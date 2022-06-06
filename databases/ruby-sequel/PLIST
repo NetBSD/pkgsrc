@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.95 2022/04/03 06:58:49 taca Exp $
+@comment $NetBSD: PLIST,v 1.96 2022/06/06 13:39:58 taca Exp $
 bin/sequel${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -79,6 +79,8 @@ ${GEM_LIBDIR}/doc/release_notes/5.52.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.53.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.54.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.55.0.txt
+${GEM_LIBDIR}/doc/release_notes/5.56.0.txt
+${GEM_LIBDIR}/doc/release_notes/5.57.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.6.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.7.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.8.0.txt
@@ -208,6 +210,7 @@ ${GEM_LIBDIR}/lib/sequel/extensions/implicit_subquery.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/index_caching.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/inflector.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/integer64.rb
+${GEM_LIBDIR}/lib/sequel/extensions/is_distinct_from.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/looser_typecasting.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/migration.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/mssql_emulate_lateral_with_apply.rb
@@ -249,6 +252,7 @@ ${GEM_LIBDIR}/lib/sequel/extensions/split_array_nil.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/sql_comments.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/sql_expr.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/sql_log_normalizer.rb
+${GEM_LIBDIR}/lib/sequel/extensions/sqlite_json_ops.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/string_agg.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/string_date_time.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/symbol_aref.rb
