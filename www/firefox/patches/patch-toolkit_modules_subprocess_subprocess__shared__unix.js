@@ -1,15 +1,15 @@
-$NetBSD: patch-toolkit_modules_subprocess_subprocess__shared__unix.js,v 1.2 2019/07/11 11:32:40 ryoon Exp $
+$NetBSD: patch-toolkit_modules_subprocess_subprocess__shared__unix.js,v 1.3 2022/06/06 20:59:40 ryoon Exp $
 
 Fix broken native messaging on NetBSD and possibly other BSDs too:
 https://bugzilla.mozilla.org/show_bug.cgi?id=1543602
 
 Please remove this patch when the upstream issue is resolved.
 
---- toolkit/modules/subprocess/subprocess_shared_unix.js.orig	2019-07-06 01:49:01.000000000 +0000
+--- toolkit/modules/subprocess/subprocess_shared_unix.js.orig	2022-05-20 10:44:23.277253777 +0000
 +++ toolkit/modules/subprocess/subprocess_shared_unix.js
-@@ -12,7 +12,15 @@
+@@ -13,7 +13,15 @@
  
- const LIBC = OS.Constants.libc;
+ var LIBC = OS.Constants.libc;
  
 -const LIBC_CHOICES = ["libc.so", "libSystem.B.dylib", "a.out"];
 +/* libc.so isn't meant to be dlopen'ed. On Linux it's usually an ld
