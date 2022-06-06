@@ -1,30 +1,28 @@
-# $NetBSD: Makefile,v 1.30 2020/08/17 20:20:09 leot Exp $
+# $NetBSD: Makefile,v 1.31 2022/06/06 05:11:58 dholland Exp $
 #
 
 DISTNAME=	tkdesk-2.0
 PKGNAME=	${DISTNAME}p2
-PKGREVISION=	3
+PKGREVISION=	5
 CATEGORIES=	sysutils
 MASTER_SITES=	http://tkdesk.sourceforge.net/dist/
+
+PATCH_SITES=		http://tkdesk.sourceforge.net/patches/
+PATCHFILES=		${DISTNAME}p1.patch ${DISTNAME}p2.patch
+PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tkdesk.sourceforge.net/
 COMMENT=	Graphical file manager
-
-PATCHFILES=		${DISTNAME}p1.patch ${DISTNAME}p2.patch
-PATCH_DIST_STRIP=	-p1
-PATCH_SITES=		http://tkdesk.sourceforge.net/patches/
 
 USE_TOOLS+=	pax
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl}/lib	\
 			--with-tk=${BUILDLINK_PREFIX.tk}/lib	\
-			--with-itcl=${BUILDLINK_PREFIX.tcl}/lib/itcl${ITCL_VERSION}	\
+			--with-itcl=${BUILDLINK_PREFIX.tcl}/lib/itcl${ITCL_VERSION} \
 			--with-blt=${BUILDLINK_PREFIX.blt}/lib
 MAKE_ENV+=		LIB_RUNTIME_DIR=${BUILDLINK_PREFIX.tcl}/lib/itcl${ITCL_VERSION}
-
-CFLAGS+=	-DUSE_INTERP_RESULT
 
 DESTDIR_VARNAME=	INSTALL_ROOT
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
