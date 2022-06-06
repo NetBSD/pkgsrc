@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2898 2022/06/06 13:28:28 taca Exp $
+$NetBSD: CHANGES-2022,v 1.2899 2022/06/06 13:40:22 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4392,3 +4392,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated audio/mserv to 0.35nb24 [martin 2022-06-06]
 	Updated databases/ruby-hiera to 3.9.0 [taca 2022-06-06]
 	Updated databases/ruby-moneta to 1.5.1 [taca 2022-06-06]
+	Updated databases/ruby-sequel to 5.57.0 [taca 2022-06-06]
