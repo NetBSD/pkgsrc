@@ -1,13 +1,54 @@
-$NetBSD: patch-ab,v 1.8 2004/02/20 00:41:16 abs Exp $
+$NetBSD: patch-ab,v 1.9 2022/06/06 12:12:47 martin Exp $
 
 --- mserv/cmd.c.orig	Sat Aug  2 15:26:19 2003
 +++ mserv/cmd.c
-@@ -51,7 +51,7 @@ met:
+@@ -49,9 +49,20 @@ met:
+ #include <ctype.h>
+ #include <stdlib.h>
  #include <math.h>
++
  #include "mserv.h"
++
++#ifdef HAVE_INTTYPES_H
++#include <inttypes.h>
++#define	TIME_T_PRI_CAST	uint64_t
++#define	TIME_T_PRI	PRIu64
++#else
++#define	TIME_T_PRI_CAST	unsigned long
++#define	TIME_T_PRI	"lu"
++#endif
++
  #include "misc.h"
 -#include "soundcard.h"
 +#include "mservsoundcard.h"
  #include "acl.h"
  #include "filter.h"
  #include "cmd.h"
+@@ -2534,11 +2545,11 @@ static void mserv_cmd_info(t_client *cl,
+   rate = mserv_getrate(ru, track);
+   snprintf(year, sizeof(year), "%d", track->year);
+   mserv_response(cl, "INFT",
+-		 "%d\t%d\t%s\t%s\t%s\t%s\t%s\t%d\t%s\t%.1f\t%.1f\t"
++		 "%d\t%d\t%s\t%s\t%s\t%s\t%s\t%" TIME_T_PRI "\t%s\t%.1f\t%.1f\t"
+ 		 "%s\t%s\t%s\t%d:%02d.%d\t%s",
+ 		 track->n_album, track->n_track, album->author, album->name,
+ 		 track->author, track->name, track->year ? year : "unknown",
+-		 track->lastplay, ago, 100*track->prating, 100*track->rating,
++		 (TIME_T_PRI_CAST)track->lastplay, ago, 100*track->prating, 100*track->rating,
+ 		 mserv_ratestr(rate), track->genres,
+ 		 track->filterok ? "included" : "excluded",
+ 		 (track->duration/100)/60, (track->duration/100) % 60,
+@@ -2547,11 +2558,11 @@ static void mserv_cmd_info(t_client *cl,
+     for (i = 1; i <= 11; i++) {
+       sprintf(token, "INFT%d", i);
+       mserv_response(cl, token,
+-		     "%d\t%d\t%s\t%s\t%s\t%s\t%s\t%d\t%s\t%.1f\t%.1f\t"
++		     "%d\t%d\t%s\t%s\t%s\t%s\t%s\t%" TIME_T_PRI "\t%s\t%.1f\t%.1f\t"
+ 		     "%s\t%s\t%s\t%d:%02d.%d\t%s",
+ 		     track->n_album, track->n_track, album->author,
+ 		     album->name, track->author, track->name,
+-		     track->year ? year : "unknown", track->lastplay,
++		     track->year ? year : "unknown", (TIME_T_PRI_CAST)track->lastplay,
+ 		     ago, 100*track->prating, 100*track->rating,
+ 		     mserv_ratestr(rate), track->genres,
+ 		     track->filterok ? "included" : "excluded",
