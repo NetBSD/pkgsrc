@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.344 2021/12/23 04:33:06 jnemeth Exp $
+# $NetBSD: Makefile,v 1.345 2022/06/06 14:20:45 rhialto Exp $
 #
 
 COMMENT=	Emulators for other machines and systems
@@ -161,6 +161,7 @@ SUBDIR+=	netbsd32_compat30-extras
 SUBDIR+=	netbsd32_compat40
 SUBDIR+=	netbsd32_compat40-extras
 SUBDIR+=	nono
+SUBDIR+=	open-simh
 SUBDIR+=	openmsx
 SUBDIR+=	or1ksim
 SUBDIR+=	osf1_lib
@@ -179,6 +180,7 @@ SUBDIR+=	rpcemu
 SUBDIR+=	sameboy
 SUBDIR+=	shoebill
 SUBDIR+=	simh
+SUBDIR+=	simh3
 SUBDIR+=	simulavr
 SUBDIR+=	ski
 SUBDIR+=	sms_sdl
