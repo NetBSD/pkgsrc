@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2903 2022/06/06 20:58:49 tron Exp $
+$NetBSD: CHANGES-2022,v 1.2904 2022/06/06 21:00:59 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4397,3 +4397,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added emulators/open-simh version 4.0.0.20220531 [rhialto 2022-06-06]
 	Updated devel/cbindgen to 0.23.0 [ryoon 2022-06-06]
 	Updated mail/mutt to 2.2.6 [tron 2022-06-06]
+	Updated www/firefox to 101.0 [ryoon 2022-06-06]
