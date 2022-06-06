@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2020/11/26 15:12:39 nia Exp $
+@comment $NetBSD: PLIST,v 1.10 2022/06/06 21:09:28 ryoon Exp $
 bin/dos2unix
 bin/mac2unix
 bin/unix2dos
@@ -31,6 +31,10 @@ man/pt_BR/man1/dos2unix.1
 man/pt_BR/man1/mac2unix.1
 man/pt_BR/man1/unix2dos.1
 man/pt_BR/man1/unix2mac.1
+man/sr/man1/dos2unix.1
+man/sr/man1/mac2unix.1
+man/sr/man1/unix2dos.1
+man/sr/man1/unix2mac.1
 man/sv/man1/dos2unix.1
 man/sv/man1/mac2unix.1
 man/sv/man1/unix2dos.1
@@ -64,6 +68,8 @@ share/doc/${PKGNAME}/pl/dos2unix.htm
 share/doc/${PKGNAME}/pl/dos2unix.txt
 share/doc/${PKGNAME}/pt_BR/dos2unix.htm
 share/doc/${PKGNAME}/pt_BR/dos2unix.txt
+share/doc/${PKGNAME}/sr/dos2unix.htm
+share/doc/${PKGNAME}/sr/dos2unix.txt
 share/doc/${PKGNAME}/sv/dos2unix.htm
 share/doc/${PKGNAME}/sv/dos2unix.txt
 share/doc/${PKGNAME}/uk/dos2unix.htm
