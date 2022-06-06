@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21930 2022/06/06 01:16:16 gutteridge Exp $
+$NetBSD: TODO,v 1.21931 2022/06/06 13:24:47 taca Exp $
 
 Suggested new packages
 ======================
@@ -397,9 +397,10 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-quadprog-1.5.8
 	o R-tseries-0.10.48
 	o SDL_sound-2.0
-	o SOGo-2.4.1
-	o SOGo-5.4.0
-	o SOPE-2.4.1
+	o SOGo-2.4.3
+	o SOGo-5.6.0
+	o SOPE-2.4.3
+	o SOPE-5.6.0
 	o SQLiteCpp-2.5.0
 	o TeXmacs-2.1.1
 	o TiffIO-140a
@@ -780,6 +781,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o go-ffuf-1.3.0
 	o go-fsnotify-1.4.9
 	o go-grpc-1.37.0
+	o go-hugo-0.99.1
 	o go-i18n-2.1.2
 	o go-imaging-1.6.2
 	o go-isatty-0.0.12
