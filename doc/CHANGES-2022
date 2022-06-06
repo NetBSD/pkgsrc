@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2895 2022/06/06 08:47:21 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.2896 2022/06/06 12:13:02 martin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4389,3 +4389,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/blt to 2.4znb13 [dholland 2022-06-06]
 	Updated sysutils/tkdesk to 2.0p2nb5 [dholland 2022-06-06]
 	Added net/czds version 1.0.6 [fcambus 2022-06-06]
+	Updated audio/mserv to 0.35nb24 [martin 2022-06-06]
