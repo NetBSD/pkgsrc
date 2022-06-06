@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2905 2022/06/06 21:02:08 ryoon Exp $
+$NetBSD: CHANGES-2022,v 1.2906 2022/06/06 21:09:58 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4399,3 +4399,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated mail/mutt to 2.2.6 [tron 2022-06-06]
 	Updated www/firefox to 101.0 [ryoon 2022-06-06]
 	Updated www/firefox-l10n to 101.0 [ryoon 2022-06-06]
+	Updated converters/dos2unix to 7.4.3 [ryoon 2022-06-06]
