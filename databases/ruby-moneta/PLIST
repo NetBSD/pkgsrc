@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2021/05/22 14:58:04 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2022/06/06 13:28:05 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.github/workflows/ruby.yml
 ${GEM_LIBDIR}/.gitignore
@@ -15,6 +15,7 @@ ${GEM_LIBDIR}/feature_matrix.yaml
 ${GEM_LIBDIR}/lib/action_dispatch/middleware/session/moneta_store.rb
 ${GEM_LIBDIR}/lib/active_support/cache/moneta_store.rb
 ${GEM_LIBDIR}/lib/moneta.rb
+${GEM_LIBDIR}/lib/moneta/adapter.rb
 ${GEM_LIBDIR}/lib/moneta/adapters/activerecord.rb
 ${GEM_LIBDIR}/lib/moneta/adapters/activesupportcache.rb
 ${GEM_LIBDIR}/lib/moneta/adapters/cassandra.rb
@@ -56,6 +57,7 @@ ${GEM_LIBDIR}/lib/moneta/adapters/tokyotyrant.rb
 ${GEM_LIBDIR}/lib/moneta/adapters/yaml.rb
 ${GEM_LIBDIR}/lib/moneta/builder.rb
 ${GEM_LIBDIR}/lib/moneta/cache.rb
+${GEM_LIBDIR}/lib/moneta/config.rb
 ${GEM_LIBDIR}/lib/moneta/create_support.rb
 ${GEM_LIBDIR}/lib/moneta/dbm_adapter.rb
 ${GEM_LIBDIR}/lib/moneta/defaults.rb
@@ -244,6 +246,7 @@ ${GEM_LIBDIR}/spec/moneta/adapters/yaml/adapter_yaml_spec.rb
 ${GEM_LIBDIR}/spec/moneta/adapters/yaml/standard_yaml_spec.rb
 ${GEM_LIBDIR}/spec/moneta/adapters/yaml/standard_yaml_with_expires_spec.rb
 ${GEM_LIBDIR}/spec/moneta/builder_spec.rb
+${GEM_LIBDIR}/spec/moneta/config_spec.rb
 ${GEM_LIBDIR}/spec/moneta/mutex_spec.rb
 ${GEM_LIBDIR}/spec/moneta/proxies/cache/cache_file_memory_spec.rb
 ${GEM_LIBDIR}/spec/moneta/proxies/cache/cache_memory_null_spec.rb
