@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2022/06/07 09:53:36 jperkin Exp $
+libexec/mktools/mk-buildlink-symlinks
