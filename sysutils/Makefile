@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1004 2022/05/14 04:44:02 adam Exp $
+# $NetBSD: Makefile,v 1.1005 2022/06/07 10:15:01 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -706,7 +706,6 @@ SUBDIR+=	testdisk
 SUBDIR+=	tiramisu
 SUBDIR+=	tits
 SUBDIR+=	tkcron
-SUBDIR+=	tkdesk
 SUBDIR+=	tload
 SUBDIR+=	tob
 SUBDIR+=	top
