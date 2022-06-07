@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2022/03/30 10:02:24 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2022/06/07 20:34:14 wiz Exp $
 
 DISTNAME=	gexiv2-0.12.2
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	graphics devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gexiv2/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -31,8 +31,8 @@ BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=./gexiv2/gexiv2.map
 
 .include "../../devel/meson/build.mk"
 .include "../../devel/glib2/buildlink3.mk"
+BUILDLINK_DEPMETHOD.gobject-introspection=	build
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../graphics/exiv2/buildlink3.mk"
-BUILDLINK_DEPMETHOD.vala=	build
 .include "../../lang/vala/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
