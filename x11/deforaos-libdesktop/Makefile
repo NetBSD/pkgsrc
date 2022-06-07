@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2022/04/13 00:46:57 khorben Exp $
+# $NetBSD: Makefile,v 1.42 2022/06/07 07:30:20 wiz Exp $
 
 DISTNAME=	libDesktop-0.4.1
 PKGNAME=	deforaos-libdesktop-0.4.1
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	https://ftp.defora.org/pub/DeforaOS/Apps/Desktop/src/libDesktop/
 
@@ -32,7 +33,7 @@ post-install:
 
 .include "../../devel/deforaos-configure/deforaos-configure.mk"
 .include "../../devel/deforaos-libsystem/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gtk-doc+=	gtk-doc>=1.20
+BUILDLINK_API_DEPENDS.gtk-doc+=	gtk-doc>=1.32nb9
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../textproc/gtk-doc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
