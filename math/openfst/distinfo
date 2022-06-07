@@ -1,26 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:55:51 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/06/07 07:58:23 wiz Exp $
 
-BLAKE2s (openfst-1.1.tar.gz) = d8b79b30f749d74afdbf35328d542c233de7310c5cc4075bfc49058a062d707d
-SHA512 (openfst-1.1.tar.gz) = dce835b2be5a805ba2927e36536ada1ad2d49c4bea2fed65bd7c09320626a4ba9f159c5b720ddee4f6e67c53f873496c3c7bf80fe826d7eeb31a898d2b2198b8
-Size (openfst-1.1.tar.gz) = 513404 bytes
-SHA1 (patch-src_bin_compile-main.h) = b0f77cf8876acea5597b0ddb622dcddc52103cf0
-SHA1 (patch-src_include_fst_cache.h) = 6a29b49f07b61a0ed9d9e2349805b836c45a25bc
-SHA1 (patch-src_include_fst_compact-fst.h) = f1a2b9ec65d3c8be4d0574c96fa5e5a52c9e680c
-SHA1 (patch-src_include_fst_compose.h) = 4fb25482929aecf37e69d9b6c23491f5512554f8
-SHA1 (patch-src_include_fst_config.h.in) = 6c1eba23afe7d30026b37b9e7cf7c6552778c3e4
-SHA1 (patch-src_include_fst_const-fst.h) = 758b60a5238f9f6f4a1a5a05c5abc41d81faa3a2
-SHA1 (patch-src_include_fst_determinize.h) = c0ec374166a57c3df97cab25b5ec87231ec86df5
-SHA1 (patch-src_include_fst_difference.h) = e66c128b621d1be4f9b7501d969cd2097f32aa04
-SHA1 (patch-src_include_fst_encode.h) = ad9c3662b63dc40a40fa827fa011ea8332f04962
-SHA1 (patch-src_include_fst_epsnormalize.h) = 1bee82d16fab4bdb4d635eb27aa22f9573d57fb9
-SHA1 (patch-src_include_fst_equivalent.h) = dbc925b9de2b859a0a5493db4e5823dc8ed57e6c
-SHA1 (patch-src_include_fst_factor-weight.h) = 311911d8308cdc073cffa2a2d0a52202330c4324
-SHA1 (patch-src_include_fst_map.h) = 61faf469de577c944d2e66c10f1b877619ae0889
-SHA1 (patch-src_include_fst_relabel.h) = 6fce070b426dfbcfb2aa89c05daec96b03cd6349
-SHA1 (patch-src_include_fst_replace.h) = 2f8984463d5f083d3bc1fa439dc1a88e27f1954f
-SHA1 (patch-src_include_fst_rmepsilon.h) = e371a2145c571378a49b707710b9ab5cc592f352
-SHA1 (patch-src_include_fst_rmfinalepsilon.h) = fb1834d54a343982eb433f6c7ffddf1315a2b797
-SHA1 (patch-src_include_fst_slist.h) = c63321cf232ec861ec07dc0c26a9c5c773c35f49
-SHA1 (patch-src_include_fst_synchronize.h) = aed6efedd865bda3a881d5516487c4abdac36217
-SHA1 (patch-src_include_fst_test-properties.h) = d82a8e542a8afbe10a7232c12a22a724a9fe0a0c
-SHA1 (patch-src_include_fst_vector-fst.h) = 51178b6757e89e5c18807ec8521223dacaeb6c16
+BLAKE2s (openfst-1.8.2.tar.gz) = 6889e3afcbd841e313e730ebf6a0deccd8cc85cd47364290dca7f7672cb1c694
+SHA512 (openfst-1.8.2.tar.gz) = ca7f9f19e24141e1f1d0bbabf43795e6e278bce3887c14261d9ce204a0e01b1588eaf982755a9105247510a19f67da2f566e9b14b1d869497148f95b55606d5c
+Size (openfst-1.8.2.tar.gz) = 1342793 bytes
