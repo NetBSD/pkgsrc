@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2906 2022/06/06 21:09:58 ryoon Exp $
+$NetBSD: CHANGES-2022,v 1.2907 2022/06/07 07:30:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4400,3 +4400,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/firefox to 101.0 [ryoon 2022-06-06]
 	Updated www/firefox-l10n to 101.0 [ryoon 2022-06-06]
 	Updated converters/dos2unix to 7.4.3 [ryoon 2022-06-06]
+	Updated x11/deforaos-libdesktop to 0.4.1nb1 [wiz 2022-06-07]
