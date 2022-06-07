@@ -1,15 +1,13 @@
-# $NetBSD: options.mk,v 1.22 2022/05/29 17:47:15 leot Exp $
+# $NetBSD: options.mk,v 1.23 2022/06/07 20:28:43 wiz Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.webkit-gtk
-PKG_SUPPORTED_OPTIONS=	debug enchant introspection opengl webkit-jit wayland
-PKG_SUGGESTED_OPTIONS=	enchant introspection opengl
+PKG_SUPPORTED_OPTIONS=	debug enchant opengl webkit-jit wayland
+PKG_SUGGESTED_OPTIONS=	enchant opengl
 .include "../../devel/wayland/platform.mk"
 .if ${PLATFORM_SUPPORTS_WAYLAND} == "yes"
 PKG_SUGGESTED_OPTIONS+=	wayland
 .endif
-
-PLIST_VARS=	introspection
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -69,19 +67,6 @@ CMAKE_ARGS+=	-DENABLE_SPELLCHECK=OFF
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Debug
 .else
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
-.endif
-
-#
-# Introspection
-#
-.if !empty(PKG_OPTIONS:Mintrospection)
-PLIST.introspection=				yes
-BUILDLINK_API_DEPENDS.gobject-introspection+=	gobject-introspection>=0.9.5
-BUILDLINK_DEPMETHOD.gobject-introspection+=	build
-.include "../../devel/gobject-introspection/buildlink3.mk"
-CMAKE_ARGS+=	-DENABLE_INTROSPECTION=ON
-.else
-CMAKE_ARGS+=	-DENABLE_INTROSPECTION=OFF
 .endif
 
 #
