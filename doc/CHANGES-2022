@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2920 2022/06/07 10:24:14 pin Exp $
+$NetBSD: CHANGES-2022,v 1.2921 2022/06/07 10:37:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4415,3 +4415,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed sysutils/tkdesk [wiz 2022-06-07]
 	Added games/tetris-cli version 22.66.1 [pin 2022-06-07]
 	Updated audio/spotify-player to 0.8.0nb1 [pin 2022-06-07]
+	Removed x11/py-Pmw [wiz 2022-06-07]
+	Removed x11/py-Pmw2 [wiz 2022-06-07]

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.956 2022/05/11 00:20:47 gutteridge Exp $
+# $NetBSD: Makefile,v 1.957 2022/06/07 10:37:23 wiz Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -324,8 +324,6 @@ SUBDIR+=	p5-gtk3
 SUBDIR+=	picom
 SUBDIR+=	pixman
 SUBDIR+=	plasma-framework
-SUBDIR+=	py-Pmw
-SUBDIR+=	py-Pmw2
 SUBDIR+=	py-Tk
 SUBDIR+=	py-Xlib
 SUBDIR+=	py-gnome2
