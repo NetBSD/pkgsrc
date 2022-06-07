@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2020/10/01 13:40:33 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.8 2022/06/07 18:17:28 wiz Exp $
 include/gtksourceview-4/gtksourceview/completion-providers/words/gtksourcecompletionwords.h
 include/gtksourceview-4/gtksourceview/gtksource-enumtypes.h
 include/gtksourceview-4/gtksourceview/gtksource.h
@@ -41,12 +41,12 @@ include/gtksourceview-4/gtksourceview/gtksourceundomanager.h
 include/gtksourceview-4/gtksourceview/gtksourceutils.h
 include/gtksourceview-4/gtksourceview/gtksourceversion.h
 include/gtksourceview-4/gtksourceview/gtksourceview.h
-${PLIST.introspection}lib/girepository-1.0/GtkSource-4.typelib
+lib/girepository-1.0/GtkSource-4.typelib
 lib/libgtksourceview-4.so
 lib/libgtksourceview-4.so.0
 lib/libgtksourceview-4.so.0.0.0
 lib/pkgconfig/gtksourceview-4.pc
-${PLIST.introspection}share/gir-1.0/GtkSource-4.gir
+share/gir-1.0/GtkSource-4.gir
 share/gtksourceview-4/language-specs/R.lang
 share/gtksourceview-4/language-specs/abnf.lang
 share/gtksourceview-4/language-specs/actionscript.lang
