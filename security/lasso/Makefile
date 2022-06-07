@@ -1,4 +1,6 @@
-# $NetBSD: Makefile,v 1.52 2022/05/19 01:23:31 khorben Exp $
+# $NetBSD: Makefile,v 1.53 2022/06/07 07:39:45 wiz Exp $
+
+PKGREVISION=	4
 
 CONFIGURE_ENV+=		INKSCAPE=/bin/false
 CONFIGURE_ARGS+=	--disable-python
@@ -12,8 +14,6 @@ PYTHON_FOR_BUILD_ONLY=		yes
 
 EXTRACT_USING=		bsdtar
 
-PKGREVISION= 3
-
-BUILDLINK_API_DEPENDS.gtk-doc+=	gtk-doc>=1.20
+BUILDLINK_API_DEPENDS.gtk-doc+=	gtk-doc>=1.32nb9
 .include "../../textproc/gtk-doc/buildlink3.mk"
 .include "../../security/lasso/Makefile.common"
