@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2943 2022/06/07 20:41:28 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.2944 2022/06/07 20:41:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4486,3 +4486,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated print/poppler-glib to 22.04.0nb1 [wiz 2022-06-07]
 	Updated net/gupnp to 1.0.3nb16 [wiz 2022-06-07]
 	Updated net/gupnp-igd to 0.2.5nb13 [wiz 2022-06-07]
+	Updated net/gssdp to 1.0.3nb20 [wiz 2022-06-07]
