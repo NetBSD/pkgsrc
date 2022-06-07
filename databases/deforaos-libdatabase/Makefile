@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.33 2022/04/18 19:10:35 adam Exp $
+# $NetBSD: Makefile,v 1.34 2022/06/07 07:44:24 wiz Exp $
 
 DISTNAME=	libDatabase-0.0.2
 PKGNAME=	deforaos-libdatabase-0.0.2
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	databases
 MASTER_SITES=	https://ftp.defora.org/pub/DeforaOS/Apps/Database/src/libDatabase/
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	https://www.defora.org/
 COMMENT=	DeforaOS libDatabase
-
 LICENSE=	gnu-gpl-v3
 
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
@@ -23,6 +22,6 @@ MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
 .include "../../mk/readline.buildlink3.mk"
 .include "../../databases/sqlite/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gtk-doc+=	gtk-doc>=1.20
+BUILDLINK_API_DEPENDS.gtk-doc+=	gtk-doc>=1.32nb9
 .include "../../textproc/gtk-doc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
