@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2022/05/19 01:23:31 khorben Exp $
+@comment $NetBSD: PLIST,v 1.12 2022/06/07 07:39:45 wiz Exp $
 include/lasso/backward_comp.h
 include/lasso/ctypes.h
 include/lasso/debug.h
@@ -186,8 +186,10 @@ share/doc/lasso/writing-a-java-sp.txt
 share/doc/lasso/writing-a-php-sp.txt
 share/doc/lasso/writing-a-saml2-php-sp.txt
 share/gtk-doc/html/lasso/annotation-glossary.html
+share/gtk-doc/html/lasso/api-index-2-3.html
 share/gtk-doc/html/lasso/api-index-full.html
 share/gtk-doc/html/lasso/architecture.html
+share/gtk-doc/html/lasso/deprecated-api-index.html
 share/gtk-doc/html/lasso/home.png
 share/gtk-doc/html/lasso/idff.html
 share/gtk-doc/html/lasso/idwsf.html

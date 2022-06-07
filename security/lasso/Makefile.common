@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2021/06/08 07:34:48 manu Exp $
+# $NetBSD: Makefile.common,v 1.18 2022/06/07 07:39:45 wiz Exp $
 #
 # used by security/lasso/Makefile
 # used by security/py-lasso/Makefile
@@ -26,7 +26,7 @@ CFLAGS.NetBSD+=	-D_POSIX_C_SOURCE=199506
 PKGCONFIG_OVERRIDE+=	lasso.pc.in
 
 DEPENDS+=			${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
-BUILDLINK_ABI_DEPENDS.glib2+=	glib2>=2.35
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.35
 
 .include "../../lang/python/application.mk"
 
