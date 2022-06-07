@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.56 2022/05/24 18:18:18 nia Exp $
+# $NetBSD: Makefile,v 1.57 2022/06/07 17:57:13 wiz Exp $
 
 DISTNAME=	gstreamer-1.20.2
 PKGNAME=	${DISTNAME:S/gstreamer/gstreamer1/}
+PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	https://gstreamer.freedesktop.org/src/gstreamer/
 EXTRACT_SUFX=	.tar.xz
@@ -16,8 +17,6 @@ TEST_TARGET=		check
 FLEX_REQD=		2.5.31
 
 LDFLAGS.SunOS+=		-lsocket -lnsl -lrt
-
-.include "options.mk"
 
 PKGCONFIG_OVERRIDE+=	pkgconfig/gstreamer-controller.pc.in
 PKGCONFIG_OVERRIDE+=	pkgconfig/gstreamer-check.pc.in
@@ -51,6 +50,8 @@ MAKE_ENV+=		LD_LIBRARY_PATH=${WRKSRC}/output/gst:${WRKSRC}/output/libs/gst/check
 BUILDLINK_DEPMETHOD.check=	build
 .include "../../devel/check/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
+BUILDLINK_DEPMETHOD.gobject-introspection=	build
+.include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../math/gsl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
