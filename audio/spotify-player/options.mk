@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.3 2022/04/03 10:04:09 pin Exp $
+# $NetBSD: options.mk,v 1.4 2022/06/07 10:23:54 pin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.spotify-player
-PKG_SUPPORTED_OPTIONS=	alsa gstreamer jack portaudio pulseaudio rodio sdl
+PKG_SUPPORTED_OPTIONS=	alsa gstreamer jack portaudio pulseaudio rodio sdl spotify-player-lyric-finder
 PKG_SUGGESTED_OPTIONS=	portaudio
 
 .include "../../mk/bsd.options.mk"
@@ -55,4 +55,9 @@ CARGO_FEATURES+=	sdl-backend
 RUSTFLAGS+=		-C link-arg=-L${BUILDLINK_PREFIX.SDL2}/lib
 RUSTFLAGS+=		-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.SDL2}/lib
 .include "../../devel/SDL2/buildlink3.mk"
+.endif
+
+.if !empty(PKG_OPTIONS:Mspotify-player-lyric-finder)
+CARGO_FEATURES+=	lyric-finder
+LICENSE+=		AND genius.com-license
 .endif
