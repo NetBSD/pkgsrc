@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2909 2022/06/07 07:39:55 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.2910 2022/06/07 07:44:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4403,3 +4403,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/deforaos-libdesktop to 0.4.1nb1 [wiz 2022-06-07]
 	Updated devel/deforaos-cpp to 0.0.6nb1 [wiz 2022-06-07]
 	Updated security/lasso to 2.7.0nb4 [wiz 2022-06-07]
+	Updated databases/deforaos-libdatabase to 0.0.2nb7 [wiz 2022-06-07]
