@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2919 2022/06/07 10:18:27 pin Exp $
+$NetBSD: CHANGES-2022,v 1.2920 2022/06/07 10:24:14 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4414,3 +4414,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated time/heliocron to 0.6.0 [pin 2022-06-07]
 	Removed sysutils/tkdesk [wiz 2022-06-07]
 	Added games/tetris-cli version 22.66.1 [pin 2022-06-07]
+	Updated audio/spotify-player to 0.8.0nb1 [pin 2022-06-07]
