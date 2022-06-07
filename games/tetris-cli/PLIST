@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2022/06/07 10:17:07 pin Exp $
+bin/tetris-cli
