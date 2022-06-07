@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.20 2022/06/04 13:49:15 wiz Exp $
+# $NetBSD: Makefile.common,v 1.21 2022/06/07 16:47:33 wiz Exp $
 # used by fonts/harfbuzz-icu/Makefile
 
 DISTNAME=	harfbuzz-4.3.0
@@ -27,7 +27,7 @@ USE_TOOLS+=	pkg-config
 
 # cairo/fontconfig are only needed for command line utilities
 MESON_ARGS+=	-Dcairo=disabled
-MESON_ARGS+=	-Dintrospection=disabled
+MESON_ARGS+=	-Dintrospection=enabled
 MESON_ARGS+=	-Dbenchmark=disabled
 
 PLIST_VARS+=		graphite2
@@ -77,6 +77,8 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../devel/meson/build.mk"
 .include "../../devel/glib2/buildlink3.mk"
+BUILDLINK_DEPMETHOD.gobject-introspection+=	build
+.include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 #BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.8.0
 #.include "../../graphics/cairo/buildlink3.mk"
