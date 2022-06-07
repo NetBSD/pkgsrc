@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.96 2022/02/15 19:26:48 wiz Exp $
+# $NetBSD: Makefile,v 1.97 2022/06/07 20:36:50 wiz Exp $
 
 .include "../../print/poppler/Makefile.common"
 
 PKGNAME=	poppler-glib-${POPPLER_VERS}
+PKGREVISION=	1
 
 COMMENT=	PDF rendering library (GLib wrapper)
 
@@ -51,6 +52,7 @@ post-install:
 #.include "../../lang/python/tool.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.41.0
 .include "../../devel/glib2/buildlink3.mk"
+BUILDLINK_DEPMETHOD.gobject-introspection=	build
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../graphics/cairo-gobject/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
