@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2945 2022/06/07 20:42:50 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.2946 2022/06/07 20:46:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4488,3 +4488,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/gupnp-igd to 0.2.5nb13 [wiz 2022-06-07]
 	Updated net/gssdp to 1.0.3nb20 [wiz 2022-06-07]
 	Updated net/libnice to 0.1.16nb11 [wiz 2022-06-07]
+	Updated devel/at-spi2-core to 2.40.3nb2 [wiz 2022-06-07]
