@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2022/05/10 17:00:11 adam Exp $
+# $NetBSD: Makefile,v 1.30 2022/06/07 16:28:39 adam Exp $
 
-DISTNAME=	jupyter_client-7.3.1
+DISTNAME=	jupyter_client-7.3.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jupyter_client/}
@@ -10,13 +10,14 @@ HOMEPAGE=	https://jupyter-client.readthedocs.io/
 COMMENT=	Jupyter protocol implementation and client libraries
 LICENSE=	modified-bsd
 
+BUILD_DEPENDS+=	${PYPKGPREFIX}-hatchling>=0.25:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-entrypoints-[0-9]*:../../devel/py-entrypoints
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.8.2:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-jupyter_core>=4.9.2:../../devel/py-jupyter_core
 DEPENDS+=	${PYPKGPREFIX}-nest-asyncio>=1.5.4:../../devel/py-nest-asyncio
 DEPENDS+=	${PYPKGPREFIX}-tornado>=6.0:../../www/py-tornado
 DEPENDS+=	${PYPKGPREFIX}-traitlets>=4.1.0:../../devel/py-traitlets
-DEPENDS+=	${PYPKGPREFIX}-zmq>=13.0.0:../../net/py-zmq
+DEPENDS+=	${PYPKGPREFIX}-zmq>=23.0:../../net/py-zmq
 TEST_DEPENDS+=	${PYPKGPREFIX}-ipykernel>=6.5:../../devel/py-ipykernel
 TEST_DEPENDS+=	${PYPKGPREFIX}-ipython-[0-9]*:../../devel/py-ipython
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
@@ -39,5 +40,5 @@ post-install:
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
