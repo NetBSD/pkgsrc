@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2929 2022/06/07 16:29:16 adam Exp $
+$NetBSD: CHANGES-2022,v 1.2930 2022/06/07 17:56:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4472,3 +4472,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated games/tetris-cli to 22.67.2 [pin 2022-06-07]
 	Updated net/py-zmq to 23.1.0 [adam 2022-06-07]
 	Updated devel/py-jupyter_client to 7.3.3 [adam 2022-06-07]
+	Updated fonts/harfbuzz to 4.3.0nb2 [wiz 2022-06-07]
