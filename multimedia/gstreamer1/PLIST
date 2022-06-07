@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2022/05/26 07:17:33 nia Exp $
+@comment $NetBSD: PLIST,v 1.23 2022/06/07 17:57:13 wiz Exp $
 bin/gst-inspect-1.0
 bin/gst-launch-1.0
 bin/gst-stats-1.0
@@ -126,11 +126,11 @@ include/gstreamer-1.0/gst/net/gstnetutils.h
 include/gstreamer-1.0/gst/net/gstptpclock.h
 include/gstreamer-1.0/gst/net/net-prelude.h
 include/gstreamer-1.0/gst/net/net.h
-${PLIST.introspection}lib/girepository-1.0/Gst-1.0.typelib
-${PLIST.introspection}lib/girepository-1.0/GstBase-1.0.typelib
-${PLIST.introspection}lib/girepository-1.0/GstCheck-1.0.typelib
-${PLIST.introspection}lib/girepository-1.0/GstController-1.0.typelib
-${PLIST.introspection}lib/girepository-1.0/GstNet-1.0.typelib
+lib/girepository-1.0/Gst-1.0.typelib
+lib/girepository-1.0/GstBase-1.0.typelib
+lib/girepository-1.0/GstCheck-1.0.typelib
+lib/girepository-1.0/GstController-1.0.typelib
+lib/girepository-1.0/GstNet-1.0.typelib
 lib/gstreamer-1.0/libgstcoreelements.so
 lib/gstreamer-1.0/libgstcoretracers.so
 lib/libgstbase-1.0.so
@@ -163,11 +163,11 @@ man/man1/gst-stats-1.0.1
 man/man1/gst-typefind-1.0.1
 share/aclocal/gst-element-check-1.0.m4
 share/gdb/auto-load${LOCALBASE}/lib/libgstreamer-1.0.so.0.2002.0-gdb.py
-${PLIST.introspection}share/gir-1.0/Gst-1.0.gir
-${PLIST.introspection}share/gir-1.0/GstBase-1.0.gir
-${PLIST.introspection}share/gir-1.0/GstCheck-1.0.gir
-${PLIST.introspection}share/gir-1.0/GstController-1.0.gir
-${PLIST.introspection}share/gir-1.0/GstNet-1.0.gir
+share/gir-1.0/Gst-1.0.gir
+share/gir-1.0/GstBase-1.0.gir
+share/gir-1.0/GstCheck-1.0.gir
+share/gir-1.0/GstController-1.0.gir
+share/gir-1.0/GstNet-1.0.gir
 share/gstreamer-1.0/gdb/glib_gobject_helper.py
 share/gstreamer-1.0/gdb/gst_gdb.py
 share/locale/af/LC_MESSAGES/gstreamer-1.0.mo
