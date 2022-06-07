@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.227 2022/05/30 20:40:55 leot Exp $
+# $NetBSD: Makefile,v 1.228 2022/06/07 20:28:43 wiz Exp $
 
 DISTNAME=	webkitgtk-2.36.3
 PKGNAME=	${DISTNAME:S/webkitgtk/webkit-gtk/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	https://www.webkitgtk.org/releases/
 EXTRACT_SUFX=	.tar.xz
@@ -50,6 +50,7 @@ CMAKE_ARGS+=		-DENABLE_X11_TARGET=ON
 CMAKE_ARGS+=		-DENABLE_MINIBROWSER=ON
 CMAKE_ARGS+=		-DENABLE_GAMEPAD=OFF
 CMAKE_ARGS+=		-DENABLE_GEOLOCATION=OFF
+CMAKE_ARGS+=		-DENABLE_INTROSPECTION=ON
 CMAKE_ARGS+=		-DENABLE_JOURNALD_LOG=OFF
 CMAKE_ARGS+=		-DENABLE_BUBBLEWRAP_SANDBOX=OFF
 CMAKE_ARGS+=		-DUSE_GSTREAMER_GL=OFF
@@ -142,6 +143,9 @@ BUILDLINK_API_DEPENDS.glib2+= glib2>=2.32.1
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gobject-introspection+=	gobject-introspection>=0.9.5
+BUILDLINK_DEPMETHOD.gobject-introspection+=	build
+.include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../devel/gperf/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../fonts/harfbuzz-icu/buildlink3.mk"

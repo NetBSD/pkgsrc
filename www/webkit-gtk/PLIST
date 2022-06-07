@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.83 2022/05/29 17:47:15 leot Exp $
+@comment $NetBSD: PLIST,v 1.84 2022/06/07 20:28:43 wiz Exp $
 bin/WebKitWebDriver
 include/webkitgtk-4.0/JavaScriptCore/JSBase.h
 include/webkitgtk-4.0/JavaScriptCore/JSContextRef.h
@@ -216,9 +216,9 @@ include/webkitgtk-4.0/webkitdom/WebKitDOMXPathResult.h
 include/webkitgtk-4.0/webkitdom/webkitdom.h
 include/webkitgtk-4.0/webkitdom/webkitdomautocleanups.h
 include/webkitgtk-4.0/webkitdom/webkitdomdefines.h
-${PLIST.introspection}lib/girepository-1.0/JavaScriptCore-4.0.typelib
-${PLIST.introspection}lib/girepository-1.0/WebKit2-4.0.typelib
-${PLIST.introspection}lib/girepository-1.0/WebKit2WebExtension-4.0.typelib
+lib/girepository-1.0/JavaScriptCore-4.0.typelib
+lib/girepository-1.0/WebKit2-4.0.typelib
+lib/girepository-1.0/WebKit2WebExtension-4.0.typelib
 lib/libjavascriptcoregtk-4.0.so
 lib/libjavascriptcoregtk-4.0.so.18
 lib/libjavascriptcoregtk-4.0.so.18.20.7
@@ -233,9 +233,9 @@ libexec/webkit2gtk-4.0/MiniBrowser
 libexec/webkit2gtk-4.0/WebKitNetworkProcess
 libexec/webkit2gtk-4.0/WebKitWebProcess
 libexec/webkit2gtk-4.0/jsc
-${PLIST.introspection}share/gir-1.0/JavaScriptCore-4.0.gir
-${PLIST.introspection}share/gir-1.0/WebKit2-4.0.gir
-${PLIST.introspection}share/gir-1.0/WebKit2WebExtension-4.0.gir
+share/gir-1.0/JavaScriptCore-4.0.gir
+share/gir-1.0/WebKit2-4.0.gir
+share/gir-1.0/WebKit2WebExtension-4.0.gir
 share/locale/ar/LC_MESSAGES/WebKit2GTK-4.0.mo
 share/locale/as/LC_MESSAGES/WebKit2GTK-4.0.mo
 share/locale/bg/LC_MESSAGES/WebKit2GTK-4.0.mo
