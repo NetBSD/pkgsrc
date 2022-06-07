@@ -1,5 +1,6 @@
-# $NetBSD: cargo-depends.mk,v 1.2 2022/05/15 06:45:09 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.3 2022/06/07 10:13:04 pin Exp $
 
+CARGO_CRATE_DEPENDS+=	aho-corasick-0.7.18
 CARGO_CRATE_DEPENDS+=	anyhow-1.0.57
 CARGO_CRATE_DEPENDS+=	assert_cmd-2.0.4
 CARGO_CRATE_DEPENDS+=	bstr-0.2.16
@@ -14,6 +15,8 @@ CARGO_CRATE_DEPENDS+=	pico-args-0.4.2
 CARGO_CRATE_DEPENDS+=	predicates-2.1.1
 CARGO_CRATE_DEPENDS+=	predicates-core-1.0.2
 CARGO_CRATE_DEPENDS+=	predicates-tree-1.0.2
+CARGO_CRATE_DEPENDS+=	regex-1.5.6
 CARGO_CRATE_DEPENDS+=	regex-automata-0.1.10
+CARGO_CRATE_DEPENDS+=	regex-syntax-0.6.26
 CARGO_CRATE_DEPENDS+=	treeline-0.1.0
 CARGO_CRATE_DEPENDS+=	wait-timeout-0.2.0
