@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2022/05/30 16:31:10 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/06/07 18:48:34 adam Exp $
 bin/wx-config-3.1
 bin/wxrc-3.1
 include/wx-3.1/wx/aboutdlg.h
@@ -637,14 +637,14 @@ include/wx-3.1/wx/xtixml.h
 include/wx-3.1/wx/zipstrm.h
 include/wx-3.1/wx/zstream.h
 lib/libwx_baseu-3.1.so
-lib/libwx_baseu-3.1.so.6
-lib/libwx_baseu-3.1.so.6.0.0
+lib/libwx_baseu-3.1.so.7
+lib/libwx_baseu-3.1.so.7.0.0
 lib/libwx_baseu_net-3.1.so
-lib/libwx_baseu_net-3.1.so.6
-lib/libwx_baseu_net-3.1.so.6.0.0
+lib/libwx_baseu_net-3.1.so.7
+lib/libwx_baseu_net-3.1.so.7.0.0
 lib/libwx_baseu_xml-3.1.so
-lib/libwx_baseu_xml-3.1.so.6
-lib/libwx_baseu_xml-3.1.so.6.0.0
+lib/libwx_baseu_xml-3.1.so.7
+lib/libwx_baseu_xml-3.1.so.7.0.0
 libexec/wx-3.1/wx-config
 libexec/wx-3.1/wxrc
 libexec/wx-3.1/wxrc-3.1
