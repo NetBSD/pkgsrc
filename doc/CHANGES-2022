@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2912 2022/06/07 08:17:46 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.2913 2022/06/07 09:53:46 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4406,3 +4406,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/deforaos-libdatabase to 0.0.2nb7 [wiz 2022-06-07]
 	Updated math/openfst to 1.8.2 [wiz 2022-06-07]
 	Updated sysutils/e2fsprogs to 1.46.4nb2 [wiz 2022-06-07]
+	Added pkgtools/mktools version 20220607 [jperkin 2022-06-07]
