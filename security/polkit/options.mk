@@ -1,21 +1,12 @@
-# $NetBSD: options.mk,v 1.4 2020/11/05 17:06:57 nia Exp $
+# $NetBSD: options.mk,v 1.5 2022/06/07 18:03:55 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.polkit
-PKG_SUPPORTED_OPTIONS=	introspection pam
-PKG_SUGGESTED_OPTIONS=	introspection pam
+PKG_SUPPORTED_OPTIONS=	pam
+PKG_SUGGESTED_OPTIONS=	pam
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=	introspection pam
-
-.if !empty(PKG_OPTIONS:Mintrospection)
-BUILDLINK_DEPMETHOD.gobject-introspection+=	build
-.include "../../devel/gobject-introspection/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-introspection
-PLIST.introspection=	yes
-.else
-CONFIGURE_ARGS+=	--disable-introspection
-.endif
+PLIST_VARS+=	pam
 
 .if !empty(PKG_OPTIONS:Mpam)
 .include "../../mk/pam.buildlink3.mk"
