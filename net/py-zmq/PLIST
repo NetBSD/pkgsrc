@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2021/11/14 20:17:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2022/06/07 16:23:04 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -13,6 +13,9 @@ ${PYSITELIB}/zmq/__init__.pyo
 ${PYSITELIB}/zmq/_future.py
 ${PYSITELIB}/zmq/_future.pyc
 ${PYSITELIB}/zmq/_future.pyo
+${PYSITELIB}/zmq/_typing.py
+${PYSITELIB}/zmq/_typing.pyc
+${PYSITELIB}/zmq/_typing.pyo
 ${PYSITELIB}/zmq/asyncio.py
 ${PYSITELIB}/zmq/asyncio.pyc
 ${PYSITELIB}/zmq/asyncio.pyo
@@ -45,9 +48,6 @@ ${PYSITELIB}/zmq/backend/cffi/_cdefs.h
 ${PYSITELIB}/zmq/backend/cffi/_poll.py
 ${PYSITELIB}/zmq/backend/cffi/_poll.pyc
 ${PYSITELIB}/zmq/backend/cffi/_poll.pyo
-${PYSITELIB}/zmq/backend/cffi/constants.py
-${PYSITELIB}/zmq/backend/cffi/constants.pyc
-${PYSITELIB}/zmq/backend/cffi/constants.pyo
 ${PYSITELIB}/zmq/backend/cffi/context.py
 ${PYSITELIB}/zmq/backend/cffi/context.pyc
 ${PYSITELIB}/zmq/backend/cffi/context.pyo
@@ -66,7 +66,6 @@ ${PYSITELIB}/zmq/backend/cffi/socket.pyo
 ${PYSITELIB}/zmq/backend/cffi/utils.py
 ${PYSITELIB}/zmq/backend/cffi/utils.pyc
 ${PYSITELIB}/zmq/backend/cffi/utils.pyo
-${PYSITELIB}/zmq/backend/constants.pyi
 ${PYSITELIB}/zmq/backend/cython/__init__.pxd
 ${PYSITELIB}/zmq/backend/cython/__init__.py
 ${PYSITELIB}/zmq/backend/cython/__init__.pyc
@@ -77,8 +76,6 @@ ${PYSITELIB}/zmq/backend/cython/_proxy_steerable.so
 ${PYSITELIB}/zmq/backend/cython/_version.so
 ${PYSITELIB}/zmq/backend/cython/checkrc.pxd
 ${PYSITELIB}/zmq/backend/cython/constant_enums.pxi
-${PYSITELIB}/zmq/backend/cython/constants.pxi
-${PYSITELIB}/zmq/backend/cython/constants.so
 ${PYSITELIB}/zmq/backend/cython/context.pxd
 ${PYSITELIB}/zmq/backend/cython/context.so
 ${PYSITELIB}/zmq/backend/cython/error.so
@@ -91,6 +88,9 @@ ${PYSITELIB}/zmq/backend/cython/utils.so
 ${PYSITELIB}/zmq/backend/select.py
 ${PYSITELIB}/zmq/backend/select.pyc
 ${PYSITELIB}/zmq/backend/select.pyo
+${PYSITELIB}/zmq/constants.py
+${PYSITELIB}/zmq/constants.pyc
+${PYSITELIB}/zmq/constants.pyo
 ${PYSITELIB}/zmq/decorators.py
 ${PYSITELIB}/zmq/decorators.pyc
 ${PYSITELIB}/zmq/decorators.pyo
@@ -215,10 +215,6 @@ ${PYSITELIB}/zmq/sugar/__init__.pyo
 ${PYSITELIB}/zmq/sugar/attrsettr.py
 ${PYSITELIB}/zmq/sugar/attrsettr.pyc
 ${PYSITELIB}/zmq/sugar/attrsettr.pyo
-${PYSITELIB}/zmq/sugar/constants.py
-${PYSITELIB}/zmq/sugar/constants.pyc
-${PYSITELIB}/zmq/sugar/constants.pyi
-${PYSITELIB}/zmq/sugar/constants.pyo
 ${PYSITELIB}/zmq/sugar/context.py
 ${PYSITELIB}/zmq/sugar/context.pyc
 ${PYSITELIB}/zmq/sugar/context.pyo
@@ -354,9 +350,6 @@ ${PYSITELIB}/zmq/utils/__init__.pyo
 ${PYSITELIB}/zmq/utils/buffers.pxd
 ${PYSITELIB}/zmq/utils/compiler.json
 ${PYSITELIB}/zmq/utils/config.json
-${PYSITELIB}/zmq/utils/constant_names.py
-${PYSITELIB}/zmq/utils/constant_names.pyc
-${PYSITELIB}/zmq/utils/constant_names.pyo
 ${PYSITELIB}/zmq/utils/garbage.py
 ${PYSITELIB}/zmq/utils/garbage.pyc
 ${PYSITELIB}/zmq/utils/garbage.pyo
@@ -383,4 +376,3 @@ ${PYSITELIB}/zmq/utils/z85.py
 ${PYSITELIB}/zmq/utils/z85.pyc
 ${PYSITELIB}/zmq/utils/z85.pyo
 ${PYSITELIB}/zmq/utils/zmq_compat.h
-${PYSITELIB}/zmq/utils/zmq_constants.h
