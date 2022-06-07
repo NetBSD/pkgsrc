@@ -1,8 +1,9 @@
-# $NetBSD: options.mk,v 1.1 2021/12/02 17:59:05 pho Exp $
+# $NetBSD: options.mk,v 1.2 2022/06/07 08:17:37 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.e2fsprogs
 PKG_SUPPORTED_OPTIONS=	nls
-PKG_SUGGESTED_OPTIONS=	nls
+# the option is broken - the .po files it wants to install are not generated
+PKG_SUGGESTED_OPTIONS=	# nls
 
 PLIST_VARS+=		nls
 
