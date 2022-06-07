@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2022/05/30 15:58:30 adam Exp $
+# $NetBSD: Makefile,v 1.68 2022/06/07 18:07:16 wiz Exp $
 
 DISTNAME=	libnotify-0.7.12
 CATEGORIES=	sysutils gnome
@@ -22,6 +22,8 @@ PKGCONFIG_OVERRIDE=		output/meson-private/libnotify.pc
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
 MAKE_ENV+=			LD_LIBRARY_PATH=${WRKSRC}/output/${PKGBASE}
 
+MESON_ARGS+=		-Dintrospection=enabled
+
 # Apply removals to post-wrapper transformed arguments.
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,${WRKSRC}/libnotify/libnotify.map
@@ -33,6 +35,8 @@ PYTHON_FOR_BUILD_ONLY=	tool
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.26.0
 .include "../../devel/glib2/buildlink3.mk"
+BUILDLINK_DEPMETHOD.gobject-introspection=	build
+.include "../../devel/gobject-introspection/buildlink3.mk"
 BUILDLINK_DEPMETHOD.gtk3=	build
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../devel/meson/build.mk"
