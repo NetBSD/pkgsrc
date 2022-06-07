@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2940 2022/06/07 20:34:23 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.2941 2022/06/07 20:36:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4483,3 +4483,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-ipykernel to 6.13.1 [adam 2022-06-07]
 	Updated www/webkit-gtk to 2.36.3nb2 [wiz 2022-06-07]
 	Updated graphics/gexiv2 to 0.12.2nb6 [wiz 2022-06-07]
+	Updated print/poppler-glib to 22.04.0nb1 [wiz 2022-06-07]
