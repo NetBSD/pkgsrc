@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.421 2022/05/01 08:03:40 nia Exp $
+# $NetBSD: bsd.prefs.mk,v 1.422 2022/06/07 10:04:25 jperkin Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -872,6 +872,14 @@ _PKGSRC_USE_CTF=	no
 _USE_CWRAPPERS=		yes
 .else
 _USE_CWRAPPERS=		no
+.endif
+
+# Use C-based tools to speed up pkgsrc infrastructure tasks.
+.if empty(PKGPATH:Mpkgtools/mktools) && \
+    ${PKGSRC_USE_MKTOOLS:tl} == "yes"
+_PKGSRC_USE_MKTOOLS=	yes
+.else
+_PKGSRC_USE_MKTOOLS=	no
 .endif
 
 # Wrapper framework definitions
