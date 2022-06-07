@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2022/06/07 10:23:54 pin Exp $
+# $NetBSD: options.mk,v 1.5 2022/06/07 16:29:21 pin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.spotify-player
 PKG_SUPPORTED_OPTIONS=	alsa gstreamer jack portaudio pulseaudio rodio sdl spotify-player-lyric-finder
@@ -58,6 +58,7 @@ RUSTFLAGS+=		-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.SDL2}/lib
 .endif
 
 .if !empty(PKG_OPTIONS:Mspotify-player-lyric-finder)
+# Please review the Terms of Service at https://genius.com/static/terms
+# and make sure you agree with these before enabling this option
 CARGO_FEATURES+=	lyric-finder
-LICENSE+=		AND genius.com-license
 .endif
