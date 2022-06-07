@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2022/05/05 03:08:15 taca Exp $
+$NetBSD: distinfo,v 1.14 2022/06/07 14:48:12 taca Exp $
 
-BLAKE2s (activejob-5.2.7.1.gem) = 59d51f77072d5a2c67b936e0541f22d794572314903239ecba1595a6e8237414
-SHA512 (activejob-5.2.7.1.gem) = 47730b7609c93f888610ba872182ac0a24855adfba59794d6bb112f449e71aa709d8805084aaf02774ff79daf7a21e8329cce674c8a0b44cd02a0f80c35843ae
-Size (activejob-5.2.7.1.gem) = 26624 bytes
+BLAKE2s (activejob-5.2.8.gem) = 95b0a069f29b53525e6f3a6ca996abd6270fff82405a2737ccebafdacbee9434
+SHA512 (activejob-5.2.8.gem) = 5d708317c7fbff448710ac2c7958c01f4d3453a62d12913fc6e28dc4aa55a7914d5f37e2be652e7827cb56cc5d5607dce97e0dbe7f7a7be272cdb848f811223a
+Size (activejob-5.2.8.gem) = 26624 bytes
