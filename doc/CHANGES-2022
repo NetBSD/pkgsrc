@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2927 2022/06/07 15:24:25 taca Exp $
+$NetBSD: CHANGES-2022,v 1.2928 2022/06/07 16:25:51 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4469,3 +4469,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/ruby-railties70 to 7.0.3 [taca 2022-06-07]
 	Updated textproc/ruby-actiontext70 to 7.0.3 [taca 2022-06-07]
 	Updated www/ruby-rails70 to 7.0.3 [taca 2022-06-07]
+	Updated games/tetris-cli to 22.67.2 [pin 2022-06-07]
