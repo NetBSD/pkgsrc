@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.97 2022/04/18 19:10:01 adam Exp $
+# $NetBSD: Makefile,v 1.98 2022/06/07 20:38:06 wiz Exp $
 
 DISTNAME=	gssdp-1.0.3
-PKGREVISION=	19
+PKGREVISION=	20
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gssdp/1.0/}
 EXTRACT_SUFX=	.tar.xz
@@ -19,8 +19,8 @@ USE_TOOLS+=		pkg-config gmake
 PKGCONFIG_OVERRIDE+=	gssdp-1.0.pc.in
 
 .include "../../devel/glib2/buildlink3.mk"
+BUILDLINK_DEPMETHOD.gobject-introspection=	build
 .include "../../devel/gobject-introspection/buildlink3.mk"
-BUILDLINK_DEPMETHOD.vala?=	build
 .include "../../lang/vala/buildlink3.mk"
 .include "../../net/libsoup/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
