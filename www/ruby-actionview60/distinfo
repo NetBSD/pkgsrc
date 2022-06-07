@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2022/05/05 03:23:12 taca Exp $
+$NetBSD: distinfo,v 1.18 2022/06/07 14:59:20 taca Exp $
 
-BLAKE2s (actionview-6.0.4.8.gem) = 21c79c896fe78d0687f0454769cddad6d65bd31c9cec7683a3eb496de1e99d74
-SHA512 (actionview-6.0.4.8.gem) = 7eac75addd958fe5c0ae3136c8d051a1cd65829740891bd856272ed1251123fa90293887e6714da98150d3be73abbda2ffabbdd8231d8f95286e32406cb6123d
-Size (actionview-6.0.4.8.gem) = 170496 bytes
+BLAKE2s (actionview-6.0.5.gem) = af9376f075698ea84aa5dde418643f57c9af6e25ef8d46a989c34bea7643ad2b
+SHA512 (actionview-6.0.5.gem) = 9c5afc817588b572328623c5845f1cf71dcdc2373f11ccd75ff5e0e444b5b050bc4410f8e26b5c9910fbfb7d0665c0d3147ee15bea6bb4f608c70ce7fc268424
+Size (actionview-6.0.5.gem) = 170496 bytes
