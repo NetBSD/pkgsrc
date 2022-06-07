@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/03/20 17:11:39 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/06/07 14:59:21 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/MIT-LICENSE
@@ -31,6 +31,7 @@ ${GEM_LIBDIR}/lib/action_text/fragment.rb
 ${GEM_LIBDIR}/lib/action_text/gem_version.rb
 ${GEM_LIBDIR}/lib/action_text/html_conversion.rb
 ${GEM_LIBDIR}/lib/action_text/plain_text_conversion.rb
+${GEM_LIBDIR}/lib/action_text/rendering.rb
 ${GEM_LIBDIR}/lib/action_text/serialization.rb
 ${GEM_LIBDIR}/lib/action_text/trix_attachment.rb
 ${GEM_LIBDIR}/lib/action_text/version.rb
