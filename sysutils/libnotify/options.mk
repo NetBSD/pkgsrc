@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.7 2019/08/25 11:54:34 leot Exp $
+# $NetBSD: options.mk,v 1.8 2022/06/07 18:07:16 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libnotify
-PKG_SUPPORTED_OPTIONS=	doc introspection
-PKG_SUGGESTED_OPTIONS=	introspection
-PLIST_VARS+=		doc introspection
+PKG_SUPPORTED_OPTIONS=	doc
+PKG_SUGGESTED_OPTIONS=	# empty
+PLIST_VARS+=		doc
 
 .include "../../mk/bsd.options.mk"
 
@@ -16,13 +16,4 @@ MESON_ARGS+=		-Dgtk_doc=true
 .else
 MESON_ARGS+=		-Ddocbook_docs=disabled
 MESON_ARGS+=		-Dgtk_doc=false
-.endif
-
-.if !empty(PKG_OPTIONS:Mintrospection)
-BUILDLINK_DEPMETHOD.gobject-introspection=	build
-.include "../../devel/gobject-introspection/buildlink3.mk"
-PLIST.introspection=	yes
-MESON_ARGS+=		-Dintrospection=enabled
-.else
-MESON_ARGS+=		-Dintrospection=disabled
 .endif
