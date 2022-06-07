@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2923 2022/06/07 14:48:45 tpaul Exp $
+$NetBSD: CHANGES-2022,v 1.2924 2022/06/07 14:50:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4419,3 +4419,14 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed x11/py-Pmw2 [wiz 2022-06-07]
 	Updated devel/php-xdebug to 3.1.5 [taca 2022-06-07]
 	Updated net/terraform-provider-vultr to 2.11.2 [tpaul 2022-06-07]
+	Updated devel/ruby-activesupport52 to 5.2.8 [taca 2022-06-07]
+	Updated devel/ruby-activemodel52 to 5.2.8 [taca 2022-06-07]
+	Updated devel/ruby-activejob52 to 5.2.8 [taca 2022-06-07]
+	Updated www/ruby-actionview52 to 5.2.8 [taca 2022-06-07]
+	Updated www/ruby-actionpack52 to 5.2.8 [taca 2022-06-07]
+	Updated www/ruby-actioncable52 to 5.2.8 [taca 2022-06-07]
+	Updated databases/ruby-activerecord52 to 5.2.8 [taca 2022-06-07]
+	Updated devel/ruby-activestorage52 to 5.2.8 [taca 2022-06-07]
+	Updated mail/ruby-actionmailer52 to 5.2.8 [taca 2022-06-07]
+	Updated devel/ruby-railties52 to 5.2.8 [taca 2022-06-07]
+	Updated www/ruby-rails52 to 5.2.8 [taca 2022-06-07]
