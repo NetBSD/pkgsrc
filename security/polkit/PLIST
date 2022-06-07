@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2021/11/01 10:20:48 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/06/07 18:03:55 wiz Exp $
 bin/pk-example-frobnicate
 bin/pkaction
 bin/pkcheck
@@ -32,8 +32,8 @@ include/polkit-1/polkitagent/polkitagentlistener.h
 include/polkit-1/polkitagent/polkitagentsession.h
 include/polkit-1/polkitagent/polkitagenttextlistener.h
 include/polkit-1/polkitagent/polkitagenttypes.h
-${PLIST.introspection}lib/girepository-1.0/Polkit-1.0.typelib
-${PLIST.introspection}lib/girepository-1.0/PolkitAgent-1.0.typelib
+lib/girepository-1.0/Polkit-1.0.typelib
+lib/girepository-1.0/PolkitAgent-1.0.typelib
 lib/libpolkit-agent-1.la
 lib/libpolkit-gobject-1.la
 lib/pkgconfig/polkit-agent-1.pc
@@ -52,8 +52,8 @@ ${PLIST.pam}share/examples/pam.d/polkit-1
 share/examples/polkit/polkit-1/rules.d/50-default.rules
 share/gettext/its/polkit.its
 share/gettext/its/polkit.loc
-${PLIST.introspection}share/gir-1.0/Polkit-1.0.gir
-${PLIST.introspection}share/gir-1.0/PolkitAgent-1.0.gir
+share/gir-1.0/Polkit-1.0.gir
+share/gir-1.0/PolkitAgent-1.0.gir
 share/locale/cs/LC_MESSAGES/polkit-1.mo
 share/locale/da/LC_MESSAGES/polkit-1.mo
 share/locale/de/LC_MESSAGES/polkit-1.mo
