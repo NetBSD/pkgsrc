@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2913 2022/06/07 09:53:46 jperkin Exp $
+$NetBSD: CHANGES-2022,v 1.2914 2022/06/07 10:05:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4407,3 +4407,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated math/openfst to 1.8.2 [wiz 2022-06-07]
 	Updated sysutils/e2fsprogs to 1.46.4nb2 [wiz 2022-06-07]
 	Added pkgtools/mktools version 20220607 [jperkin 2022-06-07]
+	Updated net/wireguard-tools to 1.0.20210914 [adam 2022-06-07]
+	Updated textproc/ugrep to 3.8.1 [adam 2022-06-07]
