@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2918 2022/06/07 10:15:01 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.2919 2022/06/07 10:18:27 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4413,3 +4413,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/tuc to 0.9.0 [pin 2022-06-07]
 	Updated time/heliocron to 0.6.0 [pin 2022-06-07]
 	Removed sysutils/tkdesk [wiz 2022-06-07]
+	Added games/tetris-cli version 22.66.1 [pin 2022-06-07]
