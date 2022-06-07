@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.89 2022/05/29 17:47:15 leot Exp $
+# $NetBSD: buildlink3.mk,v 1.90 2022/06/07 20:28:43 wiz Exp $
 
 BUILDLINK_TREE+=	webkit-gtk
 
@@ -15,7 +15,7 @@ GCC_REQD+=	8
 pkgbase := webkit-gtk
 .include "../../mk/pkg-build-options.mk"
 
-.if !empty(PKG_BUILD_OPTIONS.webkit-gtk:Menchant)
+.if ${PKG_BUILD_OPTIONS.webkit-gtk:Menchant}
 .include "../../textproc/enchant2/buildlink3.mk"
 .endif
 
