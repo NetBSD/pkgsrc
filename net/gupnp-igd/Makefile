@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.53 2022/04/18 19:10:02 adam Exp $
+# $NetBSD: Makefile,v 1.54 2022/06/07 20:41:17 wiz Exp $
 
 DISTNAME=	gupnp-igd-0.2.5
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	net devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gupnp-igd/0.2/}
 EXTRACT_SUFX=	.tar.xz
@@ -22,6 +22,7 @@ TEST_TARGET=	check
 .include "../../net/gupnp/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.14.0
 .include "../../devel/glib2/buildlink3.mk"
+BUILDLINK_DEPMETHOD.gobject-introspection=	build
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../textproc/gtk-doc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
