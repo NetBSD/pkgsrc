@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2022/03/12 08:01:51 nia Exp $
+# $NetBSD: Makefile,v 1.42 2022/06/07 18:03:55 wiz Exp $
 
 DISTNAME=	polkit-0.120
 PKGREVISION=	2
@@ -39,6 +39,7 @@ CONFIGURE_ARGS+=	--with-polkitd-user=${POLKITD_USER}
 CONFIGURE_ARGS+=	--disable-libsystemd-login
 CONFIGURE_ARGS+=	--disable-libelogind
 CONFIGURE_ARGS+=	--with-duktape
+CONFIGURE_ARGS+=	--enable-introspection
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -84,5 +85,7 @@ pre-configure:
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../devel/glib2/buildlink3.mk"
+BUILDLINK_DEPMETHOD.gobject-introspection+=	build
+.include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
