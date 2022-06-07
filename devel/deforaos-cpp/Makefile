@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2022/04/30 21:01:19 khorben Exp $
+# $NetBSD: Makefile,v 1.11 2022/06/07 07:37:58 wiz Exp $
 
 DISTNAME=	CPP-0.0.6
 PKGNAME=	deforaos-cpp-0.0.6
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://ftp.defora.org/pub/DeforaOS/Apps/Devel/src/CPP/
 
@@ -24,6 +25,6 @@ post-install:
 
 .include "../../devel/deforaos-configure/deforaos-configure.mk"
 .include "../../devel/deforaos-libsystem/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gtk-doc+=	gtk-doc>=1.20
+BUILDLINK_API_DEPENDS.gtk-doc+=	gtk-doc>=1.32nb9
 .include "../../textproc/gtk-doc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
