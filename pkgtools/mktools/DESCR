@@ -1,0 +1,2 @@
+Collection of tools written in C to improve the performance of certain
+sections of the pkgsrc mk infrastructure where shell is too slow.
