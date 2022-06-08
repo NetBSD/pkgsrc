@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2954 2022/06/08 11:49:30 mef Exp $
+$NetBSD: CHANGES-2022,v 1.2955 2022/06/08 12:00:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4498,3 +4498,19 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/meson to 0.62.2 [adam 2022-06-08]
 	Updated textproc/hck to 0.7.5 [pin 2022-06-08]
 	Updated devel/MoarVM to 2022.06 [mef 2022-06-08]
+	Updated security/py-acme to 1.28.0 [adam 2022-06-08]
+	Updated security/py-certbot to 1.28.0 [adam 2022-06-08]
+	Updated security/py-certbot-apache to 1.28.0 [adam 2022-06-08]
+	Updated security/py-certbot-dns-digitalocean to 1.28.0 [adam 2022-06-08]
+	Updated security/py-certbot-dns-dnsimple to 1.28.0 [adam 2022-06-08]
+	Updated security/py-certbot-dns-dnsmadeeasy to 1.28.0 [adam 2022-06-08]
+	Updated security/py-certbot-dns-gehirn to 1.28.0 [adam 2022-06-08]
+	Updated security/py-certbot-dns-google to 1.28.0 [adam 2022-06-08]
+	Updated security/py-certbot-dns-linode to 1.28.0 [adam 2022-06-08]
+	Updated security/py-certbot-dns-luadns to 1.28.0 [adam 2022-06-08]
+	Updated security/py-certbot-dns-nsone to 1.28.0 [adam 2022-06-08]
+	Updated security/py-certbot-dns-ovh to 1.28.0 [adam 2022-06-08]
+	Updated security/py-certbot-dns-rfc2136 to 1.28.0 [adam 2022-06-08]
+	Updated security/py-certbot-dns-route53 to 1.28.0 [adam 2022-06-08]
+	Updated security/py-certbot-dns-sakuracloud to 1.28.0 [adam 2022-06-08]
+	Updated security/py-certbot-nginx to 1.28.0 [adam 2022-06-08]
