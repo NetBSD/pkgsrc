@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2022/04/18 12:36:07 nia Exp $
+# $NetBSD: Makefile,v 1.19 2022/06/08 07:52:41 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/plugins/plugins1/}
+PKGREVISION=	1
 CATEGORIES=	multimedia gnome
 
 COMMENT=	Open source multimedia framework - bad plugins
@@ -81,5 +82,6 @@ GST_PLUGINS+=	nls
 LDFLAGS.SunOS+=	-lsocket -lnsl
 
 .include "Makefile.common"
+BUILDLINK_DEPMETHOD.gobject-introspection=	build
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
