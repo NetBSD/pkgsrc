@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2952 2022/06/08 08:28:20 adam Exp $
+$NetBSD: CHANGES-2022,v 1.2953 2022/06/08 11:34:04 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4496,3 +4496,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated multimedia/gst-plugins1-bad to 1.20.2nb1 [wiz 2022-06-08]
 	Updated devel/py-setuptools to 62.3.3 [adam 2022-06-08]
 	Updated devel/meson to 0.62.2 [adam 2022-06-08]
+	Updated textproc/hck to 0.7.5 [pin 2022-06-08]
