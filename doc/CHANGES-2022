@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2951 2022/06/08 07:52:50 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.2952 2022/06/08 08:28:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4494,3 +4494,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/htop to 3.2.1 [nia 2022-06-08]
 	Updated multimedia/gst-plugins1-base to 1.20.2nb1 [wiz 2022-06-08]
 	Updated multimedia/gst-plugins1-bad to 1.20.2nb1 [wiz 2022-06-08]
+	Updated devel/py-setuptools to 62.3.3 [adam 2022-06-08]
+	Updated devel/meson to 0.62.2 [adam 2022-06-08]
