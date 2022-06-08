@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2960 2022/06/08 17:57:17 adam Exp $
+$NetBSD: CHANGES-2022,v 1.2961 2022/06/08 19:00:13 chuck Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4523,3 +4523,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-filelock to 3.7.1 [adam 2022-06-08]
 	Updated lang/python310 to 3.10.5 [adam 2022-06-08]
 	Updated lang/py310-html-docs to 3.10.5 [adam 2022-06-08]
+	Updated fonts/t1lib to 5.1.2nb7 [chuck 2022-06-08]
