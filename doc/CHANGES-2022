@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2950 2022/06/08 07:50:01 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.2951 2022/06/08 07:52:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4493,3 +4493,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated audio/pt2-clone to 1.49 [nia 2022-06-08]
 	Updated sysutils/htop to 3.2.1 [nia 2022-06-08]
 	Updated multimedia/gst-plugins1-base to 1.20.2nb1 [wiz 2022-06-08]
+	Updated multimedia/gst-plugins1-bad to 1.20.2nb1 [wiz 2022-06-08]
