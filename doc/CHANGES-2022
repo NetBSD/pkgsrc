@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2957 2022/06/08 13:43:46 bacon Exp $
+$NetBSD: CHANGES-2022,v 1.2958 2022/06/08 17:19:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4517,3 +4517,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/nqp to 2022.06 [mef 2022-06-08]
 	Updated lang/rakudo to 2022.06 [mef 2022-06-08]
 	Updated sysutils/auto-admin to 0.7.11 [bacon 2022-06-08]
+	Updated math/py-asteval to 0.9.27 [adam 2022-06-08]
+	Updated devel/py-typed-ast to 1.5.4 [adam 2022-06-08]
