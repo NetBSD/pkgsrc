@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2953 2022/06/08 11:34:04 pin Exp $
+$NetBSD: CHANGES-2022,v 1.2954 2022/06/08 11:49:30 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4497,3 +4497,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-setuptools to 62.3.3 [adam 2022-06-08]
 	Updated devel/meson to 0.62.2 [adam 2022-06-08]
 	Updated textproc/hck to 0.7.5 [pin 2022-06-08]
+	Updated devel/MoarVM to 2022.06 [mef 2022-06-08]
