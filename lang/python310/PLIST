@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2022/03/25 17:55:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/06/08 17:56:46 adam Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -2984,6 +2984,9 @@ lib/python${PY_VER_SUFFIX}/test/dis_module.pyo
 lib/python${PY_VER_SUFFIX}/test/doctest_aliases.py
 lib/python${PY_VER_SUFFIX}/test/doctest_aliases.pyc
 lib/python${PY_VER_SUFFIX}/test/doctest_aliases.pyo
+lib/python${PY_VER_SUFFIX}/test/doctest_lineno.py
+lib/python${PY_VER_SUFFIX}/test/doctest_lineno.pyc
+lib/python${PY_VER_SUFFIX}/test/doctest_lineno.pyo
 lib/python${PY_VER_SUFFIX}/test/double_const.py
 lib/python${PY_VER_SUFFIX}/test/double_const.pyc
 lib/python${PY_VER_SUFFIX}/test/double_const.pyo
