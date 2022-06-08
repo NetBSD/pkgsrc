@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2963 2022/06/08 21:26:12 rillig Exp $
+$NetBSD: CHANGES-2022,v 1.2964 2022/06/08 22:20:03 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4526,3 +4526,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated fonts/t1lib to 5.1.2nb7 [chuck 2022-06-08]
 	Updated devel/texttest to 4.1.2 [schmonz 2022-06-08]
 	Updated games/puzzles to 20220127 [rillig 2022-06-08]
+	Updated games/robotfindskitten to 2.7182818.701 [rillig 2022-06-08]
