@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2946 2022/06/07 20:46:05 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.2947 2022/06/08 06:12:18 fox Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4489,3 +4489,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/gssdp to 1.0.3nb20 [wiz 2022-06-07]
 	Updated net/libnice to 0.1.16nb11 [wiz 2022-06-07]
 	Updated devel/at-spi2-core to 2.40.3nb2 [wiz 2022-06-07]
+	Updated sysutils/py-Glances to 3.2.6.4 [fox 2022-06-08]
