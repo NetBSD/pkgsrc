@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:44:23 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/06/08 21:55:28 rillig Exp $
 
 BLAKE2s (robotfindskitten-1.7320508.406.tar.gz) = 0827123f74e4077c15f2c3b56f705c1318e0a5724b213581e999d0867b12b6e1
 SHA512 (robotfindskitten-1.7320508.406.tar.gz) = 96c8f9968336cda5f079ca4b69a17a76444a3291b1354d594d2a9b89cb0d88296b983c70076da3334774710d811b33a90fe513ba5dca330808e5345e6c920865
 Size (robotfindskitten-1.7320508.406.tar.gz) = 406412 bytes
-SHA1 (patch-configure) = 0ac7bf23c092e6302db9ac040845663cdcab5f2e
-SHA1 (patch-src_Makefile.in) = 84636145ec95e38d25b140ce4a9adf7c7f087e15
-SHA1 (patch-src_robotfindskitten.c) = ec94eb49711f4f3d439e354a29c7217b363b23cf
+SHA1 (patch-src_Makefile.in) = b86047359beb9ae8e37303e91b90401920cb18c0
+SHA1 (patch-src_robotfindskitten.c) = 3de2a29060bb3f3889608b3917e6e54dbc5837b1
