@@ -1,24 +1,11 @@
-$NetBSD: patch-Source_WTF_wtf_posix_OSAllocatorPOSIX.cpp,v 1.2 2022/05/30 20:40:55 leot Exp $
+$NetBSD: patch-Source_WTF_wtf_posix_OSAllocatorPOSIX.cpp,v 1.3 2022/06/08 20:56:50 leot Exp $
 
 Set protections for tryReserveUncommittedAligned() on platforms
 that have MAP_ALIGNED.
 
-This avoid a regression introduced by:
+This avoid a regression introduced by 247105@main.
 
- 2022-02-10  Keith Miller  <keith_miller@apple.com>
- 
- tryReserveUncommittedAligned should explicitly take the alignment requested
- https://bugs.webkit.org/show_bug.cgi?id=236460
- 
- Reviewed by Yusuke Suzuki.
- 
- When reducing the size of VA space reserved for Structures, we
- didn't take care to ensure the alignment matched the required
- alignment for our bit mask. To fix this we need to pass the
- original alignment to the allocator as a new parameter.
- 
- * heap/StructureAlignedMemoryAllocator.cpp:
-   (JSC::StructureMemoryManager::StructureMemoryManager):
+Shared and applied upstream via <https://bugs.webkit.org/show_bug.cgi?id=241386>.
 
 --- Source/WTF/wtf/posix/OSAllocatorPOSIX.cpp.orig	2022-02-23 11:41:47.560819000 +0000
 +++ Source/WTF/wtf/posix/OSAllocatorPOSIX.cpp
