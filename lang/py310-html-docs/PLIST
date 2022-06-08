@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/10/05 19:07:13 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/06/08 17:56:46 adam Exp $
 share/doc/python3.10/.buildinfo
 share/doc/python3.10/_downloads/6b45dc135219d1404be49d606589a11d/tzinfo_examples.py
 share/doc/python3.10/_images/hashlib-blake2-tree.png
@@ -398,7 +398,6 @@ share/doc/python3.10/_sources/library/tty.rst.txt
 share/doc/python3.10/_sources/library/turtle.rst.txt
 share/doc/python3.10/_sources/library/types.rst.txt
 share/doc/python3.10/_sources/library/typing.rst.txt
-share/doc/python3.10/_sources/library/undoc.rst.txt
 share/doc/python3.10/_sources/library/unicodedata.rst.txt
 share/doc/python3.10/_sources/library/unittest.mock-examples.rst.txt
 share/doc/python3.10/_sources/library/unittest.mock.rst.txt
@@ -943,7 +942,6 @@ share/doc/python3.10/library/tty.html
 share/doc/python3.10/library/turtle.html
 share/doc/python3.10/library/types.html
 share/doc/python3.10/library/typing.html
-share/doc/python3.10/library/undoc.html
 share/doc/python3.10/library/unicodedata.html
 share/doc/python3.10/library/unittest.html
 share/doc/python3.10/library/unittest.mock-examples.html
