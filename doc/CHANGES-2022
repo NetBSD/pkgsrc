@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2948 2022/06/08 06:54:53 nia Exp $
+$NetBSD: CHANGES-2022,v 1.2949 2022/06/08 07:01:26 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4491,3 +4491,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/at-spi2-core to 2.40.3nb2 [wiz 2022-06-07]
 	Updated sysutils/py-Glances to 3.2.6.4 [fox 2022-06-08]
 	Updated audio/pt2-clone to 1.49 [nia 2022-06-08]
+	Updated sysutils/htop to 3.2.1 [nia 2022-06-08]
