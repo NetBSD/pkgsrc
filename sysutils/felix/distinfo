@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.25 2022/05/26 21:26:52 pin Exp $
+$NetBSD: distinfo,v 1.26 2022/06/09 07:16:18 pin Exp $
 
 BLAKE2s (adler-1.0.2.crate) = f263779d752af886455fc0f42c997893fb1a09edcf1bd2980605251c2e3602aa
 SHA512 (adler-1.0.2.crate) = 7ab190d31890fc05b0b55d8e2c6527a505e06793d5496be0b3831e0513412f9ba97f8148f6f68ed0770fa9cd980a5092d885e058becf1d5506b7c74b82674aa1
@@ -84,9 +84,9 @@ Size (exr-1.4.2.crate) = 235974 bytes
 BLAKE2s (fastrand-1.7.0.crate) = 16894d1387a09d7f3575ec099db001d9e750e54426cd80fa084ce86174b27ecb
 SHA512 (fastrand-1.7.0.crate) = 6a1a8cd4f6f9bfff07a4ca18ef84839e4427ca9bf9b6733bb15b1b70cf2439820d6a770ae9f3e5e10166a6144449e37e6f3f6ed9acb761688207fd7c53d2c673
 Size (fastrand-1.7.0.crate) = 11265 bytes
-BLAKE2s (felix-0.9.3.tar.gz) = 0e7b97b7bc434a8a78c8906acc65808278f130e8499b89b6281d0ee9fc89fbf6
-SHA512 (felix-0.9.3.tar.gz) = eaf18433e44a7893e5fc44c6f3c0d219d0b3946307ebe83cf85e39b8f9fc7c81a6c4fe26905e27d86cb2f10b09f2db0d6844d2caae0be6c42e6d6fce1c95e73f
-Size (felix-0.9.3.tar.gz) = 4664533 bytes
+BLAKE2s (felix-0.9.4.tar.gz) = 1c07c63b2d1eb15d250eff81873fc3c69396062af273ea0104181ccd5881e941
+SHA512 (felix-0.9.4.tar.gz) = b6c81a274841e3cb3c6664cc5e6de6f827554efd8630db9b708f1db7be12a9de50395ad3984c7857ede8821a2c24f82fa10f5d72bc28e096b5d5c0bf0944772e
+Size (felix-0.9.4.tar.gz) = 5742334 bytes
 BLAKE2s (flate2-1.0.23.crate) = 583b36f5a7633fc0284c0984b7c464819307413180cb59e4311efd7c41beb9a9
 SHA512 (flate2-1.0.23.crate) = 01f84f0d4d0c06aa0c807e5ccb418a5675d88d568694f74aabec8ee06c74e6b75c9c28fbeba2a99fe74b00bd29e71b9aa2df0d96da85beec76b3a30b4d044fe9
 Size (flate2-1.0.23.crate) = 70440 bytes
@@ -219,6 +219,12 @@ Size (redox_termios-0.1.2.crate) = 3268 bytes
 BLAKE2s (redox_users-0.4.3.crate) = fafe5c327db7de7f8b6340807a14fb60bdea5ac74634a60379b62c4793cb447b
 SHA512 (redox_users-0.4.3.crate) = 0d3366e23cf93e1b0e025a29025eaebfcd1145bd158e2663b94fd952dc2d8a25566819e3a03c4136ca16a6408d37396e2ead0814c3f0c2bb10334dfd0b838fda
 Size (redox_users-0.4.3.crate) = 15353 bytes
+BLAKE2s (regex-1.5.6.crate) = 54470e0ce7f905fde38456f82bc830c98a1ac830538cc1596f5e4f1dc2ee84a4
+SHA512 (regex-1.5.6.crate) = 43ad2ebe14f43d69c62f563a4fd53b5657f0f2cc130a0e6353a13073027640ff891e9f9b40ea85858507047bddb2e023d668c9bf57f2ba0ae045b74b5f0d2a1f
+Size (regex-1.5.6.crate) = 238593 bytes
+BLAKE2s (regex-syntax-0.6.26.crate) = d644259c960314f13984e773bc86607f79ce86e6b397fe231d5cb32ddcc36926
+SHA512 (regex-syntax-0.6.26.crate) = 46087f5a2abfb48f24da77e79e66f6e514b5d005c4ae2c3283418ec471ddac9e4a1361edbae9d27efeb10217157092f812946b7b98182cf9f8aa703e01c03634
+Size (regex-syntax-0.6.26.crate) = 293912 bytes
 BLAKE2s (remove_dir_all-0.5.3.crate) = 1c3501d77c00011b5c303ca74013c37e39700786c370d0891f8114759e4e6b4b
 SHA512 (remove_dir_all-0.5.3.crate) = 50417d6d8a33912193a1ed37eb72b47431b12ae65d2780cdb7080c3d141e63819da13751c3fb737685cea322f70b36d413389c3dc01aa12b4dce615aefed0e2c
 Size (remove_dir_all-0.5.3.crate) = 9184 bytes
@@ -300,6 +306,9 @@ Size (toml-0.5.9.crate) = 55667 bytes
 BLAKE2s (unicode-ident-1.0.0.crate) = 9ce51d7ca1d6aa69db417316fa73574c417fe43e9f002277f7a5731bc179fd6f
 SHA512 (unicode-ident-1.0.0.crate) = ccdad29fc63f71c507cdf276b02a5bb7fad44dffa123bf04d5b1495eb9c26bd7ec42ad6e11717eb10dc6499693047952c6b766c40d7b0696bd011779649d5fc9
 Size (unicode-ident-1.0.0.crate) = 34224 bytes
+BLAKE2s (unicode-width-0.1.9.crate) = 2c6be29baaa9f1c7b48cc6251da5aff0f9ee755d8ff1cc058dd0c084643e546c
+SHA512 (unicode-width-0.1.9.crate) = 0f5ec46c57e3b5e50cb8430c89db8d9c129e80ca11a9c398b5312bfe95001e19ca3efbfeb01c3ac09c4ce7e26c6ee1f352f7e114ecef78cefd68c54d2d50f5f4
+Size (unicode-width-0.1.9.crate) = 16745 bytes
 BLAKE2s (viuer-0.6.1.crate) = 969f4b991004e10f61e3d3cba24bbb804856370987ae1304f0c9ad3273d926c5
 SHA512 (viuer-0.6.1.crate) = 51b8bee7182631f62b634a63736120e93027ad698c747cb3210f8d0ccbc968c684d66ae25a449da34ffd857381dd19d7d7ff30db8d6c16b2257722eefa3f1541
 Size (viuer-0.6.1.crate) = 14527 bytes
