@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2022/04/30 21:12:46 khorben Exp $
+# $NetBSD: Makefile,v 1.11 2022/06/09 07:44:49 wiz Exp $
 
 DISTNAME=	Asm-0.2.6
 PKGNAME=	deforaos-asm-0.2.6
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://ftp.defora.org/pub/DeforaOS/Apps/Devel/src/Asm/
 
@@ -19,6 +20,6 @@ AUTO_MKDIRS=	yes
 
 .include "../../devel/deforaos-configure/deforaos-configure.mk"
 .include "../../devel/deforaos-cpp/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gtk-doc+=	gtk-doc>=1.20
+BUILDLINK_API_DEPENDS.gtk-doc+=	gtk-doc>=1.32nb9
 .include "../../textproc/gtk-doc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
