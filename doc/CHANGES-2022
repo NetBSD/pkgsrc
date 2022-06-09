@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2965 2022/06/09 07:16:39 pin Exp $
+$NetBSD: CHANGES-2022,v 1.2966 2022/06/09 07:45:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4528,3 +4528,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated games/puzzles to 20220127 [rillig 2022-06-08]
 	Updated games/robotfindskitten to 2.7182818.701 [rillig 2022-06-08]
 	Updated sysutils/felix to 0.9.4 [pin 2022-06-09]
+	Updated devel/deforaos-asm to 0.2.6nb1 [wiz 2022-06-09]
