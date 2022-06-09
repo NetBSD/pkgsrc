@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.13 2022/01/04 20:53:45 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2022/06/09 15:49:25 adam Exp $
 
-DISTNAME=	traitlets-5.1.1
+DISTNAME=	traitlets-5.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/traitlets/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://ipython.org/
+HOMEPAGE=	https://github.com/ipython/traitlets
 COMMENT=	Traitlets Python config system
 LICENSE=	modified-bsd
+
+BUILD_DEPENDS+=	${PYPKGPREFIX}-hatchling>=0.25:../../devel/py-hatchling
 
 USE_LANGUAGES=	# none
 
@@ -17,5 +18,5 @@ USE_LANGUAGES=	# none
 # For any earlier version of Python use traitlets 4.x
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
