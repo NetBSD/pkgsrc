@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.5 2022/06/07 10:13:04 pin Exp $
+$NetBSD: distinfo,v 1.6 2022/06/09 07:58:58 pin Exp $
 
-BLAKE2s (aho-corasick-0.7.18.crate) = 8925e88e2df4b5ca3b31783f527e1bb31dbe27846f409f631148fa239f3b2935
-SHA512 (aho-corasick-0.7.18.crate) = 7a23b16231a90d23ee60ad4c81bc225410599a4560d33d3a203138fc540c39cf1000100fed3aed40dcc371c3635656a3792545dca5dd1aefbde00d8774eebd00
-Size (aho-corasick-0.7.18.crate) = 112923 bytes
 BLAKE2s (anyhow-1.0.57.crate) = 41fb9d89f40f717e78e0037fae26ece2af44205dddd0028375284f2c827231bb
 SHA512 (anyhow-1.0.57.crate) = 311b9280aa7d573c11752ca2ffe810e2d4b55fe4c34cca948bbd42f1ddb1d36a51eda39684cffb7f6c4a18508cb53a5a38495521562a0088e3374fee800ff004
 Size (anyhow-1.0.57.crate) = 44614 bytes
@@ -45,21 +42,15 @@ Size (predicates-core-1.0.2.crate) = 8185 bytes
 BLAKE2s (predicates-tree-1.0.2.crate) = 03a7b58203b9a598c3a3e8f0d194f6e1d3de9d1435cc4aa92f3408c48a1f9db1
 SHA512 (predicates-tree-1.0.2.crate) = d11b2b7d44ba5a00ed189d4455216f0c991c0f272776166a528136e26436e3f0cbbbdd001bf9a2b9aceaaf221fb9218fb497116e7957bf6bd9761616428c7ed2
 Size (predicates-tree-1.0.2.crate) = 6341 bytes
-BLAKE2s (regex-1.5.6.crate) = 54470e0ce7f905fde38456f82bc830c98a1ac830538cc1596f5e4f1dc2ee84a4
-SHA512 (regex-1.5.6.crate) = 43ad2ebe14f43d69c62f563a4fd53b5657f0f2cc130a0e6353a13073027640ff891e9f9b40ea85858507047bddb2e023d668c9bf57f2ba0ae045b74b5f0d2a1f
-Size (regex-1.5.6.crate) = 238593 bytes
 BLAKE2s (regex-automata-0.1.10.crate) = 283615bf1114bdcf5a2ebd639ba1889a8a9a0195b566f41226f7e0961f3d5d81
 SHA512 (regex-automata-0.1.10.crate) = 56d64da361afce82c6cb49e70b99ce1fca3e1969c54bba5f9971db135f8544c65f49feb8827789947b3d1dcefc9c49a7a434a7ffe0d09c5900345a1733723c5f
 Size (regex-automata-0.1.10.crate) = 114533 bytes
-BLAKE2s (regex-syntax-0.6.26.crate) = d644259c960314f13984e773bc86607f79ce86e6b397fe231d5cb32ddcc36926
-SHA512 (regex-syntax-0.6.26.crate) = 46087f5a2abfb48f24da77e79e66f6e514b5d005c4ae2c3283418ec471ddac9e4a1361edbae9d27efeb10217157092f812946b7b98182cf9f8aa703e01c03634
-Size (regex-syntax-0.6.26.crate) = 293912 bytes
 BLAKE2s (treeline-0.1.0.crate) = 81ccdbd03361021dd31e9d28ba05b16020601481bf2ec9754869ab687eddc0bc
 SHA512 (treeline-0.1.0.crate) = 37a7c7e95855fdf0fafe5b529eed6c6cfc641da799bc6738a5649a9a0c3db2ef3e63d692862a987bc19263f33b6df2e8ae71b49fe30160d6d470cbb804511824
 Size (treeline-0.1.0.crate) = 3855 bytes
-BLAKE2s (tuc-0.9.0.tar.gz) = 47b8514b1543b626c48d2cc2854f34930cd4676e1078ed40436553338ccdd7a3
-SHA512 (tuc-0.9.0.tar.gz) = e1429bcef50237174dd2adb9278d4a7adb6f3dc92dfdc143f186fca81c8a4aaeeb85b77fbdd6ba8a9527807afb426f0e6a97bf7fd8d9f3f4faceb9b12b875051
-Size (tuc-0.9.0.tar.gz) = 30909 bytes
+BLAKE2s (tuc-0.8.0.tar.gz) = 2f4de96adeccdec78467d752d36e04691fe74f3344c301780a4773df688b6c06
+SHA512 (tuc-0.8.0.tar.gz) = c4ecab5571adf137276603649621d55155fe590bdcabf1c47ea94517267f102ee41b346e967f20a1c98c5a934d0e5eabf065a2454693a7eff0e47142f8e618fd
+Size (tuc-0.8.0.tar.gz) = 26635 bytes
 BLAKE2s (wait-timeout-0.2.0.crate) = 74292341b8dbc71125610cb6f528f9a1b05b234d35fc98899901971af99da233
 SHA512 (wait-timeout-0.2.0.crate) = db3b7aa2acfd44e64451042b8ba98eecab77a82aa5c58ed08dadb119ab36dee4e26d62baad7978ed56d5ad03019c96be5021455362290f56043981137bac8066
 Size (wait-timeout-0.2.0.crate) = 12441 bytes
