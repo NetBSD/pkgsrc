@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2972 2022/06/09 15:53:46 adam Exp $
+$NetBSD: CHANGES-2022,v 1.2973 2022/06/09 18:26:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4534,3 +4534,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/php81 to 8.1.7 [taca 2022-06-09]
 	Updated devel/py-traitlets to 5.2.2 [adam 2022-06-09]
 	Updated devel/py-trio to 0.21.0 [adam 2022-06-09]
+	Updated www/apache24 to 2.4.54 [adam 2022-06-09]
+	Updated sysutils/py-ansible-compat to 2.1.0 [adam 2022-06-09]
