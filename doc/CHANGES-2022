@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2971 2022/06/09 15:11:20 taca Exp $
+$NetBSD: CHANGES-2022,v 1.2972 2022/06/09 15:53:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4532,3 +4532,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/deforaos-browser to 0.5.5nb1 [wiz 2022-06-09]
 	Updated lang/php74 to 7.4.30 [taca 2022-06-09]
 	Updated lang/php81 to 8.1.7 [taca 2022-06-09]
+	Updated devel/py-traitlets to 5.2.2 [adam 2022-06-09]
+	Updated devel/py-trio to 0.21.0 [adam 2022-06-09]
