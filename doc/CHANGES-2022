@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2978 2022/06/10 07:36:13 pin Exp $
+$NetBSD: CHANGES-2022,v 1.2979 2022/06/10 15:07:02 tpaul Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4541,3 +4541,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/wired-notify to 0.10.2 [pin 2022-06-10]
 	Updated security/pleaser to 0.5.2 [pin 2022-06-10]
 	Added textproc/fsrx version 1.0.0 [pin 2022-06-10]
+	Updated devel/php-composer to 2.2.14 [tpaul 2022-06-10]
