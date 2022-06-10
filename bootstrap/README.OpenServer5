@@ -1,12 +1,30 @@
-$NetBSD: README.OpenServer5,v 1.4 2022/04/01 17:19:28 gdt Exp $
+$NetBSD: README.OpenServer5,v 1.5 2022/06/10 13:27:24 gdt Exp $
 
 XXX You should change your /bin/sh to shells/pdksh under OpenServer 5.0.7/3.2!!
 
+
+
 Supported platforms
 ===================
-- Xinuos SCO OpenServer 5.0.7/3.2
+- SCO OpenServer 5 Definitive 2018
 
-Prerequisite softwares
+Prerequisite for SCO OpenServer 5 Definitive 2018
+======================
+- SCO OpenServer 5 Definitive 2018
+- pth 2.0.7 Tc
+- OSS683D
+- XDEV
+
+* Note The above includes compilers, header file changes,  linker changes,
+and other changes to support development. All the above prerequisite are 
+using patchck -o dev on SCO OpenServer 5 Definitive 2018.
+
+Previously Supported platforms
+===================
+- SCO OpenServer 5.0.7/3.2
+
+The below Prerequisite softwares are for versions prior to 
+SCO OpenServer 5 Definitive 2018
 ======================
 - SCO OpenServer 5 Development System with Maintenance Pack 4 update
 - GCC 4.2.4
@@ -24,7 +42,7 @@ in its directory structure (GCC fixincludes mechanism).
 
 Selecting which ABI to use
 ==========================
-Xinuos SCO OpenServer 5.0.7 can handle COFF and ELF binaries.
+SCO OpenServer 5.0.7 can handle COFF and ELF binaries.
 I have tested only ELF binaries.
 But OpenServer 5.0.7's native CC generates COFF by default.
 
