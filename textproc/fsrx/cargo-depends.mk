@@ -1,0 +1,35 @@
+# $NetBSD: cargo-depends.mk,v 1.1 2022/06/10 07:34:56 pin Exp $
+
+CARGO_CRATE_DEPENDS+=	aho-corasick-0.7.18
+CARGO_CRATE_DEPENDS+=	ansi_term-0.12.1
+CARGO_CRATE_DEPENDS+=	atty-0.2.14
+CARGO_CRATE_DEPENDS+=	autocfg-1.1.0
+CARGO_CRATE_DEPENDS+=	bitflags-1.3.2
+CARGO_CRATE_DEPENDS+=	clap-3.1.18
+CARGO_CRATE_DEPENDS+=	clap_derive-3.1.18
+CARGO_CRATE_DEPENDS+=	clap_lex-0.2.0
+CARGO_CRATE_DEPENDS+=	hashbrown-0.11.2
+CARGO_CRATE_DEPENDS+=	heck-0.4.0
+CARGO_CRATE_DEPENDS+=	hermit-abi-0.1.19
+CARGO_CRATE_DEPENDS+=	indexmap-1.8.2
+CARGO_CRATE_DEPENDS+=	lazy_static-1.4.0
+CARGO_CRATE_DEPENDS+=	libc-0.2.126
+CARGO_CRATE_DEPENDS+=	memchr-2.5.0
+CARGO_CRATE_DEPENDS+=	os_str_bytes-6.1.0
+CARGO_CRATE_DEPENDS+=	proc-macro-error-1.0.4
+CARGO_CRATE_DEPENDS+=	proc-macro-error-attr-1.0.4
+CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.39
+CARGO_CRATE_DEPENDS+=	quote-1.0.18
+CARGO_CRATE_DEPENDS+=	regex-1.5.6
+CARGO_CRATE_DEPENDS+=	regex-syntax-0.6.26
+CARGO_CRATE_DEPENDS+=	strsim-0.10.0
+CARGO_CRATE_DEPENDS+=	syn-1.0.96
+CARGO_CRATE_DEPENDS+=	termcolor-1.1.3
+CARGO_CRATE_DEPENDS+=	textwrap-0.15.0
+CARGO_CRATE_DEPENDS+=	unicode-ident-1.0.0
+CARGO_CRATE_DEPENDS+=	unicode-segmentation-1.9.0
+CARGO_CRATE_DEPENDS+=	version_check-0.9.4
+CARGO_CRATE_DEPENDS+=	winapi-0.3.9
+CARGO_CRATE_DEPENDS+=	winapi-i686-pc-windows-gnu-0.4.0
+CARGO_CRATE_DEPENDS+=	winapi-util-0.1.5
+CARGO_CRATE_DEPENDS+=	winapi-x86_64-pc-windows-gnu-0.4.0
