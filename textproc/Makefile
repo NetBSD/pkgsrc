@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1317 2022/05/31 21:06:57 markd Exp $
+# $NetBSD: Makefile,v 1.1318 2022/06/10 07:35:48 pin Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -237,6 +237,7 @@ SUBDIR+=	fmtlib
 SUBDIR+=	fop
 SUBDIR+=	freepwing
 SUBDIR+=	freexl
+SUBDIR+=	fsrx
 SUBDIR+=	gdome2
 SUBDIR+=	git-delta
 SUBDIR+=	glimpse
