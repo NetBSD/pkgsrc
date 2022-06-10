@@ -1,12 +1,20 @@
-This package provides the certificates distributed by the Mozilla
-Project and will, by default, install certificates trusted by the
-Mozilla Project in the system OpenSSL certificate store.  Modification
-of system configuration files is very irregular as pkgsrc should not
-write anything outside of ${PREFIX}.
+This package provides the root certificates distributed by the Mozilla
+Project as curated by Debian in their package of the same name, along
+with tools to manage the set of configured trust anchors for openssl.
 
-The sysadmin can configure the list of trusted certificates and also
-add local certificates as needed by editing ca-certificates.conf and
-re-running update-ca-certificates.
+\todo Explain if Debian adds or removes, or if this is exactly the
+same set.
+
+NB: Installing this package will modify the configuration of the
+openssl implementation used by pkgsrc, which is either the base system
+openssl or pkgsrc openssl.  The modification is configuring every
+certificate as a trust anchor.  Modification of system configuration
+files is very irregular as pkgsrc should not write anything outside of
+${PREFIX}.
+
+The sysadmin can exclude CA certificates from the list of trust
+anchors and also add local certificates as configured trust anchors by
+editing ca-certificates.conf and re-running update-ca-certificates.
 
 See also the mozilla-rootcerts and mozilla-rootcerts-openssl packages
 for an alternative approach.
