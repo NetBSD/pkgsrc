@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2975 2022/06/10 07:30:26 pin Exp $
+$NetBSD: CHANGES-2022,v 1.2976 2022/06/10 07:31:16 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4538,3 +4538,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/py-ansible-compat to 2.1.0 [adam 2022-06-09]
 	Updated lang/php80 to 8.0.20 [taca 2022-06-09]
 	Updated devel/difftastic to 0.29.0 [pin 2022-06-10]
+	Updated x11/wired-notify to 0.10.2 [pin 2022-06-10]
