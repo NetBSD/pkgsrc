@@ -1,4 +1,4 @@
-$NetBSD: README.OpenServer5,v 1.5 2022/06/10 13:27:24 gdt Exp $
+$NetBSD: README.OpenServer5,v 1.6 2022/06/10 13:57:23 gdt Exp $
 
 XXX You should change your /bin/sh to shells/pdksh under OpenServer 5.0.7/3.2!!
 
@@ -15,9 +15,10 @@ Prerequisite for SCO OpenServer 5 Definitive 2018
 - OSS683D
 - XDEV
 
-* Note The above includes compilers, header file changes,  linker changes,
-and other changes to support development. All the above prerequisite are 
-using patchck -o dev on SCO OpenServer 5 Definitive 2018.
+* Note The above includes compilers, header file changes, linker
+changes, and other changes to support development.  All the above
+prerequisite are installed using patchck -o dev on SCO OpenServer 5
+Definitive 2018.
 
 Previously Supported platforms
 ===================
