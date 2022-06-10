@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2022/02/08 12:40:34 pin Exp $
+# $NetBSD: Makefile,v 1.4 2022/06/10 07:30:56 pin Exp $
 
-DISTNAME=	wired-notify-0.10.1
+DISTNAME=	wired-notify-0.10.2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Toqozz/}
 
@@ -20,7 +20,8 @@ RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.libX11}/lib
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.dbus}/lib
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/wired ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/target/release/wired \
+		${DESTDIR}${PREFIX}/bin
 
 
 .include "../../lang/rust/cargo.mk"
