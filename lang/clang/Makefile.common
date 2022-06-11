@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.48 2022/05/05 08:24:41 nia Exp $
+# $NetBSD: Makefile.common,v 1.49 2022/06/11 13:45:44 fcambus Exp $
 # used by lang/clang/Makefile
 # used by lang/clang-tools-extra/Makefile
 
@@ -145,7 +145,7 @@ PLIST.notdylib=	yes
 PLIST_SUBST+=	SOEXT=${SOEXT}
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.clang
-PKG_SUPPORTED_OPTIONS=	tests
+PKG_SUPPORTED_OPTIONS=	tests z3
 
 .include "../../mk/bsd.options.mk"
 
@@ -160,6 +160,16 @@ CMAKE_ARGS+=		-DLLVM_INCLUDE_TESTS=OFF
 CMAKE_ARGS+=		-DCLANG_INCLUDE_TESTS=OFF
 .endif
 
+.include "../../lang/llvm/buildlink3.mk"
+
+.if !empty(PKG_OPTIONS:Mz3)
+.if empty(PKG_BUILD_OPTIONS.llvm:Mz3)
+PKG_FAIL_REASON+=	"z3 PKG_OPTION must be enabled in lang/llvm"
+.endif
+.include "../../math/z3/buildlink3.mk"
+CMAKE_ARGS+=		-DLLVM_ENABLE_Z3_SOLVER=ON
+.endif
+
 post-extract:
 	${MKDIR} ${WRKDIR}/build
 
@@ -168,4 +178,3 @@ post-extract:
 .include "../../lang/python/application.mk"
 .include "../../lang/python/tool.mk"
 DEPENDS+=	llvm-${PKGVERSION_NOREV}{,nb*}:../../lang/llvm
-.include "../../lang/llvm/buildlink3.mk"
