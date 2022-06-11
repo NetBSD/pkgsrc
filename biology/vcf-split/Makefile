@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2022/03/15 21:12:52 bacon Exp $
+# $NetBSD: Makefile,v 1.6 2022/06/11 19:46:43 bacon Exp $
 
-DISTNAME=	vcf-split-0.1.4
+DISTNAME=	vcf-split-0.1.5
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=auerlab/}
 
