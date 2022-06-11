@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2022/03/12 08:01:49 nia Exp $
+# $NetBSD: Makefile,v 1.8 2022/06/11 12:26:55 nia Exp $
 
-DISTNAME=	drawing-0.8.3
+DISTNAME=	drawing-1.0.1
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GITHUB:=maoschanz/}
 
@@ -13,7 +13,7 @@ TOOL_DEPENDS+=	appstream-glib-[0-9]*:../../devel/appstream-glib
 DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 DEPENDS+=	gtk3+-[0-9]*:../../x11/gtk3
 
-USE_TOOLS+=	pkg-config msgfmt xgettext
+USE_TOOLS+=	pkg-config msgfmt xgettext itstool
 
 # Uses python3 command
 PYTHON_VERSIONS_INCOMPATIBLE=	27
