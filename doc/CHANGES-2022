@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2987 2022/06/11 12:19:20 nia Exp $
+$NetBSD: CHANGES-2022,v 1.2988 2022/06/11 12:27:09 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4550,3 +4550,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/sord to 0.16.10 [nia 2022-06-11]
 	Updated audio/suil to 0.10.12 [nia 2022-06-11]
 	Updated converters/sratom to 0.6.10 [nia 2022-06-11]
+	Updated graphics/drawing to 1.0.1 [nia 2022-06-11]
