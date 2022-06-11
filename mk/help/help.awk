@@ -1,4 +1,4 @@
-# $NetBSD: help.awk,v 1.42 2020/08/04 21:46:44 rillig Exp $
+# $NetBSD: help.awk,v 1.43 2022/06/11 15:58:41 rillig Exp $
 #
 
 # This program extracts the inline documentation from *.mk files.
@@ -24,12 +24,12 @@ BEGIN {
 	delete lines;		# the collected lines
 	nlines = 0;		# the number of lines collected so far
 	delete keywords;	# the keywords for this paragraph
-	delete all_keywords;	# all keywords that appear anywhere
+	delete all_keywords;	# all keywords that occur anywhere
 	comment_lines = 0;	# the number of comment lines so far
 	print_noncomment_lines = yes; # for make targets, this isn't useful
 	print_index = (topic == ":index");
 				# whether to print only the list of keywords
-	delete all_appearances;	# all files where the topic appears as text
+	delete all_occurrences;	# all files where the topic occurs as text
 }
 
 # Help topics are separated by either completely empty lines or by the
@@ -136,7 +136,7 @@ function array_is_empty(arr,   i) {
 	eval_next_empty_line = no;
 }
 
-# The lines containing the keywords should also not appear in
+# The lines containing the keywords should also not occur in
 # the output for now. This decision is not final since it may
 # be helpful for the user to know by which keywords a topic
 # can be reached.
@@ -239,7 +239,7 @@ eval_this_line && $1 == "#" {
 }
 
 index(tolower($0), topic) != 0 {
-	all_appearances[FILENAME] = yes;
+	all_occurrences[FILENAME] = yes;
 }
 
 {
@@ -253,9 +253,9 @@ END {
 		print "Available help topics:";
 		print sorted_keys(all_keywords, "\n");
 	} else if (!found_anything) {
-		appearances = sorted_keys(all_appearances, "\n");
-		if (appearances != "") {
-			print "No help found for " topic ", but it appears in:\n" appearances;
+		occurrences = sorted_keys(all_occurrences, "\n");
+		if (occurrences != "") {
+			print "No help found for " topic ", but it occurs in:\n" occurrences;
 		} else {
 			print "No help found for " topic ".";
 		}
