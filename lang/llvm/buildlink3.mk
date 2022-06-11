@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2021/11/23 20:55:44 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2022/06/11 13:44:05 fcambus Exp $
 
 BUILDLINK_TREE+=	llvm
 
@@ -96,6 +96,10 @@ pkgbase := llvm
 .include "../../mk/pkg-build-options.mk"
 .if ${PKG_BUILD_OPTIONS.llvm:Mterminfo}
 .include "../../mk/terminfo.buildlink3.mk"
+.endif
+
+.if ${PKG_BUILD_OPTIONS.llvm:Mz3}
+.include "../../math/z3/buildlink3.mk"
 .endif
 
 .include "../../devel/zlib/buildlink3.mk"
