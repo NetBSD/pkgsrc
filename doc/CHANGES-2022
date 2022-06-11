@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2989 2022/06/11 12:46:22 nia Exp $
+$NetBSD: CHANGES-2022,v 1.2990 2022/06/11 13:33:38 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4552,3 +4552,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated converters/sratom to 0.6.10 [nia 2022-06-11]
 	Updated graphics/drawing to 1.0.1 [nia 2022-06-11]
 	Updated graphics/gdk-pixbuf2 to 2.42.8 [nia 2022-06-11]
+	Updated graphics/scrot to 1.7 [nia 2022-06-11]
