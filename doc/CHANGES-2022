@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2981 2022/06/10 21:35:06 pin Exp $
+$NetBSD: CHANGES-2022,v 1.2982 2022/06/11 12:03:49 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4544,3 +4544,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/php-composer to 2.2.14 [tpaul 2022-06-10]
 	Updated cad/klayout to 0.27.10 [mef 2022-06-10]
 	Updated security/pleaser to 0.5.3 [pin 2022-06-10]
+	Updated audio/lv2 to 1.18.4 [nia 2022-06-11]
