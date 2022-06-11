@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2022/03/15 21:12:52 bacon Exp $
+$NetBSD: distinfo,v 1.8 2022/06/11 19:46:43 bacon Exp $
 
-BLAKE2s (vcf-split-0.1.4.tar.gz) = 31b04374f814b3957826456ec6399c94b25ed2da93bcd2b65e77bfa8069b9c93
-SHA512 (vcf-split-0.1.4.tar.gz) = 05a8085888c0659e63339a75e4c0b2a7602570e48e4df02df6e4d03f85a4af49d4ca6239175209e2b9b5d4bd8c0a6326b89932560abeca9c25b0fc7dcac48b43
-Size (vcf-split-0.1.4.tar.gz) = 22354 bytes
+BLAKE2s (vcf-split-0.1.5.tar.gz) = 58b6b5b094afd1a5e3c66a06ad23b00a4069dc41c43a8b87abf6ab7d7146d5be
+SHA512 (vcf-split-0.1.5.tar.gz) = d7e7eb05c292f43f44d484b97293029a16c09261979a0325223742d400e54a3b3aa43b0138e1e42df4d92a7b893b0409ee080350273d5e4c03d580a16397c921
+Size (vcf-split-0.1.5.tar.gz) = 22381 bytes
