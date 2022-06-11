@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2021/11/08 14:50:12 taca Exp $
+@comment $NetBSD: PLIST,v 1.8.4.1 2022/06/11 10:33:10 bsiegert Exp $
 share/doc/clamav/html/404.html
 share/doc/clamav/html/FontAwesome/css/font-awesome.css
 share/doc/clamav/html/FontAwesome/fonts/FontAwesome.ttf
@@ -18,6 +18,7 @@ share/doc/clamav/html/appendix/Terminology.html
 share/doc/clamav/html/ayu-highlight.css
 share/doc/clamav/html/book.js
 share/doc/clamav/html/clipboard.min.js
+share/doc/clamav/html/community_resources/CommunityResources.html
 share/doc/clamav/html/css/chrome.css
 share/doc/clamav/html/css/general.css
 share/doc/clamav/html/css/print.css
@@ -31,6 +32,7 @@ share/doc/clamav/html/faq/faq-ignore.html
 share/doc/clamav/html/faq/faq-misc.html
 share/doc/clamav/html/faq/faq-ml.html
 share/doc/clamav/html/faq/faq-pua.html
+share/doc/clamav/html/faq/faq-rust.html
 share/doc/clamav/html/faq/faq-safebrowsing.html
 share/doc/clamav/html/faq/faq-scan-alerts.html
 share/doc/clamav/html/faq/faq-troubleshoot.html
@@ -103,6 +105,7 @@ share/doc/clamav/html/manual/Signatures/FileTypeMagic.html
 share/doc/clamav/html/manual/Signatures/HashSignatures.html
 share/doc/clamav/html/manual/Signatures/LogicalSignatures.html
 share/doc/clamav/html/manual/Signatures/PhishSigs.html
+share/doc/clamav/html/manual/Signatures/SignatureNames.html
 share/doc/clamav/html/manual/Signatures/YaraRules.html
 share/doc/clamav/html/manual/Usage.html
 share/doc/clamav/html/manual/Usage/Configuration.html
