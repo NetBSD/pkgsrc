@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2022Q1,v 1.1.2.10 2022/06/11 10:32:00 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2022Q1,v 1.1.2.11 2022/06/11 10:42:24 bsiegert Exp $
 
 Changes to packages and infrastructure on the 2022Q1 branch:
 
@@ -164,4 +164,13 @@ databases/mariadb105-client: security update
 
 Pullup ticket #6642 - requested by nia
 lang/gcc6: build fix
+
+Pullup ticket #6643 - requested by taca
+security/clamav-doc: build fix after pullup #6625
+
+Pullup ticket #6644 - requested by taca
+www/ruby-rack: security fix
+
+Pullup ticket #6645 - requested by taca
+www/apache24: security fix
 
