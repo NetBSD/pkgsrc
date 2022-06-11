@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2022/05/18 00:28:35 khorben Exp $
+@comment $NetBSD: PLIST,v 1.9 2022/06/11 13:58:57 mef Exp $
 bin/panel
 bin/panel-embed
 bin/panel-message
@@ -68,6 +68,7 @@ share/applications/org.defora.wifibrowser.desktop
 share/doc/Panel/COPYING
 share/doc/Panel/README.md
 share/doc/Panel/wpa_supplicant.conf
+share/gtk-doc/html/libDesktop/deprecated-api-index.html
 share/gtk-doc/html/Panel/Panel-applet.html
 share/gtk-doc/html/Panel/Panel-panel.html
 share/gtk-doc/html/Panel/Panel-window.html
