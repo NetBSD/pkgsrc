@@ -1,11 +1,11 @@
-$NetBSD: patch-ai,v 1.43 2021/08/14 08:58:20 taca Exp $
+$NetBSD: patch-ai,v 1.44 2022/06/11 10:27:04 bsiegert Exp $
 
 1) Add shlib definitions for NetBSD 5; the build system must be
 hard-coded per OS per version.  Not yet reported upstream.
 
 2) Make this pkgsrc friendly.
 
-3) Add support for FreeBSD 12.
+3) Add support for FreeBSD 13.
 
 4) Add blocklist(3) support.
 
@@ -15,7 +15,7 @@ hard-coded per OS per version.  Not yet reported upstream.
  		: ${SHLIB_ENV="LD_LIBRARY_PATH=`pwd`/lib"}
  		: ${PLUGIN_LD="${CC} -shared"}
  		;;
-+  FreeBSD.12*)	SYSTYPE=FREEBSD12
++  FreeBSD.13*)	SYSTYPE=FREEBSD13
 +		: ${CC=cc}
 +		: ${SHLIB_SUFFIX=.so}
 +		: ${SHLIB_CFLAGS=-fPIC}
