@@ -1,4 +1,4 @@
-$NetBSD: patch-util_rarian-sk-update.in,v 1.1 2022/06/11 02:55:14 gutteridge Exp $
+$NetBSD: patch-util_rarian-sk-update.in,v 1.2 2022/06/11 07:23:20 wiz Exp $
 
 Use the GNU version of getopt, so the -n option is available. Avoids
 significant output spamming from versions of getopt that don't support
@@ -15,10 +15,3 @@ it, e.g., the version NetBSD includes in base.
      	     -- "$@"` \
      || print_usage
  
-@@ -422,4 +422,4 @@ then
- fi
- rm -rf $tmpdir
- 
--fi # ENABLE_OMF_READ
-\ No newline at end of file
-+fi # ENABLE_OMF_READ
