@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2022/03/15 21:03:27 bacon Exp $
+@comment $NetBSD: PLIST,v 1.8 2022/06/11 19:39:33 bacon Exp $
 include/xtend/common.h
 include/xtend/ctype.h
 include/xtend/dsv-accessors.h
@@ -32,6 +32,7 @@ man/man3/digits.3
 man/man3/double_cmp.3
 man/man3/dsv_line_copy.3
 man/man3/dsv_line_free.3
+man/man3/dsv_line_init.3
 man/man3/dsv_line_read.3
 man/man3/dsv_line_set_array_size.3
 man/man3/dsv_line_set_delims.3
@@ -80,6 +81,7 @@ man/man3/strlbasecpy.3
 man/man3/strllower.3
 man/man3/strlower.3
 man/man3/strlupper.3
+man/man3/strptrcasecmp.3
 man/man3/strptrcmp.3
 man/man3/strshellcpy.3
 man/man3/strsplit.3
@@ -102,6 +104,7 @@ man/man3/xt_ffopen.3
 man/man3/xt_fgetline.3
 man/man3/xt_file_mod_cmp.3
 man/man3/xt_fopen.3
+man/man3/xt_free_strings.3
 man/man3/xt_get_home_dir.3
 man/man3/xt_inhale_strings.3
 man/man3/xt_malloc.3
