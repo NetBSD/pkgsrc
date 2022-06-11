@@ -1,4 +1,4 @@
-# $NetBSD: curses.buildlink3.mk,v 1.30 2019/09/02 02:23:02 rillig Exp $
+# $NetBSD: curses.buildlink3.mk,v 1.31 2022/06/11 15:02:28 rillig Exp $
 #
 # This Makefile fragment is meant to be included by packages that require
 # any curses implementation instead of one particular one.  The available
@@ -161,9 +161,9 @@ BUILDLINK_TRANSFORM+=		l:ncurses:${BUILDLINK_LIBNAME.curses}
 
 _VARGROUPS+=		curses
 _USER_VARS.curses=	CURSES_DEFAULT
-_PKG_VARS.curses=	FAKE_NCURSES USE_CURSES
+_PKG_VARS.curses=	FAKE_NCURSES USE_CURSES USE_NCURSES
 _SYS_VARS.curses=	PKG_OPTIONS CURSES_TYPE BUILDLINK_BUILTIN_MK.curses \
-			USE_NCURSES BUILDLINK_PKGNAME.curses \
+			BUILDLINK_PKGNAME.curses \
 			BUILDLINK_PREFIX.curses BUILDLINK_INCDIRS.curses \
 			BUILDLINK_LIBDIRS.curses BUILDLINK_LIBNAME.curses \
 			BUILDLINK_LDADD.curses
