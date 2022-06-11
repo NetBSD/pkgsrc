@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2984 2022/06/11 12:08:35 nia Exp $
+$NetBSD: CHANGES-2022,v 1.2985 2022/06/11 12:10:04 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4547,3 +4547,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated audio/lv2 to 1.18.4 [nia 2022-06-11]
 	Updated audio/lilv to 0.24.14 [nia 2022-06-11]
 	Updated textproc/serd to 0.30.12 [nia 2022-06-11]
+	Updated textproc/sord to 0.16.10 [nia 2022-06-11]
