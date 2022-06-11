@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2022/03/15 21:11:58 bacon Exp $
+$NetBSD: distinfo,v 1.8 2022/06/11 19:52:58 bacon Exp $
 
-BLAKE2s (peak-classifier-0.1.3.tar.gz) = bdb852d6b21851ef3a7aec655eca764689c9b65cb07fc35dabcc05f924e62c2c
-SHA512 (peak-classifier-0.1.3.tar.gz) = c2ec9ed8784b8a5f3d129c8538eac263b5d95c08807535e4581a01ceb0cab4e2d84d567fc596c1d2fb75ee78e215cf9d08092e34fad5803d8d5f6cb6cf990210
-Size (peak-classifier-0.1.3.tar.gz) = 87194 bytes
+BLAKE2s (peak-classifier-0.1.4.tar.gz) = 9234e21a4f08cca96018f7ee9629d362468d877d8af59354ca0ed562616a43f3
+SHA512 (peak-classifier-0.1.4.tar.gz) = 022bccf07bff5cb2a267454cb863b8d4304463023c9416f196b0075bb5da7d35767f103c80e017ef69b5c08391471fcd68ef55e8bdb8134bd739d157a9e33566
+Size (peak-classifier-0.1.4.tar.gz) = 87333 bytes
