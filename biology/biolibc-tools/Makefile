@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2022/03/15 21:10:59 bacon Exp $
+# $NetBSD: Makefile,v 1.4 2022/06/11 19:44:45 bacon Exp $
 
-DISTNAME=	biolibc-tools-0.1.2
+DISTNAME=	biolibc-tools-0.1.3
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=auerlab/}
 
