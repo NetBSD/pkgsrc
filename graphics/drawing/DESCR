@@ -1,4 +1,6 @@
-This application is a basic image editor, similar to Microsoft Paint, but
-aiming at the GNOME desktop.
+This application is a basic image editor, similar to Microsoft Paint.
+
+As well as GNOME, the app is well integrated in traditional-looking
+desktops.
 
 PNG, JPEG and BMP files are supported.
