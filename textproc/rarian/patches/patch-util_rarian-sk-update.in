@@ -1,0 +1,24 @@
+$NetBSD: patch-util_rarian-sk-update.in,v 1.1 2022/06/11 02:55:14 gutteridge Exp $
+
+Use the GNU version of getopt, so the -n option is available. Avoids
+significant output spamming from versions of getopt that don't support
+it, e.g., the version NetBSD includes in base.
+
+--- util/rarian-sk-update.in.orig	2008-09-01 18:40:21.000000000 +0000
++++ util/rarian-sk-update.in
+@@ -264,7 +264,7 @@ process_directory ()
+ # They are inherited from scrollkeeper :(
+ 
+ # We use TEMP as set -- seems to nuke the return value of getopt
+-TEMP=`getopt -u -n$(basename $0) -o "o:r:p:vqnhV" \
++TEMP=`${prefix}/bin/getopt -u -n$(basename $0) -o "o:r:p:vqnhV" \
+     	     -- "$@"` \
+     || print_usage
+ 
+@@ -422,4 +422,4 @@ then
+ fi
+ rm -rf $tmpdir
+ 
+-fi # ENABLE_OMF_READ
+\ No newline at end of file
++fi # ENABLE_OMF_READ
