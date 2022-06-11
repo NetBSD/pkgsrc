@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:06:53 nia Exp $
+$NetBSD: distinfo,v 1.9 2022/06/11 12:19:06 nia Exp $
 
-BLAKE2s (sratom-0.6.8.tar.bz2) = d01a0ed75af9e0a4449916bcbf4dc691c4cfada549eeef93e3d2bd26be2f7bef
-SHA512 (sratom-0.6.8.tar.bz2) = 49ec4b230a72005ab7a7a3de0bfa630a27a16f9f811ca8e7f6da7fcf6b34526577217075d428a993f95b813dd2a82a9b6892eeb2e36b66b122ada778fbb3fb95
-Size (sratom-0.6.8.tar.bz2) = 327027 bytes
+BLAKE2s (sratom-0.6.10.tar.bz2) = 9905590801b49bedc49f96f2c4c30d57c0aabdeef8d98a10a0e642d6255bb335
+SHA512 (sratom-0.6.10.tar.bz2) = cc5d2848d61de45a37d1f844b2c741016decf065bcac975214dd01108171ba332f0a51526f2f1078d5f501055af0a48716704515cbe7a9f73526fd878621ca4b
+Size (sratom-0.6.10.tar.bz2) = 327047 bytes
