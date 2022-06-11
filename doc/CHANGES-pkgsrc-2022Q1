@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2022Q1,v 1.1.2.9 2022/06/05 15:22:50 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2022Q1,v 1.1.2.10 2022/06/11 10:32:00 bsiegert Exp $
 
 Changes to packages and infrastructure on the 2022Q1 branch:
 
@@ -69,6 +69,21 @@ ruby31-base: build fix
 
 Pullup ticket #6625 - requested by taca
 security/clamav: security fix
+
+Pullup ticket #6632 - requested by nia
+math/py-numpy: build fix
+
+Pullup ticket #6633 - requested by gutteridge
+textproc/libxml2: security fix
+
+Pullup ticket #6634 - requested by sborrill
+mail/sendmail: bugfix for SMTP AUTH
+
+Pullup ticket #6637 - requested by nia
+multimedia/libaom: security fix
+
+Pullup ticket #6638 - requested by khorben
+www/gitea: security fix
 
 Pullup ticket #6628 - requested by taca
 databases/ruby-activerecord52: security update
