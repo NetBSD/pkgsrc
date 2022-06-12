@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2999 2022/06/12 12:20:33 taca Exp $
+$NetBSD: CHANGES-2022,v 1.3000 2022/06/12 14:35:15 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4563,3 +4563,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated biology/peak-classifier to 0.1.4 [bacon 2022-06-11]
 	Updated security/opendnssec2 to 2.1.10 [he 2022-06-12]
 	Updated www/ruby-rails-html-sanitizer to 1.4.3 [taca 2022-06-12]
+	Added math/basic-stats version 0.1.2 [bacon 2022-06-12]
