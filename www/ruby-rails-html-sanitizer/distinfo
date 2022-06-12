@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:31:03 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/06/12 12:20:11 taca Exp $
 
-BLAKE2s (rails-html-sanitizer-1.4.2.gem) = 92d5f6e7d93f6f6686931830ff28e64795917a407299db40154cbcee20511364
-SHA512 (rails-html-sanitizer-1.4.2.gem) = 9f0872f1000c758918f66a889322d3393ec678604eb3b01fc21bbb861189ec04fcf05f5c9487bd5eeb63ce6d99a80064718c82bfce2daf25c07754979a2ed747
-Size (rails-html-sanitizer-1.4.2.gem) = 16896 bytes
+BLAKE2s (rails-html-sanitizer-1.4.3.gem) = 110fc5e7b2557d3a8bb7d2424b072e62f7bb9d4dd6d5d6625c4033250a25626a
+SHA512 (rails-html-sanitizer-1.4.3.gem) = ead339d8ed5aefa737298d886a0db3c353254cfa57bdee7d2011f596ed2871dcad3bd16561728da2447e239fcaa908256bb6436493462bca6310a17a3812ffd9
+Size (rails-html-sanitizer-1.4.3.gem) = 17920 bytes
