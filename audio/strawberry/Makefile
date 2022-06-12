@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.35 2022/05/21 07:55:39 nia Exp $
+# $NetBSD: Makefile,v 1.36 2022/06/12 16:16:44 nia Exp $
 
-DISTNAME=	strawberry-1.0.4
-PKGREVISION=	1
+DISTNAME=	strawberry-1.0.5
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=strawberrymusicplayer/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	nia@NetBSD.org
 HOMEPAGE=	https://www.strawberrymusicplayer.org/
 COMMENT=	Music player and music collection organizer (based on Clementine)
 LICENSE=	gnu-gpl-v3
