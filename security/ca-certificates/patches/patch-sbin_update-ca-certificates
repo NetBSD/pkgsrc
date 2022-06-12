@@ -1,8 +1,61 @@
-$NetBSD: patch-sbin_update-ca-certificates,v 1.1 2022/02/28 06:46:52 kim Exp $
+$NetBSD: patch-sbin_update-ca-certificates,v 1.2 2022/06/12 07:05:30 kim Exp $
 
 --- sbin/update-ca-certificates.orig	2021-10-16 16:09:43.000000000 +0000
-+++ sbin/update-ca-certificates	2022-02-28 06:38:12.674110664 +0000
-@@ -81,8 +81,8 @@
++++ sbin/update-ca-certificates	2022-06-12 16:09:43.000000000 +0000
+@@ -28,9 +28,23 @@
+ CERTSDIR=/usr/share/ca-certificates
+ LOCALCERTSDIR=/usr/local/share/ca-certificates
+ CERTBUNDLE=ca-certificates.crt
+-ETCCERTSDIR=/etc/ssl/certs
++ETCCERTSDIR=disabled
++ETCCERTSDIRCONF=/etc/ca-certificates-dir.conf
+ HOOKSDIR=/etc/ca-certificates/update.d
+ 
++if [ -s "$ETCCERTSDIRCONF" ]
++then
++  _ETCCERTSDIR="$(sed -n -e '
++      /^ETCCERTSDIR=/ {
++	  s///;
++	  s/#.*$//;
++	  s/  *$//;
++	  s/^  *//;
++	  p;
++      }' "$ETCCERTSDIRCONF")"
++  ETCCERTSDIR="${_ETCCERTSDIR:-${ETCCERTSDIR}}"
++fi
++
+ while [ $# -gt 0 ];
+ do
+   case $1 in
+@@ -66,6 +80,27 @@
+   shift
+ done
+ 
++case "$ETCCERTSDIR" in
++disabled)
++  cat <<-EOF
++	Please enable update-ca-certificates by editing
++	  $ETCCERTSDIRCONF
++	and then run it again.
++	EOF
++  exit 1
++  ;;
++/*)
++  ;;
++*)
++  cat <<-EOF
++	Please set ETCCERTSDIR to an absolute path in
++	  $ETCCERTSDIRCONF
++	and then run it again.
++	EOF
++  exit 1
++  ;;
++esac
++
+ if [ ! -s "$CERTSCONF" ]
+ then
+   fresh=1
+@@ -81,8 +116,8 @@
  # Helper files.  (Some of them are not simple arrays because we spawn
  # subshells later on.)
  TEMPBUNDLE="${ETCCERTSDIR}/${CERTBUNDLE}.new"

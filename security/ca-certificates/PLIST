@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/02/28 05:48:44 kim Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/06/12 07:05:30 kim Exp $
 man/man8/update-ca-certificates.8
 sbin/update-ca-certificates
 share/ca-certificates/mozilla/ACCVRAIZ1.crt
@@ -132,3 +132,4 @@ share/doc/ca-certificates/README.pkgsrc
 share/doc/ca-certificates/README.source
 share/doc/ca-certificates/changelog
 share/examples/ca-certificates/ca-certificates.conf
+share/examples/ca-certificates/ca-certificates-dir.conf
