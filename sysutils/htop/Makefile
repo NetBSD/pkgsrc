@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2022/06/08 07:01:16 nia Exp $
+# $NetBSD: Makefile,v 1.29 2022/06/12 04:48:53 nia Exp $
 
 DISTNAME=	htop-3.2.1
 CATEGORIES=	sysutils
@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v2
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	autoreconf automake
-USE_NCURSES=	yes # uses ncurses mouse definitions
+USE_CURSES=	getmouse
 
 .include "../../mk/curses.buildlink3.mk"
 
