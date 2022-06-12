@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.73 2022/06/12 14:48:12 gdt Exp $
+$NetBSD: distinfo,v 1.74 2022/06/12 19:05:44 wiz Exp $
 
 BLAKE2s (sbcl-2.2.5-source.tar.bz2) = e57a0c6e5449d773f91b0b96529a5d2977d9f3141140af26eaf83c50f31e925a
 SHA512 (sbcl-2.2.5-source.tar.bz2) = 9d581535348bb709ca1f7edbe5ad92f079fd1cbc9a462524220fb229bd78770f7855c0b1a8641b990a1d663fb559edc0c2ca0f029281d4b0c80a5917b45d7b72
@@ -11,4 +11,3 @@ SHA1 (patch-make-host-2.sh) = c0ac2f16a670a6db2ff69b863d1f990f7ba0bef0
 SHA1 (patch-make-target-1.sh) = 9064623b0cba2fc6869f3d29ea090d55b7bdaf17
 SHA1 (patch-make-target-2.sh) = 7b288c3c320adb89cefa78a2fc93223ea4b3b66f
 SHA1 (patch-slam.sh) = 2f4d28b2d1572cd624a54f493cc7e30c3c491a3f
-SHA1 (patch-src_runtime_run-program.c) = 42b3ba2e8644fa32c6b2fcb8064c8178f9da9699
