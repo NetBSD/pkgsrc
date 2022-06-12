@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2022/04/21 11:00:00 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2022/06/12 07:05:30 kim Exp $
 
 PKGNAME=	ca-certificates-20211016
-PKGREVISION=	1
+PKGREVISION=	3
 DISTNAME=	${PKGNAME_NOREV:C/-([^-]*)$/_\1/}
 CATEGORIES=	security
 MASTER_SITES=	http://deb.debian.org/debian/pool/main/c/ca-certificates/
@@ -25,10 +25,9 @@ DOCDIR=		${PREFIX}/share/doc/${PKGBASE}
 EGDIR=		${PREFIX}/share/examples/${PKGBASE}
 MANDIR=		${PREFIX}/${PKGMANDIR}/man8
 
-# Set paths depending on whether we depend on builtin or pkgsrc
-# openssl.  \todo Arguably, we should consider installing into both
-# builtin and pkgsrc, if both exist, but this requires much more
-# thought.
+# Set default certificate store path depending on whether we depend on
+# builtin or pkgsrc openssl.
+
 CHECK_BUILTIN.openssl=	yes
 .include "../../security/openssl/builtin.mk"
 CHECK_BUILTIN.openssl=	no
@@ -47,20 +46,24 @@ SUBST_MESSAGE.paths=	Replacing hard-coded paths.
 SUBST_STAGE.paths=	post-build
 SUBST_FILES.paths=	Makefile sbin/Makefile
 SUBST_FILES.paths+=	ca-certificates.conf
+SUBST_FILES.paths+=	ca-certificates-dir.conf
 SUBST_FILES.paths+=	sbin/update-ca-certificates sbin/update-ca-certificates.8
 SUBST_FILES.paths+=	README.pkgsrc
 SUBST_SED.paths=	-e 's,/usr/sbin,${PREFIX}/sbin,g'
-SUBST_SED.paths+=	-e 's,/etc/ca-certificates.conf,${PKG_SYSCONFDIR}/ca-certificates.conf,g'
+SUBST_SED.paths+=	-e 's,/etc/ca-certificates,${PKG_SYSCONFDIR}/ca-certificates,g'
 SUBST_SED.paths+=	-e 's,/etc/ssl,${SSLDIR},g'
 SUBST_SED.paths+=	-e 's,/usr/share/ca-certificates,${DATADIR},g'
 
 INSTALLATION_DIRS=	sbin ${DATADIR} ${DOCDIR} ${EGDIR} ${MANDIR}
 
 CONF_FILES=		${EGDIR}/ca-certificates.conf \
-			${PKG_SYSCONFDIR}/ca-certificates.conf
+			${PKG_SYSCONFDIR}/ca-certificates.conf \
+			${EGDIR}/ca-certificates-dir.conf \
+			${PKG_SYSCONFDIR}/ca-certificates-dir.conf
 
 pre-build:
-	@${CP} ${FILESDIR}/ca-certificates.conf ${FILESDIR}/README.pkgsrc ${WRKSRC}/
+	@${CP} ${FILESDIR}/ca-certificates.conf ${FILESDIR}/ca-certificates-dir.conf \
+	    ${FILESDIR}/README.pkgsrc ${WRKSRC}/
 	@${GREP} '^share/ca-certificates/' ${FILESDIR}/../PLIST \
 	    >> ${WRKSRC}/ca-certificates.conf
 
@@ -78,6 +81,7 @@ post-install:
 	    ${DESTDIR}${DOCDIR}/
 	${INSTALL_DATA} \
 	    ${WRKSRC}/ca-certificates.conf \
+	    ${WRKSRC}/ca-certificates-dir.conf \
 	    ${DESTDIR}${EGDIR}/
 
 .include "../../lang/python/tool.mk"
