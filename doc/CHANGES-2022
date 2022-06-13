@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3009 2022/06/13 08:19:37 jaapb Exp $
+$NetBSD: CHANGES-2022,v 1.3010 2022/06/13 09:10:14 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4571,3 +4571,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added time/ocaml-mirage-clock version 4.2.0 [jaapb 2022-06-13]
 	Added devel/ocaml-mirage-flow version 3.0.0 [jaapb 2022-06-13]
 	Added net/ocaml-mimic version 0.0.5 [jaapb 2022-06-13]
+	Updated devel/ocaml-psq to 0.2.0 [jaapb 2022-06-13]
