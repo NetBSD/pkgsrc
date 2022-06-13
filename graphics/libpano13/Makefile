@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2022/05/30 16:32:44 adam Exp $
+# $NetBSD: Makefile,v 1.22 2022/06/13 07:03:41 wiz Exp $
 
 DISTNAME=	libpano13-2.9.21
 CATEGORIES=	graphics
@@ -13,7 +13,7 @@ MAKE_JOBS_SAFE=		no
 
 USE_CMAKE=		yes
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pod2man
 TOOLS_BROKEN+=		perl
 PKGCONFIG_OVERRIDE=	libpano13.pc.in
 
