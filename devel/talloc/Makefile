@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.42 2021/07/29 10:19:14 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2022/06/13 09:30:40 wiz Exp $
 
-DISTNAME=	talloc-2.3.3
+DISTNAME=	talloc-2.3.4
 CATEGORIES=	devel
 MASTER_SITES=	https://www.samba.org/ftp/talloc/
 
@@ -19,9 +19,6 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_TOOLS+=		pkg-config
 HAS_CONFIGURE=		yes
-CONFIG_SHELL=		${PYTHONBIN}
-CONFIGURE_SCRIPT=	${WRKSRC}/buildtools/bin/waf
-CONFIGURE_ARGS+=	configure
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	--abi-check-disable
 CONFIGURE_ARGS+=	--disable-symbol-versions
