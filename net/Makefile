@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1465 2022/06/06 08:47:02 fcambus Exp $
+# $NetBSD: Makefile,v 1.1466 2022/06/13 08:19:52 jaapb Exp $
 #
 
 COMMENT=	Networking tools
@@ -475,6 +475,7 @@ SUBDIR+=	obfs4proxy
 SUBDIR+=	ocaml-conduit
 SUBDIR+=	ocaml-domain-name
 SUBDIR+=	ocaml-ipaddr
+SUBDIR+=	ocaml-mimic
 SUBDIR+=	ocaml-protocol_version_header
 SUBDIR+=	ocamlnet
 SUBDIR+=	ocsinventory-agent
