@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.71 2022/05/17 07:44:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.72 2022/06/13 18:26:00 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -291,9 +291,6 @@ ${PYSITELIB}/setuptools/_distutils/msvc9compiler.pyo
 ${PYSITELIB}/setuptools/_distutils/msvccompiler.py
 ${PYSITELIB}/setuptools/_distutils/msvccompiler.pyc
 ${PYSITELIB}/setuptools/_distutils/msvccompiler.pyo
-${PYSITELIB}/setuptools/_distutils/py35compat.py
-${PYSITELIB}/setuptools/_distutils/py35compat.pyc
-${PYSITELIB}/setuptools/_distutils/py35compat.pyo
 ${PYSITELIB}/setuptools/_distutils/py38compat.py
 ${PYSITELIB}/setuptools/_distutils/py38compat.pyc
 ${PYSITELIB}/setuptools/_distutils/py38compat.pyo
@@ -529,6 +526,9 @@ ${PYSITELIB}/setuptools/command/bdist_egg.pyo
 ${PYSITELIB}/setuptools/command/bdist_rpm.py
 ${PYSITELIB}/setuptools/command/bdist_rpm.pyc
 ${PYSITELIB}/setuptools/command/bdist_rpm.pyo
+${PYSITELIB}/setuptools/command/build.py
+${PYSITELIB}/setuptools/command/build.pyc
+${PYSITELIB}/setuptools/command/build.pyo
 ${PYSITELIB}/setuptools/command/build_clib.py
 ${PYSITELIB}/setuptools/command/build_clib.pyc
 ${PYSITELIB}/setuptools/command/build_clib.pyo
