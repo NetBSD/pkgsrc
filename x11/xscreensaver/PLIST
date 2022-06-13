@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.55 2022/05/11 10:29:48 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.56 2022/06/13 09:46:47 wiz Exp $
 bin/xscreensaver
 bin/xscreensaver-command
 bin/xscreensaver-demo
@@ -36,6 +36,7 @@ libexec/xscreensaver/cage
 libexec/xscreensaver/carousel
 libexec/xscreensaver/ccurve
 libexec/xscreensaver/celtic
+libexec/xscreensaver/chompytower
 libexec/xscreensaver/circuit
 libexec/xscreensaver/cityflow
 libexec/xscreensaver/cloudlife
@@ -74,6 +75,7 @@ libexec/xscreensaver/config/cage.xml
 libexec/xscreensaver/config/carousel.xml
 libexec/xscreensaver/config/ccurve.xml
 libexec/xscreensaver/config/celtic.xml
+libexec/xscreensaver/config/chompytower.xml
 libexec/xscreensaver/config/circuit.xml
 libexec/xscreensaver/config/cityflow.xml
 libexec/xscreensaver/config/cloudlife.xml
@@ -195,6 +197,7 @@ libexec/xscreensaver/config/molecule.xml
 libexec/xscreensaver/config/morph3d.xml
 libexec/xscreensaver/config/mountain.xml
 libexec/xscreensaver/config/munch.xml
+libexec/xscreensaver/config/nakagin.xml
 libexec/xscreensaver/config/nerverot.xml
 libexec/xscreensaver/config/noof.xml
 libexec/xscreensaver/config/noseguy.xml
@@ -404,6 +407,7 @@ libexec/xscreensaver/molecule
 libexec/xscreensaver/morph3d
 libexec/xscreensaver/mountain
 libexec/xscreensaver/munch
+libexec/xscreensaver/nakagin
 libexec/xscreensaver/nerverot
 libexec/xscreensaver/noof
 libexec/xscreensaver/noseguy
@@ -540,6 +544,7 @@ man/man6/cage.6
 man/man6/carousel.6
 man/man6/ccurve.6
 man/man6/celtic.6
+man/man6/chompytower.6
 man/man6/circuit.6
 man/man6/cityflow.6
 man/man6/cloudlife.6
@@ -660,6 +665,7 @@ man/man6/molecule.6
 man/man6/morph3d.6
 man/man6/mountain.6
 man/man6/munch.6
+man/man6/nakagin.6
 man/man6/nerverot.6
 man/man6/noof.6
 man/man6/noseguy.6
@@ -759,14 +765,15 @@ man/man6/xscreensaver-systemd.6
 man/man6/xscreensaver-text.6
 man/man6/xspirograph.6
 man/man6/zoom.6
-share/applications/xscreensaver-properties.desktop
+share/applications/xscreensaver-settings.desktop
+share/applications/xscreensaver.desktop
 share/doc/xscreensaver/README.pkgsrc
 share/fonts/xscreensaver/OCRAStd.otf
 share/fonts/xscreensaver/SpecialElite.ttf
 share/fonts/xscreensaver/clacon.ttf
 share/fonts/xscreensaver/gallant12x22.ttf
 share/fonts/xscreensaver/luximr.ttf
-share/pixmaps/xscreensaver.xpm
+share/pixmaps/xscreensaver.png
 share/xscreensaver/ui/screensaver-cmndln.png
 share/xscreensaver/ui/screensaver-colorselector.png
 share/xscreensaver/ui/screensaver-diagnostic.png
@@ -774,3 +781,4 @@ share/xscreensaver/ui/screensaver-locking.png
 share/xscreensaver/ui/screensaver-power.png
 share/xscreensaver/ui/screensaver-snap.png
 share/xscreensaver/ui/xscreensaver.ui
+share/xscreensaver/xscreensaver.service
