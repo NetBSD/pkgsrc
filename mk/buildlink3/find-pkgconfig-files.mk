@@ -1,4 +1,4 @@
-# $NetBSD: find-pkgconfig-files.mk,v 1.2 2022/02/10 18:58:37 gutteridge Exp $
+# $NetBSD: find-pkgconfig-files.mk,v 1.3 2022/06/13 06:54:10 rillig Exp $
 #
 # Copyright (c) 2020 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -35,25 +35,26 @@
 #	variables take the value of the path to the file that is
 #	"found".
 #
-#    BUILTIN_FIND_PKGCONFIG.<var> is the list of header files to find, in
+#    BUILTIN_FIND_PKGCONFIG.<var> is the list of pkg-config files to find, in
 #	order, on the ${BUILTIN_PKGCONFIG_DIRS}.  The variable <var> is set
 #	to the first path "found" on the filesystem.
 #
 # After including this file, the following variables are defined:
 #
-#    <var> is the first of the header files listed in
+#    <var> is the first of the pkg-config files listed in
 #	${BUILTIN_FIND_PKGCONFIG.<var>} that is "found" in
 #	${BUILTIN_PKGCONFIG_DIRS}, or else it is "__nonexistent__".
 #
 # An example use is:
 #
 # BUILTIN_FIND_PKGCONFIG_FILES_VAR:=	LIB1 LIB2
-#
-# BUILTIN_FIND_PKGCONFIG_FILES.LIB1=	lib1.pc lib-1.0.pc
-
-# BUILTIN_FIND_PKGCONFIG_FILES.LIB2=	lib2.pc lib-2.0.pc
+# BUILTIN_FIND_PKGCONFIG_FILES.LIB1:=	lib1.pc lib-1.0.pc
+# BUILTIN_FIND_PKGCONFIG_FILES.LIB2:=	lib2.pc lib-2.0.pc
 # .include "../../mk/buildlink3/find-pkgconfig-files.mk"
+# .info ${LIB1}		# during development
+# .info ${LIB2}		# during development
 #
+# Keywords: pkg-config pc
 
 BUILTIN_PKGCONFIG_DIRS?=	/usr/lib/pkgconfig				\
 				/usr/share/pkgconfig				\
