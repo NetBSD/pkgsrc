@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/06/13 08:19:27 jaapb Exp $
+
+BLAKE2s (mimic-0.0.5.tar.gz) = c026ca637ff2bb5646580782243c9099f7ebcae2c0a244384617fe5bab658bab
+SHA512 (mimic-0.0.5.tar.gz) = 356fadd575fa9b754c84e1250c121ea2d63b3671c475f34e6c5c887998133576288c541cdcfd7b250430c6b65fe7bf398057fb89f56bee4ed10f0b16e64be358
+Size (mimic-0.0.5.tar.gz) = 30028 bytes
