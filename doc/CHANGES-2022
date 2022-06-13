@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3020 2022/06/13 15:45:32 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3021 2022/06/13 18:28:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4582,3 +4582,6 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated ham/chirp to 20220613 [gdt 2022-06-13]
 	Updated www/lighttpd to 1.4.65 [schmonz 2022-06-13]
 	Updated archivers/libzip to 1.9.0 [wiz 2022-06-13]
+	Updated devel/py-traitlets to 5.2.2.post1 [adam 2022-06-13]
+	Updated devel/py-setuptools to 62.4.0 [adam 2022-06-13]
+	Updated devel/py-build to 0.8.0 [adam 2022-06-13]
