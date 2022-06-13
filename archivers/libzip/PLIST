@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2021/06/24 21:40:06 wiz Exp $
+@comment $NetBSD: PLIST,v 1.18 2022/06/13 15:45:22 wiz Exp $
 bin/zipcmp
 bin/zipmerge
 bin/ziptool
@@ -10,7 +10,7 @@ lib/cmake/libzip/libzip-targets-noconfig.cmake
 lib/cmake/libzip/libzip-targets.cmake
 lib/libzip.so
 lib/libzip.so.5
-lib/libzip.so.5.4
+lib/libzip.so.5.5
 lib/pkgconfig/libzip.pc
 man/man1/zipcmp.1
 man/man1/zipmerge.1
