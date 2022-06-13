@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.41 2021/10/26 09:57:09 nia Exp $
+$NetBSD: distinfo,v 1.42 2022/06/13 15:45:22 wiz Exp $
 
-BLAKE2s (libzip-1.8.0.tar.xz) = 77edd0b85fae3236982c65c85b1834bf628e40676a9e4fe4870ae77ce9c66747
-SHA512 (libzip-1.8.0.tar.xz) = fe94a26a2797dff7c9b27334f29982f8e523dd5095bf32ebcadc6443726864f0ff7b2e8bf243e52cad8f79297bc7a87d73fdbc35edae4ffc8ab6aa0bcc93b03e
-Size (libzip-1.8.0.tar.xz) = 760604 bytes
-SHA1 (patch-CMakeLists.txt) = 17745d56f98cd4a6298c54b8562b463207c5a7ee
+BLAKE2s (libzip-1.9.0.tar.xz) = 4aa8786c7380da893acc2efdad88f4fc87c018690ee435a3aba224b9ded89748
+SHA512 (libzip-1.9.0.tar.xz) = dd0c7046f5b1faf00690774572982e870edaa1819563f9ebf7caf823c9c5718623576a7135a64c9acfed9cefac5601cf944b7aa0b623986f5c85743f3014b349
+Size (libzip-1.9.0.tar.xz) = 763704 bytes
