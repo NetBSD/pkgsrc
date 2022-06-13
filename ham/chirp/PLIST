@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2022/05/15 12:12:20 gdt Exp $
-@comment $NetBSD: PLIST,v 1.13 2022/05/15 12:12:20 gdt Exp $
+@comment $NetBSD: PLIST,v 1.14 2022/06/13 11:50:39 gdt Exp $
 bin/chirpw
 bin/rpttool
 ${PYSITELIB}/${EGG_INFODIR}
@@ -586,6 +585,7 @@ share/chirp/locale/pl/LC_MESSAGES/CHIRP.mo
 share/chirp/locale/pt_BR/LC_MESSAGES/CHIRP.mo
 share/chirp/locale/ru/LC_MESSAGES/CHIRP.mo
 share/chirp/locale/uk_UA/LC_MESSAGES/CHIRP.mo
+share/chirp/locale/zh_CN/LC_MESSAGES/CHIRP.mo
 share/chirp/stock_configs/DE Freenet Frequencies.csv
 share/chirp/stock_configs/EU LPD and PMR Channels.csv
 share/chirp/stock_configs/FR Marine VHF Channels.csv
