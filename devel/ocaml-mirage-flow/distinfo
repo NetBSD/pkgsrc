@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/06/13 08:12:02 jaapb Exp $
+
+BLAKE2s (mirage-flow-3.0.0.tar.gz) = 15fe99c7474a1e76b18828348525dff6c25cc2c62088c225db7677c773ad3016
+SHA512 (mirage-flow-3.0.0.tar.gz) = 0397bf5a1bea5ae91c498fe0a56f5b5e863b59709938bca91ae75c998435a221199ffb9a26ab06bf238fce0a34e06a3c3f3794bca5ad9d95114eca03b5ff7e8c
+Size (mirage-flow-3.0.0.tar.gz) = 11463 bytes
