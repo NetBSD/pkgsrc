@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3014 2022/06/13 09:35:54 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3015 2022/06/13 09:46:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4576,3 +4576,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated fonts/unifont to 14.0.04 [wiz 2022-06-13]
 	Updated devel/talloc to 2.3.4 [wiz 2022-06-13]
 	Updated graphics/ImageMagick to 7.1.0.37 [wiz 2022-06-13]
+	Updated x11/xscreensaver to 6.04 [wiz 2022-06-13]
