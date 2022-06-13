@@ -1,14 +1,21 @@
-@comment $NetBSD: PLIST,v 1.1 2019/03/19 14:19:47 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/06/13 09:10:05 jaapb Exp $
+${OCAML_SITELIB}/psq/.private/psq_list.cmi
+${OCAML_SITELIB}/psq/.private/psq_list.cmt
 ${OCAML_SITELIB}/psq/META
+${OCAML_SITELIB}/psq/dune-package
 ${OCAML_SITELIB}/psq/opam
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/psq/psq.a
 ${OCAML_SITELIB}/psq/psq.cma
 ${OCAML_SITELIB}/psq/psq.cmi
+${OCAML_SITELIB}/psq/psq.cmt
 ${OCAML_SITELIB}/psq/psq.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/psq/psq.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/psq/psq.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/psq/psq.cmxs
+${OCAML_SITELIB}/psq/psq.ml
 ${OCAML_SITELIB}/psq/psq.mli
+${PLIST.ocaml-opt}${OCAML_SITELIB}/psq/psq_list.cmx
+${OCAML_SITELIB}/psq/psq_list.ml
 share/doc/psq/CHANGES.md
 share/doc/psq/LICENSE.md
 share/doc/psq/README.md
