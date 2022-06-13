@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2022/06/10 07:34:56 pin Exp $
+$NetBSD: distinfo,v 1.2 2022/06/13 20:47:10 pin Exp $
 
 BLAKE2s (aho-corasick-0.7.18.crate) = 8925e88e2df4b5ca3b31783f527e1bb31dbe27846f409f631148fa239f3b2935
 SHA512 (aho-corasick-0.7.18.crate) = 7a23b16231a90d23ee60ad4c81bc225410599a4560d33d3a203138fc540c39cf1000100fed3aed40dcc371c3635656a3792545dca5dd1aefbde00d8774eebd00
@@ -24,9 +24,9 @@ Size (clap_derive-3.1.18.crate) = 25521 bytes
 BLAKE2s (clap_lex-0.2.0.crate) = 03d313a395b1bf59d7a4d48ef2b2c73fcace9957576bb84f4ebef4af43a1af83
 SHA512 (clap_lex-0.2.0.crate) = d4acd8e2b8d1d19214fde1f0f21f0e0a755cb44e326893bc65350d742c2e260bda61f0abce5fdcb08fc5c4c835d0419cb02452d9f6a85cffa2b5dc7c4bc1e962
 Size (clap_lex-0.2.0.crate) = 9581 bytes
-BLAKE2s (fsrx-1.0.0.tar.gz) = d5e64d483a29c477a65fe02a2610318095700fcf164fdbb877bfaf7233870d8b
-SHA512 (fsrx-1.0.0.tar.gz) = 4085c791ed7830de7923b7cdf5122b61639597cad6481f97d64b3f41d803759acee6092644bf250ea1214136e4eac77d0e00eb4e86545273a813866d3c75236d
-Size (fsrx-1.0.0.tar.gz) = 10002 bytes
+BLAKE2s (fsrx-1.0.1.tar.gz) = ecfd826cfc7562c0d6e1c9dd4345c1bc1b9067e04da5018396d249dbb7bee0cf
+SHA512 (fsrx-1.0.1.tar.gz) = e87ed56dcba8e6437b1bff4a38e332416c8e912e359c5c43346b2c4bc944335d4bba875571c8a51156ee9d03ddf480635ec33b8d64570f111e2ed40f050181f2
+Size (fsrx-1.0.1.tar.gz) = 9972 bytes
 BLAKE2s (hashbrown-0.11.2.crate) = abc7a6572c0284c484fdb4f678d265bc7a1571c78272b16a4a924565bc14063c
 SHA512 (hashbrown-0.11.2.crate) = c21ca68fd49bbb741901f59fed04cc124b8da99e2a4dfc26e2e5e1140637872b344612a01691bd30cc771575c571be15f756c84dde225441699cd2322af2ad6c
 Size (hashbrown-0.11.2.crate) = 85713 bytes
