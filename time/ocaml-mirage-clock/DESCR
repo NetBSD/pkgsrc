@@ -1,0 +1,2 @@
+This library implements portable support for an operating system timesource
+that is compatible with the MirageOS library interfaces.
