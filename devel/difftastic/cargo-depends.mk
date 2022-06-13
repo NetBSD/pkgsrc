@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.3 2022/06/10 07:30:01 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.4 2022/06/13 20:46:05 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-0.7.18
 CARGO_CRATE_DEPENDS+=	ansi_term-0.12.1
@@ -31,11 +31,11 @@ CARGO_CRATE_DEPENDS+=	indexmap-1.7.0
 CARGO_CRATE_DEPENDS+=	itertools-0.10.3
 CARGO_CRATE_DEPENDS+=	lazy_static-1.4.0
 CARGO_CRATE_DEPENDS+=	libc-0.2.126
-CARGO_CRATE_DEPENDS+=	libmimalloc-sys-0.1.25
+CARGO_CRATE_DEPENDS+=	libmimalloc-sys-0.1.24
 CARGO_CRATE_DEPENDS+=	log-0.4.17
 CARGO_CRATE_DEPENDS+=	memchr-2.5.0
 CARGO_CRATE_DEPENDS+=	memoffset-0.6.5
-CARGO_CRATE_DEPENDS+=	mimalloc-0.1.29
+CARGO_CRATE_DEPENDS+=	mimalloc-0.1.28
 CARGO_CRATE_DEPENDS+=	minimal-lexical-0.2.1
 CARGO_CRATE_DEPENDS+=	nom-7.1.1
 CARGO_CRATE_DEPENDS+=	num_cpus-1.13.1
