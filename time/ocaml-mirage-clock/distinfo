@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/06/13 08:01:03 jaapb Exp $
+
+BLAKE2s (mirage-clock-4.2.0.tar.gz) = 20d988c32a695d4947cba131011f9d489558f6d8fac681cd6023a9ad1a7ee7dc
+SHA512 (mirage-clock-4.2.0.tar.gz) = 7c32adf30505fe35a1313c162731b96e283a883dbc18d530344830a1f76d3397a6dd3b76a4ac3024aa02ff917d228c953c9ebdfeeae1f48686e776007234edda
+Size (mirage-clock-4.2.0.tar.gz) = 8440 bytes
