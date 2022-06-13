@@ -1,0 +1,2 @@
+mimic is a small project which gives you the opportunity to instantiate a
+transmission protocol - such as a TCP/IP connection - from dynamic values.
