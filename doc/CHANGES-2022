@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3012 2022/06/13 09:27:41 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3013 2022/06/13 09:30:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4574,3 +4574,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/ocaml-psq to 0.2.0 [jaapb 2022-06-13]
 	Updated security/botan2 to 2.19.2 [wiz 2022-06-13]
 	Updated fonts/unifont to 14.0.04 [wiz 2022-06-13]
+	Updated devel/talloc to 2.3.4 [wiz 2022-06-13]
