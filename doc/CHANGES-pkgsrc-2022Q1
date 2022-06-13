@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2022Q1,v 1.1.2.11 2022/06/11 10:42:24 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2022Q1,v 1.1.2.12 2022/06/13 16:14:00 bsiegert Exp $
 
 Changes to packages and infrastructure on the 2022Q1 branch:
 
@@ -173,4 +173,7 @@ www/ruby-rack: security fix
 
 Pullup ticket #6645 - requested by taca
 www/apache24: security fix
+
+Pullup ticket #6646 - requested by nia
+graphics/gdk-pixbuf2: security fix
 
