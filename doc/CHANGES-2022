@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3021 2022/06/13 18:28:25 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3022 2022/06/13 19:36:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4585,3 +4585,6 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-traitlets to 5.2.2.post1 [adam 2022-06-13]
 	Updated devel/py-setuptools to 62.4.0 [adam 2022-06-13]
 	Updated devel/py-build to 0.8.0 [adam 2022-06-13]
+	Added devel/py-hatch-vcs version 0.2.0 [adam 2022-06-13]
+	Updated misc/py-platformdirs to 2.5.2 [adam 2022-06-13]
+	Updated textproc/py-lxml to 4.9.0 [adam 2022-06-13]
