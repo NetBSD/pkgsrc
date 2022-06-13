@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3023 2022/06/13 20:46:25 pin Exp $
+$NetBSD: CHANGES-2022,v 1.3024 2022/06/13 20:47:32 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4589,3 +4589,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated misc/py-platformdirs to 2.5.2 [adam 2022-06-13]
 	Updated textproc/py-lxml to 4.9.0 [adam 2022-06-13]
 	Updated devel/difftastic to 0.29.1 [pin 2022-06-13]
+	Updated textproc/fsrx to 1.0.1 [pin 2022-06-13]
