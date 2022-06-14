@@ -1,4 +1,4 @@
-$NetBSD: README.OpenBSD,v 1.14 2022/06/01 12:07:37 gdt Exp $
+$NetBSD: README.OpenBSD,v 1.15 2022/06/14 05:04:23 charlotte Exp $
 
 Please read the general README file as well.
 
@@ -21,9 +21,12 @@ fw_update(1).
 
 # Status
 
-pkgsrc bootstrap has been tested on OpenBSD 7.0 (amd64, i386) with the
+pkgsrc bootstrap has been tested on OpenBSD 7.1 (amd64, i386) with the
 system-provided clang. Earlier version/platform/compiler combinations
 have previously been reported to work.
+
+If the bootstrap fails for you, try adding `--prefer-pkgsrc yes` to your
+bootstrap command line.
 
 Once bootstrapped, as is typical with pkgsrc, many packages build as is.
 For any particular package that doesn't, fixes are often in OpenBSD
