@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2022/01/05 15:40:58 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2022/06/14 13:24:54 gdt Exp $
 
-DISTNAME=	nodemcu-uploader-0.4.3
+DISTNAME=	nodemcu-uploader-1.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	4
 CATEGORIES=	comms
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nodemcu-uploader/}
 
