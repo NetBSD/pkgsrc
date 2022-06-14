@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.310 2022/04/06 13:06:09 schmonz Exp $
+# $NetBSD: bootstrap,v 1.311 2022/06/14 09:08:31 nia Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -1132,6 +1132,11 @@ echo "PKGMANDIR=		$pkgmandir" >> ${TARGET_MKCONF}
 echo "" >> ${TARGET_MKCONF}
 
 case $opsys in
+OpenBSD)
+	if [ -z "$prefer_pkgsrc" ] && [ "$prefer_native" != "yes" ]; then
+		prefer_pkgsrc="yes"
+	fi
+	;;
 Linux)
 	# Default to PREFER_PKGSRC=yes unless user specifies --prefer-native=yes
 	# Linux systems likely have software from other packages managers
