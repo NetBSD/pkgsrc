@@ -1,9 +1,12 @@
-$NetBSD: patch-config_makefiles_rust.mk,v 1.9 2021/12/11 14:10:01 ryoon Exp $
+$NetBSD: patch-config_makefiles_rust.mk,v 1.10 2022/06/14 16:44:29 ryoon Exp $
 
 NetBSD doesn't get along with parallel rust builds (it causes issues
 with ld.so) which are the default. Force -j1.
 
---- config/makefiles/rust.mk.orig	2021-11-25 21:18:06.000000000 +0000
+Use less memory to fix build under NetBSD/i386.
+From: https://bugzilla.mozilla.org/show_bug.cgi?id=1644409
+
+--- config/makefiles/rust.mk.orig	2022-06-08 14:10:19.000000000 +0000
 +++ config/makefiles/rust.mk
 @@ -58,6 +58,9 @@ ifdef MOZ_TSAN
  cargo_build_flags += -Zbuild-std=std,panic_abort
@@ -15,3 +18,13 @@ with ld.so) which are the default. Force -j1.
  
  rustflags_sancov =
  ifdef LIBFUZZER
+@@ -90,7 +93,8 @@ ifndef rustflags_sancov
+ # Never enable when coverage is enabled to work around https://github.com/rust-lang/rust/issues/90045.
+ ifndef MOZ_CODE_COVERAGE
+ ifeq (,$(findstring gkrust_gtest,$(RUST_LIBRARY_FILE)))
+-cargo_rustc_flags += -Clto
++cargo_rustc_flags += -Clto=thin
++export CARGO_PROFILE_RELEASE_LTO=thin
+ endif
+ # We need -Cembed-bitcode=yes for all crates when using -Clto.
+ RUSTFLAGS += -Cembed-bitcode=yes
