@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3033 2022/06/14 20:17:05 pin Exp $
+$NetBSD: CHANGES-2022,v 1.3034 2022/06/14 23:27:34 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4599,3 +4599,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/firefox to 101.0.1 [ryoon 2022-06-14]
 	Updated www/firefox-l10n to 101.0.1 [ryoon 2022-06-14]
 	Updated sysutils/dua-cli to 2.17.7 [pin 2022-06-14]
+	Updated net/xfce4-wavelan-plugin to 0.6.3 [gutteridge 2022-06-14]
