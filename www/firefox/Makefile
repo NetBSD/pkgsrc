@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.522 2022/06/06 20:59:39 ryoon Exp $
+# $NetBSD: Makefile,v 1.523 2022/06/14 16:44:29 ryoon Exp $
 
 FIREFOX_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
 MOZ_BRANCH=		101.0
-MOZ_BRANCH_MINOR=	
+MOZ_BRANCH_MINOR=	.1
 
 DISTNAME=	firefox-${FIREFOX_VER}.source
 PKGNAME=	${DISTNAME:S/.source//:S/b/beta/:S/esr//}
@@ -72,11 +72,6 @@ NOT_PAX_MPROTECT_SAFE+=	lib/${PKGBASE}/plugin-container
 .if ${MACHINE_ARCH} == "x86_64" || ${MACHINE_ARCH} == "i386"
 NOT_PAX_MPROTECT_SAFE+=	lib/${PKGBASE}/firefox
 NOT_PAX_MPROTECT_SAFE+=	lib/${PKGBASE}/firefox-bin
-.endif
-
-# As of 101.0, rustc consumes all available RAM and swap by default.
-.if ${MACHINE_ARCH} == "i386"
-MAKE_ENV+=	RUSTFLAGS="-C opt-level=1 -C codegen-units=1"
 .endif
 
 # Avoid ld "invalid section index" errors.

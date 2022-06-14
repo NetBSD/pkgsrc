@@ -1,15 +1,15 @@
-$NetBSD: distinfo,v 1.469 2022/06/06 20:59:39 ryoon Exp $
+$NetBSD: distinfo,v 1.470 2022/06/14 16:44:29 ryoon Exp $
 
-BLAKE2s (firefox-101.0.source.tar.xz) = 21e95ea9927612144a36f5b56fc95272fb63b7b1f31813c72eba5f7ca4d7bfba
-SHA512 (firefox-101.0.source.tar.xz) = fffe7e0940c1443fcdc5b205677764cb4e04b29f33fcfafb2857d383700584f309806b81fc4989efb56cc12a3cca1ff7d451b647050c43e98777b5c952ed5d56
-Size (firefox-101.0.source.tar.xz) = 490975228 bytes
+BLAKE2s (firefox-101.0.1.source.tar.xz) = 8e4588e1557fda73bc529a3f5470f3bcfb06a2ed7efb700f464eaa4350dcb61b
+SHA512 (firefox-101.0.1.source.tar.xz) = 435a7f6013582933e75c41e554a45beda30b5affd7d3ed7d2876026609ba7f17b2c20b507d9d0c9ce2379e335ec09b021257ba30ac55fabf02dca54b03ea70b4
+Size (firefox-101.0.1.source.tar.xz) = 486021240 bytes
 BLAKE2s (nodejs-output-95.0.tgz) = c44b37d3605524a49157002f01c29f568f04194b0e635bc312de7ffdeb9a74c9
 SHA512 (nodejs-output-95.0.tgz) = 2faf326f4e100b66f8597c365cc2eb5d0eee26aae92a7e2446891f2178041aa71ba16eae37000acacd43a657025ec11c18db73b112f5c49cc21cdb882da6d798
 Size (nodejs-output-95.0.tgz) = 200627 bytes
 SHA1 (patch-browser_app_profile_firefox.js) = 7f6b4361fe62ccc2d1c092a5ace97ea2085727bf
 SHA1 (patch-build_moz.configure_rust.configure) = 25ddfacd29cebbc6db005dbe61a2a7446d480678
 SHA1 (patch-config_gcc-stl-wrapper.template.h) = 9d1f15ff487efa9202114d19ed5668b4e7aa032a
-SHA1 (patch-config_makefiles_rust.mk) = fa9f0f59a179cae2562a76110fada49039490fb8
+SHA1 (patch-config_makefiles_rust.mk) = 188178b184d79737247ed3770cc8f4370cd7f6c0
 SHA1 (patch-dom_base_nsAttrName.h) = ac7ba441a3b27df2855cf2673eea36b1cb44ad49
 SHA1 (patch-gfx_angle_checkout_src_common_third__party_smhasher_src_PMurHash.cpp) = e458c9c8dc66edc69c1874734af28a77fc5e3993
 SHA1 (patch-gfx_angle_checkout_src_compiler_translator_InfoSink.h) = b2adce9e65662283a11b6dcff40e95523e940045
@@ -22,7 +22,7 @@ SHA1 (patch-js_src_jit_ProcessExecutableMemory.cpp) = fad103cc698f9828ad58f74223
 SHA1 (patch-js_src_jit_arm64_vixl_MozCpu-vixl.cpp) = fdc522e3fb626b1b8a2ebf19ad60bfc25dfa4183
 SHA1 (patch-js_src_util_NativeStack.cpp) = a0a16d8d8d78d3cc3f4d2a508586f1a7821f7dba
 SHA1 (patch-js_src_vm_ArrayBufferObject.cpp) = 0501fdcae11568ae4ea78e0d2f6b3750b7a67d47
-SHA1 (patch-libwebrtc.diff) = dd36ac8c3449d876ac179e00238e50ebef468a8e
+SHA1 (patch-libwebrtc.diff) = 16f4e68adca7f6dc11cfd527a13b3e50d175d277
 SHA1 (patch-media_ffvpx_libavutil_arm_bswap.h) = de58daa0fd23d4fec50426602b65c9ea5862558a
 SHA1 (patch-media_libcubeb_src_cubeb__alsa.c) = 2ef11da83c90c41490db4c0d9809c3e1826b488a
 SHA1 (patch-media_libcubeb_src_cubeb__jack.cpp) = fc546c5e6582fd5eda64ba83287dfbbb3c9e229f
