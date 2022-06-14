@@ -1,4 +1,4 @@
-$NetBSD: patch-src_hostapi_oss_pa__unix__oss.c,v 1.4 2020/04/15 17:12:14 nia Exp $
+$NetBSD: patch-src_hostapi_oss_pa__unix__oss.c,v 1.5 2022/06/14 14:18:45 nia Exp $
 
 - Add 24-bit and 32-bit sample formats.
 - NetBSD-specific changes to make this map better to the emulation layer:
@@ -30,6 +30,15 @@ $NetBSD: patch-src_hostapi_oss_pa__unix__oss.c,v 1.4 2020/04/15 17:12:14 nia Exp
          ENSURE_( ioctl( devHandle, SNDCTL_DSP_SPEED, &sr ), paUnanticipatedHostError );
  
          *defaultSampleRate = sr;
+@@ -756,7 +761,7 @@ static PaError PaOssStreamComponent_Init
+     component->devName = deviceName;
+     component->userChannelCount = parameters->channelCount;
+     component->userFormat = parameters->sampleFormat;
+-    component->latency = parameters->suggestedLatency;
++    component->latency = parameters->suggestedLatency > 0 ? parameters->suggestedLatency : 1;
+     component->userInterleaved = !(parameters->sampleFormat & paNonInterleaved);
+ 
+     if( !callbackMode && !component->userInterleaved )
 @@ -938,6 +943,16 @@ static PaError Pa2OssFormat( PaSampleFor
          case paInt16:
              *ossFormat = AFMT_S16_NE;
