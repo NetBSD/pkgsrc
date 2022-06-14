@@ -1,4 +1,4 @@
-$NetBSD: README.OpenBSD,v 1.15 2022/06/14 05:04:23 charlotte Exp $
+$NetBSD: README.OpenBSD,v 1.16 2022/06/14 09:08:31 nia Exp $
 
 Please read the general README file as well.
 
@@ -26,7 +26,7 @@ system-provided clang. Earlier version/platform/compiler combinations
 have previously been reported to work.
 
 If the bootstrap fails for you, try adding `--prefer-pkgsrc yes` to your
-bootstrap command line.
+bootstrap command line (this is now the default).
 
 Once bootstrapped, as is typical with pkgsrc, many packages build as is.
 For any particular package that doesn't, fixes are often in OpenBSD
