@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/06/14 13:24:54 gdt Exp $
+# $NetBSD: Makefile,v 1.7 2022/06/14 13:29:18 gdt Exp $
 
 DISTNAME=	nodemcu-uploader-1.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,6 +11,7 @@ COMMENT=	Tool to upload files to a nodemcu/ESP8266 device
 LICENSE=	mit
 
 USE_LANGUAGES=	# none
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 DEPENDS+=	${PYPKGPREFIX}-serial>=2.7:../../comms/py-serial
 DEPENDS+=	${PYPKGPREFIX}-wrapt>=1.10.10:../../devel/py-wrapt
