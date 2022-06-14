@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2022/03/28 10:59:30 tnn Exp $
+# $NetBSD: Makefile,v 1.18 2022/06/14 01:50:32 gutteridge Exp $
 
-DISTNAME=	e16-1.0.24
+DISTNAME=	e16-1.0.25
 PKGNAME=	${DISTNAME:S/e/enlightenment/}
-PKGREVISION=	2
 CATEGORIES=	wm x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=enlightenment/}
 
@@ -20,18 +19,16 @@ LICENSE=	enlightenment16
 CONFLICTS=	enlightenment>=1.0
 SUPERSEDES=	enlightenment>=1.0
 
-USE_TOOLS+=		gmake perl:run pkg-config
+USE_TOOLS+=		gmake pkg-config
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--disable-hints-gnome
 MAKE_ENV+=		USER=${SHAREOWN}:${SHAREGRP}
 
 INSTALL_MAKE_FLAGS+=	sesmdir=${WRKDIR}/.tmp
 
-REPLACE_PERL=		sample-scripts/bouncingball.pl
-REPLACE_PERL+=		sample-scripts/testroller.pl
-REPLACE_PERL+=		sample-scripts/shade-pagers.pl
-REPLACE_PERL+=		scripts/e_gen_menu
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+REPLACE_PYTHON+=	scripts/e_gen_menu
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
@@ -61,6 +58,7 @@ post-install:
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/imlib2/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../x11/xbitmaps/buildlink3.mk"
 .include "../../x11/libXcomposite/buildlink3.mk"
 .include "../../x11/libXdamage/buildlink3.mk"
