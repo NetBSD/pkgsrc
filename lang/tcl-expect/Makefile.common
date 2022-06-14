@@ -1,4 +1,7 @@
-# $NetBSD: Makefile.common,v 1.13 2022/05/03 23:38:38 gdt Exp $
+# $NetBSD: Makefile.common,v 1.14 2022/06/14 10:56:15 gdt Exp $
+
+# used by lang/tcl-expect/Makefile
+# \todo Explain why there is only one user, or fold into Makefile.
 
 DISTNAME=	expect${EXPECT_FNAME}
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=expect/}
