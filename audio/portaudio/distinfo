@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.28 2021/10/26 09:59:23 nia Exp $
+$NetBSD: distinfo,v 1.29 2022/06/14 14:18:45 nia Exp $
 
 BLAKE2s (pa_stable_v190600_20161030.tgz) = 19c45436985da2c2ff7a4f016c7ae9dcb0772b43ffa3356961a2a98cacdb24d9
 SHA512 (pa_stable_v190600_20161030.tgz) = 7ec692cbd8c23878b029fad9d9fd63a021f57e60c4921f602995a2fca070c29f17a280c7f2da5966c4aad29d28434538452f4c822eacf3a60af59a6dc8e9704c
@@ -12,6 +12,6 @@ SHA1 (patch-src_common_pa__front.c) = cdddb6f537f803b55873ad6bfa936a6bff47556d
 SHA1 (patch-src_common_pa__stream.c) = 58e6ab2a61957208973a59be2f1140abc922f360
 SHA1 (patch-src_common_pa__stream.h) = 94781a9ae79ea1340eea8caadc106416c019cf74
 SHA1 (patch-src_hostapi_alsa_pa__linux__alsa.c) = 71daf913422f72aa379ae8cc302186800cff7717
-SHA1 (patch-src_hostapi_oss_pa__unix__oss.c) = 572c48f64104e22e7ae49acc54a26e549e381b5b
-SHA1 (patch-src_hostapi_sun_pa__unix__sun.c) = bab9b21d35d76afafa06c929bb35954d3870bc0d
+SHA1 (patch-src_hostapi_oss_pa__unix__oss.c) = 785b6ba7fc89cf973c992541ee79a045a5c40707
+SHA1 (patch-src_hostapi_sun_pa__unix__sun.c) = 1e54e4fb75f15e74d931a11ee157beaae9a5f917
 SHA1 (patch-src_os_unix_pa__unix__hostapis.c) = 8cfc7d7aac8f9803e204711ded3d64842913f4fd

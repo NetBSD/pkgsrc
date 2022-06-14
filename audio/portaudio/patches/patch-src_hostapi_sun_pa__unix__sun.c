@@ -1,8 +1,10 @@
-$NetBSD: patch-src_hostapi_sun_pa__unix__sun.c,v 1.4 2021/09/09 21:42:00 nia Exp $
+$NetBSD: patch-src_hostapi_sun_pa__unix__sun.c,v 1.5 2022/06/14 14:18:45 nia Exp $
 
 Sun/NetBSD audio support.
 
---- src/hostapi/sun/pa_unix_sun.c.orig	2021-09-09 21:10:47.132269006 +0000
+This is upstreamed to GitHub.
+
+--- src/hostapi/sun/pa_unix_sun.c.orig	2022-06-14 14:03:33.619499935 +0000
 +++ src/hostapi/sun/pa_unix_sun.c
 @@ -0,0 +1,1123 @@
 +/*
