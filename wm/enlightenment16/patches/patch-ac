@@ -1,27 +1,29 @@
-$NetBSD: patch-ac,v 1.2 2021/02/20 18:59:54 gutteridge Exp $
+$NetBSD: patch-ac,v 1.3 2022/06/14 01:50:32 gutteridge Exp $
 
 Apply pkgsrc-specific paths.
 
---- scripts/e_gen_menu.orig	2019-11-19 00:17:54.796424791 +0000
+--- scripts/e_gen_menu.orig	2022-06-06 10:24:22.000000000 +0000
 +++ scripts/e_gen_menu
-@@ -28,8 +28,7 @@
- #use warnings;
+@@ -362,9 +362,7 @@ for opt, val in opts:
+         dbg += 1
  
  # Likely  prefixes
--$Prefixes = "/usr/local:/usr:/opt:/opt/kde:$ENV{'KDEDIR'}";
--$Prefixes = "$Prefixes:/opt/kde3:/opt/gnome";	# SUSE
-+$Prefixes = "@PREFIX@:@X11BASE@:/usr:$ENV{'KDEDIR'}";
- $Prefixes = "$Prefixes:$ENV{'HOME'}/.local";
- $Prefixes = RemoveDuplcates($Prefixes);
- 
-@@ -59,8 +58,8 @@ $loc3 =~ s/_.*//;
- $loc1 = "" if ($loc1 eq $loc2);
- 
- $EdirUser = "$ENV{'HOME'}/.e16" unless $EdirUser;
--$EdirRoot = "/usr/share/e16" unless $EdirRoot;
--$EdirBin  = "/usr/bin" unless $EdirBin;
-+$EdirRoot = "@PREFIX@/share/e16" unless $EdirRoot;
-+$EdirBin  = "@PREFIX@/bin" unless $EdirBin;
- 
- $EdirMenus = "$EdirUser/menus";
- 
+-Prefixes  = ['/usr/local', '/usr', '/opt']
+-Prefixes += ['/opt/kde', '/opt/kde3', getenv('KDEDIR')]
+-Prefixes += ['/opt/gnome']                    # SUSE
++Prefixes = ['@PREFIX@', '@X11BASE@', '/usr', getenv('KDEDIR')]
+ Prefixes += [getenv('HOME') + '/.local']
+ D(f'Prefixes = "{Prefixes}"')
+ Prefixes = RemoveDuplicates(Prefixes)
+@@ -399,9 +397,9 @@ EdirBin  = getenv('EBIN')
+ if EdirUser == '':
+     EdirUser = getenv('HOME') + '/.e16'
+ if EdirRoot == '':
+-    EdirRoot = '/usr/share/e16'
++    EdirRoot = '@PREFIX@/share/e16'
+ if EdirBin == '':
+-    EdirBin  = '/usr/bin'
++    EdirBin  = '@PREFIX@/bin'
+ D(f'EdirUser = "{EdirUser}"')
+ D(f'EdirRoot = "{EdirRoot}"')
+ D(f'EdirBin  = "{EdirBin}"')
