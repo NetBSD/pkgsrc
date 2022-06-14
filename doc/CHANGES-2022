@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3030 2022/06/14 13:25:23 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.3031 2022/06/14 16:45:09 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4596,3 +4596,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/firefox91 to 91.10.0 [nia 2022-06-14]
 	Updated www/firefox91-l10n to 91.10.0 [nia 2022-06-14]
 	Updated comms/py-nodemcu-uploader to 1.0.0 [gdt 2022-06-14]
+	Updated www/firefox to 101.0.1 [ryoon 2022-06-14]
