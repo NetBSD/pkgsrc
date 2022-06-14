@@ -1,4 +1,4 @@
-/* $NetBSD: mk-buildlink-symlinks.c,v 1.1 2022/06/07 09:53:36 jperkin Exp $ */
+/* $NetBSD: mk-buildlink-symlinks.c,v 1.2 2022/06/14 08:45:33 jperkin Exp $ */
 
 /*
  * Copyright (c) 2022 Jonathan Perkin <jonathan@perkin.org.uk>
@@ -72,4 +72,6 @@ main(int argc, char *argv[])
 
 		free(path2);
 	}
+
+	exit(0);
 }
