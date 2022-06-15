@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3050 2022/06/15 22:29:57 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.3051 2022/06/15 22:31:58 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4617,3 +4617,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/felix to 0.9.5 [pin 2022-06-15]
 	Updated editors/featherpad to 1.3.0 [pin 2022-06-15]
 	Added devel/py-collections-extended version 2.0.2 [gdt 2022-06-15]
+	Updated filesystems/tahoe-lafs to 1.17.1 [gdt 2022-06-15]
