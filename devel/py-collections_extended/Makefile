@@ -1,0 +1,16 @@
+# $NetBSD: Makefile,v 1.1 2022/06/15 22:00:26 gdt Exp $
+
+DISTNAME=	collections-extended-2.0.2
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+CATEGORIES=	devel python
+MASTER_SITES=	${MASTER_SITE_PYPI:=c/collections-extended/}
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://github.com/mlenzen/collections-extended
+COMMENT=	Python Collections (Bag, setlist, IndexedDict, etc.)
+LICENSE=	apache-2.0
+
+USE_LANGUAGES=	# none
+
+.include "../../lang/python/egg.mk"
+.include "../../mk/bsd.pkg.mk"
