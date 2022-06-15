@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.63 2022/05/15 19:25:35 adam Exp $
+# $NetBSD: Makefile,v 1.64 2022/06/15 11:43:05 adam Exp $
 
-DISTNAME=	pylint-2.13.9
+DISTNAME=	pylint-2.14.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pylint/}
@@ -10,12 +10,14 @@ HOMEPAGE=	https://www.pylint.org/
 COMMENT=	Python source code analyzer
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	${PYPKGPREFIX}-astroid>=2.11.3:../../devel/py-astroid
+DEPENDS+=	${PYPKGPREFIX}-astroid>=2.11.6:../../devel/py-astroid
 DEPENDS+=	${PYPKGPREFIX}-dill>=0.2:../../textproc/py-dill
 DEPENDS+=	${PYPKGPREFIX}-isort>=4.2.5:../../devel/py-isort
 DEPENDS+=	${PYPKGPREFIX}-mccabe>=0.6:../../devel/py-mccabe
 DEPENDS+=	${PYPKGPREFIX}-platformdirs>=2.2.0:../../misc/py-platformdirs
-DEPENDS+=	${PYPKGPREFIX}-tomli>=1.1.0:../../textproc/py-toml
+DEPENDS+=	${PYPKGPREFIX}-tomlkit>=0.10.1:../../textproc/py-tomlkit
+# ${_PYTHON_VERSION} < 311
+DEPENDS+=	${PYPKGPREFIX}-tomli>=1.1.0:../../textproc/py-tomli
 
 USE_LANGUAGES=	# none
 
@@ -29,7 +31,7 @@ DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.10.0:../../devel/py-typing-extensi
 .endif
 
 post-install:
-.for file in epylint pylint pyreverse symilar
+.for file in epylint pylint pylint-config pyreverse symilar
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} ${file} ${file}-${PYVERSSUFFIX} || ${TRUE}
 .endfor
