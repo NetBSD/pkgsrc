@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2022/06/15 22:00:26 gdt Exp $
+$NetBSD: distinfo,v 1.1 2022/06/15 22:29:14 gdt Exp $
 
 BLAKE2s (collections-extended-2.0.2.tar.gz) = c149cfeda5d40df434787decad32e16f2bc45f33612c04bfcaf77723db4f89ee
 SHA512 (collections-extended-2.0.2.tar.gz) = 7849ae7a3194f7023478eb8fc4328e6ace3c973444d078cdbaec18d791436ec7cac0d192dec976b3af61985040904fdcac5ba1a930aca62a9c71acc2fd0676ee
