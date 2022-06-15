@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3041 2022/06/15 14:08:57 taca Exp $
+$NetBSD: CHANGES-2022,v 1.3042 2022/06/15 14:11:10 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4609,3 +4609,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-pylint to 2.14.2 [adam 2022-06-15]
 	Updated net/bind916 to 9.16.30 [taca 2022-06-15]
 	Updated meta-pkgs/bulk-medium to 20220615 [taca 2022-06-15]
+	Updated net/nagios-plugins to 2.2.1nb7 [taca 2022-06-15]
