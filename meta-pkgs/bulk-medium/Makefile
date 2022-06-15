@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.75 2022/05/16 08:22:07 jperkin Exp $
+# $NetBSD: Makefile,v 1.76 2022/06/15 14:08:37 taca Exp $
 
-DISTNAME=	bulk-medium-20211229
+DISTNAME=	bulk-medium-20220615
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -91,7 +91,6 @@ BUILD_DEPENDS+=	mhonarc-[0-9]*:../../mail/mhonarc
 BUILD_DEPENDS+=	mutt-[0-9]*:../../mail/mutt
 BUILD_DEPENDS+=	alpine-[0-9]*:../../mail/alpine
 BUILD_DEPENDS+=	spamassassin-[0-9]*:../../mail/spamassassin
-BUILD_DEPENDS+=	bind>=9.11<9.12:../../net/bind911
 BUILD_DEPENDS+=	bind>=9.16<9.17:../../net/bind916
 BUILD_DEPENDS+=	clive-[0-9]*:../../net/clive
 BUILD_DEPENDS+=	nmap-[0-9]*:../../net/nmap
