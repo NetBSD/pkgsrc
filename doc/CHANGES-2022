@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3048 2022/06/15 18:58:50 pin Exp $
+$NetBSD: CHANGES-2022,v 1.3049 2022/06/15 22:01:27 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4616,3 +4616,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/terraform-provider-vultr to 2.11.3 [tpaul 2022-06-15]
 	Updated sysutils/felix to 0.9.5 [pin 2022-06-15]
 	Updated editors/featherpad to 1.3.0 [pin 2022-06-15]
+	Added devel/py-collections_extended version 2.0.2 [gdt 2022-06-15]
