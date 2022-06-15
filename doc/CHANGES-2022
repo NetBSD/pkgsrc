@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3038 2022/06/15 10:53:44 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.3039 2022/06/15 11:44:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4605,3 +4605,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated audio/libopenmpt to 0.6.4 [fcambus 2022-06-15]
 	Updated devel/binaryen to 109 [fcambus 2022-06-15]
 	Updated comms/tio to 1.39 [fcambus 2022-06-15]
+	Updated devel/py-astroid to 2.11.6 [adam 2022-06-15]
+	Updated devel/py-pylint to 2.14.2 [adam 2022-06-15]
