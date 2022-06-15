@@ -1,4 +1,4 @@
-<!-- $NetBSD: creating.xml,v 1.36 2022/02/06 21:21:08 rillig Exp $ -->
+<!-- $NetBSD: creating.xml,v 1.37 2022/06/15 22:26:45 gdt Exp $ -->
 
 <chapter id="creating">
 <title>Creating a new pkgsrc package from scratch</title>
@@ -187,7 +187,10 @@ to include <quote><filename>../../lang/python/egg.mk</filename></quote>.
 <programlisting>
 DISTNAME=   foopymodule-1.2.10
 PKGNAME=    ${PYPKGPREFIX}-${DISTNAME}
-</programlisting></para>
+</programlisting>
+For software in PyPi, the name should match what PyPi specifies for
+"pip install software".
+</para>
 
 <para>If it is an application, include
 <quote><filename>../../lang/python/application.mk</filename></quote>.
