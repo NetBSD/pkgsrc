@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3036 2022/06/15 10:07:03 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.3037 2022/06/15 10:22:58 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4603,3 +4603,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated misc/rhash to 1.4.3 [adam 2022-06-15]
 	Updated textproc/ugrep to 3.8.2 [adam 2022-06-15]
 	Updated audio/libopenmpt to 0.6.4 [fcambus 2022-06-15]
+	Updated devel/binaryen to 109 [fcambus 2022-06-15]
