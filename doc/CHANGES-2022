@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3045 2022/06/15 15:43:07 tpaul Exp $
+$NetBSD: CHANGES-2022,v 1.3046 2022/06/15 15:46:46 tpaul Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4613,3 +4613,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed net/bind911 [taca 2022-06-15]
 	Updated devel/ruby-redmine42 to 4.2.6 [taca 2022-06-15]
 	Updated net/vultr-cli to 2.14.2 [tpaul 2022-06-15]
+	Updated net/terraform-provider-vultr to 2.11.3 [tpaul 2022-06-15]
