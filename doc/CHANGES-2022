@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3046 2022/06/15 15:46:46 tpaul Exp $
+$NetBSD: CHANGES-2022,v 1.3047 2022/06/15 18:39:22 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4614,3 +4614,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/ruby-redmine42 to 4.2.6 [taca 2022-06-15]
 	Updated net/vultr-cli to 2.14.2 [tpaul 2022-06-15]
 	Updated net/terraform-provider-vultr to 2.11.3 [tpaul 2022-06-15]
+	Updated sysutils/felix to 0.9.5 [pin 2022-06-15]
