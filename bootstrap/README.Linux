@@ -1,4 +1,4 @@
-$NetBSD: README.Linux,v 1.13 2022/06/01 12:15:39 gdt Exp $
+$NetBSD: README.Linux,v 1.14 2022/06/15 20:17:32 schmonz Exp $
 
 # General
 
@@ -22,6 +22,18 @@ There are no reports of success or failure with clang.
 
 It was reported in 2008 that icc (Intel C++ Compiler) 8.0 and 8.1
 have been tested on i386.  See the old section at the end.
+
+# Alpine and derivatives
+
+After bootstrap, if you want to be using pkgsrc build/install locking,
+install a more featureful ps(1) than BusyBox's:
+
+	apk add procps
+
+You may also find that pkgsrc needs a more featureful date(1),
+such as GNU's:
+
+	apk add coreutils
 
 # Debian and derivatives
 
