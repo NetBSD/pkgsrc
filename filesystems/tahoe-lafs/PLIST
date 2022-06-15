@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2021/10/21 12:16:25 gdt Exp $
+@comment $NetBSD: PLIST,v 1.14 2022/06/15 22:31:44 gdt Exp $
 bin/tahoe
 ${PYSITELIB}/allmydata/__init__.py
 ${PYSITELIB}/allmydata/__init__.pyc
@@ -27,9 +27,6 @@ ${PYSITELIB}/allmydata/client.pyo
 ${PYSITELIB}/allmydata/codec.py
 ${PYSITELIB}/allmydata/codec.pyc
 ${PYSITELIB}/allmydata/codec.pyo
-${PYSITELIB}/allmydata/control.py
-${PYSITELIB}/allmydata/control.pyc
-${PYSITELIB}/allmydata/control.pyo
 ${PYSITELIB}/allmydata/crypto/__init__.py
 ${PYSITELIB}/allmydata/crypto/__init__.pyc
 ${PYSITELIB}/allmydata/crypto/__init__.pyo
@@ -273,15 +270,30 @@ ${PYSITELIB}/allmydata/storage/crawler.pyo
 ${PYSITELIB}/allmydata/storage/expirer.py
 ${PYSITELIB}/allmydata/storage/expirer.pyc
 ${PYSITELIB}/allmydata/storage/expirer.pyo
+${PYSITELIB}/allmydata/storage/http_client.py
+${PYSITELIB}/allmydata/storage/http_client.pyc
+${PYSITELIB}/allmydata/storage/http_client.pyo
+${PYSITELIB}/allmydata/storage/http_server.py
+${PYSITELIB}/allmydata/storage/http_server.pyc
+${PYSITELIB}/allmydata/storage/http_server.pyo
 ${PYSITELIB}/allmydata/storage/immutable.py
 ${PYSITELIB}/allmydata/storage/immutable.pyc
 ${PYSITELIB}/allmydata/storage/immutable.pyo
+${PYSITELIB}/allmydata/storage/immutable_schema.py
+${PYSITELIB}/allmydata/storage/immutable_schema.pyc
+${PYSITELIB}/allmydata/storage/immutable_schema.pyo
 ${PYSITELIB}/allmydata/storage/lease.py
 ${PYSITELIB}/allmydata/storage/lease.pyc
 ${PYSITELIB}/allmydata/storage/lease.pyo
+${PYSITELIB}/allmydata/storage/lease_schema.py
+${PYSITELIB}/allmydata/storage/lease_schema.pyc
+${PYSITELIB}/allmydata/storage/lease_schema.pyo
 ${PYSITELIB}/allmydata/storage/mutable.py
 ${PYSITELIB}/allmydata/storage/mutable.pyc
 ${PYSITELIB}/allmydata/storage/mutable.pyo
+${PYSITELIB}/allmydata/storage/mutable_schema.py
+${PYSITELIB}/allmydata/storage/mutable_schema.pyc
+${PYSITELIB}/allmydata/storage/mutable_schema.pyo
 ${PYSITELIB}/allmydata/storage/server.py
 ${PYSITELIB}/allmydata/storage/server.pyc
 ${PYSITELIB}/allmydata/storage/server.pyo
@@ -303,6 +315,9 @@ ${PYSITELIB}/allmydata/test/cli/__init__.pyo
 ${PYSITELIB}/allmydata/test/cli/common.py
 ${PYSITELIB}/allmydata/test/cli/common.pyc
 ${PYSITELIB}/allmydata/test/cli/common.pyo
+${PYSITELIB}/allmydata/test/cli/test_admin.py
+${PYSITELIB}/allmydata/test/cli/test_admin.pyc
+${PYSITELIB}/allmydata/test/cli/test_admin.pyo
 ${PYSITELIB}/allmydata/test/cli/test_alias.py
 ${PYSITELIB}/allmydata/test/cli/test_alias.pyc
 ${PYSITELIB}/allmydata/test/cli/test_alias.pyo
@@ -351,12 +366,20 @@ ${PYSITELIB}/allmydata/test/cli_node_api.pyo
 ${PYSITELIB}/allmydata/test/common.py
 ${PYSITELIB}/allmydata/test/common.pyc
 ${PYSITELIB}/allmydata/test/common.pyo
+${PYSITELIB}/allmydata/test/common_storage.py
+${PYSITELIB}/allmydata/test/common_storage.pyc
+${PYSITELIB}/allmydata/test/common_storage.pyo
+${PYSITELIB}/allmydata/test/common_system.py
+${PYSITELIB}/allmydata/test/common_system.pyc
+${PYSITELIB}/allmydata/test/common_system.pyo
 ${PYSITELIB}/allmydata/test/common_util.py
 ${PYSITELIB}/allmydata/test/common_util.pyc
 ${PYSITELIB}/allmydata/test/common_util.pyo
 ${PYSITELIB}/allmydata/test/common_web.py
 ${PYSITELIB}/allmydata/test/common_web.pyc
 ${PYSITELIB}/allmydata/test/common_web.pyo
+${PYSITELIB}/allmydata/test/data/lease_checker.history.txt
+${PYSITELIB}/allmydata/test/data/lease_checker.state.txt
 ${PYSITELIB}/allmydata/test/data/openssh-rsa-2048.pub.txt
 ${PYSITELIB}/allmydata/test/data/openssh-rsa-2048.txt
 ${PYSITELIB}/allmydata/test/data/pycryptopp-rsa-2048-priv.txt
@@ -530,6 +553,9 @@ ${PYSITELIB}/allmydata/test/test_introducer.pyo
 ${PYSITELIB}/allmydata/test/test_iputil.py
 ${PYSITELIB}/allmydata/test/test_iputil.pyc
 ${PYSITELIB}/allmydata/test/test_iputil.pyo
+${PYSITELIB}/allmydata/test/test_istorageserver.py
+${PYSITELIB}/allmydata/test/test_istorageserver.pyc
+${PYSITELIB}/allmydata/test/test_istorageserver.pyo
 ${PYSITELIB}/allmydata/test/test_json_metadata.py
 ${PYSITELIB}/allmydata/test/test_json_metadata.pyc
 ${PYSITELIB}/allmydata/test/test_json_metadata.pyo
@@ -554,6 +580,9 @@ ${PYSITELIB}/allmydata/test/test_node.pyo
 ${PYSITELIB}/allmydata/test/test_observer.py
 ${PYSITELIB}/allmydata/test/test_observer.pyc
 ${PYSITELIB}/allmydata/test/test_observer.pyo
+${PYSITELIB}/allmydata/test/test_openmetrics.py
+${PYSITELIB}/allmydata/test/test_openmetrics.pyc
+${PYSITELIB}/allmydata/test/test_openmetrics.pyo
 ${PYSITELIB}/allmydata/test/test_pipeline.py
 ${PYSITELIB}/allmydata/test/test_pipeline.pyc
 ${PYSITELIB}/allmydata/test/test_pipeline.pyo
@@ -584,6 +613,9 @@ ${PYSITELIB}/allmydata/test/test_storage.pyo
 ${PYSITELIB}/allmydata/test/test_storage_client.py
 ${PYSITELIB}/allmydata/test/test_storage_client.pyc
 ${PYSITELIB}/allmydata/test/test_storage_client.pyo
+${PYSITELIB}/allmydata/test/test_storage_http.py
+${PYSITELIB}/allmydata/test/test_storage_http.pyc
+${PYSITELIB}/allmydata/test/test_storage_http.pyo
 ${PYSITELIB}/allmydata/test/test_storage_web.py
 ${PYSITELIB}/allmydata/test/test_storage_web.pyc
 ${PYSITELIB}/allmydata/test/test_storage_web.pyo
@@ -665,6 +697,9 @@ ${PYSITELIB}/allmydata/uri.pyo
 ${PYSITELIB}/allmydata/util/__init__.py
 ${PYSITELIB}/allmydata/util/__init__.pyc
 ${PYSITELIB}/allmydata/util/__init__.pyo
+${PYSITELIB}/allmydata/util/_eliot_updates.py
+${PYSITELIB}/allmydata/util/_eliot_updates.pyc
+${PYSITELIB}/allmydata/util/_eliot_updates.pyo
 ${PYSITELIB}/allmydata/util/abbreviate.py
 ${PYSITELIB}/allmydata/util/abbreviate.pyc
 ${PYSITELIB}/allmydata/util/abbreviate.pyo
