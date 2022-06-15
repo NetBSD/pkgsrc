@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2022/06/03 08:49:10 fcambus Exp $
+# $NetBSD: Makefile,v 1.10 2022/06/15 10:53:32 fcambus Exp $
 
-DISTNAME=	tio-1.38
+DISTNAME=	tio-1.39
 CATEGORIES=	comms
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tio/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
