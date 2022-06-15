@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2022/05/04 17:34:05 jperkin Exp $
+# $NetBSD: Makefile,v 1.10 2022/06/15 14:22:55 taca Exp $
 
 DISTNAME=	redmine-${RM_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/redmine/redmine${RM_VER}/}
@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v2 # and so on.
 
 USE_TOOLS+=	pax
 
-RM_VERSION=	4.2.5
+RM_VERSION=	4.2.6
 
 NO_BUILD=	yes
 
@@ -20,7 +20,8 @@ RUBY_VERSIONS_ACCEPTED=	26 27
 
 RUBY_RAILS_ACCEPTED=	52
 
-OVERRIDE_GEMSPEC+=	nokogiri>=1.11.0 mini_mime>=1.0.1 csv>=3.1.1
+OVERRIDE_GEMSPEC+=	csv>=3.1.1 i18n>=1.8.2 nokogiri>=1.11.0 \
+			mini_mime>=1.0.1
 
 REPLACE_RUBY+=	bin/*
 REPLACE_RUBY+=	extra/mail_handler/rdm-mailhandler.rb
@@ -41,7 +42,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-marcel>=1.0.0:../../devel/ruby-marcel
 DEPENDS+=	${RUBY_PKGPREFIX}-mail>=2.7.1<2.8:../../mail/ruby-mail
 DEPENDS+=	${RUBY_PKGPREFIX}-csv>=3.1.1:../../textproc/ruby-csv
 DEPENDS+=	${RUBY_PKGPREFIX}-nokogiri>=1.11.1:../../textproc/ruby-nokogiri
-DEPENDS+=	${RUBY_PKGPREFIX}-i18n>=1.8.2<1.9:../../devel/ruby-i18n
+DEPENDS+=	${RUBY_PKGPREFIX}-i18n>=1.8.2<2:../../devel/ruby-i18n
 DEPENDS+=	${RUBY_PKGPREFIX}-rbpdf>=1.20.0<1.21:../../print/ruby-rbpdf
 DEPENDS+=	${RUBY_PKGPREFIX}-addressable>=0:../../net/ruby-addressable
 DEPENDS+=	${RUBY_PKGPREFIX}-zip>=2.3.0<2.4:../../archivers/ruby-zip
