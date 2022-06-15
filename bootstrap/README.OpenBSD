@@ -1,4 +1,4 @@
-$NetBSD: README.OpenBSD,v 1.16 2022/06/14 09:08:31 nia Exp $
+$NetBSD: README.OpenBSD,v 1.17 2022/06/15 15:04:48 schmonz Exp $
 
 Please read the general README file as well.
 
@@ -24,9 +24,6 @@ fw_update(1).
 pkgsrc bootstrap has been tested on OpenBSD 7.1 (amd64, i386) with the
 system-provided clang. Earlier version/platform/compiler combinations
 have previously been reported to work.
-
-If the bootstrap fails for you, try adding `--prefer-pkgsrc yes` to your
-bootstrap command line (this is now the default).
 
 Once bootstrapped, as is typical with pkgsrc, many packages build as is.
 For any particular package that doesn't, fixes are often in OpenBSD
