@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/01/04 20:53:14 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/06/15 08:34:57 spz Exp $
 
 DISTNAME=	Kivy-2.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -23,6 +23,9 @@ USE_LANGUAGES=	c
 USE_TOOLS+=	pkg-config
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+pre-configure:
+	${CHMOD} -R go-w ${WRKSRC}
 
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
