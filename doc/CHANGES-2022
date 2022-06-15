@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3043 2022/06/15 14:14:29 taca Exp $
+$NetBSD: CHANGES-2022,v 1.3044 2022/06/15 14:23:16 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4611,3 +4611,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated meta-pkgs/bulk-medium to 20220615 [taca 2022-06-15]
 	Updated net/nagios-plugins to 2.2.1nb7 [taca 2022-06-15]
 	Removed net/bind911 [taca 2022-06-15]
+	Updated devel/ruby-redmine42 to 4.2.6 [taca 2022-06-15]
