@@ -1,0 +1,26 @@
+$NetBSD: patch-isl_configure,v 1.1 2022/06/16 15:43:55 adam Exp $
+
+Make test portable
+
+https://gcc.gnu.org/bugzilla/show_bug.cgi?id=90144
+
+--- isl/configure.orig	2016-01-14 17:26:10.000000000 +0000
++++ isl/configure
+@@ -17561,7 +17561,7 @@ else
+ fi
+ 
+ 
+- if test "x$with_int" == "ximath-32"; then
++ if test "x$with_int" = "ximath-32"; then
+   SMALL_INT_OPT_TRUE=
+   SMALL_INT_OPT_FALSE='#'
+ else
+@@ -17569,7 +17569,7 @@ else
+   SMALL_INT_OPT_FALSE=
+ fi
+ 
+-if test "x$with_int" == "ximath-32"; then :
++if test "x$with_int" = "ximath-32"; then :
+ 
+ 
+ $as_echo "#define USE_SMALL_INT_OPT /**/" >>confdefs.h
