@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3054 2022/06/16 07:22:44 pin Exp $
+$NetBSD: CHANGES-2022,v 1.3055 2022/06/16 11:49:16 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4621,3 +4621,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/tcpreplay to 4.4.1 [gutteridge 2022-06-16]
 	Updated chat/matrix-synapse to 1.57.0 [gdt 2022-06-16]
 	Updated sysutils/felix to 0.9.7 [pin 2022-06-16]
+	Updated chat/matrix-synapse to 1.58.1 [gdt 2022-06-16]
