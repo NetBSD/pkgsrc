@@ -1,13 +1,13 @@
-$NetBSD: patch-pyproject.toml,v 1.1 2022/06/16 11:49:08 gdt Exp $
+$NetBSD: patch-pyproject.toml,v 1.2 2022/06/16 12:06:25 gdt Exp $
 
 Patch out cryptography check: It doesn't need a version this high and it was
 added by upstream as an ugly hack to force a patched OpenSSL, in case it is
 linked statically.
 
---- pyproject.toml.orig	2022-05-05 14:15:32.000000000 +0000
+--- pyproject.toml.orig	2022-06-14 10:56:45.000000000 +0000
 +++ pyproject.toml
-@@ -146,7 +146,7 @@ bleach = ">=1.4.3"
- typing-extensions = ">=3.10.0"
+@@ -147,7 +147,7 @@ bleach = ">=1.4.3"
+ typing-extensions = ">=3.10.0.1"
  # We enforce that we have a `cryptography` version that bundles an `openssl`
  # with the latest security patches.
 -cryptography = ">=3.4.7"
