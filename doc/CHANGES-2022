@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3057 2022/06/16 15:25:24 ryoon Exp $
+$NetBSD: CHANGES-2022,v 1.3058 2022/06/16 15:44:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4624,3 +4624,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated chat/matrix-synapse to 1.58.1 [gdt 2022-06-16]
 	Updated chat/matrix-synapse to 1.61.0 [gdt 2022-06-16]
 	Updated graphics/py-matplotlib to 3.5.2 [ryoon 2022-06-16]
+	Added lang/gcc12 version 12.1.0 [adam 2022-06-16]
+	Added lang/gcc12-libs version 12.1.0nb1 [adam 2022-06-16]
