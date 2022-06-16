@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3056 2022/06/16 12:06:32 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.3057 2022/06/16 15:25:24 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4623,3 +4623,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/felix to 0.9.7 [pin 2022-06-16]
 	Updated chat/matrix-synapse to 1.58.1 [gdt 2022-06-16]
 	Updated chat/matrix-synapse to 1.61.0 [gdt 2022-06-16]
+	Updated graphics/py-matplotlib to 3.5.2 [ryoon 2022-06-16]
