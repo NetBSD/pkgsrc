@@ -1,0 +1,237 @@
+$NetBSD: patch-gcc_config.gcc,v 1.1 2022/06/16 15:43:55 adam Exp $
+
+Match what is in NetBSD src. Fixes at least aarch64eb, and
+probably several others.
+
+--- gcc/config.gcc.orig	2022-05-06 07:30:56.000000000 +0000
++++ gcc/config.gcc
+@@ -439,6 +439,16 @@ m32r*-*-*)
+         cpu_type=m32r
+ 	extra_options="${extra_options} g.opt"
+         ;;
++m5200-*-*|m5407-*-*)
++	cpu_type=m68k
++	extra_headers=math-68881.h
++	extra_options="${extra_options} m68k/m68k-tables.opt"
++	;;
++m680[012]0-*-*)
++	cpu_type=m68k
++	extra_headers=math-68881.h
++	extra_options="${extra_options} m68k/m68k-tables.opt"
++	;;
+ m68k-*-*)
+ 	extra_headers=math-68881.h
+ 	extra_options="${extra_options} m68k/m68k-tables.opt"
+@@ -906,6 +916,11 @@ case ${target} in
+   case ${enable_threads} in
+     "" | yes | posix) thread_file='posix' ;;
+   esac
++  case ${target} in
++    arm*-* | i[34567]86-* | powerpc*-* | sparc*-* | x86_64-*)
++      default_gnu_indirect_function=yes
++      ;;
++  esac
+   nbsd_tm_file="netbsd.h netbsd-stdint.h netbsd-elf.h"
+   default_use_cxa_atexit=yes
+   target_has_targetdm=yes
+@@ -1135,6 +1150,11 @@ aarch64*-*-netbsd*)
+ 	tm_file="${tm_file} aarch64/aarch64-elf.h aarch64/aarch64-errata.h aarch64/aarch64-netbsd.h"
+ 	tmake_file="${tmake_file} aarch64/t-aarch64 aarch64/t-aarch64-netbsd"
+ 	extra_options="${extra_options} netbsd.opt netbsd-elf.opt"
++	case $target in
++	aarch64_be-*)
++		tm_defines="${tm_defines} TARGET_BIG_ENDIAN_DEFAULT=1"
++		;;
++	esac
+ 	;;
+ aarch64*-*-linux*)
+ 	tm_file="${tm_file} dbxelf.h elfos.h gnu-user.h linux.h glibc-stdint.h"
+@@ -1276,7 +1296,6 @@ arm*-*-freebsd*)                # ARM Fr
+ 	with_tls=${with_tls:-gnu}
+ 	;;
+ arm*-*-netbsdelf*)
+-	target_cpu_cname="strongarm"
+ 	tmake_file="${tmake_file} arm/t-arm"
+ 	tm_file="dbxelf.h elfos.h ${nbsd_tm_file} arm/elf.h"
+ 	extra_options="${extra_options} netbsd.opt netbsd-elf.opt"
+@@ -1285,26 +1304,34 @@ arm*-*-netbsdelf*)
+ 	esac
+ 	case ${target} in
+ 	arm*-*-netbsdelf-*eabi*)
+-	    tm_file="$tm_file arm/bpabi.h arm/netbsd-elf.h arm/netbsd-eabi.h"
+-	    tmake_file="$tmake_file arm/t-bpabi arm/t-netbsdeabi"
++	    tm_file="${tm_file} arm/bpabi.h arm/netbsd-elf.h arm/netbsd-eabi.h"
++	    #tmake_file="$tmake_file arm/t-bpabi"
++	    # The EABI requires the use of __cxa_atexit.
++	    default_use_cxa_atexit=yes
++	    # NetBSD native configuration pulls this in, not sure why this must
++	    # be here explicitly for pkgsrc.
++	    gcc_cv_initfini_array=yes
+ 	    ;;
+ 	*)
+-	    tm_file="$tm_file arm/netbsd-elf.h"
++	    tm_file="$tm_file arm/bpabi.h arm/netbsd-elf.h"
++	    #tmake_file="$tmake_file arm/t-bpabi arm/t-netbsdeabi"
+ 	    tmake_file="$tmake_file arm/t-netbsd"
+ 	    ;;
+ 	esac
+ 	tm_file="${tm_file} arm/aout.h arm/arm.h"
+ 	case ${target} in
+ 	arm*-*-netbsdelf-*eabihf*)
+-	    # Hard-float requires at least Arm v5te
+-	    target_cpu_cname="arm10e"
+ 	    tm_defines="${tm_defines} TARGET_DEFAULT_FLOAT_ABI=ARM_FLOAT_ABI_HARD"
+ 	    ;;
+ 	esac
+ 	case ${target} in
+-	armv6*) target_cpu_cname="arm1176jzf-s";;
+-	armv7*) target_cpu_cname="generic-armv7-a";;
++	armv4*) with_cpu=${with_cpu:-strongarm};;
++	armv6*) with_cpu=${with_cpu:-arm1176jzf-s};;
++	armv7*) with_cpu=${with_cpu:-cortex-a8};;
++	arm*eabihf*) with_cpu=${with_cpu:-arm10e};;
++	arm*) with_cpu=${with_cpu:-arm9e};;
+ 	esac
++	target_cpu_cname="$with_cpu"
+ 	;;
+ arm*-*-linux-* | arm*-*-uclinuxfdpiceabi)
+ 	tm_file="dbxelf.h elfos.h gnu-user.h linux.h linux-android.h glibc-stdint.h arm/elf.h arm/linux-gas.h arm/linux-elf.h"
+@@ -1931,6 +1958,7 @@ i[34567]86-*-netbsdelf*)
+ 	;;
+ x86_64-*-netbsd*)
+ 	tm_file="${tm_file} i386/unix.h i386/att.h dbxelf.h elfos.h ${nbsd_tm_file} i386/x86-64.h i386/netbsd64.h"
++	tmake_file="${tmake_file} i386/t-netbsd64"
+ 	extra_options="${extra_options} netbsd.opt netbsd-elf.opt"
+ 	;;
+ i[34567]86-*-openbsd*)
+@@ -2259,6 +2287,16 @@ ia64*-*-elf*)
+ 		target_cpu_default="${target_cpu_default}|MASK_GNU_LD"
+ 	fi
+ 	;;
++ia64*-*-netbsd*)
++	tm_file="${tm_file} dbxelf.h elfos.h ${nbsd_tm_file} ia64/sysv4.h ia64/netbsd.h"
++	target_cpu_default="MASK_GNU_AS|MASK_GNU_LD"
++	tmake_file="${tmake_file} ia64/t-ia64"
++	if test x$with_system_libunwind != xyes ; then
++		tmake_file="${tmake_file} t-libunwind-elf ia64/t-glibc-libunwind"
++	fi
++	extra_parts="crtbegin.o crtend.o crtbeginS.o crtendS.o crtfastmath.o"
++	extra_options="${extra_options} netbsd.opt netbsd-elf.opt"
++	;;
+ ia64*-*-freebsd*)
+ 	tm_file="${tm_file} dbxelf.h elfos.h ${fbsd_tm_file} ia64/sysv4.h ia64/freebsd.h"
+ 	target_cpu_default="MASK_GNU_AS|MASK_GNU_LD"
+@@ -2355,8 +2393,25 @@ m68k-*-elf* | fido-*-elf*)
+ 		;;
+ 	esac
+ 	;;
+-m68k*-*-netbsdelf*)
++m68010-*-netbsdelf* | m68k-*-netbsdelf* | m5407-*-netbsdelf*)
+ 	default_m68k_cpu=68020
++	case ${target} in
++	m5407*)
++		with_arch=${with_arch:-cf}
++		target_cpu_default="mcf5475"
++#	        target="`echo ${target} | sed 's/m68kcf/m68k/'`"
++		;;
++	m68010*)
++		target_cpu_default="m68010"
++		tmake_file="${tmake_file} m68k/t-m68kelf m68k/t-m68010-netbsd"
++		default_m68k_cpu=68010
++		tmake_file="${tmake_file} m68k/t-floatlib"
++		;;
++	*)
++		with_arch=${with_arch:-m68k}
++		tmake_file="${tmake_file} m68k/t-floatlib"
++		;;
++	esac
+ 	default_cf_cpu=5475
+ 	tm_file="${tm_file} dbxelf.h elfos.h ${nbsd_tm_file} m68k/netbsd-elf.h"
+ 	extra_options="${extra_options} netbsd.opt netbsd-elf.opt"
+@@ -2516,6 +2571,26 @@ loongarch*-*-linux*)
+ 	gcc_cv_initfini_array=yes
+ 	;;
+ 
++riscv*-*-netbsd*)                      # NetBSD RISC-V
++       tm_file="elfos.h ${tm_file} ${nbsd_tm_file} riscv/netbsd.h"
++       tm_defines="${tm_defines} CHAR_FAST8=1 SHORT_FAST16=1"
++       case ${target} in
++         riscv32*) tm_defines="${tm_defines} TARGET_64BIT_DEFAULT=0" ;;
++         *) tmake_file="${tmake_file} riscv/t-netbsd64" ;;
++       esac
++       extra_options="${extra_options} netbsd.opt netbsd-elf.opt"
++       tmake_file="${tmake_file} riscv/t-riscv"
++       gnu_ld=yes
++       gas=yes
++       gcc_cv_initfini_array=yes
++       ;;
++mips64*-*-netbsd*)                     # NetBSD/mips64, either endian.
++       target_cpu_default="MASK_ABICALLS|MASK_FLOAT64|MASK_SOFT_FLOAT_ABI"
++       tm_file="elfos.h ${tm_file} mips/elf.h ${nbsd_tm_file} mips/netbsd.h mips/netbsd64.h"
++       tmake_file="${tmake_file} mips/t-netbsd64"
++       tm_defines="${tm_defines} MIPS_ABI_DEFAULT=ABI_N32"
++       extra_options="${extra_options} netbsd.opt netbsd-elf.opt"
++       ;;
+ mips*-*-netbsd*)			# NetBSD/mips, either endian.
+ 	target_cpu_default="MASK_ABICALLS"
+ 	tm_file="elfos.h ${tm_file} mips/elf.h ${nbsd_tm_file} mips/netbsd.h"
+@@ -2941,11 +3016,24 @@ powerpc*-*-freebsd*)
+ 		;;
+ 	esac
+ 	;;
+-powerpc-*-netbsd*)
+-	tm_file="${tm_file} dbxelf.h elfos.h gnu-user.h ${nbsd_tm_file} freebsd-spec.h rs6000/sysv4.h rs6000/netbsd.h"
++powerpc*-*-netbsd*)
++	tm_file="${tm_file} dbxelf.h elfos.h gnu-user.h ${nbsd_tm_file} freebsd-spec.h"
++	case ${target} in
++	    powerpc64*)
++		tm_file="rs6000/biarch64.h ${tm_file}"
++		tm_file="${tm_file} rs6000/sysv4.h rs6000/default64.h rs6000/netbsd64.h"
++		tmake_file="${tmake_file} rs6000/t-netbsd64"
++		;;
++	    *)
++		tm_file="${tm_file} rs6000/sysv4.h rs6000/netbsd.h"
++		tmake_file="${tmake_file} rs6000/t-netbsd"
++		;;
++	esac
+ 	extra_options="${extra_options} netbsd.opt netbsd-elf.opt"
+-	tmake_file="${tmake_file} rs6000/t-netbsd"
+-	extra_options="${extra_options} rs6000/sysv4.opt"
++	extra_options="${extra_options} rs6000/sysv4.opt rs6000/linux64.opt"
++	if test x${enable_secureplt} != xno; then
++	    tm_file="rs6000/secureplt.h ${tm_file}"
++	fi
+ 	;;
+ powerpc-*-eabisimaltivec*)
+ 	tm_file="${tm_file} dbxelf.h elfos.h gnu-user.h freebsd-spec.h newlib-stdint.h rs6000/sysv4.h rs6000/eabi.h rs6000/eabisim.h rs6000/eabialtivec.h"
+@@ -3450,9 +3538,11 @@ sparc64-*-freebsd*|ultrasparc-*-freebsd*
+ sparc64-*-netbsd*)
+ 	tm_file="sparc/biarch64.h ${tm_file}"
+ 	tm_file="${tm_file} dbxelf.h elfos.h sparc/sysv4.h ${nbsd_tm_file} sparc/netbsd-elf.h"
++	tm_file="${tm_file} sparc/default64.h"
+ 	extra_options="${extra_options} netbsd.opt netbsd-elf.opt"
+ 	extra_options="${extra_options} sparc/long-double-switch.opt"
+ 	tmake_file="${tmake_file} sparc/t-sparc sparc/t-netbsd64"
++	with_cpu=ultrasparc
+ 	;;
+ sparc64-*-openbsd*)
+ 	tm_file="sparc/openbsd1-64.h ${tm_file} dbxelf.h elfos.h sparc/sysv4.h sparc/sp64-elf.h"
+@@ -3958,6 +4048,9 @@ if test x$with_cpu = x ; then
+     frv550-*-*linux*)
+       with_cpu=fr550
+       ;;
++    m5200-*-*|m5407-*-*)
++      with_cpu=${default_cf_cpu}
++      ;;
+     m68k*-*-*)
+       case "$with_arch" in
+ 	"cf")
+@@ -4509,7 +4602,7 @@ case "${target}" in
+ 		esac
+ 		;;
+ 
+-	fido-*-* | m68k*-*-*)
++	fido-*-* | m68k*-*-* | m5200-*-* | m5407-*-*)
+ 		supported_defaults="arch cpu"
+ 		case "$with_arch" in
+ 		"" | "m68k"| "cf")
