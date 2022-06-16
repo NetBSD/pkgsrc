@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.311 2022/06/14 09:08:31 nia Exp $
+# $NetBSD: bootstrap,v 1.312 2022/06/16 22:12:20 charlotte Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -1133,6 +1133,7 @@ echo "" >> ${TARGET_MKCONF}
 
 case $opsys in
 OpenBSD)
+	# Use PREFER_PKGSRC=yes to work around libressl compatibility problem
 	if [ -z "$prefer_pkgsrc" ] && [ "$prefer_native" != "yes" ]; then
 		prefer_pkgsrc="yes"
 	fi
