@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3059 2022/06/16 16:02:39 ryoon Exp $
+$NetBSD: CHANGES-2022,v 1.3060 2022/06/16 16:24:17 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4627,3 +4627,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added lang/gcc12 version 12.1.0 [adam 2022-06-16]
 	Added lang/gcc12-libs version 12.1.0nb1 [adam 2022-06-16]
 	Updated www/php-nextcloud to 24.0.1 [ryoon 2022-06-16]
+	Updated net/nsd to 4.5.0 [ryoon 2022-06-16]
