@@ -1,0 +1,17 @@
+$NetBSD: patch-pyproject.toml,v 1.1 2022/06/16 11:49:08 gdt Exp $
+
+Patch out cryptography check: It doesn't need a version this high and it was
+added by upstream as an ugly hack to force a patched OpenSSL, in case it is
+linked statically.
+
+--- pyproject.toml.orig	2022-05-05 14:15:32.000000000 +0000
++++ pyproject.toml
+@@ -146,7 +146,7 @@ bleach = ">=1.4.3"
+ typing-extensions = ">=3.10.0"
+ # We enforce that we have a `cryptography` version that bundles an `openssl`
+ # with the latest security patches.
+-cryptography = ">=3.4.7"
++cryptography = ">=3.3.2"
+ # ijson 3.1.4 fixes a bug with "." in property names
+ ijson = ">=3.1.4"
+ matrix-common = "~=1.1.0"
