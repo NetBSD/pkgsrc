@@ -1,0 +1,36 @@
+$NetBSD: patch-fixincludes_inclhack.def,v 1.1 2022/06/16 15:43:55 adam Exp $
+
+A workaround for Catalina SDK bug from
+https://github.com/Homebrew/homebrew-core/pull/44762
+
+--- fixincludes/inclhack.def.orig	2020-03-04 08:29:59.000000000 +0000
++++ fixincludes/inclhack.def
+@@ -1269,6 +1269,28 @@ fix = {
+ };
+ 
+ /*
++ *  macOS 10.15 <Availability.h> does not define __OSX_AVAILABLE_STARTING on
++ *  non-clang compilers.
++ */
++fix = {
++    hackname  = darwin_availability;
++    mach      = "*-*-darwin*";
++    files     = Availability.h;
++    select    = "#endif /\\* __OSX_AVAILABLE_STARTING \\*/";
++    c_fix     = format;
++    c_fix_arg = <<- _EOFix_
++	#endif /* __OSX_AVAILABLE_STARTING */
++	#ifndef __OSX_AVAILABLE_STARTING
++	  #define __OSX_AVAILABLE_STARTING(_osx, _ios)
++	  #define __OSX_AVAILABLE_BUT_DEPRECATED(_osxIntro, _osxDep, _iosIntro, _iosDep)
++	  #define __OSX_AVAILABLE_BUT_DEPRECATED_MSG(_osxIntro, _osxDep, _iosIntro, _iosDep, _msg)
++	#endif
++	_EOFix_;
++
++    test_text = "#endif /* __OSX_AVAILABLE_STARTING */";
++};
++
++/*
+  *  macOS 10.12 <AvailabilityInternal.h> uses __attribute__((availability))
+  *  unconditionally.
+  */
