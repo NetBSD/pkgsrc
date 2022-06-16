@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2022/04/17 11:08:33 js Exp $
+@comment $NetBSD: PLIST,v 1.25 2022/06/16 00:29:04 gdt Exp $
 bin/export_signing_key
 bin/generate_config
 bin/generate_log_config
@@ -574,6 +574,9 @@ ${PYSITELIB}/synapse/http/servlet.pyo
 ${PYSITELIB}/synapse/http/site.py
 ${PYSITELIB}/synapse/http/site.pyc
 ${PYSITELIB}/synapse/http/site.pyo
+${PYSITELIB}/synapse/http/types.py
+${PYSITELIB}/synapse/http/types.pyc
+${PYSITELIB}/synapse/http/types.pyo
 ${PYSITELIB}/synapse/logging/__init__.py
 ${PYSITELIB}/synapse/logging/__init__.pyc
 ${PYSITELIB}/synapse/logging/__init__.pyo
@@ -613,6 +616,9 @@ ${PYSITELIB}/synapse/metrics/_gc.pyo
 ${PYSITELIB}/synapse/metrics/_reactor_metrics.py
 ${PYSITELIB}/synapse/metrics/_reactor_metrics.pyc
 ${PYSITELIB}/synapse/metrics/_reactor_metrics.pyo
+${PYSITELIB}/synapse/metrics/_types.py
+${PYSITELIB}/synapse/metrics/_types.pyc
+${PYSITELIB}/synapse/metrics/_types.pyo
 ${PYSITELIB}/synapse/metrics/background_process_metrics.py
 ${PYSITELIB}/synapse/metrics/background_process_metrics.pyc
 ${PYSITELIB}/synapse/metrics/background_process_metrics.pyo
@@ -734,9 +740,6 @@ ${PYSITELIB}/synapse/replication/slave/storage/account_data.pyo
 ${PYSITELIB}/synapse/replication/slave/storage/appservice.py
 ${PYSITELIB}/synapse/replication/slave/storage/appservice.pyc
 ${PYSITELIB}/synapse/replication/slave/storage/appservice.pyo
-${PYSITELIB}/synapse/replication/slave/storage/client_ips.py
-${PYSITELIB}/synapse/replication/slave/storage/client_ips.pyc
-${PYSITELIB}/synapse/replication/slave/storage/client_ips.pyo
 ${PYSITELIB}/synapse/replication/slave/storage/deviceinbox.py
 ${PYSITELIB}/synapse/replication/slave/storage/deviceinbox.pyc
 ${PYSITELIB}/synapse/replication/slave/storage/deviceinbox.pyo
@@ -1376,9 +1379,6 @@ ${PYSITELIB}/synapse/storage/purge_events.pyo
 ${PYSITELIB}/synapse/storage/push_rule.py
 ${PYSITELIB}/synapse/storage/push_rule.pyc
 ${PYSITELIB}/synapse/storage/push_rule.pyo
-${PYSITELIB}/synapse/storage/relations.py
-${PYSITELIB}/synapse/storage/relations.pyc
-${PYSITELIB}/synapse/storage/relations.pyo
 ${PYSITELIB}/synapse/storage/roommember.py
 ${PYSITELIB}/synapse/storage/roommember.pyc
 ${PYSITELIB}/synapse/storage/roommember.pyo
@@ -1715,6 +1715,11 @@ ${PYSITELIB}/synapse/storage/schema/main/delta/68/05_delete_non_strings_from_eve
 ${PYSITELIB}/synapse/storage/schema/main/delta/68/05partial_state_rooms_triggers.py
 ${PYSITELIB}/synapse/storage/schema/main/delta/68/05partial_state_rooms_triggers.pyc
 ${PYSITELIB}/synapse/storage/schema/main/delta/68/05partial_state_rooms_triggers.pyo
+${PYSITELIB}/synapse/storage/schema/main/delta/68/06_msc3202_add_device_list_appservice_stream_type.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/69/01as_txn_seq.py
+${PYSITELIB}/synapse/storage/schema/main/delta/69/01as_txn_seq.pyc
+${PYSITELIB}/synapse/storage/schema/main/delta/69/01as_txn_seq.pyo
+${PYSITELIB}/synapse/storage/schema/main/delta/69/01device_list_oubound_by_room.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/application_services.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/event_edges.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/event_signatures.sql
