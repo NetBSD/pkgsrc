@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2022/01/05 15:41:18 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2022/06/16 00:27:44 gutteridge Exp $
 
 DISTNAME=	scapy-2.4.5
 PKGREVISION=	3
@@ -39,6 +39,11 @@ post-install:
 
 DATE_VAL=	${DATE} "+%Y%m%d-%H%M%S"
 
+# XXX this needs to be reworked to use scapy's run_tests with py-tox, which is
+# the normal test suite mechanism now. Test coverage below isn't complete; it
+# could also be tweaked with multiple -t plus -T to exclude irrelevant test
+# components, like the one for Windows, but py-tox would probably be the
+# simpler route.
 do-test:
 	cd ${WRKSRC}/test && ${SETENV} PYTHON=${PYTHONBIN} ./run_tests \
 		-t regression.uts -f html -K ipv6 -l \
