@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.50 2022/06/16 00:29:04 gdt Exp $
+# $NetBSD: Makefile,v 1.51 2022/06/16 11:49:08 gdt Exp $
 
-DISTNAME=	matrix-synapse-1.57.0
+DISTNAME=	matrix-synapse-1.58.1
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=matrix-org/}
-EGG_NAME=	matrix_synapse-${PKGVERSION_NOREV}
 GITHUB_PROJECT=	synapse
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
@@ -12,6 +11,10 @@ HOMEPAGE=	https://github.com/matrix-org/synapse/
 COMMENT=	Reference homeserver for the Matrix decentralised comms protocol
 LICENSE=	apache-2.0
 
+# Build tools:
+TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-[0-9]*:../../devel/py-poetry
+
+# Dependencies as defined by synapse's build system (in theory):
 DEPENDS+=	${PYPKGPREFIX}-asn1-modules>=0.0.7:../../security/py-asn1-modules
 DEPENDS+=	${PYPKGPREFIX}-asn1>=0.1.9:../../security/py-asn1
 DEPENDS+=	${PYPKGPREFIX}-attrs>=19.2.0:../../devel/py-attrs
@@ -52,6 +55,9 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-unpaddedbase64
 USE_PKG_RESOURCES=	yes
 
 USE_LANGUAGES=	# none
+
+REPLACE_PYTHON+=	synapse/_scripts/*.py
+
 USE_TOOLS+=	perl:run
 REPLACE_PERL+=	scripts/sync_room_to_group.pl
 
@@ -88,10 +94,16 @@ SUBST_VARS.pl=			SYNAPSE_DEFAULT_CREATOR_PL
 
 BUILD_DEFS+=			SYNAPSE_DEFAULT_CREATOR_PL
 
+post-patch:
+	# Otherwise, this file is installed and pollutes PLIST.
+	rm ${WRKSRC}/synapse/handlers/room.py.orig
+
+# \todo Grok upstream's new test scheme and port to it.
 # test status as of 1.51.0
 # 51 warnings, 1 error
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} pytest-${PYVERSSUFFIX}
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/application.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
