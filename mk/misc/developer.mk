@@ -1,26 +1,25 @@
-# $NetBSD: developer.mk,v 1.25 2021/01/20 01:35:33 gutteridge Exp $
+# $NetBSD: developer.mk,v 1.26 2022/06/16 04:56:49 rillig Exp $
 #
-# Public targets for developers:
+# Targets for pkgsrc developers for updating doc/CHANGES, doc/TODO, and for
+# uploading distfiles to NetBSD's backup location.
 #
-# changes-entry-noupdate:
-#	Appends a correctly-formatted entry to the pkgsrc CHANGES file,
-#	and removes any TODO entries that were completed with this
-#	update from the TODO file.
-#	The CHANGES and TODO files are presumed to be up to date and writable.
-#	Note that the first assumption is often wrong and that the
-#	second is wrong for those that set CVSREAD.
-#
-#	Command-line variables:
+# cce:
+# commit-changes-entry:
+#	Updates the CHANGES and TODO files from CVS, appends an entry to the
+#	CHANGES file, removes any TODO entries that were completed with this
+#	update, and finally commits the changes to CVS.
 #
 #	CTYPE
-#		The type of entry to add. Must be one of "Added",
-#		"Updated", "Renamed" (when the PKGNAME has changed),
-#		"Moved" (when the package has a new directory, but the
-#		PKGNAME is still the same), or "Removed".
-#		The default is "Updated".
+#		The type of entry to add:
 #
-#	TO
-#		When a package is renamed, this is the new name of the
+#		Added		for a new package
+#		Updated		(default)
+#		Renamed		when the PKGNAME has changed
+#		Moved		when the package has a new directory, but the
+#				PKGNAME is still the same
+#		Removed		for a removed package
+#
+#	TO	When a package is renamed, this is the new name of the
 #		package.
 #
 #	NETBSD_LOGIN_NAME
@@ -28,37 +27,42 @@
 #		The default is the local login name.
 #
 #	PKGSRC_CHANGES
-#		The path to the CHANGES file to which the entry
-#		is appended.
+#		The path to the CHANGES file to which the entry	is appended.
 #		The default is ${PKGSRCDIR}/doc/CHANGES-YYYY.
 #
 #	PKGSRC_TODO
-#		The path to the TODO file from which now possibly
-#		obsolete entries are removed
+#		The path to the TODO file from which now possibly obsolete
+#		entries are removed.
 #		The default is ${PKGSRCDIR}/TODO.
 #
 #	USE_NETBSD_REPO
 #		Explicitly use cvs.netbsd.org:/cvsroot for all cvs commands
-#		issues by changes-entry and co.
+#		issued by changes-entry and co.
 #
 #	Example usage:
 #		% cd /usr/pkgsrc/category/package
-#		% make changes-entry CTYPE=Added
+#		% make cce CTYPE=Added
 #
 # changes-entry:
-#	Like changes-entry-noupdate, plus the CHANGES and TODO files
-#	are updated, and if not writable, "cvs edit" is done.
+#	Like commit-changes-entry, except for actually committing the changes.
 #
-# commit-changes-entry:
-# cce:
-#	Like changes-entry, plus the CHANGES and TODO files are committed.
+# changes-entry-noupdate:
+#	Like changes-entry, except that the CHANGES and TODO files are not
+#	updated from CVS.  Typically used to add several change entries in a
+#	single batch.
+#
+#	The CHANGES and TODO files are presumed to be up to date and writable.
+#	Note that the first assumption is often wrong and that the second is
+#	wrong for those that set CVSREAD.
+#
 #
 # upload-distfiles:
 #	Upload distribution files to a project archive so that others may fetch
 #	them from there. It only uploads distfiles that are freely
 #	re-distributable by setting NO_SKIP (see mk/fetch/bsd.fetch-vars.mk).
 #
-# Keywords: commit update add rename changes upload
+# Keywords: commit update changes todo upload
+# Keywords: add added update updated rename renamed move moved remove removed
 #
 
 CTYPE?=			Updated
