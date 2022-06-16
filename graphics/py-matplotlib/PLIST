@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.27 2021/05/05 10:11:29 adam Exp $
+@comment $NetBSD: PLIST,v 1.28 2022/06/16 15:24:40 ryoon Exp $
+${PYSITELIB}/${EGG_NAME}-nspkg.pth
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/${EGG_NAME}-nspkg.pth
 ${PYSITELIB}/matplotlib/__init__.py
 ${PYSITELIB}/matplotlib/__init__.pyc
 ${PYSITELIB}/matplotlib/__init__.pyo
@@ -18,6 +18,9 @@ ${PYSITELIB}/matplotlib/_api/__init__.pyo
 ${PYSITELIB}/matplotlib/_api/deprecation.py
 ${PYSITELIB}/matplotlib/_api/deprecation.pyc
 ${PYSITELIB}/matplotlib/_api/deprecation.pyo
+${PYSITELIB}/matplotlib/_blocking_input.py
+${PYSITELIB}/matplotlib/_blocking_input.pyc
+${PYSITELIB}/matplotlib/_blocking_input.pyo
 ${PYSITELIB}/matplotlib/_c_internal_utils.so
 ${PYSITELIB}/matplotlib/_cm.py
 ${PYSITELIB}/matplotlib/_cm.pyc
@@ -53,9 +56,9 @@ ${PYSITELIB}/matplotlib/_pylab_helpers.py
 ${PYSITELIB}/matplotlib/_pylab_helpers.pyc
 ${PYSITELIB}/matplotlib/_pylab_helpers.pyo
 ${PYSITELIB}/matplotlib/_qhull.so
-${PYSITELIB}/matplotlib/_text_layout.py
-${PYSITELIB}/matplotlib/_text_layout.pyc
-${PYSITELIB}/matplotlib/_text_layout.pyo
+${PYSITELIB}/matplotlib/_text_helpers.py
+${PYSITELIB}/matplotlib/_text_helpers.pyc
+${PYSITELIB}/matplotlib/_text_helpers.pyo
 ${PYSITELIB}/matplotlib/_tri.so
 ${PYSITELIB}/matplotlib/_ttconv.so
 ${PYSITELIB}/matplotlib/_version.py
@@ -101,6 +104,9 @@ ${PYSITELIB}/matplotlib/backends/__init__.py
 ${PYSITELIB}/matplotlib/backends/__init__.pyc
 ${PYSITELIB}/matplotlib/backends/__init__.pyo
 ${PYSITELIB}/matplotlib/backends/_backend_agg.so
+${PYSITELIB}/matplotlib/backends/_backend_gtk.py
+${PYSITELIB}/matplotlib/backends/_backend_gtk.pyc
+${PYSITELIB}/matplotlib/backends/_backend_gtk.pyo
 ${PYSITELIB}/matplotlib/backends/_backend_pdf_ps.py
 ${PYSITELIB}/matplotlib/backends/_backend_pdf_ps.pyc
 ${PYSITELIB}/matplotlib/backends/_backend_pdf_ps.pyo
@@ -123,6 +129,15 @@ ${PYSITELIB}/matplotlib/backends/backend_gtk3agg.pyo
 ${PYSITELIB}/matplotlib/backends/backend_gtk3cairo.py
 ${PYSITELIB}/matplotlib/backends/backend_gtk3cairo.pyc
 ${PYSITELIB}/matplotlib/backends/backend_gtk3cairo.pyo
+${PYSITELIB}/matplotlib/backends/backend_gtk4.py
+${PYSITELIB}/matplotlib/backends/backend_gtk4.pyc
+${PYSITELIB}/matplotlib/backends/backend_gtk4.pyo
+${PYSITELIB}/matplotlib/backends/backend_gtk4agg.py
+${PYSITELIB}/matplotlib/backends/backend_gtk4agg.pyc
+${PYSITELIB}/matplotlib/backends/backend_gtk4agg.pyo
+${PYSITELIB}/matplotlib/backends/backend_gtk4cairo.py
+${PYSITELIB}/matplotlib/backends/backend_gtk4cairo.pyc
+${PYSITELIB}/matplotlib/backends/backend_gtk4cairo.pyo
 ${PYSITELIB}/matplotlib/backends/backend_macosx.py
 ${PYSITELIB}/matplotlib/backends/backend_macosx.pyc
 ${PYSITELIB}/matplotlib/backends/backend_macosx.pyo
@@ -141,15 +156,9 @@ ${PYSITELIB}/matplotlib/backends/backend_pgf.pyo
 ${PYSITELIB}/matplotlib/backends/backend_ps.py
 ${PYSITELIB}/matplotlib/backends/backend_ps.pyc
 ${PYSITELIB}/matplotlib/backends/backend_ps.pyo
-${PYSITELIB}/matplotlib/backends/backend_qt4.py
-${PYSITELIB}/matplotlib/backends/backend_qt4.pyc
-${PYSITELIB}/matplotlib/backends/backend_qt4.pyo
-${PYSITELIB}/matplotlib/backends/backend_qt4agg.py
-${PYSITELIB}/matplotlib/backends/backend_qt4agg.pyc
-${PYSITELIB}/matplotlib/backends/backend_qt4agg.pyo
-${PYSITELIB}/matplotlib/backends/backend_qt4cairo.py
-${PYSITELIB}/matplotlib/backends/backend_qt4cairo.pyc
-${PYSITELIB}/matplotlib/backends/backend_qt4cairo.pyo
+${PYSITELIB}/matplotlib/backends/backend_qt.py
+${PYSITELIB}/matplotlib/backends/backend_qt.pyc
+${PYSITELIB}/matplotlib/backends/backend_qt.pyo
 ${PYSITELIB}/matplotlib/backends/backend_qt5.py
 ${PYSITELIB}/matplotlib/backends/backend_qt5.pyc
 ${PYSITELIB}/matplotlib/backends/backend_qt5.pyo
@@ -159,6 +168,12 @@ ${PYSITELIB}/matplotlib/backends/backend_qt5agg.pyo
 ${PYSITELIB}/matplotlib/backends/backend_qt5cairo.py
 ${PYSITELIB}/matplotlib/backends/backend_qt5cairo.pyc
 ${PYSITELIB}/matplotlib/backends/backend_qt5cairo.pyo
+${PYSITELIB}/matplotlib/backends/backend_qtagg.py
+${PYSITELIB}/matplotlib/backends/backend_qtagg.pyc
+${PYSITELIB}/matplotlib/backends/backend_qtagg.pyo
+${PYSITELIB}/matplotlib/backends/backend_qtcairo.py
+${PYSITELIB}/matplotlib/backends/backend_qtcairo.pyc
+${PYSITELIB}/matplotlib/backends/backend_qtcairo.pyo
 ${PYSITELIB}/matplotlib/backends/backend_svg.py
 ${PYSITELIB}/matplotlib/backends/backend_svg.pyc
 ${PYSITELIB}/matplotlib/backends/backend_svg.pyo
@@ -195,15 +210,9 @@ ${PYSITELIB}/matplotlib/backends/qt_editor/__init__.pyo
 ${PYSITELIB}/matplotlib/backends/qt_editor/_formlayout.py
 ${PYSITELIB}/matplotlib/backends/qt_editor/_formlayout.pyc
 ${PYSITELIB}/matplotlib/backends/qt_editor/_formlayout.pyo
-${PYSITELIB}/matplotlib/backends/qt_editor/_formsubplottool.py
-${PYSITELIB}/matplotlib/backends/qt_editor/_formsubplottool.pyc
-${PYSITELIB}/matplotlib/backends/qt_editor/_formsubplottool.pyo
 ${PYSITELIB}/matplotlib/backends/qt_editor/figureoptions.py
 ${PYSITELIB}/matplotlib/backends/qt_editor/figureoptions.pyc
 ${PYSITELIB}/matplotlib/backends/qt_editor/figureoptions.pyo
-${PYSITELIB}/matplotlib/backends/qt_editor/formsubplottool.py
-${PYSITELIB}/matplotlib/backends/qt_editor/formsubplottool.pyc
-${PYSITELIB}/matplotlib/backends/qt_editor/formsubplottool.pyo
 ${PYSITELIB}/matplotlib/backends/web_backend/.eslintrc.js
 ${PYSITELIB}/matplotlib/backends/web_backend/.prettierignore
 ${PYSITELIB}/matplotlib/backends/web_backend/.prettierrc
@@ -246,9 +255,6 @@ ${PYSITELIB}/matplotlib/colorbar.pyo
 ${PYSITELIB}/matplotlib/colors.py
 ${PYSITELIB}/matplotlib/colors.pyc
 ${PYSITELIB}/matplotlib/colors.pyo
-${PYSITELIB}/matplotlib/compat/__init__.py
-${PYSITELIB}/matplotlib/compat/__init__.pyc
-${PYSITELIB}/matplotlib/compat/__init__.pyo
 ${PYSITELIB}/matplotlib/container.py
 ${PYSITELIB}/matplotlib/container.pyc
 ${PYSITELIB}/matplotlib/container.pyo
@@ -454,6 +460,7 @@ ${PYSITELIB}/matplotlib/mpl-data/images/zoom_to_rect.pdf
 ${PYSITELIB}/matplotlib/mpl-data/images/zoom_to_rect.png
 ${PYSITELIB}/matplotlib/mpl-data/images/zoom_to_rect.svg
 ${PYSITELIB}/matplotlib/mpl-data/images/zoom_to_rect_large.png
+${PYSITELIB}/matplotlib/mpl-data/kpsewhich.lua
 ${PYSITELIB}/matplotlib/mpl-data/matplotlibrc
 ${PYSITELIB}/matplotlib/mpl-data/plot_directive/plot_directive.css
 ${PYSITELIB}/matplotlib/mpl-data/sample_data/Minduka_Present_Blue_Pack.png
@@ -473,6 +480,8 @@ ${PYSITELIB}/matplotlib/mpl-data/sample_data/s1045.ima.gz
 ${PYSITELIB}/matplotlib/mpl-data/sample_data/topobathy.npz
 ${PYSITELIB}/matplotlib/mpl-data/stylelib/Solarize_Light2.mplstyle
 ${PYSITELIB}/matplotlib/mpl-data/stylelib/_classic_test_patch.mplstyle
+${PYSITELIB}/matplotlib/mpl-data/stylelib/_mpl-gallery-nogrid.mplstyle
+${PYSITELIB}/matplotlib/mpl-data/stylelib/_mpl-gallery.mplstyle
 ${PYSITELIB}/matplotlib/mpl-data/stylelib/bmh.mplstyle
 ${PYSITELIB}/matplotlib/mpl-data/stylelib/classic.mplstyle
 ${PYSITELIB}/matplotlib/mpl-data/stylelib/dark_background.mplstyle
@@ -644,6 +653,9 @@ ${PYSITELIB}/matplotlib/tests/test_backend_cairo.pyo
 ${PYSITELIB}/matplotlib/tests/test_backend_gtk3.py
 ${PYSITELIB}/matplotlib/tests/test_backend_gtk3.pyc
 ${PYSITELIB}/matplotlib/tests/test_backend_gtk3.pyo
+${PYSITELIB}/matplotlib/tests/test_backend_macosx.py
+${PYSITELIB}/matplotlib/tests/test_backend_macosx.pyc
+${PYSITELIB}/matplotlib/tests/test_backend_macosx.pyo
 ${PYSITELIB}/matplotlib/tests/test_backend_nbagg.py
 ${PYSITELIB}/matplotlib/tests/test_backend_nbagg.pyc
 ${PYSITELIB}/matplotlib/tests/test_backend_nbagg.pyo
@@ -728,6 +740,9 @@ ${PYSITELIB}/matplotlib/tests/test_font_manager.pyo
 ${PYSITELIB}/matplotlib/tests/test_fontconfig_pattern.py
 ${PYSITELIB}/matplotlib/tests/test_fontconfig_pattern.pyc
 ${PYSITELIB}/matplotlib/tests/test_fontconfig_pattern.pyo
+${PYSITELIB}/matplotlib/tests/test_getattr.py
+${PYSITELIB}/matplotlib/tests/test_getattr.pyc
+${PYSITELIB}/matplotlib/tests/test_getattr.pyo
 ${PYSITELIB}/matplotlib/tests/test_gridspec.py
 ${PYSITELIB}/matplotlib/tests/test_gridspec.pyc
 ${PYSITELIB}/matplotlib/tests/test_gridspec.pyo
@@ -899,9 +914,6 @@ ${PYSITELIB}/matplotlib/tri/trirefine.pyo
 ${PYSITELIB}/matplotlib/tri/tritools.py
 ${PYSITELIB}/matplotlib/tri/tritools.pyc
 ${PYSITELIB}/matplotlib/tri/tritools.pyo
-${PYSITELIB}/matplotlib/ttconv.py
-${PYSITELIB}/matplotlib/ttconv.pyc
-${PYSITELIB}/matplotlib/ttconv.pyo
 ${PYSITELIB}/matplotlib/type1font.py
 ${PYSITELIB}/matplotlib/type1font.pyc
 ${PYSITELIB}/matplotlib/type1font.pyo
