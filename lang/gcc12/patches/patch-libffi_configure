@@ -1,0 +1,16 @@
+$NetBSD: patch-libffi_configure,v 1.1 2022/06/16 15:43:55 adam Exp $
+
+https://gcc.gnu.org/bugzilla/show_bug.cgi?id=90146
+https://github.com/libffi/libffi/issues/485
+
+--- libffi/configure.orig	2022-05-06 07:31:19.000000000 +0000
++++ libffi/configure
+@@ -16155,7 +16155,7 @@ case "$target" in
+ $as_echo "#define FFI_EXEC_TRAMPOLINE_TABLE 1" >>confdefs.h
+ 
+      ;;
+-     *-apple-* | *-*-freebsd* | *-*-kfreebsd* | *-*-openbsd* | *-pc-solaris* | *-linux-android*)
++     *-apple-* | *-*-freebsd* | *-*-kfreebsd* | *-*-netbsd* | *-*-openbsd* | *-pc-solaris* | *-linux-android*)
+ 
+ $as_echo "#define FFI_MMAP_EXEC_WRIT 1" >>confdefs.h
+ 
