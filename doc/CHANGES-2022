@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3053 2022/06/16 00:30:24 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.3054 2022/06/16 07:22:44 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4620,3 +4620,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated filesystems/tahoe-lafs to 1.17.1 [gdt 2022-06-15]
 	Updated net/tcpreplay to 4.4.1 [gutteridge 2022-06-16]
 	Updated chat/matrix-synapse to 1.57.0 [gdt 2022-06-16]
+	Updated sysutils/felix to 0.9.7 [pin 2022-06-16]
