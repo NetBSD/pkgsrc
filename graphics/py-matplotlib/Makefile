@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.73 2022/05/15 10:27:07 nia Exp $
+# $NetBSD: Makefile,v 1.74 2022/06/16 15:24:40 ryoon Exp $
 
-DISTNAME=	matplotlib-3.4.3
+DISTNAME=	matplotlib-3.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/matplotlib/}
 
@@ -18,6 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.7:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-kiwisolver>=1.0.1:../../math/py-kiwisolver
 DEPENDS+=	${PYPKGPREFIX}-pyparsing>=2.2.1:../../devel/py-pyparsing
 BUILD_DEPENDS+=	${PYPKGPREFIX}-certifi>=2020.06.20:../../security/py-certifi
+BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm_git_archive-[0-9]*:../../devel/py-setuptools_scm_git_archive
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	c c++
