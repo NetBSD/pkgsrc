@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3051 2022/06/15 22:31:58 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.3052 2022/06/16 00:30:01 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4618,3 +4618,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated editors/featherpad to 1.3.0 [pin 2022-06-15]
 	Added devel/py-collections-extended version 2.0.2 [gdt 2022-06-15]
 	Updated filesystems/tahoe-lafs to 1.17.1 [gdt 2022-06-15]
+	Updated net/tcpreplay to 4.4.1 [gutteridge 2022-06-16]
