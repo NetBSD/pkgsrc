@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3063 2022/06/16 21:26:38 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3064 2022/06/17 08:04:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4631,3 +4631,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/knot to 3.1.8 [ryoon 2022-06-16]
 	Updated x11/xcb-proto to 1.15.1 [wiz 2022-06-16]
 	Updated x11/py-xcbgen to 1.15.1 [wiz 2022-06-16]
+	Updated lang/nodejs to 18.4.0 [adam 2022-06-17]
+	Updated lang/npm to 8.12.2 [adam 2022-06-17]
