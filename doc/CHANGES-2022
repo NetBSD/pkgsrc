@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3069 2022/06/17 13:01:33 jaapb Exp $
+$NetBSD: CHANGES-2022,v 1.3070 2022/06/17 14:54:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4641,3 +4641,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-ipykernel to 6.15.0 [adam 2022-06-17]
 	Updated parallel/py-ipyparallel to 8.4.0 [adam 2022-06-17]
 	Updated devel/ocaml-lru to 0.3.0 [jaapb 2022-06-17]
+	Updated net/tor to 0.4.7.8 [wiz 2022-06-17]
