@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.190 2022/05/25 09:22:05 adam Exp $
+# $NetBSD: Makefile,v 1.191 2022/06/17 23:05:24 wiz Exp $
 #
 
 COMMENT=	Archivers and compression tools
@@ -132,6 +132,7 @@ SUBDIR+=	star
 SUBDIR+=	szip
 SUBDIR+=	tartest
 SUBDIR+=	torrentzip
+SUBDIR+=	trrntzip
 SUBDIR+=	unace
 SUBDIR+=	unace-bin
 SUBDIR+=	unalz
