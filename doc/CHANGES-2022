@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3074 2022/06/17 18:18:07 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3075 2022/06/17 23:05:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4647,3 +4647,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/py-peewee to 3.15.0 [adam 2022-06-17]
 	Updated net/synergy to 1.14.4.37 [tnn 2022-06-17]
 	Updated databases/postgresql14 to 14.4 [adam 2022-06-17]
+	Added archivers/trrntzip version 1.0 [wiz 2022-06-17]
