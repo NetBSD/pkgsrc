@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2022/05/04 04:39:09 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2022/06/17 16:43:34 wiz Exp $
 
 DISTNAME=	libxcb-1.15
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	https://xorg.freedesktop.org/archive/individual/lib/
 EXTRACT_SUFX=	.tar.xz
@@ -11,7 +12,7 @@ COMMENT=	X protocol C-language Binding
 LICENSE=	mit # with no-advertising clause
 
 TOOL_DEPENDS+=	libxslt>=1.1.0:../../textproc/libxslt
-TOOL_DEPENDS+=	${PYPKGPREFIX}-xcbgen>=1.15:../../x11/py-xcbgen
+TOOL_DEPENDS+=	${PYPKGPREFIX}-xcbgen>=1.15.1:../../x11/py-xcbgen
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
