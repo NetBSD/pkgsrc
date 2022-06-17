@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21949 2022/06/17 08:04:22 adam Exp $
+$NetBSD: TODO,v 1.21950 2022/06/17 12:36:59 wiz Exp $
 
 Suggested new packages
 ======================
@@ -374,7 +374,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
 	o Mesa-21.3.8
-	o Mesa-22.1.1
+	o Mesa-22.1.2
 	o MesaLib-21.3.9
 	o OdfConverter-4.0
 	o PACK-0.0.4
@@ -397,6 +397,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-poweRlaw-0.70.6
 	o R-quadprog-1.5.8
 	o R-tseries-0.10.48
+	o SDL2-2.23.1
 	o SDL_sound-2.0
 	o SOGo-2.4.3
 	o SOGo-5.6.0
@@ -665,6 +666,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o felt-3.07 [wip]
 	o fet-6.0.1
 	o filerunner-14.06.18.10
+	o fish-3.5
 	o flashplayer-0.4.13
 	o flatbuffers-1.12.0
 	o flow-tools-0.411
