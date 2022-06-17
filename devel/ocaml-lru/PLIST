@@ -1,12 +1,15 @@
-@comment $NetBSD: PLIST,v 1.1 2019/03/19 14:21:34 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/06/17 13:01:24 jaapb Exp $
 ${OCAML_SITELIB}/lru/META
+${OCAML_SITELIB}/lru/dune-package
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/lru/lru.a
 ${OCAML_SITELIB}/lru/lru.cma
 ${OCAML_SITELIB}/lru/lru.cmi
+${OCAML_SITELIB}/lru/lru.cmt
 ${OCAML_SITELIB}/lru/lru.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/lru/lru.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/lru/lru.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/lru/lru.cmxs
+${OCAML_SITELIB}/lru/lru.ml
 ${OCAML_SITELIB}/lru/lru.mli
 ${OCAML_SITELIB}/lru/opam
 share/doc/lru/CHANGES.md
