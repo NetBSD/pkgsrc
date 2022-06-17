@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.104 2022/05/23 19:10:43 plunky Exp $
+# $NetBSD: Makefile,v 1.105 2022/06/17 11:40:56 mef Exp $
 #
 
 COMMENT=	Computer Aided Design tools
@@ -59,6 +59,7 @@ SUBDIR+=	py-MyHDL
 SUBDIR+=	py-PyRTL
 SUBDIR+=	py-gds
 SUBDIR+=	py-gdscad
+SUBDIR+=	py-gdstk
 SUBDIR+=	py-simpy
 SUBDIR+=	qcad
 SUBDIR+=	qcad-partlibrary
