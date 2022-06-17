@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2022/06/07 18:53:21 adam Exp $
+# $NetBSD: Makefile,v 1.38 2022/06/17 12:22:10 adam Exp $
 
-DISTNAME=	ipykernel-6.13.1
+DISTNAME=	ipykernel-6.15.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/ipykernel/}
@@ -20,6 +20,7 @@ DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-psutil-[0-9]*:../../sysutils/py-psutil
 DEPENDS+=	${PYPKGPREFIX}-tornado>=6.1:../../www/py-tornado
 DEPENDS+=	${PYPKGPREFIX}-traitlets>=5.1.0:../../devel/py-traitlets
+DEPENDS+=	${PYPKGPREFIX}-zmq>=17:../../net/py-zmq
 TEST_DEPENDS+=	${PYPKGPREFIX}-flaky-[0-9]*:../../devel/py-flaky
 TEST_DEPENDS+=	${PYPKGPREFIX}-ipyparallel-[0-9]*:../../parallel/py-ipyparallel
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=6.0.0:../../devel/py-test
