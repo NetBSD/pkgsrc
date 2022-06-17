@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2022/05/04 06:02:19 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2022/06/17 16:43:34 wiz Exp $
 include/xcb/bigreq.h
 include/xcb/composite.h
 include/xcb/damage.h
@@ -318,6 +318,8 @@ man/man3/xcb_dri3_pixmap_from_buffers_checked.3
 man/man3/xcb_dri3_query_version.3
 man/man3/xcb_dri3_query_version_reply.3
 man/man3/xcb_dri3_query_version_unchecked.3
+man/man3/xcb_dri3_set_drm_device_in_use.3
+man/man3/xcb_dri3_set_drm_device_in_use_checked.3
 man/man3/xcb_enter_notify_event_t.3
 man/man3/xcb_expose_event_t.3
 man/man3/xcb_fill_poly.3
