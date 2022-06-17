@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3064 2022/06/17 08:04:22 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3065 2022/06/17 08:08:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4633,3 +4633,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/py-xcbgen to 1.15.1 [wiz 2022-06-16]
 	Updated lang/nodejs to 18.4.0 [adam 2022-06-17]
 	Updated lang/npm to 8.12.2 [adam 2022-06-17]
+	Updated net/haproxy to 2.6.0 [adam 2022-06-17]
+	Updated databases/tdb to 1.4.7 [adam 2022-06-17]
