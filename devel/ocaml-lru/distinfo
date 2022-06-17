@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:15:50 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/06/17 13:01:24 jaapb Exp $
 
-BLAKE2s (lru-0.2.0.tar.gz) = f67e691813abfdbed8e8a9628b9d0591bf1ef5f680ef97d602cf7cdc11c24bfd
-SHA512 (lru-0.2.0.tar.gz) = 5ccb670c8ce0afe91749d0dd993fae6177ea30bcce5a43c0e9139a01c7f843170ab9bc759980b77d9998ee39ca7739546525462e640a7a40dcca54771d98e023
-Size (lru-0.2.0.tar.gz) = 9862 bytes
+BLAKE2s (lru-0.3.0.tar.gz) = 3245aab6fa8eab10a370846ae119e006b5fede5104a6035eee9fa264ccbaa291
+SHA512 (lru-0.3.0.tar.gz) = 7e6663b654b93063c2e37af1a25155e1ff0cab90879df8d3b3cbd8f6d206ff015bb1fe2a069c1cd4b18d058796cc58d182e019f445176be15a8362a537a650ea
+Size (lru-0.3.0.tar.gz) = 10417 bytes
