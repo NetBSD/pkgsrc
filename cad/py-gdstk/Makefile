@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/06/17 11:38:30 mef Exp $
+# $NetBSD: Makefile,v 1.2 2022/06/17 13:26:34 mef Exp $
 
 VERSION=	0.8.3
 GITHUB_TAG=	v${VERSION}
@@ -6,6 +6,7 @@ DISTNAME=	gdstk-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_GITHUB:=heitzmann/}
+GITHUB_PROJECT=	gdstk
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/heitzmann/gdstk/
