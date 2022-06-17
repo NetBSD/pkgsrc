@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2022/04/06 15:17:17 adam Exp $
+# $NetBSD: Makefile,v 1.6 2022/06/17 12:23:17 adam Exp $
 
-DISTNAME=	ipyparallel-8.2.1
+DISTNAME=	ipyparallel-8.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	parallel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/ipyparallel/}
@@ -10,7 +10,8 @@ HOMEPAGE=	https://ipython.org/
 COMMENT=	Interactive Parallel Computing with IPython
 LICENSE=	modified-bsd
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
+BUILD_DEPENDS+=	${PYPKGPREFIX}-hatchling>=0.25:../../devel/py-hatchling
+#BUILD_DEPENDS+=	${PYPKGPREFIX}-jupyterlab>=3.0.0-[0-9]*:../../devel/py-jupyterlab
 DEPENDS+=	${PYPKGPREFIX}-decorator-[0-9]*:../../devel/py-decorator
 DEPENDS+=	${PYPKGPREFIX}-entrypoints-[0-9]*:../../devel/py-entrypoints
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.1:../../time/py-dateutil
@@ -33,6 +34,12 @@ USE_LANGUAGES=	# none
 USE_PKG_RESOURCES=	yes
 PYTHON_SELF_CONFLICT=	yes
 
+REPLACE_PYTHON+=	ipyparallel/apps/iploggerapp.py
+REPLACE_PYTHON+=	ipyparallel/cluster/app.py
+REPLACE_PYTHON+=	ipyparallel/controller/app.py
+REPLACE_PYTHON+=	ipyparallel/controller/heartmonitor.py
+REPLACE_PYTHON+=	ipyparallel/engine/app.py
+
 PYTHON_VERSIONS_INCOMPATIBLE=	27 37
 
 post-install:
@@ -44,5 +51,6 @@ post-install:
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/application.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
