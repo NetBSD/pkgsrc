@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3073 2022/06/17 18:10:16 tnn Exp $
+$NetBSD: CHANGES-2022,v 1.3074 2022/06/17 18:18:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4646,3 +4646,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated mail/dovecot2 to 2.3.19.1 [adam 2022-06-17]
 	Updated databases/py-peewee to 3.15.0 [adam 2022-06-17]
 	Updated net/synergy to 1.14.4.37 [tnn 2022-06-17]
+	Updated databases/postgresql14 to 14.4 [adam 2022-06-17]
