@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3065 2022/06/17 08:08:26 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3066 2022/06/17 10:56:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4635,3 +4635,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/npm to 8.12.2 [adam 2022-06-17]
 	Updated net/haproxy to 2.6.0 [adam 2022-06-17]
 	Updated databases/tdb to 1.4.7 [adam 2022-06-17]
+	Updated devel/py-jupyter_client to 7.3.4 [adam 2022-06-17]
+	Updated textproc/py-xmlschema to 1.11.2 [adam 2022-06-17]
