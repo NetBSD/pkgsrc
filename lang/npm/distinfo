@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.38 2022/05/05 10:52:39 adam Exp $
+$NetBSD: distinfo,v 1.39 2022/06/17 08:04:03 adam Exp $
 
-BLAKE2s (npm-8.8.0.tar.gz) = 94a8d77c2d78d35b1fb7abf2b2a9fd52ca36671b76e9d7352299937556b2bb3a
-SHA512 (npm-8.8.0.tar.gz) = 85d3c11345bb0d584089cdf7b4ae3c2773a69258f0bc8833d1bef3c3f554583c9c93b1e4a42ce7a8821c5b38b92ec05314184466dc62fd7cf0b9f421f8200352
-Size (npm-8.8.0.tar.gz) = 92909786 bytes
+BLAKE2s (npm-8.12.2.tar.gz) = ccb531e947b62640c6646035f3b491f891fb67e6fe7040555de185a993d18e10
+SHA512 (npm-8.12.2.tar.gz) = 21a6ba3214cabb5e74ab1daedd84a0fd81da8b78739cd38851d853d8a05772d3e83ecebc952ae24038f64cfdd3fadb7059ea35a242035f0d34b6f5326fc4f847
+Size (npm-8.12.2.tar.gz) = 92913247 bytes
 SHA1 (patch-Makefile) = 07b3b31fc3171aa688242ced7ba9eeadd943aee3
 SHA1 (patch-node__modules_@npmcli_config_lib_index.js) = 10565ad4a1eee79dc962e00d1c8d486fceb073cd
 SHA1 (patch-node__modules_bin-links_lib_man-target.js) = ece52effb0d44a0fb5252bd67f8e503c1c6ea602
