@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.40 2022/03/14 11:40:08 tnn Exp $
+$NetBSD: distinfo,v 1.41 2022/06/17 18:09:24 tnn Exp $
 
 BLAKE2s (googletest-1.10.0.tar.gz) = 53d218b6e7821bf20289e24c4efec5b7a3cc2be8f06373c07a5af078dc4ee892
 SHA512 (googletest-1.10.0.tar.gz) = bd52abe938c3722adc2347afad52ea3a17ecc76730d8d16b065e165bc7477d762bce0997a427131866a89f1001e3f3315198204ffa5d643a9355f1f4d0d7b1a9
@@ -6,12 +6,11 @@ Size (googletest-1.10.0.tar.gz) = 904349 bytes
 BLAKE2s (pugixml-1.12.1.tar.gz) = 89db006704bd615535d7b4eb78c2712de08c04c2f3669b39cd94532455afc1fc
 SHA512 (pugixml-1.12.1.tar.gz) = c1a80518e8d7b21f2a15b2023b77e87484f5b7581e68ff508785a60cab53d1689b5508f5a652d6f0d4fbcc91f66d59246fdfe499fd6b0e188c7914ed5919980b
 Size (pugixml-1.12.1.tar.gz) = 571665 bytes
-BLAKE2s (synergy-core-1.14.3.5.tar.gz) = 8e8a5fd46395aca12829b89ba881fca071b6ea2774e4081efdd6a42de176e7aa
-SHA512 (synergy-core-1.14.3.5.tar.gz) = aa35a5750c2431365707cdd9ad933711349c8008171e4c77f341e747f4de8417ad3091a37c2fd2ac30d8f37570b09927d31dd0b2af515becb8ba80a309cc1e67
-Size (synergy-core-1.14.3.5.tar.gz) = 4635452 bytes
+BLAKE2s (synergy-core-1.14.4.37.tar.gz) = 97f0633c059232ec735e9427c037ab9c69f5315af432665073d60eda43c830ff
+SHA512 (synergy-core-1.14.4.37.tar.gz) = 5cca4e439c508a71db4bed1af137e71c9b6443818f4d54a5894885c45b3c978a024cd5454c0df46225f0f0e01949913d090b9824cc9c3ed20600772dd817305e
+Size (synergy-core-1.14.4.37.tar.gz) = 4642045 bytes
 SHA1 (patch-CMakeLists.txt) = 3f0e3a894f2233be5dee7efb20fc3931aab0532c
 SHA1 (patch-src_lib_arch_CMakeLists.txt) = 79464a7c2bc2f4012163fd4a84742bdd2e31dd4a
-SHA1 (patch-src_lib_arch_unix_ArchNetworkBSD.cpp) = 17e0e3253ddc47c662a836aa4d01836c31ab588b
 SHA1 (patch-src_lib_arch_unix_ArchSystemUnix.cpp) = 722df1971a98bfca48792102d2157c91ce130835
 SHA1 (patch-src_lib_platform_CMakeLists.txt) = 0ed41294261e7dc07313a2d93a6874878f3c27bd
 SHA1 (patch-src_lib_platform_XWindowsKeyState.cpp) = 8c7715c4c569a180f825946e11b2b3967b9c84c1
