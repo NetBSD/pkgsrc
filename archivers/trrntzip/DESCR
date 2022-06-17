@@ -1,0 +1,6 @@
+Torrentzip converts zip archives to a standard format with some
+pre-defined values, sorting the files, and using particular
+compression settings so that running it on zip archives created by
+other tools will always result in the same output. This helps e.g.
+with sharing zip archives using BitTorrent (which is where the name
+comes from).
