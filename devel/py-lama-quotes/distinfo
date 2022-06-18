@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/06/18 22:30:30 wiz Exp $
+
+BLAKE2s (pylama_quotes-0.1.0.tar.gz) = a774f36a1586d81c7a0d17037b830f1f5bd6d65a4e7e949a8e608a1751990ab0
+SHA512 (pylama_quotes-0.1.0.tar.gz) = d4bb63fd80198508b6da3ac496df6d67ac661eba02bdbada924e3113ffc9564f282b631bf256ab425a49e79e12673597315d0fb420da1a6b9864a9a05fbea937
+Size (pylama_quotes-0.1.0.tar.gz) = 2729 bytes
