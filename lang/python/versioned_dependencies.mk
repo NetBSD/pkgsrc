@@ -1,4 +1,4 @@
-# $NetBSD: versioned_dependencies.mk,v 1.71 2022/06/18 21:47:01 wiz Exp $
+# $NetBSD: versioned_dependencies.mk,v 1.72 2022/06/18 21:58:50 wiz Exp $
 #
 # This file determines which separate distribution of a Python
 # package is used as dependency, depending on the Python version
@@ -9,7 +9,7 @@
 # PYTHON_VERSIONED_DEPENDENCIES
 #       The Python package which should be added as a dependency.
 #
-#       Possible values: Pillow X cairo click cryptography flake8 html2text hypothesis importlib-metadata jinja2 lama markdown mccabe more-itertools pip packaging pygments pyparsing python-digest rsa setuptools setuptools_scm sphinx test twisted zipp
+#       Possible values: Pillow X cairo click cryptography docstyle flake8 html2text hypothesis importlib-metadata jinja2 lama markdown mccabe more-itertools pip packaging pygments pyparsing python-digest rsa setuptools setuptools_scm sphinx test twisted zipp
 #       Default: (nothing)
 #
 
@@ -22,6 +22,7 @@ _SUPPORTED_PACKAGES+=	X textproc/py-X2 textproc/py-X
 _SUPPORTED_PACKAGES+=	cairo graphics/py-cairo118 graphics/py-cairo
 _SUPPORTED_PACKAGES+=	click devel/py-click7 devel/py-click
 _SUPPORTED_PACKAGES+=	cryptography security/py27-cryptography security/py-cryptography 
+_SUPPORTED_PACKAGES+=	docstyle devel/py-docstyle3 devel/py-docstyle
 _SUPPORTED_PACKAGES+=	flake8 devel/py-flake8-3 devel/py-flake8
 _SUPPORTED_PACKAGES+=	html2text textproc/py-html2text-2019.8.11 textproc/py-html2text
 _SUPPORTED_PACKAGES+=	hypothesis devel/py-hypothesis4 devel/py-hypothesis
