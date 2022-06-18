@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3078 2022/06/18 08:25:54 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3079 2022/06/18 08:40:08 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4651,3 +4651,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/librsvg to 2.54.4 [gutteridge 2022-06-18]
 	Updated x11/xcb-proto to 1.15.2 [wiz 2022-06-18]
 	Updated x11/py-xcbgen to 1.15.2 [wiz 2022-06-18]
+	Updated editors/tp-note to 1.17.1 [pin 2022-06-18]
