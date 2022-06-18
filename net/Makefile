@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1467 2022/06/15 14:13:14 taca Exp $
+# $NetBSD: Makefile,v 1.1468 2022/06/18 10:07:10 pin Exp $
 #
 
 COMMENT=	Networking tools
@@ -449,6 +449,7 @@ SUBDIR+=	netcat6
 SUBDIR+=	netdisco
 SUBDIR+=	netgroup
 SUBDIR+=	netname
+SUBDIR+=	netop
 SUBDIR+=	netpipes
 SUBDIR+=	netwake
 SUBDIR+=	nfdump
