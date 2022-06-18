@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/03/28 15:51:46 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2022/06/18 09:07:37 tnn Exp $
 
 R_PKGNAME=	tcltk2
 R_PKGVER=	1.2-11
@@ -9,7 +9,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Tcl/Tk additions
 LICENSE=	gnu-lgpl-v3	# + file LICENSE
 
-BROKEN=		"Infinite loop during build, see pkg/56696"
+.if empty(DISPLAY)
+PKG_FAIL_REASON=	"PR pkg/56696: DISPLAY must be set to a working X11 display."
+.endif
 
 USE_LANGUAGES=	# none
 
