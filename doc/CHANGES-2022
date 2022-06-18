@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3082 2022/06/18 14:23:25 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.3083 2022/06/18 14:52:26 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4655,3 +4655,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added net/netop version 0.1.0 [pin 2022-06-18]
 	Added emulators/nono version 0.4.0 [jun 2022-06-18]
 	Updated devel/mold to 1.3.0 [fcambus 2022-06-18]
+	Updated comms/tio to 1.40 [fcambus 2022-06-18]
