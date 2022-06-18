@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.18 2022/06/16 21:26:15 wiz Exp $
+$NetBSD: distinfo,v 1.19 2022/06/18 08:25:05 wiz Exp $
 
-BLAKE2s (xcb-proto-1.15.1.tar.xz) = 859d71fa4fa4d10f6038ea4a90637e01f01d37309bb1b3dc71a53c3bb9c81db1
-SHA512 (xcb-proto-1.15.1.tar.xz) = 56fd505e567e1d39b4d46d0e5f79aeb90144c9b1a4429b2f51cd326ec0dea2a5fda5e2ebfe48af0da2781a4b1e29d9a91a4e0da662db5e35a701eac2e5ec1684
-Size (xcb-proto-1.15.1.tar.xz) = 147908 bytes
-SHA1 (patch-ae) = c3244439391c8aa47e8c82bc3347fbe0e10ac5cc
+BLAKE2s (xcb-proto-1.15.2.tar.xz) = 0d9b32f71966c1e82957f86d4e107d6c53f1ede0148377eed971ebd07a5fbb7d
+SHA512 (xcb-proto-1.15.2.tar.xz) = 9d0b2f0a4dbbf2d64e32ff4658d1663e13d7e5f1bffc1e8d45be7b9dd5bab46e29fc1c2f6e66a7a569e374ba6756faf3c39b0b5e5560df6d7f8b68beec97659d
+Size (xcb-proto-1.15.2.tar.xz) = 148108 bytes
+SHA1 (patch-ae) = f0143f1ccda08e9c626b30ee53ddf3779759e03e
