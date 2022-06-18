@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2018/12/05 15:52:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/06/18 22:06:28 wiz Exp $
 bin/pydocstyle-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/pbr.json
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/pydocstyle/__init__.py
