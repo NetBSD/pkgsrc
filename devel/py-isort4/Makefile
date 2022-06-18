@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/01/05 20:47:35 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/06/18 21:47:01 wiz Exp $
 
 DISTNAME=	isort-4.3.21
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,9 +11,8 @@ HOMEPAGE=	https://github.com/timothycrosley/isort
 COMMENT=	Python utility / library to sort imports
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-lama-[0-9]*:../../devel/py-lama
-
-PYTHON_VERSIONED_DEPENDENCIES=	test:test
+PYTHON_VERSIONED_DEPENDENCIES+=	lama
+PYTHON_VERSIONED_DEPENDENCIES+=	test:test
 
 USE_PKG_RESOURCES=	yes
 
