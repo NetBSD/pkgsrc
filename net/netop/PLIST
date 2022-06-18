@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2022/06/18 10:05:58 pin Exp $
+bin/netop
