@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2022/01/05 15:41:03 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2022/06/18 22:06:28 wiz Exp $
 
-DISTNAME=	pydocstyle-3.0.0
+DISTNAME=	pydocstyle-6.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pydocstyle/}
 
@@ -11,15 +10,11 @@ HOMEPAGE=	https://github.com/PyCQA/pydocstyle
 COMMENT=	Python docstring style checker
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-snowballstemmer-[0-9]*:../../textproc/py-snowballstemmer
 
-USE_PKG_RESOURCES=	yes
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../lang/python/pyversion.mk"
-.if ${_PYTHON_VERSION} == 27
-DEPENDS+=	${PYPKGPREFIX}-configparser-[0-9]*:../../devel/py-configparser
-.endif
+USE_PKG_RESOURCES=	yes
 
 post-extract:
 	${CHMOD} go-w ${WRKSRC}/src/pydocstyle/data/*.txt
