@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3076 2022/06/18 01:57:58 gutteridge Exp $
+$NetBSD: CHANGES-2022,v 1.3077 2022/06/18 08:25:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4649,3 +4649,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/postgresql14 to 14.4 [adam 2022-06-17]
 	Added archivers/trrntzip version 1.0 [wiz 2022-06-17]
 	Updated graphics/librsvg to 2.54.4 [gutteridge 2022-06-18]
+	Updated x11/xcb-proto to 1.15.2 [wiz 2022-06-18]
