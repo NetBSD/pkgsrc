@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/06/18 21:44:34 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2022/06/18 22:02:38 wiz Exp $
 
 DISTNAME=	pylama-7.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -12,7 +12,7 @@ COMMENT=	Code audit tool for Python
 LICENSE=	gnu-lgpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-codestyle>=2.3.1:../../devel/py-codestyle
-DEPENDS+=	${PYPKGPREFIX}-docstyle>=2.0.0:../../devel/py-docstyle
+DEPENDS+=	${PYPKGPREFIX}-docstyle>=2.0.0:../../devel/py-docstyle3
 DEPENDS+=	${PYPKGPREFIX}-flakes>=1.5.0:../../devel/py-flakes
 DEPENDS+=	${PYPKGPREFIX}-mccabe-[0-9]*:../../devel/py-mccabe06
 # extensions
