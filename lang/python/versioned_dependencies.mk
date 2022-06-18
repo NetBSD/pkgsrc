@@ -1,4 +1,4 @@
-# $NetBSD: versioned_dependencies.mk,v 1.70 2022/06/07 10:37:23 wiz Exp $
+# $NetBSD: versioned_dependencies.mk,v 1.71 2022/06/18 21:47:01 wiz Exp $
 #
 # This file determines which separate distribution of a Python
 # package is used as dependency, depending on the Python version
@@ -9,7 +9,7 @@
 # PYTHON_VERSIONED_DEPENDENCIES
 #       The Python package which should be added as a dependency.
 #
-#       Possible values: Pillow X cairo click cryptography flake8 html2text hypothesis importlib-metadata jinja2 markdown mccabe more-itertools pip packaging pygments pyparsing python-digest rsa setuptools setuptools_scm sphinx test twisted zipp
+#       Possible values: Pillow X cairo click cryptography flake8 html2text hypothesis importlib-metadata jinja2 lama markdown mccabe more-itertools pip packaging pygments pyparsing python-digest rsa setuptools setuptools_scm sphinx test twisted zipp
 #       Default: (nothing)
 #
 
@@ -28,6 +28,7 @@ _SUPPORTED_PACKAGES+=	hypothesis devel/py-hypothesis4 devel/py-hypothesis
 _SUPPORTED_PACKAGES+=	importlib-metadata devel/py-importlib-metadata2 devel/py-importlib-metadata
 _SUPPORTED_PACKAGES+=	isort devel/py-isort4 devel/py-isort
 _SUPPORTED_PACKAGES+=	jinja2 textproc/py27-jinja2 textproc/py-jinja2
+_SUPPORTED_PACKAGES+=	lama devel/py-lama7 devel/py-lama
 _SUPPORTED_PACKAGES+=	markdown textproc/py-markdown3 textproc/py-markdown
 _SUPPORTED_PACKAGES+=	mccabe devel/py-mccabe06 devel/py-mccabe
 _SUPPORTED_PACKAGES+=	more-itertools devel/py-more-itertools2 devel/py-more-itertools
