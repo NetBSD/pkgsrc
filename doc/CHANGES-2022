@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3075 2022/06/17 23:05:35 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3076 2022/06/18 01:57:58 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4648,3 +4648,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/synergy to 1.14.4.37 [tnn 2022-06-17]
 	Updated databases/postgresql14 to 14.4 [adam 2022-06-17]
 	Added archivers/trrntzip version 1.0 [wiz 2022-06-17]
+	Updated graphics/librsvg to 2.54.4 [gutteridge 2022-06-18]
