@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/06/15 22:29:14 gdt Exp $
+# $NetBSD: Makefile,v 1.2 2022/06/18 17:05:00 adam Exp $
 
 DISTNAME=	collections-extended-2.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,6 +11,8 @@ COMMENT=	Python Collections (Bag, setlist, IndexedDict, etc.)
 LICENSE=	apache-2.0
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
