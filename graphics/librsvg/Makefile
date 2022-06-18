@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.142 2022/05/25 10:55:30 gutteridge Exp $
+# $NetBSD: Makefile,v 1.143 2022/06/18 01:56:22 gutteridge Exp $
 
-DISTNAME=	librsvg-2.54.3
+DISTNAME=	librsvg-2.54.4
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/librsvg/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
