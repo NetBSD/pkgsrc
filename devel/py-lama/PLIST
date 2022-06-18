@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2019/04/25 07:27:55 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/06/18 22:35:24 wiz Exp $
 bin/pylama-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/pylama/__init__.py
@@ -19,6 +18,9 @@ ${PYSITELIB}/pylama/check_async.pyo
 ${PYSITELIB}/pylama/config.py
 ${PYSITELIB}/pylama/config.pyc
 ${PYSITELIB}/pylama/config.pyo
+${PYSITELIB}/pylama/context.py
+${PYSITELIB}/pylama/context.pyc
+${PYSITELIB}/pylama/context.pyo
 ${PYSITELIB}/pylama/core.py
 ${PYSITELIB}/pylama/core.pyc
 ${PYSITELIB}/pylama/core.pyo
@@ -31,21 +33,18 @@ ${PYSITELIB}/pylama/hook.pyo
 ${PYSITELIB}/pylama/libs/__init__.py
 ${PYSITELIB}/pylama/libs/__init__.pyc
 ${PYSITELIB}/pylama/libs/__init__.pyo
-${PYSITELIB}/pylama/libs/importlib.py
-${PYSITELIB}/pylama/libs/importlib.pyc
-${PYSITELIB}/pylama/libs/importlib.pyo
 ${PYSITELIB}/pylama/libs/inirama.py
 ${PYSITELIB}/pylama/libs/inirama.pyc
 ${PYSITELIB}/pylama/libs/inirama.pyo
 ${PYSITELIB}/pylama/lint/__init__.py
 ${PYSITELIB}/pylama/lint/__init__.pyc
 ${PYSITELIB}/pylama/lint/__init__.pyo
-${PYSITELIB}/pylama/lint/extensions.py
-${PYSITELIB}/pylama/lint/extensions.pyc
-${PYSITELIB}/pylama/lint/extensions.pyo
 ${PYSITELIB}/pylama/lint/pylama_eradicate.py
 ${PYSITELIB}/pylama/lint/pylama_eradicate.pyc
 ${PYSITELIB}/pylama/lint/pylama_eradicate.pyo
+${PYSITELIB}/pylama/lint/pylama_fake.py
+${PYSITELIB}/pylama/lint/pylama_fake.pyc
+${PYSITELIB}/pylama/lint/pylama_fake.pyo
 ${PYSITELIB}/pylama/lint/pylama_mccabe.py
 ${PYSITELIB}/pylama/lint/pylama_mccabe.pyc
 ${PYSITELIB}/pylama/lint/pylama_mccabe.pyo
@@ -67,9 +66,15 @@ ${PYSITELIB}/pylama/lint/pylama_pylint.pyo
 ${PYSITELIB}/pylama/lint/pylama_radon.py
 ${PYSITELIB}/pylama/lint/pylama_radon.pyc
 ${PYSITELIB}/pylama/lint/pylama_radon.pyo
+${PYSITELIB}/pylama/lint/pylama_vulture.py
+${PYSITELIB}/pylama/lint/pylama_vulture.pyc
+${PYSITELIB}/pylama/lint/pylama_vulture.pyo
 ${PYSITELIB}/pylama/main.py
 ${PYSITELIB}/pylama/main.pyc
 ${PYSITELIB}/pylama/main.pyo
 ${PYSITELIB}/pylama/pytest.py
 ${PYSITELIB}/pylama/pytest.pyc
 ${PYSITELIB}/pylama/pytest.pyo
+${PYSITELIB}/pylama/utils.py
+${PYSITELIB}/pylama/utils.pyc
+${PYSITELIB}/pylama/utils.pyo

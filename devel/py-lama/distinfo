@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:18:37 nia Exp $
+$NetBSD: distinfo,v 1.9 2022/06/18 22:35:24 wiz Exp $
 
-BLAKE2s (pylama-7.7.1.tar.gz) = 6f0c9bed178483e7eaa8331ad8cf577d3f493302fd78b21c4c13209d093aa0dd
-SHA512 (pylama-7.7.1.tar.gz) = 859b7e12846f9e1183f15eaa3d172ff6aa6e759c419696450048c6a659b8aee086a4d8e47004a0552596674850303e08179dd98c8d942dd9165ca88585017676
-Size (pylama-7.7.1.tar.gz) = 33278 bytes
-SHA1 (patch-setup.py) = b0efe33e509008ad6e696eaf17cad60ac6750370
+BLAKE2s (pylama-8.3.8.tar.gz) = 9eb9f8f5a3d2e22a684b53416089980557307503e48945f8c4c7bc183c03dbc1
+SHA512 (pylama-8.3.8.tar.gz) = 09baec666bb129545cb076ffe84ec296f59561aff7ff359257e97d45e193983c17da7e8ea86351c13ae0938a62bc102eb16385555dd40dec32555a3f9d76cf4f
+Size (pylama-8.3.8.tar.gz) = 32437 bytes
