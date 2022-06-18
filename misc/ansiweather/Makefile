@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2021/09/14 16:49:01 fcambus Exp $
+# $NetBSD: Makefile,v 1.17 2022/06/18 18:11:27 fcambus Exp $
 
 DISTNAME=	ansiweather-1.18.0
 CATEGORIES=	misc
@@ -24,11 +24,6 @@ DOCDIR=		share/doc/ansiweather
 EGDIR=		share/examples/ansiweather
 
 CONF_FILES+=	${EGDIR}/ansiweatherrc.example ${PKG_SYSCONFDIR}/ansiweatherrc
-
-SUBST_CLASSES+=		config
-SUBST_FILES.config=	ansiweather
-SUBST_SED.config=	-e 's,~/.ansiweatherrc,${PKG_SYSCONFDIR}/ansiweatherrc,'
-SUBST_STAGE.config=	pre-configure
 
 AUTO_MKDIRS=		yes
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
