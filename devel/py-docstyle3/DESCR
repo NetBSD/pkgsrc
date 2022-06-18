@@ -1,0 +1,7 @@
+pydocstyle is a static analysis tool for checking compliance with
+Python docstring conventions.
+
+pydocstyle supports most of PEP 257 out of the box, but it should
+not be considered a reference implementation.
+
+This package contains the last version supporting python 2.7.
