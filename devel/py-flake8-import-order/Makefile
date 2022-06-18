@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2022/01/29 08:48:40 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2022/06/18 21:25:50 wiz Exp $
 
 DISTNAME=	flake8-import-order-0.18.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,14 +13,14 @@ LICENSE=	gnu-lgpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-asttokens-[0-9]*:../../lang/py-asttokens
 DEPENDS+=	${PYPKGPREFIX}-codestyle-[0-9]*:../../devel/py-codestyle
+TEST_DEPENDS+=	${PYPKGPREFIX}-flake8-[0-9]*:../../devel/py-flake8
 TEST_DEPENDS+=	${PYPKGPREFIX}-lama-[0-9]*:../../devel/py-lama
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
-PYTHON_VERSIONED_DEPENDENCIES+=	test:test
-PYTHON_VERSIONED_DEPENDENCIES+= flake8:test
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 do-test:
 	cd ${WRKSRC} && pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
