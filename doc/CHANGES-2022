@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3084 2022/06/18 15:31:33 pin Exp $
+$NetBSD: CHANGES-2022,v 1.3085 2022/06/18 20:40:22 leot Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4657,3 +4657,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/mold to 1.3.0 [fcambus 2022-06-18]
 	Updated comms/tio to 1.40 [fcambus 2022-06-18]
 	Updated editors/tp-note to 1.17.2 [pin 2022-06-18]
+	Updated net/mitmproxy to 8.1.0 [leot 2022-06-18]
