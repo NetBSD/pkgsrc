@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/06/18 22:30:01 wiz Exp $
+
+BLAKE2s (vulture-2.4.tar.gz) = 1013a5d5a009af20b634d726908ffa0e50a3cd95c5ee80b93a0cac6064803c3a
+SHA512 (vulture-2.4.tar.gz) = b7dc2b5f310b1af736c9317dfc4f1634c99857a11493be98b0c4e56c132b754be0e01bd99b1b7d795a495ac9103c8010a603b4a38859bac5dd3d900bc0dedf07
+Size (vulture-2.4.tar.gz) = 52734 bytes
