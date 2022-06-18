@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3089 2022/06/18 22:16:17 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3090 2022/06/18 22:30:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4662,3 +4662,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-docstyle to 6.1.1 [wiz 2022-06-18]
 	Updated textproc/py-eradicate to 2.1.0 [wiz 2022-06-18]
 	Updated devel/py-radon to 5.1.0 [wiz 2022-06-18]
+	Added devel/py-lama-quotes version 0.1.0 [wiz 2022-06-18]
