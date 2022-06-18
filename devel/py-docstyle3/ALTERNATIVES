@@ -1,0 +1,1 @@
+bin/pydocstyle @PREFIX@/bin/pydocstyle-@PYVERSSUFFIX@
