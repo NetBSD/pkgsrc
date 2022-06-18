@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2022/06/18 18:11:27 fcambus Exp $
+# $NetBSD: Makefile,v 1.18 2022/06/18 18:34:59 fcambus Exp $
 
 DISTNAME=	ansiweather-1.18.0
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fcambus/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -22,8 +23,6 @@ NO_BUILD=	yes
 
 DOCDIR=		share/doc/ansiweather
 EGDIR=		share/examples/ansiweather
-
-CONF_FILES+=	${EGDIR}/ansiweatherrc.example ${PKG_SYSCONFDIR}/ansiweatherrc
 
 AUTO_MKDIRS=		yes
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
