@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3086 2022/06/18 22:00:11 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3087 2022/06/18 22:06:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4659,3 +4659,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated editors/tp-note to 1.17.2 [pin 2022-06-18]
 	Updated net/mitmproxy to 8.1.0 [leot 2022-06-18]
 	Added devel/py-docstyle3 version 3.0.0nb2 [wiz 2022-06-18]
+	Updated devel/py-docstyle to 6.1.1 [wiz 2022-06-18]
