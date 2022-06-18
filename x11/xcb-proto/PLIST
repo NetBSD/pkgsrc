@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.7 2022/06/16 21:26:15 wiz Exp $
-lib/pkgconfig/xcb-proto.pc
+@comment $NetBSD: PLIST,v 1.8 2022/06/18 08:25:05 wiz Exp $
+share/pkgconfig/xcb-proto.pc
 share/xcb/bigreq.xml
 share/xcb/composite.xml
 share/xcb/damage.xml
