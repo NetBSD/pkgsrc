@@ -1,0 +1,11 @@
+netop is a terminal command line interface that can customize the filter
+network traffic rule.
+
+Features
+-Use the bpf rule filter
+-Multi-rule switching
+-Real-time rate
+-Total traffic
+-Response UI
+-Resource occupation is small, rust Written
+-Support docker deployment
