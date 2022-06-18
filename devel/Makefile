@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3753 2022/06/18 21:59:58 wiz Exp $
+# $NetBSD: Makefile,v 1.3754 2022/06/18 22:30:36 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2548,6 +2548,7 @@ SUBDIR+=	py-kivy
 SUBDIR+=	py-kivy-garden
 SUBDIR+=	py-kjbuckets
 SUBDIR+=	py-lama
+SUBDIR+=	py-lama-quotes
 SUBDIR+=	py-lama7
 SUBDIR+=	py-lazr.config
 SUBDIR+=	py-lazr.delegates
@@ -2880,6 +2881,7 @@ SUBDIR+=	py-versioningit
 SUBDIR+=	py-vine
 SUBDIR+=	py-virtualenv
 SUBDIR+=	py-visitor
+SUBDIR+=	py-vulture
 SUBDIR+=	py-wasm
 SUBDIR+=	py-wcwidth
 SUBDIR+=	py-wheel
