@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3080 2022/06/18 10:07:37 pin Exp $
+$NetBSD: CHANGES-2022,v 1.3081 2022/06/18 12:53:26 jun Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4653,3 +4653,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/py-xcbgen to 1.15.2 [wiz 2022-06-18]
 	Updated editors/tp-note to 1.17.1 [pin 2022-06-18]
 	Added net/netop version 0.1.0 [pin 2022-06-18]
+	Added emulators/nono version 0.4.0 [jun 2022-06-18]
