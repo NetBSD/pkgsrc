@@ -1,0 +1,1 @@
+bin/pylama @PREFIX@/bin/pylama-@PYVERSSUFFIX@

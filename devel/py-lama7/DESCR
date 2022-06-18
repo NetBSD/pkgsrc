@@ -1,0 +1,11 @@
+Code audit tool for Python and JavaScript. Pylama wraps these tools:
+* pycodestyle (formerly pep8)
+* pydocstyle (formerly pep257)
+* PyFlakes
+* Mccabe
+* Pylint
+* Radon
+* gjslin
+* eradicate
+
+This package contains the last version supporting python 2.7.
