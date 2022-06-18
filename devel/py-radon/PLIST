@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2020/10/03 06:08:06 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2022/06/18 22:16:09 wiz Exp $
 bin/radon-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -60,6 +60,9 @@ ${PYSITELIB}/radon/tests/run.pyo
 ${PYSITELIB}/radon/tests/test_cli.py
 ${PYSITELIB}/radon/tests/test_cli.pyc
 ${PYSITELIB}/radon/tests/test_cli.pyo
+${PYSITELIB}/radon/tests/test_cli_colors.py
+${PYSITELIB}/radon/tests/test_cli_colors.pyc
+${PYSITELIB}/radon/tests/test_cli_colors.pyo
 ${PYSITELIB}/radon/tests/test_cli_harvest.py
 ${PYSITELIB}/radon/tests/test_cli_harvest.pyc
 ${PYSITELIB}/radon/tests/test_cli_harvest.pyo
