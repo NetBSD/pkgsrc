@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/01/29 08:48:40 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2022/06/18 22:02:38 wiz Exp $
 
 DISTNAME=	flake8-docstrings-1.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,8 +11,7 @@ HOMEPAGE=	https://gitlab.com/pycqa/flake8-docstrings
 COMMENT=	Extension for flake8 using pydocstyle to check docstrings
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-docstyle>=2.1.0:../../devel/py-docstyle
-
+PYTHON_VERSIONED_DEPENDENCIES+=	docstyle
 PYTHON_VERSIONED_DEPENDENCIES+=	flake8
 
 USE_LANGUAGES=	# none
