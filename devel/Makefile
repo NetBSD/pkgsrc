@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3751 2022/06/15 22:29:14 gdt Exp $
+# $NetBSD: Makefile,v 1.3752 2022/06/18 21:46:19 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2547,6 +2547,7 @@ SUBDIR+=	py-kivy
 SUBDIR+=	py-kivy-garden
 SUBDIR+=	py-kjbuckets
 SUBDIR+=	py-lama
+SUBDIR+=	py-lama7
 SUBDIR+=	py-lazr.config
 SUBDIR+=	py-lazr.delegates
 SUBDIR+=	py-lazy-object-proxy
