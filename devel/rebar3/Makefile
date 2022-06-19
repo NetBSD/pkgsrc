@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2022/04/25 12:25:58 nikita Exp $
+# $NetBSD: Makefile,v 1.7 2022/06/19 20:49:18 nikita Exp $
 
-DISTNAME=	rebar3-3.18.0
+DISTNAME=	rebar3-3.19.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=erlang/}
 DIST_SUBDIR=	rebar3
@@ -13,25 +13,23 @@ LICENSE=	apache-2.0
 USE_TOOLS+=	tar
 
 REBAR_DEPS+=	bbmustache-1.12.2
-REBAR_DEPS+=	certifi-2.8.0
+REBAR_DEPS+=	certifi-2.9.0
 REBAR_DEPS+=	cf-0.3.1
 REBAR_DEPS+=	cth_readable-1.5.1
 REBAR_DEPS+=	erlware_commons-1.5.0
 REBAR_DEPS+=	eunit_formatters-0.5.0
 REBAR_DEPS+=	getopt-1.0.1
 REBAR_DEPS+=	providers-1.9.0
-REBAR_DEPS+=	relx-4.6.0
+REBAR_DEPS+=	relx-4.7.0
 REBAR_DEPS+=	ssl_verify_fun-1.1.6
+REBAR_DEPS+=	meck-0.8.13
 
-MAKE_ENV+=	DEBUG=1
 MAKE_ENV+=	HOME=${WRKDIR}
-MAKE_ENV+=	REBAR_NO_VERIFY_REPO_ORIGIN=1
+MAKE_ENV+=	REBAR_OFFLINE=1
+#MAKE_ENV+=	REBAR_NO_VERIFY_REPO_ORIGIN=1
 
 DISTFILES=	${DEFAULT_DISTFILES}
 
-# rebar3 bootstrap in offline mode
-# is an open ticket: https://github.com/erlang/rebar3/issues/1281
-# until then, we have to bootstrap it this way.
 .for dep in ${REBAR_DEPS}
 DISTFILES+=		${dep}.tar
 SITES.${dep}.tar=	https://repo.hex.pm/tarballs/
@@ -63,8 +61,8 @@ post-extract:
 .endfor
 
 do-build:
-	${RM} ${WRKSRC}/rebar.lock
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./bootstrap
+	#${RM} ${WRKSRC}/rebar.lock
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./bootstrap --offline
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/rebar3 ${DESTDIR}${PREFIX}/bin/
@@ -72,10 +70,11 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/rebar.config.sample \
 		${DESTDIR}${PREFIX}/share/examples/rebar3
 
+# Failed 159 tests. Skipped 1 (1, 0) tests. Passed 454 tests.
 do-test:
 	cd ${WRKSRC} && \
-		${SETENV} ./rebar3 escriptize && \
-		${SETENV} ./rebar3 ct
+		${SETENV} REBAR_OFFLINE=1 ./rebar3 escriptize && \
+		${SETENV} REBAR_OFFLINE=1 ./rebar3 ct
 
 .include "../../lang/erlang/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
