@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3095 2022/06/19 07:03:51 pin Exp $
+$NetBSD: CHANGES-2022,v 1.3096 2022/06/19 18:18:22 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4668,3 +4668,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated ham/trustedQSL to 2.6.3 [mef 2022-06-19]
 	Updated sysutils/broot to 1.13.2 [pin 2022-06-19]
 	Updated audio/spotify-player to 0.9.0 [pin 2022-06-19]
+	Updated net/gh to 2.12.1 [bsiegert 2022-06-19]
