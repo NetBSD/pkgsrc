@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2022/06/19 20:49:18 nikita Exp $
+# $NetBSD: Makefile,v 1.8 2022/06/19 21:37:15 nikita Exp $
 
 DISTNAME=	rebar3-3.19.0
 CATEGORIES=	devel
@@ -71,10 +71,11 @@ do-install:
 		${DESTDIR}${PREFIX}/share/examples/rebar3
 
 # Failed 159 tests. Skipped 1 (1, 0) tests. Passed 454 tests.
+# Reported upstream: https://github.com/erlang/rebar3/issues/2721
 do-test:
 	cd ${WRKSRC} && \
-		${SETENV} REBAR_OFFLINE=1 ./rebar3 escriptize && \
-		${SETENV} REBAR_OFFLINE=1 ./rebar3 ct
+		${SETENV} REBAR_OFFLINE=1 DEBUG=1 ./rebar3 escriptize && \
+		${SETENV} REBAR_OFFLINE=1 DEBUG=1 ./rebar3 ct
 
 .include "../../lang/erlang/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
