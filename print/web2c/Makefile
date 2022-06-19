@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.109 2022/04/17 10:46:46 markd Exp $
+# $NetBSD: Makefile,v 1.110 2022/06/19 20:05:15 spz Exp $
 
 .include "../../print/texlive/Makefile.common"
 
@@ -9,7 +9,7 @@ HOMEPAGE=	https://www.tug.org/web2c/
 COMMENT=	TeX implementation translating WEB to C
 
 DEPENDS+=	kpathsea>=6.2.1:../../print/kpathsea
-DEPENDS+=	ptexenc>=1.3.7:../../print/ptexenc
+DEPENDS+=	ptexenc>=1.4.0:../../print/ptexenc
 
 EXTRACT_ELEMENTS+=	${DISTNAME}/libs/xpdf
 EXTRACT_ELEMENTS+=	${DISTNAME}/texk/web2c
