@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3096 2022/06/19 18:18:22 bsiegert Exp $
+$NetBSD: CHANGES-2022,v 1.3097 2022/06/19 20:49:32 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4669,3 +4669,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/broot to 1.13.2 [pin 2022-06-19]
 	Updated audio/spotify-player to 0.9.0 [pin 2022-06-19]
 	Updated net/gh to 2.12.1 [bsiegert 2022-06-19]
+	Updated devel/rebar3 to 3.19.0 [nikita 2022-06-19]
