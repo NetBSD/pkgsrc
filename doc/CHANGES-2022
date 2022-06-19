@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3092 2022/06/18 22:35:33 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3093 2022/06/19 06:20:50 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4665,3 +4665,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/py-lama-quotes version 0.1.0 [wiz 2022-06-18]
 	Added devel/py-vulture version 2.4 [wiz 2022-06-18]
 	Updated devel/py-lama to 8.3.8 [wiz 2022-06-18]
+	Updated ham/trustedQSL to 2.6.3 [mef 2022-06-19]
