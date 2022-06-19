@@ -1,4 +1,4 @@
-$NetBSD: patch-exp__chan.c,v 1.1 2022/05/15 01:56:24 dholland Exp $
+$NetBSD: patch-exp__chan.c,v 1.2 2022/06/19 14:43:28 gdt Exp $
 
 Add hack to work around deadlock situation that occurs on Solaris and
 Linux. See PR 34442.
@@ -8,6 +8,8 @@ be clear why or whether that's really the case; the description of the
 problem as far as it's understood seems to be portable. So don't
 conditionalize it, as the check should be safe. If this turns out to
 cause problems, we can wrap it in ifdefs.
+
+\todo File changes upstream (but upstream is not functioning).
 
 --- exp_chan.c.orig	2010-07-01 00:53:49.000000000 +0000
 +++ exp_chan.c
