@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2021/06/24 00:09:06 gdt Exp $
+@comment $NetBSD: PLIST,v 1.10 2022/06/19 06:19:08 mef Exp $
 bin/tqsl
 include/adif.h
 include/cabrillo.h
@@ -121,6 +121,7 @@ share/TrustedQSL/help/tqslapp/stnloc2park.bmp
 share/TrustedQSL/help/tqslapp/stnloc3.bmp
 share/TrustedQSL/help/tqslapp/stnloc4.bmp
 share/TrustedQSL/help/tqslapp/stnloc5.bmp
+share/TrustedQSL/help/tqslapp/stnprop.bmp
 share/TrustedQSL/help/tqslapp/tqslapp.hhp
 share/TrustedQSL/help/tqslapp/tqslstyle.css
 share/TrustedQSL/help/tqslapp/unlock.bmp
@@ -138,5 +139,6 @@ share/locale/it/LC_MESSAGES/tqslapp.mo
 share/locale/ja/LC_MESSAGES/tqslapp.mo
 share/locale/pt/LC_MESSAGES/tqslapp.mo
 share/locale/ru/LC_MESSAGES/tqslapp.mo
-share/locale/zh/LC_MESSAGES/tqslapp.mo
+share/locale/zh_CN/LC_MESSAGES/tqslapp.mo
+share/locale/zh_TW/LC_MESSAGES/tqslapp.mo
 share/pixmaps/TrustedQSL.png
