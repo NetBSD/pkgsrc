@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.6 2022/04/25 12:25:58 nikita Exp $
+$NetBSD: distinfo,v 1.7 2022/06/19 20:49:18 nikita Exp $
 
 BLAKE2s (rebar3/bbmustache-1.12.2.tar) = 32ead8f53518aa6dc2d16f4136f6aa7dba0edcbc2d3066c59cd81bf033929812
 SHA512 (rebar3/bbmustache-1.12.2.tar) = aecba4e354bdd5e09756cf9cd8c1e55af832f0e121c4c8000b71bc9a46485a4cdd86d13aae4f1838588be228745003a324956fdd440fb4c48b987cc58a9e238c
 Size (rebar3/bbmustache-1.12.2.tar) = 17920 bytes
-BLAKE2s (rebar3/certifi-2.8.0.tar) = 71b7970ab6cf2ed86f02529a31d5056639a75eb7b65584a78f4c539e1058896c
-SHA512 (rebar3/certifi-2.8.0.tar) = 1c484afdf7664eb92df90251bb451208c08e76179e5654a2b069388a72889aac75e941ef626eaeec7fe0a74fdbacf359aeab5330eebd43e333ad513998e46e76
-Size (rebar3/certifi-2.8.0.tar) = 153088 bytes
+BLAKE2s (rebar3/certifi-2.9.0.tar) = c78804760357d06b1638ec9f414ab5b3e6d43e2ef538313bd8763ff42641cd0e
+SHA512 (rebar3/certifi-2.9.0.tar) = d8c2f62b3b5a626735bbdaf3fb553bafe2cd1c736a378240633f0970c35079ce610ad3458d3e43c79f244c670b5e197554ddf8a71944bdc0975213db693a5583
+Size (rebar3/certifi-2.9.0.tar) = 156160 bytes
 BLAKE2s (rebar3/cf-0.3.1.tar) = f001900e6df6a33021788f72e44656eefebd8a76b6b3281a53ff469aea4569c8
 SHA512 (rebar3/cf-0.3.1.tar) = 232fa9cd175e54599c035b087a6d44c9afb4135a5509b7498ebce8becec333cd670d0e06a3bf9e30d54c7c609ad2aecd42fc40e667cf95e68b7dc228e1fd85d8
 Size (rebar3/cf-0.3.1.tar) = 10240 bytes
@@ -21,15 +21,18 @@ Size (rebar3/eunit_formatters-0.5.0.tar) = 14848 bytes
 BLAKE2s (rebar3/getopt-1.0.1.tar) = c569953af866ab03369962937ebcd66a79d3f5b7d29e8e7514e2f93e50e6dda5
 SHA512 (rebar3/getopt-1.0.1.tar) = 859642dc26c42414474fa8af8a32fed827b0773ac6d6eb51ec19c291672408e71619ad2bb0c7f08d84ff591b33a655a7e0b6241b94372e9cc816a648ee6cdaf6
 Size (rebar3/getopt-1.0.1.tar) = 19456 bytes
+BLAKE2s (rebar3/meck-0.8.13.tar) = cfb4d57afe0636e6d892baf1815b1ecaded39ef69557c86d1decbf49c83e659d
+SHA512 (rebar3/meck-0.8.13.tar) = adcfd3fdf69d4926dc1d9c2f0b477c8977bddba8b8ffdbfedcf1b5dc3c1af47b39b1c6263c922a43efede90f145f009d71b27178597320522960c5ebbd84a15a
+Size (rebar3/meck-0.8.13.tar) = 34304 bytes
 BLAKE2s (rebar3/providers-1.9.0.tar) = 2e8cf8313cd61b9216a425bc6ae8992ece5bb7ef8f9eb66e935aee613b163785
 SHA512 (rebar3/providers-1.9.0.tar) = 7227855164124425b89996b0295a786e36bbc2fadee9949d0b3d9ad518b3be9204650e5fa9e027e72cc4c2d2e8b968bddfc2015ceaf4cc00d865a35132defe76
 Size (rebar3/providers-1.9.0.tar) = 14848 bytes
-BLAKE2s (rebar3/rebar3-3.18.0.tar.gz) = 33c4028a20f32cff85db69561cf11d7c0f1f3d258419e8af1c6a7d3cf14ec9fc
-SHA512 (rebar3/rebar3-3.18.0.tar.gz) = 4fcaa1867fba7462df0b9a64fa442f4a887e83530635fdcd19f4b5dcee14ace3e7403c27f35e5e6055fb6bf89c98a91a3ff1e2036ab6e67e3de028f91233e4ed
-Size (rebar3/rebar3-3.18.0.tar.gz) = 436403 bytes
-BLAKE2s (rebar3/relx-4.6.0.tar) = bd0f7939b6ee9a115b39d3086eaf84156cbdafd8a04ac14a2ad980850686c2f2
-SHA512 (rebar3/relx-4.6.0.tar) = a0ae0447815e78b7f296b721be1430897305bb21b8b183191ed1bb0cc33ee1060f5b1ee2452d86ff7a782f29450896e8b01e90f00847c7e4bad62f3c5a786678
-Size (rebar3/relx-4.6.0.tar) = 75776 bytes
+BLAKE2s (rebar3/rebar3-3.19.0.tar.gz) = 92a008ab1a901db18ed673b052bb0af0e9b66d3ceb874ad17c2852e4012d863a
+SHA512 (rebar3/rebar3-3.19.0.tar.gz) = 43928e2b96ca9361af2ec0b6ceb82f4429e29990054e1cbe2f1d4e293748243d16a8d2b809200ce443408a82fd3227b2cfe02efc14941d1cdd3d3c9a689fa0ea
+Size (rebar3/rebar3-3.19.0.tar.gz) = 442286 bytes
+BLAKE2s (rebar3/relx-4.7.0.tar) = 255eed651214e09675c19c936a12cf06726af912710cd04590a86e6869e6acdd
+SHA512 (rebar3/relx-4.7.0.tar) = cd7bc3535d012f8e2bf98cf9a68c03425903c137557c18599a27d80722471353623e616787fed791760c0ec6ec51379e060a57777521be33ef84b37b3693f9c3
+Size (rebar3/relx-4.7.0.tar) = 76288 bytes
 BLAKE2s (rebar3/ssl_verify_fun-1.1.6.tar) = 000cb4e6d18aa9d0695306cb6b5de24a2cb559d3a59b28445d25be22ee9a296e
 SHA512 (rebar3/ssl_verify_fun-1.1.6.tar) = 65980368629357ec16b37fd8ea1d42f7dbd7fa86318b329bec756e868b70eb4c93cf1bfe3dd34e1b6c011086ba32e11981d61e18fdad78564b77664e4d155a47
 Size (rebar3/ssl_verify_fun-1.1.6.tar) = 14848 bytes
