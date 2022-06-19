@@ -808,6 +808,7 @@ speex			Enable speex support.
 spf			Enable Sender Policy Framework support.
 sphinx			Enable Sphinx full-text search.
 spice			Enable Spice-Space support.
+spotify-player-album-image	Displays album art on spotify-player.
 spotify-player-lyric-finder	Lyric finder library for spotify-player.
 sqlite			Enable SQLite support.
 sqlite3			Enable SQLite3 support.
