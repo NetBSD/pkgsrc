@@ -1,20 +1,20 @@
-$NetBSD: patch-Makefile.in,v 1.5 2022/06/14 10:56:15 gdt Exp $
+$NetBSD: patch-Makefile.in,v 1.6 2022/06/19 14:43:28 gdt Exp $
 
-(This patch was created in 2012 and not adequately commented.  The
-comment included "no libtool", but there is no hint of libtool
-upstream and this patch does not remove it.)
+Add a shlib version to the shared library, which does not have one,
+for reasons not understood.  This is accomplished by defining a
+SHLIB_VERSION make variable by autoconf substitution (and oddly but
+not importantly, including a . in the make variable rather than where
+used).
 
-Define SHLIB_VERSION, mysteriously.
+Build and install a static version of the expect library.
 
-Add a variable for a static library version, build and install it.
-
-Use standard rather than namespaced directories.
+Use standard rather than namespaced directories for data/lib/include.
+\todo Decide if this is working around an upstream bug, and if so file
+upstream, or if it is a pkgsrc accomodation.
 
 Include LDFLAGS when linking (for RELRO).
 
-Version the shlib and the expect binary.
-
-\todo Push changes upstream, or explain why that's not appropriate.
+\todo File changes upstream (but upstream is not functioning).
 
 --- Makefile.in.orig	2010-09-30 17:14:07.000000000 +0000
 +++ Makefile.in
