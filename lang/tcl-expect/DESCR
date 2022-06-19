@@ -3,3 +3,6 @@ interactive programs.  It is briefly described by its man page, expect(1).
 
 It uses pseudo-tty's to control the child processes, so it is not affected
 by programs that refuse to read from stdin or pipes. (eg: passwd(1) etc).
+
+This program is no longer maintained upstream, with a last release in
+2018 and the most recent maintainer ticket action in 2020.
