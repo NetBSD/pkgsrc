@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3100 2022/06/20 08:00:48 nikita Exp $
+$NetBSD: CHANGES-2022,v 1.3101 2022/06/20 08:17:11 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4673,3 +4673,4 @@ Changes to the packages collection and infrastructure in 2022:
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2022Q2 branch [gdt 2022-06-20]
 	Updated audio/fasttracker2 to 1.55 [fox 2022-06-20]
 	Updated net/erlang-idna to 6.1.1nb5 [nikita 2022-06-20]
+	Added devel/ocaml-hxd version 0.3.2 [jaapb 2022-06-20]
