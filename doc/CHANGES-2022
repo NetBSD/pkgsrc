@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3098 2022/06/20 00:05:09 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.3099 2022/06/20 02:30:42 fox Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4671,3 +4671,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/gh to 2.12.1 [bsiegert 2022-06-19]
 	Updated devel/rebar3 to 3.19.0 [nikita 2022-06-19]
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2022Q2 branch [gdt 2022-06-20]
+	Updated audio/fasttracker2 to 1.55 [fox 2022-06-20]
