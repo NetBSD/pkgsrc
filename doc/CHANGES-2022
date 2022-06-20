@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3102 2022/06/20 17:02:19 pin Exp $
+$NetBSD: CHANGES-2022,v 1.3103 2022/06/20 22:31:56 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4675,3 +4675,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/erlang-idna to 6.1.1nb5 [nikita 2022-06-20]
 	Added devel/ocaml-hxd version 0.3.2 [jaapb 2022-06-20]
 	Updated sysutils/broot to 1.13.3 [pin 2022-06-20]
+	Updated x11/xfce4-exo to 4.16.4 [gutteridge 2022-06-20]
