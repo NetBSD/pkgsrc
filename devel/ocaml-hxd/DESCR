@@ -1,0 +1,3 @@
+`hxd` is a little program to output a hexdump of a stdin or a binary file.
+The main difference with `xxd` is to color outputs to be more fancy to read.
+Then, it provides a way to generate a Caml code which is a dump of inputs.
