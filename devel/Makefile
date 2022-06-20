@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3754 2022/06/18 22:30:36 wiz Exp $
+# $NetBSD: Makefile,v 1.3755 2022/06/20 08:18:02 jaapb Exp $
 #
 
 COMMENT=	Development utilities
@@ -1128,6 +1128,7 @@ SUBDIR+=	ocaml-fpath
 SUBDIR+=	ocaml-git
 SUBDIR+=	ocaml-hex
 SUBDIR+=	ocaml-hmap
+SUBDIR+=	ocaml-hxd
 SUBDIR+=	ocaml-int_repr
 SUBDIR+=	ocaml-intrinsics
 SUBDIR+=	ocaml-jane-street-headers
