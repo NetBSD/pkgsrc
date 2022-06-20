@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2022/06/19 21:37:15 nikita Exp $
+# $NetBSD: Makefile,v 1.9 2022/06/20 07:40:39 nikita Exp $
 
 DISTNAME=	rebar3-3.19.0
 CATEGORIES=	devel
@@ -25,7 +25,6 @@ REBAR_DEPS+=	ssl_verify_fun-1.1.6
 REBAR_DEPS+=	meck-0.8.13
 
 MAKE_ENV+=	HOME=${WRKDIR}
-MAKE_ENV+=	REBAR_OFFLINE=1
 #MAKE_ENV+=	REBAR_NO_VERIFY_REPO_ORIGIN=1
 
 DISTFILES=	${DEFAULT_DISTFILES}
@@ -70,12 +69,10 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/rebar.config.sample \
 		${DESTDIR}${PREFIX}/share/examples/rebar3
 
-# Failed 159 tests. Skipped 1 (1, 0) tests. Passed 454 tests.
-# Reported upstream: https://github.com/erlang/rebar3/issues/2721
 do-test:
 	cd ${WRKSRC} && \
-		${SETENV} REBAR_OFFLINE=1 DEBUG=1 ./rebar3 escriptize && \
-		${SETENV} REBAR_OFFLINE=1 DEBUG=1 ./rebar3 ct
+		${SETENV} ./rebar3 escriptize && \
+		${SETENV} ./rebar3 ct
 
 .include "../../lang/erlang/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
