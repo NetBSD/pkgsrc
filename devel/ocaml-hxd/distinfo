@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/06/20 08:16:58 jaapb Exp $
+
+BLAKE2s (hxd-0.3.2.tar.gz) = 6e5454a57ce8674db0fb1575e634a957083bb2686326c42ff1327ebc87acfe97
+SHA512 (hxd-0.3.2.tar.gz) = d3f47fbb18ebc201eefa663825949eaff11534aefb35bcff9ec0683b14a21c595a3d409fcc5111f5cbab2fac361f7f206ec1d8ad978978ed62c7828835f44b9d
+Size (hxd-0.3.2.tar.gz) = 38629 bytes
