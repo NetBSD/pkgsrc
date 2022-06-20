@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2022/05/03 10:11:15 nikita Exp $
+# $NetBSD: Makefile,v 1.8 2022/06/20 08:00:34 nikita Exp $
 
 DISTNAME=	idna-6.1.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=benoitc/}
 
