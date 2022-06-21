@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3103 2022/06/20 22:31:56 gutteridge Exp $
+$NetBSD: CHANGES-2022,v 1.3104 2022/06/21 02:21:59 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4672,6 +4672,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/rebar3 to 3.19.0 [nikita 2022-06-19]
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2022Q2 branch [gdt 2022-06-20]
 	Updated audio/fasttracker2 to 1.55 [fox 2022-06-20]
+	Updated lang/coq to 8.15.2 [dholland 2022-06-20]
 	Updated net/erlang-idna to 6.1.1nb5 [nikita 2022-06-20]
 	Added devel/ocaml-hxd version 0.3.2 [jaapb 2022-06-20]
 	Updated sysutils/broot to 1.13.3 [pin 2022-06-20]
