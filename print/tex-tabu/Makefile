@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2020/01/18 23:34:52 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2022/06/21 22:16:21 joerg Exp $
 
 DISTNAME=	tabu
 PKGNAME=	tex-${DISTNAME}-2.9
+PKGREVISION=	1
 TEXLIVE_REV=	49707
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
