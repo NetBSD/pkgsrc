@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3104 2022/06/21 02:21:59 dholland Exp $
+$NetBSD: CHANGES-2022,v 1.3105 2022/06/21 18:48:49 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4677,3 +4677,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/ocaml-hxd version 0.3.2 [jaapb 2022-06-20]
 	Updated sysutils/broot to 1.13.3 [pin 2022-06-20]
 	Updated x11/xfce4-exo to 4.16.4 [gutteridge 2022-06-20]
+	Updated security/openssl to 1.1.1p [jperkin 2022-06-21]
