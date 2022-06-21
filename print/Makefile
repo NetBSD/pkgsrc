@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.862 2022/05/15 05:15:52 wiz Exp $
+# $NetBSD: Makefile,v 1.863 2022/06/21 22:20:23 joerg Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -143,7 +143,6 @@ SUBDIR+=	py-reportlab
 SUBDIR+=	py-weasyprint
 SUBDIR+=	py-weasyprint0
 SUBDIR+=	py-xhtml2pdf
-SUBDIR+=	py27-reportlab
 SUBDIR+=	qpdf
 SUBDIR+=	qpdfview
 SUBDIR+=	rlpr

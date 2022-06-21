@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:12:16 nia Exp $
-
-BLAKE2s (reportlab-3.5.65.tar.gz) = ebb5fbc66f464377989ceaaf8a4586857d65a18159b8a205b65018a607d617c6
-SHA512 (reportlab-3.5.65.tar.gz) = a143ff277ab4e9bf667d8334aca9d5b0c959b64eebbd5eda8d6fed95b09cd28544a33bbe5f630753f167b54e63a1a5e04f841c8892712e93d2f8739e9651269a
-Size (reportlab-3.5.65.tar.gz) = 2909468 bytes
