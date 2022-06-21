@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21954 2022/06/21 02:22:00 dholland Exp $
+$NetBSD: TODO,v 1.21955 2022/06/21 03:42:10 dholland Exp $
 
 Suggested new packages
 ======================
@@ -519,7 +519,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o calibre-5.43.0
 	o calligra-3.0.1 [in wip; koffice successor]
 	o camlp4-4.12
-	o camlp5-8.00 [does not support ocaml 4.14]
+	o camlp5-8.00.03 [dholland has a partial update]
 	o canu-2.1.1
 	o carbons-purple-0.2.3
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
