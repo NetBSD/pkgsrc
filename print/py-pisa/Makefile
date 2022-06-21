@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2022/01/05 20:07:10 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2022/06/21 22:18:16 joerg Exp $
 
 DISTNAME=	pisa-3.0.33
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	HTML2pdf converter (obsolete, use print/py-weasyprint instead)
 LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-Pdf-[0-9]*:../../print/py-Pdf
-DEPENDS+=	${PYPKGPREFIX}-reportlab>=2.2:../../print/py27-reportlab
+DEPENDS+=	${PYPKGPREFIX}-reportlab>=2.2:../../print/py-reportlab
 DEPENDS+=	${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
 
 PYTHON_VERSIONS_ACCEPTED=	27 # not ported as of 3.0.33
