@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.12 2022/05/01 09:45:42 wiz Exp $
+# $NetBSD: options.mk,v 1.13 2022/06/21 02:21:22 dholland Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.coq
 PKG_SUPPORTED_OPTIONS=	doc coqide
@@ -70,6 +70,7 @@ CONFIGURE_ARGS+=		-with-doc no
 .endif
 
 .if !empty(PKG_OPTIONS:Mcoqide)
+BUILDLINK_API_DEPENDS.ocaml-lablgtk3+=	ocaml-lablgtk3>=3.1.0
 .include "../../x11/ocaml-lablgtk3/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 DEPENDS+=	adwaita-icon-theme-[0-9]*:../../graphics/adwaita-icon-theme

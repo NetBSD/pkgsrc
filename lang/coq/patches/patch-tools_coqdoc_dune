@@ -1,0 +1,16 @@
+$NetBSD: patch-tools_coqdoc_dune,v 1.1 2022/06/21 02:21:22 dholland Exp $
+
+Install the latex style file in the right place for us.
+(This used to be settable via configure, but no longer is)
+
+--- tools/coqdoc/dune~	2022-05-31 08:36:38.000000000 +0000
++++ tools/coqdoc/dune
+@@ -10,7 +10,7 @@
+  (section share_root)
+  (package coq-core)
+  (files
+-  (coqdoc.sty as texmf/tex/latex/misc/coqdoc.sty)))
++  (coqdoc.sty as texmf-dist/tex/latex/coq/coqdoc.sty)))
+ 
+ (executable
+  (name main)
