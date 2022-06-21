@@ -12,3 +12,7 @@ written in C or C++. On most systems such modules may be
 dynamically loaded. Python is also adaptable as an exten-
 sion language for existing applications. See the internal
 documentation for hints.
+
+This release is no longer supported the Python project. It
+entered official end of life status in early 2020. Users are
+advised to migrate to a currently supported Python 3 release.
