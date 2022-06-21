@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile.install,v 1.1 2022/06/21 02:21:22 dholland Exp $
+
+Use BSD_INSTALL_*
+
+--- Makefile.install~	2022-05-31 08:36:38.000000000 +0000
++++ Makefile.install
+@@ -31,7 +31,7 @@ install-byte:
+ 
+ .PHONY: install install-byte install-coqide install-doc-all install-doc-no
+ 
+-INSTALLLIB:=install -m 644
++INSTALLLIB:=${BSD_INSTALL_LIB}
+ 
+ .PHONY: install-coq install-dune install-library
+ 
