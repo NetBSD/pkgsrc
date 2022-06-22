@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21956 2022/06/22 06:16:16 wiz Exp $
+$NetBSD: TODO,v 1.21957 2022/06/22 12:23:14 wiz Exp $
 
 Suggested new packages
 ======================
@@ -516,7 +516,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o cacti-spine-1.2.16
 	o calc-2.11.10.1
 	o calcoo-2.1.0
-	o calibre-5.43.0
+	o calibre-5.44.0
 	o calligra-3.0.1 [in wip; koffice successor]
 	o camlp4-4.12
 	o camlp5-8.00.03 [dholland has a partial update]
@@ -587,7 +587,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o dega-1.12
 	o dehydrated-0.7.0
 	o delegate-9.9.13
-	o denemo-2.5.0
+	o denemo-2.6
 	o desklaunch-1.1.7
 	o deskmenu-1.4.5
 	o dhcpcd-dbus-0.6.1
@@ -1634,7 +1634,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o wine-devel-3.7
 	o wiredtiger-10.0.0
 	o wireshark-3.6.6
-	o wkhtmltopdf-0.12.5
+	o wkhtmltopdf-0.12.6
 	o wmi-11
 	o wordwarvi-1.0.4
 	o worker-4.8.0
