@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:15:19 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/06/22 10:29:02 wiz Exp $
 
 BLAKE2s (libewf-experimental-20150126.tar.gz) = aa9318f9d58c80d96528f8fd182c8a9e580880ed3ad6a2a5de75e66182d3a579
 SHA512 (libewf-experimental-20150126.tar.gz) = ebb713c99ae365069e47b3ccab7963010c1eb61d961ae597502bc31696f33be5f394e665afb9b62d8c8cad1a83ea3f8c08759aa2ef79cb4e4b411b1f66faf707
 Size (libewf-experimental-20150126.tar.gz) = 2130325 bytes
+SHA1 (patch-libuna_libuna__inline.h) = b8ad58fb633407b4ee53464e4c996ae5c73c3378
