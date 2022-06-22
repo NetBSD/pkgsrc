@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2022/04/18 19:11:15 adam Exp $
+# $NetBSD: Makefile,v 1.73 2022/06/22 10:31:19 nia Exp $
 
 DISTNAME=	denemo-0.9.2
 PKGREVISION=	40
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.denemo.org/
 COMMENT=	GUI musical score editor written in C/GTK+
 LICENSE=	gnu-gpl-v3
+
+BROKEN+=	"Incompatible with latest fluidsynth, needs update"
 
 DEPENDS+=	lilypond-[0-9]*:../../print/lilypond
 
