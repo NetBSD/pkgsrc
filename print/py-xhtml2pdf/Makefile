@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/01/05 15:41:19 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/06/22 01:26:35 joerg Exp $
 
 DISTNAME=	xhtml2pdf-0.2.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -20,9 +20,6 @@ DEPENDS+=	${PYPKGPREFIX}-reportlab>=3.3.0:../../print/py-reportlab
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27	# py-pyphen
-
 USE_PKG_RESOURCES=	yes
 
 post-install:
