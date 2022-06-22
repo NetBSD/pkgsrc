@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3106 2022/06/21 22:19:42 joerg Exp $
+$NetBSD: CHANGES-2022,v 1.3107 2022/06/22 13:33:17 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4679,3 +4679,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/xfce4-exo to 4.16.4 [gutteridge 2022-06-20]
 	Updated security/openssl to 1.1.1p [jperkin 2022-06-21]
 	Removed print/py27-reportlab successor print/py-reportlab [joerg 2022-06-21]
+	Updated databases/openldap-server to 2.6.2nb1 [taca 2022-06-22]
