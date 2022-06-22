@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.84 2022/06/21 22:10:43 joerg Exp $
+# $NetBSD: Makefile,v 1.85 2022/06/22 05:58:17 wiz Exp $
 
 DISTNAME=	reportlab-3.5.68
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	print python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/reportlab/}
 
@@ -21,4 +21,5 @@ PYSETUPARGS+=	--use-system-libart
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/libart/buildlink3.mk"
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
