@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.20 2022/06/12 16:16:44 nia Exp $
+$NetBSD: distinfo,v 1.21 2022/06/22 09:36:49 nia Exp $
 
 BLAKE2s (strawberry-1.0.5.tar.xz) = 5d223ed06087e64fe78ceb8bf963ab8495d44aa478fc5328e4faae59e1231277
 SHA512 (strawberry-1.0.5.tar.xz) = 4c625c75855f87952b274c85b4c5b021b27e75a74d46202ab3ea0aa3c86f510bccdece583483c4ba73e4733f151feb5eac5f5ef5d9a956995979fa307fd8d911
 Size (strawberry-1.0.5.tar.xz) = 11212028 bytes
 SHA1 (patch-src_analyzer_blockanalyzer.cpp) = e1e22a4ea278f03142f13fd8310730854a8ddc9a
 SHA1 (patch-src_analyzer_boomanalyzer.cpp) = 833bab9d6b59644c9acae662bc389bf731e507ad
+SHA1 (patch-src_core_utilities.cpp) = 4763a6a376d312a65a083fd798d4a34fe46a716f
