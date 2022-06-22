@@ -1,10 +1,11 @@
-# $NetBSD: options.mk,v 1.1 2022/04/06 16:32:21 nia Exp $
+# $NetBSD: options.mk,v 1.2 2022/06/22 10:12:02 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.zam-plugins
 
+PKG_SUPPORTED_OPTIONS+=		jack
+
 .include "../../audio/jack/platform.mk"
 .if ${PLATFORM_SUPPORTS_JACK:tl} == "yes"
-PKG_SUPPORTED_OPTIONS+=		jack
 PKG_SUGGESTED_OPTIONS+=		jack
 .endif
 
