@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3107 2022/06/22 13:33:17 taca Exp $
+$NetBSD: CHANGES-2022,v 1.3108 2022/06/22 15:40:20 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4680,3 +4680,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/openssl to 1.1.1p [jperkin 2022-06-21]
 	Removed print/py27-reportlab successor print/py-reportlab [joerg 2022-06-21]
 	Updated databases/openldap-server to 2.6.2nb1 [taca 2022-06-22]
+	Updated devel/ruby-redmine42 to 4.2.7 [taca 2022-06-22]
