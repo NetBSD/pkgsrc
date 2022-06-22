@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2022/04/03 05:36:02 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/06/22 15:39:58 taca Exp $
 bin/redmine42_generate_secret_token${RUBY_SUFFIX}.sh
 bin/redmine42_load_default_data${RUBY_SUFFIX}.sh
 bin/redmine42_migrate_db${RUBY_SUFFIX}.sh
@@ -1613,7 +1613,7 @@ share/${RUBY_NAME}-redmine42/public/javascripts/i18n/datepicker-uk.js
 share/${RUBY_NAME}-redmine42/public/javascripts/i18n/datepicker-vi.js
 share/${RUBY_NAME}-redmine42/public/javascripts/i18n/datepicker-zh-CN.js
 share/${RUBY_NAME}-redmine42/public/javascripts/i18n/datepicker-zh-TW.js
-share/${RUBY_NAME}-redmine42/public/javascripts/jquery-3.5.1-ui-1.12.1-ujs-5.2.4.5.js
+share/${RUBY_NAME}-redmine42/public/javascripts/jquery-3.6.0-ui-1.13.1-ujs-5.2.4.5.js
 share/${RUBY_NAME}-redmine42/public/javascripts/jquery-migrate-3.3.2.min.js
 share/${RUBY_NAME}-redmine42/public/javascripts/jstoolbar/jstoolbar.js
 share/${RUBY_NAME}-redmine42/public/javascripts/jstoolbar/lang/jstoolbar-ar.js
@@ -1685,7 +1685,7 @@ share/${RUBY_NAME}-redmine42/public/stylesheets/jquery/images/ui-icons_777620_25
 share/${RUBY_NAME}-redmine42/public/stylesheets/jquery/images/ui-icons_777777_256x240.png
 share/${RUBY_NAME}-redmine42/public/stylesheets/jquery/images/ui-icons_cc0000_256x240.png
 share/${RUBY_NAME}-redmine42/public/stylesheets/jquery/images/ui-icons_ffffff_256x240.png
-share/${RUBY_NAME}-redmine42/public/stylesheets/jquery/jquery-ui-1.12.1.css
+share/${RUBY_NAME}-redmine42/public/stylesheets/jquery/jquery-ui-1.13.1.css
 share/${RUBY_NAME}-redmine42/public/stylesheets/jstoolbar.css
 share/${RUBY_NAME}-redmine42/public/stylesheets/responsive.css
 share/${RUBY_NAME}-redmine42/public/stylesheets/rtl.css
