@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2022/04/18 19:11:53 adam Exp $
+# $NetBSD: Makefile,v 1.36 2022/06/22 15:45:59 wiz Exp $
 
 DISTNAME=	ownCloud-2.7.6.3261
 PKGNAME=	${DISTNAME:S/ownCloud/owncloudclient/1}
@@ -11,6 +11,8 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://owncloud.com/
 COMMENT=	Synchronization program for ownCloud
 LICENSE=	gnu-gpl-v2
+
+BROKEN=		"Needs to be updated, for qt5 compatibility"
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
