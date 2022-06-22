@@ -1,4 +1,4 @@
-# $NetBSD: versioned_dependencies.mk,v 1.74 2022/06/22 09:10:48 joerg Exp $
+# $NetBSD: versioned_dependencies.mk,v 1.75 2022/06/22 09:14:44 wiz Exp $
 #
 # This file determines which separate distribution of a Python
 # package is used as dependency, depending on the Python version
@@ -9,7 +9,7 @@
 # PYTHON_VERSIONED_DEPENDENCIES
 #       The Python package which should be added as a dependency.
 #
-#       Possible values: Pillow X cairo click cryptography docstyle flake8 html2text hypothesis importlib-metadata jinja2 lama markdown mccabe more-itertools pip packaging pygments pyparsing python-digest rsa setuptools setuptools_scm sphinx test twisted zipp
+#       Possible values: Pillow X cairo click cryptography docstyle flake8 html2text hypothesis importlib-metadata jinja2 lama markdown mccabe more-itertools pip packaging pygments pyparsing pyphen python-digest rsa setuptools setuptools_scm sphinx test twisted zipp
 #       Default: (nothing)
 #
 
