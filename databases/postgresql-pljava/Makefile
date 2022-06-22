@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2021/05/24 19:49:45 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2022/06/22 10:25:38 nia Exp $
 
 DISTNAME=	pljava-1.5.0
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
@@ -24,6 +24,8 @@ USE_LANGUAGES=	c c++
 TOOLS_BROKEN+=	perl
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/./_/g}
+
+PKG_JVMS_ACCEPTED=	openjdk8
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/compiler.mk"
