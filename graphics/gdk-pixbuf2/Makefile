@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2022/06/11 12:46:06 nia Exp $
+# $NetBSD: Makefile,v 1.54 2022/06/22 08:50:44 nia Exp $
 
 DISTNAME=	gdk-pixbuf-2.42.8
 PKGNAME=	${DISTNAME:S/pixbuf/pixbuf2/}
@@ -37,6 +37,11 @@ SUBST_SED.dyld=		-e 's|@LD_LIBRARY_PATH@|LD_LIBRARY_PATH|g'
 MESON_ARGS+=			-D installed_tests=false
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
 PKGCONFIG_OVERRIDE=		output/meson-private/gdk-pixbuf-2.0.pc
+
+SUBST_CLASSES+=		docbook
+SUBST_STAGE.docbook=	pre-configure
+SUBST_FILES.docbook+=	docs/meson.build
+SUBST_VARS.docbook+=	PREFIX
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYTHON_FOR_BUILD_ONLY=		tool
