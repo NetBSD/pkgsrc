@@ -1,4 +1,4 @@
-# $NetBSD: versioned_dependencies.mk,v 1.73 2022/06/21 22:10:10 joerg Exp $
+# $NetBSD: versioned_dependencies.mk,v 1.74 2022/06/22 09:10:48 joerg Exp $
 #
 # This file determines which separate distribution of a Python
 # package is used as dependency, depending on the Python version
@@ -37,7 +37,7 @@ _SUPPORTED_PACKAGES+=	packaging devel/py-packaging2 devel/py-packaging
 _SUPPORTED_PACKAGES+=	pip devel/py-pip20 devel/py-pip
 _SUPPORTED_PACKAGES+=	pygments textproc/py-pygments25 textproc/py-pygments
 _SUPPORTED_PACKAGES+=	pyparsing devel/py-pyparsing2 devel/py-pyparsing
-_SUPPORTED_PACKAGES+=	pyphen textproc/py-pyphen textproc/py27-pyphen
+_SUPPORTED_PACKAGES+=	pyphen textproc/py27-pyphen textproc/py-pyphen
 _SUPPORTED_PACKAGES+=	python-digest www/py-python-digest www/py-python3-digest
 _SUPPORTED_PACKAGES+=	rsa security/py-rsa40 security/py-rsa
 _SUPPORTED_PACKAGES+=	setuptools devel/py-setuptools44 devel/py-setuptools
