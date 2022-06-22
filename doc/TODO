@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21957 2022/06/22 12:23:14 wiz Exp $
+$NetBSD: TODO,v 1.21958 2022/06/22 13:34:29 taca Exp $
 
 Suggested new packages
 ======================
@@ -400,9 +400,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o SDL2-2.23.1
 	o SDL_sound-2.0
 	o SOGo-2.4.3
-	o SOGo-5.6.0
+	o SOGo-5.7.0
 	o SOPE-2.4.3
-	o SOPE-5.6.0
+	o SOPE-5.7.0
 	o SQLiteCpp-2.5.0
 	o TeXmacs-2.1.1
 	o TiffIO-140a
@@ -1513,7 +1513,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o strace-4.23
 	o stratagus-2.2.5.5
 	o streamtuner-2.2.0
-	o sudo-1.9.11p1
+	o sudo-1.9.11p3
 	o sunclock-3.57 [https://github.com/mdoege/Sunclock]
 	o sup-0.4
 	o superlu-5.2.2
@@ -1523,7 +1523,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o swi-prolog-jpl-8.3.22
 	o swi-prolog-lite-8.3.22
 	o swi-prolog-packages-8.3.22
-	o sympa-6.2.60
+	o sympa-6.2.68
 	o sysinfo-4.2.2
 	o system-tools-backends-2.10.1
 	o systrace-1.6e
