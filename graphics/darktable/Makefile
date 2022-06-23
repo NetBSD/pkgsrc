@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.129 2022/06/23 07:08:36 nia Exp $
+# $NetBSD: Makefile,v 1.130 2022/06/23 07:12:40 nia Exp $
 
 DISTNAME=	darktable-3.6.1
 PKGREVISION=	3
@@ -44,9 +44,6 @@ CONFIGURE_DIRS=	../pkgsrc_build
 CMAKE_ARG_PATH=	${WRKSRC}
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/darktable
 
-# Hard-coded use of SSE2
-ONLY_FOR_PLATFORM=	*-*-i386 *-*-x86_64
-
 .include "../../mk/bsd.fast.prefs.mk"
 .if ${MACHINE_ARCH} == "i386"
 # SSE alignment issues
@@ -54,6 +51,8 @@ GCC_REQD+=	4.2
 CFLAGS+=	-mstackrealign -msse2 -march=i686
 .elif ${MACHINE_ARCH} == "x86_64"
 CFLAGS+=	-msse2
+.else
+CMAKE_ARGS+=	-DBUILD_SSE2_CODEPATHS=OFF
 .endif
 
 CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
