@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2022/06/12 16:16:44 nia Exp $
+# $NetBSD: Makefile,v 1.37 2022/06/23 22:18:35 nia Exp $
 
 DISTNAME=	strawberry-1.0.5
 CATEGORIES=	audio
@@ -70,6 +70,7 @@ post-install:
 .include "../../math/fftw/buildlink3.mk"
 .include "../../misc/libcdio/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
+.include "../../multimedia/gst-plugins1-good/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
