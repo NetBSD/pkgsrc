@@ -1,1 +1,1 @@
-in/pyproject-build @PREFIX@/bin/pyproject-build-@PYVERSSUFFIX@
+bin/pyproject-build @PREFIX@/bin/pyproject-build-@PYVERSSUFFIX@
