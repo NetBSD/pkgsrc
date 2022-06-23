@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2021/11/30 13:00:15 cirnatdan Exp $
+@comment $NetBSD: PLIST,v 1.17 2022/06/23 20:05:11 gdt Exp $
 bin/darktable
 bin/darktable-chart
 bin/darktable-cli
@@ -317,6 +317,7 @@ share/darktable/themes/darktable-icons-grey.css
 share/darktable/themes/darktable-icons.css
 share/darktable/themes/darktable.css
 share/darktable/tools/common.sh
+share/darktable/tools/extract_wb_from_images.sh
 share/darktable/tools/purge_from_cache.sh
 share/darktable/tools/purge_non_existing_images.sh
 share/darktable/tools/purge_unused_tags.sh
