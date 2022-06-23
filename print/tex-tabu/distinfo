@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2022/06/21 22:16:21 joerg Exp $
+$NetBSD: distinfo,v 1.8 2022/06/23 06:47:05 wiz Exp $
 
 BLAKE2s (tex-tabu-49707/tabu.tar.xz) = 9862730b6d37c307be80e7e52143cedf9e8068f51c2f731ca66d2363e85e23a5
 SHA512 (tex-tabu-49707/tabu.tar.xz) = bf557df30521d99abe4ce5c86e5487ff32f682ab7d94aecba88172012c7875942c977218317a4fc738f4edb119487bd6785f2348f771b8c98421c6494ba2eb5f
 Size (tex-tabu-49707/tabu.tar.xz) = 23900 bytes
-SHA1 (patch-tex_latex_tabu_tabu.sty) = 55f9e42caee8bfec8564da12e6f5c36896128a04
+SHA1 (patch-tex_latex_tabu_tabu.sty) = 58d8296c8c13aca72f909a37fda9c2209f605fd5
