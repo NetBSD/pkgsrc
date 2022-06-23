@@ -1,4 +1,4 @@
-# $NetBSD: NEWS,v 1.24 2022/06/23 17:26:27 nia Exp $
+# $NetBSD: NEWS,v 1.25 2022/06/23 17:30:14 nia Exp $
 
 PKGSRC NEWS
 ===========
@@ -6,6 +6,15 @@ PKGSRC NEWS
   This file contains information about important infrastructural changes in
   pkgsrc. The intended readers are the pkgsrc developers as well as anyone
   tracking pkgsrc-current.
+
+PKGSRC_USE_MKTOOLS support added [jperkin 2022-06-07]
+
+        Added C-based tools to speed up various parts of the
+        mk infrastructure via PKGSRC_USE_MKTOOLS=yes in mk.conf.
+
+        For packages with large numbers of dependencies, you should see
+        anywhere up to around 10x speed-up for the 'wrapper' phase, and
+        perhaps more importantly a huge reduction in system time usage.
 
 Linux infrastructure adapted to non-standard distributions [nia 2022-05-01]
 
