@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.131 2022/05/05 11:16:39 adam Exp $
+$NetBSD: distinfo,v 1.132 2022/06/23 06:45:44 wiz Exp $
 
 BLAKE2s (openldap-2.6.2.tgz) = 868d250c00841cad6001be34c0da6ee6ba1c1cdc1df8bc1ff039e937e720889f
 SHA512 (openldap-2.6.2.tgz) = a490a760ec954710e78821877744e8a6caa4e4f47cc292baae8106af2a4b62c16b7e8003af05ae16f58b28464d89e5459f9e4cf33241fe440c0c6ca041364420
@@ -18,3 +18,4 @@ SHA1 (patch-libraries_libldap_thr__posix.c) = d9e6ff44bd3885ab4a83fd5e9915e74aaa
 SHA1 (patch-libraries_liblutil_sha1.c) = 10deca5c2f0431dd51d9137f14b5070be1264dcd
 SHA1 (patch-servers_slapd_Makefile.in) = 40043fdaecac7b591b462f7af32149a93e88eaf5
 SHA1 (patch-servers_slapd_back-sql_delete.c) = 437336aed5ef7e1b8b0e53c9d9019a43eb226472
+SHA1 (patch-servers_slapd_daemon.c) = 332652157b961d9469fd05478ac5743cdd250f0a
