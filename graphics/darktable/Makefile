@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.130 2022/06/23 07:12:40 nia Exp $
+# $NetBSD: Makefile,v 1.131 2022/06/23 20:05:11 gdt Exp $
 
 DISTNAME=	darktable-3.6.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=darktable-org/}
 GITHUB_PROJECT=	darktable
@@ -19,6 +19,7 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake intltool msgfmt pkg-config bash:run
 
 REPLACE_BASH+=	tools/common.sh
+REPLACE_BASH+=	tools/extract_wb_from_images.sh
 REPLACE_BASH+=	tools/purge_from_cache.sh          
 REPLACE_BASH+=	tools/purge_non_existing_images.sh 
 REPLACE_BASH+=	tools/purge_unused_tags.sh
@@ -62,6 +63,11 @@ CHECK_PORTABILITY_SKIP+=	packaging/macosx/start
 
 pre-configure:
 	${MKDIR} ${WRKDIR}/pkgsrc_build
+
+# exiftool presence controls whether a script is installed.  It is
+# simplest to just depend, and almost everyone who would used
+# darktable would want exiftool anyway.
+DEPENDS+=	p5-Image-ExifTool-[0-9]*:../../graphics/p5-Image-ExifTool
 
 BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.7.14.1nb1
 
