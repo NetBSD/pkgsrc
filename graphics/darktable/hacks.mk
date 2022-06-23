@@ -1,10 +1,10 @@
-# $NetBSD: hacks.mk,v 1.1 2022/06/23 07:08:36 nia Exp $
+# $NetBSD: hacks.mk,v 1.2 2022/06/23 09:32:57 nia Exp $
 
 .if !defined(DARKTABLE_HACKS_MK)
 DARKTABLE_HACKS_MK:=
 
 .  include "../../mk/bsd.fast.prefs.mk"
-.  if ${OPSYS} == "NetBSD"
+.  if ${OPSYS} == "NetBSD" && !empty(PKGSRC_COMPILER:M*gcc*)
 PKG_HACKS+=		disable-graphite-opt
 # Disable some of the more ridiculous compiler flags being used, that are
 # creating build failures with the system compiler on NetBSD due to the
