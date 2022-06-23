@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2022/05/11 09:44:19 jperkin Exp $
+$NetBSD: distinfo,v 1.9 2022/06/23 13:50:05 he Exp $
 
 BLAKE2s (pyvex-9.0.7491.tar.gz) = e06baf6f9dd6b0771f82a7bf8a2fa4cdd4ae80352e12e8d6b2cd83a1cf9af289
 SHA512 (pyvex-9.0.7491.tar.gz) = 20db00e889af9477511b85ee3347d82ba2241ffcb064101645697c40fe6cf65d982a7921931f358b91721ba965ab0781d24200e17b4ab528874775b2c3ae0ed2
@@ -7,3 +7,4 @@ BLAKE2s (vex-0.0.0.tar.gz) = 4ddaeb29fa44d31ab434aa47d8e8b7dc7de7c0dc3d0d12d096d
 SHA512 (vex-0.0.0.tar.gz) = 917ffe7f0ec53d9f455aee390b302788227bab7369631e9a7032415a968d5d0720eeda2580d069416c53f2e40b8427c55a960c428726a43e51e430a7c64d97e4
 Size (vex-0.0.0.tar.gz) = 3590889 bytes
 SHA1 (patch-pyvex__c_Makefile) = b638b1e6e0aa20d8faf15b8b7c3ca12408e42262
+SHA1 (patch-pyvex__c_pyvex.c) = ee53fff745a735fba2119bfaa7e7729bfca3d712
