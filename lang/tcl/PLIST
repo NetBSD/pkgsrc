@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2021/11/16 16:24:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.30 2022/06/23 09:07:01 thor Exp $
 bin/sqlite3_analyzer
 bin/tclsh
 bin/tclsh${BASEVER}
@@ -149,13 +149,11 @@ lib/tcl${BASEVER}/encoding/shiftjis.enc
 lib/tcl${BASEVER}/encoding/symbol.enc
 lib/tcl${BASEVER}/encoding/tis-620.enc
 lib/tcl${BASEVER}/history.tcl
-lib/tcl${BASEVER}/http/http.tcl
-lib/tcl${BASEVER}/http/pkgIndex.tcl
+lib/tcl8/8.6/http-2.9.5.tm
 lib/tcl${BASEVER}/http1.0/http.tcl
 lib/tcl${BASEVER}/http1.0/pkgIndex.tcl
 lib/tcl${BASEVER}/init.tcl
-lib/tcl${BASEVER}/msgcat1.6/msgcat.tcl
-lib/tcl${BASEVER}/msgcat1.6/pkgIndex.tcl
+lib/tcl8/8.5/msgcat-1.6.1.tm
 lib/tcl${BASEVER}/msgs/af.msg
 lib/tcl${BASEVER}/msgs/af_za.msg
 lib/tcl${BASEVER}/msgs/ar.msg
@@ -287,15 +285,12 @@ lib/tcl${BASEVER}/opt0.4/optparse.tcl
 lib/tcl${BASEVER}/opt0.4/pkgIndex.tcl
 lib/tcl${BASEVER}/package.tcl
 lib/tcl${BASEVER}/parray.tcl
-lib/tcl${BASEVER}/platform1.0/pkgIndex.tcl
-lib/tcl${BASEVER}/platform1.0/platform.tcl
+lib/tcl8/8.4/platform-1.0.18.tm
+lib/tcl8/8.4/platform/shell-1.1.4.tm
 lib/tcl${BASEVER}/safe.tcl
-lib/tcl${BASEVER}/shell1.1/pkgIndex.tcl
-lib/tcl${BASEVER}/shell1.1/platform/shell.tcl
 lib/tcl${BASEVER}/tclAppInit.c
 lib/tcl${BASEVER}/tclIndex
-lib/tcl${BASEVER}/tcltest2.5/pkgIndex.tcl
-lib/tcl${BASEVER}/tcltest2.5/tcltest.tcl
+lib/tcl8/8.5/tcltest-2.5.3.tm
 lib/tcl${BASEVER}/tm.tcl
 lib/tcl${BASEVER}/word.tcl
 lib/tcl8/${BASEVER}/tdbc/sqlite3-${TDBC_VERSION}.tm
