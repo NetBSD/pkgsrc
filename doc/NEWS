@@ -1,4 +1,4 @@
-# $NetBSD: NEWS,v 1.25 2022/06/23 17:30:14 nia Exp $
+# $NetBSD: NEWS,v 1.26 2022/06/23 22:29:32 nia Exp $
 
 PKGSRC NEWS
 ===========
@@ -26,9 +26,8 @@ Linux infrastructure adapted to non-standard distributions [nia 2022-05-01]
 
 UnixWare support [nia 2021-12-26]
 
-        Support for SCO/Xinuos UnixWare support was improved to the
-        point where it is possible to complete a bootstrap on this
-        platform.
+        Support for SCO/Xinuos UnixWare was improved to the point where
+        it is possible to complete a bootstrap on this platform.
 
 SHA1 distfile hashes deprecated [nia 2021-10-07]
 
