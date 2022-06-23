@@ -1,4 +1,4 @@
-$NetBSD: patch-unix_Makefile.in,v 1.18 2021/11/16 16:24:40 adam Exp $
+$NetBSD: patch-unix_Makefile.in,v 1.19 2022/06/23 09:07:01 thor Exp $
 
 Honour LDFLAGS.
 
@@ -95,44 +95,6 @@ Honour LDFLAGS.
  	@echo "Installing tclConfig.sh to $(CONFIG_INSTALL_DIR)/"
  	@$(INSTALL_DATA) tclConfig.sh "$(CONFIG_INSTALL_DIR)/tclConfig.sh"
  	@echo "Installing tclooConfig.sh to $(CONFIG_INSTALL_DIR)/"
-@@ -947,23 +963,32 @@ install-libraries: libraries
- 	    $(INSTALL_DATA) $$i "$(SCRIPT_INSTALL_DIR)/http1.0"; \
- 	    done
- 	@echo "Installing package http 2.9.5 as a Tcl Module";
--	@$(INSTALL_DATA) $(TOP_DIR)/library/http/http.tcl "$(MODULE_INSTALL_DIR)/8.6/http-2.9.5.tm"
-+	@$(INSTALL_DATA) $(TOP_DIR)/library/http/http.tcl "$(SCRIPT_INSTALL_DIR)/http/http.tcl"
-+	@$(INSTALL_DATA) $(TOP_DIR)/library/http/pkgIndex.tcl "$(SCRIPT_INSTALL_DIR)/http/pkgIndex.tcl";
- 	@echo "Installing package opt0.4 files to $(SCRIPT_INSTALL_DIR)/opt0.4/";
- 	@for i in $(TOP_DIR)/library/opt/*.tcl; do \
- 	    $(INSTALL_DATA) $$i "$(SCRIPT_INSTALL_DIR)/opt0.4"; \
- 	done
- 	@echo "Installing package msgcat 1.6.1 as a Tcl Module"
- 	@$(INSTALL_DATA) $(TOP_DIR)/library/msgcat/msgcat.tcl \
--		"$(MODULE_INSTALL_DIR)/8.5/msgcat-1.6.1.tm"
-+		"$(SCRIPT_INSTALL_DIR)/msgcat1.6/msgcat.tcl"
-+	@$(INSTALL_DATA) $(TOP_DIR)/library/msgcat/pkgIndex.tcl \
-+		"$(SCRIPT_INSTALL_DIR)/msgcat1.6/pkgIndex.tcl";
- 	@echo "Installing package tcltest 2.5.3 as a Tcl Module"
- 	@$(INSTALL_DATA) $(TOP_DIR)/library/tcltest/tcltest.tcl \
--		"$(MODULE_INSTALL_DIR)/8.5/tcltest-2.5.3.tm"
-+		"$(SCRIPT_INSTALL_DIR)/tcltest2.5/tcltest.tcl"
-+	@$(INSTALL_DATA) $(TOP_DIR)/library/tcltest/pkgIndex.tcl \
-+		"$(SCRIPT_INSTALL_DIR)/tcltest2.5/pkgIndex.tcl";
- 	@echo "Installing package platform 1.0.18 as a Tcl Module"
- 	@$(INSTALL_DATA) $(TOP_DIR)/library/platform/platform.tcl \
--		"$(MODULE_INSTALL_DIR)/8.4/platform-1.0.18.tm"
-+		"$(SCRIPT_INSTALL_DIR)/platform1.0/platform.tcl"
-+	@$(INSTALL_DATA) $(TOP_DIR)/library/platform/pkgIndex.tcl \
-+		"$(SCRIPT_INSTALL_DIR)/platform1.0/pkgIndex.tcl";
- 	@echo "Installing package platform::shell 1.1.4 as a Tcl Module"
- 	@$(INSTALL_DATA) $(TOP_DIR)/library/platform/shell.tcl \
--		"$(MODULE_INSTALL_DIR)/8.4/platform/shell-1.1.4.tm"
-+		"$(SCRIPT_INSTALL_DIR)/shell1.1/platform/shell.tcl"
-+	@$(INSTALL_DATA) $(TOP_DIR)/library/platform/pkgIndex.tcl \
-+		"$(SCRIPT_INSTALL_DIR)/shell1.1/pkgIndex.tcl";
- 	@echo "Installing encoding files to $(SCRIPT_INSTALL_DIR)/encoding/"
- 	@for i in $(TOP_DIR)/library/encoding/*.enc; do \
- 		$(INSTALL_DATA) $$i "$(SCRIPT_INSTALL_DIR)/encoding"; \
 @@ -1039,20 +1064,24 @@ install-doc: doc
  	done
  
