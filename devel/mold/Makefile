@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2022/06/18 14:23:13 fcambus Exp $
+# $NetBSD: Makefile,v 1.17 2022/06/23 14:24:33 fcambus Exp $
 
 DISTNAME=	mold-1.3.0
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rui314/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -25,7 +26,7 @@ MAKE_FLAGS+=	CFLAGS="${CFLAGS}"
 MAKE_FLAGS+=	CXXFLAGS="${CXXFLAGS}"
 MAKE_FLAGS+=	PREFIX="${PREFIX}"
 MAKE_FLAGS+=	MANDIR="${PREFIX}/${PKGMANDIR}"
-MAKE_FLAGS+=	SYSTEM_MIMALLOC=1
+MAKE_FLAGS+=	SYSTEM_MIMALLOC=1 SYSTEM_TBB=1
 
 # This package uses a lot of C++20 features. GCC 10 is the oldest GCC that can
 # build it.
@@ -44,6 +45,7 @@ pre-configure:
 .include "../../devel/mimalloc/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/application.mk"
+.include "../../parallel/threadingbuildingblocks/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
