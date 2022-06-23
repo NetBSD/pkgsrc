@@ -1,4 +1,4 @@
-# $NetBSD: NEWS,v 1.23 2022/01/10 18:06:00 gdt Exp $
+# $NetBSD: NEWS,v 1.24 2022/06/23 17:26:27 nia Exp $
 
 PKGSRC NEWS
 ===========
@@ -6,6 +6,20 @@ PKGSRC NEWS
   This file contains information about important infrastructural changes in
   pkgsrc. The intended readers are the pkgsrc developers as well as anyone
   tracking pkgsrc-current.
+
+Linux infrastructure adapted to non-standard distributions [nia 2022-05-01]
+
+        The Linux pkgsrc infrastructure was adapted to support Linux
+        distributions where binaries and shared objects are not
+        stored in a normal Unix-like file system layout.  It's hoped
+        that this will be useful for pkgsrc development on platforms
+        like NixOS and Gobo Linux.
+
+UnixWare support [nia 2021-12-26]
+
+        Support for SCO/Xinuos UnixWare support was improved to the
+        point where it is possible to complete a bootstrap on this
+        platform.
 
 SHA1 distfile hashes deprecated [nia 2021-10-07]
 
