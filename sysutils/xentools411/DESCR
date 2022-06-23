@@ -3,3 +3,6 @@ on a single physical machine.  The xentools411 package contains the
 tools to create, destroy and control the virtual machines.
 
 This package contains the tools for Xen 4.11.x
+
+THIS PACKAGE IS DEPERECATED and will be removed in the near future.
+Please switch to sysutils/xentools415 
