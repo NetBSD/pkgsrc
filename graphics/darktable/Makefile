@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.128 2022/04/18 19:11:15 adam Exp $
+# $NetBSD: Makefile,v 1.129 2022/06/23 07:08:36 nia Exp $
 
 DISTNAME=	darktable-3.6.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=darktable-org/}
 GITHUB_PROJECT=	darktable
@@ -16,29 +16,33 @@ LICENSE=	gnu-gpl-v3
 USE_CMAKE=		yes
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake intltool msgfmt pkg-config bash
+USE_TOOLS+=		gmake intltool msgfmt pkg-config bash:run
 
-#CFLAGS+=	-fopenmp
+REPLACE_BASH+=	tools/common.sh
+REPLACE_BASH+=	tools/purge_from_cache.sh          
+REPLACE_BASH+=	tools/purge_non_existing_images.sh 
+REPLACE_BASH+=	tools/purge_unused_tags.sh
+
 CFLAGS+=	-Wno-reserved-id-macro
 
 CMAKE_ARGS+=	-DLENSFUN_INCLUDE_DIR:PATH=${BUILDLINK_PREFIX.glib2}/include/lensfun
 CMAKE_ARGS+=	-DGTHREAD_INCLUDE_DIR:PATH=${BUILDLINK_PREFIX.glib2}/include
 CMAKE_ARGS+=	-DGMODULE_INCLUDE_DIR:PATH=${BUILDLINK_PREFIX.glib2}/include
+# Honour system CFLAGS.
+CMAKE_ARGS+=	-DCUSTOM_CFLAGS=ON
 CMAKE_ARGS+=	-DUSE_OPENCL=OFF
+CMAKE_ARGS+=	-DUSE_OPENMP=OFF
 
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 CMAKE_ARGS+=	-DBINARY_PACKAGE_BUILD=Yes
 CMAKE_ARGS+=	-Wno-dev
-CMAKE_ARGS+=	-DWITH_OPENMP=OFF
 CMAKE_ARGS+=	-DUSE_COLORD=OFF
 CMAKE_ARGS+=	-DRAWSPEED_ENABLE_WERROR=OFF
+CMAKE_ARGS+=	-DTESTBUILD_OPENCL_PROGRAMS=OFF
 
 CONFIGURE_DIRS=	../pkgsrc_build
 CMAKE_ARG_PATH=	${WRKSRC}
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/darktable
-
-# NetBSD 6 libm is the first with exp2f(3)
-#NOT_FOR_PLATFORM=	NetBSD-4*-* NetBSD-5.[0-8]*-*
 
 # Hard-coded use of SSE2
 ONLY_FOR_PLATFORM=	*-*-i386 *-*-x86_64
@@ -48,16 +52,12 @@ ONLY_FOR_PLATFORM=	*-*-i386 *-*-x86_64
 # SSE alignment issues
 GCC_REQD+=	4.2
 CFLAGS+=	-mstackrealign -msse2 -march=i686
+.elif ${MACHINE_ARCH} == "x86_64"
+CFLAGS+=	-msse2
 .endif
 
 CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
 CFLAGS.SunOS+=	-D__SUNOS__=1
-
-.include "../../mk/compiler.mk"
-.if !empty(PKGSRC_COMPILER:Mgcc)
-# gdk_pixbuf_new_from_inline
-CFLAGS+=	-Wno-error=deprecated-declarations
-.endif
 
 CHECK_PORTABILITY_SKIP+=	packaging/macosx/start
 
@@ -86,14 +86,9 @@ BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.11
 .include "../../graphics/openjpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
-PKG_CC=		${PREFIX}/bin/clang
-PKG_CXX=	${PREFIX}/bin/clang++
-BUILDLINK_DEPMETHOD.clang=	build
-.include "../../lang/clang/buildlink3.mk"
 .include "../../lang/lua53/buildlink3.mk"
 .include "../../net/flickcurl/buildlink3.mk"
 .include "../../net/libsoup/buildlink3.mk"
-.include "../../parallel/openmp/buildlink3.mk"
 .include "../../print/cups-base/buildlink3.mk"
 .include "../../security/libsecret/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
