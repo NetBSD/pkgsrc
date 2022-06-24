@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.144 2022/05/24 18:25:38 jaapb Exp $
+# $NetBSD: Makefile,v 1.145 2022/06/24 12:30:09 gdt Exp $
 
 .include "Makefile.common"
 
@@ -24,6 +24,11 @@ BUILD_TARGET=		world.opt
 .else
 CONFIGURE_ARGS+=	--disable-native-compiler
 BUILD_TARGET=		world
+.endif
+
+# configure: error: fma does not work, enable emulation with --enable-imprecise-c99-float-ops
+.if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "i386"
+CONFIGURE_ARGS+=	--enable-imprecise-c99-float-ops
 .endif
 
 # This is needed because ${WRKSRC}/build/partial-install.sh uses
