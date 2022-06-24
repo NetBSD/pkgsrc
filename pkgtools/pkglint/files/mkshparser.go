@@ -82,7 +82,7 @@ func (lex *ShellLexer) Lex(lval *shyySymType) (ttype int) {
 				trace.Stepf("lex EOF because of a comment")
 				return
 			}
-			tname := shyyTokname(shyyTok2[ttype-shyyPrivate])
+			tname := shyyTokname(int(shyyTok2[ttype-shyyPrivate]))
 			switch ttype {
 			case tkWORD, tkASSIGNMENT_WORD:
 				trace.Stepf("lex %v %q", tname, lval.Word.MkText)

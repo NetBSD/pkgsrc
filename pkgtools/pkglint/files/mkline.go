@@ -83,7 +83,7 @@ func (mkline *MkLine) HasComment() bool { return mkline.splitResult.hasComment }
 // and HOMEPAGE using http instead of https.
 //
 // To qualify as a rationale, the comment must contain any of the given
-// keywords. If no keywords are given, any comment qualifies.
+// keywords. If no keywords are given, any nonempty comment qualifies.
 func (mkline *MkLine) HasRationale(keywords ...string) bool {
 	rationale := mkline.splitResult.rationale
 	if rationale == "" {
@@ -116,8 +116,9 @@ func (mkline *MkLine) HasRationale(keywords ...string) bool {
 // entirely, they still count as variable assignments, which means that
 // their comment is the one after the value, if any.
 //
-// Shell commands (lines that start with a tab) cannot have comments, as
-// the # characters are passed uninterpreted to the shell.
+// In shell commands (lines that start with a tab), comments can only start at
+// the beginning of a line, as the first non-whitespace character. Any later
+// '#' is passed uninterpreted to the shell.
 //
 // Example:
 //  VAR=value # comment
@@ -166,8 +167,9 @@ func (mkline *MkLine) IsVarassignMaybeCommented() bool {
 }
 
 // IsShellCommand returns true for tab-indented lines that are assigned to a Make
-// target. Example:
+// target.
 //
+// Example:
 //  pre-configure:    # IsDependency
 //          ${ECHO}   # IsShellCommand
 func (mkline *MkLine) IsShellCommand() bool {
