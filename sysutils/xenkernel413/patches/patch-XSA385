@@ -1,0 +1,80 @@
+$NetBSD: patch-XSA385,v 1.1 2022/06/24 13:47:37 bouyer Exp $
+
+From: Julien Grall <jgrall@amazon.com>
+Subject: xen/page_alloc: Harden assign_pages()
+
+domain_tot_pages() and d->max_pages are 32-bit values. While the order
+should always be quite small, it would still be possible to overflow
+if domain_tot_pages() is near to (2^32 - 1).
+
+As this code may be called by a guest via XENMEM_increase_reservation
+and XENMEM_populate_physmap, we want to make sure the guest is not going
+to be able to allocate more than it is allowed.
+
+Rework the allocation check to avoid any possible overflow. While the
+check domain_tot_pages() < d->max_pages should technically not be
+necessary, it is probably best to have it to catch any possible
+inconsistencies in the future.
+
+This is CVE-2021-28706 / XSA-385.
+
+Signed-off-by: Julien Grall <jgrall@amazon.com>
+Signed-off-by: Jan Beulich <jbeulich@suse.com>
+Reviewed-by: Roger Pau Monné <roger.pau@citrix.com>
+
+--- xen/common/grant_table.c.orig
++++ xen/common/grant_table.c
+@@ -2286,7 +2286,8 @@ gnttab_transfer(
+          * pages when it is dying.
+          */
+         if ( unlikely(e->is_dying) ||
+-             unlikely(e->tot_pages >= e->max_pages) )
++             unlikely(e->tot_pages >= e->max_pages) ||
++             unlikely(!(e->tot_pages + 1)) )
+         {
+             spin_unlock(&e->page_alloc_lock);
+ 
+@@ -2295,8 +2296,8 @@ gnttab_transfer(
+                          e->domain_id);
+             else
+                 gdprintk(XENLOG_INFO,
+-                         "Transferee d%d has no headroom (tot %u, max %u)\n",
+-                         e->domain_id, e->tot_pages, e->max_pages);
++                         "Transferee %pd has no headroom (tot %u, max %u)\n",
++                         e, e->tot_pages, e->max_pages);
+ 
+             gop.status = GNTST_general_error;
+             goto unlock_and_copyback;
+--- xen/common/page_alloc.c.orig
++++ xen/common/page_alloc.c
+@@ -2276,16 +2276,25 @@ int assign_pages(
+ 
+     if ( !(memflags & MEMF_no_refcount) )
+     {
+-        if ( unlikely((d->tot_pages + (1 << order)) > d->max_pages) )
++        unsigned int nr = 1u << order;
++
++        if ( unlikely(d->tot_pages > d->max_pages) )
++        {
++            gprintk(XENLOG_INFO, "Inconsistent allocation for %pd: %u > %u\n",
++                    d, d->tot_pages, d->max_pages);
++            rc = -EPERM;
++            goto out;
++        }
++
++        if ( unlikely(nr > d->max_pages - d->tot_pages) )
+         {
+-            gprintk(XENLOG_INFO, "Over-allocation for domain %u: "
+-                    "%u > %u\n", d->domain_id,
+-                    d->tot_pages + (1 << order), d->max_pages);
++            gprintk(XENLOG_INFO, "Over-allocation for %pd: %Lu > %u\n",
++                    d, d->tot_pages + 0ull + nr, d->max_pages);
+             rc = -E2BIG;
+             goto out;
+         }
+ 
+-        if ( unlikely(domain_adjust_tot_pages(d, 1 << order) == (1 << order)) )
++        if ( unlikely(domain_adjust_tot_pages(d, nr) == nr) )
+             get_knownalive_domain(d);
+     }
+ 
