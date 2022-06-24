@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3113 2022/06/24 06:10:48 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3114 2022/06/24 07:16:35 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4686,3 +4686,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/tcl to 8.6.12nb3 [thomas 2022-06-23]
 	Updated textproc/py-openpyxl to 2.6.4 [gutteridge 2022-06-24]
 	Updated devel/nss to 3.80 [wiz 2022-06-24]
+	Updated pkgtools/pkglint to 22.2.0 [rillig 2022-06-24]
