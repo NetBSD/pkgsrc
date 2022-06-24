@@ -457,9 +457,9 @@ func (s *Suite) Test_MkAssignChecker_checkLeftPermissions(c *check.C) {
 
 	t.SetUpVartypes()
 	t.SetUpTool("awk", "AWK", AtRunTime)
-	t.SetUpType("SET_ONLY", BtUnknown, NoVartypeOptions,
+	t.SetUpVarType("SET_ONLY", BtUnknown, NoVartypeOptions,
 		"options.mk: set")
-	t.SetUpType("SET_ONLY_DEFAULT_ELSEWHERE", BtUnknown, NoVartypeOptions,
+	t.SetUpVarType("SET_ONLY_DEFAULT_ELSEWHERE", BtUnknown, NoVartypeOptions,
 		"options.mk: set",
 		"*.mk: default, set")
 	mklines := t.NewMkLines("options.mk",
