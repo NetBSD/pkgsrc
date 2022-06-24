@@ -560,17 +560,17 @@ func (s *Suite) Test_MkCondChecker_simplify(c *check.C) {
 	// Even when they are in scope, some variables such as PKGREVISION
 	// or MAKE_JOBS may be undefined.
 
-	t.SetUpType("IN_SCOPE_DEFINED", btAnything, AlwaysInScope|DefinedIfInScope,
+	t.SetUpVarType("IN_SCOPE_DEFINED", btAnything, AlwaysInScope|DefinedIfInScope,
 		"*.mk: use, use-loadtime")
-	t.SetUpType("IN_SCOPE", btAnything, AlwaysInScope,
+	t.SetUpVarType("IN_SCOPE", btAnything, AlwaysInScope,
 		"*.mk: use, use-loadtime")
-	t.SetUpType("PREFS_DEFINED", btAnything, DefinedIfInScope,
+	t.SetUpVarType("PREFS_DEFINED", btAnything, DefinedIfInScope,
 		"*.mk: use, use-loadtime")
-	t.SetUpType("PREFS", btAnything, NoVartypeOptions,
+	t.SetUpVarType("PREFS", btAnything, NoVartypeOptions,
 		"*.mk: use, use-loadtime")
-	t.SetUpType("LATER_DEFINED", btAnything, DefinedIfInScope,
+	t.SetUpVarType("LATER_DEFINED", btAnything, DefinedIfInScope,
 		"*.mk: use")
-	t.SetUpType("LATER", btAnything, NoVartypeOptions,
+	t.SetUpVarType("LATER", btAnything, NoVartypeOptions,
 		"*.mk: use")
 	// UNDEFINED is also used in the following tests, but is obviously
 	// not defined here.
@@ -1130,6 +1130,33 @@ func (s *Suite) Test_MkCondChecker_simplify(c *check.C) {
 	testBeforeAndAfterPrefs(
 		".if ${IN_SCOPE_DEFINED:M\"}",
 		".if ${IN_SCOPE_DEFINED:M\"}",
+
+		nil...)
+
+	// FIXME: Syntax error in the generated code.
+	testBeforeAndAfterPrefs(
+		".if !empty(IN_SCOPE_DEFINED:M)",
+		".if ${IN_SCOPE_DEFINED} == ",
+
+		"NOTE: filename.mk:3: IN_SCOPE_DEFINED can be "+
+			"compared using the simpler "+"\"${IN_SCOPE_DEFINED} == \" "+
+			"instead of matching against \":M\".",
+		"AUTOFIX: filename.mk:3: "+
+			"Replacing \"!empty(IN_SCOPE_DEFINED:M)\" "+
+			"with \"${IN_SCOPE_DEFINED} == \".",
+	)
+
+	// TODO: Suggest the simpler '${IN_SCOPE_DEFINED:M*.c}'.
+	testBeforeAndAfterPrefs(
+		".if !empty(IN_SCOPE_DEFINED:M*.c)",
+		".if !empty(IN_SCOPE_DEFINED:M*.c)",
+
+		nil...)
+
+	// TODO: Suggest the simpler '!${IN_SCOPE_DEFINED:M*.c}'.
+	testBeforeAndAfterPrefs(
+		".if empty(IN_SCOPE_DEFINED:M*.c)",
+		".if empty(IN_SCOPE_DEFINED:M*.c)",
 
 		nil...)
 }

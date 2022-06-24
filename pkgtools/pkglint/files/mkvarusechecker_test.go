@@ -670,9 +670,9 @@ func (s *Suite) Test_MkVarUseChecker_checkPermissions__load_time_in_condition(c 
 	t := s.Init(c)
 
 	t.SetUpPkgsrc()
-	t.SetUpType("LOAD_TIME", BtPathPattern, List,
+	t.SetUpVarType("LOAD_TIME", BtPathPattern, List,
 		"special:filename.mk: use-loadtime")
-	t.SetUpType("RUN_TIME", BtPathPattern, List,
+	t.SetUpVarType("RUN_TIME", BtPathPattern, List,
 		"special:filename.mk: use")
 	t.Chdir(".")
 	t.FinishSetUp()
@@ -694,9 +694,9 @@ func (s *Suite) Test_MkVarUseChecker_checkPermissions__load_time_in_for_loop(c *
 	t := s.Init(c)
 
 	t.SetUpPkgsrc()
-	t.SetUpType("LOAD_TIME", BtPathPattern, List,
+	t.SetUpVarType("LOAD_TIME", BtPathPattern, List,
 		"special:filename.mk: use-loadtime")
-	t.SetUpType("RUN_TIME", BtPathPattern, List,
+	t.SetUpVarType("RUN_TIME", BtPathPattern, List,
 		"special:filename.mk: use")
 	t.Chdir(".")
 	t.FinishSetUp()
@@ -747,16 +747,16 @@ func (s *Suite) Test_MkVarUseChecker_checkPermissions__load_time_run_time(c *che
 	t := s.Init(c)
 
 	t.SetUpPkgsrc()
-	t.SetUpType("LOAD_TIME", BtUnknown, NoVartypeOptions,
+	t.SetUpVarType("LOAD_TIME", BtUnknown, NoVartypeOptions,
 		"*.mk: use, use-loadtime")
-	t.SetUpType("RUN_TIME", BtUnknown, NoVartypeOptions,
+	t.SetUpVarType("RUN_TIME", BtUnknown, NoVartypeOptions,
 		"*.mk: use")
-	t.SetUpType("WRITE_ONLY", BtUnknown, NoVartypeOptions,
+	t.SetUpVarType("WRITE_ONLY", BtUnknown, NoVartypeOptions,
 		"*.mk: set")
-	t.SetUpType("LOAD_TIME_ELSEWHERE", BtUnknown, NoVartypeOptions,
+	t.SetUpVarType("LOAD_TIME_ELSEWHERE", BtUnknown, NoVartypeOptions,
 		"Makefile: use-loadtime",
 		"*.mk: set")
-	t.SetUpType("RUN_TIME_ELSEWHERE", BtUnknown, NoVartypeOptions,
+	t.SetUpVarType("RUN_TIME_ELSEWHERE", BtUnknown, NoVartypeOptions,
 		"Makefile: use",
 		"*.mk: set")
 	t.Chdir(".")
@@ -852,7 +852,7 @@ func (s *Suite) Test_MkVarUseChecker_checkPermissions__write_only_usable_in_othe
 func (s *Suite) Test_MkVarUseChecker_checkPermissions__usable_only_at_loadtime_in_other_file(c *check.C) {
 	t := s.Init(c)
 
-	t.SetUpType("VAR", BtFilename, NoVartypeOptions,
+	t.SetUpVarType("VAR", BtFilename, NoVartypeOptions,
 		"*: set, use-loadtime")
 	mklines := t.NewMkLines("Makefile",
 		MkCvsID,
@@ -871,8 +871,8 @@ func (s *Suite) Test_MkVarUseChecker_checkPermissions__assigned_to_infrastructur
 
 	// This combination of BtUnknown and all permissions is typical for
 	// otherwise unknown variables from the pkgsrc infrastructure.
-	t.SetUpType("INFRA", BtUnknown, NoVartypeOptions)
-	t.SetUpType("VAR", BtUnknown, NoVartypeOptions,
+	t.SetUpVarType("INFRA", BtUnknown, NoVartypeOptions)
+	t.SetUpVarType("VAR", BtUnknown, NoVartypeOptions,
 		"buildlink3.mk: none",
 		"*: use")
 	mklines := t.NewMkLines("buildlink3.mk",
@@ -906,10 +906,10 @@ func (s *Suite) Test_MkVarUseChecker_checkPermissions__assigned_to_load_time(c *
 	// to use its value in LOAD_TIME, as the latter might be evaluated later
 	// at load time, and at that point VAR would be evaluated as well.
 
-	t.SetUpType("LOAD_TIME", BtMessage, NoVartypeOptions,
+	t.SetUpVarType("LOAD_TIME", BtMessage, NoVartypeOptions,
 		"buildlink3.mk: set",
 		"*.mk: use-loadtime")
-	t.SetUpType("VAR", BtUnknown, NoVartypeOptions,
+	t.SetUpVarType("VAR", BtUnknown, NoVartypeOptions,
 		"buildlink3.mk: none",
 		"*.mk: use")
 	mklines := t.NewMkLines("buildlink3.mk",
@@ -1090,7 +1090,7 @@ func (s *Suite) Test_MkVarUseChecker_checkUseAtLoadTime__package_settable(c *che
 	t := s.Init(c)
 
 	btAnything := &BasicType{"Anything", func(cv *VartypeCheck) {}}
-	t.SetUpType("PKG", btAnything, PackageSettable)
+	t.SetUpVarType("PKG", btAnything, PackageSettable)
 	t.Chdir("category/package")
 
 	test := func(filename CurrPath, diagnostics ...string) {
