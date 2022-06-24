@@ -233,7 +233,7 @@ func (t *Tester) SetUpVartypes() {
 
 func (t *Tester) SetUpMasterSite(varname string, urls ...string) {
 	if !G.Pkgsrc.vartypes.IsDefinedExact(varname) {
-		t.SetUpType(varname, BtFetchURL,
+		t.SetUpVarType(varname, BtFetchURL,
 			List|SystemProvided,
 			"buildlink3.mk: none",
 			"*: use")
@@ -255,13 +255,13 @@ func (t *Tester) SetUpTool(name, varname string, validity Validity) *Tool {
 	return G.Pkgsrc.Tools.def(name, varname, false, validity, nil)
 }
 
-// SetUpType defines a variable to have a certain type and access permissions,
-// like in the type definitions in vardefs.go.
+// SetUpVarType registers the type and access permissions for a variable, like
+// in the variable definitions in vardefs.go.
 //
 // Example:
-//  SetUpType("PKGPATH", BtPkgpath, DefinedIfInScope|NonemptyIfDefined,
+//  SetUpVarType("PKGPATH", BtPkgpath, DefinedIfInScope|NonemptyIfDefined,
 //      "Makefile, *.mk: default, set, append, use, use-loadtime")
-func (t *Tester) SetUpType(varname string, basicType *BasicType,
+func (t *Tester) SetUpVarType(varname string, basicType *BasicType,
 	options vartypeOptions, aclEntries ...string) {
 
 	if len(aclEntries) == 0 {
