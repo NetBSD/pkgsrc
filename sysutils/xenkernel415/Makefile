@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2022/04/30 00:21:15 khorben Exp $
+# $NetBSD: Makefile,v 1.6 2022/06/24 13:07:52 bouyer Exp $
 
 VERSION=	4.15.2
 DISTNAME=	xen-${VERSION}
 PKGNAME=	xenkernel415-${VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	https://downloads.xenproject.org/release/xen/${VERSION}/
 DIST_SUBDIR=	xen415
