@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3115 2022/06/24 13:08:49 bouyer Exp $
+$NetBSD: CHANGES-2022,v 1.3116 2022/06/24 13:48:45 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4688,3 +4688,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/nss to 3.80 [wiz 2022-06-24]
 	Updated pkgtools/pkglint to 22.2.0 [rillig 2022-06-24]
 	Updated sysutils/xenkernel415 to 4.15.2nb2 [bouyer 2022-06-24]
+	Updated sysutils/xenkernel413 to 4.13.4nb1 [bouyer 2022-06-24]
