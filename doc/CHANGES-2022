@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3112 2022/06/24 02:29:11 gutteridge Exp $
+$NetBSD: CHANGES-2022,v 1.3113 2022/06/24 06:10:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4685,3 +4685,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-build to 0.8.0nb1 [wiz 2022-06-23]
 	Updated lang/tcl to 8.6.12nb3 [thomas 2022-06-23]
 	Updated textproc/py-openpyxl to 2.6.4 [gutteridge 2022-06-24]
+	Updated devel/nss to 3.80 [wiz 2022-06-24]
