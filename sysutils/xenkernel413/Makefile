@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2021/09/21 13:20:47 bouyer Exp $
+# $NetBSD: Makefile,v 1.16 2022/06/24 13:47:37 bouyer Exp $
 
 VERSION=	4.13.4
 DISTNAME=	xen-${VERSION}
 PKGNAME=	xenkernel413-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	https://downloads.xenproject.org/release/xen/${VERSION}/
 DIST_SUBDIR=	xen413

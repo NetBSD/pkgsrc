@@ -1,0 +1,47 @@
+$NetBSD: patch-XSA399,v 1.1 2022/06/24 13:47:37 bouyer Exp $
+
+From: Jan Beulich <jbeulich@suse.com>
+Subject: VT-d: correct ordering of operations in cleanup_domid_map()
+
+The function may be called without any locks held (leaving aside the
+domctl one, which we surely don't want to depend on here), so needs to
+play safe wrt other accesses to domid_map[] and domid_bitmap[]. This is
+to avoid context_set_domain_id()'s writing of domid_map[] to be reset to
+zero right away in the case of it racing the freeing of a DID.
+
+For the interaction with context_set_domain_id() and ->domid_map[] reads
+see the code comment.
+
+{check_,}cleanup_domid_map() are called with pcidevs_lock held or during
+domain cleanup only (and pcidevs_lock is also held around
+context_set_domain_id()), i.e. racing calls with the same (dom, iommu)
+tuple cannot occur.
+
+domain_iommu_domid(), besides its use by cleanup_domid_map(), has its
+result used only to control flushing, and hence a stale result would
+only lead to a stray extra flush.
+
+This is CVE-2022-26357 / XSA-399.
+
+Fixes: b9c20c78789f ("VT-d: per-iommu domain-id")
+Signed-off-by: Jan Beulich <jbeulich@suse.com>
+Reviewed-by: Roger Pau Monné <roger.pau@citrix.com>
+
+--- xen/drivers/passthrough/vtd/iommu.c.orig
++++ xen/drivers/passthrough/vtd/iommu.c
+@@ -152,8 +152,14 @@ static void cleanup_domid_map(struct dom
+ 
+     if ( iommu_domid >= 0 )
+     {
++        /*
++         * Update domid_map[] /before/ domid_bitmap[] to avoid a race with
++         * context_set_domain_id(), setting the slot to DOMID_INVALID for
++         * ->domid_map[] reads to produce a suitable value while the bit is
++         * still set.
++         */
++        iommu->domid_map[iommu_domid] = DOMID_INVALID;
+         clear_bit(iommu_domid, iommu->domid_bitmap);
+-        iommu->domid_map[iommu_domid] = 0;
+     }
+ }
+ 
