@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2022/05/13 15:58:54 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2022/06/24 13:46:46 bouyer Exp $
 #
 VERSION=	4.13.4
 
@@ -232,7 +232,7 @@ BUILDLINK_TRANSFORM+=	rm:-falign-jumps=1 rm:-falign-loops=1 \
 MAKE_ENV+=	EXTRA_HOSTCFLAGS=${EXTRA_HOSTCFLAGS:Q} EXTRA_CFLAGS=${EXTRA_CFLAGS:M*:Q} TARGET_CC=${TARGET_CC}
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/egg.mk"
 #.include "../../devel/SDL/buildlink3.mk"
 .include "../../lang/ocaml/buildlink3.mk"
 .include "../../devel/ocaml-findlib/buildlink3.mk"
