@@ -71,6 +71,8 @@ func (s *Suite) Test_AlternativesChecker_Check__PLIST(c *check.C) {
 		"ERROR: ALTERNATIVES:5: Invalid line \"invalid\".",
 		"ERROR: ALTERNATIVES:6: Alternative implementation \"${PREFIX}/bin/firefox\" must appear in the PLIST.",
 		"ERROR: ALTERNATIVES:6: Alternative implementation \"${PREFIX}/bin/firefox\" must be an absolute path.",
+		"ERROR: ALTERNATIVES:7: Alternative wrapper \"highscores\" "+
+			"must be in \"bin\", \"@PKGMANDIR@\" or \"sbin\".",
 		"ERROR: ALTERNATIVES:7: Alternative implementation \"@VARBASE@/game/scores\" "+
 			"must appear in the PLIST as \"${VARBASE}/game/scores\".")
 
@@ -107,7 +109,7 @@ func (s *Suite) Test_AlternativesChecker_checkLine(c *check.C) {
 			"must be relative to PREFIX.")
 }
 
-func (s *Suite) Test_AlternativesChecker_checkWrapperAbs(c *check.C) {
+func (s *Suite) Test_AlternativesChecker_checkLine__absolute(c *check.C) {
 	t := s.Init(c)
 
 	t.CreateFileLines("ALTERNATIVES",
@@ -117,11 +119,13 @@ func (s *Suite) Test_AlternativesChecker_checkWrapperAbs(c *check.C) {
 	CheckFileAlternatives(t.File("ALTERNATIVES"), nil)
 
 	t.CheckOutputLines(
-		"ERROR: ~/ALTERNATIVES:2: Alternative wrapper \"/absolute\" " +
+		"ERROR: ~/ALTERNATIVES:1: Alternative wrapper \"relative\" "+
+			"must be in \"bin\", \"@PKGMANDIR@\" or \"sbin\".",
+		"ERROR: ~/ALTERNATIVES:2: Alternative wrapper \"/absolute\" "+
 			"must be relative to PREFIX.")
 }
 
-func (s *Suite) Test_AlternativesChecker_checkWrapperPlist(c *check.C) {
+func (s *Suite) Test_AlternativesChecker_checkLine__PLIST(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpPackage("category/package")
@@ -141,6 +145,26 @@ func (s *Suite) Test_AlternativesChecker_checkWrapperPlist(c *check.C) {
 	t.CheckOutputLines(
 		"ERROR: ALTERNATIVES:1: Alternative wrapper \"bin/echo\" " +
 			"must not appear in the PLIST.")
+}
+
+func (s *Suite) Test_AlternativesChecker_checkLine__dir(c *check.C) {
+	t := s.Init(c)
+
+	t.CreateFileLines("ALTERNATIVES",
+		"in/typo @PREFIX@/bin/typo",
+		"sbin/daemon @PREFIX@/sbin/daemon-impl",
+		"typo/program @PREFIX@/typo/program-impl",
+		"man/man1/program.1 @PREFIX@/man/man1/program-impl.1")
+
+	CheckFileAlternatives(t.File("ALTERNATIVES"), nil)
+
+	t.CheckOutputLines(
+		"ERROR: ~/ALTERNATIVES:1: Alternative wrapper \"in/typo\" "+
+			"must be in \"bin\", \"@PKGMANDIR@\" or \"sbin\".",
+		"ERROR: ~/ALTERNATIVES:3: Alternative wrapper \"typo/program\" "+
+			"must be in \"bin\", \"@PKGMANDIR@\" or \"sbin\".",
+		"ERROR: ~/ALTERNATIVES:4: Alternative wrapper \"man/man1/program.1\" "+
+			"must be in \"bin\", \"@PKGMANDIR@\" or \"sbin\".")
 }
 
 func (s *Suite) Test_AlternativesChecker_checkAlternativeAbs(c *check.C) {

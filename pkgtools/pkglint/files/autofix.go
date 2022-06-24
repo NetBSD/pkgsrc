@@ -279,9 +279,14 @@ func (fix *Autofix) Describef(rawIndex int, format string, args ...interface{}) 
 // MkLines.Check.
 func (fix *Autofix) Apply() {
 	// XXX: Make the following annotations actually do something.
+	// Their intention is to insert the following conditions around each
+	// function or method call expression in this function, ensuring that this
+	// function is properly covered in all 3 of pkglint's autofix modes.
+	//
 	// gobco:beforeCall:!G.Opts.ShowAutofix && !G.Opts.Autofix
 	// gobco:beforeCall:G.Opts.ShowAutofix
 	// gobco:beforeCall:G.Opts.Autofix
+	//
 	// See https://github.com/rillig/gobco
 
 	line := fix.line
