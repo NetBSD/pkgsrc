@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.29 2022/06/25 09:17:38 he Exp $
+$NetBSD: distinfo,v 1.30 2022/06/25 09:35:51 he Exp $
 
 BLAKE2s (sqlite-2.8.17.tar.gz) = 2750dd8a0682b2047139de66b6a184b08e7674cb92846c629561604fc130fe37
 SHA512 (sqlite-2.8.17.tar.gz) = 966e0b7f7ebbaaa9e1899864475040946fd7b66363be778d29fadd5184623b1e62644f3c8d4c4ecd001b88044befa7c34d9de9f68590329a1a8301d854b73e3f
@@ -6,4 +6,4 @@ Size (sqlite-2.8.17.tar.gz) = 969805 bytes
 SHA1 (patch-Makefile.in) = a7e6d0c15b6bd4c8c0f3a7123e82a145b3848703
 SHA1 (patch-aa) = 4df2eff8c92b3e2bff86c710ef1a803d54201559
 SHA1 (patch-ab) = 00b7de05589fb62d511e26d0d864a8b5545967c8
-SHA1 (patch-tool_lemon.c) = c536a2784e9f360fc3d73c2ed0a243fee02358ff
+SHA1 (patch-tool_lemon.c) = 53e561c8b693af4b416c1f151780c69324f61b2c
