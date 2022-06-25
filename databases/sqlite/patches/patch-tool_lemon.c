@@ -1,4 +1,4 @@
-$NetBSD: patch-tool_lemon.c,v 1.1 2022/06/24 15:42:10 he Exp $
+$NetBSD: patch-tool_lemon.c,v 1.2 2022/06/25 09:17:38 he Exp $
 
 Avoid either undefined or implementation defined behaviour,
 by making the base hash variable unsigned, so that we avoid
@@ -15,12 +15,3 @@ it ever going negative (as it did on powerpc).
    char *name;               /* Name of the parser */
  
    /* Allocate and initialize types[] and allocate stddt[] */
-@@ -3068,7 +3068,7 @@ int mhflag;                 /* True if g
-     for(j=0; stddt[j]; j++){
-       hash = hash*53 + stddt[j];
-     }
--    hash = (hash & 0x7fffffff)%arraysize;
-+    hash = hash % arraysize;
-     while( types[hash] ){
-       if( strcmp(types[hash],stddt)==0 ){
-         sp->dtnum = hash + 1;
