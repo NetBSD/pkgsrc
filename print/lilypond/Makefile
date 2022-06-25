@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.136 2022/03/07 20:36:51 wiz Exp $
+# $NetBSD: Makefile,v 1.137 2022/06/25 19:35:54 gutteridge Exp $
 
 DISTNAME=	lilypond-2.18.2
 PKGREVISION=	25
@@ -54,7 +54,7 @@ CONFIGURE_ARGS+=	--with-ncsb-dir=${PREFIX}/share/fonts/urw
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 
 REPLACE_PYTHON+=		scripts/build/yyout2grammar.py
-PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 2.18.0
+PYTHON_VERSIONS_ACCEPTED=	27 # Ported to 3.x as of 2.21
 PLIST_SUBST+=			PKGVERSION=${PKGVERSION:S/nb${PKGREVISION}//}
 
 # needs FlexLexer.h
@@ -64,10 +64,11 @@ BUILDLINK_API_DEPENDS.flex+=	flex>=2.6.0
 .include "../../devel/flex/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
-# lilypond's configure rejects guile2.  It is a bug in lilypond that
-# maintained versions of guile are not usable, but it does not seem
-# likely that will be fixed.  See e.g.
-#   https://gitlab.com/lilypond/lilypond/-/issues/6163
+# lilypond's configure rejects guile2.  2.23.9 and above support and
+# require Guile 2.2 instead, also stating "Newer versions, such as Guile
+# 3.0, may work but are not officially supported (yet)."  See e.g.,
+#  https://gitlab.com/lilypond/lilypond/-/issues/6163
+#  http://lilypond.org/doc/v2.23/Documentation/contributor/requirements-for-running-lilypond
 .include "../../lang/guile18/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/omf-scrollkeeper.mk"
