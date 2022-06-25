@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2021/11/09 10:21:35 nia Exp $
+# $NetBSD: Makefile,v 1.27 2022/06/25 07:01:48 nia Exp $
 
 DISTNAME=		grub-2.04
 PKGNAME=		${DISTNAME:S/grub/grub2/}
@@ -32,6 +32,7 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--disable-efiemu
 CONFIGURE_ARGS+=	--disable-grub-emu-sdl
 CONFIGURE_ARGS+=	--disable-grub-emu-pci
+CONFIGURE_ARGS+=	--disable-werror
 INFO_FILES=		yes
 USE_PKGLOCALEDIR=	yes
 
