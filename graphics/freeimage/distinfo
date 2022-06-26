@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.16 2022/05/31 11:49:09 gdt Exp $
+$NetBSD: distinfo,v 1.17 2022/06/26 10:49:54 he Exp $
 
 BLAKE2s (FreeImage3180.zip) = 08cd435f40d668418a710a63bebdd02763d4d7abab1b2eb6958d58c35aab4f7f
 SHA512 (FreeImage3180.zip) = 9d9cc7e2d57552c3115e277aeb036e0455204d389026b17a3f513da5be1fd595421655488bb1ec2f76faebed66049119ca55e26e2a6d37024b3fb7ef36ad4818
@@ -10,6 +10,8 @@ SHA1 (patch-Source_FreeImageToolkit_JPEGTransform.cpp) = 4e7372c8947b4359de4d428
 SHA1 (patch-Source_FreeImage_J2KHelper.cpp) = a479a373f5a584978129c00d723251a784210603
 SHA1 (patch-Source_FreeImage_PSDParser.cpp) = ee4f3e1bb2b6644033a93ac58e12b9126d0dd060
 SHA1 (patch-Source_FreeImage_Plugin.cpp) = 58f5d7ca78a66ad7109b0e8dff219c26dfe50a86
+SHA1 (patch-Source_FreeImage_PluginBMP.cpp) = 23629bdaf6ca705986a4f2ab5c680020b267793f
+SHA1 (patch-Source_FreeImage_PluginDDS.cpp) = 02fd0eaaf6758a815b6b98080928206e69346bf0
 SHA1 (patch-Source_FreeImage_PluginEXR.cpp) = ce97b25f8968eea7c3216143b766b1c51ccd5e43
 SHA1 (patch-Source_FreeImage_PluginJ2K.cpp) = bbc44884aba8be3af2aa824da5cf788d91c27fb6
 SHA1 (patch-Source_FreeImage_PluginJP2.cpp) = 9a6d27e039b2050004a2d331389bdfa32dffe681
