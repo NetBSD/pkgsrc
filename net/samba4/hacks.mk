@@ -1,8 +1,8 @@
-# $NetBSD: hacks.mk,v 1.2 2022/06/21 09:47:49 he Exp $
+# $NetBSD: hacks.mk,v 1.3 2022/06/27 20:59:40 rin Exp $
 
 # Enabling PIE results in a 'Unsupported relocation type 6 in non-PLT
-# relocations' error under NetBSD/macppc.
-.if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "powerpc"
+# relocations' error under NetBSD/powerpc < 9.0.
+.if !empty(MACHINE_PLATFORM:MNetBSD-[1-8].*-powerpc)
 PKG_HACKS+=		pie
 CONFIGURE_ARGS+=	--without-pie
 .endif
