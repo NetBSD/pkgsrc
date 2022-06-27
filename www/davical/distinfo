@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.21 2021/10/26 11:29:24 nia Exp $
+$NetBSD: distinfo,v 1.22 2022/06/27 06:50:07 nia Exp $
 
-BLAKE2s (davical-1.1.10.tar.gz) = 72df7823a518be7ad3f1c4e8925b86118825ec496366017b017934bb1dca6a03
-SHA512 (davical-1.1.10.tar.gz) = 20a4a473b12d467131a3b93aed1828ae978cf3b34feedecda384a974814b285c1b842d1ec0d2638b14388a94643ed6f5566a5993884b6e71bdaf6789ce43bd63
-Size (davical-1.1.10.tar.gz) = 1891545 bytes
+BLAKE2s (davical-1.1.10/davical-1.1.10.tar.gz) = 160dcd270bb2c87c26dd3662f748caeec2f48d95124ff53ea87fc0637e1bd8dc
+SHA512 (davical-1.1.10/davical-1.1.10.tar.gz) = c46b75c2a9605ebb9db801b4cc28b4ea340992b0e59e8b2598e93ac22e64aacbed9da2e0485bc1c01291e03f444ed4c03095674570c66a4cc8939903f40e7bd4
+Size (davical-1.1.10/davical-1.1.10.tar.gz) = 1890899 bytes
 SHA1 (patch-aa) = 39d61a0bd2bc76d111fb7f03ea663ffac7dbd12f
 SHA1 (patch-ab) = 7ae06c595f54d3a959db481d303978b29ebbd899
 SHA1 (patch-ac) = 357abb2ad470121f3f30d19a4602692c77661872
