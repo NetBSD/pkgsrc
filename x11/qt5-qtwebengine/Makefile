@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2022/06/04 06:07:28 adam Exp $
+# $NetBSD: Makefile,v 1.22 2022/06/27 21:41:52 wiz Exp $
 
 DISTNAME=	qtwebengine-everywhere-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtwebengine-${QTVERSION}
@@ -94,6 +94,7 @@ post-install:
 PYTHON_VERSIONS_ACCEPTED=	27
 PYTHON_FOR_BUILD_ONLY=	tool
 .include "../../lang/python/tool.mk"
+# does not support ffmpeg5 as of 5.15.4
 .include "../../multimedia/ffmpeg4/buildlink3.mk"
 .include "../../multimedia/libvpx/buildlink3.mk"
 .include "../../print/libcups/buildlink3.mk"
