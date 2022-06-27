@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.25 2021/12/02 10:39:17 fcambus Exp $
+# $NetBSD: Makefile,v 1.26 2022/06/27 15:29:18 fcambus Exp $
 
 DISTNAME=	logswan-2.1.12
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fcambus/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
 
-MAINTAINER=	fcambus@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.logswan.org/
 COMMENT=	Fast Web log analyzer using probabilistic data structures
 LICENSE=	2-clause-bsd

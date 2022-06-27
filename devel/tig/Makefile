@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.21 2022/05/10 13:10:29 fcambus Exp $
+# $NetBSD: Makefile,v 1.22 2022/06/27 15:29:14 fcambus Exp $
 
 DISTNAME=	tig-2.5.5
 CATEGORIES=	devel scm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jonas/}
 GITHUB_RELEASE=	${DISTNAME}
 
-MAINTAINER=	fcambus@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://jonas.github.io/tig/
 COMMENT=	Ncurses-based GIT repository tool
 LICENSE=	gnu-gpl-v2
