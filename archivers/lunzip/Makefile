@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2022/01/23 21:50:33 fcambus Exp $
+# $NetBSD: Makefile,v 1.3 2022/06/27 15:29:13 fcambus Exp $
 
 DISTNAME=	lunzip-1.13
 CATEGORIES=	archivers
 MASTER_SITES=	https://download.savannah.gnu.org/releases/lzip/lunzip/
 
-MAINTAINER=	fcambus@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.nongnu.org/lzip/lunzip.html
 COMMENT=	Decompressor for the lzip format
 LICENSE=	gnu-gpl-v2
