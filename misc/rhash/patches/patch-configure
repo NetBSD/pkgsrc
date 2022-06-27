@@ -1,9 +1,9 @@
-$NetBSD: patch-configure,v 1.2 2021/07/15 09:39:17 adam Exp $
+$NetBSD: patch-configure,v 1.3 2022/06/27 01:19:40 gutteridge Exp $
 
 Skip compiler detection magic.
 
 Avoid choosing aligned_alloc() when it's not present, such as CentOS 6
-with lang/gcc7.
+with lang/gcc7 and older Solaris releases.
 
 --- configure.orig	2021-07-14 20:55:34.000000000 +0000
 +++ configure
@@ -26,7 +26,7 @@ with lang/gcc7.
 +  HAS_STDC_ALIGNED_ALLOC=yes
 +fi
 +if test "$HAS_STDC_ALIGNED_ALLOC" = "no"; then
-+  BUILD_EXTRA_CFLAGS=$(join_params $BUILD_EXTRA_CFLAGS -DNOPE_DOES_NOT_HAS_STDC_ALIGNED_ALLOC)
++  BUILD_EXTRA_CFLAGS=$(join_params $BUILD_EXTRA_CFLAGS -DNO_STDC_ALIGNED_ALLOC)
 +fi
 +finish_check "$HAS_STDC_ALIGNED_ALLOC"
 +
