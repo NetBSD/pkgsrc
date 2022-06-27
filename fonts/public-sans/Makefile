@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2022/05/18 20:34:05 fcambus Exp $
+# $NetBSD: Makefile,v 1.6 2022/06/27 06:04:14 taca Exp $
 
 VERSION=	2.001
 DISTNAME=	public-sans-v${VERSION}
-PKGNAME=	${DISTNAME:S/v1/1/}
+PKGNAME=	${DISTNAME:S/-v/-/}
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_GITHUB:=uswds/}
 GITHUB_TAG=	v${VERSION}
