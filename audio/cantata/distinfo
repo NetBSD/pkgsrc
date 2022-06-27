@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 09:58:49 nia Exp $
+$NetBSD: distinfo,v 1.9 2022/06/27 16:05:39 wiz Exp $
 
 BLAKE2s (cantata-2.4.2/cantata-2.4.2.tar.bz2) = aa9a939c083f431fc4ff053b058605b67f00747026fdf0a9056749be32ac73cf
 SHA512 (cantata-2.4.2/cantata-2.4.2.tar.bz2) = c2459a53d86e12df7e6a8f7c19880f1c353c13893401a0906ec730c34ccbf1ef070c226b55c4e772e9a54a94e7cf3a2f96b0e9223ff20057045c888c4f91d87b
 Size (cantata-2.4.2/cantata-2.4.2.tar.bz2) = 2498460 bytes
 SHA1 (patch-CMakeLists.txt) = 44a81fa0361ea4d1cb52b1701e296a8eb3aaec61
-SHA1 (patch-playlists_dynamicplaylists.cpp) = 4b2767658696d7d9d3f1a838310ca36fd3b554b9
