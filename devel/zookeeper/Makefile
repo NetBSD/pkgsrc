@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2020/04/15 22:51:19 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2022/06/27 06:32:44 nia Exp $
 #
 
 .include "Makefile.common"
@@ -13,6 +13,8 @@ BUILD_DEPENDS+=		apache-ivy>=2.2.0:../../devel/apache-ivy
 USE_JAVA=		yes
 USE_JAVA2=		yes
 USE_TOOLS+=		bash:run pax
+
+PKG_JVMS_ACCEPTED=	openjdk8
 
 PKG_SYSCONFSUBDIR=	zookeeper
 
