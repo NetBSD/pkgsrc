@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.29 2022/04/18 19:10:19 adam Exp $
+# $NetBSD: Makefile,v 1.30 2022/06/27 16:05:39 wiz Exp $
 
 DISTNAME=	cantata-2.4.2
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=CDrummond/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
-EXTRACT_SUFX=	.tar.bz2
 DIST_SUBDIR=	cantata-2.4.2
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/CDrummond/cantata
@@ -17,7 +17,7 @@ TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	bash:run perl:run
+USE_TOOLS+=	bash:run perl:run pkg-config
 
 REPLACE_PERL+=	playlists/cantata-dynamic
 REPLACE_BASH+=	cantata-remote.cmake
@@ -36,7 +36,7 @@ PLIST.notdarwin=	yes
 .include "../../audio/taglib/buildlink3.mk"
 .include "../../devel/libmtp/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../multimedia/ffmpeg4/buildlink3.mk"
+.include "../../multimedia/ffmpeg5/buildlink3.mk"
 .include "../../net/avahi/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 BUILDLINK_API_DEPENDS.qt5-qtbase+=	qt5-qtbase>=5.11
