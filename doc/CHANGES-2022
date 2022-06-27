@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3119 2022/06/27 06:05:29 taca Exp $
+$NetBSD: CHANGES-2022,v 1.3120 2022/06/27 07:50:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4691,3 +4691,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/xenkernel413 to 4.13.4nb1 [bouyer 2022-06-24]
 	Updated databases/sqlite to 2.8.17nb2 [he 2022-06-24]
 	Updated databases/sqlite to 2.8.17nb3 [he 2022-06-25]
+	Updated www/curl to 7.84.0 [wiz 2022-06-27]
