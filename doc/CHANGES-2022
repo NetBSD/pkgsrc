@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3125 2022/06/27 15:59:24 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3126 2022/06/27 16:05:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4697,3 +4697,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/links to 2.27 [fcambus 2022-06-27]
 	Updated www/links-gui to 2.27 [fcambus 2022-06-27]
 	Updated audio/musicpd to 0.23.7nb1 [wiz 2022-06-27]
+	Updated audio/cantata to 2.4.2nb12 [wiz 2022-06-27]
