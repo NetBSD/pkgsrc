@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.89 2022/04/27 07:51:20 wiz Exp $
+@comment $NetBSD: PLIST,v 1.90 2022/06/27 07:50:13 wiz Exp $
 bin/curl
 bin/curl-config
 include/curl/curl.h
@@ -19,6 +19,8 @@ man/man1/curl.1
 man/man3/CURLINFO_ACTIVESOCKET.3
 man/man3/CURLINFO_APPCONNECT_TIME.3
 man/man3/CURLINFO_APPCONNECT_TIME_T.3
+man/man3/CURLINFO_CAINFO.3
+man/man3/CURLINFO_CAPATH.3
 man/man3/CURLINFO_CERTINFO.3
 man/man3/CURLINFO_CONDITION_UNMET.3
 man/man3/CURLINFO_CONNECT_TIME.3
