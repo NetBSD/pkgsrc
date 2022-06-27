@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.79 2022/05/29 17:58:53 fcambus Exp $
+# $NetBSD: Makefile.common,v 1.80 2022/06/27 15:21:09 fcambus Exp $
 #
 # used by www/links/Makefile
 # used by www/links-gui/Makefile
 
-DISTNAME=	links-2.26
+DISTNAME=	links-2.27
 CATEGORIES=	www
 MASTER_SITES=	http://links.twibright.com/download/
 EXTRACT_SUFX=	.tar.bz2
