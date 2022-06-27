@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2020/12/16 11:21:43 nia Exp $
+# $NetBSD: Makefile,v 1.7 2022/06/27 15:29:15 fcambus Exp $
 
 DISTNAME=	nudoku-2.1.0
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jubalh/}
 
-MAINTAINER=	fcambus@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://jubalh.github.io/nudoku/
 COMMENT=	Ncurses based sudoku game
 LICENSE=	gnu-gpl-v3

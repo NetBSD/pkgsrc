@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/07/21 14:40:31 taca Exp $
+# $NetBSD: Makefile,v 1.3 2022/06/27 15:29:18 fcambus Exp $
 
 DISTNAME=	motyl-1.0.2
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=fcambus/}
 GITHUB_PROJECT=	motyl
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
 
-MAINTAINER=	fcambus@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/fcambus/motyl/
 COMMENT=	Opinionated blog-aware static site generator
 LICENSE=	2-clause-bsd
