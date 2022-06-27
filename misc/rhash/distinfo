@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.21 2022/06/15 08:54:58 adam Exp $
+$NetBSD: distinfo,v 1.22 2022/06/27 01:19:39 gutteridge Exp $
 
 BLAKE2s (rhash-1.4.3.tar.gz) = fd47c6f7997416d295fa92fa0611dc956596ff91f1199049baf3b6bd2d88a427
 SHA512 (rhash-1.4.3.tar.gz) = d87ffcde28d8f25cf775c279fed457e52d24523ed9b695629dae694b3c22372247d18f6032f8ce13a0b70fa2953be408982e46659daaa7c4ab227ae89eaed9c7
 Size (rhash-1.4.3.tar.gz) = 429290 bytes
-SHA1 (patch-configure) = 6f0c4abf3f487f046feea5aca5866481eda4546a
+SHA1 (patch-configure) = aba3e782bd317504fcb35a4d59b4146ccb944171
 SHA1 (patch-librhash_Makefile) = f5a3ccdd8c0467b11f2dda553310bf5a9c8ade0c
