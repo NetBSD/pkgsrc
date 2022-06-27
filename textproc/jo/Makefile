@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2022/01/07 21:29:43 fcambus Exp $
+# $NetBSD: Makefile,v 1.14 2022/06/27 15:29:17 fcambus Exp $
 
 DISTNAME=	jo-1.6
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jpmens/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
 
-MAINTAINER=	fcambus@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/jpmens/jo
 COMMENT=	JSON output from a shell
 LICENSE=	gnu-gpl-v2

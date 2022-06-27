@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.17 2021/06/13 18:27:55 fcambus Exp $
+# $NetBSD: Makefile,v 1.18 2022/06/27 15:29:15 fcambus Exp $
 
 DISTNAME=	spleen-1.9.1
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fcambus/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
 
-MAINTAINER=	fcambus@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/fcambus/spleen/
 COMMENT=	Monospaced bitmap fonts
 LICENSE=	2-clause-bsd

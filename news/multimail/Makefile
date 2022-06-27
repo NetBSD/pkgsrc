@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2022/02/11 12:12:41 fcambus Exp $
+# $NetBSD: Makefile,v 1.4 2022/06/27 15:29:17 fcambus Exp $
 
 DISTNAME=	mmail-0.52
 CATEGORIES=	news
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=multimail/}
 
-MAINTAINER=	fcambus@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://wmcbrine.com/MultiMail/
 COMMENT=	Offline mail reader for Blue Wave, QWK, OMEN, SOUP and OPX
 LICENSE=	gnu-gpl-v3

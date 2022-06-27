@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2021/11/01 21:33:26 fcambus Exp $
+# $NetBSD: Makefile,v 1.8 2022/06/27 15:29:15 fcambus Exp $
 #
 
 DISTNAME=	tweak-3.02
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	https://www.chiark.greenend.org.uk/~sgtatham/tweak/
 
-MAINTAINER=	fcambus@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.chiark.greenend.org.uk/~sgtatham/tweak/
 COMMENT=	Efficient hex editor
 LICENSE=	mit

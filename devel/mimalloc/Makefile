@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2022/04/15 13:50:56 fcambus Exp $
+# $NetBSD: Makefile,v 1.7 2022/06/27 15:29:14 fcambus Exp $
 
 DISTNAME=	mimalloc-2.0.6
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=microsoft/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	fcambus@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/microsoft/mimalloc/
 COMMENT=	General-purpose allocator with excellent performance characteristics
 LICENSE=	mit
