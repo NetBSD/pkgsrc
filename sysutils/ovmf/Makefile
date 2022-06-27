@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2019/11/04 21:28:49 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2022/06/27 07:21:07 nia Exp $
 
 PKGNAME=		OVMF-0.0.20181116
-PKGREVISION=		1
+PKGREVISION=		2
 DISTNAME=		edk2-20181116
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 CATEGORIES=		sysutils
@@ -22,12 +22,13 @@ SSP_SUPPORTED=		no
 .include "../../mk/bsd.prefs.mk"
 ONLY_FOR_PLATFORM=	*-*-i386 *-*-x86_64
 
-PLIST_VARS+=	x64
+PLIST_VARS+=	x32 x64
 
 .if !empty(MACHINE_PLATFORM:M*-*-i386)
 TARGET_ARCHS=	IA32
+PLIST.x32=	yes
 .elif !empty(MACHINE_PLATFORM:M*-*-x86_64)
-TARGET_ARCHS=	IA32 X64
+TARGET_ARCHS=	X64
 PLIST.x64=	yes
 .endif
 
