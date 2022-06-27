@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2022/06/18 14:52:15 fcambus Exp $
+# $NetBSD: Makefile,v 1.12 2022/06/27 15:29:14 fcambus Exp $
 
 DISTNAME=	tio-1.40
 CATEGORIES=	comms
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=tio/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	fcambus@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/tio/tio
 COMMENT=	Simple TTY terminal I/O application
 LICENSE=	gnu-gpl-v2

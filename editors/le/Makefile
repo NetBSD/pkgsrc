@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2021/05/24 19:52:05 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2022/06/27 15:29:15 fcambus Exp $
 
 DISTNAME=	le-1.16.8
 PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	http://lav.yar.ru/download/le/
 
-MAINTAINER=	fcambus@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://lav.yar.ru/programs.html
 COMMENT=	Full screen text editor inspired by Norton Editor
 LICENSE=	gnu-gpl-v3
