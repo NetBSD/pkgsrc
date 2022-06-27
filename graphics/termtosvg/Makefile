@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2022/01/04 20:54:08 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/06/27 15:29:16 fcambus Exp $
 
 DISTNAME=	termtosvg-1.1.0
 PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nbedos/}
 
-MAINTAINER=	fcambus@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://nbedos.github.io/termtosvg/
 COMMENT=	Record terminal sessions as SVG animations
 LICENSE=	modified-bsd

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.19 2022/04/21 20:41:41 fcambus Exp $
+# $NetBSD: Makefile,v 1.20 2022/06/27 15:29:18 fcambus Exp $
 
 DISTNAME=	kore-4.2.2
 CATEGORIES=	www
 MASTER_SITES=	https://kore.io/releases/
 
-MAINTAINER=	fcambus@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://kore.io/
 COMMENT=	Web application framework for writing scalable web APIs in C
 LICENSE=	isc
