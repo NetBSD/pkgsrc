@@ -1,19 +1,24 @@
-# $NetBSD: Makefile,v 1.48 2021/05/24 19:55:13 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2022/06/27 06:49:51 nia Exp $
+
+DAVICAL_VERSION=	1.1.10
 
 DISTNAME=	davical-${DAVICAL_VERSION}
 PKGNAME=	${PHP_PKG_PREFIX}-davical-${DAVICAL_VERSION}
 PKGREVISION=	1
 CATEGORIES=	www
-MASTER_SITES=	-https://gitlab.com/davical-project/davical/repository/archive.tar.gz?ref=${GITLAB_TAG}
+# Remove DIST_SUBDIR on next update!
+DIST_SUBDIR=	davical-${DAVICAL_VERSION}
+MASTER_SITES=	${MASTER_SITE_GITLAB:=davical-project/}
+GITLAB_PROJECT=	davical
+GITLAB_TAG=	r${DAVICAL_VERSION}
+GITLAB_REV=	9da21ad116a2913bf788bd4b0b8c58c0de83d9da
 
 MAINTAINER=	jym@NetBSD.org
 HOMEPAGE=	https://www.davical.org/
 COMMENT=	Simple CalDAV server using a PostgreSQL backend
 LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3
 
-DAVICAL_VERSION=	1.1.10
-GITLAB_TAG=		r${DAVICAL_VERSION}
-GITLAB_REV=		9da21ad116a2913bf788bd4b0b8c58c0de83d9da
+WRKSRC=		${WRKDIR}/davical-${GITLAB_TAG}
 
 DAVICALDIR=	${PREFIX}/share/davical
 EGDIR=		${PREFIX}/share/examples/davical
@@ -104,7 +109,6 @@ SUBST_FILES.postgres=	dba/create-database.sh
 SUBST_MESSAGE.postgres=	Fixing PostgreSQL variables.
 
 pre-patch:
-	${MV} ${WRKDIR}/davical-${GITLAB_TAG}-${GITLAB_REV} ${WRKSRC}
 	${CP} ${FILESDIR}/davical.conf ${WRKSRC}/davical.conf
 
 pre-install:
