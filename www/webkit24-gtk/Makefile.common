@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.21 2021/04/03 10:19:03 cirnatdan Exp $
+# $NetBSD: Makefile.common,v 1.22 2022/06/28 11:26:24 nia Exp $
 # used by www/webkit24-gtk/Makefile
 # used by www/webkit24-gtk3/Makefile
 
@@ -36,6 +36,8 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--enable-x11-target \
 			--disable-geolocation \
 			--disable-gtk-doc-html
+
+CONFIGURE_ARGS+=	--enable-introspection
 
 .include "../../mk/compiler.mk"
 .if (!empty(PKGSRC_COMPILER:Mgcc) && !empty(_USE_PKGSRC_GCC:M[yY][eE][sS]))
@@ -90,6 +92,9 @@ CXXFLAGS+=	-DGLIB_VERSION_MIN_REQUIRED=GLIB_VERSION_2_66
 .include "../../mk/atomic64.mk"
 BUILDLINK_API_DEPENDS.glib2+= glib2>=2.32.1
 .include "../../devel/glib2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gobject-introspection+=	gobject-introspection>=0.9.5
+BUILDLINK_DEPMETHOD.gobject-introspection+=	build
+.include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/flex/buildlink3.mk"
