@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2021/12/08 16:02:08 adam Exp $
+# $NetBSD: Makefile,v 1.32 2022/06/28 10:40:39 nia Exp $
 
 DISTNAME=	cogl-1.22.0
 PKGREVISION=	12
@@ -23,6 +23,7 @@ USE_PKGLOCALEDIR=	yes
 # Disable -Werror.
 # code is not clean enough for modern compilers
 CONFIGURE_ARGS+=	--enable-maintainer-flags=no
+CONFIGURE_ARGS+=	--enable-introspection=yes
 
 PKGCONFIG_OVERRIDE+=	cogl-gles2/cogl-gles2-experimental.pc.in
 PKGCONFIG_OVERRIDE+=	cogl-pango/cogl-pango-1.0.pc.in
@@ -39,7 +40,9 @@ PKGCONFIG_OVERRIDE+=	cogl-gst/cogl-gst.pc.in
 PKGCONFIG_OVERRIDE+=	cogl-path/cogl-path.pc.in
 
 .include "options.mk"
-
+BUILDLINK_API_DEPENDS.gobject-introspection+=	gobject-introspection>=0.9.5
+BUILDLINK_DEPMETHOD.gobject-introspection+=	build
+.include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.32.0
 .include "../../devel/glib2/buildlink3.mk"
