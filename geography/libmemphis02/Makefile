@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2021/12/08 16:02:06 adam Exp $
+# $NetBSD: Makefile,v 1.16 2022/06/28 10:58:04 nia Exp $
 
 DISTNAME=	memphis-0.2.3
 PKGNAME=	libmemphis02-0.2.3
@@ -18,6 +18,8 @@ USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	aclocal autoconf autoheader automake gmake pkg-config
 
+CONFIGURE_ARGS+=	--enable-introspection
+
 PKGCONFIG_OVERRIDE+=	memphis.pc.in
 
 pre-configure:
@@ -26,9 +28,9 @@ pre-configure:
 	autoheader ; \
 	automake -a --foreign -i --add-missing; autoconf
 
-.include "options.mk"
-
 .include "../../devel/glib2/buildlink3.mk"
+BUILDLINK_DEPMETHOD.gobject-introspection+=	build
+.include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
