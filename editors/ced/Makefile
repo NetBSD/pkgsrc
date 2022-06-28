@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2022/06/04 21:24:58 pin Exp $
+# $NetBSD: Makefile,v 1.6 2022/06/28 09:29:17 pin Exp $
 
-DISTNAME=	ced-0.1.7
+DISTNAME=	ced-0.2.2
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Simhyeon/}
 GITHUB_PROJECT=	ced
-GITHUB_TAG=	76f18843436d05e58d9f7194acd098aa17826314
+GITHUB_TAG=	e54b8674607a6a39b03756cc11be3b9b8886e111
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/Simhyeon/ced/
