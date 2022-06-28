@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2019/10/18 15:14:49 nia Exp $
+@comment $NetBSD: PLIST,v 1.8 2022/06/28 10:32:34 nia Exp $
 include/clutter-gtk-1.0/clutter-gtk/clutter-gtk.h
 include/clutter-gtk-1.0/clutter-gtk/gtk-clutter-actor.h
 include/clutter-gtk-1.0/clutter-gtk/gtk-clutter-embed.h
@@ -6,10 +6,10 @@ include/clutter-gtk-1.0/clutter-gtk/gtk-clutter-texture.h
 include/clutter-gtk-1.0/clutter-gtk/gtk-clutter-util.h
 include/clutter-gtk-1.0/clutter-gtk/gtk-clutter-version.h
 include/clutter-gtk-1.0/clutter-gtk/gtk-clutter-window.h
-${PLIST.introspection}lib/girepository-1.0/GtkClutter-1.0.typelib
+lib/girepository-1.0/GtkClutter-1.0.typelib
 lib/libclutter-gtk-1.0.la
 lib/pkgconfig/clutter-gtk-1.0.pc
-${PLIST.introspection}share/gir-1.0/GtkClutter-1.0.gir
+share/gir-1.0/GtkClutter-1.0.gir
 share/gtk-doc/html/clutter-gtk-1.0/GtkClutterActor.html
 share/gtk-doc/html/clutter-gtk-1.0/GtkClutterEmbed.html
 share/gtk-doc/html/clutter-gtk-1.0/GtkClutterWindow.html
