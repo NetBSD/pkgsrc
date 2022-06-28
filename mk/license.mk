@@ -1,4 +1,4 @@
-# $NetBSD: license.mk,v 1.112 2022/04/20 21:48:14 wiz Exp $
+# $NetBSD: license.mk,v 1.113 2022/06/28 23:57:17 gutteridge Exp $
 #
 # This file handles everything about the LICENSE variable. It is
 # included automatically by bsd.pkg.mk.
@@ -193,8 +193,8 @@ DEFAULT_ACCEPTABLE_LICENSES+=	enlightenment16
 # The following licenses do not currently meet our standards for
 # inclusion.
 
-# mostly inline with Free Software principles and typefaces can not be
-# sold by itself.
+# Mostly in line with Free Software principles and typefaces can not be
+# sold by themselves.
 DEFAULT_ACCEPTABLE_LICENSES+=	vera-ttf-license
 
 ##### Variant spellings
