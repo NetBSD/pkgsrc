@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2020/08/31 18:06:29 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2022/06/28 11:31:55 wiz Exp $
 
 BUILDLINK_TREE+=	p5-B-Hooks-OP-Annotation
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	p5-B-Hooks-OP-Annotation
 P5_B_HOOKS_OP_ANNOTATION_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.p5-B-Hooks-OP-Annotation+=	p5-B-Hooks-OP-Annotation>=0.43
-BUILDLINK_ABI_DEPENDS.p5-B-Hooks-OP-Annotation?=	p5-B-Hooks-OP-Annotation>=0.44nb10
+BUILDLINK_ABI_DEPENDS.p5-B-Hooks-OP-Annotation?=	p5-B-Hooks-OP-Annotation>=0.44nb12
 BUILDLINK_PKGSRCDIR.p5-B-Hooks-OP-Annotation?=		../../devel/p5-B-Hooks-OP-Annotation
 BUILDLINK_INCDIRS.p5-B-Hooks-OP-Annotation?=		${PERL5_SUB_INSTALLVENDORARCH}/B/Hooks/OP/Annotation
 BUILDLINK_CONTENTS_FILTER.p5-B-Hooks-OP-Annotation?=	${GREP} '${PERL5_SUB_INSTALLVENDORARCH}/B/Hooks/OP/Annotation'

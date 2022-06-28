@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2020/11/03 20:55:34 otis Exp $
+# $NetBSD: Makefile,v 1.2 2022/06/28 11:35:59 wiz Exp $
 
 PKGVERSION=	2.0.29
-PKGNAME=	openipmi-${PKGVERSION}
 DISTNAME=	OpenIPMI-${PKGVERSION_NOREV}
+PKGNAME=	openipmi-${PKGVERSION}
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	https://newcontinuum.dl.sourceforge.net/project/openipmi/OpenIPMI%202.0%20Library/
 

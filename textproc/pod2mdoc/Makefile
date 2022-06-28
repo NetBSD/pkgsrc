@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2021/05/24 19:54:59 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2022/06/28 11:36:49 wiz Exp $
 
 DISTNAME=	pod2mdoc-0.2
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	textproc
 MASTER_SITES=	http://mdocml.bsd.lv/pod2mdoc/snapshots/
 EXTRACT_SUFX=	.tgz

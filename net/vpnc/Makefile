@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.49 2021/05/24 19:53:39 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2022/06/28 11:35:22 wiz Exp $
 #
 
 DISTNAME=		vpnc-0.5.3
-PKGREVISION=		19
+PKGREVISION=		20
 CATEGORIES=		net security
 MASTER_SITES=		https://www.unix-ag.uni-kl.de/~massar/vpnc/
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2012/12/15 00:29:31 pettai Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2022/06/28 11:35:34 wiz Exp $
 
 BUILDLINK_TREE+=	ccid
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	ccid
 CCID_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ccid+=	ccid>=1.4.0
+BUILDLINK_ABI_DEPENDS.ccid?=	ccid>=1.5.0nb1
 BUILDLINK_PKGSRCDIR.ccid?=	../../security/ccid
 
 .include "../../security/pcsc-lite/buildlink3.mk"

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.57 2021/06/07 06:35:16 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2022/06/28 11:31:01 wiz Exp $
 #
 DISTNAME=	dinotrace-9.4f
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_GITHUB:=veripool/}
 GITHUB_TAG=	v9.4f

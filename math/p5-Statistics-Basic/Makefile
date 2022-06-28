@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2021/05/24 19:53:02 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/06/28 11:34:44 wiz Exp $
 
 DISTNAME=	Statistics-Basic-1.6611
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	math perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/J/JE/JETTERO/}
 

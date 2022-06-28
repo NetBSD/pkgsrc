@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2022/04/06 06:00:11 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2022/06/28 11:36:49 wiz Exp $
 
 DISTNAME=	typogrify-2.0.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/typogrify/}
 

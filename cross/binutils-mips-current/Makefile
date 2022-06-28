@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2021/05/24 19:49:25 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2022/06/28 11:31:14 wiz Exp $
 #
 # GNU binutils snapshot, configured to target MIPS (NetBSD/playstation2)
 
@@ -6,7 +6,7 @@ BINUTILS_VER=		2.25
 
 DISTNAME=		binutils-${BINUTILS_VER}
 PKGNAME=		binutils-mips-${BINUTILS_VER}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		cross lang
 MASTER_SITES=		${MASTER_SITE_GNU:=binutils/}
 EXTRACT_SUFX=		.tar.bz2

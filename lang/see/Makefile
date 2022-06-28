@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2021/05/24 19:52:35 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2022/06/28 11:34:15 wiz Exp $
 #
 
 DISTNAME=	see-3.0.1376
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	lang
 MASTER_SITES=	http://users.tpg.com.au/dle0nard/software/
 

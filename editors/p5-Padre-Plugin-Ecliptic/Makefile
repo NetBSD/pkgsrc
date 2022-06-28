@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2021/05/24 19:52:06 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2022/06/28 11:33:47 wiz Exp $
 #
 
 DISTNAME=	Padre-Plugin-Ecliptic-0.23
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	editors perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Padre/}
 

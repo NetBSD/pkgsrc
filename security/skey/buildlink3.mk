@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2016/02/26 09:41:06 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2022/06/28 11:35:51 wiz Exp $
 
 BUILDLINK_TREE+=	skey
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	skey
 SKEY_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.skey+=	skey>=1.1.5
-BUILDLINK_ABI_DEPENDS.skey+=	skey>=1.1.5nb2
+BUILDLINK_ABI_DEPENDS.skey+=	skey>=1.1.5nb14
 BUILDLINK_PKGSRCDIR.skey?=	../../security/skey
 BUILDLINK_DEPMETHOD.skey?=	build
 

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2022/04/20 20:31:00 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/06/28 11:31:42 wiz Exp $
 
 DISTNAME=	diff-so-fancy-1.4.3
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_GITHUB:=so-fancy/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

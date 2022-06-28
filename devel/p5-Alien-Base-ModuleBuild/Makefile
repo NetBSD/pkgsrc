@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2021/05/24 19:50:04 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2022/06/28 11:31:51 wiz Exp $
 
 DISTNAME=	Alien-Base-ModuleBuild-1.15
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/P/PL/PLICEASE/}
 

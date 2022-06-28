@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2021/05/24 19:54:29 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2022/06/28 11:36:16 wiz Exp $
 
 DISTNAME=	Kwalify-1.23
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/S/SR/SREZIC/}
 

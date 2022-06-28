@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2021/05/24 19:51:22 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2022/06/28 11:33:03 wiz Exp $
 
 DISTNAME=	PatchReader-0.9.6
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/T/TM/TMANNERM/}
 

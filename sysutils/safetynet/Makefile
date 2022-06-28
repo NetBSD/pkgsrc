@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2021/05/24 19:54:19 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2022/06/28 11:36:05 wiz Exp $
 #
 
 DISTNAME=	safetynet-1.15
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	sysutils
 MASTER_SITES=	# http://www.unixpimps.org/safetynet/
 

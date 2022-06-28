@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2022/06/08 11:59:45 mef Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2022/06/28 11:34:14 wiz Exp $
 
 BUILDLINK_TREE+=	nqp
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	nqp
 NQP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.nqp+=		nqp>=2022.06
-BUILDLINK_ABI_DEPENDS.nqp+=		nqp>=2022.06
+BUILDLINK_ABI_DEPENDS.nqp+=		nqp>=2022.06nb1
 BUILDLINK_PKGSRCDIR.nqp?=		../../lang/nqp
 
 .include "../../devel/MoarVM/buildlink3.mk"

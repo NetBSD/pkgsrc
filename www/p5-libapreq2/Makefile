@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.47 2021/09/05 01:26:19 wen Exp $
+# $NetBSD: Makefile,v 1.48 2022/06/28 11:37:48 wiz Exp $
 
 DISTNAME=	libapreq2-2.16
 PKGNAME=	p5-${APACHE_PKG_PREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_APACHE:=httpd/libapreq/}
 

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2022/04/24 15:25:18 pin Exp $
+# $NetBSD: Makefile,v 1.15 2022/06/28 11:30:52 wiz Exp $
 
 DISTNAME=	lxqt-archiver-0.6.0
+PKGREVISION=	1
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2021/05/24 19:51:17 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2022/06/28 11:32:58 wiz Exp $
 #
 
 DISTNAME=	Object-Pluggable-1.29
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Object/}
 

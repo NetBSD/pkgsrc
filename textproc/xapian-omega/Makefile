@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2022/01/02 09:32:06 schmonz Exp $
+# $NetBSD: Makefile,v 1.47 2022/06/28 11:36:50 wiz Exp $
 
+PKGREVISION= 1
 .include "../../textproc/xapian/Makefile.common"
 
 DISTNAME=		xapian-omega-${VERSION}

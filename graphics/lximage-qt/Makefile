@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2022/04/24 15:06:41 pin Exp $
+# $NetBSD: Makefile,v 1.20 2022/06/28 11:34:02 wiz Exp $
 
 DISTNAME=	lximage-qt-1.1.0
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}

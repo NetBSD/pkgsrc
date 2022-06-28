@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2020/08/31 18:06:30 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2022/06/28 11:35:37 wiz Exp $
 
 BUILDLINK_TREE+=	libpreludedb-perl
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libpreludedb-perl
 LIBPRELUDEDB_PERL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libpreludedb-perl+=	libpreludedb-perl>=0.9.15.3
-BUILDLINK_ABI_DEPENDS.libpreludedb-perl?=	libpreludedb-perl>=0.9.15.3nb21
+BUILDLINK_ABI_DEPENDS.libpreludedb-perl?=	libpreludedb-perl>=0.9.15.3nb26
 BUILDLINK_PKGSRCDIR.libpreludedb-perl?=		../../security/libpreludedb-perl
 
 .endif	# LIBPRELUDEDB_PERL_BUILDLINK3_MK

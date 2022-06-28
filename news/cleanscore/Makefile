@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2021/05/24 19:53:39 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2022/06/28 11:35:22 wiz Exp $
 
 DISTNAME=		slrn-1.0.3a
 PKGNAME=		cleanscore-0.9.8.1
-PKGREVISION=		12
+PKGREVISION=		13
 CATEGORIES=		news
 MASTER_SITES=		http://jedsoft.org/releases/slrn/
 EXTRACT_SUFX=		.tar.bz2

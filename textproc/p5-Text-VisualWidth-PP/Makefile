@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2021/05/24 19:54:47 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2022/06/28 11:36:36 wiz Exp $
 
 DISTNAME=	Text-VisualWidth-PP-0.05
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/T/TO/TOKUHIROM/}
 

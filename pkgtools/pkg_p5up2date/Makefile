@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2022/03/20 08:09:55 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2022/06/28 11:35:25 wiz Exp $
 
 PKGNAME=	pkg_p5up2date-0.07
+PKGREVISION=	1
 CATEGORIES=	pkgtools
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

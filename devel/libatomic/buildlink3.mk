@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2021/05/07 11:34:48 rin Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2022/06/28 11:31:46 wiz Exp $
 
 BUILDLINK_TREE+=	libatomic
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libatomic
 LIBATOMIC_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libatomic+=	libatomic>=10.0
-BUILDLINK_ABI_DEPENDS.libatomic+=	libatomic>=10.0
+BUILDLINK_ABI_DEPENDS.libatomic+=	libatomic>=12.1.0nb1
 BUILDLINK_PKGSRCDIR.libatomic?=		../../devel/libatomic
 
 BUILDLINK_LDADD.libatomic+=	-latomic

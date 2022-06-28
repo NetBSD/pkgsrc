@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.42 2021/05/24 19:53:07 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2022/06/28 11:34:49 wiz Exp $
 
 DISTNAME=		Array-PrintCols-2.6
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		8
+PKGREVISION=		9
 CATEGORIES=		misc perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Array/}
 

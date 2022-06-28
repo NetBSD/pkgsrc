@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2020/11/12 10:33:44 otis Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2022/06/28 11:35:04 wiz Exp $
 
 BUILDLINK_TREE+=	net-snmp
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	net-snmp
 NET_SNMP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.net-snmp+=	net-snmp>=5.0.9nb3
-BUILDLINK_ABI_DEPENDS.net-snmp+=	net-snmp>=5.7.3nb13
+BUILDLINK_ABI_DEPENDS.net-snmp+=	net-snmp>=5.8nb4
 BUILDLINK_PKGSRCDIR.net-snmp?=		../../net/net-snmp
 
 pkgbase := net-snmp

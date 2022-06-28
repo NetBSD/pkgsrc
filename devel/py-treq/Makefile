@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2022/02/14 10:15:33 adam Exp $
+# $NetBSD: Makefile,v 1.9 2022/06/28 11:33:42 wiz Exp $
 
 DISTNAME=	treq-22.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/treq/}
 
