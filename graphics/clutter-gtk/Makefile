@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2022/06/28 10:32:34 nia Exp $
+# $NetBSD: Makefile,v 1.52 2022/06/28 10:35:50 nia Exp $
 
 DISTNAME=	clutter-gtk-1.8.4
 PKGREVISION=	4
@@ -31,7 +31,7 @@ BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.6.0
 BUILDLINK_API_DEPENDS.clutter+=	clutter>=1.18.0
 .include "../../graphics/clutter/buildlink3.mk"
 .if !${PKG_BUILD_OPTIONS.clutter:Mx11}
-PKG_FAIL_REASON+=	Require Clutter with X11 backend
+PKG_FAIL_REASON+=	"Requires Clutter with X11 backend"
 .endif
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
