@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2022/04/18 19:09:51 adam Exp $
+# $NetBSD: Makefile,v 1.40 2022/06/28 11:07:13 nia Exp $
 
 DISTNAME=	libchamplain-0.12.20
 PKGNAME=	${DISTNAME:S/ain/ain012/}
@@ -21,13 +21,11 @@ PKGCONFIG_OVERRIDE+=		output/meson-private/champlain-gtk-0.12.pc
 
 PYTHON_FOR_BUILD_ONLY=	tool
 
-# TODO:
-# add vala option?
-.include "options.mk"
-
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/meson/build.mk"
+BUILDLINK_DEPMETHOD.gobject-introspection+=	build
+.include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../geography/libmemphis02/buildlink3.mk"
 .include "../../graphics/clutter-gtk/buildlink3.mk"
 .include "../../graphics/clutter/buildlink3.mk"
