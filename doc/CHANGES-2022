@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3133 2022/06/28 09:42:12 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3134 2022/06/28 10:03:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4706,3 +4706,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/tre-command to 0.4.0 [pin 2022-06-28]
 	Updated sysutils/zoxide to 0.8.2 [pin 2022-06-28]
 	Updated finance/gnucash-docs to 4.11 [wiz 2022-06-28]
+	Updated lang/perl5 to 5.36.0 [wiz 2022-06-28]
