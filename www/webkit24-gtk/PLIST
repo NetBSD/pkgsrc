@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2016/12/01 14:27:21 martin Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/06/28 11:26:24 nia Exp $
 bin/jsc-1
 include/webkitgtk-1.0/JavaScriptCore/JSBase.h
 include/webkitgtk-1.0/JavaScriptCore/JSContextRef.h
@@ -251,14 +251,14 @@ include/webkitgtk-1.0/webkitdom/WebKitDOMXPathNSResolver.h
 include/webkitgtk-1.0/webkitdom/WebKitDOMXPathResult.h
 include/webkitgtk-1.0/webkitdom/webkitdom.h
 include/webkitgtk-1.0/webkitdom/webkitdomdefines.h
-${PLIST.introspection}lib/girepository-1.0/JavaScriptCore-1.0.typelib
-${PLIST.introspection}lib/girepository-1.0/WebKit-1.0.typelib
+lib/girepository-1.0/JavaScriptCore-1.0.typelib
+lib/girepository-1.0/WebKit-1.0.typelib
 lib/libjavascriptcoregtk-1.0.la
 lib/libwebkitgtk-1.0.la
 lib/pkgconfig/javascriptcoregtk-1.0.pc
 lib/pkgconfig/webkit-1.0.pc
-${PLIST.introspection}share/gir-1.0/JavaScriptCore-1.0.gir
-${PLIST.introspection}share/gir-1.0/WebKit-1.0.gir
+share/gir-1.0/JavaScriptCore-1.0.gir
+share/gir-1.0/WebKit-1.0.gir
 share/gtk-doc/html/webkitdomgtk/WebKitDOMAttr.html
 share/gtk-doc/html/webkitdomgtk/WebKitDOMAudioTrack.html
 share/gtk-doc/html/webkitdomgtk/WebKitDOMAudioTrackList.html

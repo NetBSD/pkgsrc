@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2016/12/01 14:27:21 martin Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/06/28 11:26:24 nia Exp $
 bin/jsc-3
 include/webkitgtk-3.0/JavaScriptCore/JSBase.h
 include/webkitgtk-3.0/JavaScriptCore/JSContextRef.h
@@ -251,14 +251,14 @@ include/webkitgtk-3.0/webkitdom/WebKitDOMXPathNSResolver.h
 include/webkitgtk-3.0/webkitdom/WebKitDOMXPathResult.h
 include/webkitgtk-3.0/webkitdom/webkitdom.h
 include/webkitgtk-3.0/webkitdom/webkitdomdefines.h
-${PLIST.introspection}lib/girepository-1.0/JavaScriptCore-3.0.typelib
-${PLIST.introspection}lib/girepository-1.0/WebKit-3.0.typelib
+lib/girepository-1.0/JavaScriptCore-3.0.typelib
+lib/girepository-1.0/WebKit-3.0.typelib
 lib/libjavascriptcoregtk-3.0.la
 lib/libwebkitgtk-3.0.la
 lib/pkgconfig/javascriptcoregtk-3.0.pc
 lib/pkgconfig/webkitgtk-3.0.pc
-${PLIST.introspection}share/gir-1.0/JavaScriptCore-3.0.gir
-${PLIST.introspection}share/gir-1.0/WebKit-3.0.gir
+share/gir-1.0/JavaScriptCore-3.0.gir
+share/gir-1.0/WebKit-3.0.gir
 share/locale/ar/LC_MESSAGES/WebKitGTK-3.0.mo
 share/locale/as/LC_MESSAGES/WebKitGTK-3.0.mo
 share/locale/bg/LC_MESSAGES/WebKitGTK-3.0.mo
