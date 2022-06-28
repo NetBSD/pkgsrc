@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3136 2022/06/28 13:01:59 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.3137 2022/06/28 16:36:32 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4707,5 +4707,8 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/zoxide to 0.8.2 [pin 2022-06-28]
 	Updated finance/gnucash-docs to 4.11 [wiz 2022-06-28]
 	Updated lang/perl5 to 5.36.0 [wiz 2022-06-28]
+	Updated sysutils/xenstoretools to 4.15.2 [bouyer 2022-06-28]
+	Removed sysutils/xenkernel411 successor sysutils/xenkernel415 [bouyer 2022-06-28]
+	Removed sysutils/xentools411 successor sysutils/xentools415 [bouyer 2022-06-28]
 	Added time/calcurse version 4.8.0 [pin 2022-06-28]
 	Updated chat/element-web to 1.10.15 [gdt 2022-06-28]
