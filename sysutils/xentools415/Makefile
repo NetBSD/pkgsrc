@@ -1,25 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2022/06/28 11:36:07 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2022/06/28 16:26:34 bouyer Exp $
 #
+# VERSION is set in version.mk as it is shared with other packages
+.include        "version.mk"
+PKGREVISION=    2
 
-VERSION=	4.15.2
-DIST_SUBDIR=		xen415
-DISTNAME=		xen-${VERSION}
-PKGNAME=		xentools415-${VERSION}
-PKGREVISION=		2
 CATEGORIES=		sysutils
-MASTER_SITES=		https://downloads.xenproject.org/release/xen/${VERSION}/
-
-DISTFILES=		${DISTNAME}.tar.gz
-
-SEABIOS_VERSION=	1.14.0
-SEABIOS_DIST=		seabios-${SEABIOS_VERSION}.tar.gz
-DISTFILES+=		${SEABIOS_DIST}
-SITES.${SEABIOS_DIST}=	-http://xenbits.xen.org/gitweb/?p=seabios.git;a=snapshot;h=refs/tags/rel-${SEABIOS_VERSION};sf=tgz
-
-IPXE_VERSION=		988d2c13cdf0f0b4140685af35ced70ac5b3283c
-IPXE_DIST=		ipxe-${IPXE_VERSION}.tar.gz
-DISTFILES+=		${IPXE_DIST}
-SITES.${IPXE_DIST}=	-https://github.com/ipxe/ipxe/archive/${IPXE_VERSION}.tar.gz
 
 MAINTAINER=		bouyer@NetBSD.org
 HOMEPAGE=		https://xenproject.org/
