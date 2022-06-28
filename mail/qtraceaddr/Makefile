@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2022/02/07 09:01:02 schmonz Exp $
+# $NetBSD: Makefile,v 1.3 2022/06/28 11:34:34 wiz Exp $
 
 DISTNAME=		qtraceaddr
 PKGNAME=		${DISTNAME}-20061202
+PKGREVISION=		1
 CATEGORIES=		mail
 MASTER_SITES=		https://code.dogmap.org./qmail/
 DIST_SUBDIR=		${PKGNAME_NOREV}

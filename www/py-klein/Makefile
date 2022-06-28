@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2022/04/29 23:14:02 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2022/06/28 11:37:49 wiz Exp $
 
 DISTNAME=	klein-20.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=k/klein/}
 

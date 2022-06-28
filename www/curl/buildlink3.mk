@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.54 2021/12/08 16:02:46 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.55 2022/06/28 11:37:03 wiz Exp $
 
 BUILDLINK_TREE+=	curl
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	curl
 CURL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.curl+=	curl>=7.12.3
-BUILDLINK_ABI_DEPENDS.curl+=	curl>=7.80.0
+BUILDLINK_ABI_DEPENDS.curl+=	curl>=7.84.0nb1
 BUILDLINK_PKGSRCDIR.curl?=	../../www/curl
 
 pkgbase:= curl

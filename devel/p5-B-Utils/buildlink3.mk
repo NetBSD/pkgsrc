@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2011/11/15 16:02:34 sno Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2022/06/28 11:31:55 wiz Exp $
 
 BUILDLINK_TREE+=	p5-B-Utils
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	p5-B-Utils
 P5_B_UTILS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.p5-B-Utils+=	p5-B-Utils>=0.15nb1
+BUILDLINK_ABI_DEPENDS.p5-B-Utils?=	p5-B-Utils>=0.27nb7
 BUILDLINK_PKGSRCDIR.p5-B-Utils?=	../../devel/p5-B-Utils
 .endif # P5_B_UTILS_BUILDLINK3_MK
 

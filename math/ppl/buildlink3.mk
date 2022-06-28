@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2012/04/08 20:58:05 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2022/06/28 11:34:45 wiz Exp $
 
 BUILDLINK_TREE+=	ppl
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	ppl
 PPL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ppl+=	ppl>=0.11.2
+BUILDLINK_ABI_DEPENDS.ppl?=	ppl>=1.2nb4
 BUILDLINK_PKGSRCDIR.ppl?=	../../math/ppl
 
 .endif # PPL_BUILDLINK3_MK

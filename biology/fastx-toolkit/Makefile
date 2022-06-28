@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2022/04/05 18:48:57 bacon Exp $
+# $NetBSD: Makefile,v 1.2 2022/06/28 11:31:00 wiz Exp $
 
 DISTNAME=	fastx-toolkit-0.0.14.6
+PKGREVISION=	1
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=agordon/}
 GITHUB_PROJECT=	fastx_toolkit

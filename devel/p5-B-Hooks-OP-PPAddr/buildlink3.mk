@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2009/10/19 10:14:52 abs Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2022/06/28 11:31:55 wiz Exp $
 
 BUILDLINK_TREE+=	p5-B-Hooks-OP-PPAddr
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	p5-B-Hooks-OP-PPAddr
 P5_B_HOOKS_OP_PPADDR_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.p5-B-Hooks-OP-PPAddr+=	p5-B-Hooks-OP-PPAddr>=0.02
+BUILDLINK_ABI_DEPENDS.p5-B-Hooks-OP-PPAddr?=	p5-B-Hooks-OP-PPAddr>=0.06nb5
 BUILDLINK_PKGSRCDIR.p5-B-Hooks-OP-PPAddr?=	../../devel/p5-B-Hooks-OP-PPAddr
 .endif # P5_B_HOOKS_OP_PPADDR_BUILDLINK3_MK
 

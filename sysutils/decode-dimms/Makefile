@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.31 2021/10/28 20:18:20 pgoyette Exp $
+# $NetBSD: Makefile,v 1.32 2022/06/28 11:35:55 wiz Exp $
 
 # Track upstream's HEAD
 PKG_DATE=	20210722
 GIT_COMMIT=	d8bc1f1ff4b00a6bd988aa114100ae9b787f50d8
 DISTNAME=	i2c-tools-${GIT_COMMIT}
 PKGNAME=	decode-dimms-4.3.${PKG_DATE}
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	https://git.kernel.org/pub/scm/utils/i2c-tools/i2c-tools.git/snapshot/
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2021/05/24 19:52:29 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2022/06/28 11:34:09 wiz Exp $
 
 DISTNAME=		osmo-sdr-0.1
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		ham
 MASTER_SITES+=		http://cgit.osmocom.org/osmo-sdr/snapshot/
 EXTRACT_SUFX=		.tar.bz2

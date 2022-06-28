@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2018/01/07 13:04:20 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2022/06/28 11:34:14 wiz Exp $
 
 BUILDLINK_TREE+=	ossp-js
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	ossp-js
 OSSP_JS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ossp-js+=	ossp-js>=1.6.20070208nb1
+BUILDLINK_ABI_DEPENDS.ossp-js?=	ossp-js>=1.6.20070208nb13
 BUILDLINK_PKGSRCDIR.ossp-js?=	../../lang/ossp-js
 .include "../../lang/ossp-js/libm.mk"
 

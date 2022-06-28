@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2021/11/11 16:53:45 abs Exp $
+# $NetBSD: Makefile,v 1.2 2022/06/28 11:31:21 wiz Exp $
 
 DISTNAME=	DBD-MariaDB-1.21
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DBD/}
 

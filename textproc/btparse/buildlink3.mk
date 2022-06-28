@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2009/03/20 19:25:28 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2022/06/28 11:36:08 wiz Exp $
 
 BUILDLINK_TREE+=	btparse
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	btparse
 BTPARSE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.btparse+=	btparse>=0.34
+BUILDLINK_ABI_DEPENDS.btparse?=	btparse>=0.35nb10
 BUILDLINK_PKGSRCDIR.btparse?=	../../textproc/btparse
 .endif # BTPARSE_BUILDLINK3_MK
 

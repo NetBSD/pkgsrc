@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2021/05/24 19:54:08 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2022/06/28 11:35:53 wiz Exp $
 
 DISTNAME=	posh_0.12.6
 PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/p/posh/}
 EXTRACT_SUFX=	.tar.xz

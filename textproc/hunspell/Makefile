@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2021/11/28 19:24:19 nia Exp $
+# $NetBSD: Makefile,v 1.39 2022/06/28 11:36:10 wiz Exp $
 
 DISTNAME=	hunspell-1.7.0
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hunspell/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

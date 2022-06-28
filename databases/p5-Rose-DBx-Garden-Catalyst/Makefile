@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2021/05/24 19:49:41 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2022/06/28 11:31:29 wiz Exp $
 
 DISTNAME=	Rose-DBx-Garden-Catalyst-0.180
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Rose/}
 
