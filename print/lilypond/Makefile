@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.138 2022/06/28 11:35:29 wiz Exp $
+# $NetBSD: Makefile,v 1.139 2022/06/28 23:56:18 gutteridge Exp $
 
 DISTNAME=	lilypond-2.18.2
 PKGREVISION=	26
@@ -8,7 +8,7 @@ MASTER_SITES=	http://download.linuxaudio.org/lilypond/sources/v2.18/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://lilypond.org/
 COMMENT=	GNU Music Typesetter
-LICENSE=	gnu-gpl-v2
+LICENSE=	gnu-gpl-v3 AND gnu-fdl-v1.3 AND ofl-v1.1
 
 BUILD_DEPENDS+=	tex-metafont-[0-9]*:../../fonts/tex-metafont
 BUILD_DEPENDS+=	tex-metapost-[0-9]*:../../graphics/tex-metapost
