@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2022/04/10 02:28:39 gutteridge Exp $
+# $NetBSD: Makefile,v 1.81 2022/06/28 11:43:52 nia Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -23,6 +23,7 @@ CONF_FILES=	${EGDIR}/uca.xml ${PKG_SYSCONFDIR}/uca.xml
 
 .include "options.mk"
 
+.include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/buildlink3.mk"

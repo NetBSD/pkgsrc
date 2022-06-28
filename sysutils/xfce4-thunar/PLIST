@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2021/11/30 14:46:14 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.22 2022/06/28 11:43:52 nia Exp $
 bin/thunar
 bin/thunar-settings
 include/thunarx-3/thunarx/thunarx-config.h
@@ -16,7 +16,7 @@ include/thunarx-3/thunarx/thunarx-renamer-provider.h
 include/thunarx-3/thunarx/thunarx-renamer.h
 include/thunarx-3/thunarx/thunarx.h
 lib/Thunar/thunar-sendto-email
-${PLIST.introspection}lib/girepository-1.0/Thunarx-3.0.typelib
+lib/girepository-1.0/Thunarx-3.0.typelib
 lib/libthunarx-3.la
 lib/pkgconfig/thunarx-3.pc
 lib/systemd/user/thunar.service
@@ -35,7 +35,7 @@ share/dbus-1/services/org.xfce.Thunar.FileManager1.service
 share/dbus-1/services/org.xfce.Thunar.service
 share/doc/thunar/README.gtkrc
 share/examples/xfce4/Thunar/uca.xml
-${PLIST.introspection}share/gir-1.0/Thunarx-3.0.gir
+share/gir-1.0/Thunarx-3.0.gir
 share/gtk-doc/html/thunarx/ThunarxFileInfo.html
 share/gtk-doc/html/thunarx/ThunarxMenu.html
 share/gtk-doc/html/thunarx/ThunarxMenuItem.html
