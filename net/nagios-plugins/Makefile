@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.54 2022/06/15 14:10:08 taca Exp $
+# $NetBSD: Makefile,v 1.55 2022/06/28 11:35:03 wiz Exp $
 #
 
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	net sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

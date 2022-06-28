@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.83 2021/12/08 16:02:10 adam Exp $
+# $NetBSD: Makefile,v 1.84 2022/06/28 11:34:02 wiz Exp $
 
 DISTNAME=	gtkglext-1.2.0
-PKGREVISION=	46
+PKGREVISION=	47
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtkglext/}
 EXTRACT_SUFX=	.tar.bz2

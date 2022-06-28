@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2022/01/24 16:24:27 gdt Exp $
+# $NetBSD: Makefile,v 1.8 2022/06/28 11:35:13 wiz Exp $
 
 DISTNAME=	Net-SFTP-Foreign-1.93
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 

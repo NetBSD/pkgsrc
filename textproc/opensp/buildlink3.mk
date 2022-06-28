@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2018/01/07 13:04:35 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2022/06/28 11:36:13 wiz Exp $
 
 BUILDLINK_TREE+=	opensp
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	opensp
 OPENSP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.opensp+=	opensp>=1.5.1
-BUILDLINK_ABI_DEPENDS.opensp+=	opensp>=1.5.2nb1
+BUILDLINK_ABI_DEPENDS.opensp+=	opensp>=1.5.2nb11
 BUILDLINK_PKGSRCDIR.opensp?=	../../textproc/opensp
 
 PTHREAD_OPTS+=	require

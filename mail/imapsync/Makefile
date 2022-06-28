@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2021/12/30 10:06:21 prlw1 Exp $
+# $NetBSD: Makefile,v 1.26 2022/06/28 11:34:21 wiz Exp $
 
 DISTNAME=	imapsync-2.140
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=imapsync/}
 GITHUB_TAG=	refs/tags/${DISTNAME}

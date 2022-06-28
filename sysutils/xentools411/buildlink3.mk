@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2020/07/13 21:49:37 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2022/06/28 11:36:07 wiz Exp $
 
 BUILDLINK_TREE+=	xentools411
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	xentools411
 XENTOOLS411_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.xentools411+=	xentools411>=4.11.0
+BUILDLINK_ABI_DEPENDS.xentools411?=	xentools411>=4.11.4nb10
 BUILDLINK_PKGSRCDIR.xentools411?=	../../sysutils/xentools411
 
 .endif	# XENTOOLS411_BUILDLINK3_MK

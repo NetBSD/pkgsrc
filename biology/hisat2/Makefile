@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2022/03/17 16:01:11 bacon Exp $
+# $NetBSD: Makefile,v 1.8 2022/06/28 11:31:00 wiz Exp $
 
 DISTNAME=	hisat2-2.2.1
+PKGREVISION=	1
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=DaehwanKimLab/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

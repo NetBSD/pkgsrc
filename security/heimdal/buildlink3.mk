@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.67 2022/04/18 19:10:04 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.68 2022/06/28 11:35:35 wiz Exp $
 
 BUILDLINK_TREE+=	heimdal
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	heimdal
 HEIMDAL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.heimdal+=	heimdal>=0.4e
-BUILDLINK_ABI_DEPENDS.heimdal+=	heimdal>=7.7.0nb4
+BUILDLINK_ABI_DEPENDS.heimdal+=	heimdal>=7.7.0nb5
 BUILDLINK_PKGSRCDIR.heimdal?=	../../security/heimdal
 BUILDLINK_INCDIRS.heimdal?=	include/krb5
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2021/05/24 19:49:27 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2022/06/28 11:31:15 wiz Exp $
 .include		"../../cross/nios2/Makefile.common"
 PKGNAME=		nios2-gcc-${PKG_VERSION}
 PKG_VERSION=		4.7.3
-PKGREVISION=		9
+PKGREVISION=		10
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		GNU gcc for Altera FPGA Nios2 processor

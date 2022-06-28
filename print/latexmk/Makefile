@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2022/04/24 22:12:50 tnn Exp $
+# $NetBSD: Makefile,v 1.21 2022/06/28 11:35:29 wiz Exp $
 
 DISTNAME=	latexmk-463b
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	print
 MASTER_SITES=	http://users.phys.psu.edu/~collins/software/latexmk/
 EXTRACT_SUFX=	.zip

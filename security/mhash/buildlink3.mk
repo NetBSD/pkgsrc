@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2015/03/05 22:31:56 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2022/06/28 11:35:38 wiz Exp $
 
 BUILDLINK_TREE+=	mhash
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	mhash
 MHASH_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.mhash+=	mhash>=0.9.9nb6
+BUILDLINK_ABI_DEPENDS.mhash?=	mhash>=0.9.9nb13
 BUILDLINK_PKGSRCDIR.mhash?=	../../security/mhash
 .endif # MHASH_BUILDLINK3_MK
 

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2021/05/24 19:53:55 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2022/06/28 11:35:39 wiz Exp $
 #
 
 DISTNAME=	Authen-PluggableCaptcha-0.05
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	security perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Authen/}
 

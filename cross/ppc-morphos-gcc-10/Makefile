@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2021/07/25 17:31:10 js Exp $
+# $NetBSD: Makefile,v 1.3 2022/06/28 11:31:16 wiz Exp $
 
 DISTNAME=	sdk-source-20210211
 PKGNAME=	ppc-morphos-gcc-10-10.2.0
+PKGREVISION=	1
 CATEGORIES=	cross
 MASTER_SITES=	https://morphos-team.net/files/src/sdk/
 EXTRACT_SUFX=	.tar.xz

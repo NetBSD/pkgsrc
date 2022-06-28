@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2020/10/25 12:43:45 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2022/06/28 11:34:56 wiz Exp $
 
 BUILDLINK_TREE+=	libvpx
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libvpx
 LIBVPX_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libvpx+=	libvpx>=1.6.0
-BUILDLINK_ABI_DEPENDS.libvpx+=	libvpx>=1.6.1
+BUILDLINK_ABI_DEPENDS.libvpx+=	libvpx>=1.11.0nb1
 BUILDLINK_PKGSRCDIR.libvpx?=	../../multimedia/libvpx
 
 GCC_REQD+=	4.8

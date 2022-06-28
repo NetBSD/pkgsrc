@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2020/11/03 20:55:34 otis Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2022/06/28 11:35:59 wiz Exp $
 
 BUILDLINK_TREE+=	openipmi
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	openipmi
 OPENIPMI_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.openipmi+=	openipmi>=2.0.29
+BUILDLINK_ABI_DEPENDS.openipmi?=		openipmi>=2.0.29nb1
 BUILDLINK_PKGSRCDIR.openipmi?=		../../sysutils/openipmi
 
 .include "../../devel/popt/buildlink3.mk"

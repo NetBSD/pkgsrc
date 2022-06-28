@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2021/05/24 19:50:40 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2022/06/28 11:32:24 wiz Exp $
 
 DISTNAME=	File-DirSync-1.22
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	sysutils perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=File/}
 

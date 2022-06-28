@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2021/05/24 19:55:27 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2022/06/28 11:37:17 wiz Exp $
 
 DISTNAME=	Catalyst-View-Excel-Template-Plus-0.04
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Catalyst/}
 

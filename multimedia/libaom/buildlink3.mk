@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2021/10/09 20:36:04 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2022/06/28 11:34:56 wiz Exp $
 
 BUILDLINK_TREE+=	libaom
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libaom
 LIBAOM_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libaom+=	libaom>=1.0.0
-BUILDLINK_ABI_DEPENDS.libaom?=	libaom>=3.1.3
+BUILDLINK_ABI_DEPENDS.libaom?=	libaom>=3.3.0nb1
 BUILDLINK_PKGSRCDIR.libaom?=	../../multimedia/libaom
 .endif	# LIBAOM_BUILDLINK3_MK
 

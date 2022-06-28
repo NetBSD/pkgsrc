@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2009/03/20 19:25:21 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2022/06/28 11:35:38 wiz Exp $
 
 BUILDLINK_TREE+=	openpam
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	openpam
 OPENPAM_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.openpam+=	openpam>=20040210
+BUILDLINK_ABI_DEPENDS.openpam?=	openpam>=20190224nb4
 BUILDLINK_PKGSRCDIR.openpam?=	../../security/openpam
 
 .include "../../mk/dlopen.buildlink3.mk"

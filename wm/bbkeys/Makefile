@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2021/06/10 12:48:49 nia Exp $
+# $NetBSD: Makefile,v 1.38 2022/06/28 11:37:00 wiz Exp $
 #
 
 DISTNAME=	bbkeys-0.9.1
+PKGREVISION=	1
 CATEGORIES=	x11 wm
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bbkeys/}
 

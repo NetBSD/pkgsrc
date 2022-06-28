@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2020/05/04 17:35:52 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2022/06/28 11:33:44 wiz Exp $
 
 BUILDLINK_TREE+=	swig3
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	swig3
 SWIG3_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.swig3+=	swig3>=3.0.12
+BUILDLINK_ABI_DEPENDS.swig3?=	swig3>=3.0.12nb5
 BUILDLINK_PKGSRCDIR.swig3?=	../../devel/swig3
 
 .include "../../devel/pcre/buildlink3.mk"

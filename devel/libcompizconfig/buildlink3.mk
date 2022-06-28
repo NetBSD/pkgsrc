@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2022/04/18 19:09:47 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2022/06/28 11:31:46 wiz Exp $
 
 BUILDLINK_TREE+=	libcompizconfig
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libcompizconfig
 LIBCOMPIZCONFIG_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libcompizconfig+=	libcompizconfig>=0.6.0
-BUILDLINK_ABI_DEPENDS.libcompizconfig+=	libcompizconfig>=0.8.8nb58
+BUILDLINK_ABI_DEPENDS.libcompizconfig+=	libcompizconfig>=0.8.8nb59
 BUILDLINK_PKGSRCDIR.libcompizconfig?=	../../devel/libcompizconfig
 
 .include "../../devel/protobuf/buildlink3.mk"

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2021/05/24 19:54:20 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2022/06/28 11:36:06 wiz Exp $
 
 DISTNAME=	swatch-3.2.3
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=swatch/}
 

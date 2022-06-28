@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2021/05/24 19:49:10 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/06/28 11:31:00 wiz Exp $
 
 DISTNAME=	fastqc_v${PKGVERSION_NOREV}
 PKGNAME=	fastqc-0.11.9
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	biology
 MASTER_SITES=	https://www.bioinformatics.babraham.ac.uk/projects/fastqc/
 EXTRACT_SUFX=	.zip

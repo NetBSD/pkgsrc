@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2016/05/24 09:20:07 leot Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2022/06/28 11:33:43 wiz Exp $
 
 BUILDLINK_TREE+=	stfl
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	stfl
 STFL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.stfl+=	stfl>=0.19
+BUILDLINK_ABI_DEPENDS.stfl?=	stfl>=0.24nb7
 BUILDLINK_PKGSRCDIR.stfl?=	../../devel/stfl
 .endif	# STFL_BUILDLINK3_MK
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2021/05/24 19:54:20 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2022/06/28 11:36:06 wiz Exp $
 #
 
 DISTNAME=	tenshi-0.15
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	sysutils
 MASTER_SITES=	http://dev.inversepath.com/download/tenshi/
 

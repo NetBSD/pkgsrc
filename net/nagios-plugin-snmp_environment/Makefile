@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2021/05/24 19:53:20 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/06/28 11:35:03 wiz Exp $
 
 DISTNAME=	check_snmp_environment.pl
 VERSION=	0.7
-PKGREVISION=	2
+PKGREVISION=	3
 PKGNAME=	nagios-plugin-snmp_environment-${VERSION}
 CATEGORIES=	net sysutils
 MASTER_SITES=	-https://exchange.nagios.org/components/com_mtree/attachment.php?link_id=483&cf_id=24

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2021/03/18 15:04:54 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2022/06/28 11:31:32 wiz Exp $
 
 BUILDLINK_TREE+=	postgresql10-client
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	postgresql10-client
 POSTGRESQL10_CLIENT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.postgresql10-client+=	postgresql10-client>=10.0
-BUILDLINK_ABI_DEPENDS.postgresql10-client+=	postgresql10-client>=10.15nb1
+BUILDLINK_ABI_DEPENDS.postgresql10-client+=	postgresql10-client>=10.21nb1
 BUILDLINK_PKGSRCDIR.postgresql10-client?=	../../databases/postgresql10-client
 
 # This variable contains the libraries need to link most clients.

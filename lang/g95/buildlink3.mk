@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2009/03/20 19:24:48 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2022/06/28 11:34:10 wiz Exp $
 
 BUILDLINK_TREE+=	g95
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	g95
 G95_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.g95+=	g95>=0.91
+BUILDLINK_ABI_DEPENDS.g95?=	g95>=0.93nb15
 BUILDLINK_PKGSRCDIR.g95?=	../../lang/g95
 .endif # G95_BUILDLINK3_MK
 

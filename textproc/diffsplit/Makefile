@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2021/05/24 19:54:23 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2022/06/28 11:36:09 wiz Exp $
 # FreeBSD Id: ports/textproc/diffsplit/Makefile,v 1.7 2006/12/22 13:43:54 barner Exp
 
 DISTNAME=	diffsplit
 PKGNAME=	diffsplit-1.0
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	textproc devel misc
 MASTER_SITES=	http://www.pathname.com/~quinlan/software/diffsplit/
 EXTRACT_SUFX=

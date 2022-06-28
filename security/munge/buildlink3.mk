@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2012/02/19 03:51:17 asau Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2022/06/28 11:35:38 wiz Exp $
 
 BUILDLINK_TREE+=	munge
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	munge
 MUNGE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.munge+=	munge>=0.5.10
+BUILDLINK_ABI_DEPENDS.munge?=	munge>=0.5.13nb7
 BUILDLINK_PKGSRCDIR.munge?=	../../security/munge
 
 .endif	# MUNGE_BUILDLINK3_MK

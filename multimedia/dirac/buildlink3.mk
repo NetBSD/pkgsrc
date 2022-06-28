@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2009/06/11 17:28:42 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2022/06/28 11:34:53 wiz Exp $
 
 BUILDLINK_TREE+=	dirac
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	dirac
 DIRAC_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.dirac+=	dirac>=1.0.2
+BUILDLINK_ABI_DEPENDS.dirac?=	dirac>=1.0.2nb11
 BUILDLINK_PKGSRCDIR.dirac?=	../../multimedia/dirac
 .endif # DIRAC_BUILDLINK3_MK
 

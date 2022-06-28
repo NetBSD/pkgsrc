@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2021/05/24 19:49:24 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2022/06/28 11:31:13 wiz Exp $
 
 DISTNAME=	chkjis
 PKGNAME=	p5-chkjis-${VERSION}
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	japanese converters perl5
 MASTER_SITES=	http://www2d.biglobe.ne.jp/~msyk/software/perl5/
 EXTRACT_SUFX=	.txt

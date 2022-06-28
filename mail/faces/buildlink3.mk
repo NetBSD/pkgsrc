@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2009/03/20 19:24:54 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2022/06/28 11:34:20 wiz Exp $
 
 BUILDLINK_TREE+=	faces
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	faces
 FACES_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.faces+=	faces>=1.6.1nb1
-BUILDLINK_ABI_DEPENDS.faces+=	faces>=1.6.1nb4
+BUILDLINK_ABI_DEPENDS.faces+=	faces>=1.6.1nb15
 BUILDLINK_PKGSRCDIR.faces?=	../../mail/faces
 .endif # FACES_BUILDLINK3_MK
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2021/05/24 19:49:12 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2022/06/28 11:31:02 wiz Exp $
 
 DISTNAME=	verilator-4.100
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	cad
 MASTER_SITES=	https://www.veripool.org/ftp/
 EXTRACT_SUFX=	.tgz

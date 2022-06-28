@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2021/05/24 19:53:48 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2022/06/28 11:35:31 wiz Exp $
 
 DISTNAME=	checkend
 PKGNAME=	tex-${DISTNAME}-1.0
-PKGREVISION=	3
+PKGREVISION=	4
 TEXLIVE_REV=	51475
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

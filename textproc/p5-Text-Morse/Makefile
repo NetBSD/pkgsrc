@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2021/12/10 18:42:53 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 2022/06/28 11:36:33 wiz Exp $
 
 DISTNAME=	Text-Morse-0.07
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	perl5 devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Text/}
 

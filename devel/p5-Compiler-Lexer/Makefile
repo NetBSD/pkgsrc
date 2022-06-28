@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2021/05/24 19:50:20 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/06/28 11:32:05 wiz Exp $
 
 DISTNAME=	Compiler-Lexer-0.23
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Compiler/}
 

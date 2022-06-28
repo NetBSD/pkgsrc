@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2021/10/21 07:31:47 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2022/06/28 11:36:12 wiz Exp $
 
 DISTNAME=	mandoc-1.14.6
+PKGREVISION=	1
 CATEGORIES=	textproc devel
 MASTER_SITES=	http://mandoc.bsd.lv/snapshots/
 

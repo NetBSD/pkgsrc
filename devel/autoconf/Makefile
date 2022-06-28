@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.101 2021/05/24 19:49:52 wiz Exp $
+# $NetBSD: Makefile,v 1.102 2022/06/28 11:31:39 wiz Exp $
 #
 # When updating this package, please update mk/gnu-config/config.guess and
 # mk/gnu-config/config.sub as well.
 
 DISTNAME=		autoconf-2.71
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNU:=autoconf/}
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2021/05/24 19:53:18 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2022/06/28 11:35:00 wiz Exp $
 
 DISTNAME=	ipcalc-0.41
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	net
 MASTER_SITES=	http://jodies.de/ipcalc-archive/
 

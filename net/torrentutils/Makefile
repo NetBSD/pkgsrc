@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2021/05/24 19:53:38 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2022/06/28 11:35:21 wiz Exp $
 
 DISTNAME=		torrentutils-0.3.0
-PKGREVISION=		14
+PKGREVISION=		15
 CATEGORIES=		net
 MASTER_SITES=		#
 

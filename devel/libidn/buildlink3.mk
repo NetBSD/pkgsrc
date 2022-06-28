@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2011/04/22 13:42:06 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2022/06/28 11:31:47 wiz Exp $
 
 BUILDLINK_TREE+=	libidn
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libidn
 LIBIDN_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libidn+=	libidn>=0.4.6
-BUILDLINK_ABI_DEPENDS.libidn+=	libidn>=1.20nb1
+BUILDLINK_ABI_DEPENDS.libidn+=	libidn>=1.38nb1
 BUILDLINK_PKGSRCDIR.libidn?=	../../devel/libidn
 
 .include "../../converters/libiconv/buildlink3.mk"

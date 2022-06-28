@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2022/06/16 15:43:55 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2022/06/28 11:34:10 wiz Exp $
 
 BUILDLINK_TREE+=	gcc12
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gcc12
 GCC12_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gcc12+=	gcc12>=${_GCC_REQD}
-BUILDLINK_ABI_DEPENDS.gcc12+=	gcc12>=12.1
+BUILDLINK_ABI_DEPENDS.gcc12+=	gcc12>=12.1.0nb1
 BUILDLINK_PKGSRCDIR.gcc12=	../../lang/gcc12
 BUILDLINK_DEPMETHOD.gcc12?=	build
 

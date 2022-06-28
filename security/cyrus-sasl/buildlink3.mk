@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2012/12/16 01:36:44 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2022/06/28 11:35:34 wiz Exp $
 
 BUILDLINK_TREE+=	cyrus-sasl
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	cyrus-sasl
 CYRUS_SASL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.cyrus-sasl+=	cyrus-sasl>=2.1.12
-BUILDLINK_ABI_DEPENDS.cyrus-sasl+=	cyrus-sasl>=2.1.26
+BUILDLINK_ABI_DEPENDS.cyrus-sasl+=	cyrus-sasl>=2.1.28nb1
 BUILDLINK_PKGSRCDIR.cyrus-sasl?=	../../security/cyrus-sasl
 
 # Cyrus SASL mechanisms are shared modules loaded via dlopen().

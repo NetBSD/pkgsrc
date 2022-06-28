@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2021/12/08 16:07:04 adam Exp $
+# $NetBSD: Makefile,v 1.21 2022/06/28 11:37:52 wiz Exp $
 
 DISTNAME=	gcolor2-0.4
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GENTOO:=distfiles/}
 

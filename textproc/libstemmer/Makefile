@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2022/04/25 23:22:58 tnn Exp $
+# $NetBSD: Makefile,v 1.6 2022/06/28 11:36:12 wiz Exp $
 
 DISTNAME=	snowball-2.1.0
 PKGNAME=	${DISTNAME:S/snowball/libstemmer/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=snowballstem/}
 GITHUB_PROJECT=	snowball

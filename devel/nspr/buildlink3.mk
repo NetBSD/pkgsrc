@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.26 2022/05/19 09:18:02 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.27 2022/06/28 11:31:49 wiz Exp $
 
 BUILDLINK_TREE+=	nspr
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	nspr
 NSPR_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.nspr+=	nspr>=4.9.3.2
+BUILDLINK_ABI_DEPENDS.nspr?=	nspr>=4.34nb1
 BUILDLINK_PKGSRCDIR.nspr?=	../../devel/nspr
 
 BUILDLINK_LIBDIRS.nspr+=	lib/nspr

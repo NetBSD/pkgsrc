@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2021/05/24 19:50:40 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2022/06/28 11:32:25 wiz Exp $
 
 DISTNAME=	File-Find-Rule-VCS-1.08
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=File/}
 

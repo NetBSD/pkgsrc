@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2021/05/24 19:52:39 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2022/06/28 11:34:19 wiz Exp $
 
 DISTNAME=		dcc-1.3.159
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		mail
 MASTER_SITES=		https://www.dcc-servers.net/src/dcc/old/
 EXTRACT_SUFX=		.tar.Z

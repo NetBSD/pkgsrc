@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2022/01/19 22:10:16 nia Exp $
+# $NetBSD: Makefile,v 1.39 2022/06/28 11:35:51 wiz Exp $
 #
 
 DISTNAME=		skey-1.1.5
-PKGREVISION=		13
+PKGREVISION=		14
 CATEGORIES=		security
 MASTER_SITES=		http://www.sparc.spb.su/solaris/skey/
 #MASTER_SITES=		ftp://ftp.math.ethz.ch/hg/pub/opie/
