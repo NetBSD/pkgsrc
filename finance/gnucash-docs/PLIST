@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2022/03/30 08:21:10 wiz Exp $
+@comment $NetBSD: PLIST,v 1.23 2022/06/28 09:30:51 wiz Exp $
 share/gnome/help/gnucash-guide/C/appendixa.xml
 share/gnome/help/gnucash-guide/C/appendixd.xml
 share/gnome/help/gnucash-guide/C/ch_accts.xml
@@ -28,6 +28,7 @@ share/gnome/help/gnucash-guide/C/figures/accts_DefaultIncomeAccounts.png
 share/gnome/help/gnucash-guide/C/figures/accts_toplevel.png
 share/gnome/help/gnucash-guide/C/figures/accts_tree.png
 share/gnome/help/gnucash-guide/C/figures/basics_AccountRelationships.png
+share/gnome/help/gnucash-guide/C/figures/basics_AccountRelationships.svg
 share/gnome/help/gnucash-guide/C/figures/basics_Accounts.png
 share/gnome/help/gnucash-guide/C/figures/basics_AccountsSampleQIF.png
 share/gnome/help/gnucash-guide/C/figures/basics_CheckAccount.png
@@ -219,7 +220,8 @@ share/gnome/help/gnucash-guide/C/figures/txns_sxn_ledger3.png
 share/gnome/help/gnucash-guide/C/figures/txns_sxn_ledger4.png
 share/gnome/help/gnucash-guide/C/gnc-docbookx.dtd
 share/gnome/help/gnucash-guide/C/gnc-glossary.xml
-share/gnome/help/gnucash-guide/C/gnc-locale-C.dtd
+share/gnome/help/gnucash-guide/C/gnc-gui-C.dtd
+share/gnome/help/gnucash-guide/C/gnc-gui-struct.dtd
 share/gnome/help/gnucash-guide/C/gnucash-guide.xml
 share/gnome/help/gnucash-guide/C/legal.xml
 share/gnome/help/gnucash-guide/de/appendixa.xml
@@ -254,6 +256,7 @@ share/gnome/help/gnucash-guide/de/figures/accts_DefaultIncomeAccounts.png
 share/gnome/help/gnucash-guide/de/figures/accts_toplevel.png
 share/gnome/help/gnucash-guide/de/figures/accts_tree.png
 share/gnome/help/gnucash-guide/de/figures/basics_AccountRelationships.png
+share/gnome/help/gnucash-guide/de/figures/basics_AccountRelationships.svg
 share/gnome/help/gnucash-guide/de/figures/basics_Accounts.png
 share/gnome/help/gnucash-guide/de/figures/basics_AccountsSampleQIF.png
 share/gnome/help/gnucash-guide/de/figures/basics_CheckAccount.png
@@ -450,8 +453,9 @@ share/gnome/help/gnucash-guide/de/figures/txns_sxn_ledger3.png
 share/gnome/help/gnucash-guide/de/figures/txns_sxn_ledger4.png
 share/gnome/help/gnucash-guide/de/glossary.xml
 share/gnome/help/gnucash-guide/de/gnc-docbookx.dtd
-share/gnome/help/gnucash-guide/de/gnc-locale-C.dtd
-share/gnome/help/gnucash-guide/de/gnc-locale-de.dtd
+share/gnome/help/gnucash-guide/de/gnc-gui-C.dtd
+share/gnome/help/gnucash-guide/de/gnc-gui-de.dtd
+share/gnome/help/gnucash-guide/de/gnc-gui-struct.dtd
 share/gnome/help/gnucash-guide/de/gnucash-guide.xml
 share/gnome/help/gnucash-guide/it/figures/accts_CreateAssetsAccount.png
 share/gnome/help/gnucash-guide/it/figures/accts_DefaultExpenseAccounts.png
@@ -459,6 +463,7 @@ share/gnome/help/gnucash-guide/it/figures/accts_DefaultIncomeAccounts.png
 share/gnome/help/gnucash-guide/it/figures/accts_toplevel.png
 share/gnome/help/gnucash-guide/it/figures/accts_tree.png
 share/gnome/help/gnucash-guide/it/figures/basics_AccountRelationships.png
+share/gnome/help/gnucash-guide/it/figures/basics_AccountRelationships.svg
 share/gnome/help/gnucash-guide/it/figures/basics_Accounts.png
 share/gnome/help/gnucash-guide/it/figures/basics_AccountsSampleQIF.png
 share/gnome/help/gnucash-guide/it/figures/basics_CheckAccount.png
@@ -618,8 +623,9 @@ share/gnome/help/gnucash-guide/it/figures/txns_sxn_ledger2.png
 share/gnome/help/gnucash-guide/it/figures/txns_sxn_ledger3.png
 share/gnome/help/gnucash-guide/it/figures/txns_sxn_ledger4.png
 share/gnome/help/gnucash-guide/it/gnc-docbookx.dtd
-share/gnome/help/gnucash-guide/it/gnc-locale-C.dtd
-share/gnome/help/gnucash-guide/it/gnc-locale-it.dtd
+share/gnome/help/gnucash-guide/it/gnc-gui-C.dtd
+share/gnome/help/gnucash-guide/it/gnc-gui-it.dtd
+share/gnome/help/gnucash-guide/it/gnc-gui-struct.dtd
 share/gnome/help/gnucash-guide/it/gnucash-guide.xml
 share/gnome/help/gnucash-guide/ja/appendixa.xml
 share/gnome/help/gnucash-guide/ja/appendixd.xml
@@ -647,6 +653,7 @@ share/gnome/help/gnucash-guide/ja/figures/accts_DefaultIncomeAccounts.png
 share/gnome/help/gnucash-guide/ja/figures/accts_toplevel.png
 share/gnome/help/gnucash-guide/ja/figures/accts_tree.png
 share/gnome/help/gnucash-guide/ja/figures/basics_AccountRelationships.png
+share/gnome/help/gnucash-guide/ja/figures/basics_AccountRelationships.svg
 share/gnome/help/gnucash-guide/ja/figures/basics_Accounts.png
 share/gnome/help/gnucash-guide/ja/figures/basics_AccountsSampleQIF.png
 share/gnome/help/gnucash-guide/ja/figures/basics_CheckAccount.png
@@ -828,8 +835,9 @@ share/gnome/help/gnucash-guide/ja/figures/txns_sxn_ledger2.png
 share/gnome/help/gnucash-guide/ja/figures/txns_sxn_ledger3.png
 share/gnome/help/gnucash-guide/ja/figures/txns_sxn_ledger4.png
 share/gnome/help/gnucash-guide/ja/gnc-docbookx.dtd
-share/gnome/help/gnucash-guide/ja/gnc-locale-C.dtd
-share/gnome/help/gnucash-guide/ja/gnc-locale-ja.dtd
+share/gnome/help/gnucash-guide/ja/gnc-gui-C.dtd
+share/gnome/help/gnucash-guide/ja/gnc-gui-ja.dtd
+share/gnome/help/gnucash-guide/ja/gnc-gui-struct.dtd
 share/gnome/help/gnucash-guide/ja/gnucash-guide.xml
 share/gnome/help/gnucash-guide/ja/legal.xml
 share/gnome/help/gnucash-guide/pt/appendixa.xml
@@ -860,6 +868,7 @@ share/gnome/help/gnucash-guide/pt/figures/accts_DefaultIncomeAccounts.png
 share/gnome/help/gnucash-guide/pt/figures/accts_toplevel.png
 share/gnome/help/gnucash-guide/pt/figures/accts_tree.png
 share/gnome/help/gnucash-guide/pt/figures/basics_AccountRelationships.png
+share/gnome/help/gnucash-guide/pt/figures/basics_AccountRelationships.svg
 share/gnome/help/gnucash-guide/pt/figures/basics_Accounts.png
 share/gnome/help/gnucash-guide/pt/figures/basics_AccountsSampleQIF.png
 share/gnome/help/gnucash-guide/pt/figures/basics_CheckAccount.png
@@ -1025,8 +1034,9 @@ share/gnome/help/gnucash-guide/pt/figures/txns_sxn_ledger2.png
 share/gnome/help/gnucash-guide/pt/figures/txns_sxn_ledger3.png
 share/gnome/help/gnucash-guide/pt/figures/txns_sxn_ledger4.png
 share/gnome/help/gnucash-guide/pt/gnc-docbookx.dtd
-share/gnome/help/gnucash-guide/pt/gnc-locale-C.dtd
-share/gnome/help/gnucash-guide/pt/gnc-locale-pt.dtd
+share/gnome/help/gnucash-guide/pt/gnc-gui-C.dtd
+share/gnome/help/gnucash-guide/pt/gnc-gui-pt.dtd
+share/gnome/help/gnucash-guide/pt/gnc-gui-struct.dtd
 share/gnome/help/gnucash-guide/pt/gnucash-guide.xml
 share/gnome/help/gnucash-guide/pt/legal.xml
 share/gnome/help/gnucash-help/C/Help_ch_Account-Actions.xml
@@ -1093,7 +1103,8 @@ share/gnome/help/gnucash-help/C/figures/welcome.png
 share/gnome/help/gnucash-help/C/figures/window-main-empty.png
 share/gnome/help/gnucash-help/C/figures/window-tip.png
 share/gnome/help/gnucash-help/C/gnc-docbookx.dtd
-share/gnome/help/gnucash-help/C/gnc-locale-C.dtd
+share/gnome/help/gnucash-help/C/gnc-gui-C.dtd
+share/gnome/help/gnucash-help/C/gnc-gui-struct.dtd
 share/gnome/help/gnucash-help/C/gnucash-help.xml
 share/gnome/help/gnucash-help/de/Help_ch_Account-Actions.xml
 share/gnome/help/gnucash-help/de/Help_ch_Business.xml
@@ -1113,12 +1124,15 @@ share/gnome/help/gnucash-help/de/Help_para-assist-intro.xml
 share/gnome/help/gnucash-help/de/Help_tips-appendix.xml
 share/gnome/help/gnucash-help/de/Help_txf-categories.xml
 share/gnome/help/gnucash-help/de/ch_Finance-Quote.xml
+share/gnome/help/gnucash-help/de/figures/AccountTreeCascade.png
 share/gnome/help/gnucash-help/de/figures/AccountTreeCreate.png
 share/gnome/help/gnucash-help/de/figures/AccountTree_Export_CSV.png
 share/gnome/help/gnucash-help/de/figures/AccountTree_Export_dbms.png
 share/gnome/help/gnucash-help/de/figures/AccountTree_Export_file.png
 share/gnome/help/gnucash-help/de/figures/AccountTree_Import_CSV.png
 share/gnome/help/gnucash-help/de/figures/AccountTree_Import_CSV_Preview.png
+share/gnome/help/gnucash-help/de/figures/AcctCreate_General.png
+share/gnome/help/gnucash-help/de/figures/AcctCreate_OpenBal.png
 share/gnome/help/gnucash-help/de/figures/AcctViewOptions-0.png
 share/gnome/help/gnucash-help/de/figures/AcctViewOptions-1.png
 share/gnome/help/gnucash-help/de/figures/Help_AccountReg_Screen.png
@@ -1156,9 +1170,25 @@ share/gnome/help/gnucash-help/de/figures/Help_Reset_Warnings.png
 share/gnome/help/gnucash-help/de/figures/Help_Scheduled_Transactions.png
 share/gnome/help/gnucash-help/de/figures/Help_Style_Choose.png
 share/gnome/help/gnucash-help/de/figures/Help_Style_New.png
+share/gnome/help/gnucash-help/de/figures/Help_Tool_LotsBus.png
+share/gnome/help/gnucash-help/de/figures/Help_Tool_LotsStk.png
+share/gnome/help/gnucash-help/de/figures/Help_Tool_Lots_h_double_arrow.png
+share/gnome/help/gnucash-help/de/figures/Help_Tool_Lots_v_double_arrow.png
 share/gnome/help/gnucash-help/de/figures/Help_Trans_Assoc_Dialog.png
 share/gnome/help/gnucash-help/de/figures/Help_Trans_Assoc_Symbols.png
+share/gnome/help/gnucash-help/de/figures/Help_TxRptOpt_Screen.png
 share/gnome/help/gnucash-help/de/figures/Main-window-callouts.png
+share/gnome/help/gnucash-help/de/figures/Tools_CloseBook.png
+share/gnome/help/gnucash-help/de/figures/Tools_PriceDatabase.png
+share/gnome/help/gnucash-help/de/figures/Tools_PriceEditor_add.png
+share/gnome/help/gnucash-help/de/figures/Tools_PriceEditor_del.png
+share/gnome/help/gnucash-help/de/figures/Tools_SecurityEditor.png
+share/gnome/help/gnucash-help/de/figures/Tools_SecurityEditor_add.png
+share/gnome/help/gnucash-help/de/figures/Tools_SecurityEditor_edit.png
+share/gnome/help/gnucash-help/de/figures/chart_acct_delete_01.png
+share/gnome/help/gnucash-help/de/figures/chart_acct_delete_02.png
+share/gnome/help/gnucash-help/de/figures/chart_acct_delete_03.png
+share/gnome/help/gnucash-help/de/figures/chart_acct_delete_msg.png
 share/gnome/help/gnucash-help/de/figures/column-selector-0.png
 share/gnome/help/gnucash-help/de/figures/column-selector-1.png
 share/gnome/help/gnucash-help/de/figures/main-window-small.png
@@ -1171,8 +1201,9 @@ share/gnome/help/gnucash-help/de/figures/welcome-cancel.png
 share/gnome/help/gnucash-help/de/figures/welcome.png
 share/gnome/help/gnucash-help/de/figures/window-main-empty.png
 share/gnome/help/gnucash-help/de/gnc-docbookx.dtd
-share/gnome/help/gnucash-help/de/gnc-locale-C.dtd
-share/gnome/help/gnucash-help/de/gnc-locale-de.dtd
+share/gnome/help/gnucash-help/de/gnc-gui-C.dtd
+share/gnome/help/gnucash-help/de/gnc-gui-de.dtd
+share/gnome/help/gnucash-help/de/gnc-gui-struct.dtd
 share/gnome/help/gnucash-help/de/gnucash-help.xml
 share/gnome/help/gnucash-help/de/para-assist-buttons.xml
 share/gnome/help/gnucash-help/it/figures/Help_AccountReg_Screen.png
@@ -1192,8 +1223,9 @@ share/gnome/help/gnucash-help/it/figures/Help_Pref_Windows.png
 share/gnome/help/gnucash-help/it/figures/Help_Report_Screen.png
 share/gnome/help/gnucash-help/it/figures/Main-window-callouts.png
 share/gnome/help/gnucash-help/it/gnc-docbookx.dtd
-share/gnome/help/gnucash-help/it/gnc-locale-C.dtd
-share/gnome/help/gnucash-help/it/gnc-locale-it.dtd
+share/gnome/help/gnucash-help/it/gnc-gui-C.dtd
+share/gnome/help/gnucash-help/it/gnc-gui-it.dtd
+share/gnome/help/gnucash-help/it/gnc-gui-struct.dtd
 share/gnome/help/gnucash-help/it/gnucash-help.xml
 share/gnome/help/gnucash-help/pt/Help_ch_Account-Actions.xml
 share/gnome/help/gnucash-help/pt/Help_ch_Business.xml
@@ -1245,8 +1277,9 @@ share/gnome/help/gnucash-help/pt/figures/small_icon.png
 share/gnome/help/gnucash-help/pt/figures/split_transaction.png
 share/gnome/help/gnucash-help/pt/figures/transfer.png
 share/gnome/help/gnucash-help/pt/gnc-docbookx.dtd
-share/gnome/help/gnucash-help/pt/gnc-locale-C.dtd
-share/gnome/help/gnucash-help/pt/gnc-locale-pt.dtd
+share/gnome/help/gnucash-help/pt/gnc-gui-C.dtd
+share/gnome/help/gnucash-help/pt/gnc-gui-pt.dtd
+share/gnome/help/gnucash-help/pt/gnc-gui-struct.dtd
 share/gnome/help/gnucash-help/pt/gnucash-help.xml
 share/gnucash-docs/COPYING
 share/gnucash-docs/COPYING-DOCS
