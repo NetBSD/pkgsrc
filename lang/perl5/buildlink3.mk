@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.70 2021/05/24 17:46:25 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.71 2022/06/28 10:02:51 wiz Exp $
 
 BUILDLINK_TREE+=	perl
 
@@ -6,13 +6,13 @@ BUILDLINK_TREE+=	perl
 PERL_BUILDLINK3_MK:=
 
 .include "../../mk/bsd.fast.prefs.mk"
-PERL5_REQD+=			5.34.0
+PERL5_REQD+=			5.36.0
 .for _perl5_ver_ in ${PERL5_REQD}
 BUILDLINK_API_DEPENDS.perl+=	perl>=${_perl5_ver_}
 .endfor
-# Prevent p5-* etc. packages built for 5.34.0 to be used
+# Prevent p5-* etc. packages built for 5.36.0 to be used
 # with the next incompatible version of perl:
-BUILDLINK_API_DEPENDS.perl+=	perl<5.36.0
+BUILDLINK_API_DEPENDS.perl+=	perl<5.38.0
 
 BUILDLINK_PKGSRCDIR.perl?=	../../lang/perl5
 
