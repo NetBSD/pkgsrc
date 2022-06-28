@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3131 2022/06/28 09:32:29 pin Exp $
+$NetBSD: CHANGES-2022,v 1.3132 2022/06/28 09:33:43 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4704,3 +4704,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated editors/ced to 0.2.2 [pin 2022-06-28]
 	Updated audio/spotify-player to 0.9.2 [pin 2022-06-28]
 	Updated sysutils/tre-command to 0.4.0 [pin 2022-06-28]
+	Updated sysutils/zoxide to 0.8.2 [pin 2022-06-28]
