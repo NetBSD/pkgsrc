@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3137 2022/06/28 16:36:32 bouyer Exp $
+$NetBSD: CHANGES-2022,v 1.3138 2022/06/28 20:15:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4712,3 +4712,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed sysutils/xentools411 successor sysutils/xentools415 [bouyer 2022-06-28]
 	Added time/calcurse version 4.8.0 [pin 2022-06-28]
 	Updated chat/element-web to 1.10.15 [gdt 2022-06-28]
+	Updated archivers/libzip to 1.9.2 [wiz 2022-06-28]
