@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2022/06/27 15:29:15 fcambus Exp $
+# $NetBSD: Makefile,v 1.8 2022/06/28 11:33:46 wiz Exp $
 
 DISTNAME=	le-1.16.8
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	editors
 MASTER_SITES=	http://lav.yar.ru/download/le/
 

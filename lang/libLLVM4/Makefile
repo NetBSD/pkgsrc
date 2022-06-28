@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2021/05/24 19:52:33 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2022/06/28 11:34:13 wiz Exp $
 
 DISTNAME=	llvm-4.0.1.src
 PKGNAME=	${DISTNAME:S/llvm/libLLVM4/:S/.src//}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	lang devel
 MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz

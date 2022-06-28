@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2021/05/24 19:49:32 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2022/06/28 11:31:21 wiz Exp $
 
 DISTNAME=	Class-DBI-BaseDSN-1.22
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Class/}
 

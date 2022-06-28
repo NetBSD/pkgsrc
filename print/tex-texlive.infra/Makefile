@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2022/04/17 10:24:32 markd Exp $
+# $NetBSD: Makefile,v 1.31 2022/06/28 11:35:33 wiz Exp $
 
 DISTNAME=	texlive.infra
 PKGNAME=	tex-${DISTNAME}-2022
+PKGREVISION=	1
 TEXLIVE_REV=	62297
 
 MAINTAINER=	minskim@NetBSD.org

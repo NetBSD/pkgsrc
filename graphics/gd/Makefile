@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.131 2021/09/19 19:25:14 prlw1 Exp $
+# $NetBSD: Makefile,v 1.132 2022/06/28 11:34:00 wiz Exp $
 
 DISTNAME=	libgd-2.3.3
 PKGNAME=	${DISTNAME:S/libgd/gd/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libgd/}
 GITHUB_PROJECT=	libgd

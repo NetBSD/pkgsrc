@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2021/05/24 19:54:19 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2022/06/28 11:36:05 wiz Exp $
 
 PKGNAME=	shelldap-1.5.1
-PKGREVISION=	3
+PKGREVISION=	4
 DISTNAME=	c06315e
 CATEGORIES=	sysutils
 MASTER_SITES=	http://code.martini.nu/shelldap/archive/

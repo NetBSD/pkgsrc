@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2021/09/03 11:19:34 adam Exp $
+# $NetBSD: Makefile,v 1.6 2022/06/28 11:33:41 wiz Exp $
 
+PKGREVISION= 1
 .include "../../devel/thrift/Makefile.version"
 
 PKGNAME=	p5-${DISTNAME}

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2021/04/15 11:23:04 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2022/06/28 11:36:06 wiz Exp $
 
 BUILDLINK_TREE+=	ups-nut
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ups-nut
 UPS_NUT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ups-nut+=	ups-nut>=2.7.4
-BUILDLINK_ABI_DEPENDS.ups-nut?=	ups-nut>=2.7.4nb6
+BUILDLINK_ABI_DEPENDS.ups-nut?=	ups-nut>=2.8.0nb1
 BUILDLINK_PKGSRCDIR.ups-nut?=	../../sysutils/ups-nut
 
 pkgbase:= ups-nut

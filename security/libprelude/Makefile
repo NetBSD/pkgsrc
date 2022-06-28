@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.72 2021/12/08 16:02:34 adam Exp $
+# $NetBSD: Makefile,v 1.73 2022/06/28 11:35:36 wiz Exp $
 #
 
-PKGREVISION=	26
+PKGREVISION=	27
 COMMENT=	LibPrelude libraries and c++ easy bindings
 LICENSE=	gnu-gpl-v2
 

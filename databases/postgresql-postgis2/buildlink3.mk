@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.20 2022/04/18 19:09:43 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.21 2022/06/28 11:31:32 wiz Exp $
 
 BUILDLINK_TREE+=	postgresql-postgis
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	postgresql-postgis
 POSTGRESQL_POSTGIS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.postgresql-postgis+=	postgresql${PGSQL_VERSION}-postgis>=2.0
-BUILDLINK_ABI_DEPENDS.postgresql-postgis?=	postgresql14-postgis>=3.2.1nb2
+BUILDLINK_ABI_DEPENDS.postgresql-postgis?=	postgresql13-postgis>=3.2.1nb4
 BUILDLINK_PKGSRCDIR.postgresql-postgis?=	../../databases/postgresql-postgis2
 
 .include "../../geography/geos/buildlink3.mk"

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2021/05/24 19:50:13 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2022/06/28 11:31:59 wiz Exp $
 
 DISTNAME=	Carp-Clan-6.08
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Carp/}
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2021/05/24 19:50:30 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2022/06/28 11:32:15 wiz Exp $
 
 DISTNAME=	Devel-Caller-IgnoreNamespaces-1.1
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Devel/}
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2021/06/06 01:33:13 markd Exp $
+# $NetBSD: Makefile,v 1.11 2022/06/28 11:36:50 wiz Exp $
 
 DISTNAME=	xindy
 PKGNAME=	tex-${DISTNAME}-2.5.1.59003
+PKGREVISION=	1
 TEXLIVE_REV=	59003
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

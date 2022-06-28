@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2021/05/24 19:53:46 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2022/06/28 11:35:29 wiz Exp $
 
 DISTNAME=	if-psprint-1.10
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_GITHUB:=abs0/}
 

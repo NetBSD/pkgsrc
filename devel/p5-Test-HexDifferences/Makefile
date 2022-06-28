@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2021/05/24 19:51:43 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2022/06/28 11:33:24 wiz Exp $
 
 DISTNAME=	Test-HexDifferences-1.001
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/S/ST/STEFFENW/}
 

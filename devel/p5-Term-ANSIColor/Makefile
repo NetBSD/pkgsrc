@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2022/05/31 21:03:08 markd Exp $
+# $NetBSD: Makefile,v 1.29 2022/06/28 11:33:18 wiz Exp $
 
 DISTNAME=	Term-ANSIColor-5.01
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/R/RR/RRA/}
 
