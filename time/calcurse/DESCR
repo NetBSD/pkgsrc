@@ -1,0 +1,24 @@
+Calcurse is a text-based calendar and scheduling application
+
+Important features:
+
+* fast and customizable curses-based interface
+
+* user-definable key bindings
+
+* fully user-configurable notification system (ability to send mails or
+  anything else that could remind you of your upcoming appointments)
+
+* moon phases calculation
+
+* import capabilities with support for iCalendar format
+
+* export capabilities with support for iCalendar and pcal formats
+
+* ability to attach notes to each calendar element, and to edit them with your
+  favorite text editor
+
+* support for internationalization with texts and manual translated in English,
+  French, German, Dutch, Spanish and Italian
+
+* complete online help system
