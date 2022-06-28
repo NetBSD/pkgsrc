@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2021/12/08 16:02:40 adam Exp $
+# $NetBSD: Makefile,v 1.21 2022/06/28 11:13:20 nia Exp $
 
 DISTNAME=	upower-0.99.13
 PKGREVISION=	1
@@ -21,6 +21,7 @@ BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-libintl-prefix=${BUILDLINK_PREFIX.gettext}
+CONFIGURE_ARGS+=	--enable-introspection
 
 PKG_SYSCONFSUBDIR=	UPower
 INSTALL_MAKE_FLAGS+=	configdir=${EGDIR} dbusconfdir=${EGDIR}
@@ -40,10 +41,10 @@ TEST_TARGET=	check
 # with --nonet, xsltproc needs a helping hand finding some dtds
 XSLTPROC_PATH=	${PREFIX}/share/doc/dbus
 
-.include "options.mk"
-
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
+BUILDLINK_DEPMETHOD.gobject-introspection+=	build
+.include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../textproc/libxslt/xsltproc-nonet.mk"
