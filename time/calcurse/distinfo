@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/06/28 12:32:56 pin Exp $
+
+BLAKE2s (calcurse-4.8.0.tar.gz) = 1deb9d981b6ae8ab7c81341f545ce9154ea810f5284254b71829da8a1dc22df0
+SHA512 (calcurse-4.8.0.tar.gz) = ea156c4320abf97fdb5abc29ff1f9bc659a3cab0e571295ed04b42dd742c4c45a7d5958dc2d386fc0ee7bd733969a6275405d5cf10cd645c75cb97b6b9e571d6
+Size (calcurse-4.8.0.tar.gz) = 716234 bytes
