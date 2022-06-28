@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2021/12/08 16:02:08 adam Exp $
+# $NetBSD: Makefile,v 1.68 2022/06/28 10:43:11 nia Exp $
 
 DISTNAME=	clutter-1.26.2
 PKGREVISION=	8
@@ -24,6 +24,8 @@ PKGCONFIG_OVERRIDE+=	clutter/clutter.pc.in
 # until this can be detected properly via various PKG_OPTIONS.
 CONFIGURE_ARGS+=	--disable-egl-backend
 
+CONFIGURE_ARGS+=	--enable-introspection=yes
+
 .include "options.mk"
 
 TEST_TARGET=	check
@@ -40,6 +42,9 @@ BUILDLINK_API_DEPENDS.atk+=	atk>=2.5.3
 .include "../../devel/atk/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.39.0
 .include "../../devel/glib2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gobject-introspection+=	gobject-introspection>=0.9.5
+BUILDLINK_DEPMETHOD.gobject-introspection+=	build
+.include "../../devel/gobject-introspection/buildlink3.mk"
 BUILDLINK_API_DEPENDS.pango+=	pango>=1.30.0
 .include "../../devel/pango/buildlink3.mk"
 BUILDLINK_API_DEPENDS.cairo-gobject+=	cairo-gobject>=1.14.0
