@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2021/07/28 03:44:21 wen Exp $
+# $NetBSD: Makefile,v 1.16 2022/06/28 11:32:39 wiz Exp $
 #
 
 DISTNAME=	LEOCHARRE-Dir-1.09
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/L/LE/LEOCHARRE/}
 

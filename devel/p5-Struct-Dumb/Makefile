@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2021/05/24 19:51:34 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2022/06/28 11:33:15 wiz Exp $
 
 DISTNAME=	Struct-Dumb-0.12
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/P/PE/PEVANS/}
 

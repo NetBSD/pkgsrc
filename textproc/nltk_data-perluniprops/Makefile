@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2021/11/24 15:57:07 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2022/06/28 11:36:13 wiz Exp $
 
 DISTNAME=	perluniprops
 PKGNAME=	nltk_data-perluniprops-20211124
+PKGREVISION=	1
 CATEGORIES=	textproc
 DIST_SUBDIR=	${PKGNAME_NOREV}
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2018/01/07 13:04:36 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2022/06/28 11:37:00 wiz Exp $
 
 BUILDLINK_TREE+=	i3
 
@@ -7,6 +7,7 @@ I3_BUILDLINK3_MK:=
 
 BUILDLINK_DEPMETHOD.i3?=	build
 BUILDLINK_API_DEPENDS.i3+=	i3>=4.10.1
+BUILDLINK_ABI_DEPENDS.i3?=	i3>=4.20.1nb2
 BUILDLINK_PKGSRCDIR.i3?=	../../wm/i3
 
 .endif	# I3_BUILDLINK3_MK

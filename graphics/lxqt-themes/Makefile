@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2022/04/24 15:22:22 pin Exp $
+# $NetBSD: Makefile,v 1.9 2022/06/28 11:34:02 wiz Exp $
 
 DISTNAME=	lxqt-themes-1.1.0
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2022/05/10 11:50:55 nia Exp $
+# $NetBSD: Makefile,v 1.37 2022/06/28 11:35:02 wiz Exp $
 #
 # todo: set location of [md-]whois.conf and fix in man page too
 # todo: build and install the po/ files and add to PLIST
@@ -8,7 +8,7 @@
 GITHUB_PROJECT=	whois
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 DISTNAME=	md-whois-${VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rfc1036/}
 

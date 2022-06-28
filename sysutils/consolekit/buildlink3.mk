@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2021/12/08 16:02:37 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2022/06/28 11:35:55 wiz Exp $
 
 BUILDLINK_TREE+=	consolekit
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	consolekit
 CONSOLEKIT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.consolekit+=	consolekit>=0.3.0
-BUILDLINK_ABI_DEPENDS.consolekit+=	consolekit>=1.2.4
+BUILDLINK_ABI_DEPENDS.consolekit+=	consolekit>=1.2.4nb2
 BUILDLINK_PKGSRCDIR.consolekit?=	../../sysutils/consolekit
 
 .include "../../sysutils/dbus/buildlink3.mk"

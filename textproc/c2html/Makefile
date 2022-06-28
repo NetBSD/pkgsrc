@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2021/05/24 19:54:22 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2022/06/28 11:36:08 wiz Exp $
 
 DISTNAME=		c2html-20070126
-PKGREVISION=		9
+PKGREVISION=		10
 CATEGORIES=		textproc devel
 #MASTER_SITES=		http://gavare.se/c2html/src/
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2021/05/24 19:49:20 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2022/06/28 11:31:09 wiz Exp $
 
 DISTNAME=	jcode.pl-2.13
 PKGNAME=	${DISTNAME:S/jcode.pl/jcode-perl/}
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	japanese converters perl5
 MASTER_SITES=	ftp://ftp.iij.ad.jp/pub/IIJ/dist/utashiro/perl/
 MASTER_SITES+=	ftp://ftp.sra.co.jp/pub/lang/perl/sra-scripts/

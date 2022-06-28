@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2009/10/19 10:14:52 abs Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2022/06/28 11:31:55 wiz Exp $
 
 BUILDLINK_TREE+=	p5-B-Hooks-OP-Check
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	p5-B-Hooks-OP-Check
 P5_B_HOOKS_OP_CHECK_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.p5-B-Hooks-OP-Check+=	p5-B-Hooks-OP-Check>=0.12nb1
+BUILDLINK_ABI_DEPENDS.p5-B-Hooks-OP-Check?=	p5-B-Hooks-OP-Check>=0.22nb5
 BUILDLINK_PKGSRCDIR.p5-B-Hooks-OP-Check?=	../../devel/p5-B-Hooks-OP-Check
 .endif # P5_B_HOOKS_OP_CHECK_BUILDLINK3_MK
 

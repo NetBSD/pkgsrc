@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2022/04/18 19:10:09 adam Exp $
+# $NetBSD: Makefile,v 1.4 2022/06/28 11:36:12 wiz Exp $
 
 DISTNAME=	libxml++-5.0.1
 PKGNAME=	${DISTNAME:S/libxml++/libxml++5.0/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libxml++/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz

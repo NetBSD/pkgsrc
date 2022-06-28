@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2021/05/24 19:50:13 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2022/06/28 11:31:59 wiz Exp $
 
 DISTNAME=	Carton-v1.0.34
 PKGNAME=	p5-${DISTNAME:S/-v/-/}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MI/MIYAGAWA/}
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2022/05/12 13:56:28 jperkin Exp $
+# $NetBSD: Makefile,v 1.29 2022/06/28 11:34:23 wiz Exp $
 
 DISTNAME=	rel-${PKGNAME:C/\./-/g}
 PKGNAME=	opendmarc-1.4.2
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=trusteddomainproject/}
 GITHUB_PROJECT=	OpenDMARC

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2022/05/23 11:56:34 micha Exp $
+# $NetBSD: Makefile,v 1.36 2022/06/28 11:31:14 wiz Exp $
 
 DISTNAME=		binutils-2.38
 PKGNAME=		${DISTNAME:S/^/avr-/}
+PKGREVISION=		1
 CATEGORIES=		cross
 MASTER_SITES=		${MASTER_SITE_GNU:=binutils/}
 EXTRACT_SUFX=		.tar.bz2

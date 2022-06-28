@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2022/03/27 17:01:30 tnn Exp $
+# $NetBSD: Makefile,v 1.18 2022/06/28 11:34:10 wiz Exp $
 
 GCC_PKGNAME=		gcc10
-PKGREVISION=		1
+PKGREVISION=		2
 .include		"version.mk"
 
 DISTNAME=	gcc-${GCC10_DIST_VERSION}

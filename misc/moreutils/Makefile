@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2022/01/13 11:49:41 leot Exp $
+# $NetBSD: Makefile,v 1.15 2022/06/28 11:34:49 wiz Exp $
 
 DISTNAME=	moreutils-0.67
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	https://git.joeyh.name/index.cgi/moreutils.git/snapshot/
 

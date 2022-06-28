@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2021/12/09 00:39:34 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2022/06/28 11:31:46 wiz Exp $
 
 BUILDLINK_TREE+=	libffi
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libffi
 LIBFFI_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libffi+=	libffi>=1.20
-BUILDLINK_ABI_DEPENDS.libffi+=	libffi>=3.4
+BUILDLINK_ABI_DEPENDS.libffi+=	libffi>=3.4.2nb3
 BUILDLINK_PKGSRCDIR.libffi?=	../../devel/libffi
 .endif # LIBFFI_BUILDLINK3_MK
 

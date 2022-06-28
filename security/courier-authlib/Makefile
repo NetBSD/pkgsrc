@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.62 2021/06/23 20:33:16 nia Exp $
+# $NetBSD: Makefile,v 1.63 2022/06/28 11:35:34 wiz Exp $
 
-PKGREVISION= 4
+PKGREVISION= 5
 .include "Makefile.common"
 
 DISTNAME=	courier-authlib-0.69.1

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.45 2021/05/24 19:55:50 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2022/06/28 11:37:42 wiz Exp $
 
 DISTNAME=	SVN-Web-0.63
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	perl5 www
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/D/DJ/DJZORT/}
 

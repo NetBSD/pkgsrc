@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.29 2022/06/24 13:46:46 bouyer Exp $
+# $NetBSD: Makefile,v 1.30 2022/06/28 11:36:07 wiz Exp $
 #
 VERSION=	4.13.4
 
 DIST_SUBDIR=		xen413
 DISTNAME=		xen-${VERSION}
 PKGNAME=		xentools413-${VERSION}
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		sysutils
 MASTER_SITES=		https://downloads.xenproject.org/release/xen/${VERSION}/
 

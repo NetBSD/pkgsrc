@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2014/05/04 22:06:34 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2022/06/28 11:37:57 wiz Exp $
 
 BUILDLINK_TREE+=	pixman
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	pixman
 PIXMAN_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.pixman+=	pixman>=0.25.2
-BUILDLINK_ABI_DEPENDS.pixman+=	pixman>=0.25.2
+BUILDLINK_ABI_DEPENDS.pixman+=	pixman>=0.40.0nb3
 BUILDLINK_PKGSRCDIR.pixman?=	../../x11/pixman
 .endif # PIXMAN_BUILDLINK3_MK
 

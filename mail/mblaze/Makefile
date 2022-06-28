@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2022/01/04 12:21:47 schmonz Exp $
+# $NetBSD: Makefile,v 1.12 2022/06/28 11:34:22 wiz Exp $
 
 DISTNAME=	mblaze-1.2
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=leahneukirchen/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

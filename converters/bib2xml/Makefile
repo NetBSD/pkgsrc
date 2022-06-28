@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2021/05/24 19:49:19 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2022/06/28 11:31:08 wiz Exp $
 #
 
 DISTNAME=	bib2xml-10062002
 PKGNAME=	${DISTNAME:C/-(....)(....)/-\2\1/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	converters textproc
 #MASTER_SITES=	http://www-plan.cs.colorado.edu/henkel/stuff/bib2xml/
 

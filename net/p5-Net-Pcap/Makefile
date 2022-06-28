@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.36 2021/05/24 19:53:30 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2022/06/28 11:35:13 wiz Exp $
 #
 
 DISTNAME=	Net-Pcap-0.18
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 
