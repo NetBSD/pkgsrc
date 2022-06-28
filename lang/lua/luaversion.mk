@@ -1,4 +1,4 @@
-# $NetBSD: luaversion.mk,v 1.16 2022/06/28 09:39:29 nia Exp $
+# $NetBSD: luaversion.mk,v 1.17 2022/06/28 09:39:59 nia Exp $
 
 # This file determines which Lua version is used as a dependency for
 # a package.
@@ -9,7 +9,7 @@
 #	The preferred lua version to use.
 #
 #	Possible values: 51 52 53 54
-#	Default: 53
+#	Default: 54
 #
 # === Infrastructure variables ===
 #
