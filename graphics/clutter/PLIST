@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2018/05/31 14:53:00 youri Exp $
+@comment $NetBSD: PLIST,v 1.14 2022/06/28 10:43:11 nia Exp $
 include/clutter-1.0/cally/cally-actor.h
 include/clutter-1.0/cally/cally-clone.h
 include/clutter-1.0/cally/cally-factory.h
@@ -137,9 +137,9 @@ ${PLIST.x11}include/clutter-1.0/clutter/glx/clutter-glx.h
 ${PLIST.osx}include/clutter-1.0/clutter/osx/clutter-osx.h
 ${PLIST.x11}include/clutter-1.0/clutter/x11/clutter-x11-texture-pixmap.h
 ${PLIST.x11}include/clutter-1.0/clutter/x11/clutter-x11.h
-${PLIST.introspection}lib/girepository-1.0/Cally-1.0.typelib
-${PLIST.introspection}lib/girepository-1.0/Clutter-1.0.typelib
-${PLIST.x11}${PLIST.introspection}lib/girepository-1.0/ClutterX11-1.0.typelib
+lib/girepository-1.0/Cally-1.0.typelib
+lib/girepository-1.0/Clutter-1.0.typelib
+${PLIST.x11}lib/girepository-1.0/ClutterX11-1.0.typelib
 lib/libclutter-1.0.la
 ${PLIST.x11}lib/libclutter-glx-1.0.so
 ${PLIST.x11}lib/libclutter-glx-1.0.so.0
@@ -149,9 +149,9 @@ lib/pkgconfig/clutter-cogl-1.0.pc
 ${PLIST.x11}lib/pkgconfig/clutter-glx-1.0.pc
 ${PLIST.osx}lib/pkgconfig/clutter-osx-1.0.pc
 ${PLIST.x11}lib/pkgconfig/clutter-x11-1.0.pc
-${PLIST.introspection}share/gir-1.0/Cally-1.0.gir
-${PLIST.introspection}share/gir-1.0/Clutter-1.0.gir
-${PLIST.x11}${PLIST.introspection}share/gir-1.0/ClutterX11-1.0.gir
+share/gir-1.0/Cally-1.0.gir
+share/gir-1.0/Clutter-1.0.gir
+${PLIST.x11}share/gir-1.0/ClutterX11-1.0.gir
 share/gtk-doc/html/clutter/CallyActor.html
 share/gtk-doc/html/clutter/CallyClone.html
 share/gtk-doc/html/clutter/CallyGroup.html

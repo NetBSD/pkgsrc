@@ -1,23 +1,13 @@
-# $NetBSD: options.mk,v 1.10 2016/02/25 13:37:47 jperkin Exp $
+# $NetBSD: options.mk,v 1.11 2022/06/28 10:43:11 nia Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.clutter
-PKG_SUPPORTED_OPTIONS=	introspection x11
-PKG_SUGGESTED_OPTIONS=	introspection x11
+PKG_SUPPORTED_OPTIONS=	x11
+PKG_SUGGESTED_OPTIONS=	x11
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=	introspection x11 osx
-
-.if !empty(PKG_OPTIONS:Mintrospection)
-PLIST.introspection=	yes
-BUILDLINK_API_DEPENDS.gobject-introspection+=	gobject-introspection>=0.9.5
-BUILDLINK_DEPMETHOD.gobject-introspection+=	build
-.include "../../devel/gobject-introspection/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-introspection=yes
-.else
-CONFIGURE_ARGS+=	--enable-introspection=no
-.endif
+PLIST_VARS+=	x11 osx
 
 .if ${OPSYS} == "Darwin"
 PLIST.osx=		yes
