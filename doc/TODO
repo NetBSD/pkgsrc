@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21962 2022/06/28 09:05:05 wiz Exp $
+$NetBSD: TODO,v 1.21963 2022/06/28 09:27:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -397,7 +397,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-poweRlaw-0.70.6
 	o R-quadprog-1.5.8
 	o R-tseries-0.10.48
-	o SDL2-2.23.1
 	o SDL_sound-2.0
 	o SOGo-2.4.3
 	o SOGo-5.7.0
@@ -771,7 +770,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
 	o gnucap-20210107
-	o gnucash-4.11
 	o gnucash-docs-4.11
 	o gnutime-1.9
 	o go-afero-1.6.0
