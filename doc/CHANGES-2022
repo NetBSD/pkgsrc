@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3129 2022/06/28 09:29:36 pin Exp $
+$NetBSD: CHANGES-2022,v 1.3130 2022/06/28 09:30:58 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4702,3 +4702,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/samba4 to 4.15.6nb2 [rin 2022-06-27]
 	Updated finance/gnucash to 4.11 [wiz 2022-06-28]
 	Updated editors/ced to 0.2.2 [pin 2022-06-28]
+	Updated audio/spotify-player to 0.9.2 [pin 2022-06-28]
