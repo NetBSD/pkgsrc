@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.46 2021/12/08 16:02:08 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.47 2022/06/28 10:43:11 nia Exp $
 #
 
 BUILDLINK_TREE+=	clutter
@@ -13,7 +13,7 @@ BUILDLINK_PKGSRCDIR.clutter?=	../../graphics/clutter
 pkgbase := clutter
 .include "../../mk/pkg-build-options.mk"
 
-.if !empty(PKG_BUILD_OPTIONS.clutter:Mx11)
+.if ${PKG_BUILD_OPTIONS.clutter:Mx11}
 BUILDLINK_API_DEPENDS.MesaLib+=	MesaLib>=7.0
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
