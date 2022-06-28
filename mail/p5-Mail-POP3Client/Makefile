@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2022/05/28 07:19:37 wen Exp $
+# $NetBSD: Makefile,v 1.14 2022/06/28 11:34:29 wiz Exp $
 #
 
 DISTNAME=	Mail-POP3Client-2.21
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Mail/}
 

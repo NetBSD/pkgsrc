@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2009/03/20 19:25:09 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2022/06/28 11:35:01 wiz Exp $
 
 BUILDLINK_TREE+=	ldns
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	ldns
 LDNS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ldns+=	ldns>=1.4
+BUILDLINK_ABI_DEPENDS.ldns?=	ldns>=1.8.0nb1
 BUILDLINK_PKGSRCDIR.ldns?=	../../net/ldns
 .endif # LDNS_BUILDLINK3_MK
 

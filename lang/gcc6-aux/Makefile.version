@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.version,v 1.4 2019/08/11 13:21:20 wiz Exp $
+# $NetBSD: Makefile.version,v 1.5 2022/06/28 11:34:11 wiz Exp $
 
 SNAPSHOT=	20160822
 GCC_BRANCH=	6
 GCC_POINT=	2.0
 GCC_VERSION=	${GCC_BRANCH}.${GCC_POINT}
 BUILD_RELEASE=	yes
-MAIN_PR=	3
+MAIN_PR=	4
 
 .if ${BUILD_RELEASE:Mno}
 # Snapshot naming pattern

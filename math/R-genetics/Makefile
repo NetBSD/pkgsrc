@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.19 2021/09/11 14:28:04 mef Exp $
+# $NetBSD: Makefile,v 1.20 2022/06/28 11:34:36 wiz Exp $
 
 R_PKGNAME=	genetics
 R_PKGVER=	1.3.8.1.3
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Classes and methods for handling genetic data
+PKGREVISION=	1
 LICENSE=	gnu-gpl-v1 OR gnu-gpl-v2 OR gnu-gpl-v3
 
 USE_TOOLS+=	perl

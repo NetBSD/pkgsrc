@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.99 2021/12/19 09:47:58 maya Exp $
+# $NetBSD: Makefile,v 1.100 2022/06/28 11:35:56 wiz Exp $
 
 DISTNAME=		hal-0.5.14
-PKGREVISION=		29
+PKGREVISION=		30
 CATEGORIES=		sysutils
 MASTER_SITES=		http://hal.freedesktop.org/releases/
 EXTRACT_SUFX=		.tar.bz2

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2021/05/24 19:51:27 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2022/06/28 11:33:08 wiz Exp $
 #
 
 DISTNAME=		Proc-WaitStat-1.00
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		12
+PKGREVISION=		13
 CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Proc/}
 

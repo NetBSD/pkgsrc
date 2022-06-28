@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.80 2021/09/19 14:53:15 hauke Exp $
+# $NetBSD: Makefile,v 1.81 2022/06/28 11:33:49 wiz Exp $
 
 DISTNAME=	xemacs-packages
 PKGNAME=	xemacs-packages-1.18
-PKGREVISION=	9
+PKGREVISION=	10
 
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_XEMACS:=${XEMACSPKG_PATH}/}

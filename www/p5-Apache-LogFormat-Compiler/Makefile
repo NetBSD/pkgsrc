@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2021/05/24 19:55:18 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2022/06/28 11:37:08 wiz Exp $
 
 DISTNAME=	Apache-LogFormat-Compiler-0.36
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Apache/}
 

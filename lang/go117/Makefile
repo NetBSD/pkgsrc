@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2022/01/09 19:54:47 bsiegert Exp $
+# $NetBSD: Makefile,v 1.6 2022/06/28 11:34:12 wiz Exp $
 
+PKGREVISION= 1
 .include "../../lang/go/version.mk"
 .include "../../lang/go/bootstrap.mk"
 

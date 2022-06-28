@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2021/09/21 18:30:39 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/06/28 11:34:10 wiz Exp $
 
 DISTNAME=	csmith-2.3.0
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	https://embed.cs.utah.edu/csmith/
 

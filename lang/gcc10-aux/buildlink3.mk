@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2022/03/13 08:34:04 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2022/06/28 11:34:10 wiz Exp $
 
 BUILDLINK_TREE+=	gcc10-aux
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gcc10-aux
 GCC10_AUX_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gcc10-aux+=	gcc10-aux>=${_GCC_REQD}
-BUILDLINK_ABI_DEPENDS.gcc10-aux+=	gcc10-aux>=10.0
+BUILDLINK_ABI_DEPENDS.gcc10-aux+=	gcc10-aux>=10.3.0nb1
 BUILDLINK_PKGSRCDIR.gcc10-aux=		../../lang/gcc10-aux
 BUILDLINK_DEPMETHOD.gcc10-aux?=		build
 

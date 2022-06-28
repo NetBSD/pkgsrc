@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2021/05/24 19:49:17 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2022/06/28 11:31:06 wiz Exp $
 
 DISTNAME=		asterisk-perl-1.08
 PKGNAME=		p5-Asterisk-${DISTNAME:S/asterisk-perl-//}
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		comms perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=../../authors/id/I/IT/ITCHARLIE/}
 #MASTER_SITES+=		http://asterisk.gnuinter.net/files/

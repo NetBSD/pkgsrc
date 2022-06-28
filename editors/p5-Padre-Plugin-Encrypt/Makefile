@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2021/05/24 19:52:07 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2022/06/28 11:33:47 wiz Exp $
 
 DISTNAME=	Padre-Plugin-Encrypt-0.12
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	editors perl5 security
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Padre/}
 

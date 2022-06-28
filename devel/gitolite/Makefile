@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2021/05/24 19:49:57 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2022/06/28 11:31:43 wiz Exp $
 
 GLVER=		3.6.6
 DISTNAME=	gitolite-${GLVER}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sitaramc/}
 GITHUB_PROJECT=	gitolite
