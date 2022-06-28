@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3132 2022/06/28 09:33:43 pin Exp $
+$NetBSD: CHANGES-2022,v 1.3133 2022/06/28 09:42:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4705,3 +4705,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated audio/spotify-player to 0.9.2 [pin 2022-06-28]
 	Updated sysutils/tre-command to 0.4.0 [pin 2022-06-28]
 	Updated sysutils/zoxide to 0.8.2 [pin 2022-06-28]
+	Updated finance/gnucash-docs to 4.11 [wiz 2022-06-28]
