@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2022/04/18 19:10:12 adam Exp $
+# $NetBSD: Makefile,v 1.69 2022/06/28 11:40:47 nia Exp $
 
 DISTNAME=	eekboard-1.0.8
 PKGREVISION=	37
@@ -16,6 +16,8 @@ GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake pkg-config intltool msgfmt msgmerge xgettext
+
+CONFIGURE_ARGS+=	--enable-introspection=yes
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
@@ -43,6 +45,8 @@ TEST_TARGET=		check
 .include "../../devel/at-spi2-core/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
+BUILDLINK_DEPMETHOD.gobject-introspection=	build
+.include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../textproc/libcroco/buildlink3.mk"
