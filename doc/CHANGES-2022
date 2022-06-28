@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3135 2022/06/28 12:34:12 pin Exp $
+$NetBSD: CHANGES-2022,v 1.3136 2022/06/28 13:01:59 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4708,3 +4708,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated finance/gnucash-docs to 4.11 [wiz 2022-06-28]
 	Updated lang/perl5 to 5.36.0 [wiz 2022-06-28]
 	Added time/calcurse version 4.8.0 [pin 2022-06-28]
+	Updated chat/element-web to 1.10.15 [gdt 2022-06-28]
