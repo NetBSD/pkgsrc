@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.83 2022/03/30 08:12:51 wiz Exp $
+@comment $NetBSD: PLIST,v 1.84 2022/06/28 09:27:42 wiz Exp $
 bin/gnc-fq-check
 bin/gnc-fq-dump
 bin/gnc-fq-helper
@@ -1318,7 +1318,9 @@ share/locale/da/LC_MESSAGES/gnucash.mo
 share/locale/de/LC_MESSAGES/gnucash.mo
 share/locale/doi/LC_MESSAGES/gnucash.mo
 share/locale/el/LC_MESSAGES/gnucash.mo
+share/locale/en_AU/LC_MESSAGES/gnucash.mo
 share/locale/en_GB/LC_MESSAGES/gnucash.mo
+share/locale/en_NZ/LC_MESSAGES/gnucash.mo
 share/locale/es/LC_MESSAGES/gnucash.mo
 share/locale/es_NI/LC_MESSAGES/gnucash.mo
 share/locale/et/LC_MESSAGES/gnucash.mo
