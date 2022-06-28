@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2022/04/18 19:10:11 adam Exp $
+# $NetBSD: Makefile,v 1.40 2022/06/28 10:08:20 nia Exp $
 
 DISTNAME=	rest-0.7.93
 PKGNAME=	${DISTNAME:S/rest/librest07/}
@@ -17,14 +17,15 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config gmake
 # see pkgsrc/security/mozilla-rootcerts
 CONFIGURE_ARGS+=	--with-ca-certificates=/etc/ssl/certs/ca-certificates.crt
+CONFIGURE_ARGS+=	--enable-introspection=yes
 
 PKGCONFIG_OVERRIDE+=	rest.pc.in rest-extras.pc.in
 
 TEST_TARGET=	check
 
-.include "options.mk"
-
 .include "../../devel/glib2/buildlink3.mk"
+BUILDLINK_DEPMETHOD.gobject-introspection+=	build
+.include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../net/libsoup/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
