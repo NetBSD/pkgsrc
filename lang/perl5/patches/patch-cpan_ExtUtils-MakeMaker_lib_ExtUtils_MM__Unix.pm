@@ -1,4 +1,4 @@
-$NetBSD: patch-cpan_ExtUtils-MakeMaker_lib_ExtUtils_MM__Unix.pm,v 1.2 2021/05/29 13:04:21 rin Exp $
+$NetBSD: patch-cpan_ExtUtils-MakeMaker_lib_ExtUtils_MM__Unix.pm,v 1.3 2022/06/28 10:02:51 wiz Exp $
 
 * $Is{NetBSD} and $Is{Interix} are unified into $Is{BSD}.
 * Ignore installed packlist when creating new packlist.
@@ -25,15 +25,6 @@ $NetBSD: patch-cpan_ExtUtils-MakeMaker_lib_ExtUtils_MM__Unix.pm,v 1.2 2021/05/29
          # Use nothing on static perl platforms, and to the flags needed
          # to link against the shared libperl library on shared perl
          # platforms.  We peek at lddlflags to see if we need -Wl,-R
-@@ -1314,7 +1312,7 @@ sub _fixin_replace_shebang {
-             if ($self->maybe_command($origcmd) && grep { $_ eq $origdir } @absdirs) {
-                 my ($odev, $oino) = stat $origcmd;
-                 my ($idev, $iino) = stat $interpreter;
--                if ($odev == $idev && $oino == $iino) {
-+                if ($odev == $idev && $oino eq $iino) {
-                     warn "$origcmd is the same as $interpreter, leaving alone"
-                         if $Verbose;
-                     $interpreter = $origcmd;
 @@ -2351,7 +2349,7 @@ pure_vendor_install :: all
  	$(NOECHO) $(MOD_INSTALL) \
  };
