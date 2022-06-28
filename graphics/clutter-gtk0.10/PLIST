@@ -1,14 +1,14 @@
-@comment $NetBSD: PLIST,v 1.1 2014/01/04 13:34:16 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/06/28 10:37:32 nia Exp $
 include/clutter-1.0/clutter-gtk/clutter-gtk.h
 include/clutter-1.0/clutter-gtk/gtk-clutter-embed.h
 include/clutter-1.0/clutter-gtk/gtk-clutter-scrollable.h
 include/clutter-1.0/clutter-gtk/gtk-clutter-util.h
 include/clutter-1.0/clutter-gtk/gtk-clutter-viewport.h
 include/clutter-1.0/clutter-gtk/gtk-clutter-zoomable.h
-${PLIST.introspection}lib/girepository-1.0/GtkClutter-0.10.typelib
+lib/girepository-1.0/GtkClutter-0.10.typelib
 lib/libclutter-gtk-0.10.la
 lib/pkgconfig/clutter-gtk-0.10.pc
-${PLIST.introspection}share/gir-1.0/GtkClutter-0.10.gir
+share/gir-1.0/GtkClutter-0.10.gir
 share/gtk-doc/html/clutter-gtk/GtkClutterEmbed.html
 share/gtk-doc/html/clutter-gtk/GtkClutterScrollable.html
 share/gtk-doc/html/clutter-gtk/GtkClutterViewport.html
