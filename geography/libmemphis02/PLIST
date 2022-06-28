@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2021/04/19 15:55:29 cirnatdan Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/06/28 10:58:04 nia Exp $
 include/libmemphis-0.2/memphis/memphis-data-pool.h
 include/libmemphis-0.2/memphis/memphis-debug.h
 include/libmemphis-0.2/memphis/memphis-map.h
@@ -6,8 +6,8 @@ include/libmemphis-0.2/memphis/memphis-renderer.h
 include/libmemphis-0.2/memphis/memphis-rule-set.h
 include/libmemphis-0.2/memphis/memphis-rule.h
 include/libmemphis-0.2/memphis/memphis.h
-${PLIST.introspection}lib/girepository-1.0/Memphis-0.2.typelib
+lib/girepository-1.0/Memphis-0.2.typelib
 lib/libmemphis-0.2.la
 lib/pkgconfig/memphis-0.2.pc
-${PLIST.introspection}share/gir-1.0/Memphis-0.2.gir
+share/gir-1.0/Memphis-0.2.gir
 share/memphis-0.2/default-rules.xml
