@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2013/10/23 12:27:26 obache Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/06/28 11:40:47 nia Exp $
 bin/eekboard
 bin/eekboard-server
 include/eek-0.90/eek/eek-container.h
@@ -29,10 +29,10 @@ include/eekboard-0.90/eekboard/eekboard-context-service.h
 include/eekboard-0.90/eekboard/eekboard-context.h
 include/eekboard-0.90/eekboard/eekboard-service.h
 include/eekboard-0.90/eekboard/eekboard-xklutil.h
-${PLIST.introspection}lib/girepository-1.0/Eek-0.90.typelib
-${PLIST.introspection}lib/girepository-1.0/EekGtk-0.90.typelib
-${PLIST.introspection}lib/girepository-1.0/EekXkl-0.90.typelib
-${PLIST.introspection}lib/girepository-1.0/Eekboard-0.90.typelib
+lib/girepository-1.0/Eek-0.90.typelib
+lib/girepository-1.0/EekGtk-0.90.typelib
+lib/girepository-1.0/EekXkl-0.90.typelib
+lib/girepository-1.0/Eekboard-0.90.typelib
 lib/libeek-gtk.la
 lib/libeek-xkl.la
 lib/libeek.la
@@ -77,10 +77,10 @@ share/eekboard/keyboards/symbols/zh-bopomofo.xml
 share/eekboard/preferences-dialog.ui
 share/eekboard/themes/default.css
 share/examples/eekboard/xdg/autostart/eekboard-autostart.desktop
-${PLIST.introspection}share/gir-1.0/Eek-0.90.gir
-${PLIST.introspection}share/gir-1.0/EekGtk-0.90.gir
-${PLIST.introspection}share/gir-1.0/EekXkl-0.90.gir
-${PLIST.introspection}share/gir-1.0/Eekboard-0.90.gir
+share/gir-1.0/Eek-0.90.gir
+share/gir-1.0/EekGtk-0.90.gir
+share/gir-1.0/EekXkl-0.90.gir
+share/gir-1.0/Eekboard-0.90.gir
 share/glib-2.0/schemas/org.fedorahosted.eekboard.gschema.xml
 share/gtk-doc/html/eek/EekContainer.html
 share/gtk-doc/html/eek/EekElement.html
