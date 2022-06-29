@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:15:50 nia Exp $
-
-BLAKE2s (lwt_camlp4-20180325-45f25a0.tar.gz) = a0b141133e765e883ea2a5f3cf6f353060019dbed53a5909ed4ac4cb2dc16bca
-SHA512 (lwt_camlp4-20180325-45f25a0.tar.gz) = 7dc5bbde9c77cfd5d289b4df823ad2548c155add3cea55a1a3fa3a1b8be2caec142c1bea661c777339cc46eb46a153c6a5217238b74968bb915bcf5648013006
-Size (lwt_camlp4-20180325-45f25a0.tar.gz) = 16669 bytes

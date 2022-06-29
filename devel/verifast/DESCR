@@ -1,4 +1,0 @@
-VeriFast is a research prototype of a tool for modular formal
-verification of correctness properties of single-threaded and
-multithreaded C and Java programs annotated with preconditions and
-postconditions written in separation logic.

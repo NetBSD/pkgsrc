@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.15 2021/10/26 10:51:30 nia Exp $
-
-BLAKE2s (camlp4-4.08+1.tar.gz) = ef65caa49ce6dd21ad1bf25e00ed509b7f08d09b9e8d3d8d174639e7ff0d2110
-SHA512 (camlp4-4.08+1.tar.gz) = 1f8d6df42935ecdbed96a7b02d05564665b4bf0cbe4f5fd1800a1f292d8b3864d973df1e9e8c566c0fd00b5a55ba47ecd9bd07f134a9be83601e010b0246e075
-Size (camlp4-4.08+1.tar.gz) = 649830 bytes

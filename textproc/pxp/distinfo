@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:22:58 nia Exp $
-
-BLAKE2s (pxp-1.2.8.tar.gz) = 41f90920940979cb992ec9410f7ee5f4c6f8ab10f11329992b70241df5866369
-SHA512 (pxp-1.2.8.tar.gz) = 3292bfbda494066e454331a9cfc56b03f55afe8548bdf24fea09d9bc0a03c333c027f7b527983bd9b4d659458c95acf7e3fc251c72d26ab3502f52067c9f2549
-Size (pxp-1.2.8.tar.gz) = 619689 bytes
-SHA1 (patch-src_pxp-engine_pxp-document.ml) = c9c4bcdb102ca44e4fc676a11059fffc46e672de
-SHA1 (patch-tools_src_m2parsergen_Makefile) = 115700c42eb1a2204eb395e4840681c4663f0a76
-SHA1 (patch-tools_src_odoc_Makefile) = 1c7b769bd9d145b6e12850428af2eb61720f2334

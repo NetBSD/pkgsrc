@@ -1,2 +1,0 @@
-The type_conv mini-library factors out functionality needed by different
-OCaml preprocessors that generate code from type specifications.
