@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:15:51 nia Exp $
-
-BLAKE2s (optcomp-1.6.tar.gz) = 6d929f333ac2e427ec9df6ae3f78785b41891ca8c1744a2cfd2a5bafe4bc691f
-SHA512 (optcomp-1.6.tar.gz) = 19fa04a42e5ed589979647469759017442598d170bf82d49c3b720d1b1b6bbe3066ae3ffee77a3f15dcbf51be5d7a8934300873391ebce423f3a0f3878250c18
-Size (optcomp-1.6.tar.gz) = 56370 bytes
-SHA1 (patch-src_optcomp.ml) = 2463996a335a15a59328a3b63cb2f8e4a2e614c0
