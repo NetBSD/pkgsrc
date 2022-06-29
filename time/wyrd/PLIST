@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:18:01 joerg Exp $
-bin/wyrd
-man/man1/wyrd.1
-man/man5/wyrdrc.5
-share/examples/wyrd/wyrdrc

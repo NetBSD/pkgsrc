@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1468 2022/06/18 10:07:10 pin Exp $
+# $NetBSD: Makefile,v 1.1469 2022/06/29 07:54:40 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -381,8 +381,6 @@ SUBDIR+=	mirror
 SUBDIR+=	miruo
 SUBDIR+=	mitmproxy
 SUBDIR+=	mkvserver_mk2
-SUBDIR+=	mldonkey
-SUBDIR+=	mldonkey-gui
 SUBDIR+=	modpcap
 SUBDIR+=	mono-nat
 SUBDIR+=	monotorrent
