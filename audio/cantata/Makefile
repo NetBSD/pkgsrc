@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2022/06/28 11:30:54 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2022/06/29 07:40:24 wiz Exp $
 
 DISTNAME=	cantata-2.4.2
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=CDrummond/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
@@ -36,7 +36,8 @@ PLIST.notdarwin=	yes
 .include "../../audio/taglib/buildlink3.mk"
 .include "../../devel/libmtp/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../multimedia/ffmpeg5/buildlink3.mk"
+# does not support ffmpeg5 as of 2.4.2
+.include "../../multimedia/ffmpeg4/buildlink3.mk"
 .include "../../net/avahi/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 BUILDLINK_API_DEPENDS.qt5-qtbase+=	qt5-qtbase>=5.11
