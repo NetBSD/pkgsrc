@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3141 2022/06/29 11:35:13 thor Exp $
+$NetBSD: CHANGES-2022,v 1.3142 2022/06/29 11:39:31 micha Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4730,3 +4730,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed time/wyrd [wiz 2022-06-29]
 	Removed www/ocaml-http [wiz 2022-06-29]
 	Updated devel/cmake to 3.23.2nb1 [thor 2022-06-29]
+	Updated games/woof to 10.0.0 [micha 2022-06-29]
