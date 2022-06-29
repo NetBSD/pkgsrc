@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 10:15:48 nia Exp $
-
-BLAKE2s (deriving-0.8.1.tar.gz) = 539d2162dc686e533e1de20ea8183c33decd6993b0ce1e363e7e27dee39620c9
-SHA512 (deriving-0.8.1.tar.gz) = c12eba7044cd28166b02c23f51a3244878a056285ebe7ae00fe4d432675d82fb7a9b630f5f1e5bc96408f928e6ba6ce8de38ca15e9651d89eb80616a3afb1f66
-Size (deriving-0.8.1.tar.gz) = 68596 bytes

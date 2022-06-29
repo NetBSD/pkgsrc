@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 11:24:45 nia Exp $
-
-BLAKE2s (wyrd-1.4.6.tar.gz) = 1d43b6fae6cba632ed73faa7cef83b2cdf76a33a2c19effba46a8dc2d1253f33
-SHA512 (wyrd-1.4.6.tar.gz) = fc09c4567ea8d6225638ee6851ddab716665913b7d7b2f6b5a3cc7f2af9144df617e2a95ca78c74874bec3ff355aba028c7c51eafe1426d9ae803ab77ce84477
-Size (wyrd-1.4.6.tar.gz) = 425829 bytes
-SHA1 (patch-Makefile.in) = 0eb1244df49e201d23e24c4e4c4acdfac76534b0
-SHA1 (patch-curses_Makefile.in) = e99e848199238f9540d5035dec0d2935296b232f
-SHA1 (patch-utility.ml) = 529b15bc306bddf41992a299001966e00f631e69

@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3139 2022/06/28 22:36:51 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.3140 2022/06/29 07:54:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4714,3 +4714,18 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated chat/element-web to 1.10.15 [gdt 2022-06-28]
 	Updated archivers/libzip to 1.9.2 [wiz 2022-06-28]
 	Updated geography/qgis to 3.22.8 [gdt 2022-06-28]
+	Removed databases/ocaml-macaque [wiz 2022-06-29]
+	Removed devel/monotone-viz [wiz 2022-06-29]
+	Removed devel/ocaml-deriving-ocsigen [wiz 2022-06-29]
+	Removed devel/ocaml-lwt_camlp4 [wiz 2022-06-29]
+	Removed devel/ocaml-optcomp [wiz 2022-06-29]
+	Removed devel/ocaml-type_conv [wiz 2022-06-29]
+	Removed devel/verifast [wiz 2022-06-29]
+	Removed lang/camlp4 [wiz 2022-06-29]
+	Removed net/mldonkey [wiz 2022-06-29]
+	Removed net/mldonkey-gui [wiz 2022-06-29]
+	Removed security/sks [wiz 2022-06-29]
+	Removed textproc/pxp [wiz 2022-06-29]
+	Removed textproc/harmony [wiz 2022-06-29]
+	Removed time/wyrd [wiz 2022-06-29]
+	Removed www/ocaml-http [wiz 2022-06-29]

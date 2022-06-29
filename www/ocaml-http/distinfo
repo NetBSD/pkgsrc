@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:29:42 nia Exp $
-
-BLAKE2s (ocaml-http-0.1.5.tar.gz) = cc1ab917920f755f8d6b1400c0c6d18a493039609cf858a981ac05fb2658f261
-SHA512 (ocaml-http-0.1.5.tar.gz) = 4d3a31c6d936346865212c72d40a6f1ad96c963fb779cb47adb1adc1006b3212ecf3946229fa3d32eb075e71595acdfb4e96f4c2623ca7082c2e397cbecbde37
-Size (ocaml-http-0.1.5.tar.gz) = 201026 bytes
-SHA1 (patch-Makefile) = cd30a2461c12801bb24f30c7cc06e249ff2eba79
-SHA1 (patch-Makefile.defs) = 07f1622361029dc5c0aeb472ac71283c73272c33
