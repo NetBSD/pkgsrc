@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3755 2022/06/20 08:18:02 jaapb Exp $
+# $NetBSD: Makefile,v 1.3756 2022/06/29 07:54:38 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1057,7 +1057,6 @@ SUBDIR+=	mob
 SUBDIR+=	mold
 SUBDIR+=	monotone
 SUBDIR+=	monotone-server
-SUBDIR+=	monotone-viz
 SUBDIR+=	mph
 SUBDIR+=	msgpack
 SUBDIR+=	mustach
@@ -1112,7 +1111,6 @@ SUBDIR+=	ocaml-core_unix
 SUBDIR+=	ocaml-cppo
 SUBDIR+=	ocaml-csexp
 SUBDIR+=	ocaml-cstruct
-SUBDIR+=	ocaml-deriving-ocsigen
 SUBDIR+=	ocaml-digestif
 SUBDIR+=	ocaml-duff
 SUBDIR+=	ocaml-dune
@@ -1138,7 +1136,6 @@ SUBDIR+=	ocaml-ke
 SUBDIR+=	ocaml-logs
 SUBDIR+=	ocaml-lru
 SUBDIR+=	ocaml-lwt
-SUBDIR+=	ocaml-lwt_camlp4
 SUBDIR+=	ocaml-lwt_glib
 SUBDIR+=	ocaml-lwt_log
 SUBDIR+=	ocaml-lwt_ppx
@@ -1149,7 +1146,6 @@ SUBDIR+=	ocaml-mirage-flow
 SUBDIR+=	ocaml-mmap
 SUBDIR+=	ocaml-oasis
 SUBDIR+=	ocaml-ocplib-endian
-SUBDIR+=	ocaml-optcomp
 SUBDIR+=	ocaml-optint
 SUBDIR+=	ocaml-parsexp
 SUBDIR+=	ocaml-ppx_assert
@@ -1203,7 +1199,6 @@ SUBDIR+=	ocaml-splittable_random
 SUBDIR+=	ocaml-stdio
 SUBDIR+=	ocaml-stdlib-shims
 SUBDIR+=	ocaml-stringext
-SUBDIR+=	ocaml-type_conv
 SUBDIR+=	ocaml-typerep
 SUBDIR+=	ocaml-variantslib
 SUBDIR+=	ocaml-yojson
@@ -3302,7 +3297,6 @@ SUBDIR+=	vanessa_adt
 SUBDIR+=	vanessa_logger
 SUBDIR+=	vanessa_socket
 SUBDIR+=	vera++
-SUBDIR+=	verifast
 SUBDIR+=	visualvm
 SUBDIR+=	vtcl
 SUBDIR+=	wabt

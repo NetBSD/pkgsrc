@@ -1,3 +1,0 @@
-Extension to OCaml for deriving functions from type declarations. Includes
-derivers for pretty-printing, type-safe marshalling with structure-sharing,
-dynamic typing, equality, and more.

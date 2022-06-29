@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:20:08 nia Exp $
-
-BLAKE2s (verifast-18.02.tar.gz) = aea9735793d72a657219288c0feef82a6ebad1dc0387b2d4f3eb982fa898d63a
-SHA512 (verifast-18.02.tar.gz) = 5f1c6203d9db4556a00402e56b6699cb00e75c388f2de6f957558cf7611ddabddccfc4ae1235a1cd8fabc4ec5673df6588e475328ed562799f1fa687ad5c38aa
-Size (verifast-18.02.tar.gz) = 1732020 bytes
-SHA1 (patch-src_GNUmakefile) = 880a8369c92eaf3162e62b104ee2a3755f3d6055

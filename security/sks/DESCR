@@ -1,5 +1,0 @@
-SKS is a new OpenPGP keyserver whose goal is to provide easy to deploy,
-decentralized, and highly reliable synchronization.  That means that a key
-submitted to one SKS server will quickly be distributed to all key servers,
-and even wildly out-of-date servers, or servers that experience spotty
-connectivity, can fully synchronize with rest of the system.

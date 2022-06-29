@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.650 2022/06/16 15:43:54 adam Exp $
+# $NetBSD: Makefile,v 1.651 2022/06/29 07:54:40 wiz Exp $
 #
 
 COMMENT=	Programming languages
@@ -20,7 +20,6 @@ SUBDIR+=	boomerang
 SUBDIR+=	brandybasic
 SUBDIR+=	bwbasic
 SUBDIR+=	caml-light
-SUBDIR+=	camlp4
 SUBDIR+=	camlp5
 SUBDIR+=	cbmbasic
 SUBDIR+=	ccsh
