@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.139 2022/06/28 23:56:18 gutteridge Exp $
+# $NetBSD: Makefile,v 1.140 2022/06/29 00:41:47 gutteridge Exp $
 
 DISTNAME=	lilypond-2.18.2
 PKGREVISION=	26
@@ -37,7 +37,11 @@ GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		bison flex gmake gs:run makeinfo perl pkg-config msgfmt
-USE_TOOLS+=		texi2html zip
+# GNU grep will likely not be required after this package is next updated,
+# assuming the package no longer greps binary files for strings. This is a
+# build fix workaround for GNU grep >= 3.5 changing its behaviour in this
+# regard.
+USE_TOOLS+=		ggrep texi2html zip
 MAKE_FILE=		GNUmakefile
 
 .include "../../mk/bsd.prefs.mk"
