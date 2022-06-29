@@ -1,4 +1,4 @@
-# $NetBSD: license.mk,v 1.113 2022/06/28 23:57:17 gutteridge Exp $
+# $NetBSD: license.mk,v 1.114 2022/06/29 00:02:32 gutteridge Exp $
 #
 # This file handles everything about the LICENSE variable. It is
 # included automatically by bsd.pkg.mk.
@@ -106,7 +106,7 @@
 
 # The convention is that Free and Open Source licenses do not have a
 # -license suffix, and non-Free licenses end in -license.  Thus,
-# license in DEFAULT_ACCEPTABLE_LICENSES should not end in -license.
+# licenses in DEFAULT_ACCEPTABLE_LICENSES should not end in -license.
 #
 # First, we set DEFAULT_ACCEPTABLE_LICENSES to the set of licenses
 # formally approved as Free Software by FSF or Open Source by OSI,
