@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2022/05/30 20:08:56 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.18 2022/06/29 19:12:18 schmonz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -64,6 +64,9 @@ ${PYSITELIB}/approvaltests/list_utils.pyo
 ${PYSITELIB}/approvaltests/namer/__init__.py
 ${PYSITELIB}/approvaltests/namer/__init__.pyc
 ${PYSITELIB}/approvaltests/namer/__init__.pyo
+${PYSITELIB}/approvaltests/namer/default_name.py
+${PYSITELIB}/approvaltests/namer/default_name.pyc
+${PYSITELIB}/approvaltests/namer/default_name.pyo
 ${PYSITELIB}/approvaltests/namer/default_namer_factory.py
 ${PYSITELIB}/approvaltests/namer/default_namer_factory.pyc
 ${PYSITELIB}/approvaltests/namer/default_namer_factory.pyo
@@ -170,6 +173,9 @@ ${PYSITELIB}/approvaltests/utilities/exceptions/exception_utils.pyo
 ${PYSITELIB}/approvaltests/utilities/exceptions/multiple_exceptions.py
 ${PYSITELIB}/approvaltests/utilities/exceptions/multiple_exceptions.pyc
 ${PYSITELIB}/approvaltests/utilities/exceptions/multiple_exceptions.pyo
+${PYSITELIB}/approvaltests/utilities/markdown_table.py
+${PYSITELIB}/approvaltests/utilities/markdown_table.pyc
+${PYSITELIB}/approvaltests/utilities/markdown_table.pyo
 ${PYSITELIB}/approvaltests/utilities/multiline_string_utils.py
 ${PYSITELIB}/approvaltests/utilities/multiline_string_utils.pyc
 ${PYSITELIB}/approvaltests/utilities/multiline_string_utils.pyo
