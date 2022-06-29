@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.5 2019/12/28 21:48:09 gutteridge Exp $
+$NetBSD: patch-configure,v 1.6 2022/06/29 00:41:47 gutteridge Exp $
 
 Disable c/c++ version check; it fails e.g. with clang emulating gcc.
 Allow more metapost versions than upstream until pkgsrc contains
@@ -9,6 +9,9 @@ Ignore result of broken pkg-config version test.
 Fix various searches for executables: "type -p" no longer works in
 NetBSD's /bin/sh, nor does it work as expected on some other OSes
 (e.g. DragonFly). As discussed in NetBSD PR bin/54803.
+
+Fix builds with GNU grep >= 3.5. That is, require GNU grep as a tool,
+and use the -a option, since it is operating on binary files.
 
 --- configure.orig	2014-03-17 15:29:16.000000000 +0000
 +++ configure
@@ -48,6 +51,15 @@ NetBSD's /bin/sh, nor does it work as expected on some other OSes
  `
  	if ! $exe -V > /dev/null 2>&1 ; then
  	    continue
+@@ -4272,7 +4272,7 @@ if test "$NCSB_DIR" != "" ;  then
+     if test ! -f "$NCSB_DIR/$f"; then
+       MISSING_NCSB_SOURCE_FILES="$f $MISSING_NCSB_SOURCE_FILES"
+     else
+-      if test "`grep Cyrillic "$NCSB_DIR/$f"`" = ""; then
++      if test "`grep -a Cyrillic "$NCSB_DIR/$f"`" = ""; then
+         INCOMPLETE_NCSB_SOURCE_FILES="$f $INCOMPLETE_NCSB_SOURCE_FILES"
+       else
+         NCSB_SOURCE_FILES="$NCSB_DIR/$f $NCSB_SOURCE_FILES"
 @@ -4331,7 +4331,7 @@ $as_echo_n "checking for python... " >&6
      ## command -v doesn't work in zsh
      ## command -v "$r" 2>&1
