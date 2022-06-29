@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.864 2022/05/30 16:32:47 mef Exp $
+# $NetBSD: Makefile,v 1.865 2022/06/29 07:54:41 wiz Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -602,7 +602,6 @@ SUBDIR+=	seahorse
 SUBDIR+=	seccure
 SUBDIR+=	secpanel
 SUBDIR+=	skey
-SUBDIR+=	sks
 SUBDIR+=	sleuthkit
 SUBDIR+=	smaSHeM
 SUBDIR+=	snallygaster

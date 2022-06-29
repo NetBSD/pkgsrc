@@ -1,5 +1,0 @@
-MaCaQue (or macaque) is a DSL for SQL Queries in Caml.
-
-It has the following objectives :
-- be highly compositional
-- use expressive types to avoid runtime errors

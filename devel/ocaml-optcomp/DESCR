@@ -1,2 +1,0 @@
-optcomp is an OCaml/Camlp4 syntax extension for optional compilation with
-cpp-like directives.

@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:48:59 joerg Exp $
-bin/monotone-viz
-share/examples/monotone-viz/monotone-viz.style.sample
