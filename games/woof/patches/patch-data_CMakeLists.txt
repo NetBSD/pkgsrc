@@ -1,0 +1,14 @@
+$NetBSD: patch-data_CMakeLists.txt,v 1.1 2022/06/29 11:31:54 micha Exp $
+
+Install man page into hierarchy "$PREFIX/man".
+Patch is not suitable for upstream.
+
+--- data/CMakeLists.txt.orig	2022-06-17 09:24:44.000000000 +0000
++++ data/CMakeLists.txt
+@@ -1,5 +1,5 @@
+ if(UNIX AND NOT APPLE)
+-    install(FILES woof.6 DESTINATION share/man/man6)
++    install(FILES woof.6 DESTINATION man/man6)
+     install(FILES woof.desktop DESTINATION share/applications)
+     install(FILES woof.png DESTINATION share/icons/hicolor/128x128/apps)
+     install(FILES woof-setup.desktop DESTINATION share/applications)

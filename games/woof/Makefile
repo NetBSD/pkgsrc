@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2022/03/28 10:44:18 tnn Exp $
+# $NetBSD: Makefile,v 1.34 2022/06/29 11:31:54 micha Exp $
 
-DISTNAME=	woof_9.0.0
+DISTNAME=	woof_10.0.0
 PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fabiangreffrath/}
 GITHUB_TAG=	${DISTNAME}
@@ -27,7 +26,7 @@ DOOMWADDIR=	share/doom
 SUBST_CLASSES+=		waddir
 SUBST_STAGE.waddir=	pre-configure
 SUBST_MESSAGE.waddir=	Preparing d_iwad.c file ...
-SUBST_FILES.waddir=	Source/d_iwad.c
+SUBST_FILES.waddir=	src/d_iwad.c
 SUBST_SED.waddir=	-e 's,PKGSRC_PREFIX,"${PREFIX}",'
 SUBST_SED.waddir+=	-e 's,PKGSRC_DOOMWADDIR,"/${DOOMWADDIR}",'
 
