@@ -1,5 +1,8 @@
-@comment $NetBSD: PLIST,v 1.8 2022/03/11 11:10:11 micha Exp $
+@comment $NetBSD: PLIST,v 1.9 2022/06/29 11:31:54 micha Exp $
 bin/woof
+bin/woof-setup
+man/man6/woof.6
+share/applications/woof-setup.desktop
 share/applications/woof.desktop
 share/doc/woof/COPYING
 share/doc/woof/INSTALL.pkgsrc
@@ -26,15 +29,15 @@ share/doc/woof/examples/possbud.deh
 share/doc/woof/examples/sky.wad
 share/doc/woof/examples/touchy.deh
 share/doc/woof/mapcolors_vanilla.cfg
-share/doc/woof/mbf-bugs.html
+share/doc/woof/mbf-bugs.md
 share/doc/woof/mbf.txt
-share/doc/woof/mbf21.md
 share/doc/woof/mbfedit.txt
 share/doc/woof/mbffaq.txt
 share/doc/woof/options.txt
-share/doc/woof/umapinfo.txt
+share/doc/woof/umapinfo.md
 share/doc/woof/winmbf02.txt
 share/doc/woof/winmbf02s.txt
+share/icons/hicolor/128x128/apps/woof-setup.png
 share/icons/hicolor/128x128/apps/woof.png
 share/woof/autoload/chex.wad/chex.deh
 share/woof/autoload/chex.wad/extchex.deh
