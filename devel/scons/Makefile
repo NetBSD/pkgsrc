@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.53 2022/01/09 11:58:15 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2022/06/30 11:18:18 nia Exp $
 
 # 4.1.0 is broken, per reports on gpsd list.  Apparently 4.0.1 is ok.
 DISTNAME=	scons-3.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scons/}
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2020/12/04 20:45:30 nia Exp $
+# $NetBSD: Makefile,v 1.6 2022/06/30 11:18:38 nia Exp $
 
 DISTNAME=	libcec-4.0.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Pulse-Eight/}
 GITHUB_PROJECT=	libcec

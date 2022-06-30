@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2022/01/14 17:52:02 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2022/06/30 11:18:44 nia Exp $
 
-PKGREVISION= 1
+PKGREVISION= 2
 .include "../../net/nmap/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/nmap/zenmap/}

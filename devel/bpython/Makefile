@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2022/01/05 15:41:00 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2022/06/30 11:18:11 nia Exp $
 
 DISTNAME=	bpython-0.22.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel python
 MASTER_SITES=	https://bpython-interpreter.org/releases/
 

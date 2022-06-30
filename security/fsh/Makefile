@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2020/12/04 20:45:39 nia Exp $
+# $NetBSD: Makefile,v 1.30 2022/06/30 11:18:47 nia Exp $
 #
 
 DISTNAME=	fsh-1.2
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	security net
 MASTER_SITES=	ftp://ftp.lysator.liu.se/pub/unix/fsh/
 MASTER_SITES+=	http://www.lysator.liu.se/fsh/

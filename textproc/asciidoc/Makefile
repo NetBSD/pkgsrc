@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.69 2022/05/29 09:39:44 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2022/06/30 11:18:53 nia Exp $
 
 DISTNAME=	asciidoc-10.2.0
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=asciidoc/}
 GITHUB_PROJECT=	asciidoc-py3

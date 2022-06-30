@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2020/12/04 20:45:12 nia Exp $
+# $NetBSD: Makefile,v 1.16 2022/06/30 11:18:16 nia Exp $
 #
 
 DISTNAME=		ncc-2.8
-PKGREVISION=		9
+PKGREVISION=		10
 CATEGORIES=		devel
 MASTER_SITES=		http://students.ceid.upatras.gr/~sxanth/ncc/
 

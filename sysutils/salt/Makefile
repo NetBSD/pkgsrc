@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.78 2022/04/25 16:34:39 jperkin Exp $
+# $NetBSD: Makefile,v 1.79 2022/06/30 11:18:51 nia Exp $
 
 DISTNAME=	salt-3004
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/salt/}
 
