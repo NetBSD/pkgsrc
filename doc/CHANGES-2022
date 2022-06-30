@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3143 2022/06/29 19:12:24 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.3144 2022/06/30 12:20:59 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4732,3 +4732,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/cmake to 3.23.2nb1 [thor 2022-06-29]
 	Updated games/woof to 10.0.0 [micha 2022-06-29]
 	Updated devel/py-approvaltests to 5.3.0 [schmonz 2022-06-29]
+	Updated sysutils/felix to 0.9.8 [pin 2022-06-30]
