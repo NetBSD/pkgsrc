@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3145 2022/06/30 14:49:05 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3146 2022/06/30 14:52:30 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4734,3 +4734,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-approvaltests to 5.3.0 [schmonz 2022-06-29]
 	Updated sysutils/felix to 0.9.8 [pin 2022-06-30]
 	Updated security/gnupg2 to 2.2.35nb1 [wiz 2022-06-30]
+	Updated mail/milter-greylist to 4.6.4 [hauke 2022-06-30]
