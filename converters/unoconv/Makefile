@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2020/12/04 20:45:03 nia Exp $
+# $NetBSD: Makefile,v 1.8 2022/06/30 11:18:08 nia Exp $
 
 DISTNAME=	unoconv-0.7
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dagwieers/}
 

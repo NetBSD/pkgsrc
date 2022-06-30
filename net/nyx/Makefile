@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2021/06/15 15:28:22 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/06/30 11:18:43 nia Exp $
 
-PKGREVISION= 2
+PKGREVISION= 3
 .include "../../net/py-nyx/Makefile.common"
 
 PKGNAME=	nyx-${VERSION}

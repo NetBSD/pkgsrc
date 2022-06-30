@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2022/01/10 20:38:01 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2022/06/30 11:18:54 nia Exp $
 
 DISTNAME=	markdown2social-0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PYPI:M=/markdown2social/}
 MASTER_SITES+=	${MASTER_SITE_GITHUB:=jmmv/markdown2social/releases/download/${DISTNAME}/}

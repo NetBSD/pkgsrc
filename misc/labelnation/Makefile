@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2021/11/21 15:38:31 gdt Exp $
+# $NetBSD: Makefile,v 1.13 2022/06/30 11:18:37 nia Exp $
 
 DISTNAME=		labelnation-1.231
+PKGREVISION=		1
 CATEGORIES=		misc
 MASTER_SITES=		https://www.red-bean.com/labelnation/
 

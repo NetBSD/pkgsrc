@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2022/01/10 22:04:42 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2022/06/30 11:18:17 nia Exp $
 
 DISTNAME=	qbzr-${VER}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	devel
 MASTER_SITES=	http://launchpad.net/qbzr/${VER:R}/${VER}/+download/
 VER=		0.22.1

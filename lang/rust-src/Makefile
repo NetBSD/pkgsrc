@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2022/05/25 21:54:43 he Exp $
+# $NetBSD: Makefile,v 1.6 2022/06/30 11:18:34 nia Exp $
 
 DISTNAME=	rust-src-1.60.0
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_LOCAL:=rust/}
 
