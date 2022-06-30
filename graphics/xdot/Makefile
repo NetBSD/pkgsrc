@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2020/12/04 20:45:23 nia Exp $
+# $NetBSD: Makefile,v 1.15 2022/06/30 11:18:29 nia Exp $
 
 DISTNAME=	xdot
 PKGNAME=	xdot-20121124
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 #MASTER_SITES=	http://xdot.jrfonseca.googlecode.com/git/
 EXTRACT_SUFX=	.py

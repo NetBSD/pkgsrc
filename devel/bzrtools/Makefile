@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2022/01/10 21:29:05 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2022/06/30 11:18:11 nia Exp $
 
 PKGNAME=	bzrtools-${VER}
-PKGREVISION=	3
+PKGREVISION=	4
 DISTNAME=	bzrtools-${VER:R}
 CATEGORIES=	devel scm
 MASTER_SITES=	http://launchpad.net/bzrtools/stable/${VER:R}/+download/

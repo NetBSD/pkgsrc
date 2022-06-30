@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2022/01/09 16:33:19 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2022/06/30 11:18:21 nia Exp $
 
 DISTNAME=	fs-uae-arcade-3.0.5
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	emulators
 MASTER_SITES=	http://fs-uae.net/stable/${PKGVERSION_NOREV}/
 

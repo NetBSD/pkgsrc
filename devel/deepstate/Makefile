@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2021/08/24 21:38:14 khorben Exp $
+# $NetBSD: Makefile,v 1.8 2022/06/30 11:18:12 nia Exp $
 
-PKGREVISION=	2
+PKGREVISION=	3
 
 USE_LANGUAGES=	c99 c++
 USE_CMAKE=	yes

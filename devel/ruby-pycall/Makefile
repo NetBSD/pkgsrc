@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2021/08/22 13:52:26 taca Exp $
+# $NetBSD: Makefile,v 1.4 2022/06/30 11:18:18 nia Exp $
 
 DISTNAME=	pycall-1.4.1
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://github.com/mrkn/pycall.rb
 COMMENT=	Calling Python functions from Ruby
+PKGREVISION=	1
 LICENSE=	mit
 
 SUBST_CLASSES+=		python

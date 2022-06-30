@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2020/12/04 20:45:18 nia Exp $
+# $NetBSD: Makefile,v 1.38 2022/06/30 11:18:24 nia Exp $
 
 DISTNAME=	mftrace-1.2.19
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	fonts
 MASTER_SITES=	http://lilypond.org/download/sources/mftrace/
 

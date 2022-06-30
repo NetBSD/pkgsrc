@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2022/02/04 13:39:10 adam Exp $
+# $NetBSD: Makefile,v 1.8 2022/06/30 11:18:18 nia Exp $
 
 DISTNAME=	iruby-0.7.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 
 MAINTAINER=	ryoon@NetBSD.org

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.95 2021/10/26 18:42:55 tm Exp $
+# $NetBSD: Makefile,v 1.96 2022/06/30 11:18:34 nia Exp $
 
 DISTNAME=	mailman-2.1.35
+PKGREVISION=	1
 CATEGORIES=	mail www
 MASTER_SITES=	https://launchpad.net/mailman/2.1/2.1.35/+download/
 EXTRACT_SUFX=	.tgz

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2022/01/21 18:01:31 gutteridge Exp $
+# $NetBSD: Makefile,v 1.3 2022/06/30 11:18:26 nia Exp $
 
 DISTNAME=	wordsearch-2.1
+PKGREVISION=	1
 CATEGORIES=	games
 GITHUB_PROJECT=	wordsearch
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jensenpat/}

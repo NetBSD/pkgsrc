@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2020/12/04 20:45:12 nia Exp $
+# $NetBSD: Makefile,v 1.7 2022/06/30 11:18:17 nia Exp $
 #
 
 DISTNAME=	PythonTidy-1.20
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	http://lacusveris.com/PythonTidy/
 EXTRACT_SUFX=	.python

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2022/01/10 07:48:08 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2022/06/30 11:18:25 nia Exp $
 
 DISTNAME=		jools-0.20
-PKGREVISION=		7
+PKGREVISION=		8
 CATEGORIES=		games
 #MASTER_SITES=		http://pessimization.com/software/jools/
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} jools-musicpack-1.0.tar.gz

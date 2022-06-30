@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2022/01/25 01:54:12 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2022/06/30 11:18:11 nia Exp $
 
 DISTNAME=	bzr-gtk-${VER}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	http://launchpad.net/bzr-gtk/gtk2/${VER}/+download/
 VER=		0.100.0

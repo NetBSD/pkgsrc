@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2022/01/04 20:54:36 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/06/30 11:18:46 nia Exp $
 
 DISTNAME=	print-plist-python-0.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	regress
 MASTER_SITES=	# none
 DISTFILES=	# none

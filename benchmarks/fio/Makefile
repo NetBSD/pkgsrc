@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2020/12/04 20:44:59 nia Exp $
+# $NetBSD: Makefile,v 1.10 2022/06/30 11:18:03 nia Exp $
 
 DISTNAME=	fio-3.19
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	benchmarks
 MASTER_SITES=	http://brick.kernel.dk/snaps/
 

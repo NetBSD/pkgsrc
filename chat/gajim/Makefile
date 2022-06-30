@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.63 2022/03/12 08:01:53 nia Exp $
+# $NetBSD: Makefile,v 1.64 2022/06/30 11:18:05 nia Exp $
 
 DISTNAME=	gajim-1.3.3
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	https://www.gajim.org/downloads/${PKGVERSION_NOREV:R}/
 

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2020/09/29 03:06:08 khorben Exp $
+# $NetBSD: Makefile,v 1.2 2022/06/30 11:18:13 nia Exp $
 
 PKGNAME=	deepstate-honggfuzz-${VERSION}
+PKGREVISION=	1
 
 USE_LANGUAGES=	c99 c++
 USE_CMAKE=	yes

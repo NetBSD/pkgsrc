@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2022/01/10 23:46:49 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2022/06/30 11:18:52 nia Exp $
 
 DISTNAME=	virtinst-0.600.3
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	sysutils
 MASTER_SITES=	http://virt-manager.org/download/sources/virtinst/
 
