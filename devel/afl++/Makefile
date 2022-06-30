@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2022/04/17 07:34:46 nia Exp $
+# $NetBSD: Makefile,v 1.4 2022/06/30 11:18:10 nia Exp $
 
 DISTNAME=	AFLplusplus-2.62c
 PKGNAME=	${DISTNAME:C/AFLplusplus/afl++/}
+PKGREVISION=	1
 GITHUB_PROJECT=	AFLplusplus
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AFLplusplus/}

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.55 2022/01/05 15:41:21 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2022/06/30 11:18:50 nia Exp $
 
 VERSION=		1.12.0
 DISTNAME=		Fabric-${VERSION}
 PKGNAME=		${DISTNAME:S/F/f/}
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		sysutils net
 MASTER_SITES=		${MASTER_SITE_PYPI:=F/Fabric/}
 

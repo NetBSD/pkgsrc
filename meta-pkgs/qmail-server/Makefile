@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2020/12/04 20:45:29 nia Exp $
+# $NetBSD: Makefile,v 1.4 2022/06/30 11:18:37 nia Exp $
 #
 
 DISTNAME=	qmail-server-1.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	meta-pkgs mail
 MASTER_SITES=	# empty
 DISTFILES=	# empty

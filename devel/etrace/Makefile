@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2022/06/28 11:31:42 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2022/06/30 11:18:13 nia Exp $
 #
 
 DISTNAME=	etrace-2.1
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	devel
 MASTER_SITES=	http://ndevilla.free.fr/etrace/
 

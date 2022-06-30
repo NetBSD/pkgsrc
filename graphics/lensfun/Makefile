@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2022/06/02 18:29:16 adam Exp $
+# $NetBSD: Makefile,v 1.41 2022/06/30 11:18:28 nia Exp $
 
 DISTNAME=	lensfun-0.3.3
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lensfun/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

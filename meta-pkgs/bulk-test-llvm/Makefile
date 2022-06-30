@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2021/11/20 19:58:59 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/06/30 11:18:37 nia Exp $
 
 DISTNAME=	bulk-test-llvm-20211120
+PKGREVISION=	1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty

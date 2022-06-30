@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2022/06/28 16:26:34 bouyer Exp $
+# $NetBSD: Makefile,v 1.17 2022/06/30 11:18:53 nia Exp $
 #
 # VERSION is set in version.mk as it is shared with other packages
 .include        "version.mk"
-PKGREVISION=    2
+PKGREVISION=    3
 
 CATEGORIES=		sysutils
 
