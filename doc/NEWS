@@ -1,4 +1,4 @@
-# $NetBSD: NEWS,v 1.26 2022/06/23 22:29:32 nia Exp $
+# $NetBSD: NEWS,v 1.27 2022/06/30 13:08:25 nia Exp $
 
 PKGSRC NEWS
 ===========
@@ -6,6 +6,15 @@ PKGSRC NEWS
   This file contains information about important infrastructural changes in
   pkgsrc. The intended readers are the pkgsrc developers as well as anyone
   tracking pkgsrc-current.
+
+Default versions bumped [nia 2022-06-30]
+
+	PYTHON_VERSION_DEFAULT is now 310.
+	PGSQL_VERSION_DEFAULT is now 14.
+	LUA_VERSION_DEFAULT is now 54.
+
+Dropped support for compiling glib2-using packages without introspection
+support [wiz 2022-06-07]
 
 PKGSRC_USE_MKTOOLS support added [jperkin 2022-06-07]
 
