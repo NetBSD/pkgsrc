@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.40 2021/10/26 10:54:08 nia Exp $
+$NetBSD: distinfo,v 1.41 2022/06/30 14:52:07 hauke Exp $
 
-BLAKE2s (milter-greylist-4.4.3.tgz) = 89ba2b8dddcde42ce9198d5eb08438cd1f2e08b2ef35d16b37ff9150a92ea7be
-SHA512 (milter-greylist-4.4.3.tgz) = 789c2b1d5b330b4564ef454aaebe891250c655f712081a436bb2d7462daa3590e02b6829881cb2e315db1238e021480013be95d0457d6bbde79a4230926cc841
-Size (milter-greylist-4.4.3.tgz) = 236277 bytes
+BLAKE2s (milter-greylist-4.6.4.tgz) = 09f598721df076426efe201a4c423c489ca0e6f88285a5ddba07a8b82752d8f9
+SHA512 (milter-greylist-4.6.4.tgz) = a52984e89b78a8c9ec89004d1ef0d3cc1e91ccce63b73774a616868a6c64565a393e77dcb29e20a4340d0a23850ce0c261725aef7a3bb607ea4049a1cd78c20c
+Size (milter-greylist-4.6.4.tgz) = 357243 bytes
 SHA1 (patch-aa) = c42757814933001ddbcdfb77dd03e17a9c4c8283
 SHA1 (patch-p0f.c) = 512055976836662e2c39362fc17766db0ae1a7b0
 SHA1 (patch-spamd.c) = 5249c4061460cc7b1f9e2d25df0a50f6f628c728
