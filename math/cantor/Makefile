@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.95 2022/05/13 20:00:05 wiz Exp $
+# $NetBSD: Makefile,v 1.96 2022/06/30 11:18:35 nia Exp $
 
 DISTNAME=	cantor-${KAPPSVER}
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	math
 
 HOMEPAGE=	https://kde.org/applications/education/cantor/

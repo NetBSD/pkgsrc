@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.47 2022/01/04 20:52:32 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2022/06/30 11:18:02 nia Exp $
 
 DISTNAME=	picard-2.3.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	audio python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/picard/}
 

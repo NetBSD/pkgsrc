@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.56 2022/01/04 20:54:11 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2022/06/30 11:18:35 nia Exp $
 
 DISTNAME=		rss2email-3.13.1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		mail python
 MASTER_SITES=		${MASTER_SITE_GITHUB:=rss2email/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}

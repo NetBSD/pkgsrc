@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2022/06/28 11:30:58 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2022/06/30 11:18:03 nia Exp $
 
 DISTNAME=	sphinxtrain-1.0.8
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cmusphinx/}
 

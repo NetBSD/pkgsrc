@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2021/04/29 23:30:15 thor Exp $
+# $NetBSD: Makefile,v 1.12 2022/06/30 11:18:30 nia Exp $
 
 DISTNAME=		hackrf-2021.03.1
+PKGREVISION=		1
 CATEGORIES=		ham
 MASTER_SITES=		${MASTER_SITE_GITHUB:=mossmann/}
 GITHUB_RELEASE=		v${PKGVERSION_NOREV}

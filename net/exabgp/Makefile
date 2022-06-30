@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2022/06/28 11:34:59 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2022/06/30 11:18:40 nia Exp $
 
 DISTNAME=	exabgp-4.2.17
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Exa-Networks/}
 
