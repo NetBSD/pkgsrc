@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2020/12/04 20:45:09 nia Exp $
+# $NetBSD: Makefile,v 1.5 2022/06/30 11:18:14 nia Exp $
 
 DISTNAME=	git-remote-hg-20140603
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel scm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=felipec/}
 

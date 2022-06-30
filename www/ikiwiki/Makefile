@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.177 2022/06/28 11:37:05 wiz Exp $
+# $NetBSD: Makefile,v 1.178 2022/06/30 11:18:58 nia Exp $
 
 DISTNAME=		ikiwiki_3.20200202.3.orig
 PKGNAME=		${DISTNAME:S/_/-/:S/.orig//}
-PKGREVISION=		7
+PKGREVISION=		8
 CATEGORIES=		www textproc
 MASTER_SITES=		${MASTER_SITE_DEBIAN:=pool/main/i/ikiwiki/}
 EXTRACT_SUFX=		.tar.xz

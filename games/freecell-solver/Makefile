@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2022/06/28 11:33:56 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2022/06/30 11:18:24 nia Exp $
 
 DISTNAME=	freecell-solver-5.14.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	games
 MASTER_SITES=	https://fc-solve.shlomifish.org/downloads/fc-solve/
 EXTRACT_SUFX=	.tar.xz

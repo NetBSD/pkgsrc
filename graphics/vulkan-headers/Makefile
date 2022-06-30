@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2022/01/29 22:07:27 triaxx Exp $
+# $NetBSD: Makefile,v 1.4 2022/06/30 11:18:29 nia Exp $
 
 GITHUB_PROJECT=	Vulkan-Headers
 DISTNAME=	v1.3.204
 PKGNAME=	${GITHUB_PROJECT:tl}-${DISTNAME:S/^v//}
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=KhronosGroup/}
 DIST_SUBDIR=	${GITHUB_PROJECT}

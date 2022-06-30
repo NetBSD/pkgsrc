@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2022/01/04 20:54:50 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2022/06/30 11:18:53 nia Exp $
 
 DISTNAME=	coccigrep-1.16
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=regit/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

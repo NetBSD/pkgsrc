@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2022/01/10 23:46:48 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2022/06/30 11:18:31 nia Exp $
 
 DISTNAME=	tegaki-pygtk-0.3.1
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	inputmethod
 MASTER_SITES=	http://www.tegaki.org/releases/${PKGVERSION_NOREV}/
 

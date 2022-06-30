@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2022/04/23 13:49:50 js Exp $
+# $NetBSD: Makefile,v 1.13 2022/06/30 11:18:06 nia Exp $
 
 DISTNAME=	telegram-0.11.3
 PKGNAME=	mautrix-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	chat python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mautrix/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

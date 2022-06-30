@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2022/01/04 21:31:58 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/06/30 11:18:13 nia Exp $
 
 PKGNAME=	deepstate-libfuzzer-${VERSION}
+PKGREVISION=	1
 
 USE_LANGUAGES=	c99 c++
 USE_CMAKE=	yes

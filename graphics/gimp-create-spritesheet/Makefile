@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2021/05/12 09:03:12 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2022/06/30 11:18:27 nia Exp $
 
 DISTNAME=		create_spritesheet
 PKGNAME=		gimp-create-spritesheet-0.0.2019.11.27
+PKGREVISION=		1
 CATEGORIES=		graphics
 MASTER_SITES=		https://raw.githubusercontent.com/Spydarlee/scripts/master/GIMP/
 DIST_SUBDIR=		${PKGNAME_NOREV}

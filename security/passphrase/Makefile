@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2022/02/24 21:29:12 nikita Exp $
+# $NetBSD: Makefile,v 1.8 2022/06/30 11:18:47 nia Exp $
 
 DISTNAME=	1.2
 PKGNAME=	passphrase-1.2
+PKGREVISION=	1
 DIST_SUBDIR=	passphrase
 CATEGORIES=	security
 MASTER_SITES=	https://git.sr.ht/~alva/passphrase/archive/
