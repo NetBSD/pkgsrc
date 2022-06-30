@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3146 2022/06/30 14:52:30 hauke Exp $
+$NetBSD: CHANGES-2022,v 1.3147 2022/06/30 17:53:28 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4735,3 +4735,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/felix to 0.9.8 [pin 2022-06-30]
 	Updated security/gnupg2 to 2.2.35nb1 [wiz 2022-06-30]
 	Updated mail/milter-greylist to 4.6.4 [hauke 2022-06-30]
+	Updated geography/gama to 2.19 [gdt 2022-06-30]
