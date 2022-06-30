@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21968 2022/06/30 14:49:05 wiz Exp $
+$NetBSD: TODO,v 1.21969 2022/06/30 14:52:30 hauke Exp $
 
 Suggested new packages
 ======================
@@ -1068,7 +1068,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o mftrace-1.2.20
 	o mg-20160118
 	o mgetty+sendfax-1.2.1
-	o milter-greylist-4.6.4
 	o milter-regex-2.0
 	o mined-2015.25
 	o mingw-binutils-2.36.1
