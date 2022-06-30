@@ -1,4 +1,4 @@
-<!-- $NetBSD: using.xml,v 1.52 2021/06/11 14:45:08 nia Exp $ -->
+<!-- $NetBSD: using.xml,v 1.53 2022/06/30 14:04:32 gdt Exp $ -->
 
 <chapter id="using"> <?dbhtml filename="using.html"?>
 <title>Using pkgsrc</title>
@@ -38,12 +38,11 @@ and you can still use binary packages from someone else.</para>
     url="https://cdn.NetBSD.org/pub/pkgsrc/packages/"><filename>/pub/pkgsrc/packages</filename></ulink>.</para>
 
     <para>This directory contains binary packages for multiple
-    platforms. First, select your operating system. (Ignore the
-    directories with version numbers attached to it, they just exist for
-    legacy reasons.) Then, select your hardware architecture, and in the
-    third step, the OS version and the <quote>version</quote> of pkgsrc.</para>
+    platforms. First, select your operating system. Then, select your
+    hardware architecture, and in the third step, the OS version and
+    the <quote>version</quote> of pkgsrc.</para>
 
-    <para>In this directory, you often find a file called
+    <para>In this directory, you may find a file called
     <filename>bootstrap.tar.gz</filename> which contains the package
     management tools. If the file is missing, it is likely that your
     operating system already provides those tools. Download the file and
