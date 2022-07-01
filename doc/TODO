@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21969 2022/06/30 14:52:30 hauke Exp $
+$NetBSD: TODO,v 1.21970 2022/07/01 16:57:39 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1041,7 +1041,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o mailutis-2.2 [wip]
 	o maketool-0.8.4
 	o makeztxt-1.60
-	o mame-0.245
 	o man-pages-5.11
 	o manedit-1.2.1
 	o mapserver-7.6.2
@@ -1407,6 +1406,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o qca2-qt5-gnupg-2.3.2
 	o qca2-qt5-ossl-2.3.2
 	o qconf-2.5
+	o qdirstat-1.8.1
 	o qemu-7.0
 	o qt6-6.0
 	o qtcreator-6.0
