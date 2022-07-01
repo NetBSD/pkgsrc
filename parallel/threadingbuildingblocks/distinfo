@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.11 2022/05/16 17:09:50 jperkin Exp $
+$NetBSD: distinfo,v 1.12 2022/07/01 16:21:08 adam Exp $
 
-BLAKE2s (oneTBB-2021.3.0.tar.gz) = d6d10b35108642bfba06cd85a1d6628affb59aac7951d97f6e7a9b387b1aa172
-SHA512 (oneTBB-2021.3.0.tar.gz) = 969bc8d1dcf50bd12f70633d0319e46308eb1667cdc6f0503b373a35dcb2fe6b2adf59c26bd3c8e2a99a8d2d8b9f64088db5a43e784218b163b3661d12908c0e
-Size (oneTBB-2021.3.0.tar.gz) = 1651329 bytes
-SHA1 (patch-cmake_compilers_Clang.cmake) = e61f17d9df4dd06b2c42a6e450fdc3a452b10516
-SHA1 (patch-cmake_compilers_GNU.cmake) = c52042af12a3f90822a70ba6ec0e943deeb24eb7
+BLAKE2s (oneTBB-2021.5.0.tar.gz) = 570452be4c16d646d781f41449c52caa4d9e580ba7bbd777085e88b955979e26
+SHA512 (oneTBB-2021.5.0.tar.gz) = 0e7b71022e397a6d7abb0cea106847935ae79a1e12a6976f8d038668c6eca8775ed971202c5bd518f7e517092b67af805cc5feb04b5c3a40e9fbf972cc703a46
+Size (oneTBB-2021.5.0.tar.gz) = 2463218 bytes
 SHA1 (patch-test_tbb_test__composite__node.cpp) = 1c48644e8cbee6622e2cf4a91901db217cee2ff3
