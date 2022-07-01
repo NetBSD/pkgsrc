@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2022/04/27 17:12:17 adam Exp $
+# $NetBSD: Makefile,v 1.112 2022/07/01 17:49:39 adam Exp $
 
 .include "../../databases/sqlite3/Makefile.common"
 
@@ -21,7 +21,7 @@ BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.6.10
 
 # avoid conflict with lang/tcl
 post-extract:
-	mv ${WRKSRC}/doc/sqlite3.n ${WRKSRC}/doc/sqlite3-tcl.n
+	${MV} ${WRKSRC}/doc/sqlite3.n ${WRKSRC}/doc/sqlite3-tcl.n
 
 .include "../../mk/bsd.prefs.mk"
 
