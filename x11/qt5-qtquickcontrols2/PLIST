@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2022/04/18 11:18:17 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2022/07/01 16:13:38 adam Exp $
 lib/pkgconfig/Qt5QuickControls2.pc
 qt5/include/QtQuickControls2/${PKGVERSION}/QtQuickControls2/private/qquickanimatednode_p.h
 qt5/include/QtQuickControls2/${PKGVERSION}/QtQuickControls2/private/qquickattachedobject_p.h
@@ -134,6 +134,7 @@ qt5/include/QtQuickTemplates2/${PKGVERSION}/QtQuickTemplates2/private/qquicktumb
 qt5/include/QtQuickTemplates2/${PKGVERSION}/QtQuickTemplates2/private/qquickvelocitycalculator_p_p.h
 qt5/include/QtQuickTemplates2/${PKGVERSION}/QtQuickTemplates2/private/qtquicktemplates2-config_p.h
 qt5/include/QtQuickTemplates2/${PKGVERSION}/QtQuickTemplates2/private/qtquicktemplates2global_p.h
+qt5/include/QtQuickTemplates2/5.15.5/QtQuickTemplates2/private/qquickpopupitem_p.h
 qt5/include/QtQuickTemplates2/QtQuickTemplates2
 qt5/include/QtQuickTemplates2/QtQuickTemplates2Depends
 qt5/include/QtQuickTemplates2/QtQuickTemplates2Version
@@ -359,6 +360,7 @@ qt5/qml/QtQuick/Controls.2/Material/ToolSeparator.qml
 qt5/qml/QtQuick/Controls.2/Material/ToolTip.qml
 qt5/qml/QtQuick/Controls.2/Material/Tumbler.qml
 qt5/qml/QtQuick/Controls.2/Material/VerticalHeaderView.qml
+qt5/qml/QtQuick/Controls.2/Material/libqqc2materialstyleplugin.so
 qt5/qml/QtQuick/Controls.2/Material/libqtquickcontrols2materialstyleplugin.so
 qt5/qml/QtQuick/Controls.2/Material/plugins.qmltypes
 qt5/qml/QtQuick/Controls.2/Material/qmldir
