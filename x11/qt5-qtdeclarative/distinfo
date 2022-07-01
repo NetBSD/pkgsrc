@@ -1,14 +1,13 @@
-$NetBSD: distinfo,v 1.32 2022/06/04 06:07:26 adam Exp $
+$NetBSD: distinfo,v 1.33 2022/07/01 16:13:37 adam Exp $
 
-BLAKE2s (qtdeclarative-everywhere-opensource-src-5.15.4.tar.xz) = 5acab897c9196e3c61eea23e372fce613d21b182f8882ff449ff9280debb0440
-SHA512 (qtdeclarative-everywhere-opensource-src-5.15.4.tar.xz) = 8a4ff61238fde7cc563f9d94b5d1f4fd71ecb95ace447e57d08f71da82400b37c42f4f1ecdcd561116bffa1ed483219e06fb550f91c90842e5a43487bc4706b6
-Size (qtdeclarative-everywhere-opensource-src-5.15.4.tar.xz) = 21573148 bytes
+BLAKE2s (qtdeclarative-everywhere-opensource-src-5.15.5.tar.xz) = 68cd303b0c300b3e0ae631f0cfdebd833675c2f58b2edfaace98822b623df338
+SHA512 (qtdeclarative-everywhere-opensource-src-5.15.5.tar.xz) = b4b2754ae3566bbfa3e0162738ae6ea3b36d506841ce7e4b5651d0b0ca1c341ab19f653aebc23d13a17840d391280137c463c29fcf4866fc1f1c3adf8ebb5e5b
+Size (qtdeclarative-everywhere-opensource-src-5.15.5.tar.xz) = 21581628 bytes
 SHA1 (patch-src_3rdparty_masm_assembler_ARMv7Assembler.h) = 505b2a585a7ed98e63403a3cc44d839a4f80c01d
 SHA1 (patch-src_3rdparty_masm_wtf_Compiler.h) = 8d7e318e0148eea0f262ec13463bc15bd03478dc
 SHA1 (patch-src_3rdparty_masm_yarr_Yarr.h) = 3a3f3d33705dc7d24827b87f37b40b077bcbdaf8
 SHA1 (patch-src_3rdparty_masm_yarr_YarrCanonicalize.h) = 3cb31384f5287a5449d1a6bdd03d42870ac9385f
 SHA1 (patch-src_qml_common_qv4alloca__p.h) = 15a300585e4f5acf956badf0d94e388934883041
 SHA1 (patch-src_qml_jit_qv4assemblercommon__p.h) = 84fa72bb8b90dffe6636fcd4302876bfc838663c
-SHA1 (patch-src_qmldebug_qqmlprofilerevent_p.h) = 128d4849de6766e028433281d6fd463d403d0ccc
 SHA1 (patch-src_qmltest_qmltest.pro) = f340d6f31d8d6a9d69034d67712dfd109e1769fb
 SHA1 (patch-tools_qmltestrunner_qmltestrunner.pro) = 471d399d57696652be5a4264657aed467852c5f3
