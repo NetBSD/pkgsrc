@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2022/06/27 21:41:52 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2022/07/01 16:13:40 adam Exp $
 
 DISTNAME=	qtwebengine-everywhere-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtwebengine-${QTVERSION}
@@ -113,6 +113,7 @@ BUILDLINK_TRANSFORM+=   l:pci:${PCIUTILS_LIBNAME}
 .include "../../multimedia/gst-plugins1-bad/buildlink3.mk"
 .include "../../x11/libXcomposite/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
+.include "../../x11/libxkbfile/buildlink3.mk"
 .endif
 .include "../../x11/qt5-qtdeclarative/buildlink3.mk"
 .include "../../x11/qt5-qtlocation/buildlink3.mk"
