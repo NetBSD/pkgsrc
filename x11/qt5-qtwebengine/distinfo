@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.7 2022/06/04 06:07:28 adam Exp $
+$NetBSD: distinfo,v 1.8 2022/07/01 16:13:40 adam Exp $
 
-BLAKE2s (qtwebengine-everywhere-opensource-src-5.15.4.tar.xz) = ac874d3d669f78aa55437664bd9dc2457ea03d93d869ad48118c277446fa87d1
-SHA512 (qtwebengine-everywhere-opensource-src-5.15.4.tar.xz) = 935c5a21ec2529d8cc3dbaf906e1f68f6e0879da212719d2da9fc1c97efd572563e8d12a6742a0a995efa5014ce5378235833eafb8d463ebe4060b60a590c476
-Size (qtwebengine-everywhere-opensource-src-5.15.4.tar.xz) = 316231408 bytes
+BLAKE2s (qtwebengine-everywhere-opensource-src-5.15.5.tar.xz) = 2ecf9261b6f9ff81bee32a23ca534703bac6038b11aaeb2062aa748c96fe3e2b
+SHA512 (qtwebengine-everywhere-opensource-src-5.15.5.tar.xz) = 9dc7891c452397878fb20bd64ec00b13a056e9eff33f74ac3a9c06bc93992ae2ce49b8f8cef553d3f681c37d81a81ee5af29d317ca1963b4793d32841aa316f0
+Size (qtwebengine-everywhere-opensource-src-5.15.5.tar.xz) = 316252448 bytes
 SHA1 (patch-mkspecs_features_functions.prf) = e9c7a9c348cc7b9d09232f4b03f0a8282e9bfeb5
 SHA1 (patch-src_3rdparty_chromium_BUILD.gn) = 97fbda3bd2dc44d4ae97b650240e61516cd108f4
 SHA1 (patch-src_3rdparty_chromium_base_BUILD.gn) = 839b97c34e0aaf1309c89af6c9f8e65ebf77a7e5
@@ -806,7 +806,6 @@ SHA1 (patch-src_3rdparty_chromium_v8_gni_v8.gni) = 37cbd6b92dac3370c039aa04424e4
 SHA1 (patch-src_3rdparty_chromium_v8_src_api_api.cc) = d563a6b50e5dff265d5a4b1b516de02e7149cab6
 SHA1 (patch-src_3rdparty_chromium_v8_src_base_cpu.cc) = f6ec99bba983bb93e8515478f64681440ffbda1e
 SHA1 (patch-src_3rdparty_chromium_v8_src_base_platform_platform-posix.cc) = 7e587fac8a26a975b33a93aa09ccf9af82afabb7
-SHA1 (patch-src_3rdparty_chromium_v8_src_objects_js-list-format.cc) = 077357c9113ff9267ecc96ec5b65b66b4b5b6083
 SHA1 (patch-src_3rdparty_chromium_v8_src_trap-handler_handler-inside-posix.cc) = 568877d1ebcaaee5782527f232a6fcc7f096066a
 SHA1 (patch-src_3rdparty_chromium_v8_src_trap-handler_handler-inside-posix.h) = a64ca7574cca4cb804e0ca24dd3454507d3d556d
 SHA1 (patch-src_3rdparty_chromium_v8_src_trap-handler_trap-handler.h) = d0b72fff980d5072d2221dd31b2e95526cd33875
