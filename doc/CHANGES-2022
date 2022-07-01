@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3151 2022/07/01 14:35:48 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.3152 2022/07/01 14:37:28 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4740,3 +4740,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated chat/matrix-synapse to 1.61.1 [gdt 2022-07-01]
 	Updated net/dbip-asn-lite to 2022.07 [fcambus 2022-07-01]
 	Updated net/dbip-city-lite to 2022.07 [fcambus 2022-07-01]
+	Updated net/dbip-country-lite to 2022.07 [fcambus 2022-07-01]
