@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3153 2022/07/01 16:21:31 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3154 2022/07/01 16:39:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4745,3 +4745,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/potrace to 1.16 [adam 2022-07-01]
 	Updated graphics/openimageio to 2.2.20.0 [adam 2022-07-01]
 	Updated parallel/threadingbuildingblocks to 2021.5.0 [adam 2022-07-01]
+	Updated www/nghttp2 to 1.48.0 [adam 2022-07-01]
+	Updated www/nghttp2-tools to 1.48.0 [adam 2022-07-01]
