@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.5 2022/06/28 11:26:24 nia Exp $
+# $NetBSD: options.mk,v 1.6 2022/07/01 12:28:12 martin Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.webkit-gtk
-PKG_SUPPORTED_OPTIONS=	debug enchant opengl webkit-jit
+PKG_SUPPORTED_OPTIONS=	debug debug-info enchant opengl webkit-jit
 PKG_SUGGESTED_OPTIONS=	enchant opengl
 
 .include "../../mk/bsd.prefs.mk"
@@ -38,6 +38,9 @@ CONFIGURE_ARGS+=	--enable-debug \
 .else
 CONFIGURE_ARGS+=	--disable-debug \
 			--enable-optimizations
+.endif
+.if !empty(PKG_OPTIONS:Mdebug-info)
+CONFIGURE_ARGS+=	--enable-debug-symbols=yes
 .endif
 
 #
