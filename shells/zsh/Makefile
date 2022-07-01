@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.103 2022/05/16 14:58:30 ryoon Exp $
+# $NetBSD: Makefile,v 1.104 2022/07/01 23:31:49 rin Exp $
 
 DISTNAME=	zsh-5.9
+PKGREVISION=	1
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=zsh/}
 EXTRACT_SUFX=	.tar.xz
@@ -11,7 +12,7 @@ COMMENT=	The Z shell
 LICENSE=	gnu-gpl-v2 AND zsh
 
 USE_LANGUAGES=		c c99
-USE_TOOLS+=		automake autoconf makeinfo
+USE_TOOLS+=		makeinfo
 GNU_CONFIGURE=		yes
 INFO_FILES=		yes
 TEXINFO_REQD=		4.0
@@ -75,9 +76,6 @@ SUBST_FILES.pkgdb=	Completion/BSD/Command/_bsd_pkg
 SUBST_VARS.pkgdb=	PKG_DBDIR
 
 .include "options.mk"
-
-pre-configure:
-	cd ${WRKSRC};  autoreconf -fiv
 
 post-install:
 .for f in FEATURES NEWS Etc/BUGS Etc/FAQ
