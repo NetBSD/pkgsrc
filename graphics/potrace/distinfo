@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2021/10/26 10:46:42 nia Exp $
+$NetBSD: distinfo,v 1.16 2022/07/01 16:15:47 adam Exp $
 
-BLAKE2s (potrace-1.15.tar.gz) = eb25262feea25d952a07a384659b229e5beaabf780c22173e6a74a223747dc5f
-SHA512 (potrace-1.15.tar.gz) = c9a8edd4f3339da587b9b32e12c83c8f7b993c7c23f551fa267545d9411679bc024924e23596ed1c83985693fc894b65dfa9f860275de395d9e0a88da37a4f02
-Size (potrace-1.15.tar.gz) = 650840 bytes
+BLAKE2s (potrace-1.16.tar.gz) = 10920df7c9b7ad82e63d242e33aaf969a12b86cc2b601dd88079b3a546ad6533
+SHA512 (potrace-1.16.tar.gz) = 10d85ed3fada80951223c65e923b5e6ee3e76e071575971d5b09b996b477ec5ff2403e0337c44963c6b441cc3ba6c4f7009541124a25c16b7721fdebd1f774b9
+Size (potrace-1.16.tar.gz) = 657314 bytes
