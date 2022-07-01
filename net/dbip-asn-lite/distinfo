@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.28 2022/06/01 10:47:29 fcambus Exp $
+$NetBSD: distinfo,v 1.29 2022/07/01 14:27:55 fcambus Exp $
 
-BLAKE2s (dbip-asn-lite-2022-06.mmdb.gz) = c4b48ff6bcf111364ce858b07317f4723ebbb5a818116ba561526873c3f0778b
-SHA512 (dbip-asn-lite-2022-06.mmdb.gz) = 9e7ea6f6ea2c50567e49d13559db091d736983ca854f31ed3fe55da5ce7bdac2ceb72bdb36795fe63618387367546450fc7f91b43068424abfe335ba69e4c2ab
-Size (dbip-asn-lite-2022-06.mmdb.gz) = 4128183 bytes
+BLAKE2s (dbip-asn-lite-2022-07.mmdb.gz) = 40958c4a5c13ad090546bb20921c589a579330a557b9ad35e77fc147d46de9fe
+SHA512 (dbip-asn-lite-2022-07.mmdb.gz) = 8b83bbad2ef03b6a46a0981565622d95c68c24bb717a4e48bb2d2a5010a5b36a0c9c0a6317036ae99b2379ac47f011ff3cf369b7548aefd11b5e8d3e2941dd45
+Size (dbip-asn-lite-2022-07.mmdb.gz) = 4139330 bytes
