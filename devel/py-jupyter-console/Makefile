@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2022/03/17 08:21:15 adam Exp $
+# $NetBSD: Makefile,v 1.10 2022/07/01 18:06:01 adam Exp $
 
-DISTNAME=	jupyter_console-6.4.3
+DISTNAME=	jupyter_console-6.4.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jupyter_console/}

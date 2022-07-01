@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2022/03/17 08:21:15 adam Exp $
+$NetBSD: distinfo,v 1.7 2022/07/01 18:06:01 adam Exp $
 
-BLAKE2s (jupyter_console-6.4.3.tar.gz) = 0b6c42cf8907474d9884f3e5b71c8131c2b985192dee1ddeacacc6e0b4e04a64
-SHA512 (jupyter_console-6.4.3.tar.gz) = 6b8f9be62efdac9d8a17367e169f8f73c3d7ee2783692ea380853a886d228957cad03095a2aa165a1ace3440c340e2939c1044c85fa3f5e1e2d1f48919e562da
-Size (jupyter_console-6.4.3.tar.gz) = 35432 bytes
+BLAKE2s (jupyter_console-6.4.4.tar.gz) = 879b516d6b3baa30425def35cca011a2ae7710490eea832cefbb4e7871092247
+SHA512 (jupyter_console-6.4.4.tar.gz) = 1f06591ed2a0fcf56e783d4e9f2a7c3f58a4f566cfb63b3367edac23c7709aa1af7bf6639c7358227a987049804da90658144fa5ad38db120c0816e78ed465ef
+Size (jupyter_console-6.4.4.tar.gz) = 35145 bytes
