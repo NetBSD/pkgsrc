@@ -1,10 +1,10 @@
-$NetBSD: patch-configure.ac,v 1.9 2022/05/16 14:58:30 ryoon Exp $
+$NetBSD: patch-configure,v 1.1 2022/07/01 23:31:49 rin Exp $
 
 Fix SunOS flags.
 
---- configure.ac.orig	2020-02-27 02:06:19.620472371 +0000
-+++ configure.ac
-@@ -2857,7 +2789,7 @@ char *argv[];
+--- configure.orig	2022-07-02 08:12:29.625197786 +0900
++++ configure	2022-07-02 08:12:43.989244826 +0900
+@@ -14101,7 +14101,7 @@
      sunos*)       DLLDFLAGS="${DLLDFLAGS=-assert nodefinitions}" ;;
      sysv4*|esix*) DLLDFLAGS="${DLLDFLAGS=-G $ldflags}" ;;
      aix*)         DLLDFLAGS="${DLLDFLAGS=-G -bexpall -lc}" ;;
