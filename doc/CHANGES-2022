@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3159 2022/07/01 18:06:30 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3160 2022/07/01 18:36:45 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4758,3 +4758,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/lemon to 1.0.3.39.0 [adam 2022-07-01]
 	Updated www/py-nbclient to 0.6.6 [adam 2022-07-01]
 	Updated devel/py-jupyter-console to 6.4.4 [adam 2022-07-01]
+	Added audio/shairport-sync version 3.3.9 [nia 2022-07-01]
