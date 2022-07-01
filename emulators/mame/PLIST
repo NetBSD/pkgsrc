@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.66 2022/05/25 09:06:03 wiz Exp $
+@comment $NetBSD: PLIST,v 1.67 2022/07/01 16:57:29 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -25,7 +25,6 @@ man/man1/ldresample.1
 man/man1/ldverify.1
 man/man1/romcmp.1
 man/man6/mame.6
-man/man6/mess.6
 share/doc/mame/CONTRIBUTING.md
 share/doc/mame/README.md
 share/mame/artwork/LICENSE
@@ -728,6 +727,7 @@ share/mame/hash/x07_card.xml
 share/mame/hash/x07_cass.xml
 share/mame/hash/x1_cass.xml
 share/mame/hash/x1_flop.xml
+share/mame/hash/x37_flop.xml
 share/mame/hash/x68k_flop.xml
 share/mame/hash/xegs.xml
 share/mame/hash/xerox820.xml
