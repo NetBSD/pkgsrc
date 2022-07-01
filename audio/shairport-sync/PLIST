@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2022/07/01 18:36:27 nia Exp $
+bin/shairport-sync
+man/man7/shairport-sync.7
+share/examples/shairport-sync/shairport-sync.conf

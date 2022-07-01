@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.1 2022/07/01 18:36:27 nia Exp $
+
+BLAKE2s (shairport-sync-3.3.9.tar.gz) = 1fb7074a2af92bb759c07a408e7078f96fd7363d2e963111664a7ebdb15f18c2
+SHA512 (shairport-sync-3.3.9.tar.gz) = 725bbab9f35a209a1893851d6f470a830d396cf73620361b42444459359c04bb98a090d91b74db080eb17cee597ca9da2dd51285e629bd34d6e5f79682fe6470
+Size (shairport-sync-3.3.9.tar.gz) = 426827 bytes
+SHA1 (patch-Makefile.am) = 7986bbcd9db23bbb46bb6f383bf20268fd0e56cd
+SHA1 (patch-audio.c) = 09efa3814893b878214505c7e95b6f323e317399
+SHA1 (patch-audio__sun.c) = b48b166b557bb61e89b7f91ba812ef9f3f76ff01
+SHA1 (patch-common.c) = 495e6e7cdf243daf18c695e052eef1bf0174c880
+SHA1 (patch-configure.ac) = ea06a77574022542263fab5affef5722a6a31b7c
+SHA1 (patch-shairport.c) = e8905c0b705b048d8934051f43c7054a3c1c5483

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.654 2022/04/24 00:20:01 tnn Exp $
+# $NetBSD: Makefile,v 1.655 2022/07/01 18:36:27 nia Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -436,6 +436,7 @@ SUBDIR+=	ruby-mp3info
 SUBDIR+=	ruby-taglib
 SUBDIR+=	schismtracker
 SUBDIR+=	sfxr
+SUBDIR+=	shairport-sync
 SUBDIR+=	shine
 SUBDIR+=	shntool
 SUBDIR+=	shorten
