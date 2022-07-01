@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3148 2022/07/01 06:56:31 pin Exp $
+$NetBSD: CHANGES-2022,v 1.3149 2022/07/01 14:22:42 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4737,3 +4737,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated mail/milter-greylist to 4.6.4 [hauke 2022-06-30]
 	Updated geography/gama to 2.19 [gdt 2022-06-30]
 	Updated net/yaydl to 0.10.1 [pin 2022-07-01]
+	Updated chat/matrix-synapse to 1.61.1 [gdt 2022-07-01]
