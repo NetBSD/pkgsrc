@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3162 2022/07/01 20:32:46 pin Exp $
+$NetBSD: CHANGES-2022,v 1.3163 2022/07/01 23:34:01 rin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4762,3 +4762,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/ugrep to 3.8.3 [adam 2022-07-01]
 	Updated net/wireshark to 3.6.6 [adam 2022-07-01]
 	Updated www/lariza to 22.04 [pin 2022-07-01]
+	Updated shells/zsh to 5.9nb1 [rin 2022-07-01]
