@@ -1,0 +1,17 @@
+$NetBSD: patch-Makefile.am,v 1.1 2022/07/01 18:36:28 nia Exp $
+
+Add support for Sun/NetBSD audio.
+
+--- Makefile.am.orig	2020-12-01 12:16:11.000000000 +0000
++++ Makefile.am
+@@ -56,6 +56,10 @@ if USE_SNDIO
+ shairport_sync_SOURCES += audio_sndio.c
+ endif
+ 
++if USE_SUN
++shairport_sync_SOURCES += audio_sun.c
++endif
++
+ if USE_STDOUT
+ shairport_sync_SOURCES += audio_stdout.c
+ endif
