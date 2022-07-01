@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3156 2022/07/01 17:14:07 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3157 2022/07/01 17:32:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4750,3 +4750,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated emulators/mame to 0.245 [wiz 2022-07-01]
 	Updated devel/py-cffi to 1.15.1 [adam 2022-07-01]
 	Updated lang/py-mypy to 0.961 [adam 2022-07-01]
+	Updated net/haproxy to 2.6.1 [adam 2022-07-01]
+	Updated devel/py-prompt_toolkit to 3.0.30 [adam 2022-07-01]
