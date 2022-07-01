@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE.NetBSD,v 1.1 2022/07/01 18:36:27 nia Exp $
+
+To run shairport-sync as the shairport user, make sure audio(4) is
+configured for multi-user access:
+
+# sysctl -w hw.audio0.multiuser=1
+
+===========================================================================
