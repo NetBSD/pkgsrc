@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.192 2022/06/28 11:34:20 wiz Exp $
+# $NetBSD: Makefile,v 1.193 2022/07/02 09:24:34 adam Exp $
 
-DISTNAME=	exim-4.95
-PKGREVISION=	3
+DISTNAME=	exim-4.96
 CATEGORIES=	mail net
 MASTER_SITES=	https://ftp.exim.org/pub/exim/exim4/
 MASTER_SITES+=	https://ftp.exim.org/pub/exim/exim4/fixes/
@@ -130,5 +129,5 @@ post-install:
 		${DESTDIR}${PREFIX}/share/doc/exim
 
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../devel/pcre/buildlink3.mk"
+.include "../../devel/pcre2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
