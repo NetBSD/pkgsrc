@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.171 2022/06/28 11:30:58 wiz Exp $
+# $NetBSD: Makefile,v 1.172 2022/07/02 16:44:38 ryoon Exp $
 
-DISTNAME=	pulseaudio-15.0
-PKGREVISION=	3
+DISTNAME=	pulseaudio-16.1
 CATEGORIES=	audio
 MASTER_SITES=	https://freedesktop.org/software/pulseaudio/releases/
 EXTRACT_SUFX=	.tar.xz
@@ -33,7 +32,7 @@ GCC_REQD+=	4.8
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		bash:run gmake gm4
+USE_TOOLS+=		bash:run gm4
 USE_TOOLS+=		msgfmt perl:build pkg-config
 MESON_ARGS+=		-Dtcpwrap=disabled
 MESON_ARGS+=		--localedir=${PKGLOCALEDIR}/locale
@@ -71,8 +70,6 @@ MAKE_FLAGS+=		bashcompletiondir=${PREFIX}/share/bash-completion/completions
 .include "../../devel/libatomic_ops/buildlink3.mk"
 .endif
 
-# Version number in patch-configure.ac.must be changed too.
-PLIST_SUBST+=		PULSELIBVER=15.0
 PLIST_VARS+=		alsa evdev oss
 
 .if ${SHLIB_TYPE} == "dylib"
@@ -80,6 +77,7 @@ PLIST_SUBST+=		SOEXT=dylib
 .else
 PLIST_SUBST+=		SOEXT=so
 .endif
+PRINT_PLIST_AWK+=	{ gsub(/\.so/, ".$${SOEXT}"); }
 
 # Build module-mmkbd-evdev.so under Linux
 .if ${OPSYS} == "Linux"
@@ -109,7 +107,7 @@ LDFLAGS.SunOS+=		-lsocket -lnsl
 
 # Do not depend on RPATH $ORIGIN.
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/pulseaudio
-LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/pulse-${PKGVERSION_NOREV}/modules
+LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/pulseaudio/modules
 
 INSTALLATION_DIRS=	share/examples/pulse
 
