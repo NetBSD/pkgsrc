@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2022/04/25 05:02:23 markd Exp $
+# $NetBSD: Makefile,v 1.51 2022/07/02 16:53:13 ryoon Exp $
 
 DISTNAME=	krunner-${KF5VER}
+PKGREVISION=	1
 CATEGORIES=	devel
 
 HOMEPAGE=	https://community.kde.org/Frameworks

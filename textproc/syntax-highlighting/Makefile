@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2022/06/28 11:36:49 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2022/07/02 16:53:36 ryoon Exp $
 
 DISTNAME=	syntax-highlighting-${KF5VER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc
 
 HOMEPAGE=	https://community.kde.org/Frameworks
