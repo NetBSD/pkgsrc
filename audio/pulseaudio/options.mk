@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.14 2021/07/30 12:21:06 ryoon Exp $
+# $NetBSD: options.mk,v 1.15 2022/07/02 16:44:39 ryoon Exp $
 
 .include "../../comms/lirc/available.mk"
 
@@ -44,3 +44,13 @@ PLIST.x11=		yes
 .else
 CONFIGURE_ARGS+=	--disable-x11
 .endif
+
+PRINT_PLIST_AWK+=	{if ($$0 ~ /x11/ && !($$0 ~ /start-pulseaudio-x11.1/)) {$$0 = "$${PLIST.x11}" $$0;}}
+PRINT_PLIST_AWK+=	{if ($$0 ~ /pulseaudio.desktop/) {$$0 = "$${PLIST.x11}" $$0;}}
+
+PRINT_PLIST_AWK+=	{if ($$0 ~ /avahi/) {$$0 = "$${PLIST.avahi}" $$0;}}
+PRINT_PLIST_AWK+=	{if ($$0 ~ /zeroconf/) {$$0 = "$${PLIST.avahi}" $$0;}}
+PRINT_PLIST_AWK+=	{if ($$0 ~ /module-raop-discover/) {$$0 = "$${PLIST.avahi}" $$0;}}
+
+PRINT_PLIST_AWK+=	{if ($$0 ~ /oss/) {$$0 = "$${PLIST.oss}" $$0;}}
+PRINT_PLIST_AWK+=	{if ($$0 ~ /dsp/ && !($$0 ~ /share\/bash-completion\/completions\/padsp/)) {$$0 = "$${PLIST.oss}" $$0;}}
