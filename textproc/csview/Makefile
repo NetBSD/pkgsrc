@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2022/02/16 21:19:20 pin Exp $
+# $NetBSD: Makefile,v 1.8 2022/07/02 13:35:40 pin Exp $
 
+# v1.1.0 release on 2022-07-02 requires Rust-1.62
 DISTNAME=	csview-1.0.1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wfxr/}
