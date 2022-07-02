@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.20 2020/06/21 17:53:01 tsutsui Exp $
+# $NetBSD: options.mk,v 1.21 2022/07/02 03:11:43 rin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mlterm
-PKG_SUPPORTED_OPTIONS=	cairo canna fcitx fribidi gdk_pixbuf2 ibus libind m17nlib mlterm-fb otl scim skk uim wnn4 xft2
+PKG_SUPPORTED_OPTIONS=	cairo canna fcitx fribidi gdk_pixbuf2 ibus libind m17nlib mlterm-fb otl scim skk uim wnn4 xft2 debug
 PKG_SUGGESTED_OPTIONS=	cairo fribidi gdk_pixbuf2 m17nlib otl xft2
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "Linux"
 PKG_SUGGESTED_OPTIONS+=	mlterm-fb
@@ -153,4 +153,8 @@ CONFIGURE_ARGS+=	--with-type-engines=xcore,cairo
 CONFIGURE_ARGS+=	--with-type-engines=xcore,xft
 .else
 CONFIGURE_ARGS+=	--with-type-engines=xcore
+.endif
+
+.if !empty(PKG_OPTIONS:Mdebug)
+CONFIGURE_ARGS+=	--enable-debug
 .endif
