@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.22 2022/01/19 06:04:35 adam Exp $
+$NetBSD: distinfo,v 1.23 2022/07/02 09:13:24 adam Exp $
 
-BLAKE2s (zstandard-0.17.0.tar.gz) = 2de7fb51d6844b307bbff7e1f46369ad781b68cf454e73104f641a68cdcc6e82
-SHA512 (zstandard-0.17.0.tar.gz) = 312aa02c7309fac64cf70ca901942118d4b3f12f27d20cc18dcaba5ce155ad81ea8d7657501a33a5fb6cdc8bcca11f91141ea9d6c3fc09c28a84d698b9050391
-Size (zstandard-0.17.0.tar.gz) = 629456 bytes
-SHA1 (patch-c-ext_backend__c.c) = e66030166a04c355b941e0d524af59882ec70bb4
+BLAKE2s (zstandard-0.18.0.tar.gz) = ada018d33df493d851f50efcf1e6194edbc1c3ff2a715a92ae4e49004de7f1b4
+SHA512 (zstandard-0.18.0.tar.gz) = 62b21a20b39b0ce3e247f1df91208c41cdcdda9006261c6cad4683586a14f7d45d4a9c764246666418d5cf44d6028c086be712ab72db95bb6cf3da019eb32e91
+Size (zstandard-0.18.0.tar.gz) = 631544 bytes
+SHA1 (patch-c-ext_backend__c.c) = 56779ce7c8388f70916c1550062942e976f7c8c4
