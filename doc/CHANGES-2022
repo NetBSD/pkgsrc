@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3168 2022/07/02 09:39:57 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3169 2022/07/02 16:45:24 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4776,3 +4776,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/py-zmq to 23.2.0 [adam 2022-07-02]
 	Updated textproc/py-xmlschema to 1.11.3 [adam 2022-07-02]
 	Updated devel/py-pylint to 2.14.4 [adam 2022-07-02]
+	Updated audio/pulseaudio to 16.1 [ryoon 2022-07-02]
