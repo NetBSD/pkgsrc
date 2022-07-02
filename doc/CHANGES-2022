@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3169 2022/07/02 16:45:24 ryoon Exp $
+$NetBSD: CHANGES-2022,v 1.3170 2022/07/02 19:46:36 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4777,3 +4777,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/py-xmlschema to 1.11.3 [adam 2022-07-02]
 	Updated devel/py-pylint to 2.14.4 [adam 2022-07-02]
 	Updated audio/pulseaudio to 16.1 [ryoon 2022-07-02]
+	Updated emulators/PC6001VX to 3.9.0 [tsutsui 2022-07-02]
