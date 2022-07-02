@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3170 2022/07/02 19:46:36 tsutsui Exp $
+$NetBSD: CHANGES-2022,v 1.3171 2022/07/02 21:22:57 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4778,3 +4778,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-pylint to 2.14.4 [adam 2022-07-02]
 	Updated audio/pulseaudio to 16.1 [ryoon 2022-07-02]
 	Updated emulators/PC6001VX to 3.9.0 [tsutsui 2022-07-02]
+	Updated devel/mold to 1.3.1 [fcambus 2022-07-02]
