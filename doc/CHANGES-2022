@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3166 2022/07/02 09:13:42 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3167 2022/07/02 09:25:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4770,3 +4770,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-traitlets to 5.3.0 [adam 2022-07-02]
 	Updated devel/py-hypothesis to 6.48.2 [adam 2022-07-02]
 	Updated archivers/py-zstandard to 0.18.0 [adam 2022-07-02]
+	Updated mail/exim to 4.96 [adam 2022-07-02]
+	Updated mail/exim-html to 4.96 [adam 2022-07-02]
