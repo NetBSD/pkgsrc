@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.42 2022/06/12 21:22:44 pin Exp $
+# $NetBSD: Makefile,v 1.43 2022/07/02 16:53:06 ryoon Exp $
 
 # ncspot-0.10.0 needs enum-map-derive v0.9.0, which requires rust-1.61
 DISTNAME=	ncspot-0.9.8
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hrkfdn/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

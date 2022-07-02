@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.60 2022/04/18 19:12:22 adam Exp $
+# $NetBSD: Makefile,v 1.61 2022/07/02 16:53:40 ryoon Exp $
 
 DISTNAME=	konsole-${KAPPSVER}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	x11
 
 HOMEPAGE=	http://kde.org/applications/system/konsole/

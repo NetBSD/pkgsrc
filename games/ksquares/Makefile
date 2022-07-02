@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.51 2022/04/18 19:11:08 adam Exp $
+# $NetBSD: Makefile,v 1.52 2022/07/02 16:53:20 ryoon Exp $
 
 DISTNAME=	ksquares-${KAPPSVER}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	games
 
 HOMEPAGE=	https://kde.org/applications/games/ksquares/
