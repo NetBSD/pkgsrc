@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2022/06/28 11:34:23 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2022/07/02 13:02:32 taca Exp $
 
-DISTNAME=	rel-${PKGNAME:C/\./-/g}
+DISTNAME=	rel-${PKGNAME_NOREV:C/\./-/g}
 PKGNAME=	opendmarc-1.4.2
 PKGREVISION=	1
 CATEGORIES=	mail
