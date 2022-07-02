@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.27 2022/06/07 16:23:04 adam Exp $
+$NetBSD: distinfo,v 1.28 2022/07/02 09:31:44 adam Exp $
 
-BLAKE2s (pyzmq-23.1.0.tar.gz) = d7c366104e58be9a8148e62e6022912ed4e9c6b6cb90d130b15cfdda63452e5a
-SHA512 (pyzmq-23.1.0.tar.gz) = 4ffd65815d9d6540614e925da41c6a94e6098f9ddf4191c65f31ddc34dc102795ba7111a09d73b9424a393b019ba98cc39ae3c5a603ee0cd199608f7a1099b0a
-Size (pyzmq-23.1.0.tar.gz) = 1216153 bytes
+BLAKE2s (pyzmq-23.2.0.tar.gz) = 4a5486ec579fedcdc4950974ab226341482d3e876eb9d5cb4d248f450aee34ef
+SHA512 (pyzmq-23.2.0.tar.gz) = f2709a1f18301696266a8c4fe0fad57ec116be71b1feb245576c53159476d574def9e61ec4c511293068c52e27d5f2d121308f0c0af53c92bac48d29fb31b784
+Size (pyzmq-23.2.0.tar.gz) = 1216729 bytes
 SHA1 (patch-buildutils_detect.py) = 8d96f50e057b7b42d5f05c9c09c6665fac5bd4a5
 SHA1 (patch-setup.py) = be1d04bae34f1c6df97c52b03163bb7871767422
