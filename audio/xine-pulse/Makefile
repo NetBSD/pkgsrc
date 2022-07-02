@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.56 2022/03/28 10:43:41 tnn Exp $
+# $NetBSD: Makefile,v 1.57 2022/07/02 16:53:08 ryoon Exp $
 
-PKGREVISION= 6
+PKGREVISION= 7
 .include "../../multimedia/xine-lib/Makefile.common"
 
 PKGNAME=	${XINE_PKGNAME:S/lib/pulse/}

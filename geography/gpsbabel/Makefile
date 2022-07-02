@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2022/04/18 19:11:12 adam Exp $
+# $NetBSD: Makefile,v 1.42 2022/07/02 16:53:21 ryoon Exp $
 #
 
 DISTNAME=	gpsbabel-1.6.0
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_BACKUP}
 # Download from official site apparently only via interactive form,

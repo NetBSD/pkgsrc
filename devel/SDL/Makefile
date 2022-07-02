@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.147 2022/05/11 10:14:29 nia Exp $
+# $NetBSD: Makefile,v 1.148 2022/07/02 16:53:10 ryoon Exp $
 
 DISTNAME=	SDL-1.2.15
-PKGREVISION=	38
+PKGREVISION=	39
 CATEGORIES=	devel games
 MASTER_SITES=	http://www.libsdl.org/release/
 
