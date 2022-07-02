@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3164 2022/07/02 03:17:59 rin Exp $
+$NetBSD: CHANGES-2022,v 1.3165 2022/07/02 08:01:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4764,3 +4764,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/lariza to 22.04 [pin 2022-07-01]
 	Updated shells/zsh to 5.9nb1 [rin 2022-07-01]
 	Updated x11/mlterm to 3.9.2nb2 [rin 2022-07-02]
+	Updated textproc/py-lxml to 4.9.1 [adam 2022-07-02]
+	Updated textproc/py-ujson to 5.4.0 [adam 2022-07-02]
+	Updated www/py-websocket-client to 1.3.3 [adam 2022-07-02]
+	Updated devel/py-traitlets to 5.3.0 [adam 2022-07-02]
