@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.297 2022/06/28 11:33:50 wiz Exp $
+# $NetBSD: Makefile,v 1.298 2022/07/02 11:40:52 adam Exp $
 
 DISTNAME=	qemu-7.0.0
 PKGREVISION=	2
@@ -7,7 +7,7 @@ MASTER_SITES=	https://download.qemu.org/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.qemu-project.org/
+HOMEPAGE=	https://www.qemu.org/
 COMMENT=	CPU emulator using dynamic translation
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1 AND mit AND modified-bsd
 
