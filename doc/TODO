@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21980 2022/07/03 10:17:14 wiz Exp $
+$NetBSD: TODO,v 1.21981 2022/07/03 10:19:57 wiz Exp $
 
 Suggested new packages
 ======================
@@ -974,7 +974,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libgiigic-1.1.2
 	o libgnomekbd-3.4.0.2
 	o libiconv-1.16
-	o libidn-1.40
 	o libisoburn-1.5.4
 	o libisofs-1.5.4
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version; see also wmii+ixp entry]
