@@ -1,19 +1,19 @@
-$NetBSD: patch-Makefile.in,v 1.9 2021/02/18 10:59:09 adam Exp $
+$NetBSD: patch-Makefile.in,v 1.10 2022/07/03 09:46:45 wiz Exp $
 
 Use LIBTOOL.
 
---- Makefile.in.orig	2021-02-17 18:02:32.000000000 +0000
+--- Makefile.in.orig	2022-06-02 17:57:16.000000000 +0000
 +++ Makefile.in
-@@ -27,7 +27,7 @@ PRE_CPPFLAGS = -I.
+@@ -26,7 +26,7 @@ include config.make
+ PRE_CPPFLAGS = -I.
  EXTRA_CFLAGS = $(CCPIC)
  
- # FIXME: Add configuration of LIBEXT?
 -LIBTARGETS = @IF_STATIC@ libnettle.a @IF_HOGWEED@ libhogweed.a
 +LIBTARGETS = @IF_STATIC@ libnettle.la @IF_HOGWEED@ libhogweed.la
  SHLIBTARGETS = @IF_SHARED@ $(LIBNETTLE_FORLINK) @IF_HOGWEED@ $(LIBHOGWEED_FORLINK)
  
  getopt_SOURCES = getopt.c getopt1.c
-@@ -277,24 +277,24 @@ nettle_OBJS = $(nettle_SOURCES:.c=.$(OBJ
+@@ -276,24 +276,24 @@ nettle_OBJS = $(nettle_SOURCES:.c=.$(OBJ
  hogweed_OBJS = $(hogweed_SOURCES:.c=.$(OBJEXT)) \
  	       $(OPT_HOGWEED_OBJS) @IF_MINI_GMP@ mini-gmp.$(OBJEXT)
  
@@ -48,7 +48,7 @@ Use LIBTOOL.
  	&& $(DEP_PROCESS)
  
  # Rules building shared libraries.
-@@ -494,7 +494,7 @@ install-here: install-doc install-header
+@@ -484,7 +484,7 @@ install-here: install-doc install-header
  install-static: $(LIBTARGETS)
  	$(MKDIR_P) $(DESTDIR)$(libdir)
  	for f in $(LIBTARGETS); do \
