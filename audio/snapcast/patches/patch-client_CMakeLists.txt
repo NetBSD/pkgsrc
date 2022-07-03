@@ -1,0 +1,17 @@
+$NetBSD: patch-client_CMakeLists.txt,v 1.1 2022/07/03 16:09:15 nia Exp $
+
+Add Sun Audio support for NetBSD.
+
+--- client/CMakeLists.txt.orig	2021-12-22 17:40:36.000000000 +0000
++++ client/CMakeLists.txt
+@@ -53,6 +53,10 @@ elseif(NOT ANDROID)
+         list(APPEND CLIENT_LIBRARIES ${PULSE_LIBRARIES})
+         list(APPEND CLIENT_INCLUDE ${PULSE_INCLUDE_DIRS})
+     endif (PULSE_FOUND)
++
++    if (SUN_FOUND)
++        list(APPEND CLIENT_SOURCES player/sun_player.cpp)
++    endif (SUN_FOUND)
+ endif (MACOSX)
+ 
+ if (ANDROID)

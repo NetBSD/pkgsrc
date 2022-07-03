@@ -1,0 +1,32 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2022/07/03 16:09:15 nia Exp $
+
+Make ALSA optional. Add Sun Audio support for NetBSD.
+
+--- CMakeLists.txt.orig	2021-12-22 17:40:36.000000000 +0000
++++ CMakeLists.txt
+@@ -178,10 +178,12 @@ if(NOT WIN32 AND NOT ANDROID)
+         list(APPEND INCLUDE_DIRS "/usr/local/include")
+     else()
+ 
+-        pkg_search_module(ALSA REQUIRED alsa)
++        if(BUILD_WITH_ALSA)
++        pkg_search_module(ALSA alsa)
+         if (ALSA_FOUND)
+             add_definitions(-DHAS_ALSA)
+         endif (ALSA_FOUND)
++        endif(BUILD_WITH_ALSA)
+ 
+         if(BUILD_WITH_PULSE)
+             pkg_search_module(PULSE libpulse)
+@@ -206,6 +208,11 @@ if(NOT WIN32 AND NOT ANDROID)
+             link_directories("/usr/local/lib")
+             list(APPEND INCLUDE_DIRS "/usr/local/include")
+         endif()
++
++        check_include_file("sys/audioio.h" SUN_FOUND)
++        if (SUN_FOUND)
++            add_definitions(-DHAS_SUN)
++        endif (SUN_FOUND)
+     endif()
+ 
+     pkg_search_module(SOXR soxr)
