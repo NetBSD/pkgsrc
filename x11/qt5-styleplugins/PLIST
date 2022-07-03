@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2022/07/03 20:43:53 pin Exp $
+qt5/lib/cmake/Qt5Gui/Qt5Gui_QGtk2ThemePlugin.cmake
+qt5/lib/cmake/Qt5Widgets/Qt5Widgets_QBB10StylePlugin.cmake
+qt5/lib/cmake/Qt5Widgets/Qt5Widgets_QCleanlooksStylePlugin.cmake
+qt5/lib/cmake/Qt5Widgets/Qt5Widgets_QGtk2StylePlugin.cmake
+qt5/lib/cmake/Qt5Widgets/Qt5Widgets_QMotifStylePlugin.cmake
+qt5/lib/cmake/Qt5Widgets/Qt5Widgets_QPlastiqueStylePlugin.cmake
+qt5/plugins/platformthemes/libqgtk2.so
+qt5/plugins/styles/libbb10styleplugin.so
+qt5/plugins/styles/libqcleanlooksstyle.so
+qt5/plugins/styles/libqgtk2style.so
+qt5/plugins/styles/libqmotifstyle.so
+qt5/plugins/styles/libqplastiquestyle.so
