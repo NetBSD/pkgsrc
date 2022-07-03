@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21975 2022/07/03 09:38:14 wiz Exp $
+$NetBSD: TODO,v 1.21976 2022/07/03 09:39:31 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1505,7 +1505,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o sparsehash-2.0.4
 	o spatialindex-1.9.3
 	o spcaview-20060501
-	o speex-1.2.1
 	o spice-protocol-0.14.4
 	o spin-649
 	o spiped-1.6.1b

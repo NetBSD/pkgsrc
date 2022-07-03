@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3173 2022/07/03 09:38:14 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3174 2022/07/03 09:39:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4781,3 +4781,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/mold to 1.3.1 [fcambus 2022-07-02]
 	Updated devel/meld to 3.21.2 [wiz 2022-07-03]
 	Updated x11/gtk3 to 3.24.34 [wiz 2022-07-03]
+	Updated audio/speex to 1.2.1 [wiz 2022-07-03]
