@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21978 2022/07/03 09:46:54 wiz Exp $
+$NetBSD: TODO,v 1.21979 2022/07/03 10:13:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -989,7 +989,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o liboobs-2.32.0
 	o liboop-1.0.1
 	o libpgm-5.2.122
-	o libplist-2.2.0
 	o libprelude-3.1.0
 	o libpreludedb-3.1.0
 	o libquantum-1.1.0 [pkg/43728, development release]
