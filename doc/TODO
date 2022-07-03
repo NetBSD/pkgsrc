@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21983 2022/07/03 10:36:03 wiz Exp $
+$NetBSD: TODO,v 1.21984 2022/07/03 10:38:18 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1336,7 +1336,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
 	o py-coverage-6.3.2
 	o py-cryptography-36.0.2
-	o py-cyclonedx-python-lib-2.6.0
 	o py-django-4.0
 	o py-django-debug-toolbar-3.2.1
 	o py-django-tagging-0.5.0
