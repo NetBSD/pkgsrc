@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2022/07/03 20:57:38 pin Exp $
+# $NetBSD: Makefile,v 1.2 2022/07/03 21:18:31 leot Exp $
 
-DISTNAME=	v1.0.0-beta.2
-PKGVER=		${DISTNAME:S,^v,,:S,-beta,,}
-PKGNAME=	${GITHUB_PROJECT}93-${PKGVER}
+DISTNAME=	ksh93-1.0.0beta.2
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ksh93/}
 GITHUB_PROJECT=	ksh
-GITHUB_TAG=	${DISTNAME}
+GITHUB_TAG=	v${PKGVERSION:S/beta/-beta/}
 
 MAINTAINER=	vms@retrobsd.ddns.net
 HOMEPAGE=	https://github.com/ksh93/ksh/
@@ -28,8 +26,6 @@ CFLAGS.SunOS+=	-std=c11 -D__EXTENSIONS__
 PKG_SHELL=		bin/ksh93
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
-
-WRKSRC=	${WRKDIR}/ksh-${DISTNAME:S,^v,,}
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} 				\
