@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3175 2022/07/03 09:41:08 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3176 2022/07/03 09:44:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4783,3 +4783,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/gtk3 to 3.24.34 [wiz 2022-07-03]
 	Updated audio/speex to 1.2.1 [wiz 2022-07-03]
 	Updated audio/speexdsp to 1.2.1 [wiz 2022-07-03]
+	Updated x11/libX11 to 1.8.1 [wiz 2022-07-03]
