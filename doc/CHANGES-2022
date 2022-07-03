@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3188 2022/07/03 12:32:15 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3189 2022/07/03 12:36:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4796,3 +4796,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/py-cryptography to 37.0.2 [wiz 2022-07-03]
 	Added converters/py-chardet4 version 4.0.0nb2 [wiz 2022-07-03]
 	Added devel/py-flit_scm version 1.6.2 [wiz 2022-07-03]
+	Added devel/py-exceptiongroup version 1.0.0rc8 [wiz 2022-07-03]
