@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/07/03 21:07:48 pin Exp $
+
+BLAKE2s (xbrightness-0.3.tar.gz) = ee52ad4d6f4d27e6c65b0773a441e9157847e1529afb6aaa9061dd3088f5c3a9
+SHA512 (xbrightness-0.3.tar.gz) = d98bdafa3ef1e97ec9a9b483a5570a9abd44ab0d62ddc14f818c36073915811e8922ff6c12bf922eec710270c17678e5b34a9b59e98b6099cf7decd2af4d0ec3
+Size (xbrightness-0.3.tar.gz) = 2872 bytes
