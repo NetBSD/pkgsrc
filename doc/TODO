@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21991 2022/07/03 16:01:09 wiz Exp $
+$NetBSD: TODO,v 1.21992 2022/07/03 17:07:57 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1283,7 +1283,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o podcastdl-0.3.3
 	o policyd-weight-0.1.15.2
 	o poppass-4.0.14
-	o poppler-22.06.0
 	o posh-0.14.1
 	o postal-0.72
 	o postfix-3.7.1
