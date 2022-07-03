@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2022/07/03 21:07:48 pin Exp $
+bin/xbrightness
+man/man1/xbrightness.1
