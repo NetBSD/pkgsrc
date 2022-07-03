@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.45 2022/04/18 19:11:01 adam Exp $
+# $NetBSD: Makefile,v 1.46 2022/07/03 10:13:49 wiz Exp $
 #
 
 DISTNAME=	fusepod-0.5.1
 PKGNAME=	fuse-pod-0.5.1
-PKGREVISION=	39
+PKGREVISION=	40
 CATEGORIES=	filesystems
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fusepod/}
 EXTRACT_SUFX=	.tar.bz2
