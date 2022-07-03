@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.109 2022/07/02 09:10:39 adam Exp $
+# $NetBSD: Makefile,v 1.110 2022/07/03 12:44:09 wiz Exp $
 #
 # Changelog: https://hypothesis.readthedocs.io/en/latest/changes.html
 
 DISTNAME=	hypothesis-6.48.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hypothesis/}
 
@@ -22,4 +23,9 @@ USE_PKG_RESOURCES=	yes
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
+
+.if ${_PYTHON_VERSION} == 37 || ${_PYTHON_VERSION} == 38 || ${_PYTHON_VERSION} == 39 || ${_PYTHON_VERSION} == 310
+DEPENDS+=	${PYPKGPREFIX}-exceptiongroup>=1.0.0rc8:../../devel/py-exceptiongroup
+.endif
+
 .include "../../mk/bsd.pkg.mk"
