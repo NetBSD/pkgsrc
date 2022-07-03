@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/07/03 12:36:06 wiz Exp $
+
+BLAKE2s (exceptiongroup-1.0.0rc8.tar.gz) = 6face31dae9fbfce81c8ed8f91bdf49ac4418abb3e11e06c5d7a9f6c403e5f2c
+SHA512 (exceptiongroup-1.0.0rc8.tar.gz) = 73d4efc9b9265afe64c550ad56f9965597c3c26d29cfd05f4e30a9c0e8775e2dd91d4dacbc8c79a647c6c3072936ee2856afeda1831ede171f3772b3bdababa0
+Size (exceptiongroup-1.0.0rc8.tar.gz) = 11299 bytes
