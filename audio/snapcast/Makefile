@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/07/03 16:23:35 nia Exp $
+# $NetBSD: Makefile,v 1.3 2022/07/03 17:32:04 nia Exp $
 
 DISTNAME=	snapcast-0.26.0
 CATEGORIES=	audio
@@ -13,6 +13,9 @@ LICENSE=	gnu-gpl-v3
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
+
+# std::filesystem
+GCC_REQD+=	8
 
 REPLACE_PYTHON+=	server/etc/plug-ins/meta_mpd.py
 
