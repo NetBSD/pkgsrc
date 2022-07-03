@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2022/01/04 20:53:18 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2022/07/03 13:31:08 wiz Exp $
 
-DISTNAME=	msgpack-1.0.3
+DISTNAME=	msgpack-1.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/msgpack/}
 
@@ -14,6 +13,8 @@ LICENSE=	apache-2.0
 PYTHON_VERSIONED_DEPENDENCIES=	test:test
 
 USE_LANGUAGES=	c c++
+
+DISTUTILS_BUILDDIR_IN_TEST_ENV=		yes
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} test
