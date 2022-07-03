@@ -1,0 +1,30 @@
+$NetBSD: patch-server_snapserver.1,v 1.1 2022/07/03 16:09:15 nia Exp $
+
+Don't hardcode various paths, allow pkgsrc to substitute them.
+
+--- server/snapserver.1.orig	2021-12-22 17:40:36.000000000 +0000
++++ server/snapserver.1
+@@ -25,20 +25,17 @@ Show version number
+ Daemonize
+ optional process priority [-20..19]
+ .TP
+-\fB-c, --config arg (=/etc/snapserver.conf)\fR
++\fB-c, --config arg (=@PKG_SYSCONFDIR@/snapserver.conf)\fR
+ path to the configuration file
+ .SH FILES
+ .TP
+ \fI/tmp/snapfifo\fR
+ PCM input fifo file
+ .TP
+-\fI/etc/default/snapserver\fR
+-the daemon default configuration file
+-.TP
+-\fI/etc/snapserver.conf\fR
++\fI@PKG_SYSCONFDIR@/snapserver.conf\fR
+ the snapserver configuration file
+ .TP
+-\fI~/.config/snapcast/server.json\fR or (if $HOME is not set) \fI/var/lib/snapcast/server.json\fR
++\fI~/.config/snapcast/server.json\fR or (if $HOME is not set) \fI@VARBASE@/lib/snapcast/server.json\fR
+ persistent server data file
+ .SH "COPYRIGHT"
+ Copyright (C) 2014-2020 Johannes Pohl (snapcast@badaix.de).
