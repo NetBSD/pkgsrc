@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:29:37 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/07/03 10:46:54 wiz Exp $
 
-BLAKE2s (libwebsockets-4.1.4.tar.gz) = 4efed454d12b836939c6c85802af6ad1f9ef667c1ad2d7b5a93644eb755b6d42
-SHA512 (libwebsockets-4.1.4.tar.gz) = 4da84f612ad427465c4eea0bdd0db59c21c9e42bb21eb46b904f544dc4078af2c9a957e61430f3569b87cfc96b3addee50ac7a7c77777dcf16350fe441dd8854
-Size (libwebsockets-4.1.4.tar.gz) = 12698800 bytes
-SHA1 (patch-CMakeLists.txt) = 7d8a4d5d87ab887c78a914c09ae61f119c47737e
-SHA1 (patch-lib_core_context.c) = a0f7067a0ffa65b19a13945bfc1fe0cece5d2869
+BLAKE2s (libwebsockets-4.3.0.tar.gz) = f3d36d771602cfb8a4f5660a5ca8313e8034114dc056f7f3d6e5ff9919a4f5e3
+SHA512 (libwebsockets-4.3.0.tar.gz) = 7f183cb0417a902cb18e76431a8580d87db09c973483f3a129e138e4644b9d0e78e0539e985dc6286d9fe429edea7f63147864dc0413cf8e40fca3d67f9c3c42
+Size (libwebsockets-4.3.0.tar.gz) = 15605272 bytes
