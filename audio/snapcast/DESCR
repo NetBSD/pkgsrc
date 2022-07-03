@@ -1,0 +1,4 @@
+Snapcast is a multiroom client-server audio player, where all clients are
+time synchronized with the server to play perfectly synced audio. It's not
+a standalone player, but an extension that turns your existing audio player
+into a Sonos-like multiroom solution.
