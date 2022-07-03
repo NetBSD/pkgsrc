@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3180 2022/07/03 10:17:25 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3181 2022/07/03 10:19:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4788,3 +4788,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/libplist to 2.2.0 [wiz 2022-07-03]
 	Updated security/mozilla-rootcerts to 1.0.20220614 [wiz 2022-07-03]
 	Updated security/mozilla-rootcerts-openssl to 2.8 [wiz 2022-07-03]
+	Updated devel/libidn to 1.40 [wiz 2022-07-03]
