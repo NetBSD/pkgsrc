@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2022/07/03 20:57:38 pin Exp $
+
+BLAKE2s (v1.0.0-beta.2.tar.gz) = 1852a7f7963978ea6b80d47a915fe0da868bb91f8d9830056dfc6ea1b3303165
+SHA512 (v1.0.0-beta.2.tar.gz) = c2cd5a4b442bcff1dd2c1c054ee79c4cb131dce28d811dcd3476164d6cb7e88e6b317a094b16f227564a1266708ef0cfeca2af0929c00a19497cf1b67c647cf2
+Size (v1.0.0-beta.2.tar.gz) = 2238224 bytes
+SHA1 (patch-src_lib_libast_features_syscall) = 725fead538810678e808c6fdfd543fa1a0415645
