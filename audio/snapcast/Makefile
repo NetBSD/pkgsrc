@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/07/03 16:09:15 nia Exp $
+# $NetBSD: Makefile,v 1.2 2022/07/03 16:23:35 nia Exp $
 
 DISTNAME=	snapcast-0.26.0
 CATEGORIES=	audio
@@ -7,7 +7,7 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	nia@NetBSD.org
 HOMEPAGE=	https://github.com/badaix/snapcast
-COMMENT=	Multiroom client-server audio player,
+COMMENT=	Multiroom client-server audio player
 LICENSE=	gnu-gpl-v3
 
 USE_CMAKE=	yes
