@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 10:14:47 nia Exp $
+$NetBSD: distinfo,v 1.14 2022/07/03 13:36:45 wiz Exp $
 
-BLAKE2s (googletest-1.11.0.tar.gz) = 0b546cc02c7a8d6e15337b5dde02e2ff1c17bb5232212cba0b665ad47ff51eac
-SHA512 (googletest-1.11.0.tar.gz) = 6fcc7827e4c4d95e3ae643dd65e6c4fc0e3d04e1778b84f6e06e390410fe3d18026c131d828d949d2f20dde6327d30ecee24dcd3ef919e21c91e010d149f3a28
-Size (googletest-1.11.0.tar.gz) = 886330 bytes
+BLAKE2s (googletest-1.12.1.tar.gz) = e922ffca935005022fa75550fe5d8ea68341cdac406a7082d7d7ae1a6ca35b7f
+SHA512 (googletest-1.12.1.tar.gz) = a9104dc6c53747e36e7dd7bb93dfce51a558bd31b487a9ef08def095518e1296da140e0db263e0644d9055dbd903c0cb69380cb2322941dbfb04780ef247df9c
+Size (googletest-1.12.1.tar.gz) = 854944 bytes
