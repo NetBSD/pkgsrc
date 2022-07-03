@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21986 2022/07/03 10:51:14 wiz Exp $
+$NetBSD: TODO,v 1.21987 2022/07/03 12:45:27 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1330,7 +1330,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-borgbackup-1.2.1
 	o py-cares-3.1.1
 	o py-cassa-1.11.0
-	o py-chardet-5.0.0
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
 	o py-coverage-6.3.2
 	o py-django-4.0
