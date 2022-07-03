@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3756 2022/06/29 07:54:38 wiz Exp $
+# $NetBSD: Makefile,v 1.3757 2022/07/03 12:32:05 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2456,6 +2456,7 @@ SUBDIR+=	py-flaky
 SUBDIR+=	py-flexmock
 SUBDIR+=	py-flit
 SUBDIR+=	py-flit_core
+SUBDIR+=	py-flit_scm
 SUBDIR+=	py-flufl.i18n
 SUBDIR+=	py-flufl.lock
 SUBDIR+=	py-flufl.testing
