@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 10:06:49 nia Exp $
+$NetBSD: distinfo,v 1.13 2022/07/03 12:45:17 wiz Exp $
 
-BLAKE2s (chardet-4.0.0.tar.gz) = 0d2dbdc34b5f86de8a94091931d4cb576e2d4ed7c6b1ac46276b7502ac2f5666
-SHA512 (chardet-4.0.0.tar.gz) = ebd7f420e1094445270db993f6373ffe7370419e002b0bb13299dc6c9b0f7c4e77b0f44f871fba6371e6869e7c86728514367db377e3137487a3acf50cb81e96
-Size (chardet-4.0.0.tar.gz) = 1907771 bytes
+BLAKE2s (chardet-5.0.0.tar.gz) = 4132ba79b99831e53fbf283bd1514ad4a97a282c44488767bbb5a19bb83d81ef
+SHA512 (chardet-5.0.0.tar.gz) = 3853248584d53d977abe0e6ab856e1526fd7360d9b94b4f08d03895da80ba9efac8882dbd3f919f0d52b0699c0d7fd68edb223c37512685976c6f2b212fbe0ff
+Size (chardet-5.0.0.tar.gz) = 2021116 bytes

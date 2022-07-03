@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2021/01/04 11:53:14 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2022/07/03 12:45:17 wiz Exp $
 bin/chardetect-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -32,9 +32,6 @@ ${PYSITELIB}/chardet/cli/chardetect.pyo
 ${PYSITELIB}/chardet/codingstatemachine.py
 ${PYSITELIB}/chardet/codingstatemachine.pyc
 ${PYSITELIB}/chardet/codingstatemachine.pyo
-${PYSITELIB}/chardet/compat.py
-${PYSITELIB}/chardet/compat.pyc
-${PYSITELIB}/chardet/compat.pyo
 ${PYSITELIB}/chardet/cp949prober.py
 ${PYSITELIB}/chardet/cp949prober.pyc
 ${PYSITELIB}/chardet/cp949prober.pyo
@@ -74,6 +71,12 @@ ${PYSITELIB}/chardet/hebrewprober.pyo
 ${PYSITELIB}/chardet/jisfreq.py
 ${PYSITELIB}/chardet/jisfreq.pyc
 ${PYSITELIB}/chardet/jisfreq.pyo
+${PYSITELIB}/chardet/johabfreq.py
+${PYSITELIB}/chardet/johabfreq.pyc
+${PYSITELIB}/chardet/johabfreq.pyo
+${PYSITELIB}/chardet/johabprober.py
+${PYSITELIB}/chardet/johabprober.pyc
+${PYSITELIB}/chardet/johabprober.pyo
 ${PYSITELIB}/chardet/jpcntx.py
 ${PYSITELIB}/chardet/jpcntx.pyc
 ${PYSITELIB}/chardet/jpcntx.pyo
@@ -128,6 +131,9 @@ ${PYSITELIB}/chardet/sjisprober.pyo
 ${PYSITELIB}/chardet/universaldetector.py
 ${PYSITELIB}/chardet/universaldetector.pyc
 ${PYSITELIB}/chardet/universaldetector.pyo
+${PYSITELIB}/chardet/utf1632prober.py
+${PYSITELIB}/chardet/utf1632prober.pyc
+${PYSITELIB}/chardet/utf1632prober.pyo
 ${PYSITELIB}/chardet/utf8prober.py
 ${PYSITELIB}/chardet/utf8prober.pyc
 ${PYSITELIB}/chardet/utf8prober.pyo
