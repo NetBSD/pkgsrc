@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.20 2020/05/19 19:53:14 maya Exp $
+# $NetBSD: options.mk,v 1.21 2022/07/03 09:38:04 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gtk3
 PKG_SUPPORTED_OPTIONS+=	gtk3-atk-bridge cups debug
@@ -8,7 +8,8 @@ PKG_SUPPORTED_OPTIONS+=	quartz
 .endif
 .include "../../devel/wayland/platform.mk"
 .if ${PLATFORM_SUPPORTS_WAYLAND} == "yes"
-PKG_SUGGESTED_OPTIONS+=	wayland
+# wayland package needs updating to > 1.18
+#PKG_SUGGESTED_OPTIONS+=	wayland
 .endif
 PKG_SUGGESTED_OPTIONS+=	gtk3-atk-bridge x11 cups
 
