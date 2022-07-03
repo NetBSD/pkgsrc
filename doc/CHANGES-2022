@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3184 2022/07/03 10:38:18 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3185 2022/07/03 10:47:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4792,3 +4792,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated print/cups to 2.4.2 [wiz 2022-07-03]
 	Updated security/py-pip-audit to 2.3.4 [wiz 2022-07-03]
 	Updated security/py-cyclonedx-python-lib to 2.6.0 [wiz 2022-07-03]
+	Updated www/libwebsockets to 4.3.0 [wiz 2022-07-03]
