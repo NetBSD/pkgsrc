@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3757 2022/07/03 12:32:05 wiz Exp $
+# $NetBSD: Makefile,v 1.3758 2022/07/03 12:36:20 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2431,6 +2431,7 @@ SUBDIR+=	py-empty-files
 SUBDIR+=	py-entrypoints
 SUBDIR+=	py-enum34
 SUBDIR+=	py-exam
+SUBDIR+=	py-exceptiongroup
 SUBDIR+=	py-execnet
 SUBDIR+=	py-extension-helpers
 SUBDIR+=	py-extras
