@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2022/06/28 11:34:56 wiz Exp $
+# $NetBSD: Makefile,v 1.78 2022/07/03 21:38:48 dbj Exp $
 #
 
 DISTNAME=	HandBrake-1.3.3-source
@@ -79,7 +79,8 @@ post-extract:
 	cp ${DISTDIR}/${DIST_SUBDIR}/${MESON_DISTFILE} ${WRKSRC}/download/
 	(cd ${WRKSRC}/contrib; tar zxf ${WRKSRC}/download/${MESON_DISTFILE})
 
-.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "options.mk"
+
 .include "../../audio/lame/buildlink3.mk"
 .include "../../audio/libopus/buildlink3.mk"
 .include "../../audio/libsamplerate/buildlink3.mk"
@@ -92,7 +93,5 @@ post-extract:
 .include "../../multimedia/libvpx/buildlink3.mk"
 .include "../../multimedia/x264-devel/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../x11/gtk3/buildlink3.mk"
 .include "../../textproc/jansson/buildlink3.mk"
-.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
