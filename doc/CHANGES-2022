@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3198 2022/07/03 16:09:36 nia Exp $
+$NetBSD: CHANGES-2022,v 1.3199 2022/07/03 17:07:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4806,3 +4806,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/gcc10 to 10.4.0 [wiz 2022-07-03]
 	Updated audio/openal-soft to 1.22.1 [wiz 2022-07-03]
 	Added audio/snapcast version 0.26.0 [nia 2022-07-03]
+	Updated print/poppler to 22.06.0 [wiz 2022-07-03]
