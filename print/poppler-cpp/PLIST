@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2021/04/08 06:14:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2022/07/03 17:07:44 wiz Exp $
 include/poppler/cpp/poppler-destination.h
 include/poppler/cpp/poppler-document.h
 include/poppler/cpp/poppler-embedded-file.h
@@ -15,5 +15,5 @@ include/poppler/cpp/poppler-version.h
 include/poppler/cpp/poppler_cpp_export.h
 lib/libpoppler-cpp.so
 lib/libpoppler-cpp.so.0
-lib/libpoppler-cpp.so.0.9.0
+lib/libpoppler-cpp.so.0.10.0
 lib/pkgconfig/poppler-cpp.pc
