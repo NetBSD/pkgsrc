@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/07/03 21:18:31 leot Exp $
+# $NetBSD: Makefile,v 1.3 2022/07/03 21:19:31 leot Exp $
 
 DISTNAME=	ksh93-1.0.0beta.2
 CATEGORIES=	shells
@@ -13,7 +13,6 @@ LICENSE=	epl-v1.0
 
 CONFLICTS+=		ast-ksh-[0-9]* static-ast-ksh-[0-9]*
 
-USE_LANGUAGES=		c
 FORTIFY_SUPPORTED=	no
 
 KSH=	${TOOLS_PATH.ksh:Q}
