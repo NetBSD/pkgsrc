@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2022/04/21 11:00:00 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2022/07/03 12:13:07 wiz Exp $
 
 DISTNAME=	requests-2.27.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -27,7 +27,7 @@ REPLACE_PYTHON+=	requests/certs.py
 
 .include "../../lang/python/pyversion.mk"
 .if ${_PYTHON_VERSION} == 27
-DEPENDS+=	${PYPKGPREFIX}-chardet>=3.0.2:../../converters/py-chardet
+DEPENDS+=	${PYPKGPREFIX}-chardet>=3.0.2:../../converters/py-chardet4
 TEST_DEPENDS=	# none; py-test-httpbin is incompatible with py27
 do-test:
 .else
