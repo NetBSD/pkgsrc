@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3178 2022/07/03 10:13:36 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3179 2022/07/03 10:17:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4786,3 +4786,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/libX11 to 1.8.1 [wiz 2022-07-03]
 	Updated security/nettle to 3.8 [wiz 2022-07-03]
 	Updated textproc/libplist to 2.2.0 [wiz 2022-07-03]
+	Updated security/mozilla-rootcerts to 1.0.20220614 [wiz 2022-07-03]
