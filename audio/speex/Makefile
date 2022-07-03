@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2021/04/29 23:30:13 thor Exp $
+# $NetBSD: Makefile,v 1.38 2022/07/03 09:39:22 wiz Exp $
 
-DISTNAME=	speex-1.2.0
-PKGREVISION=	1
+DISTNAME=	speex-1.2.1
 CATEGORIES=	audio
 MASTER_SITES=	http://downloads.us.xiph.org/releases/speex/
 

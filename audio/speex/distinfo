@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.19 2021/10/26 09:59:30 nia Exp $
+$NetBSD: distinfo,v 1.20 2022/07/03 09:39:22 wiz Exp $
 
-BLAKE2s (speex-1.2.0.tar.gz) = 9236c6127a1369178166a5e8b22cb3da93db3c1464a186cf0c063d81c59c6c25
-SHA512 (speex-1.2.0.tar.gz) = 7fe10838c7d1bafcbe42295b82b79262420dba793b8a4388e2f73a3007850b5572face1b5308d9f4e8d7dfc9cb1c016cbad88cd65b2892667986107ed946836b
-Size (speex-1.2.0.tar.gz) = 1047080 bytes
+BLAKE2s (speex-1.2.1.tar.gz) = 0d1bad01ef5e90b76c75d105b3cf488833175d906cf1b12fb2bbd48f7c0addc1
+SHA512 (speex-1.2.1.tar.gz) = 52e00300df82e1c7fb527b245af02b99a1f37faef74d004b7cd981052f1aa22a412cb18f5c7a5618df4c958f727c97eb7385beec99d68548d5b02e76192d4e0a
+Size (speex-1.2.1.tar.gz) = 1043278 bytes
 SHA1 (patch-ab) = cffe95988c956177cb2e849083c44168bf737f9a
