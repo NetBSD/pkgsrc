@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.958 2022/07/03 20:45:30 pin Exp $
+# $NetBSD: Makefile,v 1.959 2022/07/03 21:09:22 pin Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -476,6 +476,7 @@ SUBDIR+=	xbanner
 SUBDIR+=	xbindkeys
 SUBDIR+=	xbindkeys-tk
 SUBDIR+=	xbitmaps
+SUBDIR+=	xbrightness
 SUBDIR+=	xcalc
 SUBDIR+=	xcalib
 SUBDIR+=	xcb
