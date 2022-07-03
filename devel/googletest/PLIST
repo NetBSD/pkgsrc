@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2021/06/28 09:07:53 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2022/07/03 13:36:45 wiz Exp $
 include/gmock/gmock-actions.h
 include/gmock/gmock-cardinalities.h
 include/gmock/gmock-function-mocker.h
@@ -15,6 +15,7 @@ include/gmock/internal/custom/gmock-port.h
 include/gmock/internal/gmock-internal-utils.h
 include/gmock/internal/gmock-port.h
 include/gmock/internal/gmock-pp.h
+include/gtest/gtest-assertion-result.h
 include/gtest/gtest-death-test.h
 include/gtest/gtest-matchers.h
 include/gtest/gtest-message.h
