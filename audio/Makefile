@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.655 2022/07/01 18:36:27 nia Exp $
+# $NetBSD: Makefile,v 1.656 2022/07/03 16:09:15 nia Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -442,6 +442,7 @@ SUBDIR+=	shntool
 SUBDIR+=	shorten
 SUBDIR+=	sidplay
 SUBDIR+=	sidplay2
+SUBDIR+=	snapcast
 SUBDIR+=	snd
 SUBDIR+=	sndfile-tools
 SUBDIR+=	solfege
