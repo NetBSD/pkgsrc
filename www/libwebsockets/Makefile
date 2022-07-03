@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2021/05/26 19:38:28 bouyer Exp $
+# $NetBSD: Makefile,v 1.3 2022/07/03 10:46:54 wiz Exp $
 
-DISTNAME=	libwebsockets-4.1.4
+DISTNAME=	libwebsockets-4.3.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=warmcat/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
-PKGREVISION=	1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://libwebsockets.org/
@@ -12,6 +11,7 @@ COMMENT=	Lightweight C library for websocket clients and servers
 LICENSE=	mit
 
 USE_CMAKE=	yes
+USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
 CMAKE_ARGS+=	-DLWS_WITH_LIBUV=ON
