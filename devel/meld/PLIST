@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.40 2022/01/10 08:21:09 wiz Exp $
+@comment $NetBSD: PLIST,v 1.41 2022/07/03 09:12:07 wiz Exp $
 bin/meld
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -219,6 +219,7 @@ share/help/C/meld/legal.xml
 share/help/C/meld/missing-functionality.page
 share/help/C/meld/preferences.page
 share/help/C/meld/resolving-conflicts.page
+share/help/C/meld/syncpoints.page
 share/help/C/meld/text-filters.page
 share/help/C/meld/vc-mode.page
 share/help/C/meld/vc-supported.page
