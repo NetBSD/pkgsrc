@@ -1,0 +1,2 @@
+xbrightness is a command-line tool for altering the brightness (and optionally
+gamma) at software level, through the X server.
