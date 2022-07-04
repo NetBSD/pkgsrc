@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2022/07/04 20:09:05 pin Exp $
+bin/emwm
+lib/X11/app-defaults/Emwm
+man/man1/emwm.1
+share/examples/emwm/system.emwmrc
