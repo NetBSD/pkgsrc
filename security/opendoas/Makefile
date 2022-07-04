@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2022/05/09 15:21:19 nia Exp $
+# $NetBSD: Makefile,v 1.5 2022/07/04 08:25:58 pin Exp $
 
-DISTNAME=	opendoas-6.8.1
+DISTNAME=	opendoas-6.8.2
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=duncaen/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
