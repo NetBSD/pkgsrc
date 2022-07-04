@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3206 2022/07/04 08:13:47 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3207 2022/07/04 08:26:49 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4814,3 +4814,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Downgraded shells/ksh93 to 1.0.0beta2 [leot 2022-07-03]
 	Updated converters/p5-Cpanel-JSON-XS to 4.30 [wiz 2022-07-04]
 	Updated sysutils/openipmi to 2.0.32 [wiz 2022-07-04]
+	Updated security/opendoas to 6.8.2 [pin 2022-07-04]
