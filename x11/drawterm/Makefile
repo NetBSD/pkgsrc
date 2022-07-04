@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/07/04 20:56:48 pin Exp $
+# $NetBSD: Makefile,v 1.2 2022/07/04 21:52:04 gutteridge Exp $
 
 DISTNAME=	snap
 BUILD=		20220603
@@ -67,7 +67,7 @@ MAKEFLAGS+=	AUDIO=sun
 MAKEFLAGS+=	AUDIO=unix
 .  endif
 
-.  if ${OPSYS} == "SunOS" && !empty(PKGSRC_COMPILER:Msunpro)
+.  if !empty(PKGSRC_COMPILER:Msunpro)
 MAKEFLAGS+=	CONF=sun
 .  else
 MAKEFLAGS+=	CONF=unix
