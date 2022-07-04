@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3213 2022/07/04 20:11:36 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3214 2022/07/04 20:23:05 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4822,3 +4822,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added wm/emwm version 1.0a [pin 2022-07-04]
 	Updated editors/vile to 9.8vnb2 [wiz 2022-07-04]
 	Updated editors/xvile to 9.8vnb2 [wiz 2022-07-04]
+	Added wm/emwm-utils version 1.0 [pin 2022-07-04]
