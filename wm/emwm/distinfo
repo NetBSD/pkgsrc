@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/07/04 20:09:05 pin Exp $
+
+BLAKE2s (emwm-1.0a/emwm-src.tar.xz) = 7b9b357b4339fddaffd1f37c249f6ee1b6923dca4812d8c3323317569dd51d1d
+SHA512 (emwm-1.0a/emwm-src.tar.xz) = 64128186a70e0d4d4814fab951c9cc8cfec3faf61bab4885dd5d0059b7cec6b5e45710084954f72205e473ce015e59d5cd8aa4ca93258c0f4da22bc27ba5dcfb
+Size (emwm-1.0a/emwm-src.tar.xz) = 329364 bytes

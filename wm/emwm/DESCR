@@ -1,0 +1,2 @@
+EMWM is a lightweight window manager for X11. It is derived from MWM, adding
+support for UTF-8, Xinerama and Extended Window Manager Hints.
