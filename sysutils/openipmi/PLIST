@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2020/11/03 23:58:10 otis Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/07/04 08:13:37 wiz Exp $
 bin/ipmi_sim
 bin/ipmi_ui
 bin/ipmicmd
@@ -9,6 +9,7 @@ bin/rmcp_ping
 bin/sdrcomp
 bin/solterm
 include/OpenIPMI/deprecator.h
+include/OpenIPMI/dllvisibility.h
 include/OpenIPMI/extcmd.h
 include/OpenIPMI/internal/ilist.h
 include/OpenIPMI/internal/ipmi_control.h
@@ -28,6 +29,7 @@ include/OpenIPMI/internal/locked_list.h
 include/OpenIPMI/internal/md2.h
 include/OpenIPMI/internal/md5.h
 include/OpenIPMI/internal/opq.h
+include/OpenIPMI/internal/winsock_compat.h
 include/OpenIPMI/ipmbserv.h
 include/OpenIPMI/ipmi_addr.h
 include/OpenIPMI/ipmi_auth.h
@@ -58,6 +60,7 @@ include/OpenIPMI/ipmi_ui.h
 include/OpenIPMI/ipmi_user.h
 include/OpenIPMI/ipmiif.h
 include/OpenIPMI/lanserv.h
+include/OpenIPMI/lanserv_dllvisibility.h
 include/OpenIPMI/mcserv.h
 include/OpenIPMI/msg.h
 include/OpenIPMI/mxp.h

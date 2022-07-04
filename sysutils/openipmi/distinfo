@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:19:55 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/07/04 08:13:37 wiz Exp $
 
-BLAKE2s (OpenIPMI-2.0.29.tar.gz) = feef48d7838eb545cc4dfca0846315aae5d4b2237f46d30830fb9e4518051d46
-SHA512 (OpenIPMI-2.0.29.tar.gz) = ff23aadfe4b9002574d1f06dda3d61f7a03ef1df2c61855516b7d67bd6d3272c53af74e3412e1045242dcb845f50b7c542083e918805c0efac424dd86e720a10
-Size (OpenIPMI-2.0.29.tar.gz) = 3119530 bytes
+BLAKE2s (OpenIPMI-2.0.32.tar.gz) = 9d67d8854104dcb91d61f262d343c4aa2f28a0bd0d26ed36a71b67932d8705d0
+SHA512 (OpenIPMI-2.0.32.tar.gz) = e409f32e6bbf26756338ada386fa394d48d734b4d6ba4beca700ce60bc3af3d0f41e972a328c4e076ae014f4fbd8598d05d3f879f9c6d76198e6ae1a2ba03e95
+Size (OpenIPMI-2.0.32.tar.gz) = 3140147 bytes
 SHA1 (patch-configure) = 644287934ea58b18aebad100cfe3f37c39eca3ff
-SHA1 (patch-lanserv_extcmd.c) = bb9d9b91343becc6a448efdf166b5095f5270eeb
 SHA1 (patch-unix_selector.c) = 45730697f0c4c110f4e34b4ff07a8dd9c4cc0a8b
