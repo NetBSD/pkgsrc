@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/11/23 14:07:27 nia Exp $
+# $NetBSD: Makefile,v 1.3 2022/07/04 19:51:29 pin Exp $
 
 DISTNAME=	lemonbar-1.4
 CATEGORIES=	x11
@@ -10,6 +10,8 @@ MAINTAINER=	hopkinsza@gmail.com
 HOMEPAGE=	https://github.com/LemonBoy/bar
 COMMENT=	Featherweight lemon-scented bar
 LICENSE=	mit
+
+CONFLICTS=      lemonbar-xft-[0-9]*
 
 USE_TOOLS+=	gmake pod2man
 
