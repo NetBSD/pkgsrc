@@ -5,7 +5,7 @@ conjuction with the Enhanced Motif Window Manager.
   screen locking, as well as shutdown/suspend options. It also launches the
   window manager and the toolbox.
 
-- XmToolbox, is a toolchest like application launcher, which reads it's
+- XmToolbox is a toolchest-like application launcher, which reads its
   multi-level menu structure from a simple plain-text file (namely
   ~/.toolboxrc).  It also communicates with the session manager to provide
   lock, log out, and shutdown commands.
