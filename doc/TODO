@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21993 2022/07/03 17:52:50 wiz Exp $
+$NetBSD: TODO,v 1.21994 2022/07/04 07:20:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1168,7 +1168,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o p5-Class-Measure-0.09
 	o p5-Clipboard-0.28
 	o p5-Convert-Color-1.000001
-	o p5-Cpanel-JSON-XS-4.26
 	o p5-DBD-DB2-1.86
 	o p5-DBD-Oracle-1.80
 	o p5-DBD-Sybase-1.16

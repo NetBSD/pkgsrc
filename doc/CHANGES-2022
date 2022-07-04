@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3204 2022/07/03 21:20:52 leot Exp $
+$NetBSD: CHANGES-2022,v 1.3205 2022/07/04 07:20:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4812,3 +4812,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added shells/ksh93 version 1.0.0.2 [pin 2022-07-03]
 	Added x11/xbrightness version 0.3 [pin 2022-07-03]
 	Downgraded shells/ksh93 to 1.0.0beta2 [leot 2022-07-03]
+	Updated converters/p5-Cpanel-JSON-XS to 4.30 [wiz 2022-07-04]
