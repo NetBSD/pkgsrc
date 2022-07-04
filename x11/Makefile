@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.959 2022/07/03 21:09:22 pin Exp $
+# $NetBSD: Makefile,v 1.960 2022/07/04 19:57:07 pin Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -199,6 +199,7 @@ SUBDIR+=	kwindowsystem
 SUBDIR+=	kxmlgui
 SUBDIR+=	labltk
 SUBDIR+=	lemonbar
+SUBDIR+=	lemonbar-xft
 SUBDIR+=	lesstif
 SUBDIR+=	libFS
 SUBDIR+=	libICE
