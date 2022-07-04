@@ -1,0 +1,11 @@
+This package provides the XmSm and XmToolbox utilities, to use in
+conjuction with the Enhanced Motif Window Manager.
+
+- XmSm is simple session manager that provides session configuration and
+  screen locking, as well as shutdown/suspend options. It also launches the
+  window manager and the toolbox.
+
+- XmToolbox, is a toolchest like application launcher, which reads it's
+  multi-level menu structure from a simple plain-text file (namely
+  ~/.toolboxrc).  It also communicates with the session manager to provide
+  lock, log out, and shutdown commands.
