@@ -1,6 +1,6 @@
-$NetBSD: patch-lemonbar.c,v 1.1 2022/07/04 19:56:05 pin Exp $
+$NetBSD: patch-lemonbar.c,v 1.2 2022/07/04 21:37:25 gutteridge Exp $
 
-Adapt pkgsrc lemonbar patch
+Argument to ctype functions must be unsigned char.
 
 --- lemonbar.c.orig	2020-12-13 07:41:32.000000000 +0000
 +++ lemonbar.c
