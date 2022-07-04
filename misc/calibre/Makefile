@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.268 2022/06/30 11:18:37 nia Exp $
+# $NetBSD: Makefile,v 1.269 2022/07/04 07:46:15 wiz Exp $
 
 DISTNAME=	calibre-5.40.0
 PKGREVISION=	3
@@ -44,6 +44,7 @@ BUILD_DEPENDS+=	xdg-utils>=1.0.2:../../misc/xdg-utils
 EXTRACT_USING=	bsdtar
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 # as of 5.x
+PYTHON_VERSIONS_INCOMPATIBLE+=	310 # as of 5.40.0
 PYTHON_VERSIONED_DEPENDENCIES+=	markdown
 
 USE_LANGUAGES=			c99 c++
