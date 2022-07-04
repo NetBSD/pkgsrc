@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/07/04 20:56:48 pin Exp $
+
+BLAKE2s (drawterm-20220603-20220603/snap.tar.gz) = 22416509dfe89320a1119b5a539c8f66828cfabccd9fa70e0cacd961d1c7aaf9
+SHA512 (drawterm-20220603-20220603/snap.tar.gz) = 89db21fff1459bb74b65b57a9b7f418bc0df6c00b8c6a1bcc448e58436c637b87c8f50191960d5c185f5f074d5bc7e803388afefbdc0f16446a3cece3a78181f
+Size (drawterm-20220603-20220603/snap.tar.gz) = 606935 bytes
