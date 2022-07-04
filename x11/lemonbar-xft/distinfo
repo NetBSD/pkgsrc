@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2022/07/04 19:56:05 pin Exp $
+
+BLAKE2s (lemonbar-xft-1.3.tar.gz) = 709001c325c7873bb22ef05103ff564c8c1cf592c6689bb5a8f5358f85cb7d36
+SHA512 (lemonbar-xft-1.3.tar.gz) = b106a18e1628f29be8bff3964599a52c852dfce4eec4dafde10e25c84580ba533bec20ef0b5151521f33fe26b1c2803f8491a3d315640d9642d9c196a0de1402
+Size (lemonbar-xft-1.3.tar.gz) = 17111 bytes
+SHA1 (patch-lemonbar.c) = 578b2fdd58af3d173b7a7844ee59c15f30a9df80
