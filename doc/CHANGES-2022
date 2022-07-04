@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3209 2022/07/04 14:35:02 ryoon Exp $
+$NetBSD: CHANGES-2022,v 1.3210 2022/07/04 14:36:13 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4817,3 +4817,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/opendoas to 6.8.2 [pin 2022-07-04]
 	Added shells/etsh version 5.4.0 [pin 2022-07-04]
 	Updated www/firefox to 102.0 [ryoon 2022-07-04]
+	Updated www/firefox-l10n to 102.0 [ryoon 2022-07-04]
