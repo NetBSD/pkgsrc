@@ -1,8 +1,10 @@
-# $NetBSD: options.mk,v 1.1 2020/11/03 20:55:34 otis Exp $
+# $NetBSD: options.mk,v 1.2 2022/07/04 08:13:37 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openipmi
-PKG_SUPPORTED_OPTIONS=		perl python snmp swig
-PKG_SUGGESTED_OPTIONS=		perl python snmp swig
+# python: distutils is deprecated
+# https://sourceforge.net/p/openipmi/feature-requests/10/
+PKG_SUPPORTED_OPTIONS=		perl snmp swig
+PKG_SUGGESTED_OPTIONS=		perl snmp swig
 
 PLIST_VARS+=			perl python
 
@@ -16,6 +18,7 @@ PLIST.perl=		yes
 CONFIGURE_ARGS+=	--with-perl=no
 .endif
 
+# uses distutils, which is deprecated
 .if !empty(PKG_OPTIONS:Mpython)
 CONFIGURE_ARGS+=	--with-python=${PYTHONBIN}
 .include "../../lang/python/pyversion.mk"
