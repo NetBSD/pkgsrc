@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.960 2022/07/04 19:57:07 pin Exp $
+# $NetBSD: Makefile,v 1.961 2022/07/04 20:57:50 pin Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -40,6 +40,7 @@ SUBDIR+=	deskmenu
 SUBDIR+=	devilspie
 SUBDIR+=	dmenu
 SUBDIR+=	docker
+SUBDIR+=	drawterm
 SUBDIR+=	driconf
 SUBDIR+=	dtx11session
 SUBDIR+=	dunst
