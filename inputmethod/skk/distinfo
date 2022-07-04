@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.16 2021/10/26 10:49:42 nia Exp $
+$NetBSD: distinfo,v 1.17 2022/07/04 14:40:40 ryoon Exp $
 
 BLAKE2s (ddskk-ddskk-17.1_Neppu.tar.gz) = e7f2031406f7b9131d7d5b4a4a419a43b03745ee67ed66bf1f47dcc40d66ef0e
 SHA512 (ddskk-ddskk-17.1_Neppu.tar.gz) = e0b924111a6289acd29ee5a5d94ea70730fe8f4e1dd5ed279520263efab0c69a6940e5b1b6182e45ed30c0b1ddca9e44ff75b7b3fdab5c8a3e1b2b9f82cc20fa
 Size (ddskk-ddskk-17.1_Neppu.tar.gz) = 952635 bytes
 SHA1 (patch-Makefile) = a04d6c460fae99d247a9b237192619477c1aed02
+SHA1 (patch-ccc.el) = 42677c3dd2d4d48536da569ee3b57ef7f53d66b8
