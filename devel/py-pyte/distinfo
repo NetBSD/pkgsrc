@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:19:00 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/07/05 10:16:35 adam Exp $
 
-BLAKE2s (pyte-0.8.0.tar.gz) = c2d8b8cca272796e04a3a3be5af8c7bed32a5389d26e0b0fd55005efc05af855
-SHA512 (pyte-0.8.0.tar.gz) = b1c23206f32c49ab509ac9bd4e042b043478cae35594c52c8389f5a5ba15cd0895315c42be5a0f2992b3aaa918ae282e43e88e72798a0b600307860f6df06465
-Size (pyte-0.8.0.tar.gz) = 50415 bytes
+BLAKE2s (pyte-0.8.1.tar.gz) = 3344502d8b86b7965dc4004031e40c4d9844998113a086b65d2bb0abbf3fd7b0
+SHA512 (pyte-0.8.1.tar.gz) = fe393bac7ff5d7cdfeeb42a37c7f4719c1920f61518df47fc8e51fd541a6c5368e33928e114190072d5270e019605b6e7e3b33330c5e42e2f6afbb07da993f4d
+Size (pyte-0.8.1.tar.gz) = 51657 bytes
