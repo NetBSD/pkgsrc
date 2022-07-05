@@ -1,4 +1,4 @@
-# $NetBSD: tools.Linux.mk,v 1.67 2022/05/09 16:44:40 schmonz Exp $
+# $NetBSD: tools.Linux.mk,v 1.68 2022/07/05 20:35:45 markd Exp $
 #
 # System-supplied tools for the Linux operating system.
 #
@@ -197,6 +197,9 @@ TOOLS_PLATFORM.pwd?=		${_path}/pwd
 .  endif
 .  if exists(${_path}/readlink)
 TOOLS_PLATFORM.readlink?=	${_path}/readlink
+.  endif
+.  if exists(${_path}/realpath)
+TOOLS_PLATFORM.realpath?=	${_path}/realpath
 .  endif
 .  if exists(${_path}/rm)
 TOOLS_PLATFORM.rm?=		${_path}/rm
