@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3217 2022/07/05 07:01:43 pin Exp $
+$NetBSD: CHANGES-2022,v 1.3218 2022/07/05 07:25:33 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4826,3 +4826,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/felix to 1.0.0 [pin 2022-07-04]
 	Added x11/drawterm version 20220603 [pin 2022-07-04]
 	Updated devel/difftastic to 0.30.0 [pin 2022-07-05]
+	Updated net/bwm-ng to 0.6.3 [pin 2022-07-05]
