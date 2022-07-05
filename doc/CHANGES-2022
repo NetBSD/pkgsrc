@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3223 2022/07/05 11:01:55 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3224 2022/07/05 12:58:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4837,3 +4837,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated chat/ircd-hybrid to 8.2.40 [fox 2022-07-05]
 	Updated biology/htslib to 1.15.1 [adam 2022-07-05]
 	Updated security/sudo to 1.9.11p3 [adam 2022-07-05]
+	Updated textproc/py-tabulate to 0.8.10 [adam 2022-07-05]
+	Updated net/py-smb to 1.2.8 [adam 2022-07-05]
