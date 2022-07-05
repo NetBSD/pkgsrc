@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 11:23:16 nia Exp $
+$NetBSD: distinfo,v 1.11 2022/07/05 12:56:19 adam Exp $
 
-BLAKE2s (tabulate-0.8.9.tar.gz) = d709c568c93886f9003cb70e9399ca6da00b2aaee6ed4bb16c5345a66262e2be
-SHA512 (tabulate-0.8.9.tar.gz) = 4170bb4ded836997ea053b039f19e084818c40e8ae2ae4f56c686ed3d33a341986bc311dd0370256b1af815db7b1ed8ba89008f87f8634b216412d0fd5fa76d9
-Size (tabulate-0.8.9.tar.gz) = 53482 bytes
+BLAKE2s (tabulate-0.8.10.tar.gz) = 98f8c2751c2268cc9b8db33caeed587bdb912592c8e095aeba814e3fba34de27
+SHA512 (tabulate-0.8.10.tar.gz) = da390eb620c257eb4a24393d011c8835c59b0da573ce2ed19950a8f16033ef432e7847d8a39f3e7907ba5502635b744ed69c4ebed9fa0efed9d2385a03798a3f
+Size (tabulate-0.8.10.tar.gz) = 60154 bytes
