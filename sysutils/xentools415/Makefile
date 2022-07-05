@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2022/07/01 13:07:37 bouyer Exp $
+# $NetBSD: Makefile,v 1.19 2022/07/05 15:56:33 bouyer Exp $
 #
 # VERSION is set in version.mk as it is shared with other packages
 .include        "version.mk"
 PKGNAME=		xentools415-${VERSION}
-PKGREVISION=    	3
 
 CATEGORIES=		sysutils
 
@@ -18,6 +17,9 @@ BUILD_DEPENDS+=	dev86-[0-9]*:../../devel/dev86 # needed to build firmware
 BUILD_DEPENDS+=	acpica-utils-[0-9]*:../../sysutils/acpica-utils
 .endif
 DEPENDS+=	${PYPKGPREFIX}-curses>=0:../../devel/py-curses
+
+TOOL_DEPENDS+=  ${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 PKG_SYSCONFSUBDIR=	xen
 
@@ -159,6 +161,7 @@ pre-build:
 
 INSTALLATION_DIRS=	${EGDIR} ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 INSTALLATION_DIRS+=	${PKGMANDIR}/man8 share/doc/xen
+INSTALLATION_DIRS+=	${PYSITELIB}
 
 BUILD_DEFS+=		VARBASE
 
@@ -221,7 +224,7 @@ BUILDLINK_TRANSFORM+=	rm:-falign-jumps=1 rm:-falign-loops=1 \
 MAKE_ENV+=	EXTRA_HOSTCFLAGS=${EXTRA_HOSTCFLAGS:Q} EXTRA_CFLAGS=${EXTRA_CFLAGS:M*:Q} TARGET_CC=${TARGET_CC}
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/extension.mk"
 #.include "../../devel/SDL/buildlink3.mk"
 .include "../../lang/ocaml/buildlink3.mk"
 .include "../../devel/ocaml-findlib/buildlink3.mk"
