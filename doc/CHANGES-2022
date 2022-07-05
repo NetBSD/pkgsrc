@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3226 2022/07/05 16:28:33 pin Exp $
+$NetBSD: CHANGES-2022,v 1.3227 2022/07/05 18:08:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4843,3 +4843,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/xentools415 to 4.15.3 [bouyer 2022-07-05]
 	Updated sysutils/xenstoretools to 4.15.3 [bouyer 2022-07-05]
 	Updated sysutils/dua-cli to 2.17.8 [pin 2022-07-05]
+	Updated devel/py-test-subtests to 0.8.0 [adam 2022-07-05]
+	Updated parallel/py-ipyparallel to 8.4.1 [adam 2022-07-05]
+	Updated security/py-cryptography to 37.0.4 [adam 2022-07-05]
+	Updated security/py-cryptography_vectors to 37.0.4 [adam 2022-07-05]
