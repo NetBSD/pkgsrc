@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3218 2022/07/05 07:25:33 pin Exp $
+$NetBSD: CHANGES-2022,v 1.3219 2022/07/05 08:16:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4827,3 +4827,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Added x11/drawterm version 20220603 [pin 2022-07-04]
 	Updated devel/difftastic to 0.30.0 [pin 2022-07-05]
 	Updated net/bwm-ng to 0.6.3 [pin 2022-07-05]
+	Updated devel/py-semantic_version to 2.10.0 [adam 2022-07-05]
+	Updated devel/py-setuptools-rust to 1.4.0 [adam 2022-07-05]
+	Updated security/py-cryptography_vectors to 37.0.3 [adam 2022-07-05]
+	Updated security/py-cryptodome to 3.15.0 [adam 2022-07-05]
