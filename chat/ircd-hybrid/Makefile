@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.81 2021/12/08 16:03:28 adam Exp $
+# $NetBSD: Makefile,v 1.82 2022/07/05 10:45:29 fox Exp $
 
-DISTNAME=	ircd-hybrid-8.2.39
-PKGREVISION=	3
+DISTNAME=	ircd-hybrid-8.2.40
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ircd-hybrid/}
 EXTRACT_SUFX=	.tgz
@@ -73,8 +72,8 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/log/ircd-hybrid
 .include "options.mk"
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/INSTALL ${DESTDIR}${PREFIX}/${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/INSTALL.md ${DESTDIR}${PREFIX}/${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/tools/README.mkpasswd \
 		${DESTDIR}${PREFIX}/${DOCDIR}/README.ircd-hybrid-mkpasswd
 
