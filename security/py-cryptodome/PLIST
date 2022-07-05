@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2021/12/06 19:20:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.25 2022/07/05 08:16:14 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -337,10 +337,13 @@ ${PYSITELIB}/Crypto/PublicKey/__init__.pyc
 ${PYSITELIB}/Crypto/PublicKey/__init__.pyi
 ${PYSITELIB}/Crypto/PublicKey/__init__.pyo
 ${PYSITELIB}/Crypto/PublicKey/_ec_ws.${SOEXT}
+${PYSITELIB}/Crypto/PublicKey/_ed25519.abi3.so
+${PYSITELIB}/Crypto/PublicKey/_ed448.abi3.so
 ${PYSITELIB}/Crypto/PublicKey/_openssh.py
 ${PYSITELIB}/Crypto/PublicKey/_openssh.pyc
 ${PYSITELIB}/Crypto/PublicKey/_openssh.pyi
 ${PYSITELIB}/Crypto/PublicKey/_openssh.pyo
+${PYSITELIB}/Crypto/PublicKey/_x25519.abi3.so
 ${PYSITELIB}/Crypto/Random/__init__.py
 ${PYSITELIB}/Crypto/Random/__init__.pyc
 ${PYSITELIB}/Crypto/Random/__init__.pyi
@@ -535,9 +538,15 @@ ${PYSITELIB}/Crypto/SelfTest/PublicKey/__init__.pyo
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_DSA.py
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_DSA.pyc
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_DSA.pyo
-${PYSITELIB}/Crypto/SelfTest/PublicKey/test_ECC.py
-${PYSITELIB}/Crypto/SelfTest/PublicKey/test_ECC.pyc
-${PYSITELIB}/Crypto/SelfTest/PublicKey/test_ECC.pyo
+${PYSITELIB}/Crypto/SelfTest/PublicKey/test_ECC_25519.py
+${PYSITELIB}/Crypto/SelfTest/PublicKey/test_ECC_25519.pyc
+${PYSITELIB}/Crypto/SelfTest/PublicKey/test_ECC_25519.pyo
+${PYSITELIB}/Crypto/SelfTest/PublicKey/test_ECC_448.py
+${PYSITELIB}/Crypto/SelfTest/PublicKey/test_ECC_448.pyc
+${PYSITELIB}/Crypto/SelfTest/PublicKey/test_ECC_448.pyo
+${PYSITELIB}/Crypto/SelfTest/PublicKey/test_ECC_NIST.py
+${PYSITELIB}/Crypto/SelfTest/PublicKey/test_ECC_NIST.pyc
+${PYSITELIB}/Crypto/SelfTest/PublicKey/test_ECC_NIST.pyo
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_ElGamal.py
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_ElGamal.pyc
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_ElGamal.pyo
@@ -565,6 +574,9 @@ ${PYSITELIB}/Crypto/SelfTest/Signature/__init__.pyo
 ${PYSITELIB}/Crypto/SelfTest/Signature/test_dss.py
 ${PYSITELIB}/Crypto/SelfTest/Signature/test_dss.pyc
 ${PYSITELIB}/Crypto/SelfTest/Signature/test_dss.pyo
+${PYSITELIB}/Crypto/SelfTest/Signature/test_eddsa.py
+${PYSITELIB}/Crypto/SelfTest/Signature/test_eddsa.pyc
+${PYSITELIB}/Crypto/SelfTest/Signature/test_eddsa.pyo
 ${PYSITELIB}/Crypto/SelfTest/Signature/test_pkcs1_15.py
 ${PYSITELIB}/Crypto/SelfTest/Signature/test_pkcs1_15.pyc
 ${PYSITELIB}/Crypto/SelfTest/Signature/test_pkcs1_15.pyo
@@ -619,6 +631,10 @@ ${PYSITELIB}/Crypto/Signature/PKCS1_v1_5.pyo
 ${PYSITELIB}/Crypto/Signature/__init__.py
 ${PYSITELIB}/Crypto/Signature/__init__.pyc
 ${PYSITELIB}/Crypto/Signature/__init__.pyo
+${PYSITELIB}/Crypto/Signature/eddsa.py
+${PYSITELIB}/Crypto/Signature/eddsa.pyc
+${PYSITELIB}/Crypto/Signature/eddsa.pyi
+${PYSITELIB}/Crypto/Signature/eddsa.pyo
 ${PYSITELIB}/Crypto/Signature/pkcs1_15.py
 ${PYSITELIB}/Crypto/Signature/pkcs1_15.pyc
 ${PYSITELIB}/Crypto/Signature/pkcs1_15.pyi
