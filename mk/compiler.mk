@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.97 2022/04/10 19:54:02 riastradh Exp $
+# $NetBSD: compiler.mk,v 1.98 2022/07/05 17:32:24 jperkin Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -48,9 +48,9 @@
 #	This is used to determine the correct compilers to make
 #	visible to the build environment, installing them if
 #	necessary.  Flags such as -std=c++99 are also added.
-#	Valid values are: c, c99, c++, c++03, gnu++03, c++0x, gnu++0x,
-#	c++11, gnu++11, c++14, gnu++14, c++17, gnu++17, c++20, gnu++20,
-#	fortran, fortran77, java, objc, obj-c++, and ada.
+#	Valid values are: c, c99, gnu99, c11, gnu11, c17, gnu17, c++, c++03,
+#	gnu++03, c++0x, gnu++0x, c++11, gnu++11, c++14, gnu++14, c++17,
+#	gnu++17, c++20, gnu++20, fortran, fortran77, java, objc, obj-c++, ada.
 #	The default is "c".
 #
 #       The above is partly aspirational.  As an example c++11 does
@@ -83,10 +83,12 @@ _SYS_VARS.compiler=	CC_VERSION
 # Since most packages need a C compiler, this is the default value.
 USE_LANGUAGES?=	c
 
-# Add c support if c99 is set
-.if !empty(USE_LANGUAGES:Mc99)
-USE_LANGUAGES+=	c
-.endif
+_C_STD_VERSIONS=	c99 gnu99 c11 gnu11 c17 gnu17
+.for _version_ in ${_C_STD_VERSIONS}
+.  if !empty(USE_LANGUAGES:M${_version_})
+USE_LANGUAGES+=		c
+.  endif
+.endfor
 
 _CXX_STD_VERSIONS=	gnu++20 c++20 gnu++17 c++17 gnu++14 c++14 gnu++11 c++11 gnu++0x c++0x gnu++03 c++03
 .for _version_ in ${_CXX_STD_VERSIONS}
@@ -178,13 +180,19 @@ ${_var_}:=	${${_var_}:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//:T} ${${_var_}:C/^/_asdf_
 .  endif
 .endfor
 
-# Pass the compiler flag based on the most recent version of the C++ standard
-# required.  We currently assume that each standard is a superset of all that
-# come after it.
+# Pass the compiler flag based on the most recent version of the C or C++
+# standard required.  We currently assume that each standard is a superset of
+# all that come after it.
 #
-# If and when the flags differ between compilers we can push this down into
-# the respective mk/compiler/*.mk files.
-#
+_C_VERSION_REQD=
+.for _version_ in ${_C_STD_VERSIONS}
+.  if empty(_C_VERSION_REQD) && !empty(USE_LANGUAGES:M${_version_})
+_C_VERSION_REQD=	${_version_}
+_WRAP_EXTRA_ARGS.CC+=	${_C_STD_FLAG.${_C_VERSION_REQD}}
+CWRAPPERS_PREPEND.cc+=	${_C_STD_FLAG.${_C_VERSION_REQD}}
+.  endif
+.endfor
+
 _CXX_VERSION_REQD=
 .for _version_ in ${_CXX_STD_VERSIONS}
 .  if empty(_CXX_VERSION_REQD) && !empty(USE_LANGUAGES:M${_version_})
