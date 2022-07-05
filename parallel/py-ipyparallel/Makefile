@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2022/06/17 12:23:17 adam Exp $
+# $NetBSD: Makefile,v 1.7 2022/07/05 18:06:28 adam Exp $
 
-DISTNAME=	ipyparallel-8.4.0
+DISTNAME=	ipyparallel-8.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	parallel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/ipyparallel/}
