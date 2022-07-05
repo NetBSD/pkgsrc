@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21995 2022/07/04 08:13:47 wiz Exp $
+$NetBSD: TODO,v 1.21996 2022/07/05 07:25:33 pin Exp $
 
 Suggested new packages
 ======================
@@ -505,7 +505,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o bos-2.5
 	o bottlerocket-0.05b3
 	o bugzilla3-3.6.13
-	o bwm-ng-0.6.3
 	o byobu-5.133
 	o bzr-explorer-1.3.0
 	o bzr-gtk-0.103.0
