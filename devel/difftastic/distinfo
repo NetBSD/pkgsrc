@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2022/06/13 20:46:05 pin Exp $
+$NetBSD: distinfo,v 1.5 2022/07/05 07:00:49 pin Exp $
 
 BLAKE2s (aho-corasick-0.7.18.crate) = 8925e88e2df4b5ca3b31783f527e1bb31dbe27846f409f631148fa239f3b2935
 SHA512 (aho-corasick-0.7.18.crate) = 7a23b16231a90d23ee60ad4c81bc225410599a4560d33d3a203138fc540c39cf1000100fed3aed40dcc371c3635656a3792545dca5dd1aefbde00d8774eebd00
@@ -60,9 +60,9 @@ Size (ctor-0.1.22.crate) = 9311 bytes
 BLAKE2s (diff-0.1.12.crate) = 97e9a9edde58861f9129c0f531e596f0602a744e070445315118269ae02ad4f7
 SHA512 (diff-0.1.12.crate) = 0e81331c0424e9369963e23894a6412b65a3ed4f3154ccc184fc84cf1c5985b81c586a6b34e8c6c0e5c3afba38fb15277cfd89e7f50c85bd5d8d4d24ba670d16
 Size (diff-0.1.12.crate) = 10223 bytes
-BLAKE2s (difftastic-0.29.1.tar.gz) = 7df9e0f400d72a3106f7a9514acd8ee4c16b1d78d0a9edf387347d96b583896b
-SHA512 (difftastic-0.29.1.tar.gz) = d9dee1d4d5e165693353c29442b90438b14832545790495616cbbd14c449fecbca73e3e4c5743d86bc9c23f5534a4f361fb596d0ee38ef67f6ddc4bdf20f55c1
-Size (difftastic-0.29.1.tar.gz) = 15891069 bytes
+BLAKE2s (difftastic-0.30.0.tar.gz) = b006ee47c536955d836798fcd7ae8c512ef71ecb532c9b921e53cc97a916640d
+SHA512 (difftastic-0.30.0.tar.gz) = 795debca1d4d605ab5e84294457ac59641d59a5494207f64ca443d68561b560245d5c8d68524890876190e459bf372e9b16049d862711ee005e72547a0bfc4ad
+Size (difftastic-0.30.0.tar.gz) = 23071446 bytes
 BLAKE2s (either-1.6.1.crate) = 6bb7f6e21460b5351a6f5a377c2cf08d5e444c0fef34823941742c346e201965
 SHA512 (either-1.6.1.crate) = 4bfe56920e30cbc8eb4f90162db618f7dca653b42db35ab6a7045d3fd9a24ceb1778b1f79613850bdb1a87ad3794fa0d73015e46c48d513f368d8c3776fc9ddf
 Size (either-1.6.1.crate) = 13641 bytes
@@ -210,6 +210,9 @@ Size (typed-arena-2.0.1.crate) = 11439 bytes
 BLAKE2s (unicode-ident-1.0.0.crate) = 9ce51d7ca1d6aa69db417316fa73574c417fe43e9f002277f7a5731bc179fd6f
 SHA512 (unicode-ident-1.0.0.crate) = ccdad29fc63f71c507cdf276b02a5bb7fad44dffa123bf04d5b1495eb9c26bd7ec42ad6e11717eb10dc6499693047952c6b766c40d7b0696bd011779649d5fc9
 Size (unicode-ident-1.0.0.crate) = 34224 bytes
+BLAKE2s (unicode-width-0.1.9.crate) = 2c6be29baaa9f1c7b48cc6251da5aff0f9ee755d8ff1cc058dd0c084643e546c
+SHA512 (unicode-width-0.1.9.crate) = 0f5ec46c57e3b5e50cb8430c89db8d9c129e80ca11a9c398b5312bfe95001e19ca3efbfeb01c3ac09c4ce7e26c6ee1f352f7e114ecef78cefd68c54d2d50f5f4
+Size (unicode-width-0.1.9.crate) = 16745 bytes
 BLAKE2s (unicode-xid-0.2.3.crate) = 3609a81b9f5546adda6d7983759b46c7b1996e4f6407c61dfc159d1d91a0b29e
 SHA512 (unicode-xid-0.2.3.crate) = 2adea0c8447c9450be34859f2b2e2b87a61b5e313685da994d21bc24a96dd94088f3320bcdb8d20466a3fdafb0bc0375823f0c28ec0077c9c42a9818f66ac1f5
 Size (unicode-xid-0.2.3.crate) = 15174 bytes
