@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.243 2022/06/16 15:46:22 adam Exp $
+# $NetBSD: gcc.mk,v 1.244 2022/07/05 17:32:24 jperkin Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -101,6 +101,8 @@ _DEF_VARS.gcc=	\
 	_USE_GCC_SHLIB _USE_PKGSRC_GCC \
 	_WRAP_EXTRA_ARGS.CC \
 	_EXTRA_CC_DIRS \
+	_C_STD_VERSIONS \
+	${_C_STD_VERSIONS:@std@_C_STD_FLAG.${std}@} \
 	_CXX_STD_VERSIONS \
 	${_CXX_STD_VERSIONS:@std@_CXX_STD_FLAG.${std}@} \
 	_MKPIE_CFLAGS.gcc _MKPIE_LDFLAGS \
@@ -220,6 +222,13 @@ _GCC_VERSION=	0
 .  endif
 .endif
 _GCC_PKG=	gcc-${_GCC_VERSION:C/-.*$//}
+
+.for _version_ in ${_C_STD_VERSIONS}
+_C_STD_FLAG.${_version_}?=	-std=${_version_}
+.endfor
+# XXX: pkgsrc historically hardcoded c99=gnu99 so we retain that for now, but
+# we should look at removing this and be explicit in packages where required.
+_C_STD_FLAG.c99=	-std=gnu99
 
 .for _version_ in ${_CXX_STD_VERSIONS}
 _CXX_STD_FLAG.${_version_}?=	-std=${_version_}
@@ -383,11 +392,6 @@ _LANGUAGES.gcc+=	${LANGUAGES.gcc:M${_lang_}}
 
 _WRAP_EXTRA_ARGS.cc+=	-fcommon
 CWRAPPERS_PREPEND.cc+=	-fcommon
-
-.if !empty(USE_LANGUAGES:Mc99)
-_WRAP_EXTRA_ARGS.CC+=	-std=gnu99
-CWRAPPERS_APPEND.cc+=	-std=gnu99
-.endif
 
 .if ${_PKGSRC_MKPIE} == "yes"
 _MKPIE_CFLAGS.gcc=	-fPIC
