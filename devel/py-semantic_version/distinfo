@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2022/04/04 09:58:41 adam Exp $
+$NetBSD: distinfo,v 1.9 2022/07/05 08:10:24 adam Exp $
 
-BLAKE2s (semantic_version-2.9.0.tar.gz) = a059e532c033ad87507c56d3ab4a2b30b7e0d34622603797ed7b2cf05cc75b75
-SHA512 (semantic_version-2.9.0.tar.gz) = e08f8e83ad20e94ecd6393d88836e13703fec3c2f89dc7e44fae42d8a929b2460524053fd7440865fa136d22312501a1368b5c3e923997b02383c8227972aa74
-Size (semantic_version-2.9.0.tar.gz) = 51123 bytes
+BLAKE2s (semantic_version-2.10.0.tar.gz) = a66194621d81ae3496844d3d81b3a11c2625072f6b621da36506271a1877a88a
+SHA512 (semantic_version-2.10.0.tar.gz) = 869a3901d4fc12acb285c94175011ed03dc00b35ab687c67dda458cffab5666cea21bc1b4bf75ef4edeb83b8080452a1c1470248eee54bbd269614a8cab132dc
+Size (semantic_version-2.10.0.tar.gz) = 52289 bytes
