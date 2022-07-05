@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2022/04/25 06:03:10 markd Exp $
+# $NetBSD: Makefile,v 1.28 2022/07/05 20:32:19 markd Exp $
 
 DISTNAME=	prison-${KF5VER}
+PKGREVISION=	1
 CATEGORIES=	graphics
 
 HOMEPAGE=	https://community.kde.org/Frameworks
@@ -15,6 +16,7 @@ USE_TOOLS+=	pkg-config
 
 .include "../../converters/qrencode/buildlink3.mk"
 .include "../../graphics/libdmtx/buildlink3.mk"
+.include "../../graphics/zxing-cpp/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtdeclarative/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
