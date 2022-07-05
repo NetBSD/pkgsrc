@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/06/15 15:42:58 tpaul Exp $
+# $NetBSD: Makefile,v 1.6 2022/07/05 16:12:50 tpaul Exp $
 
 VERSION=	2.14.2
 DISTNAME=	vultr-cli-${VERSION}
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=vultr/}
 GITHUB_TAG=	v${VERSION}
 
 DIST_SUBDIR=	${DISTNAME}
-MAINTAINER=	tpaul@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/vultr/vultr-cli/
 COMMENT=	Official command line tool for Vultr services
 LICENSE=	apache-2.0
