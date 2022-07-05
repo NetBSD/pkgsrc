@@ -1,10 +1,14 @@
-# $NetBSD: options.mk,v 1.5 2021/10/30 07:46:10 schmonz Exp $
+# $NetBSD: options.mk,v 1.6 2022/07/05 00:15:09 brook Exp $
+
+.include "../../mk/bsd.prefs.mk"
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.bison
 PKG_SUPPORTED_OPTIONS=	nls
-# TODO: avoid suggesting nls on macOS/x86_64 versions where bison will crash
+# avoid suggesting nls on macOS/x86_64 versions where bison will crash
 # schmonz reports 11.6 crashes, earlier likely doesn't, 12.0.1 doesn't
+.if ${OPSYS} != Darwin || (${OPSYS} == Darwin && ${OPSYS_VERSION} > 110600)
 PKG_SUGGESTED_OPTIONS=  nls
+.endif
 
 PLIST_VARS+=		nls
 
