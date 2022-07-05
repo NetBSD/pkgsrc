@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3220 2022/07/05 10:19:30 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3221 2022/07/05 10:42:53 fox Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4833,3 +4833,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/py-cryptodome to 3.15.0 [adam 2022-07-05]
 	Updated devel/py-pyte to 0.8.1 [adam 2022-07-05]
 	Updated databases/py-redis to 4.3.4 [adam 2022-07-05]
+	Updated www/jira-cli to 1.0.0 [fox 2022-07-05]
