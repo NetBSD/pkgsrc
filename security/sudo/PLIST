@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2022/05/14 06:48:11 adam Exp $
+@comment $NetBSD: PLIST,v 1.22 2022/07/05 11:01:38 adam Exp $
 bin/cvtsudoers
 bin/sudo
 bin/sudoedit
@@ -15,12 +15,12 @@ man/man1/cvtsudoers.1
 man/man5/sudo.conf.5
 man/man5/sudo_logsrv.proto.5
 man/man5/sudo_logsrvd.conf.5
+man/man5/sudo_plugin.5
 man/man5/sudoers.5
 ${PLIST.ldap}man/man5/sudoers.ldap.5
 man/man5/sudoers_timestamp.5
 man/man8/sudo.8
 man/man8/sudo_logsrvd.8
-man/man8/sudo_plugin.8
 man/man8/sudo_sendlog.8
 man/man8/sudoedit.8
 man/man8/sudoreplay.8
@@ -82,6 +82,7 @@ ${PLIST.nls}share/locale/it/LC_MESSAGES/sudo.mo
 ${PLIST.nls}share/locale/it/LC_MESSAGES/sudoers.mo
 ${PLIST.nls}share/locale/ja/LC_MESSAGES/sudo.mo
 ${PLIST.nls}share/locale/ja/LC_MESSAGES/sudoers.mo
+${PLIST.nls}share/locale/ka/LC_MESSAGES/sudo.mo
 ${PLIST.nls}share/locale/ko/LC_MESSAGES/sudo.mo
 ${PLIST.nls}share/locale/ko/LC_MESSAGES/sudoers.mo
 ${PLIST.nls}share/locale/lt/LC_MESSAGES/sudoers.mo
