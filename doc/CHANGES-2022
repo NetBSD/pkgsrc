@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3222 2022/07/05 10:45:52 fox Exp $
+$NetBSD: CHANGES-2022,v 1.3223 2022/07/05 11:01:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4835,3 +4835,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/py-redis to 4.3.4 [adam 2022-07-05]
 	Updated www/jira-cli to 1.0.0 [fox 2022-07-05]
 	Updated chat/ircd-hybrid to 8.2.40 [fox 2022-07-05]
+	Updated biology/htslib to 1.15.1 [adam 2022-07-05]
+	Updated security/sudo to 1.9.11p3 [adam 2022-07-05]
