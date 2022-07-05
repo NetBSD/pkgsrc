@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2021/01/16 19:22:08 fox Exp $
+@comment $NetBSD: PLIST,v 1.18 2022/07/05 10:45:29 fox Exp $
 bin/ircd
 bin/ircd-hybrid-mkpasswd
 lib/ircd-hybrid/modules/autoload/m_accept.la
@@ -39,6 +39,7 @@ lib/ircd-hybrid/modules/autoload/m_post.la
 lib/ircd-hybrid/modules/autoload/m_rehash.la
 lib/ircd-hybrid/modules/autoload/m_restart.la
 lib/ircd-hybrid/modules/autoload/m_resv.la
+lib/ircd-hybrid/modules/autoload/m_resync.la
 lib/ircd-hybrid/modules/autoload/m_set.la
 lib/ircd-hybrid/modules/autoload/m_stats.la
 lib/ircd-hybrid/modules/autoload/m_svinfo.la
@@ -75,6 +76,7 @@ lib/ircd-hybrid/modules/m_join.la
 lib/ircd-hybrid/modules/m_kick.la
 lib/ircd-hybrid/modules/m_kill.la
 lib/ircd-hybrid/modules/m_message.la
+lib/ircd-hybrid/modules/m_mlock.la
 lib/ircd-hybrid/modules/m_mode.la
 lib/ircd-hybrid/modules/m_nick.la
 lib/ircd-hybrid/modules/m_part.la
@@ -84,9 +86,9 @@ lib/ircd-hybrid/modules/m_sjoin.la
 lib/ircd-hybrid/modules/m_squit.la
 lib/ircd-hybrid/modules/m_tmode.la
 man/man8/ircd.8
-share/doc/ircd-hybrid/INSTALL
-share/doc/ircd-hybrid/README
+share/doc/ircd-hybrid/INSTALL.md
 share/doc/ircd-hybrid/README.ircd-hybrid-mkpasswd
+share/doc/ircd-hybrid/README.md
 share/doc/ircd-hybrid/doc/CIDR.txt
 share/doc/ircd-hybrid/doc/index.txt
 share/doc/ircd-hybrid/doc/kline.txt
