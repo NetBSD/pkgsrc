@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2022/02/23 08:22:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/07/05 08:12:00 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -9,6 +9,9 @@ ${PYSITELIB}/${EGG_INFODIR}/zip-safe
 ${PYSITELIB}/setuptools_rust/__init__.py
 ${PYSITELIB}/setuptools_rust/__init__.pyc
 ${PYSITELIB}/setuptools_rust/__init__.pyo
+${PYSITELIB}/setuptools_rust/_utils.py
+${PYSITELIB}/setuptools_rust/_utils.pyc
+${PYSITELIB}/setuptools_rust/_utils.pyo
 ${PYSITELIB}/setuptools_rust/build.py
 ${PYSITELIB}/setuptools_rust/build.pyc
 ${PYSITELIB}/setuptools_rust/build.pyo
@@ -21,12 +24,12 @@ ${PYSITELIB}/setuptools_rust/command.pyo
 ${PYSITELIB}/setuptools_rust/extension.py
 ${PYSITELIB}/setuptools_rust/extension.pyc
 ${PYSITELIB}/setuptools_rust/extension.pyo
+${PYSITELIB}/setuptools_rust/rustc_info.py
+${PYSITELIB}/setuptools_rust/rustc_info.pyc
+${PYSITELIB}/setuptools_rust/rustc_info.pyo
 ${PYSITELIB}/setuptools_rust/setuptools_ext.py
 ${PYSITELIB}/setuptools_rust/setuptools_ext.pyc
 ${PYSITELIB}/setuptools_rust/setuptools_ext.pyo
-${PYSITELIB}/setuptools_rust/utils.py
-${PYSITELIB}/setuptools_rust/utils.pyc
-${PYSITELIB}/setuptools_rust/utils.pyo
 ${PYSITELIB}/setuptools_rust/version.py
 ${PYSITELIB}/setuptools_rust/version.pyc
 ${PYSITELIB}/setuptools_rust/version.pyo
