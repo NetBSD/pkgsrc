@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3224 2022/07/05 12:58:28 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3225 2022/07/05 15:57:59 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4839,3 +4839,6 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/sudo to 1.9.11p3 [adam 2022-07-05]
 	Updated textproc/py-tabulate to 0.8.10 [adam 2022-07-05]
 	Updated net/py-smb to 1.2.8 [adam 2022-07-05]
+	Updated sysutils/xenkernel415 to 4.15.3 [bouyer 2022-07-05]
+	Updated sysutils/xentools415 to 4.15.3 [bouyer 2022-07-05]
+	Updated sysutils/xenstoretools to 4.15.3 [bouyer 2022-07-05]
