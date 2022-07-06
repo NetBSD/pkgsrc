@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.2039 2020/05/10 06:52:49 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.2040 2022/07/06 19:06:31 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -91,7 +91,7 @@ DEPENDS?=		# empty
 DESCR_SRC?=		${PKGDIR}/DESCR
 INTERACTIVE_STAGE?=	none
 .if defined(OWNER)
-MAINTAINER=${OWNER}
+MAINTAINER=		${OWNER}
 .else
 MAINTAINER?=		pkgsrc-users@NetBSD.org
 .endif
@@ -128,15 +128,15 @@ PKG_FAIL_REASON+=	"Out-dated buildlink3.mk detected, please update"
 .endif
 
 .if !defined(CATEGORIES)
-PKG_FAIL_REASON+='CATEGORIES are mandatory.'
+PKG_FAIL_REASON+=	'CATEGORIES are mandatory.'
 .endif
 
 .if !defined(PKGNAME) && !defined(DISTNAME)
-PKG_FAIL_REASON+='PKGNAME and/or DISTNAME are mandatory.'
+PKG_FAIL_REASON+=	'PKGNAME and/or DISTNAME are mandatory.'
 .endif
 
 .if defined(PKG_PATH)
-PKG_FAIL_REASON+='Please unset PKG_PATH before doing pkgsrc work!'
+PKG_FAIL_REASON+=	'Please unset PKG_PATH before doing pkgsrc work!'
 .endif
 
 # Allow variables to be set on a per-OS basis
@@ -212,14 +212,14 @@ _BUILD_DEFS+=		_USE_DESTDIR
 # can query for the build options using "pkg_info -Q PKG_OPTIONS <pkg>".
 #
 .if defined(PKG_SUPPORTED_OPTIONS) && defined(PKG_OPTIONS)
-_BUILD_DEFS+=            PKG_OPTIONS
+_BUILD_DEFS+=		PKG_OPTIONS
 .endif
 
 # Store the build options for multi-packages, i.e. packages that can
 # be built with multiple versions of Apache, Python, Ruby, PHP etc.
 #
 .if defined(MULTI)
-_BUILD_DEFS+=            MULTI
+_BUILD_DEFS+=		MULTI
 .endif
 
 # _ZERO_FILESIZE_P exits with a successful return code if the given file
@@ -244,31 +244,31 @@ TOUCH_FLAGS?=		-f
 
 # A few aliases for *-install targets
 INSTALL=		${TOOLS_INSTALL}	# XXX override sys.mk
-INSTALL_PROGRAM?= 	\
+INSTALL_PROGRAM?=	\
 	${INSTALL} ${COPY} ${_STRIPFLAG_INSTALL} -o ${BINOWN} -g ${BINGRP} -m ${BINMODE}
 INSTALL_GAME?=		\
 	${INSTALL} ${COPY} ${_STRIPFLAG_INSTALL} -o ${GAMEOWN} -g ${GAMEGRP} -m ${GAMEMODE}
-INSTALL_SCRIPT?= 	\
+INSTALL_SCRIPT?=	\
 	${INSTALL} ${COPY} -o ${BINOWN} -g ${BINGRP} -m ${BINMODE}
-INSTALL_LIB?= 		\
+INSTALL_LIB?=		\
 	${INSTALL} ${COPY} -o ${BINOWN} -g ${BINGRP} -m ${BINMODE}
-INSTALL_DATA?= 		\
+INSTALL_DATA?=		\
 	${INSTALL} ${COPY} -o ${SHAREOWN} -g ${SHAREGRP} -m ${SHAREMODE}
-INSTALL_GAME_DATA?= 	\
+INSTALL_GAME_DATA?=	\
 	${INSTALL} ${COPY} -o ${GAMEOWN} -g ${GAMEGRP} -m ${GAMEDATAMODE}
-INSTALL_MAN?= 		\
+INSTALL_MAN?=		\
 	${INSTALL} ${COPY} -o ${MANOWN} -g ${MANGRP} -m ${MANMODE}
-INSTALL_PROGRAM_DIR?= 	\
+INSTALL_PROGRAM_DIR?=	\
 	${INSTALL} -d -o ${BINOWN} -g ${BINGRP} -m ${PKGDIRMODE}
-INSTALL_GAME_DIR?=		\
+INSTALL_GAME_DIR?=	\
 	${INSTALL} -d -o ${GAMEOWN} -g ${GAMEGRP} -m ${GAMEDIRMODE}
-INSTALL_SCRIPT_DIR?= 	\
+INSTALL_SCRIPT_DIR?=	\
 	${INSTALL_PROGRAM_DIR}
-INSTALL_LIB_DIR?= 	\
+INSTALL_LIB_DIR?=	\
 	${INSTALL_PROGRAM_DIR}
-INSTALL_DATA_DIR?= 	\
+INSTALL_DATA_DIR?=	\
 	${INSTALL} -d -o ${SHAREOWN} -g ${SHAREGRP} -m ${PKGDIRMODE}
-INSTALL_MAN_DIR?= 	\
+INSTALL_MAN_DIR?=	\
 	${INSTALL} -d -o ${MANOWN} -g ${MANGRP} -m ${PKGDIRMODE}
 
 INSTALL_MACROS=	BSD_INSTALL_PROGRAM=${INSTALL_PROGRAM:Q}		\
@@ -469,19 +469,23 @@ X11BASE:=		/usr
 
 .if !defined(NO_SKIP)
 .  if (defined(NO_BIN_ON_CDROM) && defined(FOR_CDROM))
-PKG_SKIP_REASON+= "${PKGNAME} may not be placed in binary form on a CDROM:" \
+PKG_SKIP_REASON+=	\
+	"${PKGNAME} may not be placed in binary form on a CDROM:" \
          "    "${NO_BIN_ON_CDROM:Q}
 .  endif
 .  if (defined(NO_SRC_ON_CDROM) && defined(FOR_CDROM))
-PKG_SKIP_REASON+= "${PKGNAME} may not be placed in source form on a CDROM:" \
+PKG_SKIP_REASON+=	\
+	"${PKGNAME} may not be placed in source form on a CDROM:" \
          "    "${NO_SRC_ON_CDROM:Q}
 .  endif
 .  if (defined(RESTRICTED) && defined(NO_RESTRICTED))
-PKG_SKIP_REASON+= "${PKGNAME} is restricted:" \
+PKG_SKIP_REASON+=	\
+	"${PKGNAME} is restricted:" \
 	 "    "${RESTRICTED:Q}
 .  endif
 .  if defined(USE_X11) && (${USE_X11} != "weak") && (${X11_TYPE} == "native") && !exists(${X11BASE})
-PKG_FAIL_REASON+= "${PKGNAME} uses X11, but ${X11BASE} not found"
+PKG_FAIL_REASON+=	\
+	"${PKGNAME} uses X11, but ${X11BASE} not found"
 .  endif
 .  if ${BROKEN:U:M*}
 PKG_FAIL_REASON+=	"${PKGNAME} is marked as broken:"
@@ -534,10 +538,12 @@ __PLATFORM_OK?=	yes
 
 # Check OK (NOT_FOR/ONLY_FOR) before WORKS (BROKEN_ON)
 .  if !defined(__PLATFORM_OK)
-PKG_SKIP_REASON+= "${PKGNAME} is not available for ${MACHINE_PLATFORM}"
+PKG_SKIP_REASON+=	\
+	"${PKGNAME} is not available for ${MACHINE_PLATFORM}"
 .  endif	# !__PLATFORM_OK
 .  if !defined(__PLATFORM_WORKS)
-PKG_FAIL_REASON+= "${PKGNAME} is marked broken on ${MACHINE_PLATFORM}"
+PKG_FAIL_REASON+=	\
+	"${PKGNAME} is marked broken on ${MACHINE_PLATFORM}"
 .  endif	# !__PLATFORM_WORKS
 
 .endif # NO_SKIP
@@ -649,11 +655,11 @@ ${.CURDIR}/${WRKDIR_BASENAME}:
 #
 
 _ROOT_CMD=	cd ${.CURDIR} &&					\
-		${PKGSRC_SETENV} ${PKGSRC_MAKE_ENV}				\
+		${PKGSRC_SETENV} ${PKGSRC_MAKE_ENV}			\
 			PATH=${_PATH_ORIG:Q}:${SU_CMD_PATH_APPEND:Q}	\
 		${MAKE} ${MAKEFLAGS} _PKGSRC_BARRIER=yes		\
 			PKG_DEBUG_LEVEL=${PKG_DEBUG_LEVEL:Q}		\
-			${USE_CROSS_COMPILE:DUSE_CROSS_COMPILE=${USE_CROSS_COMPILE:Q}}	\
+			${USE_CROSS_COMPILE:DUSE_CROSS_COMPILE=${USE_CROSS_COMPILE:Q}} \
 			su-${.TARGET} ${MAKEFLAGS.su-${.TARGET}}
 
 .PHONY: su-target
@@ -790,7 +796,8 @@ tags:
 # a make target.
 #
 .for _class_ in ${PKG_ERROR_CLASSES}
-PKG_ERROR_HANDLER.${_class_}?=	{					\
+PKG_ERROR_HANDLER.${_class_}?= \
+	{								\
 		ec=$$?;							\
 		for str in ${PKG_ERROR_MSG.${_class_}}; do		\
 			${PHASE_MSG} "$$str";				\
