@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3229 2022/07/06 06:32:19 pin Exp $
+$NetBSD: CHANGES-2022,v 1.3230 2022/07/06 07:26:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4849,3 +4849,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/py-cryptography_vectors to 37.0.4 [adam 2022-07-05]
 	Updated www/webkit-gtk to 2.36.4 [leot 2022-07-05]
 	Updated sysutils/broot to 1.14.0 [pin 2022-07-06]
+	Updated devel/py-setuptools to 63.1.0 [adam 2022-07-06]
+	Updated devel/py-setuptools-rust to 1.4.1 [adam 2022-07-06]
