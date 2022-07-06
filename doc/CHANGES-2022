@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3234 2022/07/06 19:00:25 pin Exp $
+$NetBSD: CHANGES-2022,v 1.3235 2022/07/06 19:17:50 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4860,3 +4860,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/py-breathe to 4.34.0 [adam 2022-07-06]
 	Updated www/py-channels to 3.0.5 [adam 2022-07-06]
 	Updated sysutils/broot to 1.14.1 [pin 2022-07-06]
+	Updated audio/termusic to 0.6.17 [pin 2022-07-06]
