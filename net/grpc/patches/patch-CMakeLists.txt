@@ -1,13 +1,13 @@
-$NetBSD: patch-CMakeLists.txt,v 1.11 2021/10/06 10:58:30 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.12 2022/07/06 15:18:17 adam Exp $
 
---- CMakeLists.txt.orig	2020-02-04 17:04:33.000000000 +0000
+--- CMakeLists.txt.orig	2022-06-21 20:39:47.000000000 +0000
 +++ CMakeLists.txt
-@@ -254,7 +254,7 @@ function(protobuf_generate_grpc_cpp)
-              "${_gRPC_PROTO_GENS_DIR}/${RELFIL_WE}_mock.grpc.pb.h"
-              "${_gRPC_PROTO_GENS_DIR}/${RELFIL_WE}.pb.cc"
-              "${_gRPC_PROTO_GENS_DIR}/${RELFIL_WE}.pb.h"
--      COMMAND ${_gRPC_PROTOBUF_PROTOC_EXECUTABLE}
-+      COMMAND env LD_LIBRARY_PATH=${CMAKE_BINARY_DIR} DYLD_LIBRARY_PATH=${CMAKE_BINARY_DIR} ${_gRPC_PROTOBUF_PROTOC_EXECUTABLE}
-       ARGS --grpc_out=generate_mock_code=true:${_gRPC_PROTO_GENS_DIR}
-            --cpp_out=${_gRPC_PROTO_GENS_DIR}
-            --plugin=protoc-gen-grpc=${_gRPC_CPP_PLUGIN}
+@@ -504,7 +504,7 @@ function(protobuf_generate_grpc_cpp_with
+            "${_gRPC_PROTO_GENS_DIR}/${RELFIL_WE}_mock.grpc.pb.h"
+            "${_gRPC_PROTO_GENS_DIR}/${RELFIL_WE}.pb.cc"
+            "${_gRPC_PROTO_GENS_DIR}/${RELFIL_WE}.pb.h"
+-    COMMAND ${_gRPC_PROTOBUF_PROTOC_EXECUTABLE}
++    COMMAND env LD_LIBRARY_PATH=${CMAKE_BINARY_DIR} DYLD_LIBRARY_PATH=${CMAKE_BINARY_DIR} ${_gRPC_PROTOBUF_PROTOC_EXECUTABLE}
+     ARGS --grpc_out=generate_mock_code=true:${_gRPC_PROTO_GENS_DIR}
+          --cpp_out=${_gRPC_PROTO_GENS_DIR}
+          --plugin=protoc-gen-grpc=${_gRPC_CPP_PLUGIN}

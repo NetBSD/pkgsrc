@@ -1,11 +1,11 @@
-$NetBSD: patch-setup.py,v 1.13 2022/02/18 09:08:08 adam Exp $
+$NetBSD: patch-setup.py,v 1.14 2022/07/06 15:18:17 adam Exp $
 
 Fix libatomic detection.
 Use dependencies in pkgsrc.
 
---- setup.py.orig	2022-02-11 11:07:23.000000000 +0000
+--- setup.py.orig	2022-06-21 21:07:50.000000000 +0000
 +++ setup.py
-@@ -304,29 +304,7 @@ EXTENSION_INCLUDE_DIRECTORIES = ((PYTHON
+@@ -316,32 +316,7 @@ EXTENSION_INCLUDE_DIRECTORIES = ((PYTHON
                                   UPBDEFS_GRPC_GENERATED_INCLUDE +
                                   XXHASH_INCLUDE + ZLIB_INCLUDE)
  
@@ -32,11 +32,14 @@ Use dependencies in pkgsrc.
 -    EXTENSION_LIBRARIES += ('cares',)
 -if BUILD_WITH_SYSTEM_RE2:
 -    EXTENSION_LIBRARIES += ('re2',)
+-if BUILD_WITH_SYSTEM_ABSL:
+-    EXTENSION_LIBRARIES += tuple(
+-        lib.stem[3:] for lib in pathlib.Path('/usr').glob('lib*/libabsl_*.so'))
 +EXTENSION_LIBRARIES = ('grpc',)
  
  DEFINE_MACROS = (('_WIN32_WINNT', 0x600),)
  asm_files = []
-@@ -427,7 +405,7 @@ def cython_extensions_and_necessity():
+@@ -442,7 +417,7 @@ def cython_extensions_and_necessity():
      ]
      config = os.environ.get('CONFIG', 'opt')
      prefix = 'libs/' + config + '/'
@@ -45,7 +48,7 @@ Use dependencies in pkgsrc.
          extra_objects = [
              prefix + 'libares.a', prefix + 'libboringssl.a',
              prefix + 'libgpr.a', prefix + 'libgrpc.a'
-@@ -439,8 +417,7 @@ def cython_extensions_and_necessity():
+@@ -454,8 +429,7 @@ def cython_extensions_and_necessity():
      extensions = [
          _extension.Extension(
              name=module_name,
