@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3230 2022/07/06 07:26:50 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3231 2022/07/06 11:22:22 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4851,3 +4851,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/broot to 1.14.0 [pin 2022-07-06]
 	Updated devel/py-setuptools to 63.1.0 [adam 2022-07-06]
 	Updated devel/py-setuptools-rust to 1.4.1 [adam 2022-07-06]
+	Updated net/syncthing to 1.20.3 [triaxx 2022-07-06]
