@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/06/14 08:45:33 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2022/07/06 05:03:09 dbj Exp $
 
 PKGNAME=		mktools-20220614
 CATEGORIES=		pkgtools sysutils
@@ -16,6 +16,7 @@ INSTALLATION_DIRS=	libexec/mktools
 CHECK_PERMS_SKIP=	*
 CHECK_PORTABILITY_SKIP=	*
 PKGSRC_LOCKTYPE=	none
+IGNORE_CCACHE=		yes
 
 do-extract:
 	${CP} -R ${FILESDIR}/ ${WRKSRC}/
