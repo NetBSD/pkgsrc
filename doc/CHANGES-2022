@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3231 2022/07/06 11:22:22 triaxx Exp $
+$NetBSD: CHANGES-2022,v 1.3232 2022/07/06 15:19:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4852,3 +4852,8 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-setuptools to 63.1.0 [adam 2022-07-06]
 	Updated devel/py-setuptools-rust to 1.4.1 [adam 2022-07-06]
 	Updated net/syncthing to 1.20.3 [triaxx 2022-07-06]
+	Updated devel/abseil to 20220623.0 [adam 2022-07-06]
+	Updated net/grpc to 1.47.0 [adam 2022-07-06]
+	Updated net/py-grpcio to 1.47.0 [adam 2022-07-06]
+	Updated net/py-grpcio-testing to 1.47.0 [adam 2022-07-06]
+	Updated net/py-grpcio-tools to 1.47.0 [adam 2022-07-06]
