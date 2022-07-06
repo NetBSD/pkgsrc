@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3232 2022/07/06 15:19:26 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3233 2022/07/06 15:30:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4857,3 +4857,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/py-grpcio to 1.47.0 [adam 2022-07-06]
 	Updated net/py-grpcio-testing to 1.47.0 [adam 2022-07-06]
 	Updated net/py-grpcio-tools to 1.47.0 [adam 2022-07-06]
+	Updated textproc/py-breathe to 4.34.0 [adam 2022-07-06]
+	Updated www/py-channels to 3.0.5 [adam 2022-07-06]
