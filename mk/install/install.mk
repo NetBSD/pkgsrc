@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.80 2021/08/14 08:38:01 rillig Exp $
+# $NetBSD: install.mk,v 1.81 2022/07/06 18:53:58 rillig Exp $
 #
 # This file provides the code for the "install" phase.
 #
@@ -201,11 +201,11 @@ _INSTALL_ALL_TARGETS+=		privileged-install-hook
 _INSTALL_ALL_TARGETS+=		error-check
 
 .PHONY: install-all su-install-all
-.  if !empty(_MAKE_INSTALL_AS_ROOT:M[Yy][Ee][Ss])
+.if !empty(_MAKE_INSTALL_AS_ROOT:M[Yy][Ee][Ss])
 install-all: su-target
-.  else
+.else
 install-all: su-install-all
-.  endif
+.endif
 su-install-all: ${_INSTALL_ALL_TARGETS}
 
 ######################################################################
@@ -218,8 +218,8 @@ su-install-all: ${_INSTALL_ALL_TARGETS}
 install-check-umask:
 	${RUN}								\
 	umask=`${SH} -c umask`;						\
-	if [ "$$umask" -ne ${DEF_UMASK} ]; then			\
-		${WARNING_MSG} "Your umask is \`\`$$umask''.";	\
+	if [ "$$umask" -ne ${DEF_UMASK} ]; then				\
+		${WARNING_MSG} "Your umask is \`\`$$umask''.";		\
 		${WARNING_MSG} "If this is not desired, set it to an appropriate value (${DEF_UMASK}) and install"; \
 		${WARNING_MSG} "this package again by \`\`${MAKE} deinstall reinstall''."; \
         fi
@@ -235,7 +235,8 @@ install-check-umask:
 # A shell command that creates the directory ${DESTDIR}${PREFIX}/$$dir
 # with appropriate permissions and ownership.
 #
-_INSTALL_ONE_DIR_CMD= { \
+_INSTALL_ONE_DIR_CMD= \
+	{								\
 	ddir="${DESTDIR}${PREFIX}/$$dir";				\
 	[ ! -f "$$ddir" ] || ${FAIL_MSG} "[install.mk] $$ddir should be a directory, but is a file."; \
 	case "$$dir" in							\
