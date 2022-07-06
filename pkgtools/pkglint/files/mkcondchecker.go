@@ -168,14 +168,13 @@ var mkCondModifierPatternLiteral = textproc.NewByteSet("-+,./0-9<=>@A-Z_a-z")
 // * neg is true for the form !empty(VAR...), and false for empty(VAR...).
 func (ck *MkCondChecker) simplify(varuse *MkVarUse, fromEmpty bool, neg bool) {
 	varname := varuse.varname
-	mods := varuse.modifiers
-	modifiers := mods
+	modifiers := varuse.modifiers
 
 	n := len(modifiers)
 	if n == 0 {
 		return
 	}
-	modsExceptLast := NewMkVarUse("", mods[:n-1]...).Mod()
+	modsExceptLast := NewMkVarUse("", modifiers[:n-1]...).Mod()
 	vartype := G.Pkgsrc.VariableType(ck.MkLines, varname)
 
 	isDefined := func() bool {
@@ -226,6 +225,7 @@ func (ck *MkCondChecker) simplify(varuse *MkVarUse, fromEmpty bool, neg bool) {
 			condStr(fromEmpty, ")", "}"))
 
 		needsQuotes := textproc.NewLexer(pattern).NextBytesSet(mkCondStringLiteralUnquoted) != pattern ||
+			pattern == "" ||
 			matches(pattern, `^\d+\.?\d*$`)
 		quote := condStr(needsQuotes, "\"", "")
 
@@ -239,6 +239,32 @@ func (ck *MkCondChecker) simplify(varuse *MkVarUse, fromEmpty bool, neg bool) {
 	modifier := modifiers[n-1]
 	ok, positive, pattern, exact := modifier.MatchMatch()
 	if !ok || !positive && n != 1 {
+		return
+	}
+
+	// Replace !empty(VAR:M*.c) with ${VAR:M*.c}.
+	// Replace empty(VAR:M*.c) with !${VAR:M*.c}.
+	if fromEmpty && positive && !exact && vartype != nil && isDefined() &&
+		// Restrict replacements to very simple patterns with only few
+		// special characters.
+		// Before generalizing this to arbitrary strings, there has to be
+		// a proper code generator for these conditions that handles all
+		// possible escaping.
+		matches(varuse.Mod(), `^[*.:\w]+$`) {
+
+		fixedPart := varname + modsExceptLast + ":M" + pattern
+		from := condStr(neg, "!", "") + "empty(" + fixedPart + ")"
+		to := condStr(neg, "", "!") + "${" + fixedPart + "}"
+
+		fix := ck.MkLine.Autofix()
+		fix.Notef("%q can be simplified to %q.", from, to)
+		fix.Explain(
+			"This variable is guaranteed to be defined at this point.",
+			"Therefore it may occur on the left-hand side of a comparison",
+			"and doesn't have to be guarded by the function 'empty'.")
+		fix.Replace(from, to)
+		fix.Apply()
+
 		return
 	}
 
