@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2021/10/26 11:30:29 nia Exp $
+$NetBSD: distinfo,v 1.21 2022/07/06 15:30:19 adam Exp $
 
-BLAKE2s (channels-3.0.4.tar.gz) = cd543ffcf9073e649d368fc446b60832e0c5735434eca2a477053abfb658bd67
-SHA512 (channels-3.0.4.tar.gz) = 0eff18ecd61450d80d0bd10fb92bd10e759437060b8c4b7bf3e0815c4df729de71cfc3c4aa6e9e93f2ad64d73acf5df1ad92db12380b728c9c967da7ebb872f1
-Size (channels-3.0.4.tar.gz) = 31835 bytes
+BLAKE2s (channels-3.0.5.tar.gz) = 53bed9bc0d17f5ccc337d3b3dc24ffc235d155802f5c79de9ce27c950411cda9
+SHA512 (channels-3.0.5.tar.gz) = 44bf4eea6764ba116c4db2c85653bdb277389eb5c010d67b19653bb4c1c5c2b2a1fe490d71afb33555a58b626bfb80bb863432a7fb7c404cdfb534c483a27852
+Size (channels-3.0.5.tar.gz) = 31725 bytes
