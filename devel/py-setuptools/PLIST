@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.72 2022/06/13 18:26:00 adam Exp $
+@comment $NetBSD: PLIST,v 1.73 2022/07/06 07:25:58 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -177,6 +177,9 @@ ${PYSITELIB}/setuptools/_distutils/cmd.pyo
 ${PYSITELIB}/setuptools/_distutils/command/__init__.py
 ${PYSITELIB}/setuptools/_distutils/command/__init__.pyc
 ${PYSITELIB}/setuptools/_distutils/command/__init__.pyo
+${PYSITELIB}/setuptools/_distutils/command/_framework_compat.py
+${PYSITELIB}/setuptools/_distutils/command/_framework_compat.pyc
+${PYSITELIB}/setuptools/_distutils/command/_framework_compat.pyo
 ${PYSITELIB}/setuptools/_distutils/command/bdist.py
 ${PYSITELIB}/setuptools/_distutils/command/bdist.pyc
 ${PYSITELIB}/setuptools/_distutils/command/bdist.pyo
@@ -411,12 +414,6 @@ ${PYSITELIB}/setuptools/_vendor/more_itertools/more.pyo
 ${PYSITELIB}/setuptools/_vendor/more_itertools/recipes.py
 ${PYSITELIB}/setuptools/_vendor/more_itertools/recipes.pyc
 ${PYSITELIB}/setuptools/_vendor/more_itertools/recipes.pyo
-${PYSITELIB}/setuptools/_vendor/nspektr/__init__.py
-${PYSITELIB}/setuptools/_vendor/nspektr/__init__.pyc
-${PYSITELIB}/setuptools/_vendor/nspektr/__init__.pyo
-${PYSITELIB}/setuptools/_vendor/nspektr/_compat.py
-${PYSITELIB}/setuptools/_vendor/nspektr/_compat.pyc
-${PYSITELIB}/setuptools/_vendor/nspektr/_compat.pyo
 ${PYSITELIB}/setuptools/_vendor/ordered_set.py
 ${PYSITELIB}/setuptools/_vendor/ordered_set.pyc
 ${PYSITELIB}/setuptools/_vendor/ordered_set.pyo
