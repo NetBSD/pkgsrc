@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2022/07/06 10:02:13 nia Exp $
+# $NetBSD: Makefile,v 1.5 2022/07/06 10:04:46 nia Exp $
 
 DISTNAME=	snapcast-0.26.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=badaix/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -31,6 +31,7 @@ SUBST_FILES.etc+=	server/etc/snapserver.conf
 SUBST_FILES.etc+=	server/server_settings.hpp
 SUBST_FILES.etc+=	server/snapserver.cpp
 SUBST_FILES.etc+=	server/snapserver.1
+SUBST_VARS.etc+=	PREFIX
 SUBST_VARS.etc+=	PKG_SYSCONFDIR
 SUBST_VARS.etc+=	VARBASE
 
