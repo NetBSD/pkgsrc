@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2022/07/03 16:09:15 nia Exp $
+$NetBSD: distinfo,v 1.2 2022/07/06 10:04:46 nia Exp $
 
 BLAKE2s (snapcast-0.26.0.tar.gz) = e0ef56ee25d30c8536158949c5e5f85b32a8c410303da939ef844bb3dc300012
 SHA512 (snapcast-0.26.0.tar.gz) = fc7885e42a11794e33314544083251ffbb91a0cf160c6d4b854c56f57ffe9f38f75c7594478c9edabfe9076959938cd8de891dd456e66202692de664a75cde71
@@ -11,7 +11,7 @@ SHA1 (patch-client_player_sun__player.hpp) = d8eeba9f4c16e85833baba95c07f9a06007
 SHA1 (patch-client_snapclient.cpp) = d682d4c1de438251d1510d40387e9a0b2bcf926f
 SHA1 (patch-common_utils.hpp) = 8184a65459accd76b55e8e9e95d1911439fb4d8a
 SHA1 (patch-server_CMakeLists.txt) = 49144e902844bd3308871a625f5da56575904855
-SHA1 (patch-server_etc_snapserver.conf) = a740795aa764ffb5870a4d798518a0464ca3517b
+SHA1 (patch-server_etc_snapserver.conf) = f274e31ab54d76ea8ce839f5d2d918c111a80604
 SHA1 (patch-server_server__settings.hpp) = 50950a4855ecc336dbec146b86935fa18942dc1d
 SHA1 (patch-server_snapserver.1) = 3459c6109635d1ad72c1aee92e302088a2317007
 SHA1 (patch-server_snapserver.cpp) = 62d5dcbfe369f9095e9b6c695680650f7eb458b6
