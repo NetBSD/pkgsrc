@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.94 2022/05/18 20:45:36 triaxx Exp $
+$NetBSD: distinfo,v 1.95 2022/07/06 11:21:50 triaxx Exp $
 
-BLAKE2s (syncthing-source-v1.20.1.tar.gz) = 5fc7dce952ff7a9914d46c7aaa167632d8e7c5a697258fadf352b0ad325f7e0c
-SHA512 (syncthing-source-v1.20.1.tar.gz) = 7b365b295862f1cac41a9f33b389d7ac6c814b6ea14b8a964f4ecbfd15f1207abd26c53efbe5779aaad9b4b256e594f5f6f59ecf911ddfc6eb129295ba11646c
-Size (syncthing-source-v1.20.1.tar.gz) = 13184830 bytes
+BLAKE2s (syncthing-source-v1.20.3.tar.gz) = a86b6137c333e25edec43668db0d7129f1668dcf1cd58c952d8c1fead61e48de
+SHA512 (syncthing-source-v1.20.3.tar.gz) = 153420546ee35ed504e56d23167d803c28c2d3ba97f3f8d4a361489f1fc293e802998a8762fcf9f6986d2aebd9b7c04335f0fb8aa476cfeed41255d6bd7cd857
+Size (syncthing-source-v1.20.3.tar.gz) = 13454640 bytes
