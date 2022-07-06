@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2022/07/03 12:45:17 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2022/07/06 11:20:16 wiz Exp $
 
 DISTNAME=	chardet-5.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,6 +17,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-py-[0-9]*:../../devel/py-py
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_PKG_RESOURCES=	yes
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
