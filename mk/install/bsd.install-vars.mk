@@ -1,4 +1,4 @@
-# $NetBSD: bsd.install-vars.mk,v 1.10 2020/07/08 12:37:13 jperkin Exp $
+# $NetBSD: bsd.install-vars.mk,v 1.11 2022/07/06 18:53:58 rillig Exp $
 #
 # This Makefile fragment is included separately by bsd.pkg.mk and
 # defines some variables which must be defined earlier than where
@@ -36,9 +36,9 @@
 #
 .if !defined(_MANCOMPRESSED)
 .  if defined(MANCOMPRESSED) && !empty(MANCOMPRESSED:M[yY][eE][sS])
-_MANCOMPRESSED=		yes
+_MANCOMPRESSED=	yes
 .  else
-_MANCOMPRESSED=		no
+_MANCOMPRESSED=	no
 .  endif
 .  if defined(MANCOMPRESSED_IF_MANZ) && defined(PKGMAKECONF)
 _MANCOMPRESSED!=							\
