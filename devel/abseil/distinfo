@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.13 2022/07/06 15:16:59 adam Exp $
+$NetBSD: distinfo,v 1.14 2022/07/06 15:27:01 wiz Exp $
 
 BLAKE2s (abseil-20220623.0-20220623.0.tar.gz) = 6d266cfbbdabc9047de29dcd6a164d35d2ea0139f43638a7a67d767d8ce4e996
 SHA512 (abseil-20220623.0-20220623.0.tar.gz) = 6a84254927cac285c77f6b2e77de23ce4f65c28acc0289228f3db552e247fb1dedf2c6e51a98da7df700c062612e27e6acd029122e8abc3fff12f3f5502c8c10
 Size (abseil-20220623.0-20220623.0.tar.gz) = 1957466 bytes
-SHA1 (patch-absl_debugging_internal_vdso__support.cc) = af3feea0938193b35be19b9d0bf581a973343ed9
+SHA1 (patch-absl_debugging_internal_vdso__support.cc) = 2292c5b0f2b41679039a1697508343ff5b6cc401
 SHA1 (patch-absl_time_internal_cctz_src_time__zone__format.cc) = 501736490edc62afb8b82e16f9a88e7fab6f5552

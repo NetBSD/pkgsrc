@@ -1,7 +1,5 @@
-$NetBSD: patch-absl_debugging_internal_vdso__support.cc,v 1.4 2022/07/06 15:16:59 adam Exp $
+$NetBSD: patch-absl_debugging_internal_vdso__support.cc,v 1.5 2022/07/06 15:27:01 wiz Exp $
 
-Support NetBSD.
-https://github.com/abseil/abseil-cpp/pull/1121
 No support for SunOS yet, so disable for the time being.
 
 --- absl/debugging/internal/vdso_support.cc.orig	2022-06-23 18:22:47.000000000 +0000
