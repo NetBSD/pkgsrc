@@ -1,4 +1,4 @@
-# $NetBSD: subst.mk,v 1.104 2021/05/19 14:44:22 triaxx Exp $
+# $NetBSD: subst.mk,v 1.105 2022/07/06 20:59:51 rillig Exp $
 #
 # The subst framework replaces text in one or more files in the WRKSRC
 # directory. Packages can define several ``classes'' of replacements.
@@ -133,9 +133,9 @@ PKG_FAIL_REASON+=	"[subst.mk] duplicate SUBST class in: ${SUBST_CLASSES:O}"
 .for class in ${SUBST_CLASSES:O:u}
 _SUBST_COOKIE.${class}=		${WRKDIR}/.subst_${class}_done
 
-.if defined(SUBST_FILTER_CMD.${class}) && (defined(SUBST_SED.${class}) || defined(SUBST_VARS.${class}))
+.  if defined(SUBST_FILTER_CMD.${class}) && (defined(SUBST_SED.${class}) || defined(SUBST_VARS.${class}))
 PKG_FAIL_REASON+=		"[subst.mk:${class}] SUBST_FILTER_CMD and SUBST_SED/SUBST_VARS cannot be combined."
-.endif
+.  endif
 
 SUBST_FILTER_CMD.${class}?=	LC_ALL=C ${SED} ${SUBST_SED.${class}}
 SUBST_MESSAGE.${class}?=	Substituting "${class}" in ${SUBST_FILES.${class}}
