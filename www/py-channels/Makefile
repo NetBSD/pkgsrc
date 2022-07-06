@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2022/01/04 20:55:17 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2022/07/06 15:30:19 adam Exp $
 
-DISTNAME=	channels-3.0.4
+DISTNAME=	channels-3.0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/channels/}
 
