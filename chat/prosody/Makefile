@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2022/07/07 01:53:00 khorben Exp $
+# $NetBSD: Makefile,v 1.39 2022/07/07 02:31:45 khorben Exp $
 
 DISTNAME=		prosody-0.12.0
 PKGREVISION=		1
@@ -70,6 +70,7 @@ MAKE_ENV.SunOS+=	SOCKET_LIB=-lsocket
 MAKE_FILE=		makefile
 
 RCD_SCRIPTS=		prosody
+FILES_SUBST+=		PROSODY_RUN=${PROSODY_RUN}
 
 TEST_TARGET=		test
 
