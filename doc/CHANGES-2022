@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3236 2022/07/07 00:09:46 rin Exp $
+$NetBSD: CHANGES-2022,v 1.3237 2022/07/07 05:31:11 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4862,3 +4862,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/broot to 1.14.1 [pin 2022-07-06]
 	Updated audio/termusic to 0.6.17 [pin 2022-07-06]
 	Updated x11/mlterm to 3.9.2nb3 [rin 2022-07-07]
+	Updated graphics/feh to 3.9 [nia 2022-07-07]
