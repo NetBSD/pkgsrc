@@ -1,9 +1,8 @@
-$NetBSD: patch-uitoolkit_xlib_ui__imagelib.c,v 1.3 2022/07/02 03:17:04 rin Exp $
+$NetBSD: patch-uitoolkit_xlib_ui__imagelib.c,v 1.4 2022/07/07 00:08:29 rin Exp $
 
 Fix color of sixel image on X server whose byte-order is opposite to client.
 
-This patch has been pull-requested to upstream:
-https://github.com/arakiken/mlterm/pull/45
+This patch has been merged to upstream, and will be in the next release.
 
 --- uitoolkit/xlib/ui_imagelib.c.orig	2022-07-02 10:56:15.200011767 +0900
 +++ uitoolkit/xlib/ui_imagelib.c	2022-07-02 10:58:10.298442685 +0900
