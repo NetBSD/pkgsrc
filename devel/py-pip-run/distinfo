@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/02/02 18:54:08 adam Exp $
+$NetBSD: distinfo,v 1.2 2022/07/07 11:53:09 adam Exp $
 
-BLAKE2s (pip-run-8.8.0.tar.gz) = 936a64525b697bd1afb5951ef573a762f30e4b3c1d15d85826e29e35d77bb424
-SHA512 (pip-run-8.8.0.tar.gz) = 5bd3ce58fcbced0e32309fe46f6e2e34aa3c7c546f1cb925a2e02f8796cd503ca889305d430d27919200b80aad33c4360a5bb8d157a253f8d70b765e10e9f529
-Size (pip-run-8.8.0.tar.gz) = 28429 bytes
+BLAKE2s (pip-run-8.8.1.tar.gz) = 9825a051f229ab824db4649fe9140aec39d60b891ad7ce20555d3a2b61a8aa73
+SHA512 (pip-run-8.8.1.tar.gz) = 89614aa5e442b86344cdcf9e1570472193da974113cba1803d090da2b8bbab8eec1ba0f3730f1d8d6068777b47f865c7a1d88c24878c536d947893b9c86044c6
+Size (pip-run-8.8.1.tar.gz) = 28680 bytes
