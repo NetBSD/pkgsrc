@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.11 2022/07/02 16:53:37 ryoon Exp $
+# $NetBSD: Makefile,v 1.12 2022/07/07 08:13:50 nia Exp $
 
-DISTNAME=	arcticfox-39.1
-PKGREVISION=	3
+DISTNAME=	arcticfox-39.2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wicknix/}
 GITHUB_PROJECT=	Arctic-Fox
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	nia@NetBSD.org
 HOMEPAGE=	https://github.com/wicknix/Arctic-Fox
 COMMENT=	Web browser for aging systems, forked from Firefox
 LICENSE=	mpl-1.1
@@ -60,11 +59,6 @@ CONFIGURE_ARGS+=	--with-system-zlib
 TOOL_DEPENDS+=		yasm>=1.1:../../devel/yasm
 .endif
 
-PLIST_VARS+=	skia
-.if ${MACHINE_ARCH} != "powerpc"
-PLIST.skia=	yes
-.endif
-
 CONFIGURE_DIRS=		${WRKDIR}/build
 CONFIGURE_SCRIPT=	${WRKSRC}/configure
 
@@ -98,6 +92,7 @@ pre-configure:
 	${CP} ${FILESDIR}/cubeb_sun.c ${WRKSRC}/media/libcubeb/src
 
 post-install:
+	${RM} -rf ${DESTDIR}${PREFIX}/include
 	${INSTALL_DATA} ${WRKSRC}/browser/branding/arcticfox/default16.png \
 	    ${DESTDIR}${PREFIX}/share/icons/hicolor/16x16/apps/arcticfox.png
 	${INSTALL_DATA} ${WRKSRC}/browser/branding/arcticfox/default32.png \
