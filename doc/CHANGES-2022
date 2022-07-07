@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3240 2022/07/07 08:14:07 nia Exp $
+$NetBSD: CHANGES-2022,v 1.3241 2022/07/07 10:27:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4866,3 +4866,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated emulators/sameboy to 0.15 [nia 2022-07-07]
 	Updated emulators/libretro-sameboy to 0.15 [nia 2022-07-07]
 	Updated www/arcticfox to 39.2 [nia 2022-07-07]
+	Updated audio/openal-soft to 1.22.2 [adam 2022-07-07]
+	Updated lang/npm to 8.13.2 [adam 2022-07-07]
+	Updated multimedia/libaom to 3.4.0 [adam 2022-07-07]
+	Updated audio/eyeD3 to 0.9.6 [adam 2022-07-07]
