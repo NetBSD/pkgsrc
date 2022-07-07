@@ -1,39 +1,31 @@
-# $NetBSD: Makefile,v 1.20 2022/06/30 11:18:02 nia Exp $
+# $NetBSD: Makefile,v 1.21 2022/07/07 10:27:14 adam Exp $
 
-DISTNAME=	eyeD3-0.9.5
-PKGREVISION=	4
-CATEGORIES=	audio
-MASTER_SITES=	${MASTER_SITE_PYPI:=e/eyeD3/}
+DISTNAME=	eyeD3-0.9.6
+CATEGORIES=	audio python
+MASTER_SITES=	${MASTER_SITE_PYPI:=e/eyed3/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://eyed3.readthedocs.io/en/latest/
 COMMENT=	Python audio data toolkit (ID3 and MP3)
 LICENSE=	gnu-gpl-v3
 
-DEPENDS+=	${PYPKGPREFIX}-deprecation-[0-9]*:../../devel/py-deprecation
-DEPENDS+=	${PYPKGPREFIX}-factory_boy-[0-9]*:../../devel/py-factory_boy
-DEPENDS+=	${PYPKGPREFIX}-filetype-[0-9]*:../../sysutils/py-filetype
-#TEST_DEPENDS+=	wget-[0-9]*:../../net/wget
-#TEST_DEPENDS+=	${PYPKGPREFIX}-tox-[0-9]*:../../devel/py-tox
+EGG_NAME=	${DISTNAME:tl}
 
-PYTHON_VERSIONED_DEPENDENCIES+=	test:test
+DEPENDS+=	${PYPKGPREFIX}-deprecation>=2.1.0:../../devel/py-deprecation
+DEPENDS+=	${PYPKGPREFIX}-filetype>=1.0.7:../../sysutils/py-filetype
+TEST_DEPENDS+=	${PYPKGPREFIX}-factory_boy>=3.1.0:../../devel/py-factory_boy
+TEST_DEPENDS+=	${PYPKGPREFIX}-flake8>=3.8.4:../../devel/py-flake8
+TEST_DEPENDS+=	${PYPKGPREFIX}-test>=6.2.1:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=2.10.1:../../devel/py-test-cov
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-faker via py-factory_boy
+USE_LANGUAGES=	# none
 
 USE_PKG_RESOURCES=	yes
 
-USE_LANGUAGES=	# none
-USE_TOOLS+=	gmake
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-#SUBST_CLASSES+=		test
-#SUBST_SED.test+=	-e "s,tox,tox-${PYVERSSUFFIX},g"
-#SUBST_STAGE.test+=	pre-configure
-#SUBST_FILES.test+=	Makefile
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} pytest-${PYVERSSUFFIX} tests
 
-# tox-based testing
-#do-test:
-#	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} test-data test
-
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
