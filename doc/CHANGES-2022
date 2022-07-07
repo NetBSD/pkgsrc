@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3247 2022/07/07 19:08:37 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3248 2022/07/07 21:33:12 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4880,3 +4880,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated math/arpack-ng to 3.8.0nb2 [thor 2022-07-07]
 	Updated graphics/MesaLib to 21.3.9 [wiz 2022-07-07]
 	Updated print/texlab to 4.2.0 [wiz 2022-07-07]
+	Updated x11/xbanish to 1.8 [pin 2022-07-07]
