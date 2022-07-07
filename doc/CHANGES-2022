@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3246 2022/07/07 14:05:48 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3247 2022/07/07 19:08:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4879,3 +4879,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/rclone to 1.58.1 [leot 2022-07-07]
 	Updated math/arpack-ng to 3.8.0nb2 [thor 2022-07-07]
 	Updated graphics/MesaLib to 21.3.9 [wiz 2022-07-07]
+	Updated print/texlab to 4.2.0 [wiz 2022-07-07]
