@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3242 2022/07/07 10:44:07 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3243 2022/07/07 11:55:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4872,3 +4872,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated audio/eyeD3 to 0.9.6 [adam 2022-07-07]
 	Updated textproc/py-jsonschema to 4.6.1 [adam 2022-07-07]
 	Updated textproc/py-tomlkit to 0.11.1 [adam 2022-07-07]
+	Updated devel/py-pip to 22.1.2 [adam 2022-07-07]
+	Updated devel/py-virtualenv to 20.15.1 [adam 2022-07-07]
+	Updated devel/py-pip-run to 8.8.1 [adam 2022-07-07]
+	Updated sysutils/py-psutil to 5.9.1 [adam 2022-07-07]
