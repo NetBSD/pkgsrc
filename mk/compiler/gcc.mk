@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.244 2022/07/05 17:32:24 jperkin Exp $
+# $NetBSD: gcc.mk,v 1.245 2022/07/07 16:23:39 jperkin Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -232,11 +232,11 @@ _C_STD_FLAG.c99=	-std=gnu99
 
 .for _version_ in ${_CXX_STD_VERSIONS}
 _CXX_STD_FLAG.${_version_}?=	-std=${_version_}
-.  if !empty(_GCC_VERSION:M[34].[1234].*)
+.endfor
+.if !empty(_GCC_VERSION:M[34].[1234].*)
 _CXX_STD_FLAG.c++03=	-std=c++0x
 _CXX_STD_FLAG.gnu++03=	-std=gnu++0x
-.  endif
-.endfor
+.endif
 
 .if !empty(_CC:M${LOCALBASE}/*)
 _IS_BUILTIN_GCC=	NO
