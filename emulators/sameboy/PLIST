@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2021/03/19 12:18:56 nia Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/07/07 05:46:15 nia Exp $
 bin/sameboy
 share/applications/sameboy.desktop
 share/icons/hicolor/128x128/apps/sameboy.png
@@ -38,8 +38,10 @@ share/sameboy/Shaders/Scale4x.fsh
 share/sameboy/Shaders/SmoothBilinear.fsh
 share/sameboy/agb_boot.bin
 share/sameboy/background.bmp
+share/sameboy/cgb0_boot.bin
 share/sameboy/cgb_boot.bin
 share/sameboy/dmg_boot.bin
+share/sameboy/mgb_boot.bin
 share/sameboy/registers.sym
 share/sameboy/sgb2_boot.bin
 share/sameboy/sgb_boot.bin
