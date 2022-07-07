@@ -1,4 +1,4 @@
-$NetBSD: patch-setup.py,v 1.5 2022/04/03 10:54:52 riastradh Exp $
+$NetBSD: patch-setup.py,v 1.6 2022/07/07 15:26:43 khorben Exp $
 
 Disable certain modules, so they can be built as separate packages.
 Do not look for ncursesw.
@@ -26,7 +26,7 @@ Enable cross-build by setting sys._home and sys.path to build directory
  from glob import glob, escape
  import _osx_support
  
-+sys.path = [p for p in sys.path if not re.compile('^' + sys.base_prefix + '/').match(p)]
++sys.path = [p for p in sys.path if not re.compile('^' + sys.base_prefix + '/lib').match(p)]
  
  try:
      import subprocess
