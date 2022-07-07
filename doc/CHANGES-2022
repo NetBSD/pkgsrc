@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3237 2022/07/07 05:31:11 nia Exp $
+$NetBSD: CHANGES-2022,v 1.3238 2022/07/07 05:46:34 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4863,3 +4863,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated audio/termusic to 0.6.17 [pin 2022-07-06]
 	Updated x11/mlterm to 3.9.2nb3 [rin 2022-07-07]
 	Updated graphics/feh to 3.9 [nia 2022-07-07]
+	Updated emulators/sameboy to 0.15 [nia 2022-07-07]
