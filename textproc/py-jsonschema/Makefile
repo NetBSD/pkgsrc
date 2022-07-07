@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2022/05/11 09:30:52 adam Exp $
+# $NetBSD: Makefile,v 1.25 2022/07/07 10:41:40 adam Exp $
 
-DISTNAME=	jsonschema-4.5.1
+DISTNAME=	jsonschema-4.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jsonschema/}
@@ -10,8 +10,8 @@ HOMEPAGE=	https://github.com/Julian/jsonschema
 COMMENT=	Implementation of JSON Schema for Python
 LICENSE=	modified-bsd
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4:../../devel/py-setuptools_scm
-BUILD_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+BUILD_DEPENDS+=	${PYPKGPREFIX}-hatchling>0:../../devel/py-hatchling
+BUILD_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs>0:../../devel/py-hatch-vcs
 DEPENDS+=	${PYPKGPREFIX}-attrs>=17.4.0:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-pyrsistent>=0.17.3:../../devel/py-pyrsistent
 TEST_DEPENDS+=	${PYPKGPREFIX}-twisted>0:../../net/py-twisted
