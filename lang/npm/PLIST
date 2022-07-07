@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2022/06/17 08:04:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.29 2022/07/07 10:05:11 adam Exp $
 bin/npm
 bin/npx
 lib/node_modules/npm/LICENSE
@@ -86,6 +86,7 @@ lib/node_modules/npm/docs/content/using-npm/config.md
 lib/node_modules/npm/docs/content/using-npm/developers.md
 lib/node_modules/npm/docs/content/using-npm/logging.md
 lib/node_modules/npm/docs/content/using-npm/orgs.md
+lib/node_modules/npm/docs/content/using-npm/package-spec.md
 lib/node_modules/npm/docs/content/using-npm/registry.md
 lib/node_modules/npm/docs/content/using-npm/removal.md
 lib/node_modules/npm/docs/content/using-npm/scope.md
@@ -194,6 +195,7 @@ lib/node_modules/npm/lib/utils/is-windows.js
 lib/node_modules/npm/lib/utils/log-file.js
 lib/node_modules/npm/lib/utils/log-shim.js
 lib/node_modules/npm/lib/utils/npm-usage.js
+lib/node_modules/npm/lib/utils/open-url-prompt.js
 lib/node_modules/npm/lib/utils/open-url.js
 lib/node_modules/npm/lib/utils/otplease.js
 lib/node_modules/npm/lib/utils/ping.js
@@ -284,6 +286,7 @@ lib/node_modules/npm/man/man7/config.7
 lib/node_modules/npm/man/man7/developers.7
 lib/node_modules/npm/man/man7/logging.7
 lib/node_modules/npm/man/man7/orgs.7
+lib/node_modules/npm/man/man7/package-spec.7
 lib/node_modules/npm/man/man7/registry.7
 lib/node_modules/npm/man/man7/removal.7
 lib/node_modules/npm/man/man7/scope.7
@@ -478,6 +481,7 @@ lib/node_modules/npm/node_modules/@npmcli/promise-spawn/LICENSE
 lib/node_modules/npm/node_modules/@npmcli/promise-spawn/lib/index.js
 lib/node_modules/npm/node_modules/@npmcli/promise-spawn/package.json
 lib/node_modules/npm/node_modules/@npmcli/run-script/LICENSE
+lib/node_modules/npm/node_modules/@npmcli/run-script/lib/escape.js
 lib/node_modules/npm/node_modules/@npmcli/run-script/lib/is-server-package.js
 lib/node_modules/npm/node_modules/@npmcli/run-script/lib/is-windows.js
 lib/node_modules/npm/node_modules/@npmcli/run-script/lib/make-spawn-args.js
