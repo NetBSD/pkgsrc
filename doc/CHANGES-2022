@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3239 2022/07/07 06:00:22 nia Exp $
+$NetBSD: CHANGES-2022,v 1.3240 2022/07/07 08:14:07 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4865,3 +4865,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/feh to 3.9 [nia 2022-07-07]
 	Updated emulators/sameboy to 0.15 [nia 2022-07-07]
 	Updated emulators/libretro-sameboy to 0.15 [nia 2022-07-07]
+	Updated www/arcticfox to 39.2 [nia 2022-07-07]
