@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2022/05/08 21:24:12 khorben Exp $
+# $NetBSD: Makefile,v 1.38 2022/07/07 01:53:00 khorben Exp $
 
 DISTNAME=		prosody-0.12.0
+PKGREVISION=		1
 CATEGORIES=		chat
 MASTER_SITES=		https://prosody.im/downloads/source/
 
@@ -16,7 +17,7 @@ DEPENDS+=		${LUA_PKGPREFIX}-socket>=2.0:../../net/lua-socket
 DEPENDS+=		${LUA_PKGPREFIX}-unbound-[0-9]*:../../net/lua-unbound
 
 HAS_CONFIGURE=		yes
-USE_LANGUAGES=		c99
+USE_LANGUAGES=		c
 BUILD_DEFS+=		VARBASE
 
 LUA_VERSIONS_ACCEPTED=	52 51
@@ -53,7 +54,7 @@ SUBST_CLASSES+=		path
 SUBST_MESSAGE.path=	Fixing default paths
 SUBST_STAGE.path=	pre-configure
 SUBST_FILES.path=	makefile prosody.cfg.lua.dist
-SUBST_SED.path=		-e 's,$$(CONFIG),$$(DESTDIR)$(EGDIR),g'
+SUBST_SED.path=		-e 's,$$(CONFIG),$${DESTDIR}${EGDIR},g'
 SUBST_VARS.path=	EGDIR PROSODY_DATA PROSODY_LOG PROSODY_RUN
 
 CONFIGURE_ARGS+=	--cflags=${CFLAGS:Q}
