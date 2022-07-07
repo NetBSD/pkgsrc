@@ -1,11 +1,11 @@
-$NetBSD: patch-configure.in,v 1.2 2022/05/05 14:07:38 nia Exp $
+$NetBSD: patch-configure.in,v 1.3 2022/07/07 08:13:50 nia Exp $
 
 - Add Sun Audio support.
 - Replace a GNU regex with a portable one.
 
---- configure.in.orig	2022-02-03 04:20:33.000000000 +0000
+--- configure.in.orig	2022-05-24 05:29:40.000000000 +0000
 +++ configure.in
-@@ -4193,7 +4193,7 @@ cairo-cocoa)
+@@ -4270,7 +4270,7 @@ cairo-cocoa)
      MOZ_USER_DIR="Mozilla"
      MOZ_FS_LAYOUT=bundle
      # skip event loop instrumentation on UIKit for now
@@ -14,7 +14,7 @@ $NetBSD: patch-configure.in,v 1.2 2022/05/05 14:07:38 nia Exp $
        MOZ_INSTRUMENT_EVENT_LOOP=1
      fi
      ;;
-@@ -5273,6 +5273,13 @@ if test -n "$MOZ_OMX_PLUGIN"; then
+@@ -5395,6 +5395,13 @@ if test -n "$MOZ_OMX_PLUGIN"; then
      fi
  fi
  
@@ -28,7 +28,7 @@ $NetBSD: patch-configure.in,v 1.2 2022/05/05 14:07:38 nia Exp $
  dnl system libvpx Support
  dnl ========================================================
  MOZ_ARG_WITH_BOOL(system-libvpx,
-@@ -5443,6 +5450,8 @@ if test -n "$MOZ_WEBM_ENCODER"; then
+@@ -5575,6 +5582,8 @@ if test -n "$MOZ_WEBM_ENCODER"; then
  fi
  AC_SUBST(MOZ_WEBM_ENCODER)
  
@@ -37,13 +37,3 @@ $NetBSD: patch-configure.in,v 1.2 2022/05/05 14:07:38 nia Exp $
  dnl ==================================
  dnl = Check alsa availability on Linux
  dnl ==================================
-@@ -8852,7 +8861,8 @@ ac_configure_args="$_SUBDIR_CONFIG_ARGS"
- 
- # --with-system-nspr will have been converted into the relevant $NSPR_CFLAGS
- # and $NSPR_LIBS.
--ac_configure_args="`echo $ac_configure_args | sed -e 's/--with-system-nspr\S* *//'`"
-+ac_configure_args="`echo $ac_configure_args | sed -e 's/--with-system-nspr[[^[:
-+space:]]]* *//'`"
- 
- ac_configure_args="$ac_configure_args --enable-threadsafe"
- 
