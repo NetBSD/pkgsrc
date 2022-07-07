@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.42 2022/05/09 22:08:10 wiz Exp $
+@comment $NetBSD: PLIST,v 1.43 2022/07/07 11:49:50 adam Exp $
 bin/virtualenv-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -270,11 +270,12 @@ ${PYSITELIB}/virtualenv/seed/wheels/embed/__init__.pyc
 ${PYSITELIB}/virtualenv/seed/wheels/embed/__init__.pyo
 ${PYSITELIB}/virtualenv/seed/wheels/embed/pip-20.3.4-py2.py3-none-any.whl
 ${PYSITELIB}/virtualenv/seed/wheels/embed/pip-21.3.1-py3-none-any.whl
-${PYSITELIB}/virtualenv/seed/wheels/embed/pip-22.0.4-py3-none-any.whl
+${PYSITELIB}/virtualenv/seed/wheels/embed/pip-22.1.2-py3-none-any.whl
 ${PYSITELIB}/virtualenv/seed/wheels/embed/setuptools-44.1.1-py2.py3-none-any.whl
 ${PYSITELIB}/virtualenv/seed/wheels/embed/setuptools-50.3.2-py3-none-any.whl
 ${PYSITELIB}/virtualenv/seed/wheels/embed/setuptools-59.6.0-py3-none-any.whl
-${PYSITELIB}/virtualenv/seed/wheels/embed/setuptools-62.1.0-py3-none-any.whl
+${PYSITELIB}/virtualenv/seed/wheels/embed/setuptools-62.3.2-py3-none-any.whl
+${PYSITELIB}/virtualenv/seed/wheels/embed/setuptools-62.6.0-py3-none-any.whl
 ${PYSITELIB}/virtualenv/seed/wheels/embed/wheel-0.37.1-py2.py3-none-any.whl
 ${PYSITELIB}/virtualenv/seed/wheels/periodic_update.py
 ${PYSITELIB}/virtualenv/seed/wheels/periodic_update.pyc
