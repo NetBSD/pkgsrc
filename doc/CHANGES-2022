@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3243 2022/07/07 11:55:16 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3244 2022/07/07 13:27:26 leot Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4876,3 +4876,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-virtualenv to 20.15.1 [adam 2022-07-07]
 	Updated devel/py-pip-run to 8.8.1 [adam 2022-07-07]
 	Updated sysutils/py-psutil to 5.9.1 [adam 2022-07-07]
+	Updated net/rclone to 1.58.1 [leot 2022-07-07]
