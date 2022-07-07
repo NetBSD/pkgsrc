@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:34:33 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/07/07 21:32:21 pin Exp $
 
-BLAKE2s (xbanish-1.7.tar.gz) = 07719b2b8311320e800398a3498b739af889bbfafe495c64f92e0494578ca4da
-SHA512 (xbanish-1.7.tar.gz) = f790ea888812bb6b7793f0a60a900724fc407ec4485672e37d464387ffacfa4bf2dc891862f3fed06948cda31024745816b3adb58074c4578edc6a9848f2bd08
-Size (xbanish-1.7.tar.gz) = 6379 bytes
+BLAKE2s (xbanish-1.8.tar.gz) = 1285bbce97e910cab5310581643328945aaddf49e8cf423cc9e3d21a40f9c645
+SHA512 (xbanish-1.8.tar.gz) = d6c3434f38bd0c9aabdc8745cb46ad196df379acae156f2f282aba83f69ecb88164fe752cd868e63ab887ca5758fbfd502d709c811843fe1deafd880e161a972
+Size (xbanish-1.8.tar.gz) = 7082 bytes
