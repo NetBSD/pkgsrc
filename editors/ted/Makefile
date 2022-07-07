@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2022/05/24 09:19:29 nia Exp $
+# $NetBSD: Makefile,v 1.69 2022/07/07 20:17:47 nia Exp $
 
 DISTNAME=	ted-2.23.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -11,6 +11,7 @@ COMMENT=	X11 based WordPad-like word processor
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c c++
+USE_TOOLS+=	pkg-config
 MAKE_JOBS_SAFE=	no
 
 WRKSRC=		${WRKDIR}/Ted-${PKGVERSION_NOREV}
@@ -19,22 +20,8 @@ AFMDIR=		${PREFIX}/share/Ted/afm
 INDDIR=		${PREFIX}/share/Ted/dfa
 INFODIR=	${PREFIX}/share/doc/Ted
 
-CONFIGURE_ENV+=	ac_jpeg_includes="${JPEGBASE}/include"
-CONFIGURE_ENV+=	ac_jpeg_libraries="${JPEGBASE}/lib"
-CONFIGURE_ENV+=	ac_png_includes="${BUILDLINK_PREFIX.png}/include"
-CONFIGURE_ENV+=	ac_png_libraries="${BUILDLINK_PREFIX.png}/lib"
-CONFIGURE_ENV+=	ac_tiff_includes="${BUILDLINK_PREFIX.tiff}/include"
-CONFIGURE_ENV+=	ac_tiff_libraries="${BUILDLINK_PREFIX.tiff}/lib"
-CONFIGURE_ENV+=	ac_xm_includes="${BUILDLINK_PREFIX.openmotif}/include"
-CONFIGURE_ENV+=	ac_xm_libraries="${BUILDLINK_PREFIX.openmotif}/lib"
-CONFIGURE_ENV+=	ac_xpm_includes="${BUILDLINK_PREFIX.libXpm}/include"
-CONFIGURE_ENV+=	ac_xpm_libraries="${BUILDLINK_PREFIX.libXpm}/lib"
-CONFIGURE_ENV+=	ac_zlib_includes="${BUILDLINK_PREFIX.zlib}/include"
-CONFIGURE_ENV+=	ac_zlib_libraries="${BUILDLINK_PREFIX.zlib}/lib"
-
 LDFLAGS.SunOS+=		-liconv
 LDFLAGS.Darwin+=	-liconv
-LDFLAGS+=		-lfontconfig -lXft -lXpm 
 
 MAKE_FLAGS+=	CONFIGURE_OPTIONS=--x-libraries=${X11BASE}/lib\ --with-MOTIF
 
