@@ -1,4 +1,4 @@
-# $NetBSD: clang.mk,v 1.36 2022/07/05 17:32:24 jperkin Exp $
+# $NetBSD: clang.mk,v 1.37 2022/07/07 17:19:55 jperkin Exp $
 #
 # This is the compiler definition for the clang compiler.
 #
@@ -120,10 +120,6 @@ _NOERROR_IMPLICIT_cmd=	${CCPATH} -\#\#\# -E -x c /dev/null 2>&1 \
 			|| ${TRUE}
 CWRAPPERS_PREPEND.cc+=	${_NOERROR_IMPLICIT_cmd:sh}
 .endif
-
-.for _version_ in ${_C_STD_VERSIONS}
-_C_STD_FLAG.${_version_}?=	-std=${_version_}
-.endfor
 
 .for _version_ in ${_CXX_STD_VERSIONS}
 _CXX_STD_FLAG.${_version_}?=	-std=${_version_}
