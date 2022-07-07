@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22001 2022/07/07 10:27:42 adam Exp $
+$NetBSD: TODO,v 1.22002 2022/07/07 14:05:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -373,9 +373,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ImageMagick6-6.9.12.8
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
-	o Mesa-21.3.8
-	o Mesa-22.1.2
-	o MesaLib-21.3.9
+	o MesaLib-22.1.2
 	o OdfConverter-4.0
 	o PACK-0.0.4
 	o Pantomime-1.2.2
@@ -475,6 +473,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o avidemux-2.8
 	o avl-2.0.3 [2.x is not source and binary compatible with 1.x]
 	o avr-gdb-10.1
+	o babl-0.1.92
 	o baci-20040415
 	o baloo-21.04.0
 	o basket-2.11b
@@ -1004,7 +1003,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o linpsk-1.2 [ld: cannot find -lqt-mt with qt4]
 	o liquidwar-6.0.0.11
 	o lirc-0.9.3
-	o llvm-14.0.2
+	o llvm-14.0.6
 	o lmbench-3
 	o log4cxx-0.11.0
 	o lohit-fonts-2.4.2
