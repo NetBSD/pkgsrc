@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3255 2022/07/08 13:23:17 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.3256 2022/07/08 13:24:59 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4890,3 +4890,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated geography/geos to 3.11.0rc0 [gdt 2022-07-08]
 	Updated geography/gdal-lib to 3.5.1 [gdt 2022-07-08]
 	Updated geography/py-gdal to 3.5.1 [gdt 2022-07-08]
+	Updated comms/py-esptool to 4.1 [gdt 2022-07-08]
