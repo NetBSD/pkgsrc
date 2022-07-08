@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2022/06/28 11:38:00 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2022/07/08 15:08:02 wiz Exp $
 
 DISTNAME=		xkeyboard-config-2.34
 PKGREVISION=		1
@@ -21,6 +21,8 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake msgfmt perl pkg-config
 PKGCONFIG_OVERRIDE+=	xkeyboard-config.pc.in
 PYTHON_FOR_BUILD_ONLY=	yes
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 BUILD_DEFS+=		VARBASE
 BUILD_DEFS+=		XKBCOMPDIR
