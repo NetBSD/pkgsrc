@@ -1,5 +1,0 @@
-Euca2ools are command line tools used to interact with Amazon Web
-Services (AWS) as well as other services that are compatible with AWS,
-such as Eucalyptus.  They aim to use the same input as similar tools
-provided by AWS for each service individually along with several
-enhancements that make them easier to use with multiple clouds at once.
