@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2022/07/01 16:38:52 adam Exp $
+# $NetBSD: Makefile,v 1.76 2022/07/08 15:05:26 wiz Exp $
 
 .include "Makefile.common"
 
@@ -13,6 +13,8 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-lib-only
 PKGCONFIG_OVERRIDE+=	lib/libnghttp2.pc.in
 PKGCONFIG_OVERRIDE+=	src/libnghttp2_asio.pc.in
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 REPLACE_PYTHON+=	script/fetch-ocsp-response
 
