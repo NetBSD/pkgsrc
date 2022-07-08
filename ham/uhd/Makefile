@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.68 2022/06/30 11:18:30 nia Exp $
+# $NetBSD: Makefile,v 1.69 2022/07/08 14:26:11 wiz Exp $
 
 DISTNAME=	uhd-4.1.0.5
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	ham
 MASTER_SITES=	${MASTER_SITE_GITHUB:=EttusResearch/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -19,11 +19,13 @@ CMAKE_ARGS+=	-DENABLE_MAN_PAGE_COMPRESSION=OFF
 CMAKE_ARGS+=	-DPKG_MAN_DIR=${PKGMANDIR}/man1
 CMAKE_ARGS+=	-DRST2HTML_EXECUTABLE=${PREFIX}/bin/rst2html-${PYVERSSUFFIX}.py
 CMAKE_ARGS+=	-Wno-dev
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
 .include "../../lang/python/pyversion.mk"
+
 CMAKE_ARGS+=	-DPYTHON_EXECUTABLE=${PYTHONBIN}
-.if !empty(_PYTHON_VERSION:M3*)
 CMAKE_ARGS+=	-DENABLE_PYTHON3=ON
-.endif
 
 # Upstream says C++11 is required, even though it is not documented.
 # It is documented that gcc 4.8 is required, when using gcc.
