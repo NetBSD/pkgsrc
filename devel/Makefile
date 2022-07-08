@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3758 2022/07/03 12:36:20 wiz Exp $
+# $NetBSD: Makefile,v 1.3759 2022/07/08 14:35:08 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2752,7 +2752,6 @@ SUBDIR+=	py-reparser
 SUBDIR+=	py-repoze.lru
 SUBDIR+=	py-requests
 SUBDIR+=	py-requests-file
-SUBDIR+=	py-requests-ftp
 SUBDIR+=	py-requests-futures
 SUBDIR+=	py-requests-mock
 SUBDIR+=	py-requests-toolbelt
