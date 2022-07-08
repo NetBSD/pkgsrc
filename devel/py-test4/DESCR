@@ -10,3 +10,5 @@ Features
 * Can run unittest (including trial) and nose test suites out of the box;
 * Rich plugin architecture, with over 315+ external plugins and thriving
   community;
+
+This package contains the last version supporting python 2.7.
