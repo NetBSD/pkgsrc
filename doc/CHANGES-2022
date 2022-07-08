@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3248 2022/07/07 21:33:12 pin Exp $
+$NetBSD: CHANGES-2022,v 1.3249 2022/07/08 06:12:03 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4881,3 +4881,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/MesaLib to 21.3.9 [wiz 2022-07-07]
 	Updated print/texlab to 4.2.0 [wiz 2022-07-07]
 	Updated x11/xbanish to 1.8 [pin 2022-07-07]
+	Updated audio/termusic to 0.6.18 [pin 2022-07-08]
