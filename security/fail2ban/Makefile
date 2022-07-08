@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2022/06/30 11:18:46 nia Exp $
-#
+# $NetBSD: Makefile,v 1.20 2022/07/08 22:10:29 wiz Exp $
 
 DISTNAME=	fail2ban-0.11.2
 PKGREVISION=	2
@@ -14,8 +13,9 @@ LICENSE=	gnu-gpl-v2
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-numpydoc-[0-9]*:../../textproc/py-numpydoc
+BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 
-PYTHON_VERSIONED_DEPENDENCIES=	sphinx:build
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_TOOLS+=	make:build
 
@@ -102,9 +102,7 @@ post-extract:
 	${CP} ${FILESDIR}/paths-pkgsrc.conf ${WRKSRC}/config/paths-pkgsrc.conf
 
 pre-patch:
-.if "${PYTHON_VERSION_DEFAULT}" != "27"
 	cd ${WRKSRC}/ && ${PREFIX}/bin/2to3-${PYVERSSUFFIX} --no-diffs --write --nobackups --fix=all bin/* fail2ban
-.endif
 
 post-build:
 	cd ${WRKSRC}/doc/ && make SPHINXBUILD=${PREFIX}/bin/sphinx-build-${PYVERSSUFFIX} text
@@ -126,5 +124,4 @@ post-install:
 .include "options.mk"
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

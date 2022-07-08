@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2022/01/10 08:14:30 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2022/07/08 22:10:29 wiz Exp $
 bin/fail2ban-client
 bin/fail2ban-python
 bin/fail2ban-regex
@@ -596,7 +596,3 @@ share/examples/fail2ban/paths-netbsd.conf
 share/examples/fail2ban/paths-opensuse.conf
 share/examples/fail2ban/paths-osx.conf
 share/examples/fail2ban/paths-pkgsrc.conf
-@pkgdir share/examples/fail2ban/jail.d
-@pkgdir share/examples/fail2ban/fail2ban.d
-@pkgdir etc/fail2ban/filter.d/ignorecommands
-@pkgdir etc/fail2ban/action.d
