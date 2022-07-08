@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3271 2022/07/08 17:58:32 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3272 2022/07/08 18:06:30 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4909,3 +4909,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/py-openapi3 to 1.6.5 [wiz 2022-07-08]
 	Updated devel/py-ipykernel to 6.15.1 [adam 2022-07-08]
 	Updated devel/py-poetry to 1.1.14 [adam 2022-07-08]
+	Updated pkgtools/createbuildlink to 3.19 [rillig 2022-07-08]
