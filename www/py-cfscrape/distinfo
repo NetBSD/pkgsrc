@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2021/10/26 11:30:28 nia Exp $
+$NetBSD: distinfo,v 1.16 2022/07/08 14:08:38 wiz Exp $
 
-BLAKE2s (cfscrape-2.0.8.tar.gz) = 15efcc79f29db911ec52b97e383ae3a551fbb547a5d8f367b741670acf446298
-SHA512 (cfscrape-2.0.8.tar.gz) = 8191fb975bc0cab3d255fe1d413abe41dba443af84f749825028cb84debe091dbc06dd778428a6acd4b1705aad1d3b706fbb6fd03b314c51fdeb879caff9ccb4
-Size (cfscrape-2.0.8.tar.gz) = 12273 bytes
+BLAKE2s (cfscrape-2.1.1.tar.gz) = 895a9f441df8758c1767a0d2d5ba84193f78c18aadfe447ecdde7422774af621
+SHA512 (cfscrape-2.1.1.tar.gz) = 54cc0fda438e78ca6d405288eb48083cc87e3a6df50517cfdaa313f6d71da7e0fffcf51e6e4d0f140530a644933b014a19d72c4f4b2557e837c2f77f2ef51f2d
+Size (cfscrape-2.1.1.tar.gz) = 15368 bytes
