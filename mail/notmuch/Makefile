@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2022/06/28 11:34:23 wiz Exp $
+# $NetBSD: Makefile,v 1.84 2022/07/08 22:12:53 wiz Exp $
 
 DISTNAME=	notmuch-0.36
 PKGREVISION=	1
@@ -18,7 +18,8 @@ MAKE_FLAGS+=	PYTHON=${PYTHONBIN}
 INFO_FILES=	yes
 TEST_TARGET=	check
 
-PYTHON_FOR_BUILD_ONLY=	tool
+PYTHON_FOR_BUILD_ONLY=		tool
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 REPLACE_BASH+=	emacs/notmuch-emacs-mua
 
