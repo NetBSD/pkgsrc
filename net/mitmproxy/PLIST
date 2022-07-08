@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2022/06/18 20:40:17 leot Exp $
+@comment $NetBSD: PLIST,v 1.21 2022/07/08 12:57:26 leot Exp $
 bin/mitmdump
 bin/mitmproxy
 bin/mitmweb
@@ -713,6 +713,18 @@ ${PYSITELIB}/mitmproxy/utils/emoji.pyo
 ${PYSITELIB}/mitmproxy/utils/human.py
 ${PYSITELIB}/mitmproxy/utils/human.pyc
 ${PYSITELIB}/mitmproxy/utils/human.pyo
+${PYSITELIB}/mitmproxy/utils/pyinstaller/__init__.py
+${PYSITELIB}/mitmproxy/utils/pyinstaller/__init__.pyc
+${PYSITELIB}/mitmproxy/utils/pyinstaller/__init__.pyo
+${PYSITELIB}/mitmproxy/utils/pyinstaller/hook-mitmproxy.addons.onboardingapp.py
+${PYSITELIB}/mitmproxy/utils/pyinstaller/hook-mitmproxy.addons.onboardingapp.pyc
+${PYSITELIB}/mitmproxy/utils/pyinstaller/hook-mitmproxy.addons.onboardingapp.pyo
+${PYSITELIB}/mitmproxy/utils/pyinstaller/hook-mitmproxy.py
+${PYSITELIB}/mitmproxy/utils/pyinstaller/hook-mitmproxy.pyc
+${PYSITELIB}/mitmproxy/utils/pyinstaller/hook-mitmproxy.pyo
+${PYSITELIB}/mitmproxy/utils/pyinstaller/hook-mitmproxy.tools.web.py
+${PYSITELIB}/mitmproxy/utils/pyinstaller/hook-mitmproxy.tools.web.pyc
+${PYSITELIB}/mitmproxy/utils/pyinstaller/hook-mitmproxy.tools.web.pyo
 ${PYSITELIB}/mitmproxy/utils/sliding_window.py
 ${PYSITELIB}/mitmproxy/utils/sliding_window.pyc
 ${PYSITELIB}/mitmproxy/utils/sliding_window.pyo
