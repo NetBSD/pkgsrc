@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-#	$NetBSD: createbuildlink,v 1.39 2020/05/16 06:28:52 rillig Exp $
+#	$NetBSD: createbuildlink,v 1.40 2022/07/08 18:06:19 rillig Exp $
 #
 # Copyright (c) 2002 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -32,7 +32,7 @@
 # Create an initial buildlink3.mk from a package's Makefile and PLIST
 #
 
-REV=`echo '$Revision: 1.39 $' | sed 's/\\$//g'`
+REV=`echo '$Revision: 1.40 $' | sed 's/\\$//g'`
 tmpdir=/tmp
 spacesintab=8
 makefile=Makefile
@@ -108,11 +108,6 @@ sed -f $sedrules <<EOF
 # XXX After this file has been verified as correct, the comment lines
 # XXX beginning with "XXX" should be removed.  Please do not commit
 # XXX unverified buildlink3.mk files.
-# XXX
-# XXX Packages that only install static libraries or headers should
-# XXX include the following line:
-# XXX
-# XXX	BUILDLINK_DEPMETHOD.$PKGNOVER?=	build
 
 EOF
 
@@ -129,6 +124,12 @@ BUILDLINK_TREE+=	$PKGNOVER
 
 .if !defined(${PKGUPPER}_BUILDLINK3_MK)
 ${PKGUPPER}_BUILDLINK3_MK:=
+
+# XXX
+# XXX Packages that only install static libraries or headers should
+# XXX include the following line:
+# XXX
+# XXX	BUILDLINK_DEPMETHOD.$PKGNOVER?=	build
 
 EOF
 
