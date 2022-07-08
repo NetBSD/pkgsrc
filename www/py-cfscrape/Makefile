@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2022/05/13 10:57:32 jperkin Exp $
+# $NetBSD: Makefile,v 1.17 2022/07/08 14:08:38 wiz Exp $
 
-DISTNAME=	cfscrape-2.0.8
+DISTNAME=	cfscrape-2.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	www net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cfscrape/}
 
@@ -12,6 +11,8 @@ COMMENT=	Python module for dealing with Cloudfare protection
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.6.1:../../devel/py-requests
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=	# none
 
