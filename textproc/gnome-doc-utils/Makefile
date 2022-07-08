@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2022/06/30 11:18:53 nia Exp $
+# $NetBSD: Makefile,v 1.82 2022/07/08 15:06:08 wiz Exp $
 
 DISTNAME=	gnome-doc-utils-0.20.10
 PKGREVISION=	12
@@ -21,6 +21,8 @@ MAKE_JOBS_SAFE=		no
 TEST_TARGET=		check
 USE_PKGLOCALEDIR=	YES
 REPLACE_BASH=		tools/gnome-doc-tool.in
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 CONFIGURE_ARGS+=	PYTHON=${PYTHONBIN:Q}
 
