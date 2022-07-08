@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2022/01/24 12:50:27 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2022/07/08 08:00:42 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -52,6 +52,9 @@ ${PYSITELIB}/asyncssh/crypto/chacha.pyo
 ${PYSITELIB}/asyncssh/crypto/cipher.py
 ${PYSITELIB}/asyncssh/crypto/cipher.pyc
 ${PYSITELIB}/asyncssh/crypto/cipher.pyo
+${PYSITELIB}/asyncssh/crypto/dh.py
+${PYSITELIB}/asyncssh/crypto/dh.pyc
+${PYSITELIB}/asyncssh/crypto/dh.pyo
 ${PYSITELIB}/asyncssh/crypto/dsa.py
 ${PYSITELIB}/asyncssh/crypto/dsa.pyc
 ${PYSITELIB}/asyncssh/crypto/dsa.pyo
