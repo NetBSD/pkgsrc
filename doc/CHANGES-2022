@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3256 2022/07/08 13:24:59 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.3257 2022/07/08 13:31:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4891,3 +4891,6 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated geography/gdal-lib to 3.5.1 [gdt 2022-07-08]
 	Updated geography/py-gdal to 3.5.1 [gdt 2022-07-08]
 	Updated comms/py-esptool to 4.1 [gdt 2022-07-08]
+	Updated lang/nodejs14 to 14.20.0 [adam 2022-07-08]
+	Updated lang/nodejs16 to 16.16.0 [adam 2022-07-08]
+	Updated lang/nodejs to 18.5.0 [adam 2022-07-08]
