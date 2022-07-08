@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2022/04/14 20:32:11 adam Exp $
+$NetBSD: distinfo,v 1.3 2022/07/08 17:57:46 adam Exp $
 
-BLAKE2s (poetry-1.1.13.tar.gz) = d096ec0e38069696cbe9d1399bfe14fbbd9e4da8bb01ec77a96fda5b981054cb
-SHA512 (poetry-1.1.13.tar.gz) = 39b633b8785e5d54d119c9ea820defee90abdad468b118a24548076d5d604afce346dc4b7763f40d0763332afb1d325d131b19e810744f0afa650740438b6f02
-Size (poetry-1.1.13.tar.gz) = 135837 bytes
+BLAKE2s (poetry-1.1.14.tar.gz) = a473272259c52645b0f110be1d35eba94a26b1336b244b96b6ff2d8cf8aa8e01
+SHA512 (poetry-1.1.14.tar.gz) = 07f3f856665c0998627ce603b65760fbda9919158ff5939f03779fd9c268302b33463b3a80a8b87e4778dc67dceb41e08827afb03d0760f94c108008acd06ea9
+Size (poetry-1.1.14.tar.gz) = 135828 bytes
 SHA1 (patch-setup.py) = 87294e65a2c8082246af945ac651c7e7e405e64c
