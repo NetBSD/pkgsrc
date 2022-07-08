@@ -1,5 +1,0 @@
-pyCardDAV is supposed to provide a simple way of accessing a CardDAV
-resource, mainly for use with mutt's query_command, but it might
-be of some use solo. pyCardDAV consists of pycardsyncer, a program
-for syncing your CardDAV resource into a local database and of
-pc_query, a program for querying the local database.
