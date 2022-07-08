@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3251 2022/07/08 08:01:02 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3252 2022/07/08 12:57:30 leot Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4886,3 +4886,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/py-asyncpg to 0.26.0 [adam 2022-07-08]
 	Updated textproc/py-jsonschema to 4.6.2 [adam 2022-07-08]
 	Updated security/py-asyncssh to 2.11.0 [adam 2022-07-08]
+	Updated net/mitmproxy to 8.1.1 [leot 2022-07-08]
