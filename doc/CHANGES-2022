@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3269 2022/07/08 14:40:06 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3270 2022/07/08 14:48:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4906,3 +4906,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed devel/py-requests-ftp [wiz 2022-07-08]
 	Removed misc/py-carddav [wiz 2022-07-08]
 	Removed sysutils/py-euca2ools [wiz 2022-07-08]
+	Updated textproc/py-openapi3 to 1.6.5 [wiz 2022-07-08]
