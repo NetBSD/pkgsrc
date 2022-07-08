@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2022/04/21 10:59:59 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2022/07/08 13:24:51 gdt Exp $
 
-DISTNAME=	esptool-3.3
+DISTNAME=	esptool-4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	comms python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/esptool/}
@@ -9,6 +9,8 @@ MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://github.com/espressif/esptool
 COMMENT=	Firmware tool for ESP8266/ESP32
 LICENSE=	gnu-gpl-v2
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-bitstring>=3.1.6:../../devel/py-bitstring
