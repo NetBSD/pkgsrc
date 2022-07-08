@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.546 2022/06/12 14:35:53 bacon Exp $
+# $NetBSD: Makefile,v 1.547 2022/07/08 19:47:59 thor Exp $
 
 COMMENT=	Mathematics
 
@@ -362,6 +362,7 @@ SUBDIR+=	pear-Numbers_Roman
 SUBDIR+=	pear-Numbers_Words
 SUBDIR+=	php-bcmath
 SUBDIR+=	php-stats
+SUBDIR+=	plumed
 SUBDIR+=	ppl
 SUBDIR+=	prng
 SUBDIR+=	pspp

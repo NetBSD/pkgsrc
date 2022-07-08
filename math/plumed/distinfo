@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2022/07/08 19:47:59 thor Exp $
+
+BLAKE2s (plumed-2.8.0.tgz) = 77d381aab5c5e227b870cc12dfb57650c1598a044d8e0343d4341152e0826da5
+SHA512 (plumed-2.8.0.tgz) = fd426893b3b6d9ccd3103f5d799a8eff1a60c1a7756d4c1788046a9496f7aaadbfea2390c1617f5645ed63255a896d2ef78c154e3e2c5092d678ef6082be0641
+Size (plumed-2.8.0.tgz) = 107630231 bytes
+SHA1 (patch-Makefile.conf.in) = db317ff45591a2aaefc95a1b93c74c8825115bef
+SHA1 (patch-configure) = 34ccd63ee2151b6a7634b477ebb38a6bfcdb88f0
+SHA1 (patch-configure.ac) = 0ec5c5a7db2057c78a99ddd329a8cbc91d05e7e3
