@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3270 2022/07/08 14:48:53 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3271 2022/07/08 17:58:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4907,3 +4907,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed misc/py-carddav [wiz 2022-07-08]
 	Removed sysutils/py-euca2ools [wiz 2022-07-08]
 	Updated textproc/py-openapi3 to 1.6.5 [wiz 2022-07-08]
+	Updated devel/py-ipykernel to 6.15.1 [adam 2022-07-08]
+	Updated devel/py-poetry to 1.1.14 [adam 2022-07-08]
