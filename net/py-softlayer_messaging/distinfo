@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:06:44 nia Exp $
-
-BLAKE2s (softlayer_messaging-1.0.3.tar.gz) = 03d8a023ebed54f015c01c1ba8299fdb0493ff097a89e825f5e3d55c27dba687
-SHA512 (softlayer_messaging-1.0.3.tar.gz) = 00188b61de5db5c31165e5a5831ffaa84544672cef5b0fded676e2a44fc00bc712529a4a01a85171be3d3f740a47d30ef5f057fcb54749420aee866ae9ac0c15
-Size (softlayer_messaging-1.0.3.tar.gz) = 5378 bytes
