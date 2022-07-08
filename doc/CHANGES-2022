@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3252 2022/07/08 12:57:30 leot Exp $
+$NetBSD: CHANGES-2022,v 1.3253 2022/07/08 13:22:07 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4887,3 +4887,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/py-jsonschema to 4.6.2 [adam 2022-07-08]
 	Updated security/py-asyncssh to 2.11.0 [adam 2022-07-08]
 	Updated net/mitmproxy to 8.1.1 [leot 2022-07-08]
+	Updated geography/geos to 3.11.0rc0 [gdt 2022-07-08]
