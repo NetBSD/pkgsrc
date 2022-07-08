@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2022/06/30 11:19:00 nia Exp $
+# $NetBSD: Makefile,v 1.37 2022/07/08 22:07:33 wiz Exp $
 
 DISTNAME=	varnish-7.1.0
 PKGREVISION=	1
@@ -12,7 +12,9 @@ COMMENT=	High-performace HTTP accelerator
 LICENSE=	modified-bsd
 
 BUILD_DEPENDS+=			${PYPKGPREFIX}-docutils>=0.12:../../textproc/py-docutils
-PYTHON_VERSIONED_DEPENDENCIES=	sphinx:tool
+TOOL_DEPENDS+=			${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
@@ -80,7 +82,6 @@ TEST_TARGET=		check
 .include "../../devel/pcre2/buildlink3.mk"
 .include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/readline.buildlink3.mk"
