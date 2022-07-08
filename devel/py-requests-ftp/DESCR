@@ -1,4 +1,0 @@
-Requests-FTP is an implementation of an FTP transport adapter for use
-with the awesome Requests Python library.  This library is intended as
-both a starting point for future development and a useful example for
-how to implement transport adapters.
