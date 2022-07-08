@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3272 2022/07/08 18:06:30 rillig Exp $
+$NetBSD: CHANGES-2022,v 1.3273 2022/07/08 19:48:19 thor Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4910,3 +4910,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-ipykernel to 6.15.1 [adam 2022-07-08]
 	Updated devel/py-poetry to 1.1.14 [adam 2022-07-08]
 	Updated pkgtools/createbuildlink to 3.19 [rillig 2022-07-08]
+	Updated math/plumed to 2.8.0 [thor 2022-07-08]
