@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.32 2022/07/06 19:16:59 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.33 2022/07/08 06:11:10 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
 CARGO_CRATE_DEPENDS+=	adler32-1.2.0
@@ -100,6 +100,8 @@ CARGO_CRATE_DEPENDS+=	id3-1.2.0
 CARGO_CRATE_DEPENDS+=	ident_case-1.0.1
 CARGO_CRATE_DEPENDS+=	idna-0.2.3
 CARGO_CRATE_DEPENDS+=	image-0.24.2
+CARGO_CRATE_DEPENDS+=	include_dir-0.7.2
+CARGO_CRATE_DEPENDS+=	include_dir_macros-0.7.2
 CARGO_CRATE_DEPENDS+=	inflate-0.4.5
 CARGO_CRATE_DEPENDS+=	instant-0.1.12
 CARGO_CRATE_DEPENDS+=	itoa-1.0.2
