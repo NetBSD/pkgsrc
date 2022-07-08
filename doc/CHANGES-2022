@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3268 2022/07/08 14:37:30 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3269 2022/07/08 14:40:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4905,3 +4905,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated finance/py-stripe to 3.5.0 [wiz 2022-07-08]
 	Removed devel/py-requests-ftp [wiz 2022-07-08]
 	Removed misc/py-carddav [wiz 2022-07-08]
+	Removed sysutils/py-euca2ools [wiz 2022-07-08]
