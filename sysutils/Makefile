@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1006 2022/06/28 16:33:25 bouyer Exp $
+# $NetBSD: Makefile,v 1.1007 2022/07/08 14:40:06 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -558,7 +558,6 @@ SUBDIR+=	py-crontab
 SUBDIR+=	py-dbus
 SUBDIR+=	py-diffoscope
 SUBDIR+=	py-eliot
-SUBDIR+=	py-euca2ools
 SUBDIR+=	py-filetype
 SUBDIR+=	py-google-compute-engine
 SUBDIR+=	py-jeepney
