@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3257 2022/07/08 13:31:49 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3258 2022/07/08 13:51:00 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4894,3 +4894,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/nodejs14 to 14.20.0 [adam 2022-07-08]
 	Updated lang/nodejs16 to 16.16.0 [adam 2022-07-08]
 	Updated lang/nodejs to 18.5.0 [adam 2022-07-08]
+	Updated lang/php80 to 8.0.21 [taca 2022-07-08]
