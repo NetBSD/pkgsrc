@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2022/01/04 20:52:41 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2022/07/08 07:26:09 adam Exp $
 
-DISTNAME=	asyncpg-0.25.0
+DISTNAME=	asyncpg-0.26.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/asyncpg/}
 
