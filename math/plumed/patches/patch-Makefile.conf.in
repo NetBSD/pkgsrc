@@ -1,0 +1,17 @@
+$NetBSD: patch-Makefile.conf.in,v 1.1 2022/07/08 19:47:59 thor Exp $
+
+Enable rpath flags also for linking the main binary.
+
+--- Makefile.conf.in.orig	2022-07-08 18:34:07.530823035 +0000
++++ Makefile.conf.in
+@@ -11,8 +11,8 @@ DYNAMIC_LIBS=@LIBS@ @LDFLAGS@ @OPENMP_CX
+ LIBS=@STATIC_LIBS@
+ SOEXT=@SOEXT@
+ # LD is used only to link the plumed executable, so should be equivalent to the C++ compiler
+-LD=@CXX@ @CXXFLAGS@
+-LDSHARED=@LDSHARED@
++LD=@CXX@ @CXXFLAGS@ @RPATH@
++LDSHARED=@LDSHARED@ @RPATH@
+ GCCDEP=@CXX@
+ disable_dependency_tracking=@disable_dependency_tracking@
+ prefix=@prefix@
