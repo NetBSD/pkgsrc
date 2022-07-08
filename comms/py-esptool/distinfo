@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2022/04/20 12:22:11 adam Exp $
+$NetBSD: distinfo,v 1.9 2022/07/08 13:24:51 gdt Exp $
 
-BLAKE2s (esptool-3.3.tar.gz) = 90bb49b1dafe89e1aaec98ea65b6db3298f25640d38a11d9bad4dca5fd6edca7
-SHA512 (esptool-3.3.tar.gz) = 4795125ddb5b4728965ae7fd84bb04c6001fa669282596190b43108dea89df5f52a1549b763276d297876a83ca5b3a89cfbf41729cd256d3493566b3e8b9929e
-Size (esptool-3.3.tar.gz) = 213683 bytes
+BLAKE2s (esptool-4.1.tar.gz) = ef732a65b8e9479261909bd8b453144b5870c952490ff16b0d188fc8b0739137
+SHA512 (esptool-4.1.tar.gz) = efd96e2e90eab4617e1947b3daa7a3fdc2829ac46e9d9a81792fc515b52afb193044bb8138facb258574f4ed35b85e42effe339749ed8ac6621bd1f568b02090
+Size (esptool-4.1.tar.gz) = 222091 bytes
