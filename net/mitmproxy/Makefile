@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.40 2022/06/30 11:18:42 nia Exp $
+# $NetBSD: Makefile,v 1.41 2022/07/08 12:57:26 leot Exp $
 
-DISTNAME=	mitmproxy-8.1.0
-PKGREVISION=	1
+DISTNAME=	mitmproxy-8.1.1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mitmproxy/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -17,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-blinker>=1.4:../../devel/py-blinker
 DEPENDS+=	${PYPKGPREFIX}-brotli>=1.0:../../archivers/py-brotli
 DEPENDS+=	${PYPKGPREFIX}-certifi>=2019.9.11:../../security/py-certifi
 DEPENDS+=	${PYPKGPREFIX}-click>=7.0:../../devel/py-click
-DEPENDS+=	${PYPKGPREFIX}-cryptography>=3.3:../../security/py-cryptography # XXX: should be >=36
+DEPENDS+=	${PYPKGPREFIX}-cryptography>=36:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-flask>=1.1.1:../../www/py-flask
 DEPENDS+=	${PYPKGPREFIX}-h11>=0.11:../../www/py-h11
 DEPENDS+=	${PYPKGPREFIX}-h2>=4.1:../../www/py-h2
@@ -44,9 +43,6 @@ SUBST_MESSAGE.setuppyversions=	Avoid too strict version requirements
 SUBST_FILES.setuppyversions=	setup.py
 SUBST_SED.setuppyversions+=	-E -e '/[>=]=/ s/, *(<|!=)[^"]+//g'
 SUBST_SED.setuppyversions+=	-E -e '/==[0-9.]+",/ s/==/>=/g'
-# XXX: Lower down crypography requirements to avoid possible big cryptography
-# XXX: update to >=36 not yet done in pkgsrc.
-SUBST_SED.setuppyversions+=	-E -e 's/cryptography>=36/cryptography>=3.3/'
 
 REPLACE_SH+=	mitmproxy/contrib/kaitaistruct/make.sh
 
