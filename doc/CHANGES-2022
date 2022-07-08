@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3262 2022/07/08 14:06:37 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3263 2022/07/08 14:08:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4899,3 +4899,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated audio/py-acoustid to 1.2.2 [wiz 2022-07-08]
 	Updated devel/py-bugzilla to 3.2.0 [wiz 2022-07-08]
 	Updated www/py-publicsuffix2 to 2.20191221 [wiz 2022-07-08]
+	Updated www/py-cfscrape to 2.1.1 [wiz 2022-07-08]
