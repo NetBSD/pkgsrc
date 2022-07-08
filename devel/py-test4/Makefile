@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2022/07/08 13:30:52 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2022/07/08 14:49:28 wiz Exp $
 
 DISTNAME=	pytest-4.6.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -28,7 +28,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-argcomplete-[0-9]*:../../devel/py-argcomplete
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis4
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
-TEST_DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
+# does not support python 2.7
+#TEST_DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 
 PYTHON_VERSIONS_ACCEPTED=	27
 
