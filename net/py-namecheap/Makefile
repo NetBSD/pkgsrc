@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/01/04 20:54:29 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/07/08 14:23:38 wiz Exp $
 
 DISTNAME=	PyNamecheap-0.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Py//:tl}
@@ -12,6 +12,8 @@ COMMENT=	Namecheap API client in Python
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=	# none
 
