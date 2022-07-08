@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2022/04/24 13:51:41 nia Exp $
+# $NetBSD: Makefile,v 1.47 2022/07/08 22:11:33 wiz Exp $
 
 DISTNAME=	ncmpc-0.46
 CATEGORIES=	audio
@@ -10,11 +10,13 @@ HOMEPAGE=	https://musicpd.org/clients/ncmpc/
 COMMENT=	Fully featured musicpd client using curses
 LICENSE=	gnu-gpl-v2
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
+
 USE_TOOLS+=	pkg-config xgettext
 USE_LANGUAGES=	c c++
 FAKE_NCURSES=	yes
 
-PYTHON_VERSIONED_DEPENDENCIES=	sphinx:tool
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 MESON_ARGS+=	-Dlirc=disabled
 MESON_ARGS+=	-Dhtml_manual=false
@@ -45,6 +47,5 @@ SUBST_VARS.py+=		PYVERSSUFFIX
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/pcre2/buildlink3.mk"
 .include "../../lang/python/tool.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
