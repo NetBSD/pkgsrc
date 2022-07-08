@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3250 2022/07/08 07:26:32 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3251 2022/07/08 08:01:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4884,3 +4884,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated audio/termusic to 0.6.18 [pin 2022-07-08]
 	Updated www/py-urllib3 to 1.26.10 [adam 2022-07-08]
 	Updated databases/py-asyncpg to 0.26.0 [adam 2022-07-08]
+	Updated textproc/py-jsonschema to 4.6.2 [adam 2022-07-08]
+	Updated security/py-asyncssh to 2.11.0 [adam 2022-07-08]
