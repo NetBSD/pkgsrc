@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3264 2022/07/08 14:16:15 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3265 2022/07/08 14:22:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4901,3 +4901,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/py-publicsuffix2 to 2.20191221 [wiz 2022-07-08]
 	Updated www/py-cfscrape to 2.1.1 [wiz 2022-07-08]
 	Removed net/py-softlayer_messaging [wiz 2022-07-08]
+	Updated net/py-dropbox to 11.32.0 [wiz 2022-07-08]
