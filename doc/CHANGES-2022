@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3260 2022/07/08 13:59:05 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3261 2022/07/08 14:01:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4897,3 +4897,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/php80 to 8.0.21 [taca 2022-07-08]
 	Updated lang/php81 to 8.1.8 [taca 2022-07-08]
 	Updated audio/py-acoustid to 1.2.2 [wiz 2022-07-08]
+	Updated devel/py-bugzilla to 3.2.0 [wiz 2022-07-08]
