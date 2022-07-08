@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.20 2022/05/19 13:32:47 nia Exp $
+$NetBSD: distinfo,v 1.21 2022/07/08 07:21:23 nia Exp $
 
 BLAKE2s (ted-2.23.src.tar.gz) = 5f32fde6f8ea58a0bf505784e5bb998341db78241ed7f0c13e53589170e950c2
 SHA512 (ted-2.23.src.tar.gz) = c6541e5a07545a08b30cb9b33429d9a7675f9252df32ccca5cdb4f2ff09978085d28d015a42922baf8c95db1ea6379a9d1088541aafd9ce45b8870212496849f
 Size (ted-2.23.src.tar.gz) = 4672208 bytes
+SHA1 (patch-Ted_configure) = e307c07ba3cfa30879a974bf93e153c0b37e28c5
+SHA1 (patch-bitmap_configure) = 36dcc05b25828f02168edf1800cf0f2860103039
