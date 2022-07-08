@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:30:45 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/07/08 14:06:27 wiz Exp $
 
-BLAKE2s (publicsuffix2-2.20190812.tar.gz) = 63d3acdeef3b245748b549d4da233f48ba1a0bd7077057930d97bcbacbee7a83
-SHA512 (publicsuffix2-2.20190812.tar.gz) = bfc7859f356e963d887623042276e7ed7ab6dc97d75eaf98d699d35f0cc77c25c4d6a90bfd55fe9e74ef5bbfa94f84330064b9e33f636c0bc35615e3ecbd8ceb
-Size (publicsuffix2-2.20190812.tar.gz) = 98348 bytes
+BLAKE2s (publicsuffix2-2.20191221.tar.gz) = 993b83fde2b55a5ff9c2e9824daa3414d6cf8e0bc460e38f0605610630bdee14
+SHA512 (publicsuffix2-2.20191221.tar.gz) = d863f0937b340958ef7c8bd07d62054aead993ba31b0c2753631f2e75e48f7cea412c6501d8a94d98bf6a97a13eb0716c24a89e336787d5570e9af0386c58320
+Size (publicsuffix2-2.20191221.tar.gz) = 99592 bytes
