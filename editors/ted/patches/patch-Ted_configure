@@ -1,0 +1,26 @@
+$NetBSD: patch-Ted_configure,v 1.1 2022/07/08 07:21:23 nia Exp $
+
+Fix the name of the graphics/tiff .pc file.
+
+--- Ted/configure.orig	2013-02-01 12:11:08.000000000 +0000
++++ Ted/configure
+@@ -5152,15 +5152,15 @@ rm -f core conftest.err conftest.$ac_obj
+     LIBTIFF_LIBS_FOUND=NO
+     LIBTIFF_FOUND=0
+ 
+-    if  ( pkg-config libtiff --cflags ) > /dev/null 2>&1
++    if  ( pkg-config libtiff-4 --cflags ) > /dev/null 2>&1
+     then
+-	LIBTIFF_CFLAGS=`pkg-config libtiff --cflags`
++	LIBTIFF_CFLAGS=`pkg-config libtiff-4 --cflags`
+ 	LIBTIFF_HEADERS_FOUND=YES
+     fi
+ 
+-    if  ( pkg-config libtiff --libs ) > /dev/null 2>&1
++    if  ( pkg-config libtiff-4 --libs ) > /dev/null 2>&1
+     then
+-	LIBTIFF_LIBS=`pkg-config libtiff --libs`
++	LIBTIFF_LIBS=`pkg-config libtiff-4 --libs`
+ 	LIBTIFF_LIBS_FOUND=YES
+     fi
+ 
