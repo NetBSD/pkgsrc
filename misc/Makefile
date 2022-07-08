@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.565 2022/06/05 02:31:30 mef Exp $
+# $NetBSD: Makefile,v 1.566 2022/07/08 14:37:30 wiz Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -253,7 +253,6 @@ SUBDIR+=	py-anita
 SUBDIR+=	py-ansi
 SUBDIR+=	py-asciinema
 SUBDIR+=	py-autocommand
-SUBDIR+=	py-carddav
 SUBDIR+=	py-crashtest
 SUBDIR+=	py-ghp-import
 SUBDIR+=	py-immutables
