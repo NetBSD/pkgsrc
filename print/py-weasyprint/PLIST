@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2022/05/23 05:22:13 kleink Exp $
+@comment $NetBSD: PLIST,v 1.10 2022/07/09 18:39:22 kleink Exp $
 bin/weasyprint-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
@@ -85,10 +85,17 @@ ${PYSITELIB}/weasyprint/logger.py
 ${PYSITELIB}/weasyprint/logger.pyc
 ${PYSITELIB}/weasyprint/matrix.py
 ${PYSITELIB}/weasyprint/matrix.pyc
+${PYSITELIB}/weasyprint/pdf/__init__.py
+${PYSITELIB}/weasyprint/pdf/__init__.pyc
+${PYSITELIB}/weasyprint/pdf/fonts.py
+${PYSITELIB}/weasyprint/pdf/fonts.pyc
+${PYSITELIB}/weasyprint/pdf/pdfa.py
+${PYSITELIB}/weasyprint/pdf/pdfa.pyc
+${PYSITELIB}/weasyprint/pdf/sRGB2014.icc
+${PYSITELIB}/weasyprint/pdf/stream.py
+${PYSITELIB}/weasyprint/pdf/stream.pyc
 ${PYSITELIB}/weasyprint/stacking.py
 ${PYSITELIB}/weasyprint/stacking.pyc
-${PYSITELIB}/weasyprint/stream.py
-${PYSITELIB}/weasyprint/stream.pyc
 ${PYSITELIB}/weasyprint/svg/__init__.py
 ${PYSITELIB}/weasyprint/svg/__init__.pyc
 ${PYSITELIB}/weasyprint/svg/bounding_box.py
