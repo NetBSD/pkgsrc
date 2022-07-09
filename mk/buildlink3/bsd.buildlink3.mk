@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.249 2022/07/09 07:46:02 rillig Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.250 2022/07/09 08:19:18 rillig Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -130,7 +130,7 @@ _ok_:=yes
      _ok_:=yes
 .  else
      # leaving a package (in the buildlink tree)
-.    if ${USE_BUILTIN.${_pkg_:S/^-//}:M[Yy][Ee][Ss]}
+.    if ${USE_BUILTIN.${_pkg_:S/^-//}:Uno:M[Yy][Ee][Ss]}
        # this package is going to use the builtin version
 .      if ${_ok_} != yes
          # not ok for it to be builtin; force it to pkgsrc
@@ -142,7 +142,7 @@ _ok_:=yes
 .      else
          #.say "${_stack_:C/.*/  /} ${_pkg_:S/^-//} built-in"
 .      endif
-.    elif !${IGNORE_PKG.${_pkg_:S/^-//}:M[Yy][Ee][Ss]}
+.    elif !${IGNORE_PKG.${_pkg_:S/^-//}:Uno:M[Yy][Ee][Ss]}
        # no builtin version or not using it
        #.say "${_stack_:C/.*/  /} ${_pkg_:S/^-//} pkgsrc"
 .      if ${_ok_} == yes
