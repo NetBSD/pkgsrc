@@ -1,6 +1,7 @@
 package pkglint
 
 import (
+	"encoding/json"
 	"gopkg.in/check.v1"
 	"strings"
 )
@@ -40,13 +41,22 @@ func (s *Suite) Test_MkParser_MkCond(c *check.C) {
 	defined := func(varname string) *MkCond { return &MkCond{Defined: varname} }
 	paren := func(cond *MkCond) *MkCond { return &MkCond{Paren: cond} }
 
+	toJSON := func(obj interface{}) string {
+		var sb strings.Builder
+		encoder := json.NewEncoder(&sb)
+		encoder.SetIndent("", "  ")
+		err := encoder.Encode(obj)
+		t.AssertNil(err)
+		return sb.String()
+	}
+
 	testRest := func(input string, expectedTree *MkCond, expectedRest string) {
 		// As of July 2019 p.MkCond does not emit warnings;
 		// this is left to MkCondChecker.Check.
 		line := t.NewLine("filename.mk", 1, ".if "+input)
 		p := NewMkParser(line, input)
 		actualTree := p.MkCond()
-		t.CheckDeepEquals(actualTree, expectedTree)
+		t.CheckDeepEquals(toJSON(actualTree), toJSON(expectedTree))
 		t.CheckEquals(p.Rest(), expectedRest)
 	}
 	test := func(input string, expectedTree *MkCond) {
@@ -186,6 +196,18 @@ func (s *Suite) Test_MkParser_MkCond(c *check.C) {
 
 	test("target(do-build)",
 		call("target", "do-build"))
+
+	test("(!defined(VAR))",
+		paren(not(defined("VAR"))))
+
+	test("(((((!defined(VAR))))))",
+		paren(paren(paren(paren(paren(not(defined("VAR"))))))))
+
+	test("(${VAR} == \"value\")",
+		paren(cmp(cvar("VAR"), "==", cstr("value"))))
+
+	test("(((((${VAR} == \"value\")))))",
+		paren(paren(paren(paren(paren(cmp(cvar("VAR"), "==", cstr("value"))))))))
 
 	// TODO: ok "${q}text${q} == ${VAR}"
 	// TODO: fail "text${q} == ${VAR}"
