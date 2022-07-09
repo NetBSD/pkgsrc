@@ -6,7 +6,6 @@ import (
 	"crypto/sha512"
 	"encoding/hex"
 	"golang.org/x/crypto/blake2s"
-	"golang.org/x/crypto/ripemd160"
 	hashpkg "hash"
 	"io"
 	"strings"
@@ -149,18 +148,6 @@ func (ck *distinfoLinesChecker) checkAlgorithms(info distinfoFileInfo) {
 		return
 	case algorithms == "BLAKE2s, SHA512, Size" && isPatch != yes:
 		return
-	case G.Wip && algorithms == "RMD160, SHA512, Size" && isPatch != yes:
-		// TODO: remove after 2021Q4. Until then, allow pkgsrc-wip to
-		//  be used with the stable 2021Q3.
-		return
-	case G.Wip && algorithms == "SHA1, RMD160, SHA512, Size" && isPatch != yes:
-		// TODO: remove after 2021Q4. Until then, allow pkgsrc-wip to
-		//  be used with the stable 2021Q3.
-		return
-	case G.Wip && algorithms == "SHA1, BLAKE2s, SHA512, Size" && isPatch != yes:
-		// TODO: remove after 2021Q4. Until then, allow pkgsrc-wip to
-		//  be used with the stable 2021Q3.
-		return
 	}
 
 	switch {
@@ -277,8 +264,6 @@ func (ck *distinfoLinesChecker) checkAlgorithmsDistfile(info distinfoFileInfo) {
 		switch alg {
 		case "SHA1":
 			return computeHash(sha1.New())
-		case "RMD160": // TODO: remove after 2021Q4
-			return computeHash(ripemd160.New())
 		case "BLAKE2s":
 			blake, err := blake2s.New256(nil)
 			assertNil(err, "blake2s")
@@ -462,15 +447,6 @@ func (info *distinfoFileInfo) algorithms() string {
 
 func (info *distinfoFileInfo) hasDistfileAlgorithms() bool {
 	h := info.hashes
-	// TODO: remove after 2021Q4. Until then, allow pkgsrc-wip to
-	//  be used with the stable 2021Q3.
-	if G.Wip && len(h) == 4 &&
-		h[0].algorithm == "SHA1" &&
-		h[1].algorithm == "RMD160" &&
-		h[2].algorithm == "SHA512" &&
-		h[3].algorithm == "Size" {
-		return true
-	}
 	return len(h) == 3 &&
 		h[0].algorithm == "BLAKE2s" &&
 		h[1].algorithm == "SHA512" &&
