@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.87 2022/07/05 18:07:38 adam Exp $
+# $NetBSD: Makefile,v 1.88 2022/07/09 18:18:00 gutteridge Exp $
 
 DISTNAME=	cryptography-37.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Cryptographic recipes and primitives for Python
 LICENSE=	apache-2.0 OR modified-bsd
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools-rust-[0-9]*:../../devel/py-setuptools-rust
-BUILD_DEPENDS+=	rust>=1.41:../../lang/rust
 DEPENDS+=	${PYPKGPREFIX}-cffi>=1.11.4:../../devel/py-cffi
 DEPENDS+=	${PYPKGPREFIX}-six>=1.4.1:../../lang/py-six
 TEST_DEPENDS+=	${PYPKGPREFIX}-cryptography_vectors-[0-9]*:../../security/py-cryptography_vectors
