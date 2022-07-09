@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3274 2022/07/09 02:23:04 ryoon Exp $
+$NetBSD: CHANGES-2022,v 1.3275 2022/07/09 02:23:56 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4912,3 +4912,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated pkgtools/createbuildlink to 3.19 [rillig 2022-07-08]
 	Updated math/plumed to 2.8.0 [thor 2022-07-08]
 	Updated www/firefox to 102.0.1 [ryoon 2022-07-09]
+	Updated www/firefox-l10n to 102.0.1 [ryoon 2022-07-09]
