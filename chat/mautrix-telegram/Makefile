@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2022/06/30 11:18:06 nia Exp $
+# $NetBSD: Makefile,v 1.14 2022/07/09 09:23:48 wiz Exp $
 
 DISTNAME=	telegram-0.11.3
 PKGNAME=	mautrix-${DISTNAME}
@@ -23,7 +23,7 @@ DEPENDS+=	${PYPKGPREFIX}-aiohttp>=3<4:../../www/py-aiohttp
 DEPENDS+=	${PYPKGPREFIX}-yarl>=1<2:../../www/py-yarl
 DEPENDS+=	${PYPKGPREFIX}-mautrix>=0.16<0.17:../../chat/py-mautrix
 DEPENDS+=	${PYPKGPREFIX}-tulir-telethon>=1.25.0a7:../../chat/py-tulir-telethon
-DEPENDS+=	${PYPKGPREFIX}-asyncpg>=0.20<0.26:../../databases/py-asyncpg
+DEPENDS+=	${PYPKGPREFIX}-asyncpg>=0.20:../../databases/py-asyncpg
 DEPENDS+=	${PYPKGPREFIX}-mako>=1<2:../../devel/py-mako
 # webp_convert and qr_login
 DEPENDS+=	${PYPKGPREFIX}-Pillow>=4<10:../../graphics/py-Pillow
