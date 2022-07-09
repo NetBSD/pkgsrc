@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3280 2022/07/09 18:39:38 kleink Exp $
+$NetBSD: CHANGES-2022,v 1.3281 2022/07/09 18:40:46 thorpej Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4918,3 +4918,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/split-thai to 2.16 [scole 2022-07-09]
 	Updated print/py-pydyf to 0.2.0 [kleink 2022-07-09]
 	Updated print/py-weasyprint to 56.0 [kleink 2022-07-09]
+	Added filesystems/cocofs-1.0 [thorpej 2022-07-09]
