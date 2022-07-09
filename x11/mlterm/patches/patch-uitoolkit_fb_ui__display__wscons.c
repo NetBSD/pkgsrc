@@ -1,4 +1,4 @@
-$NetBSD: patch-uitoolkit_fb_ui__display__wscons.c,v 1.5 2022/07/07 00:04:42 rin Exp $
+$NetBSD: patch-uitoolkit_fb_ui__display__wscons.c,v 1.6 2022/07/09 09:40:20 rin Exp $
 
 Add support for 8- and 4-bpp planar fb found on NetBSD/amiga.
 
@@ -12,8 +12,7 @@ analogue monitors.
 XXX
 Logic to detect planar fb is not very elegant...
 
-This has been pull-requested to upstream:
-https://github.com/arakiken/mlterm/pull/46
+This has been merged to upstream, and will be in the next release.
 
 --- uitoolkit/fb/ui_display_wscons.c.orig	2022-01-17 00:20:31.000000000 +0900
 +++ uitoolkit/fb/ui_display_wscons.c	2022-07-07 05:22:09.475716704 +0900
