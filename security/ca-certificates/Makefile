@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2022/06/12 07:05:30 kim Exp $
+# $NetBSD: Makefile,v 1.8 2022/07/09 09:38:57 wiz Exp $
 
 PKGNAME=	ca-certificates-20211016
 PKGREVISION=	3
@@ -12,10 +12,11 @@ HOMEPAGE=	https://packages.debian.org/source/sid/ca-certificates
 COMMENT=	Root CA certificates from the Mozilla Project
 LICENSE=	gnu-gpl-v2 AND mpl-2.0
 
-NO_CONFIGURE=		yes
-PYTHON_FOR_BUILD_ONLY=	yes
+BUILD_DEPENDS+=	${PYPKGPREFIX}-cryptography-[0-9]*:../../security/py-cryptography
 
-PYTHON_VERSIONED_DEPENDENCIES+=	cryptography:build
+NO_CONFIGURE=			yes
+PYTHON_FOR_BUILD_ONLY=		yes
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_TOOLS=	echo:run find:run ln:run openssl:run rm:run sed:run sort:run wc:run
 
@@ -85,5 +86,4 @@ post-install:
 	    ${DESTDIR}${EGDIR}/
 
 .include "../../lang/python/tool.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
