@@ -1,3 +1,11 @@
-$NetBSD: CHANGES-pkgsrc-2022Q2,v 1.1.2.1 2022/06/27 13:34:15 gdt Exp $
+$NetBSD: CHANGES-pkgsrc-2022Q2,v 1.1.2.2 2022/07/09 10:52:14 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2022Q2 branch:
+
+Pullup ticket #6647 - requested by khorben
+lang/python39: build fix
+lang/python310: build fix
+
+Pullup ticket #6648 - requested by nia
+x11/libXft: NetBSD 8 build fix
+
