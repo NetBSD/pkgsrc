@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3275 2022/07/09 02:23:56 ryoon Exp $
+$NetBSD: CHANGES-2022,v 1.3276 2022/07/09 06:33:09 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4861,6 +4861,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/py-channels to 3.0.5 [adam 2022-07-06]
 	Updated sysutils/broot to 1.14.1 [pin 2022-07-06]
 	Updated audio/termusic to 0.6.17 [pin 2022-07-06]
+	Updated pkgtools/pkglint to 22.2.1 [rillig 2022-07-06]
 	Updated x11/mlterm to 3.9.2nb3 [rin 2022-07-07]
 	Updated graphics/feh to 3.9 [nia 2022-07-07]
 	Updated emulators/sameboy to 0.15 [nia 2022-07-07]
