@@ -246,10 +246,12 @@ func (ck *MkCondChecker) simplify(varuse *MkVarUse, fromEmpty bool, neg bool) {
 	// Replace empty(VAR:M*.c) with !${VAR:M*.c}.
 	if fromEmpty && positive && !exact && vartype != nil && isDefined() &&
 		// Restrict replacements to very simple patterns with only few
-		// special characters.
+		// special characters, for now.
 		// Before generalizing this to arbitrary strings, there has to be
 		// a proper code generator for these conditions that handles all
 		// possible escaping.
+		// The same reasoning applies to the variable name, even though the
+		// variable name typically only uses a restricted character set.
 		matches(varuse.Mod(), `^[*.:\w]+$`) {
 
 		fixedPart := varname + modsExceptLast + ":M" + pattern
