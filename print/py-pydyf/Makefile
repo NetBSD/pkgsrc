@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2022/01/10 22:00:08 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/07/09 18:36:41 kleink Exp $
 
-DISTNAME=	pydyf-0.1.2
+DISTNAME=	pydyf-0.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	print python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pydyf/}
 
@@ -23,8 +22,11 @@ USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
+post-extract:
+	${CHMOD} -x ${WRKSRC}/pydyf/__init__.py
+
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
