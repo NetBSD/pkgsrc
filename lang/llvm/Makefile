@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2022/06/28 11:34:13 wiz Exp $
+# $NetBSD: Makefile,v 1.72 2022/07/09 08:16:02 wiz Exp $
 #
 # when updating this, please also update:
 # devel/include-what-you-use
@@ -37,6 +37,8 @@ USE_LANGUAGES=		c c++14
 USE_CMAKE=		yes
 GCC_REQD+=		5
 PYTHON_FOR_BUILD_ONLY=	yes
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 NOT_FOR_PLATFORM+=	*-*-alpha
 NOT_FOR_PLATFORM+=	*-*-vax
