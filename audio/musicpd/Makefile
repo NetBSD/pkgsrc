@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.267 2022/07/09 08:18:02 wiz Exp $
+# $NetBSD: Makefile,v 1.268 2022/07/09 09:13:55 wiz Exp $
 
 DISTNAME=	mpd-0.23.7
 PKGNAME=	${DISTNAME:S/mpd/musicpd/}
@@ -121,6 +121,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/mpdconf.example ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${FILESDIR}/mpd.logrotate ${DESTDIR}${EGDIR}/logrotate.d/mpd
 
+.include "../../lang/python/pyversion.mk"
 .include "../../devel/meson/build.mk"
 BUILDLINK_API_DEPENDS.flac+=	flac>=1.2
 .include "../../audio/flac/buildlink3.mk"
