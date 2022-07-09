@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3276 2022/07/09 06:33:09 rillig Exp $
+$NetBSD: CHANGES-2022,v 1.3277 2022/07/09 06:41:32 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4914,3 +4914,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated math/plumed to 2.8.0 [thor 2022-07-08]
 	Updated www/firefox to 102.0.1 [ryoon 2022-07-09]
 	Updated www/firefox-l10n to 102.0.1 [ryoon 2022-07-09]
+	Updated pkgtools/pkglint to 22.2.2 [rillig 2022-07-09]
