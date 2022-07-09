@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2022/05/01 00:22:58 khorben Exp $
+@comment $NetBSD: PLIST,v 1.20 2022/07/09 09:34:17 wiz Exp $
 bin/tor-browser
 lib/tor-browser/actors/AboutHttpsOnlyErrorChild.jsm
 lib/tor-browser/actors/AboutHttpsOnlyErrorParent.jsm
@@ -5411,7 +5411,6 @@ lib/tor-browser/libmozavcodec.so
 lib/tor-browser/libmozavutil.so
 lib/tor-browser/libmozgtk.so
 lib/tor-browser/libmozsqlite3.so
-lib/tor-browser/libmozwayland.so
 lib/tor-browser/libxul.so
 lib/tor-browser/localization/en-US/crashreporter/aboutcrashes.ftl
 lib/tor-browser/localization/en-US/security/certificates/certManager.ftl
