@@ -199,6 +199,10 @@ func (ck *MkAssignChecker) checkLeftUserSettable() bool {
 	}
 
 	switch {
+	case G.Infrastructure:
+		// No warnings, as the usage patterns between the packages
+		// and the pkgsrc infrastructure differ a lot.
+
 	case mkline.HasComment():
 		// Assume that the comment contains a rationale for disabling
 		// this particular check.
