@@ -437,8 +437,10 @@ func ToVarUse(str string) *MkVarUse {
 //
 // The representation is somewhere between syntactic and semantic.
 // Unnecessary parentheses are omitted in this representation,
+// (TODO: double-check; the 'paren(paren(paren()))' tests contradict)
 // but !empty(VARNAME) is represented differently from ${VARNAME} != "".
 // For higher level analysis, a unified representation might be better.
+// See MkParser.MkCond.
 type MkCond struct {
 	Or  []*MkCond
 	And []*MkCond
