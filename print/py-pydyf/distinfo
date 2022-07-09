@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2021/11/19 09:43:08 adam Exp $
+$NetBSD: distinfo,v 1.2 2022/07/09 18:36:41 kleink Exp $
 
-BLAKE2s (pydyf-0.1.2.tar.gz) = 2008e47b38ed779ccdb62d8bf7c21d46a17a1f57c92fd7a632c5d658dbd1f8d4
-SHA512 (pydyf-0.1.2.tar.gz) = 0054791c92c86c188c6a70cfe83831319cd1a587f48ba4b8bd212af178bae24611815b5436699ea6d17fe1b39115a666b30a7982ac35e54ce1d52f34612c9729
-Size (pydyf-0.1.2.tar.gz) = 14492 bytes
+BLAKE2s (pydyf-0.2.0.tar.gz) = 0e6836ff264dff33d66e652ace1c771b7ced76efbb779d0521924a52f8c53c6b
+SHA512 (pydyf-0.2.0.tar.gz) = 93d29b2783f3bc62b9ff2bb0d1414051805c508e17cf9607e44a31ec11c5436fef499e3f1bd225c193ccbda03feb7d32196286d984121fe1dbb65d02ea1dcf43
+Size (pydyf-0.2.0.tar.gz) = 14610 bytes
