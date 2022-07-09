@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3279 2022/07/09 18:36:58 kleink Exp $
+$NetBSD: CHANGES-2022,v 1.3280 2022/07/09 18:39:38 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4917,3 +4917,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated pkgtools/pkglint to 22.2.2 [rillig 2022-07-09]
 	Updated textproc/split-thai to 2.16 [scole 2022-07-09]
 	Updated print/py-pydyf to 0.2.0 [kleink 2022-07-09]
+	Updated print/py-weasyprint to 56.0 [kleink 2022-07-09]
