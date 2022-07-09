@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2022/06/28 11:34:13 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2022/07/09 08:16:02 wiz Exp $
 
 DISTNAME=	llvm-13.0.1.src
 PKGNAME=	${DISTNAME:S/llvm/libLLVM/:S/.src//}
@@ -18,6 +18,8 @@ USE_LANGUAGES=		c c++11
 USE_CMAKE=		yes
 GCC_REQD+=		5
 PYTHON_FOR_BUILD_ONLY=	yes
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 CONFIGURE_DIRS=		${WRKDIR}/build
 CMAKE_ARG_PATH=		${WRKSRC}
