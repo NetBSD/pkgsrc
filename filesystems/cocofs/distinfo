@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/07/09 18:38:59 thorpej Exp $
+
+BLAKE2s (cocofs-v1.0.tar.gz) = 7db75488bf1327ef712dda2c338f2eab1d44af5e042d162b59e7a4c3baf43a42
+SHA512 (cocofs-v1.0.tar.gz) = ba29ba6017d8e43f5f33b7ceddd94d279eba995e1fefa3bc320b9da64adf124f5b2553f99109992de11e9247e6e7e8bc75cb9dff54a8e15cf1462fd6fb25e00a
+Size (cocofs-v1.0.tar.gz) = 11877 bytes
