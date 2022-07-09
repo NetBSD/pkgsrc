@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.248 2022/06/07 10:04:25 jperkin Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.249 2022/07/09 07:46:02 rillig Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -92,8 +92,7 @@ PREPEND_PATH+=	${BUILDLINK_BINDIR}
 _BUILDLINK_DEPENDS:=
 _BUILDLINK_DEPTH:=
 .for _pkg_ in ${BUILDLINK_TREE}
-_BUILDLINK_pkg:=	${_pkg_:N-*}
-.  if empty(_BUILDLINK_pkg)
+.  if ${_pkg_:M-*}
 _BUILDLINK_DEPTH:=	${_BUILDLINK_DEPTH:S/+$//}
 .  else
 .    if empty(_BUILDLINK_DEPTH)
@@ -122,22 +121,16 @@ BUILDLINK_BUILTIN_MK.${_pkg_}?=	${BUILDLINK_PKGSRCDIR.${_pkg_}}/builtin.mk
 _stack_:=bot
 _ok_:=yes
 .for _pkg_ in ${BUILDLINK_TREE}
-# work around PR 47888
-_enter_:=${_pkg_:M-*}
-# work around another bug in netbsd-5's make (fixed in HEAD)
-_use_:=${USE_BUILTIN.${_pkg_:S/^-//}:M[Yy][Ee][Ss]}
-_ignore_:=${IGNORE_PKG.${_pkg_:S/^-//}:M[Yy][Ee][Ss]}
-
-.  if "${_pkg_}" == "x11-links" || "${_pkg_}" == "-x11-links"
+.  if ${_pkg_} == "x11-links" || ${_pkg_} == "-x11-links"
      # (nothing)
-.  elif empty(_enter_)
+.  elif !${_pkg_:M-*}
      # entering a package (in the buildlink tree)
      #.say "${_stack_:C/.*/  /} ${_pkg_}:"
      _stack_:=${_ok_} ${_stack_}
      _ok_:=yes
 .  else
      # leaving a package (in the buildlink tree)
-.    if !empty(_use_)
+.    if ${USE_BUILTIN.${_pkg_:S/^-//}:M[Yy][Ee][Ss]}
        # this package is going to use the builtin version
 .      if ${_ok_} != yes
          # not ok for it to be builtin; force it to pkgsrc
@@ -149,7 +142,7 @@ _ignore_:=${IGNORE_PKG.${_pkg_:S/^-//}:M[Yy][Ee][Ss]}
 .      else
          #.say "${_stack_:C/.*/  /} ${_pkg_:S/^-//} built-in"
 .      endif
-.    elif empty(_ignore_)
+.    elif !${IGNORE_PKG.${_pkg_:S/^-//}:M[Yy][Ee][Ss]}
        # no builtin version or not using it
        #.say "${_stack_:C/.*/  /} ${_pkg_:S/^-//} pkgsrc"
 .      if ${_ok_} == yes
