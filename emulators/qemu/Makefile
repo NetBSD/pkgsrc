@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.298 2022/07/02 11:40:52 adam Exp $
+# $NetBSD: Makefile,v 1.299 2022/07/10 12:20:04 wiz Exp $
 
 DISTNAME=	qemu-7.0.0
 PKGREVISION=	2
@@ -22,8 +22,10 @@ HAS_CONFIGURE=		yes
 # https://github.com/qemu/qemu/commit/56208a0d473c6db263cc333c787ca48b502d72ab
 GCC_REQD+=		7
 
-PYTHON_VERSIONED_DEPENDENCIES=	sphinx:tool
-BUILD_DEPENDS+=		${PYPKGPREFIX}-sphinx-rtd-theme>=0.4.3:../../textproc/py-sphinx-rtd-theme
+PYTHON_VERSIONS_INCOMPATIBLE	27
+
+TOOL_DEPENDS+=		${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
+TOOL_DEPENDS+=		${PYPKGPREFIX}-sphinx-rtd-theme>=0.4.3:../../textproc/py-sphinx-rtd-theme
 
 SUBST_CLASSES+=			sphinx-build
 SUBST_STAGE.sphinx-build=	pre-configure
@@ -205,7 +207,6 @@ post-install:
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../lang/python/tool.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../net/libslirp/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
