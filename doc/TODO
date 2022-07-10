@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22007 2022/07/10 20:15:18 wiz Exp $
+$NetBSD: TODO,v 1.22008 2022/07/10 20:23:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -473,7 +473,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o avidemux-2.8
 	o avl-2.0.3 [2.x is not source and binary compatible with 1.x]
 	o avr-gdb-10.1
-	o babl-0.1.92
 	o baci-20040415
 	o baloo-21.04.0
 	o basket-2.11b
