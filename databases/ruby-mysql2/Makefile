@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2021/06/23 20:33:10 nia Exp $
+# $NetBSD: Makefile,v 1.24 2022/07/10 06:09:40 taca Exp $
 #
 
-DISTNAME=	mysql2-0.5.3
-PKGREVISION=	1
+DISTNAME=	mysql2-0.5.4
 CATEGORIES=	databases ruby
 
 MAINTAINER=	taca@NetBSD.org
