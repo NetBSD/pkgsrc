@@ -1,4 +1,0 @@
-bin/sphinx-apidoc @PREFIX@/bin/sphinx-apidoc-@PYVERSSUFFIX@
-bin/sphinx-autogen @PREFIX@/bin/sphinx-autogen-@PYVERSSUFFIX@
-bin/sphinx-build @PREFIX@/bin/sphinx-build-@PYVERSSUFFIX@
-bin/sphinx-quickstart @PREFIX@/bin/sphinx-quickstart-@PYVERSSUFFIX@
