@@ -1,0 +1,26 @@
+$NetBSD: patch-Makefile,v 1.1 2022/07/10 02:40:52 khorben Exp $
+
+Set the rpath when linking libpe
+Set an absolute install_name when linking libpe on macOS
+
+--- Makefile.orig	2021-01-11 23:28:07.000000000 +0000
++++ Makefile
+@@ -53,7 +53,8 @@ override CFLAGS += \
+ 	-I"./include" \
+ 	-W -Wall -Wextra -pedantic -std=c99 -c
+ override CPPFLAGS += -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2
+-override LDFLAGS += -lssl -lcrypto
++override LDFLAGS += -lssl -lcrypto \
++	-Wl,-rpath,$(libdir)
+ 
+ ifneq ($(PLATFORM_OS), CYGWIN)
+ 	override CFLAGS += -fPIC
+@@ -90,7 +91,7 @@ else ifeq ($(PLATFORM_OS), OpenBSD)
+ 	$(LINK) -shared -Wl,-soname,$(LIBNAME).so.1 $(LDFLAGS) -o $(LIBNAME).so $^
+ else ifeq ($(PLATFORM_OS), Darwin)
+ 	$(LINK) -headerpad_max_install_names -dynamiclib \
+-		-flat_namespace -install_name $(LIBNAME).$(VERSION).dylib \
++		-flat_namespace -install_name $(libdir)/$(LIBNAME).$(VERSION).dylib \
+ 		-current_version $(VERSION) -compatibility_version $(VERSION) \
+ 		$(LDFLAGS) -o $(LIBNAME).dylib $^
+ else ifeq ($(PLATFORM_OS), CYGWIN)
