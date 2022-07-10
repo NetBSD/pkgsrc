@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2018/05/10 07:12:53 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2022/07/10 18:43:19 wiz Exp $
 bin/pgadmin3
 share/pgadmin3/branding/branding.ini
 share/pgadmin3/docs/cs_CZ/hints/autovacuum.html
@@ -104,7 +104,6 @@ ${PLIST.doc}share/pgadmin3/docs/en_US/_images/slony-subscription.png
 ${PLIST.doc}share/pgadmin3/docs/en_US/_images/slony-table.png
 ${PLIST.doc}share/pgadmin3/docs/en_US/_images/slony-upgrade.png
 ${PLIST.doc}share/pgadmin3/docs/en_US/_images/status.png
-${PLIST.doc}share/pgadmin3/docs/en_US/_static/ajax-loader.gif
 ${PLIST.doc}share/pgadmin3/docs/en_US/_static/backup-2.png
 ${PLIST.doc}share/pgadmin3/docs/en_US/_static/backup-3.png
 ${PLIST.doc}share/pgadmin3/docs/en_US/_static/backup-4.png
@@ -112,16 +111,11 @@ ${PLIST.doc}share/pgadmin3/docs/en_US/_static/backup-5.png
 ${PLIST.doc}share/pgadmin3/docs/en_US/_static/backup.png
 ${PLIST.doc}share/pgadmin3/docs/en_US/_static/basic.css
 ${PLIST.doc}share/pgadmin3/docs/en_US/_static/classic.css
-${PLIST.doc}share/pgadmin3/docs/en_US/_static/comment-bright.png
-${PLIST.doc}share/pgadmin3/docs/en_US/_static/comment-close.png
-${PLIST.doc}share/pgadmin3/docs/en_US/_static/comment.png
 ${PLIST.doc}share/pgadmin3/docs/en_US/_static/connect.png
 ${PLIST.doc}share/pgadmin3/docs/en_US/_static/debugger.png
 ${PLIST.doc}share/pgadmin3/docs/en_US/_static/default.css
 ${PLIST.doc}share/pgadmin3/docs/en_US/_static/doctools.js
 ${PLIST.doc}share/pgadmin3/docs/en_US/_static/documentation_options.js
-${PLIST.doc}share/pgadmin3/docs/en_US/_static/down-pressed.png
-${PLIST.doc}share/pgadmin3/docs/en_US/_static/down.png
 ${PLIST.doc}share/pgadmin3/docs/en_US/_static/editgrid.png
 ${PLIST.doc}share/pgadmin3/docs/en_US/_static/export.png
 ${PLIST.doc}share/pgadmin3/docs/en_US/_static/file.png
@@ -130,8 +124,9 @@ ${PLIST.doc}share/pgadmin3/docs/en_US/_static/grantwiz.png
 ${PLIST.doc}share/pgadmin3/docs/en_US/_static/gridopt-filter.png
 ${PLIST.doc}share/pgadmin3/docs/en_US/_static/gridopt-sort.png
 ${PLIST.doc}share/pgadmin3/docs/en_US/_static/guru-connect.png
-${PLIST.doc}share/pgadmin3/docs/en_US/_static/jquery-3.2.1.js
+${PLIST.doc}share/pgadmin3/docs/en_US/_static/jquery-3.5.1.js
 ${PLIST.doc}share/pgadmin3/docs/en_US/_static/jquery.js
+${PLIST.doc}share/pgadmin3/docs/en_US/_static/language_data.js
 ${PLIST.doc}share/pgadmin3/docs/en_US/_static/locks.png
 ${PLIST.doc}share/pgadmin3/docs/en_US/_static/logfile.png
 ${PLIST.doc}share/pgadmin3/docs/en_US/_static/main.png
@@ -197,11 +192,8 @@ ${PLIST.doc}share/pgadmin3/docs/en_US/_static/slony-table.png
 ${PLIST.doc}share/pgadmin3/docs/en_US/_static/slony-upgrade.png
 ${PLIST.doc}share/pgadmin3/docs/en_US/_static/status.png
 ${PLIST.doc}share/pgadmin3/docs/en_US/_static/transaction.png
-${PLIST.doc}share/pgadmin3/docs/en_US/_static/underscore-1.3.1.js
+${PLIST.doc}share/pgadmin3/docs/en_US/_static/underscore-1.13.1.js
 ${PLIST.doc}share/pgadmin3/docs/en_US/_static/underscore.js
-${PLIST.doc}share/pgadmin3/docs/en_US/_static/up-pressed.png
-${PLIST.doc}share/pgadmin3/docs/en_US/_static/up.png
-${PLIST.doc}share/pgadmin3/docs/en_US/_static/websupport.js
 ${PLIST.doc}share/pgadmin3/docs/en_US/appendices.html
 ${PLIST.doc}share/pgadmin3/docs/en_US/backup.html
 ${PLIST.doc}share/pgadmin3/docs/en_US/bugreport.html
