@@ -1,15 +1,15 @@
-$NetBSD: patch-setup.py,v 1.9 2020/02/21 06:42:59 adam Exp $
+$NetBSD: patch-setup.py,v 1.10 2022/07/10 20:09:56 wiz Exp $
 
 Allow newer test dependencies.
 
---- setup.py.orig	2020-02-18 22:55:51.000000000 +0000
+--- setup.py.orig	2022-06-29 15:09:45.000000000 +0000
 +++ setup.py
-@@ -49,7 +49,7 @@ requires = [
- 
+@@ -65,7 +65,7 @@ requires = [
+     "certifi>=2017.4.17",
  ]
  test_requirements = [
--    'pytest-httpbin==0.0.7',
-+    'pytest-httpbin>=0.0.7',
-     'pytest-cov',
-     'pytest-mock',
-     'pytest-xdist',
+-    "pytest-httpbin==0.0.7",
++    "pytest-httpbin>=0.0.7",
+     "pytest-cov",
+     "pytest-mock",
+     "pytest-xdist",
