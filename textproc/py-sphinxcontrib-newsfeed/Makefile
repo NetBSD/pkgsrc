@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/01/04 20:55:07 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/07/10 19:05:02 wiz Exp $
 
 DISTNAME=	sphinxcontrib-newsfeed-0.1.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,10 +11,11 @@ HOMEPAGE=	https://bitbucket.org/prometheus/sphinxcontrib-newsfeed
 COMMENT=	News Feed extension for Sphinx
 LICENSE=	2-clause-bsd
 
-PYTHON_VERSIONED_DEPENDENCIES=	sphinx
+DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
