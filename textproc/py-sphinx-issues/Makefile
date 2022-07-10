@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/01/04 20:55:06 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/07/10 19:04:24 wiz Exp $
 
 DISTNAME=	sphinx-issues-1.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,10 +11,11 @@ HOMEPAGE=	https://github.com/sloria/sphinx-issues
 COMMENT=	Sphinx extension for linking to an issue tracker
 LICENSE=	mit
 
-PYTHON_VERSIONED_DEPENDENCIES=	sphinx
+DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
