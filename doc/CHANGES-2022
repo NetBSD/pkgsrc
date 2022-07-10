@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3296 2022/07/10 20:55:26 pin Exp $
+$NetBSD: CHANGES-2022,v 1.3297 2022/07/10 22:34:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4932,3 +4932,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/babl to 0.1.92 [wiz 2022-07-10]
 	Updated textproc/fsrx to 1.0.2 [pin 2022-07-10]
 	Updated audio/spotify-player to 0.9.3 [pin 2022-07-10]
+	Updated graphics/gimp to 2.10.32 [wiz 2022-07-10]
