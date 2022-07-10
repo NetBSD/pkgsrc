@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:30:41 nia Exp $
+$NetBSD: distinfo,v 1.9 2022/07/10 19:52:03 wiz Exp $
 
 BLAKE2s (httpbin-0.7.0.tar.gz) = c25602362782565ce40953f3a531cdc6f943745e1dfa9ece77caa7c68c9ccd4d
 SHA512 (httpbin-0.7.0.tar.gz) = 82e80058b58943637e9f8191764cea79bf7a6e40f36069f9b5d3f908585dbef20a03ef070d1f865d350920b6e874a93a48a544b05c14ff4911038ec2c20f6f63
 Size (httpbin-0.7.0.tar.gz) = 92613 bytes
+SHA1 (patch-httpbin_core.py) = 3c01a77d18d540b6cd5e5a5b013418b6f70a6819
