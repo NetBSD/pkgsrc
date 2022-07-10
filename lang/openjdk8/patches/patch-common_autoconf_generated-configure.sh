@@ -1,12 +1,8 @@
-$NetBSD: patch-common_autoconf_generated-configure.sh,v 1.21 2021/06/27 14:54:41 tnn Exp $
+$NetBSD: patch-common_autoconf_generated-configure.sh,v 1.22 2022/07/10 14:47:24 ryoon Exp $
 
-BOOT_JDK_VERSION part: pkg/51221 (Build error with OpenJDK8 and i386) and
-pkg/53223.
-Fix detection of GCC>=10.
-
---- common/autoconf/generated-configure.sh.orig	2021-05-14 21:52:06.000000000 +0000
+--- common/autoconf/generated-configure.sh.orig	2022-05-26 16:48:39.258220648 +0000
 +++ common/autoconf/generated-configure.sh
-@@ -4191,7 +4191,7 @@ VALID_TOOLCHAINS_all="gcc clang solstudi
+@@ -4198,7 +4198,7 @@ VALID_TOOLCHAINS_all="gcc clang solstudi
  # These toolchains are valid on different platforms
  VALID_TOOLCHAINS_bsd="clang gcc"
  VALID_TOOLCHAINS_linux="gcc clang"
@@ -15,7 +11,7 @@ Fix detection of GCC>=10.
  VALID_TOOLCHAINS_macosx="gcc clang"
  VALID_TOOLCHAINS_aix="xlc"
  VALID_TOOLCHAINS_windows="microsoft"
-@@ -15482,9 +15482,6 @@ done
+@@ -15475,9 +15475,6 @@ done
    # We need to find a recent version of GNU make. Especially on Solaris, this can be tricky.
    if test "x$MAKE" != x; then
      # User has supplied a make, test it.
@@ -25,7 +21,7 @@ Fix detection of GCC>=10.
  
    MAKE_CANDIDATE=""$MAKE""
    DESCRIPTION="user supplied MAKE=$MAKE"
-@@ -20173,7 +20170,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -20352,7 +20349,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -34,7 +30,7 @@ Fix detection of GCC>=10.
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -20505,7 +20502,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -20684,7 +20681,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -43,7 +39,7 @@ Fix detection of GCC>=10.
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -20823,7 +20820,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -21002,7 +20999,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -52,7 +48,7 @@ Fix detection of GCC>=10.
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -21011,7 +21008,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -21190,7 +21187,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -61,7 +57,7 @@ Fix detection of GCC>=10.
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -21289,7 +21286,7 @@ fi
+@@ -21468,7 +21465,7 @@ fi
        # Resolve file symlinks
        while test $COUNTER -lt 20; do
          ISLINK=`$LS -l $sym_link_dir/$sym_link_file | $GREP '\->' | $SED -e 's/.*-> \(.*\)/\1/'`
@@ -70,7 +66,7 @@ Fix detection of GCC>=10.
            # This is not a symbolic link! We are done!
            break
          fi
-@@ -21339,7 +21336,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -21518,7 +21515,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -79,7 +75,7 @@ Fix detection of GCC>=10.
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -21554,7 +21551,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -21733,7 +21730,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -88,7 +84,7 @@ Fix detection of GCC>=10.
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -21734,7 +21731,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -21913,7 +21910,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -97,7 +93,7 @@ Fix detection of GCC>=10.
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -21942,7 +21939,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -22121,7 +22118,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -106,7 +102,7 @@ Fix detection of GCC>=10.
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -22122,7 +22119,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -22301,7 +22298,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -115,7 +111,7 @@ Fix detection of GCC>=10.
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -22330,7 +22327,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -22509,7 +22506,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -124,7 +120,7 @@ Fix detection of GCC>=10.
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -22510,7 +22507,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -22689,7 +22686,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -133,7 +129,7 @@ Fix detection of GCC>=10.
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -22718,7 +22715,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -22897,7 +22894,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -142,7 +138,7 @@ Fix detection of GCC>=10.
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -22898,7 +22895,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -23077,7 +23074,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -151,7 +147,7 @@ Fix detection of GCC>=10.
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -23093,7 +23090,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -23272,7 +23269,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -160,7 +156,7 @@ Fix detection of GCC>=10.
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -23271,7 +23268,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -23450,7 +23447,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -169,7 +165,7 @@ Fix detection of GCC>=10.
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -23467,7 +23464,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -23646,7 +23643,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -178,7 +174,7 @@ Fix detection of GCC>=10.
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -23645,7 +23642,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -23824,7 +23821,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -187,7 +183,7 @@ Fix detection of GCC>=10.
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -23840,7 +23837,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -24019,7 +24016,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -196,7 +192,7 @@ Fix detection of GCC>=10.
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -24018,7 +24015,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -24197,7 +24194,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -205,7 +201,7 @@ Fix detection of GCC>=10.
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -24214,7 +24211,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -24393,7 +24390,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -214,7 +210,7 @@ Fix detection of GCC>=10.
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -24392,7 +24389,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -24571,7 +24568,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -223,7 +219,7 @@ Fix detection of GCC>=10.
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -24569,7 +24566,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -24748,7 +24745,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -232,7 +228,7 @@ Fix detection of GCC>=10.
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -24975,16 +24972,15 @@ $as_echo_n "checking flags for boot jdk 
+@@ -25154,16 +25151,15 @@ $as_echo_n "checking flags for boot jdk 
    # Maximum amount of heap memory.
    # Maximum stack size.
    if test "x$BOOT_JDK_BITS" = x32; then
@@ -250,7 +246,7 @@ Fix detection of GCC>=10.
  
    $ECHO "Check if jvm arg is ok: -Xmx$JVM_MAX_HEAP" >&5
    $ECHO "Command: $JAVA -Xmx$JVM_MAX_HEAP -version" >&5
-@@ -27518,7 +27514,7 @@ $as_echo_n "checking resolved symbolic l
+@@ -27719,7 +27715,7 @@ $as_echo_n "checking resolved symbolic l
        # Resolve file symlinks
        while test $COUNTER -lt 20; do
          ISLINK=`$LS -l $sym_link_dir/$sym_link_file | $GREP '\->' | $SED -e 's/.*-> \(.*\)/\1/'`
@@ -259,7 +255,7 @@ Fix detection of GCC>=10.
            # This is not a symbolic link! We are done!
            break
          fi
-@@ -27973,7 +27969,7 @@ $as_echo_n "checking for resolved symbol
+@@ -28174,7 +28170,7 @@ $as_echo_n "checking for resolved symbol
        # Resolve file symlinks
        while test $COUNTER -lt 20; do
          ISLINK=`$LS -l $sym_link_dir/$sym_link_file | $GREP '\->' | $SED -e 's/.*-> \(.*\)/\1/'`
@@ -268,7 +264,7 @@ Fix detection of GCC>=10.
            # This is not a symbolic link! We are done!
            break
          fi
-@@ -29259,7 +29255,7 @@ $as_echo_n "checking resolved symbolic l
+@@ -29460,7 +29456,7 @@ $as_echo_n "checking resolved symbolic l
        # Resolve file symlinks
        while test $COUNTER -lt 20; do
          ISLINK=`$LS -l $sym_link_dir/$sym_link_file | $GREP '\->' | $SED -e 's/.*-> \(.*\)/\1/'`
@@ -277,7 +273,7 @@ Fix detection of GCC>=10.
            # This is not a symbolic link! We are done!
            break
          fi
-@@ -29714,7 +29710,7 @@ $as_echo_n "checking for resolved symbol
+@@ -29915,7 +29911,7 @@ $as_echo_n "checking for resolved symbol
        # Resolve file symlinks
        while test $COUNTER -lt 20; do
          ISLINK=`$LS -l $sym_link_dir/$sym_link_file | $GREP '\->' | $SED -e 's/.*-> \(.*\)/\1/'`
@@ -286,7 +282,7 @@ Fix detection of GCC>=10.
            # This is not a symbolic link! We are done!
            break
          fi
-@@ -41431,6 +41427,12 @@ $as_echo "$ac_cv_c_bigendian" >&6; }
+@@ -42022,6 +42018,12 @@ $as_echo "$ac_cv_c_bigendian" >&6; }
        SET_SHARED_LIBRARY_ORIGIN="$SET_EXECUTABLE_ORIGIN"
        SET_SHARED_LIBRARY_NAME='-Xlinker -install_name -Xlinker @rpath/$1'
        SET_SHARED_LIBRARY_MAPFILE=''
@@ -299,7 +295,7 @@ Fix detection of GCC>=10.
      else
        # Default works for linux, might work on other platforms as well.
        SHARED_LIBRARY_FLAGS='-shared'
-@@ -41482,7 +41484,9 @@ $as_echo "$ac_cv_c_bigendian" >&6; }
+@@ -42093,7 +42095,9 @@ $as_echo "$ac_cv_c_bigendian" >&6; }
    if test "x$OPENJDK_TARGET_OS" = xsolaris; then
      CFLAGS_JDK="${CFLAGS_JDK} -D__solaris__"
      CXXFLAGS_JDK="${CXXFLAGS_JDK} -D__solaris__"
@@ -309,7 +305,7 @@ Fix detection of GCC>=10.
    fi
    # The (cross) compiler is now configured, we can now test capabilities
    # of the target platform.
-@@ -41623,7 +41627,7 @@ $as_echo "$ac_cv_c_bigendian" >&6; }
+@@ -42253,7 +42257,7 @@ $as_echo "$ac_cv_c_bigendian" >&6; }
    elif test "x$TOOLCHAIN_TYPE" = xgcc; then
      LEGACY_EXTRA_CFLAGS="$LEGACY_EXTRA_CFLAGS -fstack-protector"
      LEGACY_EXTRA_CXXFLAGS="$LEGACY_EXTRA_CXXFLAGS -fstack-protector"
@@ -318,7 +314,7 @@ Fix detection of GCC>=10.
        LDFLAGS_JDK="$LDFLAGS_JDK -Wl,-z,relro"
        LEGACY_EXTRA_LDFLAGS="$LEGACY_EXTRA_LDFLAGS -Wl,-z,relro"
      fi
-@@ -42370,7 +42374,9 @@ $as_echo "$supports" >&6; }
+@@ -43112,7 +43116,9 @@ $as_echo "$supports" >&6; }
        # Enabling pie on 32 bit builds prevents the JVM from allocating a continuous
        # java heap.
        if test "x$OPENJDK_TARGET_CPU_BITS" != "x32"; then
@@ -328,7 +324,7 @@ Fix detection of GCC>=10.
        fi
      fi
    fi
-@@ -42863,7 +42869,8 @@ $as_echo "alsa pulse x11" >&6; }
+@@ -43600,7 +43606,8 @@ $as_echo "alsa pulse x11" >&6; }
    if test "x$OPENJDK_TARGET_OS" = xbsd; then
      { $as_echo "$as_me:${as_lineno-$LINENO}: checking what is not needed on BSD?" >&5
  $as_echo_n "checking what is not needed on BSD?... " >&6; }
@@ -338,7 +334,7 @@ Fix detection of GCC>=10.
        ALSA_NOT_NEEDED=yes
        PULSE_NOT_NEEDED=yes
        { $as_echo "$as_me:${as_lineno-$LINENO}: result: alsa pulse" >&5
-@@ -44093,7 +44100,7 @@ $as_echo "$as_me: WARNING: Can't find pr
+@@ -44830,7 +44837,7 @@ $as_echo "$as_me: WARNING: Can't find pr
      BUILD_FREETYPE=no
    fi
    # Now check if configure found a version of 'msbuild.exe'
@@ -347,7 +343,7 @@ Fix detection of GCC>=10.
      { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: Can't find an msbuild.exe executable (you may try to install .NET 4.0) - ignoring --with-freetype-src" >&5
  $as_echo "$as_me: WARNING: Can't find an msbuild.exe executable (you may try to install .NET 4.0) - ignoring --with-freetype-src" >&2;}
      BUILD_FREETYPE=no
-@@ -44509,7 +44516,11 @@ $as_echo "$as_me: WARNING: --with-freety
+@@ -45246,7 +45253,11 @@ $as_echo "$as_me: WARNING: --with-freety
  
        # Allow --with-freetype-lib and --with-freetype-include to override
        if test "x$with_freetype_include" != x; then
@@ -360,7 +356,7 @@ Fix detection of GCC>=10.
        fi
        if test "x$with_freetype_lib" != x; then
          POTENTIAL_FREETYPE_LIB_PATH="$with_freetype_lib"
-@@ -47619,7 +47630,7 @@ $as_echo "$as_me: The path of FREETYPE_I
+@@ -48356,7 +48367,7 @@ $as_echo "$as_me: The path of FREETYPE_I
      FREETYPE_INCLUDE_PATH="`cd "$path"; $THEPWDCMD -L`"
    fi
  
@@ -369,7 +365,7 @@ Fix detection of GCC>=10.
          FREETYPE_CFLAGS="-I$FREETYPE_INCLUDE_PATH/freetype2 -I$FREETYPE_INCLUDE_PATH"
        else
          FREETYPE_CFLAGS="-I$FREETYPE_INCLUDE_PATH"
-@@ -47752,7 +47763,7 @@ $as_echo "$as_me: The path of FREETYPE_L
+@@ -48489,7 +48500,7 @@ $as_echo "$as_me: The path of FREETYPE_L
        if test "x$OPENJDK_TARGET_OS" = xwindows; then
          FREETYPE_LIBS="$FREETYPE_LIB_PATH/freetype.lib"
        else
@@ -378,7 +374,7 @@ Fix detection of GCC>=10.
        fi
      fi
  
-@@ -49089,9 +49100,6 @@ fi
+@@ -49824,9 +49835,6 @@ fi
  
  
  
@@ -388,7 +384,7 @@ Fix detection of GCC>=10.
  
      llvm_components="jit mcjit engine nativecodegen native"
      unset LLVM_CFLAGS
-@@ -49134,7 +49142,7 @@ fi
+@@ -49869,7 +49877,7 @@ fi
    fi
  
    # libCrun is the c++ runtime-library with SunStudio (roughly the equivalent of gcc's libstdc++.so)
