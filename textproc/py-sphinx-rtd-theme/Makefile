@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2022/01/04 20:55:06 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2022/07/10 19:04:39 wiz Exp $
 
 DISTNAME=	sphinx_rtd_theme-0.4.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
@@ -11,10 +11,11 @@ HOMEPAGE=	https://github.com/rtfd/sphinx_rtd_theme
 COMMENT=	Sphinx readthedocs.org theme
 LICENSE=	modified-bsd AND ofl-v1.1
 
-PYTHON_VERSIONED_DEPENDENCIES=	sphinx
+DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
