@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3292 2022/07/10 20:02:02 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3293 2022/07/10 20:10:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4928,3 +4928,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed textproc/py-sphinx1 successor textproc/py-sphinx [wiz 2022-07-10]
 	Updated www/py-httpbin to 0.7.0nb2 [wiz 2022-07-10]
 	Updated www/py-test-httpbin to 1.0.1 [wiz 2022-07-10]
+	Updated devel/py-requests to 2.28.1 [wiz 2022-07-10]
