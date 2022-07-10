@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/01/17 09:19:45 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2022/07/10 19:17:11 wiz Exp $
 
 DISTNAME=	astropy-sphinx-theme-1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,10 +10,12 @@ HOMEPAGE=	https://github.com/astropy/astropy-sphinx-theme
 COMMENT=	Sphinx theme for Astropy and affiliated packages
 LICENSE=	modified-bsd
 
-PYTHON_VERSIONED_DEPENDENCIES+=	sphinx test:test
+DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
