@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2021/05/30 00:49:51 khorben Exp $
+# $NetBSD: Makefile,v 1.11 2022/07/10 02:55:02 khorben Exp $
 
 .include "../../security/libpe/Makefile.common"
 
@@ -14,6 +14,11 @@ LICENSE=	gnu-gpl-v3
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 MAKE_FLAGS+=	prefix=${PREFIX}
 MAKE_FLAGS+=	mandir=${PREFIX}/${PKGMANDIR}
+
+OPSYSVARS+=	SOEXT
+SOEXT.Darwin=	dylib
+SOEXT.*=	so
+PLIST_SUBST+=	SOEXT=${SOEXT}
 
 .include "../../security/libpe/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
