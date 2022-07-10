@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2022/06/28 11:37:53 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2022/07/10 19:11:09 wiz Exp $
 
 DISTNAME=	gtkada-${GTKADA_VERSION}
 PKGREVISION=	29
@@ -13,7 +13,9 @@ HOMEPAGE=	http://libre.adacore.com/libre/tools/gtkada/
 COMMENT=	Ada graphical toolkit based on Gtk+
 LICENSE=	gnu-gpl-v2
 
-PYTHON_VERSIONED_DEPENDENCIES=	sphinx:build
+BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake perl pkg-config
@@ -66,6 +68,6 @@ post-install:
 	${RM} -rf ${DESTDIR}${PREFIX}/share/doc/gtkada/gtkada_ug/_sources
 
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../lang/python/versioned_dependencies.mk"
+.include "../../lang/python/pyversion.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
