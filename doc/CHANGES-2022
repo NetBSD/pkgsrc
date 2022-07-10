@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3290 2022/07/10 19:27:10 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3291 2022/07/10 19:52:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4926,3 +4926,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed devel/gps [wiz 2022-07-10]
 	Updated sysutils/salt-docs to 3004nb2 [wiz 2022-07-10]
 	Removed textproc/py-sphinx1 successor textproc/py-sphinx [wiz 2022-07-10]
+	Updated www/py-httpbin to 0.7.0nb2 [wiz 2022-07-10]
