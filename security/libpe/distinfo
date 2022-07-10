@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:17:14 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/07/10 02:40:52 khorben Exp $
 
 BLAKE2s (libpe-0.81-ce39b127328e3863e08163962f7ecc768eb2555e.tar.gz) = c03b0febd665c337ff7a1a9f47bd77c97c6cde2ba07f8085de61c3d2580c9757
 SHA512 (libpe-0.81-ce39b127328e3863e08163962f7ecc768eb2555e.tar.gz) = 3d05f896c710e2daffe34503409d9a2201d86fa14dad722aa14c23bb84cc88e45ff38a8e2746766f194e8b9b54bb9b07ae64b5bf7d8fd928db27fa895ea101c2
 Size (libpe-0.81-ce39b127328e3863e08163962f7ecc768eb2555e.tar.gz) = 123068 bytes
+SHA1 (patch-Makefile) = dabd1c3396948adfa6084b9161ea834e5521a6aa
