@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.299 2022/07/10 12:20:04 wiz Exp $
+# $NetBSD: Makefile,v 1.300 2022/07/10 14:36:25 ryoon Exp $
 
 DISTNAME=	qemu-7.0.0
 PKGREVISION=	2
@@ -22,7 +22,7 @@ HAS_CONFIGURE=		yes
 # https://github.com/qemu/qemu/commit/56208a0d473c6db263cc333c787ca48b502d72ab
 GCC_REQD+=		7
 
-PYTHON_VERSIONS_INCOMPATIBLE	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 TOOL_DEPENDS+=		${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 TOOL_DEPENDS+=		${PYPKGPREFIX}-sphinx-rtd-theme>=0.4.3:../../textproc/py-sphinx-rtd-theme
