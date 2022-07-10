@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2022/01/05 15:41:30 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2022/07/10 19:06:44 wiz Exp $
 
 DISTNAME=		pelican-4.5.0
 GITHUB_PROJECT=		pelican
@@ -12,6 +12,7 @@ HOMEPAGE=		https://blog.getpelican.com/
 COMMENT=		Static site generator that supports Markdown and reST syntax
 LICENSE=		gnu-agpl-v3
 
+BUILD_DEPENDS+=		${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 DEPENDS+=		${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
 DEPENDS+=		${PYPKGPREFIX}-markdown-[0-9]*:../../textproc/py-markdown
 DEPENDS+=		${PYPKGPREFIX}-jinja2>=2.7:../../textproc/py-jinja2
@@ -23,9 +24,7 @@ DEPENDS+=		${PYPKGPREFIX}-Unidecode-[0-9]*:../../textproc/py-Unidecode
 DEPENDS+=		${PYPKGPREFIX}-six>=1.4:../../lang/py-six
 DEPENDS+=		${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 
-# Starting version 4.5.0, Pelican removed support for Python 2.7
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-PYTHON_VERSIONED_DEPENDENCIES=	sphinx:build
 
 USE_PKG_RESOURCES=	yes
 
@@ -66,5 +65,4 @@ post-install:
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
