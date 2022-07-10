@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3293 2022/07/10 20:10:05 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3294 2022/07/10 20:23:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4929,3 +4929,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/py-httpbin to 0.7.0nb2 [wiz 2022-07-10]
 	Updated www/py-test-httpbin to 1.0.1 [wiz 2022-07-10]
 	Updated devel/py-requests to 2.28.1 [wiz 2022-07-10]
+	Updated graphics/babl to 0.1.92 [wiz 2022-07-10]
