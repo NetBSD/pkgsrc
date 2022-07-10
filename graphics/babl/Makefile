@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.47 2022/04/12 23:43:44 tnn Exp $
+# $NetBSD: Makefile,v 1.48 2022/07/10 20:23:38 wiz Exp $
 
-DISTNAME=	babl-0.1.90
-PKGREVISION=	1
+DISTNAME=	babl-0.1.92
 CATEGORIES=	graphics
 MASTER_SITES=	https://download.gimp.org/pub/babl/${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.xz
@@ -64,6 +63,8 @@ BUILDLINK_TRANSFORM.Darwin+=	rm:-Wl,--version-script
 BUILDLINK_TRANSFORM.Darwin+=	rm:-Wl,babl.map
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,babl.map
+
+TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/babl
 
 .include "../../devel/meson/build.mk"
 .include "../../devel/glib2/buildlink3.mk"
