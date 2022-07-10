@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.77 2021/10/01 15:50:14 wiz Exp $
+@comment $NetBSD: PLIST,v 1.78 2022/07/10 22:34:30 wiz Exp $
 bin/gimp
 bin/gimp-2.10
 bin/gimp-console
@@ -4088,8 +4088,11 @@ share/gimp/2.0/themes/Dark/ui/menuitem.png
 share/gimp/2.0/themes/Dark/ui/minus.png
 share/gimp/2.0/themes/Dark/ui/notebook.png
 share/gimp/2.0/themes/Dark/ui/null.png
+share/gimp/2.0/themes/Dark/ui/option1-prelight.png
 share/gimp/2.0/themes/Dark/ui/option1.png
+share/gimp/2.0/themes/Dark/ui/option2-prelight.png
 share/gimp/2.0/themes/Dark/ui/option2.png
+share/gimp/2.0/themes/Dark/ui/option3-prelight.png
 share/gimp/2.0/themes/Dark/ui/option3.png
 share/gimp/2.0/themes/Dark/ui/plus.png
 share/gimp/2.0/themes/Dark/ui/progressbar-trough.png
@@ -4110,6 +4113,7 @@ share/gimp/2.0/themes/Dark/ui/spin-up-pressed.png
 share/gimp/2.0/themes/Dark/ui/spin.png
 share/gimp/2.0/themes/Dark/ui/toolbar.png
 share/gimp/2.0/themes/Dark/ui/transparent.png
+share/gimp/2.0/themes/Dark/ui/treeview-item-prelight.png
 share/gimp/2.0/themes/Gray/gtkrc
 share/gimp/2.0/themes/Gray/ui/arrow-down-insens.png
 share/gimp/2.0/themes/Gray/ui/arrow-down-prelight.png
@@ -4233,6 +4237,7 @@ share/gimp/2.0/themes/Gray/ui/spin-up-pressed.png
 share/gimp/2.0/themes/Gray/ui/spin.png
 share/gimp/2.0/themes/Gray/ui/toolbar.png
 share/gimp/2.0/themes/Gray/ui/transparent.png
+share/gimp/2.0/themes/Gray/ui/treeview-item-prelight.png
 share/gimp/2.0/themes/Light/gtkrc
 share/gimp/2.0/themes/Light/ui/arrow-down-insens.png
 share/gimp/2.0/themes/Light/ui/arrow-down-prelight.png
@@ -4358,6 +4363,7 @@ share/gimp/2.0/themes/Light/ui/spin-up-pressed.png
 share/gimp/2.0/themes/Light/ui/spin.png
 share/gimp/2.0/themes/Light/ui/toolbar.png
 share/gimp/2.0/themes/Light/ui/transparent.png
+share/gimp/2.0/themes/Light/ui/treeview-item-prelight.png
 share/gimp/2.0/themes/System/gtkrc
 share/gimp/2.0/tips/gimp-tips.xml
 share/gimp/2.0/tool-presets/Crop/16_10.gtp
@@ -5190,6 +5196,7 @@ share/locale/ja/LC_MESSAGES/gimp20-python.mo
 share/locale/ja/LC_MESSAGES/gimp20-script-fu.mo
 share/locale/ja/LC_MESSAGES/gimp20-std-plug-ins.mo
 share/locale/ja/LC_MESSAGES/gimp20.mo
+share/locale/ka/LC_MESSAGES/gimp20-libgimp.mo
 share/locale/ka/LC_MESSAGES/gimp20.mo
 share/locale/kab/LC_MESSAGES/gimp20-python.mo
 share/locale/kab/LC_MESSAGES/gimp20-std-plug-ins.mo
