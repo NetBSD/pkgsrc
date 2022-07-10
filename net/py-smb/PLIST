@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2022/07/05 12:58:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/07/10 21:12:35 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -61,9 +61,9 @@ ${PYSITELIB}/smb/smb_constants.pyo
 ${PYSITELIB}/smb/smb_structs.py
 ${PYSITELIB}/smb/smb_structs.pyc
 ${PYSITELIB}/smb/smb_structs.pyo
-${PYSITELIB}/smb/strategy.py
-${PYSITELIB}/smb/strategy.pyc
-${PYSITELIB}/smb/strategy.pyo
+${PLIST.py3x}${PYSITELIB}/smb/strategy.py
+${PLIST.py3x}${PYSITELIB}/smb/strategy.pyc
+${PLIST.py3x}${PYSITELIB}/smb/strategy.pyo
 ${PYSITELIB}/smb/utils/U32.py
 ${PYSITELIB}/smb/utils/U32.pyc
 ${PYSITELIB}/smb/utils/U32.pyo
