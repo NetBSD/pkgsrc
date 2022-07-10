@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3283 2022/07/10 11:08:29 leot Exp $
+$NetBSD: CHANGES-2022,v 1.3284 2022/07/10 14:48:16 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4920,3 +4920,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated print/py-weasyprint to 56.0 [kleink 2022-07-09]
 	Added filesystems/cocofs version 1.0 [thorpej 2022-07-09]
 	Updated databases/ruby-mysql2 to 0.5.4 [taca 2022-07-10]
+	Updated lang/openjdk8 to 1.8.332 [ryoon 2022-07-10]
