@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/05/29 23:28:36 khorben Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/07/10 02:55:02 khorben Exp $
 bin/ofs2rva
 bin/pedis
 bin/pehash
@@ -10,11 +10,11 @@ bin/pesec
 bin/pestr
 bin/readpe
 bin/rva2ofs
-lib/pev/plugins/csv_plugin.so
-lib/pev/plugins/html_plugin.so
-lib/pev/plugins/json_plugin.so
-lib/pev/plugins/text_plugin.so
-lib/pev/plugins/xml_plugin.so
+lib/pev/plugins/csv_plugin.${SOEXT}
+lib/pev/plugins/html_plugin.${SOEXT}
+lib/pev/plugins/json_plugin.${SOEXT}
+lib/pev/plugins/text_plugin.${SOEXT}
+lib/pev/plugins/xml_plugin.${SOEXT}
 man/man1/ofs2rva.1
 man/man1/pedis.1
 man/man1/pehash.1
