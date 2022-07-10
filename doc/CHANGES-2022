@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3285 2022/07/10 16:32:43 brook Exp $
+$NetBSD: CHANGES-2022,v 1.3286 2022/07/10 18:43:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4922,3 +4922,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/ruby-mysql2 to 0.5.4 [taca 2022-07-10]
 	Updated lang/openjdk8 to 1.8.332 [ryoon 2022-07-10]
 	Updated sysutils/u-boot-beagleboneblack to 2022.04 [brook 2022-07-10]
+	Updated databases/pgadmin3 to 1.22.2nb13 [wiz 2022-07-10]
