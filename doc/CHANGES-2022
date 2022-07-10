@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3288 2022/07/10 19:25:11 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3289 2022/07/10 19:26:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4925,3 +4925,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/pgadmin3 to 1.22.2nb13 [wiz 2022-07-10]
 	Removed devel/gps [wiz 2022-07-10]
 	Updated sysutils/salt-docs to 3004nb2 [wiz 2022-07-10]
+	Removed textproc/py-sphinx1 [wiz 2022-07-10]
