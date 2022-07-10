@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3284 2022/07/10 14:48:16 ryoon Exp $
+$NetBSD: CHANGES-2022,v 1.3285 2022/07/10 16:32:43 brook Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4921,3 +4921,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added filesystems/cocofs version 1.0 [thorpej 2022-07-09]
 	Updated databases/ruby-mysql2 to 0.5.4 [taca 2022-07-10]
 	Updated lang/openjdk8 to 1.8.332 [ryoon 2022-07-10]
+	Updated sysutils/u-boot-beagleboneblack to 2022.04 [brook 2022-07-10]
