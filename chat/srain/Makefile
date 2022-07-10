@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2022/04/18 19:10:32 adam Exp $
+# $NetBSD: Makefile,v 1.18 2022/07/10 17:20:33 wiz Exp $
 
 DISTNAME=	srain-1.3.2
 PKGREVISION=	1
@@ -9,6 +9,10 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://srain.im/
 COMMENT=	Modern IRC client written in GTK
 LICENSE=	gnu-gpl-v3
+
+TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_TOOLS+=	pkg-config
 USE_TOOLS+=	msgfmt msgmerge xgettext
@@ -26,18 +30,16 @@ SUBST_FILES.sphinx=	doc/meson.build
 SUBST_MESSAGE.sphinx=	Fixing sphinx binary name.
 SUBST_SED.sphinx+=	-e "s,sphinx-build,sphinx-build-${PYVERSSUFFIX},"
 
-PYTHON_VERSIONED_DEPENDENCIES=	sphinx:tool
-
 PYTHON_FOR_BUILD_ONLY=	tool
 
 post-install:
 	${RM} -f ${DESTDIR}${PREFIX}/share/srain/themes/meson.build
 
+.include "../../lang/python/pyversion.mk"
 .include "../../devel/meson/build.mk"
 .include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../devel/libconfig/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../net/libsoup/buildlink3.mk"
 .include "../../security/libsecret/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
