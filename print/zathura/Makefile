@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2022/04/18 19:11:58 adam Exp $
+# $NetBSD: Makefile,v 1.49 2022/07/10 17:24:18 wiz Exp $
 
 DISTNAME=	zathura-0.4.9
 PKGREVISION=	1
@@ -11,9 +11,11 @@ HOMEPAGE=	https://pwmt.org/projects/zathura/
 COMMENT=	PDF viewer with vi-like keybindings
 LICENSE=	zlib
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
+
 USE_TOOLS+=	pkg-config
 
-PYTHON_VERSIONED_DEPENDENCIES=	sphinx:tool
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 # Avoid possible dependency on librsvg
 MESON_ARGS+=	-D convert-icon=disabled
@@ -37,10 +39,10 @@ TOOLS_PLATFORM.msgfmt=
 .include "../../devel/meson/build.mk"
 .include "../../devel/gettext-tools/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
-BUILDLINK_ABI_DEPENDS.girara?=	girara>=0.3.7
+BUILDLINK_API_DEPENDS.girara?=	girara>=0.3.7
 .include "../../graphics/girara/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../lang/python/versioned_dependencies.mk"
+.include "../../lang/python/pyversion.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/file/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
