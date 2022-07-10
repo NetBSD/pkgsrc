@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2022/07/01 20:36:12 pin Exp $
+$NetBSD: distinfo,v 1.16 2022/07/10 23:00:33 pin Exp $
 
 BLAKE2s (adler-1.0.2.crate) = f263779d752af886455fc0f42c997893fb1a09edcf1bd2980605251c2e3602aa
 SHA512 (adler-1.0.2.crate) = 7ab190d31890fc05b0b55d8e2c6527a505e06793d5496be0b3831e0513412f9ba97f8148f6f68ed0770fa9cd980a5092d885e058becf1d5506b7c74b82674aa1
@@ -225,6 +225,9 @@ Size (lock_api-0.4.7.crate) = 25371 bytes
 BLAKE2s (log-0.4.17.crate) = 6994234f481cfe97b62255329a6c6f4a07dcdb193cc54d2c7ddda0519b41d214
 SHA512 (log-0.4.17.crate) = 2477d88db42b1d92c30708d88823212e236f613b3465e85eb425f83f8d16fadfaf0352f06c2999a1852102edd2f6ffb10ecb539d8a3b6c48f552a25622ccffa2
 Size (log-0.4.17.crate) = 38028 bytes
+BLAKE2s (m3u8-rs-4.0.0.crate) = 66e2a9df4f8213839eed8a276dbe6462e2eb0d3c4427f425ea29c43f846b7d20
+SHA512 (m3u8-rs-4.0.0.crate) = b716b60284025a313fbabd931aecf03947d4ff1bfc0710ccab62f660fc3135d6daa7ddff0b2d2a203bd34a0f8a112172c7387ec23b173276922af47fc7a917cb
+Size (m3u8-rs-4.0.0.crate) = 26172 bytes
 BLAKE2s (mac-0.1.1.crate) = 3124d669e657d967992edce0a20d742ace52af8b9a0e9fa62f09f1e74851f896
 SHA512 (mac-0.1.1.crate) = dbc6def04c482911ace311f34be79992fa04042c7ce36b71459b5af5c1c43e9fa66b6b40f63f8c3647daba287bf1c1be9b1a8031ead1d855f99a988898c96f1a
 Size (mac-0.1.1.crate) = 4838 bytes
@@ -240,6 +243,9 @@ Size (memchr-2.5.0.crate) = 65812 bytes
 BLAKE2s (mime-0.3.16.crate) = 0b9e3a74a1d79c695679fd795f27d97ea837ce415d8c057edc9b30381a1ce60c
 SHA512 (mime-0.3.16.crate) = cb1d691610cb82720e553247336fc5eab63407ad37febf2eb50aaa4e329cca70959ecd8bb8c7af5753acec2c8e86fc9a0f8ad9ad2de93fe9295ce84033d6054c
 Size (mime-0.3.16.crate) = 15206 bytes
+BLAKE2s (minimal-lexical-0.2.1.crate) = 7868d0264ff2c8d6fd1944aac77710c2163c9c0bb7488ee70835966d9a324022
+SHA512 (minimal-lexical-0.2.1.crate) = 385fab51884bdcc7b0f2728a219ab164d0dc8efe42160b918f2c09f79ecf853fb12bda006d11e649f097bae1499dcd41ddf2a8784ee7d178cf2c28059e46078c
+Size (minimal-lexical-0.2.1.crate) = 94841 bytes
 BLAKE2s (miniz_oxide-0.5.1.crate) = 847f6ccabb2124e08828a24ff56d3a6743a69cd32a41f81804cd00905e0bb74e
 SHA512 (miniz_oxide-0.5.1.crate) = 7fd2c28f3afcb993d48452eac55d0d6037f4eab5c05d6d9abbaab76145d5ea9c6163af9b6461f91d4940c91b9b7734a351096a313311c07cc53518559d578c01
 Size (miniz_oxide-0.5.1.crate) = 52418 bytes
@@ -255,6 +261,9 @@ Size (new_debug_unreachable-1.0.4.crate) = 2561 bytes
 BLAKE2s (nodrop-0.1.14.crate) = 2076fa1dc5ee934f6234cdf30b9af93d13cfec10de4acd32e79f979bb1b438c9
 SHA512 (nodrop-0.1.14.crate) = f583ef6104aa087e13c66a183d451d4cf350560476ca959ce4e0e8308db26ac9f31166c25aca3d50ccd972266d7595d89767655504566a4131a54607e8ed9376
 Size (nodrop-0.1.14.crate) = 7667 bytes
+BLAKE2s (nom-7.1.1.crate) = 347cce605f3edc9e6dd8f9c30b9d75e4216e959bfc9e9973987fa9e2393f3b40
+SHA512 (nom-7.1.1.crate) = 1456efdbda4f5b3da6c8580721acf101ed7d779619ee0190c1df103244e405a8ffa0c3889901a2d8beeab0ab84074ed4c7cec5330c7cc2a5a3c30e36a2530be8
+Size (nom-7.1.1.crate) = 115818 bytes
 BLAKE2s (num-integer-0.1.45.crate) = 6851d06be3e09bf92658acd4e10dedfc9721516087e927cf26a95404d75a4ce9
 SHA512 (num-integer-0.1.45.crate) = 731bdc09c3af7f9d8b171041f2957aa60facef93b06886000d8ba60d410aabbbee358d700bf31b2588b2e077464f290f24a0b712df7bb7f12972675b6c9bd735
 Size (num-integer-0.1.45.crate) = 22529 bytes
