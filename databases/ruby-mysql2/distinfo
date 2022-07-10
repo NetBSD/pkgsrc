@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.22 2021/10/26 10:10:03 nia Exp $
+$NetBSD: distinfo,v 1.23 2022/07/10 06:09:40 taca Exp $
 
-BLAKE2s (mysql2-0.5.3.gem) = 8c0d77b29f53168c14733e8106e876d89b7ddb9a46ca92068956682aac2fa32f
-SHA512 (mysql2-0.5.3.gem) = 59a0ee00261b09e8bbfc586a6f75af840a465a94fd8c9463a3d7767e5ea6b7e64507c9571fb90c6d0cdde3cfff560c97fbf3f3c32b3916aca852ef5c41e1bce9
-Size (mysql2-0.5.3.gem) = 74240 bytes
+BLAKE2s (mysql2-0.5.4.gem) = 2e22b972e3b51eef2f3efc021de743ba4538fee06f03260d5cd10c195b23d636
+SHA512 (mysql2-0.5.4.gem) = 7852afe449f6931d0dc6ceba542a49280170af56c9f2f1fa369224e1633b6cbd03c1dfeae9d7b2c2c3e0e63fe6dd386b030e0249c9c9de1863476729490c1c9b
+Size (mysql2-0.5.4.gem) = 79360 bytes
