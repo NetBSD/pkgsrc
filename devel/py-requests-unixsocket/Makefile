@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2022/04/29 23:29:18 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/07/11 09:31:04 adam Exp $
 
-DISTNAME=	requests-unixsocket-0.2.0
+DISTNAME=	requests-unixsocket-0.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/requests-unixsocket/}
 
@@ -13,7 +12,6 @@ LICENSE=	apache-2.0
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-pbr-[0-9]*:../../devel/py-pbr
 DEPENDS+=	${PYPKGPREFIX}-requests>=1.1:../../devel/py-requests
-DEPENDS+=	${PYPKGPREFIX}-urllib3>=1.8:../../www/py-urllib3
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
