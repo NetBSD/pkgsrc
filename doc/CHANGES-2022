@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3308 2022/07/11 11:53:55 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3309 2022/07/11 12:36:30 micha Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4955,3 +4955,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-atomicwrites to 1.4.1 [adam 2022-07-11]
 	Updated multimedia/gerbera to 1.11.0 [adam 2022-07-11]
 	Updated devel/py-packageurl to 0.10.0 [adam 2022-07-11]
+	Updated editors/xnedit to 1.4.1 [micha 2022-07-11]
