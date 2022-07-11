@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3329 2022/07/11 23:04:00 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3330 2022/07/11 23:19:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4978,3 +4978,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/xf86-video-mga to 2.0.1 [wiz 2022-07-11]
 	Updated x11/libdrm to 2.4.112 [wiz 2022-07-11]
 	Updated security/openssl to 1.1.1q [wiz 2022-07-11]
+	Removed devel/undebt [wiz 2022-07-11]
