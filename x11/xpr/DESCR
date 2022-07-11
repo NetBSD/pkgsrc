@@ -1,2 +1,2 @@
-xpr takes as input a window dump file produced by xwd and formats it for output
-on various types of printers.
+xpr takes as input a window dump file produced by xwd and formats
+it for output on various types of printers.
