@@ -1,5 +1,0 @@
-Undebt is a fast, straightforward, reliable tool for performing
-massive, automated code refactoring used @Yelp. Undebt lets you
-define complex find-and-replace rules using standard, straightforward
-Python that can be applied quickly to an entire code base with a
-simple command.
