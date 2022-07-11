@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3302 2022/07/11 08:26:21 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3303 2022/07/11 08:47:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4942,3 +4942,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/spice-gtk to 0.39 [wiz 2022-07-11]
 	Updated audio/wavpack to 5.5.0 [adam 2022-07-11]
 	Updated audio/musicpd to 0.23.8 [adam 2022-07-11]
+	Updated devel/py-test-sugar to 0.9.5 [adam 2022-07-11]
+	Updated net/py-amqp to 5.1.1 [adam 2022-07-11]
+	Updated net/py-kombu to 5.2.4 [adam 2022-07-11]
+	Updated multimedia/mkvtoolnix to 69.0.0 [adam 2022-07-11]
