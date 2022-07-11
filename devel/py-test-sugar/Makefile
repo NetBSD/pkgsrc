@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2022/01/04 20:53:42 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2022/07/11 08:38:54 adam Exp $
 
-DISTNAME=	pytest-sugar-0.9.4
+DISTNAME=	pytest-sugar-0.9.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-sugar/}
 
@@ -13,7 +12,7 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-termcolor>=1.1.0:../../devel/py-termcolor
 
-PYTHON_VERSIONED_DEPENDENCIES=	test
+PYTHON_VERSIONED_DEPENDENCIES=	packaging test
 
 USE_LANGUAGES=	# none
 
