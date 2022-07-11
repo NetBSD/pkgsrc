@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:18:20 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/07/11 08:48:48 wiz Exp $
 
 BLAKE2s (cpplint-1.5.5.tar.gz) = dff23a9926a84bda664ac8fb9fc928839f7c289ec9711b1f3a7c9f276aee9e71
 SHA512 (cpplint-1.5.5.tar.gz) = 6f5148f5be2fba9e290a2e83a13943bed2d5d388f20c1e4efcc4eb832e905e71afc6ac074cd9553a7dbfeeb527c2759c3281a1243a0d8ce93a2082253d83ebf0
 Size (cpplint-1.5.5.tar.gz) = 361348 bytes
+SHA1 (patch-test-requirements) = a4bb24dc8a5f069772d6ed1296dedbcf001a046f
