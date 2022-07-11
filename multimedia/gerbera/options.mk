@@ -1,5 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2022/02/08 06:26:49 khorben Exp $
-#
+# $NetBSD: options.mk,v 1.2 2022/07/11 11:49:48 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gerbera
 
@@ -14,25 +13,21 @@ CMAKE_ARGS+=	-DWITH_DEBUG=OFF
 
 .if !empty(PKG_OPTIONS:Mffmpeg)
 CMAKE_ARGS+=	-DWITH_AVCODEC=ON
-
 .  include "../../multimedia/ffmpeg4/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mffmpegthumbnailer)
 CMAKE_ARGS+=	-DWITH_FFMPEGTHUMBNAILER=ON
-
 .  include "../../multimedia/ffmpegthumbnailer/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mlastfm)
 CMAKE_ARGS+=	-DWITH_LASTFM=ON
-
 .  include "../../audio/liblastfm/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mjavascript)
 CMAKE_ARGS+=	-DWITH_JS=OFF
-
 .  include "../../lang/libduktape/buildlink3.mk"
 .endif
 
