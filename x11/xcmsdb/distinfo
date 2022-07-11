@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:34:35 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/07/11 19:32:05 wiz Exp $
 
-BLAKE2s (xcmsdb-1.0.5.tar.bz2) = 43d622c3a32933f543fe2d0fc5f9ec5e338ffc54ac722decc487c217935a92b5
-SHA512 (xcmsdb-1.0.5.tar.bz2) = e47bfce87d7531e7809c300e01120c3e8d6001130d9a6c9f6de5bc19651d8712d273a6f54452223bd8c4bff4612b5ecae8db45eddb022da945ed6e14c9c84ae4
-Size (xcmsdb-1.0.5.tar.bz2) = 145419 bytes
+BLAKE2s (xcmsdb-1.0.6.tar.xz) = 55e82117c976457c234a378ce819792d448a8f7cf50350e9f6274402f153b72c
+SHA512 (xcmsdb-1.0.6.tar.xz) = e47d9498ce496effbc44a66e70af91d9fe65c344a17916fd4990a4c84fa8879aa09b6695aeb6ef595f475c16a13c7c31d4c48449234564de7de38d7436764fae
+Size (xcmsdb-1.0.6.tar.xz) = 136708 bytes
