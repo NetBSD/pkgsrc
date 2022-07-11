@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22010 2022/07/11 08:26:21 adam Exp $
+$NetBSD: TODO,v 1.22011 2022/07/11 08:53:16 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1366,6 +1366,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-sybase-0.37
 	o py-syslog-ng-3.31.2
 	o py-terminator-2.1.1
+	o py-test-django-4.5.2
 	o py-tokyocabinet-0.6
 	o py-uliweb-0.6
 	o py-webpy-0.38
