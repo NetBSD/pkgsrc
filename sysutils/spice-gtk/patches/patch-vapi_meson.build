@@ -1,0 +1,22 @@
+$NetBSD: patch-vapi_meson.build,v 1.1 2022/07/11 07:52:57 wiz Exp $
+
+Fix girdirs on Linux
+
+--- vapi/meson.build.orig	2020-12-01 16:31:58.783751000 +0000
++++ vapi/meson.build
+@@ -2,13 +2,14 @@ if spice_gtk_has_vala
+   spice_glib_vapi = gnome.generate_vapi('spice-client-glib-2.0',
+                       install : true,
+                       packages : ['gio-2.0', 'gstreamer-1.0'],
++                      gir_dirs: spice_gtk_datadir / 'gir-1.0',
+                       sources : spice_client_glib_gir[0])
+ 
+   if spice_gtk_has_gtk
+     gnome.generate_vapi('spice-client-gtk-3.0',
+                         install : true,
+                         packages : ['gtk+-3.0', 'gstreamer-1.0', spice_glib_vapi],
+-                        gir_dirs : meson.build_root() / 'src',
++                        gir_dirs : [meson.build_root() / 'src', spice_gtk_datadir / 'gir-1.0'],
+                         vapi_dirs : meson.current_build_dir(),
+                         sources : spice_client_gtk_gir[0])
+   endif
