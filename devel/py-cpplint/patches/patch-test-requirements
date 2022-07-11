@@ -1,0 +1,19 @@
+$NetBSD: patch-test-requirements,v 1.1 2022/07/11 08:48:49 wiz Exp $
+
+Allow current pkgsrc versions, restrictions are for python 2.7
+
+--- test-requirements.orig	2020-08-05 00:41:14.000000000 +0000
++++ test-requirements
+@@ -1,9 +1,8 @@
+ # minimal requirements to run python setup.py test
+ # 5.x requires python 3.5
+-pytest>=4.6,<5.0
++pytest>=4.6
+ pytest-cov
+ # freeze versions breaking python 2.7 on travis
+-pyparsing<3
+-zipp<=0.5.1
+-configparser<=3.7.4
++pyparsing
++zipp
+ testfixtures
