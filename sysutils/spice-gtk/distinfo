@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:20:13 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/07/11 07:52:56 wiz Exp $
 
-BLAKE2s (spice-gtk-0.37.tar.bz2) = 149124f19fd85571ede694e96daca59c22f8dcdfbc4003d90c0bf255edc04b4e
-SHA512 (spice-gtk-0.37.tar.bz2) = a0a20bc6f25337d86e57fe1fc9586c4cc84457fc8c38cdcc5a728990a69018da0fca3ab5aa63349786b5a7508c82b716c94803eefb3495cffb7df4526db2d029
-Size (spice-gtk-0.37.tar.bz2) = 1303111 bytes
-SHA1 (patch-configure) = 2f34b59a9efd9573a0d451ea8e20b728f6ea1e95
+BLAKE2s (spice-gtk-0.39.tar.xz) = 6c78762219e820f302a8b2502a9ba40114d6eea7fc60b51a966da2dea5a30807
+SHA512 (spice-gtk-0.39.tar.xz) = ff0f3ca6b10a2c415f2fa8d61464c5710aaa2a46c2c83909f146fa45f01151e756d9c3d79cb162dd3d0c1279b6ef55a67fc5c1266af2cb5b46ac1eaa0254c8d2
+Size (spice-gtk-0.39.tar.xz) = 845528 bytes
+SHA1 (patch-subprojects_spice-common_common_recorder_make-it-quick_config.gnu.mk) = b1b125b33292370bf46ce621f540217dd34417c7
+SHA1 (patch-subprojects_spice-common_meson.build) = aa5274b68f64ea08ba91da2f28dbbfc0e8a3c841
+SHA1 (patch-vapi_meson.build) = ab38cab9efb27a59874f45679e2bc6e63512ec0c
