@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2017/01/23 21:53:22 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/07/11 06:30:43 adam Exp $
 bin/wavpack
 bin/wvgain
 bin/wvtag
@@ -10,3 +10,9 @@ man/man1/wavpack.1
 man/man1/wvgain.1
 man/man1/wvtag.1
 man/man1/wvunpack.1
+share/doc/wavpack/README.md
+share/doc/wavpack/WavPack5FileFormat.pdf
+share/doc/wavpack/WavPack5LibraryDoc.pdf
+share/doc/wavpack/WavPack5PortingGuide.pdf
+share/doc/wavpack/style.css
+share/doc/wavpack/wavpack_doc.html
