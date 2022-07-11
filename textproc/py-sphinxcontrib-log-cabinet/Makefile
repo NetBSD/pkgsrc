@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/01/04 20:55:07 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/07/11 07:22:04 wiz Exp $
 
 DISTNAME=	sphinxcontrib-log-cabinet-1.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,6 +12,8 @@ COMMENT=	Organize changelog directives in Sphinx docs
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=	# none
 
