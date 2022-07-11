@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2022/05/10 07:21:45 adam Exp $
+# $NetBSD: Makefile,v 1.14 2022/07/11 00:32:34 gutteridge Exp $
 
 DISTNAME=	rst2pdf-0.99
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rst2pdf/}
 
@@ -18,6 +19,7 @@ DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-reportlab-[0-9]*:../../print/py-reportlab
 DEPENDS+=	${PYPKGPREFIX}-smartypants-[0-9]*:../../textproc/py-smartypants
+DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 TEST_DEPENDS+=	${PYPKGPREFIX}-PDF2-[0-9]*:../../print/py-PDF2
 
 USE_LANGUAGES=	# none
