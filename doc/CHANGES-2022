@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3316 2022/07/11 19:31:00 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3317 2022/07/11 19:32:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4965,3 +4965,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/xapian to 1.4.20 [schmonz 2022-07-11]
 	Updated textproc/xapian-omega to 1.4.20 [schmonz 2022-07-11]
 	Updated x11/xclipboard to 1.1.4 [wiz 2022-07-11]
+	Updated x11/xcmsdb to 1.0.6 [wiz 2022-07-11]
