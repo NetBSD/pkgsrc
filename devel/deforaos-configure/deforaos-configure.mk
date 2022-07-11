@@ -1,4 +1,4 @@
-# $NetBSD: deforaos-configure.mk,v 1.7 2022/05/17 18:02:26 khorben Exp $
+# $NetBSD: deforaos-configure.mk,v 1.8 2022/07/11 01:38:20 khorben Exp $
 #
 # used by audio/deforaos-mixer/Makefile
 # used by devel/deforaos-asm/Makefile
@@ -6,6 +6,7 @@
 # used by devel/deforaos-cpp/Makefile
 # used by sysutils/deforaos-browser/Makefile
 # used by x11/deforaos-libdesktop/Makefile
+# used by x11/deforaos-locker/Makefile
 # used by x11/deforaos-panel/Makefile
 
 BUILD_DEPENDS+=	deforaos-configure-[0-9]*:../../devel/deforaos-configure
