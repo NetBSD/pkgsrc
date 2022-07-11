@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:34:55 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/07/11 19:40:33 wiz Exp $
 
-BLAKE2s (xpr-1.0.5.tar.bz2) = 05065c750c97494c1ffcc0a90ff0d04b2253f560d650bd63d28d414b25644a3b
-SHA512 (xpr-1.0.5.tar.bz2) = d5dfb936ec4ad0067d02654dec8e862fe337ff6a2c2f974b2b3a612a829c2e728a0d51e7aba00ed2a94dc96dc50cc69f2c59f522e0635013f5f4f5bb3f4ab967
-Size (xpr-1.0.5.tar.bz2) = 150714 bytes
+BLAKE2s (xpr-1.1.0.tar.xz) = b6444cbc23bec1bdafaa0a948832c1fe6aea9bc4beb3d2b23669d3a7567ef6ca
+SHA512 (xpr-1.1.0.tar.xz) = 53eb896cf1844036a13b1018ffcecbc6a0a56eebe0d7cb6331dbe691207498d2c41f3791655b7fc081acfef2ed9904987f363b710bf0eeff6c8d33f819a951cb
+Size (xpr-1.1.0.tar.xz) = 140244 bytes
