@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3311 2022/07/11 13:36:00 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3312 2022/07/11 14:26:39 micha Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4960,3 +4960,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-cytoolz to 0.12.0 [adam 2022-07-11]
 	Updated time/py-dateparser to 1.1.1 [adam 2022-07-11]
 	Updated time/py-arrow to 1.2.2 [adam 2022-07-11]
+	Updated games/woof to 10.0.3 [micha 2022-07-11]
