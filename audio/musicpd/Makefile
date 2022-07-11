@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.268 2022/07/09 09:13:55 wiz Exp $
+# $NetBSD: Makefile,v 1.269 2022/07/11 08:25:59 adam Exp $
 
-DISTNAME=	mpd-0.23.7
+DISTNAME=	mpd-0.23.8
 PKGNAME=	${DISTNAME:S/mpd/musicpd/}
-PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	https://www.musicpd.org/download/mpd/${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.xz
