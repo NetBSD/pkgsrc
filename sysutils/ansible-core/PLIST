@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2022/05/17 09:29:54 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/07/11 09:28:41 adam Exp $
 bin/ansible
 bin/ansible-config
 bin/ansible-connection
@@ -1541,7 +1541,8 @@ ${PYSITELIB}/ansible_test/_data/playbooks/windows_hosts_prepare.ps1
 ${PYSITELIB}/ansible_test/_data/playbooks/windows_hosts_prepare.yml
 ${PYSITELIB}/ansible_test/_data/playbooks/windows_hosts_restore.ps1
 ${PYSITELIB}/ansible_test/_data/playbooks/windows_hosts_restore.yml
-${PYSITELIB}/ansible_test/_data/pytest.ini
+${PYSITELIB}/ansible_test/_data/pytest/config/default.ini
+${PYSITELIB}/ansible_test/_data/pytest/config/legacy.ini
 ${PYSITELIB}/ansible_test/_data/requirements/ansible.txt
 ${PYSITELIB}/ansible_test/_data/requirements/constraints.txt
 ${PYSITELIB}/ansible_test/_data/requirements/sanity.ansible-doc.in
