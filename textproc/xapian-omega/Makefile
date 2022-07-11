@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.47 2022/06/28 11:36:50 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2022/07/11 18:27:07 schmonz Exp $
 
-PKGREVISION= 1
 .include "../../textproc/xapian/Makefile.common"
 
 DISTNAME=		xapian-omega-${VERSION}
@@ -37,7 +36,7 @@ INSTALL_MAKE_FLAGS+=	${MAKE_FLAGS} sysconfdir=${EGDIR:Q}
 
 BUILD_DEFS+=		VARBASE
 
-.include "../../devel/pcre/buildlink3.mk"
+.include "../../devel/pcre2/buildlink3.mk"
 .include "../../sysutils/file/buildlink3.mk"
 .include "../../textproc/xapian/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
