@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/05/18 07:13:26 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/07/11 09:59:06 triaxx Exp $
 share/examples/roundcube/plugins/carddav/config.inc.php
 share/roundcube/plugins/carddav/carddav.php
 share/roundcube/plugins/carddav/dbmigrations/0000-dbinit/mysql.sql
@@ -57,6 +57,10 @@ share/roundcube/plugins/carddav/dbmigrations/0015-fixmysqlconstraints/README.md
 share/roundcube/plugins/carddav/dbmigrations/0015-fixmysqlconstraints/mysql.sql
 share/roundcube/plugins/carddav/dbmigrations/0015-fixmysqlconstraints/postgres.sql
 share/roundcube/plugins/carddav/dbmigrations/0015-fixmysqlconstraints/sqlite3.sql
+share/roundcube/plugins/carddav/dbmigrations/0016-increasetextfieldlengths/README.md
+share/roundcube/plugins/carddav/dbmigrations/0016-increasetextfieldlengths/mysql.sql
+share/roundcube/plugins/carddav/dbmigrations/0016-increasetextfieldlengths/postgres.sql
+share/roundcube/plugins/carddav/dbmigrations/0016-increasetextfieldlengths/sqlite3.sql
 share/roundcube/plugins/carddav/dbmigrations/INIT-currentschema/mysql.sql
 share/roundcube/plugins/carddav/dbmigrations/INIT-currentschema/postgres.sql
 share/roundcube/plugins/carddav/dbmigrations/INIT-currentschema/sqlite3.sql
@@ -89,6 +93,9 @@ share/roundcube/plugins/carddav/src/DelayedPhotoLoader.php
 share/roundcube/plugins/carddav/src/RoundcubeLogger.php
 share/roundcube/plugins/carddav/src/SyncHandlerRoundcube.php
 share/roundcube/plugins/carddav/vendor/autoload.php
+share/roundcube/plugins/carddav/vendor/bin/generate_vcards
+share/roundcube/plugins/carddav/vendor/bin/rcubeinitdb.sh
+share/roundcube/plugins/carddav/vendor/bin/vobject
 share/roundcube/plugins/carddav/vendor/composer/ClassLoader.php
 share/roundcube/plugins/carddav/vendor/composer/InstalledVersions.php
 share/roundcube/plugins/carddav/vendor/composer/LICENSE
