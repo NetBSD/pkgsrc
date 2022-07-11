@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2018/02/18 05:24:35 rillig Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/07/11 01:36:50 khorben Exp $
 bin/locker
 bin/lockerctl
 include/Desktop/Locker.h
@@ -18,8 +18,26 @@ lib/Locker/plugins/suspend.so
 lib/Locker/plugins/systray.so
 man/man1/locker.1
 man/man1/lockerctl.1
-share/applications/deforaos-locker-settings.desktop
+share/applications/org.defora.locker-settings.desktop
+share/doc/Locker/COPYING
+share/doc/Locker/README.md
 share/doc/deforaos-locker/locker.html
 share/doc/deforaos-locker/lockerctl.html
+share/gtk-doc/html/Locker/Locker-auth.html
+share/gtk-doc/html/Locker/Locker-demo.html
+share/gtk-doc/html/Locker/Locker-plugin.html
+share/gtk-doc/html/Locker/Locker.devhelp2
+share/gtk-doc/html/Locker/api-index-full.html
+share/gtk-doc/html/Locker/ch01.html
+share/gtk-doc/html/Locker/deprecated-api-index.html
+share/gtk-doc/html/Locker/home.png
+share/gtk-doc/html/Locker/index.html
+share/gtk-doc/html/Locker/left-insensitive.png
+share/gtk-doc/html/Locker/left.png
+share/gtk-doc/html/Locker/right-insensitive.png
+share/gtk-doc/html/Locker/right.png
+share/gtk-doc/html/Locker/style.css
+share/gtk-doc/html/Locker/up-insensitive.png
+share/gtk-doc/html/Locker/up.png
 share/locale/es/LC_MESSAGES/Locker.mo
 share/locale/fr/LC_MESSAGES/Locker.mo
