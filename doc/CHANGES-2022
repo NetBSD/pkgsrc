@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3300 2022/07/11 06:18:18 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3301 2022/07/11 07:53:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4939,3 +4939,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/py-tldextract to 3.3.1 [adam 2022-07-11]
 	Updated devel/py-types-setuptools to 62.6.0 [adam 2022-07-11]
 	Updated devel/py-types-ujson to 5.4.0 [adam 2022-07-11]
+	Updated sysutils/spice-gtk to 0.39 [wiz 2022-07-11]
