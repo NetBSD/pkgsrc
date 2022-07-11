@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2021/04/06 14:23:25 adam Exp $
+# $NetBSD: options.mk,v 1.7 2022/07/11 13:34:53 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.py-sqlalchemy-utils
 PKG_SUPPORTED_OPTIONS=	arrow babel color furl intervals ipaddress json password
@@ -9,6 +9,7 @@ PKG_SUGGESTED_OPTIONS+=	# blank
 
 .if !empty(PKG_OPTIONS:Marrow)
 DEPENDS+=	${PYPKGPREFIX}-arrow>=0.3.4:../../time/py-arrow
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 .endif
 
 .if !empty(PKG_OPTIONS:Mbabel)
