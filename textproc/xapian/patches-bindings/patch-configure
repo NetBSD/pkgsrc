@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.5 2021/01/14 18:18:11 schmonz Exp $
+$NetBSD: patch-configure,v 1.6 2022/07/11 18:25:18 schmonz Exp $
 
 - Remove hackaround for old OpenBSD bugs that break builds with other
   STL implementations.
@@ -6,17 +6,17 @@ $NetBSD: patch-configure,v 1.5 2021/01/14 18:18:11 schmonz Exp $
 - Remove broken cross-compile check (builds a bundle, complains it can't
   run as executable) to fix lua-xapian on Big Sur.
 
---- configure.orig	2021-01-14 00:45:37.000000000 +0000
+--- configure.orig	2022-07-04 06:00:37.000000000 +0000
 +++ configure
-@@ -3971,51 +3971,6 @@ FILE *f = fopen ("conftest.out", "w");
+@@ -4745,51 +4745,6 @@ FILE *f = fopen ("conftest.out", "w");
    return 0;
  }
  _ACEOF
 -ac_clean_files="$ac_clean_files conftest.out"
 -# Check that the compiler produces executables we can run.  If not, either
 -# the compiler is broken, or we cross compile.
--{ $as_echo "$as_me:${as_lineno-$LINENO}: checking whether we are cross compiling" >&5
--$as_echo_n "checking whether we are cross compiling... " >&6; }
+-{ printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking whether we are cross compiling" >&5
+-printf %s "checking whether we are cross compiling... " >&6; }
 -if test "$cross_compiling" != yes; then
 -  { { ac_try="$ac_link"
 -case "(($ac_try" in
@@ -24,10 +24,10 @@ $NetBSD: patch-configure,v 1.5 2021/01/14 18:18:11 schmonz Exp $
 -  *) ac_try_echo=$ac_try;;
 -esac
 -eval ac_try_echo="\"\$as_me:${as_lineno-$LINENO}: $ac_try_echo\""
--$as_echo "$ac_try_echo"; } >&5
+-printf "%s\n" "$ac_try_echo"; } >&5
 -  (eval "$ac_link") 2>&5
 -  ac_status=$?
--  $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+-  printf "%s\n" "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
 -  test $ac_status = 0; }
 -  if { ac_try='./conftest$ac_cv_exeext'
 -  { { case "(($ac_try" in
@@ -35,32 +35,32 @@ $NetBSD: patch-configure,v 1.5 2021/01/14 18:18:11 schmonz Exp $
 -  *) ac_try_echo=$ac_try;;
 -esac
 -eval ac_try_echo="\"\$as_me:${as_lineno-$LINENO}: $ac_try_echo\""
--$as_echo "$ac_try_echo"; } >&5
+-printf "%s\n" "$ac_try_echo"; } >&5
 -  (eval "$ac_try") 2>&5
 -  ac_status=$?
--  $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+-  printf "%s\n" "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
 -  test $ac_status = 0; }; }; then
 -    cross_compiling=no
 -  else
 -    if test "$cross_compiling" = maybe; then
 -	cross_compiling=yes
 -    else
--	{ { $as_echo "$as_me:${as_lineno-$LINENO}: error: in \`$ac_pwd':" >&5
--$as_echo "$as_me: error: in \`$ac_pwd':" >&2;}
--as_fn_error $? "cannot run C compiled programs.
+-	{ { printf "%s\n" "$as_me:${as_lineno-$LINENO}: error: in \`$ac_pwd':" >&5
+-printf "%s\n" "$as_me: error: in \`$ac_pwd':" >&2;}
+-as_fn_error 77 "cannot run C compiled programs.
 -If you meant to cross compile, use \`--host'.
 -See \`config.log' for more details" "$LINENO" 5; }
 -    fi
 -  fi
 -fi
--{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $cross_compiling" >&5
--$as_echo "$cross_compiling" >&6; }
+-{ printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: $cross_compiling" >&5
+-printf "%s\n" "$cross_compiling" >&6; }
 -
 -rm -f conftest.$ac_ext conftest$ac_cv_exeext conftest.out
  ac_clean_files=$ac_clean_files_save
- { $as_echo "$as_me:${as_lineno-$LINENO}: checking for suffix of object files" >&5
- $as_echo_n "checking for suffix of object files... " >&6; }
-@@ -18048,7 +18003,7 @@ fi
+ { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for suffix of object files" >&5
+ printf %s "checking for suffix of object files... " >&6; }
+@@ -19077,7 +19032,7 @@ fi
  	    for x in "/tcl$tcl_version" "" ; do
  	      TCLCONFIG_SH=$tcl_libdir_runtime$x/tclConfig.sh
  	      if test -r "$TCLCONFIG_SH" ; then
@@ -69,7 +69,7 @@ $NetBSD: patch-configure,v 1.5 2021/01/14 18:18:11 schmonz Exp $
  		break
  	      fi
  	    done
-@@ -19524,9 +19479,6 @@ SWIG_CXXFLAGS=
+@@ -20655,9 +20610,6 @@ SWIG_CXXFLAGS=
  if test yes = "$GXX" ; then
                      SWIG_CXXFLAGS="-fno-strict-aliasing"
  
