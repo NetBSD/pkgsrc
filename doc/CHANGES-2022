@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3314 2022/07/11 18:25:24 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.3315 2022/07/11 18:27:13 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4963,3 +4963,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated games/woof to 10.0.3 [micha 2022-07-11]
 	Updated net/unbound to 1.16.1 [he 2022-07-11]
 	Updated textproc/xapian to 1.4.20 [schmonz 2022-07-11]
+	Updated textproc/xapian-omega to 1.4.20 [schmonz 2022-07-11]
