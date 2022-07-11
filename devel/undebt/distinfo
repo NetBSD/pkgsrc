@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:20:06 nia Exp $
-
-BLAKE2s (undebt-0.2.2.tar.gz) = 695032a384e45ba4d2c2d6a3d7747f5e303aa5b3d9a2c67a4d50a22ef0470225
-SHA512 (undebt-0.2.2.tar.gz) = b0a5110d6bda5106b6ee470a3b2bf71c7a80385e60e2e9819920c98235f51917bb207e2a9ed37c6ffa09010bb3a34f06afd35217f02a2e777f69a018bd435bd1
-Size (undebt-0.2.2.tar.gz) = 10098 bytes
