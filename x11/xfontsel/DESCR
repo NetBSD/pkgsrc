@@ -1,4 +1,6 @@
-This package provides xfontsel, a program to query and display X11
-fonts.
+xfontsel application provides a simple way to display the X11 core
+protocol fonts known to your X server, examine samples of each,
+and retrieve the X Logical Font Description ("XLFD") full name for
+a font.
 
 This is from the modular X.org X11 project.
