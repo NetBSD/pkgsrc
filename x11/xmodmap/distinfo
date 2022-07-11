@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 11:34:53 nia Exp $
+$NetBSD: distinfo,v 1.11 2022/07/11 19:39:07 wiz Exp $
 
-BLAKE2s (xmodmap-1.0.10.tar.bz2) = 161cb9f8dba87eeb4d01f99174624b803457ad19ca21a40d018958e1ba853549
-SHA512 (xmodmap-1.0.10.tar.bz2) = 324c7dcef843186088f16b3bc47485eb3c9b4331e56ce43b692deb4bb3d4f4f27512480e91a379cceac8383df920dc5e37cd825246b50b6343291cec48134c04
-Size (xmodmap-1.0.10.tar.bz2) = 145489 bytes
+BLAKE2s (xmodmap-1.0.11.tar.xz) = 0b2285dfde567a2316666a0244e9998ba8a2350d61060e6c1ad439f02b925b39
+SHA512 (xmodmap-1.0.11.tar.xz) = a78f916f048d2017f079733becc99232c087c360ece61ec6c4fa4b5b130b96a1b10c4ce1b64a15bdcab7ea05de3c7f16035503d5be6f8ce1a7612ce71d558510
+Size (xmodmap-1.0.11.tar.xz) = 139532 bytes
