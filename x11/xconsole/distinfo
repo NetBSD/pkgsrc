@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 11:34:36 nia Exp $
+$NetBSD: distinfo,v 1.10 2022/07/11 19:33:47 wiz Exp $
 
-BLAKE2s (xconsole-1.0.7.tar.bz2) = d47d4f5240643a2b58fc7b627f542081db908832dad6b406f014d226afc3ebeb
-SHA512 (xconsole-1.0.7.tar.bz2) = 89f391058ea99904587bd1dac9e31fa3ff06cf63b899abe6c06e4897bbc9919500dd4773873b1a452de4f54cc6999bd496022b6d8df9d4147804448abbdca2f9
-Size (xconsole-1.0.7.tar.bz2) = 134832 bytes
+BLAKE2s (xconsole-1.0.8.tar.xz) = f4562ca458a969353d6c45bb08a59d38a88e0f257ed5b2e9d60db297860d1415
+SHA512 (xconsole-1.0.8.tar.xz) = 93fd8527abed4faaf0f6a3804ab08dbcb926b0aaf67fd814c003b6b1102e2f643be5362a020c7028ae928925ffd423df6eb456d4ed48cf30a4c5f00a7ce648fa
+Size (xconsole-1.0.8.tar.xz) = 129336 bytes
