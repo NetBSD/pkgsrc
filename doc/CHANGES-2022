@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3325 2022/07/11 19:51:14 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3326 2022/07/11 19:54:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4974,3 +4974,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/xwud to 1.0.6 [wiz 2022-07-11]
 	Updated x11/xf86-input-keyboard to 2.0.0 [wiz 2022-07-11]
 	Updated x11/xf86-video-cirrus to 1.6.0 [wiz 2022-07-11]
+	Updated x11/xf86-video-mach64 to 6.9.7 [wiz 2022-07-11]
