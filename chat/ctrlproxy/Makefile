@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2021/12/08 16:03:27 adam Exp $
+# $NetBSD: Makefile,v 1.21 2022/07/11 12:15:17 jperkin Exp $
 #
 
 DISTNAME=		ctrlproxy-3.0.8
@@ -24,6 +24,10 @@ CONF_FILES+=		${PREFIX}/share/examples/ctrlproxy/config.default \
 
 PKGCONFIG_OVERRIDE+=	ctrlproxy.pc.in
 INSTALLATION_DIRS+=	share/examples/ctrlproxy
+
+BUILDLINK_TRANSFORM+=	rm:-ansi
+
+LDFLAGS.SunOS+=		-lsocket -lnsl
 
 .include "options.mk"
 
