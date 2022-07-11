@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 11:33:45 nia Exp $
+$NetBSD: distinfo,v 1.11 2022/07/11 01:36:50 khorben Exp $
 
-BLAKE2s (Locker-0.4.1.tar.gz) = c83ae302cdbbcfff04df05c184f064aae10a39e00b78184d127e13b8eb91726b
-SHA512 (Locker-0.4.1.tar.gz) = 7a0bd2466f670e891af87e7900d318a303501a18f99913f7b5b4109c32e62d54baf1fc65fd3768aaebe7911d2f95717bdd479159d2f03f7786de349a64d8fe02
-Size (Locker-0.4.1.tar.gz) = 63237 bytes
+BLAKE2s (Locker-0.4.2.tar.gz) = 59f3ebbcf821eb5c80851659d1cf7b075fc497c5e7105340e00091004b0c233d
+SHA512 (Locker-0.4.2.tar.gz) = 5d6e4876360a76d323d145bd1edbd7e46f4da4a9050a56c235047d13665de98d8bd2131caf35ee7ad89d05e63ce121e4c00c95d5b4023a807da8c73ddc2a9eae
+Size (Locker-0.4.2.tar.gz) = 54620 bytes
