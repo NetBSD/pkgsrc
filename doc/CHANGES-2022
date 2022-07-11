@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3306 2022/07/11 09:59:36 triaxx Exp $
+$NetBSD: CHANGES-2022,v 1.3307 2022/07/11 10:27:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4951,3 +4951,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/ansible-core to 2.13.1 [adam 2022-07-11]
 	Updated devel/py-requests-unixsocket to 0.3.0 [adam 2022-07-11]
 	Updated mail/roundcube-plugin-carddav to 4.4.2 [triaxx 2022-07-11]
+	Updated misc/stellarium to 0.22.2 [adam 2022-07-11]
+	Updated devel/py-atomicwrites to 1.4.1 [adam 2022-07-11]
