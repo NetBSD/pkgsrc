@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.249 2022/06/28 11:34:01 wiz Exp $
+# $NetBSD: Makefile,v 1.250 2022/07/11 17:25:00 micha Exp $
 
 DISTNAME=	graphviz-2.50.0
 PKGREVISION=	6
@@ -6,7 +6,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	https://gitlab.com/api/v4/projects/4207231/packages/generic/graphviz-releases/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.gz
 
-MAINTAINER=	sno@NetBSD.org
+MAINTAINER=	micha@NetBSD.org
 HOMEPAGE=	https://www.graphviz.org/
 COMMENT=	Graph Drawing Programs from AT&T Research and Lucent Bell Labs
 LICENSE=	epl-v1.0
@@ -79,7 +79,6 @@ PKGCONFIG_OVERRIDE+=	lib/pack/libpack.pc.in
 PKGCONFIG_OVERRIDE+=	lib/pathplan/libpathplan.pc.in
 PKGCONFIG_OVERRIDE+=	lib/sfdpgen/libsfdp.pc.in
 PKGCONFIG_OVERRIDE+=	lib/xdot/libxdot.pc.in
-XAW_TYPE=		standard
 
 # With lua51 there's a PLIST divergence and it isn't obvious whether
 # it's serious or not, or what causes it.
@@ -96,6 +95,8 @@ REPLACE_PERL+=		tclpkg/gv/demo/modgraph.pl contrib/dotmcl.pl \
 			contrib/dirgraph/dirgraph.pl
 
 .include "../../mk/bsd.prefs.mk"
+
+XAW_TYPE=		standard
 
 .include "../../mk/compiler.mk"
 .if !empty(CC_VERSION:Mgcc-2*)
