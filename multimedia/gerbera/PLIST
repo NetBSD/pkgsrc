@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2022/02/08 06:26:49 khorben Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/07/11 11:49:48 adam Exp $
 bin/gerbera
 man/man1/gerbera.1
 share/applications/gerbera.desktop
@@ -53,20 +53,12 @@ share/gerbera/web/js/jquery.gerbera.tree.js
 share/gerbera/web/js/jquery.gerbera.tweak.js
 share/gerbera/web/js/md5.js
 share/gerbera/web/mr_reg.xml
-share/gerbera/web/vendor/bootstrap/css/bootstrap-grid.css
-share/gerbera/web/vendor/bootstrap/css/bootstrap-grid.css.map
 share/gerbera/web/vendor/bootstrap/css/bootstrap-grid.min.css
 share/gerbera/web/vendor/bootstrap/css/bootstrap-grid.min.css.map
-share/gerbera/web/vendor/bootstrap/css/bootstrap-reboot.css
-share/gerbera/web/vendor/bootstrap/css/bootstrap-reboot.css.map
 share/gerbera/web/vendor/bootstrap/css/bootstrap-reboot.min.css
 share/gerbera/web/vendor/bootstrap/css/bootstrap-reboot.min.css.map
-share/gerbera/web/vendor/bootstrap/css/bootstrap.css
-share/gerbera/web/vendor/bootstrap/css/bootstrap.css.map
 share/gerbera/web/vendor/bootstrap/css/bootstrap.min.css
 share/gerbera/web/vendor/bootstrap/css/bootstrap.min.css.map
-share/gerbera/web/vendor/bootstrap/js/bootstrap.js
-share/gerbera/web/vendor/bootstrap/js/bootstrap.js.map
 share/gerbera/web/vendor/bootstrap/js/bootstrap.min.js
 share/gerbera/web/vendor/bootstrap/js/bootstrap.min.js.map
 share/gerbera/web/vendor/font-awesome/css/font-awesome.css
@@ -77,9 +69,10 @@ share/gerbera/web/vendor/font-awesome/fonts/fontawesome-webfont.svg
 share/gerbera/web/vendor/font-awesome/fonts/fontawesome-webfont.ttf
 share/gerbera/web/vendor/font-awesome/fonts/fontawesome-webfont.woff
 share/gerbera/web/vendor/font-awesome/fonts/fontawesome-webfont.woff2
-share/gerbera/web/vendor/jquery/jquery-3.5.1.min.js
+share/gerbera/web/vendor/jquery/jquery-3.6.0.min.js
+share/gerbera/web/vendor/jquery/jquery-3.6.0.min.map
 share/gerbera/web/vendor/jquery/jquery-ui.min.js
-share/gerbera/web/vendor/js-cookie.js
+share/gerbera/web/vendor/js-cookie.min.js
 share/gerbera/web/vendor/lato/LICENCE.md
 share/gerbera/web/vendor/lato/lato-v14-latin-ext_latin-regular.woff
 share/gerbera/web/vendor/lato/lato-v14-latin-ext_latin-regular.woff2
