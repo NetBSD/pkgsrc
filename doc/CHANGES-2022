@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3313 2022/07/11 15:02:43 he Exp $
+$NetBSD: CHANGES-2022,v 1.3314 2022/07/11 18:25:24 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4962,3 +4962,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated time/py-arrow to 1.2.2 [adam 2022-07-11]
 	Updated games/woof to 10.0.3 [micha 2022-07-11]
 	Updated net/unbound to 1.16.1 [he 2022-07-11]
+	Updated textproc/xapian to 1.4.20 [schmonz 2022-07-11]
