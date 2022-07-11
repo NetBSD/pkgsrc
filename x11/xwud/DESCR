@@ -1,4 +1,4 @@
-Display an XWD X Window Dump image format file such as created by
-xwd(1).
+xwud allows X users to display in a window an image saved in a
+specially formatted dump file, such as produced by xwd.
 
 This is from the modular X.org project.
