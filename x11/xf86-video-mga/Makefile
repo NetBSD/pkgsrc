@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.29 2022/04/10 08:53:21 nia Exp $
+# $NetBSD: Makefile,v 1.30 2022/07/11 20:51:33 wiz Exp $
 
-DISTNAME=	xf86-video-mga-2.0.0
+DISTNAME=	xf86-video-mga-2.0.1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	https://xorg.freedesktop.org/
