@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 11:35:00 nia Exp $
+$NetBSD: distinfo,v 1.8 2022/07/11 19:43:40 wiz Exp $
 
-BLAKE2s (xwud-1.0.5.tar.bz2) = ca503fbc6dae74348b71f9ed7cfddd044aed9c0cee0fd9a6ee56350f6feaacc6
-SHA512 (xwud-1.0.5.tar.bz2) = 27a0ce7481978ae6cd94b0d94374af72185e270d68f2496620e148bb00945427c4827138d9efc48745e6382e3da3390ed0cdff7dbd02dcf9706e8ecccae97184
-Size (xwud-1.0.5.tar.bz2) = 133376 bytes
+BLAKE2s (xwud-1.0.6.tar.xz) = a0e194be12211c754857d717cf50d25c0d69d996a2297649fad360aa2833a00f
+SHA512 (xwud-1.0.6.tar.xz) = a7b964d9ef13e4726b2ef84dcc1040cdf510c8031c3e6e1dc1c711e65d9e56f1fc5921a7af3dbbd898b861c79e9da6242da23c2e73816e39152ae719052293e9
+Size (xwud-1.0.6.tar.xz) = 126696 bytes
