@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3304 2022/07/11 09:24:34 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3305 2022/07/11 09:31:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4948,3 +4948,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated multimedia/mkvtoolnix to 69.0.0 [adam 2022-07-11]
 	Updated net/py-celery to 5.2.7 [adam 2022-07-11]
 	Updated textproc/py-black to 22.6.0 [adam 2022-07-11]
+	Updated sysutils/ansible-core to 2.13.1 [adam 2022-07-11]
+	Updated devel/py-requests-unixsocket to 0.3.0 [adam 2022-07-11]
