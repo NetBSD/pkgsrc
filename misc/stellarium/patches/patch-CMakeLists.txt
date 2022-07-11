@@ -1,9 +1,9 @@
-$NetBSD: patch-CMakeLists.txt,v 1.5 2022/03/28 20:10:38 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.6 2022/07/11 10:23:32 adam Exp $
 
 Do not use ccache.
 Do not use application bundle on Darwin.
 
---- CMakeLists.txt.orig	2022-03-27 08:42:59.000000000 +0000
+--- CMakeLists.txt.orig	2022-07-07 14:03:54.000000000 +0000
 +++ CMakeLists.txt
 @@ -159,14 +159,6 @@ IF(OPENGL_DEBUG_LOGGING)
       ADD_DEFINITIONS(-DQ_ENABLE_OPENGL_FUNCTIONS_DEBUG)
@@ -37,8 +37,8 @@ Do not use application bundle on Darwin.
 +     IF(FALSE)
            SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fno-common -Wall -Wextra -Wno-unused-parameter")
            SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fno-common -Wall -Wextra -Wno-unknown-warning-option")
-           # macOS architectures: x86_64 or arm64 (default: x86_64)
-@@ -644,7 +636,7 @@ ENDIF()
+           # macOS architectures: x86_64 or arm64 (default: current system's processor architecture)
+@@ -641,7 +633,7 @@ ENDIF()
  
  ########### Set some global variables ###########
  IF(UNIX AND NOT WIN32)
@@ -47,7 +47,7 @@ Do not use application bundle on Darwin.
            SET(CMAKE_INSTALL_PREFIX "${PROJECT_BINARY_DIR}/Stellarium.app/Contents")
       ELSE()
            ADD_DEFINITIONS(-DINSTALL_DATADIR="${CMAKE_INSTALL_PREFIX}/${SDATALOC}")          
-@@ -783,7 +775,7 @@ IF(GENERATE_PACKAGE_TARGET)
+@@ -780,7 +772,7 @@ IF(GENERATE_PACKAGE_TARGET)
  ENDIF()
  
  ########### OS X Bundling ###############
