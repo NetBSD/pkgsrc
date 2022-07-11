@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2022/02/11 12:45:53 micha Exp $
+# $NetBSD: Makefile,v 1.6 2022/07/11 12:34:58 micha Exp $
 
-DISTNAME=	xnedit-1.4.0
-PKGREVISION=	1
+DISTNAME=	xnedit-1.4.1
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xnedit/}
 
@@ -33,22 +32,6 @@ SUBST_STAGE.fix-cflags=		pre-configure
 SUBST_MESSAGE.fix-cflags=	Fixing Makefile.generic.
 SUBST_FILES.fix-cflags=		makefiles/Makefile.generic
 SUBST_SED.fix-cflags=		-e 's,CFLAGS=,CFLAGS+=,'
-
-# Search for Xft headers in X11 subdirectory
-# Upstream ticket: <https://sourceforge.net/p/xnedit/bugs/20/>
-# Fixed with commit 452499daab227afab372763f7a64ec996c7057db, remove this patch
-# for next release.
-SUBST_CLASSES+=			fix-include
-SUBST_STAGE.fix-include=	pre-configure
-SUBST_MESSAGE.fix-include=	Fixing include Xft.h.
-SUBST_FILES.fix-include=	source/nedit.h
-SUBST_FILES.fix-include+=	source/rangeset.h
-SUBST_FILES.fix-include+=	source/text.h
-SUBST_FILES.fix-include+=	source/textDisp.h
-SUBST_FILES.fix-include+=	source/textP.h
-SUBST_FILES.fix-include+=	util/colorchooser.c
-SUBST_FILES.fix-include+=	util/fontsel.c
-SUBST_SED.fix-include=		-e 's,Xft/Xft.h>,X11/&,'
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/source/xnedit ${DESTDIR}${PREFIX}/bin
