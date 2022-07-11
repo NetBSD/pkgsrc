@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.31 2022/04/10 08:53:18 nia Exp $
+# $NetBSD: Makefile,v 1.32 2022/07/11 19:48:15 wiz Exp $
 
-DISTNAME=	xf86-input-keyboard-1.9.0
-PKGREVISION=	3
+DISTNAME=	xf86-input-keyboard-2.0.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	https://xorg.freedesktop.org/
@@ -16,6 +15,8 @@ GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake pkg-config
 
 RELRO_SUPPORTED=	partial
+
+NOT_FOR_PLATFORM=	Linux-*
 
 CONFIGURE_ENV.SunOS+=	DRIVER_MAN_SUFFIX=4
 
