@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/01/04 20:53:19 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/07/11 08:51:08 wiz Exp $
 
 DISTNAME=	packaging-20.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,11 +12,11 @@ COMMENT=	Core utilities for Python packages (Python 2.x version)
 LICENSE=	modified-bsd OR apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+DEPENDS+=	${PYPKGPREFIX}-pyparsing-[0-9]*:../../devel/py-pyparsing2
 TEST_DEPENDS+=	${PYPKGPREFIX}-pretend-[0-9]*:../../devel/py-pretend
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test4
 
 PYTHON_VERSIONS_ACCEPTED=	27
-
-PYTHON_VERSIONED_DEPENDENCIES=	test:test pyparsing
 
 USE_LANGUAGES=	# none
 
@@ -25,5 +25,4 @@ do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
