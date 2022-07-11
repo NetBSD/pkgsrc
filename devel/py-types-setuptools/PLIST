@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2022/01/07 17:19:22 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/07/11 06:16:18 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -45,7 +45,6 @@ ${PYSITELIB}/setuptools-stubs/extern/__init__.pyi
 ${PYSITELIB}/setuptools-stubs/glob.pyi
 ${PYSITELIB}/setuptools-stubs/installer.pyi
 ${PYSITELIB}/setuptools-stubs/launch.pyi
-${PYSITELIB}/setuptools-stubs/lib2to3_ex.pyi
 ${PYSITELIB}/setuptools-stubs/monkey.pyi
 ${PYSITELIB}/setuptools-stubs/msvc.pyi
 ${PYSITELIB}/setuptools-stubs/namespaces.pyi
