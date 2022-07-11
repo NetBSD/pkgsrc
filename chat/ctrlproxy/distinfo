@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:05:12 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/07/11 12:15:17 jperkin Exp $
 
 BLAKE2s (ctrlproxy-3.0.8.tar.gz) = 73d7f41242cac74061d0129b436bcf3a308b951ed6dee5efae5839b76c9b7aa6
 SHA512 (ctrlproxy-3.0.8.tar.gz) = 241f227eaae864a43846cf90bb3c41e7ff2423224f92b214d19f681cd1fbdee73c1edfde06ecd6ab0df2061e1386b370c66905a797ab3e3f92382f886698520c
 Size (ctrlproxy-3.0.8.tar.gz) = 277083 bytes
 SHA1 (patch-Makefile) = e42074951158b4d35704725c115ad17eee8a8200
 SHA1 (patch-src_gnutls.c) = 735747cf2b344b3821d9d5a32aaf73d0d3586d56
+SHA1 (patch-src_settings.c) = 5aca90a41f80bba6d99f89b5a6bc77cf148c7976
