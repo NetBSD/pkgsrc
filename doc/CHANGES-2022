@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3321 2022/07/11 19:40:41 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3322 2022/07/11 19:42:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4970,3 +4970,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/xfontsel to 1.1.0 [wiz 2022-07-11]
 	Updated x11/xmodmap to 1.0.11 [wiz 2022-07-11]
 	Updated x11/xpr to 1.1.0 [wiz 2022-07-11]
+	Updated x11/xscope to 1.4.3 [wiz 2022-07-11]
