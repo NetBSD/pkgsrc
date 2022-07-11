@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2021/10/26 11:24:32 nia Exp $
+$NetBSD: distinfo,v 1.20 2022/07/11 13:32:24 adam Exp $
 
-BLAKE2s (arrow-0.15.8.tar.gz) = 9b1b9bec597bf6c6c37047dae47a04958b8a2bfb8653f86b221d437dcc1598e7
-SHA512 (arrow-0.15.8.tar.gz) = 93d161cbeb48636f2e3f91ebcc51cddbb3b21175ae31f5d9251a22358c7d1934663a8e47a82efd8773bf30c28efefcd8d2a3baf581fe191777cd41f12f29d4d2
-Size (arrow-0.15.8.tar.gz) = 92220 bytes
+BLAKE2s (arrow-1.2.2.tar.gz) = d2bbb30c040c6b193f129490ab3aa2211c017d4b96ff7e0c6fcff02849172bcf
+SHA512 (arrow-1.2.2.tar.gz) = f88afa9a0bc967e8731a7bf1712ecf3810f12ade9cc53a94a74efd3ece750f37bea7541a054eb9acd12b99b4a6d32687eab4eae20a6f49b2c2d6f1b499221542
+Size (arrow-1.2.2.tar.gz) = 123174 bytes
