@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.25 2019/12/09 18:46:00 adam Exp $
+# $NetBSD: options.mk,v 1.26 2022/07/11 10:52:29 abs Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.exim
 PKG_SUPPORTED_OPTIONS=	exim-appendfile-maildir exim-appendfile-mailstore
@@ -136,17 +136,12 @@ LOOKUP_LIBS+=		-lopendmarc
 EXIM_USE_DB_CONFIG=	USE_GDBM=yes
 EXIM_DBMLIB=		DBMLIB=${LDFLAGS} -lgdbm
 EXIM_INCLUDE=		-I${PREFIX}/include
-.else # use native or Berkeley DB as defined by BDB_DEFAULT and BDB_ACCEPTED
+.else # use Berkeley DB as defined by BDB_DEFAULT and BDB_ACCEPTED
+BDB_ACCEPTED?=db2 db3 db4 db5 db6
 .  include "../../mk/bdb.buildlink3.mk"
 EXIM_USE_DB_CONFIG=	USE_DB=yes	# the default
-.  if ${BDB_TYPE} == "db1"
-EXIM_DBMLIB=		# empty so use defaults
-EXIM_USE_DB_CONFIG=	# empty so use defaults
-EXIM_INCLUDE=		-I/usr/${BUILDLINK_INCDIRS.db-native}
-.  else
 EXIM_DBMLIB=		DBMLIB=${LDFLAGS} ${BDB_LIBS}
 EXIM_INCLUDE=		-I${PREFIX}/${BUILDLINK_INCDIRS.${BDB_TYPE}}
-.  endif
 .endif
 
 .if !empty(PKG_OPTIONS:Msaslauthd)
