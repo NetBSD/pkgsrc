@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2022/02/15 16:24:56 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2022/07/11 08:50:27 adam Exp $
 
-DISTNAME=	celery-5.2.3
+DISTNAME=	celery-5.2.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/celery/}
@@ -17,7 +17,6 @@ DEPENDS+=	${PYPKGPREFIX}-click-plugins>=1.1.1:../../devel/py-click-plugins
 DEPENDS+=	${PYPKGPREFIX}-click-repl>=0.2.0:../../devel/py-click-repl
 DEPENDS+=	${PYPKGPREFIX}-kombu>=5.2.3:../../net/py-kombu
 DEPENDS+=	${PYPKGPREFIX}-pytz>=2021.3:../../time/py-pytz
-DEPENDS+=	${PYPKGPREFIX}-setuptools>=59.1.1:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-vine>=5.0.0:../../devel/py-vine
 TEST_DEPENDS+=	${PYPKGPREFIX}-boto3>=1.9.178:../../net/py-boto3
 TEST_DEPENDS+=	${PYPKGPREFIX}-moto>=2.2.6:../../net/py-moto
