@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/07/03 20:43:53 pin Exp $
+# $NetBSD: Makefile,v 1.2 2022/07/11 22:04:16 wiz Exp $
 
 DISTNAME=	qt5-styleplugins-5.0.0.20170112
 CATEGORIES=	x11
@@ -12,6 +12,7 @@ COMMENT=	Qt 5 extra widget styles
 LICENSE=	gnu-lgpl-v2.1
 
 USE_LANGUAGES=		c c++11
+USE_TOOLS+=		pkg-config
 
 INSTALL_MAKE_FLAGS+=	INSTALL_ROOT=${DESTDIR}
 
