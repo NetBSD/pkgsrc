@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2022/01/04 20:53:53 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/07/12 07:31:17 adam Exp $
 
-DISTNAME=	eth-keys-0.3.3
+DISTNAME=	eth-keys-0.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	finance python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/eth-keys/}
 
@@ -11,8 +10,8 @@ HOMEPAGE=	https://github.com/ethereum/eth-keys
 COMMENT=	Common API for Ethereum key operations
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-eth-typing>=2.2.1:../../finance/py-eth-typing
-DEPENDS+=	${PYPKGPREFIX}-eth-utils>=1.3.0:../../finance/py-eth-utils
+DEPENDS+=	${PYPKGPREFIX}-eth-typing>=3.0.0:../../finance/py-eth-typing
+DEPENDS+=	${PYPKGPREFIX}-eth-utils>=2.0.0:../../finance/py-eth-utils
 
 USE_LANGUAGES=	# none
 
