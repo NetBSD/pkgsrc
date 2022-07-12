@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2017/11/27 23:28:37 minskim Exp $
-${PYSITELIB}/lru.so
+@comment $NetBSD: PLIST,v 1.2 2022/07/12 07:43:12 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/lru.so
