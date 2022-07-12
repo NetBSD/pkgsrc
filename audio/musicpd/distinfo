@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.138 2022/07/12 20:16:08 triaxx Exp $
+$NetBSD: distinfo,v 1.139 2022/07/12 21:20:40 triaxx Exp $
 
 BLAKE2s (mpd-0.23.8.tar.xz) = f7573d127356d7e8a2042086abdd4b65eedd9eea85b80505a26277a7a892a898
 SHA512 (mpd-0.23.8.tar.xz) = 62f7571de29a329b8ef1fc6f7c338125e70895e06fca134eb9ade19635498ec13da00511870bfadabc5a9ccb090c44543d3101361ffe109e4fadce66435b37ab
 Size (mpd-0.23.8.tar.xz) = 773280 bytes
 SHA1 (patch-doc_mpd.conf.5.rst) = ee22092564075cdf7917e4e66687f6ab98b5817c
+SHA1 (patch-src_decoder_plugins_meson.build) = 8033d6e19da05f472f14f3562a5dfc2f410da98b
 SHA1 (patch-src_net_IPv6Address.hxx) = f89b838ad5e946c5db8d95a6dd560e02bdccae29
 SHA1 (patch-src_util_WStringAPI.hxx) = 92f39096770943c26d8aaae8a7581d4daca2d233
