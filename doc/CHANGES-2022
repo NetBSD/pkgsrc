@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3332 2022/07/12 06:01:44 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3333 2022/07/12 07:28:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4998,3 +4998,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/gnupg2 to 2.2.36 [adam 2022-07-12]
 	Updated time/py-icalendar to 4.1.0 [adam 2022-07-12]
 	Updated time/khal to 0.10.5 [adam 2022-07-12]
+	Updated finance/py-eth-hash to 0.4.0 [adam 2022-07-12]
+	Updated finance/py-eth-typing to 3.1.0 [adam 2022-07-12]
+	Updated finance/py-eth-utils to 2.0.0 [adam 2022-07-12]
+	Updated devel/py-rlp to 3.0.0 [adam 2022-07-12]
