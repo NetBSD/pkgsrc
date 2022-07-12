@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.23 2021/10/26 11:24:22 nia Exp $
+$NetBSD: distinfo,v 1.24 2022/07/12 06:01:26 adam Exp $
 
-BLAKE2s (khal-0.10.4.tar.gz) = c692ff03be0db0d406e8dc3978087943bc47416441e0f99c98fe2f2966752125
-SHA512 (khal-0.10.4.tar.gz) = b32f1bfe5d3a3976278726a6570eb345a5ad44f63a52b75f045fd0509d145edd5b76e11a10acffd9c3982edc124f93daec34a37c39299c2311796c0314016eb6
-Size (khal-0.10.4.tar.gz) = 185736 bytes
+BLAKE2s (khal-0.10.5.tar.gz) = cf7c38fe397197da2c96f16e496bce955aecf0291c863a881eced690cbae72db
+SHA512 (khal-0.10.5.tar.gz) = f7b1e4d4934757ec7458fc4e73c6b6c5ee6b1c64f6cdc3e61771a2f05041515e4afb73b4a17cbc577747039b689ddd66503e120648c4bfe4e33113a3de6f3d14
+Size (khal-0.10.5.tar.gz) = 188468 bytes
