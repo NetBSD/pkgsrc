@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3337 2022/07/12 08:59:08 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3338 2022/07/12 09:18:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5012,3 +5012,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/py-parsimonious to 0.9.0 [adam 2022-07-12]
 	Removed devel/py-chai [adam 2022-07-12]
 	Removed databases/py-couchdb [wiz 2022-07-12]
+	Updated devel/py-importlib-resources to 3.0.0nb2 [wiz 2022-07-12]
