@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2022/04/26 17:50:11 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2022/07/12 09:20:40 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -272,6 +272,9 @@ ${PYSITELIB}/PIL/__main__.pyo
 ${PYSITELIB}/PIL/_binary.py
 ${PYSITELIB}/PIL/_binary.pyc
 ${PYSITELIB}/PIL/_binary.pyo
+${PYSITELIB}/PIL/_deprecate.py
+${PYSITELIB}/PIL/_deprecate.pyc
+${PYSITELIB}/PIL/_deprecate.pyo
 ${PYSITELIB}/PIL/_imaging.so
 ${PYSITELIB}/PIL/_imagingcms.so
 ${PYSITELIB}/PIL/_imagingft.so
