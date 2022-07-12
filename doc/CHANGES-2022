@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3333 2022/07/12 07:28:51 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3334 2022/07/12 07:33:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5002,3 +5002,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated finance/py-eth-typing to 3.1.0 [adam 2022-07-12]
 	Updated finance/py-eth-utils to 2.0.0 [adam 2022-07-12]
 	Updated devel/py-rlp to 3.0.0 [adam 2022-07-12]
+	Updated finance/py-eth-rlp to 0.3.0 [adam 2022-07-12]
+	Updated finance/py-eth-keys to 0.4.0 [adam 2022-07-12]
+	Updated finance/py-eth-abi to 3.0.0 [adam 2022-07-12]
+	Updated finance/py-eth-keyfile to 0.6.0 [adam 2022-07-12]
