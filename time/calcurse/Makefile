@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/06/30 11:18:56 nia Exp $
+# $NetBSD: Makefile,v 1.3 2022/07/12 09:04:01 wiz Exp $
 
 DISTNAME=	calcurse-4.8.0
 PKGREVISION=	1
@@ -23,6 +23,8 @@ FAKE_NCURSES=	yes
 
 REPLACE_PYTHON+=	contrib/caldav/calcurse-caldav
 REPLACE_PYTHON+=	contrib/vdir/calcurse-vdir
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 INSTALLATION_DIRS+=	share/examples/calcurse
 
