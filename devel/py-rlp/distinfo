@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:19:02 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/07/12 07:28:27 adam Exp $
 
-BLAKE2s (rlp-2.0.1.tar.gz) = 3ac2681fb6ff78ae78b1824d322b78e21ba58f2dfcd1f351a74cb835c319d4c4
-SHA512 (rlp-2.0.1.tar.gz) = 5082cb8458964a458d039da8ca565fc1bb9e9f2926afe63af47417622f86d392b64ed68a884909a9008d59dfc27b4d606c7e7a6c0e0abd5494370de05a3e9212
-Size (rlp-2.0.1.tar.gz) = 39928 bytes
-SHA1 (patch-setup.py) = 8163902c3c6782fa4843e4d179fca69cc9031ee2
+BLAKE2s (rlp-3.0.0.tar.gz) = ba394d4c62f6671f9ffec7a96ca5778f6fb77945214a6b24690235c9fee0ddd6
+SHA512 (rlp-3.0.0.tar.gz) = f3f9027f08137cba31e651d5b438cfb296e0697ad36bd9296ef9c2d2a8e43178172cf528cafca4b6ad90714df08f02620a0349031149b349e943282198d70ea6
+Size (rlp-3.0.0.tar.gz) = 40017 bytes
+SHA1 (patch-setup.py) = 1ba58bd23c970f404370b901510a52c92a9fd678
