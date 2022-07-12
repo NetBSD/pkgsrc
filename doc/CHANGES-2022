@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3330 2022/07/11 23:19:38 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3331 2022/07/12 05:46:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4979,3 +4979,20 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/libdrm to 2.4.112 [wiz 2022-07-11]
 	Updated security/openssl to 1.1.1q [wiz 2022-07-11]
 	Removed devel/undebt [wiz 2022-07-11]
+	Updated security/py-acme to 1.29.0 [adam 2022-07-12]
+	Updated security/py-certbot to 1.29.0 [adam 2022-07-12]
+	Updated security/py-certbot-apache to 1.29.0 [adam 2022-07-12]
+	Updated security/py-certbot-dns-digitalocean to 1.29.0 [adam 2022-07-12]
+	Updated security/py-certbot-dns-dnsimple to 1.29.0 [adam 2022-07-12]
+	Updated security/py-certbot-dns-dnsmadeeasy to 1.29.0 [adam 2022-07-12]
+	Updated security/py-certbot-dns-gehirn to 1.29.0 [adam 2022-07-12]
+	Updated security/py-certbot-dns-google to 1.29.0 [adam 2022-07-12]
+	Updated security/py-certbot-dns-linode to 1.29.0 [adam 2022-07-12]
+	Updated security/py-certbot-dns-luadns to 1.29.0 [adam 2022-07-12]
+	Updated security/py-certbot-dns-nsone to 1.29.0 [adam 2022-07-12]
+	Updated security/py-certbot-dns-ovh to 1.29.0 [adam 2022-07-12]
+	Updated security/py-certbot-dns-rfc2136 to 1.29.0 [adam 2022-07-12]
+	Updated security/py-certbot-dns-route53 to 1.29.0 [adam 2022-07-12]
+	Updated security/py-certbot-dns-sakuracloud to 1.29.0 [adam 2022-07-12]
+	Updated security/py-certbot-nginx to 1.29.0 [adam 2022-07-12]
+	Updated security/gnupg2 to 2.2.36 [adam 2022-07-12]
