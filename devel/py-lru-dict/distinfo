@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:18:39 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/07/12 07:43:12 adam Exp $
 
-BLAKE2s (lru-dict-1.1.7.tar.gz) = 1012d7fac107a599f39cf06486c29c62430df367abf7c6973184ea6281120c8e
-SHA512 (lru-dict-1.1.7.tar.gz) = f645afc40d52b6f7f30afd09f0bdc7b4b6bd98fc5ba31d194c8f55680421b34ef04f5b624b68598369964d3fea82029bd02f9571762c61f9104088f4ecefbf44
-Size (lru-dict-1.1.7.tar.gz) = 10380 bytes
+BLAKE2s (lru-dict-1.1.8.tar.gz) = 9633c3ee2234808e3e4d99841cba4b129313f50dd78accab26dbc1db22e74f29
+SHA512 (lru-dict-1.1.8.tar.gz) = df1fc927b62a755bbf324a9f95c19eeb97d1bb555f0dc134e774bb7400dab4fda84ec1f667385d8883747d434d71c6b5cb6f9b07ca4ac0f37eb7b07f9a848ac7
+Size (lru-dict-1.1.8.tar.gz) = 10921 bytes
