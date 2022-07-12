@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2022/01/04 20:53:53 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2022/07/12 07:34:36 adam Exp $
 
-DISTNAME=	eth-account-0.5.6
+DISTNAME=	eth-account-0.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	finance python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/eth-account/}
 
