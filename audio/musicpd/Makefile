@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.270 2022/07/12 20:16:08 triaxx Exp $
+# $NetBSD: Makefile,v 1.271 2022/07/12 21:20:40 triaxx Exp $
 
 DISTNAME=	mpd-0.23.8
 PKGNAME=	${DISTNAME:S/mpd/musicpd/}
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	https://www.musicpd.org/download/mpd/${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.xz
@@ -112,6 +113,12 @@ SUBST_STAGE.doc=	pre-configure
 SUBST_FILES.doc=	doc/mpd.conf.5.rst
 SUBST_MESSAGE.doc=	Fixing sysconfdir path in mpd.conf location.
 SUBST_VARS.doc+=	PKG_SYSCONFDIR
+
+SUBST_CLASSES+=		sidplay
+SUBST_STAGE.sidplay=	pre-configure
+SUBST_FILES.sidplay=	src/decoder/plugins/meson.build
+SUBST_MESSAGE.sidplay=	Add directory of sidplay2 to search resid-buidler library in.
+SUBST_VARS.sidplay+=	PREFIX
 
 INSTALLATION_DIRS=	${EGDIR} ${EGDIR}/logrotate.d
 
