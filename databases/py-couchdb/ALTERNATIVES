@@ -1,4 +1,0 @@
-bin/couchdb-dump @PREFIX@/bin/couchdb-dump@PYVERSSUFFIX@
-bin/couchdb-load @PREFIX@/bin/couchdb-load@PYVERSSUFFIX@
-bin/couchdb-replicate @PREFIX@/bin/couchdb-replicate@PYVERSSUFFIX@
-bin/couchpy @PREFIX@/bin/couchpy@PYVERSSUFFIX@
