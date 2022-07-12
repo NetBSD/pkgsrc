@@ -1,0 +1,15 @@
+$NetBSD: patch-src_decoder_plugins_meson.build,v 1.1 2022/07/12 21:20:40 triaxx Exp $
+
+Add directory to search resid-builder library in sidplay2.
+
+--- src/decoder/plugins/meson.build.orig	2022-07-08 23:05:38.000000000 +0000
++++ src/decoder/plugins/meson.build
+@@ -167,7 +167,7 @@ if not get_option('sidplay').disabled()
+     libsidplay2_dep = dependency('libsidplay2', required: false)
+     if libsidplay2_dep.found()
+       libsidutils_dep = dependency('libsidutils')
+-      libresid_builder_dep = compiler.find_library('resid-builder')
++      libresid_builder_dep = compiler.find_library('resid-builder', dirs: '@PREFIX@/lib/sidplay/builders')
+       libsidplay_dep = declare_dependency(dependencies: [libsidplay2_dep, libsidutils_dep, libresid_builder_dep])
+     elif get_option('sidplay').enabled()
+       error('Neither libsidplayfp nor libsidplay2 found')
