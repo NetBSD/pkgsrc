@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/02/08 07:00:56 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/07/12 07:31:17 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -41,6 +41,12 @@ ${PYSITELIB}/eth_keys/exceptions.pyo
 ${PYSITELIB}/eth_keys/main.py
 ${PYSITELIB}/eth_keys/main.pyc
 ${PYSITELIB}/eth_keys/main.pyo
+${PYSITELIB}/eth_keys/tools/__init__.py
+${PYSITELIB}/eth_keys/tools/__init__.pyc
+${PYSITELIB}/eth_keys/tools/__init__.pyo
+${PYSITELIB}/eth_keys/tools/factories.py
+${PYSITELIB}/eth_keys/tools/factories.pyc
+${PYSITELIB}/eth_keys/tools/factories.pyo
 ${PYSITELIB}/eth_keys/utils/__init__.py
 ${PYSITELIB}/eth_keys/utils/__init__.pyc
 ${PYSITELIB}/eth_keys/utils/__init__.pyo
