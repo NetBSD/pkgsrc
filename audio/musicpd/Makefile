@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.269 2022/07/11 08:25:59 adam Exp $
+# $NetBSD: Makefile,v 1.270 2022/07/12 20:16:08 triaxx Exp $
 
 DISTNAME=	mpd-0.23.8
 PKGNAME=	${DISTNAME:S/mpd/musicpd/}
@@ -106,6 +106,12 @@ SUBST_STAGE.sphinx=	pre-configure
 SUBST_FILES.sphinx=	doc/meson.build
 SUBST_MESSAGE.sphinx=	Fixing sphinx binary name.
 SUBST_SED.sphinx+=	-e "s,sphinx-build,sphinx-build-${PYVERSSUFFIX},"
+
+SUBST_CLASSES+=		doc
+SUBST_STAGE.doc=	pre-configure
+SUBST_FILES.doc=	doc/mpd.conf.5.rst
+SUBST_MESSAGE.doc=	Fixing sysconfdir path in mpd.conf location.
+SUBST_VARS.doc+=	PKG_SYSCONFDIR
 
 INSTALLATION_DIRS=	${EGDIR} ${EGDIR}/logrotate.d
 
