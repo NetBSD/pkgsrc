@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/05/19 07:42:01 adam Exp $
+# $NetBSD: Makefile,v 1.4 2022/07/12 09:07:13 wiz Exp $
 
 DISTNAME=	google-reauth-0.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,6 +12,8 @@ LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-oauth2client>=2:../../security/py-oauth2client
 DEPENDS+=	${PYPKGPREFIX}-u2f-[0-9]*:../../security/py-u2f
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
