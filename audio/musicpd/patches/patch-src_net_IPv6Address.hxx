@@ -1,4 +1,4 @@
-$NetBSD: patch-src_net_IPv6Address.hxx,v 1.2 2020/10/02 09:47:09 wiz Exp $
+$NetBSD: patch-src_net_IPv6Address.hxx,v 1.3 2022/07/12 20:16:08 triaxx Exp $
 
 Fixes
 In file included from /usr/include/netinet/in.h:372:0,
@@ -15,7 +15,7 @@ https://github.com/MusicPlayerDaemon/MPD/issues/438
 
 --- src/net/IPv6Address.hxx.orig	2020-09-23 13:26:51.000000000 +0000
 +++ src/net/IPv6Address.hxx
-@@ -41,6 +41,7 @@
+@@ -40,6 +40,7 @@
  #include <ws2tcpip.h>
  #else
  #include <netinet/in.h>
