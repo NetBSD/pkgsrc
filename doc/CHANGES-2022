@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3339 2022/07/12 09:24:05 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3340 2022/07/12 15:16:36 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5015,3 +5015,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-importlib-resources to 3.0.0nb2 [wiz 2022-07-12]
 	Updated graphics/py-Pillow to 9.2.0 [adam 2022-07-12]
 	Updated time/py-pytz to 2022.1 [adam 2022-07-12]
+	Updated www/grafana to 9.0.2 [triaxx 2022-07-12]
