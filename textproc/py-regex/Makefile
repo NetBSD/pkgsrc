@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.39 2022/01/04 20:55:05 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2022/07/12 08:26:52 adam Exp $
 
-DISTNAME=	regex-2021.11.10
+DISTNAME=	regex-2022.7.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/regex/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://bitbucket.org/mrabarnett/mrab-regex
+HOMEPAGE=	https://github.com/mrabarnett/mrab-regex
 COMMENT=	Alternative regular expression module, to replace re
 LICENSE=	python-software-foundation
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 do-test:
 	${PYTHONBIN} -m regex.test_regex
