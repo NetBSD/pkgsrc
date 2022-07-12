@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3335 2022/07/12 07:43:29 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3336 2022/07/12 08:31:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5008,3 +5008,6 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated finance/py-eth-keyfile to 0.6.0 [adam 2022-07-12]
 	Updated finance/py-eth-account to 0.6.1 [adam 2022-07-12]
 	Updated devel/py-lru-dict to 1.1.8 [adam 2022-07-12]
+	Updated textproc/py-regex to 2022.7.9 [adam 2022-07-12]
+	Updated textproc/py-parsimonious to 0.9.0 [adam 2022-07-12]
+	Removed devel/py-chai [adam 2022-07-12]
