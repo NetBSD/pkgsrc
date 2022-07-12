@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22013 2022/07/11 23:04:00 wiz Exp $
+$NetBSD: TODO,v 1.22014 2022/07/12 09:18:49 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1149,6 +1149,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o openslp-2.0.0
 	o opensmtpd-6.8.0p2
 	o openssl-3.0.5
+	o openxenmanager-0.83
 	o opera-26
 	o or1k-none-elf-binutils-2.36.1
 	o or1k-none-elf-gcc-9.3.0
@@ -1374,7 +1375,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-yubikey-manager-4.0.2
 	o py-z3-4.8.10
 	o py-z3solver-4.8.10.0
-	o py-zanata-python-client-1.5.3
+	o py-zanata-python-client-4.6.2
 	o pythontidy-1.23
 	o q5go-2.1.1
 	o qalculate-3.18.0
