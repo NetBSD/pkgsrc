@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.664 2022/06/29 07:54:38 wiz Exp $
+# $NetBSD: Makefile,v 1.665 2022/07/12 08:59:08 wiz Exp $
 
 COMMENT=	Databases
 
@@ -361,7 +361,6 @@ SUBDIR+=	py-cassa
 SUBDIR+=	py-cassandra-driver
 SUBDIR+=	py-cdb
 SUBDIR+=	py-ckanclient
-SUBDIR+=	py-couchdb
 SUBDIR+=	py-cx_Oracle
 SUBDIR+=	py-datapkg
 SUBDIR+=	py-dbf

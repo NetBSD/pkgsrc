@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:09:50 nia Exp $
-
-BLAKE2s (CouchDB-0.9.tar.gz) = c31eba02d4333d38d82039ec1306e94ef19a9fb09082eae6f9f3b5cd625df56a
-SHA512 (CouchDB-0.9.tar.gz) = ceba7afd3400e9da51fb6493b68d5192e1c3817d159fc8f2791bdc03b61828f1b2f262a64832e81f4b950379795b100c8f506527489e91a8872291a7b4173c42
-Size (CouchDB-0.9.tar.gz) = 55189 bytes
