@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:26:04 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/07/12 07:33:02 adam Exp $
 
-BLAKE2s (eth-keyfile-0.5.1.tar.gz) = da6f5c73a47193ebebb1e0edc3b9183dc6d4d98ea09000593821201c2962d63c
-SHA512 (eth-keyfile-0.5.1.tar.gz) = afbc0d891fa24e6ed078b19ff6de45c035ff0fd1765dae09812889fc04d902f54791dd265c6173c4c243538980c5ee6977ae36c31efec147b0720c840958d981
-Size (eth-keyfile-0.5.1.tar.gz) = 6607 bytes
-SHA1 (patch-setup.py) = 2e327353dad96657c86d824d640f4bfaf00032bf
+BLAKE2s (eth-keyfile-0.6.0.tar.gz) = f16142ce30142a413645ea0fdcf891c4dcb87d4df46e85d0315ba280ebc1ad1e
+SHA512 (eth-keyfile-0.6.0.tar.gz) = a65295931d8505b8028f5c7ebaa2693399191e4d70d4037b8d57772119f13c1e59cf9222c9429f06052d3d48d8ccd47e1127d6ca5b3e1cd0b6ca9c56dd9a3de4
+Size (eth-keyfile-0.6.0.tar.gz) = 7266 bytes
