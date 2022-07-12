@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2022/01/04 20:54:43 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2022/07/12 09:08:27 wiz Exp $
 
 DISTNAME=	oauth2client-4.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,12 +14,12 @@ LICENSE=	apache-2.0
 DEPENDS+=	${PYPKGPREFIX}-asn1-[0-9]*:../../security/py-asn1
 DEPENDS+=	${PYPKGPREFIX}-asn1-modules-[0-9]*:../../security/py-asn1-modules
 DEPENDS+=	${PYPKGPREFIX}-httplib2-[0-9]*:../../www/py-httplib2
+DEPENDS+=	${PYPKGPREFIX}-rsa-[0-9]*:../../security/py-rsa
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
-PYTHON_VERSIONED_DEPENDENCIES+=	rsa
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
