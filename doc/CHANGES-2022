@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3354 2022/07/13 14:42:22 taca Exp $
+$NetBSD: CHANGES-2022,v 1.3355 2022/07/13 14:45:18 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5043,3 +5043,16 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated mail/ruby-actionmailer52 to 5.2.8.1 [taca 2022-07-13]
 	Updated devel/ruby-railties52 to 5.2.8.1 [taca 2022-07-13]
 	Updated www/ruby-rails52 to 5.2.8.1 [taca 2022-07-13]
+	Updated devel/ruby-activesupport60 to 6.0.5.1 [taca 2022-07-13]
+	Updated devel/ruby-activemodel60 to 6.0.5.1 [taca 2022-07-13]
+	Updated devel/ruby-activejob60 to 6.0.5.1 [taca 2022-07-13]
+	Updated www/ruby-actionview60 to 6.0.5.1 [taca 2022-07-13]
+	Updated www/ruby-actionpack60 to 6.0.5.1 [taca 2022-07-13]
+	Updated databases/ruby-activerecord60 to 6.0.5.1 [taca 2022-07-13]
+	Updated mail/ruby-actionmailer60 to 6.0.5.1 [taca 2022-07-13]
+	Updated devel/ruby-activestorage60 to 6.0.5.1 [taca 2022-07-13]
+	Updated mail/ruby-actionmailbox60 to 6.0.5.1 [taca 2022-07-13]
+	Updated www/ruby-actioncable60 to 6.0.5.1 [taca 2022-07-13]
+	Updated devel/ruby-railties60 to 6.0.5.1 [taca 2022-07-13]
+	Updated textproc/ruby-actiontext60 to 6.0.5.1 [taca 2022-07-13]
+	Updated www/ruby-rails60 to 6.0.5.1 [taca 2022-07-13]
