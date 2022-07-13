@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/06/02 18:50:40 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/07/13 15:02:02 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go118/AUTHORS
@@ -2651,6 +2651,7 @@ go118/src/cmd/go/testdata/script/mod_domain_root.txt
 go118/src/cmd/go/testdata/script/mod_dot.txt
 go118/src/cmd/go/testdata/script/mod_download.txt
 go118/src/cmd/go/testdata/script/mod_download_concurrent_read.txt
+go118/src/cmd/go/testdata/script/mod_download_git_decorate_full.txt
 go118/src/cmd/go/testdata/script/mod_download_hash.txt
 go118/src/cmd/go/testdata/script/mod_download_insecure_redirect.txt
 go118/src/cmd/go/testdata/script/mod_download_json.txt
@@ -10788,7 +10789,12 @@ go118/test/fixedbugs/issue52612.go
 go118/test/fixedbugs/issue5291.dir/pkg1.go
 go118/test/fixedbugs/issue5291.dir/prog.go
 go118/test/fixedbugs/issue5291.go
+go118/test/fixedbugs/issue53137.dir/main.go
+go118/test/fixedbugs/issue53137.go
+go118/test/fixedbugs/issue53454.go
 go118/test/fixedbugs/issue5358.go
+go118/test/fixedbugs/issue53600.go
+go118/test/fixedbugs/issue53600.out
 go118/test/fixedbugs/issue5373.go
 go118/test/fixedbugs/issue5470.dir/a.go
 go118/test/fixedbugs/issue5470.dir/b.go
@@ -11635,6 +11641,9 @@ go118/test/typeparam/issue52117.dir/b.go
 go118/test/typeparam/issue52117.go
 go118/test/typeparam/issue52228.go
 go118/test/typeparam/issue52241.go
+go118/test/typeparam/issue53309.go
+go118/test/typeparam/issue53419.go
+go118/test/typeparam/issue53477.go
 go118/test/typeparam/list.go
 go118/test/typeparam/list2.go
 go118/test/typeparam/listimp.dir/a.go
