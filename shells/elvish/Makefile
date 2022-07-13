@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2022/06/28 11:35:52 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2022/07/13 16:03:03 bsiegert Exp $
 
 DISTNAME=	elvish-0.18.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GITHUB:=elves/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
