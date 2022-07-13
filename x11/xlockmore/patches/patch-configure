@@ -1,11 +1,11 @@
-$NetBSD: patch-configure,v 1.1 2022/01/24 18:05:58 micha Exp $
+$NetBSD: patch-configure,v 1.2 2022/07/13 17:26:34 micha Exp $
 
 Modify handling of LDFLAGS.
 Rejected by upstream.
 
---- configure.orig	2020-06-04 14:43:47.000000000 +0000
+--- configure.orig	2022-07-11 01:00:43.000000000 +0000
 +++ configure
-@@ -10833,10 +10833,10 @@ $as_echo "#define LESS_THAN_AIX3_2 1" >>
+@@ -11764,10 +11764,10 @@ printf "%s\n" "#define LESS_THAN_AIX3_2 
          dirname=`which gcc`
          dirname=`dirname $dirname`
          dirname=`dirname $dirname`/lib
@@ -20,16 +20,16 @@ Rejected by upstream.
      fi
      case "${canonical}" in
        *-*-freebsd* )
-@@ -10896,6 +10896,8 @@ _ACEOF
- if test "x$ac_cv_header_elf_h" = xyes; then :
+@@ -11822,6 +11822,8 @@ if test "x$ac_cv_header_elf_h" = xyes
+ then :
  
- $as_echo "#define HAVE_SHADOW 1" >>confdefs.h
+ printf "%s\n" "#define HAVE_SHADOW 1" >>confdefs.h
 +XLOCKLDFLAGS="${COMPILER_RPATH_FLAG}${XLOCK_LDFLAGS}"
 +XMLOCKLDFLAGS="${COMPILER_RPATH_FLAG}${XMLOCK_LDFLAGS}"
  
  fi
  
-@@ -11006,10 +11008,10 @@ $as_echo "#define SVR4 1" >>confdefs.h
+@@ -11931,10 +11933,10 @@ printf "%s\n" "#define SVR4 1" >>confdef
          dirname=`which gcc`
          dirname=`dirname $dirname`
          dirname=`dirname $dirname`/lib
