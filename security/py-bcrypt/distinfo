@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 11:17:41 nia Exp $
+$NetBSD: distinfo,v 1.13 2022/07/13 20:12:17 adam Exp $
 
-BLAKE2s (bcrypt-3.1.7.tar.gz) = b4b4072f7b8a8e68be6ff3906c98e1092a9c729ddaf8f8c7687a45e3ae4953b5
-SHA512 (bcrypt-3.1.7.tar.gz) = bb9a431c8de97d5615d1a7fb67f868d08d839313fd5f3e17d8db40db1870f8b624594352c24c163c6a03485217de873cd92578040350678888728885c7b749de
-Size (bcrypt-3.1.7.tar.gz) = 42512 bytes
+BLAKE2s (bcrypt-3.2.2.tar.gz) = 04312c5bda6178575adee999ae8c587b6d0a45eed96c63b22ccee612e4859325
+SHA512 (bcrypt-3.2.2.tar.gz) = 2f3b88bffaa9ff820aba6fb3143253b7936a1440ae93caff13cbdff58c1f8427f132cce60299cda523659b7026751a954b476857f2b9841cdd2a1a50c430a626
+Size (bcrypt-3.2.2.tar.gz) = 42455 bytes
