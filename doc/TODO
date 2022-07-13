@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22014 2022/07/12 09:18:49 wiz Exp $
+$NetBSD: TODO,v 1.22015 2022/07/13 20:24:34 wiz Exp $
 
 Suggested new packages
 ======================
@@ -512,7 +512,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o cacti-spine-1.2.16
 	o calc-2.11.10.1
 	o calcoo-2.1.0
-	o calibre-5.44.0
+	o calibre-6.0.0
 	o calligra-3.0.1 [in wip; koffice successor]
 	o camlp4-4.12
 	o camlp5-8.00.03 [dholland has a partial update]
@@ -732,7 +732,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gkrellm-share-2.3.11
 	o gkrellm-snmp-1.0
 	o gkrellm-weather-2.0.8 [pkg/51463]
-	o glade-3.38.2
 	o gli2-2.70.0
 	o gli2-tools-2.70.0
 	o gliv-1.9.7
