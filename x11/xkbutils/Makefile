@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2020/01/18 23:36:09 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2022/07/13 20:48:09 wiz Exp $
 
-DISTNAME=		xkbutils-1.0.4
-PKGREVISION=		1
+DISTNAME=		xkbutils-1.0.5
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=app/}
-EXTRACT_SUFX=		.tar.bz2
+EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/
