@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.83 2022/06/28 11:37:07 wiz Exp $
+# $NetBSD: Makefile,v 1.84 2022/07/13 20:31:47 osa Exp $
 
-DISTNAME=	nginx-1.22.0
-PKGREVISION=	2
+DISTNAME=	nginx-1.23.0
 CATEGORIES=	www
 MASTER_SITES=	http://nginx.org/download/
 DISTFILES=	${DEFAULT_DISTFILES}
@@ -92,6 +91,14 @@ SOEXT=		bundle
 SOEXT=		so
 .endif
 PLIST_SUBST+=	SOEXT=${SOEXT}
+
+post-patch:
+.if !empty(PKG_OPTIONS:Mluajit)
+	(cd ${WRKSRC}/ && patch -p1 <${PATCHDIR}/extra-patch-lua-nginx-module)
+.endif
+.if !empty(PKG_OPTIONS:Mnaxsi)
+	(cd ${WRKSRC}/ && patch <${PATCHDIR}/extra-patch-naxsi_runtime.c)
+.endif
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/objs/nginx ${DESTDIR}${PREFIX}/sbin/nginx

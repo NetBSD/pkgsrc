@@ -1,4 +1,6 @@
-# $NetBSD: options.mk,v 1.7 2022/05/25 13:57:02 osa Exp $
+# $NetBSD: options.mk,v 1.8 2022/07/13 20:31:47 osa Exp $
+
+CODELOAD_SITE_GITHUB=		https://codeload.github.com/
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nginx-devel
 PKG_SUPPORTED_OPTIONS=	array-var auth-request cache-purge dav debug
@@ -34,10 +36,12 @@ _addextmod=		add-module
 
 # documentation says naxsi must be the first module
 .if !empty(PKG_OPTIONS:Mnaxsi) || make(makesum) || make(mdi) || make(distclean)
-NAXSI_VERSION=			1.3
-NAXSI_DISTNAME=			naxsi-${NAXSI_VERSION}
-NAXSI_DISTFILE=			${NAXSI_DISTNAME}.tar.gz
-SITES.${NAXSI_DISTFILE}=	-${MASTER_SITE_GITHUB:=nbs-system/naxsi/archive/}${NAXSI_VERSION}.tar.gz
+NAXSI_GH_ACCOUNT=		nbs-system
+NAXSI_GH_PROJECT=		naxsi
+NAXSI_VERSION=			29793dc
+NAXSI_DISTNAME=			${NAXSI_GH_PROJECT}-${NAXSI_VERSION}
+NAXSI_DISTFILE=			${NAXSI_GH_ACCOUNT}-${NAXSI_DISTNAME}_GH.tar.gz
+SITES.${NAXSI_DISTFILE}=	-${CODELOAD_SITE_GITHUB:=${NAXSI_GH_ACCOUNT}/${NAXSI_GH_PROJECT}/tar.gz/${NAXSI_VERSION}?dummy=${NAXSI_DISTFILE}}
 DISTFILES+=			${NAXSI_DISTFILE}
 PLIST.naxsi=			yes
 DSO_EXTMODS+=			naxsi
@@ -234,10 +238,12 @@ PLIST.forminput=		yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mheaders-more) || make(makesum) || make(mdi) || make(distclean)
-HEADMORE_VERSION=		0.33
-HEADMORE_DISTNAME=		headers-more-nginx-module-${HEADMORE_VERSION}
-HEADMORE_DISTFILE=		${HEADMORE_DISTNAME}.tar.gz
-SITES.${HEADMORE_DISTFILE}=	-${MASTER_SITE_GITHUB:=openresty/headers-more-nginx-module/archive/}v${HEADMORE_VERSION}.tar.gz
+HEADMORE_GH_ACCOUNT=		openresty
+HEADMORE_GH_PROJECT=		headers-more-nginx-module
+HEADMORE_GH_TAG=		d502e41
+HEADMORE_DISTNAME=		${HEADMORE_GH_PROJECT}-${HEADMORE_GH_TAG}
+HEADMORE_DISTFILE=		${HEADMORE_GH_ACCOUNT}-${HEADMORE_DISTNAME}_GH.tar.gz
+SITES.${HEADMORE_DISTFILE}=	-${CODELOAD_SITE_GITHUB:=${HEADMORE_GH_ACCOUNT}/${HEADMORE_GH_PROJECT}/tar.gz/${HEADMORE_VERSION}?dummy=${HEADMORE_DISTFILE}}
 DISTFILES+=			${HEADMORE_DISTFILE}
 DSO_EXTMODS+=			headmore
 PLIST.headmore=			yes
@@ -252,7 +258,7 @@ CONFIGURE_ARGS+=	--without-http_uwsgi_module
 .endif
 
 .if !empty(PKG_OPTIONS:Mpush) || make(makesum) || make(mdi) || make(distclean)
-PUSH_VERSION=		1.2.15
+PUSH_VERSION=		1.3.0
 PUSH_DISTNAME=		nchan-${PUSH_VERSION}
 PUSH_DISTFILE=		${PUSH_DISTNAME}.tar.gz
 SITES.${PUSH_DISTFILE}=	-${MASTER_SITE_GITHUB:=slact/nchan/archive/}v${PUSH_VERSION}.tar.gz
@@ -328,7 +334,7 @@ PLIST.rtmp=		yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mnjs) || make(makesum) || make(mdi) || make(distclean)
-NJS_VERSION=		0.7.4
+NJS_VERSION=		0.7.5
 NJS_DISTNAME=		njs-${NJS_VERSION}
 NJS_DISTFILE=		${NJS_DISTNAME}.tar.gz
 NJS_CONFIGURE_ARGS=	--no-pcre2
