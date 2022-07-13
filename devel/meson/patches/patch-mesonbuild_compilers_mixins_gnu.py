@@ -1,10 +1,10 @@
-$NetBSD: patch-mesonbuild_compilers_mixins_gnu.py,v 1.2 2021/02/21 12:45:23 adam Exp $
+$NetBSD: patch-mesonbuild_compilers_mixins_gnu.py,v 1.3 2022/07/13 03:57:22 triaxx Exp $
 
 Do not default to -z ignore on SunOS, it breaks for example -fstack-protector.
 
 --- mesonbuild/compilers/mixins/gnu.py.orig	2021-02-08 21:39:00.000000000 +0000
 +++ mesonbuild/compilers/mixins/gnu.py
-@@ -153,7 +153,7 @@ class GnuLikeCompiler(Compiler, metaclas
+@@ -147,7 +147,7 @@ class GnuLikeCompiler(Compiler, metaclas
                                     'b_ndebug', 'b_staticpic', 'b_pie']}
          if not (self.info.is_windows() or self.info.is_cygwin() or self.info.is_openbsd()):
              self.base_options.add(OptionKey('b_lundef'))
