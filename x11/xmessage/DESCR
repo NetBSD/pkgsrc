@@ -1,4 +1,6 @@
-This package provides xmessage, a program to display messages from the
-command line, a file or standard input in a window.
+xmessage displays a message or query in a window.  The user can
+click on an "okay" button to dismiss it or can select one of several
+buttons to answer a question.  xmessage can also exit after a
+specified time.
 
 This is from the modular X.org X11 project.

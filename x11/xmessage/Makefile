@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2020/01/18 23:36:11 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2022/07/13 20:49:24 wiz Exp $
 
-DISTNAME=		xmessage-1.0.5
+DISTNAME=		xmessage-1.0.6
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=app/}
-EXTRACT_SUFX=		.tar.bz2
+EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/
