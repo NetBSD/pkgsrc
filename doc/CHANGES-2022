@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3343 2022/07/13 00:53:31 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.3344 2022/07/13 00:54:21 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5019,3 +5019,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated audio/musicpd to 0.23.8nb1 [triaxx 2022-07-12]
 	Updated textproc/libhighlight to 4.2 [schmonz 2022-07-13]
 	Updated textproc/p5-highlight to 4.2 [schmonz 2022-07-13]
+	Updated textproc/highlight to 4.2 [schmonz 2022-07-13]
