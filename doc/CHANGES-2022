@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3349 2022/07/13 09:58:54 thor Exp $
+$NetBSD: CHANGES-2022,v 1.3350 2022/07/13 09:59:10 thor Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5026,3 +5026,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated emulators/sameboy to 0.15.1 [nia 2022-07-13]
 	Updated audio/mpg123 to 1.30.1nb1 [thomas 2022-07-13]
 	Updated audio/mpg123-jack to 1.30.1nb2 [thomas 2022-07-13]
+	Updated audio/mpg123-nas to 1.30.1 [thomas 2022-07-13]
