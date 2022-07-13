@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3359 2022/07/13 17:29:52 micha Exp $
+$NetBSD: CHANGES-2022,v 1.3360 2022/07/13 19:43:11 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5084,3 +5084,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/ruby-rails70 to 7.0.3.1 [taca 2022-07-13]
 	Updated lang/go118 to 1.18.4 [bsiegert 2022-07-13]
 	Updated x11/xlockmore to 5.70 [micha 2022-07-13]
+	Updated sysutils/broot to 1.14.2 [pin 2022-07-13]
