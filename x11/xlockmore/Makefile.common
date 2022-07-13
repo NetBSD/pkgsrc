@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.84 2022/03/11 11:18:20 micha Exp $
+# $NetBSD: Makefile.common,v 1.85 2022/07/13 17:26:34 micha Exp $
 #
 # used by x11/xlockmore/Makefile
 # used by x11/xlockmore-lite/Makefile
 
-DISTNAME=	xlockmore-5.69
+DISTNAME=	xlockmore-5.70
 CATEGORIES=	x11
 MASTER_SITES=	http://sillycycle.com/xlock/
 EXTRACT_SUFX=	.tar.xz
