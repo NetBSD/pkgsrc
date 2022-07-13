@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3344 2022/07/13 00:54:21 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.3345 2022/07/13 03:57:54 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5020,3 +5020,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/libhighlight to 4.2 [schmonz 2022-07-13]
 	Updated textproc/p5-highlight to 4.2 [schmonz 2022-07-13]
 	Updated textproc/highlight to 4.2 [schmonz 2022-07-13]
+	Updated devel/meson to 0.63.0 [triaxx 2022-07-13]
