@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2022/01/04 20:54:38 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2022/07/13 20:12:17 adam Exp $
 
-DISTNAME=	bcrypt-3.1.7
+DISTNAME=	bcrypt-3.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/bcrypt/}
 
@@ -12,10 +11,12 @@ COMMENT=	Modern password hashing for your software and your servers
 LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-cffi>=1.1:../../devel/py-cffi
-DEPENDS+=	${PYPKGPREFIX}-six>=1.4.1:../../lang/py-six
+TEST_DEPENDS+=	${PYPKGPREFIX}-test>=3.3.1:../../devel/py-test
 
-PYTHON_VERSIONED_DEPENDENCIES=	test:test
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
