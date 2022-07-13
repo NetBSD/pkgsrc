@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.6 2022/06/28 11:34:12 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2022/07/13 14:14:18 bsiegert Exp $
 
-PKGREVISION= 1
 .include "../../lang/go/version.mk"
 .include "../../lang/go/bootstrap.mk"
 
@@ -92,6 +91,11 @@ PLIST.pty=	yes
 .if ${OPSYS} != "Linux" && ${OPSYS} != "SunOS"
 PLIST.route=	yes
 .endif
+
+PRINT_PLIST_AWK+=	/^bin\/go${GOVERSSUFFIX}/ { print "bin/go$${GOVERSSUFFIX}"; next; }
+PRINT_PLIST_AWK+=	/^bin\/gofmt${GOVERSSUFFIX}/ { print "bin/gofmt$${GOVERSSUFFIX}"; next; }
+PRINT_PLIST_AWK+=	/internal\/pty\.a/ { printf "%s", "$${PLIST.pty}"; }
+PRINT_PLIST_AWK+=	/x\/net\/route\.a/ { printf "%s", "$${PLIST.route}"; }
 
 post-extract:
 	${RM} -r -f ${WRKSRC}/test/fixedbugs/issue27836*
