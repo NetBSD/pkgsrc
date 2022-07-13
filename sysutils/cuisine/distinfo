@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:19:27 nia Exp $
-
-BLAKE2s (cuisine-0.7.13.tar.gz) = 0e30310fecf10bfd4914ed82641b28b6c840db6acf331e2be3c0c10835e1a5aa
-SHA512 (cuisine-0.7.13.tar.gz) = 8474ca1d564ed475a8d9c3bf65ccb60a73e1d68e103eb91325e6acf932975020acc4f891b2cd599c86837b0d1170397b6882a3a72a225b1b3678a97d7e7e54c2
-Size (cuisine-0.7.13.tar.gz) = 21268 bytes
