@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2020/01/18 23:31:04 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2022/07/13 20:52:11 wiz Exp $
 
-DISTNAME=		font-util-1.3.2
+DISTNAME=		font-util-1.3.3
 CATEGORIES=		fonts
 MASTER_SITES=		${MASTER_SITE_XORG:=font/}
-EXTRACT_SUFX=		.tar.bz2
+EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/
