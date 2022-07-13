@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3341 2022/07/12 21:21:25 triaxx Exp $
+$NetBSD: CHANGES-2022,v 1.3342 2022/07/13 00:52:37 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5017,3 +5017,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated time/py-pytz to 2022.1 [adam 2022-07-12]
 	Updated www/grafana to 9.0.2 [triaxx 2022-07-12]
 	Updated audio/musicpd to 0.23.8nb1 [triaxx 2022-07-12]
+	Updated textproc/libhighlight to 4.2 [schmonz 2022-07-13]
