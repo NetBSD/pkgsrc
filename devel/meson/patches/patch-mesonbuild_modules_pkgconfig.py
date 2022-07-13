@@ -1,11 +1,11 @@
-$NetBSD: patch-mesonbuild_modules_pkgconfig.py,v 1.4 2021/11/07 13:23:05 adam Exp $
+$NetBSD: patch-mesonbuild_modules_pkgconfig.py,v 1.5 2022/07/13 03:57:22 triaxx Exp $
 
 Revert https://github.com/mesonbuild/meson/commit/aba8792 that introduced
 a condition to match FreeBSD path norm for pkg-config files.
 
---- mesonbuild/modules/pkgconfig.py.orig	2021-11-02 20:00:40.000000000 +0000
+--- mesonbuild/modules/pkgconfig.py.orig	2022-06-19 19:10:14.000000000 +0000
 +++ mesonbuild/modules/pkgconfig.py
-@@ -545,12 +545,8 @@ class PkgConfigModule(ExtensionModule):
+@@ -593,12 +593,8 @@ class PkgConfigModule(ExtensionModule):
          pcfile = filebase + '.pc'
          pkgroot = pkgroot_name = kwargs.get('install_dir', default_install_dir)
          if pkgroot is None:
@@ -19,4 +19,4 @@ a condition to match FreeBSD path norm for pkg-config files.
 +            pkgroot_name = os.path.join('{libdir}', 'pkgconfig')
          if not isinstance(pkgroot, str):
              raise mesonlib.MesonException('Install_dir must be a string.')
-         self._generate_pkgconfig_file(state, deps, subdirs, name, description, url,
+         relocatable = state.get_option('relocatable', module='pkgconfig')
