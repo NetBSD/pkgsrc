@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.14 2022/04/03 23:49:19 riastradh Exp $
+# $NetBSD: build.mk,v 1.15 2022/07/13 03:57:22 triaxx Exp $
 
 MESON_REQD?=	0
 .for version in ${MESON_REQD}
@@ -86,21 +86,21 @@ MESON_CROSS_FILE=	${WRKDIR}/.meson_cross
 meson-configure: ${MESON_CROSS_FILE}
 ${MESON_CROSS_FILE}:
 	${RUN}${ECHO} '[properties]' >$@.tmp
-.for _v_ in ${MESON_CROSS_VARS}
-.if defined(MESON_CROSS.${_v_})
+.  for _v_ in ${MESON_CROSS_VARS}
+.    if defined(MESON_CROSS.${_v_})
 	${RUN}${ECHO} ${_v_} = ${MESON_CROSS.${_v_}:Q} >>$@.tmp
-.endif
-.endfor
-.for _v_ in ${MESON_CROSS_OPSYS_VARS}
-.if defined(MESON_CROSS.${OPSYS}.${_v_})
+.    endif
+.  endfor
+.  for _v_ in ${MESON_CROSS_OPSYS_VARS}
+.    if defined(MESON_CROSS.${OPSYS}.${_v_})
 	${RUN}${ECHO} ${_v_} = ${MESON_CROSS.${OPSYS}.${_v_}:Q} >>$@.tmp
-.endif
-.endfor
-.for _v_ in ${MESON_CROSS_ARCH_VARS}
-.if defined(MESON_CROSS.${MACHINE_ARCH}.${_v_})
+.    endif
+.  endfor
+.  for _v_ in ${MESON_CROSS_ARCH_VARS}
+.    if defined(MESON_CROSS.${MACHINE_ARCH}.${_v_})
 	${RUN}${ECHO} ${_v_} = ${MESON_CROSS.${MACHINE_ARCH}.${_v_}:Q} >>$@.tmp
-.endif
-.endfor
+.    endif
+.  endfor
 	${RUN}${ECHO} '[host_machine]' >>$@.tmp
 	${RUN}${ECHO} "system = '${LOWER_OPSYS}'" >>$@.tmp
 	${RUN}${ECHO} "cpu_family = '${MESON_CPU_FAMILY}'" >>$@.tmp
