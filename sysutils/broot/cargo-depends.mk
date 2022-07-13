@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.39 2022/07/06 06:31:21 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.40 2022/07/13 19:42:12 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
 CARGO_CRATE_DEPENDS+=	adler32-1.2.0
@@ -191,7 +191,7 @@ CARGO_CRATE_DEPENDS+=	tempfile-3.3.0
 CARGO_CRATE_DEPENDS+=	termcolor-1.1.3
 CARGO_CRATE_DEPENDS+=	termimad-0.20.2
 CARGO_CRATE_DEPENDS+=	terminal-clipboard-0.3.1
-CARGO_CRATE_DEPENDS+=	terminal-light-0.8.1
+CARGO_CRATE_DEPENDS+=	terminal-light-1.0.0
 CARGO_CRATE_DEPENDS+=	termux-clipboard-0.1.0
 CARGO_CRATE_DEPENDS+=	textwrap-0.15.0
 CARGO_CRATE_DEPENDS+=	thiserror-1.0.31
@@ -236,4 +236,5 @@ CARGO_CRATE_DEPENDS+=	x11-clipboard-0.5.3
 CARGO_CRATE_DEPENDS+=	xcb-0.10.1
 CARGO_CRATE_DEPENDS+=	xml-rs-0.8.4
 CARGO_CRATE_DEPENDS+=	xterm-query-0.1.0
+CARGO_CRATE_DEPENDS+=	xterm-query-0.2.0
 CARGO_CRATE_DEPENDS+=	yaml-rust-0.4.5
