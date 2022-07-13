@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 11:34:52 nia Exp $
+$NetBSD: distinfo,v 1.10 2022/07/13 20:56:31 wiz Exp $
 
-BLAKE2s (xmag-1.0.6.tar.bz2) = ad7902bc0973f8dcf7c709eedf251cc49e5160148efb9d4db1ebae3afa2e4672
-SHA512 (xmag-1.0.6.tar.bz2) = 98f3c8e0c58f31cd4f1736ba9c5cd68dba3b2e2de6191988de8ae3e91b1d310803461840189ad56be45ee57c9ca05a2c63544a49b02ce6f79f2ebc14c59613de
-Size (xmag-1.0.6.tar.bz2) = 143112 bytes
+BLAKE2s (xmag-1.0.7.tar.xz) = dd76e0fd6cb41a9c5c447fe13862eb493f534b63513cfd8fef9f17c10ec05388
+SHA512 (xmag-1.0.7.tar.xz) = d35ac5d977b9f3bd03fb919bf178f68bdbc6ef2a57915b407d836fce0582f5cb78d0b79043bb6f8d015464ca113deb09469c3b724aed03901a4c3fc4a9982984
+Size (xmag-1.0.7.tar.xz) = 137660 bytes
