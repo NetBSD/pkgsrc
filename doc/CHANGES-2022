@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3351 2022/07/13 09:59:25 thor Exp $
+$NetBSD: CHANGES-2022,v 1.3352 2022/07/13 12:16:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5028,3 +5028,6 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated audio/mpg123-jack to 1.30.1nb2 [thomas 2022-07-13]
 	Updated audio/mpg123-nas to 1.30.1 [thomas 2022-07-13]
 	Updated audio/mpg123-pulse to 1.30.1nb3 [thomas 2022-07-13]
+	Added sysutils/py-invoke version 1.7.1 [adam 2022-07-13]
+	Updated sysutils/fabric to 2.7.0 [adam 2022-07-13]
+	Removed sysutils/cuisine [adam 2022-07-13]
