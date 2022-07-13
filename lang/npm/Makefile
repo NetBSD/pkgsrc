@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2022/07/07 10:05:11 adam Exp $
+# $NetBSD: Makefile,v 1.54 2022/07/13 11:41:06 jperkin Exp $
 
 DISTNAME=	npm-8.13.2
 CATEGORIES=	lang
@@ -12,6 +12,8 @@ COMMENT=	Package manager for JavaScript
 LICENSE=	artistic-2.0
 
 USE_TOOLS+=	bash gmake perl
+
+DEPENDS+=	nodejs-[0-9]*:../../lang/nodejs
 
 MAKE_JOBS_SAFE=	no	# building man-pages
 
@@ -46,6 +48,5 @@ do-install:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${INSTALL_ENV} ${PREFIX}/bin/node \
 		bin/npm-cli.js install -g -f ${PKGNAME_NOREV}.tgz
 
-.include "../../lang/nodejs/nodeversion.mk"
 .include "../../lang/python/pyversion.mk"
 .include "../../mk/bsd.pkg.mk"
