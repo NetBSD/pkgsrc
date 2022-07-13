@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/07/13 12:11:00 adam Exp $
+
+BLAKE2s (invoke-1.7.1.tar.gz) = ad2115695708b3b2df9e85618f83fb820e0c51d6422796808f254fea01e6fb3a
+SHA512 (invoke-1.7.1.tar.gz) = 10671faf7eccb44491860a3272324fe79ea32b05d83d68f2c929bf1cec348f64a6d10234eeffd9ecaef402631df3d9c07f2d63daa0ee9e7e3ea7756af268ff09
+Size (invoke-1.7.1.tar.gz) = 344626 bytes
