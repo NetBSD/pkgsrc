@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:34:56 nia Exp $
+$NetBSD: distinfo,v 1.9 2022/07/13 20:50:26 wiz Exp $
 
-BLAKE2s (xrefresh-1.0.6.tar.bz2) = 9be0a51d117355e21472e5fc836e19dc6bf8610775aaea36c5397a81235d582e
-SHA512 (xrefresh-1.0.6.tar.bz2) = 361e97fecfc2706d5eeab69df0d4dd4baa55b6783cfddabf51d8561b7c930d71ce6c217e0512c6564208d69b04f89c69ea8c0bfb2e4f6cc25b062b55e4db3674
-Size (xrefresh-1.0.6.tar.bz2) = 127494 bytes
+BLAKE2s (xrefresh-1.0.7.tar.xz) = 107a862a6048f9446137d8ee754cc7edc5e8ef2aefc94a8ff0e83d61c1218f8b
+SHA512 (xrefresh-1.0.7.tar.xz) = 8fcbb01aa368944ca536f050ab194b21bbd6b2a56265a7ed5807882e5c2f9660105283cdba0ea35b3e4a17a015586aeb82906e081da030332dfc49169a191c31
+Size (xrefresh-1.0.7.tar.xz) = 121820 bytes
