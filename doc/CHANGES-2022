@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3353 2022/07/13 14:14:34 bsiegert Exp $
+$NetBSD: CHANGES-2022,v 1.3354 2022/07/13 14:42:22 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5032,3 +5032,14 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/fabric to 2.7.0 [adam 2022-07-13]
 	Removed sysutils/cuisine [adam 2022-07-13]
 	Updated lang/go117 to 1.17.12 [bsiegert 2022-07-13]
+	Updated devel/ruby-activesupport52 to 5.2.8.1 [taca 2022-07-13]
+	Updated devel/ruby-activemodel52 to 5.2.8.1 [taca 2022-07-13]
+	Updated devel/ruby-activejob52 to 5.2.8.1 [taca 2022-07-13]
+	Updated www/ruby-actionview52 to 5.2.8.1 [taca 2022-07-13]
+	Updated www/ruby-actionpack52 to 5.2.8.1 [taca 2022-07-13]
+	Updated www/ruby-actioncable52 to 5.2.8.1 [taca 2022-07-13]
+	Updated databases/ruby-activerecord52 to 5.2.8.1 [taca 2022-07-13]
+	Updated devel/ruby-activestorage52 to 5.2.8.1 [taca 2022-07-13]
+	Updated mail/ruby-actionmailer52 to 5.2.8.1 [taca 2022-07-13]
+	Updated devel/ruby-railties52 to 5.2.8.1 [taca 2022-07-13]
+	Updated www/ruby-rails52 to 5.2.8.1 [taca 2022-07-13]
