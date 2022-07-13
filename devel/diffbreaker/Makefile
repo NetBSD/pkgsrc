@@ -1,14 +1,19 @@
-# $NetBSD: Makefile,v 1.6 2021/05/14 14:47:55 nia Exp $
+# $NetBSD: Makefile,v 1.7 2022/07/13 11:48:05 nat Exp $
 
-PKGNAME=	diffbreaker-0.3
+VERSION=	0.4
+GITHUB_PROJECT= diffbreaker
+DISTNAME=       ${GITHUB_PROJECT}-${VERSION}
+PKGNAME=        ${GITHUB_PROJECT}-${VERSION}
+
 #PKGREVISION=	1
 CATEGORIES=	devel
+MASTER_SITES=   ${MASTER_SITE_GITHUB:=AceHusky12/}
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	nat@NetBSD.org
+HOMEPAGE=	https://github.com/AceHusky12/diffbreaker
 COMMENT=	Tool to manuipulate unified diffs using curses
 LICENSE=	2-clause-bsd
-
-WRKSRC=		${WRKDIR}/diffbreaker
 
 USE_BSD_MAKEFILE=	yes
 
@@ -23,9 +28,6 @@ INSTALLATION_DIRS+=	${PKGMANDIR}/cat1
 .if !empty(MANINSTALL:Mmaninstall)
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 .endif
-
-do-extract:
-	${CP} -R ${FILESDIR}/diffbreaker ${WRKDIR}
 
 do-install:
 .for f in diffbreaker
