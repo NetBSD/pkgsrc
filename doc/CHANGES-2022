@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3361 2022/07/13 20:12:36 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3362 2022/07/13 20:24:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5087,3 +5087,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/broot to 1.14.2 [pin 2022-07-13]
 	Updated security/py-paramiko to 2.11.0 [adam 2022-07-13]
 	Updated security/py-bcrypt to 3.2.2 [adam 2022-07-13]
+	Updated devel/glade to 3.38.2 [wiz 2022-07-13]
