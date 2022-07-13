@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.10 2022/06/02 18:19:26 bsiegert Exp $
-bin/go117
-bin/gofmt117
+@comment $NetBSD: PLIST,v 1.11 2022/07/13 14:14:18 bsiegert Exp $
+bin/go${GOVERSSUFFIX}
+bin/gofmt${GOVERSSUFFIX}
 go117/AUTHORS
 go117/CONTRIBUTING.md
 go117/CONTRIBUTORS
@@ -2402,6 +2402,7 @@ go117/src/cmd/go/testdata/script/mod_domain_root.txt
 go117/src/cmd/go/testdata/script/mod_dot.txt
 go117/src/cmd/go/testdata/script/mod_download.txt
 go117/src/cmd/go/testdata/script/mod_download_concurrent_read.txt
+go117/src/cmd/go/testdata/script/mod_download_git_decorate_full.txt
 go117/src/cmd/go/testdata/script/mod_download_hash.txt
 go117/src/cmd/go/testdata/script/mod_download_json.txt
 go117/src/cmd/go/testdata/script/mod_download_partial.txt
@@ -10065,6 +10066,7 @@ go117/test/fixedbugs/issue5260.go
 go117/test/fixedbugs/issue5291.dir/pkg1.go
 go117/test/fixedbugs/issue5291.dir/prog.go
 go117/test/fixedbugs/issue5291.go
+go117/test/fixedbugs/issue53454.go
 go117/test/fixedbugs/issue5358.go
 go117/test/fixedbugs/issue5373.go
 go117/test/fixedbugs/issue5470.dir/a.go
