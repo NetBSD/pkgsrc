@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.49 2022/07/06 18:59:33 pin Exp $
+$NetBSD: distinfo,v 1.50 2022/07/13 19:42:12 pin Exp $
 
 BLAKE2s (adler-1.0.2.crate) = f263779d752af886455fc0f42c997893fb1a09edcf1bd2980605251c2e3602aa
 SHA512 (adler-1.0.2.crate) = 7ab190d31890fc05b0b55d8e2c6527a505e06793d5496be0b3831e0513412f9ba97f8148f6f68ed0770fa9cd980a5092d885e058becf1d5506b7c74b82674aa1
@@ -51,9 +51,9 @@ Size (bit_field-0.10.1.crate) = 10576 bytes
 BLAKE2s (bitflags-1.3.2.crate) = e3a3b45a4403823875a03dbda329ca16068fa8f847cef81987c6b780101f2415
 SHA512 (bitflags-1.3.2.crate) = 3c698f757b5cc62f815f9a1cce365c3d2dd88e4db71f331dff8bba86c2865f755b81cb4c9bfc59bd86b7643b0943f9e09a7c4f8ad75eb2ab0e714803d0129f62
 Size (bitflags-1.3.2.crate) = 23021 bytes
-BLAKE2s (broot-1.14.1.tar.gz) = d7baf307bc68027749ca0441b1c3587cb5b6c5a8d607f9704d4f83b18142f26a
-SHA512 (broot-1.14.1.tar.gz) = 5602b570f52ae5ee188dab2dbcc7fe04a41e11e6772ed8c086b7f2386070104701fa4e41352ae27787454ce5f773e61752ff025d719b5fd6d1d9d1d6162da88b
-Size (broot-1.14.1.tar.gz) = 10043633 bytes
+BLAKE2s (broot-1.14.2.tar.gz) = 63409379708be23ce78f1a05f91b26f467bdbfe8552e5a914b03d19370c8f615
+SHA512 (broot-1.14.2.tar.gz) = ae48ca96a4c99a50bcb1ad752b3a83b6831c337ddfab6b7c4618f5b57f6262bab7ac677f5dea351d57eb708364be6213eab0f74aef9b18a800b38fdf91f991d5
+Size (broot-1.14.2.tar.gz) = 10043403 bytes
 BLAKE2s (bstr-0.2.17.crate) = a970078acf6f8b1a2a6be249cda3a6cc7225239af2aa21cbac2b60fbaab453fd
 SHA512 (bstr-0.2.17.crate) = 883eac8210d14f89517b4dd5e25d02c97cf31602ec74498b5e186112ba0f154d47de8d1c41a8f4e5503f3b53c064e2c976b60bbfd63fc28b186bc006e00f20c2
 Size (bstr-0.2.17.crate) = 330350 bytes
@@ -576,9 +576,9 @@ Size (termimad-0.20.2.crate) = 353272 bytes
 BLAKE2s (terminal-clipboard-0.3.1.crate) = f5b2c36bb0b6d8741979fc0c820fec6babccee834693f1801ea1053742d8734f
 SHA512 (terminal-clipboard-0.3.1.crate) = b29a81d2737271cc4e60115e473ea3af80ce45f078c99fee573cbd35da8e27c939ff1aa86dd86a3e2ea9352a28f2fd3492e28be63c3eb0dad53974d06b43c346
 Size (terminal-clipboard-0.3.1.crate) = 5597 bytes
-BLAKE2s (terminal-light-0.8.1.crate) = c617e462a97a494923fb6ca4e07771b0d3b9520696deea6803418964e414e50e
-SHA512 (terminal-light-0.8.1.crate) = abb91348603846387f91b0e5446086cfdcaa31d6a111eeffabf70ac312fef3c971fc8c8a96eab5f2f5413a528edef8b6ca0422261775a5026c4a06c310aff144
-Size (terminal-light-0.8.1.crate) = 38103 bytes
+BLAKE2s (terminal-light-1.0.0.crate) = e87c69f15e5d29a4ef984612e0ae4d4ecf4863b0643f56e2f2a1ebfc5d5c1c75
+SHA512 (terminal-light-1.0.0.crate) = 2414c6cd98ae293556552ad0a5fb198f148be05dc1336bee65b31d864aaecf4f85442ed9f1c34bd1a5968e10e6d015307e32173e75c2a80fca9f3df3374db598
+Size (terminal-light-1.0.0.crate) = 38533 bytes
 BLAKE2s (termux-clipboard-0.1.0.crate) = 688c163ccee933156183295acf7456e38bfbc816edd41349935f1d676901e66c
 SHA512 (termux-clipboard-0.1.0.crate) = acd972d9c9eaa20dfadf1ec01274ed27fb33d16d97b504d8f41fea9c6598557a32d939d0a8a8585d919ee9d1b411d714851d662b5bc7d1a5f3b97d8cd423a434
 Size (termux-clipboard-0.1.0.crate) = 2033 bytes
@@ -711,6 +711,9 @@ Size (xml-rs-0.8.4.crate) = 52690 bytes
 BLAKE2s (xterm-query-0.1.0.crate) = 62fb6f6f4182cff28f60f3975c2e9882678a8f22f4830f5f8c08222aac1aecde
 SHA512 (xterm-query-0.1.0.crate) = 10809fb3d15364d3b2bda823a2d3bb102a5b859148090da8ecf019ad84e4663359160d6fb08f41dbad7b90752f5a71764fcb3809d73f0c07acc08c1d303c7515
 Size (xterm-query-0.1.0.crate) = 5662 bytes
+BLAKE2s (xterm-query-0.2.0.crate) = 99b46144118a5390b2ef859b8bebbc72b088ce18ca5c08e16b33c9bb9bcd1f0e
+SHA512 (xterm-query-0.2.0.crate) = 672c1a73021b9cec3cf804b1ff3a6bfece8b297bff7f15762e46e842e06b418ee4c1b712ec08cb19756987a3db93c7ef33a1459aa438dc82924aad48065af9ca
+Size (xterm-query-0.2.0.crate) = 6342 bytes
 BLAKE2s (yaml-rust-0.4.5.crate) = 65c7c0fe708cb682959e36fbb03b09a35b09d529e5c87364107f5985940a1404
 SHA512 (yaml-rust-0.4.5.crate) = 7621dc8dfd5e7d4a7a8805b2a7e8319b63b852367655f2359d4e3e8fec6c4fad52d75c46ce1161e4c674eac0780b757ce9d34e664e304d8d2beec7afa0363ea0
 Size (yaml-rust-0.4.5.crate) = 47783 bytes
