@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2022/05/13 10:56:05 jperkin Exp $
+# $NetBSD: Makefile,v 1.15 2022/07/13 11:41:06 jperkin Exp $
 
 DISTNAME=	execjs-2.8.1
 PKGREVISION=	1
@@ -9,6 +9,7 @@ HOMEPAGE=	https://github.com/rails/execjs
 COMMENT=	Run JavaScript code from Ruby
 LICENSE=	mit
 
-.include "../../lang/nodejs/nodeversion.mk"
+DEPENDS+=	nodejs-[0-9]*:../../lang/nodejs
+
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
