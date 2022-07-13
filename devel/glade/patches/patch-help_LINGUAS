@@ -1,0 +1,14 @@
+$NetBSD: patch-help_LINGUAS,v 1.1 2022/07/13 20:24:24 wiz Exp $
+
+Remove duplicate 'da' entry, breaking build.
+https://gitlab.gnome.org/GNOME/glade/-/commit/efdd5338b034a11c5d617684d92d11edc600965e
+
+--- help/LINGUAS.orig	2020-11-20 21:02:11.862337000 +0000
++++ help/LINGUAS
+@@ -1,6 +1,5 @@
+ # please keep this list sorted alphabetically
+ #
+-da
+ bg
+ ca
+ cs

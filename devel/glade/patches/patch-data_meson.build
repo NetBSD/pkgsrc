@@ -1,0 +1,22 @@
+$NetBSD: patch-data_meson.build,v 1.1 2022/07/13 20:24:24 wiz Exp $
+
+Fix build with meson-0.62
+
+--- data/meson.build.orig	2020-11-20 21:02:11.854337200 +0000
++++ data/meson.build
+@@ -2,7 +2,6 @@ desktop_conf = configuration_data()
+ desktop_conf.set('VERSION', glade_version)
+ 
+ i18n.merge_file(
+-  'desktop',
+   type: 'desktop',
+   input: configure_file(
+     input: 'org.gnome.Glade.desktop.in.in',
+@@ -18,7 +17,6 @@ i18n.merge_file(
+ appdata = glade_name + '.appdata.xml'
+ 
+ i18n.merge_file(
+-  'appdata',
+   input: 'org.gnome.Glade.appdata.xml.in',
+   output: '@BASENAME@',
+   po_dir: po_dir,
