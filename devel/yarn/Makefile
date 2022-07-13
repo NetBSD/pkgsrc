@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2022/05/13 10:54:37 jperkin Exp $
+# $NetBSD: Makefile,v 1.21 2022/07/13 11:41:06 jperkin Exp $
 
 DISTNAME=	yarn-v1.22.19
 PKGREVISION=	1
@@ -13,6 +13,8 @@ COMMENT=	JavaScript package manager
 LICENSE=	2-clause-bsd
 
 USE_LANGUAGES=	# none
+
+DEPENDS+=	nodejs-[0-9]*:../../lang/nodejs
 
 INSTALLATION_DIRS=	bin libexec/yarn/bin libexec/yarn/lib
 
@@ -32,5 +34,4 @@ do-install:
 		${DESTDIR}${PREFIX}/bin/yarnpkg
 
 .include "../../lang/nodejs/application.mk"
-.include "../../lang/nodejs/nodeversion.mk"
 .include "../../mk/bsd.pkg.mk"
