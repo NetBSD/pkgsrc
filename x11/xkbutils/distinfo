@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:34:51 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/07/13 20:48:09 wiz Exp $
 
-BLAKE2s (xkbutils-1.0.4.tar.bz2) = ec6b6c02081d068c1352f422ce50f3701b45e8881f317f1040ae63e623c70e99
-SHA512 (xkbutils-1.0.4.tar.bz2) = 5bb6cb52ac02a4ec18332559853815585ca86e00e8c6452483af10c4db75811fe00952575dbbad5b7d03b9d6498830fb45d617b1b3c5c1cea8445f1131856a4d
-Size (xkbutils-1.0.4.tar.bz2) = 131269 bytes
+BLAKE2s (xkbutils-1.0.5.tar.xz) = 496e2126b6f97755afcfc0abf36725a695d0efc4670cb25c088bede35e2f8091
+SHA512 (xkbutils-1.0.5.tar.xz) = 0d8d460f5e015e9034292688437511068dab61216c2493f2981cfb63aaa012976ac9435c1586a22c0940fbfcb779b48dce9b85832303fe2b854aa945b814ac77
+Size (xkbutils-1.0.5.tar.xz) = 129344 bytes
