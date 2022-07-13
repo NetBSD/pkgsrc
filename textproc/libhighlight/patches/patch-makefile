@@ -1,8 +1,8 @@
-$NetBSD: patch-makefile,v 1.6 2021/05/13 14:06:10 schmonz Exp $
+$NetBSD: patch-makefile,v 1.7 2022/07/13 00:52:31 schmonz Exp $
 
 Use pkgsrc-provided paths and tools.
 
---- makefile.orig	2021-05-10 17:47:34.000000000 +0000
+--- makefile.orig	2022-03-22 20:58:01.000000000 +0000
 +++ makefile
 @@ -7,7 +7,7 @@
  DESTDIR =
@@ -13,8 +13,8 @@ Use pkgsrc-provided paths and tools.
  
  # Location of the highlight data files:
  data_dir = ${PREFIX}/share/highlight/
-@@ -16,7 +16,7 @@ data_dir = ${PREFIX}/share/highlight/
- bin_dir = ${PREFIX}/bin/
+@@ -19,7 +19,7 @@ bin_dir = ${PREFIX}/bin/
+ lib_dir = ${PREFIX}/lib/
  
  # Location of the highlight man pages:
 -man_dir = ${PREFIX}/share/man/
@@ -22,7 +22,7 @@ Use pkgsrc-provided paths and tools.
  
  # Location of the highlight documentation:
  doc_dir = ${PREFIX}/share/doc/highlight/
-@@ -25,8 +25,8 @@ doc_dir = ${PREFIX}/share/doc/highlight/
+@@ -28,8 +28,8 @@ doc_dir = ${PREFIX}/share/doc/highlight/
  examples_dir = ${doc_dir}extras/
  
  # Location of the highlight config files:
@@ -33,7 +33,7 @@ Use pkgsrc-provided paths and tools.
  
  # Location of additional gui files
  desktop_apps = ${PREFIX}/share/applications/
-@@ -34,10 +34,10 @@ desktop_icons = ${PREFIX}/share/icons/hi
+@@ -37,10 +37,10 @@ desktop_icons = ${PREFIX}/share/icons/hi
  
  # Commands:
  GZIP=gzip -9f
@@ -48,7 +48,7 @@ Use pkgsrc-provided paths and tools.
  
  all cli:
  	${MAKE} -C ./src -f ./makefile HL_DATA_DIR=${data_dir} HL_CONFIG_DIR=${conf_dir}
-@@ -82,19 +82,12 @@ install:
+@@ -85,19 +85,12 @@ install:
  		${DESTDIR}${data_dir}themes/base16 \
  		${DESTDIR}${data_dir}langDefs \
  		${DESTDIR}${data_dir}plugins
@@ -68,7 +68,7 @@ Use pkgsrc-provided paths and tools.
  
  	${INSTALL_DATA} ./AUTHORS ${DESTDIR}${doc_dir}
  	${INSTALL_DATA} ./README* ${DESTDIR}${doc_dir}
-@@ -111,15 +104,27 @@ install:
+@@ -114,15 +107,27 @@ install:
  	${INSTALL_DATA} ./extras/themes-resources/css-themes/* ${DESTDIR}${examples_dir}themes-resources/css-themes
  	${INSTALL_DATA} ./extras/highlight_pipe.* ${DESTDIR}${examples_dir}
  	${INSTALL_DATA} ./extras/*.py ${DESTDIR}${examples_dir}
@@ -98,7 +98,7 @@ Use pkgsrc-provided paths and tools.
  install-gui:
  	@echo "Installing files for the GUI..."
  	${MKDIR} ${DESTDIR}${data_dir} \
-@@ -141,8 +146,8 @@ uninstall:
+@@ -147,8 +152,8 @@ uninstall:
  	${RMDIR} ${DESTDIR}${doc_dir}
  	${RMDIR} ${DESTDIR}${conf_dir}
  	${RMDIR} ${DESTDIR}${examples_dir}
