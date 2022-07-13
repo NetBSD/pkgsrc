@@ -1,0 +1,2 @@
+bin/inv @PREFIX@/bin/inv-@PYVERSSUFFIX@
+bin/invoke @PREFIX@/bin/invoke-@PYVERSSUFFIX@
