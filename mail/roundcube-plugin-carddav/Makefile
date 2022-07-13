@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2022/07/11 09:59:06 triaxx Exp $
+# $NetBSD: Makefile,v 1.8 2022/07/13 17:55:19 triaxx Exp $
 
 DISTNAME=	carddav-v4.4.2
 PKGNAME=	${PHP_PKG_PREFIX}-roundcube-plugin-${DISTNAME:S/-v/-/}
@@ -11,6 +11,8 @@ HOMEPAGE=	https://github.com/mstilkerich/rcmcarddav
 MAINTAINER=	triaxx@NetBSD.org
 COMMENT=	CardDAV adapter for Roundcube
 LICENSE=	gnu-gpl-v2
+
+PHP_VERSIONS_INCOMPATIBLE=	56
 
 USE_TOOLS+=	pax
 
