@@ -1,6 +1,9 @@
-Xev is an X11 debugging tool. Xev creates a window (or can attach
-to an existing window) and then asks the X server to send it events
-whenever anything happens to the window (such as it being moved,
-resized, typed in, clicked in, etc cetera).
+xev creates a window and then asks the X server to send it X11
+events whenever anything happens to the window (such as it being
+moved, resized, typed in, clicked in, etc.).  You can also attach
+it to an existing window.  It is useful for seeing what causes
+events to occur and to display the information that they contain;
+it is essentially a debugging and development tool, and should not
+be needed in normal usage.
 
 This is the version of xev maintained by Xorg.
