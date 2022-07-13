@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2021/05/13 14:06:09 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.18 2022/07/13 00:52:30 schmonz Exp $
 lib/libhighlight.la
 share/doc/highlight/AUTHORS
 share/doc/highlight/COPYING
@@ -109,6 +109,7 @@ share/highlight/langDefs/cobol.lang
 share/highlight/langDefs/coffeescript.lang
 share/highlight/langDefs/coldfusion.lang
 share/highlight/langDefs/conf.lang
+share/highlight/langDefs/critic.lang
 share/highlight/langDefs/crk.lang
 share/highlight/langDefs/crystal.lang
 share/highlight/langDefs/cs_block_regex.lang
@@ -163,6 +164,7 @@ share/highlight/langDefs/ini.lang
 share/highlight/langDefs/innosetup.lang
 share/highlight/langDefs/interlis.lang
 share/highlight/langDefs/io.lang
+share/highlight/langDefs/jam.lang
 share/highlight/langDefs/jasmin.lang
 share/highlight/langDefs/java.lang
 share/highlight/langDefs/javascript.lang
@@ -208,6 +210,7 @@ share/highlight/langDefs/netrexx.lang
 share/highlight/langDefs/nginx.lang
 share/highlight/langDefs/nice.lang
 share/highlight/langDefs/nim.lang
+share/highlight/langDefs/nix.lang
 share/highlight/langDefs/nsis.lang
 share/highlight/langDefs/nxc.lang
 share/highlight/langDefs/oberon.lang
@@ -239,6 +242,7 @@ share/highlight/langDefs/ps.lang
 share/highlight/langDefs/psl.lang
 share/highlight/langDefs/pure.lang
 share/highlight/langDefs/purebasic.lang
+share/highlight/langDefs/purescript.lang
 share/highlight/langDefs/pyrex.lang
 share/highlight/langDefs/python.lang
 share/highlight/langDefs/q.lang
