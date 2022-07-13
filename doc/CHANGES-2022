@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3352 2022/07/13 12:16:37 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3353 2022/07/13 14:14:34 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5031,3 +5031,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added sysutils/py-invoke version 1.7.1 [adam 2022-07-13]
 	Updated sysutils/fabric to 2.7.0 [adam 2022-07-13]
 	Removed sysutils/cuisine [adam 2022-07-13]
+	Updated lang/go117 to 1.17.12 [bsiegert 2022-07-13]
