@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:27:11 nia Exp $
+$NetBSD: distinfo,v 1.11 2022/07/13 20:52:11 wiz Exp $
 
-BLAKE2s (font-util-1.3.2.tar.bz2) = 17352893d1b62ccb7ee1be97b4bd6d5d3fe8b01129e9de3193ed06e501e92f2e
-SHA512 (font-util-1.3.2.tar.bz2) = 7cac529b12ae71185b89c72c1569b9826f52eeaecc1c76010338e7c42c4078ae339f18220b580bbd68fb5dc09df6ecf169a47c32e6104d8ee53bd443fa21d167
-Size (font-util-1.3.2.tar.bz2) = 158480 bytes
+BLAKE2s (font-util-1.3.3.tar.xz) = 446b8f4aa9bc62925447b86114e3026ccd2f5dd4be9a990f901f3712b7cc2ec0
+SHA512 (font-util-1.3.3.tar.xz) = 5e1cb8af44fe0bea72b1a6a4e455f50ca49b7531c2f4b605800c0b2b7578b9826ccf17fa195c505ab1d6339fd4ad697c01ba3b9777616f354ab62b23434d47c9
+Size (font-util-1.3.3.tar.xz) = 142544 bytes
