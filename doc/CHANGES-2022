@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3392 2022/07/14 14:09:52 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.3393 2022/07/14 15:14:31 osa Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5125,3 +5125,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-xopen to 1.5.0 [adam 2022-07-14]
 	Updated print/poppler to 22.07.0 [wiz 2022-07-14]
 	Updated devel/mob to 3.1.5 [schmonz 2022-07-14]
+	Updated www/nginx-devel to 1.23.0nb2 [osa 2022-07-14]
