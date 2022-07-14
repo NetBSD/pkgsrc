@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2022/07/14 05:09:46 dbj Exp $
+# $NetBSD: Makefile,v 1.25 2022/07/14 05:46:46 dbj Exp $
 
 DISTNAME=	free42-nologo-3.0.13
 PKGNAME=	${DISTNAME:S/-nologo//}
@@ -32,8 +32,6 @@ do-install:
 		${DESTDIR}/${PREFIX}/bin/
 	${INSTALL_DATA} ${WRKSRC}/README \
 		${DESTDIR}/${PREFIX}/share/doc/free42/
-	${INSTALL_DATA} ${WRKSRC}/gtk/README \
-		${DESTDIR}/${PREFIX}/share/doc/free42/README.gtk
 	${INSTALL_DATA} ${WRKSRC}/gtk/README \
 		${DESTDIR}/${PREFIX}/share/doc/free42/README.gtk
 	${INSTALL_DATA} ${WRKSRC}/gtk/icon-128x128.xpm \
