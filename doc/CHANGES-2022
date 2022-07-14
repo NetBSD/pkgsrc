@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3381 2022/07/14 10:58:10 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3382 2022/07/14 11:05:03 osa Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5113,3 +5113,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/njs to 0.7.5 [osa 2022-07-14]
 	Updated devel/git to 2.37.1 [adam 2022-07-14]
 	Updated devel/py-scard to 2.0.3 [adam 2022-07-14]
+	Updated lang/njs to 0.7.5nb1 [osa 2022-07-14]
