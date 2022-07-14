@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.136 2022/07/14 14:06:58 wiz Exp $
+# $NetBSD: Makefile.common,v 1.137 2022/07/14 23:53:27 schmonz Exp $
 #
 # used by print/poppler/Makefile
 # used by print/poppler-cpp/Makefile
@@ -22,7 +22,7 @@ PATCHDIR=	${.CURDIR}/../../print/poppler/patches
 
 USE_CMAKE=		yes
 USE_LANGUAGES=		c c++17
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		pkg-config gsed
 GCC_REQD+=		7 # std::optional
 
 .include "../../mk/bsd.prefs.mk"
