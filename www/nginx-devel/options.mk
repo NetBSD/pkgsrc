@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2022/07/14 10:21:20 osa Exp $
+# $NetBSD: options.mk,v 1.10 2022/07/14 15:13:22 osa Exp $
 
 CODELOAD_SITE_GITHUB=		https://codeload.github.com/
 
@@ -197,7 +197,7 @@ PLIST.setmisc=			yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mgeoip2) || make(makesum) || make(mdi) || make(distclean)
-GEOIP2_VERSION=			3.3
+GEOIP2_VERSION=			3.4
 GEOIP2_DISTNAME=		ngx_http_geoip2_module-${GEOIP2_VERSION}
 GEOIP2_DISTFILE=		${GEOIP2_DISTNAME}.tar.gz
 SITES.${GEOIP2_DISTFILE}=	-${MASTER_SITE_GITHUB:=leev/ngx_http_geoip2_module/archive/}${GEOIP2_VERSION}.tar.gz
