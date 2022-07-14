@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.97 2022/07/14 10:39:24 osa Exp $
+$NetBSD: distinfo,v 1.98 2022/07/14 16:09:42 osa Exp $
 
 BLAKE2s (array-var-nginx-module-0.05.tar.gz) = 2f9af1e0eb209b7c20aa58cd8ec2afb1eb1cc122c5f4ea169e34131c463c1c26
 SHA512 (array-var-nginx-module-0.05.tar.gz) = 7c9fa9b76bc7cd2473ceae6d5ffb8de26993be9293ea967908d6c4550e086affa7016df4c936fb0b79f1142dc0aa1a5f2058d417e6433b5a3497a45d7e866e84
@@ -21,9 +21,9 @@ Size (lua-nginx-module-0.10.21.tar.gz) = 690938 bytes
 BLAKE2s (naxsi-1.3.tar.gz) = d3c819d8fbd2a896c56138f028b92fa4b26a51168ff24334f76e3d1d07626927
 SHA512 (naxsi-1.3.tar.gz) = d7aac69b5eceeb1b0db4741201159ade1e0e7f6f7c3e8c4afa2f8959c6c00c3b5285d5185747c2fb0b1400efda02e96799836315e7e492bb4a059b14acb2142d
 Size (naxsi-1.3.tar.gz) = 235626 bytes
-BLAKE2s (nchan-1.2.15.tar.gz) = bfc1c98de14aeb709fd0309b5350d885c62ed072867fe289e18dffedd5371eb4
-SHA512 (nchan-1.2.15.tar.gz) = 1323a285724052dd08a317fd25cbf0061b9b7afb73bf922a9a90f4317391eb0984dc5f4160769da0bd7f68a1627832c500d434f967fc5d7f759cb3c0260d1dbb
-Size (nchan-1.2.15.tar.gz) = 734488 bytes
+BLAKE2s (nchan-1.3.0.tar.gz) = fd45ccebd86c9808522dabefb8c202747f428ed04b46225282f344fbfd52f0b2
+SHA512 (nchan-1.3.0.tar.gz) = c8cd3eb0b06fc0f17b5a9013d32f5a6d5a8252015b3ac27fbf74a7a1b97bc7ae78c5c8cdd7372e36f5f9d137b59635f007d836746282c85c4a972b6984ba2bef
+Size (nchan-1.3.0.tar.gz) = 745161 bytes
 BLAKE2s (nginx-1.22.0.tar.gz) = 4d1b3995f370925e767fefb1a8744db73f77ef7089479e7f765c136719bda370
 SHA512 (nginx-1.22.0.tar.gz) = 074782dba9cd5f8f493fbb57e20bda6dc9171814d919a47ee9f825d93f12c9f9d496e25d063c983191b55ad6a236bcef252ce16ecc1d253dc8b23433557559b1
 Size (nginx-1.22.0.tar.gz) = 1073322 bytes
@@ -42,9 +42,9 @@ Size (ngx_cache_purge-2.5.1.tar.gz) = 16614 bytes
 BLAKE2s (ngx_devel_kit-0.3.1.tar.gz) = e059ff3e7706eb444be721b28cc9989568c842db5ffcca7985203ed3368509f4
 SHA512 (ngx_devel_kit-0.3.1.tar.gz) = de1e3349d8dd08e5982279b2219dc8a8006739f0409b8e0f5c50d93434beff1fbafba43e9c5ac85a5fab90afc5c0a7244a340610339c36f82f2cba7233e72de9
 Size (ngx_devel_kit-0.3.1.tar.gz) = 66542 bytes
-BLAKE2s (ngx_http_geoip2_module-3.3.tar.gz) = cfa0bbf88d6b5f21129fc9f653d30516d782ca474a68159d367017b96e05b330
-SHA512 (ngx_http_geoip2_module-3.3.tar.gz) = 06963b598c54e22d75ce837fb222f5aa6c9494c29e558ff46f1205d7159fc305414bfac4ed3288c836dcbf7628d92f26458e1992d34fc2f4b73275a32847bdc0
-Size (ngx_http_geoip2_module-3.3.tar.gz) = 8509 bytes
+BLAKE2s (ngx_http_geoip2_module-3.4.tar.gz) = eb14ed670788d4cc46037719ebab29e1c0da53cadbb0da10198e76255d924273
+SHA512 (ngx_http_geoip2_module-3.4.tar.gz) = 18dea21e5ae2647bea1fc448058a1b773c936917245edef8d861d5e23ed92e9a3b1ec4ef43ffb2ece7b5899d787910adcf4fbd39f84d7e8d7c54759e2fee5b72
+Size (ngx_http_geoip2_module-3.4.tar.gz) = 8877 bytes
 BLAKE2s (njs-0.7.5.tar.gz) = 03706004202f68f9095eed4bb78e9700258d7a363454a38222dc9977197ec4c4
 SHA512 (njs-0.7.5.tar.gz) = e33dbb285ff6216acddcd213fdbd73ffadd5730680bcec742b1598fa57b4d100da32c913b1c2648b3e87867fc29bf11075d70fa5655f85c62e42eb0a48d177f1
 Size (njs-0.7.5.tar.gz) = 592998 bytes
