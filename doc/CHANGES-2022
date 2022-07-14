@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3387 2022/07/14 13:17:31 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3388 2022/07/14 13:21:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5119,3 +5119,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/libidn to 1.41 [wiz 2022-07-14]
 	Updated multimedia/libva to 2.15.0 [wiz 2022-07-14]
 	Updated devel/liblangtag to 0.6.4 [wiz 2022-07-14]
+	Updated security/py-pip-audit to 2.4.1 [wiz 2022-07-14]
