@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2013/09/01 12:14:07 obache Exp $
+# $NetBSD: Makefile,v 1.24 2022/07/14 23:46:22 dholland Exp $
 #
 
 DISTNAME=		h5utils-1.12.1
-PKGREVISION=		8
+PKGREVISION=		9
 CATEGORIES=		graphics
 MASTER_SITES=		http://ab-initio.mit.edu/h5utils/
 
