@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3390 2022/07/14 13:36:58 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3391 2022/07/14 14:07:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5123,3 +5123,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/zxing-cpp to 1.4.0 [wiz 2022-07-14]
 	Updated devel/py-test-timeout to 2.1.0 [adam 2022-07-14]
 	Updated devel/py-xopen to 1.5.0 [adam 2022-07-14]
+	Updated print/poppler to 22.07.0 [wiz 2022-07-14]
