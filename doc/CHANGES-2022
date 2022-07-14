@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3378 2022/07/14 10:22:26 osa Exp $
+$NetBSD: CHANGES-2022,v 1.3379 2022/07/14 10:40:19 osa Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5109,3 +5109,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-setuptools to 63.2.0 [adam 2022-07-14]
 	Updated converters/py-unicode-slugify to 0.1.5 [adam 2022-07-14]
 	Updated www/nginx-devel to 1.23.0nb1 [osa 2022-07-14]
+	Updated www/nginx to 1.22.0nb3 [osa 2022-07-14]
