@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/04/01 21:08:38 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/07/14 07:03:23 dbj Exp $
 bin/hdhomerun_config
 include/hdhomerun/hdhomerun.h
 include/hdhomerun/hdhomerun_channels.h
@@ -15,4 +15,5 @@ include/hdhomerun/hdhomerun_pkt.h
 include/hdhomerun/hdhomerun_sock.h
 include/hdhomerun/hdhomerun_types.h
 include/hdhomerun/hdhomerun_video.h
-lib/libhdhomerun.${SHLIBEXT}
+lib/libhdhomerun.so
+

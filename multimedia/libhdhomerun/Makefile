@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2019/11/03 17:12:02 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2022/07/14 07:03:23 dbj Exp $
 
 DISTNAME=	libhdhomerun_20140121
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -25,7 +25,6 @@ SHLIBEXT=	dylib
 .else
 SHLIBEXT=	so
 .endif
-PLIST_SUBST+=	SHLIBEXT=${SHLIBEXT}
 
 INSTALL_HEADERS=	hdhomerun.h \
 			hdhomerun_channelscan.h \
