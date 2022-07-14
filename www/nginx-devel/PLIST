@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2022/03/14 02:49:09 osa Exp $
+@comment $NetBSD: PLIST,v 1.9 2022/07/14 10:21:20 osa Exp $
 ${PLIST.dso}${PLIST.arrayvar}libexec/nginx/ngx_http_array_var_module.so
 ${PLIST.dso}${PLIST.cprg}libexec/nginx/ngx_http_cache_purge_module.so
 ${PLIST.dso}${PLIST.dav}libexec/nginx/ngx_http_dav_ext_module.so
@@ -20,6 +20,7 @@ ${PLIST.dso}${PLIST.perl}libexec/nginx/ngx_http_perl_module.so
 ${PLIST.dso}${PLIST.rtmp}libexec/nginx/ngx_rtmp_module.so
 ${PLIST.dso}${PLIST.setmisc}libexec/nginx/ngx_http_set_misc_module.so
 ${PLIST.dso}${PLIST.stream}libexec/nginx/ngx_stream_module.so
+${PLIST.dso}${PLIST.upload}libexec/nginx/ngx_http_upload_module.so
 ${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/auto/nginx/nginx.${SOEXT}
 ${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/nginx.pm
 man/man8/nginx.8

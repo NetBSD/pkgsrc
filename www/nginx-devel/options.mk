@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2022/07/13 20:31:47 osa Exp $
+# $NetBSD: options.mk,v 1.9 2022/07/14 10:21:20 osa Exp $
 
 CODELOAD_SITE_GITHUB=		https://codeload.github.com/
 
@@ -21,7 +21,7 @@ PKG_OPTIONS_GROUP.pcre=		pcre pcre2
 
 PLIST_VARS+=		arrayvar cprg dav dso echo encses forminput geoip2
 PLIST_VARS+=		headmore imagefilter lua mail naxsi nchan ndk njs
-PLIST_VARS+=		perl rtmp setmisc stream uwsgi
+PLIST_VARS+=		perl rtmp setmisc stream upload uwsgi
 
 .include "../../mk/bsd.options.mk"
 

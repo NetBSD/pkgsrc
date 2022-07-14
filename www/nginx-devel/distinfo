@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.79 2022/07/13 20:31:47 osa Exp $
+$NetBSD: distinfo,v 1.80 2022/07/14 10:21:20 osa Exp $
 
 BLAKE2s (array-var-nginx-module-0.05.tar.gz) = 2f9af1e0eb209b7c20aa58cd8ec2afb1eb1cc122c5f4ea169e34131c463c1c26
 SHA512 (array-var-nginx-module-0.05.tar.gz) = 7c9fa9b76bc7cd2473ceae6d5ffb8de26993be9293ea967908d6c4550e086affa7016df4c936fb0b79f1142dc0aa1a5f2058d417e6433b5a3497a45d7e866e84
@@ -51,7 +51,8 @@ Size (openresty-headers-more-nginx-module-d502e41_GH.tar.gz) = 28824 bytes
 BLAKE2s (set-misc-nginx-module-0.33.tar.gz) = 306eb7a96ce5650c7e97a91e9cdba48d154d10cf6445d31193ffab889054d893
 SHA512 (set-misc-nginx-module-0.33.tar.gz) = 1ff4c947538a5bd5f9d6adcd87b37f2702f5cc90e3342bc08359cbe8f290b705a3a2daa3dedfb1df3ce4bc19478c8fcac07081c4a53a804fc2862d50078278dc
 Size (set-misc-nginx-module-0.33.tar.gz) = 30084 bytes
+SHA1 (extra-patch-lua-nginx-module) = 72d581ec97da32600d8b0b1a33b69dfa00bd762a
+SHA1 (extra-patch-naxsi_runtime.c) = 75aaa09005225c1003b6d7d14b2e3415799e05f7
 SHA1 (patch-auto_install) = 3b3a0f9f4c005b707664554fa57a58c9e3b7de60
 SHA1 (patch-conf_nginx.conf) = ee9fbc3838cc006f6e1cddddadf6603f4941d171
 SHA1 (patch-src_event_modules_ngx__eventport__module.c) = c8e919f48d68bd5bffc4ad11d9c79dc6da3a0de2
-SHA1 (patch-src_os_unix_ngx__udp__sendmsg__chain.c) = d00e0f8bf7ff967e56e2b0d299f0e75f8cbdb3cb
