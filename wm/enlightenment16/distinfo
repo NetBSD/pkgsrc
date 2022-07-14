@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.8 2022/06/14 01:50:32 gutteridge Exp $
+$NetBSD: distinfo,v 1.9 2022/07/14 00:53:02 gutteridge Exp $
 
 BLAKE2s (e16-1.0.25.tar.gz) = 992c5e56d045f797fa2010b6bd8ffc2da7390809fc0530f7b06063405de6aca8
 SHA512 (e16-1.0.25.tar.gz) = 6c69c2e345350115281c822805a072644cf3ce6c16e5c963146924ed94af235c51c5fd846ebba9ad97a6da2c397eafc54d3ffbcd460bb14c903ef3a4bf0621b1
 Size (e16-1.0.25.tar.gz) = 2395514 bytes
 SHA1 (patch-ac) = a5a2f2b0377212178480cc94e6975dd4ff364ced
+SHA1 (patch-src_menus.c) = 8ae49e4fcd0733e0e9afea41a1038f5c52167cc6
