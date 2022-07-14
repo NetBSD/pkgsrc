@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2022/01/14 11:49:41 wiz Exp $
+$NetBSD: distinfo,v 1.6 2022/07/14 08:58:45 adam Exp $
 
-BLAKE2s (unicode-slugify-0.1.3.tar.gz) = db73f98ecfb833e81420458405fb750580ec6a2cd25ea370bf40245ba7c8cb5e
-SHA512 (unicode-slugify-0.1.3.tar.gz) = 509414c8b3603f3b092390ee29f52b6a22de45d904fcfa5554f2c1188a35ac090781050642b0b7bf068d1b30ce424342878e646db98b592712f47595528911a1
-Size (unicode-slugify-0.1.3.tar.gz) = 4430 bytes
+BLAKE2s (unicode-slugify-0.1.5.tar.gz) = 2525fcc158e3088c812cd6e789699ae712f913455b3b5d7ed30545636b083118
+SHA512 (unicode-slugify-0.1.5.tar.gz) = 69cf66a91264647aa551996e84952ebf6b5a31b88783c657f2857265bf52fbc1bc52ba832e092862c56ab13967505e98db192e03e1d3932829c923ee30c483e8
+Size (unicode-slugify-0.1.5.tar.gz) = 5784 bytes
