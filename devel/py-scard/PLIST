@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2020/08/17 07:00:58 riastradh Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/07/14 10:57:52 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/pbr.json
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/smartcard/ATR.py
