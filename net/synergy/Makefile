@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.75 2022/06/17 18:09:24 tnn Exp $
+# $NetBSD: Makefile,v 1.76 2022/07/14 13:48:57 tnn Exp $
 
 DISTNAME=		synergy-core-1.14.4.37
+PKGREVISION=		1
 PKGNAME=		${DISTNAME:S/-core//}
 CATEGORIES=		net x11
 MASTER_SITES=		${MASTER_SITE_GITHUB:=symless/}
@@ -36,7 +37,9 @@ SUBST_STAGE.fix-paths=		pre-configure
 SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
 SUBST_FILES.fix-paths=		src/lib/arch/unix/ArchFileUnix.cpp
 SUBST_FILES.fix-paths+=		src/lib/arch/unix/ArchDaemonUnix.h
+SUBST_FILES.fix-paths+=		src/lib/synergy/unix/AppUtilUnix.cpp
 SUBST_SED.fix-paths=		-e 's,"/etc,"${PKG_SYSCONFDIR},g'
+SUBST_SED.fix-paths+=		-e 's,"/usr/share/X11,"${X11BASE}/share/X11,g'
 
 post-extract:
 	${RM} -rf ${WRKSRC}/ext/googletest
