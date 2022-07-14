@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:19:09 nia Exp $
+$NetBSD: distinfo,v 1.11 2022/07/14 13:35:21 adam Exp $
 
-BLAKE2s (pytest-timeout-1.4.2.tar.gz) = a2a3f511dc8c34fb20481744ae5b608b30180b751d19b1d3bed2804e442e2c6d
-SHA512 (pytest-timeout-1.4.2.tar.gz) = 3446ecdb5aaad5fbca12df4e7f4f40c6c1a12895d3ed9f3a3ee24800ce36deed3cb8c09a4cc72220c962b06f821cfd55bf7eebbca23664c56abf2d0e5bc8fbea
-Size (pytest-timeout-1.4.2.tar.gz) = 15424 bytes
+BLAKE2s (pytest-timeout-2.1.0.tar.gz) = cd458ddbb713d3096d23655e10e137a64c4a5e9b94adc68fee6401a6c76ffcaf
+SHA512 (pytest-timeout-2.1.0.tar.gz) = 5750e5183669ed9b83fbb76bd7fc9fc1f5f6eef3d9b675dc44f6c7edfd2c6d15739d71e845ededaa192c93da73026ac3376a3295be9f7d3f3eac325660ce7bf3
+Size (pytest-timeout-2.1.0.tar.gz) = 18386 bytes
