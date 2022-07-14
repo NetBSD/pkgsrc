@@ -1,12 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2021/12/08 16:04:15 adam Exp $
+# $NetBSD: Makefile,v 1.24 2022/07/14 05:09:46 dbj Exp $
 
-DISTNAME=	free42
-PKGNAME=	${DISTNAME}-1.4.78
-PKGREVISION=	15
-DIST_SUBDIR=	${PKGNAME_NOREV}
+DISTNAME=	free42-nologo-3.0.13
+PKGNAME=	${DISTNAME:S/-nologo//}
 CATEGORIES=	emulators
-#MASTER_SITES=	http://thomasokken.com/free42/download/
-MASTER_SITES=	${MASTER_SITE_BACKUP}
+MASTER_SITES=	https://thomasokken.com/free42/upstream/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -14,33 +11,39 @@ HOMEPAGE=	https://thomasokken.com/free42/
 COMMENT=	HP42S Calculator Simulator
 LICENSE=	gnu-gpl-v2
 
-#WRKSRC=	${WRKDIR}/free42/gtk/
-USE_TOOLS+=	gmake pkg-config
-USE_LANGUAGES+=	c++03
-BUILD_DIRS=	gtk
-
-.include "options.mk"
-
-BUILD_TARGET=	free42${VARIANT}
-
-CXXFLAGS.NetBSD+=	-DNO_SINCOS
+USE_TOOLS+=	gmake pkg-config pax
+USE_LANGUAGES+=	c c++
 
 INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	share/doc/free42
 
+do-configure:
+	mkdir ${WRKSRC}/gtk-bcd
+	cd ${WRKSRC}/gtk && ${PAX} -rw . ../gtk-bcd
+
+do-build:
+	cd ${WRKSRC}/gtk && ${BUILD_MAKE_CMD} free42bin
+	cd ${WRKSRC}/gtk-bcd && ${BUILD_MAKE_CMD} BCD_MATH=1 free42dec
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${BUILD_DIRS}/${BUILD_TARGET} \
-		${DESTDIR}/${PREFIX}/bin/free42
+	${INSTALL_PROGRAM} ${WRKSRC}/gtk/free42bin \
+		${DESTDIR}/${PREFIX}/bin/
+	${INSTALL_PROGRAM} ${WRKSRC}/gtk-bcd/free42dec \
+		${DESTDIR}/${PREFIX}/bin/
 	${INSTALL_DATA} ${WRKSRC}/README \
-		${DESTDIR}/${PREFIX}/share/doc/free42
-	${INSTALL_DATA} ${WRKSRC}/${BUILD_DIRS}/README \
+		${DESTDIR}/${PREFIX}/share/doc/free42/
+	${INSTALL_DATA} ${WRKSRC}/gtk/README \
 		${DESTDIR}/${PREFIX}/share/doc/free42/README.gtk
+	${INSTALL_DATA} ${WRKSRC}/gtk/README \
+		${DESTDIR}/${PREFIX}/share/doc/free42/README.gtk
+	${INSTALL_DATA} ${WRKSRC}/gtk/icon-128x128.xpm \
+		${DESTDIR}/${PREFIX}/share/doc/free42/free42icon-128x128.xpm
+
+.include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "Linux"
 MAKE_ENV+=	AUDIO_ALSA=1
 .include "../../audio/alsa-lib/buildlink3.mk"
 .endif
-.include "../../x11/gtk2/buildlink3.mk"
-.include "../../x11/libX11/buildlink3.mk"
-.include "../../x11/libXmu/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
