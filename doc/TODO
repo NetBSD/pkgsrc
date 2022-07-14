@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22018 2022/07/14 13:16:20 wiz Exp $
+$NetBSD: TODO,v 1.22019 2022/07/14 13:17:31 wiz Exp $
 
 Suggested new packages
 ======================
@@ -970,7 +970,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libjit-1.0.2
 	o libkactivities4-5.81.0
 	o libkscreen-5.21.4
-	o liblangtag-0.6.4
 	o liblzo-2.10
 	o libmcs-0.7.2
 	o libmilter-8.16.1
