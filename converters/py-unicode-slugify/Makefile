@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2022/01/04 20:52:40 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/07/14 08:58:45 adam Exp $
 
-DISTNAME=	unicode-slugify-0.1.3
+DISTNAME=	unicode-slugify-0.1.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	converters python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/unicode-slugify/}
 
@@ -13,6 +12,9 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-Unidecode-[0-9]*:../../textproc/py-Unidecode
+TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
+
+USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
