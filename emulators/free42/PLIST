@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2014/03/10 08:38:25 he Exp $
-bin/free42
+@comment $NetBSD: PLIST,v 1.2 2022/07/14 05:09:46 dbj Exp $
+bin/free42bin
+bin/free42dec
 share/doc/free42/README
 share/doc/free42/README.gtk
+share/doc/free42/free42icon-128x128.xpm
