@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3383 2022/07/14 13:13:42 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3384 2022/07/14 13:13:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5115,3 +5115,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-scard to 2.0.3 [adam 2022-07-14]
 	Updated lang/njs to 0.7.5nb1 [osa 2022-07-14]
 	Updated fonts/harfbuzz to 4.4.1 [wiz 2022-07-14]
+	Updated fonts/harfbuzz-icu to 4.4.1 [wiz 2022-07-14]
