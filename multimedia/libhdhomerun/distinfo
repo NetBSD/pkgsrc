@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:01:09 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/07/14 07:03:06 dbj Exp $
 
 BLAKE2s (libhdhomerun_20140121.tgz) = ea7d074b8e6e97a5297561c7ffd29a7ad9322a6e8636ea9144953ef759d9894a
 SHA512 (libhdhomerun_20140121.tgz) = bf7bfed024980b4a58d860b28194c6f3a394071ba1e3e25b46b2a20709e5de51fbb61779d46c9f1f01efd1553abf0332b3711afeb21479576f7f40da7f22eca1
 Size (libhdhomerun_20140121.tgz) = 47685 bytes
+SHA1 (patch-Makefile) = 153eb9e73fbe2bfba944cb666305efd20555ecd3
 SHA1 (patch-hdhomerun__sock__posix.c) = 29771502664cfaa580b083dc5adcab88869a6502
