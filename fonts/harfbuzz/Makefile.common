@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.21 2022/06/07 16:47:33 wiz Exp $
+# $NetBSD: Makefile.common,v 1.22 2022/07/14 13:13:32 wiz Exp $
 # used by fonts/harfbuzz-icu/Makefile
 
-DISTNAME=	harfbuzz-4.3.0
+DISTNAME=	harfbuzz-4.4.1
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_GITHUB:=harfbuzz/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
