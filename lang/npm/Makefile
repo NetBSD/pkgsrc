@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.54 2022/07/13 11:41:06 jperkin Exp $
+# $NetBSD: Makefile,v 1.55 2022/07/14 07:17:14 adam Exp $
 
-DISTNAME=	npm-8.13.2
+DISTNAME=	npm-8.14.0
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=npm/}
 GITHUB_PROJECT=	cli
