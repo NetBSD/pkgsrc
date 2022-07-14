@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3375 2022/07/14 07:17:37 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3376 2022/07/14 08:07:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5102,3 +5102,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated emulators/free42 to 3.0.13 [dbj 2022-07-14]
 	Updated lang/nodejs to 18.6.0 [adam 2022-07-14]
 	Updated lang/npm to 8.14.0 [adam 2022-07-14]
+	Updated databases/sqlite3 to 3.39.1 [adam 2022-07-14]
+	Updated databases/sqlite3-docs to 3.39.1 [adam 2022-07-14]
+	Updated databases/sqlite3-tcl to 3.39.1 [adam 2022-07-14]
+	Updated devel/lemon to 1.0.3.39.1 [adam 2022-07-14]
