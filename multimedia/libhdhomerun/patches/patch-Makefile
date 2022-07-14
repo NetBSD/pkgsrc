@@ -1,0 +1,14 @@
+$NetBSD: patch-Makefile,v 1.1 2022/07/14 07:03:06 dbj Exp $
+
+Do not force arch on darwin
+
+--- Makefile.orig	2013-05-03 21:14:06.000000000 +0000
++++ Makefile
+@@ -32,7 +32,6 @@ else
+     LDFLAGS += -lsocket
+   endif
+   ifeq ($(OS),Darwin)
+-    CFLAGS += -arch i386 -arch ppc
+     LIBEXT := .dylib
+     SHARED := -dynamiclib -install_name libhdhomerun$(LIBEXT)
+   endif
