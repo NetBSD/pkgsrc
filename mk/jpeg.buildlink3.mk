@@ -1,4 +1,4 @@
-# $NetBSD: jpeg.buildlink3.mk,v 1.4 2021/03/21 08:02:27 wiz Exp $
+# $NetBSD: jpeg.buildlink3.mk,v 1.5 2022/07/14 23:45:48 dholland Exp $
 #
 # This Makefile fragment is meant to be included by packages that
 # require a libjpeg implementation.  jpeg.buildlink3.mk will:
@@ -45,6 +45,14 @@ JPEG_TYPE=	none
 BUILD_DEFS+=		JPEG_DEFAULT
 BUILD_DEFS_EFFECTS+=	JPEGBASE JPEG_TYPE
 
+JPEGBASE=	${BUILDLINK_PREFIX.${JPEG_TYPE}}
+
+.endif	# MK_JPEG_BUILDLINK3_MK
+
+# Include the bl3 files outside the multiple-include protection.  They
+# should get into the buildlink tree each time this file is included,
+# not just the first time.
+
 .if ${JPEG_TYPE} == "none"
 PKG_FAIL_REASON+=	\
 	"${_JPEG_TYPE} is not an acceptable libjpeg type for ${PKGNAME}."
@@ -53,7 +61,3 @@ PKG_FAIL_REASON+=	\
 .elif ${JPEG_TYPE} == "libjpeg-turbo"
 .  include "../../graphics/libjpeg-turbo/buildlink3.mk"
 .endif
-
-JPEGBASE=	${BUILDLINK_PREFIX.${JPEG_TYPE}}
-
-.endif	# MK_JPEG_BUILDLINK3_MK
