@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.62 2022/06/07 16:47:33 wiz Exp $
+@comment $NetBSD: PLIST,v 1.63 2022/07/14 13:13:32 wiz Exp $
 bin/hb-ot-shape-closure
 bin/hb-shape
 bin/hb-subset
@@ -8,6 +8,7 @@ include/harfbuzz/hb-blob.h
 include/harfbuzz/hb-buffer.h
 include/harfbuzz/hb-common.h
 ${PLIST.coretext}include/harfbuzz/hb-coretext.h
+include/harfbuzz/hb-cplusplus.hh
 include/harfbuzz/hb-deprecated.h
 include/harfbuzz/hb-draw.h
 include/harfbuzz/hb-face.h
@@ -119,12 +120,12 @@ ${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-4-0-0.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-4-1-0.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-4-2-0.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-4-3-0.html
+${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-4-4-0.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-full.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/apple-advanced-typography-api.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/buffers-language-script-and-direction.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/building.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/clusters.html
-${PLIST.doc}share/gtk-doc/html/harfbuzz/complex-scripts.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/core-api.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/customizing-unicode-functions.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/deprecated-api-index.html
@@ -192,6 +193,7 @@ ${PLIST.doc}share/gtk-doc/html/harfbuzz/reference-manual.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/reordering-in-levels-0-and-1.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/right-insensitive.png
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/right.png
+${PLIST.doc}share/gtk-doc/html/harfbuzz/script-specific-shaping.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/setting-buffer-properties.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/shaping-and-shape-plans.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/shaping-concepts.html
