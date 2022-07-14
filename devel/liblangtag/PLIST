@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2019/10/10 12:27:25 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2022/07/14 13:17:22 wiz Exp $
 include/liblangtag/langtag.h
 include/liblangtag/lt-config.h
 include/liblangtag/lt-database.h
@@ -69,7 +69,6 @@ share/gtk-doc/html/liblangtag/liblangtag-Module---Accessor.html
 share/gtk-doc/html/liblangtag/liblangtag-Module---Data.html
 share/gtk-doc/html/liblangtag/liblangtag-Strings.html
 share/gtk-doc/html/liblangtag/liblangtag.devhelp2
-share/gtk-doc/html/liblangtag/object-tree.html
 share/gtk-doc/html/liblangtag/right-insensitive.png
 share/gtk-doc/html/liblangtag/right.png
 share/gtk-doc/html/liblangtag/style.css
