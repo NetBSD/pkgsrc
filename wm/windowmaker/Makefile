@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.136 2022/06/28 11:37:01 wiz Exp $
+# $NetBSD: Makefile,v 1.137 2022/07/14 23:46:27 dholland Exp $
 
 DISTNAME=	WindowMaker-0.95.9
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	wm windowmaker
 MASTER_SITES=	https://windowmaker.org/pub/source/release/
 
