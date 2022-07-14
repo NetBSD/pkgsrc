@@ -1,8 +1,11 @@
-# $NetBSD: options.mk,v 1.2 2022/07/14 10:59:51 osa Exp $
+# $NetBSD: options.mk,v 1.3 2022/07/14 12:46:21 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.njs
-PKG_SUPPORTED_OPTIONS=	pcre pcre2 ssl
+PKG_SUPPORTED_OPTIONS=	ssl
 PKG_SUGGESTED_OPTIONS=	pcre ssl
+
+PKG_OPTIONS_REQUIRED_GROUPS=	regex
+PKG_OPTIONS_GROUP.regex=	pcre pcre2
 
 .include "../../mk/bsd.options.mk"
 
@@ -24,10 +27,6 @@ SUBST_STAGE.fix-pcre2=	pre-configure
 SUBST_FILES.fix-pcre2=	auto/pcre
 SUBST_SED.fix-pcre2=	-e 's,/usr/pkg,${BUILDLINK_PREFIX.pcre2},g'
 SUBST_NOOP_OK.fix-pcre2=yes
-.endif
-
-.if empty(PKG_OPTIONS:Mpcre2) && empty(PKG_OPTIONS:Mpcre)
-PKG_FAIL_REASON=	"Requires PCRE or PCRE2."
 .endif
 
 .if !empty(PKG_OPTIONS:Mssl)
