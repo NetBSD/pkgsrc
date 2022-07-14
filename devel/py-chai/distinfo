@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:18:17 nia Exp $
-
-BLAKE2s (chai-1.1.2.tar.gz) = b6f56facef41f341d7a73776110e4c0c71a8d729751db70a7dc7173284f77282
-SHA512 (chai-1.1.2.tar.gz) = 81191b11a8c5c6bd1fbb0c43fe7855d6e6d9be54b4d0ddc42582a23b9df03249a91ba8ca50b5b74e76aab73a101377624e041b6c47ea6cba5267d4b58eaf77e5
-Size (chai-1.1.2.tar.gz) = 107807 bytes
