@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.81 2022/05/25 13:57:02 osa Exp $
+# $NetBSD: options.mk,v 1.82 2022/07/14 10:39:24 osa Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nginx
 PKG_SUPPORTED_OPTIONS=	array-var auth-request cache-purge dav debug
@@ -19,7 +19,7 @@ PKG_OPTIONS_GROUP.pcre=		pcre pcre2
 
 PLIST_VARS+=		arrayvar cprg dav dso echo encses forminput geoip2
 PLIST_VARS+=		headmore imagefilter lua mail naxsi nchan ndk njs
-PLIST_VARS+=		perl rtmp setmisc stream uwsgi
+PLIST_VARS+=		perl rtmp setmisc stream upload uwsgi
 
 .include "../../mk/bsd.options.mk"
 
@@ -328,7 +328,7 @@ PLIST.rtmp=		yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mnjs) || make(makesum) || make(mdi) || make(distclean)
-NJS_VERSION=		0.7.4
+NJS_VERSION=		0.7.5
 NJS_DISTNAME=		njs-${NJS_VERSION}
 NJS_DISTFILE=		${NJS_DISTNAME}.tar.gz
 NJS_CONFIGURE_ARGS=	--no-pcre2
