@@ -1,4 +1,6 @@
-# $NetBSD: Makefile.common,v 1.4 2020/04/29 21:38:24 maya Exp $
+# $NetBSD: Makefile.common,v 1.5 2022/07/14 22:41:18 dholland Exp $
+# used by graphics/djvulibre-lib/Makefile
+# used by graphics/djvulibre-tools/Makefile
 
 DISTNAME=		djvulibre-3.5.27
 CATEGORIES=		graphics
