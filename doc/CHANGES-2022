@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3376 2022/07/14 08:07:14 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3377 2022/07/14 08:59:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5106,3 +5106,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/sqlite3-docs to 3.39.1 [adam 2022-07-14]
 	Updated databases/sqlite3-tcl to 3.39.1 [adam 2022-07-14]
 	Updated devel/lemon to 1.0.3.39.1 [adam 2022-07-14]
+	Updated devel/py-setuptools to 63.2.0 [adam 2022-07-14]
+	Updated converters/py-unicode-slugify to 0.1.5 [adam 2022-07-14]
