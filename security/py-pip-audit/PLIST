@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2022/05/28 08:58:27 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/07/14 13:21:26 wiz Exp $
 bin/pip-audit-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
@@ -46,6 +46,8 @@ ${PYSITELIB}/pip_audit/_format/interface.py
 ${PYSITELIB}/pip_audit/_format/interface.pyc
 ${PYSITELIB}/pip_audit/_format/json.py
 ${PYSITELIB}/pip_audit/_format/json.pyc
+${PYSITELIB}/pip_audit/_format/markdown.py
+${PYSITELIB}/pip_audit/_format/markdown.pyc
 ${PYSITELIB}/pip_audit/_service/__init__.py
 ${PYSITELIB}/pip_audit/_service/__init__.pyc
 ${PYSITELIB}/pip_audit/_service/interface.py
