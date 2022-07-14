@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2022/03/14 02:52:48 osa Exp $
+# $NetBSD: options.mk,v 1.2 2022/07/14 10:59:51 osa Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.njs
 PKG_SUPPORTED_OPTIONS=	pcre pcre2 ssl
@@ -27,8 +27,7 @@ SUBST_NOOP_OK.fix-pcre2=yes
 .endif
 
 .if empty(PKG_OPTIONS:Mpcre2) && empty(PKG_OPTIONS:Mpcre)
-CONFIGURE_ARGS+=	--no-pcre
-CONFIGURE_ARGS+=	--no-pcre2
+PKG_FAIL_REASON=	"Requires PCRE or PCRE2."
 .endif
 
 .if !empty(PKG_OPTIONS:Mssl)
