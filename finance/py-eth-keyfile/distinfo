@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2022/07/12 07:33:02 adam Exp $
+$NetBSD: distinfo,v 1.5 2022/07/15 20:54:26 adam Exp $
 
 BLAKE2s (eth-keyfile-0.6.0.tar.gz) = f16142ce30142a413645ea0fdcf891c4dcb87d4df46e85d0315ba280ebc1ad1e
 SHA512 (eth-keyfile-0.6.0.tar.gz) = a65295931d8505b8028f5c7ebaa2693399191e4d70d4037b8d57772119f13c1e59cf9222c9429f06052d3d48d8ccd47e1127d6ca5b3e1cd0b6ca9c56dd9a3de4
 Size (eth-keyfile-0.6.0.tar.gz) = 7266 bytes
+SHA1 (patch-setup.py) = 3ed762ef6f6c85df570fd39b751506328afc37e9
