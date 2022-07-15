@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:46:16 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/07/15 21:21:29 wiz Exp $
 
-BLAKE2s (grafx2-2.7.2950-src.tgz) = 38ecda4d33b0414245ccce81a56ff09565ba7a7d2d28dea16bad5cbe6a76935c
-SHA512 (grafx2-2.7.2950-src.tgz) = 1f13d17327b55d040cca63bf804f81ff2cc8a57ef6c3418d5da2e84c090b3c2b62ed348abfb95b50f11ceea80637477e8cfd3d277dfd5c8949fbdb7620098cec
-Size (grafx2-2.7.2950-src.tgz) = 1104406 bytes
-SHA1 (patch-help.c) = 6b889198e644c1cf720956f1b2003032d09c1013
+BLAKE2s (grafx2-2.8.3128-src.tgz) = e2e091e1e90b8adac2d7975161219920922aec738411a223ad343a20b0bc0d85
+SHA512 (grafx2-2.8.3128-src.tgz) = 822eccd04f8fd793767c002c8911a4ec5a28194c046a1b88c7cec50512f5f7536b4114c75658012c1c94c38b2d97323f58919258e7b56021273c4999966438e3
+Size (grafx2-2.8.3128-src.tgz) = 1174766 bytes
 SHA1 (patch-main.c) = 3116bf8990994265132ce95fec1ca13a0b735912
-SHA1 (patch-misc.c) = 19d9c3225babd1f62c14def892b77a8691edb0a6
+SHA1 (patch-misc.c) = bd349d1012d220facfdf8beeef28d0d3c212a3f4
