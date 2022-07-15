@@ -1,4 +1,4 @@
-# $NetBSD: license.mk,v 1.114 2022/06/29 00:02:32 gutteridge Exp $
+# $NetBSD: license.mk,v 1.115 2022/07/15 00:51:13 gutteridge Exp $
 #
 # This file handles everything about the LICENSE variable. It is
 # included automatically by bsd.pkg.mk.
@@ -117,6 +117,7 @@ DEFAULT_ACCEPTABLE_LICENSES= \
 	apache-1.1 apache-2.0 \
 	arphic-public \
 	artistic artistic-2.0 \
+	beer-ware \
 	boost-license \
 	cc-by-sa-v3.0 \
 	cc-by-sa-v4.0 \
