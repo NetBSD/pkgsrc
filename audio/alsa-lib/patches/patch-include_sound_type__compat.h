@@ -1,17 +1,9 @@
-$NetBSD: patch-include_sound_type__compat.h,v 1.2 2022/03/14 14:08:42 wiz Exp $
+$NetBSD: patch-include_sound_type__compat.h,v 1.3 2022/07/15 21:17:25 wiz Exp $
 
 NetBSD and Solaris support.
 
 --- include/sound/type_compat.h.orig	2020-06-29 10:51:08.000000000 +0000
 +++ include/sound/type_compat.h
-@@ -1,5 +1,5 @@
--#ifndef __TYPE_COMPAT_H
--#define __TYPE_COMPAT_H
-+#ifndef __SOUND_TYPE_COMPAT_H
-+#define __SOUND_TYPE_COMPAT_H
- 
- #ifndef DOC_HIDDEN
- #include <stdint.h>
 @@ -15,7 +15,30 @@ typedef int16_t __s16;
  typedef int32_t __s32;
  typedef int64_t __s64;
@@ -52,9 +44,3 @@ NetBSD and Solaris support.
  
  #define __le32_to_cpu __cpu_to_le32
  #define __be32_to_cpu __cpu_to_be32
-@@ -54,4 +79,4 @@ typedef int64_t __s64;
- 
- #endif /* DOC_HIDDEN */
- 
--#endif /* __TYPE_COMPAT_H */
-+#endif /* __SOUND_TYPE_COMPAT_H */
