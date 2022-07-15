@@ -1,10 +1,10 @@
-$NetBSD: patch-ac,v 1.14 2021/06/06 21:05:08 wiz Exp $
+$NetBSD: patch-ac,v 1.15 2022/07/15 23:23:35 gutteridge Exp $
 
 See patch-aa.
 
---- configure.orig	2021-06-06 16:49:01.000000000 +0000
+--- configure.orig	2022-06-09 01:06:54.000000000 +0000
 +++ configure
-@@ -22009,42 +22009,16 @@ printf "%s\n" "#define XUSE_MTSAFE_API 1
+@@ -22170,42 +22170,16 @@ printf "%s\n" "#define XUSE_MTSAFE_API 1
  	;;
  esac
  
@@ -54,7 +54,7 @@ See patch-aa.
  then :
    thrstubs="no"
  else $as_nop
-@@ -22066,12 +22040,12 @@ if test x$xthreads = xyes ; then
+@@ -22227,12 +22201,12 @@ if test x$xthreads = xyes ; then
      linux*|gnu*|k*bsd*-gnu)
          XTHREADLIB=-lpthread ;;
      netbsd*)
@@ -70,3 +70,11 @@ See patch-aa.
          XTHREADLIB="-pthread" ;;
      solaris*)
  	XTHREAD_CFLAGS="-D_REENTRANT -D_POSIX_PTHREAD_SEMANTICS" ;;
+@@ -25521,6 +25497,7 @@ echo " Loadable i18n module support:
+ echo " Loadable xcursor library support:        "$XLIB_LOADABLE_XCURSOR
+ echo " Threading support:                       "$xthreads
+ echo " Use Threads safe API:                    "$mtsafeapi
++echo " Use thread safety constructor:           "$USE_THREAD_SAFETY_CONSTRUCTOR
+ echo " Threads stubs in libX11:                 "$thrstubs
+ echo " XCMS:                                    "$XCMS
+ echo " Internationalization support:            "$XLOCALE
