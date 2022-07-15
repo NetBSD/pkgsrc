@@ -1,10 +1,10 @@
-$NetBSD: patch-misc.c,v 1.3 2020/02/10 13:08:10 ryoon Exp $
+$NetBSD: patch-misc.c,v 1.4 2022/07/15 21:21:29 wiz Exp $
 
 * Fix sysctl build failure
 
---- misc.c.orig	2020-02-06 21:01:27.000000000 +0000
+--- misc.c.orig	2022-05-19 07:17:59.000000000 +0000
 +++ misc.c
-@@ -29,6 +29,9 @@
+@@ -21,6 +21,9 @@
  #ifndef _MSC_VER
  #include <strings.h>
  #endif
@@ -13,4 +13,4 @@ $NetBSD: patch-misc.c,v 1.3 2020/02/10 13:08:10 ryoon Exp $
 +#endif
  #include <stdlib.h>
  #include <math.h>
- #if !defined(USE_SDL) && !defined(USE_SDL2)
+ #include "struct.h"
