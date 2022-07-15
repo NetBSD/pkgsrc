@@ -1,12 +1,12 @@
-$NetBSD: patch-src_conf.c,v 1.5 2016/04/15 08:47:50 wiz Exp $
+$NetBSD: patch-src_conf.c,v 1.6 2022/07/15 21:17:25 wiz Exp $
 
 * SunOS has no dirent d_type
 
---- src/conf.c.orig	2015-11-09 07:39:18.000000000 +0000
+--- src/conf.c.orig	2022-06-17 09:42:05.000000000 +0000
 +++ src/conf.c
-@@ -3419,11 +3419,19 @@ static int snd_config_hooks(snd_config_t
+@@ -4066,11 +4066,19 @@ static int snd_config_hooks(snd_config_t
  
- static int config_filename_filter(const struct dirent *dirent)
+ static int config_filename_filter(const struct dirent64 *dirent)
  {
 +#ifdef __sun
 +	struct stat s;
