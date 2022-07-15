@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3398 2022/07/15 07:26:55 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3399 2022/07/15 07:36:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5130,3 +5130,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated meta-pkgs/xfce4 to 4.16.0nb5 [gutteridge 2022-07-15]
 	Updated sysutils/fabric to 2.7.1 [adam 2022-07-15]
 	Updated databases/py-peewee to 3.15.1 [adam 2022-07-15]
+	Updated devel/gopls to 0.9.1 [wiz 2022-07-15]
