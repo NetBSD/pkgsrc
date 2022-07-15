@@ -1,23 +1,21 @@
-$NetBSD: distinfo,v 1.117 2022/05/22 21:29:58 dholland Exp $
+$NetBSD: distinfo,v 1.118 2022/07/15 20:39:49 wiz Exp $
 
-BLAKE2s (xorg-server-1.20.14.tar.xz) = 207f7e9d968765e4ee9d916007fdd32827ed33516b2457b83002b709476e8319
-SHA512 (xorg-server-1.20.14.tar.xz) = be3dc32cce7d55d7e38c5f6557027f13f39224c76cc83e5800555d5ce89dbdc3731773a2d186a5b97db9fc8731a2b2dd6e9829af2b01ee2559246d4aef7c4963
-Size (xorg-server-1.20.14.tar.xz) = 5178288 bytes
-SHA1 (patch-configure) = b1badceba5a38df6ee898fd1d103d5722986a120
+BLAKE2s (xorg-server-21.1.4.tar.xz) = 97a0cd59c9035819ad3006d2429d4e0349d579d323c49053b0e3cc39949e38c1
+SHA512 (xorg-server-21.1.4.tar.xz) = eb5b8520d02908f72719e6ecfbf7a9bf139acb65ccae04d1db4223a8a2384cd3a94bd5afef10cce327b751b800cc2b79bfaa5ae35c95c3a217f775168082e68f
+Size (xorg-server-21.1.4.tar.xz) = 4940176 bytes
+SHA1 (patch-configure) = 1d02efcf80d337b923006032d5bb9fccf811948d
 SHA1 (patch-hw_kdrive_ephyr_hostx.c) = b681ee28bc7af06774f10bc882d355d42ac965d3
 SHA1 (patch-hw_xfree86_common_xf86AutoConfig.c) = 70adf85be9fc6222a335686e7e9e9f385aca02f9
 SHA1 (patch-hw_xfree86_common_xf86sbusBus.h) = f56f87336b2f669413ebb1005a2b64568a111f92
 SHA1 (patch-hw_xfree86_dri2_dri2.c) = 0bf58305059321e10f6f58186301dbb7cb858c2a
 SHA1 (patch-hw_xfree86_os-support_bsd_alpha__video.c) = deb410b82c461ce36c15651795bf62370a56d5a4
-SHA1 (patch-hw_xfree86_os-support_bsd_arm__video.c) = 9c03b24f44eafc5fabe27e9d6cc6c54b607e47c3
+SHA1 (patch-hw_xfree86_os-support_bsd_arm__video.c) = 521cf3bf2bb0529b4546d5343f67388bc59bd68b
 SHA1 (patch-hw_xfree86_os-support_bsd_bsd__VTsw.c) = 90343f694c27a6fdd5070e1167687943bd056a99
 SHA1 (patch-hw_xfree86_os-support_bsd_bsd__init.c) = b58ce2005251c1b3f723ee87c759f75bcb27e230
 SHA1 (patch-hw_xfree86_os-support_bsd_i386__video.c) = f2c72562a40c0e3109991453aff9c2c082526b1b
-SHA1 (patch-hw_xfree86_os-support_bus_Sbus.c) = 8507a2ac60c77031048a386dc5c48f0ef86cb8de
+SHA1 (patch-hw_xfree86_os-support_bus_Sbus.c) = 50e6ffa8f58ffeed0f734d3bbabf1939649c3208
 SHA1 (patch-hw_xfree86_os-support_solaris_solaris-amd64.S) = 088a3118deb7567194e08dd46e34cb6edba38400
 SHA1 (patch-hw_xfree86_os-support_solaris_sun__init.c) = 6148072cfaf1cb8d0a2f465b51429563c8ea2c15
 SHA1 (patch-hw_xfree86_os-support_xf86_OSproc.h) = e1c049857893d2f050d5fb297a3e8ef86f0b1d7e
 SHA1 (patch-hw_xfree86_os_support_bus_xf86Sbus.h) = 0e0a243b737f8f762c9f8f24a2265d1b6aefb544
-SHA1 (patch-hw_xwayland_xwayland-input.c) = b876642a56f4930dfaa88cff77d4518cfe9d73e0
 SHA1 (patch-os_backtrace.c) = 8cf93febb737dd850706d140b467b73f61ecd3ad
-SHA1 (patch-test_xtest.c) = 77622ef481e91e64b3a6dd64b8579404f33ec88f

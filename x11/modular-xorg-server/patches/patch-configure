@@ -1,13 +1,13 @@
-$NetBSD: patch-configure,v 1.7 2021/12/15 23:35:00 wiz Exp $
+$NetBSD: patch-configure,v 1.8 2022/07/15 20:39:49 wiz Exp $
 
 Use USE_AMD64_IOPL (actually x86_64_iopl) on NetBSD/amd64.
 (c.f. patch-hw_xfree86_os-support_bsd_i386.c)
 
 for netbsd, force pass pthread configure checks (pthread not needed)
 
---- configure.orig	2021-12-15 19:01:32.000000000 +0000
+--- configure.orig	2022-07-12 13:28:08.000000000 +0000
 +++ configure
-@@ -24634,7 +24634,7 @@ printf "%s\n" "#define USE_ALPHA_PIO 1" 
+@@ -22981,7 +22981,7 @@ $as_echo "#define USE_ALPHA_PIO 1" >>con
  	esac
  	GLX_ARCH_DEFINES="-D__GLX_ALIGN64 -mieee"
  	;;
@@ -16,16 +16,16 @@ for netbsd, force pass pthread configure checks (pthread not needed)
  	ARM_VIDEO=yes
  	DEFAULT_INT10="stub"
  	;;
-@@ -24676,7 +24676,7 @@ printf "%s\n" "#define USE_DEV_IO 1" >>c
- printf "%s\n" "#define USE_DEV_IO 1" >>confdefs.h
+@@ -23023,7 +23023,7 @@ $as_echo "#define USE_DEV_IO 1" >>confde
+ $as_echo "#define USE_DEV_IO 1" >>confdefs.h
   ;;
  		*netbsd*)
--printf "%s\n" "#define USE_I386_IOPL 1" >>confdefs.h
-+printf "%s\n" "#define USE_AMD64_IOPL 1" >>confdefs.h
+-$as_echo "#define USE_I386_IOPL 1" >>confdefs.h
++$as_echo "#define USE_AMD64_IOPL 1" >>confdefs.h
  
  				SYS_LIBS=-lx86_64
  				;;
-@@ -26605,7 +26605,8 @@ case ${host_os} in
+@@ -24789,7 +24789,8 @@ case ${host_os} in
  	netbsd*)
  	# use libc stubs, don't link against libpthread, to allow
  	# dynamic loading
