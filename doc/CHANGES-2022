@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3406 2022/07/15 20:40:18 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3407 2022/07/15 21:17:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5140,3 +5140,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/p5-Modern-Perl to 1.20220515 [mef 2022-07-15]
 	Updated x11/modular-xorg-server to 21.1.4 [wiz 2022-07-15]
 	Updated x11/modular-xorg-xephyr to 21.1.4 [wiz 2022-07-15]
+	Updated audio/alsa-lib to 1.2.7.2 [wiz 2022-07-15]
