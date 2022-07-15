@@ -1,20 +1,18 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.3 2003/05/06 17:42:22 jmmv Exp $
-
-Edit ${LEAFNODE_CONFDIR}/config and make the necessary local
+Edit @LEAFNODE_CONFDIR@/config and make the necessary local
 changes.
 
 Leafnode needs to be run from inetd. An example configuration for
 /etc/inetd.conf is as follows:
-nntp stream tcp  nowait news ${PREFIX}/sbin/leafnode leafnode
-nntp stream tcp6 nowait news ${PREFIX}/sbin/leafnode leafnode
+
+nntp stream tcp  nowait news @PREFIX@/sbin/leafnode leafnode
+nntp stream tcp6 nowait news @PREFIX@/sbin/leafnode leafnode
 
 Edit the news user's crontab to run an expiry job. For example, add:
-0 4 * * *	${PREFIX}/sbin/texpire
+
+0 4 * * *	@PREFIX@/sbin/texpire
 
 As root or news, run "fetchnews". This may take some time. Then connect
 to the leafnode server with an NNTP client. Select the groups you want
 to read in the future by reading the "default" article in them.
 Run "fetchnews" again. This run will pick up all the groups you want to
 read. You may wish to automate the running of "fetchnews".
-===========================================================================
