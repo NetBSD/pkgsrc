@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.24 2021/10/26 11:09:35 nia Exp $
+$NetBSD: distinfo,v 1.25 2022/07/15 12:37:55 micha Exp $
 
-BLAKE2s (leafnode-1.11.12.tar.bz2) = d0e53af7221094aa451c0a6575c91d457986bfc80a457abb97c519c966e202a3
-SHA512 (leafnode-1.11.12.tar.bz2) = 2460bb4fc51a716059ccfcde7fd99f2f0f8c11f7d20db457c06abb04a39f892331b1e70334901c9f20480f348186465be147ee21368fcd48c9e08bb3c8d7fe87
-Size (leafnode-1.11.12.tar.bz2) = 501619 bytes
-SHA1 (patch-Makefile.in) = 28dd40d5af8316a1a234affa71b807e3ad15c8f1
+BLAKE2s (leafnode-1.12.0.tar.gz) = b04cc9e266f6d50901c4e0ead09a599328da5ce6e1925539564437f386cd8082
+SHA512 (leafnode-1.12.0.tar.gz) = 8122f8e2f7061c68c00d964f88a288d162be6e7fa526dea7a969ea8742116354359a85014bc9cbd59e09d51acf94dcd898a3955231f8aa7262c9c56114fed3cd
+Size (leafnode-1.12.0.tar.gz) = 585469 bytes
+SHA1 (patch-Makefile.in) = f40330bc49ba26c1e946f8164bc92256b3b301a8
