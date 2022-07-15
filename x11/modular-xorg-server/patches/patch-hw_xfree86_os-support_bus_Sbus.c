@@ -1,8 +1,8 @@
-$NetBSD: patch-hw_xfree86_os-support_bus_Sbus.c,v 1.4 2022/05/22 21:29:58 dholland Exp $
+$NetBSD: patch-hw_xfree86_os-support_bus_Sbus.c,v 1.5 2022/07/15 20:39:49 wiz Exp $
 
 Merge most of netbsdSbus.c from xsrc, but leave the Solaris support in place.
 
---- hw/xfree86/os-support/bus/Sbus.c.orig	2022-05-22 21:01:31.709546787 +0000
+--- hw/xfree86/os-support/bus/Sbus.c.orig	2022-07-12 13:27:57.000000000 +0000
 +++ hw/xfree86/os-support/bus/Sbus.c
 @@ -34,6 +34,9 @@
  #ifdef __sun
@@ -148,17 +148,15 @@ Merge most of netbsdSbus.c from xsrc, but leave the Solaris support in place.
  }
  
  #define PROM_NODE_SIBLING 0x01
-@@ -180,8 +245,8 @@ promIsP1275(void)
+@@ -180,7 +245,7 @@ promIsP1275(void)
          promP1275 = TRUE;
      else
          promP1275 = FALSE;
 -#elif defined(__FreeBSD__)
--    promP1275 = TRUE;
 +#elif defined(__FreeBSD__) || defined(__NetBSD__)
-+    promP1275 = TRUE;
+     promP1275 = TRUE;
  #else
  #error Missing promIsP1275() function for this OS
- #endif
 @@ -198,8 +263,10 @@ sparcPromClose(void)
          close(promFd);
          promFd = -1;
