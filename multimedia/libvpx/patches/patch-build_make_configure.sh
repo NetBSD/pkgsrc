@@ -1,4 +1,4 @@
-$NetBSD: patch-build_make_configure.sh,v 1.2 2021/04/14 07:02:49 adam Exp $
+$NetBSD: patch-build_make_configure.sh,v 1.3 2022/07/15 11:04:33 adam Exp $
 
 *BSD and qnx are identified as linux.
 Add another SDK path on Mac OS X.
@@ -6,9 +6,9 @@ All sparc cpus can not do unaligned access.
 Detect NetBSD ARMv7 hardfloat toolchain.
 Recognize powerpc as a target ISA, so we don't end up with generic-gnu
 
---- build/make/configure.sh.orig	2019-02-04 17:02:33.000000000 +0000
+--- build/make/configure.sh.orig	2022-06-28 19:00:48.000000000 +0000
 +++ build/make/configure.sh
-@@ -740,7 +740,7 @@ process_common_toolchain() {
+@@ -751,7 +751,7 @@ process_common_toolchain() {
        aarch64*)
          tgt_isa=arm64
          ;;
@@ -17,9 +17,9 @@ Recognize powerpc as a target ISA, so we don't end up with generic-gnu
          tgt_isa=armv7
          float_abi=hard
          ;;
-@@ -766,6 +766,9 @@ process_common_toolchain() {
-       *mips32el*)
-         tgt_isa=mips32
+@@ -783,6 +783,9 @@ process_common_toolchain() {
+       loongarch64*)
+         tgt_isa=loongarch64
          ;;
 +      *powerpc*)
 +	tgt_isa=powerpc
@@ -27,7 +27,7 @@ Recognize powerpc as a target ISA, so we don't end up with generic-gnu
      esac
  
      # detect tgt_os
-@@ -812,7 +815,7 @@ process_common_toolchain() {
+@@ -805,7 +808,7 @@ process_common_toolchain() {
          [ -z "$tgt_isa" ] && tgt_isa=x86
          tgt_os=win32
          ;;
@@ -36,9 +36,9 @@ Recognize powerpc as a target ISA, so we don't end up with generic-gnu
          tgt_os=linux
          ;;
        *solaris2.10)
-@@ -858,6 +861,9 @@ process_common_toolchain() {
-     ppc*)
-       enable_feature ppc
+@@ -856,6 +859,9 @@ process_common_toolchain() {
+       soft_enable lasx
+       enable_feature loongarch
        ;;
 +    sparc*)
 +      disable_feature fast_unaligned
@@ -46,7 +46,7 @@ Recognize powerpc as a target ISA, so we don't end up with generic-gnu
    esac
  
    # PIC is probably what we want when building shared libs
-@@ -1530,7 +1536,7 @@ EOF
+@@ -1506,7 +1512,7 @@ EOF
    check_cc <<EOF
  unsigned int e = 'O'<<24 | '2'<<16 | 'B'<<8 | 'E';
  EOF
@@ -55,7 +55,7 @@ Recognize powerpc as a target ISA, so we don't end up with generic-gnu
          grep '4f *32 *42 *45' >/dev/null 2>&1 && enable_feature big_endian
  
      # Try to find which inline keywords are supported
-@@ -1547,7 +1553,7 @@ EOF
+@@ -1523,7 +1529,7 @@ EOF
          # bionic includes basic pthread functionality, obviating -lpthread.
          ;;
        *)
