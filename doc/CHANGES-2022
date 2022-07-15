@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3397 2022/07/15 06:19:52 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3398 2022/07/15 07:26:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5120,7 +5120,6 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated multimedia/libva to 2.15.0 [wiz 2022-07-14]
 	Updated devel/liblangtag to 0.6.4 [wiz 2022-07-14]
 	Updated security/py-pip-audit to 2.4.1 [wiz 2022-07-14]
-	Updated graphics/zxing-cpp to 1.4.0 [wiz 2022-07-14]
 	Updated devel/py-test-timeout to 2.1.0 [adam 2022-07-14]
 	Updated devel/py-xopen to 1.5.0 [adam 2022-07-14]
 	Updated print/poppler to 22.07.0 [wiz 2022-07-14]
