@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3394 2022/07/14 16:12:43 osa Exp $
+$NetBSD: CHANGES-2022,v 1.3395 2022/07/15 05:19:24 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5127,3 +5127,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/mob to 3.1.5 [schmonz 2022-07-14]
 	Updated www/nginx-devel to 1.23.0nb2 [osa 2022-07-14]
 	Updated www/nginx to 1.22.0nb4 [osa 2022-07-14]
+	Updated x11/xfce4-settings to 4.16.3 [gutteridge 2022-07-15]
