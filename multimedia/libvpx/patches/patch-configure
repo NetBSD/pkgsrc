@@ -1,21 +1,21 @@
-$NetBSD: patch-configure,v 1.8 2019/02/12 20:47:14 adam Exp $
+$NetBSD: patch-configure,v 1.9 2022/07/15 11:04:33 adam Exp $
 
 Recognize sparc and powerpc linux (or BSD...) platforms.
 Don't do doxygen.
 Remove bogus diff check.
 
---- configure.orig	2019-02-04 17:02:33.000000000 +0000
+--- configure.orig	2022-06-28 19:00:48.000000000 +0000
 +++ configure
-@@ -114,6 +114,8 @@ all_platforms="${all_platforms} armv7-wi
- all_platforms="${all_platforms} armv7s-darwin-gcc"
- all_platforms="${all_platforms} armv8-linux-gcc"
+@@ -117,6 +117,8 @@ all_platforms="${all_platforms} armv8-li
+ all_platforms="${all_platforms} loongarch32-linux-gcc"
+ all_platforms="${all_platforms} loongarch64-linux-gcc"
  all_platforms="${all_platforms} mips32-linux-gcc"
 +all_platforms="${all_platforms} powerpc-linux-gcc"
 +all_platforms="${all_platforms} sparc-linux-gcc"
  all_platforms="${all_platforms} mips64-linux-gcc"
  all_platforms="${all_platforms} ppc64le-linux-gcc"
  all_platforms="${all_platforms} sparc-solaris-gcc"
-@@ -166,9 +168,6 @@ for t in ${all_targets}; do
+@@ -177,9 +179,6 @@ for t in ${all_targets}; do
      [ -f "${source_path}/${t}.mk" ] && enable_feature ${t}
  done
  
@@ -25,7 +25,7 @@ Remove bogus diff check.
  
  if ! perl --version >/dev/null; then
      die "Perl is required to build"
-@@ -181,19 +180,6 @@ if [ "`cd \"${source_path}\" && pwd`" !=
+@@ -192,19 +191,6 @@ if [ "`cd \"${source_path}\" && pwd`" !=
    fi
  fi
  
