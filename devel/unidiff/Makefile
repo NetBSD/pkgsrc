@@ -1,20 +1,18 @@
-# $NetBSD: Makefile,v 1.19 2021/01/27 09:30:05 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2022/07/15 02:51:20 nat Exp $
+#
 
-DISTNAME=	part01
-PKGNAME=	unidiff-1.0
-PKGREVISION=	2
+VERSION=	1.1
+GITHUB_PROJECT= unidiff
+DISTNAME=       ${GITHUB_PROJECT}-${VERSION}
+PKGNAME=        ${GITHUB_PROJECT}-${VERSION}
 CATEGORIES=	devel
-MASTER_SITES=	#
-EXTRACT_SUFX=	.gz
+MASTER_SITES=   ${MASTER_SITE_GITHUB:=AceHusky12/}
+EXTRACT_SUFX=	.zip
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	#
+MAINTAINER=	nat@NetBSD.org
+HOMEPAGE=	https://github.com/AceHusky12/unidiff
 COMMENT=	Converts between uni-diffs and context diffs
-
-BUILD_DEPENDS+=	gsharutils>=4.2.1:../../archivers/gsharutils
-
-WRKSRC=		${WRKDIR}
-EXTRACT_CMD=	${GZCAT} $$extract_file | ${PREFIX}/bin/gunshar
+LICENSE=	public-domain
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
