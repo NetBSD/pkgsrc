@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22028 2022/07/15 21:17:34 wiz Exp $
+$NetBSD: TODO,v 1.22029 2022/07/15 21:21:38 wiz Exp $
 
 Suggested new packages
 ======================
@@ -802,7 +802,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gprolog-1.5.0 [adds arm64 support]
 	o gps-17.0
 	o gradle-7.0
-	o grafx2-2.8.3128
 	o gramps5-5.1.4
 	o grantlee-5.0.0
 	o graphene-1.10.6
