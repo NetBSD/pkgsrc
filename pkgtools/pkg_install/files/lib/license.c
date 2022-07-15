@@ -1,4 +1,4 @@
-/*	$NetBSD: license.c,v 1.59 2022/04/20 21:47:26 wiz Exp $	*/
+/*	$NetBSD: license.c,v 1.60 2022/07/15 00:55:37 gutteridge Exp $	*/
 
 /*-
  * Copyright (c) 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -50,6 +50,7 @@ const char *default_acceptable_licenses =
     "apache-1.1 apache-2.0 "
     "arphic-public "
     "artistic artistic-2.0 "
+    "beer-ware "
     "boost-license "
     "cc-by-sa-v3.0 "
     "cc-by-sa-v4.0 "
