@@ -1,10 +1,10 @@
-$NetBSD: patch-libs.mk,v 1.6 2021/04/14 07:02:49 adam Exp $
+$NetBSD: patch-libs.mk,v 1.7 2022/07/15 11:04:33 adam Exp $
 
 Do not install debug library.
 
---- libs.mk.orig	2021-03-18 19:59:46.000000000 +0000
+--- libs.mk.orig	2022-06-28 19:00:48.000000000 +0000
 +++ libs.mk
-@@ -174,7 +174,6 @@ INSTALL-LIBS-$(CONFIG_SHARED) += $(forea
+@@ -187,7 +187,6 @@ INSTALL-LIBS-$(CONFIG_SHARED) += $(forea
  endif
  else
  INSTALL-LIBS-$(CONFIG_STATIC) += $(LIBSUBDIR)/libvpx.a
@@ -12,7 +12,7 @@ Do not install debug library.
  endif
  
  ifeq ($(CONFIG_VP9_ENCODER)$(CONFIG_RATE_CTRL),yesyes)
-@@ -284,8 +283,8 @@ endif # ifeq ($(CONFIG_MSVS),yes)
+@@ -297,8 +296,8 @@ endif # ifeq ($(CONFIG_MSVS),yes)
  else # ifeq ($(CONFIG_EXTERNAL_BUILD),yes)
  LIBVPX_OBJS=$(call objs, $(filter-out $(ASM_INCLUDES), $(CODEC_SRCS)))
  OBJS-yes += $(LIBVPX_OBJS)
@@ -23,14 +23,14 @@ Do not install debug library.
  
  # Updating version info.
  # https://www.gnu.org/software/libtool/manual/libtool.html#Updating-version-info
-@@ -402,15 +401,15 @@ ifeq ($(CONFIG_VP9_ENCODER),yes)
-   RC_RTC_OBJS=$(call objs,$(RC_RTC_SRCS))
+@@ -414,15 +413,15 @@ CLEAN-OBJS += vpx.pc
+ ifeq ($(CONFIG_ENCODERS),yes)
    RC_RTC_OBJS=$(call objs,$(RC_RTC_SRCS))
    OBJS-yes += $(RC_RTC_OBJS)
--  LIBS-yes += $(BUILD_PFX)libvp9rc.a $(BUILD_PFX)libvp9rc_g.a
--  $(BUILD_PFX)libvp9rc_g.a: $(RC_RTC_OBJS)
-+  LIBS-yes += $(BUILD_PFX)libvp9rc.a
-+  $(BUILD_PFX)libvp9rc.a: $(RC_RTC_OBJS)
+-  LIBS-yes += $(BUILD_PFX)libvpxrc.a $(BUILD_PFX)libvpxrc_g.a
+-  $(BUILD_PFX)libvpxrc_g.a: $(RC_RTC_OBJS)
++  LIBS-yes += $(BUILD_PFX)libvpxrc.a
++  $(BUILD_PFX)libvpxrc.a: $(RC_RTC_OBJS)
  endif
  
  ifeq ($(CONFIG_VP9_ENCODER)$(CONFIG_RATE_CTRL),yesyes)

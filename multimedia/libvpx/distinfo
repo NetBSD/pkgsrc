@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.45 2021/11/01 20:06:46 wiz Exp $
+$NetBSD: distinfo,v 1.46 2022/07/15 11:04:33 adam Exp $
 
-BLAKE2s (libvpx-1.11.0.tar.gz) = ada5a68c472be5f3c528e2565834b54d93e10220dcd5d15c7f24296087f1391d
-SHA512 (libvpx-1.11.0.tar.gz) = 7aa5d30afa956dccda60917fd82f6f9992944ca893437c8cd53a04d1b7a94e0210431954aa136594dc400340123cc166dcc855753e493c8d929667f4c42b65a5
-Size (libvpx-1.11.0.tar.gz) = 5347256 bytes
+BLAKE2s (libvpx-1.12.0.tar.gz) = 019b0ed78ffbc9c29de956e59548025c372bf0c4373c9006c325417150f2563d
+SHA512 (libvpx-1.12.0.tar.gz) = dc059bc3102b75524ae29989372334b3e0f2acf1520e5a4daa4073831bb55949d82897c498fb9d2d38b59f1a66bb0ad24407d0d086b1e3a8394a4933f04f2ed0
+Size (libvpx-1.12.0.tar.gz) = 5465627 bytes
 SHA1 (patch-build_make_Makefile) = 908b1abc8c5eed56e920f442f8f1f80c49838a6f
-SHA1 (patch-build_make_configure.sh) = ec0235cc29830b7e2619885dda2abdadbe5f2417
+SHA1 (patch-build_make_configure.sh) = 018bb2333f1de509a81ae4c7b390076043f18118
 SHA1 (patch-build_make_gen_asm_deps.sh) = c55bd4d0e12176b73ba62c3c4741b58de77923e6
-SHA1 (patch-configure) = 738871dc9ffa44a809e594849915a875a97ac40b
+SHA1 (patch-configure) = aeb5bfd9d58b06b4f2fdbdb8c73b03339de313e7
 SHA1 (patch-examples.mk) = 17410f43ff9952d616be3211ca697f37c107610a
-SHA1 (patch-libs.mk) = 2eff62fd8080eeb9315793cc0dc93cbb485cc33d
+SHA1 (patch-libs.mk) = 9ddc9cb6c09c9eefce59072c2a657bc5b7e1d295
