@@ -1,15 +1,15 @@
-$NetBSD: patch-src_app_CMakeLists.txt,v 1.3 2021/05/04 18:48:03 adam Exp $
+$NetBSD: patch-src_app_CMakeLists.txt,v 1.4 2022/07/15 10:48:53 adam Exp $
 
 Disable app bundle on Darwin.
 
---- src/app/CMakeLists.txt.orig	2021-05-02 15:59:11.000000000 +0000
+--- src/app/CMakeLists.txt.orig	2022-05-24 20:10:49.000000000 +0000
 +++ src/app/CMakeLists.txt
-@@ -82,7 +82,7 @@ set_source_files_properties(
-             MACOSX_PACKAGE_LOCATION Resources
- )
- 
+@@ -60,7 +60,7 @@ endif()
+ # Additional platform specific configuration
+ # -----------------------------------------------------------------------------
+ # -----------------------------------------------------------------------------
 -if (CMAKE_SYSTEM_NAME STREQUAL "Darwin")
 +if (FALSE)
-     # provide variables for substitution in dist/mac/Info.plist
-     get_target_property(EXECUTABLE_NAME qbt_app OUTPUT_NAME)
-     # This variable name should be changed once qmake is no longer used. Refer to the discussion in PR #14813
+     include(FindQtTranslations)
+     qbt_get_qt_translations(QT_TRANSLATIONS)
+     set_source_files_properties(${QT_TRANSLATIONS} PROPERTIES MACOSX_PACKAGE_LOCATION translations)
