@@ -1,13 +1,9 @@
-@comment $NetBSD: PLIST,v 1.30 2019/08/22 19:52:29 nia Exp $
+@comment $NetBSD: PLIST,v 1.31 2022/07/15 20:39:49 wiz Exp $
 bin/X
 bin/Xnest
 bin/Xorg
 bin/Xvfb
-bin/cvt
 bin/gtf
-include/xorg/BT.h
-include/xorg/IBM.h
-include/xorg/TI.h
 include/xorg/XIstubs.h
 include/xorg/Xprintf.h
 include/xorg/callback.h
@@ -111,7 +107,6 @@ include/xorg/servermd.h
 include/xorg/shadow.h
 include/xorg/shadowfb.h
 include/xorg/shmint.h
-include/xorg/site.h
 ${PLIST.sunos}include/xorg/solaris-${SUNOS_ARCH}.il
 include/xorg/syncsdk.h
 include/xorg/validate.h
@@ -125,6 +120,7 @@ include/xorg/windowstr.h
 include/xorg/xaarop.h
 include/xorg/xace.h
 include/xorg/xacestr.h
+include/xorg/xf86-input-inputtest-protocol.h
 include/xorg/xf86.h
 include/xorg/xf86Crtc.h
 include/xorg/xf86Cursor.h
@@ -140,7 +136,6 @@ include/xorg/xf86Pci.h
 include/xorg/xf86PciInfo.h
 include/xorg/xf86Priv.h
 include/xorg/xf86Privstr.h
-include/xorg/xf86RamDac.h
 include/xorg/xf86RandR12.h
 ${PLIST.sparc}include/xorg/xf86Sbus.h
 include/xorg/xf86VGAarbiter.h
@@ -171,14 +166,14 @@ include/xorg/xvmcext.h
 lib/pkgconfig/xorg-server.pc
 ${PLIST.dri}lib/xorg/modules/drivers/modesetting_drv.la
 ${PLIST.dri}lib/xorg/modules/extensions/libglx.la
+lib/xorg/modules/input/inputtest_drv.la
+lib/xorg/modules/input/inputtest_drv.so
 lib/xorg/modules/libexa.la
-lib/xorg/modules/libfb.la
 lib/xorg/modules/libfbdevhw.la
 ${PLIST.dri}lib/xorg/modules/libglamoregl.la
 lib/xorg/modules/libint10.la
 lib/xorg/modules/libshadow.la
 lib/xorg/modules/libshadowfb.la
-lib/xorg/modules/libvbe.la
 lib/xorg/modules/libvgahw.la
 lib/xorg/modules/libwfb.la
 lib/xorg/protocol.txt
@@ -186,13 +181,12 @@ man/man1/Xnest.1
 man/man1/Xorg.1
 man/man1/Xserver.1
 man/man1/Xvfb.1
-man/man1/cvt.1
 man/man1/gtf.1
 man/man4/exa.4
 man/man4/fbdevhw.4
+man/man4/inputtestdrv.4
 ${PLIST.dri}man/man4/modesetting.4
 man/man5/xorg.conf.5
 man/man5/xorg.conf.d.5
 share/aclocal/xorg-server.m4
 ${PLIST.dtrace}share/doc/xorg-server/Xserver-DTrace.xml
-@pkgdir lib/xorg/modules/input

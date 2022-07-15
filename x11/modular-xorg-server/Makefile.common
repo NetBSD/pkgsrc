@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.48 2022/05/05 08:24:05 nia Exp $
+# $NetBSD: Makefile.common,v 1.49 2022/07/15 20:39:49 wiz Exp $
 # used by x11/modular-xorg-server/Makefile
 # used by x11/modular-xorg-xephyr/Makefile
 # used by x11/modular-xorg-xwayland/Makefile
 
-XORG_VERSION=	1.20.14
+XORG_VERSION=	21.1.4
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=xserver/}
 EXTRACT_SUFX=	.tar.xz
@@ -34,7 +34,7 @@ XKB_OUTPUT_DIR?=	${VARBASE}/db/xkb # XXX sync with xkeyboard-config
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 CONFIGURE_ARGS+=	--with-xkb-output=${XKB_OUTPUT_DIR:Q}
 
-.if !empty(USE_TOOLS:Mauto*)
+.if ${USE_TOOLS:Mauto*}
 TOOLS_DEPENDS+=	xorg-util-macros>=1.1.5:../../devel/xorg-util-macros
 .endif
 
@@ -95,7 +95,7 @@ SUNOS_ARCH=		sparcv8plus
 .endif
 
 PLIST_VARS+=		sparc
-.if !empty(MACHINE_ARCH:Msparc*)
+.if ${MACHINE_ARCH:Msparc*}
 PLIST.sparc=		yes
 .endif
 
@@ -136,6 +136,7 @@ BUILDLINK_API_DEPENDS.libXext+=	libXext>=1.1.1
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXfixes/buildlink3.mk"
 .include "../../x11/libXfont2/buildlink3.mk"
+.include "../../x11/libxcvt/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
