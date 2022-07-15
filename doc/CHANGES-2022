@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3400 2022/07/15 08:11:45 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3401 2022/07/15 11:08:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5133,3 +5133,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/gopls to 0.9.1 [wiz 2022-07-15]
 	Updated databases/openldap to 2.6.3 [adam 2022-07-15]
 	Updated devel/memcached to 1.6.15 [adam 2022-07-15]
+	Updated net/qbittorrent to 4.4.3.1 [adam 2022-07-15]
+	Updated multimedia/libvpx to 1.12.0 [adam 2022-07-15]
