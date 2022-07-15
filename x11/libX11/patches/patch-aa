@@ -1,12 +1,15 @@
-$NetBSD: patch-aa,v 1.12 2015/03/10 07:16:26 wiz Exp $
+$NetBSD: patch-aa,v 1.13 2022/07/15 23:23:35 gutteridge Exp $
 
 Include pthread.h as thread stubs might be macros like on NetBSD.
 
 Define conditional for cross-compiling support.
 
---- configure.ac.orig	2013-09-09 01:37:20.000000000 +0000
+Indicate whether the thread safety constructor is enabled. (This can cause
+issues with X clients that aren't coded correctly.)
+
+--- configure.ac.orig	2022-06-09 01:06:45.000000000 +0000
 +++ configure.ac
-@@ -276,7 +276,7 @@ xyes)
+@@ -222,7 +222,7 @@ xyes)
  	;;
  esac
  
@@ -15,7 +18,7 @@ Define conditional for cross-compiling support.
  AM_CONDITIONAL(THRSTUBS, test x$thrstubs = xyes)
  
  # XXX incomplete, please fill this in
-@@ -285,12 +285,12 @@ if test x$xthreads = xyes ; then
+@@ -231,12 +231,12 @@ if test x$xthreads = xyes ; then
      linux*|gnu*|k*bsd*-gnu)
          XTHREADLIB=-lpthread ;;
      netbsd*)
@@ -31,3 +34,11 @@ Define conditional for cross-compiling support.
          XTHREADLIB="-pthread" ;;
      solaris*)
  	XTHREAD_CFLAGS="-D_REENTRANT -D_POSIX_PTHREAD_SEMANTICS" ;;
+@@ -437,6 +437,7 @@ echo " Loadable i18n module support:
+ echo " Loadable xcursor library support:        "$XLIB_LOADABLE_XCURSOR
+ echo " Threading support:                       "$xthreads
+ echo " Use Threads safe API:                    "$mtsafeapi
++echo " Use thread safety constructor:           "$USE_THREAD_SAFETY_CONSTRUCTOR
+ echo " Threads stubs in libX11:                 "$thrstubs
+ echo " XCMS:                                    "$XCMS
+ echo " Internationalization support:            "$XLOCALE
