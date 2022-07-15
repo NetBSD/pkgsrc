@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3399 2022/07/15 07:36:09 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3400 2022/07/15 08:11:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5131,3 +5131,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/fabric to 2.7.1 [adam 2022-07-15]
 	Updated databases/py-peewee to 3.15.1 [adam 2022-07-15]
 	Updated devel/gopls to 0.9.1 [wiz 2022-07-15]
+	Updated databases/openldap to 2.6.3 [adam 2022-07-15]
+	Updated devel/memcached to 1.6.15 [adam 2022-07-15]
