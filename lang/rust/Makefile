@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.262 2022/07/07 16:26:37 jperkin Exp $
+# $NetBSD: Makefile,v 1.263 2022/07/15 07:03:30 jperkin Exp $
 
 DISTNAME=	rustc-1.60.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -161,6 +161,15 @@ MAKE_JOBS_SAFE?=	no
 # Under NetBSD, do not use DT_RUNPATH
 #
 BUILDLINK_TRANSFORM.NetBSD+=	rm:-Wl,--enable-new-dtags
+
+#
+# Somewhere in the LLVM build "-arch x86_64" is passed on macOS/arm64 which
+# breaks linking, see https://github.com/rust-lang/rust/issues/81790.  Until
+# this can be located (proving difficult!) we just force it.
+#
+.if !empty(MACHINE_PLATFORM:MDarwin-*-aarch64)
+BUILDLINK_TRANSFORM+=	opt:x86_64:arm64
+.endif
 
 .PHONY: pre-build-fix
 #
