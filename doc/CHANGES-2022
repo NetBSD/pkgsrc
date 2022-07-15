@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3404 2022/07/15 14:38:20 mef Exp $
+$NetBSD: CHANGES-2022,v 1.3405 2022/07/15 20:40:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5138,3 +5138,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated news/leafnode to 1.12.0 [micha 2022-07-15]
 	Updated devel/libuv to 1.44.2 [adam 2022-07-15]
 	Updated devel/p5-Modern-Perl to 1.20220515 [mef 2022-07-15]
+	Updated x11/modular-xorg-server to 21.1.4 [wiz 2022-07-15]
