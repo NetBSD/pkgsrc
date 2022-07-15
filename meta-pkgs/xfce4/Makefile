@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.109 2022/06/28 11:34:46 wiz Exp $
+# $NetBSD: Makefile,v 1.110 2022/07/15 05:22:19 gutteridge Exp $
 
 META_PACKAGE=	yes
 
-PKGREVISION=	4
+PKGREVISION=	5
 .include "Makefile.common"
 
 DISTNAME=	xfce4-${XFCE4_VERSION}
@@ -15,7 +15,7 @@ DEPENDS+=	xfce4-desktop>=4.16.0:../../x11/xfce4-desktop
 DEPENDS+=	xfce4-mousepad>=0.5.8nb2:../../editors/xfce4-mousepad
 DEPENDS+=	xfce4-panel>=4.16.3:../../x11/xfce4-panel
 DEPENDS+=	xfce4-power-manager>=4.16.0:../../sysutils/xfce4-power-manager
-DEPENDS+=	xfce4-settings>=4.16.2nb2:../../x11/xfce4-settings
+DEPENDS+=	xfce4-settings>=4.16.3:../../x11/xfce4-settings
 DEPENDS+=	xfce4-session>=4.16.0:../../x11/xfce4-session
 DEPENDS+=	xfce4-terminal>=0.8.10:../../x11/xfce4-terminal
 DEPENDS+=	xfce4-thunar>=4.16.10:../../sysutils/xfce4-thunar
