@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.80 2022/06/28 11:31:48 wiz Exp $
+# $NetBSD: Makefile,v 1.81 2022/07/15 08:11:28 adam Exp $
 
-DISTNAME=	memcached-1.6.13
-PKGREVISION=	1
+DISTNAME=	memcached-1.6.15
 CATEGORIES=	devel
 MASTER_SITES=	https://memcached.org/files/
 
