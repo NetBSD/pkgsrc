@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22023 2022/07/15 00:37:54 gutteridge Exp $
+$NetBSD: TODO,v 1.22024 2022/07/15 07:26:55 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1699,6 +1699,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o zoneminder-1.34.21
 	o zookeeper-3.7.0
 	o zopeedit-0.8
+	o zxing-cpp-1.4.0
 
 Licenses of packages
 ====================
