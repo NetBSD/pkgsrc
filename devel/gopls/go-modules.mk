@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.25 2022/05/28 09:12:02 wiz Exp $
+# $NetBSD: go-modules.mk,v 1.26 2022/07/15 07:36:00 wiz Exp $
 
 GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v1.0.0.mod
 GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v1.0.0.zip
@@ -56,11 +56,11 @@ GO_MODULE_FILES+=	golang.org/x/text/@v/v0.3.7.mod
 GO_MODULE_FILES+=	golang.org/x/text/@v/v0.3.7.zip
 GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.0.0-20180917221912-90fa682c2a6e.mod
 GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.0.0-20191119224855-298f0cb1881e.mod
-GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.1.11-0.20220513164230-dfee1649af67.mod
-GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.1.11-0.20220513164230-dfee1649af67.zip
+GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.1.12-0.20220713141851-7464a5a40219.mod
+GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.1.12-0.20220713141851-7464a5a40219.zip
 GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.1.9.mod
-GO_MODULE_FILES+=	golang.org/x/vuln/@v/v0.0.0-20220503210553-a5481fb0c8be.mod
-GO_MODULE_FILES+=	golang.org/x/vuln/@v/v0.0.0-20220503210553-a5481fb0c8be.zip
+GO_MODULE_FILES+=	golang.org/x/vuln/@v/v0.0.0-20220613164644-4eb5ba49563c.mod
+GO_MODULE_FILES+=	golang.org/x/vuln/@v/v0.0.0-20220613164644-4eb5ba49563c.zip
 GO_MODULE_FILES+=	golang.org/x/xerrors/@v/v0.0.0-20190717185122-a985d3407aa7.mod
 GO_MODULE_FILES+=	golang.org/x/xerrors/@v/v0.0.0-20191011141410-1b5146add898.mod
 GO_MODULE_FILES+=	golang.org/x/xerrors/@v/v0.0.0-20191204190536-9bdfabe68543.mod
@@ -72,8 +72,8 @@ GO_MODULE_FILES+=	gopkg.in/check.v1/@v/v1.0.0-20190902080502-41f04d3bba15.mod
 GO_MODULE_FILES+=	gopkg.in/errgo.v2/@v/v2.1.0.mod
 GO_MODULE_FILES+=	gopkg.in/yaml.v2/@v/v2.2.2.mod
 GO_MODULE_FILES+=	gopkg.in/yaml.v2/@v/v2.2.4.mod
-GO_MODULE_FILES+=	honnef.co/go/tools/@v/v0.3.0.mod
-GO_MODULE_FILES+=	honnef.co/go/tools/@v/v0.3.0.zip
+GO_MODULE_FILES+=	honnef.co/go/tools/@v/v0.3.2.mod
+GO_MODULE_FILES+=	honnef.co/go/tools/@v/v0.3.2.zip
 GO_MODULE_FILES+=	mvdan.cc/gofumpt/@v/v0.3.0.mod
 GO_MODULE_FILES+=	mvdan.cc/gofumpt/@v/v0.3.0.zip
 GO_MODULE_FILES+=	mvdan.cc/xurls/v2/@v/v2.4.0.mod
