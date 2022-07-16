@@ -654,6 +654,7 @@ opendkim-filter		Build opendkim-filter support.
 openexr			Use OpenEXR as imaging library.
 opengl			Use OpenGL as display library.
 opengrok-build		Enable building of OpenGrok from source.
+openipmi		Enable OpenIPMI support.
 openldap		Enable OpenLDAP support.
 openmp	Enable OpenMP multithreading.
 openmpi-vampirtrace	Build VampirTrace as part of OpenMPI.
