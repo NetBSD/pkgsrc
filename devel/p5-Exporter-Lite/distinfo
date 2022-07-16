@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:16:32 nia Exp $
+$NetBSD: distinfo,v 1.8 2022/07/16 07:46:50 wen Exp $
 
-BLAKE2s (Exporter-Lite-0.08.tar.gz) = 96f0f2fadb75ca4e9b087195b6d26e2f74a9218f0e498c6d50f8cfbf34576ad4
-SHA512 (Exporter-Lite-0.08.tar.gz) = 8c6ff5a88c1b810d74156c5d84695cfde6f555e0fc663804123e2a96f5e2235a5adeebbf24b18301ed2c3fb57f76788ecfdf301b26263279e92a88a9143b8953
-Size (Exporter-Lite-0.08.tar.gz) = 6271 bytes
+BLAKE2s (Exporter-Lite-0.09.tar.gz) = e23ecee22fa6be00464bd17ee2a8731d4a2457366b0ef7abecbe7258cf0f4dda
+SHA512 (Exporter-Lite-0.09.tar.gz) = fa540b0aba6178031d0448cdd92bdf21226facd0424ca00329eac8b93086f7e53b9f37daf52a53a74b65fa6afe2b2aa236165d4c44e96d63aad19e0764924f92
+Size (Exporter-Lite-0.09.tar.gz) = 6859 bytes
