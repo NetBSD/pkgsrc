@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3410 2022/07/16 00:23:42 wen Exp $
+$NetBSD: CHANGES-2022,v 1.3411 2022/07/16 00:36:26 wen Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5144,3 +5144,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/grafx2 to 2.8.3128 [wiz 2022-07-15]
 	Updated devel/p5-Date-Manip to 6.88 [wen 2022-07-16]
 	Updated devel/p5-Devel-CheckLib to 1.16 [wen 2022-07-16]
+	Updated devel/p5-Devel-CheckOS to 1.93 [wen 2022-07-16]
