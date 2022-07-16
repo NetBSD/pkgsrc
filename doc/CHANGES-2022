@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3414 2022/07/16 07:26:06 wen Exp $
+$NetBSD: CHANGES-2022,v 1.3415 2022/07/16 07:47:40 wen Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5148,3 +5148,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/p5-Devel-FindPerl to 0.016 [wen 2022-07-16]
 	Updated devel/p5-Devel-REPL to 1.003029 [wen 2022-07-16]
 	Updated devel/p5-Dist-Zilla to 6.025 [wen 2022-07-16]
+	Updated devel/p5-Exporter-Lite to 0.09 [wen 2022-07-16]
