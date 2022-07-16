@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2022/06/28 11:32:18 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2022/07/16 03:33:28 wen Exp $
 
-DISTNAME=	Devel-REPL-1.003028
+DISTNAME=	Devel-REPL-1.003029
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	7
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Devel/}
 
@@ -11,8 +10,6 @@ HOMEPAGE=	https://metacpan.org/release/Devel-REPL
 COMMENT=	Modern Perl interactive shell
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	p5-File-HomeDir-[0-9]*:../../devel/p5-File-HomeDir
-DEPENDS+=	p5-Moose>=0.74:../../devel/p5-Moose
 DEPENDS+=	p5-MooseX-AttributeHelpers>=0.16:../../devel/p5-MooseX-AttributeHelpers
 DEPENDS+=	p5-MooseX-Getopt>=0.18:../../devel/p5-MooseX-Getopt
 DEPENDS+=	p5-MooseX-Object-Pluggable>=0.0009:../../devel/p5-MooseX-Object-Pluggable
