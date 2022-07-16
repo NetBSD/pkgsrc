@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3408 2022/07/15 21:21:38 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3409 2022/07/16 00:07:23 wen Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5142,3 +5142,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/modular-xorg-xephyr to 21.1.4 [wiz 2022-07-15]
 	Updated audio/alsa-lib to 1.2.7.2 [wiz 2022-07-15]
 	Updated graphics/grafx2 to 2.8.3128 [wiz 2022-07-15]
+	Updated devel/p5-Date-Manip to 6.88 [wen 2022-07-16]
