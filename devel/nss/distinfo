@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.155 2022/06/24 06:10:38 wiz Exp $
+$NetBSD: distinfo,v 1.156 2022/07/16 19:11:15 tnn Exp $
 
 BLAKE2s (nss-3.80.tar.gz) = 4f564a570a4681992c65b5abe15bc8930aa7ff6e26f27886240aaa3d6737c15f
 SHA512 (nss-3.80.tar.gz) = db05df17fea12bf3ec83882bf761663f8f10f3a8ce9a33519c7985d6003945068adb658250cf05d8b598c34ecb4ba7ea5cdc468d9cc7bc786aedb72d7be65923
@@ -20,8 +20,6 @@ SHA1 (patch-nss_coreconf_command.mk) = a7b682d367825b48f8802fa30cee83f10680bb74
 SHA1 (patch-nss_lib_certdb_alg1485.c) = 319ecd8bc83f4309fe24267a6b7b8d03f11d06cb
 SHA1 (patch-nss_lib_certdb_certdb.c) = 1635d99677720b7813014a70cd2a7febc2584c05
 SHA1 (patch-nss_lib_dbm_src_mktemp.c) = 999ae164ff1f2390b0e6dc2160c27906d56aa940
-SHA1 (patch-nss_lib_freebl_aes-armv8.c) = aa698f61dd3d66ba707a9b5425bc15d057244ad7
-SHA1 (patch-nss_lib_freebl_gcm-aarch64.c) = 311cfe7ca58e91285052d0ca27bd2df3f325071b
 SHA1 (patch-nss_lib_freebl_sha256-armv8.c) = 48ec50204493dd510099a3495f3b775c6bfa8828
 SHA1 (patch-nss_lib_nss_nssinit.c) = d694c417096664ebab4f886a18434225fcd81277
 SHA1 (patch-nss_lib_softoken_legacydb_lowcert.c) = bef61e830bae12b82046713a40a3d6546bb63c34
