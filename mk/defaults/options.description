@@ -497,6 +497,7 @@ libsmi			Use libsmi for SMI MIB support.
 libsoup			Use libsoup for SOUP support.
 libsoxr			Enable libsoxr (resample) support.
 libspiff		Use libspiff for XML shareable playlist support.
+libssh			Use libssh for SSHv2 protocol support.
 libssh2			Use libssh2 for SSHv2 protocol support.
 libthai			Use libthai for Thai word segmentation.
 libusb			Enable USB access.
