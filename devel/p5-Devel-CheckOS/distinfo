@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2021/10/26 10:16:25 nia Exp $
+$NetBSD: distinfo,v 1.17 2022/07/16 00:35:07 wen Exp $
 
-BLAKE2s (Devel-CheckOS-1.87.tar.gz) = f246225aae4559db8adcd50264da72231e0824164a83fe9fd81fe9f4946a976f
-SHA512 (Devel-CheckOS-1.87.tar.gz) = 4f41bf38ebbc77f30363bfdf677c8d271a0d17810e211fb7bef7f3d533ec92d2a1575567019c0e1edf44854f5a3dfd80ed787bea4ad8a1806d388b0e92a1b4b9
-Size (Devel-CheckOS-1.87.tar.gz) = 33745 bytes
+BLAKE2s (Devel-CheckOS-1.93.tar.gz) = a9e3e65c7bd4858062c2b177485cd99a436446529f3031ae296abab31b117201
+SHA512 (Devel-CheckOS-1.93.tar.gz) = 895ac38d9cf31bd9b9c53f5196768b67137393b51b6c67bdb77500abcab6a61bfb4ab769710a09cea520f0933176d2895138c34b149bc4c19cdb99daf0e1fdf4
+Size (Devel-CheckOS-1.93.tar.gz) = 36598 bytes
