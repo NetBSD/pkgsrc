@@ -1,4 +1,13 @@
-# $NetBSD: url2pkg_test.py,v 1.40 2022/02/06 21:07:44 rillig Exp $
+# $NetBSD: url2pkg_test.py,v 1.41 2022/07/16 08:59:38 rillig Exp $
+
+# URLs for manual testing:
+#
+# https://files.pythonhosted.org/packages/source/p/pysha3/pysha3-1.0.2.tar.gz
+#   Prefers distutils over setuptools, has no external dependencies.
+#
+# https://github.com/pytorch/pytorch/archive/refs/tags/v1.12.0.tar.gz
+#   Uses setuptools with an extension.
+#   Runs Git from 'setup.py', which is rather unusual.
 
 import pytest
 from url2pkg import *
