@@ -1,5 +1,5 @@
 #! @PYTHONBIN@
-# $NetBSD: url2pkg.py,v 1.42 2022/02/08 20:48:09 rillig Exp $
+# $NetBSD: url2pkg.py,v 1.43 2022/07/16 08:59:38 rillig Exp $
 
 # Copyright (c) 2019 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -1021,7 +1021,7 @@ class Adjuster:
         cmd = f'{self.g.pythonbin} setup.py build'
         env = {
             'PYTHONDONTWRITEBYTECODE': 'x',
-            'PYTHONPATH': self.g.libdir
+            'PYTHONPATH': f'{self.g.libdir}/python'
         }
         self.read_dependencies(cmd, env, self.abs_wrksrc, 'py-', '${PYPKGPREFIX}-')
 
