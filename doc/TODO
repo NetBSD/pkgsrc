@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22029 2022/07/15 21:21:38 wiz Exp $
+$NetBSD: TODO,v 1.22030 2022/07/16 15:54:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -511,7 +511,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o cacti-spine-1.2.16
 	o calc-2.11.10.1
 	o calcoo-2.1.0
-	o calibre-6.0.0
+	o calibre-6.1
 	o calligra-3.0.1 [in wip; koffice successor]
 	o camlp4-4.12
 	o camlp5-8.00.03 [dholland has a partial update]
@@ -868,7 +868,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o influxdb-2.0.4
 	o inform-6.34
 	o ingo-3.2.8
-	o inkscape-1.2
+	o inkscape-1.2.1
 	o inn-2.6.4
 	o input-pad-1.4.2
 	o ipe-7.2.24
