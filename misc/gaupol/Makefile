@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.49 2022/06/30 11:18:37 nia Exp $
+# $NetBSD: Makefile,v 1.50 2022/07/16 19:19:45 wiz Exp $
 
 DISTNAME=	gaupol-0.28.2
-PKGREVISION=	21
+PKGREVISION=	22
 CATEGORIES=	misc
 #MASTER_SITES=	http://download.gna.org/gaupol/0.28/
 EXTRACT_SUFX=	.tar.xz
@@ -36,6 +36,6 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 .include "../../lang/python/egg.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../textproc/gtkspell/buildlink3.mk"
+.include "../../textproc/gtkspell3/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
