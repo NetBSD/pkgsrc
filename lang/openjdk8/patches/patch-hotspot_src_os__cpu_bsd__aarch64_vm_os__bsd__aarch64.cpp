@@ -1,4 +1,4 @@
-$NetBSD: patch-hotspot_src_os__cpu_bsd__aarch64_vm_os__bsd__aarch64.cpp,v 1.2 2022/07/10 14:47:24 ryoon Exp $
+$NetBSD: patch-hotspot_src_os__cpu_bsd__aarch64_vm_os__bsd__aarch64.cpp,v 1.3 2022/07/17 03:03:41 tnn Exp $
 
 NetBSD/evbarm-aarch64 support
 
@@ -40,3 +40,12 @@ NetBSD/evbarm-aarch64 support
  #endif
  }
  
+@@ -288,7 +296,7 @@ JVM_handle_bsd_signal(int sig,
+       return 1;
+     }
+ 
+-#if !defined(AMD64) && !defined(__OpenBSD__)
++#if !defined(AMD64) && defined(SI_KERNEL)
+     // Halt if SI_KERNEL before more crashes get misdiagnosed as Java bugs
+     // This can happen in any running code (currently more frequently in
+     // interpreter code but has been seen in compiled code)
