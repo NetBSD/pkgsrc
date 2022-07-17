@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.31 2022/07/03 17:50:52 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2022/07/17 09:53:00 wiz Exp $
 #
 # Release notes:
 # https://lists.mercurial-scm.org/pipermail/mercurial-evolve-testers/
 
-DISTNAME=	hg-evolve-10.5.1
+DISTNAME=	hg-evolve-10.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/post//}
 CATEGORIES=	devel scm
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hg-evolve/}
@@ -18,6 +18,8 @@ DEPENDS+=	${PYPKGPREFIX}-sqlite3>=0:../../databases/py-sqlite3
 TEST_DEPENDS+=	curl-[0-9]*:../../www/curl
 
 USE_TOOLS+=	bash:test
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	rm -f ${DESTDIR}${PREFIX}/${PYSITELIB}/hgext3rd/__init__.py*
