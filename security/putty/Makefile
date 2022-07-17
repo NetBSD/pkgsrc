@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2021/12/08 16:06:23 adam Exp $
+# $NetBSD: Makefile,v 1.70 2022/07/17 01:23:54 tnn Exp $
 #
 
 DISTNAME=	putty-0.76
@@ -39,5 +39,10 @@ CFLAGS.Linux+=	-DHAVE_FUTIMES -DHAVE_NO_SETRESUID
 LDFLAGS.Linux+=	-ldl
 
 .include "../../x11/gtk3/buildlink3.mk"
+.if !empty(PKG_BUILD_OPTIONS.gtk3:Mquartz)
+# Override default GTK_CONFIG from Makefile.gtk to prevent search for x11.pc
+MAKE_FLAGS+=	"GTK_CONFIG=pkg-config gtk+-3.0"
+CFLAGS+=	-DOSX_GTK
+.endif
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
