@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.65 2022/05/04 05:42:49 wiz Exp $
+$NetBSD: distinfo,v 1.66 2022/07/17 08:31:33 wiz Exp $
 
-BLAKE2s (vala-0.56.1.tar.xz) = c4c5089c598e8658e79e3b9b26d8653cba39471a7a630d1a9f944c1b1062bf29
-SHA512 (vala-0.56.1.tar.xz) = 83c34ab0497a9b7a627db8c1dbfea9e76c94b902e298afb2c30ba9824717f2fe3b0e26b987feb93cd4ff0ce211d0ecd9a746cc18c00e41c4c6fd01d05947902f
-Size (vala-0.56.1.tar.xz) = 3960476 bytes
+BLAKE2s (vala-0.56.2.tar.xz) = b7497bf7216424280e8be55cbd4fa42f5cc5813e409dbfc84ba3e5ec60c9d61b
+SHA512 (vala-0.56.2.tar.xz) = 8a33a1f1d573dd6aa1de6c001bce6e77da39d804cd526433c3e01454e597a7afb6d1b1bce554babf52a7baca5e88e205d28132c73b9a63e9d7b9f7314b3d4496
+Size (vala-0.56.2.tar.xz) = 3967960 bytes
 SHA1 (patch-build-aux_testrunner.sh) = d30ce05459b398a18e9dbd4420f28d8bfdf7323a
