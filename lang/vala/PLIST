@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2022/05/04 05:42:49 wiz Exp $
+@comment $NetBSD: PLIST,v 1.37 2022/07/17 08:31:33 wiz Exp $
 bin/vala
 bin/vala-0.56
 bin/vala-gen-introspect
@@ -122,6 +122,8 @@ share/vala-0.56/vapi/gdl-3.0.deps
 share/vala-0.56/vapi/gdl-3.0.vapi
 share/vala-0.56/vapi/geocode-glib-1.0.deps
 share/vala-0.56/vapi/geocode-glib-1.0.vapi
+share/vala-0.56/vapi/geocode-glib-2.0.deps
+share/vala-0.56/vapi/geocode-glib-2.0.vapi
 share/vala-0.56/vapi/gio-2.0.deps
 share/vala-0.56/vapi/gio-2.0.vapi
 share/vala-0.56/vapi/gio-unix-2.0.deps
@@ -322,8 +324,12 @@ share/vala-0.56/vapi/rasqal.vapi
 share/vala-0.56/vapi/readline.vapi
 share/vala-0.56/vapi/rest-0.7.deps
 share/vala-0.56/vapi/rest-0.7.vapi
+share/vala-0.56/vapi/rest-1.0.deps
+share/vala-0.56/vapi/rest-1.0.vapi
 share/vala-0.56/vapi/rest-extras-0.7.deps
 share/vala-0.56/vapi/rest-extras-0.7.vapi
+share/vala-0.56/vapi/rest-extras-1.0.deps
+share/vala-0.56/vapi/rest-extras-1.0.vapi
 share/vala-0.56/vapi/sdl2-android.deps
 share/vala-0.56/vapi/sdl2-android.vapi
 share/vala-0.56/vapi/sdl2-ios.deps
@@ -342,6 +348,7 @@ share/vala-0.56/vapi/udisks2.vapi
 share/vala-0.56/vapi/unique-1.0.deps
 share/vala-0.56/vapi/unique-1.0.vapi
 share/vala-0.56/vapi/v4l2.vapi
+share/vala-0.56/vapi/wayland-client.vapi
 share/vala-0.56/vapi/webkit2gtk-4.0.deps
 share/vala-0.56/vapi/webkit2gtk-4.0.vapi
 share/vala-0.56/vapi/webkit2gtk-4.1.deps
