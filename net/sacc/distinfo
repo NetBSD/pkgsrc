@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/12/18 13:49:25 leot Exp $
+$NetBSD: distinfo,v 1.8 2022/07/17 16:10:46 leot Exp $
 
-BLAKE2s (sacc-1.05.tar.gz) = 7818c240bc26603167acc4771235d2a7846546052bbab8c79e184f405964292a
-SHA512 (sacc-1.05.tar.gz) = 61eac55e2e5a24265b0c3f723fa7bb768f6df2de76001db89be6dc86fa4726b193b68e2d5461c1a47b0e13bfa8d28226e0f981753778a6260d1ddb8d4cdd0d10
-Size (sacc-1.05.tar.gz) = 14375 bytes
+BLAKE2s (sacc-1.06.tar.gz) = 1e54b3fa413b5af2e0dcba542df3223af7eea68c3952ed951ae4a10f48614d32
+SHA512 (sacc-1.06.tar.gz) = 7a895e432e1d28b7d9b2bb2a5326ca32350876a2c80d39dc6c19e75347d72a4847f1aa4ff11f07e8a9adea14ea71b84d70890dcc170ff6ce0b779e1d6586b4fa
+Size (sacc-1.06.tar.gz) = 14540 bytes

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2021/12/18 13:49:25 leot Exp $
+# $NetBSD: Makefile,v 1.8 2022/07/17 16:10:46 leot Exp $
 
-DISTNAME=	sacc-1.05
+DISTNAME=	sacc-1.06
 CATEGORIES=	net
 MASTER_SITES=	ftp://bitreich.org/releases/sacc/
 
