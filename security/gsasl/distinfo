@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.22 2021/10/26 11:17:07 nia Exp $
+$NetBSD: distinfo,v 1.23 2022/07/17 08:24:53 wiz Exp $
 
-BLAKE2s (gsasl-1.10.0.tar.gz) = 0f33658e5a7a6f99ae48e5d21529190fa32040e5f1f7781b00c2c952a13d9bec
-SHA512 (gsasl-1.10.0.tar.gz) = 8b1dc87e85dbfd0255b3b43c4b7f9c2e896cb03efe4cd4af86393b62fd193665aae4ce59e66db736722e32babfcea6d4f6ddd3c5f069dcc4210f7e9531043e4a
-Size (gsasl-1.10.0.tar.gz) = 5946076 bytes
+BLAKE2s (gsasl-2.0.1.tar.gz) = d3c1968d9ce3a8602df57be4efa4cec6e1da8c52f585f4f7f734cdd540bf4c98
+SHA512 (gsasl-2.0.1.tar.gz) = 01c6f6bd9f986c942a25b89fee0052aef8c10bf914ead29983abdf0cc8fcaa7223fd9d9eeafb4be07e4bc318f087f6f6258facaaeb7f83bca8de512406812be5
+Size (gsasl-2.0.1.tar.gz) = 3279632 bytes
