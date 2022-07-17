@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2020/07/16 01:28:25 markd Exp $
+# $NetBSD: options.mk,v 1.6 2022/07/17 08:26:57 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.fluidsynth
 
@@ -16,7 +16,7 @@ PKG_SUGGESTED_OPTIONS+=		sdl2
 .endif
 
 # A guess at platforms where ladspa is likely to work...
-.if ${OPSYS} == "Linux" || !empty(OPSYS:M*BSD) || ${OPSYS} == "DragonFly"
+.if ${OPSYS} == "Linux" || ${OPSYS:M*BSD} || ${OPSYS} == "DragonFly"
 PKG_SUGGESTED_OPTIONS+=		ladspa
 .endif
 
