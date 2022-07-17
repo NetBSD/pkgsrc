@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22030 2022/07/16 15:54:24 wiz Exp $
+$NetBSD: TODO,v 1.22031 2022/07/17 07:59:13 wiz Exp $
 
 Suggested new packages
 ======================
@@ -373,7 +373,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ImageMagick6-6.9.12.8
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
-	o MesaLib-22.1.3
+	o MesaLib-22.1.4
 	o OdfConverter-4.0
 	o PACK-0.0.4
 	o Pantomime-1.2.2
@@ -664,6 +664,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o flatbuffers-1.12.0
 	o flow-tools-0.411
 	o fluent-bit-1.7.4
+	o fluidsynth-2.2.8
 	o foomatic-filters-4.0.12
 	o foomatic4-db-20210421
 	o fop-2.6
@@ -807,8 +808,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o graphene-1.10.6
 	o greed-4.2
 	o gromacs-2021.1
+	o grpc-1.47.1
 	o grub2-2.06
-	o gsasl-2.0.0
+	o gsasl-2.0.1
 	o gss-1.0.3
 	o gst-plugins1-omx-1.10.0
 	o gst-rtsp-server-1.18.5
@@ -961,6 +963,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libgiigic-1.1.2
 	o libgnomekbd-3.4.0.2
 	o libiconv-1.16
+	o libidn2-2.3.3
 	o libisoburn-1.5.4
 	o libisofs-1.5.4
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version; see also wmii+ixp entry]
@@ -1331,6 +1334,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-hyperscan-0.2.0
 	o py-input-pad-1.4.2
 	o py-keybinder-0.3.2
+	o py-mercurial-6.2
 	o py-musicbrainz-0.7.4
 	o py-musicbrainz-ngs-0.7.1
 	o py-newt-0.52.21
@@ -1420,7 +1424,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rump-20131213
 	o rust-1.61.0 [wip]
 	o rust-1.62.0
-	o rust-analyzer-0.0.20220704
+	o rust-analyzer-0.0.20220711
 	o rvault-0.4
 	o rvm-1.20
 	o sabayon-2.30.1
@@ -1580,6 +1584,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o userppp-030706
 	o userspace-rcu-0.12.2
 	o utilisp-1.14
+	o vala-0.56.2
 	o valgrind-3.18.1
 	o vault-1.7.4
 	o vbetool-1.1
