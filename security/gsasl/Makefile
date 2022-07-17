@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.55 2021/12/08 16:06:18 adam Exp $
+# $NetBSD: Makefile,v 1.56 2022/07/17 08:24:53 wiz Exp $
 
-DISTNAME=	gsasl-1.10.0
-PKGREVISION=	4
+DISTNAME=	gsasl-2.0.1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GNU:=gsasl/}
 
@@ -25,8 +24,7 @@ PKGCONFIG_OVERRIDE+=	lib/libgsasl.pc.in
 INFO_FILES=		yes
 TEST_TARGET=		check
 
-# one test failure as of 1.8.1
-# FAIL: test-pthread_sigmask2
+# all tests pass as of 2.0.1
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libidn/buildlink3.mk"
