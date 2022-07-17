@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3428 2022/07/17 16:54:26 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3429 2022/07/17 19:33:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5162,3 +5162,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/gallery-dl to 1.22.4 [leot 2022-07-17]
 	Updated graphics/babl to 0.1.92nb1 [wiz 2022-07-17]
 	Updated graphics/gegl to 0.4.36nb4 [wiz 2022-07-17]
+	Added graphics/libhighway version 0.17.0 [wiz 2022-07-17]
