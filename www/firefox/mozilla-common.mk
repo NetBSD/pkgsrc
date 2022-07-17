@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.234 2022/07/05 01:18:01 gutteridge Exp $
+# $NetBSD: mozilla-common.mk,v 1.235 2022/07/17 08:08:56 wiz Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -51,7 +51,7 @@ CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM}
 CONFIGURE_ENV+=		BINDGEN_CFLAGS="-isystem${PREFIX}/include/nspr \
 			-isystem${X11BASE}/include/pixman-1"
 
-test:
+do-test:
 	cd ${WRKSRC}/${OBJDIR}/dist/bin &&	\
 	     ./run-mozilla.sh ${WRKSRC}/mach check-spidermonkey
 
@@ -167,7 +167,7 @@ CONFIGURE_SCRIPT=	${WRKSRC}/configure
 PLIST_VARS+=	ffvpx
 
 .if ${MACHINE_ARCH} == "aarch64" || \
-    !empty(MACHINE_ARCH:M*arm*) || \
+    ${MACHINE_ARCH:M*arm*} || \
     ${MACHINE_ARCH} == "i386" || \
     ${MACHINE_ARCH} == "x86_64"
 PLIST.ffvpx=	yes	# see media/ffvpx/ffvpxcommon.mozbuild
@@ -223,7 +223,6 @@ RUST_REQ=	1.59.0
 .include "../../x11/libXtst/buildlink3.mk"
 BUILDLINK_API_DEPENDS.pixman+= pixman>=0.25.2
 .include "../../x11/pixman/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 PLIST_VARS+=		wayland
 .if ${PKG_BUILD_OPTIONS.gtk3:Mwayland}

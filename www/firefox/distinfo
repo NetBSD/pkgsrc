@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.472 2022/07/09 02:22:25 ryoon Exp $
+$NetBSD: distinfo,v 1.473 2022/07/17 08:08:56 wiz Exp $
 
 BLAKE2s (firefox-102.0.1.source.tar.xz) = 43e2f34c0e39d1a3d3d341e55d474a9e5551865ace57f9f0fd1d7eb16676ef64
 SHA512 (firefox-102.0.1.source.tar.xz) = a930d359fb81e473b963a93f6db5110871e9fd57f6d0f352513047d363d930dd4811e8dd786c2f6f3541c3871eb1c0169b718652d9ee076fd13a20f52af30417
@@ -29,12 +29,12 @@ SHA1 (patch-media_libcubeb_src_cubeb__jack.cpp) = fc546c5e6582fd5eda64ba83287dfb
 SHA1 (patch-media_libcubeb_src_moz.build) = e027285ea24f2626b1328d4c6e9a31ed55445f99
 SHA1 (patch-media_libpng_pngpriv.h) = c8084332560017cd7c9b519b61d125fa28af0dbc
 SHA1 (patch-media_libtheora_lib_info.c) = f6dbf536d73859a1ff78304c2e9f6a6f74dac01f
-SHA1 (patch-media_webrtc_trunk_webrtc_modules_video__capture_linux_device__info__linux.cc) = 2e951d7d91934751608e99628fc144632d8a3b5c
 SHA1 (patch-modules_fdlibm_src_math__private.h) = 6ae3b0077b4a8c6088c35769fa1972cfc44ea9c1
 SHA1 (patch-mozglue_misc_Uptime.cpp) = daefe25ef1ebc8e4d3735017b9e8ac68c4710a00
 SHA1 (patch-nsprpub_pr_src_pthreads_ptsynch.c) = 13e512c7ee9fa1e14ba415d62fa853e5fbfc91c0
 SHA1 (patch-security_nss_lib_freebl_mpi_mpi.c) = a7cd867916524770609d1c307a65b315b88456f4
 SHA1 (patch-third__party_js_cfworker_build.sh) = 46cdf97b99cf01080f290ae8d9a33b5f869fc3e4
+SHA1 (patch-third__party_libwebrtc_modules_video__capture_linux_device__info__linux.cc) = 2e951d7d91934751608e99628fc144632d8a3b5c
 SHA1 (patch-third__party_libwebrtc_system__wrappers_source_cpu__features__linux.cc) = b90e22b50879f7adcc1da3a993f52c0701b720f8
 SHA1 (patch-toolkit_components_terminator_nsTerminator.cpp) = bd7b2a0f2407c3ab95515b2f143c41c3ca6fb0c4
 SHA1 (patch-toolkit_modules_subprocess_subprocess__shared__unix.js) = 2303b753066298305ccae80d72765dbc4da5e0dc
