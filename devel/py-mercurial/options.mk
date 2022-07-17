@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2020/12/06 11:37:33 wiz Exp $
+# $NetBSD: options.mk,v 1.6 2022/07/17 09:51:33 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.mercurial
 # 5.6.1 needs some "*-pre" crates that are not available
@@ -8,10 +8,10 @@ PKG_SUGGESTED_OPTIONS=		#rust
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=	rust
+#PLIST_VARS+=	rust
 
 .if !empty(PKG_OPTIONS:Mrust)
-PLIST.rust=	yes
+#PLIST.rust=	yes
 PYSETUPARGS+=	--rust
 # for python3-sys
 MAKE_ENV+=	PYTHON_SYS_EXECUTABLE=${PYTHONBIN}
