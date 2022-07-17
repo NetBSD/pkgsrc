@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.38 2022/05/13 20:56:09 tnn Exp $
+@comment $NetBSD: PLIST,v 1.39 2022/07/17 16:54:15 wiz Exp $
 bin/gegl
 bin/gegl-imgcmp
 include/gegl-0.4/gegl-apply.h
@@ -135,6 +135,7 @@ lib/gegl-0.4/transformops.${SOEXT}
 lib/gegl-0.4/vector-stroke.${SOEXT}
 lib/gegl-0.4/webp-load.${SOEXT}
 lib/gegl-0.4/webp-save.${SOEXT}
+lib/girepository-1.0/Gegl-0.4.typelib
 lib/libgegl-0.4.${SOEXT}
 ${PLIST.darwin}lib/libgegl-0.4.0.dylib
 ${PLIST.notdarwin}lib/libgegl-0.4.${SOEXT}.0
@@ -143,6 +144,7 @@ lib/libgegl-npd-0.4.${SOEXT}
 lib/libgegl-sc-0.4.${SOEXT}
 lib/pkgconfig/gegl-0.4.pc
 lib/pkgconfig/gegl-sc-0.4.pc
+share/gir-1.0/Gegl-0.4.gir
 share/locale/bs/LC_MESSAGES/gegl-0.4.mo
 share/locale/ca/LC_MESSAGES/gegl-0.4.mo
 share/locale/da/LC_MESSAGES/gegl-0.4.mo
@@ -179,3 +181,5 @@ share/locale/sv/LC_MESSAGES/gegl-0.4.mo
 share/locale/tr/LC_MESSAGES/gegl-0.4.mo
 share/locale/uk/LC_MESSAGES/gegl-0.4.mo
 share/locale/zh_CN/LC_MESSAGES/gegl-0.4.mo
+share/vala/vapi/gegl-0.4.deps
+share/vala/vapi/gegl-0.4.vapi

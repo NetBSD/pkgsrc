@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.107 2022/07/14 23:46:22 dholland Exp $
+# $NetBSD: Makefile,v 1.108 2022/07/17 16:54:15 wiz Exp $
 
 DISTNAME=	gegl-0.4.36
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	https://download.gimp.org/pub/gegl/${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.xz
@@ -11,11 +11,10 @@ HOMEPAGE=	http://gegl.org/
 COMMENT=	Graph based image processing framework
 LICENSE=	gnu-gpl-v3
 
-MESON_ARGS+=	-Dintrospection=false
 MESON_ARGS+=	-Dlibv4l=disabled
 MESON_ARGS+=	-Dlibv4l2=disabled
 # Some binaries that are required to generate docs
-# are built with RPATH $ORIGIN. DIsable docs explicitly.
+# are built with RPATH $ORIGIN. Disable docs explicitly.
 MESON_ARGS+=	-Ddocs=false
 
 USE_LANGUAGES=	c c++
@@ -60,7 +59,8 @@ pre-build:
 .include "../../devel/meson/build.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.babl+=	babl>=0.1.90
+BUILDLINK_API_DEPENDS.babl+=	babl>=0.1.92nb1
+.include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../graphics/babl/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
@@ -68,6 +68,7 @@ BUILDLINK_API_DEPENDS.babl+=	babl>=0.1.90
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
+.include "../../lang/vala/buildlink3.mk"
 .include "../../lang/python/tool.mk"
 .include "../../textproc/json-glib/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
