@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2022/07/14 23:53:17 dholland Exp $
+# $NetBSD: Makefile,v 1.9 2022/07/17 21:23:31 wiz Exp $
 
-DISTNAME=	spice-gtk-0.39
-PKGREVISION=	1
+DISTNAME=	spice-gtk-0.41
 CATEGORIES=	sysutils
 MASTER_SITES=	https://www.spice-space.org/download/gtk/
 EXTRACT_SUFX=	.tar.xz
@@ -31,6 +30,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 .include "../../lang/vala/buildlink3.mk"
 .include "../../devel/meson/build.mk"
 .include "../../lang/python/pyversion.mk"
+.include "../../lang/python/tool.mk"
 .include "../../audio/libopus/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
