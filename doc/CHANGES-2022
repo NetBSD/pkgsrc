@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3426 2022/07/17 16:19:09 leot Exp $
+$NetBSD: CHANGES-2022,v 1.3427 2022/07/17 16:38:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5160,3 +5160,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-hg-evolve to 10.5.2 [wiz 2022-07-17]
 	Updated net/sacc to 1.06 [leot 2022-07-17]
 	Updated net/gallery-dl to 1.22.4 [leot 2022-07-17]
+	Updated graphics/babl to 0.1.92nb1 [wiz 2022-07-17]
