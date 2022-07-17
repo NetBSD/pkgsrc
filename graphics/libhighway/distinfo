@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/07/17 19:32:46 wiz Exp $
+
+BLAKE2s (highway-0.17.0.tar.gz) = 0797498051a9bdccac2f7451d0c5fd4ead0406cfd7f92c8cad5e5182b57862ec
+SHA512 (highway-0.17.0.tar.gz) = 7e55724c844a09a07cb981a7d8e913dcc5491e07d14ff3e7783a69060b0c470e7d5adc4f5dbeea526b3e109eea8cc9e80605d6b8d2da1b794382e56fd534ba06
+Size (highway-0.17.0.tar.gz) = 1694290 bytes
