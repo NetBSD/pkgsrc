@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.89 2022/07/10 14:47:24 ryoon Exp $
+$NetBSD: distinfo,v 1.90 2022/07/17 03:03:41 tnn Exp $
 
 BLAKE2s (openjdk7/bootstrap-jdk-1.7.76-freebsd-10-amd64-20150301.tar.xz) = 8745b980e290e509c0dd09706398b89afce85fee1405b9367b6684c83d56b96a
 SHA512 (openjdk7/bootstrap-jdk-1.7.76-freebsd-10-amd64-20150301.tar.xz) = 6ed928cc68503c27edd6f3a90f94e1e762192d41997b12903e37071f4fcd34f5579fa970e59c240928eaae60729300fbfdb02a5ec1136bc757ee24f1ee554af4
@@ -57,12 +57,13 @@ SHA1 (patch-hotspot_make_solaris_makefiles_optimized.make) = 78d64fe6cb7c3420889
 SHA1 (patch-hotspot_make_solaris_makefiles_product.make) = c41b360302bffd9fbfaa34ee7a4d5d1a756ae0e2
 SHA1 (patch-hotspot_make_solaris_makefiles_saproc.make) = 0ca85ba72d154643b934815a0a2deb1e77371ff9
 SHA1 (patch-hotspot_make_solaris_makefiles_vm.make) = 787e0c68cf976fc0df3e19fb2a22b1b7e3662c07
+SHA1 (patch-hotspot_src_cpu_aarch64_vm_pauth__aarch64.hpp) = 9087c8b7a0e97315bacd1edc567920cb22c4156f
 SHA1 (patch-hotspot_src_cpu_aarch64_vm_vm__version__aarch64.cpp) = b02d08302974a923e19875c4fa30057580629f14
 SHA1 (patch-hotspot_src_cpu_aarch64_vm_vm__version__aarch64.hpp) = 6a766abe3c53ee3b15ad9636527d0e4b61942d4d
 SHA1 (patch-hotspot_src_cpu_zero_vm_methodHandles__zero.cpp) = 9f7acf1eff3baba430880be9fd0f6148056dd088
 SHA1 (patch-hotspot_src_cpu_zero_vm_nativeInst__zero.cpp) = 446b96a91a2e4fa76f43ac653d1608f037c64af9
 SHA1 (patch-hotspot_src_os__cpu_bsd__aarch64_vm_bytes__bsd__aarch64.inline.hpp) = acc0b870113ffc279d089da385e564f3ffd87f89
-SHA1 (patch-hotspot_src_os__cpu_bsd__aarch64_vm_os__bsd__aarch64.cpp) = 1c9f8e68b738975a6accce502f1b9ce6f6ebaabd
+SHA1 (patch-hotspot_src_os__cpu_bsd__aarch64_vm_os__bsd__aarch64.cpp) = 461717b25728884add18a8c68221ccea4ef81bbe
 SHA1 (patch-hotspot_src_os__cpu_bsd__aarch64_vm_vm__version__bsd__aarch64.cpp) = d6762bb2a9fe6e158ccf23f7d04aa0cba588e78e
 SHA1 (patch-hotspot_src_os__cpu_bsd__zero_vm_atomic__bsd__zero.inline.hpp) = f46713855507654be42707b1f80a779796929069
 SHA1 (patch-hotspot_src_os__cpu_solaris__x86_vm_atomic__solaris__x86.inline.hpp) = 2bf9147643be4ac711d1bf94eb0e6ae4abad20c6
