@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.66 2022/05/13 14:12:53 ryoon Exp $
+# $NetBSD: options.mk,v 1.67 2022/07/17 17:37:11 tnn Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.firefox
 
@@ -17,7 +17,7 @@ PKG_SUGGESTED_OPTIONS+=	pulseaudio mozilla-jemalloc webrtc
 PKG_SUGGESTED_OPTIONS+=	sunaudio
 .endif
 
-.if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} >= 090000
+.if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} >= 090000 && (!empty(MACHINE_ARCH:Mx86_64) || !empty(MACHINE_ARCH:Mi386))
 PKG_SUGGESTED_OPTIONS+=	webrtc
 .endif
 
