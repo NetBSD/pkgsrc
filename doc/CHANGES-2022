@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3425 2022/07/17 16:10:50 leot Exp $
+$NetBSD: CHANGES-2022,v 1.3426 2022/07/17 16:19:09 leot Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5159,3 +5159,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-mercurial to 6.2 [wiz 2022-07-17]
 	Updated devel/py-hg-evolve to 10.5.2 [wiz 2022-07-17]
 	Updated net/sacc to 1.06 [leot 2022-07-17]
+	Updated net/gallery-dl to 1.22.4 [leot 2022-07-17]
