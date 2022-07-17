@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 10:15:22 nia Exp $
+$NetBSD: distinfo,v 1.12 2022/07/17 08:33:16 wiz Exp $
 
-BLAKE2s (libidn2-2.3.2.tar.gz) = 3aa5be0f0bc6b6eca6479d34540843028986849cffc9be0e3f97ab6ad4e63072
-SHA512 (libidn2-2.3.2.tar.gz) = 958dbf49a47a84c7627ac182f4cc8ea452696cec3f0d1ff102a6c48e89893e772b2aa81f75da8223dfc6326515cca3ae085268fbf997828de9330c3a351152f1
-Size (libidn2-2.3.2.tar.gz) = 2169556 bytes
+BLAKE2s (libidn2-2.3.3.tar.gz) = c15f17df54a6e585fac502c3541899a3becb42560fbd5f48e9a4b2a76cc31990
+SHA512 (libidn2-2.3.3.tar.gz) = 2dd0201b5224b3eb6a5667e53c9a2beb6e6aefefab23060a70f143bb5d447029e8f4200e4e0460a4fab51767f0bdfc9583a0cc757652bee58f5593106dd18274
+Size (libidn2-2.3.3.tar.gz) = 2116946 bytes
