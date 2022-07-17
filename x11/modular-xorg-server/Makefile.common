@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.49 2022/07/15 20:39:49 wiz Exp $
+# $NetBSD: Makefile.common,v 1.50 2022/07/17 01:25:50 tnn Exp $
 # used by x11/modular-xorg-server/Makefile
 # used by x11/modular-xorg-xephyr/Makefile
 # used by x11/modular-xorg-xwayland/Makefile
@@ -16,7 +16,7 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config
 USE_LANGUAGES+=	c99
 
-CHECK_PORTABILITY_SKIP+=	hw/xquartz/bundle/mk_bundke.sh
+CHECK_PORTABILITY_SKIP+=	hw/xquartz/bundle/*
 
 # Needed to load certain modules.
 RELRO_SUPPORTED=	partial
