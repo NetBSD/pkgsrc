@@ -1,0 +1,16 @@
+Highway is a C++ library for SIMD (Single Instruction, Multiple Data), i.e.
+applying the same operation to 'lanes'.
+
+## Why Highway?
+
+- more portable (same source code) than platform-specific intrinsics,
+- works on a wider range of compilers than compiler-specific vector extensions,
+- more dependable than autovectorization,
+- easier to write/maintain than assembly language,
+- supports runtime dispatch,
+- supports variable-length vector architectures.
+
+## Current status
+
+Supported targets: scalar, SSE4, AVX2, AVX-512, NEON (ARMv7 and v8), WASM SIMD.
+Ports to RVV and SVE/SVE2 are in progress.
