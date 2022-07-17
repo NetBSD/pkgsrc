@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3420 2022/07/17 08:27:06 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3421 2022/07/17 08:31:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5154,3 +5154,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/firefox to 102.0.1nb1 [wiz 2022-07-17]
 	Updated security/gsasl to 2.0.1 [wiz 2022-07-17]
 	Updated audio/fluidsynth to 2.2.8 [wiz 2022-07-17]
+	Updated lang/vala to 0.56.2 [wiz 2022-07-17]
