@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.129 2022/05/17 13:37:10 ryoon Exp $
+$NetBSD: distinfo,v 1.130 2022/07/17 10:58:12 tnn Exp $
 
 BLAKE2s (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = 0e0a0ae1eb07e5058749dc1726bc59971c723b4b16c57d83f24b6ac6ddd96d71
 SHA512 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = b9c02d63e9b47a838dbe67c05b9e9e4983d13b9d74794e1c30c73d341c3bc905c9edec3a72fa339ae8c0e06d97e69ac2ea23bf51336b77af14cab7ae67721a46
@@ -190,6 +190,7 @@ SHA1 (patch-external_skia_Library__skia.mk) = bf97a0724bd8cb5e249b63e60e85e2e721
 SHA1 (patch-external_skia_UnpackedTarball__skia.mk) = 75d379ec8f11f45ea98e81e1b9124edf6d7e2f2b
 SHA1 (patch-external_skia_netbsd.patch.0) = 0667db4002f8026108f3a4b0adbfeffd08a3369c
 SHA1 (patch-i18nutil_source_utility_unicode.cxx) = 014d48574a379f92f2d0afe3c91d2c2956708dd8
+SHA1 (patch-instsetoo__native_inc__openoffice_unix_find-requires-x11.sh) = 3595ea18e6231d09665268cb716df61456c444d6
 SHA1 (patch-sal_osl_unx_system.hxx) = 478dd47dc512d283a554600951010bbaa10c2c0e
 SHA1 (patch-sal_rtl_cipher.cxx) = e5e46d0b96e25572be86bf26f0053436859736cd
 SHA1 (patch-sc_source_core_tool_math.cxx) = 94ea14291d87ab7ad43a8f277738685e2743cb4a
