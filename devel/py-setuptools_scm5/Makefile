@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/01/13 18:24:10 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2022/07/17 09:55:35 wiz Exp $
 
 DISTNAME=	setuptools_scm-5.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,8 @@ COMMENT=	Manage your versions by scm tags (python 2.7 version)
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-toml-[0-9]*:../../textproc/py-toml
-TEST_DEPENDS+=	${PYPKGPREFIX}-mercurial-[0-9]*:../../devel/py-mercurial
+# does not support python 2.7
+#TEST_DEPENDS+=	${PYPKGPREFIX}-mercurial-[0-9]*:../../devel/py-mercurial
 
 PYTHON_VERSIONED_DEPENDENCIES=	pip:test test:test
 PYTHON_VERSIONS_ACCEPTED=	27

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2022/01/04 20:53:09 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2022/07/17 09:55:35 wiz Exp $
 
 DISTNAME=	hg-fastimport-0.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,6 +13,8 @@ COMMENT=	Mercurial extension for importing from a git fast-import stream
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-mercurial>=5.1:../../devel/py-mercurial
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
