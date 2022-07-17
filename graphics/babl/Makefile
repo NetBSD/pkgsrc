@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.48 2022/07/10 20:23:38 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2022/07/17 16:38:25 wiz Exp $
 
 DISTNAME=	babl-0.1.92
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	https://download.gimp.org/pub/babl/${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.xz
@@ -14,7 +15,6 @@ USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c99
 
 MESON_ARGS+=	-Dwith-docs=false
-MESON_ARGS+=	-Denable-gir=false
 
 PKGCONFIG_OVERRIDE+=	babl.pc.in
 
@@ -68,6 +68,8 @@ TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/babl
 
 .include "../../devel/meson/build.mk"
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/gobject-introspection/buildlink3.mk"
+.include "../../lang/vala/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
