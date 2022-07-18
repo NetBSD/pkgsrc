@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22038 2022/07/18 14:20:04 wiz Exp $
+$NetBSD: TODO,v 1.22039 2022/07/18 15:43:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1323,7 +1323,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-gammu-3.1
 	o py-gcovr-4.2
 	o py-goocalendar-0.7.2
-	o py-gstreamer1-1.20.3
 	o py-gsutil-5.6
 	o py-hgview-1.9.0
 	o py-hyperscan-0.2.0

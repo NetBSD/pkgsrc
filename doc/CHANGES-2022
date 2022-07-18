@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3439 2022/07/18 14:20:16 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3440 2022/07/18 15:43:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5174,3 +5174,9 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated math/py-sympy to 1.9nb3 [jperkin 2022-07-18]
 	Updated devel/protobuf to 3.21.2 [wiz 2022-07-18]
 	Updated devel/py-protobuf to 4.21.2 [wiz 2022-07-18]
+	Updated multimedia/gstreamer1 to 1.20.3 [wiz 2022-07-18]
+	Updated multimedia/gst-plugins1-bad to 1.20.3 [wiz 2022-07-18]
+	Updated multimedia/gst-plugins1-base to 1.20.3 [wiz 2022-07-18]
+	Updated multimedia/gst-plugins1-good to 1.20.3 [wiz 2022-07-18]
+	Updated multimedia/gst-plugins1-ugly to 1.20.3 [wiz 2022-07-18]
+	Updated multimedia/py-gstreamer1 to 1.20.3 [wiz 2022-07-18]
