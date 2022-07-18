@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3442 2022/07/18 15:50:34 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3443 2022/07/18 15:51:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5182,3 +5182,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated multimedia/py-gstreamer1 to 1.20.3 [wiz 2022-07-18]
 	Updated multimedia/gst-plugins1-editing-services to 1.20.3 [wiz 2022-07-18]
 	Updated multimedia/gst-plugins1-libav to 1.20.3 [wiz 2022-07-18]
+	Updated multimedia/gst-plugins1-vaapi to 1.20.3 [wiz 2022-07-18]
