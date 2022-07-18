@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3446 2022/07/18 19:49:21 tnn Exp $
+$NetBSD: CHANGES-2022,v 1.3447 2022/07/18 22:11:22 yhardy Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5190,3 +5190,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/postgresql-timescaledb to 2.7.0 [tnn 2022-07-18]
 	Updated databases/postgresql-promscale_extension to 0.5.2 [tnn 2022-07-18]
 	Updated databases/promscale to 0.12.1 [tnn 2022-07-18]
+	Updated multimedia/streamlink to 4.2.0 [yhardy 2022-07-18]
