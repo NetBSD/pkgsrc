@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2022/04/19 16:34:10 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/07/18 07:30:43 adam Exp $
 include/libtorrent/add_torrent_params.hpp
 include/libtorrent/address.hpp
 include/libtorrent/alert.hpp
@@ -182,6 +182,7 @@ include/libtorrent/kademlia/traversal_algorithm.hpp
 include/libtorrent/kademlia/types.hpp
 include/libtorrent/libtorrent.hpp
 include/libtorrent/link.hpp
+include/libtorrent/load_torrent.hpp
 include/libtorrent/lsd.hpp
 include/libtorrent/magnet_uri.hpp
 include/libtorrent/mmap_disk_io.hpp
