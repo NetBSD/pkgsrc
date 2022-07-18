@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2022/05/04 21:05:42 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2022/07/18 20:37:58 yhardy Exp $
 
 DISTNAME=	xournalpp-1.1.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=xournalpp/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -45,6 +45,7 @@ post-install:
 .include "../../archivers/libzip/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../audio/portaudio/buildlink3.mk"
+.include "../../graphics/adwaita-icon-theme/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
 .include "../../lang/lua53/buildlink3.mk"
