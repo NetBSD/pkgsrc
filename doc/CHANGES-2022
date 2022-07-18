@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3432 2022/07/18 07:31:10 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3433 2022/07/18 10:16:46 micha Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5167,3 +5167,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added cross/lwtools version 4.19 [thorpej 2022-07-17]
 	Updated net/grpc to 1.47.1 [adam 2022-07-18]
 	Updated net/libtorrent-rasterbar to 2.0.7 [adam 2022-07-18]
+	Updated games/woof to 10.1.0 [micha 2022-07-18]
