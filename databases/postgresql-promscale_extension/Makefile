@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2022/07/18 19:47:26 tnn Exp $
+# $NetBSD: Makefile,v 1.15 2022/07/18 22:14:25 tnn Exp $
 
 DISTNAME=	promscale_extension-0.5.2
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
@@ -28,6 +28,12 @@ USE_TOOLS+=	gmake bash pax pkg-config
 BUILD_TARGET=	package
 MAKE_FLAGS+=	PG_CONFIG=${PREFIX}/bin/pg_config
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
+
+SUBST_CLASSES+=			include_dir
+SUBST_STAGE.include_dir=	pre-configure
+SUBST_MESSAGE.include_dir=	fixing include paths for bindgen
+SUBST_FILES.include_dir+=	../pgx/pgx-pg-sys/build.rs
+SUBST_VARS.include_dir+=	BUILDLINK_DIR
 
 post-extract:
 	mv ${WRKDIR}/pgx-* ${WRKDIR}/pgx
