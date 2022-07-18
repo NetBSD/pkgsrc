@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2022/04/22 10:13:33 adam Exp $
+# $NetBSD: Makefile,v 1.57 2022/07/18 14:19:52 wiz Exp $
 #
 # When updating this, please also update devel/py-protobuf
 #
@@ -7,12 +7,13 @@
 # from before and after, and do a recursive PKGREVISION
 # bump if necessary
 
-DISTNAME=	protobuf-cpp-3.20.1
+DISTNAME=	protobuf-cpp-3.21.2
 PKGNAME=	${DISTNAME:S/-cpp//}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=protocolbuffers/}
 GITHUB_PROJECT=	protobuf
-GITHUB_RELEASE=	v${PKGVERSION_NOREV}
+# attention, does not match version above!
+GITHUB_RELEASE=	v21.2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/protocolbuffers/protobuf
