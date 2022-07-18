@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3435 2022/07/18 12:48:05 jperkin Exp $
+$NetBSD: CHANGES-2022,v 1.3436 2022/07/18 12:48:46 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5170,3 +5170,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated games/woof to 10.1.0 [micha 2022-07-18]
 	Updated devel/ruby-ronn to 0.7.3nb2 [jperkin 2022-07-18]
 	Updated lang/ruby30-base to 3.0.4nb2 [jperkin 2022-07-18]
+	Updated lang/ruby31-base to 3.1.2nb3 [jperkin 2022-07-18]
