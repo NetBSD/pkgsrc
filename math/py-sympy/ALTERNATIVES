@@ -1,2 +1,1 @@
 bin/isympy @PREFIX@/bin/isympy-@PYVERSSUFFIX@
-@PKGMANDIR@/man1/isympy.1 @PREFIX@/@PKGMANDIR@/man1/isympy-@PYVERSSUFFIX@.1
