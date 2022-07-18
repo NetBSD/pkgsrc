@@ -1,5 +1,9 @@
-@comment $NetBSD: PLIST,v 1.5 2022/03/11 18:47:30 tnn Exp $
-lib/postgresql/promscale.so
+@comment $NetBSD: PLIST,v 1.6 2022/07/18 19:47:26 tnn Exp $
+lib/postgresql/promscale-${PKGVERSION}.so
+share/postgresql/extension/promscale--0.0.0--0.5.0.sql
+share/postgresql/extension/promscale--0.0.0--0.5.1.sql
+share/postgresql/extension/promscale--0.0.0--${PKGVERSION}.sql
+share/postgresql/extension/promscale--0.0.0.sql
 share/postgresql/extension/promscale--0.1--0.1.1.sql
 share/postgresql/extension/promscale--0.1.1--0.1.2.sql
 share/postgresql/extension/promscale--0.1.1.sql
@@ -12,7 +16,13 @@ share/postgresql/extension/promscale--0.2.0--0.3.0.sql
 share/postgresql/extension/promscale--0.2.0.sql
 share/postgresql/extension/promscale--0.3.0--0.3.1.sql
 share/postgresql/extension/promscale--0.3.0.sql
-share/postgresql/extension/promscale--0.3.1--${PKGVERSION}.sql
+share/postgresql/extension/promscale--0.3.1--0.3.2.sql
 share/postgresql/extension/promscale--0.3.1.sql
+share/postgresql/extension/promscale--0.3.2.sql
+share/postgresql/extension/promscale--0.5.0--0.5.1.sql
+share/postgresql/extension/promscale--0.5.0--${PKGVERSION}.sql
+share/postgresql/extension/promscale--0.5.0.sql
+share/postgresql/extension/promscale--0.5.1--${PKGVERSION}.sql
+share/postgresql/extension/promscale--0.5.1.sql
 share/postgresql/extension/promscale--${PKGVERSION}.sql
 share/postgresql/extension/promscale.control
