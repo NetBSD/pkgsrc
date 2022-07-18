@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22037 2022/07/18 07:31:10 adam Exp $
+$NetBSD: TODO,v 1.22038 2022/07/18 14:20:04 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1298,7 +1298,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o privoxy-3.0.33
 	o profit-2.5.3
 	o proj-8.0.0
-	o protobuf-3.21.2
 	o ps2eps-1.70
 	o psmisc-22.20
 	o pspp-1.4.1
