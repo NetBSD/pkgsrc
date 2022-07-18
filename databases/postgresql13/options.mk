@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2021/04/01 10:22:23 adam Exp $
+# $NetBSD: options.mk,v 1.3 2022/07/18 22:13:21 tnn Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.postgresql13
 PKG_SUPPORTED_OPTIONS=	bonjour dtrace icu llvm gssapi ldap nls pam
@@ -60,6 +60,9 @@ PLIST.nls=		yes
 BROKEN_GETTEXT_DETECTION=	yes
 .  include "../../devel/gettext-lib/buildlink3.mk"
 LIBS.SunOS+=		-lintl
+.  if !empty(USE_BUILTIN.gettext:M[nN][oO])
+CPPFLAGS+=		-I${PREFIX}/include/gettext
+.  endif
 .else
 CONFIGURE_ARGS+=	--disable-nls
 .endif
