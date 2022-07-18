@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.60 2022/06/28 11:34:55 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2022/07/18 15:50:19 wiz Exp $
 
-DISTNAME=	gst-libav-1.20.2
+DISTNAME=	gst-libav-1.20.3
 PKGNAME=	${DISTNAME:S/gst/gst-plugins1/}
-PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	https://gstreamer.freedesktop.org/src/gst-libav/
 EXTRACT_SUFX=	.tar.xz
@@ -15,7 +14,6 @@ LICENSE=	gnu-gpl-v2
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config perl
 
-BUILDLINK_API_DEPENDS.gstreamer1+=	gstreamer1>=1.18
 .include "../../devel/meson/build.mk"
 .include "../../lang/python/tool.mk"
 .include "../../multimedia/gstreamer1/buildlink3.mk"
