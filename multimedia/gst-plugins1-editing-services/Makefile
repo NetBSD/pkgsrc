@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2022/06/30 11:18:39 nia Exp $
+# $NetBSD: Makefile,v 1.19 2022/07/18 15:48:53 wiz Exp $
 
-DISTNAME=	gst-editing-services-1.20.1
+DISTNAME=	gst-editing-services-1.20.3
 PKGNAME=	${DISTNAME:S/gst-/gst-plugins1-/1}
-PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	https://gstreamer.freedesktop.org/src/gst-editing-services/
 EXTRACT_SUFX=	.tar.xz
@@ -28,7 +27,6 @@ MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/ges
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/tool.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gstreamer1+=	gstreamer1>=1.18
 .include "../../multimedia/gstreamer1/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-good/buildlink3.mk"
