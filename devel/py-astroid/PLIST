@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2022/04/20 10:42:10 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2022/07/18 18:57:41 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -88,6 +88,9 @@ ${PYSITELIB}/astroid/brain/brain_namedtuple_enum.pyo
 ${PYSITELIB}/astroid/brain/brain_nose.py
 ${PYSITELIB}/astroid/brain/brain_nose.pyc
 ${PYSITELIB}/astroid/brain/brain_nose.pyo
+${PYSITELIB}/astroid/brain/brain_numpy_core_einsumfunc.py
+${PYSITELIB}/astroid/brain/brain_numpy_core_einsumfunc.pyc
+${PYSITELIB}/astroid/brain/brain_numpy_core_einsumfunc.pyo
 ${PYSITELIB}/astroid/brain/brain_numpy_core_fromnumeric.py
 ${PYSITELIB}/astroid/brain/brain_numpy_core_fromnumeric.pyc
 ${PYSITELIB}/astroid/brain/brain_numpy_core_fromnumeric.pyo
@@ -118,6 +121,9 @@ ${PYSITELIB}/astroid/brain/brain_numpy_random_mtrand.pyo
 ${PYSITELIB}/astroid/brain/brain_numpy_utils.py
 ${PYSITELIB}/astroid/brain/brain_numpy_utils.pyc
 ${PYSITELIB}/astroid/brain/brain_numpy_utils.pyo
+${PYSITELIB}/astroid/brain/brain_pathlib.py
+${PYSITELIB}/astroid/brain/brain_pathlib.pyc
+${PYSITELIB}/astroid/brain/brain_pathlib.pyo
 ${PYSITELIB}/astroid/brain/brain_pkg_resources.py
 ${PYSITELIB}/astroid/brain/brain_pkg_resources.pyc
 ${PYSITELIB}/astroid/brain/brain_pkg_resources.pyo
@@ -232,6 +238,9 @@ ${PYSITELIB}/astroid/node_classes.pyo
 ${PYSITELIB}/astroid/nodes/__init__.py
 ${PYSITELIB}/astroid/nodes/__init__.pyc
 ${PYSITELIB}/astroid/nodes/__init__.pyo
+${PYSITELIB}/astroid/nodes/_base_nodes.py
+${PYSITELIB}/astroid/nodes/_base_nodes.pyc
+${PYSITELIB}/astroid/nodes/_base_nodes.pyo
 ${PYSITELIB}/astroid/nodes/as_string.py
 ${PYSITELIB}/astroid/nodes/as_string.pyc
 ${PYSITELIB}/astroid/nodes/as_string.pyo
