@@ -1,0 +1,31 @@
+$NetBSD: patch-Cargo.toml,v 1.5 2022/07/18 19:47:26 tnn Exp $
+
+Provide unpublished crate manually rather than fetch with git.
+
+--- Cargo.toml.orig	2022-06-20 14:29:39.000000000 +0000
++++ Cargo.toml
+@@ -29,8 +29,8 @@ pg_test = ["serde_json", "proptest"]
+ 
+ [dependencies]
+ bincode = "1.3.1"
+-pgx = "0.3.1"
+-pgx-macros = "0.3.1"
++pgx = {path="../pgx/pgx"}
++pgx-macros = {path="../pgx/pgx-macros"}
+ num_cpus = "1.13.1"
+ sha2 = "0.10.2"
+ serde = { version = "1.0", features = ["derive"] }
+@@ -41,12 +41,4 @@ proptest  = { version = "1.0.0", optiona
+ askama = "0.11.0"
+ 
+ [dev-dependencies]
+-pgx-tests = "0.3.1"
+-
+-[patch.crates-io]
+-pgx = { git = "https://github.com/timescale/pgx", branch = "promscale-staging" }
+-pgx-macros = { git = "https://github.com/timescale/pgx", branch = "promscale-staging" }
+-pgx-tests = { git = "https://github.com/timescale/pgx", branch = "promscale-staging" }
+-
+-# from e2e workspace
+-test-generator = { git = "https://github.com/JamesGuthrie/test-generator" }
++pgx-tests = {path="../pgx/pgx-tests"}
