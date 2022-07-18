@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile,v 1.1 2022/07/18 03:43:05 thorpej Exp $
+
+Use portable arguments to fmt(1).
+
+--- Makefile.orig	2022-07-18 02:08:23.184399250 +0000
++++ Makefile	2022-07-18 02:08:43.187883530 +0000
+@@ -179,7 +179,7 @@ extra_clean := $(extra_clean) *~ */*~
+ 	@$(CC) -MM $(CPPFLAGS) -o $*.d $<
+ 	@mv -f $*.d $*.d.tmp
+ 	@sed -e 's|.*:|$*.o $*.d:|' < $*.d.tmp > $*.d
+-	@sed -e 's/.*://' -e 's/\\$$//' < $*.d.tmp | fmt -1 | sed -e 's/^ *//' -e 's/$$/:/' >> $*.d
++	@sed -e 's/.*://' -e 's/\\$$//' < $*.d.tmp | fmt -w 1 -g 0 | sed -e 's/^ *//' -e 's/$$/:/' >> $*.d
+ 	@rm -f $*.d.tmp
+ 	@echo Building $@
+ 	@$(CC) $(CPPFLAGS) $(CFLAGS) -o $@ -c $<
