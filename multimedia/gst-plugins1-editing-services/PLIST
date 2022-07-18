@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2022/04/18 12:36:08 nia Exp $
+@comment $NetBSD: PLIST,v 1.8 2022/07/18 15:48:53 wiz Exp $
 bin/ges-launch-1.0
 include/gstreamer-1.0/ges/ges-asset.h
 include/gstreamer-1.0/ges/ges-audio-source.h
@@ -70,7 +70,7 @@ lib/gstreamer-1.0/libgstges.so
 lib/gstreamer-1.0/libgstnle.so
 lib/libges-1.0.so
 lib/libges-1.0.so.0
-lib/libges-1.0.so.0.2001.0
+lib/libges-1.0.so.0.2003.0
 lib/pkgconfig/gst-editing-services-1.0.pc
 ${PYSITELIB}/gi/overrides/GES.py
 man/man1/ges-launch-1.0.1
