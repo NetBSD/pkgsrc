@@ -1,3 +1,1 @@
 bin/ronn @PREFIX@/bin/ronn@RUBY_SUFFIX@
-@PKGMANDIR@/man1/ronn.1 @PREFIX@/@PKGMANDIR@/man1/ronn@RUBY_SUFFIX@.1
-@PKGMANDIR@/man7/ronn-format.7 @PREFIX@/@PKGMANDIR@/man7/ronn-format@RUBY_SUFFIX@.7
