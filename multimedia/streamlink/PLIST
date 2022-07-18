@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2022/05/11 18:07:28 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.17 2022/07/18 22:11:03 yhardy Exp $
 bin/streamlink
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -54,9 +54,21 @@ ${PYSITELIB}/streamlink/plugin/api/http_session.pyo
 ${PYSITELIB}/streamlink/plugin/api/useragents.py
 ${PYSITELIB}/streamlink/plugin/api/useragents.pyc
 ${PYSITELIB}/streamlink/plugin/api/useragents.pyo
-${PYSITELIB}/streamlink/plugin/api/validate.py
-${PYSITELIB}/streamlink/plugin/api/validate.pyc
-${PYSITELIB}/streamlink/plugin/api/validate.pyo
+${PYSITELIB}/streamlink/plugin/api/validate/__init__.py
+${PYSITELIB}/streamlink/plugin/api/validate/__init__.pyc
+${PYSITELIB}/streamlink/plugin/api/validate/__init__.pyo
+${PYSITELIB}/streamlink/plugin/api/validate/_exception.py
+${PYSITELIB}/streamlink/plugin/api/validate/_exception.pyc
+${PYSITELIB}/streamlink/plugin/api/validate/_exception.pyo
+${PYSITELIB}/streamlink/plugin/api/validate/_schemas.py
+${PYSITELIB}/streamlink/plugin/api/validate/_schemas.pyc
+${PYSITELIB}/streamlink/plugin/api/validate/_schemas.pyo
+${PYSITELIB}/streamlink/plugin/api/validate/_validate.py
+${PYSITELIB}/streamlink/plugin/api/validate/_validate.pyc
+${PYSITELIB}/streamlink/plugin/api/validate/_validate.pyo
+${PYSITELIB}/streamlink/plugin/api/validate/_validators.py
+${PYSITELIB}/streamlink/plugin/api/validate/_validators.pyc
+${PYSITELIB}/streamlink/plugin/api/validate/_validators.pyo
 ${PYSITELIB}/streamlink/plugin/api/websocket.py
 ${PYSITELIB}/streamlink/plugin/api/websocket.pyc
 ${PYSITELIB}/streamlink/plugin/api/websocket.pyo
@@ -78,6 +90,9 @@ ${PYSITELIB}/streamlink/plugins/afreeca.pyo
 ${PYSITELIB}/streamlink/plugins/albavision.py
 ${PYSITELIB}/streamlink/plugins/albavision.pyc
 ${PYSITELIB}/streamlink/plugins/albavision.pyo
+${PYSITELIB}/streamlink/plugins/aloula.py
+${PYSITELIB}/streamlink/plugins/aloula.pyc
+${PYSITELIB}/streamlink/plugins/aloula.pyo
 ${PYSITELIB}/streamlink/plugins/app17.py
 ${PYSITELIB}/streamlink/plugins/app17.pyc
 ${PYSITELIB}/streamlink/plugins/app17.pyo
@@ -105,6 +120,9 @@ ${PYSITELIB}/streamlink/plugins/bigo.pyo
 ${PYSITELIB}/streamlink/plugins/bilibili.py
 ${PYSITELIB}/streamlink/plugins/bilibili.pyc
 ${PYSITELIB}/streamlink/plugins/bilibili.pyo
+${PYSITELIB}/streamlink/plugins/blazetv.py
+${PYSITELIB}/streamlink/plugins/blazetv.pyc
+${PYSITELIB}/streamlink/plugins/blazetv.pyo
 ${PYSITELIB}/streamlink/plugins/bloomberg.py
 ${PYSITELIB}/streamlink/plugins/bloomberg.pyc
 ${PYSITELIB}/streamlink/plugins/bloomberg.pyo
@@ -174,9 +192,6 @@ ${PYSITELIB}/streamlink/plugins/earthcam.pyo
 ${PYSITELIB}/streamlink/plugins/egame.py
 ${PYSITELIB}/streamlink/plugins/egame.pyc
 ${PYSITELIB}/streamlink/plugins/egame.pyo
-${PYSITELIB}/streamlink/plugins/eltrecetv.py
-${PYSITELIB}/streamlink/plugins/eltrecetv.pyc
-${PYSITELIB}/streamlink/plugins/eltrecetv.pyo
 ${PYSITELIB}/streamlink/plugins/euronews.py
 ${PYSITELIB}/streamlink/plugins/euronews.pyc
 ${PYSITELIB}/streamlink/plugins/euronews.pyo
@@ -207,6 +222,9 @@ ${PYSITELIB}/streamlink/plugins/googledrive.pyo
 ${PYSITELIB}/streamlink/plugins/gulli.py
 ${PYSITELIB}/streamlink/plugins/gulli.pyc
 ${PYSITELIB}/streamlink/plugins/gulli.pyo
+${PYSITELIB}/streamlink/plugins/hiplayer.py
+${PYSITELIB}/streamlink/plugins/hiplayer.pyc
+${PYSITELIB}/streamlink/plugins/hiplayer.pyo
 ${PYSITELIB}/streamlink/plugins/hls.py
 ${PYSITELIB}/streamlink/plugins/hls.pyc
 ${PYSITELIB}/streamlink/plugins/hls.pyo
@@ -351,9 +369,6 @@ ${PYSITELIB}/streamlink/plugins/raiplay.pyo
 ${PYSITELIB}/streamlink/plugins/reuters.py
 ${PYSITELIB}/streamlink/plugins/reuters.pyc
 ${PYSITELIB}/streamlink/plugins/reuters.pyo
-${PYSITELIB}/streamlink/plugins/rotana.py
-${PYSITELIB}/streamlink/plugins/rotana.pyc
-${PYSITELIB}/streamlink/plugins/rotana.pyo
 ${PYSITELIB}/streamlink/plugins/rtbf.py
 ${PYSITELIB}/streamlink/plugins/rtbf.pyc
 ${PYSITELIB}/streamlink/plugins/rtbf.pyo
@@ -468,6 +483,9 @@ ${PYSITELIB}/streamlink/plugins/twitcasting.pyo
 ${PYSITELIB}/streamlink/plugins/twitch.py
 ${PYSITELIB}/streamlink/plugins/twitch.pyc
 ${PYSITELIB}/streamlink/plugins/twitch.pyo
+${PYSITELIB}/streamlink/plugins/useetv.py
+${PYSITELIB}/streamlink/plugins/useetv.pyc
+${PYSITELIB}/streamlink/plugins/useetv.pyo
 ${PYSITELIB}/streamlink/plugins/ustreamtv.py
 ${PYSITELIB}/streamlink/plugins/ustreamtv.pyc
 ${PYSITELIB}/streamlink/plugins/ustreamtv.pyo
@@ -639,6 +657,3 @@ ${PYSITELIB}/streamlink_cli/utils/player.pyo
 ${PYSITELIB}/streamlink_cli/utils/progress.py
 ${PYSITELIB}/streamlink_cli/utils/progress.pyc
 ${PYSITELIB}/streamlink_cli/utils/progress.pyo
-${PYSITELIB}/streamlink_cli/utils/stream.py
-${PYSITELIB}/streamlink_cli/utils/stream.pyc
-${PYSITELIB}/streamlink_cli/utils/stream.pyo
