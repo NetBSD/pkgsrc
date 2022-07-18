@@ -1,10 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2022/04/03 18:19:24 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/${EGG_NAME}-nspkg.pth
+@comment $NetBSD: PLIST,v 1.18 2022/07/18 14:19:52 wiz Exp $
 ${PYSITELIB}/google/protobuf/__init__.py
 ${PYSITELIB}/google/protobuf/__init__.pyc
 ${PYSITELIB}/google/protobuf/__init__.pyo
@@ -130,6 +124,9 @@ ${PYSITELIB}/google/protobuf/timestamp_pb2.pyo
 ${PYSITELIB}/google/protobuf/type_pb2.py
 ${PYSITELIB}/google/protobuf/type_pb2.pyc
 ${PYSITELIB}/google/protobuf/type_pb2.pyo
+${PYSITELIB}/google/protobuf/unknown_fields.py
+${PYSITELIB}/google/protobuf/unknown_fields.pyc
+${PYSITELIB}/google/protobuf/unknown_fields.pyo
 ${PYSITELIB}/google/protobuf/util/__init__.py
 ${PYSITELIB}/google/protobuf/util/__init__.pyc
 ${PYSITELIB}/google/protobuf/util/__init__.pyo
@@ -142,3 +139,9 @@ ${PYSITELIB}/google/protobuf/util/json_format_proto3_pb2.pyo
 ${PYSITELIB}/google/protobuf/wrappers_pb2.py
 ${PYSITELIB}/google/protobuf/wrappers_pb2.pyc
 ${PYSITELIB}/google/protobuf/wrappers_pb2.pyo
+${PYSITELIB}/${EGG_NAME}-nspkg.pth
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
