@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3430 2022/07/17 21:23:42 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3431 2022/07/18 03:43:40 thorpej Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5164,3 +5164,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/gegl to 0.4.36nb4 [wiz 2022-07-17]
 	Added graphics/libhighway version 0.17.0 [wiz 2022-07-17]
 	Updated sysutils/spice-gtk to 0.41 [wiz 2022-07-17]
+	Added cross/lwtools version 4.19 [thorpej 2022-07-17]
