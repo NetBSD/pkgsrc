@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2022/04/14 00:53:43 tnn Exp $
+# $NetBSD: Makefile,v 1.103 2022/07/18 03:43:05 thorpej Exp $
 #
 
 COMMENT=	Cross-platform development utilities
@@ -37,6 +37,7 @@ SUBDIR+=	gcc-mips-current
 SUBDIR+=	h8300-elf-binutils
 SUBDIR+=	h8300-elf-gcc
 SUBDIR+=	icdprog
+SUBDIR+=	lwtools
 SUBDIR+=	mingw
 SUBDIR+=	mingw-binutils
 SUBDIR+=	mingw-gcc
