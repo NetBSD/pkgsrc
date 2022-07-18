@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3444 2022/07/18 18:58:49 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3445 2022/07/18 19:09:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5185,3 +5185,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated multimedia/gst-plugins1-vaapi to 1.20.3 [wiz 2022-07-18]
 	Updated devel/py-astroid to 2.12.2 [adam 2022-07-18]
 	Updated devel/py-pylint to 2.14.5 [adam 2022-07-18]
+	Updated graphics/libwebp to 1.2.3 [adam 2022-07-18]
+	Updated www/py-flask to 2.1.3 [adam 2022-07-18]
