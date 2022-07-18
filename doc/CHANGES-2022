@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3445 2022/07/18 19:09:42 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3446 2022/07/18 19:49:21 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5187,3 +5187,6 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-pylint to 2.14.5 [adam 2022-07-18]
 	Updated graphics/libwebp to 1.2.3 [adam 2022-07-18]
 	Updated www/py-flask to 2.1.3 [adam 2022-07-18]
+	Updated databases/postgresql-timescaledb to 2.7.0 [tnn 2022-07-18]
+	Updated databases/postgresql-promscale_extension to 0.5.2 [tnn 2022-07-18]
+	Updated databases/promscale to 0.12.1 [tnn 2022-07-18]
