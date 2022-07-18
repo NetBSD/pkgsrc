@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.41 2022/05/24 18:18:18 nia Exp $
+# $NetBSD: Makefile.common,v 1.42 2022/07/18 15:40:56 wiz Exp $
 
-DISTNAME=	gst-plugins-good-1.20.2
+DISTNAME=	gst-plugins-good-1.20.3
 MASTER_SITES=	https://gstreamer.freedesktop.org/src/gst-plugins-good/
 EXTRACT_SUFX=	.tar.xz
 

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2022/06/07 17:57:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.24 2022/07/18 15:40:56 wiz Exp $
 bin/gst-inspect-1.0
 bin/gst-launch-1.0
 bin/gst-stats-1.0
@@ -135,19 +135,19 @@ lib/gstreamer-1.0/libgstcoreelements.so
 lib/gstreamer-1.0/libgstcoretracers.so
 lib/libgstbase-1.0.so
 lib/libgstbase-1.0.so.0
-lib/libgstbase-1.0.so.0.2002.0
+lib/libgstbase-1.0.so.0.2003.0
 lib/libgstcheck-1.0.so
 lib/libgstcheck-1.0.so.0
-lib/libgstcheck-1.0.so.0.2002.0
+lib/libgstcheck-1.0.so.0.2003.0
 lib/libgstcontroller-1.0.so
 lib/libgstcontroller-1.0.so.0
-lib/libgstcontroller-1.0.so.0.2002.0
+lib/libgstcontroller-1.0.so.0.2003.0
 lib/libgstnet-1.0.so
 lib/libgstnet-1.0.so.0
-lib/libgstnet-1.0.so.0.2002.0
+lib/libgstnet-1.0.so.0.2003.0
 lib/libgstreamer-1.0.so
 lib/libgstreamer-1.0.so.0
-lib/libgstreamer-1.0.so.0.2002.0
+lib/libgstreamer-1.0.so.0.2003.0
 lib/pkgconfig/gstreamer-1.0.pc
 lib/pkgconfig/gstreamer-base-1.0.pc
 lib/pkgconfig/gstreamer-check-1.0.pc
@@ -162,7 +162,7 @@ man/man1/gst-launch-1.0.1
 man/man1/gst-stats-1.0.1
 man/man1/gst-typefind-1.0.1
 share/aclocal/gst-element-check-1.0.m4
-share/gdb/auto-load${LOCALBASE}/lib/libgstreamer-1.0.so.0.2002.0-gdb.py
+share/gdb/auto-load${LOCALBASE}/lib/libgstreamer-1.0.so.0.2003.0-gdb.py
 share/gir-1.0/Gst-1.0.gir
 share/gir-1.0/GstBase-1.0.gir
 share/gir-1.0/GstCheck-1.0.gir
