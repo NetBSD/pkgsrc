@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.59 2022/07/06 15:18:17 adam Exp $
+$NetBSD: distinfo,v 1.60 2022/07/18 07:30:01 adam Exp $
 
-BLAKE2s (grpc-1.47.0.tar.gz) = 1431fb15523fccf48c3a487fdab2d3d906280de024703c0b35acecdab67aa3c2
-SHA512 (grpc-1.47.0.tar.gz) = d0bb34e8763db6a0c7c6475137dd4659ab96b40ea50d60f55a93a669c60c42fbcb5c924089ea0eccdabfbf8eff12564e2909810095931910d9fdcbace618bb44
-Size (grpc-1.47.0.tar.gz) = 8197682 bytes
+BLAKE2s (grpc-1.47.1.tar.gz) = 22c8f6e746a5ba5e1c1bc228599ecfb82382c9e06c6bb20036feb66ab0649f51
+SHA512 (grpc-1.47.1.tar.gz) = 4b7affab165137f8c9453cd162b9862227901ea86de77eb57489663e009a077c581c71104dc8e3910618c7ec786836243d4ad80aa52c0912c951881cba5bc70a
+Size (grpc-1.47.1.tar.gz) = 8198148 bytes
 BLAKE2s (v0.3.0.tar.gz) = be3ce863226f4aa422d9faa997fe29f9bb1743c0e804af3c5fad3c170e60ba42
 SHA512 (v0.3.0.tar.gz) = 39231a495dfdccfc8267d1e6af2ac624feea611a8691c10ec570de2194b352e4a9c3b0ce1606414fb98e5d77c66873bed4a9e56512efa12b267b8a91e0c5851e
 Size (v0.3.0.tar.gz) = 163404 bytes
