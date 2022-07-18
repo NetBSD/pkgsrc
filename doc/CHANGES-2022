@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3438 2022/07/18 14:20:04 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3439 2022/07/18 14:20:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5173,3 +5173,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/ruby31-base to 3.1.2nb3 [jperkin 2022-07-18]
 	Updated math/py-sympy to 1.9nb3 [jperkin 2022-07-18]
 	Updated devel/protobuf to 3.21.2 [wiz 2022-07-18]
+	Updated devel/py-protobuf to 4.21.2 [wiz 2022-07-18]
