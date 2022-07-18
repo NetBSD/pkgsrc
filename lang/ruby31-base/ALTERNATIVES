@@ -10,6 +10,3 @@ bin/rdoc @PREFIX@/bin/rdoc@RUBY_SUFFIX@
 bin/ri @PREFIX@/bin/ri@RUBY_SUFFIX@
 bin/ruby @PREFIX@/bin/@RUBY_NAME@
 bin/typeprof @PREFIX@/bin/typeprof@RUBY_SUFFIX@
-@PKGMANDIR@/man1/erb.1 @PREFIX@/@PKGMANDIR@/man1/erb@RUBY_SUFFIX@.1
-@PKGMANDIR@/man1/irb.1 @PREFIX@/@PKGMANDIR@/man1/irb@RUBY_SUFFIX@.1
-@PKGMANDIR@/man1/ruby.1 @PREFIX@/@PKGMANDIR@/man1/ruby@RUBY_SUFFIX@.1
