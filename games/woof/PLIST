@@ -1,15 +1,19 @@
-@comment $NetBSD: PLIST,v 1.9 2022/06/29 11:31:54 micha Exp $
+@comment $NetBSD: PLIST,v 1.10 2022/07/18 10:15:26 micha Exp $
 bin/woof
 bin/woof-setup
+man/man6/woof-setup.6
 man/man6/woof.6
 share/applications/woof-setup.desktop
 share/applications/woof.desktop
+share/bash-completion/completions/woof
+share/doc/woof/CMDLINE.txt
 share/doc/woof/COPYING
 share/doc/woof/INSTALL.pkgsrc
 share/doc/woof/README.md
 share/doc/woof/boom.txt
 share/doc/woof/boomdeh.txt
 share/doc/woof/boomref.txt
+share/doc/woof/changes.txt
 share/doc/woof/dckboom.txt
 share/doc/woof/examples/battle.wad
 share/doc/woof/examples/dogfly.deh
@@ -28,6 +32,10 @@ share/doc/woof/examples/playbud.deh
 share/doc/woof/examples/possbud.deh
 share/doc/woof/examples/sky.wad
 share/doc/woof/examples/touchy.deh
+share/doc/woof/log_jff.txt
+share/doc/woof/log_lee.txt
+share/doc/woof/log_rsp.txt
+share/doc/woof/log_ty.txt
 share/doc/woof/mapcolors_vanilla.cfg
 share/doc/woof/mbf-bugs.md
 share/doc/woof/mbf.txt

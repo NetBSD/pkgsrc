@@ -1,0 +1,17 @@
+$NetBSD: patch-man_CMakeLists.txt,v 1.1 2022/07/18 10:15:26 micha Exp $
+
+games/woof: Honor PKGMANDIR on install
+
+--- man/CMakeLists.txt.orig	2022-07-18 07:37:39.000000000 +0000
++++ man/CMakeLists.txt
+@@ -14,8 +14,8 @@ if(WIN32)
+     install(FILES CMDLINE.txt DESTINATION .)
+ elseif(UNIX AND NOT APPLE)
+     install(FILES CMDLINE.txt DESTINATION "share/doc/${PROJECT_SHORTNAME}")
+-    install(FILES "${PROJECT_SHORTNAME}.6" DESTINATION share/man/man6)
+-    install(FILES "${PROJECT_SHORTNAME}-setup.6" DESTINATION share/man/man6)
++    install(FILES "${PROJECT_SHORTNAME}.6" DESTINATION ${CMAKE_INSTALL_MANDIR}/man6)
++    install(FILES "${PROJECT_SHORTNAME}-setup.6" DESTINATION ${CMAKE_INSTALL_MANDIR}/man6)
+     install(FILES "bash-completion/${PROJECT_SHORTNAME}"
+         DESTINATION "share/bash-completion/completions")
+ endif()

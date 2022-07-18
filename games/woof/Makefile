@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2022/07/11 14:25:34 micha Exp $
+# $NetBSD: Makefile,v 1.38 2022/07/18 10:15:26 micha Exp $
 
-DISTNAME=	woof_10.0.3
+DISTNAME=	woof_10.1.0
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fabiangreffrath/}
@@ -21,13 +21,6 @@ WRKSRC=		${WRKDIR}/woof-${DISTNAME}
 
 # DOOMWADDIR is intentionally shared with other Doom packages
 DOOMWADDIR=	share/doom
-
-# Install man page into PKGMANDIR hierarchy
-SUBST_CLASSES+=		mandir
-SUBST_STAGE.mandir=	pre-configure
-SUBST_MESSAGE.mandir=	Preparing data/CMakeLists.txt file ...
-SUBST_FILES.mandir=	data/CMakeLists.txt
-SUBST_VARS.mandir=	PKGMANDIR
 
 # Add DOOMWADDIR to search path
 SUBST_CLASSES+=		waddir
