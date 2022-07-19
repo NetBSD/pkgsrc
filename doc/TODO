@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22041 2022/07/18 15:53:48 wiz Exp $
+$NetBSD: TODO,v 1.22042 2022/07/19 23:05:55 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1084,7 +1084,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o nant-0.92
 	o nap-1.5.3
 	o nas-auscope-1.9.4
-	o ncspot-0.10.0
+	o ncspot-0.10.0 [needs rust-1.61.0]
 	o ncview-2.1.8
 	o nedit-5.7
 	o netbt-hcidump-5.58
@@ -1616,7 +1616,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o wmi-11
 	o wordwarvi-1.0.4
 	o worker-4.8.0
-	o wxGTK30-3.2
+	o wxGTK30-3.2 [wip]
 	o wxRemind-101
 	o x16-emulator-38
 	o x16-rom-38
