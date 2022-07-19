@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3447 2022/07/18 22:11:22 yhardy Exp $
+$NetBSD: CHANGES-2022,v 1.3448 2022/07/19 00:06:01 thor Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5024,10 +5024,10 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/lua-web-sanitize to 1.3.0 [nia 2022-07-13]
 	Updated emulators/libretro-sameboy to 0.15.1 [nia 2022-07-13]
 	Updated emulators/sameboy to 0.15.1 [nia 2022-07-13]
-	Updated audio/mpg123 to 1.30.1nb1 [thomas 2022-07-13]
-	Updated audio/mpg123-jack to 1.30.1nb2 [thomas 2022-07-13]
-	Updated audio/mpg123-nas to 1.30.1 [thomas 2022-07-13]
-	Updated audio/mpg123-pulse to 1.30.1nb3 [thomas 2022-07-13]
+	Updated audio/mpg123 to 1.30.1 [thor 2022-07-13]
+	Updated audio/mpg123-jack to 1.30.1 [thor 2022-07-13]
+	Updated audio/mpg123-nas to 1.30.1 [thor 2022-07-13]
+	Updated audio/mpg123-pulse to 1.30.1 [thor 2022-07-13]
 	Added sysutils/py-invoke version 1.7.1 [adam 2022-07-13]
 	Updated sysutils/fabric to 2.7.0 [adam 2022-07-13]
 	Removed sysutils/cuisine [adam 2022-07-13]
