@@ -1,0 +1,23 @@
+$NetBSD: distinfo,v 1.1 2022/07/19 20:26:07 bsiegert Exp $
+
+BLAKE2s (github.com_fatih_camelcase_@v_v1.0.0.mod) = 06a93b1d6fa339ecea9f02775f159f103acc48483c3071174fa3e217f365ff6b
+SHA512 (github.com_fatih_camelcase_@v_v1.0.0.mod) = 547267e05f39979e80906176e520bc4e74e48f9f96ffcd9d862f974972eb8238b28ed0a0ac891e3e0ebd6d635de98192a38534155fed9eaf44ba0b94c5ff1d9d
+Size (github.com_fatih_camelcase_@v_v1.0.0.mod) = 34 bytes
+BLAKE2s (github.com_fatih_camelcase_@v_v1.0.0.zip) = cb283da0150988ad0584c102d0462b5995683a5a1eea36ecf441343e6e0bb10b
+SHA512 (github.com_fatih_camelcase_@v_v1.0.0.zip) = e7e9551abfed9a626f8054630faa16cf7ce23122e810f0ac36c3dc63131b142d8c23b615164f54f2a6669721d0bc5ce0a03973f5e547b86fa79c0cd94e2197d4
+Size (github.com_fatih_camelcase_@v_v1.0.0.zip) = 4266 bytes
+BLAKE2s (github.com_fatih_structtag_@v_v1.2.0.mod) = 4fe904c962633a246d60625e848555a2868178b34aac19fef50bf0f0817a3329
+SHA512 (github.com_fatih_structtag_@v_v1.2.0.mod) = 068ba292dcda1558106c24300b7780d68f2830a2b81beb6656c844c47853b3eadee17c22c75be2420ce82db630de33ebfc56e79c62c85329d6675907c89bcd3c
+Size (github.com_fatih_structtag_@v_v1.2.0.mod) = 43 bytes
+BLAKE2s (github.com_fatih_structtag_@v_v1.2.0.zip) = a330fed760e52092ff04547f988b5327c25a4d8fee027523747c0cd08eca47aa
+SHA512 (github.com_fatih_structtag_@v_v1.2.0.zip) = 6bd5dc5b0a86a6c82edd272772667b03e6002843d46f126f120621666d496e46359517ed3bc236d3986e8a0fd9623a3ea8d7a83dcbf86e5208701b5fb2fa89f0
+Size (github.com_fatih_structtag_@v_v1.2.0.zip) = 6770 bytes
+BLAKE2s (golang.org_x_tools_@v_v0.0.0-20180824175216-6c1c5e93cdc1.mod) = d276ed1711a2da66e71b05357b06093eb7c33e7f00c194ff6386deb7b0676fca
+SHA512 (golang.org_x_tools_@v_v0.0.0-20180824175216-6c1c5e93cdc1.mod) = 3c166b18c0ce47a47e95da9eeede63879a92b0205bd4589d554f7bae89699be0efa83e1f5bba8e50f47714ea23e759b07f4543fe06301995d39373da2db16fc0
+Size (golang.org_x_tools_@v_v0.0.0-20180824175216-6c1c5e93cdc1.mod) = 26 bytes
+BLAKE2s (golang.org_x_tools_@v_v0.0.0-20180824175216-6c1c5e93cdc1.zip) = 7508bf59252003a5b416ff255af0ec854e7defaa69a032a0aa3bc1a990e9f958
+SHA512 (golang.org_x_tools_@v_v0.0.0-20180824175216-6c1c5e93cdc1.zip) = d99b081e0d6b3e8eb0e10706c885fac77d983c5741b1c0acd8e64151a5a6cfd19139fc390a6a112e037955197fe632e450756568c37cc37a12ac3ee2ff94a01b
+Size (golang.org_x_tools_@v_v0.0.0-20180824175216-6c1c5e93cdc1.zip) = 2674535 bytes
+BLAKE2s (gomodifytags-1.16.0.tar.gz) = 085a2ba2876301b72fba3f704a15d93aa1eb1e382f225f62305a5716f694e49b
+SHA512 (gomodifytags-1.16.0.tar.gz) = f18b434cf9c79d5c5dc0b30bbc7e3646780f392838d9683edbf201358a8075dccb3e90aaca04b499a3f2345c52a94998845d6498a7f53b6264d15134d5fcd623
+Size (gomodifytags-1.16.0.tar.gz) = 21305 bytes

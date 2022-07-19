@@ -1,0 +1,6 @@
+gomodifytags is a Go tool to modify/update field tags in structs. It makes it
+easy to update, add or delete the tags in a struct field. You can easily add
+new tags, update existing tags (such as appending a new key, i.e. db, xml,
+etc.) or remove existing tags. It also allows you to add and remove tag
+options. It's intended to be used by an editor, but also has modes to run it
+from the terminal.
