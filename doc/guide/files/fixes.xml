@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.179 2022/06/02 21:20:32 gutteridge Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.180 2022/07/19 01:58:04 gutteridge Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -470,10 +470,11 @@ BUILDLINK_API_DEPENDS.jpeg+=    jpeg>=9.0
   <sect2 id="conflicts">
     <title>Handling conflicts with other packages</title>
 
-    <para>Your package may conflict with other packages a user might
-    already have installed on his system, e.g. if your package
+    <para>Your package may conflict with other packages users might
+    already have installed on their system, e.g., if your package
     installs the same set of files as another package in the pkgsrc
-    tree or has the same <varname>PKGNAME</varname>.</para>
+    tree or has the same <varname>PKGNAME</varname> (though, the latter
+    would arguably be a bug in itself).</para>
 
     <para>For example, <filename role="pkg">x11/libXaw3d</filename>
     and <filename role="pkg">x11/Xaw-Xpm</filename>
