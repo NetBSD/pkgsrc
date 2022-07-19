@@ -1,0 +1,4 @@
+gotests makes writing Go tests easy. It is a Go command-line tool that
+generates table driven tests based on its target source files' function and
+method signatures. Any new dependencies in the test files are automatically
+imported.

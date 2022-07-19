@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2022/07/19 20:14:27 bsiegert Exp $
+bin/gotests
