@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3450 2022/07/19 14:39:01 taca Exp $
+$NetBSD: CHANGES-2022,v 1.3451 2022/07/19 15:23:56 scole Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5193,3 +5193,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated multimedia/streamlink to 4.2.0 [yhardy 2022-07-18]
 	Updated net/bind916 to 9.16.30nb2 [jperkin 2022-07-19]
 	Updated databases/ruby-sequel to 5.58.0 [taca 2022-07-19]
+	Updated textproc/split-thai to 2.17 [scole 2022-07-19]
