@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2022/07/19 20:26:07 bsiegert Exp $
+bin/gomodifytags
