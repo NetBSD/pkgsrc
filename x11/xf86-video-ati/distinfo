@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.41 2021/10/26 11:34:41 nia Exp $
+$NetBSD: distinfo,v 1.42 2022/07/19 11:59:05 hauke Exp $
 
 BLAKE2s (xf86-video-ati-19.1.0.tar.bz2) = 07180b71f7a5bb49dfb06a3c763120607799603ae82a79d90fd7733c45e3d8f3
 SHA512 (xf86-video-ati-19.1.0.tar.bz2) = 73a81f6c492daf2e89067fb52b3033dc0fe6841f109627ddca1aee54a45a738c8c134443753a2a2aaa2c131e1d560057ebc76351ff2304c16407df3ff568fcd6
 Size (xf86-video-ati-19.1.0.tar.bz2) = 904558 bytes
 SHA1 (patch-configure) = bdd1014b215af69c2bb837d36829e12e86eb5764
-SHA1 (patch-src_radeon.h) = f51b077af01a111269ecb2d86b9eac45e0ba6853
+SHA1 (patch-src_drmmode__display.c) = 70f9271286f9190f79815dd0643ad6bac78b4d66
+SHA1 (patch-src_radeon.h) = d3921c60f64e3e74633b8e7b6623eece6b0c64c5
+SHA1 (patch-src_radeon__kms.c) = 8179d6adf5fcce312c9b930a81b4b69d2931fe8f
