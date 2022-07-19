@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3451 2022/07/19 15:23:56 scole Exp $
+$NetBSD: CHANGES-2022,v 1.3452 2022/07/19 18:12:29 osa Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5194,3 +5194,6 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/bind916 to 9.16.30nb2 [jperkin 2022-07-19]
 	Updated databases/ruby-sequel to 5.58.0 [taca 2022-07-19]
 	Updated textproc/split-thai to 2.17 [scole 2022-07-19]
+	Updated www/nginx to 1.22.0nb5 [osa 2022-07-19]
+	Updated www/nginx-devel to 1.23.1 [osa 2022-07-19]
+	Updated lang/njs to 0.7.6 [osa 2022-07-19]
