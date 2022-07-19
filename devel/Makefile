@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3762 2022/07/12 08:30:51 adam Exp $
+# $NetBSD: Makefile,v 1.3763 2022/07/19 20:14:27 bsiegert Exp $
 #
 
 COMMENT=	Development utilities
@@ -452,6 +452,7 @@ SUBDIR+=	googletest
 SUBDIR+=	gopls
 SUBDIR+=	goredo
 SUBDIR+=	got
+SUBDIR+=	gotests
 SUBDIR+=	gperf
 SUBDIR+=	gperftools
 SUBDIR+=	gprbuild-aux
