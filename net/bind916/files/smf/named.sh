@@ -202,7 +202,7 @@ case "$method" in
         rndc_key_file=${chroot_dir}${rndc_key_file}
         rndc_cmd_opts="${rndc_cmd_opts} -t ${chroot_dir}"
     else
-        mkdir -p 0770 @VARBASE@/run/named
+        mkdir -p -m 0770 @VARBASE@/run/named
         chown ${cmduser}:${cmduser} @VARBASE@/run/named
     fi
 
