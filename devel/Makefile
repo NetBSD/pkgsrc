@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3763 2022/07/19 20:14:27 bsiegert Exp $
+# $NetBSD: Makefile,v 1.3764 2022/07/19 20:26:07 bsiegert Exp $
 #
 
 COMMENT=	Development utilities
@@ -447,6 +447,7 @@ SUBDIR+=	gob2
 SUBDIR+=	gobject-introspection
 SUBDIR+=	golangci-lint
 SUBDIR+=	golint
+SUBDIR+=	gomodifytags
 SUBDIR+=	google-glog
 SUBDIR+=	googletest
 SUBDIR+=	gopls
