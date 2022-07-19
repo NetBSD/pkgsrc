@@ -1,0 +1,16 @@
+impl generates method stubs for implementing an interface.
+
+Sample usage:
+
+$ impl 'f *File' io.ReadWriteCloser
+func (f *File) Read(p []byte) (n int, err error) {
+	panic("not implemented")
+}
+
+func (f *File) Write(p []byte) (n int, err error) {
+	panic("not implemented")
+}
+
+func (f *File) Close() error {
+	panic("not implemented")
+}
