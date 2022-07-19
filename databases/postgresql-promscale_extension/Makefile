@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2022/07/18 22:14:25 tnn Exp $
+# $NetBSD: Makefile,v 1.16 2022/07/19 19:40:32 tnn Exp $
 
 DISTNAME=	promscale_extension-0.5.2
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
@@ -41,7 +41,10 @@ post-extract:
 pre-build:
 	ln -sf ${PREFIX}/bin/cargo ${TOOLS_DIR}/bin/cargo
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} cargo install --offline --path ../pgx/cargo-pgx cargo-pgx
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} cargo pgx init --pg${PGSQL_VERSION}=${PREFIX}/bin/pg_config
+# cargo pgx init (initdb) refuses to run as root
+#	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} cargo pgx init --pg${PGSQL_VERSION}=${PREFIX}/bin/pg_config
+	mkdir -p ${FAKEHOMEDIR}/.pgx
+	printf '[configs]\npg${PGSQL_VERSION}="${PREFIX}/bin/pg_config"\n' > ${FAKEHOMEDIR}/.pgx/config.toml
 
 # prevent cargo.mk from claiming do-build
 do-build:
