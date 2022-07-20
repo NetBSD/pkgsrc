@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:19:55 nia Exp $
-
-BLAKE2s (openxenmanager_0.r80+dfsg.orig.tar.gz) = 9a7cbf50534d37b94e1832b763d9a2ffbf12d012048dd9e41536bc6827ca29de
-SHA512 (openxenmanager_0.r80+dfsg.orig.tar.gz) = 498a98c6c833a002a6dfe3bf6d005a8c951c64b517e7755de31ea6c397d599aa37466395759c438e919711961315c7db0d22d2032fc84e952fe47d453019cfda
-Size (openxenmanager_0.r80+dfsg.orig.tar.gz) = 405676 bytes
