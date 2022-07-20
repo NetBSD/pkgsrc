@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3463 2022/07/20 08:49:29 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3464 2022/07/20 15:14:43 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5210,3 +5210,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-pkginfo to 1.8.3 [adam 2022-07-20]
 	Updated devel/py-types-setuptools to 63.2.0 [adam 2022-07-20]
 	Updated devel/py-types-toml to 0.10.8 [adam 2022-07-20]
+	Updated net/bind916 to 9.16.31 [taca 2022-07-20]
