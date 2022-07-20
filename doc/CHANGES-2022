@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3466 2022/07/20 16:29:58 tnn Exp $
+$NetBSD: CHANGES-2022,v 1.3467 2022/07/20 22:08:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5218,3 +5218,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated cad/kicad-packages3d to 6.0.6 [tnn 2022-07-20]
 	Updated cad/kicad-symbols to 6.0.6 [tnn 2022-07-20]
 	Updated cad/kicad-templates to 6.0.6 [tnn 2022-07-20]
+	Updated devel/py-zanata-python-client to 1.5.3 [wiz 2022-07-20]
