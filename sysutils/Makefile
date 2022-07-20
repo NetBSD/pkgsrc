@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1009 2022/07/13 12:16:02 adam Exp $
+# $NetBSD: Makefile,v 1.1010 2022/07/20 15:03:04 ryoon Exp $
 #
 
 COMMENT=	System utilities
@@ -480,7 +480,6 @@ SUBDIR+=	onefetch
 SUBDIR+=	open-vm-tools
 SUBDIR+=	openipmi
 SUBDIR+=	openstack_init
-SUBDIR+=	openxenmanager
 SUBDIR+=	osname
 SUBDIR+=	ovmf
 SUBDIR+=	p5-BackupPC-XS
