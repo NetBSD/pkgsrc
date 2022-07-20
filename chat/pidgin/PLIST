@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2021/05/02 10:19:20 nia Exp $
+@comment $NetBSD: PLIST,v 1.27 2022/07/20 02:14:13 khorben Exp $
 bin/pidgin
 include/pidgin/gtkaccount.h
 include/pidgin/gtkblist-theme-loader.h
@@ -408,6 +408,7 @@ share/pixmaps/pidgin/emotes/small/excited.png
 share/pixmaps/pidgin/emotes/small/excruciating.png
 share/pixmaps/pidgin/emotes/small/eyeroll.png
 share/pixmaps/pidgin/emotes/small/girl.png
+share/pixmaps/pidgin/emotes/small/glasses-cool.png
 share/pixmaps/pidgin/emotes/small/grumpy.png
 share/pixmaps/pidgin/emotes/small/happy.png
 share/pixmaps/pidgin/emotes/small/hot.png
@@ -436,6 +437,7 @@ share/pixmaps/pidgin/emotes/small/question.png
 share/pixmaps/pidgin/emotes/small/restroom.png
 share/pixmaps/pidgin/emotes/small/rose.png
 share/pixmaps/pidgin/emotes/small/sad.png
+share/pixmaps/pidgin/emotes/small/sarcastic.png
 share/pixmaps/pidgin/emotes/small/search.png
 share/pixmaps/pidgin/emotes/small/shame.png
 share/pixmaps/pidgin/emotes/small/shocked.png
