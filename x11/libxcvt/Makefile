@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2022/07/17 01:39:07 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2022/07/20 07:57:48 wiz Exp $
 
-DISTNAME=		libxcvt-0.1.1
-PKGREVISION=		1
+DISTNAME=		libxcvt-0.1.2
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.xz
