@@ -1,4 +1,4 @@
-$NetBSD: patch-third__party_wasm2c_wasm2c_wasm-rt-os-unix.c,v 1.1 2022/07/20 21:22:35 nia Exp $
+$NetBSD: patch-third__party_wasm2c_wasm2c_wasm-rt-os-unix.c,v 1.2 2022/07/20 22:09:32 wiz Exp $
 
 Work with PaX MPROTECT on NetBSD by stating that we will later make this memory
 block executable.
@@ -18,10 +18,3 @@ block executable.
    if (prot & MMAP_PROT_READ)
      map_prot |= PROT_READ;
  
-@@ -279,4 +285,4 @@ void os_print_last_error(const char* msg
- #else
-   // https://stackoverflow.com/questions/26541150/warning-iso-c-forbids-an-empty-translation-unit
-   typedef int make_iso_compilers_happy;
--#endif
-\ No newline at end of file
-+#endif
