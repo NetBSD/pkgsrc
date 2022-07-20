@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2022/01/04 20:54:05 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2022/07/20 22:16:56 wiz Exp $
 
 DISTNAME=	pydot-1.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -12,11 +12,11 @@ COMMENT=	Python interface to Graphviz's Dot language
 LICENSE=	mit
 
 DEPENDS+=	graphviz-[0-9]*:../../graphics/graphviz
+DEPENDS+=	${PYPKGPREFIX}-pyparsing-[0-9]*:../../devel/py-pyparsing
 
-PYTHON_VERSIONED_DEPENDENCIES+=	pyparsing
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
