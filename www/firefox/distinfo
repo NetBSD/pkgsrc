@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.475 2022/07/20 21:41:39 nia Exp $
+$NetBSD: distinfo,v 1.476 2022/07/20 22:09:32 wiz Exp $
 
 BLAKE2s (firefox-102.0.1.source.tar.xz) = 43e2f34c0e39d1a3d3d341e55d474a9e5551865ace57f9f0fd1d7eb16676ef64
 SHA512 (firefox-102.0.1.source.tar.xz) = a930d359fb81e473b963a93f6db5110871e9fd57f6d0f352513047d363d930dd4811e8dd786c2f6f3541c3871eb1c0169b718652d9ee076fd13a20f52af30417
@@ -37,7 +37,7 @@ SHA1 (patch-security_nss_lib_freebl_mpi_mpi.c) = a7cd867916524770609d1c307a65b31
 SHA1 (patch-third__party_js_cfworker_build.sh) = 46cdf97b99cf01080f290ae8d9a33b5f869fc3e4
 SHA1 (patch-third__party_libwebrtc_modules_video__capture_linux_device__info__linux.cc) = 2e951d7d91934751608e99628fc144632d8a3b5c
 SHA1 (patch-third__party_libwebrtc_system__wrappers_source_cpu__features__linux.cc) = b90e22b50879f7adcc1da3a993f52c0701b720f8
-SHA1 (patch-third__party_wasm2c_wasm2c_wasm-rt-os-unix.c) = ba423726a4859f19aa627bb127e5597eac323016
+SHA1 (patch-third__party_wasm2c_wasm2c_wasm-rt-os-unix.c) = 9b8ce4b823fd06951aac59bdb4a5642f256b8e3f
 SHA1 (patch-toolkit_components_terminator_nsTerminator.cpp) = bd7b2a0f2407c3ab95515b2f143c41c3ca6fb0c4
 SHA1 (patch-toolkit_modules_subprocess_subprocess__shared__unix.js) = 2303b753066298305ccae80d72765dbc4da5e0dc
 SHA1 (patch-toolkit_moz.configure) = 8de54693dc47b0993f220cc5a04af98925de1fb5
