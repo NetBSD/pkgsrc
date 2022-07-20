@@ -1,10 +1,10 @@
-$NetBSD: patch-lib_isc_include_isc_socket.h,v 1.2 2021/11/19 14:32:28 taca Exp $
+$NetBSD: patch-lib_isc_include_isc_socket.h,v 1.3 2022/07/20 15:14:14 taca Exp $
 
 * Take from NetBSD base.
 
---- lib/isc/include/isc/socket.h.orig	2021-11-05 09:03:26.000000000 +0000
+--- lib/isc/include/isc/socket.h.orig	2022-07-11 04:55:00.000000000 +0000
 +++ lib/isc/include/isc/socket.h
-@@ -160,7 +160,8 @@ typedef enum {
+@@ -162,7 +162,8 @@ typedef enum {
  	isc_sockettype_udp = 1,
  	isc_sockettype_tcp = 2,
  	isc_sockettype_unix = 3,
@@ -14,7 +14,7 @@ $NetBSD: patch-lib_isc_include_isc_socket.h,v 1.2 2021/11/19 14:32:28 taca Exp $
  } isc_sockettype_t;
  
  /*@{*/
-@@ -901,12 +902,55 @@ isc_socketmgr_renderjson(isc_socketmgr_t
+@@ -903,12 +904,56 @@ isc_socketmgr_renderjson(isc_socketmgr_t
   */
  #endif /* HAVE_JSON_C */
  
@@ -33,10 +33,11 @@ $NetBSD: patch-lib_isc_include_isc_socket.h,v 1.2 2021/11/19 14:32:28 taca Exp $
 +			 void *cbarg,
 +			 isc_task_t *task,
 +			 isc_socket_t **socketp);
++
  /*%<
   * See isc_socketmgr_create() above.
   */
- typedef isc_result_t (*isc_socketmgrcreatefunc_t)(isc_mem_t	    *mctx,
+ typedef isc_result_t (*isc_socketmgrcreatefunc_t)(isc_mem_t	   *mctx,
  						  isc_socketmgr_t **managerp);
  
 +isc_result_t
