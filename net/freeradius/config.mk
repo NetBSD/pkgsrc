@@ -1,6 +1,10 @@
-# $NetBSD: config.mk,v 1.4 2022/04/12 01:02:47 gutteridge Exp $
+# $NetBSD: config.mk,v 1.5 2022/07/20 01:19:55 gutteridge Exp $
 
-# cd ${DESTDIR}${EGDIR}/raddb; find . -type f -or -type l | sort | sed 's,^./,EGFILES+=\t,'
+# cd ${DESTDIR}${EGDIR}/raddb; find . -type f | sort | sed 's,^./,EGFILES+=\t,'
+#
+# Separately, any symlinks intended to be placed in the mods-enabled or
+# sites-enabled directories must be added to the respective variables in the
+# INSTALL and DEINSTALL scripts.
 EGFILES+=	README.rst
 EGFILES+=	certs/Makefile
 EGFILES+=	certs/README.md
@@ -195,37 +199,6 @@ EGFILES+=	mods-config/sql/moonshot-targeted-ids/postgresql/schema.sql
 EGFILES+=	mods-config/sql/moonshot-targeted-ids/sqlite/queries.conf
 EGFILES+=	mods-config/sql/moonshot-targeted-ids/sqlite/schema.sql
 EGFILES+=	mods-config/unbound/default.conf
-EGFILES+=	mods-enabled/always
-EGFILES+=	mods-enabled/attr_filter
-EGFILES+=	mods-enabled/cache_eap
-EGFILES+=	mods-enabled/chap
-EGFILES+=	mods-enabled/date
-EGFILES+=	mods-enabled/detail
-EGFILES+=	mods-enabled/detail.log
-EGFILES+=	mods-enabled/digest
-EGFILES+=	mods-enabled/dynamic_clients
-EGFILES+=	mods-enabled/eap
-EGFILES+=	mods-enabled/echo
-EGFILES+=	mods-enabled/exec
-EGFILES+=	mods-enabled/expiration
-EGFILES+=	mods-enabled/expr
-EGFILES+=	mods-enabled/files
-EGFILES+=	mods-enabled/linelog
-EGFILES+=	mods-enabled/logintime
-EGFILES+=	mods-enabled/mschap
-EGFILES+=	mods-enabled/ntlm_auth
-EGFILES+=	mods-enabled/pap
-EGFILES+=	mods-enabled/passwd
-EGFILES+=	mods-enabled/preprocess
-EGFILES+=	mods-enabled/radutmp
-EGFILES+=	mods-enabled/realm
-EGFILES+=	mods-enabled/replicate
-EGFILES+=	mods-enabled/soh
-EGFILES+=	mods-enabled/sradutmp
-EGFILES+=	mods-enabled/totp
-EGFILES+=	mods-enabled/unix
-EGFILES+=	mods-enabled/unpack
-EGFILES+=	mods-enabled/utf8
 EGFILES+=	panic.gdb
 EGFILES+=	policy.d/abfab-tr
 EGFILES+=	policy.d/accounting
@@ -269,8 +242,6 @@ EGFILES+=	sites-available/tls
 EGFILES+=	sites-available/totp
 EGFILES+=	sites-available/virtual.example.com
 EGFILES+=	sites-available/vmps
-EGFILES+=	sites-enabled/default
-EGFILES+=	sites-enabled/inner-tunnel
 EGFILES+=	templates.conf
 EGFILES+=	trigger.conf
 
