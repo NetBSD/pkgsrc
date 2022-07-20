@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3460 2022/07/20 02:16:49 khorben Exp $
+$NetBSD: CHANGES-2022,v 1.3461 2022/07/20 07:57:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5205,3 +5205,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated chat/pidgin to 2.14.10 [khorben 2022-07-20]
 	Updated chat/pidgin-sametime to 2.14.10 [khorben 2022-07-20]
 	Updated chat/pidgin-silc to 2.14.10 [khorben 2022-07-20]
+	Updated x11/libxcvt to 0.1.2 [wiz 2022-07-20]
