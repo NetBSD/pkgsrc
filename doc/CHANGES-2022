@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3455 2022/07/19 20:37:50 bsiegert Exp $
+$NetBSD: CHANGES-2022,v 1.3456 2022/07/20 02:15:35 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5200,3 +5200,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/gotests version 1.6.0 [bsiegert 2022-07-19]
 	Added devel/gomodifytags version 1.16.0 [bsiegert 2022-07-19]
 	Added devel/go-impl version 1.1.0 [bsiegert 2022-07-19]
+	Updated chat/libpurple to 2.14.10 [khorben 2022-07-20]
