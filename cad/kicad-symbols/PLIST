@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2022/03/11 21:42:14 tnn Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/07/20 16:28:54 tnn Exp $
 share/kicad/symbols/4xxx.kicad_sym
 share/kicad/symbols/4xxx_IEEE.kicad_sym
 share/kicad/symbols/74xGxx.kicad_sym
@@ -91,6 +91,7 @@ share/kicad/symbols/MCU_Microchip_8051.kicad_sym
 share/kicad/symbols/MCU_Microchip_ATmega.kicad_sym
 share/kicad/symbols/MCU_Microchip_ATtiny.kicad_sym
 share/kicad/symbols/MCU_Microchip_AVR.kicad_sym
+share/kicad/symbols/MCU_Microchip_AVR_Dx.kicad_sym
 share/kicad/symbols/MCU_Microchip_PIC10.kicad_sym
 share/kicad/symbols/MCU_Microchip_PIC12.kicad_sym
 share/kicad/symbols/MCU_Microchip_PIC16.kicad_sym
@@ -115,6 +116,7 @@ share/kicad/symbols/MCU_NXP_NTAG.kicad_sym
 share/kicad/symbols/MCU_NXP_S08.kicad_sym
 share/kicad/symbols/MCU_Nordic.kicad_sym
 share/kicad/symbols/MCU_Parallax.kicad_sym
+share/kicad/symbols/MCU_RaspberryPi.kicad_sym
 share/kicad/symbols/MCU_Renesas_Synergy_S1.kicad_sym
 share/kicad/symbols/MCU_STC.kicad_sym
 share/kicad/symbols/MCU_ST_STM32F0.kicad_sym
