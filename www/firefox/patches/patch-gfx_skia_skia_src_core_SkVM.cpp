@@ -1,4 +1,4 @@
-$NetBSD: patch-gfx_skia_skia_src_core_SkVM.cpp,v 1.1 2022/07/20 21:22:35 nia Exp $
+$NetBSD: patch-gfx_skia_skia_src_core_SkVM.cpp,v 1.2 2022/07/20 21:41:39 nia Exp $
 
 Work with PaX MPROTECT on NetBSD by stating that we will later make this memory
 block executable.
@@ -10,7 +10,7 @@ block executable.
          const size_t page = sysconf(_SC_PAGESIZE);
          fJITSize = ((a.size() + page - 1) / page) * page;  // mprotect works at page granularity.
 +#ifdef PROT_MPROTECT
-+        fJITBuf = mmap(nullptr,fJITSize, PROT_READ|PROT_WRITE|PROT_MPROTECT(PROT_WRITE), MAP_ANONYMOUS|MAP_PRIVATE, -1,0);
++        fJITBuf = mmap(nullptr,fJITSize, PROT_READ|PROT_WRITE|PROT_MPROTECT(PROT_EXEC), MAP_ANONYMOUS|MAP_PRIVATE, -1,0);
 +#else
          fJITBuf = mmap(nullptr,fJITSize, PROT_READ|PROT_WRITE, MAP_ANONYMOUS|MAP_PRIVATE, -1,0);
 +#endif

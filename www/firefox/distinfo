@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.474 2022/07/20 21:22:35 nia Exp $
+$NetBSD: distinfo,v 1.475 2022/07/20 21:41:39 nia Exp $
 
 BLAKE2s (firefox-102.0.1.source.tar.xz) = 43e2f34c0e39d1a3d3d341e55d474a9e5551865ace57f9f0fd1d7eb16676ef64
 SHA512 (firefox-102.0.1.source.tar.xz) = a930d359fb81e473b963a93f6db5110871e9fd57f6d0f352513047d363d930dd4811e8dd786c2f6f3541c3871eb1c0169b718652d9ee076fd13a20f52af30417
@@ -14,7 +14,7 @@ SHA1 (patch-dom_base_nsAttrName.h) = ac7ba441a3b27df2855cf2673eea36b1cb44ad49
 SHA1 (patch-gfx_angle_checkout_src_common_third__party_smhasher_src_PMurHash.cpp) = e458c9c8dc66edc69c1874734af28a77fc5e3993
 SHA1 (patch-gfx_angle_checkout_src_compiler_translator_InfoSink.h) = b2adce9e65662283a11b6dcff40e95523e940045
 SHA1 (patch-gfx_skia_skia_src_core_SkCpu.cpp) = 36218819254f3681b9c717d652ea78c9f20d49ad
-SHA1 (patch-gfx_skia_skia_src_core_SkVM.cpp) = cdb2c2b0d512c0eb8403abba9b74c218d3a306ea
+SHA1 (patch-gfx_skia_skia_src_core_SkVM.cpp) = 13c058199ca1d91a8b7964f6626952ce8bd933a4
 SHA1 (patch-gfx_wr_swgl_build.rs) = df6ebfaabb4d27994e59a9d0eaf12c7cf08415fb
 SHA1 (patch-ipc_chromium_src_base_message__pump__libevent.cc) = 298642a3527804115b398fb7904a3596962932e3
 SHA1 (patch-ipc_chromium_src_base_platform__thread__posix.cc) = 35d20981d33ccdb1d8ffb8039e48798777f11658
