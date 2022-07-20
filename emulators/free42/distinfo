@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2022/07/19 08:49:43 dbj Exp $
+$NetBSD: distinfo,v 1.8 2022/07/20 05:03:06 dbj Exp $
 
 BLAKE2s (free42-nologo-3.0.13.tgz) = 70420aeb62b88ee0b2f3ada3c8ba8c40c036b0debadbf14599fccf4b352636b1
 SHA512 (free42-nologo-3.0.13.tgz) = 6037e86962157a2293915d2bd9343f7ddcddcbb346e98fe339a7ef1784c98249fb55c69c0cf6370a79db4628197ac851d4c4c05ec610a2911fa9c3b00a6d077d
 Size (free42-nologo-3.0.13.tgz) = 7458844 bytes
-SHA1 (patch-gtk_build-intel-lib.sh) = 352776e139cba7882ed24072dbffa23777a4c8a0
+SHA1 (patch-gtk_build-intel-lib.sh) = 2319c64c6c457fae43f1e82b306cc1d507eb30f7
