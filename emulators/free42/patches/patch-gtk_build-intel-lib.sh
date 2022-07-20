@@ -1,12 +1,14 @@
-$NetBSD: patch-gtk_build-intel-lib.sh,v 1.2 2022/07/19 08:49:43 dbj Exp $
+$NetBSD: patch-gtk_build-intel-lib.sh,v 1.3 2022/07/20 05:03:06 dbj Exp $
 
 Avoid pkgsrc libtool on Darwin.
+
+Include fenv.h explicitly on QNX/Darwin/Apple/FreeBSD/NetBSD
 
 On NetBSD, build intel lib as if it was FreeBSD
 
 --- gtk/build-intel-lib.sh.orig	2022-06-16 09:39:50.000000000 +0000
 +++ gtk/build-intel-lib.sh
-@@ -45,6 +45,24 @@ tar xvfz ../inteldecimal/IntelRDFPMathLi
+@@ -45,6 +45,26 @@ tar xvfz ../inteldecimal/IntelRDFPMathLi
  cd IntelRDFPMathLib20U1
  patch -p0 <../intel-lib-linux.patch
  
@@ -15,9 +17,11 @@ On NetBSD, build intel lib as if it was FreeBSD
 +    sed -e 's/libtool/xcrun libtool/' \
 +        LIBRARY/makefile.iml_head.orig > LIBRARY/makefile.iml_head
 +
-+# Fixup fenv.h inclusion detection. NetBSD uses _FENV_H_
++# Fixup fenv.h inclusion detection. NetBSD uses _FENV_H_, Darwin uses __FENV_H__
++# also actually include fenv.h on platforms that use it.
 +mv LIBRARY/src/bid_functions.h LIBRARY/src/bid_functions.h.orig && \
-+    sed -e 's/!defined (_FENV_H)/& \&\& !defined(_FENV_H_)/' \
++    sed -e 's/!defined (_FENV_H)/& \&\& !defined(_FENV_H_) \&\& !defined(__FENV_H__)/' \
++        -e 's/^#ifdef __QNX__/#if defined(__QNX__) || defined(__APPLE__) || defined(__FreeBSD__) || defined(__NetBSD__)/' \
 +        LIBRARY/src/bid_functions.h.orig > LIBRARY/src/bid_functions.h
 +
 +# make NetBSD look like FreeBSD to the Makefiles, this is a little hackish
