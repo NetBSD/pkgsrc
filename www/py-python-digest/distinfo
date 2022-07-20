@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:30:45 nia Exp $
-
-BLAKE2s (python-digest-1.7.tar.gz) = 044f71a181a4e45f761da6d06638fffcd937d355042a6d5fe6feccb8791fccfe
-SHA512 (python-digest-1.7.tar.gz) = 15bfdb8e42275bc8f7fbc10f6f8bcd109852c57b77e98c8c2251784278fb135db494b0224341d34626ad49ea4db2a8803b2eb89d70d88b704819f4e6ca10f7e1
-Size (python-digest-1.7.tar.gz) = 10073 bytes

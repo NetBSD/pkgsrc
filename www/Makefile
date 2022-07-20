@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1631 2022/06/29 07:54:42 wiz Exp $
+# $NetBSD: Makefile,v 1.1632 2022/07/20 22:58:17 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -811,7 +811,6 @@ SUBDIR+=	py-publicsuffix2
 SUBDIR+=	py-purl
 SUBDIR+=	py-pylint-django
 SUBDIR+=	py-pystache
-SUBDIR+=	py-python-digest
 SUBDIR+=	py-python-mimeparse
 SUBDIR+=	py-python-multipart
 SUBDIR+=	py-python3-digest

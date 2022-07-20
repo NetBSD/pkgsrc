@@ -1,4 +1,4 @@
-# $NetBSD: versioned_dependencies.mk,v 1.80 2022/07/20 22:23:49 wiz Exp $
+# $NetBSD: versioned_dependencies.mk,v 1.81 2022/07/20 22:58:17 wiz Exp $
 #
 # This file determines which separate distribution of a Python
 # package is used as dependency, depending on the Python version
@@ -9,7 +9,7 @@
 # PYTHON_VERSIONED_DEPENDENCIES
 #       The Python package which should be added as a dependency.
 #
-#       Possible values: Pillow X cairo chardet click cryptography flake8 html2text hypothesis importlib-metadata jinja2 lama markdown mccabe more-itertools pip packaging pygments pyphen python-digest rsa setuptools setuptools_scm test twisted
+#       Possible values: Pillow X cairo chardet click cryptography flake8 html2text hypothesis importlib-metadata jinja2 lama markdown mccabe more-itertools pip packaging pygments pyphen rsa setuptools setuptools_scm test twisted
 #       Default: (nothing)
 #
 
@@ -37,7 +37,6 @@ _SUPPORTED_PACKAGES+=	packaging devel/py-packaging2 devel/py-packaging
 _SUPPORTED_PACKAGES+=	pip devel/py-pip20 devel/py-pip
 _SUPPORTED_PACKAGES+=	pygments textproc/py-pygments25 textproc/py-pygments
 _SUPPORTED_PACKAGES+=	pyphen textproc/py27-pyphen textproc/py-pyphen
-_SUPPORTED_PACKAGES+=	python-digest www/py-python-digest www/py-python3-digest
 _SUPPORTED_PACKAGES+=	rsa security/py-rsa40 security/py-rsa
 _SUPPORTED_PACKAGES+=	setuptools devel/py-setuptools44 devel/py-setuptools
 _SUPPORTED_PACKAGES+=	setuptools_scm devel/py-setuptools_scm5 devel/py-setuptools_scm
