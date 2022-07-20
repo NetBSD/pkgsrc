@@ -2,4 +2,4 @@ Janet is a functional and imperative programming language.
 
 Janet makes a good system scripting language, or a language to embed in
 other programs. Think Lua or Guile. Janet also can be used for rapid
-prototying, dynamic systems, and other domains where lisp shines.
+prototyping, dynamic systems, and other domains where lisp shines.
