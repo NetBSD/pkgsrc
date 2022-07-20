@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3458 2022/07/20 02:16:23 khorben Exp $
+$NetBSD: CHANGES-2022,v 1.3459 2022/07/20 02:16:38 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5203,3 +5203,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated chat/libpurple to 2.14.10 [khorben 2022-07-20]
 	Updated chat/finch to 2.14.10 [khorben 2022-07-20]
 	Updated chat/pidgin to 2.14.10 [khorben 2022-07-20]
+	Updated chat/pidgin-sametime to 2.14.10 [khorben 2022-07-20]
