@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.528 2022/07/17 08:08:56 wiz Exp $
+# $NetBSD: Makefile,v 1.529 2022/07/20 21:22:35 nia Exp $
 
 FIREFOX_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
 MOZ_BRANCH=		102.0
@@ -6,7 +6,7 @@ MOZ_BRANCH_MINOR=	.1
 
 DISTNAME=	firefox-${FIREFOX_VER}.source
 PKGNAME=	${DISTNAME:S/.source//:S/b/beta/:S/esr//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES+=	${MASTER_SITE_MOZILLA:=firefox/releases/${FIREFOX_VER}/source/}
 EXTRACT_SUFX=	.tar.xz
@@ -69,11 +69,6 @@ LDFLAGS.SunOS+=		-lm
 
 # XXX not sure how to test this! likely unnecessary
 NOT_PAX_MPROTECT_SAFE+=	lib/${PKGBASE}/plugin-container
-# For RLBox WASM sandbox. Sync condition with mozilla-common.mk
-.if ${MACHINE_ARCH} == "x86_64" || ${MACHINE_ARCH} == "i386"
-NOT_PAX_MPROTECT_SAFE+=	lib/${PKGBASE}/firefox
-NOT_PAX_MPROTECT_SAFE+=	lib/${PKGBASE}/firefox-bin
-.endif
 
 # Avoid ld "invalid section index" errors.
 BUILDLINK_TRANSFORM.SunOS+=	rm:-fdata-sections
