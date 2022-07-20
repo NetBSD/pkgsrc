@@ -1,4 +1,4 @@
-# $NetBSD: DEINSTALL,v 1.3 2019/12/30 18:17:22 adam Exp $
+# $NetBSD: DEINSTALL,v 1.4 2022/07/20 01:19:55 gutteridge Exp $
 #
 # Remove default symlinks in ${PKG_SYSCONFDIR} for enabled modules/sites
 #
@@ -7,7 +7,7 @@ SITES_ENABLED="default inner-tunnel"
 MODS_ENABLED="always attr_filter cache_eap chap date detail detail.log
 	      digest dynamic_clients eap echo exec expiration expr
 	      files linelog logintime mschap ntlm_auth pap passwd preprocess
-	      radutmp realm replicate soh sradutmp unix unpack utf8"
+	      radutmp realm replicate soh sradutmp totp unix unpack utf8"
 
 case ${STAGE} in
 DEINSTALL)
@@ -19,8 +19,9 @@ DEINSTALL)
 	    ${RM} -f @PKG_SYSCONFDIR@/mods-enabled/${m}
 	done
 	${RMDIR} @PKG_SYSCONFDIR@/sites-enabled
-	${RMDIR} @PKG_SYSCONFDIR@/mods-enabled	
+	${RMDIR} @PKG_SYSCONFDIR@/mods-enabled
 	${RM} @PKG_SYSCONFDIR@/hints
 	${RM} @PKG_SYSCONFDIR@/huntgroups
+	${RM} @PKG_SYSCONFDIR@/users
 	;;
 esac
