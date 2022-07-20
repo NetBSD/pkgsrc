@@ -1,4 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2021/12/07 18:03:07 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/07/20 08:33:11 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/requirements/__init__.py
 ${PYSITELIB}/requirements/__init__.pyc
 ${PYSITELIB}/requirements/__init__.pyo
@@ -8,13 +13,10 @@ ${PYSITELIB}/requirements/fragment.pyo
 ${PYSITELIB}/requirements/parser.py
 ${PYSITELIB}/requirements/parser.pyc
 ${PYSITELIB}/requirements/parser.pyo
+${PYSITELIB}/requirements/py.typed
 ${PYSITELIB}/requirements/requirement.py
 ${PYSITELIB}/requirements/requirement.pyc
 ${PYSITELIB}/requirements/requirement.pyo
 ${PYSITELIB}/requirements/vcs.py
 ${PYSITELIB}/requirements/vcs.pyc
 ${PYSITELIB}/requirements/vcs.pyo
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
