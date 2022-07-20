@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3465 2022/07/20 15:55:12 jperkin Exp $
+$NetBSD: CHANGES-2022,v 1.3466 2022/07/20 16:29:58 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5212,3 +5212,9 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-types-toml to 0.10.8 [adam 2022-07-20]
 	Updated net/bind916 to 9.16.31 [taca 2022-07-20]
 	Updated mail/rspamd to 3.2 [jperkin 2022-07-20]
+	Updated cad/kicad to 6.0.6 [tnn 2022-07-20]
+	Updated cad/kicad-doc to 6.0.6 [tnn 2022-07-20]
+	Updated cad/kicad-footprints to 6.0.6 [tnn 2022-07-20]
+	Updated cad/kicad-packages3d to 6.0.6 [tnn 2022-07-20]
+	Updated cad/kicad-symbols to 6.0.6 [tnn 2022-07-20]
+	Updated cad/kicad-templates to 6.0.6 [tnn 2022-07-20]
