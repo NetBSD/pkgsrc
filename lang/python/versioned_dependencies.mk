@@ -1,4 +1,4 @@
-# $NetBSD: versioned_dependencies.mk,v 1.81 2022/07/20 22:58:17 wiz Exp $
+# $NetBSD: versioned_dependencies.mk,v 1.82 2022/07/20 23:04:56 wiz Exp $
 #
 # This file determines which separate distribution of a Python
 # package is used as dependency, depending on the Python version
@@ -9,7 +9,7 @@
 # PYTHON_VERSIONED_DEPENDENCIES
 #       The Python package which should be added as a dependency.
 #
-#       Possible values: Pillow X cairo chardet click cryptography flake8 html2text hypothesis importlib-metadata jinja2 lama markdown mccabe more-itertools pip packaging pygments pyphen rsa setuptools setuptools_scm test twisted
+#       Possible values: Pillow X cairo chardet click cryptography flake8 hypothesis importlib-metadata jinja2 lama markdown mccabe more-itertools pip packaging pygments pyphen rsa setuptools setuptools_scm test twisted
 #       Default: (nothing)
 #
 
@@ -24,7 +24,6 @@ _SUPPORTED_PACKAGES+=	chardet converters/py-chardet4 converters/py-chardet
 _SUPPORTED_PACKAGES+=	click devel/py-click7 devel/py-click
 _SUPPORTED_PACKAGES+=	cryptography security/py27-cryptography security/py-cryptography 
 _SUPPORTED_PACKAGES+=	flake8 devel/py-flake8-3 devel/py-flake8
-_SUPPORTED_PACKAGES+=	html2text textproc/py-html2text-2019.8.11 textproc/py-html2text
 _SUPPORTED_PACKAGES+=	hypothesis devel/py-hypothesis4 devel/py-hypothesis
 _SUPPORTED_PACKAGES+=	importlib-metadata devel/py-importlib-metadata2 devel/py-importlib-metadata
 _SUPPORTED_PACKAGES+=	isort devel/py-isort4 devel/py-isort
