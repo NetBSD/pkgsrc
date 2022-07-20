@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2022/05/24 10:55:59 nikita Exp $
+# $NetBSD: Makefile,v 1.12 2022/07/20 16:28:54 tnn Exp $
 #
 
-V=		6.0.2
+V=		6.0.6
 DISTNAME=	kicad-footprints-${V}
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_GITLAB:=kicad/libraries/}
