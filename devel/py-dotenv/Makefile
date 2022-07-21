@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2022/01/05 15:41:03 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2022/07/21 09:38:30 adam Exp $
 
-DISTNAME=	python-dotenv-0.19.2
+DISTNAME=	python-dotenv-0.20.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^python-//}
-PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-dotenv/}
 
