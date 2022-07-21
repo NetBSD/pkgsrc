@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2022/06/16 12:06:25 gdt Exp $
+@comment $NetBSD: PLIST,v 1.28 2022/07/21 16:44:05 gdt Exp $
 bin/export_signing_key
 bin/generate_config
 bin/generate_log_config
@@ -138,6 +138,8 @@ ${PYSITELIB}/synapse/config/experimental.py
 ${PYSITELIB}/synapse/config/experimental.pyc
 ${PYSITELIB}/synapse/config/federation.py
 ${PYSITELIB}/synapse/config/federation.pyc
+${PYSITELIB}/synapse/config/groups.py
+${PYSITELIB}/synapse/config/groups.pyc
 ${PYSITELIB}/synapse/config/homeserver.py
 ${PYSITELIB}/synapse/config/homeserver.pyc
 ${PYSITELIB}/synapse/config/jwt.py
@@ -757,6 +759,8 @@ ${PYSITELIB}/synapse/rest/synapse/client/saml2/response_resource.py
 ${PYSITELIB}/synapse/rest/synapse/client/saml2/response_resource.pyc
 ${PYSITELIB}/synapse/rest/synapse/client/sso_register.py
 ${PYSITELIB}/synapse/rest/synapse/client/sso_register.pyc
+${PYSITELIB}/synapse/rest/synapse/client/unsubscribe.py
+${PYSITELIB}/synapse/rest/synapse/client/unsubscribe.pyc
 ${PYSITELIB}/synapse/rest/well_known.py
 ${PYSITELIB}/synapse/rest/well_known.pyc
 ${PYSITELIB}/synapse/server.py
@@ -846,8 +850,6 @@ ${PYSITELIB}/synapse/storage/databases/main/events_worker.py
 ${PYSITELIB}/synapse/storage/databases/main/events_worker.pyc
 ${PYSITELIB}/synapse/storage/databases/main/filtering.py
 ${PYSITELIB}/synapse/storage/databases/main/filtering.pyc
-${PYSITELIB}/synapse/storage/databases/main/group_server.py
-${PYSITELIB}/synapse/storage/databases/main/group_server.pyc
 ${PYSITELIB}/synapse/storage/databases/main/keys.py
 ${PYSITELIB}/synapse/storage/databases/main/keys.pyc
 ${PYSITELIB}/synapse/storage/databases/main/lock.py
@@ -1247,6 +1249,12 @@ ${PYSITELIB}/synapse/storage/schema/main/delta/69/01as_txn_seq.pyc
 ${PYSITELIB}/synapse/storage/schema/main/delta/69/01device_list_oubound_by_room.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/69/02cache_invalidation_index.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/70/01clean_table_purged_rooms.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/71/01rebuild_event_edges.sql.postgres
+${PYSITELIB}/synapse/storage/schema/main/delta/71/01rebuild_event_edges.sql.sqlite
+${PYSITELIB}/synapse/storage/schema/main/delta/71/01remove_noop_background_updates.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/71/02event_push_summary_unique.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/72/01event_push_summary_receipt.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/72/02event_push_actions_index.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/application_services.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/event_edges.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/event_signatures.sql
