@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.46 2022/04/21 16:53:25 nia Exp $
+# $NetBSD: Makefile,v 1.47 2022/07/21 11:21:50 tnn Exp $
 
 DISTNAME=	# empty
 PKGNAME=	modular-xorg-drivers-1.19.0
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	meta-pkgs x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 DISTFILES=	# empty
@@ -17,7 +17,9 @@ META_PACKAGE=	yes
 .include "../../mk/bsd.prefs.mk"
 
 DEPENDS+=	xf86-input-acecad-[0-9]*:../../x11/xf86-input-acecad
+.if ${OPSYS} != "Linux"
 DEPENDS+=	xf86-input-keyboard-[0-9]*:../../x11/xf86-input-keyboard
+.endif
 DEPENDS+=	xf86-input-mouse-[0-9]*:../../x11/xf86-input-mouse
 DEPENDS+=	xf86-input-penmount-[0-9]*:../../x11/xf86-input-penmount
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
