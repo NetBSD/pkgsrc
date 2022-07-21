@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22043 2022/07/20 22:08:20 wiz Exp $
+$NetBSD: TODO,v 1.22044 2022/07/21 15:19:23 taca Exp $
 
 Suggested new packages
 ======================
@@ -1272,7 +1272,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o poppass-4.0.14
 	o posh-0.14.1
 	o postal-0.72
-	o postfix-3.7.1
 	o postgres_exporter-0.9.0
 	o postgresql-pgroonga-2.2.9
 	o postgresql-pljava-1.6.2
