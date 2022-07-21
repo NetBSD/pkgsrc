@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3480 2022/07/21 14:08:46 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.3481 2022/07/21 15:09:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5234,3 +5234,11 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated archivers/php-pecl-zip to 1.21.0 [taca 2022-07-21]
 	Updated devel/nss to 3.81 [wiz 2022-07-21]
 	Updated chat/py-matrix-common to 1.2.1 [gdt 2022-07-21]
+	Updated mail/postfix to 3.7.2 [taca 2022-07-21]
+	Updated mail/postfix-cdb to 3.7.2 [taca 2022-07-21]
+	Updated mail/postfix-ldap to 3.7.2 [taca 2022-07-21]
+	Updated mail/postfix-lmdb to 3.7.2 [taca 2022-07-21]
+	Updated mail/postfix-mysql to 3.7.2 [taca 2022-07-21]
+	Updated mail/postfix-pcre to 3.7.2 [taca 2022-07-21]
+	Updated mail/postfix-pgsql to 3.7.2 [taca 2022-07-21]
+	Updated mail/postfix-sqlite to 3.7.2 [taca 2022-07-21]
