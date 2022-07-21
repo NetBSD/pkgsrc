@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2022/07/21 16:44:05 gdt Exp $
+@comment $NetBSD: PLIST,v 1.29 2022/07/21 18:57:02 gdt Exp $
 bin/export_signing_key
 bin/generate_config
 bin/generate_log_config
@@ -75,6 +75,8 @@ ${PYSITELIB}/synapse/app/appservice.py
 ${PYSITELIB}/synapse/app/appservice.pyc
 ${PYSITELIB}/synapse/app/client_reader.py
 ${PYSITELIB}/synapse/app/client_reader.pyc
+${PYSITELIB}/synapse/app/complement_fork_starter.py
+${PYSITELIB}/synapse/app/complement_fork_starter.pyc
 ${PYSITELIB}/synapse/app/event_creator.py
 ${PYSITELIB}/synapse/app/event_creator.pyc
 ${PYSITELIB}/synapse/app/federation_reader.py
@@ -473,6 +475,8 @@ ${PYSITELIB}/synapse/replication/http/register.py
 ${PYSITELIB}/synapse/replication/http/register.pyc
 ${PYSITELIB}/synapse/replication/http/send_event.py
 ${PYSITELIB}/synapse/replication/http/send_event.pyc
+${PYSITELIB}/synapse/replication/http/state.py
+${PYSITELIB}/synapse/replication/http/state.pyc
 ${PYSITELIB}/synapse/replication/http/streams.py
 ${PYSITELIB}/synapse/replication/http/streams.pyc
 ${PYSITELIB}/synapse/replication/slave/__init__.py
@@ -1253,6 +1257,7 @@ ${PYSITELIB}/synapse/storage/schema/main/delta/71/01rebuild_event_edges.sql.post
 ${PYSITELIB}/synapse/storage/schema/main/delta/71/01rebuild_event_edges.sql.sqlite
 ${PYSITELIB}/synapse/storage/schema/main/delta/71/01remove_noop_background_updates.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/71/02event_push_summary_unique.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/72/01add_room_type_to_state_stats.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/72/01event_push_summary_receipt.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/72/02event_push_actions_index.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/application_services.sql
