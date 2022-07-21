@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3475 2022/07/21 11:31:32 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3476 2022/07/21 11:37:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5229,3 +5229,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-dotenv to 0.20.0 [adam 2022-07-21]
 	Updated devel/gmp to 6.2.1nb3 [wiz 2022-07-21]
 	Updated net/libfilezilla to 0.38.1 [wiz 2022-07-21]
+	Updated net/filezilla to 3.60.1 [wiz 2022-07-21]
