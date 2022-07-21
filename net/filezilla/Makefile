@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.145 2022/05/04 05:55:46 wiz Exp $
+# $NetBSD: Makefile,v 1.146 2022/07/21 11:37:29 wiz Exp $
 
-VERSION=	3.59.0
+VERSION=	3.60.1
 DISTNAME=	FileZilla_${VERSION}_src
 PKGNAME=	filezilla-${VERSION}
 CATEGORIES=	net x11
@@ -18,16 +18,10 @@ USE_LANGUAGES=	c c++17
 USE_TOOLS+=	gmake pkg-config msgfmt msgmerge xgettext
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
-# remove on next update, when patch-src_commonui_Makefile.am is included
-USE_TOOLS+=	aclocal automake
-pre-configure:
-	cd ${WRKSRC} && aclocal && automake
-
 CONFIGURE_ARGS+=	--disable-autoupdatecheck
 # avoid xdg-utils dependency
 CONFIGURE_ENV+=		ac_cv_path_xdgopen=firefox
-
-GNU_CONFIGURE_WX_VERSION=	no
+#CONFIGURE_ENV+=	ac_cv_path_WX_CONFIG_PATH=${PREFIX}/bin/wx-config
 
 # For C++17.
 GCC_REQD+=		7
@@ -36,7 +30,7 @@ GCC_REQD+=		7
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/libidn/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libfilezilla+=	libfilezilla>=0.37.1
+BUILDLINK_API_DEPENDS.libfilezilla+=	libfilezilla>=0.38
 .include "../../net/libfilezilla/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gnutls+=	gnutls>=3.4.0
 .include "../../security/gnutls/buildlink3.mk"
