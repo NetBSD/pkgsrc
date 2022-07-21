@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3472 2022/07/21 08:59:21 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3473 2022/07/21 09:38:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5225,3 +5225,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed sysutils/openxenmanager [ryoon 2022-07-20]
 	Updated databases/ldb to 2.5.1 [adam 2022-07-21]
 	Updated devel/tevent to 0.12.1 [adam 2022-07-21]
+	Updated net/samba4 to 4.16.3 [adam 2022-07-21]
+	Updated devel/py-dotenv to 0.20.0 [adam 2022-07-21]
