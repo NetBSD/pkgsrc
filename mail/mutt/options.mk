@@ -1,15 +1,15 @@
-# $NetBSD: options.mk,v 1.35 2020/06/22 06:24:15 wiz Exp $
+# $NetBSD: options.mk,v 1.36 2022/07/21 10:12:36 jperkin Exp $
 
 # Global and legacy options
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.mutt
 PKG_OPTIONS_REQUIRED_GROUPS=	display
-PKG_OPTIONS_OPTIONAL_GROUPS=	ssl
+PKG_OPTIONS_OPTIONAL_GROUPS=	db ssl
+PKG_OPTIONS_GROUP.db=		tokyocabinet lmdb
 PKG_OPTIONS_GROUP.display=	curses wide-curses slang
 PKG_OPTIONS_GROUP.ssl=		gnutls openssl
 PKG_SUPPORTED_OPTIONS=		debug gpgme idn smime sasl
-# TODO: add kyoto cabinet and lmdb backend options for header cache
-PKG_SUPPORTED_OPTIONS+=		mutt-hcache mutt-compressed-mbox tokyocabinet mutt-smtp
+PKG_SUPPORTED_OPTIONS+=		mutt-hcache mutt-compressed-mbox mutt-smtp
 PKG_SUPPORTED_OPTIONS+=		gssapi
 PKG_SUGGESTED_OPTIONS=		curses gpgme mutt-hcache mutt-smtp smime openssl
 PKG_SUGGESTED_OPTIONS+=		gssapi mutt-compressed-mbox sasl
@@ -102,7 +102,13 @@ CONFIGURE_ARGS+=	--disable-smime
 ### Header cache
 ###
 .if !empty(PKG_OPTIONS:Mmutt-hcache)
-.  if !empty(PKG_OPTIONS:Mtokyocabinet)
+.  if !empty(PKG_OPTIONS:Mlmdb)
+.    include "../../databases/lmdb/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-hcache
+CONFIGURE_ARGS+=	--enable-lmdb
+CONFIGURE_ARGS+=	--without-gdbm
+CONFIGURE_ARGS+=	--without-bdb
+.  elif !empty(PKG_OPTIONS:Mtokyocabinet)
 .    include "../../databases/tokyocabinet/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-hcache
 CONFIGURE_ARGS+=	--enable-tokyocabinet
