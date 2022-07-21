@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3482 2022/07/21 15:18:55 taca Exp $
+$NetBSD: CHANGES-2022,v 1.3483 2022/07/21 16:44:24 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5246,3 +5246,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated mail/roundcube-plugin-enigma to 1.5.3 [taca 2022-07-21]
 	Updated mail/roundcube-plugin-password to 1.5.3 [taca 2022-07-21]
 	Updated mail/roundcube-plugin-zipdownload to 1.5.3 [taca 2022-07-21]
+	Updated chat/matrix-synapse to 1.62.0 [gdt 2022-07-21]
