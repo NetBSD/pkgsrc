@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.144 2022/06/30 11:18:43 nia Exp $
+# $NetBSD: Makefile,v 1.145 2022/07/21 09:35:19 adam Exp $
 
-DISTNAME=	samba-4.15.6
-PKGREVISION=	3
+DISTNAME=	samba-4.16.3
 CATEGORIES=	net
 MASTER_SITES=	https://download.samba.org/pub/samba/stable/
 
@@ -18,6 +17,7 @@ GCC_REQD+=	4.4
 BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 BUILD_DEPENDS+=	docbook-xml-[0-9]*:../../textproc/docbook-xml
 BUILD_DEPENDS+=	docbook-xsl>=1.79.2:../../textproc/docbook-xsl
+DEPENDS+=	p5-JSON>=4.05:../../converters/p5-JSON
 DEPENDS+=	p5-Parse-Yapp>=1.05:../../devel/p5-Parse-Yapp
 DEPENDS+=	${PYPKGPREFIX}-dns-[0-9]*:../../net/py-dns
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
@@ -160,7 +160,7 @@ SUBST_SED.docbook+=	-e 's,http://docbook.sourceforge.net/release/xsl/current,${P
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Fixing paths.
 SUBST_FILES.paths=	${WRKDIR}/adduser.sh ${WRKDIR}/deluser.sh
-SUBST_FILES.paths+=	source4/heimdal_build/roken.h
+SUBST_FILES.paths+=	third_party/heimdal_build/roken.h
 SUBST_STAGE.paths=	pre-configure
 SUBST_SED.paths+=	-e 's,@PERL@,${PERL5},g'
 SUBST_VARS.paths=	AWK CAT MKTEMP RM PWD_MKDB SH PERL PKG_SYSCONFBASE
