@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.43 2022/03/20 21:53:53 adam Exp $
+@comment $NetBSD: PLIST,v 1.44 2022/07/21 09:35:19 adam Exp $
 bin/cifsdd
 bin/dbwrap_tool
 bin/dumpmscat
@@ -174,6 +174,7 @@ lib/libsmbclient.so.0
 lib/libsmbclient.so.0.7.0
 lib/libsmbconf.so
 lib/libsmbconf.so.0
+lib/libsmbconf.so.0.0.1
 ${PLIST.ldap}lib/libsmbldap.so
 ${PLIST.ldap}lib/libsmbldap.so.2
 ${PLIST.ldap}lib/libsmbldap.so.2.1.0
@@ -264,7 +265,11 @@ ${PYSITELIB}/samba/emulate/traffic_packets.py
 ${PYSITELIB}/samba/forest_update.py
 ${PYSITELIB}/samba/gensec.so
 ${PYSITELIB}/samba/getopt.py
+${PYSITELIB}/samba/gp_cert_auto_enroll_ext.py
+${PYSITELIB}/samba/gp_chromium_ext.py
 ${PYSITELIB}/samba/gp_ext_loader.py
+${PYSITELIB}/samba/gp_firefox_ext.py
+${PYSITELIB}/samba/gp_firewalld_ext.py
 ${PYSITELIB}/samba/gp_gnome_settings_ext.py
 ${PYSITELIB}/samba/gp_msgs_ext.py
 ${PYSITELIB}/samba/gp_parse/__init__.py
@@ -462,6 +467,7 @@ ${PYSITELIB}/samba/tests/krb5/kdc_base_test.py
 ${PYSITELIB}/samba/tests/krb5/kdc_tests.py
 ${PYSITELIB}/samba/tests/krb5/kdc_tgs_tests.py
 ${PYSITELIB}/samba/tests/krb5/ms_kile_client_principal_lookup_tests.py
+${PYSITELIB}/samba/tests/krb5/pac_align_tests.py
 ${PYSITELIB}/samba/tests/krb5/raw_testcase.py
 ${PYSITELIB}/samba/tests/krb5/rfc4120_constants.py
 ${PYSITELIB}/samba/tests/krb5/rfc4120_pyasn1.py
@@ -540,6 +546,7 @@ ${PYSITELIB}/samba/tests/samba_tool/group.py
 ${PYSITELIB}/samba/tests/samba_tool/help.py
 ${PYSITELIB}/samba/tests/samba_tool/join.py
 ${PYSITELIB}/samba/tests/samba_tool/join_lmdb_size.py
+${PYSITELIB}/samba/tests/samba_tool/join_member.py
 ${PYSITELIB}/samba/tests/samba_tool/ntacl.py
 ${PYSITELIB}/samba/tests/samba_tool/ou.py
 ${PYSITELIB}/samba/tests/samba_tool/passwordsettings.py
@@ -572,6 +579,7 @@ ${PYSITELIB}/samba/tests/smb.py
 ${PYSITELIB}/samba/tests/smbd_base.py
 ${PYSITELIB}/samba/tests/smbd_fuzztest.py
 ${PYSITELIB}/samba/tests/source.py
+${PYSITELIB}/samba/tests/source_chars.py
 ${PYSITELIB}/samba/tests/strings.py
 ${PYSITELIB}/samba/tests/subunitrun.py
 ${PYSITELIB}/samba/tests/tdb_util.py
@@ -601,6 +609,7 @@ ${PLIST.ads}lib/samba/bind9/dlz_bind9_11.${SOEXT}
 ${PLIST.ads}lib/samba/bind9/dlz_bind9_12.${SOEXT}
 ${PLIST.ads}lib/samba/bind9/dlz_bind9_14.${SOEXT}
 ${PLIST.ads}lib/samba/bind9/dlz_bind9_16.${SOEXT}
+${PLIST.ads}lib/samba/bind9/dlz_bind9_18.${SOEXT}
 ${PLIST.ads}lib/samba/gensec/krb5.${SOEXT}
 ${PLIST.ads}lib/samba/idmap/ad.${SOEXT}
 lib/samba/idmap/autorid.${SOEXT}
@@ -667,10 +676,12 @@ ${PLIST.ads}lib/samba/private/libHDB-SAMBA4-samba4.so
 lib/samba/private/libLIBWBCLIENT-OLD-samba4.so
 lib/samba/private/libMESSAGING-SEND-samba4.so
 lib/samba/private/libMESSAGING-samba4.so
+lib/samba/private/libREG-FULL-samba4.so
+lib/samba/private/libRPC-SERVER-LOOP-samba4.so
+lib/samba/private/libRPC-WORKER-samba4.so
 lib/samba/private/libaddns-samba4.so
 lib/samba/private/libads-samba4.so
-lib/samba/private/libasn1-samba4.so.8
-lib/samba/private/libasn1-samba4.so.8.0.0
+lib/samba/private/libasn1-samba4.so
 lib/samba/private/libasn1util-samba4.so
 lib/samba/private/libauth-samba4.so
 lib/samba/private/libauth-unix-token-samba4.so
@@ -687,8 +698,7 @@ lib/samba/private/libclidns-samba4.so
 lib/samba/private/libcluster-samba4.so
 lib/samba/private/libcmdline-contexts-samba4.so
 lib/samba/private/libcmdline-samba4.so
-lib/samba/private/libcom_err-samba4.so.0
-lib/samba/private/libcom_err-samba4.so.0.25
+lib/samba/private/libcom-err-samba4.so
 lib/samba/private/libcommon-auth-samba4.so
 ${PLIST.ads}lib/samba/private/libdb-glue-samba4.so
 lib/samba/private/libdbwrap-samba4.so
@@ -707,26 +717,19 @@ lib/samba/private/libgensec-samba4.so
 lib/samba/private/libgpext-samba4.so
 lib/samba/private/libgpo-samba4.so
 lib/samba/private/libgse-samba4.so
-lib/samba/private/libgssapi-samba4.so.2
-lib/samba/private/libgssapi-samba4.so.2.0.0
-lib/samba/private/libhcrypto-samba4.so.5
-lib/samba/private/libhcrypto-samba4.so.5.0.1
-lib/samba/private/libhdb-samba4.so.11
-lib/samba/private/libhdb-samba4.so.11.0.2
-lib/samba/private/libheimbase-samba4.so.1
-lib/samba/private/libheimbase-samba4.so.1.0.0
-lib/samba/private/libheimntlm-samba4.so.1
-lib/samba/private/libheimntlm-samba4.so.1.0.1
+lib/samba/private/libgss-preauth-samba4.so
+lib/samba/private/libgssapi-samba4.so
+lib/samba/private/libhcrypto-samba4.so
+lib/samba/private/libhdb-samba4.so
+lib/samba/private/libheimbase-samba4.so
+lib/samba/private/libheimntlm-samba4.so
 lib/samba/private/libhttp-samba4.so
-lib/samba/private/libhx509-samba4.so.5
-lib/samba/private/libhx509-samba4.so.5.0.0
+lib/samba/private/libhx509-samba4.so
 lib/samba/private/libidmap-samba4.so
 lib/samba/private/libinterfaces-samba4.so
 lib/samba/private/libiov-buf-samba4.so
-lib/samba/private/libkdc-samba4.so.2
-lib/samba/private/libkdc-samba4.so.2.0.0
-lib/samba/private/libkrb5-samba4.so.26
-lib/samba/private/libkrb5-samba4.so.26.0.0
+lib/samba/private/libkdc-samba4.so
+lib/samba/private/libkrb5-samba4.so
 lib/samba/private/libkrb5samba-samba4.so
 lib/samba/private/libldbsamba-samba4.so
 lib/samba/private/liblibcli-lsa3-samba4.so
@@ -750,8 +753,7 @@ lib/samba/private/libprinting-migrate-samba4.so
 ${PLIST.ads}lib/samba/private/libprocess-model-samba4.so
 lib/samba/private/libregistry-samba4.so
 lib/samba/private/libreplace-samba4.so
-lib/samba/private/libroken-samba4.so.19
-lib/samba/private/libroken-samba4.so.19.0.1
+lib/samba/private/libroken-samba4.so
 lib/samba/private/libsamba-cluster-support-samba4.so
 lib/samba/private/libsamba-debug-samba4.so
 lib/samba/private/libsamba-modules-samba4.so
@@ -784,9 +786,7 @@ lib/samba/private/libtrusts-util-samba4.so
 lib/samba/private/libutil-reg-samba4.so
 lib/samba/private/libutil-setid-samba4.so
 lib/samba/private/libutil-tdb-samba4.so
-lib/samba/private/libwinbind-client-samba4.so
-lib/samba/private/libwind-samba4.so.0
-lib/samba/private/libwind-samba4.so.0.0.0
+lib/samba/private/libwind-samba4.so
 lib/samba/private/libxattr-tdb-samba4.so
 ${PLIST.ads}lib/samba/process_model/prefork.${SOEXT}
 ${PLIST.ads}lib/samba/process_model/standard.${SOEXT}
@@ -841,7 +841,16 @@ lib/samba/vfs/virusfilter.${SOEXT}
 lib/samba/vfs/widelinks.${SOEXT}
 lib/samba/vfs/worm.${SOEXT}
 lib/samba/vfs/xattr_tdb.${SOEXT}
+libexec/samba/rpcd_classic
+libexec/samba/rpcd_epmapper
+libexec/samba/rpcd_fsrvp
+libexec/samba/rpcd_lsad
+libexec/samba/rpcd_mdssvc
+libexec/samba/rpcd_rpcecho
+libexec/samba/rpcd_spoolss
+libexec/samba/rpcd_winreg
 libexec/samba/samba-bgqd
+libexec/samba/samba-dcerpcd
 ${PLIST.cups}libexec/samba/smbspool_krb5_wrapper
 man/man1/dbwrap_tool.1
 man/man1/gentest.1
@@ -871,7 +880,6 @@ man/man1/smbtar.1
 man/man1/smbtorture.1
 man/man1/smbtree.1
 man/man1/testparm.1
-man/man1/vfstest.1
 man/man1/wbinfo.1
 man/man5/lmhosts.5
 ${PLIST.pam}man/man5/pam_winbind.conf.5
@@ -899,6 +907,7 @@ man/man8/nmbd.8
 ${PLIST.pam}man/man8/pam_winbind.8
 man/man8/pdbedit.8
 man/man8/samba-bgqd.8
+man/man8/samba-dcerpcd.8
 man/man8/samba-gpupdate.8
 man/man8/samba-regedit.8
 man/man8/samba-tool.8
@@ -919,6 +928,7 @@ man/man8/vfs_commit.8
 man/man8/vfs_crossrename.8
 man/man8/vfs_default_quota.8
 man/man8/vfs_dirsort.8
+man/man8/vfs_expand_msdfs.8
 man/man8/vfs_extd_audit.8
 man/man8/vfs_fake_perms.8
 man/man8/vfs_fruit.8
