@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3479 2022/07/21 13:53:03 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3480 2022/07/21 14:08:46 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5233,3 +5233,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added x11/wxGTK32 version 3.2.0 [wiz 2022-07-21]
 	Updated archivers/php-pecl-zip to 1.21.0 [taca 2022-07-21]
 	Updated devel/nss to 3.81 [wiz 2022-07-21]
+	Updated chat/py-matrix-common to 1.2.1 [gdt 2022-07-21]
