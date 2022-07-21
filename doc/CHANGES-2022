@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3487 2022/07/21 19:00:36 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.3488 2022/07/21 19:04:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5251,3 +5251,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/patchelf to 0.15.0 [fcambus 2022-07-21]
 	Updated devel/py-frozendict to 2.3.3 [gdt 2022-07-21]
 	Updated chat/matrix-synapse to 1.63.1 [gdt 2022-07-21]
+	Updated net/ncdc to 1.23 [wiz 2022-07-21]
