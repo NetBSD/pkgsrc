@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2022/06/30 11:18:19 nia Exp $
+# $NetBSD: Makefile,v 1.12 2022/07/21 08:58:00 adam Exp $
 
-DISTNAME=	tevent-0.11.0
-PKGREVISION=	2
+DISTNAME=	tevent-0.12.1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.samba.org/ftp/tevent/
 
@@ -19,9 +18,6 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_TOOLS+=		pkg-config
 HAS_CONFIGURE=		yes
-CONFIG_SHELL=		${PYTHONBIN}
-CONFIGURE_SCRIPT=	${WRKSRC}/buildtools/bin/waf
-CONFIGURE_ARGS+=	configure
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	--abi-check-disable
 CONFIGURE_ARGS+=	--disable-symbol-versions
