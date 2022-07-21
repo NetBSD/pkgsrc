@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2021/07/05 20:37:11 fcambus Exp $
+# $NetBSD: Makefile,v 1.15 2022/07/21 17:19:37 fcambus Exp $
 
-DISTNAME=	ncdu-1.16
+DISTNAME=	ncdu-1.17
 CATEGORIES=	sysutils
 MASTER_SITES=	https://dev.yorhel.nl/download/
 
