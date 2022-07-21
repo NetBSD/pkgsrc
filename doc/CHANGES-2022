@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3489 2022/07/21 19:13:59 tnn Exp $
+$NetBSD: CHANGES-2022,v 1.3490 2022/07/21 23:56:56 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5253,3 +5253,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated chat/matrix-synapse to 1.63.1 [gdt 2022-07-21]
 	Updated net/ncdc to 1.23 [wiz 2022-07-21]
 	Updated databases/prometheus to 2.37.0 [tnn 2022-07-21]
+	Added www/firefox102 version 102.0 [nia 2022-07-21]
