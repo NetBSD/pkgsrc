@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2021/12/21 15:00:41 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.24 2022/07/21 09:10:12 jperkin Exp $
 bin/rspamadm
 bin/rspamadm-${PKGVERSION}
 bin/rspamc
@@ -33,6 +33,7 @@ share/examples/rspamd/modules.d/antivirus.conf
 share/examples/rspamd/modules.d/arc.conf
 share/examples/rspamd/modules.d/asn.conf
 share/examples/rspamd/modules.d/aws_s3.conf
+share/examples/rspamd/modules.d/bimi.conf
 share/examples/rspamd/modules.d/chartable.conf
 share/examples/rspamd/modules.d/clickhouse.conf
 share/examples/rspamd/modules.d/dcc.conf
@@ -181,6 +182,7 @@ share/rspamd/lualib/lua_mime_types.lua
 share/rspamd/lualib/lua_redis.lua
 share/rspamd/lualib/lua_scanners/avast.lua
 share/rspamd/lualib/lua_scanners/clamav.lua
+share/rspamd/lualib/lua_scanners/cloudmark.lua
 share/rspamd/lualib/lua_scanners/common.lua
 share/rspamd/lualib/lua_scanners/dcc.lua
 share/rspamd/lualib/lua_scanners/fprot.lua
@@ -229,6 +231,7 @@ share/rspamd/lualib/rspamadm/grep.lua
 share/rspamd/lualib/rspamadm/keypair.lua
 share/rspamd/lualib/rspamadm/mime.lua
 share/rspamd/lualib/rspamadm/neural_test.lua
+share/rspamd/lualib/rspamadm/publicsuffix.lua
 share/rspamd/lualib/rspamadm/rescore.lua
 share/rspamd/lualib/rspamadm/stat_convert.lua
 share/rspamd/lualib/rspamadm/statistics_dump.lua
@@ -240,6 +243,7 @@ share/rspamd/plugins/arc.lua
 share/rspamd/plugins/asn.lua
 share/rspamd/plugins/aws_s3.lua
 share/rspamd/plugins/bayes_expiry.lua
+share/rspamd/plugins/bimi.lua
 share/rspamd/plugins/clickhouse.lua
 share/rspamd/plugins/clustering.lua
 share/rspamd/plugins/dcc.lua
@@ -307,6 +311,7 @@ share/rspamd/www/browserconfig.xml
 share/rspamd/www/css/FooTable.Glyphicons.css
 share/rspamd/www/css/bootstrap.min.css
 share/rspamd/www/css/d3evolution.css
+share/rspamd/www/css/d3pie.css
 share/rspamd/www/css/font-glyphicons.css
 share/rspamd/www/css/footable.standalone.min.css
 share/rspamd/www/css/nprogress.css
