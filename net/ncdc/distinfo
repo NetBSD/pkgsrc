@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:06:05 nia Exp $
+$NetBSD: distinfo,v 1.9 2022/07/21 19:03:51 wiz Exp $
 
-BLAKE2s (ncdc-1.22.1.tar.gz) = 9c78e50637beb97d8def32b88ba2cc8be80c10f2a8f9690b30c950b9ff56765e
-SHA512 (ncdc-1.22.1.tar.gz) = b084ee28a799705009600c450016719ebb992cb0bf7e026513f4cd7e93b2566e7bf8e352eec92f3d69612ce06c930587759d7f7d20d14ee9fe1d5c4b8c4393af
-Size (ncdc-1.22.1.tar.gz) = 371572 bytes
+BLAKE2s (ncdc-1.23.tar.gz) = fe30a4614953dd8947e99b5b7d65008e2acb3cbb772b406273850cc10c32389f
+SHA512 (ncdc-1.23.tar.gz) = c1b2098df517631a64b24efaeb328a796ed716dca08b61248bb39bba866055ce1e017f33cc594197824476ec65ada53b13bfb56878b5b8aa330288017ad15df2
+Size (ncdc-1.23.tar.gz) = 378384 bytes
