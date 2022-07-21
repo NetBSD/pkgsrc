@@ -1,11 +1,11 @@
-$NetBSD: patch-source4_heimdal_include_heim__threads.h,v 1.2 2021/04/29 15:21:16 taca Exp $
+$NetBSD: patch-third__party_heimdal_include_heim__threads.h,v 1.1 2022/07/21 09:35:19 adam Exp $
 
 On SunOS (OpenSolaris), pthread_mutex_init() expects a zeroed-out
 mutex data structure
 
---- source4/heimdal/include/heim_threads.h.orig	2019-01-15 10:07:00.000000000 +0000
-+++ source4/heimdal/include/heim_threads.h
-@@ -87,7 +87,7 @@
+--- third_party/heimdal/include/heim_threads.h.orig	2022-01-24 10:27:00.000000000 +0000
++++ third_party/heimdal/include/heim_threads.h
+@@ -110,7 +110,7 @@ typedef unsigned long HEIM_PRIV_thread_k
  
  #define HEIMDAL_MUTEX pthread_mutex_t
  #define HEIMDAL_MUTEX_INITIALIZER PTHREAD_MUTEX_INITIALIZER

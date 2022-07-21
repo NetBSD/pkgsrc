@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.77 2022/04/25 16:25:02 jperkin Exp $
+$NetBSD: distinfo,v 1.78 2022/07/21 09:35:19 adam Exp $
 
-BLAKE2s (samba-4.15.6.tar.gz) = b11fd56c12dfbb3e0dc3e7b5e25b73f964b3b26afcc504293f2050c9bb9b0cfd
-SHA512 (samba-4.15.6.tar.gz) = cd193d74173831449abc24f1769f0af2dabd5dd8a65507af7b09fde6dd5780d30336d59600add939b044cfa5781f357ec9192c7fed1a1e7278812b6c07b824e2
-Size (samba-4.15.6.tar.gz) = 19290189 bytes
+BLAKE2s (samba-4.16.3.tar.gz) = 465d98b2aaec2d305d81e38d6d61de0b1f5061802aeba284a9df52e83f0ee05c
+SHA512 (samba-4.16.3.tar.gz) = 8f082654251e6a3284ba8f411c55b854dc00a9c6b07c486ca01f53af2b6ec09d34c21d66a2a1afc7a8c62a9f715c643c1a22fc7688699d23f8fcafe6995b5ebd
+Size (samba-4.16.3.tar.gz) = 30593657 bytes
 SHA1 (patch-buildtools_wafsamba_samba__conftests.py) = d927db17124d2bb5b382885e70a41f84c3929926
 SHA1 (patch-buildtools_wafsamba_samba__install.py) = d801340617da325e3bb70a90350e45cc8e383c2d
 SHA1 (patch-buildtools_wafsamba_samba__pidl.py) = e4c0ed3dacfcf5613a5b397b3c6cf88509497da7
@@ -20,19 +20,20 @@ SHA1 (patch-lib_tevent_wscript) = fbbe2024096b57d651d90064f53489a974db9d7a
 SHA1 (patch-lib_util_charset_charset__macosxfs.c) = 9772fc52fff48aec2a7e279223f73bb791217c26
 SHA1 (patch-lib_util_smb__threads.h) = 817591a2b69f31ac29497a2006fe21f0b4b0aaea
 SHA1 (patch-lib_util_tfork.c) = a9acb5561c5bba76450c48904a22019c8b14cbec
+SHA1 (patch-lib_util_time.h) = 56e3d418d492a029eda03c82397f47c7f0cda6ba
 SHA1 (patch-libcli_dns_wscript__build) = 4103a144aa1bb4662fd7a62270941f1a3d01fe89
 SHA1 (patch-nsswitch_stress-nss-libwbclient.c) = c546f00184b0d22b6c150e210962cdfc6fc12df2
 SHA1 (patch-nsswitch_winbind__nss__netbsd.c) = 2773ec9269d1fe0d7ce7ed220f6a7122d187fabe
-SHA1 (patch-nsswitch_wscript__build) = e8a6251e031ffa13d6347fade8891f7afd65d3eb
+SHA1 (patch-nsswitch_wscript__build) = 5be3e07f8a34ae3e2f68126eb6f05f8b65f5be2f
 SHA1 (patch-source3_libsmb_pylibsmb.c) = 962bb35b140ec11c0035ffa7fb83c9143fa5615f
-SHA1 (patch-source3_modules_vfs__solarisacl.c) = 087db5db78bce27a71caee5c78eb4f9aba81b428
+SHA1 (patch-source3_modules_vfs__solarisacl.c) = 1a56006393d08d9977c60e75fddfcf501e2233f7
 SHA1 (patch-source3_modules_vfs__solarisacl.h) = 11f8664641a14fd83d78b1a7e10056a77b7b634f
 SHA1 (patch-source3_printing_samba-bgqd.c) = e9b83c35fbb24c702650d745b82fe6c9efbcdf76
 SHA1 (patch-source3_smbd_open.c) = 002f26f77dad54617bf9c0fe4fa12f093ef3b66c
 SHA1 (patch-source3_smbd_process.c) = 3a6f9682aca6473e364d0be0f601774df4fd1296
 SHA1 (patch-source3_utils_net__offlinejoin.c) = 773a4686d5e2a7eaebf9430529708e8318d45c77
 SHA1 (patch-source4_dsdb_samdb_ldb__modules_wscript__build__server) = 47f55ec16b667a0a4d38de5ac89a117f2ac8f898
-SHA1 (patch-source4_heimdal__build_roken.h) = c9fbcb1cf505022ae1483774ed429d74ac091253
-SHA1 (patch-source4_heimdal_include_heim__threads.h) = 1108fe804f235c72a93bcda0ec14454828ed030f
 SHA1 (patch-source4_scripting_wsript_build) = 816d44f48b6cbc6d999995e00eaea1d2dc477159
 SHA1 (patch-source4_utils_oLschema2ldif_wscript__build) = cbba15c2c0e1eee9d07424510a96b596f46992b4
+SHA1 (patch-third__party_heimdal__build_roken.h) = 59d5523676fe8c0315e969247f26b4ea2f900402
+SHA1 (patch-third__party_heimdal_include_heim__threads.h) = 5ad13530cf9688e46f9ad487bb0fddab668c8276
