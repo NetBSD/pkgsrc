@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3473 2022/07/21 09:38:49 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3474 2022/07/21 10:17:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5227,3 +5227,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/tevent to 0.12.1 [adam 2022-07-21]
 	Updated net/samba4 to 4.16.3 [adam 2022-07-21]
 	Updated devel/py-dotenv to 0.20.0 [adam 2022-07-21]
+	Updated devel/gmp to 6.2.1nb3 [wiz 2022-07-21]
