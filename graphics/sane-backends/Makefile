@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.81 2022/07/14 23:46:24 dholland Exp $
+# $NetBSD: Makefile,v 1.82 2022/07/21 11:04:34 nia Exp $
 
-PKGREVISION=	3
+PKGREVISION=	4
 .include "Makefile.common"
 MASTER_SITES=	https://gitlab.com/sane-project/backends/uploads/104f09c07d35519cc8e72e604f11643f/
 COMMENT=	API for access to scanners, digital cameras, frame grabbers, etc
@@ -11,7 +11,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 USE_TOOLS+=		msgfmt msgmerge pkg-config
 USE_PKGLOCALEDIR=	YES
 
-PYTHON_VERSIONS_ACCEPTED=	27
+PYTHON_FOR_BUILD_ONLY=	tool
 
 # c++11 is needed for genesys backend
 USE_LANGUAGES=		c c++11
