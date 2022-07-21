@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2022/06/30 11:18:08 nia Exp $
+# $NetBSD: Makefile,v 1.28 2022/07/21 08:56:47 adam Exp $
 
-# Before updating, make sure net/samba4 supports the newer version.
-DISTNAME=	ldb-2.4.2
-PKGREVISION=	1
+DISTNAME=	ldb-2.5.1
 CATEGORIES=	databases
 MASTER_SITES=	https://www.samba.org/ftp/ldb/
 
@@ -16,11 +14,10 @@ BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
+.include "../../mk/bsd.prefs.mk"
+
 USE_TOOLS+=		gmake pkg-config
 HAS_CONFIGURE=		yes
-CONFIG_SHELL=		${PYTHONBIN}
-CONFIGURE_SCRIPT=	${WRKSRC}/buildtools/bin/waf
-CONFIGURE_ARGS+=	configure
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	--abi-check-disable
 CONFIGURE_ARGS+=	--disable-symbol-versions
@@ -37,8 +34,6 @@ USE_GCC_RUNTIME=	yes
 PY_PATCHPLIST=		yes
 REPLACE_PYTHON+=	buildtools/bin/waf
 MAKE_FLAGS+=		WAF_BINARY=${PYTHONBIN}\ ${WRKSRC}/buildtools/bin/waf
-
-.include "../../mk/bsd.prefs.mk"
 
 .if ${SHLIB_TYPE} == "dylib"
 PLIST_SUBST+=	SOEXT=dylib
