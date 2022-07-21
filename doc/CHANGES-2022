@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3476 2022/07/21 11:37:39 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3477 2022/07/21 11:39:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5230,3 +5230,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/gmp to 6.2.1nb3 [wiz 2022-07-21]
 	Updated net/libfilezilla to 0.38.1 [wiz 2022-07-21]
 	Updated net/filezilla to 3.60.1 [wiz 2022-07-21]
+	Added x11/wxGTK32 version 3.2.0 [wiz 2022-07-21]
