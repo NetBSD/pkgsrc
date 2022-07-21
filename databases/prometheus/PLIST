@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2022/04/11 18:53:43 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2022/07/21 19:12:58 tnn Exp $
 bin/prometheus
 bin/promtool
 share/examples/prometheus/console_libraries/menu.lib
@@ -17,11 +17,11 @@ share/prometheus/static/react/asset-manifest.json
 share/prometheus/static/react/favicon.ico
 share/prometheus/static/react/index.html
 share/prometheus/static/react/manifest.json
-share/prometheus/static/react/static/css/main.faad45b4.css
-share/prometheus/static/react/static/css/main.faad45b4.css.map
-share/prometheus/static/react/static/js/main.8ea0e5d3.js
-share/prometheus/static/react/static/js/main.8ea0e5d3.js.LICENSE.txt
-share/prometheus/static/react/static/js/main.8ea0e5d3.js.map
+share/prometheus/static/react/static/css/main.ec237bfc.css
+share/prometheus/static/react/static/css/main.ec237bfc.css.map
+share/prometheus/static/react/static/js/main.4716abbc.js
+share/prometheus/static/react/static/js/main.4716abbc.js.LICENSE.txt
+share/prometheus/static/react/static/js/main.4716abbc.js.map
 share/prometheus/static/react/static/media/codicon.b3726f0165bf67ac6849.ttf
 share/prometheus/static/react/static/media/index.cd351d7c31d0d3fccf96.cjs
 share/prometheus/static/react/static/media/prometheus_logo_grey.3cf697e5443028ca5e5255b93c7906c5.svg
