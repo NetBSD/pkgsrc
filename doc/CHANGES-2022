@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3481 2022/07/21 15:09:44 taca Exp $
+$NetBSD: CHANGES-2022,v 1.3482 2022/07/21 15:18:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5242,3 +5242,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated mail/postfix-pcre to 3.7.2 [taca 2022-07-21]
 	Updated mail/postfix-pgsql to 3.7.2 [taca 2022-07-21]
 	Updated mail/postfix-sqlite to 3.7.2 [taca 2022-07-21]
+	Updated mail/roundcube to 1.5.3 [taca 2022-07-21]
+	Updated mail/roundcube-plugin-enigma to 1.5.3 [taca 2022-07-21]
+	Updated mail/roundcube-plugin-password to 1.5.3 [taca 2022-07-21]
+	Updated mail/roundcube-plugin-zipdownload to 1.5.3 [taca 2022-07-21]
