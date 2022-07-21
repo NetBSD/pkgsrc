@@ -1,0 +1,15 @@
+$NetBSD: patch-build_moz.configure_rust.configure,v 1.1 2022/07/21 23:56:39 nia Exp $
+
+* Do not match rumprun toolchain for NetBSD,
+  narrowed should be one not two.
+
+--- build/moz.configure/rust.configure.orig	2020-12-03 23:12:39.000000000 +0000
++++ build/moz.configure/rust.configure
+@@ -371,6 +371,7 @@ def detect_rustc_target(
+             for c in candidates
+             if c.target.raw_os == host_or_target.raw_os
+             and c.target.raw_cpu == host_or_target.raw_cpu
++            and not c.rust_target.endswith("-rumprun-netbsd")
+         ]
+         if len(narrowed) == 1:
+             return narrowed[0].rust_target

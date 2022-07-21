@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1632 2022/07/20 22:58:17 wiz Exp $
+# $NetBSD: Makefile,v 1.1633 2022/07/21 23:56:38 nia Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -117,6 +117,8 @@ SUBDIR+=	ffproxy
 SUBDIR+=	firefox
 SUBDIR+=	firefox-esr
 SUBDIR+=	firefox-l10n
+SUBDIR+=	firefox102
+SUBDIR+=	firefox102-l10n
 SUBDIR+=	firefox52
 SUBDIR+=	firefox52-l10n
 SUBDIR+=	firefox68
