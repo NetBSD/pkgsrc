@@ -1,4 +1,4 @@
-$NetBSD: patch-ai,v 1.44 2022/06/11 10:27:04 bsiegert Exp $
+$NetBSD: patch-ai,v 1.45 2022/07/21 15:08:39 taca Exp $
 
 1) Add shlib definitions for NetBSD 5; the build system must be
 hard-coded per OS per version.  Not yet reported upstream.
@@ -9,9 +9,9 @@ hard-coded per OS per version.  Not yet reported upstream.
 
 4) Add blocklist(3) support.
 
---- makedefs.orig	2021-04-24 20:49:37.000000000 +0000
+--- makedefs.orig	2022-01-23 20:53:41.000000000 +0000
 +++ makedefs
-@@ -309,6 +309,15 @@ case "$SYSTEM.$RELEASE" in
+@@ -339,6 +339,15 @@ case "$SYSTEM.$RELEASE" in
  		: ${SHLIB_ENV="LD_LIBRARY_PATH=`pwd`/lib"}
  		: ${PLUGIN_LD="${CC} -shared"}
  		;;
@@ -27,7 +27,7 @@ hard-coded per OS per version.  Not yet reported upstream.
   DragonFly.*)	SYSTYPE=DRAGONFLY
  		;;
    OpenBSD.2*)	SYSTYPE=OPENBSD2
-@@ -337,25 +346,7 @@ case "$SYSTEM.$RELEASE" in
+@@ -376,49 +385,7 @@ case "$SYSTEM.$RELEASE" in
  		;;
    ekkoBSD.1*)	SYSTYPE=EKKOBSD1
  		;;
@@ -48,13 +48,37 @@ hard-coded per OS per version.  Not yet reported upstream.
 -		: ${SHLIB_RPATH='-Wl,-rpath,${SHLIB_DIR}'}
 -		: ${SHLIB_ENV="LD_LIBRARY_PATH=`pwd`/lib"}
 -		: ${PLUGIN_LD="${CC-gcc} -shared"}
--               ;;
--   NetBSD.7*)  SYSTYPE=NETBSD7
+-		;;
+-   NetBSD.7*)	SYSTYPE=NETBSD7
+-		: ${SHLIB_SUFFIX=.so}
+-		: ${SHLIB_CFLAGS=-fPIC}
+-		: ${SHLIB_LD="${CC-gcc} -shared"' -Wl,-soname,${LIB}'}
+-		: ${SHLIB_RPATH='-Wl,-rpath,${SHLIB_DIR}'}
+-		: ${SHLIB_ENV="LD_LIBRARY_PATH=`pwd`/lib"}
+-		: ${PLUGIN_LD="${CC-gcc} -shared"}
+-		;;
+-   NetBSD.8*)	SYSTYPE=NETBSD8
+-		: ${SHLIB_SUFFIX=.so}
+-		: ${SHLIB_CFLAGS=-fPIC}
+-		: ${SHLIB_LD="${CC-gcc} -shared"' -Wl,-soname,${LIB}'}
+-		: ${SHLIB_RPATH='-Wl,-rpath,${SHLIB_DIR}'}
+-		: ${SHLIB_ENV="LD_LIBRARY_PATH=`pwd`/lib"}
+-		: ${PLUGIN_LD="${CC-gcc} -shared"}
+-		;;
+-   NetBSD.9*)	SYSTYPE=NETBSD9
+-		: ${SHLIB_SUFFIX=.so}
+-		: ${SHLIB_CFLAGS=-fPIC}
+-		: ${SHLIB_LD="${CC-gcc} -shared"' -Wl,-soname,${LIB}'}
+-		: ${SHLIB_RPATH='-Wl,-rpath,${SHLIB_DIR}'}
+-		: ${SHLIB_ENV="LD_LIBRARY_PATH=`pwd`/lib"}
+-		: ${PLUGIN_LD="${CC-gcc} -shared"}
+-		;;
+-   NetBSD.10*)	SYSTYPE=NETBSD10
 +   NetBSD*)	SYSTYPE=NETBSD
  		: ${SHLIB_SUFFIX=.so}
  		: ${SHLIB_CFLAGS=-fPIC}
  		: ${SHLIB_LD="${CC-gcc} -shared"' -Wl,-soname,${LIB}'}
-@@ -434,13 +425,6 @@ case "$SYSTEM.$RELEASE" in
+@@ -493,13 +460,6 @@ case "$SYSTEM.$RELEASE" in
  		esac
  		;;
     ULTRIX.4*)	SYSTYPE=ULTRIX4
@@ -68,7 +92,7 @@ hard-coded per OS per version.  Not yet reported upstream.
  		for l in syslog resolv; do
  		    if [ -f /usr/local/lib/lib$l.a ]; then
  			SYSLIBS="$SYSLIBS -l$l"
-@@ -482,33 +466,8 @@ case "$SYSTEM.$RELEASE" in
+@@ -541,33 +501,8 @@ case "$SYSTEM.$RELEASE" in
  		esac;;
  		# Tested with RedHat 3.03 on 20020729.
      Linux.1*)	SYSTYPE=LINUX1
@@ -102,7 +126,7 @@ hard-coded per OS per version.  Not yet reported upstream.
  		for name in nsl resolv $GDBM_LIBS
  		do
  		    for lib in /usr/lib64 /lib64 /usr/lib /lib
-@@ -608,24 +567,6 @@ EOF
+@@ -667,24 +602,6 @@ EOF
  		;;
       GNU.0*|GNU/kFreeBSD.[567]*)
  		SYSTYPE=GNU0
@@ -127,7 +151,7 @@ hard-coded per OS per version.  Not yet reported upstream.
  		for name in nsl resolv
  		do
  		    for lib in /usr/lib64 /lib64 /usr/lib /lib
-@@ -656,26 +597,14 @@ EOF
+@@ -715,26 +632,14 @@ EOF
  HP-UX.A.09.*)	SYSTYPE=HPUX9
  		SYSLIBS=-ldbm
  		CCARGS="$CCARGS -DMISSING_USLEEP -DNO_SNPRINTF"
@@ -154,7 +178,7 @@ hard-coded per OS per version.  Not yet reported upstream.
  		;;
  ReliantUNIX-?.5.43) SYSTYPE=ReliantUnix543
  		RANLIB=echo
-@@ -717,12 +646,12 @@ ReliantUNIX-?.5.43) SYSTYPE=ReliantUnix5
+@@ -776,12 +681,12 @@ ReliantUNIX-?.5.43) SYSTYPE=ReliantUnix5
  		esac
  		: ${SHLIB_CFLAGS=-fPIC}
  		: ${SHLIB_SUFFIX=.dylib}
@@ -169,7 +193,7 @@ hard-coded per OS per version.  Not yet reported upstream.
  		;;
      dcosx.1*)	SYSTYPE=DCOSX1
  		RANLIB=echo
-@@ -746,6 +675,21 @@ ReliantUNIX-?.5.43) SYSTYPE=ReliantUnix5
+@@ -805,6 +710,21 @@ ReliantUNIX-?.5.43) SYSTYPE=ReliantUnix5
  esac
  
  #
