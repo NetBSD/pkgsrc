@@ -1,0 +1,57 @@
+$NetBSD: patch-toolkit_moz.configure,v 1.1 2022/07/21 23:56:39 nia Exp $
+
+* Add Sun audio support and enable for NetBSD and SunOS by default.
+* Enable ALSA for NetBSD too.
+
+--- toolkit/moz.configure.orig	2022-04-28 23:01:47.000000000 +0000
++++ toolkit/moz.configure
+@@ -198,6 +198,10 @@ def audio_backends_default(target):
+         return ("sndio",)
+     elif target.os == "OSX":
+         return ("audiounit",)
++    elif target.os == "NetBSD":
++        return ("sunaudio",)
++    elif target.os == "SunOS":
++        return ("sunaudio",)
+     elif target.os == "WINNT":
+         return ("wasapi",)
+     else:
+@@ -216,6 +220,7 @@ option(
+         "oss",
+         "pulseaudio",
+         "sndio",
++        "sunaudio",
+         "wasapi",
+     ),
+     default=audio_backends_default,
+@@ -236,6 +241,7 @@ def imply_alsa(values, target):
+         any("alsa" in value for value in values)
+         and target.kernel != "Linux"
+         and target.os != "FreeBSD"
++        and target.os != "NetBSD"
+     ):
+         die("Cannot enable ALSA on %s", target.os)
+     return any("alsa" in value for value in values) or None
+@@ -290,6 +296,13 @@ def imply_sndio(values, target):
+         die("Cannot enable sndio on %s", target.os)
+     return any("sndio" in value for value in values) or None
+ 
++@depends("--enable-audio-backends", target)
++def imply_sunaudio(values, target):
++    if any("sunaudio" in value for value in values) and (
++        target.os != "NetBSD" and target.os != "SunOS"
++    ):
++        die("Cannot enable sunaudio on %s", target.os)
++    return any("sunaudio" in value for value in values) or None
+ 
+ @depends("--enable-audio-backends", target)
+ def imply_wasapi(values, target):
+@@ -314,6 +327,8 @@ imply_option("--enable-pulseaudio", impl
+ 
+ imply_option("--enable-sndio", imply_sndio, reason="--enable-audio-backends")
+ 
++set_config("MOZ_SUNAUDIO", imply_sunaudio, when="--enable-audio-backends")
++
+ set_config("MOZ_WASAPI", imply_wasapi, when="--enable-audio-backends")
+ 
+ # ALSA cubeb backend
