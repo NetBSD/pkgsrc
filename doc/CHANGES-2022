@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3478 2022/07/21 13:22:22 taca Exp $
+$NetBSD: CHANGES-2022,v 1.3479 2022/07/21 13:53:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5232,3 +5232,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/filezilla to 3.60.1 [wiz 2022-07-21]
 	Added x11/wxGTK32 version 3.2.0 [wiz 2022-07-21]
 	Updated archivers/php-pecl-zip to 1.21.0 [taca 2022-07-21]
+	Updated devel/nss to 3.81 [wiz 2022-07-21]
