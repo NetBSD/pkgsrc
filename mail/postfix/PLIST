@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2020/01/28 08:16:51 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.33 2022/07/21 15:08:39 taca Exp $
 bin/mailq
 bin/newaliases
 lib/postfix/libpostfix-dns.so
@@ -137,6 +137,7 @@ share/doc/postfix/ADDRESS_REWRITING_README
 share/doc/postfix/ADDRESS_VERIFICATION_README
 share/doc/postfix/BACKSCATTER_README
 share/doc/postfix/BASIC_CONFIGURATION_README
+share/doc/postfix/BDAT_README
 share/doc/postfix/BUILTIN_FILTER_README
 share/doc/postfix/CDB_README
 share/doc/postfix/COMPATIBILITY_README
@@ -156,6 +157,7 @@ share/doc/postfix/LINUX_README
 share/doc/postfix/LMDB_README
 share/doc/postfix/LOCAL_RECIPIENT_README
 share/doc/postfix/MAILDROP_README
+share/doc/postfix/MAILLOG_README
 share/doc/postfix/MEMCACHE_README
 share/doc/postfix/MILTER_README
 share/doc/postfix/MULTI_INSTANCE_README
@@ -165,6 +167,7 @@ share/doc/postfix/OVERVIEW
 share/doc/postfix/PACKAGE_README
 share/doc/postfix/PCRE_README
 share/doc/postfix/PGSQL_README
+share/doc/postfix/POSTSCREEN_3_5_README
 share/doc/postfix/POSTSCREEN_README
 share/doc/postfix/QSHAPE_README
 share/doc/postfix/RELEASE_NOTES
@@ -174,6 +177,7 @@ share/doc/postfix/SCHEDULER_README
 share/doc/postfix/SMTPD_ACCESS_README
 share/doc/postfix/SMTPD_POLICY_README
 share/doc/postfix/SMTPD_PROXY_README
+share/doc/postfix/SMTPUTF8_README
 share/doc/postfix/SOHO_README
 share/doc/postfix/SQLITE_README
 share/doc/postfix/STANDARD_CONFIGURATION_README
@@ -203,7 +207,5 @@ share/examples/postfix/relocated
 ${PLIST.csasl}share/examples/postfix/smtpd.conf
 share/examples/postfix/transport
 share/examples/postfix/virtual
-@pkgdir var/spool/postfix
-@pkgdir var/db/postfix
 @pkgdir libexec/postfix/postfix-files.d
 @pkgdir libexec/postfix/dynamicmaps.cf.d
