@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST.gtk3,v 1.1 2022/07/21 11:39:21 wiz Exp $
+lib/wx/3.2/web-extensions/webkit2_extu-3.2.so
+lib/wx/config/gtk3-unicode-3.2
+lib/wx/include/gtk3-unicode-3.2/wx/setup.h
