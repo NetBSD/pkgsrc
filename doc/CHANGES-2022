@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3484 2022/07/21 17:19:48 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.3485 2022/07/21 17:44:31 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5248,3 +5248,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated mail/roundcube-plugin-zipdownload to 1.5.3 [taca 2022-07-21]
 	Updated chat/matrix-synapse to 1.62.0 [gdt 2022-07-21]
 	Updated sysutils/ncdu to 1.17 [fcambus 2022-07-21]
+	Updated devel/patchelf to 0.15.0 [fcambus 2022-07-21]
