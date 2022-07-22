@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3495 2022/07/22 08:17:12 nia Exp $
+$NetBSD: CHANGES-2022,v 1.3496 2022/07/22 08:35:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5262,3 +5262,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/lemon to 1.0.3.39.2 [adam 2022-07-22]
 	Updated www/firefox91 to 91.11.0 [nia 2022-07-22]
 	Updated www/firefox91-l10n to 91.11.0 [nia 2022-07-22]
+	Updated devel/gperftools to 2.10 [adam 2022-07-22]
+	Updated benchmarks/google-benchmark to 1.6.2 [adam 2022-07-22]
