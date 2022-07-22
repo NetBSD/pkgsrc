@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3499 2022/07/22 13:43:56 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3500 2022/07/22 20:19:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5267,3 +5267,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/appstream-glib to 0.7.18nb5 [wiz 2022-07-22]
 	Updated graphics/graphviz to 5.0.0 [micha 2022-07-22]
 	Updated graphics/libwmf to 0.2.8.4nb22 [wiz 2022-07-22]
+	Added graphics/libjxl version 0.6.1 [wiz 2022-07-22]
