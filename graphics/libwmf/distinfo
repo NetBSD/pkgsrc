@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.23 2021/10/26 10:46:30 nia Exp $
+$NetBSD: distinfo,v 1.24 2022/07/22 13:43:46 wiz Exp $
 
 BLAKE2s (libwmf-0.2.8.4.tar.gz) = e3eb4ff4d57da5b13f40a8c9ba0e847099de8994b25451bc6b931831cd28d97d
 SHA512 (libwmf-0.2.8.4.tar.gz) = d98df8e76a52245487b13e5ab3d2fbba9d246f97ee04a7344c0e5861bb2d0f990fc6d662dbd849ce621768b06eaebd4270fb34bec4ee004334a98b14ba6044a5
 Size (libwmf-0.2.8.4.tar.gz) = 2169375 bytes
 SHA1 (patch-aa) = e687f9f8c20e7a9b1ed4718c8d37b7407658c52c
-SHA1 (patch-ad) = b74be16c5da490394b86403009f5f35d80ba4bfa
+SHA1 (patch-ad) = dc16568018e244a211d6337cb26d3fb0f5534d52
 SHA1 (patch-ae) = f5cbb60757261aaf6084e9fcf16f9074b3013538
 SHA1 (patch-src_extra_gd_gd.c) = 4c00b5625cd054313c8780ed0fc4fb65520258a2
 SHA1 (patch-src_extra_gd_gd_gd.c) = 8678d62d2b1bbb5ee5d71c8e12e5f865ace98fdb
