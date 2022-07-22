@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.6 2019/11/02 22:54:28 rillig Exp $
+# $NetBSD: builtin.mk,v 1.7 2022/07/22 15:04:17 wiz Exp $
 
 BUILTIN_PKG:=	xz
 
@@ -115,7 +115,7 @@ override-liblzma-pkgconfig:
 	${RUN}						\
 	${MKDIR} ${BLKDIR_PKGCFG};			\
 	{						\
-	${ECHO} "prefix=${LIBLZMA_PREFIX}";		\
+	${ECHO} "prefix=${BUILDLINK_PREFIX.xz}";		\
 	${ECHO} "exec_prefix=\$${prefix}";		\
 	${ECHO} "libdir=\$${exec_prefix}/lib";		\
 	${ECHO} "includedir=\$${prefix}/include";	\
