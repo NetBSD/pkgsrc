@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3492 2022/07/22 01:00:57 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.3493 2022/07/22 07:07:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5256,3 +5256,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Added www/firefox102 version 102.0 [nia 2022-07-21]
 	Added www/firefox102-l10n version 102.0 [nia 2022-07-21]
 	Updated devel/py-approvaltests to 5.3.1 [schmonz 2022-07-22]
+	Updated databases/sqlite3 to 3.39.2 [adam 2022-07-22]
+	Updated databases/sqlite3-docs to 3.39.2 [adam 2022-07-22]
+	Updated databases/sqlite3-tcl to 3.39.2 [adam 2022-07-22]
+	Updated devel/lemon to 1.0.3.39.2 [adam 2022-07-22]
