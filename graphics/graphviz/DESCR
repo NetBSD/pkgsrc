@@ -4,8 +4,7 @@ Laboratories.
 It includes:
 - dot: makes hierarchical layouts of directed graphs
 - neato: makes "spring" model layouts of undirected graphs
-- lefty: a programmable graphics editor
-- dotty: a customizable interface written in LEFTY
 - tcldot: a customizable graphical interface written in TCL
-- libgraph: the base library for graph tools
+  (part of "tcl" option)
+- libcgraph: the base library for graph tools
 - various associated utilities
