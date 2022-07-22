@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/07/22 22:08:59 wiz Exp $
+
+BLAKE2s (mypaint-brushes-1.3.1.tar.gz) = 5d4bfa0e89e7dfc31f6697da4b97d09dde0369b4a77c42cfd133bb00cbe5c634
+SHA512 (mypaint-brushes-1.3.1.tar.gz) = 3e65619ae9a042cd6314396a826a2b63a72066e761244dc8763910555715b1dff6aa4395b5322510b114d61bb486f909fe505a564c89a2a5e1e5087ed298d08b
+Size (mypaint-brushes-1.3.1.tar.gz) = 1382033 bytes
