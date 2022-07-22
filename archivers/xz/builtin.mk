@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.7 2022/07/22 15:04:17 wiz Exp $
+# $NetBSD: builtin.mk,v 1.8 2022/07/22 16:06:34 wiz Exp $
 
 BUILTIN_PKG:=	xz
 
@@ -95,7 +95,7 @@ CHECK_BUILTIN.xz?=	no
 .if !empty(CHECK_BUILTIN.xz:M[nN][oO])
 
 .  if !empty(USE_BUILTIN.xz:M[yY][eE][sS])
-BUILDLINK_FILES.xz+=	lib/pkgconfig/xz.pc
+BUILDLINK_FILES.xz+=	lib/pkgconfig/liblzma.pc
 .  endif
 
 # Fake pkg-config for builtin xz on NetBSD
@@ -112,21 +112,30 @@ override-message-liblzma-pkgconfig:
 	@${STEP_MSG} "Generating pkg-config files for builtin xz package."
 
 override-liblzma-pkgconfig:
-	${RUN}						\
-	${MKDIR} ${BLKDIR_PKGCFG};			\
-	{						\
-	${ECHO} "prefix=${BUILDLINK_PREFIX.xz}";		\
-	${ECHO} "exec_prefix=\$${prefix}";		\
-	${ECHO} "libdir=\$${exec_prefix}/lib";		\
-	${ECHO} "includedir=\$${prefix}/include";	\
-	${ECHO} "";					\
-	${ECHO} "Name: liblzma";			\
-	${ECHO} "Description: Generic purpose data compression library";	\
-	${ECHO} "Version: ${BUILTIN_VERSION.xz}";	\
-	${ECHO} "Libs: ${COMPILER_RPATH_FLAG}\$${libdir} -L\$${libdir} -llzma";	\
-	${ECHO} "Libs.private: -pthread";	\
-	${ECHO} "Cflags: -I\$${includedir}";		\
-	} >> ${BLKDIR_PKGCFG}/${LIBLZMA_PKGCFGF};
+	${RUN}								\
+	dst=${BLKDIR_PKGCFG}/${LIBLZMA_PKGCFGF};			\
+	src=${BUILDLINK_PREFIX.xz:Q}/lib${LIBABISUFFIX}/pkgconfig/liblzma.pc; \
+	if [ ! -f $${dst} ]; then					\
+		if [ -f $${src} ]; then					\
+			${ECHO_BUILDLINK_MSG} "Symlinking $${src}";	\
+			${LN} -sf $${src} $${dst};			\
+		else							\
+			${MKDIR} ${BLKDIR_PKGCFG};			\
+			{						\
+			${ECHO} "prefix=${BUILDLINK_PREFIX.xz}";	\
+			${ECHO} "exec_prefix=\$${prefix}";		\
+			${ECHO} "libdir=\$${exec_prefix}/lib";		\
+			${ECHO} "includedir=\$${prefix}/include";	\
+			${ECHO} "";					\
+			${ECHO} "Name: liblzma";			\
+			${ECHO} "Description: Generic purpose data compression library";	\
+			${ECHO} "Version: ${BUILTIN_VERSION.xz}";	\
+			${ECHO} "Libs: ${COMPILER_RPATH_FLAG}\$${libdir} -L\$${libdir} -llzma";	\
+			${ECHO} "Libs.private: -pthread";		\
+			${ECHO} "Cflags: -I\$${includedir}";		\
+			} > ${BLKDIR_PKGCFG}/${LIBLZMA_PKGCFGF};	\
+		fi;							\
+	fi
 .    endif
 .  endif
 
