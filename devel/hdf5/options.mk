@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2019/11/03 10:39:13 rillig Exp $
+# $NetBSD: options.mk,v 1.10 2022/07/22 14:50:32 thor Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.hdf5
 PKG_SUPPORTED_OPTIONS=	szip threads
@@ -11,8 +11,11 @@ CONFIGURE_ARGS+=	--with-szlib
 .include "../../archivers/libaec/buildlink3.mk"
 .endif
 
+# Threadsafe API is incompatible with high-level and C++ APIs.
+PLIST_VARS+=	hl
 .if !empty(PKG_OPTIONS:Mthreads)
-CONFIGURE_ARGS+=	--enable-threadsafe
-# XXX libraries should not be linked against -lpthread
+CONFIGURE_ARGS+=	--enable-threadsafe --disable-hl
 .include "../../mk/pthread.buildlink3.mk"
+.else
+PLIST.hl=	yes
 .endif
