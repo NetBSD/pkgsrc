@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2021/06/07 11:52:48 adam Exp $
+# $NetBSD: Makefile,v 1.9 2022/07/22 14:50:33 thor Exp $
 
 PKGNAME=	${DISTNAME:S/-/-c++-/}
 COMMENT=	Hierarchical Data Format (new generation) - C++ wrappers
@@ -34,12 +34,8 @@ do-install:
 # same options should be passed:
 .include "../../devel/hdf5/options.mk"
 
-#.if !empty(PKG_BUILD_OPTIONS.hdf5:Mszip)
-#CONFIGURE_ARGS+=	--with-szlib
-#.endif
-
-#.if !empty(PKG_BUILD_OPTIONS.hdf5:Mthreads)
-#CONFIGURE_ARGS+=	--enable-threadsafe
-#.endif
+.if !empty(PKG_OPTIONS:Mthreads)
+PKG_FAIL_REASON=	"Threadsafe HDF5 with C++ interface is unsupported."
+.endif
 
 .include "../../mk/bsd.pkg.mk"
