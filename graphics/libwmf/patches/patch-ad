@@ -1,6 +1,11 @@
-$NetBSD: patch-ad,v 1.5 2006/01/18 22:04:58 adam Exp $
+$NetBSD: patch-ad,v 1.6 2022/07/22 13:43:46 wiz Exp $
 
---- configure.orig	2005-07-27 23:47:12.000000000 +0200
+Add rpath for X libraries.
+Use proper library name for libpng; the unversioned one
+works inside pkgsrc, but this paths leaks to the libwmf-config
+script and breaks other software.
+
+--- configure.orig	2005-07-27 21:47:12.000000000 +0000
 +++ configure
 @@ -21916,7 +21916,7 @@ else
  
@@ -11,6 +16,44 @@ $NetBSD: patch-ad,v 1.5 2006/01/18 22:04:58 adam Exp $
      # For Solaris; some versions of Sun CC require a space after -R and
      # others require no space.  Words are not sufficient . . . .
      case `(uname -sr) 2>/dev/null` in
+@@ -24373,13 +24373,13 @@ echo "${ECHO_T}$ac_cv_header_png_h" >&6
+ fi
+ if test $ac_cv_header_png_h = yes; then
+ 
+-	echo "$as_me:$LINENO: checking for png_write_image in -lpng" >&5
+-echo $ECHO_N "checking for png_write_image in -lpng... $ECHO_C" >&6
++	echo "$as_me:$LINENO: checking for png_write_image in -lpng16" >&5
++echo $ECHO_N "checking for png_write_image in -lpng16... $ECHO_C" >&6
+ if test "${ac_cv_lib_png_png_write_image+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lpng -lz -lm $LIBS"
++LIBS="-lpng16 -lz -lm $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
+@@ -24441,9 +24441,9 @@ if test $ac_cv_lib_png_png_write_image =
+ 
+ 		if  test "x$PNG_DIR" != "x" ; then
+ 			WMF_PNG_CFLAGS="-I$PNG_DIR/include"
+-			WMF_PNG_LDFLAGS="-L$PNG_DIR/lib -lpng"
++			WMF_PNG_LDFLAGS="-L$PNG_DIR/lib -lpng16"
+ 		else
+-			WMF_PNG_LDFLAGS="-lpng"
++			WMF_PNG_LDFLAGS="-lpng16"
+ 		fi
+ 
+ else
+@@ -24867,7 +24867,7 @@ fi
+ 
+ 	CPPFLAGS="$CPPFLAGS $WMF_FT_CFLAGS $WMF_PNG_CFLAGS $WMF_Z_CFLAGS"
+ 	LDFLAGS="$LDFLAGS $WMF_FT_LDFLAGS $WMF_PNG_LDFLAGS $WMF_Z_LDFLAGS"
+-	other_libs="$other_libs -lfreetype -lpng -lz -lm"
++	other_libs="$other_libs -lfreetype -lpng16 -lz -lm"
+ 
+ 	if test "${ac_cv_header_gd_h+set}" = set; then
+   echo "$as_me:$LINENO: checking for gd.h" >&5
 @@ -26007,7 +26007,7 @@ echo "${ECHO_T}$GDK_PIXBUF_LIBS" >&6
  
  		GTK_VERSION=`$PKG_CONFIG --variable=gtk_binary_version gtk+-2.0`
