@@ -1,27 +1,20 @@
-# $NetBSD: Makefile,v 1.250 2022/07/11 17:25:00 micha Exp $
+# $NetBSD: Makefile,v 1.251 2022/07/22 12:04:46 micha Exp $
 
-DISTNAME=	graphviz-2.50.0
-PKGREVISION=	6
+DISTNAME=	graphviz-5.0.0
 CATEGORIES=	graphics
-MASTER_SITES=	https://gitlab.com/api/v4/projects/4207231/packages/generic/graphviz-releases/${PKGVERSION_NOREV}/
-EXTRACT_SUFX=	.tar.gz
+MASTER_SITES=	${MASTER_SITE_GITLAB:=api/v4/projects/4207231/packages/generic/graphviz-releases/${PKGVERSION_NOREV}/}
 
 MAINTAINER=	micha@NetBSD.org
 HOMEPAGE=	https://www.graphviz.org/
 COMMENT=	Graph Drawing Programs from AT&T Research and Lucent Bell Labs
 LICENSE=	epl-v1.0
 
-TOOL_DEPENDS+=	ghostscript-[0-9]*:../../print/ghostscript
-
 CHECK_FILES_SKIP+=		${PREFIX}/lib/graphviz/config6
 CHECK_PORTABILITY_SKIP+=	windows/*
 
 USE_LANGUAGES=		c99 c++11
+USE_TOOLS+=		automake autoreconf makeinfo bison flex gmake groff pkg-config
 USE_LIBTOOL=		yes
-USE_TOOLS+=		automake autoreconf makeinfo bison flex groff pkg-config
-# GNU make is needed since BSD Make does not know $< in explicit rules,
-# such as used by lib/cdt/Makefile.am.
-USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_STRICT=	no # has sub-configures
 CONFIGURE_ARGS+=	--disable-d
@@ -33,6 +26,8 @@ CONFIGURE_ARGS+=	--disable-javascript
 CONFIGURE_ARGS+=	--disable-php
 CONFIGURE_ARGS+=	--disable-python
 CONFIGURE_ARGS+=	--disable-python3
+CONFIGURE_ARGS+=	--disable-guile
+CONFIGURE_ARGS+=	--disable-ocaml
 CONFIGURE_ARGS+=	--disable-r
 CONFIGURE_ARGS+=	--disable-ruby
 CONFIGURE_ARGS+=	--disable-sharp
@@ -65,8 +60,8 @@ CONFIGURE_ARGS+=	--with-webp
 # build fails when PHP and/or Ruby are also installed
 CONFIGURE_ENV+=		ac_cv_prog_PHP=
 CONFIGURE_ENV+=		ac_cv_prog_RUBY=
-CPPFLAGS+=		-DNO_POSTSCRIPT_ALIAS=1
 
+CPPFLAGS+=		-DNO_POSTSCRIPT_ALIAS=1
 LDFLAGS.SunOS+=		-lsocket -lnsl
 
 PKGCONFIG_OVERRIDE+=	lib/cdt/libcdt.pc.in
@@ -96,12 +91,8 @@ REPLACE_PERL+=		tclpkg/gv/demo/modgraph.pl contrib/dotmcl.pl \
 
 .include "../../mk/bsd.prefs.mk"
 
+# Override Xaw type configured by user
 XAW_TYPE=		standard
-
-.include "../../mk/compiler.mk"
-.if !empty(CC_VERSION:Mgcc-2*)
-BUILDLINK_TRANSFORM+=	rm:-Wno-unused-parameter
-.endif
 
 .if (${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "powerpc")
 # Forces link with -lgomp directly instead of via dlopen()
@@ -130,18 +121,17 @@ post-install:
 
 .include "options.mk"
 
-.include "../../lang/lua/application.mk"
+DEPENDS+=	urw-fonts-[0-9]*:../../fonts/urw-fonts
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
-#.include "../../devel/libltdl/convenience.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
-.include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/gts/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
-.include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../textproc/expat/buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"
