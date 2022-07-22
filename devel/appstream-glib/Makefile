@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2022/07/17 21:10:25 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2022/07/22 09:07:11 wiz Exp $
 
 DISTNAME=	appstream-glib-0.7.18
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hughsie/}
 GITHUB_TAG=	${DISTNAME:S/-/_/g:S/./_/g}
@@ -20,7 +20,8 @@ USE_LANGUAGES=		c c++
 
 MESON_ARGS+=		-Drpm=false
 
-PKGCONFIG_OVERRIDE+=	libappstream-glib/appstream-glib.pc.in
+PKGCONFIG_OVERRIDE_STAGE=	pre-install
+PKGCONFIG_OVERRIDE+=		output/meson-private/appstream-glib.pc
 
 PYTHON_FOR_BUILD_ONLY=	tool
 
