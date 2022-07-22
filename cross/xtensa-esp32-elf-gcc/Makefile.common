@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2022/04/14 13:11:49 tnn Exp $
+# $NetBSD: Makefile.common,v 1.3 2022/07/22 02:01:54 tnn Exp $
 
 # used by cross/xtensa-esp32-elf-gcc/Makefile
 # used by cross/xtensa-esp32s2-elf-gcc/Makefile
@@ -24,9 +24,9 @@ SITES.crosstool-NG-esp-2021r2-patch3.tar.gz=	\
 	-https://github.com/espressif/crosstool-NG/releases/download/esp-2021r2-patch3/crosstool-NG-esp-2021r2-patch3.tar.gz
 # Custom ESP32 newlib
 DISTFILES+=		newlib-${NEWLIBVER}.tar.gz
-NEWLIBVER=		esp32-2021r2-patch3_newlib-3_3_0
+NEWLIBVER=		esp32-2021r2-patch3_newlib-3_3_0-9e1cbb81
 SITES.newlib-${NEWLIBVER}.tar.gz= \
-	-https://github.com/espressif/newlib-esp32/archive/8a3197a2a9a42dd99605cf8cc1e0f2d3c976c58c.tar.gz
+	-https://github.com/espressif/newlib-esp32/archive/9e1cbb8144de573e8c2e8425b671a04d379bd166.tar.gz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://github.com/espressif/gcc
@@ -60,6 +60,8 @@ MKPIE_SUPPORTED=	no
 # This is based on "gcc -v" output from the binary release
 # xtensa-esp32-elf-gcc8_4_0-esp-2021r2-patch3-linux-amd64.tar.gz
 CONFIGURE_ARGS+=	--target=xtensa-${ESP32_TYPE}-elf
+CONFIGURE_ARGS+=	--with-local-prefix=${GNU_CONFIGURE_PREFIX}/xtensa-${ESP32_TYPE}-elf
+CONFIGURE_ARGS+=	--with-headers=${GNU_CONFIGURE_PREFIX}/xtensa-${ESP32_TYPE}-elf/include
 CONFIGURE_ARGS+=	--with-newlib
 CONFIGURE_ARGS+=	--enable-threads=no
 CONFIGURE_ARGS+=	--disable-shared
@@ -83,6 +85,32 @@ CONFIGURE_ARGS+=	--enable-gcov-custom-rtio
 CONFIGURE_ARGS+=	--enable-libstdcxx-time=yes
 
 CONFIGURE_ARGS+=	--disable-bootstrap
+
+# configry for newlib
+CONFIGURE_ARGS+=	--enable-newlib-io-float
+CONFIGURE_ARGS+=	--disable-newlib-io-long-double
+CONFIGURE_ARGS+=	--disable-newlib-supplied-syscalls
+CONFIGURE_ARGS+=	--enable-newlib-io-pos-args
+CONFIGURE_ARGS+=	--enable-newlib-io-c99-formats
+CONFIGURE_ARGS+=	--enable-newlib-io-long-long
+CONFIGURE_ARGS+=	--disable-newlib-register-fini
+CONFIGURE_ARGS+=	--disable-newlib-nano-malloc
+CONFIGURE_ARGS+=	--disable-newlib-nano-formatted-io
+CONFIGURE_ARGS+=	--enable-newlib-atexit-dynamic-alloc
+CONFIGURE_ARGS+=	--disable-newlib-global-atexit
+CONFIGURE_ARGS+=	--disable-lite-exit
+CONFIGURE_ARGS+=	--enable-newlib-reent-small
+CONFIGURE_ARGS+=	--enable-newlib-multithread
+CONFIGURE_ARGS+=	--disable-newlib-retargetable-locking
+CONFIGURE_ARGS+=	--disable-newlib-wide-orient
+CONFIGURE_ARGS+=	--enable-newlib-fseek-optimization
+CONFIGURE_ARGS+=	--enable-newlib-fvwrite-in-streamio
+CONFIGURE_ARGS+=	--enable-newlib-unbuf-stream-opt
+CONFIGURE_ARGS+=	--enable-target-optspace
+CONFIGURE_ARGS+=	--enable-newlib-long-time_t
+CONFIGURE_ARGS+=	--enable-newlib-nano-malloc
+CONFIGURE_ARGS+=	--enable-newlib-retargetable-locking
+CONFIGURE_ARGS+=	--enable-newlib-iconv
 
 CHECK_PORTABILITY_SKIP+=	contrib/*
 
