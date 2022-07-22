@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2019/08/05 13:39:24 prlw1 Exp $
+# $NetBSD: Makefile,v 1.8 2022/07/22 22:25:08 wiz Exp $
 
 DISTNAME=	libmspack-0.10.1alpha
 CATEGORIES=	devel
@@ -11,7 +11,6 @@ LICENSE=	gnu-lgpl-v2.1
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config
 TEST_TARGET=	check
 
 PKGCONFIG_OVERRIDE+=	libmspack.pc.in
