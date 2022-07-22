@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2022/04/15 16:56:08 tnn Exp $
+$NetBSD: distinfo,v 1.8 2022/07/22 02:01:54 tnn Exp $
 
 BLAKE2s (crosstool-NG-esp-2021r2-patch3.tar.gz) = 2013c2818fd818473d5a6d923108f6c80bd6b62345a1e2a835bb4ba9a5f104b7
 SHA512 (crosstool-NG-esp-2021r2-patch3.tar.gz) = 65a4c60151fb13311c21092c9b575fa29cac1beb9642ed73940c2d5fb5b11b8129b73ccfab847a02fb99d0a6b596b98d7f54c40fdcf304a2b667ca78746ed2cb
@@ -6,9 +6,9 @@ Size (crosstool-NG-esp-2021r2-patch3.tar.gz) = 3145346 bytes
 BLAKE2s (espressif-gcc-8.4.0-f9333cfc1a790dff864aea3478cb862cc442be30.tar.gz) = bf9fb66a7c0042cfc762adf67e2c3f8df15be176d4c3f95e15dd3d75908ea970
 SHA512 (espressif-gcc-8.4.0-f9333cfc1a790dff864aea3478cb862cc442be30.tar.gz) = 304af9506b6e69d7405eef87ca558d8467438a3bc4dfe98e1cff22a9b1250f4f72e9aa0908a157a4c1d1b21387116335de0745ba7bafb6af0fce5cee43f71be2
 Size (espressif-gcc-8.4.0-f9333cfc1a790dff864aea3478cb862cc442be30.tar.gz) = 102886468 bytes
-BLAKE2s (newlib-esp32-2021r2-patch3_newlib-3_3_0.tar.gz) = f49c5ba7d678b9d05e6eb6abf543e5fc24ca4af1ca1d172edd028fe5f9396e1c
-SHA512 (newlib-esp32-2021r2-patch3_newlib-3_3_0.tar.gz) = 24e2200b5e16db12a40ada1a03d01389214859382d06f2068a57fd4e8d87e4f74bf963e139fbfd3f24e5815ba2ead897b0ac190fc0848a1c49895ed0c8ab54ac
-Size (newlib-esp32-2021r2-patch3_newlib-3_3_0.tar.gz) = 21938580 bytes
+BLAKE2s (newlib-esp32-2021r2-patch3_newlib-3_3_0-9e1cbb81.tar.gz) = acd19f2ce950b6522d68e969b0e72dad949fd5b5bb8e73460006f5f879466d53
+SHA512 (newlib-esp32-2021r2-patch3_newlib-3_3_0-9e1cbb81.tar.gz) = 9b93075b0cd3b22c839dfd55e576eaa2e41c5936754fb67a4cf0298cc291db0c6c22e780cd463ad331840ef5468f9df1f5ecaddbda573fb75ed9245d0aa34ebb
+Size (newlib-esp32-2021r2-patch3_newlib-3_3_0-9e1cbb81.tar.gz) = 21950118 bytes
 SHA1 (patch-gcc_config_host-darwin.c) = 497f2d417755071e78e69e9a3b75754b29055b20
 SHA1 (patch-gcc_system.h) = 72a75ff773b9b5f3d2f16f4ec7d29e032aba5f53
 SHA1 (patch-newlib_libc_posix_collate.c) = 2916597f1ca3b7beb2f67a457d8f448e1da8f896
