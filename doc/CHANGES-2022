@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3493 2022/07/22 07:07:07 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3494 2022/07/22 08:16:55 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5260,3 +5260,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/sqlite3-docs to 3.39.2 [adam 2022-07-22]
 	Updated databases/sqlite3-tcl to 3.39.2 [adam 2022-07-22]
 	Updated devel/lemon to 1.0.3.39.2 [adam 2022-07-22]
+	Updated www/firefox91 to 91.11.0 [nia 2022-07-22]
