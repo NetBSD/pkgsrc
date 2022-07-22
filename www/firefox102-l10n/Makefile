@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2022/07/21 23:56:39 nia Exp $
+# $NetBSD: Makefile,v 1.2 2022/07/22 08:13:11 nia Exp $
 
 FIREFOX_VER=	102.0esr
 PKGNAME=	firefox102-l10n-${FIREFOX_VER:S/esr//}
+PKGREVISION=	1
 DISTNAME=	# empty
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=firefox/releases/${FIREFOX_VER}/linux-i686/xpi/}
@@ -17,7 +18,7 @@ DISTFILES=	${XPI_FILES}
 
 NO_BUILD=	yes
 
-INSTALLATION_DIRS=	lib/firefox91/browser/extensions
+INSTALLATION_DIRS=	lib/${PKGBASE:S/-l10n//g}/browser/extensions
 
 FIREFOX_LOCALES=	ach af an ar ast az be bg bn br bs ca cak	\
 			cs cy da de dsb el en-CA en-GB en-US eo es-AR	\
@@ -30,7 +31,7 @@ FIREFOX_LOCALES=	ach af an ar ast az be bg bn br bs ca cak	\
 			pt-BR pt-PT rm ro ru si sk sl son sq sr sv-SE ta te th	\
 			tr uk uz vi xh zh-CN zh-TW
 
-EXTENSIONS_DIR=		${PREFIX}/lib/firefox91/browser/extensions
+EXTENSIONS_DIR=		${PREFIX}/lib/${PKGBASE:S/-l10n//g}/browser/extensions
 XPI_FILES=		${FIREFOX_LOCALES:=.xpi}
 
 do-install:
