@@ -1,0 +1,33 @@
+$NetBSD: patch-ab,v 1.1 2022/07/22 20:18:55 wiz Exp $
+
+CC_VERSION_OPTS for gcc is modified to avoid going through the link
+stage. If pkgsrc appends or prepends any linker flags through
+CWRAPPERS (e.g. for MKRELRO), getting the version of the compiler may
+fail because GCC will try to link the nonexistent program.
+
+--- configure.orig	2022-02-22 22:13:59.000000000 +0000
++++ configure
+@@ -22400,11 +22400,11 @@ WARNING: GCC 7.2.0 has a serious bug aff
+          See https://bugzilla.gnome.org/show_bug.cgi?id=787222"
+   fi
+   # For GCC, use -v which has more information than --version.
+-  CC_VERSION_OPTS="-v"
++  CC_VERSION_OPTS="-c -v"
+ else
+   # This is the list of common options used by autotools to check
+   # versions for various compilers.
+-  CC_VERSION_OPTS="--version -v -V -qversion"
++  CC_VERSION_OPTS="-c --version -v -V -qversion"
+ fi
+ 
+ for CC_VERSION_OPT in $CC_VERSION_OPTS; do
+@@ -36538,7 +36538,8 @@ esac
+ 
+ gimpdatadir="$datadir/$PACKAGE/2.99"
+ gimpplugindir="$libdir/$PACKAGE/2.99"
+-gimpsysconfdir="$sysconfdir/$PACKAGE/2.99"
++gimpsysconfdir="$sysconfdir"
++
+ 
+ 
+ 
