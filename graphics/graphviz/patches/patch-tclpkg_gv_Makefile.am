@@ -1,12 +1,15 @@
-$NetBSD: patch-tclpkg_gv_Makefile.am,v 1.1 2021/10/21 19:44:31 schmonz Exp $
+$NetBSD: patch-tclpkg_gv_Makefile.am,v 1.2 2022/07/22 12:04:46 micha Exp $
 
 Add missing -I flags to point to perl files.
 
 See https://gitlab.com/graphviz/graphviz/issues/1576.
+Issue was closed, but patch is still missing. Regression?
+
+https://gitlab.com/graphviz/graphviz/-/merge_requests/2758
 
 --- tclpkg/gv/Makefile.am.orig	2021-10-16 16:39:12.000000000 +0000
 +++ tclpkg/gv/Makefile.am
-@@ -184,7 +184,7 @@ nodist_libgv_perl_la_SOURCES = gv_perl.c
+@@ -180,7 +180,7 @@ nodist_libgv_perl_la_SOURCES = gv_perl.c
  libgv_perl_la_SOURCES = $(BASESOURCES) gv_dummy_init.c
  libgv_perl_la_LIBADD = $(BASELIBS) $(PERL_LIBS)
  libgv_perl_la_LDFLAGS = -module -avoid-version $(PERL_LD)

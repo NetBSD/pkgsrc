@@ -1,17 +1,14 @@
-# $NetBSD: buildlink3.mk,v 1.28 2022/06/28 11:34:01 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.29 2022/07/22 12:04:46 micha Exp $
 
 BUILDLINK_TREE+=	graphviz
 
 .if !defined(GRAPHVIZ_BUILDLINK3_MK)
 GRAPHVIZ_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.graphviz+=	graphviz>=2.26.3
-BUILDLINK_ABI_DEPENDS.graphviz+=	graphviz>=2.50.0nb6
+BUILDLINK_API_DEPENDS.graphviz+=	graphviz>=5.0.0
 BUILDLINK_PKGSRCDIR.graphviz?=		../../graphics/graphviz
 
-# doxygen PLIST varies with pangocairo of PKG_OPTIONS
-pkgbase := graphviz
-.include "../../mk/pkg-build-options.mk"
+DEPENDS+=	urw-fonts-[0-9]*:../../fonts/urw-fonts
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"

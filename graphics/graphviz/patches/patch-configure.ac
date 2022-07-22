@@ -1,18 +1,20 @@
-$NetBSD: patch-configure.ac,v 1.6 2021/10/21 19:44:31 schmonz Exp $
+$NetBSD: patch-configure.ac,v 1.7 2022/07/22 12:04:46 micha Exp $
 
 1. chunk: fix
 ./configure.lineno: 1: Syntax error: Bad substitution
 http://www.graphviz.org/mantisbt/view.php?id=2362
+https://gitlab.com/graphviz/graphviz/-/issues/370
 2. chunk: use the same path for all platforms in pkgsrc
 other chunks: use lua/php/... from pkgsrc
 last chunk: fix
 ./configure.lineno: 27203: Syntax error: ")" unexpected (expecting "fi")
 http://www.graphviz.org/mantisbt/view.php?id=2362
+https://gitlab.com/graphviz/graphviz/-/issues/370
 last last chunk: fix sed expression not to use + which is not in BRE (guile)
 
---- configure.ac.orig	2021-10-16 16:39:12.000000000 +0000
+--- configure.ac.orig	2022-07-07 15:43:58.000000000 +0000
 +++ configure.ac
-@@ -106,8 +106,15 @@ case "${host_os}" in
+@@ -101,8 +101,15 @@ case "${host_os}" in
  	# For the build number: months since Jan 2000, day of month from the timestamp
  	# For the revision number: hour, minute from the timestamp
  	if test $GRAPHVIZ_VERSION_MICRO != "0"; then
@@ -30,7 +32,7 @@ last last chunk: fix sed expression not to use + which is not in BRE (guile)
  	fi
  	;;
  esac
-@@ -123,8 +130,7 @@ if test -z "$LIBPOSTFIX"; then
+@@ -118,8 +125,7 @@ if test -z "$LIBPOSTFIX"; then
    case "${host_os}" in
      *linux* )
        case "${host_cpu}" in
@@ -40,7 +42,7 @@ last last chunk: fix sed expression not to use + which is not in BRE (guile)
            INTGOSIZE=64
            ;;
        esac
-@@ -132,7 +138,6 @@ if test -z "$LIBPOSTFIX"; then
+@@ -127,7 +133,6 @@ if test -z "$LIBPOSTFIX"; then
      *solaris* )
        case "${host_cpu}" in
          x86_64 | sparc64 )
@@ -48,7 +50,7 @@ last last chunk: fix sed expression not to use + which is not in BRE (guile)
            INTGOSIZE=64
            ;;
        esac
-@@ -684,7 +689,7 @@ else
+@@ -694,7 +699,7 @@ else
        if test "x$GUILE_CONFIG" = "x"; then
          use_guile="No (guile not available)"
        else
@@ -57,7 +59,7 @@ last last chunk: fix sed expression not to use + which is not in BRE (guile)
          GUILE_VERSION_MAJOR=`echo $GUILE_VERSION | cut -d '.' -f 1`
          GUILE_VERSION_MINOR=`echo $GUILE_VERSION | cut -d '.' -f 2`
          AC_CHECK_PROGS(GUILE,guile$GUILE_VERSION_MAJOR.$GUILE_VERSION_MINOR guile$GUILE_VERSION_MAJOR guile)
-@@ -908,7 +913,7 @@ else
+@@ -918,7 +923,7 @@ else
  		        LUA_VERSION=`$PKG_CONFIG --modversion lua$l`
                          LUA_INCLUDES="$LUA_CFLAGS "`$PKG_CONFIG --cflags lua$l`
                          LUA_LIBS="$LUA_LFLAGS "`$PKG_CONFIG --libs lua$l`
@@ -66,7 +68,7 @@ last last chunk: fix sed expression not to use + which is not in BRE (guile)
  
  		        pkgconfig_lualib_found=`$PKG_CONFIG --exists lualib$l 2>/dev/null`
  		        if test  "x$?" = "x0"; then
-@@ -930,7 +935,7 @@ else
+@@ -940,7 +945,7 @@ else
                  LUA_INCLUDES=`$LUACONFIG --include`
                  LUA_LIBS=`$LUACONFIG --libs`
  	        LUA_VERSION="5.0.x"
@@ -75,18 +77,7 @@ last last chunk: fix sed expression not to use + which is not in BRE (guile)
              fi
          fi
  
-@@ -1020,8 +1025,8 @@ else
-         use_ocaml="No (ocaml not available)"
-       else
-         AC_CHECK_PROG(OCAML_OPT,ocamlopt,ocamlopt)
--        OCAML_INCLUDES=-I/usr/lib$LIBPOSTFIX/ocaml
--        OCAML_LIBS=-L/usr/lib$LIBPOSTFIX/ocaml
-+        OCAML_INCLUDES=-I${PREFIX}/lib$LIBPOSTFIX/ocaml
-+        OCAML_LIBS=-L${PREFIX}/lib$LIBPOSTFIX/ocaml
-         save_CPPFLAGS=$CPPFLAGS
-         CPPFLAGS="$CPPFLAGS $OCAML_INCLUDES"
-         AC_CHECK_HEADER(caml/mlvalues.h,[
-@@ -1124,7 +1129,7 @@ else
+@@ -1137,7 +1142,7 @@ else
          else
            PHP_INCLUDES="`$PHPCONFIG --includes`"
            PHP_INSTALL_DIR="`$PHPCONFIG --extension-dir`"
@@ -95,7 +86,7 @@ last last chunk: fix sed expression not to use + which is not in BRE (guile)
            PHP_LIBS="`$PHPCONFIG --ldflags` `$PHPCONFIG --libs`"
            save_CPPFLAGS=$CPPFLAGS
            CPPFLAGS="$CPPFLAGS $PHP_INCLUDES"
-@@ -2191,45 +2196,6 @@ else
+@@ -2130,45 +2135,6 @@ else
  fi
  AM_CONDITIONAL(WITH_QUARTZ, [test "x$use_quartz" = "xYes"])
  

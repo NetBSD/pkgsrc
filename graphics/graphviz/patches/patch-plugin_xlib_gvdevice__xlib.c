@@ -1,4 +1,4 @@
-$NetBSD: patch-plugin_xlib_gvdevice__xlib.c,v 1.2 2020/07/27 20:44:15 adam Exp $
+$NetBSD: patch-plugin_xlib_gvdevice__xlib.c,v 1.3 2022/07/22 12:04:46 micha Exp $
 
 SunOS inotify requires sys/filio.h for FIONREAD.
 
