@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3497 2022/07/22 09:07:21 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3498 2022/07/22 12:07:05 micha Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5265,3 +5265,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/gperftools to 2.10 [adam 2022-07-22]
 	Updated benchmarks/google-benchmark to 1.6.2 [adam 2022-07-22]
 	Updated devel/appstream-glib to 0.7.18nb5 [wiz 2022-07-22]
+	Updated graphics/graphviz to 5.0.0 [micha 2022-07-22]
