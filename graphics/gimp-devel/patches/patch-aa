@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1 2022/07/22 20:18:55 wiz Exp $
+
+Install configuration into pkgsrc example directory.
+
+--- etc/Makefile.in.orig	2010-06-21 20:00:58.000000000 +0000
++++ etc/Makefile.in
+@@ -436,7 +436,7 @@ gimpdatadir = @gimpdatadir@
+ gimpdir = @gimpdir@
+ gimplocaledir = @gimplocaledir@
+ gimpplugindir = @gimpplugindir@
+-gimpsysconfdir = @gimpsysconfdir@
++gimpsysconfdir = $(prefix)/share/examples/gimp-2.99
+ host = @host@
+ host_alias = @host_alias@
+ host_cpu = @host_cpu@
