@@ -1,6 +1,6 @@
-$NetBSD: patch-config_config__perl.pl,v 1.3 2013/09/09 20:35:07 wiz Exp $
+$NetBSD: patch-config_config__perl.pl,v 1.4 2022/07/22 12:04:46 micha Exp $
 
-add rpath for pkgsrc
+Add rpath for pkgsrc
 
 --- config/config_perl.pl.orig	2013-08-01 17:35:15.000000000 +0000
 +++ config/config_perl.pl

@@ -1,13 +1,13 @@
-# $NetBSD: options.mk,v 1.33 2022/05/13 21:33:16 tnn Exp $
+# $NetBSD: options.mk,v 1.34 2022/07/22 12:04:46 micha Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.graphviz
-PKG_SUPPORTED_OPTIONS=	gd ghostscript gtk lua ocaml perl poppler svg tcl x11 # guile does not build with guile20
+PKG_SUPPORTED_OPTIONS=	gd ghostscript gtk lua perl poppler svg tcl x11
 .if exists(/System/Library/Frameworks/Quartz.framework)
 PKG_SUPPORTED_OPTIONS+=	quartz
 .endif
-PKG_SUGGESTED_OPTIONS=	gd lua perl tcl x11
+PKG_SUGGESTED_OPTIONS=	gd x11
 # Explanation of consequence of options, to help those trying to slim down:
-#   guile ocaml lua tcl perl: extension language support
+#   lua tcl perl: extension language support
 #   x11: Omits all linking with x11, which means x11 graphics supports as
 #     well as x11 frontend support.
 #   gtk: basic graphic format support (in addition to gd, which isn't
@@ -19,7 +19,7 @@ PKG_SUGGESTED_OPTIONS=	gd lua perl tcl x11
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		gd ghostscript gtk guile lua ocaml perl poppler quartz svg swig tcl x11
+PLIST_VARS+=		gd ghostscript gtk lua perl poppler quartz svg swig tcl x11
 
 .if !empty(PKG_OPTIONS:Mgd)
 .  include "../../graphics/gd/buildlink3.mk"
@@ -31,6 +31,8 @@ CONFIGURE_ARGS+=	--without-libgd
 
 .if !empty(PKG_OPTIONS:Mghostscript)
 .  include "../../print/ghostscript/buildlink3.mk"
+# Also required as tool dependency according to documentation
+TOOL_DEPENDS+=		ghostscript-[0-9]*:../../print/ghostscript
 PLIST.ghostscript=	yes
 CONFIGURE_ARGS+=	--with-ghostscript
 .else
@@ -79,10 +81,8 @@ CONFIGURE_ARGS+=	--without-rsvg
 .  include "../../x11/libXrender/buildlink3.mk"
 PLIST.x11=		yes
 CONFIGURE_ENV+=		X11BASE=${X11BASE}
-CONFIGURE_ARGS+=	--enable-lefty
 CONFIGURE_ARGS+=	--with-x
 .else
-CONFIGURE_ARGS+=	--disable-lefty
 CONFIGURE_ARGS+=	--without-x
 .endif
 
@@ -92,22 +92,17 @@ USING_SWIG=	no
 USING_SWIG=	yes
 .  include "../../lang/lua/tool.mk"
 .  include "../../lang/lua/buildlink3.mk"
+.  include "../../lang/lua/application.mk"
 PLIST.lua=		yes
 CONFIGURE_ARGS+=	--enable-lua
 .else
 CONFIGURE_ARGS+=	--disable-lua
 .endif
 
-.if !empty(PKG_OPTIONS:Mocaml)
-USING_SWIG=	yes
-.  include "../../lang/ocaml/buildlink3.mk"
-PLIST.ocaml=		yes
-CONFIGURE_ARGS+=	--enable-ocaml
-.else
-CONFIGURE_ARGS+=	--disable-ocaml
-.endif
-
 .if !empty(PKG_OPTIONS:Mtcl)
+.  if empty(PKG_OPTIONS:Mx11)
+PKG_FAIL_REASON=	"tcl option requires x11 option"
+.  endif
 USING_SWIG=	yes
 .  include "../../lang/tcl/Makefile.version"
 .  include "../../x11/tk/buildlink3.mk"
@@ -119,15 +114,6 @@ CONFIGURE_ARGS+=	--with-tclsh=${TCLSH:Q}
 CONFIGURE_ARGS+=	--enable-tcl
 .else
 CONFIGURE_ARGS+=	--disable-tcl
-.endif
-
-.if !empty(PKG_OPTIONS:Mguile)
-USING_SWIG=	yes
-.  include "../../lang/guile20/buildlink3.mk"
-PLIST.guile=		yes
-CONFIGURE_ARGS+=	--enable-guile
-.else
-CONFIGURE_ARGS+=	--disable-guile
 .endif
 
 .if !empty(PKG_OPTIONS:Mperl)
@@ -142,7 +128,8 @@ CONFIGURE_ARGS+=	--disable-perl
 
 .if !empty(USING_SWIG:Myes)
 PLIST.swig=		yes
-.  include "../../devel/swig/buildlink3.mk"
+# Tool dependency according to documentation
+TOOL_DEPENDS+=		swig>=1.3.29:../../devel/swig
 CONFIGURE_ARGS+=	--enable-swig
 .else
 CONFIGURE_ARGS+=	--disable-swig
