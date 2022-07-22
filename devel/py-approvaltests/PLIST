@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2022/06/29 19:12:18 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.19 2022/07/22 01:00:24 schmonz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -161,6 +161,9 @@ ${PYSITELIB}/approvaltests/string_writer.pyo
 ${PYSITELIB}/approvaltests/utilities/__init__.py
 ${PYSITELIB}/approvaltests/utilities/__init__.pyc
 ${PYSITELIB}/approvaltests/utilities/__init__.pyo
+${PYSITELIB}/approvaltests/utilities/clipboard_utilities.py
+${PYSITELIB}/approvaltests/utilities/clipboard_utilities.pyc
+${PYSITELIB}/approvaltests/utilities/clipboard_utilities.pyo
 ${PYSITELIB}/approvaltests/utilities/exceptions/__init__.py
 ${PYSITELIB}/approvaltests/utilities/exceptions/__init__.pyc
 ${PYSITELIB}/approvaltests/utilities/exceptions/__init__.pyo
