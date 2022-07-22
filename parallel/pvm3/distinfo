@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.33 2021/10/26 11:10:38 nia Exp $
+$NetBSD: distinfo,v 1.34 2022/07/22 09:03:16 he Exp $
 
 BLAKE2s (pvm3.4.6.tgz) = 209e125d5af842efc70571602849d054770dabc0d7d7761325ef4b2b8c25c4d6
 SHA512 (pvm3.4.6.tgz) = a8ddb8fc944bbe64d185eeffba0e020f28af4c8175a446511deca55d7c4f5cf62884c8c5dcb03dd9700bcc48368c8dab353e45656094d139385d88fdf34dd78a
@@ -48,8 +48,8 @@ SHA1 (patch-bq) = 404d9b54968945019767bd299f40e69eb6a7f624
 SHA1 (patch-br) = bb3431cd07153d9a8d42ca0fed8c55282a21977e
 SHA1 (patch-bs) = 0f982d32bc145aae66fcae721c21560417ed304f
 SHA1 (patch-bt) = aa57072e31b8c717eff64b57a5332b58f214b109
-SHA1 (patch-bu) = a8410e44d6d18949fde5afa57780adc8e168d559
-SHA1 (patch-bv) = faff2d0c965ece536942e97c12fad47a42253d3e
+SHA1 (patch-bu) = 1a713e9e59071fdd1776a5c9fd677ab33ed282c0
+SHA1 (patch-bv) = 92944d99a638312c77ba24af6c221790486e33cd
 SHA1 (patch-bw) = 2dd00c3b3cebc8dfc926429648a6f9a3d314d041
 SHA1 (patch-bx) = a8e538ec5bf5f0c6bba76a136186430a72e480fa
 SHA1 (patch-by) = bb381baef296a792b01bacacbaa54710736ffd8f

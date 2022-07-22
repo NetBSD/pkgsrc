@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2019/03/20 10:55:21 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2022/07/22 09:03:16 he Exp $
 
 DISTNAME=	pvm3.4.6
 PKGNAME=	pvm-3.4.6
@@ -36,6 +36,8 @@ MAKE_ENV+=		MKDIR=${MKDIR:Q}
 MAKE_ENV+=		PVMLIB_VER=3:4
 MAKE_ENV+=		PVM_DIR=${PVM_DIR:Q}
 BUILD_TARGET=		all install
+
+FFLAGS+=		-fallow-argument-mismatch
 
 REPLACE_CSH=		${WRKSRC}/lib/debugger ${WRKSRC}/lib/debugger2
 

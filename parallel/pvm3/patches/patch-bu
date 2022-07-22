@@ -1,15 +1,30 @@
-$NetBSD: patch-bu,v 1.3 2011/01/29 20:37:35 markd Exp $
+$NetBSD: patch-bu,v 1.4 2022/07/22 09:03:16 he Exp $
+
+Use libtool for linking.
+Also respect passed LDFLAGS.
 
 --- examples/Makefile.aimk.orig	Wed Feb 16 21:49:35 2000
 +++ examples/Makefile.aimk	Thu Mar 25 03:43:25 2004
-@@ -85,5 +85,5 @@
+@@ -63,7 +63,7 @@ FFLOPTS		=	-g
+ FFLAGS		=	$(FFLOPTS) $(ARCHFFLAGS)
+ FLIBS		=	-lfpvm3
+ 
+-LDFLAGS		=	$(LOPT) -L$(PVMDIR)/lib/$(PVM_ARCH)
++LDFLAGS		+=	$(LOPT) -L$(PVMDIR)/lib/$(PVM_ARCH)
+ 
+ CPROGS		=	hello$(EXESFX) hello_other$(EXESFX) \
+ 				gexample$(EXESFX) \
+@@ -84,7 +84,7 @@ HOSTFPROGS	=	fmaster1h hitch
+ CTXPROGS	=	inherita$(EXESFX) inheritb$(EXESFX) inherit1$(EXESFX) \
  				inherit2$(EXESFX) inherit3$(EXESFX)
  
 -MBPROGS		=	taskf.o task0$(EXESFX) task1$(EXESFX) \
 +MBPROGS		=	taskf.lo task0$(EXESFX) task1$(EXESFX) \
  				task_end$(EXESFX) rme$(EXESFX) \
  				lmbi$(EXESFX) gmbi$(EXESFX)
-@@ -108,172 +108,177 @@
+ 
+@@ -107,173 +107,178 @@ $(XDIR):
+ 	- mkdir $(BDIR)
  	- mkdir $(XDIR)
  
 +LTCC=		${LIBTOOL} --mode=compile ${CC}

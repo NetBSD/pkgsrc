@@ -1,14 +1,18 @@
-$NetBSD: patch-bv,v 1.3 2011/01/29 20:37:35 markd Exp $
+$NetBSD: patch-bv,v 1.4 2022/07/22 09:03:16 he Exp $
+
+Use libtool for linking.
+Also, respect passed LDFLAGS.
 
 --- gexamples/Makefile.aimk.orig	Wed Feb 16 21:48:37 2000
 +++ gexamples/Makefile.aimk	Thu Mar 25 02:04:18 2004
-@@ -38,48 +38,53 @@
+@@ -37,50 +37,55 @@ PROGS	=	joinleave$(EXESFX) gexamp$(EXESF
+ 			thb$(EXESFX) tnb$(EXESFX) ge$(EXESFX) tjl$(EXESFX) \
  			tjf$(EXESFX) trsg$(EXESFX) frsg$(EXESFX) gs$(EXESFX)
  
 +LTCC=		${LIBTOOL} --mode=compile ${CC}
 +LTCC_LINK=	${LIBTOOL} --mode=link ${CC} ${PVM_STATIC} ${COMPILER_RPATH_FLAG}${PVM_DIR}/lib/${PVM_ARCH}
 +LTFORT=		${LIBTOOL} --mode=compile --tag=F77 ${FC}
-+LTFORT_LINK=	${LIBTOOL} --mode=link --tag=F77 ${FC} ${PVM_STATIC} ${COMPILER_RPATH_FLAG}${PVM_DIR}/lib/${PVM_ARCH}
++LTFORT_LINK=	${LIBTOOL} --mode=link --tag=F77 ${FC} ${PVM_STATIC} ${COMPILER_RPATH_FLAG}${PVM_DIR}/lib/${PVM_ARCH} ${LDFLAGS}
 +
  all:  $(PROGS)
  
@@ -67,3 +71,4 @@ $NetBSD: patch-bv,v 1.3 2011/01/29 20:37:35 markd Exp $
 +	$(LTFORT_LINK) $(FFLAGS) -o $@ $(SDIR)/frsg.f $(PVMFLIB)
  	cp frsg$(EXESFX) $(XDIR)
  
+ clean:
