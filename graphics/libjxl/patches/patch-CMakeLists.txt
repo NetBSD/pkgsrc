@@ -1,0 +1,15 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2022/07/22 20:17:14 wiz Exp $
+
+* install manpages to PKGMANDIR
+
+--- CMakeLists.txt.orig	2021-10-04 18:02:44.000000000 +0000
++++ CMakeLists.txt
+@@ -364,7 +364,7 @@ if (ASCIIDOC_PY_FOUND)
+     list(APPEND MANPAGES "${PAGE}.1")
+   endforeach()
+   add_custom_target(manpages ALL DEPENDS ${MANPAGES})
+-  install(FILES ${MANPAGE_FILES} DESTINATION share/man/man1)
++  install(FILES ${MANPAGE_FILES} DESTINATION ${CMAKE_INSTALL_MANDIR}/man1)
+ endif()  # ASCIIDOC_PY_FOUND
+ else()
+   message(WARNING "asciidoc was not found, the man pages will not be installed.")
