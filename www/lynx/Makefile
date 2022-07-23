@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.141 2021/12/08 16:06:58 adam Exp $
+# $NetBSD: Makefile,v 1.142 2022/07/23 14:41:52 wiz Exp $
 
 DISTNAME=	lynx2.8.9rel.1
 PKGNAME=	${DISTNAME:S/lynx/lynx-/:S/rel//}
@@ -25,7 +25,7 @@ MAKE_FILE=			makefile
 
 CONFIGURE_ENV+=		GZIP=${TOOLS_GZIP_CMD:Q}
 CONFIGURE_ENV+=		UNZIP=${TOOLS_PATH.unzip:Q}
-USE_TOOLS+=		gzip msgfmt msginit unzip:run
+USE_TOOLS+=		gzip msgfmt unzip:run
 
 CONF_FILES+=		share/examples/lynx/lynx.cfg ${PKG_SYSCONFDIR}/lynx.cfg
 CONF_FILES+=		share/examples/lynx/lynx.lss ${PKG_SYSCONFDIR}/lynx.lss
@@ -33,6 +33,7 @@ CONF_FILES+=		share/examples/lynx/lynx.lss ${PKG_SYSCONFDIR}/lynx.lss
 # But no dependency on Perl.
 REPLACE_PERL+=			samples/mailto-form.pl
 CHECK_INTERPRETER_SKIP+=	share/lynx/lynx_doc/samples/mailto-form.pl
+CHECK_WRKREF_SKIP+=		bin/lynx
 
 .include "options.mk"
 

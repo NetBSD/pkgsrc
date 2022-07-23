@@ -1,15 +1,15 @@
-# $NetBSD: options.mk,v 1.19 2020/04/30 09:35:09 nia Exp $
+# $NetBSD: options.mk,v 1.20 2022/07/23 14:41:52 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.lynx
 PKG_SUPPORTED_OPTIONS=	inet6
 
-PKG_OPTIONS_OPTIONAL_GROUPS=	socksproxy
+PKG_OPTIONS_OPTIONAL_GROUPS+=	socksproxy
 PKG_OPTIONS_GROUP.socksproxy=	dante socks4
 
-PKG_OPTIONS_OPTIONAL_GROUPS=	ssl
+PKG_OPTIONS_OPTIONAL_GROUPS+=	ssl
 PKG_OPTIONS_GROUP.ssl=		gnutls openssl
 
-PKG_OPTIONS_REQUIRED_GROUPS=	screen
+PKG_OPTIONS_REQUIRED_GROUPS+=	screen
 PKG_OPTIONS_GROUP.screen=	curses wide-curses slang
 PKG_OPTIONS_LEGACY_OPTS+=	ncurses:curses ncursesw:wide-curses
 
@@ -21,7 +21,7 @@ PKG_SUGGESTED_OPTIONS=		inet6 openssl wide-curses
 ### We can't compile support for both the "slang" screen library and
 ### SOCKS support.
 ###
-.if !empty(PKG_OPTIONS:Mslang) && !empty(PKG_OPTIONS:Msocks*)
+.if !empty(PKG_OPTIONS:Mslang) && ${PKG_OPTIONS:Msocks*}
 PKG_FAIL_REASON+=	"SOCKS may not be enabled together with the \"slang\"" \
 			"screen library.  If SOCKS support is desired," \
 			"please change ${PKG_OPTIONS_VAR} to include" \
