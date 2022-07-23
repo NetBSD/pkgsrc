@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2022/07/22 20:18:54 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2022/07/23 06:40:08 wiz Exp $
 
 DISTNAME=	gimp-2.99.10
+PKGNAME=	${DISTNAME:S/gimp/gimp-devel/}
 CATEGORIES=	graphics
 MASTER_SITES=	https://download.gimp.org/pub/gimp/v${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.bz2
@@ -16,6 +17,8 @@ TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 DEPENDS+=	glib-networking>=2.36.2:../../net/glib-networking
 DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
 DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
+
+CONFLICTS+=	gimp-[0-9]*
 
 USE_LANGUAGES+=		c c++14
 USE_LIBTOOL=		yes
