@@ -1,9 +1,9 @@
-$NetBSD: patch-thirdparty_mujs_Makefile,v 1.8 2021/10/23 15:22:07 leot Exp $
+$NetBSD: patch-thirdparty_mujs_Makefile,v 1.9 2022/07/23 15:09:43 leot Exp $
 
 - Add libtool support to mujs.
 - Avoid to set (unused) VERSION variable.
 
---- thirdparty/mujs/Makefile.orig	2021-06-08 11:41:51.000000000 +0000
+--- thirdparty/mujs/Makefile.orig	2021-12-08 11:56:12.000000000 +0000
 +++ thirdparty/mujs/Makefile
 @@ -9,12 +9,6 @@ bindir ?= $(prefix)/bin
  incdir ?= $(prefix)/include
@@ -15,19 +15,19 @@ $NetBSD: patch-thirdparty_mujs_Makefile,v 1.8 2021/10/23 15:22:07 leot Exp $
 -  VERSION := $(shell basename $$PWD | sed -e s,^mujs-,,)
 -endif
 -
- # Compiler flags for various configurations:
- 
- CFLAGS := -std=c99 -pedantic -Wall -Wextra -Wno-unused-parameter
-@@ -54,7 +48,7 @@ HDRS := $(wildcard js*.h mujs.h utf.h re
+ ifeq ($(shell uname),Darwin)
+ 	SO_EXT := dylib
+ else
+@@ -60,7 +54,7 @@ HDRS := $(wildcard js*.h mujs.h utf.h re
  
  default: shell
  shell: $(OUT)/mujs $(OUT)/mujs-pp
 -static: $(OUT)/libmujs.a
 +static: $(OUT)/libmujs.la
- shared: $(OUT)/libmujs.so
+ shared: $(OUT)/libmujs.$(SO_EXT)
  
  astnames.h: jsparse.h
-@@ -68,15 +62,15 @@ one.c: $(SRCS)
+@@ -74,15 +68,15 @@ one.c: $(SRCS)
  
  jsdump.c: astnames.h opnames.h
  
@@ -46,7 +46,7 @@ $NetBSD: patch-thirdparty_mujs_Makefile,v 1.8 2021/10/23 15:22:07 leot Exp $
  	@ mkdir -p $(dir $@)
  	$(AR) cr $@ $^
  
-@@ -84,11 +78,11 @@ $(OUT)/libmujs.so: one.c $(HDRS)
+@@ -90,11 +84,11 @@ $(OUT)/libmujs.$(SO_EXT): one.c $(HDRS)
  	@ mkdir -p $(dir $@)
  	$(CC) $(CFLAGS) $(CPPFLAGS) -fPIC -shared $(LDFLAGS) -o $@ $< -lm
  
@@ -60,7 +60,7 @@ $NetBSD: patch-thirdparty_mujs_Makefile,v 1.8 2021/10/23 15:22:07 leot Exp $
  	@ mkdir -p $(dir $@)
  	$(CC) $(LDFLAGS) -o $@ $^ -lm
  
-@@ -114,8 +108,8 @@ install-common: $(OUT)/mujs $(OUT)/mujs.
+@@ -120,8 +114,8 @@ install-common: $(OUT)/mujs $(OUT)/mujs.
  	install -m 644 $(OUT)/mujs.pc $(DESTDIR)$(libdir)/pkgconfig
  	install -m 755 $(OUT)/mujs $(DESTDIR)$(bindir)
  
@@ -69,5 +69,5 @@ $NetBSD: patch-thirdparty_mujs_Makefile,v 1.8 2021/10/23 15:22:07 leot Exp $
 +install-static: install-common $(OUT)/libmujs.la
 +	${LIBTOOL} --mode=install $(OUT)/libmujs.la $(DESTDIR)$(libdir)
  
- install-shared: install-common $(OUT)/libmujs.so
- 	install -m 755 $(OUT)/libmujs.so $(DESTDIR)$(libdir)
+ install-shared: install-common $(OUT)/libmujs.$(SO_EXT)
+ 	install -m 755 $(OUT)/libmujs.$(SO_EXT) $(DESTDIR)$(libdir)
