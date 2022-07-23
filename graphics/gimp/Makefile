@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.364 2022/07/23 06:40:08 wiz Exp $
+# $NetBSD: Makefile,v 1.365 2022/07/23 08:49:09 wiz Exp $
 
 DISTNAME=	gimp-2.10.32
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	https://download.gimp.org/pub/gimp/v${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.bz2
@@ -62,10 +62,6 @@ PLIST_SUBST+=	GIMP_DEBUG_TOOL_DIR="bin"
 PLIST_SUBST+=	GIMP_DEBUG_TOOL_DIR="libexec"
 .endif
 
-pre-configure:
-	${LN} -s mypaint-brushes-2.0.pc \
-	${BUILDLINK_DIR}/share/pkgconfig/mypaint-brushes-1.0.pc
-
 .include "options.mk"
 .include "../../archivers/xz/buildlink3.mk"
 BUILDLINK_API_DEPENDS.freetype2+=	freetype2>=2.8.1
@@ -88,7 +84,7 @@ BUILDLINK_API_DEPENDS.gegl+=		gegl>=0.4.36
 .include "../../graphics/libheif/buildlink3.mk"
 .include "../../graphics/libmypaint/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
-.include "../../graphics/mypaint-brushes/buildlink3.mk"
+.include "../../graphics/mypaint-brushes1/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"
 .include "../../graphics/openjpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
