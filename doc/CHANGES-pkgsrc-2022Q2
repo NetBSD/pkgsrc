@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2022Q2,v 1.1.2.2 2022/07/09 10:52:14 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2022Q2,v 1.1.2.3 2022/07/23 19:59:35 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2022Q2 branch:
 
@@ -8,4 +8,71 @@ lang/python310: build fix
 
 Pullup ticket #6648 - requested by nia
 x11/libXft: NetBSD 8 build fix
+
+Pullup ticket #6650 - requested by khorben
+lang/nodejs14: security update
+
+Pullup ticket #6651 - requested by khorben
+lang/nodejs16: security update
+
+Pullup ticket #6652 - requested by khorben
+lang/nodejs: security update
+
+Pullup ticket #6653 - requested by taca
+databases/ruby-activerecord52: security update
+devel/ruby-activejob52: security update
+devel/ruby-activemodel52: security update
+devel/ruby-activestorage52: security update
+devel/ruby-activesupport52: security update
+devel/ruby-railties52: security update
+mail/ruby-actionmailer52: security update
+www/ruby-actioncable52: security update
+www/ruby-actionpack52: security update
+www/ruby-actionview52: security update
+www/ruby-rails52: security update
+
+Pullup ticket #6654 - requested by taca
+databases/ruby-activerecord60: security update
+devel/ruby-activejob60: security update
+devel/ruby-activemodel60: security update
+devel/ruby-activestorage60: security update
+devel/ruby-activesupport60: security update
+devel/ruby-railties60: security update
+mail/ruby-actionmailbox60: security update
+mail/ruby-actionmailer60: security update
+textproc/ruby-actiontext60: security update
+www/ruby-actioncable60: security update
+www/ruby-actionpack60: security update
+www/ruby-actionview60: security update
+www/ruby-rails60: security update
+
+Pullup ticket #6655 - requested by taca
+databases/ruby-activerecord61: security update
+devel/ruby-activejob61: security update
+devel/ruby-activemodel61: security update
+devel/ruby-activestorage61: security update
+devel/ruby-activesupport61: security update
+devel/ruby-railties61: security update
+mail/ruby-actionmailbox61: security update
+mail/ruby-actionmailer61: security update
+textproc/ruby-actiontext61: security update
+www/ruby-actioncable61: security update
+www/ruby-actionpack61: security update
+www/ruby-actionview61: security update
+www/ruby-rails61: security update
+
+Pullup ticket #6656 - requested by taca
+databases/ruby-activerecord70: security update
+devel/ruby-activejob70: security update
+devel/ruby-activemodel70: security update
+devel/ruby-activestorage70: security update
+devel/ruby-activesupport70: security update
+devel/ruby-railties70: security update
+mail/ruby-actionmailbox70: security update
+mail/ruby-actionmailer70: security update
+textproc/ruby-actiontext70: security update
+www/ruby-actioncable70: security update
+www/ruby-actionpack70: security update
+www/ruby-actionview70: security update
+www/ruby-rails70: security update
 
