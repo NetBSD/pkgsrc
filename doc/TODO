@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22046 2022/07/23 15:09:49 leot Exp $
+$NetBSD: TODO,v 1.22047 2022/07/23 20:51:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -659,6 +659,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o felinks-0.14.0
 	o felt-3.07 [wip]
 	o fet-6.0.1
+	o ffmpeg5-5.1
 	o filerunner-14.06.18.10
 	o fish-3.5
 	o flashplayer-0.4.13
@@ -798,7 +799,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o goocanvas-2.0.2
 	o google-glog-2.2.2
 	o gossip-0.31
-	o got-0.52
+	o got-0.74
 	o gourmet-0.13.3
 	o gperiodic-3.0.2
 	o gprolog-1.5.0 [adds arm64 support]
