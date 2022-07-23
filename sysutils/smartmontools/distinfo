@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.40 2022/05/10 07:01:28 triaxx Exp $
+$NetBSD: distinfo,v 1.41 2022/07/23 15:18:17 tnn Exp $
 
 BLAKE2s (smartmontools-7.3.tar.gz) = fe02e8378d6a4b70b124df0627bef796f70f7f8000a614ad2f5b1a43549ccbe7
 SHA512 (smartmontools-7.3.tar.gz) = 08afe8b0a6a39e742160cd4e4c03fc7aff7b1ae8681b906360f0932277dc99e361b7606b2373bdf42425cf9453480a5f4344bc040ebc2fa26a03bd52f02a6ac0
 Size (smartmontools-7.3.tar.gz) = 1043932 bytes
 SHA1 (patch-aa) = c74f808d5e5d7530d7dda1871df70b46a3503ae3
-SHA1 (patch-ag) = 14f6def84df02af67b7669a8030e34e6f71b0d1c
+SHA1 (patch-ag) = 892ba81f7920fcd76288efdefadcf182b94d5e4f
