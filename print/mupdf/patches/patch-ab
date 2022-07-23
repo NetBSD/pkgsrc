@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.24 2021/10/23 15:22:07 leot Exp $
+$NetBSD: patch-ab,v 1.25 2022/07/23 15:09:43 leot Exp $
 
 - Handle the various operating systems in the same way avoiding hardcoding
 - Avoid to use objcopy by setting HAVE_OBJCOPY to no (if `yes', and with
@@ -14,9 +14,9 @@ $NetBSD: patch-ab,v 1.24 2021/10/23 15:22:07 leot Exp $
   If no lcms2 is available just pass `-DFZ_ENABLE_ICC=0' to disable it via
   CFLAGS.
 
---- Makerules.orig	2021-10-05 10:44:43.000000000 +0000
+--- Makerules.orig	2022-06-14 12:19:22.000000000 +0000
 +++ Makerules
-@@ -27,29 +27,6 @@ endif
+@@ -27,30 +27,6 @@ endif
  
  # System specific features
  
@@ -32,6 +32,7 @@ $NetBSD: patch-ab,v 1.24 2021/10/23 15:22:07 leot Exp $
 -  LDREMOVEUNREACH := -Wl,--gc-sections
 -  ifeq ($(OS),MINGW)
 -    SO := dll
+-    EXE := .exe
 -  else
 -    SO := so
 -  endif
@@ -46,7 +47,7 @@ $NetBSD: patch-ab,v 1.24 2021/10/23 15:22:07 leot Exp $
  SANITIZE_FLAGS += -fsanitize=address
  SANITIZE_FLAGS += -fsanitize=leak
  
-@@ -132,103 +109,79 @@ ifneq "$(CLUSTER)" ""
+@@ -133,103 +109,79 @@ ifneq "$(CLUSTER)" ""
    CFLAGS += -DCLUSTER
  endif
  
