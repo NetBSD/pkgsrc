@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2022/05/13 19:24:02 tnn Exp $
+# $NetBSD: Makefile,v 1.103 2022/07/23 14:57:33 wiz Exp $
 
 .include "dist.mk"
 
@@ -21,6 +21,7 @@ CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--with-dbmliborder=ndbm:bdb
 CONFIGURE_ARGS+=	--with-system-ffi
 CONFIGURE_ARGS+=	--with-threads
+CONFIGURE_ARGS+=	PKG_CONFIG=${PREFIX}/bin/pkg-config
 CONFIGURE_ENV+=		MKDIR_P=${MKDIR:Q}
 CONFIGURE_ENV+=		OPT=${CFLAGS:M*:Q}
 PKGCONFIG_OVERRIDE+=	Misc/python.pc.in
