@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:18:01 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/07/23 15:19:38 leot Exp $
 
-BLAKE2s (snallygaster-0.0.9.tar.gz) = 3fe0f15e774af1b653771fb7877f814f6a43b6dde21c66a7ed70fdd596fb8de0
-SHA512 (snallygaster-0.0.9.tar.gz) = e7de6d97576f1651e0a6882c4d2766efe82b8656f53a6c30a5e36eeadbaa4fdc2b79dc370a1106a0bbd916d45d1c92169dcfb5d7c75e89946b371bc80098366c
-Size (snallygaster-0.0.9.tar.gz) = 24055 bytes
+BLAKE2s (snallygaster-0.0.12.tar.gz) = f917f3fb1dd70a87df2230f07f7cffa0a4b3af1ce88876a63565793ef060dc31
+SHA512 (snallygaster-0.0.12.tar.gz) = 507b5bbaa8a013bbbb18b53778781e1e212e295f113ea91b1b73d5162f93d35be74780fa0cba7499d62f40c8cd27b4cdfd79526bd0ab07018090460ca937eb48
+Size (snallygaster-0.0.12.tar.gz) = 25234 bytes
