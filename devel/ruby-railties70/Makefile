@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/06/07 15:22:14 taca Exp $
+# $NetBSD: Makefile,v 1.4.2.1 2022/07/23 19:40:54 spz Exp $
 
 DISTNAME=	railties-${RAILS_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-railties${RUBY_RAILS}-${RAILS_VERSION}
@@ -20,8 +20,7 @@ RUBY_RAILS_ACCEPTED=	70
 RUBY_RAILS_STRICT_DEP=	yes
 RUBYGEM_OPTIONS+=	--format-executable
 OVERRIDE_GEMSPEC+=	:executables rails=rails${RUBY_RAILS} \
-			:files exe/rails=exe/rails${RUBY_RAILS} \
-			:files lib/rails/.DS_Store=
+			:files exe/rails=exe/rails${RUBY_RAILS}
 
 RUBY_VERSIONS_INCOMPATIBLE=	26
 
