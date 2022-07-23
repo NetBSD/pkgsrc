@@ -1,10 +1,19 @@
-$NetBSD: patch-ag,v 1.7 2022/05/10 07:01:28 triaxx Exp $
+$NetBSD: patch-ag,v 1.8 2022/07/23 15:18:17 tnn Exp $
 
 Match x86 SunOS platforms correctly.
 Remove os_solaris=yes to avoid special man page section handling (PR 38199).
 
---- configure.orig	2016-05-07 11:18:29.000000000 +0000
-+++ configure	2016-05-08 06:41:03.000000000 +0000
+--- configure.orig	2022-02-28 16:34:39.000000000 +0000
++++ configure
+@@ -3633,7 +3633,7 @@ smartmontools_release_date=2022-02-28
+ smartmontools_release_time="16:33:40 UTC"
+ 
+ 
+-printf "%s\n" "#define SMARTMONTOOLS_CONFIGURE_ARGS \"$ac_configure_args\"" >>confdefs.h
++printf "%s\n" "#define SMARTMONTOOLS_CONFIGURE_ARGS \"$(echo $ac_configure_args | sed -e "s/ 'PKG_CONFIG[_A-Z]*=[^']*'//g")\"" >>confdefs.h
+ 
+ 
+ printf "%s\n" "#define SMARTMONTOOLS_RELEASE_DATE \"$smartmontools_release_date\"" >>confdefs.h
 @@ -7707,13 +7707,11 @@ fi
      test "$with_solaris_sparc_ata" = "yes" \
        && os_deps="$os_deps os_solaris_ata.o"
