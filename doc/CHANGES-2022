@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3507 2022/07/23 15:19:43 leot Exp $
+$NetBSD: CHANGES-2022,v 1.3508 2022/07/23 15:40:39 leot Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5273,3 +5273,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/gimp-devel to 2.99.10nb1 [wiz 2022-07-23]
 	Updated print/mupdf to 1.20.0 [leot 2022-07-23]
 	Updated security/snallygaster to 0.0.12 [leot 2022-07-23]
+	Updated net/socat to 1.7.4.3 [leot 2022-07-23]
