@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.252 2022/07/22 17:07:10 micha Exp $
+# $NetBSD: Makefile,v 1.253 2022/07/23 08:11:04 wiz Exp $
 
 DISTNAME=	graphviz-5.0.0
 PKGREVISION=	1
@@ -14,7 +14,7 @@ CHECK_FILES_SKIP+=		${PREFIX}/lib/graphviz/config6
 CHECK_PORTABILITY_SKIP+=	windows/*
 
 USE_LANGUAGES=		c99 c++11
-USE_TOOLS+=		automake autoreconf makeinfo bison flex gmake groff pkg-config
+USE_TOOLS+=		automake autoreconf makeinfo bison flex gmake groff pkg-config ps2pdf
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_STRICT=	no # has sub-configures
