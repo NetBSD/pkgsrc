@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.43 2022/02/26 03:55:37 pho Exp $
+# $NetBSD: haskell.mk,v 1.44 2022/07/23 07:14:54 wiz Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages. Package
 # configuration, building, installation, registration and unregistration
@@ -105,14 +105,6 @@ _IGN_VARS.haskell= \
 PKGNAME?=	hs-${DISTNAME}
 MASTER_SITES?=	${MASTER_SITE_HASKELL_HACKAGE:=${DISTNAME}/}
 HOMEPAGE?=	http://hackage.haskell.org/package/${DISTNAME:C/-[^-]*$//}
-
-# Cabal packages may use pkg-config to find external libraries, but
-# mk/tools/pkg-config.mk doesn't prevent it from being invoked when it's
-# missing from USE_TOOLS for some reason. In our case that's very
-# undesirable because we would be silently depending on it.
-.if empty(USE_TOOLS:Mpkg-config)
-TOOLS_FAIL+=	pkg-config
-.endif
 
 # GHC can be a memory hog, so don't apply regular limits.
 UNLIMIT_RESOURCES+=	datasize virtualsize
