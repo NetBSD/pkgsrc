@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2021/10/23 15:22:07 leot Exp $
+@comment $NetBSD: PLIST,v 1.23 2022/07/23 15:09:43 leot Exp $
 bin/mupdf
 ${PLIST.curl}bin/mupdf-curl
 ${PLIST.opengl}bin/mupdf-gl
@@ -47,6 +47,7 @@ include/mupdf/fitz/text.h
 include/mupdf/fitz/track-usage.h
 include/mupdf/fitz/transition.h
 include/mupdf/fitz/tree.h
+include/mupdf/fitz/types.h
 include/mupdf/fitz/util.h
 include/mupdf/fitz/version.h
 include/mupdf/fitz/write-pixmap.h
@@ -81,14 +82,14 @@ man/man1/mutool.1
 share/doc/mupdf/CHANGES
 share/doc/mupdf/COPYING
 share/doc/mupdf/README
-share/doc/mupdf/android-sdk.html
+share/doc/mupdf/android-library.html
 share/doc/mupdf/artifex-logo.png
 share/doc/mupdf/building.html
 share/doc/mupdf/coding-overview.html
 share/doc/mupdf/coding-progressive.html
 share/doc/mupdf/coding-style.html
+share/doc/mupdf/ecosystem.css
 share/doc/mupdf/ecosystem.html
-share/doc/mupdf/ecosystem.png
 share/doc/mupdf/examples/bbox-device.js
 share/doc/mupdf/examples/create-thumbnail.js
 share/doc/mupdf/examples/draw-device.js
@@ -106,6 +107,7 @@ share/doc/mupdf/examples/pdf-portfolio.js
 share/doc/mupdf/examples/pdf-trace.js
 share/doc/mupdf/examples/trace-device.js
 share/doc/mupdf/index.html
+share/doc/mupdf/library.html
 share/doc/mupdf/manual-mupdf-gl.html
 share/doc/mupdf/manual-mutool-clean.html
 share/doc/mupdf/manual-mutool-convert.html
@@ -120,6 +122,7 @@ share/doc/mupdf/manual-mutool-run.html
 share/doc/mupdf/manual-mutool-show.html
 share/doc/mupdf/manual-mutool-sign.html
 share/doc/mupdf/manual-mutool-trace.html
+share/doc/mupdf/mutool.html
 share/doc/mupdf/style.css
-share/doc/mupdf/template.html
 share/doc/mupdf/thirdparty.html
+share/doc/mupdf/viewers.html
