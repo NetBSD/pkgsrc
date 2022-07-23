@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3509 2022/07/23 15:42:19 leot Exp $
+$NetBSD: CHANGES-2022,v 1.3510 2022/07/23 18:50:21 leot Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5275,3 +5275,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/snallygaster to 0.0.12 [leot 2022-07-23]
 	Updated net/socat to 1.7.4.3 [leot 2022-07-23]
 	Updated sysutils/entr to 5.2 [leot 2022-07-23]
+	Updated devel/opa to 0.42.2 [leot 2022-07-23]
