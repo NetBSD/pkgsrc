@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22045 2022/07/22 09:07:21 wiz Exp $
+$NetBSD: TODO,v 1.22046 2022/07/23 15:09:49 leot Exp $
 
 Suggested new packages
 ======================
@@ -1067,7 +1067,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o mtail-1.2.0
 	o multitail-6.4.2
 	o munge-0.5.14
-	o mupdf-1.20.0
 	o muse-0.9.2
 	o myodbc-8.0.28
 	o mysql-workbench-8.0.23
