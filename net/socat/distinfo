@@ -1,11 +1,10 @@
-$NetBSD: distinfo,v 1.34 2022/04/03 10:29:41 riastradh Exp $
+$NetBSD: distinfo,v 1.35 2022/07/23 15:40:33 leot Exp $
 
-BLAKE2s (socat-1.7.4.1.tar.gz) = 40fc322f89ca333a35c77cb25d71512404bfd116d36aecedb1773201f37b5d2e
-SHA512 (socat-1.7.4.1.tar.gz) = e43c8b23a841aea5ecc3ac324185ee4ada552a8284ec41b99245def2d8b493bca9caea1af6f646f434a7eda67a1dd71e4e037eea65fce0444840236eadb126a6
-Size (socat-1.7.4.1.tar.gz) = 648888 bytes
+BLAKE2s (socat-1.7.4.3.tar.gz) = 4fadaae253185c23ce27765d3bbe6744889d8b9f1cc660bc7ebff939916d1d9f
+SHA512 (socat-1.7.4.3.tar.gz) = 81cb34c245052b6a0ae38a711591358460b6070957af4a9eeb11a3cadb4aff184eeaedabbc7ecdc7fdf21a6126c06f90f19b24a87ce74b30bfd60a3879181046
+Size (socat-1.7.4.3.tar.gz) = 655520 bytes
 SHA1 (patch-config.h.in) = e0cb8c4075ca96863e458f1c2384dc7a6b69e928
 SHA1 (patch-configure) = ba75b5f192c1359220bea019fa50603b2b5c7c3a
-SHA1 (patch-fdname.c) = c59bd921989e4d84375764fdd707b7cd6c49ceba
 SHA1 (patch-sysincludes.h) = d48307ade6bc82bea946920e7336bc5329714c08
 SHA1 (patch-sysutils.c) = 03ae8b81f0277d8dbbdf82e5b215d7099b25cc36
 SHA1 (patch-xio-openssl.c) = 26745eff5eab745ac45eb04b2243b0bc4bfd6b8d
