@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2022/06/27 15:29:14 fcambus Exp $
+# $NetBSD: Makefile,v 1.23 2022/07/24 14:53:44 fcambus Exp $
 
-DISTNAME=	tig-2.5.5
+DISTNAME=	tig-2.5.6
 CATEGORIES=	devel scm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jonas/}
 GITHUB_RELEASE=	${DISTNAME}
