@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3765 2022/07/19 20:37:27 bsiegert Exp $
+# $NetBSD: Makefile,v 1.3766 2022/07/24 10:48:24 gdt Exp $
 #
 
 COMMENT=	Development utilities
@@ -2641,6 +2641,7 @@ SUBDIR+=	py-py
 SUBDIR+=	py-py2app
 SUBDIR+=	py-pybind11
 SUBDIR+=	py-pycotap
+SUBDIR+=	py-pydantic
 SUBDIR+=	py-pydispatcher
 SUBDIR+=	py-pyelftools
 SUBDIR+=	py-pygit2
