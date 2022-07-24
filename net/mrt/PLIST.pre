@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST.pre,v 1.2 2018/01/01 22:29:48 rillig Exp $
-man/man8/mrtd.8
-man/man8/ricd.8
-sbin/bgpsim
-sbin/mrtd
-sbin/ricd
-sbin/route_atob
-sbin/route_btoa
-sbin/sbgp
