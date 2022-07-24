@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22050 2022/07/24 10:47:46 wiz Exp $
+$NetBSD: TODO,v 1.22051 2022/07/24 10:49:04 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1347,7 +1347,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-rarfile-4.0
 	o py-rebulk-3.0.1
 	o py-requests-kerberos-0.14.0
-	o py-rsa-4.9
 	o py-sbws-1.1.0
 	o py-scgi-2.0
 	o py-serpent-1.30.2
