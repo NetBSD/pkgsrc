@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 2019/06/03 09:53:50 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/07/24 21:24:55 wiz Exp $
 bin/gdbus-codegen
 share/glib-2.0/codegen/__init__.py
 share/glib-2.0/codegen/codegen.py
 share/glib-2.0/codegen/codegen_docbook.py
 share/glib-2.0/codegen/codegen_main.py
+share/glib-2.0/codegen/codegen_rst.py
 share/glib-2.0/codegen/config.py
 share/glib-2.0/codegen/dbustypes.py
 share/glib-2.0/codegen/parser.py
