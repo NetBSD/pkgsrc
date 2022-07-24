@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3521 2022/07/24 11:04:34 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3522 2022/07/24 11:09:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5287,3 +5287,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-pip-api to 0.0.30 [wiz 2022-07-24]
 	Updated security/py-cyclonedx-python-lib to 2.7.0 [wiz 2022-07-24]
 	Added devel/py-pip-requirements-parser version 31.2.0 [wiz 2022-07-24]
+	Updated security/py-pip-audit to 2.4.2 [wiz 2022-07-24]
