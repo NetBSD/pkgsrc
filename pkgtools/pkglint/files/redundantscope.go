@@ -241,7 +241,7 @@ func (s *RedundantScope) handleVarUse(mkline *MkLine) {
 	}
 }
 
-// access returns the info for the given variable, creating it if necessary.
+// get returns the info for the given variable, creating it if necessary.
 func (s *RedundantScope) get(varname string) *redundantScopeVarinfo {
 	info := s.vars[varname]
 	if info == nil {

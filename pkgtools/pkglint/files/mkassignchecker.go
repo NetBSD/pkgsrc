@@ -494,6 +494,11 @@ func (ck *MkAssignChecker) checkRight() {
 	mkLineChecker := NewMkLineChecker(ck.MkLines, ck.MkLine)
 	mkLineChecker.checkText(value)
 	mkLineChecker.checkVartype(varname, op, value, comment)
+	if mkline.IsEmpty() {
+		// The line type can change due to an Autofix, see for example
+		// VartypeCheck.WrkdirSubdirectory.
+		return
+	}
 
 	ck.checkMisc()
 
