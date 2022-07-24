@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2022/07/22 09:07:11 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2022/07/24 14:59:35 wiz Exp $
 
-DISTNAME=	appstream-glib-0.7.18
-PKGREVISION=	5
+DISTNAME=	appstream-glib-0.8.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hughsie/}
 GITHUB_TAG=	${DISTNAME:S/-/_/g:S/./_/g}
@@ -32,9 +31,9 @@ PYTHON_FOR_BUILD_ONLY=	tool
 .include "../../devel/libuuid/buildlink3.mk"
 .include "../../devel/meson/build.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
-.include "../../net/libsoup/buildlink3.mk"
 .include "../../textproc/json-glib/buildlink3.mk"
 .include "../../textproc/libstemmer/buildlink3.mk"
 .include "../../textproc/libyaml/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
