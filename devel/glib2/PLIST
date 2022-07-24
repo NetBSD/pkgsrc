@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.137 2022/03/31 11:54:54 adam Exp $
+@comment $NetBSD: PLIST,v 1.138 2022/07/24 21:24:56 wiz Exp $
 ${PLIST.nococoa}bin/gapplication
 bin/gdbus
 bin/gio
@@ -11,14 +11,11 @@ bin/gresource
 bin/gsettings
 ${PLIST.nococoa}include/gio-unix-2.0/gio/gdesktopappinfo.h
 include/gio-unix-2.0/gio/gfiledescriptorbased.h
-include/gio-unix-2.0/gio/gunixconnection.h
-include/gio-unix-2.0/gio/gunixcredentialsmessage.h
 include/gio-unix-2.0/gio/gunixfdlist.h
 include/gio-unix-2.0/gio/gunixfdmessage.h
 include/gio-unix-2.0/gio/gunixinputstream.h
 include/gio-unix-2.0/gio/gunixmounts.h
 include/gio-unix-2.0/gio/gunixoutputstream.h
-include/gio-unix-2.0/gio/gunixsocketaddress.h
 include/glib-2.0/gio/gaction.h
 include/glib-2.0/gio/gactiongroup.h
 include/glib-2.0/gio/gactiongroupexporter.h
@@ -63,6 +60,8 @@ include/glib-2.0/gio/gdbusobjectskeleton.h
 include/glib-2.0/gio/gdbusproxy.h
 include/glib-2.0/gio/gdbusserver.h
 include/glib-2.0/gio/gdbusutils.h
+include/glib-2.0/gio/gdebugcontroller.h
+include/glib-2.0/gio/gdebugcontrollerdbus.h
 include/glib-2.0/gio/gdrive.h
 include/glib-2.0/gio/gdtlsclientconnection.h
 include/glib-2.0/gio/gdtlsconnection.h
@@ -114,7 +113,6 @@ include/glib-2.0/gio/gnetworking.h
 include/glib-2.0/gio/gnetworkmonitor.h
 include/glib-2.0/gio/gnetworkservice.h
 include/glib-2.0/gio/gnotification.h
-${PLIST.cocoa}include/glib-2.0/gio/gosxappinfo.h
 include/glib-2.0/gio/goutputstream.h
 include/glib-2.0/gio/gpermission.h
 include/glib-2.0/gio/gpollableinputstream.h
@@ -166,6 +164,9 @@ include/glib-2.0/gio/gtlsfiledatabase.h
 include/glib-2.0/gio/gtlsinteraction.h
 include/glib-2.0/gio/gtlspassword.h
 include/glib-2.0/gio/gtlsserverconnection.h
+include/glib-2.0/gio/gunixconnection.h
+include/glib-2.0/gio/gunixcredentialsmessage.h
+include/glib-2.0/gio/gunixsocketaddress.h
 include/glib-2.0/gio/gvfs.h
 include/glib-2.0/gio/gvolume.h
 include/glib-2.0/gio/gvolumemonitor.h
@@ -261,6 +262,7 @@ include/glib-2.0/glib/gversionmacros.h
 include/glib-2.0/glib/gwin32.h
 include/glib-2.0/gmodule.h
 include/glib-2.0/gobject/gbinding.h
+include/glib-2.0/gobject/gbindinggroup.h
 include/glib-2.0/gobject/gboxed.h
 include/glib-2.0/gobject/gclosure.h
 include/glib-2.0/gobject/genums.h
@@ -273,6 +275,7 @@ include/glib-2.0/gobject/gobjectnotifyqueue.c
 include/glib-2.0/gobject/gparam.h
 include/glib-2.0/gobject/gparamspecs.h
 include/glib-2.0/gobject/gsignal.h
+include/glib-2.0/gobject/gsignalgroup.h
 include/glib-2.0/gobject/gsourceclosure.h
 include/glib-2.0/gobject/gtype.h
 include/glib-2.0/gobject/gtypemodule.h
@@ -285,19 +288,19 @@ ${PLIST.fam}lib/gio/modules/libgiofam.so
 lib/glib-2.0/include/glibconfig.h
 lib/libgio-2.0.so
 lib/libgio-2.0.so.0
-lib/libgio-2.0.so.0.7000.5
+lib/libgio-2.0.so.0.7200.2
 lib/libglib-2.0.so
 lib/libglib-2.0.so.0
-lib/libglib-2.0.so.0.7000.5
+lib/libglib-2.0.so.0.7200.2
 lib/libgmodule-2.0.so
 lib/libgmodule-2.0.so.0
-lib/libgmodule-2.0.so.0.7000.5
+lib/libgmodule-2.0.so.0.7200.2
 lib/libgobject-2.0.so
 lib/libgobject-2.0.so.0
-lib/libgobject-2.0.so.0.7000.5
+lib/libgobject-2.0.so.0.7200.2
 lib/libgthread-2.0.so
 lib/libgthread-2.0.so.0
-lib/libgthread-2.0.so.0.7000.5
+lib/libgthread-2.0.so.0.7200.2
 lib/pkgconfig/gio-2.0.pc
 lib/pkgconfig/gio-unix-2.0.pc
 lib/pkgconfig/glib-2.0.pc
@@ -309,8 +312,8 @@ lib/pkgconfig/gthread-2.0.pc
 share/aclocal/glib-2.0.m4
 share/aclocal/glib-gettext.m4
 share/aclocal/gsettings.m4
-share/gdb/auto-load${LOCALBASE}/lib/libglib-2.0.so.0.7000.5-gdb.py
-share/gdb/auto-load${LOCALBASE}/lib/libgobject-2.0.so.0.7000.5-gdb.py
+share/gdb/auto-load/usr/pkg/lib/libglib-2.0.so.0.7200.2-gdb.py
+share/gdb/auto-load/usr/pkg/lib/libgobject-2.0.so.0.7200.2-gdb.py
 share/gettext/its/gschema.its
 share/gettext/its/gschema.loc
 share/glib-2.0/gdb/glib_gdb.py
