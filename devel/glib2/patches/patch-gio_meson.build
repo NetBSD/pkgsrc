@@ -1,10 +1,10 @@
-$NetBSD: patch-gio_meson.build,v 1.8 2021/11/07 13:24:04 adam Exp $
+$NetBSD: patch-gio_meson.build,v 1.9 2022/07/24 21:24:56 wiz Exp $
 
 Disable inotify on SunOS.
 
---- gio/meson.build.orig	2021-10-28 12:34:36.000000000 +0000
+--- gio/meson.build.orig	2022-05-30 13:26:47.000000000 +0000
 +++ gio/meson.build
-@@ -755,7 +755,7 @@ gioenumtypes_c = custom_target('gioenumt
+@@ -754,7 +754,7 @@ gioenumtypes_c = custom_target('gioenumt
  gioenumtypes_dep = declare_dependency(sources : [gioenumtypes_h, glib_enumtypes_h])
  
  # inotify
@@ -12,4 +12,4 @@ Disable inotify on SunOS.
 +if glib_conf.has('HAVE_SYS_INOTIFY_H') and have_func_inotify_init1 and host_system != 'sunos'
    subdir('inotify')
    internal_deps += [ inotify_lib ]
-   internal_objects += [inotify_lib.extract_all_objects(recursive: false)]
+ endif
