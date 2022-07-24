@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3529 2022/07/24 21:15:29 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3530 2022/07/24 21:25:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5295,3 +5295,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/xfce4-panel to 4.16.4nb1 [gutteridge 2022-07-24]
 	Updated editors/xfce4-mousepad to 0.5.10 [gutteridge 2022-07-24]
 	Updated net/nagstamon to 1.0.1nb24 [wiz 2022-07-24]
+	Updated devel/glib2 to 2.72.2 [wiz 2022-07-24]
