@@ -1341,6 +1341,19 @@ func (s *Suite) Test_Package_check__patches_Makefile(c *check.C) {
 		"1 warning found.")
 }
 
+func (s *Suite) Test_Package_check__redundant_WRKSRC(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package",
+		"WRKSRC=\t${WRKDIR}/package-1.0")
+
+	t.Main("-q", "category/package")
+
+	t.CheckOutputLines(
+		"NOTE: ~/category/package/Makefile:20: " +
+			"Setting WRKSRC to \"${WRKDIR}/package-1.0\" is redundant.")
+}
+
 func (s *Suite) Test_Package_checkDescr__DESCR_SRC(c *check.C) {
 	t := s.Init(c)
 
