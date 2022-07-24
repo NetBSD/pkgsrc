@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2022/07/03 10:38:09 wiz Exp $
+$NetBSD: distinfo,v 1.7 2022/07/24 10:55:02 wiz Exp $
 
-BLAKE2s (cyclonedx-python-lib-2.6.0.tar.gz) = b0c63247f76397e2813f257bb018e851057f7cbbdd510142768200e0e566229a
-SHA512 (cyclonedx-python-lib-2.6.0.tar.gz) = 9847725f9e211fc2fd8cda3c76a783143b0ad243d284211ef078bfe4521b43ffa9c2eb78883d933beee11ff69219705ed1682542b98a923a7e2cbb776851ba18
-Size (cyclonedx-python-lib-2.6.0.tar.gz) = 159846 bytes
+BLAKE2s (cyclonedx-python-lib-2.7.0.tar.gz) = 3341623dd8bb6280007ba58290d1348b69ef25640b4c7aa5fd4121902427f9e2
+SHA512 (cyclonedx-python-lib-2.7.0.tar.gz) = be2a02f1a8193de0f33d6416e69160b5bd9b250bc65f270b0a4cb71bfeb8135d6a1b985d1a004a93e2fbc31ce5a8eb803fa5a27799e2169cb329eee1d3c57644
+Size (cyclonedx-python-lib-2.7.0.tar.gz) = 162011 bytes
 SHA1 (patch-setup.py) = f48060c553b57a7943004ef76770d8b4518a80fe
