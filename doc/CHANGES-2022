@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3514 2022/07/24 07:46:37 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3515 2022/07/24 08:58:32 rin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5280,3 +5280,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated emulators/nono version 0.4.1 [jun 2022-07-24]
 	Updated multimedia/ffmpeg5 to 5.1 [adam 2022-07-24]
 	Updated multimedia/ffplay5 to 5.1 [adam 2022-07-24]
+	Updated x11/mlterm to 3.9.2nb4 [rin 2022-07-24]
