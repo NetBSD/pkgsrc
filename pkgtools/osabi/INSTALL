@@ -1,4 +1,4 @@
-# $NetBSD: INSTALL,v 1.6 2022/07/24 07:28:09 nia Exp $
+# $NetBSD: INSTALL,v 1.7 2022/07/24 20:56:56 nia Exp $
 
 UNAME="@UNAME@"
 PKG_ADMIN="@PKG_ADMIN@"
@@ -24,12 +24,6 @@ PRE-INSTALL)
 		;;
 	DragonFly|FreeBSD|Linux)
 		OS_VERSION=`echo "${OS_VERSION}" | sed -e's/-.*$//'`
-		;;
-	NetBSD) 
-		if [ -f /etc/release ]; then
-			OS_VERSION=`head -1 /etc/release | \
-			    sed -e "s,^NetBSD ,,g" -e "s,/.*$,,g"`
-		fi
 		;;
 	OSF1)
 		OS_VERSION=`echo "${OS_VERSION}" | sed -e's/^V//'`
