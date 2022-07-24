@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3515 2022/07/24 08:58:32 rin Exp $
+$NetBSD: CHANGES-2022,v 1.3516 2022/07/24 10:47:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5281,3 +5281,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated multimedia/ffmpeg5 to 5.1 [adam 2022-07-24]
 	Updated multimedia/ffplay5 to 5.1 [adam 2022-07-24]
 	Updated x11/mlterm to 3.9.2nb4 [rin 2022-07-24]
+	Updated graphics/gegl to 0.4.38 [wiz 2022-07-24]
