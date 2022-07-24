@@ -1,9 +1,10 @@
-$NetBSD: patch-ac,v 1.28 2022/07/23 15:09:43 leot Exp $
+$NetBSD: patch-ac,v 1.29 2022/07/24 10:13:38 leot Exp $
 
 - libtool support 
 - Install target cleanup
 - Also install muthreads and mupkcs7 libraries (needed by various tools)
 - Do not force `-O0' flag when building
+- Use sh instead of bash
 - Get rid of unused VERSION variable and `version:' target (otherwise `git' can
   be invoked during the building phase)
 - Install mupdf with curl support as `mupdf-curl'
@@ -147,8 +148,18 @@ $NetBSD: patch-ac,v 1.28 2022/07/23 15:09:43 leot Exp $
  
  # --- Generated embedded font files ---
  
-@@ -187,13 +187,13 @@ generated/%.ttf.c : %.ttf $(HEXDUMP_SH) 
- generated/%.ttc.c : %.ttc $(HEXDUMP_SH) ; $(QUIET_GEN) $(MKTGTDIR) ; bash $(HEXDUMP_SH) > $@ $<
+@@ -181,19 +181,19 @@ FONT_BIN += $(sort $(wildcard resources/
+ 
+ FONT_GEN := $(FONT_BIN:%=generated/%.c)
+ 
+-generated/%.cff.c : %.cff $(HEXDUMP_SH) ; $(QUIET_GEN) $(MKTGTDIR) ; bash $(HEXDUMP_SH) > $@ $<
+-generated/%.otf.c : %.otf $(HEXDUMP_SH) ; $(QUIET_GEN) $(MKTGTDIR) ; bash $(HEXDUMP_SH) > $@ $<
+-generated/%.ttf.c : %.ttf $(HEXDUMP_SH) ; $(QUIET_GEN) $(MKTGTDIR) ; bash $(HEXDUMP_SH) > $@ $<
+-generated/%.ttc.c : %.ttc $(HEXDUMP_SH) ; $(QUIET_GEN) $(MKTGTDIR) ; bash $(HEXDUMP_SH) > $@ $<
++generated/%.cff.c : %.cff $(HEXDUMP_SH) ; $(QUIET_GEN) $(MKTGTDIR) ; sh $(HEXDUMP_SH) > $@ $<
++generated/%.otf.c : %.otf $(HEXDUMP_SH) ; $(QUIET_GEN) $(MKTGTDIR) ; sh $(HEXDUMP_SH) > $@ $<
++generated/%.ttf.c : %.ttf $(HEXDUMP_SH) ; $(QUIET_GEN) $(MKTGTDIR) ; sh $(HEXDUMP_SH) > $@ $<
++generated/%.ttc.c : %.ttc $(HEXDUMP_SH) ; $(QUIET_GEN) $(MKTGTDIR) ; sh $(HEXDUMP_SH) > $@ $<
  
  ifeq ($(HAVE_OBJCOPY),yes)
 -  MUPDF_OBJ += $(FONT_BIN:%=$(OUT)/%.o)
