@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.138 2022/07/24 21:24:56 wiz Exp $
+@comment $NetBSD: PLIST,v 1.139 2022/07/24 23:10:01 tnn Exp $
 ${PLIST.nococoa}bin/gapplication
 bin/gdbus
 bin/gio
@@ -312,8 +312,8 @@ lib/pkgconfig/gthread-2.0.pc
 share/aclocal/glib-2.0.m4
 share/aclocal/glib-gettext.m4
 share/aclocal/gsettings.m4
-share/gdb/auto-load/usr/pkg/lib/libglib-2.0.so.0.7200.2-gdb.py
-share/gdb/auto-load/usr/pkg/lib/libgobject-2.0.so.0.7200.2-gdb.py
+share/gdb/auto-load${LOCALBASE}/lib/libglib-2.0.so.0.7200.2-gdb.py
+share/gdb/auto-load${LOCALBASE}/lib/libgobject-2.0.so.0.7200.2-gdb.py
 share/gettext/its/gschema.its
 share/gettext/its/gschema.loc
 share/glib-2.0/gdb/glib_gdb.py
