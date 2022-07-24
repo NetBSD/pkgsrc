@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3527 2022/07/24 20:48:03 gutteridge Exp $
+$NetBSD: CHANGES-2022,v 1.3528 2022/07/24 21:07:22 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5293,3 +5293,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/appstream-glib to 0.8.0 [wiz 2022-07-24]
 	Updated pkgtools/pkglint to 22.2.3 [rillig 2022-07-24]
 	Updated x11/xfce4-panel to 4.16.4nb1 [gutteridge 2022-07-24]
+	Updated editors/xfce4-mousepad to 0.5.10 [gutteridge 2022-07-24]
