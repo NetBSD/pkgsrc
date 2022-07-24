@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22047 2022/07/23 20:51:23 wiz Exp $
+$NetBSD: TODO,v 1.22048 2022/07/24 06:26:49 wiz Exp $
 
 Suggested new packages
 ======================
@@ -810,6 +810,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o graphene-1.10.6
 	o greed-4.2
 	o gromacs-2021.1
+	o grpc-1.48.0
 	o grub2-2.06
 	o gss-1.0.3
 	o gst-plugins1-omx-1.10.0
@@ -1095,6 +1096,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o nickle-2.90
 	o nios2-binutils-2.36.1
 	o node_exporter-1.1.2
+	o npm-8.15.0
 	o ns-3.14.1
 	o ns-plugger-common-5.1.3
 	o nsm-2.4.12
@@ -1298,6 +1300,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o privoxy-3.0.33
 	o profit-2.5.3
 	o proj-8.0.0
+	o protobuf-3.21.3
 	o ps2eps-1.70
 	o psmisc-22.20
 	o pspp-1.4.1
@@ -1314,6 +1317,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-cassa-1.11.0
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
 	o py-coverage-6.3.2
+	o py-cyclonedx-python-lib-2.7.0
 	o py-django-4.0
 	o py-django-debug-toolbar-3.2.1
 	o py-django-tagging-0.5.0
@@ -1333,6 +1337,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-newt-0.52.21
 	o py-omniORBpy-3.7
 	o py-pdf-parser-0.7.4
+	o py-pip-api-0.0.30
+	o py-pip-audit-2.4.2
 	o py-postgresql-5.1.2
 	o py-ptt-1.10.2
 	o py-py3c-1.3.1
@@ -1343,6 +1349,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-rarfile-4.0
 	o py-rebulk-3.0.1
 	o py-requests-kerberos-0.14.0
+	o py-rsa-4.9
 	o py-sbws-1.1.0
 	o py-scgi-2.0
 	o py-serpent-1.30.2
@@ -1416,7 +1423,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rump-20131213
 	o rust-1.61.0 [wip]
 	o rust-1.62.0
-	o rust-analyzer-0.0.20220711
+	o rust-analyzer-0.0.20220718
 	o rvault-0.4
 	o rvm-1.20
 	o sabayon-2.30.1
