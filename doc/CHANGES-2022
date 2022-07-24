@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3519 2022/07/24 10:53:39 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3520 2022/07/24 10:55:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5285,3 +5285,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-pydantic to 1.9.1 [gdt 2022-07-24]
 	Updated security/py-rsa to 4.9 [wiz 2022-07-24]
 	Updated devel/py-pip-api to 0.0.30 [wiz 2022-07-24]
+	Updated security/py-cyclonedx-python-lib to 2.7.0 [wiz 2022-07-24]
