@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.294 2022/07/22 22:31:58 wiz Exp $
+# $NetBSD: replace.mk,v 1.295 2022/07/24 14:47:00 wiz Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -686,7 +686,6 @@ AUTORECONF_ARGS+=		-I ${TOOLS_PLATFORM.pkg-config:S/\/bin\/pkg-config//}/share/a
 # "broken" pkg-config in the tools directory.
 #
 TOOLS_FAIL+=			pkg-config
-TOOLS_PATH.pkg-config=		${TOOLS_CMD.pkg-config}
 .endif
 
 .if !defined(TOOLS_IGNORE.rpm2pkg) && !empty(_USE_TOOLS:Mrpm2pkg)
