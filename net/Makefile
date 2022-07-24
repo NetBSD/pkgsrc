@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1470 2022/07/08 14:16:15 wiz Exp $
+# $NetBSD: Makefile,v 1.1471 2022/07/24 21:35:31 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -389,7 +389,6 @@ SUBDIR+=	mosquitto
 SUBDIR+=	mouse-pppoe
 SUBDIR+=	mping
 SUBDIR+=	mrstat
-SUBDIR+=	mrt
 SUBDIR+=	mrtg
 SUBDIR+=	msdl
 SUBDIR+=	mtftpd
