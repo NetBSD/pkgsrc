@@ -1,4 +1,4 @@
-$NetBSD: patch-libwebrtc.diff,v 1.5 2022/07/04 14:34:08 ryoon Exp $
+$NetBSD: patch-libwebrtc.diff,v 1.6 2022/07/24 16:33:09 rjs Exp $
 
 diff -ur firefox-102.0.orig/third_party/libwebrtc/api/adaptation/resource_adaptation_api_gn/moz.build firefox-102.0/third_party/libwebrtc/api/adaptation/resource_adaptation_api_gn/moz.build
 --- third_party/libwebrtc/api/adaptation/resource_adaptation_api_gn/moz.build	2022-06-17 06:35:29.000000000 +0900
@@ -15288,6 +15288,15 @@ _+++ third_party/libwebrtc/moz.build	2022-06-23 07:16:39.729659012 +0900
  
      DIRS += [
          "/third_party/libwebrtc/api/audio_codecs/isac/audio_decoder_isac_float_gn",
+@@ -497,7 +497,7 @@
+         "/third_party/libwebrtc/modules/video_processing/video_processing_sse2_gn"
+     ]
+ 
+-if CONFIG["CPU_ARCH"] == "aarch64" and CONFIG["OS_TARGET"] == "Linux":
++if CONFIG["CPU_ARCH"] == "aarch64" and (CONFIG["OS_TARGET"] == "Linux" or CONFIG["OS_TARGET"] == "NetBSD" or CONFIG["OS_TARGET"] == "OpenBSD" or CONFIG["OS_TARGET"] == "FreeBSD"):
+ 
+     DIRS += [
+         "/third_party/libwebrtc/common_audio/common_audio_neon_c_gn",
 @@ -505,7 +505,7 @@
          "/third_party/libwebrtc/modules/video_processing/video_processing_neon_gn"
      ]
