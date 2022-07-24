@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3531 2022/07/24 21:25:17 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3532 2022/07/24 21:25:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5297,3 +5297,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/nagstamon to 1.0.1nb24 [wiz 2022-07-24]
 	Updated devel/glib2 to 2.72.2 [wiz 2022-07-24]
 	Updated devel/glib2-tools to 2.72.2 [wiz 2022-07-24]
+	Updated devel/gdbus-codegen to 2.72.2 [wiz 2022-07-24]
