@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3524 2022/07/24 14:53:56 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.3525 2022/07/24 14:59:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5290,3 +5290,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/py-pip-audit to 2.4.2 [wiz 2022-07-24]
 	Updated net/glib-networking to 2.72.1 [wiz 2022-07-24]
 	Updated devel/tig to 2.5.6 [fcambus 2022-07-24]
+	Updated devel/appstream-glib to 0.8.0 [wiz 2022-07-24]
