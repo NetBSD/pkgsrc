@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3526 2022/07/24 20:07:30 rillig Exp $
+$NetBSD: CHANGES-2022,v 1.3527 2022/07/24 20:48:03 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5292,3 +5292,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/tig to 2.5.6 [fcambus 2022-07-24]
 	Updated devel/appstream-glib to 0.8.0 [wiz 2022-07-24]
 	Updated pkgtools/pkglint to 22.2.3 [rillig 2022-07-24]
+	Updated x11/xfce4-panel to 4.16.4nb1 [gutteridge 2022-07-24]
