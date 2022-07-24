@@ -1,0 +1,5 @@
+pip-requirements-parser is a mostly correct pip requirements parsing
+library... because it uses pip's own code!
+
+pip is the package installer for Python that is using "requirements"
+text files listing the packages to install.
