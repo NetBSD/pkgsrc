@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3525 2022/07/24 14:59:45 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3526 2022/07/24 20:07:30 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5291,3 +5291,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/glib-networking to 2.72.1 [wiz 2022-07-24]
 	Updated devel/tig to 2.5.6 [fcambus 2022-07-24]
 	Updated devel/appstream-glib to 0.8.0 [wiz 2022-07-24]
+	Updated pkgtools/pkglint to 22.2.3 [rillig 2022-07-24]
