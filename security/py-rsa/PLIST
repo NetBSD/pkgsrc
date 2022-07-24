@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/12/11 20:06:49 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/07/24 10:48:55 wiz Exp $
 bin/pyrsa-decrypt-${PYVERSSUFFIX}
 bin/pyrsa-encrypt-${PYVERSSUFFIX}
 bin/pyrsa-keygen-${PYVERSSUFFIX}
@@ -14,9 +14,6 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/rsa/__init__.py
 ${PYSITELIB}/rsa/__init__.pyc
 ${PYSITELIB}/rsa/__init__.pyo
-${PYSITELIB}/rsa/_compat.py
-${PYSITELIB}/rsa/_compat.pyc
-${PYSITELIB}/rsa/_compat.pyo
 ${PYSITELIB}/rsa/asn1.py
 ${PYSITELIB}/rsa/asn1.pyc
 ${PYSITELIB}/rsa/asn1.pyo
