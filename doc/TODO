@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22049 2022/07/24 07:46:37 adam Exp $
+$NetBSD: TODO,v 1.22050 2022/07/24 10:47:46 wiz Exp $
 
 Suggested new packages
 ======================
@@ -706,7 +706,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gdb-12.1
 	o gdb7-7.12
 	o geeklog-2.2.1sr1
-	o gegl-0.4.38
 	o geneweb-7.0.0
 	o genius-1.0.26
 	o gens-2.15.5
