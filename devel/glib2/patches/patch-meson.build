@@ -1,4 +1,4 @@
-$NetBSD: patch-meson.build,v 1.16 2021/10/15 15:04:47 jperkin Exp $
+$NetBSD: patch-meson.build,v 1.17 2022/07/24 21:24:56 wiz Exp $
 
 - On Darwin, optionally use Cocoa (needed for X11 users).
 
@@ -12,9 +12,9 @@ $NetBSD: patch-meson.build,v 1.16 2021/10/15 15:04:47 jperkin Exp $
 
 - Define a newer POSIX, as we build this package with -std=gnu99
 
---- meson.build.orig	2021-09-17 10:17:56.849962700 +0000
+--- meson.build.orig	2022-05-30 13:26:47.000000000 +0000
 +++ meson.build
-@@ -778,7 +778,7 @@ if host_system == 'darwin'
+@@ -821,7 +821,7 @@ if host_system == 'darwin'
                                        #error "Detected GNUstep, not Cocoa"
                                        #endif''',
                                     name : 'Mac OS X Cocoa support')
@@ -22,17 +22,8 @@ $NetBSD: patch-meson.build,v 1.16 2021/10/15 15:04:47 jperkin Exp $
 +  glib_have_cocoa = glib_have_cocoa and get_option('use_cocoa')
    if glib_have_cocoa
      glib_conf.set('HAVE_COCOA', true)
-     osx_ldflags += ['-Wl,-framework,Foundation', '-Wl,-framework,AppKit']
-@@ -2047,7 +2047,7 @@ endif
- # FIXME: glib-gettext.m4 has much more checks to detect broken/uncompatible
- # implementations. This could be extended if issues are found in some platforms.
- libintl_deps = []
--if cc.has_function('ngettext', args : osx_ldflags)
-+if cc.has_function('ngettext', args : osx_ldflags) and host_system != 'sunos'
-   have_bind_textdomain_codeset = cc.has_function('bind_textdomain_codeset')
- else
-   # First just find the bare library.
-@@ -2118,18 +2118,17 @@ if host_system != 'windows' and get_opti
+   endif
+@@ -2159,18 +2159,17 @@ if host_system != 'windows' and get_opti
  
    # try glibc
    if cc.has_function('getxattr') and cc.has_header('sys/xattr.h')
@@ -53,7 +44,7 @@ $NetBSD: patch-meson.build,v 1.16 2021/10/15 15:04:47 jperkin Exp $
    if cc.compiles(glib_conf_prefix + '''
                   #include <stdio.h>
                   #ifdef HAVE_SYS_TYPES_H
-@@ -2230,9 +2229,12 @@ endif
+@@ -2271,9 +2270,12 @@ endif
  
  glib_conf.set('HAVE_PROC_SELF_CMDLINE', have_proc_self_cmdline)
  
@@ -69,7 +60,7 @@ $NetBSD: patch-meson.build,v 1.16 2021/10/15 15:04:47 jperkin Exp $
  
  python_version = python.language_version()
  python_version_req = '>=3.5'
-@@ -2241,7 +2243,7 @@ if not python_version.version_compare(py
+@@ -2282,7 +2284,7 @@ if not python_version.version_compare(py
  endif
  
  # Determine which user environment-dependent files that we want to install
@@ -78,7 +69,7 @@ $NetBSD: patch-meson.build,v 1.16 2021/10/15 15:04:47 jperkin Exp $
  bash_comp_dep = dependency('bash-completion', version: '>=2.0', required: false)
  have_sh = find_program('sh', required : false).found() # For glib-gettextize
  
-@@ -2250,8 +2252,7 @@ env_program = find_program('env', requir
+@@ -2291,8 +2293,7 @@ env_program = find_program('env', requir
  
  # FIXME: How to detect Solaris? https://github.com/mesonbuild/meson/issues/1578
  if host_system == 'sunos'
