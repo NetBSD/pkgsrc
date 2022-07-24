@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3516 2022/07/24 10:47:46 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3517 2022/07/24 10:48:36 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5282,3 +5282,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated multimedia/ffplay5 to 5.1 [adam 2022-07-24]
 	Updated x11/mlterm to 3.9.2nb4 [rin 2022-07-24]
 	Updated graphics/gegl to 0.4.38 [wiz 2022-07-24]
+	Updated devel/py-pydantic to 1.9.1 [gdt 2022-07-24]
