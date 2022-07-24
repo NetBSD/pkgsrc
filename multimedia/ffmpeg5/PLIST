@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2022/07/24 07:46:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/07/24 22:48:31 tnn Exp $
 bin/ffmpeg5
 bin/ffprobe5
 include/ffmpeg5/libavcodec/ac3_parser.h
@@ -198,9 +198,9 @@ man/man3/libavformat5.3
 man/man3/libavutil5.3
 man/man3/libswresample5.3
 man/man3/libswscale5.3
-share/doc/ffmpeg5/bootstrap.min.css
+${PLIST.doc}share/doc/ffmpeg5/bootstrap.min.css
 share/doc/ffmpeg5/build_system.txt
-share/doc/ffmpeg5/default.css
+${PLIST.doc}share/doc/ffmpeg5/default.css
 ${PLIST.doc}share/doc/ffmpeg5/developer.html
 share/doc/ffmpeg5/errno.txt
 ${PLIST.doc}share/doc/ffmpeg5/faq.html
@@ -239,7 +239,7 @@ share/doc/ffmpeg5/optimization.txt
 ${PLIST.doc}share/doc/ffmpeg5/platform.html
 share/doc/ffmpeg5/rate_distortion.txt
 share/doc/ffmpeg5/snow.txt
-share/doc/ffmpeg5/style.min.css
+${PLIST.doc}share/doc/ffmpeg5/style.min.css
 share/doc/ffmpeg5/swresample.txt
 share/doc/ffmpeg5/swscale.txt
 share/doc/ffmpeg5/tablegen.txt
