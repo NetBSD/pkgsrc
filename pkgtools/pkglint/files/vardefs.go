@@ -283,7 +283,7 @@ func (reg *VarTypeRegistry) compilerLanguages(src *Pkgsrc) *BasicType {
 	if mklines != nil {
 		for _, mkline := range mklines.mklines {
 
-			if mkline.IsVarassign() && mkline.Varname() == "_CXX_STD_VERSIONS" {
+			if mkline.IsVarassign() && hasSuffix(mkline.Varname(), "_STD_VERSIONS") {
 				words := mkline.ValueFields(mkline.Value())
 				for _, word := range words {
 					languages[intern(word)] = true
@@ -1088,6 +1088,7 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	reg.pkg("CHECK_SHLIBS", BtYesNo)
 	reg.pkglist("CHECK_SHLIBS_SKIP", BtPathPattern)
 	reg.pkg("CHECK_SHLIBS_SUPPORTED", BtYesNo)
+	reg.usrlist("CHECK_WRKREF", enum("tools wrappers home wrksrc work wrkobjdir pkgsrc buildlink extra"))
 	reg.pkglist("CHECK_WRKREF_SKIP", BtPathPattern)
 	reg.pkg("CMAKE_ARG_PATH", BtPathname)
 	reg.pkglist("CMAKE_ARGS", BtShellWord)
