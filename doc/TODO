@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22051 2022/07/24 10:49:04 wiz Exp $
+$NetBSD: TODO,v 1.22052 2022/07/24 10:53:39 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1335,7 +1335,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-newt-0.52.21
 	o py-omniORBpy-3.7
 	o py-pdf-parser-0.7.4
-	o py-pip-api-0.0.30
 	o py-pip-audit-2.4.2
 	o py-postgresql-5.1.2
 	o py-ptt-1.10.2
@@ -1418,8 +1417,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rubber-1.5.1
 	o rudiments-1.4.2
 	o rump-20131213
-	o rust-1.61.0 [wip]
-	o rust-1.62.0
+	o rust-1.62.0 [wip]
 	o rust-analyzer-0.0.20220718
 	o rvault-0.4
 	o rvm-1.20
