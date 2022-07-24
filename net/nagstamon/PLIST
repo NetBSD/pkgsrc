@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2015/07/03 14:41:42 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/07/24 21:15:18 wiz Exp $
 bin/nagstamon
 bin/nagstamon.py
 ${PYSITELIB}/Nagstamon/Actions.py
@@ -127,4 +127,5 @@ ${PYSITELIB}/Nagstamon/thirdparty/__init__.pyo
 ${PYSITELIB}/Nagstamon/thirdparty/zabbix_api.py
 ${PYSITELIB}/Nagstamon/thirdparty/zabbix_api.pyc
 ${PYSITELIB}/Nagstamon/thirdparty/zabbix_api.pyo
+${PYSITELIB}/${PKGNAME}-py${PYVERSSUFFIX}.egg-info
 man/man1/nagstamon.1
