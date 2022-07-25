@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.251 2022/07/14 23:46:22 dholland Exp $
+# $NetBSD: Makefile,v 1.252 2022/07/25 19:42:33 wiz Exp $
 
-DISTNAME=	inkscape-1.1.2
-PKGREVISION=	5
+DISTNAME=	inkscape-1.2.1
 CATEGORIES=	graphics
 MASTER_SITES=	https://media.inkscape.org/dl/resources/file/
 EXTRACT_SUFX=	.tar.xz
@@ -21,7 +20,7 @@ DEPENDS+=		${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 DEPENDS+=		${PYPKGPREFIX}-serial-[0-9]*:../../comms/py-serial
 DEPENDS+=		${PYPKGPREFIX}-scour-[0-9]*:../../graphics/py-scour
 
-WRKSRC=		${WRKDIR}/inkscape-1.1.2_2022-02-04_0a00cf5339
+WRKSRC=		${WRKDIR}/inkscape-1.2.1_2022-07-14_9c6d41e410
 
 # std::optional
 GCC_REQD+=		7
