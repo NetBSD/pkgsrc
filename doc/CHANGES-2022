@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3544 2022/07/25 19:45:44 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3545 2022/07/25 19:47:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5313,3 +5313,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-iso3166 to 2.1.1 [adam 2022-07-25]
 	Updated graphics/inkscape to 1.2.1 [wiz 2022-07-25]
 	Updated devel/libsigc++3 to 3.2.0 [wiz 2022-07-25]
+	Updated devel/concurrencykit to 0.6.0 [wiz 2022-07-25]
