@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.72 2021/01/30 14:10:12 mef Exp $
+# $NetBSD: Makefile.common,v 1.73 2022/07/25 08:54:29 rin Exp $
 #
 # used by www/w3m/Makefile
 # used by www/w3m-img/Makefile
@@ -21,7 +21,7 @@ USE_TOOLS+=		gmake	# Needed for some combinations of options...
 USE_TOOLS+=		msgfmt
 USE_PKGLOCALEDIR=	yes
 
-W3M_VERS=	0.5.3+git20210102
+W3M_VERS=	0.5.3+git20220429
 W3M_PKGVERS=	${W3M_VERS:S/+git/.0./}
 
 # For w3mman, xface2xpm, cgi scripts.
