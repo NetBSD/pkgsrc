@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.69 2022/07/24 16:33:09 rjs Exp $
+# $NetBSD: options.mk,v 1.70 2022/07/25 13:57:01 tnn Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.firefox
 
@@ -63,6 +63,7 @@ AUDIO_BACKENDS+=	pulseaudio
 CONFIGURE_ARGS+=	--enable-dbus
 .else
 CONFIGURE_ARGS+=	--disable-dbus
+CONFIGURE_ARGS+=	--disable-necko-wifi
 .endif
 
 .if !empty(PKG_OPTIONS:Mofficial-mozilla-branding)
