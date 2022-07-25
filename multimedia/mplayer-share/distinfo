@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.102 2022/04/24 15:00:42 nia Exp $
+$NetBSD: distinfo,v 1.103 2022/07/25 00:45:05 tnn Exp $
 
 BLAKE2s (mplayer/MPlayer-1.5.tar.xz) = 1a86b823bcc82e07cf43551151449dd1cbdd768d8281ebe32cea6ced91d029c5
 SHA512 (mplayer/MPlayer-1.5.tar.xz) = 05fe1edf23cec53be676333b6299df4b3f1ee746e5ccd96dc0bed550e7a1602ba7ba182c1cc23fcac67aacde849a46628b1dcab8ee3d3d4117415c11b6a6ad74
@@ -6,6 +6,7 @@ Size (mplayer/MPlayer-1.5.tar.xz) = 15379972 bytes
 SHA1 (patch-Makefile) = be30a8e90383d6af5902380587b5075fd9c73b83
 SHA1 (patch-ae) = 286f5ac075ea4123a1a6276f97e02a4dda9b3e67
 SHA1 (patch-an) = 330c427e30b686165fda15a85b730a3f53e0d217
+SHA1 (patch-av__helpers.c) = c7821a3c4fb4cddc581ed1ee364c735c9680eb05
 SHA1 (patch-configure) = 70eee721bfb49e811d1b3c9376bdada5438f6b17
 SHA1 (patch-gui_interface.c) = 04c347b6cb0a54132e6b089142c8ed282f583a1c
 SHA1 (patch-libao2_ao__alsa.c) = da568da8b9290f1ed49ecedec7dc9141408698b1
