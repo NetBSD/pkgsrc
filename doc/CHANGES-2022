@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3535 2022/07/25 07:55:11 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3536 2022/07/25 08:55:23 rin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5302,3 +5302,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/xfce4-xkb-plugin to 0.8.3 [gutteridge 2022-07-25]
 	Updated sysutils/ansible-core to 2.13.2 [adam 2022-07-25]
 	Updated net/haproxy to 2.6.2 [adam 2022-07-25]
+	Updated www/w3m to 0.5.3+git20220429 [rin 2022-07-25]
