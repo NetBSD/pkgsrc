@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2021/11/13 10:56:22 nia Exp $
+# $NetBSD: Makefile,v 1.7 2022/07/25 11:12:20 wiz Exp $
 
 DISTNAME=	soundtouch-2.3.1
 CATEGORIES=	audio
@@ -11,7 +11,7 @@ LICENSE=	gnu-lgpl-v2.1
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-USE_TOOLS+=		autoconf automake autoreconf pkg-config
+USE_TOOLS+=		autoconf automake autoreconf
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	soundtouch.pc.in
 

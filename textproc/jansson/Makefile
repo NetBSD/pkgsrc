@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2020/05/08 13:54:06 adam Exp $
+# $NetBSD: Makefile,v 1.10 2022/07/25 11:12:29 wiz Exp $
 
 DISTNAME=	jansson-2.13.1
 CATEGORIES=	textproc
@@ -12,7 +12,6 @@ LICENSE=	mit
 
 USE_LANGUAGES=		c99
 USE_LIBTOOL=		yes
-USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	jansson.pc.in
 # Fails a self-test because the library exports more symbols than it should.

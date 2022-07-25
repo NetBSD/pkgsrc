@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2022/06/28 11:35:57 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2022/07/25 11:12:28 wiz Exp $
 
 DISTNAME=	libcap-2.44
 PKGREVISION=	2
@@ -10,7 +10,7 @@ HOMEPAGE=	https://sites.google.com/site/fullycapable/
 COMMENT=	Library for getting and setting POSIX.1e capabilities
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=	pkg-config gmake gsed perl
+USE_TOOLS+=	gmake gsed perl
 
 ONLY_FOR_PLATFORM=	Linux-*-*
 

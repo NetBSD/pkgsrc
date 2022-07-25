@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2021/01/07 21:42:50 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/07/25 11:12:25 wiz Exp $
 
 DISTNAME=	erfa-1.7.1
 CATEGORIES=	math
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/liberfa/erfa
 COMMENT=	Essential Routines for Fundamental Astronomy
 LICENSE=	modified-bsd
-
-USE_TOOLS+=	pkg-config
 
 PKGCONFIG_OVERRIDE+=	erfa.pc.in
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2022/06/28 11:31:02 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2022/07/25 11:12:20 wiz Exp $
 
 DISTNAME=	verilator-4.100
 PKGREVISION=	2
@@ -13,7 +13,7 @@ LICENSE=	gnu-lgpl-v3 OR artistic-2.0
 
 GNU_CONFIGURE=	yes
 FLEX_REQD=	2.6.4
-USE_TOOLS+=	bison flex gmake perl pkg-config
+USE_TOOLS+=	bison flex gmake perl
 USE_LANGUAGES=	c c++
 
 TOOLS_PLATFORM.flex=	# Use flex from pkgsrc

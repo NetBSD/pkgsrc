@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2017/08/16 21:22:11 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.8 2022/07/25 11:12:22 wiz Exp $
 
 DISTNAME=	libgcroots-0.2.3
 CATEGORIES=	devel
@@ -12,7 +11,6 @@ COMMENT=	Garbage collector supporting library
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config
 
 PKGCONFIG_OVERRIDE+=	gcroots.pc.in
 

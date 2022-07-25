@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/06/23 09:40:54 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2022/07/25 11:12:24 wiz Exp $
 
 DISTNAME=	unittest-cpp-2.0.0
 CATEGORIES=	devel
@@ -12,7 +12,6 @@ LICENSE=	mit
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
 PKGCONFIG_OVERRIDE+=	UnitTest++.pc.in

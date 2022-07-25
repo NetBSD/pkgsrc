@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/11/24 14:16:31 nia Exp $
+# $NetBSD: Makefile,v 1.4 2022/07/25 11:12:20 wiz Exp $
 
 DISTNAME=	shine-3.1.1
 CATEGORIES=	audio
@@ -12,7 +12,6 @@ LICENSE=	gnu-lgpl-v2
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config
 
 PKGCONFIG_OVERRIDE+=	shine.pc.in
 

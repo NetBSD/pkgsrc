@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/03/15 17:15:02 hiramatsu Exp $
-#
+# $NetBSD: Makefile,v 1.7 2022/07/25 11:12:23 wiz Exp $
 
 DISTNAME=	npapi-sdk-0.27.2
 CATEGORIES=	devel
@@ -12,7 +11,6 @@ COMMENT=	Reusable, released NPAPI-SDK
 LICENSE=	mpl-1.1
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	pkg-config
 
 PKGCONFIG_OVERRIDE+=	npapi-sdk.pc.in
 

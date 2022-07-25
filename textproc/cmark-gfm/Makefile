@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/01/15 06:29:58 pho Exp $
+# $NetBSD: Makefile,v 1.2 2022/07/25 11:12:29 wiz Exp $
 
 GITHUB_PROJECT=	cmark-gfm
 GITHUB_TAG=	${DISTNAME}
@@ -15,7 +15,6 @@ LICENSE=	2-clause-bsd
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 USE_CMAKE=	yes
-USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
 PKGCONFIG_OVERRIDE+=	src/libcmark-gfm.pc.in

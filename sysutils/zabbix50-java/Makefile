@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2020/11/03 23:35:41 otis Exp $
+# $NetBSD: Makefile,v 1.3 2022/07/25 11:12:28 wiz Exp $
 
 .include "../../sysutils/zabbix50-server/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-java-/}
 COMMENT=	Enterprise-class Monitoring Solution for Everyone
 
-USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-java
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}

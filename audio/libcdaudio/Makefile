@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2020/01/26 05:26:11 rillig Exp $
+# $NetBSD: Makefile,v 1.38 2022/07/25 11:12:19 wiz Exp $
 
 DISTNAME=	libcdaudio-0.99.12
 PKGREVISION=	2
@@ -12,7 +12,6 @@ LICENSE=	gnu-gpl-v2
 
 NOT_FOR_PLATFORM=	Interix-*-*
 
-USE_TOOLS+=		pkg-config
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 PKGCONFIG_OVERRIDE=	libcdaudio.pc.in

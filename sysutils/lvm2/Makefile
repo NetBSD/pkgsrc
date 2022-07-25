@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/07/08 09:09:47 kamil Exp $
+# $NetBSD: Makefile,v 1.2 2022/07/25 11:12:28 wiz Exp $
 
 DISTNAME=	LVM2.2.02.98
 PKGNAME=	${DISTNAME:S/LVM2./lvm2-/}
@@ -12,7 +12,7 @@ COMMENT=	Linux userspace toolset for volume management facilities
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	pkg-config gmake
+USE_TOOLS+=	gmake
 
 ONLY_FOR_PLATFORM=	Linux-*-*
 

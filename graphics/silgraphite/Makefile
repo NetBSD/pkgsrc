@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2020/03/20 11:57:53 nia Exp $
+# $NetBSD: Makefile,v 1.8 2022/07/25 11:12:25 wiz Exp $
 
 DISTNAME=	silgraphite-2.3.1
 CATEGORIES=	graphics
@@ -10,7 +10,6 @@ COMMENT=	Font engine for complex non-Roman writing systems
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c99 c++03
 WRKSRC=		${WRKDIR}/${DISTNAME}/engine
 
