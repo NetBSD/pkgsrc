@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2022/06/27 15:29:15 fcambus Exp $
+# $NetBSD: Makefile,v 1.8 2022/07/25 11:12:24 wiz Exp $
 
 DISTNAME=	libmaxminddb-1.6.0
 CATEGORIES=	geography
@@ -13,7 +13,7 @@ LICENSE=	apache-2.0
 GNU_CONFIGURE=	yes
 USE_LANGUAGES+=	c99
 USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake pkg-config
+USE_TOOLS+=	gmake
 
 PKGCONFIG_OVERRIDE+=	src/libmaxminddb.pc.in
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/06/22 18:54:04 bsiegert Exp $
+# $NetBSD: Makefile,v 1.2 2022/07/25 11:12:27 wiz Exp $
 
 DISTNAME=	libb2-0.98.1
 CATEGORIES=	security
@@ -12,7 +12,6 @@ LICENSE=	cc0-1.0-universal
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config
 
 PKGCONFIG_OVERRIDE+=	libb2.pc.in
 

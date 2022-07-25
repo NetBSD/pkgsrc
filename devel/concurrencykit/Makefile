@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/11/03 10:39:08 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2022/07/25 11:12:21 wiz Exp $
 
 DISTNAME=	ck-0.5.1
 CATEGORIES=	devel
@@ -11,7 +11,6 @@ LICENSE=	2-clause-bsd
 
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
-USE_TOOLS+=		pkg-config
 
 PKGCONFIG_OVERRIDE+=	build/ck.pc.in
 

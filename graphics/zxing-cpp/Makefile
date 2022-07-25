@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/07/15 07:26:22 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2022/07/25 11:12:25 wiz Exp $
 
 DISTNAME=	zxing-cpp-1.3.0
 CATEGORIES=	graphics
@@ -11,7 +11,6 @@ COMMENT=	1D/2D barcode reader/writer library in C++
 LICENSE=	apache-2.0
 
 USE_CMAKE=	yes
-USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c++11
 
 CMAKE_ARGS+=	-DBUILD_EXAMPLES=OFF

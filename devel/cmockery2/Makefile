@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2016/06/09 06:23:38 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2022/07/25 11:12:21 wiz Exp $
 
 VERS=		1.3.9
 DISTNAME=	cmockery2-${VERS}
@@ -14,7 +14,7 @@ LICENSE=	apache-2.0
 
 WRKSRC=		${WRKDIR}/cmockery2-${VERS}
 AUTOMAKE_REQD=	1.9
-USE_TOOLS+=	pkg-config gmake m4 autoconf automake
+USE_TOOLS+=	gmake m4 autoconf automake
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 

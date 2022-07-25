@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/05/27 19:37:42 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2022/07/25 11:12:28 wiz Exp $
 
 DISTNAME=	liblogging-1.0.6
 CATEGORIES=	sysutils
@@ -11,7 +11,6 @@ LICENSE=	2-clause-bsd
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config
 
 PKGCONFIG_OVERRIDE+=	rfc3195/liblogging-rfc3195.pc.in
 PKGCONFIG_OVERRIDE+=	stdlog/liblogging-stdlog.pc.in

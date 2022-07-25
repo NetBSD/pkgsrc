@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/03/17 14:43:48 asau Exp $
+# $NetBSD: Makefile,v 1.5 2022/07/25 11:12:27 wiz Exp $
 
 DISTNAME=	openpa-1.0.4
 CATEGORIES=	parallel
@@ -8,7 +8,6 @@ MAINTAINER=	asau@inbox.ru
 HOMEPAGE=	http://trac.mcs.anl.gov/projects/openpa/
 COMMENT=	Atomic primitives for high performance software
 
-USE_TOOLS=	pkg-config
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 TEST_TARGET=	check

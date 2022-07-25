@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2020/01/26 05:26:11 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2022/07/25 11:12:19 wiz Exp $
 
 DISTNAME=	libsbsms-2.0.2
 CATEGORIES=	audio
@@ -11,7 +11,6 @@ LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
 PKGCONFIG_OVERRIDE+=	sbsms.pc.in

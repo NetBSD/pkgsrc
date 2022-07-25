@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/04/05 18:41:20 bacon Exp $
+# $NetBSD: Makefile,v 1.2 2022/07/25 11:12:22 wiz Exp $
 
 DISTNAME=	libgtextutils-0.7.2
 CATEGORIES=	devel
@@ -11,7 +11,7 @@ COMMENT=	Gordon text utilities
 LICENSE=	gnu-agpl-v3
 
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	automake autoreconf pkg-config
+USE_TOOLS+=	automake autoreconf
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 

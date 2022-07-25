@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2022/06/28 11:35:56 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2022/07/25 11:12:28 wiz Exp $
 
 DISTNAME=		hal-info-20091130
 PKGREVISION=		10
@@ -15,7 +15,7 @@ TOOL_DEPENDS+=		libxml2-[0-9]*:../../textproc/libxml2 # for xmllint
 
 GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES
-USE_TOOLS+=		gmake intltool msgfmt perl pkg-config
+USE_TOOLS+=		gmake intltool msgfmt perl
 USE_LIBTOOL=		YES
 
 TEST_TARGET=		check

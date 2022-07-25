@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/03/13 13:21:39 tnn Exp $
+# $NetBSD: Makefile,v 1.2 2022/07/25 11:12:27 wiz Exp $
 
 DISTNAME=	libiscsi-1.19.0
 CATEGORIES=	net
@@ -11,7 +11,7 @@ LICENSE=	gnu-lgpl-v2.1
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	aclocal autoconf automake autoreconf gmake pkg-config
+USE_TOOLS+=	aclocal autoconf automake autoreconf gmake
 
 PKGCONFIG_OVERRIDE+=	libiscsi.pc.in
 BUILDLINK_TRANSFORM+=	rm:-Werror

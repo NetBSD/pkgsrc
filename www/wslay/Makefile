@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/06/29 13:44:22 adam Exp $
+# $NetBSD: Makefile,v 1.4 2022/07/25 11:12:30 wiz Exp $
 
 DISTNAME=	wslay-1.1.1
 CATEGORIES=	www
@@ -12,7 +12,6 @@ COMMENT=	WebSocket library written in C
 LICENSE=	mit
 
 USE_LIBTOOL=		yes
-USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	lib/libwslay.pc.in
 

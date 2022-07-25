@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2022/05/13 11:41:56 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2022/07/25 11:12:28 wiz Exp $
 
 DISTNAME=	pciutils-3.8.0
 CATEGORIES=	sysutils
@@ -19,7 +19,7 @@ MAKE_FLAGS+=		LDFLAGS=${LDFLAGS:Q}
 MAKE_FLAGS+=		SHARED=yes
 
 INSTALL_TARGET=		install install-lib
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake
 REPLACE_SH=		*.sh
 
 PKGCONFIG_OVERRIDE=	lib/libpci.pc.in

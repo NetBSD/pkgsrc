@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2017/08/16 20:21:08 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2022/07/25 11:12:23 wiz Exp $
 
 DISTNAME=	libzen_0.4.31
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -12,7 +12,7 @@ COMMENT=	Small C++ derivate class to have a simpler life
 LICENSE=	zlib
 
 WRKSRC=		${WRKDIR}/ZenLib
-USE_TOOLS+=	autoconf automake pkg-config
+USE_TOOLS+=	autoconf automake
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes

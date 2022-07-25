@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2022/04/09 18:33:11 bsiegert Exp $
+# $NetBSD: Makefile,v 1.10 2022/07/25 11:12:21 wiz Exp $
 
 DISTNAME=	Catch2-2.13.8
 PKGNAME=	${DISTNAME:tl}
@@ -12,7 +12,6 @@ COMMENT=	C++ header-only test framework for unit tests
 LICENSE=	boost-license
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
-USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++14
 USE_CMAKE=	yes
 CONFIGURE_DIRS=	build
