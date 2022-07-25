@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:29:19 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/07/25 12:11:45 manu Exp $
 
-BLAKE2s (mod_upload-0.8.tar.gz) = e15a7ec0bc0614e1483b3f51720ae64fa0c0e438fceeffb8271dc37a87c56bd4
-SHA512 (mod_upload-0.8.tar.gz) = a5d24c64a7116ee0c7e4c8b72afadf24e6578883e29a3d62747784c9ff4cd55913cb6cfd87b2c9792b82078fcdf34a83c2399439f89f66235405f5214ee5d498
-Size (mod_upload-0.8.tar.gz) = 58356 bytes
+BLAKE2s (mod_upload-0.9.tar.gz) = 66231f016ba4082e507b1ae0ce981d9283b7802e80586d6d9146c4cdfe33c616
+SHA512 (mod_upload-0.9.tar.gz) = 4b2ddde5096c7afe2bcf30e03fc8771a9ff06f9b73f8786fae4c10d7c5531d485fd321b7ffca7bbcef5e174e43e1a716ca4cdd0db3c20e6e4b065281a98eb0b6
+Size (mod_upload-0.9.tar.gz) = 59900 bytes
