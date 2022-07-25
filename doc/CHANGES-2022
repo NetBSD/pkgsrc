@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3534 2022/07/25 02:01:45 gutteridge Exp $
+$NetBSD: CHANGES-2022,v 1.3535 2022/07/25 07:55:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5300,3 +5300,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/gdbus-codegen to 2.72.2 [wiz 2022-07-24]
 	Removed net/mrt [wiz 2022-07-24]
 	Updated sysutils/xfce4-xkb-plugin to 0.8.3 [gutteridge 2022-07-25]
+	Updated sysutils/ansible-core to 2.13.2 [adam 2022-07-25]
+	Updated net/haproxy to 2.6.2 [adam 2022-07-25]
