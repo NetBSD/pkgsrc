@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2022/07/25 11:12:21 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2022/07/25 19:47:45 wiz Exp $
 
-DISTNAME=	ck-0.5.1
+DISTNAME=	ck-0.6.0
 CATEGORIES=	devel
 MASTER_SITES=	http://concurrencykit.org/releases/
 

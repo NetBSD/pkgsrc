@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2016/08/10 23:44:10 mef Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/07/25 19:47:45 wiz Exp $
 include/ck_array.h
 include/ck_backoff.h
 include/ck_barrier.h
@@ -35,6 +35,10 @@ include/ck_stdlib.h
 include/ck_string.h
 include/ck_swlock.h
 include/ck_tflock.h
+include/gcc/aarch64/ck_f_pr.h
+include/gcc/aarch64/ck_pr.h
+include/gcc/aarch64/ck_pr_llsc.h
+include/gcc/aarch64/ck_pr_lse.h
 include/gcc/arm/ck_f_pr.h
 include/gcc/arm/ck_pr.h
 include/gcc/ck_cc.h

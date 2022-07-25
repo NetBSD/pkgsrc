@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:14:27 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/07/25 19:47:45 wiz Exp $
 
-BLAKE2s (ck-0.5.1.tar.gz) = 27ff9e7c564c18b0162d452ba50ebec33f525faf560dc0ea0de64d32cf66374e
-SHA512 (ck-0.5.1.tar.gz) = a48d7986ff60fd80ee2a08d85e6bfff441831c3c780373fd694fafc9eb588e1efc81a8a4c035ff22e635afdec131819d5dbc24df31cbca90b9f655c93892ef3d
-Size (ck-0.5.1.tar.gz) = 212506 bytes
+BLAKE2s (ck-0.6.0.tar.gz) = cc3598e1a758e11c1385dad12547e1051c02bc4981f09eb33a88b1d23c990fda
+SHA512 (ck-0.6.0.tar.gz) = 4c75f1194a6ad9d3e51a4bad4802cc522df70870135e6e2db1e303d0df89d57e5dc7a73e924de49fe9641b3dcdc81b1a74a26aa7297cd06b7acb5cbf46c402f0
+Size (ck-0.6.0.tar.gz) = 217198 bytes
