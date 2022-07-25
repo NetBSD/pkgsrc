@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST.Darwin,v 1.1 2022/07/25 16:11:51 thor Exp $
+lib/libplumed.dylib
+lib/libplumedKernel.dylib
+lib/libplumedWrapper.a
+lib/plumed/plumed-runtime
+lib/plumed/src/lib/Plumed.cmake.runtime
+lib/plumed/src/lib/Plumed.cmake.shared
+lib/plumed/src/lib/Plumed.inc.runtime
+lib/plumed/src/lib/Plumed.inc.shared
