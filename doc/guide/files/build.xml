@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.87 2022/05/21 11:42:29 nia Exp $ -->
+<!-- $NetBSD: build.xml,v 1.88 2022/07/25 05:42:22 rillig Exp $ -->
 
 <chapter id="build">
   <title>The build process</title>
@@ -122,8 +122,19 @@
 
       <varlistentry><term><varname>PKGPATH</varname></term>
       <listitem><para>This is a pathname relative to
-      <varname>PKGSRCDIR</varname> that points to the current
-      package.</para></listitem></varlistentry>
+      <varname>PKGSRCDIR</varname> that points to the current package.
+      It is defined after including <filename>bsd.prefs.mk</filename>
+      and can be used in makefile fragments that are used by several
+      packages to distinguish between these packages. Other variables
+      that would serve the same purpose are <varname>PKGBASE</varname>
+      and <varname>PKGNAME</varname>, but these are only defined after
+      including <filename>bsd.pkg.mk</filename>, which is too
+      late.</para>
+
+      <para>In &mk.conf;, the pkgsrc user can use
+      <varname>PKGPATH</varname> to tweak variables like
+      <varname>MAKE_JOBS</varname> and
+      <varname>CFLAGS</varname>.</para></listitem></varlistentry>
 
       <varlistentry><term><varname>WRKDIR</varname></term>
       <listitem><para>This is an absolute pathname pointing to the directory
@@ -155,10 +166,11 @@
     <title>Running a phase</title>
 
     <para>You can run a particular phase by typing <command>make
-    phase</command>, where <emphasis>phase</emphasis> is the name of the
-    phase. This will automatically run all phases that are required for this
-    phase. The default phase is <varname>build</varname>, that is, when you
-    run <command>make</command> without parameters in a package directory,
+    <replaceable>phase</replaceable></command>, where
+    <replaceable>phase</replaceable> is the name of the phase. This will
+    automatically run all phases that are required for this phase. The
+    default phase is <varname>build</varname>, that is, when you run
+    <command>make</command> without parameters in a package directory,
     the package will be built, but not installed.</para>
 
   </sect1>
