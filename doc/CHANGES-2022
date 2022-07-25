@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3533 2022/07/24 21:35:31 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3534 2022/07/25 02:01:45 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5299,3 +5299,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/glib2-tools to 2.72.2 [wiz 2022-07-24]
 	Updated devel/gdbus-codegen to 2.72.2 [wiz 2022-07-24]
 	Removed net/mrt [wiz 2022-07-24]
+	Updated sysutils/xfce4-xkb-plugin to 0.8.3 [gutteridge 2022-07-25]
