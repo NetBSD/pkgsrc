@@ -1,5 +1,9 @@
-@comment $NetBSD: PLIST,v 1.10 2021/01/10 05:44:19 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.11 2022/07/25 02:00:39 gutteridge Exp $
 lib/xfce4/panel/plugins/libxkb.la
+share/icons/hicolor/128x128/apps/org.xfce.panel.xkb.png
+share/icons/hicolor/16x16/apps/org.xfce.panel.xkb.png
+share/icons/hicolor/32x32/apps/org.xfce.panel.xkb.png
+share/icons/hicolor/scalable/apps/org.xfce.panel.xkb.svg
 share/locale/ar/LC_MESSAGES/xfce4-xkb-plugin.mo
 share/locale/ast/LC_MESSAGES/xfce4-xkb-plugin.mo
 share/locale/be/LC_MESSAGES/xfce4-xkb-plugin.mo
