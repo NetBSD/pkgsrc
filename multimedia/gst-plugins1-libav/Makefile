@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.61 2022/07/18 15:50:19 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2022/07/25 01:01:53 tnn Exp $
 
 DISTNAME=	gst-libav-1.20.3
 PKGNAME=	${DISTNAME:S/gst/gst-plugins1/}
+PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	https://gstreamer.freedesktop.org/src/gst-libav/
 EXTRACT_SUFX=	.tar.xz
