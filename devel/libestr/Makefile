@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/03/24 15:28:09 nia Exp $
+# $NetBSD: Makefile,v 1.5 2022/07/25 11:12:22 wiz Exp $
 
 DISTNAME=		libestr-0.1.11
 CATEGORIES=		devel
@@ -11,7 +11,6 @@ LICENSE=		gnu-gpl-v2
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-USE_TOOLS+=		pkg-config
 
 PKGCONFIG_OVERRIDE+=	libestr.pc.in
 

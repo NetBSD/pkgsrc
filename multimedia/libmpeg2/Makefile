@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2020/03/20 11:58:04 nia Exp $
+# $NetBSD: Makefile,v 1.28 2022/07/25 11:12:26 wiz Exp $
 
 DISTNAME=	libmpeg2-0.5.1
 PKGNAME=	libmpeg2-0.5.1
@@ -10,7 +10,7 @@ HOMEPAGE=	http://libmpeg2.sourceforge.net/
 COMMENT=	Library for decoding mpeg-2 and mpeg-1 video streams
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	gmake pkg-config
+USE_TOOLS+=	gmake
 USE_LIBTOOL=	yes
 
 PKGCONFIG_OVERRIDE+=	libmpeg2/convert/libmpeg2convert.pc.in

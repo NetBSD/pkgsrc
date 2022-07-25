@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/01/25 12:55:43 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2022/07/25 11:12:28 wiz Exp $
 
 DISTNAME=	olm-3.2.10
 CATEGORIES=	security
@@ -11,7 +11,6 @@ COMMENT=	Implementation of the Double Ratchet cryptographic ratchet
 LICENSE=	apache-2.0
 
 USE_CMAKE=	yes
-USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 

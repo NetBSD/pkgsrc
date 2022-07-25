@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2021/01/21 18:49:42 nia Exp $
+# $NetBSD: Makefile,v 1.5 2022/07/25 11:12:26 wiz Exp $
 
 DISTNAME=	libde265-1.0.8
 PKGREVISION=	1
@@ -14,7 +14,6 @@ LICENSE=	gnu-lgpl-v3
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
 PKGCONFIG_OVERRIDE+=	libde265.pc.in

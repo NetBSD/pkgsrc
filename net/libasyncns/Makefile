@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/02/09 11:30:47 mef Exp $
-#
+# $NetBSD: Makefile,v 1.4 2022/07/25 11:12:26 wiz Exp $
 
 DISTNAME=	libasyncns-0.8
 CATEGORIES=	net
@@ -12,7 +11,6 @@ LICENSE=	gnu-lgpl-v2.1
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config
 TEST_TARGET=	check
 
 PKGCONFIG_OVERRIDE+=	libasyncns.pc.in

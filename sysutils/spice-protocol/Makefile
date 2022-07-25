@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2021/04/12 11:18:21 nia Exp $
+# $NetBSD: Makefile,v 1.16 2022/07/25 11:12:28 wiz Exp $
 
 DISTNAME=	spice-protocol-0.14.3
 PKGREVISION=	1
@@ -11,7 +11,6 @@ HOMEPAGE=	https://spice-space.org/
 COMMENT=	Headers defining protocols for SPICE server code
 LICENSE=	modified-bsd AND mit
 
-USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	# none
 
 PKGCONFIG_OVERRIDE_STAGE=	pre-install

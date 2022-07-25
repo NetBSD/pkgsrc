@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.48 2021/11/16 15:19:59 wiz Exp $
+# $NetBSD: Makefile.common,v 1.49 2022/07/25 11:12:23 wiz Exp $
 #
 # used by devel/ncurses/Makefile
 # used by devel/ncursesw/Makefile
@@ -16,7 +16,7 @@ LICENSE=	mit
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake pkg-config tbl
+USE_TOOLS+=		gmake tbl
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-libtool
 CONFIGURE_ARGS+=	--enable-bsdpad

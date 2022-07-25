@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2020/01/18 23:30:31 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2022/07/25 11:12:22 wiz Exp $
 
 DISTNAME=	libconfig-1.7.2
 CATEGORIES=	devel
@@ -12,7 +12,7 @@ LICENSE=	gnu-lgpl-v2.1
 GNU_CONFIGURE=	yes
 INFO_FILES=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	bison pkg-config
+USE_TOOLS+=	bison
 USE_LANGUAGES=	c c++
 
 PKGCONFIG_OVERRIDE+=	lib/libconfig++.pc.in

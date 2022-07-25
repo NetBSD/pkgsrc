@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2020/08/02 12:08:35 jmcneill Exp $
+# $NetBSD: Makefile,v 1.11 2022/07/25 11:12:29 wiz Exp $
 
 DISTNAME=	libfastjson-0.99.8
 PKGREVISION=	1
@@ -13,7 +13,6 @@ LICENSE=	mit
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c99
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config
 
 PKGCONFIG_OVERRIDE+=	libfastjson.pc.in
 

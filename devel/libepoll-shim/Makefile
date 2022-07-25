@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2021/11/09 12:04:43 nia Exp $
+# $NetBSD: Makefile,v 1.7 2022/07/25 11:12:22 wiz Exp $
 
 GITHUB_PROJECT=	epoll-shim
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -13,7 +13,6 @@ COMMENT=	Small epoll implemented using kevent
 LICENSE=	mit
 
 USE_CMAKE=	yes
-USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
 CMAKE_ARGS+=	-DBUILD_TESTING=OFF

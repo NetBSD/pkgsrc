@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2017/08/16 20:45:31 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.10 2022/07/25 11:12:20 wiz Exp $
 
 DISTNAME=	libvisual-0.2.0
 PKGNAME=	libvisual0.2-0.2.0
@@ -18,7 +17,6 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/libvisual.pc.in
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		pkg-config
 
 CFLAGS.SunOS+=	-Du_int8_t=uint8_t -Du_int16_t=uint16_t -Du_int32_t=uint32_t
 

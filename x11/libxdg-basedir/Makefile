@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/04/05 14:06:13 nia Exp $
+# $NetBSD: Makefile,v 1.7 2022/07/25 11:12:30 wiz Exp $
 
 DISTNAME=	libxdg-basedir-1.2.0
 CATEGORIES=	x11
@@ -13,7 +13,6 @@ LICENSE=	mit
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	autoconf automake autoreconf
-USE_TOOLS+=	pkg-config
 
 PKGCONFIG_OVERRIDE+=	pkgconfig/libxdg-basedir.pc.in
 

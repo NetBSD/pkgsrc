@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/09/24 13:30:59 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2022/07/25 11:12:24 wiz Exp $
 
 DISTNAME=	libpgf-src-6.14.12
 PKGNAME=	${DISTNAME:S/-src//}
@@ -12,7 +12,7 @@ LICENSE=	gnu-lgpl-v2.1
 
 WRKSRC=		${WRKDIR}/libpgf
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	aclocal autoconf automake pkg-config
+USE_TOOLS+=	aclocal autoconf automake
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 

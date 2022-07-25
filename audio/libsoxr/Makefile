@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/01/02 21:30:21 bsiegert Exp $
+# $NetBSD: Makefile,v 1.3 2022/07/25 11:12:19 wiz Exp $
 
 DISTNAME=	soxr-0.1.3-Source
 PKGNAME=	lib${DISTNAME:S/-Source//}
@@ -12,7 +12,6 @@ COMMENT=	SoX Resample library
 LICENSE=	gnu-lgpl-v2.1
 
 USE_CMAKE=	yes
-USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
 CMAKE_ARGS+=	-DBUILD_TESTS=NO

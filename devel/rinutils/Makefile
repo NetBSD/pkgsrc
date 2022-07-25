@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/06/28 11:33:42 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/07/25 11:12:24 wiz Exp $
 
 DISTNAME=	rinutils-0.8.0
 PKGREVISION=	2
@@ -12,7 +12,7 @@ HOMEPAGE=	https://www.shlomifish.org/open-source/projects/
 COMMENT=	C11 / gnu11 utilities C library
 LICENSE=	mit
 
-USE_TOOLS+=	perl pkg-config
+USE_TOOLS+=	perl
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 

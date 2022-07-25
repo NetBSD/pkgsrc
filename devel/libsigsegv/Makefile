@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2022/01/16 22:48:17 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2022/07/25 11:12:23 wiz Exp $
 
 DISTNAME=		libsigsegv-2.14
 CATEGORIES=		devel
@@ -11,7 +11,6 @@ LICENSE=		gnu-gpl-v2
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
-USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 TEST_TARGET=		check
 

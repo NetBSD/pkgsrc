@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/03/23 02:29:17 riastradh Exp $
+# $NetBSD: Makefile,v 1.2 2022/07/25 11:12:29 wiz Exp $
 
 DISTNAME=	scdoc-1.10.1
 CATEGORIES=	textproc
@@ -10,7 +10,6 @@ COMMENT=	Simple man page generator
 LICENSE=	mit
 
 USE_TOOLS+=	gmake
-USE_TOOLS+=	pkg-config
 
 PKGCONFIG_OVERRIDE+=	scdoc.pc.in
 
