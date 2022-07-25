@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3542 2022/07/25 16:27:52 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3543 2022/07/25 19:42:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5311,3 +5311,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated math/plumed to 2.8.0nb1 [thor 2022-07-25]
 	Updated comms/py-rich to 12.5.1 [adam 2022-07-25]
 	Updated devel/py-iso3166 to 2.1.1 [adam 2022-07-25]
+	Updated graphics/inkscape to 1.2.1 [wiz 2022-07-25]
