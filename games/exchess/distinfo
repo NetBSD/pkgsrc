@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.16 2022/04/25 13:53:15 tnn Exp $
+$NetBSD: distinfo,v 1.17 2022/07/25 09:34:44 he Exp $
 
 BLAKE2s (EXchess_v7.97beta.zip) = 52928b5eee629915db502864ecce875e5a0b03d1c1c22aec8f51d3e57065e543
 SHA512 (EXchess_v7.97beta.zip) = 33e909bf2f39996e579c16ba2752f6d8d1c0d3c7e788c95be7fa8bc8b8ef67d3792693b28d3f73e52fb3f45bffbc5c9ccb0cf7a5fb27f70bb154de7e93f7df86
 Size (EXchess_v7.97beta.zip) = 1759660 bytes
+SHA1 (patch-src_score.h) = aaba314a94ea50e4499d88717c4150b71a3d45ce
 SHA1 (patch-src_smp.cpp) = cf2894493295ec16b1ae3620d3b26cbc520100ca
