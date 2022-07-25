@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3538 2022/07/25 12:11:44 manu Exp $
+$NetBSD: CHANGES-2022,v 1.3539 2022/07/25 12:19:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5305,3 +5305,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/w3m to 0.5.3+git20220429 [rin 2022-07-25]
 	Updated graphics/adaptagrams to 0.20160901nb1 [wiz 2022-07-25]
 	Updated www/ap2_upload to 0.9 [manu 2022-07-25]
+	Updated devel/protobuf to 3.21.3 [adam 2022-07-25]
+	Updated devel/py-protobuf to 4.21.3 [adam 2022-07-25]
