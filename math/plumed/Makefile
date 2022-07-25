@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2022/07/25 14:57:58 thor Exp $
+# $NetBSD: Makefile,v 1.3 2022/07/25 14:58:47 thor Exp $
 
 DISTNAME=	plumed-2.8.0
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=plumed/plumed2/releases/download/v2.8.0/}
 EXTRACT_SUFX=	.tgz
