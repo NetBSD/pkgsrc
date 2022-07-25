@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2022/01/04 09:16:14 leot Exp $
+# $NetBSD: Makefile,v 1.74 2022/07/25 05:57:18 rillig Exp $
 
 DISTNAME=		pkgsrc-guide-${PKGVERSION}
 CATEGORIES=		# empty
@@ -37,28 +37,25 @@ SUBST_FILES.docbook45=	${WRKDIR}/htdocs/share/xml/*
 SUBST_SED.docbook45=	-e 's,V4\.2,V4.5,'
 SUBST_SED.docbook45+=	-e 's,/4\.2/,/4.5/,'
 
-.if defined(OUTPUTS)
-.  if !empty(OUTPUTS:Mascii)
+.if ${OUTPUTS:Mascii}
 # the html is needed to build the ascii version.
 OUTPUTS+=		html
 PLIST.ascii=		yes
-.  endif
+.endif
 
-.  if !empty(OUTPUTS:Mhtml) || !empty(OUTPUTS:Mhtml-split)
+.if ${OUTPUTS:Mhtml} || ${OUTPUTS:Mhtml-split}
 PLIST.html=		yes
 .endif
 
-.  if !empty(OUTPUTS:Mpdf)
+.if ${OUTPUTS:Mpdf}
 PLIST.pdf=		yes
 .endif
 
-.  if !empty(OUTPUTS:Mepub)
+.if ${OUTPUTS:Mepub}
 PLIST.epub=		yes
 .endif
 
-# only override the Makefile.common default if it is explicitly set
 _GUIDE_OUTPUTS=		${OUTPUTS}
-.endif
 
 .include "Makefile.common"
 
