@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2017/08/16 20:45:41 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.6 2022/07/25 11:12:26 wiz Exp $
 
 DISTNAME=	libnms-0.6.0
 CATEGORIES=	multimedia
@@ -11,7 +10,6 @@ MAINTAINER=	jfranz@bsdprojects.net
 COMMENT=	Open Media Streaming Client Library
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	pkg-config
 USE_LIBTOOL=	yes
 
 PKGCONFIG_OVERRIDE+=	libnms.pc.in

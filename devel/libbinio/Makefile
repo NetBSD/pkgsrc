@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/03/20 11:57:27 nia Exp $
-#
+# $NetBSD: Makefile,v 1.6 2022/07/25 11:12:22 wiz Exp $
 
 DISTNAME=	libbinio-1.4
 CATEGORIES=	devel
@@ -13,7 +12,6 @@ COMMENT=	Binary I/O stream class library
 GNU_CONFIGURE=	yes
 INFO_FILES=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
 PKGCONFIG_OVERRIDE+=	libbinio.pc.in

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/01/26 05:26:20 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2022/07/25 11:12:21 wiz Exp $
 
 DISTNAME=	libdbh2-5.0.16
 CATEGORIES=	databases
@@ -11,7 +11,6 @@ LICENSE=	gnu-gpl-v3
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		pkg-config
 
 INSTALLATION_DIRS+=	share/doc/dbh/html
 

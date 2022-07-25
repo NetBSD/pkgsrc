@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2021/01/24 15:52:25 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2022/07/25 11:12:24 wiz Exp $
 
 DISTNAME=		util-macros-1.19.3
 PKGNAME=		xorg-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=		Xorg autotool macros
 LICENSE=		mit
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		pkg-config
 PKGCONFIG_OVERRIDE+=	xorg-macros.pc.in
 
 .include "../../mk/bsd.pkg.mk"

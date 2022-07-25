@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2022/04/17 22:41:39 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2022/07/25 11:12:29 wiz Exp $
 
 DISTNAME=	discount-2.2.7
 CATEGORIES=	textproc
@@ -23,7 +23,6 @@ CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	--shared
 CONFIGURE_ARGS+=	--enable-all-features
 
-USE_TOOLS+=		pkg-config
 USE_LIBTOOL=		yes
 
 PKGCONFIG_OVERRIDE+=	libmarkdown.pc.in

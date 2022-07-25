@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2020/04/17 13:31:31 plunky Exp $
+# $NetBSD: Makefile,v 1.8 2022/07/25 11:12:25 wiz Exp $
 
 DISTNAME=	mypaint-brushes-2.0.2
 PKGREVISION=	1
@@ -15,7 +15,7 @@ LICENSE=	cc0-1.0-universal
 GNU_CONFIGURE=	yes
 AUTOCONF_REQD=	2.62
 AUTOMAKE_REQD=	1.13
-USE_TOOLS+=	autoconf automake gmake pkg-config
+USE_TOOLS+=	autoconf automake gmake
 USE_LANGUAGES=	# none
 
 PKGCONFIG_OVERRIDE+=	pkgconfig.pc.in
