@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3546 2022/07/25 19:51:04 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3547 2022/07/25 20:51:56 leot Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5304,7 +5304,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/haproxy to 2.6.2 [adam 2022-07-25]
 	Updated www/w3m to 0.5.3+git20220429 [rin 2022-07-25]
 	Updated graphics/adaptagrams to 0.20160901nb1 [wiz 2022-07-25]
-	Updated www/ap2_upload to 0.9 [manu 2022-07-25]
+	Updated www/ap2-upload to 0.9 [manu 2022-07-25]
 	Updated devel/protobuf to 3.21.3 [adam 2022-07-25]
 	Updated devel/py-protobuf to 4.21.3 [adam 2022-07-25]
 	Updated devel/py-typing-extensions to 4.3.0 [leot 2022-07-25]
