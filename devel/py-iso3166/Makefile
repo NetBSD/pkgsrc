@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2022/01/04 20:53:12 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2022/07/25 16:27:11 adam Exp $
 
-DISTNAME=	iso3166-2.0.2
+DISTNAME=	iso3166-2.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/iso3166/}
 
