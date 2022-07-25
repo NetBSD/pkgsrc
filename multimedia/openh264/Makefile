@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/11/16 14:56:36 nia Exp $
+# $NetBSD: Makefile,v 1.2 2022/07/25 11:12:26 wiz Exp $
 
 DISTNAME=	openh264-2.1.1
 CATEGORIES=	multimedia
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/cisco/openh264
 COMMENT=	H.264 encoder/decoder library from Cisco
 LICENSE=	2-clause-bsd
 
-USE_TOOLS+=	gmake pkg-config
+USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++
 
 PKGCONFIG_OVERRIDE+=	openh264.pc.in

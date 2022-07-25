@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2018/05/14 16:23:51 fhajny Exp $
+# $NetBSD: Makefile,v 1.12 2022/07/25 11:12:21 wiz Exp $
 
 DISTNAME=	ivykis-0.42.3
 CATEGORIES=	devel
@@ -13,7 +13,6 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config
 
 .include "../../mk/bsd.prefs.mk"
 

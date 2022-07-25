@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/06/22 11:52:31 nia Exp $
-#
+# $NetBSD: Makefile,v 1.3 2022/07/25 11:12:23 wiz Exp $
 
 DISTNAME=	libsafec-10052013
 CATEGORIES=	devel
@@ -12,7 +11,6 @@ LICENSE=	mit
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config
 
 AUTO_MKDIRS=	yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2020/01/26 17:30:43 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2022/07/25 11:12:19 wiz Exp $
 
 DISTNAME=	libdiscid-0.6.2
 CATEGORIES=	audio
@@ -11,7 +11,7 @@ LICENSE=	gnu-lgpl-v2.1
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config gmake
+USE_TOOLS+=	gmake
 
 PKGCONFIG_OVERRIDE+=	libdiscid.pc.in
 

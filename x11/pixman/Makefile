@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2022/06/28 11:37:57 wiz Exp $
+# $NetBSD: Makefile,v 1.81 2022/07/25 11:12:30 wiz Exp $
 
 DISTNAME=	pixman-0.40.0
 PKGREVISION=	3
@@ -19,7 +19,7 @@ CONFIGURE_ARGS+=	--disable-sse2
 .endif
 
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config perl
+USE_TOOLS+=	perl
 
 PKGCONFIG_OVERRIDE+=	pixman-1.pc.in
 PKGCONFIG_OVERRIDE+=	pixman-1-uninstalled.pc.in

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2020/03/20 11:58:08 nia Exp $
+# $NetBSD: Makefile,v 1.11 2022/07/25 11:12:27 wiz Exp $
 
 DISTNAME=	libquvi-scripts-0.4.21
 CATEGORIES=	net
@@ -13,7 +13,6 @@ LICENSE=	gnu-lgpl-v2.1
 CONFLICTS+=	quvi<=0.2.19
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	# none
 
 CONFIGURE_ARGS+=	--with-nsfw

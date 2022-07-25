@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/06/28 11:31:48 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/07/25 11:12:23 wiz Exp $
 
 DISTNAME=	libvterm-0.1.4
 PKGNAME=	${DISTNAME:S/libvterm/libvterm01/g}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://www.leonerd.org.uk/code/libvterm/
 COMMENT=	Abstract VT220/xterm/ECMA-48 emulation library
 LICENSE=	mit
 
-USE_TOOLS+=	pkg-config gmake perl
+USE_TOOLS+=	gmake perl
 USE_LIBTOOL=	yes
 
 MAKE_FLAGS+=	PREFIX=${PREFIX}

@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2021/06/13 06:40:48 nia Exp $
-#
+# $NetBSD: Makefile,v 1.24 2022/07/25 11:12:19 wiz Exp $
 
 DISTNAME=	libmad-0.15.1b
 PKGREVISION=	2
@@ -15,7 +14,6 @@ CONFLICTS=	mad<0.15
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-USE_TOOLS+=		pkg-config
 
 INSTALLATION_DIRS=	lib/pkgconfig
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2020/05/16 17:56:53 nia Exp $
+# $NetBSD: Makefile,v 1.17 2022/07/25 11:12:19 wiz Exp $
 
 DISTNAME=	libdca-0.0.7
 CATEGORIES=	audio
@@ -13,7 +13,6 @@ LICENSE=	gnu-gpl-v2
 USE_LANGUAGES=		c99
 USE_LIBTOOL=		yes
 USE_TOOLS+=		autoconf automake autoreconf
-USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 
 RESTRICTED=		Unresolved patent issue

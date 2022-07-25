@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/04/12 22:36:02 tnn Exp $
+# $NetBSD: Makefile,v 1.6 2022/07/25 11:12:22 wiz Exp $
 
 DISTNAME=	libcbor-0.9.0
 CATEGORIES=	devel
@@ -12,7 +12,6 @@ LICENSE=	mit
 
 USE_LANGUAGES+=	c c++
 USE_CMAKE=	yes
-USE_TOOLS+=	pkg-config
 CMAKE_ARGS+=	-DBUILD_SHARED_LIBS=ON
 
 CHECK_PORTABILITY_SKIP+=	misc/hooks/*

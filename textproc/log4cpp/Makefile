@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/10/03 17:31:23 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2022/07/25 11:12:29 wiz Exp $
 
 DISTNAME=	log4cpp-1.1.3
 CATEGORIES=	textproc
@@ -11,7 +11,6 @@ LICENSE=	gnu-lgpl-v2.1
 
 WRKSRC=		${WRKDIR}/log4cpp
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 

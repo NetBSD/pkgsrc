@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/08/18 10:25:16 leot Exp $
+# $NetBSD: Makefile,v 1.3 2022/07/25 11:12:25 wiz Exp $
 
 DISTNAME=	chibi-scheme-0.9.1
 CATEGORIES=	lang
@@ -10,7 +10,7 @@ HOMEPAGE=	http://synthcode.com/wiki/chibi-scheme
 COMMENT=	Minimal Scheme Implementation for use as an Extension Language
 LICENSE=	modified-bsd
 
-USE_TOOLS+=	gmake pkg-config
+USE_TOOLS+=	gmake
 
 PKGCONFIG_OVERRIDE+=	chibi-scheme.pc.in
 

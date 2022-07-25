@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/06/28 11:34:36 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2022/07/25 11:12:25 wiz Exp $
 
 DISTNAME=	boolstuff-0.1.16
 PKGREVISION=	2
@@ -12,7 +12,6 @@ LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 TOOLS_BROKEN+=	perl
 

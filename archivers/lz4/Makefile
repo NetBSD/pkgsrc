@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2021/08/06 05:08:50 kim Exp $
+# $NetBSD: Makefile,v 1.24 2022/07/25 11:12:18 wiz Exp $
 
 DISTNAME=	lz4-1.9.3
 PKGREVISION=	1
@@ -12,7 +12,7 @@ COMMENT=	Extremely Fast Compression algorithm
 LICENSE=	2-clause-bsd
 
 USE_LANGUAGES=		c99 c++
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake
 PKGCONFIG_OVERRIDE+=	lib/liblz4.pc.in
 TEST_TARGET=		test
 
