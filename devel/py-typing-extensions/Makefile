@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2022/01/04 20:53:46 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2022/07/25 12:37:44 leot Exp $
 
-DISTNAME=	typing_extensions-3.10.0.2
+DISTNAME=	typing_extensions-4.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/typing-extensions/}
 
@@ -11,12 +10,11 @@ HOMEPAGE=	https://github.com/python/typing
 COMMENT=	Backported and Experimental Type Hints for Python
 LICENSE=	python-software-foundation
 
-.include "../../lang/python/pyversion.mk"
-.if ${_PYTHON_VERSION} == 27
-DEPENDS+=	${PYPKGPREFIX}-typing>=3.7.4:../../devel/py-typing
-.endif
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core-[0-9]*:../../devel/py-flit_core
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
