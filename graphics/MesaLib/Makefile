@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.200 2022/07/07 14:05:25 wiz Exp $
+# $NetBSD: Makefile,v 1.201 2022/07/25 09:49:06 he Exp $
 
 DISTNAME=	mesa-21.3.9
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
@@ -53,7 +53,13 @@ BUILDLINK_API_DEPENDS.libdrm+=	libdrm>=2.4.100
 .  endif
 MESON_ARGS+=		-Degl=true
 MESON_ARGS+=		-Dgbm=true
+PLIST_VARS+=		xa
+.  if empty(MACHINE_PLATFORM:MNetBSD-*-powerpc)
+# XA state tracker requires at least one of the following gallium drivers:
+# nouveau, freedreno, i915, svga
 MESON_ARGS+=		-Dgallium-xa=enabled
+PLIST.xa=		yes
+.  endif
 .  if ${X11_TYPE} == "native" && !exists(${X11BASE}/include/xcb/dri3.h)
 MESON_ARGS+=		-Ddri3=false
 .  endif
@@ -74,10 +80,13 @@ PLIST.iris=		yes
 .  endif
 # FreeBSD lacks nouveau support (there are official binaries from Nvidia)
 .  if ${OPSYS} != "FreeBSD"
+.    if empty(MACHINE_PLATFORM:MNetBSD-*-powerpc)
+# nouveau not available on this platform
 PLIST.nouveau=		yes
 PLIST.nouveau_dri=	yes
 GALLIUM_DRIVERS+=	nouveau
 DRI_DRIVERS+=		nouveau
+.    endif
 .  endif
 .  if !empty(MACHINE_PLATFORM:MLinux-*-x86_64)
 # qemu Linux guest driver
