@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: prosody.sh,v 1.4 2022/07/07 02:31:46 khorben Exp $
+# $NetBSD: prosody.sh,v 1.5 2022/07/25 04:47:06 khorben Exp $
 #
 # PROVIDE: prosody
 # REQUIRE: DAEMON
@@ -14,8 +14,17 @@ rcvar=${name}
 ctl_command="@PREFIX@/bin/${name}ctl"
 required_files="@PKG_SYSCONFDIR@/${name}.cfg.lua"
 pidfile="@PROSODY_RUN@/${name}.pid"
-#start_precmd="ulimit -n 2048"
+start_precmd="prosody_precmd"
 extra_commands="reload status"
+
+prosody_precmd()
+{
+    if [ ! -d @PROSODY_RUN@ ]; then
+        @MKDIR@ -m 0755 @PROSODY_RUN@
+    fi
+    @CHOWN@ @PROSODY_USER@:@PROSODY_GROUP@ @PROSODY_RUN@
+    #ulimit -n 2048
+}
 
 start_cmd="${ctl_command} start"
 stop_cmd="${ctl_command} stop"
