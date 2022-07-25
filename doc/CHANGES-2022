@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3537 2022/07/25 11:04:56 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3538 2022/07/25 12:11:44 manu Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5304,3 +5304,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/haproxy to 2.6.2 [adam 2022-07-25]
 	Updated www/w3m to 0.5.3+git20220429 [rin 2022-07-25]
 	Updated graphics/adaptagrams to 0.20160901nb1 [wiz 2022-07-25]
+	Updated www/ap2_upload to 0.9 [manu 2022-07-25]
