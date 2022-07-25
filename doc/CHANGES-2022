@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3539 2022/07/25 12:19:52 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3540 2022/07/25 12:37:50 leot Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5307,3 +5307,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/ap2_upload to 0.9 [manu 2022-07-25]
 	Updated devel/protobuf to 3.21.3 [adam 2022-07-25]
 	Updated devel/py-protobuf to 4.21.3 [adam 2022-07-25]
+	Updated devel/py-typing-extensions to 4.3.0 [leot 2022-07-25]
