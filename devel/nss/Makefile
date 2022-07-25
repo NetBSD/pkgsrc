@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.233 2022/07/21 13:52:50 wiz Exp $
+# $NetBSD: Makefile,v 1.234 2022/07/25 11:53:57 tnn Exp $
 #
 # release notes
 # https://firefox-source-docs.mozilla.org/security/nss/releases/index.html
@@ -22,6 +22,10 @@ CTF_SUPPORTED=		no # https://smartos.org/bugview/OS-6510
 USE_GCC_RUNTIME=	yes
 USE_LANGUAGES=		c99
 USE_TOOLS+=		gmake perl pax pkg-config
+# Fails to detect jobserver on systems where /bin/make and /bin/gmake both
+# exist. This is because nss uses "gmake" explicitly rather than $MAKE to
+# launch subprocesses.
+MAKE_JOBS_SAFE=		no
 
 BUILD_DIRS=		nss
 
