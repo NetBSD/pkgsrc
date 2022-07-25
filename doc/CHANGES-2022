@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3545 2022/07/25 19:47:54 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3546 2022/07/25 19:51:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5314,3 +5314,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/inkscape to 1.2.1 [wiz 2022-07-25]
 	Updated devel/libsigc++3 to 3.2.0 [wiz 2022-07-25]
 	Updated devel/concurrencykit to 0.6.0 [wiz 2022-07-25]
+	Updated math/erfa to 2.0.0 [wiz 2022-07-25]
