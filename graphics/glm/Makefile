@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/01/02 14:53:26 tnn Exp $
+# $NetBSD: Makefile,v 1.7 2022/07/25 11:12:24 wiz Exp $
 
 DISTNAME=	glm-0.9.9.8
 CATEGORIES=	graphics math
@@ -12,7 +12,7 @@ LICENSE=	mit
 NO_BUILD=	yes
 NO_CONFIGURE=	yes
 
-USE_TOOLS+=	pax pkg-config
+USE_TOOLS+=	pax
 
 GLM_DIR=		include/glm
 INSTALLATION_DIRS=	${GLM_DIR}

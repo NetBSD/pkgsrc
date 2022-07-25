@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2020/11/26 15:49:58 schmonz Exp $
+# $NetBSD: Makefile,v 1.17 2022/07/25 11:12:27 wiz Exp $
 
 DISTNAME=	libressl-2.7.4
 PKGREVISION=	1
@@ -12,7 +12,6 @@ LICENSE=	openssl
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config
 
 PKGCONFIG_OVERRIDE+=	libcrypto.pc.in
 PKGCONFIG_OVERRIDE+=	libssl.pc.in

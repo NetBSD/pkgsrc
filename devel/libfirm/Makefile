@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2020/05/31 15:26:59 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.9 2022/07/25 11:12:22 wiz Exp $
 
 DISTNAME=	libfirm-1.21.0
 CATEGORIES=	devel
@@ -12,7 +11,6 @@ COMMENT=	Provides a graph-based SSA representation of programs
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config
 
 PKGCONFIG_OVERRIDE+=	libfirm.pc.in
 

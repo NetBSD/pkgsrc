@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2018/07/20 07:08:32 adam Exp $
+# $NetBSD: Makefile,v 1.6 2022/07/25 11:12:19 wiz Exp $
 
 DISTNAME=	fdk-aac-0.1.6
 CATEGORIES=	audio
@@ -11,7 +11,6 @@ LICENSE=	fraunhofer-license
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	fdk-aac.pc.in
 

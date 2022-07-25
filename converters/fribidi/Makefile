@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2021/10/17 10:56:37 nia Exp $
+# $NetBSD: Makefile,v 1.32 2022/07/25 11:12:21 wiz Exp $
 
 DISTNAME=	fribidi-1.0.11
 CATEGORIES=	converters
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2
 
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	pkg-config gmake
+USE_TOOLS+=	gmake
 
 TEST_TARGET=	check
 

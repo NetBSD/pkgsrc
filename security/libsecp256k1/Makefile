@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/11/04 20:32:18 js Exp $
+# $NetBSD: Makefile,v 1.2 2022/07/25 11:12:27 wiz Exp $
 
 GITHUB_PROJECT=	secp256k1
 GITHUB_TAG=	ac05f61fcf639a15b5101131561620303e4bd808
@@ -13,7 +13,7 @@ LICENSE=	mit
 
 WRKSRC=		${WRKDIR}/secp256k1-${GITHUB_TAG}
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	autoconf automake gmake pkg-config
+USE_TOOLS+=	autoconf automake gmake
 USE_LIBTOOL=	yes
 
 # Inspired by the configure flags ArchLinux uses

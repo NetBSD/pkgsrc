@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2020/03/20 11:57:23 nia Exp $
+# $NetBSD: Makefile,v 1.8 2022/07/25 11:12:20 wiz Exp $
 
 DISTNAME=	opencore-amr-0.1.5
 CATEGORIES=	audio
@@ -11,7 +11,6 @@ LICENSE=	apache-2.0
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 
 PKGCONFIG_OVERRIDE+=	amrnb/opencore-amrnb.pc.in

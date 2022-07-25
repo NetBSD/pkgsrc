@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2022/05/15 05:52:19 dholland Exp $
+# $NetBSD: Makefile,v 1.30 2022/07/25 11:12:26 wiz Exp $
 
 DISTNAME=	libogg-1.3.5
 PKGREVISION=	1
@@ -12,7 +12,6 @@ COMMENT=	Ogg project codecs library
 LICENSE=	modified-bsd
 
 USE_LIBTOOL=		yes
-USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	ogg.pc.in
 TEST_TARGET=		check
