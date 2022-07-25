@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2022/07/08 19:47:59 thor Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/07/25 16:11:51 thor Exp $
 bin/plumed
 bin/plumed-config
 bin/plumed-patch
@@ -222,9 +222,6 @@ include/plumed/xdrfile/xdrfile.h
 include/plumed/xdrfile/xdrfile_trr.h
 include/plumed/xdrfile/xdrfile_xtc.h
 lib/libplumed.a
-lib/libplumed.so
-lib/libplumedKernel.so
-lib/libplumedWrapper.a
 lib/pkgconfig/plumed.pc
 lib/pkgconfig/plumedInternals.pc
 lib/pkgconfig/plumedWrapper.pc
@@ -328,7 +325,6 @@ lib/plumed/plumed-mklib
 lib/plumed/plumed-newcv
 lib/plumed/plumed-partial_tempering
 lib/plumed/plumed-patch
-lib/plumed/plumed-runtime
 lib/plumed/plumed-selector
 lib/plumed/plumed-vim2html
 lib/plumed/scripts/config.sh
@@ -342,12 +338,8 @@ lib/plumed/src/colvar/Template.cpp
 lib/plumed/src/config/compile_options.sh
 lib/plumed/src/config/config.txt
 lib/plumed/src/lib/Plumed.cmake
-lib/plumed/src/lib/Plumed.cmake.runtime
-lib/plumed/src/lib/Plumed.cmake.shared
 lib/plumed/src/lib/Plumed.cmake.static
 lib/plumed/src/lib/Plumed.inc
-lib/plumed/src/lib/Plumed.inc.runtime
-lib/plumed/src/lib/Plumed.inc.shared
 lib/plumed/src/lib/Plumed.inc.static
 lib/plumed/vim/help/ABMD.txt
 lib/plumed/vim/help/ADAPTIVE_PATH.txt
