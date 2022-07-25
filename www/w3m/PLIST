@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2017/01/21 09:11:27 leot Exp $
+@comment $NetBSD: PLIST,v 1.19 2022/07/25 08:54:29 rin Exp $
 bin/w3m
 bin/w3mman
 libexec/w3m/cgi-bin/dirlist.cgi
@@ -64,7 +64,9 @@ share/doc/w3m/doc/keymap.lynx
 share/doc/w3m/doc/menu.default
 share/doc/w3m/doc/menu.submenu
 share/locale/de/LC_MESSAGES/w3m.mo
+share/locale/it/LC_MESSAGES/w3m.mo
 share/locale/ja/LC_MESSAGES/w3m.mo
+share/locale/sv_SE/LC_MESSAGES/w3m.mo
 share/locale/zh_CN/LC_MESSAGES/w3m.mo
 share/locale/zh_TW/LC_MESSAGES/w3m.mo
 share/w3m/w3mhelp-funcdesc.de.pl
