@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2020/01/26 17:31:20 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2022/07/25 11:04:45 wiz Exp $
 
 GITHUB_PROJECT=	adaptagrams
 GITHUB_TAG=	0503f7524f5b2aa96b356dfdd817f9f9869d2b20
 # Date of the latest git commit
 DISTNAME=	adaptagrams-0.20160901
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mjwybrow/}
 
@@ -28,4 +29,5 @@ pre-configure:
 # ./autogen.sh runs ./configure && make && make check and sets questionable shebang
 	${RUN} cd ${WRKSRC} && ${MKDIR} -p m4 && autoreconf -fiv
 
+.include "../../graphics/cairomm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
