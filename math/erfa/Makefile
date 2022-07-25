@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2022/07/25 11:12:25 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2022/07/25 19:50:54 wiz Exp $
 
-DISTNAME=	erfa-1.7.1
+DISTNAME=	erfa-2.0.0
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=liberfa/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
