@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2022/07/18 22:11:03 yhardy Exp $
+@comment $NetBSD: PLIST,v 1.18 2022/07/25 19:07:23 yhardy Exp $
 bin/streamlink
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -399,6 +399,8 @@ ${PYSITELIB}/streamlink/plugins/showroom.pyo
 ${PYSITELIB}/streamlink/plugins/sportal.py
 ${PYSITELIB}/streamlink/plugins/sportal.pyc
 ${PYSITELIB}/streamlink/plugins/sportal.pyo
+${PYSITELIB}/streamlink/plugins/sportal.pyc
+${PYSITELIB}/streamlink/plugins/sportschau.pyo
 ${PYSITELIB}/streamlink/plugins/sportschau.py
 ${PYSITELIB}/streamlink/plugins/sportschau.pyc
 ${PYSITELIB}/streamlink/plugins/sportschau.pyo
@@ -417,6 +419,9 @@ ${PYSITELIB}/streamlink/plugins/streamable.pyo
 ${PYSITELIB}/streamlink/plugins/streann.py
 ${PYSITELIB}/streamlink/plugins/streann.pyc
 ${PYSITELIB}/streamlink/plugins/streann.pyo
+${PYSITELIB}/streamlink/plugins/streann.pyc
+${PYSITELIB}/streamlink/plugins/streann.pyo
+${PYSITELIB}/streamlink/plugins/stv.py
 ${PYSITELIB}/streamlink/plugins/stv.py
 ${PYSITELIB}/streamlink/plugins/stv.pyc
 ${PYSITELIB}/streamlink/plugins/stv.pyo
@@ -444,6 +449,8 @@ ${PYSITELIB}/streamlink/plugins/turkuvaz.pyo
 ${PYSITELIB}/streamlink/plugins/tv360.py
 ${PYSITELIB}/streamlink/plugins/tv360.pyc
 ${PYSITELIB}/streamlink/plugins/tv360.pyo
+${PYSITELIB}/streamlink/plugins/turkuvaz.pyo
+${PYSITELIB}/streamlink/plugins/tv360.py
 ${PYSITELIB}/streamlink/plugins/tv3cat.py
 ${PYSITELIB}/streamlink/plugins/tv3cat.pyc
 ${PYSITELIB}/streamlink/plugins/tv3cat.pyo
