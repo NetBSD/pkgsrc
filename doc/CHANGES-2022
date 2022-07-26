@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3549 2022/07/26 08:17:32 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3550 2022/07/26 08:43:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5318,3 +5318,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated audio/musicpd to 0.23.8nb3 [wiz 2022-07-26]
 	Updated www/py-urllib3 to 1.26.11 [adam 2022-07-26]
 	Updated textproc/py-regex to 2022.7.25 [adam 2022-07-26]
+	Updated www/py-httpx-socks to 0.7.4 [adam 2022-07-26]
+	Updated devel/py-frozendict to 2.3.4 [adam 2022-07-26]
