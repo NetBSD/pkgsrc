@@ -1,12 +1,12 @@
-$NetBSD: manual-libtool.m4,v 1.48 2018/11/13 21:44:42 sevan Exp $
+$NetBSD: manual-libtool.m4,v 1.49 2022/07/26 16:15:26 wiz Exp $
 
 Support mirbsd, midnightbsd, minix.
 Handle pkgsrc wrappers.
 Fixup output on various OS.
 
---- m4/libtool.m4.orig	Tue Jan 20 16:15:19 2015
+--- m4/libtool.m4.orig	2022-03-17 02:43:39.000000000 +0000
 +++ m4/libtool.m4
-@@ -117,7 +117,10 @@ func_cc_basename ()
+@@ -118,7 +118,10 @@ func_cc_basename ()
          *) break;;
        esac
      done
@@ -18,7 +18,7 @@ Fixup output on various OS.
  }
  ])# _LT_PREPARE_CC_BASENAME
  
-@@ -141,7 +144,10 @@ cc_basename=$func_cc_basename_result
+@@ -142,7 +145,10 @@ cc_basename=$func_cc_basename_result
  # It is okay to use these file commands and assume they have been set
  # sensibly after 'm4_require([_LT_FILEUTILS_DEFAULTS])'.
  m4_defun([_LT_FILEUTILS_DEFAULTS],
@@ -30,7 +30,7 @@ Fixup output on various OS.
  : ${MV="mv -f"}
  : ${RM="rm -f"}
  ])# _LT_FILEUTILS_DEFAULTS
-@@ -1120,7 +1126,7 @@ m4_defun([_LT_DARWIN_LINKER_FEATURES],
+@@ -1117,7 +1123,7 @@ m4_defun([_LT_DARWIN_LINKER_FEATURES],
    _LT_TAGVAR(allow_undefined_flag, $1)=$_lt_dar_allow_undefined
    case $cc_basename in
       ifort*|nagfor*) _lt_dar_can_shared=yes ;;
@@ -39,7 +39,7 @@ Fixup output on various OS.
    esac
    if test yes = "$_lt_dar_can_shared"; then
      output_verbose_link_cmd=func_echo_all
-@@ -1558,7 +1564,7 @@ fi
+@@ -1569,7 +1575,7 @@ fi
  
  case $host_os in
    darwin*)
@@ -48,25 +48,25 @@ Fixup output on various OS.
    *)
      lock_old_archive_extraction=no ;;
  esac
-@@ -1714,7 +1720,7 @@ AC_CACHE_VAL([lt_cv_sys_max_cmd_len], [dnl
+@@ -1725,7 +1731,7 @@ AC_CACHE_VAL([lt_cv_sys_max_cmd_len], [d
      lt_cv_sys_max_cmd_len=8192;
      ;;
  
--  bitrig* | darwin* | dragonfly* | freebsd* | netbsd* | openbsd*)
-+  bitrig* | darwin* | dragonfly* | freebsd* | minix* | netbsd* | openbsd* | mirbsd*)
+-  bitrig* | darwin* | dragonfly* | freebsd* | midnightbsd* | netbsd* | openbsd*)
++  bitrig* | darwin* | dragonfly* | freebsd* | midnightbsd* | minix* | netbsd* | openbsd*)
      # This has been around since 386BSD, at least.  Likely further.
      if test -x /sbin/sysctl; then
        lt_cv_sys_max_cmd_len=`/sbin/sysctl -n kern.argmax`
-@@ -2655,7 +2661,7 @@ dgux*)
+@@ -2675,7 +2681,7 @@ dgux*)
    shlibpath_var=LD_LIBRARY_PATH
    ;;
  
--freebsd* | dragonfly*)
-+freebsd*)
+-freebsd* | dragonfly* | midnightbsd*)
++freebsd* | midnightbsd*)
    # DragonFly does not have aout.  When/if they implement a new
    # versioning mechanism, adjust this.
    if test -x /usr/bin/objformat; then
-@@ -2700,6 +2706,17 @@ freebsd* | dragonfly*)
+@@ -2720,6 +2726,17 @@ freebsd* | dragonfly* | midnightbsd*)
    esac
    ;;
  
@@ -84,7 +84,7 @@ Fixup output on various OS.
  haiku*)
    version_type=linux # correct to gnu/linux during the next big refactor
    need_lib_prefix=no
-@@ -2777,12 +2794,7 @@ interix[[3-9]]*)
+@@ -2797,12 +2814,7 @@ interix[[3-9]]*)
  irix5* | irix6* | nonstopux*)
    case $host_os in
      nonstopux*) version_type=nonstopux ;;
@@ -98,7 +98,7 @@ Fixup output on various OS.
    esac
    need_lib_prefix=no
    need_version=no
-@@ -2887,19 +2899,48 @@ linux* | k*bsd*-gnu | kopensolaris*-gnu | gnu*)
+@@ -2907,19 +2919,48 @@ linux* | k*bsd*-gnu | kopensolaris*-gnu 
    dynamic_linker='GNU/Linux ld.so'
    ;;
  
@@ -157,7 +157,7 @@ Fixup output on various OS.
    shlibpath_var=LD_LIBRARY_PATH
    shlibpath_overrides_runpath=yes
    hardcode_into_libs=yes
-@@ -2925,7 +2966,7 @@ newsos6)
+@@ -2945,7 +2986,7 @@ newsos6)
    ;;
  
  openbsd* | bitrig*)
@@ -166,7 +166,7 @@ Fixup output on various OS.
    sys_lib_dlsearch_path_spec=/usr/lib
    need_lib_prefix=no
    if test -z "`echo __ELF__ | $CC -E - | $GREP __ELF__`"; then
-@@ -2933,7 +2974,7 @@ openbsd* | bitrig*)
+@@ -2953,7 +2994,7 @@ openbsd* | bitrig*)
    else
      need_version=yes
    fi
@@ -175,7 +175,7 @@ Fixup output on various OS.
    finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
    shlibpath_var=LD_LIBRARY_PATH
    shlibpath_overrides_runpath=yes
-@@ -3546,14 +3587,21 @@ linux* | k*bsd*-gnu | kopensolaris*-gnu | gnu*)
+@@ -3566,12 +3607,19 @@ linux* | k*bsd*-gnu | kopensolaris*-gnu 
    lt_cv_deplibs_check_method=pass_all
    ;;
  
@@ -190,20 +190,18 @@ Fixup output on various OS.
 +  # naming scheme for libraries yet, as the current one is deprecated, and
 +  # the new one in a state of flux especially between mports and MirPorts
 +  lt_cv_deplibs_check_method=pass_all
-   ;;
- 
++  ;;
++
 +mirbsd*)
 +  lt_cv_deplibs_check_method='match_pattern /lib[[^/]]+(\.so\.[[0-9]]+\.[[0-9]]+|\.so|_pic\.a)$'
 +  ;;
 +
 +netbsd* | minix*)
 +  lt_cv_deplibs_check_method='match_pattern /lib[[^/]]+(\.so|_pic\.a)$'
-+  ;;
-+
+   ;;
+ 
  newos6*)
-   lt_cv_deplibs_check_method='file_magic ELF [[0-9]][[0-9]]*-bit [[ML]]SB (executable|dynamic lib)'
-   lt_cv_file_magic_cmd=/usr/bin/file
-@@ -3561,7 +3609,7 @@ newos6*)
+@@ -3581,7 +3629,7 @@ newos6*)
    ;;
  
  *nto* | *qnx*)
@@ -212,7 +210,7 @@ Fixup output on various OS.
    ;;
  
  openbsd* | bitrig*)
-@@ -3931,7 +3979,7 @@ osf*)
+@@ -3951,7 +3999,7 @@ osf*)
    symcode='[[BCDEGQRST]]'
    ;;
  solaris*)
@@ -221,7 +219,7 @@ Fixup output on various OS.
    ;;
  sco3.2v5*)
    symcode='[[DT]]'
-@@ -4236,10 +4284,16 @@ m4_if([$1], [CXX], [
+@@ -4256,9 +4304,15 @@ m4_if([$1], [CXX], [
        esac
        ;;
      darwin* | rhapsody*)
@@ -231,25 +229,24 @@ Fixup output on various OS.
        # Common symbols not allowed in MH_DYLIB files
        _LT_TAGVAR(lt_prog_compiler_pic, $1)='-fno-common'
 +      _LT_TAGVAR(lt_prog_compiler_static, $1)=''
-       ;;
++      ;;
 +    *mint*)
 +      # FreeMiNT does not support shared libraries at all
 +      _LT_TAGVAR(lt_prog_compiler_pic, $1)=
-+      ;;
+       ;;
      *djgpp*)
        # DJGPP does not support shared libraries at all
-       _LT_TAGVAR(lt_prog_compiler_pic, $1)=
-@@ -4317,6 +4371,9 @@ m4_if([$1], [CXX], [
+@@ -4337,6 +4391,9 @@ m4_if([$1], [CXX], [
  	    ;;
  	esac
  	;;
 +      mint*)
 +	# FreeMiNT uses GNU C++
 +	;;
-       freebsd* | dragonfly*)
+       freebsd* | dragonfly* | midnightbsd*)
  	# FreeBSD uses GNU C++
  	;;
-@@ -4424,7 +4481,7 @@ m4_if([$1], [CXX], [
+@@ -4444,7 +4501,7 @@ m4_if([$1], [CXX], [
  	    ;;
  	esac
  	;;
@@ -258,7 +255,7 @@ Fixup output on various OS.
  	;;
        *qnx* | *nto*)
          # QNX uses GNU C++, but need to define -shared option too, otherwise
-@@ -4561,11 +4618,18 @@ m4_if([$1], [CXX], [
+@@ -4581,9 +4638,16 @@ m4_if([$1], [CXX], [
        ;;
  
      darwin* | rhapsody*)
@@ -268,17 +265,15 @@ Fixup output on various OS.
        # Common symbols not allowed in MH_DYLIB files
        _LT_TAGVAR(lt_prog_compiler_pic, $1)='-fno-common'
 +      _LT_TAGVAR(lt_prog_compiler_static, $1)=''
-       ;;
- 
++      ;;
++
 +    *mint*)
 +      # FreeMiNT does not support shared libraries at all
 +      _LT_TAGVAR(lt_prog_compiler_pic, $1)=
-+      ;;
-+
+       ;;
+ 
      haiku*)
-       # PIC is the default for Haiku.
-       # The "-static" flag exists, but is broken.
-@@ -4591,6 +4655,13 @@ m4_if([$1], [CXX], [
+@@ -4611,6 +4675,13 @@ m4_if([$1], [CXX], [
        # Instead, we relocate shared libraries at runtime.
        ;;
  
@@ -292,7 +287,7 @@ Fixup output on various OS.
      msdosdjgpp*)
        # Just because we use GCC doesn't mean we suddenly get shared libraries
        # on systems that don't support them.
-@@ -4769,6 +4840,15 @@ m4_if([$1], [CXX], [
+@@ -4789,6 +4860,15 @@ m4_if([$1], [CXX], [
        esac
        ;;
  
@@ -308,7 +303,7 @@ Fixup output on various OS.
      newsos6)
        _LT_TAGVAR(lt_prog_compiler_pic, $1)='-KPIC'
        _LT_TAGVAR(lt_prog_compiler_static, $1)='-Bstatic'
-@@ -4844,6 +4924,9 @@ m4_if([$1], [CXX], [
+@@ -4864,6 +4944,9 @@ m4_if([$1], [CXX], [
  ])
  case $host_os in
    # For platforms that do not support PIC, -DPIC is meaningless:
@@ -318,7 +313,7 @@ Fixup output on various OS.
    *djgpp*)
      _LT_TAGVAR(lt_prog_compiler_pic, $1)=
      ;;
-@@ -5252,16 +5335,29 @@ _LT_EOF
+@@ -5273,16 +5356,29 @@ _LT_EOF
        fi
        ;;
  
@@ -354,7 +349,7 @@ Fixup output on various OS.
      solaris*)
        if $LD -v 2>&1 | $GREP 'BFD 2\.8' > /dev/null; then
  	_LT_TAGVAR(ld_shlibs, $1)=no
-@@ -5794,15 +5890,28 @@ _LT_EOF
+@@ -5815,15 +5911,28 @@ _LT_EOF
        esac
        ;;
  
@@ -388,7 +383,7 @@ Fixup output on various OS.
        ;;
  
      newsos6)
-@@ -5814,6 +5923,11 @@ _LT_EOF
+@@ -5835,6 +5944,11 @@ _LT_EOF
        ;;
  
      *nto* | *qnx*)
@@ -400,7 +395,7 @@ Fixup output on various OS.
        ;;
  
      openbsd* | bitrig*)
-@@ -6287,9 +6401,7 @@ m4_defun([_LT_LANG_CXX_CONFIG],
+@@ -6309,9 +6423,7 @@ m4_defun([_LT_LANG_CXX_CONFIG],
  [m4_require([_LT_FILEUTILS_DEFAULTS])dnl
  m4_require([_LT_DECL_EGREP])dnl
  m4_require([_LT_PATH_MANIFEST_TOOL])dnl
@@ -411,7 +406,7 @@ Fixup output on various OS.
    AC_PROG_CXXCPP
  else
    _lt_caught_CXX_error=yes
-@@ -7079,6 +7191,22 @@ if test yes != "$_lt_caught_CXX_error"; then
+@@ -7102,6 +7214,22 @@ if test yes != "$_lt_caught_CXX_error"; 
          _LT_TAGVAR(ld_shlibs, $1)=no
  	;;
  
@@ -434,7 +429,7 @@ Fixup output on various OS.
        mvs*)
          case $cc_basename in
            cxx*)
-@@ -7092,16 +7220,14 @@ if test yes != "$_lt_caught_CXX_error"; then
+@@ -7115,16 +7243,14 @@ if test yes != "$_lt_caught_CXX_error"; 
  	esac
  	;;
  
@@ -459,7 +454,7 @@ Fixup output on various OS.
  	;;
  
        *nto* | *qnx*)
-@@ -7275,7 +7401,7 @@ if test yes != "$_lt_caught_CXX_error"; then
+@@ -7298,7 +7424,7 @@ if test yes != "$_lt_caught_CXX_error"; 
  	    # GNU C++ compiler with Solaris linker
  	    if test yes,no = "$GXX,$with_gnu_ld"; then
  	      _LT_TAGVAR(no_undefined_flag, $1)=' $wl-z ${wl}defs'
@@ -468,7 +463,7 @@ Fixup output on various OS.
  	        _LT_TAGVAR(archive_cmds, $1)='$CC -shared $pic_flag -nostdlib $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags $wl-h $wl$soname -o $lib'
  	        _LT_TAGVAR(archive_expsym_cmds, $1)='echo "{ global:" > $lib.exp~cat $export_symbols | $SED -e "s/\(.*\)/\1;/" >> $lib.exp~echo "local: *; };" >> $lib.exp~
                    $CC -shared $pic_flag -nostdlib $wl-M $wl$lib.exp $wl-h $wl$soname -o $lib $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags~$RM $lib.exp'
-@@ -7534,8 +7660,9 @@ if AC_TRY_EVAL(ac_compile); then
+@@ -7557,8 +7683,9 @@ if AC_TRY_EVAL(ac_compile); then
      -L* | -R* | -l*)
         # Some compilers place space between "-{L,R}" and the path.
         # Remove the space.
