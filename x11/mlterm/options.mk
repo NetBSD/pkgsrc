@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.22 2022/07/07 12:59:51 rin Exp $
+# $NetBSD: options.mk,v 1.23 2022/07/26 02:25:15 rin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mlterm
 PKG_SUPPORTED_OPTIONS=	cairo canna fcitx fribidi gdk_pixbuf2 gtk ibus libind m17nlib mlterm-fb otl scim skk uim wnn4 xft2 debug
@@ -9,7 +9,7 @@ PKG_SUGGESTED_OPTIONS+=	mlterm-fb
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		bidi cairo canna fb fbfiles fcitx gtk ibus ind m17nlib otl scim skk uim wscons wnn x68kgrf xft2
+PLIST_VARS+=		bidi cairo canna fb fbfiles fcitx gdk_pixbuf2 gtk ibus ind m17nlib otl scim skk uim wscons wnn x68kgrf xft2
 
 .if !empty(PKG_OPTIONS:Mmlterm-fb)
 .  if ${OPSYS} == "NetBSD"
@@ -54,6 +54,7 @@ CONFIGURE_ARGS+=	--disable-fribidi
 
 .if !empty(PKG_OPTIONS:Mgdk_pixbuf2)
 CONFIGURE_ARGS+=	--with-imagelib=gdk-pixbuf
+PLIST.gdk_pixbuf2=	yes
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 .endif
 

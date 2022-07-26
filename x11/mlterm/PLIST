@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.46 2022/07/07 12:59:51 rin Exp $
+@comment $NetBSD: PLIST,v 1.47 2022/07/26 02:25:15 rin Exp $
 bin/mlcc
 bin/mlclient
 bin/mlclientx
@@ -49,7 +49,7 @@ lib/mlterm/libmotif.la
 lib/mlterm/libmozmodern.la
 lib/mlterm/libnext.la
 ${PLIST.otl}lib/mlterm/libotl.la
-${PLIST.gtk}lib/mlterm/libpixmap_engine.la
+${PLIST.gdk_pixbuf2}lib/mlterm/libpixmap_engine.la
 lib/mlterm/libsample.la
 ${PLIST.cairo}lib/mlterm/libtype_cairo.la
 ${PLIST.xft2}lib/mlterm/libtype_xft.la
@@ -99,15 +99,15 @@ ${PLIST.gtk}share/locale/vi/LC_MESSAGES/mlconfig.mo
 ${PLIST.gtk}share/locale/zh_TW/LC_MESSAGES/mlconfig.mo
 ${PLIST.fbfiles}share/mlterm/kbd/kbd.six
 ${PLIST.fbfiles}share/mlterm/kbd/pressed_kbd.six
-${PLIST.gtk}share/mlterm/scrollbars/sample3/bg_body.png
-${PLIST.gtk}share/mlterm/scrollbars/sample3/bg_bottom.png
-${PLIST.gtk}share/mlterm/scrollbars/sample3/bg_top.png
-${PLIST.gtk}share/mlterm/scrollbars/sample3/button_down.png
-${PLIST.gtk}share/mlterm/scrollbars/sample3/button_down_pressed.png
-${PLIST.gtk}share/mlterm/scrollbars/sample3/button_up.png
-${PLIST.gtk}share/mlterm/scrollbars/sample3/button_up_pressed.png
-${PLIST.gtk}share/mlterm/scrollbars/sample3/rc
-${PLIST.gtk}share/mlterm/scrollbars/sample3/slider_body.png
-${PLIST.gtk}share/mlterm/scrollbars/sample3/slider_bottom.png
-${PLIST.gtk}share/mlterm/scrollbars/sample3/slider_knob.png
-${PLIST.gtk}share/mlterm/scrollbars/sample3/slider_top.png
+${PLIST.gdk_pixbuf2}share/mlterm/scrollbars/sample3/bg_body.png
+${PLIST.gdk_pixbuf2}share/mlterm/scrollbars/sample3/bg_bottom.png
+${PLIST.gdk_pixbuf2}share/mlterm/scrollbars/sample3/bg_top.png
+${PLIST.gdk_pixbuf2}share/mlterm/scrollbars/sample3/button_down.png
+${PLIST.gdk_pixbuf2}share/mlterm/scrollbars/sample3/button_down_pressed.png
+${PLIST.gdk_pixbuf2}share/mlterm/scrollbars/sample3/button_up.png
+${PLIST.gdk_pixbuf2}share/mlterm/scrollbars/sample3/button_up_pressed.png
+${PLIST.gdk_pixbuf2}share/mlterm/scrollbars/sample3/rc
+${PLIST.gdk_pixbuf2}share/mlterm/scrollbars/sample3/slider_body.png
+${PLIST.gdk_pixbuf2}share/mlterm/scrollbars/sample3/slider_bottom.png
+${PLIST.gdk_pixbuf2}share/mlterm/scrollbars/sample3/slider_knob.png
+${PLIST.gdk_pixbuf2}share/mlterm/scrollbars/sample3/slider_top.png
