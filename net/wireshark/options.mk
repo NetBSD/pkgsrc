@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.26 2020/06/30 15:52:51 nia Exp $
+# $NetBSD: options.mk,v 1.27 2022/07/26 22:54:51 tnn Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.wireshark
 PKG_SUPPORTED_OPTIONS=	http2 lua qt5 spandsp
-PKG_SUGGESTED_OPTIONS=	qt5 lua
+PKG_SUGGESTED_OPTIONS=	http2 lua qt5
 
 .include "../../mk/bsd.options.mk"
 
