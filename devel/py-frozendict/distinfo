@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2022/07/21 18:36:35 gdt Exp $
+$NetBSD: distinfo,v 1.9 2022/07/26 08:43:00 adam Exp $
 
-BLAKE2s (frozendict-2.3.3.tar.gz) = b2117ea73c876af32e7721298baa5e505692ea3e0ed56168559970addc397d60
-SHA512 (frozendict-2.3.3.tar.gz) = 7d29801e2bbf2d0fe377d3e182568d9b50cc548f72d7a3499b6cb5010830fc4610b379c6b5d0f3ad3bf9db9905f747dabde2a5d8c5d5b8deceb2d894e5e3e509
-Size (frozendict-2.3.3.tar.gz) = 308271 bytes
+BLAKE2s (frozendict-2.3.4.tar.gz) = 0ac958cfe4fcde13f17779be2904d48630c2fabb4fd23ed6e26525b3a1672cae
+SHA512 (frozendict-2.3.4.tar.gz) = a73aabcb7449f8c1876c7acbf58e41016dd8177c08321cd66082e0fec08f53cdd3d21ed3034fbadad2c188267c4adfdbcd1b761dfbc0641b2d3710b9ddad29bc
+Size (frozendict-2.3.4.tar.gz) = 309401 bytes
