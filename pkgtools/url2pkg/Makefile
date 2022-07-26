@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.127 2022/07/16 08:59:38 rillig Exp $
+# $NetBSD: Makefile,v 1.128 2022/07/26 21:50:10 rillig Exp $
 
 PKGNAME=	url2pkg-22.2.0
 CATEGORIES=	pkgtools
@@ -36,7 +36,8 @@ do-install:
 	${INSTALL_MAN} ${FILESDIR}/url2pkg.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 	${INSTALL_DATA} ${WRKSRC}/Build.pm ${DESTDIR}${PREFIX}/lib/url2pkg/Module/
 	${INSTALL_DATA} ${WRKSRC}/MakeMaker.pm ${DESTDIR}${PREFIX}/lib/url2pkg/ExtUtils/
-	${RUN} cd ${WRKSRC}; for f in $$(find python -name '*.py' -print); do \
+	${RUN} cd ${WRKSRC};						\
+	for f in $$(find python -name '*.py' -print); do		\
 		${INSTALL_DATA} "$$f" ${DESTDIR}${PREFIX}/lib/url2pkg/"$$f"; \
 	done
 
