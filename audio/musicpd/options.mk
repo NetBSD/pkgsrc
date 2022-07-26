@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.42 2022/07/12 21:20:40 triaxx Exp $
+# $NetBSD: options.mk,v 1.43 2022/07/26 07:38:42 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.musicpd
 
@@ -83,7 +83,10 @@ MESON_ARGS+=	-Dfaad=disabled
 .endif
 
 .if !empty(PKG_OPTIONS:Mffmpeg)
-.  include "../../multimedia/ffmpeg5/buildlink3.mk"
+# needs 5.1 support
+# https://github.com/MusicPlayerDaemon/MPD/issues/1582
+#.  include "../../multimedia/ffmpeg5/buildlink3.mk"
+.  include "../../multimedia/ffmpeg4/buildlink3.mk"
 .else
 MESON_ARGS+=	-Dffmpeg=disabled
 .endif
