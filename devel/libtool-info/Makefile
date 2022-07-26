@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2014/10/09 13:44:37 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.21 2022/07/26 16:15:27 wiz Exp $
 
 .include "../../devel/libtool/Makefile.common"
 

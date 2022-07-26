@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.122 2022/06/28 11:31:48 wiz Exp $
+# $NetBSD: Makefile,v 1.123 2022/07/26 16:15:26 wiz Exp $
 
 ###########################################################################
 ###########################################################################
@@ -31,7 +31,6 @@
 .include "../../devel/libtool/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-base-/}
-PKGREVISION=	4
 
 COMMENT=	Generic shared library support script (the script itself)
 
@@ -61,6 +60,8 @@ CONFIGURE_ARGS+=	--disable-ltdl-install
 CONFIGURE_ARGS+=	F77=no FC=no
 
 USE_TOOLS+=		echo
+
+REPLACE_SH+=	libtoolize.in
 
 .PHONY: fix-libtool
 fix-libtool:
