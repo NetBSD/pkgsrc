@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.85 2020/01/18 23:30:33 rillig Exp $
+# $NetBSD: Makefile.common,v 1.86 2022/07/26 16:15:26 wiz Exp $
 # used by devel/libltdl/Makefile
 # used by devel/libtool-base/Makefile
 # used by devel/libtool-fortran/Makefile
@@ -32,7 +32,7 @@
 ###########################################################################
 ###########################################################################
 
-DISTNAME=	libtool-2.4.6
+DISTNAME=	libtool-2.4.7
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 CATEGORIES=	devel pkgtools
 MASTER_SITES=	${MASTER_SITE_GNU:=libtool/}
