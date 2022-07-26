@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3552 2022/07/26 15:47:08 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3553 2022/07/26 16:15:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5322,3 +5322,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-frozendict to 2.3.4 [adam 2022-07-26]
 	Updated fonts/harfbuzz to 5.0.0 [wiz 2022-07-26]
 	Updated fonts/harfbuzz-icu to 5.0.0 [wiz 2022-07-26]
+	Updated devel/libtool to 2.4.7 [wiz 2022-07-26]
