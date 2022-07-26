@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3547 2022/07/25 20:51:56 leot Exp $
+$NetBSD: CHANGES-2022,v 1.3548 2022/07/26 07:38:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5315,3 +5315,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/libsigc++3 to 3.2.0 [wiz 2022-07-25]
 	Updated devel/concurrencykit to 0.6.0 [wiz 2022-07-25]
 	Updated math/erfa to 2.0.0 [wiz 2022-07-25]
+	Updated audio/musicpd to 0.23.8nb3 [wiz 2022-07-26]
