@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.13 2022/07/15 23:23:35 gutteridge Exp $
+$NetBSD: patch-aa,v 1.14 2022/07/26 02:19:03 gutteridge Exp $
 
 Include pthread.h as thread stubs might be macros like on NetBSD.
 
@@ -6,6 +6,7 @@ Define conditional for cross-compiling support.
 
 Indicate whether the thread safety constructor is enabled. (This can cause
 issues with X clients that aren't coded correctly.)
+https://gitlab.freedesktop.org/xorg/lib/libx11/-/merge_requests/149
 
 --- configure.ac.orig	2022-06-09 01:06:45.000000000 +0000
 +++ configure.ac
