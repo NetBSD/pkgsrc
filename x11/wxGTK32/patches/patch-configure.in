@@ -1,0 +1,23 @@
+$NetBSD: patch-configure.in,v 1.1 2022/07/26 02:58:56 dbj Exp $
+
+Fixup invocation of install_name_tool on wxrc
+
+--- configure.in.orig	2022-07-06 14:19:50.000000000 +0000
++++ configure.in
+@@ -2975,7 +2975,7 @@ if test "$wxUSE_XML" != "yes"; then
+     USE_XML=0
+ else
+     USE_XML=1
+-    echo "${HOST_PREFIX}install_name_tool \${changes} \${2}/wxrc-${WX_RELEASE}" >> change-install-names
++    echo "${HOST_PREFIX}install_name_tool \${changes} \${2}/wxrc-${WX_RELEASE}" > change-install-names.wxrc
+ fi
+ 
+ 
+@@ -4047,6 +4047,7 @@ for i in \${libnames} ; do
+     ${HOST_PREFIX}install_name_tool \${changes} -id \${3}/\${i} \${1}/\${i}
+ done
+ EOF
++            cat change-install-names.wxrc >> change-install-names
+             chmod +x change-install-names
+             DYLIB_RPATH_INSTALL="\$(wx_top_builddir)/change-install-names \${DESTDIR}\${libdir} \${DESTDIR}\${bindir} \${libdir} \$(wx_top_builddir)/lib"
+         fi
