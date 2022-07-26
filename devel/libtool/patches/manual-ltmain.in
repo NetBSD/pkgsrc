@@ -1,11 +1,20 @@
-$NetBSD: manual-ltmain.in,v 1.1 2017/03/06 16:14:07 jperkin Exp $
+$NetBSD: manual-ltmain.in,v 1.2 2022/07/26 16:15:26 wiz Exp $
 
 Handle versuffix2 for mirbsd/midnightbsd.
 Avoid empty relink_command.
 
---- build-aux/ltmain.in.orig	2015-02-06 12:57:56.000000000 +0000
+--- build-aux/ltmain.in.orig	2022-03-17 02:43:39.000000000 +0000
 +++ build-aux/ltmain.in
-@@ -6430,7 +6430,11 @@ func_mode_link ()
+@@ -5133,7 +5133,7 @@ func_mode_link ()
+ 	    # These systems don't actually have a C library (as such)
+ 	    test X-lc = "X$arg" && continue
+ 	    ;;
+-	  *-*-openbsd* | *-*-freebsd* | *-*-dragonfly* | *-*-bitrig* | *-*-midnightbsd*)
++	  *-*-openbsd* | *-*-freebsd* | *-*-dragonfly* | *-*-bitrig* | *-*-midnightbsd* | *-*-mirbsd*)
+ 	    # Do not include libc due to us having libc/libc_r.
+ 	    test X-lc = "X$arg" && continue
+ 	    ;;
+@@ -6478,7 +6478,11 @@ func_mode_link ()
  	    # Finalize command for both is simple: just hardcode it.
  	    if test yes = "$hardcode_direct" &&
  	       test no = "$hardcode_direct_absolute"; then
@@ -18,7 +27,7 @@ Avoid empty relink_command.
  	    elif test yes = "$hardcode_minus_L"; then
  	      add_dir=-L$libdir
  	      add=-l$name
-@@ -6953,6 +6957,7 @@ func_mode_link ()
+@@ -7001,6 +7005,7 @@ func_mode_link ()
  	# Calculate the version variables.
  	major=
  	versuffix=
@@ -26,7 +35,7 @@ Avoid empty relink_command.
  	verstring=
  	case $version_type in
  	none) ;;
-@@ -7023,6 +7028,7 @@ func_mode_link ()
+@@ -7071,6 +7076,7 @@ func_mode_link ()
  	  func_arith $current - $age
  	  major=.$func_arith_result
  	  versuffix=$major.$age.$revision
@@ -34,7 +43,7 @@ Avoid empty relink_command.
  	  ;;
  
  	osf)
-@@ -7088,8 +7094,10 @@ func_mode_link ()
+@@ -7136,8 +7142,10 @@ func_mode_link ()
  	  esac
  	  if test no = "$need_version"; then
  	    versuffix=
@@ -45,7 +54,7 @@ Avoid empty relink_command.
  	  fi
  	fi
  
-@@ -7097,6 +7105,7 @@ func_mode_link ()
+@@ -7145,6 +7153,7 @@ func_mode_link ()
  	if test yes,no = "$avoid_version,$need_version"; then
  	  major=
  	  versuffix=
@@ -53,16 +62,7 @@ Avoid empty relink_command.
  	  verstring=
  	fi
  
-@@ -7210,7 +7219,7 @@ func_mode_link ()
- 	  *-*-netbsd*)
- 	    # Don't link with libc until the a.out ld.so is fixed.
- 	    ;;
--	  *-*-openbsd* | *-*-freebsd* | *-*-dragonfly*)
-+	  *-*-openbsd* | *-*-freebsd* | *-*-dragonfly* | *-*-mirbsd*)
- 	    # Do not include libc due to us having libc/libc_r.
- 	    ;;
- 	  *-*-sco3.2v5* | *-*-sco5v6*)
-@@ -7233,12 +7242,14 @@ func_mode_link ()
+@@ -7281,12 +7290,14 @@ func_mode_link ()
  	libname_save=$libname
  	release_save=$release
  	versuffix_save=$versuffix
@@ -77,7 +77,7 @@ Avoid empty relink_command.
  	major=
  	newdeplibs=
  	droppeddeps=no
-@@ -7515,6 +7526,7 @@ EOF
+@@ -7563,6 +7574,7 @@ EOF
  	  ;;
  	esac
  	versuffix=$versuffix_save
@@ -85,7 +85,7 @@ Avoid empty relink_command.
  	major=$major_save
  	release=$release_save
  	libname=$libname_save
-@@ -9000,7 +9012,7 @@ dlpreopen='$dlprefiles'
+@@ -9051,7 +9063,7 @@ dlpreopen='$dlprefiles'
  
  # Directory that this library needs to be installed in:
  libdir='$install_libdir'"

@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.107 2021/10/26 10:15:29 nia Exp $
+$NetBSD: distinfo,v 1.108 2022/07/26 16:15:26 wiz Exp $
 
-BLAKE2s (libtool-2.4.6.tar.gz) = 832d8f361eed1e02b8eda8bcec4e4780500e9bb70e77e33ee7375c4ca2dced97
-SHA512 (libtool-2.4.6.tar.gz) = 3233d81cb2739a54b840a0a82064eebbfaa4fb442fb993a35d6bd41d8395c51f038c90ae048b9252f172d0a5bbfb4b36e2b13d4477001f9ff7d4124237819a18
-Size (libtool-2.4.6.tar.gz) = 1806697 bytes
+BLAKE2s (libtool-2.4.7.tar.gz) = ae08c74a0da41b3ae252b207ff642d594648edc9c1af41b0191b899d844fecf7
+SHA512 (libtool-2.4.7.tar.gz) = 27acef46d9eb67203d708b57d80b853f76fa4b9c2720ff36ec161e6cdf702249e7982214ddf60bae75511aa79bc7d92aa27e3eab7ef9c0f5c040e8e42e76a385
+Size (libtool-2.4.7.tar.gz) = 1938886 bytes
 SHA1 (patch-Makefile.in) = 0adb634335acd5fb280c99b5d43ae568018ca0af
 SHA1 (patch-build-aux_depcomp) = ae6f93ad4fac1df648cfcb62601c72f9ebb30233
-SHA1 (patch-build-aux_ltmain.sh) = 110c3976ccdc2a69c34001923427e47e9c4b3b37
-SHA1 (patch-configure) = 30b05f8f258b3e16abf7daadb9d59cce9dbd9976
-SHA1 (patch-libltdl_configure) = 73cc33d5ce0a91c7cd976d4a386e17d69d377c24
+SHA1 (patch-build-aux_ltmain.sh) = 0cf9b87586f9e3e38ea3cc5b145c080b0c7bd940
+SHA1 (patch-configure) = ef16440d8fd726bea7dee71fc0eb04b2e305b6e5
+SHA1 (patch-libltdl_configure) = 05dc719a11c557173d12cd76787f593bd5950e48
