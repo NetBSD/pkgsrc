@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3558 2022/07/27 09:42:55 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3559 2022/07/27 12:32:53 micha Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5330,3 +5330,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated games/wesnoth to 1.16.5 [adam 2022-07-27]
 	Updated lang/nodejs to 18.7.0 [adam 2022-07-27]
 	Updated audio/musicpd to 0.23.8nb4 [wiz 2022-07-27]
+	Updated graphics/graphviz to 5.0.0nb2 [micha 2022-07-27]
