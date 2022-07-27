@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2022/06/30 11:18:11 nia Exp $
+# $NetBSD: Makefile,v 1.13 2022/07/27 18:52:41 rhialto Exp $
 
 DISTNAME=	breezy-3.2.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel scm
 MASTER_SITES=	https://launchpad.net/brz/${PKGVERSION_NOREV:R}/${PKGVERSION_NOREV}/+download/
 
@@ -13,10 +13,11 @@ LICENSE=	gnu-gpl-v2
 # For building from repo instead of release tarball:
 #BUILD_DEPENDS+=	${PYPKGPREFIX}-cython>=0:../../devel/py-cython
 DEPENDS+=		${PYPKGPREFIX}-configobj>0:../../devel/py-configobj
-DEPENDS+=		${PYPKGPREFIX}-dulwich>0:../../devel/py-dulwich
+DEPENDS+=		${PYPKGPREFIX}-dulwich>=0.20.23:../../devel/py-dulwich
+DEPENDS+=		${PYPKGPREFIX}-fastbencode>=0.0.9:../../converters/py-fastbencode
 DEPENDS+=		${PYPKGPREFIX}-fastimport>0:../../devel/py-fastimport
-DEPENDS+=		${PYPKGPREFIX}-six>0:../../lang/py-six
 DEPENDS+=		${PYPKGPREFIX}-patiencediff>=0.2.2:../../textproc/py-patiencediff
+DEPENDS+=		${PYPKGPREFIX}-six>0:../../lang/py-six
 # Not yet packaged; only needed for lp: shortcuts.
 #DEPENDS+=		${PYPKGPREFIX}-launchpadlib>=1.6.3:../../devel/py-launchpadlib
 TEST_DEPENDS+=		${PYPKGPREFIX}-testtools>=0:../../devel/py-testtools
