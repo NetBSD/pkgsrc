@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.61 2020/08/17 20:17:49 leot Exp $
+# $NetBSD: Makefile,v 1.62 2022/07/27 18:53:29 wiz Exp $
 
 DISTNAME=	fox-1.6.57
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	ftp://www.fox-toolkit.org/pub/
 
