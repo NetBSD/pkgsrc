@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: prosody.sh,v 1.5 2022/07/25 04:47:06 khorben Exp $
+# $NetBSD: prosody.sh,v 1.6 2022/07/27 01:53:40 khorben Exp $
 #
 # PROVIDE: prosody
 # REQUIRE: DAEMON
@@ -19,7 +19,7 @@ extra_commands="reload status"
 
 prosody_precmd()
 {
-    if [ ! -d @PROSODY_RUN@ ]; then
+    if ! @TEST@ -d @PROSODY_RUN@; then
         @MKDIR@ -m 0755 @PROSODY_RUN@
     fi
     @CHOWN@ @PROSODY_USER@:@PROSODY_GROUP@ @PROSODY_RUN@
