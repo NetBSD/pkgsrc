@@ -1,4 +1,8 @@
-$NetBSD: patch-ag,v 1.6 2005/11/08 10:58:00 joerg Exp $
+$NetBSD: patch-ag,v 1.7 2022/07/27 18:38:48 wiz Exp $
+
+Add DragonFly support.
+Fix png library name.
+Fix linking against tiff.
 
 --- configure.orig	2004-09-23 01:15:44.000000000 +0000
 +++ configure
@@ -109,4 +113,33 @@ $NetBSD: patch-ag,v 1.6 2005/11/08 10:58:00 joerg Exp $
 +    SUPPORT_LIBS="$SUPPORT_LIBS -ltiff -ljpeg -lz";
  cat >>confdefs.h <<\_ACEOF
  #define HAVE_LIBTIFF 1
+ _ACEOF
+@@ -24395,13 +24395,13 @@ fi
+ 
+ 
+ 
+-echo "$as_me:$LINENO: checking for png_read_info in -lpng" >&5
+-echo $ECHO_N "checking for png_read_info in -lpng... $ECHO_C" >&6
++echo "$as_me:$LINENO: checking for png_read_info in -lpng16" >&5
++echo $ECHO_N "checking for png_read_info in -lpng16... $ECHO_C" >&6
+ if test "${ac_cv_lib_png_png_read_info+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lpng -lz -lm $GX_LIBS $LIBS"
++LIBS="-lpng16 -lz -lm $GX_LIBS $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
+@@ -24670,9 +24670,9 @@ echo "$as_me: error: *** PNG header file
+ fi
+ 
+ if test "$png_ok" = yes; then
+-	PNGLIBS="-lpng -lz"
++	PNGLIBS="-lpng16 -lz"
+ 
+-	SUPPORT_LIBS="$SUPPORT_LIBS -lpng -lz";
++	SUPPORT_LIBS="$SUPPORT_LIBS -lpng16 -lz";
+ cat >>confdefs.h <<\_ACEOF
+ #define HAVE_LIBPNG 1
  _ACEOF
