@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3567 2022/07/27 15:15:01 khorben Exp $
+$NetBSD: CHANGES-2022,v 1.3568 2022/07/27 15:15:14 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5340,3 +5340,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated editors/vim-gtk3 to 8.2.5172 [khorben 2022-07-27]
 	Updated editors/vim-lang to 8.2.5172 [khorben 2022-07-27]
 	Updated editors/vim-motif to 8.2.5172 [khorben 2022-07-27]
+	Updated editors/vim-xaw to 8.2.5172 [khorben 2022-07-27]
