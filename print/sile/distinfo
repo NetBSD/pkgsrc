@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2022/02/18 13:45:23 joerg Exp $
+$NetBSD: distinfo,v 1.7 2022/07/27 19:41:57 wiz Exp $
 
 BLAKE2s (sile-0.12.2.tar.xz) = cd23cd9d8a694d424cb3ef224dba91ba955bad4d044d25272eef42dd3e2b9c61
 SHA512 (sile-0.12.2.tar.xz) = d2e37e4a1d7f5bbb344ef2783d1b7b70591de33f1b0bd4919490b96acf5e44e9bef2c1024afcdefac0cf0806f86f6211d4a21c046b8f99de2fd11f4598c372fd
 Size (sile-0.12.2.tar.xz) = 2722568 bytes
+SHA1 (patch-Makefile.in) = 1240ef771e529e7e461f5fb53800130fdc516d44
