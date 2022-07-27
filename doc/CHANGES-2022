@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3555 2022/07/27 01:53:57 khorben Exp $
+$NetBSD: CHANGES-2022,v 1.3556 2022/07/27 06:44:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5325,3 +5325,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/libtool to 2.4.7 [wiz 2022-07-26]
 	Updated graphics/ristretto to 0.12.3 [gutteridge 2022-07-27]
 	Updated chat/prosody to 0.12.1 [khorben 2022-07-27]
+	Updated devel/protobuf to 3.21.4 [adam 2022-07-27]
+	Updated devel/py-protobuf to 4.21.4 [adam 2022-07-27]
