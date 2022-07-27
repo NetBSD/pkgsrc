@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.41 2021/10/26 11:19:26 nia Exp $
+$NetBSD: distinfo,v 1.42 2022/07/27 14:31:31 ryoon Exp $
 
-BLAKE2s (coreutils-9.0.tar.xz) = 8b2d248c9a3e4d739c44ada041417eb66064b1e692395346ce91254802fa677e
-SHA512 (coreutils-9.0.tar.xz) = 9be08212891dbf48e5b22e7689dc27dac50df4631ebf29313470b72b7921f0b2aa5242917d05587785358495ca56e3b21f5b3ca81043d53cab92354da6c53a03
-Size (coreutils-9.0.tar.xz) = 5612752 bytes
+BLAKE2s (coreutils-9.1.tar.xz) = 7f712a25194c8f4a40a0d973b9ea11e2446686402fca424f683db99de349de2b
+SHA512 (coreutils-9.1.tar.xz) = a6ee2c549140b189e8c1b35e119d4289ec27244ec0ed9da0ac55202f365a7e33778b1dc7c4e64d1669599ff81a8297fe4f5adbcc8a3a2f75c919a43cd4b9bdfa
+Size (coreutils-9.1.tar.xz) = 5712104 bytes
 SHA1 (patch-Makefile.in) = e012814dded9691c2269661e64fc02f8f12d2039
 SHA1 (patch-lib_fflush.c) = 856ad3e8d301d65ca3db23347a88651e5c7a75d7
 SHA1 (patch-lib_string.in.h) = 4fcd9c511eed2bb476db0d7bb8cceba03c1da180
+SHA1 (patch-tests_misc_b2sum.sh) = 66d525bad222d198bbf419ce86542906be6dbb55
