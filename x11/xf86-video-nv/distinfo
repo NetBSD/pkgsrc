@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.22 2021/10/26 11:34:42 nia Exp $
+$NetBSD: distinfo,v 1.23 2022/07/27 20:19:28 wiz Exp $
 
-BLAKE2s (xf86-video-nv-2.1.21.tar.bz2) = 7d786026dc323428c8be31e09c04fd60ac4fa2a88e434572208283e6e3766f6a
-SHA512 (xf86-video-nv-2.1.21.tar.bz2) = 97cec43100b00609d43cf45937bafea387fd656cb5e321fcbed426973320097ba6601e4e548026618b3cf0c480f58956874a201791dc0cc39297b5fd54979ca7
-Size (xf86-video-nv-2.1.21.tar.bz2) = 424091 bytes
+BLAKE2s (xf86-video-nv-2.1.22.tar.xz) = e9de9b3f7257c6ceed8f5582eda8843e5dd9e5afb9aaccaab29407f566d4a2a3
+SHA512 (xf86-video-nv-2.1.22.tar.xz) = a54767e9060404cafbb028ea36e582e8cfb7431a746cfc1d698c435fa73e41c4dfc12f84e50d002a582ac61e2d4c377f4defdf407250ee9e8656e5ff989b3cda
+Size (xf86-video-nv-2.1.22.tar.xz) = 354708 bytes
