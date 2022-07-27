@@ -1,9 +1,10 @@
-$NetBSD: patch-configure,v 1.1 2021/05/17 10:38:48 micha Exp $
+$NetBSD: patch-configure,v 1.2 2022/07/27 18:46:49 wiz Exp $
 
 Add libtool support.
 Upstream will not merge this (libtool is listed as not acceptable).
+Fix png library name.
 
---- configure.orig	2021-05-04 18:40:48.000000000 +0000
+--- configure.orig	2021-11-20 18:12:26.000000000 +0000
 +++ configure
 @@ -3830,7 +3830,22 @@ if test "${enable_shared+set}" = set; th
    enableval=$enable_shared;
@@ -49,4 +50,61 @@ Upstream will not merge this (libtool is listed as not acceptable).
 +fi
  
  
+ 
+@@ -6355,13 +6384,13 @@ fi
+ syspnglib_ok=no
+ syspnginc_ok=no
+ if test x$enable_localpng != xyes; then
+-  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for png_read_info in -lpng" >&5
+-$as_echo_n "checking for png_read_info in -lpng... " >&6; }
++  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for png_read_info in -lpng16" >&5
++$as_echo_n "checking for png_read_info in -lpng16... " >&6; }
+ if ${ac_cv_lib_png_png_read_info+:} false; then :
+   $as_echo_n "(cached) " >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lpng  $LIBS"
++LIBS="-lpng16  $LIBS"
+ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ 
+@@ -6437,17 +6466,17 @@ $as_echo "$as_me: WARNING: Cannot find s
+ else
+     PNGINC=""
+     PNG=""
+-    IMAGELIBS="-lpng $IMAGELIBS"
+-    STATICIMAGELIBS="-lpng $STATICIMAGELIBS"
++    IMAGELIBS="-lpng16 $IMAGELIBS"
++    STATICIMAGELIBS="-lpng16 $STATICIMAGELIBS"
+     $as_echo "#define HAVE_LIBPNG 1" >>confdefs.h
+ 
+-    { $as_echo "$as_me:${as_lineno-$LINENO}: checking for png_get_valid in -lpng" >&5
+-$as_echo_n "checking for png_get_valid in -lpng... " >&6; }
++    { $as_echo "$as_me:${as_lineno-$LINENO}: checking for png_get_valid in -lpng16" >&5
++$as_echo_n "checking for png_get_valid in -lpng16... " >&6; }
+ if ${ac_cv_lib_png_png_get_valid+:} false; then :
+   $as_echo_n "(cached) " >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lpng  $LIBS"
++LIBS="-lpng16  $LIBS"
+ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ 
+@@ -6482,13 +6511,13 @@ if test "x$ac_cv_lib_png_png_get_valid" 
+ 
+ fi
+ 
+-    { $as_echo "$as_me:${as_lineno-$LINENO}: checking for png_set_tRNS_to_alpha in -lpng" >&5
+-$as_echo_n "checking for png_set_tRNS_to_alpha in -lpng... " >&6; }
++    { $as_echo "$as_me:${as_lineno-$LINENO}: checking for png_set_tRNS_to_alpha in -lpng16" >&5
++$as_echo_n "checking for png_set_tRNS_to_alpha in -lpng16... " >&6; }
+ if ${ac_cv_lib_png_png_set_tRNS_to_alpha+:} false; then :
+   $as_echo_n "(cached) " >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lpng  $LIBS"
++LIBS="-lpng16  $LIBS"
+ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
  

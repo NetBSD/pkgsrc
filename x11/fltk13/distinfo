@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.16 2021/11/22 10:49:08 micha Exp $
+$NetBSD: distinfo,v 1.17 2022/07/27 18:46:49 wiz Exp $
 
 BLAKE2s (fltk-1.3.8-source.tar.bz2) = c94fe7f4ce7afbc5c1c8968f19a944d36ddb85c73bcf80c91039f74c46f9b039
 SHA512 (fltk-1.3.8-source.tar.bz2) = a836ad5069de7461ab3d791a587237a64efded9328bc89f46f71f02b3576000f5386bb17d2e8ee693435752fe99b0fb6566ebd34e4038c270c1801b9f360cd8b
 Size (fltk-1.3.8-source.tar.bz2) = 4574725 bytes
 SHA1 (patch-Makefile) = c10e99516649e8fc02b6041be162229baec7a550
-SHA1 (patch-configure) = 4bc9690d9a18c1b3eca9c40dbe01d952cc3194a6
+SHA1 (patch-configure) = 1b8ad181047144d7adf610a3ca73c01ea94e2315
 SHA1 (patch-documentation_Makefile) = 4c0c4243311c170d6c645db41b8bb1821d053712
 SHA1 (patch-fluid_Makefile) = 6033e485a8ea7590fe68d9049645a1035326f8ce
 SHA1 (patch-makeinclude.in) = e353cdc721c856e9c8839eb6334de59981e70d90
