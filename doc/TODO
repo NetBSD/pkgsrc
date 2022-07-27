@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22064 2022/07/27 14:34:32 ryoon Exp $
+$NetBSD: TODO,v 1.22065 2022/07/27 19:14:41 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1162,7 +1162,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o p5-Dumbbench-0.501
 	o p5-ExtUtils-F77-1.26
 	o p5-Fsdb-2.71
-	o p5-GD-2.73
 	o p5-GStreamer-0.21
 	o p5-GitLab-API-v3-1.06
 	o p5-GitLab-API-v4-0.26
