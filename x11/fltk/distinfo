@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.28 2021/10/26 11:33:48 nia Exp $
+$NetBSD: distinfo,v 1.29 2022/07/27 18:42:42 wiz Exp $
 
 BLAKE2s (fltk-1.1.10-source.tar.bz2) = 64883d2b8ad915a4922bbc3d3c799f5efbd751c77ff9ac3b8fd49d235578f301
 SHA512 (fltk-1.1.10-source.tar.bz2) = 5bdece6855f190e56ea57a54ebe38172f177e9a4ac40d834f7a646a1d419bf92cfda46a30a1434a952c81a2ad14a22a7a02961c8a24d0cfc352f4d80dc3319a6
 Size (fltk-1.1.10-source.tar.bz2) = 2214382 bytes
 SHA1 (patch-aa) = 661dcac75cf50c791c2edcc14ec93e9ee83b062a
-SHA1 (patch-ab) = cb8500a9169c899ae332adc8672e814e4ba13304
-SHA1 (patch-ac) = 65e9fd364d5154904fa864e0550cf712fae6d569
+SHA1 (patch-ab) = 6c7b22664d0cc474ec3c26a1afa9150e535061a4
+SHA1 (patch-ac) = 6aa8efbb4bf9d9e49662d30ec02f02725220dfd8
 SHA1 (patch-ad) = b04051b14eb0bc74e8ccfe762e367ab8ccb11b80
 SHA1 (patch-ae) = de29d1be1219c3b17707216a7c54c25a9adb746c
 SHA1 (patch-af) = 791ba33cfc85e41e0f2b75ce0d1b0d6a378d9d0b
