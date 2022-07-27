@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.86 2022/05/11 09:23:48 jperkin Exp $
+$NetBSD: distinfo,v 1.87 2022/07/27 19:53:16 wiz Exp $
 
 BLAKE2s (vlc-3.0.17.4.tar.xz) = 33035b5a032653fa6eefc0972fb0e65e738911f47e369ecdafd8eb1909412719
 SHA512 (vlc-3.0.17.4.tar.xz) = dac14c6586603c064294672eb878253e52b3a7bef431fb10303345e5400591b5c1f2d452a2af03f503db0ca186582a84be06fdf05ab011c33f7b0bd5389c51fb
 Size (vlc-3.0.17.4.tar.xz) = 26567148 bytes
 SHA1 (patch-compat_Makefile.am) = 1c3e0a7c4610c55c3ec9ba80d66b9959661139b3
-SHA1 (patch-configure.ac) = c869f5e43c2d3bed5c376fdb7e751e071326e6b0
+SHA1 (patch-configure.ac) = d30a00fe67c95f42f9838a7d5c1a5b694b44a91c
 SHA1 (patch-lib_core.c) = 8ec5557424e6ddc05cc365aacd1ec847d9a94605
 SHA1 (patch-lib_video.c) = 362aaf7977c264bb70a79e98cf18da923ae62e39
 SHA1 (patch-m4_dolt.m4) = 6cf8ef04cc09510132a12df16b95a13e90019878
