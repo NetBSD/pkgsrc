@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3553 2022/07/26 16:15:46 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3554 2022/07/27 01:16:19 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5323,3 +5323,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated fonts/harfbuzz to 5.0.0 [wiz 2022-07-26]
 	Updated fonts/harfbuzz-icu to 5.0.0 [wiz 2022-07-26]
 	Updated devel/libtool to 2.4.7 [wiz 2022-07-26]
+	Updated graphics/ristretto to 0.12.3 [gutteridge 2022-07-27]
