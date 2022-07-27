@@ -1,10 +1,10 @@
-$NetBSD: patch-CMakeLists.txt,v 1.5 2022/01/21 20:37:07 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.6 2022/07/27 08:40:58 adam Exp $
 
 Do not look for X11 on macOS.
 We don't have readline as a module.
 Do not bother with uninstaller.
 
---- CMakeLists.txt.orig	2022-01-16 18:10:36.000000000 +0000
+--- CMakeLists.txt.orig	2022-07-13 16:10:31.000000000 +0000
 +++ CMakeLists.txt
 @@ -76,7 +76,9 @@ find_package(ICU REQUIRED COMPONENTS dat
  # no, gettext executables are not required when NLS is deactivated
@@ -20,7 +20,7 @@ Do not bother with uninstaller.
  # TODO: can use find_package and Fontconfig::Fontconfig with cmake 3.14+
  	pkg_check_modules(FONTCONFIG REQUIRED fontconfig>=2.4.1)
  	pkg_check_modules(PANGO REQUIRED pango>=1.22.0)
--	pkg_check_modules(LIBREADLINE REQUIRED readline)
+-	pkg_check_modules(LIBREADLINE readline)
  endif()
  
  if(ENABLE_TESTS)
