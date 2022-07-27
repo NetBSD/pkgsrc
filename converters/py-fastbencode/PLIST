@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2022/07/27 18:40:31 rhialto Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/fastbencode/__init__.py
+${PYSITELIB}/fastbencode/__init__.pyc
+${PYSITELIB}/fastbencode/__init__.pyo
+${PYSITELIB}/fastbencode/_bencode_py.py
+${PYSITELIB}/fastbencode/_bencode_py.pyc
+${PYSITELIB}/fastbencode/_bencode_py.pyo
+${PYSITELIB}/fastbencode/_bencode_pyx.so
