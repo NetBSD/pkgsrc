@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3559 2022/07/27 12:32:53 micha Exp $
+$NetBSD: CHANGES-2022,v 1.3560 2022/07/27 13:43:02 tpaul Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5331,3 +5331,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/nodejs to 18.7.0 [adam 2022-07-27]
 	Updated audio/musicpd to 0.23.8nb4 [wiz 2022-07-27]
 	Updated graphics/graphviz to 5.0.0nb2 [micha 2022-07-27]
+	Updated devel/php-composer to 2.2.17 [tpaul 2022-07-27]
