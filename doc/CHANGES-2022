@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3570 2022/07/27 18:35:40 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3571 2022/07/27 18:38:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5343,3 +5343,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated editors/vim-xaw to 8.2.5172 [khorben 2022-07-27]
 	Updated geography/gdal-lib to 3.5.1nb1 [wiz 2022-07-27]
 	Updated devel/libmatchbox to 1.9nb11 [wiz 2022-07-27]
+	Updated graphics/imlib to 1.9.15nb22 [wiz 2022-07-27]
