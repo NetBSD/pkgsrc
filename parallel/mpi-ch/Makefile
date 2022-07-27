@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2022/07/27 10:45:47 gdt Exp $
+# $NetBSD: Makefile,v 1.98 2022/07/27 10:57:27 gdt Exp $
 
 DISTNAME=	mpich-3.2.1
 PKGREVISION=	9
@@ -47,9 +47,9 @@ BUILDLINK_TRANSFORM+=	rm:-lrt
 
 # These contain strings with build info, for display with the "-info"
 # argument.
-CHECK_WRKREF_SKIP+=	/usr/pkg/bin/mpiexec
-CHECK_WRKREF_SKIP+=	/usr/pkg/bin/mpiexec.hydra
-CHECK_WRKREF_SKIP+=	/usr/pkg/bin/mpirun
+CHECK_WRKREF_SKIP+=	bin/mpiexec
+CHECK_WRKREF_SKIP+=	bin/mpiexec.hydra
+CHECK_WRKREF_SKIP+=	bin/mpirun
 
 .include "options.mk"
 
