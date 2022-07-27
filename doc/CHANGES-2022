@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3576 2022/07/27 18:56:52 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3577 2022/07/27 19:06:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5349,3 +5349,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated multimedia/ming to 0.4.8nb6 [wiz 2022-07-27]
 	Updated x11/fox to 1.6.57nb2 [wiz 2022-07-27]
 	Updated www/webalizer to 2.23.8nb2 [wiz 2022-07-27]
+	Updated devel/py-game to 1.9.6nb2 [wiz 2022-07-27]
