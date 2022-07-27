@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.11 2010/04/09 13:35:42 obache Exp $
+$NetBSD: patch-ac,v 1.12 2022/07/27 18:42:42 wiz Exp $
 
 --- configure.orig	2009-12-27 15:24:34.000000000 +0000
 +++ configure
@@ -58,3 +58,62 @@ $NetBSD: patch-ac,v 1.11 2010/04/09 13:35:42 obache Exp $
  
  
  
+@@ -8794,13 +8823,13 @@ fi
+ syspnglib_ok=no
+ syspnginc_ok=no
+ if test x$enable_localpng != xyes; then
+-  { echo "$as_me:$LINENO: checking for png_read_info in -lpng" >&5
+-echo $ECHO_N "checking for png_read_info in -lpng... $ECHO_C" >&6; }
++  { echo "$as_me:$LINENO: checking for png_read_info in -lpng16" >&5
++echo $ECHO_N "checking for png_read_info in -lpng16... $ECHO_C" >&6; }
+ if test "${ac_cv_lib_png_png_read_info+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lpng  $LIBS"
++LIBS="-lpng16  $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
+@@ -9161,19 +9190,19 @@ echo "$as_me: WARNING: Cannot find syste
+ else
+     PNGINC=""
+     PNG=""
+-    IMAGELIBS="-lpng $IMAGELIBS"
+-    STATICIMAGELIBS="-lpng $STATICIMAGELIBS"
++    IMAGELIBS="-lpng16 $IMAGELIBS"
++    STATICIMAGELIBS="-lpng16 $STATICIMAGELIBS"
+     cat >>confdefs.h <<\_ACEOF
+ #define HAVE_LIBPNG 1
+ _ACEOF
+ 
+-    { echo "$as_me:$LINENO: checking for png_get_valid in -lpng" >&5
+-echo $ECHO_N "checking for png_get_valid in -lpng... $ECHO_C" >&6; }
++    { echo "$as_me:$LINENO: checking for png_get_valid in -lpng16" >&5
++echo $ECHO_N "checking for png_get_valid in -lpng16... $ECHO_C" >&6; }
+ if test "${ac_cv_lib_png_png_get_valid+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lpng  $LIBS"
++LIBS="-lpng16  $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
+@@ -9235,13 +9264,13 @@ _ACEOF
+ 
+ fi
+ 
+-    { echo "$as_me:$LINENO: checking for png_set_tRNS_to_alpha in -lpng" >&5
+-echo $ECHO_N "checking for png_set_tRNS_to_alpha in -lpng... $ECHO_C" >&6; }
++    { echo "$as_me:$LINENO: checking for png_set_tRNS_to_alpha in -lpng16" >&5
++echo $ECHO_N "checking for png_set_tRNS_to_alpha in -lpng16... $ECHO_C" >&6; }
+ if test "${ac_cv_lib_png_png_set_tRNS_to_alpha+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lpng  $LIBS"
++LIBS="-lpng16  $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
