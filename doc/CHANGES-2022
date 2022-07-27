@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3562 2022/07/27 15:13:47 khorben Exp $
+$NetBSD: CHANGES-2022,v 1.3563 2022/07/27 15:14:00 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5335,3 +5335,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/coreutils to 9.1nb1 [ryoon 2022-07-27]
 	Updated misc/gnuls to 9.1 [ryoon 2022-07-27]
 	Updated editors/vim-share to 8.2.5172nb1 [khorben 2022-07-27]
+	Updated editors/vim to 8.2.5172 [khorben 2022-07-27]
