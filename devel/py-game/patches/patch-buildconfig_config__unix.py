@@ -1,4 +1,4 @@
-$NetBSD: patch-buildconfig_config__unix.py,v 1.2 2020/06/22 11:33:41 ryoon Exp $
+$NetBSD: patch-buildconfig_config__unix.py,v 1.3 2022/07/27 19:05:58 wiz Exp $
 
 Detect X11R6 or X11R7; avoid localbase overriding search.
 Use correct libpng.
@@ -27,7 +27,7 @@ Disable portmidi and porttime; porttime is a part of portmidi.
          ]
      DEPS.extend([
 -        Dependency('PNG', 'png.h', 'libpng', ['png']),
-+        Dependency('PNG', 'png.h', 'libpng16', ['png']),
++        Dependency('PNG', 'png.h', 'libpng16', ['png16']),
          Dependency('JPEG', 'jpeglib.h', 'libjpeg', ['jpeg']),
          Dependency('SCRAP', '', 'libX11', ['X11']),
          #Dependency('GFX', 'SDL_gfxPrimitives.h', 'libSDL_gfx.so', ['SDL_gfx']),
