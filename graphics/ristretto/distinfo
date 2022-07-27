@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2022/01/20 01:03:55 gutteridge Exp $
+$NetBSD: distinfo,v 1.14 2022/07/27 01:15:44 gutteridge Exp $
 
-BLAKE2s (ristretto-0.12.2.tar.bz2) = 1092687edeb62f61f5c8ea6d26103864eaf24e2a8835403d42d1a7d1420a628a
-SHA512 (ristretto-0.12.2.tar.bz2) = 39fc5868c3858e3667660b6411b3d39c19a2306be3d169e499aa11aff34a24e0ee8e745e15dfe301be48e1c6adce30129ed76270b025f5160cfa773467764379
-Size (ristretto-0.12.2.tar.bz2) = 612128 bytes
+BLAKE2s (ristretto-0.12.3.tar.bz2) = 244c36010f36febfac11df0456e1b6dfdb4f0cc5976b875d9458ace7eb9bd65f
+SHA512 (ristretto-0.12.3.tar.bz2) = c78ec55196fbf3bcb843b240faea1f7eb532bfdc519c125337ebb61d20ab8e01c818920c9ec1bdd97035f8b5ce9bcd2ffb338a91b8919ca48ab1010828a8d49d
+Size (ristretto-0.12.3.tar.bz2) = 616251 bytes
 SHA1 (patch-src_Makefile.in) = efe5b0923709f5b2087e9faec15f11fcd8106924
