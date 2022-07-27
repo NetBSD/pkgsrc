@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile.in,v 1.1 2022/07/27 19:41:57 wiz Exp $
+
+Fix unportable test(1) operator.
+
+--- Makefile.in.orig	2022-01-28 13:04:21.645056627 +0000
++++ Makefile.in
+@@ -1418,7 +1418,7 @@ define runsile =
+ 	export -n SILE_COVERAGE
+ 	if $(hastoc); then
+ 		$${hadtoc} || $(silepass)
+-		[ "$${pg}" == "$${pg0}" ] || $(silepass)
++		[ "$${pg}" = "$${pg0}" ] || $(silepass)
+ 	fi
+ endef
+ $(_BUILT_SUBDIRS): $(_SUBDIR_TELLS)
