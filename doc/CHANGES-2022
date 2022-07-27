@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3572 2022/07/27 18:42:50 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3573 2022/07/27 18:47:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5345,3 +5345,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/libmatchbox to 1.9nb11 [wiz 2022-07-27]
 	Updated graphics/imlib to 1.9.15nb22 [wiz 2022-07-27]
 	Updated x11/fltk to 1.1.10nb7 [wiz 2022-07-27]
+	Updated x11/fltk13 to 1.3.8nb1 [wiz 2022-07-27]
