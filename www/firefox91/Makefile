@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2022/06/14 09:17:19 nia Exp $
+# $NetBSD: Makefile,v 1.19.2.1 2022/07/27 07:18:16 spz Exp $
 
 FIREFOX_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
-MOZ_BRANCH=		91.10
+MOZ_BRANCH=		91.11
 MOZ_BRANCH_MINOR=	.0esr
 
 DISTNAME=	firefox-${FIREFOX_VER}.source
