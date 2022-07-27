@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3580 2022/07/27 19:14:41 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3581 2022/07/27 20:19:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5353,3 +5353,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added converters/py-fastbencode version 0.0.9 [rhialto 2022-07-27]
 	Updated graphics/gd to 2.3.3nb4 [wiz 2022-07-27]
 	Updated graphics/p5-GD to 2.76 [wiz 2022-07-27]
+	Updated x11/xf86-video-nv to 2.1.22 [wiz 2022-07-27]
