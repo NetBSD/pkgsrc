@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.23 2022/05/08 21:24:12 khorben Exp $
+$NetBSD: distinfo,v 1.24 2022/07/27 01:53:40 khorben Exp $
 
-BLAKE2s (prosody-0.12.0.tar.gz) = 5060b27c828174f3b9a1cca350b584a5767b93d48f8373d61cf1d63e37b7000c
-SHA512 (prosody-0.12.0.tar.gz) = b7144a413a5bc72b1e677504d5ced6583c7399c8334b39b4c9157da60f951300832b34a1d47703a0b217caa4f1d3a0f52ab59cef08b27c6b43e876e1dffca3ce
-Size (prosody-0.12.0.tar.gz) = 610330 bytes
+BLAKE2s (prosody-0.12.1.tar.gz) = e7dae67c0a7c9e6b28358495af6b593c20851b1747f3c39391bd65b1020ab24f
+SHA512 (prosody-0.12.1.tar.gz) = 705d2bcd38ffb19e90dab19992711aebf3d81f7bca7f9791ae5149510d465ec837ddf26a8c547eff2f2d131e5a694ddc3d0aac0b8921df65808192ae00527a85
+Size (prosody-0.12.1.tar.gz) = 611898 bytes
 SHA1 (patch-makefile) = 8971d0a898ca7bf38f0d79322e2d0c381334c37c
 SHA1 (patch-prosody.cfg.lua.dist) = a1e4636abe4f2caa82d13ed8564b5b785dc8595a
 SHA1 (patch-util-src_pposix.c) = 519fd2da1931c1b35a0b028ea9303b3c0f5b6a6a
