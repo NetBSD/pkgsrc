@@ -1,4 +1,6 @@
-$NetBSD: patch-configure.in,v 1.1 2018/11/13 10:18:26 markd Exp $
+$NetBSD: patch-configure.in,v 1.2 2022/07/27 18:49:45 wiz Exp $
+
+First chunk:
 
 From ef3719d39e8bb7e96c6ec57d60261f1516353460 Mon Sep 17 00:00:00 2001
 From: Lars Wendler <polynomial-c@gentoo.org>
@@ -7,6 +9,9 @@ Subject: [PATCH] Use pkg-config to find freetype
 
 As of freetype-2.9.1 the freetype-config script has been deprecated and
 is no longer shipped by default.
+
+Second chunk:
+Fix png library name.
 
 --- configure.in.orig	2017-04-07 08:12:56.000000000 +0000
 +++ configure.in
@@ -39,3 +44,12 @@ is no longer shipped by default.
  fi
  
  dnl Check for the ungif or gif (new or old) libraries
+@@ -297,7 +279,7 @@ AC_CHECK_HEADERS([gif_lib.h], GIFINC="tr
+ 
+ dnl Check for the png library
+ dnl Solaris needs -lm on the linker line, and other platforms aren't bothered having it there. :)
+-AC_CHECK_LIB(png, png_read_image, PNGLIB="-lpng", PNGLIB="", "-lm")
++AC_CHECK_LIB(png16, png_read_image, PNGLIB="-lpng16", PNGLIB="", "-lm")
+ 
+ dnl Check for the zlib library
+ AC_CHECK_LIB(z, compress2,
