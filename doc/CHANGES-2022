@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3557 2022/07/27 08:42:39 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3558 2022/07/27 09:42:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5329,3 +5329,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-protobuf to 4.21.4 [adam 2022-07-27]
 	Updated games/wesnoth to 1.16.5 [adam 2022-07-27]
 	Updated lang/nodejs to 18.7.0 [adam 2022-07-27]
+	Updated audio/musicpd to 0.23.8nb4 [wiz 2022-07-27]
