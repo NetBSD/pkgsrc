@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2022Q2,v 1.1.2.3 2022/07/23 19:59:35 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2022Q2,v 1.1.2.4 2022/07/27 19:06:56 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2022Q2 branch:
 
@@ -75,4 +75,24 @@ www/ruby-actioncable70: security update
 www/ruby-actionpack70: security update
 www/ruby-actionview70: security update
 www/ruby-rails70: security update
+
+Pullup ticket #6649 - requested by khorben
+chat/prosody: integration fix
+
+Pullup ticket #6657 - requested by taca
+devel/git: security update
+devel/git-base: security update
+devel/git-docs: security update
+www/gitweb: security update
+
+Pullup ticket #6658 - requested by nia
+www/firefox91: security update
+www/firefox91-l10n: dependency update
+
+Pullup ticket #6659 - requested by khorben
+chat/libpurple: security update
+chat/finch: security update
+chat/pidgin: security update
+chat/pidgin-sametime: security update
+chat/pidgin-silc: security update
 
