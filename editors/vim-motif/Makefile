@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.41 2021/12/01 21:36:59 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2022/07/27 15:13:10 khorben Exp $
 
 PKGNAME=		vim-motif-${VIM_VERSION}.${VIM_PATCHLEVEL}
-PKGREVISION=		1
 
 COMMENT=		Vim editor (vi clone) with X11 Motif GUI
 
