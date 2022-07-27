@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3578 2022/07/27 19:09:50 rhialto Exp $
+$NetBSD: CHANGES-2022,v 1.3579 2022/07/27 19:10:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5351,3 +5351,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/webalizer to 2.23.8nb2 [wiz 2022-07-27]
 	Updated devel/py-game to 1.9.6nb2 [wiz 2022-07-27]
 	Added converters/py-fastbencode version 0.0.9 [rhialto 2022-07-27]
+	Updated graphics/gd to 2.3.3nb4 [wiz 2022-07-27]
