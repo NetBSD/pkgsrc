@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.253 2022/07/23 08:11:04 wiz Exp $
+# $NetBSD: Makefile,v 1.254 2022/07/27 12:29:08 micha Exp $
 
 DISTNAME=	graphviz-5.0.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITLAB:=api/v4/projects/4207231/packages/generic/graphviz-releases/${PKGVERSION_NOREV}/}
 
@@ -14,36 +14,36 @@ CHECK_FILES_SKIP+=		${PREFIX}/lib/graphviz/config6
 CHECK_PORTABILITY_SKIP+=	windows/*
 
 USE_LANGUAGES=		c99 c++11
-USE_TOOLS+=		automake autoreconf makeinfo bison flex gmake groff pkg-config ps2pdf
+USE_TOOLS+=		automake autoreconf makeinfo bison flex gmake groff pkg-config
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_STRICT=	no # has sub-configures
 CONFIGURE_ARGS+=	--disable-d
 CONFIGURE_ARGS+=	--disable-debug
 CONFIGURE_ARGS+=	--disable-go
+CONFIGURE_ARGS+=	--disable-guile
 CONFIGURE_ARGS+=	--disable-io
 CONFIGURE_ARGS+=	--disable-java
 CONFIGURE_ARGS+=	--disable-javascript
+CONFIGURE_ARGS+=	--disable-man-pdfs
+CONFIGURE_ARGS+=	--disable-ocaml
 CONFIGURE_ARGS+=	--disable-php
 CONFIGURE_ARGS+=	--disable-python
 CONFIGURE_ARGS+=	--disable-python3
-CONFIGURE_ARGS+=	--disable-guile
-CONFIGURE_ARGS+=	--disable-ocaml
 CONFIGURE_ARGS+=	--disable-r
 CONFIGURE_ARGS+=	--disable-ruby
 CONFIGURE_ARGS+=	--disable-sharp
 CONFIGURE_ARGS+=	--enable-ltdl
-CONFIGURE_ARGS+=	--enable-man-pdfs
 CONFIGURE_ARGS+=	--enable-rpath
 CONFIGURE_ARGS+=	--without-ann
 CONFIGURE_ARGS+=	--without-devil
-CONFIGURE_ARGS+=	--without-glut
-CONFIGURE_ARGS+=	--without-lasi
 CONFIGURE_ARGS+=	--without-gdiplus
 CONFIGURE_ARGS+=	--without-glade
 CONFIGURE_ARGS+=	--without-glitz
+CONFIGURE_ARGS+=	--without-glut
 CONFIGURE_ARGS+=	--without-gtkgl
 CONFIGURE_ARGS+=	--without-gtkglext
+CONFIGURE_ARGS+=	--without-lasi
 CONFIGURE_ARGS+=	--without-ming
 CONFIGURE_ARGS+=	--without-qt
 CONFIGURE_ARGS+=	--without-smyrna
