@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2020/08/17 20:17:23 leot Exp $
-#
+# $NetBSD: Makefile,v 1.34 2022/07/27 18:35:30 wiz Exp $
 
 DISTNAME=	libmatchbox-1.9
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	devel
 MASTER_SITES=	http://downloads.yoctoproject.org/releases/matchbox/libmatchbox/1.9/
 
@@ -15,10 +14,15 @@ USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
 
+SUBST_CLASSES+=		pc
+SUBST_SED.pc+=		-e "s/libpng12/libpng16/"
+SUBST_FILES.pc+=	configure
+SUBST_STAGE.pc=		pre-configure
+SUBST_MESSAGE.pc=	Fix png library name.
+
 .include "../../graphics/png/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
