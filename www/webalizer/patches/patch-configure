@@ -1,0 +1,32 @@
+$NetBSD: patch-configure,v 1.1 2022/07/27 18:56:43 wiz Exp $
+
+Fix png library name.
+
+--- configure.orig	2010-10-09 06:19:22.000000000 +0000
++++ configure
+@@ -4695,13 +4695,13 @@ echo "$as_me: error: zlib.h header not f
+ fi
+ 
+ 
+-{ echo "$as_me:$LINENO: checking for main in -lpng" >&5
+-echo $ECHO_N "checking for main in -lpng... $ECHO_C" >&6; }
++{ echo "$as_me:$LINENO: checking for main in -lpng16" >&5
++echo $ECHO_N "checking for main in -lpng16... $ECHO_C" >&6; }
+ if test "${ac_cv_lib_png_main+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lpng  $LIBS"
++LIBS="-lpng16  $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
+@@ -4751,7 +4751,7 @@ fi
+ { echo "$as_me:$LINENO: result: $ac_cv_lib_png_main" >&5
+ echo "${ECHO_T}$ac_cv_lib_png_main" >&6; }
+ if test $ac_cv_lib_png_main = yes; then
+-  LIBPNG="yes"; LIBS="-lpng ${LIBS}"
++  LIBPNG="yes"; LIBS="-lpng16 ${LIBS}"
+ else
+   LIBPNG="no"
+ fi

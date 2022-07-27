@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.20 2021/10/26 11:31:13 nia Exp $
+$NetBSD: distinfo,v 1.21 2022/07/27 18:56:42 wiz Exp $
 
 BLAKE2s (webalizer-2.23-08-src.tar.bz2) = 8f97b531ba3c0e1fb811c5864a52eebd05616ffc04c1f07b7bedb81c02411d49
 SHA512 (webalizer-2.23-08-src.tar.bz2) = 23fe6e3ef1c85aa527ffafef16c31c13ad8e1f9feb774557c07a5c8fd6c67986b98180ef16d6cebe62d59c5f7ca214b8292e94ce8f195fa0541de9c5438fb9bd
@@ -10,4 +10,5 @@ SHA1 (patch-ba) = eadf9f9d22c89d441debd90b993846529fc872fd
 SHA1 (patch-bb) = d8a5f6f60f53d6de8fc24d3b1844a052be0ad69a
 SHA1 (patch-bc) = 98d263cfb585477798f620a6f3690680ce2759b6
 SHA1 (patch-bd) = 21f074725a85de5d9d865b84cc88dc04919226d4
+SHA1 (patch-configure) = 8b4aaca2a8ec704313b9b4fed37b8479c85cf854
 SHA1 (patch-preserve.c) = 5fc85459af088b773073f161a29160a2cff73ba8
