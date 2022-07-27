@@ -1,6 +1,7 @@
-$NetBSD: patch-configure.ac,v 1.7 2022/05/11 09:23:48 jperkin Exp $
+$NetBSD: patch-configure.ac,v 1.8 2022/07/27 19:53:16 wiz Exp $
 
 Fix pkg-config'ing for lua.
+Fix png library name.
 
 --- configure.ac.orig	2022-04-18 22:10:15.000000000 +0000
 +++ configure.ac
@@ -37,3 +38,12 @@ Fix pkg-config'ing for lua.
        [ have_lua=yes ],
        [
        AC_MSG_WARN([${LUA_PKG_ERRORS}, trying lua >= 5.1 instead])
+@@ -2843,7 +2843,7 @@ AS_IF([test "${enable_png}" != "no"], [
+ AC_CHECK_HEADERS(png.h, [
+   VLC_SAVE_FLAGS
+   LDFLAGS="${LDFLAGS} -lz $LIBM"
+-  AC_CHECK_LIB(png, png_set_alpha_mode, [
++  AC_CHECK_LIB(png16, png_set_alpha_mode, [
+     VLC_ADD_PLUGIN([png])
+   ], [], [-lz $LIBM])
+   VLC_RESTORE_FLAGS
