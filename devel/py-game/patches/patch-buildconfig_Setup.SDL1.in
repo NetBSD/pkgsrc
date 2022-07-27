@@ -1,8 +1,8 @@
-$NetBSD: patch-buildconfig_Setup.SDL1.in,v 1.1 2019/06/06 21:46:12 adam Exp $
+$NetBSD: patch-buildconfig_Setup.SDL1.in,v 1.2 2022/07/27 19:05:58 wiz Exp $
 
 Disable portmidi/porttime
 
---- buildconfig/Setup.SDL1.in.orig	2019-06-06 17:51:10.000000000 +0000
+--- buildconfig/Setup.SDL1.in.orig	2019-04-25 06:14:17.000000000 +0000
 +++ buildconfig/Setup.SDL1.in
 @@ -7,15 +7,13 @@
  
@@ -13,7 +13,8 @@ Disable portmidi/porttime
  FONT = -lSDL_ttf
  IMAGE = -lSDL_image
  MIXER = -lSDL_mixer
- PNG = -lpng
+-PNG = -lpng
++PNG = -lpng16
  JPEG = -ljpeg
  SCRAP = -lX11
 -PORTMIDI = -lportmidi

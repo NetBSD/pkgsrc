@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 10:18:29 nia Exp $
+$NetBSD: distinfo,v 1.14 2022/07/27 19:05:58 wiz Exp $
 
 BLAKE2s (pygame-1.9.6.tar.gz) = c0d6c76daada468ffda34e8610171057045782f63186f075d9354cbec94389f1
 SHA512 (pygame-1.9.6.tar.gz) = d923c554203a7c35e37921658cb4c5bf50215ab0ff4d2b869a1ee6b2e2ca31d66ec4bbde4287f5a777838ffe932cd15b993cb0224b86e43d684de61c35acbcd0
 Size (pygame-1.9.6.tar.gz) = 3223131 bytes
-SHA1 (patch-buildconfig_Setup.SDL1.in) = 2f4b60f933952b67092fabfe4c84d7525b9d0338
+SHA1 (patch-buildconfig_Setup.SDL1.in) = 185fe6e5d61fdbaab8884584c34d3925d8a73828
 SHA1 (patch-buildconfig_Setup.SDL2.in) = 9b33e714df4319622aac66ced2b3ce36f879dc8c
-SHA1 (patch-buildconfig_config__darwin.py) = c1e8ac90619fce59e250a33175a546cd235c0fe1
-SHA1 (patch-buildconfig_config__unix.py) = 1072834d9eb38170a4bc650c9dea0992f3e0aba8
+SHA1 (patch-buildconfig_config__darwin.py) = 181c99f91473e6e6a12ddb345858cecfe6edc6bf
+SHA1 (patch-buildconfig_config__unix.py) = 2f47293c343bbfdea048f75166082139fcbf94fb
