@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.22 2021/10/26 11:01:11 nia Exp $
+$NetBSD: distinfo,v 1.23 2022/07/27 18:49:44 wiz Exp $
 
 BLAKE2s (ming-0_4_8.tar.gz) = 37d0936b989b05c8e73d628dc751634194843da4aebfb89ee08fd31eebf81a11
 SHA512 (ming-0_4_8.tar.gz) = e395acde9119ad32f4cedd500bcceee70bdd563222a41dda899cc318d5e34eb580abc38ac39c6dec7821913a0a70d2f953fc81f52255b623e34f7c3aaafbc9c0
 Size (ming-0_4_8.tar.gz) = 14908459 bytes
-SHA1 (patch-configure.in) = 9c231dc2e06d12e05b8e82d48f1df2aed33de697
+SHA1 (patch-configure.in) = 77faa06d09168df430d68f4de7a811202232999e
 SHA1 (patch-php__ext_ming.c) = d84ed8b586b2e357481bb98b403fc40270432de4
 SHA1 (patch-util_parser.c) = f41454623af76bc893d3040513dcd900f5b76a32
