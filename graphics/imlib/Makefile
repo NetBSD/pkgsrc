@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.129 2021/09/21 14:27:05 ryoon Exp $
+# $NetBSD: Makefile,v 1.130 2022/07/27 18:38:48 wiz Exp $
 
 DISTNAME=	imlib-1.9.15
-PKGREVISION=	21
+PKGREVISION=	22
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/imlib/1.9/}
 EXTRACT_SUFX=	.tar.bz2
@@ -19,7 +19,7 @@ PKGCONFIG_OVERRIDE=	imlib.pc.in
 UNLIMIT_RESOURCES=	datasize
 
 CPPFLAGS+=		-DENABLE_NLS
-CONFIGURE_ENV+=		ac_cv_path_CONVERT_PROG="${LOCALBASE}/bin/convert"
+CONFIGURE_ENV+=		ac_cv_path_CONVERT_PROG="${PREFIX}/bin/convert"
 CONFIGURE_ENV+=		X_LDFLAGS=${X_LDFLAGS:Q}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--disable-shm
