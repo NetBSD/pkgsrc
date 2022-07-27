@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.133 2022/07/14 23:46:21 dholland Exp $
+# $NetBSD: Makefile,v 1.134 2022/07/27 19:10:03 wiz Exp $
 
 DISTNAME=	libgd-2.3.3
 PKGNAME=	${DISTNAME:S/libgd/gd/}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libgd/}
 GITHUB_PROJECT=	libgd
@@ -29,6 +29,7 @@ CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
 REPLACE_PERL+=		src/bdftogd
 PTHREAD_AUTO_VARS=	yes
 TEST_TARGET=		check
+PKGCONFIG_OVERRIDE+=	config/gdlib.pc.in
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
