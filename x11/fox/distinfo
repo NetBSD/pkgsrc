@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.26 2022/04/25 15:17:21 tnn Exp $
+$NetBSD: distinfo,v 1.27 2022/07/27 18:53:29 wiz Exp $
 
 BLAKE2s (fox-1.6.57.tar.gz) = 6ecaf9f17afdcec1d5e4797d36178600913b217688954bb5f720057e8921b8b9
 SHA512 (fox-1.6.57.tar.gz) = e7b91054a9ea674818803415284cb61572935d22466e446cb37ef68344e2684e8acd567f7c8a6912f939dcbcc37455119ad6a01ac30513f460d0b3937b7e6087
 Size (fox-1.6.57.tar.gz) = 4284018 bytes
-SHA1 (patch-aa) = 06444b562a32d3471dd8d65f5af2c49e11b3e491
+SHA1 (patch-aa) = bb2702cec4df2a8f173b0ee0ddad6ac38f733eb5
 SHA1 (patch-src_FXGUISignal.cpp) = 389f3a8ee75942cb6c52eedd0c9d429db4e521b1

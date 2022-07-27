@@ -1,8 +1,11 @@
-$NetBSD: patch-aa,v 1.9 2015/02/15 14:04:59 ryoon Exp $
+$NetBSD: patch-aa,v 1.10 2022/07/27 18:53:29 wiz Exp $
 
---- configure.orig	2014-05-14 04:33:43.000000000 +0000
+pthread changes: ?
+Fix png library name.
+
+--- configure.orig	2018-04-04 03:47:18.000000000 +0000
 +++ configure
-@@ -17640,7 +17640,7 @@ if ${ac_cv_lib_pthread_pthread_exit+:} f
+@@ -18493,7 +18493,7 @@ if ${ac_cv_lib_pthread_pthread_exit+:} f
    $as_echo_n "(cached) " >&6
  else
    ac_check_lib_save_LIBS=$LIBS
@@ -11,7 +14,7 @@ $NetBSD: patch-aa,v 1.9 2015/02/15 14:04:59 ryoon Exp $
  cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  
-@@ -17675,7 +17675,7 @@ if test "x$ac_cv_lib_pthread_pthread_exi
+@@ -18528,7 +18528,7 @@ if test "x$ac_cv_lib_pthread_pthread_exi
  #define HAVE_LIBPTHREAD 1
  _ACEOF
  
@@ -20,3 +23,12 @@ $NetBSD: patch-aa,v 1.9 2015/02/15 14:04:59 ryoon Exp $
  
  fi
  
+@@ -18730,7 +18730,7 @@ if test "x$ac_cv_header_png_h" = xyes; t
+   cat >>confdefs.h <<_ACEOF
+ #define HAVE_PNG_H 1
+ _ACEOF
+- CXXFLAGS="${CXXFLAGS} -DHAVE_PNG_H=1"; LIBS="${LIBS} ${LIBPNG:=-lpng}"
++ CXXFLAGS="${CXXFLAGS} -DHAVE_PNG_H=1"; LIBS="${LIBS} ${LIBPNG:=-lpng16}"
+ fi
+ 
+ done
