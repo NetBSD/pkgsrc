@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.73 2021/02/20 14:37:23 bsiegert Exp $
+# $NetBSD: Makefile,v 1.74 2022/07/27 18:56:42 wiz Exp $
 
 DISTNAME=	webalizer-2.23-08-src
 PKGNAME=	webalizer-2.23.8
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	ftp://ftp.mrunix.net/pub/webalizer/
 EXTRACT_SUFX=	.tar.bz2
@@ -53,5 +53,6 @@ post-install:
 BUILDLINK_TRANSFORM+=	l:db:${BDB_TYPE}
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/gd/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
 .include "../../mk/bdb.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
