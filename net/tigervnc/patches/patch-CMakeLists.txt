@@ -1,4 +1,4 @@
-$NetBSD: patch-CMakeLists.txt,v 1.5 2021/11/16 15:45:01 wiz Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.6 2022/07/28 08:14:02 wiz Exp $
 
 --- CMakeLists.txt.orig	2021-11-09 07:51:28.000000000 +0000
 +++ CMakeLists.txt
@@ -6,7 +6,7 @@ $NetBSD: patch-CMakeLists.txt,v 1.5 2021/11/16 15:45:01 wiz Exp $
        set(FLTK_LIBRARIES ${FLTK_LIBRARIES} ${X11_Xrender_LIB})
      endif()
    endif()
-+  set(FLTK_LIBRARIES ${FLTK_LIBRARIES} -lpng)
++  set(FLTK_LIBRARIES ${FLTK_LIBRARIES} -lpng16)
  endif()
  
  # Check for GNUTLS library
