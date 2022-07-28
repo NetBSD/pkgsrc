@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3583 2022/07/28 06:56:55 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3584 2022/07/28 18:45:14 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5357,3 +5357,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated pkgtools/pkglint to 22.2.4 [rillig 2022-07-28]
 	Updated devel/py-canonicaljson to 1.6.2 [adam 2022-07-28]
 	Updated sysutils/py-setproctitle to 1.3.0 [adam 2022-07-28]
+	Updated devel/p5-Devel-CheckLib to 1.16nb1 [buildbox 2022-07-28]
