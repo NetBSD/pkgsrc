@@ -1,7 +1,4 @@
-@comment $NetBSD: PLIST.configure,v 1.1 2022/07/26 02:58:56 dbj Exp $
-libexec/wx-3.2/wx-config
-libexec/wx-3.2/wxrc
-libexec/wx-3.2/wxrc-3.2
+@comment $NetBSD: PLIST.configure,v 1.2 2022/07/28 05:25:22 dbj Exp $
 share/wx-3.2/aclocal/wxwin.m4
 share/wx-3.2/bakefile/presets/wx.bkl
 share/wx-3.2/bakefile/presets/wx_presets.py
