@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2022/07/26 02:58:56 dbj Exp $
+# $NetBSD: Makefile,v 1.3 2022/07/28 05:25:22 dbj Exp $
 
 DISTNAME=	wxWidgets-3.2.0
 PKGNAME=	${DISTNAME:S/wxWidgets/wxGTK32/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wxWidgets/}
 GITHUB_PROJECT=	wxWidgets
@@ -45,6 +45,7 @@ PKG_SUPPORTED_OPTIONS=	cmake
 .if !empty(PKG_OPTIONS:Mcmake)
 USE_CMAKE=		yes
 CMAKE_ARGS+=		-DCMAKE_DISABLE_PRECOMPILE_HEADERS:BOOL=ON
+CMAKE_ARGS+=		-DCMAKE_INSTALL_BINDIR:STRING=libexec/wx-3.2
 PLIST_SRC+=		PLIST.cmake
 
 . if ${OPSYS} != "Darwin"
@@ -89,23 +90,14 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/docs/lgpl.txt ${DESTDIR}${PREFIX}/${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/docs/changes.txt ${DESTDIR}${PREFIX}/${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/docs/readme.txt ${DESTDIR}${PREFIX}/${DOCDIR}
-.if defined(USE_CMAKE)
-# Installation rules in cmake are not using DESTDIR properly, do it manually
-# https://github.com/wxWidgets/wxWidgets/issues/22647
-# CMake Error: failed to create symbolic link '/usr/pkg/bin/wx-config': Permission denied
-# CMake Error: failed to create symbolic link '/usr/pkg/bin/wxrc': Permission denied
-	${LN} -sf ../${WX_CONFIG} ${DESTDIR}${PREFIX}/bin/wx-config-3.2
-.endif
-.if defined(GNU_CONFIGURE)
-	${LN} -sf ../libexec/wx-3.2/wxrc-3.2 ${DESTDIR}${PREFIX}/bin/wxrc-3.2
+	${LN} -sf ../libexec/wx-3.2/wxrc ${DESTDIR}${PREFIX}/bin/wxrc-3.2
 	${LN} -sf ../libexec/wx-3.2/wx-config ${DESTDIR}${PREFIX}/bin/wx-config-3.2
-.endif
 
 .if defined(USE_CMAKE)
 SUBST_CLASSES+=		unwrap
 SUBST_STAGE.unwrap=	post-build
 SUBST_FILES.unwrap=	${WX_CONFIG}
-SUBST_SED.unwrap=	-e "s,EGREP=.*,EGREP=${EGREP},"
+SUBST_SED.unwrap=	-e 's,EGREP=.*,EGREP=${EGREP},'
 SUBST_SED.unwrap+=	-e 's,echo.*/${CC}",echo "${CC}",'
 SUBST_SED.unwrap+=	-e 's,echo.*/${CXX}",echo "${CXX}",'
 SUBST_SED.unwrap+=	-e 's,echo.*/${CXX} -o",echo "${CXX} -o",'
