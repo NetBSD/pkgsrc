@@ -136,7 +136,31 @@ func (s *MkCondSimplifier) simplifyMatch(varuse *MkVarUse, fromEmpty bool, neg b
 		return
 	}
 
-	if !(fromEmpty && positive && !exact && vartype != nil) {
+	if !fromEmpty {
+		return // Already using the simple form.
+	}
+
+	// Only simplify the form ':M' for now, but not ':N'.
+	// The form ':M' is much more popular than ':N'.
+	if !positive {
+		return
+	}
+
+	// For now, only suggest the replacement if the pattern
+	// actually contains wildcards. This mainly affects
+	// PKG_OPTIONS in the second part of options.mk files.
+	// There are many of these, and the pkgsrc developers got
+	// used to using '!empty' for them.
+	if exact {
+		return
+	}
+
+	// TODO: Even if the variable type is not known,
+	//  the RedundantScope may know that the variable is always
+	//  defined at this point, so that the variable expression
+	//  does not need the modifier ':U'.
+	//  Example: doc/guide/Makefile.common, _GUIDE_OUTPUTS.
+	if vartype == nil {
 		return
 	}
 
