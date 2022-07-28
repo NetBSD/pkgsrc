@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3586 2022/07/28 22:17:22 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.3587 2022/07/28 22:17:40 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5360,3 +5360,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/p5-Devel-CheckLib to 1.16nb1 [buildbox 2022-07-28]
 	Updated www/webkit-gtk to 2.36.5 [leot 2022-07-28]
 	Updated www/motyl to 1.0.3 [fcambus 2022-07-28]
+	Updated www/logswan to 2.1.13 [fcambus 2022-07-28]
