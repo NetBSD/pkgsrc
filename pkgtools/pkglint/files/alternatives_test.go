@@ -72,7 +72,7 @@ func (s *Suite) Test_AlternativesChecker_Check__PLIST(c *check.C) {
 		"ERROR: ALTERNATIVES:6: Alternative implementation \"${PREFIX}/bin/firefox\" must appear in the PLIST.",
 		"ERROR: ALTERNATIVES:6: Alternative implementation \"${PREFIX}/bin/firefox\" must be an absolute path.",
 		"ERROR: ALTERNATIVES:7: Alternative wrapper \"highscores\" "+
-			"must be in \"bin\", \"@PKGMANDIR@\" or \"sbin\".",
+			"must be in \"bin\" or \"sbin\".",
 		"ERROR: ALTERNATIVES:7: Alternative implementation \"@VARBASE@/game/scores\" "+
 			"must appear in the PLIST as \"${VARBASE}/game/scores\".")
 
@@ -120,7 +120,7 @@ func (s *Suite) Test_AlternativesChecker_checkLine__absolute(c *check.C) {
 
 	t.CheckOutputLines(
 		"ERROR: ~/ALTERNATIVES:1: Alternative wrapper \"relative\" "+
-			"must be in \"bin\", \"@PKGMANDIR@\" or \"sbin\".",
+			"must be in \"bin\" or \"sbin\".",
 		"ERROR: ~/ALTERNATIVES:2: Alternative wrapper \"/absolute\" "+
 			"must be relative to PREFIX.")
 }
@@ -160,11 +160,11 @@ func (s *Suite) Test_AlternativesChecker_checkLine__dir(c *check.C) {
 
 	t.CheckOutputLines(
 		"ERROR: ~/ALTERNATIVES:1: Alternative wrapper \"in/typo\" "+
-			"must be in \"bin\", \"@PKGMANDIR@\" or \"sbin\".",
+			"must be in \"bin\" or \"sbin\".",
 		"ERROR: ~/ALTERNATIVES:3: Alternative wrapper \"typo/program\" "+
-			"must be in \"bin\", \"@PKGMANDIR@\" or \"sbin\".",
+			"must be in \"bin\" or \"sbin\".",
 		"ERROR: ~/ALTERNATIVES:4: Alternative wrapper \"man/man1/program.1\" "+
-			"must be in \"bin\", \"@PKGMANDIR@\" or \"sbin\".")
+			"must be in \"bin\" or \"sbin\".")
 }
 
 func (s *Suite) Test_AlternativesChecker_checkAlternativeAbs(c *check.C) {
@@ -211,12 +211,9 @@ func (s *Suite) Test_AlternativesChecker_checkAlternativePlist__conditional(c *c
 			"must appear in the PLIST as \"bin/not-found\".")
 }
 
-// When a man page is mentioned in the ALTERNATIVES file, it must use the
-// PKGMANDIR variable. In the PLIST files though, there is some magic
-// in the pkgsrc infrastructure that maps man/ to ${PKGMANDIR}, which
-// leads to a bit less typing.
-//
-// Seen in graphics/py-blockdiag.
+// Manual pages must not be listed in the ALTERNATIVES file.
+// Instead, they are handled automatically based on the program in bin/ or
+// sbin/.
 func (s *Suite) Test_AlternativesChecker_checkAlternativePlist__PKGMANDIR(c *check.C) {
 	t := s.Init(c)
 
@@ -230,5 +227,13 @@ func (s *Suite) Test_AlternativesChecker_checkAlternativePlist__PKGMANDIR(c *che
 
 	G.Check(t.File("category/package"))
 
-	t.CheckOutputEmpty()
+	t.CheckOutputLines(
+		"ERROR: ~/category/package/ALTERNATIVES:1: "+
+			"Alternative wrapper \"@PKGMANDIR@/man1/blockdiag\" "+
+			"must be in \"bin\" or \"sbin\".",
+		"ERROR: ~/category/package/ALTERNATIVES:1: "+
+			"Alternative implementation "+
+			"\"@PREFIX@/@PKGMANDIR@/man1/blockdiag-@PYVERSSUFFIX@.1\" "+
+			"must appear in the PLIST as "+
+			"\"${PKGMANDIR}/man1/blockdiag-${PYVERSSUFFIX}.1\".")
 }
