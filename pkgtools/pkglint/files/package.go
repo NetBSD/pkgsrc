@@ -47,13 +47,12 @@ type Package struct {
 	bl3Data map[Buildlink3ID]*Buildlink3Data
 
 	// Remembers the Makefile fragments that have already been included.
-	// The key to the map is the filename relative to the package directory.
 	// Typical keys are "../../category/package/buildlink3.mk".
 	//
 	// TODO: Include files with multiple-inclusion guard only once.
 	//
 	// TODO: Include files without multiple-inclusion guard as often as needed.
-	included Once
+	included IncludedMap
 
 	// Does the package have any .includes?
 	//
@@ -110,7 +109,7 @@ func NewPackage(dir CurrPath) *Package {
 		vars:                  NewScope(),
 		bl3:                   make(map[PackagePath]*MkLine),
 		bl3Data:               make(map[Buildlink3ID]*Buildlink3Data),
-		included:              Once{},
+		included:              NewIncludedMap(),
 		conditionalIncludes:   make(map[PackagePath]*MkLine),
 		unconditionalIncludes: make(map[PackagePath]*MkLine),
 	}
@@ -295,8 +294,8 @@ func (pkg *Package) parse(mklines *MkLines, allLines *MkLines, includingFileForU
 	filename := mklines.lines.Filename
 	if mklines.lines.BaseName == "buildlink3.mk" {
 		builtin := filename.Dir().JoinNoClean("builtin.mk").CleanPath()
-		builtinRel := G.Pkgsrc.Relpath(pkg.dir, builtin)
-		if pkg.included.FirstTime(builtinRel.String()) && builtin.IsFile() {
+		builtinRel := NewPackagePath(G.Pkgsrc.Relpath(pkg.dir, builtin))
+		if pkg.included.FirstTime(builtinRel) && builtin.IsFile() {
 			builtinMkLines := LoadMk(builtin, pkg, MustSucceed|LogErrors)
 			pkg.parse(builtinMkLines, allLines, "", false)
 		}
@@ -377,13 +376,13 @@ func (pkg *Package) loadIncluded(mkline *MkLine, includingFile CurrPath) (includ
 	dirname, _ := includingFile.Split()
 	dirname = dirname.CleanPath()
 	fullIncluded := dirname.JoinNoClean(includedFile)
-	relIncludedFile := G.Pkgsrc.Relpath(pkg.dir, fullIncluded)
 
 	if !pkg.shouldDiveInto(includingFile, includedFile) {
 		return nil, true
 	}
 
-	if !pkg.included.FirstTime(relIncludedFile.String()) {
+	relIncludedFile := NewPackagePath(G.Pkgsrc.Relpath(pkg.dir, fullIncluded))
+	if !pkg.included.FirstTime(relIncludedFile) {
 		return nil, true
 	}
 
@@ -604,6 +603,7 @@ func (pkg *Package) check(filenames []CurrPath, mklines, allLines *MkLines) {
 	}
 
 	pkg.checkDistfilesInDistinfo(allLines)
+	pkg.checkPkgConfig(allLines)
 }
 
 func (pkg *Package) checkDescr(filenames []CurrPath, mklines *MkLines) {
@@ -653,6 +653,34 @@ func (pkg *Package) checkDistfilesInDistinfo(mklines *MkLines) {
 				distfile, mkline.Rel(pkg.File(pkg.DistinfoFile)))
 		}
 	}
+}
+
+func (pkg *Package) checkPkgConfig(allLines *MkLines) {
+	pkgConfig := allLines.Tools.ByName("pkg-config")
+	if pkgConfig == nil || !pkgConfig.UsableAtRunTime() {
+		return
+	}
+
+	for included := range pkg.included.m {
+		included := included.String()
+		if hasSuffix(included, "buildlink3.mk") ||
+			hasSuffix(included, "/mk/apache.mk") ||
+			hasSuffix(included, "/mk/apache.module.mk") {
+			return
+		}
+	}
+
+	mkline := allLines.mklines[0]
+	mkline.Warnf("The package uses the tool \"pkg-config\" " +
+		"but doesn't include any buildlink3 file.")
+	mkline.Explain(
+		"The pkgsrc tool wrappers replace the \"pkg-config\" command",
+		"with a pkg-config implementation that looks in the buildlink3",
+		"directory.",
+		"This directory is populated by including the dependencies via",
+		"the buildlink3.mk files.",
+		"Since this package does not include any such files, the buildlink3",
+		"directory will be empty and pkg-config will not find anything.")
 }
 
 func (pkg *Package) checkfilePackageMakefile(filename CurrPath, mklines *MkLines, allLines *MkLines) {
@@ -1800,6 +1828,34 @@ func NewPlistContent() PlistContent {
 		make(map[RelPath]*PlistLine),
 		make(map[RelPath]*PlistLine),
 		make(map[string]bool)}
+}
+
+// IncludedMap remembers which files the package Makefile has included,
+// including indirect files.
+// See Once.
+type IncludedMap struct {
+	m     map[PackagePath]struct{}
+	Trace bool
+}
+
+func NewIncludedMap() IncludedMap {
+	return IncludedMap{make(map[PackagePath]struct{}), false}
+}
+
+func (im *IncludedMap) FirstTime(p PackagePath) bool {
+	_, found := im.m[p]
+	if !found {
+		im.m[p] = struct{}{}
+		if im.Trace {
+			G.Logger.out.WriteLine("FirstTime: " + p.String())
+		}
+	}
+	return !found
+}
+
+func (im *IncludedMap) Seen(p PackagePath) bool {
+	_, seen := im.m[p]
+	return seen
 }
 
 // matchPkgname tests whether the string has the form of a package name that
