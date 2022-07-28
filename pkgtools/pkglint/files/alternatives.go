@@ -47,10 +47,9 @@ func (ck *AlternativesChecker) checkLine(line *Line, plistFiles map[RelPath]*Pli
 			line.Errorf("Alternative wrapper %q must not appear in the PLIST.", wrapper)
 		}
 		if !wrapper.HasPrefixText("bin/") &&
-			!wrapper.HasPrefixText("@PKGMANDIR@/") &&
 			!wrapper.HasPrefixText("sbin/") {
 			line.Errorf("Alternative wrapper %q must be in "+
-				"\"bin\", \"@PKGMANDIR@\" or \"sbin\".", wrapper)
+				"\"bin\" or \"sbin\".", wrapper)
 		}
 	}
 
@@ -93,9 +92,6 @@ func (ck *AlternativesChecker) checkAlternativePlist(line *Line, alternative str
 
 	rel := NewRelPathString(plistName)
 	if plistFiles[rel] != nil || pkg.vars.IsDefined("ALTERNATIVES_SRC") {
-		return
-	}
-	if plistFiles[rel.Replace("${PKGMANDIR}", "man")] != nil {
 		return
 	}
 
