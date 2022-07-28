@@ -444,7 +444,7 @@ func (ck *PlistChecker) checkPathShareIcons(pline *PlistLine) {
 
 	if hasPrefix(text, "share/icons/hicolor/") && pkg.Pkgpath != "graphics/hicolor-icon-theme" {
 		f := "../../graphics/hicolor-icon-theme/buildlink3.mk"
-		if !pkg.included.Seen(f) && ck.once.FirstTime("hicolor-icon-theme") {
+		if !pkg.included.Seen(NewPackagePathString(f)) && ck.once.FirstTime("hicolor-icon-theme") {
 			pline.Errorf("Packages that install hicolor icons must include %q in the Makefile.", f)
 		}
 	}
@@ -459,7 +459,7 @@ func (ck *PlistChecker) checkPathShareIcons(pline *PlistLine) {
 
 	if hasPrefix(text, "share/icons/gnome") && pkg.Pkgpath != "graphics/gnome-icon-theme" {
 		f := "../../graphics/gnome-icon-theme/buildlink3.mk"
-		if !pkg.included.Seen(f) {
+		if !pkg.included.Seen(NewPackagePathString(f)) {
 			pline.Errorf("The package Makefile must include %q.", f)
 			pline.Explain(
 				"Packages that install GNOME icons must maintain the icon theme",
