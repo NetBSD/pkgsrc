@@ -1,7 +1,12 @@
-@comment $NetBSD: PLIST,v 1.3 2020/11/29 18:09:51 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/07/28 06:52:58 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/setproctitle.so
+${PYSITELIB}/setproctitle/__init__.py
+${PYSITELIB}/setproctitle/__init__.pyc
+${PYSITELIB}/setproctitle/__init__.pyo
+${PYSITELIB}/setproctitle/_setproctitle.so
+${PYSITELIB}/setproctitle/py.typed
