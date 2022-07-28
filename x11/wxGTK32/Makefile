@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/07/28 05:25:22 dbj Exp $
+# $NetBSD: Makefile,v 1.4 2022/07/28 07:34:33 dbj Exp $
 
 DISTNAME=	wxWidgets-3.2.0
 PKGNAME=	${DISTNAME:S/wxWidgets/wxGTK32/}
@@ -43,19 +43,33 @@ PKG_SUPPORTED_OPTIONS=	cmake
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mcmake)
+
 USE_CMAKE=		yes
-CMAKE_ARGS+=		-DCMAKE_DISABLE_PRECOMPILE_HEADERS:BOOL=ON
-CMAKE_ARGS+=		-DCMAKE_INSTALL_BINDIR:STRING=libexec/wx-3.2
 PLIST_SRC+=		PLIST.cmake
 
-. if ${OPSYS} != "Darwin"
-WX_CONFIG=		lib/wx/config/gtk3-unicode-3.2
-. else
-WX_CONFIG=		lib/wx/config/osx_cocoa-unicode-3.2
-. endif
+CMAKE_ARGS+=		-DCMAKE_DISABLE_PRECOMPILE_HEADERS:BOOL=ON
+CMAKE_ARGS+=		-DCMAKE_INSTALL_BINDIR:PATH=libexec/wx-3.2
+# https://github.com/wxWidgets/wxWidgets/issues/22646
+CMAKE_ARGS.Linux+=	-DwxUSE_JOYSTICK:BOOL=OFF
 
-.else
+SUBST_CLASSES+=		unwrap
+SUBST_STAGE.unwrap=	post-build
+SUBST_MESSAGE.unwrap=	Unwrapping wx-config.
+. if ${OPSYS} != "Darwin"
+SUBST_FILES.unwrap=	lib/wx/config/gtk3-unicode-3.2
+. else
+SUBST_FILES.unwrap=	lib/wx/config/osx_cocoa-unicode-3.2
+. endif
+SUBST_SED.unwrap=	-e 's,EGREP=.*,EGREP=${EGREP},'
+SUBST_SED.unwrap+=	-e 's,echo.*/${CC}",echo "${CC}",'
+SUBST_SED.unwrap+=	-e 's,echo.*/${CXX}",echo "${CXX}",'
+SUBST_SED.unwrap+=	-e 's,echo.*/${CXX} -o",echo "${CXX} -o",'
+
+.else # empty(PKG_OPTIONS:Mcmake)
+
 GNU_CONFIGURE=		yes
+PLIST_SRC+=		PLIST.configure
+
 USE_GNU_CONFIGURE_HOST=	no
 CONFIGURE_ARGS+=	--with-libpng=sys
 CONFIGURE_ARGS+=	--with-libjpeg=sys
@@ -75,8 +89,6 @@ CONFIGURE_ARGS.Darwin+=	--without-macosx-version-min
 CONFIGURE_ARGS.Darwin+=	--disable-precomp-headers
 CONFIGURE_ARGS.SunOS+=	--disable-xlocale
 
-PLIST_SRC+=		PLIST.configure
-
 SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		pre-configure
 SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
@@ -92,23 +104,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/docs/readme.txt ${DESTDIR}${PREFIX}/${DOCDIR}
 	${LN} -sf ../libexec/wx-3.2/wxrc ${DESTDIR}${PREFIX}/bin/wxrc-3.2
 	${LN} -sf ../libexec/wx-3.2/wx-config ${DESTDIR}${PREFIX}/bin/wx-config-3.2
-
-.if defined(USE_CMAKE)
-SUBST_CLASSES+=		unwrap
-SUBST_STAGE.unwrap=	post-build
-SUBST_FILES.unwrap=	${WX_CONFIG}
-SUBST_SED.unwrap=	-e 's,EGREP=.*,EGREP=${EGREP},'
-SUBST_SED.unwrap+=	-e 's,echo.*/${CC}",echo "${CC}",'
-SUBST_SED.unwrap+=	-e 's,echo.*/${CXX}",echo "${CXX}",'
-SUBST_SED.unwrap+=	-e 's,echo.*/${CXX} -o",echo "${CXX} -o",'
-.endif
-
-.if defined(USE_CMAKE)
-# https://github.com/wxWidgets/wxWidgets/issues/22646
-.if ${OPSYS} != "Linux"
-CMAKE_ARGS+=		-DwxUSE_JOYSTICK:BOOL=OFF
-.endif
-.endif
 
 .if ${OPSYS} != "Darwin"
 .include "../../sysutils/libnotify/buildlink3.mk"
