@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.20 2021/01/04 12:01:45 wiz Exp $
+$NetBSD: patch-ae,v 1.21 2022/07/28 09:02:04 wiz Exp $
 
 Libtoolify.
 Pass -no-undefined to libtool for building shared library.
@@ -60,7 +60,7 @@ Fix race condition so the examples are built *after* the library.
  
 +libreadline.la: $(OBJECTS:.o=.lo)
 +	$(LIBTOOL) --mode=clean $(RM) $@
-+	$(LIBTOOL) --mode=link $(CC) -o $@ $(OBJECTS:.o=.lo) $(TERMCAP_LIB) \
++	$(LIBTOOL) --mode=link --tag=CC $(CC) -o $@ $(OBJECTS:.o=.lo) $(TERMCAP_LIB) \
 +		-rpath $(libdir) -version-info $(SHLIB_MAJOR):$(SHLIB_MINOR) \
 +		$(LDFLAGS)
 +
@@ -71,7 +71,7 @@ Fix race condition so the examples are built *after* the library.
  
 +libhistory.la: $(HISTOBJ:.o=.lo) xmalloc.lo xfree.lo
 +	$(LIBTOOL) --mode=clean $(RM) $@
-+	$(LIBTOOL) --mode=link $(CC) -o $@ $(HISTOBJ:.o=.lo) xmalloc.lo xfree.lo \
++	$(LIBTOOL) --mode=link --tag=CC $(CC) -o $@ $(HISTOBJ:.o=.lo) xmalloc.lo xfree.lo \
 +		-rpath $(libdir) -version-info $(SHLIB_MAJOR):$(SHLIB_MINOR) \
 +		$(LDFLAGS)
 +
@@ -83,7 +83,7 @@ Fix race condition so the examples are built *after* the library.
  
 +tilde.lo:	tilde.c
 +	$(LIBTOOL) --mode=clean rm -f $@
-+	$(LIBTOOL) --mode=compile $(CC) $(CCFLAGS) -DREADLINE_LIBRARY -c $(srcdir)/tilde.c
++	$(LIBTOOL) --mode=compile --tag=CC $(CC) $(CCFLAGS) -DREADLINE_LIBRARY -c $(srcdir)/tilde.c
 +
  readline: $(OBJECTS) readline.h rldefs.h chardefs.h ./libreadline.a
  	$(CC) $(CCFLAGS) -DREADLINE_LIBRARY -o $@ $(top_srcdir)/examples/rl.c ./libreadline.a ${TERMCAP_LIB}

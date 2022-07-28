@@ -1,4 +1,4 @@
-$NetBSD: patch-examples_Makefile.in,v 1.5 2019/02/13 22:49:02 wiz Exp $
+$NetBSD: patch-examples_Makefile.in,v 1.6 2022/07/28 09:02:04 wiz Exp $
 
 Patch to link correctly against libtool built libs.
 
@@ -12,8 +12,8 @@ to compile. There's only one compile line and many link lines.
  
  DEFS = @DEFS@
 -CC = @CC@
-+REALCC = $(LIBTOOL) --mode=compile @CC@
-+CC = $(LIBTOOL) --mode=link @CC@
++REALCC = $(LIBTOOL) --mode=compile --tag=CC @CC@
++CC = $(LIBTOOL) --mode=link --tag=CC @CC@
  CFLAGS = @CFLAGS@
  LOCAL_CFLAGS = @LOCAL_CFLAGS@ -DREADLINE_LIBRARY -DRL_LIBRARY_VERSION='"$(RL_LIBRARY_VERSION)"'
  CPPFLAGS = @CPPFLAGS@
