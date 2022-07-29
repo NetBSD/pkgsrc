@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/07/29 16:34:58 wiz Exp $
+
+BLAKE2s (libadwaita-1.0.5.tar.xz) = ea2bf16ef915c6383e7211bf75128bc5a1d70a7410aa2065eba072d399210e4b
+SHA512 (libadwaita-1.0.5.tar.xz) = c1b0dae6098890a18fd43f972c6f7d0e3a36e459d3aad3b2f9341f911abdc4ccbc2b4c06c430870ccdb5bcc98f42bc5c1a23f537b875f038e5f67c80f374389d
+Size (libadwaita-1.0.5.tar.xz) = 2724720 bytes
