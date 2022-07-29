@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2022/07/25 10:04:35 jperkin Exp $
+# $NetBSD: Makefile,v 1.36 2022/07/29 20:37:48 jperkin Exp $
 
 .include "dist.mk"
 
@@ -193,6 +193,7 @@ INSTALLATION_DIRS+=	lib/python${PY_VER_SUFFIX}/site-packages
 
 # PKG_CONFIG_LIBDIR references to BUILDLINK_DIR
 CHECK_WRKREF_SKIP+=	lib/python${PY_VER_SUFFIX}/_sysconfigdata*
+CHECK_WRKREF_SKIP+=	lib/python${PY_VER_SUFFIX}/__pycache__/_sysconfigdata*
 CHECK_WRKREF_SKIP+=	lib/python${PY_VER_SUFFIX}/config-${PY_VER_SUFFIX}/Makefile
 
 pre-install: setuptools-preinstall
