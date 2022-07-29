@@ -1,9 +1,9 @@
-$NetBSD: patch-plugins_kdb_db2_Makefile.in,v 1.2 2018/06/15 20:46:01 tez Exp $
+$NetBSD: patch-plugins_kdb_db2_Makefile.in,v 1.3 2022/07/29 20:22:44 jperkin Exp $
 
 Add --enable-pkgsrc-libtool option
 (was patch-ch)
 
---- plugins/kdb/db2/Makefile.in.orig	2016-02-29 19:50:13.000000000 +0000
+--- plugins/kdb/db2/Makefile.in.orig	2022-03-11 06:54:31.000000000 +0000
 +++ plugins/kdb/db2/Makefile.in
 @@ -29,8 +29,8 @@ RELDIR=../plugins/kdb/db2
  # Also on gssrpc, for xdr stuff.
@@ -13,7 +13,7 @@ Add --enable-pkgsrc-libtool option
 -	$(TOPLIBD)/libkrb5$(SHLIBEXT)
 +	$(TOPLIBD)/libk5crypto$(DEPLIBEXT) \
 +	$(TOPLIBD)/libkrb5$(DEPLIBEXT)
- SHLIB_EXPLIBS= $(GSSRPC_LIBS) -lkrb5 -lcom_err -lk5crypto $(KDB5_DB_LIB) $(KADMSRV_LIBS) $(SUPPORT_LIB) $(LIBS) @DB_EXTRA_LIBS@
+ SHLIB_EXPLIBS= $(GSSRPC_LIBS) -lkrb5 $(COM_ERR_LIB) -lk5crypto $(KDB5_DB_LIB) $(KADMSRV_LIBS) $(SUPPORT_LIB) $(LIBS) @DB_EXTRA_LIBS@
  
  DBDIR = libdb2
 @@ -38,7 +38,7 @@ DBOBJLISTS = $(DBOBJLISTS-@DB_VERSION@)

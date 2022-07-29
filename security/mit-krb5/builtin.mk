@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.17 2021/05/13 09:06:15 thor Exp $
+# $NetBSD: builtin.mk,v 1.18 2022/07/29 20:22:44 jperkin Exp $
 
 BUILTIN_PKG:=	mit-krb5
 
@@ -12,7 +12,7 @@ BUILTIN_FIND_HEADERS.H_MIT_KRB5=	krb5/krb5.h
 BUILTIN_FIND_HEADERS.H_MIT_KRB5=	kerberosv5/krb5.h
 .elif !empty(MACHINE_PLATFORM:MLinux-*)
 # Assuming mit-krb5 >= 1.5 on GNU/Linux.
-BUILTIN_FIND_HEADERS.H_MIT_KRB5=        krb5/krb5.h
+BUILTIN_FIND_HEADERS.H_MIT_KRB5=	krb5/krb5.h
 .else
 BUILTIN_FIND_HEADERS.H_MIT_KRB5=	krb5.h
 .endif
