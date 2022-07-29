@@ -1,0 +1,16 @@
+$NetBSD: patch-meson.build,v 1.3 2022/07/29 16:08:20 wiz Exp $
+
+sincos and sincosf detection is broken
+https://gitlab.gnome.org/GNOME/gtk/-/issues/5070
+
+--- meson.build.orig	2022-07-02 18:38:25.000000000 +0000
++++ meson.build
+@@ -197,8 +197,6 @@ check_functions = [
+   'flockfile',
+   'mkstemp',
+   'mallinfo2',
+-  'sincos',
+-  'sincosf',
+ ]
+ 
+ foreach func : check_functions
