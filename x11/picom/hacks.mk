@@ -1,3 +1,5 @@
+# $NetBSD: hacks.mk,v 1.3 2022/07/29 21:16:32 tnn Exp $
+
 .if !defined(PICOM_HACKS_MK)
 PICOM_HACKS_MK=	defined
 
