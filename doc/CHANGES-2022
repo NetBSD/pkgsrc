@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3589 2022/07/29 06:11:30 rin Exp $
+$NetBSD: CHANGES-2022,v 1.3590 2022/07/29 08:05:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5371,3 +5371,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated wm/3ddesktop to 0.2.9nb14 [rin 2022-07-29]
 	Updated wm/skippy to 0.5.0nb20 [rin 2022-07-29]
 	Updated x11/eterm to 0.9.6nb5 [rin 2022-07-29]
+	Updated security/gnutls to 3.7.7 [adam 2022-07-29]
+	Updated net/wireshark to 3.6.7 [adam 2022-07-29]
