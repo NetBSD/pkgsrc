@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:46:52 nia Exp $
+$NetBSD: distinfo,v 1.11 2022/07/29 06:00:31 rin Exp $
 
 BLAKE2s (imlib2-ruby-0.5.2.gem) = 173168f4189924d746b9098e1cb22af363a1f5763083148e94b9051337c1b82f
 SHA512 (imlib2-ruby-0.5.2.gem) = 9524760581bfd2d97c66a2578ca0972f41955a20040394389d2ebd2172bcc9dd3f834d397195ae8a6f8d57664c501fbf105cee594b4dad22e90359cf9ec20031
 Size (imlib2-ruby-0.5.2.gem) = 119296 bytes
 SHA1 (patch-ab) = 04f72f6b839756c00b65feddc8bbec6ac6703642
+SHA1 (patch-extconf.rb) = 5d07f03669acb9bda546d8a53907fb20a8da08b7
