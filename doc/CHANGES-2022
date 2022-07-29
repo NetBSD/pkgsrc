@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3591 2022/07/29 09:07:27 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3592 2022/07/29 10:43:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5375,3 +5375,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/wireshark to 3.6.7 [adam 2022-07-29]
 	Updated archivers/py-zipp to 3.8.1 [adam 2022-07-29]
 	Updated www/py-uvicorn to 0.18.2 [adam 2022-07-29]
+	Updated devel/cmake to 3.23.3 [adam 2022-07-29]
+	Updated finance/py-braintree to 4.16.0 [adam 2022-07-29]
