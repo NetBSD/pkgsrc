@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2022/02/21 16:45:43 adam Exp $
+@comment $NetBSD: PLIST,v 1.20 2022/07/29 10:42:47 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -215,6 +215,21 @@ ${PYSITELIB}/braintree/exceptions/unexpected_error.pyo
 ${PYSITELIB}/braintree/exceptions/upgrade_required_error.py
 ${PYSITELIB}/braintree/exceptions/upgrade_required_error.pyc
 ${PYSITELIB}/braintree/exceptions/upgrade_required_error.pyo
+${PYSITELIB}/braintree/exchange_rate_quote.py
+${PYSITELIB}/braintree/exchange_rate_quote.pyc
+${PYSITELIB}/braintree/exchange_rate_quote.pyo
+${PYSITELIB}/braintree/exchange_rate_quote_gateway.py
+${PYSITELIB}/braintree/exchange_rate_quote_gateway.pyc
+${PYSITELIB}/braintree/exchange_rate_quote_gateway.pyo
+${PYSITELIB}/braintree/exchange_rate_quote_input.py
+${PYSITELIB}/braintree/exchange_rate_quote_input.pyc
+${PYSITELIB}/braintree/exchange_rate_quote_input.pyo
+${PYSITELIB}/braintree/exchange_rate_quote_payload.py
+${PYSITELIB}/braintree/exchange_rate_quote_payload.pyc
+${PYSITELIB}/braintree/exchange_rate_quote_payload.pyo
+${PYSITELIB}/braintree/exchange_rate_quote_request.py
+${PYSITELIB}/braintree/exchange_rate_quote_request.pyc
+${PYSITELIB}/braintree/exchange_rate_quote_request.pyo
 ${PYSITELIB}/braintree/facilitated_details.py
 ${PYSITELIB}/braintree/facilitated_details.pyc
 ${PYSITELIB}/braintree/facilitated_details.pyo
@@ -230,6 +245,9 @@ ${PYSITELIB}/braintree/iban_bank_account.pyo
 ${PYSITELIB}/braintree/ids_search.py
 ${PYSITELIB}/braintree/ids_search.pyc
 ${PYSITELIB}/braintree/ids_search.pyo
+${PYSITELIB}/braintree/liability_shift.py
+${PYSITELIB}/braintree/liability_shift.pyc
+${PYSITELIB}/braintree/liability_shift.pyo
 ${PYSITELIB}/braintree/local_payment.py
 ${PYSITELIB}/braintree/local_payment.pyc
 ${PYSITELIB}/braintree/local_payment.pyo
@@ -278,6 +296,9 @@ ${PYSITELIB}/braintree/merchant_gateway.pyo
 ${PYSITELIB}/braintree/modification.py
 ${PYSITELIB}/braintree/modification.pyc
 ${PYSITELIB}/braintree/modification.pyo
+${PYSITELIB}/braintree/montary_amount.py
+${PYSITELIB}/braintree/montary_amount.pyc
+${PYSITELIB}/braintree/montary_amount.pyo
 ${PYSITELIB}/braintree/oauth_access_revocation.py
 ${PYSITELIB}/braintree/oauth_access_revocation.pyc
 ${PYSITELIB}/braintree/oauth_access_revocation.pyo
