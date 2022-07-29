@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.26 2021/10/26 11:33:48 nia Exp $
+$NetBSD: distinfo,v 1.27 2022/07/29 06:05:49 rin Exp $
 
 BLAKE2s (Eterm-0.9.6.tar.gz) = 6f7b2d8dc741929ad4b8f93fa257cd6ae22ac7d68012b2d04da9d27316b70715
 SHA512 (Eterm-0.9.6.tar.gz) = 07ef5587b7c8444d49ffd6f20f09c98bd248ccee9b3de311f5705961579f707c4a8e2b69a2193500b75cc1e4bdeabb711a1dd23637d6b94433508d8a93d377fe
@@ -11,5 +11,7 @@ SHA1 (patch-ab) = d019a18bb32f890d6de7c5bb0cdb43e7715a7d4d
 SHA1 (patch-ai) = 1f1a050c27b042c5cccff91aae4ced7b887b68b1
 SHA1 (patch-src_Makefile.in) = 3000a407bed7d7c23bfc127fd09b0723d9c0b395
 SHA1 (patch-src_command.c) = 0b5b3dbde8eba16b1690155a28764ec7ea0f6bff
+SHA1 (patch-src_pixmap.c) = 4894169d1f23c6e8de09fc53a9fc2b242b0e8f36
+SHA1 (patch-src_pixmap.h) = 5ade255a6a6d8d8c423eacc3057b9e1ee89c9bf4
 SHA1 (patch-src_screen.c) = f820501e3a67cfc59dedd1dd5e3eb6f06ae2be23
 SHA1 (patch-src_term.c) = 45b1fecdb9b0f726f4ce5c001c27cc20340cd687
