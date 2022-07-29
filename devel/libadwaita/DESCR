@@ -1,0 +1,3 @@
+Libadwaita is a GTK 4 library implementing the GNOME HIG, complementing
+GTK. For GTK 3 this role has increasingly been played by Libhandy,
+and so Libadwaita is a direct Libhandy successor.
