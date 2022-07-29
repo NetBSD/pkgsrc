@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2021/12/08 16:04:42 adam Exp $
+# $NetBSD: Makefile,v 1.43 2022/07/29 16:29:09 jperkin Exp $
 
 DISTNAME=		ufoai-2.2.1
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ufoai/}
@@ -18,6 +18,8 @@ HOMEPAGE=	http://ufoai.sourceforge.net/
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	tar gmake bzip2 msgfmt
 MAKE_JOBS_SAFE=	no
+
+LIBS.SunOS+=	-lintl
 
 INSTALLATION_DIRS=	share/ufoai
 INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX}

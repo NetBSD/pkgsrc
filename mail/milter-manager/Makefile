@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2021/12/08 16:05:28 adam Exp $
+# $NetBSD: Makefile,v 1.52 2022/07/29 16:29:08 jperkin Exp $
 #
 
 DISTNAME=	milter-manager-${VERSION}
@@ -35,6 +35,8 @@ SUBST_STAGE.libev_inc=		pre-configure
 SUBST_MESSAGE.libev_inc=	Adjust include path for libevent from pkgsrc.
 SUBST_FILES.libev_inc=		configure
 SUBST_SED.libev_inc=		-e 's,/include/ev.h,/include/ev/ev.h,g'
+
+LIBS.SunOS+=	-lintl
 
 PKG_SYSCONFSUBDIR=	${PKGBASE}
 
