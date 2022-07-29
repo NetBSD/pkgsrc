@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2022/07/29 16:34:58 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/07/29 16:39:50 wiz Exp $
 bin/adwaita-1-demo
 include/libadwaita-1/adw-action-row.h
 include/libadwaita-1/adw-animation-target.h
@@ -83,6 +83,7 @@ share/locale/ja/LC_MESSAGES/libadwaita.mo
 share/locale/kk/LC_MESSAGES/libadwaita.mo
 share/locale/ko/LC_MESSAGES/libadwaita.mo
 share/locale/lt/LC_MESSAGES/libadwaita.mo
+share/locale/ne/LC_MESSAGES/libadwaita.mo
 share/locale/nl/LC_MESSAGES/libadwaita.mo
 share/locale/oc/LC_MESSAGES/libadwaita.mo
 share/locale/pl/LC_MESSAGES/libadwaita.mo
@@ -96,7 +97,9 @@ share/locale/sr/LC_MESSAGES/libadwaita.mo
 share/locale/sv/LC_MESSAGES/libadwaita.mo
 share/locale/tr/LC_MESSAGES/libadwaita.mo
 share/locale/uk/LC_MESSAGES/libadwaita.mo
+share/locale/vi/LC_MESSAGES/libadwaita.mo
 share/locale/zh_CN/LC_MESSAGES/libadwaita.mo
+share/locale/zh_TW/LC_MESSAGES/libadwaita.mo
 share/metainfo/org.gnome.Adwaita1.Demo.metainfo.xml
 share/vala/vapi/libadwaita-1.deps
 share/vala/vapi/libadwaita-1.vapi
