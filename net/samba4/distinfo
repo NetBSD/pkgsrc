@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.78 2022/07/21 09:35:19 adam Exp $
+$NetBSD: distinfo,v 1.79 2022/07/29 20:33:38 jperkin Exp $
 
 BLAKE2s (samba-4.16.3.tar.gz) = 465d98b2aaec2d305d81e38d6d61de0b1f5061802aeba284a9df52e83f0ee05c
 SHA512 (samba-4.16.3.tar.gz) = 8f082654251e6a3284ba8f411c55b854dc00a9c6b07c486ca01f53af2b6ec09d34c21d66a2a1afc7a8c62a9f715c643c1a22fc7688699d23f8fcafe6995b5ebd
@@ -17,6 +17,7 @@ SHA1 (patch-lib_tdb_common_mutex.c) = 74162bf9dfd440fc0b9782982e83776c9671a983
 SHA1 (patch-lib_tevent_tevent.c) = dc782c5b7214abf52a4c8c242018b1989bca08e3
 SHA1 (patch-lib_tevent_tevent__threads.c) = e5e82db82cff4d550451cd9290b3a351b25d4de4
 SHA1 (patch-lib_tevent_wscript) = fbbe2024096b57d651d90064f53489a974db9d7a
+SHA1 (patch-lib_tsocket_tsocket__bsd.c) = 0ac414e02ee3a326d3dd34515bfffce6e8da5e46
 SHA1 (patch-lib_util_charset_charset__macosxfs.c) = 9772fc52fff48aec2a7e279223f73bb791217c26
 SHA1 (patch-lib_util_smb__threads.h) = 817591a2b69f31ac29497a2006fe21f0b4b0aaea
 SHA1 (patch-lib_util_tfork.c) = a9acb5561c5bba76450c48904a22019c8b14cbec
@@ -37,3 +38,4 @@ SHA1 (patch-source4_scripting_wsript_build) = 816d44f48b6cbc6d999995e00eaea1d2dc
 SHA1 (patch-source4_utils_oLschema2ldif_wscript__build) = cbba15c2c0e1eee9d07424510a96b596f46992b4
 SHA1 (patch-third__party_heimdal__build_roken.h) = 59d5523676fe8c0315e969247f26b4ea2f900402
 SHA1 (patch-third__party_heimdal_include_heim__threads.h) = 5ad13530cf9688e46f9ad487bb0fddab668c8276
+SHA1 (patch-third__party_heimdal_lib_roken_getauxval.h) = 23c9cf574d9f042c9f6dd1b0377c91045e755b5b

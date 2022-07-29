@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST.mit-krb5,v 1.1 2022/07/29 20:33:38 jperkin Exp $
+lib/krb5/plugins/kdb/samba.so
+lib/samba/krb5/winbind_krb5_localauth.so
+man/man8/winbind_krb5_localauth.8
