@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/07/28 07:34:33 dbj Exp $
+# $NetBSD: Makefile,v 1.5 2022/07/29 01:24:24 dbj Exp $
 
 DISTNAME=	wxWidgets-3.2.0
 PKGNAME=	${DISTNAME:S/wxWidgets/wxGTK32/}
@@ -49,8 +49,10 @@ PLIST_SRC+=		PLIST.cmake
 
 CMAKE_ARGS+=		-DCMAKE_DISABLE_PRECOMPILE_HEADERS:BOOL=ON
 CMAKE_ARGS+=		-DCMAKE_INSTALL_BINDIR:PATH=libexec/wx-3.2
+. if ${OPSYS} != "Linux"
 # https://github.com/wxWidgets/wxWidgets/issues/22646
-CMAKE_ARGS.Linux+=	-DwxUSE_JOYSTICK:BOOL=OFF
+CMAKE_ARGS+=		-DwxUSE_JOYSTICK:BOOL=OFF
+. endif
 
 SUBST_CLASSES+=		unwrap
 SUBST_STAGE.unwrap=	post-build
