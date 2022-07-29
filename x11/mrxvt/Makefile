@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.39 2021/07/19 13:03:38 tnn Exp $
+# $NetBSD: Makefile,v 1.40 2022/07/29 20:46:37 tnn Exp $
 #
 
 DISTNAME=	mrxvt-0.5.4
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=materm/}
 PATCH_SITES=	${MASTER_SITES}
@@ -14,7 +14,7 @@ COMMENT=	Multi-tabbed terminal emulator with Xft support
 LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=		YES
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 USE_FEATURES+=		snprintf
 
 CONFIGURE_ARGS+=	--enable-xft
