@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.22 2022/04/27 22:24:16 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.23 2022/07/29 19:00:36 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -13,9 +13,9 @@
 # TODO: Handle fun DEPENDS like avifile-devel with
 #			{qt2-designer>=2.2.4,qt2-designer-kde>=2.3.1nb1}
 
-$^W = 1;
 use locale;
 use strict;
+use warnings;
 use Getopt::Std;
 use File::Find;
 use File::Basename;
@@ -37,6 +37,12 @@ my (
     @prebuilt_pkgdirs,            # Use to follow symlinks in prebuilt pkgdirs
     %prebuilt_pkgdir_cache,       # To avoid symlink loops in prebuilt_pkgdirs
 );
+
+sub usage_and_exit();
+sub listdir($$);
+sub get_default_makefile_vars();
+sub fail($);
+sub parse_makefile_pkgsrc($);
 
 $ENV{PATH} .=
   ":/bin:/usr/bin:/sbin:/usr/sbin:${conf_prefix}/sbin:${conf_prefix}/bin";
@@ -171,7 +177,7 @@ sub main() {
 	    }
 
 	# distfiles downloaded on the current system
-	@tmpdistfiles = listdir("$pkgdistdir");
+	@tmpdistfiles = listdir("$pkgdistdir", undef);
 	foreach my $tmppkg (@tmpdistfiles)
 	    {
 	    if ($tmppkg ne "pkg-vulnerabilities")
@@ -561,9 +567,9 @@ sub deweycmp_extract($$) {
     $cmp;
 }
 
-sub fail(@) {
+sub fail($) {
 
-    print STDERR @_, "\n";
+    print STDERR shift(), "\n";
     exit(3);
 }
 
