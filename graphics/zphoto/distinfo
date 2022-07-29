@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:47:26 nia Exp $
+$NetBSD: distinfo,v 1.9 2022/07/29 06:01:21 rin Exp $
 
 BLAKE2s (zphoto-1.2.tar.gz) = a516e0cde5977c72eb028d19529c443c7f601ea634b45a6ab28e046aecf336a7
 SHA512 (zphoto-1.2.tar.gz) = 9af3ae5f699b87e9184e9efa663f13451b52de80569b96e6ec3c6a107bc3bef5bb9396e8fd82382c48d96c4e8a65e584c70f8d7366f762c0ff3e9e7f7e998302
@@ -7,3 +7,4 @@ SHA1 (patch-aa) = 4c15d45ecfbefadc4b9b2195e00d005e3ed2a936
 SHA1 (patch-ab) = d365aeba430374b3ba6b4f1f88731f3b809fca31
 SHA1 (patch-ac) = 5f23d2b9611f403409902fdc7cb4ac2218b1cafb
 SHA1 (patch-ad) = cda6e504d5d88cdf1ae202ce1bad786313546f3d
+SHA1 (patch-configure) = 4882567200e22583308895868ddd594283b96980
