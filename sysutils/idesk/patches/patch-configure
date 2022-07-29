@@ -1,0 +1,32 @@
+$NetBSD: patch-configure,v 1.1 2022/07/29 06:02:09 rin Exp $
+
+Add minimal support to `pkg-config imlib2`; imlib2-config has been
+dropped since imlib2-1.7.5.
+
+--- configure.orig	2022-07-29 02:55:46.473250206 +0900
++++ configure	2022-07-29 03:03:32.631168267 +0900
+@@ -7031,7 +7031,12 @@
+ echo $ECHO_N "checking for imlib2... $ECHO_C" >&6
+   no_imlib2=""
+   if test "$IMLIB2_CONFIG" = "no" ; then
+-     no_imlib2=yes
++     if pkg-config imlib2; then
++        IMLIB2_CFLAGS="`pkg-config imlib2 --cflags`"
++        IMLIB2_LIBS="`pkg-config imlib2 --libs`"
++     else
++        no_imlib2=yes
++     fi
+   else
+      IMLIB2_CFLAGS="`$IMLIB2_CONFIG $imlib2_config_args --cflags`"
+      IMLIB2_LIBS="`$IMLIB2_CONFIG $imlib2_config_args --libs`"
+@@ -7067,8 +7072,8 @@
+ 
+ 
+ 
+-IMLIB_LIBS=`imlib2-config --libs`
+-IMLIB_CFLAGS=`imlib2-config --cflags`
++IMLIB_LIBS=$IMLIB2_LIBS
++IMLIB_CFLAGS=$IMLIB2_CFLAGS
+ 
+ 
+ 
