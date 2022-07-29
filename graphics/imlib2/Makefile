@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.84 2021/10/19 08:39:04 nia Exp $
+# $NetBSD: Makefile,v 1.85 2022/07/29 05:56:08 rin Exp $
 
-DISTNAME=	imlib2-1.7.4
+DISTNAME=	imlib2-1.9.1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=enlightenment/}
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://docs.enlightenment.org/api/imlib2/html/
@@ -33,12 +33,6 @@ SUBST_MESSAGE.shlib=	Replacing shared library suffix
 SUBST_FILES.shlib+=	src/lib/image.c
 SUBST_SED.shlib+=	-e 's,"\.so",".${SHLIB_SUFFIX}",'
 .endif
-
-SUBST_CLASSES+=		rpath
-SUBST_STAGE.rpath=	pre-configure
-SUBST_MESSAGE.rpath=	Replacing COMPILER_RPATH_FLAG
-SUBST_FILES.rpath=	imlib2-config.in
-SUBST_VARS.rpath=	COMPILER_RPATH_FLAG
 
 .include "options.mk"
 
