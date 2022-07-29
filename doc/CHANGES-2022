@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3588 2022/07/28 22:18:16 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.3589 2022/07/29 06:11:30 rin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5362,3 +5362,12 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/motyl to 1.0.3 [fcambus 2022-07-28]
 	Updated www/logswan to 2.1.13 [fcambus 2022-07-28]
 	Updated chat/swirc to 3.3.5 [fcambus 2022-07-28]
+	Updated graphics/imlib2 to 1.9.1 [rin 2022-07-29]
+	Updated devel/giblib to 1.2.4nb17 [rin 2022-07-29]
+	Updated graphics/p5-Image-Imlib2 to 2.03nb21 [rin 2022-07-29]
+	Updated graphics/ruby-imlib2 to 0.5.2nb21 [rin 2022-07-29]
+	Updated graphics/zphoto to 1.2nb76 [rin 2022-07-29]
+	Updated sysutils/idesk to 0.7.5nb17 [rin 2022-07-29]
+	Updated wm/3ddesktop to 0.2.9nb14 [rin 2022-07-29]
+	Updated wm/skippy to 0.5.0nb20 [rin 2022-07-29]
+	Updated x11/eterm to 0.9.6nb5 [rin 2022-07-29]
