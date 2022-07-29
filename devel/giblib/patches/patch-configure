@@ -1,0 +1,58 @@
+$NetBSD: patch-configure,v 1.1 2022/07/29 05:58:10 rin Exp $
+
+Add minimal support to `pkg-config imlib2`; imlib2-config has been
+dropped since imlib2-1.7.5.
+
+--- configure.orig	2004-09-05 00:01:41.000000000 +0900
++++ configure	2022-07-29 04:18:07.334548485 +0900
+@@ -19773,12 +19773,21 @@
+ fi
+ IMLIB2_CONFIG=$ac_cv_path_IMLIB2_CONFIG
+ 
+-if test -n "$IMLIB2_CONFIG"; then
++if test -n "$IMLIB2_CONFIG" && test "$IMLIB2_CONFIG" != "no"; then
+   echo "$as_me:$LINENO: result: $IMLIB2_CONFIG" >&5
+ echo "${ECHO_T}$IMLIB2_CONFIG" >&6
++  imlib2_version=--version
+ else
+-  echo "$as_me:$LINENO: result: no" >&5
+-echo "${ECHO_T}no" >&6
++  if pkg-config imlib2; then
++    IMLIB2_CONFIG=pkg-config
++    imlib2_config_args=imlib2
++    imlib2_version=--modversion
++    echo "$as_me:$LINENO: result: $IMLIB2_CONFIG" >&5
++  echo "${ECHO_T}$IMLIB2_CONFIG" >&6
++  else
++    echo "$as_me:$LINENO: result: no" >&5
++  echo "${ECHO_T}no" >&6
++  fi
+ fi
+ 
+   echo "$as_me:$LINENO: checking for imlib2 - version >= 1.0.0" >&5
+@@ -19792,11 +19801,11 @@
+      IMLIB2_LIBS="`$IMLIB2_CONFIG $imlib2_config_args --libs`"
+ 
+         imlib2_config_major_version=`$IMLIB2_CONFIG $imlib2_config_args \
+-         --version | sed 's/[^0-9]*\([0-9]*\).\([0-9]*\).\([0-9]*\)/\1/'`
++         $imlib2_version | sed 's/[^0-9]*\([0-9]*\).\([0-9]*\).\([0-9]*\)/\1/'`
+         imlib2_config_minor_version=`$IMLIB2_CONFIG $imlib2_config_args \
+-         --version | sed 's/[^0-9]*\([0-9]*\).\([0-9]*\).\([0-9]*\)/\2/'`
++         $imlib2_version | sed 's/[^0-9]*\([0-9]*\).\([0-9]*\).\([0-9]*\)/\2/'`
+         imlib2_config_micro_version=`$IMLIB2_CONFIG $imlib2_config_args \
+-         --version | sed 's/[^0-9]*\([0-9]*\).\([0-9]*\).\([0-9]*\)/\3/'`
++         $imlib2_version | sed 's/[^0-9]*\([0-9]*\).\([0-9]*\).\([0-9]*\)/\3/'`
+         imlib2_wanted_major_version="1"
+         imlib2_wanted_minor_version="0"
+         imlib2_wanted_micro_version="0"
+@@ -19866,8 +19875,8 @@
+ 
+ 
+ 
+-IMLIB_LIBS=`imlib2-config --libs`
+-IMLIB_CFLAGS=`imlib2-config --cflags`
++IMLIB_LIBS=$IMLIB2_LIBS
++IMLIB_CFLAGS=$IMLIB2_CFLAGS
+ 
+ 
+ 
