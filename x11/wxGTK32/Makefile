@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/07/29 13:14:59 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2022/07/29 18:36:06 wiz Exp $
 
 DISTNAME=	wxWidgets-3.2.0
 PKGNAME=	${DISTNAME:S/wxWidgets/wxGTK32/}
@@ -40,6 +40,9 @@ REPLACE_SH=		wx-config.in wx-config-inplace.in
 # and remove support for building with GNU_CONFIGURE
 PKG_OPTIONS_VAR=	PKG_OPTIONS.wxGTK32
 PKG_SUPPORTED_OPTIONS=	cmake
+.if ${OPSYS} == "NetBSD"
+PKG_SUGGESTED_OPTIONS=	cmake
+.endif
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mcmake)
