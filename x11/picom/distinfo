@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 11:34:18 nia Exp $
+$NetBSD: distinfo,v 1.8 2022/07/29 21:16:32 tnn Exp $
 
 BLAKE2s (picom-8.2.tar.gz) = 7875bdc50acd5a81e0eb2871b3c42ac1962f8d23d3c72428c9735717bd0da2c4
 SHA512 (picom-8.2.tar.gz) = bdc6675e73a211075ee0df2b056342cabb19ad27fd73586f5216886f503cd994536845eb866f371e07a8dc0404346c67b899a14830e9b7cbc9c01cbd782f36b1
 Size (picom-8.2.tar.gz) = 242653 bytes
+SHA1 (patch-man_meson.build) = 987bf5451443f0a6d7cd50319052d1f48a0557fe
 SHA1 (patch-src_c2.c) = ef49d0b02691b495b625423c832c603852045a73
 SHA1 (patch-src_config.c) = ffffb13adcf2e6767813fdaade83793d074f4cf5
 SHA1 (patch-src_dbus.c) = 191ff5f507b882bac219174a89d887fd6aaf231a

@@ -1,0 +1,14 @@
+$NetBSD: patch-man_meson.build,v 1.1 2022/07/29 21:16:32 tnn Exp $
+
+Honour PKGMANDIR.
+
+--- man/meson.build.orig	2020-10-24 08:44:12.000000000 +0000
++++ man/meson.build
+@@ -7,6 +7,6 @@ if get_option('with_docs')
+ 		                        'picom-version='+version,
+ 		                        '--format', 'manpage', '@INPUT@', '-D',
+ 		                        meson.current_build_dir()],
+-		              install: true, install_dir: 'share/man/man1/')
++		              install: true, install_dir: '@PKGMANDIR@/man1/')
+ 	endforeach
+ endif
