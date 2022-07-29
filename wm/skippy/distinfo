@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:25:18 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/07/29 06:04:25 rin Exp $
 
 BLAKE2s (skippy-0.5.0.tar.bz2) = f8bf3b4a370461e55def49e4c8629c82a672900f0670f76cc41849974b2723a3
 SHA512 (skippy-0.5.0.tar.bz2) = 516e648e23a6a92e37f4d712b36f65ad640e299bd18677e30d4aa565929629c7749e64124b97da590d947daaa4e0de819cdcc3aec99c524833dea4c7955a7770
 Size (skippy-0.5.0.tar.bz2) = 23722 bytes
-SHA1 (patch-aa) = 8133c1fa2182af09a980e64066413c92216ef2b1
+SHA1 (patch-Makefile) = e1456df0aaf15d1867dea2180a43987c6ab9ece4
 SHA1 (patch-ab) = 3351514ec99c034fbe8aedf281f38164dc997cae
