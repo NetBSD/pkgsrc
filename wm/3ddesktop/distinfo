@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 11:25:09 nia Exp $
+$NetBSD: distinfo,v 1.13 2022/07/29 06:03:02 rin Exp $
 
 BLAKE2s (3ddesktop-0.2.9.tar.gz) = 0f09f382757b59506cf5705d8c96da6d18eacd8eeb22fad3d4d794d2bd161fd9
 SHA512 (3ddesktop-0.2.9.tar.gz) = 87de83561bc1614e4dde623197b04e482e04ad363ba88adf4e4e9950a942a5725d2a7199406949981c1a4aeba5d71fb9a1693f99aefa21ed7b83e083bb902686
@@ -8,4 +8,5 @@ SHA1 (patch-ab) = e078b55d2a0fc7344f59dcbddd25644b31f8f201
 SHA1 (patch-ad) = 3e24c98b58b27e2e7384bb96ece20cb604dd900f
 SHA1 (patch-config.cpp) = ccb6d582e7633e003a3f1a15e41d496084df134f
 SHA1 (patch-config.hpp) = 75e530ef6d024236a14a4e8e7f2fe44badc012d7
+SHA1 (patch-configure) = 273e1954e3723b77499400df5f2f094948638c96
 SHA1 (patch-util.h) = 8207e3ffc523b56902860abac3a80dbe03abb6e2
