@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2020/08/17 20:20:16 leot Exp $
+# $NetBSD: Makefile,v 1.52 2022/07/29 16:29:09 jperkin Exp $
 
 COMMENT=		Small, fast and light-weight window manager
 PKGREVISION=		3
@@ -7,6 +7,8 @@ CONFLICTS+=		icewm-gnome-[0-9]* icewm-imlib-[0-9]*
 
 CONFIGURE_ARGS+=	--with-imlib=no
 CONFIGURE_ARGS+=	--with-xpm=${BUILDLINK_PREFIX.libXpm}
+
+LIBS.SunOS+=	-lintl
 
 .include "Makefile.common"
 .include "../../x11/libXext/buildlink3.mk"
