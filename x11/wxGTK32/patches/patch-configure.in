@@ -1,9 +1,19 @@
-$NetBSD: patch-configure.in,v 1.1 2022/07/26 02:58:56 dbj Exp $
+$NetBSD: patch-configure.in,v 1.2 2022/07/29 13:14:59 wiz Exp $
 
+Fix png library name.
 Fixup invocation of install_name_tool on wxrc
 
 --- configure.in.orig	2022-07-06 14:19:50.000000000 +0000
 +++ configure.in
+@@ -2617,7 +2617,7 @@ if test "$wxUSE_LIBPNG" != "no" ; then
+         AC_CHECK_HEADER(png.h,,, [ ])
+ 
+         if test "$ac_cv_header_png_h" = "yes"; then
+-            AC_CHECK_LIB(png, png_sig_cmp, PNG_LINK=" -lpng -lz", , [-lz -lm])
++            AC_CHECK_LIB(png, png_sig_cmp, PNG_LINK=" -lpng16 -lz", , [-lz -lm])
+         fi
+ 
+         if test "x$PNG_LINK" = "x" ; then
 @@ -2975,7 +2975,7 @@ if test "$wxUSE_XML" != "yes"; then
      USE_XML=0
  else
