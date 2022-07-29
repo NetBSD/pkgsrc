@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.146 2022/07/27 08:23:04 dogcow Exp $
+# $NetBSD: Makefile,v 1.147 2022/07/29 20:33:38 jperkin Exp $
 
 DISTNAME=	samba-4.16.3
 CATEGORIES=	net
@@ -101,6 +101,16 @@ CONFIGURE_ARGS+=	--jobs=1
 .endif
 CONFIGURE_ARGS+=	--without-gpgme
 
+.include "../../mk/krb5.buildlink3.mk"
+
+PLIST_SRC=		${PLIST_SRC_DFLT}
+PLIST_SRC+=		PLIST.${KRB5_TYPE}
+
+.if ${KRB5_TYPE} == "mit-krb5"
+CONFIGURE_ARGS+=	--with-system-mitkrb5 --with-experimental-mit-ad-dc
+CONFIGURE_ARGS+=	--with-system-mitkdc=${KRB5BASE}/sbin/krb5kdc
+.endif
+
 # Depends on ncurses, explicitly disable for now.
 CONFIGURE_ARGS+=	--without-regedit
 
@@ -117,7 +127,7 @@ LDFLAGS+=		${COMPILER_RPATH_FLAG}${SMB_PRIVATELIB}
 CFLAGS.SunOS+=		-DHAVE_SOLARIS_GETGRENT_R
 # workaround https://bugzilla.samba.org/show_bug.cgi?id=12502 for now
 CFLAGS.SunOS+=		-DMSG_NOSIGNAL=0
-LDFLAGS.SunOS+=		-lsocket -lnsl -lsendfile
+LDFLAGS.SunOS+=		-lsocket -lsendfile
 
 .include "options.mk"
 

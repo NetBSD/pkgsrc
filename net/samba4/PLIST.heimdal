@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST.heimdal,v 1.1 2022/07/29 20:33:38 jperkin Exp $
+${PLIST.ads}lib/samba/private/libHDB-SAMBA4-samba4.so
+lib/samba/private/libasn1-samba4.so
+lib/samba/private/libcom-err-samba4.so
+lib/samba/private/libgss-preauth-samba4.so
+lib/samba/private/libgssapi-samba4.so
+lib/samba/private/libhcrypto-samba4.so
+lib/samba/private/libhdb-samba4.so
+lib/samba/private/libheimbase-samba4.so
+lib/samba/private/libheimntlm-samba4.so
+lib/samba/private/libhx509-samba4.so
+lib/samba/private/libkdc-samba4.so
+lib/samba/private/libkrb5-samba4.so
+lib/samba/private/libroken-samba4.so
+lib/samba/private/libwind-samba4.so
