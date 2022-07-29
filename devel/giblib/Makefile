@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2020/11/24 17:10:43 nia Exp $
+# $NetBSD: Makefile,v 1.38 2022/07/29 05:58:10 rin Exp $
 
 DISTNAME=		giblib-1.2.4
-PKGREVISION=		16
+PKGREVISION=		17
 CATEGORIES=		devel
 MASTER_SITES=		http://linuxbrit.co.uk/downloads/
 
@@ -13,6 +13,7 @@ LICENSE=		mit
 GNU_CONFIGURE=		YES
 PKGCONFIG_OVERRIDE=	giblib.pc.in
 USE_LIBTOOL=		YES
+USE_TOOLS+=		pkg-config
 
 .include "../../graphics/imlib2/buildlink3.mk"
 
