@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:46:37 nia Exp $
+$NetBSD: distinfo,v 1.11 2022/07/29 05:59:41 rin Exp $
 
 BLAKE2s (Image-Imlib2-2.03.tar.gz) = d653ce509965d4932ba146db8f63d79d39ef85f9ce5a75e40831675f2fc18a2d
 SHA512 (Image-Imlib2-2.03.tar.gz) = d38eba0da1d9fe46244400454f55d2d4d682a7aff78c123c01476c14f30de3fc4699a1f926fc82fea09341f0577f943d82fe73cd40225bc69a06e1c710383d60
 Size (Image-Imlib2-2.03.tar.gz) = 36014 bytes
+SHA1 (patch-Build.PL) = 6774f510512aa8a5a483fd6d956a397b4f2756c9
