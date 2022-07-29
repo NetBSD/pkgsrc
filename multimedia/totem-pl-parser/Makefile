@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2022/04/18 19:10:01 adam Exp $
+# $NetBSD: Makefile,v 1.82 2022/07/29 16:29:09 jperkin Exp $
 
 DISTNAME=	totem-pl-parser-3.26.5
 PKGREVISION=	4
@@ -18,6 +18,8 @@ MESON_ARGS+=	-Denable-quvi=no
 # workaround for build failure
 # https://gitlab.gnome.org/GNOME/json-glib/issues/35
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/plparse
+
+LIBS.SunOS+=	-lintl
 
 PYTHON_FOR_BUILD_ONLY=	tool
 

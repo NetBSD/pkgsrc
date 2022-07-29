@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.104 2022/04/18 19:11:24 adam Exp $
+# $NetBSD: Makefile,v 1.105 2022/07/29 16:29:09 jperkin Exp $
 
 DISTNAME=	tuxpaint-0.9.23
 PKGREVISION=	11
@@ -46,7 +46,7 @@ CPPFLAGS.NetBSD+=	-DHAVE_STRCASESTR
 MAKE_FLAGS+=		LIBS=${LIBS:M*:Q}
 LIBS+=			-liconv
 LIBS+=			-lpng
-LIBS.SunOS+=		-lsocket -lnsl
+LIBS.SunOS+=		-lsocket -lnsl -lintl
 LDFLAGS.SunOS+=		-lsocket
 
 pre-build:

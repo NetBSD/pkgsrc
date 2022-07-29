@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2022/03/28 10:44:06 tnn Exp $
+# $NetBSD: Makefile,v 1.26 2022/07/29 16:29:08 jperkin Exp $
 
 DISTNAME=		chromium-bsu-0.9.16.1
 PKGREVISION=		6
@@ -19,7 +19,7 @@ GNU_CONFIGURE=		yes
 
 LDFLAGS+=		${BUILDLINK_LDADD.gettext}
 LDFLAGS.DragonFly=	-lSDL2
-LDFLAGS.SunOS=		-lSDL2
+LDFLAGS.SunOS=		-lSDL2 -lintl
 
 CONFIGURE_ARGS+=	--disable-ftgl
 CONFIGURE_ARGS+=	--disable-glut

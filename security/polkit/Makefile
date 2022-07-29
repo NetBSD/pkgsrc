@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2022/06/28 11:35:50 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2022/07/29 16:29:09 jperkin Exp $
 
 DISTNAME=	polkit-0.120
 PKGREVISION=	4
@@ -40,6 +40,8 @@ CONFIGURE_ARGS+=	--disable-libsystemd-login
 CONFIGURE_ARGS+=	--disable-libelogind
 CONFIGURE_ARGS+=	--with-duktape
 CONFIGURE_ARGS+=	--enable-introspection
+
+LIBS.SunOS+=	-lintl
 
 .include "../../mk/bsd.prefs.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2022/04/18 19:12:02 adam Exp $
+# $NetBSD: Makefile,v 1.15 2022/07/29 16:29:08 jperkin Exp $
 
 PKGNAME=	${DISTNAME:S/-/-qt5-console-/}
 PKGREVISION=	3
@@ -15,6 +15,8 @@ CONFIGURE_ARGS+=	--enable-bat
 BUILDLINK_TRANSFORM+=	opt:-std=c++98:-std=gnu++98 # typeof
 
 BUILD_DIRS=		src/qt-console
+
+LIBS.SunOS+=	-lintl
 
 INSTALLATION_DIRS=	bin share/examples/bacula
 
