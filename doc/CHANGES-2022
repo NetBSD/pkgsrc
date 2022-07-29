@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3593 2022/07/29 13:50:51 thorpej Exp $
+$NetBSD: CHANGES-2022,v 1.3594 2022/07/29 16:08:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5378,3 +5378,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/cmake to 3.23.3 [adam 2022-07-29]
 	Updated finance/py-braintree to 4.16.0 [adam 2022-07-29]
 	Added u-boot-pinecube version 2022.04 [thorpej 2022-07-29]
+	Updated x11/gtk4 to 4.6.6 [wiz 2022-07-29]
