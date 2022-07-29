@@ -1,4 +1,4 @@
-# $NetBSD: u-boot.mk,v 1.35 2022/03/27 17:27:59 tnn Exp $
+# $NetBSD: u-boot.mk,v 1.36 2022/07/29 13:47:36 thorpej Exp $
 
 .include "../../sysutils/u-boot/u-boot-version.mk"
 
@@ -33,6 +33,12 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		bison flex gmake gsed pkg-config gawk
 PYTHON_FOR_BUILD_ONLY=	yes
 .include "../../lang/python/tool.mk"
+
+# XXX May need to cast a wider net, but at least 2022.04 requires
+# this when building for sunxi.
+.if !empty(UBOOT_VERSION:M202[2-9].*)
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+.endif
 
 .if ${PYPKGPREFIX} == "py27"
 ALL_ENV+=		PYTHON2=${PYTHONBIN} PYTHONCONFIG=${PYTHONCONFIG}
