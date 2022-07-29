@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/07/29 01:24:24 dbj Exp $
+# $NetBSD: Makefile,v 1.6 2022/07/29 13:14:59 wiz Exp $
 
 DISTNAME=	wxWidgets-3.2.0
 PKGNAME=	${DISTNAME:S/wxWidgets/wxGTK32/}
@@ -49,19 +49,19 @@ PLIST_SRC+=		PLIST.cmake
 
 CMAKE_ARGS+=		-DCMAKE_DISABLE_PRECOMPILE_HEADERS:BOOL=ON
 CMAKE_ARGS+=		-DCMAKE_INSTALL_BINDIR:PATH=libexec/wx-3.2
-. if ${OPSYS} != "Linux"
+.  if ${OPSYS} != "Linux"
 # https://github.com/wxWidgets/wxWidgets/issues/22646
 CMAKE_ARGS+=		-DwxUSE_JOYSTICK:BOOL=OFF
-. endif
+.  endif
 
 SUBST_CLASSES+=		unwrap
 SUBST_STAGE.unwrap=	post-build
 SUBST_MESSAGE.unwrap=	Unwrapping wx-config.
-. if ${OPSYS} != "Darwin"
+.  if ${OPSYS} != "Darwin"
 SUBST_FILES.unwrap=	lib/wx/config/gtk3-unicode-3.2
-. else
+.  else
 SUBST_FILES.unwrap=	lib/wx/config/osx_cocoa-unicode-3.2
-. endif
+.  endif
 SUBST_SED.unwrap=	-e 's,EGREP=.*,EGREP=${EGREP},'
 SUBST_SED.unwrap+=	-e 's,echo.*/${CC}",echo "${CC}",'
 SUBST_SED.unwrap+=	-e 's,echo.*/${CXX}",echo "${CXX}",'
