@@ -1,9 +1,35 @@
-$NetBSD: patch-configure,v 1.1 2022/07/26 02:58:56 dbj Exp $
+$NetBSD: patch-configure,v 1.2 2022/07/29 13:14:59 wiz Exp $
 
 Fixup invocation of install_name_tool on wxrc
 
 --- configure.orig	2022-07-06 14:19:50.000000000 +0000
 +++ configure
+@@ -26288,13 +26288,13 @@ fi
+ 
+ 
+         if test "$ac_cv_header_png_h" = "yes"; then
+-            { $as_echo "$as_me:${as_lineno-$LINENO}: checking for png_sig_cmp in -lpng" >&5
+-$as_echo_n "checking for png_sig_cmp in -lpng... " >&6; }
++            { $as_echo "$as_me:${as_lineno-$LINENO}: checking for png_sig_cmp in -lpng16" >&5
++$as_echo_n "checking for png_sig_cmp in -lpng16... " >&6; }
+ if ${ac_cv_lib_png_png_sig_cmp+:} false; then :
+   $as_echo_n "(cached) " >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lpng -lz -lm $LIBS"
++LIBS="-lpng16 -lz -lm $LIBS"
+ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ 
+@@ -26325,7 +26325,7 @@ fi
+ { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_png_png_sig_cmp" >&5
+ $as_echo "$ac_cv_lib_png_png_sig_cmp" >&6; }
+ if test "x$ac_cv_lib_png_png_sig_cmp" = xyes; then :
+-  PNG_LINK=" -lpng -lz"
++  PNG_LINK=" -lpng16 -lz"
+ fi
+ 
+         fi
 @@ -27356,7 +27356,7 @@ $as_echo "$as_me: WARNING: XML library n
      USE_XML=0
  else
