@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3595 2022/07/29 16:35:25 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3596 2022/07/29 16:39:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5380,3 +5380,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added u-boot-pinecube version 2022.04 [thorpej 2022-07-29]
 	Updated x11/gtk4 to 4.6.6 [wiz 2022-07-29]
 	Added devel/libadwaita version 1.0.5 [wiz 2022-07-29]
+	Updated devel/libadwaita to 1.1.3 [wiz 2022-07-29]
