@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2021/08/12 07:25:54 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2022/07/29 13:49:41 thorpej Exp $
 #
 
 .include "../../sysutils/u-boot/u-boot-version.mk"
@@ -70,6 +70,7 @@ DEPENDS+=	u-boot-pine-h64-[0-9]*:../../sysutils/u-boot-pine-h64
 DEPENDS+=	u-boot-pine64-[0-9]*:../../sysutils/u-boot-pine64
 DEPENDS+=	u-boot-pinebook-[0-9]*:../../sysutils/u-boot-pinebook
 DEPENDS+=	u-boot-pinebook-pro-[0-9]*:../../sysutils/u-boot-pinebook-pro
+DEPENDS+=	u-boot-pinecube-[0-9]*:../../sysutils/u-boot-pinecube
 DEPENDS+=	u-boot-pocketchip-[0-9]*:../../sysutils/u-boot-pocketchip
 DEPENDS+=	u-boot-rock64-[0-9]*:../../sysutils/u-boot-rock64
 DEPENDS+=	u-boot-rockpro64-[0-9]*:../../sysutils/u-boot-rockpro64
