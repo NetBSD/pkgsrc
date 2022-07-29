@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2022/07/11 18:27:07 schmonz Exp $
+# $NetBSD: Makefile,v 1.49 2022/07/29 15:21:41 schmonz Exp $
 
 .include "../../textproc/xapian/Makefile.common"
 
@@ -8,7 +8,7 @@ HOMEPAGE=		https://xapian.org/docs/omega/overview.html
 COMMENT=		Search engine application for websites using Xapian
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
-USE_TOOLS+=		perl:run
+USE_TOOLS+=		perl:run pkg-config
 
 TEST_TARGET=		check
 
