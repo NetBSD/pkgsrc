@@ -1,7 +1,10 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/01/12 13:39:46 xtraeme Exp $
+$NetBSD: patch-Makefile,v 1.1 2022/07/29 06:04:25 rin Exp $
 
---- Makefile.orig	2004-05-19 23:23:50.000000000 +0200
-+++ Makefile	2005-01-12 09:43:05.000000000 +0100
+- Do not hardcode paths and tools.
+- Switch from imlib2-config to pkg-config.
+
+--- Makefile.orig	2004-05-20 06:23:50.000000000 +0900
++++ Makefile	2022-07-29 02:24:37.776750501 +0900
 @@ -1,10 +1,7 @@
 -PREFIX = /usr/local
  BINDIR = ${PREFIX}/bin
@@ -10,12 +13,12 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/01/12 13:39:46 xtraeme Exp $
 -
 -CFLAGS += -I${X11PREFIX}/include `imlib2-config --cflags` `pkg-config xft --cflags` -g -pedantic -Wall
 -LDFLAGS += -L${X11PREFIX}/lib -lX11 -lm `imlib2-config --libs` `pkg-config xft --libs`
-+CFLAGS += -I${X11BASE}/include `imlib2-config --cflags` `pkg-config xft --cflags` -pedantic -Wall
-+LDFLAGS += -L${X11BASE}/lib -lX11 -lm `imlib2-config --libs` `pkg-config xft --libs`
++CFLAGS += -I${X11BASE}/include `pkg-config imlib2 --cflags` `pkg-config xft --cflags` -pedantic -Wall
++LDFLAGS += -L${X11BASE}/lib -lX11 -lm `pkg-config imlib2 --libs` `pkg-config xft --libs`
  
  # Comment these out to disable Xinerama support
  CFLAGS += -DXINERAMA
-@@ -21,11 +18,11 @@
+@@ -21,11 +18,11 @@ HEADERS = skippy.h wm.h dlist.h mainwin.
  all: skippy${EXESUFFIX}
  
  skippy${EXESUFFIX}: Makefile ${SOURCES} ${HEADERS}
