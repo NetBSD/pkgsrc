@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2022/02/05 12:11:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2022/07/29 09:07:09 adam Exp $
 bin/uvicorn-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -12,6 +12,9 @@ ${PYSITELIB}/uvicorn/__init__.pyo
 ${PYSITELIB}/uvicorn/__main__.py
 ${PYSITELIB}/uvicorn/__main__.pyc
 ${PYSITELIB}/uvicorn/__main__.pyo
+${PYSITELIB}/uvicorn/_subprocess.py
+${PYSITELIB}/uvicorn/_subprocess.pyc
+${PYSITELIB}/uvicorn/_subprocess.pyo
 ${PYSITELIB}/uvicorn/_types.py
 ${PYSITELIB}/uvicorn/_types.pyc
 ${PYSITELIB}/uvicorn/_types.pyo
@@ -102,9 +105,6 @@ ${PYSITELIB}/uvicorn/protocols/websockets/wsproto_impl.pyo
 ${PYSITELIB}/uvicorn/server.py
 ${PYSITELIB}/uvicorn/server.pyc
 ${PYSITELIB}/uvicorn/server.pyo
-${PYSITELIB}/uvicorn/subprocess.py
-${PYSITELIB}/uvicorn/subprocess.pyc
-${PYSITELIB}/uvicorn/subprocess.pyo
 ${PYSITELIB}/uvicorn/supervisors/__init__.py
 ${PYSITELIB}/uvicorn/supervisors/__init__.pyc
 ${PYSITELIB}/uvicorn/supervisors/__init__.pyo
@@ -117,6 +117,9 @@ ${PYSITELIB}/uvicorn/supervisors/multiprocess.pyo
 ${PYSITELIB}/uvicorn/supervisors/statreload.py
 ${PYSITELIB}/uvicorn/supervisors/statreload.pyc
 ${PYSITELIB}/uvicorn/supervisors/statreload.pyo
+${PYSITELIB}/uvicorn/supervisors/watchfilesreload.py
+${PYSITELIB}/uvicorn/supervisors/watchfilesreload.pyc
+${PYSITELIB}/uvicorn/supervisors/watchfilesreload.pyo
 ${PYSITELIB}/uvicorn/supervisors/watchgodreload.py
 ${PYSITELIB}/uvicorn/supervisors/watchgodreload.pyc
 ${PYSITELIB}/uvicorn/supervisors/watchgodreload.pyo
