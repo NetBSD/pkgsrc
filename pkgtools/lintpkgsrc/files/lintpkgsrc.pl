@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.36 2022/07/30 10:55:51 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.37 2022/07/30 11:33:23 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -78,23 +78,11 @@ sub pkgs($@) {
 
 sub store($) {
 	my $self = shift;
-	my @pkgs = keys %{$self->{_pkgs}};
-	my ($cnt, $subcnt) = $self->count;
 
-	print("\$pkgcnt = $cnt;\n");
-	print("\$subpkgcnt = $subcnt;\n");
-	map($self->{_pkgs}{$_}->store, keys %{$self->{_pkgs}});
-}
-
-sub count($) {
-	my $self = shift;
-	my ($pkgcnt, $pkgsubcnt);
-
-	map {
-		$pkgcnt++;
-		$pkgsubcnt += $self->{_pkgs}{$_}->count;
-	} keys %{$self->{_pkgs}};
-	wantarray ? ($pkgcnt, $pkgsubcnt) : $pkgcnt;
+	my $pkgs = $self->{_pkgs};
+	foreach my $pkg (sort keys %$pkgs) {
+		$pkgs->{$pkg}->store();
+	}
 }
 
 # Pkgs is all versions of a given package (eg: apache-1.x and apache-2.x)
@@ -148,14 +136,10 @@ sub latestver($) {
 sub store($) {
 	my $self = shift;
 
-	print("\$pkgnum++;\n");
-	map($self->{_pkgver}{$_}->store, keys %{$self->{_pkgver}});
-}
-
-sub count($) {
-	my $self = shift;
-
-	scalar(keys %{$self->{_pkgver}});
+	my $pkgvers = $self->{_pkgver};
+	foreach my $pkgver (sort keys %$pkgvers) {
+		$pkgvers->{$pkgver}->store();
+	}
 }
 
 # PkgVer is a unique package+version
@@ -207,17 +191,19 @@ sub vars($) {
 
 sub store($) {
 	my $self = shift;
-	my $data;
 
-	($data = $self->{_pkg}) =~ s/([\\\$\@\%\"])/\\$1/g;
-	print("\$pkgver = \$pkglist->add(\"$data\", \"");
+	my $name = $self->{_pkg};
+	my $ver = $self->{_ver};
 
-	($data = $self->{_ver}) =~ s/([\\\$\@\%\"])/\\$1/g;
-	print("$data\"); __pkgcount(1);\n");
+	$name =~ /\s/ and die "cannot store package name '$name'\n";
+	$ver =~ /\s/ and die "cannot store package version '$ver'\n";
+	printf("package\t%s\t%s\n", $name, $ver);
 
-	foreach ($self->vars) {
-		($data = $self->{$_}) =~ s/([\\\$\@\%\"])/\\$1/g;
-		print("\$pkgver->var(\"$_\", \"$data\");\n");
+	foreach my $varname (sort $self->vars) {
+		my $value = $self->{$varname};
+		$varname =~ /\s/ and die "cannot store variable name '$varname'\n";
+		$value =~ /\n/ and die "cannot store variable value '$value'\n";
+		printf("var\t%s\t%s\n", $varname, $value);
 	}
 }
 
@@ -397,8 +383,7 @@ sub parse_eval_make_false($$) {
 
 	# XXX Could do something with target
 	while ($test =~ /(target|empty|make|defined|exists)\s*\(([^()]+)\)/) {
-		my $testname = $1;
-		my $varname = $2;
+		my ($testname, $varname) = ($1, $2);
 		my $var;
 
 		# Implement (some of) make's :M modifier
@@ -1175,14 +1160,23 @@ sub safe_chdir($) {
 }
 
 sub load_pkgsrc_makefiles($) {
+	my ($fname) = @_;
 
-	open(STORE, "<$_[0]") || die("Cannot read pkgsrc store from $_[0]: $!\n");
+	open(STORE, "<", $fname)
+	    or die("Cannot read pkgsrc store from $fname: $!\n");
 	my ($pkgver);
-	our ($pkgcnt, $pkgnum, $subpkgcnt, $subpkgnum);
-	$pkglist = new PkgList;
-	while (<STORE>) {
-		debug("eval store $_");
-		eval $_;
+	$pkglist = PkgList->new;
+	while (defined(my $line = <STORE>)) {
+		chomp($line);
+		if ($line =~ qr"^package\t([^\t]+)\t([^\t]+$)$") {
+			$pkgver = $pkglist->add($1, $2);
+		} elsif ($line =~ qr"^var\t([^\t]+)\t(.*)$") {
+			$pkgver->var($1, $2);
+		} elsif ($line =~ qr"^sub ") {
+			die "Outdated cache format in '$fname'\n";
+		} else {
+			die "Invalid line '$line' in cache '$fname'\n";
+		}
 	}
 	close(STORE);
 }
@@ -1377,18 +1371,15 @@ sub scan_pkgsrc_distfiles_vs_distinfo($$$$) {
 }
 
 sub store_pkgsrc_makefiles($) {
-	open(STORE, ">$_[0]") || die("Cannot save pkgsrc store to $_[0]: $!\n");
-	my $was = select(STORE);
-	print(
-	    'sub __pkgcount { $subpkgnum += $_[0]; ',
-	    'verbose("\rReading pkgsrc database: ',
-	    '$pkgnum / $pkgcnt ($subpkgnum / $subpkgcnt) pkgs"); }',
-	    "\n"
-	);
-	$pkglist->store;
-	print("verbose(\"...done\\n\");\n");
-	select($was);
-	close(STORE);
+	my ($fname) = @_;
+
+	open(STORE, ">", $fname)
+	    or die("Cannot save pkgsrc store to $fname: $!\n");
+	my $prev = select(STORE);
+	$pkglist->store();
+	select($prev);
+	close(STORE)
+	    or die("Cannot save pkgsrc store to $fname: $!\n");
 }
 
 # Remember to update manual page when modifying option list
