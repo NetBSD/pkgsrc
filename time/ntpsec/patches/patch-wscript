@@ -1,10 +1,10 @@
-$NetBSD: patch-wscript,v 1.2 2020/08/15 02:31:28 tnn Exp $
+$NetBSD: patch-wscript,v 1.3 2022/07/30 01:22:07 tnn Exp $
 
 - don't hardcode PREFIX
 
---- wscript.orig	2020-05-24 03:00:19.000000000 +0000
+--- wscript.orig	2021-06-07 04:03:11.000000000 +0000
 +++ wscript
-@@ -497,18 +497,10 @@ int main(int argc, char **argv) {
+@@ -507,25 +507,12 @@ int main(int argc, char **argv) {
  
      # XXX: hack
      if ctx.env.DEST_OS in ["freebsd"]:
@@ -15,6 +15,14 @@ $NetBSD: patch-wscript,v 1.2 2020/08/15 02:31:28 tnn Exp $
 -        ctx.env.INCLUDES = ["/usr/pkg/include"]
 -        ctx.env.LIBPATH = ["/usr/pkg/lib"]
 -        ctx.env.LDFLAGS += ["-rpath=/usr/pkg/lib"]
++        pass
+     elif ctx.env.DEST_OS == "linux" and os.path.isdir("/usr/local/ssl/"):
+-        # This supports building OpenSSL from source
+-        # That allows using OpenSSL 1.1.1 on older CentOS
+-        # or testing pre-release versions of OpenSSL
+-        # see HOWTO-OpenSSL
+-        ctx.env.INCLUDES = ["/usr/local/ssl/include"]
+-        ctx.env.LIBPATH = ["/usr/local/ssl/lib"]
 +        pass
      elif ctx.env.DEST_OS == "darwin":
 -        # macports location

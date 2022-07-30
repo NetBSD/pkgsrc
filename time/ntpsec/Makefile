@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2022/07/30 00:00:57 tnn Exp $
+# $NetBSD: Makefile,v 1.18 2022/07/30 01:22:07 tnn Exp $
 
-DISTNAME=	ntpsec-1.1.9
-PKGREVISION=	7
+DISTNAME=	ntpsec-1.2.1
 CATEGORIES=	time
 MASTER_SITES=	https://ftp.ntpsec.org/pub/releases/
 
@@ -17,6 +16,7 @@ BUILD_DEPENDS+=	waf-[0-9]*:../../devel/waf
 
 USE_TOOLS+=		bison m4 pkg-config
 WAF_CONFIGURE_ARGS+=	--python=${PYTHONBIN}
+WAF_CONFIGURE_ARGS+=	--pyshebang=${PYTHONBIN}
 # pkgsrc python PLIST logic expects all python-3.x extensions to use -O1,
 # but I can't figure out how to pass it through waf, so disable precompiled
 # python files for now ...
@@ -27,7 +27,6 @@ WAF_ENV+=		BIN_A2X=${PREFIX}/bin/a2x
 WAF_ENV+=		BIN_XSLTPROC=${PREFIX}/bin/xsltproc
 
 RCD_SCRIPTS=		ntpd
-REPLACE_PYTHON+=	ntpclients/*.py
 PY_PATCHPLIST=		yes
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27

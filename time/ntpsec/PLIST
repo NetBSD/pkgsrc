@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2020/08/15 02:31:28 tnn Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/07/30 01:22:07 tnn Exp $
 bin/ntpdig
 bin/ntpfrob
 bin/ntpkeygen
@@ -13,13 +13,16 @@ bin/ntptime
 bin/ntptrace
 bin/ntpviz
 bin/ntpwait
+lib/libntpc.so
+lib/libntpc.so.1
+lib/libntpc.so.1.1.0
 ${PYSITELIB}/ntp-${PKGVERSION}.egg-info
 ${PYSITELIB}/ntp/__init__.py
 ${PYSITELIB}/ntp/agentx.py
 ${PYSITELIB}/ntp/agentx_packet.py
 ${PYSITELIB}/ntp/control.py
 ${PYSITELIB}/ntp/magic.py
-${PYSITELIB}/ntp/ntpc.so
+${PYSITELIB}/ntp/ntpc.py
 ${PYSITELIB}/ntp/packet.py
 ${PYSITELIB}/ntp/poly.py
 ${PYSITELIB}/ntp/statfiles.py
