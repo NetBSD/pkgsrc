@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.34 2022/07/30 09:37:21 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.35 2022/07/30 10:11:45 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -302,7 +302,7 @@ sub canonicalize_pkgname($) {
 }
 
 sub convert_to_standard_pkgversion(@) {
-	my ($elem, $underscore, @temp);
+	my ($elem, @temp);
 
 	# See pkg_install/lib/dewey.c.
 	# 'nb' has already been handled when we are here.
@@ -1800,4 +1800,4 @@ sub main() {
 	}
 }
 
-main();
+main() unless $ENV{'TESTING_LINTPKGSRC'} eq 'yes';
