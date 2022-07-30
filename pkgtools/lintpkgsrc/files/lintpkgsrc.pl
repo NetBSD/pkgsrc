@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.26 2022/07/30 06:56:40 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.27 2022/07/30 07:37:03 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -44,327 +44,9 @@ sub get_default_makefile_vars();
 sub fail($);
 sub parse_makefile_pkgsrc($);
 
-$ENV{PATH} .=
-    ":/bin:/usr/bin:/sbin:/usr/sbin:$conf_prefix/sbin:$conf_prefix/bin";
-
-if (
-    !getopts('BDE:I:K:LM:OP:RSVdg:himopruyz', \%opt)
-	|| $opt{h}
-	|| !(defined $opt{d}
-	|| defined $opt{g}
-	|| defined $opt{i}
-	|| defined $opt{m}
-	|| defined $opt{o}
-	|| defined $opt{p}
-	|| defined $opt{r}
-	|| defined $opt{u}
-	|| defined $opt{B}
-	|| defined $opt{D}
-	|| defined $opt{R}
-	|| defined $opt{O}
-	|| defined $opt{S}
-	|| defined $opt{E}
-	|| defined $opt{y}
-	|| defined $opt{z})) {
-	usage_and_exit();
-}
-$| = 1;
-
 # Horrible kludge to ensure we have a value for testing in conditionals, but
 # gets removed in the final evaluation
 my $magic_undefined = 'M_a_G_i_C_uNdEfInEd';
-
-get_default_makefile_vars(); # $default_vars
-
-if ($opt{D} && @ARGV) {
-	foreach my $file (@ARGV) {
-		if (-d $file) {
-			$file .= "/Makefile";
-		}
-		if (!-f $file) {
-			fail("No such file: $file");
-		}
-		my ($pkgname, $vars) = parse_makefile_pkgsrc($file);
-		$pkgname ||= 'uNDEFINEd';
-		print "$file -> $pkgname\n";
-		foreach my $varname (sort keys %{$vars}) {
-			print "\t$varname = $vars->{$varname}\n";
-		}
-
-		#if ($opt{d}) {
-		#	pkgsrc_check_depends();
-		#}
-	}
-	exit;
-}
-
-sub main() {
-	my ($pkgsrcdir, $pkgdistdir);
-
-	$pkgsrcdir = $default_vars->{PKGSRCDIR};
-	$pkgdistdir = $default_vars->{DISTDIR};
-
-	if ($opt{r} && !$opt{o} && !$opt{m} && !$opt{p}) {
-		$opt{o} = $opt{m} = $opt{p} = 1;
-	}
-	if ($opt{o} || $opt{m}) {
-		my (@baddist);
-
-		@baddist = scan_pkgsrc_distfiles_vs_distinfo(
-		    $pkgsrcdir, $pkgdistdir, $opt{o}, $opt{m});
-		if ($opt{r}) {
-			verbose("Unlinking 'bad' distfiles\n");
-			foreach my $distfile (@baddist) {
-				unlink("$pkgdistdir/$distfile");
-			}
-		}
-	}
-
-	# Remove all distfiles that are / are not part of an installed package
-	if ($opt{y} || $opt{z}) {
-		my (@pkgs, @installed, %distfiles, @pkgdistfiles, @dldistfiles);
-		my (@tmpdistfiles, @orphan, $found, @parent);
-
-		@pkgs = list_installed_packages();
-		scan_pkgsrc_makefiles($pkgsrcdir);
-
-		# list the installed packages and the directory they live in
-		foreach my $pkgname (sort @pkgs) {
-			if ($pkgname =~ /^([^*?[]+)-([\d*?[].*)/) {
-				foreach my $pkgver ($pkglist->pkgver($1)) {
-					$pkgver->var('dir') =~ /-current/ && next;
-					push(@installed, $pkgver);
-					last;
-				}
-			}
-		}
-
-		# distfiles belonging to the currently installed packages
-		foreach my $pkgver (sort @installed) {
-			if (open(DISTINFO, "$pkgsrcdir/" . $pkgver->var('dir') . "/distinfo")) {
-				while (<DISTINFO>) {
-					if (m/^(\w+) ?\(([^\)]+)\) = (\S+)/) {
-						my ($dn);
-						if ($2 =~ /^patch-[\w.+\-]+$/) { next; }
-						$dn = $2;
-						# Strip leading ./ which sometimes gets added
-						# because of DISTSUBDIR=.
-						$dn =~ s/^(\.\/)*//;
-						if (!defined $distfiles{$dn}) {
-							$distfiles{$dn}{name} = $dn;
-							push(@pkgdistfiles, $dn);
-						}
-					}
-				}
-				close(DISTINFO);
-			}
-		}
-
-		# distfiles downloaded on the current system
-		@tmpdistfiles = listdir("$pkgdistdir", undef);
-		foreach my $tmppkg (@tmpdistfiles) {
-			if ($tmppkg ne "pkg-vulnerabilities") {
-				push(@dldistfiles, $tmppkg);
-			}
-		}
-
-		# sort the two arrays to make searching a bit faster
-		@dldistfiles = sort { $a cmp $b } @dldistfiles;
-		@pkgdistfiles = sort { $a cmp $b } @pkgdistfiles;
-
-		if ($opt{y}) {
-			# looking for files that are downloaded on the current system
-			# but do not belong to any currently installed package i.e. orphaned
-			$found = 0;
-			foreach my $dldf (@dldistfiles) {
-				foreach my $pkgdf (@pkgdistfiles) {
-					if ($dldf eq $pkgdf) {
-						$found = 1;
-					}
-				}
-				if ($found != 1) {
-					push(@orphan, $dldf);
-					print "Orphaned file: $dldf\n";
-				}
-				$found = 0;
-			}
-
-			if ($opt{r}) {
-				safe_chdir("$pkgdistdir");
-				verbose("Unlinking 'orphaned' distfiles\n");
-				foreach my $distfile (@orphan) {
-					unlink($distfile)
-				}
-			}
-		}
-
-		if ($opt{z}) {
-			# looking for files that are downloaded on the current system
-			# but belong to a currently installed package i.e. parented
-			$found = 0;
-			foreach my $pkgdf (@pkgdistfiles) {
-				foreach my $dldf (@dldistfiles) {
-					if ($pkgdf eq $dldf) {
-						$found = 1;
-					}
-				}
-				if ($found == 1) {
-					push(@parent, $pkgdf);
-					print "Parented file: $pkgdf\n";
-				}
-				$found = 0;
-			}
-		}
-
-		if ($opt{r}) {
-			safe_chdir("$pkgdistdir");
-			verbose("Unlinking 'parented' distfiles\n");
-			foreach my $distfile (@parent) {
-				unlink($distfile);
-			}
-		}
-	}
-
-	# List BROKEN packages
-	if ($opt{B}) {
-		scan_pkgsrc_makefiles($pkgsrcdir);
-		foreach my $pkgver ($pkglist->pkgver) {
-			$pkgver->var('BROKEN') || next;
-			print $pkgver->pkgname . ': ' . $pkgver->var('BROKEN') . "\n";
-		}
-	}
-
-	# List obsolete or NO_BIN_ON_FTP/RESTRICTED prebuilt packages
-	#
-	if ($opt{p} || $opt{O} || $opt{R}) {
-		scan_pkgsrc_makefiles($pkgsrcdir);
-
-		@prebuilt_pkgdirs = ($default_vars->{PACKAGES});
-		%prebuilt_pkgdir_cache = ();
-
-		while (@prebuilt_pkgdirs) {
-			find(\&check_prebuilt_packages, shift @prebuilt_pkgdirs);
-		}
-
-		if ($opt{r}) {
-			verbose("Unlinking listed prebuilt packages\n");
-			foreach my $pkgfile (@matched_prebuiltpackages) {
-				unlink($pkgfile);
-			}
-		}
-	}
-
-	if ($opt{S}) {
-		my (%in_subdir);
-
-		foreach my $cat (list_pkgsrc_categories($pkgsrcdir)) {
-			my $vars = parse_makefile_vars("$pkgsrcdir/$cat/Makefile");
-
-			if (!$vars->{SUBDIR}) {
-				print "Warning - no SUBDIR for $cat\n";
-				next;
-			}
-			foreach my $pkgdir (split(/\s+/, $vars->{SUBDIR})) {
-				$in_subdir{"$cat/$pkgdir"} = 1;
-			}
-		}
-
-		scan_pkgsrc_makefiles($pkgsrcdir);
-		foreach my $pkgver ($pkglist->pkgver) {
-			if (!defined $in_subdir{ $pkgver->var('dir') }) {
-				print $pkgver->var('dir') . ": Not in SUBDIR\n";
-			}
-		}
-	}
-
-	if ($opt{g}) {
-		my $tmpfile = "$opt{g}.tmp.$$";
-
-		scan_pkgsrc_makefiles($pkgsrcdir);
-		if (!open(TABLE, ">$tmpfile")) {
-			fail("Unable to write '$tmpfile': $!");
-		}
-		foreach my $pkgver ($pkglist->pkgver) {
-			print TABLE $pkgver->pkg . "\t"
-			    . $pkgver->var('dir') . "\t"
-			    . $pkgver->ver . "\n";
-		}
-		if (!close(TABLE)) {
-			fail("Error while writing '$tmpfile': $!");
-		}
-		if (!rename($tmpfile, $opt{g})) {
-			fail("Error in rename('$tmpfile','$opt{g}'): $!");
-		}
-	}
-
-	if ($opt{d}) {
-		scan_pkgsrc_makefiles($pkgsrcdir);
-		pkgsrc_check_depends();
-	}
-
-	if ($opt{i} || $opt{u}) {
-		my (@pkgs, @update);
-
-		@pkgs = list_installed_packages();
-		scan_pkgsrc_makefiles($pkgsrcdir);
-
-		foreach my $pkgname (sort @pkgs) {
-			if ($_ = invalid_version($pkgname)) {
-				print $_;
-
-				if ($pkgname =~ /^([^*?[]+)-([\d*?[].*)/) {
-					foreach my $pkgver ($pkglist->pkgver($1)) {
-						$pkgver->var('dir') =~ /-current/ && next;
-						push(@update, $pkgver);
-						last;
-					}
-				}
-			}
-		}
-
-		if ($opt{u}) {
-			print "\nREQUIRED details for packages that could be updated:\n";
-
-			foreach my $pkgver (@update) {
-				print $pkgver->pkg . ':';
-				if (open(PKGINFO, 'pkg_info -R ' . $pkgver->pkg . '|')) {
-					my ($list);
-
-					while (<PKGINFO>) {
-						if (/Required by:/) {
-							$list = 1;
-						} elsif ($list) {
-							chomp;
-							s/-\d.*//;
-							print " $_";
-						}
-					}
-					close(PKGINFO);
-				}
-				print "\n";
-			}
-
-			print "\nRunning '$conf_make fetch-list | sh' for each package:\n";
-			foreach my $pkgver (@update) {
-				my ($pkgdir);
-
-				$pkgdir = $pkgver->var('dir');
-				if (!defined($pkgdir)) {
-					fail('Unable to determine ' . $pkgver->pkg . ' directory');
-				}
-
-				print "$pkgsrcdir/$pkgdir\n";
-				safe_chdir("$pkgsrcdir/$pkgdir");
-				system("$conf_make fetch-list | sh");
-			}
-		}
-	}
-
-	if ($opt{E}) {
-		scan_pkgsrc_makefiles($pkgsrcdir);
-		store_pkgsrc_makefiles($opt{E});
-	}
-}
 
 sub canonicalize_pkgname($) {
 	my ($pkgname) = @_;
@@ -567,12 +249,12 @@ sub get_default_makefile_vars() {
 	$default_vars->{X11BASE} = '/usr/X11R6';
 
 	my ($vars);
-	if (-f '/etc/mk.conf' && ($vars = parse_makefile_vars('/etc/mk.conf'))) {
+	if (-f '/etc/mk.conf' && ($vars = parse_makefile_vars('/etc/mk.conf', undef))) {
 		foreach my $var (keys %{$vars}) {
 			$default_vars->{$var} = $vars->{$var};
 		}
 	} elsif (-f "$conf_sysconfdir/mk.conf" &&
-	    ($vars = parse_makefile_vars("$conf_sysconfdir/mk.conf"))) {
+	    ($vars = parse_makefile_vars("$conf_sysconfdir/mk.conf", undef))) {
 		foreach my $var (keys %{$vars}) {
 			$default_vars->{$var} = $vars->{$var};
 		}
@@ -875,7 +557,7 @@ sub parse_makefile_pkgsrc($) {
 	my ($file) = @_;
 	my ($pkgname, $vars);
 
-	$vars = parse_makefile_vars($file);
+	$vars = parse_makefile_vars($file, undef);
 
 	if (!$vars) {
 
@@ -1377,8 +1059,8 @@ sub safe_chdir($) {
 
 # Generate pkgname->category/pkg mapping, optionally check DEPENDS
 #
-sub scan_pkgsrc_makefiles($$) {
-	my ($pkgsrcdir, $check_depends) = @_;
+sub scan_pkgsrc_makefiles($) {
+	my ($pkgsrcdir) = @_;
 	my (@categories);
 
 	if ($pkglist) {
@@ -1577,7 +1259,7 @@ sub load_pkgsrc_makefiles() {
 	close(STORE);
 }
 
-sub store_pkgsrc_makefiles() {
+sub store_pkgsrc_makefiles($) {
 	open(STORE, ">$_[0]") || die("Cannot save pkgsrc store to $_[0]: $!\n");
 	my $was = select(STORE);
 	print(
@@ -1838,5 +1520,322 @@ sub store($) {
 }
 
 package main;
+
+sub main() {
+
+	$ENV{PATH} .=
+	    ":/bin:/usr/bin:/sbin:/usr/sbin:$conf_prefix/sbin:$conf_prefix/bin";
+
+	if (
+	    !getopts('BDE:I:K:LM:OP:RSVdg:himopruyz', \%opt)
+		|| $opt{h}
+		|| !(defined $opt{d}
+		|| defined $opt{g}
+		|| defined $opt{i}
+		|| defined $opt{m}
+		|| defined $opt{o}
+		|| defined $opt{p}
+		|| defined $opt{r}
+		|| defined $opt{u}
+		|| defined $opt{B}
+		|| defined $opt{D}
+		|| defined $opt{R}
+		|| defined $opt{O}
+		|| defined $opt{S}
+		|| defined $opt{E}
+		|| defined $opt{y}
+		|| defined $opt{z})) {
+		usage_and_exit();
+	}
+	$| = 1;
+
+	get_default_makefile_vars(); # $default_vars
+
+	if ($opt{D} && @ARGV) {
+		foreach my $file (@ARGV) {
+			if (-d $file) {
+				$file .= "/Makefile";
+			}
+			if (!-f $file) {
+				fail("No such file: $file");
+			}
+			my ($pkgname, $vars) = parse_makefile_pkgsrc($file);
+			$pkgname ||= 'uNDEFINEd';
+			print "$file -> $pkgname\n";
+			foreach my $varname (sort keys %{$vars}) {
+				print "\t$varname = $vars->{$varname}\n";
+			}
+
+			#if ($opt{d}) {
+			#	pkgsrc_check_depends();
+			#}
+		}
+		exit;
+	}
+
+	my $pkgsrcdir = $default_vars->{PKGSRCDIR};
+	my $pkgdistdir = $default_vars->{DISTDIR};
+
+	if ($opt{r} && !$opt{o} && !$opt{m} && !$opt{p}) {
+		$opt{o} = $opt{m} = $opt{p} = 1;
+	}
+	if ($opt{o} || $opt{m}) {
+		my (@baddist);
+
+		@baddist = scan_pkgsrc_distfiles_vs_distinfo(
+		    $pkgsrcdir, $pkgdistdir, $opt{o}, $opt{m});
+		if ($opt{r}) {
+			verbose("Unlinking 'bad' distfiles\n");
+			foreach my $distfile (@baddist) {
+				unlink("$pkgdistdir/$distfile");
+			}
+		}
+	}
+
+	# Remove all distfiles that are / are not part of an installed package
+	if ($opt{y} || $opt{z}) {
+		my (@pkgs, @installed, %distfiles, @pkgdistfiles, @dldistfiles);
+		my (@tmpdistfiles, @orphan, $found, @parent);
+
+		@pkgs = list_installed_packages();
+		scan_pkgsrc_makefiles($pkgsrcdir);
+
+		# list the installed packages and the directory they live in
+		foreach my $pkgname (sort @pkgs) {
+			if ($pkgname =~ /^([^*?[]+)-([\d*?[].*)/) {
+				foreach my $pkgver ($pkglist->pkgver($1)) {
+					$pkgver->var('dir') =~ /-current/ && next;
+					push(@installed, $pkgver);
+					last;
+				}
+			}
+		}
+
+		# distfiles belonging to the currently installed packages
+		foreach my $pkgver (sort @installed) {
+			if (open(DISTINFO, "$pkgsrcdir/" . $pkgver->var('dir') . "/distinfo")) {
+				while (<DISTINFO>) {
+					if (m/^(\w+) ?\(([^\)]+)\) = (\S+)/) {
+						my ($dn);
+						if ($2 =~ /^patch-[\w.+\-]+$/) { next; }
+						$dn = $2;
+						# Strip leading ./ which sometimes gets added
+						# because of DISTSUBDIR=.
+						$dn =~ s/^(\.\/)*//;
+						if (!defined $distfiles{$dn}) {
+							$distfiles{$dn}{name} = $dn;
+							push(@pkgdistfiles, $dn);
+						}
+					}
+				}
+				close(DISTINFO);
+			}
+		}
+
+		# distfiles downloaded on the current system
+		@tmpdistfiles = listdir("$pkgdistdir", undef);
+		foreach my $tmppkg (@tmpdistfiles) {
+			if ($tmppkg ne "pkg-vulnerabilities") {
+				push(@dldistfiles, $tmppkg);
+			}
+		}
+
+		# sort the two arrays to make searching a bit faster
+		@dldistfiles = sort { $a cmp $b } @dldistfiles;
+		@pkgdistfiles = sort { $a cmp $b } @pkgdistfiles;
+
+		if ($opt{y}) {
+			# looking for files that are downloaded on the current system
+			# but do not belong to any currently installed package i.e. orphaned
+			$found = 0;
+			foreach my $dldf (@dldistfiles) {
+				foreach my $pkgdf (@pkgdistfiles) {
+					if ($dldf eq $pkgdf) {
+						$found = 1;
+					}
+				}
+				if ($found != 1) {
+					push(@orphan, $dldf);
+					print "Orphaned file: $dldf\n";
+				}
+				$found = 0;
+			}
+
+			if ($opt{r}) {
+				safe_chdir("$pkgdistdir");
+				verbose("Unlinking 'orphaned' distfiles\n");
+				foreach my $distfile (@orphan) {
+					unlink($distfile)
+				}
+			}
+		}
+
+		if ($opt{z}) {
+			# looking for files that are downloaded on the current system
+			# but belong to a currently installed package i.e. parented
+			$found = 0;
+			foreach my $pkgdf (@pkgdistfiles) {
+				foreach my $dldf (@dldistfiles) {
+					if ($pkgdf eq $dldf) {
+						$found = 1;
+					}
+				}
+				if ($found == 1) {
+					push(@parent, $pkgdf);
+					print "Parented file: $pkgdf\n";
+				}
+				$found = 0;
+			}
+		}
+
+		if ($opt{r}) {
+			safe_chdir("$pkgdistdir");
+			verbose("Unlinking 'parented' distfiles\n");
+			foreach my $distfile (@parent) {
+				unlink($distfile);
+			}
+		}
+	}
+
+	# List BROKEN packages
+	if ($opt{B}) {
+		scan_pkgsrc_makefiles($pkgsrcdir);
+		foreach my $pkgver ($pkglist->pkgver) {
+			$pkgver->var('BROKEN') || next;
+			print $pkgver->pkgname . ': ' . $pkgver->var('BROKEN') . "\n";
+		}
+	}
+
+	# List obsolete or NO_BIN_ON_FTP/RESTRICTED prebuilt packages
+	#
+	if ($opt{p} || $opt{O} || $opt{R}) {
+		scan_pkgsrc_makefiles($pkgsrcdir);
+
+		@prebuilt_pkgdirs = ($default_vars->{PACKAGES});
+		%prebuilt_pkgdir_cache = ();
+
+		while (@prebuilt_pkgdirs) {
+			find(\&check_prebuilt_packages, shift @prebuilt_pkgdirs);
+		}
+
+		if ($opt{r}) {
+			verbose("Unlinking listed prebuilt packages\n");
+			foreach my $pkgfile (@matched_prebuiltpackages) {
+				unlink($pkgfile);
+			}
+		}
+	}
+
+	if ($opt{S}) {
+		my (%in_subdir);
+
+		foreach my $cat (list_pkgsrc_categories($pkgsrcdir)) {
+			my $vars = parse_makefile_vars("$pkgsrcdir/$cat/Makefile", undef);
+
+			if (!$vars->{SUBDIR}) {
+				print "Warning - no SUBDIR for $cat\n";
+				next;
+			}
+			foreach my $pkgdir (split(/\s+/, $vars->{SUBDIR})) {
+				$in_subdir{"$cat/$pkgdir"} = 1;
+			}
+		}
+
+		scan_pkgsrc_makefiles($pkgsrcdir);
+		foreach my $pkgver ($pkglist->pkgver) {
+			if (!defined $in_subdir{ $pkgver->var('dir') }) {
+				print $pkgver->var('dir') . ": Not in SUBDIR\n";
+			}
+		}
+	}
+
+	if ($opt{g}) {
+		my $tmpfile = "$opt{g}.tmp.$$";
+
+		scan_pkgsrc_makefiles($pkgsrcdir);
+		if (!open(TABLE, ">$tmpfile")) {
+			fail("Unable to write '$tmpfile': $!");
+		}
+		foreach my $pkgver ($pkglist->pkgver) {
+			print TABLE $pkgver->pkg . "\t"
+			    . $pkgver->var('dir') . "\t"
+			    . $pkgver->ver . "\n";
+		}
+		if (!close(TABLE)) {
+			fail("Error while writing '$tmpfile': $!");
+		}
+		if (!rename($tmpfile, $opt{g})) {
+			fail("Error in rename('$tmpfile','$opt{g}'): $!");
+		}
+	}
+
+	if ($opt{d}) {
+		scan_pkgsrc_makefiles($pkgsrcdir);
+		pkgsrc_check_depends();
+	}
+
+	if ($opt{i} || $opt{u}) {
+		my (@pkgs, @update);
+
+		@pkgs = list_installed_packages();
+		scan_pkgsrc_makefiles($pkgsrcdir);
+
+		foreach my $pkgname (sort @pkgs) {
+			if ($_ = invalid_version($pkgname)) {
+				print $_;
+
+				if ($pkgname =~ /^([^*?[]+)-([\d*?[].*)/) {
+					foreach my $pkgver ($pkglist->pkgver($1)) {
+						$pkgver->var('dir') =~ /-current/ && next;
+						push(@update, $pkgver);
+						last;
+					}
+				}
+			}
+		}
+
+		if ($opt{u}) {
+			print "\nREQUIRED details for packages that could be updated:\n";
+
+			foreach my $pkgver (@update) {
+				print $pkgver->pkg . ':';
+				if (open(PKGINFO, 'pkg_info -R ' . $pkgver->pkg . '|')) {
+					my ($list);
+
+					while (<PKGINFO>) {
+						if (/Required by:/) {
+							$list = 1;
+						} elsif ($list) {
+							chomp;
+							s/-\d.*//;
+							print " $_";
+						}
+					}
+					close(PKGINFO);
+				}
+				print "\n";
+			}
+
+			print "\nRunning '$conf_make fetch-list | sh' for each package:\n";
+			foreach my $pkgver (@update) {
+				my ($pkgdir);
+
+				$pkgdir = $pkgver->var('dir');
+				if (!defined($pkgdir)) {
+					fail('Unable to determine ' . $pkgver->pkg . ' directory');
+				}
+
+				print "$pkgsrcdir/$pkgdir\n";
+				safe_chdir("$pkgsrcdir/$pkgdir");
+				system("$conf_make fetch-list | sh");
+			}
+		}
+	}
+
+	if ($opt{E}) {
+		scan_pkgsrc_makefiles($pkgsrcdir);
+		store_pkgsrc_makefiles($opt{E});
+	}
+}
 
 main();
