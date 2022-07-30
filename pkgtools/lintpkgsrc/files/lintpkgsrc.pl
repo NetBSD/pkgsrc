@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.32 2022/07/30 09:23:19 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.33 2022/07/30 09:32:05 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -307,19 +307,15 @@ sub convert_to_standard_pkgversion(@) {
 	# See pkg_install/lib/dewey.c.
 	# 'nb' has already been handled when we are here.
 	foreach $elem (@_) {
-		if ($elem =~ /\d+/) {
+		if ($elem =~ /\d/) {
 			push(@temp, $elem);
-		} elsif ($elem =~ /^pl$/ or $elem =~ /^\.$/) {
+		} elsif ($elem eq "pl" || $elem eq "." || $elem eq "_") {
 			push(@temp, 0);
-		} elsif ($elem =~ /^_$/) {
-			push(@temp, 0);
-		} elsif ($elem =~ /^pre$/) {
+		} elsif ($elem eq "pre" || $elem eq "rc") {
 			push(@temp, -1);
-		} elsif ($elem =~ /^rc$/) {
-			push(@temp, -1);
-		} elsif ($elem =~ /^beta$/) {
+		} elsif ($elem eq "beta") {
 			push(@temp, -2);
-		} elsif ($elem =~ /^alpha$/) {
+		} elsif ($elem eq "alpha") {
 			push(@temp, -3);
 		} else {
 			push(@temp, 0);
