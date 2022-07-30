@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.39 2022/07/30 16:26:14 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.40 2022/07/30 17:06:29 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -22,7 +22,8 @@ use File::Basename;
 use IPC::Open3;
 use Cwd 'realpath', 'getcwd';
 
-# PkgVer is a unique package + version.
+# PkgVer is a PKGBASE + PKGVERSION, including some of the variables that
+# have been extracted from the package Makefile.
 #
 package PkgVer;
 
@@ -87,7 +88,8 @@ sub store($) {
 	}
 }
 
-# Pkgs is all versions of a given package (eg: apache-1.x and apache-2.x)
+# Pkgs collects all versions of a given PKGBASE, e.g. apache-1.3.27 and
+# apache-2.0.46.
 #
 package Pkgs;
 
@@ -106,6 +108,8 @@ sub new($@) {
 	return $self;
 }
 
+# Returns all available versions of the package, in decreasing
+# alphabetical(!) order.
 sub versions($) {
 	my $self = shift;
 
@@ -117,16 +121,19 @@ sub pkg($) {
 	$self->{_pkg};
 }
 
+# Returns all available versioned packages of this PKGBASE, in decreasing
+# alphabetical(!) order.
 sub pkgver($@) {
 	my $self = shift;
 
+	my $pkgvers = $self->{_pkgver};
 	if (@_) {
-		if ($self->{_pkgver}{$_[0]}) {
-			return ($self->{_pkgver}{$_[0]});
+		if ($pkgvers->{$_[0]}) {
+			return ($pkgvers->{$_[0]});
 		}
 		return;
 	}
-	return sort { $b->ver() cmp $a->ver() } values %{$self->{_pkgver}};
+	return sort { $b->ver cmp $a->ver } values %{$pkgvers};
 }
 
 sub latestver($) {
@@ -1787,4 +1794,4 @@ sub main() {
 	}
 }
 
-main() unless defined $ENV{'TESTING_LINTPKGSRC'};
+main() unless caller();
