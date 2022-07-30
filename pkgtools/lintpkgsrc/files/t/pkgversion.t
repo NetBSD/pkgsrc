@@ -1,11 +1,10 @@
-# $NetBSD: pkgversion.t,v 1.1 2022/07/30 10:11:45 rillig Exp $
+# $NetBSD: pkgversion.t,v 1.2 2022/07/30 17:06:29 rillig Exp $
 use strict;
 use warnings;
 use Test;
 
 BEGIN { plan tests => 5; }
 
-$ENV{'TESTING_LINTPKGSRC'} = 'yes';
 require('../lintpkgsrc.pl');
 
 ok(pkgversioncmp('3.4', '<', '3.4'), '');
