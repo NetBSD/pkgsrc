@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.40 2022/07/30 17:06:29 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.41 2022/07/30 17:30:47 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -1485,22 +1485,7 @@ sub main() {
 	if (
 	    !getopts('BDE:I:K:LM:OP:RSVdg:himopruyz', \%opt)
 		|| $opt{h}
-		|| !(defined $opt{d}
-		|| defined $opt{g}
-		|| defined $opt{i}
-		|| defined $opt{m}
-		|| defined $opt{o}
-		|| defined $opt{p}
-		|| defined $opt{r}
-		|| defined $opt{u}
-		|| defined $opt{B}
-		|| defined $opt{D}
-		|| defined $opt{R}
-		|| defined $opt{O}
-		|| defined $opt{S}
-		|| defined $opt{E}
-		|| defined $opt{y}
-		|| defined $opt{z})) {
+		|| !grep(/[BDEORSdgimopruyz]/, keys %opt)) {
 		usage_and_exit();
 	}
 	$| = 1;
