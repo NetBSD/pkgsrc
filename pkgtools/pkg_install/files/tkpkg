@@ -15,7 +15,7 @@ listbox .frame.list -yscroll ".frame.scroll set" -relief sunken -setgrid 1
 pack append .frame .frame.scroll {right filly} \
         .frame.list {left expand fill}
 
-# build the lower window shoing the complete description of a pacage
+# build the lower window showing the complete description of a package
 frame .f -borderwidth 4
 text .f.t -width 80 -height 20 -yscrollcommand ".f.s set" -relief sunken
 
