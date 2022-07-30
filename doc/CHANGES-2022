@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3598 2022/07/30 01:22:38 tnn Exp $
+$NetBSD: CHANGES-2022,v 1.3599 2022/07/30 09:56:08 leot Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5377,7 +5377,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/py-uvicorn to 0.18.2 [adam 2022-07-29]
 	Updated devel/cmake to 3.23.3 [adam 2022-07-29]
 	Updated finance/py-braintree to 4.16.0 [adam 2022-07-29]
-	Added u-boot-pinecube version 2022.04 [thorpej 2022-07-29]
+	Added sysutils/u-boot-pinecube version 2022.04 [thorpej 2022-07-29]
 	Updated x11/gtk4 to 4.6.6 [wiz 2022-07-29]
 	Added devel/libadwaita version 1.0.5 [wiz 2022-07-29]
 	Updated devel/libadwaita to 1.1.3 [wiz 2022-07-29]
