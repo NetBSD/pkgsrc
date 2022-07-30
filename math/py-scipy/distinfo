@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.36 2022/05/27 16:59:50 tnn Exp $
+$NetBSD: distinfo,v 1.37 2022/07/30 16:13:47 he Exp $
 
 BLAKE2s (scipy-1.8.1.tar.gz) = 364d6645a49d897429094a406e6073e124c1ebca01f4be63ebe401b660d8df38
 SHA512 (scipy-1.8.1.tar.gz) = f6fc71c209991fe82baa4b10d8ade0deb1057f6f5942a91dfb7ae45f3eb78a4535efa2861badf5e2d37239fa99dbd99de760aa7e4854b95991ade0263004e7ea
@@ -6,3 +6,4 @@ Size (scipy-1.8.1.tar.gz) = 38196215 bytes
 SHA1 (patch-scipy_spatial_ckdtree_src_ckdtree__decl.h) = ad0e4a79af2a3b0667e61f205f5b8453ea440498
 SHA1 (patch-scipy_special___logit.h) = c729c2b73de00cad4c9ad834a79b80dea7b05af3
 SHA1 (patch-scipy_special___round.h) = bc05a935e6423ce8395450ad3b30e88826939422
+SHA1 (patch-scipy_stats__unuran_setup.py) = 9839f589fdfe7f1f74e84f32526a2ce96a28d04a
