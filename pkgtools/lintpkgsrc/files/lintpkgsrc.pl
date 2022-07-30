@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.29 2022/07/30 08:21:31 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.30 2022/07/30 08:25:45 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -940,7 +940,7 @@ sub list_pkgsrc_pkgdirs($$) {
 	my (@pkgdirs);
 
 	if (!opendir(CAT, "$pkgsrcdir/$cat")) {
-		die("Unable to opendir($pkgsrcdir/cat): $!");
+		die("Unable to opendir($pkgsrcdir/$cat): $!");
 	}
 	@pkgdirs =
 	    sort grep($_ ne 'Makefile'
