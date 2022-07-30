@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.25 2022/07/30 06:25:51 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.26 2022/07/30 06:56:40 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -45,7 +45,7 @@ sub fail($);
 sub parse_makefile_pkgsrc($);
 
 $ENV{PATH} .=
-    ":/bin:/usr/bin:/sbin:/usr/sbin:${conf_prefix}/sbin:${conf_prefix}/bin";
+    ":/bin:/usr/bin:/sbin:/usr/sbin:$conf_prefix/sbin:$conf_prefix/bin";
 
 if (
     !getopts('BDE:I:K:LM:OP:RSVdg:himopruyz', \%opt)
@@ -344,7 +344,7 @@ sub main() {
 				print "\n";
 			}
 
-			print "\nRunning '${conf_make} fetch-list | sh' for each package:\n";
+			print "\nRunning '$conf_make fetch-list | sh' for each package:\n";
 			foreach my $pkgver (@update) {
 				my ($pkgdir);
 
@@ -355,7 +355,7 @@ sub main() {
 
 				print "$pkgsrcdir/$pkgdir\n";
 				safe_chdir("$pkgsrcdir/$pkgdir");
-				system("${conf_make} fetch-list | sh");
+				system("$conf_make fetch-list | sh");
 			}
 		}
 	}
@@ -571,8 +571,8 @@ sub get_default_makefile_vars() {
 		foreach my $var (keys %{$vars}) {
 			$default_vars->{$var} = $vars->{$var};
 		}
-	} elsif (-f ${conf_sysconfdir} . '/mk.conf' &&
-	    ($vars = parse_makefile_vars(${conf_sysconfdir} . '/mk.conf'))) {
+	} elsif (-f "$conf_sysconfdir/mk.conf" &&
+	    ($vars = parse_makefile_vars("$conf_sysconfdir/mk.conf"))) {
 		foreach my $var (keys %{$vars}) {
 			$default_vars->{$var} = $vars->{$var};
 		}
@@ -902,7 +902,7 @@ sub parse_makefile_pkgsrc($) {
 		my ($pkgsrcdir) = ($file =~ m:(/.*)/:);
 		debug("Running '$conf_make' in '$pkgsrcdir'\n");
 		my $pid = open3(\*WTR, \*RDR, \*ERR,
-		    "cd $pkgsrcdir || exit 1; ${conf_make} show-vars VARNAMES=PKGNAME");
+		    "cd $pkgsrcdir || exit 1; $conf_make show-vars VARNAMES=PKGNAME");
 		if (!$pid) {
 			warn "$file: Unable to run make: $!";
 		} else {
