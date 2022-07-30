@@ -1,9 +1,9 @@
-Moose is an extension of the Perl 5 object system.
-The main goal of Moose is to make Perl 5 Object Oriented programming
-easier, more consistent and less tedious. With Moose you can to
-think more about what you want to do and less about the mechanics
-of OOP.
-Additionally, Moose is built on top of Class::MOP, which is a
-metaclass system for Perl 5. This means that Moose not only makes
-building normal Perl 5 objects better, but it provides the power
-of metaclass programming as well.
+Moose is an extension of the Perl 5 object system. The main goal of
+Moose is to make Perl 5 Object Oriented programming easier, more
+consistent and less tedious. With Moose you can think more about what
+you want to do and less about the mechanics of OOP.
+
+Additionally, Moose is built on top of Class::MOP, which is a metaclass
+system for Perl 5. This means that Moose not only makes building normal
+Perl 5 objects better, but it provides the power of metaclass
+programming as well.
