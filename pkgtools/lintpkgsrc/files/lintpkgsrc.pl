@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.30 2022/07/30 08:25:45 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.31 2022/07/30 09:21:41 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -304,13 +304,10 @@ sub canonicalize_pkgname($) {
 sub convert_to_standard_pkgversion(@) {
 	my ($elem, $underscore, @temp);
 
-	# According to the current implementation in pkg_install/lib/str.c
-	# as of 2002/06/02, '_' before a number, '.', and 'pl' get treated as 0,
-	# while 'rc' and 'pre' get treated as -1; beta as '-2', alpha as '-3'.
-	# Other characters are converted to lower
-	# case and then to a number: a->1, b->2, c->3, etc. Numbers stay the same.
-	# 'nb' is a special case that's already been handled when we are here.
+	# See pkg_install/lib/dewey.c.
+	# 'nb' has already been handled when we are here.
 	foreach $elem (@_) {
+		print STDERR "convert elem '$elem'\n";
 		if ($elem =~ /\d+/) {
 			push(@temp, $elem);
 		} elsif ($elem =~ /^pl$/ or $elem =~ /^\.$/) {
@@ -358,9 +355,8 @@ sub pkgversioncmp_extract($$) {
 	$cmp;
 }
 
-# Package version number matching - or thereabouts
-# Also handles 'nb<N>' suffix (checked iff values otherwise identical)
-#
+# Package version number matching.
+# Also handles 'nb<N>' suffix (checked iff values otherwise identical).
 sub pkgversioncmp($$$) {
 	my ($match, $test, $val) = @_;
 	my ($cmp, $match_nb, $val_nb);
