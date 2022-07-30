@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2020/11/10 14:30:00 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/07/30 14:20:41 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/CHANGES.md
@@ -37,6 +37,7 @@ ${GEM_LIBDIR}/lib/tzinfo/transition_rule.rb
 ${GEM_LIBDIR}/lib/tzinfo/zoneinfo_country_info.rb
 ${GEM_LIBDIR}/lib/tzinfo/zoneinfo_data_source.rb
 ${GEM_LIBDIR}/lib/tzinfo/zoneinfo_timezone_info.rb
+${GEM_LIBDIR}/test/assets/payload.rb
 ${GEM_LIBDIR}/test/tc_annual_rules.rb
 ${GEM_LIBDIR}/test/tc_country.rb
 ${GEM_LIBDIR}/test/tc_country_index_definition.rb
