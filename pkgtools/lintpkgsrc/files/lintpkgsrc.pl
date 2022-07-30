@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.37 2022/07/30 11:33:23 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.38 2022/07/30 15:11:26 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -22,127 +22,7 @@ use File::Basename;
 use IPC::Open3;
 use Cwd 'realpath', 'getcwd';
 
-# PkgList is the master list of all packages in pkgsrc.
-#
-package PkgList;
-
-sub add($@) {
-	my $self = shift;
-
-	if (!$self->pkgs($_[0])) {
-		$self->{_pkgs}{ $_[0] } = new Pkgs $_[0];
-	}
-	$self->pkgs($_[0])->add(@_);
-}
-
-sub new($) {
-	my $class = shift;
-	my $self = {};
-	bless $self, $class;
-	return $self;
-}
-
-sub numpkgver($) {
-	my $self = shift;
-	scalar($self->pkgver);
-}
-
-sub pkgver($@) {
-	my $self = shift;
-
-	if (@_ == 0) {
-		my (@list);
-		foreach my $pkg ($self->pkgs) {
-			push(@list, $pkg->pkgver);
-		}
-		return (@list);
-	}
-
-	if (defined $self->{_pkgs}{$_[0]}) {
-		return (@_ > 1)
-		    ? $self->{_pkgs}{$_[0]}->pkgver($_[1])
-		    : $self->{_pkgs}{$_[0]}->pkgver();
-	}
-	return;
-}
-
-sub pkgs($@) {
-	my $self = shift;
-
-	if (@_) {
-		return $self->{_pkgs}{$_[0]};
-	} else {
-		return (sort { $a->pkg cmp $b->pkg } values %{$self->{_pkgs}});
-	}
-}
-
-sub store($) {
-	my $self = shift;
-
-	my $pkgs = $self->{_pkgs};
-	foreach my $pkg (sort keys %$pkgs) {
-		$pkgs->{$pkg}->store();
-	}
-}
-
-# Pkgs is all versions of a given package (eg: apache-1.x and apache-2.x)
-#
-package Pkgs;
-
-sub add($@) {
-	my $self = shift;
-
-	$self->{_pkgver}{$_[1]} = new PkgVer @_;
-}
-
-sub new($@) {
-	my $class = shift;
-	my $self = {};
-
-	bless $self, $class;
-	$self->{_pkg} = $_[0];
-	return $self;
-}
-
-sub versions($) {
-	my $self = shift;
-
-	return sort { $b cmp $a } keys %{$self->{_pkgver}};
-}
-
-sub pkg($) {
-	my $self = shift;
-	$self->{_pkg};
-}
-
-sub pkgver($@) {
-	my $self = shift;
-
-	if (@_) {
-		if ($self->{_pkgver}{$_[0]}) {
-			return ($self->{_pkgver}{$_[0]});
-		}
-		return;
-	}
-	return sort { $b->ver() cmp $a->ver() } values %{$self->{_pkgver}};
-}
-
-sub latestver($) {
-	my $self = shift;
-
-	($self->pkgver())[0];
-}
-
-sub store($) {
-	my $self = shift;
-
-	my $pkgvers = $self->{_pkgver};
-	foreach my $pkgver (sort keys %$pkgvers) {
-		$pkgvers->{$pkgver}->store();
-	}
-}
-
-# PkgVer is a unique package+version
+# PkgVer is a unique package + version.
 #
 package PkgVer;
 
@@ -204,6 +84,126 @@ sub store($) {
 		$varname =~ /\s/ and die "cannot store variable name '$varname'\n";
 		$value =~ /\n/ and die "cannot store variable value '$value'\n";
 		printf("var\t%s\t%s\n", $varname, $value);
+	}
+}
+
+# Pkgs is all versions of a given package (eg: apache-1.x and apache-2.x)
+#
+package Pkgs;
+
+sub add($@) {
+	my $self = shift;
+
+	$self->{_pkgver}{$_[1]} = new PkgVer @_;
+}
+
+sub new($@) {
+	my $class = shift;
+	my $self = {};
+
+	bless $self, $class;
+	$self->{_pkg} = $_[0];
+	return $self;
+}
+
+sub versions($) {
+	my $self = shift;
+
+	return sort { $b cmp $a } keys %{$self->{_pkgver}};
+}
+
+sub pkg($) {
+	my $self = shift;
+	$self->{_pkg};
+}
+
+sub pkgver($@) {
+	my $self = shift;
+
+	if (@_) {
+		if ($self->{_pkgver}{$_[0]}) {
+			return ($self->{_pkgver}{$_[0]});
+		}
+		return;
+	}
+	return sort { $b->ver() cmp $a->ver() } values %{$self->{_pkgver}};
+}
+
+sub latestver($) {
+	my $self = shift;
+
+	($self->pkgver())[0];
+}
+
+sub store($) {
+	my $self = shift;
+
+	my $pkgvers = $self->{_pkgver};
+	foreach my $pkgver (sort keys %$pkgvers) {
+		$pkgvers->{$pkgver}->store();
+	}
+}
+
+# PkgList is the master list of all packages in pkgsrc.
+#
+package PkgList;
+
+sub add($@) {
+	my $self = shift;
+
+	if (!$self->pkgs($_[0])) {
+		$self->{_pkgs}{ $_[0] } = new Pkgs $_[0];
+	}
+	$self->pkgs($_[0])->add(@_);
+}
+
+sub new($) {
+	my $class = shift;
+	my $self = {};
+	bless $self, $class;
+	return $self;
+}
+
+sub numpkgver($) {
+	my $self = shift;
+	scalar($self->pkgver);
+}
+
+sub pkgver($@) {
+	my $self = shift;
+
+	if (@_ == 0) {
+		my (@list);
+		foreach my $pkg ($self->pkgs) {
+			push(@list, $pkg->pkgver);
+		}
+		return (@list);
+	}
+
+	if (defined $self->{_pkgs}{$_[0]}) {
+		return (@_ > 1)
+		    ? $self->{_pkgs}{$_[0]}->pkgver($_[1])
+		    : $self->{_pkgs}{$_[0]}->pkgver();
+	}
+	return;
+}
+
+sub pkgs($@) {
+	my $self = shift;
+
+	if (@_) {
+		return $self->{_pkgs}{$_[0]};
+	} else {
+		return (sort { $a->pkg cmp $b->pkg } values %{$self->{_pkgs}});
+	}
+}
+
+sub store($) {
+	my $self = shift;
+
+	my $pkgs = $self->{_pkgs};
+	foreach my $pkg (sort keys %$pkgs) {
+		$pkgs->{$pkg}->store();
 	}
 }
 
