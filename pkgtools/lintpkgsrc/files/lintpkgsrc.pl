@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.38 2022/07/30 15:11:26 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.39 2022/07/30 16:26:14 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -1148,15 +1148,11 @@ sub parse_makefile_pkgsrc($) {
 }
 
 
-# chdir() || fail()
-#
-sub safe_chdir($) {
+sub chdir_or_fail($) {
 	my ($dir) = @_;
 
 	debug("chdir: $dir");
-	if (!chdir($dir)) {
-		fail("Unable to chdir($dir): $!");
-	}
+	chdir($dir) or fail("Cannot chdir($dir): $!\n");
 }
 
 sub load_pkgsrc_makefiles($) {
@@ -1331,7 +1327,7 @@ sub scan_pkgsrc_distfiles_vs_distinfo($$$$) {
 		}
 
 		verbose("checksum mismatches\n");
-		safe_chdir($pkgdistdir);
+		chdir_or_fail($pkgdistdir);
 		foreach my $sum (keys %sumfiles) {
 			if ($sum eq 'Size') {
 				foreach my $file (@{$sumfiles{$sum}}) {
@@ -1365,7 +1361,7 @@ sub scan_pkgsrc_distfiles_vs_distinfo($$$$) {
 			waitpid($pid, 0) || fail "xargs digest $sum";
 			waitpid($pid2, 0) || fail "pipe write to xargs";
 		}
-		safe_chdir('/'); # Do not want to stay in $pkgdistdir
+		chdir_or_fail('/'); # Do not want to stay in $pkgdistdir
 	}
 	(sort keys %bad_distfiles);
 }
@@ -1615,7 +1611,7 @@ sub main() {
 			}
 
 			if ($opt{r}) {
-				safe_chdir("$pkgdistdir");
+				chdir_or_fail("$pkgdistdir");
 				verbose("Unlinking 'orphaned' distfiles\n");
 				foreach my $distfile (@orphan) {
 					unlink($distfile)
@@ -1642,7 +1638,7 @@ sub main() {
 		}
 
 		if ($opt{r}) {
-			safe_chdir("$pkgdistdir");
+			chdir_or_fail("$pkgdistdir");
 			verbose("Unlinking 'parented' distfiles\n");
 			foreach my $distfile (@parent) {
 				unlink($distfile);
@@ -1779,7 +1775,7 @@ sub main() {
 				}
 
 				print "$pkgsrcdir/$pkgdir\n";
-				safe_chdir("$pkgsrcdir/$pkgdir");
+				chdir_or_fail("$pkgsrcdir/$pkgdir");
 				system("$conf_make fetch-list | sh");
 			}
 		}
