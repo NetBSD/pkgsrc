@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3597 2022/07/29 20:22:53 jperkin Exp $
+$NetBSD: CHANGES-2022,v 1.3598 2022/07/30 01:22:38 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5382,3 +5382,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/libadwaita version 1.0.5 [wiz 2022-07-29]
 	Updated devel/libadwaita to 1.1.3 [wiz 2022-07-29]
 	Updated security/mit-krb5 to 1.19.3 [jperkin 2022-07-29]
+	Updated time/ntpsec to 1.2.1 [tnn 2022-07-30]
