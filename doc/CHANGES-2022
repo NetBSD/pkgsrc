@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3599 2022/07/30 09:56:08 leot Exp $
+$NetBSD: CHANGES-2022,v 1.3600 2022/07/30 11:33:33 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5383,3 +5383,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/libadwaita to 1.1.3 [wiz 2022-07-29]
 	Updated security/mit-krb5 to 1.19.3 [jperkin 2022-07-29]
 	Updated time/ntpsec to 1.2.1 [tnn 2022-07-30]
+	Updated pkgtools/lintpkgsrc to 4.99 [rillig 2022-07-30]
