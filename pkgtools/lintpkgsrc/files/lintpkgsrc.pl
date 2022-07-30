@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.31 2022/07/30 09:21:41 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.32 2022/07/30 09:23:19 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -307,7 +307,6 @@ sub convert_to_standard_pkgversion(@) {
 	# See pkg_install/lib/dewey.c.
 	# 'nb' has already been handled when we are here.
 	foreach $elem (@_) {
-		print STDERR "convert elem '$elem'\n";
 		if ($elem =~ /\d+/) {
 			push(@temp, $elem);
 		} elsif ($elem =~ /^pl$/ or $elem =~ /^\.$/) {
@@ -332,25 +331,13 @@ sub convert_to_standard_pkgversion(@) {
 
 sub pkgversioncmp_extract($$) {
 	my ($match, $val) = @_;
-	my ($cmp, @matchlist, @vallist, $i, $len);
+	my ($cmp, @matchlist, @vallist);
 
 	@matchlist = convert_to_standard_pkgversion(split(/(\D+)/, lc($match)));
 	@vallist = convert_to_standard_pkgversion(split(/(\D+)/, lc($val)));
 	$cmp = 0;
-	$i = 0;
-	if ($#matchlist > $#vallist) {
-		$len = $#matchlist;
-	} else {
-		$len = $#vallist;
-	}
-	while (!$cmp && ($i++ <= $len)) {
-		if (!@matchlist) {
-			push(@matchlist, 0);
-		}
-		if (!@vallist) {
-			push(@vallist, 0);
-		}
-		$cmp = (shift @matchlist <=> shift @vallist);
+	while ($cmp == 0 && (@matchlist || @vallist)) {
+		$cmp = ((shift @matchlist || 0) <=> (shift @vallist || 0));
 	}
 	$cmp;
 }
