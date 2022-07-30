@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2022/06/23 07:26:26 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2022/07/30 20:21:32 tnn Exp $
 
 DISTNAME=	build-0.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -23,7 +23,8 @@ USE_PKG_RESOURCES=	yes
 .include "../../lang/python/pyversion.mk"
 
 .if ${PYPKGPREFIX} == "py37"
-DEPENDS+=	${PYPKGPREFIX}-importlib-metadata-[0-9]*:../../devel/py-importlib-metadata
+#DEPENDS+=	${PYPKGPREFIX}-importlib-metadata-[0-9]*:../../devel/py-importlib-metadata
+BROKEN+=		"circular dependency"
 .endif
 
 post-install:
