@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.27 2022/07/30 07:37:03 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.28 2022/07/30 08:18:31 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -22,6 +22,207 @@ use File::Basename;
 use IPC::Open3;
 use Cwd 'realpath', 'getcwd';
 
+# PkgList is the master list of all packages in pkgsrc.
+#
+package PkgList;
+
+sub add($@) {
+	my $self = shift;
+
+	if (!$self->pkgs($_[0])) {
+		$self->{_pkgs}{ $_[0] } = new Pkgs $_[0];
+	}
+	$self->pkgs($_[0])->add(@_);
+}
+
+sub new($) {
+	my $class = shift;
+	my $self = {};
+	bless $self, $class;
+	return $self;
+}
+
+sub numpkgver($) {
+	my $self = shift;
+	scalar($self->pkgver);
+}
+
+sub pkgver($@) {
+	my $self = shift;
+
+	if (@_ == 0) {
+		my (@list);
+		foreach my $pkg ($self->pkgs) {
+			push(@list, $pkg->pkgver);
+		}
+		return (@list);
+	}
+
+	if (defined $self->{_pkgs}{$_[0]}) {
+		return (@_ > 1)
+		    ? $self->{_pkgs}{$_[0]}->pkgver($_[1])
+		    : $self->{_pkgs}{$_[0]}->pkgver();
+	}
+	return;
+}
+
+sub pkgs($@) {
+	my $self = shift;
+
+	if (@_) {
+		return $self->{_pkgs}{$_[0]};
+	} else {
+		return (sort { $a->pkg cmp $b->pkg } values %{$self->{_pkgs}});
+	}
+}
+
+sub store($) {
+	my $self = shift;
+	my @pkgs = keys %{$self->{_pkgs}};
+	my ($cnt, $subcnt) = $self->count;
+
+	print("\$pkgcnt = $cnt;\n");
+	print("\$subpkgcnt = $subcnt;\n");
+	map($self->{_pkgs}{$_}->store, keys %{$self->{_pkgs}});
+}
+
+sub count($) {
+	my $self = shift;
+	my ($pkgcnt, $pkgsubcnt);
+
+	map {
+		$pkgcnt++;
+		$pkgsubcnt += $self->{_pkgs}{$_}->count;
+	} keys %{$self->{_pkgs}};
+	wantarray ? ($pkgcnt, $pkgsubcnt) : $pkgcnt;
+}
+
+# Pkgs is all versions of a given package (eg: apache-1.x and apache-2.x)
+#
+package Pkgs;
+
+sub add($@) {
+	my $self = shift;
+
+	$self->{_pkgver}{$_[1]} = new PkgVer @_;
+}
+
+sub new($@) {
+	my $class = shift;
+	my $self = {};
+
+	bless $self, $class;
+	$self->{_pkg} = $_[0];
+	return $self;
+}
+
+sub versions($) {
+	my $self = shift;
+
+	return sort { $b cmp $a } keys %{$self->{_pkgver}};
+}
+
+sub pkg($) {
+	my $self = shift;
+	$self->{_pkg};
+}
+
+sub pkgver($@) {
+	my $self = shift;
+
+	if (@_) {
+		if ($self->{_pkgver}{$_[0]}) {
+			return ($self->{_pkgver}{$_[0]});
+		}
+		return;
+	}
+	return sort { $b->ver() cmp $a->ver() } values %{$self->{_pkgver}};
+}
+
+sub latestver($) {
+	my $self = shift;
+
+	($self->pkgver())[0];
+}
+
+sub store($) {
+	my $self = shift;
+
+	print("\$pkgnum++;\n");
+	map($self->{_pkgver}{$_}->store, keys %{$self->{_pkgver}});
+}
+
+sub count($) {
+	my $self = shift;
+
+	scalar(keys %{$self->{_pkgver}});
+}
+
+# PkgVer is a unique package+version
+#
+package PkgVer;
+
+sub new($$$) {
+	my $class = shift;
+	my $self = {};
+
+	bless $self, $class;
+	$self->{_pkg} = $_[0];
+	$self->{_ver} = $_[1];
+	return $self;
+}
+
+sub pkgname($) {
+	my $self = shift;
+
+	$self->pkg . '-' . $self->ver;
+}
+
+sub pkg($) {
+	my $self = shift;
+
+	$self->{_pkg};
+}
+
+sub var($$$) {
+	my $self = shift;
+	my ($key, $val) = @_;
+
+	(defined $val)
+	    ? ($self->{$key} = $val)
+	    : $self->{$key};
+}
+
+sub ver($) {
+	my $self = shift;
+
+	$self->{_ver};
+}
+
+sub vars($) {
+	my $self = shift;
+
+	grep(!/^_(pkg|ver)$/, keys %{$self});
+}
+
+sub store($) {
+	my $self = shift;
+	my $data;
+
+	($data = $self->{_pkg}) =~ s/([\\\$\@\%\"])/\\$1/g;
+	print("\$pkgver = \$pkglist->add(\"$data\", \"");
+
+	($data = $self->{_ver}) =~ s/([\\\$\@\%\"])/\\$1/g;
+	print("$data\"); __pkgcount(1);\n");
+
+	foreach ($self->vars) {
+		($data = $self->{$_}) =~ s/([\\\$\@\%\"])/\\$1/g;
+		print("\$pkgver->var(\"$_\", \"$data\");\n");
+	}
+}
+
+package main;
+
 # Buildtime configuration
 my $conf_make = '@MAKE@';
 my $conf_pkgsrcdir = '@PKGSRCDIR@';
@@ -38,15 +239,58 @@ my (
     %prebuilt_pkgdir_cache,    # To avoid symlink loops in prebuilt_pkgdirs
 );
 
-sub usage_and_exit();
-sub listdir($$);
-sub get_default_makefile_vars();
-sub fail($);
-sub parse_makefile_pkgsrc($);
-
 # Horrible kludge to ensure we have a value for testing in conditionals, but
 # gets removed in the final evaluation
 my $magic_undefined = 'M_a_G_i_C_uNdEfInEd';
+
+sub debug(@) {
+
+	($opt{D}) && print STDERR 'DEBUG: ', @_;
+}
+
+sub verbose(@) {
+
+	if (-t STDERR) {
+		print STDERR @_;
+	}
+}
+
+sub fail($) {
+
+	print STDERR shift(), "\n";
+	exit(3);
+}
+
+# List (recursive) non directory contents of specified directory
+#
+#TODO this entire sub should be replaced with direct calls to
+#     File::Find
+sub listdir($$);
+sub listdir($$) {
+	my ($base, $dir) = @_;
+	my ($thisdir);
+	my (@list, @thislist);
+
+	$thisdir = $base;
+	if (defined($dir)) {
+		$thisdir .= "/$dir";
+		$dir .= '/';
+	} else {
+		$dir = '';
+	}
+
+	opendir(DIR, $thisdir) || fail("Unable to opendir($thisdir): $!");
+	@thislist = grep(substr($_, 0, 1) ne '.' && $_ ne 'CVS', readdir(DIR));
+	closedir(DIR);
+	foreach my $entry (@thislist) {
+		if (-d "$thisdir/$entry") {
+			push(@list, listdir($base, "$dir$entry"));
+		} else {
+			push(@list, "$dir$entry");
+		}
+	}
+	@list;
+}
 
 sub canonicalize_pkgname($) {
 	my ($pkgname) = @_;
@@ -55,95 +299,6 @@ sub canonicalize_pkgname($) {
 	$pkgname =~ s,^ruby\d+-,ruby-,;
 	$pkgname =~ s,^php\d+-,php-,;
 	return $pkgname;
-}
-
-# Could speed up by building a cache of package names to paths, then processing
-# each package name once against the tests.
-sub check_prebuilt_packages() {
-
-	if ($_ eq 'distfiles' || $_ eq 'pkgsrc') {
-		# Skip these subdirs if present
-		$File::Find::prune = 1;
-
-	} elsif (/(.+)-(\d.*)\.t[bg]z$/) {
-		my ($pkg, $ver) = ($1, $2);
-
-		$pkg = canonicalize_pkgname($pkg);
-
-		my ($pkgs);
-		if ($pkgs = $pkglist->pkgs($pkg)) {
-			my ($pkgver) = $pkgs->pkgver($ver);
-
-			if (!defined $pkgver) {
-				if ($opt{p}) {
-					print "$File::Find::dir/$_\n";
-					push(@matched_prebuiltpackages, "$File::Find::dir/$_");
-				}
-
-				# Pick probably the last version
-				$pkgver = $pkgs->latestver;
-			}
-
-			if ($opt{R} && $pkgver->var('RESTRICTED')) {
-				print "$File::Find::dir/$_\n";
-				push(@matched_prebuiltpackages, "$File::Find::dir/$_");
-			}
-
-			if ($opt{O} && $pkgver->var('OSVERSION_SPECIFIC')) {
-				print "$File::Find::dir/$_\n";
-				push(@matched_prebuiltpackages, "$File::Find::dir/$_");
-			}
-		}
-
-	} elsif (-d $_) {
-		if ($prebuilt_pkgdir_cache{"$File::Find::dir/$_"}) {
-			$File::Find::prune = 1;
-			return;
-		}
-
-		$prebuilt_pkgdir_cache{"$File::Find::dir/$_"} = 1;
-		if (-l $_) {
-			my ($dest) = readlink($_);
-
-			if (substr($dest, 0, 1) ne '/') {
-				$dest = "$File::Find::dir/$dest";
-			}
-			if (!$prebuilt_pkgdir_cache{$dest}) {
-				push(@prebuilt_pkgdirs, $dest);
-			}
-		}
-	}
-}
-
-# Dewey decimal verson number matching - or thereabouts
-# Also handles 'nb<N>' suffix (checked iff values otherwise identical)
-#
-sub deweycmp($$$) {
-	my ($match, $test, $val) = @_;
-	my ($cmp, $match_nb, $val_nb);
-
-	$match_nb = $val_nb = 0;
-	if ($match =~ /(.*)nb(.*)/) {
-		# Handle nb<N> suffix
-		$match = $1;
-		$match_nb = $2;
-	}
-
-	if ($val =~ /(.*)nb(.*)/) {
-		# Handle nb<N> suffix
-		$val = $1;
-		$val_nb = $2;
-	}
-
-	$cmp = deweycmp_extract($match, $val);
-
-	if (!$cmp) {
-		# Iff otherwise identical, check nb suffix
-		$cmp = deweycmp_extract($match_nb, $val_nb);
-	}
-
-	debug("eval deweycmp $cmp $test 0\n");
-	eval "$cmp $test 0";
 }
 
 sub convert_to_standard_dewey(@) {
@@ -203,10 +358,424 @@ sub deweycmp_extract($$) {
 	$cmp;
 }
 
-sub fail($) {
+# Dewey decimal version number matching - or thereabouts
+# Also handles 'nb<N>' suffix (checked iff values otherwise identical)
+#
+sub deweycmp($$$) {
+	my ($match, $test, $val) = @_;
+	my ($cmp, $match_nb, $val_nb);
 
-	print STDERR shift(), "\n";
-	exit(3);
+	$match_nb = $val_nb = 0;
+	if ($match =~ /(.*)nb(.*)/) {
+		# Handle nb<N> suffix
+		$match = $1;
+		$match_nb = $2;
+	}
+
+	if ($val =~ /(.*)nb(.*)/) {
+		# Handle nb<N> suffix
+		$val = $1;
+		$val_nb = $2;
+	}
+
+	$cmp = deweycmp_extract($match, $val);
+
+	if (!$cmp) {
+		# Iff otherwise identical, check nb suffix
+		$cmp = deweycmp_extract($match_nb, $val_nb);
+	}
+
+	debug("eval deweycmp $cmp $test 0\n");
+	eval "$cmp $test 0";
+}
+
+sub parse_expand_vars_dumb($$) {
+	my ($line, $vars) = @_;
+
+	while ($line =~ /\$\{([-\w.]+)\}/) {
+		if (defined(${$vars}{$1})) {
+			$line = $` . ${$vars}{$1} . $';
+		} else {
+			$line = $` . $magic_undefined . $';
+		}
+	}
+	$line;
+}
+
+sub parse_expand_vars($$) {
+	my ($line, $vars) = @_;
+
+	while ($line =~ /\$\{([-\w.]+)\}/) {
+		if (defined(${$vars}{$1})) {
+			$line = $` . ${$vars}{$1} . $';
+		} else {
+			$line = $` . $magic_undefined . $';
+		}
+	}
+	$line;
+}
+
+sub parse_eval_make_false($$) {
+	my ($line, $vars) = @_;
+	my ($false, $test);
+
+	$false = 0;
+	$test = parse_expand_vars_dumb($line, $vars);
+
+	# XXX This is _so_ wrong - need to parse this correctly
+	$test =~ s/""/\r/g;
+	$test =~ s/"//g; # "
+	$test =~ s/\r/""/g;
+
+	debug("conditional: $test\n");
+
+	# XXX Could do something with target
+	while ($test =~ /(target|empty|make|defined|exists)\s*\(([^()]+)\)/) {
+		my $testname = $1;
+		my $varname = $2;
+		my $var;
+
+		# Implement (some of) make's :M modifier
+		if ($varname =~ /^([^:]+):M(.+)$/) {
+			$varname = $1;
+			my $match = $2;
+
+			$var = $${vars}{$varname};
+			$var = parse_expand_vars($var, $vars)
+			    if defined $var;
+
+			$match =~ s/([{.+])/\\$1/g;
+			$match =~ s/\*/.*/g;
+			$match =~ s/\?/./g;
+			$match = '^' . $match . '$';
+			$var = ($var =~ /$match/)
+			    if defined $var;
+		} else {
+			$var = $${vars}{$varname};
+			$var = parse_expand_vars($var, $vars)
+			    if defined $var;
+		}
+
+		if (defined $var && $var eq $magic_undefined) {
+			$var = undef;
+		}
+
+		if ($testname eq 'exists') {
+			$_ = (-e $varname) ? 1 : 0;
+
+		} elsif ($testname eq 'defined') {
+			$_ = defined($var) ? 1 : 0;
+
+		} elsif ($testname eq 'empty') {
+			$_ = ((not defined($var) or (length($var) == 0)) ? 1 : 0);
+
+		} else {
+			$_ = 0;
+		}
+
+		$test =~ s/$testname\s*\([^()]+\)/$_/;
+		debug("conditional: update to $test\n");
+	}
+
+	while ($test =~ /([^\s()\|\&]+)\s+(!=|==)\s+([^\s()]+)/) {
+		if ($2 eq '==') {
+			$_ = ($1 eq $3) ? 1 : 0;
+		} else {
+			$_ = ($1 ne $3) ? 1 : 0;
+		}
+		$test =~ s/[^\s()\|\&]+\s+(!=|==)\s+[^\s()]+/$_/;
+	}
+
+	if ($test !~ /[^<>\d()\s&|.!]/) {
+		debug("eval test $test\n");
+		$false = eval "($test)?0:1";
+		if (!defined $false) {
+			fail("Eval failed $line - $test");
+		}
+		debug("conditional: evaluated to " . ($false ? 0 : 1) . "\n");
+
+	} else {
+		$false = 0;
+		debug("conditional: defaulting to 0\n");
+	}
+	$false;
+}
+
+# Extract variable assignments from Makefile
+# Much unpalatable magic to avoid having to use make (all for speed)
+#
+sub parse_makefile_vars($$) {
+	my ($file, $cwd) = @_;
+	my (
+	    $pkgname, %vars, $plus, $value, @data,
+	    %incfiles, # Cache of previously included fils
+	    %incdirs,  # Directories in which to check for includes
+	    @if_false
+	); # 0:true 1:false 2:nested-false&nomore-elsif
+
+	if (!open(FILE, $file)) {
+		return (undef);
+	}
+	@data = map { chomp;
+		$_; } <FILE>;
+	close(FILE);
+
+	$incdirs{"."} = 1;
+	$incdirs{dirname($file)} = 1;
+
+	# Some Makefiles depend on these being set
+	if ($file eq '/etc/mk.conf') {
+		$vars{LINTPKGSRC} = 'YES';
+	} else {
+		%vars = %{$default_vars};
+	}
+	$vars{BSD_PKG_MK} = 'YES';
+
+	if ($cwd) {
+		$vars{'.CURDIR'} = $cwd;
+	} elsif ($file =~ m#(.*)/#) {
+		$vars{'.CURDIR'} = $1;
+	} else {
+		$vars{'.CURDIR'} = getcwd;
+	}
+
+	$incdirs{$vars{'.CURDIR'}} = 1;
+	if ($opt{L}) {
+		print "$file\n";
+	}
+
+	while (defined($_ = shift(@data))) {
+		s/\s*[^\\]#.*//;
+
+		# Continuation lines
+		#
+		while (substr($_, -1) eq "\\") {
+			substr($_, -2) = shift @data;
+		}
+
+		# Conditionals
+		#
+		if (m#^\.\s*if(|def|ndef)\s+(.*)#) {
+			my ($type, $false);
+
+			$type = $1;
+			if ($if_false[$#if_false]) {
+				push(@if_false, 2);
+
+			} elsif ($type eq '') {
+				# Straight if
+				push(@if_false, parse_eval_make_false($2, \%vars));
+
+			} else {
+				$false = !defined($vars{ parse_expand_vars($2, \%vars) });
+				if ($type eq 'ndef') {
+					$false = !$false;
+				}
+				push(@if_false, $false ? 1 : 0);
+			}
+			debug("$file: .if$type (! @if_false)\n");
+			next;
+		}
+
+		if (m#^\.\s*elif\s+(.*)# && @if_false) {
+			if ($if_false[$#if_false] == 0) {
+				$if_false[$#if_false] = 2;
+			} elsif ($if_false[$#if_false] == 1
+			    && !parse_eval_make_false($1, \%vars)) {
+				$if_false[$#if_false] = 0;
+			}
+			debug("$file: .elif (! @if_false)\n");
+			next;
+		}
+
+		if (m#^\.\s*else\b# && @if_false) {
+			$if_false[$#if_false] = $if_false[$#if_false] == 1 ? 0 : 1;
+			debug("$file: .else (! @if_false)\n");
+			next;
+		}
+
+		if (m#^\.\s*endif\b#) {
+			pop(@if_false);
+			debug("$file: .endif (! @if_false)\n");
+			next;
+		}
+
+		$if_false[$#if_false] && next;
+
+		# Included files (just unshift onto @data)
+		#
+		if (m#^\.\s*include\s+"([^"]+)"#) {
+			my ($incfile) = parse_expand_vars($1, \%vars);
+
+			# At this point just skip any includes which we were not able to
+			# fully expand
+			if ($incfile =~ m#/mk/bsd#
+			    || $incfile =~ /$magic_undefined/
+			    || $incfile =~ /\$\{/
+			    || (!$opt{d} && $incfile =~ m#/(buildlink[^/]*\.mk)#)) {
+				debug("$file: .include \"$incfile\" skipped\n");
+
+			} else {
+				debug("$file: .include \"$incfile\"\n");
+
+				# Expand any simple vars in $incfile
+				#
+
+				if (substr($incfile, 0, 1) ne '/') {
+					foreach my $dir (keys %incdirs) {
+						if (-f "$dir/$incfile") {
+							$incfile = "$dir/$incfile";
+							last;
+						}
+					}
+				}
+
+				# perl 5.6.1 realpath() cannot handle files, only directories
+				# If the last component is a symlink this will give a false
+				# negative, but that is not a problem as the duplicate check
+				# is for performance
+				$incfile =~ m#^(.+)(/[^/]+)$#;
+
+				if (!-f $incfile) {
+					if (!$opt{L}) {
+						verbose("\n");
+					}
+
+					verbose("$file: Cannot locate $incfile in "
+					    . join(" ", sort keys %incdirs)
+					    . "\n");
+
+				} else {
+					$incfile = realpath($1) . $2;
+
+					if (!$incfiles{$incfile}) {
+						if ($opt{L}) {
+							print "inc $incfile\n";
+						}
+						$incfiles{$incfile} = 1;
+
+						if (!open(FILE, $incfile)) {
+							verbose("Cannot open '$incfile' (from $file): $_ $!\n");
+						} else {
+							my $NEWCURDIR = $incfile;
+							$NEWCURDIR =~ s#/[^/]*$##;
+							$incdirs{$NEWCURDIR} = 1;
+							unshift(@data, ".CURDIR=$vars{'.CURDIR'}");
+							unshift(@data, map { chomp;
+								$_ } <FILE>);
+							unshift(@data, ".CURDIR=$NEWCURDIR");
+							close(FILE);
+						}
+					}
+				}
+			}
+			next;
+		}
+
+		if (/^ *([-\w\.]+)\s*([:+?]?)=\s*(.*)/) {
+			my ($key);
+
+			$key = $1;
+			$plus = $2;
+			$value = $3;
+
+			if ($plus eq ':') {
+				$vars{$key} = parse_expand_vars($value, \%vars);
+			} elsif ($plus eq '+' && defined $vars{$key}) {
+				$vars{$key} .= " $value";
+			} elsif ($plus ne '?' || !defined $vars{$key}) {
+				$vars{$key} = $value;
+			}
+			debug("assignment: $key$plus=[$value] ($vars{$key})\n");
+
+			# Give python a little hand (XXX - do we wanna consider actually
+			# implementing make .for loops, etc?
+			#
+			if ($key eq "PYTHON_VERSIONS_ACCEPTED") {
+				my ($pv);
+
+				foreach $pv (split(/\s+/, $vars{PYTHON_VERSIONS_ACCEPTED})) {
+					$vars{"_PYTHON_VERSION_FIRSTACCEPTED"} ||= $pv;
+					$vars{"_PYTHON_VERSION_${pv}_OK"} = "yes";
+				}
+			}
+		}
+	}
+
+	debug("$file: expand\n");
+
+	# Handle variable substitutions  FRED = a-${JIM:S/-/-b-/}
+	#
+	my ($loop);
+
+	for ($loop = 1; $loop;) {
+		$loop = 0;
+		foreach my $key (keys %vars) {
+			if (index($vars{$key}, '$') == -1) {
+				next;
+			}
+
+			$_ = parse_expand_vars($vars{$key}, \%vars);
+			if ($_ ne $vars{$key}) {
+				$vars{$key} = $_;
+				$loop = 1;
+
+			} elsif ($vars{$key} =~ m#\$\{([\w.]+):([CS]([^{}])[^{}\3]+\3[^{}\3]*\3[g1]*(|:[^{}]+)|U[^{}]+)\}#) {
+				my ($left, $subvar, $right) = ($`, $1, $');
+				my (@patterns) = split(':', $2);
+				my ($result);
+
+				$result = $vars{$subvar};
+				$result ||= '';
+
+				# If $vars{$subvar} contains a $ skip it on this pass.
+				# Hopefully it will get substituted and we can catch it
+				# next time around.
+				if (index($result, '${') != -1) {
+					next;
+				}
+
+				debug("$file: substitutelist $key ($result) $subvar (@patterns)\n");
+				foreach (@patterns) {
+					if (m#(U)(.*)#) {
+						$result ||= $2;
+					} elsif (m#([CS])(.)([^/@]+)\2([^/@]*)\2([1g]*)#) {
+						my ($how, $from, $to, $global) = ($1, $3, $4, $5);
+
+						debug("$file: substituteglob $subvar, $how, $from, $to, $global\n");
+						if ($how eq 'S') {
+							# Limited substitution - keep ^ and $
+							$from =~ s/([?.{}\]\[*+])/\\$1/g;
+						}
+						$to =~ s/\\(\d)/\$$1/g; # Change \1 etc to $1
+						$to =~ s/\&/\$&/g;      # Change & to $1
+
+						my ($notfirst);
+						if ($global =~ s/1//) {
+							($from, $notfirst) = split('\s', $from, 2);
+						}
+
+						debug("$file: substituteperl $subvar, $how, $from, $to\n");
+						debug("eval substitute <$from> <$to> <$global>\n");
+						eval "\$result =~ s/$from/$to/$global";
+						if (defined $notfirst) {
+							$result .= " $notfirst";
+						}
+					} else {
+						next;
+					}
+				}
+
+				$vars{$key} = $left . $result . $right;
+				$loop = 1;
+			}
+		}
+	}
+
+	foreach my $key (keys %vars) {
+		$vars{$key} =~ s/$magic_undefined//;
+	}
+	\%vars;
 }
 
 sub get_default_makefile_vars() {
@@ -331,36 +900,6 @@ sub invalid_version($) {
 	}
 	$ok && ($fail = undef);
 	$fail;
-}
-
-# List (recursive) non directory contents of specified directory
-#
-#TODO this entire sub should be replaced with direct calls to
-#     File::Find
-sub listdir($$) {
-	my ($base, $dir) = @_;
-	my ($thisdir);
-	my (@list, @thislist);
-
-	$thisdir = $base;
-	if (defined($dir)) {
-		$thisdir .= "/$dir";
-		$dir .= '/';
-	} else {
-		$dir = '';
-	}
-
-	opendir(DIR, $thisdir) || fail("Unable to opendir($thisdir): $!");
-	@thislist = grep(substr($_, 0, 1) ne '.' && $_ ne 'CVS', readdir(DIR));
-	closedir(DIR);
-	foreach my $entry (@thislist) {
-		if (-d "$thisdir/$entry") {
-			push(@list, listdir($base, "$dir$entry"));
-		} else {
-			push(@list, "$dir$entry");
-		}
-	}
-	@list;
 }
 
 # Use pkg_info to list installed packages
@@ -657,394 +1196,6 @@ sub parse_makefile_pkgsrc($) {
 	}
 }
 
-# Extract variable assignments from Makefile
-# Much unpalatable magic to avoid having to use make (all for speed)
-#
-sub parse_makefile_vars($$) {
-	my ($file, $cwd) = @_;
-	my (
-	    $pkgname, %vars, $plus, $value, @data,
-	    %incfiles, # Cache of previously included fils
-	    %incdirs,  # Directories in which to check for includes
-	    @if_false
-	); # 0:true 1:false 2:nested-false&nomore-elsif
-
-	if (!open(FILE, $file)) {
-		return (undef);
-	}
-	@data = map { chomp;
-		$_; } <FILE>;
-	close(FILE);
-
-	$incdirs{"."} = 1;
-	$incdirs{ dirname($file) } = 1;
-
-	# Some Makefiles depend on these being set
-	if ($file eq '/etc/mk.conf') {
-		$vars{LINTPKGSRC} = 'YES';
-	} else {
-		%vars = %{$default_vars};
-	}
-	$vars{BSD_PKG_MK} = 'YES';
-
-	if ($cwd) {
-		$vars{'.CURDIR'} = $cwd;
-	} elsif ($file =~ m#(.*)/#) {
-		$vars{'.CURDIR'} = $1;
-	} else {
-		$vars{'.CURDIR'} = getcwd;
-	}
-
-	$incdirs{ $vars{'.CURDIR'} } = 1;
-	if ($opt{L}) {
-		print "$file\n";
-	}
-
-	while (defined($_ = shift(@data))) {
-		s/\s*[^\\]#.*//;
-
-		# Continuation lines
-		#
-		while (substr($_, -1) eq "\\") {
-			substr($_, -2) = shift @data;
-		}
-
-		# Conditionals
-		#
-		if (m#^\.\s*if(|def|ndef)\s+(.*)#) {
-			my ($type, $false);
-
-			$type = $1;
-			if ($if_false[$#if_false]) {
-				push(@if_false, 2);
-
-			} elsif ($type eq '') {
-				# Straight if
-				push(@if_false, parse_eval_make_false($2, \%vars));
-
-			} else {
-				$false = !defined($vars{ parse_expand_vars($2, \%vars) });
-				if ($type eq 'ndef') {
-					$false = !$false;
-				}
-				push(@if_false, $false ? 1 : 0);
-			}
-			debug("$file: .if$type (! @if_false)\n");
-			next;
-		}
-
-		if (m#^\.\s*elif\s+(.*)# && @if_false) {
-			if ($if_false[$#if_false] == 0) {
-				$if_false[$#if_false] = 2;
-			} elsif ($if_false[$#if_false] == 1
-			    && !parse_eval_make_false($1, \%vars)) {
-				$if_false[$#if_false] = 0;
-			}
-			debug("$file: .elif (! @if_false)\n");
-			next;
-		}
-
-		if (m#^\.\s*else\b# && @if_false) {
-			$if_false[$#if_false] = $if_false[$#if_false] == 1 ? 0 : 1;
-			debug("$file: .else (! @if_false)\n");
-			next;
-		}
-
-		if (m#^\.\s*endif\b#) {
-			pop(@if_false);
-			debug("$file: .endif (! @if_false)\n");
-			next;
-		}
-
-		$if_false[$#if_false] && next;
-
-		# Included files (just unshift onto @data)
-		#
-		if (m#^\.\s*include\s+"([^"]+)"#) {
-			my ($incfile) = parse_expand_vars($1, \%vars);
-
-			# At this point just skip any includes which we were not able to
-			# fully expand
-			if ($incfile =~ m#/mk/bsd#
-			    || $incfile =~ /$magic_undefined/
-			    || $incfile =~ /\$\{/
-			    || (!$opt{d} && $incfile =~ m#/(buildlink[^/]*\.mk)#)) {
-				debug("$file: .include \"$incfile\" skipped\n");
-
-			} else {
-				debug("$file: .include \"$incfile\"\n");
-
-				# Expand any simple vars in $incfile
-				#
-
-				if (substr($incfile, 0, 1) ne '/') {
-					foreach my $dir (keys %incdirs) {
-						if (-f "$dir/$incfile") {
-							$incfile = "$dir/$incfile";
-							last;
-						}
-					}
-				}
-
-				# perl 5.6.1 realpath() cannot handle files, only directories
-				# If the last component is a symlink this will give a false
-				# negative, but that is not a problem as the duplicate check
-				# is for performance
-				$incfile =~ m#^(.+)(/[^/]+)$#;
-
-				if (!-f $incfile) {
-					if (!$opt{L}) {
-						verbose("\n");
-					}
-
-					verbose("$file: Cannot locate $incfile in "
-					    . join(" ", sort keys %incdirs)
-					    . "\n");
-
-				} else {
-					$incfile = realpath($1) . $2;
-
-					if (!$incfiles{$incfile}) {
-						if ($opt{L}) {
-							print "inc $incfile\n";
-						}
-						$incfiles{$incfile} = 1;
-
-						if (!open(FILE, $incfile)) {
-							verbose("Cannot open '$incfile' (from $file): $_ $!\n");
-						} else {
-							my $NEWCURDIR = $incfile;
-							$NEWCURDIR =~ s#/[^/]*$##;
-							$incdirs{$NEWCURDIR} = 1;
-							unshift(@data, ".CURDIR=$vars{'.CURDIR'}");
-							unshift(@data, map { chomp;
-								$_ } <FILE>);
-							unshift(@data, ".CURDIR=$NEWCURDIR");
-							close(FILE);
-						}
-					}
-				}
-			}
-			next;
-		}
-
-		if (/^ *([-\w\.]+)\s*([:+?]?)=\s*(.*)/) {
-			my ($key);
-
-			$key = $1;
-			$plus = $2;
-			$value = $3;
-
-			if ($plus eq ':') {
-				$vars{$key} = parse_expand_vars($value, \%vars);
-			} elsif ($plus eq '+' && defined $vars{$key}) {
-				$vars{$key} .= " $value";
-			} elsif ($plus ne '?' || !defined $vars{$key}) {
-				$vars{$key} = $value;
-			}
-			debug("assignment: $key$plus=[$value] ($vars{$key})\n");
-
-			# Give python a little hand (XXX - do we wanna consider actually
-			# implementing make .for loops, etc?
-			#
-			if ($key eq "PYTHON_VERSIONS_ACCEPTED") {
-				my ($pv);
-
-				foreach $pv (split(/\s+/, $vars{PYTHON_VERSIONS_ACCEPTED})) {
-					$vars{"_PYTHON_VERSION_FIRSTACCEPTED"} ||= $pv;
-					$vars{"_PYTHON_VERSION_${pv}_OK"} = "yes";
-				}
-			}
-		}
-	}
-
-	debug("$file: expand\n");
-
-	# Handle variable substitutions  FRED = a-${JIM:S/-/-b-/}
-	#
-	my ($loop);
-
-	for ($loop = 1; $loop;) {
-		$loop = 0;
-		foreach my $key (keys %vars) {
-			if (index($vars{$key}, '$') == -1) {
-				next;
-			}
-
-			$_ = parse_expand_vars($vars{$key}, \%vars);
-			if ($_ ne $vars{$key}) {
-				$vars{$key} = $_;
-				$loop = 1;
-
-			} elsif ($vars{$key} =~ m#\$\{([\w.]+):([CS]([^{}])[^{}\3]+\3[^{}\3]*\3[g1]*(|:[^{}]+)|U[^{}]+)\}#) {
-				my ($left, $subvar, $right) = ($`, $1, $');
-				my (@patterns) = split(':', $2);
-				my ($result);
-
-				$result = $vars{$subvar};
-				$result ||= '';
-
-				# If $vars{$subvar} contains a $ skip it on this pass.
-				# Hopefully it will get substituted and we can catch it
-				# next time around.
-				if (index($result, '${') != -1) {
-					next;
-				}
-
-				debug("$file: substitutelist $key ($result) $subvar (@patterns)\n");
-				foreach (@patterns) {
-					if (m#(U)(.*)#) {
-						$result ||= $2;
-					} elsif (m#([CS])(.)([^/@]+)\2([^/@]*)\2([1g]*)#) {
-						my ($how, $from, $to, $global) = ($1, $3, $4, $5);
-
-						debug("$file: substituteglob $subvar, $how, $from, $to, $global\n");
-						if ($how eq 'S') {
-							# Limited substitution - keep ^ and $
-							$from =~ s/([?.{}\]\[*+])/\\$1/g;
-						}
-						$to =~ s/\\(\d)/\$$1/g; # Change \1 etc to $1
-						$to =~ s/\&/\$&/g;      # Change & to $1
-
-						my ($notfirst);
-						if ($global =~ s/1//) {
-							($from, $notfirst) = split('\s', $from, 2);
-						}
-
-						debug("$file: substituteperl $subvar, $how, $from, $to\n");
-						debug("eval substitute <$from> <$to> <$global>\n");
-						eval "\$result =~ s/$from/$to/$global";
-						if (defined $notfirst) {
-							$result .= " $notfirst";
-						}
-					} else {
-						next;
-					}
-				}
-
-				$vars{$key} = $left . $result . $right;
-				$loop = 1;
-			}
-		}
-	}
-
-	foreach my $key (keys %vars) {
-		$vars{$key} =~ s/$magic_undefined//;
-	}
-	\%vars;
-}
-
-sub parse_expand_vars($$) {
-	my ($line, $vars) = @_;
-
-	while ($line =~ /\$\{([-\w.]+)\}/) {
-		if (defined(${$vars}{$1})) {
-			$line = $` . ${$vars}{$1} . $';
-		} else {
-			$line = $` . $magic_undefined . $';
-		}
-	}
-	$line;
-}
-
-sub parse_expand_vars_dumb($$) {
-	my ($line, $vars) = @_;
-
-	while ($line =~ /\$\{([-\w.]+)\}/) {
-		if (defined(${$vars}{$1})) {
-			$line = $` . ${$vars}{$1} . $';
-		} else {
-			$line = $` . $magic_undefined . $';
-		}
-	}
-	$line;
-}
-
-sub parse_eval_make_false($$) {
-	my ($line, $vars) = @_;
-	my ($false, $test);
-
-	$false = 0;
-	$test = parse_expand_vars_dumb($line, $vars);
-
-	# XXX This is _so_ wrong - need to parse this correctly
-	$test =~ s/""/\r/g;
-	$test =~ s/"//g; # "
-	$test =~ s/\r/""/g;
-
-	debug("conditional: $test\n");
-
-	# XXX Could do something with target
-	while ($test =~ /(target|empty|make|defined|exists)\s*\(([^()]+)\)/) {
-		my $testname = $1;
-		my $varname = $2;
-		my $var;
-
-		# Implement (some of) make's :M modifier
-		if ($varname =~ /^([^:]+):M(.+)$/) {
-			$varname = $1;
-			my $match = $2;
-
-			$var = $${vars}{$varname};
-			$var = parse_expand_vars($var, $vars)
-			    if defined $var;
-
-			$match =~ s/([{.+])/\\$1/g;
-			$match =~ s/\*/.*/g;
-			$match =~ s/\?/./g;
-			$match = '^' . $match . '$';
-			$var = ($var =~ /$match/)
-			    if defined $var;
-		} else {
-			$var = $${vars}{$varname};
-			$var = parse_expand_vars($var, $vars)
-			    if defined $var;
-		}
-
-		if (defined $var && $var eq $magic_undefined) {
-			$var = undef;
-		}
-
-		if ($testname eq 'exists') {
-			$_ = (-e $varname) ? 1 : 0;
-
-		} elsif ($testname eq 'defined') {
-			$_ = defined($var) ? 1 : 0;
-
-		} elsif ($testname eq 'empty') {
-			$_ = ((not defined($var) or (length($var) == 0)) ? 1 : 0);
-
-		} else {
-			$_ = 0;
-		}
-
-		$test =~ s/$testname\s*\([^()]+\)/$_/;
-		debug("conditional: update to $test\n");
-	}
-
-	while ($test =~ /([^\s()\|\&]+)\s+(!=|==)\s+([^\s()]+)/) {
-		if ($2 eq '==') {
-			$_ = ($1 eq $3) ? 1 : 0;
-		} else {
-			$_ = ($1 ne $3) ? 1 : 0;
-		}
-		$test =~ s/[^\s()\|\&]+\s+(!=|==)\s+[^\s()]+/$_/;
-	}
-
-	if ($test !~ /[^<>\d()\s&|.!]/) {
-		debug("eval test $test\n");
-		$false = eval "($test)?0:1";
-		if (!defined $false) {
-			fail("Eval failed $line - $test");
-		}
-		debug("conditional: evaluated to " . ($false ? 0 : 1) . "\n");
-
-	} else {
-		$false = 0;
-		debug("conditional: defaulting to 0\n");
-	}
-	$false;
-}
 
 # chdir() || fail()
 #
@@ -1055,6 +1206,19 @@ sub safe_chdir($) {
 	if (!chdir($dir)) {
 		fail("Unable to chdir($dir): $!");
 	}
+}
+
+sub load_pkgsrc_makefiles($) {
+
+	open(STORE, "<$_[0]") || die("Cannot read pkgsrc store from $_[0]: $!\n");
+	my ($pkgver);
+	our ($pkgcnt, $pkgnum, $subpkgcnt, $subpkgnum);
+	$pkglist = new PkgList;
+	while (<STORE>) {
+		debug("eval store $_");
+		eval $_;
+	}
+	close(STORE);
 }
 
 # Generate pkgname->category/pkg mapping, optionally check DEPENDS
@@ -1192,7 +1356,7 @@ sub scan_pkgsrc_distfiles_vs_distinfo($$$$) {
 				push(@{$sumfiles{ $dist->{sumtype} }}, $distn);
 			}
 		}
-	    } },
+	} },
 	    ($pkgdistdir));
 
 	if ($check_unref && %bad_distfiles) {
@@ -1246,19 +1410,6 @@ sub scan_pkgsrc_distfiles_vs_distinfo($$$$) {
 	(sort keys %bad_distfiles);
 }
 
-sub load_pkgsrc_makefiles() {
-
-	open(STORE, "<$_[0]") || die("Cannot read pkgsrc store from $_[0]: $!\n");
-	my ($pkgver);
-	our ($pkgcnt, $pkgnum, $subpkgcnt, $subpkgnum);
-	$pkglist = new PkgList;
-	while (<STORE>) {
-		debug("eval store $_");
-		eval $_;
-	}
-	close(STORE);
-}
-
 sub store_pkgsrc_makefiles($) {
 	open(STORE, ">$_[0]") || die("Cannot save pkgsrc store to $_[0]: $!\n");
 	my $was = select(STORE);
@@ -1308,218 +1459,63 @@ Modifiers:
 	exit;
 }
 
-sub verbose(@) {
+# Could speed up by building a cache of package names to paths, then processing
+# each package name once against the tests.
+sub check_prebuilt_packages() {
 
-	if (-t STDERR) {
-		print STDERR @_;
-	}
-}
+	if ($_ eq 'distfiles' || $_ eq 'pkgsrc') {
+		# Skip these subdirs if present
+		$File::Find::prune = 1;
 
-sub debug(@) {
+	} elsif (/(.+)-(\d.*)\.t[bg]z$/) {
+		my ($pkg, $ver) = ($1, $2);
 
-	($opt{D}) && print STDERR 'DEBUG: ', @_;
-}
+		$pkg = canonicalize_pkgname($pkg);
 
-# PkgList is the master list of all packages in pkgsrc.
-#
-package PkgList;
+		my ($pkgs);
+		if ($pkgs = $pkglist->pkgs($pkg)) {
+			my ($pkgver) = $pkgs->pkgver($ver);
 
-sub add($@) {
-	my $self = shift;
+			if (!defined $pkgver) {
+				if ($opt{p}) {
+					print "$File::Find::dir/$_\n";
+					push(@matched_prebuiltpackages, "$File::Find::dir/$_");
+				}
 
-	if (!$self->pkgs($_[0])) {
-		$self->{_pkgs}{ $_[0] } = new Pkgs $_[0];
-	}
-	$self->pkgs($_[0])->add(@_);
-}
+				# Pick probably the last version
+				$pkgver = $pkgs->latestver;
+			}
 
-sub new($) {
-	my $class = shift;
-	my $self = {};
-	bless $self, $class;
-	return $self;
-}
+			if ($opt{R} && $pkgver->var('RESTRICTED')) {
+				print "$File::Find::dir/$_\n";
+				push(@matched_prebuiltpackages, "$File::Find::dir/$_");
+			}
 
-sub numpkgver($) {
-	my $self = shift;
-	scalar($self->pkgver);
-}
-
-sub pkgver($@) {
-	my $self = shift;
-
-	if (@_ == 0) {
-		my (@list);
-		foreach my $pkg ($self->pkgs) {
-			push(@list, $pkg->pkgver);
+			if ($opt{O} && $pkgver->var('OSVERSION_SPECIFIC')) {
+				print "$File::Find::dir/$_\n";
+				push(@matched_prebuiltpackages, "$File::Find::dir/$_");
+			}
 		}
-		return (@list);
-	}
 
-	if (defined $self->{_pkgs}{$_[0]}) {
-		return (@_ > 1)
-		    ? $self->{_pkgs}{$_[0]}->pkgver($_[1])
-		    : $self->{_pkgs}{$_[0]}->pkgver();
-	}
-	return;
-}
-
-sub pkgs($@) {
-	my $self = shift;
-
-	if (@_) {
-		return $self->{_pkgs}{$_[0]};
-	} else {
-		return (sort { $a->pkg cmp $b->pkg } values %{$self->{_pkgs}});
-	}
-}
-
-sub store($) {
-	my $self = shift;
-	my @pkgs = keys %{$self->{_pkgs}};
-	my ($cnt, $subcnt) = $self->count;
-
-	print("\$pkgcnt = $cnt;\n");
-	print("\$subpkgcnt = $subcnt;\n");
-	map($self->{_pkgs}{$_}->store, keys %{$self->{_pkgs}});
-}
-
-sub count($) {
-	my $self = shift;
-	my ($pkgcnt, $pkgsubcnt);
-
-	map {
-		$pkgcnt++;
-		$pkgsubcnt += $self->{_pkgs}{$_}->count;
-	} keys %{$self->{_pkgs}};
-	wantarray ? ($pkgcnt, $pkgsubcnt) : $pkgcnt;
-}
-
-# Pkgs is all versions of a given package (eg: apache-1.x and apache-2.x)
-#
-package Pkgs;
-
-sub add($@) {
-	my $self = shift;
-
-	$self->{_pkgver}{$_[1]} = new PkgVer @_;
-}
-
-sub new($@) {
-	my $class = shift;
-	my $self = {};
-
-	bless $self, $class;
-	$self->{_pkg} = $_[0];
-	return $self;
-}
-
-sub versions($) {
-	my $self = shift;
-
-	return sort { $b cmp $a } keys %{$self->{_pkgver}};
-}
-
-sub pkg($) {
-	my $self = shift;
-	$self->{_pkg};
-}
-
-sub pkgver($@) {
-	my $self = shift;
-
-	if (@_) {
-		if ($self->{_pkgver}{$_[0]}) {
-			return ($self->{_pkgver}{$_[0]});
+	} elsif (-d $_) {
+		if ($prebuilt_pkgdir_cache{"$File::Find::dir/$_"}) {
+			$File::Find::prune = 1;
+			return;
 		}
-		return;
-	}
-	return sort { $b->ver() cmp $a->ver() } values %{$self->{_pkgver}};
-}
 
-sub latestver($) {
-	my $self = shift;
+		$prebuilt_pkgdir_cache{"$File::Find::dir/$_"} = 1;
+		if (-l $_) {
+			my ($dest) = readlink($_);
 
-	($self->pkgver())[0];
-}
-
-sub store($) {
-	my $self = shift;
-
-	print("\$pkgnum++;\n");
-	map($self->{_pkgver}{$_}->store, keys %{$self->{_pkgver}});
-}
-
-sub count($) {
-	my $self = shift;
-
-	scalar(keys %{$self->{_pkgver}});
-}
-
-# PkgVer is a unique package+version
-#
-package PkgVer;
-
-sub new($$$) {
-	my $class = shift;
-	my $self = {};
-
-	bless $self, $class;
-	$self->{_pkg} = $_[0];
-	$self->{_ver} = $_[1];
-	return $self;
-}
-
-sub pkgname($) {
-	my $self = shift;
-
-	$self->pkg . '-' . $self->ver;
-}
-
-sub pkg($) {
-	my $self = shift;
-
-	$self->{_pkg};
-}
-
-sub var($$$) {
-	my $self = shift;
-	my ($key, $val) = @_;
-
-	(defined $val)
-	    ? ($self->{$key} = $val)
-	    : $self->{$key};
-}
-
-sub ver($) {
-	my $self = shift;
-
-	$self->{_ver};
-}
-
-sub vars($) {
-	my $self = shift;
-
-	grep(!/^_(pkg|ver)$/, keys %{$self});
-}
-
-sub store($) {
-	my $self = shift;
-	my $data;
-
-	($data = $self->{_pkg}) =~ s/([\\\$\@\%\"])/\\$1/g;
-	print("\$pkgver = \$pkglist->add(\"$data\", \"");
-
-	($data = $self->{_ver}) =~ s/([\\\$\@\%\"])/\\$1/g;
-	print("$data\"); __pkgcount(1);\n");
-
-	foreach ($self->vars) {
-		($data = $self->{$_}) =~ s/([\\\$\@\%\"])/\\$1/g;
-		print("\$pkgver->var(\"$_\", \"$data\");\n");
+			if (substr($dest, 0, 1) ne '/') {
+				$dest = "$File::Find::dir/$dest";
+			}
+			if (!$prebuilt_pkgdir_cache{$dest}) {
+				push(@prebuilt_pkgdirs, $dest);
+			}
+		}
 	}
 }
-
-package main;
 
 sub main() {
 
