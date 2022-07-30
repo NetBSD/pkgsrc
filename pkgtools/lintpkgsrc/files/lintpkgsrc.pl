@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.24 2022/07/30 06:21:17 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.25 2022/07/30 06:25:51 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -333,8 +333,7 @@ sub main() {
 					while (<PKGINFO>) {
 						if (/Required by:/) {
 							$list = 1;
-						}
-						elsif ($list) {
+						} elsif ($list) {
 							chomp;
 							s/-\d.*//;
 							print " $_";
@@ -384,8 +383,7 @@ sub check_prebuilt_packages() {
 		# Skip these subdirs if present
 		$File::Find::prune = 1;
 
-	}
-	elsif (/(.+)-(\d.*)\.t[bg]z$/) {
+	} elsif (/(.+)-(\d.*)\.t[bg]z$/) {
 		my ($pkg, $ver) = ($1, $2);
 
 		$pkg = canonicalize_pkgname($pkg);
@@ -415,8 +413,7 @@ sub check_prebuilt_packages() {
 			}
 		}
 
-	}
-	elsif (-d $_) {
+	} elsif (-d $_) {
 		if ($prebuilt_pkgdir_cache{"$File::Find::dir/$_"}) {
 			$File::Find::prune = 1;
 			return;
@@ -479,26 +476,19 @@ sub convert_to_standard_dewey(@) {
 	foreach $elem (@_) {
 		if ($elem =~ /\d+/) {
 			push(@temp, $elem);
-		}
-		elsif ($elem =~ /^pl$/ or $elem =~ /^\.$/) {
+		} elsif ($elem =~ /^pl$/ or $elem =~ /^\.$/) {
 			push(@temp, 0);
-		}
-		elsif ($elem =~ /^_$/) {
+		} elsif ($elem =~ /^_$/) {
 			push(@temp, 0);
-		}
-		elsif ($elem =~ /^pre$/) {
+		} elsif ($elem =~ /^pre$/) {
 			push(@temp, -1);
-		}
-		elsif ($elem =~ /^rc$/) {
+		} elsif ($elem =~ /^rc$/) {
 			push(@temp, -1);
-		}
-		elsif ($elem =~ /^beta$/) {
+		} elsif ($elem =~ /^beta$/) {
 			push(@temp, -2);
-		}
-		elsif ($elem =~ /^alpha$/) {
+		} elsif ($elem =~ /^alpha$/) {
 			push(@temp, -3);
-		}
-		else {
+		} else {
 			push(@temp, 0);
 			push(@temp, ord($elem) - ord("a") + 1);
 		}
@@ -516,8 +506,7 @@ sub deweycmp_extract($$) {
 	$i = 0;
 	if ($#matchlist > $#vallist) {
 		$len = $#matchlist;
-	}
-	else {
+	} else {
 		$len = $#vallist;
 	}
 	while (!$cmp && ($i++ <= $len)) {
@@ -569,8 +558,7 @@ sub get_default_makefile_vars() {
 
 	if ($opt{P}) {
 		$default_vars->{PKGSRCDIR} = realpath($opt{P});
-	}
-	else {
+	} else {
 		$default_vars->{PKGSRCDIR} = $conf_pkgsrcdir;
 	}
 
@@ -583,8 +571,7 @@ sub get_default_makefile_vars() {
 		foreach my $var (keys %{$vars}) {
 			$default_vars->{$var} = $vars->{$var};
 		}
-	}
-	elsif (-f ${conf_sysconfdir} . '/mk.conf' &&
+	} elsif (-f ${conf_sysconfdir} . '/mk.conf' &&
 	    ($vars = parse_makefile_vars(${conf_sysconfdir} . '/mk.conf'))) {
 		foreach my $var (keys %{$vars}) {
 			$default_vars->{$var} = $vars->{$var};
@@ -597,8 +584,7 @@ sub get_default_makefile_vars() {
 
 	if ($opt{M}) {
 		$default_vars->{DISTDIR} = realpath($opt{M});
-	}
-	else {
+	} else {
 		$default_vars->{DISTDIR} ||= $default_vars->{PKGSRCDIR} . '/distfiles';
 	}
 
@@ -637,8 +623,7 @@ sub invalid_version($) {
 			foreach (split(',', $2)) {
 				push(@todo, "$1$_$3");
 			}
-		}
-		else {
+		} else {
 			push(@pkgmatches, $pkgmatch);
 		}
 	}
@@ -653,12 +638,10 @@ sub invalid_version($) {
 				$fail .=
 				    "Version mismatch: '$pkg' $badver vs "
 					. join(',', $pkgs->versions) . "\n";
-			}
-			else {
+			} else {
 				$fail .= "Unknown package: '$pkg' version $badver\n";
 			}
-		}
-		else {
+		} else {
 
 			# If we find one match, don't bitch about others
 			$ok = 1;
@@ -681,8 +664,7 @@ sub listdir($$) {
 	if (defined($dir)) {
 		$thisdir .= "/$dir";
 		$dir .= '/';
-	}
-	else {
+	} else {
 		$dir = '';
 	}
 
@@ -692,8 +674,7 @@ sub listdir($$) {
 	foreach my $entry (@thislist) {
 		if (-d "$thisdir/$entry") {
 			push(@list, listdir($base, "$dir$entry"));
-		}
-		else {
+		} else {
 			push(@list, "$dir$entry");
 		}
 	}
@@ -759,35 +740,27 @@ sub glob2regex($) {
 	while (defined($_ = shift @chars)) {
 		if ($_ eq '*') {
 			$regex .= '.*';
-		}
-		elsif ($_ eq '?') {
+		} elsif ($_ eq '?') {
 			$regex .= '.';
-		}
-		elsif ($_ eq '+') {
+		} elsif ($_ eq '+') {
 			$regex .= '.';
-		}
-		elsif ($_ eq '\\+') {
+		} elsif ($_ eq '\\+') {
 			$regex .= $_ . shift @chars;
-		}
-		elsif ($_ eq '.' || $_ eq '|') {
+		} elsif ($_ eq '.' || $_ eq '|') {
 			$regex .= quotemeta;
-		}
-		elsif ($_ eq '{') {
+		} elsif ($_ eq '{') {
 			$regex .= '(';
 			++$in_alt;
-		}
-		elsif ($_ eq '}') {
+		} elsif ($_ eq '}') {
 			if (!$in_alt) {
 				# Error
 				return undef;
 			}
 			$regex .= ')';
 			--$in_alt;
-		}
-		elsif ($_ eq ',' && $in_alt) {
+		} elsif ($_ eq ',' && $in_alt) {
 			$regex .= '|';
-		}
-		else {
+		} else {
 			$regex .= $_;
 		}
 	}
@@ -826,8 +799,7 @@ sub package_globmatch($) {
 						$matchver = undef;
 						last;
 					}
-				}
-				else {
+				} else {
 					if (deweycmp($pkgver->ver, $test, $matchver)) {
 						$matchver = undef;
 						last;
@@ -840,8 +812,7 @@ sub package_globmatch($) {
 			}
 		}
 
-	}
-	elsif ($pkgmatch =~ /^([^[]+)-([\d*?{[].*)$/) {
+	} elsif ($pkgmatch =~ /^([^[]+)-([\d*?{[].*)$/) {
 
 		# (package)-(globver)
 		my (@pkgnames);
@@ -851,8 +822,7 @@ sub package_globmatch($) {
 		if (defined $pkglist->pkgs($matchpkgname)) {
 			push(@pkgnames, $matchpkgname);
 
-		}
-		elsif ($regex = glob2regex($matchpkgname)) {
+		} elsif ($regex = glob2regex($matchpkgname)) {
 			foreach my $pkg ($pkglist->pkgs) {
 				($pkg->pkg() =~ /$regex/) && push(@pkgnames, $pkg->pkg());
 			}
@@ -892,8 +862,7 @@ sub package_globmatch($) {
 			}
 		}
 
-	}
-	else {
+	} else {
 		($matchpkgname, $matchver) = ($pkgmatch, 'missing');
 	}
 
@@ -916,8 +885,7 @@ sub parse_makefile_pkgsrc($) {
 
 	if (defined $vars->{PKGNAME}) {
 		$pkgname = $vars->{PKGNAME};
-	}
-	elsif (defined $vars->{DISTNAME}) {
+	} elsif (defined $vars->{DISTNAME}) {
 		$pkgname = $vars->{DISTNAME};
 	}
 
@@ -937,8 +905,7 @@ sub parse_makefile_pkgsrc($) {
 		    "cd $pkgsrcdir || exit 1; ${conf_make} show-vars VARNAMES=PKGNAME");
 		if (!$pid) {
 			warn "$file: Unable to run make: $!";
-		}
-		else {
+		} else {
 			close(WTR);
 			my @errors = <ERR>;
 			close(ERR);
@@ -965,12 +932,10 @@ sub parse_makefile_pkgsrc($) {
 		    and not $vars->{PKGREVISION} =~ /^\s*$/) {
 			if ($vars->{PKGREVISION} =~ /^\$\{(_(CVS|GIT|HG|SVN)_PKGVERSION):.*\}$/) {
 				# See wip/mk/*-package.mk.
-			}
-			elsif ($vars->{PKGREVISION} =~ /\D/) {
+			} elsif ($vars->{PKGREVISION} =~ /\D/) {
 				print "\nBogus: PKGREVISION $vars->{PKGREVISION} (from $file)\n";
 
-			}
-			elsif ($vars->{PKGREVISION}) {
+			} elsif ($vars->{PKGREVISION}) {
 				$pkgname .= "nb";
 				$pkgname .= $vars->{PKGREVISION};
 			}
@@ -979,8 +944,7 @@ sub parse_makefile_pkgsrc($) {
 		if ($pkgname =~ /\$/) {
 			print "\nBogus: $pkgname (from $file)\n";
 
-		}
-		elsif ($pkgname =~ /(.*)-(\d.*)/) {
+		} elsif ($pkgname =~ /(.*)-(\d.*)/) {
 			if ($pkglist) {
 				my ($pkgver) = $pkglist->add($1, $2);
 
@@ -996,20 +960,17 @@ sub parse_makefile_pkgsrc($) {
 
 				if ($file =~ m:([^/]+/[^/]+)/Makefile$:) {
 					$pkgver->var('dir', $1);
-				}
-				else {
+				} else {
 					$pkgver->var('dir', 'unknown');
 				}
 			}
-		}
-		else {
+		} else {
 			print "Cannot extract $pkgname version ($file)\n";
 		}
 
 		return ($pkgname, $vars);
 
-	}
-	else {
+	} else {
 		return (undef);
 	}
 }
@@ -1039,19 +1000,16 @@ sub parse_makefile_vars($$) {
 	# Some Makefiles depend on these being set
 	if ($file eq '/etc/mk.conf') {
 		$vars{LINTPKGSRC} = 'YES';
-	}
-	else {
+	} else {
 		%vars = %{$default_vars};
 	}
 	$vars{BSD_PKG_MK} = 'YES';
 
 	if ($cwd) {
 		$vars{'.CURDIR'} = $cwd;
-	}
-	elsif ($file =~ m#(.*)/#) {
+	} elsif ($file =~ m#(.*)/#) {
 		$vars{'.CURDIR'} = $1;
-	}
-	else {
+	} else {
 		$vars{'.CURDIR'} = getcwd;
 	}
 
@@ -1078,13 +1036,11 @@ sub parse_makefile_vars($$) {
 			if ($if_false[$#if_false]) {
 				push(@if_false, 2);
 
-			}
-			elsif ($type eq '') {
+			} elsif ($type eq '') {
 				# Straight if
 				push(@if_false, parse_eval_make_false($2, \%vars));
 
-			}
-			else {
+			} else {
 				$false = !defined($vars{ parse_expand_vars($2, \%vars) });
 				if ($type eq 'ndef') {
 					$false = !$false;
@@ -1098,8 +1054,7 @@ sub parse_makefile_vars($$) {
 		if (m#^\.\s*elif\s+(.*)# && @if_false) {
 			if ($if_false[$#if_false] == 0) {
 				$if_false[$#if_false] = 2;
-			}
-			elsif ($if_false[$#if_false] == 1
+			} elsif ($if_false[$#if_false] == 1
 			    && !parse_eval_make_false($1, \%vars)) {
 				$if_false[$#if_false] = 0;
 			}
@@ -1134,8 +1089,7 @@ sub parse_makefile_vars($$) {
 			    || (!$opt{d} && $incfile =~ m#/(buildlink[^/]*\.mk)#)) {
 				debug("$file: .include \"$incfile\" skipped\n");
 
-			}
-			else {
+			} else {
 				debug("$file: .include \"$incfile\"\n");
 
 				# Expand any simple vars in $incfile
@@ -1165,8 +1119,7 @@ sub parse_makefile_vars($$) {
 					    . join(" ", sort keys %incdirs)
 					    . "\n");
 
-				}
-				else {
+				} else {
 					$incfile = realpath($1) . $2;
 
 					if (!$incfiles{$incfile}) {
@@ -1177,8 +1130,7 @@ sub parse_makefile_vars($$) {
 
 						if (!open(FILE, $incfile)) {
 							verbose("Cannot open '$incfile' (from $file): $_ $!\n");
-						}
-						else {
+						} else {
 							my $NEWCURDIR = $incfile;
 							$NEWCURDIR =~ s#/[^/]*$##;
 							$incdirs{$NEWCURDIR} = 1;
@@ -1203,11 +1155,9 @@ sub parse_makefile_vars($$) {
 
 			if ($plus eq ':') {
 				$vars{$key} = parse_expand_vars($value, \%vars);
-			}
-			elsif ($plus eq '+' && defined $vars{$key}) {
+			} elsif ($plus eq '+' && defined $vars{$key}) {
 				$vars{$key} .= " $value";
-			}
-			elsif ($plus ne '?' || !defined $vars{$key}) {
+			} elsif ($plus ne '?' || !defined $vars{$key}) {
 				$vars{$key} = $value;
 			}
 			debug("assignment: $key$plus=[$value] ($vars{$key})\n");
@@ -1244,8 +1194,7 @@ sub parse_makefile_vars($$) {
 				$vars{$key} = $_;
 				$loop = 1;
 
-			}
-			elsif ($vars{$key} =~ m#\$\{([\w.]+):([CS]([^{}])[^{}\3]+\3[^{}\3]*\3[g1]*(|:[^{}]+)|U[^{}]+)\}#) {
+			} elsif ($vars{$key} =~ m#\$\{([\w.]+):([CS]([^{}])[^{}\3]+\3[^{}\3]*\3[g1]*(|:[^{}]+)|U[^{}]+)\}#) {
 				my ($left, $subvar, $right) = ($`, $1, $');
 				my (@patterns) = split(':', $2);
 				my ($result);
@@ -1264,9 +1213,7 @@ sub parse_makefile_vars($$) {
 				foreach (@patterns) {
 					if (m#(U)(.*)#) {
 						$result ||= $2;
-					}
-					elsif (m#([CS])(.)([^/@]+)\2([^/@]*)\2([1g]*)#) {
-
+					} elsif (m#([CS])(.)([^/@]+)\2([^/@]*)\2([1g]*)#) {
 						my ($how, $from, $to, $global) = ($1, $3, $4, $5);
 
 						debug("$file: substituteglob $subvar, $how, $from, $to, $global\n");
@@ -1288,8 +1235,7 @@ sub parse_makefile_vars($$) {
 						if (defined $notfirst) {
 							$result .= " $notfirst";
 						}
-					}
-					else {
+					} else {
 						next;
 					}
 				}
@@ -1312,8 +1258,7 @@ sub parse_expand_vars($$) {
 	while ($line =~ /\$\{([-\w.]+)\}/) {
 		if (defined(${$vars}{$1})) {
 			$line = $` . ${$vars}{$1} . $';
-		}
-		else {
+		} else {
 			$line = $` . $magic_undefined . $';
 		}
 	}
@@ -1326,8 +1271,7 @@ sub parse_expand_vars_dumb($$) {
 	while ($line =~ /\$\{([-\w.]+)\}/) {
 		if (defined(${$vars}{$1})) {
 			$line = $` . ${$vars}{$1} . $';
-		}
-		else {
+		} else {
 			$line = $` . $magic_undefined . $';
 		}
 	}
@@ -1369,8 +1313,7 @@ sub parse_eval_make_false($$) {
 			$match = '^' . $match . '$';
 			$var = ($var =~ /$match/)
 			    if defined $var;
-		}
-		else {
+		} else {
 			$var = $${vars}{$varname};
 			$var = parse_expand_vars($var, $vars)
 			    if defined $var;
@@ -1537,8 +1480,7 @@ sub scan_pkgsrc_distfiles_vs_distinfo($$$$) {
 							$distfiles{$dn}{sum} = $ds;
 							$distfiles{$dn}{path} = "$cat/$pkgdir";
 
-						}
-						elsif ($distfiles{$dn}{sumtype} eq $dt && $distfiles{$dn}{sum} ne $ds) {
+						} elsif ($distfiles{$dn}{sumtype} eq $dt && $distfiles{$dn}{sum} ne $ds) {
 							push(@distwarn,
 							    "checksum mismatch between '$dt' for '$dn' "
 								. "in $cat/$pkgdir and $distfiles{$dn}{path}\n"
