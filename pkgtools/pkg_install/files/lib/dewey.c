@@ -1,7 +1,7 @@
-/* $NetBSD: dewey.c,v 1.11 2009/03/06 15:18:42 joerg Exp $ */
+/* $NetBSD: dewey.c,v 1.12 2022/07/30 08:41:25 rillig Exp $ */
 
 /*
- * Copyright © 2002 Alistair G. Crooks.  All rights reserved.
+ * Copyright (c) 2002 Alistair G. Crooks.  All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -71,7 +71,7 @@ typedef struct test_t {
 
 
 /* the tests that are recognised. */
- const test_t   tests[] = {
+const test_t	tests[] = {
         {	"<=",	2,	DEWEY_LE	},
         {	"<",	1,	DEWEY_LT	},
         {	">=",	2,	DEWEY_GE	},
@@ -81,7 +81,7 @@ typedef struct test_t {
         {	NULL,	0,	0	}
 };
 
- const test_t	modifiers[] = {
+const test_t	modifiers[] = {
 	{	"alpha",	5,	Alpha	},
 	{	"beta",		4,	Beta	},
 	{	"pre",		3,	RC	},
@@ -122,10 +122,10 @@ dewey_mktest(int *op, const char *test)
 static int
 mkcomponent(arr_t *ap, const char *num)
 {
-	static const char       alphas[] = "abcdefghijklmnopqrstuvwxyz";
-	const test_t	       *modp;
-	int                 n;
-	const char             *cp;
+	static const char alphas[] = "abcdefghijklmnopqrstuvwxyz";
+	const test_t *modp;
+	int n;
+	const char *cp;
 
 	if (ap->c == ap->size) {
 		if (ap->size == 0) {
@@ -281,7 +281,7 @@ dewey_match(const char *pattern, const char *pkg)
 	    strncmp(pkg, pattern, (size_t)(version-pkg)) != 0)
 		return 0;
 	version++;
-	
+
 	/* extract comparison operator */
         if ((n = dewey_mktest(&op, sep)) < 0) {
 		return 0;
@@ -317,4 +317,3 @@ dewey_match(const char *pattern, const char *pkg)
 
 	return 0;
 }
-
