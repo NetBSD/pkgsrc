@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.33 2022/07/30 09:32:05 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.34 2022/07/30 09:37:21 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -368,19 +368,6 @@ sub pkgversioncmp($$$) {
 	eval "$cmp $test 0";
 }
 
-sub parse_expand_vars_dumb($$) {
-	my ($line, $vars) = @_;
-
-	while ($line =~ /\$\{([-\w.]+)\}/) {
-		if (defined(${$vars}{$1})) {
-			$line = $` . ${$vars}{$1} . $';
-		} else {
-			$line = $` . $magic_undefined . $';
-		}
-	}
-	$line;
-}
-
 sub parse_expand_vars($$) {
 	my ($line, $vars) = @_;
 
@@ -399,7 +386,7 @@ sub parse_eval_make_false($$) {
 	my ($false, $test);
 
 	$false = 0;
-	$test = parse_expand_vars_dumb($line, $vars);
+	$test = parse_expand_vars($line, $vars);
 
 	# XXX This is _so_ wrong - need to parse this correctly
 	$test =~ s/""/\r/g;
