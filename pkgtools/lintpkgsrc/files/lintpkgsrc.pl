@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.35 2022/07/30 10:11:45 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.36 2022/07/30 10:55:51 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -1800,4 +1800,4 @@ sub main() {
 	}
 }
 
-main() unless $ENV{'TESTING_LINTPKGSRC'} eq 'yes';
+main() unless defined $ENV{'TESTING_LINTPKGSRC'};
