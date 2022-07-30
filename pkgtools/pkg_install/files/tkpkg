@@ -22,7 +22,7 @@ text .f.t -width 80 -height 20 -yscrollcommand ".f.s set" -relief sunken
 # Initially display instructions in this window.  Erase the
 # instructions and show the package description when the user clicks
 # on a package.
-# 
+#
 .f.t insert end "Double click on a package above to see its
 complete description here."
 scrollbar .f.s -relief sunken -command ".f.t yview"
