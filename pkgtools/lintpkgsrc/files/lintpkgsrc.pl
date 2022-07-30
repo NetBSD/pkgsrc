@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.28 2022/07/30 08:18:31 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.29 2022/07/30 08:21:31 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -301,7 +301,7 @@ sub canonicalize_pkgname($) {
 	return $pkgname;
 }
 
-sub convert_to_standard_dewey(@) {
+sub convert_to_standard_pkgversion(@) {
 	my ($elem, $underscore, @temp);
 
 	# According to the current implementation in pkg_install/lib/str.c
@@ -333,12 +333,12 @@ sub convert_to_standard_dewey(@) {
 	@temp;
 }
 
-sub deweycmp_extract($$) {
+sub pkgversioncmp_extract($$) {
 	my ($match, $val) = @_;
 	my ($cmp, @matchlist, @vallist, $i, $len);
 
-	@matchlist = convert_to_standard_dewey(split(/(\D+)/, lc($match)));
-	@vallist = convert_to_standard_dewey(split(/(\D+)/, lc($val)));
+	@matchlist = convert_to_standard_pkgversion(split(/(\D+)/, lc($match)));
+	@vallist = convert_to_standard_pkgversion(split(/(\D+)/, lc($val)));
 	$cmp = 0;
 	$i = 0;
 	if ($#matchlist > $#vallist) {
@@ -358,10 +358,10 @@ sub deweycmp_extract($$) {
 	$cmp;
 }
 
-# Dewey decimal version number matching - or thereabouts
+# Package version number matching - or thereabouts
 # Also handles 'nb<N>' suffix (checked iff values otherwise identical)
 #
-sub deweycmp($$$) {
+sub pkgversioncmp($$$) {
 	my ($match, $test, $val) = @_;
 	my ($cmp, $match_nb, $val_nb);
 
@@ -378,14 +378,14 @@ sub deweycmp($$$) {
 		$val_nb = $2;
 	}
 
-	$cmp = deweycmp_extract($match, $val);
+	$cmp = pkgversioncmp_extract($match, $val);
 
 	if (!$cmp) {
 		# Iff otherwise identical, check nb suffix
-		$cmp = deweycmp_extract($match_nb, $val_nb);
+		$cmp = pkgversioncmp_extract($match_nb, $val_nb);
 	}
 
-	debug("eval deweycmp $cmp $test 0\n");
+	debug("eval pkgversioncmp $cmp $test 0\n");
 	eval "$cmp $test 0";
 }
 
@@ -1009,7 +1009,7 @@ sub package_globmatch($) {
 
 	if ($pkgmatch =~ /^([^*?[]+)(<|>|<=|>=|-)(\d[^*?[{]*)$/) {
 
-		# (package)(cmp)(dewey)
+		# (package)(cmp)(pkgversion)
 		my ($test, @pkgvers);
 
 		($matchpkgname, $test, $matchver) = ($1, $2, $3);
@@ -1021,7 +1021,7 @@ sub package_globmatch($) {
 						last;
 					}
 				} else {
-					if (deweycmp($pkgver->ver, $test, $matchver)) {
+					if (pkgversioncmp($pkgver->ver, $test, $matchver)) {
 						$matchver = undef;
 						last;
 					}
