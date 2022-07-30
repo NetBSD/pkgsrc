@@ -1,4 +1,4 @@
-/* $NetBSD: dewey.c,v 1.12 2022/07/30 08:41:25 rillig Exp $ */
+/* $NetBSD: dewey.c,v 1.13 2022/07/30 08:53:42 rillig Exp $ */
 
 /*
  * Copyright (c) 2002 Alistair G. Crooks.  All rights reserved.
@@ -47,38 +47,38 @@
 
 /* do not modify these values, or things will NOT work */
 enum {
-        Alpha = -3,
-        Beta = -2,
-        RC = -1,
-        Dot = 0,
-        Patch = 1
+	Alpha = -3,
+	Beta = -2,
+	RC = -1,
+	Dot = 0,
+	Patch = 1
 };
 
 /* this struct defines a version number */
 typedef struct arr_t {
-	unsigned	c;              /* # of version numbers */
-	unsigned	size;           /* size of array */
-	int	       *v;              /* array of decimal numbers */
-	int		netbsd;         /* any "nb" suffix */
+	unsigned	c;		/* # of version numbers */
+	unsigned	size;		/* size of array */
+	int	       *v;		/* array of decimal numbers */
+	int		netbsd;		/* any "nb" suffix */
 } arr_t;
 
 /* this struct describes a test */
 typedef struct test_t {
-	const char     *s;              /* string representation */
-	unsigned	len;            /* length of string */
-	int		t;              /* enumerated type of test */
+	const char     *s;		/* string representation */
+	unsigned	len;		/* length of string */
+	int		t;		/* enumerated type of test */
 } test_t;
 
 
 /* the tests that are recognised. */
 const test_t	tests[] = {
-        {	"<=",	2,	DEWEY_LE	},
-        {	"<",	1,	DEWEY_LT	},
-        {	">=",	2,	DEWEY_GE	},
-        {	">",	1,	DEWEY_GT	},
-        {	"==",	2,	DEWEY_EQ	},
-        {	"!=",	2,	DEWEY_NE	},
-        {	NULL,	0,	0	}
+	{	"<=",	2,	DEWEY_LE	},
+	{	"<",	1,	DEWEY_LT	},
+	{	">=",	2,	DEWEY_GE	},
+	{	">",	1,	DEWEY_GT	},
+	{	"==",	2,	DEWEY_EQ	},
+	{	"!=",	2,	DEWEY_NE	},
+	{	NULL,	0,	0	}
 };
 
 const test_t	modifiers[] = {
@@ -252,7 +252,7 @@ dewey_cmp(const char *lhs, int op, const char *rhs)
 		freeversion(&left);
 		return 0;
 	}
-        retval = vtest(&left, op, &right);
+	retval = vtest(&left, op, &right);
 	freeversion(&left);
 	freeversion(&right);
 	return retval;
@@ -283,9 +283,9 @@ dewey_match(const char *pattern, const char *pkg)
 	version++;
 
 	/* extract comparison operator */
-        if ((n = dewey_mktest(&op, sep)) < 0) {
+	if ((n = dewey_mktest(&op, sep)) < 0) {
 		return 0;
-        }
+	}
 	/* skip operator */
 	sep += n;
 
