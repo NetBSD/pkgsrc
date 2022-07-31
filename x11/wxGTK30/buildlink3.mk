@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.26 2022/06/28 11:37:59 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.27 2022/07/31 12:07:23 wiz Exp $
 
 BUILDLINK_TREE+=	wxGTK30
 
@@ -29,7 +29,7 @@ pkgbase := wxGTK30
 .if ${OPSYS} != "Darwin"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
-.  if !empty(PKG_BUILD_OPTIONS.wxGTK30:Mgtk2)
+.  if ${PKG_BUILD_OPTIONS.wxGTK30:Mgtk2}
 .include "../../x11/gtk2/buildlink3.mk"
 .  else
 .include "../../x11/gtk3/buildlink3.mk"
