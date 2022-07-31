@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2022/07/29 18:36:06 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2022/07/31 16:57:22 wiz Exp $
 
 DISTNAME=	wxWidgets-3.2.0
 PKGNAME=	${DISTNAME:S/wxWidgets/wxGTK32/}
@@ -135,8 +135,6 @@ PLIST_SRC+=	PLIST.gtk3
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 .include "../../security/libsecret/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
-# curl not checked by cmake but used by webrequest_curl.h
-# https://github.com/wxWidgets/wxWidgets/issues/22648
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
