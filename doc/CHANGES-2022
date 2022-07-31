@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3604 2022/07/30 16:14:29 he Exp $
+$NetBSD: CHANGES-2022,v 1.3605 2022/07/31 08:23:52 wen Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5388,3 +5388,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated time/ruby-tzinfo to 2.0.5 [taca 2022-07-30]
 	Updated security/pear-Crypt_GPG to 1.6.7nb1 [taca 2022-07-30]
 	Updated math/py-scipy to 1.8.1nb3 [he 2022-07-30]
+	Updated devel/p5-File-Share to 0.27 [wen 2022-07-31]
