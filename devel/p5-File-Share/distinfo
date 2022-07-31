@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:16:37 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/07/31 08:22:42 wen Exp $
 
-BLAKE2s (File-Share-0.25.tar.gz) = 8fb2f0c579bf8908edbd4c5a45757346cea8ef10b78d4f9fa8f0f298f0cc3fc5
-SHA512 (File-Share-0.25.tar.gz) = 7c9f9a341a5d2d397479a09da05136df1d0c6b9869da511e45ee75b49565218f2231fd1b45c61e68ab802402a95af02513c4c78ce72cf8205537d0e68f9b1e46
-Size (File-Share-0.25.tar.gz) = 13696 bytes
+BLAKE2s (File-Share-0.27.tar.gz) = 6760fe2f87de33a36b0e4269be672ec19ebba3c2806fd3c7cf5fe3b83b03b550
+SHA512 (File-Share-0.27.tar.gz) = 7c321de08e49f252e8e2126da00ea05ced13db362de758a693ee7f40452827fbf2591fb9e6c80caa27bb8767b3596893fc8762993a167583a0b40091e5db5ec7
+Size (File-Share-0.27.tar.gz) = 14130 bytes
