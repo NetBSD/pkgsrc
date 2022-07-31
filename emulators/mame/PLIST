@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.67 2022/07/01 16:57:29 wiz Exp $
+@comment $NetBSD: PLIST,v 1.68 2022/07/31 19:10:19 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -464,6 +464,7 @@ share/mame/hash/nes_ade.xml
 share/mame/hash/nes_datach.xml
 share/mame/hash/nes_kstudio.xml
 share/mame/hash/nes_ntbrom.xml
+share/mame/hash/nes_vt_cart.xml
 share/mame/hash/next.xml
 share/mame/hash/next_cdrom.xml
 share/mame/hash/next_hdd.xml
