@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.26 2021/12/08 16:04:02 adam Exp $
+# $NetBSD: Makefile,v 1.27 2022/07/31 18:04:55 wiz Exp $
 
 DISTNAME=		mad_fcl_v1.7_src
 PKGNAME=		mad-flute-1.7
 PKGREVISION=		23
 CATEGORIES=		devel
-MASTER_SITES=		http://mad.cs.tut.fi/download/
+#MASTER_SITES=		http://mad.cs.tut.fi/download/
 
 MAINTAINER=		agc@NetBSD.org
-HOMEPAGE=		http://mad.cs.tut.fi/
+#HOMEPAGE=		http://mad.cs.tut.fi/
 COMMENT=		Reliable Multicast Layering
 LICENSE=		gnu-gpl-v2
 
