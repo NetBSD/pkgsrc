@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1011 2022/07/29 13:49:41 thorpej Exp $
+# $NetBSD: Makefile,v 1.1012 2022/07/31 12:29:26 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -211,6 +211,7 @@ SUBDIR+=	etcutils
 SUBDIR+=	eventlog
 SUBDIR+=	exa
 SUBDIR+=	extipl
+SUBDIR+=	f3
 SUBDIR+=	fabric
 SUBDIR+=	facette
 SUBDIR+=	fakeroot
