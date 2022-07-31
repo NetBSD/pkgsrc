@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2022/07/31 12:29:10 wiz Exp $
+bin/f3read
+bin/f3write
