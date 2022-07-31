@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.74 2022/04/18 19:10:49 adam Exp $
+# $NetBSD: Makefile,v 1.75 2022/07/31 09:57:08 js Exp $
 
-DISTNAME=	fossil-src-2.18
+DISTNAME=	fossil-src-2.19
 PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	1
 CATEGORIES=	devel scm
 MASTER_SITES=	https://fossil-scm.org/home/tarball/version-${PKGVERSION_NOREV}/
 
