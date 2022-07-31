@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.2040 2022/07/06 19:06:31 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.2041 2022/07/31 19:16:33 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -548,7 +548,7 @@ PKG_FAIL_REASON+=	\
 
 .endif # NO_SKIP
 
-# Add these defs to the ones dumped into +BUILD_DEFS
+# Add these defs to the ones dumped into +BUILD_INFO
 _BUILD_DEFS+=	PKGPATH
 _BUILD_DEFS+=	OPSYS OS_VERSION MACHINE_ARCH MACHINE_GNU_ARCH
 _BUILD_DEFS+=	ABI
