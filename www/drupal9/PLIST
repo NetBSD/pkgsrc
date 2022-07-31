@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2022/05/28 04:46:39 wen Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/07/31 14:26:59 taca Exp $
 share/drupal/.csslintrc
 share/drupal/.editorconfig
 share/drupal/.eslintignore
@@ -374,6 +374,7 @@ share/drupal/core/assets/vendor/ckeditor5/alignment/translations/tk.js
 share/drupal/core/assets/vendor/ckeditor5/alignment/translations/tr.js
 share/drupal/core/assets/vendor/ckeditor5/alignment/translations/ug.js
 share/drupal/core/assets/vendor/ckeditor5/alignment/translations/uk.js
+share/drupal/core/assets/vendor/ckeditor5/alignment/translations/ur.js
 share/drupal/core/assets/vendor/ckeditor5/alignment/translations/uz.js
 share/drupal/core/assets/vendor/ckeditor5/alignment/translations/vi.js
 share/drupal/core/assets/vendor/ckeditor5/alignment/translations/zh-cn.js
@@ -438,6 +439,7 @@ share/drupal/core/assets/vendor/ckeditor5/basic-styles/translations/tr.js
 share/drupal/core/assets/vendor/ckeditor5/basic-styles/translations/tt.js
 share/drupal/core/assets/vendor/ckeditor5/basic-styles/translations/ug.js
 share/drupal/core/assets/vendor/ckeditor5/basic-styles/translations/uk.js
+share/drupal/core/assets/vendor/ckeditor5/basic-styles/translations/ur.js
 share/drupal/core/assets/vendor/ckeditor5/basic-styles/translations/uz.js
 share/drupal/core/assets/vendor/ckeditor5/basic-styles/translations/vi.js
 share/drupal/core/assets/vendor/ckeditor5/basic-styles/translations/zh-cn.js
@@ -496,6 +498,7 @@ share/drupal/core/assets/vendor/ckeditor5/block-quote/translations/tk.js
 share/drupal/core/assets/vendor/ckeditor5/block-quote/translations/tr.js
 share/drupal/core/assets/vendor/ckeditor5/block-quote/translations/ug.js
 share/drupal/core/assets/vendor/ckeditor5/block-quote/translations/uk.js
+share/drupal/core/assets/vendor/ckeditor5/block-quote/translations/ur.js
 share/drupal/core/assets/vendor/ckeditor5/block-quote/translations/uz.js
 share/drupal/core/assets/vendor/ckeditor5/block-quote/translations/vi.js
 share/drupal/core/assets/vendor/ckeditor5/block-quote/translations/zh-cn.js
@@ -523,6 +526,7 @@ share/drupal/core/assets/vendor/ckeditor5/ckeditor5-dll/translations/fa.js
 share/drupal/core/assets/vendor/ckeditor5/ckeditor5-dll/translations/fi.js
 share/drupal/core/assets/vendor/ckeditor5/ckeditor5-dll/translations/fr.js
 share/drupal/core/assets/vendor/ckeditor5/ckeditor5-dll/translations/gl.js
+share/drupal/core/assets/vendor/ckeditor5/ckeditor5-dll/translations/gu.js
 share/drupal/core/assets/vendor/ckeditor5/ckeditor5-dll/translations/he.js
 share/drupal/core/assets/vendor/ckeditor5/ckeditor5-dll/translations/hi.js
 share/drupal/core/assets/vendor/ckeditor5/ckeditor5-dll/translations/hr.js
@@ -537,6 +541,7 @@ share/drupal/core/assets/vendor/ckeditor5/ckeditor5-dll/translations/ko.js
 share/drupal/core/assets/vendor/ckeditor5/ckeditor5-dll/translations/ku.js
 share/drupal/core/assets/vendor/ckeditor5/ckeditor5-dll/translations/lt.js
 share/drupal/core/assets/vendor/ckeditor5/ckeditor5-dll/translations/lv.js
+share/drupal/core/assets/vendor/ckeditor5/ckeditor5-dll/translations/ms.js
 share/drupal/core/assets/vendor/ckeditor5/ckeditor5-dll/translations/nb.js
 share/drupal/core/assets/vendor/ckeditor5/ckeditor5-dll/translations/ne.js
 share/drupal/core/assets/vendor/ckeditor5/ckeditor5-dll/translations/nl.js
@@ -560,11 +565,13 @@ share/drupal/core/assets/vendor/ckeditor5/ckeditor5-dll/translations/tr.js
 share/drupal/core/assets/vendor/ckeditor5/ckeditor5-dll/translations/tt.js
 share/drupal/core/assets/vendor/ckeditor5/ckeditor5-dll/translations/ug.js
 share/drupal/core/assets/vendor/ckeditor5/ckeditor5-dll/translations/uk.js
+share/drupal/core/assets/vendor/ckeditor5/ckeditor5-dll/translations/ur.js
 share/drupal/core/assets/vendor/ckeditor5/ckeditor5-dll/translations/uz.js
 share/drupal/core/assets/vendor/ckeditor5/ckeditor5-dll/translations/vi.js
 share/drupal/core/assets/vendor/ckeditor5/ckeditor5-dll/translations/zh-cn.js
 share/drupal/core/assets/vendor/ckeditor5/ckeditor5-dll/translations/zh.js
 share/drupal/core/assets/vendor/ckeditor5/code-block/code-block.js
+share/drupal/core/assets/vendor/ckeditor5/code-block/translations/af.js
 share/drupal/core/assets/vendor/ckeditor5/code-block/translations/az.js
 share/drupal/core/assets/vendor/ckeditor5/code-block/translations/bs.js
 share/drupal/core/assets/vendor/ckeditor5/code-block/translations/cs.js
@@ -602,6 +609,7 @@ share/drupal/core/assets/vendor/ckeditor5/code-block/translations/tk.js
 share/drupal/core/assets/vendor/ckeditor5/code-block/translations/tr.js
 share/drupal/core/assets/vendor/ckeditor5/code-block/translations/ug.js
 share/drupal/core/assets/vendor/ckeditor5/code-block/translations/uk.js
+share/drupal/core/assets/vendor/ckeditor5/code-block/translations/ur.js
 share/drupal/core/assets/vendor/ckeditor5/code-block/translations/uz.js
 share/drupal/core/assets/vendor/ckeditor5/code-block/translations/zh-cn.js
 share/drupal/core/assets/vendor/ckeditor5/code-block/translations/zh.js
@@ -663,6 +671,7 @@ share/drupal/core/assets/vendor/ckeditor5/heading/translations/tk.js
 share/drupal/core/assets/vendor/ckeditor5/heading/translations/tr.js
 share/drupal/core/assets/vendor/ckeditor5/heading/translations/ug.js
 share/drupal/core/assets/vendor/ckeditor5/heading/translations/uk.js
+share/drupal/core/assets/vendor/ckeditor5/heading/translations/ur.js
 share/drupal/core/assets/vendor/ckeditor5/heading/translations/uz.js
 share/drupal/core/assets/vendor/ckeditor5/heading/translations/vi.js
 share/drupal/core/assets/vendor/ckeditor5/heading/translations/zh-cn.js
@@ -706,6 +715,7 @@ share/drupal/core/assets/vendor/ckeditor5/horizontal-line/translations/th.js
 share/drupal/core/assets/vendor/ckeditor5/horizontal-line/translations/tk.js
 share/drupal/core/assets/vendor/ckeditor5/horizontal-line/translations/tr.js
 share/drupal/core/assets/vendor/ckeditor5/horizontal-line/translations/uk.js
+share/drupal/core/assets/vendor/ckeditor5/horizontal-line/translations/ur.js
 share/drupal/core/assets/vendor/ckeditor5/horizontal-line/translations/vi.js
 share/drupal/core/assets/vendor/ckeditor5/horizontal-line/translations/zh-cn.js
 share/drupal/core/assets/vendor/ckeditor5/horizontal-line/translations/zh.js
@@ -721,6 +731,7 @@ share/drupal/core/assets/vendor/ckeditor5/html-support/translations/hu.js
 share/drupal/core/assets/vendor/ckeditor5/html-support/translations/id.js
 share/drupal/core/assets/vendor/ckeditor5/html-support/translations/it.js
 share/drupal/core/assets/vendor/ckeditor5/html-support/translations/jv.js
+share/drupal/core/assets/vendor/ckeditor5/html-support/translations/lv.js
 share/drupal/core/assets/vendor/ckeditor5/html-support/translations/nl.js
 share/drupal/core/assets/vendor/ckeditor5/html-support/translations/pl.js
 share/drupal/core/assets/vendor/ckeditor5/html-support/translations/pt-br.js
@@ -728,6 +739,7 @@ share/drupal/core/assets/vendor/ckeditor5/html-support/translations/ru.js
 share/drupal/core/assets/vendor/ckeditor5/html-support/translations/sk.js
 share/drupal/core/assets/vendor/ckeditor5/html-support/translations/sr-latn.js
 share/drupal/core/assets/vendor/ckeditor5/html-support/translations/sr.js
+share/drupal/core/assets/vendor/ckeditor5/html-support/translations/ur.js
 share/drupal/core/assets/vendor/ckeditor5/html-support/translations/zh.js
 share/drupal/core/assets/vendor/ckeditor5/image/image.js
 share/drupal/core/assets/vendor/ckeditor5/image/translations/ar.js
@@ -784,6 +796,7 @@ share/drupal/core/assets/vendor/ckeditor5/image/translations/tk.js
 share/drupal/core/assets/vendor/ckeditor5/image/translations/tr.js
 share/drupal/core/assets/vendor/ckeditor5/image/translations/ug.js
 share/drupal/core/assets/vendor/ckeditor5/image/translations/uk.js
+share/drupal/core/assets/vendor/ckeditor5/image/translations/ur.js
 share/drupal/core/assets/vendor/ckeditor5/image/translations/uz.js
 share/drupal/core/assets/vendor/ckeditor5/image/translations/vi.js
 share/drupal/core/assets/vendor/ckeditor5/image/translations/zh-cn.js
@@ -828,6 +841,7 @@ share/drupal/core/assets/vendor/ckeditor5/indent/translations/th.js
 share/drupal/core/assets/vendor/ckeditor5/indent/translations/tk.js
 share/drupal/core/assets/vendor/ckeditor5/indent/translations/tr.js
 share/drupal/core/assets/vendor/ckeditor5/indent/translations/uk.js
+share/drupal/core/assets/vendor/ckeditor5/indent/translations/ur.js
 share/drupal/core/assets/vendor/ckeditor5/indent/translations/uz.js
 share/drupal/core/assets/vendor/ckeditor5/indent/translations/vi.js
 share/drupal/core/assets/vendor/ckeditor5/indent/translations/zh-cn.js
@@ -848,6 +862,7 @@ share/drupal/core/assets/vendor/ckeditor5/language/translations/hu.js
 share/drupal/core/assets/vendor/ckeditor5/language/translations/id.js
 share/drupal/core/assets/vendor/ckeditor5/language/translations/it.js
 share/drupal/core/assets/vendor/ckeditor5/language/translations/jv.js
+share/drupal/core/assets/vendor/ckeditor5/language/translations/lv.js
 share/drupal/core/assets/vendor/ckeditor5/language/translations/nl.js
 share/drupal/core/assets/vendor/ckeditor5/language/translations/pl.js
 share/drupal/core/assets/vendor/ckeditor5/language/translations/pt-br.js
@@ -911,6 +926,7 @@ share/drupal/core/assets/vendor/ckeditor5/link/translations/tk.js
 share/drupal/core/assets/vendor/ckeditor5/link/translations/tr.js
 share/drupal/core/assets/vendor/ckeditor5/link/translations/ug.js
 share/drupal/core/assets/vendor/ckeditor5/link/translations/uk.js
+share/drupal/core/assets/vendor/ckeditor5/link/translations/ur.js
 share/drupal/core/assets/vendor/ckeditor5/link/translations/uz.js
 share/drupal/core/assets/vendor/ckeditor5/link/translations/vi.js
 share/drupal/core/assets/vendor/ckeditor5/link/translations/zh-cn.js
@@ -968,6 +984,7 @@ share/drupal/core/assets/vendor/ckeditor5/list/translations/tk.js
 share/drupal/core/assets/vendor/ckeditor5/list/translations/tr.js
 share/drupal/core/assets/vendor/ckeditor5/list/translations/ug.js
 share/drupal/core/assets/vendor/ckeditor5/list/translations/uk.js
+share/drupal/core/assets/vendor/ckeditor5/list/translations/ur.js
 share/drupal/core/assets/vendor/ckeditor5/list/translations/uz.js
 share/drupal/core/assets/vendor/ckeditor5/list/translations/vi.js
 share/drupal/core/assets/vendor/ckeditor5/list/translations/zh-cn.js
@@ -1029,6 +1046,7 @@ share/drupal/core/assets/vendor/ckeditor5/source-editing/translations/hr.js
 share/drupal/core/assets/vendor/ckeditor5/source-editing/translations/hu.js
 share/drupal/core/assets/vendor/ckeditor5/source-editing/translations/id.js
 share/drupal/core/assets/vendor/ckeditor5/source-editing/translations/it.js
+share/drupal/core/assets/vendor/ckeditor5/source-editing/translations/lv.js
 share/drupal/core/assets/vendor/ckeditor5/source-editing/translations/nl.js
 share/drupal/core/assets/vendor/ckeditor5/source-editing/translations/pl.js
 share/drupal/core/assets/vendor/ckeditor5/source-editing/translations/pt-br.js
@@ -1055,6 +1073,7 @@ share/drupal/core/assets/vendor/ckeditor5/special-characters/translations/id.js
 share/drupal/core/assets/vendor/ckeditor5/special-characters/translations/it.js
 share/drupal/core/assets/vendor/ckeditor5/special-characters/translations/ja.js
 share/drupal/core/assets/vendor/ckeditor5/special-characters/translations/ko.js
+share/drupal/core/assets/vendor/ckeditor5/special-characters/translations/lv.js
 share/drupal/core/assets/vendor/ckeditor5/special-characters/translations/nl.js
 share/drupal/core/assets/vendor/ckeditor5/special-characters/translations/pl.js
 share/drupal/core/assets/vendor/ckeditor5/special-characters/translations/pt-br.js
@@ -1112,6 +1131,7 @@ share/drupal/core/assets/vendor/ckeditor5/table/translations/tk.js
 share/drupal/core/assets/vendor/ckeditor5/table/translations/tr.js
 share/drupal/core/assets/vendor/ckeditor5/table/translations/ug.js
 share/drupal/core/assets/vendor/ckeditor5/table/translations/uk.js
+share/drupal/core/assets/vendor/ckeditor5/table/translations/ur.js
 share/drupal/core/assets/vendor/ckeditor5/table/translations/uz.js
 share/drupal/core/assets/vendor/ckeditor5/table/translations/vi.js
 share/drupal/core/assets/vendor/ckeditor5/table/translations/zh-cn.js
@@ -4273,6 +4293,7 @@ share/drupal/core/modules/ckeditor5/ckeditor5.ckeditor5.yml
 share/drupal/core/modules/ckeditor5/ckeditor5.info.yml
 share/drupal/core/modules/ckeditor5/ckeditor5.libraries.yml
 share/drupal/core/modules/ckeditor5/ckeditor5.module
+share/drupal/core/modules/ckeditor5/ckeditor5.post_update.php
 share/drupal/core/modules/ckeditor5/ckeditor5.routing.yml
 share/drupal/core/modules/ckeditor5/ckeditor5.services.yml
 share/drupal/core/modules/ckeditor5/config/schema/ckeditor5.data_types.yml
@@ -4414,6 +4435,7 @@ share/drupal/core/modules/ckeditor5/src/Plugin/CKEditor4To5Upgrade/Contrib.php
 share/drupal/core/modules/ckeditor5/src/Plugin/CKEditor4To5Upgrade/Core.php
 share/drupal/core/modules/ckeditor5/src/Plugin/CKEditor4To5UpgradePluginInterface.php
 share/drupal/core/modules/ckeditor5/src/Plugin/CKEditor4To5UpgradePluginManager.php
+share/drupal/core/modules/ckeditor5/src/Plugin/CKEditor5Plugin/Alignment.php
 share/drupal/core/modules/ckeditor5/src/Plugin/CKEditor5Plugin/DynamicPluginConfigWithCsrfTokenUrlTrait.php
 share/drupal/core/modules/ckeditor5/src/Plugin/CKEditor5Plugin/GlobalAttribute.php
 share/drupal/core/modules/ckeditor5/src/Plugin/CKEditor5Plugin/Heading.php
@@ -4435,6 +4457,8 @@ share/drupal/core/modules/ckeditor5/src/Plugin/CKEditor5PluginManagerInterface.p
 share/drupal/core/modules/ckeditor5/src/Plugin/Editor/CKEditor5.php
 share/drupal/core/modules/ckeditor5/src/Plugin/Validation/Constraint/CKEditor5ElementConstraint.php
 share/drupal/core/modules/ckeditor5/src/Plugin/Validation/Constraint/CKEditor5ElementConstraintValidator.php
+share/drupal/core/modules/ckeditor5/src/Plugin/Validation/Constraint/CKEditor5MediaAndFilterSettingsInSyncConstraint.php
+share/drupal/core/modules/ckeditor5/src/Plugin/Validation/Constraint/CKEditor5MediaAndFilterSettingsInSyncConstraintValidator.php
 share/drupal/core/modules/ckeditor5/src/Plugin/Validation/Constraint/EnabledConfigurablePluginsConstraint.php
 share/drupal/core/modules/ckeditor5/src/Plugin/Validation/Constraint/EnabledConfigurablePluginsConstraintValidator.php
 share/drupal/core/modules/ckeditor5/src/Plugin/Validation/Constraint/FundamentalCompatibilityConstraint.php
@@ -4453,8 +4477,15 @@ share/drupal/core/modules/ckeditor5/src/Plugin/Validation/Constraint/ToolbarItem
 share/drupal/core/modules/ckeditor5/src/Plugin/Validation/Constraint/ToolbarItemDependencyConstraintValidator.php
 share/drupal/core/modules/ckeditor5/src/SmartDefaultSettings.php
 share/drupal/core/modules/ckeditor5/templates/ckeditor5-settings-toolbar.html.twig
+share/drupal/core/modules/ckeditor5/tests/fixtures/update/ckeditor5-3259593.php
+share/drupal/core/modules/ckeditor5/tests/fixtures/update/editor.editor.test_format.yml
+share/drupal/core/modules/ckeditor5/tests/fixtures/update/filter.format.test_format.yml
 share/drupal/core/modules/ckeditor5/tests/modules/ckeditor4to5upgrade_plugin_test/ckeditor4to5upgrade_plugin_test.info.yml
 share/drupal/core/modules/ckeditor5/tests/modules/ckeditor4to5upgrade_plugin_test/ckeditor4to5upgrade_plugin_test.module
+share/drupal/core/modules/ckeditor5/tests/modules/ckeditor5_automatic_link_decorator_test/ckeditor5_automatic_link_decorator_test.ckeditor5.yml
+share/drupal/core/modules/ckeditor5/tests/modules/ckeditor5_automatic_link_decorator_test/ckeditor5_automatic_link_decorator_test.info.yml
+share/drupal/core/modules/ckeditor5/tests/modules/ckeditor5_automatic_link_decorator_test_2/ckeditor5_automatic_link_decorator_test_2.ckeditor5.yml
+share/drupal/core/modules/ckeditor5/tests/modules/ckeditor5_automatic_link_decorator_test_2/ckeditor5_automatic_link_decorator_test_2.info.yml
 share/drupal/core/modules/ckeditor5/tests/modules/ckeditor5_definition_supporting_element/ckeditor5_definition_supporting_element.ckeditor5.yml
 share/drupal/core/modules/ckeditor5/tests/modules/ckeditor5_definition_supporting_element/ckeditor5_definition_supporting_element.info.yml
 share/drupal/core/modules/ckeditor5/tests/modules/ckeditor5_drupalelementstyle_test/ckeditor5_drupalelementstyle_test.info.yml
@@ -4482,6 +4513,7 @@ share/drupal/core/modules/ckeditor5/tests/src/Functional/CKEditor5QuickEditLibra
 share/drupal/core/modules/ckeditor5/tests/src/Functional/ImageUploadAccessTest.php
 share/drupal/core/modules/ckeditor5/tests/src/Functional/ImageUploadTest.php
 share/drupal/core/modules/ckeditor5/tests/src/Functional/MediaEntityMetadataApiTest.php
+share/drupal/core/modules/ckeditor5/tests/src/Functional/Update/CKEditor5UpdateAlignmentTest.php
 share/drupal/core/modules/ckeditor5/tests/src/FunctionalJavascript/AdminUiTest.php
 share/drupal/core/modules/ckeditor5/tests/src/FunctionalJavascript/CKEditor5AllowedTagsTest.php
 share/drupal/core/modules/ckeditor5/tests/src/FunctionalJavascript/CKEditor5CKEditor4Compatibility.php
@@ -4513,6 +4545,7 @@ share/drupal/core/modules/ckeditor5/tests/src/Nightwatch/Tests/drupalHtmlBuilder
 share/drupal/core/modules/ckeditor5/tests/src/Traits/CKEditor5TestTrait.php
 share/drupal/core/modules/ckeditor5/tests/src/Traits/PrivateMethodUnitTestTrait.php
 share/drupal/core/modules/ckeditor5/tests/src/Traits/SynchronizeCsrfTokenSeedTrait.php
+share/drupal/core/modules/ckeditor5/tests/src/Unit/AlignmentPluginTest.php
 share/drupal/core/modules/ckeditor5/tests/src/Unit/CKEditor5Test.php
 share/drupal/core/modules/ckeditor5/tests/src/Unit/HTMLRestrictionsTest.php
 share/drupal/core/modules/ckeditor5/tests/src/Unit/HeadingPluginTest.php
@@ -6629,6 +6662,8 @@ share/drupal/core/modules/history/src/Plugin/views/field/HistoryUserTimestamp.ph
 share/drupal/core/modules/history/src/Plugin/views/filter/HistoryUserTimestamp.php
 share/drupal/core/modules/history/tests/src/Functional/HistoryTest.php
 share/drupal/core/modules/history/tests/src/Kernel/Views/HistoryTimestampTest.php
+share/drupal/core/modules/history/tests/themes/history_test_theme/history_test_theme.info.yml
+share/drupal/core/modules/history/tests/themes/history_test_theme/templates/mark.html.twig
 share/drupal/core/modules/image/config/install/image.settings.yml
 share/drupal/core/modules/image/config/install/image.style.large.yml
 share/drupal/core/modules/image/config/install/image.style.medium.yml
@@ -9406,7 +9441,7 @@ share/drupal/core/modules/search/tests/src/Kernel/SearchDeprecationTest.php
 share/drupal/core/modules/search/tests/src/Kernel/SearchExcerptTest.php
 share/drupal/core/modules/search/tests/src/Kernel/SearchIndexTest.php
 share/drupal/core/modules/search/tests/src/Kernel/SearchMatchTest.php
-share/drupal/core/modules/search/tests/src/Kernel/SearchSimplifyTest.php
+share/drupal/core/modules/search/tests/src/Kernel/SearchTextProcessorTest.php
 share/drupal/core/modules/search/tests/src/Kernel/SearchTokenizerTest.php
 share/drupal/core/modules/search/tests/src/Unit/SearchPageRepositoryTest.php
 share/drupal/core/modules/search/tests/src/Unit/SearchPluginCollectionTest.php
@@ -10587,6 +10622,7 @@ share/drupal/core/modules/system/tests/modules/module_handler_test_multiple/modu
 share/drupal/core/modules/system/tests/modules/module_handler_test_multiple/module_handler_test_multiple.install
 share/drupal/core/modules/system/tests/modules/module_handler_test_multiple/module_handler_test_multiple_child/module_handler_test_multiple_child.info.yml
 share/drupal/core/modules/system/tests/modules/module_handler_test_multiple/module_handler_test_multiple_child/module_handler_test_multiple_child.install
+share/drupal/core/modules/system/tests/modules/module_info_type_comment/module_info_type_comment.info.yml
 share/drupal/core/modules/system/tests/modules/module_install_class_loader_test1/module_install_class_loader_test1.info.yml
 share/drupal/core/modules/system/tests/modules/module_install_class_loader_test1/module_install_class_loader_test1.services.yml
 share/drupal/core/modules/system/tests/modules/module_install_class_loader_test1/src/EventSubscriber.php
@@ -14927,8 +14963,6 @@ share/drupal/core/tests/Drupal/Tests/Composer/Plugin/Scaffold/ScaffoldTestResult
 share/drupal/core/tests/Drupal/Tests/Composer/Plugin/Scaffold/fixtures/README.md
 share/drupal/core/tests/Drupal/Tests/Composer/Plugin/Scaffold/fixtures/composer-hooks-fixture/assets/robots-default.txt
 share/drupal/core/tests/Drupal/Tests/Composer/Plugin/Scaffold/fixtures/composer-hooks-fixture/composer.json.tmpl
-share/drupal/core/tests/Drupal/Tests/Composer/Plugin/Scaffold/fixtures/composer-hooks-nothing-allowed-fixture/assets/robots-default.txt
-share/drupal/core/tests/Drupal/Tests/Composer/Plugin/Scaffold/fixtures/composer-hooks-nothing-allowed-fixture/composer.json.tmpl
 share/drupal/core/tests/Drupal/Tests/Composer/Plugin/Scaffold/fixtures/drupal-assets-fixture/assets/.csslintrc
 share/drupal/core/tests/Drupal/Tests/Composer/Plugin/Scaffold/fixtures/drupal-assets-fixture/assets/.editorconfig
 share/drupal/core/tests/Drupal/Tests/Composer/Plugin/Scaffold/fixtures/drupal-assets-fixture/assets/.eslintignore
@@ -18351,12 +18385,12 @@ share/drupal/vendor/guzzlehttp/psr7/src/StreamDecoratorTrait.php
 share/drupal/vendor/guzzlehttp/psr7/src/StreamWrapper.php
 share/drupal/vendor/guzzlehttp/psr7/src/UploadedFile.php
 share/drupal/vendor/guzzlehttp/psr7/src/Uri.php
+share/drupal/vendor/guzzlehttp/psr7/src/UriComparator.php
 share/drupal/vendor/guzzlehttp/psr7/src/UriNormalizer.php
 share/drupal/vendor/guzzlehttp/psr7/src/UriResolver.php
 share/drupal/vendor/guzzlehttp/psr7/src/Utils.php
 share/drupal/vendor/guzzlehttp/psr7/src/functions.php
 share/drupal/vendor/guzzlehttp/psr7/src/functions_include.php
-share/drupal/vendor/laminas/laminas-diactoros/.laminas-ci.json
 share/drupal/vendor/laminas/laminas-diactoros/COPYRIGHT.md
 share/drupal/vendor/laminas/laminas-diactoros/LICENSE.md
 share/drupal/vendor/laminas/laminas-diactoros/README.md
@@ -18370,6 +18404,8 @@ share/drupal/vendor/laminas/laminas-diactoros/src/ConfigProvider.php
 share/drupal/vendor/laminas/laminas-diactoros/src/Exception/DeserializationException.php
 share/drupal/vendor/laminas/laminas-diactoros/src/Exception/ExceptionInterface.php
 share/drupal/vendor/laminas/laminas-diactoros/src/Exception/InvalidArgumentException.php
+share/drupal/vendor/laminas/laminas-diactoros/src/Exception/InvalidForwardedHeaderNameException.php
+share/drupal/vendor/laminas/laminas-diactoros/src/Exception/InvalidProxyAddressException.php
 share/drupal/vendor/laminas/laminas-diactoros/src/Exception/InvalidStreamPointerPositionException.php
 share/drupal/vendor/laminas/laminas-diactoros/src/Exception/RuntimeException.php
 share/drupal/vendor/laminas/laminas-diactoros/src/Exception/SerializationException.php
@@ -18404,6 +18440,10 @@ share/drupal/vendor/laminas/laminas-diactoros/src/Response/XmlResponse.php
 share/drupal/vendor/laminas/laminas-diactoros/src/ResponseFactory.php
 share/drupal/vendor/laminas/laminas-diactoros/src/ServerRequest.php
 share/drupal/vendor/laminas/laminas-diactoros/src/ServerRequestFactory.php
+share/drupal/vendor/laminas/laminas-diactoros/src/ServerRequestFilter/DoNotFilter.php
+share/drupal/vendor/laminas/laminas-diactoros/src/ServerRequestFilter/FilterServerRequestInterface.php
+share/drupal/vendor/laminas/laminas-diactoros/src/ServerRequestFilter/FilterUsingXForwardedHeaders.php
+share/drupal/vendor/laminas/laminas-diactoros/src/ServerRequestFilter/IPRange.php
 share/drupal/vendor/laminas/laminas-diactoros/src/Stream.php
 share/drupal/vendor/laminas/laminas-diactoros/src/StreamFactory.php
 share/drupal/vendor/laminas/laminas-diactoros/src/UploadedFile.php
