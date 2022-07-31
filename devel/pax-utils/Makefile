@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2022/06/30 11:18:17 nia Exp $
+# $NetBSD: Makefile,v 1.5 2022/07/31 17:10:15 fcambus Exp $
 
-DISTNAME=	pax-utils-1.3.4
-PKGREVISION=	1
+DISTNAME=	pax-utils-1.3.5
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gentoo/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -18,10 +17,6 @@ REPLACE_PYTHON+=	lddtree.py
 BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
 DEPENDS+=	${PYPKGPREFIX}-pyelftools-[0-9]*:../../devel/py-pyelftools
 
-MAKE_FLAGS=	PREFIX=${DESTDIR}${PREFIX} MANDIR=${DESTDIR}${PREFIX}/${PKGMANDIR}
-
-post-build:
-	${RUN}cd ${WRKSRC}/man && ${GMAKE}
-
+.include "../../devel/meson/build.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
