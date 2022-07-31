@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2022/07/24 11:09:03 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2022/07/31 09:57:11 wiz Exp $
 
-DISTNAME=	pip-audit-2.4.2
+DISTNAME=	pip-audit-2.4.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 # pypi file does not include tests
@@ -36,8 +36,8 @@ post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
         ${MV} pip-audit pip-audit-${PYVERSSUFFIX} || ${TRUE}
 
-# as of 2.4.2
-# 1 failed, 166 passed
+# as of 2.4.3
+# 1 failed, 168 passed
 TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib:${WRKSRC}/build/lib/test
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
