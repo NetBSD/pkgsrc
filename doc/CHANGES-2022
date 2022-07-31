@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3615 2022/07/31 17:10:26 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.3616 2022/07/31 19:10:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5399,3 +5399,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/drupal7 to 7.91 [taca 2022-07-31]
 	Updated www/drupal9 to 9.3.20 [taca 2022-07-31]
 	Updated devel/pax-utils to 1.3.5 [fcambus 2022-07-31]
+	Updated emulators/mame to 0.246 [wiz 2022-07-31]
