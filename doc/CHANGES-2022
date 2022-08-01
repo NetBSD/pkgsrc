@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3625 2022/08/01 08:10:19 pin Exp $
+$NetBSD: CHANGES-2022,v 1.3626 2022/08/01 08:11:48 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5410,3 +5410,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/dust to 0.8.1 [pin 2022-08-01]
 	Updated sysutils/felix to 1.0.1 [pin 2022-08-01]
 	Updated graphics/kvantum to 1.0.4 [pin 2022-08-01]
+	Updated audio/spotify-player to 0.9.4 [pin 2022-08-01]
