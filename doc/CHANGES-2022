@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3634 2022/08/01 14:37:33 pin Exp $
+$NetBSD: CHANGES-2022,v 1.3635 2022/08/01 14:38:58 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5421,3 +5421,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/csvlens to 0.1.7 [pin 2022-08-01]
 	Updated devel/git-cliff to 0.8.1 [pin 2022-08-01]
 	Updated wm/herbstluftwm to 0.9.5 [pin 2022-08-01]
+	Updated audio/librespot to 0.4.2 [pin 2022-08-01]
