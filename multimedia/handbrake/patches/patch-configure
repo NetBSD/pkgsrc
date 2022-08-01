@@ -1,0 +1,16 @@
+$NetBSD: patch-configure,v 1.1 2022/08/01 15:00:13 ast Exp $
+
+Use correct python
+
+
+--- configure.orig	2022-07-29 12:02:10.891326507 +0200
++++ configure	2022-07-29 12:02:39.737161708 +0200
+@@ -15,7 +15,7 @@
+ 
+ if ( inpath bash ); then
+     pp=""
+-    for p in python3 python3.8 python3.7 python3.6 python3.5 python3.4 python3.3 python3.2 python3.1 python2 python2.7 python
++    for p in python3 python3.10 python3.9 python3.8 python3.7 python3.6 python3.5 python3.4 python3.3 python3.2 python3.1 python2 python2.7 python
+     do
+         if ( inpath $p ); then
+             pp="$p"
