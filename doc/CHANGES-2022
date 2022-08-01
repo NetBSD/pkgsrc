@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3632 2022/08/01 14:34:34 pin Exp $
+$NetBSD: CHANGES-2022,v 1.3633 2022/08/01 14:36:00 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5419,3 +5419,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-pyelftools to 0.28 [adam 2022-08-01]
 	Updated net/unbound to 1.16.2 [he 2022-08-01]
 	Updated textproc/csvlens to 0.1.7 [pin 2022-08-01]
+	Updated devel/git-cliff to 0.8.1 [pin 2022-08-01]
