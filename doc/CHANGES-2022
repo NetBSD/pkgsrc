@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3623 2022/08/01 08:07:32 pin Exp $
+$NetBSD: CHANGES-2022,v 1.3624 2022/08/01 08:08:45 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5408,3 +5408,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/difftastic to 0.31.0 [pin 2022-08-01]
 	Updated sysutils/dusage to 0.3.1 [pin 2022-08-01]
 	Updated sysutils/dust to 0.8.1 [pin 2022-08-01]
+	Updated sysutils/felix to 1.0.1 [pin 2022-08-01]
