@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3617 2022/08/01 07:03:46 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.3618 2022/08/01 07:05:38 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5401,3 +5401,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/pax-utils to 1.3.5 [fcambus 2022-07-31]
 	Updated emulators/mame to 0.246 [wiz 2022-07-31]
 	Updated net/dbip-asn-lite to 2022.08 [fcambus 2022-08-01]
+	Updated net/dbip-city-lite to 2022.08 [fcambus 2022-08-01]
