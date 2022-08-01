@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3619 2022/08/01 07:06:55 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.3620 2022/08/01 07:53:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5403,3 +5403,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/dbip-asn-lite to 2022.08 [fcambus 2022-08-01]
 	Updated net/dbip-city-lite to 2022.08 [fcambus 2022-08-01]
 	Updated net/dbip-country-lite to 2022.08 [fcambus 2022-08-01]
+	Updated devel/py-setuptools to 63.3.0 [adam 2022-08-01]
+	Updated devel/py-pep517 to 0.13.0 [adam 2022-08-01]
