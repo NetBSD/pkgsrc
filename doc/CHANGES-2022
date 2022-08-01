@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3635 2022/08/01 14:38:58 pin Exp $
+$NetBSD: CHANGES-2022,v 1.3636 2022/08/01 15:01:53 ast Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5422,3 +5422,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/git-cliff to 0.8.1 [pin 2022-08-01]
 	Updated wm/herbstluftwm to 0.9.5 [pin 2022-08-01]
 	Updated audio/librespot to 0.4.2 [pin 2022-08-01]
+	Updated multimedia/handbrake to 1.5.1 [ast 2022-08-01]
