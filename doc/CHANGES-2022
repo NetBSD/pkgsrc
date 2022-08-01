@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3627 2022/08/01 08:13:07 pin Exp $
+$NetBSD: CHANGES-2022,v 1.3628 2022/08/01 08:14:28 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5412,3 +5412,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/kvantum to 1.0.4 [pin 2022-08-01]
 	Updated audio/spotify-player to 0.9.4 [pin 2022-08-01]
 	Updated audio/spotify-qt to 3.9 [pin 2022-08-01]
+	Updated www/wiki-tui to 0.5.0 [pin 2022-08-01]
