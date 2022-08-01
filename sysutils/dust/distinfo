@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2022/02/27 20:33:27 pin Exp $
+$NetBSD: distinfo,v 1.10 2022/08/01 08:07:13 pin Exp $
 
 BLAKE2s (aho-corasick-0.7.18.crate) = 8925e88e2df4b5ca3b31783f527e1bb31dbe27846f409f631148fa239f3b2935
 SHA512 (aho-corasick-0.7.18.crate) = 7a23b16231a90d23ee60ad4c81bc225410599a4560d33d3a203138fc540c39cf1000100fed3aed40dcc371c3635656a3792545dca5dd1aefbde00d8774eebd00
@@ -45,9 +45,9 @@ Size (difflib-0.4.0.crate) = 7638 bytes
 BLAKE2s (doc-comment-0.3.3.crate) = 3c6c0c2b176af73b7f930c90bde1054195adccd234d74431050b27bcfefff615
 SHA512 (doc-comment-0.3.3.crate) = e98ff9646a3612bd41bb6f278e7b6e9a0c58747f8b82524da814cf51b7f06c76ad4d65b502ac5740e818744abb295f78f15f8262d0b50ced1523f6d1a26939ba
 Size (doc-comment-0.3.3.crate) = 4123 bytes
-BLAKE2s (dust-0.8.0.tar.gz) = 66fd7ddaacecde770455ef5d718615723db57d0ca704a1b218e46b6c738e955c
-SHA512 (dust-0.8.0.tar.gz) = 86285862e642d3c5655ab4f37cb239acf384ff7c519cbda31f5596b017817130bd4e9840b2d5ae993e22cec5c43c1ab468ede4e8004696c9f76c1015afc294fd
-Size (dust-0.8.0.tar.gz) = 88975 bytes
+BLAKE2s (dust-0.8.1.tar.gz) = a7d3c38e96d584bdcbd351252d6ddd5ca6bd702027f2f178a1ce5cffa107c9cc
+SHA512 (dust-0.8.1.tar.gz) = 4d81c648ff5dd9d75ee4a21064d7b6b0ccb5536838883e5e64cf7af8329a4f095550aca9d82e896101becc1095e10404e10fdd9aaa4353ff3888626fd58f60a9
+Size (dust-0.8.1.tar.gz) = 89023 bytes
 BLAKE2s (either-1.6.1.crate) = 6bb7f6e21460b5351a6f5a377c2cf08d5e444c0fef34823941742c346e201965
 SHA512 (either-1.6.1.crate) = 4bfe56920e30cbc8eb4f90162db618f7dca653b42db35ab6a7045d3fd9a24ceb1778b1f79613850bdb1a87ad3794fa0d73015e46c48d513f368d8c3776fc9ddf
 Size (either-1.6.1.crate) = 13641 bytes
@@ -108,9 +108,9 @@ Size (rayon-core-1.9.1.crate) = 64961 bytes
 BLAKE2s (redox_syscall-0.2.10.crate) = 34d65a357c300759482d088d30518f3bcc4c1fa24f320c953ff6bc89bb7bdf2c
 SHA512 (redox_syscall-0.2.10.crate) = ef012eb4bffe32119e50ecdbef4cc31f6e84a344e94f026484fe4e2c904f94053a8b6249fb6bd8ada31b3ecfbf0096085283bb68aeb62b1b01b57f35794aee92
 Size (redox_syscall-0.2.10.crate) = 23582 bytes
-BLAKE2s (regex-1.5.4.crate) = 3465447445c42b1e1e85a575bc9ec4edc9b036e61e87288521038059d229c9a7
-SHA512 (regex-1.5.4.crate) = 1a9208358c4ab87c19ec91bcf5c1e35dede46f3a0c0097061b7b53fa77a1e5ad38090d243aab274956f09c491e5fbe3b3b35a91db079b82a2dde2fd9fbad4c19
-Size (regex-1.5.4.crate) = 236581 bytes
+BLAKE2s (regex-1.5.5.crate) = d6b48244aee056361cfbf09dc8f3c9abf9c53528da696282de57b24e867a5f29
+SHA512 (regex-1.5.5.crate) = a5873edc75a64f03be77151c318bc90c7dff565f838d811f5973ebca2e86247efd58830b0a8ba41e372f5a72f5402d93873f8d34c36481fa4359874b2fa5d571
+Size (regex-1.5.5.crate) = 238119 bytes
 BLAKE2s (regex-automata-0.1.10.crate) = 283615bf1114bdcf5a2ebd639ba1889a8a9a0195b566f41226f7e0961f3d5d81
 SHA512 (regex-automata-0.1.10.crate) = 56d64da361afce82c6cb49e70b99ce1fca3e1969c54bba5f9971db135f8544c65f49feb8827789947b3d1dcefc9c49a7a434a7ffe0d09c5900345a1733723c5f
 Size (regex-automata-0.1.10.crate) = 114533 bytes
