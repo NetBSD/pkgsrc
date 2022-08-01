@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.424 2022/07/22 09:27:01 nia Exp $
+# $NetBSD: bsd.prefs.mk,v 1.425 2022/08/01 07:58:21 wiz Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -855,7 +855,11 @@ _PKGSRC_USE_STACK_CHECK=no
 .if ${PKGSRC_USE_STACK_CHECK:tl} != "no" && \
     ${STACK_CHECK_SUPPORTED:Uyes:tl} == "yes" && \
     ${_OPSYS_SUPPORTS_STACK_CHECK:Uno} == "yes"
+.  if ${PKGSRC_USE_STACK_CHECK:tl} == "stack-clash"
+_PKGSRC_USE_STACK_CHECK=stack-clash
+.  else
 _PKGSRC_USE_STACK_CHECK=yes
+.  endif
 .endif
 
 # Enable CTF conversion if the user requested it, the OPSYS supports it, there
