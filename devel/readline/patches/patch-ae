@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.21 2022/07/28 09:02:04 wiz Exp $
+$NetBSD: patch-ae,v 1.22 2022/08/01 18:22:12 wiz Exp $
 
 Libtoolify.
 Pass -no-undefined to libtool for building shared library.
@@ -33,7 +33,7 @@ Fix race condition so the examples are built *after* the library.
 +.SUFFIXES: .lo
 +.c.lo:
 +	${RM} $@
-+	$(LIBTOOL) --mode=compile $(CC) -c $(CCFLAGS) $<
++	$(LIBTOOL) --tag=CC --mode=compile $(CC) -c $(CCFLAGS) $<
 +
  # The name of the main library target.
  LIBRARY_NAME = libreadline.a
