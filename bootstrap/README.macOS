@@ -1,9 +1,9 @@
-$NetBSD: README.macOS,v 1.8 2022/04/09 17:23:12 schmonz Exp $
+$NetBSD: README.macOS,v 1.9 2022/08/01 14:49:09 jperkin Exp $
 
 Please read the general README file as well.
 
 Binary packages are available for macOS arm64 and x86_64, provided by
-Joyent. More info: <http://pkgsrc.joyent.com/install-on-osx/>
+MNX Cloud. More info: <https://pkgsrc.smartos.org/install-on-macos/>
 
 If these don't suffice for your needs, you'll want to build your own.
 First, install either the full Xcode environment (if that's something
