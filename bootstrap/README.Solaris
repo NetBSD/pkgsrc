@@ -1,4 +1,4 @@
-$NetBSD: README.Solaris,v 1.28 2022/04/27 17:43:34 nia Exp $
+$NetBSD: README.Solaris,v 1.29 2022/08/01 14:49:09 jperkin Exp $
 
 This README describes pkgsrc on a variety of Solaris-derived operating
 systems.  It corresponds to pkgsrc/platform/SunOS.mk.  The relevant
@@ -77,7 +77,7 @@ required to deploy pkgsrc on the host distribution, need to be installed
 within the zone.
 
 OmniOS also provides pkgsrc branded zones. A pkgsrc zone is a sparse
-zone which is pre-configured to use Joyent’s binary package repository.
+zone which is pre-configured to use the SmartOS binary package repository.
 Refer to https://omnios.org/setup/zones
 
 General
@@ -127,7 +127,7 @@ See https://wiki.netbsd.org/pkgsrc/solarish/ for information about
 installing gcc on various illumos distributions.  One can use a
 distribution-provided gcc, or a gcc that has been built from sources.
 
-Alternatively, see https://pkgsrc.joyent.com/install-on-illumos/ for
+Alternatively, see https://pkgsrc.smartos.org/install-on-illumos/ for
 binary kits and initial packages (including gcc) that run on illumos
 variants.
 
