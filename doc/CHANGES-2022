@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3629 2022/08/01 09:11:01 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3630 2022/08/01 10:09:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5415,3 +5415,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated audio/spotify-player to 0.9.4 [pin 2022-08-01]
 	Updated audio/spotify-qt to 3.9 [pin 2022-08-01]
 	Updated www/wiki-tui to 0.5.0 [pin 2022-08-01]
+	Updated security/nettle to 3.8.1 [adam 2022-08-01]
+	Updated devel/py-pyelftools to 0.28 [adam 2022-08-01]
