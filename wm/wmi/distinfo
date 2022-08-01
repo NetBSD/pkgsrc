@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 11:25:20 nia Exp $
+$NetBSD: distinfo,v 1.11 2022/08/01 18:52:28 wiz Exp $
 
 BLAKE2s (wmi-10.tar.gz) = e68004d020a5495fa6b1c2c7a9b2f823893660406cb2d8c2afd3be945643203d
 SHA512 (wmi-10.tar.gz) = c50f722facfb119b00a40a7e1b6980f46691259da7c7a91d5f3e5feb204b85aa55e79465680a5724fa0375685d833b7169d0fd0be574b4cd00db7eba4f3237f0
@@ -7,6 +7,7 @@ SHA1 (patch-ab) = d0112ad98f1812aa9be96f0531670a02d01de71f
 SHA1 (patch-ac) = cc10b19adf1867926a4bc15de12f64172d3ddcae
 SHA1 (patch-ad) = 91cab093a6111b05652a614b6f160a28617279b3
 SHA1 (patch-src_action.cpp) = ee9d8eccbed2b3a4974a2b7e9a6f65b1fd3d57ab
+SHA1 (patch-src_kernel.cpp) = 0ce20cb9f25bb1885df3b363d1c9fee56313e65b
 SHA1 (patch-src_logger.cpp) = b755296c5e3e719b6e093a973d4827484a508a7b
 SHA1 (patch-src_main.cpp) = f54f951aee73cad73286a5791563025c9cbfb183
 SHA1 (patch-src_util.cpp) = 53a037bdd1e0d482396e66bda0563bfbe1cba406
