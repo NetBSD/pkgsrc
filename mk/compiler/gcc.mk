@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.245 2022/07/07 16:23:39 jperkin Exp $
+# $NetBSD: gcc.mk,v 1.246 2022/08/01 07:58:21 wiz Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -443,9 +443,11 @@ _RELRO_LDFLAGS=		-Wl,-zrelro
 _RELRO_LDFLAGS+=	-Wl,-z,common-page-size=0x10000
 .endif
 
-_STACK_CHECK_CFLAGS=	-fstack-check
-
 .if ${_PKGSRC_USE_STACK_CHECK} == "yes"
+_STACK_CHECK_CFLAGS=	-fstack-check
+_GCC_CFLAGS+=		${_STACK_CHECK_CFLAGS}
+.elif ${_PKGSRC_USE_STACK_CHECK} == "stack-clash"
+_STACK_CHECK_CFLAGS=	-fstack-clash-protection
 _GCC_CFLAGS+=		${_STACK_CHECK_CFLAGS}
 .endif
 
