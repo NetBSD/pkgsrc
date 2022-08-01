@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2022/04/05 07:13:05 pin Exp $
+# $NetBSD: Makefile,v 1.12 2022/08/01 14:37:07 pin Exp $
 
-DISTNAME=	herbstluftwm-0.9.4
+DISTNAME=	herbstluftwm-0.9.5
 CATEGORIES=	wm
 MASTER_SITES=	https://herbstluftwm.org/tarballs/
 
