@@ -1,28 +1,14 @@
-$NetBSD: distinfo,v 1.14 2021/10/26 11:01:05 nia Exp $
+$NetBSD: distinfo,v 1.15 2022/08/01 15:00:13 ast Exp $
 
-BLAKE2s (handbrake/HandBrake-1.3.3-source.tar.bz2) = dc19db7821477a376f15ebdce7c1440c772db5ee7f78313c777b11e575fc752d
-SHA512 (handbrake/HandBrake-1.3.3-source.tar.bz2) = a4cca4e45d39eb3d43441abe832e2b8398694917981fa994075e475b68297cae28039e3c75d06442194262a881b9e416e5ebd73d10f86214b95f54c35fd3088c
-Size (handbrake/HandBrake-1.3.3-source.tar.bz2) = 16804119 bytes
-BLAKE2s (handbrake/dav1d-0.5.1.tar.bz2) = 0bd0ab8b77932d5d2ae049ba1821d160e8bf3def37d60ef6d28675f36a866c75
-SHA512 (handbrake/dav1d-0.5.1.tar.bz2) = 2d1e7888fa9c138903b4209647e907803d2444fc2afb219b9a45dcc4c75098128b299950750bd68970004ea413ad88933d4d651a3e4e0e1557506598a15cee3b
-Size (handbrake/dav1d-0.5.1.tar.bz2) = 548584 bytes
-BLAKE2s (handbrake/ffmpeg-4.2.3.tar.bz2) = b67914caf0078180eb99105b06402430e27937b172a8c0c70c992889d59114cc
-SHA512 (handbrake/ffmpeg-4.2.3.tar.bz2) = ca9b0c8df41783689d80e9d0a43acef8b457fb4003ff4173a7b0898cefabc76efc24257e8990ab2559a3e409c9a1a66f90343a421579a85fe7398b1a898b60b5
-Size (handbrake/ffmpeg-4.2.3.tar.bz2) = 10957405 bytes
-BLAKE2s (handbrake/libbluray-1.1.2.tar.bz2) = ce9ece81266f4c4b84ea9dd36575927a07b98254bd07937e2369435f400d3a62
-SHA512 (handbrake/libbluray-1.1.2.tar.bz2) = 5a82af6c1840a1dcb31d06d90203c68e2c4f0bbadc9212eb0bb2776d42b0ab3793a769ebe07b3051be151e8b15876874d5a0658292f72b7126dd915a1ada3fe7
-Size (handbrake/libbluray-1.1.2.tar.bz2) = 745779 bytes
-BLAKE2s (handbrake/libdvdnav-6.0.1.tar.bz2) = 42d6ddcefbebf85fb1afae812c06b8e3d3eca11baf694da8f44b592493cb360f
-SHA512 (handbrake/libdvdnav-6.0.1.tar.bz2) = 83a015821dacea702eb34abb7a940b9a263918a66fe711fe9a817754f25c2aa0afae3543b4d93673d1c93d3e7914e1b776c10ce50465516f4e3a3d419c15ad9f
-Size (handbrake/libdvdnav-6.0.1.tar.bz2) = 378491 bytes
-BLAKE2s (handbrake/libdvdread-6.0.2.tar.bz2) = b6a9659fb5b236b6323ca03b64cef8331c476f48afa5df935892b3de3bf8b070
-SHA512 (handbrake/libdvdread-6.0.2.tar.bz2) = e8831a67bbf1a144e9298b59e5462889c8b0197592a3c169523b5d84d9b9c1aaa719ccde2aa98c490e04f2a94c3fa7244b286e8faed674ae8c70400a0ece9c6c
-Size (handbrake/libdvdread-6.0.2.tar.bz2) = 405298 bytes
+BLAKE2s (handbrake/HandBrake-1.5.1-source.tar.bz2) = 47b0351cc3edf04e3cf946b052431f851a006779a5feb63bb5bf8faa41b1fd3b
+SHA512 (handbrake/HandBrake-1.5.1-source.tar.bz2) = 63c5933f77d417a89512abd278a1d844f2b7a36ec9f8ab664c1a1348fd228ee389fc8e349b2df6cbf5d617b912d4634457ebea86490ff5ed4930f39a90dc7568
+Size (handbrake/HandBrake-1.5.1-source.tar.bz2) = 16137974 bytes
+BLAKE2s (handbrake/ffmpeg-4.4.2.tar.bz2) = 95a59673d4f6d2f8ee4e4e4be713a01af1a216c18358ad998d4dd8dda69c10df
+SHA512 (handbrake/ffmpeg-4.4.2.tar.bz2) = b457070abb8b63befc08e6200078df8effe2f02cc46260f6611205a88fbc6228587960b0e345f8ea243714a817132ded9378260420e8cda51b75742ac13cbe44
+Size (handbrake/ffmpeg-4.4.2.tar.bz2) = 11499285 bytes
 BLAKE2s (handbrake/meson-0.55.0.tar.gz) = 1891054c5b88427f4383c5ba5e35baba1ed09e6e027e091bab988d16ebd88fa8
 SHA512 (handbrake/meson-0.55.0.tar.gz) = bf2a5bab19deb433e363bf569527dbd1a9e8c0f77482aa077abbaa480dadc396e43148957473a31ecd9d3965578d2f7b7dc8808839c619ae2c0d419aed72d4e2
 Size (handbrake/meson-0.55.0.tar.gz) = 1742882 bytes
-BLAKE2s (handbrake/x265_3.2.1.tar.gz) = ee673d6174b785fb6ecc45932967862c3584512dab1cc9906a2691e5ef0e27ab
-SHA512 (handbrake/x265_3.2.1.tar.gz) = 5cb29b9d4475c1f686f6e31e47ccddde3db1639d5dcf9c058513389a9fdeb35a83b14e30e59498a76dec74bb0b410b6d8f5b1b45d18927be9811bb6a40d8d568
-Size (handbrake/x265_3.2.1.tar.gz) = 1426255 bytes
-SHA1 (patch-contrib_libbluray_P04-netbsd-pthread__equal-check.patch) = 8538213d147d2bb9bec455408147bd7bd40df8c2
-SHA1 (patch-libhb_fifo.c) = 46c5ec1f2c665da297830c326e703160e3e911d2
+SHA1 (patch-configure) = 5f0452587c82ac9a419ac5fc06f07d35d174bc24
+SHA1 (patch-make-include-main.defs) = 176faef9b587a99b6218e8d34781128ca8a5438b
+SHA1 (patch-make-python_launcher) = db0e01e9a5063b0d083f56840079e74909c729c6
