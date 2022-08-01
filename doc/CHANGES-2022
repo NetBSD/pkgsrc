@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3628 2022/08/01 08:14:28 pin Exp $
+$NetBSD: CHANGES-2022,v 1.3629 2022/08/01 09:11:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5405,6 +5405,8 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/dbip-country-lite to 2022.08 [fcambus 2022-08-01]
 	Updated devel/py-setuptools to 63.3.0 [adam 2022-08-01]
 	Updated devel/py-pep517 to 0.13.0 [adam 2022-08-01]
+	Updated devel/py-cython to 0.29.32 [adam 2022-08-01]
+	Updated graphics/py-wand to 0.6.8 [adam 2022-08-01]
 	Updated devel/difftastic to 0.31.0 [pin 2022-08-01]
 	Updated sysutils/dusage to 0.3.1 [pin 2022-08-01]
 	Updated sysutils/dust to 0.8.1 [pin 2022-08-01]
