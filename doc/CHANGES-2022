@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3642 2022/08/02 08:35:42 ast Exp $
+$NetBSD: CHANGES-2022,v 1.3643 2022/08/02 09:18:12 ast Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5430,3 +5430,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated math/p5-Math-GMP to 2.25 [ast 2022-08-02]
 	Updated math/p5-Math-Pari to 2.030523 [ast 2022-08-02]
 	Updated math/p5-Math-BigInt-Pari to 1.3009 [ast 2022-08-02]
+	Updated time/p5-Test-Time to 0.092 [ast 2022-08-02]
+	Updated time/p5-DateTime-Locale 1.35 [ast 2022-08-02]
