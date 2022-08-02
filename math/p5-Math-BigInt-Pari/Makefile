@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2022/06/28 11:34:39 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2022/08/02 08:33:24 ast Exp $
 
-DISTNAME=		Math-BigInt-Pari-1.3008
+DISTNAME=		Math-BigInt-Pari-1.3009
 PKGNAME=		p5-${DISTNAME}
 PKGREVISION=		1
 CATEGORIES=		math perl5
@@ -11,8 +11,8 @@ HOMEPAGE=		https://metacpan.org/release/Math-BigInt-Pari
 COMMENT=		Perl5 library to use Math::Pari for Math::BigInt routines
 LICENSE=		${PERL5_LICENSE}
 
-DEPENDS+=		p5-Math-Pari>=2.010709:../../math/p5-Math-Pari
-DEPENDS+=		p5-Math-BigInt>=1.999808:../../math/p5-Math-BigInt
+DEPENDS+=		p5-Math-Pari>=2.030523:../../math/p5-Math-Pari
+DEPENDS+=		p5-Math-BigInt>=1.999837:../../math/p5-Math-BigInt
 
 PERL5_REQD+=		5.12.2nb1
 
