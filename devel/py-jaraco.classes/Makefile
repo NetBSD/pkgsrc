@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2022/01/04 20:53:12 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/08/02 09:56:13 adam Exp $
 
-DISTNAME=	jaraco.classes-3.2.1
+DISTNAME=	jaraco.classes-3.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jaraco.classes/}
 
@@ -12,11 +11,12 @@ COMMENT=	Utility functions for Python class constructs
 LICENSE=	mit
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4.1:../../devel/py-setuptools_scm
+BUILD_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-more-itertools-[0-9]*:../../devel/py-more-itertools
 
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
