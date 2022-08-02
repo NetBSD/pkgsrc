@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2022/05/12 08:10:26 adam Exp $
+# $NetBSD: Makefile,v 1.2 2022/08/02 09:45:58 adam Exp $
 
-DISTNAME=	yamllint-1.26.3
+DISTNAME=	yamllint-1.27.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=y/yamllint/}
@@ -14,6 +14,8 @@ DEPENDS+=	${PYPKGPREFIX}-pathspec>=0.5.3:../../devel/py-pathspec
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
 USE_LANGUAGES=	# none
+
+USE_PKG_RESOURCES=	yes
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
