@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.28 2021/10/26 11:06:16 nia Exp $
+$NetBSD: distinfo,v 1.29 2022/08/02 09:29:50 ast Exp $
 
-BLAKE2s (libnet-3.13.tar.gz) = 9231403371152f3ed912e941ab9a389c6fd61104a3a1089b866838049aa372d5
-SHA512 (libnet-3.13.tar.gz) = 80d670a71f8793a4ca4bf781d800ee52ca3985795033be64e6ed12520d46da4813325d7534969c12125333d4f85e47fa497ea8687558f969b8eb3e7bfd3c1540
-Size (libnet-3.13.tar.gz) = 95547 bytes
+BLAKE2s (libnet-3.14.tar.gz) = edcdf2c068ba2695187e0ef5beb0552b0d46a225e7aed73066c578a9bcfcc30d
+SHA512 (libnet-3.14.tar.gz) = 3ea7869aa7b2784e2211e13771eb6f48be0ef079086efdc3026a8789decc08a2704180721c8850fb5f1a9c8e603080996b9fc3fd6577dfbebef07cf917b0c59a
+Size (libnet-3.14.tar.gz) = 95533 bytes
 SHA1 (patch-aa) = cb38ca4c56af2c8bc1b6592fc115b22bf0ae35a0
