@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2022/06/30 11:18:57 nia Exp $
+# $NetBSD: Makefile,v 1.12 2022/08/02 01:08:13 gutteridge Exp $
 
 DISTNAME=	fvwm3-1.0.4
 PKGREVISION=	4
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/fvwmorg/fvwm3
 COMMENT=	Multiple large virtual desktop window manager
 LICENSE=	gnu-gpl-v2
+
+CONFLICTS=	fvwm-[0-9]* fvwm1-[0-9]* fvwm2-[0-9]* metisse-[0-9]*
 
 GNU_CONFIGURE=	yes
 
