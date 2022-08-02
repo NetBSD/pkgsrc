@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3652 2022/08/02 11:20:42 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3653 2022/08/02 12:15:32 leot Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5447,3 +5447,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/yaydl to 0.11.3 [pin 2022-08-02]
 	Updated textproc/py-validate-pyproject to 0.9 [adam 2022-08-02]
 	Updated devel/py-importlib-metadata to 4.12.0 [adam 2022-08-02]
+	Updated devel/conftest to 0.34.0 [leot 2022-08-02]
