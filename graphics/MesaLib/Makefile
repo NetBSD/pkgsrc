@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.201 2022/07/25 09:49:06 he Exp $
+# $NetBSD: Makefile,v 1.202 2022/08/02 20:36:51 tnn Exp $
 
 DISTNAME=	mesa-21.3.9
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
@@ -43,7 +43,7 @@ PLIST_VARS+=		i830 i915 i965 r100 r200 nouveau_dri
 PLIST_VARS+=		r300 svga nouveau iris
 
 # other features
-PLIST_VARS+=		arm kms vaapi
+PLIST_VARS+=		arm kms vaapi xa
 
 .if ${MESALIB_SUPPORTS_DRI} == "yes"
 BUILDLINK_API_DEPENDS.libdrm+=	libdrm>=2.4.100
@@ -53,18 +53,20 @@ BUILDLINK_API_DEPENDS.libdrm+=	libdrm>=2.4.100
 .  endif
 MESON_ARGS+=		-Degl=true
 MESON_ARGS+=		-Dgbm=true
-PLIST_VARS+=		xa
-.  if empty(MACHINE_PLATFORM:MNetBSD-*-powerpc)
+.  if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64" ||	\
+      ${MACHINE_ARCH:M*arm*} || ${MACHINE_CPU} == "aarch64"
 # XA state tracker requires at least one of the following gallium drivers:
 # nouveau, freedreno, i915, svga
 MESON_ARGS+=		-Dgallium-xa=enabled
 PLIST.xa=		yes
+.  else
+MESON_ARGS+=		-Dgallium-xa=disabled
 .  endif
 .  if ${X11_TYPE} == "native" && !exists(${X11BASE}/include/xcb/dri3.h)
 MESON_ARGS+=		-Ddri3=false
 .  endif
 PLIST.kms=		yes
-.  if !empty(MACHINE_ARCH:M*arm*) || \
+.  if ${MACHINE_ARCH:M*arm*} || \
       ${MACHINE_CPU} == "aarch64"
 GALLIUM_DRIVERS+=	freedreno vc4 etnaviv tegra panfrost lima
 PLIST.arm=		yes
