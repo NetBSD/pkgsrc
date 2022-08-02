@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.44 2022/07/07 11:54:53 adam Exp $
+# $NetBSD: Makefile,v 1.45 2022/08/02 17:13:10 wiz Exp $
 
 DISTNAME=	psutil-5.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/psutil/}
 
@@ -17,7 +18,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 # facilitate PLIST processing
 .if ${OPSYS} == "Darwin"
 PLIST_SUBST+=	SYSTEM=osx
-.elif !empty(OPSYS:M*BSD)
+.elif ${OPSYS:M*BSD}
 PLIST_SUBST+=	SYSTEM=bsd
 .else
 PLIST_SUBST+=	SYSTEM=${OPSYS:tl}
