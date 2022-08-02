@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2022/07/14 07:17:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.31 2022/08/02 17:30:34 abs Exp $
 bin/npm
 bin/npx
 lib/node_modules/npm/LICENSE
@@ -209,6 +209,7 @@ lib/node_modules/npm/lib/utils/tar.js
 lib/node_modules/npm/lib/utils/timers.js
 lib/node_modules/npm/lib/utils/update-notifier.js
 lib/node_modules/npm/lib/utils/validate-lockfile.js
+lib/node_modules/npm/lib/utils/web-auth.js
 lib/node_modules/npm/lib/workspaces/get-workspaces.js
 lib/node_modules/npm/lib/workspaces/update-workspaces.js
 lib/node_modules/npm/man/man1/npm-access.1
