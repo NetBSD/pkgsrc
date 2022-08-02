@@ -1,4 +1,4 @@
-$NetBSD: patch-inc_load__plugin__file.php,v 1.3 2022/05/26 21:08:38 triaxx Exp $
+$NetBSD: patch-inc_load__plugin__file.php,v 1.4 2022/08/02 20:09:00 triaxx Exp $
 
 Honor PKG_SYSCONFDIR.
 
@@ -9,7 +9,7 @@ Honor PKG_SYSCONFDIR.
      define('DC_RC_PATH', $_SERVER['REDIRECT_DC_RC_PATH']);
  } else {
 -    define('DC_RC_PATH', __DIR__ . '/config.php');
-+    define('DC_RC_PATH', __DIR__ . '@PKG_SYSCONFDIR@/config.php');
++    define('DC_RC_PATH', '@PKG_SYSCONFDIR@/config.php');
  }
  
  if (!is_file(DC_RC_PATH)) {
