@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3654 2022/08/02 17:13:20 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3655 2022/08/02 17:30:59 abs Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5449,3 +5449,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-importlib-metadata to 4.12.0 [adam 2022-08-02]
 	Updated devel/conftest to 0.34.0 [leot 2022-08-02]
 	Updated sysutils/py-psutil to 5.9.1nb1 [wiz 2022-08-02]
+	Updated lang/npm to 8.15.1 [abs 2022-08-02]
