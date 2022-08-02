@@ -1,12 +1,11 @@
-$NetBSD: patch-Makefile.PL,v 1.1 2022/08/02 07:22:00 ast Exp $
+$NetBSD: patch-Makefile.PL,v 1.2 2022/08/02 08:01:47 ast Exp $
 
 Take Makefile.PL from version Math-Pari-2.01080900 to avoid
 Math::PariBuild and other conflicting build rules
 
 --- Makefile.PL.orig	2022-04-12 09:52:37.000000000 +0200
 +++ Makefile.PL	2022-08-02 08:57:35.009435144 +0200
-@@ -1,40 +1,10 @@
- # $Id: patch-Makefile.PL,v 1.1 2022/08/02 07:22:00 ast Exp $
+@@ 0,40 +2,10 @@
 -use strict;
 -use Config '%Config';
 -
@@ -242,7 +241,7 @@ Math::PariBuild and other conflicting build rules
 -      ep_hash_report(%codes, %names, \*STDERR);
 -    }
 -  }
-+$offset = index($Config{byteorder}, "1");
++my $offset = index($Config{byteorder}, "1"); my $extra_inc;
 +$offset = 3 if $offset > 3;	# SvFLAGS is actually I32
 +$define .= " -DLSB_in_U32=$offset";
  
