@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3650 2022/08/02 11:17:34 pin Exp $
+$NetBSD: CHANGES-2022,v 1.3651 2022/08/02 11:18:41 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5444,3 +5444,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated audio/termusic to 0.7.1 [pin 2022-08-02]
 	Updated devel/opa to 0.43.0 [leot 2022-08-02]
 	Updated www/wiki-tui to 0.5.1 [pin 2022-08-02]
+	Updated net/yaydl to 0.11.3 [pin 2022-08-02]
