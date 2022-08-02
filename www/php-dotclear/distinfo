@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2022/05/26 21:08:38 triaxx Exp $
+$NetBSD: distinfo,v 1.6 2022/08/02 20:09:00 triaxx Exp $
 
 BLAKE2s (dotclear-2.22.tar.gz) = fa449f18fdd2614b6c0c7c99b203aaf33ad635fd80094b548ba156c7f020998e
 SHA512 (dotclear-2.22.tar.gz) = c3a77d284b9df0e78669c349ae5765de57ec1224bf6edfc7e4c119301bfd0e824044357a2d83de710adf872aa38bcdfcf04f7ac98cfc3eaf74424069a1142011
@@ -7,5 +7,5 @@ SHA1 (patch-admin_install_index.php) = 038d7aed4ca4384fc6902b18a31db92fe3746be1
 SHA1 (patch-admin_install_wizard.php) = 5847ec3f7b3d5407a90194479a1a1d5819ab9f24
 SHA1 (patch-inc_config.php.in) = 14010e990adf5825b7611c1c76fa64cf233c41df
 SHA1 (patch-inc_core_class.dc.core.php) = 6811b81f4bad1ec46e55a894387d7dca29a8d7ad
-SHA1 (patch-inc_load__plugin__file.php) = c1822604516bd13e905572c8cbe0ac2a09fc956a
+SHA1 (patch-inc_load__plugin__file.php) = b71954beac273933aada40ac93097fd4dad34ad7
 SHA1 (patch-inc_prepend.php) = 89e75b5e5d659c3b6365fcb2e392106f6d4e66b3
