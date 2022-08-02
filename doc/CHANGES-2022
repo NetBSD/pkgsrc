@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3637 2022/08/01 18:24:07 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3638 2022/08/02 05:40:16 ast Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5425,3 +5425,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated multimedia/handbrake to 1.5.1 [ast 2022-08-01]
 	Updated sysutils/py-magic to 0.4.27 [adam 2022-08-01]
 	Updated sysutils/py-sh to 1.14.3 [adam 2022-08-01]
+	Updated math/p5-Math-BigInt to 1.999837 [ast 2022-08-02]
