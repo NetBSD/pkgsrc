@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2022/04/05 07:17:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/08/02 11:16:48 adam Exp $
 bin/validate-pyproject-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -85,6 +85,7 @@ ${PYSITELIB}/validate_pyproject/pre_compile/cli.pyc
 ${PYSITELIB}/validate_pyproject/pre_compile/cli.pyo
 ${PYSITELIB}/validate_pyproject/pre_compile/main_file.template
 ${PYSITELIB}/validate_pyproject/project_metadata.schema.json
+${PYSITELIB}/validate_pyproject/py.typed
 ${PYSITELIB}/validate_pyproject/pyproject_toml.schema.json
 ${PYSITELIB}/validate_pyproject/types.py
 ${PYSITELIB}/validate_pyproject/types.pyc
