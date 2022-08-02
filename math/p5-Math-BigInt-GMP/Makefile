@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2022/06/28 11:34:39 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2022/08/02 05:49:59 ast Exp $
 
-DISTNAME=	Math-BigInt-GMP-1.6009
+DISTNAME=	Math-BigInt-GMP-1.6011
 PKGNAME=	p5-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	math perl5
