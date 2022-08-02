@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2022/07/23 18:50:10 leot Exp $
+# $NetBSD: Makefile,v 1.7 2022/08/02 11:16:21 leot Exp $
 
-DISTNAME=	opa-0.42.2
+DISTNAME=	opa-0.43.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=open-policy-agent/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -16,9 +16,6 @@ GO_BUILD_PATTERN+=	-ldflags ' \
 			-X github.com/open-policy-agent/opa/version.Timestamp= \
 			-X github.com/open-policy-agent/opa/version.Hostname= \
 			-X github.com/open-policy-agent/opa/internal/report.ExternalServiceURL='
-
-pre-patch:
-	${MV} ${WRKSRC}/runtime/check_user_darwin.go ${WRKSRC}/runtime/check_user_unix.go
 
 .include "go-modules.mk"
 
