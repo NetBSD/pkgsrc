@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2022/06/07 10:14:21 pin Exp $
+# $NetBSD: Makefile,v 1.7 2022/08/02 11:14:49 pin Exp $
 
-DISTNAME=	heliocron-0.6.0
+DISTNAME=	heliocron-0.8.1
 CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mfreeborn/}
-#GITHUB_TAG=	v${PKGVERSION_NOREV}
-GITHUB_TAG=	37909ef696cf0b1e429817127375d66b314bc159
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/mfreeborn/heliocron/
