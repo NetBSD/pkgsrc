@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3645 2022/08/02 09:31:57 ast Exp $
+$NetBSD: CHANGES-2022,v 1.3646 2022/08/02 09:57:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5436,3 +5436,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated games/scummvm to 2.6.0 [adam 2022-08-02]
 	Updated net/p5-Net-DNS to 1.34 [ast 2022-08-02]
 	Updated net/p5-Net to 3.14 [ast 2022-08-02]
+	Updated textproc/py-yamllint to 1.27.1 [adam 2022-08-02]
+	Updated comms/py-colorama to 0.4.5 [adam 2022-08-02]
+	Updated sysutils/py-ansible-compat to 2.2.0 [adam 2022-08-02]
+	Updated devel/py-jaraco.classes to 3.2.2 [adam 2022-08-02]
