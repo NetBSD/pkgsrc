@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.48 2022/07/25 09:49:06 he Exp $
+@comment $NetBSD: PLIST,v 1.49 2022/08/02 20:36:51 tnn Exp $
 ${PLIST.kms}include/EGL/egl.h
 ${PLIST.kms}include/EGL/eglext.h
 ${PLIST.kms}include/EGL/eglextchromium.h
@@ -25,9 +25,9 @@ include/GLES3/gl3ext.h
 include/GLES3/gl3platform.h
 include/KHR/khrplatform.h
 ${PLIST.kms}include/gbm.h
-${PLIST.xa}${PLIST.kms}include/xa_composite.h
-${PLIST.xa}${PLIST.kms}include/xa_context.h
-${PLIST.xa}${PLIST.kms}include/xa_tracker.h
+${PLIST.xa}include/xa_composite.h
+${PLIST.xa}include/xa_context.h
+${PLIST.xa}include/xa_tracker.h
 ${PLIST.arm}lib/dri/armada-drm_dri.so
 ${PLIST.arm}lib/dri/etnaviv_dri.so
 ${PLIST.arm}lib/dri/exynos_dri.so
@@ -100,9 +100,9 @@ ${PLIST.vulkan}${PLIST.arm}lib/libvulkan_freedreno.so
 ${PLIST.vulkan_intel}lib/libvulkan_intel.so
 ${PLIST.vulkan}lib/libvulkan_lvp.so
 ${PLIST.vulkan}lib/libvulkan_radeon.so
-${PLIST.xa}${PLIST.kms}lib/libxatracker.so
-${PLIST.xa}${PLIST.kms}lib/libxatracker.so.2
-${PLIST.xa}${PLIST.kms}lib/libxatracker.so.2.5.0
+${PLIST.xa}lib/libxatracker.so
+${PLIST.xa}lib/libxatracker.so.2
+${PLIST.xa}lib/libxatracker.so.2.5.0
 lib/pkgconfig/dri.pc
 ${PLIST.kms}lib/pkgconfig/egl.pc
 ${PLIST.kms}lib/pkgconfig/gbm.pc
@@ -110,7 +110,7 @@ ${PLIST.glx}lib/pkgconfig/gl.pc
 lib/pkgconfig/glesv1_cm.pc
 lib/pkgconfig/glesv2.pc
 lib/pkgconfig/osmesa.pc
-${PLIST.xa}${PLIST.kms}lib/pkgconfig/xatracker.pc
+${PLIST.xa}lib/pkgconfig/xatracker.pc
 ${PLIST.nouveau}${PLIST.vdpau}lib/vdpau/libvdpau_nouveau.so
 ${PLIST.nouveau}${PLIST.vdpau}lib/vdpau/libvdpau_nouveau.so.1
 ${PLIST.nouveau}${PLIST.vdpau}lib/vdpau/libvdpau_nouveau.so.1.0
