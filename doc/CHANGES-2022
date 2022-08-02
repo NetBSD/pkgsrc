@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3658 2022/08/02 19:55:04 schwarz Exp $
+$NetBSD: CHANGES-2022,v 1.3659 2022/08/02 20:09:22 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5453,3 +5453,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/python310 to 3.10.6 [adam 2022-08-02]
 	Updated lang/py310-html-docs to 3.10.6 [adam 2022-08-02]
 	Updated editors/nano to 6.4 [schwarz 2022-08-02]
+	Updated www/php-dotclear to 2.22nb1 [triaxx 2022-08-02]
