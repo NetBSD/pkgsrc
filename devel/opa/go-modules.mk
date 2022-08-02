@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.3 2022/07/23 18:50:10 leot Exp $
+# $NetBSD: go-modules.mk,v 1.4 2022/08/02 11:16:21 leot Exp $
 
 GO_MODULE_FILES+=	bazil.org/fuse/@v/v0.0.0-20160811212531-371fbbdaa898.mod
 GO_MODULE_FILES+=	bazil.org/fuse/@v/v0.0.0-20200407214033-5883e5a4b512.mod
@@ -1103,7 +1103,8 @@ GO_MODULE_FILES+=	github.com/sirupsen/logrus/@v/v1.4.2.mod
 GO_MODULE_FILES+=	github.com/sirupsen/logrus/@v/v1.6.0.mod
 GO_MODULE_FILES+=	github.com/sirupsen/logrus/@v/v1.7.0.mod
 GO_MODULE_FILES+=	github.com/sirupsen/logrus/@v/v1.8.1.mod
-GO_MODULE_FILES+=	github.com/sirupsen/logrus/@v/v1.8.1.zip
+GO_MODULE_FILES+=	github.com/sirupsen/logrus/@v/v1.9.0.mod
+GO_MODULE_FILES+=	github.com/sirupsen/logrus/@v/v1.9.0.zip
 GO_MODULE_FILES+=	github.com/smartystreets/assertions/@v/v0.0.0-20180927180507-b2de0cb4f26d.mod
 GO_MODULE_FILES+=	github.com/smartystreets/assertions/@v/v0.0.0-20180927180507-b2de0cb4f26d.zip
 GO_MODULE_FILES+=	github.com/smartystreets/goconvey/@v/v0.0.0-20190330032615-68dc04aab96a.mod
@@ -1184,8 +1185,8 @@ GO_MODULE_FILES+=	github.com/urfave/cli/@v/v1.20.0.mod
 GO_MODULE_FILES+=	github.com/urfave/cli/@v/v1.22.1.mod
 GO_MODULE_FILES+=	github.com/urfave/cli/@v/v1.22.2.mod
 GO_MODULE_FILES+=	github.com/urfave/cli/@v/v1.22.2.zip
-GO_MODULE_FILES+=	github.com/vektah/gqlparser/v2/@v/v2.4.5.mod
-GO_MODULE_FILES+=	github.com/vektah/gqlparser/v2/@v/v2.4.5.zip
+GO_MODULE_FILES+=	github.com/vektah/gqlparser/v2/@v/v2.4.6.mod
+GO_MODULE_FILES+=	github.com/vektah/gqlparser/v2/@v/v2.4.6.zip
 GO_MODULE_FILES+=	github.com/vishvananda/netlink/@v/v0.0.0-20181108222139-023a6dafdcdf.mod
 GO_MODULE_FILES+=	github.com/vishvananda/netlink/@v/v1.1.0.mod
 GO_MODULE_FILES+=	github.com/vishvananda/netlink/@v/v1.1.1-0.20201029203352-d40f9887b852.mod
@@ -1572,7 +1573,8 @@ GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20211116061358-0a5406a5449c.mod
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20211216021012-1d35b9e2eb4e.mod
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20220114195835-da31bd327af9.mod
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20220412211240-33da011f77ad.mod
-GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20220412211240-33da011f77ad.zip
+GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20220715151400-c0bba94af5f8.mod
+GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20220715151400-c0bba94af5f8.zip
 GO_MODULE_FILES+=	golang.org/x/term/@v/v0.0.0-20201117132131-f5c789dd3221.mod
 GO_MODULE_FILES+=	golang.org/x/term/@v/v0.0.0-20201126162022-7de9c90e9dd1.mod
 GO_MODULE_FILES+=	golang.org/x/term/@v/v0.0.0-20210220032956-6a3ed077a48d.mod
@@ -1785,8 +1787,8 @@ GO_MODULE_FILES+=	google.golang.org/grpc/@v/v1.40.0.mod
 GO_MODULE_FILES+=	google.golang.org/grpc/@v/v1.42.0.mod
 GO_MODULE_FILES+=	google.golang.org/grpc/@v/v1.43.0.mod
 GO_MODULE_FILES+=	google.golang.org/grpc/@v/v1.46.0.mod
-GO_MODULE_FILES+=	google.golang.org/grpc/@v/v1.47.0.mod
-GO_MODULE_FILES+=	google.golang.org/grpc/@v/v1.47.0.zip
+GO_MODULE_FILES+=	google.golang.org/grpc/@v/v1.48.0.mod
+GO_MODULE_FILES+=	google.golang.org/grpc/@v/v1.48.0.zip
 GO_MODULE_FILES+=	google.golang.org/protobuf/@v/v0.0.0-20200109180630-ec00e32a8dfd.mod
 GO_MODULE_FILES+=	google.golang.org/protobuf/@v/v0.0.0-20200221191635-4d8936d0db64.mod
 GO_MODULE_FILES+=	google.golang.org/protobuf/@v/v0.0.0-20200228230310-ab0ca4ff8a60.mod
