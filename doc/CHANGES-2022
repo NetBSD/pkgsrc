@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3647 2022/08/02 11:15:09 pin Exp $
+$NetBSD: CHANGES-2022,v 1.3648 2022/08/02 11:16:24 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5441,3 +5441,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/py-ansible-compat to 2.2.0 [adam 2022-08-02]
 	Updated devel/py-jaraco.classes to 3.2.2 [adam 2022-08-02]
 	Updated time/heliocron to 0.8.1 [pin 2022-08-02]
+	Updated audio/termusic to 0.7.1 [pin 2022-08-02]
