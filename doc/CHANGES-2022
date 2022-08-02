@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3644 2022/08/02 09:21:40 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3645 2022/08/02 09:31:57 ast Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5434,3 +5434,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated time/p5-DateTime-Locale 1.35 [ast 2022-08-02]
 	Updated databases/ldb to 2.5.2 [adam 2022-08-02]
 	Updated games/scummvm to 2.6.0 [adam 2022-08-02]
+	Updated net/p5-Net-DNS to 1.34 [ast 2022-08-02]
+	Updated net/p5-Net to 3.14 [ast 2022-08-02]
