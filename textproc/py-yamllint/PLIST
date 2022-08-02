@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2022/05/12 08:10:26 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/08/02 09:45:58 adam Exp $
 bin/yamllint-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -62,6 +62,9 @@ ${PYSITELIB}/yamllint/rules/empty_lines.pyo
 ${PYSITELIB}/yamllint/rules/empty_values.py
 ${PYSITELIB}/yamllint/rules/empty_values.pyc
 ${PYSITELIB}/yamllint/rules/empty_values.pyo
+${PYSITELIB}/yamllint/rules/float_values.py
+${PYSITELIB}/yamllint/rules/float_values.pyc
+${PYSITELIB}/yamllint/rules/float_values.pyo
 ${PYSITELIB}/yamllint/rules/hyphens.py
 ${PYSITELIB}/yamllint/rules/hyphens.pyc
 ${PYSITELIB}/yamllint/rules/hyphens.pyo
