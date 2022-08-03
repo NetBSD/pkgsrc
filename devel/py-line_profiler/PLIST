@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/02/05 11:40:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/08/03 13:44:30 adam Exp $
 bin/kernprof-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -15,6 +15,9 @@ ${PYSITELIB}/line_profiler/__init__.pyo
 ${PYSITELIB}/line_profiler/__main__.py
 ${PYSITELIB}/line_profiler/__main__.pyc
 ${PYSITELIB}/line_profiler/__main__.pyo
+${PYSITELIB}/line_profiler/ipython_extension.py
+${PYSITELIB}/line_profiler/ipython_extension.pyc
+${PYSITELIB}/line_profiler/ipython_extension.pyo
 ${PYSITELIB}/line_profiler/line_profiler.py
 ${PYSITELIB}/line_profiler/line_profiler.pyc
 ${PYSITELIB}/line_profiler/line_profiler.pyo
