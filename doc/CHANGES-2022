@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3662 2022/08/03 13:06:56 jperkin Exp $
+$NetBSD: CHANGES-2022,v 1.3663 2022/08/03 13:44:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5458,3 +5458,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-setuptools to 63.4.0 [adam 2022-08-03]
 	Updated devel/libtool-base to 2.4.7nb1 [jperkin 2022-08-03]
 	Updated devel/libtool-fortran to 2.4.7nb1 [jperkin 2022-08-03]
+	Updated sysutils/py-stack-data to 0.3.0 [adam 2022-08-03]
+	Updated devel/py-line_profiler to 3.5.1 [adam 2022-08-03]
