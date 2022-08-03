@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2022/02/05 11:40:48 adam Exp $
+# $NetBSD: Makefile,v 1.13 2022/08/03 13:44:30 adam Exp $
 
-DISTNAME=	line_profiler-3.4.0
+DISTNAME=	line_profiler-3.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/line_profiler/}
@@ -9,8 +9,6 @@ MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://github.com/rkern/line_profiler
 COMMENT=	Python line-by-line profiler
 LICENSE=	modified-bsd
-
-DEPENDS+=	${PYPKGPREFIX}-ipython>=0.17:../../devel/py-ipython
 
 PYSETUPARGS=	--universal # avoid scikit-build
 
