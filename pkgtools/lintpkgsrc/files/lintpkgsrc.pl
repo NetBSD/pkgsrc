@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.44 2022/08/03 19:22:34 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.45 2022/08/03 19:47:02 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -29,6 +29,7 @@ package PkgVer;
 
 sub new($$$) {
 	my ($class, $pkgbase, $pkgversion) = @_;
+
 	my $self = {
 	    pkgbase    => $pkgbase,
 	    pkgversion => $pkgversion,
@@ -51,7 +52,7 @@ sub ver($) {
 }
 
 sub pkgname($) {
-	my $self = shift;
+	my ($self) = @_;
 
 	$self->pkg . '-' . $self->ver;
 }
@@ -71,7 +72,7 @@ sub vars($) {
 }
 
 sub store($) {
-	my $self = shift;
+	my ($self) = @_;
 
 	my $name = $self->pkg;
 	my $ver = $self->ver;
@@ -93,59 +94,59 @@ sub store($) {
 #
 package Pkgs;
 
-sub add($@) {
-	my $self = shift;
+sub new($$) {
+	my ($class, $pkgbase) = @_;
 
-	$self->{_pkgver}{$_[1]} = new PkgVer @_;
+	my $self = {
+	    pkgbase => $pkgbase,
+	    pkgvers => {},
+	};
+	bless $self, $class;
+	return $self;
 }
 
-sub new($@) {
-	my $class = shift;
-	my $self = {};
+sub pkg($) {
+	my ($self) = @_;
 
-	bless $self, $class;
-	$self->{_pkg} = $_[0];
-	return $self;
+	$self->{pkgbase};
 }
 
 # Returns all available versions of the package, in decreasing
 # alphabetical(!) order.
 sub versions($) {
-	my $self = shift;
+	my ($self) = @_;
 
-	return sort { $b cmp $a } keys %{$self->{_pkgver}};
+	return sort { $b cmp $a } keys %{$self->{pkgvers}};
 }
 
-sub pkg($) {
-	my $self = shift;
-	$self->{_pkg};
+sub add($$$) {
+	my ($self, $pkgbase, $pkgversion) = @_;
+
+	$self->{pkgvers}->{$pkgversion} = PkgVer->new($pkgbase, $pkgversion);
 }
 
 # Returns all available versioned packages of this PKGBASE, in decreasing
 # alphabetical(!) order.
 sub pkgver($@) {
-	my $self = shift;
+	my ($self, $pkgversion) = @_;
 
-	my $pkgvers = $self->{_pkgver};
-	if (@_) {
-		if ($pkgvers->{$_[0]}) {
-			return ($pkgvers->{$_[0]});
-		}
-		return;
+	my $pkgvers = $self->{pkgvers};
+	if (@_ > 1) {
+		return $pkgvers->{$pkgversion};
 	}
 	return sort { $b->ver cmp $a->ver } values %{$pkgvers};
 }
 
 sub latestver($) {
-	my $self = shift;
+	my ($self) = @_;
 
-	($self->pkgver())[0];
+	($self->pkgver)[0];
 }
 
 sub store($) {
-	my $self = shift;
+	my ($self) = @_;
 
-	my $pkgvers = $self->{_pkgver};
+	my $pkgvers = $self->{pkgvers};
 	foreach my $pkgver (sort keys %$pkgvers) {
 		$pkgvers->{$pkgver}->store();
 	}
