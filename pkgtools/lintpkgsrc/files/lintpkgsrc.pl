@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.43 2022/08/03 16:15:49 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.44 2022/08/03 19:22:34 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -28,13 +28,26 @@ use Cwd 'realpath', 'getcwd';
 package PkgVer;
 
 sub new($$$) {
-	my $class = shift;
-	my $self = {};
-
+	my ($class, $pkgbase, $pkgversion) = @_;
+	my $self = {
+	    pkgbase    => $pkgbase,
+	    pkgversion => $pkgversion,
+	    vars       => {},
+	};
 	bless $self, $class;
-	$self->{_pkg} = $_[0];
-	$self->{_ver} = $_[1];
 	return $self;
+}
+
+sub pkg($) {
+	my ($self) = @_;
+
+	$self->{pkgbase};
+}
+
+sub ver($) {
+	my ($self) = @_;
+
+	$self->{pkgversion};
 }
 
 sub pkgname($) {
@@ -43,38 +56,25 @@ sub pkgname($) {
 	$self->pkg . '-' . $self->ver;
 }
 
-sub pkg($) {
-	my $self = shift;
-
-	$self->{_pkg};
-}
-
 sub var($$$) {
-	my $self = shift;
-	my ($key, $val) = @_;
+	my ($self, $key, $val) = @_;
 
 	(defined $val)
-	    ? ($self->{$key} = $val)
-	    : $self->{$key};
-}
-
-sub ver($) {
-	my $self = shift;
-
-	$self->{_ver};
+	    ? ($self->{vars}->{$key} = $val)
+	    : $self->{vars}->{$key};
 }
 
 sub vars($) {
-	my $self = shift;
+	my ($self) = @_;
 
-	grep(!/^_(pkg|ver)$/, keys %{$self});
+	keys %{$self->{vars}};
 }
 
 sub store($) {
 	my $self = shift;
 
-	my $name = $self->{_pkg};
-	my $ver = $self->{_ver};
+	my $name = $self->pkg;
+	my $ver = $self->ver;
 
 	$name =~ /\s/ and die "cannot store package name '$name'\n";
 	$ver =~ /\s/ and die "cannot store package version '$ver'\n";
