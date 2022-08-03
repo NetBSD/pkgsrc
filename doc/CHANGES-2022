@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3671 2022/08/03 17:14:53 ryoon Exp $
+$NetBSD: CHANGES-2022,v 1.3672 2022/08/03 21:54:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5469,3 +5469,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/firefox to 103.0.1 [ryoon 2022-08-03]
 	Updated www/firefox-l10n to 103.0.1 [ryoon 2022-08-03]
 	Updated net/nsd to 4.6.0 [ryoon 2022-08-03]
+	Updated databases/p5-DBD-SQLite to 1.70 [wiz 2022-08-03]
