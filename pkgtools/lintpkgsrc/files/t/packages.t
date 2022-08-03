@@ -1,4 +1,4 @@
-# $NetBSD: packages.t,v 1.5 2022/08/03 19:22:34 rillig Exp $
+# $NetBSD: packages.t,v 1.6 2022/08/03 20:14:16 rillig Exp $
 
 use strict;
 use warnings;
@@ -12,8 +12,8 @@ require('../lintpkgsrc.pl');
 sub test_pkgver() {
 	my $pkgver = PkgVer->new('base', '1.0nb4');
 
-	ok($pkgver->pkg , 'base');
-	ok($pkgver->ver , '1.0nb4');
+	ok($pkgver->pkgbase , 'base');
+	ok($pkgver->pkgversion , '1.0nb4');
 	ok($pkgver->pkgname , 'base-1.0nb4');
 }
 
@@ -40,7 +40,7 @@ sub test_package_variables() {
 
 	# The versioned packages are sorted in decreasing alphabetical order.
 	my @pkgvers = $pkglist->pkgver('pkgbase');
-	ok(join(', ', map { $_->ver } @pkgvers), '2.0, 1.5, 1.10, 1.0');
+	ok(join(', ', map { $_->pkgversion } @pkgvers), '2.0, 1.5, 1.10, 1.0');
 	ok($pkgvers[0], $pkgbase_2_0);
 	ok($pkgvers[3], $pkgbase_1_0);
 }
