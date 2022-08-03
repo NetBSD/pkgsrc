@@ -1,10 +1,10 @@
-# $NetBSD: pkgversion.t,v 1.3 2022/08/03 16:15:49 rillig Exp $
+# $NetBSD: pkgversion.t,v 1.4 2022/08/03 18:51:56 rillig Exp $
 
 use strict;
 use warnings;
 use Test;
 
-BEGIN { plan tests => 5; }
+BEGIN { plan tests => 5, onfail => sub { die } }
 
 require('../lintpkgsrc.pl');
 
