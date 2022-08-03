@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/07/07 05:46:15 nia Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/08/03 16:23:36 nia Exp $
 bin/sameboy
 share/applications/sameboy.desktop
 share/icons/hicolor/128x128/apps/sameboy.png
@@ -21,6 +21,13 @@ share/icons/hicolor/64x64/mimetypes/x-gameboy-color-rom.png
 share/icons/hicolor/64x64/mimetypes/x-gameboy-rom.png
 share/mime/packages/sameboy.xml
 share/sameboy/LICENSE
+share/sameboy/Palettes/Desert.sbp
+share/sameboy/Palettes/Evening.sbp
+share/sameboy/Palettes/Fog.sbp
+share/sameboy/Palettes/Magic Eggplant.sbp
+share/sameboy/Palettes/Radioactive Pea.sbp
+share/sameboy/Palettes/Seaweed.sbp
+share/sameboy/Palettes/Twilight.sbp
 share/sameboy/Shaders/AAOmniScaleLegacy.fsh
 share/sameboy/Shaders/AAScale2x.fsh
 share/sameboy/Shaders/AAScale4x.fsh

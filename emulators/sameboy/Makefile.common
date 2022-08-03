@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.16 2022/07/13 09:08:22 nia Exp $
+# $NetBSD: Makefile.common,v 1.17 2022/08/03 16:23:36 nia Exp $
 # used by emulators/sameboy/Makefile
 # used by emulators/libretro-sameboy/Makefile
 
-DISTNAME=	sameboy-0.15.1
+DISTNAME=	sameboy-0.15.4
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=LIJI32/}
 GITHUB_PROJECT=	SameBoy
