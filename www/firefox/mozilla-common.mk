@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.235 2022/07/17 08:08:56 wiz Exp $
+# $NetBSD: mozilla-common.mk,v 1.236 2022/08/03 17:09:26 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -20,7 +20,7 @@ USE_LANGUAGES+=		c c++
 # ERROR: Only GCC 7.1 or newer is supported (found version 5.5.0).
 GCC_REQD+=		7
 
-TOOL_DEPENDS+=		cbindgen>=0.23.0:../../devel/cbindgen
+TOOL_DEPENDS+=		cbindgen>=0.24.3:../../devel/cbindgen
 
 .if defined(FIREFOX_MAINTAINER) && !defined(MAINTAINER_INTERNAL)
 TOOL_DEPENDS+=		nodejs-[0-9]*:../../lang/nodejs
@@ -199,7 +199,7 @@ BUILDLINK_API_DEPENDS.libevent+=	libevent>=1.1
 BUILDLINK_API_DEPENDS.nspr+=	nspr>=4.34
 .include "../../devel/nspr/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
-BUILDLINK_API_DEPENDS.nss+=	nss>=3.79
+BUILDLINK_API_DEPENDS.nss+=	nss>=3.80
 .include "../../devel/nss/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 #.include "../../mk/jpeg.buildlink3.mk"
