@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.49 2022/08/03 20:39:27 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.50 2022/08/03 20:50:43 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -305,7 +305,7 @@ sub split_pkgversion($) {
 	my $nb = ($pkgversion =~ s/^(.*)nb(\d+)$/$1/) ? +$2 : 0;
 	foreach my $elem (split(/(\D+)/, lc($pkgversion))) {
 		if ($elem =~ /\d/) {
-			push(@temp, $elem);
+			push(@temp, +$elem);
 		} elsif ($elem eq "pl" || $elem eq "." || $elem eq "_") {
 			push(@temp, 0);
 		} elsif ($elem eq "pre" || $elem eq "rc") {
@@ -318,7 +318,7 @@ sub split_pkgversion($) {
 			foreach my $ch (split(//, $elem)) {
 				if ('a' le $ch && $ch le 'z') {
 					push(@temp, 0);
-					push(@temp, ord($ch) - ord('a') + 10);
+					push(@temp, ord($ch) - ord('a') + 1);
 				}
 			}
 		}
