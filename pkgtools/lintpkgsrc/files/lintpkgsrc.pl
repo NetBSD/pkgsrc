@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.46 2022/08/03 20:04:34 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.47 2022/08/03 20:14:16 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -39,13 +39,13 @@ sub new($$$) {
 	return $self;
 }
 
-sub pkg($) {
+sub pkgbase($) {
 	my ($self) = @_;
 
 	$self->{pkgbase};
 }
 
-sub ver($) {
+sub pkgversion($) {
 	my ($self) = @_;
 
 	$self->{pkgversion};
@@ -54,7 +54,7 @@ sub ver($) {
 sub pkgname($) {
 	my ($self) = @_;
 
-	$self->pkg . '-' . $self->ver;
+	$self->pkgbase . '-' . $self->pkgversion;
 }
 
 sub var($$$) {
@@ -74,8 +74,8 @@ sub vars($) {
 sub store($) {
 	my ($self) = @_;
 
-	my $name = $self->pkg;
-	my $ver = $self->ver;
+	my $name = $self->pkgbase;
+	my $ver = $self->pkgversion;
 
 	$name =~ /\s/ and die "cannot store package name '$name'\n";
 	$ver =~ /\s/ and die "cannot store package version '$ver'\n";
@@ -105,7 +105,7 @@ sub new($$) {
 	return $self;
 }
 
-sub pkg($) {
+sub pkgbase($) {
 	my ($self) = @_;
 
 	$self->{pkgbase};
@@ -134,7 +134,7 @@ sub pkgver($@) {
 	if (@_ > 1) {
 		return $pkgvers->{$pkgversion};
 	}
-	return sort { $b->ver cmp $a->ver } values %{$pkgvers};
+	return sort { $b->pkgversion cmp $a->pkgversion } values %{$pkgvers};
 }
 
 sub latestver($) {
@@ -205,7 +205,7 @@ sub pkgs($$) {
 	if (defined $pkgbase) {
 		return $self->{$pkgbase};
 	} else {
-		return sort { $a->pkg cmp $b->pkg } values %{$self};
+		return sort { $a->pkgbase cmp $b->pkgbase } values %{$self};
 	}
 }
 
@@ -979,12 +979,12 @@ sub package_globmatch($) {
 		if (@pkgvers = $pkglist->pkgver($matchpkgname)) {
 			foreach my $pkgver (@pkgvers) {
 				if ($test eq '-') {
-					if ($pkgver->ver eq $matchver) {
+					if ($pkgver->pkgversion eq $matchver) {
 						$matchver = undef;
 						last;
 					}
 				} else {
-					if (pkgversioncmp($pkgver->ver, $test, $matchver)) {
+					if (pkgversioncmp($pkgver->pkgversion, $test, $matchver)) {
 						$matchver = undef;
 						last;
 					}
@@ -1008,7 +1008,9 @@ sub package_globmatch($) {
 
 		} elsif ($regex = glob2regex($matchpkgname)) {
 			foreach my $pkg ($pkglist->pkgs) {
-				($pkg->pkg() =~ /$regex/) && push(@pkgnames, $pkg->pkg());
+				if ($pkg->pkgbase =~ /$regex/) {
+					push(@pkgnames, $pkg->pkgbase);
+				}
 			}
 		}
 
@@ -1682,9 +1684,9 @@ sub generate_map_file($$) {
 	scan_pkgsrc_makefiles($pkgsrcdir);
 	open(TABLE, '>', $tmpfile) or fail("Cannot write '$tmpfile': $!");
 	foreach my $pkgver ($pkglist->pkgver) {
-		print TABLE $pkgver->pkg . "\t"
+		print TABLE $pkgver->pkgbase . "\t"
 		    . $pkgver->var('dir') . "\t"
-		    . $pkgver->ver . "\n";
+		    . $pkgver->pkgversion . "\n";
 	}
 	close(TABLE) or fail("close('$tmpfile'): $!");
 	rename($tmpfile, $fname)
@@ -1716,8 +1718,8 @@ sub check_outdated_installed_packages($) {
 	print "\nREQUIRED details for packages that could be updated:\n";
 
 	foreach my $pkgver (@update) {
-		print $pkgver->pkg . ':';
-		if (open(PKGINFO, 'pkg_info -R ' . $pkgver->pkg . '|')) {
+		print $pkgver->pkgbase . ':';
+		if (open(PKGINFO, 'pkg_info -R ' . $pkgver->pkgbase . '|')) {
 			my ($list);
 
 			while (<PKGINFO>) {
@@ -1738,7 +1740,7 @@ sub check_outdated_installed_packages($) {
 	foreach my $pkgver (@update) {
 		my $pkgpath = $pkgver->var('dir');
 		defined($pkgpath)
-		    or fail('Cannot determine ' . $pkgver->pkg . ' directory');
+		    or fail('Cannot determine ' . $pkgver->pkgbase . ' directory');
 
 		print "$pkgsrcdir/$pkgpath\n";
 		chdir_or_fail("$pkgsrcdir/$pkgpath");
