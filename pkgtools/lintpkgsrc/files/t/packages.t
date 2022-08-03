@@ -1,11 +1,11 @@
-# $NetBSD: packages.t,v 1.3 2022/08/03 18:24:59 rillig Exp $
+# $NetBSD: packages.t,v 1.4 2022/08/03 18:51:56 rillig Exp $
 
 use strict;
 use warnings;
 use Capture::Tiny 'capture';
 use Test;
 
-BEGIN { plan tests => 8; }
+BEGIN { plan tests => 11, onfail => sub { die } }
 
 require('../lintpkgsrc.pl');
 

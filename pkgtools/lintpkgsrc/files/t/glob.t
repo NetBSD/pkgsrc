@@ -1,10 +1,10 @@
-# $NetBSD: glob.t,v 1.2 2022/08/03 18:24:59 rillig Exp $
+# $NetBSD: glob.t,v 1.3 2022/08/03 18:51:56 rillig Exp $
 
 use strict;
 use warnings;
 use Test;
 
-BEGIN { plan tests => 12; }
+BEGIN { plan tests => 12, onfail => sub { die } }
 
 require('../lintpkgsrc.pl');
 
