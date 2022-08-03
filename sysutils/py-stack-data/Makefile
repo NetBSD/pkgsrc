@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2022/02/01 10:08:09 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/08/03 13:37:38 adam Exp $
 
-DISTNAME=	stack_data-0.1.4
+DISTNAME=	stack_data-0.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/stack-data/}
