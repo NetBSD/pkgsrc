@@ -1,4 +1,5 @@
-# $NetBSD: pkgversion.t,v 1.2 2022/07/30 17:06:29 rillig Exp $
+# $NetBSD: pkgversion.t,v 1.3 2022/08/03 16:15:49 rillig Exp $
+
 use strict;
 use warnings;
 use Test;

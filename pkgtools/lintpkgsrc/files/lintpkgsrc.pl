@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.42 2022/07/30 18:20:23 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.43 2022/08/03 16:15:49 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -361,6 +361,8 @@ sub pkgversioncmp($$$) {
 	eval "$cmp $test 0";
 }
 
+# Return a copy of $line in which trivial variable expressions are replaced
+# with the variable values.
 sub parse_expand_vars($$) {
 	my ($line, $vars) = @_;
 
@@ -1805,6 +1807,13 @@ sub main() {
 		scan_pkgsrc_makefiles($pkgsrcdir);
 		store_pkgsrc_makefiles($opt{E});
 	}
+}
+
+if (caller()) {
+	# To allow easy testing of the code.
+	# TODO: reduce the use of global variables, or make them accessible
+	#  to the tests.
+	$default_vars = {};
 }
 
 main() unless caller();
