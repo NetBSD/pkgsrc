@@ -1,4 +1,4 @@
-# $NetBSD: glob.t,v 1.1 2022/08/03 16:15:49 rillig Exp $
+# $NetBSD: glob.t,v 1.2 2022/08/03 18:24:59 rillig Exp $
 
 use strict;
 use warnings;
