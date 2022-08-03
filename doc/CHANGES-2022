@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3667 2022/08/03 16:31:29 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.3668 2022/08/03 16:31:48 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5465,3 +5465,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated emulators/libretro-sameboy to 0.15.4 [nia 2022-08-03]
 	Updated emulators/sameboy to 0.15.4 [nia 2022-08-03]
 	Updated net/fehqlibs to 20 [schmonz 2022-08-03]
+	Updated net/djbdnscurve6 to 43 [schmonz 2022-08-03]
