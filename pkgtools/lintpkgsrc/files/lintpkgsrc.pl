@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.47 2022/08/03 20:14:16 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.48 2022/08/03 20:32:55 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -297,12 +297,13 @@ sub canonicalize_pkgname($) {
 	return $pkgname;
 }
 
-sub convert_to_standard_pkgversion(@) {
-	my ($elem, @temp);
+sub split_pkgversion($) {
+	my ($pkgversion) = @_;
 
 	# See pkg_install/lib/dewey.c.
-	# 'nb' has already been handled when we are here.
-	foreach $elem (@_) {
+	my (@temp);
+	my $nb = ($pkgversion =~ s/^(.*)nb(\d+)$/$1/) ? +$2 : 0;
+	foreach my $elem (split(/(\D+)/, lc($pkgversion))) {
 		if ($elem =~ /\d/) {
 			push(@temp, $elem);
 		} elsif ($elem eq "pl" || $elem eq "." || $elem eq "_") {
@@ -318,50 +319,29 @@ sub convert_to_standard_pkgversion(@) {
 			push(@temp, ord($elem) - ord("a") + 1);
 		}
 	}
+	push(@temp, $nb);
 	@temp;
 }
 
-sub pkgversioncmp_extract($$) {
-	my ($match, $val) = @_;
-	my ($cmp, @matchlist, @vallist);
-
-	@matchlist = convert_to_standard_pkgversion(split(/(\D+)/, lc($match)));
-	@vallist = convert_to_standard_pkgversion(split(/(\D+)/, lc($val)));
-	$cmp = 0;
-	while ($cmp == 0 && (@matchlist || @vallist)) {
-		$cmp = ((shift @matchlist || 0) <=> (shift @vallist || 0));
-	}
-	$cmp;
-}
-
-# Package version number matching.
-# Also handles 'nb<N>' suffix (checked iff values otherwise identical).
 sub pkgversioncmp($$$) {
-	my ($match, $test, $val) = @_;
-	my ($cmp, $match_nb, $val_nb);
+	my ($va, $op, $vb) = @_;
 
-	$match_nb = $val_nb = 0;
-	if ($match =~ /(.*)nb(.*)/) {
-		# Handle nb<N> suffix
-		$match = $1;
-		$match_nb = $2;
+	my @a = split_pkgversion($va);
+	my @b = split_pkgversion($vb);
+	my $cmp = 0;
+	while ($cmp == 0 && (@a || @b)) {
+		$cmp = (shift @a || 0) <=> (shift @b || 0);
 	}
 
-	if ($val =~ /(.*)nb(.*)/) {
-		# Handle nb<N> suffix
-		$val = $1;
-		$val_nb = $2;
+	if ($op eq '<') {
+		$cmp < 0;
+	} elsif ($op eq '<=') {
+		$cmp <= 0;
+	} elsif ($op eq '>') {
+		$cmp > 0;
+	} else {
+		$cmp >= 0;
 	}
-
-	$cmp = pkgversioncmp_extract($match, $val);
-
-	if (!$cmp) {
-		# Iff otherwise identical, check nb suffix
-		$cmp = pkgversioncmp_extract($match_nb, $val_nb);
-	}
-
-	debug("eval pkgversioncmp $cmp $test 0\n");
-	eval "$cmp $test 0";
 }
 
 # Return a copy of $line in which trivial variable expressions are replaced
