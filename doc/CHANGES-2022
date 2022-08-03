@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3668 2022/08/03 16:31:48 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.3669 2022/08/03 17:10:15 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5466,3 +5466,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated emulators/sameboy to 0.15.4 [nia 2022-08-03]
 	Updated net/fehqlibs to 20 [schmonz 2022-08-03]
 	Updated net/djbdnscurve6 to 43 [schmonz 2022-08-03]
+	Updated www/firefox to 103.0.1 [ryoon 2022-08-03]
