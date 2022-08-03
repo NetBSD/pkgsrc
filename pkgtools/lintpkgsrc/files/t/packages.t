@@ -1,4 +1,4 @@
-# $NetBSD: packages.t,v 1.4 2022/08/03 18:51:56 rillig Exp $
+# $NetBSD: packages.t,v 1.5 2022/08/03 19:22:34 rillig Exp $
 
 use strict;
 use warnings;
@@ -8,6 +8,14 @@ use Test;
 BEGIN { plan tests => 11, onfail => sub { die } }
 
 require('../lintpkgsrc.pl');
+
+sub test_pkgver() {
+	my $pkgver = PkgVer->new('base', '1.0nb4');
+
+	ok($pkgver->pkg , 'base');
+	ok($pkgver->ver , '1.0nb4');
+	ok($pkgver->pkgname , 'base-1.0nb4');
+}
 
 sub test_package_variables() {
 	my $pkglist = PkgList->new();
@@ -57,5 +65,6 @@ sub test_store_order() {
 	    . "package\tpkgbase\t1.3nb4\n");
 }
 
+test_pkgver();
 test_package_variables();
 test_store_order();
