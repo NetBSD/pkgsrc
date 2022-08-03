@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2022/07/22 01:00:24 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.20 2022/08/03 16:15:40 schmonz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -31,6 +31,9 @@ ${PYSITELIB}/approvaltests/core/__init__.pyo
 ${PYSITELIB}/approvaltests/core/comparator.py
 ${PYSITELIB}/approvaltests/core/comparator.pyc
 ${PYSITELIB}/approvaltests/core/comparator.pyo
+${PYSITELIB}/approvaltests/core/format_wrapper.py
+${PYSITELIB}/approvaltests/core/format_wrapper.pyc
+${PYSITELIB}/approvaltests/core/format_wrapper.pyo
 ${PYSITELIB}/approvaltests/core/namer.py
 ${PYSITELIB}/approvaltests/core/namer.pyc
 ${PYSITELIB}/approvaltests/core/namer.pyo
@@ -176,6 +179,9 @@ ${PYSITELIB}/approvaltests/utilities/exceptions/exception_utils.pyo
 ${PYSITELIB}/approvaltests/utilities/exceptions/multiple_exceptions.py
 ${PYSITELIB}/approvaltests/utilities/exceptions/multiple_exceptions.pyc
 ${PYSITELIB}/approvaltests/utilities/exceptions/multiple_exceptions.pyo
+${PYSITELIB}/approvaltests/utilities/map_reduce.py
+${PYSITELIB}/approvaltests/utilities/map_reduce.pyc
+${PYSITELIB}/approvaltests/utilities/map_reduce.pyo
 ${PYSITELIB}/approvaltests/utilities/markdown_table.py
 ${PYSITELIB}/approvaltests/utilities/markdown_table.pyc
 ${PYSITELIB}/approvaltests/utilities/markdown_table.pyo
@@ -185,6 +191,12 @@ ${PYSITELIB}/approvaltests/utilities/multiline_string_utils.pyo
 ${PYSITELIB}/approvaltests/utils.py
 ${PYSITELIB}/approvaltests/utils.pyc
 ${PYSITELIB}/approvaltests/utils.pyo
+${PYSITELIB}/approvaltests/verifiable_objects/__init__.py
+${PYSITELIB}/approvaltests/verifiable_objects/__init__.pyc
+${PYSITELIB}/approvaltests/verifiable_objects/__init__.pyo
+${PYSITELIB}/approvaltests/verifiable_objects/formatter_of_argparse_namespace.py
+${PYSITELIB}/approvaltests/verifiable_objects/formatter_of_argparse_namespace.pyc
+${PYSITELIB}/approvaltests/verifiable_objects/formatter_of_argparse_namespace.pyo
 ${PYSITELIB}/approvaltests/version.py
 ${PYSITELIB}/approvaltests/version.pyc
 ${PYSITELIB}/approvaltests/version.pyo
