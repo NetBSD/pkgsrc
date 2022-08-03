@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2022/04/18 19:11:30 adam Exp $
+# $NetBSD: Makefile,v 1.17 2022/08/03 11:51:07 jperkin Exp $
 
 PKGREVISION= 1
 .include "../../lang/clang/Makefile.common"
@@ -22,6 +22,8 @@ INSTALL_DIRS=	../build/tools/extra
 REPLACE_PYTHON+=	tools/extra/clang-include-fixer/find-all-symbols/tool/run-find-all-symbols.py
 REPLACE_PYTHON+=	tools/extra/clang-tidy/tool/clang-tidy-diff.py
 REPLACE_PYTHON+=	tools/extra/clang-tidy/tool/run-clang-tidy.py
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-Bsymbolic-functions
 
 .PHONY: inject-clang-tools
 post-extract: inject-clang-tools
