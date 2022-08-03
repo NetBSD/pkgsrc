@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.48 2022/08/03 20:32:55 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.49 2022/08/03 20:39:27 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -315,8 +315,12 @@ sub split_pkgversion($) {
 		} elsif ($elem eq "alpha") {
 			push(@temp, -3);
 		} else {
-			push(@temp, 0);
-			push(@temp, ord($elem) - ord("a") + 1);
+			foreach my $ch (split(//, $elem)) {
+				if ('a' le $ch && $ch le 'z') {
+					push(@temp, 0);
+					push(@temp, ord($ch) - ord('a') + 10);
+				}
+			}
 		}
 	}
 	push(@temp, $nb);
