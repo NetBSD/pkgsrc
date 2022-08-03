@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.NetBSD,v 1.1 2022/08/03 08:16:17 wiz Exp $
+lib/python${PY_VER_SUFFIX}/lib-dynload/ossaudiodev.so
