@@ -1,4 +1,4 @@
-# $NetBSD: parse_makefile.t,v 1.2 2022/08/03 18:24:59 rillig Exp $
+# $NetBSD: parse_makefile.t,v 1.3 2022/08/03 18:51:56 rillig Exp $
 
 use strict;
 use warnings;
@@ -6,7 +6,7 @@ use File::Slurp;
 use File::Temp;
 use Test;
 
-BEGIN { plan tests => 6; }
+BEGIN { plan tests => 6, onfail => sub { die } }
 
 require('../lintpkgsrc.pl');
 
