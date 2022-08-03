@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.45 2022/08/03 19:47:02 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.46 2022/08/03 20:04:34 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -156,62 +156,64 @@ sub store($) {
 #
 package PkgList;
 
-sub add($@) {
-	my $self = shift;
-
-	if (!$self->pkgs($_[0])) {
-		$self->{_pkgs}{ $_[0] } = new Pkgs $_[0];
-	}
-	$self->pkgs($_[0])->add(@_);
-}
-
 sub new($) {
-	my $class = shift;
-	my $self = {};
+	my ($class) = @_;
+
+	my $self = {}; # pkgbase => Pkgs
 	bless $self, $class;
 	return $self;
 }
 
+sub add($$$) {
+	my ($self, $pkgbase, $pkgversion) = @_;
+
+	if (!$self->{$pkgbase}) {
+		$self->{$pkgbase} = Pkgs->new($pkgbase);
+	}
+	$self->{$pkgbase}->add($pkgbase, $pkgversion);
+}
+
 sub numpkgver($) {
-	my $self = shift;
+	my ($self) = @_;
+
 	scalar($self->pkgver);
 }
 
-sub pkgver($@) {
-	my $self = shift;
+sub pkgver($$$) {
+	my ($self, $pkgbase, $pkgversion) = @_;
 
-	if (@_ == 0) {
-		my (@list);
+	if (!defined $pkgbase) {
+		my (@pkgvers);
 		foreach my $pkg ($self->pkgs) {
-			push(@list, $pkg->pkgver);
+			push(@pkgvers, $pkg->pkgver);
 		}
-		return (@list);
+		return @pkgvers;
 	}
 
-	if (defined $self->{_pkgs}{$_[0]}) {
-		return (@_ > 1)
-		    ? $self->{_pkgs}{$_[0]}->pkgver($_[1])
-		    : $self->{_pkgs}{$_[0]}->pkgver();
+	my $pkgs = $self->{$pkgbase};
+	if (defined $pkgs) {
+		return defined $pkgversion
+		    ? $pkgs->pkgver($pkgversion)
+		    : $pkgs->pkgver();
 	}
 	return;
 }
 
-sub pkgs($@) {
-	my $self = shift;
+sub pkgs($$) {
+	my ($self, $pkgbase) = @_;
 
-	if (@_) {
-		return $self->{_pkgs}{$_[0]};
+	if (defined $pkgbase) {
+		return $self->{$pkgbase};
 	} else {
-		return (sort { $a->pkg cmp $b->pkg } values %{$self->{_pkgs}});
+		return sort { $a->pkg cmp $b->pkg } values %{$self};
 	}
 }
 
 sub store($) {
-	my $self = shift;
+	my ($self) = @_;
 
-	my $pkgs = $self->{_pkgs};
-	foreach my $pkg (sort keys %$pkgs) {
-		$pkgs->{$pkg}->store();
+	foreach my $pkgbase (sort keys %$self) {
+		$self->{$pkgbase}->store();
 	}
 }
 
