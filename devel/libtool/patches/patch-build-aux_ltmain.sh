@@ -1,9 +1,9 @@
-$NetBSD: patch-build-aux_ltmain.sh,v 1.3 2022/07/26 16:15:26 wiz Exp $
+$NetBSD: patch-build-aux_ltmain.sh,v 1.4 2022/08/03 13:06:32 jperkin Exp $
 
 Automatically generated using manual-* patches and bootstrap.
 DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
 
---- build-aux/ltmain.sh.orig	2022-07-26 16:03:08.895744386 +0000
+--- build-aux/ltmain.sh.orig	2022-08-03 12:14:26.878811652 +0000
 +++ build-aux/ltmain.sh
 @@ -323,6 +323,9 @@ test -z "$GREP" && {
  # uses them if a suitable command of that name is not already available
@@ -24,15 +24,6 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
  General help using GNU software: <http://www.gnu.org/gethelp/>."
      exit 0
  }
-@@ -7283,7 +7286,7 @@ func_mode_link ()
- 	    # These systems don't actually have a C library (as such)
- 	    test X-lc = "X$arg" && continue
- 	    ;;
--	  *-*-openbsd* | *-*-freebsd* | *-*-dragonfly* | *-*-bitrig* | *-*-midnightbsd*)
-+	  *-*-openbsd* | *-*-freebsd* | *-*-dragonfly* | *-*-bitrig* | *-*-midnightbsd* | *-*-mirbsd*)
- 	    # Do not include libc due to us having libc/libc_r.
- 	    test X-lc = "X$arg" && continue
- 	    ;;
 @@ -8628,7 +8631,11 @@ func_mode_link ()
  	    # Finalize command for both is simple: just hardcode it.
  	    if test yes = "$hardcode_direct" &&
@@ -46,65 +37,7 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
  	    elif test yes = "$hardcode_minus_L"; then
  	      add_dir=-L$libdir
  	      add=-l$name
-@@ -9151,6 +9158,7 @@ func_mode_link ()
- 	# Calculate the version variables.
- 	major=
- 	versuffix=
-+	versuffix2=
- 	verstring=
- 	case $version_type in
- 	none) ;;
-@@ -9221,6 +9229,7 @@ func_mode_link ()
- 	  func_arith $current - $age
- 	  major=.$func_arith_result
- 	  versuffix=$major.$age.$revision
-+	  versuffix2=$major.$age
- 	  ;;
- 
- 	osf)
-@@ -9286,8 +9295,10 @@ func_mode_link ()
- 	  esac
- 	  if test no = "$need_version"; then
- 	    versuffix=
-+	    versuffix2=
- 	  else
- 	    versuffix=.0.0
-+	    versuffix2=.0.0
- 	  fi
- 	fi
- 
-@@ -9295,6 +9306,7 @@ func_mode_link ()
- 	if test yes,no = "$avoid_version,$need_version"; then
- 	  major=
- 	  versuffix=
-+	  versuffix2=
- 	  verstring=
- 	fi
- 
-@@ -9431,12 +9443,14 @@ func_mode_link ()
- 	libname_save=$libname
- 	release_save=$release
- 	versuffix_save=$versuffix
-+	versuffix2_save=$versuffix2
- 	major_save=$major
- 	# I'm not sure if I'm treating the release correctly.  I think
- 	# release should show up in the -l (ie -lgmp5) so we don't want to
- 	# add it in twice.  Is that correct?
- 	release=
- 	versuffix=
-+	versuffix2=
- 	major=
- 	newdeplibs=
- 	droppeddeps=no
-@@ -9713,6 +9727,7 @@ EOF
- 	  ;;
- 	esac
- 	versuffix=$versuffix_save
-+	versuffix2=$versuffix2_save
- 	major=$major_save
- 	release=$release_save
- 	libname=$libname_save
-@@ -11201,7 +11216,7 @@ dlpreopen='$dlprefiles'
+@@ -11201,7 +11208,7 @@ dlpreopen='$dlprefiles'
  
  # Directory that this library needs to be installed in:
  libdir='$install_libdir'"

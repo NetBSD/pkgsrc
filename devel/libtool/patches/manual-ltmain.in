@@ -1,19 +1,9 @@
-$NetBSD: manual-ltmain.in,v 1.2 2022/07/26 16:15:26 wiz Exp $
+$NetBSD: manual-ltmain.in,v 1.3 2022/08/03 13:06:32 jperkin Exp $
 
-Handle versuffix2 for mirbsd/midnightbsd.
 Avoid empty relink_command.
 
 --- build-aux/ltmain.in.orig	2022-03-17 02:43:39.000000000 +0000
 +++ build-aux/ltmain.in
-@@ -5133,7 +5133,7 @@ func_mode_link ()
- 	    # These systems don't actually have a C library (as such)
- 	    test X-lc = "X$arg" && continue
- 	    ;;
--	  *-*-openbsd* | *-*-freebsd* | *-*-dragonfly* | *-*-bitrig* | *-*-midnightbsd*)
-+	  *-*-openbsd* | *-*-freebsd* | *-*-dragonfly* | *-*-bitrig* | *-*-midnightbsd* | *-*-mirbsd*)
- 	    # Do not include libc due to us having libc/libc_r.
- 	    test X-lc = "X$arg" && continue
- 	    ;;
 @@ -6478,7 +6478,11 @@ func_mode_link ()
  	    # Finalize command for both is simple: just hardcode it.
  	    if test yes = "$hardcode_direct" &&
@@ -27,65 +17,7 @@ Avoid empty relink_command.
  	    elif test yes = "$hardcode_minus_L"; then
  	      add_dir=-L$libdir
  	      add=-l$name
-@@ -7001,6 +7005,7 @@ func_mode_link ()
- 	# Calculate the version variables.
- 	major=
- 	versuffix=
-+	versuffix2=
- 	verstring=
- 	case $version_type in
- 	none) ;;
-@@ -7071,6 +7076,7 @@ func_mode_link ()
- 	  func_arith $current - $age
- 	  major=.$func_arith_result
- 	  versuffix=$major.$age.$revision
-+	  versuffix2=$major.$age
- 	  ;;
- 
- 	osf)
-@@ -7136,8 +7142,10 @@ func_mode_link ()
- 	  esac
- 	  if test no = "$need_version"; then
- 	    versuffix=
-+	    versuffix2=
- 	  else
- 	    versuffix=.0.0
-+	    versuffix2=.0.0
- 	  fi
- 	fi
- 
-@@ -7145,6 +7153,7 @@ func_mode_link ()
- 	if test yes,no = "$avoid_version,$need_version"; then
- 	  major=
- 	  versuffix=
-+	  versuffix2=
- 	  verstring=
- 	fi
- 
-@@ -7281,12 +7290,14 @@ func_mode_link ()
- 	libname_save=$libname
- 	release_save=$release
- 	versuffix_save=$versuffix
-+	versuffix2_save=$versuffix2
- 	major_save=$major
- 	# I'm not sure if I'm treating the release correctly.  I think
- 	# release should show up in the -l (ie -lgmp5) so we don't want to
- 	# add it in twice.  Is that correct?
- 	release=
- 	versuffix=
-+	versuffix2=
- 	major=
- 	newdeplibs=
- 	droppeddeps=no
-@@ -7563,6 +7574,7 @@ EOF
- 	  ;;
- 	esac
- 	versuffix=$versuffix_save
-+	versuffix2=$versuffix2_save
- 	major=$major_save
- 	release=$release_save
- 	libname=$libname_save
-@@ -9051,7 +9063,7 @@ dlpreopen='$dlprefiles'
+@@ -9051,7 +9055,7 @@ dlpreopen='$dlprefiles'
  
  # Directory that this library needs to be installed in:
  libdir='$install_libdir'"
