@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2022/07/31 16:57:22 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2022/08/04 04:49:40 dbj Exp $
 
 DISTNAME=	wxWidgets-3.2.0
 PKGNAME=	${DISTNAME:S/wxWidgets/wxGTK32/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wxWidgets/}
 GITHUB_PROJECT=	wxWidgets
@@ -15,7 +15,7 @@ COMMENT=	Cross-platform wxWidgets GUI library (3.2 stable branch)
 # LGPLv2 with additional permission; http://opensource.org/licenses/wxwindows
 LICENSE=	gnu-lgpl-v2
 
-USE_TOOLS+=		pkg-config msgfmt
+USE_TOOLS+=		pkg-config
 USE_LANGUAGES=		c c++
 
 PLIST_SRC+=		${PLIST_SRC_DFLT}
@@ -32,17 +32,14 @@ REPLACE_SH=		wx-config.in wx-config-inplace.in
 # We build using configure by default
 # The software supports building using cmake but
 # the default cmake configuration is different.
-# In particular, it doesn't install proper locale data
-# and also installs unused headers.
+# In particular it installs unused headers.
 #
 # This option is expected to be a temporary hack.
 # We should fix cmake builds to match configure builds
 # and remove support for building with GNU_CONFIGURE
 PKG_OPTIONS_VAR=	PKG_OPTIONS.wxGTK32
 PKG_SUPPORTED_OPTIONS=	cmake
-.if ${OPSYS} == "NetBSD"
 PKG_SUGGESTED_OPTIONS=	cmake
-.endif
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mcmake)
@@ -103,6 +100,13 @@ SUBST_VARS.fix-paths=		PREFIX
 .endif
 
 post-install:
+	for f in ${WRKSRC}/locale/*.mo; do \
+	  lang="$$(basename "$${f}" .mo)"; \
+	  ${INSTALL_DATA_DIR} "${DESTDIR}/${PREFIX}/share/wx-3.2/locale/$${lang}/LC_MESSAGES"; \
+	  ${INSTALL_DATA} "$${f}" "${DESTDIR}/${PREFIX}/share/wx-3.2/locale/$${lang}/LC_MESSAGES/wxstd.mo"; \
+	done
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/wx-3.2/aclocal
+	${INSTALL_DATA} ${WRKSRC}/wxwin.m4 ${DESTDIR}${PREFIX}/share/wx-3.2/aclocal/wxwin.m4
 	${INSTALL_DATA} ${WRKSRC}/docs/licence.txt ${DESTDIR}${PREFIX}/${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/docs/lgpl.txt ${DESTDIR}${PREFIX}/${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/docs/changes.txt ${DESTDIR}${PREFIX}/${DOCDIR}
