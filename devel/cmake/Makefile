@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.195 2022/08/04 08:55:12 adam Exp $
+# $NetBSD: Makefile,v 1.196 2022/08/04 09:22:33 jperkin Exp $
 
 .include "Makefile.common"
 
@@ -10,7 +10,6 @@ HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	bootstrap
 
 BUILD_TARGET=		default_target
-INSTALL_TARGET=		install/strip
 
 CONFIGURE_HAS_MANDIR=	no
 CONFIGURE_ARGS+=	--bootstrap-system-libuv
@@ -27,6 +26,10 @@ LDFLAGS.Darwin+=	-framework CoreServices # for LSOpenCFURLRef()
 LDFLAGS.SunOS+=		-lsocket -lnsl
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${INSTALL_UNSTRIPPED:Uno:tl} != yes
+INSTALL_TARGET=		install/strip
+.endif
 
 # Enforce arm64 to support building inside x86_64 chroots.
 .if !empty(MACHINE_PLATFORM:MDarwin-*-aarch64)
