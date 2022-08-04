@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.21 2022/07/03 09:38:04 wiz Exp $
+# $NetBSD: options.mk,v 1.22 2022/08/04 15:24:47 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gtk3
 PKG_SUPPORTED_OPTIONS+=	gtk3-atk-bridge cups debug
@@ -8,8 +8,7 @@ PKG_SUPPORTED_OPTIONS+=	quartz
 .endif
 .include "../../devel/wayland/platform.mk"
 .if ${PLATFORM_SUPPORTS_WAYLAND} == "yes"
-# wayland package needs updating to > 1.18
-#PKG_SUGGESTED_OPTIONS+=	wayland
+PKG_SUGGESTED_OPTIONS+=	wayland
 .endif
 PKG_SUGGESTED_OPTIONS+=	gtk3-atk-bridge x11 cups
 
@@ -38,6 +37,7 @@ CONFIGURE_ARGS+=	--disable-quartz-backend
 PLIST_VARS+=		wayland
 .if !empty(PKG_OPTIONS:Mwayland)
 PLIST.wayland=		yes
+BUILDLINK_API_DEPENDS.wayland?=	wayland>=1.20.0
 .include "../../devel/wayland/buildlink3.mk"
 .include "../../devel/wayland-protocols/buildlink3.mk"
 .include "../../x11/libxkbcommon/buildlink3.mk"
