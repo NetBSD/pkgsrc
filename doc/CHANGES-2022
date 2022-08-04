@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3683 2022/08/04 15:21:37 nia Exp $
+$NetBSD: CHANGES-2022,v 1.3684 2022/08/04 15:22:49 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5486,3 +5486,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed www/firefox68-l10n [nia 2022-08-04]
 	Updated lang/php80 to 8.0.22 [taca 2022-08-04]
 	Updated devel/wayland to 1.21.0 [nia 2022-08-04]
+	Updated lang/php81 to 8.1.9 [taca 2022-08-04]
