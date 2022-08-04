@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.107 2022/07/09 09:34:17 wiz Exp $
+# $NetBSD: Makefile,v 1.108 2022/08/04 15:07:14 nia Exp $
 #
 # How to update this package:
 #
@@ -81,7 +81,7 @@ SUBST_FILES.fonts+=	tor-browser_en-US/Browser/TorBrowser/Data/fontconfig/fonts.c
 SUBST_SED.fonts+=	-e 's,<dir>fonts</dir>,<dir>${PREFIX}/lib/tor-browser/browser/fonts</dir>,'
 SUBST_MESSAGE.fonts=	Fixing path to bundled fonts directory.
 
-.include "../../www/firefox78/mozilla-common.mk"
+.include "../../mail/thunderbird/mozilla-common.mk"
 .include "options.mk"
 
 CHECK_INTERPRETER_SKIP+=	lib/firefox-sdk/sdk/bin/header.py
