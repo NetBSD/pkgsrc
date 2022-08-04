@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.26 2022/06/06 20:53:06 ryoon Exp $
+$NetBSD: distinfo,v 1.27 2022/08/04 00:54:06 gutteridge Exp $
 
 BLAKE2s (atty-0.2.14.crate) = 8a58145c7b668aa6caf8d749e37857ff202211e1bfa9e441f130ff02feb68405
 SHA512 (atty-0.2.14.crate) = d7b6c4b9a0f898d91ddbc41a5ee45bbf45d1d269508c8cc87ee3e3990500e41e0ec387afb1f3bc7db55bedac396dd86c6509f4bf9e5148d809c3802edcc5e1d9
@@ -9,9 +9,9 @@ Size (autocfg-1.1.0.crate) = 13272 bytes
 BLAKE2s (bitflags-1.3.2.crate) = e3a3b45a4403823875a03dbda329ca16068fa8f847cef81987c6b780101f2415
 SHA512 (bitflags-1.3.2.crate) = 3c698f757b5cc62f815f9a1cce365c3d2dd88e4db71f331dff8bba86c2865f755b81cb4c9bfc59bd86b7643b0943f9e09a7c4f8ad75eb2ab0e714803d0129f62
 Size (bitflags-1.3.2.crate) = 23021 bytes
-BLAKE2s (cbindgen-0.23.0.crate) = 4628a27e0e473535c260a0c10c1f866437e842caf8e9af70ae0886fe1533133d
-SHA512 (cbindgen-0.23.0.crate) = d7218e55526abfb226df524e634a72060de752eafe5b7f5c60bb746e2c4b105040455cfa16859e6b231c07cdf0256bbd608fe1afbec35fabe2f961927c19d04c
-Size (cbindgen-0.23.0.crate) = 188128 bytes
+BLAKE2s (cbindgen-0.24.3.crate) = 27fce686db1c0a64fc6cf3607cf705ab8b2de23acf0e9160e350ec2f5bccd846
+SHA512 (cbindgen-0.24.3.crate) = 3a39be67a87aa7a4dd9baaf6b803215f4587bd7925c4315c5ec93954e021471919fa977ad2084f099c606daa392350de3557bba56cef77806def99c40318ef05
+Size (cbindgen-0.24.3.crate) = 195698 bytes
 BLAKE2s (cfg-if-1.0.0.crate) = fbb02f63b24cc224b045ff2aac3aefd0a77cf7b578df4d5f9da9517a59aaf9bb
 SHA512 (cfg-if-1.0.0.crate) = 0fb16a8882fd30e86b62c5143b1cb18ab564e84e75bd1f28fd12f24ffdc4a42e0d2e012a99abb606c12efe3c11061ff5bf8e24ab053e550ae083f7d90f6576ff
 Size (cfg-if-1.0.0.crate) = 7934 bytes
