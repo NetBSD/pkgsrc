@@ -1,0 +1,11 @@
+Autoconf is an extensible package of m4 macros that produce shell
+scripts to automatically configure software source code packages.
+These scripts can adapt the packages to many kinds of UNIX-like
+systems without manual user intervention.  Autoconf creates a
+configuration script for a package from a template file that lists the
+operating system features that the package can use, in the form of m4
+macro calls.
+
+This package contains the older 2.69 version, for generating configure
+scripts with minimal diffs to upstreams who are still using it.  For
+new software please use the devel/autoconf package.
