@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3677 2022/08/04 12:23:41 jperkin Exp $
+$NetBSD: CHANGES-2022,v 1.3678 2022/08/04 12:28:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5477,3 +5477,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/gdbus-codegen to 2.72.3 [adam 2022-08-04]
 	Updated editors/featherpad to 1.3.1 [pin 2022-08-04]
 	Updated devel/libtool-info to 2.4.7 [jperkin 2022-08-04]
+	Updated devel/memcached to 1.6.16 [adam 2022-08-04]
+	Updated devel/py-setuptools to 63.4.1 [adam 2022-08-04]
