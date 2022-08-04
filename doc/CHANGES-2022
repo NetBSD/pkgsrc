@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3684 2022/08/04 15:22:49 taca Exp $
+$NetBSD: CHANGES-2022,v 1.3685 2022/08/04 15:29:16 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5487,3 +5487,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/php80 to 8.0.22 [taca 2022-08-04]
 	Updated devel/wayland to 1.21.0 [nia 2022-08-04]
 	Updated lang/php81 to 8.1.9 [taca 2022-08-04]
+	Updated devel/wayland-protocols to 1.26 [nia 2022-08-04]
