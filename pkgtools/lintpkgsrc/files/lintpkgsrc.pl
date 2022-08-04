@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.52 2022/08/04 05:45:15 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.53 2022/08/04 05:50:54 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -308,13 +308,13 @@ sub split_pkgversion($) {
 	foreach my $elem (split(/(pl|pre|rc|beta|alpha|\D)/, $pkgversion)) {
 		if ($elem =~ /\d/) {
 			push(@temp, +$elem);
-		} elsif ($elem eq "pl" || $elem eq "." || $elem eq "_") {
+		} elsif ($elem eq 'pl' || $elem eq '.' || $elem eq '_') {
 			push(@temp, 0);
-		} elsif ($elem eq "pre" || $elem eq "rc") {
+		} elsif ($elem eq 'pre' || $elem eq 'rc') {
 			push(@temp, -1);
-		} elsif ($elem eq "beta") {
+		} elsif ($elem eq 'beta') {
 			push(@temp, -2);
-		} elsif ($elem eq "alpha") {
+		} elsif ($elem eq 'alpha') {
 			push(@temp, -3);
 		} elsif ('a' le $elem && $elem le 'z') {
 			push(@temp, 0);
@@ -438,7 +438,7 @@ sub parse_eval_make_false($$) {
 		if (!defined $false) {
 			fail("Eval failed $line - $test");
 		}
-		debug("conditional: evaluated to " . ($false ? 0 : 1) . "\n");
+		debug('conditional: evaluated to ' . ($false ? 0 : 1) . "\n");
 
 	} else {
 		$false = 0;
@@ -466,7 +466,7 @@ sub parse_makefile_vars($$) {
 		$_; } <FILE>;
 	close(FILE);
 
-	$incdirs{"."} = 1;
+	$incdirs{'.'} = 1;
 	$incdirs{dirname($file)} = 1;
 
 	# Some Makefiles depend on these being set
@@ -588,7 +588,7 @@ sub parse_makefile_vars($$) {
 					}
 
 					verbose("$file: Cannot locate $incfile in "
-					    . join(" ", sort keys %incdirs)
+					    . join(' ', sort keys %incdirs)
 					    . "\n");
 
 				} else {
@@ -637,12 +637,12 @@ sub parse_makefile_vars($$) {
 			# Give python a little hand (XXX - do we wanna consider actually
 			# implementing make .for loops, etc?
 			#
-			if ($key eq "PYTHON_VERSIONS_ACCEPTED") {
+			if ($key eq 'PYTHON_VERSIONS_ACCEPTED') {
 				my ($pv);
 
 				foreach $pv (split(/\s+/, $vars{PYTHON_VERSIONS_ACCEPTED})) {
-					$vars{"_PYTHON_VERSION_FIRSTACCEPTED"} ||= $pv;
-					$vars{"_PYTHON_VERSION_${pv}_OK"} = "yes";
+					$vars{'_PYTHON_VERSION_FIRSTACCEPTED'} ||= $pv;
+					$vars{"_PYTHON_VERSION_${pv}_OK"} = 'yes';
 				}
 			}
 		}
@@ -1105,7 +1105,7 @@ sub parse_makefile_pkgsrc($) {
 				print "\nBogus: PKGREVISION $vars->{PKGREVISION} (from $file)\n";
 
 			} elsif ($vars->{PKGREVISION}) {
-				$pkgname .= "nb";
+				$pkgname .= 'nb';
 				$pkgname .= $vars->{PKGREVISION};
 			}
 		}
@@ -1155,7 +1155,7 @@ sub chdir_or_fail($) {
 sub load_pkgsrc_makefiles($) {
 	my ($fname) = @_;
 
-	open(STORE, "<", $fname)
+	open(STORE, '<', $fname)
 	    or die("Cannot read pkgsrc store from $fname: $!\n");
 	my ($pkgver);
 	$pkglist = PkgList->new;
@@ -1228,7 +1228,7 @@ sub pkgsrc_check_depends() {
 		my ($err, $msg);
 
 		defined $pkgver->var('DEPENDS') || next;
-		foreach my $depend (split(" ", $pkgver->var('DEPENDS'))) {
+		foreach my $depend (split(' ', $pkgver->var('DEPENDS'))) {
 
 			$depend =~ s/:.*// || next;
 
@@ -1336,10 +1336,10 @@ sub scan_pkgsrc_distfiles_vs_distinfo($$$$) {
 				next;
 			}
 
-			my $pid = open3(my $in, my $out, undef, "xargs", "digest", $sum);
-			defined($pid) || fail "fork";
+			my $pid = open3(my $in, my $out, undef, 'xargs', 'digest', $sum);
+			defined($pid) || fail 'fork';
 			my $pid2 = fork();
-			defined($pid2) || fail "fork";
+			defined($pid2) || fail 'fork';
 			if ($pid2) {
 				close($in);
 			} else {
@@ -1356,7 +1356,7 @@ sub scan_pkgsrc_distfiles_vs_distinfo($$$$) {
 			}
 			close($out);
 			waitpid($pid, 0) || fail "xargs digest $sum";
-			waitpid($pid2, 0) || fail "pipe write to xargs";
+			waitpid($pid2, 0) || fail 'pipe write to xargs';
 		}
 		chdir_or_fail('/'); # Do not want to stay in $pkgdistdir
 	}
@@ -1366,7 +1366,7 @@ sub scan_pkgsrc_distfiles_vs_distinfo($$$$) {
 sub store_pkgsrc_makefiles($) {
 	my ($fname) = @_;
 
-	open(STORE, ">", $fname)
+	open(STORE, '>', $fname)
 	    or die("Cannot save pkgsrc store to $fname: $!\n");
 	my $prev = select(STORE);
 	$pkglist->store();
@@ -1470,7 +1470,7 @@ sub check_prebuilt_packages() {
 sub debug_parse_makefiles(@) {
 
 	foreach my $file (@_) {
-		-d $file and $file .= "/Makefile";
+		-d $file and $file .= '/Makefile';
 		-f $file or fail("No such file: $file");
 
 		my ($pkgname, $vars) = parse_makefile_pkgsrc($file);
@@ -1540,7 +1540,7 @@ sub remove_distfiles($$) {
 
 	# distfiles downloaded on the current system
 	my @tmpdistfiles = listdir("$pkgdistdir", undef);
-	my @dldistfiles = grep { $_ ne "pkg-vulnerabilities" } @tmpdistfiles;
+	my @dldistfiles = grep { $_ ne 'pkg-vulnerabilities' } @tmpdistfiles;
 
 	# sort the two arrays to make searching a bit faster
 	@dldistfiles = sort { $a cmp $b } @dldistfiles;
