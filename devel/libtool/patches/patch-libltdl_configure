@@ -1,9 +1,9 @@
-$NetBSD: patch-libltdl_configure,v 1.4 2022/08/03 13:06:32 jperkin Exp $
+$NetBSD: patch-libltdl_configure,v 1.5 2022/08/04 12:23:21 jperkin Exp $
 
 Automatically generated using manual-* patches and bootstrap.
 DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
 
---- libltdl/configure.orig	2022-08-03 12:14:26.903793644 +0000
+--- libltdl/configure.orig	2022-08-04 11:35:59.000000000 +0000
 +++ libltdl/configure
 @@ -703,6 +703,9 @@ AM_BACKSLASH
  AM_DEFAULT_VERBOSITY
@@ -64,7 +64,7 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
    --libdir=DIR            object code libraries [EPREFIX/lib]
    --includedir=DIR        C header files [PREFIX/include]
    --oldincludedir=DIR     C header files for non-gcc [/usr/include]
-@@ -2824,6 +2815,20 @@ am__tar='$${TAR-tar} chof - "$$tardir"'
+@@ -2824,6 +2815,20 @@ am__tar='$${TAR-tar} chof - "$$tardir"' 
  
  
  
@@ -104,7 +104,7 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
  : ${CP="cp -f"}
  : ${MV="mv -f"}
  : ${RM="rm -f"}
-@@ -5360,12 +5368,8 @@ linux* | k*bsd*-gnu | kopensolaris*-gnu
+@@ -5360,12 +5368,8 @@ linux* | k*bsd*-gnu | kopensolaris*-gnu 
    lt_cv_deplibs_check_method=pass_all
    ;;
  
