@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.7 2022/07/25 11:12:22 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2022/08/04 14:41:40 nia Exp $
 
-GITHUB_PROJECT=	epoll-shim
-GITHUB_TAG=	v${PKGVERSION_NOREV}
 DISTNAME=	${GITHUB_PROJECT}-0.0.20210418
 PKGNAME=	lib${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jiixyj/}
+GITHUB_PROJECT=	epoll-shim
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/jiixyj/epoll-shim
@@ -16,6 +17,7 @@ USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
 CMAKE_ARGS+=	-DBUILD_TESTING=OFF
+CMAKE_ARGS+=	-DCMAKE_INSTALL_PKGCONFIGDIR=${PREFIX}/lib/pkgconfig
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -30,5 +32,7 @@ PLIST.eventfd=	YES
 .if !defined(OPSYS_HAS_TIMERFD)
 PLIST.timerfd=	YES
 .endif
+
+PKGCONFIG_OVERRIDE+=	epoll-shim.pc.cmakein
 
 .include "../../mk/bsd.pkg.mk"
