@@ -1,4 +1,4 @@
-# $NetBSD: packages.t,v 1.8 2022/08/04 06:27:36 rillig Exp $
+# $NetBSD: packages.t,v 1.9 2022/08/04 07:00:51 rillig Exp $
 
 use strict;
 use warnings;
@@ -33,66 +33,66 @@ sub test_pkgs() {
 	ok($pkgs->latestver->pkgversion, '1.0nb4');
 }
 
-sub test_pkglist() {
-	my $pkglist = PkgList->new();
+sub test_pkgdb() {
+	my $pkgdb = PkgDb->new();
 
-	ok($pkglist->numpkgver, 0);
-	ok(join(', ', map { $_->pkgname } $pkglist->pkgver), '');
+	ok($pkgdb->numpkgver, 0);
+	ok(join(', ', map { $_->pkgname } $pkgdb->pkgver), '');
 
-	$pkglist->add('base', '1.0');
+	$pkgdb->add('base', '1.0');
 
-	ok($pkglist->numpkgver, 1);
+	ok($pkgdb->numpkgver, 1);
 
-	$pkglist->add('other', '5.7');
+	$pkgdb->add('other', '5.7');
 
-	ok($pkglist->numpkgver, 2);
+	ok($pkgdb->numpkgver, 2);
 
-	my $base_8_0 = $pkglist->add('base', '8.0');
+	my $base_8_0 = $pkgdb->add('base', '8.0');
 
-	ok($pkglist->numpkgver, 3);
+	ok($pkgdb->numpkgver, 3);
 	ok($base_8_0->pkgname, 'base-8.0');
 
-	my $actual = join(', ', map { $_->pkgname } $pkglist->pkgver);
+	my $actual = join(', ', map { $_->pkgname } $pkgdb->pkgver);
 	ok($actual, 'base-8.0, base-1.0, other-5.7');
 
-	$actual = join(', ', map { $_->pkgname } $pkglist->pkgver('base'));
+	$actual = join(', ', map { $_->pkgname } $pkgdb->pkgver('base'));
 	ok($actual, 'base-8.0, base-1.0');
 
-	$actual = join(', ', map { $_->pkgname } $pkglist->pkgver('unknown'));
+	$actual = join(', ', map { $_->pkgname } $pkgdb->pkgver('unknown'));
 	ok($actual, '');
 
-	ok($pkglist->pkgver('base', '1.0')->pkgname, 'base-1.0');
-	ok($pkglist->pkgver('unknown', '1.0'), undef);
-	ok($pkglist->pkgver('base', '3.0'), undef);
+	ok($pkgdb->pkgver('base', '1.0')->pkgname, 'base-1.0');
+	ok($pkgdb->pkgver('unknown', '1.0'), undef);
+	ok($pkgdb->pkgver('base', '3.0'), undef);
 
-	ok(join(', ', map { $_->pkgbase } $pkglist->pkgs), 'base, other');
-	ok($pkglist->pkgs('base')->pkgbase, 'base');
-	ok($pkglist->pkgs('unknown'), undef);
+	ok(join(', ', map { $_->pkgbase } $pkgdb->pkgs), 'base, other');
+	ok($pkgdb->pkgs('base')->pkgbase, 'base');
+	ok($pkgdb->pkgs('unknown'), undef);
 }
 
 sub test_package_variables() {
-	my $pkglist = PkgList->new();
-	my $pkgbase_1_0 = $pkglist->add('pkgbase', '1.0');
+	my $pkgdb = PkgDb->new();
+	my $pkgbase_1_0 = $pkgdb->add('pkgbase', '1.0');
 
 	$pkgbase_1_0->var('NAME', 'value');
 
 	ok($pkgbase_1_0->var('NAME'), 'value');
 	ok($pkgbase_1_0->var('undefined'), undef);
 
-	my $pkgbase_2_0 = $pkglist->add('pkgbase', '2.0');
-	my $pkgbase_1_5 = $pkglist->add('pkgbase', '1.5');
-	my $pkgbase_1_10 = $pkglist->add('pkgbase', '1.10');
+	my $pkgbase_2_0 = $pkgdb->add('pkgbase', '2.0');
+	my $pkgbase_1_5 = $pkgdb->add('pkgbase', '1.5');
+	my $pkgbase_1_10 = $pkgdb->add('pkgbase', '1.10');
 
 	$pkgbase_2_0->var('COMMENT', 'Version 2 of the package');
 
-	ok($pkglist->pkgs('unknown-pkgbase'), undef);
+	ok($pkgdb->pkgs('unknown-pkgbase'), undef);
 
 	# The versions are sorted in decreasing alphabetical order.
-	my $versions = join(', ', $pkglist->pkgs('pkgbase')->versions());
+	my $versions = join(', ', $pkgdb->pkgs('pkgbase')->versions());
 	ok($versions, '2.0, 1.5, 1.10, 1.0');
 
 	# The versioned packages are sorted in decreasing alphabetical order.
-	my @pkgvers = $pkglist->pkgver('pkgbase');
+	my @pkgvers = $pkgdb->pkgver('pkgbase');
 	ok(join(', ', map { $_->pkgversion } @pkgvers), '2.0, 1.5, 1.10, 1.0');
 	ok($pkgvers[0], $pkgbase_2_0);
 	ok($pkgvers[3], $pkgbase_1_0);
@@ -100,11 +100,11 @@ sub test_package_variables() {
 
 # Demonstrate how the package data is stored in the cache file.
 sub test_store_order() {
-	my $pkglist = PkgList->new();
+	my $pkgdb = PkgDb->new();
 
-	my $pkgbase_1_0 = $pkglist->add('pkgbase', '1.0');
-	my $pkgbase_1_3nb4 = $pkglist->add('pkgbase', '1.3nb4');
-	my $pkgbase_1_15 = $pkglist->add('pkgbase', '1.15');
+	my $pkgbase_1_0 = $pkgdb->add('pkgbase', '1.0');
+	my $pkgbase_1_3nb4 = $pkgdb->add('pkgbase', '1.3nb4');
+	my $pkgbase_1_15 = $pkgdb->add('pkgbase', '1.15');
 
 	# Ensure that variables are stored in alphabetical order.
 	$pkgbase_1_0->var('COMMENT', 'Version 1');
@@ -115,7 +115,7 @@ sub test_store_order() {
 	$pkgbase_1_15->var('COMMENT', 'Version 1.15');
 
 	my $stdout = capture {
-		$pkglist->store();
+		$pkgdb->store();
 	};
 
 	# XXX: 1.3nb4 should be sorted before 1.15.
@@ -133,6 +133,6 @@ sub test_store_order() {
 
 test_pkgver();
 test_pkgs();
-test_pkglist();
+test_pkgdb();
 test_package_variables();
 test_store_order();
