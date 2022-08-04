@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/08/18 16:05:12 nia Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/08/04 15:21:26 nia Exp $
 bin/wayland-scanner
 include/wayland-client-core.h
 include/wayland-client-protocol.h
@@ -12,10 +12,18 @@ include/wayland-server-protocol.h
 include/wayland-server.h
 include/wayland-util.h
 include/wayland-version.h
-lib/libwayland-client.la
-lib/libwayland-cursor.la
-lib/libwayland-egl.la
-lib/libwayland-server.la
+lib/libwayland-client.so
+lib/libwayland-client.so.0
+lib/libwayland-client.so.0.21.0
+lib/libwayland-cursor.so
+lib/libwayland-cursor.so.0
+lib/libwayland-cursor.so.0.21.0
+lib/libwayland-egl.so
+lib/libwayland-egl.so.1
+lib/libwayland-egl.so.${PKGVERSION}
+lib/libwayland-server.so
+lib/libwayland-server.so.0
+lib/libwayland-server.so.0.21.0
 lib/pkgconfig/wayland-client.pc
 lib/pkgconfig/wayland-cursor.pc
 lib/pkgconfig/wayland-egl-backend.pc

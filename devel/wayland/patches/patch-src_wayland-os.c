@@ -1,52 +1,31 @@
-$NetBSD: patch-src_wayland-os.c,v 1.3 2020/01/05 19:30:48 nia Exp $
+$NetBSD: patch-src_wayland-os.c,v 1.4 2022/08/04 15:21:26 nia Exp $
 
-https://lists.freedesktop.org/archives/wayland-devel/2019-February/040024.html
+Support for NetBSD.
 
---- src/wayland-os.c.orig	2019-03-21 00:55:25.000000000 +0000
+--- src/wayland-os.c.orig	2022-06-30 21:59:11.000000000 +0000
 +++ src/wayland-os.c
-@@ -30,9 +30,17 @@
- #include <unistd.h>
- #include <fcntl.h>
- #include <errno.h>
--#include <sys/epoll.h>
- 
- #include "../config.h"
-+
-+#ifdef HAVE_SYS_EPOLL_H
-+#include <sys/epoll.h>
-+#endif
-+
-+#ifdef HAVE_SYS_EVENT_H
-+#include <sys/event.h>
-+#endif
-+
- #include "wayland-os.h"
- 
- static int
-@@ -132,6 +140,7 @@ wl_os_recvmsg_cloexec(int sockfd, struct
- 	return recvmsg_cloexec_fallback(sockfd, msg, flags);
+@@ -100,6 +100,24 @@ wl_os_socket_peercred(int sockfd, uid_t 
+ #endif
+ 	return 0;
  }
- 
-+#ifdef HAVE_SYS_EPOLL_H
- int
- wl_os_epoll_create_cloexec(void)
- {
-@@ -148,6 +157,18 @@ wl_os_epoll_create_cloexec(void)
- 	fd = epoll_create(1);
- 	return set_cloexec_or_close(fd);
- }
++#elif defined(__NetBSD__)
++#ifndef SOL_LOCAL
++#define SOL_LOCAL (0)
 +#endif
-+
-+#ifdef HAVE_SYS_EVENT_H
 +int
-+wl_os_queue_create_cloexec(void)
++wl_os_socket_peercred(int sockfd, uid_t *uid, gid_t *gid, pid_t *pid)
 +{
-+	int fd;
++	socklen_t len;
++	struct sockcred ucred;
 +
-+	fd = kqueue();
-+	return set_cloexec_or_close(fd);
++	len = sizeof(ucred);
++	if (getsockopt(sockfd, SOL_LOCAL, LOCAL_CREDS, &ucred, &len) < 0)
++		return -1;
++	*uid = ucred.sc_uid;
++	*gid = ucred.sc_gid;
++	*pid = 0;
++	return 0;
 +}
-+#endif
- 
+ #elif defined(SO_PEERCRED)
  int
- wl_os_accept_cloexec(int sockfd, struct sockaddr *addr, socklen_t *addrlen)
+ wl_os_socket_peercred(int sockfd, uid_t *uid, gid_t *gid, pid_t *pid)
