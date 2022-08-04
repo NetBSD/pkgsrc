@@ -1,14 +1,7 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:20:08 nia Exp $
+$NetBSD: distinfo,v 1.11 2022/08/04 15:21:26 nia Exp $
 
-BLAKE2s (wayland-1.18.0.tar.xz) = 7c9e98fb32566a14dd6ff1d8ada2ffe07cabed85d99fd8e0720bae68c86d58db
-SHA512 (wayland-1.18.0.tar.xz) = e30199e30c2bbd361ee695b4f3f7a4e264f10ed8f46f2c90762b5739fc578ae757dc39aa0258d8fbf0ed418553470bccd4b2730ed9705481cfccdab5de96a8fc
-Size (wayland-1.18.0.tar.xz) = 453968 bytes
-SHA1 (patch-Makefile.am) = de9f10054caeb6549187639973418b9039d782ee
-SHA1 (patch-configure.ac) = 01b226ecaae6ad07ce20de70e36e68990cf1daed
-SHA1 (patch-src_event-loop.c) = d49eab01c973d9d124867e8ab06c091e63e697f9
-SHA1 (patch-src_wayland-os.c) = eb51bf1dc539926a14848097d04bb762cf1fe962
-SHA1 (patch-src_wayland-os.h) = d07a731f081c1600c3041cc1349120031d28337f
-SHA1 (patch-src_wayland-server.c) = 5d30f67968b2516f3335fb2da559883a952ed355
-SHA1 (patch-src_wayland-shm.c) = 8a2e5ae22bc400cd2c5c9dec421d536229b2943f
-SHA1 (patch-tests_os-wrappers-test.c) = a17a2e3cbab039becc8c4cb2f1be379b3bffba0e
-SHA1 (patch-tests_test-runner.c) = e97cfc48340b0de1c2642cb7cc48d9acf0a533eb
+BLAKE2s (wayland-1.21.0.tar.xz) = a4c8a8c41c3b502fe6f56a5ad4913762ddfe6dea619287d44443b8b54633847f
+SHA512 (wayland-1.21.0.tar.xz) = 5575216d30fdf5c63caa6bcad071e15f2a4f3acb12df776806073f65db37a50b5b5b3cc7957c5497636f4ac01893e2eaab26e453ded44b287acde01762f5fdc3
+Size (wayland-1.21.0.tar.xz) = 225936 bytes
+SHA1 (patch-meson.build) = 50b64c24a298596c7fdadf96551e8923a1f3eb38
+SHA1 (patch-src_wayland-os.c) = 8bbd574108e06697c874d372062d3129eb7937d1
