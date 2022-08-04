@@ -1,0 +1,15 @@
+$NetBSD: patch-lib_m4sugar_Makefile.in,v 1.1 2022/08/04 12:31:41 jperkin Exp $
+
+Use version-specific pkgdatadir.
+
+--- lib/m4sugar/Makefile.in.orig	2012-04-25 02:40:26.000000000 +0000
++++ lib/m4sugar/Makefile.in
+@@ -50,7 +50,7 @@
+ # along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ 
+ VPATH = @srcdir@
+-pkgdatadir = $(datadir)/@PACKAGE@
++pkgdatadir = $(datadir)/autoconf269
+ pkgincludedir = $(includedir)/@PACKAGE@
+ pkglibdir = $(libdir)/@PACKAGE@
+ pkglibexecdir = $(libexecdir)/@PACKAGE@

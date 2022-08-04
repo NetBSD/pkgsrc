@@ -1,0 +1,13 @@
+$NetBSD: distinfo,v 1.1 2022/08/04 12:31:41 jperkin Exp $
+
+BLAKE2s (autoconf-2.69.tar.gz) = 9e137524b06ffeee69b6424af53790955e3bd1fef32a825d6ced7bfe215c795b
+SHA512 (autoconf-2.69.tar.gz) = e34c7818bcde14d2cb13cdd293ed17d70740d4d1fd7c67a07b415491ef85d42f450d4fe5f8f80cc330bf75c40a62774c51a4336e06e8da07a4cbc49922d975ee
+Size (autoconf-2.69.tar.gz) = 1927468 bytes
+SHA1 (patch-bin_Makefile.in) = 6bda60cc520c65773d9647e0bc8fd79fe6cf7247
+SHA1 (patch-lib_Autom4te_Makefile.in) = 6c1476b74a59ca9511c9d3686c7afe7602bfb966
+SHA1 (patch-lib_Makefile.in) = ba192332dfe0bc7515434575b320ee2939cb1af3
+SHA1 (patch-lib_autoconf_Makefile.in) = 604d90802d229177f5be7eb82028d49edf4defad
+SHA1 (patch-lib_autoscan_Makefile.in) = d8f0caf2f1ec8e09b27cea50a1dcb8e7afcb1632
+SHA1 (patch-lib_autotest_Makefile.in) = d8cb662a965bdb97e380ed976f51340eca2eace6
+SHA1 (patch-lib_emacs_Makefile.in) = b304cacb5140675ecceda10775881b387b9d8090
+SHA1 (patch-lib_m4sugar_Makefile.in) = 4bb719c34f50d01328a320e8013db27877a8fb5a
