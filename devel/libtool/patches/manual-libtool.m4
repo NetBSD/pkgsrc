@@ -1,8 +1,9 @@
-$NetBSD: manual-libtool.m4,v 1.50 2022/08/03 13:06:32 jperkin Exp $
+$NetBSD: manual-libtool.m4,v 1.51 2022/08/04 12:23:21 jperkin Exp $
 
 Support Minix.
 Handle pkgsrc wrappers.
 Fixup output on various OS.
+Remove hardcoding of build-time compiler objects on SunOS.
 
 --- m4/libtool.m4.orig	2022-03-17 02:43:39.000000000 +0000
 +++ m4/libtool.m4
@@ -105,7 +106,7 @@ Fixup output on various OS.
    esac
    need_lib_prefix=no
    need_version=no
-@@ -2907,19 +2916,25 @@ linux* | k*bsd*-gnu | kopensolaris*-gnu
+@@ -2907,19 +2916,25 @@ linux* | k*bsd*-gnu | kopensolaris*-gnu 
    dynamic_linker='GNU/Linux ld.so'
    ;;
  
@@ -159,7 +160,7 @@ Fixup output on various OS.
    finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
    shlibpath_var=LD_LIBRARY_PATH
    shlibpath_overrides_runpath=yes
-@@ -3566,12 +3581,8 @@ linux* | k*bsd*-gnu | kopensolaris*-gnu
+@@ -3566,12 +3581,8 @@ linux* | k*bsd*-gnu | kopensolaris*-gnu 
    lt_cv_deplibs_check_method=pass_all
    ;;
  
@@ -336,7 +337,7 @@ Fixup output on various OS.
    AC_PROG_CXXCPP
  else
    _lt_caught_CXX_error=yes
-@@ -7115,16 +7152,14 @@ if test yes != "$_lt_caught_CXX_error";
+@@ -7115,16 +7152,14 @@ if test yes != "$_lt_caught_CXX_error"; 
  	esac
  	;;
  
@@ -361,16 +362,48 @@ Fixup output on various OS.
  	;;
  
        *nto* | *qnx*)
-@@ -7298,7 +7333,7 @@ if test yes != "$_lt_caught_CXX_error";
+@@ -7298,35 +7333,12 @@ if test yes != "$_lt_caught_CXX_error"; 
  	    # GNU C++ compiler with Solaris linker
  	    if test yes,no = "$GXX,$with_gnu_ld"; then
  	      _LT_TAGVAR(no_undefined_flag, $1)=' $wl-z ${wl}defs'
 -	      if $CC --version | $GREP -v '^2\.7' > /dev/null; then
-+	      if true; then
- 	        _LT_TAGVAR(archive_cmds, $1)='$CC -shared $pic_flag -nostdlib $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags $wl-h $wl$soname -o $lib'
- 	        _LT_TAGVAR(archive_expsym_cmds, $1)='echo "{ global:" > $lib.exp~cat $export_symbols | $SED -e "s/\(.*\)/\1;/" >> $lib.exp~echo "local: *; };" >> $lib.exp~
-                   $CC -shared $pic_flag -nostdlib $wl-M $wl$lib.exp $wl-h $wl$soname -o $lib $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags~$RM $lib.exp'
-@@ -7557,8 +7592,9 @@ if AC_TRY_EVAL(ac_compile); then
+-	        _LT_TAGVAR(archive_cmds, $1)='$CC -shared $pic_flag -nostdlib $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags $wl-h $wl$soname -o $lib'
+-	        _LT_TAGVAR(archive_expsym_cmds, $1)='echo "{ global:" > $lib.exp~cat $export_symbols | $SED -e "s/\(.*\)/\1;/" >> $lib.exp~echo "local: *; };" >> $lib.exp~
+-                  $CC -shared $pic_flag -nostdlib $wl-M $wl$lib.exp $wl-h $wl$soname -o $lib $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags~$RM $lib.exp'
+-
+-	        # Commands to make compiler produce verbose output that lists
+-	        # what "hidden" libraries, object files and flags are used when
+-	        # linking a shared library.
+-	        output_verbose_link_cmd='$CC -shared $CFLAGS -v conftest.$objext 2>&1 | $GREP -v "^Configured with:" | $GREP "\-L"'
+-	      else
+-	        # g++ 2.7 appears to require '-G' NOT '-shared' on this
+-	        # platform.
+-	        _LT_TAGVAR(archive_cmds, $1)='$CC -G -nostdlib $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags $wl-h $wl$soname -o $lib'
+-	        _LT_TAGVAR(archive_expsym_cmds, $1)='echo "{ global:" > $lib.exp~cat $export_symbols | $SED -e "s/\(.*\)/\1;/" >> $lib.exp~echo "local: *; };" >> $lib.exp~
+-                  $CC -G -nostdlib $wl-M $wl$lib.exp $wl-h $wl$soname -o $lib $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags~$RM $lib.exp'
+-
+-	        # Commands to make compiler produce verbose output that lists
+-	        # what "hidden" libraries, object files and flags are used when
+-	        # linking a shared library.
+-	        output_verbose_link_cmd='$CC -G $CFLAGS -v conftest.$objext 2>&1 | $GREP -v "^Configured with:" | $GREP "\-L"'
+-	      fi
+-
++	      _LT_TAGVAR(archive_cmds, $1)='$CC -shared $pic_flag $libobjs $deplibs $compiler_flags $wl-h $wl$soname -o $lib'
++	      _LT_TAGVAR(archive_expsym_cmds, $1)='echo "{ global:" > $lib.exp~cat $export_symbols | $SED -e "s/\(.*\)/\1;/" >> $lib.exp~echo "local: *; };" >> $lib.exp~
++                $CC -shared $pic_flag $wl-M $wl$lib.exp $wl-h $wl$soname -o $lib $libobjs $deplibs $compiler_flags~$RM $lib.exp'
++	      output_verbose_link_cmd=func_echo_all
+ 	      _LT_TAGVAR(hardcode_libdir_flag_spec, $1)='$wl-R $wl$libdir'
+-	      case $host_os in
+-		solaris2.[[0-5]] | solaris2.[[0-5]].*) ;;
+-		*)
+-		  _LT_TAGVAR(whole_archive_flag_spec, $1)='$wl-z ${wl}allextract$convenience $wl-z ${wl}defaultextract'
+-		  ;;
+-	      esac
++	      _LT_TAGVAR(whole_archive_flag_spec, $1)='$wl-z ${wl}allextract$convenience $wl-z ${wl}defaultextract'
+ 	    fi
+ 	    ;;
+         esac
+@@ -7557,8 +7569,9 @@ if AC_TRY_EVAL(ac_compile); then
      -L* | -R* | -l*)
         # Some compilers place space between "-{L,R}" and the path.
         # Remove the space.
