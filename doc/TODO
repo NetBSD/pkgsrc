@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22074 2022/08/02 17:30:59 abs Exp $
+$NetBSD: TODO,v 1.22075 2022/08/04 01:02:21 gutteridge Exp $
 
 Suggested new packages
 ======================
@@ -1366,7 +1366,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o qconf-2.5
 	o qdirstat-1.8.1
 	o qemu-7.0
-	o qt6-6.0
+	o qt6-6.3.1 [in wip]
 	o qtcreator-6.0
 	o quazip-1.1
 	o qutebrowser-2.2.0
@@ -1387,6 +1387,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rep-gtk-0.90.8.1
 	o reposurgeon-4.26
 	o resize_image-0.7
+	o retext-8.0.0 [requires qt6/py-qt6/py-qt6-webengine]
 	o rexx-regina-3.9.0
 	o riemann-client-1.10.4.1
 	o rio500-0.8.1
@@ -1562,7 +1563,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o uhttpmock-0.5.3
 	o unicode-screensaver-0.5.2
 	o units-2.21
-	o upower-0.99.18 [switches to build with meson]
+	o upower-0.99.20 [switches to build with meson]
 	o urlgrabber-3.10.2
 	o userppp-030706
 	o userspace-rcu-0.12.2
