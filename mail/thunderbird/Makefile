@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.282 2022/07/02 16:53:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.283 2022/08/04 15:07:14 nia Exp $
 
 DISTNAME=	thunderbird-${TB_VER}.source
 PKGNAME=	thunderbird-${TB_VER}
@@ -111,7 +111,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/${OBJDIR}/dist/${MOZILLA_NAME}/chrome/icons/default/default48.png	\
 	  ${DESTDIR}${PREFIX}/share/pixmaps/${MOZILLA_NAME}.png
 
-.include "../../www/firefox78/mozilla-common.mk"
+.include "mozilla-common.mk"
 .include "options.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
