@@ -1,8 +1,9 @@
-# $NetBSD: packages.t,v 1.9 2022/08/04 07:00:51 rillig Exp $
+# $NetBSD: packages.t,v 1.10 2022/08/04 21:55:58 rillig Exp $
 
 use strict;
 use warnings;
-use Capture::Tiny 'capture';
+use File::Slurp 'read_file';
+use File::Temp;
 use Test;
 
 BEGIN { plan tests => 30, onfail => sub { die } }
@@ -114,21 +115,22 @@ sub test_store_order() {
 
 	$pkgbase_1_15->var('COMMENT', 'Version 1.15');
 
-	my $stdout = capture {
-		$pkgdb->store();
-	};
+	my $tmpfile = File::Temp->new();
+	store_pkgsrc_makefiles($pkgdb, $tmpfile->filename);
+	my $stored = read_file($tmpfile->filename);
 
 	# XXX: 1.3nb4 should be sorted before 1.15.
 	# On the other hand, this is just an internal cache file format.
-	ok($stdout, ''
+	ok($stored, ''
+	    . "package\tpkgbase\t1.3nb4\n"
+	    . "package\tpkgbase\t1.15\n"
+	    . "var\tCOMMENT\tVersion 1.15\n"
 	    . "package\tpkgbase\t1.0\n"
 	    . "var\tCOMMENT\tVersion 1\n"
 	    . "var\tHOMEPAGE\thttps://example.org/pkgbase\n"
 	    . "var\tLICENSE\tmodified-bsd\n"
 	    . "var\tMAINTAINER\tpkgsrc-users\@NetBSD.org\n"
-	    . "package\tpkgbase\t1.15\n"
-	    . "var\tCOMMENT\tVersion 1.15\n"
-	    . "package\tpkgbase\t1.3nb4\n");
+	);
 }
 
 test_pkgver();

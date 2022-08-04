@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.55 2022/08/04 07:00:51 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.56 2022/08/04 21:55:58 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -70,24 +70,6 @@ sub vars($) {
 	keys %{$self->{vars}};
 }
 
-sub store($) {
-	my ($self) = @_;
-
-	my $name = $self->pkgbase;
-	my $ver = $self->pkgversion;
-
-	$name =~ /\s/ and die "cannot store package name '$name'\n";
-	$ver =~ /\s/ and die "cannot store package version '$ver'\n";
-	printf("package\t%s\t%s\n", $name, $ver);
-
-	foreach my $varname (sort $self->vars) {
-		my $value = $self->var($varname);
-		$varname =~ /\s/ and die "cannot store variable name '$varname'\n";
-		$value =~ /\n/ and die "cannot store variable value '$value'\n";
-		printf("var\t%s\t%s\n", $varname, $value);
-	}
-}
-
 # Pkgs collects all versions of a given PKGBASE, e.g. apache-1.3.27 and
 # apache-2.0.46.
 #
@@ -143,15 +125,6 @@ sub latestver($) {
 	my ($self) = @_;
 
 	($self->pkgver)[0];
-}
-
-sub store($) {
-	my ($self) = @_;
-
-	my $pkgvers = $self->{pkgvers};
-	foreach my $pkgver (sort keys %$pkgvers) {
-		$pkgvers->{$pkgver}->store();
-	}
 }
 
 # PkgDb is a small database of all packages in pkgsrc.
@@ -217,14 +190,6 @@ sub pkgs($$) {
 		return $self->{$pkgbase};
 	} else {
 		return sort { $a->pkgbase cmp $b->pkgbase } values %$self;
-	}
-}
-
-sub store($) {
-	my ($self) = @_;
-
-	foreach my $pkgs ($self->pkgs) {
-		$pkgs->store();
 	}
 }
 
@@ -1374,14 +1339,30 @@ sub scan_pkgsrc_distfiles_vs_distinfo($$$$) {
 	(sort keys %bad_distfiles);
 }
 
-sub store_pkgsrc_makefiles($) {
-	my ($fname) = @_;
+sub store_pkgsrc_makefiles($$) {
+	my ($db, $fname) = @_;
 
 	open(STORE, '>', $fname)
 	    or die("Cannot save pkgsrc store to $fname: $!\n");
-	my $prev = select(STORE);
-	$pkgdb->store();
-	select($prev);
+	foreach my $pkgver ($db->pkgver) {
+		my $pkgbase = $pkgver->pkgbase;
+		my $pkgversion = $pkgver->pkgversion;
+
+		$pkgbase =~ /^\S+$/
+		    or die "cannot store package name '$pkgbase'\n";
+		$pkgversion =~ /^\S+$/
+		    or die "cannot store package version '$pkgversion'\n";
+		print STORE "package\t$pkgbase\t$pkgversion\n";
+
+		foreach my $varname (sort $pkgver->vars) {
+			my $value = $pkgver->var($varname);
+			$varname =~ /^\S+$/
+			    or die "cannot store variable name '$varname'\n";
+			$value =~ /^.*$/
+			    or die "cannot store variable value '$value'\n";
+			print STORE "var\t$varname\t$value\n";
+		}
+	}
 	close(STORE)
 	    or die("Cannot save pkgsrc store to $fname: $!\n");
 }
@@ -1804,7 +1785,7 @@ sub main() {
 
 	if ($opt{E}) {
 		scan_pkgsrc_makefiles($pkgsrcdir);
-		store_pkgsrc_makefiles($opt{E});
+		store_pkgsrc_makefiles($pkgdb, $opt{E});
 	}
 }
 
