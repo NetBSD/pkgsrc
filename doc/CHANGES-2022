@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3674 2022/08/04 00:54:14 gutteridge Exp $
+$NetBSD: CHANGES-2022,v 1.3675 2022/08/04 11:35:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5472,3 +5472,6 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/p5-DBD-SQLite to 1.70 [wiz 2022-08-03]
 	Updated emulators/nono to 0.4.2 [jun 2022-08-04]
 	Updated devel/cbindgen to 0.24.3 [gutteridge 2022-08-04]
+	Updated devel/glib2 to 2.72.3 [adam 2022-08-04]
+	Updated devel/glib2-tools to 2.72.3 [adam 2022-08-04]
+	Updated devel/gdbus-codegen to 2.72.3 [adam 2022-08-04]
