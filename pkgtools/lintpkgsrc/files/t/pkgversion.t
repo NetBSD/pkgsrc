@@ -1,26 +1,16 @@
-# $NetBSD: pkgversion.t,v 1.8 2022/08/03 22:03:43 rillig Exp $
+# $NetBSD: pkgversion.t,v 1.9 2022/08/04 05:45:15 rillig Exp $
 
 use strict;
 use warnings;
 use IO::Null;
 use Test;
 
-BEGIN { plan tests => 6, onfail => sub { die } }
+BEGIN { plan tests => 1781, onfail => sub { die } }
 
 require('../lintpkgsrc.pl');
 
 ok(pkgversioncmp('3.4', '<', '3.4'), '');
 ok(pkgversioncmp('3.4', '<=', '3.4'), 1);
-ok(pkgversioncmp('3.4', '>=', '3.4.0.0.0'), 1);
-ok(pkgversioncmp('3.4nb13', '>=', '3.4'), 1);
-ok(pkgversioncmp('3.4nb13', '<', '3.4'), '');
-ok(pkgversioncmp('3.4nb13', '>', '3.4nb5'), 1);
-ok(pkgversioncmp('1.1ab', '>', '1.1aa'), 1);
-ok(pkgversioncmp('1.1ab', '<=', '1.1.1.2'), 1);
-ok(pkgversioncmp('1.1ab', '>=', '1.1.1.2'), 1);
-
-ok(pkgversioncmp('1nb1', '<', '1.0.0.0.0.0.0.1'), 1);
-ok(pkgversioncmp('1.0', '<', '1nb1'), 1);
 
 # See pkgtools/pkglint/files/pkgver/vercmp_test.go.
 my @split_version_tests = (
@@ -42,27 +32,33 @@ my @split_version_tests = (
 
 foreach my $test (@split_version_tests) {
 	my ($version, $expected) = @$test;
+
 	my @actual = split_pkgversion($version);
+
 	my @expected = ($expected->[1]);
 	push(@expected, @{$expected->[0]});
-	ok("$version: " . join(',', @actual), "$version: " . join(',', @expected));
+	my $actual_str = "$version: " . join(',', @actual);
+	my $expected_str = "$version: " . join(',', @expected);
+	ok($actual_str, $expected_str);
 }
 
 # See pkgtools/pkglint/files/pkgver/vercmp_test.go.
-my $versions = [
+my @versions = (
     [ "0pre20160620" ],
     [ "0" ],
-    [ "nb1" ],
+    [ "0nb1", "0NB1", "0Nb1", "0nb00001" ],
     [ "0.0.1-SNAPSHOT" ],
     [ "1.0alpha" ],
     [ "1.0alpha3" ],
     [ "1", "1.0", "1.0.0" ],
-    [ "1.0nb1" ],
+    [ "1.0nb1", "1nb1" ],
     [ "1.0nb2", "1_0nb2" ],
+    [ "1.0.0.0.0.0.0.1" ],
     [ "1.0.aa" ],
     [ "1.0.a1" ],
     [ "1.0.k" ],
     [ "1.0.1a" ],
+    [ "1.0.1.2", "1.0ab" ],
     [ "1.0.1z" ],
     [ "1.0.11", "1.0k" ],
     [ "2.0pre", "2.0rc" ],
@@ -76,14 +72,14 @@ my $versions = [
     [ "2021.06.17", "2021.6.17" ],
     [ "2021.12.01", "2021.12.1" ],
     [ "20151110" ],
-];
+);
 
 my $prev = $Test::TESTOUT;
-$Test::TESTOUT = IO::Null->new;
-for (my $i = 0; $i < $#{$versions}; $i++) {
-	for (my $j = 0; $j < $#{$versions}; $j++) {
-		foreach my $vi (@{$versions->[$i]}) {
-			foreach my $vj (@{$versions->[$j]}) {
+$Test::TESTOUT = IO::Null->new; # suppress the 'ok' output.
+foreach my $i (0 .. $#versions) {
+	foreach my $j (0 .. $#versions) {
+		foreach my $vi (@{$versions[$i]}) {
+			foreach my $vj (@{$versions[$j]}) {
 				my $actual = pkgversioncmp($vi, '<', $vj) ? '<'
 				    : pkgversioncmp($vi, '<=', $vj) ? '=='
 				    : '>';
@@ -96,3 +92,5 @@ for (my $i = 0; $i < $#{$versions}; $i++) {
 	}
 }
 $Test::TESTOUT = $prev;
+
+ok('done', 'done');
