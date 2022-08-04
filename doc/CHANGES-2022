@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3679 2022/08/04 12:32:21 jperkin Exp $
+$NetBSD: CHANGES-2022,v 1.3680 2022/08/04 15:13:03 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5480,3 +5480,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/memcached to 1.6.16 [adam 2022-08-04]
 	Updated devel/py-setuptools to 63.4.1 [adam 2022-08-04]
 	Added devel/autoconf269 version 2.69 [jperkin 2022-08-04]
+	Removed www/firefox78 successor www/firefox102 [nia 2022-08-04]
+	Removed www/firefox78-l10n successor www/firefox102-l10n [nia 2022-08-04]
