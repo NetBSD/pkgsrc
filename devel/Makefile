@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3768 2022/07/29 16:35:15 wiz Exp $
+# $NetBSD: Makefile,v 1.3769 2022/08/04 12:32:07 jperkin Exp $
 #
 
 COMMENT=	Development utilities
@@ -159,6 +159,7 @@ SUBDIR+=	atkmm2.36
 SUBDIR+=	autoconf
 SUBDIR+=	autoconf-archive
 SUBDIR+=	autoconf213
+SUBDIR+=	autoconf269
 SUBDIR+=	autogen
 SUBDIR+=	automake
 SUBDIR+=	automake14
