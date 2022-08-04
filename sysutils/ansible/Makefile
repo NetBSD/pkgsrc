@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2022/06/30 11:18:49 nia Exp $
+# $NetBSD: Makefile,v 1.48 2022/08/04 21:40:40 jperkin Exp $
 
 DISTNAME=	ansible-5.7.1
 PKGREVISION=	1
@@ -15,6 +15,11 @@ PREV_PKGPATH=	sysutils/ansible2
 DEPENDS+=	ansible-core>=2.12.5:../../sysutils/ansible-core
 
 USE_LANGUAGES=	# none
+
+CHECK_SHLIBS_SUPPORTED=	no
+CHECK_WRKREF_SKIP=	*
+CTF_SUPPORTED=		no
+STRIP_DEBUG_SUPPORTED=	no
 
 REPLACE_PYTHON+=	ansible_collections/*/*/.azure-pipelines/scripts/*.py
 REPLACE_PYTHON+=	ansible_collections/*/*/tests/*/*.py
