@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:20:08 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/08/04 15:29:00 nia Exp $
 
-BLAKE2s (wayland-protocols-1.20.tar.xz) = 9201673fd0eb35a6f090534257a30ca6e7928af04bb1bdab341c5b552a36407f
-SHA512 (wayland-protocols-1.20.tar.xz) = d13f65d03add2c39cc32bf6bda0e981e9f52504bf8505fceea045c8baeb73bea64fa4edb99cb837677fbab1b5b3023054adff36fac127e819690f366b81c4977
-Size (wayland-protocols-1.20.tar.xz) = 111684 bytes
+BLAKE2s (wayland-protocols-1.26.tar.xz) = fae11be1ef0962b90964dd16b5366a31c321a12e118cb7c510e027999b5dec7b
+SHA512 (wayland-protocols-1.26.tar.xz) = fa9c3963b548197461c8c0b9e16ebbf9cfa5b60053fc17f51b41e63a55b8c5420dd7e42313f93946b438ab47f04e1cd17bc92aae9e1074b47177dc7ce7042167
+Size (wayland-protocols-1.26.tar.xz) = 81028 bytes
