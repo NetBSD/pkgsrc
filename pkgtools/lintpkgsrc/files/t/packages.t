@@ -1,4 +1,4 @@
-# $NetBSD: packages.t,v 1.6 2022/08/03 20:14:16 rillig Exp $
+# $NetBSD: packages.t,v 1.7 2022/08/04 06:02:41 rillig Exp $
 
 use strict;
 use warnings;
@@ -53,6 +53,14 @@ sub test_store_order() {
 	my $pkgbase_1_3nb4 = $pkglist->add('pkgbase', '1.3nb4');
 	my $pkgbase_1_15 = $pkglist->add('pkgbase', '1.15');
 
+	# Ensure that variables are stored in alphabetical order.
+	$pkgbase_1_0->var('COMMENT', 'Version 1');
+	$pkgbase_1_0->var('HOMEPAGE', 'https://example.org/pkgbase');
+	$pkgbase_1_0->var('MAINTAINER', 'pkgsrc-users@NetBSD.org');
+	$pkgbase_1_0->var('LICENSE', 'modified-bsd');
+
+	$pkgbase_1_15->var('COMMENT', 'Version 1.15');
+
 	my $stdout = capture {
 		$pkglist->store();
 	};
@@ -61,7 +69,12 @@ sub test_store_order() {
 	# On the other hand, this is just an internal cache file format.
 	ok($stdout, ''
 	    . "package\tpkgbase\t1.0\n"
+	    . "var\tCOMMENT\tVersion 1\n"
+	    . "var\tHOMEPAGE\thttps://example.org/pkgbase\n"
+	    . "var\tLICENSE\tmodified-bsd\n"
+	    . "var\tMAINTAINER\tpkgsrc-users\@NetBSD.org\n"
 	    . "package\tpkgbase\t1.15\n"
+	    . "var\tCOMMENT\tVersion 1.15\n"
 	    . "package\tpkgbase\t1.3nb4\n");
 }
 

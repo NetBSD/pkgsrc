@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.53 2022/08/04 05:50:54 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.54 2022/08/04 06:02:41 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -82,7 +82,7 @@ sub store($) {
 	printf("package\t%s\t%s\n", $name, $ver);
 
 	foreach my $varname (sort $self->vars) {
-		my $value = $self->{$varname};
+		my $value = $self->var($varname);
 		$varname =~ /\s/ and die "cannot store variable name '$varname'\n";
 		$value =~ /\n/ and die "cannot store variable value '$value'\n";
 		printf("var\t%s\t%s\n", $varname, $value);
