@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3673 2022/08/03 23:36:15 jun Exp $
+$NetBSD: CHANGES-2022,v 1.3674 2022/08/04 00:54:14 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5471,3 +5471,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/nsd to 4.6.0 [ryoon 2022-08-03]
 	Updated databases/p5-DBD-SQLite to 1.70 [wiz 2022-08-03]
 	Updated emulators/nono to 0.4.2 [jun 2022-08-04]
+	Updated devel/cbindgen to 0.24.3 [gutteridge 2022-08-04]
