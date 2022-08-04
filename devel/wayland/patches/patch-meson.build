@@ -1,0 +1,42 @@
+$NetBSD: patch-meson.build,v 1.1 2022/08/04 15:21:26 nia Exp $
+
+Support for NetBSD.
+
+--- meson.build.orig	2022-06-30 21:59:11.000000000 +0000
++++ meson.build
+@@ -38,6 +38,18 @@ foreach h: [ 'sys/prctl.h', 'sys/procctl
+ 	config_h.set('HAVE_' + h.underscorify().to_upper(), cc.has_header(h))
+ endforeach
+ 
++# NetBSD defines posix_fallocate(), but it always returns failure.
++# Cleanly fall back to ftruncate.
++if host_machine.system() == 'netbsd'
++have_funcs = [
++	'accept4',
++	'mkostemp',
++	'prctl',
++	'memfd_create',
++	'mremap',
++	'strndup',
++]
++else
+ have_funcs = [
+ 	'accept4',
+ 	'mkostemp',
+@@ -47,6 +59,7 @@ have_funcs = [
+ 	'mremap',
+ 	'strndup',
+ ]
++endif
+ foreach f: have_funcs
+ 	config_h.set('HAVE_' + f.underscorify().to_upper(), cc.has_function(f))
+ endforeach
+@@ -69,7 +82,7 @@ endif
+ config_h.set10('HAVE_BROKEN_MSG_CMSG_CLOEXEC', have_broken_msg_cmsg_cloexec)
+ 
+ if get_option('libraries')
+-	if host_machine.system() == 'freebsd'
++	if host_machine.system() == 'freebsd' or host_machine.system() == 'netbsd'
+ 		# When building for FreeBSD, epoll(7) is provided by a userspace
+ 		# wrapper around kqueue(2).
+ 		epoll_dep = dependency('epoll-shim')
