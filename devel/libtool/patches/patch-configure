@@ -1,9 +1,9 @@
-$NetBSD: patch-configure,v 1.5 2022/08/03 13:06:32 jperkin Exp $
+$NetBSD: patch-configure,v 1.6 2022/08/04 12:23:21 jperkin Exp $
 
 Automatically generated using manual-* patches and bootstrap.
 DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
 
---- configure.orig	2022-08-03 12:14:26.894800127 +0000
+--- configure.orig	2022-08-04 11:35:59.000000000 +0000
 +++ configure
 @@ -748,6 +748,9 @@ AM_BACKSLASH
  AM_DEFAULT_VERBOSITY
@@ -64,7 +64,7 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
    --libdir=DIR            object code libraries [EPREFIX/lib]
    --includedir=DIR        C header files [PREFIX/include]
    --oldincludedir=DIR     C header files for non-gcc [/usr/include]
-@@ -3342,6 +3333,20 @@ am__tar='$${TAR-tar} chof - "$$tardir"'
+@@ -3342,6 +3333,20 @@ am__tar='$${TAR-tar} chof - "$$tardir"' 
  
  
  
@@ -104,7 +104,7 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
  : ${CP="cp -f"}
  : ${MV="mv -f"}
  : ${RM="rm -f"}
-@@ -6574,12 +6582,8 @@ linux* | k*bsd*-gnu | kopensolaris*-gnu
+@@ -6574,12 +6582,8 @@ linux* | k*bsd*-gnu | kopensolaris*-gnu 
    lt_cv_deplibs_check_method=pass_all
    ;;
  
@@ -420,16 +420,48 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
  	;;
  
        *nto* | *qnx*)
-@@ -16196,7 +16227,7 @@ fi
+@@ -16196,35 +16227,12 @@ fi
  	    # GNU C++ compiler with Solaris linker
  	    if test yes,no = "$GXX,$with_gnu_ld"; then
  	      no_undefined_flag_CXX=' $wl-z ${wl}defs'
 -	      if $CC --version | $GREP -v '^2\.7' > /dev/null; then
-+	      if true; then
- 	        archive_cmds_CXX='$CC -shared $pic_flag -nostdlib $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags $wl-h $wl$soname -o $lib'
- 	        archive_expsym_cmds_CXX='echo "{ global:" > $lib.exp~cat $export_symbols | $SED -e "s/\(.*\)/\1;/" >> $lib.exp~echo "local: *; };" >> $lib.exp~
-                   $CC -shared $pic_flag -nostdlib $wl-M $wl$lib.exp $wl-h $wl$soname -o $lib $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags~$RM $lib.exp'
-@@ -16360,8 +16391,9 @@ if { { eval echo "\"\$as_me\":${as_linen
+-	        archive_cmds_CXX='$CC -shared $pic_flag -nostdlib $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags $wl-h $wl$soname -o $lib'
+-	        archive_expsym_cmds_CXX='echo "{ global:" > $lib.exp~cat $export_symbols | $SED -e "s/\(.*\)/\1;/" >> $lib.exp~echo "local: *; };" >> $lib.exp~
+-                  $CC -shared $pic_flag -nostdlib $wl-M $wl$lib.exp $wl-h $wl$soname -o $lib $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags~$RM $lib.exp'
+-
+-	        # Commands to make compiler produce verbose output that lists
+-	        # what "hidden" libraries, object files and flags are used when
+-	        # linking a shared library.
+-	        output_verbose_link_cmd='$CC -shared $CFLAGS -v conftest.$objext 2>&1 | $GREP -v "^Configured with:" | $GREP "\-L"'
+-	      else
+-	        # g++ 2.7 appears to require '-G' NOT '-shared' on this
+-	        # platform.
+-	        archive_cmds_CXX='$CC -G -nostdlib $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags $wl-h $wl$soname -o $lib'
+-	        archive_expsym_cmds_CXX='echo "{ global:" > $lib.exp~cat $export_symbols | $SED -e "s/\(.*\)/\1;/" >> $lib.exp~echo "local: *; };" >> $lib.exp~
+-                  $CC -G -nostdlib $wl-M $wl$lib.exp $wl-h $wl$soname -o $lib $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags~$RM $lib.exp'
+-
+-	        # Commands to make compiler produce verbose output that lists
+-	        # what "hidden" libraries, object files and flags are used when
+-	        # linking a shared library.
+-	        output_verbose_link_cmd='$CC -G $CFLAGS -v conftest.$objext 2>&1 | $GREP -v "^Configured with:" | $GREP "\-L"'
+-	      fi
+-
++	      archive_cmds_CXX='$CC -shared $pic_flag $libobjs $deplibs $compiler_flags $wl-h $wl$soname -o $lib'
++	      archive_expsym_cmds_CXX='echo "{ global:" > $lib.exp~cat $export_symbols | $SED -e "s/\(.*\)/\1;/" >> $lib.exp~echo "local: *; };" >> $lib.exp~
++                $CC -shared $pic_flag $wl-M $wl$lib.exp $wl-h $wl$soname -o $lib $libobjs $deplibs $compiler_flags~$RM $lib.exp'
++	      output_verbose_link_cmd=func_echo_all
+ 	      hardcode_libdir_flag_spec_CXX='$wl-R $wl$libdir'
+-	      case $host_os in
+-		solaris2.[0-5] | solaris2.[0-5].*) ;;
+-		*)
+-		  whole_archive_flag_spec_CXX='$wl-z ${wl}allextract$convenience $wl-z ${wl}defaultextract'
+-		  ;;
+-	      esac
++	      whole_archive_flag_spec_CXX='$wl-z ${wl}allextract$convenience $wl-z ${wl}defaultextract'
+ 	    fi
+ 	    ;;
+         esac
+@@ -16360,8 +16368,9 @@ if { { eval echo "\"\$as_me\":${as_linen
      -L* | -R* | -l*)
         # Some compilers place space between "-{L,R}" and the path.
         # Remove the space.
@@ -441,7 +473,7 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
  	 prev=$p
  	 continue
         fi
-@@ -16541,9 +16573,15 @@ lt_prog_compiler_static_CXX=
+@@ -16541,9 +16550,15 @@ lt_prog_compiler_static_CXX=
        esac
        ;;
      darwin* | rhapsody*)
@@ -458,7 +490,7 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
        ;;
      *djgpp*)
        # DJGPP does not support shared libraries at all
-@@ -16621,6 +16659,9 @@ lt_prog_compiler_static_CXX=
+@@ -16621,6 +16636,9 @@ lt_prog_compiler_static_CXX=
  	    ;;
  	esac
  	;;
@@ -468,7 +500,7 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
        freebsd* | dragonfly* | midnightbsd*)
  	# FreeBSD uses GNU C++
  	;;
-@@ -16728,7 +16769,7 @@ lt_prog_compiler_static_CXX=
+@@ -16728,7 +16746,7 @@ lt_prog_compiler_static_CXX=
  	    ;;
  	esac
  	;;
@@ -477,7 +509,7 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
  	;;
        *qnx* | *nto*)
          # QNX uses GNU C++, but need to define -shared option too, otherwise
-@@ -16818,6 +16859,9 @@ lt_prog_compiler_static_CXX=
+@@ -16818,6 +16836,9 @@ lt_prog_compiler_static_CXX=
  
  case $host_os in
    # For platforms that do not support PIC, -DPIC is meaningless:
@@ -487,7 +519,7 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
    *djgpp*)
      lt_prog_compiler_pic_CXX=
      ;;
-@@ -17545,7 +17589,7 @@ dgux*)
+@@ -17545,7 +17566,7 @@ dgux*)
    shlibpath_var=LD_LIBRARY_PATH
    ;;
  
@@ -496,7 +528,7 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
    # DragonFly does not have aout.  When/if they implement a new
    # versioning mechanism, adjust this.
    if test -x /usr/bin/objformat; then
-@@ -17590,6 +17634,17 @@ freebsd* | dragonfly* | midnightbsd*)
+@@ -17590,6 +17611,17 @@ freebsd* | dragonfly* | midnightbsd*)
    esac
    ;;
  
@@ -514,7 +546,7 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
  haiku*)
    version_type=linux # correct to gnu/linux during the next big refactor
    need_lib_prefix=no
-@@ -17667,12 +17722,7 @@ interix[3-9]*)
+@@ -17667,12 +17699,7 @@ interix[3-9]*)
  irix5* | irix6* | nonstopux*)
    case $host_os in
      nonstopux*) version_type=nonstopux ;;
@@ -528,7 +560,7 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
    esac
    need_lib_prefix=no
    need_version=no
-@@ -17796,19 +17846,25 @@ fi
+@@ -17796,19 +17823,25 @@ fi
    dynamic_linker='GNU/Linux ld.so'
    ;;
  
@@ -564,7 +596,7 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
    shlibpath_var=LD_LIBRARY_PATH
    shlibpath_overrides_runpath=yes
    hardcode_into_libs=yes
-@@ -17834,7 +17890,7 @@ newsos6)
+@@ -17834,7 +17867,7 @@ newsos6)
    ;;
  
  openbsd* | bitrig*)
@@ -573,7 +605,7 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
    sys_lib_dlsearch_path_spec=/usr/lib
    need_lib_prefix=no
    if test -z "`echo __ELF__ | $CC -E - | $GREP __ELF__`"; then
-@@ -17842,7 +17898,7 @@ openbsd* | bitrig*)
+@@ -17842,7 +17875,7 @@ openbsd* | bitrig*)
    else
      need_version=yes
    fi
@@ -582,7 +614,7 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
    finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
    shlibpath_var=LD_LIBRARY_PATH
    shlibpath_overrides_runpath=yes
-@@ -18533,9 +18589,16 @@ lt_prog_compiler_static_F77=
+@@ -18533,9 +18566,16 @@ lt_prog_compiler_static_F77=
        ;;
  
      darwin* | rhapsody*)
@@ -600,7 +632,7 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
        ;;
  
      haiku*)
-@@ -18563,6 +18626,13 @@ lt_prog_compiler_static_F77=
+@@ -18563,6 +18603,13 @@ lt_prog_compiler_static_F77=
        # Instead, we relocate shared libraries at runtime.
        ;;
  
@@ -614,7 +646,7 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
      msdosdjgpp*)
        # Just because we use GCC doesn't mean we suddenly get shared libraries
        # on systems that don't support them.
-@@ -18815,6 +18885,9 @@ lt_prog_compiler_static_F77=
+@@ -18815,6 +18862,9 @@ lt_prog_compiler_static_F77=
  
  case $host_os in
    # For platforms that do not support PIC, -DPIC is meaningless:
@@ -624,7 +656,7 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
    *djgpp*)
      lt_prog_compiler_pic_F77=
      ;;
-@@ -19379,14 +19452,13 @@ _LT_EOF
+@@ -19379,14 +19429,13 @@ _LT_EOF
        fi
        ;;
  
@@ -646,7 +678,7 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
        ;;
  
      solaris*)
-@@ -19836,7 +19908,7 @@ fi
+@@ -19836,7 +19885,7 @@ fi
    allow_undefined_flag_F77=$_lt_dar_allow_undefined
    case $cc_basename in
       ifort*|nagfor*) _lt_dar_can_shared=yes ;;
@@ -655,7 +687,7 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
    esac
    if test yes = "$_lt_dar_can_shared"; then
      output_verbose_link_cmd=func_echo_all
-@@ -20020,15 +20092,13 @@ $as_echo "$lt_cv_irix_exported_symbol" >
+@@ -20020,15 +20069,13 @@ $as_echo "$lt_cv_irix_exported_symbol" >
        esac
        ;;
  
@@ -676,7 +708,7 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
        ;;
  
      newsos6)
-@@ -20040,6 +20110,11 @@ $as_echo "$lt_cv_irix_exported_symbol" >
+@@ -20040,6 +20087,11 @@ $as_echo "$lt_cv_irix_exported_symbol" >
        ;;
  
      *nto* | *qnx*)
@@ -688,7 +720,7 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
        ;;
  
      openbsd* | bitrig*)
-@@ -20713,7 +20788,7 @@ dgux*)
+@@ -20713,7 +20765,7 @@ dgux*)
    shlibpath_var=LD_LIBRARY_PATH
    ;;
  
@@ -697,7 +729,7 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
    # DragonFly does not have aout.  When/if they implement a new
    # versioning mechanism, adjust this.
    if test -x /usr/bin/objformat; then
-@@ -20758,6 +20833,17 @@ freebsd* | dragonfly* | midnightbsd*)
+@@ -20758,6 +20810,17 @@ freebsd* | dragonfly* | midnightbsd*)
    esac
    ;;
  
@@ -715,7 +747,7 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
  haiku*)
    version_type=linux # correct to gnu/linux during the next big refactor
    need_lib_prefix=no
-@@ -20835,12 +20921,7 @@ interix[3-9]*)
+@@ -20835,12 +20898,7 @@ interix[3-9]*)
  irix5* | irix6* | nonstopux*)
    case $host_os in
      nonstopux*) version_type=nonstopux ;;
@@ -729,7 +761,7 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
    esac
    need_lib_prefix=no
    need_version=no
-@@ -20958,19 +21039,25 @@ fi
+@@ -20958,19 +21016,25 @@ fi
    dynamic_linker='GNU/Linux ld.so'
    ;;
  
@@ -765,7 +797,7 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
    shlibpath_var=LD_LIBRARY_PATH
    shlibpath_overrides_runpath=yes
    hardcode_into_libs=yes
-@@ -20996,7 +21083,7 @@ newsos6)
+@@ -20996,7 +21060,7 @@ newsos6)
    ;;
  
  openbsd* | bitrig*)
@@ -774,7 +806,7 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
    sys_lib_dlsearch_path_spec=/usr/lib
    need_lib_prefix=no
    if test -z "`echo __ELF__ | $CC -E - | $GREP __ELF__`"; then
-@@ -21004,7 +21091,7 @@ openbsd* | bitrig*)
+@@ -21004,7 +21068,7 @@ openbsd* | bitrig*)
    else
      need_version=yes
    fi
@@ -783,7 +815,7 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
    finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
    shlibpath_var=LD_LIBRARY_PATH
    shlibpath_overrides_runpath=yes
-@@ -21681,8 +21768,9 @@ if { { eval echo "\"\$as_me\":${as_linen
+@@ -21681,8 +21745,9 @@ if { { eval echo "\"\$as_me\":${as_linen
      -L* | -R* | -l*)
         # Some compilers place space between "-{L,R}" and the path.
         # Remove the space.
@@ -795,7 +827,7 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
  	 prev=$p
  	 continue
         fi
-@@ -21836,9 +21924,16 @@ lt_prog_compiler_static_FC=
+@@ -21836,9 +21901,16 @@ lt_prog_compiler_static_FC=
        ;;
  
      darwin* | rhapsody*)
@@ -813,7 +845,7 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
        ;;
  
      haiku*)
-@@ -21866,6 +21961,13 @@ lt_prog_compiler_static_FC=
+@@ -21866,6 +21938,13 @@ lt_prog_compiler_static_FC=
        # Instead, we relocate shared libraries at runtime.
        ;;
  
@@ -827,7 +859,7 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
      msdosdjgpp*)
        # Just because we use GCC doesn't mean we suddenly get shared libraries
        # on systems that don't support them.
-@@ -22118,6 +22220,9 @@ lt_prog_compiler_static_FC=
+@@ -22118,6 +22197,9 @@ lt_prog_compiler_static_FC=
  
  case $host_os in
    # For platforms that do not support PIC, -DPIC is meaningless:
@@ -837,7 +869,7 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
    *djgpp*)
      lt_prog_compiler_pic_FC=
      ;;
-@@ -22682,14 +22787,13 @@ _LT_EOF
+@@ -22682,14 +22764,13 @@ _LT_EOF
        fi
        ;;
  
@@ -859,7 +891,7 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
        ;;
  
      solaris*)
-@@ -23139,7 +23243,7 @@ fi
+@@ -23139,7 +23220,7 @@ fi
    allow_undefined_flag_FC=$_lt_dar_allow_undefined
    case $cc_basename in
       ifort*|nagfor*) _lt_dar_can_shared=yes ;;
@@ -868,7 +900,7 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
    esac
    if test yes = "$_lt_dar_can_shared"; then
      output_verbose_link_cmd=func_echo_all
-@@ -23323,15 +23427,13 @@ $as_echo "$lt_cv_irix_exported_symbol" >
+@@ -23323,15 +23404,13 @@ $as_echo "$lt_cv_irix_exported_symbol" >
        esac
        ;;
  
@@ -889,7 +921,7 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
        ;;
  
      newsos6)
-@@ -23343,6 +23445,11 @@ $as_echo "$lt_cv_irix_exported_symbol" >
+@@ -23343,6 +23422,11 @@ $as_echo "$lt_cv_irix_exported_symbol" >
        ;;
  
      *nto* | *qnx*)
@@ -901,7 +933,7 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
        ;;
  
      openbsd* | bitrig*)
-@@ -24016,7 +24123,7 @@ dgux*)
+@@ -24016,7 +24100,7 @@ dgux*)
    shlibpath_var=LD_LIBRARY_PATH
    ;;
  
@@ -910,7 +942,7 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
    # DragonFly does not have aout.  When/if they implement a new
    # versioning mechanism, adjust this.
    if test -x /usr/bin/objformat; then
-@@ -24061,6 +24168,17 @@ freebsd* | dragonfly* | midnightbsd*)
+@@ -24061,6 +24145,17 @@ freebsd* | dragonfly* | midnightbsd*)
    esac
    ;;
  
@@ -928,7 +960,7 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
  haiku*)
    version_type=linux # correct to gnu/linux during the next big refactor
    need_lib_prefix=no
-@@ -24138,12 +24256,7 @@ interix[3-9]*)
+@@ -24138,12 +24233,7 @@ interix[3-9]*)
  irix5* | irix6* | nonstopux*)
    case $host_os in
      nonstopux*) version_type=nonstopux ;;
@@ -942,7 +974,7 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
    esac
    need_lib_prefix=no
    need_version=no
-@@ -24261,19 +24374,25 @@ fi
+@@ -24261,19 +24351,25 @@ fi
    dynamic_linker='GNU/Linux ld.so'
    ;;
  
@@ -978,7 +1010,7 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
    shlibpath_var=LD_LIBRARY_PATH
    shlibpath_overrides_runpath=yes
    hardcode_into_libs=yes
-@@ -24299,7 +24418,7 @@ newsos6)
+@@ -24299,7 +24395,7 @@ newsos6)
    ;;
  
  openbsd* | bitrig*)
@@ -987,7 +1019,7 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
    sys_lib_dlsearch_path_spec=/usr/lib
    need_lib_prefix=no
    if test -z "`echo __ELF__ | $CC -E - | $GREP __ELF__`"; then
-@@ -24307,7 +24426,7 @@ openbsd* | bitrig*)
+@@ -24307,7 +24403,7 @@ openbsd* | bitrig*)
    else
      need_version=yes
    fi
@@ -996,7 +1028,7 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
    finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
    shlibpath_var=LD_LIBRARY_PATH
    shlibpath_overrides_runpath=yes
-@@ -24858,9 +24977,16 @@ lt_prog_compiler_static_GO=
+@@ -24858,9 +24954,16 @@ lt_prog_compiler_static_GO=
        ;;
  
      darwin* | rhapsody*)
@@ -1014,7 +1046,7 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
        ;;
  
      haiku*)
-@@ -24888,6 +25014,13 @@ lt_prog_compiler_static_GO=
+@@ -24888,6 +24991,13 @@ lt_prog_compiler_static_GO=
        # Instead, we relocate shared libraries at runtime.
        ;;
  
@@ -1028,7 +1060,7 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
      msdosdjgpp*)
        # Just because we use GCC doesn't mean we suddenly get shared libraries
        # on systems that don't support them.
-@@ -25140,6 +25273,9 @@ lt_prog_compiler_static_GO=
+@@ -25140,6 +25250,9 @@ lt_prog_compiler_static_GO=
  
  case $host_os in
    # For platforms that do not support PIC, -DPIC is meaningless:
@@ -1038,7 +1070,7 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
    *djgpp*)
      lt_prog_compiler_pic_GO=
      ;;
-@@ -25704,14 +25840,13 @@ _LT_EOF
+@@ -25704,14 +25817,13 @@ _LT_EOF
        fi
        ;;
  
@@ -1060,7 +1092,7 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
        ;;
  
      solaris*)
-@@ -26173,7 +26308,7 @@ fi
+@@ -26173,7 +26285,7 @@ fi
    allow_undefined_flag_GO=$_lt_dar_allow_undefined
    case $cc_basename in
       ifort*|nagfor*) _lt_dar_can_shared=yes ;;
@@ -1069,7 +1101,7 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
    esac
    if test yes = "$_lt_dar_can_shared"; then
      output_verbose_link_cmd=func_echo_all
-@@ -26356,15 +26491,13 @@ $as_echo "$lt_cv_irix_exported_symbol" >
+@@ -26356,15 +26468,13 @@ $as_echo "$lt_cv_irix_exported_symbol" >
        esac
        ;;
  
@@ -1090,7 +1122,7 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
        ;;
  
      newsos6)
-@@ -26376,6 +26509,11 @@ $as_echo "$lt_cv_irix_exported_symbol" >
+@@ -26376,6 +26486,11 @@ $as_echo "$lt_cv_irix_exported_symbol" >
        ;;
  
      *nto* | *qnx*)
@@ -1102,7 +1134,7 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
        ;;
  
      openbsd* | bitrig*)
-@@ -27087,9 +27225,16 @@ lt_prog_compiler_static_GCJ=
+@@ -27087,9 +27202,16 @@ lt_prog_compiler_static_GCJ=
        ;;
  
      darwin* | rhapsody*)
@@ -1120,7 +1152,7 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
        ;;
  
      haiku*)
-@@ -27117,6 +27262,13 @@ lt_prog_compiler_static_GCJ=
+@@ -27117,6 +27239,13 @@ lt_prog_compiler_static_GCJ=
        # Instead, we relocate shared libraries at runtime.
        ;;
  
@@ -1134,7 +1166,7 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
      msdosdjgpp*)
        # Just because we use GCC doesn't mean we suddenly get shared libraries
        # on systems that don't support them.
-@@ -27369,6 +27521,9 @@ lt_prog_compiler_static_GCJ=
+@@ -27369,6 +27498,9 @@ lt_prog_compiler_static_GCJ=
  
  case $host_os in
    # For platforms that do not support PIC, -DPIC is meaningless:
@@ -1144,7 +1176,7 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
    *djgpp*)
      lt_prog_compiler_pic_GCJ=
      ;;
-@@ -27933,14 +28088,13 @@ _LT_EOF
+@@ -27933,14 +28065,13 @@ _LT_EOF
        fi
        ;;
  
@@ -1166,7 +1198,7 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
        ;;
  
      solaris*)
-@@ -28402,7 +28556,7 @@ fi
+@@ -28402,7 +28533,7 @@ fi
    allow_undefined_flag_GCJ=$_lt_dar_allow_undefined
    case $cc_basename in
       ifort*|nagfor*) _lt_dar_can_shared=yes ;;
@@ -1175,7 +1207,7 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
    esac
    if test yes = "$_lt_dar_can_shared"; then
      output_verbose_link_cmd=func_echo_all
-@@ -28585,15 +28739,13 @@ $as_echo "$lt_cv_irix_exported_symbol" >
+@@ -28585,15 +28716,13 @@ $as_echo "$lt_cv_irix_exported_symbol" >
        esac
        ;;
  
@@ -1196,7 +1228,7 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
        ;;
  
      newsos6)
-@@ -28605,6 +28757,11 @@ $as_echo "$lt_cv_irix_exported_symbol" >
+@@ -28605,6 +28734,11 @@ $as_echo "$lt_cv_irix_exported_symbol" >
        ;;
  
      *nto* | *qnx*)
@@ -1208,7 +1240,7 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
        ;;
  
      openbsd* | bitrig*)
-@@ -32371,7 +32528,10 @@ func_cc_basename ()
+@@ -32371,7 +32505,10 @@ func_cc_basename ()
          *) break;;
        esac
      done
