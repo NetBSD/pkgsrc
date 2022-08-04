@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.51 2022/08/03 22:03:43 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.52 2022/08/04 05:45:15 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -300,10 +300,12 @@ sub canonicalize_pkgname($) {
 sub split_pkgversion($) {
 	my ($pkgversion) = @_;
 
+	$pkgversion = lc($pkgversion);
+
 	# See pkgtools/pkg_install/files/lib/dewey.c.
 	my (@temp);
 	push(@temp, ($pkgversion =~ s/nb(\d+)//) ? +$1 : 0);
-	foreach my $elem (split(/(pl|pre|rc|beta|alpha|\D)/, lc($pkgversion))) {
+	foreach my $elem (split(/(pl|pre|rc|beta|alpha|\D)/, $pkgversion)) {
 		if ($elem =~ /\d/) {
 			push(@temp, +$elem);
 		} elsif ($elem eq "pl" || $elem eq "." || $elem eq "_") {
@@ -314,13 +316,9 @@ sub split_pkgversion($) {
 			push(@temp, -2);
 		} elsif ($elem eq "alpha") {
 			push(@temp, -3);
-		} else {
-			foreach my $ch (split(//, $elem)) {
-				if ('a' le $ch && $ch le 'z') {
-					push(@temp, 0);
-					push(@temp, ord($ch) - ord('a') + 1);
-				}
-			}
+		} elsif ('a' le $elem && $elem le 'z') {
+			push(@temp, 0);
+			push(@temp, ord($elem) - ord('a') + 1);
 		}
 	}
 	@temp;
@@ -329,10 +327,8 @@ sub split_pkgversion($) {
 sub pkgversioncmp($$$) {
 	my ($va, $op, $vb) = @_;
 
-	my @a = split_pkgversion($va);
-	my @b = split_pkgversion($vb);
-	my $nb_a = shift(@a);
-	my $nb_b = shift(@b);
+	my ($nb_a, @a) = split_pkgversion($va);
+	my ($nb_b, @b) = split_pkgversion($vb);
 
 	my $cmp = 0;
 	while ($cmp == 0 && (@a || @b)) {
