@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.194 2022/07/29 10:40:21 adam Exp $
+# $NetBSD: Makefile,v 1.195 2022/08/04 08:55:12 adam Exp $
 
 .include "Makefile.common"
 
@@ -10,6 +10,7 @@ HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	bootstrap
 
 BUILD_TARGET=		default_target
+INSTALL_TARGET=		install/strip
 
 CONFIGURE_HAS_MANDIR=	no
 CONFIGURE_ARGS+=	--bootstrap-system-libuv
