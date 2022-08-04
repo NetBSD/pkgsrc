@@ -1,9 +1,9 @@
-$NetBSD: patch-build-aux_ltmain.sh,v 1.4 2022/08/03 13:06:32 jperkin Exp $
+$NetBSD: patch-build-aux_ltmain.sh,v 1.5 2022/08/04 12:23:21 jperkin Exp $
 
 Automatically generated using manual-* patches and bootstrap.
 DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
 
---- build-aux/ltmain.sh.orig	2022-08-03 12:14:26.878811652 +0000
+--- build-aux/ltmain.sh.orig	2022-08-04 11:35:59.000000000 +0000
 +++ build-aux/ltmain.sh
 @@ -323,6 +323,9 @@ test -z "$GREP" && {
  # uses them if a suitable command of that name is not already available
