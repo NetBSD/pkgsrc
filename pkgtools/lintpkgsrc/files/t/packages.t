@@ -1,20 +1,73 @@
-# $NetBSD: packages.t,v 1.7 2022/08/04 06:02:41 rillig Exp $
+# $NetBSD: packages.t,v 1.8 2022/08/04 06:27:36 rillig Exp $
 
 use strict;
 use warnings;
 use Capture::Tiny 'capture';
 use Test;
 
-BEGIN { plan tests => 11, onfail => sub { die } }
+BEGIN { plan tests => 30, onfail => sub { die } }
 
 require('../lintpkgsrc.pl');
 
 sub test_pkgver() {
 	my $pkgver = PkgVer->new('base', '1.0nb4');
 
-	ok($pkgver->pkgbase , 'base');
-	ok($pkgver->pkgversion , '1.0nb4');
-	ok($pkgver->pkgname , 'base-1.0nb4');
+	ok($pkgver->pkgbase, 'base');
+	ok($pkgver->pkgversion, '1.0nb4');
+	ok($pkgver->pkgname, 'base-1.0nb4');
+}
+
+sub test_pkgs() {
+	my $pkgs = Pkgs->new('base');
+
+	ok($pkgs->pkgbase, 'base');
+
+	$pkgs->add('base', '1.0nb4');
+
+	ok(($pkgs->pkgver)[0]->pkgbase, 'base');
+	ok(($pkgs->pkgver)[0]->pkgversion, '1.0nb4');
+
+	$pkgs->add('base', '1.0nb20');
+
+	# FIXME: The latest version is actually 1.0nb20, not 1.0nb4.
+	ok($pkgs->latestver->pkgversion, '1.0nb4');
+}
+
+sub test_pkglist() {
+	my $pkglist = PkgList->new();
+
+	ok($pkglist->numpkgver, 0);
+	ok(join(', ', map { $_->pkgname } $pkglist->pkgver), '');
+
+	$pkglist->add('base', '1.0');
+
+	ok($pkglist->numpkgver, 1);
+
+	$pkglist->add('other', '5.7');
+
+	ok($pkglist->numpkgver, 2);
+
+	my $base_8_0 = $pkglist->add('base', '8.0');
+
+	ok($pkglist->numpkgver, 3);
+	ok($base_8_0->pkgname, 'base-8.0');
+
+	my $actual = join(', ', map { $_->pkgname } $pkglist->pkgver);
+	ok($actual, 'base-8.0, base-1.0, other-5.7');
+
+	$actual = join(', ', map { $_->pkgname } $pkglist->pkgver('base'));
+	ok($actual, 'base-8.0, base-1.0');
+
+	$actual = join(', ', map { $_->pkgname } $pkglist->pkgver('unknown'));
+	ok($actual, '');
+
+	ok($pkglist->pkgver('base', '1.0')->pkgname, 'base-1.0');
+	ok($pkglist->pkgver('unknown', '1.0'), undef);
+	ok($pkglist->pkgver('base', '3.0'), undef);
+
+	ok(join(', ', map { $_->pkgbase } $pkglist->pkgs), 'base, other');
+	ok($pkglist->pkgs('base')->pkgbase, 'base');
+	ok($pkglist->pkgs('unknown'), undef);
 }
 
 sub test_package_variables() {
@@ -79,5 +132,7 @@ sub test_store_order() {
 }
 
 test_pkgver();
+test_pkgs();
+test_pkglist();
 test_package_variables();
 test_store_order();
