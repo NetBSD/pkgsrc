@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22077 2022/08/04 21:44:45 wiz Exp $
+$NetBSD: TODO,v 1.22078 2022/08/05 08:02:39 adam Exp $
 
 Suggested new packages
 ======================
@@ -931,7 +931,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ldapsdk-6.0.7
 	o lf-22
 	o lgeneral-1.3.1
-	o libaacs-0.11.0
 	o libarchive-3.6.1
 	o libasr-1.0.4
 	o libbaloo4-21.04.0
