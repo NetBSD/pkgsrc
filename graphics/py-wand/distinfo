@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2022/08/01 08:06:08 adam Exp $
+$NetBSD: distinfo,v 1.10 2022/08/05 08:04:03 adam Exp $
 
-BLAKE2s (Wand-0.6.8.tar.gz) = fa63f6b01d176383211dabf1db71d50616468e829e9b53b00653b1a861a6df70
-SHA512 (Wand-0.6.8.tar.gz) = 111eef211edd8d5a6c825f0b455db5510c91b43852165934dbab36a9cdeea7e920987c98d975fb8c7f82ac19f20867c0ed5c8c1e2f9dd9467bc30931b4a03dd1
-Size (Wand-0.6.8.tar.gz) = 11884527 bytes
+BLAKE2s (Wand-0.6.9.tar.gz) = e3193687eda5b091c5a4999d276f1a3bfbdf8782605576164da1fc5467361057
+SHA512 (Wand-0.6.9.tar.gz) = 23adcb3360bc6a579aa4e4ff406631821cca05c8ad5ca057510a3185bf09ee58c13940706ce3b725545cc46ca5e8aaaebeb9b418e2a91cf15b570e223ede6552
+Size (Wand-0.6.9.tar.gz) = 11885077 bytes
