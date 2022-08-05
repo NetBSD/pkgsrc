@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2015/01/31 21:48:02 adam Exp $
+# $NetBSD: Makefile,v 1.3 2022/08/05 08:02:20 adam Exp $
 
-DISTNAME=	libbdplus-0.1.2
+DISTNAME=	libbdplus-0.2.0
 CATEGORIES=	multimedia
 MASTER_SITES=	http://download.videolan.org/pub/videolan/libbdplus/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2
