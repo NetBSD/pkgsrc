@@ -1,4 +1,4 @@
-# $NetBSD: cmake.mk,v 1.22 2021/10/20 23:42:13 gdt Exp $
+# $NetBSD: cmake.mk,v 1.23 2022/08/05 18:54:43 adam Exp $
 #
 # This file handles packages that use CMake as their primary build
 # system. For more information about CMake, see http://www.cmake.org/.
@@ -44,6 +44,10 @@
 #
 
 _CMAKE_DIR=	${BUILDLINK_DIR}/cmake-Modules
+
+.if ${INSTALL_UNSTRIPPED:Uno:tl} != yes
+INSTALL_TARGET?=	install/strip
+.endif
 
 CMAKE_USE_GNU_INSTALL_DIRS?=	yes
 
