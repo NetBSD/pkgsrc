@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2022/04/12 22:27:58 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2022/08/05 20:22:05 adam Exp $
 
 BUILDLINK_TREE+=	libfido2
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libfido2
 LIBFIDO2_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libfido2+=	libfido2>=1.10.0
-BUILDLINK_PKGSRCDIR.libfido2?=	../../security/libfido2
+BUILDLINK_PKGSRCDIR.libfido2?=		../../security/libfido2
 
 .include "../../devel/libcbor/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
