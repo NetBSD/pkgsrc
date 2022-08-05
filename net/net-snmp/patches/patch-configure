@@ -1,12 +1,26 @@
-$NetBSD: patch-configure,v 1.1 2020/06/12 02:22:08 sevan Exp $
+$NetBSD: patch-configure,v 1.2 2022/08/05 10:55:01 adam Exp $
 
+- Do not store configure options as these might be polluted with workdir.
 - Fix configure to look for des_cbc_encrypt in -ldes
 - Fix configure on FreeBSD 10 & newer
 - Fix portability bug in test
 
---- configure.orig	2018-07-16 15:33:50.000000000 +0100
-+++ configure	2020-06-12 00:08:19.741995000 +0100
-@@ -13923,7 +13923,7 @@
+--- configure.orig	2018-07-16 14:33:50.000000000 +0000
++++ configure
+@@ -3312,10 +3312,10 @@ ac_config_headers="$ac_config_headers in
+ #
+ 
+ cat >>confdefs.h <<_ACEOF
+-#define NETSNMP_CONFIGURE_OPTIONS "$ac_configure_args"
++#define NETSNMP_CONFIGURE_OPTIONS ""
+ _ACEOF
+ 
+-CONFIGURE_OPTIONS="\"$ac_configure_args\""
++CONFIGURE_OPTIONS="\"\""
+ 
+ 
+ #
+@@ -13923,7 +13923,7 @@ fi
        hardcode_shlibpath_var=no
        ;;
  
@@ -15,7 +29,7 @@ $NetBSD: patch-configure,v 1.1 2020/06/12 02:22:08 sevan Exp $
        ld_shlibs=no
        ;;
  
-@@ -14917,7 +14917,7 @@
+@@ -14917,7 +14917,7 @@ dgux*)
    shlibpath_var=LD_LIBRARY_PATH
    ;;
  
@@ -24,7 +38,7 @@ $NetBSD: patch-configure,v 1.1 2020/06/12 02:22:08 sevan Exp $
    dynamic_linker=no
    ;;
  
-@@ -14928,7 +14928,7 @@
+@@ -14928,7 +14928,7 @@ freebsd* | dragonfly*)
      objformat=`/usr/bin/objformat`
    else
      case $host_os in
@@ -33,7 +47,7 @@ $NetBSD: patch-configure,v 1.1 2020/06/12 02:22:08 sevan Exp $
      *) objformat=elf ;;
      esac
    fi
-@@ -19637,7 +19637,7 @@
+@@ -19637,7 +19637,7 @@ if test "x$PARTIALTARGETOS" = "xmingw32"
  fi
  
  # Linux systemd
@@ -42,7 +56,7 @@ $NetBSD: patch-configure,v 1.1 2020/06/12 02:22:08 sevan Exp $
    other_src_list="$other_src_list sd-daemon.c"
    other_objs_list="$other_objs_list sd-daemon.o"
    other_lobjs_list="$other_lobjs_list sd-daemon.lo"
-@@ -22715,6 +22715,81 @@
+@@ -22715,6 +22715,81 @@ fi
  ##
  #########################################
  
@@ -124,14 +138,3 @@ $NetBSD: patch-configure,v 1.1 2020/06/12 02:22:08 sevan Exp $
  ##
  #   Compilation-related
  ##
-@@ -32360,6 +32435,10 @@
-   case $ac_option in
-   # Handling of the options.
-   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
-+	: Avoid regenerating within pkgsrc
-+	exit 0
-+	: Avoid regenerating within pkgsrc
-+	exit 0
-     ac_cs_recheck=: ;;
-   --version | --versio | --versi | --vers | --ver | --ve | --v | -V )
-     $as_echo "$ac_cs_version"; exit ;;
