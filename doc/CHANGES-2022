@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3692 2022/08/05 12:59:16 ast Exp $
+$NetBSD: CHANGES-2022,v 1.3693 2022/08/05 13:03:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5499,3 +5499,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/py-werkzeug to 2.2.1 [adam 2022-08-05]
 	Updated www/py-flask to 2.2.1 [adam 2022-08-05]
 	Updated filesystems/p5-Path-Tiny to 0.122 [ast 2022-08-05]
+	Updated databases/leveldb to 1.23 [adam 2022-08-05]
+	Updated inputmethod/librime to 1.7.3 [adam 2022-08-05]
