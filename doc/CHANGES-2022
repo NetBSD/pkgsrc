@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3694 2022/08/05 14:03:53 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3695 2022/08/05 20:25:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5503,3 +5503,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated inputmethod/librime to 1.7.3 [adam 2022-08-05]
 	Updated converters/py-charset-normalizer to 2.1.0 [adam 2022-08-05]
 	Updated devel/py-dulwich to 0.20.45 [adam 2022-08-05]
+	Updated security/libfido2 to 1.11.0 [adam 2022-08-05]
+	Updated devel/py-google-i18n-address to 2.5.2 [adam 2022-08-05]
