@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2022/04/12 22:27:58 tnn Exp $
+$NetBSD: distinfo,v 1.7 2022/08/05 20:22:05 adam Exp $
 
-BLAKE2s (libfido2-1.10.0.tar.gz) = e7051c52d0ce83c5393b6e1deb0a4e19c257192b786a6ba1dca761fbab8779ac
-SHA512 (libfido2-1.10.0.tar.gz) = ba03e25d3f42f11cec74dee48c853ae35d03600f24ca06d2b751840408a132290fe22461372ae42ae31419061a63d9908c20a2c0cf3c0c9c8dbc46c34916784f
-Size (libfido2-1.10.0.tar.gz) = 591372 bytes
+BLAKE2s (libfido2-1.11.0.tar.gz) = a558db7853b2d0830d3076bf26799a8ee2b1e32204ed0d26cfa70a89f24bb2e4
+SHA512 (libfido2-1.11.0.tar.gz) = d9644453d67b84ec8385dfb63796adb3eae2d7f7cb47fbb1bcf9ca7f5cce400623738cc3317d629c2f0af630424cb2788217f8c7f20d1b52b7369c729052d572
+Size (libfido2-1.11.0.tar.gz) = 624148 bytes
