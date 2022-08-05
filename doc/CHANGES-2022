@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3688 2022/08/05 08:08:55 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3689 2022/08/05 08:41:41 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5494,3 +5494,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated multimedia/libbdplus to 0.2.0 [adam 2022-08-05]
 	Updated graphics/py-wand to 0.6.9 [adam 2022-08-05]
 	Updated www/py-paste to 3.5.1 [adam 2022-08-05]
+	Updated www/firefox102 to 102.1.0 [nia 2022-08-05]
