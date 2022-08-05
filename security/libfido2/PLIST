@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2022/04/12 22:27:58 tnn Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/08/05 20:22:05 adam Exp $
 bin/fido2-assert
 bin/fido2-cred
 bin/fido2-token
@@ -14,8 +14,8 @@ include/fido/rs256.h
 include/fido/types.h
 lib/libfido2.a
 lib/libfido2.so
-lib/libfido2.so.1
 lib/libfido2.so.${PKGVERSION}
+lib/libfido2.so.1
 lib/pkgconfig/libfido2.pc
 man/man1/fido2-assert.1
 man/man1/fido2-cred.1
@@ -108,6 +108,7 @@ man/man3/fido_cbor_info_fwversion.3
 man/man3/fido_cbor_info_maxcredbloblen.3
 man/man3/fido_cbor_info_maxcredcntlst.3
 man/man3/fido_cbor_info_maxcredidlen.3
+man/man3/fido_cbor_info_maxlargeblob.3
 man/man3/fido_cbor_info_maxmsgsiz.3
 man/man3/fido_cbor_info_new.3
 man/man3/fido_cbor_info_options_len.3
@@ -351,6 +352,7 @@ share/doc/libfido2/html/fido_cbor_info_fwversion.html
 share/doc/libfido2/html/fido_cbor_info_maxcredbloblen.html
 share/doc/libfido2/html/fido_cbor_info_maxcredcntlst.html
 share/doc/libfido2/html/fido_cbor_info_maxcredidlen.html
+share/doc/libfido2/html/fido_cbor_info_maxlargeblob.html
 share/doc/libfido2/html/fido_cbor_info_maxmsgsiz.html
 share/doc/libfido2/html/fido_cbor_info_new.html
 share/doc/libfido2/html/fido_cbor_info_options_len.html
