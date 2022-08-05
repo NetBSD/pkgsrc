@@ -1,8 +1,10 @@
-$NetBSD: patch-icudefs.mk.in,v 1.1 2017/04/22 20:11:45 adam Exp $
+$NetBSD: patch-icudefs.mk.in,v 1.2 2022/08/05 13:29:17 adam Exp $
 
---- icudefs.mk.in.orig	2013-10-04 20:54:58.000000000 +0000
+Install shared libraries correctly.
+
+--- icudefs.mk.in.orig	2022-04-07 22:41:55.000000000 +0000
 +++ icudefs.mk.in
-@@ -207,13 +207,13 @@ LIBICU = $(LIBPREFIX)$(ICUPREFIX)
+@@ -213,13 +213,13 @@ LIBICU = $(LIBPREFIX)$(ICUPREFIX)
  
  ## If we can't use the shared libraries, use the static libraries
  ifneq ($(ENABLE_SHARED),YES)
@@ -18,3 +20,12 @@ $NetBSD: patch-icudefs.mk.in,v 1.1 2017/04/22 20:11:45 adam Exp $
  LIBSICU = $(LIBPREFIX)$(STATIC_PREFIX)$(ICUPREFIX)
  A = a
  SOBJ = $(SO)
+@@ -231,7 +231,7 @@ RMV = rm -rf
+ # INSTALL-L installs libraries. Override in mh-* file to INSTALL_PROGRAM
+ #           when the library needs to have executable permissions
+ INSTALL-S = $(INSTALL_PROGRAM)
+-INSTALL-L = $(INSTALL_PROGRAM)
++INSTALL-L = ${BSD_INSTALL_LIB}
+ #INSTALL-L = $(INSTALL_DATA)
+ 
+ # Location of the libraries before "make install" is used
