@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.1 2022/07/21 23:56:38 nia Exp $
+$NetBSD: distinfo,v 1.2 2022/08/05 08:41:25 nia Exp $
 
-BLAKE2s (firefox-102.0esr.source.tar.xz) = 877546ff9e5632e1b1e930ddafb156890b7c7730eeef77b78c21e38e04cd5ed2
-SHA512 (firefox-102.0esr.source.tar.xz) = 76494363ffdbd33b61912ac72b5cc15450e4b2936898c84fcf3980ccfa6d7ecc05524a63a60827d6caba999ada5cfd6f121e893ba0587778ce11654d0daf21d7
-Size (firefox-102.0esr.source.tar.xz) = 486474876 bytes
+BLAKE2s (firefox-102.1.0esr.source.tar.xz) = 1ec004de7f7edb8e9e1ba7dc45a150cffeab907a48e4a617407152309c1c299d
+SHA512 (firefox-102.1.0esr.source.tar.xz) = 2505b87ce4115445568eb6b7d8af41678bd787fd07f3f79e9f0a22d90cdf752ae5d4371856cf9c56e2d9da7d5b7c3939dc2aab5753fcc017398e7d65260f6f03
+Size (firefox-102.1.0esr.source.tar.xz) = 486756700 bytes
 BLAKE2s (nodejs-output-95.0.tgz) = c44b37d3605524a49157002f01c29f568f04194b0e635bc312de7ffdeb9a74c9
 SHA512 (nodejs-output-95.0.tgz) = 2faf326f4e100b66f8597c365cc2eb5d0eee26aae92a7e2446891f2178041aa71ba16eae37000acacd43a657025ec11c18db73b112f5c49cc21cdb882da6d798
 Size (nodejs-output-95.0.tgz) = 200627 bytes
@@ -23,7 +23,7 @@ SHA1 (patch-js_src_jit_ProcessExecutableMemory.cpp) = fad103cc698f9828ad58f74223
 SHA1 (patch-js_src_jit_arm64_vixl_MozCpu-vixl.cpp) = fdc522e3fb626b1b8a2ebf19ad60bfc25dfa4183
 SHA1 (patch-js_src_util_NativeStack.cpp) = a0a16d8d8d78d3cc3f4d2a508586f1a7821f7dba
 SHA1 (patch-js_src_vm_ArrayBufferObject.cpp) = 0501fdcae11568ae4ea78e0d2f6b3750b7a67d47
-SHA1 (patch-libwebrtc.diff) = 0506b1e8fc0bc42e24f45d13194536aa7ad7eeba
+SHA1 (patch-libwebrtc.diff) = e007fe7dd2fd16e7d0ac4a35f9a006db4e24eb7e
 SHA1 (patch-media_ffvpx_libavutil_arm_bswap.h) = de58daa0fd23d4fec50426602b65c9ea5862558a
 SHA1 (patch-media_libcubeb_src_cubeb__alsa.c) = 2ef11da83c90c41490db4c0d9809c3e1826b488a
 SHA1 (patch-media_libcubeb_src_cubeb__jack.cpp) = fc546c5e6582fd5eda64ba83287dfbbb3c9e229f
