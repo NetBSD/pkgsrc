@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 11:01:07 nia Exp $
+$NetBSD: distinfo,v 1.11 2022/08/05 07:54:39 adam Exp $
 
-BLAKE2s (libaacs-0.9.0.tar.bz2) = 006359e08732ad99886cbf5e08dffad309b307f734cf29fdcaef7de7ce991255
-SHA512 (libaacs-0.9.0.tar.bz2) = b9c658db22a0966486070d3b762509a7c0120469ab29d1e57c1b624cad309701de8b92455ec649db4d731be4a5c29c38fb4f99bb7617dbb4254270284a1903f6
-Size (libaacs-0.9.0.tar.bz2) = 316323 bytes
+BLAKE2s (libaacs-0.11.1.tar.bz2) = 04510981ebb0a3ff0f3c49e7c7b1f94c40974cb269d9009e4345546da67fcfa5
+SHA512 (libaacs-0.11.1.tar.bz2) = 42dcba5fd593c9a8ec7af11251006b083ad2c49ec198734d1d66f67c2ded4557d77617600edbf0c5250e9b0407ef9a2f906d59d154bda8ecfc8adfd234fb2c42
+Size (libaacs-0.11.1.tar.bz2) = 325669 bytes
