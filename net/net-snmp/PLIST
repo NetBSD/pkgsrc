@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2020/06/26 07:47:22 otis Exp $
+@comment $NetBSD: PLIST,v 1.29 2022/08/05 10:55:01 adam Exp $
 bin/agentxtrap
 ${PLIST.perl}bin/checkbandwidth
 bin/encode_keychange
@@ -274,39 +274,6 @@ lib/libnetsnmphelpers.la
 lib/libnetsnmpmibs.la
 lib/libnetsnmptrapd.la
 lib/libsnmp.la
-${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/Bundle/MakefileSubs.pm
-${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/NetSNMP/ASN.pm
-${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/NetSNMP/OID.pm
-${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/NetSNMP/TrapReceiver.pm
-${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/NetSNMP/agent.pm
-${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/NetSNMP/agent/Support.pm
-${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/NetSNMP/agent/default_store.pm
-${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/NetSNMP/agent/netsnmp_request_infoPtr.pm
-${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/NetSNMP/default_store.pm
-${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/SNMP.pm
-${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/auto/Bundle/NetSNMP/.packlist
-${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/auto/NetSNMP/ASN/ASN.so
-${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/auto/NetSNMP/ASN/autosplit.ix
-${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/auto/NetSNMP/OID/OID.so
-${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/auto/NetSNMP/OID/autosplit.ix
-${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/auto/NetSNMP/TrapReceiver/TrapReceiver.so
-${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/auto/NetSNMP/TrapReceiver/autosplit.ix
-${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/auto/NetSNMP/agent/agent.so
-${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/auto/NetSNMP/agent/autosplit.ix
-${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/auto/NetSNMP/agent/default_store/autosplit.ix
-${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/auto/NetSNMP/agent/default_store/default_store.so
-${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/auto/NetSNMP/default_store/autosplit.ix
-${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/auto/NetSNMP/default_store/default_store.so
-${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/auto/SNMP/SNMP.so
-${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/auto/SNMP/autosplit.ix
-${PLIST.perl}${PERL5_SUB_INSTALLVENDORMAN3DIR}/NetSNMP::ASN.3
-${PLIST.perl}${PERL5_SUB_INSTALLVENDORMAN3DIR}/NetSNMP::OID.3
-${PLIST.perl}${PERL5_SUB_INSTALLVENDORMAN3DIR}/NetSNMP::TrapReceiver.3
-${PLIST.perl}${PERL5_SUB_INSTALLVENDORMAN3DIR}/NetSNMP::agent.3
-${PLIST.perl}${PERL5_SUB_INSTALLVENDORMAN3DIR}/NetSNMP::agent::default_store.3
-${PLIST.perl}${PERL5_SUB_INSTALLVENDORMAN3DIR}/NetSNMP::default_store.3
-${PLIST.perl}${PERL5_SUB_INSTALLVENDORMAN3DIR}/NetSNMP::netsnmp_request_infoPtr.3
-${PLIST.perl}${PERL5_SUB_INSTALLVENDORMAN3DIR}/SNMP.3
 man/man1/agentxtrap.1
 man/man1/encode_keychange.1
 man/man1/fixproc.1
