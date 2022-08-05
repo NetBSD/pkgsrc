@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:09:21 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/08/05 13:02:02 adam Exp $
 
-BLAKE2s (leveldb-1.22.tar.gz) = 0baba9a7ad4cbbeefc6adadb80b552da4246c866c23f9cab40bbb1bc0cfd7135
-SHA512 (leveldb-1.22.tar.gz) = f9bbf5f466e7f707b94e19261762319ea9f65d41911690e84f59098551e2e69beccf756a414d705ade74ee96fd979bdb8b94c171c6f2cc83873cbd4a9380dbab
-Size (leveldb-1.22.tar.gz) = 239365 bytes
+BLAKE2s (leveldb-1.23.tar.gz) = a8cfd6386f6697a71373b4bae909d95ca2d7678076300726465d09334b051cdb
+SHA512 (leveldb-1.23.tar.gz) = ac15eac29387b9f702a901b6567d47a9f8c17cf5c7d8700a77ec771da25158c83b04959c33f3d4de7a3f033ef08f545d14ba823a8d527e21889c4b78065b0f84
+Size (leveldb-1.23.tar.gz) = 242925 bytes
