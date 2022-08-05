@@ -1,9 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2022/01/10 01:46:38 ryoon Exp $
+# $NetBSD: Makefile,v 1.28 2022/08/05 13:02:35 adam Exp $
 
-GITHUB_PROJECT=	librime
-GITHUB_TAG=	${PKGVERSION_NOREV}
-DISTNAME=	librime-1.7.2
-PKGREVISION=	3
+DISTNAME=	librime-1.7.3
 CATEGORIES=	inputmethod chinese
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rime/}
 
@@ -26,6 +23,7 @@ PKGCONFIG_OVERRIDE+=	rime.pc.in
 .include "../../databases/leveldb/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/capnproto/buildlink3.mk"
+.include "../../devel/gflags/buildlink3.mk"
 .include "../../devel/google-glog/buildlink3.mk"
 .include "../../devel/snappy/buildlink3.mk"
 .include "../../textproc/marisa/buildlink3.mk"
