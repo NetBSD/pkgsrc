@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:05:55 nia Exp $
+$NetBSD: distinfo,v 1.9 2022/08/05 14:50:29 he Exp $
 
 BLAKE2s (libnipper-0.12.1.tgz) = 404ebb10447d4fcc1b924fcba281879a15d32b30e83a4bab32bf389c1618521d
 SHA512 (libnipper-0.12.1.tgz) = ba1c53c6c90781e8fb200129e7dabe07a6e8245c24b07dc801e7a81fbe22c03b17241eea09d1a376484c71491af99a17f5a9739ab0f308a5ef8bc9383804d17e
@@ -6,4 +6,5 @@ Size (libnipper-0.12.1.tgz) = 450651 bytes
 SHA1 (patch-aa) = c4d245196cd901b9f11826bd163df701e1b447a2
 SHA1 (patch-ab) = 02fe2e79e77a4da0513091610726d1aa655f7637
 SHA1 (patch-device_common_misc.cpp) = cb1b3947fdeb1c962b786f1345b430a7f2fcbbef
+SHA1 (patch-device_crypto_crypt-base64.cpp) = 29e2895c740313dd1aba349f745b045419fe7a42
 SHA1 (patch-report_report-text.cpp) = e686920acc8fa665eb65e69977421e7d50b459df
