@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2022/04/29 13:36:19 wiz Exp $
+@comment $NetBSD: PLIST,v 1.12 2022/08/05 11:44:30 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -69,12 +69,30 @@ ${PYSITELIB}/werkzeug/middleware/shared_data.py
 ${PYSITELIB}/werkzeug/middleware/shared_data.pyc
 ${PYSITELIB}/werkzeug/middleware/shared_data.pyo
 ${PYSITELIB}/werkzeug/py.typed
-${PYSITELIB}/werkzeug/routing.py
-${PYSITELIB}/werkzeug/routing.pyc
-${PYSITELIB}/werkzeug/routing.pyo
+${PYSITELIB}/werkzeug/routing/__init__.py
+${PYSITELIB}/werkzeug/routing/__init__.pyc
+${PYSITELIB}/werkzeug/routing/__init__.pyo
+${PYSITELIB}/werkzeug/routing/converters.py
+${PYSITELIB}/werkzeug/routing/converters.pyc
+${PYSITELIB}/werkzeug/routing/converters.pyo
+${PYSITELIB}/werkzeug/routing/exceptions.py
+${PYSITELIB}/werkzeug/routing/exceptions.pyc
+${PYSITELIB}/werkzeug/routing/exceptions.pyo
+${PYSITELIB}/werkzeug/routing/map.py
+${PYSITELIB}/werkzeug/routing/map.pyc
+${PYSITELIB}/werkzeug/routing/map.pyo
+${PYSITELIB}/werkzeug/routing/matcher.py
+${PYSITELIB}/werkzeug/routing/matcher.pyc
+${PYSITELIB}/werkzeug/routing/matcher.pyo
+${PYSITELIB}/werkzeug/routing/rules.py
+${PYSITELIB}/werkzeug/routing/rules.pyc
+${PYSITELIB}/werkzeug/routing/rules.pyo
 ${PYSITELIB}/werkzeug/sansio/__init__.py
 ${PYSITELIB}/werkzeug/sansio/__init__.pyc
 ${PYSITELIB}/werkzeug/sansio/__init__.pyo
+${PYSITELIB}/werkzeug/sansio/http.py
+${PYSITELIB}/werkzeug/sansio/http.pyc
+${PYSITELIB}/werkzeug/sansio/http.pyo
 ${PYSITELIB}/werkzeug/sansio/multipart.py
 ${PYSITELIB}/werkzeug/sansio/multipart.pyc
 ${PYSITELIB}/werkzeug/sansio/multipart.pyo
