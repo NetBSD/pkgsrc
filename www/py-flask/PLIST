@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2022/04/29 13:41:38 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2022/08/05 11:46:37 adam Exp $
 bin/flask-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -39,6 +39,9 @@ ${PYSITELIB}/flask/helpers.pyo
 ${PYSITELIB}/flask/json/__init__.py
 ${PYSITELIB}/flask/json/__init__.pyc
 ${PYSITELIB}/flask/json/__init__.pyo
+${PYSITELIB}/flask/json/provider.py
+${PYSITELIB}/flask/json/provider.pyc
+${PYSITELIB}/flask/json/provider.pyo
 ${PYSITELIB}/flask/json/tag.py
 ${PYSITELIB}/flask/json/tag.pyc
 ${PYSITELIB}/flask/json/tag.pyo
