@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2022/04/29 13:36:19 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2022/08/05 11:44:30 adam Exp $
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 
@@ -6,6 +6,7 @@ COMMENT=	Python WSGI Utility Library
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
+DEPENDS+=	${PYPKGPREFIX}-markupsafe>=2.1.1:../../textproc/py-markupsafe
 # optional
 #DEPENDS+=	${PYPKGPREFIX}-cryptography-[0-9]*:../../security/py-cryptography
 #DEPENDS+=	${PYPKGPREFIX}-greenlet-[0-9]*:../../devel/py-greenlet
@@ -34,8 +35,6 @@ post-install:
 
 TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
 
-# as of 2.1.2
-# 18 failed, 804 passed, 8 errors
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
