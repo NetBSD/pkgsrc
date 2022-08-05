@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:01:07 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/08/05 08:02:20 adam Exp $
 
-BLAKE2s (libbdplus-0.1.2.tar.bz2) = 052c99f76fe482de294650ab1cc9549ba5ffc30f9c2a49b407db715194c277ed
-SHA512 (libbdplus-0.1.2.tar.bz2) = e00e7bc9f52b9275646593b753ba646b052255be94a7241965f4dbe4734f8f6a072973ed4b9997957f939236b0633897c295749f79e232188430795be5b5087b
-Size (libbdplus-0.1.2.tar.bz2) = 319828 bytes
-SHA1 (patch-src_file_file__default.c) = 59aee01970b6609185ffe287cbcd9cc225ab88a1
-SHA1 (patch-src_libbdplus_bdsvm_segment.c) = 7897d1cec18b57300d74162199af0d46b8bb5460
+BLAKE2s (libbdplus-0.2.0.tar.bz2) = 278e5edd56c52c184ca3f0f6642f9a9b66cf3316a2723abb1ae2278541dd5e4e
+SHA512 (libbdplus-0.2.0.tar.bz2) = 172e4932fb5540fbdb5b86e1d42cfaddf60b81416d2de50c8add83fb7f1bd7c296c975fd84a6ec42566977086dccfe07db5ce696038862bc75c6494c647998d6
+Size (libbdplus-0.2.0.tar.bz2) = 321743 bytes
