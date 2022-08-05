@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2022/01/04 20:55:32 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2022/08/05 08:08:37 adam Exp $
 
-DISTNAME=	Paste-3.5.0
+DISTNAME=	Paste-3.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/Paste/}
 
