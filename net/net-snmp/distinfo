@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.98 2021/10/26 11:06:06 nia Exp $
+$NetBSD: distinfo,v 1.99 2022/08/05 10:55:01 adam Exp $
 
 BLAKE2s (net-snmp-5.8.tar.gz) = 3baf340de546040278255692e48b57bab2bbfb595572bcd814fb53be3fd6f65c
 SHA512 (net-snmp-5.8.tar.gz) = 27895a583b23f3e14c48562bc32f3ba83513d81aa848e878be9a3650f0458d45950635c937ef627135f80b757b663e71fab9a3bde4fd91889153998ae3468fe7
@@ -22,7 +22,7 @@ SHA1 (patch-ak) = 50ac67db8a9ffc16d983b4192e74db25ef439321
 SHA1 (patch-am) = d01e8a93f6e766cedfdc324efd69168f71aac76f
 SHA1 (patch-ap) = 44a4ce6302457094ba2b200e4c47ff6c2a425746
 SHA1 (patch-aq) = a8fe703d8902c2847ca6692af4400ddbf9cbe74b
-SHA1 (patch-configure) = 9f0c9f936881608842d71a4ee90875dd9a3fe533
+SHA1 (patch-configure) = 7dd273e74c2d0a4cfc90398ba7804e0416d6f4f1
 SHA1 (patch-da) = 40e8d78bad93ca12f4c08c43b86e7f13edafc299
 SHA1 (patch-db) = 281be9a88860987880c71770f4050fd965dd8ed9
 SHA1 (patch-dl) = 92563fd6be6f27be5b348cdc8bc02061374026b0
