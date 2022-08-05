@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:19:16 nia Exp $
+$NetBSD: distinfo,v 1.9 2022/08/05 07:22:49 adam Exp $
 
-BLAKE2s (pyxdg-0.27.tar.gz) = beeee994d02b3fd26a52b5df94a18eb3ecf3780b397d619fefd88579f9e24535
-SHA512 (pyxdg-0.27.tar.gz) = acb24153a4e3e0d8333f1c965c024b15d44f623497b561fc0e9be60d4411441af1dc61f11dcfb22587a510451237a341440bf7ff77a6ab6446dceb83b3c380e2
-Size (pyxdg-0.27.tar.gz) = 59753 bytes
+BLAKE2s (pyxdg-0.28.tar.gz) = 9d5e397e7d252b467060f65ae39e93f9446c5912258104bc4fdf9a49f3f12a7d
+SHA512 (pyxdg-0.28.tar.gz) = ac9dd56d72dab370da8615db6c73502472d122ff2acb1911870aa4b2b409f45d3c00642d13970401dd1000a05f10bcd9b9a7c39cf1f861b446bdf6e4a2f8c5bb
+Size (pyxdg-0.28.tar.gz) = 77776 bytes
