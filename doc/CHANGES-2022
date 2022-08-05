@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3686 2022/08/05 07:29:14 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3687 2022/08/05 08:02:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5490,3 +5490,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/wayland-protocols to 1.26 [nia 2022-08-04]
 	Updated www/py-yarl to 1.8.1 [adam 2022-08-05]
 	Updated devel/py-xdg to 0.28 [adam 2022-08-05]
+	Updated multimedia/libaacs to 0.11.1 [adam 2022-08-05]
+	Updated multimedia/libbdplus to 0.2.0 [adam 2022-08-05]
