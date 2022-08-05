@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.97 2022/04/18 11:03:24 adam Exp $
+$NetBSD: distinfo,v 1.98 2022/08/05 13:29:17 adam Exp $
 
 BLAKE2s (icu4c-71_1-src.tgz) = a18db0c84e7fedafd38029e41910110ec9a9f3b060e569862723c9264c42e99c
 SHA512 (icu4c-71_1-src.tgz) = 1fd2a20aef48369d1f06e2bb74584877b8ad0eb529320b976264ec2db87420bae242715795f372dbc513ea80047bc49077a064e78205cd5e8b33d746fd2a2912
@@ -18,6 +18,6 @@ SHA1 (patch-config_mh-scoosr5) = 47703dcc184f58c0382da3225f849424ab74d472
 SHA1 (patch-configure) = 0043c23cffaab9851b6121e9f46eb474175dbc26
 SHA1 (patch-configure.ac) = 2cb4601e20ee6b93e08e8790df3f8212510aeb1b
 SHA1 (patch-i18n_double-conversion-utils.h) = 9bee115bb9ddc597607e30f95050de7b21751fca
-SHA1 (patch-icudefs.mk.in) = c2a9469bf896b5f0702d5795c3b1c2b394893663
+SHA1 (patch-icudefs.mk.in) = 15be482cf7541c9b518b8bfb05865ac994313cb7
 SHA1 (patch-runConfigureICU) = 3cd60613104fa4f1b81529795e75d5cf7f477b64
 SHA1 (patch-tools-toolutil-pkg_genc.cpp) = 3cbcf3387d6a39315b26a3e2a2ffb715507e9110
