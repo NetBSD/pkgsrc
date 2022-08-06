@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2022/01/24 10:09:30 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2022/08/06 07:50:05 nia Exp $
 
 DISTNAME=	alsa-utils-1.2.6
 CATEGORIES=	audio
@@ -16,26 +16,27 @@ USE_PKGLOCALEDIR=	yes
 USE_NCURSES=		yes
 LDFLAGS.DragonFly=	-lm
 LDFLAGS.SunOS+=		-lm -lsocket -lnsl
-LDFLAGS.NetBSD+=	-lepoll-shim
-LDFLAGS.NetBSD+=	-linotify
 CPPFLAGS.NetBSD+=	-D__u32=uint32_t -D__u64=uint64_t
 CPPFLAGS.NetBSD+=	-Dbswap_16=bswap16 -Dbswap_32=bswap32
 CPPFLAGS.NetBSD+=	-Doff64_t=off_t
 CPPFLAGS.NetBSD+=	-Dlseek64=lseek
 
-CFLAGS+=		-g
-
 REPLACE_BASH+=		alsaconf/alsaconf.in
 REPLACE_BASH+=		alsa-info/alsa-info.sh
 REPLACE_BASH+=		bat/alsabat-test.sh
 
-BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
+TOOL_DEPENDS+=		xmlto-[0-9]*:../../textproc/xmlto
 
 CONFIGURE_ARGS+=	--disable-nls
 
 .include "../../audio/alsa-lib/buildlink3.mk"
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} != "Linux" && defined(OPSYS_HAS_KQUEUE)
+CFLAGS+=	-I${BUILDLINK_DIR}/include/libepoll-shim
+LDFLAGS+=	-lepoll-shim -linotify
 .include "../../devel/libepoll-shim/buildlink3.mk"
 .include "../../devel/libinotify/buildlink3.mk"
+.endif
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../math/fftw/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
