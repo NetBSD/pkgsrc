@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2022/07/21 11:31:23 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2022/08/06 00:40:08 gutteridge Exp $
 
 DISTNAME=	libfilezilla-0.38.1
 CATEGORIES=	net
@@ -21,14 +21,11 @@ PKGCONFIG_OVERRIDE+=	lib/libfilezilla.pc.in
 # for C++17
 GCC_REQD+=	8
 
-# As of 0.19, 64-bit atomic ops are required
-.if ${MACHINE_ARCH} == "i386"
-CXXFLAGS+=	-march=i586
-.endif
-
 BUILDLINK_API_DEPENDS.nettle+=	nettle>=3.1
 .include "../../security/nettle/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gnutls+=	gnutls>=3.5.7
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+# As of 0.19, 64-bit atomic ops are required
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
