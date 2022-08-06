@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.478 2022/08/03 17:09:26 ryoon Exp $
+$NetBSD: distinfo,v 1.479 2022/08/06 20:47:51 nia Exp $
 
 BLAKE2s (firefox-103.0.1.source.tar.xz) = 5128a952e6957b1b808dd5c513848706937e6943639d64ac6856858ae8564cb1
 SHA512 (firefox-103.0.1.source.tar.xz) = cb487e1d5d602e6b07093b5e722c4e70b9bf39f42c13c25642f263f90f9d3940d02e6fdbab9e8f41b66a50f81d70300acf81c222f08a26eed3ae55777fdc6303
@@ -23,7 +23,7 @@ SHA1 (patch-js_src_jit_ProcessExecutableMemory.cpp) = fad103cc698f9828ad58f74223
 SHA1 (patch-js_src_jit_arm64_vixl_MozCpu-vixl.cpp) = fdc522e3fb626b1b8a2ebf19ad60bfc25dfa4183
 SHA1 (patch-js_src_util_NativeStack.cpp) = a0a16d8d8d78d3cc3f4d2a508586f1a7821f7dba
 SHA1 (patch-js_src_vm_ArrayBufferObject.cpp) = 0501fdcae11568ae4ea78e0d2f6b3750b7a67d47
-SHA1 (patch-libwebrtc.diff) = e007fe7dd2fd16e7d0ac4a35f9a006db4e24eb7e
+SHA1 (patch-libwebrtc.diff) = 2f83e71f95397260ec20bced3724fa5f9259765b
 SHA1 (patch-media_ffvpx_libavutil_arm_bswap.h) = de58daa0fd23d4fec50426602b65c9ea5862558a
 SHA1 (patch-media_libcubeb_src_cubeb__alsa.c) = 2ef11da83c90c41490db4c0d9809c3e1826b488a
 SHA1 (patch-media_libcubeb_src_cubeb__jack.cpp) = fc546c5e6582fd5eda64ba83287dfbbb3c9e229f

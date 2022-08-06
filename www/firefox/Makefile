@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.531 2022/08/03 17:09:26 ryoon Exp $
+# $NetBSD: Makefile,v 1.532 2022/08/06 20:47:51 nia Exp $
 
 FIREFOX_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
 MOZ_BRANCH=		103.0
@@ -144,6 +144,12 @@ maintainer-files:
 	cd ${WRKSRC}/${OBJDIR} && tar -c -T "${NODE_FILES}" -z \
 	    -f ${FILESDIR}/nodejs-output-${PKGVERSION_NOREV}.tgz
 .endif
+
+pre-patch:
+	for f in $$(find ${WRKSRC}/third_party/libwebrtc -name moz.build -type f) ; \
+	do \
+		${AWK} -f ${FILESDIR}/replace-moz.build.awk $$f > $$f.new; mv $$f.new $$f ; \
+	done
 
 post-build:
 	${SED} -e 's|@MOZILLA@|${MOZILLA}|g'				\
