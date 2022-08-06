@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2022/05/28 19:03:15 leot Exp $
+# $NetBSD: Makefile,v 1.15 2022/08/06 22:24:49 leot Exp $
 
-DISTNAME=	geomyidae-v0.50.1
+DISTNAME=	geomyidae-v0.51
 PKGNAME=	${DISTNAME:S/-v/-/}
 CATEGORIES=	net
 MASTER_SITES=	ftp://bitreich.org/releases/geomyidae/
