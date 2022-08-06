@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2022/08/05 15:26:15 nia Exp $
+# $NetBSD: Makefile,v 1.50 2022/08/06 08:14:07 nia Exp $
 
 DISTNAME=	wxWidgets-3.0.5.1
 PKGNAME=	${DISTNAME:S/wxWidgets/wxGTK30/}
@@ -52,10 +52,6 @@ SUBST_SED.fix-paths=		-e 's,/usr/pkg/include,${PREFIX}/include,g'
 SUBST_VARS.fix-paths=		PREFIX
 
 .include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} != "Linux"
-CONFIGURE_ARGS+=	--disable-epollloop
-.endif
 
 .if ${OPSYS} == "Darwin"
 CONFIGURE_ARGS+=	--with-osx_cocoa
