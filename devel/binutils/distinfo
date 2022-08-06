@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.47 2022/02/10 14:03:07 fcambus Exp $
+$NetBSD: distinfo,v 1.48 2022/08/06 09:49:32 fcambus Exp $
 
-BLAKE2s (binutils-2.38.tar.bz2) = 80609a31f2040a8418a2004cb9de8b3d409e954c7c1d17afef8e9237227d00ee
-SHA512 (binutils-2.38.tar.bz2) = 7690b4158bd6587a85c6b98903980b9ac6f16b47f7fd1e60986b0a70388bedcfdc05d75597aa49c81fec1609ce24bed6c26583f76fd2471a9d63394fd9798afc
-Size (binutils-2.38.tar.bz2) = 34866647 bytes
+BLAKE2s (binutils-2.39.tar.bz2) = 79c9e003be8c3793764b1a79ac04ce9de89425360f6e7c9573d10fe92c6149b1
+SHA512 (binutils-2.39.tar.bz2) = faa592dd48fc715901ad704ac96dbd34b1792c51e77c7a92a387964b0700703c74be07de45cc4751945c8c0674368c73dc17bbc563d1d2cd235b5ebd8c6e7efb
+Size (binutils-2.39.tar.bz2) = 36782148 bytes
 SHA1 (patch-bfd_cache.c) = e2d96bad350552eacdffa83532f9dc9e15ee9be9
 SHA1 (patch-gold_Makefile.in) = e01d973f9625a1653851f796c123efec37102fbd
 SHA1 (patch-gold_options.h) = 03816bbf157d781820d96a4d3af0885dc2bbbaa9
