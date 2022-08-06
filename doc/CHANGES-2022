@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3697 2022/08/06 09:49:43 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.3698 2022/08/06 16:45:50 ast Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5507,3 +5507,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-google-i18n-address to 2.5.2 [adam 2022-08-05]
 	Updated devel/mold to 1.4.0 [fcambus 2022-08-06]
 	Updated devel/binutils to 2.39 [fcambus 2022-08-06]
+	Updated security/p5-IO-Socket-SSL to 2.074 [ast 2022-08-06]
