@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2022/07/02 16:53:32 ryoon Exp $
+# $NetBSD: Makefile,v 1.27 2022/08/06 08:02:27 nia Exp $
 
 DISTNAME=	freerdp-2.3.2
 PKGNAME=	${DISTNAME:S/freerdp-/freerdp2-/1}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	net
 MASTER_SITES=	https://pub.freerdp.com/releases/
 
@@ -21,7 +21,6 @@ USE_LANGUAGES=	c c++
 CMAKE_ARGS+=	-DWITH_SERVER=ON
 CMAKE_ARGS+=	-DWITH_CHANNELS=ON
 CMAKE_ARGS+=	-DWITH_JPEG=ON
-CMAKE_ARGS+=	-DWITH_WAYLAND=OFF # XXX needs epoll
 CMAKE_ARGS+=	-DWITH_GSTREAMER_1_0=OFF
 
 CMAKE_ARGS+=	-DAVCODEC_LIBRARY=${PREFIX}/lib/ffmpeg4/libavcodec.so
@@ -39,28 +38,14 @@ CMAKE_ARGS+=	-DWITH_OSS=OFF
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "NetBSD"
 # backtrace(3)
-LDFLAGS.${OPSYS}+=	-lexecinfo
-.endif
-.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD"
-NEED_EPOLLSHIM=		# defined
-LDFLAGS.${OPSYS}+=	-lepoll-shim
-.endif
+LDFLAGS.NetBSD+=	-lexecinfo
 
 PKGCONFIG_OVERRIDE+=	freerdp.pc.in
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1 ${PKGMANDIR}/man7
 
 post-install:
-.for page in freerdp-shadow-cli.1 winpr-hash.1 winpr-makecert.1 xfreerdp.1
-	${MV} ${DESTDIR}${PREFIX}/share/man/man1/${page} \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/${page} || ${TRUE}
-.endfor
-	${MV} ${DESTDIR}${PREFIX}/share/man/man7/wlog.7 \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/man7/wlog.7 || ${TRUE}
-	${MV} ${DESTDIR}${PREFIX}/share/man/man1/xfreerdp.1 \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/xfreerdp2.1 || ${TRUE}
 	${MV} ${DESTDIR}${PREFIX}/bin/xfreerdp \
 		${DESTDIR}${PREFIX}/bin/xfreerdp2 || ${TRUE}
 
@@ -70,7 +55,8 @@ post-install:
 .include "../../multimedia/ffmpeg4/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
-.ifdef NEED_EPOLLSHIM
+.if defined(OPSYS_HAS_KQUEUE)
+CFLAGS+=	-I${BUILDLINK_DIR}/include/libepoll-shim
 .include "../../devel/libepoll-shim/buildlink3.mk"
 .endif
 .include "../../mk/bsd.pkg.mk"
