@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.53 2021/10/26 11:17:33 nia Exp $
+$NetBSD: distinfo,v 1.54 2022/08/06 17:05:46 ast Exp $
 
-BLAKE2s (Net-SSLeay-1.90.tar.gz) = 882fd55d9216c31eddb69346ba98b0bceb1f0950fe9c168e40b65edd59711a09
-SHA512 (Net-SSLeay-1.90.tar.gz) = 8a5f251b5ef1d8c2d619d984594a7a22ddeed2e5e726fe683a45f299d7878f4ca8ffab00480ebf5ef7a94ae1fcf6be05dfdaa68b8bfe2ad68443150765adb891
-Size (Net-SSLeay-1.90.tar.gz) = 534246 bytes
-SHA1 (patch-SSLeay.xs) = f7937ae0c2dcf97462a44d6344ff20483cf07566
-SHA1 (patch-t_local_43__misc__functions.t) = 176e4993f9327237038312d2f23c5cfc065acc81
+BLAKE2s (Net-SSLeay-1.92.tar.gz) = 9b3c069a8ca4508f0ad613ded1c316da20e632103fe83df5a9754a392002376d
+SHA512 (Net-SSLeay-1.92.tar.gz) = e9d9161ebeb7be90f4c7a0ea98f1034892ce6d33aa72872683177b19daa1f4c5819f85ea9a052a076ec8d7c21705f6c344aef64680bc881bf3218d38e8b7b173
+Size (Net-SSLeay-1.92.tar.gz) = 555930 bytes
