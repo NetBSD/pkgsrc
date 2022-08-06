@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.38 2022/02/10 14:03:07 fcambus Exp $
+@comment $NetBSD: PLIST.common,v 1.39 2022/08/06 09:49:32 fcambus Exp $
 ${MACHINE_GNU_PLATFORM}/bin/ar
 ${PLIST.gas}${MACHINE_GNU_PLATFORM}/bin/as
 ${PLIST.gld}${MACHINE_GNU_PLATFORM}/bin/ld
@@ -160,6 +160,7 @@ ${PLIST.gas}share/locale/ja/LC_MESSAGES/gas.mo
 ${PLIST.gold}share/locale/ja/LC_MESSAGES/gold.mo
 ${PLIST.gprof}share/locale/ja/LC_MESSAGES/gprof.mo
 ${PLIST.gld}share/locale/ja/LC_MESSAGES/ld.mo
+${PLIST.gprof}share/locale/ka/LC_MESSAGES/gprof.mo
 ${PLIST.gprof}share/locale/ms/LC_MESSAGES/gprof.mo
 ${PLIST.gprof}share/locale/nl/LC_MESSAGES/gprof.mo
 share/locale/nl/LC_MESSAGES/opcodes.mo
