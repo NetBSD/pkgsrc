@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2022/07/09 08:16:02 wiz Exp $
+# $NetBSD: Makefile,v 1.73 2022/08/06 16:49:59 he Exp $
 #
 # when updating this, please also update:
 # devel/include-what-you-use
@@ -107,8 +107,8 @@ CXXFLAGS+=	-march=i586
 
 .if !empty(MACHINE_ARCH:Mpowerpc*)
 # Needed to avoid "relocation truncated to fit: R_PPC_REL24"
-CFLAGS+=	-mlongcall
-CXXFLAGS+=	-mlongcall
+CFLAGS+=	-mlongcall -mno-pltseq
+CXXFLAGS+=	-mlongcall -mno-pltseq
 .endif
 
 .if ${OPSYS} == "NetBSD"
@@ -129,4 +129,5 @@ post-extract:
 .include "../../lang/python/application.mk"
 .include "../../lang/python/tool.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
