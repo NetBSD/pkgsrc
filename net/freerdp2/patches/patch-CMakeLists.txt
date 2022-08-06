@@ -1,0 +1,35 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2022/08/06 08:02:27 nia Exp $
+
+Find epoll-shim using pkg-config on all BSDs.
+
+--- CMakeLists.txt.orig	2021-03-15 12:29:35.000000000 +0000
++++ CMakeLists.txt
+@@ -39,7 +39,7 @@ set(CMAKE_COLOR_MAKEFILE ON)
+ set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+ 
+ # Include our extra modules
+-set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake/)
++set (CMAKE_MODULE_PATH "/encrypt/src/pkgsrc/net/freerdp2/work/.buildlink/cmake-Modules" ${CMAKE_SOURCE_DIR}/cmake/)
+ 
+ if((CMAKE_SYSTEM_NAME MATCHES "WindowsStore") AND (CMAKE_SYSTEM_VERSION MATCHES "10.0"))
+ 	set(UWP 1)
+@@ -205,6 +205,7 @@ if(${CMAKE_SYSTEM_NAME} MATCHES "BSD")
+ 	if(${CMAKE_SYSTEM_NAME} MATCHES "OpenBSD")
+ 		set(OPENBSD TRUE)
+ 	endif()
++	pkg_check_modules (EPOLL_SHIM REQUIRED epoll-shim)
+ endif()
+ 
+ if(${CMAKE_SYSTEM_NAME} MATCHES "DragonFly")
+@@ -212,11 +213,6 @@ if(${CMAKE_SYSTEM_NAME} MATCHES "DragonF
+ 	set(FREEBSD TRUE)
+ endif()
+ 
+-if(FREEBSD)
+-	find_path(EPOLLSHIM_INCLUDE_DIR NAMES sys/epoll.h sys/timerfd.h HINTS /usr/local/include/libepoll-shim)
+-	find_library(EPOLLSHIM_LIBS NAMES epoll-shim libepoll-shim HINTS /usr/local/lib)
+-endif()
+-
+ # Configure MSVC Runtime
+ if(MSVC)
+ 	include(MSVCRuntime)
