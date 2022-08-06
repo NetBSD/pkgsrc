@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.163 2022/07/14 23:46:26 dholland Exp $
+# $NetBSD: Makefile,v 1.164 2022/08/06 17:24:03 he Exp $
 
 DISTNAME=	cups-filters-1.28.15
 PKGREVISION=	1
@@ -94,4 +94,5 @@ post-install:
 .include "../../print/poppler-includes/buildlink3.mk"
 .include "../../print/qpdf/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
