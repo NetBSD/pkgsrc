@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2022/05/28 19:03:15 leot Exp $
+$NetBSD: distinfo,v 1.12 2022/08/06 22:24:49 leot Exp $
 
-BLAKE2s (geomyidae-v0.50.1.tar.gz) = e5e65463e90b60ea09ac901454d7731b78e645f683138233ed457dd9a55cc622
-SHA512 (geomyidae-v0.50.1.tar.gz) = 2a71b12f51c2ef8d6e791089f9eea49eb90a36be45b874d4234eba1e673186be945711be1f92508190f5c0a6f502f132c4b7cb82caf805a39a3f31903032ac47
-Size (geomyidae-v0.50.1.tar.gz) = 31832 bytes
+BLAKE2s (geomyidae-v0.51.tar.gz) = 0b0102b4799e1c4a4141826ad7bc64cf9a33b43794b5528fe78e313a03e7f9b1
+SHA512 (geomyidae-v0.51.tar.gz) = de51806bb042aeca4605c42a8ddb81908002a5fdeefc291e482067689debaf3dce222767e28e1d37064d7bbbbcb30689c4dd9d84348a29e553dd19c541469776
+Size (geomyidae-v0.51.tar.gz) = 33384 bytes
