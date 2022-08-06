@@ -8,5 +8,3 @@ windows.
 Firefox also offers excellent bookmark and history management, and it
 can be extended by developers using industry standards such as XML,
 CSS, JavaScript, C++, etc. Many extensions are available.
-
-This package has working WebRTC support on x86.
