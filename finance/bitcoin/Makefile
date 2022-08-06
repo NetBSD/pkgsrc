@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2022/07/02 16:53:16 ryoon Exp $
+# $NetBSD: Makefile,v 1.52 2022/08/06 16:46:23 he Exp $
 
 DISTNAME=	bitcoin-22.0
 PKGREVISION=	6
@@ -57,4 +57,5 @@ BUILDLINK_API_DEPENDS.libevent+=	libevent>=2.0.21
 .include "../../net/zeromq/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/dlopen.buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
