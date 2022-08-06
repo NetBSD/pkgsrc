@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2022/04/24 19:29:12 tnn Exp $
+# $NetBSD: Makefile,v 1.13 2022/08/06 16:45:20 he Exp $
 
 DISTNAME=	protobuf-c-1.4.0
 CATEGORIES=	devel
@@ -21,4 +21,5 @@ pre-configure:
 	${LN} -s ${BUILDLINK_DIR}/include/google ${WRKSRC}/google
 
 .include "../../devel/protobuf/buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
