@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2022/07/14 23:46:24 dholland Exp $
+# $NetBSD: Makefile,v 1.24 2022/08/06 16:49:06 he Exp $
 
 DISTNAME=	VTK-9.0.3
 PKGNAME=	${DISTNAME:tl}
@@ -74,4 +74,5 @@ post-extract:
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/pugixml/buildlink3.mk"
 .include "../../textproc/utf8-cpp/buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
