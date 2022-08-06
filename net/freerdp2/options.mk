@@ -1,9 +1,14 @@
-# $NetBSD: options.mk,v 1.3 2021/05/03 18:24:38 jdolecek Exp $
+# $NetBSD: options.mk,v 1.4 2022/08/06 08:02:27 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.freerdp2
-PKG_SUPPORTED_OPTIONS=		alsa pulseaudio cups x11 pcsc
+PKG_SUPPORTED_OPTIONS=		alsa pcsc pulseaudio cups wayland x11
 PKG_SUGGESTED_OPTIONS=		x11 pcsc
 PKG_SUGGESTED_OPTIONS.Linux=	alsa
+
+.include "../../devel/wayland/platform.mk"
+.if ${PLATFORM_SUPPORTS_WAYLAND} == "yes"
+PKG_SUGGESTED_OPTIONS+=		wayland
+.endif
 
 .include "../../mk/bsd.options.mk"
 
@@ -54,4 +59,14 @@ CMAKE_ARGS+=   -DWITH_PCSC=ON
 PLIST.pcsc=    yes
 .else
 CMAKE_ARGS+=   -DWITH_PCSC=OFF
+.endif
+
+PLIST_VARS+=	wayland
+.if !empty(PKG_OPTIONS:Mwayland)
+.  include "../../devel/wayland/buildlink3.mk"
+.  include "../../x11/libxkbcommon/buildlink3.mk"
+PLIST.wayland=	yes
+CMAKE_ARGS+=   -DWITH_WAYLAND=ON
+.else
+CMAKE_ARGS+=   -DWITH_WAYLAND=OFF
 .endif
