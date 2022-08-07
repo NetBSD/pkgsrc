@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3702 2022/08/07 06:51:35 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3703 2022/08/07 07:53:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5512,3 +5512,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/Geomyidae to 0.51 [leot 2022-08-06]
 	Updated net/yt-dlp to 2022.7.18 [wiz 2022-08-07]
 	Updated net/yt-dlp to 2022.7.18nb1 [wiz 2022-08-07]
+	Updated math/double-conversion to 3.2.1 [wiz 2022-08-07]
