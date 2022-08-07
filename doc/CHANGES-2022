@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3704 2022/08/07 07:55:16 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3705 2022/08/07 08:02:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5514,3 +5514,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/yt-dlp to 2022.7.18nb1 [wiz 2022-08-07]
 	Updated math/double-conversion to 3.2.1 [wiz 2022-08-07]
 	Updated security/py-cyclonedx-python-lib to 2.7.1 [wiz 2022-08-07]
+	Updated print/texlab to 4.2.1 [wiz 2022-08-07]
