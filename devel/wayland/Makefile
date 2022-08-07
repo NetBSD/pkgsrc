@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2022/08/04 15:26:15 nia Exp $
+# $NetBSD: Makefile,v 1.16 2022/08/07 23:35:28 tnn Exp $
 
 DISTNAME=	wayland-1.21.0
 CATEGORIES=	devel
@@ -32,6 +32,7 @@ PKGCONFIG_OVERRIDE+=		output/meson-private/wayland-server.pc
 .include "../../mk/bsd.fast.prefs.mk"
 .if ${OPSYS} != "Linux"
 .  include "../../devel/libepoll-shim/buildlink3.mk"
+CPPFLAGS+=	-I${BUILDLINK_PREFIX.libepoll-shim}/include/libepoll-shim
 .endif
 .include "../../devel/libffi/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
