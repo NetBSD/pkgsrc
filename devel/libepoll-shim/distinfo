@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:15:18 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/08/07 23:29:49 tnn Exp $
 
 BLAKE2s (epoll-shim-0.0.20210418.tar.gz) = 991a4a90d3395dbe02430502802c57cfb7100b84a18b88d6b4148e0c2c485be2
 SHA512 (epoll-shim-0.0.20210418.tar.gz) = 34272a694165bfb47f8a103d18aec304f7a72b36491b83268ff63dd696f5103ab53dc9e32173ed20ddd7baa36b9d7ca2b3ec6236eef8dc2f02a101819b75eb7b
 Size (epoll-shim-0.0.20210418.tar.gz) = 91936 bytes
+SHA1 (patch-epoll-shim.pc.cmakein) = 6a31165678618c40104d9e592cb888e4a00a596c
 SHA1 (patch-src_CMakeLists.txt) = 47f32282b12c79a9b51d8ffc821cd4ffbf19b728
