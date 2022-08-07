@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3713 2022/08/07 17:38:59 thorpej Exp $
+$NetBSD: CHANGES-2022,v 1.3714 2022/08/07 22:22:32 leot Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5523,3 +5523,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/webkit-gtk to 2.36.6 [leot 2022-08-07]
 	Updated emulators/x16-rom to 41 [thorpej 2022-08-07]
 	Updated emulators/x16-emulator to 41 [thorpej 2022-08-07]
+	Added security/trufflehog version 3.7.2 [leot 2022-08-07]
