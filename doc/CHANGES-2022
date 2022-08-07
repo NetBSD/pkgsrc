@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3701 2022/08/07 06:45:37 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3702 2022/08/07 06:51:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5511,3 +5511,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/p5-Net-SSLeay to 1.92 [ast 2022-08-06]
 	Updated net/Geomyidae to 0.51 [leot 2022-08-06]
 	Updated net/yt-dlp to 2022.7.18 [wiz 2022-08-07]
+	Updated net/yt-dlp to 2022.7.18nb1 [wiz 2022-08-07]
