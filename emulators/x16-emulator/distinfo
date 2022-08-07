@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:24:15 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/08/07 17:38:08 thorpej Exp $
 
-BLAKE2s (x16-emulator-35.tar.gz) = ce9acf3b456fa9761db64da16ac0575a19d9edd2dfc9545f479971c01e524614
-SHA512 (x16-emulator-35.tar.gz) = ec014b6ad13a7631d533b665c7544689629167261ffe0f0941c9381ea8cc6b3803a27deac0d76de7aa2fdae3dc438d8f0abbabe9f55ed0221e7fa0f0d39fbf3c
-Size (x16-emulator-35.tar.gz) = 123338 bytes
-SHA1 (patch-Makefile) = 22c6d74e46c085e361900af3f8931ebd842f87c9
-SHA1 (patch-main.c) = db0721d145546dd60ed40b8e9151cd26493e07ad
-SHA1 (patch-rendertext.c) = 81a7e50e7598827addf9aca1f05a22869f2ddeeb
+BLAKE2s (x16-emulator-41.tar.gz) = 095b9dd13b544d878dab791bb2e4ffae82ba582e72bd7d8b618b2181eceb558c
+SHA512 (x16-emulator-41.tar.gz) = 88b75589149e3c308e66fa45c2c07b497c97cea11b9c3fc9635f3e27f8f11ea47fcb55cf9089ac720742b7c96288c2286d120b07ca77879d08153ffbc7870fa1
+Size (x16-emulator-41.tar.gz) = 182076 bytes
+SHA1 (patch-Makefile) = e5029a2956a79e808d8ca9197d5db330930fa7e3
+SHA1 (patch-src_main.c) = 2d037b3b897eb7767ead3968eeb92f3fff4ac563
+SHA1 (patch-src_rendertext.c) = 2474af4dff454ddd6d4ca2c9abc4eba963c3d51e
