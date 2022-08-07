@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2022/08/07 22:40:52 dbj Exp $
+# $NetBSD: Makefile,v 1.11 2022/08/07 23:17:02 wiz Exp $
 
 DISTNAME=	wxWidgets-3.2.0
 PKGNAME=	${DISTNAME:S/wxWidgets/wxGTK32/}
@@ -33,6 +33,7 @@ REPLACE_SH=		wx-config.in wx-config-inplace.in
 # We now build using cmake by default
 # However, the cmake build system installs
 # unused headers that the configure build system doesn't.
+# https://github.com/wxWidgets/wxWidgets/issues/22714
 
 # This option is expected to be a temporary hack.
 # We should fix cmake builds to match configure builds
