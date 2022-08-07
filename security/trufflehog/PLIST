@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2022/08/07 22:21:38 leot Exp $
+bin/trufflehog
