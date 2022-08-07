@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22079 2022/08/07 06:28:00 wiz Exp $
+$NetBSD: TODO,v 1.22080 2022/08/07 07:53:44 wiz Exp $
 
 Suggested new packages
 ======================
@@ -598,7 +598,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o dmalloc-5.6.5
 	o dnsbl-milter-6.78
 	o doclifter-2.19
-	o double-conversion-3.2.1
 	o drawpile-2.1.20
 	o drivel-3.0.5
 	o dtc-1.6.0
