@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:24:15 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/08/07 17:36:52 thorpej Exp $
 
-BLAKE2s (x16-rom-35.tar.gz) = 89883a93241342ef9eee6d523c908a652aea1f52e0c06daf014f3eaa8fb9774c
-SHA512 (x16-rom-35.tar.gz) = 68694f972cd9675a49ad335485c8aafe79da24da6611933e3c83e1051053c6a7a72555a3d20ce7b607c7045a5212ebffc36d3bbae286f69e09bb7d21802ce425
-Size (x16-rom-35.tar.gz) = 401918 bytes
+BLAKE2s (x16-rom-41.tar.gz) = ad1c5ce4fe1fb3b2642f59fdedf0d3895e097663c68f71fb016479ba7b31277a
+SHA512 (x16-rom-41.tar.gz) = 21afe719d1447e289a210607fde0a54847d2dcc6216933146b2a96f13e83c72158827c98a2c2dcc2f9b4fd1aee18d1b25947ca0ef3cb60bad0518f7952c10512
+Size (x16-rom-41.tar.gz) = 630172 bytes
+SHA1 (patch-scripts_symbolize.sh) = 1d5c75ccd3015508ab8510a1b0890a376aca80eb
