@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2021/12/08 16:06:36 adam Exp $
+# $NetBSD: Makefile,v 1.31 2022/08/07 14:15:28 gutteridge Exp $
 #
 
 BUILDLINK_DEPMETHOD.libestr=	full
@@ -65,5 +65,4 @@ post-install:
 
 BUILDLINK_API_DEPENDS.liblognorm+=	liblognorm>=2.0.3
 .include "../../sysutils/liblognorm/buildlink3.mk"
-.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
