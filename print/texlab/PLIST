@@ -1,3 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2021/04/06 20:40:12 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/08/07 08:02:11 wiz Exp $
 bin/texlab
-man/man1/texlab.1
