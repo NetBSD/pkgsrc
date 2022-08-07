@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.46 2022/08/06 17:25:54 he Exp $
+# $NetBSD: Makefile.common,v 1.47 2022/08/07 08:25:30 he Exp $
 # used by sysutils/rsyslog/Makefile
 # used by sysutils/rsyslog-dbi/Makefile
 # used by sysutils/rsyslog-elasticsearch/Makefile
@@ -46,8 +46,6 @@ CONFIGURE_ARGS+=	--disable-libgcrypt --disable-testbench			\
 BUILDLINK_DEPMETHOD.libestr+=		build
 BUILDLINK_DEPMETHOD.libuuid+=		build
 
-.include "../../sysutils/rsyslog/hacks.mk"
-
 .include "../../devel/libestr/buildlink3.mk"
 .include "../../devel/libuuid/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
@@ -55,3 +53,4 @@ BUILDLINK_DEPMETHOD.libuuid+=		build
 BUILDLINK_API_DEPENDS.libfastjson+=	libfastjson>=0.99.7
 .include "../../textproc/libfastjson/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
+.include "../../mk/atomic64.mk"
