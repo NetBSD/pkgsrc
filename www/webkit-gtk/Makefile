@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.232 2022/08/07 15:45:38 leot Exp $
+# $NetBSD: Makefile,v 1.233 2022/08/07 19:07:05 gutteridge Exp $
 
 DISTNAME=	webkitgtk-2.36.6
 PKGNAME=	${DISTNAME:S/webkitgtk/webkit-gtk/}
@@ -26,18 +26,6 @@ CTF_SUPPORTED=	no
 
 # GCC >= 8 is required, it no longer builds with lower versions.
 GCC_REQD+=		8
-USE_GCC_RUNTIME=	yes
-
-.include "../../mk/bsd.prefs.mk"
-
-# This package will link against libstdc++.so from the pkgsrc GCC when the
-# base OS GCC doesn't meet the minimum requirement. Thus we do this so the
-# appropriate gcc-libs package will be captured as a dependency, otherwise
-# binary packages will be broken. See also PR pkg/56604.
-.if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 099915
-USE_PKGSRC_GCC=		yes
-USE_PKGSRC_GCC_RUNTIME=	yes
-.endif
 
 PKGCONFIG_OVERRIDE+=	Source/JavaScriptCore/javascriptcoregtk.pc.in
 PKGCONFIG_OVERRIDE+=	Source/WebKit/gtk/webkit2gtk-web-extension.pc.in
