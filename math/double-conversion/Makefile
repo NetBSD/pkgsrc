@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2022/01/16 23:07:47 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/08/07 07:53:35 wiz Exp $
 
-DISTNAME=	double-conversion-3.2.0
+DISTNAME=	double-conversion-3.2.1
 CATEGORIES=	math converters
 MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
