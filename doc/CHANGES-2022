@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3712 2022/08/07 15:45:43 leot Exp $
+$NetBSD: CHANGES-2022,v 1.3713 2022/08/07 17:38:59 thorpej Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5521,3 +5521,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated print/poppler to 22.08.0 [wiz 2022-08-07]
 	Updated security/p5-Digest-CRC to 0.24 [ast 2022-08-07]
 	Updated www/webkit-gtk to 2.36.6 [leot 2022-08-07]
+	Updated emulators/x16-rom to 41 [thorpej 2022-08-07]
+	Updated emulators/x16-emulator to 41 [thorpej 2022-08-07]
