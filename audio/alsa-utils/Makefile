@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2022/08/06 07:50:05 nia Exp $
+# $NetBSD: Makefile,v 1.26 2022/08/07 23:39:44 tnn Exp $
 
 DISTNAME=	alsa-utils-1.2.6
 CATEGORIES=	audio
@@ -32,7 +32,7 @@ CONFIGURE_ARGS+=	--disable-nls
 .include "../../audio/alsa-lib/buildlink3.mk"
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} != "Linux" && defined(OPSYS_HAS_KQUEUE)
-CFLAGS+=	-I${BUILDLINK_DIR}/include/libepoll-shim
+CPPFLAGS+=	-I${BUILDLINK_PREFIX.libepoll-shim}/include/libepoll-shim
 LDFLAGS+=	-lepoll-shim -linotify
 .include "../../devel/libepoll-shim/buildlink3.mk"
 .include "../../devel/libinotify/buildlink3.mk"
