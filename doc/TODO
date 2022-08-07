@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22085 2022/08/07 08:40:16 wiz Exp $
+$NetBSD: TODO,v 1.22086 2022/08/07 08:41:34 wiz Exp $
 
 Suggested new packages
 ======================
@@ -694,7 +694,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gcal-4.1
 	o gcc-mips-current-7.1.0
 	o gcc11-11.3
-	o gcc12-12.3
 	o gcc8-8.5
 	o gcc9-9.5
 	o gcin-1.5.5
