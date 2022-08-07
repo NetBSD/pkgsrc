@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.1 2022/07/21 23:56:38 nia Exp $
+# $NetBSD: mozilla-common.mk,v 1.2 2022/08/07 18:08:08 nia Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -35,6 +35,7 @@ TOOL_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 TOOL_DEPENDS+=		nasm>=2.14:../../devel/nasm
 TOOL_DEPENDS+=		yasm>=1.1:../../devel/yasm
+CFLAGS+=		-msse2
 .endif
 
 # This is to work around build failures where an upstream configuration script
