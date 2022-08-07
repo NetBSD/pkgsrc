@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.13 2022/08/07 06:45:27 wiz Exp $
+$NetBSD: distinfo,v 1.14 2022/08/07 06:51:25 wiz Exp $
 
 BLAKE2s (yt-dlp-2022.7.18.tar.gz) = 21f5ddc9cfacd7cf69cce09e618ae56709466b29df9d4f778d5df488b3950444
 SHA512 (yt-dlp-2022.7.18.tar.gz) = 07552c1b698326152c154ff83fc08b03637234ff448e6b5dd6776c0f37d2a4d892a5c89131c4c9ec8a8c479577018ffbdf7f53538e3dc41497c0fd131c90538a
 Size (yt-dlp-2022.7.18.tar.gz) = 2348854 bytes
+SHA1 (patch-yt__dlp_extractor_arte.py) = fe748588454347fb8172cfa0838938ee65cef1d1
