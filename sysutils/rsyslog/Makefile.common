@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.47 2022/08/07 08:25:30 he Exp $
+# $NetBSD: Makefile.common,v 1.48 2022/08/07 16:01:17 gutteridge Exp $
 # used by sysutils/rsyslog/Makefile
 # used by sysutils/rsyslog-dbi/Makefile
 # used by sysutils/rsyslog-elasticsearch/Makefile
@@ -39,8 +39,8 @@ PYTHON_FOR_BUILD_ONLY=	yes
 
 EGDIR=			${PREFIX}/share/examples/rsyslog
 
-CONFIGURE_ARGS+=	--disable-libgcrypt --disable-testbench			\
-			--enable-diagtools --enable-usertools			\
+CONFIGURE_ARGS+=	--disable-libgcrypt --disable-testbench		\
+			--enable-diagtools --enable-usertools		\
 			--enable-generate-man-pages
 
 BUILDLINK_DEPMETHOD.libestr+=		build

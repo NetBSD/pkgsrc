@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2022/08/07 14:15:28 gutteridge Exp $
+# $NetBSD: Makefile,v 1.32 2022/08/07 16:01:17 gutteridge Exp $
 #
 
 BUILDLINK_DEPMETHOD.libestr=	full
@@ -9,10 +9,10 @@ PKGREVISION= 13
 
 COMMENT=		The enhanced syslogd for Unix
 
-CONFIGURE_ARGS+=	--disable-testbench					\
-			--enable-diagtools --enable-usertools --enable-uuid	\
-			--enable-imdiag --enable-imfile	--enable-impstats	\
-			--enable-mail --enable-mmjsonparse --enable-mmnormalize	\
+CONFIGURE_ARGS+=	--disable-testbench				\
+			--enable-diagtools --enable-usertools --enable-uuid \
+			--enable-imdiag --enable-imfile	--enable-impstats \
+			--enable-mail --enable-mmjsonparse --enable-mmnormalize \
 			--enable-omstdout
 
 PLIST_VARS+=		klog solaris
@@ -55,7 +55,7 @@ SUBST_SED.ldargs=	-e '/whole-archive.*librsyslog/d'
 
 RCD_SCRIPTS=		rsyslogd
 
-CONF_FILES+=		share/examples/rsyslog/rsyslog.conf 			\
+CONF_FILES+=		share/examples/rsyslog/rsyslog.conf \
 			${PKG_SYSCONFDIR}/rsyslog.conf
 
 post-install:
