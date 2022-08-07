@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2022/01/19 06:10:03 adam Exp $
+# $NetBSD: Makefile,v 1.3 2022/08/07 08:03:35 wiz Exp $
 
-DISTNAME=	frozenlist-1.3.0
+DISTNAME=	frozenlist-1.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/frozenlist/}
