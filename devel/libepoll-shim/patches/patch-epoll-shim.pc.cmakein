@@ -1,0 +1,18 @@
+$NetBSD: patch-epoll-shim.pc.cmakein,v 1.1 2022/08/07 23:29:49 tnn Exp $
+
+libepoll-shim: take out CFLAGS from the pkg-config file
+
+This is a patently Gross Hack<TM>.
+But without it random package's configure scripts that use gtk3+ can pick
+up broken epoll support via "pkg-config --cflags gtk+-x11-3.0", since that
+will include -I/usr/pkg/include/libepoll-shim.
+
+Direct consumers of libepoll-shim must add the CFLAGS explicitly.
+
+--- epoll-shim.pc.cmakein.orig	2021-04-18 19:28:52.000000000 +0000
++++ epoll-shim.pc.cmakein
+@@ -9,4 +9,3 @@ Description: Small epoll implementation 
+ Version: 
+ Libs: -L${libdir} -lepoll-shim
+ Libs.private: -pthread -lrt
+-Cflags: -I${includedir}/libepoll-shim
