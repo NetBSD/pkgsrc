@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3708 2022/08/07 08:40:16 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3709 2022/08/07 09:15:11 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5518,3 +5518,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-frozenlist to 1.3.1 [wiz 2022-08-07]
 	Updated fonts/harfbuzz to 5.1.0 [wiz 2022-08-07]
 	Updated print/poppler to 22.08.0 [wiz 2022-08-07]
+	Updated news/tuifeed to 0.2.0 [pin 2022-08-07]
