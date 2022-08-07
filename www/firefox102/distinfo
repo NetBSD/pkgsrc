@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2022/08/05 08:41:25 nia Exp $
+$NetBSD: distinfo,v 1.3 2022/08/07 18:08:08 nia Exp $
 
 BLAKE2s (firefox-102.1.0esr.source.tar.xz) = 1ec004de7f7edb8e9e1ba7dc45a150cffeab907a48e4a617407152309c1c299d
 SHA512 (firefox-102.1.0esr.source.tar.xz) = 2505b87ce4115445568eb6b7d8af41678bd787fd07f3f79e9f0a22d90cdf752ae5d4371856cf9c56e2d9da7d5b7c3939dc2aab5753fcc017398e7d65260f6f03
@@ -15,6 +15,7 @@ SHA1 (patch-gfx_angle_checkout_src_common_third__party_smhasher_src_PMurHash.cpp
 SHA1 (patch-gfx_angle_checkout_src_compiler_translator_InfoSink.h) = b2adce9e65662283a11b6dcff40e95523e940045
 SHA1 (patch-gfx_skia_skia_src_core_SkCpu.cpp) = 36218819254f3681b9c717d652ea78c9f20d49ad
 SHA1 (patch-gfx_skia_skia_src_core_SkVM.cpp) = cdb2c2b0d512c0eb8403abba9b74c218d3a306ea
+SHA1 (patch-gfx_webrender__bindings_webrender__ffi.h) = 44e73ff006ca1a4bbd42e15a09d7577bfa774353
 SHA1 (patch-gfx_wr_swgl_build.rs) = df6ebfaabb4d27994e59a9d0eaf12c7cf08415fb
 SHA1 (patch-ipc_chromium_src_base_message__pump__libevent.cc) = 298642a3527804115b398fb7904a3596962932e3
 SHA1 (patch-ipc_chromium_src_base_platform__thread__posix.cc) = 35d20981d33ccdb1d8ffb8039e48798777f11658
@@ -23,7 +24,6 @@ SHA1 (patch-js_src_jit_ProcessExecutableMemory.cpp) = fad103cc698f9828ad58f74223
 SHA1 (patch-js_src_jit_arm64_vixl_MozCpu-vixl.cpp) = fdc522e3fb626b1b8a2ebf19ad60bfc25dfa4183
 SHA1 (patch-js_src_util_NativeStack.cpp) = a0a16d8d8d78d3cc3f4d2a508586f1a7821f7dba
 SHA1 (patch-js_src_vm_ArrayBufferObject.cpp) = 0501fdcae11568ae4ea78e0d2f6b3750b7a67d47
-SHA1 (patch-libwebrtc.diff) = e007fe7dd2fd16e7d0ac4a35f9a006db4e24eb7e
 SHA1 (patch-media_ffvpx_libavutil_arm_bswap.h) = de58daa0fd23d4fec50426602b65c9ea5862558a
 SHA1 (patch-media_libcubeb_src_cubeb__alsa.c) = 2ef11da83c90c41490db4c0d9809c3e1826b488a
 SHA1 (patch-media_libcubeb_src_cubeb__jack.cpp) = fc546c5e6582fd5eda64ba83287dfbbb3c9e229f
