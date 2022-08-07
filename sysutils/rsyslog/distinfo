@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.39 2021/10/26 11:20:08 nia Exp $
+$NetBSD: distinfo,v 1.40 2022/08/07 16:01:17 gutteridge Exp $
 
 BLAKE2s (rsyslog-8.38.0.tar.gz) = 156eacb39772f84172a5d8ac0f95f09f324ea006ed648ec093779664dac00862
 SHA512 (rsyslog-8.38.0.tar.gz) = 9dc3bdc4ef01c2af433478e182704694cb50849d811d476a03e4ce03b3c5aecfb506e7f1c1e51fadcd63da60b067d8011b92b8c9354a688fe66f7b6ffd8f9254
 Size (rsyslog-8.38.0.tar.gz) = 2721798 bytes
 SHA1 (patch-configure) = c7b6ab1f7da4b78034ac5defe75f965b2b6a6e6b
-SHA1 (patch-platform_redhat_rsyslog.conf) = b2fc1dbeb2b679b82d6c1a86ec1e4e72ef460433
+SHA1 (patch-platform_redhat_rsyslog.conf) = 8cfce2df2551dc2ea81802c4cc1b52933cdda153
 SHA1 (patch-tools_iminternal.c) = 76e140343456b120cd9f0743e6f10e78f9baaa5d
-SHA1 (patch-tools_rsyslogd.8) = a3c79f551111b7bf5933ca5e0930b1f52875f341
+SHA1 (patch-tools_rsyslogd.8) = a0eea2ee7832fcb19babca24c7a198ca91386e53
 SHA1 (patch-tools_rsyslogd.c) = b2a295da0b6b667d8913bf9e73f6b2e87923e8be
