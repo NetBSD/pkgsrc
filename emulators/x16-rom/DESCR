@@ -2,9 +2,19 @@ This is the Commander X16 ROM containing BASIC, KERNAL, DOS and GEOS. BASIC
 and KERNAL are derived from the Commodore 64 versions. GEOS is derived from
 the C64/C128 version.
 
-* BASIC is fully compatible with Commodore BASIC V2.
+* BASIC is fully compatible with Commodore BASIC V2, with some additions.
 * KERNAL:
   -> supports the complete $FF81+ API.
-  -> has the same zero page and $0200-$033C memory layout as the C64.
-  -> does not support tape (device 1).
+  -> adds lots of new API, including joystick, mouse and bitmap graphics.
+  -> supports the same $0300-$0332 vectors as the C64.
+  -> does not support tape (device 1) or software RS-232 (device 2).
 * GEOS is fully compatible with the C64 version.
+* DOS
+  -> is compatible with Commodore DOS ($, SCRATCH, NEW, ...).
+  -> works on SD cards with FAT32 filesystems.
+  -> supports long filenames, timestamps.
+  -> supports partitions and subdirectories (CMD-style).
+* CodeX Interactive Assembly Environment
+  -> edit assembly code in RAM
+  -> save program, and debug information
+  -> run and debug assembly programs
