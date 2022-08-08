@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3716 2022/08/08 06:50:04 tron Exp $
+$NetBSD: CHANGES-2022,v 1.3717 2022/08/08 07:24:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5526,3 +5526,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Added security/trufflehog version 3.7.2 [leot 2022-08-07]
 	Updated audio/termusic to 0.7.2 [pin 2022-08-08]
 	Updated mail/mutt to 2.2.7 [tron 2022-08-08]
+	Updated devel/py-setuptools to 63.4.2 [adam 2022-08-08]
+	Updated textproc/py-tomlkit to 0.11.2 [adam 2022-08-08]
