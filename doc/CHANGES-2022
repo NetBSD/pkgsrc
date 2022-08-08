@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3722 2022/08/08 11:42:17 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.3723 2022/08/08 11:53:17 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5533,3 +5533,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated audio/fasttracker2 to 1.56 [fox 2022-08-08]
 	Updated sysutils/py-Glances to 3.2.7 [fox 2022-08-08]
 	Updated devel/py-approvaltests to 5.4.1 [schmonz 2022-08-08]
+	Updated devel/difftastic to 0.32.0 [pin 2022-08-08]
