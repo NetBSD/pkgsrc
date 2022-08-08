@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2022/06/28 11:33:52 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2022/08/08 10:11:57 wiz Exp $
 
 DISTNAME=	Finance-Quote-1.49
 PKGNAME=	p5-${DISTNAME}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Finance/}
 
 MAINTAINER=	damon@brodiefamily.org
 HOMEPAGE=	http://finance-quote.sourceforge.net/
-COMMENT=	Perl module to get stock quotes from Yahoo
+COMMENT=	Perl module to get stock quotes from various exchanges
 LICENSE=	gnu-gpl-v2 # or later
 
 DEPENDS+=	p5-CGI-[0-9]*:../../www/p5-CGI
