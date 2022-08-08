@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2022/05/27 04:32:49 ryoon Exp $
+$NetBSD: distinfo,v 1.8 2022/08/08 13:53:57 nia Exp $
 
 BLAKE2s (xf86-input-ws-1.3.0.20220511.tar.gz) = 2c84b8878160554e2a58c3ca086ca032bc9bf7be1dc8ed90413fb175ecfff53b
 SHA512 (xf86-input-ws-1.3.0.20220511.tar.gz) = 10581eb9ce9d5824c0a08530d0f6dde29abb7eb6e6a3865cdebb1156f79bcee249623cbf7f23679523003e7919773df9c6a3c4a35df8aeddc44a57fc83859e89
 Size (xf86-input-ws-1.3.0.20220511.tar.gz) = 347971 bytes
-SHA1 (patch-src_ws.c) = 57caff6f21bdfc83b4736638ae330f4eaf3b4c7a
+SHA1 (patch-src_ws.c) = 80ff2f6e70df37011fa69ccfe9c81fe048984def
