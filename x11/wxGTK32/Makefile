@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2022/08/07 23:17:02 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2022/08/08 10:39:46 wiz Exp $
 
 DISTNAME=	wxWidgets-3.2.0
 PKGNAME=	${DISTNAME:S/wxWidgets/wxGTK32/}
@@ -102,6 +102,11 @@ SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
 SUBST_FILES.fix-paths=		configure
 SUBST_SED.fix-paths=		-e 's,/usr/pkg/include,${PREFIX}/include,g'
 SUBST_VARS.fix-paths=		PREFIX
+
+.  if ${OPSYS} != "Darwin"
+# not needed, but configure stops if it's not found
+.include "../../graphics/glu/buildlink3.mk"
+.  endif
 .endif
 
 post-build:
