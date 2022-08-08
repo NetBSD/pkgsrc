@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3717 2022/08/08 07:24:08 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3718 2022/08/08 08:15:36 fox Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5528,3 +5528,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated mail/mutt to 2.2.7 [tron 2022-08-08]
 	Updated devel/py-setuptools to 63.4.2 [adam 2022-08-08]
 	Updated textproc/py-tomlkit to 0.11.2 [adam 2022-08-08]
+	Updated security/wolfssl to 5.4.0 [fox 2022-08-08]
