@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3720 2022/08/08 09:00:28 fox Exp $
+$NetBSD: CHANGES-2022,v 1.3721 2022/08/08 09:28:39 fox Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5531,3 +5531,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/wolfssl to 5.4.0 [fox 2022-08-08]
 	Updated chat/ircd-hybrid to 8.2.41 [fox 2022-08-08]
 	Updated audio/fasttracker2 to 1.56 [fox 2022-08-08]
+	Updated sysutils/py-Glances to 3.2.7 [fox 2022-08-08]
