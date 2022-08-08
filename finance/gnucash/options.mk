@@ -1,10 +1,15 @@
-# $NetBSD: options.mk,v 1.4 2018/04/09 08:47:35 wiz Exp $
+# $NetBSD: options.mk,v 1.5 2022/08/08 10:29:33 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnucash
-PKG_SUPPORTED_OPTIONS=	libdbi libofx python
-PKG_SUGGESTED_OPTIONS=	libdbi libofx python
+PKG_SUPPORTED_OPTIONS=	libdbi libofx gnucash-finance-quote python
+PKG_SUGGESTED_OPTIONS=	libdbi libofx gnucash-finance-quote python
 
 .include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mgnucash-finance-quote)
+DEPENDS+=	p5-Finance-Quote-[0-9]*:../../finance/p5-Finance-Quote
+DEPENDS+=	p5-Date-Manip-[0-9]*:../../devel/p5-Date-Manip
+.endif
 
 .if !empty(PKG_OPTIONS:Mlibofx)
 CMAKE_ARGS+=	-DWITH_OFX=ON
