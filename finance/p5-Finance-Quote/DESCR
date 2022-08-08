@@ -1,4 +1,2 @@
-Finance::Quote provides access to time-delayed stockquotes from a
-number of sources.  After you've installed the pacakage, try
-'perldoc Finance::Quote' for full information.  Alternatively,
-you can 'perldoc lib/Finance/Quote.pm' before the install.
+Finance::Quote provides access to time-delayed stock quotes from
+a number of sources.
