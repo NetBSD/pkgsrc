@@ -1,5 +1,5 @@
-TruffleHog find leaked credentials by scanning several sources like
-Git, GitHub, GitLab, S3, filesystem and syslog.
+TruffleHog finds leaked credentials by scanning several sources like
+Git, GitHub, GitLab, S3, filesystems and syslog.
 
-Every potential secret that is detected is verified against API to
+Every potential secret that is detected is verified against an API to
 eliminate false positives.
