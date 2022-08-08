@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.181 2022/07/23 06:45:32 wiz Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.182 2022/08/08 01:54:32 gutteridge Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -1958,7 +1958,17 @@ of functions.</para>
 
 </sect3>
 
-  </sect2>
+<sect3 id="undefined-reference-atomic">
+  <title>Missing atomic functions</title>
+  
+  <para>When building for older machine architectures (e.g., i386, PowerPC),
+  builds may fail because the package expects modern 64-bit atomic functions
+  which the underlying hardware either doesn't support, or will only support
+  with specific compiler flags. This is generally handled via inclusion of
+  mk/atomic64.mk.</para>
+</sect3>
+
+</sect2>
 
   <sect2 id="out-of-memory">
     <title>Running out of memory</title>
