@@ -291,6 +291,7 @@ gnome			Enable GNOME support.
 gnome-keyring		Enable GNOME keyring support.
 gnomecanvas		Enable GNOME canvas support
 gnomevfs		Enable GNOME Virtual File System support.
+gnucash-finance-quote	Install p5-Finance-Quote for stock quote fetching support.
 gnupg1			Use GNU Privacy Guard (GnuPG) Version 1.x
 gnupg2			Use GNU Privacy Guard (GnuPG) Version 2.0
 gnuplot			Enable gnuplot support.
