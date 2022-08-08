@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2022/06/28 11:35:20 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2022/08/08 16:47:34 adam Exp $
 
 DISTNAME=		tigervnc-1.12.0
 PKGNAME=		${DISTNAME}.1.20.13
@@ -33,6 +33,7 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	intltool msgfmt msgmerge patch perl:run autoconf automake autoreconf pkg-config gmake bash:run
 BUILD_DIRS=	. unix/xserver
 INSTALL_DIRS=	. unix/xserver/hw/vnc
+INSTALL_TARGET=	install
 
 CMAKE_ARGS+=		CMAKE_INSTALL_SYSCONFDIR=${PKG_SYSCONFDIR}
 # for reallocarray()
