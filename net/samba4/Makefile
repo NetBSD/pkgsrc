@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.147 2022/07/29 20:33:38 jperkin Exp $
+# $NetBSD: Makefile,v 1.148 2022/08/09 17:56:09 adam Exp $
 
-DISTNAME=	samba-4.16.3
+DISTNAME=	samba-4.16.4
 CATEGORIES=	net
 MASTER_SITES=	https://download.samba.org/pub/samba/stable/
 
@@ -91,7 +91,6 @@ CONFIGURE_ARGS+=	--with-privatelibdir=${SMB_PRIVATELIB}
 CONFIGURE_ARGS+=	--with-privileged-socket-dir=${SMB_PRIVSOCKETS}
 CONFIGURE_ARGS+=	--with-configdir=${SMB_CONFIG}
 CONFIGURE_ARGS+=	--with-libiconv=${BUILDLINK_PREFIX.iconv}
-#CONFIGURE_ARGS+=	--bundled-libraries=com_err
 CONFIGURE_ARGS+=	--abi-check-disable
 CONFIGURE_ARGS+=	--disable-symbol-versions
 .if defined(MAKE_JOBS) && !empty(MAKE_JOBS) && !(defined(MAKE_JOBS_SAFE) && !empty(MAKE_JOBS_SAFE:M[nN][oO]))
@@ -101,15 +100,17 @@ CONFIGURE_ARGS+=	--jobs=1
 .endif
 CONFIGURE_ARGS+=	--without-gpgme
 
-.include "../../mk/krb5.buildlink3.mk"
-
-PLIST_SRC=		${PLIST_SRC_DFLT}
-PLIST_SRC+=		PLIST.${KRB5_TYPE}
-
-.if ${KRB5_TYPE} == "mit-krb5"
-CONFIGURE_ARGS+=	--with-system-mitkrb5 --with-experimental-mit-ad-dc
-CONFIGURE_ARGS+=	--with-system-mitkdc=${KRB5BASE}/sbin/krb5kdc
-.endif
+# XXX: currenlty Samba requires embedded Heimdall
+#.include "../../mk/krb5.buildlink3.mk"
+#.if ${KRB5_TYPE} == "mit-krb5"
+#BUILDLINK_API_DEPENDS.mit-krb5+=	mit-krb5>=1.19.0
+#CONFIGURE_ARGS+=	--with-experimental-mit-ad-dc
+#CONFIGURE_ARGS+=	--with-system-mitkdc=${KRB5BASE}/sbin/krb5kdc
+#CONFIGURE_ARGS+=	--with-system-mitkrb5
+#.else
+# XXX: does not work with AD
+#CONFIGURE_ARGS+=	--with-system-heimdalkrb5
+#.endif
 
 # Depends on ncurses, explicitly disable for now.
 CONFIGURE_ARGS+=	--without-regedit
@@ -219,7 +220,7 @@ REPLACE_PYTHON+=	source4/scripting/bin/*
 .endif
 .include "../../archivers/libarchive/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
-BUILDLINK_API_DEPENDS.ldb+=	ldb>=2.5.1
+BUILDLINK_API_DEPENDS.ldb+=	ldb>=2.5.2
 .include "../../databases/ldb/buildlink3.mk"
 .include "../../databases/lmdb/buildlink3.mk"
 .include "../../devel/cmocka/buildlink3.mk"
