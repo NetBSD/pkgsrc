@@ -1,4 +1,4 @@
-# $NetBSD: glob.t,v 1.5 2022/08/09 18:14:22 rillig Exp $
+# $NetBSD: glob.t,v 1.6 2022/08/09 18:35:43 rillig Exp $
 
 use strict;
 use warnings;
@@ -11,46 +11,49 @@ require('../lintpkgsrc.pl');
 sub test_glob2regex() {
 
 	ok(glob2regex('*'), '^.*$');
+	ok(glob2regex('\*'), '');
 
 	ok(glob2regex('?'), '^.$');
+	ok(glob2regex('\?'), '');
+
+	# Ordinary characters in glob patterns.
+	ok(glob2regex('+'), '^\+$');
+	ok(glob2regex('\+'), '');
+	ok(glob2regex('|'), '^\|$');
+	ok(glob2regex('\|'), '');
+
+	ok(glob2regex('\.'), '');
+	ok(glob2regex('\n'), '^n$');
+	ok(glob2regex('\\\\'), '');
+	ok(glob2regex('\['), '');
+	ok(glob2regex('\{'), '');
+	ok(glob2regex('\-'), '');
 
 	ok(glob2regex('[a-z]'), '');
-
 	ok(glob2regex('[a-z0-9]'), '');
-
 	ok(glob2regex('[a-z0-9_]'), '');
-
-	# Outside of braces, the ',' is a regular character.
-	ok(glob2regex('a,b'), '');
-
-	# FIXME: Inside brackets, the '*' is a literal '*'.
-	ok(glob2regex('[*]'), '^[.*]$');
-
-	ok(glob2regex('\*'), '');
+	ok(glob2regex('[*]'), '');
 
 	ok(glob2regex('*.[ch]'), '^.*\.[ch]$');
 
+	# Outside of braces, the ',' is a regular character.
+	ok(glob2regex('a,b'), '');
 	ok(glob2regex('{one,two}'), '^(one|two)$');
-
 	ok(glob2regex('{{thi,fou}r,fif}teen'), '^((thi|fou)r|fif)teen$');
 
 	# There is an unbalanced '}' at the very end.
-	ok(glob2regex('{{thi,fou}r,fif}teen}'), undef);
+	ok(glob2regex('{four,fif}teen}'), undef);
 
-	ok(glob2regex('a+b|c'), '^a\+b\|c$');
-
+	# An escaped '[' does not start a character class.
 	ok(glob2regex('a\[b*'), '^a\[b.*$');
 
-	ok(glob2regex('a\+b'), '');
-
-	ok(glob2regex('a\?b'), '');
-
-	# XXX: Depending on the exact implementation, the '\n' may be
-	# interpreted as a newline, a literal 'n' or a literal '\' 'n'.
-	ok(glob2regex('a\n*'), '^a\n.*$');
+	ok(glob2regex('a\n*'), '^an.*$');
 
 	# https://gnats.netbsd.org/12996
 	ok(glob2regex('libsigc++'), '^libsigc\+\+$');
+
+	my $re = 'a\nb';
+	ok("a\nb" =~ $re, 1);
 }
 
 test_glob2regex();
