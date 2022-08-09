@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.66 2022/08/09 20:51:45 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.67 2022/08/09 21:01:49 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -660,6 +660,9 @@ sub parse_makefile_vars($$) {
 
 		} elsif (m#^[ ]* ([-\w\.]+) \s* ([:+?]?=) \s* (.*)#x) {
 			parse_makefile_line_var($1, $2, $3, \%vars);
+
+		} elsif ($_ eq '' || m#^\s*\## || m#^\t#) {
+			# Skip comment lines and shell commands.
 
 		} else {
 			debug("$file: unknown line '$_'\n");
