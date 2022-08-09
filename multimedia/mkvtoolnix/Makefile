@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.197 2022/07/11 08:46:49 adam Exp $
+# $NetBSD: Makefile,v 1.198 2022/08/09 12:08:34 jperkin Exp $
 
 DISTNAME=	mkvtoolnix-69.0.0
 CATEGORIES=	multimedia
@@ -35,7 +35,6 @@ CONFIGURE_ARGS+=	--with-qmake=${QTDIR}/bin/qmake
 REPLACE_LOCALEDIR_PATTERNS=	build-config.in
 
 LDFLAGS.DragonFly=	-lboost_system
-LDFLAGS.SunOS+=		-lintl
 
 INSTALL_ENV+=	SHELL=${SH:Q}
 

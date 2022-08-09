@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2022/07/08 22:11:33 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2022/08/09 12:08:32 jperkin Exp $
 
 DISTNAME=	ncmpc-0.46
 CATEGORIES=	audio
@@ -29,7 +29,7 @@ CXXFLAGS+=	-Wno-undef
 
 LDFLAGS+=	${BUILDLINK_LDADD.curses}
 
-LDFLAGS.SunOS+=		-lintl -liconv -lsocket -lnsl
+LDFLAGS.SunOS+=		-lsocket -lnsl
 LDFLAGS.NetBSD+=	-lintl
 
 PYTHON_FOR_BUILD_ONLY=	tool

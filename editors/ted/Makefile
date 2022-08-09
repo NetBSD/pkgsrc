@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2022/07/07 20:17:47 nia Exp $
+# $NetBSD: Makefile,v 1.70 2022/08/09 12:08:30 jperkin Exp $
 
 DISTNAME=	ted-2.23.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -20,7 +20,6 @@ AFMDIR=		${PREFIX}/share/Ted/afm
 INDDIR=		${PREFIX}/share/Ted/dfa
 INFODIR=	${PREFIX}/share/doc/Ted
 
-LDFLAGS.SunOS+=		-liconv
 LDFLAGS.Darwin+=	-liconv
 
 MAKE_FLAGS+=	CONFIGURE_OPTIONS=--x-libraries=${X11BASE}/lib\ --with-MOTIF

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2021/06/23 20:33:17 nia Exp $
+# $NetBSD: Makefile,v 1.18 2022/08/09 12:08:34 jperkin Exp $
 #
 
 DISTNAME=	sphinx-2.2.11-release
@@ -63,7 +63,7 @@ CONFIGURE_ARGS+=	--with-iconv
 
 INSTALL_MAKE_FLAGS+=	sysconfdir=${EGDIR}
 
-LIBS.SunOS+=		-liconv -lsocket -lnsl
+LIBS.SunOS+=		-lsocket -lnsl
 
 post-install:
 	${MV} ${DESTDIR}${EGDIR}/sphinx.conf.dist ${DESTDIR}${EGDIR}/sphinx-full.conf

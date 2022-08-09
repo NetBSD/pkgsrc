@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2022/07/29 16:29:08 jperkin Exp $
+# $NetBSD: Makefile,v 1.28 2022/08/09 12:08:33 jperkin Exp $
 
 DISTNAME=	speech-dispatcher-0.10.2
 PKGREVISION=	5
@@ -32,8 +32,6 @@ CONFIGURE_ARGS+=	--without-alsa
 CONFIGURE_ARGS+=	--without-nas
 CONFIGURE_ARGS+=	--without-oss
 CONFIGURE_ARGS+=	--without-pulse
-
-LIBS.SunOS+=	-lintl
 
 .include "../../mk/bsd.prefs.mk"
 
