@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.63 2022/08/09 19:53:02 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.64 2022/08/09 20:01:25 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -483,6 +483,33 @@ sub parse_makefile_line_include($$$$$$) {
 	close(FILE);
 }
 
+sub parse_makefile_line_var($$$$) {
+	my ($varname, $op, $value, $vars) = @_;
+
+	if ($op eq ':=') {
+		$vars->{$varname} = parse_expand_vars($value, $vars);
+	} elsif ($op eq '+=' && defined $vars->{$varname}) {
+		$vars->{$varname} .= " $value";
+	} elsif ($op eq '?=' && defined $vars->{$varname}) {
+		# Do nothing.
+	} else {
+		$vars->{$varname} = $value;
+	}
+	debug($op eq '='
+	    ? "assignment: $varname $op $value\n"
+	    : "assignment: $varname $op $value => $vars->{$varname}\n");
+
+	# Give python a little hand (XXX - do we wanna consider actually
+	# implementing make .for loops, etc?
+	#
+	if ($varname eq 'PYTHON_VERSIONS_ACCEPTED') {
+		foreach my $pv (split(/\s+/, $vars->{PYTHON_VERSIONS_ACCEPTED})) {
+			$vars->{'_PYTHON_VERSION_FIRSTACCEPTED'} ||= $pv;
+			$vars->{"_PYTHON_VERSION_${pv}_OK"} = 'yes';
+		}
+	}
+}
+
 # Extract variable assignments from Makefile
 # Much unpalatable magic to avoid having to use make (all for speed)
 #
@@ -579,9 +606,9 @@ sub parse_makefile_vars($$) {
 			next;
 		}
 
-		$if_false[$#if_false] && next;
+		next if $if_false[$#if_false];
 
-		if (m#^\.\s*include\s+"([^"]+)"#) {
+		if (m#^\. \s* include \s+ "([^"]+)" #x) {
 			my $incfile = parse_expand_vars($1, \%vars);
 
 			parse_makefile_line_include($file, $incfile,
@@ -589,32 +616,8 @@ sub parse_makefile_vars($$) {
 			next;
 		}
 
-		if (/^[ ]* ([-\w\.]+) \s* ([:+?]?=) \s* (.*)/x) {
-			my ($varname, $op, $value) = ($1, $2, $3);
-
-			if ($op eq ':=') {
-				$vars{$varname} = parse_expand_vars($value, \%vars);
-			} elsif ($op eq '+=' && defined $vars{$varname}) {
-				$vars{$varname} .= " $value";
-				# TODO: Handle append to undefined variable.
-			} elsif ($op eq '?=' && defined $vars{$varname}) {
-				# Do nothing.
-			} else {
-				$vars{$varname} = $value;
-			}
-			debug($op eq '='
-			    ? "assignment: $varname $op $value\n"
-			    : "assignment: $varname $op $value => $vars{$varname}\n");
-
-			# Give python a little hand (XXX - do we wanna consider actually
-			# implementing make .for loops, etc?
-			#
-			if ($varname eq 'PYTHON_VERSIONS_ACCEPTED') {
-				foreach my $pv (split(/\s+/, $vars{PYTHON_VERSIONS_ACCEPTED})) {
-					$vars{'_PYTHON_VERSION_FIRSTACCEPTED'} ||= $pv;
-					$vars{"_PYTHON_VERSION_${pv}_OK"} = 'yes';
-				}
-			}
+		if (m#^[ ]* ([-\w\.]+) \s* ([:+?]?=) \s* (.*)#x) {
+			parse_makefile_line_var($1, $2, $3, \%vars);
 		}
 	}
 
