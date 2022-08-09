@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2022/06/28 11:34:12 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2022/08/09 21:57:43 tnn Exp $
 
-PKGNAME=	go-bin-1.17.8
-PKGREVISION=	1
+PKGNAME=	go-bin-1.18.5
 CATEGORIES=	lang
 MASTER_SITES=	https://dl.google.com/go/
 
@@ -77,6 +76,8 @@ ONLY_FOR_PLATFORM+=		NetBSD-*-aarch64
 DIST.netbsd-arm64=		go1.17.8.netbsd-arm64.tar.gz
 SITES.${DIST.netbsd-arm64}=	https://cdn.NetBSD.org/pub/pkgsrc/misc/tnn/golang-aarch64/
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-aarch64) || make(distinfo)
+PKGNAME=			go-bin-1.17.8
+PKGREVISION?=			1
 DISTFILES+=			${DIST.netbsd-arm64}
 EXTRACT_ONLY+=			${DIST.netbsd-arm64}
 .endif
