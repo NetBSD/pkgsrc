@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.56 2022/08/04 21:55:58 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.57 2022/08/09 18:14:22 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -874,6 +874,9 @@ sub list_pkgsrc_pkgdirs($$) {
 	@pkgdirs;
 }
 
+# Convert the glob pattern to a regular expression.
+# Return '' if the regular expression equals the glob expression.
+# Return undef on error.
 sub glob2regex($) {
 	my ($glob) = @_;
 	my (@chars, $in_alt);
@@ -886,8 +889,8 @@ sub glob2regex($) {
 		} elsif ($_ eq '?') {
 			$regex .= '.';
 		} elsif ($_ eq '+') {
-			$regex .= '.';
-		} elsif ($_ eq '\\+') {
+			$regex .= '\\+';
+		} elsif ($_ eq '\\') {
 			$regex .= $_ . shift @chars;
 		} elsif ($_ eq '.' || $_ eq '|') {
 			$regex .= quotemeta;
