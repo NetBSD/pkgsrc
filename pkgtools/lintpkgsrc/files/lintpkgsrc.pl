@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.57 2022/08/09 18:14:22 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.58 2022/08/09 18:35:43 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -879,10 +879,10 @@ sub list_pkgsrc_pkgdirs($$) {
 # Return undef on error.
 sub glob2regex($) {
 	my ($glob) = @_;
-	my (@chars, $in_alt);
-	my ($regex);
 
-	@chars = split(//, $glob);
+	my @chars = split(//, $glob);
+	my $alternative_depth = 0;
+	my $regex = '';
 	while (defined($_ = shift @chars)) {
 		if ($_ eq '*') {
 			$regex .= '.*';
@@ -890,37 +890,43 @@ sub glob2regex($) {
 			$regex .= '.';
 		} elsif ($_ eq '+') {
 			$regex .= '\\+';
-		} elsif ($_ eq '\\') {
-			$regex .= $_ . shift @chars;
+		} elsif ($_ eq '\\' && @chars > 0) {
+			my $next = shift @chars;
+			$regex .= $next =~ /\w/ ? "$next" : "\\$next";
 		} elsif ($_ eq '.' || $_ eq '|') {
 			$regex .= quotemeta;
 		} elsif ($_ eq '{') {
 			$regex .= '(';
-			++$in_alt;
+			++$alternative_depth;
 		} elsif ($_ eq '}') {
-			if (!$in_alt) {
+			if ($alternative_depth == 0) {
 				# Error
 				return undef;
 			}
 			$regex .= ')';
-			--$in_alt;
-		} elsif ($_ eq ',' && $in_alt) {
+			--$alternative_depth;
+		} elsif ($_ eq ',' && $alternative_depth) {
 			$regex .= '|';
+		} elsif ($_ eq '[') {
+			$regex .= '[';
+			while (defined($_ = shift @chars)) {
+				$regex .= $_;
+				if ($_ eq ']') {
+					last;
+				} elsif ($_ eq '\\' && @chars > 0) {
+					$regex .= shift @chars;
+				}
+			}
+			return undef if $_ ne ']';
 		} else {
 			$regex .= $_;
 		}
 	}
 
-	if ($in_alt) {
-		# Error
-		return undef;
-	}
-	if ($regex eq $glob) {
-		return ('');
-	}
-	if ($opt{D}) {
-		print "glob2regex: $glob -> $regex\n";
-	}
+	return undef if $alternative_depth > 0;
+	return '' if $regex eq $glob; # XXX: why?
+
+	$opt{D} and print "glob2regex: $glob -> $regex\n";
 	'^' . $regex . '$';
 }
 
