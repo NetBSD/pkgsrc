@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2020/01/18 21:49:49 jperkin Exp $
+# $NetBSD: Makefile,v 1.11 2022/08/09 12:08:30 jperkin Exp $
 
 DISTNAME=	gnarwl-3.6
 PKGREVISION=	4
@@ -25,8 +25,6 @@ GNARWL_LIBS=		-L${BUILDLINK_PREFIX.openldap}/lib	\
 		-W,-lR${BUILDLINK_PREFIX.gdbm}/lib
 CONFIGURE_ENV+=		LDFLAGS=${GNARWL_LIBS:Q}
 CONFIGURE_ARGS+=	--with-homedir=${GNARWL_HOME}
-
-LDFLAGS.SunOS+=	-liconv
 
 GNARWL_USER?=		gnarwl
 GNARWL_GROUP?=		gnarwl

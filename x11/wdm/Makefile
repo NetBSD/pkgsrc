@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2020/08/17 20:20:37 leot Exp $
+# $NetBSD: Makefile,v 1.68 2022/08/09 12:08:35 jperkin Exp $
 
 DISTNAME=		wdm-1.28
 PKGREVISION=		22
@@ -15,7 +15,7 @@ USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 
 LDFLAGS.DragonFly=	-lintl -lfontconfig
-LDFLAGS.SunOS+=		-lintl -lresolv
+LDFLAGS.SunOS+=		-lresolv
 
 CONFIGURE_ARGS+=	--with-wdmdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-nlsdir=${PREFIX}/${PKGLOCALEDIR}/locale

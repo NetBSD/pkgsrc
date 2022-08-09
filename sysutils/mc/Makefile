@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.128 2022/07/29 16:29:08 jperkin Exp $
+# $NetBSD: Makefile,v 1.129 2022/08/09 12:08:33 jperkin Exp $
 
 DISTNAME=	mc-4.8.28
 PKGREVISION=	1
@@ -25,8 +25,6 @@ CHECK_WRKREF_SKIP+=	bin/mc
 CHECK_WRKREF_SKIP+=	bin/mcdiff
 CHECK_WRKREF_SKIP+=	bin/mcedit
 CHECK_WRKREF_SKIP+=	bin/mcview
-
-LIBS.SunOS+=	-lintl
 
 .include "../../mk/bsd.prefs.mk"
 

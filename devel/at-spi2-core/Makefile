@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2022/07/29 16:29:08 jperkin Exp $
+# $NetBSD: Makefile,v 1.44 2022/08/09 12:08:27 jperkin Exp $
 
 DISTNAME=	at-spi2-core-2.40.3
 PKGREVISION=	2
@@ -16,8 +16,6 @@ USE_TOOLS+=		msgfmt pkg-config
 PKGCONFIG_OVERRIDE=		output/meson-private/atspi-2.pc
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
 MAKE_ENV+=			LD_LIBRARY_PATH=${WRKSRC}/output/atspi
-
-LIBS.SunOS+=	-lintl
 
 BUILD_DEFS+=		PKG_SYSCONFBASE
 

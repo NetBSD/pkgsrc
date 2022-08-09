@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/07/29 16:29:09 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2022/08/09 12:08:31 jperkin Exp $
 
 DISTNAME=	xcpc-20070122
 PKGREVISION=	1
@@ -15,8 +15,6 @@ WRKSRC=		${WRKDIR}/ponceto-xcpc-90cd270f37be
 USE_TOOLS+=	automake pkg-config
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
-
-LIBS.SunOS+=	-lintl
 
 pre-configure:
 	set -e; cd ${WRKSRC}; \
