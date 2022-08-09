@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.64 2022/08/09 20:01:25 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.65 2022/08/09 20:38:12 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -510,6 +510,58 @@ sub parse_makefile_line_var($$$$) {
 	}
 }
 
+sub expand_modifiers($$$$$$$) {
+	my ($file, $varname, $left, $subvar, $mods, $right, $vars) = @_;
+
+	my @patterns = split(':', $mods);
+	my $result = $vars->{$subvar} || '';
+
+	# If the value of $subvar contains a '$', skip it on this pass.
+	# Hopefully it will get substituted and we can catch it
+	# next time around.
+	return 0 if index($result, '${') != -1;
+
+	debug("$file: substitutelist $varname ($result) $subvar (@patterns)\n");
+	foreach (@patterns) {
+		if (m#(U)(.*)#) {
+			$result ||= $2;
+		} elsif (m# ([CS]) (.) ([^/\@]+) \2 ([^/\@]*) \2 ([1g]*) #x) {
+			# TODO: Use non-greedy repetitions above.
+			# TODO: Properly handle separators other than '/' and '@'.
+			my ($how, $from, $to, $global) = ($1, $3, $4, $5);
+
+			debug("$file: ':S' $subvar, $how, $from, $to, $global\n");
+			if ($how eq 'S') {
+				# Limited substitution - keep ^ and $
+				$from =~ s/([?.{}\]\[*+])/\\$1/g;
+			}
+			$to =~ s/\\(\d)/\$$1/g; # Change \1 etc to $1
+			$to =~ s/\&/\$&/g;
+
+			my ($notfirst);
+			if ($global =~ s/1//) {
+				# FIXME: The modifier '1' applies to the first
+				#  occurrence in any word, it doesn't have to
+				#  be in the first word.
+				($from, $notfirst) = split('\s', $from, 2);
+			}
+
+			debug("$file: substituteperl $subvar, $how, $from, $to\n");
+			debug("eval substitute <$from> <$to> <$global>\n");
+			eval "\$result =~ s/$from/$to/$global";
+			if (defined $notfirst) {
+				$result .= " $notfirst";
+			}
+		} else {
+			debug("$file: variable '$varname' has unknown modifier '$_'\n");
+			next;
+		}
+	}
+
+	$vars->{$varname} = $left . $result . $right;
+	return 1;
+}
+
 # Extract variable assignments from Makefile
 # Much unpalatable magic to avoid having to use make (all for speed)
 #
@@ -638,53 +690,7 @@ sub parse_makefile_vars($$) {
 				$loop = 1;
 
 			} elsif ($vars{$key} =~ m#\$\{([\w.]+):([CS]([^{}])[^{}\3]+\3[^{}\3]*\3[g1]*(|:[^{}]+)|U[^{}]+)\}#) {
-				my ($left, $subvar, $right) = ($`, $1, $');
-				my (@patterns) = split(':', $2);
-				my ($result);
-
-				$result = $vars{$subvar};
-				$result ||= '';
-
-				# If $vars{$subvar} contains a $ skip it on this pass.
-				# Hopefully it will get substituted and we can catch it
-				# next time around.
-				if (index($result, '${') != -1) {
-					next;
-				}
-
-				debug("$file: substitutelist $key ($result) $subvar (@patterns)\n");
-				foreach (@patterns) {
-					if (m#(U)(.*)#) {
-						$result ||= $2;
-					} elsif (m#([CS])(.)([^/@]+)\2([^/@]*)\2([1g]*)#) {
-						my ($how, $from, $to, $global) = ($1, $3, $4, $5);
-
-						debug("$file: substituteglob $subvar, $how, $from, $to, $global\n");
-						if ($how eq 'S') {
-							# Limited substitution - keep ^ and $
-							$from =~ s/([?.{}\]\[*+])/\\$1/g;
-						}
-						$to =~ s/\\(\d)/\$$1/g; # Change \1 etc to $1
-						$to =~ s/\&/\$&/g;      # Change & to $1
-
-						my ($notfirst);
-						if ($global =~ s/1//) {
-							($from, $notfirst) = split('\s', $from, 2);
-						}
-
-						debug("$file: substituteperl $subvar, $how, $from, $to\n");
-						debug("eval substitute <$from> <$to> <$global>\n");
-						eval "\$result =~ s/$from/$to/$global";
-						if (defined $notfirst) {
-							$result .= " $notfirst";
-						}
-					} else {
-						next;
-					}
-				}
-
-				$vars{$key} = $left . $result . $right;
-				$loop = 1;
+				$loop ||= expand_modifiers($file, $key, $`, $1, $2, $', \%vars);
 			}
 		}
 	}
