@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.62 2022/08/09 19:42:46 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.63 2022/08/09 19:53:02 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -589,25 +589,28 @@ sub parse_makefile_vars($$) {
 			next;
 		}
 
-		if (/^ *([-\w\.]+)\s*([:+?]?)=\s*(.*)/) {
-			my ($key, $plus, $value) = ($1, $2, $3);
+		if (/^[ ]* ([-\w\.]+) \s* ([:+?]?=) \s* (.*)/x) {
+			my ($varname, $op, $value) = ($1, $2, $3);
 
-			if ($plus eq ':') {
-				$vars{$key} = parse_expand_vars($value, \%vars);
-			} elsif ($plus eq '+' && defined $vars{$key}) {
-				$vars{$key} .= " $value";
-			} elsif ($plus ne '?' || !defined $vars{$key}) {
-				$vars{$key} = $value;
+			if ($op eq ':=') {
+				$vars{$varname} = parse_expand_vars($value, \%vars);
+			} elsif ($op eq '+=' && defined $vars{$varname}) {
+				$vars{$varname} .= " $value";
+				# TODO: Handle append to undefined variable.
+			} elsif ($op eq '?=' && defined $vars{$varname}) {
+				# Do nothing.
+			} else {
+				$vars{$varname} = $value;
 			}
-			debug("assignment: $key$plus=[$value] ($vars{$key})\n");
+			debug($op eq '='
+			    ? "assignment: $varname $op $value\n"
+			    : "assignment: $varname $op $value => $vars{$varname}\n");
 
 			# Give python a little hand (XXX - do we wanna consider actually
 			# implementing make .for loops, etc?
 			#
-			if ($key eq 'PYTHON_VERSIONS_ACCEPTED') {
-				my ($pv);
-
-				foreach $pv (split(/\s+/, $vars{PYTHON_VERSIONS_ACCEPTED})) {
+			if ($varname eq 'PYTHON_VERSIONS_ACCEPTED') {
+				foreach my $pv (split(/\s+/, $vars{PYTHON_VERSIONS_ACCEPTED})) {
 					$vars{'_PYTHON_VERSION_FIRSTACCEPTED'} ||= $pv;
 					$vars{"_PYTHON_VERSION_${pv}_OK"} = 'yes';
 				}
