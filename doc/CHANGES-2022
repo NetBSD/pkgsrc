@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3736 2022/08/09 18:12:04 leot Exp $
+$NetBSD: CHANGES-2022,v 1.3737 2022/08/09 18:14:32 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5549,3 +5549,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/tevent to 0.13.0 [adam 2022-08-09]
 	Updated net/samba4 to 4.16.4 [adam 2022-08-09]
 	Updated net/yt-dlp to 2022.8.8 [leot 2022-08-09]
+	Updated pkgtools/lintpkgsrc to 2022.08.09 [rillig 2022-08-09]
