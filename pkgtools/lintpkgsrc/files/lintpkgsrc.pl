@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.59 2022/08/09 18:42:40 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.60 2022/08/09 19:06:33 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -429,17 +429,15 @@ sub parse_eval_make_false($$) {
 sub parse_makefile_vars($$) {
 	my ($file, $cwd) = @_;
 	my (
-	    $pkgname, %vars, $plus, $value, @data,
+	    %vars, $plus, $value,
 	    %incfiles, # Cache of previously included fils
 	    %incdirs,  # Directories in which to check for includes
 	    @if_false
 	); # 0:true 1:false 2:nested-false&nomore-elsif
+	my @lines;
 
-	if (!open(FILE, $file)) {
-		return (undef);
-	}
-	@data = map { chomp;
-		$_; } <FILE>;
+	open(FILE, $file) or return undef;
+	chomp(@lines = <FILE>);
 	close(FILE);
 
 	$incdirs{'.'} = 1;
@@ -466,13 +464,13 @@ sub parse_makefile_vars($$) {
 		print "$file\n";
 	}
 
-	while (defined($_ = shift(@data))) {
+	while (defined($_ = shift(@lines))) {
 		s/\s*[^\\]#.*//;
 
 		# Continuation lines
 		#
-		while (substr($_, -1) eq "\\") {
-			substr($_, -2) = shift @data;
+		while (substr($_, -1) eq "\\" && @lines > 0) {
+			substr($_, -2) = shift @lines;
 		}
 
 		# Conditionals
@@ -489,7 +487,7 @@ sub parse_makefile_vars($$) {
 				push(@if_false, parse_eval_make_false($2, \%vars));
 
 			} else {
-				$false = !defined($vars{ parse_expand_vars($2, \%vars) });
+				$false = !defined($vars{parse_expand_vars($2, \%vars)});
 				if ($type eq 'ndef') {
 					$false = !$false;
 				}
@@ -529,8 +527,8 @@ sub parse_makefile_vars($$) {
 		if (m#^\.\s*include\s+"([^"]+)"#) {
 			my ($incfile) = parse_expand_vars($1, \%vars);
 
-			# At this point just skip any includes which we were not able to
-			# fully expand
+			# At this point just skip any includes which we were
+			# not able to fully expand.
 			if ($incfile =~ m#/mk/bsd#
 			    || $incfile =~ /$magic_undefined/
 			    || $incfile =~ /\$\{/
@@ -539,9 +537,6 @@ sub parse_makefile_vars($$) {
 
 			} else {
 				debug("$file: .include \"$incfile\"\n");
-
-				# Expand any simple vars in $incfile
-				#
 
 				if (substr($incfile, 0, 1) ne '/') {
 					foreach my $dir (keys %incdirs) {
@@ -552,10 +547,10 @@ sub parse_makefile_vars($$) {
 					}
 				}
 
-				# perl 5.6.1 realpath() cannot handle files, only directories
-				# If the last component is a symlink this will give a false
-				# negative, but that is not a problem as the duplicate check
-				# is for performance
+				# perl 5.6.1 realpath() cannot handle files, only directories.
+				# If the last component is a symlink, this will give a false
+				# negative, but that is not a problem, as the duplicate check
+				# is for performance.
 				$incfile =~ m#^(.+)(/[^/]+)$#;
 
 				if (!-f $incfile) {
@@ -582,10 +577,10 @@ sub parse_makefile_vars($$) {
 							my $NEWCURDIR = $incfile;
 							$NEWCURDIR =~ s#/[^/]*$##;
 							$incdirs{$NEWCURDIR} = 1;
-							unshift(@data, ".CURDIR=$vars{'.CURDIR'}");
-							unshift(@data, map { chomp;
-								$_ } <FILE>);
-							unshift(@data, ".CURDIR=$NEWCURDIR");
+							unshift(@lines, ".CURDIR=$vars{'.CURDIR'}");
+							chomp(my @inc_lines = <FILE>);
+							unshift(@lines, @inc_lines);
+							unshift(@lines, ".CURDIR=$NEWCURDIR");
 							close(FILE);
 						}
 					}
@@ -627,10 +622,8 @@ sub parse_makefile_vars($$) {
 	debug("$file: expand\n");
 
 	# Handle variable substitutions  FRED = a-${JIM:S/-/-b-/}
-	#
-	my ($loop);
 
-	for ($loop = 1; $loop;) {
+	for (my $loop = 1; $loop != 0;) {
 		$loop = 0;
 		foreach my $key (keys %vars) {
 			if (index($vars{$key}, '$') == -1) {
