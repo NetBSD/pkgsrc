@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2017/01/21 23:38:19 rillig Exp $
+# $NetBSD: Makefile.common,v 1.13 2022/08/09 12:08:32 jperkin Exp $
 # used by audio/aumix/Makefile
 # used by audio/aumix-gtk/Makefile
 
@@ -25,8 +25,6 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-own-labels
 CONFIGURE_ARGS+=	--enable-nls
 CONFIGURE_ARGS+=	--without-gtk
-
-LIBS.SunOS+=		-lintl
 
 REPLACE_SH+=		src/mute src/xaumix
 

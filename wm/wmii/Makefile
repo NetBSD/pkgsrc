@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2021/07/21 14:40:31 taca Exp $
+# $NetBSD: Makefile,v 1.42 2022/08/09 12:08:31 jperkin Exp $
 
 DISTNAME=		wmii+ixp-3.9.2
 PKGNAME=		wmii-3.9.2
@@ -47,7 +47,7 @@ CONF_FILES+=		${EGDIR}/${EGSUBDIR.${subdir}}/${file} \
 .endfor
 
 LDFLAGS.NetBSD+=	-lm # frexp
-LDFLAGS.SunOS+=		-lsocket -lnsl -liconv
+LDFLAGS.SunOS+=		-lsocket -lnsl
 
 SUBST_CLASSES+=		vars
 SUBST_STAGE.vars=	pre-configure

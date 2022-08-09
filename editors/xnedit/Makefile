@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/07/11 12:34:58 micha Exp $
+# $NetBSD: Makefile,v 1.7 2022/08/09 12:08:30 jperkin Exp $
 
 DISTNAME=	xnedit-1.4.1
 CATEGORIES=	editors
@@ -24,7 +24,6 @@ CFLAGS.IRIX+=	-DNO_XMIM
 CFLAGS.SunOS+=	-DROWCOLPATCH
 
 LDFLAGS.Darwin+=	-liconv
-LDFLAGS.SunOS+=		-liconv
 
 # Honor external CFLAGS
 SUBST_CLASSES+=			fix-cflags

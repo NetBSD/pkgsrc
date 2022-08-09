@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2022/07/06 11:53:59 adam Exp $
+# $NetBSD: Makefile,v 1.98 2022/08/09 12:08:28 jperkin Exp $
 
 .include "../../devel/git/Makefile.common"
 
@@ -88,7 +88,7 @@ SUBST_MESSAGE.test-shell=	Use bash as TEST_SHELL_PATH
 SUBST_STAGE.test-shell=		pre-build
 SUBST_SED.test-shell=		-e '/^TEST_SHELL_PATH/ s;$$(SHELL_PATH);${TOOLS_BASH};'
 
-LDFLAGS.SunOS+=		-lintl -lnsl
+LDFLAGS.SunOS+=		-lnsl
 
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)

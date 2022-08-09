@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2021/12/08 16:02:03 adam Exp $
+# $NetBSD: Makefile,v 1.23 2022/08/09 12:08:28 jperkin Exp $
 
 DISTNAME=	ucommon-7.0.0
 PKGREVISION=	8
@@ -20,7 +20,7 @@ CMAKE_ARGS+=	-DCRYPTO_OPENSSL=OFF
 PKGCONFIG_OVERRIDE+=	commoncpp.pc.in
 PKGCONFIG_OVERRIDE+=	ucommon.pc.in
 
-LDFLAGS.SunOS+=		-lsocket -lnsl -lintl
+LDFLAGS.SunOS+=		-lsocket -lnsl
 
 .include "options.mk"
 .include "../../mk/dlopen.buildlink3.mk"

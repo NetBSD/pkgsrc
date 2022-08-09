@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2022/06/28 11:37:00 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2022/08/09 12:08:31 jperkin Exp $
 
 DISTNAME=	i3-4.20.1
 PKGREVISION=	2
@@ -15,7 +15,7 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	bash pkg-config perl:run
 USE_LANGUAGES=	c99
 
-LDFLAGS.SunOS+=	-lgen -liconv -lsocket
+LDFLAGS.SunOS+=	-lgen -lsocket
 
 EGDIR=		${PREFIX}/share/examples/i3
 OWN_DIRS+=	${PKG_SYSCONFDIR}/i3

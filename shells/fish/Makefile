@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2022/06/30 11:18:48 nia Exp $
+# $NetBSD: Makefile,v 1.36 2022/08/09 12:08:30 jperkin Exp $
 
 DISTNAME=		fish-3.4.1
 PKGREVISION=		1
@@ -21,8 +21,6 @@ CMAKE_ARGS+=		-DCMAKE_INSTALL_SYSCONFDIR=${PKG_SYSCONFDIR}
 CMAKE_ARGS+=		-DBUILD_DOCS=OFF
 
 PKG_SHELL=		bin/fish
-
-LDFLAGS.SunOS+=		-lintl
 
 .include "../../mk/bsd.prefs.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.125 2022/02/18 11:52:56 micha Exp $
+# $NetBSD: Makefile,v 1.126 2022/08/09 12:08:33 jperkin Exp $
 
 DISTNAME=	schily-2021-09-18
 PKGNAME=	cdrtools-3.02a10
@@ -14,7 +14,6 @@ LICENSE=	cddl-1.0 AND gnu-gpl-v2 AND gnu-lgpl-v2.1 AND 2-clause-bsd
 MAKE_JOBS_SAFE=	no
 
 LDFLAGS.Darwin+=	-liconv
-LDFLAGS.SunOS+=		-liconv
 
 .include "../../mk/bsd.prefs.mk"
 

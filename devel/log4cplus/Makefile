@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2020/01/26 05:26:24 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2022/08/09 12:08:27 jperkin Exp $
 #
 
 DISTNAME=	log4cplus-2.0.3
@@ -22,8 +22,6 @@ CONFIGURE_ARGS+=	--without-wchar_t-support
 CONFIGURE_ARGS+=	--without-qt
 CONFIGURE_ARGS+=	--without-qt5
 CONFIGURE_ARGS+=	--without-python
-
-LDFLAGS.SunOS+=	-liconv
 
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)

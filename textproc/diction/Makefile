@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2020/01/18 23:35:25 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2022/08/09 12:08:35 jperkin Exp $
 
 DISTNAME=	diction-1.13
 CATEGORIES=	textproc
@@ -15,8 +15,6 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake msgfmt
 
 USE_FEATURES+=		getopt_long regcomp snprintf
-
-LIBS.SunOS+=		-lintl
 
 .include "options.mk"
 

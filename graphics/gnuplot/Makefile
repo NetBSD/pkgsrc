@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.159 2022/07/02 16:53:22 ryoon Exp $
+# $NetBSD: Makefile,v 1.160 2022/08/09 12:08:35 jperkin Exp $
 
 DISTNAME=	gnuplot-5.4.2
 CATEGORIES+=	graphics
@@ -23,7 +23,6 @@ INFO_FILES=		yes
 TEST_TARGET=		check
 
 PLIST_SUBST+=		API_VERSION=${API_VERSION}
-LDFLAGS.SunOS+=		-liconv
 
 .include "options.mk"
 
