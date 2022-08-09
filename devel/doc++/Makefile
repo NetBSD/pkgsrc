@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2020/01/26 05:26:23 rillig Exp $
+# $NetBSD: Makefile,v 1.27 2022/08/09 12:08:28 jperkin Exp $
 
 DISTNAME=	doc++-3.4.10
 PKGREVISION=	3
@@ -13,8 +13,6 @@ USE_TOOLS+=		flex gmake msgfmt
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
-
-LIBS.SunOS+=		-lintl
 
 INSTALLATION_DIRS+=	share/doc/doc++
 

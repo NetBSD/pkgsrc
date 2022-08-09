@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2022/06/28 11:37:04 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2022/08/09 12:08:32 jperkin Exp $
 
 DISTNAME=	e2guardian-5.1.1
 PKGREVISION=	6
@@ -48,8 +48,6 @@ CONFIGURE_ARGS+=	--with-proxygroup=${E2G_GROUP}
 CONFIGURE_ARGS+=	--with-piddir=${VARBASE}/run
 CONFIGURE_ARGS+=	--with-logdir=${VARBASE}/log/${E2G_LOG}
 CONFIGURE_ARGS+=	--enable-ntlm
-
-LIBS.SunOS+=		-liconv
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 

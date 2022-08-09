@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2021/12/08 16:03:34 adam Exp $
+# $NetBSD: Makefile,v 1.48 2022/08/09 12:08:31 jperkin Exp $
 #
 
 DISTNAME=	gammu-1.41.0
@@ -47,8 +47,6 @@ SUBST_STAGE.cmakelists=		pre-configure
 SUBST_MESSAGE.cmakelists=	Fixing CMakeLists.txt
 SUBST_FILES.cmakelists=		CMakeLists.txt
 SUBST_SED.cmakelists=		-e 's/LIB_SUFFIX "64"/LIB_SUFFIX ""/'
-
-LDFLAGS.SunOS+=	-lintl
 
 .include "../../databases/unixodbc/buildlink3.mk"
 .include "../../devel/libusb1/buildlink3.mk"

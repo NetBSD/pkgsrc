@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2021/12/08 16:02:19 adam Exp $
+# $NetBSD: Makefile,v 1.16 2022/08/09 12:08:30 jperkin Exp $
 
 DISTNAME=	gmime-3.2.7
 PKGNAME=	${DISTNAME:S/gmime/gmime3/}
@@ -18,8 +18,6 @@ USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
 PKGCONFIG_OVERRIDE+=	gmime.pc.in
-
-LDFLAGS.SunOS+=		-liconv
 
 # one test failure as of 3.2.6
 # test-filters:

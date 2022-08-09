@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2022/07/02 16:53:24 ryoon Exp $
+# $NetBSD: Makefile,v 1.58 2022/08/09 12:08:32 jperkin Exp $
 #
 
 SQUEAK_VERSION=	4.10.2.2614
@@ -29,7 +29,7 @@ CMAKE_ARGS+=	-DPKGMANDIR=${PKGMANDIR}
 CMAKE_ARGS+=	-DVM_HOST=${MACHINE_GNU_PLATFORM:Q} -DVM_VERSION=${SQUEAK_VERSION}
 CMAKE_ARGS+=	-DDEVOSSAUDIO=${DEVOSSAUDIO}
 
-LDFLAGS.SunOS+=	-liconv -lsocket -lnsl -lm
+LDFLAGS.SunOS+=	-lsocket -lnsl -lm
 
 # UUID routines are in libc:
 BUILDLINK_TRANSFORM.NetBSD+=	rm:-luuid

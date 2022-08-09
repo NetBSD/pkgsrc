@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.115 2022/04/18 19:11:50 adam Exp $
+# $NetBSD: Makefile,v 1.116 2022/08/09 12:08:29 jperkin Exp $
 
 DISTNAME=	gtk-gnutella-1.1.11
 PKGREVISION=	18
@@ -22,7 +22,7 @@ CONFIGURE_ARGS+=	--cc=${CC:Q}
 CONFIGURE_ARGS+=	--cflags=${CFLAGS:Unone:Q}
 CONFIGURE_ARGS+=	--yacc="yacc"
 
-LDFLAGS.SunOS+=	-lsocket -lnsl -liconv
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 .include "options.mk"
 
