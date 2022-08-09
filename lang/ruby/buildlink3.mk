@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.20 2021/08/31 11:37:18 markd Exp $
+# $NetBSD: buildlink3.mk,v 1.21 2022/08/09 11:32:47 jperkin Exp $
 
 BUILDLINK_TREE+=	${RUBY_BASE}
 
@@ -25,10 +25,10 @@ buildlink-bin-ruby:
 		${LN} -s $$f ${BUILDLINK_DIR}/bin/ruby; \
 	fi
 
+.include "../../converters/libiconv/buildlink3.mk"
 .if empty(RUBY_USE_PTHREAD:M[nN][oO])
 PTHREAD_OPTS+=		native
 PTHREAD_AUTO_VARS=	yes
-
 .include "../../mk/pthread.buildlink3.mk"
 .endif
 .include "../../mk/dlopen.buildlink3.mk"
