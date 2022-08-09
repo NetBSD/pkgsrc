@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.58 2022/08/09 18:35:43 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.59 2022/08/09 18:42:40 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -892,20 +892,17 @@ sub glob2regex($) {
 			$regex .= '\\+';
 		} elsif ($_ eq '\\' && @chars > 0) {
 			my $next = shift @chars;
-			$regex .= $next =~ /\w/ ? "$next" : "\\$next";
+			$regex .= $next =~ /\w/ ? $next : "\\$next";
 		} elsif ($_ eq '.' || $_ eq '|') {
-			$regex .= quotemeta;
+			$regex .= "\\$_";
 		} elsif ($_ eq '{') {
 			$regex .= '(';
 			++$alternative_depth;
 		} elsif ($_ eq '}') {
-			if ($alternative_depth == 0) {
-				# Error
-				return undef;
-			}
+			return undef if $alternative_depth == 0;
 			$regex .= ')';
 			--$alternative_depth;
-		} elsif ($_ eq ',' && $alternative_depth) {
+		} elsif ($_ eq ',' && $alternative_depth > 0) {
 			$regex .= '|';
 		} elsif ($_ eq '[') {
 			$regex .= '[';
