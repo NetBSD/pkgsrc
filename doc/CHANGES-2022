@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3733 2022/08/09 13:40:09 nia Exp $
+$NetBSD: CHANGES-2022,v 1.3734 2022/08/09 14:19:28 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5545,3 +5545,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated archivers/arqiver to 0.9.0nb3 [pin 2022-08-09]
 	Updated www/firefox91 to 91.12.0 [nia 2022-08-09]
 	Updated www/firefox91-l10n to 91.12.0 [nia 2022-08-09]
+	Updated www/lighttpd to 1.4.66 [schmonz 2022-08-09]
