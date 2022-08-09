@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2022/08/04 21:55:57 rillig Exp $
+# $NetBSD: Makefile,v 1.47 2022/08/09 18:14:22 rillig Exp $
 
-PKGNAME=	lintpkgsrc-4.99
+PKGNAME=	lintpkgsrc-2022.08.09
 CATEGORIES=	pkgtools
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -10,7 +10,6 @@ COMMENT=	Sanity checks on the complete pkgsrc tree
 DEPENDS+=	digest>=20010101:../../pkgtools/digest
 TEST_DEPENDS+=	p5-File-Slurp>=0:../../devel/p5-File-Slurp
 TEST_DEPENDS+=	p5-IO-Null>=0:../../devel/p5-IO-Null
-CONFLICTS+=	pkglint<4.82
 
 USE_TOOLS+=	perl:run
 
