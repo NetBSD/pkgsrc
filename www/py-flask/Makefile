@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2022/08/05 11:46:37 adam Exp $
+# $NetBSD: Makefile,v 1.26 2022/08/09 05:43:29 adam Exp $
 
-DISTNAME=	Flask-2.2.1
+DISTNAME=	Flask-2.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/Flask/}
@@ -13,7 +13,7 @@ LICENSE=	modified-bsd
 DEPENDS+=	${PYPKGPREFIX}-itsdangerous>=2.0:../../security/py-itsdangerous
 DEPENDS+=	${PYPKGPREFIX}-click>=8.0:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=3.0:../../textproc/py-jinja2
-DEPENDS+=	${PYPKGPREFIX}-werkzeug>=2.2.0:../../www/py-werkzeug
+DEPENDS+=	${PYPKGPREFIX}-werkzeug>=2.2.2:../../www/py-werkzeug
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
