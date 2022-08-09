@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.40 2019/11/03 10:39:12 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.41 2022/08/09 11:31:14 jperkin Exp $
 
 BUILDLINK_TREE+=	gettext
 
@@ -25,6 +25,21 @@ BROKEN_GETTEXT_DETECTION?=	no
 .if !empty(BROKEN_GETTEXT_DETECTION:M[yY][eE][sS])
 BUILDLINK_LIBS.gettext+=	${BUILDLINK_LDADD.gettext}
 CONFIGURE_ENV+=			INTLLIBS="${BUILDLINK_LDADD.gettext}"
+.endif
+
+#
+# Due to Linux shipping libintl in libc, third-party software often forgets to
+# explicitly look for and add -lintl when required.  On systems that use GNU
+# ld this isn't always an issue as it will often be pulled in via an explicit
+# library, but some systems have a stricter linker that will not pull in
+# symbols via implicit dependencies, and so we need to explicitly link here.
+#
+# Ideally this would be done via CWRAPPERS_LDADD to avoid leaking into LDFLAGS
+# but there is no concensus on that yet.
+#
+.if ${OPSYS_EXPLICIT_LIBDEPS:Uno:tl} == "yes"
+BUILDLINK_LDFLAGS.gettext+=	${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.gettext}/lib
+BUILDLINK_LDFLAGS.gettext+=	${BUILDLINK_LDADD.gettext}
 .endif
 
 CHECK_BUILTIN.gettext:=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: SunOS.mk,v 1.82 2021/11/29 16:14:23 jperkin Exp $
+# $NetBSD: SunOS.mk,v 1.83 2022/08/09 11:31:14 jperkin Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -138,6 +138,9 @@ _OPSYS_SUPPORTS_CTF=		yes # Compact Type Format conversion.
 _OPSYS_SUPPORTS_FORTIFY=	yes # Requires GCC
 _OPSYS_SUPPORTS_SSP?=		yes # Requires GCC
 _OPSYS_CAN_CHECK_SHLIBS=	yes # Requires readelf
+
+# The Solaris/illumos linker requires explicit library dependencies.
+OPSYS_EXPLICIT_LIBDEPS=		yes
 
 # check for maximum command line length and set it in configure's environment,
 # to avoid a test required by the libtool script that takes forever.
