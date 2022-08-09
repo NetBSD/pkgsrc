@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.61 2022/08/09 19:31:57 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.62 2022/08/09 19:42:46 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -439,7 +439,7 @@ sub parse_makefile_line_include($$$$$$) {
 	debug("$file: .include \"$incfile\"\n");
 
 	if (substr($incfile, 0, 1) ne '/') {
-		foreach my $dir (keys %$incdirs) {
+		foreach my $dir (reverse @$incdirs) {
 			if (-f "$dir/$incfile") {
 				$incfile = "$dir/$incfile";
 				last;
@@ -456,7 +456,7 @@ sub parse_makefile_line_include($$$$$$) {
 	if (!-f $incfile) {
 		$opt{L} or verbose("\n");
 
-		my $dirs = join(' ', sort keys %$incdirs);
+		my $dirs = join(' ', @$incdirs);
 		verbose("$file: Cannot locate $incfile in $dirs\n");
 		return;
 	}
@@ -474,7 +474,8 @@ sub parse_makefile_line_include($$$$$$) {
 
 	my $NEWCURDIR = $incfile;
 	$NEWCURDIR =~ s#/[^/]*$##;
-	$incdirs->{$NEWCURDIR} = 1;
+	push(@$incdirs, $NEWCURDIR)
+	    unless grep { $_ eq $NEWCURDIR } @$incdirs;
 	unshift(@$lines, ".CURDIR=" . $vars->{'.CURDIR'});
 	chomp(my @inc_lines = <FILE>);
 	unshift(@$lines, @inc_lines);
@@ -487,20 +488,19 @@ sub parse_makefile_line_include($$$$$$) {
 #
 sub parse_makefile_vars($$) {
 	my ($file, $cwd) = @_;
-	my (
-	    %vars, $plus, $value,
-	    %incfiles, # Cache of previously included fils
-	    %incdirs,  # Directories in which to check for includes
-	    @if_false
-	); # 0:true 1:false 2:nested-false&nomore-elsif
+
+	my %vars;
+	my %incfiles; # Cache of previously included files
+	my @incdirs;  # Directories in which to check for includes
+	my @if_false; # 0:true 1:false 2:nested-false&nomore-elsif
 	my @lines;
 
 	open(FILE, $file) or return undef;
 	chomp(@lines = <FILE>);
 	close(FILE);
 
-	$incdirs{'.'} = 1;
-	$incdirs{dirname($file)} = 1;
+	push(@incdirs, '.');
+	push(@incdirs, dirname($file));
 
 	# Some Makefiles depend on these being set
 	if ($file eq '/etc/mk.conf') {
@@ -518,7 +518,7 @@ sub parse_makefile_vars($$) {
 		$vars{'.CURDIR'} = getcwd;
 	}
 
-	$incdirs{$vars{'.CURDIR'}} = 1;
+	push(@incdirs, $vars{'.CURDIR'});
 	if ($opt{L}) {
 		print "$file\n";
 	}
@@ -585,16 +585,12 @@ sub parse_makefile_vars($$) {
 			my $incfile = parse_expand_vars($1, \%vars);
 
 			parse_makefile_line_include($file, $incfile,
-			    \%incdirs, \%incfiles, \@lines, \%vars);
+			    \@incdirs, \%incfiles, \@lines, \%vars);
 			next;
 		}
 
 		if (/^ *([-\w\.]+)\s*([:+?]?)=\s*(.*)/) {
-			my ($key);
-
-			$key = $1;
-			$plus = $2;
-			$value = $3;
+			my ($key, $plus, $value) = ($1, $2, $3);
 
 			if ($plus eq ':') {
 				$vars{$key} = parse_expand_vars($value, \%vars);
