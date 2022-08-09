@@ -1,4 +1,4 @@
-# $NetBSD: parse_makefile.t,v 1.3 2022/08/03 18:51:56 rillig Exp $
+# $NetBSD: parse_makefile.t,v 1.4 2022/08/09 20:51:46 rillig Exp $
 
 use strict;
 use warnings;
@@ -10,7 +10,7 @@ BEGIN { plan tests => 6, onfail => sub { die } }
 
 require('../lintpkgsrc.pl');
 
-sub test_parse_expand_vars() {
+sub test_expand_var() {
 	my %vars = (
 	    CFLAGS      => '${CFLAGS_OPT} ${CFLAGS_WARN} ${CFLAGS_ERR}',
 	    CFLAGS_WARN => '${CFLAGS_WARN_ALL}',
@@ -18,7 +18,7 @@ sub test_parse_expand_vars() {
 	    CFLAGS_ERR  => '${CFLAGS_WARN_ALL:M*error=*}',
 	);
 
-	my $cflags = parse_expand_vars('<${CFLAGS}>', \%vars);
+	my $cflags = expand_var('<${CFLAGS}>', \%vars);
 
 	ok($cflags, '<-Os M_a_G_i_C_uNdEfInEd ${CFLAGS_WARN_ALL:M*error=*}>')
 }
@@ -52,5 +52,5 @@ sub test_parse_makefile_vars() {
 	ok($vars->{VAR}, 'value');
 }
 
-test_parse_expand_vars();
+test_expand_var();
 test_parse_makefile_vars();

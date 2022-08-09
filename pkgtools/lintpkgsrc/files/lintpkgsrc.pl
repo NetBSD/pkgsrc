@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.65 2022/08/09 20:38:12 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.66 2022/08/09 20:51:45 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -323,19 +323,19 @@ sub pkgversioncmp($$$) {
 	}
 }
 
-# Return a copy of $line in which trivial variable expressions are replaced
-# with the variable values.
-sub parse_expand_vars($$) {
-	my ($line, $vars) = @_;
+# Return a copy of $value in which trivial variable expressions are replaced
+# with their variable values.
+sub expand_var($$) {
+	my ($value, $vars) = @_;
 
-	while ($line =~ /\$\{([-\w.]+)\}/) {
-		if (defined(${$vars}{$1})) {
-			$line = $` . ${$vars}{$1} . $';
+	while ($value =~ /\$\{([-\w.]+)\}/) {
+		if (defined($vars->{$1})) {
+			$value = $` . $vars->{$1} . $';
 		} else {
-			$line = $` . $magic_undefined . $';
+			$value = $` . $magic_undefined . $';
 		}
 	}
-	$line;
+	$value;
 }
 
 sub parse_eval_make_false($$) {
@@ -343,7 +343,7 @@ sub parse_eval_make_false($$) {
 	my ($false, $test);
 
 	$false = 0;
-	$test = parse_expand_vars($line, $vars);
+	$test = expand_var($line, $vars);
 
 	# XXX This is _so_ wrong - need to parse this correctly
 	$test =~ s/""/\r/g;
@@ -363,7 +363,7 @@ sub parse_eval_make_false($$) {
 			my $match = $2;
 
 			$var = $${vars}{$varname};
-			$var = parse_expand_vars($var, $vars)
+			$var = expand_var($var, $vars)
 			    if defined $var;
 
 			$match =~ s/([{.+])/\\$1/g;
@@ -374,7 +374,7 @@ sub parse_eval_make_false($$) {
 			    if defined $var;
 		} else {
 			$var = $${vars}{$varname};
-			$var = parse_expand_vars($var, $vars)
+			$var = expand_var($var, $vars)
 			    if defined $var;
 		}
 
@@ -487,7 +487,7 @@ sub parse_makefile_line_var($$$$) {
 	my ($varname, $op, $value, $vars) = @_;
 
 	if ($op eq ':=') {
-		$vars->{$varname} = parse_expand_vars($value, $vars);
+		$vars->{$varname} = expand_var($value, $vars);
 	} elsif ($op eq '+=' && defined $vars->{$varname}) {
 		$vars->{$varname} .= " $value";
 	} elsif ($op eq '?=' && defined $vars->{$varname}) {
@@ -513,7 +513,7 @@ sub parse_makefile_line_var($$$$) {
 sub expand_modifiers($$$$$$$) {
 	my ($file, $varname, $left, $subvar, $mods, $right, $vars) = @_;
 
-	my @patterns = split(':', $mods);
+	my @mods = split(':', $mods);
 	my $result = $vars->{$subvar} || '';
 
 	# If the value of $subvar contains a '$', skip it on this pass.
@@ -521,8 +521,8 @@ sub expand_modifiers($$$$$$$) {
 	# next time around.
 	return 0 if index($result, '${') != -1;
 
-	debug("$file: substitutelist $varname ($result) $subvar (@patterns)\n");
-	foreach (@patterns) {
+	debug("$file: substitutelist $varname ($result) $subvar (@mods)\n");
+	foreach (@mods) {
 		if (m#(U)(.*)#) {
 			$result ||= $2;
 		} elsif (m# ([CS]) (.) ([^/\@]+) \2 ([^/\@]*) \2 ([1g]*) #x) {
@@ -558,7 +558,7 @@ sub expand_modifiers($$$$$$$) {
 		}
 	}
 
-	$vars->{$varname} = $left . $result . $right;
+	$vars->{$varname} = "$left$result$right";
 	return 1;
 }
 
@@ -605,15 +605,14 @@ sub parse_makefile_vars($$) {
 	while (defined($_ = shift(@lines))) {
 		s/\s*[^\\]#.*//;
 
-		# Continuation lines
-		#
+		# Join continuation lines.
 		while (substr($_, -1) eq "\\" && @lines > 0) {
 			substr($_, -2) = shift @lines;
 		}
 
 		# Conditionals
 		#
-		if (m#^\.\s*if(|def|ndef)\s+(.*)#) {
+		if (m#^ \. \s* if(|def|ndef) \s+ (.*) #x) {
 			my ($type, $false);
 
 			$type = $1;
@@ -625,17 +624,15 @@ sub parse_makefile_vars($$) {
 				push(@if_false, parse_eval_make_false($2, \%vars));
 
 			} else {
-				$false = !defined($vars{parse_expand_vars($2, \%vars)});
+				$false = !defined($vars{expand_var($2, \%vars)});
 				if ($type eq 'ndef') {
 					$false = !$false;
 				}
 				push(@if_false, $false ? 1 : 0);
 			}
 			debug("$file: .if$type (! @if_false)\n");
-			next;
-		}
 
-		if (m#^\.\s*elif\s+(.*)# && @if_false) {
+		} elsif (m#^ \. \s* elif \s+ (.*)#x && @if_false) {
 			if ($if_false[$#if_false] == 0) {
 				$if_false[$#if_false] = 2;
 			} elsif ($if_false[$#if_false] == 1
@@ -643,33 +640,29 @@ sub parse_makefile_vars($$) {
 				$if_false[$#if_false] = 0;
 			}
 			debug("$file: .elif (! @if_false)\n");
-			next;
-		}
 
-		if (m#^\.\s*else\b# && @if_false) {
+		} elsif (m#^ \. \s* else \b #x && @if_false) {
 			$if_false[$#if_false] = $if_false[$#if_false] == 1 ? 0 : 1;
 			debug("$file: .else (! @if_false)\n");
-			next;
-		}
 
-		if (m#^\.\s*endif\b#) {
+		} elsif (m#^\. \s* endif \b #x) {
 			pop(@if_false);
 			debug("$file: .endif (! @if_false)\n");
-			next;
-		}
 
-		next if $if_false[$#if_false];
+		} elsif ($if_false[$#if_false]) {
+			# Skip branches whose condition evaluated to false.
 
-		if (m#^\. \s* include \s+ "([^"]+)" #x) {
-			my $incfile = parse_expand_vars($1, \%vars);
+		} elsif (m#^\. \s* include \s+ "([^"]+)" #x) {
+			my $incfile = expand_var($1, \%vars);
 
 			parse_makefile_line_include($file, $incfile,
 			    \@incdirs, \%incfiles, \@lines, \%vars);
-			next;
-		}
 
-		if (m#^[ ]* ([-\w\.]+) \s* ([:+?]?=) \s* (.*)#x) {
+		} elsif (m#^[ ]* ([-\w\.]+) \s* ([:+?]?=) \s* (.*)#x) {
 			parse_makefile_line_var($1, $2, $3, \%vars);
+
+		} else {
+			debug("$file: unknown line '$_'\n");
 		}
 	}
 
@@ -680,11 +673,9 @@ sub parse_makefile_vars($$) {
 	for (my $loop = 1; $loop != 0;) {
 		$loop = 0;
 		foreach my $key (keys %vars) {
-			if (index($vars{$key}, '$') == -1) {
-				next;
-			}
+			next if index($vars{$key}, '$') == -1;
 
-			$_ = parse_expand_vars($vars{$key}, \%vars);
+			$_ = expand_var($vars{$key}, \%vars);
 			if ($_ ne $vars{$key}) {
 				$vars{$key} = $_;
 				$loop = 1;
