@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3728 2022/08/09 06:36:27 pin Exp $
+$NetBSD: CHANGES-2022,v 1.3729 2022/08/09 06:38:01 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5540,3 +5540,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/py-werkzeug to 2.2.2 [adam 2022-08-09]
 	Updated www/py-flask to 2.2.2 [adam 2022-08-09]
 	Updated sysutils/felix to 1.1.0 [pin 2022-08-09]
+	Updated shells/ksh93 to 1.0.1 [pin 2022-08-09]
