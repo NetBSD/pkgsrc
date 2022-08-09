@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.131 2022/07/14 23:46:27 dholland Exp $
+# $NetBSD: Makefile,v 1.132 2022/08/09 12:08:35 jperkin Exp $
 
 DISTNAME=	kdelibs-4.14.38
 PKGNAME=	${DISTNAME:S/-4/4-4/}
@@ -83,7 +83,6 @@ PLIST.kgrantpty=	yes
 
 CFLAGS.SunOS+=		-D__EXTENSIONS__
 LDFLAGS.Darwin+=	-lintl
-LDFLAGS.SunOS+=		-lintl
 
 # jasper uses SIZE_MAX and friends in its headers.
 CXXFLAGS+=	-D__STDC_LIMIT_MACROS

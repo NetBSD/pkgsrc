@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2022/07/29 16:29:09 jperkin Exp $
+# $NetBSD: Makefile,v 1.16 2022/08/09 12:08:33 jperkin Exp $
 
 PKGNAME=	${DISTNAME:S/-/-tray-monitor-qt5-/}
 PKGREVISION=	3
@@ -15,8 +15,6 @@ CONFIGURE_ARGS+=	--enable-bat
 BUILDLINK_TRANSFORM+=	opt:-std=c++98:-std=gnu++98 # typeof
 
 BUILD_DIRS=		src/qt-console/tray-monitor
-
-LIBS.SunOS+=	-lintl
 
 INSTALLATION_DIRS=	bin share/examples/bacula
 

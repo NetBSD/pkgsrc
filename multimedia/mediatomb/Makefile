@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2022/04/18 19:11:46 adam Exp $
+# $NetBSD: Makefile,v 1.84 2022/08/09 12:08:34 jperkin Exp $
 
 DISTNAME=	mediatomb-0.12.1
 PKGREVISION=	61
@@ -42,8 +42,6 @@ SUBST_VARS.config=	MEDIATOMB_HOME PREFIX OPSYS
 SUBST_STAGE.config=	pre-configure
 
 INSTALLATION_DIRS+=	share/applications share/examples/mediatomb
-
-LDFLAGS.SunOS+=	-liconv
 
 post-extract:
 	${CP} ${FILESDIR}/config.xml.in ${WRKSRC}/config.xml
