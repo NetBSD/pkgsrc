@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2022/04/18 19:10:18 adam Exp $
+# $NetBSD: Makefile,v 1.20 2022/08/09 12:06:15 pin Exp $
 
 DISTNAME=	Arqiver-0.9.0
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tsujan/}
 GITHUB_TAG=	V${PKGVERSION_NOREV}
@@ -13,10 +13,17 @@ COMMENT=	Simple Qt5 archive manager
 LICENSE=	gnu-gpl-v3
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
-USE_LANGUAGES=	c++
+USE_CMAKE=	yes
+USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config bsdtar:run gzip:run 7za:run
 
-INSTALL_MAKE_FLAGS+=	INSTALL_ROOT=${DESTDIR}
+CONFIGURE_DIRS=	build
+CMAKE_ARG_PATH=	..
+
+CMAKE_ARGS+=	-DCMAKE_INSTALL_PREFIX=${PREFIX}
+
+pre-configure:
+	${MKDIR} -p ${WRKSRC}/build
 
 SUBST_CLASSES+=		prefix
 SUBST_MESSAGE.prefix=	Fixing paths.
@@ -29,11 +36,6 @@ SUBST_SED.prefix+=	-e 's,"7z","${TOOLS_PATH.7za}",g'
 # (Can't include closing double-quotes below, as there are varying
 # character sequences following the command references.)
 SUBST_SED.prefix+=	-e 's,"xdg-open,"${PREFIX}/bin/xdg-open,g'
-
-do-configure:
-	cd ${WRKSRC} && \
-	${SETENV} ${CONFIGURE_ENV} \
-	${QTDIR}/bin/qmake -o Makefile PREFIX=${PREFIX}
 
 # Either needs misc/xdg-utils for xdg-open or devel/glib2 for gio.
 # Upstream prefers glib2, but xdg-utils is a lot smaller, so use
