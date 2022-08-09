@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.60 2022/08/09 19:06:33 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.61 2022/08/09 19:31:57 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -423,6 +423,65 @@ sub parse_eval_make_false($$) {
 	$false;
 }
 
+sub parse_makefile_line_include($$$$$$) {
+	my ($file, $incfile, $incdirs, $included, $lines, $vars) = @_;
+
+	# At this point just skip any includes which we were
+	# not able to fully expand.
+	if ($incfile =~ m#/mk/bsd#
+	    || $incfile =~ /$magic_undefined/
+	    || $incfile =~ /\$\{/
+	    || (!$opt{d} && $incfile =~ m#/(buildlink[^/]*\.mk)#)) {
+		debug("$file: .include \"$incfile\" skipped\n");
+		return;
+	}
+
+	debug("$file: .include \"$incfile\"\n");
+
+	if (substr($incfile, 0, 1) ne '/') {
+		foreach my $dir (keys %$incdirs) {
+			if (-f "$dir/$incfile") {
+				$incfile = "$dir/$incfile";
+				last;
+			}
+		}
+	}
+
+	# perl 5.6.1 realpath() cannot handle files, only directories.
+	# If the last component is a symlink, this will give a false
+	# negative, but that is not a problem, as the duplicate check
+	# is for performance.
+	$incfile =~ m#^(.+)(/[^/]+)$#;
+
+	if (!-f $incfile) {
+		$opt{L} or verbose("\n");
+
+		my $dirs = join(' ', sort keys %$incdirs);
+		verbose("$file: Cannot locate $incfile in $dirs\n");
+		return;
+	}
+
+	$incfile = realpath($1) . $2;
+	return if $included->{$incfile};
+
+	$opt{L} and print "inc $incfile\n";
+	$included->{$incfile} = 1;
+
+	if (!open(FILE, $incfile)) {
+		verbose("Cannot open '$incfile' (from $file): $_ $!\n");
+		return;
+	}
+
+	my $NEWCURDIR = $incfile;
+	$NEWCURDIR =~ s#/[^/]*$##;
+	$incdirs->{$NEWCURDIR} = 1;
+	unshift(@$lines, ".CURDIR=" . $vars->{'.CURDIR'});
+	chomp(my @inc_lines = <FILE>);
+	unshift(@$lines, @inc_lines);
+	unshift(@$lines, ".CURDIR=$NEWCURDIR");
+	close(FILE);
+}
+
 # Extract variable assignments from Makefile
 # Much unpalatable magic to avoid having to use make (all for speed)
 #
@@ -522,70 +581,11 @@ sub parse_makefile_vars($$) {
 
 		$if_false[$#if_false] && next;
 
-		# Included files (just unshift onto @data)
-		#
 		if (m#^\.\s*include\s+"([^"]+)"#) {
-			my ($incfile) = parse_expand_vars($1, \%vars);
+			my $incfile = parse_expand_vars($1, \%vars);
 
-			# At this point just skip any includes which we were
-			# not able to fully expand.
-			if ($incfile =~ m#/mk/bsd#
-			    || $incfile =~ /$magic_undefined/
-			    || $incfile =~ /\$\{/
-			    || (!$opt{d} && $incfile =~ m#/(buildlink[^/]*\.mk)#)) {
-				debug("$file: .include \"$incfile\" skipped\n");
-
-			} else {
-				debug("$file: .include \"$incfile\"\n");
-
-				if (substr($incfile, 0, 1) ne '/') {
-					foreach my $dir (keys %incdirs) {
-						if (-f "$dir/$incfile") {
-							$incfile = "$dir/$incfile";
-							last;
-						}
-					}
-				}
-
-				# perl 5.6.1 realpath() cannot handle files, only directories.
-				# If the last component is a symlink, this will give a false
-				# negative, but that is not a problem, as the duplicate check
-				# is for performance.
-				$incfile =~ m#^(.+)(/[^/]+)$#;
-
-				if (!-f $incfile) {
-					if (!$opt{L}) {
-						verbose("\n");
-					}
-
-					verbose("$file: Cannot locate $incfile in "
-					    . join(' ', sort keys %incdirs)
-					    . "\n");
-
-				} else {
-					$incfile = realpath($1) . $2;
-
-					if (!$incfiles{$incfile}) {
-						if ($opt{L}) {
-							print "inc $incfile\n";
-						}
-						$incfiles{$incfile} = 1;
-
-						if (!open(FILE, $incfile)) {
-							verbose("Cannot open '$incfile' (from $file): $_ $!\n");
-						} else {
-							my $NEWCURDIR = $incfile;
-							$NEWCURDIR =~ s#/[^/]*$##;
-							$incdirs{$NEWCURDIR} = 1;
-							unshift(@lines, ".CURDIR=$vars{'.CURDIR'}");
-							chomp(my @inc_lines = <FILE>);
-							unshift(@lines, @inc_lines);
-							unshift(@lines, ".CURDIR=$NEWCURDIR");
-							close(FILE);
-						}
-					}
-				}
-			}
+			parse_makefile_line_include($file, $incfile,
+			    \%incdirs, \%incfiles, \@lines, \%vars);
 			next;
 		}
 
