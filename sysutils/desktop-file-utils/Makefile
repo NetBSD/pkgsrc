@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2021/12/08 16:06:28 adam Exp $
+# $NetBSD: Makefile,v 1.47 2022/08/09 12:08:33 jperkin Exp $
 
 DISTNAME=	desktop-file-utils-0.26
 PKGREVISION=	1
@@ -15,8 +15,6 @@ LICENSE=	gnu-gpl-v2
 GCC_REQD+=	4.7
 
 USE_TOOLS+=		pkg-config
-
-LDFLAGS.SunOS+=		-lintl
 
 FILES_SUBST+=		APPLICATIONS_PATH="${PREFIX}/share/applications"
 FILES_SUBST+=		UPDATE_DESKTOPDB="${PREFIX}/bin/update-desktop-database"

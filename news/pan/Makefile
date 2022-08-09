@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.123 2022/07/03 13:31:41 rhialto Exp $
+# $NetBSD: Makefile,v 1.124 2022/08/09 12:08:34 jperkin Exp $
 
 PKGNAME=		pan-0.151
 CATEGORIES=		news
@@ -29,7 +29,7 @@ CONFIGURE_ARGS+=	--with-gtkspell
 LIBS+=			-lcompat
 .endif
 
-LIBS.SunOS+=	-lsocket -liconv
+LIBS.SunOS+=	-lsocket
 
 pre-configure:
 	cd ${WRKSRC} && ./autogen.sh

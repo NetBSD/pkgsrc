@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/08/06 16:31:21 adam Exp $
+# $NetBSD: Makefile,v 1.5 2022/08/09 12:08:34 jperkin Exp $
 
 DISTNAME=	freexl-1.0.6
 CATEGORIES=	textproc
@@ -14,8 +14,6 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE=	freexl.pc.in
 TEST_TARGET=		check
-
-LIBS.SunOS+=	-liconv
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

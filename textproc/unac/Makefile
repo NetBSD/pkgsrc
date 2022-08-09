@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2017/09/06 10:40:34 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/08/09 12:08:34 jperkin Exp $
 #
 
 DISTNAME=	unac-1.7.0
@@ -14,8 +14,6 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 
 PKGCONFIG_OVERRIDE+=	unac.pc.in
-
-LIBS.SunOS+=	-liconv
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

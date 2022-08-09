@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2022/07/29 16:29:08 jperkin Exp $
+# $NetBSD: Makefile,v 1.40 2022/08/09 12:08:34 jperkin Exp $
 
 DISTNAME=	json-glib-1.6.2
 PKGREVISION=	2
@@ -19,8 +19,6 @@ USE_TOOLS+=	msgfmt pkg-config xgettext
 MESON_ARGS+=	-Dman=true
 MESON_ARGS+=	-Dgtk_doc=disabled
 MESON_ARGS+=	-Dintrospection=enabled
-
-LIBS.SunOS+=	-lintl
 
 .include "../../mk/compiler.mk"
 

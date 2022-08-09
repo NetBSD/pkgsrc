@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2022/06/28 11:37:03 wiz Exp $
+# $NetBSD: Makefile,v 1.86 2022/08/09 12:08:32 jperkin Exp $
 
 DISTNAME=	dillo-3.0.5
 PKGREVISION=	11
@@ -28,8 +28,6 @@ CONF_FILES+=		${EGDIR}/domainrc ${PKG_SYSCONFDIR}/domainrc
 INSTALLATION_DIRS=	share/doc/dillo ${EGDIR}
 
 INSTALL_MAKE_FLAGS+=	sysconfdir=${EGDIR}
-
-LIBS.SunOS+=	-liconv
 
 .include "options.mk"
 

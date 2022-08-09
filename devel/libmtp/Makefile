@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2021/11/13 10:20:12 nia Exp $
+# $NetBSD: Makefile,v 1.23 2022/08/09 12:08:28 jperkin Exp $
 
 DISTNAME=	libmtp-1.1.19
 CATEGORIES=	devel
@@ -20,7 +20,6 @@ REPLACE_SH=		hotplug.sh.in
 REPLACE_SH+=		libmtp.sh.in
 
 LDFLAGS.FreeBSD+=	-liconv
-LDFLAGS.SunOS=		-liconv
 
 .include "options.mk"
 

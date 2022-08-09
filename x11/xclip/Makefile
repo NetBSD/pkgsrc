@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2020/11/08 15:25:58 kim Exp $
+# $NetBSD: Makefile,v 1.22 2022/08/09 12:08:35 jperkin Exp $
 
 DISTNAME=	xclip-0.13
 PKGREVISION=	1
@@ -12,8 +12,6 @@ LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	autoconf gmake
-
-LDFLAGS.SunOS+=	-liconv
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf

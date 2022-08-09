@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.108 2022/06/30 11:18:20 nia Exp $
+# $NetBSD: Makefile,v 1.109 2022/08/09 12:08:30 jperkin Exp $
 
 DISTNAME=		lyx-2.3.6.1
 PKGREVISION=		6
@@ -66,7 +66,6 @@ USE_PKGLOCALEDIR=		YES
 PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 1.6.10
 
 CXXFLAGS.Linux+=	-fpermissive
-LDFLAGS.SunOS+=		-liconv
 
 CONFIGURE_ARGS+=	--without-included-mythes
 CONFIGURE_ARGS+=	--without-included-boost

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.104 2022/07/29 16:29:09 jperkin Exp $
+# $NetBSD: Makefile,v 1.105 2022/08/09 12:08:28 jperkin Exp $
 
 DISTNAME=	libgsf-1.14.47
 PKGREVISION=	5
@@ -17,8 +17,6 @@ USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	yes
 
 PKGCONFIG_OVERRIDE=	libgsf-1.pc.in
-
-LIBS.SunOS+=	-lintl
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
