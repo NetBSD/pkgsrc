@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3747 2022/08/10 10:58:02 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3748 2022/08/10 11:45:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5566,3 +5566,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/nspr to 4.34.1 [wiz 2022-08-10]
 	Updated lang/py-pygls to 0.12.1 [adam 2022-08-10]
 	Updated security/py-ecdsa to 0.18.0 [adam 2022-08-10]
+	Updated lang/py-cmake-language-server to 0.1.6 [adam 2022-08-10]
+	Updated devel/py-more-itertools to 8.14.0 [adam 2022-08-10]
