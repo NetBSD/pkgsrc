@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.69 2022/08/10 07:12:52 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.70 2022/08/10 20:16:55 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -13,7 +13,7 @@
 # TODO: Handle fun DEPENDS like avifile-devel with
 #			{qt2-designer>=2.2.4,qt2-designer-kde>=2.3.1nb1}
 
-use v5.34;
+use v5.36;
 use locale;
 use strict;
 use warnings;
@@ -22,8 +22,6 @@ use File::Find;
 use File::Basename;
 use IPC::Open3;
 use Cwd 'realpath', 'getcwd';
-use feature 'signatures';               # only for < v5.36
-no warnings 'experimental::signatures'; # only for < v5.36
 
 # PkgVer is a PKGBASE + PKGVERSION, including some of the variables that
 # have been extracted from the package Makefile.
@@ -178,12 +176,12 @@ my (
 # gets removed in the final evaluation
 my $magic_undefined = 'M_a_G_i_C_uNdEfInEd';
 
-sub debug(@) {
-	$opt{D} and print STDERR 'DEBUG: ', @_;
+sub debug(@args) {
+	$opt{D} and print STDERR 'DEBUG: ', @args;
 }
 
-sub verbose(@) {
-	-t STDERR and print STDERR @_;
+sub verbose(@args) {
+	-t STDERR and print STDERR @args;
 }
 
 sub fail($msg) {
@@ -1035,7 +1033,7 @@ sub load_pkgsrc_makefiles($fname) {
 	open(STORE, '<', $fname)
 	    or die("Cannot read pkgsrc store from $fname: $!\n");
 	my ($pkgver);
-	$pkgdb = PkgDb->new;
+	$pkgdb = PkgDb->new();
 	while (defined(my $line = <STORE>)) {
 		chomp($line);
 		if ($line =~ qr"^package\t([^\t]+)\t([^\t]+$)$") {
@@ -1067,7 +1065,7 @@ sub scan_pkgsrc_makefiles($pkgsrcdir) {
 		return;
 	}
 
-	$pkgdb = new PkgDb;
+	$pkgdb = PkgDb->new();
 	@categories = list_pkgsrc_categories($pkgsrcdir);
 	verbose('Scan Makefiles: ');
 
@@ -1356,8 +1354,8 @@ sub check_prebuilt_packages() {
 	}
 }
 
-sub debug_parse_makefiles(@) {
-	foreach my $file (@_) {
+sub debug_parse_makefiles(@args) {
+	foreach my $file (@args) {
 		-d $file and $file .= '/Makefile';
 		-f $file or fail("No such file: $file");
 
