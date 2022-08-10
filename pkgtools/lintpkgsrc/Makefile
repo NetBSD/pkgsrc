@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.47 2022/08/09 18:14:22 rillig Exp $
+# $NetBSD: Makefile,v 1.48 2022/08/10 20:16:55 rillig Exp $
 
-PKGNAME=	lintpkgsrc-2022.08.09
+PKGNAME=	lintpkgsrc-2022.08.10
 CATEGORIES=	pkgtools
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -12,6 +12,7 @@ TEST_DEPENDS+=	p5-File-Slurp>=0:../../devel/p5-File-Slurp
 TEST_DEPENDS+=	p5-IO-Null>=0:../../devel/p5-IO-Null
 
 USE_TOOLS+=	perl:run
+PERL5_REQD+=	5.36
 
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# none
