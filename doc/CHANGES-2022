@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3746 2022/08/10 10:16:34 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3747 2022/08/10 10:58:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5564,3 +5564,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-pip to 22.2.2 [adam 2022-08-10]
 	Updated sysutils/parallel-disk-usage to 0.8.1 [pin 2022-08-10]
 	Updated devel/nspr to 4.34.1 [wiz 2022-08-10]
+	Updated lang/py-pygls to 0.12.1 [adam 2022-08-10]
+	Updated security/py-ecdsa to 0.18.0 [adam 2022-08-10]
