@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/08/10 07:25:25 adam Exp $
+# $NetBSD: Makefile,v 1.3 2022/08/10 07:41:04 adam Exp $
 
 DISTNAME=	distlib-0.3.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,6 +13,8 @@ LICENSE=	python-software-foundation
 BUILD_DEPENDS+=	${PYPKGPREFIX}-wheel>=0.29.0:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 do-test:
 	cd ${WRKSRC} && ${PYTHONBIN} tests/test_all.py
