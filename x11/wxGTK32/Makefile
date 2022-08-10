@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2022/08/08 10:39:46 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2022/08/10 05:19:57 dbj Exp $
 
 DISTNAME=	wxWidgets-3.2.0
 PKGNAME=	${DISTNAME:S/wxWidgets/wxGTK32/}
@@ -49,10 +49,6 @@ USE_CMAKE=		yes
 PLIST_SRC+=		PLIST.cmake
 
 CMAKE_ARGS+=		-DCMAKE_DISABLE_PRECOMPILE_HEADERS:BOOL=ON
-# Note that this CMAKE_INSTALL_BINDIR override is probably
-# not the correct way to do this.  In particular if you remove
-# this option, it doesn't fall back to "bin" as I expected.
-# I will hopefully figure out a better fix for this -- dbj@
 CMAKE_ARGS+=		-DCMAKE_INSTALL_BINDIR:PATH=libexec/wx-3.2
 .  if ${OPSYS} != "Linux"
 # https://github.com/wxWidgets/wxWidgets/issues/22646
