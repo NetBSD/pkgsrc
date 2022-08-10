@@ -1,4 +1,4 @@
-# $NetBSD: parse_makefile.t,v 1.5 2022/08/10 07:12:52 rillig Exp $
+# $NetBSD: parse_makefile.t,v 1.6 2022/08/10 21:48:47 rillig Exp $
 
 use strict;
 use warnings;
@@ -6,7 +6,7 @@ use File::Slurp;
 use File::Temp;
 use Test;
 
-BEGIN { plan tests => 6, onfail => sub { die } }
+BEGIN { plan tests => 29, onfail => sub { die } }
 
 require('../lintpkgsrc.pl');
 
@@ -69,6 +69,50 @@ sub test_expand_modifiers() {
 	ok($vars->{VAR}, '<HUE>');
 }
 
+sub test_eval_mk_cond_func() {
+	my $vars = {
+	    'EMPTY'    => '',
+	    'SPACE'    => ' ',
+	    'WORD'     => 'word',
+	    'WORDS'    => 'word1 word2',
+	    'DEV_NULL' => '/dev/null',
+	};
+
+	ok(eval_mk_cond_func('defined', '', $vars), 0);
+	ok(eval_mk_cond_func('defined', 'UNDEF', $vars), 0);
+	ok(eval_mk_cond_func('defined', 'EMPTY', $vars), 1);
+	ok(eval_mk_cond_func('defined', 'SPACE', $vars), 1);
+	ok(eval_mk_cond_func('defined', 'WORDS', $vars), 1);
+
+	# TODO: The expression '${}' doesn't expand to an empty string.
+	ok(eval_mk_cond_func('empty', '', $vars), 0);
+
+	ok(eval_mk_cond_func('empty', 'EMPTY', $vars), 1);
+	ok(eval_mk_cond_func('empty', 'SPACE', $vars), 1);
+	ok(eval_mk_cond_func('empty', 'WORD', $vars), 0);
+	ok(eval_mk_cond_func('empty', 'WORDS', $vars), 0);
+
+	ok(eval_mk_cond_func('empty', 'EMPTY:M*', $vars), 1);
+	ok(eval_mk_cond_func('empty', 'SPACE:M*', $vars), 1);
+	ok(eval_mk_cond_func('empty', 'WORD:Mword', $vars), 0);
+	ok(eval_mk_cond_func('empty', 'WORD:Mword1', $vars), 1);
+	ok(eval_mk_cond_func('empty', 'WORD:M*', $vars), 0);
+
+	# Only expressions with a single ':M' modifier are supported.
+	# The expression '${WORD:Mword:Mword}' is not expanded further,
+	# and is thus nonempty.
+	ok(eval_mk_cond_func('empty', 'WORD:Mword:Mword', $vars), 0);
+
+	ok(eval_mk_cond_func('exists', '/dev/null', $vars), 1);
+	ok(eval_mk_cond_func('exists', '${DEV_NULL}', $vars), 1);
+	ok(eval_mk_cond_func('exists', '/random-46699840-8aca', $vars), 0);
+
+	ok(eval_mk_cond_func('make', 'anything', $vars), 0);
+
+	ok(eval_mk_cond_func('target', 'anything', $vars), 0);
+}
+
 test_expand_var();
 test_parse_makefile_vars();
 test_expand_modifiers();
+test_eval_mk_cond_func();
