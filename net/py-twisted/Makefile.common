@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.46 2022/02/13 09:26:19 adam Exp $
+# $NetBSD: Makefile.common,v 1.47 2022/08/10 08:59:35 adam Exp $
 #
 # used by net/py-twisted/Makefile
 # used by net/py-twisted-docs/Makefile
 
-DISTNAME=	Twisted-22.1.0
+DISTNAME=	Twisted-22.4.0
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=T/Twisted/}
 
