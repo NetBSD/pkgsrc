@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3750 2022/08/10 13:38:31 taca Exp $
+$NetBSD: CHANGES-2022,v 1.3751 2022/08/10 13:40:06 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5570,3 +5570,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-more-itertools to 8.14.0 [adam 2022-08-10]
 	Updated sysutils/parallel-disk-usage to 0.8.2 [pin 2022-08-10]
 	Updated security/clamav to 0.103.7 [taca 2022-08-10]
+	Updated security/clamav-doc to 0.103.7 [taca 2022-08-10]
