@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2022/06/30 11:18:32 nia Exp $
+# $NetBSD: Makefile,v 1.39 2022/08/10 21:54:47 jperkin Exp $
 
 GCC_PKGNAME=	gcc9
 .include "version.mk"
@@ -164,8 +164,7 @@ CONFIGURE_ARGS+=	--with-gnu-as --with-as=/usr/sfw/bin/gas
 .  elif exists(/usr/ccs/bin/as)
 CONFIGURE_ARGS+=	--without-gnu-as --with-as=/usr/ccs/bin/as
 .  else
-BUILDLINK_DEPMETHOD.binutils=	full
-.    include "../../devel/binutils/buildlink3.mk"
+DEPENDS+=		binutils-[0-9]*:../../devel/binutils
 CONFIGURE_ARGS+=	--with-gnu-as --with-as=${PREFIX}/bin/gas
 .  endif
 .endif
