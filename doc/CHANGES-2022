@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3748 2022/08/10 11:45:20 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3749 2022/08/10 12:29:18 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5568,3 +5568,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/py-ecdsa to 0.18.0 [adam 2022-08-10]
 	Updated lang/py-cmake-language-server to 0.1.6 [adam 2022-08-10]
 	Updated devel/py-more-itertools to 8.14.0 [adam 2022-08-10]
+	Updated sysutils/parallel-disk-usage to 0.8.2 [pin 2022-08-10]
