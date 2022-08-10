@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2021/06/01 05:34:51 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/08/10 10:57:45 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -13,6 +13,9 @@ ${PYSITELIB}/ecdsa/_compat.pyo
 ${PYSITELIB}/ecdsa/_rwlock.py
 ${PYSITELIB}/ecdsa/_rwlock.pyc
 ${PYSITELIB}/ecdsa/_rwlock.pyo
+${PYSITELIB}/ecdsa/_sha3.py
+${PYSITELIB}/ecdsa/_sha3.pyc
+${PYSITELIB}/ecdsa/_sha3.pyo
 ${PYSITELIB}/ecdsa/_version.py
 ${PYSITELIB}/ecdsa/_version.pyc
 ${PYSITELIB}/ecdsa/_version.pyo
@@ -28,6 +31,9 @@ ${PYSITELIB}/ecdsa/ecdh.pyo
 ${PYSITELIB}/ecdsa/ecdsa.py
 ${PYSITELIB}/ecdsa/ecdsa.pyc
 ${PYSITELIB}/ecdsa/ecdsa.pyo
+${PYSITELIB}/ecdsa/eddsa.py
+${PYSITELIB}/ecdsa/eddsa.pyc
+${PYSITELIB}/ecdsa/eddsa.pyo
 ${PYSITELIB}/ecdsa/ellipticcurve.py
 ${PYSITELIB}/ecdsa/ellipticcurve.pyc
 ${PYSITELIB}/ecdsa/ellipticcurve.pyo
@@ -55,6 +61,9 @@ ${PYSITELIB}/ecdsa/test_ecdh.pyo
 ${PYSITELIB}/ecdsa/test_ecdsa.py
 ${PYSITELIB}/ecdsa/test_ecdsa.pyc
 ${PYSITELIB}/ecdsa/test_ecdsa.pyo
+${PYSITELIB}/ecdsa/test_eddsa.py
+${PYSITELIB}/ecdsa/test_eddsa.pyc
+${PYSITELIB}/ecdsa/test_eddsa.pyo
 ${PYSITELIB}/ecdsa/test_ellipticcurve.py
 ${PYSITELIB}/ecdsa/test_ellipticcurve.pyc
 ${PYSITELIB}/ecdsa/test_ellipticcurve.pyo
@@ -76,6 +85,9 @@ ${PYSITELIB}/ecdsa/test_pyecdsa.pyo
 ${PYSITELIB}/ecdsa/test_rw_lock.py
 ${PYSITELIB}/ecdsa/test_rw_lock.pyc
 ${PYSITELIB}/ecdsa/test_rw_lock.pyo
+${PYSITELIB}/ecdsa/test_sha3.py
+${PYSITELIB}/ecdsa/test_sha3.pyc
+${PYSITELIB}/ecdsa/test_sha3.pyo
 ${PYSITELIB}/ecdsa/util.py
 ${PYSITELIB}/ecdsa/util.pyc
 ${PYSITELIB}/ecdsa/util.pyo
