@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/05/18 15:19:01 wiz Exp $
-bin/cmake-format-${PYVERSSUFFIX}
+@comment $NetBSD: PLIST,v 1.2 2022/08/10 11:42:58 adam Exp $
 bin/cmake-language-server-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -13,12 +12,6 @@ ${PYSITELIB}/cmake_language_server/__init__.pyo
 ${PYSITELIB}/cmake_language_server/api.py
 ${PYSITELIB}/cmake_language_server/api.pyc
 ${PYSITELIB}/cmake_language_server/api.pyo
-${PYSITELIB}/cmake_language_server/formatter.py
-${PYSITELIB}/cmake_language_server/formatter.pyc
-${PYSITELIB}/cmake_language_server/formatter.pyo
-${PYSITELIB}/cmake_language_server/parser.py
-${PYSITELIB}/cmake_language_server/parser.pyc
-${PYSITELIB}/cmake_language_server/parser.pyo
 ${PYSITELIB}/cmake_language_server/server.py
 ${PYSITELIB}/cmake_language_server/server.pyc
 ${PYSITELIB}/cmake_language_server/server.pyo
