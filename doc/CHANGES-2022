@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3742 2022/08/10 07:25:47 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3743 2022/08/10 09:04:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5556,3 +5556,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/intel-microcode-netbsd to 20220809 [msaitoh 2022-08-10]
 	Updated devel/py-serpent to 1.41 [adam 2022-08-10]
 	Updated devel/py-distlib to 0.3.5 [adam 2022-08-10]
+	Updated net/py-twisted to 22.4.0 [adam 2022-08-10]
+	Updated devel/py-outcome to 1.2.0 [adam 2022-08-10]
