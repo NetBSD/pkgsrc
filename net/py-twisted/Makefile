@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.50 2022/06/28 11:35:19 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2022/08/10 08:59:35 adam Exp $
 
-PKGREVISION= 1
 .include "../../net/py-twisted/Makefile.common"
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
