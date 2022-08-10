@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2022/05/15 04:46:32 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2022/08/10 13:39:46 taca Exp $
 share/doc/clamav/html/404.html
 share/doc/clamav/html/FontAwesome/css/font-awesome.css
 share/doc/clamav/html/FontAwesome/fonts/FontAwesome.ttf
@@ -19,6 +19,7 @@ share/doc/clamav/html/ayu-highlight.css
 share/doc/clamav/html/book.js
 share/doc/clamav/html/clipboard.min.js
 share/doc/clamav/html/community_resources/CommunityResources.html
+share/doc/clamav/html/community_resources/CompileClamAV_AmazonLinux2.txt
 share/doc/clamav/html/css/chrome.css
 share/doc/clamav/html/css/general.css
 share/doc/clamav/html/css/print.css
