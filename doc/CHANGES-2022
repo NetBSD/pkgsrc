@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3741 2022/08/10 01:25:37 msaitoh Exp $
+$NetBSD: CHANGES-2022,v 1.3742 2022/08/10 07:25:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5554,3 +5554,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/go-bin to 1.18.5 [tnn 2022-08-09]
 	Updated multimedia/assimp to 5.2.4 [charlotte 2022-08-09]
 	Updated sysutils/intel-microcode-netbsd to 20220809 [msaitoh 2022-08-10]
+	Updated devel/py-serpent to 1.41 [adam 2022-08-10]
+	Updated devel/py-distlib to 0.3.5 [adam 2022-08-10]
