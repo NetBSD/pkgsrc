@@ -1,2 +1,1 @@
-bin/cmake-format @PREFIX@/bin/cmake-format-@PYVERSSUFFIX@
 bin/cmake-language-server @PREFIX@/bin/cmake-language-server-@PYVERSSUFFIX@
