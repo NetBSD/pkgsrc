@@ -1,9 +1,9 @@
-.\"	$NetBSD: lintpkgsrc.1,v 1.5 2016/03/12 09:05:22 wiz Exp $
+.\"	$NetBSD: lintpkgsrc.1,v 1.6 2022/08/10 22:43:55 rillig Exp $
 .\"
 .\" Copyright (c) 1999 by David Brownlee (abs@netbsd.org)
 .\" Absolutely no warranty.
 .\"
-.Dd March 12, 2016
+.Dd August 10, 2022
 .Dt LINTPKGSRC 1
 .Sh NAME
 .Nm lintpkgsrc
@@ -73,7 +73,7 @@ Check the version of each installed package against the current version in
 pkgsrc.
 .It Fl K Ar PACKAGES
 Override binary packages base directory, normally set from
-.Pa /etc/mk.conf
+.Pa @MAKECONF@
 or defaulted to
 .Pa ${PKGSRCDIR}/packages .
 .Pp
@@ -85,8 +85,8 @@ and
 .Fl R
 check for
 binary packages in any depth of PACKAGES subdirs - this allows packages for all
-architectures/OS versions to be checked simultaneously with an
-.Pa /etc/mk.conf
+architectures/OS versions to be checked simultaneously with a
+.Pa @MAKECONF@
 construct of the form:
 .Bd -literal
 \&.ifdef LINTPKGSRC
@@ -118,9 +118,9 @@ This is intended to help those making binary packages available for ftp.
 Report any old distfiles (not referenced by any package's distinfo file).
 .It Fl P Ar PKGSRCDIR
 Set base of pkgsrc tree, normally set from
-.Pa /etc/mk.conf
+.Pa @MAKECONF@
 or defaulted to
-.Pa /usr/pkgsrc .
+.Pa @PREFIX@ .
 .It Fl p
 Report any old binary packages in any subdirs of
 .Em PACKAGES .
@@ -179,7 +179,7 @@ In this case
 can be overridden with
 .Fl K
 or set conditionally in
-.Pa /etc/mk.conf
+.Pa @MAKECONF@
 based on the value of
 .Em LINTPKGSRC .
 .Pp
