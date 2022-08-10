@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2022/01/04 20:54:40 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2022/08/10 10:57:45 adam Exp $
 
-DISTNAME=	ecdsa-0.17.0
+DISTNAME=	ecdsa-0.18.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/ecdsa/}
 
@@ -12,6 +11,7 @@ COMMENT=	Easy-to-use implementation of ECDSA cryptography
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-six>=1.9.0:../../lang/py-six
+TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 
 USE_LANGUAGES=	# none
 
