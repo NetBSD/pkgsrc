@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2022/01/14 11:49:43 wiz Exp $
+$NetBSD: distinfo,v 1.7 2022/08/10 09:12:00 adam Exp $
 
-BLAKE2s (ifaddr-0.1.7.tar.gz) = 43926a3a349fc3960daaf3570a62836863c8e76f42d06d58d5dac25047ecaaf9
-SHA512 (ifaddr-0.1.7.tar.gz) = 9a428dd6bb022c8f483b77df9e9301f96e9ba64207eda8b3956a7ca5993bfe97f222c451149851135d379db1a819c75d0834566f3b6501456b2f237b0645e300
-Size (ifaddr-0.1.7.tar.gz) = 9281 bytes
+BLAKE2s (ifaddr-0.2.0.tar.gz) = d8ea89d809aba622d50d341d4ea7e67426135a75868e7462703ee8b65a91f1ea
+SHA512 (ifaddr-0.2.0.tar.gz) = 02597c0fda81addebbc52893d2f1f5a5f1e99820360202652c433b4869f751901c0931a9fcf8cf0b1b4f1a95c438f238e5b1cfc84511785e7a2a42d5f81bb0d6
+Size (ifaddr-0.2.0.tar.gz) = 10485 bytes
