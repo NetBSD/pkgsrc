@@ -1,4 +1,4 @@
-# $NetBSD: parse_makefile.t,v 1.4 2022/08/09 20:51:46 rillig Exp $
+# $NetBSD: parse_makefile.t,v 1.5 2022/08/10 07:12:52 rillig Exp $
 
 use strict;
 use warnings;
@@ -52,5 +52,23 @@ sub test_parse_makefile_vars() {
 	ok($vars->{VAR}, 'value');
 }
 
+sub test_expand_modifiers() {
+	my $vars = {
+	    REF => 'VALUE',
+	};
+	export_for_test()->{opt}->{D} = 1;
+
+	expand_modifiers('file.mk', 'VAR', '<', 'REF', 'S,U,X,', '>', $vars);
+
+	# FIXME: Should be 'VALXE', but the 'U' is wrongly interpreted as a
+	#  ':U' modifier.
+	ok($vars->{VAR}, '<VALUE>');
+
+	expand_modifiers('file.mk', 'VAR', '<', 'REF', 'S,VAL,H,', '>', $vars);
+
+	ok($vars->{VAR}, '<HUE>');
+}
+
 test_expand_var();
 test_parse_makefile_vars();
+test_expand_modifiers();
