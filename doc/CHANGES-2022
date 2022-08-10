@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3744 2022/08/10 09:18:13 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3745 2022/08/10 09:22:17 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5562,3 +5562,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/py-ifaddr to 0.2.0 [adam 2022-08-10]
 	Updated net/py-zeroconf to 0.39.0 [adam 2022-08-10]
 	Updated devel/py-pip to 22.2.2 [adam 2022-08-10]
+	Updated sysutils/parallel-disk-usage to 0.8.1 [pin 2022-08-10]
