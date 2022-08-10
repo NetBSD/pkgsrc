@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3743 2022/08/10 09:04:05 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3744 2022/08/10 09:18:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5558,3 +5558,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-distlib to 0.3.5 [adam 2022-08-10]
 	Updated net/py-twisted to 22.4.0 [adam 2022-08-10]
 	Updated devel/py-outcome to 1.2.0 [adam 2022-08-10]
+	Updated textproc/py-tomlkit to 0.11.3 [adam 2022-08-10]
+	Updated net/py-ifaddr to 0.2.0 [adam 2022-08-10]
+	Updated net/py-zeroconf to 0.39.0 [adam 2022-08-10]
+	Updated devel/py-pip to 22.2.2 [adam 2022-08-10]
