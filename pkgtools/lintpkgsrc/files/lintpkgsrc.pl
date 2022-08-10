@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.71 2022/08/10 21:48:47 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.72 2022/08/10 22:43:55 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -158,9 +158,12 @@ package main;
 
 # Buildtime configuration
 my $conf_make = '@MAKE@';
+my $conf_makeconf = '@MAKECONF@';
+my $conf_pkg_info = '@PKG_INFO@';
 my $conf_pkgsrcdir = '@PKGSRCDIR@';
 my $conf_prefix = '@PREFIX@';
 my $conf_sysconfdir = '@PKG_SYSCONFDIR@';
+my $conf_x11base = '@X11BASE@';
 
 my (
     $pkgdb,                    # Database of pkgsrc packages
@@ -517,7 +520,7 @@ sub parse_makefile_vars($file, $cwd = undef) {
 	push @incdirs, dirname($file);
 
 	# Some Makefiles depend on these being set
-	if ($file eq '/etc/mk.conf') {
+	if ($file eq $conf_makeconf) {
 		$vars{LINTPKGSRC} = 'YES';
 	} else {
 		%vars = %{$default_vars};
@@ -630,7 +633,7 @@ sub parse_makefile_vars($file, $cwd = undef) {
 
 sub get_default_makefile_vars() {
 
-	chomp($pkg_installver = `pkg_info -V 2>/dev/null || echo 20010302`);
+	chomp($pkg_installver = `$conf_pkg_info -V 2>/dev/null || echo 20010302`);
 
 	chomp($_ = `uname -srm`);
 	(
@@ -659,16 +662,12 @@ sub get_default_makefile_vars() {
 	    : $conf_pkgsrcdir;
 
 	$default_vars->{DESTDIR} = '';
-	$default_vars->{LOCALBASE} = '/usr/pkg';
-	$default_vars->{X11BASE} = '/usr/X11R6';
+	$default_vars->{LOCALBASE} = $conf_pkgsrcdir;
+	$default_vars->{X11BASE} = $conf_x11base;
 
 	my ($vars);
-	if (-f '/etc/mk.conf' && ($vars = parse_makefile_vars('/etc/mk.conf', undef))) {
-		foreach my $var (keys %{$vars}) {
-			$default_vars->{$var} = $vars->{$var};
-		}
-	} elsif (-f "$conf_sysconfdir/mk.conf" &&
-	    ($vars = parse_makefile_vars("$conf_sysconfdir/mk.conf", undef))) {
+	if (-f $conf_makeconf &&
+	    ($vars = parse_makefile_vars($conf_makeconf, undef))) {
 		foreach my $var (keys %{$vars}) {
 			$default_vars->{$var} = $vars->{$var};
 		}
@@ -744,8 +743,8 @@ sub invalid_version($pkgmatch) {
 }
 
 sub list_installed_packages() {
-	open(PKG_INFO, 'pkg_info -e "*" |')
-	    or fail("Unable to run pkg_info: $!");
+	open(PKG_INFO, "$conf_pkg_info -e '*' |")
+	    or fail("Unable to run $conf_pkg_info: $!");
 	chomp(my @pkgs = <PKG_INFO>);
 	close(PKG_INFO);
 	map { $_ = canonicalize_pkgname($_) } @pkgs;
@@ -1579,8 +1578,9 @@ sub check_outdated_installed_packages($pkgsrcdir) {
 	print "\nREQUIRED details for packages that could be updated:\n";
 
 	foreach my $pkgver (@update) {
-		print $pkgver->pkgbase . ':';
-		if (open(PKGINFO, 'pkg_info -R ' . $pkgver->pkgbase . '|')) {
+		my $pkgbase = $pkgver->pkgbase;
+		print "$pkgbase:";
+		if (open(PKGINFO, "$conf_pkg_info -R $pkgbase |")) {
 			my ($list);
 
 			while (<PKGINFO>) {
