@@ -1,17 +1,19 @@
-$NetBSD: patch-build_cmake_install.cmake,v 1.1 2022/07/28 05:25:22 dbj Exp $
+$NetBSD: patch-build_cmake_install.cmake,v 1.2 2022/08/10 05:19:57 dbj Exp $
 
 Fix use of DESTDIR
 https://github.com/wxWidgets/wxWidgets/issues/22610
 
 Respect ${CMAKE_INSTALL_BINDIR} instead of assuming bin
 
---- build/cmake/install.cmake.orig	2022-07-28 04:31:27.000000000 +0000
+--- build/cmake/install.cmake.orig	2022-07-06 14:19:50.000000000 +0000
 +++ build/cmake/install.cmake
-@@ -39,11 +39,11 @@ else()
+@@ -39,11 +39,13 @@ else()
                      WORLD_EXECUTE WORLD_READ
          )
  
 -    install(DIRECTORY DESTINATION "bin")
++    include(GNUInstallDirs)
++
 +    install(DIRECTORY DESTINATION "${CMAKE_INSTALL_BINDIR}")
      install(CODE "execute_process( \
          COMMAND ${CMAKE_COMMAND} -E create_symlink \
@@ -21,7 +23,7 @@ Respect ${CMAKE_INSTALL_BINDIR} instead of assuming bin
          )"
      )
  endif()
-@@ -96,8 +96,8 @@ if(NOT TARGET ${UNINST_NAME})
+@@ -96,8 +98,8 @@ if(NOT TARGET ${UNINST_NAME})
          endif()
  
          set(WX_EXTRA_UNINSTALL_FILES
