@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.70 2022/08/10 20:16:55 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.71 2022/08/10 21:48:47 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -275,6 +275,52 @@ sub expand_var($value, $vars) {
 	$value;
 }
 
+sub eval_mk_cond_func($func, $arg, $vars) {
+	if ($func eq 'defined') {
+		my $varname = expand_var($arg, $vars);
+		defined $vars->{$varname} ? 1 : 0;
+
+	} elsif ($func eq 'empty') {
+
+		# Implement (some of) make's :M modifier
+		if ($arg =~ /^ ([^:]+) :M ([^:]+) $/x) {
+			my ($varname, $pattern) = ($1, $2);
+			$varname = expand_var($varname, $vars);
+			$pattern = expand_var($pattern, $vars);
+
+			my $value = $vars->{$varname};
+			return 1 unless defined $value;
+
+			$value = expand_var($value, $vars);
+
+			$pattern =~ s/([{.+])/\\$1/g;
+			$pattern =~ s/\*/.*/g;
+			$pattern =~ s/\?/./g;
+			$pattern = '^' . $pattern . '$';
+
+			foreach my $word (split(/\s+/, $value)) {
+				return 0 if $word =~ /$pattern/;
+			}
+			return 1;
+		} elsif ($arg =~ /:M/) {
+			debug("Unsupported ':M' modifier in '$arg'\n");
+		}
+
+		my $value = expand_var("\${$arg}", $vars);
+		defined $value && $value =~ /\S/ ? 0 : 1;
+
+	} elsif ($func eq 'exists') {
+		my $fname = expand_var($arg, $vars);
+		-e $fname ? 1 : 0;
+
+	} elsif ($func eq 'make') {
+		0;
+
+	} else { # $func eq 'target'
+		0;
+	}
+}
+
 sub parse_eval_make_false($line, $vars) {
 	my $false = 0;
 	my $test = expand_var($line, $vars);
@@ -287,49 +333,9 @@ sub parse_eval_make_false($line, $vars) {
 	debug("conditional: $test\n");
 
 	while ($test =~ /(target|empty|make|defined|exists)\s*\(([^()]+)\)/) {
-		my ($testname, $varname) = ($1, $2);
-		my $var;
-
-		# Implement (some of) make's :M modifier
-		if ($varname =~ /^([^:]+):M(.+)$/) {
-			$varname = $1;
-			my $match = $2;
-
-			$var = $${vars}{$varname};
-			$var = expand_var($var, $vars)
-			    if defined $var;
-
-			$match =~ s/([{.+])/\\$1/g;
-			$match =~ s/\*/.*/g;
-			$match =~ s/\?/./g;
-			$match = '^' . $match . '$';
-			$var = ($var =~ /$match/)
-			    if defined $var;
-		} else {
-			$var = $${vars}{$varname};
-			$var = expand_var($var, $vars)
-			    if defined $var;
-		}
-
-		if (defined $var && $var eq $magic_undefined) {
-			$var = undef;
-		}
-
-		if ($testname eq 'exists') {
-			$_ = -e $varname ? 1 : 0;
-
-		} elsif ($testname eq 'defined') {
-			$_ = defined $var ? 1 : 0;
-
-		} elsif ($testname eq 'empty') {
-			$_ = !defined $var || $var eq '' ? 1 : 0;
-
-		} else {
-			# XXX Could do something with target
-			$_ = 0;
-		}
-
-		$test =~ s/$testname\s*\([^()]+\)/$_/;
+		my ($func, $arg) = ($1, $2);
+		my $cond = eval_mk_cond_func($func, $arg, $vars);
+		$test =~ s/$func\s*\([^()]+\)/$cond/;
 		debug("conditional: update to $test\n");
 	}
 
