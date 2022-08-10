@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2022/08/09 19:09:30 pin Exp $
+$NetBSD: distinfo,v 1.3 2022/08/10 09:21:57 pin Exp $
 
 BLAKE2s (ansi_term-0.12.1.crate) = 9d7961fca7b2680f17660048cf2d6171faa0def807ea66b5b5b9110f0623a12f
 SHA512 (ansi_term-0.12.1.crate) = b840e28b3e7700689a69a39659b1e066560078dd4a58326b91a028915819e7af883399ee53e920db68fd974c58d35bb1ddf8d427af5937d5f696f57c4376b671
@@ -159,9 +159,9 @@ Size (os_str_bytes-6.2.0.crate) = 21037 bytes
 BLAKE2s (output_vt100-0.1.2.crate) = c7fbcb2dfb16f1d52b7e4cc8729bb03d07c693e019db6c176a8f40ce6c295c78
 SHA512 (output_vt100-0.1.2.crate) = b8eb00a541bebef2e0bb44975c4547fadfd4ab88a14aa8e31945f3c73531a550cf5729f1f3d18fae5cf36286b82d1a54fb08b28720f1592ab6cfe0814c8d3036
 Size (output_vt100-0.1.2.crate) = 4062 bytes
-BLAKE2s (parallel-disk-usage-0.8.0.tar.gz) = bd02f21ccc257fb3c57f0ef8c4e918f1faca0ffd6c565e3f53be37c6bb834d09
-SHA512 (parallel-disk-usage-0.8.0.tar.gz) = 995824188c1495175c416b4b3e970e0fd1dc0a40b85c3630b3079145ac1c59731f73785879f628f2d2c955c97847297887a99225cc83dedfca5b74d2ce2844f2
-Size (parallel-disk-usage-0.8.0.tar.gz) = 80150 bytes
+BLAKE2s (parallel-disk-usage-0.8.1.tar.gz) = 6892113c67a0945b5f53b5ad7673719e598522c405bf2a74de9f5bd28528d7e9
+SHA512 (parallel-disk-usage-0.8.1.tar.gz) = 2d6e6a20014d9b9060703662d334f78cde15ab854cc80d0120b665267d2703b9ab51f5bc3902a0c6ee6ae9277d49166bcfae0f8c8a6a346892257b7def80ce52
+Size (parallel-disk-usage-0.8.1.tar.gz) = 80145 bytes
 BLAKE2s (pipe-trait-0.3.2.crate) = cac661559c4d0736f5935f7c5fea69934e45d99b0337e45bbe007119a61cee4a
 SHA512 (pipe-trait-0.3.2.crate) = 1b01821f625b17cefc0ec5a05c5da57b1e07aab5756898442d4648c205e1353fe28f0a2dd02be6ae4dbe07c04ee0abea298aadae60d0ec980c11bca050a55bd2
 Size (pipe-trait-0.3.2.crate) = 4395 bytes
