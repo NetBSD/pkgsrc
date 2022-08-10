@@ -1,4 +1,4 @@
-LINTPKGSRC(1)               General Commands Manual              LINTPKGSRC(1)
+LINTPKGSRC(1)           NetBSD General Commands Manual           LINTPKGSRC(1)
 
 NNAAMMEE
      lliinnttppkkggssrrcc -- verifier for the pkgsrc tree
@@ -10,8 +10,8 @@ SSYYNNOOPPSSIISS
 DDEESSCCRRIIPPTTIIOONN
      lliinnttppkkggssrrcc tries to verify the entire contents of the pkgsrc tree.
      lliinnttppkkggssrrcc uses simple regular-expression matching for verifying files
-     that make up a pkgsrc directory.  Note that it does NOT implement a
-     complete Makefile parser.
+     that make up a pkgsrc directory.  Note that it does NOT implement a com-
+     plete Makefile parser.
 
    OOppttiioonnss
      --BB            List packages marked as BROKEN.
@@ -31,29 +31,29 @@ DDEESSCCRRIIPPTTIIOONN
                    a set of similarly configured machines (in the absence of
                    extra copies of the pkgsrc tree) both quick and possible.
 
-     --gg _p_k_g_s_r_c_m_a_p  Generate pkgsrcmap file containing an entry for each
-                   package of `pkgname pkgdir pkgver'.
+     --gg _p_k_g_s_r_c_m_a_p  Generate pkgsrcmap file containing an entry for each pack-
+                   age of `pkgname pkgdir pkgver'.
 
      --hh            Basic help and usage.
 
      --II _f_i_l_e       Imports the data to construct the internal database for
                    checking the installed versions of packages, among other
                    things, against the current version found in pkgsrc.  This
-                   database provides most or all of the data required for
-                   running lliinnttppkkggssrrcc with any combination of --BB, --OO, --RR, --SS,
-                   --dd, --gg, --ii, --pp, or --uu.
+                   database provides most or all of the data required for run-
+                   ning lliinnttppkkggssrrcc with any combination of --BB, --OO, --RR, --SS, --dd,
+                   --gg, --ii, --pp, or --uu.
 
      --ii            Check the version of each installed package against the
                    current version in pkgsrc.
 
      --KK _P_A_C_K_A_G_E_S   Override binary packages base directory, normally set from
-                   _/_e_t_c_/_m_k_._c_o_n_f or defaulted to _$_{_P_K_G_S_R_C_D_I_R_}_/_p_a_c_k_a_g_e_s.
+                   _@_M_A_K_E_C_O_N_F_@ or defaulted to _$_{_P_K_G_S_R_C_D_I_R_}_/_p_a_c_k_a_g_e_s.
 
                    Note: lintpkgsrc treats _P_A_C_K_A_G_E_S slightly differently to
-                   the pkgsrc build system.  --pp and --RR check for binary
-                   packages in any depth of PACKAGES subdirs - this allows
-                   packages for all architectures/OS versions to be checked
-                   simultaneously with an _/_e_t_c_/_m_k_._c_o_n_f construct of the form:
+                   the pkgsrc build system.  --pp and --RR check for binary pack-
+                   ages in any depth of PACKAGES subdirs - this allows pack-
+                   ages for all architectures/OS versions to be checked simul-
+                   taneously with a _@_M_A_K_E_C_O_N_F_@ construct of the form:
 
                    .ifdef LINTPKGSRC
                    PACKAGES=${PKGSRCDIR}/packages
@@ -82,8 +82,8 @@ DDEESSCCRRIIPPTTIIOONN
      --oo            Report any old distfiles (not referenced by any package's
                    distinfo file).
 
-     --PP _P_K_G_S_R_C_D_I_R  Set base of pkgsrc tree, normally set from _/_e_t_c_/_m_k_._c_o_n_f or
-                   defaulted to _/_u_s_r_/_p_k_g_s_r_c.
+     --PP _P_K_G_S_R_C_D_I_R  Set base of pkgsrc tree, normally set from _@_M_A_K_E_C_O_N_F_@ or
+                   defaulted to _@_P_R_E_F_I_X_@.
 
      --pp            Report any old binary packages in any subdirs of _P_A_C_K_A_G_E_S.
 
@@ -92,11 +92,11 @@ DDEESSCCRRIIPPTTIIOONN
                    This is intended to help those making binary packages
                    available for ftp.
 
-     --rr            Remove distfiles which are not referenced from any
-                   package's distinfo file, or have an incorrect checksum
-                   (usually due to an interrupted download), and any old
-                   binary packages.  To remove any given type, additionally
-                   specify the --oo, --mm, or --pp flags respectively.
+     --rr            Remove distfiles which are not referenced from any pack-
+                   age's distinfo file, or have an incorrect checksum (usually
+                   due to an interrupted download), and any old binary pack-
+                   ages.  To remove any given type, additionally specify the
+                   --oo, --mm, or --pp flags respectively.
 
      --SS            List packages missing from category _S_U_B_D_I_R lists.
 
@@ -117,11 +117,10 @@ AAUUTTHHOORRSS
 
 BBUUGGSS
      The --RR and --pp options default to using _P_A_C_K_A_G_E_S as the base directory
-     from which to search for binary packages.  If this includes OS or
-     architecture information then packages for other OS/architecture
-     combinations will be missed.  In this case _P_A_C_K_A_G_E_S can be overridden
-     with --KK or set conditionally in _/_e_t_c_/_m_k_._c_o_n_f based on the value of
-     _L_I_N_T_P_K_G_S_R_C.
+     from which to search for binary packages.  If this includes OS or archi-
+     tecture information then packages for other OS/architecture combinations
+     will be missed.  In this case _P_A_C_K_A_G_E_S can be overridden with --KK or set
+     conditionally in _@_M_A_K_E_C_O_N_F_@ based on the value of _L_I_N_T_P_K_G_S_R_C.
 
      The `Makefile parsing' algorithm used to obtain package versions and
      DEPENDS information is geared towards speed rather than perfection,
@@ -130,4 +129,4 @@ BBUUGGSS
 
      Potentially others, but non serious to date.
 
-LOCAL                          November 24, 2014                         LOCAL
+NetBSD 9.99                     August 10, 2022                    NetBSD 9.99
