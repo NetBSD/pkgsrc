@@ -1,0 +1,16 @@
+$NetBSD: patch-configure,v 1.9 2022/08/10 13:38:00 taca Exp $
+
+Prevent WRKDIR reference.
+
+--- configure.orig	2022-07-26 04:32:39.000000000 +0000
++++ configure
+@@ -1036,9 +1036,6 @@ CFLAGS
+ CPP
+ LT_SYS_LIBRARY_PATH
+ CXXCPP
+-PKG_CONFIG
+-PKG_CONFIG_PATH
+-PKG_CONFIG_LIBDIR
+ YACC
+ YFLAGS
+ CHECK_CFLAGS
