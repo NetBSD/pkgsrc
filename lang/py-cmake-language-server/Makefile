@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2022/01/05 15:41:12 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2022/08/10 11:42:58 adam Exp $
 
-DISTNAME=	cmake-language-server-0.1.2
+DISTNAME=	cmake-language-server-0.1.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cmake-language-server/}
 
@@ -11,16 +10,20 @@ HOMEPAGE=	https://github.com/regen100/cmake-language-server
 COMMENT=	CMake Language Server Protocol Implementation
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-pygls-[0-9]*:../../lang/py-pygls
-DEPENDS+=	${PYPKGPREFIX}-pyparsing-[0-9]*:../../devel/py-pyparsing
+DEPENDS+=	${PYPKGPREFIX}-pygls>=0.12:../../lang/py-pygls
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-pygls
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+.include "../../lang/python/pyversion.mk"
+.if ${_PYTHON_VERSION} < 38
+DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=4.8:../../devel/py-importlib-metadata
+.endif
 
 USE_PKG_RESOURCES=	yes
 
 post-install:
-	cd ${DESTDIR}${PREFIX}/bin && ${MV} cmake-format cmake-format-${PYVERSSUFFIX}
-	cd ${DESTDIR}${PREFIX}/bin && ${MV} cmake-language-server cmake-language-server-${PYVERSSUFFIX}
+	cd ${DESTDIR}${PREFIX}/bin && \
+	${MV} cmake-language-server cmake-language-server-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
