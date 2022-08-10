@@ -1,15 +1,18 @@
-$NetBSD: patch-build_cmake_utils_CMakeLists.txt,v 1.1 2022/07/28 05:25:22 dbj Exp $
+$NetBSD: patch-build_cmake_utils_CMakeLists.txt,v 1.2 2022/08/10 05:19:57 dbj Exp $
 
 Fix use of DESTDIR
 https://github.com/wxWidgets/wxWidgets/issues/22610
 
 Respect ${CMAKE_INSTALL_BINDIR} instead of assuming bin
 
---- build/cmake/utils/CMakeLists.txt.orig	2022-07-28 04:31:27.000000000 +0000
+--- build/cmake/utils/CMakeLists.txt.orig	2022-07-06 14:19:50.000000000 +0000
 +++ build/cmake/utils/CMakeLists.txt
-@@ -26,21 +26,22 @@ if(wxUSE_XRC)
+@@ -25,22 +25,25 @@ if(wxUSE_XRC)
+ 
      set_target_properties(wxrc PROPERTIES FOLDER "Utilities")
  
++    include(GNUInstallDirs)
++
      wx_install(TARGETS wxrc
 -        RUNTIME DESTINATION "bin"
 -        BUNDLE DESTINATION "bin"
