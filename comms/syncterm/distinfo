@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.1 2022/01/16 13:11:07 nia Exp $
+$NetBSD: distinfo,v 1.2 2022/08/10 18:49:39 he Exp $
 
 BLAKE2s (syncterm-1.1-src.tgz) = 2de2559b621ab8a8249e2321ed617cc3a73aa44f74ca2d49b82c141bf9d97eb6
 SHA512 (syncterm-1.1-src.tgz) = b5280e8f64ce12101f810dbee38a113e03450356a1fbc46a7c63a57eb8ca382e99ec1586b0a3527e336c9725efedae2ce80c5d4b372456eba1f090ec0f8c80eb
 Size (syncterm-1.1-src.tgz) = 18270212 bytes
 SHA1 (patch-src_syncterm_GNUmakefile) = 0c8739341c1c86b7455fc50f2265a02a87333a30
 SHA1 (patch-src_syncterm_syncterm.man.in) = 8bc6eed865883b3e2c49638e9fc08abb8ac8e617
+SHA1 (patch-src_xpdev_genwrap.h) = c004b77f8ce6874527d957f172e46f59ceca500f
