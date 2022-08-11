@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/10/21 09:40:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/08/11 01:32:50 gutteridge Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -2963,6 +2963,7 @@ lib/python${PY_VER_SUFFIX}/test/list_tests.pyo
 lib/python${PY_VER_SUFFIX}/test/lock_tests.py
 lib/python${PY_VER_SUFFIX}/test/lock_tests.pyc
 lib/python${PY_VER_SUFFIX}/test/lock_tests.pyo
+lib/python${PY_VER_SUFFIX}/test/mailcap.txt
 lib/python${PY_VER_SUFFIX}/test/make_ssl_certs.py
 lib/python${PY_VER_SUFFIX}/test/make_ssl_certs.pyc
 lib/python${PY_VER_SUFFIX}/test/make_ssl_certs.pyo
@@ -3700,6 +3701,9 @@ lib/python${PY_VER_SUFFIX}/test/test_macurl2path.pyo
 lib/python${PY_VER_SUFFIX}/test/test_mailbox.py
 lib/python${PY_VER_SUFFIX}/test/test_mailbox.pyc
 lib/python${PY_VER_SUFFIX}/test/test_mailbox.pyo
+lib/python${PY_VER_SUFFIX}/test/test_mailcap.py
+lib/python${PY_VER_SUFFIX}/test/test_mailcap.pyc
+lib/python${PY_VER_SUFFIX}/test/test_mailcap.pyo
 lib/python${PY_VER_SUFFIX}/test/test_marshal.py
 lib/python${PY_VER_SUFFIX}/test/test_marshal.pyc
 lib/python${PY_VER_SUFFIX}/test/test_marshal.pyo
