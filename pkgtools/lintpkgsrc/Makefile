@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2022/08/10 22:43:54 rillig Exp $
+# $NetBSD: Makefile,v 1.50 2022/08/11 07:20:52 rillig Exp $
 
 PKGNAME=	lintpkgsrc-2022.08.10
 CATEGORIES=	pkgtools
@@ -28,7 +28,6 @@ SUBST_VARS.lp+=		MAKECONF
 SUBST_VARS.lp+=		PERL5
 SUBST_VARS.lp+=		PKGSRCDIR
 SUBST_VARS.lp+=		PKG_INFO
-SUBST_VARS.lp+=		PKG_SYSCONFDIR
 SUBST_VARS.lp+=		PREFIX
 SUBST_VARS.lp+=		X11BASE
 
