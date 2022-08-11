@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.34 2020/03/23 15:20:09 taca Exp $
+# $NetBSD: Makefile,v 1.35 2022/08/11 04:00:18 taca Exp $
 
-DISTNAME=	pg-1.2.3
+DISTNAME=	pg-1.4.3
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:C/postgres/&ql/}
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://bitbucket.org/ged/ruby-pg/
+HOMEPAGE=	https://github.com/ged/ruby-pg
 COMMENT=	Ruby extension for PostgreSQL
 LICENSE=	2-clause-bsd OR ruby-license
 
