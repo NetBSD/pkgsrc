@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2021/09/16 08:37:53 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2022/08/11 06:09:17 wiz Exp $
 include/GL/glxint.h
 include/GL/glxmd.h
 include/GL/glxproto.h
@@ -119,6 +119,7 @@ include/X11/extensions/xtestconst.h
 include/X11/extensions/xtestext1const.h
 include/X11/extensions/xtestext1proto.h
 include/X11/extensions/xtestproto.h
+include/X11/extensions/xwaylandproto.h
 include/X11/fonts/FS.h
 include/X11/fonts/FSproto.h
 include/X11/fonts/font.h
@@ -155,6 +156,7 @@ lib/pkgconfig/xf86driproto.pc
 lib/pkgconfig/xf86vidmodeproto.pc
 lib/pkgconfig/xineramaproto.pc
 lib/pkgconfig/xproto.pc
+lib/pkgconfig/xwaylandproto.pc
 share/doc/bigreqsproto/bigreq.xml
 share/doc/fontsproto/fsproto.xml
 share/doc/kbproto/XKBproto-1.svg
@@ -218,6 +220,7 @@ share/doc/xorgproto/randrproto.txt
 share/doc/xorgproto/renderproto.txt
 share/doc/xorgproto/resproto.txt
 share/doc/xorgproto/xv-protocol-v2.txt
+share/doc/xorgproto/xwaylandproto.txt
 share/doc/xproto/encoding.xml
 share/doc/xproto/glossary.xml
 share/doc/xproto/keysyms.xml
