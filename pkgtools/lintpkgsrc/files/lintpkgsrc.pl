@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.74 2022/08/11 07:18:47 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.75 2022/08/11 07:20:52 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -152,7 +152,6 @@ my $conf_makeconf = '@MAKECONF@';
 my $conf_pkg_info = '@PKG_INFO@';
 my $conf_pkgsrcdir = '@PKGSRCDIR@';
 my $conf_prefix = '@PREFIX@';
-my $conf_sysconfdir = '@PKG_SYSCONFDIR@';
 my $conf_x11base = '@X11BASE@';
 
 my (
