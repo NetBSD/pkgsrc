@@ -1,4 +1,4 @@
-# $NetBSD: packages.t,v 1.10 2022/08/04 21:55:58 rillig Exp $
+# $NetBSD: packages.t,v 1.11 2022/08/11 07:07:27 rillig Exp $
 
 use strict;
 use warnings;
@@ -37,23 +37,23 @@ sub test_pkgs() {
 sub test_pkgdb() {
 	my $pkgdb = PkgDb->new();
 
-	ok($pkgdb->numpkgver, 0);
-	ok(join(', ', map { $_->pkgname } $pkgdb->pkgver), '');
+	ok(scalar $pkgdb->pkgvers_all, 0);
+	ok(join(', ', map { $_->pkgname } $pkgdb->pkgvers_all), '');
 
 	$pkgdb->add('base', '1.0');
 
-	ok($pkgdb->numpkgver, 1);
+	ok(scalar $pkgdb->pkgvers_all, 1);
 
 	$pkgdb->add('other', '5.7');
 
-	ok($pkgdb->numpkgver, 2);
+	ok(scalar $pkgdb->pkgvers_all, 2);
 
 	my $base_8_0 = $pkgdb->add('base', '8.0');
 
-	ok($pkgdb->numpkgver, 3);
+	ok(scalar $pkgdb->pkgvers_all, 3);
 	ok($base_8_0->pkgname, 'base-8.0');
 
-	my $actual = join(', ', map { $_->pkgname } $pkgdb->pkgver);
+	my $actual = join(', ', map { $_->pkgname } $pkgdb->pkgvers_all);
 	ok($actual, 'base-8.0, base-1.0, other-5.7');
 
 	$actual = join(', ', map { $_->pkgname } $pkgdb->pkgver('base'));
