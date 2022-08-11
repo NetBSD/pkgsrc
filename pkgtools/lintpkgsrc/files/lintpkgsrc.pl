@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.73 2022/08/11 07:07:26 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.74 2022/08/11 07:18:47 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -123,17 +123,16 @@ sub pkgvers_all($self) {
 	map { $_->pkgver } $self->pkgs;
 }
 
-# pkgver($pkgbase) returns all PkgVers of the given pkgbase, sorted by
-# version in decreasing alphabetical(!) order.
-#
-# pkgver($pkgbase, $pkgversion) returns the package, or undef.
-sub pkgver($self, $pkgbase = undef, $pkgversion = undef) {
+# All PkgVers of the given pkgbase, sorted by version in decreasing
+# alphabetical(!) order.
+sub pkgvers_by_pkgbase($self, $pkgbase) {
 	my $pkgs = $self->{$pkgbase};
-	defined $pkgs && defined $pkgversion
-	    ? $pkgs->pkgver($pkgversion)
-	    : defined $pkgs
-	    ? $pkgs->pkgver
-	    : ();
+	defined $pkgs ? $pkgs->pkgver : ();
+}
+
+sub pkgver($self, $pkgbase, $pkgversion) {
+	my $pkgs = $self->{$pkgbase};
+	defined $pkgs ? $pkgs->pkgver($pkgversion) : undef;
 }
 
 # pkgs() returns all Pkgs, sorted by pkgbase.
@@ -834,8 +833,9 @@ sub package_globmatch($pkgmatch) {
 		# (package)(cmp)(pkgversion)
 		my ($test, @pkgvers);
 
+		# TODO: rename $matchpkgname to be more accurate.
 		($matchpkgname, $test, $matchver) = ($1, $2, $3);
-		if (@pkgvers = $pkgdb->pkgver($matchpkgname)) {
+		if (@pkgvers = $pkgdb->pkgvers_by_pkgbase($matchpkgname)) {
 			foreach my $pkgver (@pkgvers) {
 				if ($test eq '-') {
 					if ($pkgver->pkgversion eq $matchver) {
@@ -1388,7 +1388,7 @@ sub remove_distfiles($pkgsrcdir, $pkgdistdir) {
 	my @installed;
 	foreach my $pkgname (sort @pkgs) {
 		if ($pkgname =~ /^([^*?[]+)-([\d*?[].*)/) {
-			foreach my $pkgver ($pkgdb->pkgver($1)) {
+			foreach my $pkgver ($pkgdb->pkgvers_by_pkgbase($1)) {
 				next if $pkgver->var('dir') =~ /-current/;
 				push @installed, $pkgver;
 				last;
@@ -1557,7 +1557,7 @@ sub check_outdated_installed_packages($pkgsrcdir) {
 		print $_;
 		next unless $pkgname =~ /^([^*?[]+)-([\d*?[].*)/;
 
-		foreach my $pkgver ($pkgdb->pkgver($1)) {
+		foreach my $pkgver ($pkgdb->pkgvers_by_pkgbase($1)) {
 			next if $pkgver->var('dir') =~ /-current/;
 			push @update, $pkgver;
 			last;

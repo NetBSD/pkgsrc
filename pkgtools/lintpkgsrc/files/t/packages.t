@@ -1,4 +1,4 @@
-# $NetBSD: packages.t,v 1.11 2022/08/11 07:07:27 rillig Exp $
+# $NetBSD: packages.t,v 1.12 2022/08/11 07:18:47 rillig Exp $
 
 use strict;
 use warnings;
@@ -56,10 +56,10 @@ sub test_pkgdb() {
 	my $actual = join(', ', map { $_->pkgname } $pkgdb->pkgvers_all);
 	ok($actual, 'base-8.0, base-1.0, other-5.7');
 
-	$actual = join(', ', map { $_->pkgname } $pkgdb->pkgver('base'));
+	$actual = join(', ', map { $_->pkgname } $pkgdb->pkgvers_by_pkgbase('base'));
 	ok($actual, 'base-8.0, base-1.0');
 
-	$actual = join(', ', map { $_->pkgname } $pkgdb->pkgver('unknown'));
+	$actual = join(', ', map { $_->pkgname } $pkgdb->pkgvers_by_pkgbase('unknown'));
 	ok($actual, '');
 
 	ok($pkgdb->pkgver('base', '1.0')->pkgname, 'base-1.0');
@@ -93,7 +93,7 @@ sub test_package_variables() {
 	ok($versions, '2.0, 1.5, 1.10, 1.0');
 
 	# The versioned packages are sorted in decreasing alphabetical order.
-	my @pkgvers = $pkgdb->pkgver('pkgbase');
+	my @pkgvers = $pkgdb->pkgvers_by_pkgbase('pkgbase');
 	ok(join(', ', map { $_->pkgversion } @pkgvers), '2.0, 1.5, 1.10, 1.0');
 	ok($pkgvers[0], $pkgbase_2_0);
 	ok($pkgvers[3], $pkgbase_1_0);
