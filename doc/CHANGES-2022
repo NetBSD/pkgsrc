@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3764 2022/08/11 06:29:50 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3765 2022/08/11 06:40:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5586,3 +5586,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/xorgproto to 2022.2 [wiz 2022-08-11]
 	Updated devel/py-setuptools to 63.4.3 [adam 2022-08-11]
 	Updated devel/py-xopen to 1.6.0 [adam 2022-08-11]
+	Updated security/mbedtls to 2.28.1 [wiz 2022-08-11]
