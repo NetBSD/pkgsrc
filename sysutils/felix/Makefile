@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2022/08/09 06:36:01 pin Exp $
+# $NetBSD: Makefile,v 1.31 2022/08/11 08:54:24 pin Exp $
 
-DISTNAME=	felix-1.1.0
+DISTNAME=	felix-1.1.1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kyoheiu/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
