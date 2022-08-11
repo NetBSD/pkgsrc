@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.75 2022/08/11 07:20:52 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.76 2022/08/11 18:55:35 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -1259,7 +1259,7 @@ sub store_pkgsrc_makefiles($db, $fname) {
 
 # Remember to update manual page when modifying option list
 #
-sub usage_and_exit() {
+sub usage_and_exit($status) {
 	print "Usage: lintpkgsrc [opts] [makefiles]
 opts:
   -h : This help.	 [see lintpkgsrc(1) for more information]
@@ -1288,7 +1288,7 @@ Modifiers:
   -D      : Debug makefile and glob parsing
   -L      : List each Makefile when scanned
 ";
-	exit;
+	exit $status;
 }
 
 # Could speed up by building a cache of package names to paths, then processing
@@ -1608,7 +1608,7 @@ sub main() {
 	    !getopts('BDE:I:K:LM:OP:RSVdg:himopruyz', \%opt)
 		|| $opt{h}
 		|| !grep(/[BDEORSdgimopruyz]/, keys %opt)) {
-		usage_and_exit();
+		usage_and_exit($opt{h} ? 0 : 1);
 	}
 	$| = 1;
 
