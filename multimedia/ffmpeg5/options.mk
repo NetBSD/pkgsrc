@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2022/01/31 23:16:41 ryoon Exp $
+# $NetBSD: options.mk,v 1.2 2022/08/11 23:57:05 gutteridge Exp $
 
 # Global and legacy options
 
@@ -191,7 +191,6 @@ CONFIGURE_ARGS+=	--enable-libspeex
 
 # Raspberry Pi support
 .if !empty(PKG_OPTIONS:Mrpi)
-CONFIGURE_ARGS+=	--disable-xvmc
 CONFIGURE_ARGS+=	--enable-omx-rpi
 CONFIGURE_ARGS+=	--enable-mmal
 SUBST_CLASSES+=		vc
