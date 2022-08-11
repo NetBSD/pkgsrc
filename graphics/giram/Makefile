@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.88 2021/12/08 16:04:54 adam Exp $
+# $NetBSD: Makefile,v 1.89 2022/08/11 05:08:41 gutteridge Exp $
 #
 
 DISTNAME=	giram-0.3.5
-PKGREVISION=	40
+PKGREVISION=	41
 CATEGORIES=	graphics
 #MASTER_SITES=	http://www.giram.org/downloads/
 

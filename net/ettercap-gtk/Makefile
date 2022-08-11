@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2021/12/08 16:05:56 adam Exp $
+# $NetBSD: Makefile,v 1.5 2022/08/11 05:09:09 gutteridge Exp $
 
-PKGREVISION= 3
+PKGREVISION= 4
 .include "../../net/ettercap/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/ettercap-/ettercap-gtk-/1}

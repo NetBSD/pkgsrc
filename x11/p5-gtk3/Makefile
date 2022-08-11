@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2022/06/28 11:37:57 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/08/11 05:09:32 gutteridge Exp $
 
 DISTNAME=	Gtk3-0.038
 PKGNAME=	p5-${DISTNAME:S/Gtk/gtk/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11 perl5
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/X/XA/XAOC/
 

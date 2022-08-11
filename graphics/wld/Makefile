@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2021/12/08 16:02:13 adam Exp $
+# $NetBSD: Makefile,v 1.8 2022/08/11 05:08:47 gutteridge Exp $
 
 DISTNAME=	wld-0.0.0.20200220
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=michaelforney/}
 GITHUB_PROJECT=	wld

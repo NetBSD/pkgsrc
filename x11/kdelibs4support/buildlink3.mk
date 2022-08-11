@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.37 2022/07/02 16:53:40 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.38 2022/08/11 05:09:28 gutteridge Exp $
 
 BUILDLINK_TREE+=	kdelibs4support
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kdelibs4support
 KDELIBS4SUPPORT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kdelibs4support+=	kdelibs4support>=5.21.0
-BUILDLINK_ABI_DEPENDS.kdelibs4support?=	kdelibs4support>=5.93.0nb2
+BUILDLINK_ABI_DEPENDS.kdelibs4support?=	kdelibs4support>=5.93.0nb3
 BUILDLINK_PKGSRCDIR.kdelibs4support?=	../../x11/kdelibs4support
 
 .include "../../misc/kemoticons/buildlink3.mk"
