@@ -1,12 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.4 2022/08/04 15:21:26 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2022/08/11 05:08:14 gutteridge Exp $
 
 BUILDLINK_TREE+=	wayland
 
 .if !defined(WAYLAND_BUILDLINK3_MK)
 WAYLAND_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.wayland+=	wayland>=1.9.90
-BUILDLINK_ABI_DEPENDS.wayland?=	wayland>=1.18.0nb3
+BUILDLINK_API_DEPENDS.wayland+=	wayland>=1.21.0
 BUILDLINK_PKGSRCDIR.wayland?=	../../devel/wayland
 
 .include "../../mk/bsd.fast.prefs.mk"

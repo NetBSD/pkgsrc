@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2022/07/22 17:07:10 micha Exp $
+# $NetBSD: Makefile,v 1.7 2022/08/11 05:08:02 gutteridge Exp $
 
 DISTNAME=	gsound-1.0.2
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz

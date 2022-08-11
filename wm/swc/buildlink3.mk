@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2020/08/17 20:17:47 leot Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2022/08/11 05:09:21 gutteridge Exp $
 
 BUILDLINK_TREE+=	swc
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	swc
 SWC_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.swc+=	swc>=0.0.0.20191211
-BUILDLINK_ABI_DEPENDS.swc?=	swc>=0.0.0.20200228nb1
+BUILDLINK_ABI_DEPENDS.swc?=	swc>=0.0.0.20200228nb3
 BUILDLINK_PKGSRCDIR.swc?=	../../wm/swc
 
 .include "../../devel/wayland/buildlink3.mk"

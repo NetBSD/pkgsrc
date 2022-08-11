@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2021/12/08 16:02:46 adam Exp $
+# $NetBSD: Makefile,v 1.14 2022/08/11 05:09:21 gutteridge Exp $
 
 DISTNAME=	swc-0.0.0.20200228
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=michaelforney/}
 GITHUB_PROJECT=	swc

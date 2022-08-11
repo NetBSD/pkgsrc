@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2021/12/08 16:02:09 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2022/08/11 05:08:41 gutteridge Exp $
 
 BUILDLINK_TREE+=	girara
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	girara
 GIRARA_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.girara+=	girara>=0.2.8
-BUILDLINK_ABI_DEPENDS.girara?=	girara>=0.3.6
+BUILDLINK_ABI_DEPENDS.girara?=	girara>=0.3.7nb1
 BUILDLINK_PKGSRCDIR.girara?=	../../graphics/girara
 
 .include "../../x11/gtk3/buildlink3.mk"

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2022/07/11 01:36:50 khorben Exp $
+# $NetBSD: Makefile,v 1.36 2022/08/11 05:09:25 gutteridge Exp $
 
 DISTNAME=	Locker-0.4.2
 PKGNAME=	deforaos-locker-0.4.2
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	https://ftp.defora.org/pub/DeforaOS/Apps/Desktop/src/Locker/
 

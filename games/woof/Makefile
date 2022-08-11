@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2022/07/18 10:15:26 micha Exp $
+# $NetBSD: Makefile,v 1.39 2022/08/11 05:08:36 gutteridge Exp $
 
 DISTNAME=	woof_10.1.0
 PKGNAME=	${DISTNAME:S/_/-/}
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fabiangreffrath/}
 GITHUB_TAG=	${DISTNAME}

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.33 2022/07/02 16:53:34 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.34 2022/08/11 05:09:13 gutteridge Exp $
 
 BUILDLINK_TREE+=	kwallet
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kwallet
 KWALLET_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kwallet+=	kwallet>=5.19.0
-BUILDLINK_ABI_DEPENDS.kwallet?=	kwallet>=5.93.0nb1
+BUILDLINK_ABI_DEPENDS.kwallet?=	kwallet>=5.93.0nb2
 BUILDLINK_PKGSRCDIR.kwallet?=	../../security/kwallet
 
 .include "../../devel/knotifications/buildlink3.mk"

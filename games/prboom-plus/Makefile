@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2022/03/28 10:44:15 tnn Exp $
+# $NetBSD: Makefile,v 1.12 2022/08/11 05:08:34 gutteridge Exp $
 
 DISTNAME=	prboom-plus-2.6.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=coelckers/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2022/08/07 17:38:08 thorpej Exp $
+# $NetBSD: Makefile,v 1.10 2022/08/11 05:08:21 gutteridge Exp $
 
 DISTNAME=	x16-emulator-41
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=commanderx16/}
 GITHUB_PROJECT=	x16-emulator

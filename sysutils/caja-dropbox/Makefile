@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.31 2022/06/30 11:18:49 nia Exp $
+# $NetBSD: Makefile,v 1.32 2022/08/11 05:09:14 gutteridge Exp $
 
 # Makefile.common already includes python .mk files, so need to set this here
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-PKGREVISION= 5
+PKGREVISION= 6
 .include "../../meta-pkgs/mate/Makefile.common"
 
 DISTNAME=	caja-dropbox-${VERSION:R}.0

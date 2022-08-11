@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2022/03/28 10:53:03 tnn Exp $
+# $NetBSD: Makefile,v 1.17 2022/08/11 05:08:18 gutteridge Exp $
 
 DISTNAME=	cannonball-0.34
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=djyt/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

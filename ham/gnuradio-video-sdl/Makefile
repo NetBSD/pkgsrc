@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.53 2022/05/26 15:20:10 mef Exp $
+# $NetBSD: Makefile,v 1.54 2022/08/11 05:08:50 gutteridge Exp $
 
 PKGNAME=	gnuradio-video-sdl-${VERSION}
+PKGREVISION=	1
 COMMENT=	SDL (Simple DirectMedia Layer) bindings for GNU Radio
 
 .include	"../../ham/gnuradio-core/Makefile.common"

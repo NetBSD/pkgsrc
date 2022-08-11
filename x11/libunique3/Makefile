@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.33 2021/12/08 16:07:07 adam Exp $
+# $NetBSD: Makefile,v 1.34 2022/08/11 05:09:29 gutteridge Exp $
 #
 
 DISTNAME=	libunique-3.0.2
 PKGNAME=	${DISTNAME:S/libunique/libunique3/}
-PKGREVISION=	28
+PKGREVISION=	29
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libunique/3.0/}
 EXTRACT_SUFX=	.tar.bz2

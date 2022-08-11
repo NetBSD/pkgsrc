@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.104 2022/07/22 17:07:12 micha Exp $
+# $NetBSD: Makefile,v 1.105 2022/08/11 05:08:39 gutteridge Exp $
 
 DISTNAME=	cheese-3.34.0
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/cheese/3.34/}
 EXTRACT_SUFX=	.tar.xz
