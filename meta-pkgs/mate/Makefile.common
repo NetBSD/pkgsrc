@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2022/03/13 03:22:37 gutteridge Exp $
+# $NetBSD: Makefile.common,v 1.15 2022/08/11 01:11:23 gutteridge Exp $
 # used by meta-pkgs/mate/Makefile
 # used by print/atril/Makefile
 # used by sysutils/caja/Makefile
@@ -39,7 +39,7 @@
 # used by editors/pluma/Makefile
 
 VERSION=	1.24.1
-MASTER_SITES+=	http://pub.mate-desktop.org/releases/${VERSION:R}/
+MASTER_SITES+=	https://pub.mate-desktop.org/releases/${VERSION:R}/
 EXTRACT_SUFX=	.tar.xz
 
 GNU_CONFIGURE=	yes
