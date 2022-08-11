@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2020/04/14 21:38:32 scole Exp $
+# $NetBSD: Makefile,v 1.3 2022/08/11 16:37:19 scole Exp $
 #
 
-GITHUB_PROJECT=	thai-font-collection
-GITHUB_TAG=	ee660780065cc2bfff502e426d609b482464bf5c
-DISTNAME=	lanna-io-20200318
+DISTNAME=	lanna-io-20220607
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lannainnovation/}
+GITHUB_PROJECT=	thai-font-collection
+GITHUB_TAG=	6de0ec00f34514a25f1f6d028ce85cd69b7c4136
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/lannainnovation/thai-font-collection/
