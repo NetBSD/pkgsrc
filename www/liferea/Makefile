@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.184 2022/06/28 11:37:06 wiz Exp $
+# $NetBSD: Makefile,v 1.185 2022/08/11 05:09:23 gutteridge Exp $
 
 DISTNAME=	liferea-1.12.8
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lwindolf/}
 EXTRACT_SUFX=	.tar.bz2

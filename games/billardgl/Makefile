@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2021/12/08 16:04:24 adam Exp $
+# $NetBSD: Makefile,v 1.18 2022/08/11 05:08:23 gutteridge Exp $
 #
 
 DISTNAME=	BillardGL-1.75
 PKGNAME=	${DISTNAME:S/BillardGL/billardgl/}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=billardgl/}
 
