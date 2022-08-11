@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.7 2016/08/23 13:39:02 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2022/08/11 13:04:15 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
+${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/Readme.md
 ${GEM_LIBDIR}/lib/fast_gettext.rb
 ${GEM_LIBDIR}/lib/fast_gettext/cache.rb
