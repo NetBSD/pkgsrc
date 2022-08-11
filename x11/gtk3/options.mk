@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.22 2022/08/04 15:24:47 nia Exp $
+# $NetBSD: options.mk,v 1.23 2022/08/11 05:11:40 gutteridge Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gtk3
 PKG_SUPPORTED_OPTIONS+=	gtk3-atk-bridge cups debug
@@ -37,7 +37,6 @@ CONFIGURE_ARGS+=	--disable-quartz-backend
 PLIST_VARS+=		wayland
 .if !empty(PKG_OPTIONS:Mwayland)
 PLIST.wayland=		yes
-BUILDLINK_API_DEPENDS.wayland?=	wayland>=1.20.0
 .include "../../devel/wayland/buildlink3.mk"
 .include "../../devel/wayland-protocols/buildlink3.mk"
 .include "../../x11/libxkbcommon/buildlink3.mk"
