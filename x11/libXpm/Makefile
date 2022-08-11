@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2022/04/10 08:53:16 nia Exp $
+# $NetBSD: Makefile,v 1.24 2022/08/11 13:37:24 jperkin Exp $
 
 DISTNAME=		libXpm-3.5.13
 CATEGORIES=		graphics x11
@@ -22,6 +22,7 @@ CONFIGURE_ENV+=		APP_MAN_SUFFIX=1
 # pass down INTLLIBS in the build environment for use by the [cs]xpm
 # Makefiles.
 #
+USE_EXPLICIT_LIBDEPS=	no
 CONFIGURE_ENV+=		ac_cv_search_gettext=no
 MAKE_ENV+=		INTLLIBS=${BUILDLINK_LDADD.gettext:Q}
 
