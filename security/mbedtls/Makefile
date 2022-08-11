@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2021/05/02 08:16:13 nia Exp $
+# $NetBSD: Makefile,v 1.22 2022/08/11 06:40:38 wiz Exp $
 
-DISTNAME=	mbedtls-2.26.0
+DISTNAME=	mbedtls-2.28.1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ARMmbed/}
 GITHUB_TAG=	${DISTNAME}
