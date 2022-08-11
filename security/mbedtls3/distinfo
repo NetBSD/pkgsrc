@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/08/11 06:49:16 wiz Exp $
+
+BLAKE2s (mbedtls-3.2.1.tar.gz) = 5a7c6540ef9aeeca41b5f4192f3f7550f1e5a1b498a70592c484123552341516
+SHA512 (mbedtls-3.2.1.tar.gz) = e7f1726d2cdae6c580d588b40c8a51b9e353786efdd2e50fd1c11c7f46a2b6fe2622cfe2ee5cf998ec762b5ebf8f4720cfc1a1ecaebc497489f9d6a263a83523
+Size (mbedtls-3.2.1.tar.gz) = 4097571 bytes
