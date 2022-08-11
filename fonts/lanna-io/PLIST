@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2020/04/14 21:38:32 scole Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/08/11 16:37:19 scole Exp $
 share/fonts/X11/OTF/JS-Arisa-Italic.otf
 share/fonts/X11/OTF/JS-Arisa.otf
 share/fonts/X11/OTF/JS-Synjai-Italic.otf
@@ -214,6 +214,15 @@ share/fonts/X11/TTF/NotoSansThai-SemiCondensedMedium.ttf
 share/fonts/X11/TTF/NotoSansThai-SemiCondensedSemiBold.ttf
 share/fonts/X11/TTF/NotoSansThai-SemiCondensedThin.ttf
 share/fonts/X11/TTF/NotoSansThai-Thin.ttf
+share/fonts/X11/TTF/NotoSansThaiLooped-Black.ttf
+share/fonts/X11/TTF/NotoSansThaiLooped-Bold.ttf
+share/fonts/X11/TTF/NotoSansThaiLooped-ExtraBold.ttf
+share/fonts/X11/TTF/NotoSansThaiLooped-ExtraLight.ttf
+share/fonts/X11/TTF/NotoSansThaiLooped-Light.ttf
+share/fonts/X11/TTF/NotoSansThaiLooped-Medium.ttf
+share/fonts/X11/TTF/NotoSansThaiLooped-Regular.ttf
+share/fonts/X11/TTF/NotoSansThaiLooped-SemiBold.ttf
+share/fonts/X11/TTF/NotoSansThaiLooped-Thin.ttf
 share/fonts/X11/TTF/NotoSansThaiUI-Bold.ttf
 share/fonts/X11/TTF/NotoSansThaiUI-Regular.ttf
 share/fonts/X11/TTF/NotoSerifThai-Black.ttf
