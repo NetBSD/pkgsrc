@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3763 2022/08/11 06:09:29 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3764 2022/08/11 06:29:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5584,3 +5584,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/ruby-sqlite3 to 1.4.4 [taca 2022-08-11]
 	Updated x11/xfce4-screenshooter to 1.9.11 [gutteridge 2022-08-11]
 	Updated x11/xorgproto to 2022.2 [wiz 2022-08-11]
+	Updated devel/py-setuptools to 63.4.3 [adam 2022-08-11]
+	Updated devel/py-xopen to 1.6.0 [adam 2022-08-11]
