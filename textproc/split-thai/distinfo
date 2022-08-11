@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.22 2022/07/19 15:21:51 scole Exp $
+$NetBSD: distinfo,v 1.23 2022/08/11 15:55:55 scole Exp $
 
-BLAKE2s (split-thai-2.17.tgz) = b0ef0da109623aa0271bd588e5788b096ff59591f6c5fb069695b86f70e7eb2b
-SHA512 (split-thai-2.17.tgz) = e38fe989e07c50a9f6284e130ae44c59fe8ccf48bdf719e2349cfd7e0654d88bfc96e9d267c3482f146e409cecf1425c9cae36124f88d8eb892abe9875713d22
-Size (split-thai-2.17.tgz) = 38480 bytes
+BLAKE2s (split-thai-2.18.tgz) = bb7d003be53cc4d072f51d15916907fbd83fcdfce7eb8efddfa94982f1cc9747
+SHA512 (split-thai-2.18.tgz) = ec04dce68ff75a3ce3d703c2e168f0096a5d7dff77cd58e4ce728750076c98b399642241b9afce2378b9c0a3a39dfd5c1881b5018a0588316d3ffa84581c9f8a
+Size (split-thai-2.18.tgz) = 38497 bytes
 BLAKE2s (th_TH-7-2-0.dic) = 976e7d64726682c474f8ae202e5aa94e495a862712e1f6351332d1ff324ef99d
 SHA512 (th_TH-7-2-0.dic) = e2280e4a15fea69deaa20868909010342341ad8622337291492e2a4faf84fabc3441f5d34f47ace1d74cf41a21e0b983848ec686f1e4b5adea920f601f2e634b
 Size (th_TH-7-2-0.dic) = 1251425 bytes
