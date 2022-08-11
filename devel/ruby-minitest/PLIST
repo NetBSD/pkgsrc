@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2019/10/30 15:16:50 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2022/08/11 13:24:37 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.autotest
 ${GEM_LIBDIR}/History.rdoc
@@ -19,6 +19,7 @@ ${GEM_LIBDIR}/lib/minitest/pride.rb
 ${GEM_LIBDIR}/lib/minitest/pride_plugin.rb
 ${GEM_LIBDIR}/lib/minitest/spec.rb
 ${GEM_LIBDIR}/lib/minitest/test.rb
+${GEM_LIBDIR}/lib/minitest/test_task.rb
 ${GEM_LIBDIR}/lib/minitest/unit.rb
 ${GEM_LIBDIR}/test/minitest/metametameta.rb
 ${GEM_LIBDIR}/test/minitest/test_minitest_assertions.rb
@@ -27,4 +28,5 @@ ${GEM_LIBDIR}/test/minitest/test_minitest_mock.rb
 ${GEM_LIBDIR}/test/minitest/test_minitest_reporter.rb
 ${GEM_LIBDIR}/test/minitest/test_minitest_spec.rb
 ${GEM_LIBDIR}/test/minitest/test_minitest_test.rb
+${GEM_LIBDIR}/test/minitest/test_minitest_test_task.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
