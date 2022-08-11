@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2022/05/15 11:50:53 tnn Exp $
+# $NetBSD: Makefile,v 1.6 2022/08/11 05:08:40 gutteridge Exp $
 
 DISTNAME=	FNA3D-22.05
 PKGNAME=	${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=FNA-XNA/}
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2022/07/02 16:53:30 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2022/08/11 05:09:06 gutteridge Exp $
 
 BUILDLINK_TREE+=	kmediaplayer
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kmediaplayer
 KMEDIAPLAYER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kmediaplayer+=	kmediaplayer>=5.80.0
-BUILDLINK_ABI_DEPENDS.kmediaplayer?=	kmediaplayer>=5.93.0nb1
+BUILDLINK_ABI_DEPENDS.kmediaplayer?=	kmediaplayer>=5.93.0nb2
 BUILDLINK_PKGSRCDIR.kmediaplayer?=	../../multimedia/kmediaplayer
 
 .include "../../devel/kparts/buildlink3.mk"

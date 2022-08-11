@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2022/06/11 12:13:46 nia Exp $
+# $NetBSD: Makefile,v 1.25 2022/08/11 05:08:05 gutteridge Exp $
 
 DISTNAME=	suil-0.10.12
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	https://download.drobilla.net/
 EXTRACT_SUFX=	.tar.bz2
