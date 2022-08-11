@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.27 2021/10/26 10:19:31 nia Exp $
+$NetBSD: distinfo,v 1.28 2022/08/11 13:04:15 taca Exp $
 
-BLAKE2s (fast_gettext-2.1.0.gem) = ad560cee00968ca373956dfe2ddf071074aae7383f77ff60c99745bfdd015a98
-SHA512 (fast_gettext-2.1.0.gem) = 407f010afaeb644b50139330c1a28940e7f624d4664e4f839f4d2eba9772c081f577f11e2a88d61590baa95cffa57f53ad686f96290e963db3395b6d1208a576
-Size (fast_gettext-2.1.0.gem) = 28672 bytes
+BLAKE2s (fast_gettext-2.2.0.gem) = 289d2c798cb29dfade3c5f2b1072d0b791424cb79eb2582a4969a0422fdd69b6
+SHA512 (fast_gettext-2.2.0.gem) = 52d76151cf2eb83da1a07a431de99b475dea1e45c3fa234f9798ec00ca5650d4881432796eac9d4c7d70d20eb0a69a1922b7665262af37f1e600ab149564460e
+Size (fast_gettext-2.2.0.gem) = 30208 bytes
