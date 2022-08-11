@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3776 2022/08/11 14:03:53 taca Exp $
+$NetBSD: CHANGES-2022,v 1.3777 2022/08/11 15:58:14 scole Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5598,3 +5598,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/ruby-mixlib-shellout to 3.2.7 [taca 2022-08-11]
 	Updated devel/hoe to 3.24.0 [taca 2022-08-11]
 	Updated devel/ruby-mocha to 1.14.0 [taca 2022-08-11]
+	Updated textproc/split-thai to 2.18 [scole 2022-08-11]
