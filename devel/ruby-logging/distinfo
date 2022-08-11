@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/10/26 10:19:36 nia Exp $
+$NetBSD: distinfo,v 1.15 2022/08/11 13:16:02 taca Exp $
 
-BLAKE2s (logging-2.3.0.gem) = 0f2e63daa7d66ca1a773efdfb76935551f34ad464645600e79473fde4d3bd000
-SHA512 (logging-2.3.0.gem) = 32c0c3570022b2bdaf91fa11c3401bae0069f0450f1c5bc7063ab897e8e542eb4bf2952e533b5189b1f132f8b6a3931a52d8069b27090538ff0772754f154796
-Size (logging-2.3.0.gem) = 89088 bytes
+BLAKE2s (logging-2.3.1.gem) = 176fb989ee6bcaaf1c8195fa3c7914a88b3e1eb767d70fd574abe1036aded019
+SHA512 (logging-2.3.1.gem) = c622194088d3397484e026e8908ad8ed861833cbc9633677cc0984daa0a6d105865162794385ab5dd25a7874fdd98efc9e37efd8e9b7d4b00afa85775ba7e41b
+Size (logging-2.3.1.gem) = 89088 bytes
