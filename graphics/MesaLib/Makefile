@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.204 2022/08/06 19:35:33 he Exp $
+# $NetBSD: Makefile,v 1.205 2022/08/11 05:08:38 gutteridge Exp $
 
 DISTNAME=	mesa-21.3.9
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	https://mesa.freedesktop.org/archive/
 EXTRACT_SUFX=	.tar.xz

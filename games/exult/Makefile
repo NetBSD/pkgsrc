@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2022/07/02 16:53:16 ryoon Exp $
+# $NetBSD: Makefile,v 1.34 2022/08/11 05:08:25 gutteridge Exp $
 
 DISTNAME=	exult-1.6
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=exult/exult-all-versions/}
 

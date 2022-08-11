@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2022/05/15 13:41:11 tnn Exp $
+# $NetBSD: Makefile,v 1.10 2022/08/11 05:08:26 gutteridge Exp $
 
 DISTNAME=	FNA-22.05
 PKGNAME=	${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=FNA-XNA/}
 

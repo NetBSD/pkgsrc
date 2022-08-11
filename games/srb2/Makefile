@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2022/03/28 10:44:17 tnn Exp $
+# $NetBSD: Makefile,v 1.9 2022/08/11 05:08:35 gutteridge Exp $
 
 PKGNAME=	srb2-2.2.4
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	games
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

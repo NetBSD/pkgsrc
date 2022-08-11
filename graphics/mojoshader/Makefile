@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2022/04/23 22:43:19 tnn Exp $
+# $NetBSD: Makefile,v 1.6 2022/08/11 05:08:45 gutteridge Exp $
 
 DISTNAME=	mojoshader-0.0.20220415
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=icculus/}
 GITHUB_TAG=	335f92c67a719bff03b51dc83d34431ca823228a
