@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.866 2022/08/07 22:22:10 leot Exp $
+# $NetBSD: Makefile,v 1.867 2022/08/11 06:49:34 wiz Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -224,6 +224,7 @@ SUBDIR+=	lxqt-sudo
 SUBDIR+=	lynis
 SUBDIR+=	mate-polkit
 SUBDIR+=	mbedtls
+SUBDIR+=	mbedtls3
 SUBDIR+=	mcrypt
 SUBDIR+=	md4-collision
 SUBDIR+=	md5-collision
