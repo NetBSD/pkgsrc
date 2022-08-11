@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.90 2022/05/13 18:42:05 tnn Exp $
+$NetBSD: distinfo,v 1.91 2022/08/11 01:32:50 gutteridge Exp $
 
 BLAKE2s (Python-2.7.18.tar.xz) = 1b673ec8c9362a178e044691392bc4f67ad13457d7fddd84a88de346f23f9812
 SHA512 (Python-2.7.18.tar.xz) = a7bb62b51f48ff0b6df0b18f5b0312a523e3110f49c3237936bfe56ed0e26838c0274ff5401bda6fc21bf24337477ccac49e8026c5d651e4b4cafb5eb5086f6c
 Size (Python-2.7.18.tar.xz) = 12854736 bytes
 SHA1 (patch-Doc_library_cgi.rst) = ed9ac101b0857dc573e9a648694d1ee5fabe61fb
+SHA1 (patch-Doc_library_mailcap.rst) = 020cf493c4e83bc9f21040f90ccb99a2d9aeef24
 SHA1 (patch-Doc_library_urlparse.rst) = ceaea3a4577ba7d3055ffb3b3c8ffbbdda7e1d32
 SHA1 (patch-Include_pyerrors.h) = 0d2cd52d18cc719b895fa32ed7e11c6cb15bae54
 SHA1 (patch-Include_pyport.h) = f3e4ddbc954425a65301465410911222ca471320
@@ -22,14 +23,17 @@ SHA1 (patch-Lib_distutils_util.py) = 5bcfad96f8e490351160f1a7c1f4ece7706a33fa
 SHA1 (patch-Lib_ftplib.py) = 6679c4ea109dcb5d56d86a55343954e0368b9138
 SHA1 (patch-Lib_httplib.py) = b8eeaa203e2a86ece94148d192b2a7e0c078602a
 SHA1 (patch-Lib_lib2to3_pgen2_driver.py) = 5d6dab14197f27363394ff1aeee22a8ced8026d2
+SHA1 (patch-Lib_mailcap.py) = 9ed762022c0f08cefa6b87f975d0e5333fe2a5eb
 SHA1 (patch-Lib_multiprocessing_process.py) = 15699bd8ec822bf54a0631102e00e0a34f882803
 SHA1 (patch-Lib_plistlib.py) = 96ae702995d434e2d7ec0ac62e37427a90b61d13
 SHA1 (patch-Lib_sysconfig.py) = 8a7a0e5cbfec279a05945dffafea1b1131a76f0e
 SHA1 (patch-Lib_tarfile.py) = df00aa1941367c42dcbbed4b6658b724a22ddcde
+SHA1 (patch-Lib_test_mailcap.txt) = 80923517cb616f7de97df11ee8632465cce8d10c
 SHA1 (patch-Lib_test_multibytecodec__support.py) = a18c40e8009f1a8f63e15196d3e751d7dccf8367
 SHA1 (patch-Lib_test_test__cgi.py) = 724355e8d2195f8a4b76d7ea61133e9b14fa3a68
 SHA1 (patch-Lib_test_test__ftplib.py) = 4b22c8a963ccf6f60ca49be003bf026e1b0b632d
 SHA1 (patch-Lib_test_test__httplib.py) = f7cfa5501a63eaca539bfa53d38cf931f3a6c3ac
+SHA1 (patch-Lib_test_test__mailcap.py) = 6b869c9e9d9ef097d6fc4aef967e7b7bca3bd41c
 SHA1 (patch-Lib_test_test__platform.py) = 3a3b8c05f9bf9adf4862b1022ce864127d36b8b0
 SHA1 (patch-Lib_test_test__unicode.py) = 1bd182bdbd880d0a847f9d8b69277a607f9f0526
 SHA1 (patch-Lib_test_test__urllib2.py) = 89baa57daf2f3282e4fc5009915dbc4910b96ef1
