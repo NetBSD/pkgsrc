@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 10:19:28 nia Exp $
+$NetBSD: distinfo,v 1.10 2022/08/11 12:51:13 taca Exp $
 
-BLAKE2s (concurrent-ruby-1.1.9.gem) = 5edb547ff38146e1b327465e855b428bdc1c4e6e6bf8b11ac57ed8a1337cc488
-SHA512 (concurrent-ruby-1.1.9.gem) = 39472a1b5589a125428e67c532b23b8fead2a9e1a56e53d8de7d94cf95b52fc856540db657d751a2abfd1accbbbc66f3a7e05bc308f44445bb4344025abf00d5
-Size (concurrent-ruby-1.1.9.gem) = 358400 bytes
+BLAKE2s (concurrent-ruby-1.1.10.gem) = 47adc558c5cb6645d507e6d861b82f578f67e66726d2c76aa2a7fa6e991272ab
+SHA512 (concurrent-ruby-1.1.10.gem) = ed01d65d79e6ed2987321f4665cb5f7c3fcd701029a33e68da0feb0cd6cb2682cef619566a3bd0996db207becb0425d77967b66ee66d775a489b1317e78807ab
+Size (concurrent-ruby-1.1.10.gem) = 360448 bytes
