@@ -1,3 +1,6 @@
-mbed TLS (formerly known as PolarSSL) makes it trivially easy for developers
-to include cryptographic and SSL/TLS capabilities in their (embedded)
-products, facilitating this functionality with a minimal coding footprint.
+mbed TLS (formerly known as PolarSSL) makes it trivially easy for
+developers to include cryptographic and SSL/TLS capabilities in
+their (embedded) products, facilitating this functionality with a
+minimal coding footprint.
+
+This package contains the old stable major 2 version of the library.
