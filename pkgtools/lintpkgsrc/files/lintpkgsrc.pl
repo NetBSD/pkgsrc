@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.72 2022/08/10 22:43:55 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.73 2022/08/11 07:07:26 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -117,26 +117,17 @@ sub add($self, $pkgbase, $pkgversion) {
 	$pkgs->add($pkgbase, $pkgversion);
 }
 
-sub numpkgver($self) {
-	scalar $self->pkgver;
+# All PkgVers, sorted by pkgbase, then by version in decreasing
+# alphabetical(!) order.
+sub pkgvers_all($self) {
+	map { $_->pkgver } $self->pkgs;
 }
 
-# pkgver() returns all PkgVers, sorted by pkgbase, then by version in
-# decreasing alphabetical(!) order.
-#
 # pkgver($pkgbase) returns all PkgVers of the given pkgbase, sorted by
 # version in decreasing alphabetical(!) order.
 #
 # pkgver($pkgbase, $pkgversion) returns the package, or undef.
 sub pkgver($self, $pkgbase = undef, $pkgversion = undef) {
-	if (!defined $pkgbase) {
-		my (@pkgvers);
-		foreach my $pkg ($self->pkgs) {
-			push @pkgvers, $pkg->pkgver;
-		}
-		return @pkgvers;
-	}
-
 	my $pkgs = $self->{$pkgbase};
 	defined $pkgs && defined $pkgversion
 	    ? $pkgs->pkgver($pkgversion)
@@ -908,7 +899,7 @@ sub package_globmatch($pkgmatch) {
 		if ($matchver && ($regex = glob2regex($pkgmatch))) {
 
 			# (large-glob)
-			foreach my $pkgver ($pkgdb->pkgver) {
+			foreach my $pkgver ($pkgdb->pkgvers_all) {
 				if ($pkgver->pkgname =~ /$regex/) {
 					$matchver = undef;
 					last;
@@ -1093,7 +1084,7 @@ sub scan_pkgsrc_makefiles($pkgsrcdir) {
 	if (!$opt{L}) {
 		my ($len);
 
-		$_ = $pkgdb->numpkgver() . ' packages';
+		$_ = scalar $pkgdb->pkgvers_all . ' packages';
 		$len = @categories - length($_);
 		verbose("\b" x @categories, $_, ' ' x $len, "\b" x $len, "\n");
 	}
@@ -1102,7 +1093,7 @@ sub scan_pkgsrc_makefiles($pkgsrcdir) {
 # Cross reference all depends
 #
 sub pkgsrc_check_depends() {
-	foreach my $pkgver ($pkgdb->pkgver) {
+	foreach my $pkgver ($pkgdb->pkgvers_all) {
 		my ($err, $msg);
 
 		defined $pkgver->var('DEPENDS') || next;
@@ -1244,7 +1235,7 @@ sub scan_pkgsrc_distfiles_vs_distinfo($pkgsrcdir, $pkgdistdir, $check_unref,
 sub store_pkgsrc_makefiles($db, $fname) {
 	open(STORE, '>', $fname)
 	    or die("Cannot save pkgsrc store to $fname: $!\n");
-	foreach my $pkgver ($db->pkgver) {
+	foreach my $pkgver ($db->pkgvers_all) {
 		my $pkgbase = $pkgver->pkgbase;
 		my $pkgversion = $pkgver->pkgversion;
 
@@ -1490,7 +1481,7 @@ sub remove_distfiles($pkgsrcdir, $pkgdistdir) {
 
 sub list_broken_packages($pkgsrcdir) {
 	scan_pkgsrc_makefiles($pkgsrcdir);
-	foreach my $pkgver ($pkgdb->pkgver) {
+	foreach my $pkgver ($pkgdb->pkgvers_all) {
 		my $broken = $pkgver->var('BROKEN');
 		next unless $broken;
 		print $pkgver->pkgname . ": $broken\n";
@@ -1532,7 +1523,7 @@ sub list_packages_not_in_SUBDIR($pkgsrcdir) {
 	}
 
 	scan_pkgsrc_makefiles($pkgsrcdir);
-	foreach my $pkgver ($pkgdb->pkgver) {
+	foreach my $pkgver ($pkgdb->pkgvers_all) {
 		my $pkgpath = $pkgver->var('dir');
 		if (!defined $in_subdir{$pkgpath}) {
 			print "$pkgpath: Not in SUBDIR\n";
@@ -1545,7 +1536,7 @@ sub generate_map_file($pkgsrcdir, $fname) {
 
 	scan_pkgsrc_makefiles($pkgsrcdir);
 	open(TABLE, '>', $tmpfile) or fail("Cannot write '$tmpfile': $!");
-	foreach my $pkgver ($pkgdb->pkgver) {
+	foreach my $pkgver ($pkgdb->pkgvers_all) {
 		print TABLE $pkgver->pkgbase . "\t"
 		    . $pkgver->var('dir') . "\t"
 		    . $pkgver->pkgversion . "\n";
