@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.65 2022/06/28 11:36:06 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2022/08/11 16:00:17 gdt Exp $
 
-PKGREVISION= 1
+PKGREVISION= 2
 .include "Makefile.common"
 
 PKGNAME=		ups-${DISTNAME}
@@ -75,4 +75,6 @@ post-install:
 		${INSTALL_DATA} $$f ${DESTDIR}${NUT_DOCDIR}/cables/; \
 	done
 
+# nut-scanner needs libltdl, but this is not documented
+.include "../../devel/libltdl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
