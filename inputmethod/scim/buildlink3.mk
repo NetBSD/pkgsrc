@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.38 2022/06/28 11:34:09 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.39 2022/08/11 05:08:52 gutteridge Exp $
 
 BUILDLINK_TREE+=	scim
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	scim
 SCIM_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.scim+=	scim>=1.4.7
-BUILDLINK_ABI_DEPENDS.scim+=	scim>=1.4.17nb3
+BUILDLINK_ABI_DEPENDS.scim+=	scim>=1.4.17nb4
 BUILDLINK_PKGSRCDIR.scim?=	../../inputmethod/scim
 
 .include "../../devel/gettext-lib/buildlink3.mk"

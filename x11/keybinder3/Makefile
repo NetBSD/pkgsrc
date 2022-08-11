@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2021/12/08 16:02:53 adam Exp $
+# $NetBSD: Makefile,v 1.9 2022/08/11 05:09:28 gutteridge Exp $
 
 DISTNAME=	keybinder-3.0-0.3.2
 PKGNAME=	keybinder3-0.3.2
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kupferlauncher/keybinder/releases/download/keybinder-3.0-v0.3.2/}
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2022/07/15 20:39:49 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2022/08/11 05:09:31 gutteridge Exp $
 
 DISTNAME=	xorg-server-${XORG_VERSION}
 PKGNAME=	modular-xorg-xwayland-${XORG_VERSION}
+PKGREVISION=	1
 
 .include "../../devel/wayland/platform.mk"
 

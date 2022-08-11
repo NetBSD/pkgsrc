@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.113 2021/12/08 16:05:56 adam Exp $
+# $NetBSD: Makefile,v 1.114 2022/08/11 05:09:09 gutteridge Exp $
 
 DISTNAME=	etherape-0.9.20
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=etherape/}
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2020/03/08 16:47:48 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2022/08/11 05:08:44 gutteridge Exp $
 
 BUILDLINK_TREE+=	lib3ds
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	lib3ds
 LIB3DS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.lib3ds+=	lib3ds>=1.2.0nb2
-BUILDLINK_ABI_DEPENDS.lib3ds+=	lib3ds>=1.2.0nb8
+BUILDLINK_ABI_DEPENDS.lib3ds+=	lib3ds>=1.2.0nb10
 BUILDLINK_PKGSRCDIR.lib3ds?=	../../graphics/lib3ds
 
 .include "../../graphics/MesaLib/buildlink3.mk"

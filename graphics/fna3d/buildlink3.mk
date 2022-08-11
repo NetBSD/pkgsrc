@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2022/05/15 12:08:07 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2022/08/11 05:08:40 gutteridge Exp $
 
 BUILDLINK_TREE+=	fna3d
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	fna3d
 FNA3D_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.fna3d+=	fna3d>=22.05
+BUILDLINK_ABI_DEPENDS.fna3d?=	fna3d>=22.05nb1
 BUILDLINK_PKGSRCDIR.fna3d?=	../../graphics/fna3d
 
 .include "../../devel/SDL2/buildlink3.mk"
