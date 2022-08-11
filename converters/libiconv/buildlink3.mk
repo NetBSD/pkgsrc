@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.27 2022/08/09 11:31:14 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.28 2022/08/11 13:37:24 jperkin Exp $
 
 BUILDLINK_TREE+=	iconv
 
@@ -23,7 +23,10 @@ BUILDLINK_LDADD.iconv=		${BUILDLINK_LIBNAME.iconv:S/^/-l/:S/^-l$//}
 # Ideally this would be done via CWRAPPERS_LDADD to avoid leaking into LDFLAGS
 # but there is no concensus on that yet.
 #
-.if ${OPSYS_EXPLICIT_LIBDEPS:Uno:tl} == "yes"
+# USE_EXPLICIT_LIBDEPS is a package-settable variable for rare cases where the
+# libraries need to be pulled in but we do not want to expose them by default.
+#
+.if ${OPSYS_EXPLICIT_LIBDEPS:Uno:tl} == "yes" && ${USE_EXPLICIT_LIBDEPS:Uyes:tl} != "no"
 BUILDLINK_LDFLAGS.iconv+=	${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.iconv}/lib
 BUILDLINK_LDFLAGS.iconv+=	${BUILDLINK_LDADD.iconv}
 .endif

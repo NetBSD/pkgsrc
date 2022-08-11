@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.41 2022/08/09 11:31:14 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.42 2022/08/11 13:37:24 jperkin Exp $
 
 BUILDLINK_TREE+=	gettext
 
@@ -37,7 +37,10 @@ CONFIGURE_ENV+=			INTLLIBS="${BUILDLINK_LDADD.gettext}"
 # Ideally this would be done via CWRAPPERS_LDADD to avoid leaking into LDFLAGS
 # but there is no concensus on that yet.
 #
-.if ${OPSYS_EXPLICIT_LIBDEPS:Uno:tl} == "yes"
+# USE_EXPLICIT_LIBDEPS is a package-settable variable for rare cases where the
+# libraries need to be pulled in but we do not want to expose them by default.
+#
+.if ${OPSYS_EXPLICIT_LIBDEPS:Uno:tl} == "yes" && ${USE_EXPLICIT_LIBDEPS:Uyes:tl} != "no"
 BUILDLINK_LDFLAGS.gettext+=	${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.gettext}/lib
 BUILDLINK_LDFLAGS.gettext+=	${BUILDLINK_LDADD.gettext}
 .endif
