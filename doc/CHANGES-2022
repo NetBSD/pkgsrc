@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3774 2022/08/11 13:55:41 taca Exp $
+$NetBSD: CHANGES-2022,v 1.3775 2022/08/11 13:58:58 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5596,3 +5596,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/ruby-minitest to 5.16.2 [taca 2022-08-11]
 	Updated devel/ruby-mixlib-config to 3.0.27 [taca 2022-08-11]
 	Updated devel/ruby-mixlib-shellout to 3.2.7 [taca 2022-08-11]
+	Updated devel/hoe to 3.24.0 [taca 2022-08-11]
