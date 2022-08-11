@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3770 2022/08/11 13:07:42 taca Exp $
+$NetBSD: CHANGES-2022,v 1.3771 2022/08/11 13:16:34 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5592,3 +5592,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/ruby-concurrent-ruby to 1.1.10 [taca 2022-08-11]
 	Updated devel/ruby-fast_gettext to 2.2.0 [taca 2022-08-11]
 	Updated devel/ruby-inline to 3.12.6 [taca 2022-08-11]
+	Updated devel/ruby-logging to 2.3.1 [taca 2022-08-11]
