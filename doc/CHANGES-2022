@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3757 2022/08/11 01:33:11 gutteridge Exp $
+$NetBSD: CHANGES-2022,v 1.3758 2022/08/11 03:37:14 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5578,3 +5578,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated pkgtools/lintpkgsrc to 2022.08.10 [rillig 2022-08-10]
 	Updated audio/spotify-player to 0.9.5 [pin 2022-08-10]
 	Updated lang/python27 to 2.7.18nb9 [gutteridge 2022-08-11]
+	Updated databases/ruby-hiera to 3.10.0 [taca 2022-08-11]
