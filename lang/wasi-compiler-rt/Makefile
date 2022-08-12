@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2022/04/18 19:11:31 adam Exp $
+# $NetBSD: Makefile,v 1.13 2022/08/12 13:59:52 gutteridge Exp $
 
 .include "../../lang/llvm/version.mk"
 
 DISTNAME=	compiler-rt-${LLVM_VERSION}.src
 PKGNAME=	${DISTNAME:S/.src//:S/compiler-rt-/wasi-compiler-rt-/}
-PKGREVISION=	3
 CATEGORIES=	lang devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
