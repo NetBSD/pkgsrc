@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.76 2022/08/11 18:55:35 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.77 2022/08/12 20:53:01 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -17,11 +17,11 @@ use v5.36;
 use locale;
 use strict;
 use warnings;
-use Getopt::Std;
-use File::Find;
-use File::Basename;
-use IPC::Open3;
 use Cwd 'realpath', 'getcwd';
+use File::Basename;
+use File::Find;
+use Getopt::Std;
+use IPC::Open3;
 
 # PkgVer is a PKGBASE + PKGVERSION, including some of the variables that
 # have been extracted from the package Makefile.
@@ -49,10 +49,10 @@ sub pkgname($self) {
 	$self->pkgbase . '-' . $self->pkgversion;
 }
 
-sub var($self, $key, $val = undef) {
-	defined $val
-	    ? ($self->{vars}->{$key} = $val)
-	    : $self->{vars}->{$key};
+sub var($self, $name, $value = undef) {
+	defined $value
+	    ? ($self->{vars}->{$name} = $value)
+	    : $self->{vars}->{$name};
 }
 
 sub vars($self) {
@@ -87,20 +87,14 @@ sub add($self, $pkgbase, $pkgversion) {
 	$self->{pkgvers}->{$pkgversion} = PkgVer->new($pkgbase, $pkgversion);
 }
 
-# pkgver() returns all PkgVers of this pkgbase, in decreasing alphabetical(!)
-# version order.
-#
-# pkgver($pkgversion) returns the PkgVer, or undef.
-sub pkgver($self, $pkgversion = undef) {
+# All PkgVers of this pkgbase, in decreasing alphabetical(!) version order.
+sub pkgvers_all($self) {
 	my $pkgvers = $self->{pkgvers};
-	defined $pkgversion
-	    ? $pkgvers->{$pkgversion}
-	    : sort { $b->pkgversion cmp $a->pkgversion } values %$pkgvers;
+	sort { $b->pkgversion cmp $a->pkgversion } values %$pkgvers;
 }
 
-# XXX: Returns the alphabetically(!) highest PkgVer.
-sub latestver($self) {
-	($self->pkgver)[0];
+sub pkgver($self, $pkgversion) {
+	$self->{pkgvers}->{$pkgversion}
 }
 
 # PkgDb is a small database of all packages in pkgsrc.
@@ -120,14 +114,14 @@ sub add($self, $pkgbase, $pkgversion) {
 # All PkgVers, sorted by pkgbase, then by version in decreasing
 # alphabetical(!) order.
 sub pkgvers_all($self) {
-	map { $_->pkgver } $self->pkgs;
+	map { $_->pkgvers_all } $self->pkgs;
 }
 
 # All PkgVers of the given pkgbase, sorted by version in decreasing
 # alphabetical(!) order.
 sub pkgvers_by_pkgbase($self, $pkgbase) {
 	my $pkgs = $self->{$pkgbase};
-	defined $pkgs ? $pkgs->pkgver : ();
+	defined $pkgs ? $pkgs->pkgvers_all : ();
 }
 
 sub pkgver($self, $pkgbase, $pkgversion) {
@@ -1315,7 +1309,7 @@ sub check_prebuilt_packages() {
 				}
 
 				# Pick probably the last version
-				$pkgver = $pkgs->latestver;
+				$pkgver = ($pkgs->pkgvers_all)[0];
 			}
 
 			if ($opt{R} && $pkgver->var('RESTRICTED')) {

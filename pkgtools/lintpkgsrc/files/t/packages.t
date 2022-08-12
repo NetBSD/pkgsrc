@@ -1,4 +1,4 @@
-# $NetBSD: packages.t,v 1.12 2022/08/11 07:18:47 rillig Exp $
+# $NetBSD: packages.t,v 1.13 2022/08/12 20:53:01 rillig Exp $
 
 use strict;
 use warnings;
@@ -25,13 +25,14 @@ sub test_pkgs() {
 
 	$pkgs->add('base', '1.0nb4');
 
-	ok(($pkgs->pkgver)[0]->pkgbase, 'base');
-	ok(($pkgs->pkgver)[0]->pkgversion, '1.0nb4');
+	ok(($pkgs->pkgvers_all)[0]->pkgname, 'base-1.0nb4');
 
 	$pkgs->add('base', '1.0nb20');
 
 	# FIXME: The latest version is actually 1.0nb20, not 1.0nb4.
-	ok($pkgs->latestver->pkgversion, '1.0nb4');
+	#  As of 2022-08-12, [0] is the alphabetically(!) largest version.
+	ok(($pkgs->pkgvers_all)[0]->pkgname, 'base-1.0nb4');
+	ok(($pkgs->pkgvers_all)[1]->pkgname, 'base-1.0nb20');
 }
 
 sub test_pkgdb() {
