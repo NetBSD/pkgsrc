@@ -1,13 +1,12 @@
-@comment $NetBSD: PLIST,v 1.6 2021/11/23 20:55:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/08/12 08:52:51 pin Exp $
 bin/ld.lld
 bin/ld64.lld
-bin/ld64.lld.darwinnew
-bin/ld64.lld.darwinold
 bin/lld
 bin/lld-link
 bin/wasm-ld
 include/lld/Common/Args.h
 include/lld/Common/Arrays.h
+include/lld/Common/CommonLinkerContext.h
 include/lld/Common/DWARF.h
 include/lld/Common/Driver.h
 include/lld/Common/ErrorHandler.h
@@ -39,19 +38,12 @@ include/lld/Core/Simple.h
 include/lld/Core/SymbolTable.h
 include/lld/Core/UndefinedAtom.h
 include/lld/Core/Writer.h
-include/lld/ReaderWriter/MachOLinkingContext.h
-include/lld/ReaderWriter/YamlContext.h
 lib/cmake/lld/LLDConfig.cmake
 lib/cmake/lld/LLDTargets-release.cmake
 lib/cmake/lld/LLDTargets.cmake
 lib/liblldCOFF.a
 lib/liblldCommon.a
-lib/liblldCore.a
-lib/liblldDriver.a
 lib/liblldELF.a
 lib/liblldMachO.a
-lib/liblldMachO2.a
 lib/liblldMinGW.a
-lib/liblldReaderWriter.a
 lib/liblldWasm.a
-lib/liblldYAML.a
