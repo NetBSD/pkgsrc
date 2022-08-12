@@ -1,4 +1,4 @@
-# $NetBSD: parse_makefile.t,v 1.6 2022/08/10 21:48:47 rillig Exp $
+# $NetBSD: parse_makefile.t,v 1.7 2022/08/12 22:18:35 rillig Exp $
 
 use strict;
 use warnings;
@@ -10,31 +10,46 @@ BEGIN { plan tests => 29, onfail => sub { die } }
 
 require('../lintpkgsrc.pl');
 
-sub test_expand_var() {
+sub enable_debug_logging() {
+	export_for_test()->{opt}->{D} = 1;
+}
+
+sub disable_debug_logging() {
+	export_for_test()->{opt}->{D} = 0;
+}
+
+sub test_expand_exprs() {
 	my %vars = (
 	    CFLAGS      => '${CFLAGS_OPT} ${CFLAGS_WARN} ${CFLAGS_ERR}',
 	    CFLAGS_WARN => '${CFLAGS_WARN_ALL}',
 	    CFLAGS_OPT  => '-Os',
 	    CFLAGS_ERR  => '${CFLAGS_WARN_ALL:M*error=*}',
+	    '2_DOLLAR'  => '$${CFLAGS_OPT}',
+	    '3_DOLLAR'  => '$$${CFLAGS_OPT}',
 	);
 
-	my $cflags = expand_var('<${CFLAGS}>', \%vars);
+	ok(expand_exprs('<${CFLAGS}>', \%vars),
+	    '<-Os M_a_G_i_C_uNdEfInEd ${CFLAGS_WARN_ALL:M*error=*}>');
 
-	ok($cflags, '<-Os M_a_G_i_C_uNdEfInEd ${CFLAGS_WARN_ALL:M*error=*}>')
+	# FIXME: '$$' must be preserved, the result must be '$${CFLAGS_OPT}'.
+	ok(expand_exprs('<${2_DOLLAR}>', \%vars),
+	    '<$-Os>');
+	ok(expand_exprs('<${3_DOLLAR}>', \%vars),
+	    '<$$-Os>');
 }
 
 sub test_parse_makefile_vars() {
 	my $dir = File::Temp->newdir();
 	my $file = "$dir/filename.mk";
 
-	write_file($file,
-	    "# comment\n",
-	    "VAR=\tvalue\n",
-	    "COMMENT=\tvalue#comment\n",
-	    "MULTI=\tone\\\n",
-	    "\ttwo\\\n",
-	    "three#comment\n"
-	);
+	write_file($file, map { "$_\n" } (
+	    '# comment',
+	    "VAR=\tvalue",
+	    "COMMENT=\tvalue#comment",
+	    "MULTI=\tone\\",
+	    "\ttwo\\",
+	    'three#comment',
+	));
 
 	my $vars = parse_makefile_vars($file, undef);
 
@@ -52,11 +67,39 @@ sub test_parse_makefile_vars() {
 	ok($vars->{VAR}, 'value');
 }
 
+sub test_parse_makefile_vars_cond() {
+	my $dir = File::Temp->newdir();
+	my $file = "$dir/filename.mk";
+
+	write_file($file, map { "$_\n" } (
+	    '.if ${COND} == then',
+	    'BRANCH= then',
+	    '.elif ${COND} == elif',
+	    'BRANCH= elif',
+	    '.else',
+	    'BRANCH= else',
+	    '.endif',
+	));
+
+	my $vars;
+	export_for_test()->{default_vars}->{COND} = 'then';
+	$vars = parse_makefile_vars($file, undef);
+	ok($vars->{BRANCH}, 'then');
+
+	export_for_test()->{default_vars}->{COND} = 'elif';
+	$vars = parse_makefile_vars($file, undef);
+	ok($vars->{BRANCH}, 'elif');
+
+	# XXX: The string 'anything else' would not work due to the space.
+	export_for_test()->{default_vars}->{COND} = 'anything_else';
+	$vars = parse_makefile_vars($file, undef);
+	ok($vars->{BRANCH}, 'else');
+}
+
 sub test_expand_modifiers() {
 	my $vars = {
 	    REF => 'VALUE',
 	};
-	export_for_test()->{opt}->{D} = 1;
 
 	expand_modifiers('file.mk', 'VAR', '<', 'REF', 'S,U,X,', '>', $vars);
 
@@ -112,7 +155,23 @@ sub test_eval_mk_cond_func() {
 	ok(eval_mk_cond_func('target', 'anything', $vars), 0);
 }
 
-test_expand_var();
+sub test_parse_eval_make_false() {
+	my $vars = {
+	    'EMPTY'    => '',
+	    'SPACE'    => ' ',
+	    'WORD'     => 'word',
+	    'WORDS'    => 'word1 word2',
+	    'DEV_NULL' => '/dev/null',
+	};
+
+	# 1 means false, 0 means true.
+	ok(parse_eval_make_false('defined(UNDEF)', $vars), 1);
+	ok(parse_eval_make_false('defined(EMPTY)', $vars), 0);
+}
+
+test_expand_exprs();
 test_parse_makefile_vars();
+test_parse_makefile_vars_cond();
 test_expand_modifiers();
 test_eval_mk_cond_func();
+test_parse_eval_make_false();
