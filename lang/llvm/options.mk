@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.13 2022/06/11 13:44:05 fcambus Exp $
+# $NetBSD: options.mk,v 1.14 2022/08/12 08:37:58 pin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.llvm
 
@@ -26,7 +26,7 @@ PKG_SUGGESTED_OPTIONS+=		terminfo
 PKG_SUGGESTED_OPTIONS+=	llvm-target-sparc
 .elif !empty(MACHINE_ARCH:Mpowerpc*)
 PKG_SUGGESTED_OPTIONS+=	llvm-target-powerpc
-.elif !empty(MACHINE_ARCH:Maarch64)
+.elif ${MACHINE_ARCH} == aarch64
 PKG_SUGGESTED_OPTIONS+=	llvm-target-aarch64
 PKG_SUGGESTED_OPTIONS+=	llvm-target-webassembly
 .elif !empty(MACHINE_ARCH:Mearm*)
