@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2021/11/23 20:55:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2022/08/12 08:47:29 pin Exp $
 include/polly/Canonicalization.h
 include/polly/CodeGen/BlockGenerators.h
 include/polly/CodeGen/CodeGeneration.h
@@ -30,7 +30,6 @@ include/polly/Options.h
 include/polly/PolyhedralInfo.h
 include/polly/PruneUnprofitable.h
 include/polly/RegisterPasses.h
-include/polly/RewriteByReferenceParameters.h
 include/polly/ScheduleOptimizer.h
 include/polly/ScheduleTreeTransform.h
 include/polly/ScopBuilder.h
@@ -39,6 +38,7 @@ include/polly/ScopDetectionDiagnostic.h
 include/polly/ScopInfo.h
 include/polly/ScopPass.h
 include/polly/Simplify.h
+include/polly/Support/DumpFunctionPass.h
 include/polly/Support/DumpModulePass.h
 include/polly/Support/GICHelper.h
 include/polly/Support/ISLOStream.h
@@ -58,9 +58,6 @@ include/polly/isl/ast.h
 include/polly/isl/ast_build.h
 include/polly/isl/ast_type.h
 include/polly/isl/constraint.h
-include/polly/isl/cpp-checked-conversion.h
-include/polly/isl/cpp-checked.h
-include/polly/isl/cpp.h
 include/polly/isl/ctx.h
 include/polly/isl/fixed_box.h
 include/polly/isl/flow.h
@@ -104,7 +101,6 @@ include/polly/isl/space_type.h
 include/polly/isl/stdint.h
 include/polly/isl/stream.h
 include/polly/isl/stride_info.h
-include/polly/isl/typed_cpp.h
 include/polly/isl/union_map.h
 include/polly/isl/union_map_type.h
 include/polly/isl/union_set.h
