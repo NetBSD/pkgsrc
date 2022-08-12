@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.49 2022/06/11 13:45:44 fcambus Exp $
+# $NetBSD: Makefile.common,v 1.50 2022/08/12 08:45:44 pin Exp $
 # used by lang/clang/Makefile
 # used by lang/clang-tools-extra/Makefile
 
@@ -110,14 +110,7 @@ LIBCPP_CHECK!=	\
 LIBCPP_CHECK=	NO
 .endif
 
-# patch NetBSD::GetCXXStdlibType
 .if ${OPSYS} == "NetBSD" && ${LIBCPP_CHECK} != YES
-SUBST_CLASSES+=			libcxx
-SUBST_STAGE.libcxx=		pre-configure
-SUBST_MESSAGE.libcxx=		Patching toolchain to use libstdc++ (matching the host compiler)
-SUBST_FILES.libcxx=		lib/Driver/ToolChains/NetBSD.cpp
-SUBST_SED.libcxx=		-e 's,(Major >= 7 || Major == 0),(false),'
-
 CMAKE_ARGS+=			-DCLANG_DEFAULT_CXX_STDLIB:STRING="libstdc++"
 .endif
 
