@@ -1,10 +1,10 @@
-$NetBSD: patch-ELF_Config.h,v 1.8 2021/07/12 18:47:15 adam Exp $
+$NetBSD: patch-ELF_Config.h,v 1.9 2022/08/12 08:52:51 pin Exp $
 
 Add dummy option for an AArch64 erratum.
 
---- ELF/Config.h.orig	2020-10-07 10:10:48.000000000 +0000
+--- ELF/Config.h.orig	2022-06-22 16:46:24.000000000 +0000
 +++ ELF/Config.h
-@@ -156,6 +156,7 @@ struct Configuration {
+@@ -170,6 +170,7 @@ struct Configuration {
    bool enableNewDtags;
    bool executeOnly;
    bool exportDynamic;

@@ -1,10 +1,10 @@
-$NetBSD: patch-ELF_Options.td,v 1.4 2019/11/03 12:10:29 kamil Exp $
+$NetBSD: patch-ELF_Options.td,v 1.5 2022/08/12 08:52:51 pin Exp $
 
 Add dummy option for an AArch64 erratum.
 
---- ELF/Options.td.orig	2019-07-17 14:54:02.000000000 +0000
+--- ELF/Options.td.orig	2022-06-22 16:46:24.000000000 +0000
 +++ ELF/Options.td
-@@ -168,6 +168,9 @@ defm filter: Eq<"filter", "Set DT_FILTER
+@@ -217,6 +217,9 @@ defm filter: Eq<"filter", "Set DT_FILTER
  
  defm fini: Eq<"fini", "Specify a finalizer function">, MetaVarName<"<symbol>">;
  
