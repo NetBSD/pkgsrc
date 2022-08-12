@@ -1,4 +1,4 @@
-# $NetBSD: parse_makefile.t,v 1.7 2022/08/12 22:18:35 rillig Exp $
+# $NetBSD: parse_makefile.t,v 1.8 2022/08/12 22:32:21 rillig Exp $
 
 use strict;
 use warnings;
@@ -62,7 +62,7 @@ sub test_parse_makefile_vars() {
 	ok($vars->{COMMENT}, 'valu');
 
 	# FIXME: must be 'one two three'
-	ok($vars->{MULTI}, "on\ttwthree#comment");
+	ok($vars->{MULTI}, "one two three#comment");
 
 	ok($vars->{VAR}, 'value');
 }
