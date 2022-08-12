@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2022/04/25 03:04:59 markd Exp $
+# $NetBSD: Makefile,v 1.21 2022/08/12 08:26:31 adam Exp $
 
 DISTNAME=	extra-cmake-modules-5.93.0
 CATEGORIES=	devel kde
@@ -11,7 +11,7 @@ COMMENT=	Extra modules and scripts for CMake
 LICENSE=	modified-bsd
 
 USE_CMAKE=	yes
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	# none
 CMAKE_ARG_PATH=	..
 CONFIGURE_DIRS=	_KDE_build
 
