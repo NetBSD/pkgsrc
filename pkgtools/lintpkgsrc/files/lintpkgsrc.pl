@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.80 2022/08/12 22:40:40 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.81 2022/08/12 22:45:14 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -445,10 +445,9 @@ sub expand_modifiers($file, $varname, $left, $subvar, $mods, $right, $vars) {
 
 	debug("$file: substitutelist $varname ($result) $subvar (@mods)\n");
 	foreach (@mods) {
-		# FIXME: Add '^' anchor.
-		if (m# (U) (.*) #x) {
+		if (m#^ (U) (.*) #x) {
 			$result ||= "fallback:$2";
-		} elsif (m# ([CS]) (.) ([^/\@]+) \2 ([^/\@]*) \2 ([1g]*) #x) {
+		} elsif (m#^ ([CS]) (.) ([^/\@]+) \2 ([^/\@]*) \2 ([1g]*) #x) {
 			# TODO: Use non-greedy repetitions above.
 			# TODO: Properly handle separators other than '/' and '@'.
 			my ($how, $from, $to, $global) = ($1, $3, $4, $5);
