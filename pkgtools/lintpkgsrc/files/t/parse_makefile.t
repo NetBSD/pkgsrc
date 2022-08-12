@@ -1,4 +1,4 @@
-# $NetBSD: parse_makefile.t,v 1.9 2022/08/12 22:40:40 rillig Exp $
+# $NetBSD: parse_makefile.t,v 1.10 2022/08/12 22:45:14 rillig Exp $
 
 use strict;
 use warnings;
@@ -101,9 +101,10 @@ sub test_expand_modifiers() {
 
 	expand_modifiers('file.mk', 'VAR', '<', 'REF', 'S,U,X,', '>', $vars);
 
-	# FIXME: Should be 'VALXE', but the 'U' is wrongly interpreted as a
-	#  ':U' modifier.
-	ok($vars->{VAR}, '<VALUE>');
+	# Ensure that the 'U' in the modifier 'S,U,X,' is not interpreted as
+	# the modifier ':U'. Before lintpkgsrc.pl 1.81 from 2022-08-13,
+	# lintpkgsrc did exactly that.
+	ok($vars->{VAR}, '<VALXE>');
 
 	expand_modifiers('file.mk', 'VAR', '<', 'REF', 'S,VAL,H,', '>', $vars);
 
