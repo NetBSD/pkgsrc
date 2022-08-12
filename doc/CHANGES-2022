@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3791 2022/08/12 08:59:00 pin Exp $
+$NetBSD: CHANGES-2022,v 1.3792 2022/08/12 14:07:48 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5615,3 +5615,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/lldb to 14.0.6 [pin 2022-08-12]
 	Updated devel/include-what-you-use to 0.18 [pin 2022-08-12]
 	Updated lang/compiler-rt to 14.0.6 [pin 2022-08-12]
+	Updated lang/wasi-compiler-rt to 14.0.6 [gutteridge 2022-08-12]
