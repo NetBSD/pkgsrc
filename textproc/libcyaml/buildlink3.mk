@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2021/08/06 14:10:21 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2022/08/12 08:06:47 wiz Exp $
 
 BUILDLINK_TREE+=	libcyaml
 
@@ -7,7 +7,7 @@ LIBCYAML_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libcyaml+=	libcyaml>=1.1.0
 BUILDLINK_ABI_DEPENDS.libcyaml+=	libcyaml>=1.1.0
-BUILDLINK_PKGSRCDIR.libcyaml?=		../../wip/libcyaml
+BUILDLINK_PKGSRCDIR.libcyaml?=		../../textproc/libcyaml
 
 .include "../../textproc/libyaml/buildlink3.mk"
 .endif # LIBCYAML_BUILDLINK3_MK
