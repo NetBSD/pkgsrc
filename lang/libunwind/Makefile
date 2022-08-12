@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2021/07/12 18:46:07 adam Exp $
+# $NetBSD: Makefile,v 1.26 2022/08/12 08:39:56 pin Exp $
 
 .include "../../lang/llvm/version.mk"
 
@@ -26,7 +26,7 @@ CMAKE_ARG_PATH=	${WRKSRC}
 USE_CMAKE=		yes
 USE_LANGUAGES=		c c++11
 USE_TOOLS+=		pax
-GCC_REQD+=		4.8
+GCC_REQD+=		12
 SSP_SUPPORTED=		no
 
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
