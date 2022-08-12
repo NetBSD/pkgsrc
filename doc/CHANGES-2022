@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3780 2022/08/12 08:38:22 pin Exp $
+$NetBSD: CHANGES-2022,v 1.3781 2022/08/12 08:40:18 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5604,3 +5604,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-aiounittest to 1.4.2 [adam 2022-08-12]
 	Updated sysutils/ansible to 6.2.0 [adam 2022-08-12]
 	Updated lang/llvm to 14.0.6 [pin 2022-08-12]
+	Updated lang/libunwind to 14.0.6 [pin 2022-08-12]
