@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2022/08/06 16:49:59 he Exp $
+# $NetBSD: Makefile,v 1.74 2022/08/12 08:37:58 pin Exp $
 #
 # when updating this, please also update:
 # devel/include-what-you-use
@@ -21,7 +21,6 @@
 # Always update all */buildlink3.mk to require the latest stable release
 # version in BUILDLINK_API_DEPENDS, as there is no backwards compatibility
 
-PKGREVISION= 2
 .include "version.mk"
 
 DISTNAME=	llvm-${LLVM_VERSION}.src
@@ -38,7 +37,7 @@ USE_CMAKE=		yes
 GCC_REQD+=		5
 PYTHON_FOR_BUILD_ONLY=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=   27
 
 NOT_FOR_PLATFORM+=	*-*-alpha
 NOT_FOR_PLATFORM+=	*-*-vax
