@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3778 2022/08/11 16:40:17 scole Exp $
+$NetBSD: CHANGES-2022,v 1.3779 2022/08/12 08:21:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5600,3 +5600,6 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/ruby-mocha to 1.14.0 [taca 2022-08-11]
 	Updated textproc/split-thai to 2.18 [scole 2022-08-11]
 	Updated fonts/lanna-io to 20220607 [scole 2022-08-11]
+	Updated devel/git to 2.37.2 [adam 2022-08-12]
+	Updated devel/py-aiounittest to 1.4.2 [adam 2022-08-12]
+	Updated sysutils/ansible to 6.2.0 [adam 2022-08-12]
