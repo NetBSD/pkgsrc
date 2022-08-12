@@ -1,0 +1,16 @@
+$NetBSD: patch-lib_asan_CMakeLists.txt,v 1.1 2022/08/12 08:58:41 pin Exp $
+
+Only use optimized asan code on Linux.
+https://github.com/llvm/llvm-project/issues/57086
+
+--- lib/asan/CMakeLists.txt.orig	2022-06-22 16:46:24.000000000 +0000
++++ lib/asan/CMakeLists.txt
+@@ -46,7 +46,7 @@ set(ASAN_STATIC_SOURCES
+   asan_rtl_static.cpp
+   )
+ 
+-if (NOT WIN32 AND NOT APPLE)
++if (LINUX)
+   list(APPEND ASAN_STATIC_SOURCES
+     asan_rtl_x86_64.S
+   )
