@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.70 2022/06/30 11:18:32 nia Exp $
+# $NetBSD: Makefile,v 1.71 2022/08/12 08:45:44 pin Exp $
 
-PKGREVISION= 3
 .include "Makefile.common"
 
 PKGNAME=	${DISTNAME:S/.src//}
