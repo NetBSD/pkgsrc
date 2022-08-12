@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.48 2022/08/04 21:40:40 jperkin Exp $
+# $NetBSD: Makefile,v 1.49 2022/08/12 08:18:19 adam Exp $
 
-DISTNAME=	ansible-5.7.1
-PKGREVISION=	1
+DISTNAME=	ansible-6.2.0
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/ansible/}
 
@@ -25,6 +24,7 @@ REPLACE_PYTHON+=	ansible_collections/*/*/.azure-pipelines/scripts/*.py
 REPLACE_PYTHON+=	ansible_collections/*/*/tests/*/*.py
 REPLACE_PYTHON+=	ansible_collections/*/*/tests/*/*/*.py
 REPLACE_PYTHON+=	ansible_collections/*/*/tests/*/*/*/*.py
+REPLACE_PYTHON+=	ansible_collections/cisco/meraki/scripts/sublime-build/build.py.generic
 REPLACE_PYTHON+=	ansible_collections/community/digitalocean/scripts/inventory/*.py
 REPLACE_PYTHON+=	ansible_collections/community/dns/update-docs-fragments.py
 REPLACE_PYTHON+=	ansible_collections/community/general/scripts/inventory/*.py
@@ -32,7 +32,9 @@ REPLACE_PYTHON+=	ansible_collections/community/general/scripts/vault/*.py
 REPLACE_PYTHON+=	ansible_collections/community/general/tests/integration/targets/django_manage/files/base_test/*/*/*.py
 REPLACE_PYTHON+=	ansible_collections/community/hashi_vault/.github/actions/ansible-codecov/process.py
 REPLACE_PYTHON+=	ansible_collections/community/hashi_vault/.github/actions/docker-image-versions/versions.py
+REPLACE_PYTHON+=	ansible_collections/community/okd/ci/doc_fragment_modules.py
 REPLACE_PYTHON+=	ansible_collections/community/okd/ci/downstream_fragments.py
+REPLACE_PYTHON+=	ansible_collections/community/routeros/update-docs.py
 REPLACE_PYTHON+=	ansible_collections/ngine_io/cloudstack/scripts/inventory/cloudstack.py
 REPLACE_PYTHON+=	ansible_collections/ovirt/ovirt/roles/disaster_recovery/files/*.py
 REPLACE_PYTHON+=	ansible_collections/ovirt/ovirt/roles/disaster_recovery/files/ovirt-dr
@@ -47,7 +49,7 @@ CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/netbox/netbox/hacking/
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/community/hashi_vault/docs/preview/build.sh
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/community/kubernetes/utils/*.sh
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/community/okd/ci/*.sh
-CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/community/vmware/check-ignores-order
+CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/community/vmware/tools/check-ignores-order
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/community/zabbix/roles/zabbix_proxy/files/*.bsx
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/community/zabbix/roles/zabbix_server/files/*.bsx
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/cyberark/conjur/ci/*
@@ -56,6 +58,7 @@ CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/infinidat/infinibox/bi
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/ovirt/ovirt/automation/*.sh
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/ovirt/ovirt/build.sh
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/sensu/sensu_go/docker/*.sh
+CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/vmware/vmware_rest/manual/source/export_to_ansible_ansible.sh
 
 post-extract:
 	${FIND} ${WRKSRC}/ansible_collections -name .DS_Store -delete
