@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2021/11/23 20:55:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2022/08/12 08:54:31 pin Exp $
 bin/lldb
 bin/lldb-argdumper
 bin/lldb-instr
@@ -105,6 +105,7 @@ include/lldb/Core/AddressResolver.h
 include/lldb/Core/AddressResolverFileLine.h
 include/lldb/Core/Architecture.h
 include/lldb/Core/Communication.h
+include/lldb/Core/DataFileCache.h
 include/lldb/Core/Debugger.h
 include/lldb/Core/Declaration.h
 include/lldb/Core/Disassembler.h
@@ -230,7 +231,6 @@ include/lldb/Host/PseudoTerminal.h
 include/lldb/Host/SafeMachO.h
 include/lldb/Host/Socket.h
 include/lldb/Host/SocketAddress.h
-include/lldb/Host/StringConvert.h
 include/lldb/Host/Terminal.h
 include/lldb/Host/ThreadLauncher.h
 include/lldb/Host/Time.h
@@ -324,6 +324,7 @@ include/lldb/Interpreter/OptionValues.h
 include/lldb/Interpreter/Options.h
 include/lldb/Interpreter/Property.h
 include/lldb/Interpreter/ScriptInterpreter.h
+include/lldb/Interpreter/ScriptedInterface.h
 include/lldb/Interpreter/ScriptedProcessInterface.h
 include/lldb/Symbol/ArmUnwindInfo.h
 include/lldb/Symbol/Block.h
@@ -361,8 +362,10 @@ include/lldb/Symbol/UnwindTable.h
 include/lldb/Symbol/Variable.h
 include/lldb/Symbol/VariableList.h
 include/lldb/Target/ABI.h
+include/lldb/Target/AppleArm64ExceptionClass.h
 include/lldb/Target/AssertFrameRecognizer.h
 include/lldb/Target/DynamicLoader.h
+include/lldb/Target/DynamicRegisterInfo.h
 include/lldb/Target/ExecutionContext.h
 include/lldb/Target/ExecutionContextScope.h
 include/lldb/Target/InstrumentationRuntime.h
@@ -375,6 +378,7 @@ include/lldb/Target/Memory.h
 include/lldb/Target/MemoryHistory.h
 include/lldb/Target/MemoryRegionInfo.h
 include/lldb/Target/MemoryTagManager.h
+include/lldb/Target/MemoryTagMap.h
 include/lldb/Target/ModuleCache.h
 include/lldb/Target/OperatingSystem.h
 include/lldb/Target/PathMappingList.h
@@ -398,6 +402,7 @@ include/lldb/Target/StackFrame.h
 include/lldb/Target/StackFrameList.h
 include/lldb/Target/StackFrameRecognizer.h
 include/lldb/Target/StackID.h
+include/lldb/Target/Statistics.h
 include/lldb/Target/StopInfo.h
 include/lldb/Target/StructuredDataPlugin.h
 include/lldb/Target/SystemRuntime.h
@@ -455,6 +460,7 @@ include/lldb/Utility/FileSpec.h
 include/lldb/Utility/Flags.h
 include/lldb/Utility/GDBRemote.h
 include/lldb/Utility/IOObject.h
+include/lldb/Utility/Instrumentation.h
 include/lldb/Utility/Iterable.h
 include/lldb/Utility/LLDBAssert.h
 include/lldb/Utility/Listener.h
@@ -468,7 +474,6 @@ include/lldb/Utility/RangeMap.h
 include/lldb/Utility/RegisterValue.h
 include/lldb/Utility/RegularExpression.h
 include/lldb/Utility/Reproducer.h
-include/lldb/Utility/ReproducerInstrumentation.h
 include/lldb/Utility/ReproducerProvider.h
 include/lldb/Utility/Scalar.h
 include/lldb/Utility/SelectHelper.h
@@ -497,6 +502,7 @@ include/lldb/Utility/UserIDResolver.h
 include/lldb/Utility/VASPrintf.h
 include/lldb/Utility/VMRange.h
 include/lldb/Utility/XcodeSDK.h
+include/lldb/Version/Version.h
 include/lldb/lldb-defines.h
 include/lldb/lldb-enumerations.h
 include/lldb/lldb-forward.h
@@ -510,8 +516,9 @@ include/lldb/lldb-public.h
 include/lldb/lldb-types.h
 include/lldb/lldb-versioning.h
 lib/liblldb.so
-lib/liblldb.so.13
+lib/liblldb.so.14
 lib/liblldb.so.${PKGVERSION}
+lib/lua/5.3/lldb.so
 ${PYSITELIB}/lldb/__init__.py
 ${PYSITELIB}/lldb/_lldb.so
 ${PYSITELIB}/lldb/embedded_interpreter.py

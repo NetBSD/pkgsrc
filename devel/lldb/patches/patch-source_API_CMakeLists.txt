@@ -1,10 +1,10 @@
-$NetBSD: patch-source_API_CMakeLists.txt,v 1.5 2021/07/12 18:47:16 adam Exp $
+$NetBSD: patch-source_API_CMakeLists.txt,v 1.6 2022/08/12 08:54:31 pin Exp $
 
 Fix finding libxml2's includes.
 
---- source/API/CMakeLists.txt.orig	2021-04-06 16:38:18.000000000 +0000
+--- source/API/CMakeLists.txt.orig	2022-06-22 16:46:24.000000000 +0000
 +++ source/API/CMakeLists.txt
-@@ -19,6 +19,10 @@ if(LLDB_ENABLE_LUA)
+@@ -15,6 +15,10 @@ if(LLDB_ENABLE_LUA)
    set(lldb_lua_wrapper ${lua_bindings_dir}/LLDBWrapLua.cpp)
  endif()
  
