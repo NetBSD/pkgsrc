@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3786 2022/08/12 08:49:39 pin Exp $
+$NetBSD: CHANGES-2022,v 1.3787 2022/08/12 08:51:17 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5610,3 +5610,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/clang to 14.0.6 [pin 2022-08-12]
 	Updated devel/polly to 14.0.6 [pin 2022-08-12]
 	Updated parallel/openmp to 14.0.6 [pin 2022-08-12]
+	Updated lang/clang-tools-extra to 14.0.6 [pin 2022-08-12]
