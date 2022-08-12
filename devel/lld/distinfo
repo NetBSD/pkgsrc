@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.16 2022/02/03 20:38:40 adam Exp $
+$NetBSD: distinfo,v 1.17 2022/08/12 08:52:51 pin Exp $
 
-BLAKE2s (lld-13.0.1.src.tar.xz) = 2231bc19e5b7b30db7e765b900ed2e4388b162d36140d09c0c12d76512b8d8dd
-SHA512 (lld-13.0.1.src.tar.xz) = cc0b401e741b9d3d283d9d41969354be55791f74ab80d3d3ac50bb653c4b5826d9ce11e7fdd38517c98e0abceaa21cf0407fc8e418f9db1a30f2f3587e0f0db0
-Size (lld-13.0.1.src.tar.xz) = 1473868 bytes
-SHA1 (patch-CMakeLists.txt) = 32163a5bcd7d9456065e48ef6e6f0e2c3380a820
-SHA1 (patch-ELF_Config.h) = c449bf971088da671df5da507347fe8dc8c9da82
-SHA1 (patch-ELF_Options.td) = 22a1f293681b86a9aac87624efcfeeb20a4ba51c
+BLAKE2s (lld-14.0.6.src.tar.xz) = 2fc265b616bbdbaeecc8385fda204dbc28b1d871d98f4b3b3cd5183c4d6eefc8
+SHA512 (lld-14.0.6.src.tar.xz) = fad97b441f9642b73edd240af2c026259de0951d5ace42779e9e0fcf5e417252a1d744e2fc51e754a45016621ba0c70088177f88695af1c6ce290dd26873b094
+Size (lld-14.0.6.src.tar.xz) = 1366180 bytes
+SHA1 (patch-CMakeLists.txt) = 082e24d9c155f69a8256fcde486c427a7354cb69
+SHA1 (patch-ELF_Config.h) = 50861ef74c2ff9a9091afcbc8d076e379d9531e5
+SHA1 (patch-ELF_Options.td) = c81907d6e5e099ed2c26de972c6744b7197de3d3

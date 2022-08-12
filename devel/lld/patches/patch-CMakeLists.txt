@@ -1,12 +1,12 @@
-$NetBSD: patch-CMakeLists.txt,v 1.3 2021/07/12 18:47:15 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.4 2022/08/12 08:52:51 pin Exp $
 
 LLD 7.0.1 is incompatible with gtest version in pkgsrc.  Remove
 the condition that prevents it from building its own copy when system
 version is installed.
 
---- CMakeLists.txt.orig	2021-04-06 16:38:18.000000000 +0000
+--- CMakeLists.txt.orig	2022-06-22 16:46:24.000000000 +0000
 +++ CMakeLists.txt
-@@ -76,7 +76,6 @@ if(CMAKE_SOURCE_DIR STREQUAL CMAKE_CURRE
+@@ -115,7 +115,6 @@ if(LLD_BUILT_STANDALONE)
        endif()
        set(UNITTEST_DIR ${LLVM_MAIN_SRC_DIR}/utils/unittest)
        if(EXISTS ${UNITTEST_DIR}/googletest/include/gtest/gtest.h
