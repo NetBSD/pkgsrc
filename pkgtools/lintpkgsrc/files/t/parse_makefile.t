@@ -1,4 +1,4 @@
-# $NetBSD: parse_makefile.t,v 1.8 2022/08/12 22:32:21 rillig Exp $
+# $NetBSD: parse_makefile.t,v 1.9 2022/08/12 22:40:40 rillig Exp $
 
 use strict;
 use warnings;
@@ -58,11 +58,9 @@ sub test_parse_makefile_vars() {
 	    '.CURDIR, BSD_PKG_MK, COMMENT, MULTI, VAR');
 	ok($vars->{BSD_PKG_MK}, 'YES');
 
-	# FIXME: must be 'value'
-	ok($vars->{COMMENT}, 'valu');
+	ok($vars->{COMMENT}, 'value');
 
-	# FIXME: must be 'one two three'
-	ok($vars->{MULTI}, "one two three#comment");
+	ok($vars->{MULTI}, 'one two three');
 
 	ok($vars->{VAR}, 'value');
 }
