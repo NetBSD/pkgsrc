@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3793 2022/08/12 14:08:20 gutteridge Exp $
+$NetBSD: CHANGES-2022,v 1.3794 2022/08/12 15:02:24 he Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5617,3 +5617,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/compiler-rt to 14.0.6 [pin 2022-08-12]
 	Updated lang/wasi-compiler-rt to 14.0.6 [gutteridge 2022-08-12]
 	Updated lang/wasi-libcxx to 14.0.6 [gutteridge 2022-08-12]
+	Updated net/routinator to 0.11.2 [he 2022-08-12]
