@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.79 2022/08/12 22:32:21 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.80 2022/08/12 22:40:40 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -523,15 +523,18 @@ sub parse_makefile_vars($file, $cwd = undef) {
 		print "$file\n";
 	}
 
-	while (defined($_ = shift(@lines))) {
-		s/\s*[^\\]#.*//;
+	while (defined($_ = shift @lines)) {
+		s/(*negative_lookbehind:\\)#.*//;
+		s/\s+$//;
 
 		# Join continuation lines.
 		# See devel/bmake/files/parse.c, 'replace following'.
 		while (substr($_, -1) eq "\\" && @lines > 0) {
-			my $line = shift @lines;
-			$line =~ s,^\s*, ,;
-			substr($_, -1) = $line;
+			my $cont = shift @lines;
+			$cont =~ s,^\s*, ,;
+			$cont =~ s/(*negative_lookbehind:\\)#.*//;
+			$cont =~ s/\s+$//;
+			substr($_, -1) = $cont;
 		}
 
 		# Conditionals
