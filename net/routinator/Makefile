@@ -1,21 +1,15 @@
-# $NetBSD: Makefile,v 1.2 2022/03/01 13:08:13 he Exp $
+# $NetBSD: Makefile,v 1.3 2022/08/12 15:01:42 he Exp $
 
-DISTNAME=	routinator-0.11.0
+DISTNAME=	routinator-0.11.2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=NLnetLabs/}
-#GITHUB_TAG=	v${PKGVERSION_NOREV}
-#GITHUB_TAG=	v0.11.0-rc1
-#GITHUB_TAG=	ada9a2d7cd66ffa4eaf5d2f83e41d1468dd285f2
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 GITHUB_PROJECT=	routinator
-GITHUB_TAG=	ada9a2d
-GITHUB_TYPE=	tag
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/NLnetLabs/routinator
 COMMENT=	Validate RPKI ROA against routing announcements
 LICENSE=	modified-bsd
-
-WRKSRC=		${WRKDIR}/routinator-ada9a2d7cd66ffa4eaf5d2f83e41d1468dd285f2
 
 # 0.11.0 requires minimum this rust version:
 RUST_REQ=		1.52.0
