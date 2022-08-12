@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.77 2022/08/12 20:53:01 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.78 2022/08/12 22:18:35 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -234,7 +234,7 @@ sub split_pkgversion($pkgversion) {
 	@temp;
 }
 
-sub pkgversioncmp($va, $op, $vb) {
+sub pkgversion_cmp($va, $op, $vb) {
 	my ($nb_a, @a) = split_pkgversion($va);
 	my ($nb_b, @b) = split_pkgversion($vb);
 
@@ -252,7 +252,7 @@ sub pkgversioncmp($va, $op, $vb) {
 
 # Return a copy of $value in which trivial variable expressions are replaced
 # with their variable values.
-sub expand_var($value, $vars) {
+sub expand_exprs($value, $vars) {
 	while ($value =~ /\$\{([-\w.]+)\}/) {
 		$value = defined $vars->{$1}
 		    ? "$`$vars->{$1}$'"
@@ -263,7 +263,7 @@ sub expand_var($value, $vars) {
 
 sub eval_mk_cond_func($func, $arg, $vars) {
 	if ($func eq 'defined') {
-		my $varname = expand_var($arg, $vars);
+		my $varname = expand_exprs($arg, $vars);
 		defined $vars->{$varname} ? 1 : 0;
 
 	} elsif ($func eq 'empty') {
@@ -271,19 +271,22 @@ sub eval_mk_cond_func($func, $arg, $vars) {
 		# Implement (some of) make's :M modifier
 		if ($arg =~ /^ ([^:]+) :M ([^:]+) $/x) {
 			my ($varname, $pattern) = ($1, $2);
-			$varname = expand_var($varname, $vars);
-			$pattern = expand_var($pattern, $vars);
+			$varname = expand_exprs($varname, $vars);
+			$pattern = expand_exprs($pattern, $vars);
 
 			my $value = $vars->{$varname};
 			return 1 unless defined $value;
 
-			$value = expand_var($value, $vars);
+			$value = expand_exprs($value, $vars);
 
 			$pattern =~ s/([{.+])/\\$1/g;
 			$pattern =~ s/\*/.*/g;
 			$pattern =~ s/\?/./g;
 			$pattern = '^' . $pattern . '$';
 
+			# XXX: Splitting by whitespace is not correct, but
+			#  it's good enough for lists with only unquoted
+			#  words. See devel/bmake/files/str.c:brk_string.
 			foreach my $word (split(/\s+/, $value)) {
 				return 0 if $word =~ /$pattern/;
 			}
@@ -292,11 +295,11 @@ sub eval_mk_cond_func($func, $arg, $vars) {
 			debug("Unsupported ':M' modifier in '$arg'\n");
 		}
 
-		my $value = expand_var("\${$arg}", $vars);
+		my $value = expand_exprs("\${$arg}", $vars);
 		defined $value && $value =~ /\S/ ? 0 : 1;
 
 	} elsif ($func eq 'exists') {
-		my $fname = expand_var($arg, $vars);
+		my $fname = expand_exprs($arg, $vars);
 		-e $fname ? 1 : 0;
 
 	} elsif ($func eq 'make') {
@@ -307,9 +310,10 @@ sub eval_mk_cond_func($func, $arg, $vars) {
 	}
 }
 
+# TODO: The word 'false' is confusing.
 sub parse_eval_make_false($line, $vars) {
 	my $false = 0;
-	my $test = expand_var($line, $vars);
+	my $test = expand_exprs($line, $vars);
 
 	# XXX This is _so_ wrong - need to parse this correctly
 	$test =~ s/""/\r/g;
@@ -320,23 +324,19 @@ sub parse_eval_make_false($line, $vars) {
 
 	while ($test =~ /(target|empty|make|defined|exists)\s*\(([^()]+)\)/) {
 		my ($func, $arg) = ($1, $2);
-		my $cond = eval_mk_cond_func($func, $arg, $vars);
-		$test =~ s/$func\s*\([^()]+\)/$cond/;
+		my $result = eval_mk_cond_func($func, $arg, $vars);
+		$test =~ s/$func\s*\([^()]+\)/$result/;
 		debug("conditional: update to $test\n");
 	}
 
 	while ($test =~ /([^\s()\|\&]+)\s+(!=|==)\s+([^\s()]+)/) {
-		if ($2 eq '==') {
-			$_ = $1 eq $3 ? 1 : 0;
-		} else {
-			$_ = $1 ne $3 ? 1 : 0;
-		}
-		$test =~ s/[^\s()\|\&]+\s+(!=|==)\s+[^\s()]+/$_/;
+		my $result = 0 + (($2 eq '==') ? ($1 eq $3) : ($1 ne $3));
+		$test =~ s/[^\s()\|\&]+\s+(!=|==)\s+[^\s()]+/$result/;
 	}
 
 	if ($test !~ /[^<>\d()\s&|.!]/) {
 		debug("eval test $test\n");
-		$false = eval "($test)?0:1";
+		$false = eval "($test) ? 0 : 1";
 		if (!defined $false) {
 			fail("Eval failed $line - $test");
 		}
@@ -411,7 +411,7 @@ sub parse_makefile_line_include($file, $incfile,
 
 sub parse_makefile_line_var($varname, $op, $value, $vars) {
 	if ($op eq ':=') {
-		$vars->{$varname} = expand_var($value, $vars);
+		$vars->{$varname} = expand_exprs($value, $vars);
 	} elsif ($op eq '+=' && defined $vars->{$varname}) {
 		$vars->{$varname} .= " $value";
 	} elsif ($op eq '?=' && defined $vars->{$varname}) {
@@ -543,7 +543,7 @@ sub parse_makefile_vars($file, $cwd = undef) {
 				push @if_false, parse_eval_make_false($2, \%vars);
 
 			} else {
-				my $false = !defined $vars{expand_var($2, \%vars)};
+				my $false = !defined $vars{expand_exprs($2, \%vars)};
 				if ($type eq 'ndef') {
 					$false = !$false;
 				}
@@ -572,7 +572,7 @@ sub parse_makefile_vars($file, $cwd = undef) {
 			# Skip branches whose condition evaluated to false.
 
 		} elsif (m#^\. \s* include \s+ "([^"]+)" #x) {
-			my $incfile = expand_var($1, \%vars);
+			my $incfile = expand_exprs($1, \%vars);
 
 			parse_makefile_line_include($file, $incfile,
 			    \@incdirs, \%incfiles, \@lines, \%vars);
@@ -597,7 +597,7 @@ sub parse_makefile_vars($file, $cwd = undef) {
 		foreach my $key (keys %vars) {
 			next if index($vars{$key}, '$') == -1;
 
-			$_ = expand_var($vars{$key}, \%vars);
+			$_ = expand_exprs($vars{$key}, \%vars);
 			if ($_ ne $vars{$key}) {
 				$vars{$key} = $_;
 				$loop = 1;
@@ -836,7 +836,7 @@ sub package_globmatch($pkgmatch) {
 						last;
 					}
 				} else {
-					if (pkgversioncmp($pkgver->pkgversion, $test, $matchver)) {
+					if (pkgversion_cmp($pkgver->pkgversion, $test, $matchver)) {
 						$matchver = undef;
 						last;
 					}

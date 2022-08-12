@@ -1,4 +1,4 @@
-# $NetBSD: pkgversion.t,v 1.10 2022/08/04 05:50:54 rillig Exp $
+# $NetBSD: pkgversion.t,v 1.11 2022/08/12 22:18:35 rillig Exp $
 
 use strict;
 use warnings;
@@ -9,8 +9,8 @@ BEGIN { plan tests => 1781, onfail => sub { die } }
 
 require('../lintpkgsrc.pl');
 
-ok(pkgversioncmp('3.4', '<', '3.4'), '');
-ok(pkgversioncmp('3.4', '<=', '3.4'), 1);
+ok(pkgversion_cmp('3.4', '<', '3.4'), '');
+ok(pkgversion_cmp('3.4', '<=', '3.4'), 1);
 
 # See pkgtools/pkglint/files/pkgver/vercmp_test.go.
 my @split_version_tests = (
@@ -80,8 +80,8 @@ foreach my $i (0 .. $#versions) {
 	foreach my $j (0 .. $#versions) {
 		foreach my $vi (@{$versions[$i]}) {
 			foreach my $vj (@{$versions[$j]}) {
-				my $actual = pkgversioncmp($vi, '<', $vj) ? '<'
-				    : pkgversioncmp($vi, '<=', $vj) ? '=='
+				my $actual = pkgversion_cmp($vi, '<', $vj) ? '<'
+				    : pkgversion_cmp($vi, '<=', $vj) ? '=='
 				    : '>';
 				my $expected = $i < $j ? '<'
 				    : $i == $j ? '=='
