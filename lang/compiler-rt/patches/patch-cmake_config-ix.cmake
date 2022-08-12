@@ -1,10 +1,10 @@
-$NetBSD: patch-cmake_config-ix.cmake,v 1.4 2021/07/12 18:46:07 adam Exp $
+$NetBSD: patch-cmake_config-ix.cmake,v 1.5 2022/08/12 08:58:41 pin Exp $
 
 Disable components that aren't ready for SunOS yet.
 
---- cmake/config-ix.cmake.orig	2021-04-06 16:38:18.000000000 +0000
+--- cmake/config-ix.cmake.orig	2022-06-22 16:46:24.000000000 +0000
 +++ cmake/config-ix.cmake
-@@ -646,7 +646,7 @@ set(COMPILER_RT_SANITIZERS_TO_BUILD all 
+@@ -668,7 +668,7 @@ set(COMPILER_RT_SANITIZERS_TO_BUILD all 
  list_replace(COMPILER_RT_SANITIZERS_TO_BUILD all "${ALL_SANITIZERS}")
  
  if (SANITIZER_COMMON_SUPPORTED_ARCH AND NOT LLVM_USE_SANITIZER AND
@@ -13,7 +13,7 @@ Disable components that aren't ready for SunOS yet.
      (OS_NAME MATCHES "Windows" AND NOT CYGWIN AND
          (NOT MINGW OR CMAKE_CXX_COMPILER_ID MATCHES "Clang"))))
    set(COMPILER_RT_HAS_SANITIZER_COMMON TRUE)
-@@ -666,7 +666,7 @@ else()
+@@ -688,7 +688,7 @@ else()
    set(COMPILER_RT_HAS_ASAN FALSE)
  endif()
  
@@ -22,7 +22,7 @@ Disable components that aren't ready for SunOS yet.
    set(COMPILER_RT_ASAN_HAS_STATIC_RUNTIME TRUE)
  else()
    set(COMPILER_RT_ASAN_HAS_STATIC_RUNTIME FALSE)
-@@ -716,7 +716,7 @@ else()
+@@ -738,7 +738,7 @@ else()
  endif()
  
  if (PROFILE_SUPPORTED_ARCH AND NOT LLVM_USE_SANITIZER AND
@@ -31,7 +31,7 @@ Disable components that aren't ready for SunOS yet.
    set(COMPILER_RT_HAS_PROFILE TRUE)
  else()
    set(COMPILER_RT_HAS_PROFILE FALSE)
-@@ -730,7 +730,7 @@ else()
+@@ -763,7 +763,7 @@ else()
  endif()
  
  if (COMPILER_RT_HAS_SANITIZER_COMMON AND UBSAN_SUPPORTED_ARCH AND
