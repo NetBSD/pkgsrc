@@ -1,15 +1,15 @@
-$NetBSD: patch-include_____config,v 1.1 2021/07/23 09:39:34 jperkin Exp $
+$NetBSD: patch-include_____config,v 1.2 2022/08/12 08:43:58 pin Exp $
 
 Avoid init_priority() on SunOS.
 
---- include/__config.orig	2021-06-28 16:23:38.000000000 +0000
+--- include/__config.orig	2022-06-22 16:46:24.000000000 +0000
 +++ include/__config
-@@ -1439,7 +1439,7 @@ extern "C" _LIBCPP_FUNC_VIS void __sanit
+@@ -1409,7 +1409,7 @@ extern "C" _LIBCPP_FUNC_VIS void __sanit
  #define _LIBCPP_HAS_NO_FGETPOS_FSETPOS
  #endif
  
 -#if __has_attribute(init_priority)
 +#if __has_attribute(init_priority) && !defined(__sun)
- # define _LIBCPP_INIT_PRIORITY_MAX __attribute__((init_priority(101)))
- #else
- # define _LIBCPP_INIT_PRIORITY_MAX
+     // TODO: Remove this once we drop support for building libc++ with old Clangs
+ #   if (defined(_LIBCPP_CLANG_VER) && _LIBCPP_CLANG_VER < 1200) || \
+        (defined(__apple_build_version__) && __apple_build_version__ < 13000000)
