@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2020/03/20 11:58:29 nia Exp $
+# $NetBSD: Makefile,v 1.10 2022/08/12 08:28:01 adam Exp $
 
 DISTNAME=	shared-desktop-ontologies-0.11.0
 CATEGORIES=	textproc
@@ -10,10 +10,8 @@ HOMEPAGE=	http://oscaf.sourceforge.net/
 COMMENT=	Ontologies for Semantic Desktop
 #LICENSE=	modified-bsd
 
-# BUILD_MAKE_FLAGS+= VERBOSE=1
-
-USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
+USE_LANGUAGES=	# none
 
 PKGCONFIG_OVERRIDE+=	shared-desktop-ontologies.pc.cmake
 
