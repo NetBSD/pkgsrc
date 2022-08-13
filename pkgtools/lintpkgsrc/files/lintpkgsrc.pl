@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.87 2022/08/13 11:34:39 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.88 2022/08/13 12:22:20 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -59,9 +59,8 @@ sub vars($self) {
 	keys $self->{vars}->%*;
 }
 
-# Pkgs collects all versions of a given PKGBASE, e.g. apache-1.3.27 and
-# apache-2.0.46.
-#
+# All versions of a given PKGBASE, e.g. apache-1.3.27 and apache-2.0.46.
+# Multi-prefix packages like py39-* are stored as simply py-*.
 package Pkgs;
 
 sub new($class, $pkgbase) {
@@ -77,8 +76,7 @@ sub pkgbase($self) {
 	$self->{pkgbase};
 }
 
-# Returns all available versions of the package, in decreasing
-# alphabetical(!) order.
+# All available versions of the package, in decreasing alphabetical(!) order.
 sub versions($self) {
 	reverse sort keys $self->{pkgvers}->%*;
 }
@@ -314,7 +312,7 @@ sub eval_mk_cond($line, $vars) {
 
 	# XXX This is _so_ wrong - need to parse this correctly
 	$test =~ s/""/\r/g;
-	$test =~ s/"//g; # "
+	$test =~ s/"//g;
 	$test =~ s/\r/""/g;
 
 	debug("conditional: $test\n");
@@ -333,7 +331,6 @@ sub eval_mk_cond($line, $vars) {
 
 	if ($test =~ /^[ <> \d () \s & | . ! ]+$/xx) {
 		debug("eval test $test\n");
-		$! = undef;
 		my $result = eval "($test) ? 1 : 0";
 		defined $result or fail("Eval '$test' failed in '$line': $@");
 		debug("conditional: evaluated to " . ($result ? 'true' : 'false') . "\n");
@@ -433,7 +430,8 @@ sub parse_makefile_line_var($varname, $op, $value, $vars) {
 
 sub expand_modifiers($file, $varname, $left, $subvar, $mods, $right, $vars) {
 	my @mods = split(':', $mods);
-	my $result = $vars->{$subvar} || '';
+	my $result = $vars->{$subvar};
+	$result = '' unless defined $result;
 
 	# If the value of $subvar contains a '$', skip it on this pass.
 	# Hopefully it will get substituted and we can catch it
@@ -442,8 +440,11 @@ sub expand_modifiers($file, $varname, $left, $subvar, $mods, $right, $vars) {
 
 	debug("$file: substitutelist $varname ($result) $subvar (@mods)\n");
 	foreach (@mods) {
+		debug("expanding modifier '$_'\n");
+
 		if (m#^ (U) (.*) #x) {
-			$result ||= "fallback:$2";
+			$result = $2 unless defined $vars->{$subvar};
+
 		} elsif (m#^ ([CS]) (.) ([^/\@]+) \2 ([^/\@]*) \2 ([1g]*) #x) {
 			# TODO: Use non-greedy repetitions above.
 			# TODO: Properly handle separators other than '/' and '@'.
@@ -471,12 +472,13 @@ sub expand_modifiers($file, $varname, $left, $subvar, $mods, $right, $vars) {
 			if (defined $notfirst) {
 				$result .= " $notfirst";
 			}
+
 		} else {
 			debug("$file: variable '$varname' has unknown modifier '$_'\n");
-			next;
 		}
 	}
 
+	$result = '' if !defined $result;
 	$vars->{$varname} = "$left$result$right";
 	return 1;
 }
