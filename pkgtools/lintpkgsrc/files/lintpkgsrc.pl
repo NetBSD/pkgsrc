@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.84 2022/08/13 10:41:21 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.85 2022/08/13 10:51:28 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -1019,7 +1019,7 @@ sub chdir_or_fail($dir) {
 	chdir($dir) or fail("Cannot chdir($dir): $!\n");
 }
 
-sub load_pkgsrc_makefiles($fname) {
+sub load_pkgdb_from_cache($fname) {
 	open(STORE, '<', $fname)
 	    or die("Cannot read pkgsrc store from $fname: $!\n");
 	my ($pkgver);
@@ -1042,21 +1042,16 @@ sub load_pkgsrc_makefiles($fname) {
 # Generate pkgname->category/pkg mapping, optionally check DEPENDS
 #
 sub scan_pkgsrc_makefiles($pkgsrcdir) {
-	my (@categories);
 
-	if ($pkgdb) {
-
-		# Already done
-		return;
-	}
+	return if defined $pkgdb; # Already done.
 
 	if ($opt{I}) {
-		load_pkgsrc_makefiles($opt{I});
+		load_pkgdb_from_cache($opt{I});
 		return;
 	}
 
 	$pkgdb = PkgDb->new();
-	@categories = list_pkgsrc_categories($pkgsrcdir);
+	my @categories = list_pkgsrc_categories($pkgsrcdir);
 	verbose('Scan Makefiles: ');
 
 	if (!$opt{L}) {
@@ -1223,12 +1218,13 @@ sub scan_pkgsrc_distfiles_vs_distinfo($pkgsrcdir, $pkgdistdir, $check_unref,
 		}
 		chdir_or_fail('/'); # Do not want to stay in $pkgdistdir
 	}
-	(sort keys %bad_distfiles);
+
+	sort keys %bad_distfiles;
 }
 
-sub store_pkgsrc_makefiles($db, $fname) {
+sub store_pkgdb_in_cache($db, $fname) {
 	open(STORE, '>', $fname)
-	    or die("Cannot save pkgsrc store to $fname: $!\n");
+	    or die("Cannot save package data to $fname: $!\n");
 	foreach my $pkgver ($db->pkgvers_all) {
 		my $pkgbase = $pkgver->pkgbase;
 		my $pkgversion = $pkgver->pkgversion;
@@ -1249,7 +1245,7 @@ sub store_pkgsrc_makefiles($db, $fname) {
 		}
 	}
 	close(STORE)
-	    or die("Cannot save pkgsrc store to $fname: $!\n");
+	    or die("Cannot save package data to $fname: $!\n");
 }
 
 # Remember to update manual page when modifying option list
@@ -1656,7 +1652,7 @@ sub main() {
 
 	if ($opt{E}) {
 		scan_pkgsrc_makefiles($pkgsrcdir);
-		store_pkgsrc_makefiles($pkgdb, $opt{E});
+		store_pkgdb_in_cache($pkgdb, $opt{E});
 	}
 }
 
