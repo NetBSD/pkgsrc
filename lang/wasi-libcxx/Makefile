@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2022/08/13 09:56:45 tnn Exp $
+# $NetBSD: Makefile,v 1.13 2022/08/13 12:42:45 ryoon Exp $
 
 .include "../../lang/llvm/version.mk"
 
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://libcxxabi.llvm.org/
 COMMENT=	C++ Standard Librares (libc++/libc++abi) for WASI/WebAssembly
 LICENSE=	apache-2.0
+
+WRKSRC=		${WRKDIR}
 
 # libcxx requires libcxxabi's cxxabi.h to build, but libcxxabi requires
 # libcxx's includes to build, so we have this unholy extra distfiles thing
@@ -31,8 +33,8 @@ BUILD_DEPENDS+=	lld-[0-9]*:../../devel/lld
 BUILDLINK_TRANSFORM+=	rm:-I/usr/include
 BUILDLINK_TRANSFORM+=	rm:-I${PREFIX}/include
 
-BUILD_DIRS+=		../build_libcxx
-BUILD_DIRS+=		../build_libcxxabi
+BUILD_DIRS+=		build_libcxx
+BUILD_DIRS+=		build_libcxxabi
 INSTALL_DIRS+=		${BUILD_DIRS}
 
 USE_LANGUAGES=	c c++
@@ -46,8 +48,8 @@ CMAKE_ARGS+=	-DCMAKE_VERBOSE_MAKEFILE=1
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 CMAKE_ARGS+=	-DCMAKE_C_COMPILER=${CC:Q}
 CMAKE_ARGS+=	-DCMAKE_CXX_COMPILER=${CXX:Q}
-CMAKE_ARGS+=	-DLIBCXXABI_LIBCXX_INCLUDES=${WRKDIR}/${LIBCXX}/include
-CMAKE_ARGS+=	-DLIBCXXABI_USE_LLVM_UNWINDER=ON
+CMAKE_ARGS+=	-DLIBCXXABI_LIBCXX_INCLUDES=${WRKDIR}/libcxx/include
+CMAKE_ARGS+=	-DLIBCXXABI_USE_LLVM_UNWINDER=OFF
 CMAKE_ARGS+=	-DCMAKE_C_COMPILER_WORKS=1
 CMAKE_ARGS+=	-DCMAKE_CXX_COMPILER_WORKS=1
 CMAKE_ARGS+=	-DCXX_SUPPORTS_CXX11=ON
@@ -143,8 +145,10 @@ CMAKE_ARGS+=	-DLIBCXXABI_SUPPORTS_WUNUSED_VARIABLE_FLAG:BOOL=ON
 CMAKE_ARGS+=	-DLIBCXXABI_SUPPORTS_PEDANTIC_FLAG:BOOL=ON
 CMAKE_ARGS+=	-DLIBCXXABI_SUPPORTS_FSTRICT_ALIASING_FLAG:BOOL=ON
 CMAKE_ARGS+=	-DCMAKE_CXX_LINK_FLAGS=${LDFLAGS:Q}
+CMAKE_ARGS+=	-DCMAKE_C_FLAGS=-fno-exceptions
+CMAKE_ARGS+=	-DCMAKE_CXX_FLAGS=-fno-exceptions
 CMAKE_ARGS+=	-DLIBCXX_CXX_ABI=libcxxabi
-CMAKE_ARGS+=	-DLIBCXX_CXX_ABI_INCLUDE_PATHS=${WRKDIR}/${DISTNAME}/include
+CMAKE_ARGS+=	-DLIBCXX_CXX_ABI_INCLUDE_PATHS=${WRKDIR}/libcxxabi/include
 
 CMAKE_INSTALL_PREFIX=	${PREFIX}/wasi
 
@@ -157,14 +161,12 @@ post-extract:
 	${LN} -f -s ${WRKDIR}/${DISTNAME} ${WRKDIR}/libcxxabi
 	${LN} -f -s ${WRKDIR}/${LIBCXX} ${WRKDIR}/libcxx
 	${LN} -f -s ${WRKDIR}/${LLVMDIST} ${WRKDIR}/llvm
-# TODO: not sure what should create this and with which contents
-	${TOUCH} ${WRKDIR}/${LIBCXX}/include/__config_site
 
 do-configure:
-	cd ${WRKSRC} && cd ../build_libcxx && \
+	cd ${WRKSRC} && cd build_libcxx && \
 	${PKGSRC_SETENV} ${_CONFIGURE_CMAKE_ENV} \
 		cmake ${CMAKE_ARGS} ../libcxx
-	cd ${WRKSRC} && cd ../build_libcxxabi && \
+	cd ${WRKSRC} && cd build_libcxxabi && \
 	${PKGSRC_SETENV} ${_CONFIGURE_CMAKE_ENV} \
 		cmake ${CMAKE_ARGS} ../libcxxabi
 
