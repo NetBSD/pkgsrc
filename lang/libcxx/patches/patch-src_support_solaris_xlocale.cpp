@@ -1,4 +1,4 @@
-$NetBSD: patch-src_support_solaris_xlocale.cpp,v 1.2 2022/08/12 08:43:58 pin Exp $
+$NetBSD: patch-src_support_solaris_xlocale.cpp,v 1.3 2022/08/13 09:38:09 tnn Exp $
 
 don't try to use sys/localedef.h on SunOS if nonexistent
 OpenIndiana doesn't seem to ship the header.
@@ -12,7 +12,7 @@ https://illumos.topicbox.com/groups/developer/T6cfd2e6cd87f3485-M30dac0cb6fffae6
  //===----------------------------------------------------------------------===//
  
 -#ifdef __sun__
-+#ifdef(__sun__) && __has_include(<sys/localedef.h>)
++#if defined(__sun__) && __has_include(<sys/localedef.h>)
  
  #include "__support/solaris/xlocale.h"
  #include <stdarg.h>
