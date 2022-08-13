@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2022/08/12 13:55:48 gutteridge Exp $
+# $NetBSD: Makefile,v 1.12 2022/08/13 09:56:45 tnn Exp $
 
 .include "../../lang/llvm/version.mk"
 
@@ -15,17 +15,18 @@ LICENSE=	apache-2.0
 # libcxx's includes to build, so we have this unholy extra distfiles thing
 # in both of them to get them to build against each other without causing
 # circular dependencies.  This must be kept in sync with libcxxabi/Makefile.
-LIBCXX=					libcxx-${LLVM_VERSION}.src
-LLVMDIST=				llvm-${LLVM_VERSION}.src
-_EXTRA_DIST=				${LIBCXX}${EXTRACT_SUFX} ${LLVMDIST}${EXTRACT_SUFX}
-SITES.${LIBCXX}${EXTRACT_SUFX}=		${MASTER_SITES:=${GITHUB_PROJECT}/releases/download/${GITHUB_RELEASE}/}
-SITES.${LLLVMDIST}${EXTRACT_SUFX}=	${MASTER_SITES:=${GITHUB_PROJECT}/releases/download/${GITHUB_RELEASE}/}
+LIBCXX=		libcxx-${LLVM_VERSION}.src
+LLVMDIST=	llvm-${LLVM_VERSION}.src
+EXTRA_DIST=	${LIBCXX}${EXTRACT_SUFX} ${LLVMDIST}${EXTRACT_SUFX}
+SITES.${LIBCXX}${EXTRACT_SUFX}=	\
+	${MASTER_SITES:=${GITHUB_PROJECT}/releases/download/${GITHUB_RELEASE}/}
+SITES.${LLLVMDIST}${EXTRACT_SUFX}=	\
+	${MASTER_SITES:=${GITHUB_PROJECT}/releases/download/${GITHUB_RELEASE}/}
 
-DISTFILES=	${DEFAULT_DISTFILES} ${_EXTRA_DIST}
+DISTFILES=	${DEFAULT_DISTFILES} ${EXTRA_DIST}
 
 BUILD_DEPENDS+=	lld-[0-9]*:../../devel/lld
 
-CXXFLAGS+=		-Wno-reserved-user-defined-literal
 # Workaround for header conflicts
 BUILDLINK_TRANSFORM+=	rm:-I/usr/include
 BUILDLINK_TRANSFORM+=	rm:-I${PREFIX}/include
@@ -156,7 +157,7 @@ post-extract:
 	${LN} -f -s ${WRKDIR}/${DISTNAME} ${WRKDIR}/libcxxabi
 	${LN} -f -s ${WRKDIR}/${LIBCXX} ${WRKDIR}/libcxx
 	${LN} -f -s ${WRKDIR}/${LLVMDIST} ${WRKDIR}/llvm
-	# TODO: not sure what should create this and with which contents
+# TODO: not sure what should create this and with which contents
 	${TOUCH} ${WRKDIR}/${LIBCXX}/include/__config_site
 
 do-configure:
