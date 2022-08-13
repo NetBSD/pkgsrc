@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.51 2022/08/12 22:51:59 rillig Exp $
+# $NetBSD: Makefile,v 1.52 2022/08/13 12:30:00 rillig Exp $
 
-PKGNAME=	lintpkgsrc-2022.08.12
+PKGNAME=	lintpkgsrc-2022.08.13
 CATEGORIES=	pkgtools
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
