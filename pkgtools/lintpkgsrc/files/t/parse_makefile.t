@@ -1,4 +1,4 @@
-# $NetBSD: parse_makefile.t,v 1.10 2022/08/12 22:45:14 rillig Exp $
+# $NetBSD: parse_makefile.t,v 1.11 2022/08/13 10:23:40 rillig Exp $
 
 use strict;
 use warnings;
@@ -154,7 +154,7 @@ sub test_eval_mk_cond_func() {
 	ok(eval_mk_cond_func('target', 'anything', $vars), 0);
 }
 
-sub test_parse_eval_make_false() {
+sub test_eval_mk_cond() {
 	my $vars = {
 	    'EMPTY'    => '',
 	    'SPACE'    => ' ',
@@ -163,9 +163,15 @@ sub test_parse_eval_make_false() {
 	    'DEV_NULL' => '/dev/null',
 	};
 
-	# 1 means false, 0 means true.
-	ok(parse_eval_make_false('defined(UNDEF)', $vars), 1);
-	ok(parse_eval_make_false('defined(EMPTY)', $vars), 0);
+	ok(eval_mk_cond('defined(UNDEF)', $vars), 0);
+	ok(eval_mk_cond('defined(EMPTY)', $vars), 1);
+
+	# The regular expression above the 'eval' prevents most strange
+	# expressions from being evaluated. There might be ways to circumvent
+	# this plausibility check. The numbers in the below example form the
+	# string literal 'exit', and there might be a way to extend this
+	# expression to 'exit(6)', just for fun.
+	ok(eval_mk_cond('101.120.105.116', $vars), 1);
 }
 
 test_expand_exprs();
@@ -173,4 +179,4 @@ test_parse_makefile_vars();
 test_parse_makefile_vars_cond();
 test_expand_modifiers();
 test_eval_mk_cond_func();
-test_parse_eval_make_false();
+test_eval_mk_cond();
