@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2022/08/12 15:59:31 gutteridge Exp $
+# $NetBSD: Makefile,v 1.76 2022/08/13 09:11:12 tnn Exp $
 #
 # When updating this, please also update:
 # devel/include-what-you-use
@@ -39,12 +39,12 @@ USE_CMAKE=		yes
 GCC_REQD+=		5
 PYTHON_FOR_BUILD_ONLY=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=   27
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 NOT_FOR_PLATFORM+=	*-*-alpha
 NOT_FOR_PLATFORM+=	*-*-vax
 
-CONFIGURE_DIRS=		${WRKDIR}/build
+CONFIGURE_DIRS=		build
 CMAKE_ARG_PATH=		${WRKSRC}
 
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
@@ -106,7 +106,7 @@ PLIST_SUBST+=	SOEXT=${SOEXT}
 CXXFLAGS+=	-march=i586
 .endif
 
-.if !empty(MACHINE_ARCH:Mpowerpc*)
+.if ${MACHINE_ARCH:Mpowerpc*}
 # Needed to avoid "relocation truncated to fit: R_PPC_REL24"
 CFLAGS+=	-mlongcall -mno-pltseq
 CXXFLAGS+=	-mlongcall -mno-pltseq
@@ -121,7 +121,7 @@ CMAKE_ARGS+=	-DPKGSRC_LLVM_PTHREADLIB=-lpthread
 # replacing config.guess is required even for cmake.
 # It is used to detect correct LLVM_HOST_TRIPLE, e.g. for NetBSD/evbarm.
 post-extract:
-	${MKDIR} ${WRKDIR}/build
+	${MKDIR} ${WRKSRC}/build
 .for f in config.guess config.sub
 	cp ../../mk/gnu-config/${f} ${WRKSRC}/cmake/${f}
 .endfor

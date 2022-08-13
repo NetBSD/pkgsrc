@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.14 2022/08/12 08:37:58 pin Exp $
+# $NetBSD: options.mk,v 1.15 2022/08/13 09:11:12 tnn Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.llvm
 
@@ -16,22 +16,22 @@ PKG_SUPPORTED_OPTIONS+=		terminfo z3
 CHECK_BUILTIN.terminfo:=	yes
 .include "../../mk/terminfo.builtin.mk"
 CHECK_BUILTIN.terminfo:=	no
-.if !empty(USE_BUILTIN.terminfo:M[yY][eE][sS])
+.if ${USE_BUILTIN.terminfo:M[yY][eE][sS]}
 PKG_SUGGESTED_OPTIONS+=		terminfo
 .endif
 
 # Probably safe to assume that only x86 users are interested in
 # cross-compilation for now. This saves some build time for everyone else.
-.if !empty(MACHINE_ARCH:Msparc*)
+.if ${MACHINE_ARCH:Msparc*}
 PKG_SUGGESTED_OPTIONS+=	llvm-target-sparc
-.elif !empty(MACHINE_ARCH:Mpowerpc*)
+.elif ${MACHINE_ARCH:Mpowerpc*}
 PKG_SUGGESTED_OPTIONS+=	llvm-target-powerpc
 .elif ${MACHINE_ARCH} == aarch64
 PKG_SUGGESTED_OPTIONS+=	llvm-target-aarch64
 PKG_SUGGESTED_OPTIONS+=	llvm-target-webassembly
-.elif !empty(MACHINE_ARCH:Mearm*)
+.elif ${MACHINE_ARCH:Mearm*}
 PKG_SUGGESTED_OPTIONS+=	llvm-target-arm
-.elif !empty(MACHINE_ARCH:M*mips*)
+.elif ${MACHINE_ARCH:M*mips*}
 PKG_SUGGESTED_OPTIONS+=	llvm-target-mips
 .else
 # X86 and everyone else get all targets by default.
