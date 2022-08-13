@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.82 2022/08/13 09:33:43 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.83 2022/08/13 10:23:40 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -310,9 +310,7 @@ sub eval_mk_cond_func($func, $arg, $vars) {
 	}
 }
 
-# TODO: The word 'false' is confusing.
-sub parse_eval_make_false($line, $vars) {
-	my $false = 0;
+sub eval_mk_cond($line, $vars) {
 	my $test = expand_exprs($line, $vars);
 
 	# XXX This is _so_ wrong - need to parse this correctly
@@ -329,24 +327,23 @@ sub parse_eval_make_false($line, $vars) {
 		debug("conditional: update to $test\n");
 	}
 
-	while ($test =~ /([^\s()\|\&]+)\s+(!=|==)\s+([^\s()]+)/) {
+	while ($test =~ /([^\s()\|\&]+) \s+ (!=|==) \s+ ([^\s()]+)/x) {
 		my $result = 0 + (($2 eq '==') ? ($1 eq $3) : ($1 ne $3));
-		$test =~ s/[^\s()\|\&]+\s+(!=|==)\s+[^\s()]+/$result/;
+		$test =~ s/[^\s()\|\&]+ \s+ (!=|==) \s+ [^\s()]+/$result/x;
 	}
 
-	if ($test !~ /[^<>\d()\s&|.!]/) {
+	if ($test =~ /^[ <> \d () \s & | . ! ]+$/xx) {
 		debug("eval test $test\n");
-		$false = eval "($test) ? 0 : 1";
-		if (!defined $false) {
-			fail("Eval failed $line - $test");
-		}
-		debug('conditional: evaluated to ' . ($false ? 0 : 1) . "\n");
+		$! = undef;
+		my $result = eval "($test) ? 1 : 0";
+		defined $result or fail("Eval '$test' failed in '$line': $@");
+		debug("conditional: evaluated to " . ($result ? 'true' : 'false') . "\n");
+		$result;
 
 	} else {
-		$false = 0;
-		debug("conditional: defaulting to 0\n");
+		debug("conditional: defaulting '$test' to true\n");
+		1;
 	}
-	$false;
 }
 
 sub parse_makefile_line_include($file, $incfile,
@@ -398,6 +395,7 @@ sub parse_makefile_line_include($file, $incfile,
 		return;
 	}
 
+	# FIXME: .CURDIR doesn't change, but .PARSEDIR does.
 	my $NEWCURDIR = $incfile;
 	$NEWCURDIR =~ s#/[^/]*$##;
 	push @$incdirs, $NEWCURDIR
@@ -491,7 +489,6 @@ sub parse_makefile_vars($file, $cwd = undef) {
 	my %vars;
 	my %incfiles; # Cache of previously included files
 	my @incdirs;  # Directories in which to check for includes
-	my @if_false; # 0:true 1:false 2:nested-false&nomore-elsif
 	my @lines;
 
 	open(FILE, $file) or return undef;
@@ -509,19 +506,14 @@ sub parse_makefile_vars($file, $cwd = undef) {
 	}
 	$vars{BSD_PKG_MK} = 'YES';
 
-	if ($cwd) {
-		$vars{'.CURDIR'} = $cwd;
-	} elsif ($file =~ m#(.*)/#) {
-		$vars{'.CURDIR'} = $1;
-	} else {
-		$vars{'.CURDIR'} = getcwd;
-	}
-
-	push @incdirs, $vars{'.CURDIR'};
+	my $curdir = $cwd || ($file =~ m#(.*)/# ? $1 : getcwd);
+	$vars{'.CURDIR'} = $curdir;
+	push @incdirs, $curdir;
 	if ($opt{L}) {
 		print "$file\n";
 	}
 
+	my @if_state; # 'not_yet', 'active', 'done'
 	while (defined($_ = shift @lines)) {
 		s/(*negative_lookbehind:\\)#.*//;
 		s/\s+$//;
@@ -538,42 +530,53 @@ sub parse_makefile_vars($file, $cwd = undef) {
 
 		# Conditionals
 		#
-		if (m#^ \. \s* if(|def|ndef) \s+ (.*) #x) {
-			my $type = $1;
-			if ($if_false[-1]) {
-				push @if_false, 2;
+		if (m#^ \. \s* (if|ifdef|ifndef) \s+ (.*) #x) {
+			my ($kind, $cond) = ($1, $2);
 
-			} elsif ($type eq '') {
-				# Straight if
-				push @if_false, parse_eval_make_false($2, \%vars);
+			if (@if_state > 0 && $if_state[-1] ne 'active') {
+				push @if_state, 'done';
+
+			} elsif ($kind eq 'if') {
+				my $result = eval_mk_cond($cond, \%vars);
+				push @if_state, $result ? 'active' : 'not_yet';
 
 			} else {
-				my $false = !defined $vars{expand_exprs($2, \%vars)};
-				if ($type eq 'ndef') {
-					$false = !$false;
-				}
-				push @if_false, $false ? 1 : 0;
-			}
-			debug("$file: .if$type (! @if_false)\n");
+				my $varname = expand_exprs($cond, \%vars);
 
-		} elsif (m#^ \. \s* elif \s+ (.*)#x && @if_false) {
-			if ($if_false[-1] == 0) {
-				$if_false[-1] = 2;
-			} elsif ($if_false[-1] == 1
-			    && !parse_eval_make_false($1, \%vars)) {
-				$if_false[-1] = 0;
-			}
-			debug("$file: .elif (! @if_false)\n");
+				# bmake also allows '.ifdef A && B'.
+				debug("not implemented: .ifdef $varname\n")
+				    if $cond =~ /\s/;
 
-		} elsif (m#^ \. \s* else \b #x && @if_false) {
-			$if_false[-1] = $if_false[-1] == 1 ? 0 : 1;
-			debug("$file: .else (! @if_false)\n");
+				my $result = $kind eq 'ifdef'
+				    ? defined($vars{$varname})
+				    : !defined($vars{$varname});
+				push @if_state, $result ? 'active' : 'not_yet';
+			}
+
+			debug("$file: .$kind @if_state\n");
+
+		} elsif ( # XXX: bmake also knows '.elifdef' and '.elifnmake'.
+		    m#^ \. \s* elif \s+ (.*)#x && @if_state > 0) {
+			my ($cond) = ($1);
+
+			if ($if_state[-1] eq 'active') {
+				$if_state[-1] = 'done';
+			} elsif ($if_state[-1] eq 'not_yet'
+			    && eval_mk_cond($cond, \%vars)) {
+				$if_state[-1] = 'active';
+			}
+			debug("$file: .elif @if_state\n");
+
+		} elsif (m#^ \. \s* else \b #x && @if_state > 0) {
+			$if_state[-1] =
+			    $if_state[-1] eq 'not_yet' ? 'active' : 'done';
+			debug("$file: .else @if_state\n");
 
 		} elsif (m#^\. \s* endif \b #x) {
-			pop(@if_false);
-			debug("$file: .endif (! @if_false)\n");
+			pop @if_state;
+			debug("$file: .endif @if_state\n");
 
-		} elsif ($if_false[-1]) {
+		} elsif (@if_state > 0 && $if_state[-1] ne 'active') {
 			# Skip branches whose condition evaluated to false.
 
 		} elsif (m#^\. \s* include \s+ "([^"]+)" #x) {
