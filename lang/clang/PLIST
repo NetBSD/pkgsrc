@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2022/08/12 19:03:39 tnn Exp $
+@comment $NetBSD: PLIST,v 1.36 2022/08/13 22:39:28 tnn Exp $
 bin/analyze-build
 bin/c-index-test
 bin/clang
@@ -718,13 +718,13 @@ lib/clang/${PKGVERSION}/include/ammintrin.h
 lib/clang/${PKGVERSION}/include/amxintrin.h
 lib/clang/${PKGVERSION}/include/arm64intr.h
 lib/clang/${PKGVERSION}/include/arm_acle.h
-lib/clang/${PKGVERSION}/include/arm_bf16.h
-lib/clang/${PKGVERSION}/include/arm_cde.h
+${PLIST.ARM}lib/clang/${PKGVERSION}/include/arm_bf16.h
+${PLIST.ARM}lib/clang/${PKGVERSION}/include/arm_cde.h
 lib/clang/${PKGVERSION}/include/arm_cmse.h
-lib/clang/${PKGVERSION}/include/arm_fp16.h
-lib/clang/${PKGVERSION}/include/arm_mve.h
-lib/clang/${PKGVERSION}/include/arm_neon.h
-lib/clang/${PKGVERSION}/include/arm_sve.h
+${PLIST.ARM}lib/clang/${PKGVERSION}/include/arm_fp16.h
+${PLIST.ARM}lib/clang/${PKGVERSION}/include/arm_mve.h
+${PLIST.ARM}lib/clang/${PKGVERSION}/include/arm_neon.h
+${PLIST.ARM}lib/clang/${PKGVERSION}/include/arm_sve.h
 lib/clang/${PKGVERSION}/include/armintr.h
 lib/clang/${PKGVERSION}/include/avx2intrin.h
 lib/clang/${PKGVERSION}/include/avx512bf16intrin.h
