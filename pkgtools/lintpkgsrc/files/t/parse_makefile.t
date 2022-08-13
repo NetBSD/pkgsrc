@@ -1,4 +1,7 @@
-# $NetBSD: parse_makefile.t,v 1.11 2022/08/13 10:23:40 rillig Exp $
+# $NetBSD: parse_makefile.t,v 1.12 2022/08/13 12:22:20 rillig Exp $
+#
+# Tests for parsing and interpreting package makefiles, in order to avoid
+# running bmake on the packages, as that is generally slow.
 
 use strict;
 use warnings;
@@ -94,9 +97,26 @@ sub test_parse_makefile_vars_cond() {
 	ok($vars->{BRANCH}, 'else');
 }
 
+sub test_parse_makefile_vars_default() {
+	my $dir = File::Temp->newdir();
+	my $file = "$dir/filename.mk";
+
+	write_file($file, map { "$_\n" } (
+	    'DEFAULT?= 0',
+	    'DEFAULT?= 1',
+	    'DEFAULT?= 2',
+	));
+
+	my $vars;
+	$vars = parse_makefile_vars($file, undef);
+	ok($vars->{DEFAULT}, '0');
+}
+
 sub test_expand_modifiers() {
 	my $vars = {
-	    REF => 'VALUE',
+	    REF   => 'VALUE',
+	    ZERO  => '0',
+	    EMPTY => '',
 	};
 
 	expand_modifiers('file.mk', 'VAR', '<', 'REF', 'S,U,X,', '>', $vars);
@@ -109,6 +129,18 @@ sub test_expand_modifiers() {
 	expand_modifiers('file.mk', 'VAR', '<', 'REF', 'S,VAL,H,', '>', $vars);
 
 	ok($vars->{VAR}, '<HUE>');
+
+	expand_modifiers('file.mk', 'VAR', 'undef <', 'UNDEF', 'Ufallback', '>', $vars);
+
+	ok($vars->{VAR}, 'undef <fallback>');
+
+	expand_modifiers('file.mk', 'VAR', 'empty <', 'EMPTY', 'Ufallback', '>', $vars);
+
+	ok($vars->{VAR}, 'empty <>');
+
+	expand_modifiers('file.mk', 'VAR', 'zero <', 'ZERO', 'Ufallback', '>', $vars);
+
+	ok($vars->{VAR}, 'zero <0>');
 }
 
 sub test_eval_mk_cond_func() {
@@ -177,6 +209,7 @@ sub test_eval_mk_cond() {
 test_expand_exprs();
 test_parse_makefile_vars();
 test_parse_makefile_vars_cond();
+test_parse_makefile_vars_default();
 test_expand_modifiers();
 test_eval_mk_cond_func();
 test_eval_mk_cond();

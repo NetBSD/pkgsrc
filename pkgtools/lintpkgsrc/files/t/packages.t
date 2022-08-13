@@ -1,4 +1,7 @@
-# $NetBSD: packages.t,v 1.14 2022/08/13 10:51:28 rillig Exp $
+# $NetBSD: packages.t,v 1.15 2022/08/13 12:22:20 rillig Exp $
+#
+# Tests for the internal package database, which stores the packages and their
+# versions, and a few variables like DEPENDS and BROKEN.
 
 use strict;
 use warnings;
