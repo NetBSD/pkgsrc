@@ -1,10 +1,10 @@
-$NetBSD: patch-src_filesystem_directory__iterator.cpp,v 1.2 2019/10/19 13:59:07 adam Exp $
+$NetBSD: patch-src_filesystem_filesystem__common.h,v 1.1 2022/08/13 09:38:09 tnn Exp $
 
 Support POSIX file modes.
 
---- src/filesystem/directory_iterator.cpp.orig	2019-02-01 23:52:17.000000000 +0000
-+++ src/filesystem/directory_iterator.cpp
-@@ -28,7 +28,21 @@ namespace {
+--- src/filesystem/filesystem_common.h.orig	2022-06-22 16:46:24.000000000 +0000
++++ src/filesystem/filesystem_common.h
+@@ -538,7 +538,21 @@ bool set_file_times(const path& p, std::
  #if defined(DT_BLK)
  template <class DirEntT, class = decltype(DirEntT::d_type)>
  static file_type get_file_type(DirEntT* ent, int) {

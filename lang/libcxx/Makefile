@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2022/08/12 08:43:58 pin Exp $
+# $NetBSD: Makefile,v 1.13 2022/08/13 09:38:09 tnn Exp $
 
 .include "../../lang/llvm/version.mk"
+PKGREVISION=	1
 
 DISTNAME=	libcxx-${LLVM_VERSION}.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -15,20 +16,22 @@ LICENSE=	apache-2.0
 # libcxx's includes to build, so we have this unholy extra distfiles thing
 # in both of them to get them to build against each other without causing
 # circular dependencies.  This must be kept in sync with libcxxabi/Makefile.
-LIBCXXABI=				libcxxabi-${LLVM_VERSION}.src
-LLVMDIST=				llvm-${LLVM_VERSION}.src
-_EXTRA_DIST=				${LIBCXXABI}${EXTRACT_SUFX} ${LLVMDIST}${EXTRACT_SUFX}
-SITES.${LIBCXXABI}${EXTRACT_SUFX}=	${MASTER_SITES:=${GITHUB_PROJECT}/releases/download/${GITHUB_RELEASE}/}
-SITES.${LLLVMDIST}${EXTRACT_SUFX}=	${MASTER_SITES:=${GITHUB_PROJECT}/releases/download/${GITHUB_RELEASE}/}
+LIBCXXABI=	libcxxabi-${LLVM_VERSION}.src
+LLVMDIST=	llvm-${LLVM_VERSION}.src
+EXTRA_DIST=	${LIBCXXABI}${EXTRACT_SUFX} ${LLVMDIST}${EXTRACT_SUFX}
 
-DISTFILES=	${DEFAULT_DISTFILES} ${_EXTRA_DIST}
+SITES.${LIBCXXABI}${EXTRACT_SUFX}=	\
+	${MASTER_SITES:=${GITHUB_PROJECT}/releases/download/${GITHUB_RELEASE}/}
+SITES.${LLLVMDIST}${EXTRACT_SUFX}=	\
+	${MASTER_SITES:=${GITHUB_PROJECT}/releases/download/${GITHUB_RELEASE}/}
 
-CONFIGURE_DIRS=	${WRKDIR}/build
+DISTFILES=	${DEFAULT_DISTFILES} ${EXTRA_DIST}
+
+CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	${WRKSRC}
 
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++17
 USE_CMAKE=	yes
-GCC_REQD+=	12
 SSP_SUPPORTED=	no
 
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
@@ -43,8 +46,11 @@ CMAKE_ARGS+=	-DLIBCXX_ENABLE_ABI_LINKER_SCRIPT=OFF
 # avoid conflict with stddef.h
 CXXFLAGS.NetBSD+=	-D__DEFINED_max_align_t=1
 
+# Avoid GCC < 11 error https://github.com/llvm/llvm-project/issues/54018
+CXXFLAGS+=		-std=c++17 -D_LIBCPP_STD_VER=17
+
 post-extract:
-	${MKDIR} ${WRKDIR}/build
+	${MKDIR} ${WRKSRC}/build
 	${LN} -f -s ${WRKDIR}/${LIBCXXABI} ${WRKDIR}/libcxxabi
 	${LN} -f -s ${WRKDIR}/${LLVMDIST} ${WRKDIR}/llvm
 
