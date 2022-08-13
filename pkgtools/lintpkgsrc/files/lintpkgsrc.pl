@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.85 2022/08/13 10:51:28 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.86 2022/08/13 11:27:32 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -1103,6 +1103,42 @@ sub pkgsrc_check_depends() {
 	}
 }
 
+sub load_distinfo($pkgsrcdir, $cat, $pkgdir, $distfiles, $warnings) {
+	my $fname = "$pkgsrcdir/$cat/$pkgdir/distinfo";
+	open(DISTINFO, '<', $fname) or return;
+
+	while (defined(my $line = <DISTINFO>)) {
+		chomp($line);
+
+		next if $line eq '' || $line =~ /^\$NetBSD/;
+
+		if ($line !~ m/^ (\w+) \s \( ([^)]+) \) \s=\s (\S+)/x) {
+			warn "Invalid line in $fname:$.: $line\n";
+			next;
+		}
+		my ($alg, $distfile, $hash) = ($1, $2, $3);
+
+		next if $distfile =~ /^patch-[\w.+\-]+$/;
+
+		# Only store and check the first algorithm listed in distinfo.
+		if (!defined $distfiles->{$distfile}) {
+			$distfiles->{$distfile} = {
+			    sumtype => $alg,
+			    sum     => $hash,
+			    path    => "$cat/$pkgdir",
+			};
+
+		} elsif ($distfiles->{$distfile}->{sumtype} eq $alg
+		    && $distfiles->{$distfile}->{sum} ne $hash) {
+			push @$warnings,
+			    "checksum mismatch between '$alg' for '$distfile' "
+				. "in $cat/$pkgdir "
+				. "and $distfiles->{$distfile}{path}\n";
+		}
+	}
+	close(DISTINFO) or die;
+}
+
 # Extract all distinfo entries, then verify contents of distfiles
 #
 sub scan_pkgsrc_distfiles_vs_distinfo($pkgsrcdir, $pkgdistdir, $check_unref,
@@ -1117,36 +1153,9 @@ sub scan_pkgsrc_distfiles_vs_distinfo($pkgsrcdir, $pkgdistdir, $check_unref,
 	$numpkg = 0;
 	foreach my $cat (sort @categories) {
 		foreach my $pkgdir (list_pkgsrc_pkgdirs($pkgsrcdir, $cat)) {
-			if (open(DISTINFO, "$pkgsrcdir/$cat/$pkgdir/distinfo")) {
-				++$numpkg;
-				while (<DISTINFO>) {
-					if (m/^(\w+) ?\(([^\)]+)\) = (\S+)/) {
-						my ($dn, $ds, $dt);
-						$dt = $1;
-						$dn = $2;
-						$ds = $3;
-						if ($dn =~ /^patch-[\w.+\-]+$/) {
-							next;
-						}
-
-						# Strip leading ./ which sometimes gets added
-						# because of DISTSUBDIR=.
-						$dn =~ s/^(\.\/)*//;
-						if (!defined $distfiles{$dn}) {
-							$distfiles{$dn}{sumtype} = $dt;
-							$distfiles{$dn}{sum} = $ds;
-							$distfiles{$dn}{path} = "$cat/$pkgdir";
-
-						} elsif ($distfiles{$dn}{sumtype} eq $dt && $distfiles{$dn}{sum} ne $ds) {
-							push(@distwarn,
-							    "checksum mismatch between '$dt' for '$dn' "
-								. "in $cat/$pkgdir and $distfiles{$dn}{path}\n"
-							);
-						}
-					}
-				}
-				close(DISTINFO);
-			}
+			++$numpkg;
+			load_distinfo($pkgsrcdir, $cat, $pkgdir,
+			    \%distfiles, \@distwarn);
 		}
 		verbose('.');
 	}
