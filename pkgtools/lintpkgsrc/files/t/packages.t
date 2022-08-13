@@ -1,4 +1,4 @@
-# $NetBSD: packages.t,v 1.13 2022/08/12 20:53:01 rillig Exp $
+# $NetBSD: packages.t,v 1.14 2022/08/13 10:51:28 rillig Exp $
 
 use strict;
 use warnings;
@@ -117,7 +117,7 @@ sub test_store_order() {
 	$pkgbase_1_15->var('COMMENT', 'Version 1.15');
 
 	my $tmpfile = File::Temp->new();
-	store_pkgsrc_makefiles($pkgdb, $tmpfile->filename);
+	store_pkgdb_in_cache($pkgdb, $tmpfile->filename);
 	my $stored = read_file($tmpfile->filename);
 
 	# XXX: 1.3nb4 should be sorted before 1.15.
