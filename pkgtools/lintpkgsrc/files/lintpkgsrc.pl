@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.86 2022/08/13 11:27:32 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.87 2022/08/13 11:34:39 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -1605,7 +1605,7 @@ sub main() {
 	    ":/bin:/usr/bin:/sbin:/usr/sbin:$conf_prefix/sbin:$conf_prefix/bin";
 
 	if (
-	    !getopts('BDE:I:K:LM:OP:RSVdg:himopruyz', \%opt)
+	    !getopts('-BDE:I:K:LM:OP:RSVdg:himopruyz', \%opt)
 		|| $opt{h}
 		|| !grep(/[BDEORSdgimopruyz]/, keys %opt)) {
 		usage_and_exit($opt{h} ? 0 : 1);
