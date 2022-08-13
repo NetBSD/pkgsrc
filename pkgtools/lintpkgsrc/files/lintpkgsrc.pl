@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.83 2022/08/13 10:23:40 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.84 2022/08/13 10:41:21 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -150,7 +150,6 @@ my $conf_x11base = '@X11BASE@';
 
 my (
     $pkgdb,                    # Database of pkgsrc packages
-    $pkg_installver,           # Installed version of pkg_install pseudo-pkg
     $default_vars,             # Set for Makefiles, inc PACKAGES & PKGSRCDIR
     %opt,                      # Command line options
     @matched_prebuiltpackages, # List of obsolete prebuilt package paths
@@ -624,8 +623,6 @@ sub parse_makefile_vars($file, $cwd = undef) {
 
 sub get_default_makefile_vars() {
 
-	chomp($pkg_installver = `$conf_pkg_info -V 2>/dev/null || echo 20010302`);
-
 	chomp($_ = `uname -srm`);
 	(
 	    $default_vars->{OPSYS},
@@ -944,10 +941,10 @@ sub parse_makefile_pkgsrc($file) {
 	if (!defined $pkgname || $pkgname =~ /\$/ || $pkgname !~ /(.*)-(\d.*)/) {
 
 		# invoke make here as a last resort
-		my ($pkgsrcdir) = ($file =~ m:(/.*)/:);
-		debug("Running '$conf_make' in '$pkgsrcdir'\n");
+		my $pkgdir = dirname $file;
+		debug("Running '$conf_make' in '$pkgdir'\n");
 		my $pid = open3(\*WTR, \*RDR, \*ERR,
-		    "cd $pkgsrcdir || exit 1; $conf_make show-vars VARNAMES=PKGNAME");
+		    "cd $pkgdir || exit 1; $conf_make show-vars VARNAMES=PKGNAME");
 		if (!$pid) {
 			warn "$file: Unable to run make: $!";
 		} else {
@@ -967,10 +964,6 @@ sub parse_makefile_pkgsrc($file) {
 	}
 
 	if (defined $pkgname) {
-		if ($pkgname =~ /^pkg_install-(\d+)$/ && $1 < $pkg_installver) {
-			$pkgname = "pkg_install-$pkg_installver";
-		}
-
 		$pkgname = canonicalize_pkgname($pkgname);
 
 		if (defined $vars->{PKGREVISION}
