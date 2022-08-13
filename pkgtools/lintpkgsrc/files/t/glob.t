@@ -1,4 +1,6 @@
-# $NetBSD: glob.t,v 1.7 2022/08/10 21:48:47 rillig Exp $
+# $NetBSD: glob.t,v 1.8 2022/08/13 12:22:20 rillig Exp $
+#
+# Tests for file globbing and matching.
 
 use strict;
 use warnings;

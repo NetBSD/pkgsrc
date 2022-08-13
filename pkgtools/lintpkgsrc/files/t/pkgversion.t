@@ -1,4 +1,6 @@
-# $NetBSD: pkgversion.t,v 1.11 2022/08/12 22:18:35 rillig Exp $
+# $NetBSD: pkgversion.t,v 1.12 2022/08/13 12:22:20 rillig Exp $
+#
+# Tests for parsing and comparing package versions, such as 1.0nb4.
 
 use strict;
 use warnings;
