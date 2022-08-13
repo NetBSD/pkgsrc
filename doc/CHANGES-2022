@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3796 2022/08/12 22:52:09 rillig Exp $
+$NetBSD: CHANGES-2022,v 1.3797 2022/08/13 12:30:09 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5621,3 +5621,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/go117 to 1.17.13 [bsiegert 2022-08-12]
 	Updated lang/go118 to 1.18.5 [bsiegert 2022-08-12]
 	Updated pkgtools/lintpkgsrc to 2022.08.12 [rillig 2022-08-12]
+	Updated pkgtools/lintpkgsrc to 2022.08.13 [rillig 2022-08-13]
