@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3798 2022/08/13 12:58:11 ryoon Exp $
+$NetBSD: CHANGES-2022,v 1.3799 2022/08/13 12:59:13 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5623,3 +5623,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated pkgtools/lintpkgsrc to 2022.08.12 [rillig 2022-08-12]
 	Updated pkgtools/lintpkgsrc to 2022.08.13 [rillig 2022-08-13]
 	Updated www/firefox to 103.0.2 [ryoon 2022-08-13]
+	Updated www/firefox-l10n to 103.0.2 [ryoon 2022-08-13]
