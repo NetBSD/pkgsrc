@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.73 2022/07/25 08:54:29 rin Exp $
+# $NetBSD: Makefile.common,v 1.74 2022/08/13 11:27:56 wiz Exp $
 #
 # used by www/w3m/Makefile
 # used by www/w3m-img/Makefile
@@ -34,6 +34,9 @@ _W3M_USE_IMAGE?=	NO
 .include "options.mk"
 
 .include "../../mk/bsd.prefs.mk"
+
+# not supported by gcc 5
+BUILDLINK_TRANSFORM+=	rm:-Wnull-dereference
 
 # Configurable by environment variables at run-time.
 CONFIGURE_ARGS+=	--with-charset=US-ASCII
