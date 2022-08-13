@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/07/04 19:51:42 gson Exp $
+# $NetBSD: Makefile,v 1.3 2022/08/13 13:24:19 gson Exp $
 
 GIT_COMMIT=		fe86885ecafd0d16eb122f3212403d1d5a86e24e
 
@@ -19,6 +19,8 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS=		--enable-sse --enable-single
+
+ONLY_FOR_PLATFORM=	*-*-x86_64
 
 pre-configure:
 	set -e; cd ${WRKSRC}; \
