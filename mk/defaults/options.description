@@ -520,6 +520,7 @@ llvm-target-arm		Support code generation for ARM CPUs.
 llvm-target-mips	Support code generation for MIPS CPUs.
 llvm-target-powerpc	Support code generation for PowerPC CPUs.
 llvm-target-sparc	Support code generation for SPARC CPUs.
+llvm-target-webassembly	Support code generation for WebAssembly virtual machine.
 lmdb			Enable lmdb support.
 lprng-priv-ports	Connections must be made from privileged ports.
 lprng-suid		Install LPRng executables setuid root.
@@ -984,6 +985,7 @@ xterm-toolbar		Enable toolbar support in xterm.
 xtest			Use XTEST Extension Library.
 xvid			Enable usage of XVid codecs.
 xvideo			Enable X-Video Motion Compensation library support.
+z3			Enable support for the Z3 theorem prover.
 zenmap			Enable nmap GUI frontend.
 zip			Support zip archives.
 ziplinks		Compress data before transmitting it between servers.
