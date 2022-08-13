@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.81 2022/08/12 22:45:14 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.82 2022/08/13 09:33:43 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -540,7 +540,7 @@ sub parse_makefile_vars($file, $cwd = undef) {
 		#
 		if (m#^ \. \s* if(|def|ndef) \s+ (.*) #x) {
 			my $type = $1;
-			if ($if_false[$#if_false]) {
+			if ($if_false[-1]) {
 				push @if_false, 2;
 
 			} elsif ($type eq '') {
@@ -557,23 +557,23 @@ sub parse_makefile_vars($file, $cwd = undef) {
 			debug("$file: .if$type (! @if_false)\n");
 
 		} elsif (m#^ \. \s* elif \s+ (.*)#x && @if_false) {
-			if ($if_false[$#if_false] == 0) {
-				$if_false[$#if_false] = 2;
-			} elsif ($if_false[$#if_false] == 1
+			if ($if_false[-1] == 0) {
+				$if_false[-1] = 2;
+			} elsif ($if_false[-1] == 1
 			    && !parse_eval_make_false($1, \%vars)) {
-				$if_false[$#if_false] = 0;
+				$if_false[-1] = 0;
 			}
 			debug("$file: .elif (! @if_false)\n");
 
 		} elsif (m#^ \. \s* else \b #x && @if_false) {
-			$if_false[$#if_false] = $if_false[$#if_false] == 1 ? 0 : 1;
+			$if_false[-1] = $if_false[-1] == 1 ? 0 : 1;
 			debug("$file: .else (! @if_false)\n");
 
 		} elsif (m#^\. \s* endif \b #x) {
 			pop(@if_false);
 			debug("$file: .endif (! @if_false)\n");
 
-		} elsif ($if_false[$#if_false]) {
+		} elsif ($if_false[-1]) {
 			# Skip branches whose condition evaluated to false.
 
 		} elsif (m#^\. \s* include \s+ "([^"]+)" #x) {
