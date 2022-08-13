@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2022/08/12 13:59:52 gutteridge Exp $
+# $NetBSD: Makefile,v 1.14 2022/08/13 10:07:26 tnn Exp $
 
 .include "../../lang/llvm/version.mk"
 
@@ -23,7 +23,7 @@ USE_TOOLS+=	ggrep
 SSP_SUPPORTED=		no
 PKGSRC_USE_STACK_CHECK=	no
 
-CONFIGURE_DIRS=	../build
+CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	${WRKSRC}/lib/builtins
 
 BUILDLINK_TRANSFORM+=	rm:-I/usr/include
@@ -58,7 +58,7 @@ CMAKE_ARGS+=	-DCMAKE_CXX_COMPILER_WORKS=1 # Do not test clang++ compile
 CMAKE_INSTALL_PREFIX=	${PREFIX}/lib/clang/${PKGVERSION_NOREV}
 
 post-extract:
-	${MKDIR} ${WRKDIR}/build
+	${MKDIR} ${WRKSRC}/build
 
 # Run llvm-ranlib again on the archive. Fixes mystery build failure
 # in Firefox due to missing index (see PR pkg/56590). Might be a MAKE_JOBS
