@@ -1,5 +1,5 @@
 #!@PERL5@
-# $NetBSD: lintpkgsrc.pl,v 1.92 2022/08/14 12:40:43 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.93 2022/08/14 12:42:38 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -250,8 +250,7 @@ sub expand_braces($str) {
 	my @todo = ($str);
 
 	my @expanded;
-	# FIXME: see test_expand_braces.
-	while ($str = shift @todo) {
+	while (defined($str = shift @todo)) {
 		# FIXME: see test_expand_braces.
 		if ($str =~ /(.*) \{ ([^{}]+) } (.*)/x) {
 			# FIXME: see test_expand_braces.
