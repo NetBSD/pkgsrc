@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2022/07/29 16:08:20 wiz Exp $
+$NetBSD: distinfo,v 1.6 2022/08/14 21:05:32 tnn Exp $
 
 BLAKE2s (gtk-4.6.6.tar.xz) = 520d6e0edc306ef03691c57e499f1a98ea094bbe30bfe3d731487e8833776758
 SHA512 (gtk-4.6.6.tar.xz) = b743d99029d7d51db19396641023eefd5d25bbacbd89ad6660d43e382b26fe6cc5e9ce8f0dbb3f4ac7d2143db617ea0c2e2d3cc8926fc93d735eb76ffb2f8309
 Size (gtk-4.6.6.tar.xz) = 23085304 bytes
+SHA1 (patch-demos_gtk-demo_gtkgears.c) = f09912bb4bef8589f694d4ed1a4744afe422ccbd
 SHA1 (patch-meson.build) = 89b91ba48b35baafb35598d3dd82577de8fc424c
