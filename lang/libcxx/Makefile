@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2022/08/14 13:52:26 tnn Exp $
+# $NetBSD: Makefile,v 1.15 2022/08/14 14:15:48 tnn Exp $
 
 .include "../../lang/llvm/version.mk"
 PKGREVISION=	1
@@ -46,6 +46,8 @@ CMAKE_ARGS+=	-DLIBCXX_ENABLE_ABI_LINKER_SCRIPT=OFF
 
 # avoid conflict with stddef.h
 CXXFLAGS.NetBSD+=	-D__DEFINED_max_align_t=1
+
+.include "../../mk/compiler.mk"
 
 .if !empty(CC_VERSION:Mgcc-[0-9].*) || !empty(CC_VERSION:Mgcc-10.*)
 # Avoid GCC < 11 error https://github.com/llvm/llvm-project/issues/54018
