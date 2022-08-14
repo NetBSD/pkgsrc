@@ -1,5 +1,5 @@
 #!@PERL5@
-# $NetBSD: lintpkgsrc.pl,v 1.90 2022/08/14 03:12:02 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.91 2022/08/14 03:18:36 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -1191,6 +1191,7 @@ sub scan_pkgsrc_distfiles_vs_distinfo($pkgsrcdir, $pkgdistdir, $check_unref,
 		}
 
 		verbose("checksum mismatches\n");
+		my $prev_cwd = getcwd() or die;
 		chdir_or_fail($pkgdistdir);
 		foreach my $sum (keys %sumfiles) {
 			if ($sum eq 'Size') {
@@ -1225,7 +1226,7 @@ sub scan_pkgsrc_distfiles_vs_distinfo($pkgsrcdir, $pkgdistdir, $check_unref,
 			waitpid($pid, 0) || fail "xargs digest $sum";
 			waitpid($pid2, 0) || fail 'pipe write to xargs';
 		}
-		chdir_or_fail('/'); # Do not want to stay in $pkgdistdir
+		chdir_or_fail($prev_cwd);
 	}
 
 	sort keys %unref_distfiles;
