@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.22 2021/10/26 11:30:18 nia Exp $
+$NetBSD: distinfo,v 1.23 2022/08/14 17:21:01 schmonz Exp $
 
-BLAKE2s (Template-Toolkit-3.009.tar.gz) = 745e9d25fc7651be94184b5254ff5bb40b01258445aad9bf316dd1f6caecabc3
-SHA512 (Template-Toolkit-3.009.tar.gz) = 940992d7e3059a64c273c2f0441a81e095560c35f4bb9ab75afb9eeeb58d043cc5ac9785e2eb79a6635480ade12771c75c632c755977124dbe7cbfae399f9972
-Size (Template-Toolkit-3.009.tar.gz) = 523388 bytes
+BLAKE2s (Template-Toolkit-3.100.tar.gz) = 1919c39b957773c55da5e1732dba486ab028d9a16f4e2deb9b53662199859215
+SHA512 (Template-Toolkit-3.100.tar.gz) = 7a23254450662a71761f7f8f6d774f71695ce975ef5638d04e45858a39003f82453cefdfed4528840094126a6148fe68d98a39fd5dde4908a08b6128576b3767
+Size (Template-Toolkit-3.100.tar.gz) = 521315 bytes
