@@ -1,0 +1,24 @@
+$NetBSD: patch-include_____locale,v 1.1 2022/08/14 19:54:31 tnn Exp $
+
+Fix definition of __regex_word on SunOS.
+0x80 clashes with _ISXDIGIT. Looking at <iso/ctype_iso.h>, 0x1000
+/seems/ to be an unused character class so use that pending an
+upstream fix. Similar issue to AIX.
+See upstream d29c9477320b982b73dc64405ff8f7fc54bb04d6.
+
+--- include/__locale.orig	2022-06-22 16:46:24.000000000 +0000
++++ include/__locale
+@@ -493,7 +493,13 @@ public:
+     static const mask punct  = _ISPUNCT;
+     static const mask xdigit = _ISXDIGIT;
+     static const mask blank  = _ISBLANK;
++# if defined(_AIX)
++    static const mask __regex_word = 0x8000;
++# elif defined(__sun__)
++    static const mask __regex_word = 0x1000;
++# else
+     static const mask __regex_word = 0x80;
++# endif
+ #elif defined(_NEWLIB_VERSION)
+     // Same type as Newlib's _ctype_ array in newlib/libc/include/ctype.h.
+     typedef char mask;
