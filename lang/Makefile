@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.651 2022/06/29 07:54:40 wiz Exp $
+# $NetBSD: Makefile,v 1.652 2022/08/14 22:45:05 tnn Exp $
 #
 
 COMMENT=	Programming languages
@@ -143,7 +143,6 @@ SUBDIR+=	konoha
 SUBDIR+=	ksi
 SUBDIR+=	libBlocksRuntime
 SUBDIR+=	libLLVM
-SUBDIR+=	libLLVM34
 SUBDIR+=	libLLVM4
 SUBDIR+=	libcxx
 SUBDIR+=	libcxxabi
