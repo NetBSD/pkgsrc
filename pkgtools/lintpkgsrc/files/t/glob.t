@@ -1,4 +1,4 @@
-# $NetBSD: glob.t,v 1.9 2022/08/14 12:40:43 rillig Exp $
+# $NetBSD: glob.t,v 1.10 2022/08/14 12:42:38 rillig Exp $
 #
 # Tests for file globbing and matching.
 
@@ -66,10 +66,8 @@ sub test_expand_braces() {
 	    # FIXME: '<>' is missing.
 	    [ '<{opt,}>', '<opt>' ],
 	    [ '<{,opt}>', '<>', '<opt>' ],
-	    # FIXME: '0', '1', '2' are missing.
-	    [ '{0,1,2}', ],
-	    # FIXME: '0' is missing.
-	    [ '{2,1,0}', '2', '1' ],
+	    [ '{0,1,2}', '0', '1', '2' ],
+	    [ '{2,1,0}', '2', '1', '0' ],
 	);
 
 	foreach my $example (@examples) {
