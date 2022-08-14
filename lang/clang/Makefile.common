@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.51 2022/08/13 09:58:03 tnn Exp $
+# $NetBSD: Makefile.common,v 1.52 2022/08/14 12:13:03 tnn Exp $
 # used by lang/clang/Makefile
 # used by lang/clang-tools-extra/Makefile
 
@@ -17,7 +17,7 @@ CMAKE_ARG_PATH=		${WRKSRC}
 
 USE_LANGUAGES=		c c++14
 USE_CMAKE=		yes
-GCC_REQD+=		5
+GCC_REQD+=		7
 
 CMAKE_ARGS+=	-DLLVM_CONFIG=${LLVM_CONFIG_PATH:Q}
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
