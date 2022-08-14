@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.19 2022/08/13 09:38:09 tnn Exp $
+$NetBSD: distinfo,v 1.20 2022/08/14 19:54:31 tnn Exp $
 
 BLAKE2s (libcxx-14.0.6.src.tar.xz) = e77dfac79fb977adf84345b7e4c2762b3fa89f3d1f611baa8f8fa6831d1bc68a
 SHA512 (libcxx-14.0.6.src.tar.xz) = c39bb01317e8ae7e5b23a677754a866953b6c45188c194d3d76fbd276de9565df8bcbcab8cf6606584af7dd30a61f39376c0e2de6b8c32c69f7fc592587e710d
@@ -10,6 +10,7 @@ BLAKE2s (llvm-14.0.6.src.tar.xz) = 2d44946453add45426569fd4187654f83881341c5c010
 SHA512 (llvm-14.0.6.src.tar.xz) = 6461bdde27aac17fa44c3e99a85ec47ffb181d0d4e5c3ef1c4286a59583e3b0c51af3c8081a300f45b99524340773a3011380059e3b3a571c3b0a8733e96fc1d
 Size (llvm-14.0.6.src.tar.xz) = 49660136 bytes
 SHA1 (patch-include_____config) = 01793dc2ec7db8f51d042fd0114649223036b089
+SHA1 (patch-include_____locale) = 16ce105c26adf43828699ddb2825ea2a199f2bda
 SHA1 (patch-src_charconv.cpp) = b8569ae77df4a5a7b627b3a9cb6691be73699dca
 SHA1 (patch-src_filesystem_filesystem__common.h) = 7b088ae8e577b482e05906434b510daed40469ae
 SHA1 (patch-src_include_to__chars__floating__point.h) = f7f880905609b87830ea657c7510fb3987448a09
