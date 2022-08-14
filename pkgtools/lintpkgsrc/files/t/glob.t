@@ -1,4 +1,4 @@
-# $NetBSD: glob.t,v 1.12 2022/08/14 12:46:39 rillig Exp $
+# $NetBSD: glob.t,v 1.13 2022/08/14 12:54:01 rillig Exp $
 #
 # Tests for file globbing and matching.
 
@@ -67,7 +67,7 @@ sub test_expand_braces() {
 	    [ '<{,opt}>', '<>', '<opt>' ],
 	    [ '{0,1,2}', '0', '1', '2' ],
 	    [ '{2,1,0}', '2', '1', '0' ],
-	    # FIXME: duplicate 'thirteen'.
+	    # XXX: duplicate 'thirteen'.
 	    [ '{thir,f{our,if}}teen', 'thirteen', 'fourteen', 'thirteen', 'fifteen' ]
 	);
 

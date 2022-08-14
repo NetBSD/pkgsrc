@@ -1,5 +1,5 @@
 #!@PERL5@
-# $NetBSD: lintpkgsrc.pl,v 1.94 2022/08/14 12:44:17 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.95 2022/08/14 12:54:01 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -251,10 +251,9 @@ sub expand_braces($str) {
 
 	my @expanded;
 	while (defined($str = shift @todo)) {
-		# FIXME: see test_expand_braces.
 		if ($str =~ /(.*) \{ ([^{}]+) } (.*)/x) {
-			foreach (split(',', $2, -1)) {
-				push @todo, "$1$_$3";
+			foreach my $alt (split(',', $2, -1)) {
+				push @todo, "$1$alt$3";
 			}
 		} else {
 			push @expanded, $str;
