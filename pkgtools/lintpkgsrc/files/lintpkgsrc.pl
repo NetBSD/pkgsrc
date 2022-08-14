@@ -1,6 +1,5 @@
 #!@PERL5@
-
-# $NetBSD: lintpkgsrc.pl,v 1.88 2022/08/13 12:22:20 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.89 2022/08/14 03:06:41 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -160,7 +159,7 @@ my (
 my $magic_undefined = 'M_a_G_i_C_uNdEfInEd';
 
 sub debug(@args) {
-	$opt{D} and print STDERR 'DEBUG: ', @args;
+	$opt{D} and print STDERR 'DEBUG: ', @args, "\n";
 }
 
 sub verbose(@args) {
@@ -289,7 +288,7 @@ sub eval_mk_cond_func($func, $arg, $vars) {
 			}
 			return 1;
 		} elsif ($arg =~ /:M/) {
-			debug("Unsupported ':M' modifier in '$arg'\n");
+			debug("Unsupported ':M' modifier in '$arg'");
 		}
 
 		my $value = expand_exprs("\${$arg}", $vars);
@@ -315,13 +314,13 @@ sub eval_mk_cond($line, $vars) {
 	$test =~ s/"//g;
 	$test =~ s/\r/""/g;
 
-	debug("conditional: $test\n");
+	debug("conditional: $test");
 
 	while ($test =~ /(target|empty|make|defined|exists)\s*\(([^()]+)\)/) {
 		my ($func, $arg) = ($1, $2);
 		my $result = eval_mk_cond_func($func, $arg, $vars);
 		$test =~ s/$func\s*\([^()]+\)/$result/;
-		debug("conditional: update to $test\n");
+		debug("conditional: update to $test");
 	}
 
 	while ($test =~ /([^\s()\|\&]+) \s+ (!=|==) \s+ ([^\s()]+)/x) {
@@ -330,14 +329,14 @@ sub eval_mk_cond($line, $vars) {
 	}
 
 	if ($test =~ /^[ <> \d () \s & | . ! ]+$/xx) {
-		debug("eval test $test\n");
+		debug("eval test $test");
 		my $result = eval "($test) ? 1 : 0";
 		defined $result or fail("Eval '$test' failed in '$line': $@");
-		debug("conditional: evaluated to " . ($result ? 'true' : 'false') . "\n");
+		debug("conditional: evaluated to " . ($result ? 'true' : 'false'));
 		$result;
 
 	} else {
-		debug("conditional: defaulting '$test' to true\n");
+		debug("conditional: defaulting '$test' to true");
 		1;
 	}
 }
@@ -351,11 +350,11 @@ sub parse_makefile_line_include($file, $incfile,
 	    || $incfile =~ /$magic_undefined/
 	    || $incfile =~ /\$\{/
 	    || (!$opt{d} && $incfile =~ m#/(buildlink[^/]*\.mk)#)) {
-		debug("$file: .include \"$incfile\" skipped\n");
+		debug("$file: .include \"$incfile\" skipped");
 		return;
 	}
 
-	debug("$file: .include \"$incfile\"\n");
+	debug("$file: .include \"$incfile\"");
 
 	if (substr($incfile, 0, 1) ne '/') {
 		foreach my $dir (reverse @$incdirs) {
@@ -414,8 +413,8 @@ sub parse_makefile_line_var($varname, $op, $value, $vars) {
 		$vars->{$varname} = $value;
 	}
 	debug($op eq '='
-	    ? "assignment: $varname $op $value\n"
-	    : "assignment: $varname $op $value => $vars->{$varname}\n");
+	    ? "assignment: $varname $op $value"
+	    : "assignment: $varname $op $value => $vars->{$varname}");
 
 	# Give python a little hand (XXX - do we wanna consider actually
 	# implementing make .for loops, etc?
@@ -438,9 +437,9 @@ sub expand_modifiers($file, $varname, $left, $subvar, $mods, $right, $vars) {
 	# next time around.
 	return 0 if index($result, '${') != -1;
 
-	debug("$file: substitutelist $varname ($result) $subvar (@mods)\n");
+	debug("$file: substitutelist $varname ($result) $subvar (@mods)");
 	foreach (@mods) {
-		debug("expanding modifier '$_'\n");
+		debug("expanding modifier '$_'");
 
 		if (m#^ (U) (.*) #x) {
 			$result = $2 unless defined $vars->{$subvar};
@@ -450,7 +449,7 @@ sub expand_modifiers($file, $varname, $left, $subvar, $mods, $right, $vars) {
 			# TODO: Properly handle separators other than '/' and '@'.
 			my ($how, $from, $to, $global) = ($1, $3, $4, $5);
 
-			debug("$file: ':S' $subvar, $how, $from, $to, $global\n");
+			debug("$file: ':S' $subvar, $how, $from, $to, $global");
 			if ($how eq 'S') {
 				# Limited substitution - keep ^ and $
 				$from =~ s/([?.{}\]\[*+])/\\$1/g;
@@ -466,15 +465,15 @@ sub expand_modifiers($file, $varname, $left, $subvar, $mods, $right, $vars) {
 				($from, $notfirst) = split('\s', $from, 2);
 			}
 
-			debug("$file: substituteperl $subvar, $how, $from, $to\n");
-			debug("eval substitute <$from> <$to> <$global>\n");
+			debug("$file: substituteperl $subvar, $how, $from, $to");
+			debug("eval substitute <$from> <$to> <$global>");
 			eval "\$result =~ s/$from/$to/$global";
 			if (defined $notfirst) {
 				$result .= " $notfirst";
 			}
 
 		} else {
-			debug("$file: variable '$varname' has unknown modifier '$_'\n");
+			debug("$file: variable '$varname' has unknown modifier '$_'");
 		}
 	}
 
@@ -545,7 +544,7 @@ sub parse_makefile_vars($file, $cwd = undef) {
 				my $varname = expand_exprs($cond, \%vars);
 
 				# bmake also allows '.ifdef A && B'.
-				debug("not implemented: .ifdef $varname\n")
+				debug("not implemented: .ifdef $varname")
 				    if $cond =~ /\s/;
 
 				my $result = $kind eq 'ifdef'
@@ -554,7 +553,7 @@ sub parse_makefile_vars($file, $cwd = undef) {
 				push @if_state, $result ? 'active' : 'not_yet';
 			}
 
-			debug("$file: .$kind @if_state\n");
+			debug("$file: .$kind @if_state");
 
 		} elsif ( # XXX: bmake also knows '.elifdef' and '.elifnmake'.
 		    m#^ \. \s* elif \s+ (.*)#x && @if_state > 0) {
@@ -566,16 +565,16 @@ sub parse_makefile_vars($file, $cwd = undef) {
 			    && eval_mk_cond($cond, \%vars)) {
 				$if_state[-1] = 'active';
 			}
-			debug("$file: .elif @if_state\n");
+			debug("$file: .elif @if_state");
 
 		} elsif (m#^ \. \s* else \b #x && @if_state > 0) {
 			$if_state[-1] =
 			    $if_state[-1] eq 'not_yet' ? 'active' : 'done';
-			debug("$file: .else @if_state\n");
+			debug("$file: .else @if_state");
 
 		} elsif (m#^\. \s* endif \b #x) {
 			pop @if_state;
-			debug("$file: .endif @if_state\n");
+			debug("$file: .endif @if_state");
 
 		} elsif (@if_state > 0 && $if_state[-1] ne 'active') {
 			# Skip branches whose condition evaluated to false.
@@ -593,11 +592,11 @@ sub parse_makefile_vars($file, $cwd = undef) {
 			# Skip comment lines and shell commands.
 
 		} else {
-			debug("$file: unknown line '$_'\n");
+			debug("$file: unknown line '$_'");
 		}
 	}
 
-	debug("$file: expand\n");
+	debug("$file: expand");
 
 	# Handle variable substitutions  FRED = a-${JIM:S/-/-b-/}
 
@@ -934,17 +933,17 @@ sub parse_makefile_pkgsrc($file) {
 	}
 
 	if (defined $vars->{PKGNAME}) {
-		debug("$file: PKGNAME=$vars->{PKGNAME}\n");
+		debug("$file: PKGNAME=$vars->{PKGNAME}");
 	}
 	if (defined $vars->{DISTNAME}) {
-		debug("$file: DISTNAME=$vars->{DISTNAME}\n");
+		debug("$file: DISTNAME=$vars->{DISTNAME}");
 	}
 
 	if (!defined $pkgname || $pkgname =~ /\$/ || $pkgname !~ /(.*)-(\d.*)/) {
 
 		# invoke make here as a last resort
 		my $pkgdir = dirname $file;
-		debug("Running '$conf_make' in '$pkgdir'\n");
+		debug("Running '$conf_make' in '$pkgdir'");
 		my $pid = open3(\*WTR, \*RDR, \*ERR,
 		    "cd $pkgdir || exit 1; $conf_make show-vars VARNAMES=PKGNAME");
 		if (!$pid) {
@@ -988,7 +987,7 @@ sub parse_makefile_pkgsrc($file) {
 			if ($pkgdb) {
 				my ($pkgver) = $pkgdb->add($1, $2);
 
-				debug("add $1 $2\n");
+				debug("add $1 $2");
 
 				foreach my $var (qw(DEPENDS RESTRICTED OSVERSION_SPECIFIC BROKEN)) {
 					$pkgver->var($var, $vars->{$var});
