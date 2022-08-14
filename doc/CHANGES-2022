@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3801 2022/08/14 16:52:56 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.3802 2022/08/14 16:56:39 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5626,3 +5626,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/firefox-l10n to 103.0.2 [ryoon 2022-08-13]
 	Updated devel/gopls to 0.9.3 [bsiegert 2022-08-13]
 	Updated www/p5-URI-db to 0.20 [schmonz 2022-08-14]
+	Updated devel/p5-Test-Exit to 0.11nb4 [schmonz 2022-08-14]
