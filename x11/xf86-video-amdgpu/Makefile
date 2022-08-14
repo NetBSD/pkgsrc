@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2022/04/10 08:53:19 nia Exp $
+# $NetBSD: Makefile,v 1.23 2022/08/14 19:25:13 tnn Exp $
 
-DISTNAME=	xf86-video-amdgpu-19.1.0
+DISTNAME=	xf86-video-amdgpu-22.0.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	https://xorg.freedesktop.org/
