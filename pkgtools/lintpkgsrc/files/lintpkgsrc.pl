@@ -1,5 +1,5 @@
 #!@PERL5@
-# $NetBSD: lintpkgsrc.pl,v 1.91 2022/08/14 03:18:36 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.92 2022/08/14 12:40:43 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -244,6 +244,25 @@ sub pkgversion_cmp($va, $op, $vb) {
 	    : $op eq '<=' ? $cmp <= 0
 	    : $op eq '>' ? $cmp > 0
 	    : $cmp >= 0;
+}
+
+sub expand_braces($str) {
+	my @todo = ($str);
+
+	my @expanded;
+	# FIXME: see test_expand_braces.
+	while ($str = shift @todo) {
+		# FIXME: see test_expand_braces.
+		if ($str =~ /(.*) \{ ([^{}]+) } (.*)/x) {
+			# FIXME: see test_expand_braces.
+			foreach (split(',', $2)) {
+				push @todo, "$1$_$3";
+			}
+		} else {
+			push @expanded, $str;
+		}
+	}
+	@expanded;
 }
 
 # Return a copy of $value in which trivial variable expressions are replaced
@@ -696,21 +715,8 @@ sub get_default_makefile_vars() {
 #
 sub invalid_version($pkgmatch) {
 	my ($fail, $ok);
-	my (@pkgmatches);
 
-	my @todo = ($pkgmatch);
-
-	# We handle {} here, everything else in package_globmatch
-	while ($pkgmatch = shift @todo) {
-		if ($pkgmatch =~ /(.*)\{([^{}]+)}(.*)/) {
-			foreach (split(',', $2)) {
-				push @todo, "$1$_$3";
-			}
-		} else {
-			push @pkgmatches, $pkgmatch;
-		}
-	}
-
+	my @pkgmatches = expand_braces($pkgmatch);
 	foreach $pkgmatch (@pkgmatches) {
 		my ($pkg, $badver) = package_globmatch($pkgmatch);
 
