@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2022/06/28 11:33:23 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2022/08/14 16:56:31 schmonz Exp $
 
 DISTNAME=	Test-Exit-0.11
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/A/AR/ARODLAND/}
 
@@ -11,7 +11,7 @@ HOMEPAGE=	https://metacpan.org/pod/Test::Exit
 COMMENT=	Test that some code calls exit() without terminating testing
 LICENSE=	${PERL5_LICENSE}
 
-TEST_DEPENDS+=	p5-Return-MultiLevel-[0-9]*:../../devel/p5-Return-MultiLevel
+DEPENDS+=	p5-Return-MultiLevel-[0-9]*:../../devel/p5-Return-MultiLevel
 
 PERL5_PACKLIST=	auto/Test/Exit/.packlist
 
