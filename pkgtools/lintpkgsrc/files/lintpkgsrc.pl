@@ -1,5 +1,5 @@
 #!@PERL5@
-# $NetBSD: lintpkgsrc.pl,v 1.89 2022/08/14 03:06:41 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.90 2022/08/14 03:12:02 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -307,36 +307,35 @@ sub eval_mk_cond_func($func, $arg, $vars) {
 }
 
 sub eval_mk_cond($line, $vars) {
-	my $test = expand_exprs($line, $vars);
+	my $cond = expand_exprs($line, $vars);
 
 	# XXX This is _so_ wrong - need to parse this correctly
-	$test =~ s/""/\r/g;
-	$test =~ s/"//g;
-	$test =~ s/\r/""/g;
+	$cond =~ s/""/\r/g;
+	$cond =~ s/"//g;
+	$cond =~ s/\r/""/g;
 
-	debug("conditional: $test");
+	debug("conditional: $cond");
 
-	while ($test =~ /(target|empty|make|defined|exists)\s*\(([^()]+)\)/) {
+	while ($cond =~ /(target|empty|make|defined|exists)\s*\(([^()]+)\)/) {
 		my ($func, $arg) = ($1, $2);
 		my $result = eval_mk_cond_func($func, $arg, $vars);
-		$test =~ s/$func\s*\([^()]+\)/$result/;
-		debug("conditional: update to $test");
+		$cond =~ s/$func\s*\([^()]+\)/$result/;
+		debug("conditional: update to $cond");
 	}
 
-	while ($test =~ /([^\s()\|\&]+) \s+ (!=|==) \s+ ([^\s()]+)/x) {
+	while ($cond =~ /([^\s()\|\&]+) \s+ (!=|==) \s+ ([^\s()]+)/x) {
 		my $result = 0 + (($2 eq '==') ? ($1 eq $3) : ($1 ne $3));
-		$test =~ s/[^\s()\|\&]+ \s+ (!=|==) \s+ [^\s()]+/$result/x;
+		$cond =~ s/[^\s()\|\&]+ \s+ (!=|==) \s+ [^\s()]+/$result/x;
 	}
 
-	if ($test =~ /^[ <> \d () \s & | . ! ]+$/xx) {
-		debug("eval test $test");
-		my $result = eval "($test) ? 1 : 0";
-		defined $result or fail("Eval '$test' failed in '$line': $@");
+	if ($cond =~ /^[ <> \d () \s & | . ! ]+$/xx) {
+		my $result = eval "($cond) ? 1 : 0";
+		defined $result or fail("Eval '$cond' failed in '$line': $@");
 		debug("conditional: evaluated to " . ($result ? 'true' : 'false'));
 		$result;
 
 	} else {
-		debug("conditional: defaulting '$test' to true");
+		debug("conditional: defaulting '$cond' to true");
 		1;
 	}
 }
@@ -1146,7 +1145,7 @@ sub scan_pkgsrc_distfiles_vs_distinfo($pkgsrcdir, $pkgdistdir, $check_unref,
 				      $check_distinfo) {
 	my (@categories);
 	my (%distfiles, %sumfiles, @distwarn, $numpkg);
-	my (%bad_distfiles);
+	my (%unref_distfiles);
 
 	@categories = list_pkgsrc_categories($pkgsrcdir);
 
@@ -1172,7 +1171,7 @@ sub scan_pkgsrc_distfiles_vs_distinfo($pkgsrcdir, $pkgdistdir, $check_unref,
 			return if $distn =~ m/^\.cvsignore/;
 			return if $distn =~ m/^CVS\//;
 			if (!defined($dist = $distfiles{$distn})) {
-				$bad_distfiles{$distn} = 1;
+				$unref_distfiles{$distn} = 1;
 			} elsif ($dist->{sum} ne 'IGNORE') {
 				push @{$sumfiles{ $dist->{sumtype} }}, $distn;
 			}
@@ -1180,10 +1179,10 @@ sub scan_pkgsrc_distfiles_vs_distinfo($pkgsrcdir, $pkgdistdir, $check_unref,
 	} },
 	    ($pkgdistdir));
 
-	if ($check_unref && %bad_distfiles) {
-		verbose(scalar(keys %bad_distfiles),
+	if ($check_unref && %unref_distfiles) {
+		verbose(scalar(keys %unref_distfiles),
 		    " unreferenced file(s) in '$pkgdistdir':\n");
-		print join("\n", sort keys %bad_distfiles), "\n";
+		print join("\n", sort keys %unref_distfiles), "\n";
 	}
 
 	if ($check_distinfo) {
@@ -1198,7 +1197,7 @@ sub scan_pkgsrc_distfiles_vs_distinfo($pkgsrcdir, $pkgdistdir, $check_unref,
 				foreach my $file (@{$sumfiles{$sum}}) {
 					if (!-f $file || -S $file != $distfiles{$file}{sum}) {
 						print $file, " (Size)\n";
-						$bad_distfiles{$file} = 1;
+						$unref_distfiles{$file} = 1;
 					}
 				}
 				next;
@@ -1218,7 +1217,7 @@ sub scan_pkgsrc_distfiles_vs_distinfo($pkgsrcdir, $pkgdistdir, $check_unref,
 				if (m/^$sum ?\(([^\)]+)\) = (\S+)/) {
 					if ($distfiles{$1}{sum} ne $2) {
 						print $1, " ($sum)\n";
-						$bad_distfiles{$1} = 1;
+						$unref_distfiles{$1} = 1;
 					}
 				}
 			}
@@ -1229,7 +1228,7 @@ sub scan_pkgsrc_distfiles_vs_distinfo($pkgsrcdir, $pkgdistdir, $check_unref,
 		chdir_or_fail('/'); # Do not want to stay in $pkgdistdir
 	}
 
-	sort keys %bad_distfiles;
+	sort keys %unref_distfiles;
 }
 
 sub store_pkgdb_in_cache($db, $fname) {
@@ -1370,12 +1369,12 @@ sub debug_parse_makefiles(@args) {
 }
 
 sub check_distfiles($pkgsrcdir, $pkgdistdir) {
-	my @baddist = scan_pkgsrc_distfiles_vs_distinfo(
+	my @unref_distfiles = scan_pkgsrc_distfiles_vs_distinfo(
 	    $pkgsrcdir, $pkgdistdir, $opt{o}, $opt{m});
 
 	return unless $opt{r};
-	verbose("Unlinking 'bad' distfiles\n");
-	foreach my $distfile (@baddist) {
+	verbose("Unlinking unreferenced distfiles\n");
+	foreach my $distfile (@unref_distfiles) {
 		unlink("$pkgdistdir/$distfile");
 	}
 }
