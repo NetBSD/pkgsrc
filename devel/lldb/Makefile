@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2022/08/14 14:44:55 tnn Exp $
+# $NetBSD: Makefile,v 1.40 2022/08/14 15:00:18 tnn Exp $
 
 .include "../../lang/llvm/version.mk"
 
@@ -15,9 +15,6 @@ DEPENDS+=	llvm-${PKGVERSION_NOREV}{,nb*}:../../lang/llvm
 DEPENDS+=	clang-${PKGVERSION_NOREV}{,nb*}:../../lang/clang
 DEPENDS+=	swig3>=3.0:../../devel/swig3
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
-
-# lacks ptrace(2) PT_STOP
-NOT_FOR_PLATFORM+=	NetBSD-[1-8].*-*
 
 CONFIGURE_DIRS=		build
 CMAKE_ARG_PATH=		${WRKSRC}
@@ -71,6 +68,11 @@ TEST_ENV+=		LD_LIBRARY_PATH=${WRKDIR}/build/lib
 CMAKE_ARGS+=	-DLLDB_DISABLE_CURSES:BOOL=FALSE
 .  else
 CMAKE_ARGS+=	-DLLDB_DISABLE_CURSES:BOOL=TRUE
+.  endif
+
+.  if ${OPSYS_VERSION} < 99922
+# lacks ptrace(2) PT_STOP
+NOT_FOR_PLATFORM+=	NetBSD-*-*
 .  endif
 .endif
 
