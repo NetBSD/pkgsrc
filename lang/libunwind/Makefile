@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2022/08/13 09:00:23 tnn Exp $
+# $NetBSD: Makefile,v 1.28 2022/08/14 13:52:27 tnn Exp $
 
 .include "../../lang/llvm/version.mk"
-PKGREVISION=	1
+PKGREVISION=	2
 
 DISTNAME=	libunwind-${LLVM_VERSION}.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -31,6 +31,7 @@ USE_CMAKE=		yes
 USE_LANGUAGES=		c c++11
 USE_TOOLS+=		pax
 SSP_SUPPORTED=		no
+GCC_REQD+=		10	# must be in sync with libcxx
 
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 CMAKE_ARGS+=	-DCMAKE_C_COMPILER=${CC:Q}
