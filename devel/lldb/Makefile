@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2022/08/12 08:54:30 pin Exp $
+# $NetBSD: Makefile,v 1.39 2022/08/14 14:44:55 tnn Exp $
 
 .include "../../lang/llvm/version.mk"
 
@@ -16,12 +16,15 @@ DEPENDS+=	clang-${PKGVERSION_NOREV}{,nb*}:../../lang/clang
 DEPENDS+=	swig3>=3.0:../../devel/swig3
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
-CONFIGURE_DIRS=		${WRKDIR}/build
+# lacks ptrace(2) PT_STOP
+NOT_FOR_PLATFORM+=	NetBSD-[1-8].*-*
+
+CONFIGURE_DIRS=		build
 CMAKE_ARG_PATH=		${WRKSRC}
 
 USE_CMAKE=		yes
 USE_LANGUAGES=		c c++14
-GCC_REQD+=		4.8
+GCC_REQD+=		7
 PY_PATCHPLIST=		yes
 
 CMAKE_ARGS+=	-DLLVM_CONFIG=${LLVM_CONFIG_PATH}
@@ -63,11 +66,6 @@ TEST_ENV+=		LD_LIBRARY_PATH=${WRKDIR}/build/lib
 
 .include "../../mk/bsd.prefs.mk"
 
-PLIST_VARS+=	posix
-.if ${OPSYS} != "Darwin"
-PLIST.posix=	yes
-.endif
-
 .if ${OPSYS} == "NetBSD"
 .  if exists(/usr/include/panel.h)
 CMAKE_ARGS+=	-DLLDB_DISABLE_CURSES:BOOL=FALSE
@@ -77,7 +75,7 @@ CMAKE_ARGS+=	-DLLDB_DISABLE_CURSES:BOOL=TRUE
 .endif
 
 post-extract:
-	${MKDIR} ${WRKDIR}/build
+	${MKDIR} ${WRKSRC}/build
 
 #.include "../../devel/googletest/buildlink3.mk" # check-lldb-unit
 .include "../../devel/libatomic_ops/buildlink3.mk"
