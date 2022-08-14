@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2022/08/13 09:38:09 tnn Exp $
+# $NetBSD: Makefile,v 1.14 2022/08/14 13:52:26 tnn Exp $
 
 .include "../../lang/llvm/version.mk"
 PKGREVISION=	1
@@ -30,9 +30,10 @@ DISTFILES=	${DEFAULT_DISTFILES} ${EXTRA_DIST}
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	${WRKSRC}
 
-USE_LANGUAGES=	c c++17
+USE_LANGUAGES=	c c++20
 USE_CMAKE=	yes
 SSP_SUPPORTED=	no
+GCC_REQD+=	10
 
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 CMAKE_ARGS+=	-DCMAKE_C_COMPILER=${CC:Q}
@@ -46,8 +47,10 @@ CMAKE_ARGS+=	-DLIBCXX_ENABLE_ABI_LINKER_SCRIPT=OFF
 # avoid conflict with stddef.h
 CXXFLAGS.NetBSD+=	-D__DEFINED_max_align_t=1
 
+.if !empty(CC_VERSION:Mgcc-[0-9].*) || !empty(CC_VERSION:Mgcc-10.*)
 # Avoid GCC < 11 error https://github.com/llvm/llvm-project/issues/54018
 CXXFLAGS+=		-std=c++17 -D_LIBCPP_STD_VER=17
+.endif
 
 post-extract:
 	${MKDIR} ${WRKSRC}/build
