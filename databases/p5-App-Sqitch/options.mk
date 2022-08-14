@@ -1,8 +1,9 @@
-# $NetBSD: options.mk,v 1.1 2018/10/05 10:37:39 schmonz Exp $
+# $NetBSD: options.mk,v 1.2 2022/08/14 17:21:50 schmonz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.sqitch
 
 PKG_SUPPORTED_OPTIONS+=	mysql odbc oracle pgsql sqlite
+PKG_SUGGESTED_OPTIONS=	sqlite
 
 .include "../../mk/bsd.options.mk"
 
