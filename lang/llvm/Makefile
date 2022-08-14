@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2022/08/13 09:11:12 tnn Exp $
+# $NetBSD: Makefile,v 1.77 2022/08/14 12:13:03 tnn Exp $
 #
 # When updating this, please also update:
 # devel/include-what-you-use
@@ -36,7 +36,7 @@ LICENSE=	apache-2.0
 
 USE_LANGUAGES=		c c++14
 USE_CMAKE=		yes
-GCC_REQD+=		5
+GCC_REQD+=		7
 PYTHON_FOR_BUILD_ONLY=	yes
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
