@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3811 2022/08/15 12:23:48 tnn Exp $
+$NetBSD: CHANGES-2022,v 1.3812 2022/08/15 14:45:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5640,3 +5640,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/openjdk8 to 1.8.342 [tnn 2022-08-15]
 	Updated lang/openjdk11 to 1.11.0.16.8 [tnn 2022-08-15]
 	Updated lang/openjdk17 to 1.17.0.4.8 [tnn 2022-08-15]
+	Added misc/preftools version 0.9 [wiz 2022-08-15]
