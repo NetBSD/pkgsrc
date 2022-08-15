@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2021/11/23 20:55:44 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/08/15 20:39:21 tnn Exp $
 include/LLVMSPIRVLib/LLVMSPIRVExtensions.inc
 include/LLVMSPIRVLib/LLVMSPIRVLib.h
 include/LLVMSPIRVLib/LLVMSPIRVOpts.h
 lib/libLLVMSPIRVLib.so
-lib/libLLVMSPIRVLib.so.13
+lib/libLLVMSPIRVLib.so.14
 lib/pkgconfig/LLVMSPIRVLib.pc

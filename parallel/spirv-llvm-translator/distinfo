@@ -1,23 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/11/23 20:55:44 wiz Exp $
+$NetBSD: distinfo,v 1.6 2022/08/15 20:39:21 tnn Exp $
 
-BLAKE2s (SPIRV-LLVM-Translator-13.0.0.tar.gz) = 1d544e845cb4adfc4c9a5056ab48c4347bf5cc0848bcf21f5ab098a583e6d272
-SHA512 (SPIRV-LLVM-Translator-13.0.0.tar.gz) = 1ce7a38c2c3447249e19d50063a7a2acf32699905572950e4f102d8ce1680785433035154b7b55782d5a56211a50e042aef775836f37c33fe847b347a02b5a04
-Size (SPIRV-LLVM-Translator-13.0.0.tar.gz) = 1436324 bytes
+BLAKE2s (SPIRV-LLVM-Translator-14.0.0.tar.gz) = c3aa2584d427b33aacd85cb3406a222505a56ae32a7f3d674822bf34e8417ea2
+SHA512 (SPIRV-LLVM-Translator-14.0.0.tar.gz) = 5659149a380ceef7acdcb274bcad9b23e4817bf88e795e0a8464dfe14fbd102dbf7199cbe67eb611a16d3a411c7a1b8afc6f0eef61fec5a2b8f9fba06748bcb1
+Size (SPIRV-LLVM-Translator-14.0.0.tar.gz) = 1482704 bytes
 SHA1 (patch-CMakeLists.txt) = db9173e06fb702c3fa88844fc87380262024cbe1
-SHA1 (patch-lib_SPIRV_SPIRVReader.cpp) = 25dc02f63e6b32f69afa0388ceb945131c2fb48e
-SHA1 (patch-lib_SPIRV_SPIRVWriter.cpp) = cd9030f5ab63b0c7ba9492e101578b7431fdc903
-SHA1 (patch-lib_SPIRV_SPIRVWriter.h) = db22ff84b6cd8494898ea5cd35f53bde8e6c35a0
-SHA1 (patch-lib_SPIRV_libSPIRV_SPIRVFunction.h) = 8290d8246db59c3beb27866a7c555a08468e8d05
-SHA1 (patch-lib_SPIRV_libSPIRV_SPIRVModule.cpp) = 683a2d76e4faaed82179f6f995e1c272e706fcf5
-SHA1 (patch-lib_SPIRV_libSPIRV_SPIRVModule.h) = 83ddc00be71ce79d1fe1b63564857053da9fd1f3
-SHA1 (patch-lib_SPIRV_libSPIRV_SPIRVOpCode.h) = bc0e6685c80e82190f7b327e5ebb5ccf19b3e810
-SHA1 (patch-lib_SPIRV_libSPIRV_SPIRVOpCodeEnum.h) = e2a7329fbdcdadbae07334b0c735056837a88121
-SHA1 (patch-spirv-headers-tag.conf) = ecfb5efbaceb94672f8cc8e9d6242315c44818bd
-SHA1 (patch-test_constexpr__vector.ll) = b4527f06912fa18dc824fc43f5fed433cca84354
-SHA1 (patch-test_transcoding_SPV__INTEL__function__pointers_bitcast.ll) = 373852e3963a06e991e231f0c5ab2ae766404410
-SHA1 (patch-test_transcoding_SPV__INTEL__function__pointers_const-function-pointer.ll) = f6067833cdcb1620aba9394f9535bde76056c191
-SHA1 (patch-test_transcoding_SPV__INTEL__function__pointers_function-pointer.ll) = 4e0ac321159280936fb38b7f16b417cf060cafbd
-SHA1 (patch-test_transcoding_SPV__INTEL__function__pointers_global__ctor__dtor.ll) = f11189c9f6df87402dc0cd44015206cbbf0591af
-SHA1 (patch-test_transcoding_SPV__INTEL__function__pointers_non-uniform-function-pointer.ll) = 25a6766ee57116d3b8296bfea8c8b8983016a9cd
-SHA1 (patch-test_transcoding_SPV__INTEL__function__pointers_select.ll) = 17fc3d504c94a9f88eda183e07e8ec8a2a9e8624
-SHA1 (patch-test_transcoding_SPV__INTEL__function__pointers_vector__elem.ll) = c019121148a8d95269ca7b41a0c1c162ae46eed9

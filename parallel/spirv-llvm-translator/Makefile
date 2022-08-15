@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2022/08/15 19:22:52 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2022/08/15 20:39:21 tnn Exp $
 
-DISTNAME=	SPIRV-LLVM-Translator-13.0.0
+DISTNAME=	SPIRV-LLVM-Translator-14.0.0
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	parallel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=KhronosGroup/}
@@ -13,15 +13,13 @@ LICENSE=	modified-bsd
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
-BROKEN=		"This version does not support llvm 14, please update this to 14.0.0."
-
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
-GCC_REQD+=	5 # C++14
+GCC_REQD+=	7 # sync with llvm
 
 CMAKE_ARGS+=	-DBUILD_SHARED_LIBS=ON
-CMAKE_ARGS+=	-DLLVM_EXTERNAL_SPIRV_HEADERS_SOURCE_DIR=${PREFIX}/include
+CMAKE_ARGS+=	-DLLVM_EXTERNAL_SPIRV_HEADERS_SOURCE_DIR=${PREFIX}/include/libLLVM
 
 PKGCONFIG_OVERRIDE+=	LLVMSPIRVLib.pc.in
 
