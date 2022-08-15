@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3814 2022/08/15 16:00:02 leot Exp $
+$NetBSD: CHANGES-2022,v 1.3815 2022/08/15 20:40:54 he Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5643,3 +5643,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added misc/preftools version 0.9 [wiz 2022-08-15]
 	Updated pkgtools/pkg_p5up2date to 0.08 [wiz 2022-08-15]
 	Updated net/yt-dlp to 2022.8.14 [leot 2022-08-15]
+	Updated editors/codeblocks to 20.03nb4 [he 2022-08-15]
