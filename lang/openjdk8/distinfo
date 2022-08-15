@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.90 2022/07/17 03:03:41 tnn Exp $
+$NetBSD: distinfo,v 1.91 2022/08/15 12:23:05 tnn Exp $
 
 BLAKE2s (openjdk7/bootstrap-jdk-1.7.76-freebsd-10-amd64-20150301.tar.xz) = 8745b980e290e509c0dd09706398b89afce85fee1405b9367b6684c83d56b96a
 SHA512 (openjdk7/bootstrap-jdk-1.7.76-freebsd-10-amd64-20150301.tar.xz) = 6ed928cc68503c27edd6f3a90f94e1e762192d41997b12903e37071f4fcd34f5579fa970e59c240928eaae60729300fbfdb02a5ec1136bc757ee24f1ee554af4
@@ -24,9 +24,9 @@ Size (openjdk7/bootstrap-jdk7u60-bin-dragonfly-3.6-amd64-20140719.tar.bz2) = 379
 BLAKE2s (openjdk7/bootstrap-jdk7u60-bin-dragonfly-3.8-amd64-20140719.tar.bz2) = 98777d4ff1f864a9ff5a42870b30319abd39488be2abfdc5e7d3d59b016c5807
 SHA512 (openjdk7/bootstrap-jdk7u60-bin-dragonfly-3.8-amd64-20140719.tar.bz2) = 1403e582dacd0474e57d9aa8f1333060c50d099ef5d2c5a992ff7f63dcde2e538ff1e7fb78e45d12fd5aea6daf0704672e7f326399d415ee0d6bb53b6f925e9f
 Size (openjdk7/bootstrap-jdk7u60-bin-dragonfly-3.8-amd64-20140719.tar.bz2) = 37883700 bytes
-BLAKE2s (openjdk7/jdk8u-jdk8u332-b09.1.tar.gz) = 119023e6274bef8b6db1a55cb80c549a652d3248e8f8ce583667cd5c5b3b7c89
-SHA512 (openjdk7/jdk8u-jdk8u332-b09.1.tar.gz) = 5074567d027ce5293186700fcea0c8e870c73c0364b423c3a2df7942907bc7655a5a94093d62de3b1db5c63a36403aef8add322ef10ad261d42b0c6ff651dce4
-Size (openjdk7/jdk8u-jdk8u332-b09.1.tar.gz) = 88705654 bytes
+BLAKE2s (openjdk7/jdk8u-jdk8u342-b07.1.tar.gz) = d6fab9676f8823b787cab9a818b4dfda9899e7a38f5d5c7cfeaafd172c64f05a
+SHA512 (openjdk7/jdk8u-jdk8u342-b07.1.tar.gz) = 8e3055a680d640879035246c1a0c612dd09f59f3b58d44c035c32fb7351e32d353c7b79a6cf784b432a533f98d462355da6456c6508175f7a15bb7297d138304
+Size (openjdk7/jdk8u-jdk8u342-b07.1.tar.gz) = 88770755 bytes
 SHA1 (patch-aa) = 8810cfed600ee3bf36a408cc77e497ac7b3e6838
 SHA1 (patch-al) = f65f739805c2ef471a4de10d6da42e86c5561b8c
 SHA1 (patch-an) = fce4da00762770c1c0592bd225bf73e875252178
@@ -57,7 +57,6 @@ SHA1 (patch-hotspot_make_solaris_makefiles_optimized.make) = 78d64fe6cb7c3420889
 SHA1 (patch-hotspot_make_solaris_makefiles_product.make) = c41b360302bffd9fbfaa34ee7a4d5d1a756ae0e2
 SHA1 (patch-hotspot_make_solaris_makefiles_saproc.make) = 0ca85ba72d154643b934815a0a2deb1e77371ff9
 SHA1 (patch-hotspot_make_solaris_makefiles_vm.make) = 787e0c68cf976fc0df3e19fb2a22b1b7e3662c07
-SHA1 (patch-hotspot_src_cpu_aarch64_vm_pauth__aarch64.hpp) = 9087c8b7a0e97315bacd1edc567920cb22c4156f
 SHA1 (patch-hotspot_src_cpu_aarch64_vm_vm__version__aarch64.cpp) = b02d08302974a923e19875c4fa30057580629f14
 SHA1 (patch-hotspot_src_cpu_aarch64_vm_vm__version__aarch64.hpp) = 6a766abe3c53ee3b15ad9636527d0e4b61942d4d
 SHA1 (patch-hotspot_src_cpu_zero_vm_methodHandles__zero.cpp) = 9f7acf1eff3baba430880be9fd0f6148056dd088
@@ -119,5 +118,4 @@ SHA1 (patch-jdk_test_java_beans_Introspector_Test4144543.java) = bb0a20f688093f2
 SHA1 (patch-jdk_test_java_lang_management_OperatingSystemMXBean_GetSystemLoadAverage.java) = 07b071ace2a91acd1968ed670aead67d72f0d490
 SHA1 (patch-jdk_test_sun_security_ec_TestEC.java) = c2db0716408ae1d081b3516b6c866b8f43cf5b6f
 SHA1 (patch-langtools_make_build.xml) = e9dccdb67a0f25b266755f66e520c6420afaf7ba
-SHA1 (patch-make_common_MakeBase.gmk) = d91d68247d6125e2a1a55a08247b9c49435adb8f
 SHA1 (patch-make_common_NativeCompilation.gmk) = 8c1e0fd1e9eaa4be6db4b1622f199a063d923e20
