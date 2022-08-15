@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.15 2021/10/26 11:31:08 nia Exp $
+$NetBSD: distinfo,v 1.16 2022/08/15 08:51:16 taca Exp $
 
 BLAKE2s (squid-4.17.tar.xz) = 017ccf4d7df44393dafc40347e66d3b6d7498c5aef9654ae6401d5a1a5b6f883
 SHA512 (squid-4.17.tar.xz) = cea36de10f128f5beb51bdc89604c16af3a820a5ac27284b2aa181ac87144930489688e1d85ce357fe1ed8a4e96e300277b95034a2475cbf86c9d6923ddf7c0a
 Size (squid-4.17.tar.xz) = 2464204 bytes
 SHA1 (patch-compat_compat.h) = 839381a5e1f46e7d9b822bbb53d82a53c996ddc0
-SHA1 (patch-configure) = d19dcb189447f9693d29bf477ebb6c5a7d479ec8
+SHA1 (patch-configure) = b8c6d66a59d8fd1e5b042889a36c32e15e9629c4
 SHA1 (patch-errors_Makefile.in) = 84cbf5c836f02ed5fbfff140888c6d3aadeac326
 SHA1 (patch-src_Makefile.in) = afc5aefd97c46d1ffab43e97aeaeade3a5a8c648
 SHA1 (patch-src_acl_external_kerberos__ldap__group_support__resolv.cc) = 0ea41d55e32d689a16e012391a9eea67631daf3a
