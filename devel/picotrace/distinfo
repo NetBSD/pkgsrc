@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:18:03 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/08/15 23:04:38 tnn Exp $
 
 BLAKE2s (picotrace-20200318-20200318.tar.gz) = b1cfb38a9077ec984d459bda9fd7c483b30da8e158327bc488de9812202de5d2
 SHA512 (picotrace-20200318-20200318.tar.gz) = 4c673f2367050fc0dbd4c4bd0d5fcafe9460a58a5d77da707823174c7b4d0ff0a44042783f13a11c8f8429af2ea961e8a906606536c2fbb3139ce04fe37b644c
 Size (picotrace-20200318-20200318.tar.gz) = 1413800 bytes
+SHA1 (patch-truss_count.c) = a6230f64ac423db68077a4a092260e85d21e795a
