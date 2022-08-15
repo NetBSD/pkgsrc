@@ -9,7 +9,6 @@ use Cwd qw(abs_path);
 use File::Basename;
 use File::Spec;
 use version;
-use File::Find::Rule;
 use Getopt::Long;
 use Pod::Usage qw(pod2usage);
 
@@ -296,7 +295,7 @@ my %distmods = get_modules_by_distribution();
 my ( $pkg2update, $pkgok, $pkgcrank ) = ( 0, 0, 0 );
 
 my $pkgsrc_base = find_pkgsrc_dir();
-my @p5_pkg_dirs = find( directory => name => "p5-*", in => $pkgsrc_base );
+my @p5_pkg_dirs = glob($pkgsrc_base . "/*/p5-*" );
    @p5_pkg_dirs = sort @p5_pkg_dirs;
 
 foreach my $dn (@p5_pkg_dirs)
