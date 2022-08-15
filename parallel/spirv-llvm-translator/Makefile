@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2021/11/23 20:55:44 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/08/15 19:22:52 wiz Exp $
 
 DISTNAME=	SPIRV-LLVM-Translator-13.0.0
 PKGNAME=	${DISTNAME:tl}
@@ -12,6 +12,8 @@ COMMENT=	Tool and library for translation between SPIR-V and LLVM IR
 LICENSE=	modified-bsd
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
+
+BROKEN=		"This version does not support llvm 14, please update this to 14.0.0."
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
