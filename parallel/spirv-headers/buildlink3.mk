@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.1 2021/11/20 20:06:55 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2022/08/15 20:39:21 tnn Exp $
 
 BUILDLINK_TREE+=	SPIRV-Headers
 
 .if !defined(SPIRV_HEADERS_BUILDLINK3_MK)
 SPIRV_HEADERS_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.SPIRV-Headers+=	SPIRV-Headers>=1.2.198.0
+BUILDLINK_API_DEPENDS.SPIRV-Headers+=	SPIRV-Headers>=1.3.216.0
 BUILDLINK_PKGSRCDIR.SPIRV-Headers?=	../../parallel/spirv-headers
 BUILDLINK_DEPMETHOD.SPIRV-Headers?=	build
 .endif	# SPIRV_HEADERS_BUILDLINK3_MK
