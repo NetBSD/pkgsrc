@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.566 2022/07/08 14:37:30 wiz Exp $
+# $NetBSD: Makefile,v 1.567 2022/08/15 08:47:58 pin Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -386,6 +386,7 @@ SUBDIR+=	wdic
 SUBDIR+=	wemux
 SUBDIR+=	whohas
 SUBDIR+=	window
+SUBDIR+=	wthrr
 SUBDIR+=	xchm
 SUBDIR+=	xdg-utils
 SUBDIR+=	xfce4-calculator-plugin
