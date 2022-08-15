@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22093 2022/08/15 19:23:52 wiz Exp $
+$NetBSD: TODO,v 1.22094 2022/08/15 20:45:55 tnn Exp $
 
 Suggested new packages
 ======================
@@ -1493,7 +1493,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o spice-protocol-0.14.4
 	o spin-649
 	o spiped-1.6.1b
-	o spirv-llvm-translator-14.0.0
 	o spl-1.0pre6
 	o sqlrelay-1.9.2
 	o squeak-5.0
