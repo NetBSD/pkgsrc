@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:15:44 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/08/15 14:56:04 ryoon Exp $
 
 BLAKE2s (objfw-0.90.2.tar.gz) = 4fe99a0a775aed1270bbd549b1bef0eb23170022b897c5e6f9566caf1b3720a2
 SHA512 (objfw-0.90.2.tar.gz) = c894befe9388a5fce9c0e18fbd737f995af9923d52cfb3c8c1faca8879121cd68654d8e262f6a9fdb1578073dd70e5364737ad5ffaa483d9553d6a549af2ec67
 Size (objfw-0.90.2.tar.gz) = 650744 bytes
+SHA1 (patch-src_OFKernelEventObserver__kqueue.m) = 4dc82606f5db15bf109cdf6bdf5ed886212a1d22
+SHA1 (patch-src_threading__pthread.m) = 3bc4948a25bfc261e83984524539e49066a6a59c
