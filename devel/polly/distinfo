@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.24 2022/08/12 08:47:29 pin Exp $
+$NetBSD: distinfo,v 1.25 2022/08/15 19:07:20 wiz Exp $
 
 BLAKE2s (polly-14.0.6.src.tar.xz) = b787ce64b15d9f550d0c02966d43c5f18f2a601715780a2a34852b503bb81d5c
 SHA512 (polly-14.0.6.src.tar.xz) = a2a3c96d58975a2023a26aef87ec3a755b489d3fe62d5c18fc1a477a65e032e265f4fcebc3d28c2958c2e97de44673259a1e083cc8aebb5671685695501e7645
 Size (polly-14.0.6.src.tar.xz) = 9357684 bytes
-SHA1 (patch-CMakeLists.txt) = c827eac5e5bfa3ae948970b66bfe634c6d1eadfe
+SHA1 (patch-CMakeLists.txt) = 8138e11f858f23e0069c8fa0c07eff2b7aaf8c43
