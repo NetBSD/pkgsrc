@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2022/01/06 07:53:46 pin Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/08/15 06:55:16 pin Exp $
 bin/feathernotes
 share/applications/feathernotes.desktop
 share/feathernotes/translations/feathernotes_ar_DZ.qm
@@ -32,6 +32,7 @@ share/feathernotes/translations/feathernotes_pt_BR.qm
 share/feathernotes/translations/feathernotes_ru.qm
 share/feathernotes/translations/feathernotes_si.qm
 share/feathernotes/translations/feathernotes_sk_SK.qm
+share/feathernotes/translations/feathernotes_sv.qm
 share/feathernotes/translations/feathernotes_tr.qm
 share/feathernotes/translations/feathernotes_uk.qm
 share/feathernotes/translations/feathernotes_zh_CN.qm
