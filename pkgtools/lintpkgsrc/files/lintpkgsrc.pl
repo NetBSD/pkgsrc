@@ -1,5 +1,5 @@
 #!@PERL5@
-# $NetBSD: lintpkgsrc.pl,v 1.96 2022/08/15 21:09:13 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.97 2022/08/15 21:54:53 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -827,46 +827,40 @@ sub glob2regex($glob) {
 # and either 'problem version' or undef if all OK
 #
 sub package_globmatch($pkgmatch) {
-	my ($matchpkgname, $matchver, $regex);
 
-	if ($pkgmatch =~ /^([^*?[]+)(<|>|<=|>=|-)(\d[^*?[{]*)$/) {
-
-		# (package)(cmp)(pkgversion)
-		my ($test, @pkgvers);
-
+	if ($pkgmatch =~ /^ ([^*?[]+) (<|>|<=|>=|-) (\d[^*?[{]*) $/x) {
 		# TODO: rename $matchpkgname to be more accurate.
-		($matchpkgname, $test, $matchver) = ($1, $2, $3);
-		if (@pkgvers = $pkgdb->pkgvers_by_pkgbase($matchpkgname)) {
+		my ($matchpkgname, $op, $matchver) = ($1, $2, $3);
+
+		if (my @pkgvers = $pkgdb->pkgvers_by_pkgbase($matchpkgname)) {
 			foreach my $pkgver (@pkgvers) {
-				if ($test eq '-') {
+				if ($op eq '-') {
 					if ($pkgver->pkgversion eq $matchver) {
 						$matchver = undef;
 						last;
 					}
 				} else {
-					if (pkgversion_cmp($pkgver->pkgversion, $test, $matchver)) {
+					if (pkgversion_cmp($pkgver->pkgversion, $op, $matchver)) {
 						$matchver = undef;
 						last;
 					}
 				}
 			}
 
-			if ($matchver && $test ne '-') {
-				$matchver = "$test$matchver";
+			if ($matchver && $op ne '-') {
+				$matchver = "$op$matchver";
 			}
 		}
+		($matchpkgname, $matchver);
 
-	} elsif ($pkgmatch =~ /^([^[]+)-([\d*?{[].*)$/) {
+	} elsif ($pkgmatch =~ /^ ([^[]+) - ([\d*?{[].*) $/x) {
+		my ($matchpkgname, $matchver) = ($1, $2);
 
-		# (package)-(globver)
-		my (@pkgnames);
-
-		($matchpkgname, $matchver) = ($1, $2);
-
+		my @pkgnames;
 		if (defined $pkgdb->pkgs($matchpkgname)) {
 			push @pkgnames, $matchpkgname;
 
-		} elsif ($regex = glob2regex($matchpkgname)) {
+		} elsif (my $regex = glob2regex($matchpkgname)) {
 			foreach my $pkg ($pkgdb->pkgs) {
 				if ($pkg->pkgbase =~ /$regex/) {
 					push @pkgnames, $pkg->pkgbase;
@@ -876,7 +870,7 @@ sub package_globmatch($pkgmatch) {
 
 		# Try to convert $matchver into regex version
 		#
-		$regex = glob2regex($matchver);
+		my $regex = glob2regex($matchver);
 
 		foreach my $pkg (@pkgnames) {
 			if (defined $pkgdb->pkgver($pkg, $matchver)) {
@@ -892,7 +886,7 @@ sub package_globmatch($pkgmatch) {
 				}
 			}
 
-			$matchver || last;
+			$matchver or last;
 		}
 
 		# last ditch attempt to handle the whole DEPENDS as a glob
@@ -908,11 +902,11 @@ sub package_globmatch($pkgmatch) {
 			}
 		}
 
-	} else {
-		($matchpkgname, $matchver) = ($pkgmatch, 'missing');
-	}
+		($matchpkgname, $matchver);
 
-	($matchpkgname, $matchver);
+	} else {
+		($pkgmatch, 'missing');
+	}
 }
 
 # Parse a pkgsrc package makefile and return the pkgname and set variables
@@ -921,12 +915,7 @@ sub parse_makefile_pkgsrc($file) {
 	my ($pkgname, $vars);
 
 	$vars = parse_makefile_vars($file, undef);
-
-	if (!$vars) {
-
-		# Missing Makefile
-		return undef;
-	}
+	defined $vars or return undef; # Missing Makefile.
 
 	if (defined $vars->{PKGNAME}) {
 		$pkgname = $vars->{PKGNAME};
@@ -1029,11 +1018,11 @@ sub load_pkgdb_from_cache($fname) {
 	$pkgdb = PkgDb->new();
 	while (defined(my $line = <STORE>)) {
 		chomp($line);
-		if ($line =~ qr"^package\t([^\t]+)\t([^\t]+$)$") {
+		if ($line =~ m"^ package \t ([^\t]+) \t ([^\t]+) $"x) {
 			$pkgver = $pkgdb->add($1, $2);
-		} elsif ($line =~ qr"^var\t([^\t]+)\t(.*)$") {
+		} elsif ($line =~ m"^ var \t ([^\t]+) \t (.*) $"x) {
 			$pkgver->var($1, $2);
-		} elsif ($line =~ qr"^sub ") {
+		} elsif ($line =~ m"^ sub ") {
 			die "Outdated cache format in '$fname'\n";
 		} else {
 			die "Invalid line '$line' in cache '$fname'\n";
@@ -1055,12 +1044,11 @@ sub scan_pkgsrc_makefiles($pkgsrcdir) {
 
 	$pkgdb = PkgDb->new();
 	my @categories = list_pkgsrc_categories($pkgsrcdir);
-	verbose('Scan Makefiles: ');
 
-	if (!$opt{L}) {
-		verbose('_' x @categories . "\b" x @categories);
+	if ($opt{L}) {
+		verbose("Scan Makefiles:\n");
 	} else {
-		verbose("\n");
+		verbose('Scan Makefiles: ', '_' x @categories, "\b" x @categories);
 	}
 
 	foreach my $cat (sort @categories) {
@@ -1068,9 +1056,7 @@ sub scan_pkgsrc_makefiles($pkgsrcdir) {
 			my ($pkg, $vars) = parse_makefile_pkgsrc("$pkgsrcdir/$cat/$pkgdir/Makefile");
 		}
 
-		if (!$opt{L}) {
-			verbose('.');
-		}
+		verbose('.') unless $opt{L};
 	}
 
 	if (!$opt{L}) {
@@ -1086,19 +1072,19 @@ sub scan_pkgsrc_makefiles($pkgsrcdir) {
 #
 sub pkgsrc_check_depends() {
 	foreach my $pkgver ($pkgdb->pkgvers_all) {
-		my ($err, $msg);
+		my $depends = $pkgver->var('DEPENDS');
+		next unless defined $depends;
 
-		defined $pkgver->var('DEPENDS') || next;
-		foreach my $depend (split(' ', $pkgver->var('DEPENDS'))) {
-
-			$depend =~ s/:.*// || next;
+		my $seen_header = 0;
+		foreach my $depend (split(' ', $depends)) {
+			next unless $depend =~ s/:.*//;
 
 			$depend = canonicalize_pkgname($depend);
-			if (($msg = invalid_version($depend))) {
-				if (!defined $err) {
+			if ((my $msg = invalid_version($depend))) {
+				if ($seen_header == 0) {
 					print $pkgver->pkgname . " DEPENDS errors:\n";
+					$seen_header = 1;
 				}
-				$err = 1;
 				$msg =~ s/(\n)(.)/$1\t$2/g;
 				print "\t$msg";
 			}
@@ -1424,8 +1410,8 @@ sub remove_distfiles($pkgsrcdir, $pkgdistdir) {
 	my @dldistfiles = grep { $_ ne 'pkg-vulnerabilities' } @tmpdistfiles;
 
 	# sort the two arrays to make searching a bit faster
-	@dldistfiles = sort { $a cmp $b } @dldistfiles;
-	@pkgdistfiles = sort { $a cmp $b } @pkgdistfiles;
+	@dldistfiles = sort @dldistfiles;
+	@pkgdistfiles = sort @pkgdistfiles;
 
 	if ($opt{y}) {
 		# looking for files that are downloaded on the current system
@@ -1503,24 +1489,22 @@ sub list_prebuilt_packages($pkgsrcdir) {
 		find(\&check_prebuilt_packages, shift @prebuilt_pkgdirs);
 	}
 
-	if ($opt{r}) {
-		verbose("Unlinking listed prebuilt packages\n");
-		foreach my $pkgfile (@matched_prebuiltpackages) {
-			unlink($pkgfile);
-		}
+	return unless $opt{r};
+	verbose("Unlinking listed prebuilt packages\n");
+	foreach my $pkgfile (@matched_prebuiltpackages) {
+		unlink($pkgfile);
 	}
 }
 
 sub list_packages_not_in_SUBDIR($pkgsrcdir) {
 	my (%in_subdir);
 	foreach my $cat (list_pkgsrc_categories($pkgsrcdir)) {
-		my $vars = parse_makefile_vars("$pkgsrcdir/$cat/Makefile", undef);
+		my $makefile = "$pkgsrcdir/$cat/Makefile";
+		my $vars = parse_makefile_vars($makefile, undef);
+		my $subdirs = $vars->{SUBDIR};
+		defined $subdirs or die "No SUBDIR in $makefile";
 
-		if (!$vars->{SUBDIR}) {
-			print "Warning - no SUBDIR for $cat\n";
-			next;
-		}
-		foreach my $pkgdir (split(/\s+/, $vars->{SUBDIR})) {
+		foreach my $pkgdir (split(/\s+/, $subdirs)) {
 			$in_subdir{"$cat/$pkgdir"} = 1;
 		}
 	}
@@ -1540,9 +1524,10 @@ sub generate_map_file($pkgsrcdir, $fname) {
 	scan_pkgsrc_makefiles($pkgsrcdir);
 	open(TABLE, '>', $tmpfile) or fail("Cannot write '$tmpfile': $!");
 	foreach my $pkgver ($pkgdb->pkgvers_all) {
-		print TABLE $pkgver->pkgbase . "\t"
-		    . $pkgver->var('dir') . "\t"
-		    . $pkgver->pkgversion . "\n";
+		printf TABLE "%s\t%s\t%s\n",
+		    $pkgver->pkgbase,
+		    $pkgver->var('dir'),
+		    $pkgver->pkgversion;
 	}
 	close(TABLE) or fail("close('$tmpfile'): $!");
 	rename($tmpfile, $fname)
