@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2021/11/20 20:06:55 wiz Exp $
+$NetBSD: distinfo,v 1.2 2022/08/15 20:39:21 tnn Exp $
 
-BLAKE2s (SPIRV-Headers-1.2.198.0.tar.gz) = 9c797196b2fdc42dfbf34eed28acfe78037cbba614cfffdfd925ba882e9bbbb8
-SHA512 (SPIRV-Headers-1.2.198.0.tar.gz) = a35167f8de66f2e16c6d2dccdd69f95c58b08abcdef5dac5a705e8e52af049ec9b0e2d0ef6fb732454a0671cd331b69bea75b24911599c0a2ce3972d40addfef
-Size (SPIRV-Headers-1.2.198.0.tar.gz) = 416113 bytes
+BLAKE2s (SPIRV-Headers-1.3.216.0.tar.gz) = d8f2122fc7c99084f5526066093ea412b29d3674b3e65cfc4b6f76b5b544b5a9
+SHA512 (SPIRV-Headers-1.3.216.0.tar.gz) = 951715cf62a643bfce6a3854f2206b95dd65e60b27355a2f290e829da0f06e19877e9dfcbf53f455b8a0524fb851a851742f3e16bb29be2f470cd62d3a8fc8f0
+Size (SPIRV-Headers-1.3.216.0.tar.gz) = 437011 bytes
