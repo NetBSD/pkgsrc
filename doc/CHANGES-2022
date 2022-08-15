@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3808 2022/08/15 06:59:09 pin Exp $
+$NetBSD: CHANGES-2022,v 1.3809 2022/08/15 08:20:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5634,3 +5634,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed lang/libLLVM34 [tnn 2022-08-14]
 	Removed lang/libLLVM4 [tnn 2022-08-14]
 	Updated www/monolith to 2.6.2 [pin 2022-08-15]
+	Updated devel/meson to 0.63.1 [adam 2022-08-15]
+	Updated multimedia/mkvtoolnix to 70.0.0 [adam 2022-08-15]
