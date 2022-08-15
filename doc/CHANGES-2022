@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3809 2022/08/15 08:20:58 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3810 2022/08/15 08:48:26 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5636,3 +5636,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/monolith to 2.6.2 [pin 2022-08-15]
 	Updated devel/meson to 0.63.1 [adam 2022-08-15]
 	Updated multimedia/mkvtoolnix to 70.0.0 [adam 2022-08-15]
+	Added misc/wthrr version 0.1.3 [pin 2022-08-15]
