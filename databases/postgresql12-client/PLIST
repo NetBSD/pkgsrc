@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2020/11/16 12:15:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/08/15 20:59:37 adam Exp $
 bin/clusterdb
 bin/createdb
 bin/createuser
@@ -976,7 +976,6 @@ ${PLIST.nls}share/locale/pl/LC_MESSAGES/ecpg-12.mo
 ${PLIST.nls}share/locale/pl/LC_MESSAGES/ecpglib6-12.mo
 ${PLIST.nls}share/locale/pl/LC_MESSAGES/pg_config-12.mo
 ${PLIST.nls}share/locale/pl/LC_MESSAGES/pg_controldata-12.mo
-${PLIST.nls}share/locale/pl/LC_MESSAGES/pg_ctl-12.mo
 ${PLIST.nls}share/locale/pl/LC_MESSAGES/pg_test_fsync-12.mo
 ${PLIST.nls}share/locale/pl/LC_MESSAGES/pg_test_timing-12.mo
 ${PLIST.nls}share/locale/pt_BR/LC_MESSAGES/ecpg-12.mo

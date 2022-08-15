@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2022/06/17 18:16:51 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/08/15 20:59:40 adam Exp $
 man/man1/clusterdb.1
 man/man1/createdb.1
 man/man1/createuser.1
@@ -554,6 +554,7 @@ share/doc/postgresql/html/ecpg-errors.html
 share/doc/postgresql/html/ecpg-informix-compat.html
 share/doc/postgresql/html/ecpg-library.html
 share/doc/postgresql/html/ecpg-lo.html
+share/doc/postgresql/html/ecpg-oracle-compat.html
 share/doc/postgresql/html/ecpg-pgtypes.html
 share/doc/postgresql/html/ecpg-preproc.html
 share/doc/postgresql/html/ecpg-process.html
@@ -989,6 +990,7 @@ share/doc/postgresql/html/release-14-1.html
 share/doc/postgresql/html/release-14-2.html
 share/doc/postgresql/html/release-14-3.html
 share/doc/postgresql/html/release-14-4.html
+share/doc/postgresql/html/release-14-5.html
 share/doc/postgresql/html/release-14.html
 share/doc/postgresql/html/release-prior.html
 share/doc/postgresql/html/release.html
