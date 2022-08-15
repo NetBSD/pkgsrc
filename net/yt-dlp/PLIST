@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2022/08/09 18:11:59 leot Exp $
+@comment $NetBSD: PLIST,v 1.12 2022/08/15 15:59:57 leot Exp $
 bin/yt-dlp
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -1179,6 +1179,9 @@ ${PYSITELIB}/yt_dlp/extractor/jamendo.pyo
 ${PYSITELIB}/yt_dlp/extractor/jeuxvideo.py
 ${PYSITELIB}/yt_dlp/extractor/jeuxvideo.pyc
 ${PYSITELIB}/yt_dlp/extractor/jeuxvideo.pyo
+${PYSITELIB}/yt_dlp/extractor/jixie.py
+${PYSITELIB}/yt_dlp/extractor/jixie.pyc
+${PYSITELIB}/yt_dlp/extractor/jixie.pyo
 ${PYSITELIB}/yt_dlp/extractor/joj.py
 ${PYSITELIB}/yt_dlp/extractor/joj.pyc
 ${PYSITELIB}/yt_dlp/extractor/joj.pyo
@@ -1509,6 +1512,9 @@ ${PYSITELIB}/yt_dlp/extractor/movieclips.pyo
 ${PYSITELIB}/yt_dlp/extractor/moviepilot.py
 ${PYSITELIB}/yt_dlp/extractor/moviepilot.pyc
 ${PYSITELIB}/yt_dlp/extractor/moviepilot.pyo
+${PYSITELIB}/yt_dlp/extractor/moview.py
+${PYSITELIB}/yt_dlp/extractor/moview.pyc
+${PYSITELIB}/yt_dlp/extractor/moview.pyo
 ${PYSITELIB}/yt_dlp/extractor/moviezine.py
 ${PYSITELIB}/yt_dlp/extractor/moviezine.pyc
 ${PYSITELIB}/yt_dlp/extractor/moviezine.pyo
@@ -1782,6 +1788,9 @@ ${PYSITELIB}/yt_dlp/extractor/panopto.pyo
 ${PYSITELIB}/yt_dlp/extractor/paramountplus.py
 ${PYSITELIB}/yt_dlp/extractor/paramountplus.pyc
 ${PYSITELIB}/yt_dlp/extractor/paramountplus.pyo
+${PYSITELIB}/yt_dlp/extractor/parler.py
+${PYSITELIB}/yt_dlp/extractor/parler.pyc
+${PYSITELIB}/yt_dlp/extractor/parler.pyo
 ${PYSITELIB}/yt_dlp/extractor/parlview.py
 ${PYSITELIB}/yt_dlp/extractor/parlview.pyc
 ${PYSITELIB}/yt_dlp/extractor/parlview.pyo
@@ -2514,6 +2523,9 @@ ${PYSITELIB}/yt_dlp/extractor/trueid.pyo
 ${PYSITELIB}/yt_dlp/extractor/trunews.py
 ${PYSITELIB}/yt_dlp/extractor/trunews.pyc
 ${PYSITELIB}/yt_dlp/extractor/trunews.pyo
+${PYSITELIB}/yt_dlp/extractor/truth.py
+${PYSITELIB}/yt_dlp/extractor/truth.pyc
+${PYSITELIB}/yt_dlp/extractor/truth.pyo
 ${PYSITELIB}/yt_dlp/extractor/trutv.py
 ${PYSITELIB}/yt_dlp/extractor/trutv.pyc
 ${PYSITELIB}/yt_dlp/extractor/trutv.pyo
