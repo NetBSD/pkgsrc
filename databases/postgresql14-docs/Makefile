@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2022/06/28 11:31:36 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2022/08/15 20:59:40 adam Exp $
 
 PKGNAME=	${DISTNAME:S/-/14-docs-/}
-PKGREVISION=	1
 COMMENT=	PostgreSQL database documentation
 
 .include "../../databases/postgresql14/Makefile.common"
