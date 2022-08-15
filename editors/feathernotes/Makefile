@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2022/08/09 12:05:01 pin Exp $
+# $NetBSD: Makefile,v 1.18 2022/08/15 06:55:16 pin Exp $
 
 VERSION=	1.0.0
 DISTNAME=	FeatherNotes-V${VERSION}
@@ -20,7 +20,7 @@ USE_LANGUAGES=	c c++
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	..
 
-CMAKE_ARGS+=    -DCMAKE_INSTALL_PREFIX=${PREFIX}
+CMAKE_ARGS+=	-DCMAKE_INSTALL_PREFIX=${PREFIX}
 
 pre-configure:
 	${MKDIR} -p ${WRKSRC}/build
