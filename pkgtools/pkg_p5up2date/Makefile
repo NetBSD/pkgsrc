@@ -1,19 +1,17 @@
-# $NetBSD: Makefile,v 1.23 2022/06/28 11:35:25 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2022/08/15 14:48:24 wiz Exp $
 
-PKGNAME=	pkg_p5up2date-0.07
-PKGREVISION=	1
+PKGNAME=	pkg_p5up2date-0.08
 CATEGORIES=	pkgtools
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Check p5-* pkgsrc packages requiring updates
 
-USE_TOOLS+=	perl:run
+USE_TOOLS+=	perl:run pod2man
 
 WRKSRC=		${WRKDIR}
 NO_BUILD=	yes
 USE_LANGUAGES=	# none
 
-DEPENDS+=	p5-File-Find-Rule>=0.30:../../devel/p5-File-Find-Rule
 DEPENDS+=	p5-CPAN-DistnameInfo>=0.02:../../devel/p5-CPAN-DistnameInfo
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man8
