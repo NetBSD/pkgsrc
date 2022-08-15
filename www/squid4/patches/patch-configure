@@ -1,14 +1,25 @@
-$NetBSD: patch-configure,v 1.7 2021/10/10 15:55:47 taca Exp $
+$NetBSD: patch-configure,v 1.8 2022/08/15 08:51:16 taca Exp $
 
 * More support for OpenSSL 1.1; not only check SSL_Library_init() but
   also check OPENSSL_init_ssl().
 * Fix syntax error by accidental new line.
 * Utilize <stdlib.h> on BSD.
 * Do not override CFLAGS/CXXFLAGS except linux.
+* Prevent WRKDIR reference.
 
 --- configure.orig	2021-10-03 17:15:01.000000000 +0000
 +++ configure
-@@ -24425,10 +24425,12 @@ do
+@@ -1114,9 +1114,6 @@ CXXFLAGS
+ CCC
+ BUILDCXX
+ CPP
+-PKG_CONFIG
+-PKG_CONFIG_PATH
+-PKG_CONFIG_LIBDIR
+ LT_SYS_LIBRARY_PATH
+ CXXCPP
+ LIBXML2_CFLAGS
+@@ -24425,10 +24422,12 @@ do
  done
  
    # GLIBC 2.30 deprecates sysctl.h. Test with the same flags that (may) break includes later.
@@ -24,7 +35,7 @@ $NetBSD: patch-configure,v 1.7 2021/10/10 15:55:47 taca Exp $
        ${TRUE}
        ;;
      mingw)
-@@ -24478,6 +24480,7 @@ then :
+@@ -24478,6 +24477,7 @@ then :
  fi
  
    ac_fn_cxx_check_header_compile "$LINENO" "net/if_arp.h" "ac_cv_header_net_if_arp_h" "
@@ -32,7 +43,7 @@ $NetBSD: patch-configure,v 1.7 2021/10/10 15:55:47 taca Exp $
  #include <sys/types.h>
  #include <sys/socket.h>
  
-@@ -24488,6 +24491,7 @@ then :
+@@ -24488,6 +24488,7 @@ then :
  
  fi
  ac_fn_cxx_check_header_compile "$LINENO" "net/route.h" "ac_cv_header_net_route_h" "
@@ -40,7 +51,7 @@ $NetBSD: patch-configure,v 1.7 2021/10/10 15:55:47 taca Exp $
  #include <sys/types.h>
  #include <sys/socket.h>
  
-@@ -25381,7 +25385,51 @@ then :
+@@ -25381,7 +25382,51 @@ then :
    LIBOPENSSL_LIBS="-lssl $LIBOPENSSL_LIBS"
  else $as_nop
  
@@ -93,7 +104,7 @@ $NetBSD: patch-configure,v 1.7 2021/10/10 15:55:47 taca Exp $
  
  fi
  
-@@ -25482,7 +25530,51 @@ then :
+@@ -25482,7 +25527,51 @@ then :
    LIBOPENSSL_LIBS="-lssl $LIBOPENSSL_LIBS"
  else $as_nop
  
@@ -146,7 +157,7 @@ $NetBSD: patch-configure,v 1.7 2021/10/10 15:55:47 taca Exp $
  
  fi
  
-@@ -42202,6 +42294,8 @@ else
+@@ -42202,6 +42291,8 @@ else
  # elif defined _MSC_VER
  #  include <malloc.h>
  #  define alloca _alloca
@@ -155,7 +166,7 @@ $NetBSD: patch-configure,v 1.7 2021/10/10 15:55:47 taca Exp $
  # else
  #  ifdef  __cplusplus
  extern "C"
-@@ -45149,6 +45243,9 @@ printf "%s\n" "#define USE_SOLARIS_IPFIL
+@@ -45149,6 +45240,9 @@ printf "%s\n" "#define USE_SOLARIS_IPFIL
  #if USE_SOLARIS_IPFILTER_MINOR_T_HACK
  #define minor_t fubar
  #endif
