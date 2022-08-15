@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3807 2022/08/14 22:53:42 tnn Exp $
+$NetBSD: CHANGES-2022,v 1.3808 2022/08/15 06:59:09 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5633,3 +5633,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/libjpeg-turbo to 2.1.4 [adam 2022-08-14]
 	Removed lang/libLLVM34 [tnn 2022-08-14]
 	Removed lang/libLLVM4 [tnn 2022-08-14]
+	Updated www/monolith to 2.6.2 [pin 2022-08-15]
