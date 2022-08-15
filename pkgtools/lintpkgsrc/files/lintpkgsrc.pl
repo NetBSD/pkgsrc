@@ -1,5 +1,5 @@
 #!@PERL5@
-# $NetBSD: lintpkgsrc.pl,v 1.95 2022/08/14 12:54:01 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.96 2022/08/15 21:09:13 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -1574,20 +1574,11 @@ sub check_outdated_installed_packages($pkgsrcdir) {
 	foreach my $pkgver (@update) {
 		my $pkgbase = $pkgver->pkgbase;
 		print "$pkgbase:";
-		if (open(PKGINFO, "$conf_pkg_info -R $pkgbase |")) {
-			my ($list);
-
-			while (<PKGINFO>) {
-				if (/Required by:/) {
-					$list = 1;
-				} elsif ($list) {
-					chomp;
-					s/-\d.*//;
-					print " $_";
-				}
-			}
-			close(PKGINFO);
+		open(PKGINFO, "$conf_pkg_info -q -R $pkgbase |") or die;
+		while (<PKGINFO>) {
+			print " $1" if /^(.*?)-\d/;
 		}
+		close(PKGINFO);
 		print "\n";
 	}
 
