@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:21:25 nia Exp $
+$NetBSD: distinfo,v 1.8 2022/08/15 20:40:11 he Exp $
 
 BLAKE2s (codeblocks-20.03.tar.xz) = cd3ebe8279f1b45961100a6cc609e411075af7e20198a12b76e12fdf93c0c2cc
 SHA512 (codeblocks-20.03.tar.xz) = f97c1a02d31f0be4dc08b1f19b57bd0d3cba375ab5f33ab91b2a2df7817018f5b3e3063ed07199a3970644f1caa7c7e511db2034c73264f5f4963046d65b0097
 Size (codeblocks-20.03.tar.xz) = 11799264 bytes
+SHA1 (patch-src_plugins_contrib_dragscroll_dragscrollcfg.h) = a73b712d0547254a55393ae74fdda9ca4c0c30a1
 SHA1 (patch-src_src_prefix.cpp) = 941fe61e81427990ed45b414a0bf98ceb40557cc
