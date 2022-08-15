@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2022/08/11 05:09:09 gutteridge Exp $
+# $NetBSD: Makefile,v 1.29 2022/08/15 20:05:12 tnn Exp $
 
 DISTNAME=	freerdp-2.3.2
 PKGNAME=	${DISTNAME:S/freerdp-/freerdp2-/1}
@@ -56,7 +56,7 @@ post-install:
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .if defined(OPSYS_HAS_KQUEUE)
-CFLAGS+=	-I${BUILDLINK_DIR}/include/libepoll-shim
+CFLAGS+=	-I${BUILDLINK_PREFIX.libepoll-shim}/include/libepoll-shim
 .include "../../devel/libepoll-shim/buildlink3.mk"
 .endif
 .include "../../mk/bsd.pkg.mk"
