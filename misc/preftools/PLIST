@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2022/08/15 14:44:24 wiz Exp $
+bin/propor
+bin/schulze
+bin/schulze-simple
+share/doc/preftools/example-data-propor/ballots.txt
+share/doc/preftools/example-data-propor/candidates.txt
+share/doc/preftools/example-data-propor/random.txt
+share/doc/preftools/example-data-schulze/ballots.txt
+share/doc/preftools/example-data-schulze/candidates.txt
+share/doc/preftools/schulze-simple.ballot.odt
+share/doc/preftools/schulze-simple.ballot.pdf
+share/doc/preftools/schulze-simple.description.de.txt
