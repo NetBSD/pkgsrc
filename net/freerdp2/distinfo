@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.10 2022/08/06 08:02:27 nia Exp $
+$NetBSD: distinfo,v 1.11 2022/08/15 20:05:12 tnn Exp $
 
 BLAKE2s (freerdp-2.3.2.tar.gz) = b17b6a3127b36e4c8837f7542cf91e26c7828d55975dc7aab420f532e4e1fe93
 SHA512 (freerdp-2.3.2.tar.gz) = b8502d34c73113a42bf2dc240431967829064d68f507cc42ff06432a784213eee4a2c001b174f1b970545aec75b3caf21ba5f4ee1ca8c07c7ef834131413204b
 Size (freerdp-2.3.2.tar.gz) = 7284490 bytes
-SHA1 (patch-CMakeLists.txt) = b836a6f13ca3ae654fd9c96aec43c01df237ad53
+SHA1 (patch-CMakeLists.txt) = 1451870eee9dee3fed9b4166da6345de678d4848
 SHA1 (patch-channels_rdpdr_client_rdpdr__main.c) = 4358d4cd4b9293a27f3edafb94e7759e133ecd5f
 SHA1 (patch-client_Wayland_wlf__input.c) = c79c7359ce538021e09ffbec9e61a9acc63d24af
 SHA1 (patch-client_Wayland_wlfreerdp.c) = c20ac99842d3ae0fda2a1b43807e65efd5121487
