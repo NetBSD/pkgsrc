@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3816 2022/08/15 20:45:55 tnn Exp $
+$NetBSD: CHANGES-2022,v 1.3817 2022/08/15 21:00:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5647,3 +5647,8 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated parallel/spirv-headers to 1.3.216.0 [tnn 2022-08-15]
 	Updated parallel/spirv-llvm-translator to 14.0.0 [tnn 2022-08-15]
 	Updated parallel/opencl-clang to 14.0.0 [tnn 2022-08-15]
+	Updated databases/postgresql10 to 10.22 [adam 2022-08-15]
+	Updated databases/postgresql11 to 11.17 [adam 2022-08-15]
+	Updated databases/postgresql12 to 12.12 [adam 2022-08-15]
+	Updated databases/postgresql13 to 13.8 [adam 2022-08-15]
+	Updated databases/postgresql14 to 14.5 [adam 2022-08-15]
