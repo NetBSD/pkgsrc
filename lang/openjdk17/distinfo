@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2022/05/25 19:41:49 tnn Exp $
+$NetBSD: distinfo,v 1.8 2022/08/15 12:23:05 tnn Exp $
 
 BLAKE2s (bootstrap-jdk-1.17.0.3.7-netbsd-9-aarch64-20220516.tar.xz) = b632092d25292e795a2d7567ec55d03f21021dbba27eab3e81a48aed5e5bdd68
 SHA512 (bootstrap-jdk-1.17.0.3.7-netbsd-9-aarch64-20220516.tar.xz) = fb86749d56be94cc1509f92d8fbdec481b0c7f6fdd5e731826098e6eaa668539052571ffd09125346c1920262b07857ea675799ab8476fcff53c03e158536c1d
@@ -12,9 +12,9 @@ Size (bootstrap-jdk-1.17.0.3.7-netbsd-9-earmv6hf-20220525.tar.xz) = 96766088 byt
 BLAKE2s (bootstrap-jdk-1.17.0.3.7-netbsd-9-i386-20220515.tar.xz) = a8e6a44e1470cf2e8845f6b5a6edff142d06c76e12a793b5991b1bf05cf36a98
 SHA512 (bootstrap-jdk-1.17.0.3.7-netbsd-9-i386-20220515.tar.xz) = 9fc54d9a31270cbec5e0454bbf1ddf3bb99ab5c916660e1f5e89163b384368a7f1fd5311db71b21c1638eb916899199a1080e90cc1f9615bfdbd871bb94a3216
 Size (bootstrap-jdk-1.17.0.3.7-netbsd-9-i386-20220515.tar.xz) = 103902136 bytes
-BLAKE2s (jdk17u-jdk-17.0.3-7-1.tar.gz) = d080a7513b3e1d431e24673fff10695adf0154b97fd45be7307be09e929e78a6
-SHA512 (jdk17u-jdk-17.0.3-7-1.tar.gz) = ddbe9c6e2c48c320247e023070de9f4b770a58d6eaf763f6331d6cccfd4bd5591445994174d5196392e5a4f0bb398d6b309e37dc5079c823458ac7fc4d9b6a9d
-Size (jdk17u-jdk-17.0.3-7-1.tar.gz) = 104898973 bytes
+BLAKE2s (jdk17u-jdk-17.0.4-8-1.tar.gz) = 24a8661a8ccedaa95e7fed3eebfcbd838ea2d5c467958d5a8269c45070f9bcf9
+SHA512 (jdk17u-jdk-17.0.4-8-1.tar.gz) = ca2aaab456a188aedf7ca122705b46c94c5fcbd728194f69981c8343e4dbbe2c39da344fc9b70130dbe7eabd51a1ebfe60fc2e221a748703f829ef04c0f3339b
+Size (jdk17u-jdk-17.0.4-8-1.tar.gz) = 105007565 bytes
 SHA1 (patch-make_autoconf_buildjdk-spec.gmk.in) = 01b6ac6dae1a886949020b9d472aab1e357084b0
 SHA1 (patch-make_autoconf_flags-cflags.m4) = 0379aeecc6181cbd15f6f31518b73ca915f1f73b
 SHA1 (patch-make_autoconf_hotspot.m4) = 6370c6cb2a3f225c502e7916342104cf1288f4cf
@@ -22,17 +22,7 @@ SHA1 (patch-make_autoconf_lib-alsa.m4) = 999fbf951363f6b49b22aad81537728f22d7c38
 SHA1 (patch-make_autoconf_lib-bundled.m4) = 8720c3f674955e8a51b2ab7dba80c36d34ba8594
 SHA1 (patch-make_autoconf_lib-freetype.m4) = bd791b99e4fd87f24432831fba1e814dd199445f
 SHA1 (patch-make_autoconf_lib-x11.m4) = 38038e6d7cfc2d15fb3537a52f11d2961cc2ec99
-SHA1 (patch-make_common_NativeCompilation.gmk) = fc97a952ba87efb450f59e87f19fb4c47558ae1d
 SHA1 (patch-make_data_fontconfig_bsd.fontconfig.properties) = 3172d8d76e0e79b127605429fb70dccd164b33c8
 SHA1 (patch-make_lib_Awt2dLibraries.gmk) = d69fa8c5cab173be2f41cfbd6479dad60a6337db
-SHA1 (patch-src_hotspot_os__cpu_bsd__aarch64_bytes__bsd__aarch64.hpp) = 9748f3c6efeb96fb3654965bbe1f005dbd64f778
-SHA1 (patch-src_hotspot_os__cpu_bsd__aarch64_os__bsd__aarch64.cpp) = 33d53951a3f80a2a4c0f62717cf72b93711a4fc5
-SHA1 (patch-src_hotspot_os_bsd_os__bsd.cpp) = 0a772045ad967cbd0a1342d124c47927f4a57bfe
-SHA1 (patch-src_hotspot_os_bsd_os__perf__bsd.cpp) = b70e14728e426a9f79c2c1ee735849fb53dfc1bd
-SHA1 (patch-src_hotspot_os_posix_os__posix.cpp) = a58d5eb59181d68d46272e15d47b94c6790ed00a
-SHA1 (patch-src_hotspot_os_posix_signals__posix.cpp) = 05486d931f294066e0cc04a389ce6cb038bb1b6d
-SHA1 (patch-src_java.base_unix_native_libnio_ch_Net.c) = 2bdb089f7d4f708fb750793b7e0bfa7796fb1694
+SHA1 (patch-src_hotspot_os_bsd_os__bsd.cpp) = 5561ed502aa925cd3d0514c7ec298e0491d14ffc
 SHA1 (patch-src_java.desktop_unix_native_common_awt_fontpath.c) = d7bd8839ecd84459fbd3e7d14ac0e2f48b8b4032
-SHA1 (patch-src_jdk.jdwp.agent_share_native_libdt__socket_socketTransport.c) = c06b49fbc9d34cb839f3bd7821779c79b763a629
-SHA1 (patch-src_jdk.management_bsd_native_libmanagement__ext_UnixOperatingSystem.c) = ba9dfd0af80493daa83a4d76c7444368f4a8c221
-SHA1 (patch-test_micro_org_openjdk_bench_java_nio_genBuffers.sh) = 07d8bd57548ce9cfea0e789ba78c27b08f9b80ba
