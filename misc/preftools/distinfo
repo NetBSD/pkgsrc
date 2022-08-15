@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/08/15 14:44:24 wiz Exp $
+
+BLAKE2s (preftools-v0.9.tar.gz) = bc648e12610c4a775e6246684d1e692cd76403afb8bb590cb50bb5824fb52463
+SHA512 (preftools-v0.9.tar.gz) = 84ddfa0d6137427ca6ba0be020e8641f743c8e5add470d55a475f084b198dc06d3b9640344a0b4a4798edec48febca3510c3c715839027bcd546e0b7660ec7ab
+Size (preftools-v0.9.tar.gz) = 76313 bytes
