@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2022/05/22 12:16:59 adam Exp $
+# $NetBSD: Makefile,v 1.24 2022/08/15 19:14:43 wiz Exp $
 
 DISTNAME=	llvmlite-0.38.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,6 +11,9 @@ COMMENT=	Lightweight LLVM Python binding for writing JIT compilers
 LICENSE=	2-clause-bsd
 
 USE_LANGUAGES=	c++14
+
+# https://github.com/numba/llvmlite/pull/802
+BROKEN=		"No support for llvm 14 yet."
 
 # officially supports llvm 11 as of 0.37.0
 MAKE_ENV+=		LLVMLITE_SKIP_LLVM_VERSION_CHECK=1
