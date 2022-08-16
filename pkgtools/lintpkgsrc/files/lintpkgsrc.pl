@@ -1,5 +1,5 @@
 #!@PERL5@
-# $NetBSD: lintpkgsrc.pl,v 1.100 2022/08/16 19:07:53 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.101 2022/08/16 19:15:43 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -1007,8 +1007,10 @@ sub parse_makefile_pkgsrc($file) {
 
 
 sub chdir_or_fail($dir) {
+	my $prev_dir = getcwd() or die;
 	debug("chdir: $dir");
 	chdir($dir) or fail("Cannot chdir($dir): $!\n");
+	return $prev_dir;
 }
 
 sub load_pkgdb_from_cache($fname) {
@@ -1196,8 +1198,7 @@ sub scan_pkgsrc_distfiles_vs_distinfo($pkgsrcdir, $pkgdistdir, $check_unref,
 		}
 
 		verbose("checksum mismatches\n");
-		my $prev_cwd = getcwd() or die;
-		chdir_or_fail($pkgdistdir);
+		my $prev_dir = chdir_or_fail($pkgdistdir);
 		foreach my $sum (keys %sumfiles) {
 			if ($sum eq 'Size') {
 				foreach my $file (@{$sumfiles{$sum}}) {
@@ -1231,7 +1232,7 @@ sub scan_pkgsrc_distfiles_vs_distinfo($pkgsrcdir, $pkgdistdir, $check_unref,
 			waitpid($pid, 0) || fail "xargs digest $sum";
 			waitpid($pid2, 0) || fail 'pipe write to xargs';
 		}
-		chdir_or_fail($prev_cwd);
+		chdir_or_fail($prev_dir);
 	}
 
 	sort keys %unref_distfiles;
@@ -1404,10 +1405,9 @@ sub remove_orphaned_distfiles($dldistfiles, $pkgdistfiles, $pkgdistdir) {
 	}
 
 	if ($opt{r}) {
-		chdir_or_fail("$pkgdistdir");
 		verbose("Unlinking 'orphaned' distfiles\n");
 		foreach my $distfile (@orphan) {
-			unlink($distfile)
+			unlink("$pkgdistdir/$distfile")
 		}
 	}
 }
@@ -1431,10 +1431,9 @@ sub remove_parented_distfiles($dldistfiles, $pkgdistfiles, $pkgdistdir) {
 	}
 
 	if ($opt{r}) {
-		chdir_or_fail("$pkgdistdir");
 		verbose("Unlinking 'parented' distfiles\n");
 		foreach my $distfile (@parent) {
-			unlink($distfile);
+			unlink("$pkgdistdir/$distfile");
 		}
 	}
 }
@@ -1588,8 +1587,9 @@ sub check_outdated_installed_packages($pkgsrcdir) {
 		    or fail('Cannot determine ' . $pkgver->pkgbase . ' directory');
 
 		print "$pkgsrcdir/$pkgpath\n";
-		chdir_or_fail("$pkgsrcdir/$pkgpath");
+		my $prev_dir = chdir_or_fail("$pkgsrcdir/$pkgpath");
 		system("$conf_make fetch-list | sh");
+		chdir_or_fail($prev_dir);
 	}
 }
 
