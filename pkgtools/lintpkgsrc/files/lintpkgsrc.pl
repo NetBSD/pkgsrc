@@ -1,5 +1,5 @@
 #!@PERL5@
-# $NetBSD: lintpkgsrc.pl,v 1.102 2022/08/16 19:20:06 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.103 2022/08/16 19:40:24 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -829,29 +829,21 @@ sub glob2regex($glob) {
 sub package_globmatch($pkgmatch) {
 
 	if ($pkgmatch =~ /^ ([^*?[]+) (<|>|<=|>=|-) (\d[^*?[{]*) $/x) {
-		# TODO: rename $matchpkgname to be more accurate.
-		my ($matchpkgname, $op, $matchver) = ($1, $2, $3);
+		my ($match_base, $op, $match_ver) = ($1, $2, $3);
 
-		if (my @pkgvers = $pkgdb->pkgvers_by_pkgbase($matchpkgname)) {
-			foreach my $pkgver (@pkgvers) {
-				if ($op eq '-') {
-					if ($pkgver->pkgversion eq $matchver) {
-						$matchver = undef;
-						last;
-					}
-				} else {
-					if (pkgversion_cmp($pkgver->pkgversion, $op, $matchver)) {
-						$matchver = undef;
-						last;
-					}
-				}
-			}
-
-			if ($matchver && $op ne '-') {
-				$matchver = "$op$matchver";
+		my @pkgvers = $pkgdb->pkgvers_by_pkgbase($match_base);
+		foreach my $pkgver (@pkgvers) {
+			if ($op eq '-'
+			    ? $pkgver->pkgversion eq $match_ver
+			    : pkgversion_cmp($pkgver->pkgversion, $op, $match_ver)) {
+				return ($match_base, undef);
 			}
 		}
-		($matchpkgname, $matchver);
+
+		if (@pkgvers && $match_ver && $op ne '-') {
+			$match_ver = "$op$match_ver";
+		}
+		($match_base, $match_ver);
 
 	} elsif ($pkgmatch =~ /^ ([^[]+) - ([\d*?{[].*) $/x) {
 		my ($matchpkgname, $matchver) = ($1, $2);
