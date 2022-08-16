@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3820 2022/08/16 12:46:55 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3821 2022/08/16 13:53:08 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5655,3 +5655,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated editors/tp-note to 1.17.3 [pin 2022-08-16]
 	Updated misc/wthrr to 0.1.4 [pin 2022-08-16]
 	Updated sysutils/file to 5.42 [wiz 2022-08-16]
+	Updated www/php-glpi to 10.0.2 [hauke 2022-08-16]
