@@ -1,5 +1,5 @@
 #!@PERL5@
-# $NetBSD: lintpkgsrc.pl,v 1.103 2022/08/16 19:40:24 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.104 2022/08/16 20:06:05 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -707,30 +707,23 @@ sub get_default_makefile_vars() {
 	$default_vars->{PACKAGES} ||= $default_vars->{PKGSRCDIR} . '/packages';
 }
 
-# Determine if a package version is current. If not, report correct version
-# if found
-#
+# Determine if a package version is current. If not, report the correct
+# version if found.
 sub invalid_version($pkgmatch) {
-	my ($fail, $ok);
 
-	my @pkgmatches = expand_braces($pkgmatch);
-	foreach $pkgmatch (@pkgmatches) {
+	my @warnings;
+	foreach $pkgmatch (expand_braces($pkgmatch)) {
 		my ($pkg, $badver) = package_globmatch($pkgmatch);
+		# If we find one match, it's good enough.
+		return () unless defined $badver;
 
-		if (defined $badver) {
-			if (my $pkgs = $pkgdb->pkgs($pkg)) {
-				$fail .=
-				    "Version mismatch: '$pkg' $badver vs "
-					. join(',', $pkgs->versions) . "\n";
-			} else {
-				$fail .= "Unknown package: '$pkg' version $badver\n";
-			}
-		} else {
-			# If we find one match, don't bitch about others
-			$ok = 1;
-		}
+		my $pkgs = $pkgdb->pkgs($pkg);
+		push @warnings, $pkgs
+		    ? "Version mismatch: '$pkg' $badver vs "
+		    . join(',', $pkgs->versions)
+		    : "Unknown package: '$pkg' version $badver";
 	}
-	$ok ? undef : $fail;
+	@warnings;
 }
 
 sub list_installed_packages() {
@@ -1074,14 +1067,13 @@ sub pkgsrc_check_depends() {
 			next unless $depend =~ s/:.*//;
 
 			$depend = canonicalize_pkgname($depend);
-			if ((my $msg = invalid_version($depend))) {
-				if ($seen_header == 0) {
-					print $pkgver->pkgname . " DEPENDS errors:\n";
-					$seen_header = 1;
-				}
-				$msg =~ s/(\n)(.)/$1\t$2/g;
-				print "\t$msg";
+			next unless my @msgs = invalid_version($depend);
+
+			if ($seen_header == 0) {
+				print $pkgver->pkgname . " DEPENDS errors:\n";
+				$seen_header = 1;
 			}
+			print map { "\t$_\n" } @msgs;
 		}
 	}
 }
@@ -1545,9 +1537,9 @@ sub check_outdated_installed_packages($pkgsrcdir) {
 
 	my @update;
 	foreach my $pkgname (sort @pkgs) {
-		next unless $_ = invalid_version($pkgname);
+		next unless my @warnings = invalid_version($pkgname);
 
-		print $_;
+		print map { "$_\n" } @warnings;
 		next unless $pkgname =~ /^([^*?[]+)-([\d*?[].*)/;
 
 		foreach my $pkgver ($pkgdb->pkgvers_by_pkgbase($1)) {
