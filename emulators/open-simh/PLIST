@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2022/06/06 14:20:07 rhialto Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/08/16 20:08:39 rhialto Exp $
 bin/simh-3b2
 bin/simh-altair
 bin/simh-altairz80
@@ -100,6 +100,7 @@ share/doc/simh/pdp10_bug_history.txt
 share/doc/simh/pdp18b_diag.txt
 share/doc/simh/pdp1_diag.txt
 share/doc/simh/readme-sage.txt
+share/doc/simh/readme.txt
 share/doc/simh/readme1130.txt
 share/doc/simh/readme_s3.txt
 share/doc/simh/readme_update.txt
