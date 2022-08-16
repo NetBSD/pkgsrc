@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3822 2022/08/16 14:02:08 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3823 2022/08/16 14:21:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5658,3 +5658,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/php-glpi to 10.0.2 [hauke 2022-08-16]
 	Updated archivers/lz4 to 1.9.4 [adam 2022-08-16]
 	Updated textproc/py-pygments to 2.13.0 [adam 2022-08-16]
+	Updated mail/spamassassin to 3.4.6nb3 [wiz 2022-08-16]
