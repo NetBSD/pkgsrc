@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3823 2022/08/16 14:21:59 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3824 2022/08/16 20:08:53 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5659,3 +5659,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated archivers/lz4 to 1.9.4 [adam 2022-08-16]
 	Updated textproc/py-pygments to 2.13.0 [adam 2022-08-16]
 	Updated mail/spamassassin to 3.4.6nb3 [wiz 2022-08-16]
+	Updated emulators/open-simh to 4.0.0.20220814 [rhialto 2022-08-16]
