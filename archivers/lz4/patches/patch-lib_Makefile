@@ -1,31 +1,31 @@
-$NetBSD: patch-lib_Makefile,v 1.10 2019/04/30 09:17:38 adam Exp $
+$NetBSD: patch-lib_Makefile,v 1.11 2022/08/16 13:02:56 adam Exp $
 
 Make portable. Unlock install target. Use pkgsrc install scripts.
 
---- lib/Makefile.orig	2019-04-23 17:18:40.000000000 +0000
+--- lib/Makefile.orig	2022-08-15 22:45:31.000000000 +0000
 +++ lib/Makefile
-@@ -33,9 +33,9 @@
- # ################################################################
+@@ -34,9 +34,9 @@
+ SED = sed
  
  # Version numbers
--LIBVER_MAJOR_SCRIPT:=`sed -n '/define LZ4_VERSION_MAJOR/s/.*[[:blank:]]\([0-9][0-9]*\).*/\1/p' < ./lz4.h`
--LIBVER_MINOR_SCRIPT:=`sed -n '/define LZ4_VERSION_MINOR/s/.*[[:blank:]]\([0-9][0-9]*\).*/\1/p' < ./lz4.h`
--LIBVER_PATCH_SCRIPT:=`sed -n '/define LZ4_VERSION_RELEASE/s/.*[[:blank:]]\([0-9][0-9]*\).*/\1/p' < ./lz4.h`
+-LIBVER_MAJOR_SCRIPT:=`$(SED) -n '/define LZ4_VERSION_MAJOR/s/.*[[:blank:]]\([0-9][0-9]*\).*/\1/p' < ./lz4.h`
+-LIBVER_MINOR_SCRIPT:=`$(SED) -n '/define LZ4_VERSION_MINOR/s/.*[[:blank:]]\([0-9][0-9]*\).*/\1/p' < ./lz4.h`
+-LIBVER_PATCH_SCRIPT:=`$(SED) -n '/define LZ4_VERSION_RELEASE/s/.*[[:blank:]]\([0-9][0-9]*\).*/\1/p' < ./lz4.h`
 +LIBVER_MAJOR_SCRIPT:=`awk '$$2=="LZ4_VERSION_MAJOR" {print $$3}' < lz4.h`
 +LIBVER_MINOR_SCRIPT:=`awk '$$2=="LZ4_VERSION_MINOR" {print $$3}' < lz4.h`
 +LIBVER_PATCH_SCRIPT:=`awk '$$2=="LZ4_VERSION_RELEASE" {print $$3}' < lz4.h`
  LIBVER_SCRIPT:= $(LIBVER_MAJOR_SCRIPT).$(LIBVER_MINOR_SCRIPT).$(LIBVER_PATCH_SCRIPT)
  LIBVER_MAJOR := $(shell echo $(LIBVER_MAJOR_SCRIPT))
  LIBVER_MINOR := $(shell echo $(LIBVER_MINOR_SCRIPT))
-@@ -45,6 +45,7 @@ LIBVER  := $(shell echo $(LIBVER_SCRIPT)
+@@ -46,6 +46,7 @@ LIBVER  := $(shell echo $(LIBVER_SCRIPT)
  BUILD_SHARED:=yes
  BUILD_STATIC:=yes
  
 +OS ?= $(shell uname)
  CPPFLAGS+= -DXXH_NAMESPACE=LZ4_
+ CPPFLAGS+= $(MOREFLAGS)
  CFLAGS  ?= -O3
- DEBUGFLAGS:= -Wall -Wextra -Wcast-qual -Wcast-align -Wshadow \
-@@ -156,28 +157,23 @@ libdir      ?= $(LIBDIR)
+@@ -162,29 +163,24 @@ libdir      ?= $(LIBDIR)
  INCLUDEDIR  ?= $(prefix)/include
  includedir  ?= $(INCLUDEDIR)
  
@@ -39,47 +39,49 @@ Make portable. Unlock install target. Use pkgsrc install scripts.
  
  liblz4.pc: liblz4.pc.in Makefile
  	@echo creating pkgconfig
--	$(Q)sed -e 's|@PREFIX@|$(prefix)|' \
+-	$(SED) -e 's|@PREFIX@|$(prefix)|' \
 -         -e 's|@LIBDIR@|$(libdir)|' \
 -         -e 's|@INCLUDEDIR@|$(includedir)|' \
 -         -e 's|@VERSION@|$(LIBVER)|' \
-+	$(Q)sed -e 's|@PREFIX@|$(prefix)|g' \
+-         -e 's|=${prefix}/|=$${prefix}/|' \
++	$(SED) -e 's|@PREFIX@|$(prefix)|g' \
 +         -e 's|@LIBDIR@|$(libdir)|g' \
 +         -e 's|@INCLUDEDIR@|$(includedir)|g' \
 +         -e 's|@VERSION@|$(LIBVER)|g' \
++         -e 's|=${prefix}/|=$${prefix}/|g' \
            $< >$@
  
  install: lib liblz4.pc
--	$(Q)$(INSTALL_DIR) $(DESTDIR)$(pkgconfigdir)/ $(DESTDIR)$(includedir)/ $(DESTDIR)$(libdir)/ $(DESTDIR)$(bindir)/
--	$(Q)$(INSTALL_DATA) liblz4.pc $(DESTDIR)$(pkgconfigdir)/
-+	$(Q)$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(pkgconfigdir)/ $(DESTDIR)$(includedir)/ $(DESTDIR)$(libdir)/ $(DESTDIR)$(bindir)/
-+	$(Q)$(BSD_INSTALL_DATA) liblz4.pc $(DESTDIR)$(pkgconfigdir)/
- 	@echo Installing libraries
+-	$(INSTALL_DIR) $(DESTDIR)$(pkgconfigdir)/ $(DESTDIR)$(includedir)/ $(DESTDIR)$(libdir)/ $(DESTDIR)$(bindir)/
+-	$(INSTALL_DATA) liblz4.pc $(DESTDIR)$(pkgconfigdir)/
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(pkgconfigdir)/ $(DESTDIR)$(includedir)/ $(DESTDIR)$(libdir)/ $(DESTDIR)$(bindir)/
++	$(BSD_INSTALL_DATA) liblz4.pc $(DESTDIR)$(pkgconfigdir)/
+ 	@echo Installing libraries in $(DESTDIR)$(libdir)
    ifeq ($(BUILD_STATIC),yes)
--	$(Q)$(INSTALL_DATA) liblz4.a $(DESTDIR)$(libdir)/liblz4.a
--	$(Q)$(INSTALL_DATA) lz4frame_static.h $(DESTDIR)$(includedir)/lz4frame_static.h
-+	$(Q)$(BSD_INSTALL_LIB) liblz4.a $(DESTDIR)$(libdir)/liblz4.a
-+	$(Q)$(BSD_INSTALL_DATA) lz4frame_static.h $(DESTDIR)$(includedir)/lz4frame_static.h
+-	$(INSTALL_DATA) liblz4.a $(DESTDIR)$(libdir)/liblz4.a
+-	$(INSTALL_DATA) lz4frame_static.h $(DESTDIR)$(includedir)/lz4frame_static.h
++	$(BSD_INSTALL_LIB) liblz4.a $(DESTDIR)$(libdir)/liblz4.a
++	$(BSD_INSTALL_DATA) lz4frame_static.h $(DESTDIR)$(includedir)/lz4frame_static.h
    endif
    ifeq ($(BUILD_SHARED),yes)
- # Traditionnally, one installs the DLLs in the bin directory as programs
-@@ -187,15 +183,15 @@ install: lib liblz4.pc
- 	$(Q)$(INSTALL_PROGRAM) dll/$(LIBLZ4).dll $(DESTDIR)$(bindir)
- 	$(Q)$(INSTALL_PROGRAM) dll/$(LIBLZ4_EXP) $(DESTDIR)$(libdir)
+ # Traditionally, one installs the DLLs in the bin directory as programs
+@@ -194,15 +190,15 @@ install: lib liblz4.pc
+ 	$(INSTALL_PROGRAM) dll/$(LIBLZ4).dll $(DESTDIR)$(bindir)
+ 	$(INSTALL_PROGRAM) dll/$(LIBLZ4_EXP) $(DESTDIR)$(libdir)
      else
--	$(Q)$(INSTALL_PROGRAM) liblz4.$(SHARED_EXT_VER) $(DESTDIR)$(libdir)
-+	$(Q)$(BSD_INSTALL_LIB) liblz4.$(SHARED_EXT_VER) $(DESTDIR)$(libdir)
- 	$(Q)$(LN_SF) liblz4.$(SHARED_EXT_VER) $(DESTDIR)$(libdir)/liblz4.$(SHARED_EXT_MAJOR)
- 	$(Q)$(LN_SF) liblz4.$(SHARED_EXT_VER) $(DESTDIR)$(libdir)/liblz4.$(SHARED_EXT)
+-	$(INSTALL_PROGRAM) liblz4.$(SHARED_EXT_VER) $(DESTDIR)$(libdir)
++	$(BSD_INSTALL_LIB) liblz4.$(SHARED_EXT_VER) $(DESTDIR)$(libdir)
+ 	$(LN_SF) liblz4.$(SHARED_EXT_VER) $(DESTDIR)$(libdir)/liblz4.$(SHARED_EXT_MAJOR)
+ 	$(LN_SF) liblz4.$(SHARED_EXT_VER) $(DESTDIR)$(libdir)/liblz4.$(SHARED_EXT)
      endif
    endif
- 	@echo Installing headers in $(includedir)
--	$(Q)$(INSTALL_DATA) lz4.h $(DESTDIR)$(includedir)/lz4.h
--	$(Q)$(INSTALL_DATA) lz4hc.h $(DESTDIR)$(includedir)/lz4hc.h
--	$(Q)$(INSTALL_DATA) lz4frame.h $(DESTDIR)$(includedir)/lz4frame.h
-+	$(Q)$(BSD_INSTALL_DATA) lz4.h $(DESTDIR)$(includedir)/lz4.h
-+	$(Q)$(BSD_INSTALL_DATA) lz4hc.h $(DESTDIR)$(includedir)/lz4hc.h
-+	$(Q)$(BSD_INSTALL_DATA) lz4frame.h $(DESTDIR)$(includedir)/lz4frame.h
+ 	@echo Installing headers in $(DESTDIR)$(includedir)
+-	$(INSTALL_DATA) lz4.h $(DESTDIR)$(includedir)/lz4.h
+-	$(INSTALL_DATA) lz4hc.h $(DESTDIR)$(includedir)/lz4hc.h
+-	$(INSTALL_DATA) lz4frame.h $(DESTDIR)$(includedir)/lz4frame.h
++	$(BSD_INSTALL_DATA) lz4.h $(DESTDIR)$(includedir)/lz4.h
++	$(BSD_INSTALL_DATA) lz4hc.h $(DESTDIR)$(includedir)/lz4hc.h
++	$(BSD_INSTALL_DATA) lz4frame.h $(DESTDIR)$(includedir)/lz4frame.h
  	@echo lz4 libraries installed
  
  uninstall:
