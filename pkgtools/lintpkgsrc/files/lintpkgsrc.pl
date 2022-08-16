@@ -1,5 +1,5 @@
 #!@PERL5@
-# $NetBSD: lintpkgsrc.pl,v 1.105 2022/08/16 20:10:32 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.106 2022/08/16 20:28:41 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -612,6 +612,12 @@ sub parse_makefile_vars($file, $cwd = undef) {
 		}
 	}
 
+	if ($opt{D}) {
+		print "Before expansion:\n";
+		foreach my $varname (sort keys %vars) {
+			print "\t$varname = $vars{$varname}\n";
+		}
+	}
 	debug("$file: expand");
 
 	# Handle variable substitutions  FRED = a-${JIM:S/-/-b-/}
@@ -707,7 +713,10 @@ sub get_default_makefile_vars() {
 
 	$default_vars->{PACKAGES} ||= $default_vars->{PKGSRCDIR} . '/packages';
 
-	$default_vars->{LUA_PKGPREFIX} = 'lua54';
+	$default_vars->{LUA_PKGPREFIX} = 'lua12345';
+	$default_vars->{PHP_PKG_PREFIX} = 'php12345';
+	$default_vars->{PYPKGPREFIX} = 'py12345';
+	$default_vars->{RUBY_PKGPREFIX} = 'ruby12345';
 }
 
 # Determine if a package version is current. If not, report the correct
