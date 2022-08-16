@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 11:30:23 nia Exp $
+$NetBSD: distinfo,v 1.12 2022/08/16 13:52:48 hauke Exp $
 
-BLAKE2s (glpi-9.4.6.tgz) = 1747d685b07a1b7628ab3b414dde45e0d85f92cb29c40fa7dbd5d8a5ebb72ddb
-SHA512 (glpi-9.4.6.tgz) = a7bd8f2c351d17feb245716b3716268a43be513d3265916c93e0ce926bce3c754c05b9c1c237336bab74cd2ddb349c722dcaf994f39f5e1b5f2c01e0565df0de
-Size (glpi-9.4.6.tgz) = 35006348 bytes
+BLAKE2s (glpi-10.0.2.tgz) = 9638b695717a0df8267aa4f0b1150be0be178f0b9e9dceea2548909021634ced
+SHA512 (glpi-10.0.2.tgz) = 0ea38c951ab2a6f5ea8b89b0df1fdc5ab68b84affaef270a1b107be5a71fca08e789ad3f097cbbe24cb150dc3819b37a62be399f186d4bdb54b657af05115283
+Size (glpi-10.0.2.tgz) = 60482619 bytes

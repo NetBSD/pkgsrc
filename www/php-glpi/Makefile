@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.16 2021/12/29 06:05:19 taca Exp $
+# $NetBSD: Makefile,v 1.17 2022/08/16 13:52:48 hauke Exp $
 
 DISTNAME=	glpi-${GLPI_VERSION}
-GLPI_VERSION=	9.4.6
-PKGREVISION=	1
+GLPI_VERSION=	10.0.2
 CATEGORIES=	www
 
-MASTER_SITES=	https://github.com/glpi-project/glpi/releases/download/${GLPI_VERSION}/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=glpi-project/}glpi/releases/download/${GLPI_VERSION}/
+#MASTER_SITES=	https://github.com/glpi-project/glpi/releases/download/${GLPI_VERSION}/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	hauke@NetBSD.org
@@ -13,18 +13,28 @@ HOMEPAGE=	https://glpi-project.org/
 COMMENT=	IT inventory management software
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=5.4:../../archivers/php-zlib
-DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=5.4:../../converters/php-mbstring
-DEPENDS+=	${PHP_PKG_PREFIX}-ldap>=5.4:../../databases/php-ldap
-DEPENDS+=	${PHP_PKG_PREFIX}-mysqli>=5.4:../../databases/php-mysqli
-DEPENDS+=	${PHP_PKG_PREFIX}-opcache>=5.4:../../devel/php-opcache
-DEPENDS+=	${PHP_PKG_PREFIX}-exif>=5.4:../../graphics/php-exif
-DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.4:../../graphics/php-gd
-DEPENDS+=	${PHP_PKG_PREFIX}-imap>=5.4:../../mail/php-imap
-DEPENDS+=	${PHP_PKG_PREFIX}-xmlrpc>=5.4:../../net/php-xmlrpc
-DEPENDS+=	${PHP_PKG_PREFIX}-json>=5.4:../../textproc/php-json
-DEPENDS+=	${PHP_PKG_PREFIX}-curl>=5.4:../../www/php-curl
+DEPENDS+=	${PHP_PKG_PREFIX}-bz2>=7.4:../../archivers/php-bz2
+DEPENDS+=	${PHP_PKG_PREFIX}-curl>=7.4:../../www/php-curl
+DEPENDS+=	${PHP_PKG_PREFIX}-exif>=7.4:../../graphics/php-exif
+DEPENDS+=	${PHP_PKG_PREFIX}-gd>=7.4:../../graphics/php-gd
+DEPENDS+=	${PHP_PKG_PREFIX}-iconv>=7.4:../../converters/php-iconv
+DEPENDS+=	${PHP_PKG_PREFIX}-imap>=7.4:../../mail/php-imap
+DEPENDS+=	${PHP_PKG_PREFIX}-intl>=7.4:../../textproc/php-intl
+DEPENDS+=	${PHP_PKG_PREFIX}-ldap>=7.4:../../databases/php-ldap
+DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=7.4:../../converters/php-mbstring
+DEPENDS+=	${PHP_PKG_PREFIX}-mysqli>=7.4:../../databases/php-mysqli
+DEPENDS+=	${PHP_PKG_PREFIX}-opcache>=7.4:../../devel/php-opcache
+DEPENDS+=	${PHP_PKG_PREFIX}-sodium>=7.4:../../security/php-sodium
+DEPENDS+=	${PHP_PKG_PREFIX}-zip>=7.4:../../archivers/php-zip
+DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=7.4:../../archivers/php-zlib
+
 DEPENDS+=	freefont-ttf-[0-9]*:../../fonts/freefont-ttf
+
+.include "../../lang/php/phpversion.mk"
+
+.if ${PKG_PHP_VERSION} == 74
+DEPENDS+=	${PHP_PKG_PREFIX}-json>=7.4:../../textproc/php-json
+.endif
 
 NO_BUILD=	yes
 USE_LANGUAGES=	# none
@@ -34,8 +44,6 @@ USE_TOOLS+=	chmod find pax
 BUILD_DEFS+=	APACHE_USER APACHE_GROUP VARBASE
 
 MESSAGE_SUBST+=	APACHE_USER="${APACHE_USER}"
-
-PHP_VERSIONS_ACCEPTED=	56 74
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -81,15 +89,10 @@ REPLACE_FILES.php+=	bin/console
 REPLACE_FILES.php+=	vendor/sabre/vobject/bin/${ddd}
 .endfor
 
-INSTALLATION_DIRS+=	${GLPI_DIR} ${EGDIR}
+OWN_DIRS_PERMS+=	${GLPI_DIR}/marketplace ${APACHE_USER} \
+				${APACHE_GROUP} 0750
 
-.include "../../lang/php/phpversion.mk"
-
-.if ${PKG_PHP_VERSION} == 56
-DEPENDS+=	${PHP_PKG_PREFIX}-apcu>=4.0:../../www/php-apcu4
-.else
-DEPENDS+=	${PHP_PKG_PREFIX}-apcu_bc>=1.0:../../www/php-apcu_bc
-.endif
+INSTALLATION_DIRS+=	${EGDIR} ${GLPI_DIR} ${GLPI_DIR}/marketplace
 
 post-extract:
 	for ddd in local_define.php crontab.sample httpd-glpi.conf ; do \
@@ -100,11 +103,10 @@ post-extract:
 		find ${WRKSRC}/$${ddd} -type f -exec ${CHMOD} ugo-x \{\} \; ; \
 	done
 	cd ${WRKSRC}/install && ${MV} install.php install.php.disabled
-	${CHMOD} ugo-x ${WRKSRC}/scripts/.htaccess
 
 do-install:
 	cd ${WRKSRC}/config && ${PAX} -rw * ${DESTDIR}${PREFIX}/${EGDIR}
-	cd ${WRKSRC}/files && cp .htaccess \
+	${INSTALL_DATA} ${WRKSRC}/files/.htaccess \
 		${DESTDIR}${PREFIX}/${EGDIR}/var_glpi.htaccess
 	# Sub-tree will be re-created in VARBASE/glpi
 	cd ${WRKSRC} && rm -r files
