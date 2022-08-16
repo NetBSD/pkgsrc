@@ -1,11 +1,14 @@
-$NetBSD: distinfo,v 1.79 2021/10/26 10:54:30 nia Exp $
+$NetBSD: distinfo,v 1.80 2022/08/16 14:21:48 wiz Exp $
 
 BLAKE2s (Mail-SpamAssassin-3.4.6.tar.gz) = d330863c4775e9dfc3ffb8158e3b145a3e43ff9122e686a074be7c2d1a2cb65d
 SHA512 (Mail-SpamAssassin-3.4.6.tar.gz) = 7910852f04463a7363a2fc3b70a35adadf5714552e57c5b8ca57beaa534ee18d9f06526cdbcf8bcd5781e5ca778f98d2f84ef2efd1872fa550cfe1689440364a
 Size (Mail-SpamAssassin-3.4.6.tar.gz) = 6572574 bytes
-BLAKE2s (Mail-SpamAssassin-rules-3.4.4.r1873061.tgz) = a45930ab88019b844fe7128da7742fa5c6bf68c4d6a02543f10af103575cf525
-SHA512 (Mail-SpamAssassin-rules-3.4.4.r1873061.tgz) = cc2f6949db4662cdcaf5dcef922e69d18320a591deb7fb98c1fb729d91d37f5164052ab6cd2e294657334874fbfc0cccdefc750910e0453cb8da0b3f263b3ede
-Size (Mail-SpamAssassin-rules-3.4.4.r1873061.tgz) = 315930 bytes
+BLAKE2s (Mail-SpamAssassin-rules-3.4.6.r1888502.tgz) = 5ac6070924cf3093fda442bf1cbc059ea3dd98df0d9eea7eaad45eea6f7a177e
+SHA512 (Mail-SpamAssassin-rules-3.4.6.r1888502.tgz) = 29167c2ab50de26954181ad53395d4270b8b15b7d3bb13d6c62aa2f13ed3bb7a54adcda944bbd4c8d0cf4fe918a2eb0f542ef420af2bd96a121cb3d9b55dd572
+Size (Mail-SpamAssassin-rules-3.4.6.r1888502.tgz) = 369768 bytes
+BLAKE2s (Mail-SpamAssassin-rules-3.4.6.r1888502.tgz.asc) = e1c0171d935698f2f3241a45ae16e34d990727ba8c0d6195e658eb77e4959b04
+SHA512 (Mail-SpamAssassin-rules-3.4.6.r1888502.tgz.asc) = 97066dfe751aa067b14368ebd0388666522257945bd0fd37d921371682209be6bd658199ca817bb0dd345c4ddb1cebe02015ca9ca3a33f167d68b7d029a07b0c
+Size (Mail-SpamAssassin-rules-3.4.6.r1888502.tgz.asc) = 833 bytes
 SHA1 (patch-Makefile.PL) = bcf48afe3adce57fbe4ff0de583ca23bf5177aab
 SHA1 (patch-README) = 5d2aaecc4791e4f76df1078c17036cc23a39a8d0
 SHA1 (patch-ae) = e6e83c1de1002b8db647779d17740e67103b69d8
