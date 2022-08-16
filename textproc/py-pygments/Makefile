@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.40 2022/04/26 10:53:29 adam Exp $
+# $NetBSD: Makefile,v 1.41 2022/08/16 14:01:18 adam Exp $
 
-DISTNAME=	Pygments-2.12.0
+DISTNAME=	Pygments-2.13.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/Pygments/}
@@ -17,6 +17,11 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-wcag-contrast-ratio-[0-9]*:../../graphics/py-wcag-
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+.include "../../lang/python/pyversion.mk"
+.if ${_PYTHON_VERSION} < 38
+DEPENDS+=	${PYPKGPREFIX}-importlib-metadata-[0-9]*:../../devel/py-importlib-metadata
+.endif
 
 USE_PKG_RESOURCES=	yes
 

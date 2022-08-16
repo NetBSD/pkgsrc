@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.21 2022/04/26 10:53:29 adam Exp $
+@comment $NetBSD: PLIST,v 1.22 2022/08/16 14:01:18 adam Exp $
 bin/pygmentize-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/pygments/__init__.py
 ${PYSITELIB}/pygments/__init__.pyc
@@ -234,6 +235,9 @@ ${PYSITELIB}/pygments/lexers/chapel.pyo
 ${PYSITELIB}/pygments/lexers/clean.py
 ${PYSITELIB}/pygments/lexers/clean.pyc
 ${PYSITELIB}/pygments/lexers/clean.pyo
+${PYSITELIB}/pygments/lexers/comal.py
+${PYSITELIB}/pygments/lexers/comal.pyc
+${PYSITELIB}/pygments/lexers/comal.pyo
 ${PYSITELIB}/pygments/lexers/compiled.py
 ${PYSITELIB}/pygments/lexers/compiled.pyc
 ${PYSITELIB}/pygments/lexers/compiled.pyo
@@ -396,6 +400,9 @@ ${PYSITELIB}/pygments/lexers/j.pyo
 ${PYSITELIB}/pygments/lexers/javascript.py
 ${PYSITELIB}/pygments/lexers/javascript.pyc
 ${PYSITELIB}/pygments/lexers/javascript.pyo
+${PYSITELIB}/pygments/lexers/jmespath.py
+${PYSITELIB}/pygments/lexers/jmespath.pyc
+${PYSITELIB}/pygments/lexers/jmespath.pyo
 ${PYSITELIB}/pygments/lexers/jslt.py
 ${PYSITELIB}/pygments/lexers/jslt.pyc
 ${PYSITELIB}/pygments/lexers/jslt.pyo
@@ -771,6 +778,9 @@ ${PYSITELIB}/pygments/styles/friendly_grayscale.pyo
 ${PYSITELIB}/pygments/styles/fruity.py
 ${PYSITELIB}/pygments/styles/fruity.pyc
 ${PYSITELIB}/pygments/styles/fruity.pyo
+${PYSITELIB}/pygments/styles/gh_dark.py
+${PYSITELIB}/pygments/styles/gh_dark.pyc
+${PYSITELIB}/pygments/styles/gh_dark.pyo
 ${PYSITELIB}/pygments/styles/gruvbox.py
 ${PYSITELIB}/pygments/styles/gruvbox.pyc
 ${PYSITELIB}/pygments/styles/gruvbox.pyo
@@ -801,6 +811,9 @@ ${PYSITELIB}/pygments/styles/murphy.pyo
 ${PYSITELIB}/pygments/styles/native.py
 ${PYSITELIB}/pygments/styles/native.pyc
 ${PYSITELIB}/pygments/styles/native.pyo
+${PYSITELIB}/pygments/styles/nord.py
+${PYSITELIB}/pygments/styles/nord.pyc
+${PYSITELIB}/pygments/styles/nord.pyo
 ${PYSITELIB}/pygments/styles/onedark.py
 ${PYSITELIB}/pygments/styles/onedark.pyc
 ${PYSITELIB}/pygments/styles/onedark.pyo
@@ -828,6 +841,9 @@ ${PYSITELIB}/pygments/styles/sas.pyo
 ${PYSITELIB}/pygments/styles/solarized.py
 ${PYSITELIB}/pygments/styles/solarized.pyc
 ${PYSITELIB}/pygments/styles/solarized.pyo
+${PYSITELIB}/pygments/styles/staroffice.py
+${PYSITELIB}/pygments/styles/staroffice.pyc
+${PYSITELIB}/pygments/styles/staroffice.pyo
 ${PYSITELIB}/pygments/styles/stata_dark.py
 ${PYSITELIB}/pygments/styles/stata_dark.pyc
 ${PYSITELIB}/pygments/styles/stata_dark.pyo
