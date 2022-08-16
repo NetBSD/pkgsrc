@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3817 2022/08/15 21:00:56 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3818 2022/08/16 07:52:19 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5652,3 +5652,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/postgresql12 to 12.12 [adam 2022-08-15]
 	Updated databases/postgresql13 to 13.8 [adam 2022-08-15]
 	Updated databases/postgresql14 to 14.5 [adam 2022-08-15]
+	Updated editors/tp-note to 1.17.3 [pin 2022-08-16]
