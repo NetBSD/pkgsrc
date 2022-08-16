@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2015/09/09 19:13:48 christos Exp $
+@comment $NetBSD: PLIST,v 1.24 2022/08/16 14:21:48 wiz Exp $
 @comment Most of this PLIST is auto-generated; see Makefile.
 share/examples/spamassassin/local.cf
 share/examples/spamassassin/netbsd_lists.cf
@@ -7,3 +7,4 @@ share/spamassassin/languages
 share/spamassassin/sa-update-pubkey.txt
 share/spamassassin/user_prefs.template
 share/spamassassin/${RULESARCHIVE}
+share/spamassassin/${RULESARCHIVE}.asc
