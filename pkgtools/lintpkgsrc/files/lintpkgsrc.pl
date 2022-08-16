@@ -1,5 +1,5 @@
 #!@PERL5@
-# $NetBSD: lintpkgsrc.pl,v 1.99 2022/08/16 18:58:00 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.100 2022/08/16 19:07:53 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -1385,25 +1385,82 @@ sub check_distfiles($pkgsrcdir, $pkgdistdir) {
 	}
 }
 
+# looking for files that are downloaded on the current system
+# but do not belong to any currently installed package i.e. orphaned
+sub remove_orphaned_distfiles($dldistfiles, $pkgdistfiles, $pkgdistdir) {
+	my $found = 0;
+	my @orphan;
+	foreach my $dldf (@$dldistfiles) {
+		foreach my $pkgdf (@$pkgdistfiles) {
+			if ($dldf eq $pkgdf) {
+				$found = 1;
+			}
+		}
+		if ($found != 1) {
+			push @orphan, $dldf;
+			print "Orphaned file: $dldf\n";
+		}
+		$found = 0;
+	}
+
+	if ($opt{r}) {
+		chdir_or_fail("$pkgdistdir");
+		verbose("Unlinking 'orphaned' distfiles\n");
+		foreach my $distfile (@orphan) {
+			unlink($distfile)
+		}
+	}
+}
+
+# looking for files that are downloaded on the current system
+# but belong to a currently installed package i.e. parented
+sub remove_parented_distfiles($dldistfiles, $pkgdistfiles, $pkgdistdir) {
+	my $found = 0;
+	my @parent;
+	foreach my $pkgdf (sort @$pkgdistfiles) {
+		foreach my $dldf (@$dldistfiles) {
+			if ($pkgdf eq $dldf) {
+				$found = 1;
+			}
+		}
+		if ($found == 1) {
+			push @parent, $pkgdf;
+			print "Parented file: $pkgdf\n";
+		}
+		$found = 0;
+	}
+
+	if ($opt{r}) {
+		chdir_or_fail("$pkgdistdir");
+		verbose("Unlinking 'parented' distfiles\n");
+		foreach my $distfile (@parent) {
+			unlink($distfile);
+		}
+	}
+}
+
 sub remove_distfiles($pkgsrcdir, $pkgdistdir) {
-	my @pkgs = list_installed_packages();
+	my @installed_pkgnames = list_installed_packages();
 	scan_pkgsrc_makefiles($pkgsrcdir);
 
 	# list the installed packages and the directory they live in
-	my @installed;
-	foreach my $pkgname (sort @pkgs) {
-		if ($pkgname =~ /^([^*?[]+)-([\d*?[].*)/) {
-			foreach my $pkgver ($pkgdb->pkgvers_by_pkgbase($1)) {
-				next if $pkgver->var('dir') =~ /-current/;
-				push @installed, $pkgver;
-				last;
-			}
+	my @installed_pkgvers;
+	foreach my $pkgname (sort @installed_pkgnames) {
+		if ($pkgname !~ /^ ([^*?[]+) - ([\d*?[].*) /x) {
+			warn "Invalid installed package name: $pkgname";
+			next;
+		}
+
+		foreach my $pkgver ($pkgdb->pkgvers_by_pkgbase($1)) {
+			next if $pkgver->var('dir') =~ /-current/;
+			push @installed_pkgvers, $pkgver;
+			last;
 		}
 	}
 
 	# distfiles belonging to the currently installed packages
 	my (%distfiles, @pkgdistfiles);
-	foreach my $pkgver (sort @installed) {
+	foreach my $pkgver (sort @installed_pkgvers) {
 		my $pkgpath = $pkgver->var('dir');
 		foreach my $entry (load_distinfo("$pkgsrcdir/$pkgpath")) {
 			my $distfile = $entry->{distfile};
@@ -1418,59 +1475,11 @@ sub remove_distfiles($pkgsrcdir, $pkgdistdir) {
 	my @dldistfiles = sort grep { $_ ne 'pkg-vulnerabilities' }
 	    listdir("$pkgdistdir", undef);
 
-	if ($opt{y}) {
-		# looking for files that are downloaded on the current system
-		# but do not belong to any currently installed package i.e. orphaned
-		my $found = 0;
-		my @orphan;
-		foreach my $dldf (@dldistfiles) {
-			foreach my $pkgdf (@pkgdistfiles) {
-				if ($dldf eq $pkgdf) {
-					$found = 1;
-				}
-			}
-			if ($found != 1) {
-				push @orphan, $dldf;
-				print "Orphaned file: $dldf\n";
-			}
-			$found = 0;
-		}
+	$opt{y} and remove_orphaned_distfiles(
+	    \@dldistfiles, \@pkgdistfiles, $pkgdistdir);
 
-		if ($opt{r}) {
-			chdir_or_fail("$pkgdistdir");
-			verbose("Unlinking 'orphaned' distfiles\n");
-			foreach my $distfile (@orphan) {
-				unlink($distfile)
-			}
-		}
-	}
-
-	if ($opt{z}) {
-		# looking for files that are downloaded on the current system
-		# but belong to a currently installed package i.e. parented
-		my $found = 0;
-		my @parent;
-		foreach my $pkgdf (sort @pkgdistfiles) {
-			foreach my $dldf (@dldistfiles) {
-				if ($pkgdf eq $dldf) {
-					$found = 1;
-				}
-			}
-			if ($found == 1) {
-				push @parent, $pkgdf;
-				print "Parented file: $pkgdf\n";
-			}
-			$found = 0;
-		}
-
-		if ($opt{r}) {
-			chdir_or_fail("$pkgdistdir");
-			verbose("Unlinking 'parented' distfiles\n");
-			foreach my $distfile (@parent) {
-				unlink($distfile);
-			}
-		}
-	}
+	$opt{z} and remove_parented_distfiles(
+	    \@dldistfiles, \@pkgdistfiles, $pkgdistdir);
 }
 
 sub list_broken_packages($pkgsrcdir) {
