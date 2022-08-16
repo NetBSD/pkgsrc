@@ -1,5 +1,5 @@
 #!@PERL5@
-# $NetBSD: lintpkgsrc.pl,v 1.97 2022/08/15 21:54:53 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.98 2022/08/16 18:47:50 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -1092,40 +1092,53 @@ sub pkgsrc_check_depends() {
 	}
 }
 
-sub load_distinfo($pkgsrcdir, $cat, $pkgdir, $distfiles, $warnings) {
-	my $fname = "$pkgsrcdir/$cat/$pkgdir/distinfo";
-	open(DISTINFO, '<', $fname) or return;
+sub load_distinfo($dir) {
+	my $fname = "$dir/distinfo";
+	open(my $f, '<', $fname) or return;
+	chomp(my @lines = <$f>);
+	close($f) or die;
 
-	while (defined(my $line = <DISTINFO>)) {
-		chomp($line);
+	my @entries;
+	foreach my $line (@lines) {
+		next if $line eq '' || $line =~ m#^\$NetBSD#;
 
-		next if $line eq '' || $line =~ /^\$NetBSD/;
-
-		if ($line !~ m/^ (\w+) \s \( ([^)]+) \) \s=\s (\S+)/x) {
-			warn "Invalid line in $fname:$.: $line\n";
-			next;
-		}
-		my ($alg, $distfile, $hash) = ($1, $2, $3);
-
-		next if $distfile =~ /^patch-[\w.+\-]+$/;
-
-		# Only store and check the first algorithm listed in distinfo.
-		if (!defined $distfiles->{$distfile}) {
-			$distfiles->{$distfile} = {
-			    sumtype => $alg,
-			    sum     => $hash,
-			    path    => "$cat/$pkgdir",
+		if ($line =~ m/^ (\w+) \s \( ([^)]+) \) \s=\s (\S+)/x) {
+			push @entries, {
+			    algorithm => $1,
+			    distfile  => $2,
+			    hash      => $3,
 			};
-
-		} elsif ($distfiles->{$distfile}->{sumtype} eq $alg
-		    && $distfiles->{$distfile}->{sum} ne $hash) {
-			push @$warnings,
-			    "checksum mismatch between '$alg' for '$distfile' "
-				. "in $cat/$pkgdir "
-				. "and $distfiles->{$distfile}{path}\n";
+		} else {
+			warn "Invalid line in $fname: $line\n";
 		}
 	}
-	close(DISTINFO) or die;
+
+	@entries;
+}
+
+sub check_distinfo_hash($entry, $pkgpath, $distfiles, $warnings) {
+	my $algorithm = $entry->{algorithm};
+	my $distfile = $entry->{distfile};
+	my $hash = $entry->{hash};
+
+	return if $distfile =~ /^patch-[\w.+\-]+$/;
+
+	# Only store and check the first algorithm listed in distinfo.
+	my $other_entry = $distfiles->{$distfile};
+	if (!defined $other_entry) {
+		$distfiles->{$distfile} = {
+		    algorithm => $algorithm,
+		    hash      => $hash,
+		    pkgpath   => $pkgpath,
+		};
+
+	} elsif ($other_entry->{algorithm} eq $algorithm
+	    && $other_entry->{hash} ne $hash) {
+		my $other_pkgpath = $other_entry->{pkgpath};
+		my $warning = "checksum mismatch for '$algorithm' "
+		    . "of '$distfile' between '$pkgpath' and '$other_pkgpath'\n";
+		push @$warnings, $warning;
+	}
 }
 
 # Extract all distinfo entries, then verify contents of distfiles
@@ -1143,8 +1156,11 @@ sub scan_pkgsrc_distfiles_vs_distinfo($pkgsrcdir, $pkgdistdir, $check_unref,
 	foreach my $cat (sort @categories) {
 		foreach my $pkgdir (list_pkgsrc_pkgdirs($pkgsrcdir, $cat)) {
 			++$numpkg;
-			load_distinfo($pkgsrcdir, $cat, $pkgdir,
-			    \%distfiles, \@distwarn);
+			my $pkgpath = "$cat/$pkgdir";
+			foreach my $entry (load_distinfo("$pkgsrcdir/$pkgpath")) {
+				check_distinfo_hash($entry, $pkgpath,
+				    \%distfiles, \@distwarn);
+			}
 		}
 		verbose('.');
 	}
@@ -1161,8 +1177,8 @@ sub scan_pkgsrc_distfiles_vs_distinfo($pkgsrcdir, $pkgdistdir, $check_unref,
 			return if $distn =~ m/^CVS\//;
 			if (!defined($dist = $distfiles{$distn})) {
 				$unref_distfiles{$distn} = 1;
-			} elsif ($dist->{sum} ne 'IGNORE') {
-				push @{$sumfiles{ $dist->{sumtype} }}, $distn;
+			} else {
+				push @{$sumfiles{$dist->{algorithm}}}, $distn;
 			}
 		}
 	} },
@@ -1185,7 +1201,7 @@ sub scan_pkgsrc_distfiles_vs_distinfo($pkgsrcdir, $pkgdistdir, $check_unref,
 		foreach my $sum (keys %sumfiles) {
 			if ($sum eq 'Size') {
 				foreach my $file (@{$sumfiles{$sum}}) {
-					if (!-f $file || -S $file != $distfiles{$file}{sum}) {
+					if (!-f $file || -S $file != $distfiles{$file}{hash}) {
 						print $file, " (Size)\n";
 						$unref_distfiles{$file} = 1;
 					}
@@ -1205,7 +1221,7 @@ sub scan_pkgsrc_distfiles_vs_distinfo($pkgsrcdir, $pkgdistdir, $check_unref,
 			}
 			while (<$out>) {
 				if (m/^$sum ?\(([^\)]+)\) = (\S+)/) {
-					if ($distfiles{$1}{sum} ne $2) {
+					if ($distfiles{$1}{hash} ne $2) {
 						print $1, " ($sum)\n";
 						$unref_distfiles{$1} = 1;
 					}
