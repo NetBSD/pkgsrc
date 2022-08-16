@@ -1,5 +1,5 @@
 #!@PERL5@
-# $NetBSD: lintpkgsrc.pl,v 1.106 2022/08/16 20:28:41 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.107 2022/08/16 20:54:35 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -94,8 +94,8 @@ sub pkgver($self, $pkgversion) {
 	$self->{pkgvers}->{$pkgversion}
 }
 
-# PkgDb is a small database of all packages in pkgsrc.
-package PkgDb;
+# PkgData is a small database of all packages in pkgsrc.
+package PkgData;
 
 sub new($class) {
 	my $self = {}; # pkgbase => Pkgs
@@ -146,7 +146,7 @@ my $conf_prefix = '@PREFIX@';
 my $conf_x11base = '@X11BASE@';
 
 my (
-    $pkgdb,                    # Database of pkgsrc packages
+    $pkgdata,                  # Database of pkgsrc packages
     $default_vars,             # Set for Makefiles, inc PACKAGES & PKGSRCDIR
     %opt,                      # Command line options
     @matched_prebuiltpackages, # List of obsolete prebuilt package paths
@@ -729,7 +729,7 @@ sub invalid_version($pkgmatch) {
 		# If we find one match, it's good enough.
 		return () unless defined $badver;
 
-		my $pkgs = $pkgdb->pkgs($pkg);
+		my $pkgs = $pkgdata->pkgs($pkg);
 		push @warnings, $pkgs
 		    ? "Version mismatch: '$pkg' $badver vs "
 		    . join(',', $pkgs->versions)
@@ -836,7 +836,7 @@ sub package_globmatch($pkgmatch) {
 	if ($pkgmatch =~ /^ ([^*?[]+) (<|>|<=|>=|-) (\d[^*?[{]*) $/x) {
 		my ($match_base, $op, $match_ver) = ($1, $2, $3);
 
-		my @pkgvers = $pkgdb->pkgvers_by_pkgbase($match_base);
+		my @pkgvers = $pkgdata->pkgvers_by_pkgbase($match_base);
 		foreach my $pkgver (@pkgvers) {
 			if ($op eq '-'
 			    ? $pkgver->pkgversion eq $match_ver
@@ -854,11 +854,11 @@ sub package_globmatch($pkgmatch) {
 		my ($matchpkgname, $matchver) = ($1, $2);
 
 		my @pkgnames;
-		if (defined $pkgdb->pkgs($matchpkgname)) {
+		if (defined $pkgdata->pkgs($matchpkgname)) {
 			push @pkgnames, $matchpkgname;
 
 		} elsif (my $regex = glob2regex($matchpkgname)) {
-			foreach my $pkg ($pkgdb->pkgs) {
+			foreach my $pkg ($pkgdata->pkgs) {
 				if ($pkg->pkgbase =~ /$regex/) {
 					push @pkgnames, $pkg->pkgbase;
 				}
@@ -870,12 +870,12 @@ sub package_globmatch($pkgmatch) {
 		my $regex = glob2regex($matchver);
 
 		foreach my $pkg (@pkgnames) {
-			if (defined $pkgdb->pkgver($pkg, $matchver)) {
+			if (defined $pkgdata->pkgver($pkg, $matchver)) {
 				return ($matchver);
 			}
 
 			if ($regex) {
-				foreach my $ver ($pkgdb->pkgs($pkg)->versions) {
+				foreach my $ver ($pkgdata->pkgs($pkg)->versions) {
 					if ($ver =~ /$regex/) {
 						$matchver = undef;
 						last;
@@ -891,7 +891,7 @@ sub package_globmatch($pkgmatch) {
 		if ($matchver && ($regex = glob2regex($pkgmatch))) {
 
 			# (large-glob)
-			foreach my $pkgver ($pkgdb->pkgvers_all) {
+			foreach my $pkgver ($pkgdata->pkgvers_all) {
 				if ($pkgver->pkgname =~ /$regex/) {
 					$matchver = undef;
 					last;
@@ -972,8 +972,8 @@ sub parse_makefile_pkgsrc($file) {
 			print "\nBogus: $pkgname (from $file)\n";
 
 		} elsif ($pkgname =~ /(.*)-(\d.*)/) {
-			if ($pkgdb) {
-				my ($pkgver) = $pkgdb->add($1, $2);
+			if ($pkgdata) {
+				my ($pkgver) = $pkgdata->add($1, $2);
 
 				debug("add $1 $2");
 
@@ -1010,15 +1010,15 @@ sub chdir_or_fail($dir) {
 	return $prev_dir;
 }
 
-sub load_pkgdb_from_cache($fname) {
+sub load_pkgdata_from_cache($fname) {
 	open(STORE, '<', $fname)
 	    or die("Cannot read pkgsrc store from $fname: $!\n");
 	my ($pkgver);
-	$pkgdb = PkgDb->new();
+	$pkgdata = PkgData->new();
 	while (defined(my $line = <STORE>)) {
 		chomp($line);
 		if ($line =~ m"^ package \t ([^\t]+) \t ([^\t]+) $"x) {
-			$pkgver = $pkgdb->add($1, $2);
+			$pkgver = $pkgdata->add($1, $2);
 		} elsif ($line =~ m"^ var \t ([^\t]+) \t (.*) $"x) {
 			$pkgver->var($1, $2);
 		} elsif ($line =~ m"^ sub ") {
@@ -1034,14 +1034,14 @@ sub load_pkgdb_from_cache($fname) {
 #
 sub scan_pkgsrc_makefiles($pkgsrcdir) {
 
-	return if defined $pkgdb; # Already done.
+	return if defined $pkgdata; # Already done.
 
 	if ($opt{I}) {
-		load_pkgdb_from_cache($opt{I});
+		load_pkgdata_from_cache($opt{I});
 		return;
 	}
 
-	$pkgdb = PkgDb->new();
+	$pkgdata = PkgData->new();
 	my @categories = list_pkgsrc_categories($pkgsrcdir);
 
 	if ($opt{L}) {
@@ -1061,7 +1061,7 @@ sub scan_pkgsrc_makefiles($pkgsrcdir) {
 	if (!$opt{L}) {
 		my ($len);
 
-		$_ = scalar $pkgdb->pkgvers_all . ' packages';
+		$_ = scalar $pkgdata->pkgvers_all . ' packages';
 		$len = @categories - length($_);
 		verbose("\b" x @categories, $_, ' ' x $len, "\b" x $len, "\n");
 	}
@@ -1070,7 +1070,7 @@ sub scan_pkgsrc_makefiles($pkgsrcdir) {
 # Cross reference all depends
 #
 sub pkgsrc_check_depends() {
-	foreach my $pkgver ($pkgdb->pkgvers_all) {
+	foreach my $pkgver ($pkgdata->pkgvers_all) {
 		my $depends = $pkgver->var('DEPENDS');
 		next unless defined $depends;
 
@@ -1234,7 +1234,7 @@ sub check_pkgsrc_distfiles_vs_distinfo($pkgsrcdir, $pkgdistdir, $check_unref,
 	sort keys %unref_distfiles;
 }
 
-sub store_pkgdb_in_cache($db, $fname) {
+sub store_pkgdata_in_cache($db, $fname) {
 	open(STORE, '>', $fname)
 	    or die("Cannot save package data to $fname: $!\n");
 	foreach my $pkgver ($db->pkgvers_all) {
@@ -1308,7 +1308,7 @@ sub check_prebuilt_packages() {
 		$pkg = canonicalize_pkgname($pkg);
 
 		my ($pkgs);
-		if ($pkgs = $pkgdb->pkgs($pkg)) {
+		if ($pkgs = $pkgdata->pkgs($pkg)) {
 			my ($pkgver) = $pkgs->pkgver($ver);
 
 			if (!defined $pkgver) {
@@ -1446,7 +1446,7 @@ sub remove_distfiles($pkgsrcdir, $pkgdistdir) {
 			next;
 		}
 
-		foreach my $pkgver ($pkgdb->pkgvers_by_pkgbase($1)) {
+		foreach my $pkgver ($pkgdata->pkgvers_by_pkgbase($1)) {
 			next if $pkgver->var('dir') =~ /-current/;
 			push @installed_pkgvers, $pkgver;
 			last;
@@ -1479,7 +1479,7 @@ sub remove_distfiles($pkgsrcdir, $pkgdistdir) {
 
 sub list_broken_packages($pkgsrcdir) {
 	scan_pkgsrc_makefiles($pkgsrcdir);
-	foreach my $pkgver ($pkgdb->pkgvers_all) {
+	foreach my $pkgver ($pkgdata->pkgvers_all) {
 		my $broken = $pkgver->var('BROKEN');
 		next unless $broken;
 		print $pkgver->pkgname . ": $broken\n";
@@ -1519,7 +1519,7 @@ sub list_packages_not_in_SUBDIR($pkgsrcdir) {
 	}
 
 	scan_pkgsrc_makefiles($pkgsrcdir);
-	foreach my $pkgver ($pkgdb->pkgvers_all) {
+	foreach my $pkgver ($pkgdata->pkgvers_all) {
 		my $pkgpath = $pkgver->var('dir');
 		if (!defined $in_subdir{$pkgpath}) {
 			print "$pkgpath: Not in SUBDIR\n";
@@ -1532,7 +1532,7 @@ sub generate_map_file($pkgsrcdir, $fname) {
 
 	scan_pkgsrc_makefiles($pkgsrcdir);
 	open(TABLE, '>', $tmpfile) or fail("Cannot write '$tmpfile': $!");
-	foreach my $pkgver ($pkgdb->pkgvers_all) {
+	foreach my $pkgver ($pkgdata->pkgvers_all) {
 		printf TABLE "%s\t%s\t%s\n",
 		    $pkgver->pkgbase,
 		    $pkgver->var('dir'),
@@ -1554,7 +1554,7 @@ sub check_outdated_installed_packages($pkgsrcdir) {
 		print map { "$_\n" } @warnings;
 		next unless $pkgname =~ /^([^*?[]+)-([\d*?[].*)/;
 
-		foreach my $pkgver ($pkgdb->pkgvers_by_pkgbase($1)) {
+		foreach my $pkgver ($pkgdata->pkgvers_by_pkgbase($1)) {
 			next if $pkgver->var('dir') =~ /-current/;
 			push @update, $pkgver;
 			last;
@@ -1651,7 +1651,7 @@ sub main() {
 
 	if ($opt{E}) {
 		scan_pkgsrc_makefiles($pkgsrcdir);
-		store_pkgdb_in_cache($pkgdb, $opt{E});
+		store_pkgdata_in_cache($pkgdata, $opt{E});
 	}
 }
 
@@ -1659,7 +1659,7 @@ sub export_for_test() {
 	({
 	    'opt'          => \%opt,
 	    'default_vars' => $default_vars,
-	    'pkgdb'        => $pkgdb,
+	    'pkgdata'      => $pkgdata,
 	});
 }
 
