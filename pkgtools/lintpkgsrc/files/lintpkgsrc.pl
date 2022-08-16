@@ -1,5 +1,5 @@
 #!@PERL5@
-# $NetBSD: lintpkgsrc.pl,v 1.104 2022/08/16 20:06:05 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.105 2022/08/16 20:10:32 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -201,6 +201,7 @@ sub listdir($base, $dir = undef) {
 }
 
 sub canonicalize_pkgname($pkgname) {
+	$pkgname =~ s,^lua\d+-,lua-,;
 	$pkgname =~ s,^py\d+(?:pth|)-,py-,;
 	$pkgname =~ s,^ruby\d+-,ruby-,;
 	$pkgname =~ s,^php\d+-,php-,;
@@ -705,6 +706,8 @@ sub get_default_makefile_vars() {
 	}
 
 	$default_vars->{PACKAGES} ||= $default_vars->{PKGSRCDIR} . '/packages';
+
+	$default_vars->{LUA_PKGPREFIX} = 'lua54';
 }
 
 # Determine if a package version is current. If not, report the correct
