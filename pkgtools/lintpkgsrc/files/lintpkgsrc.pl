@@ -1,5 +1,5 @@
 #!@PERL5@
-# $NetBSD: lintpkgsrc.pl,v 1.98 2022/08/16 18:47:50 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.99 2022/08/16 18:58:00 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -1405,29 +1405,18 @@ sub remove_distfiles($pkgsrcdir, $pkgdistdir) {
 	my (%distfiles, @pkgdistfiles);
 	foreach my $pkgver (sort @installed) {
 		my $pkgpath = $pkgver->var('dir');
-		next unless open(DISTINFO, "$pkgsrcdir/$pkgpath/distinfo");
-		while (<DISTINFO>) {
-			next unless m/^(\w+) ?\(([^\)]+)\) = (\S+)/;
-			my $dn = $2;
-			next if $dn =~ /^patch-[\w.+\-]+$/;
-			# Strip leading ./ which sometimes gets added
-			# because of DISTSUBDIR=.
-			$dn =~ s/^(\.\/)*//;
-			if (!defined $distfiles{$dn}) {
-				$distfiles{$dn}{name} = $dn;
-				push @pkgdistfiles, $dn;
-			}
+		foreach my $entry (load_distinfo("$pkgsrcdir/$pkgpath")) {
+			my $distfile = $entry->{distfile};
+			next if $distfile =~ /^patch-[\w.+\-]+$/;
+			next if defined $distfiles{$distfile};
+			$distfiles{$distfile}->{name} = $distfile;
+			push @pkgdistfiles, $distfile;
 		}
-		close(DISTINFO);
 	}
 
 	# distfiles downloaded on the current system
-	my @tmpdistfiles = listdir("$pkgdistdir", undef);
-	my @dldistfiles = grep { $_ ne 'pkg-vulnerabilities' } @tmpdistfiles;
-
-	# sort the two arrays to make searching a bit faster
-	@dldistfiles = sort @dldistfiles;
-	@pkgdistfiles = sort @pkgdistfiles;
+	my @dldistfiles = sort grep { $_ ne 'pkg-vulnerabilities' }
+	    listdir("$pkgdistdir", undef);
 
 	if ($opt{y}) {
 		# looking for files that are downloaded on the current system
@@ -1461,7 +1450,7 @@ sub remove_distfiles($pkgsrcdir, $pkgdistdir) {
 		# but belong to a currently installed package i.e. parented
 		my $found = 0;
 		my @parent;
-		foreach my $pkgdf (@pkgdistfiles) {
+		foreach my $pkgdf (sort @pkgdistfiles) {
 			foreach my $dldf (@dldistfiles) {
 				if ($pkgdf eq $dldf) {
 					$found = 1;
