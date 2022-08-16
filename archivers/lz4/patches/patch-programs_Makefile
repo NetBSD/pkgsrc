@@ -1,10 +1,10 @@
-$NetBSD: patch-programs_Makefile,v 1.12 2019/04/30 09:17:39 adam Exp $
+$NetBSD: patch-programs_Makefile,v 1.13 2022/08/16 13:02:56 adam Exp $
 
 Unlock install target. Use pkgsrc install scripts.
 
---- programs/Makefile.orig	2019-04-23 17:18:40.000000000 +0000
+--- programs/Makefile.orig	2022-08-15 22:45:31.000000000 +0000
 +++ programs/Makefile
-@@ -140,20 +140,20 @@ BINDIR      ?= $(exec_prefix)/bin
+@@ -165,20 +165,20 @@ BINDIR      ?= $(exec_prefix)/bin
  bindir      ?= $(BINDIR)
  DATAROOTDIR ?= $(prefix)/share
  datarootdir ?= $(DATAROOTDIR)
@@ -15,17 +15,17 @@ Unlock install target. Use pkgsrc install scripts.
  man1dir     ?= $(MAN1DIR)
  
  install: lz4
- 	@echo Installing binaries
--	@$(INSTALL_DIR) $(DESTDIR)$(bindir)/ $(DESTDIR)$(man1dir)/
--	@$(INSTALL_PROGRAM) lz4$(EXT) $(DESTDIR)$(bindir)/lz4$(EXT)
-+	@$(BSD_INSTALL_PROGRAM_DIR) $(DESTDIR)$(bindir)/ $(DESTDIR)$(man1dir)/
-+	@$(BSD_INSTALL_PROGRAM) lz4$(EXT) $(DESTDIR)$(bindir)/lz4$(EXT)
- 	@$(LN_S) lz4$(EXT) $(DESTDIR)$(bindir)/lz4c$(EXT)
- 	@$(LN_S) lz4$(EXT) $(DESTDIR)$(bindir)/lz4cat$(EXT)
- 	@$(LN_S) lz4$(EXT) $(DESTDIR)$(bindir)/unlz4$(EXT)
- 	@echo Installing man pages
--	@$(INSTALL_DATA) lz4.1 $(DESTDIR)$(man1dir)/lz4.1
-+	@$(BSD_INSTALL_MAN) lz4.1 $(DESTDIR)$(man1dir)/lz4.1
- 	@$(LN_SF) lz4.1 $(DESTDIR)$(man1dir)/lz4c.1
- 	@$(LN_SF) lz4.1 $(DESTDIR)$(man1dir)/lz4cat.1
- 	@$(LN_SF) lz4.1 $(DESTDIR)$(man1dir)/unlz4.1
+ 	@echo Installing binaries in $(DESTDIR)$(bindir)
+-	$(INSTALL_DIR) $(DESTDIR)$(bindir)/ $(DESTDIR)$(man1dir)/
+-	$(INSTALL_PROGRAM) lz4$(EXT) $(DESTDIR)$(bindir)/lz4$(EXT)
++	$(BSD_INSTALL_PROGRAM_DIR) $(DESTDIR)$(bindir)/ $(DESTDIR)$(man1dir)/
++	$(BSD_INSTALL_PROGRAM) lz4$(EXT) $(DESTDIR)$(bindir)/lz4$(EXT)
+ 	$(LN_SF) lz4$(EXT) $(DESTDIR)$(bindir)/lz4c$(EXT)
+ 	$(LN_SF) lz4$(EXT) $(DESTDIR)$(bindir)/lz4cat$(EXT)
+ 	$(LN_SF) lz4$(EXT) $(DESTDIR)$(bindir)/unlz4$(EXT)
+ 	@echo Installing man pages in $(DESTDIR)$(man1dir)
+-	$(INSTALL_DATA) lz4.1 $(DESTDIR)$(man1dir)/lz4.1
++	$(BSD_INSTALL_MAN) lz4.1 $(DESTDIR)$(man1dir)/lz4.1
+ 	$(LN_SF) lz4.1 $(DESTDIR)$(man1dir)/lz4c.1
+ 	$(LN_SF) lz4.1 $(DESTDIR)$(man1dir)/lz4cat.1
+ 	$(LN_SF) lz4.1 $(DESTDIR)$(man1dir)/unlz4.1
