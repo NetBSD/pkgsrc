@@ -1,5 +1,5 @@
 #!@PERL5@
-# $NetBSD: lintpkgsrc.pl,v 1.101 2022/08/16 19:15:43 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.102 2022/08/16 19:20:06 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -1143,10 +1143,10 @@ sub check_distinfo_hash($entry, $pkgpath, $distfiles, $warnings) {
 	}
 }
 
-# Extract all distinfo entries, then verify contents of distfiles
-#
-sub scan_pkgsrc_distfiles_vs_distinfo($pkgsrcdir, $pkgdistdir, $check_unref,
-				      $check_distinfo) {
+# Verify that the contents of the distfiles directory matches the distinfo
+# files in the packages.
+sub check_pkgsrc_distfiles_vs_distinfo($pkgsrcdir, $pkgdistdir, $check_unref,
+				       $check_distinfo) {
 	my (@categories);
 	my (%distfiles, %sumfiles, @distwarn, $numpkg);
 	my (%unref_distfiles);
@@ -1376,7 +1376,7 @@ sub debug_parse_makefiles(@args) {
 }
 
 sub check_distfiles($pkgsrcdir, $pkgdistdir) {
-	my @unref_distfiles = scan_pkgsrc_distfiles_vs_distinfo(
+	my @unref_distfiles = check_pkgsrc_distfiles_vs_distinfo(
 	    $pkgsrcdir, $pkgdistdir, $opt{o}, $opt{m});
 
 	return unless $opt{r};
