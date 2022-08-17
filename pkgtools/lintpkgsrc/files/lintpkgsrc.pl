@@ -1,5 +1,5 @@
 #!@PERL5@
-# $NetBSD: lintpkgsrc.pl,v 1.112 2022/08/17 18:22:26 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.113 2022/08/17 18:25:26 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -988,58 +988,55 @@ sub parse_makefile_pkgsrc($file) {
 		}
 	}
 
-	if (defined $pkgname) {
-		$pkgname = canonicalize_pkgname($pkgname);
+	defined $pkgname or return ();
 
-		my $pkgrevision = $vars->{PKGREVISION};
-		if (defined $pkgrevision && $pkgrevision !~ /^\s*$/) {
-			if ($pkgrevision =~ /^\$\{ (?:
-			    _CVS_PKGVERSION |
-			    _GIT_PKGVERSION_CMD |
-			    _HG_PKGVERSION_CMD |
-			    _SVN_PKGREVISION_CMD) :.* \}$ /x) {
-				# See wip/mk/*-package.mk.
-			} elsif ($pkgrevision =~ /\D/) {
-				print "\n";
-				print "Bogus: PKGREVISION $pkgrevision (from $file)\n";
+	$pkgname = canonicalize_pkgname($pkgname);
 
-			} elsif ($pkgrevision > 0) {
-				$pkgname .= "nb$pkgrevision";
-			}
+	my $pkgrevision = $vars->{PKGREVISION};
+	if (defined $pkgrevision && $pkgrevision !~ /^\s*$/) {
+		if ($pkgrevision =~ /^\$\{ (?:
+		    _CVS_PKGVERSION |
+		    _GIT_PKGVERSION_CMD |
+		    _HG_PKGVERSION_CMD |
+		    _SVN_PKGREVISION_CMD) :.* \}$ /x) {
+			# See wip/mk/*-package.mk.
+		} elsif ($pkgrevision =~ /\D/) {
+			print "\n";
+			print "Bogus: PKGREVISION $pkgrevision (from $file)\n";
+
+		} elsif ($pkgrevision > 0) {
+			$pkgname .= "nb$pkgrevision";
 		}
-
-		if ($pkgname =~ /\$/) {
-			print "\nBogus: $pkgname (from $file)\n";
-
-		} elsif ($pkgname =~ /(.*)-(\d.*)/) {
-			if (defined $pkgdata) {
-				my $pkgver = $pkgdata->add($1, $2);
-
-				debug("add $1 $2");
-
-				foreach my $var (qw(DEPENDS RESTRICTED OSVERSION_SPECIFIC BROKEN)) {
-					$pkgver->var($var, $vars->{$var});
-				}
-
-				if (defined $vars->{NO_BIN_ON_FTP}) {
-					$pkgver->var('RESTRICTED', 'NO_BIN_ON_FTP');
-				}
-
-				if ($file =~ m:([^/]+/[^/]+)/Makefile$:) {
-					$pkgver->var('dir', $1);
-				} else {
-					$pkgver->var('dir', 'unknown');
-				}
-			}
-		} else {
-			print "Cannot extract $pkgname version ($file)\n";
-		}
-
-		return ($pkgname, $vars);
-
-	} else {
-		return (undef);
 	}
+
+	if ($pkgname =~ /\$/) {
+		print "\nBogus: $pkgname (from $file)\n";
+
+	} elsif ($pkgname =~ /(.*)-(\d.*)/) {
+		if (defined $pkgdata) {
+			my $pkgver = $pkgdata->add($1, $2);
+
+			debug("add $1 $2");
+
+			foreach my $var (qw(DEPENDS RESTRICTED OSVERSION_SPECIFIC BROKEN)) {
+				$pkgver->var($var, $vars->{$var});
+			}
+
+			if (defined $vars->{NO_BIN_ON_FTP}) {
+				$pkgver->var('RESTRICTED', 'NO_BIN_ON_FTP');
+			}
+
+			if ($file =~ m:([^/]+/[^/]+)/Makefile$:) {
+				$pkgver->var('dir', $1);
+			} else {
+				$pkgver->var('dir', 'unknown');
+			}
+		}
+	} else {
+		print "Cannot extract $pkgname version ($file)\n";
+	}
+
+	($pkgname, $vars);
 }
 
 
