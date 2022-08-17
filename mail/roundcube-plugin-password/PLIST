@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2021/11/20 15:13:32 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/08/17 15:41:43 taca Exp $
 share/examples/roundcube/plugins/password/config.inc.php
 share/roundcube/plugins/password/README
 share/roundcube/plugins/password/composer.json
@@ -17,6 +17,7 @@ share/roundcube/plugins/password/drivers/ldap.php
 share/roundcube/plugins/password/drivers/ldap_exop.php
 share/roundcube/plugins/password/drivers/ldap_ppolicy.php
 share/roundcube/plugins/password/drivers/ldap_simple.php
+share/roundcube/plugins/password/drivers/mailcow.php
 share/roundcube/plugins/password/drivers/miab.php
 share/roundcube/plugins/password/drivers/modoboa.php
 share/roundcube/plugins/password/drivers/pam.php
@@ -38,7 +39,6 @@ share/roundcube/plugins/password/helpers/chgdbmailusers.c
 share/roundcube/plugins/password/helpers/chgsaslpasswd.c
 share/roundcube/plugins/password/helpers/chgvirtualminpasswd.c
 share/roundcube/plugins/password/helpers/chpass-wrapper.py
-share/roundcube/plugins/password/helpers/dovecot_hmacmd5.php
 share/roundcube/plugins/password/helpers/passwd-expect
 share/roundcube/plugins/password/localization/ar.inc
 share/roundcube/plugins/password/localization/ar_SA.inc
