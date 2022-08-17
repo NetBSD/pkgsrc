@@ -1,5 +1,5 @@
 #!@PERL5@
-# $NetBSD: lintpkgsrc.pl,v 1.107 2022/08/16 20:54:35 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.108 2022/08/17 17:26:35 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -133,6 +133,51 @@ sub pkgs($self, $pkgbase = undef) {
 	defined $pkgbase
 	    ? $self->{$pkgbase}
 	    : sort { $a->pkgbase cmp $b->pkgbase } values %$self;
+}
+
+sub load($class, $fname) {
+	open(STORE, '<', $fname)
+	    or die("Cannot read package data from $fname: $!\n");
+	my ($pkgver);
+	my $self = $class->new();
+	while (defined(my $line = <STORE>)) {
+		chomp($line);
+		if ($line =~ m"^ package \t ([^\t]+) \t ([^\t]+) $"x) {
+			$pkgver = $self->add($1, $2);
+		} elsif ($line =~ m"^ var \t ([^\t]+) \t (.*) $"x) {
+			$pkgver->var($1, $2);
+		} elsif ($line =~ m"^ sub ") {
+			die "Outdated cache format in '$fname'\n";
+		} else {
+			die "Invalid line '$line' in cache '$fname'\n";
+		}
+	}
+	close(STORE) or die;
+}
+
+sub store($self, $fname) {
+	open(STORE, '>', $fname)
+	    or die("Cannot save package data to $fname: $!\n");
+	foreach my $pkgver ($self->pkgvers_all) {
+		my $pkgbase = $pkgver->pkgbase;
+		my $pkgversion = $pkgver->pkgversion;
+
+		$pkgbase =~ /^\S+$/
+		    or die "cannot store package name '$pkgbase'\n";
+		$pkgversion =~ /^\S+$/
+		    or die "cannot store package version '$pkgversion'\n";
+		print STORE "package\t$pkgbase\t$pkgversion\n";
+
+		foreach my $varname (sort $pkgver->vars) {
+			my $value = $pkgver->var($varname);
+			$varname =~ /^\S+$/
+			    or die "cannot store variable name '$varname'\n";
+			$value =~ /^.*$/
+			    or die "cannot store variable value '$value'\n";
+			print STORE "var\t$varname\t$value\n";
+		}
+	}
+	close(STORE) or die("Cannot save package data to $fname: $!\n");
 }
 
 package main;
@@ -1010,26 +1055,6 @@ sub chdir_or_fail($dir) {
 	return $prev_dir;
 }
 
-sub load_pkgdata_from_cache($fname) {
-	open(STORE, '<', $fname)
-	    or die("Cannot read pkgsrc store from $fname: $!\n");
-	my ($pkgver);
-	$pkgdata = PkgData->new();
-	while (defined(my $line = <STORE>)) {
-		chomp($line);
-		if ($line =~ m"^ package \t ([^\t]+) \t ([^\t]+) $"x) {
-			$pkgver = $pkgdata->add($1, $2);
-		} elsif ($line =~ m"^ var \t ([^\t]+) \t (.*) $"x) {
-			$pkgver->var($1, $2);
-		} elsif ($line =~ m"^ sub ") {
-			die "Outdated cache format in '$fname'\n";
-		} else {
-			die "Invalid line '$line' in cache '$fname'\n";
-		}
-	}
-	close(STORE);
-}
-
 # Generate pkgname->category/pkg mapping, optionally check DEPENDS
 #
 sub scan_pkgsrc_makefiles($pkgsrcdir) {
@@ -1037,7 +1062,7 @@ sub scan_pkgsrc_makefiles($pkgsrcdir) {
 	return if defined $pkgdata; # Already done.
 
 	if ($opt{I}) {
-		load_pkgdata_from_cache($opt{I});
+		$pkgdata = PkgData->load($opt{I});
 		return;
 	}
 
@@ -1232,32 +1257,6 @@ sub check_pkgsrc_distfiles_vs_distinfo($pkgsrcdir, $pkgdistdir, $check_unref,
 	}
 
 	sort keys %unref_distfiles;
-}
-
-sub store_pkgdata_in_cache($db, $fname) {
-	open(STORE, '>', $fname)
-	    or die("Cannot save package data to $fname: $!\n");
-	foreach my $pkgver ($db->pkgvers_all) {
-		my $pkgbase = $pkgver->pkgbase;
-		my $pkgversion = $pkgver->pkgversion;
-
-		$pkgbase =~ /^\S+$/
-		    or die "cannot store package name '$pkgbase'\n";
-		$pkgversion =~ /^\S+$/
-		    or die "cannot store package version '$pkgversion'\n";
-		print STORE "package\t$pkgbase\t$pkgversion\n";
-
-		foreach my $varname (sort $pkgver->vars) {
-			my $value = $pkgver->var($varname);
-			$varname =~ /^\S+$/
-			    or die "cannot store variable name '$varname'\n";
-			$value =~ /^.*$/
-			    or die "cannot store variable value '$value'\n";
-			print STORE "var\t$varname\t$value\n";
-		}
-	}
-	close(STORE)
-	    or die("Cannot save package data to $fname: $!\n");
 }
 
 # Remember to update manual page when modifying option list
@@ -1651,7 +1650,7 @@ sub main() {
 
 	if ($opt{E}) {
 		scan_pkgsrc_makefiles($pkgsrcdir);
-		store_pkgdata_in_cache($pkgdata, $opt{E});
+		$pkgdata->store($opt{E});
 	}
 }
 

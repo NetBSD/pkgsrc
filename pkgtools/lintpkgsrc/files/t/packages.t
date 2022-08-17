@@ -1,4 +1,4 @@
-# $NetBSD: packages.t,v 1.16 2022/08/16 20:54:35 rillig Exp $
+# $NetBSD: packages.t,v 1.17 2022/08/17 17:26:36 rillig Exp $
 #
 # Tests for the internal package database, which stores the packages and their
 # versions, and a few variables like DEPENDS and BROKEN.
@@ -104,7 +104,7 @@ sub test_package_variables() {
 }
 
 # Demonstrate how the package data is stored in the cache file.
-sub test_store_order() {
+sub test_pkgdata_store() {
 	my $pkgdata = PkgData->new();
 
 	my $pkgbase_1_0 = $pkgdata->add('pkgbase', '1.0');
@@ -120,7 +120,7 @@ sub test_store_order() {
 	$pkgbase_1_15->var('COMMENT', 'Version 1.15');
 
 	my $tmpfile = File::Temp->new();
-	store_pkgdata_in_cache($pkgdata, $tmpfile->filename);
+	$pkgdata->store($tmpfile->filename);
 	my $stored = read_file($tmpfile->filename);
 
 	# XXX: 1.3nb4 should be sorted before 1.15.
@@ -141,4 +141,4 @@ test_pkgver();
 test_pkgs();
 test_pkgdata();
 test_package_variables();
-test_store_order();
+test_pkgdata_store();
