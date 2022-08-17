@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2022/08/02 08:39:47 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2022/08/17 09:01:51 tnn Exp $
 
 DISTNAME=	Math-Pari-2.030523
 PKGNAME=	p5-${DISTNAME}
@@ -19,7 +19,7 @@ LICENSE=	gnu-gpl-v2
 #MAKE_ENV+=		MP_NOGNUPLOT=1
 MAKE_PARAMS+=		pariprefix=${PREFIX:Q}
 PERL5_PACKLIST=		auto/Math/Pari/.packlist
-CFLAGS.NetBSD+=		-DUSE_STANDALONE_PARILIB=1
+CFLAGS+=		-DUSE_STANDALONE_PARILIB=1
 
 post-extract:
 	${RM} ${WRKSRC}/libPARI/Makefile.PL
