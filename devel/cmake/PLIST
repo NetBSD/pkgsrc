@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.69 2022/04/18 11:01:33 adam Exp $
+@comment $NetBSD: PLIST,v 1.70 2022/08/17 13:38:30 tnn Exp $
 bin/ccmake
 bin/cmake
 bin/cpack
@@ -3031,6 +3031,5 @@ share/cmake-${CMAKE_API}/Templates/Windows/Windows_TemporaryKey.pfx
 share/cmake-${CMAKE_API}/include/cmCPluginAPI.h
 share/doc/cmake-${CMAKE_API}/Copyright.txt
 share/doc/cmake-${CMAKE_API}/cmsys/Copyright.txt
-share/emacs/site-lisp/cmake-mode.el
 share/vim/vimfiles/indent/cmake.vim
 share/vim/vimfiles/syntax/cmake.vim
