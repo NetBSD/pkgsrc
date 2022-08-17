@@ -1,0 +1,12 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2022/08/17 15:44:16 hauke Exp $
+
+Vaultwarden stores its data under ${VAULTWARDEN_DATADIR}, the
+service and its daaemonize(8) wrapper log into ${VAULTWARDEN_LOGDIR}.
+
+Vaultwarden binds to localhost only, and is best run behind a reverse
+proxy, see
+<https://github.com/dani-garcia/vaultwarden/wiki/Proxy-examples> and
+the enclosed Apache config snippet.
+
+===========================================================================
