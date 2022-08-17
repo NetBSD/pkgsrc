@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3832 2022/08/17 17:44:22 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3833 2022/08/17 17:46:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5671,3 +5671,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added security/vaultwarden version 1.25.2 [hauke 2022-08-17]
 	Updated sysutils/xentools413 to 4.13.4nb6 [wiz 2022-08-17]
 	Updated textproc/py-tomlkit to 0.11.4 [wiz 2022-08-17]
+	Updated security/gpgme to 1.18.0 [wiz 2022-08-17]
