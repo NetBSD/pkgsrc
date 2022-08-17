@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3829 2022/08/17 15:43:18 taca Exp $
+$NetBSD: CHANGES-2022,v 1.3830 2022/08/17 15:45:23 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5668,3 +5668,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated mail/roundcube-plugin-enigma to 1.6.0 [taca 2022-08-17]
 	Updated mail/roundcube-plugin-password to 1.6.0 [taca 2022-08-17]
 	Updated mail/roundcube-plugin-zipdownload to 1.6.0 [taca 2022-08-17]
+	Added security/vaultwarden version 1.25.2 [hauke 2022-08-17]
