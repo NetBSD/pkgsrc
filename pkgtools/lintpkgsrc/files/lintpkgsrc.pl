@@ -1,5 +1,5 @@
 #!@PERL5@
-# $NetBSD: lintpkgsrc.pl,v 1.116 2022/08/17 18:45:16 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.117 2022/08/17 18:48:09 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -1252,8 +1252,8 @@ sub check_pkgsrc_distfiles_vs_distinfo($pkgsrcdir, $pkgdistdir, $check_unref,
 # Remember to update manual page when modifying option list
 #
 sub usage_and_exit($status) {
-	print "Usage: lintpkgsrc [opts] [makefiles]
-opts:
+	print "Usage: lintpkgsrc [options] [makefiles]
+options:
   -h : This help.	 [see lintpkgsrc(1) for more information]
 
 Installed package options:		Distfile options:
