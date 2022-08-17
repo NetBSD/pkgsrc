@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2022/05/24 11:50:12 adam Exp $
+$NetBSD: distinfo,v 1.9 2022/08/17 17:05:14 tnn Exp $
 
 BLAKE2s (pgpool-II-4.3.2.tar.gz) = 11cae621379e32e1d16f4d738483d521b8b5bcc9404ad6a435983fe557131835
 SHA512 (pgpool-II-4.3.2.tar.gz) = 771426257eddb5c48504c80a2c8cccf44a18f7ea50df55654b7e9e017bda561a73a3e1f0db79785785ff6893d6df26f73b55310d0184ef3301838d12290d3d4c
@@ -8,6 +8,7 @@ SHA1 (patch-src_Makefile.in) = 467e7b9a2acf5459b29141812dc0e1ad6d01f72f
 SHA1 (patch-src_auth_pool__hba.c) = e677effdc067273342adedfd0611661fc03ca059
 SHA1 (patch-src_include_pool.h) = eae2f78a996e3204d75d23378ad6e95333282926
 SHA1 (patch-src_include_utils_fe__ports.h) = 7aea07d78cf2295844286935a330a90e0e411825
+SHA1 (patch-src_main_pgpool__logger.c) = edf1a6c90f13dbe1810e921af08f9d2fda5c91d0
 SHA1 (patch-src_main_pgpool__main.c) = 1e680d9143bc745618ecdc61cb4791a90719a5ff
 SHA1 (patch-src_sample_pgpool.conf.sample) = 3a12aa1a9107a77b536912ab46d98888c3640ef6
 SHA1 (patch-src_tools_pgproto_read.c) = a533898b74eb2c43a8aa24285f8cdd3d1e9ac2e2
