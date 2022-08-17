@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2022/05/24 11:50:12 adam Exp $
+# $NetBSD: Makefile,v 1.11 2022/08/17 17:05:14 tnn Exp $
 
 DISTNAME=	pgpool-II-4.3.2
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME:S/-II/2/}
@@ -6,7 +6,7 @@ CATEGORIES=	databases
 MASTER_SITES=	https://www.pgpool.net/mediawiki/images/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.pgpool.net/mediawiki/
+HOMEPAGE=	https://www.pgpool.net/mediawiki/index.php/Main_Page
 COMMENT=	Middleware between PostgreSQL servers and a PostgreSQL database client
 LICENSE=	modified-bsd
 
