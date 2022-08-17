@@ -311,7 +311,8 @@ func (p *Pkglint) checkMode(dirent CurrPath, mode os.FileMode) {
 	pkgsrcRel := p.Pkgsrc.Rel(dirent)
 
 	p.Wip = pkgsrcRel.HasPrefixPath("wip")
-	p.Infrastructure = pkgsrcRel.HasPrefixPath("mk")
+	p.Infrastructure = pkgsrcRel.HasPrefixPath("mk") ||
+		pkgsrcRel.HasPrefixPath("wip/mk")
 	pkgsrcdir := p.findPkgsrcTopdir(dir)
 	if pkgsrcdir.IsEmpty() {
 		G.Logger.TechErrorf("",
