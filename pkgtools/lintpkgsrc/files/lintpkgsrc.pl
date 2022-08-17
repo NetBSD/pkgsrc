@@ -1,5 +1,5 @@
 #!@PERL5@
-# $NetBSD: lintpkgsrc.pl,v 1.108 2022/08/17 17:26:35 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.109 2022/08/17 17:40:09 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -153,6 +153,7 @@ sub load($class, $fname) {
 		}
 	}
 	close(STORE) or die;
+	$self;
 }
 
 sub store($self, $fname) {
@@ -797,11 +798,8 @@ sub list_pkgsrc_categories($pkgsrcdir) {
 	my (@categories);
 
 	opendir(BASE, $pkgsrcdir) || die("Unable to opendir($pkgsrcdir): $!");
-	@categories =
-	    grep(substr($_, 0, 1) ne '.'
-		&& $_ ne 'CVS'
-		&& -f "$pkgsrcdir/$_/Makefile",
-		readdir(BASE));
+	@categories = grep { !/^\./ && -f "$pkgsrcdir/$_/Makefile" }
+	    readdir(BASE);
 	closedir(BASE);
 	@categories;
 }
