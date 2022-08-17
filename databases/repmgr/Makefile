@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2022/05/26 08:44:11 adam Exp $
+# $NetBSD: Makefile,v 1.20 2022/08/17 16:41:18 tnn Exp $
 
 DISTNAME=	repmgr-5.3.2
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	postgresql${PGSQL_VERSION}-server>=0:../../databases/postgresql${PGSQL_VERSION}-server
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake flex
 GNU_CONFIGURE=		yes
 PKG_SYSCONFSUBDIR=	postgresql
 
