@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2021/12/08 16:06:09 adam Exp $
+# $NetBSD: Makefile,v 1.3 2022/08/17 08:17:10 tnn Exp $
 
 DISTNAME=	wget2-2.0.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GNU:=wget/}
 EXTRACT_SUFX=	.tar.lz
@@ -17,6 +17,7 @@ USE_TOOLS+=		gmake pkg-config
 USE_PKGLOCALEDIR=	yes
 
 CONFIGURE_ARGS+=	--disable-doc # Needs pandoc
+CONFIGURE_ARGS+=	--disable-lzip # Needs wip/lzlib
 
 PKGCONFIG_OVERRIDE+=	libwget.pc.in
 
@@ -27,6 +28,7 @@ post-install:
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
+.include "../../archivers/zstd/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/pcre2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
