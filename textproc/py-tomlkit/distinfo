@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2022/08/10 09:07:59 adam Exp $
+$NetBSD: distinfo,v 1.10 2022/08/17 17:44:12 wiz Exp $
 
-BLAKE2s (tomlkit-0.11.3.tar.gz) = 5fb823dade36e2894e896cddae52d37fd2554d99ddd8ef389d242c2279a9c375
-SHA512 (tomlkit-0.11.3.tar.gz) = 09582776d7472647dadc387521e380056cf0a0d7ba68f7bfd423046caea2ecb068cc24cafceb54cecdc2754be9b3a4ad0cc40c7a0027e27b866491ade5b911c7
-Size (tomlkit-0.11.3.tar.gz) = 187825 bytes
+BLAKE2s (tomlkit-0.11.4.tar.gz) = f3da250caba5b7404829b176f9a2c8b43b33efbdbcd13ac906b2f9694c2572e9
+SHA512 (tomlkit-0.11.4.tar.gz) = b68b5d2c5f2ad7aa2cbeac308008467f22c0c9975862506bcabbfdf1de677dbaab1c5cead17c68f4bf2977a7077ddcc46ef6383bd8a87e2ac1252641ae463335
+Size (tomlkit-0.11.4.tar.gz) = 187608 bytes
