@@ -1,17 +1,19 @@
-# $NetBSD: Makefile,v 1.11 2021/12/22 16:07:04 schmonz Exp $
+# $NetBSD: Makefile,v 1.12 2022/08/17 12:06:38 tnn Exp $
 
 DISTNAME=	s6-networking-2.5.1.0
 CATEGORIES=	net
 MASTER_SITES=	${HOMEPAGE}
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${MANPAGES}
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${MANPAGES_DIST}
 
 MAINTAINER=	schmonz@NetBSD.org
 HOMEPAGE=	https://skarnet.org/software/s6-networking/
 COMMENT=	Suite of small networking utilities
 LICENSE=	isc
 
-MANPAGES=		v2.5.0.0.3.tar.gz
-SITES.${MANPAGES}=	${MASTER_SITE_GITHUB:=flexibeast/s6-networking-man-pages/archive/}
+# man-pages version is usually not exactly in-sync with PKGVERSION_NOREV
+MANPAGES_VERSION=	2.5.0.0.3
+MANPAGES_DIST=		s6-networking-man-pages-${MANPAGES_VERSION}.tar.gz
+SITES.${MANPAGES_DIST}=	-${MASTER_SITE_GITHUB:=flexibeast/s6-networking-man-pages/archive/}v${MANPAGES_VERSION}.tar.gz
 
 USE_TOOLS+=		gmake
 HAS_CONFIGURE=		yes
