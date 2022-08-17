@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.44 2020/03/14 14:13:02 tnn Exp $
+# $NetBSD: Makefile.common,v 1.45 2022/08/17 19:59:39 rillig Exp $
 # used by devel/java-subversion/Makefile
 # used by devel/p5-subversion/Makefile
 # used by devel/py-subversion/Makefile
@@ -43,8 +43,6 @@ CHECK_PORTABILITY_SKIP+=	tools/dev/iz/ff2csv.command	# unused
 
 .if !empty(PKG_OPTIONS:Mserf)
 CONFIGURE_ARGS+=	--with-serf=${BUILDLINK_PREFIX.serf}
-.else
-CONFIGURE_ARGS+=	--with-neon=${BUILDLINK_PREFIX.neon}
 .endif
 
 # workaround: does not install info file, but does create directory
