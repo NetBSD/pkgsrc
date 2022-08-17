@@ -69,6 +69,7 @@ func newVersion(vstr string) *version {
 			num := lex.NextBytesSet(textproc.Digit)
 			v.nb, _ = strconv.Atoi(num)
 		case lex.TestByteSet(textproc.Lower):
+			v.add(0)
 			v.add(int(lex.Rest()[0] - 'a' + 1))
 			lex.Skip(1)
 		default:
