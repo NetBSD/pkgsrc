@@ -1,0 +1,15 @@
+$NetBSD: patch-Auxiliary_CMakeLists.txt,v 1.1 2022/08/17 13:38:30 tnn Exp $
+
+Don't install the emacs mode here, it is provided by devel/cmake-mode.
+devel/cmake doesn't supply the pkgsrc emacs integration nor .elc files.
+
+--- Auxiliary/CMakeLists.txt.orig	2022-07-28 15:46:12.000000000 +0000
++++ Auxiliary/CMakeLists.txt
+@@ -10,7 +10,6 @@ install(DIRECTORY vim/indent vim/syntax 
+ if(NOT CMake_INSTALL_EMACS_DIR)
+   set(CMake_INSTALL_EMACS_DIR ${CMAKE_XDGDATA_DIR}/emacs/site-lisp)
+ endif()
+-install(FILES cmake-mode.el DESTINATION ${CMake_INSTALL_EMACS_DIR})
+ 
+ install(FILES cmake.m4 DESTINATION ${CMAKE_XDGDATA_DIR}/aclocal)
+ add_subdirectory (bash-completion)
