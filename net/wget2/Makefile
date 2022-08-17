@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/08/17 08:17:10 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2022/08/17 08:18:24 tnn Exp $
 
 DISTNAME=	wget2-2.0.0
 PKGREVISION=	2
@@ -17,7 +17,7 @@ USE_TOOLS+=		gmake pkg-config
 USE_PKGLOCALEDIR=	yes
 
 CONFIGURE_ARGS+=	--disable-doc # Needs pandoc
-CONFIGURE_ARGS+=	--disable-lzip # Needs wip/lzlib
+CONFIGURE_ARGS+=	--without-lzip # Needs wip/lzlib
 
 PKGCONFIG_OVERRIDE+=	libwget.pc.in
 
