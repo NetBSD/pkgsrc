@@ -1,5 +1,5 @@
 #!@PERL5@
-# $NetBSD: lintpkgsrc.pl,v 1.111 2022/08/17 18:18:20 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.112 2022/08/17 18:22:26 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -952,23 +952,16 @@ sub package_globmatch($pkgmatch) {
 # Parse a pkgsrc package makefile and return the pkgname and set variables
 #
 sub parse_makefile_pkgsrc($file) {
-	my ($pkgname, $vars);
-
-	$vars = parse_makefile_vars($file, undef);
+	my $vars = parse_makefile_vars($file, undef);
 	defined $vars or return undef; # Missing Makefile.
 
-	if (defined $vars->{PKGNAME}) {
-		$pkgname = $vars->{PKGNAME};
-	} elsif (defined $vars->{DISTNAME}) {
-		$pkgname = $vars->{DISTNAME};
-	}
+	my $pkgname = $vars->{PKGNAME};
+	my $distname = $vars->{DISTNAME};
 
-	if (defined $vars->{PKGNAME}) {
-		debug("$file: PKGNAME=$vars->{PKGNAME}");
-	}
-	if (defined $vars->{DISTNAME}) {
-		debug("$file: DISTNAME=$vars->{DISTNAME}");
-	}
+	debug("$file: PKGNAME=$pkgname") if defined $pkgname;
+	debug("$file: DISTNAME=$distname") if defined $distname;
+
+	$pkgname = $distname unless defined $pkgname;
 
 	if (!defined $pkgname || $pkgname =~ /\$/ || $pkgname !~ /(.*)-(\d.*)/) {
 
