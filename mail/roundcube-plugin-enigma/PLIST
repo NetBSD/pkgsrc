@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/01/14 14:31:55 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/08/17 15:41:43 taca Exp $
 share/examples/roundcube/plugins/enigma/config.inc.php
 share/roundcube/plugins/enigma/README
 share/roundcube/plugins/enigma/bin/import_keys.sh
@@ -104,28 +104,8 @@ share/roundcube/plugins/enigma/localization/vi_VN.inc
 share/roundcube/plugins/enigma/localization/zh_CN.inc
 share/roundcube/plugins/enigma/localization/zh_TW.inc
 share/roundcube/plugins/enigma/openpgp.min.js
-share/roundcube/plugins/enigma/skins/classic/enigma.css
-share/roundcube/plugins/enigma/skins/classic/enigma.min.css
-share/roundcube/plugins/enigma/skins/classic/enigma.png
-share/roundcube/plugins/enigma/skins/classic/enigma_error.png
-share/roundcube/plugins/enigma/skins/classic/key.png
-share/roundcube/plugins/enigma/skins/classic/key_add.png
-share/roundcube/plugins/enigma/skins/classic/keys_toolbar.png
-share/roundcube/plugins/enigma/skins/classic/templates/keycreate.html
-share/roundcube/plugins/enigma/skins/classic/templates/keyimport.html
-share/roundcube/plugins/enigma/skins/classic/templates/keyinfo.html
-share/roundcube/plugins/enigma/skins/classic/templates/keys.html
-share/roundcube/plugins/enigma/skins/classic/templates/keysearch.html
 share/roundcube/plugins/enigma/skins/elastic/templates/keycreate.html
 share/roundcube/plugins/enigma/skins/elastic/templates/keyimport.html
 share/roundcube/plugins/enigma/skins/elastic/templates/keyinfo.html
 share/roundcube/plugins/enigma/skins/elastic/templates/keys.html
 share/roundcube/plugins/enigma/skins/elastic/templates/keysearch.html
-share/roundcube/plugins/enigma/skins/larry/enigma.css
-share/roundcube/plugins/enigma/skins/larry/enigma.min.css
-share/roundcube/plugins/enigma/skins/larry/enigma_icons.png
-share/roundcube/plugins/enigma/skins/larry/templates/keycreate.html
-share/roundcube/plugins/enigma/skins/larry/templates/keyimport.html
-share/roundcube/plugins/enigma/skins/larry/templates/keyinfo.html
-share/roundcube/plugins/enigma/skins/larry/templates/keys.html
-share/roundcube/plugins/enigma/skins/larry/templates/keysearch.html
