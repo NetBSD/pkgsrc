@@ -1,5 +1,5 @@
 #!@PERL5@
-# $NetBSD: lintpkgsrc.pl,v 1.118 2022/08/17 18:51:43 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.119 2022/08/17 18:53:40 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -721,7 +721,7 @@ sub get_default_makefile_vars() {
 	    : $conf_pkgsrcdir;
 
 	$default_vars->{DESTDIR} = '';
-	$default_vars->{LOCALBASE} = $conf_pkgsrcdir;
+	$default_vars->{LOCALBASE} = $conf_prefix;
 	$default_vars->{X11BASE} = $conf_x11base;
 
 	if (-f $conf_makeconf &&
