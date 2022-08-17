@@ -1,5 +1,5 @@
 #!@PERL5@
-# $NetBSD: lintpkgsrc.pl,v 1.110 2022/08/17 17:47:50 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.111 2022/08/17 18:18:20 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -999,8 +999,12 @@ sub parse_makefile_pkgsrc($file) {
 		$pkgname = canonicalize_pkgname($pkgname);
 
 		my $pkgrevision = $vars->{PKGREVISION};
-		if (defined $pkgrevision and not $pkgrevision =~ /^\s*$/) {
-			if ($pkgrevision =~ /^\$\{(_(CVS|GIT|HG|SVN)_PKGVERSION):.*\}$/) {
+		if (defined $pkgrevision && $pkgrevision !~ /^\s*$/) {
+			if ($pkgrevision =~ /^\$\{ (?:
+			    _CVS_PKGVERSION |
+			    _GIT_PKGVERSION_CMD |
+			    _HG_PKGVERSION_CMD |
+			    _SVN_PKGREVISION_CMD) :.* \}$ /x) {
 				# See wip/mk/*-package.mk.
 			} elsif ($pkgrevision =~ /\D/) {
 				print "\n";
