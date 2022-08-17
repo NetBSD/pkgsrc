@@ -1,5 +1,5 @@
 #!@PERL5@
-# $NetBSD: lintpkgsrc.pl,v 1.117 2022/08/17 18:48:09 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.118 2022/08/17 18:51:43 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -138,7 +138,7 @@ sub pkgs($self, $pkgbase = undef) {
 sub load($class, $fname) {
 	open(STORE, '<', $fname)
 	    or die("Cannot read package data from $fname: $!\n");
-	my ($pkgver);
+	my $pkgver;
 	my $self = $class->new();
 	while (defined(my $line = <STORE>)) {
 		chomp($line);
@@ -222,10 +222,9 @@ sub fail($msg) {
 #TODO this entire sub should be replaced with direct calls to
 #     File::Find
 sub listdir($base, $dir = undef) {
-	my ($thisdir);
 	my (@list, @thislist);
 
-	$thisdir = $base;
+	my $thisdir = $base;
 	if (defined $dir) {
 		$thisdir .= "/$dir";
 		$dir .= '/';
@@ -520,7 +519,7 @@ sub expand_modifiers($file, $varname, $left, $subvar, $mods, $right, $vars) {
 			$to =~ s/\\(\d)/\$$1/g; # Change \1 etc to $1
 			$to =~ s/\&/\$&/g;
 
-			my ($notfirst);
+			my $notfirst;
 			if ($global =~ s/1//) {
 				# FIXME: The modifier '1' applies to the first
 				#  occurrence in any word, it doesn't have to
@@ -725,9 +724,8 @@ sub get_default_makefile_vars() {
 	$default_vars->{LOCALBASE} = $conf_pkgsrcdir;
 	$default_vars->{X11BASE} = $conf_x11base;
 
-	my ($vars);
 	if (-f $conf_makeconf &&
-	    ($vars = parse_makefile_vars($conf_makeconf, undef))) {
+	    (my $vars = parse_makefile_vars($conf_makeconf, undef))) {
 		foreach my $var (keys %$vars) {
 			$default_vars->{$var} = $vars->{$var};
 		}
@@ -977,7 +975,7 @@ sub parse_makefile_pkgsrc($file) {
 			close(WTR) or die;
 			my @errors = <ERR>;
 			close(ERR) or die;
-			my ($makepkgname) = <RDR>;
+			my $makepkgname = <RDR>;
 			close(RDR) or die;
 			wait;
 			chomp @errors;
@@ -1159,9 +1157,9 @@ sub check_distinfo_hash($entry, $pkgpath, $distfiles, $warnings) {
 # files in the packages.
 sub check_pkgsrc_distfiles_vs_distinfo($pkgsrcdir, $pkgdistdir, $check_unref,
 				       $check_distinfo) {
-	my (@categories);
+	my @categories;
 	my (%distfiles, %sumfiles, @distwarn, $numpkg);
-	my (%unref_distfiles);
+	my %unref_distfiles;
 
 	@categories = list_pkgsrc_categories($pkgsrcdir);
 
@@ -1297,7 +1295,7 @@ sub check_prebuilt_packages() {
 		$pkg = canonicalize_pkgname($pkg);
 
 		if (my $pkgs = $pkgdata->pkgs($pkg)) {
-			my ($pkgver) = $pkgs->pkgver($ver);
+			my $pkgver = $pkgs->pkgver($ver);
 
 			if (!defined $pkgver) {
 				if ($opt{p}) {
@@ -1328,7 +1326,7 @@ sub check_prebuilt_packages() {
 
 		$prebuilt_pkgdir_cache{"$File::Find::dir/$_"} = 1;
 		if (-l $_) {
-			my ($dest) = readlink($_);
+			my $dest = readlink($_);
 
 			if (substr($dest, 0, 1) ne '/') {
 				$dest = "$File::Find::dir/$dest";
@@ -1494,7 +1492,7 @@ sub list_prebuilt_packages($pkgsrcdir) {
 }
 
 sub list_packages_not_in_SUBDIR($pkgsrcdir) {
-	my (%in_subdir);
+	my %in_subdir;
 	foreach my $cat (list_pkgsrc_categories($pkgsrcdir)) {
 		my $makefile = "$pkgsrcdir/$cat/Makefile";
 		my $vars = parse_makefile_vars($makefile, undef);
