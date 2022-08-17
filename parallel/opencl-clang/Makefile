@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2022/08/15 20:45:21 tnn Exp $
+# $NetBSD: Makefile,v 1.8 2022/08/17 15:34:36 tnn Exp $
 
 DISTNAME=	opencl-clang-14.0.0
 CATEGORIES=	parallel
@@ -15,6 +15,10 @@ USE_LANGUAGES=	c c++
 
 # C++14
 GCC_REQD+=	7 # sync with llvm/clang
+
+.for os in Darwin SunOS
+BUILDLINK_TRANSFORM.${os}+=	rm:-Wl,--version-script=${WRKDIR}/${DISTNAME}/common_clang.map
+.endfor
 
 .include "../../parallel/spirv-llvm-translator/buildlink3.mk"
 .include "../../lang/clang/buildlink3.mk"
