@@ -1,5 +1,5 @@
 #!@PERL5@
-# $NetBSD: lintpkgsrc.pl,v 1.114 2022/08/17 18:28:33 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.115 2022/08/17 18:36:10 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -564,7 +564,7 @@ sub parse_makefile_vars($file, $cwd = undef) {
 	if ($file eq $conf_makeconf) {
 		$vars{LINTPKGSRC} = 'YES';
 	} else {
-		%vars = %{$default_vars};
+		%vars = %$default_vars;
 	}
 	$vars{BSD_PKG_MK} = 'YES';
 
@@ -725,7 +725,7 @@ sub get_default_makefile_vars() {
 	my ($vars);
 	if (-f $conf_makeconf &&
 	    ($vars = parse_makefile_vars($conf_makeconf, undef))) {
-		foreach my $var (keys %{$vars}) {
+		foreach my $var (keys %$vars) {
 			$default_vars->{$var} = $vars->{$var};
 		}
 	}
@@ -746,12 +746,11 @@ sub get_default_makefile_vars() {
 	}
 
 	# Extract some variables from bsd.pkg.mk
-	my ($mkvars);
-	$mkvars = parse_makefile_vars(
+	my $mkvars = parse_makefile_vars(
 	    "$default_vars->{PKGSRCDIR}/mk/bsd.pkg.mk",
 	    "$default_vars->{PKGSRCDIR}/mk/scripts"
 	);
-	foreach my $varname (keys %{$mkvars}) {
+	foreach my $varname (keys %$mkvars) {
 		if ($varname =~ /_REQD$/ || $varname eq 'EXTRACT_SUFX') {
 			$default_vars->{$varname} = $mkvars->{$varname};
 		}
@@ -794,7 +793,7 @@ sub list_installed_packages() {
 # List top level pkgsrc categories
 #
 sub list_pkgsrc_categories($pkgsrcdir) {
-	my (@categories);
+	my @categories;
 
 	opendir(BASE, $pkgsrcdir) || die("Unable to opendir($pkgsrcdir): $!");
 	@categories = grep { !/^\./ && -f "$pkgsrcdir/$_/Makefile" }
@@ -1075,11 +1074,9 @@ sub scan_pkgsrc_makefiles($pkgsrcdir) {
 	}
 
 	if (!$opt{L}) {
-		my ($len);
-
-		$_ = scalar $pkgdata->pkgvers_all . ' packages';
-		$len = @categories - length($_);
-		verbose("\b" x @categories, $_, ' ' x $len, "\b" x $len, "\n");
+		my $summary = scalar $pkgdata->pkgvers_all . ' packages';
+		my $len = @categories - length($summary);
+		verbose("\b" x @categories, $summary, ' ' x $len, "\b" x $len, "\n");
 	}
 }
 
@@ -1182,14 +1179,13 @@ sub check_pkgsrc_distfiles_vs_distinfo($pkgsrcdir, $pkgdistdir, $check_unref,
 
 	# check each file in $pkgdistdir
 	find({ wanted => sub {
-		my ($dist);
 		if (-f $File::Find::name) {
 			my $distn = $File::Find::name;
 			$distn =~ s/$pkgdistdir\/?//g;
 			#pkg/47516 ignore cvs dirs
 			return if $distn =~ m/^\.cvsignore/;
 			return if $distn =~ m/^CVS\//;
-			if (!defined($dist = $distfiles{$distn})) {
+			if (!defined(my $dist = $distfiles{$distn})) {
 				$unref_distfiles{$distn} = 1;
 			} else {
 				push @{$sumfiles{$dist->{algorithm}}}, $distn;
@@ -1297,8 +1293,7 @@ sub check_prebuilt_packages() {
 
 		$pkg = canonicalize_pkgname($pkg);
 
-		my ($pkgs);
-		if ($pkgs = $pkgdata->pkgs($pkg)) {
+		if (my $pkgs = $pkgdata->pkgs($pkg)) {
 			my ($pkgver) = $pkgs->pkgver($ver);
 
 			if (!defined $pkgver) {
