@@ -1,5 +1,5 @@
 #!@PERL5@
-# $NetBSD: lintpkgsrc.pl,v 1.109 2022/08/17 17:40:09 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.110 2022/08/17 17:47:50 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -998,16 +998,16 @@ sub parse_makefile_pkgsrc($file) {
 	if (defined $pkgname) {
 		$pkgname = canonicalize_pkgname($pkgname);
 
-		if (defined $vars->{PKGREVISION}
-		    and not $vars->{PKGREVISION} =~ /^\s*$/) {
-			if ($vars->{PKGREVISION} =~ /^\$\{(_(CVS|GIT|HG|SVN)_PKGVERSION):.*\}$/) {
+		my $pkgrevision = $vars->{PKGREVISION};
+		if (defined $pkgrevision and not $pkgrevision =~ /^\s*$/) {
+			if ($pkgrevision =~ /^\$\{(_(CVS|GIT|HG|SVN)_PKGVERSION):.*\}$/) {
 				# See wip/mk/*-package.mk.
-			} elsif ($vars->{PKGREVISION} =~ /\D/) {
-				print "\nBogus: PKGREVISION $vars->{PKGREVISION} (from $file)\n";
+			} elsif ($pkgrevision =~ /\D/) {
+				print "\n";
+				print "Bogus: PKGREVISION $pkgrevision (from $file)\n";
 
-			} elsif ($vars->{PKGREVISION}) {
-				$pkgname .= 'nb';
-				$pkgname .= $vars->{PKGREVISION};
+			} elsif ($pkgrevision > 0) {
+				$pkgname .= "nb$pkgrevision";
 			}
 		}
 
@@ -1015,8 +1015,8 @@ sub parse_makefile_pkgsrc($file) {
 			print "\nBogus: $pkgname (from $file)\n";
 
 		} elsif ($pkgname =~ /(.*)-(\d.*)/) {
-			if ($pkgdata) {
-				my ($pkgver) = $pkgdata->add($1, $2);
+			if (defined $pkgdata) {
+				my $pkgver = $pkgdata->add($1, $2);
 
 				debug("add $1 $2");
 
