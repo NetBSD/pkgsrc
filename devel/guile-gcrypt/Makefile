@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2022/03/14 15:17:36 nikita Exp $
+# $NetBSD: Makefile,v 1.8 2022/08/17 12:01:11 tnn Exp $
 
-DISTNAME=	v0.3.0
-DIST_SUBDIR=	guile-gcrypt
-PKGNAME=	guile-gcrypt-${DISTNAME:S/v//}
+DISTNAME=	guile-gcrypt-0.3.0
 PKGREVISION=	1
 CATEGORIES=	devel
-MASTER_SITES=	https://notabug.org/cwebber/guile-gcrypt/archive/
+MASTER_SITES=	-https://notabug.org/cwebber/guile-gcrypt/archive/v${PKGVERSION_NOREV}.tar.gz
 
 MAINTAINER=	nikita@NetBSD.org
 HOMEPAGE=	https://notabug.org/cwebber/guile-gcrypt
