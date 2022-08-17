@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2021/12/08 16:05:00 adam Exp $
+# $NetBSD: Makefile,v 1.57 2022/08/17 10:25:33 tnn Exp $
 
 DISTNAME=		libsixel-1.8.6
 PKGREVISION=		8
@@ -17,6 +17,7 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
 
 CONFIGURE_ARGS+=	--disable-python
+CPPFLAGS.SunOS=		-D__EXTENSIONS__
 
 PKGCONFIG_OVERRIDE+=	libsixel.pc.in
 
