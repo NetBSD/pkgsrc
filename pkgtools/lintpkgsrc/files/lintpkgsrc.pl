@@ -1,5 +1,5 @@
 #!@PERL5@
-# $NetBSD: lintpkgsrc.pl,v 1.115 2022/08/17 18:36:10 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.116 2022/08/17 18:45:16 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -451,17 +451,18 @@ sub parse_makefile_line_include($file, $incfile,
 		verbose("Cannot open '$incfile' (from $file): $_ $!\n");
 		return;
 	}
+	chomp(my @inc_lines = <FILE>);
+	close(FILE);
+
+	my $new_curdir = dirname $incfile;
+	push @$incdirs, $new_curdir
+	    unless grep { $_ eq $new_curdir } @$incdirs;
 
 	# FIXME: .CURDIR doesn't change, but .PARSEDIR does.
-	my $NEWCURDIR = $incfile;
-	$NEWCURDIR =~ s#/[^/]*$##;
-	push @$incdirs, $NEWCURDIR
-	    unless grep { $_ eq $NEWCURDIR } @$incdirs;
-	unshift @$lines, ".CURDIR=" . $vars->{'.CURDIR'};
-	chomp(my @inc_lines = <FILE>);
-	unshift @$lines, @inc_lines;
-	unshift @$lines, ".CURDIR=$NEWCURDIR";
-	close(FILE);
+	unshift @$lines,
+	    ".CURDIR=$new_curdir",
+	    @inc_lines,
+	    ".CURDIR=" . $vars->{'.CURDIR'};
 }
 
 sub parse_makefile_line_var($varname, $op, $value, $vars) {
@@ -670,22 +671,24 @@ sub parse_makefile_vars($file, $cwd = undef) {
 
 	for (my $loop = 1; $loop != 0;) {
 		$loop = 0;
-		foreach my $key (keys %vars) {
-			next if index($vars{$key}, '$') == -1;
+		foreach my $varname (keys %vars) {
+			next if index($vars{$varname}, '$') == -1;
 
-			$_ = expand_exprs($vars{$key}, \%vars);
-			if ($_ ne $vars{$key}) {
-				$vars{$key} = $_;
+			$_ = expand_exprs($vars{$varname}, \%vars);
+			if ($_ ne $vars{$varname}) {
+				$vars{$varname} = $_;
 				$loop = 1;
 
-			} elsif ($vars{$key} =~ m#\$\{([\w.]+):([CS]([^{}])[^{}\3]+\3[^{}\3]*\3[g1]*(|:[^{}]+)|U[^{}]+)\}#) {
-				$loop ||= expand_modifiers($file, $key, $`, $1, $2, $', \%vars);
+			} elsif ($vars{$varname} =~ m#\$\{([\w.]+):([CS]([^{}])[^{}\3]+\3[^{}\3]*\3[g1]*(|:[^{}]+)|U[^{}]+)\}#) {
+				$loop ||= expand_modifiers($file, $varname, $`, $1, $2, $', \%vars);
 			}
 		}
 	}
 
-	foreach my $key (keys %vars) {
-		$vars{$key} =~ s/$magic_undefined//;
+	foreach my $varname (keys %vars) {
+		# XXX: Removing only the first magic string is strange; either
+		#  all of them or none of them should be removed.
+		$vars{$varname} =~ s/$magic_undefined//;
 	}
 	\%vars;
 }
