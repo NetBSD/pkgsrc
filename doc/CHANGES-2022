@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3828 2022/08/17 15:38:54 taca Exp $
+$NetBSD: CHANGES-2022,v 1.3829 2022/08/17 15:43:18 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5664,3 +5664,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated print/py-weasyprint to 56.1 [kleink 2022-08-17]
 	Updated news/sfeed to 1.6 [leot 2022-08-17]
 	Updated net/bind916 to 9.16.32 [taca 2022-08-17]
+	Updated mail/roundcube to 1.6.0 [taca 2022-08-17]
+	Updated mail/roundcube-plugin-enigma to 1.6.0 [taca 2022-08-17]
+	Updated mail/roundcube-plugin-password to 1.6.0 [taca 2022-08-17]
+	Updated mail/roundcube-plugin-zipdownload to 1.6.0 [taca 2022-08-17]
