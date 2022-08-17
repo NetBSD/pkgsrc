@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.60 2022/07/18 07:30:01 adam Exp $
+$NetBSD: distinfo,v 1.61 2022/08/17 11:21:08 tnn Exp $
 
 BLAKE2s (grpc-1.47.1.tar.gz) = 22c8f6e746a5ba5e1c1bc228599ecfb82382c9e06c6bb20036feb66ab0649f51
 SHA512 (grpc-1.47.1.tar.gz) = 4b7affab165137f8c9453cd162b9862227901ea86de77eb57489663e009a077c581c71104dc8e3910618c7ec786836243d4ad80aa52c0912c951881cba5bc70a
 Size (grpc-1.47.1.tar.gz) = 8198148 bytes
-BLAKE2s (v0.3.0.tar.gz) = be3ce863226f4aa422d9faa997fe29f9bb1743c0e804af3c5fad3c170e60ba42
-SHA512 (v0.3.0.tar.gz) = 39231a495dfdccfc8267d1e6af2ac624feea611a8691c10ec570de2194b352e4a9c3b0ce1606414fb98e5d77c66873bed4a9e56512efa12b267b8a91e0c5851e
-Size (v0.3.0.tar.gz) = 163404 bytes
+BLAKE2s (opencensus-proto-0.3.0.tar.gz) = be3ce863226f4aa422d9faa997fe29f9bb1743c0e804af3c5fad3c170e60ba42
+SHA512 (opencensus-proto-0.3.0.tar.gz) = 39231a495dfdccfc8267d1e6af2ac624feea611a8691c10ec570de2194b352e4a9c3b0ce1606414fb98e5d77c66873bed4a9e56512efa12b267b8a91e0c5851e
+Size (opencensus-proto-0.3.0.tar.gz) = 163404 bytes
 SHA1 (patch-CMakeLists.txt) = e3ec7dd3fdc01ac7b7afaa8abdac0dfb47bb5317
 SHA1 (patch-include_grpc_impl_codegen_port__platform.h) = a9d2f116c941d1ed23b18f25cf4fb638ed004181
 SHA1 (patch-src_core_ext_filters_client__channel_resolver_dns_c__ares_grpc__ares__ev__driver__posix.cc) = 0aa7fcadae98d1dd5229f0a695cffc1e9c1e8164

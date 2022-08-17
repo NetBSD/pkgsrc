@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2022/07/18 07:30:01 adam Exp $
+# $NetBSD: Makefile,v 1.60 2022/08/17 11:21:08 tnn Exp $
 
 DISTNAME=	grpc-1.47.1
 CATEGORIES=	net
@@ -27,14 +27,15 @@ CMAKE_ARGS+=	-DgRPC_ZLIB_PROVIDER=package
 
 # This should be included in the distfile, but it's not,
 # so CMakeFile.txt will try to download it.
-CENSUS_DIST=		v0.3.0.tar.gz
-SITES.${CENSUS_DIST}=	${MASTER_SITE_GITHUB:=census-instrumentation/opencensus-proto/archive/}
+CENSUS_VER=		0.3.0
+CENSUS_DIST=		opencensus-proto-${CENSUS_VER}.tar.gz
+SITES.${CENSUS_DIST}=	-${MASTER_SITE_GITHUB:=census-instrumentation/opencensus-proto/archive/}/v${CENSUS_VER}.tar.gz
 
 DISTFILES=	${DEFAULT_DISTFILES} ${CENSUS_DIST}
 
 post-extract:
-	cd ${WRKSRC}/third_party/opencensus-proto && \
-	${LN} -s ${WRKDIR}/opencensus-proto-0.3.0/src src
+	${RMDIR} ${WRKSRC}/third_party/opencensus-proto
+	${LN} -s ${WRKDIR}/opencensus-proto-* ${WRKSRC}/third_party/opencensus-proto
 
 .include "../../mk/atomic64.mk"
 .include "../../benchmarks/google-benchmark/buildlink3.mk"
