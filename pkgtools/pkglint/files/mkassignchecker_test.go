@@ -108,12 +108,17 @@ func (s *Suite) Test_MkAssignChecker_checkLeft__infrastructure(c *check.C) {
 		MkCvsID,
 		"_VARNAME=\t\tvalue",
 		"_SORTED_VARS.group=\tVARNAME")
+	t.CreateFileLines("wip/mk/infra.mk",
+		MkCvsID,
+		"_CVS_ENV+=\t\tCVS_RSH=ssh")
 	t.FinishSetUp()
 
 	G.Check(t.File("mk/infra.mk"))
+	G.Check(t.File("wip/mk/infra.mk"))
 
 	t.CheckOutputLines(
-		"WARN: ~/mk/infra.mk:2: _VARNAME is defined but not used.")
+		"WARN: ~/mk/infra.mk:2: _VARNAME is defined but not used.",
+		"WARN: ~/wip/mk/infra.mk:2: _CVS_ENV is defined but not used.")
 }
 
 func (s *Suite) Test_MkAssignChecker_checkLeft__documented_underscore(c *check.C) {
