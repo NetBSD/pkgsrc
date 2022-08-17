@@ -1,5 +1,5 @@
 #!@PERL5@
-# $NetBSD: lintpkgsrc.pl,v 1.113 2022/08/17 18:25:26 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.114 2022/08/17 18:28:33 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -555,7 +555,7 @@ sub parse_makefile_vars($file, $cwd = undef) {
 
 	open(FILE, $file) or return undef;
 	chomp(@lines = <FILE>);
-	close(FILE);
+	close(FILE) or die;
 
 	push @incdirs, '.';
 	push @incdirs, dirname($file);
@@ -785,10 +785,9 @@ sub invalid_version($pkgmatch) {
 }
 
 sub list_installed_packages() {
-	open(PKG_INFO, "$conf_pkg_info -e '*' |")
-	    or fail("Unable to run $conf_pkg_info: $!");
+	open(PKG_INFO, "$conf_pkg_info -e '*' |") or die;
 	chomp(my @pkgs = <PKG_INFO>);
-	close(PKG_INFO);
+	close(PKG_INFO) or die;
 	map { $_ = canonicalize_pkgname($_) } @pkgs;
 }
 
@@ -973,11 +972,11 @@ sub parse_makefile_pkgsrc($file) {
 		if (!$pid) {
 			warn "$file: Unable to run make: $!";
 		} else {
-			close(WTR);
+			close(WTR) or die;
 			my @errors = <ERR>;
-			close(ERR);
+			close(ERR) or die;
 			my ($makepkgname) = <RDR>;
-			close(RDR);
+			close(RDR) or die;
 			wait;
 			chomp @errors;
 			if (@errors) { warn "\n$file: @errors\n"; }
@@ -1228,7 +1227,7 @@ sub check_pkgsrc_distfiles_vs_distinfo($pkgsrcdir, $pkgdistdir, $check_unref,
 			my $pid2 = fork();
 			defined $pid2 || fail 'fork';
 			if ($pid2) {
-				close($in);
+				close($in) or die;
 			} else {
 				print $in "@{$sumfiles{$sum}}";
 				exit 0;
@@ -1241,7 +1240,7 @@ sub check_pkgsrc_distfiles_vs_distinfo($pkgsrcdir, $pkgdistdir, $check_unref,
 					}
 				}
 			}
-			close($out);
+			close($out) or die;
 			waitpid($pid, 0) || fail "xargs digest $sum";
 			waitpid($pid2, 0) || fail 'pipe write to xargs';
 		}
@@ -1563,7 +1562,7 @@ sub check_outdated_installed_packages($pkgsrcdir) {
 		while (<PKGINFO>) {
 			print " $1" if /^(.*?)-\d/;
 		}
-		close(PKGINFO);
+		close(PKGINFO) or die;
 		print "\n";
 	}
 
