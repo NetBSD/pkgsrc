@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.867 2022/08/11 06:49:34 wiz Exp $
+# $NetBSD: Makefile,v 1.868 2022/08/17 15:44:16 hauke Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -641,6 +641,7 @@ SUBDIR+=	tripwire
 SUBDIR+=	trufflehog
 SUBDIR+=	validns
 SUBDIR+=	vault
+SUBDIR+=	vaultwarden
 SUBDIR+=	volatility
 SUBDIR+=	wfuzz
 SUBDIR+=	wolfssl
