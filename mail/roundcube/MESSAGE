@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.10 2016/02/16 10:49:53 wiz Exp $
+$NetBSD: MESSAGE,v 1.11 2022/08/17 15:41:43 taca Exp $
 
 Please refer to the following file on how to setup your RoundCube
 installation.
@@ -8,7 +8,8 @@ installation.
 
 Please refer to the following file on how to upgrade your RoundCube
 from older version and make sure to remember the version of current
-installed Round cube with "pkg_info -I roundcube".
+installed Round cube with "pkg_info -I roundcube".  And please refer
+config options changed.
 
 	${DOCDIR}/UPGRADING
 
@@ -30,5 +31,36 @@ later.
 Make sure
 	${PREFIX}/share/roundcube/temp/
 exists and is writable by the web server user.
+
+Breaking Changes to 1.5 and prior versions
+
+The following config options have either been removed or renamed:
+
+1. IMAP:
+
+   * renamed default_host to imap_host
+   * removed default_port option (non-standard port can be set via
+     imap_host)
+   * set "localhost:143" as a default for imap_host
+
+2. SMTP:
+
+   * renamed smtp_server to smtp_host
+   * removed smtp_port option (non-standard port can be set via smtp_host)
+   * set "localhost:587" as a default for smtp_host
+
+3. LDAP:
+
+   * removed port option from ldap_public array (non-standard port can be
+     set via host)
+   * removed use_tls option from ldap_public array (use tls:// prefix in
+     host)
+
+4. Managesieve:
+
+   * removed managesieve_port option (non-standard port can be set via
+     managesieve_host)
+   * removed managesieve_usetls option (set tls:// prefix to
+     managesieve_host)
 
 ===========================================================================
