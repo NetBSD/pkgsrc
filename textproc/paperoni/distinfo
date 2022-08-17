@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:22:56 nia Exp $
+$NetBSD: distinfo,v 1.9 2022/08/17 12:32:52 tnn Exp $
 
 BLAKE2s (addr2line-0.14.1.crate) = f243578c09937fec741f30669f18581946d61f86a2c3b1bceda64ef157f539e5
 SHA512 (addr2line-0.14.1.crate) = f665deccae566ec2754cd43fc1d8fc05db11320af54d0561a612faad769234e8b3b8c0235f90f86027a4db9b7ef2915c86398005c949e2c096fac8e53f3f441e
@@ -471,6 +471,9 @@ Size (openssl-probe-0.1.2.crate) = 6427 bytes
 BLAKE2s (openssl-sys-0.9.62.crate) = 7dd8027842c4d9fa10b55e9fb2aad6b6e9d995dab15ef9441cd7851e3e2963dc
 SHA512 (openssl-sys-0.9.62.crate) = 8c6ed605bbd985aa8a4cfb9392a349d6fbc62b5a81cbf806c2c04524daf7cb40675a028541c61ca0bc5b607060b280e49e749337308748887ab955b057cd58f4
 Size (openssl-sys-0.9.62.crate) = 52116 bytes
+BLAKE2s (paperoni-v0.6.1-alpha1.tar.gz) = 6d942f79c33a0bc53f58f5ecad1b296433c984ae726714f5d5ddfffc05d00ebc
+SHA512 (paperoni-v0.6.1-alpha1.tar.gz) = acb666609202c56e3861ee5ea20fcd6321f9666bd0b66d51d83f04312597acea05f6d2c701b8ea27dba1df3cddad473203d087b5b0c13acf872c0465b4b48830
+Size (paperoni-v0.6.1-alpha1.tar.gz) = 84219 bytes
 BLAKE2s (parking-2.0.0.crate) = 4f79863e2139449b05a39219bf0e5b51fee6414d02e213ac0fcb773471c0bdc5
 SHA512 (parking-2.0.0.crate) = 21c5723dc0281ade1c2cd6a1c2215ba70eb47a721a4a594ef1e54061bc79579ffe9c31f06e534fd847f936ed265cd65a59dfa9e38880f8bd42c6e8ac70a13f93
 Size (parking-2.0.0.crate) = 9714 bytes
@@ -798,9 +801,6 @@ Size (utf8-width-0.1.5.crate) = 2941 bytes
 BLAKE2s (uuid-0.8.2.crate) = 8bf7347fae8f81652c57eff0283e90003a269e07df2a17c66e3000b8d96503c2
 SHA512 (uuid-0.8.2.crate) = 5a1f5ead9a920b9bbc120c02049c24b62ec215765e486d3a15c5015ef49fa506206efb737e6f6555cf6e2eddddfe55f0ca1d7dcfa9aa8bcf3e0ef570a54fa2d8
 Size (uuid-0.8.2.crate) = 37909 bytes
-BLAKE2s (v0.6.1-alpha1.tar.gz) = 6d942f79c33a0bc53f58f5ecad1b296433c984ae726714f5d5ddfffc05d00ebc
-SHA512 (v0.6.1-alpha1.tar.gz) = acb666609202c56e3861ee5ea20fcd6321f9666bd0b66d51d83f04312597acea05f6d2c701b8ea27dba1df3cddad473203d087b5b0c13acf872c0465b4b48830
-Size (v0.6.1-alpha1.tar.gz) = 84219 bytes
 BLAKE2s (value-bag-1.0.0-alpha.6.crate) = 1b6bbb51182f7c20ecabd945084d1793a4851cc401f6cd5230f7916a8d63075f
 SHA512 (value-bag-1.0.0-alpha.6.crate) = 1723a8e7698b832b288845b466ae7efb5ee1cf90d7510ece286774fc71e8f322596c05e03732d9e51af2db460b689b3e473cc11a94f97c9015972d6db3c6ba80
 Size (value-bag-1.0.0-alpha.6.crate) = 25273 bytes
