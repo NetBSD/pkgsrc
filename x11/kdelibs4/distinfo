@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.59 2021/10/26 11:34:02 nia Exp $
+$NetBSD: distinfo,v 1.60 2022/08/17 18:51:09 tnn Exp $
 
 BLAKE2s (kdelibs-4.14.38.tar.xz) = 1b2445541c6dc1ce334f888950ea0a6bf994d642eb4db034001f8394335a4b4a
 SHA512 (kdelibs-4.14.38.tar.xz) = 54fbbb9b2f12a47d5aca21c152164ed03cc6a6619bf285e2b93c8e9260042ffd728ef41e1badb217e552de6478687cab5d3caf14af7b32da8caca3468d469e45
@@ -22,6 +22,7 @@ SHA1 (patch-kdecore_network_ConfigureChecks.cmake) = 0ad9352974911ef78ec565f7b2a
 SHA1 (patch-kdecore_tests_CMakeLists.txt) = bbe806b078f54201528c86489d3ac200145a8d2f
 SHA1 (patch-kdecore_util_kshareddatacache_p.h) = 6d064fe75fbecd489b0343960333864c717c0805
 SHA1 (patch-kdeui_icons_kiconcache.cpp) = c360192afd21efedc6dad8a6ccdd61573ee0dbac
+SHA1 (patch-kdeui_util_kpixmapcache.cpp) = 676984f352b91fe1aa2557cd2d3fe63994262f9f
 SHA1 (patch-khtml_dom_dom2_traversal.h) = b001fc3825fcfea8f25b7219057e59d5b87723e4
 SHA1 (patch-khtml_misc_AtomicString.cpp) = eff036bcd09e031651eba1e3a2136e313d184f2b
 SHA1 (patch-kimgio_jp2.cpp) = 165ff6b2e6176366739c78c1ca9dc2065c2d008d
