@@ -1,5 +1,5 @@
 #!@PERL5@
-# $NetBSD: lintpkgsrc.pl,v 1.120 2022/08/18 17:51:13 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.121 2022/08/18 18:13:23 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -1021,10 +1021,6 @@ sub parse_makefile_pkgsrc($file) {
 
 			foreach my $var (qw(DEPENDS RESTRICTED OSVERSION_SPECIFIC BROKEN)) {
 				$pkgver->var($var, $vars->{$var});
-			}
-
-			if (defined $vars->{NO_BIN_ON_FTP}) {
-				$pkgver->var('RESTRICTED', 'NO_BIN_ON_FTP');
 			}
 
 			if ($file =~ m:([^/]+/[^/]+)/Makefile$:) {
