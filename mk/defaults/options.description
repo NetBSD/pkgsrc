@@ -773,6 +773,7 @@ sendmail-milter		Build the milter with support for the Sendmail MTA.
 sendmail-socketmap	Enable Sendmail SOCKETMAP support.
 serf			Use serf HTTP/WebDAV client library.
 serialconsole		Enable use of serial console.
+sge			Support for Sun Grid Engine batch scheduler
 shine			Enable shine (non-FPU mp3) support.
 shout			Enable SHOUTcast support.
 sidplay			Enable support for the SID audio file format.
@@ -788,6 +789,7 @@ skk			Use SKK for Kana-to-Kanji conversion.
 skkdic-expr2		Enable fast skkdic-expr tool.
 slang			Enable S-Lang support.
 slp			Enable Service Location Protocol support.
+slurm			Support Slurm batch scheduler.
 small-net		Tune for a smaller networks.
 smime			Enable S/MIME support.
 smokeping-speedycgi	Enable SpeedyCGI.
