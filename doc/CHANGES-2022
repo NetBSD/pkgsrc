@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3843 2022/08/18 13:59:21 taca Exp $
+$NetBSD: CHANGES-2022,v 1.3844 2022/08/18 15:13:23 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5681,3 +5681,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/grafx2 to 2.8.3132 [wiz 2022-08-18]
 	Updated databases/p5-BerkeleyDB to 0.65 [wiz 2022-08-18]
 	Updated time/ruby-tzinfo-data to 1.2022.3 [taca 2022-08-18]
+	Updated textproc/ruby-nokogiri to 1.13.8 [tsutsui 2022-08-18]
