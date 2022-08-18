@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3864 2022/08/18 19:17:11 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3865 2022/08/18 19:24:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5706,3 +5706,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/hs-th-abstraction to 0.4.4.0 [wiz 2022-08-18]
 	Updated devel/hs-transformers-compat to 0.7.2 [wiz 2022-08-18]
 	Updated devel/hs-unordered-containers to 0.2.19.1 [wiz 2022-08-18]
+	Updated devel/protobuf-c to 1.4.1 [wiz 2022-08-18]
