@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2022/02/12 05:19:37 pho Exp $
+$NetBSD: distinfo,v 1.6 2022/08/18 18:32:15 wiz Exp $
 
-BLAKE2s (bifunctors-5.5.11.tar.gz) = 2b03c96fefbbf9bcfcd3a4e8a9787782782fba23de48f7d87a3ed0510fa52eee
-SHA512 (bifunctors-5.5.11.tar.gz) = 09f66d1a086a72a822e804521c2258acb16fd5a4a29c3758b97987f27a271f58e3dd4103518b31b3bdf44465c87fe5573a0bba168ba109287ca3370b8ab491a1
-Size (bifunctors-5.5.11.tar.gz) = 46003 bytes
+BLAKE2s (bifunctors-5.5.12.tar.gz) = 9dcfe3922f81fe235cf019009c1761c818c2240a96805058baa89bdc29be1b32
+SHA512 (bifunctors-5.5.12.tar.gz) = 8ebccd995d218cc171238aef2a767daff5defe8e66fc6ccca1d99c15ae51b4d3df880c96143eb4956c85ca6508921d9addc27e2d73b1906b66300d1574f5b558
+Size (bifunctors-5.5.12.tar.gz) = 46135 bytes
