@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2021/10/26 10:46:51 nia Exp $
+$NetBSD: distinfo,v 1.17 2022/08/18 15:44:23 tsutsui Exp $
 
-BLAKE2s (cairo-1.17.5.gem) = 7c5ddc129c655cd8502e9fb50cb6419a5faeac644152b5a4e78121239cbdd0a7
-SHA512 (cairo-1.17.5.gem) = f2ade6fb6b9fccd81a11061b277d4a9077936e0beef42c61225bd4d5630586a57a3fa192a20a0f7e4922313e2a8215268bc9a5d007d2805cf1f80714fd9ad1ba
-Size (cairo-1.17.5.gem) = 197120 bytes
+BLAKE2s (cairo-1.17.7.gem) = db1ed6b38407e44a5d77a747e07fdfe947e1ae5a89b46ea3f4f748b1dd268327
+SHA512 (cairo-1.17.7.gem) = 0a70bfe6e06ef566bd11b9d9bcda97758809081650015b59ff340d49effab9995d59e3b798291c2ef1c29cd6b8ca44cdefee8199c293f7cbce03cee853d19b2b
+Size (cairo-1.17.7.gem) = 198656 bytes
