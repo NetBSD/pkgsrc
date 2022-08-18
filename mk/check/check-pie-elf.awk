@@ -1,4 +1,4 @@
-# $NetBSD: check-pie-elf.awk,v 1.2 2022/02/13 10:48:24 nia Exp $
+# $NetBSD: check-pie-elf.awk,v 1.3 2022/08/18 00:20:58 joerg Exp $
 #
 # Read a list of potential ELF binaries from stdin. For each, extract the list
 # of headers. There are four possibilities:
@@ -32,8 +32,8 @@
 function shquote(IN, out) {
 	out = IN;
 	gsub("\\\\", "\\\\", out);
-	gsub("\\\n", "\\n", out);
-	gsub("\\\t", "\\t", out);
+	gsub("\n", "\\n", out);
+	gsub("\t", "\\t", out);
 	gsub(" ", "\\ ", out);
 	gsub("'", "\\'", out);
 	gsub("`", "\\`", out);
