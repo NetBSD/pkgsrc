@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.30 2022/07/01 17:13:49 adam Exp $
+$NetBSD: distinfo,v 1.31 2022/08/18 07:33:45 adam Exp $
 
-BLAKE2s (mypy-0.961.tar.gz) = d1300c10b78cef55cc76de15bcba30c5f8b29d2ce0d022ee3d429ecde575a57d
-SHA512 (mypy-0.961.tar.gz) = 1056cf3c436f133c316604e837a9705fe12c4f7fa25ea4de396d8a6723b7a76be7ea04ceb6bcd05d62f013accb702601deb9ed8ea94bd0cdbb9cde5992178556
-Size (mypy-0.961.tar.gz) = 2715861 bytes
+BLAKE2s (mypy-0.971.tar.gz) = 36e94e2e656eaa090bd11a81e9fc349b71257caf85e83ba949f118c582f9eb77
+SHA512 (mypy-0.971.tar.gz) = 5f206f6682f659f461e5927f20a6786a94d8246441c0c480b6eeadb74e9517a2ece1780e91f18e6f23cd658cc4c9350f337e9f7d3cf26507a1debbca94a4e112
+Size (mypy-0.971.tar.gz) = 2757982 bytes
