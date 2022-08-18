@@ -1,5 +1,5 @@
 #!@PERL5@
-# $NetBSD: lintpkgsrc.pl,v 1.119 2022/08/17 18:53:40 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.120 2022/08/18 17:51:13 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -246,6 +246,7 @@ sub listdir($base, $dir = undef) {
 }
 
 sub canonicalize_pkgname($pkgname) {
+	$pkgname =~ s,^ap\d+-,ap-,;
 	$pkgname =~ s,^lua\d+-,lua-,;
 	$pkgname =~ s,^py\d+(?:pth|)-,py-,;
 	$pkgname =~ s,^ruby\d+-,ruby-,;
@@ -759,6 +760,7 @@ sub get_default_makefile_vars() {
 
 	$default_vars->{PACKAGES} ||= $default_vars->{PKGSRCDIR} . '/packages';
 
+	$default_vars->{APACHE_PKGPREFIX} = 'ap12345';
 	$default_vars->{LUA_PKGPREFIX} = 'lua12345';
 	$default_vars->{PHP_PKG_PREFIX} = 'php12345';
 	$default_vars->{PYPKGPREFIX} = 'py12345';
