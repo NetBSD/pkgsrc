@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3856 2022/08/18 18:38:28 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3857 2022/08/18 18:43:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5698,3 +5698,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/hs-base-orphans to 0.8.7 [wiz 2022-08-18]
 	Updated math/hs-bifunctors to 5.5.12 [wiz 2022-08-18]
 	Updated devel/hs-generic-deriving to 1.14.2 [wiz 2022-08-18]
+	Updated devel/hs-hashable to 1.4.1.0 [wiz 2022-08-18]
