@@ -1,4 +1,4 @@
-# $NetBSD: check-relro-elf.awk,v 1.3 2019/04/24 22:56:47 maya Exp $
+# $NetBSD: check-relro-elf.awk,v 1.4 2022/08/18 00:20:58 joerg Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # Copyright (c) 2017 Pierre Pronchery <khorben@NetBSD.org>.
@@ -42,8 +42,8 @@
 function shquote(IN, out) {
 	out = IN;
 	gsub("\\\\", "\\\\", out);
-	gsub("\\\n", "\\n", out);
-	gsub("\\\t", "\\t", out);
+	gsub("\n", "\\n", out);
+	gsub("\t", "\\t", out);
 	gsub(" ", "\\ ", out);
 	gsub("'", "\\'", out);
 	gsub("`", "\\`", out);
