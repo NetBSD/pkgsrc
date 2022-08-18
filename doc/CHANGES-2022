@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3852 2022/08/18 18:21:24 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3853 2022/08/18 18:26:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5694,3 +5694,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/py-filetype to 1.1.0 [adam 2022-08-18]
 	Updated shells/fish to 3.5.0 [wiz 2022-08-18]
 	Updated devel/hs-base-compat to 0.12.2 [wiz 2022-08-18]
+	Updated devel/hs-base-compat-batteries to 0.12.2 [wiz 2022-08-18]
