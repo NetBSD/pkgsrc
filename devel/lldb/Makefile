@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2022/08/14 15:00:18 tnn Exp $
+# $NetBSD: Makefile,v 1.41 2022/08/18 23:55:26 gutteridge Exp $
 
 .include "../../lang/llvm/version.mk"
 
@@ -72,7 +72,7 @@ CMAKE_ARGS+=	-DLLDB_DISABLE_CURSES:BOOL=TRUE
 
 .  if ${OPSYS_VERSION} < 99922
 # lacks ptrace(2) PT_STOP
-NOT_FOR_PLATFORM+=	NetBSD-*-*
+PKG_FAIL_REASON+=	"Only NetBSD >= 9.99.22 provides ptrace(2) PT_STOP"
 .  endif
 .endif
 
