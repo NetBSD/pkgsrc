@@ -1,5 +1,5 @@
 #!@PERL5@
-# $NetBSD: lintpkgsrc.pl,v 1.122 2022/08/18 18:26:46 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.123 2022/08/18 18:28:08 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -91,7 +91,7 @@ sub pkgvers_all($self) {
 }
 
 sub pkgver($self, $pkgversion) {
-	$self->{pkgvers}->{$pkgversion}
+	$self->{pkgvers}->{$pkgversion};
 }
 
 # PkgData is a small database of all packages in pkgsrc.
@@ -235,6 +235,7 @@ sub listdir($base, $dir = undef) {
 	opendir(DIR, $thisdir) or fail("Unable to opendir($thisdir): $!");
 	@thislist = grep { substr($_, 0, 1) ne '.' && $_ ne 'CVS' } readdir(DIR);
 	closedir(DIR);
+
 	foreach my $entry (@thislist) {
 		if (-d "$thisdir/$entry") {
 			push @list, listdir($base, "$dir$entry");
@@ -242,6 +243,7 @@ sub listdir($base, $dir = undef) {
 			push @list, "$dir$entry";
 		}
 	}
+
 	@list;
 }
 
@@ -690,6 +692,7 @@ sub parse_makefile_vars($file, $cwd = undef) {
 		#  all of them or none of them should be removed.
 		$vars{$varname} =~ s/$magic_undefined//;
 	}
+
 	\%vars;
 }
 
@@ -793,8 +796,6 @@ sub list_installed_packages() {
 	map { $_ = canonicalize_pkgname($_) } @pkgs;
 }
 
-# List top level pkgsrc categories
-#
 sub list_pkgsrc_categories($pkgsrcdir) {
 	my @categories;
 
@@ -806,7 +807,6 @@ sub list_pkgsrc_categories($pkgsrcdir) {
 }
 
 # For a given category, list potentially valid pkgdirs
-#
 sub list_pkgsrc_pkgdirs($pkgsrcdir, $cat) {
 	opendir(CAT, "$pkgsrcdir/$cat")
 	    or die("Unable to opendir($pkgsrcdir/$cat): $!");
@@ -1036,7 +1036,6 @@ sub parse_makefile_pkgsrc($file) {
 	($pkgname, $vars);
 }
 
-
 sub chdir_or_fail($dir) {
 	my $prev_dir = getcwd() or die;
 	debug("chdir: $dir");
@@ -1200,9 +1199,7 @@ sub check_pkgsrc_distfiles_vs_distinfo($pkgsrcdir, $pkgdistdir, $check_unref,
 	}
 
 	if ($check_distinfo) {
-		if (@distwarn) {
-			verbose(@distwarn);
-		}
+		verbose(@distwarn) if @distwarn;
 
 		verbose("checksum mismatches\n");
 		my $prev_dir = chdir_or_fail($pkgdistdir);
@@ -1287,7 +1284,7 @@ sub check_prebuilt_packages() {
 		# Skip these subdirs if present
 		$File::Find::prune = 1;
 
-	} elsif (/(.+)-(\d.*)\.t[bg]z$/) {
+	} elsif (/^ (.+) - (\d.*) \.t[bg]z $/x) {
 		my ($pkg, $ver) = ($1, $2);
 
 		$pkg = canonicalize_pkgname($pkg);
