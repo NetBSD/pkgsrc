@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2022/02/11 13:27:44 pho Exp $
+$NetBSD: distinfo,v 1.8 2022/08/18 19:12:12 wiz Exp $
 
-BLAKE2s (transformers-compat-0.7.1.tar.gz) = 5b99bc3bd50e0e6e4dd76d0ffdeb6c86957be11d912134b2b946bef3ee0d9dc7
-SHA512 (transformers-compat-0.7.1.tar.gz) = 5d6dc222a9168dbfbcf1fa4ae0949494d54ee56274c1dc0be589aea54369fd64a30495dc5947fe8478800fd00dd1cb80339d855ab9b1b976c36e2b97bea21763
-Size (transformers-compat-0.7.1.tar.gz) = 44363 bytes
+BLAKE2s (transformers-compat-0.7.2.tar.gz) = d55086be56f651ca272e3b8eb57468525459275711266ebe3e76d355d1ceb2c0
+SHA512 (transformers-compat-0.7.2.tar.gz) = 9bcc4b5aebbc6ec0b05ac8499ec79102e766ae8c2c919343f7d20ebb451fedb3a00647dc0baff5e998dd0b67f1ffbe725a14e0abf299a6b2656c219f8330856e
+Size (transformers-compat-0.7.2.tar.gz) = 46485 bytes
