@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/02/12 05:21:58 pho Exp $
+$NetBSD: distinfo,v 1.2 2022/08/18 18:53:17 wiz Exp $
 
-BLAKE2s (indexed-traversable-instances-0.1.1.tar.gz) = e1c5762f7b18692fc3887dde18354d1f82c487fadbe54660029e53c05bd262da
-SHA512 (indexed-traversable-instances-0.1.1.tar.gz) = 746706f439392c0919a5e944576b341974a1221c080394f9637629bc8f7403d85923d22172132bc98dea818b2bc508b41bdfd8e2130ee3b12048165f1b5f39a8
-Size (indexed-traversable-instances-0.1.1.tar.gz) = 4422 bytes
+BLAKE2s (indexed-traversable-instances-0.1.1.1.tar.gz) = 05172217b19a0d170af112df27ef94a4a7e9d448c5708c49a76d798da35fffde
+SHA512 (indexed-traversable-instances-0.1.1.1.tar.gz) = a7d0d33cae09e848949d8d3d7d7c4cd118d6b073a30a5bb3f872ebb7ad349dbad808f61e5efe325cdd3717f4969e00012bca81fe1a017daf6ca98e921ef65b35
+Size (indexed-traversable-instances-0.1.1.1.tar.gz) = 3751 bytes
