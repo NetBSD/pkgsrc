@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3838 2022/08/18 08:06:41 pin Exp $
+$NetBSD: CHANGES-2022,v 1.3839 2022/08/18 08:08:07 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5676,3 +5676,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/py-mypy to 0.971 [adam 2022-08-18]
 	Updated sysutils/py-setproctitle to 1.3.2 [adam 2022-08-18]
 	Updated devel/git-cliff to 0.9.0 [pin 2022-08-18]
+	Updated security/gpg-tui to 0.9.1 [pin 2022-08-18]
