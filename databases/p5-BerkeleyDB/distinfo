@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.24 2021/10/26 10:09:27 nia Exp $
+$NetBSD: distinfo,v 1.25 2022/08/18 11:14:33 wiz Exp $
 
-BLAKE2s (BerkeleyDB-0.64.tar.gz) = 5bc9f5fa4dabf51245c212437217aaf3b9c70e9e8c981c51760ade3f45c29fa9
-SHA512 (BerkeleyDB-0.64.tar.gz) = 368f89bb12e209ed6f0d1367875739813bfec85f4c10f0ffd7260d5be97bbd758af517133977f1e8f43c1d9b04d6b5dd9696ae1de1d544d9682b1f6bacfe3e85
-Size (BerkeleyDB-0.64.tar.gz) = 259656 bytes
+BLAKE2s (BerkeleyDB-0.65.tar.gz) = 0c7efcd4fe9f3898f39799e6a2c70ea8e838b02e6d31668ef5c8ce251bae1a2d
+SHA512 (BerkeleyDB-0.65.tar.gz) = 896d1388df35ff0c22ff6ad0cea93bf57be6e09a9176d05b88f34455dcd32e4549d19b11cad2322ae8f323adbe8a8ee6054fe611bdcb1490d26f6bec67686763
+Size (BerkeleyDB-0.65.tar.gz) = 258814 bytes
