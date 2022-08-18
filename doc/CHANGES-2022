@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3859 2022/08/18 18:56:44 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3860 2022/08/18 19:02:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5701,3 +5701,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/hs-hashable to 1.4.1.0 [wiz 2022-08-18]
 	Updated devel/hs-indexed-traversable-instances to 0.1.1.1 [wiz 2022-08-18]
 	Updated devel/hs-primitive to 0.7.4.0 [wiz 2022-08-18]
+	Updated devel/hs-random to 1.2.1.1 [wiz 2022-08-18]
