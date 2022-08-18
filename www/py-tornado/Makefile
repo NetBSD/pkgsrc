@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2022/02/05 09:00:25 adam Exp $
+# $NetBSD: Makefile,v 1.31 2022/08/18 16:48:30 adam Exp $
 
-DISTNAME=	tornado-6.1
+DISTNAME=	tornado-6.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tornado/}

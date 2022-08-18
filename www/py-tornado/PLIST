@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2022/02/05 09:00:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.17 2022/08/18 16:48:30 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -85,7 +85,7 @@ ${PYSITELIB}/tornado/routing.pyo
 ${PYSITELIB}/tornado/simple_httpclient.py
 ${PYSITELIB}/tornado/simple_httpclient.pyc
 ${PYSITELIB}/tornado/simple_httpclient.pyo
-${PYSITELIB}/tornado/speedups.so
+${PYSITELIB}/tornado/speedups.abi3.so
 ${PYSITELIB}/tornado/tcpclient.py
 ${PYSITELIB}/tornado/tcpclient.pyc
 ${PYSITELIB}/tornado/tcpclient.pyo
@@ -95,6 +95,9 @@ ${PYSITELIB}/tornado/tcpserver.pyo
 ${PYSITELIB}/tornado/template.py
 ${PYSITELIB}/tornado/template.pyc
 ${PYSITELIB}/tornado/template.pyo
+${PYSITELIB}/tornado/test/__init__.py
+${PYSITELIB}/tornado/test/__init__.pyc
+${PYSITELIB}/tornado/test/__init__.pyo
 ${PYSITELIB}/tornado/test/__main__.py
 ${PYSITELIB}/tornado/test/__main__.pyc
 ${PYSITELIB}/tornado/test/__main__.pyo
