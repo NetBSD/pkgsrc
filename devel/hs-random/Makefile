@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2022/02/26 03:58:05 pho Exp $
+# $NetBSD: Makefile,v 1.10 2022/08/18 19:00:48 wiz Exp $
 
-DISTNAME=	random-1.2.1
-PKGREVISION=	2
+DISTNAME=	random-1.2.1.1
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
