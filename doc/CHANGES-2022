@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3841 2022/08/18 11:13:00 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3842 2022/08/18 11:14:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5679,3 +5679,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/gpg-tui to 0.9.1 [pin 2022-08-18]
 	Updated devel/gitui to 0.21.0 [pin 2022-08-18]
 	Updated graphics/grafx2 to 2.8.3132 [wiz 2022-08-18]
+	Updated databases/p5-BerkeleyDB to 0.65 [wiz 2022-08-18]
