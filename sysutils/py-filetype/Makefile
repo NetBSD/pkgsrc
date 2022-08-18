@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2022/05/02 08:46:18 adam Exp $
+# $NetBSD: Makefile,v 1.8 2022/08/18 17:11:56 adam Exp $
 
-DISTNAME=	filetype-1.0.13
+DISTNAME=	filetype-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/filetype/}
