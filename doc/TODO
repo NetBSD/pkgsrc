@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22099 2022/08/18 11:13:00 wiz Exp $
+$NetBSD: TODO,v 1.22100 2022/08/18 11:14:42 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1164,7 +1164,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o p5-Alien-Hunspell-0.17
 	o p5-Archive-Peek-0.38
 	o p5-Authen-Simple-0.6
-	o p5-BerkeleyDB-1.1
 	o p5-Carp-Assert-More-1.26
 	o p5-Class-DBI-Plugin-1.04
 	o p5-Class-Measure-0.09
