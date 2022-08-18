@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2021/11/09 15:17:01 taca Exp $
+@comment $NetBSD: PLIST,v 1.12 2022/08/18 13:58:50 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/CONTRIBUTING.md
@@ -454,6 +454,7 @@ ${GEM_LIBDIR}/lib/tzinfo/data/definitions/Europe/Jersey.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/Europe/Kaliningrad.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/Europe/Kiev.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/Europe/Kirov.rb
+${GEM_LIBDIR}/lib/tzinfo/data/definitions/Europe/Kyiv.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/Europe/Lisbon.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/Europe/Ljubljana.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/Europe/London.rb
