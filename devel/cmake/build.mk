@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.2 2022/08/09 21:45:08 wiz Exp $
+# $NetBSD: build.mk,v 1.3 2022/08/18 16:20:15 rillig Exp $
 #
 # This Makefile fragment supports building using the CMake build tool.
 #
@@ -62,10 +62,10 @@ _CMAKE_BUILD_TOOL?=	${MAKE}
 
 CONFIGURE_DIRS?=	.
 BUILD_DIRS?=		${CONFIGURE_DIRS}
-INSTALL_DIRS?=		${CONFIGURE_DIRS}
 TEST_DIRS?=		${CONFIGURE_DIRS}
+INSTALL_DIRS?=		${CONFIGURE_DIRS}
 
-.PHONY: cmake-configure cmake-build cmake-install cmake-test
+.PHONY: cmake-configure cmake-build cmake-test cmake-install
 
 do-configure: cmake-configure
 cmake-configure:
@@ -100,3 +100,19 @@ cmake-install:
 		${SETENV} ${INSTALL_ENV} \
 		${_CMAKE_BUILD_TOOL} ${CMAKE_INSTALL_ARGS} ${INSTALL_TARGET}
 .endfor
+
+_VARGROUPS+=		cmake
+_USER_VARS.cmake+=	CMAKE_GENERATOR
+_PKG_VARS.cmake+=	CMAKE_REQD
+_PKG_VARS.cmake+=	CMAKE_CONFIGURE_ARGS CONFIGURE_DIRS
+_PKG_VARS.cmake+=	CMAKE_BUILD_ARGS BUILD_DIRS
+_PKG_VARS.cmake+=	TEST_DIRS TEST_TARGET
+_PKG_VARS.cmake+=	CMAKE_INSTALL_ARGS INSTALL_DIRS INSTALL_TARGET
+_SYS_VARS.cmake+=	CMAKE_BUILD_DIR
+_USE_VARS.cmake+=	CMAKE_ARGS
+_USE_VARS.cmake+=	CONFIGURE_ENV MAKE_ENV TEST_ENV INSTALL_ENV
+_IGN_VARS.cmake+=	BUILDLINK_DIR WRKSRC PREFIX
+_IGN_VARS.cmake+=	SETENV TOOL_DEPENDS
+_IGN_VARS.cmake+=	_CMAKE_BUILD_SYSTEM _CMAKE_BUILD_TOOL _MAKE_JOBS_N
+_LISTED_VARS.cmake+=	*_ARGS
+_SORTED_VARS.cmake+=	*_ENV
