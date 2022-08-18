@@ -1,10 +1,10 @@
-$NetBSD: patch-build__tools_git__version__gen.sh,v 1.1 2021/07/16 08:50:50 jperkin Exp $
+$NetBSD: patch-build__tools_git__version__gen.sh,v 1.2 2022/08/18 18:11:51 wiz Exp $
 
 Rename version file to avoid C++ <version> issue.
 
---- build_tools/git_version_gen.sh.orig	2021-07-06 14:45:37.000000000 +0000
+--- build_tools/git_version_gen.sh.orig	2022-06-16 10:49:19.000000000 +0000
 +++ build_tools/git_version_gen.sh
-@@ -12,9 +12,9 @@ DEF_VER=unknown
+@@ -13,9 +13,9 @@ git_permission_failed=0
  
  # First see if there is a version file (included in release tarballs),
  # then try git-describe, then default.
@@ -13,6 +13,6 @@ Rename version file to avoid C++ <version> issue.
  then
 -	VN=$(cat version) || VN="$DEF_VER"
 +	VN=$(cat version.txt) || VN="$DEF_VER"
- elif ! VN=$(git -C "$FISH_BASE_DIR" describe --always --dirty 2>/dev/null); then
- 	VN="$DEF_VER"
- fi
+ else
+     if VN=$(git -C "$FISH_BASE_DIR" describe --always --dirty 2>/dev/null); then
+        :
