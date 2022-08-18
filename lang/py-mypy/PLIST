@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2022/05/02 08:19:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.22 2022/08/18 07:33:45 adam Exp $
 bin/dmypy-${PYVERSSUFFIX}
 bin/mypy-${PYVERSSUFFIX}
 bin/mypyc-${PYVERSSUFFIX}
@@ -58,6 +58,9 @@ ${PYSITELIB}/mypy/config_parser.pyo
 ${PYSITELIB}/mypy/constraints.py
 ${PYSITELIB}/mypy/constraints.pyc
 ${PYSITELIB}/mypy/constraints.pyo
+${PYSITELIB}/mypy/copytype.py
+${PYSITELIB}/mypy/copytype.pyc
+${PYSITELIB}/mypy/copytype.pyo
 ${PYSITELIB}/mypy/defaults.py
 ${PYSITELIB}/mypy/defaults.pyc
 ${PYSITELIB}/mypy/defaults.pyo
@@ -968,6 +971,7 @@ ${PYSITELIB}/mypy/typeshed/stdlib/asyncio/subprocess.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/asyncio/taskgroups.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/asyncio/tasks.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/asyncio/threads.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/asyncio/timeouts.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/asyncio/transports.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/asyncio/trsock.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/asyncio/unix_events.pyi
@@ -1415,6 +1419,9 @@ ${PYSITELIB}/mypyc/__main__.pyo
 ${PYSITELIB}/mypyc/analysis/__init__.py
 ${PYSITELIB}/mypyc/analysis/__init__.pyc
 ${PYSITELIB}/mypyc/analysis/__init__.pyo
+${PYSITELIB}/mypyc/analysis/attrdefined.py
+${PYSITELIB}/mypyc/analysis/attrdefined.pyc
+${PYSITELIB}/mypyc/analysis/attrdefined.pyo
 ${PYSITELIB}/mypyc/analysis/blockfreq.py
 ${PYSITELIB}/mypyc/analysis/blockfreq.pyc
 ${PYSITELIB}/mypyc/analysis/blockfreq.pyo
@@ -1424,6 +1431,9 @@ ${PYSITELIB}/mypyc/analysis/dataflow.pyo
 ${PYSITELIB}/mypyc/analysis/ircheck.py
 ${PYSITELIB}/mypyc/analysis/ircheck.pyc
 ${PYSITELIB}/mypyc/analysis/ircheck.pyo
+${PYSITELIB}/mypyc/analysis/selfleaks.py
+${PYSITELIB}/mypyc/analysis/selfleaks.pyc
+${PYSITELIB}/mypyc/analysis/selfleaks.pyo
 ${PYSITELIB}/mypyc/build.py
 ${PYSITELIB}/mypyc/build.pyc
 ${PYSITELIB}/mypyc/build.pyo
@@ -1550,6 +1560,9 @@ ${PYSITELIB}/mypyc/ir/rtypes.pyo
 ${PYSITELIB}/mypyc/irbuild/__init__.py
 ${PYSITELIB}/mypyc/irbuild/__init__.pyc
 ${PYSITELIB}/mypyc/irbuild/__init__.pyo
+${PYSITELIB}/mypyc/irbuild/ast_helpers.py
+${PYSITELIB}/mypyc/irbuild/ast_helpers.pyc
+${PYSITELIB}/mypyc/irbuild/ast_helpers.pyo
 ${PYSITELIB}/mypyc/irbuild/builder.py
 ${PYSITELIB}/mypyc/irbuild/builder.pyc
 ${PYSITELIB}/mypyc/irbuild/builder.pyo
@@ -1695,6 +1708,7 @@ ${PYSITELIB}/mypyc/sametype.pyo
 ${PYSITELIB}/mypyc/subtype.py
 ${PYSITELIB}/mypyc/subtype.pyc
 ${PYSITELIB}/mypyc/subtype.pyo
+${PYSITELIB}/mypyc/test-data/alwaysdefined.test
 ${PYSITELIB}/mypyc/test-data/analysis.test
 ${PYSITELIB}/mypyc/test-data/commandline.test
 ${PYSITELIB}/mypyc/test-data/driver/driver.py
@@ -1764,6 +1778,9 @@ ${PYSITELIB}/mypyc/test/__init__.pyo
 ${PYSITELIB}/mypyc/test/config.py
 ${PYSITELIB}/mypyc/test/config.pyc
 ${PYSITELIB}/mypyc/test/config.pyo
+${PYSITELIB}/mypyc/test/test_alwaysdefined.py
+${PYSITELIB}/mypyc/test/test_alwaysdefined.pyc
+${PYSITELIB}/mypyc/test/test_alwaysdefined.pyo
 ${PYSITELIB}/mypyc/test/test_analysis.py
 ${PYSITELIB}/mypyc/test/test_analysis.pyc
 ${PYSITELIB}/mypyc/test/test_analysis.pyo
