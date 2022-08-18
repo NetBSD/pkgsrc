@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3850 2022/08/18 17:12:19 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3851 2022/08/18 18:12:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5692,3 +5692,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/py-rapidjson to 1.8 [adam 2022-08-18]
 	Updated textproc/ugrep to 3.9.1 [adam 2022-08-18]
 	Updated sysutils/py-filetype to 1.1.0 [adam 2022-08-18]
+	Updated shells/fish to 3.5.0 [wiz 2022-08-18]
