@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2022/02/11 13:02:00 pho Exp $
+$NetBSD: distinfo,v 1.6 2022/08/18 18:26:47 wiz Exp $
 
-BLAKE2s (base-compat-batteries-0.12.1.tar.gz) = 0500ee89be5ef3f964d52cc553de664e678c3f08b2811940938cbfa9692e8584
-SHA512 (base-compat-batteries-0.12.1.tar.gz) = 346ad1e53e4712017e610d1883e91371c1bbdefdce35b2830b8807e207f6fbd2233e2be153d85b6632059f58d3d9c74435537719823533ddddd47d96b231b0cf
-Size (base-compat-batteries-0.12.1.tar.gz) = 17623 bytes
+BLAKE2s (base-compat-batteries-0.12.2.tar.gz) = ed121ef42cc044de24080bdaffd204bf8fb612336439bb232e1c3620096b4e30
+SHA512 (base-compat-batteries-0.12.2.tar.gz) = 655e25ef307feacdf2e6e2670700c4f46acf0702776bb5eee609472d6b7f87f6118e0b652d44a8daef390e075ecff9b9000839468d4716fb8864495d9f19503a
+Size (base-compat-batteries-0.12.2.tar.gz) = 17645 bytes
