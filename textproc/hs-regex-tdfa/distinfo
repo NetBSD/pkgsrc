@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2022/02/11 09:14:02 pho Exp $
+$NetBSD: distinfo,v 1.6 2022/08/18 19:07:53 wiz Exp $
 
-BLAKE2s (regex-tdfa-1.3.1.1.tar.gz) = 9fbcd789f9fe4694e3da92828e41a5efcad8b8dd9db6e1f3eb8b43bd1c706266
-SHA512 (regex-tdfa-1.3.1.1.tar.gz) = d90461dd142602ee392e8861d6a44a15b59ffae9ed9aae150aa0f27245f04839da46ed3c8cb87e11f8c35ff017b0a596e2874b6a1ec653452a2fab3ee1f83b4e
-Size (regex-tdfa-1.3.1.1.tar.gz) = 78057 bytes
-SHA1 (patch-regex-tdfa.cabal) = 12fa52e782fc2019ce47bdb452805fbc078362b0
+BLAKE2s (regex-tdfa-1.3.2.tar.gz) = 46376cc0cd6fa6def6670472e6a6d892e2fde0740b2093d134ead8d59a9a8e31
+SHA512 (regex-tdfa-1.3.2.tar.gz) = 88bbf8f4d7ac15fb85c899bdeb8f8556c7a284075bf2b600051f529f0e2109dcda6ba74fc95969b824cfb03f00a9eb47e9c375c70b1b9e17096c95acbe517168
+Size (regex-tdfa-1.3.2.tar.gz) = 82839 bytes
