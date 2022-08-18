@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3849 2022/08/18 16:56:41 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3850 2022/08/18 17:12:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5690,3 +5690,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/py-tornado to 6.2 [adam 2022-08-18]
 	Updated net/py-zmq to 23.2.1 [adam 2022-08-18]
 	Updated textproc/py-rapidjson to 1.8 [adam 2022-08-18]
+	Updated textproc/ugrep to 3.9.1 [adam 2022-08-18]
+	Updated sysutils/py-filetype to 1.1.0 [adam 2022-08-18]
