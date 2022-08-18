@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22102 2022/08/18 18:21:24 wiz Exp $
+$NetBSD: TODO,v 1.22103 2022/08/18 18:26:57 wiz Exp $
 
 Suggested new packages
 ======================
@@ -847,7 +847,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o howm-1.4.7
 	o hplip-3.22.2
 	o hs-aeson-2.1.0.0
-	o hs-base-compat-batteries-0.12.2
 	o hs-base-orphans-0.8.7
 	o hs-bifunctors-5.5.12
 	o hs-generic-deriving-1.14.2
