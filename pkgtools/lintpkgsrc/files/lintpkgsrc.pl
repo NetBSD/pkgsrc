@@ -1,5 +1,5 @@
 #!@PERL5@
-# $NetBSD: lintpkgsrc.pl,v 1.121 2022/08/18 18:13:23 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.122 2022/08/18 18:26:46 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -232,7 +232,7 @@ sub listdir($base, $dir = undef) {
 		$dir = '';
 	}
 
-	opendir(DIR, $thisdir) || fail("Unable to opendir($thisdir): $!");
+	opendir(DIR, $thisdir) or fail("Unable to opendir($thisdir): $!");
 	@thislist = grep { substr($_, 0, 1) ne '.' && $_ ne 'CVS' } readdir(DIR);
 	closedir(DIR);
 	foreach my $entry (@thislist) {
@@ -798,7 +798,7 @@ sub list_installed_packages() {
 sub list_pkgsrc_categories($pkgsrcdir) {
 	my @categories;
 
-	opendir(BASE, $pkgsrcdir) || die("Unable to opendir($pkgsrcdir): $!");
+	opendir(BASE, $pkgsrcdir) or die("Unable to opendir($pkgsrcdir): $!");
 	@categories = grep { !/^\./ && -f "$pkgsrcdir/$_/Makefile" }
 	    readdir(BASE);
 	closedir(BASE);
@@ -1218,9 +1218,9 @@ sub check_pkgsrc_distfiles_vs_distinfo($pkgsrcdir, $pkgdistdir, $check_unref,
 			}
 
 			my $pid = open3(my $in, my $out, undef, 'xargs', 'digest', $sum);
-			defined $pid || fail 'fork';
+			defined $pid or fail 'fork';
 			my $pid2 = fork();
-			defined $pid2 || fail 'fork';
+			defined $pid2 or fail 'fork';
 			if ($pid2) {
 				close($in) or die;
 			} else {
@@ -1236,8 +1236,8 @@ sub check_pkgsrc_distfiles_vs_distinfo($pkgsrcdir, $pkgdistdir, $check_unref,
 				}
 			}
 			close($out) or die;
-			waitpid($pid, 0) || fail "xargs digest $sum";
-			waitpid($pid2, 0) || fail 'pipe write to xargs';
+			waitpid($pid, 0) or fail "xargs digest $sum";
+			waitpid($pid2, 0) or fail 'pipe write to xargs';
 		}
 		chdir_or_fail($prev_dir);
 	}
