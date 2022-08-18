@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3854 2022/08/18 18:28:39 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3855 2022/08/18 18:32:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5696,3 +5696,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/hs-base-compat to 0.12.2 [wiz 2022-08-18]
 	Updated devel/hs-base-compat-batteries to 0.12.2 [wiz 2022-08-18]
 	Updated devel/hs-base-orphans to 0.8.7 [wiz 2022-08-18]
+	Updated math/hs-bifunctors to 5.5.12 [wiz 2022-08-18]
