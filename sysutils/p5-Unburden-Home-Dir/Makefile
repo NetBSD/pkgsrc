@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2022/06/28 11:36:03 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2022/08/18 15:18:06 hauke Exp $
 
-VERSION_TAG=	0.4.1.3
+VERSION_TAG=	0.4.2
 
 DISTNAME=	Unburden-Home-Dir-${VERSION_TAG}
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	sysutils perl5
 MASTER_SITES=	-https://codeload.github.com/xtaran/unburden-home-dir/tar.gz/${VERSION_TAG}
 
