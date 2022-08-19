@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2022/08/19 19:59:06 wiz Exp $
+share/texmf-dist/doc/fonts/dad/README
+share/texmf-dist/doc/fonts/dad/dad-to-utf8.pl
+share/texmf-dist/doc/fonts/dad/dad-user-guide.bib
+share/texmf-dist/doc/fonts/dad/dad-user-guide.pdf
+share/texmf-dist/doc/fonts/dad/dad-user-guide.tex
+share/texmf-dist/doc/fonts/dad/dad.adjust
+share/texmf-dist/doc/fonts/dad/dadbold.adjust
+share/texmf-dist/doc/fonts/dad/dadmono.adjust
+share/texmf-dist/doc/fonts/dad/make-dad-font.pl
+share/texmf-dist/doc/fonts/dad/utf8-to-dad.pl
