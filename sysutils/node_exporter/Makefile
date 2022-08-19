@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2022/08/12 20:38:08 bsiegert Exp $
+# $NetBSD: Makefile,v 1.38 2022/08/19 08:39:39 leot Exp $
 
-DISTNAME=	node_exporter-1.0.1
+DISTNAME=	node_exporter-1.3.1
 MASTER_SITES=	${MASTER_SITE_GITHUB:=prometheus/}
-PKGREVISION=	21
 CATEGORIES=	sysutils
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
@@ -11,23 +10,13 @@ HOMEPAGE=	https://github.com/prometheus/node_exporter
 COMMENT=	Prometheus exporter for hardware and OS metrics
 LICENSE=	apache-2.0
 
-GO_DIST_BASE=	${DISTNAME}
-GO_SRCPATH=	github.com/prometheus/node_exporter
+GO_BUILD_PATTERN+=	-ldflags ' \
+			-X github.com/prometheus/common/version.Version=${PKGVERSION_NOREV} \
+			-X github.com/prometheus/common/version.Revision=${PKGREVISION} \
+			-X github.com/prometheus/common/version.Branch=${GITHUB_TAG}'
+GO_BUILD_PATTERN+=	.
 
-NEXP_GO_FLAG_PREFIX=	-X ${GO_SRCPATH}/vendor/${GO_SRCPATH:H}/common/version
-NEXP_GO_FLAGS+=		-s
-NEXP_GO_FLAGS+=		${NEXP_GO_FLAG_PREFIX}.Version=${PKGVERSION_NOREV}
-NEXP_GO_FLAGS+=		${NEXP_GO_FLAG_PREFIX}.Revision=${PKGREVISION}
-NEXP_GO_FLAGS+=		${NEXP_GO_FLAG_PREFIX}.Branch=${GITHUB_TAG}
+.include "go-modules.mk"
 
-do-build:
-	${RUN} ${PKGSRC_SETENV} ${MAKE_ENV} \
-		${GO} build -ldflags "${NEXP_GO_FLAGS}" ${GO_BUILD_PATTERN}
-	${RUN} ${PKGSRC_SETENV} ${MAKE_ENV} \
-		${GO} install -ldflags "${NEXP_GO_FLAGS}" ${GO_BUILD_PATTERN}
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKDIR}/bin/node_exporter ${DESTDIR}${PREFIX}/bin
-
-.include "../../lang/go/go-package.mk"
+.include "../../lang/go/go-module.mk"
 .include "../../mk/bsd.pkg.mk"
