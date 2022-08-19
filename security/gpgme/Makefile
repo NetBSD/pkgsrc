@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.107 2022/08/18 10:38:26 tnn Exp $
+# $NetBSD: Makefile,v 1.108 2022/08/19 11:15:16 tnn Exp $
 
 DISTNAME=	gpgme-1.18.0
 CATEGORIES=	security
@@ -10,7 +10,7 @@ HOMEPAGE=	https://www.gnupg.org/related_software/gpgme/
 COMMENT=	GnuPG Made Easy
 LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES+=		c99 c++14 # https://dev.gnupg.org/T6141
+USE_LANGUAGES+=		c99 c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
