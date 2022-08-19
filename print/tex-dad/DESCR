@@ -1,0 +1,5 @@
+This package allows simple typesetting in Arabic script,
+intended for mixed Arabic/Latin script usage in situations
+where heavy-duty solutions are discouraged. The system operates
+with both Unicode and transliterated input, allowing the user
+to choose the most appropriate approach for every situation.
