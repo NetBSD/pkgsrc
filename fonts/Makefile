@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.379 2022/08/19 16:14:56 wiz Exp $
+# $NetBSD: Makefile,v 1.380 2022/08/19 16:24:55 wiz Exp $
 #
 
 COMMENT=	Fonts
@@ -253,7 +253,7 @@ SUBDIR+=	tex-albatross-doc
 SUBDIR+=	tex-alegreya
 SUBDIR+=	tex-alegreya-doc
 SUBDIR+=	tex-alkalami
-SUBDIR+=	tex-alkalami.doc
+SUBDIR+=	tex-alkalami-doc
 SUBDIR+=	tex-allrunes
 SUBDIR+=	tex-allrunes-doc
 SUBDIR+=	tex-almfixed
