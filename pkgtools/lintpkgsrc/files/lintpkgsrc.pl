@@ -1,5 +1,5 @@
 #!@PERL5@
-# $NetBSD: lintpkgsrc.pl,v 1.126 2022/08/19 05:06:26 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.127 2022/08/19 05:20:27 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -951,6 +951,30 @@ sub package_globmatch($pkgmatch) {
 	}
 }
 
+sub make_show_vars($pkgdir) {
+	debug("Running '$conf_make' in '$pkgdir'");
+	my $pid = open3(\*WTR, \*RDR, \*ERR,
+	    "cd $pkgdir || exit 1; $conf_make show-vars VARNAMES=PKGNAME");
+	if (!$pid) {
+		warn "$pkgdir: Unable to run make: $!";
+	} else {
+		close(WTR) or die;
+		my @errors = <ERR>;
+		close(ERR) or die;
+		my $makepkgname = <RDR>;
+		close(RDR) or die;
+		wait;
+		chomp @errors;
+		if (@errors) { warn "\n$pkgdir: @errors\n"; }
+
+		if ($makepkgname =~ /(.*)-(\d.*)/) {
+			return $makepkgname;
+		}
+	}
+
+	undef;
+}
+
 # Parse a pkgsrc package makefile and return the pkgname and set variables
 #
 sub parse_makefile_pkgsrc($file) {
@@ -966,28 +990,8 @@ sub parse_makefile_pkgsrc($file) {
 	$pkgname = $distname unless defined $pkgname;
 
 	if (!defined $pkgname || $pkgname =~ /\$/ || $pkgname !~ /(.*)-(\d.*)/) {
-
-		# invoke make here as a last resort
-		my $pkgdir = dirname $file;
-		debug("Running '$conf_make' in '$pkgdir'");
-		my $pid = open3(\*WTR, \*RDR, \*ERR,
-		    "cd $pkgdir || exit 1; $conf_make show-vars VARNAMES=PKGNAME");
-		if (!$pid) {
-			warn "$file: Unable to run make: $!";
-		} else {
-			close(WTR) or die;
-			my @errors = <ERR>;
-			close(ERR) or die;
-			my $makepkgname = <RDR>;
-			close(RDR) or die;
-			wait;
-			chomp @errors;
-			if (@errors) { warn "\n$file: @errors\n"; }
-
-			if ($makepkgname =~ /(.*)-(\d.*)/) {
-				$pkgname = $makepkgname;
-			}
-		}
+		my $makepkgname = make_show_vars(dirname $file);
+		$pkgname = $makepkgname if defined $makepkgname;
 	}
 
 	defined $pkgname or return ();
