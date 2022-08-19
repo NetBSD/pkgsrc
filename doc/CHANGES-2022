@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3900 2022/08/19 19:41:44 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3901 2022/08/19 19:50:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5745,3 +5745,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated pkgtools/texlive2pkg to 1.12 [wiz 2022-08-19]
 	Added print/tex-arabi-add version 1.0 [wiz 2022-08-19]
 	Added print/tex-arabi-add-doc version 1.0 [wiz 2022-08-19]
+	Added print/tex-arabic-book version 1.0 [wiz 2022-08-19]
