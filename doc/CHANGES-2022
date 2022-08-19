@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3891 2022/08/19 16:25:14 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3892 2022/08/19 16:30:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5736,3 +5736,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/woboq_codebrowser to 2.1.20220614 [tnn 2022-08-19]
 	Added fonts/tex-alkalami version 1.000 [wiz 2022-08-19]
 	Added fonts/tex-alkalami-doc version 2022 [wiz 2022-08-19]
+	Added print/tex-alpha-persian version 1.3 [wiz 2022-08-19]
