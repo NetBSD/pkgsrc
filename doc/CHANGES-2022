@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3872 2022/08/19 06:25:54 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3873 2022/08/19 06:26:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5716,3 +5716,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/grpc to 1.48.0 [wiz 2022-08-19]
 	Updated net/py-grpcio to 1.48.0 [wiz 2022-08-19]
 	Updated net/py-grpcio-testing to 1.48.0 [wiz 2022-08-19]
+	Updated net/py-grpcio-tools to 1.48.0 [wiz 2022-08-19]
