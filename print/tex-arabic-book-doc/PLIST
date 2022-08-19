@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2022/08/19 19:49:28 wiz Exp $
+share/texmf-dist/doc/xelatex/arabic-book/README.txt
+share/texmf-dist/doc/xelatex/arabic-book/arabic-book.pdf
+share/texmf-dist/doc/xelatex/arabic-book/arabic-book.tex
+share/texmf-dist/doc/xelatex/arabic-book/arabic-ref.bib
+share/texmf-dist/doc/xelatex/arabic-book/fig1.png
