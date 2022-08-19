@@ -1,17 +1,38 @@
-$NetBSD: patch-Makefile,v 1.1 2013/12/10 11:41:43 jperkin Exp $
+$NetBSD: patch-Makefile,v 1.2 2022/08/19 01:01:29 tnn Exp $
 
-Use compiler wrapper and support additional CFLAGS.
+support DESTDIR installation properly
 
---- Makefile.orig	2005-07-25 22:15:49.000000000 +0000
+--- Makefile.orig	2020-12-30 18:17:52.000000000 +0000
 +++ Makefile
-@@ -2,8 +2,8 @@
- # Makefile for EXIFPROBE image file probe
+@@ -23,9 +23,9 @@ CFLAGS+=-DCOLOR -O -std=c99
  
- # Any compiler should do
--CC=cc
--CFLAGS=-DCOLOR -O 
-+#CC=cc
-+CFLAGS+=-DCOLOR
+ # On Solaris, you may need to use 'gmake', or edit the next line.
+ INSTALL = install -d -m 644
+-PREFIX ?= $(DESTDIR)/usr
+-BINDIR=$(PREFIX)/bin/local
+-MANDIR=$(PREFIX)/share/man/man1
++PREFIX ?= /usr
++BINDIR?=$(PREFIX)/bin
++MANDIR?=$(PREFIX)/share/man/man1
  
- # You probably don't need these
- # CFLAGS=-DCOLOR -g -O -Dlint -Wall  -Wno-long-long 
+ INCLUDES=defs.h extern.h misc.h tifftags.h exiftags.h \
+ 	tiffeptags.h jpegtags.h global.h
+@@ -71,12 +71,12 @@ exifprobe: $(OBJS) $(INCLUDES) Makefile
+ 	$(CC) -o exifprobe $(CFLAGS) $(LDFLAGS) $(CPPFLAGS) $(OBJS) comptime.c -lm
+ 
+ install: all
+-	install -d $(PREFIX)/bin
+-	install -d $(PREFIX)/share/man/man1
+-	install -c -m 755 exifprobe $(PREFIX)/bin
+-	install -c -m 755 exifgrep $(PREFIX)/bin
+-	install -c -m 644  exifprobe.1 $(PREFIX)/share/man/man1
+-	install -c -m 644  exifgrep.1 $(PREFIX)/share/man/man1
++	install -d $(DESTDIR)$(BINDIR)
++	install -d $(DESTDIR)$(MANDIR)
++	install -c -m 755 exifprobe $(DESTDIR)$(BINDIR)
++	install -c -m 755 exifgrep $(DESTDIR)$(BINDIR)
++	install -c -m 644  exifprobe.1 $(DESTDIR)$(MANDIR)
++	install -c -m 644  exifgrep.1 $(DESTDIR)$(MANDIR)
+ 
+ # if you want HTML man pages, pick a target; I prefer man2html
+ rman: exifprobe.1 exifgrep.1
