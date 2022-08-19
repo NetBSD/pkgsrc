@@ -1,51 +1,50 @@
-# $NetBSD: Makefile,v 1.29 2022/06/28 11:34:47 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2022/08/19 02:00:50 tnn Exp $
 #
 
-DISTNAME=	colorize_0.3.0
-PKGNAME=	colorize-0.3.0
-PKGREVISION=	11
+DISTNAME=	colorize-0.3.4
 CATEGORIES=	misc
-MASTER_SITES=	http://colorize.raszi.hu/downloads/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_GITHUB:=raszi/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	# http://colorize.raszi.hu/
+HOMEPAGE=	https://github.com/raszi/colorize
 COMMENT=	Log colorize perl script
+LICENSE=	gnu-gpl-v2
 
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 NO_BUILD=	yes
 
 USE_TOOLS+=		gunzip perl:run
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 SUBST_CLASSES+=		color
 SUBST_STAGE.color=	pre-configure
 SUBST_MESSAGE.color=	Fixing hard-coded paths.
-SUBST_FILES.color=	colorize.pl examples/*.sh
-SUBST_SED.color+=	-e "s,/usr/bin/perl,${LOCALBASE}/bin/perl,"
+SUBST_FILES.color=	colorize colorize.1
 SUBST_SED.color+=	-e "s,/etc/colorizerc,${PKG_SYSCONFDIR}/colorizerc,"
-SUBST_SED.color+=	-e "s,/bin/bash,"${SH:Q}","
+
+REPLACE_PERL+=		colorize
+REPLACE_SH+=		examples/*.sh
+
+INSTALLATION_DIRS+=	bin
+INSTALLATION_DIRS+=	${PKGMANDIR}/man1
+INSTALLATION_DIRS+=	share/examples/colorize
+INSTALLATION_DIRS+=	share/doc/colorize
 
 post-extract:
-	${GUNZIP_CMD} ${WRKSRC}/colorize.pl.1.gz
-	${GUNZIP_CMD} ${WRKSRC}/examples/colorize-fifo.sh.gz
-	${GUNZIP_CMD} ${WRKSRC}/examples/colorize-tail.sh.gz
+	${GUNZIP_CMD} ${WRKSRC}/colorize.1.gz
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/colorize.pl ${DESTDIR}${PREFIX}/bin/colorize
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/colorize
+	${INSTALL_SCRIPT} ${WRKSRC}/colorize ${DESTDIR}${PREFIX}/bin/colorize
 	${INSTALL_DATA} ${WRKSRC}/colorizerc				\
 		${DESTDIR}${PREFIX}/share/examples/colorize
-	${INSTALL_MAN} ${WRKSRC}/colorize.pl.1				\
+	${INSTALL_MAN} ${WRKSRC}/colorize.1				\
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/colorize.1
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/colorize
 	cd ${WRKSRC} && ${INSTALL_DATA} README TIPS			\
 		${DESTDIR}${PREFIX}/share/doc/colorize
 	${INSTALL_SCRIPT} ${WRKSRC}/examples/colorize-fifo.sh		\
 		${DESTDIR}${PREFIX}/share/examples/colorize
 	${INSTALL_SCRIPT} ${WRKSRC}/examples/colorize-tail.sh		\
 		${DESTDIR}${PREFIX}/share/examples/colorize
-	${INSTALL_DATA} ${WRKSRC}/examples/Xlog.tar.gz			\
+	${INSTALL_DATA} ${WRKSRC}/examples/Xlog.tar			\
 		${DESTDIR}${PREFIX}/share/examples/colorize
 
 .include "../../mk/bsd.pkg.mk"
