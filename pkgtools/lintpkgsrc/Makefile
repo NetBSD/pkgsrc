@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2022/08/14 13:13:52 rillig Exp $
+# $NetBSD: Makefile,v 1.54 2022/08/19 18:23:41 rillig Exp $
 
 PKGNAME=	lintpkgsrc-2022.08.13
 CATEGORIES=	pkgtools
@@ -18,11 +18,27 @@ WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# none
 AUTO_MKDIRS=	yes
 
+.include "../../mk/bsd.prefs.mk"
+
+# See bootstrap/bootstrap.
+# See pkgtools/bootstrap-mk-files/files/bsd.own.mk.in.
+# Another guess would be '${.MAKE.MAKEFILES:M*/mk.conf:[1]}'.
+.for conf in \
+    ${MAKECONF} \
+    ${PKG_SYSCONFBASE:=/mk.conf} \
+    ${SYSCONFBASE:=/mk.conf} \
+    ${LOCALBASE:=/etc/mk.conf}
+.  if exists(${conf})
+LINTPKGSRC_MAKECONF=	${conf}
+.  endif
+.endfor
+LINTPKGSRC_MAKECONF?=	/etc/mk.conf
+
 SUBST_CLASSES+=		lp
 SUBST_STAGE.lp=		post-configure
 SUBST_FILES.lp+=	lintpkgsrc.1 lintpkgsrc.pl
+SUBST_VARS.lp+=		LINTPKGSRC_MAKECONF
 SUBST_VARS.lp+=		MAKE
-SUBST_VARS.lp+=		MAKECONF
 SUBST_VARS.lp+=		PERL5
 SUBST_VARS.lp+=		PKGSRCDIR
 SUBST_VARS.lp+=		PKG_INFO
