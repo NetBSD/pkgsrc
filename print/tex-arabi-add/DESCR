@@ -1,0 +1,3 @@
+This package takes advantage of some of the possibilities that
+hyperref and bookmark packages offer when you create a table of
+contents for Arabic texts created by the arabi package.
