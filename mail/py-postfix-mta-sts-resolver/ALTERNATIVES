@@ -1,0 +1,2 @@
+bin/mta-sts-daemon @PREFIX@/bin/mta-sts-daemon-@PYVERSSUFFIX@
+bin/mta-sts-query @PREFIX@/bin/mta-sts-query-@PYVERSSUFFIX@
