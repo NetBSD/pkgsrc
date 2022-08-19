@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2022/08/19 13:51:55 tnn Exp $
+# $NetBSD: Makefile,v 1.12 2022/08/19 14:01:38 tnn Exp $
 
 DISTNAME=	codebrowser-2.1.20220614
 PKGNAME=	woboq_${DISTNAME}
@@ -12,19 +12,10 @@ COMMENT=	Code analysis tool
 LICENSE=	cc-by-nc-sa-v3.0-license
 
 USE_CMAKE=	yes
-CMAKE_ARGS+=	-DLLVM_CONFIG_EXECUTABLE=${LLVM_CONFIG_PATH:Q} \
-		-DCMAKE_BUILD_TYPE=Release
-
-USE_TOOLS+=	pax
 USE_LANGUAGES=	c c++11
+CMAKE_ARGS+=	-DLLVM_CONFIG_EXECUTABLE=${LLVM_CONFIG_PATH:Q}
+CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 WRKSRC=		${WRKDIR}/codebrowser-${GITHUB_TAG}
-
-INSTALLATION_DIRS+=	bin share/woboq_codebrowser
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/generator/codebrowser_generator ${DESTDIR}${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/indexgenerator/codebrowser_indexgenerator ${DESTDIR}${PREFIX}/bin
-	cd ${WRKSRC}/data && pax -rwpp . ${DESTDIR}${PREFIX}/share/woboq_codebrowser
 
 .include "../../lang/clang/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
