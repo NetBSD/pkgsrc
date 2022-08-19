@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/08/19 16:13:59 wiz Exp $
+
+BLAKE2s (alkalami.r44497.tar.xz) = ae9b4fa305b821919fa6020710554c1654313e5406fd320fec9d5f000f28f93d
+SHA512 (alkalami.r44497.tar.xz) = 57d8a09d5643536cb2341cfd7bd84f24f101ebd73ef1456a39fa8557fc81bb6bddfb58990c38d4da229da5c6ccba0b4d956d82f7d07d65c57a87c749ba3ef841
+Size (alkalami.r44497.tar.xz) = 98212 bytes
