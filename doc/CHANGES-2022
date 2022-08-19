@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3905 2022/08/19 19:59:31 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3906 2022/08/19 19:59:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5750,3 +5750,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added print/tex-bidihl version 0.1c [wiz 2022-08-19]
 	Added print/tex-bidihl-doc version 0.1c [wiz 2022-08-19]
 	Added print/tex-dad version 1.2 [wiz 2022-08-19]
+	Added print/tex-dad-doc version 1.2 [wiz 2022-08-19]
