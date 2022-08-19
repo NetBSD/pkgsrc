@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3877 2022/08/19 10:16:21 pin Exp $
+$NetBSD: CHANGES-2022,v 1.3878 2022/08/19 10:17:40 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5722,3 +5722,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/xlockmore to 5.71 [micha 2022-08-19]
 	Updated x11/xlockmore-lite to 5.71 [micha 2022-08-19]
 	Updated news/tuifeed to 0.2.1 [pin 2022-08-19]
+	Updated audio/termusic to 0.7.3 [pin 2022-08-19]
