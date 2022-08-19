@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3884 2022/08/19 13:31:30 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3885 2022/08/19 13:48:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5730,3 +5730,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated mail/roundcube to 1.6.0nb1 [taca 2022-08-19]
 	Updated www/py-paste to 3.5.2 [adam 2022-08-19]
 	Updated finance/py-stripe to 4.0.2 [adam 2022-08-19]
+	Updated net/py-cares to 4.2.2 [wiz 2022-08-19]
