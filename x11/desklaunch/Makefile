@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.8 2017/09/03 08:53:17 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2022/08/19 09:58:30 tnn Exp $
 #
 
 VERSION=	1.1.5
 DISTNAME=	desklaunch_${VERSION}
 PKGNAME=	desklaunch-${VERSION}
 CATEGORIES=	x11
-MASTER_SITES=	https://www.oroborus.org/debian/dists/sid/main/source/x11/
+#MASTER_SITES=	https://www.oroborus.org/debian/dists/sid/main/source/x11/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.oroborus.org/?node=Download
+HOMEPAGE=	https://web.archive.org/web/20191129172107/https://www.oroborus.org/
 COMMENT=	X utility for binding commands to pixmap icons
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
