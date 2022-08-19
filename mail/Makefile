@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.579 2022/05/25 15:45:31 manu Exp $
+# $NetBSD: Makefile,v 1.580 2022/08/19 13:59:43 wiz Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -300,6 +300,7 @@ SUBDIR+=	py-email_validator
 SUBDIR+=	py-flufl.bounce
 SUBDIR+=	py-imapclient
 SUBDIR+=	py-policyd-spf
+SUBDIR+=	py-postfix-mta-sts-resolver
 SUBDIR+=	py-sendmail-admin
 SUBDIR+=	py-spf
 SUBDIR+=	py-ukpostcodeparser
