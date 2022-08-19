@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2022/08/19 20:09:44 wiz Exp $
+share/texmf-dist/doc/latex/hvarabic/CHANGELOG
+share/texmf-dist/doc/latex/hvarabic/README.md
+share/texmf-dist/doc/latex/hvarabic/hvarabic.pdf
+share/texmf-dist/doc/latex/hvarabic/hvarabic.tex
