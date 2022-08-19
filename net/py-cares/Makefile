@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2022/01/04 20:54:26 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2022/08/19 13:48:29 wiz Exp $
 
-DISTNAME=	pycares-2.4.0
+DISTNAME=	pycares-4.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
-PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pycares/}
 
@@ -15,6 +14,8 @@ DEPENDS+=	${PYPKGPREFIX}-cffi>=1.5.0:../../devel/py-cffi
 
 USE_LANGUAGES=	c
 MAKE_ENV+=	PYCARES_CFFI=1
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
