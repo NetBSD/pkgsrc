@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22118 2022/08/19 06:25:33 wiz Exp $
+$NetBSD: TODO,v 1.22119 2022/08/19 08:39:46 leot Exp $
 
 Suggested new packages
 ======================
@@ -1089,7 +1089,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o newmail-1.0.2
 	o nickle-2.90
 	o nios2-binutils-2.36.1
-	o node_exporter-1.1.2
 	o npm-8.17.0
 	o ns-3.14.1
 	o ns-plugger-common-5.1.3
