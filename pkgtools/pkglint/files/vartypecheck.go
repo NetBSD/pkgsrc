@@ -397,6 +397,9 @@ func (cv *VartypeCheck) DependencyPattern() {
 		if defpat == nil || defpat.LowerOp == "" {
 			return
 		}
+		if containsVarUse(defpat.LowerOp) || containsVarUse(deppat.Lower) {
+			return
+		}
 		limit := condInt(defpat.LowerOp == ">=" && deppat.LowerOp == ">", 1, 0)
 		if pkgver.Compare(deppat.Lower, defpat.Lower) < limit {
 			cv.Notef("The requirement %s%s is already guaranteed by the %s%s from %s.",

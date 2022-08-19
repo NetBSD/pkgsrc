@@ -489,8 +489,13 @@ func (s *Suite) Test_VartypeCheck_DependencyPattern__smaller_version(c *check.C)
 	t := s.Init(c)
 
 	t.SetUpPackage("category/package",
+		"LIB_VERSION_SMALL=\t1.0",
+		"LIB_VERSION_LARGE=\t10.0",
+		"",
 		".include \"../../category/lib/buildlink3.mk\"",
 		"BUILDLINK_API_DEPENDS.lib+=\tlib>=1.0pkg",
+		"BUILDLINK_API_DEPENDS.lib+=\tlib>=${LIB_VERSION_SMALL}",
+		"BUILDLINK_API_DEPENDS.lib+=\tlib>=${LIB_VERSION_LARGE}",
 		"BUILDLINK_ABI_DEPENDS.lib+=\tlib>=1.1pkg")
 	t.SetUpPackage("category/lib")
 	t.CreateFileBuildlink3("category/lib/buildlink3.mk",
@@ -502,11 +507,11 @@ func (s *Suite) Test_VartypeCheck_DependencyPattern__smaller_version(c *check.C)
 	G.checkdirPackage(".")
 
 	t.CheckOutputLines(
-		"NOTE: Makefile:21: The requirement >=1.0pkg is already guaranteed "+
+		"NOTE: Makefile:24: The requirement >=1.0pkg is already guaranteed "+
 			"by the >=1.3api from ../../category/lib/buildlink3.mk:12.",
-		"ERROR: Makefile:22: Packages must only require API versions, "+
+		"ERROR: Makefile:27: Packages must only require API versions, "+
 			"not ABI versions of dependencies.",
-		"NOTE: Makefile:22: The requirement >=1.1pkg is already guaranteed "+
+		"NOTE: Makefile:27: The requirement >=1.1pkg is already guaranteed "+
 			"by the >=1.4abi from ../../category/lib/buildlink3.mk:13.")
 }
 
