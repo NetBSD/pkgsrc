@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3903 2022/08/19 19:54:28 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3904 2022/08/19 19:54:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5748,3 +5748,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added print/tex-arabic-book version 1.0 [wiz 2022-08-19]
 	Added print/tex-arabic-book-doc version 1.0 [wiz 2022-08-19]
 	Added print/tex-bidihl version 0.1c [wiz 2022-08-19]
+	Added print/tex-bidihl-doc version 0.1c [wiz 2022-08-19]
