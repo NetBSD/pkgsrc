@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2020/01/26 05:26:24 rillig Exp $
+# $NetBSD: Makefile,v 1.42 2022/08/19 22:13:19 abs Exp $
 
 DISTNAME=	joe-4.6
+PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=joe-editor/}
 
@@ -25,4 +26,5 @@ CONF_FILES+=	${EGDIR}/jstarrc ${PKG_SYSCONFDIR}/jstarrc
 CONF_FILES+=	${EGDIR}/rjoerc ${PKG_SYSCONFDIR}/rjoerc
 
 .include "../../mk/termcap.buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
