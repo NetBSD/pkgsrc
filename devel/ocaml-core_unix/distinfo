@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.1 2022/05/05 09:26:58 jaapb Exp $
+$NetBSD: distinfo,v 1.2 2022/08/19 12:42:34 tnn Exp $
 
 BLAKE2s (core_unix-0.15.0.tar.gz) = 4c2a4fdf1a4fcc9967f4eb6e86c5b081968110fdd4acec4b81ce7981a315a969
 SHA512 (core_unix-0.15.0.tar.gz) = eeb53bd0c06a7d1facfb133f0a45a232d57941eff644d4ed6c2d5002acd4e6b323376ec9c05838f760ebd9da3fbc39332989ed50b3921191c175811c947fcbfe
 Size (core_unix-0.15.0.tar.gz) = 377928 bytes
+SHA1 (patch-bigstring__unix_src_bigstring__unix.ml) = 3fb49b23bdf93b8d1c4fe0c7574347ad5f53c8ef
+SHA1 (patch-core__unix_src_core__unix__stubs.c) = 0a6ab8913d7151cc7106f0b047751d198d0e13fa
+SHA1 (patch-syslog_src_syslog__stubs.c) = c8d5270b66227ddd225067aa793f17732d3e66c4
