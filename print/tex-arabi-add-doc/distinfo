@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/08/19 19:41:02 wiz Exp $
+
+BLAKE2s (arabi-add.doc.r37709.tar.xz) = f696a8b7975f861e966026d01394916306fd9f8d1e7efc7aa1af53c4b3a474fc
+SHA512 (arabi-add.doc.r37709.tar.xz) = 4c44de9d3b46c605a463fd1704e56c5c61806f6e0dcc130251c81d0c555534e167034b6ba2deec1370e502fd006192540ef415aa42987f69025f18642451396e
+Size (arabi-add.doc.r37709.tar.xz) = 168780 bytes
