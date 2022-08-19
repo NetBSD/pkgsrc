@@ -1,0 +1,2 @@
+aiodns provides a simple way for doing asynchronous DNS resolutions
+using pycares.
