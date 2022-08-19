@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2022/08/19 20:05:46 wiz Exp $
+share/texmf-dist/doc/latex/ghab/README
+share/texmf-dist/doc/latex/ghab/ghab-doc.pdf
+share/texmf-dist/doc/latex/ghab/ghab-doc.tex
