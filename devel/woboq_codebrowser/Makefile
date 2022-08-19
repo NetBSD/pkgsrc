@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2022/08/19 13:48:25 tnn Exp $
+# $NetBSD: Makefile,v 1.11 2022/08/19 13:51:55 tnn Exp $
 
 DISTNAME=	codebrowser-2.1.20220614
+PKGNAME=	woboq_${DISTNAME}
 CATEGORIES=	devel lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=KDAB/}
 GITHUB_TAG=	ff3846d2addc75d1077435a3df87fd7606e54485
@@ -16,6 +17,7 @@ CMAKE_ARGS+=	-DLLVM_CONFIG_EXECUTABLE=${LLVM_CONFIG_PATH:Q} \
 
 USE_TOOLS+=	pax
 USE_LANGUAGES=	c c++11
+WRKSRC=		${WRKDIR}/codebrowser-${GITHUB_TAG}
 
 INSTALLATION_DIRS+=	bin share/woboq_codebrowser
 
