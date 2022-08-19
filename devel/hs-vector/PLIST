@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2021/04/23 07:00:57 pho Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/08/19 12:30:14 wiz Exp $
 lib/vector-${PKGVERSION}/${HS_VERSION}/package-description
 lib/vector-${PKGVERSION}/${HS_VERSION}/package-id
 lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
@@ -78,11 +78,9 @@ share/doc/${HS_PLATFORM}/vector-${PKGVERSION}/html/Data-Vector-Generic-Mutable-B
 share/doc/${HS_PLATFORM}/vector-${PKGVERSION}/html/Data-Vector-Generic-Mutable.html
 share/doc/${HS_PLATFORM}/vector-${PKGVERSION}/html/Data-Vector-Generic-New.html
 share/doc/${HS_PLATFORM}/vector-${PKGVERSION}/html/Data-Vector-Generic.html
-share/doc/${HS_PLATFORM}/vector-${PKGVERSION}/html/Data-Vector-Internal-Check.html
 share/doc/${HS_PLATFORM}/vector-${PKGVERSION}/html/Data-Vector-Mutable.html
 share/doc/${HS_PLATFORM}/vector-${PKGVERSION}/html/Data-Vector-Primitive-Mutable.html
 share/doc/${HS_PLATFORM}/vector-${PKGVERSION}/html/Data-Vector-Primitive.html
-share/doc/${HS_PLATFORM}/vector-${PKGVERSION}/html/Data-Vector-Storable-Internal.html
 share/doc/${HS_PLATFORM}/vector-${PKGVERSION}/html/Data-Vector-Storable-Mutable.html
 share/doc/${HS_PLATFORM}/vector-${PKGVERSION}/html/Data-Vector-Storable.html
 share/doc/${HS_PLATFORM}/vector-${PKGVERSION}/html/Data-Vector-Unboxed-Mutable.html
