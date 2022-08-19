@@ -1,16 +1,16 @@
-$NetBSD: patch-Makefile,v 1.11 2022/08/06 09:13:47 fcambus Exp $
+$NetBSD: patch-Makefile,v 1.12 2022/08/19 08:59:48 fcambus Exp $
 
 - Do not hard-code -pthread, as it is handled by the pkgsrc infrastructure.
 - Do not hard-code -ldl
 
---- Makefile.orig	2022-08-04 12:47:21.000000000 +0000
+--- Makefile.orig	2022-08-18 08:27:51.000000000 +0000
 +++ Makefile
-@@ -48,7 +48,7 @@ MOLD_CXXFLAGS := -std=c++20 -fno-excepti
-                  -fno-asynchronous-unwind-tables -Ithird-party \
+@@ -49,7 +49,7 @@ MOLD_CXXFLAGS := -std=c++20 -fno-excepti
+                  -fno-asynchronous-unwind-tables \
                   -DMOLD_VERSION=\"$(VERSION)\" -DLIBDIR="\"$(LIBDIR)\""
  
 -MOLD_LDFLAGS := -pthread -lz -lm -ldl
 +MOLD_LDFLAGS := -lz -lm
  
- # Get a hash of the current git head. We don't want to use the git
- # command because the command prints out a warning if running under
+ LTO = 0
+ ifeq ($(LTO), 1)
