@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 11:23:36 nia Exp $
+$NetBSD: distinfo,v 1.12 2022/08/19 21:23:32 leot Exp $
 
-BLAKE2s (translate-shell-0.9.6.12.tar.gz) = 11dc3ab599b4f2527d7f6ea904d4cbd7132c1cfb1d03424e611c5b263cabda49
-SHA512 (translate-shell-0.9.6.12.tar.gz) = 6cbdfd14b7004d0e37a4abee01bec87409137f1bb7a14a964936bf0a2ad704ea1fc04dcd8ab10404a5c2df105bf7a6a8b33ed02c75c1035a6900082f6dfbb20d
-Size (translate-shell-0.9.6.12.tar.gz) = 77580 bytes
+BLAKE2s (translate-shell-0.9.7.tar.gz) = 5a81096ade46091415ce8f0b9e7c09507afb6bb2ea87ca4aed7eedc34d76fe61
+SHA512 (translate-shell-0.9.7.tar.gz) = 77736eb37e54a4484f81ef516b0178a1a470fec7641da3a1ebba7765e0be6304e747b069b4b4eede6956db8e18558312ffc0f78ec109043059c0246ee2136ba8
+Size (translate-shell-0.9.7.tar.gz) = 94599 bytes
