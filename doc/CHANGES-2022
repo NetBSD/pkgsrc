@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3885 2022/08/19 13:48:39 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3886 2022/08/19 13:58:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5731,3 +5731,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/py-paste to 3.5.2 [adam 2022-08-19]
 	Updated finance/py-stripe to 4.0.2 [adam 2022-08-19]
 	Updated net/py-cares to 4.2.2 [wiz 2022-08-19]
+	Added net/py-aiodns version 3.0.0 [wiz 2022-08-19]
