@@ -1,10 +1,13 @@
-# $NetBSD: install.tmpl,v 1.1.1.1 2004/09/21 17:03:54 jmmv Exp $
+# $NetBSD: install.tmpl,v 1.2 2022/08/19 22:05:10 abs Exp $
 
 APPLICATIONS_PATH="@APPLICATIONS_PATH@"
 UPDATE_DESKTOPDB="@UPDATE_DESKTOPDB@"
 
 case ${STAGE} in
 POST-INSTALL|DEINSTALL)
-	${UPDATE_DESKTOPDB} ${APPLICATIONS_PATH}
+        # desktop-file-utils may not be installed
+        if [ -x ${UPDATE_DESKTOPDB} ] ; then
+                ${UPDATE_DESKTOPDB} ${APPLICATIONS_PATH}
+        fi
 	;;
 esac
