@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2022/05/21 21:38:36 fcambus Exp $
+# $NetBSD: Makefile,v 1.34 2022/08/19 09:25:53 fcambus Exp $
 
 DISTNAME=	most-5.1.0
 CATEGORIES=	misc
@@ -7,6 +7,7 @@ MASTER_SITES=	https://www.jedsoft.org/releases/most/
 MAINTAINER=	rhwang@bigpanda.com
 HOMEPAGE=	https://www.jedsoft.org/most/
 COMMENT=	Pager (like less) which has support for windows and binary files
+LICENSE=	gnu-gpl-v2
 
 MAKE_JOBS_SAFE=		no
 
