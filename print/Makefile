@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.869 2022/08/19 20:05:56 wiz Exp $
+# $NetBSD: Makefile,v 1.870 2022/08/19 20:09:54 wiz Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -854,6 +854,8 @@ SUBDIR+=	tex-hologo
 SUBDIR+=	tex-hologo-doc
 SUBDIR+=	tex-hopatch
 SUBDIR+=	tex-hopatch-doc
+SUBDIR+=	tex-hvarabic
+SUBDIR+=	tex-hvarabic-doc
 SUBDIR+=	tex-hycolor
 SUBDIR+=	tex-hycolor-doc
 SUBDIR+=	tex-hypdestopt
