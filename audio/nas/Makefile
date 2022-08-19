@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2020/04/26 06:35:30 rillig Exp $
+# $NetBSD: Makefile,v 1.104 2022/08/19 12:17:46 tnn Exp $
 
 DISTNAME=	nas-1.9.4.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -39,6 +39,13 @@ SUBST_CLASSES+=		mungeman
 SUBST_STAGE.mungeman=	pre-configure
 SUBST_FILES.mungeman=	config/mungeman
 SUBST_SED.mungeman=	-e 's|^ *\#|\#|g'
+
+SUBST_CLASSES+=		laudio
+SUBST_STAGE.laudio=	pre-configure
+SUBST_MESSAGE.laudio=	fix linking with not-yet-installed libaudio.so
+SUBST_FILES.laudio=	config/NetAudio.tmpl
+SUBST_FILES.laudio+=	Makefile */Makefile */*/Makefile */*/*/Makefile
+SUBST_SED.laudio=	-e 's,-laudio,-L$$(AUSRC) &,g'
 
 REPLACE_SH=		clients/audio/util/checkmail
 

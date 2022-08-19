@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.39 2021/10/26 09:59:18 nia Exp $
+$NetBSD: distinfo,v 1.40 2022/08/19 12:17:46 tnn Exp $
 
 BLAKE2s (nas-1.9.4.src.tar.gz) = 6a7271a2d32e2d7778f10a85213c8e61f35354081562d446902aa3a242e225d6
 SHA512 (nas-1.9.4.src.tar.gz) = 3f8bd60f8ce0f25a2605af17caaadfe4f21223ba4cd3fa02078d1427b17cdf33ebda887e5dc30cd68eb7f64bfad80aafc9071ff0a26f0d3a4a93caacac03b5bb
@@ -9,7 +9,7 @@ SHA1 (patch-ac) = 348c34feb5b5da95ba4d1df79e5dcb79880dbfd8
 SHA1 (patch-ad) = bef3e9fe82487766240931bbbed0213e3fe1c2c3
 SHA1 (patch-ae) = 2e88c42f849ec2e3eb942f79d05065ec8ddd1a9e
 SHA1 (patch-af) = 9e387f88504d6ef18ad4210af24702de61efbf1a
-SHA1 (patch-ag) = bd7d41acba8c38f133318380155dff30a7d32994
+SHA1 (patch-ag) = bd9f832cb3a32fc75deb61a1eb1f4adddffe852e
 SHA1 (patch-clients_audio_auconvert_Imakefile) = 423e6123111fdc1c10943b2d73b0214ca037fdaa
 SHA1 (patch-server_dia_auservertype.h) = 8ee2d064797837a1fcfd6c1389e09879f015cc9b
 SHA1 (patch-server_dia_lex.l) = dbfbf4adcad53034d633d59959d08a7464774b85
