@@ -1,5 +1,5 @@
 #!@PERL5@
-# $NetBSD: lintpkgsrc.pl,v 1.127 2022/08/19 05:20:27 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.128 2022/08/19 18:23:41 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -185,7 +185,7 @@ package main;
 
 # Buildtime configuration
 my $conf_make = '@MAKE@';
-my $conf_makeconf = '@MAKECONF@';
+my $conf_makeconf = '@LINTPKGSRC_MAKECONF@';
 my $conf_pkg_info = '@PKG_INFO@';
 my $conf_pkgsrcdir = '@PKGSRCDIR@';
 my $conf_prefix = '@PREFIX@';
