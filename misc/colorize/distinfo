@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:58:59 nia Exp $
+$NetBSD: distinfo,v 1.8 2022/08/19 02:00:50 tnn Exp $
 
-BLAKE2s (colorize_0.3.0.tar.bz2) = f0446391e7b46887486bbf9046ed0545d1621e10526aa2a6298d1d9b28ebb8fa
-SHA512 (colorize_0.3.0.tar.bz2) = df01b7b15c54e792202be1a75e534fa2565159cfb1b5b428dc61630e6bb876e4b1cc9ada09c926cde016c446a0625f46ae8e8fdce93ea810420c8bbef3b45adb
-Size (colorize_0.3.0.tar.bz2) = 16337 bytes
+BLAKE2s (colorize-0.3.4.tar.gz) = f7f4aec25864f40e5f4caf1a373afea02884287876029ca8abfecba46190be86
+SHA512 (colorize-0.3.4.tar.gz) = 2d17e3fd6006c82a829e2bf899c32d79ae4c496b01b4a47680ca52fde7010afa19884a0fb940d744baa9208bd23a26e34e54c695bf96500c389eccf047a16db8
+Size (colorize-0.3.4.tar.gz) = 17404 bytes
