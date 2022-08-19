@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3881 2022/08/19 12:23:33 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3882 2022/08/19 12:30:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5726,3 +5726,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/hs-generically version 0.1 [wiz 2022-08-19]
 	Updated converters/hs-aeson to 2.1.0.0 [wiz 2022-08-19]
 	Added devel/hs-vector-stream version 0.1.0.0 [wiz 2022-08-19]
+	Updated devel/hs-vector to 0.13.0.0 [wiz 2022-08-19]
