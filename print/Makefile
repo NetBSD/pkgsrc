@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.868 2022/08/19 19:59:16 wiz Exp $
+# $NetBSD: Makefile,v 1.869 2022/08/19 20:05:56 wiz Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -812,6 +812,8 @@ SUBDIR+=	tex-gettitlestring
 SUBDIR+=	tex-gettitlestring-doc
 SUBDIR+=	tex-gfnotation
 SUBDIR+=	tex-gfnotation-doc
+SUBDIR+=	tex-ghab
+SUBDIR+=	tex-ghab-doc
 SUBDIR+=	tex-glossaries
 SUBDIR+=	tex-glossaries-doc
 SUBDIR+=	tex-go
