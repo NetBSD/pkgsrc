@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2022/08/19 16:44:28 wiz Exp $
+share/texmf-dist/fonts/truetype/public/amiri/Amiri-Bold.ttf
+share/texmf-dist/fonts/truetype/public/amiri/Amiri-BoldSlanted.ttf
+share/texmf-dist/fonts/truetype/public/amiri/Amiri-Regular.ttf
+share/texmf-dist/fonts/truetype/public/amiri/Amiri-Slanted.ttf
+share/texmf-dist/fonts/truetype/public/amiri/AmiriQuran.ttf
+share/texmf-dist/fonts/truetype/public/amiri/AmiriQuranColored.ttf
+share/texmf-dist/tex/latex/amiri/Amiri.fontspec
