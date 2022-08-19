@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3883 2022/08/19 13:09:58 taca Exp $
+$NetBSD: CHANGES-2022,v 1.3884 2022/08/19 13:31:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5728,3 +5728,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/hs-vector-stream version 0.1.0.0 [wiz 2022-08-19]
 	Updated devel/hs-vector to 0.13.0.0 [wiz 2022-08-19]
 	Updated mail/roundcube to 1.6.0nb1 [taca 2022-08-19]
+	Updated www/py-paste to 3.5.2 [adam 2022-08-19]
+	Updated finance/py-stripe to 4.0.2 [adam 2022-08-19]
