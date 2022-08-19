@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/08/19 19:59:06 wiz Exp $
+
+BLAKE2s (dad.doc.r54191.tar.xz) = f3b71aac96a3c44f8f672f48b315ee38f7509b8aa1999c7ce56673eb1603893c
+SHA512 (dad.doc.r54191.tar.xz) = 97d4596972c436762e33bd1d5077f7fdbe7da2a74b016a8841ad98536c2e9d9a2bd01a91b1ad2fb306c7ba06a0a5532d47c7b813d42b0bd82a3390f3bd17760b
+Size (dad.doc.r54191.tar.xz) = 199976 bytes
