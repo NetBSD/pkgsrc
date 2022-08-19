@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/08/19 19:49:04 wiz Exp $
+
+BLAKE2s (arabic-book.r59594.tar.xz) = 7e50abccc6507d598effbd6d042d3a9f2e9a9670554f28b14ed5457235cdfd0b
+SHA512 (arabic-book.r59594.tar.xz) = ac60431be9ebb42e2329c954805ecaef988bb6724eba7638ace659a973de3de9dbffc9ee85b2847531c3fca44e97e7099b1d9412ec754d9d27bde1432480f133
+Size (arabic-book.r59594.tar.xz) = 2868 bytes
