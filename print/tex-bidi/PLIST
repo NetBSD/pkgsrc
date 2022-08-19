@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2022/04/19 02:53:13 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/08/19 20:04:07 wiz Exp $
 share/texmf-dist/tex/xelatex/bidi/adjmulticol-xetex-bidi.def
 share/texmf-dist/tex/xelatex/bidi/algorithm2e-xetex-bidi.def
 share/texmf-dist/tex/xelatex/bidi/amsart-xetex-bidi.def
@@ -12,6 +12,37 @@ share/texmf-dist/tex/xelatex/bidi/artikel1-xetex-bidi.def
 share/texmf-dist/tex/xelatex/bidi/artikel2-xetex-bidi.def
 share/texmf-dist/tex/xelatex/bidi/artikel3-xetex-bidi.def
 share/texmf-dist/tex/xelatex/bidi/arydshln-xetex-bidi.def
+share/texmf-dist/tex/xelatex/bidi/beamer-xetex-bidi.def
+share/texmf-dist/tex/xelatex/bidi/beamerbaseauxtemplates-xetex-bidi.def
+share/texmf-dist/tex/xelatex/bidi/beamerbaseboxes-xetex-bidi.def
+share/texmf-dist/tex/xelatex/bidi/beamerbasecolor-xetex-bidi.def
+share/texmf-dist/tex/xelatex/bidi/beamerbasecompatibility-xetex-bidi.def
+share/texmf-dist/tex/xelatex/bidi/beamerbaseframecomponents-xetex-bidi.def
+share/texmf-dist/tex/xelatex/bidi/beamerbaseframesize-xetex-bidi.def
+share/texmf-dist/tex/xelatex/bidi/beamerbaselocalstructure-xetex-bidi.def
+share/texmf-dist/tex/xelatex/bidi/beamerbasemisc-xetex-bidi.def
+share/texmf-dist/tex/xelatex/bidi/beamerbasenavigation-xetex-bidi.def
+share/texmf-dist/tex/xelatex/bidi/beamerbaseoverlay-xetex-bidi.def
+share/texmf-dist/tex/xelatex/bidi/beamerinnerthemecircles-xetex-bidi.def
+share/texmf-dist/tex/xelatex/bidi/beamerinnerthemedefault-xetex-bidi.def
+share/texmf-dist/tex/xelatex/bidi/beamerinnerthemefocus-xetex-bidi.def
+share/texmf-dist/tex/xelatex/bidi/beamerinnerthemeinmargin-xetex-bidi.def
+share/texmf-dist/tex/xelatex/bidi/beamerinnerthememetropolis-xetex-bidi.def
+share/texmf-dist/tex/xelatex/bidi/beamerinnerthemerectangles-xetex-bidi.def
+share/texmf-dist/tex/xelatex/bidi/beamerinnerthemerounded-xetex-bidi.def
+share/texmf-dist/tex/xelatex/bidi/beamerouterthemedefault-xetex-bidi.def
+share/texmf-dist/tex/xelatex/bidi/beamerouterthemefocus-xetex-bidi.def
+share/texmf-dist/tex/xelatex/bidi/beamerouterthemeinfolines-xetex-bidi.def
+share/texmf-dist/tex/xelatex/bidi/beamerouterthememetropolis-xetex-bidi.def
+share/texmf-dist/tex/xelatex/bidi/beamerouterthememiniframes-xetex-bidi.def
+share/texmf-dist/tex/xelatex/bidi/beamerouterthemeshadow-xetex-bidi.def
+share/texmf-dist/tex/xelatex/bidi/beamerouterthemesidebar-xetex-bidi.def
+share/texmf-dist/tex/xelatex/bidi/beamerouterthemesmoothbars-xetex-bidi.def
+share/texmf-dist/tex/xelatex/bidi/beamerouterthemesmoothtree-xetex-bidi.def
+share/texmf-dist/tex/xelatex/bidi/beamerouterthemesplit-xetex-bidi.def
+share/texmf-dist/tex/xelatex/bidi/beamerouterthemetree-xetex-bidi.def
+share/texmf-dist/tex/xelatex/bidi/beamerthemeHannover-xetex-bidi.def
+share/texmf-dist/tex/xelatex/bidi/beamerthemeSingapore-xetex-bidi.def
 share/texmf-dist/tex/xelatex/bidi/bidi-logo.pdf
 share/texmf-dist/tex/xelatex/bidi/bidi-media9.sty
 share/texmf-dist/tex/xelatex/bidi/bidi-perpage.sty
@@ -91,6 +122,7 @@ share/texmf-dist/tex/xelatex/bidi/multicol-xetex-bidi.def
 share/texmf-dist/tex/xelatex/bidi/multienum-xetex-bidi.def
 share/texmf-dist/tex/xelatex/bidi/natbib-xetex-bidi.def
 share/texmf-dist/tex/xelatex/bidi/newfloat-xetex-bidi.def
+share/texmf-dist/tex/xelatex/bidi/nicematrix-xetex-bidi.def
 share/texmf-dist/tex/xelatex/bidi/ntheorem-hyper-xetex-bidi.def
 share/texmf-dist/tex/xelatex/bidi/ntheorem-xetex-bidi.def
 share/texmf-dist/tex/xelatex/bidi/overpic-xetex-bidi.def
@@ -98,6 +130,7 @@ share/texmf-dist/tex/xelatex/bidi/pdfbase-xetex-bidi.def
 share/texmf-dist/tex/xelatex/bidi/pdflscape-xetex-bidi.def
 share/texmf-dist/tex/xelatex/bidi/pdfpages-xetex-bidi.def
 share/texmf-dist/tex/xelatex/bidi/pgfcorescopes.code-xetex-bidi.def
+share/texmf-dist/tex/xelatex/bidi/pgfsys.code-xetex-bidi.def
 share/texmf-dist/tex/xelatex/bidi/picinpar-xetex-bidi.def
 share/texmf-dist/tex/xelatex/bidi/plain-xetex-bidi.def
 share/texmf-dist/tex/xelatex/bidi/pstricks-xetex-bidi.def
@@ -110,7 +143,6 @@ share/texmf-dist/tex/xelatex/bidi/report-xetex-bidi.def
 share/texmf-dist/tex/xelatex/bidi/rotating-xetex-bidi.def
 share/texmf-dist/tex/xelatex/bidi/scrartcl-xetex-bidi.def
 share/texmf-dist/tex/xelatex/bidi/scrbook-xetex-bidi.def
-share/texmf-dist/tex/xelatex/bidi/scrlettr-xetex-bidi.def
 share/texmf-dist/tex/xelatex/bidi/scrreprt-xetex-bidi.def
 share/texmf-dist/tex/xelatex/bidi/sidecap-xetex-bidi.def
 share/texmf-dist/tex/xelatex/bidi/soul-xetex-bidi.def
