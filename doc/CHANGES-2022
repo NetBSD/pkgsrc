@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3912 2022/08/19 20:10:17 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3913 2022/08/19 20:11:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5757,3 +5757,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added print/tex-ghab-doc version 0.5 [wiz 2022-08-19]
 	Added print/tex-hvarabic version 0.02 [wiz 2022-08-19]
 	Added print/tex-hvarabic-doc version 0.02 [wiz 2022-08-19]
+	Updated meta-pkgs/texlive-collection-langarabic to 2022pre3 [wiz 2022-08-19]
