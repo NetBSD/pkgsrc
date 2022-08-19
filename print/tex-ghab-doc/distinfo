@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/08/19 20:05:46 wiz Exp $
+
+BLAKE2s (ghab.doc.r29803.tar.xz) = 97c631b70f747a3c71987874a959f1f3e46cbe567eae84bdf03d010396311ef7
+SHA512 (ghab.doc.r29803.tar.xz) = 2cb7dbf5b43130b122618c50c18e513dc0ee0ce267cdfa6e710451d1fa7fce8965617d74d48748241321948ae8c5eb9cfa4945df146ed8e5d476d0fc5caaf204
+Size (ghab.doc.r29803.tar.xz) = 27156 bytes
