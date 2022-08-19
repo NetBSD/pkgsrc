@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.864 2022/08/19 16:29:48 wiz Exp $
+# $NetBSD: Makefile,v 1.865 2022/08/19 19:41:18 wiz Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -241,6 +241,8 @@ SUBDIR+=	tex-appendix-doc
 SUBDIR+=	tex-appendixnumberbeamer
 SUBDIR+=	tex-appendixnumberbeamer-doc
 SUBDIR+=	tex-arabi
+SUBDIR+=	tex-arabi-add
+SUBDIR+=	tex-arabi-add-doc
 SUBDIR+=	tex-arabi-doc
 SUBDIR+=	tex-arabicfront
 SUBDIR+=	tex-arabicfront-doc
