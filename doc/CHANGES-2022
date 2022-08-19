@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3913 2022/08/19 20:11:31 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3914 2022/08/19 21:23:38 leot Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5758,3 +5758,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added print/tex-hvarabic version 0.02 [wiz 2022-08-19]
 	Added print/tex-hvarabic-doc version 0.02 [wiz 2022-08-19]
 	Updated meta-pkgs/texlive-collection-langarabic to 2022pre3 [wiz 2022-08-19]
+	Updated textproc/translate-shell to 0.9.7 [leot 2022-08-19]
