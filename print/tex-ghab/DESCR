@@ -1,0 +1,3 @@
+The package defines a command \darghab that will typeset its
+argument in a box with a decorated frame. The width of the box
+may be set using an optional argument.
