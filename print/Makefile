@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.863 2022/06/21 22:20:23 joerg Exp $
+# $NetBSD: Makefile,v 1.864 2022/08/19 16:29:48 wiz Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -208,6 +208,8 @@ SUBDIR+=	tex-algorithmicx
 SUBDIR+=	tex-algorithmicx-doc
 SUBDIR+=	tex-algorithms
 SUBDIR+=	tex-algorithms-doc
+SUBDIR+=	tex-alpha-persian
+SUBDIR+=	tex-alpha-persian-doc
 SUBDIR+=	tex-alphalph
 SUBDIR+=	tex-alphalph-doc
 SUBDIR+=	tex-amscls
