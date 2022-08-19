@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/08/19 20:09:27 wiz Exp $
+
+BLAKE2s (hvarabic.r59423.tar.xz) = c809e2ba920ab8ae553a9df217162c4eba5305b3c980905b4d4db4b3159ed0ad
+SHA512 (hvarabic.r59423.tar.xz) = 2f9af35f3e3ebf6d90ed05a77fcd6d6c079d3a476c26e0704e6f6b74899badc3eb0cc79d37f5f9e8b6a2846edb869bf57fc5b4bf14e834629d126bc71b77e42a
+Size (hvarabic.r59423.tar.xz) = 1468 bytes

@@ -1,0 +1,4 @@
+This package provides some macros for right-to-left
+typesetting. It uses by default the arabic fonts Scheherazade
+and ALM fixed, the only monospaced arabic font. The package
+works with LuaLaTeX or XeLaTeX, but not with pdfLaTeX or latex.
