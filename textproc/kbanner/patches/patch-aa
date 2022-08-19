@@ -1,18 +1,10 @@
-$NetBSD: patch-aa,v 1.3 2016/03/30 10:01:24 jperkin Exp $
+$NetBSD: patch-aa,v 1.4 2022/08/19 02:34:51 tnn Exp $
 
-Use pkgsrc layout/flags.
+Honour pkgsrc compiler selection.
 
---- Makefile.orig	Fri Oct 15 14:19:54 1993
-+++ Makefile	Thu May 18 00:48:33 2000
-@@ -1,21 +1,20 @@
- SHELL = /bin/sh
--DESTDIR = /usr/local/bin
--MANUAL = /usr/local/man/man1/kbanner.1
--CFLAGS = -O -KEOPT -KBREG -KINF
-+MANUAL = $(PREFIX)/${PKGMANDIR}/man1/kbanner.1
-+#CFLAGS = -O -KEOPT -KBREG -KINF
- OBJ = kbanner.o font1.o font2.o font3.o
- 
+--- Makefile.orig	2004-07-13 01:06:57.000000000 +0000
++++ Makefile
+@@ -7,10 +7,10 @@ OBJ = kbanner.o font1.o font2.o font3.o
  .SUFFIXES: .c .o
  
  .c.o:
@@ -25,10 +17,3 @@ Use pkgsrc layout/flags.
  	strip kbanner
  
  clean:
- 	rm -f *.o core
- 
- install: kbanner
--	cp kbanner $(DESTDIR)/
--	cp kbanner.1 $(MANUAL)
-+	$(BSD_INSTALL_PROGRAM) kbanner $(DESTDIR)${PREFIX}/bin
-+	$(BSD_INSTALL_MAN) kbanner.1 ${DESTDIR}$(MANUAL)
