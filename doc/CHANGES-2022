@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3869 2022/08/19 02:01:51 tnn Exp $
+$NetBSD: CHANGES-2022,v 1.3870 2022/08/19 06:25:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5713,3 +5713,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/catch to 1.12.2 [tnn 2022-08-19]
 	Updated graphics/exifprobe to 2.1.0.20201230 [tnn 2022-08-19]
 	Updated misc/colorize to 0.3.4 [tnn 2022-08-19]
+	Updated net/grpc to 1.48.0 [wiz 2022-08-19]

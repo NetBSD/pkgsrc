@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22117 2022/08/19 02:01:51 tnn Exp $
+$NetBSD: TODO,v 1.22118 2022/08/19 06:25:33 wiz Exp $
 
 Suggested new packages
 ======================
@@ -804,7 +804,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o graphene-1.10.6
 	o greed-4.2
 	o gromacs-2021.1
-	o grpc-1.48.0
 	o grub2-2.06
 	o gss-1.0.3
 	o gst-plugins1-omx-1.10.0
