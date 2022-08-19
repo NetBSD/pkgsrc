@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2022/08/19 19:58:42 wiz Exp $
+share/texmf-dist/fonts/afm/public/dad/Dad-bold.afm
+share/texmf-dist/fonts/afm/public/dad/Dad-mono.afm
+share/texmf-dist/fonts/afm/public/dad/Dad.afm
+share/texmf-dist/fonts/map/dvips/dad/dad.map
+share/texmf-dist/fonts/ofm/public/dad/dad.ofm
+share/texmf-dist/fonts/ofm/public/dad/dadbold.ofm
+share/texmf-dist/fonts/ofm/public/dad/dadmono.ofm
+share/texmf-dist/fonts/ovf/public/dad/dad.ovf
+share/texmf-dist/fonts/ovf/public/dad/dadbold.ovf
+share/texmf-dist/fonts/ovf/public/dad/dadmono.ovf
+share/texmf-dist/fonts/tfm/public/dad/dadreal.tfm
+share/texmf-dist/fonts/tfm/public/dad/dadrealbold.tfm
+share/texmf-dist/fonts/tfm/public/dad/dadrealmono.tfm
+share/texmf-dist/fonts/type1/public/dad/Dad-bold.pfb
+share/texmf-dist/fonts/type1/public/dad/Dad-mono.pfb
+share/texmf-dist/fonts/type1/public/dad/Dad.pfb
+share/texmf-dist/tex/lualatex/dad/OT1dad.fd
+share/texmf-dist/tex/lualatex/dad/T1dad.fd
+share/texmf-dist/tex/lualatex/dad/dad.sty
