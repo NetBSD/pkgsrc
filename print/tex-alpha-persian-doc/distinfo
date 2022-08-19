@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/08/19 16:29:35 wiz Exp $
+
+BLAKE2s (alpha-persian.doc.r50316.tar.xz) = 35b0ac1d6f492b71f6002b9e117a9bbc0b13d82b2cd42d9a19dd742f0afbd4e3
+SHA512 (alpha-persian.doc.r50316.tar.xz) = aaae11a4d64fcd05b9a98d324356c9b206bf22d5a744f6d9bd124e1c53f2df3ffd7f2901dd63a8dc2addd9783212792e2e3bbc789b1376e8f5f1d5fd28ea3ed3
+Size (alpha-persian.doc.r50316.tar.xz) = 4484924 bytes
