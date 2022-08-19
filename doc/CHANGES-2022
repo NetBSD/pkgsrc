@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3893 2022/08/19 16:30:12 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3894 2022/08/19 16:35:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5738,3 +5738,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added fonts/tex-alkalami-doc version 2022 [wiz 2022-08-19]
 	Added print/tex-alpha-persian version 1.3 [wiz 2022-08-19]
 	Added print/tex-alpha-persian-doc version 2022 [wiz 2022-08-19]
+	Updated devel/nss to 3.82 [wiz 2022-08-19]
