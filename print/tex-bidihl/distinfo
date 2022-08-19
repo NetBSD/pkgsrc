@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/08/19 19:53:38 wiz Exp $
+
+BLAKE2s (bidihl.r37795.tar.xz) = 4daea5a4f978c6ce506be69a608807dff53de76973cf923fa0295aa72b7b10cf
+SHA512 (bidihl.r37795.tar.xz) = fd82ad18b96cdd782fddab8739e09978d08fc37e8c65a177bde930671e102c9ffefe7465fc766860068188f6b9f8222119ac791f07223f79e9840f25659ea3ea
+Size (bidihl.r37795.tar.xz) = 2356 bytes
