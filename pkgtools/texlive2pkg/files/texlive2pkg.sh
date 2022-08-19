@@ -1,6 +1,6 @@
 #!/bin/sh
 # texlive2pkg
-# $NetBSD: texlive2pkg.sh,v 1.3 2019/09/13 13:43:30 rillig Exp $
+# $NetBSD: texlive2pkg.sh,v 1.4 2022/08/19 18:31:23 wiz Exp $
 #
 # Copyright (c) 2016
 #       Mark Davies.  All rights reserved.
@@ -67,12 +67,12 @@ fi
 case $pkgtarball in
 file:/*.tar.xz | ftp:/*.tar.xz | http:/*.tar.xz | https:/*.tar.xz )
    pkgurl=1
-   break ;;
+    ;;
 /*.tar.xz)
-   break ;;
+    ;;
 *.tar.xz)
    pkgtarball=$PWD/$pkgtarball
-   break ;;
+    ;;
 *)
    echo "${usage}" 1>&2
    exit 1
@@ -80,15 +80,15 @@ esac
 
 case "$doctarball" in
 "")
-   break ;;
-file:/*.doc.tar.xz | ftp:/*.tar.xz | http:/*.doc.tar.xz | https:/*.doc.tar.xz )
+    ;;
+file:/*.doc*.tar.xz | ftp:/*.doc*.tar.xz | http:/*.doc*.tar.xz | https:/*.doc*.tar.xz )
    docurl=1
-   break ;;
-/*.doc.tar.xz)
-   break ;;  
-*.doc.tar.xz)
+    ;;
+/*.doc*.tar.xz)
+    ;;  
+*.doc*.tar.xz)
    doctarball=$PWD/$doctarball
-   break ;;
+    ;;
 *)
    echo "${usage}" 1>&2
    exit 1
