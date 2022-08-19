@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.867 2022/08/19 19:54:15 wiz Exp $
+# $NetBSD: Makefile,v 1.868 2022/08/19 19:59:16 wiz Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -603,6 +603,8 @@ SUBDIR+=	tex-cyrillic-bin
 SUBDIR+=	tex-cyrillic-bin-doc
 SUBDIR+=	tex-cyrillic-doc
 SUBDIR+=	tex-cyrplain
+SUBDIR+=	tex-dad
+SUBDIR+=	tex-dad-doc
 SUBDIR+=	tex-dashbox
 SUBDIR+=	tex-dashbox-doc
 SUBDIR+=	tex-dashrule
