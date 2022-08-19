@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3879 2022/08/19 12:14:49 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3880 2022/08/19 12:16:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5724,3 +5724,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated news/tuifeed to 0.2.1 [pin 2022-08-19]
 	Updated audio/termusic to 0.7.3 [pin 2022-08-19]
 	Added devel/hs-generically version 0.1 [wiz 2022-08-19]
+	Updated converters/hs-aeson to 2.1.0.0 [wiz 2022-08-19]
