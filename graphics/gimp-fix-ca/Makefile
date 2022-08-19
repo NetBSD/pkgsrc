@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.62 2022/04/18 19:11:16 adam Exp $
+# $NetBSD: Makefile,v 1.63 2022/08/19 02:10:24 tnn Exp $
 
 DISTNAME=		gimp-fix-ca-3.0.2
 PKGREVISION=		4
 CATEGORIES=		graphics
-MASTER_SITES=		-http://gimper.net/resources/fix-ca.218/download?version=218
-EXTRACT_SUFX=		.zip
+MASTER_SITES=		-http://kcd.sourceforge.net/fix-ca.c
+EXTRACT_SUFX=		.c
 
 MAINTAINER=		dsainty@NetBSD.org
 HOMEPAGE=		http://kcd.sourceforge.net/fix-ca.php
@@ -18,6 +18,9 @@ INSTALLATION_DIRS=	lib/gimp/2.0/plug-ins
 USE_TOOLS+=		pkg-config
 
 LINK_PTHREAD=		${PTHREAD_LDFLAGS} ${PTHREAD_LIBS} -lm
+
+post-extract:
+	ln -sf ${WRKDIR}/${DISTNAME}${EXTRACT_SUFX} ${WRKDIR}/fix-ca.c
 
 pre-build:
 	ln -sf ${BUILDLINK_PREFIX.gimp}/bin/gimptool-2.0 \
