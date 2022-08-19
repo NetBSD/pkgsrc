@@ -1,5 +1,5 @@
 #!@PERL5@
-# $NetBSD: lintpkgsrc.pl,v 1.125 2022/08/19 04:34:03 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.126 2022/08/19 05:06:26 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -763,7 +763,8 @@ sub get_default_makefile_vars() {
 
 	$default_vars->{PACKAGES} ||= $default_vars->{PKGSRCDIR} . '/packages';
 
-	$default_vars->{APACHE_PKG_PREFIX} = 'ap12345';
+	$default_vars->{PKG_APACHE} = 'apache12345';
+	$default_vars->{'_APACHE_PKG_PREFIX.apache12345'} = 'ap12345';
 	$default_vars->{LUA_PKGPREFIX} = 'lua12345';
 	$default_vars->{PHP_PKG_PREFIX} = 'php12345';
 	$default_vars->{PYPKGPREFIX} = 'py12345';
