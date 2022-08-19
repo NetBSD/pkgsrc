@@ -1,0 +1,3 @@
+The package provides a Persian version of the alpha BibTeX
+style and offers several enhancements. It is compatible with
+the hyperref, url, natbib, and cite packages.
