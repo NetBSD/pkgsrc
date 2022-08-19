@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:22:14 nia Exp $
+$NetBSD: distinfo,v 1.9 2022/08/19 02:34:51 tnn Exp $
 
-BLAKE2s (kbanner2.tar.Z) = 07ab70a01aba469cbe27881105f88241d277d7f266e3b9ce0e022c3412c8e2b7
-SHA512 (kbanner2.tar.Z) = e0968687c7a084758964f87ccb17c827fd0a9ac69017bf50a79eaf6b29da99e5645c05ac9689229d76a674583dd94b782b709b9d6c2d3b82de54e25cf71b7c95
-Size (kbanner2.tar.Z) = 240221 bytes
-SHA1 (patch-aa) = 6820520798bba21f7b9dff1c8b4e7aed24c80970
+BLAKE2s (kbanner2-20040713/kbanner2.tar.Z) = cd0d903ffdba5696a803ebc9a5d764bc9108edf7606012f2e72197e18997baf2
+SHA512 (kbanner2-20040713/kbanner2.tar.Z) = f2c9a6cf3e47364725d7c5ed6bf396733f52d9e9493fb5c1f786d006d25edf8a83766d2bc0aed5d4cce00424bea87ff9b7870b3586b08d95eac9fc137feb2bf5
+Size (kbanner2-20040713/kbanner2.tar.Z) = 240423 bytes
+SHA1 (patch-aa) = 7a5dbea5932f923ee20fd78a1c297ff86dd203a5
 SHA1 (patch-ab) = 95970635b3fb6f3d6a254f3116c29b9f6d593617
 SHA1 (patch-ac) = 1f6964b8c936199e408ab5aceb06ddeb1a249751
 SHA1 (patch-ad) = 9f3a26d4ac3eab9e9c0094d02de09925f47b2b7b
