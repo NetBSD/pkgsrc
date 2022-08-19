@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2022/08/19 16:44:46 wiz Exp $
+share/texmf-dist/doc/fonts/amiri/Documentation-Arabic.pdf
+share/texmf-dist/doc/fonts/amiri/NEWS
+share/texmf-dist/doc/fonts/amiri/NEWS-Arabic
+share/texmf-dist/doc/fonts/amiri/OFL.txt
+share/texmf-dist/doc/fonts/amiri/README
+share/texmf-dist/doc/fonts/amiri/README-Arabic
