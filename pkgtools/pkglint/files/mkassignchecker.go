@@ -25,7 +25,7 @@ func (ck *MkAssignChecker) check() {
 // checkLeft checks everything to the left of the assignment operator.
 func (ck *MkAssignChecker) checkLeft() {
 	varname := ck.MkLine.Varname()
-	if hasPrefix(varname, "_") && !G.Infrastructure && G.Pkgsrc.vartypes.Canon(varname) == nil {
+	if !ck.mayBeDefined(varname) {
 		ck.MkLine.Warnf("Variable names starting with an underscore (%s) are reserved for internal pkgsrc use.", varname)
 	}
 
@@ -690,4 +690,28 @@ func (ck *MkAssignChecker) checkVaruseShell(vartype *Vartype, time VucTime) {
 			NewMkVarUseChecker(varuse, ck.MkLines, mkline).Check(&vuc)
 		}
 	}
+}
+
+func (ck *MkAssignChecker) mayBeDefined(varname string) bool {
+	if !hasPrefix(varname, "_") {
+		return true
+	}
+	if G.Infrastructure {
+		return true
+	}
+	if G.Pkgsrc.vartypes.Canon(varname) != nil {
+		return true
+	}
+
+	// Defining the group 'cmake' allows the variable names '_CMAKE_*',
+	// it's kind of a namespace declaration.
+	vargroups := ck.MkLines.allVars.FirstDefinition("_VARGROUPS")
+	if vargroups != nil {
+		prefix := "_" + strings.ToUpper(vargroups.Value()) + "_"
+		if hasPrefix(varname, prefix) {
+			return true
+		}
+	}
+
+	return false
 }

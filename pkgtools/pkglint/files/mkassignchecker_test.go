@@ -1188,3 +1188,25 @@ func (s *Suite) Test_MkAssignChecker_checkVaruseShell(c *check.C) {
 		"WARN: filename.mk:1: Unknown shell command \"grep\".",
 		"WARN: filename.mk:1: EXAMPLE_FILES is used but not defined.")
 }
+
+func (s *Suite) Test_MkAssignChecker_mayBeDefined(c *check.C) {
+	t := s.Init(c)
+	t.SetUpVartypes()
+
+	mklines := t.NewMkLines("filename.mk",
+		MkCvsID,
+		"",
+		"_GOOD_PREFIX=\t\tvalue",
+		"_BAD_PREFIX=\t\tvalue",
+		"",
+		"_VARGROUPS+=\t\tgood",
+		"_IGN_VARS.good+=\t_GOOD_PREFIX")
+
+	mklines.Check()
+
+	t.CheckOutputLines(
+		"WARN: filename.mk:3: _GOOD_PREFIX is defined but not used.",
+		"WARN: filename.mk:4: Variable names starting with an underscore (_BAD_PREFIX) are reserved for internal pkgsrc use.",
+		"WARN: filename.mk:4: _BAD_PREFIX is defined but not used.",
+		"WARN: filename.mk:4: Variable _BAD_PREFIX is defined but not mentioned in the _VARGROUPS section.")
+}
