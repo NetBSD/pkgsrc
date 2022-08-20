@@ -1,0 +1,2 @@
+The package attempts to emulate the XeTeX bidi package, in the
+context of LuaTeX.
