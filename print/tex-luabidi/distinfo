@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/08/20 21:31:30 wiz Exp $
+
+BLAKE2s (luabidi.r54512.tar.xz) = ba5b51b07319173ad1137f11b246b29d4eeb1ac11ad051788060786eb4893688
+SHA512 (luabidi.r54512.tar.xz) = 917d0d96748f2b70d368a2719bf6fdfaada3d24e2e60c97b6d412ba2cdd991a920d86a94d19136e075605095c19331e1dd37c3a059a9e8f772479ff5ab53550d
+Size (luabidi.r54512.tar.xz) = 2508 bytes
