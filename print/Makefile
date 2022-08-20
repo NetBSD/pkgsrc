@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.871 2022/08/20 21:18:52 wiz Exp $
+# $NetBSD: Makefile,v 1.872 2022/08/20 21:24:26 wiz Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -1006,6 +1006,8 @@ SUBDIR+=	tex-kotex-utils
 SUBDIR+=	tex-kotex-utils-doc
 SUBDIR+=	tex-kpathsea
 SUBDIR+=	tex-kpathsea-doc
+SUBDIR+=	tex-kurdishlipsum
+SUBDIR+=	tex-kurdishlipsum-doc
 SUBDIR+=	tex-kvdefinekeys
 SUBDIR+=	tex-kvdefinekeys-doc
 SUBDIR+=	tex-kvoptions
