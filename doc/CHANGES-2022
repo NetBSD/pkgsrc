@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3919 2022/08/20 21:32:39 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3920 2022/08/20 21:33:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5764,3 +5764,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added print/tex-kurdishlipsum version 1.1 [wiz 2022-08-20]
 	Added print/tex-kurdishlipsum-doc version 1.1 [wiz 2022-08-20]
 	Added print/tex-luabidi version 0.5 [wiz 2022-08-20]
+	Added print/tex-luabidi-doc version 0.5 [wiz 2022-08-20]
