@@ -1,0 +1,6 @@
+The name is by way of being an acronym for "Yet Another Grand
+Unified Symbols Loader"... The package allows the user to
+access a symbol without loading the package that usually
+provides it; this has the advantage of avoiding the name
+clashes that so commonly trouble those who load
+symbol-packages.
