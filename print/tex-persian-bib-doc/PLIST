@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2022/08/20 21:41:00 wiz Exp $
+share/texmf-dist/doc/xelatex/persian-bib/MyReferences.bib
+share/texmf-dist/doc/xelatex/persian-bib/Persian-bib-userguide.pdf
+share/texmf-dist/doc/xelatex/persian-bib/Persian-bib-userguide.tex
+share/texmf-dist/doc/xelatex/persian-bib/README
+share/texmf-dist/doc/xelatex/persian-bib/bibtex-example.tex
+share/texmf-dist/doc/xelatex/persian-bib/gen_pdf.pl
