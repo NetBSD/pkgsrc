@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/08/20 21:22:10 wiz Exp $
+
+BLAKE2s (kurdishlipsum.r47518.tar.xz) = 3cc7ac37f50061b17b083ead118c6f79b475f82cb8e966dbc9b3874085485b63
+SHA512 (kurdishlipsum.r47518.tar.xz) = d7160d78d7f0d8d7771740f030cf1c76b57aa9ec2d179887fe4065337e35bef528b522c666eca0974aea6696033678dec5446a9a198fb139f2d2469c8cd47eff
+Size (kurdishlipsum.r47518.tar.xz) = 34900 bytes
