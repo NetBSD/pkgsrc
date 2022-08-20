@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2022/08/20 23:02:41 wiz Exp $
+share/texmf-dist/tex/latex/ean13isbn/ean13isbn.sty
