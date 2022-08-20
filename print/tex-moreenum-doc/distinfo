@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/08/20 23:21:24 wiz Exp $
+
+BLAKE2s (moreenum.doc.r24479.tar.xz) = 085d1ec8b4049db1422779f6d56a802e5d4463abaa13257c628f5cfccd531484
+SHA512 (moreenum.doc.r24479.tar.xz) = 987a1dd96669b9202846fc604fbcfb935b68c79d13bbe4599f32fab9e869ca5b60f3b4bdfcf78d3b3f5102db9ab16955ec13958c4cf3df7ec64649268c226d1c
+Size (moreenum.doc.r24479.tar.xz) = 220832 bytes
