@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.870 2022/08/19 20:09:54 wiz Exp $
+# $NetBSD: Makefile,v 1.871 2022/08/20 21:18:52 wiz Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -962,6 +962,8 @@ SUBDIR+=	tex-imakeidx-doc
 SUBDIR+=	tex-impatient-doc
 SUBDIR+=	tex-import
 SUBDIR+=	tex-import-doc
+SUBDIR+=	tex-imsproc
+SUBDIR+=	tex-imsproc-doc
 SUBDIR+=	tex-index
 SUBDIR+=	tex-index-doc
 SUBDIR+=	tex-infwarerr
