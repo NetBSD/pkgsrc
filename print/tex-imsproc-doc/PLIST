@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2022/08/20 21:18:40 wiz Exp $
+share/texmf-dist/doc/xelatex/imsproc/README
+share/texmf-dist/doc/xelatex/imsproc/logo.JPG
+share/texmf-dist/doc/xelatex/imsproc/sample-imsproc.tex
