@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/08/20 23:27:53 wiz Exp $
+
+BLAKE2s (yagusylo.doc.r29803.tar.xz) = 83945cd42ce73a3af1141d36926b3046f5fd94a11dc7e70159ed38db62734769
+SHA512 (yagusylo.doc.r29803.tar.xz) = 0ba73f1c7c7d7d646312f8a3d35c0d063e792ebae45c3e869565f01ef65e14f31bee463a1ebb8ad60166d54cdc23a9d21684675a6ccb09b8da233badb0d0ad96
+Size (yagusylo.doc.r29803.tar.xz) = 1661528 bytes
