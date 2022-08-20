@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3915 2022/08/20 21:19:09 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3916 2022/08/20 21:19:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5760,3 +5760,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated meta-pkgs/texlive-collection-langarabic to 2022pre3 [wiz 2022-08-19]
 	Updated textproc/translate-shell to 0.9.7 [leot 2022-08-19]
 	Added print/tex-imsproc version 0.1 [wiz 2022-08-20]
+	Added print/tex-imsproc-doc version 0.1 [wiz 2022-08-20]
