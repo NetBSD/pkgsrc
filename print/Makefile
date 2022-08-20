@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.874 2022/08/20 21:37:55 wiz Exp $
+# $NetBSD: Makefile,v 1.875 2022/08/20 21:41:36 wiz Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -1286,6 +1286,8 @@ SUBDIR+=	tex-pdftex
 SUBDIR+=	tex-pdftex-doc
 SUBDIR+=	tex-pdftexcmds
 SUBDIR+=	tex-pdftexcmds-doc
+SUBDIR+=	tex-persian-bib
+SUBDIR+=	tex-persian-bib-doc
 SUBDIR+=	tex-pgf
 SUBDIR+=	tex-pgf-doc
 SUBDIR+=	tex-pgfplots
