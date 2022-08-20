@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3927 2022/08/20 23:03:41 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3928 2022/08/20 23:21:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5771,3 +5771,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added print/tex-persian-bib-doc version 0.9 [wiz 2022-08-20]
 	Added graphics/tex-ean13isbn version 2022 [wiz 2022-08-20]
 	Added graphics/tex-ean13isbn-doc version 2022 [wiz 2022-08-20]
+	Added print/tex-moreenum version 1.03 [wiz 2022-08-20]
