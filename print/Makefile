@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.877 2022/08/20 23:28:10 wiz Exp $
+# $NetBSD: Makefile,v 1.878 2022/08/20 23:32:28 wiz Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -1453,6 +1453,8 @@ SUBDIR+=	tex-seminar-doc
 SUBDIR+=	tex-sepnum
 SUBDIR+=	tex-sepnum-doc
 SUBDIR+=	tex-setspace
+SUBDIR+=	tex-sexam
+SUBDIR+=	tex-sexam-doc
 SUBDIR+=	tex-sfmath
 SUBDIR+=	tex-shadethm
 SUBDIR+=	tex-shadow
