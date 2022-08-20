@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2022/08/20 05:07:05 ryoon Exp $
+# $NetBSD: options.mk,v 1.9 2022/08/20 05:11:21 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.notmuch
 PKG_SUPPORTED_OPTIONS=	notmuch-emacs doc
@@ -9,6 +9,7 @@ PKG_SUGGESTED_OPTIONS+=	doc
 ###
 ### emacs support
 ###
+BUILDLINK_DEPMETHOD.desktop-file-utils=	build
 .include "../../sysutils/desktop-file-utils/buildlink3.mk"
 PLIST_VARS+=		emacs
 .if !empty(PKG_OPTIONS:Mnotmuch-emacs)
