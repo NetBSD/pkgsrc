@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2022/08/20 23:32:08 wiz Exp $
+share/texmf-dist/doc/xelatex/sexam/01.JPG
+share/texmf-dist/doc/xelatex/sexam/10.png
+share/texmf-dist/doc/xelatex/sexam/11.png
+share/texmf-dist/doc/xelatex/sexam/2.JPG
+share/texmf-dist/doc/xelatex/sexam/3.JPG
+share/texmf-dist/doc/xelatex/sexam/4.JPG
+share/texmf-dist/doc/xelatex/sexam/6.JPG
+share/texmf-dist/doc/xelatex/sexam/7.JPG
+share/texmf-dist/doc/xelatex/sexam/8.JPG
+share/texmf-dist/doc/xelatex/sexam/9.JPG
+share/texmf-dist/doc/xelatex/sexam/README.txt
+share/texmf-dist/doc/xelatex/sexam/bac_template-DZ.pdf
+share/texmf-dist/doc/xelatex/sexam/bac_template-DZ.tex
+share/texmf-dist/doc/xelatex/sexam/exam_with_sexam_ar-DZ.pdf
+share/texmf-dist/doc/xelatex/sexam/exam_with_sexam_ar-DZ.tex
+share/texmf-dist/doc/xelatex/sexam/exam_with_wexam_ar-DZ.pdf
+share/texmf-dist/doc/xelatex/sexam/exam_with_wexam_ar-DZ.tex
+share/texmf-dist/doc/xelatex/sexam/sexam_wexam_doc_ar.pdf
+share/texmf-dist/doc/xelatex/sexam/sexam_wexam_doc_ar.tex
