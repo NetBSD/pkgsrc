@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/08/20 21:18:40 wiz Exp $
+
+BLAKE2s (imsproc.doc.r29803.tar.xz) = 90212748ca7cde3ad63f74dc739d74408638a7c2bd8aac5a2568e30ad08dfb2f
+SHA512 (imsproc.doc.r29803.tar.xz) = a4007fe80cca88525dcade8d8201fb82a2c35cafd7bf92a8ebe6b4668ddce6bd43e958e1223d5c212e91ca692df39aae84c4a25b6862afa3aed2f1f646eabba1
+Size (imsproc.doc.r29803.tar.xz) = 57712 bytes
