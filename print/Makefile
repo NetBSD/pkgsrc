@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.872 2022/08/20 21:24:26 wiz Exp $
+# $NetBSD: Makefile,v 1.873 2022/08/20 21:32:26 wiz Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -1091,6 +1091,8 @@ SUBDIR+=	tex-ltxcmds-doc
 SUBDIR+=	tex-ltxmisc
 SUBDIR+=	tex-lua-uni-algos
 SUBDIR+=	tex-lua-uni-algos-doc
+SUBDIR+=	tex-luabidi
+SUBDIR+=	tex-luabidi-doc
 SUBDIR+=	tex-luacode
 SUBDIR+=	tex-luacode-doc
 SUBDIR+=	tex-luacolor
