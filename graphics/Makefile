@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.976 2022/07/23 09:32:50 wiz Exp $
+# $NetBSD: Makefile,v 1.977 2022/08/20 23:03:15 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -621,6 +621,8 @@ SUBDIR+=	tex-drv-doc
 SUBDIR+=	tex-dviincl
 SUBDIR+=	tex-dviincl-doc
 SUBDIR+=	tex-dvipng-doc
+SUBDIR+=	tex-ean13isbn
+SUBDIR+=	tex-ean13isbn-doc
 SUBDIR+=	tex-eepic
 SUBDIR+=	tex-eepic-doc
 SUBDIR+=	tex-ellipse
