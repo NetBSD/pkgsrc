@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2022/08/20 23:27:53 wiz Exp $
+share/texmf-dist/doc/latex/yagusylo/LISEZMOI
+share/texmf-dist/doc/latex/yagusylo/README
+share/texmf-dist/doc/latex/yagusylo/yagusylo-en.pdf
+share/texmf-dist/doc/latex/yagusylo/yagusylo-fr.pdf
+share/texmf-dist/doc/latex/yagusylo/yagusylo.pdf
