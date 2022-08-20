@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2022/02/26 03:57:52 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2022/08/20 08:08:14 wiz Exp $
 
 BUILDLINK_TREE+=	hs-deferred-folds
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-deferred-folds
 HS_DEFERRED_FOLDS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-deferred-folds+=	hs-deferred-folds>=0.9.18
-BUILDLINK_ABI_DEPENDS.hs-deferred-folds+=	hs-deferred-folds>=0.9.18.1nb1
+BUILDLINK_ABI_DEPENDS.hs-deferred-folds+=	hs-deferred-folds>=0.9.18.1nb2
 BUILDLINK_PKGSRCDIR.hs-deferred-folds?=		../../devel/hs-deferred-folds
 
 .include "../../devel/hs-foldl/buildlink3.mk"
