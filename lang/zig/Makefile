@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2022/08/15 19:16:25 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2022/08/20 21:01:27 wiz Exp $
 
 DISTNAME=	zig-0.9.1
 PKGREVISION=	1
@@ -11,6 +11,7 @@ HOMEPAGE=	https://ziglang.org/
 COMMENT=	Programming language designed for robustness and clarity
 LICENSE=	mit
 
+# https://github.com/ziglang/zig/issues/12534
 BROKEN=		"No support for llvm 14 yet."
 
 USE_CMAKE=	yes
