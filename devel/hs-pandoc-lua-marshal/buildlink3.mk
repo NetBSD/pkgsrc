@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2022/02/26 03:58:04 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2022/08/20 08:08:18 wiz Exp $
 
 BUILDLINK_TREE+=	hs-pandoc-lua-marshal
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-pandoc-lua-marshal
 HS_PANDOC_LUA_MARSHAL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-pandoc-lua-marshal+=	hs-pandoc-lua-marshal>=0.1.4
-BUILDLINK_ABI_DEPENDS.hs-pandoc-lua-marshal+=	hs-pandoc-lua-marshal>=0.1.4nb2
+BUILDLINK_ABI_DEPENDS.hs-pandoc-lua-marshal+=	hs-pandoc-lua-marshal>=0.1.4nb3
 BUILDLINK_PKGSRCDIR.hs-pandoc-lua-marshal?=	../../devel/hs-pandoc-lua-marshal
 
 .include "../../lang/hs-hslua/buildlink3.mk"
