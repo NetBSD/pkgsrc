@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/08/20 21:40:40 wiz Exp $
+
+BLAKE2s (persian-bib.r37297.tar.xz) = 55384c2b9ac7938853ad2e1b3ea51f3abeaa0865705447b87a6eea3a1480be46
+SHA512 (persian-bib.r37297.tar.xz) = e6650399eb5129dd0ad08c3ff93843da47287ce641a65826545b10a9213437da56467eabd8c37f1a7fc17086af968043586c53bdbc7485e9a4453b3f5b23bf83
+Size (persian-bib.r37297.tar.xz) = 21692 bytes
