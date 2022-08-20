@@ -1,0 +1,3 @@
+This is a modified version of the pas-cours package made
+compatible with XeLaTeX/polyglossia to write arabic documents
+with fancy boxed theorem-alike environments.
