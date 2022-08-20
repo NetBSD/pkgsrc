@@ -1,0 +1,3 @@
+The package provides a modified version of the exam package
+made compatible with XeLaTeX/polyglossia to typesetting arabic
+exams.

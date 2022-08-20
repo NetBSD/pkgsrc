@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2022/08/20 23:31:53 wiz Exp $
+share/texmf-dist/tex/xelatex/sexam/bacex.sty
+share/texmf-dist/tex/xelatex/sexam/sexam.sty
+share/texmf-dist/tex/xelatex/sexam/wexam.sty

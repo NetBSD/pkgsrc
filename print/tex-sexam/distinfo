@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/08/20 23:31:53 wiz Exp $
+
+BLAKE2s (sexam.r46628.tar.xz) = dd953b5c6b18031542b7acdc383c78c53f68db09a0f6ebf2116395854409babb
+SHA512 (sexam.r46628.tar.xz) = 60fc18bf706b787b9bc59d1ff12e62fc3b69f5c6815a629f6743c8ff3fbbb2948c145278805888b235756beac5dde5613c10fe4ce20bb6536b4a3d77a2713569
+Size (sexam.r46628.tar.xz) = 2480 bytes
