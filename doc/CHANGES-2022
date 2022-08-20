@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3923 2022/08/20 21:41:12 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3924 2022/08/20 21:41:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5767,4 +5767,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Added print/tex-luabidi-doc version 0.5 [wiz 2022-08-20]
 	Added print/tex-na-box version 1.0 [wiz 2022-08-20]
 	Added print/tex-na-box-doc version 1.0 [wiz 2022-08-20]
+	Added print/tex-persian-bib version 0.9 [wiz 2022-08-20]
 	Added print/tex-persian-bib version 0.9 [wiz 2022-08-20]
