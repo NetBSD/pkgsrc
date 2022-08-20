@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3930 2022/08/20 23:28:24 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3931 2022/08/20 23:28:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5774,3 +5774,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added print/tex-moreenum version 1.03 [wiz 2022-08-20]
 	Added print/tex-moreenum-doc version 1.03 [wiz 2022-08-20]
 	Added print/tex-yagusylo version 1.2 [wiz 2022-08-20]
+	Added print/tex-yagusylo-doc version 1.2 [wiz 2022-08-20]
