@@ -1,0 +1,4 @@
+This package provides lipsum-like facilities for the Kurdish
+language. The package gives you easy access to the Kurdish
+poetry and balladry texts of the Diwany Vafaiy, Ahmedy Xani,
+Naly, Mahwy,.... The package needs to be run under XeLaTeX.
