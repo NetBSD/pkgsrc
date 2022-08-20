@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.876 2022/08/20 23:21:42 wiz Exp $
+# $NetBSD: Makefile,v 1.877 2022/08/20 23:28:10 wiz Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -1759,6 +1759,8 @@ SUBDIR+=	tex-xtab
 SUBDIR+=	tex-xtab-doc
 SUBDIR+=	tex-xunicode
 SUBDIR+=	tex-xunicode-doc
+SUBDIR+=	tex-yagusylo
+SUBDIR+=	tex-yagusylo-doc
 SUBDIR+=	tex-ydoc
 SUBDIR+=	tex-ydoc-doc
 SUBDIR+=	tex-yfonts
