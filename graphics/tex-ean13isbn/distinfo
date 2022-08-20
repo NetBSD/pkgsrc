@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/08/20 23:02:41 wiz Exp $
+
+BLAKE2s (ean13isbn.r57514.tar.xz) = 3742fb2286b9894ef69427378712a0247370526672a7c16ca49e6ed2f2ca5904
+SHA512 (ean13isbn.r57514.tar.xz) = 84f73871c0ddf2d6d2ae0d23f6d27c1cc985ac1c42345ad339d55762ac9e109f8d33dbf27105ae470ec2d2f127918c3fa0a3c49d9fbff8a7c67b3d20f36d2e8d
+Size (ean13isbn.r57514.tar.xz) = 1828 bytes
