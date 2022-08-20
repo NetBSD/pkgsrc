@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2022/02/26 03:57:44 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2022/08/20 08:08:12 wiz Exp $
 
 BUILDLINK_TREE+=	hs-aeson-pretty
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-aeson-pretty
 HS_AESON_PRETTY_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-aeson-pretty+=	hs-aeson-pretty>=0.8.9
-BUILDLINK_ABI_DEPENDS.hs-aeson-pretty+=	hs-aeson-pretty>=0.8.9nb2
+BUILDLINK_ABI_DEPENDS.hs-aeson-pretty+=	hs-aeson-pretty>=0.8.9nb3
 BUILDLINK_PKGSRCDIR.hs-aeson-pretty?=	../../converters/hs-aeson-pretty
 
 .include "../../converters/hs-aeson/buildlink3.mk"

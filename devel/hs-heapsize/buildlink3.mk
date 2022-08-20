@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2022/02/26 03:57:57 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2022/08/20 08:08:14 wiz Exp $
 
 BUILDLINK_TREE+=	hs-heapsize
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-heapsize
 HS_HEAPSIZE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-heapsize+=	hs-heapsize>=0.3.0
-BUILDLINK_ABI_DEPENDS.hs-heapsize+=	hs-heapsize>=0.3.0.1nb1
+BUILDLINK_ABI_DEPENDS.hs-heapsize+=	hs-heapsize>=0.3.0.1nb2
 BUILDLINK_PKGSRCDIR.hs-heapsize?=	../../devel/hs-heapsize
 
 .include "../../devel/hs-hashable/buildlink3.mk"
