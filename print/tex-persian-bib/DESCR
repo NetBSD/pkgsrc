@@ -1,0 +1,8 @@
+Currently 9 files: acm-fa.bst, asa-fa.bst, chicago-fa.bst,
+ieeetr-fa.bst, plain-fa-inLTR-beamer.bst, plain-fa-inLTR.bst,
+plain-fa.bst, plainnat-fa.bst and unsrt-fa.bst are modified for
+Persian documents prepared with XePersian (which the present
+package depends on). The Persian .bst files can simultaneously
+handle both Latin and Persian references. A file cp1256fa.csf
+is provided for correct sorting of Persian references and three
+fields LANGUAGE, TRANSLATOR and AUTHORFA are defined.

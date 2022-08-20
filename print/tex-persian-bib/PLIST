@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2022/08/20 21:40:40 wiz Exp $
+share/texmf-dist/bibtex/bst/persian-bib/acm-fa.bst
+share/texmf-dist/bibtex/bst/persian-bib/asa-fa.bst
+share/texmf-dist/bibtex/bst/persian-bib/chicago-fa.bst
+share/texmf-dist/bibtex/bst/persian-bib/ieeetr-fa.bst
+share/texmf-dist/bibtex/bst/persian-bib/plain-fa-inLTR-beamer.bst
+share/texmf-dist/bibtex/bst/persian-bib/plain-fa-inLTR.bst
+share/texmf-dist/bibtex/bst/persian-bib/plain-fa.bst
+share/texmf-dist/bibtex/bst/persian-bib/plainnat-fa.bst
+share/texmf-dist/bibtex/bst/persian-bib/unsrt-fa.bst
+share/texmf-dist/bibtex/csf/persian-bib/cp1256fa.csf
