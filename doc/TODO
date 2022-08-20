@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22125 2022/08/19 21:38:05 wiz Exp $
+$NetBSD: TODO,v 1.22126 2022/08/20 21:19:09 wiz Exp $
 
 Suggested new packages
 ======================
@@ -395,6 +395,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-poweRlaw-0.70.6
 	o R-quadprog-1.5.8
 	o R-tseries-0.10.48
+	o SDL2-2.24
 	o SDL_sound-2.0
 	o SOGo-2.4.3
 	o SOGo-5.7.0
