@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2022/02/26 03:58:13 pho Exp $
+# $NetBSD: Makefile,v 1.4 2022/08/20 08:08:20 wiz Exp $
 
 DISTNAME=	witherable-0.4.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
