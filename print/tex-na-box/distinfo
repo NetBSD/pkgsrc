@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/08/20 21:37:16 wiz Exp $
+
+BLAKE2s (na-box.r45130.tar.xz) = c567d96ed18cb13b6a89423c70e72300ccc8de5415f7cb7529bd1492186295b5
+SHA512 (na-box.r45130.tar.xz) = 8b0659454d8324ca51c9e97f7957a3c14230dca0b4b8e047b961bad1b81d2a8b0220cf275bf84e9aae6a3d601fe93df3de94f603a198f6bea716064ae8675d0f
+Size (na-box.r45130.tar.xz) = 2952 bytes
