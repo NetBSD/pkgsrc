@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3961 2022/08/21 17:15:35 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3962 2022/08/21 20:51:32 markd Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5805,3 +5805,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Added print/tex-xepersian-hm version 1.1a [wiz 2022-08-21]
 	Added print/tex-xepersian-hm-doc version 1.1a [wiz 2022-08-21]
 	Updated meta-pkgs/texlive-collection-langarabic to 2022 [wiz 2022-08-21]
+	Updated textproc/p5-Convert-ASN1 to 0.33 [markd 2022-08-21]
+	Updated databases/p5-DBIx-SearchBuilder to 1.71 [markd 2022-08-21]
