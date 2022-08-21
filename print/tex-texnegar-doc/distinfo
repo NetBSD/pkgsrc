@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/08/21 15:17:17 wiz Exp $
+
+BLAKE2s (texnegar.doc.r57692.tar.xz) = 78f2dd733b58ef81b0a6320a63c9c4ee5529978c41f539d47748dcc02de4dc28
+SHA512 (texnegar.doc.r57692.tar.xz) = 403e75ef47ffc6da77e4d61dcc95419932d2b62ebb0c107cf612a195b0e2a24862139a518ead801ee15f56546c44bf9cf0e56aad7b4d8a7ede8529063aa745d1
+Size (texnegar.doc.r57692.tar.xz) = 2104876 bytes
