@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2022/08/21 15:16:58 wiz Exp $
+share/texmf-dist/tex/latex/texnegar/texnegar-char-table.lua
+share/texmf-dist/tex/latex/texnegar/texnegar-common-kashida.tex
+share/texmf-dist/tex/latex/texnegar/texnegar-ini.lua
+share/texmf-dist/tex/latex/texnegar/texnegar-ini.tex
+share/texmf-dist/tex/latex/texnegar/texnegar-luatex-kashida.lua
+share/texmf-dist/tex/latex/texnegar/texnegar-luatex.sty
+share/texmf-dist/tex/latex/texnegar/texnegar-xetex-kashida.tex
+share/texmf-dist/tex/latex/texnegar/texnegar-xetex.sty
+share/texmf-dist/tex/latex/texnegar/texnegar.lua
+share/texmf-dist/tex/latex/texnegar/texnegar.sty
