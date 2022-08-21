@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.881 2022/08/21 14:41:30 wiz Exp $
+# $NetBSD: Makefile,v 1.882 2022/08/21 15:13:19 wiz Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -1212,6 +1212,8 @@ SUBDIR+=	tex-newsletr
 SUBDIR+=	tex-newsletr-doc
 SUBDIR+=	tex-newunicodechar
 SUBDIR+=	tex-newunicodechar-doc
+SUBDIR+=	tex-newverbs
+SUBDIR+=	tex-newverbs-doc
 SUBDIR+=	tex-nextpage
 SUBDIR+=	tex-nfssext-cfr
 SUBDIR+=	tex-nfssext-cfr-doc
