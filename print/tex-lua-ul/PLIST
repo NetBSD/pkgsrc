@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2022/08/21 14:23:29 wiz Exp $
+share/texmf-dist/tex/lualatex/lua-ul/docstrip-luacode.sty
+share/texmf-dist/tex/lualatex/lua-ul/lua-ul-patches-preserve-attr.lua
+share/texmf-dist/tex/lualatex/lua-ul/lua-ul.lua
+share/texmf-dist/tex/lualatex/lua-ul/lua-ul.sty
+share/texmf-dist/tex/lualatex/lua-ul/pre_append_to_vlist_filter.lua
