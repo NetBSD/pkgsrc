@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.880 2022/08/21 14:29:20 wiz Exp $
+# $NetBSD: Makefile,v 1.881 2022/08/21 14:41:30 wiz Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -1480,6 +1480,8 @@ SUBDIR+=	tex-sidenotes-doc
 SUBDIR+=	tex-silence
 SUBDIR+=	tex-silence-doc
 SUBDIR+=	tex-simplified-latex-doc
+SUBDIR+=	tex-simurgh
+SUBDIR+=	tex-simurgh-doc
 SUBDIR+=	tex-siunitx
 SUBDIR+=	tex-siunitx-doc
 SUBDIR+=	tex-skak
