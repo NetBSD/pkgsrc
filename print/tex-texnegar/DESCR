@@ -1,0 +1,13 @@
+In some cursive scripts such as Persian or Arabic, kashida is
+used to create justification. In this type of justification
+characters are elongated rather than expanding spaces between
+words. The kashida justification in xepersian has many bugs.
+Also it has problems with some fonts. The xepersian-hm package
+was the first attempt to fix these bugs in xepersian, which
+uses the XeTeX engine. This package extends the kashida
+justification to be used with the LuaTeX engine, too.
+Explanation of the package name: Negar, in Persian, is the
+present stem of negaashtan meaning to design, to paint, to
+write; and as a noun it means "sweetheart, idol, beloved,
+figuratively referring to a beautiful woman, pattern, painting,
+and artistic design".
