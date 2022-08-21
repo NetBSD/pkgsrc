@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/08/21 14:23:29 wiz Exp $
+
+BLAKE2s (lua-ul.r63469.tar.xz) = a0aa51da91498f5fb70e4be7bdf87fa9f1f2af2f6fffe70a08c06d24f00a80c6
+SHA512 (lua-ul.r63469.tar.xz) = a6502086f7d1c57247f9371a711ae7cd1d6112f68818e2a1e04a5a04c97c81dc0c01d7b767e6a6880e366eee9d912cf1ea1f0a17f1d43645ac15ed005d2b8855
+Size (lua-ul.r63469.tar.xz) = 7508 bytes
