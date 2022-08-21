@@ -1,0 +1,4 @@
+Tram boxes are highlighted with patterns of dots; the package
+defines an environment tram that typesets its content into a
+tram box. The pattern used may be selected in an optional
+argument to the environment.
