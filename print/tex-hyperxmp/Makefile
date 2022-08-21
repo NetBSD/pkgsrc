@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/06/28 11:35:32 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/08/21 14:35:05 wiz Exp $
 
 DISTNAME=	hyperxmp
 PKGNAME=	tex-${DISTNAME}-5.9
@@ -22,16 +22,16 @@ REPLACE_PERL+=	texmf-dist/scripts/hyperxmp/hyperxmp-add-bytecount.pl
 DEPENDS+=	tex-etoolbox-[0-9]*:../../devel/tex-etoolbox
 DEPENDS+=	tex-hyperref-[0-9]*:../../print/tex-hyperref
 DEPENDS+=	tex-ifmtarg-[0-9]*:../../print/tex-ifmtarg
+# ifluatex
 DEPENDS+=	tex-iftex-[0-9]*:../../print/tex-iftex
+# ifthen
+DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
 DEPENDS+=	tex-intcalc-[0-9]*:../../print/tex-intcalc
 DEPENDS+=	tex-kvoptions-[0-9]*:../../print/tex-kvoptions
 DEPENDS+=	tex-luacode-[0-9]*:../../print/tex-luacode
 DEPENDS+=	tex-pdfescape-[0-9]*:../../print/tex-pdfescape
 DEPENDS+=	tex-stringenc-[0-9]*:../../print/tex-stringenc
 DEPENDS+=	tex-totpages-[0-9]*:../../print/tex-totpages
-
-#DEPENDS+=	tex-ifthen-[0-9]*:../../print/tex-ifthen
-#DEPENDS+=	tex-ifluatex-[0-9]*:../../print/tex-ifluatex
 
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
