@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2022/08/21 17:12:39 wiz Exp $
+share/texmf-dist/tex/xelatex/xepersian-hm/xepersian-hm-common-kashida.tex
+share/texmf-dist/tex/xelatex/xepersian-hm/xepersian-hm-kashida.tex
+share/texmf-dist/tex/xelatex/xepersian-hm/xepersian-hm.sty
