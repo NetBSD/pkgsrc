@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/08/21 15:21:41 wiz Exp $
+
+BLAKE2s (tram.doc.r29803.tar.xz) = c79549ff12a0df4d140d87acf5a57cfda58c4516826f4ac6fe971c9651631a02
+SHA512 (tram.doc.r29803.tar.xz) = bfc46f516c2f81530ed7e648ef6774443502b580cf580b5fd5ea9f7be0311b33fb14156aca3f36bb4d74cc165dd33d0b8ef3ebbab5624f38239c281c7d7bda09
+Size (tram.doc.r29803.tar.xz) = 29108 bytes
