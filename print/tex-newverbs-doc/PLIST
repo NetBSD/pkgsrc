@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2022/08/21 15:13:01 wiz Exp $
+share/texmf-dist/doc/latex/newverbs/README
+share/texmf-dist/doc/latex/newverbs/newverbs.pdf
