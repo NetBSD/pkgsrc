@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2022/08/21 17:12:04 wiz Exp $
+share/texmf-dist/doc/xelatex/xepersian/README
+share/texmf-dist/doc/xelatex/xepersian/dkun-0.3.py
+share/texmf-dist/doc/xelatex/xepersian/dkun-0.4.py
+share/texmf-dist/doc/xelatex/xepersian/ftxe-0.12.py
+share/texmf-dist/doc/xelatex/xepersian/img/ireland.jpg
+share/texmf-dist/doc/xelatex/xepersian/img/weather/clouds.jpg
+share/texmf-dist/doc/xelatex/xepersian/img/weather/rain.jpg
+share/texmf-dist/doc/xelatex/xepersian/img/weather/sun.jpg
+share/texmf-dist/doc/xelatex/xepersian/magazine-sample.tex
+share/texmf-dist/doc/xelatex/xepersian/test-correction.tex
+share/texmf-dist/doc/xelatex/xepersian/test-empty-form.tex
+share/texmf-dist/doc/xelatex/xepersian/test-question-only.tex
+share/texmf-dist/doc/xelatex/xepersian/test-solution-form.tex
+share/texmf-dist/doc/xelatex/xepersian/undk-0.6.py
+share/texmf-dist/doc/xelatex/xepersian/unldk-0.2.py
+share/texmf-dist/doc/xelatex/xepersian/xepersian-doc.pdf
+share/texmf-dist/doc/xelatex/xepersian/xepersian-logo.tex
+share/texmf-dist/doc/xelatex/xepersian/xepersian.pdf

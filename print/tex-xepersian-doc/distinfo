@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/08/21 17:12:04 wiz Exp $
+
+BLAKE2s (xepersian.doc.r63791.tar.xz) = f340d3245981125dea4007f6c98bfbed02730468366eaad414af82e509619621
+SHA512 (xepersian.doc.r63791.tar.xz) = 69036adcb6ffcc361f5457d497c8f31afb9ac5d3e0096b7e4293d68b43436ab008b20474cf9957c75619687356de781e102c3643f2b13b00eb54f739518bb23d
+Size (xepersian.doc.r63791.tar.xz) = 1011828 bytes
