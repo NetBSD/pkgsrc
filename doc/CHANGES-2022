@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3948 2022/08/21 15:13:30 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3949 2022/08/21 15:13:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5792,3 +5792,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added print/tex-simurgh version 0.01b [wiz 2022-08-21]
 	Added print/tex-simurgh-doc version 0.01b [wiz 2022-08-21]
 	Added print/tex-newverbs version 1.6 [wiz 2022-08-21]
+	Added print/tex-newverbs-doc version 1.6 [wiz 2022-08-21]
