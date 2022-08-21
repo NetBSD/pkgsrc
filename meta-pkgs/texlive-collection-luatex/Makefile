@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2022/04/25 10:43:14 markd Exp $
+# $NetBSD: Makefile,v 1.20 2022/08/21 14:25:49 wiz Exp $
 
 DISTNAME=	collection-luatex
-PKGNAME=	texlive-${DISTNAME}-2022pre1
+PKGNAME=	texlive-${DISTNAME}-2022pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	63081
@@ -33,7 +33,7 @@ DEPENDS+=	tex-ctablestack-[0-9]*:../../print/tex-ctablestack
 # depend linebreaker
 # depend lua-typo
 # depend lua-uca
-# depend lua-ul
+DEPENDS+=	tex-lua-ul-[0-9]*:../../print/tex-lua-ul
 DEPENDS+=	tex-lua-uni-algos-[0-9]*:../../print/tex-lua-uni-algos
 # depend lua-visual-debug
 # depend lua-widow-control
