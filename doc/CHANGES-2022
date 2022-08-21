@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3957 2022/08/21 17:14:27 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3958 2022/08/21 17:14:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5801,3 +5801,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/trippy to 0.6.0 [pin 2022-08-21]
 	Updated www/so to 0.4.7 [pin 2022-08-21]
 	Added print/tex-xepersian version 24.7 [wiz 2022-08-21]
+	Added print/tex-xepersian-doc version 24.7 [wiz 2022-08-21]
