@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2022/08/21 14:28:42 wiz Exp $
+share/texmf-dist/doc/lualatex/arabluatex/arabluatex.el
+share/texmf-dist/doc/lualatex/arabluatex/arabluatex.pdf
+share/texmf-dist/doc/lualatex/arabluatex/samples/al-Jahiz.pdf
+share/texmf-dist/doc/lualatex/arabluatex/samples/al-Jahiz.tex
+share/texmf-dist/doc/lualatex/arabluatex/samples/exporting.pdf
+share/texmf-dist/doc/lualatex/arabluatex/samples/exporting.tex
+share/texmf-dist/doc/lualatex/arabluatex/samples/template-01.pdf
+share/texmf-dist/doc/lualatex/arabluatex/samples/template-01.tex
