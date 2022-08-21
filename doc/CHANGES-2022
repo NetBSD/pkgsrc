@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3945 2022/08/21 14:29:45 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3946 2022/08/21 14:41:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5789,3 +5789,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated meta-pkgs/texlive-collection-luatex to 2022pre2 [wiz 2022-08-21]
 	Added print/tex-arabluatex version 1.20 [wiz 2022-08-21]
 	Added print/tex-arabluatex-doc version 1.20 [wiz 2022-08-21]
+	Added print/tex-simurgh version 0.01b [wiz 2022-08-21]
