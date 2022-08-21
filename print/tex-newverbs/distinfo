@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/08/21 15:12:37 wiz Exp $
+
+BLAKE2s (newverbs.r58256.tar.xz) = d7f6357927e18fefe4d5b9a503325ac83bc604fd2a7d058ee25c7bf8a6cb95ed
+SHA512 (newverbs.r58256.tar.xz) = 146e0d503ff458d22e002f11b9ec89bf17595ff758c0b0a1644f340ece93553b86fa46e8aae590e4973603a441634f86666a4926e1c828523a28969585546dea
+Size (newverbs.r58256.tar.xz) = 2844 bytes
