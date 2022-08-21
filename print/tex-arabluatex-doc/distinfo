@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/08/21 14:28:42 wiz Exp $
+
+BLAKE2s (arabluatex.doc.r54512.tar.xz) = 5eb5c2839b387f7d4c3c7ce881c24ebf6b6e8e16cce2d5cb98d36603cc08e1dd
+SHA512 (arabluatex.doc.r54512.tar.xz) = b9153998fe52ac42bed2bce670db355c805c274b71e3a1f18d8794c36bf9143641b01d9b42cb95f0c126659651aa7dff38e69a7a122326b54e719dabb6f7ebe0
+Size (arabluatex.doc.r54512.tar.xz) = 758844 bytes
