@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.69 2022/08/20 23:29:21 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2022/08/21 15:14:38 wiz Exp $
 
 DISTNAME=	collection-latexextra
-PKGNAME=	texlive-${DISTNAME}-2022pre4
+PKGNAME=	texlive-${DISTNAME}-2022pre5
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	63430
@@ -912,7 +912,7 @@ DEPENDS+=	tex-newlfm-[0-9]*:../../print/tex-newlfm
 # depend newspaper
 DEPENDS+=	tex-newunicodechar-[0-9]*:../../print/tex-newunicodechar
 # depend newvbtm
-# depend newverbs
+DEPENDS+=	tex-newverbs-[0-9]*:../../print/tex-newverbs
 DEPENDS+=	tex-nextpage-[0-9]*:../../print/tex-nextpage
 DEPENDS+=	tex-nfssext-cfr-[0-9]*:../../print/tex-nfssext-cfr
 # depend nicefilelist
