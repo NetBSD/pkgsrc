@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.SunOS,v 1.1 2022/08/21 11:42:19 bsiegert Exp $
+go118/pkg/${GO_PLATFORM}/vendor/golang.org/x/net/lif.a
