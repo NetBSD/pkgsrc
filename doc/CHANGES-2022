@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3937 2022/08/21 11:28:34 bsiegert Exp $
+$NetBSD: CHANGES-2022,v 1.3938 2022/08/21 11:43:04 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5781,3 +5781,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated meta-pkgs/texlive-collection-langarabic to 2022pre4 [wiz 2022-08-20]
 	Updated www/jira-cli to 1.1.0 [fox 2022-08-21]
 	Updated www/hugo to 0.101.0 [bsiegert 2022-08-21]
+	Added lang/go119 version 1.19 [bsiegert 2022-08-21]
