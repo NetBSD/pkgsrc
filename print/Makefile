@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.879 2022/08/21 14:24:11 wiz Exp $
+# $NetBSD: Makefile,v 1.880 2022/08/21 14:29:20 wiz Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -248,6 +248,8 @@ SUBDIR+=	tex-arabic-book
 SUBDIR+=	tex-arabic-book-doc
 SUBDIR+=	tex-arabicfront
 SUBDIR+=	tex-arabicfront-doc
+SUBDIR+=	tex-arabluatex
+SUBDIR+=	tex-arabluatex-doc
 SUBDIR+=	tex-arabtex
 SUBDIR+=	tex-arabtex-doc
 SUBDIR+=	tex-around-the-bend-doc
