@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2022/07/05 15:56:33 bouyer Exp $
+# $NetBSD: Makefile,v 1.20 2022/08/21 20:20:29 markd Exp $
 #
 # VERSION is set in version.mk as it is shared with other packages
 .include        "version.mk"
 PKGNAME=		xentools415-${VERSION}
+PKGREVISION=		1
 
 CATEGORIES=		sysutils
 
@@ -230,6 +231,7 @@ MAKE_ENV+=	EXTRA_HOSTCFLAGS=${EXTRA_HOSTCFLAGS:Q} EXTRA_CFLAGS=${EXTRA_CFLAGS:M*
 .include "../../devel/ocaml-findlib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.pciutils+=	pciutils>=3.8
 .include "../../sysutils/pciutils/buildlink3.mk"
+.include "../../archivers/zstd/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/yajl/buildlink3.mk"
 .include "../../devel/argp/buildlink3.mk"
