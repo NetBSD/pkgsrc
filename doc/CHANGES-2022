@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3955 2022/08/21 16:49:06 pin Exp $
+$NetBSD: CHANGES-2022,v 1.3956 2022/08/21 16:50:09 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5799,3 +5799,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added print/tex-tram version 0.2 [wiz 2022-08-21]
 	Added print/tex-tram-doc version 0.2 [wiz 2022-08-21]
 	Updated net/trippy to 0.6.0 [pin 2022-08-21]
+	Updated www/so to 0.4.7 [pin 2022-08-21]
