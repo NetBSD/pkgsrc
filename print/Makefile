@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.884 2022/08/21 15:21:57 wiz Exp $
+# $NetBSD: Makefile,v 1.885 2022/08/21 17:14:12 wiz Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -1750,6 +1750,10 @@ SUBDIR+=	tex-xcomment-doc
 SUBDIR+=	tex-xdvi
 SUBDIR+=	tex-xecjk
 SUBDIR+=	tex-xecjk-doc
+SUBDIR+=	tex-xepersian
+SUBDIR+=	tex-xepersian-doc
+SUBDIR+=	tex-xepersian-hm
+SUBDIR+=	tex-xepersian-hm-doc
 SUBDIR+=	tex-xetex
 SUBDIR+=	tex-xetex-doc
 SUBDIR+=	tex-xetexconfig
