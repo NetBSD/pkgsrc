@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2022/08/21 17:13:08 wiz Exp $
+share/texmf-dist/doc/xelatex/xepersian-hm/INSTALL.txt
+share/texmf-dist/doc/xelatex/xepersian-hm/README.txt
+share/texmf-dist/doc/xelatex/xepersian-hm/doc-ligature-xep.pdf
+share/texmf-dist/doc/xelatex/xepersian-hm/doc-ligature-xepersian-hm.pdf
+share/texmf-dist/doc/xelatex/xepersian-hm/doc-samples-glyph.pdf
+share/texmf-dist/doc/xelatex/xepersian-hm/doc-samples-hrule.pdf
+share/texmf-dist/doc/xelatex/xepersian-hm/doc-samples-xep.pdf
+share/texmf-dist/doc/xelatex/xepersian-hm/xepersian-XB.pdf
+share/texmf-dist/doc/xelatex/xepersian-hm/xepersian-XB.tex
+share/texmf-dist/doc/xelatex/xepersian-hm/xepersian-hm-doc.ltx
+share/texmf-dist/doc/xelatex/xepersian-hm/xepersian-hm-doc.pdf
+share/texmf-dist/doc/xelatex/xepersian-hm/xepersian-hm-glyph.pdf
+share/texmf-dist/doc/xelatex/xepersian-hm/xepersian-hm-glyph.tex
+share/texmf-dist/doc/xelatex/xepersian-hm/xepersian-hm-leaders-glyph.pdf
+share/texmf-dist/doc/xelatex/xepersian-hm/xepersian-hm-leaders-glyph.tex
+share/texmf-dist/doc/xelatex/xepersian-hm/xepersian-hm-leaders-hrule.pdf
+share/texmf-dist/doc/xelatex/xepersian-hm/xepersian-hm-leaders-hrule.tex
+share/texmf-dist/doc/xelatex/xepersian-hm/xepersian-hm.pdf
