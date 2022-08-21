@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3771 2022/08/19 12:23:23 wiz Exp $
+# $NetBSD: Makefile,v 1.3772 2022/08/21 12:26:57 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -569,7 +569,6 @@ SUBDIR+=	hs-ghc-check
 SUBDIR+=	hs-ghc-exactprint
 SUBDIR+=	hs-ghc-lib-parser
 SUBDIR+=	hs-ghc-lib-parser-ex
-SUBDIR+=	hs-ghc-mtl
 SUBDIR+=	hs-ghc-paths
 SUBDIR+=	hs-ghc-trace-events
 SUBDIR+=	hs-ghcide
