@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2022/08/21 14:41:06 wiz Exp $
+share/texmf-dist/doc/lualatex/simurgh/ChangeLog
+share/texmf-dist/doc/lualatex/simurgh/README.doc
+share/texmf-dist/doc/lualatex/simurgh/simurgh-doc.pdf
+share/texmf-dist/doc/lualatex/simurgh/simurgh-doc.tex
+share/texmf-dist/doc/lualatex/simurgh/simurgh-logo.pdf
+share/texmf-dist/doc/lualatex/simurgh/simurgh-logo.tex
