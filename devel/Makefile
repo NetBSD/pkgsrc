@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3772 2022/08/21 12:26:57 wiz Exp $
+# $NetBSD: Makefile,v 1.3773 2022/08/21 12:29:22 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -481,7 +481,6 @@ SUBDIR+=	gyp
 SUBDIR+=	happy
 SUBDIR+=	haskell-language-server
 SUBDIR+=	haskell-mode
-SUBDIR+=	hdevtools
 SUBDIR+=	hdf
 SUBDIR+=	hdf5
 SUBDIR+=	hdf5-c++
