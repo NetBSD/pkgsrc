@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2022/08/21 14:28:16 wiz Exp $
+share/texmf-dist/tex/lualatex/arabluatex/arabluatex-patch.sty
+share/texmf-dist/tex/lualatex/arabluatex/arabluatex.lua
+share/texmf-dist/tex/lualatex/arabluatex/arabluatex.sty
+share/texmf-dist/tex/lualatex/arabluatex/arabluatex_fullvoc.lua
+share/texmf-dist/tex/lualatex/arabluatex/arabluatex_novoc.lua
+share/texmf-dist/tex/lualatex/arabluatex/arabluatex_trans.lua
+share/texmf-dist/tex/lualatex/arabluatex/arabluatex_voc.lua
