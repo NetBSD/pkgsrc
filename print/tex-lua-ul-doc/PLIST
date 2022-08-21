@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2022/08/21 14:23:55 wiz Exp $
+share/texmf-dist/doc/lualatex/lua-ul/README
+share/texmf-dist/doc/lualatex/lua-ul/lua-ul.pdf
