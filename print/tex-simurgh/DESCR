@@ -1,0 +1,4 @@
+The package provides an automatic and unified interface for
+Parsi typesetting in LaTeX, using the LuaTeX engine. The
+project to produce this system is dedicated to Ferdowsi The
+Great.
