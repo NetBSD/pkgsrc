@@ -1,0 +1,13 @@
+This package provides for LuaLaTeX an ArabTeX-like interface to
+generate Arabic writing from an ascii transliteration. It is
+particularly well-suited for complex documents such as
+technical documents or critical editions where a lot of
+left-to-right commands intertwine with Arabic writing.
+arabluatex is able to process any ArabTeX input notation. Its
+output can be set in the same modes of vocalization as ArabTeX,
+or in different roman transliterations. It further allows many
+typographical refinements. It will eventually interact with
+some other packages yet to come to produce from .tex source
+files, in addition to printed books, TEI xml compliant critical
+editions and/or lexicons that can be searched, analyzed and
+correlated in various ways.
