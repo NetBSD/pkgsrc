@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3952 2022/08/21 15:17:59 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3953 2022/08/21 15:22:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5796,3 +5796,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated meta-pkgs/texlive-collection-latexextra to 2022pre5 [wiz 2022-08-21]
 	Added print/tex-texnegar version 0.1e [wiz 2022-08-21]
 	Added print/tex-texnegar-doc version 0.1e [wiz 2022-08-21]
+	Added print/tex-tram version 0.2 [wiz 2022-08-21]
