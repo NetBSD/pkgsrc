@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.883 2022/08/21 15:17:32 wiz Exp $
+# $NetBSD: Makefile,v 1.884 2022/08/21 15:21:57 wiz Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -1638,6 +1638,8 @@ SUBDIR+=	tex-tpslifonts
 SUBDIR+=	tex-tpslifonts-doc
 SUBDIR+=	tex-tracklang
 SUBDIR+=	tex-tracklang-doc
+SUBDIR+=	tex-tram
+SUBDIR+=	tex-tram-doc
 SUBDIR+=	tex-translation-arsclassica-de-doc
 SUBDIR+=	tex-translation-biblatex-de-doc
 SUBDIR+=	tex-translation-chemsym-de-doc
