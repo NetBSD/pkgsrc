@@ -1,0 +1,3 @@
+The kashida feature in xepersian has problems with some fonts
+such as the HM Series fonts and the XB Series fonts. This
+package fixes these problems.
