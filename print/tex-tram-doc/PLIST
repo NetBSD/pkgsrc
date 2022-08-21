@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2022/08/21 15:21:41 wiz Exp $
+share/texmf-dist/doc/latex/tram/README
+share/texmf-dist/doc/latex/tram/tram-doc.pdf
+share/texmf-dist/doc/latex/tram/tram-doc.tex
