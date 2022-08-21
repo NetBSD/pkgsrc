@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/08/21 14:40:07 wiz Exp $
+
+BLAKE2s (simurgh.r31719.tar.xz) = 8827f9c6fd07e1d84f3a531e0b29a090fba7bcb4be6db69f3a69b132c2c3d9d8
+SHA512 (simurgh.r31719.tar.xz) = 11b77f831aff6796e41ccf2024496ae1c9d4b9b5f4c029daf33e0eb4b4fd3d1e5c78137b945e3c9fe7a16380365fb88165a46e614dc3078657ce025a55f90d44
+Size (simurgh.r31719.tar.xz) = 246476 bytes
