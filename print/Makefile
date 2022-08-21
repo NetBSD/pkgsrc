@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.882 2022/08/21 15:13:19 wiz Exp $
+# $NetBSD: Makefile,v 1.883 2022/08/21 15:17:32 wiz Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -1589,6 +1589,8 @@ SUBDIR+=	tex-texlive-scripts-extra-doc
 SUBDIR+=	tex-texlive.infra
 SUBDIR+=	tex-texmate
 SUBDIR+=	tex-texmate-doc
+SUBDIR+=	tex-texnegar
+SUBDIR+=	tex-texnegar-doc
 SUBDIR+=	tex-texpower
 SUBDIR+=	tex-texpower-doc
 SUBDIR+=	tex-texsis
