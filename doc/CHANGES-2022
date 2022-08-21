@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3953 2022/08/21 15:22:12 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3954 2022/08/21 15:22:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5797,3 +5797,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added print/tex-texnegar version 0.1e [wiz 2022-08-21]
 	Added print/tex-texnegar-doc version 0.1e [wiz 2022-08-21]
 	Added print/tex-tram version 0.2 [wiz 2022-08-21]
+	Added print/tex-tram-doc version 0.2 [wiz 2022-08-21]
