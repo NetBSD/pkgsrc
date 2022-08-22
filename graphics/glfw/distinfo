@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:46:13 nia Exp $
+$NetBSD: distinfo,v 1.8 2022/08/22 19:19:51 wiz Exp $
 
-BLAKE2s (glfw-3.3.4.tar.gz) = 22e7f0cf2a3fc3626a43561ff9dba16d97aa8893bc4f23319a425ad011bb1f06
-SHA512 (glfw-3.3.4.tar.gz) = 2b45ab72da7a2c007c0f42ccd56205f9684cfb980e2b1df127850cd057bb2b02ce02c7c64acd54cd433778e7017148f214afedf09badff9d2edf5f9b8d9d2701
-Size (glfw-3.3.4.tar.gz) = 762885 bytes
+BLAKE2s (glfw-3.3.8.tar.gz) = fa6a3866c6fa8248231a0c6f0d1a5f581bcb3298ad45d5d867d51009c001b5f8
+SHA512 (glfw-3.3.8.tar.gz) = 70d6d99fb7e7616990516070c9a430915dc68d89ec4fe785570f0b35f5c9606a34121e0cd57c0a7debb50e87e2a8e8d97d81a6d52d65ef454f7fd191bd9f679f
+Size (glfw-3.3.8.tar.gz) = 803789 bytes
