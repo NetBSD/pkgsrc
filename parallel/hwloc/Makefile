@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2022/04/18 19:10:04 adam Exp $
+# $NetBSD: Makefile,v 1.32 2022/08/22 08:31:01 markd Exp $
 
 DISTNAME=	hwloc-1.11.13
 PKGREVISION=	5
@@ -15,6 +15,7 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-picky
+CONFIGURE_ARGS+=	--disable-opencl
 TEST_TARGET=		check
 
 .include "../../mk/bsd.prefs.mk"
