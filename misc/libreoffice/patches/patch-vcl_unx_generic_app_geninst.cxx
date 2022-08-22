@@ -1,4 +1,4 @@
-$NetBSD: patch-vcl_unx_generic_app_geninst.cxx,v 1.2 2021/07/26 12:42:24 ryoon Exp $
+$NetBSD: patch-vcl_unx_generic_app_geninst.cxx,v 1.3 2022/08/22 13:58:32 ryoon Exp $
 
 Set "OS Environment" on NetBSD,same as FreeBSD.
 
@@ -8,7 +8,7 @@ Help -> About LibreOffice
 
 Tweaked by Yasushi Oshima, PR pkg/56048.
 
---- vcl/unx/generic/app/geninst.cxx.orig	2021-07-16 21:17:42.000000000 +0000
+--- vcl/unx/generic/app/geninst.cxx.orig	2022-08-10 14:14:32.000000000 +0000
 +++ vcl/unx/generic/app/geninst.cxx
 @@ -22,7 +22,7 @@
  #if defined(LINUX)
@@ -19,10 +19,10 @@ Tweaked by Yasushi Oshima, PR pkg/56048.
  #  include <sys/utsname.h>
  #endif
  
-@@ -73,14 +73,18 @@ OUString SalGenericInstance::getOSVersio
+@@ -72,14 +72,18 @@ OUString SalGenericInstance::getOSVersio
+         }
          fclose( pVersion );
      }
-     return aKernelVer;
 -#elif defined(__FreeBSD__)
 +#elif defined(__FreeBSD__) || defined(__NetBSD__)
      struct utsname stName;
@@ -40,11 +40,11 @@ Tweaked by Yasushi Oshima, PR pkg/56048.
      while ( nIndex++ < aKernelVer.getLength() )
      {
          const char c = stName.release[ nIndex ];
-@@ -89,6 +93,7 @@ OUString SalGenericInstance::getOSVersio
+@@ -87,6 +91,7 @@ OUString SalGenericInstance::getOSVersio
+             break;
      }
-     return OUString::createFromAscii( stName.sysname ) + " " +
-         aKernelVer.copy( 0, nIndex );
+     aKernelVer = OUString::createFromAscii(stName.sysname) + " " + aKernelVer.copy(0, nIndex);
 +#endif
- #else
-     return aKernelVer;
- #endif
+ #elif defined(EMSCRIPTEN)
+ #define str(s) #s
+ #define xstr(s) str(s)
