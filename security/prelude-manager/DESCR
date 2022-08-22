@@ -1,7 +1,0 @@
-Prelude is a hybrid IDS consisting of multiple
-sensors, managers, and a display console. This
-is the manager. The Manager (there can be several
-in an IDS network) accepts secured connections
-from sensors and saves the alerts that Sensors
-emit. This package installs the manager so that
-mySql is used for alert storage.
