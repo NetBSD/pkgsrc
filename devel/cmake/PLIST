@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.70 2022/08/17 13:38:30 tnn Exp $
+@comment $NetBSD: PLIST,v 1.71 2022/08/22 19:08:10 adam Exp $
 bin/ccmake
 bin/cmake
 bin/cpack
@@ -10,6 +10,7 @@ share/bash-completion/completions/ctest
 share/cmake-${CMAKE_API}/Help/command/DEVICE_LINK_OPTIONS.txt
 share/cmake-${CMAKE_API}/Help/command/FIND_XXX.txt
 share/cmake-${CMAKE_API}/Help/command/FIND_XXX_ORDER.txt
+share/cmake-${CMAKE_API}/Help/command/FIND_XXX_REGISTRY_VIEW.txt
 share/cmake-${CMAKE_API}/Help/command/FIND_XXX_ROOT.txt
 share/cmake-${CMAKE_API}/Help/command/LINK_OPTIONS_LINKER.txt
 share/cmake-${CMAKE_API}/Help/command/OPTIONS_SHELL.txt
@@ -152,6 +153,7 @@ share/cmake-${CMAKE_API}/Help/cpack_gen/packagemaker.rst
 share/cmake-${CMAKE_API}/Help/cpack_gen/productbuild.rst
 share/cmake-${CMAKE_API}/Help/cpack_gen/rpm.rst
 share/cmake-${CMAKE_API}/Help/cpack_gen/wix.rst
+share/cmake-${CMAKE_API}/Help/envvar/ADSP_ROOT.rst
 share/cmake-${CMAKE_API}/Help/envvar/ASM_DIALECT.rst
 share/cmake-${CMAKE_API}/Help/envvar/ASM_DIALECTFLAGS.rst
 share/cmake-${CMAKE_API}/Help/envvar/CC.rst
@@ -160,6 +162,7 @@ share/cmake-${CMAKE_API}/Help/envvar/CFLAGS.rst
 share/cmake-${CMAKE_API}/Help/envvar/CMAKE_APPLE_SILICON_PROCESSOR.rst
 share/cmake-${CMAKE_API}/Help/envvar/CMAKE_BUILD_PARALLEL_LEVEL.rst
 share/cmake-${CMAKE_API}/Help/envvar/CMAKE_BUILD_TYPE.rst
+share/cmake-${CMAKE_API}/Help/envvar/CMAKE_COLOR_DIAGNOSTICS.rst
 share/cmake-${CMAKE_API}/Help/envvar/CMAKE_CONFIGURATION_TYPES.rst
 share/cmake-${CMAKE_API}/Help/envvar/CMAKE_CONFIG_TYPE.rst
 share/cmake-${CMAKE_API}/Help/envvar/CMAKE_EXPORT_COMPILE_COMMANDS.rst
@@ -300,7 +303,6 @@ share/cmake-${CMAKE_API}/Help/module/CPackIFW.rst
 share/cmake-${CMAKE_API}/Help/module/CPackIFWConfigureFile.rst
 share/cmake-${CMAKE_API}/Help/module/CPackNSIS.rst
 share/cmake-${CMAKE_API}/Help/module/CPackNuGet.rst
-share/cmake-${CMAKE_API}/Help/module/CPackPackageMaker.rst
 share/cmake-${CMAKE_API}/Help/module/CPackProductBuild.rst
 share/cmake-${CMAKE_API}/Help/module/CPackRPM.rst
 share/cmake-${CMAKE_API}/Help/module/CPackWIX.rst
@@ -667,6 +669,16 @@ share/cmake-${CMAKE_API}/Help/policy/CMP0126.rst
 share/cmake-${CMAKE_API}/Help/policy/CMP0127.rst
 share/cmake-${CMAKE_API}/Help/policy/CMP0128.rst
 share/cmake-${CMAKE_API}/Help/policy/CMP0129.rst
+share/cmake-${CMAKE_API}/Help/policy/CMP0130.rst
+share/cmake-${CMAKE_API}/Help/policy/CMP0131.rst
+share/cmake-${CMAKE_API}/Help/policy/CMP0132.rst
+share/cmake-${CMAKE_API}/Help/policy/CMP0133.rst
+share/cmake-${CMAKE_API}/Help/policy/CMP0134.rst
+share/cmake-${CMAKE_API}/Help/policy/CMP0135.rst
+share/cmake-${CMAKE_API}/Help/policy/CMP0136.rst
+share/cmake-${CMAKE_API}/Help/policy/CMP0137.rst
+share/cmake-${CMAKE_API}/Help/policy/CMP0138.rst
+share/cmake-${CMAKE_API}/Help/policy/CMP0139.rst
 share/cmake-${CMAKE_API}/Help/policy/DEPRECATED.txt
 share/cmake-${CMAKE_API}/Help/policy/DISALLOWED_COMMAND.txt
 share/cmake-${CMAKE_API}/Help/prop_cache/ADVANCED.rst
@@ -900,6 +912,7 @@ share/cmake-${CMAKE_API}/Help/prop_tgt/COMPILE_PDB_NAME_CONFIG.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/COMPILE_PDB_NOTE.txt
 share/cmake-${CMAKE_API}/Help/prop_tgt/COMPILE_PDB_OUTPUT_DIRECTORY.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/COMPILE_PDB_OUTPUT_DIRECTORY_CONFIG.rst
+share/cmake-${CMAKE_API}/Help/prop_tgt/COMPILE_WARNING_AS_ERROR.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/CONFIG_OUTPUT_NAME.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/CONFIG_POSTFIX.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/CROSSCOMPILING_EMULATOR.rst
@@ -996,10 +1009,14 @@ share/cmake-${CMAKE_API}/Help/prop_tgt/INTERFACE_COMPILE_DEFINITIONS.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/INTERFACE_COMPILE_FEATURES.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/INTERFACE_COMPILE_OPTIONS.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/INTERFACE_HEADER_SETS.rst
+share/cmake-${CMAKE_API}/Help/prop_tgt/INTERFACE_HEADER_SETS_TO_VERIFY.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/INTERFACE_INCLUDE_DIRECTORIES.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/INTERFACE_LINK_DEPENDS.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/INTERFACE_LINK_DIRECTORIES.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/INTERFACE_LINK_LIBRARIES.rst
+share/cmake-${CMAKE_API}/Help/prop_tgt/INTERFACE_LINK_LIBRARIES_DIRECT.rst
+share/cmake-${CMAKE_API}/Help/prop_tgt/INTERFACE_LINK_LIBRARIES_DIRECT.txt
+share/cmake-${CMAKE_API}/Help/prop_tgt/INTERFACE_LINK_LIBRARIES_DIRECT_EXCLUDE.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/INTERFACE_LINK_OPTIONS.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/INTERFACE_POSITION_INDEPENDENT_CODE.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/INTERFACE_PRECOMPILE_HEADERS.rst
@@ -1042,6 +1059,8 @@ share/cmake-${CMAKE_API}/Help/prop_tgt/LINK_INTERFACE_MULTIPLICITY_CONFIG.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/LINK_LIBRARIES.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/LINK_LIBRARIES_INDIRECTION.txt
 share/cmake-${CMAKE_API}/Help/prop_tgt/LINK_LIBRARIES_ONLY_TARGETS.rst
+share/cmake-${CMAKE_API}/Help/prop_tgt/LINK_LIBRARY_OVERRIDE.rst
+share/cmake-${CMAKE_API}/Help/prop_tgt/LINK_LIBRARY_OVERRIDE_LIBRARY.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/LINK_OPTIONS.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/LINK_SEARCH_END_STATIC.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/LINK_SEARCH_START_STATIC.rst
@@ -1115,6 +1134,7 @@ share/cmake-${CMAKE_API}/Help/prop_tgt/UNITY_BUILD_CODE_AFTER_INCLUDE.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/UNITY_BUILD_CODE_BEFORE_INCLUDE.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/UNITY_BUILD_MODE.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/UNITY_BUILD_UNIQUE_ID.rst
+share/cmake-${CMAKE_API}/Help/prop_tgt/VERIFY_INTERFACE_HEADER_SETS.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/VERSION.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/VISIBILITY_INLINES_HIDDEN.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/VS_CONFIGURATION_TYPE.rst
@@ -1128,6 +1148,7 @@ share/cmake-${CMAKE_API}/Help/prop_tgt/VS_DOTNET_REFERENCEPROP_refname_TAG_tagna
 share/cmake-${CMAKE_API}/Help/prop_tgt/VS_DOTNET_REFERENCES.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/VS_DOTNET_REFERENCES_COPY_LOCAL.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/VS_DOTNET_REFERENCE_refname.rst
+share/cmake-${CMAKE_API}/Help/prop_tgt/VS_DOTNET_STARTUP_OBJECT.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/VS_DOTNET_TARGET_FRAMEWORK_VERSION.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/VS_DPI_AWARE.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/VS_GLOBAL_KEYWORD.rst
@@ -1139,6 +1160,7 @@ share/cmake-${CMAKE_API}/Help/prop_tgt/VS_IOT_STARTUP_TASK.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/VS_JUST_MY_CODE_DEBUGGING.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/VS_KEYWORD.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/VS_MOBILE_EXTENSIONS_VERSION.rst
+share/cmake-${CMAKE_API}/Help/prop_tgt/VS_NO_COMPILE_BATCHING.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/VS_NO_SOLUTION_DEPLOY.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/VS_PACKAGE_REFERENCES.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/VS_PLATFORM_TOOLSET.rst
@@ -1155,6 +1177,8 @@ share/cmake-${CMAKE_API}/Help/prop_tgt/VS_WINDOWS_TARGET_PLATFORM_MIN_VERSION.rs
 share/cmake-${CMAKE_API}/Help/prop_tgt/VS_WINRT_COMPONENT.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/VS_WINRT_EXTENSIONS.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/VS_WINRT_REFERENCES.rst
+share/cmake-${CMAKE_API}/Help/prop_tgt/WATCOM_RUNTIME_LIBRARY-VALUES.txt
+share/cmake-${CMAKE_API}/Help/prop_tgt/WATCOM_RUNTIME_LIBRARY.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/WIN32_EXECUTABLE.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/WINDOWS_EXPORT_ALL_SYMBOLS.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/XCODE_ATTRIBUTE_an-attribute.rst
@@ -1190,6 +1214,7 @@ share/cmake-${CMAKE_API}/Help/prop_tgt/XCODE_SCHEME_UNDEFINED_BEHAVIOUR_SANITIZE
 share/cmake-${CMAKE_API}/Help/prop_tgt/XCODE_SCHEME_UNDEFINED_BEHAVIOUR_SANITIZER_STOP.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/XCODE_SCHEME_WORKING_DIRECTORY.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/XCODE_SCHEME_ZOMBIE_OBJECTS.rst
+share/cmake-${CMAKE_API}/Help/prop_tgt/XCODE_XCCONFIG.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/XCTEST.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/XXX_OUTPUT_DIRECTORY.txt
 share/cmake-${CMAKE_API}/Help/prop_tgt/XXX_OUTPUT_NAME.txt
@@ -1210,6 +1235,7 @@ share/cmake-${CMAKE_API}/Help/release/3.20.rst
 share/cmake-${CMAKE_API}/Help/release/3.21.rst
 share/cmake-${CMAKE_API}/Help/release/3.22.rst
 share/cmake-${CMAKE_API}/Help/release/3.23.rst
+share/cmake-${CMAKE_API}/Help/release/3.24.rst
 share/cmake-${CMAKE_API}/Help/release/3.3.rst
 share/cmake-${CMAKE_API}/Help/release/3.4.rst
 share/cmake-${CMAKE_API}/Help/release/3.5.rst
@@ -1225,6 +1251,7 @@ share/cmake-${CMAKE_API}/Help/variable/BORLAND.rst
 share/cmake-${CMAKE_API}/Help/variable/BUILD_SHARED_LIBS.rst
 share/cmake-${CMAKE_API}/Help/variable/CACHE.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_ABSOLUTE_DESTINATION_FILES.rst
+share/cmake-${CMAKE_API}/Help/variable/CMAKE_ADSP_ROOT.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_AIX_EXPORT_ALL_SYMBOLS.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_ANDROID_ANT_ADDITIONAL_OPTIONS.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_ANDROID_API.rst
@@ -1294,6 +1321,7 @@ share/cmake-${CMAKE_API}/Help/variable/CMAKE_CL_64.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_CODEBLOCKS_COMPILER_ID.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_CODEBLOCKS_EXCLUDE_EXTERNAL_FILES.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_CODELITE_USE_TARGETS.rst
+share/cmake-${CMAKE_API}/Help/variable/CMAKE_COLOR_DIAGNOSTICS.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_COLOR_MAKEFILE.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_COMMAND.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_COMPILER_2005.rst
@@ -1302,6 +1330,7 @@ share/cmake-${CMAKE_API}/Help/variable/CMAKE_COMPILER_IS_GNUCXX.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_COMPILER_IS_GNUG77.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_COMPILE_PDB_OUTPUT_DIRECTORY.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_COMPILE_PDB_OUTPUT_DIRECTORY_CONFIG.rst
+share/cmake-${CMAKE_API}/Help/variable/CMAKE_COMPILE_WARNING_AS_ERROR.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_CONFIGURATION_TYPES.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_CONFIG_POSTFIX.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_CPACK_COMMAND.rst
@@ -1382,9 +1411,11 @@ share/cmake-${CMAKE_API}/Help/variable/CMAKE_FIND_PACKAGE_NAME.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_FIND_PACKAGE_NO_PACKAGE_REGISTRY.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_FIND_PACKAGE_NO_SYSTEM_PACKAGE_REGISTRY.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_FIND_PACKAGE_PREFER_CONFIG.rst
+share/cmake-${CMAKE_API}/Help/variable/CMAKE_FIND_PACKAGE_REDIRECTS_DIR.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_FIND_PACKAGE_RESOLVE_SYMLINKS.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_FIND_PACKAGE_SORT_DIRECTION.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_FIND_PACKAGE_SORT_ORDER.rst
+share/cmake-${CMAKE_API}/Help/variable/CMAKE_FIND_PACKAGE_TARGETS_GLOBAL.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_FIND_PACKAGE_WARN_NO_MODULE.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_FIND_ROOT_PATH.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_FIND_ROOT_PATH_MODE_INCLUDE.rst
@@ -1395,6 +1426,7 @@ share/cmake-${CMAKE_API}/Help/variable/CMAKE_FIND_ROOT_PATH_MODE_XXX.txt
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_FIND_USE_CMAKE_PATH.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_FIND_USE_CMAKE_SYSTEM_PATH.rst
+share/cmake-${CMAKE_API}/Help/variable/CMAKE_FIND_USE_INSTALL_PREFIX.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_FIND_USE_PACKAGE_REGISTRY.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_FIND_USE_PACKAGE_ROOT_PATH.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH.rst
@@ -1516,9 +1548,13 @@ share/cmake-${CMAKE_API}/Help/variable/CMAKE_LANG_LINKER_PREFERENCE_PROPAGATES.r
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_LANG_LINKER_WRAPPER_FLAG.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_LANG_LINKER_WRAPPER_FLAG_SEP.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_LANG_LINK_EXECUTABLE.rst
+share/cmake-${CMAKE_API}/Help/variable/CMAKE_LANG_LINK_GROUP_USING_FEATURE.rst
+share/cmake-${CMAKE_API}/Help/variable/CMAKE_LANG_LINK_GROUP_USING_FEATURE_SUPPORTED.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_LANG_LINK_LIBRARY_FILE_FLAG.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_LANG_LINK_LIBRARY_FLAG.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_LANG_LINK_LIBRARY_SUFFIX.rst
+share/cmake-${CMAKE_API}/Help/variable/CMAKE_LANG_LINK_LIBRARY_USING_FEATURE.rst
+share/cmake-${CMAKE_API}/Help/variable/CMAKE_LANG_LINK_LIBRARY_USING_FEATURE_SUPPORTED.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_LANG_LINK_WHAT_YOU_USE_FLAG.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_LANG_OUTPUT_EXTENSION.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_LANG_PLATFORM_ID.rst
@@ -1541,11 +1577,17 @@ share/cmake-${CMAKE_API}/Help/variable/CMAKE_LIBRARY_PATH_FLAG.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_LINK_DEF_FILE_FLAG.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_LINK_DEPENDS_NO_SHARED.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_LINK_DIRECTORIES_BEFORE.rst
+share/cmake-${CMAKE_API}/Help/variable/CMAKE_LINK_GROUP_USING_FEATURE.rst
+share/cmake-${CMAKE_API}/Help/variable/CMAKE_LINK_GROUP_USING_FEATURE.txt
+share/cmake-${CMAKE_API}/Help/variable/CMAKE_LINK_GROUP_USING_FEATURE_SUPPORTED.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_LINK_INTERFACE_LIBRARIES.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_LINK_LIBRARIES_ONLY_TARGETS.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_LINK_LIBRARY_FILE_FLAG.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_LINK_LIBRARY_FLAG.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_LINK_LIBRARY_SUFFIX.rst
+share/cmake-${CMAKE_API}/Help/variable/CMAKE_LINK_LIBRARY_USING_FEATURE.rst
+share/cmake-${CMAKE_API}/Help/variable/CMAKE_LINK_LIBRARY_USING_FEATURE.txt
+share/cmake-${CMAKE_API}/Help/variable/CMAKE_LINK_LIBRARY_USING_FEATURE_SUPPORTED.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_LINK_SEARCH_END_STATIC.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_LINK_SEARCH_START_STATIC.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_LINK_WHAT_YOU_USE.rst
@@ -1609,6 +1651,7 @@ share/cmake-${CMAKE_API}/Help/variable/CMAKE_PROJECT_INCLUDE_BEFORE.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_PROJECT_NAME.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_PROJECT_PROJECT-NAME_INCLUDE.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_PROJECT_PROJECT-NAME_INCLUDE_BEFORE.rst
+share/cmake-${CMAKE_API}/Help/variable/CMAKE_PROJECT_TOP_LEVEL_INCLUDES.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_PROJECT_VERSION.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_PROJECT_VERSION_MAJOR.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_PROJECT_VERSION_MINOR.rst
@@ -1668,6 +1711,7 @@ share/cmake-${CMAKE_API}/Help/variable/CMAKE_TLS_CAINFO.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_TLS_VERIFY.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_TOOLCHAIN_FILE.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_TRY_COMPILE_CONFIGURATION.rst
+share/cmake-${CMAKE_API}/Help/variable/CMAKE_TRY_COMPILE_NO_PLATFORM_VARIABLES.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_TRY_COMPILE_PLATFORM_VARIABLES.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_TRY_COMPILE_TARGET_TYPE.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_TWEAK_VERSION.rst
@@ -1678,6 +1722,7 @@ share/cmake-${CMAKE_API}/Help/variable/CMAKE_USER_MAKE_RULES_OVERRIDE.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_USER_MAKE_RULES_OVERRIDE_LANG.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_USE_RELATIVE_PATHS.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_VERBOSE_MAKEFILE.rst
+share/cmake-${CMAKE_API}/Help/variable/CMAKE_VERIFY_INTERFACE_HEADER_SETS.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_VERSION.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_VISIBILITY_INLINES_HIDDEN.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_VS_DEVENV_COMMAND.rst
@@ -1687,6 +1732,7 @@ share/cmake-${CMAKE_API}/Help/variable/CMAKE_VS_INCLUDE_PACKAGE_TO_DEFAULT_BUILD
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_VS_INTEL_Fortran_PROJECT_VERSION.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_VS_JUST_MY_CODE_DEBUGGING.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_VS_MSBUILD_COMMAND.rst
+share/cmake-${CMAKE_API}/Help/variable/CMAKE_VS_NO_COMPILE_BATCHING.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_VS_NUGET_PACKAGE_RESTORE.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_VS_NsightTegra_VERSION.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_VS_PLATFORM_NAME.rst
@@ -1711,6 +1757,7 @@ share/cmake-${CMAKE_API}/Help/variable/CMAKE_VS_WINDOWS_TARGET_PLATFORM_VERSION_
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_VS_WINRT_BY_DEFAULT.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_WARN_DEPRECATED.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION.rst
+share/cmake-${CMAKE_API}/Help/variable/CMAKE_WATCOM_RUNTIME_LIBRARY.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_WIN32_EXECUTABLE.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_XCODE_ATTRIBUTE_an-attribute.rst
@@ -1738,6 +1785,7 @@ share/cmake-${CMAKE_API}/Help/variable/CMAKE_XCODE_SCHEME_UNDEFINED_BEHAVIOUR_SA
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_XCODE_SCHEME_UNDEFINED_BEHAVIOUR_SANITIZER_STOP.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_XCODE_SCHEME_WORKING_DIRECTORY.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_XCODE_SCHEME_ZOMBIE_OBJECTS.rst
+share/cmake-${CMAKE_API}/Help/variable/CMAKE_XCODE_XCCONFIG.rst
 share/cmake-${CMAKE_API}/Help/variable/CPACK_ABSOLUTE_DESTINATION_FILES.rst
 share/cmake-${CMAKE_API}/Help/variable/CPACK_COMPONENT_INCLUDE_TOPLEVEL_DIRECTORY.rst
 share/cmake-${CMAKE_API}/Help/variable/CPACK_CUSTOM_INSTALL_VARIABLES.rst
@@ -1774,6 +1822,7 @@ share/cmake-${CMAKE_API}/Help/variable/CTEST_CUSTOM_POST_TEST.rst
 share/cmake-${CMAKE_API}/Help/variable/CTEST_CUSTOM_PRE_MEMCHECK.rst
 share/cmake-${CMAKE_API}/Help/variable/CTEST_CUSTOM_PRE_TEST.rst
 share/cmake-${CMAKE_API}/Help/variable/CTEST_CUSTOM_TESTS_IGNORE.rst
+share/cmake-${CMAKE_API}/Help/variable/CTEST_CUSTOM_TEST_OUTPUT_TRUNCATION.rst
 share/cmake-${CMAKE_API}/Help/variable/CTEST_CUSTOM_WARNING_EXCEPTION.rst
 share/cmake-${CMAKE_API}/Help/variable/CTEST_CUSTOM_WARNING_MATCH.rst
 share/cmake-${CMAKE_API}/Help/variable/CTEST_CUSTOM_XXX.txt
@@ -1834,6 +1883,8 @@ share/cmake-${CMAKE_API}/Help/variable/IGNORE_SEARCH_PREFIX.txt
 share/cmake-${CMAKE_API}/Help/variable/IGNORE_SEARCH_SYSTEM.txt
 share/cmake-${CMAKE_API}/Help/variable/IOS.rst
 share/cmake-${CMAKE_API}/Help/variable/LIBRARY_OUTPUT_PATH.rst
+share/cmake-${CMAKE_API}/Help/variable/LINK_GROUP_PREDEFINED_FEATURES.txt
+share/cmake-${CMAKE_API}/Help/variable/LINK_LIBRARY_PREDEFINED_FEATURES.txt
 share/cmake-${CMAKE_API}/Help/variable/MINGW.rst
 share/cmake-${CMAKE_API}/Help/variable/MSVC.rst
 share/cmake-${CMAKE_API}/Help/variable/MSVC10.rst
@@ -2093,7 +2144,10 @@ share/cmake-${CMAKE_API}/Modules/CheckTypeSize.cmake
 share/cmake-${CMAKE_API}/Modules/CheckTypeSizeMap.cmake.in
 share/cmake-${CMAKE_API}/Modules/CheckVariableExists.c
 share/cmake-${CMAKE_API}/Modules/CheckVariableExists.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/ADSP-C.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/ADSP-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/ADSP-DetermineCompiler.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/ADSP.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/ARMCC-ASM.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/ARMCC-C.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/ARMCC-CXX.cmake
@@ -2219,12 +2273,14 @@ share/cmake-${CMAKE_API}/Modules/Compiler/LCC-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/LCC-FindBinUtils.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/LCC-Fortran.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/LCC.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/LLVMFlang-Fortran.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/MSVC-ASM.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/MSVC-C-FeatureTests.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/MSVC-C.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/MSVC-CXX-FeatureTests.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/MSVC-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/MSVC-DetermineCompiler.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/MSVC.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/NAG-Fortran.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/NVHPC-C.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/NVHPC-CXX.cmake
@@ -2325,6 +2381,8 @@ share/cmake-${CMAKE_API}/Modules/FLTKCompatibility.cmake
 share/cmake-${CMAKE_API}/Modules/FeatureSummary.cmake
 share/cmake-${CMAKE_API}/Modules/FetchContent.cmake
 share/cmake-${CMAKE_API}/Modules/FetchContent/CMakeLists.cmake.in
+share/cmake-${CMAKE_API}/Modules/FetchContent/package-config-version.cmake.in
+share/cmake-${CMAKE_API}/Modules/FetchContent/package-config.cmake.in
 share/cmake-${CMAKE_API}/Modules/FindALSA.cmake
 share/cmake-${CMAKE_API}/Modules/FindASPELL.cmake
 share/cmake-${CMAKE_API}/Modules/FindAVIFile.cmake
@@ -2565,6 +2623,11 @@ share/cmake-${CMAKE_API}/Modules/MacOSXBundleInfo.plist.in
 share/cmake-${CMAKE_API}/Modules/MacOSXFrameworkInfo.plist.in
 share/cmake-${CMAKE_API}/Modules/MacroAddFileDependencies.cmake
 share/cmake-${CMAKE_API}/Modules/MatlabTestsRedirect.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/ADSP-C.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/ADSP-CXX.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/ADSP-Common.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/ADSP-Determine.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/ADSP.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/AIX-Clang-C.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/AIX-Clang-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/AIX-GNU-ASM.cmake
