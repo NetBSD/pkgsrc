@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3985 2022/08/22 15:24:25 micha Exp $
+$NetBSD: CHANGES-2022,v 1.3986 2022/08/22 18:05:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5834,3 +5834,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Added graphics/zimg 3.0.4 [ast 2022-08-22]
 	Updated misc/libreoffice to 7.4.0.3 [ryoon 2022-08-22]
 	Updated games/woof to 10.2.0 [micha 2022-08-22]
+	Updated devel/py-poetry to 1.1.15 [adam 2022-08-22]
+	Updated www/py-urllib3 to 1.26.12 [adam 2022-08-22]
