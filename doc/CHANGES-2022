@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3963 2022/08/22 06:52:40 adam Exp $
+$NetBSD: CHANGES-2022,v 1.3964 2022/08/22 07:44:12 sborrill Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5809,3 +5809,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/p5-DBIx-SearchBuilder to 1.71 [markd 2022-08-21]
 	Updated finance/py-stripe to 4.1.0 [adam 2022-08-22]
 	Updated devel/py-setuptools-rust to 1.5.1 [adam 2022-08-22]
+	Updated security/oath-toolkit to 2.6.7 [sborrill 2022-08-22]
