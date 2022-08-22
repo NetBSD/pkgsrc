@@ -1,17 +1,17 @@
-$NetBSD: patch-configure,v 1.1 2019/07/05 15:32:10 hauke Exp $
+$NetBSD: patch-configure,v 1.2 2022/08/22 08:49:44 markd Exp $
 
 configure takes offense at details of an installed auctex package, but
 it really is the pkgsrc framework's business to check for installation
 conflicts.
 
---- configure.orig	2017-12-03 19:10:55.000000000 +0000
+--- configure.orig	2022-02-20 19:30:41.000000000 +0000
 +++ configure
-@@ -3844,72 +3844,6 @@ test -n "$TEXHASH" || TEXHASH=":"
+@@ -3796,72 +3796,6 @@ test -n "$TEXHASH" || TEXHASH=":"
       fi
     fi
  
--   { $as_echo "$as_me:${as_lineno-$LINENO}: checking for glaring installation conflicts" >&5
--$as_echo_n "checking for glaring installation conflicts... " >&6; }
+-   { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for glaring installation conflicts" >&5
+-printf %s "checking for glaring installation conflicts... " >&6; }
 -   exppackagelispdir="$packagelispdir"
 -    __ac_tmp_oldprefix__="${prefix}"
 -  __ac_tmp_oldexec_prefix__="$exec_prefix"
@@ -62,18 +62,18 @@ conflicts.
 -     conflictsmsg="Conflicts with previous installations have been detected.
 -   Please fix them before continuing.
 -   "
--     { $as_echo "$as_me:${as_lineno-$LINENO}: result: ouch!
+-     { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: ouch!
 -   " >&5
--$as_echo "ouch!
+-printf "%s\n" "ouch!
 -   " >&6; }
--   { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: ${shadows}
+-   { printf "%s\n" "$as_me:${as_lineno-$LINENO}: WARNING: ${shadows}
 -   " >&5
--$as_echo "$as_me: WARNING: ${shadows}
+-printf "%s\n" "$as_me: WARNING: ${shadows}
 -   " >&2;}
 -   else
 -     conflictsmsg=
--     { $as_echo "$as_me:${as_lineno-$LINENO}: result: probably none" >&5
--$as_echo "probably none" >&6; }
+-     { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: probably none" >&5
+-printf "%s\n" "probably none" >&6; }
 -   fi
 -
     texmfdir="`sed 's/[^-0-9a-zA-Z_./:$]/\\\\&/g;s/[$]\\\\[{(]\\([^)}]*\\)\\\\[})]/${\\1}/g' <<EOF
