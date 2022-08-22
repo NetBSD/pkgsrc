@@ -1,11 +1,11 @@
-$NetBSD: patch-make-include-main.defs,v 1.1 2022/08/01 15:00:13 ast Exp $
+$NetBSD: patch-make-include-main.defs,v 1.2 2022/08/22 13:56:41 ast Exp $
 
 Use comon pkgsrc libraries
 
 
 --- make/include/main.defs.orig	2022-01-10 20:11:37.000000000 +0100
-+++ make/include/main.defs	2022-08-01 12:41:38.928984695 +0200
-@@ -13,28 +13,32 @@
++++ make/include/main.defs	2022-08-22 13:43:55.300892530 +0200
+@@ -13,46 +13,43 @@
  endif
  endif
  
@@ -31,8 +31,8 @@ Use comon pkgsrc libraries
 -    MODULES += contrib/jansson
 -    MODULES += contrib/x264
 -endif
-+MODULES += contrib/zimg
-+MODULES += contrib/ffmpeg
++## MODULES += contrib/zimg
++## MODULES += contrib/ffmpeg
 +MODULES += contrib/libjpeg-turbo
 +
 +## ifneq (,$(filter $(HOST.system),darwin cygwin mingw))
@@ -60,17 +60,27 @@ Use comon pkgsrc libraries
  
  ifeq (1,$(FEATURE.fdk_aac))
      MODULES += contrib/fdk-aac
-@@ -47,13 +51,6 @@
-     MODULES += contrib/x265_12bit
  endif
  
+-ifeq (1,$(FEATURE.x265))
+-    MODULES += contrib/x265
+-    MODULES += contrib/x265_8bit
+-    MODULES += contrib/x265_10bit
+-    MODULES += contrib/x265_12bit
+-endif
+-
 -MODULES += contrib/libdav1d
 -MODULES += contrib/zimg
 -MODULES += contrib/ffmpeg
 -MODULES += contrib/libdvdread
 -MODULES += contrib/libdvdnav
 -MODULES += contrib/libbluray
--
++## ifeq (1,$(FEATURE.x265))
++##     MODULES += contrib/x265
++##     MODULES += contrib/x265_8bit
++##     MODULES += contrib/x265_10bit
++##     MODULES += contrib/x265_12bit
++## endif
+ 
  ifeq (1,$(FEATURE.qsv))
  ifeq (,$(filter $(HOST.system),freebsd))
-     MODULES += contrib/libvpl
