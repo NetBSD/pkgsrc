@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.15 2022/06/28 11:35:55 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2022/08/22 18:34:23 tnn Exp $
 #
 
 DISTNAME=	dirvish-1.2.1
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	sysutils
-MASTER_SITES=	http://www.dirvish.org/
+MASTER_SITES=	https://dirvish.org/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.dirvish.org/
 COMMENT=	Fast, disk based, rotating network backup system
+#LICENSE=	osl-2.0
 
 DEPENDS+=	rsync>=2.6.0:../../net/rsync
 #DEPENDS+=	{perl>=5.8.8,p5-Getopt-Long>=2.35}:../../devel/p5-Getopt-Long
@@ -17,6 +18,7 @@ DEPENDS+=	p5-Time-modules>=2003.0:../../time/p5-Time-modules
 DEPENDS+=	p5-Time-Period>=1.0:../../time/p5-Time-Period
 
 PKG_SYSCONFSUBDIR=	dirvish
+DIST_SUBDIR=		dirvish-20120107
 
 EXECUTABLES=	dirvish dirvish-runall dirvish-expire dirvish-locate
 MAN5=		dirvish.conf.5
@@ -30,10 +32,10 @@ INSTALLATION_DIRS=	${PKGMANDIR}/man5 ${PKGMANDIR}/man8 sbin \
 do-build:
 	cd ${WRKSRC}; \
 	for f in ${EXECUTABLES}; do \
-        	${ECHO} "#!${PERL5}" > $$f; \
-        	${ECHO} "\$$CONFDIR = \"${PKG_SYSCONFDIR}\";" >> $$f; \
-        	${CAT} $$f.pl >>$$f; \
-	        ${CAT} loadconfig.pl >>$$f; \
+		${ECHO} "#!${PERL5}" > $$f; \
+		${ECHO} "\$$CONFDIR = \"${PKG_SYSCONFDIR}\";" >> $$f; \
+		${CAT} $$f.pl >>$$f; \
+		${CAT} loadconfig.pl >>$$f; \
 	done
 
 do-install:
