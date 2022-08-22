@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2022/07/08 17:57:46 adam Exp $
+# $NetBSD: Makefile,v 1.5 2022/08/22 17:59:50 adam Exp $
 
-DISTNAME=	poetry-1.1.14
+DISTNAME=	poetry-1.1.15
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/poetry/}
@@ -26,7 +26,7 @@ DEPENDS+=	${PYPKGPREFIX}-requests-toolbelt>=0.9.1:../../devel/py-requests-toolbe
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.18:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-shellingham>=1.1:../../misc/py-shellingham
 DEPENDS+=	${PYPKGPREFIX}-tomlkit>=0.7.0:../../textproc/py-tomlkit
-DEPENDS+=	${PYPKGPREFIX}-virtualenv-[0-9]*:../../devel/py-virtualenv
+DEPENDS+=	${PYPKGPREFIX}-virtualenv>=20.0.26:../../devel/py-virtualenv
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=6.0:../../devel/py-test
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
