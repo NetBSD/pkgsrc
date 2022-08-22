@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.67 2022/04/18 19:11:55 adam Exp $
+# $NetBSD: Makefile,v 1.68 2022/08/22 15:22:14 tnn Exp $
 #
 
 DISTNAME=		xymon-4.3.30
-#PKGREVISION=		0
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xymon/}
 
@@ -18,8 +17,7 @@ CONFLICTS+=		hobbitmon-[0-9]*
 CONFLICTS+=		hobbitclient-[0-9]*
 
 DEPENDS+=		fping>=2:../../net/fping
-	# xymonclient ought to be the same version as the server, modulo nbN
-DEPENDS+=		xymonclient>=4.3.0b2:../../net/xymonclient
+DEPENDS+=		xymonclient-${PKGVERSION_NOREV}{,nb*}:../../net/xymonclient
 
 HAS_CONFIGURE=		YES
 USE_TOOLS+=		gmake
@@ -97,7 +95,7 @@ CONFIGURE_ARGS+=	"--rrdlib" "${BUILDLINK_PREFIX.rrdtool}/lib"
 CONFIGURE_ARGS+=	"--pngconfig" "${BUILDLINK_PREFIX.png}/bin/libpng-config"
 CONFIGURE_ARGS+=	"--pcreinclude" "${BUILDLINK_PREFIX.pcre}/include"
 CONFIGURE_ARGS+=	"--pcrelib" "${BUILDLINK_PREFIX.pcre}/lib"
-CONFIGURE_ARGS+=	"--fping" "${LOCALBASE}/sbin/fping"
+CONFIGURE_ARGS+=	"--fping" "${PREFIX}/sbin/fping"
 
 CONFIGURE_ENV+=		USEXYMONPING=n
 CONFIGURE_ENV+=		XYMONHOSTNAME=${XYMONSERVERNAME:Q}
