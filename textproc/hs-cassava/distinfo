@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2022/02/12 05:16:24 pho Exp $
+$NetBSD: distinfo,v 1.6 2022/08/22 10:39:13 wiz Exp $
 
-BLAKE2s (cassava-0.5.2.0.tar.gz) = e8230b497563ea74a4282e9d2643706728089bd4a1f9a95604489beab88b9299
-SHA512 (cassava-0.5.2.0.tar.gz) = f7f3fc2ebf58491847fb20b21ecf18595933d296bfd4c48249d35c52e72988c4e2758d7a6d2095a9edb3bed8e154a11170920a7c08262270c9f60cb853085383
-Size (cassava-0.5.2.0.tar.gz) = 37411 bytes
-SHA1 (patch-cassava.cabal) = 7e6343c335afdae249790e01ddbf049a288dd4fd
+BLAKE2s (cassava-0.5.3.0.tar.gz) = 91d490bc52a0e5398239fc3bddcaa7427343235fbac3476d17e6b16b8e7a9fe7
+SHA512 (cassava-0.5.3.0.tar.gz) = 6afae52a2facc013d746a83afa975a2493174e2c5bda0c0ad8cab76c13c46dd86e8d3142e0676c881a35c3c8bf5618a5c1e4b70c3ab153443b949cb84b70bcb4
+Size (cassava-0.5.3.0.tar.gz) = 38224 bytes
