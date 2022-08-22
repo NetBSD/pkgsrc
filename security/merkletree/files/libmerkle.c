@@ -41,6 +41,9 @@
 #ifndef __UNCONST
 #define __UNCONST(a)	((void *)(unsigned long)(const void *)(a))
 #endif
+#ifndef MIN
+#define MIN(a,b)	(((a)<(b))?(a):(b))
+#endif
 
 /* a row of digests in a merkle tree */
 typedef struct merkletree_row_t {
