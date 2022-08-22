@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3983 2022/08/22 13:52:23 ast Exp $
+$NetBSD: CHANGES-2022,v 1.3984 2022/08/22 14:05:00 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5832,3 +5832,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/gcc12 to 12.2.0 [wiz 2022-08-22]
 	Updated devel/py-gitpython to 3.1.27 [adam 2022-08-22]
 	Added graphics/zimg 3.0.4 [ast 2022-08-22]
+	Updated misc/libreoffice to 7.4.0.3 [ryoon 2022-08-22]
