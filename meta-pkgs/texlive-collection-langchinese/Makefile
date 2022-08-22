@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.20 2022/04/16 02:23:27 markd Exp $
+# $NetBSD: Makefile,v 1.21 2022/08/22 11:38:55 markd Exp $
 
 DISTNAME=	collection-langchinese
 PKGNAME=	texlive-${DISTNAME}-2022pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	61913
+TEXLIVE_REV=	63995
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -20,6 +20,7 @@ DEPENDS+=	tex-arphic-ttf-[0-9]*:../../fonts/tex-arphic-ttf
 DEPENDS+=	tex-cmsd-[0-9]*:../../fonts/tex-cmsd
 DEPENDS+=	tex-ctex-[0-9]*:../../print/tex-ctex
 # ctex-faq is documentation only
+# depend exam-zh
 DEPENDS+=	tex-fandol-[0-9]*:../../fonts/tex-fandol
 # depend fduthesis
 # depend hanzibox
