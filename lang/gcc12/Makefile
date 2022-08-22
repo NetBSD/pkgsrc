@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2022/06/28 11:34:10 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/08/22 12:16:15 wiz Exp $
 
 GCC_PKGNAME=		gcc12
-PKGREVISION=		1
 .include		"version.mk"
 
 DISTNAME=	gcc-${GCC12_DIST_VERSION}
@@ -203,7 +202,7 @@ GENERATE_PLIST+= \
 CHECK_BUILTIN.zlib:= yes
 .include "../../devel/zlib/builtin.mk"
 CHECK_BUILTIN.zlib:= no
-.if !empty(USE_BUILTIN.zlib:M[yY][eE][sS])
+.if ${USE_BUILTIN.zlib:M[yY][eE][sS]}
 CONFIGURE_ARGS+=	--with-system-zlib
 .else
 CONFIGURE_ARGS+=	--without-system-zlib
