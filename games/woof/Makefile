@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2022/08/11 05:08:36 gutteridge Exp $
+# $NetBSD: Makefile,v 1.40 2022/08/22 15:20:35 micha Exp $
 
-DISTNAME=	woof_10.1.0
+DISTNAME=	woof_10.2.0
 PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fabiangreffrath/}
 GITHUB_TAG=	${DISTNAME}
@@ -54,6 +53,8 @@ pre-configure:
 post-install:
 	${INSTALL_DATA} ${WRKDIR}/INSTALL.pkgsrc \
 		${DESTDIR}${PREFIX}/share/doc/woof/INSTALL.pkgsrc
+	${MV} ${DESTDIR}${PREFIX}/share/doc/Woof/woof/CMDLINE.txt \
+		${DESTDIR}${PREFIX}/share/doc/woof/CMDLINE.txt
 
 .include "../../audio/SDL2_mixer/buildlink3.mk"
 .include "../../audio/fluidsynth/buildlink3.mk"
