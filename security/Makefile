@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.868 2022/08/17 15:44:16 hauke Exp $
+# $NetBSD: Makefile,v 1.869 2022/08/22 22:59:07 tnn Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -184,16 +184,6 @@ SUBDIR+=	liboauth
 SUBDIR+=	libp11
 SUBDIR+=	libpbc
 SUBDIR+=	libpe
-SUBDIR+=	libprelude
-SUBDIR+=	libprelude-lua
-SUBDIR+=	libprelude-perl
-SUBDIR+=	libprelude-python
-SUBDIR+=	libpreludedb
-SUBDIR+=	libpreludedb-mysql
-SUBDIR+=	libpreludedb-perl
-SUBDIR+=	libpreludedb-pgsql
-SUBDIR+=	libpreludedb-python
-SUBDIR+=	libpreludedb-sqlite3
 SUBDIR+=	libpwquality
 SUBDIR+=	libressl
 SUBDIR+=	libretls
@@ -412,9 +402,6 @@ SUBDIR+=	polkit
 SUBDIR+=	polkit-qt
 SUBDIR+=	polkit-qt5
 SUBDIR+=	portsentry
-SUBDIR+=	prelude-correlator
-SUBDIR+=	prelude-lml
-SUBDIR+=	prelude-manager
 SUBDIR+=	priv
 SUBDIR+=	prngd
 SUBDIR+=	pscan
@@ -491,7 +478,6 @@ SUBDIR+=	py-paramiko
 SUBDIR+=	py-passlib
 SUBDIR+=	py-pbkdf2
 SUBDIR+=	py-pip-audit
-SUBDIR+=	py-prewikka
 SUBDIR+=	py-pydeep
 SUBDIR+=	py-requests-gssapi
 SUBDIR+=	py-requests-kerberos
