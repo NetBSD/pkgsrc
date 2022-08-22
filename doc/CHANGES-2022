@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3988 2022/08/22 18:17:55 pin Exp $
+$NetBSD: CHANGES-2022,v 1.3989 2022/08/22 18:19:05 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5837,3 +5837,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/py-urllib3 to 1.26.12 [adam 2022-08-22]
 	Updated www/nghttp2 to 1.49.0 [adam 2022-08-22]
 	Updated textproc/py-regex to 2022.8.17 [adam 2022-08-22]
+	Updated www/so to 0.4.8 [pin 2022-08-22]
