@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2022/06/28 11:31:46 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2022/08/22 11:16:35 wiz Exp $
 
-DISTNAME=	gcc-12.1.0
+DISTNAME=	gcc-12.2.0
 PKGNAME=	${DISTNAME:S/gcc/libatomic/}
-PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=gcc/${DISTNAME}/}
 EXTRACT_SUFX=	.tar.xz
