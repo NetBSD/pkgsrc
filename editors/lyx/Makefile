@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.109 2022/08/09 12:08:30 jperkin Exp $
+# $NetBSD: Makefile,v 1.110 2022/08/22 08:12:47 markd Exp $
 
 DISTNAME=		lyx-2.3.6.1
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		editors
 MASTER_SITES=		ftp://ftp.lyx.org/pub/lyx/stable/2.3.x/
 MASTER_SITES+=		ftp://ftp.sdsc.edu/pub/other/lyx/stable/2.3.x/
@@ -63,7 +63,6 @@ GNU_CONFIGURE=			YES
 USE_TOOLS+=			gmake perl:run pkg-config xgettext
 USE_LIBTOOL=			YES
 USE_PKGLOCALEDIR=		YES
-PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 1.6.10
 
 CXXFLAGS.Linux+=	-fpermissive
 
@@ -136,6 +135,7 @@ SUBST_SED.python+=	-e 's,command("python -tt,command("${PYTHONBIN} -tt,'
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../lang/python/application.mk"
+.include "../../lang/python/extension.mk"   # for PLIST handling
 .include "../../textproc/aspell/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtsvg/buildlink3.mk"
