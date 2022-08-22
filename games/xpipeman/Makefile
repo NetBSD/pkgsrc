@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2021/01/30 18:42:47 rillig Exp $
+# $NetBSD: Makefile,v 1.25 2022/08/22 17:36:13 tnn Exp $
 #
 
 DISTNAME=	xpipeman-1.5
@@ -13,6 +13,8 @@ COMMENT=	Connect the pipes to contain the water flow game for X11
 
 WRKSRC=		${WRKDIR}/xpipeman
 USE_IMAKE=	yes
+
+CPPFLAGS.SunOS+=	-DSYSV
 
 SETGIDGAME=		yes
 CONF_FILES_PERMS=	share/xpipeman/xpipescores /var/games/xpipescores \
