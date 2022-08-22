@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2016/01/17 14:07:37 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/08/22 10:55:27 wiz Exp $
 include/SDL2/SDL_ttf.h
+lib/cmake/SDL2_ttf/sdl2_ttf-config-version.cmake
+lib/cmake/SDL2_ttf/sdl2_ttf-config.cmake
 lib/libSDL2_ttf.la
 lib/pkgconfig/SDL2_ttf.pc
