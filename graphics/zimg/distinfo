@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/08/22 13:50:37 ast Exp $
+$NetBSD: distinfo,v 1.2 2022/08/22 14:22:30 leot Exp $
 
-BLAKE2s (zimg-3.0.4/zimg.tar.gz) = 7530721a147684db519ac5fad4a194a9ad99d0912d155c3be4e190e255f77d33
-SHA512 (zimg-3.0.4/zimg.tar.gz) = 94beddb109f0b301f0fecf09ea2761d3707aaa1f0cc1caf682bb3d1d7dcd89164de8388e922758e274914df9c7c7c1a0a0c5192e78f88655ed4c6da0ee51995c
-Size (zimg-3.0.4/zimg.tar.gz) = 326578 bytes
+BLAKE2s (zimg-3.0.4.tar.gz) = 7530721a147684db519ac5fad4a194a9ad99d0912d155c3be4e190e255f77d33
+SHA512 (zimg-3.0.4.tar.gz) = 94beddb109f0b301f0fecf09ea2761d3707aaa1f0cc1caf682bb3d1d7dcd89164de8388e922758e274914df9c7c7c1a0a0c5192e78f88655ed4c6da0ee51995c
+Size (zimg-3.0.4.tar.gz) = 326578 bytes
