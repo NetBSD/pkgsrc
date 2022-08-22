@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2022/01/04 20:53:08 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2022/08/22 12:47:31 adam Exp $
 
-DISTNAME=	GitPython-3.1.18
+DISTNAME=	GitPython-3.1.27
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gitpython/}
 
@@ -13,14 +12,14 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-gitdb>=4.0.1:../../devel/py-gitdb
 
+USE_LANGUAGES=	# none
+
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
 .if ${_PYTHON_VERSION} < 38
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.7.4.0:../../devel/py-typing-extensions
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.7.4.3:../../devel/py-typing-extensions
 .endif
-
-USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
