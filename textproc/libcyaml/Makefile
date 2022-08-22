@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2022/05/22 02:41:47 charlotte Exp $
+# $NetBSD: Makefile,v 1.3 2022/08/22 10:44:16 wiz Exp $
 
-DISTNAME=	libcyaml-1.2.0
+DISTNAME=	libcyaml-1.3.1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tlsa/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/tlsa/libcyaml
 COMMENT=	Schema-based YAML parsing and serialization
 LICENSE=	isc
 
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake pkg-config
 NO_CONFIGURE=	yes
 
 # The Makefile wants to add a bunch of options to install(1) specific to GNU
