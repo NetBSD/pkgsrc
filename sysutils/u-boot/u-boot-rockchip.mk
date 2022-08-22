@@ -1,6 +1,6 @@
-# $NetBSD: u-boot-rockchip.mk,v 1.13 2022/02/11 23:03:50 mrg Exp $
+# $NetBSD: u-boot-rockchip.mk,v 1.14 2022/08/22 19:08:22 tnn Exp $
 #
-# should be used by sysutils/u-boot-rock64/Makefile
+# used by sysutils/u-boot-rock64/Makefile
 # used by sysutils/u-boot-rockpro64/Makefile
 # used by sysutils/u-boot-rockpro64-ayufan/Makefile
 # used by sysutils/u-boot-pinebook-pro/Makefile
