@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3962 2022/08/21 20:51:32 markd Exp $
+$NetBSD: CHANGES-2022,v 1.3963 2022/08/22 06:52:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5807,3 +5807,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated meta-pkgs/texlive-collection-langarabic to 2022 [wiz 2022-08-21]
 	Updated textproc/p5-Convert-ASN1 to 0.33 [markd 2022-08-21]
 	Updated databases/p5-DBIx-SearchBuilder to 1.71 [markd 2022-08-21]
+	Updated finance/py-stripe to 4.1.0 [adam 2022-08-22]
+	Updated devel/py-setuptools-rust to 1.5.1 [adam 2022-08-22]
