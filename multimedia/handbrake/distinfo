@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2022/08/01 15:00:13 ast Exp $
+$NetBSD: distinfo,v 1.16 2022/08/22 13:56:41 ast Exp $
 
 BLAKE2s (handbrake/HandBrake-1.5.1-source.tar.bz2) = 47b0351cc3edf04e3cf946b052431f851a006779a5feb63bb5bf8faa41b1fd3b
 SHA512 (handbrake/HandBrake-1.5.1-source.tar.bz2) = 63c5933f77d417a89512abd278a1d844f2b7a36ec9f8ab664c1a1348fd228ee389fc8e349b2df6cbf5d617b912d4634457ebea86490ff5ed4930f39a90dc7568
@@ -10,5 +10,5 @@ BLAKE2s (handbrake/meson-0.55.0.tar.gz) = 1891054c5b88427f4383c5ba5e35baba1ed09e
 SHA512 (handbrake/meson-0.55.0.tar.gz) = bf2a5bab19deb433e363bf569527dbd1a9e8c0f77482aa077abbaa480dadc396e43148957473a31ecd9d3965578d2f7b7dc8808839c619ae2c0d419aed72d4e2
 Size (handbrake/meson-0.55.0.tar.gz) = 1742882 bytes
 SHA1 (patch-configure) = 5f0452587c82ac9a419ac5fc06f07d35d174bc24
-SHA1 (patch-make-include-main.defs) = 176faef9b587a99b6218e8d34781128ca8a5438b
+SHA1 (patch-make-include-main.defs) = b15457b804a63ece613e71c08526029170e20a1e
 SHA1 (patch-make-python_launcher) = db0e01e9a5063b0d083f56840079e74909c729c6
