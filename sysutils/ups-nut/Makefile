@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2022/08/11 16:00:17 gdt Exp $
+# $NetBSD: Makefile,v 1.67 2022/08/22 22:27:12 tnn Exp $
 
 PKGREVISION= 2
 .include "Makefile.common"
@@ -20,6 +20,7 @@ CONFIGURE_ARGS+=	--with-drvpath=${NUT_DRVDIR:Q}
 CONFIGURE_ARGS+=	--with-altpidpath=${NUT_STATEDIR:Q}
 CONFIGURE_ARGS+=	--with-pidpath=${NUT_STATEDIR:Q}
 CONFIGURE_ARGS+=	--with-dev
+CONFIGURE_ARGS+=	--without-snmp	# provided by sysutils/ups-nut-snmp
 
 PKG_GROUPS_VARS+=	NUT_GROUP
 PKG_USERS_VARS+=	NUT_USER
