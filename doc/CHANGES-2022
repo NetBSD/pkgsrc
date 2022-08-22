@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3990 2022/08/22 18:31:06 pin Exp $
+$NetBSD: CHANGES-2022,v 1.3991 2022/08/22 19:09:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5839,3 +5839,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/py-regex to 2022.8.17 [adam 2022-08-22]
 	Updated www/so to 0.4.8 [pin 2022-08-22]
 	Added graphics/oculante version 0.5.47 [pin 2022-08-22]
+	Updated devel/cmake to 3.24.1 [adam 2022-08-22]
+	Updated devel/cmake-gui to 3.24.1 [adam 2022-08-22]
