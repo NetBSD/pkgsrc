@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:46:11 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/08/22 19:31:13 tnn Exp $
 
-BLAKE2s (gimp-jxr-2.0.zip) = 499c84937b0183522472f3683c33ac51bcf843ecec521547c726fd405eae28d6
-SHA512 (gimp-jxr-2.0.zip) = bd35c323f2072dfb76a7b49379ce5ff47167ad0afe75e16e2453880808a08d2acfef7cce4493c840c86b70aeff52b5a6e7b1252ace14c376a1e25134def45b03
-Size (gimp-jxr-2.0.zip) = 191840 bytes
+BLAKE2s (gimp-jxr-2.1.1.tar.gz) = 8ba7614d10dc9ac6b9c121165b2561a09d8817b3ae0b7b88f0d5468420eeaac5
+SHA512 (gimp-jxr-2.1.1.tar.gz) = 4e2755e0c8486218c82c36d35b2102ad860940575dd776b180dc7b460720bcc6d9076f93b287f3bb4f67582916c84fbbd37d722f43b94154657ba02029f8d546
+Size (gimp-jxr-2.1.1.tar.gz) = 13591 bytes
