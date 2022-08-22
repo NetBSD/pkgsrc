@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.33 2022/07/18 10:15:26 micha Exp $
+$NetBSD: distinfo,v 1.34 2022/08/22 15:20:35 micha Exp $
 
-BLAKE2s (woof_10.1.0.tar.gz) = 9e316d25f9237aed7eb5658884106ac3cd683a1b1422a3d9075fbc67a0f378fd
-SHA512 (woof_10.1.0.tar.gz) = 1cbe833065c5e29b38f80b9085f997fe36a1992c51ad0d7eb70a02fde3dc02668d00694c0e6590b19bb976861547f9c0738c80d7c019e75e240f00fea2468a00
-Size (woof_10.1.0.tar.gz) = 7995100 bytes
-SHA1 (patch-man_CMakeLists.txt) = 3420c0a48526aae52982584324aab9ee3533ab11
+BLAKE2s (woof_10.2.0.tar.gz) = a45b783abc7f07960c36a775238ea896d6f32972bcd73d0550f5a5fef194f525
+SHA512 (woof_10.2.0.tar.gz) = 795457f4613c7c1c3fc092ed0c714f94aa53072d38423bd92d3d65cd6e46b763a30ae1ef8b6c42f94aa987abab52580cc8447887f168b61e76764b4cf112e654
+Size (woof_10.2.0.tar.gz) = 7260372 bytes
 SHA1 (patch-src_d__iwad.c) = e2e596d3f0eacfca8852afa329704c14dadf7889
