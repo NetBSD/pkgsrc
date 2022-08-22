@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22143 2022/08/22 19:09:23 adam Exp $
+$NetBSD: TODO,v 1.22144 2022/08/22 19:15:30 wiz Exp $
 
 Suggested new packages
 ======================
@@ -655,7 +655,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o felt-3.07 [wip]
 	o fet-6.0.1
 	o filerunner-14.06.18.10
-	o fish-3.5.1
 	o flashplayer-0.4.13
 	o flatbuffers-1.12.0
 	o flow-tools-0.411
@@ -971,7 +970,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libquantum-1.1.0 [pkg/43728, development release]
 	o librdkafka-1.6.1
 	o librelp-1.10.0
-	o libreoffice-7.4.0
 	o libressl-3.5.3
 	o libretro-core-info-1.9.1
 	o libslang-2.2.4
