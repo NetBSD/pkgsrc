@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2022/08/20 08:08:13 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2022/08/22 10:13:22 wiz Exp $
 
 DISTNAME=	hlint-3.3.6
 PKGNAME=	${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
