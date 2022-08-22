@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.978 2022/08/22 15:27:55 ast Exp $
+# $NetBSD: Makefile,v 1.979 2022/08/22 18:30:38 pin Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -396,6 +396,7 @@ SUBDIR+=	nvidia-texture-tools
 SUBDIR+=	nvtv
 SUBDIR+=	ocaml-cairo
 SUBDIR+=	ocrad
+SUDBIR+=	oculante
 SUBDIR+=	opencolorio
 SUBDIR+=	opencsg
 SUBDIR+=	opencv
