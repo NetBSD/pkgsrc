@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.27 2022/08/13 15:18:51 bsiegert Exp $
+# $NetBSD: go-modules.mk,v 1.28 2022/08/22 11:05:49 wiz Exp $
 
 GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v1.2.0.mod
 GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v1.2.0.zip
@@ -35,8 +35,8 @@ GO_MODULE_FILES+=	golang.org/x/text/@v/v0.3.3.mod
 GO_MODULE_FILES+=	golang.org/x/text/@v/v0.3.7.mod
 GO_MODULE_FILES+=	golang.org/x/text/@v/v0.3.7.zip
 GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.0.0-20180917221912-90fa682c2a6e.mod
-GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.1.13-0.20220811140653-b901dff69f70.mod
-GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.1.13-0.20220811140653-b901dff69f70.zip
+GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.1.13-0.20220812184215-3f9b119300de.mod
+GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.1.13-0.20220812184215-3f9b119300de.zip
 GO_MODULE_FILES+=	golang.org/x/vuln/@v/v0.0.0-20220725105440-4151a5aca1df.mod
 GO_MODULE_FILES+=	golang.org/x/vuln/@v/v0.0.0-20220725105440-4151a5aca1df.zip
 GO_MODULE_FILES+=	gopkg.in/check.v1/@v/v0.0.0-20161208181325-20d25e280405.mod
