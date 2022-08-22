@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2022/08/20 08:08:18 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/08/22 10:13:24 wiz Exp $
 
 DISTNAME=	semver-range-0.2.8
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
