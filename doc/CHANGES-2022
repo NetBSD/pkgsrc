@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3994 2022/08/22 19:32:57 tnn Exp $
+$NetBSD: CHANGES-2022,v 1.3995 2022/08/22 21:10:46 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5844,3 +5844,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated shells/fish to 3.5.1 [wiz 2022-08-22]
 	Updated graphics/glfw to 3.3.8 [wiz 2022-08-22]
 	Updated graphics/gimp-jxr to 2.1.1 [tnn 2022-08-22]
+	Updated www/kore to 4.2.3 [fcambus 2022-08-22]
