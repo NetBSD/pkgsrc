@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3995 2022/08/22 21:10:46 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.3996 2022/08/22 22:59:50 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5845,3 +5845,18 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/glfw to 3.3.8 [wiz 2022-08-22]
 	Updated graphics/gimp-jxr to 2.1.1 [tnn 2022-08-22]
 	Updated www/kore to 4.2.3 [fcambus 2022-08-22]
+	Removed security/libpreludedb [tnn 2022-08-22]
+	Removed security/libprelude [tnn 2022-08-22]
+	Removed security/libprelude-lua [tnn 2022-08-22]
+	Removed security/libprelude-perl [tnn 2022-08-22]
+	Removed security/libprelude-python [tnn 2022-08-22]
+	Removed security/libpreludedb [tnn 2022-08-22]
+	Removed security/libpreludedb-mysql [tnn 2022-08-22]
+	Removed security/libpreludedb-perl [tnn 2022-08-22]
+	Removed security/libpreludedb-pgsql [tnn 2022-08-22]
+	Removed security/libpreludedb-python [tnn 2022-08-22]
+	Removed security/libpreludedb-sqlite3 [tnn 2022-08-22]
+	Removed security/prelude-correlator [tnn 2022-08-22]
+	Removed security/prelude-lml [tnn 2022-08-22]
+	Removed security/prelude-manager [tnn 2022-08-22]
+	Removed security/py-prewikka [tnn 2022-08-22]
