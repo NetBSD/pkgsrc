@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.10 2022/06/28 11:32:31 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2022/08/22 08:01:15 markd Exp $
 
-DISTNAME=	GitLab-API-v4-0.25
+DISTNAME=	GitLab-API-v4-0.26
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/B/BL/BLUEFEET/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/release/GitLab-API-v4
 COMMENT=	Complete GitLab API v4 client
-LICENSE=	gnu-gpl-v3
+LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Const-Fast-[0-9]*:../../devel/p5-Const-Fast
 DEPENDS+=	p5-IO-Prompter-[0-9]*:../../devel/p5-IO-Prompter

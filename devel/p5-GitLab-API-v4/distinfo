@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:16:41 nia Exp $
+$NetBSD: distinfo,v 1.8 2022/08/22 08:01:15 markd Exp $
 
-BLAKE2s (GitLab-API-v4-0.25.tar.gz) = 50bda5e1e82337f0557dd6c19e7c6728f42bc9206f17dceb0ab37fa543d111a0
-SHA512 (GitLab-API-v4-0.25.tar.gz) = f10e6ff78f7b696684e57f43ffedb617599dc173770bade2183ed245db3eb0d80e707df20a3a6a62a8f27eded9b23883032af0416b97590b44e227c7fa477964
-Size (GitLab-API-v4-0.25.tar.gz) = 86024 bytes
+BLAKE2s (GitLab-API-v4-0.26.tar.gz) = e2892f817908c9cd8218b1fcece7ccbe1503c679d407e8fc109eff3d53952be5
+SHA512 (GitLab-API-v4-0.26.tar.gz) = 03ca9b2ef738e3567b3f5b809beb02baed8d792cac1ec3eebdeeebf8362e2d0eb43b15d353934587d364b8c32a530b66fd15d31e2eef1bc080c5059d3eaf23ab
+Size (GitLab-API-v4-0.26.tar.gz) = 80446 bytes
