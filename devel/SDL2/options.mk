@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.18 2020/06/09 19:36:52 nia Exp $
+# $NetBSD: options.mk,v 1.19 2022/08/22 10:51:11 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.SDL2
 PKG_OPTIONS_REQUIRED_GROUPS=	gl
@@ -9,7 +9,7 @@ PKG_SUGGESTED_OPTIONS+=		opengl
 
 .include "../../mk/bsd.fast.prefs.mk"
 
-.if ${OPSYS} == "NetBSD" && !empty(MACHINE_ARCH:Mearm*)
+.if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH:Mearm*}
 PKG_OPTIONS_GROUP.gl+=	rpi
 .endif
 
