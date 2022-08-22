@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.81 2022/08/11 05:09:06 gutteridge Exp $
+# $NetBSD: Makefile,v 1.82 2022/08/22 13:56:41 ast Exp $
 
 DISTNAME=	HandBrake-1.5.1-source
 PKGNAME=	${DISTNAME:tl:S/-source//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=HandBrake/}
 EXTRACT_SUFX=	.tar.bz2
@@ -17,11 +17,6 @@ LICENSE=	gnu-gpl-v2
 DIST_SUBDIR=	handbrake
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
-
-CDISTFILES=	ffmpeg-4.4.2.tar.bz2
-SITES.ffmpeg-4.4.2.tar.bz2=	http://www.ffmpeg.org/releases/
-
-DISTFILES+=	${CDISTFILES}
 
 RESTRICTED=		Unresolved patent issues
 NO_BIN_ON_CDROM=	${RESTRICTED}
@@ -44,6 +39,8 @@ BUILDLINK_TRANSFORM.NetBSD+=	rm:-ldl
 PLIST_SRC+=	${PKGDIR}/PLIST
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--enable-nls
+
 MAKE_FILE=		GNUmakefile
 BUILD_DIRS=		build
 BUILD_TARGET=		# empty
@@ -58,14 +55,22 @@ BUILD_DEPENDS+=		meson-[0-9]*:../../devel/meson
 CFLAGS+=	-fheinous-gnu-extensions
 .endif
 
-post-extract:
-	${MKDIR} ${WRKSRC}/download
-.for distfile in ${CDISTFILES}
-	cp ${DISTDIR}/${DIST_SUBDIR}/${distfile} \
-		${WRKSRC}/download/
-.endfor
+# libjpeg-turbo is also required to build Handbrake: buuilt and linked statically as not to conflict with jpeg for gtk
+JPEG_DEFAULT=	jpeg
+.include "../../mk/jpeg.buildlink3.mk"
 
 .include "options.mk"
+
+BROKEN_GETTEXT_DETECTION=	yes
+GHB_LOCALES=	af co cs da de es eu fr he hr it ja ko nl no pl pt pt_BR ro ru si sk sl_SI sv th tr uk_UA zh_CN zh_TW
+
+post-build:
+	set -e; cd ${WRKSRC};							\
+	for po in ${GHB_LOCALES}; do						\
+		mo="../.destdir/usr/pkg/share/locale/$${po%%.po}/LC_MESSAGES";	\
+		${MKDIR} $${mo};						\
+		${TOOLS_DIR}/bin/msgfmt -v -c -o $${mo}/ghb.mo gtk/po/$${po};	\
+	done
 
 .include "../../audio/lame/buildlink3.mk"
 .include "../../audio/libopus/buildlink3.mk"
@@ -85,6 +90,8 @@ post-extract:
 .include "../../multimedia/libdvdnav/buildlink3.mk"
 .include "../../multimedia/libdvdread/buildlink3.mk"
 .include "../../multimedia/libbluray/buildlink3.mk"
+.include "../../multimedia/ffmpeg4/buildlink3.mk"
+.include "../../graphics/zimg/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../fonts/harfbuzz/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
