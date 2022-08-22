@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2022/05/14 22:25:33 dholland Exp $
+# $NetBSD: Makefile,v 1.40 2022/08/22 07:39:09 markd Exp $
 
 DISTNAME=	apel-10.8.0.20201107
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -28,6 +28,7 @@ MAKE_FLAGS+=	${MAKE_FLAGS.${EMACS_FLAVOR}}
 EMACS_VERSIONS_ACCEPTED=	emacs25 emacs25nox emacs21 emacs21nox emacs20
 EMACS_VERSIONS_ACCEPTED+=	emacs26 emacs26nox
 EMACS_VERSIONS_ACCEPTED+=	emacs27 emacs27nox
+EMACS_VERSIONS_ACCEPTED+=	emacs28 emacs28nox
 
 BUILD_TARGET.emacs=	elc
 BUILD_TARGET.xemacs=	package
