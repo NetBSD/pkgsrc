@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.27 2022/05/01 20:49:39 markd Exp $
+# $NetBSD: Makefile,v 1.28 2022/08/22 11:29:24 markd Exp $
 
 DISTNAME=	collection-publishers
 PKGNAME=	texlive-${DISTNAME}-2022pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	63161
+TEXLIVE_REV=	64009
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -97,6 +97,7 @@ DEPENDS+=	tex-elsarticle-[0-9]*:../../print/tex-elsarticle
 # depend har2nat
 # depend hecthese
 # depend hep-paper
+# depend hfutthesis
 # depend hithesis
 # depend hitszbeamer
 # depend hitszthesis
@@ -120,6 +121,7 @@ DEPENDS+=	tex-ieeetran-[0-9]*:../../print/tex-IEEEtran
 # depend jpsj
 # depend kdgdocs
 # depend kdpcover
+# depend kfupm-math-exam
 # depend kluwer
 # depend ksp-thesis
 # depend ku-template
@@ -150,6 +152,7 @@ DEPENDS+=	tex-ieeetran-[0-9]*:../../print/tex-IEEEtran
 # depend navydocs
 # depend nddiss
 # depend ndsu-thesis
+# depend ndsu-thesis-2022
 # depend nih
 # depend nihbiosketch
 # depend njustthesis
@@ -187,6 +190,7 @@ DEPENDS+=	tex-revtex4-[0-9]*:../../print/tex-revtex4
 # depend sapthesis
 # depend schule
 # depend scientific-thesis-cover
+# depend scripture
 # depend scrjrnl
 # depend sduthesis
 # depend seu-ml-assign
