@@ -1,7 +1,10 @@
-@comment $NetBSD: PLIST,v 1.5 2021/04/23 13:02:09 pho Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/08/22 10:11:27 wiz Exp $
 lib/vector-algorithms-${PKGVERSION}/${HS_VERSION}/package-description
 lib/vector-algorithms-${PKGVERSION}/${HS_VERSION}/package-id
 lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Vector/Algorithms.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Vector/Algorithms.hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Vector/Algorithms.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Vector/Algorithms/AmericanFlag.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Vector/Algorithms/AmericanFlag.hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Vector/Algorithms/AmericanFlag.p_hi
@@ -45,6 +48,7 @@ share/doc/${HS_PLATFORM}/vector-algorithms-${PKGVERSION}/html/Data-Vector-Algori
 share/doc/${HS_PLATFORM}/vector-algorithms-${PKGVERSION}/html/Data-Vector-Algorithms-Radix.html
 share/doc/${HS_PLATFORM}/vector-algorithms-${PKGVERSION}/html/Data-Vector-Algorithms-Search.html
 share/doc/${HS_PLATFORM}/vector-algorithms-${PKGVERSION}/html/Data-Vector-Algorithms-Tim.html
+share/doc/${HS_PLATFORM}/vector-algorithms-${PKGVERSION}/html/Data-Vector-Algorithms.html
 share/doc/${HS_PLATFORM}/vector-algorithms-${PKGVERSION}/html/doc-index.html
 share/doc/${HS_PLATFORM}/vector-algorithms-${PKGVERSION}/html/haddock-bundle.min.js
 share/doc/${HS_PLATFORM}/vector-algorithms-${PKGVERSION}/html/index.html
