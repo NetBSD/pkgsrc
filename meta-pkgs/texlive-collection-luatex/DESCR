@@ -1,3 +1,5 @@
-Packages for LuaTeX, a Unicode-aware extension of pdfTeX, using
-Lua as an embedded scripting and extension language.
-http://luatex.org/
+Packages for LuaTeX, a TeX engine using Lua as an embedded
+scripting and extension language, with native support for
+Unicode, OpenType/TrueType fonts, and both PDF and DVI output.
+The LuaTeX engine itself (and plain formats) are in
+collection-basic.
