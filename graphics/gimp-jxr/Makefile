@@ -1,17 +1,16 @@
-# $NetBSD: Makefile,v 1.18 2022/04/18 19:11:17 adam Exp $
+# $NetBSD: Makefile,v 1.19 2022/08/22 19:31:13 tnn Exp $
 
-DISTNAME=	gimp-jxr-2.0
-PKGREVISION=	16
+DISTNAME=	gimp-jxr-2.1.1
 CATEGORIES=	graphics
-MASTER_SITES=	# javascript link
-EXTRACT_SUFX=	.zip
+MASTER_SITES=	${MASTER_SITE_GITHUB:=chausner/}
+GITHUB_TAG=	version-${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/chausner/gimp-jxr
 COMMENT=	Gimp plugin for JPEG XR files
 LICENSE=	modified-bsd
 
-WRKSRC=		${WRKDIR}/src
+WRKSRC=		${WRKDIR}/gimp-jxr-version-${PKGVERSION_NOREV}/src
 
 USE_TOOLS+=	pkg-config
 
@@ -26,6 +25,7 @@ CFLAGS+=	-I${BUILDLINK_PREFIX.jxrlib}/include/jxrgluelib
 CFLAGS+=	-D__ANSI__ -DABLE_PERF_MEASUREMENT
 CFLAGS+=	load.c save.c utils.c
 LDFLAGS+=	-L${BUILDLINK_PREFIX.jxrlib}/lib -ljxrglue -ljpegxr
+LDFLAGS+=	-lm	# for pow(3), needed by libjxrglue.a
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} gimptool-2.0 --build file-jxr.c
