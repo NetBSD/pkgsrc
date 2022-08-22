@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.20 2022/05/31 21:20:55 markd Exp $
+# $NetBSD: Makefile,v 1.21 2022/08/22 11:35:02 markd Exp $
 
 DISTNAME=	collection-mathscience
 PKGNAME=	texlive-${DISTNAME}-2022pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	63426
+TEXLIVE_REV=	63667
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -73,6 +73,7 @@ DEPENDS+=	tex-concrete-[0-9]*:../../fonts/tex-concrete
 # depend conteq
 # depend correctmathalign
 # depend cryptocode
+# depend csassignments
 # depend decision-table
 # depend delim
 # depend delimseasy
@@ -204,6 +205,7 @@ DEPENDS+=	tex-physics-[0-9]*:../../math/tex-physics
 # depend shuffle
 # depend simplebnf
 # depend simpler-wick
+# depend simples-matrices
 # depend simplewick
 DEPENDS+=	tex-sistyle-[0-9]*:../../print/tex-SIstyle
 DEPENDS+=	tex-siunits-[0-9]*:../../print/tex-SIunits
