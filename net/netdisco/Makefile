@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.50 2022/06/28 11:35:04 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2022/08/22 19:01:36 tnn Exp $
 
 DISTNAME=		netdisco-1.3.3_with_mibs
 PKGNAME=		${DISTNAME:S/_with_mibs//}
-PKGREVISION=		7
+PKGREVISION=		8
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=netdisco/}
-SITES.oui.txt=		http://standards.ieee.org/regauth/oui/
-DISTFILES=		${DEFAULT_DISTFILES} oui.txt
+OUI_TXT=		oui-20220822.txt
+#SITES.${OUI_TXT}=	-https://standards-oui.ieee.org/oui/oui.txt
+DISTFILES=		${DEFAULT_DISTFILES} ${OUI_TXT}
 
 MAINTAINER=		bouyer@NetBSD.org
 HOMEPAGE=		http://www.netdisco.org/
@@ -139,7 +140,7 @@ do-build:
 	done
 	cd ${WRKSRC:Q} && \
 	${FIND} . \( -name '*.orig' -o -name '*.bak' \) -print | ${XARGS} ${RM} -f
-	${CP} ${DISTDIR}/oui.txt ${WRKSRC:Q}
+	${CP} ${DISTDIR}/${OUI_TXT} ${WRKSRC:Q}
 
 do-install:
 	${RM} -f ${WRKSRC:Q}/bin/netdisco_daemon
