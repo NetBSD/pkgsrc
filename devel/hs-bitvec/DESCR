@@ -1,0 +1,2 @@
+A newtype over Bool with a better Vector instance: 8x less memory,
+up to 1000x faster.
