@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2022/08/20 08:08:13 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2022/08/22 10:28:48 wiz Exp $
 
-DISTNAME=	ListLike-4.7.6
-PKGREVISION=	3
+DISTNAME=	ListLike-4.7.7
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
