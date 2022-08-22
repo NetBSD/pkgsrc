@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2022/08/20 08:08:16 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2022/08/22 10:13:24 wiz Exp $
 
 BUILDLINK_TREE+=	hs-implicit-hie-cradle
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-implicit-hie-cradle
 HS_IMPLICIT_HIE_CRADLE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-implicit-hie-cradle+=	hs-implicit-hie-cradle>=0.5.0
-BUILDLINK_ABI_DEPENDS.hs-implicit-hie-cradle+=	hs-implicit-hie-cradle>=0.5.0.0nb2
+BUILDLINK_ABI_DEPENDS.hs-implicit-hie-cradle+=	hs-implicit-hie-cradle>=0.5.0.0nb3
 BUILDLINK_PKGSRCDIR.hs-implicit-hie-cradle?=	../../devel/hs-implicit-hie-cradle
 
 .include "../../converters/hs-base16-bytestring/buildlink3.mk"

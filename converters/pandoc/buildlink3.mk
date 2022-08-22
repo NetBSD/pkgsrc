@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2022/08/20 08:08:12 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2022/08/22 10:13:21 wiz Exp $
 
 BUILDLINK_TREE+=	pandoc
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	pandoc
 PANDOC_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.pandoc+=	pandoc>=2.17.1
-BUILDLINK_ABI_DEPENDS.pandoc+=	pandoc>=2.17.1.1nb4
+BUILDLINK_ABI_DEPENDS.pandoc+=	pandoc>=2.17.1.1nb5
 BUILDLINK_PKGSRCDIR.pandoc?=	../../converters/pandoc
 
 .include "../../converters/hs-aeson/buildlink3.mk"
