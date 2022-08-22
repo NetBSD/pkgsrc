@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3978 2022/08/22 11:10:22 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3979 2022/08/22 11:11:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5827,3 +5827,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated audio/musicpd to 0.23.9 [wiz 2022-08-22]
 	Updated devel/gopls to 0.9.4 [wiz 2022-08-22]
 	Updated sysutils/py-borgbackup to 1.2.2 [wiz 2022-08-22]
+	Updated net/rsync to 3.2.5 [wiz 2022-08-22]
