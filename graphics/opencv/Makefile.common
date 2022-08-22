@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2022/05/04 17:51:33 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.14 2022/08/22 08:17:30 markd Exp $
 # used by graphics/opencv/Makefile
 # used by graphics/opencv-contrib-face/Makefile
 #
@@ -25,6 +25,7 @@ CHECK_PORTABILITY_SKIP+=	platforms/ios/cmake/Toolchains/xcodebuild_wrapper.in
 CHECK_PORTABILITY_SKIP+=	cmake/templates/xcode-*
 
 CMAKE_ARG_PATH=		${WRKSRC}
+CMAKE_ARGS+=		-DBUILD_JAVA=OFF
 CMAKE_ARGS+=		-DBUILD_PROTOBUF=OFF
 CMAKE_ARGS+=		-DCV_ENABLE_INTRINSICS=OFF # XXX: problematic
 CMAKE_ARGS+=		-DENABLE_CCACHE=OFF
