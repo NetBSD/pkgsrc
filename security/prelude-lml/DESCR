@@ -1,5 +1,0 @@
-Prelude is a hybrid IDS consisting of multiple
-sensors, managers, and a display console.
-Prelude-lml is the log file analyzer. It scans
-system log files and generates IDMEF alerts to
-the prelude-manager based on signature rulesets.
