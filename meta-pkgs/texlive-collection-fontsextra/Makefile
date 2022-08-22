@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.28 2022/05/31 21:17:43 markd Exp $
+# $NetBSD: Makefile,v 1.29 2022/08/22 11:41:31 markd Exp $
 
 DISTNAME=	collection-fontsextra
 PKGNAME=	texlive-${DISTNAME}-2022pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	63394
+TEXLIVE_REV=	63936
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -349,6 +349,7 @@ DEPENDS+=	tex-xcharter-[0-9]*:../../fonts/tex-xcharter
 # depend xcharter-math
 DEPENDS+=	tex-xits-[0-9]*:../../fonts/tex-xits
 DEPENDS+=	tex-yfonts-[0-9]*:../../print/tex-yfonts
+# yfonts-otf
 DEPENDS+=	tex-yfonts-t1-[0-9]*:../../fonts/tex-yfonts-t1
 # depend yinit-otf
 DEPENDS+=	tex-zlmtt-[0-9]*:../../fonts/tex-zlmtt
