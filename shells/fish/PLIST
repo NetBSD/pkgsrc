@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2022/08/18 18:11:51 wiz Exp $
+@comment $NetBSD: PLIST,v 1.16 2022/08/22 19:15:17 wiz Exp $
 bin/fish
 bin/fish_indent
 bin/fish_key_reader
@@ -293,6 +293,7 @@ share/fish/completions/cf.fish
 share/fish/completions/chgrp.fish
 share/fish/completions/chmod.fish
 share/fish/completions/choice.fish
+share/fish/completions/choose.fish
 share/fish/completions/chown.fish
 share/fish/completions/chronyc.fish
 share/fish/completions/chsh.fish
@@ -409,6 +410,7 @@ share/fish/completions/exercism.fish
 share/fish/completions/exif.fish
 share/fish/completions/exit.fish
 share/fish/completions/expand.fish
+share/fish/completions/expect.fish
 share/fish/completions/ezjail-admin.fish
 share/fish/completions/fab.fish
 share/fish/completions/fastboot.fish
@@ -647,6 +649,7 @@ share/fish/completions/mysql.fish
 share/fish/completions/mysqldump.fish
 share/fish/completions/namei.fish
 share/fish/completions/native2ascii.fish
+share/fish/completions/navi.fish
 share/fish/completions/nc.fish
 share/fish/completions/nc.openbsd.fish
 share/fish/completions/nc.traditional.fish
@@ -763,6 +766,7 @@ share/fish/completions/python.fish
 share/fish/completions/python2.fish
 share/fish/completions/python3.fish
 share/fish/completions/pzstd.fish
+share/fish/completions/qdbus.fish
 share/fish/completions/qmk.fish
 share/fish/completions/qubes-gpg-client.fish
 share/fish/completions/quilt.fish
@@ -778,6 +782,7 @@ share/fish/completions/rclone.fish
 share/fish/completions/read.fish
 share/fish/completions/readlink.fish
 share/fish/completions/realpath.fish
+share/fish/completions/reflector.fish
 share/fish/completions/reg.fish
 share/fish/completions/reject.fish
 share/fish/completions/rejmerge.fish
