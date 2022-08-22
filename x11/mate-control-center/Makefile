@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2022/08/11 05:09:30 gutteridge Exp $
+# $NetBSD: Makefile,v 1.36 2022/08/22 08:19:12 abs Exp $
 
-PKGREVISION= 3
+PKGREVISION= 4
 .include "../../meta-pkgs/mate/Makefile.common"
 
 DISTNAME=	mate-control-center-${VERSION:R}.2
@@ -37,6 +37,7 @@ CONF_FILES+=	${PREFIX}/share/examples/${PKGBASE}/xdg/menus/matecc.menu \
 .include "../../security/polkit/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libunique/buildlink3.mk"
@@ -46,5 +47,4 @@ CONF_FILES+=	${PREFIX}/share/examples/${PKGBASE}/xdg/menus/matecc.menu \
 .include "../../x11/libXScrnSaver/buildlink3.mk"
 .include "../../x11/libICE/buildlink3.mk"
 .include "../../databases/shared-mime-info/mimedb.mk"
-.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
