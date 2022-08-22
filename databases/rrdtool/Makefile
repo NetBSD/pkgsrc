@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.148 2022/06/28 11:31:37 wiz Exp $
+# $NetBSD: Makefile,v 1.149 2022/08/22 07:37:13 markd Exp $
 
 PKGREVISION= 12
 .include "Makefile.common"
@@ -9,6 +9,7 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config perl msgfmt intltool groff nroff
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-libdbi
+CONFIGURE_ARGS+=	--disable-librados
 CONFIGURE_ARGS+=	--disable-python
 CONFIGURE_ARGS+=	--disable-ruby
 CONFIGURE_ARGS+=	--enable-shared
