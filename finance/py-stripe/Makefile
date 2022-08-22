@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.55 2022/08/19 13:30:17 adam Exp $
+# $NetBSD: Makefile,v 1.56 2022/08/22 06:50:21 adam Exp $
 
-DISTNAME=	stripe-4.0.2
+DISTNAME=	stripe-4.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	finance python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/stripe/}
@@ -10,6 +10,7 @@ HOMEPAGE=	https://github.com/stripe/stripe-python
 COMMENT=	Stripe python bindings
 LICENSE=	mit
 
+BUILD_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.20:../../devel/py-requests
 # tests require stripe-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
