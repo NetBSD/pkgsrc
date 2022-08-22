@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3969 2022/08/22 10:28:57 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3970 2022/08/22 10:37:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5818,3 +5818,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/hs-vector-algorithms to 0.9.0.1 [wiz 2022-08-22]
 	Updated devel/hs-cborg to 0.2.7.0 [wiz 2022-08-22]
 	Updated devel/hs-ListLike to 4.7.7 [wiz 2022-08-22]
+	Updated graphics/hs-JuicyPixels to 3.3.8 [wiz 2022-08-22]
