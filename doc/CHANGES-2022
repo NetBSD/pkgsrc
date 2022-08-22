@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3964 2022/08/22 07:44:12 sborrill Exp $
+$NetBSD: CHANGES-2022,v 1.3965 2022/08/22 08:59:37 markd Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5810,3 +5810,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated finance/py-stripe to 4.1.0 [adam 2022-08-22]
 	Updated devel/py-setuptools-rust to 1.5.1 [adam 2022-08-22]
 	Updated security/oath-toolkit to 2.6.7 [sborrill 2022-08-22]
+	Updated devel/cppcheck to 2.8 [markd 2022-08-22]
+	Updated devel/p5-GitLab-API-v4 to 0.26 [markd 2022-08-22]
+	Updated graphics/pstoedit to 3.78 [markd 2022-08-22]
+	Updated print/auctex to 13.1 [markd 2022-08-22]
