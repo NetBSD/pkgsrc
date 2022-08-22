@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2022/08/22 13:50:37 ast Exp $
+include/zimg++.hpp
+include/zimg.h
+lib/libzimg.la
+lib/pkgconfig/zimg.pc
+share/doc/zimg/COPYING
+share/doc/zimg/ChangeLog
+share/doc/zimg/README.md
+share/doc/zimg/example/Makefile
+share/doc/zimg/example/api_example.cpp
+share/doc/zimg/example/api_example_c.c
+share/doc/zimg/example/hdr_example.cpp
+share/doc/zimg/example/interlace_example.cpp
+share/doc/zimg/example/misc/aligned_malloc.h
+share/doc/zimg/example/misc/argparse.cpp
+share/doc/zimg/example/misc/argparse.h
+share/doc/zimg/example/misc/mmap.cpp
+share/doc/zimg/example/misc/mmap.h
+share/doc/zimg/example/misc/win32_bitmap.cpp
+share/doc/zimg/example/misc/win32_bitmap.h
+share/doc/zimg/example/tile_example.cpp
