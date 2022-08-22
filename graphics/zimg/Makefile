@@ -1,20 +1,14 @@
-# $NetBSD: Makefile,v 1.1 2022/08/22 13:50:37 ast Exp $
+# $NetBSD: Makefile,v 1.2 2022/08/22 14:22:30 leot Exp $
 
-DISTNAME=	zimg
-PKGVERSION=	3.0.4
-PKGNAME=	${DISTNAME}-${PKGVERSION}
+DISTNAME=	zimg-3.0.4
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sekrit-twc/}
-GITHUB_PROJECT=	zimg
-GITHUB_TAG=	refs/tags/release-${PKGVERSION}
+GITHUB_TAG=	release-${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/sekrit-twc/zimg
 COMMENT=	"z" image processing library
 LICENSE=	public-domain # "WTFPL" license: https://github.com/sekrit-twc/zimg/blob/master/COPYING
-
-DIST_SUBDIR=	${PKGNAME_NOREV}
-WRKSRC=		${WRKDIR}/${DISTNAME}-release-${PKGVERSION_NOREV}
 
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES
