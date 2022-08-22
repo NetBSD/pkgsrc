@@ -1,4 +1,4 @@
-$NetBSD: patch-configure.ac,v 1.20 2022/02/05 04:53:43 ryoon Exp $
+$NetBSD: patch-configure.ac,v 1.21 2022/08/22 13:58:32 ryoon Exp $
 
 * Add NetBSD/aarch64 support.
 * Disable freetype2 and fontconfig from pkgsrc explicitly.
@@ -7,9 +7,9 @@ $NetBSD: patch-configure.ac,v 1.20 2022/02/05 04:53:43 ryoon Exp $
 * Include header files from security/gpgme correctly.
 * Find devel/apache-ant.
 
---- configure.ac.orig	2022-01-26 14:35:29.000000000 +0000
+--- configure.ac.orig	2022-08-10 14:14:32.000000000 +0000
 +++ configure.ac
-@@ -5174,6 +5174,11 @@ linux-android*)
+@@ -5305,6 +5305,11 @@ linux-android*)
          RTL_ARCH=X86_64
          PLATFORMID=netbsd_x86_64
          ;;
@@ -21,33 +21,34 @@ $NetBSD: patch-configure.ac,v 1.20 2022/02/05 04:53:43 ryoon Exp $
      *)
          AC_MSG_ERROR([Unsupported host_cpu $host_cpu for host_os $host_os])
          ;;
-@@ -9451,9 +9456,9 @@ elif test "$using_freetype_fontconfig" =
-     AC_MSG_RESULT([internal])
-     FREETYPE_CFLAGS="${ISYSTEM}${WORKDIR}/UnpackedTarball/freetype/include"
-     if test "x$ac_config_site_64bit_host" = xYES; then
--        FREETYPE_LIBS="-L${WORKDIR}/UnpackedTarball/freetype/instdir/lib64 -lfreetype"
-+        FREETYPE_LIBS="${WORKDIR}/UnpackedTarball/freetype/instdir/lib64/libfreetype.a"
-     else
--        FREETYPE_LIBS="-L${WORKDIR}/UnpackedTarball/freetype/instdir/lib -lfreetype"
-+        FREETYPE_LIBS="${WORKDIR}/UnpackedTarball/freetype/instdir/lib/libfreetype.a"
-     fi
-     BUILD_TYPE="$BUILD_TYPE FREETYPE"
- fi
-@@ -10730,11 +10735,11 @@ dnl HarfBuzz
+@@ -9663,9 +9668,9 @@ dnl When the minimal version is at least
  dnl ===================================================================
- libo_CHECK_SYSTEM_MODULE([graphite],[GRAPHITE],[graphite2 >= 0.9.3],
-                          ["-I${WORKDIR}/UnpackedTarball/graphite/include -DGRAPHITE2_STATIC"],
--                         ["-L${WORKDIR}/LinkTarget/StaticLibrary -lgraphite"])
-+                         ["${WORKDIR}/LinkTarget/StaticLibrary/libgraphite.a"])
+ FREETYPE_CFLAGS_internal="${ISYSTEM}${WORKDIR}/UnpackedTarball/freetype/include"
+ if test "x$ac_config_site_64bit_host" = xYES; then
+-    FREETYPE_LIBS_internal="-L${WORKDIR}/UnpackedTarball/freetype/instdir/lib64 -lfreetype"
++    FREETYPE_LIBS_internal="${WORKDIR}/UnpackedTarball/freetype/instdir/lib64/libfreetype.a"
+ else
+-    FREETYPE_LIBS_internal="-L${WORKDIR}/UnpackedTarball/freetype/instdir/lib -lfreetype"
++    FREETYPE_LIBS_internal="${WORKDIR}/UnpackedTarball/freetype/instdir/lib/libfreetype.a"
+ fi
+ libo_CHECK_SYSTEM_MODULE([freetype],[FREETYPE],[freetype2 >= 9.9.3],,system,TRUE)
  
- libo_CHECK_SYSTEM_MODULE([harfbuzz],[HARFBUZZ],[harfbuzz-icu >= 0.9.42],
-                          ["-I${WORKDIR}/UnpackedTarball/harfbuzz/src"],
--                         ["-L${WORKDIR}/UnpackedTarball/harfbuzz/src/.libs -lharfbuzz"])
-+                         ["${WORKDIR}/UnpackedTarball/harfbuzz/src/.libs/libharfbuzz.a"])
+@@ -10890,11 +10895,12 @@ dnl HarfBuzz
+ dnl ===================================================================
+ 
+ GRAPHITE_CFLAGS_internal="-I${WORKDIR}/UnpackedTarball/graphite/include -DGRAPHITE2_STATIC"
+-GRAPHITE_LIBS_internal="-L${WORKDIR}/LinkTarget/StaticLibrary -lgraphite"
++GRAPHITE_LIBS_internal="${WORKDIR}/LinkTarget/StaticLibrary/libgraphite.a"
++
+ libo_CHECK_SYSTEM_MODULE([graphite],[GRAPHITE],[graphite2 >= 0.9.3])
+ 
+ HARFBUZZ_CFLAGS_internal="-I${WORKDIR}/UnpackedTarball/harfbuzz/src"
+-HARFBUZZ_LIBS_internal="-L${WORKDIR}/UnpackedTarball/harfbuzz/src/.libs -lharfbuzz"
++HARFBUZZ_LIBS_internal="${WORKDIR}/UnpackedTarball/harfbuzz/src/.libs/libharfbuzz.a"
+ libo_CHECK_SYSTEM_MODULE([harfbuzz],[HARFBUZZ],[harfbuzz-icu >= 0.9.42])
  
  if test "$COM" = "MSC"; then # override the above
-     GRAPHITE_LIBS="${WORKDIR}/LinkTarget/StaticLibrary/graphite.lib"
-@@ -12442,7 +12447,7 @@ elif test "$_os" = "Linux" -o "$_os" = "
+@@ -12559,7 +12565,7 @@ elif test \( \( "$_os" = "Linux" -o "$_o
          SYSTEM_GPGMEPP=TRUE
  
          # C++ library doesn't come with fancy gpgmepp-config, check for headers the old-fashioned way
@@ -56,7 +57,7 @@ $NetBSD: patch-configure.ac,v 1.20 2022/02/05 04:53:43 ryoon Exp $
              [AC_MSG_ERROR([gpgmepp headers not found, install gpgmepp >= 1.14 development package])], [])
          # progress_callback is the only func with plain C linkage
          # checking for it also filters out older, KDE-dependent libgpgmepp versions
-@@ -13611,8 +13616,8 @@ EOF
+@@ -13764,8 +13770,8 @@ EOF
                      if test -f /usr/share/ant-core/lib/ant.jar; then
                          ANT_LIB=/usr/share/ant-core/lib
                      else

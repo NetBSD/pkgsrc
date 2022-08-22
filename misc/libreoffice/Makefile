@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.288 2022/08/11 05:09:03 gutteridge Exp $
+# $NetBSD: Makefile,v 1.289 2022/08/22 13:58:32 ryoon Exp $
 
-VERREL=		7.3.3
-VERRC=		2
+VERREL=		7.4.0
+VERRC=		3
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
-PKGREVISION=	3
 CATEGORIES=	misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/${VERREL}/
 EXTRACT_SUFX=	.tar.xz
@@ -30,11 +29,17 @@ SUBST_MESSAGE.use-bash=		Using bash for configure script
 SUBST_FILES.use-bash+=		autogen.sh
 SUBST_VARS.use-bash+=		BASH
 
-SUBST_CLASSES+=			zxing
-SUBST_STAGE.zxing=		pre-configure
-SUBST_MESSAGE.zxing=		Include zxing header files
-SUBST_FILES.zxing+=		configure.ac
-SUBST_SED.zxing+=		-e 's,ZXING_CFLAGS=-I/usr/include/ZXing,ZXING_CFLAGS=-I${BUILDLINK_PREFIX.zxing-cpp}/include/ZXing,'
+#SUBST_CLASSES+=			zxing
+#SUBST_STAGE.zxing=		pre-configure
+#SUBST_MESSAGE.zxing=		Include zxing header files
+#SUBST_FILES.zxing+=		configure.ac
+#SUBST_SED.zxing+=		-e 's,ZXING_CFLAGS=-I/usr/include/ZXing,ZXING_CFLAGS=-I${BUILDLINK_PREFIX.zxing-cpp}/include/ZXing,'
+
+SUBST_CLASSES+=			dragonbox
+SUBST_STAGE.dragonbox=		pre-configure
+SUBST_MESSAGE.dragonbox=	Include dragonbox header files
+SUBST_FILES.dragonbox+=		configure.ac
+SUBST_SED.dragonbox+=		-e 's,/usr/include/dragonbox-1.0.0,${BUILDLINK_PREFIX.dragonbox}/include/dragonbox-1.1.3,'
 
 SUBST_CLASSES+=			font-path
 SUBST_STAGE.font-path=		pre-configure
@@ -48,7 +53,7 @@ BUILD_TARGET=	build
 
 .include "../../mk/bsd.prefs.mk"
 pre-build:
-	# Workaround for internal libjpeg-turbo
+	# Workaround for external openldap
 	${MKDIR} ${WRKSRC}/workdir/ExternalProject
 .if ${OPSYS} == "NetBSD"
 	cd ${WRKSRC} && \
@@ -85,7 +90,7 @@ MORE_DISTFILES= \
 	907d6e99f241876695c19ff3db0b8923-source-code-pro-2.030R-ro-1.050R-it.tar.gz \
 	edc4d741888bc0d38e32dbaa17149596-source-sans-pro-2.010R-ro-1.065R-it.tar.gz \
 	source-serif-pro-3.000R.tar.gz \
-	xmlsec1-1.2.33.tar.gz \
+	xmlsec1-1.2.34.tar.gz \
 	3404ab6b1792ae5f16bbd603bd1e1d03-libformula-1.1.7.zip \
 	35c94d2df8893241173de1d16b6034c0-swingExSrc.zip \
 	39bb3fcea1514f1369fcfc87542390fd-sacjava-1.3.zip \
@@ -112,7 +117,6 @@ MORE_DISTFILES= \
 	graphite2-minimal-1.3.14.tgz \
 	1725634df4bb3dcb1b2c91a6175f8789-GentiumBasic_1102.zip \
 	EmojiOneColor-SVGinOT-1.3.tar.gz \
-	libjpeg-turbo-2.1.1.tar.gz \
 	alef-1.001.tar.gz \
 	c74b7223abe75949b4af367942d96c7a-crosextrafonts-carlito-20130920.tar.gz \
 	culmus-0.133.tar.gz \
@@ -123,11 +127,13 @@ MORE_DISTFILES= \
 	lxml-4.1.1.tgz \
 	Amiri-0.111.zip \
 	ReemKufi-0.7.zip \
-	pdfium-4699.tar.bz2 \
+	pdfium-5058.tar.bz2 \
 	dtoa-20180411.tgz \
-	skia-m97-a7230803d64ae9d44f4e1282444801119a3ae967.tar.xz \
+	skia-m103-b301ff025004c9cd82816c86c547588e6c24b466.tar.xz \
 	libcmis-0.5.2.tar.xz \
 	libcuckoo-93217f8d391718380c508a722ab9acd5e9081233.tar.gz
+
+#	libjpeg-turbo-2.1.1.tar.gz
 
 .for md in ${MORE_DISTFILES}
 DISTFILES+=		${md}
@@ -174,7 +180,7 @@ USE_LIBTOOL=		yes
 # Use GNU find from findutils.
 TOOLS_PLATFORM.find=	# empty
 # GUN tar is really needed. Some Makefiles depends on GNUTAR.
-USE_TOOLS+=		automake bash bison gmake gtar
+USE_TOOLS+=		automake bash bison gmake gsed gtar
 USE_TOOLS+=		msgfmt perl pkg-config unzip zip
 PTHREAD_OPTS+=		require
 
@@ -185,7 +191,7 @@ CXXFLAGS.NetBSD+=	-DNO_CPLUSPLUS_ALLOCA
 
 # Do not use /tmp, outside of WRKSRC.
 CONFIGURE_ENV+=		TMPDIR=${WRKSRC}/tmp
-CONFIGURE_ENV+=		ANT_LIB=${LOCALBASE}/lib/java/ant
+CONFIGURE_ENV+=		ANT_LIB=${PREFIX}/lib/java/ant
 
 MAKE_JOBS_SAFE=		no # --with-parallelism conficts with -jN
 .if !empty(MAKE_JOBS.${PKGPATH})
@@ -214,11 +220,13 @@ CONFIGURE_ARGS+=	--enable-python=system
 CONFIGURE_ARGS+=	--enable-ext-wiki-publisher
 CONFIGURE_ARGS+=	--enable-ext-nlpsolver
 CONFIGURE_ARGS+=	--with-system-gpgmepp
-CONFIGURE_ARGS+=	--without-system-jpeg
+#CONFIGURE_ARGS+=	--without-system-jpeg
+CONFIGURE_ARGS+=	--with-system-jpeg
 CONFIGURE_ARGS+=	--without-system-postgresql
 CONFIGURE_ARGS+=	--without-system-mariadb
 CONFIGURE_ARGS+=	--without-system-xmlsec # Needs NSS support
 CONFIGURE_ARGS+=	--with-system-zxing
+CONFIGURE_ENV+=		CPLUS_INCLUDE_PATH=${BUILDLINK_PREFIX.zxing-cpp}/include
 # Internal libcmis-0.5.2 is patched. Do not libcmis-0.5.2nb13 from net/libcmis.
 CONFIGURE_ARGS+=	--without-system-libcmis
 CONFIGURE_ARGS+=	--with-compat-oowrappers
@@ -231,6 +239,7 @@ CONFIGURE_ARGS+=	--with-system-libs
 CONFIGURE_ARGS+=	--with-system-dicts
 CONFIGURE_ARGS+=	--with-vendor="pkgsrc"
 CONFIGURE_ARGS+=	--with-tls="nss"
+CONFIGURE_ARGS+=	--with-system-nss
 CONFIGURE_ARGS+=	--without-doxygen
 CONFIGURE_ARGS+=	--without-junit
 CONFIGURE_ARGS+=	--without-krb5
@@ -277,7 +286,7 @@ CONFIGURE_SCRIPT=	${WRKSRC}/autogen.sh
 
 MAKE_ENV+=		ROOT_USER=${ROOT_USER}
 MAKE_ENV+=		ROOT_GROUP=${ROOT_GROUP}
-MAKE_ENV+=		SHELL=${BASH}
+MAKE_ENV+=		SHELL=${BASH:Q}
 # configure script should use `pkg-config --cflags xzing`
 #MAKE_ENV+=		LD_LIBRARY_PATH=${LD_LIBRARY_PATH}
 BUILD_MAKE_FLAGS+=	VERBOSE=true
@@ -381,8 +390,7 @@ BUILDLINK_API_DEPENDS.libetonyek+=	libetonyek>=0.1.2
 .include "../../graphics/box2d/buildlink3.mk"
 .include "../../graphics/graphite2/buildlink3.mk"
 .endif
-# Requires JCS_EXT_BGRA
-#.include "../../mk/jpeg.buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2-xlib/buildlink3.mk"
@@ -392,6 +400,7 @@ BUILDLINK_API_DEPENDS.libetonyek+=	libetonyek>=0.1.2
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../graphics/libepoxy/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
+.include "../../graphics/libwebp/buildlink3.mk"
 .include "../../graphics/openjpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/zxing-cpp/buildlink3.mk"
@@ -403,6 +412,8 @@ BUILDLINK_API_DEPENDS.libetonyek+=	libetonyek>=0.1.2
 BUILDLINK_INCDIRS.${PYPKGPREFIX:S/py/python/}=	# empty
 .include "../../lang/python/tool.mk"
 .include "../../math/coinmp/buildlink3.mk"
+.include "../../math/dragonbox/buildlink3.mk"
+.include "../../math/libfixmath/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libnumbertext+=	libnumbertext>=1.0.6
 .include "../../math/libnumbertext/buildlink3.mk"
 .include "../../math/lp_solve/buildlink3.mk"
