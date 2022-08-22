@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.53 2022/08/19 13:30:17 adam Exp $
+$NetBSD: distinfo,v 1.54 2022/08/22 06:50:21 adam Exp $
 
-BLAKE2s (stripe-4.0.2.tar.gz) = 9c9b329d161f3cdb143442c8db075e1332a7bfed9f064b91745bf94189813ee4
-SHA512 (stripe-4.0.2.tar.gz) = b13ace2419555e21a93f37a328bd59d9ac8af69787dc89ed4851ce5a5a616a34e63d5667b9981f43c486dafee18186a9dc32524c047c9db204dc8ba831198c91
-Size (stripe-4.0.2.tar.gz) = 252436 bytes
+BLAKE2s (stripe-4.1.0.tar.gz) = ef7e24175e391a153253a62cc1f7932c1c6ba7759e52ce463a5f9b0c30f88484
+SHA512 (stripe-4.1.0.tar.gz) = 6a243526d56bc83caced776850bc3d2582c19f28779684bbf7b0a81f477d8c02c21151052b05b31160f2f81a83f5d7260bd82c171681a059b12012e794c6e5cf
+Size (stripe-4.1.0.tar.gz) = 266799 bytes
