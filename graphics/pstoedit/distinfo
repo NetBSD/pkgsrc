@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.21 2021/10/26 10:46:42 nia Exp $
+$NetBSD: distinfo,v 1.22 2022/08/22 08:23:19 markd Exp $
 
-BLAKE2s (pstoedit-3.75.tar.gz) = 30ac53ae9422e7861f59a6eac2de35f8485a4d0cc3eb6982550074617dd346f9
-SHA512 (pstoedit-3.75.tar.gz) = 54b8cf7e78e52027d45e7550821476d9a9c4df4f63af83792b6a2909bc62236450ba6b619f95eede9f61a715f4937f1fbaf2ce4ae4b486daa0294c396a882a28
-Size (pstoedit-3.75.tar.gz) = 1290057 bytes
+BLAKE2s (pstoedit-3.78.tar.gz) = 9426c8bf06d52040e30f7ba945c71079429c4ae23a0924c2c610fe9dbdd9ecfc
+SHA512 (pstoedit-3.78.tar.gz) = ed880da1ba16780224b4bb40d520f99bc5290b4335dd30f1a195855ce75b3880d5a4fca9885b214855ce61d8bd701aa0681a190e69a8fdef2f3d5e1e2f692648
+Size (pstoedit-3.78.tar.gz) = 1301408 bytes
 SHA1 (patch-src_Makefile.in) = 0f36cd43cbe154d9cf47db6918e9ecc238aa444f
+SHA1 (patch-src_drvpptx.cpp) = 45792a75098d82bda4648c3d50642347c2487e0d
