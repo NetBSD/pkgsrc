@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3981 2022/08/22 12:16:24 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3982 2022/08/22 13:39:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5830,3 +5830,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/rsync to 3.2.5 [wiz 2022-08-22]
 	Updated devel/libatomic to 12.2.0 [wiz 2022-08-22]
 	Updated lang/gcc12 to 12.2.0 [wiz 2022-08-22]
+	Updated devel/py-gitpython to 3.1.27 [adam 2022-08-22]
