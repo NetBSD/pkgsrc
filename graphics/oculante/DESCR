@@ -1,6 +1,6 @@
 A no-nonsense hardware-accelerated image viewer.
 
-I started this as a toy project to make a simple image viewer. The vision is to
+It began as a toy project to make a simple image viewer. The vision is to
 create something with a broad support of industry-standard files and gradually
 add more image analysis and editing tools.
 Here are some reasons why this might be helpful to you:
