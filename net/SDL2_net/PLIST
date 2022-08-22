@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2014/02/02 15:56:29 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/08/22 10:52:46 wiz Exp $
 include/SDL2/SDL_net.h
+lib/cmake/SDL2_net/sdl2_net-config-version.cmake
+lib/cmake/SDL2_net/sdl2_net-config.cmake
 lib/libSDL2_net.la
 lib/pkgconfig/SDL2_net.pc
