@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.234 2022/08/11 05:09:24 gutteridge Exp $
+# $NetBSD: Makefile,v 1.235 2022/08/23 20:13:58 tnn Exp $
 
 DISTNAME=	webkitgtk-2.36.6
 PKGNAME=	${DISTNAME:S/webkitgtk/webkit-gtk/}
@@ -123,6 +123,9 @@ CFLAGS+=	-DRELEASE_WITHOUT_OPTIMIZATIONS
 NOT_PAX_MPROTECT_SAFE+=	libexec/webkit2gtk-4.0/WebKitWebProcess
 NOT_PAX_MPROTECT_SAFE+=	libexec/webkit2gtk-4.0/jsc
 
+CHECK_PORTABILITY_SKIP+=	Source/JavaScriptCore/Scripts/create-symlink-to-altroot.sh
+CHECK_PORTABILITY_SKIP+=	Source/WebCore/Scripts/create-symlink-to-altroot.sh
+CHECK_PORTABILITY_SKIP+=	Source/WebKit/Scripts/create-symlink-to-altroot.sh
 CHECK_PORTABILITY_SKIP+=	Source/WebKit/Scripts/generate-feature-flags-plist.sh
 
 .include "options.mk"
