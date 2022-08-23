@@ -1,9 +1,11 @@
-$NetBSD: patch-configure,v 1.7 2020/06/26 21:19:16 nia Exp $
+$NetBSD: patch-configure,v 1.8 2022/08/23 10:17:49 wiz Exp $
 
 Enable PIC and section_data_rel_ro on NetBSD, even on i386,
 to avoid text relocations.
 
---- configure.orig	2019-12-01 22:46:41.000000000 +0000
+Allow newer SDL2 versions.
+
+--- configure.orig	2022-05-14 00:19:12.000000000 +0000
 +++ configure
 @@ -4941,6 +4941,8 @@ case $target_os in
          ;;
@@ -31,3 +33,12 @@ to avoid text relocations.
  
  check_cc <<EOF && enable const_nan
  #include <math.h>
+@@ -6100,7 +6105,7 @@ fi
+ 
+ if enabled sdl2; then
+     SDL2_CONFIG="${cross_prefix}sdl2-config"
+-    if check_pkg_config sdl2 "sdl2 >= 2.0.1 sdl2 < 2.1.0" SDL_events.h SDL_PollEvent; then
++    if check_pkg_config sdl2 "sdl2 >= 2.0.1 " SDL_events.h SDL_PollEvent; then
+         check_func SDL_Init $sdl2_extralibs $sdl2_cflags ||
+             disable sdl2
+     elif "${SDL2_CONFIG}" --version > /dev/null 2>&1; then
