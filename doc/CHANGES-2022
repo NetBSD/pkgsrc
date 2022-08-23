@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4012 2022/08/23 22:04:18 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4013 2022/08/23 22:09:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5880,3 +5880,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/py-timeout-decorator version 0.5.0 [wiz 2022-08-23]
 	Added net/py-dns1 version 1.16.0nb2 [wiz 2022-08-23]
 	Updated net/py-dns to 2.2.1 [wiz 2022-08-23]
+	Updated net/py-twine to 4.0.1 [wiz 2022-08-23]
