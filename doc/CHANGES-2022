@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4005 2022/08/23 12:16:35 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4006 2022/08/23 13:31:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5873,3 +5873,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-test-pythonpath to 0.7.4 [adam 2022-08-23]
 	Updated devel/py-pydantic to 1.9.2 [adam 2022-08-23]
 	Updated devel/hs-lens to 5.2 [wiz 2022-08-23]
+	Updated devel/hs-deferred-folds to 0.9.18.2 [wiz 2022-08-23]
