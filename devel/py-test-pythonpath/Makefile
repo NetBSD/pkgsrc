@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2022/01/04 20:53:42 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/08/23 11:17:55 adam Exp $
 
-DISTNAME=	pytest-pythonpath-0.7.3
+DISTNAME=	pytest-pythonpath-0.7.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-pythonpath/}
 
@@ -16,7 +15,7 @@ PYTHON_VERSIONED_DEPENDENCIES=	test
 USE_LANGUAGES=	# none
 
 do-test:
-	cd ${WRKSRC} && pytest-${PYVERSSUFFIX}
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
 .include "../../lang/python/versioned_dependencies.mk"
