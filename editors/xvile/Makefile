@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.81 2022/07/04 20:10:53 wiz Exp $
+# $NetBSD: Makefile,v 1.82 2022/08/23 08:52:38 wiz Exp $
 
-DISTNAME=		vile-9.8v
+DISTNAME=		vile-9.8w
 PKGNAME=		x${DISTNAME}
-PKGREVISION=		2
 CATEGORIES=		editors
-MASTER_SITES=		ftp://ftp.invisible-island.net/vile/current/ \
-			https://invisible-mirror.net/archives/vile/current/
+MASTER_SITES=		https://invisible-island.net/archives/vile/current/
+MASTER_SITES+=		ftp://ftp.invisible-island.net/vile/current/
+MASTER_SITES+=		https://invisible-mirror.net/archives/vile/current/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -44,6 +44,7 @@ CONFIGURE_ARGS+=	--with-Xaw3d
 CONFIGURE_ARGS+=	--with-screen=Xaw
 .endif
 CONFIGURE_ARGS+=	--with-xpm
+BUILD_DEFS+=		XAW_TYPE
 
 pre-configure:
 	for f in							\
