@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2022/01/05 15:41:13 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2022/08/23 21:49:56 wiz Exp $
 
 DISTNAME=	email_validator-1.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,8 +11,9 @@ HOMEPAGE=	https://github.com/JoshData/python-email-validator
 COMMENT=	Robust email syntax and deliverability validation library
 LICENSE=	cc0-1.0-universal
 
-DEPENDS+=	${PYPKGPREFIX}-dns>=1.15.0:../../net/py-dns
 DEPENDS+=	${PYPKGPREFIX}-idna>=2.0.0:../../www/py-idna
+
+PYTHON_VERSIONED_DEPENDENCIES=	dns
 
 USE_LANGUAGES=	# none
 
@@ -22,5 +23,6 @@ post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} email_validator email_validator-${PYVERSSUFFIX} || ${TRUE}
 
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

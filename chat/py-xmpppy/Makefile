@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2022/04/10 18:49:25 gdt Exp $
+# $NetBSD: Makefile,v 1.27 2022/08/23 21:49:55 wiz Exp $
 
 DISTNAME=	xmpppy-0.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,10 +11,11 @@ HOMEPAGE=	http://xmpppy.sourceforge.net/
 COMMENT=	XMPP (Jabber) library for Python
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	${PYPKGPREFIX}-dns-[0-9]*:../../net/py-dns
 DEPENDS+=	${PYPKGPREFIX}-expat>=0nb4:../../textproc/py-expat
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONED_DEPENDENCIES=	dns
 
 USE_PKG_RESOURCES=	yes
 
@@ -35,5 +36,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/docs/*.css \
 		${DESTDIR}${DOCDIR}
 
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/06/30 11:18:40 nia Exp $
+# $NetBSD: Makefile,v 1.4 2022/08/23 21:49:56 wiz Exp $
 
 GITHUB_PROJECT=	dnc
 DISTNAME=	dnc-0.2.0
@@ -14,9 +14,10 @@ LICENSE=	2-clause-bsd
 
 USE_LANGUAGES=	# none
 
-DEPENDS+=	${PYPKGPREFIX}-dns-[0-9]*:../../net/py-dns
 DEPENDS+=	${PYPKGPREFIX}-OpenSSL-[0-9]*:../../security/py-OpenSSL
 DEPENDS+=	${PYPKGPREFIX}-prettytable-[0-9]*:../../textproc/py-prettytable
+
+PYTHON_VERSIONED_DEPENDENCIES=	dns
 
 NO_BUILD=	yes
 
@@ -30,5 +31,6 @@ do-install:
 	${RUN}${INSTALL_MAN} ${WRKSRC}/dnc.1 \
 	                     ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
