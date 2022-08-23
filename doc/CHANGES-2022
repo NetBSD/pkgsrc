@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3996 2022/08/22 22:59:50 tnn Exp $
+$NetBSD: CHANGES-2022,v 1.3997 2022/08/23 08:52:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5860,3 +5860,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed security/prelude-lml [tnn 2022-08-22]
 	Removed security/prelude-manager [tnn 2022-08-22]
 	Removed security/py-prewikka [tnn 2022-08-22]
+	Updated editors/vile to 9.8w [wiz 2022-08-23]
