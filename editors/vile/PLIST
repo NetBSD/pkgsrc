@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2020/05/21 07:40:28 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2022/08/23 08:52:37 wiz Exp $
 bin/vile
 bin/vile-libdir-path
 bin/vile-pager
@@ -47,18 +47,19 @@ libexec/vile/vile-mailcap-filt
 libexec/vile/vile-make-filt
 libexec/vile/vile-manfilt
 libexec/vile/vile-mcrl-filt
+libexec/vile/vile-md-filt
 libexec/vile/vile-midl-filt
 libexec/vile/vile-mms-filt
 libexec/vile/vile-nmake-filt
 libexec/vile/vile-nr-filt
 libexec/vile/vile-pas-filt
 libexec/vile/vile-perl-filt
-libexec/vile/vile-perl6-filt
 libexec/vile/vile-php-filt
 libexec/vile/vile-pot-filt
 libexec/vile/vile-ps-filt
 libexec/vile/vile-ps1-filt
 libexec/vile/vile-py-filt
+libexec/vile/vile-raku-filt
 libexec/vile/vile-rc-filt
 libexec/vile/vile-rcs-filt
 libexec/vile/vile-rexx-filt
@@ -164,6 +165,7 @@ share/vile/mailcap.keywords
 share/vile/make.keywords
 share/vile/manpage.rc
 share/vile/mcrl.keywords
+share/vile/md.keywords
 share/vile/midl.keywords
 share/vile/modes.rc
 share/vile/mvn.keywords
@@ -198,7 +200,6 @@ share/vile/perl/search.pm
 share/vile/perl/shell.pm
 share/vile/perl/spell.pm
 share/vile/perl/winops.pm
-share/vile/perl6.keywords
 share/vile/php.keywords
 share/vile/pictmode.rc
 share/vile/pot.keywords
@@ -206,6 +207,7 @@ share/vile/prolog.keywords
 share/vile/ps.keywords
 share/vile/ps1.keywords
 share/vile/py.keywords
+share/vile/raku.keywords
 share/vile/rb.keywords
 share/vile/rc.keywords
 share/vile/rcs.keywords
