@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4014 2022/08/23 23:33:55 wen Exp $
+$NetBSD: CHANGES-2022,v 1.4015 2022/08/23 23:40:07 wen Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5882,3 +5882,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/py-dns to 2.2.1 [wiz 2022-08-23]
 	Updated net/py-twine to 4.0.1 [wiz 2022-08-23]
 	Updated www/p5-HTML-Form to 6.10 [wen 2022-08-23]
+	Updated www/p5-WWW-Mechanize to 6.15 [wen 2022-08-23]
