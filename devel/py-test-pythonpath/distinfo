@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:19:08 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/08/23 11:17:55 adam Exp $
 
-BLAKE2s (pytest-pythonpath-0.7.3.tar.gz) = 8bbd2c21f2767c21ae3c0ce68037aefee066b89d86aaf1dfcb076c5e9ddfc868
-SHA512 (pytest-pythonpath-0.7.3.tar.gz) = 45f5185d1ec015e4e11fe5a14aa3ed49f333bae25a779ede43a3128e1c92a3f151836a72dc3ac8244de05c3943876e525ec7cd464c341b44e37195c443eb6391
-Size (pytest-pythonpath-0.7.3.tar.gz) = 4498 bytes
+BLAKE2s (pytest-pythonpath-0.7.4.tar.gz) = fd6a483d956729026e842ad75a0576dfb76b3fbc9f31f5e2d1d2ea51f458c842
+SHA512 (pytest-pythonpath-0.7.4.tar.gz) = 1cbb16ea90d28659b70cee2d7ad38e7bb15eae8dc96f4446b50019f5b1423489e7bad5948318b9e51682051a43f6b9138891b64225dcfbdef2e7f32a8696ce48
+Size (pytest-pythonpath-0.7.4.tar.gz) = 4383 bytes
