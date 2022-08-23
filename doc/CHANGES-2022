@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.3998 2022/08/23 08:53:52 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.3999 2022/08/23 09:41:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5862,3 +5862,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed security/py-prewikka [tnn 2022-08-22]
 	Updated editors/vile to 9.8w [wiz 2022-08-23]
 	Updated editors/xvile to 9.8w [wiz 2022-08-23]
+	Updated www/py-sanic to 22.6.2 [adam 2022-08-23]
+	Updated time/py-pytz to 2022.2.1 [adam 2022-08-23]
