@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22146 2022/08/23 08:52:55 wiz Exp $
+$NetBSD: TODO,v 1.22147 2022/08/23 10:50:34 wiz Exp $
 
 Suggested new packages
 ======================
@@ -900,6 +900,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o kbool-2.1 [kbool_2_1, next to boolean-7.1]
 	o kcron-21.04.0
 	o kdenetwork-filesharing-20.12.3
+	o kdenlive-22.08
 	o kdesdk-kioslaves-20.08.0
 	o kdesdk-thumbnailers-20.08.0
 	o kdevelop-5.6
