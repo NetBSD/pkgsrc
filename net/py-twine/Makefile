@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2022/01/05 15:41:18 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2022/08/23 22:09:03 wiz Exp $
 
-DISTNAME=	twine-1.13.0
+DISTNAME=	twine-4.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/twine/}
 
@@ -16,11 +15,11 @@ DEPENDS+=	${PYPKGPREFIX}-readme_renderer>=21.0:../../textproc/py-readme_renderer
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.17:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-requests-toolbelt>=0.9.1:../../devel/py-requests-toolbelt
 DEPENDS+=	${PYPKGPREFIX}-tqdm>=4.14:../../misc/py-tqdm
+BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+BUILD_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
-PYTHON_VERSIONED_DEPENDENCIES+=	test:test
-PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-tqdm
-
-USE_PKG_RESOURCES=	yes
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=	# none
 
@@ -31,6 +30,5 @@ post-install:
 do-test:
 	cd ${WRKSRC} && pytest-${PYVERSSUFFIX} tests
 
-.include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
