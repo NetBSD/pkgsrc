@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3774 2022/08/22 10:06:27 wiz Exp $
+# $NetBSD: Makefile,v 1.3775 2022/08/23 21:21:17 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2649,6 +2649,7 @@ SUBDIR+=	py-pydantic
 SUBDIR+=	py-pydispatcher
 SUBDIR+=	py-pyelftools
 SUBDIR+=	py-pygit2
+SUBDIR+=	py-pyleri
 SUBDIR+=	py-pylint
 SUBDIR+=	py-pylint-plugin-utils
 SUBDIR+=	py-pylru
