@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:30:20 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/08/23 23:52:33 wen Exp $
 
-BLAKE2s (WWW-Mechanize-FormFiller-0.12.tar.gz) = 734647c7ab1089f25f697bf3bf9d4fc2c226d4231bb2a8b2e87551815e38d119
-SHA512 (WWW-Mechanize-FormFiller-0.12.tar.gz) = 87db40c49daf6955c8d42b4bd61f4cf4b1f08782ef48789d636ca81881bd000b46d52fb293792918e457aa46845e766d3685d4c3c6d14dd1875b629d6f9f0999
-Size (WWW-Mechanize-FormFiller-0.12.tar.gz) = 19930 bytes
+BLAKE2s (WWW-Mechanize-FormFiller-0.13.tar.gz) = 090e7a287964dd9d4738d920bea2c8cd8f976a1c0d9187e27217bbdee455a1c7
+SHA512 (WWW-Mechanize-FormFiller-0.13.tar.gz) = 9ddfb677dbd17da327980c349577593d5795044553b9c5966f70d095c8dc3439ae8991f082eab787f2cf45a45288ee719ac6a0a4d2e73caff0cf24abe3d0e5c0
+Size (WWW-Mechanize-FormFiller-0.13.tar.gz) = 19983 bytes
