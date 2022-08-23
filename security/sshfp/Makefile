@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2022/06/30 11:18:48 nia Exp $
+# $NetBSD: Makefile,v 1.21 2022/08/23 21:49:56 wiz Exp $
 
 DISTNAME=	sshfp-1.2.2
 PKGREVISION=	2
@@ -11,7 +11,7 @@ COMMENT=	Print ssh host key fingerprint resource records
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-argparse-[0-9]*:../../devel/py-argparse
-DEPENDS+=	${PYPKGPREFIX}-dns-[0-9]*:../../net/py-dns
+DEPENDS+=	${PYPKGPREFIX}-dns-[0-9]*:../../net/py-dns1
 DEPENDS+=	${PYPKGPREFIX}-ipcalc-[0-9]*:../../net/py-ipcalc
 
 NO_BUILD=		yes
