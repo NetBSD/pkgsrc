@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.82 2022/08/22 13:56:41 ast Exp $
+# $NetBSD: Makefile,v 1.83 2022/08/23 12:46:36 ast Exp $
 
 DISTNAME=	HandBrake-1.5.1-source
 PKGNAME=	${DISTNAME:tl:S/-source//}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=HandBrake/}
 EXTRACT_SUFX=	.tar.bz2
@@ -49,15 +49,11 @@ BUILD_DEPENDS+=		cmake-[0-9]*:../../devel/cmake
 BUILD_DEPENDS+=		nasm>=2.05.01:../../devel/nasm
 BUILD_DEPENDS+=		meson-[0-9]*:../../devel/meson
 
-.include "../../mk/compiler.mk"
+.include "../../mk/bsd.prefs.mk"
 
 .if !empty(PKGSRC_COMPILER:Mclang)
 CFLAGS+=	-fheinous-gnu-extensions
 .endif
-
-# libjpeg-turbo is also required to build Handbrake: buuilt and linked statically as not to conflict with jpeg for gtk
-JPEG_DEFAULT=	jpeg
-.include "../../mk/jpeg.buildlink3.mk"
 
 .include "options.mk"
 
@@ -67,34 +63,45 @@ GHB_LOCALES=	af co cs da de es eu fr he hr it ja ko nl no pl pt pt_BR ro ru si s
 post-build:
 	set -e; cd ${WRKSRC};							\
 	for po in ${GHB_LOCALES}; do						\
-		mo="../.destdir/usr/pkg/share/locale/$${po%%.po}/LC_MESSAGES";	\
-		${MKDIR} $${mo};						\
-		${TOOLS_DIR}/bin/msgfmt -v -c -o $${mo}/ghb.mo gtk/po/$${po};	\
+		mo="../.destdir/usr/pkg/share/locale/$${po%%.po}/LC_MESSAGES" ;	\
+		${MKDIR} $${mo} ; ${ECHO} -n "msgfmt $${po}:	" ;		\
+		${SED} -e '/^"Project-Id-Version:/ s/PACKAGE VERSION/ghb 0.1/'	\
+			gtk/po/$${po}.po | ${TOOLS_DIR}/bin/msgfmt -v -c -	\
+						-o $${mo}/ghb.mo ;		\
 	done
 
 .include "../../audio/lame/buildlink3.mk"
 .include "../../audio/libopus/buildlink3.mk"
 .include "../../audio/libsamplerate/buildlink3.mk"
-.include "../../audio/speex/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
+.include "../../audio/speex/buildlink3.mk"
+.include "../../converters/fribidi/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/gettext-tools/msgfmt-desktop.mk"
-.include "../../converters/fribidi/buildlink3.mk"
-.include "../../multimedia/gstreamer1/buildlink3.mk"
-.include "../../multimedia/x264-devel/buildlink3.mk"
-.include "../../multimedia/x265/buildlink3.mk"
+.include "../../fonts/fontconfig/buildlink3.mk"
+.include "../../fonts/harfbuzz/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
+.include "../../graphics/zimg/buildlink3.mk"
 .include "../../multimedia/dav1d/buildlink3.mk"
+.include "../../multimedia/ffmpeg4/buildlink3.mk"
+.include "../../multimedia/gstreamer1/buildlink3.mk"
 .include "../../multimedia/libass/buildlink3.mk"
-.include "../../multimedia/libtheora/buildlink3.mk"
-.include "../../multimedia/libvpx/buildlink3.mk"
+.include "../../multimedia/libbluray/buildlink3.mk"
 .include "../../multimedia/libdvdnav/buildlink3.mk"
 .include "../../multimedia/libdvdread/buildlink3.mk"
-.include "../../multimedia/libbluray/buildlink3.mk"
-.include "../../multimedia/ffmpeg4/buildlink3.mk"
-.include "../../graphics/zimg/buildlink3.mk"
-.include "../../graphics/freetype2/buildlink3.mk"
-.include "../../fonts/harfbuzz/buildlink3.mk"
-.include "../../fonts/fontconfig/buildlink3.mk"
-.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../multimedia/libtheora/buildlink3.mk"
+.include "../../multimedia/libvpx/buildlink3.mk"
+.include "../../multimedia/x264-devel/buildlink3.mk"
+.include "../../multimedia/x265/buildlink3.mk"
 .include "../../textproc/jansson/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+
+# Note that libjpeg-turbo is required by the Handbrake library libhb: when gtk3 is
+# enabled (as per default) it is built and linked statically in the build phase as
+# not to conflict with the "default" jpeg required by gtk3
+JPEG_DEFAULT=	jpeg
+.include "../../mk/jpeg.buildlink3.mk"
+
+.include "../../mk/compiler.mk"
+
 .include "../../mk/bsd.pkg.mk"
