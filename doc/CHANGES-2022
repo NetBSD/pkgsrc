@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4007 2022/08/23 14:16:01 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4008 2022/08/23 15:10:53 tpaul Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5875,3 +5875,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/hs-lens to 5.2 [wiz 2022-08-23]
 	Updated devel/hs-deferred-folds to 0.9.18.2 [wiz 2022-08-23]
 	Updated textproc/hs-pandoc-types to 1.22.2.1 [wiz 2022-08-23]
+	Updated devel/php-composer to 2.2.18 [tpaul 2022-08-23]
