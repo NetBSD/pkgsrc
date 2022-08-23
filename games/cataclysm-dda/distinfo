@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:43:49 nia Exp $
+$NetBSD: distinfo,v 1.9 2022/08/23 10:41:34 wiz Exp $
 
 BLAKE2s (cataclysm-dda-0.F.2.tar.gz) = f0cc948342759629afbf6b61d11be871cc7145e6e4c831728de1e436d7e97091
 SHA512 (cataclysm-dda-0.F.2.tar.gz) = 31425be7381815462aff48c08c89f02734bb3caff70e151b1b9fe0f5fd2e1a9ae5dbcfab6910dd2ea7788cbecd21db4f89757c07d5fb72538c531b64e6f9bde3
 Size (cataclysm-dda-0.F.2.tar.gz) = 88597127 bytes
 SHA1 (patch-Makefile) = cee0c0e1a6293b5beafe06fe2282d469bcd995a2
 SHA1 (patch-lang_compile__mo.sh) = 1a2e65a5f5a5b8c4f56ceb9ddc8e3383856fac57
+SHA1 (patch-src_sdl__font.cpp) = aa4b19ae074b44dcf3081722ed7f311b1a12d873
 SHA1 (patch-src_translations.cpp) = 90d55c1b526bcf44c8b0c902ac2c4df5c87ba68f
 SHA1 (patch-src_translations.h) = 106413eefeaff7b99661f781e2fb4002a3eace52
