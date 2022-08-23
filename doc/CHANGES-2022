@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4011 2022/08/23 21:47:20 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4012 2022/08/23 22:04:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5879,3 +5879,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/py-pyleri version 1.4.1 [wiz 2022-08-23]
 	Added devel/py-timeout-decorator version 0.5.0 [wiz 2022-08-23]
 	Added net/py-dns1 version 1.16.0nb2 [wiz 2022-08-23]
+	Updated net/py-dns to 2.2.1 [wiz 2022-08-23]
