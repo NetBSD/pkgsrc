@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/08/22 18:29:28 pin Exp $
+# $NetBSD: Makefile,v 1.2 2022/08/23 06:45:01 wiz Exp $
 
 DISTNAME=	oculante-0.5.47
 CATEGORIES=	graphics
@@ -8,6 +8,8 @@ MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/woelper/oculante/
 COMMENT=	Minimalistic crossplatform image viewer written in rust
 LICENSE=	mit
+
+BUILD_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 
 .include "cargo-depends.mk"
 
