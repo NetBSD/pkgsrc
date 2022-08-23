@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2022/01/09 11:58:15 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2022/08/23 21:49:56 wiz Exp $
 
 DISTNAME=	pyspf-2.0.14
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
@@ -11,8 +11,9 @@ HOMEPAGE=	https://github.com/sdgathman/pyspf
 COMMENT=	SPF (Sender Policy Framework) implemented in Python
 LICENSE=	python-software-foundation
 
-DEPENDS+=	${PYPKGPREFIX}-dns-[0-9]*:../../net/py-dns
 TEST_DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
+
+PYTHON_VERSIONED_DEPENDENCIES=	dns
 
 .include "../../lang/python/pyversion.mk"
 .if ${_PYTHON_VERSION} == 27
@@ -30,5 +31,6 @@ post-install:
 do-test:
 	cd ${WRKSRC}/test && ${PYTHONBIN} testspf.py
 
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
