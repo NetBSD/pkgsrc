@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4009 2022/08/23 21:21:28 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4010 2022/08/23 21:25:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5877,3 +5877,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/hs-pandoc-types to 1.22.2.1 [wiz 2022-08-23]
 	Updated devel/php-composer to 2.2.18 [tpaul 2022-08-23]
 	Added devel/py-pyleri version 1.4.1 [wiz 2022-08-23]
+	Added devel/py-timeout-decorator version 0.5.0 [wiz 2022-08-23]
