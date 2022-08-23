@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2022/08/20 08:08:12 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/08/23 10:59:52 wiz Exp $
 
-DISTNAME=	hslua-aeson-2.1.0
-PKGREVISION=	3
+DISTNAME=	hslua-aeson-2.2.1
 CATEGORIES=	converters
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
