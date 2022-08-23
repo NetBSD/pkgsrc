@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2020/05/21 07:40:28 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2022/08/23 08:52:38 wiz Exp $
 bin/lxvile
 bin/lxvile-fonts
 bin/uxvile
@@ -53,18 +53,19 @@ libexec/xvile/vile-mailcap-filt
 libexec/xvile/vile-make-filt
 libexec/xvile/vile-manfilt
 libexec/xvile/vile-mcrl-filt
+libexec/xvile/vile-md-filt
 libexec/xvile/vile-midl-filt
 libexec/xvile/vile-mms-filt
 libexec/xvile/vile-nmake-filt
 libexec/xvile/vile-nr-filt
 libexec/xvile/vile-pas-filt
 libexec/xvile/vile-perl-filt
-libexec/xvile/vile-perl6-filt
 libexec/xvile/vile-php-filt
 libexec/xvile/vile-pot-filt
 libexec/xvile/vile-ps-filt
 libexec/xvile/vile-ps1-filt
 libexec/xvile/vile-py-filt
+libexec/xvile/vile-raku-filt
 libexec/xvile/vile-rc-filt
 libexec/xvile/vile-rcs-filt
 libexec/xvile/vile-rexx-filt
@@ -170,6 +171,7 @@ share/xvile/mailcap.keywords
 share/xvile/make.keywords
 share/xvile/manpage.rc
 share/xvile/mcrl.keywords
+share/xvile/md.keywords
 share/xvile/midl.keywords
 share/xvile/modes.rc
 share/xvile/mvn.keywords
@@ -204,7 +206,6 @@ share/xvile/perl/search.pm
 share/xvile/perl/shell.pm
 share/xvile/perl/spell.pm
 share/xvile/perl/winops.pm
-share/xvile/perl6.keywords
 share/xvile/php.keywords
 share/xvile/pictmode.rc
 share/xvile/pixmaps/vile.xpm
@@ -213,6 +214,7 @@ share/xvile/prolog.keywords
 share/xvile/ps.keywords
 share/xvile/ps1.keywords
 share/xvile/py.keywords
+share/xvile/raku.keywords
 share/xvile/rb.keywords
 share/xvile/rc.keywords
 share/xvile/rcs.keywords
