@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22148 2022/08/23 12:16:35 wiz Exp $
+$NetBSD: TODO,v 1.22149 2022/08/23 17:55:40 wiz Exp $
 
 Suggested new packages
 ======================
@@ -570,6 +570,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o cyrus-imapd-3.4.3
 	o dap-3.10
 	o dar-2.4.14
+	o darcs-2.16.5
 	o darktable-4.0
 	o dateutils-0.4.8
 	o dcc-2.3.167
