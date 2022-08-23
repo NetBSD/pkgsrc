@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/08/23 21:25:03 wiz Exp $
+
+BLAKE2s (timeout-decorator-0.5.0.tar.gz) = 225ac608b998c2d59f54c4fc02c28b8a2bb09bc7a2e977993c19bf44cc84066e
+SHA512 (timeout-decorator-0.5.0.tar.gz) = ee6d47a27ad3ed7921bc5b98391c4f933e247dc3834c9571248bf2a3b0237acaad88daa8b071eb8d443f74c792318b5be5bb9fad99fa99df682198f90cd86b1b
+Size (timeout-decorator-0.5.0.tar.gz) = 4754 bytes
