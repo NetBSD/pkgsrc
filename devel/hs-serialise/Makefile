@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2022/08/20 08:08:18 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/08/23 10:50:25 wiz Exp $
 
-DISTNAME=	serialise-0.2.4.0
-PKGREVISION=	2
+DISTNAME=	serialise-0.2.5.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
