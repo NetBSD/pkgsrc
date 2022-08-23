@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2022/04/26 12:36:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2022/08/23 09:35:22 adam Exp $
 bin/sanic-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -21,6 +21,9 @@ ${PYSITELIB}/sanic/app.pyo
 ${PYSITELIB}/sanic/application/__init__.py
 ${PYSITELIB}/sanic/application/__init__.pyc
 ${PYSITELIB}/sanic/application/__init__.pyo
+${PYSITELIB}/sanic/application/constants.py
+${PYSITELIB}/sanic/application/constants.pyc
+${PYSITELIB}/sanic/application/constants.pyo
 ${PYSITELIB}/sanic/application/ext.py
 ${PYSITELIB}/sanic/application/ext.pyc
 ${PYSITELIB}/sanic/application/ext.pyo
@@ -30,6 +33,9 @@ ${PYSITELIB}/sanic/application/logo.pyo
 ${PYSITELIB}/sanic/application/motd.py
 ${PYSITELIB}/sanic/application/motd.pyc
 ${PYSITELIB}/sanic/application/motd.pyo
+${PYSITELIB}/sanic/application/spinner.py
+${PYSITELIB}/sanic/application/spinner.pyc
+${PYSITELIB}/sanic/application/spinner.pyo
 ${PYSITELIB}/sanic/application/state.py
 ${PYSITELIB}/sanic/application/state.pyc
 ${PYSITELIB}/sanic/application/state.pyo
@@ -87,9 +93,30 @@ ${PYSITELIB}/sanic/headers.pyo
 ${PYSITELIB}/sanic/helpers.py
 ${PYSITELIB}/sanic/helpers.pyc
 ${PYSITELIB}/sanic/helpers.pyo
-${PYSITELIB}/sanic/http.py
-${PYSITELIB}/sanic/http.pyc
-${PYSITELIB}/sanic/http.pyo
+${PYSITELIB}/sanic/http/__init__.py
+${PYSITELIB}/sanic/http/__init__.pyc
+${PYSITELIB}/sanic/http/__init__.pyo
+${PYSITELIB}/sanic/http/constants.py
+${PYSITELIB}/sanic/http/constants.pyc
+${PYSITELIB}/sanic/http/constants.pyo
+${PYSITELIB}/sanic/http/http1.py
+${PYSITELIB}/sanic/http/http1.pyc
+${PYSITELIB}/sanic/http/http1.pyo
+${PYSITELIB}/sanic/http/http3.py
+${PYSITELIB}/sanic/http/http3.pyc
+${PYSITELIB}/sanic/http/http3.pyo
+${PYSITELIB}/sanic/http/stream.py
+${PYSITELIB}/sanic/http/stream.pyc
+${PYSITELIB}/sanic/http/stream.pyo
+${PYSITELIB}/sanic/http/tls/__init__.py
+${PYSITELIB}/sanic/http/tls/__init__.pyc
+${PYSITELIB}/sanic/http/tls/__init__.pyo
+${PYSITELIB}/sanic/http/tls/context.py
+${PYSITELIB}/sanic/http/tls/context.pyc
+${PYSITELIB}/sanic/http/tls/context.pyo
+${PYSITELIB}/sanic/http/tls/creators.py
+${PYSITELIB}/sanic/http/tls/creators.pyc
+${PYSITELIB}/sanic/http/tls/creators.pyo
 ${PYSITELIB}/sanic/log.py
 ${PYSITELIB}/sanic/log.pyc
 ${PYSITELIB}/sanic/log.pyo
@@ -196,9 +223,6 @@ ${PYSITELIB}/sanic/signals.pyo
 ${PYSITELIB}/sanic/simple.py
 ${PYSITELIB}/sanic/simple.pyc
 ${PYSITELIB}/sanic/simple.pyo
-${PYSITELIB}/sanic/tls.py
-${PYSITELIB}/sanic/tls.pyc
-${PYSITELIB}/sanic/tls.pyo
 ${PYSITELIB}/sanic/touchup/__init__.py
 ${PYSITELIB}/sanic/touchup/__init__.pyc
 ${PYSITELIB}/sanic/touchup/__init__.pyo
@@ -208,6 +232,9 @@ ${PYSITELIB}/sanic/touchup/meta.pyo
 ${PYSITELIB}/sanic/touchup/schemes/__init__.py
 ${PYSITELIB}/sanic/touchup/schemes/__init__.pyc
 ${PYSITELIB}/sanic/touchup/schemes/__init__.pyo
+${PYSITELIB}/sanic/touchup/schemes/altsvc.py
+${PYSITELIB}/sanic/touchup/schemes/altsvc.pyc
+${PYSITELIB}/sanic/touchup/schemes/altsvc.pyo
 ${PYSITELIB}/sanic/touchup/schemes/base.py
 ${PYSITELIB}/sanic/touchup/schemes/base.pyc
 ${PYSITELIB}/sanic/touchup/schemes/base.pyo
