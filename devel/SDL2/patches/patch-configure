@@ -1,0 +1,64 @@
+$NetBSD: patch-configure,v 1.10 2022/08/24 13:09:34 ryoon Exp $
+
+* Found iconv function in libc. Fix Libs.private=-liconv in sdl2.pc.
+
+--- configure.orig	2022-08-23 14:36:41.507122435 +0000
++++ configure
+@@ -20006,7 +20006,48 @@ then :
+ fi
+ 
+ 
+-    { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for iconv_open in -liconv" >&5
++    { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for iconv_open in -lc" >&5
++printf %s "checking for iconv_open in -lc... " >&6; }
++if test ${ac_cv_lib_c_iconv_open+y}
++then :
++  printf %s "(cached) " >&6
++else $as_nop
++  ac_check_lib_save_LIBS=$LIBS
++LIBS="-lc  $LIBS"
++cat confdefs.h - <<_ACEOF >conftest.$ac_ext
++/* end confdefs.h.  */
++
++/* Override any GCC internal prototype to avoid an error.
++   Use char because int might match the return type of a GCC
++   builtin and then its argument prototype would still apply.  */
++char iconv_open ();
++int
++main (void)
++{
++return iconv_open ();
++  ;
++  return 0;
++}
++_ACEOF
++if ac_fn_c_try_link "$LINENO"
++then :
++  ac_cv_lib_c_iconv_open=yes
++else $as_nop
++  ac_cv_lib_c_iconv_open=no
++fi
++rm -f core conftest.err conftest.$ac_objext conftest.beam \
++    conftest$ac_exeext conftest.$ac_ext
++LIBS=$ac_check_lib_save_LIBS
++fi
++{ printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_c_iconv_open" >&5
++printf "%s\n" "$ac_cv_lib_c_iconv_open" >&6; }
++if test "x$ac_cv_lib_c_iconv_open" = xyes
++then :
++  found_libc_iconv=yes
++fi
++
++    if test x$found_libc_iconv != xyes; then
++      { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for iconv_open in -liconv" >&5
+ printf %s "checking for iconv_open in -liconv... " >&6; }
+ if test ${ac_cv_lib_iconv_iconv_open+y}
+ then :
+@@ -20046,6 +20087,7 @@ then :
+   LIBS="$LIBS -liconv"; EXTRA_LDFLAGS="$EXTRA_LDFLAGS -liconv"
+ fi
+ 
++    fi
+     ac_fn_c_check_func "$LINENO" "iconv" "ac_cv_func_iconv"
+ if test "x$ac_cv_func_iconv" = xyes
+ then :
