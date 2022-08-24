@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/01/04 20:52:45 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2022/08/24 09:50:58 wiz Exp $
 
 DISTNAME=	sqlsoup-0.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,6 +13,8 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=0.7.0:../../databases/py-sqlalchemy
 TEST_DEPENDS+=	${PYPKGPREFIX}-nose>=0.11:../../devel/py-nose
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=	# none
 
