@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/08/24 09:30:17 wiz Exp $
+
+BLAKE2s (fields-5.0.0.tar.gz) = 6a454fda6ccf9b5c5331583f8ee975e7cf8654e7731f7bf7288fe5587b207d5a
+SHA512 (fields-5.0.0.tar.gz) = 3d80b9c6a1d0a43568045fc25422b0db783c84e2e3f2be8b1d41b0150f48fef58736d863d06b4562b29190cd6dc2616829faab8e901b7268ac2e9e63e996180e
+Size (fields-5.0.0.tar.gz) = 36232 bytes
