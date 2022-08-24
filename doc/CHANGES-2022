@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4046 2022/08/24 14:15:23 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4047 2022/08/24 14:40:20 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5916,3 +5916,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added mail/py-mailsuite version 1.9.5 [wiz 2022-08-24]
 	Updated converters/libmwaw to 0.3.21 [ryoon 2022-08-24]
 	Updated devel/ruby-multi_test to 1.1.0 [taca 2022-08-24]
+	Updated lang/llvm to 14.0.6nb1 [ryoon 2022-08-24]
