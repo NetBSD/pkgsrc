@@ -1,0 +1,3 @@
+Cross Platform Fixed Point Maths Library
+
+Libfixmath implements Q16.16 format fixed point operations in C.
