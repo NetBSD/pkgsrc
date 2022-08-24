@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4017 2022/08/24 05:18:37 pin Exp $
+$NetBSD: CHANGES-2022,v 1.4018 2022/08/24 05:20:40 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5885,3 +5885,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/p5-WWW-Mechanize to 6.15 [wen 2022-08-23]
 	Updated www/p5-WWW-Mechanize-FormFiller to 0.13 [wen 2022-08-23]
 	Updated sysutils/dust to 0.8.2 [pin 2022-08-24]
+	Updated graphics/oculante to 0.5.47nb1 [pin 2022-08-24]
