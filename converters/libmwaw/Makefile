@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2022/01/10 01:46:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.32 2022/08/24 14:02:28 ryoon Exp $
 
-DISTNAME=	libmwaw-0.3.18
-PKGREVISION=	2
+DISTNAME=	libmwaw-0.3.21
 CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libmwaw/}
 EXTRACT_SUFX=	.tar.xz
