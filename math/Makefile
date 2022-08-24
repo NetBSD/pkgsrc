@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.548 2022/08/24 12:51:10 ryoon Exp $
+# $NetBSD: Makefile,v 1.549 2022/08/24 12:56:07 ryoon Exp $
 
 COMMENT=	Mathematics
 
@@ -168,6 +168,7 @@ SUBDIR+=	dieharder
 SUBDIR+=	djbfft
 SUBDIR+=	djbsort
 SUBDIR+=	double-conversion
+SUBDIR+=	dragonbox
 SUBDIR+=	eigen2
 SUBDIR+=	eigen3
 SUBDIR+=	eispack
