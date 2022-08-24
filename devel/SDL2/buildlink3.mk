@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2022/08/11 05:08:07 gutteridge Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2022/08/24 13:09:34 ryoon Exp $
 
 BUILDLINK_TREE+=	SDL2
 
@@ -19,6 +19,10 @@ pkgbase := SDL2
 
 .if ${PKG_BUILD_OPTIONS.SDL2:Mjack}
 .include "../../audio/jack/buildlink3.mk"
+.endif
+
+.if ${PKG_BUILD_OPTIONS.SDL2:Mpulseaudio}
+.include "../../audio/pulseaudio/buildlink3.mk"
 .endif
 
 .if ${PKG_BUILD_OPTIONS.SDL2:Mnas}
