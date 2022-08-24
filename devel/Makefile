@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3779 2022/08/24 09:29:15 wiz Exp $
+# $NetBSD: Makefile,v 1.3780 2022/08/24 09:30:30 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2447,6 +2447,7 @@ SUBDIR+=	py-falcon
 SUBDIR+=	py-fann2
 SUBDIR+=	py-fasteners
 SUBDIR+=	py-fastimport
+SUBDIR+=	py-fields
 SUBDIR+=	py-filebytes
 SUBDIR+=	py-filechunkio
 SUBDIR+=	py-filelock
