@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2022/08/24 12:53:24 ryoon Exp $
+include/${PKGNAME}/dragonbox/dragonbox.h
+include/${PKGNAME}/dragonbox/dragonbox_to_chars.h
+lib/cmake/${PKGNAME}/dragonboxConfig.cmake
+lib/cmake/${PKGNAME}/dragonboxConfigVersion.cmake
+lib/cmake/${PKGNAME}/dragonboxTargets-noconfig.cmake
+lib/cmake/${PKGNAME}/dragonboxTargets.cmake
+lib/libdragonbox_to_chars.so
