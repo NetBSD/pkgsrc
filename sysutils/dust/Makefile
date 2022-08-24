@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2022/08/01 08:07:13 pin Exp $
+# $NetBSD: Makefile,v 1.10 2022/08/24 05:18:15 pin Exp $
 
-DISTNAME=	dust-0.8.1
+DISTNAME=	dust-0.8.2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bootandy/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
