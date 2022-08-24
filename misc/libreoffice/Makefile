@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.290 2022/08/22 20:31:56 tnn Exp $
+# $NetBSD: Makefile,v 1.291 2022/08/24 12:57:35 ryoon Exp $
 
 VERREL=		7.4.0
 VERRC=		3
@@ -412,9 +412,8 @@ BUILDLINK_API_DEPENDS.libetonyek+=	libetonyek>=0.1.2
 BUILDLINK_INCDIRS.${PYPKGPREFIX:S/py/python/}=	# empty
 .include "../../lang/python/tool.mk"
 .include "../../math/coinmp/buildlink3.mk"
-BROKEN="missing math/dragonbox, ..."
-#.include "../../math/dragonbox/buildlink3.mk"
-#.include "../../math/libfixmath/buildlink3.mk"
+.include "../../math/dragonbox/buildlink3.mk"
+.include "../../math/libfixmath/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libnumbertext+=	libnumbertext>=1.0.6
 .include "../../math/libnumbertext/buildlink3.mk"
 .include "../../math/lp_solve/buildlink3.mk"
