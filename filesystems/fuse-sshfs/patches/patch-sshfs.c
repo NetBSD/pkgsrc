@@ -1,10 +1,10 @@
-$NetBSD: patch-sshfs.c,v 1.2 2022/01/22 18:48:04 pho Exp $
+$NetBSD: patch-sshfs.c,v 1.3 2022/08/24 22:26:33 wiz Exp $
 
 Impedance adjustment with librefuse which used to provide an old API
 incompatible with FUSE 3.1. This patch can go away when NetBSD 9
 reaches its EOL.
 
---- sshfs.c.orig	2021-06-08 08:52:08.000000000 +0000
+--- sshfs.c.orig	2022-05-26 13:23:35.000000000 +0000
 +++ sshfs.c
 @@ -980,7 +980,11 @@ static int buf_get_entries(struct buffer
  				    S_ISLNK(stbuf.st_mode)) {
@@ -41,7 +41,7 @@ reaches its EOL.
                          struct fuse_config *cfg)
  {
 @@ -1909,6 +1928,7 @@ static void *sshfs_init(struct fuse_conn
- 	
+ 
  	return NULL;
  }
 +#endif
@@ -148,7 +148,7 @@ reaches its EOL.
  			return -EIO;
  	}
 +#endif
- 	
+ 
  	if (sshfs.remote_uid_detected) {
  		if (uid == sshfs.local_uid)
 @@ -2650,8 +2694,12 @@ static int sshfs_chown(const char *path,
@@ -223,7 +223,7 @@ reaches its EOL.
 +#else
  		return sshfs_truncate_workaround(path, size, fi);
 +#endif
- 	
+ 
  	buf_init(&buf, 0);
  
 @@ -3372,19 +3435,37 @@ static int sshfs_truncate(const char *pa
