@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/08/24 09:28:57 wiz Exp $
+
+BLAKE2s (xdist-0.0.2.tar.gz) = 3eaf92140c08d51a110de327ebb374920c251561fd2e3bb5c07a1e7041e32b29
+SHA512 (xdist-0.0.2.tar.gz) = db87d1a4c39e1de07623507d0dcbd095976649d11d7ab6fc86e6785c22fad85fa12e6d4c39c94562fd486d9996ca260561a1cb76fc7c8c7c6ef558d2ce42003e
+Size (xdist-0.0.2.tar.gz) = 14183 bytes
