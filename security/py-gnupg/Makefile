@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2022/05/23 01:02:26 gutteridge Exp $
+# $NetBSD: Makefile,v 1.33 2022/08/24 07:02:07 adam Exp $
 
-DISTNAME=	python-gnupg-0.4.9
+DISTNAME=	python-gnupg-0.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^python-//}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-gnupg/}
