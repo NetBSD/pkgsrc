@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2022/08/22 18:29:28 pin Exp $
+$NetBSD: distinfo,v 1.2 2022/08/24 05:20:19 pin Exp $
 
 BLAKE2s (ab_glyph-0.2.16.crate) = bed0ba08196fcb3f64003e2c8e4171efe9673c92f2aa3349a97f3de3fb81da7b
 SHA512 (ab_glyph-0.2.16.crate) = 8b57a351108c71d4fff0701589d7112b1ef582c56afe3bca7ed144255d3aa02704a1ef9e44ab729db07d22b589b4d4ad30f5a90d1a848a2d0dba895fbab4ffd4
@@ -1197,4 +1197,4 @@ Size (xmlparser-0.13.3.crate) = 25732 bytes
 BLAKE2s (xmlwriter-0.1.0.crate) = 3b1f6def954abf771cd4d95c93c386f8ac1bdb790c75b35a2839a1eb0d59c1d7
 SHA512 (xmlwriter-0.1.0.crate) = a0d8bfe6e3d220358e8523212cddb84541e9d8208b2aea64a89037e4e9f4de62a7b549c9f1bacbd71e14de16707f061e547d89ba459843be45fa802db297fd58
 Size (xmlwriter-0.1.0.crate) = 6261 bytes
-SHA1 (patch-src_main.rs) = fd1502126bb46b7ea46d51664db43fbbad12e882
+SHA1 (patch-src_main.rs) = 04117cf3e1a7fa623a45c4ad78abc17cc25c040c
