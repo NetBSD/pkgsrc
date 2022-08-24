@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.117 2022/08/24 11:08:05 wiz Exp $
+# $NetBSD: Makefile,v 1.118 2022/08/24 12:54:35 wiz Exp $
 #
 
 COMMENT=	Software for geographical-related uses
@@ -89,6 +89,7 @@ SUBDIR+=	proj
 SUBDIR+=	proj-doc
 SUBDIR+=	py-country
 SUBDIR+=	py-gdal
+SUBDIR+=	py-geoip2
 SUBDIR+=	py-geojson
 SUBDIR+=	py-googlemaps
 SUBDIR+=	py-maxminddb
