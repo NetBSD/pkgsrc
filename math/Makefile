@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.547 2022/07/08 19:47:59 thor Exp $
+# $NetBSD: Makefile,v 1.548 2022/08/24 12:51:10 ryoon Exp $
 
 COMMENT=	Mathematics
 
@@ -252,6 +252,7 @@ SUBDIR+=	lapack64
 SUBDIR+=	lapacke
 SUBDIR+=	lapacke64
 SUBDIR+=	libffm
+SUBDIR+=	libfixmath
 SUBDIR+=	libint
 SUBDIR+=	libixion
 SUBDIR+=	liblbfgs
