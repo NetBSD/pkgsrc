@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.8 2022/07/22 16:06:34 wiz Exp $
+# $NetBSD: builtin.mk,v 1.9 2022/08/24 06:58:13 adam Exp $
 
 BUILTIN_PKG:=	xz
 
@@ -25,8 +25,7 @@ MAKEVARS+=	IS_BUILTIN.xz
 ### If there is a built-in implementation, then set BUILTIN_PKG.<pkg> to
 ### a package name to represent the built-in package.
 ###
-.if !defined(BUILTIN_PKG.xz) && \
-    !empty(IS_BUILTIN.xz:M[yY][eE][sS])
+.if !defined(BUILTIN_PKG.xz) && ${IS_BUILTIN.xz:M[yY][eE][sS]}
 BUILTIN_VERSION.xz!=							\
 	${AWK} 'BEGIN { M = "0" }					\
 		/\#define[ 	]+LZMA_VERSION_MAJOR/ { M = $$3 }	\
@@ -53,13 +52,12 @@ MAKEVARS+=	BUILTIN_PKG.xz
 USE_BUILTIN.xz=	no
 .  else
 USE_BUILTIN.xz=	${IS_BUILTIN.xz}
-.    if defined(BUILTIN_PKG.xz) && \
-        !empty(IS_BUILTIN.xz:M[yY][eE][sS])
+.    if defined(BUILTIN_PKG.xz) && ${IS_BUILTIN.xz:M[yY][eE][sS]}
 USE_BUILTIN.xz=	yes
 .      for _dep_ in ${BUILDLINK_API_DEPENDS.xz}
-.        if !empty(USE_BUILTIN.xz:M[yY][eE][sS])
+.        if ${USE_BUILTIN.xz:M[yY][eE][sS]}
 USE_BUILTIN.xz!=							\
-	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.xz:Q}; then	\
+	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.xz}; then	\
 		${ECHO} yes;						\
 	else								\
 		${ECHO} no;						\
@@ -81,7 +79,7 @@ MAKEVARS+=	USE_BUILTIN.xz
 # implementation.
 #
 .if defined(USE_XZ)
-.  if !empty(IS_BUILTIN.xz:M[nN][oO])
+.  if ${IS_BUILTIN.xz:M[nN][oO]}
 USE_BUILTIN.xz=	no
 .  endif
 .endif
@@ -92,15 +90,15 @@ USE_BUILTIN.xz=	no
 ###
 
 CHECK_BUILTIN.xz?=	no
-.if !empty(CHECK_BUILTIN.xz:M[nN][oO])
+.if ${CHECK_BUILTIN.xz:M[nN][oO]}
 
-.  if !empty(USE_BUILTIN.xz:M[yY][eE][sS])
+.  if ${USE_BUILTIN.xz:M[yY][eE][sS]}
 BUILDLINK_FILES.xz+=	lib/pkgconfig/liblzma.pc
 .  endif
 
 # Fake pkg-config for builtin xz on NetBSD
 
-.  if !empty(USE_BUILTIN.xz:M[yY][eE][sS])
+.  if ${USE_BUILTIN.xz:M[yY][eE][sS]}
 .    if !empty(USE_TOOLS:C/:.*//:Mpkg-config)
 do-configure-pre-hook: override-liblzma-pkgconfig
 
@@ -114,7 +112,7 @@ override-message-liblzma-pkgconfig:
 override-liblzma-pkgconfig:
 	${RUN}								\
 	dst=${BLKDIR_PKGCFG}/${LIBLZMA_PKGCFGF};			\
-	src=${BUILDLINK_PREFIX.xz:Q}/lib${LIBABISUFFIX}/pkgconfig/liblzma.pc; \
+	src=${BUILDLINK_PREFIX.xz}/lib${LIBABISUFFIX}/pkgconfig/liblzma.pc; \
 	if [ ! -f $${dst} ]; then					\
 		if [ -f $${src} ]; then					\
 			${ECHO_BUILDLINK_MSG} "Symlinking $${src}";	\
