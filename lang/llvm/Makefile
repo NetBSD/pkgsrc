@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2022/08/14 12:13:03 tnn Exp $
+# $NetBSD: Makefile,v 1.78 2022/08/24 14:38:56 ryoon Exp $
 #
 # When updating this, please also update:
 # devel/include-what-you-use
@@ -27,6 +27,7 @@
 
 DISTNAME=	llvm-${LLVM_VERSION}.src
 PKGNAME=	${DISTNAME:S/.src//}
+PKGREVISION=	1
 CATEGORIES=	lang devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -100,6 +101,13 @@ SOEXT=		so
 PLIST.notdylib=	yes
 .endif
 PLIST_SUBST+=	SOEXT=${SOEXT}
+PLIST_SUBST+=	LLVM_MAJOR_VERSION=${LLVM_MAJOR_VERSION}
+
+NOTDYLIBS=	LTO Remarks
+.for libname in ${NOTDYLIBS}
+PRINT_PLIST_AWK+=	/lib${libname}.${SOEXT}.${LLVM_MAJOR_VERSION}/ { gsub(/\.${SOEXT}\.${LLVM_MAJOR_VERSION}/, ".$${SOEXT}.$${LLVM_MAJOR_VERSION}"); print "$${PLIST.notdylib}" $$0; next }
+.endfor
+PRINT_PLIST_AWK+=	{ gsub(/\.${SOEXT}/, ".$${SOEXT}") }
 
 # needs std::atomic with 64-bit CAS
 .if ${MACHINE_ARCH} == "i386"
