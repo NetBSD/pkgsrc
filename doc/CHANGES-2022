@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4019 2022/08/24 07:02:24 adam Exp $
+$NetBSD: CHANGES-2022,v 1.4020 2022/08/24 08:35:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5888,3 +5888,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/oculante to 0.5.47nb1 [pin 2022-08-24]
 	Updated archivers/xz to 5.2.6 [adam 2022-08-24]
 	Updated security/py-gnupg to 0.5.0 [adam 2022-08-24]
+	Added devel/py27-test-cov version 2.12.1nb1 [wiz 2022-08-24]
