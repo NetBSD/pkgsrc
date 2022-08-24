@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2022/07/25 11:12:25 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2022/08/24 12:45:42 ryoon Exp $
 
-DISTNAME=	zxing-cpp-1.3.0
+DISTNAME=	zxing-cpp-1.4.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nu-book/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -18,5 +18,10 @@ CMAKE_ARGS+=	-DBUILD_EXAMPLES=OFF
 CMAKE_ARGS+=	-DBUILD_BLACKBOX_TESTS=OFF
 
 PKGCONFIG_OVERRIDE+=	zxing.pc.in
+
+# Install private header file to fix build failure of misc/libreoffice-7.3.4.2.
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/core/src/BitArray.h \
+		${DESTDIR}${PREFIX}/include/ZXing
 
 .include "../../mk/bsd.pkg.mk"
