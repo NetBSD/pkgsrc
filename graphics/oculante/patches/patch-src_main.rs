@@ -1,4 +1,4 @@
-$NetBSD: patch-src_main.rs,v 1.1 2022/08/22 18:29:28 pin Exp $
+$NetBSD: patch-src_main.rs,v 1.2 2022/08/24 05:20:19 pin Exp $
 
 Allow lazy_loop on NetBSD to reduce CPU load
 
@@ -10,7 +10,7 @@ Allow lazy_loop on NetBSD to reduce CPU load
  
 +    #[cfg(target_os = "netbsd")]
 +    {
-+        window_config = window_config.lazy_loop();
++        window_config = window_config.lazy_loop().vsync();
 +    }
 +
      #[cfg(target_os = "macos")]
