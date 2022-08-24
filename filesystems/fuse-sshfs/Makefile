@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2022/01/22 18:48:04 pho Exp $
-#
+# $NetBSD: Makefile,v 1.8 2022/08/24 22:26:32 wiz Exp $
 
-DISTNAME=	sshfs-3.7.2
+DISTNAME=	sshfs-3.7.3
 PKGNAME=	fuse-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	filesystems
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libfuse/}
 GITHUB_PROJECT=	sshfs
