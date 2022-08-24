@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2022/08/24 12:53:24 ryoon Exp $
+
+BLAKE2s (dragonbox-1.1.3.tar.gz) = 8224ccc7037b6f08a5c9fd57d4f46f59b4c97c5ee36e5fd7346532f3157d464e
+SHA512 (dragonbox-1.1.3.tar.gz) = 41ac356ebced3312c0f9ea0f07ff372337ab78af69071f63f63dc12bd2b0088d5d89aae3792276599dd0393bfdfd2b979946c43d36042e43105080bcdcbe089d
+Size (dragonbox-1.1.3.tar.gz) = 4337233 bytes
+SHA1 (patch-CMakeLists.txt) = dd1b4588f79789dead14b2b06af52e9f0fb9a2cd

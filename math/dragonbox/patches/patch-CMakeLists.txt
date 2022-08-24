@@ -1,0 +1,15 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2022/08/24 12:53:24 ryoon Exp $
+
+* Honor BUILD_SHARED_LIBS.
+
+--- CMakeLists.txt.orig	2022-06-17 23:48:12.000000000 +0000
++++ CMakeLists.txt
+@@ -39,7 +39,7 @@ set(dragonbox_to_chars_headers
+ 
+ set(dragonbox_to_chars_sources source/dragonbox_to_chars.cpp)
+ 
+-add_library(dragonbox_to_chars STATIC
++add_library(dragonbox_to_chars
+         ${dragonbox_to_chars_headers}
+         ${dragonbox_to_chars_sources})
+ add_library(dragonbox::dragonbox_to_chars ALIAS dragonbox_to_chars)
