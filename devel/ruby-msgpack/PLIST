@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2022/02/12 12:33:36 taca Exp $
+@comment $NetBSD: PLIST,v 1.14 2022/08/24 13:26:52 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/msgpack/msgpack.${RUBY_DLEXT}
@@ -11,16 +11,7 @@ ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/appveyor.yml
-${GEM_LIBDIR}/bench/pack.rb
-${GEM_LIBDIR}/bench/pack_log.rb
-${GEM_LIBDIR}/bench/pack_log_long.rb
-${GEM_LIBDIR}/bench/pack_symbols.rb
-${GEM_LIBDIR}/bench/run.sh
-${GEM_LIBDIR}/bench/run_long.sh
-${GEM_LIBDIR}/bench/run_symbols.sh
-${GEM_LIBDIR}/bench/unpack.rb
-${GEM_LIBDIR}/bench/unpack_log.rb
-${GEM_LIBDIR}/bench/unpack_log_long.rb
+${GEM_LIBDIR}/bench/bench.rb
 ${GEM_LIBDIR}/doclib/msgpack.rb
 ${GEM_LIBDIR}/doclib/msgpack/buffer.rb
 ${GEM_LIBDIR}/doclib/msgpack/core_ext.rb
@@ -70,6 +61,7 @@ ${GEM_LIBDIR}/ext/msgpack/unpacker_class.h
 ${GEM_LIBDIR}/ext/msgpack/unpacker_ext_registry.c
 ${GEM_LIBDIR}/ext/msgpack/unpacker_ext_registry.h
 ${GEM_LIBDIR}/lib/msgpack.rb
+${GEM_LIBDIR}/lib/msgpack/bigint.rb
 ${GEM_LIBDIR}/lib/msgpack/core_ext.rb
 ${GEM_LIBDIR}/lib/msgpack/factory.rb
 ${GEM_LIBDIR}/lib/msgpack/msgpack.${RUBY_DLEXT}
@@ -81,6 +73,7 @@ ${GEM_LIBDIR}/lib/msgpack/unpacker.rb
 ${GEM_LIBDIR}/lib/msgpack/version.rb
 ${GEM_LIBDIR}/msgpack.gemspec
 ${GEM_LIBDIR}/msgpack.org.md
+${GEM_LIBDIR}/spec/bigint_spec.rb
 ${GEM_LIBDIR}/spec/cases.json
 ${GEM_LIBDIR}/spec/cases.msg
 ${GEM_LIBDIR}/spec/cases_compact.msg
@@ -106,4 +99,3 @@ ${GEM_LIBDIR}/spec/timestamp_spec.rb
 ${GEM_LIBDIR}/spec/unpack_spec.rb
 ${GEM_LIBDIR}/spec/unpacker_spec.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
-
