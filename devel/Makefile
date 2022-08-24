@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3780 2022/08/24 09:30:30 wiz Exp $
+# $NetBSD: Makefile,v 1.3781 2022/08/24 09:31:53 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2636,6 +2636,7 @@ SUBDIR+=	py-pooch
 SUBDIR+=	py-pqueue
 SUBDIR+=	py-prefixspan
 SUBDIR+=	py-pretend
+SUBDIR+=	py-process-tests
 SUBDIR+=	py-progress
 SUBDIR+=	py-progressbar2
 SUBDIR+=	py-prompt_toolkit
