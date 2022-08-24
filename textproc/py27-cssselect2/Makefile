@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/06/30 11:18:54 nia Exp $
+# $NetBSD: Makefile,v 1.5 2022/08/24 08:41:09 wiz Exp $
 
 DISTNAME=	cssselect2-0.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,7 +14,7 @@ LICENSE=	modified-bsd
 PYTHON_VERSIONS_ACCEPTED=	27
 
 DEPENDS+=	${PYPKGPREFIX}-tinycss2-[0-9]*:../../textproc/py27-tinycss2
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py27-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-flake8-[0-9]*:../../devel/py-test-flake8
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-isort-[0-9]*:../../devel/py-test-isort
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
