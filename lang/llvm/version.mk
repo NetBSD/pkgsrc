@@ -1,4 +1,4 @@
-# $NetBSD: version.mk,v 1.9 2022/08/12 08:37:58 pin Exp $
+# $NetBSD: version.mk,v 1.10 2022/08/24 14:38:56 ryoon Exp $
 # used by devel/lld
 # used by devel/lldb
 # used by devel/polly
@@ -17,3 +17,5 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=llvm/}
 GITHUB_PROJECT=	llvm-project
 GITHUB_RELEASE=	llvmorg-${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.xz
+
+LLVM_MAJOR_VERSION=	${LLVM_VERSION:tu:C/\\.[[:digit:]\.]*//}
