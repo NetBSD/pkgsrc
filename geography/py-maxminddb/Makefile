@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/08/24 11:07:22 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2022/08/24 11:09:33 wiz Exp $
 
 DISTNAME=	maxminddb-2.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,6 +11,8 @@ COMMENT=	Reader for the MaxMind DB format
 LICENSE=	apache-2.0
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../geography/libmaxminddb/buildlink3.mk"
 .include "../../lang/python/egg.mk"
