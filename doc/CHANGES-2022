@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4030 2022/08/24 10:17:30 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4031 2022/08/24 10:18:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5900,3 +5900,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-test-cov to 3.0.0 [wiz 2022-08-24]
 	Added devel/py-coveralls version 3.3.1 [wiz 2022-08-24]
 	Added devel/py-expiringdict version 1.2.2 [wiz 2022-08-24]
+	Added mail/py-checkdmarc version 4.4.1 [wiz 2022-08-24]
