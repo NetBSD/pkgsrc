@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2022/01/04 20:54:52 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2022/08/24 09:25:56 wiz Exp $
 
 DISTNAME=	biplist-1.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,10 +11,12 @@ HOMEPAGE=	https://bitbucket.org/wooster/biplist
 COMMENT=	Library for reading/writing binary plists
 LICENSE=	modified-bsd
 
-TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
 TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
+
+PYTHON_VERSIONED_DEPENDENCIES+=	coverage:test
 
 USE_LANGUAGES=	# none
 
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
