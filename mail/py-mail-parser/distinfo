@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/08/24 13:54:02 wiz Exp $
+
+BLAKE2s (mail-parser-3.15.0.tar.gz) = 86bda6090646f9b41f590693354dfaebb606cc859e57a4dee8119da15407936f
+SHA512 (mail-parser-3.15.0.tar.gz) = a8d9b0d2c1bfb4a63fcc556cf8b488d585dacc2c65ddd1a80a13de04926652348df80a9c36b49cae3c401896ba8aa5f6dc24b1129035de68ce1c907959ac393b
+Size (mail-parser-3.15.0.tar.gz) = 18001 bytes
