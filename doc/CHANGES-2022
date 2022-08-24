@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4038 2022/08/24 12:54:38 ryoon Exp $
+$NetBSD: CHANGES-2022,v 1.4039 2022/08/24 12:54:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5908,3 +5908,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added math/libfixmath version 0.0.0pre20220623 [ryoon 2022-08-24]
 	Added devel/py-mocket version 3.10.8 [wiz 2022-08-24]
 	Added math/dragonbox version 1.1.3 [ryoon 2022-08-24]
+	Added geography/py-geoip2 version 4.6.0 [wiz 2022-08-24]
