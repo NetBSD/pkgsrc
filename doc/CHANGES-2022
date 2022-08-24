@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4041 2022/08/24 13:22:28 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4042 2022/08/24 13:27:12 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5911,3 +5911,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added geography/py-geoip2 version 4.6.0 [wiz 2022-08-24]
 	Updated devel/SDL2 to 2.24.0nb1 [ryoon 2022-08-24]
 	Updated devel/ruby-minitest to 5.16.3 [taca 2022-08-24]
+	Updated devel/ruby-msgpack to 1.5.6 [taca 2022-08-24]
