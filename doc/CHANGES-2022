@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4048 2022/08/24 15:56:43 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4049 2022/08/24 16:24:05 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5918,3 +5918,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/ruby-multi_test to 1.1.0 [taca 2022-08-24]
 	Updated lang/llvm to 14.0.6nb1 [ryoon 2022-08-24]
 	Updated devel/ruby-octokit to 4.25.1 [taca 2022-08-24]
+	Updated devel/ruby-pkg-config to 1.4.9 [taca 2022-08-24]
