@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4022 2022/08/24 09:23:43 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4023 2022/08/24 09:29:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5892,3 +5892,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated multimedia/py-m3u8 to 3.3.0 [adam 2022-08-24]
 	Updated devel/py-freezegun to 1.2.2 [adam 2022-08-24]
 	Added devel/py27-coverage version 5.5nb2 [wiz 2022-08-24]
+	Added devel/py-xdist version 0.0.2 [wiz 2022-08-24]
