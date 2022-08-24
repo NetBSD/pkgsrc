@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/08/24 12:48:05 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2022/08/24 12:50:12 wiz Exp $
 
 DISTNAME=	pook-1.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,6 +17,8 @@ DEPENDS+=	${PYPKGPREFIX}-aiohttp>=3.6.2:../../www/py-aiohttp
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.20.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-urllib3>=1.24.2:../../www/py-urllib3
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=3.0.3:../../devel/py-test
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 # as of 1.0.2
 # 2 failed, 31 passed, 14 warnings
