@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2021/05/18 15:26:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2022/08/24 09:36:50 wiz Exp $
 bin/coverage-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -16,9 +16,6 @@ ${PYSITELIB}/coverage/__main__.pyo
 ${PYSITELIB}/coverage/annotate.py
 ${PYSITELIB}/coverage/annotate.pyc
 ${PYSITELIB}/coverage/annotate.pyo
-${PYSITELIB}/coverage/backward.py
-${PYSITELIB}/coverage/backward.pyc
-${PYSITELIB}/coverage/backward.pyo
 ${PYSITELIB}/coverage/bytecode.py
 ${PYSITELIB}/coverage/bytecode.pyc
 ${PYSITELIB}/coverage/bytecode.pyo
@@ -49,6 +46,9 @@ ${PYSITELIB}/coverage/disposition.pyo
 ${PYSITELIB}/coverage/env.py
 ${PYSITELIB}/coverage/env.pyc
 ${PYSITELIB}/coverage/env.pyo
+${PYSITELIB}/coverage/exceptions.py
+${PYSITELIB}/coverage/exceptions.pyc
+${PYSITELIB}/coverage/exceptions.pyo
 ${PYSITELIB}/coverage/execfile.py
 ${PYSITELIB}/coverage/execfile.pyc
 ${PYSITELIB}/coverage/execfile.pyo
@@ -64,11 +64,6 @@ ${PYSITELIB}/coverage/html.pyo
 ${PYSITELIB}/coverage/htmlfiles/coverage_html.js
 ${PYSITELIB}/coverage/htmlfiles/favicon_32.png
 ${PYSITELIB}/coverage/htmlfiles/index.html
-${PYSITELIB}/coverage/htmlfiles/jquery.ba-throttle-debounce.min.js
-${PYSITELIB}/coverage/htmlfiles/jquery.hotkeys.js
-${PYSITELIB}/coverage/htmlfiles/jquery.isonscreen.js
-${PYSITELIB}/coverage/htmlfiles/jquery.min.js
-${PYSITELIB}/coverage/htmlfiles/jquery.tablesorter.min.js
 ${PYSITELIB}/coverage/htmlfiles/keybd_closed.png
 ${PYSITELIB}/coverage/htmlfiles/keybd_open.png
 ${PYSITELIB}/coverage/htmlfiles/pyfile.html
@@ -80,6 +75,9 @@ ${PYSITELIB}/coverage/inorout.pyo
 ${PYSITELIB}/coverage/jsonreport.py
 ${PYSITELIB}/coverage/jsonreport.pyc
 ${PYSITELIB}/coverage/jsonreport.pyo
+${PYSITELIB}/coverage/lcovreport.py
+${PYSITELIB}/coverage/lcovreport.pyc
+${PYSITELIB}/coverage/lcovreport.pyo
 ${PYSITELIB}/coverage/misc.py
 ${PYSITELIB}/coverage/misc.pyc
 ${PYSITELIB}/coverage/misc.pyo
