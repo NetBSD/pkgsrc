@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2022/01/24 05:46:37 adam Exp $
+# $NetBSD: Makefile,v 1.28 2022/08/24 08:45:09 adam Exp $
 
-DISTNAME=	m3u8-1.0.0
+DISTNAME=	m3u8-3.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	multimedia python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/m3u8/}
@@ -14,7 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-iso8601-[0-9]*:../../time/py-iso8601
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 # py39-iso8601
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
