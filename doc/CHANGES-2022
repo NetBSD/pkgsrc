@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4047 2022/08/24 14:40:20 ryoon Exp $
+$NetBSD: CHANGES-2022,v 1.4048 2022/08/24 15:56:43 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5917,3 +5917,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated converters/libmwaw to 0.3.21 [ryoon 2022-08-24]
 	Updated devel/ruby-multi_test to 1.1.0 [taca 2022-08-24]
 	Updated lang/llvm to 14.0.6nb1 [ryoon 2022-08-24]
+	Updated devel/ruby-octokit to 4.25.1 [taca 2022-08-24]
