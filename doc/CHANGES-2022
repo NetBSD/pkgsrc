@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4050 2022/08/24 16:31:25 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4051 2022/08/24 17:49:41 leot Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5920,3 +5920,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/ruby-octokit to 4.25.1 [taca 2022-08-24]
 	Updated devel/ruby-pkg-config to 1.4.9 [taca 2022-08-24]
 	Updated devel/ruby-regexp_parser to 2.5.0 [taca 2022-08-24]
+	Updated net/yt-dlp to 2022.8.19 [leot 2022-08-24]
