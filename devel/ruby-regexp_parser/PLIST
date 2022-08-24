@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2022/02/13 07:16:46 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2022/08/24 16:31:03 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/Gemfile
@@ -15,6 +15,7 @@ ${GEM_LIBDIR}/lib/regexp_parser/expression/classes/backreference.rb
 ${GEM_LIBDIR}/lib/regexp_parser/expression/classes/character_set.rb
 ${GEM_LIBDIR}/lib/regexp_parser/expression/classes/character_set/intersection.rb
 ${GEM_LIBDIR}/lib/regexp_parser/expression/classes/character_set/range.rb
+${GEM_LIBDIR}/lib/regexp_parser/expression/classes/character_type.rb
 ${GEM_LIBDIR}/lib/regexp_parser/expression/classes/conditional.rb
 ${GEM_LIBDIR}/lib/regexp_parser/expression/classes/escape_sequence.rb
 ${GEM_LIBDIR}/lib/regexp_parser/expression/classes/free_space.rb
@@ -22,9 +23,9 @@ ${GEM_LIBDIR}/lib/regexp_parser/expression/classes/group.rb
 ${GEM_LIBDIR}/lib/regexp_parser/expression/classes/keep.rb
 ${GEM_LIBDIR}/lib/regexp_parser/expression/classes/literal.rb
 ${GEM_LIBDIR}/lib/regexp_parser/expression/classes/posix_class.rb
-${GEM_LIBDIR}/lib/regexp_parser/expression/classes/property.rb
 ${GEM_LIBDIR}/lib/regexp_parser/expression/classes/root.rb
-${GEM_LIBDIR}/lib/regexp_parser/expression/classes/type.rb
+${GEM_LIBDIR}/lib/regexp_parser/expression/classes/unicode_property.rb
+${GEM_LIBDIR}/lib/regexp_parser/expression/methods/construct.rb
 ${GEM_LIBDIR}/lib/regexp_parser/expression/methods/match.rb
 ${GEM_LIBDIR}/lib/regexp_parser/expression/methods/match_length.rb
 ${GEM_LIBDIR}/lib/regexp_parser/expression/methods/options.rb
@@ -34,6 +35,7 @@ ${GEM_LIBDIR}/lib/regexp_parser/expression/methods/traverse.rb
 ${GEM_LIBDIR}/lib/regexp_parser/expression/quantifier.rb
 ${GEM_LIBDIR}/lib/regexp_parser/expression/sequence.rb
 ${GEM_LIBDIR}/lib/regexp_parser/expression/sequence_operation.rb
+${GEM_LIBDIR}/lib/regexp_parser/expression/shared.rb
 ${GEM_LIBDIR}/lib/regexp_parser/expression/subexpression.rb
 ${GEM_LIBDIR}/lib/regexp_parser/lexer.rb
 ${GEM_LIBDIR}/lib/regexp_parser/parser.rb
@@ -75,6 +77,7 @@ ${GEM_LIBDIR}/lib/regexp_parser/syntax/versions/2.6.0.rb
 ${GEM_LIBDIR}/lib/regexp_parser/syntax/versions/2.6.2.rb
 ${GEM_LIBDIR}/lib/regexp_parser/syntax/versions/2.6.3.rb
 ${GEM_LIBDIR}/lib/regexp_parser/syntax/versions/3.1.0.rb
+${GEM_LIBDIR}/lib/regexp_parser/syntax/versions/3.2.0.rb
 ${GEM_LIBDIR}/lib/regexp_parser/token.rb
 ${GEM_LIBDIR}/lib/regexp_parser/version.rb
 ${GEM_LIBDIR}/regexp_parser.gemspec
