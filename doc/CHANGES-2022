@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4036 2022/08/24 12:52:20 ryoon Exp $
+$NetBSD: CHANGES-2022,v 1.4037 2022/08/24 12:53:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5906,3 +5906,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/zxing-cpp to 1.4.0 [ryoon 2022-08-24]
 	Added www/py-pook version 1.0.2 [wiz 2022-08-24]
 	Added math/libfixmath version 0.0.0pre20220623 [ryoon 2022-08-24]
+	Added devel/py-mocket version 3.10.8 [wiz 2022-08-24]
