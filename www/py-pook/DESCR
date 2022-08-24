@@ -1,0 +1,3 @@
+Versatile, expressive and hackable utility library for HTTP traffic
+mocking and expectations made easy in Python. Heavily inspired by
+gock.
