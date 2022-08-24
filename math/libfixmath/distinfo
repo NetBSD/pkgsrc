@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2022/08/24 12:49:24 ryoon Exp $
+
+BLAKE2s (libfixmath-0.0.0pre20220623-809bceac540b14d182589ce4c6f74330a2ff682a.tar.gz) = d2098885fea9dad90fcc23b2d8c2e55e9b58211886f3e440431425755e139f07
+SHA512 (libfixmath-0.0.0pre20220623-809bceac540b14d182589ce4c6f74330a2ff682a.tar.gz) = 45cead77ef06c670d3ec4fbd8ebdafb3b9f7e053d1aa9b9ac9d6bea3127df103a9bdf020bde58e35bc42c66e59b8c8e53ddbcc24b2a2284b80120929d44125a3
+Size (libfixmath-0.0.0pre20220623-809bceac540b14d182589ce4c6f74330a2ff682a.tar.gz) = 267419 bytes
+SHA1 (patch-CMakeLists.txt) = 514b8cab50ff75cc8c3e3f445728c484462ec08d
+SHA1 (patch-libfixmath_libfixmath.cmake) = b4e736b324c54340c6086b9266bce79bb178c82f

@@ -1,0 +1,34 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2022/08/24 12:49:24 ryoon Exp $
+
+* Do not conflict with directories.
+* Install library and header files.
+
+--- CMakeLists.txt.orig	2022-06-23 05:57:58.000000000 +0000
++++ CMakeLists.txt
+@@ -14,14 +14,19 @@ include(libfixmath/libfixmath.cmake)
+ include(tests/tests.cmake)
+ 
+ file(GLOB fixsingen-srcs fixsingen/*.c)
+-file(GLOB fixtest-srcs fixtest/*.c fixtest/*.h)
++file(GLOB fixtest-srcs fixtest/*.c)
+ 
+-add_executable(fixtest ${fixtest-srcs})
+-target_link_libraries(fixtest PRIVATE libfixmath m)
+-target_include_directories(fixtest PRIVATE ${CMAKE_SOURCE_DIR})
++add_executable(fixtest.bin ${fixtest-srcs})
++target_link_libraries(fixtest.bin PRIVATE libfixmath m)
++target_include_directories(fixtest.bin PRIVATE ${CMAKE_SOURCE_DIR})
+ 
+-add_executable(fixsingen ${fixsingen-srcs})
+-target_link_libraries(fixsingen PRIVATE libfixmath m)
+-target_include_directories(fixsingen PRIVATE ${CMAKE_SOURCE_DIR})
++add_executable(fixsingen.bin ${fixsingen-srcs})
++target_link_libraries(fixsingen.bin PRIVATE libfixmath m)
++target_include_directories(fixsingen.bin PRIVATE ${CMAKE_SOURCE_DIR})
+ 
++install(TARGETS libfixmath
++	ARCHIVE DESTINATION lib
++	LIBRARY DESTINATION lib
++)
+ 
++install(FILES ${libfixmath-includes} DESTINATION include/libfixmath)
