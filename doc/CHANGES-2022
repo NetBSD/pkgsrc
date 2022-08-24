@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4027 2022/08/24 10:03:33 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4028 2022/08/24 10:09:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5897,3 +5897,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/py-process-tests version 2.1.2 [wiz 2022-08-24]
 	Updated devel/py-coverage to 6.4.4 [wiz 2022-08-24]
 	Updated devel/py-test-xdist to 2.5.0 [wiz 2022-08-24]
+	Updated devel/py-test-cov to 3.0.0 [wiz 2022-08-24]
