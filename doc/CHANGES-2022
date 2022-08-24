@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4035 2022/08/24 12:48:27 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4036 2022/08/24 12:52:20 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5905,3 +5905,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added geography/py-maxminddb version 2.2.0 [wiz 2022-08-24]
 	Updated graphics/zxing-cpp to 1.4.0 [ryoon 2022-08-24]
 	Added www/py-pook version 1.0.2 [wiz 2022-08-24]
+	Added math/libfixmath version 0.0.0pre20220623 [ryoon 2022-08-24]
