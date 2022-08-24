@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/08/24 09:31:07 wiz Exp $
+
+BLAKE2s (process-tests-2.1.2.tar.gz) = a411ab9b905da88bc4dc5b51e1fbbfe021128ee1578e08a783bd89c65e328a12
+SHA512 (process-tests-2.1.2.tar.gz) = 56a76d8467312de34413994e663eb63378ff179720b883037735eae9d8f23a5cc0ea32d4a9a2f9041af417b5ada07b7948fd481e3d5b2cb43db3c19183f6b263
+Size (process-tests-2.1.2.tar.gz) = 11554 bytes
