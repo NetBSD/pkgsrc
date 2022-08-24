@@ -1,7 +1,7 @@
 pkgsrc
 ======
 
-[pkgsrc](https://pkgsrc.org) is a framework for building software for a
+[pkgsrc](https://pkgsrc.org/) is a framework for building software for a
 variety of UNIX-like systems.
 
 It produces binary packages, which can be managed with tools such as
