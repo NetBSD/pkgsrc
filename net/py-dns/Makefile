@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2022/08/23 22:04:09 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2022/08/24 10:10:30 wiz Exp $
 
 DISTNAME=	dnspython-2.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-/-/}
@@ -21,16 +21,13 @@ DEPENDS+=	${PYPKGPREFIX}-idna-[0-9]*:../../www/py-idna
 BUILD_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=0:../../devel/py-poetry-core
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=0:../../devel/py-setuptools_scm
 BUILD_DEPENDS+=	${PYPKGPREFIX}-wheel>=0.35.0:../../devel/py-wheel
-#TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=6.0:../../devel/py-coverage
-TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=0:../../devel/py-coverage
+TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=6.0:../../devel/py-coverage
 TEST_DEPENDS+=	${PYPKGPREFIX}-flake8>=4.0.1:../../devel/py-flake8
 TEST_DEPENDS+=	${PYPKGPREFIX}-pylint>=2.7.4:../../devel/py-pylint
 TEST_DEPENDS+=	${PYPKGPREFIX}-sphinx>=4.0.0:../../textproc/py-sphinx
-#TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=3.0.0:../../devel/py-test-cov
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=0:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=3.0.0:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=5.4.1:../../devel/py-test
-#TEST_DEPENDS+=	${PYPKGPREFIX}-twine>=3.1.1:../../net/py-twine
-TEST_DEPENDS+=	${PYPKGPREFIX}-twine>=1:../../net/py-twine
+TEST_DEPENDS+=	${PYPKGPREFIX}-twine>=3.1.1:../../net/py-twine
 
 USE_LANGUAGES=	# none
 
