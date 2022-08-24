@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3781 2022/08/24 09:31:53 wiz Exp $
+# $NetBSD: Makefile,v 1.3782 2022/08/24 10:17:46 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2395,6 +2395,7 @@ SUBDIR+=	py-cookiecutter
 SUBDIR+=	py-cooldict
 SUBDIR+=	py-coverage
 SUBDIR+=	py-coverage-enable-subprocess
+SUBDIR+=	py-coveralls
 SUBDIR+=	py-cparser
 SUBDIR+=	py-cpplint
 SUBDIR+=	py-cppy
@@ -2437,6 +2438,7 @@ SUBDIR+=	py-enum34
 SUBDIR+=	py-exam
 SUBDIR+=	py-exceptiongroup
 SUBDIR+=	py-execnet
+SUBDIR+=	py-expiringdict
 SUBDIR+=	py-extension-helpers
 SUBDIR+=	py-extras
 SUBDIR+=	py-extratools
