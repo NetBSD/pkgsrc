@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2022/02/12 12:37:42 taca Exp $
+# $NetBSD: Makefile,v 1.17 2022/08/24 15:56:23 taca Exp $
 
-DISTNAME=	octokit-4.22.0
+DISTNAME=	octokit-4.25.1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -8,8 +8,8 @@ HOMEPAGE=	https://github.com/octokit/octokit.rb
 COMMENT=	Ruby toolkit for working with the GitHub API
 LICENSE=	mit
 
-DEPENDS+=	${RUBY_PKGPREFIX}-sawyer>=0.8.1:../../www/ruby-sawyer
-DEPENDS+=	${RUBY_PKGPREFIX}-faraday>=0.9:../../www/ruby-faraday
+DEPENDS+=	${RUBY_PKGPREFIX}-sawyer>=0.9:../../www/ruby-sawyer
+DEPENDS+=	${RUBY_PKGPREFIX}-faraday>=1:../../www/ruby-faraday
 
 USE_LANGUAGES=	# none
 
