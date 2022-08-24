@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4032 2022/08/24 10:44:35 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4033 2022/08/24 11:08:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5902,3 +5902,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/py-expiringdict version 1.2.2 [wiz 2022-08-24]
 	Added mail/py-checkdmarc version 4.4.1 [wiz 2022-08-24]
 	Updated devel/hoe to 3.25.0 [taca 2022-08-24]
+	Added geography/py-maxminddb version 2.2.0 [wiz 2022-08-24]
