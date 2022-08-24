@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3778 2022/08/24 09:19:37 wiz Exp $
+# $NetBSD: Makefile,v 1.3779 2022/08/24 09:29:15 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2895,6 +2895,7 @@ SUBDIR+=	py-wrapt
 SUBDIR+=	py-xbe
 SUBDIR+=	py-xdg
 SUBDIR+=	py-xdis
+SUBDIR+=	py-xdist
 SUBDIR+=	py-xopen
 SUBDIR+=	py-yapf
 SUBDIR+=	py-zanata-python-client
