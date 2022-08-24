@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2022/08/24 14:00:31 wiz Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/license_files/LICENSE
+${PYSITELIB}/mailsuite/__init__.py
+${PYSITELIB}/mailsuite/__init__.pyc
+${PYSITELIB}/mailsuite/imap.py
+${PYSITELIB}/mailsuite/imap.pyc
+${PYSITELIB}/mailsuite/smtp.py
+${PYSITELIB}/mailsuite/smtp.pyc
+${PYSITELIB}/mailsuite/utils.py
+${PYSITELIB}/mailsuite/utils.pyc
