@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/01/04 20:55:15 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2022/08/24 09:25:56 wiz Exp $
 
 DISTNAME=	Routes-2.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,11 +14,13 @@ LICENSE=	mit
 DEPENDS+=	${PYPKGPREFIX}-repoze.lru>=0.3:../../devel/py-repoze.lru
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-WebOb-[0-9]*:../../www/py-WebOb
-TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
 TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 TEST_DEPENDS+=	${PYPKGPREFIX}-WebTest-[0-9]*:../../www/py-WebTest
 
+PYTHON_VERSIONED_DEPENDENCIES+=	coverage:test
+
 USE_LANGUAGES=	# none
 
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

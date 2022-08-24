@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2022/08/01 18:23:41 adam Exp $
+# $NetBSD: Makefile,v 1.8 2022/08/24 09:25:56 wiz Exp $
 
 DISTNAME=	sh-1.14.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,9 +11,10 @@ COMMENT=	Python subprocess replacement
 LICENSE=	mit
 
 # some test failures, see https://github.com/amoffat/sh/issues/347
-TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
+PYTHON_VERSIONED_DEPENDENCIES+=	coverage:test
 
 USE_LANGUAGES=	# none
 
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
