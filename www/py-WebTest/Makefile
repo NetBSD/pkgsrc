@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2022/08/24 09:25:57 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2022/08/24 09:53:33 wiz Exp $
 
 DISTNAME=	WebTest-2.0.35
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,14 +17,14 @@ DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-waitress>=0.8.5:../../www/py-waitress
 TEST_DEPENDS+=	${PYPKGPREFIX}-PasteDeploy-[0-9]*:../../www/py-PasteDeploy
 TEST_DEPENDS+=	${PYPKGPREFIX}-WSGIProxy2-[0-9]*:../../www/py-WSGIProxy2
+TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 TEST_DEPENDS+=	${PYPKGPREFIX}-pyquery-[0-9]*:../../textproc/py-pyquery
 
-PYTHON_VERSIONED_DEPENDENCIES+=	coverage:test
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
