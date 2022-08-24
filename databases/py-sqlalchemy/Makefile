@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2022/01/04 20:52:44 wiz Exp $
+# $NetBSD: Makefile,v 1.69 2022/08/24 09:50:40 wiz Exp $
 
 DISTNAME=	SQLAlchemy-1.3.22
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -12,10 +12,10 @@ COMMENT=	Python SQL toolkit and Object Relational Mapper
 LICENSE=	mit
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 
-PYTHON_VERSIONED_DEPENDENCIES=	test:test
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
