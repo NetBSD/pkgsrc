@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4042 2022/08/24 13:27:12 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4043 2022/08/24 14:01:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5912,3 +5912,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/SDL2 to 2.24.0nb1 [ryoon 2022-08-24]
 	Updated devel/ruby-minitest to 5.16.3 [taca 2022-08-24]
 	Updated devel/ruby-msgpack to 1.5.6 [taca 2022-08-24]
+	Added mail/py-mail-parser version 3.15.0 [wiz 2022-08-24]
