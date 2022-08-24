@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2022/01/05 15:41:31 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2022/08/24 09:25:57 wiz Exp $
 
 DISTNAME=	waitress-1.4.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,10 +11,11 @@ HOMEPAGE=	https://github.com/Pylons/waitress
 COMMENT=	Production-quality pure-Python WSGI server
 LICENSE=	zpl-2.1
 
-TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=5.0:../../devel/py-coverage
 TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONED_DEPENDENCIES+=	coverage:test
 
 USE_PKG_RESOURCES=	yes
 
@@ -22,5 +23,6 @@ post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} waitress-serve waitress-serve-${PYVERSSUFFIX} || ${TRUE}
 
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

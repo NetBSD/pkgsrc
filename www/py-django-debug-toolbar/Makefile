@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/01/04 20:55:19 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/08/24 09:25:57 wiz Exp $
 
 DISTNAME=	django-debug-toolbar-2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,13 +16,15 @@ GITHUB_TAG=	${PKGVERSION_NOREV}
 
 DEPENDS+=	${PYPKGPREFIX}-sqlparse>=0.2.0:../../databases/py-sqlparse
 DEPENDS+=	${PYPKGPREFIX}-django>=1.11:../../www/py-django
-TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONED_DEPENDENCIES+=	coverage:test
 
 do-test:
 	cd ${WRKSRC} && ${PREFIX}/bin/coverage-${PYVERSSUFFIX} \
 	    run -m django test --settings=tests.settings
 
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

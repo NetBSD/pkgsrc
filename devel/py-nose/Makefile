@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2022/01/05 15:41:06 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2022/08/24 09:25:56 wiz Exp $
 
 DISTNAME=	nose-1.3.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,12 +11,11 @@ HOMEPAGE=	https://nose.readthedocs.io/
 COMMENT=	Unittest-based testing framework for python
 LICENSE=	gnu-lgpl-v2.1
 
-# only needed for a plugin
-TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=3.0:../../devel/py-coverage
-
 USE_LANGUAGES=	# none
 
 USE_PKG_RESOURCES=	yes
+# only needed for a plugin
+PYTHON_VERSIONED_DEPENDENCIES+=	coverage:test
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
@@ -35,4 +34,5 @@ pre-build:
 	cd ${WRKSRC} && 2to3-${PYVERSSUFFIX} -w --no-diffs nose
 .endif
 
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
