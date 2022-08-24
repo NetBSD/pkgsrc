@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2022/01/04 20:52:45 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2022/08/24 09:50:40 wiz Exp $
 
 DISTNAME=	SQLAlchemy-Utils-0.36.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -13,6 +13,8 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=1.0:../../databases/py-sqlalchemy
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=	# none
 
