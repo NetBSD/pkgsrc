@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.66 2022/08/22 10:51:11 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2022/08/24 13:09:34 ryoon Exp $
 
 DISTNAME=	SDL2-2.24.0
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libsdl-org/}
 GITHUB_PROJECT=	SDL
@@ -16,12 +17,23 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config
 GNU_CONFIGURE=	yes
 
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "NetBSD"
+SUBST_CLASSES+=		gsort
+SUBST_STAGE.gsort=	pre-configure
+SUBST_MESSAGE.gsort=	BSD sort has no -V option
+SUBST_FILES.gsort+=	configure
+SUBST_FILES.gsort+=	configure.ac
+SUBST_SED.gsort+=	-e 's,sort -V,sort,g'
+.endif
+
 # Let pkgsrc handle the rpath.
 CONFIGURE_ARGS+=	--disable-rpath
 
 # Explicitly link against libraries.
 CONFIGURE_ARGS+=	--disable-alsa-shared
 CONFIGURE_ARGS+=	--disable-jack-shared
+CONFIGURE_ARGS+=	--disable-pulseaudio-shared
 CONFIGURE_ARGS+=	--disable-libsamplerate-shared
 CONFIGURE_ARGS+=	--disable-wayland-shared
 CONFIGURE_ARGS+=	--disable-x11-shared

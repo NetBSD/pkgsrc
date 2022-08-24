@@ -1,0 +1,18 @@
+$NetBSD: patch-configure.ac,v 1.1 2022/08/24 13:09:34 ryoon Exp $
+
+* Found iconv function in libc. Fix Libs.private=-liconv in sdl2.pc.
+
+--- configure.ac.orig	2022-08-19 15:46:21.000000000 +0000
++++ configure.ac
+@@ -352,7 +352,10 @@ dnl Checks for library functions.
+     AC_CHECK_LIB(m, pow, [LIBS="$LIBS -lm"; EXTRA_LDFLAGS="$EXTRA_LDFLAGS -lm"])
+     AC_CHECK_FUNCS(acos acosf asin asinf atan atanf atan2 atan2f ceil ceilf copysign copysignf cos cosf exp expf fabs fabsf floor floorf trunc truncf fmod fmodf log logf log10 log10f lround lroundf pow powf round roundf scalbn scalbnf sin sinf sqrt sqrtf tan tanf)
+ 
+-    AC_CHECK_LIB(iconv, iconv_open, [LIBS="$LIBS -liconv"; EXTRA_LDFLAGS="$EXTRA_LDFLAGS -liconv"])
++    AC_CHECK_LIB(c, iconv_open, found_libc_iconv=yes)
++    if test x$found_libc_iconv != xyes; then
++      AC_CHECK_LIB(iconv, iconv_open, [LIBS="$LIBS -liconv"; EXTRA_LDFLAGS="$EXTRA_LDFLAGS -liconv"])
++    fi
+     AC_CHECK_FUNCS(iconv)
+ 
+     AC_CHECK_MEMBER(struct sigaction.sa_sigaction,[AC_DEFINE([HAVE_SA_SIGACTION], 1, [ ])], ,[#include <signal.h>])

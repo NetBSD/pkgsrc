@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.52 2022/08/22 10:51:11 wiz Exp $
+$NetBSD: distinfo,v 1.53 2022/08/24 13:09:34 ryoon Exp $
 
 BLAKE2s (SDL2-2.24.0.tar.gz) = 87aa504e5485612a5c5adedd1115ced216710258ec62122cd5f3c7539f50724d
 SHA512 (SDL2-2.24.0.tar.gz) = 5735bfc7b22f1780f80cc89f62a14ca809fe1280298d172f92dde74400db1f5378f8d3eae8834e886d3ca4f5ae6f1074d66c5c956613cf9e0cce961738514212
 Size (SDL2-2.24.0.tar.gz) = 7520541 bytes
+SHA1 (patch-configure) = 0eb358082bf3b61ee53c9887a6616b5f008ba8cc
+SHA1 (patch-configure.ac) = 8681cc974c43353713c59dff85ae912910c88ae5
