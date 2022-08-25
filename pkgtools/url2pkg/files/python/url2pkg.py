@@ -1,4 +1,4 @@
-# $NetBSD: url2pkg.py,v 1.1 2022/07/16 08:59:38 rillig Exp $
+# $NetBSD: url2pkg.py,v 1.2 2022/08/25 19:56:07 rillig Exp $
 #
 # Forwards the module metadata from distutils and setuptools to url2pkg.
 
