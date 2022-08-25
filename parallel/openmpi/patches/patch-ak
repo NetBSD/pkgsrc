@@ -1,4 +1,6 @@
-$NetBSD: patch-ak,v 1.5 2016/10/23 14:02:28 asau Exp $
+$NetBSD: patch-ak,v 1.6 2022/08/25 22:09:14 thor Exp $
+
+# Use pkgsrc variables
 
 --- ompi/etc/Makefile.in.orig	2016-09-02 01:30:09.000000000 +0000
 +++ ompi/etc/Makefile.in
