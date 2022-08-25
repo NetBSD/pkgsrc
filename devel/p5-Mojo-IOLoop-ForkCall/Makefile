@@ -1,21 +1,20 @@
-# $NetBSD: Makefile,v 1.18 2022/08/25 10:08:06 abs Exp $
+# $NetBSD: Makefile,v 1.19 2022/08/25 10:21:21 abs Exp $
 
-GITHUB_PROJECT=	Mojo-IOLoop-ForkCall
-DISTNAME=	Mojo-IOLoop-ForkCall-0.21
+GITHUB_PROJECT=	Mojo-IOLoop-Delay
+DISTNAME=	Mojo-IOLoop-Delay-8.76
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jberger/}
 
-MAINTAINER=	wiedi@frubar.net
-HOMEPAGE=	https://github.com/jberger/Mojo-IOLoop-ForkCall/
-COMMENT=	Execute a code block asynchronously by forking
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://github.com/jberger/Mojo-IOLoop-Delay
+COMMENT=	Promises/A+ and flow-control helpers (deprecated)
 LICENSE=	${PERL5_LICENSE}
 
-PERL5_MODULE_TYPE=	Module::Build
-PERL5_PACKLIST=		auto/Mojo/IOLoop/ForkCall/.packlist
+PERL5_MODULE_TYPE=	Module::Build::Tiny
+PERL5_PACKLIST=		auto/Mojo/IOLoop/Delay/.packlist
 USE_LANGUAGES=		# none
 
-DEPENDS+=	p5-IO-Pipely-[0-9]*:../../devel/p5-IO-Pipely
 DEPENDS+=	p5-Mojolicious>=5.08:../../www/p5-Mojolicious
 
 .include "../../lang/perl5/module.mk"
