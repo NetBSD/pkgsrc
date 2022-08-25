@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/08/24 10:18:34 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2022/08/25 07:49:43 tnn Exp $
 
 DISTNAME=	checkdmarc-4.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,6 +16,8 @@ DEPENDS+=	${PYPKGPREFIX}-pyleri>=1.3.2:../../devel/py-pyleri
 DEPENDS+=	${PYPKGPREFIX}-publicsuffix2>=2.20191221:../../www/py-publicsuffix2
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.25.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-timeout-decorator>=0.4.1:../../devel/py-timeout-decorator
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27	# py-dns
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} checkdmarc checkdmarc-${PYVERSSUFFIX} || ${TRUE}
