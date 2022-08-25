@@ -1,0 +1,15 @@
+$NetBSD: patch-scalapack.pc.in,v 1.1 2022/08/25 22:58:01 thor Exp $
+
+Do not assume fixed names for MPI and BLAS dependency pkg-config
+packages. They can vary.
+
+--- scalapack.pc.in.orig	2021-10-12 19:09:12.000000000 +0000
++++ scalapack.pc.in
+@@ -5,5 +5,5 @@ Name: scalapack
+ Description: SCALAPACK reference implementation
+ Version: @SCALAPACK_VERSION@
+ URL: http://www.netlib.org/scalapack/
+ Libs: -L${libdir} -lscalapack
+-Requires: mpi lapack blas
++Requires: @BLA_PKGCONFIG_LAPACK@ @BLA_PKGCONFIG_BLAS@
++Libs.private: @MPI_LIBRARIES@
