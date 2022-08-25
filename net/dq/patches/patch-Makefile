@@ -1,0 +1,21 @@
+$NetBSD: patch-Makefile,v 1.1 2022/08/25 17:59:08 schmonz Exp $
+
+Follow hier(7).
+
+--- Makefile.orig	2022-08-22 18:03:33.000000000 +0000
++++ Makefile
+@@ -457,10 +457,10 @@ dqcache-start: dqcache-start.o $(OBJECTS
+ 
+ 
+ install: dq dqcache dqcache-makekey dqcache-start
+-	install -D -m 0755 dq $(DESTDIR)/usr/bin/dq
+-	install -D -m 0755 dqcache $(DESTDIR)/usr/sbin/dqcache
+-	install -D -m 0755 dqcache-makekey $(DESTDIR)/usr/sbin/dqcache-makekey
+-	install -D -m 0755 dqcache-start $(DESTDIR)/usr/sbin/dqcache-start
++	$(BSD_INSTALL_PROGRAM) dq $(DESTDIR)@PREFIX@/bin/dq
++	$(BSD_INSTALL_PROGRAM) dqcache $(DESTDIR)@PREFIX@/sbin/dqcache
++	$(BSD_INSTALL_PROGRAM) dqcache-makekey $(DESTDIR)@PREFIX@/sbin/dqcache-makekey
++	$(BSD_INSTALL_PROGRAM) dqcache-start $(DESTDIR)@PREFIX@/sbin/dqcache-start
+ 
+ clean:
+ 	rm -f *.o *.out $(BINARIES)
