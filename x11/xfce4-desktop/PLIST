@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.34 2021/11/30 14:48:17 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.35 2022/08/25 22:53:38 gutteridge Exp $
 bin/xfdesktop
 bin/xfdesktop-settings
 man/man1/xfdesktop.1
@@ -16,6 +16,7 @@ share/icons/hicolor/scalable/apps/org.xfce.xfdesktop.svg
 share/locale/am/LC_MESSAGES/xfdesktop.mo
 share/locale/ar/LC_MESSAGES/xfdesktop.mo
 share/locale/ast/LC_MESSAGES/xfdesktop.mo
+share/locale/az/LC_MESSAGES/xfdesktop.mo
 share/locale/be/LC_MESSAGES/xfdesktop.mo
 share/locale/be@tarask/LC_MESSAGES/xfdesktop.mo
 share/locale/bg/LC_MESSAGES/xfdesktop.mo
