@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4071 2022/08/25 22:59:55 thor Exp $
+$NetBSD: CHANGES-2022,v 1.4072 2022/08/25 23:05:39 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5944,3 +5944,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/xfce4-desktop to 4.16.1 [gutteridge 2022-08-25]
 	Updated x11/xfce4-panel to 4.16.5 [gutteridge 2022-08-25]
 	Updated math/scalapack to 2.2.0 [thor 2022-08-25]
+	Updated meta-pkgs/xfce4 to 4.16.0nb7 [gutteridge 2022-08-25]
