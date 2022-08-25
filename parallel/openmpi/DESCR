@@ -1,11 +1,6 @@
 The Open MPI Project is an open source Message Passing Interface
 implementation that is developed and maintained by a consortium of
-academic, research, and industry partners.  Open MPI is therefore able
-to combine the expertise, technologies, and resources from all across
-the High Performance Computing community in order to build the best
-MPI library available. Open MPI offers advantages for system and
-software vendors, application developers and computer science
-researchers.
+academic, research, and industry partners.
 
 Features implemented or in short-term development for Open MPI include:
   - Full MPI-3.1 standards conformance
@@ -24,6 +19,3 @@ Features implemented or in short-term development for Open MPI include:
   - Component-based design, documented APIs
   - Active, responsive mailing list
   - Open source license based on the BSD license
-
-[Note that the pkgsrc version is very old, but still appears to
-support MPI 3.0.]
