@@ -1,20 +1,11 @@
-$NetBSD: patch-configure,v 1.2 2017/04/29 18:18:52 adam Exp $
+$NetBSD: patch-configure,v 1.3 2022/08/25 21:46:53 thor Exp $
 
 Portability fix.
 Make it use weak symbols with Clang.
 
---- configure.orig	2015-11-12 04:08:11.000000000 +0000
+--- configure.orig	2021-12-16 17:26:22.000000000 +0000
 +++ configure
-@@ -26437,7 +26437,7 @@ if test -z "$BUILD_PAMID_TRUE"; then :
- 
- 
- pamid_platform=${device_args}
--if test x"$pamid_platform" == "x"; then
-+if test x"$pamid_platform" = "x"; then
-   case $host in #(
-   *-bgq-*) :
-     pamid_platform=BGQ ;; #(
-@@ -29322,7 +29322,9 @@ else
+@@ -30608,7 +30608,9 @@ else
  cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  
@@ -24,3 +15,12 @@ Make it use weak symbols with Clang.
  #pragma weak PFoo = Foo
  int Foo(int a) { return a; }
  
+@@ -57640,7 +57642,7 @@ esac
+ # - enable-thread-cs=per-vci
+ #
+ if test "$enable_ch4_mt" != "direct"; then
+-    if test "${with_zm_prefix}" == "no" -o "${with_zm_prefix}" == "none" -o "${enable_izem_queue}" != "yes" ; then
++    if test "${with_zm_prefix}" = "no" -o "${with_zm_prefix}" = "none" -o "${enable_izem_queue}" != "yes" ; then
+         as_fn_error $? "Multi-threading model \`${enable_ch4_mt}\` requires izem queue. Set \`--enable-izem={queue|all} --with-zm-prefix\` and retry." "$LINENO" 5
+     elif test "${enable_thread_cs}" != "per-vci" -a "${enable_thread_cs}" != "per_vci"; then
+         as_fn_error $? "Multi-threading model \`${enable_ch4_mt}\` requires \`--enable-thread-cs=per-vci\`." "$LINENO" 5

@@ -1,0 +1,69 @@
+$NetBSD: patch-modules_libfabric_configure,v 1.1 2022/08/25 21:46:53 thor Exp $
+
+portability fix
+
+--- modules/libfabric/configure.orig	2022-08-18 16:44:09.581778796 +0000
++++ modules/libfabric/configure
+@@ -14731,7 +14731,7 @@ if test "${with_dlopen+set}" = set; then
+ fi
+ 
+ 
+-if test "$freebsd" == "0"; then
++if test "$freebsd" = "0"; then
+ if test x"$with_dlopen" != x"no"; then :
+ 
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for dlopen in -ldl" >&5
+@@ -24596,7 +24596,7 @@ else
+   efa_h_enable_poisoning=no
+ fi
+ 
+-	if test x"$efa_h_enable_poisoning" == x"yes"; then :
++	if test x"$efa_h_enable_poisoning" = x"yes"; then :
+ 
+ $as_echo "#define ENABLE_EFA_POISONING 1" >>confdefs.h
+ 
+@@ -28163,7 +28163,7 @@ $as_echo "yes" >&6; }
+ 
+ fi
+ 
+-               if test x"$enable_ugni_static" == x"yes" && test $ugni_lib_happy -eq 1; then :
++               if test x"$enable_ugni_static" = x"yes" && test $ugni_lib_happy -eq 1; then :
+   gni_LDFLAGS=$(echo $gni_LDFLAGS | sed -e 's/lugni/l:libugni.a/')
+ fi
+ 
+@@ -30927,7 +30927,7 @@ if test "${with_bgq_src+set}" = set; the
+ fi
+ 
+ 
+-			if test x"$bgq_external_source" == x"auto"; then :
++			if test x"$bgq_external_source" = x"auto"; then :
+ 
+ 				for bgq_dir in `ls -r /bgsys/source`; do
+ 					{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for bgq opensource distribution" >&5
+@@ -30939,7 +30939,7 @@ $as_echo "$bgq_external_source" >&6; }
+ 						break
+ fi
+ 				done
+-				if test x"$bgq_external_source" == x"auto"; then :
++				if test x"$bgq_external_source" = x"auto"; then :
+ 
+ 					bgq_happy=0
+ 					{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+@@ -32360,7 +32360,7 @@ esac
+     if test x"$enable_perf" != x"no"; then :
+   perf_happy=1
+ fi
+-    if test x"$perf_dl" == x"1"; then :
++    if test x"$perf_dl" = x"1"; then :
+ 
+ 	perf_happy=0
+ 	as_fn_error $? "perf provider cannot be compiled as DL" "$LINENO" 5
+@@ -32619,7 +32619,7 @@ esac
+     if test x"$enable_hook_debug" != x"no"; then :
+   hook_debug_happy=1
+ fi
+-    if test x"$hook_debug_dl" == x"1"; then :
++    if test x"$hook_debug_dl" = x"1"; then :
+ 
+ 	hook_debug_happy=0
+ 	as_fn_error $? "debug hooking provider cannot be compiled as DL" "$LINENO" 5
