@@ -1,6 +1,7 @@
-# $NetBSD: deforaos-configure.mk,v 1.8 2022/07/11 01:38:20 khorben Exp $
+# $NetBSD: deforaos-configure.mk,v 1.9 2022/08/25 03:11:56 khorben Exp $
 #
 # used by audio/deforaos-mixer/Makefile
+# used by databases/deforaos-libdatabase/Makefile
 # used by devel/deforaos-asm/Makefile
 # used by devel/deforaos-coder/Makefile
 # used by devel/deforaos-cpp/Makefile
