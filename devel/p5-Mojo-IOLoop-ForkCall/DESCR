@@ -1,13 +1,12 @@
-Mojo::IOLoop::Delay adds flow-control helpers to Mojo::Promise,
-which can help you avoid deep nested closures that often result
-from continuation-passing style.
+Asynchronous programming can be benefitial for performance, however
+not all functions are written for nonblocking interaction and
+external processes almost never are.
 
-This module has been extracted from Mojolicious and was removed
-from it at the 9.0 release. It is kept here for backwards compatibility
-purposes but there is no intention to maintain it further and it
-should be migrated away from as your earliest convenience.
+By forking the blocking call into a new process, the main thread may
+continue to run non-blocking, while the blocking call evaluates.
+Mojo::IOLoop::ForkCall manages the forking and will emit an
+event (or execute a callback) when the forked process completes.
+Return values are serialized and sent from the child to the parent
+via an appropriate pipe for your platform.
 
-Though there is no intention of removing it from CPAN in the future
-it should be treated as deprecated and the metadata will mark it
-as such. It will receive no no-security-related changes going
-forward.
+Deprecated! Use Mojo::IOLoop::Subprocess instead.
