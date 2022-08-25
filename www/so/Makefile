@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2022/08/22 18:18:44 pin Exp $
+# $NetBSD: Makefile,v 1.8 2022/08/25 09:50:20 pin Exp $
 
-DISTNAME=	so-0.4.8
+DISTNAME=	so-0.4.9
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=samtay/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
