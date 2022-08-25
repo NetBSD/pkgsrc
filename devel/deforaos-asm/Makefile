@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2022/06/09 07:44:49 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2022/08/25 07:00:13 khorben Exp $
 
 DISTNAME=	Asm-0.2.6
 PKGNAME=	deforaos-asm-0.2.6
@@ -10,6 +10,8 @@ MAINTAINER=	khorben@defora.org
 HOMEPAGE=	https://www.defora.org/
 COMMENT=	DeforaOS (dis)assembly framework
 LICENSE=	gnu-lgpl-v3
+
+USE_TOOLS+=	pkg-config
 
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
