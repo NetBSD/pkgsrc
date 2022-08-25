@@ -1,0 +1,7 @@
+ScaLAPACK, or Scalable LAPACK, is a library of high performance linear
+algebra routines for distributed memory computers supporting MPI.
+
+The complete ScaLAPACK package is freely available on netlib and
+can be obtained via the World Wide Web or anonymous ftp.
+
+    http://www.netlib.org/scalapack/
