@@ -1,4 +1,4 @@
-# $NetBSD: __init__.py,v 1.1 2022/07/16 08:59:39 rillig Exp $
+# $NetBSD: __init__.py,v 1.2 2022/08/25 19:51:59 rillig Exp $
 #
 # This is a drop-in replacement for the setuptools Python module. Instead
 # of actually searching for the dependencies, it extracts the dependency
@@ -25,6 +25,10 @@ def setup(**kwargs):
 def find_packages(where='.', exclude=(), include=('*',)):
     return []
 
+
+# used by pkgsrc package www/py-pook 1.0.2
+class Command:
+    pass
 
 # used by pkgsrc package devel/py-pysha3 1.0.2
 # used by pkgsrc package wip/py-torch 1.12.0
