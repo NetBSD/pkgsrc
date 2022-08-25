@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/01/16 08:44:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/08/25 11:14:51 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -25,15 +25,24 @@ ${PYSITELIB}/python_utils/converters.pyo
 ${PYSITELIB}/python_utils/decorators.py
 ${PYSITELIB}/python_utils/decorators.pyc
 ${PYSITELIB}/python_utils/decorators.pyo
+${PYSITELIB}/python_utils/exceptions.py
+${PYSITELIB}/python_utils/exceptions.pyc
+${PYSITELIB}/python_utils/exceptions.pyo
 ${PYSITELIB}/python_utils/formatters.py
 ${PYSITELIB}/python_utils/formatters.pyc
 ${PYSITELIB}/python_utils/formatters.pyo
+${PYSITELIB}/python_utils/generators.py
+${PYSITELIB}/python_utils/generators.pyc
+${PYSITELIB}/python_utils/generators.pyo
 ${PYSITELIB}/python_utils/import_.py
 ${PYSITELIB}/python_utils/import_.pyc
 ${PYSITELIB}/python_utils/import_.pyo
 ${PYSITELIB}/python_utils/logger.py
 ${PYSITELIB}/python_utils/logger.pyc
 ${PYSITELIB}/python_utils/logger.pyo
+${PYSITELIB}/python_utils/loguru.py
+${PYSITELIB}/python_utils/loguru.pyc
+${PYSITELIB}/python_utils/loguru.pyo
 ${PYSITELIB}/python_utils/terminal.py
 ${PYSITELIB}/python_utils/terminal.pyc
 ${PYSITELIB}/python_utils/terminal.pyo
