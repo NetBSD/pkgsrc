@@ -1,0 +1,15 @@
+$NetBSD: patch-ompi_mca_io_romio321_romio_configure,v 1.1 2022/08/25 22:09:14 thor Exp $
+
+# POSIX sh compat
+
+--- ompi/mca/io/romio321/romio/configure.orig	2019-02-05 14:00:57.202743253 +0000
++++ ompi/mca/io/romio321/romio/configure
+@@ -22997,7 +22997,7 @@ if test "${with_aio_lite+set}" = set; th
+   withval=$with_aio_lite; with_aiolite=yes
+ fi
+ 
+-if test "x$with_aiolite" == xyes; then :
++if test "x$with_aiolite" = xyes; then :
+   { $as_echo "$as_me:${as_lineno-$LINENO}: checking for lio_listio in -laio-lite" >&5
+ $as_echo_n "checking for lio_listio in -laio-lite... " >&6; }
+ if ${ac_cv_lib_aio_lite_lio_listio+:} false; then :
