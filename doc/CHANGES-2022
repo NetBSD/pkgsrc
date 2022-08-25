@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4054 2022/08/25 00:06:41 gutteridge Exp $
+$NetBSD: CHANGES-2022,v 1.4055 2022/08/25 01:48:30 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5924,3 +5924,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated filesystems/fuse-sshfs to 3.7.3 [wiz 2022-08-24]
 	Updated www/webkit-gtk to 2.36.7 [leot 2022-08-24]
 	Updated x11/xfce4-tumbler to 4.16.1 [gutteridge 2022-08-25]
+	Updated www/ruby-sawyer to 0.9.1 [taca 2022-08-25]
