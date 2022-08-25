@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/08/25 10:26:13 abs Exp $
+
+BLAKE2s (Mojo-IOLoop-Delay-8.76.tar.gz) = c4aea377c951643217e1a41f089c9cce1e968199ec9fc23cfe339a061a422dec
+SHA512 (Mojo-IOLoop-Delay-8.76.tar.gz) = b0cb621dca157fafcbaf8a5c57b6e94c3d80f804a3e708c1accbbf35ada636ed929b33382f0ce3f018cb02ca472b8739dbbca28dc3caddca0cc762363a04bd78
+Size (Mojo-IOLoop-Delay-8.76.tar.gz) = 8886 bytes
