@@ -1,4 +1,4 @@
-# $NetBSD: __init__.py,v 1.1 2022/07/16 08:59:39 rillig Exp $
+# $NetBSD: __init__.py,v 1.2 2022/08/25 19:56:07 rillig Exp $
 #
 # This is a drop-in replacement for the distutils Python module. Instead
 # of actually searching for the dependencies, it extracts the dependency
