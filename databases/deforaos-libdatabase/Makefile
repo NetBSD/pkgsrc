@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2022/06/07 07:44:24 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2022/08/25 03:05:38 khorben Exp $
 
 DISTNAME=	libDatabase-0.0.2
 PKGNAME=	deforaos-libdatabase-0.0.2
@@ -10,6 +10,8 @@ MAINTAINER=	khorben@defora.org
 HOMEPAGE=	https://www.defora.org/
 COMMENT=	DeforaOS libDatabase
 LICENSE=	gnu-gpl-v3
+
+USE_TOOLS+=	pkg-config
 
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 MAKE_FLAGS+=	PREFIX=${PREFIX}
