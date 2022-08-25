@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2022/06/07 07:37:58 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2022/08/25 03:01:32 khorben Exp $
 
 DISTNAME=	CPP-0.0.6
 PKGNAME=	deforaos-cpp-0.0.6
@@ -10,6 +10,8 @@ MAINTAINER=	khorben@defora.org
 HOMEPAGE=	https://www.defora.org/
 COMMENT=	DeforaOS C code pre-processing library
 LICENSE=	gnu-lgpl-v3
+
+USE_TOOLS+=	pkg-config
 
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
