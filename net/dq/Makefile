@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2022/01/27 15:31:09 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2022/08/25 17:59:08 schmonz Exp $
 
-GITHUB_PROJECT=		dq
-GITHUB_TAG=		20220101
 DISTNAME=		${GITHUB_PROJECT}
 PKGNAME=		${GITHUB_PROJECT}-${GITHUB_TAG}
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GITHUB:=janmojzis/}
+GITHUB_PROJECT=		dq
+GITHUB_TAG=		20220822
 
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		https://github.com/janmojzis/dq/
@@ -14,14 +14,15 @@ LICENSE=		public-domain
 
 DEPENDS+=		daemontools-[0-9]*:../../sysutils/daemontools
 
-DJB_MAKE_TARGETS=	no
-BUILD_TARGET=		compile
-
 SUBST_CLASSES+=		etc
 SUBST_STAGE.etc=	do-configure
-SUBST_FILES.etc=	dq/dns_rcrw.c dq/dq.c man/dq.1
+SUBST_FILES.etc=	dns_rcrw.c dq.c man/dq.1
 SUBST_SED.etc=		-e 's|/etc/dnsrewrite|${PKG_SYSCONFBASE}/dnsrewrite|g'
-SUBST_MESSAGE.etc=	Fixing prefix.
+
+SUBST_CLASSES+=		prefix
+SUBST_STAGE.prefix=	do-configure
+SUBST_FILES.prefix=	Makefile
+SUBST_VARS.prefix=	PREFIX
 
 EGDIR=			share/examples/${PKGBASE}
 INSTALLATION_DIRS=	${EGDIR}
@@ -38,14 +39,17 @@ RCD_SCRIPTS=		dqcache
 FILES_SUBST+=		DQCACHE_USER=${DQCACHE_USER:Q}
 FILES_SUBST+=		PKGNAME=${PKGNAME:Q}
 
-post-configure:
-	${RUN}cd ${DJB_CONFIG_DIR}; \
-	[ -f conf-sbin ] && ${ECHO} ${DJB_CONFIG_PREFIX}/sbin > conf-sbin
+INSTALLATION_DIRS+=	bin sbin man/man1 man/man8
 
 post-install:
+	for i in ${WRKSRC}/man/dq*.1; do \
+		${INSTALL_MAN} $$i ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/; \
+	done
+	for i in ${WRKSRC}/man/dq*.8; do \
+		${INSTALL_MAN} $$i ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/; \
+	done
 	for i in examples.md dnscurveroots.global; do \
 		${INSTALL_DATA} ${FILESDIR}/$$i ${DESTDIR}${PREFIX}/${EGDIR}/; \
 	done
 
-.include "../../mk/djbware.mk"
 .include "../../mk/bsd.pkg.mk"
