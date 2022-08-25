@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2022/08/25 22:58:00 thor Exp $
+lib/cmake/${PKGNAME}/scalapack-config-version.cmake
+lib/cmake/${PKGNAME}/scalapack-config.cmake
+lib/cmake/${PKGNAME}/scalapack-targets-noconfig.cmake
+lib/cmake/${PKGNAME}/scalapack-targets.cmake
+lib/libscalapack.so
+lib/pkgconfig/scalapack.pc
