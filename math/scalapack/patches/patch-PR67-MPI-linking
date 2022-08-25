@@ -1,0 +1,418 @@
+$NetBSD: patch-PR67-MPI-linking,v 1.1 2022/08/25 22:58:01 thor Exp $
+
+This includes upstream PR67 and the version fix, to be removed
+on update to next upstream release after 2.2.0. It modifies several
+files, as it would not make sense to have lots of separate patches
+for this one thing.
+
+diff -ru ../scalapack-2.2.0/BLACS/CMakeLists.txt ./BLACS/CMakeLists.txt
+--- ../scalapack-2.2.0/BLACS/CMakeLists.txt	2021-10-12 21:09:12.000000000 +0200
++++ ./BLACS/CMakeLists.txt	2022-07-19 10:33:55.051376486 +0200
+@@ -1,4 +1,4 @@
+ add_subdirectory(SRC)
+-if(${SCALAPACK_BUILD_TESTING})
++if(${SCALAPACK_BUILD_TESTS})
+   add_subdirectory(TESTING)
+ endif()
+diff -ru ../scalapack-2.2.0/BLACS/TESTING/CMakeLists.txt ./BLACS/TESTING/CMakeLists.txt
+--- ../scalapack-2.2.0/BLACS/TESTING/CMakeLists.txt	2021-10-12 21:09:12.000000000 +0200
++++ ./BLACS/TESTING/CMakeLists.txt	2022-07-19 16:20:28.028299214 +0200
+@@ -6,7 +6,7 @@
+ endif()
+ 
+ add_executable(xFbtest ${FTestObj})
+-target_link_libraries(xFbtest scalapack)
++target_link_libraries(xFbtest scalapack MPI::MPI_Fortran)
+ 
+ set(CTestObj
+    Cbt.c)
+@@ -17,7 +17,7 @@
+    )
+ 
+ add_executable(xCbtest ${CTestObj} ${FTestObj})
+-target_link_libraries(xCbtest scalapack)
++target_link_libraries(xCbtest scalapack MPI::MPI_Fortran)
+ 
+ file(COPY bsbr.dat DESTINATION ${SCALAPACK_BINARY_DIR}/BLACS/TESTING)
+ file(COPY bt.dat DESTINATION ${SCALAPACK_BINARY_DIR}/BLACS/TESTING)
+Only in ./BLACS/TESTING: CMakeLists.txt.orig
+diff -ru ../scalapack-2.2.0/CMakeLists.txt ./CMakeLists.txt
+--- ../scalapack-2.2.0/CMakeLists.txt	2021-10-12 21:09:12.000000000 +0200
++++ ./CMakeLists.txt	2022-07-20 16:30:35.443344793 +0200
+@@ -1,4 +1,4 @@
+-cmake_minimum_required(VERSION 3.2)
++cmake_minimum_required(VERSION 3.9)
+ project(SCALAPACK C Fortran)
+ # Configure the warning and code coverage suppression file
+ configure_file(
+@@ -27,8 +27,7 @@
+ find_package(MPI)
+ if (MPI_FOUND)
+    message(STATUS "Found MPI_LIBRARY : ${MPI_FOUND} ")
+-   INCLUDE_DIRECTORIES(${MPI_INCLUDE_PATH})
+-
++   
+    find_program(MPI_C_COMPILER
+       NAMES mpicc
+       HINTS "${MPI_BASE_DIR}"
+@@ -232,14 +231,14 @@
+ 
+ if (UNIX)
+    add_library(scalapack ${blacs} ${tools} ${tools-C} ${extra_lapack} ${pblas} ${pblas-F} ${ptzblas} ${ptools} ${pbblas} ${redist} ${src} ${src-C})
+-   target_link_libraries( scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
++   target_link_libraries( scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_C)
+    scalapack_install_library(scalapack)
+ else (UNIX) # Need to separate Fortran and C Code
+    OPTION(BUILD_SHARED_LIBS "Build shared libraries" ON )
+    add_library(scalapack ${blacs} ${tools-C} ${pblas} ${ptools} ${redist} ${src-C})
+-   target_link_libraries( scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
++   target_link_libraries( scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_C)
+    add_library(scalapack-F ${pblas-F} ${pbblas} ${ptzblas} ${tools} ${src} ${extra_lapack} )
+-   target_link_libraries( scalapack-F ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
++   target_link_libraries( scalapack-F ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
+    scalapack_install_library(scalapack)
+    scalapack_install_library(scalapack-F)
+ endif (UNIX)
+@@ -255,9 +254,9 @@
+ SET(CPACK_PACKAGE_NAME "ScaLAPACK")
+ SET(CPACK_PACKAGE_VENDOR "University of Tennessee, Univ. of California Berkeley, Univ. of Colorado Denver and NAG Ltd")
+ SET(CPACK_PACKAGE_DESCRIPTION_SUMMARY "ScaLAPACK- Linear Algebra Package")
+-set(SCALAPACK_VERSION 2.1.0)
++set(SCALAPACK_VERSION 2.2.0)
+ set(CPACK_PACKAGE_VERSION_MAJOR 2)
+-set(CPACK_PACKAGE_VERSION_MINOR 1)
++set(CPACK_PACKAGE_VERSION_MINOR 2)
+ set(CPACK_PACKAGE_VERSION_PATCH 0)
+ set(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_CURRENT_SOURCE_DIR}/LICENSE")
+ SET(CPACK_PACKAGE_INSTALL_DIRECTORY "SCALAPACK")
+Only in .: CMakeLists.txt.orig
+diff -ru ../scalapack-2.2.0/PBLAS/CMakeLists.txt ./PBLAS/CMakeLists.txt
+--- ../scalapack-2.2.0/PBLAS/CMakeLists.txt	2021-10-12 21:09:12.000000000 +0200
++++ ./PBLAS/CMakeLists.txt	2022-07-19 10:33:55.052376486 +0200
+@@ -1,5 +1,5 @@
+ add_subdirectory(SRC)
+-if(${SCALAPACK_BUILD_TESTING})
++if(${SCALAPACK_BUILD_TESTS})
+   add_subdirectory(TESTING)
+   add_subdirectory(TIMING)
+ endif()
+diff -ru ../scalapack-2.2.0/PBLAS/TESTING/CMakeLists.txt ./PBLAS/TESTING/CMakeLists.txt
+--- ../scalapack-2.2.0/PBLAS/TESTING/CMakeLists.txt	2021-10-12 21:09:12.000000000 +0200
++++ ./PBLAS/TESTING/CMakeLists.txt	2022-07-19 16:21:42.412306092 +0200
+@@ -44,20 +44,20 @@
+ add_executable(cpb3tst pcblas3tst.f ${cpbtcom})
+ add_executable(zpb3tst pzblas3tst.f ${zpbtcom})
+ 
+-target_link_libraries(spb1tst scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(dpb1tst scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(cpb1tst scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(zpb1tst scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
++target_link_libraries(spb1tst scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(dpb1tst scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(cpb1tst scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(zpb1tst scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
+ 
+-target_link_libraries(spb2tst scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(dpb2tst scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(cpb2tst scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(zpb2tst scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
++target_link_libraries(spb2tst scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(dpb2tst scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(cpb2tst scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(zpb2tst scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
+ 
+-target_link_libraries(spb3tst scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(dpb3tst scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(cpb3tst scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(zpb3tst scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
++target_link_libraries(spb3tst scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(dpb3tst scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(cpb3tst scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(zpb3tst scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
+ 
+ add_test(spb1tst ${MPIEXEC} ${MPIEXEC_NUMPROC_FLAG} 4 ./spb1tst)
+ add_test(dpb1tst ${MPIEXEC} ${MPIEXEC_NUMPROC_FLAG} 4 ./dpb1tst)
+Only in ./PBLAS/TESTING: CMakeLists.txt.orig
+diff -ru ../scalapack-2.2.0/PBLAS/TIMING/CMakeLists.txt ./PBLAS/TIMING/CMakeLists.txt
+--- ../scalapack-2.2.0/PBLAS/TIMING/CMakeLists.txt	2021-10-12 21:09:12.000000000 +0200
++++ ./PBLAS/TIMING/CMakeLists.txt	2022-07-19 16:22:31.291310612 +0200
+@@ -44,20 +44,20 @@
+ add_executable(cpb3tim pcblas3tim.f ${cpbtcom})
+ add_executable(zpb3tim pzblas3tim.f ${zpbtcom})
+ 
+-target_link_libraries(spb1tim scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(dpb1tim scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(cpb1tim scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(zpb1tim scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
++target_link_libraries(spb1tim scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(dpb1tim scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(cpb1tim scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(zpb1tim scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
+ 
+-target_link_libraries(spb2tim scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(dpb2tim scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(cpb2tim scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(zpb2tim scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
++target_link_libraries(spb2tim scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(dpb2tim scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(cpb2tim scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(zpb2tim scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
+ 
+-target_link_libraries(spb3tim scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(dpb3tim scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(cpb3tim scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(zpb3tim scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
++target_link_libraries(spb3tim scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(dpb3tim scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(cpb3tim scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(zpb3tim scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
+ 
+ add_test(spb1tim ${MPIEXEC} ${MPIEXEC_NUMPROC_FLAG} 4 ./spb1tim)
+ add_test(dpb1tim ${MPIEXEC} ${MPIEXEC_NUMPROC_FLAG} 4 ./dpb1tim)
+Only in ./PBLAS/TIMING: CMakeLists.txt.orig
+diff -ru ../scalapack-2.2.0/REDIST/CMakeLists.txt ./REDIST/CMakeLists.txt
+--- ../scalapack-2.2.0/REDIST/CMakeLists.txt	2021-10-12 21:09:12.000000000 +0200
++++ ./REDIST/CMakeLists.txt	2022-07-19 10:33:55.052376486 +0200
+@@ -1,4 +1,4 @@
+ add_subdirectory(SRC)
+-if(${SCALAPACK_BUILD_TESTING})
++if(${SCALAPACK_BUILD_TESTS})
+   add_subdirectory(TESTING)
+ endif()
+diff -ru ../scalapack-2.2.0/REDIST/TESTING/CMakeLists.txt ./REDIST/TESTING/CMakeLists.txt
+--- ../scalapack-2.2.0/REDIST/TESTING/CMakeLists.txt	2021-10-12 21:09:12.000000000 +0200
++++ ./REDIST/TESTING/CMakeLists.txt	2022-07-19 16:14:17.879264986 +0200
+@@ -15,17 +15,17 @@
+ add_executable(xctrmr pctrmrdrv.c)
+ add_executable(xztrmr pztrmrdrv.c)
+ 
+-target_link_libraries(xigemr scalapack )
+-target_link_libraries(xsgemr scalapack )
+-target_link_libraries(xdgemr scalapack )
+-target_link_libraries(xcgemr scalapack )
+-target_link_libraries(xzgemr scalapack )
++target_link_libraries(xigemr scalapack MPI::MPI_Fortran )
++target_link_libraries(xsgemr scalapack MPI::MPI_Fortran )
++target_link_libraries(xdgemr scalapack MPI::MPI_Fortran )
++target_link_libraries(xcgemr scalapack MPI::MPI_Fortran )
++target_link_libraries(xzgemr scalapack MPI::MPI_Fortran )
+ 
+-target_link_libraries(xitrmr scalapack )
+-target_link_libraries(xstrmr scalapack )
+-target_link_libraries(xdtrmr scalapack )
+-target_link_libraries(xctrmr scalapack )
+-target_link_libraries(xztrmr scalapack )
++target_link_libraries(xitrmr scalapack MPI::MPI_Fortran )
++target_link_libraries(xstrmr scalapack MPI::MPI_Fortran )
++target_link_libraries(xdtrmr scalapack MPI::MPI_Fortran )
++target_link_libraries(xctrmr scalapack MPI::MPI_Fortran )
++target_link_libraries(xztrmr scalapack MPI::MPI_Fortran )
+ 
+ #add_test(xigemr ${MPIEXEC} ${MPIEXEC_NUMPROC_FLAG} 4 ./xigemr)
+ #add_test(xsgemr ${MPIEXEC} ${MPIEXEC_NUMPROC_FLAG} 4 ./xsgemr)
+Only in ./REDIST/TESTING: CMakeLists.txt.orig
+diff -ru ../scalapack-2.2.0/TESTING/EIG/CMakeLists.txt ./TESTING/EIG/CMakeLists.txt
+--- ../scalapack-2.2.0/TESTING/EIG/CMakeLists.txt	2021-10-12 21:09:12.000000000 +0200
++++ ./TESTING/EIG/CMakeLists.txt	2022-07-19 16:19:40.461294815 +0200
+@@ -53,49 +53,49 @@
+ add_executable(xshseqr pshseqrdriver.f psmatgen2.f ${cmatgen})
+ add_executable(xdhseqr pdhseqrdriver.f pdmatgen2.f ${cmatgen})
+ 
+-target_link_libraries(xsbrd scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(xdbrd scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(xcbrd scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(xzbrd scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-
+-target_link_libraries(xshrd scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(xdhrd scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(xchrd scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(xzhrd scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-
+-target_link_libraries(xstrd scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(xdtrd scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(xctrd scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(xztrd scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-
+-target_link_libraries(xssvd scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(xdsvd scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-
+-target_link_libraries(xssep scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(xdsep scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(xcsep scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(xzsep scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-
+-target_link_libraries(xsgsep scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(xdgsep scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(xcgsep scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(xzgsep scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-
+-target_link_libraries(xsnep scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(xdnep scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(xcnep scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(xznep scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-
+-target_link_libraries(xcevc scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(xzevc scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-
+-target_link_libraries(xssyevr scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(xdsyevr scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(xcheevr scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(xzheevr scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
++target_link_libraries(xsbrd scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(xdbrd scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(xcbrd scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(xzbrd scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++
++target_link_libraries(xshrd scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(xdhrd scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(xchrd scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(xzhrd scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++
++target_link_libraries(xstrd scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(xdtrd scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(xctrd scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(xztrd scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++
++target_link_libraries(xssvd scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(xdsvd scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++
++target_link_libraries(xssep scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(xdsep scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(xcsep scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(xzsep scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++
++target_link_libraries(xsgsep scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(xdgsep scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(xcgsep scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(xzgsep scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++
++target_link_libraries(xsnep scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(xdnep scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(xcnep scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(xznep scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++
++target_link_libraries(xcevc scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(xzevc scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++
++target_link_libraries(xssyevr scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(xdsyevr scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(xcheevr scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(xzheevr scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
+ 
+-target_link_libraries(xshseqr scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(xdhseqr scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
++target_link_libraries(xshseqr scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(xdhseqr scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
+ 
+ if ("${CMAKE_Fortran_COMPILER_ID}" STREQUAL "GNU" AND CMAKE_Fortran_COMPILER_VERSION VERSION_GREATER_EQUAL 10)
+     set( CMAKE_Fortran_FLAGS "${CMAKE_Fortran_FLAGS} -std=legacy" )  # local to this directory
+Only in ./TESTING/EIG: CMakeLists.txt.orig
+diff -ru ../scalapack-2.2.0/TESTING/LIN/CMakeLists.txt ./TESTING/LIN/CMakeLists.txt
+--- ../scalapack-2.2.0/TESTING/LIN/CMakeLists.txt	2021-10-12 21:09:12.000000000 +0200
++++ ./TESTING/LIN/CMakeLists.txt	2022-07-19 16:16:53.702279395 +0200
+@@ -61,55 +61,55 @@
+ add_executable(xzls pzlsdriver.f pzlsinfo.f pzqrt13.f pzqrt14.f pzqrt16.f pzqrt17.f ${zmatgen})
+ 
+ 
+-target_link_libraries(xslu scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(xdlu scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(xclu scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(xzlu scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-
+-target_link_libraries(xsdblu scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(xddblu scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(xcdblu scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(xzdblu scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-
+-target_link_libraries(xsdtlu scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(xddtlu scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(xcdtlu scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(xzdtlu scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-
+-target_link_libraries(xsgblu scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(xdgblu scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(xcgblu scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(xzgblu scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-
+-target_link_libraries(xsllt scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(xdllt scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(xcllt scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(xzllt scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-
+-target_link_libraries(xspbllt scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(xdpbllt scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(xcpbllt scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(xzpbllt scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-
+-target_link_libraries(xsptllt scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(xdptllt scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(xcptllt scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(xzptllt scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-
+-target_link_libraries(xsinv scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(xdinv scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(xcinv scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(xzinv scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-
+-target_link_libraries(xsqr scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(xdqr scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(xcqr scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(xzqr scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-
+-target_link_libraries(xsls scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(xdls scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(xcls scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-target_link_libraries(xzls scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
++target_link_libraries(xslu scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(xdlu scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(xclu scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(xzlu scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++
++target_link_libraries(xsdblu scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(xddblu scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(xcdblu scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(xzdblu scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++
++target_link_libraries(xsdtlu scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(xddtlu scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(xcdtlu scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(xzdtlu scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++
++target_link_libraries(xsgblu scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(xdgblu scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(xcgblu scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(xzgblu scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++
++target_link_libraries(xsllt scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(xdllt scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(xcllt scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(xzllt scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++
++target_link_libraries(xspbllt scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(xdpbllt scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(xcpbllt scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(xzpbllt scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++
++target_link_libraries(xsptllt scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(xdptllt scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(xcptllt scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(xzptllt scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++
++target_link_libraries(xsinv scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(xdinv scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(xcinv scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(xzinv scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++
++target_link_libraries(xsqr scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(xdqr scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(xcqr scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(xzqr scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++
++target_link_libraries(xsls scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(xdls scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(xcls scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
++target_link_libraries(xzls scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} MPI::MPI_Fortran)
+ 
+ if ("${CMAKE_Fortran_COMPILER_ID}" STREQUAL "GNU" AND CMAKE_Fortran_COMPILER_VERSION VERSION_GREATER_EQUAL 10)
+     set( CMAKE_Fortran_FLAGS "${CMAKE_Fortran_FLAGS} -std=legacy" )  # local to this directory
+Only in ./TESTING/LIN: CMakeLists.txt.orig
