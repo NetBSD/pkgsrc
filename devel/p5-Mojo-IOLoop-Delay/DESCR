@@ -1,0 +1,13 @@
+Mojo::IOLoop::Delay adds flow-control helpers to Mojo::Promise,
+which can help you avoid deep nested closures that often result
+from continuation-passing style.
+
+This module has been extracted from Mojolicious and was removed
+from it at the 9.0 release. It is kept here for backwards compatibility
+purposes but there is no intention to maintain it further and it
+should be migrated away from as your earliest convenience.
+
+Though there is no intention of removing it from CPAN in the future
+it should be treated as deprecated and the metadata will mark it
+as such. It will receive no no-security-related changes going
+forward.
