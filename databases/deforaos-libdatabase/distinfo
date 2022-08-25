@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2022/08/25 04:33:30 khorben Exp $
+$NetBSD: distinfo,v 1.10 2022/08/25 04:39:36 khorben Exp $
 
-BLAKE2s (libDatabase-0.0.3.tar.gz) = cc207bce3d7918aa736d450ceea9c17e484b01e3ff02efdd2534134698289382
-SHA512 (libDatabase-0.0.3.tar.gz) = d084c0c3a722f9357972e00d7bcdf01e174dde061be69377d107e7d79b9fec0821af9cb01a95d60f6f97cfbee510569478e92ac54f8180d0b81b8432798a258e
-Size (libDatabase-0.0.3.tar.gz) = 39659 bytes
+BLAKE2s (libDatabase-0.1.0.tar.gz) = 4a24e883886273d2f7471f3dce35c4b6eaae89fa2c74632d79f98d14b58f2910
+SHA512 (libDatabase-0.1.0.tar.gz) = 4cb49ad93ef8b7e3e308d11fd49fa61f89e09b69b3a5b160098c3b4ebfbc281d4dd8b060f57cbd9ccf75cbaf53e9264688cc05733ed16ac9a251baa9760dca0b
+Size (libDatabase-0.1.0.tar.gz) = 28175 bytes

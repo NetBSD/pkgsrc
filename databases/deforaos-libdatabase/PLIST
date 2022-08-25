@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2022/08/25 04:33:30 khorben Exp $
+@comment $NetBSD: PLIST,v 1.9 2022/08/25 04:39:36 khorben Exp $
 bin/database
 include/Database.h
 include/Database/database.h
@@ -14,7 +14,10 @@ lib/libDatabase.so
 lib/libDatabase.so.0
 lib/libDatabase.so.0.0
 lib/pkgconfig/libDatabase.pc
+man/html1/database.html
+man/man1/database.1
 share/doc/libDatabase/COPYING
+share/doc/libDatabase/README.md
 share/gtk-doc/html/libDatabase/api-index-full.html
 share/gtk-doc/html/libDatabase/ch01.html
 share/gtk-doc/html/libDatabase/deprecated-api-index.html
@@ -29,5 +32,3 @@ share/gtk-doc/html/libDatabase/right.png
 share/gtk-doc/html/libDatabase/style.css
 share/gtk-doc/html/libDatabase/up-insensitive.png
 share/gtk-doc/html/libDatabase/up.png
-share/man/html1/database.html
-share/man/man1/database.1

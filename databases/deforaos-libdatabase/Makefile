@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.37 2022/08/25 04:33:30 khorben Exp $
+# $NetBSD: Makefile,v 1.38 2022/08/25 04:39:36 khorben Exp $
 
 DISTNAME=	libDatabase-${PKGVERSION_NOREV}
-PKGNAME=	deforaos-libdatabase-0.0.3
+PKGNAME=	deforaos-libdatabase-0.1.0
 CATEGORIES=	databases
 MASTER_SITES=	https://ftp.defora.org/pub/DeforaOS/Apps/Database/src/libDatabase/
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	https://www.defora.org/
 COMMENT=	DeforaOS libDatabase
-LICENSE=	gnu-gpl-v3
+LICENSE=	2-clause-bsd
 
 USE_TOOLS+=	pkg-config
 
@@ -16,6 +16,20 @@ MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
 MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
+AUTO_MKDIRS=	yes
+
+#TEST_TARGET=	tests
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${PKGMANDIR} != "share/man"
+post-install:
+	${MV} ${DESTDIR}${PREFIX}/share/man/html1/database.html ${DESTDIR}${PREFIX}/${PKGMANDIR}/html1/database.html
+	${MV} ${DESTDIR}${PREFIX}/share/man/man1/database.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/database.1
+	${RMDIR} ${DESTDIR}${PREFIX}/share/man/html1
+	${RMDIR} ${DESTDIR}${PREFIX}/share/man/man1
+	${RMDIR} ${DESTDIR}${PREFIX}/share/man
+.endif
 
 .include "../../devel/deforaos-configure/deforaos-configure.mk"
 .include "../../devel/deforaos-libsystem/buildlink3.mk"
