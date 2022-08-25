@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3783 2022/08/24 12:52:52 wiz Exp $
+# $NetBSD: Makefile,v 1.3784 2022/08/25 10:22:09 abs Exp $
 #
 
 COMMENT=	Development utilities
@@ -1740,6 +1740,7 @@ SUBDIR+=	p5-Module-Starter-PBP
 SUBDIR+=	p5-Module-Util
 SUBDIR+=	p5-Module-Versions
 SUBDIR+=	p5-Module-Versions-Report
+SUBDIR+=	p5-Mojo-IOLoop-Delay
 SUBDIR+=	p5-Mojo-IOLoop-ForkCall
 SUBDIR+=	p5-Moo
 SUBDIR+=	p5-MooX-ClassAttribute
