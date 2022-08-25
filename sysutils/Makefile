@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1012 2022/07/31 12:29:26 wiz Exp $
+# $NetBSD: Makefile,v 1.1013 2022/08/25 11:12:32 adam Exp $
 #
 
 COMMENT=	System utilities
@@ -562,6 +562,7 @@ SUBDIR+=	py-google-compute-engine
 SUBDIR+=	py-invoke
 SUBDIR+=	py-jeepney
 SUBDIR+=	py-kazoo
+SUBDIR+=	py-loguru
 SUBDIR+=	py-magic
 SUBDIR+=	py-notify
 SUBDIR+=	py-notify2
