@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4064 2022/08/25 18:12:41 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.4065 2022/08/25 20:20:02 leot Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5937,3 +5937,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/dq to 20220822 [schmonz 2022-08-25]
 	Updated security/tlswrapper to 20220814 [schmonz 2022-08-25]
 	Updated devel/py-approvaltests to 5.6.0 [schmonz 2022-08-25]
+	Updated devel/py-cookiecutter to 2.1.1 [leot 2022-08-25]
