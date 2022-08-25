@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.15 2021/11/30 14:25:34 gutteridge Exp $
+$NetBSD: distinfo,v 1.16 2022/08/25 00:06:03 gutteridge Exp $
 
-BLAKE2s (tumbler-4.16.0.tar.bz2) = 3d16615fec8434213295ffc4708eebf1f9f21598812de151f3f4282a1bf677e2
-SHA512 (tumbler-4.16.0.tar.bz2) = 86b30a1b3a8b668bfd6cecb39bbfc642793d63055b0f3dc32e4e275082d086a9c011a98511938b7489099f35458613b3df24224ff48e4940f42ff552a14fa9d2
-Size (tumbler-4.16.0.tar.bz2) = 607640 bytes
-SHA1 (patch-configure) = 69055bd722183258354f5277cd3796994f7940a5
+BLAKE2s (tumbler-4.16.1.tar.bz2) = ad32538cb1c8359eb6eee97dd64e884a1e75f93acc491a13f4eddebb202214dc
+SHA512 (tumbler-4.16.1.tar.bz2) = 483ed34d41349641ad9116655d1efbaa01352316f8ff4780903fd3f21aacea7c42bc80d7710e7ba0c2b9a79d0f971ce7210a03d5acb6c8b6b0750316665a8154
+Size (tumbler-4.16.1.tar.bz2) = 593122 bytes
 SHA1 (patch-tumblerd_Makefile.in) = be057d51fa064610e31f9ae883f3d3ec992e0798
