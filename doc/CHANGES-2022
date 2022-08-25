@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4055 2022/08/25 01:48:30 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4056 2022/08/25 04:33:56 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5925,3 +5925,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/webkit-gtk to 2.36.7 [leot 2022-08-24]
 	Updated x11/xfce4-tumbler to 4.16.1 [gutteridge 2022-08-25]
 	Updated www/ruby-sawyer to 0.9.1 [taca 2022-08-25]
+	Updated databases/deforaos-libdatabase to 0.0.3 [khorben 2022-08-25]
