@@ -1,4 +1,4 @@
-# $NetBSD: dist.py,v 1.1 2022/07/16 08:59:39 rillig Exp $
+# $NetBSD: dist.py,v 1.2 2022/08/25 19:56:07 rillig Exp $
 #
 # Fake implementation for setuptools.dist.
 
