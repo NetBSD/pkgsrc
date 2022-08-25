@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4058 2022/08/25 09:50:53 pin Exp $
+$NetBSD: CHANGES-2022,v 1.4059 2022/08/25 09:52:55 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5928,3 +5928,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/deforaos-libdatabase to 0.0.3 [khorben 2022-08-25]
 	Updated databases/deforaos-libdatabase to 0.1.0 [khorben 2022-08-25]
 	Updated www/so to 0.4.9 [pin 2022-08-25]
+	Updated graphics/oculante to 0.6.1 [pin 2022-08-25]
