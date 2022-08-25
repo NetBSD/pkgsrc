@@ -1,11 +1,13 @@
-$NetBSD: distinfo,v 1.29 2021/10/26 11:10:36 nia Exp $
+$NetBSD: distinfo,v 1.30 2022/08/25 21:46:53 thor Exp $
 
-BLAKE2s (mpich-3.2.1.tar.gz) = 7877617cdbac0de4f209427d263b7f449afe0baf5d95ea864be5b8c575448c3b
-SHA512 (mpich-3.2.1.tar.gz) = 659a11cf02302f27eb1db77667dd4c7a4f8008b1d73f5f0f0f28ee6b5d9cca2130bac3d010a132136ba15a25a738ec9cbda67255133aeb42f0d82a2ded23d23d
-Size (mpich-3.2.1.tar.gz) = 11908154 bytes
+BLAKE2s (mpich-3.4.3.tar.gz) = 5d4f3a8e6c80e78e23065a8160c0113c720125074bbaccea32f78b2b3190be36
+SHA512 (mpich-3.4.3.tar.gz) = d8455a3e7150dc720ba8a0660bfbbec364b62729f4a319928bb910644d20ee68d267baf9e9e2c322540a725e41858b416ed5fff001fb1f6aa45d1c08db8dad1a
+Size (mpich-3.4.3.tar.gz) = 32853411 bytes
 SHA1 (patch-Makefile.in) = 7fee6ae5e86943f7ea1b3eef103c5b5b4b66490b
-SHA1 (patch-configure) = 00c5706f825dbadeb544d14ee98a1a27e49d0797
-SHA1 (patch-src_mpi_romio_configure) = a517932dd1af1cc0da889b838fd732a5fb766910
+SHA1 (patch-configure) = 3fd9d0029536c134c2a8e7569ac7867a8264ba09
+SHA1 (patch-modules_libfabric_configure) = 58a60869a1f0e20c341336a69e3dc29a2b7ea7b7
+SHA1 (patch-modules_ucx_configure) = cba7bc2bbd1378015721cd6935cf9adf6ceccfe2
+SHA1 (patch-src_mpi_romio_configure) = 44dc0a5c655a1e45728bf1aad9ed4480b695df71
 SHA1 (patch-src_mpid_ch3_channels_nemesis_include_mpidi_ch3_impl.h) = ec7d063fb22fbfb3fc1ee85197afd6f4c4db22bd
-SHA1 (patch-src_mpid_ch3_channels_nemesis_src_ch3__init.c) = ddc3fe79eecabf81b7b092ccaa91c39fa19b29dc
+SHA1 (patch-src_mpid_ch3_channels_nemesis_src_ch3__init.c) = 7b7947271b7a94a3df91515238216b212344177b
 SHA1 (patch-src_pm_hydra_configure) = 814abcb0c6424ae9a1718c016e5b0a7f3ad85e59

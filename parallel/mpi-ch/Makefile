@@ -1,20 +1,16 @@
-# $NetBSD: Makefile,v 1.98 2022/07/27 10:57:27 gdt Exp $
+# $NetBSD: Makefile,v 1.99 2022/08/25 21:46:53 thor Exp $
 
-DISTNAME=	mpich-3.2.1
-PKGREVISION=	9
+DISTNAME=	mpich-3.4.3
 CATEGORIES=	parallel
 MASTER_SITES=	http://www.mpich.org/static/tarballs/${PKGVERSION_NOREV}/
 
 MAINTAINER=	asau@inbox.ru
 HOMEPAGE=	https://www.mpich.org/
 COMMENT=	Open source MPI, MPI-2, and MPI-3 implementation from Univ. of Chicago
+LICENSE=	0-clause-bsd
 
 CONFLICTS+=	openmpi-[0-9]*
 DEPENDS+=	bash-[0-9]*:../../shells/bash
-
-#MPI_SUBPREFIX=		mpich
-#MPI_PREFIX=		${LOCALBASE}/${MPI_SUBPREFIX}
-MPI_PREFIX=		${LOCALBASE}
 
 OVERRIDE_DIRDEPTH=	3
 
@@ -22,22 +18,23 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		perl:run
 GNU_CONFIGURE=		yes
-GNU_CONFIGURE_PREFIX=	${MPI_PREFIX}
-CONFIGURE_ARGS+=	--datadir=${MPI_PREFIX}/share/${PKGBASE}
-CONFIGURE_ARGS+=	--docdir=${MPI_PREFIX}/share/doc/${PKGBASE}
-CONFIGURE_ARGS+=	--htmldir=${MPI_PREFIX}/share/doc/${PKGBASE}/html
+CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/${PKGBASE}
+CONFIGURE_ARGS+=	--docdir=${PREFIX}/share/doc/${PKGBASE}
+CONFIGURE_ARGS+=	--htmldir=${PREFIX}/share/doc/${PKGBASE}/html
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--with-hwloc-prefix=${BUILDLINK_PREFIX.hwloc}
+# Use internal hwloc until we decided to upgrade to 2.x in pkgsrc.
+#CONFIGURE_ARGS+=	--with-hwloc-prefix=${BUILDLINK_PREFIX.hwloc}
 CONFIGURE_ARGS+=	--with-openpa-prefix=${BUILDLINK_PREFIX.openpa}
 CONFIGURE_ARGS+=	--with-pm=hydra:gforker
+# Future:  --with-device=ch4:ofi or --with-device=ch4:ucx
+# After adding ucx library to pkgsrc, probably.
+CONFIGURE_ARGS+=	--with-device=ch3
 CONFIGURE_ARGS+=	--with-thread-package=posix
 CONFIGURE_ARGS+=	--enable-wrapper-rpath
 
 LDFLAGS+=		-lm
 
 PKG_SYSCONFSUBDIR=	mpich
-
-BUILDLINK_PASSTHRU_RPATHDIRS+=	${MPI_PREFIX}/lib
 
 # FreeBSD 6 hack:
 .include "../../mk/bsd.prefs.mk"
@@ -55,7 +52,8 @@ CHECK_WRKREF_SKIP+=	bin/mpirun
 
 TEST_TARGET=	check
 
-.include "../../parallel/hwloc/buildlink3.mk"
+# Re-enable when at version 2.x.
+#.include "../../parallel/hwloc/buildlink3.mk"
 .include "../../parallel/openpa/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
