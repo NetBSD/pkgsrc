@@ -1,0 +1,31 @@
+$NetBSD: patch-modules_ucx_configure,v 1.1 2022/08/25 21:46:53 thor Exp $
+
+portability fix
+
+--- modules/ucx/configure.orig	2022-08-18 16:47:01.411794685 +0000
++++ modules/ucx/configure
+@@ -20741,21 +20741,21 @@ fi
+      if test "$DX_FLAG_html" = 1; then :
+ 
+ else
+-  if test "x$enable_doxygen_html" == xyes; then :
++  if test "x$enable_doxygen_html" = xyes; then :
+   as_fn_error $? "--enable-doxygen-html was specified, but html tools were not found" "$LINENO" 5
+ fi
+ fi
+      if test "$DX_FLAG_man" = 1; then :
+ 
+ else
+-  if test "x$enable_doxygen_man" == xyes; then :
++  if test "x$enable_doxygen_man" = xyes; then :
+   as_fn_error $? "--enable-doxygen-man was specified, but man tools were not found" "$LINENO" 5
+ fi
+ fi
+      if test "$DX_FLAG_pdf" = 1; then :
+ 
+ else
+-  if test "x$enable_doxygen_pdf" == xyes; then :
++  if test "x$enable_doxygen_pdf" = xyes; then :
+   as_fn_error $? "--enable-doxygen-pdf was specified, but pdf tools were not found" "$LINENO" 5
+ fi
+ fi

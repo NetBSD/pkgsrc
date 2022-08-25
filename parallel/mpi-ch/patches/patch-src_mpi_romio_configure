@@ -1,10 +1,19 @@
-$NetBSD: patch-src_mpi_romio_configure,v 1.1 2017/04/29 18:18:52 adam Exp $
+$NetBSD: patch-src_mpi_romio_configure,v 1.2 2022/08/25 21:46:53 thor Exp $
 
 Portability fix.
 
---- src/mpi/romio/configure.orig	2017-04-28 20:33:04.000000000 +0000
+--- src/mpi/romio/configure.orig	2021-12-16 17:23:19.000000000 +0000
 +++ src/mpi/romio/configure
-@@ -22929,7 +22929,7 @@ if test "${with_aio_lite+set}" = set; th
+@@ -22938,7 +22938,7 @@ fi
+ fi
+ 
+ if test -n "$file_system_daos" ; then
+-    if test "x$DAOS" == xyes ; then
++    if test "x$DAOS" = xyes ; then
+ 
+ $as_echo "#define ROMIO_DAOS 1" >>confdefs.h
+ 
+@@ -24020,7 +24020,7 @@ if test "${with_aio_lite+set}" = set; th
    withval=$with_aio_lite; with_aiolite=yes
  fi
  
