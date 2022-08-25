@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2022/08/24 05:20:19 pin Exp $
+$NetBSD: distinfo,v 1.3 2022/08/25 09:52:30 pin Exp $
 
 BLAKE2s (ab_glyph-0.2.16.crate) = bed0ba08196fcb3f64003e2c8e4171efe9673c92f2aa3349a97f3de3fb81da7b
 SHA512 (ab_glyph-0.2.16.crate) = 8b57a351108c71d4fff0701589d7112b1ef582c56afe3bca7ed144255d3aa02704a1ef9e44ab729db07d22b589b4d4ad30f5a90d1a848a2d0dba895fbab4ffd4
@@ -678,9 +678,9 @@ Size (objc_exception-0.1.2.crate) = 2251 bytes
 BLAKE2s (objc_id-0.1.1.crate) = 1bc76100eb8a059b580ecd9b12111a7055936856bbb9059e7d8f28a3bfb362ef
 SHA512 (objc_id-0.1.1.crate) = ec36fae6f5cefda00f3e44618b3c9fe6ec8f528f70d1a95def6421704bfa128a6e5b4a32e9dd686bf6ff60c4f87fe8094aa5e1c8070bcde58b17fdc06f49f9f5
 Size (objc_id-0.1.1.crate) = 3258 bytes
-BLAKE2s (oculante-0.5.47.tar.gz) = 0659e6602b783cc4128326e11f148a527625cad854feceedfbf3561e06ec0db1
-SHA512 (oculante-0.5.47.tar.gz) = ff70702d5e2b0bc340f2c703127a67c761e86b244c4e88e79306b670c53b32ad460ff36686e973bfae2eb1f8535815ba2f54fb556cdb31c038020243051e2a57
-Size (oculante-0.5.47.tar.gz) = 3835360 bytes
+BLAKE2s (oculante-0.6.1.tar.gz) = 4c025a825ea9432538442562e975c65216b86157bf8a5efebcac4c18d8f662b8
+SHA512 (oculante-0.6.1.tar.gz) = ed457a682825a17c00982338648b325d85763d836ee7bfed4d371b39116093fe6c77b1be76c54d2a64409fda5baa10d85d844709dd7f6ee222be043ce58d636b
+Size (oculante-0.6.1.tar.gz) = 3835404 bytes
 BLAKE2s (once_cell-1.13.1.crate) = ab93c03e004fa9981ac55e51b7e9564477d5765bd107d407a4a27df387a1ca02
 SHA512 (once_cell-1.13.1.crate) = 492831607d12846923107b464a70de62f5997845faaae1625f3e54e2610e96b0355ce9e554051c2fae28f7e6e558ed456a6fc0b3c6a71b26f7443ede5eff5b32
 Size (once_cell-1.13.1.crate) = 31335 bytes
@@ -1197,4 +1197,3 @@ Size (xmlparser-0.13.3.crate) = 25732 bytes
 BLAKE2s (xmlwriter-0.1.0.crate) = 3b1f6def954abf771cd4d95c93c386f8ac1bdb790c75b35a2839a1eb0d59c1d7
 SHA512 (xmlwriter-0.1.0.crate) = a0d8bfe6e3d220358e8523212cddb84541e9d8208b2aea64a89037e4e9f4de62a7b549c9f1bacbd71e14de16707f061e547d89ba459843be45fa802db297fd58
 Size (xmlwriter-0.1.0.crate) = 6261 bytes
-SHA1 (patch-src_main.rs) = 04117cf3e1a7fa623a45c4ad78abc17cc25c040c
