@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4053 2022/08/24 22:41:46 leot Exp $
+$NetBSD: CHANGES-2022,v 1.4054 2022/08/25 00:06:41 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5923,3 +5923,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/yt-dlp to 2022.8.19 [leot 2022-08-24]
 	Updated filesystems/fuse-sshfs to 3.7.3 [wiz 2022-08-24]
 	Updated www/webkit-gtk to 2.36.7 [leot 2022-08-24]
+	Updated x11/xfce4-tumbler to 4.16.1 [gutteridge 2022-08-25]
