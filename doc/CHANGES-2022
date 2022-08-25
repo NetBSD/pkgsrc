@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4070 2022/08/25 22:59:35 gutteridge Exp $
+$NetBSD: CHANGES-2022,v 1.4071 2022/08/25 22:59:55 thor Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5943,3 +5943,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated parallel/openmpi to 4.1.4 [thor 2022-08-25]
 	Updated x11/xfce4-desktop to 4.16.1 [gutteridge 2022-08-25]
 	Updated x11/xfce4-panel to 4.16.5 [gutteridge 2022-08-25]
+	Updated math/scalapack to 2.2.0 [thor 2022-08-25]
