@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4061 2022/08/25 11:22:26 adam Exp $
+$NetBSD: CHANGES-2022,v 1.4062 2022/08/25 17:59:14 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5934,3 +5934,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/znapzend to 0.21.1 [abs 2022-08-25]
 	Added sysutils/py-loguru version 0.6.0 [adam 2022-08-25]
 	Updated devel/py-utils to 3.3.3 [adam 2022-08-25]
+	Updated net/dq to 20220822 [schmonz 2022-08-25]
