@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4074 2022/08/26 07:43:50 adam Exp $
+$NetBSD: CHANGES-2022,v 1.4075 2022/08/26 09:22:39 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5949,3 +5949,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated multimedia/mp4v2 to 5.0.1 [adam 2022-08-26]
 	Updated devel/libextractor to 1.11 [adam 2022-08-26]
 	Updated devel/py-astroid to 2.12.4 [adam 2022-08-26]
+	Updated net/py-dnsdiag to 2.0.2 [khorben 2022-08-26]
