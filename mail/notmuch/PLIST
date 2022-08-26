@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.24 2022/02/25 05:44:50 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.25 2022/08/26 13:12:38 ryoon Exp $
 bin/notmuch
 ${PLIST.emacs}bin/notmuch-emacs-mua
 include/notmuch.h
+${PLIST.doc}info/nmbug.info
 ${PLIST.doc}info/notmuch-address.info
 ${PLIST.doc}info/notmuch-compact.info
 ${PLIST.doc}info/notmuch-config.info
@@ -9,6 +10,7 @@ ${PLIST.doc}info/notmuch-count.info
 ${PLIST.doc}info/notmuch-dump.info
 ${PLIST.doc}info/notmuch-emacs-mua.info
 ${PLIST.emacs}${PLIST.doc}info/notmuch-emacs.info
+${PLIST.doc}info/notmuch-git.info
 ${PLIST.doc}info/notmuch-hooks.info
 ${PLIST.doc}info/notmuch-insert.info
 ${PLIST.doc}info/notmuch-new.info
@@ -17,6 +19,7 @@ ${PLIST.doc}info/notmuch-reindex.info
 ${PLIST.doc}info/notmuch-reply.info
 ${PLIST.doc}info/notmuch-restore.info
 ${PLIST.doc}info/notmuch-search-terms.info
+${PLIST.doc}info/notmuch-setup.info
 ${PLIST.doc}info/notmuch-search.info
 ${PLIST.doc}info/notmuch-sexp-queries.info
 ${PLIST.doc}info/notmuch-show.info
@@ -25,12 +28,14 @@ ${PLIST.doc}info/notmuch.info
 lib/libnotmuch.so
 lib/libnotmuch.so.5
 lib/libnotmuch.so.5.6.0
+${PLIST.doc}man/man1/nmbug.1
 ${PLIST.doc}man/man1/notmuch-address.1
 ${PLIST.doc}man/man1/notmuch-compact.1
 ${PLIST.doc}man/man1/notmuch-config.1
 ${PLIST.doc}man/man1/notmuch-count.1
 ${PLIST.doc}man/man1/notmuch-dump.1
 ${PLIST.doc}man/man1/notmuch-emacs-mua.1
+${PLIST.doc}man/man1/notmuch-git.1
 ${PLIST.doc}man/man1/notmuch-insert.1
 ${PLIST.doc}man/man1/notmuch-new.1
 ${PLIST.doc}man/man1/notmuch-reindex.1
