@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.43 2022/02/12 13:38:22 taca Exp $
+# $NetBSD: Makefile,v 1.44 2022/08/26 11:22:12 taca Exp $
 
-DISTNAME=	rspec-rails-5.1.0
+DISTNAME=	rspec-rails-5.1.2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -18,7 +18,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-rspec-mocks>=3.10<4:../../devel/ruby-rspec-mocks
 
 USE_LANGUAGES=	# empty
 
-RUBY_RAILS_ACCEPTED=	# defined
+RUBY_RAILS_ACCEPTED=	# empty
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
