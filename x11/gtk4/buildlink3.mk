@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2022/07/29 16:24:31 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2022/08/26 22:32:33 wiz Exp $
 
 BUILDLINK_TREE+=	gtk4
 
@@ -20,11 +20,11 @@ BUILDLINK_PKGSRCDIR.gtk4?=	../../x11/gtk4
 pkgbase := gtk4
 .include "../../mk/pkg-build-options.mk"
 
-.  if !empty(PKG_BUILD_OPTIONS.gtk4:Mx11)
+.if ${PKG_BUILD_OPTIONS.gtk4:Mx11}
 .include "../../x11/libXcursor/buildlink3.mk"
 .include "../../x11/libXi/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
-.  endif
+.endif
 
 .endif	# GTK4_BUILDLINK3_MK
 

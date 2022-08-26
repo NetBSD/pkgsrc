@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2022/07/29 16:08:20 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2022/08/26 22:32:33 wiz Exp $
 
 DISTNAME=	gtk-4.6.6
 PKGNAME=	${DISTNAME:S/gtk/gtk4/}
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtk/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -45,6 +46,7 @@ PLIST_SUBST+=		SOEXT=${SOEXT}
 PRINT_PLIST_AWK+=	{ gsub(/\.${SOEXT}/, ".$${SOEXT}") }
 
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/glib2/schemas.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../devel/libexecinfo/buildlink3.mk"
 BUILDLINK_API_DEPENDS.pango+=	pango>=1.47.0
