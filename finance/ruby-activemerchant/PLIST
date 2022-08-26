@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2022/02/12 15:27:22 taca Exp $
+@comment $NetBSD: PLIST,v 1.14 2022/08/26 15:28:27 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/CONTRIBUTORS
@@ -18,6 +18,7 @@ ${GEM_LIBDIR}/lib/active_merchant/billing/cvv_result.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateway.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/adyen.rb
+${GEM_LIBDIR}/lib/active_merchant/billing/gateways/airwallex.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/allied_wallet.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/authorize_net.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/authorize_net_arb.rb
@@ -40,6 +41,7 @@ ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/borgun.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/bpoint.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/braintree.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/braintree/braintree_common.rb
+${GEM_LIBDIR}/lib/active_merchant/billing/gateways/braintree/token_nonce.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/braintree_blue.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/braintree_orange.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/bridge_pay.rb
@@ -204,6 +206,7 @@ ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/quickpay/quickpay_common.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/quickpay/quickpay_v10.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/quickpay/quickpay_v4to7.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/qvalent.rb
+${GEM_LIBDIR}/lib/active_merchant/billing/gateways/rapyd.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/realex.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/redsys.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/s5.rb
@@ -216,6 +219,7 @@ ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/secure_pay.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/secure_pay_au.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/secure_pay_tech.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/securion_pay.rb
+${GEM_LIBDIR}/lib/active_merchant/billing/gateways/simetrik.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/skip_jack.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/smart_ps.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/so_easy_pay.rb
