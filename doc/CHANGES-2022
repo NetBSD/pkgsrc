@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4089 2022/08/26 14:55:55 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4090 2022/08/26 15:28:52 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5965,3 +5965,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-setuptools_scm_git_archive to 1.4 [adam 2022-08-26]
 	Updated devel/ruby-wmi-lite to 1.0.7 [taca 2022-08-26]
 	Updated devel/ruby-zeitwerk to 2.6.0 [taca 2022-08-26]
+	Updated finance/ruby-activemerchant to 1.126.0 [taca 2022-08-26]
