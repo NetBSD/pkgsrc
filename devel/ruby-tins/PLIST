@@ -1,14 +1,9 @@
-@comment $NetBSD: PLIST,v 1.16 2022/02/12 15:20:56 taca Exp $
+@comment $NetBSD: PLIST,v 1.17 2022/08/26 11:41:21 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/.all_images.yml
-${GEM_LIBDIR}/.gitignore
-${GEM_LIBDIR}/.tool-versions
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/TODO
-${GEM_LIBDIR}/VERSION
 ${GEM_LIBDIR}/examples/add_one.png
 ${GEM_LIBDIR}/examples/add_one.stm
 ${GEM_LIBDIR}/examples/bb3.png
