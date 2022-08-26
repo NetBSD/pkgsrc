@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2020/08/03 14:11:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/08/26 09:22:27 khorben Exp $
 bin/dnseval-${PYVERSSUFFIX}
 bin/dnsping-${PYVERSSUFFIX}
 bin/dnstraceroute-${PYVERSSUFFIX}
@@ -8,3 +8,12 @@ ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/util/__init__.py
+${PYSITELIB}/util/__init__.pyc
+${PYSITELIB}/util/__init__.pyo
+${PYSITELIB}/util/dns.py
+${PYSITELIB}/util/dns.pyc
+${PYSITELIB}/util/dns.pyo
+${PYSITELIB}/util/whois.py
+${PYSITELIB}/util/whois.pyc
+${PYSITELIB}/util/whois.pyo
