@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4077 2022/08/26 10:33:46 triaxx Exp $
+$NetBSD: CHANGES-2022,v 1.4078 2022/08/26 10:50:45 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5953,3 +5953,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/ansible-core to 2.13.3 [adam 2022-08-26]
 	Updated sysutils/ansible to 6.3.0 [adam 2022-08-26]
 	Updated net/syncthing to 1.20.4 [triaxx 2022-08-26]
+	Updated geography/qgis to 3.22.10 [gdt 2022-08-26]
