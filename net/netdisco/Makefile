@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.51 2022/08/22 19:01:36 tnn Exp $
+# $NetBSD: Makefile,v 1.52 2022/08/26 10:27:14 wiz Exp $
 
 DISTNAME=		netdisco-1.3.3_with_mibs
 PKGNAME=		${DISTNAME:S/_with_mibs//}
-PKGREVISION=		8
+PKGREVISION=		9
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=netdisco/}
 OUI_TXT=		oui-20220822.txt
@@ -143,12 +143,12 @@ do-build:
 	${CP} ${DISTDIR}/${OUI_TXT} ${WRKSRC:Q}
 
 do-install:
-	${RM} -f ${WRKSRC:Q}/bin/netdisco_daemon
 	cd ${WRKSRC:Q} && pax -rw -pp . ${DESTDIR}${PREFIX:Q}/netdisco
 	set -e; \
 	for i in netdisco.conf netdisco-topology.txt netdisco.crontab \
 	    netdisco_apache.conf netdisco_apache_dir.conf; do \
 		${MV} ${DESTDIR}${PREFIX:Q}/netdisco/"$$i" ${DESTDIR}${EGDIR:Q}/ ;\
 	done
+	${RM} -f ${DESTDIR}${PREFIX:Q}/netdisco/bin/netdisco_daemon
 
 .include "../../mk/bsd.pkg.mk"

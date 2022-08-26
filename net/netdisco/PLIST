@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2015/09/09 08:35:51 hauke Exp $
+@comment $NetBSD: PLIST,v 1.10 2022/08/26 10:27:14 wiz Exp $
 netdisco/bin/catalyst_mac_vlan.pl
 netdisco/bin/device_to_csv
 netdisco/bin/doc_munge
@@ -3159,7 +3159,7 @@ netdisco/mibs/walk_all
 netdisco/mibs/xirrus/XIRRUS-MIB.txt
 netdisco/netdisco
 netdisco/netdisco.pm
-netdisco/oui.txt
+netdisco/oui-20220822.txt
 netdisco/sql/admin.sql
 netdisco/sql/device.sql
 netdisco/sql/device_ip.sql
