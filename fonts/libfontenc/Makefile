@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2020/01/18 23:31:05 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2022/08/26 22:23:07 wiz Exp $
 
-DISTNAME=		libfontenc-1.1.4
-CATEGORIES=		x11
+DISTNAME=		libfontenc-1.1.5
+CATEGORIES=		fonts x11
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
-EXTRACT_SUFX=		.tar.bz2
+EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/
@@ -13,6 +13,8 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
 PKGCONFIG_OVERRIDE+=	fontenc.pc.in
 GNU_CONFIGURE=		yes
+
+CFLAGS.NetBSD+=		-D_OPENBSD_SOURCE
 
 .include "../../meta-pkgs/modular-xorg/hacks.mk"
 
