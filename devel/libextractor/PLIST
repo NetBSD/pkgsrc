@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2019/02/19 00:03:45 gdt Exp $
+@comment $NetBSD: PLIST,v 1.16 2022/08/26 07:41:21 adam Exp $
 bin/extract
 include/extractor.h
 info/libextractor.info
@@ -8,6 +8,7 @@ lib/libextractor/libextractor_deb.la
 lib/libextractor/libextractor_dvi.la
 lib/libextractor/libextractor_exiv2.la
 lib/libextractor/libextractor_flac.la
+lib/libextractor/libextractor_gif.la
 lib/libextractor/libextractor_html.la
 lib/libextractor/libextractor_it.la
 lib/libextractor/libextractor_jpeg.la
@@ -22,10 +23,12 @@ lib/libextractor/libextractor_ogg.la
 lib/libextractor/libextractor_ole2.la
 lib/libextractor/libextractor_pdf.la
 lib/libextractor/libextractor_png.la
+lib/libextractor/libextractor_previewopus.la
 lib/libextractor/libextractor_ps.la
 lib/libextractor/libextractor_riff.la
 lib/libextractor/libextractor_s3m.la
 lib/libextractor/libextractor_sid.la
+lib/libextractor/libextractor_thumbnailffmpeg.la
 lib/libextractor/libextractor_thumbnailgtk.la
 lib/libextractor/libextractor_tiff.la
 lib/libextractor/libextractor_wav.la
@@ -35,6 +38,7 @@ lib/libextractor_common.la
 lib/pkgconfig/libextractor.pc
 man/man1/extract.1
 man/man3/libextractor.3
+share/locale/da/LC_MESSAGES/libextractor.mo
 share/locale/de/LC_MESSAGES/libextractor.mo
 share/locale/es/LC_MESSAGES/libextractor.mo
 share/locale/fr/LC_MESSAGES/libextractor.mo
@@ -42,6 +46,7 @@ share/locale/ga/LC_MESSAGES/libextractor.mo
 share/locale/it/LC_MESSAGES/libextractor.mo
 share/locale/nl/LC_MESSAGES/libextractor.mo
 share/locale/pl/LC_MESSAGES/libextractor.mo
+share/locale/pt_BR/LC_MESSAGES/libextractor.mo
 share/locale/ro/LC_MESSAGES/libextractor.mo
 share/locale/rw/LC_MESSAGES/libextractor.mo
 share/locale/sr/LC_MESSAGES/libextractor.mo
