@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4085 2022/08/26 11:41:46 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4086 2022/08/26 13:13:31 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5961,3 +5961,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/ruby-sexp-processor to 4.16.1 [taca 2022-08-26]
 	Updated devel/ruby-stream to 0.5.4 [taca 2022-08-26]
 	Updated devel/ruby-tins to 1.31.1 [taca 2022-08-26]
+	Updated mail/notmuch to 0.37 [ryoon 2022-08-26]
