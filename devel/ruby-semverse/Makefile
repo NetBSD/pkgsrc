@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2021/01/10 16:10:14 taca Exp $
+# $NetBSD: Makefile,v 1.2 2022/08/26 11:30:22 taca Exp $
 
-DISTNAME=	semverse-3.0.0
+DISTNAME=	semverse-3.0.2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/berkshelf/semverse/
+HOMEPAGE=	https://github.com/chef/semverse/
 COMMENT=	Representing and comparing SemVer versions and constraints
 LICENSE=	apache-2.0
 
