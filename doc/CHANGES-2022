@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4078 2022/08/26 10:50:45 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.4079 2022/08/26 11:17:32 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5954,3 +5954,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/ansible to 6.3.0 [adam 2022-08-26]
 	Updated net/syncthing to 1.20.4 [triaxx 2022-08-26]
 	Updated geography/qgis to 3.22.10 [gdt 2022-08-26]
+	Updated devel/ruby-rgl to 0.5.8 [taca 2022-08-26]
