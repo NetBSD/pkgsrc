@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4091 2022/08/26 15:36:59 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4092 2022/08/26 15:40:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5967,3 +5967,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/ruby-zeitwerk to 2.6.0 [taca 2022-08-26]
 	Updated finance/ruby-activemerchant to 1.126.0 [taca 2022-08-26]
 	Updated finance/ruby-braintree to 4.8.0 [taca 2022-08-26]
+	Updated graphics/ruby-RMagick to 4.2.6 [taca 2022-08-26]
