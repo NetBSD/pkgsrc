@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2022/08/12 08:18:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.21 2022/08/26 09:55:09 adam Exp $
 bin/ansible-community
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -290,6 +290,9 @@ ${PYSITELIB}/ansible_collections/ansible/netcommon/plugins/action/cli_command.py
 ${PYSITELIB}/ansible_collections/ansible/netcommon/plugins/action/cli_config.py
 ${PYSITELIB}/ansible_collections/ansible/netcommon/plugins/action/cli_config.pyc
 ${PYSITELIB}/ansible_collections/ansible/netcommon/plugins/action/cli_config.pyo
+${PYSITELIB}/ansible_collections/ansible/netcommon/plugins/action/grpc.py
+${PYSITELIB}/ansible_collections/ansible/netcommon/plugins/action/grpc.pyc
+${PYSITELIB}/ansible_collections/ansible/netcommon/plugins/action/grpc.pyo
 ${PYSITELIB}/ansible_collections/ansible/netcommon/plugins/action/net_banner.py
 ${PYSITELIB}/ansible_collections/ansible/netcommon/plugins/action/net_banner.pyc
 ${PYSITELIB}/ansible_collections/ansible/netcommon/plugins/action/net_banner.pyo
@@ -368,6 +371,9 @@ ${PYSITELIB}/ansible_collections/ansible/netcommon/plugins/cache/memory.pyo
 ${PYSITELIB}/ansible_collections/ansible/netcommon/plugins/connection/__init__.py
 ${PYSITELIB}/ansible_collections/ansible/netcommon/plugins/connection/__init__.pyc
 ${PYSITELIB}/ansible_collections/ansible/netcommon/plugins/connection/__init__.pyo
+${PYSITELIB}/ansible_collections/ansible/netcommon/plugins/connection/grpc.py
+${PYSITELIB}/ansible_collections/ansible/netcommon/plugins/connection/grpc.pyc
+${PYSITELIB}/ansible_collections/ansible/netcommon/plugins/connection/grpc.pyo
 ${PYSITELIB}/ansible_collections/ansible/netcommon/plugins/connection/httpapi.py
 ${PYSITELIB}/ansible_collections/ansible/netcommon/plugins/connection/httpapi.pyc
 ${PYSITELIB}/ansible_collections/ansible/netcommon/plugins/connection/httpapi.pyo
@@ -461,6 +467,12 @@ ${PYSITELIB}/ansible_collections/ansible/netcommon/plugins/module_utils/network/
 ${PYSITELIB}/ansible_collections/ansible/netcommon/plugins/module_utils/network/common/utils.py
 ${PYSITELIB}/ansible_collections/ansible/netcommon/plugins/module_utils/network/common/utils.pyc
 ${PYSITELIB}/ansible_collections/ansible/netcommon/plugins/module_utils/network/common/utils.pyo
+${PYSITELIB}/ansible_collections/ansible/netcommon/plugins/module_utils/network/grpc/__init__.py
+${PYSITELIB}/ansible_collections/ansible/netcommon/plugins/module_utils/network/grpc/__init__.pyc
+${PYSITELIB}/ansible_collections/ansible/netcommon/plugins/module_utils/network/grpc/__init__.pyo
+${PYSITELIB}/ansible_collections/ansible/netcommon/plugins/module_utils/network/grpc/grpc.py
+${PYSITELIB}/ansible_collections/ansible/netcommon/plugins/module_utils/network/grpc/grpc.pyc
+${PYSITELIB}/ansible_collections/ansible/netcommon/plugins/module_utils/network/grpc/grpc.pyo
 ${PYSITELIB}/ansible_collections/ansible/netcommon/plugins/module_utils/network/netconf/__init__.py
 ${PYSITELIB}/ansible_collections/ansible/netcommon/plugins/module_utils/network/netconf/__init__.pyc
 ${PYSITELIB}/ansible_collections/ansible/netcommon/plugins/module_utils/network/netconf/__init__.pyo
@@ -485,6 +497,12 @@ ${PYSITELIB}/ansible_collections/ansible/netcommon/plugins/modules/cli_command.p
 ${PYSITELIB}/ansible_collections/ansible/netcommon/plugins/modules/cli_config.py
 ${PYSITELIB}/ansible_collections/ansible/netcommon/plugins/modules/cli_config.pyc
 ${PYSITELIB}/ansible_collections/ansible/netcommon/plugins/modules/cli_config.pyo
+${PYSITELIB}/ansible_collections/ansible/netcommon/plugins/modules/grpc_config.py
+${PYSITELIB}/ansible_collections/ansible/netcommon/plugins/modules/grpc_config.pyc
+${PYSITELIB}/ansible_collections/ansible/netcommon/plugins/modules/grpc_config.pyo
+${PYSITELIB}/ansible_collections/ansible/netcommon/plugins/modules/grpc_get.py
+${PYSITELIB}/ansible_collections/ansible/netcommon/plugins/modules/grpc_get.pyc
+${PYSITELIB}/ansible_collections/ansible/netcommon/plugins/modules/grpc_get.pyo
 ${PYSITELIB}/ansible_collections/ansible/netcommon/plugins/modules/net_banner.py
 ${PYSITELIB}/ansible_collections/ansible/netcommon/plugins/modules/net_banner.pyc
 ${PYSITELIB}/ansible_collections/ansible/netcommon/plugins/modules/net_banner.pyo
@@ -587,6 +605,12 @@ ${PYSITELIB}/ansible_collections/ansible/netcommon/plugins/sub_plugins/cli_parse
 ${PYSITELIB}/ansible_collections/ansible/netcommon/plugins/sub_plugins/cli_parser/pyats_parser.py
 ${PYSITELIB}/ansible_collections/ansible/netcommon/plugins/sub_plugins/cli_parser/pyats_parser.pyc
 ${PYSITELIB}/ansible_collections/ansible/netcommon/plugins/sub_plugins/cli_parser/pyats_parser.pyo
+${PYSITELIB}/ansible_collections/ansible/netcommon/plugins/sub_plugins/grpc/__init__.py
+${PYSITELIB}/ansible_collections/ansible/netcommon/plugins/sub_plugins/grpc/__init__.pyc
+${PYSITELIB}/ansible_collections/ansible/netcommon/plugins/sub_plugins/grpc/__init__.pyo
+${PYSITELIB}/ansible_collections/ansible/netcommon/plugins/sub_plugins/grpc/base.py
+${PYSITELIB}/ansible_collections/ansible/netcommon/plugins/sub_plugins/grpc/base.pyc
+${PYSITELIB}/ansible_collections/ansible/netcommon/plugins/sub_plugins/grpc/base.pyo
 ${PYSITELIB}/ansible_collections/ansible/netcommon/pyproject.toml
 ${PYSITELIB}/ansible_collections/ansible/netcommon/requirements.txt
 ${PYSITELIB}/ansible_collections/ansible/netcommon/test-requirements.txt
@@ -8124,12 +8148,25 @@ ${PYSITELIB}/ansible_collections/cisco/iosxr/plugins/netconf/__init__.pyo
 ${PYSITELIB}/ansible_collections/cisco/iosxr/plugins/netconf/iosxr.py
 ${PYSITELIB}/ansible_collections/cisco/iosxr/plugins/netconf/iosxr.pyc
 ${PYSITELIB}/ansible_collections/cisco/iosxr/plugins/netconf/iosxr.pyo
+${PYSITELIB}/ansible_collections/cisco/iosxr/plugins/sub_plugins/grpc/__init__.py
+${PYSITELIB}/ansible_collections/cisco/iosxr/plugins/sub_plugins/grpc/__init__.pyc
+${PYSITELIB}/ansible_collections/cisco/iosxr/plugins/sub_plugins/grpc/__init__.pyo
+${PYSITELIB}/ansible_collections/cisco/iosxr/plugins/sub_plugins/grpc/iosxr.py
+${PYSITELIB}/ansible_collections/cisco/iosxr/plugins/sub_plugins/grpc/iosxr.pyc
+${PYSITELIB}/ansible_collections/cisco/iosxr/plugins/sub_plugins/grpc/iosxr.pyo
+${PYSITELIB}/ansible_collections/cisco/iosxr/plugins/sub_plugins/grpc/pb/__init__.py
+${PYSITELIB}/ansible_collections/cisco/iosxr/plugins/sub_plugins/grpc/pb/__init__.pyc
+${PYSITELIB}/ansible_collections/cisco/iosxr/plugins/sub_plugins/grpc/pb/__init__.pyo
+${PYSITELIB}/ansible_collections/cisco/iosxr/plugins/sub_plugins/grpc/pb/ems_grpc_pb2.py
+${PYSITELIB}/ansible_collections/cisco/iosxr/plugins/sub_plugins/grpc/pb/ems_grpc_pb2.pyc
+${PYSITELIB}/ansible_collections/cisco/iosxr/plugins/sub_plugins/grpc/pb/ems_grpc_pb2.pyo
 ${PYSITELIB}/ansible_collections/cisco/iosxr/plugins/terminal/__init__.py
 ${PYSITELIB}/ansible_collections/cisco/iosxr/plugins/terminal/__init__.pyc
 ${PYSITELIB}/ansible_collections/cisco/iosxr/plugins/terminal/__init__.pyo
 ${PYSITELIB}/ansible_collections/cisco/iosxr/plugins/terminal/iosxr.py
 ${PYSITELIB}/ansible_collections/cisco/iosxr/plugins/terminal/iosxr.pyc
 ${PYSITELIB}/ansible_collections/cisco/iosxr/plugins/terminal/iosxr.pyo
+${PYSITELIB}/ansible_collections/cisco/iosxr/pyproject.toml
 ${PYSITELIB}/ansible_collections/cisco/iosxr/requirements.txt
 ${PYSITELIB}/ansible_collections/cisco/iosxr/test-requirements.txt
 ${PYSITELIB}/ansible_collections/cisco/iosxr/tox.ini
@@ -13499,12 +13536,15 @@ ${PYSITELIB}/ansible_collections/community/ciscosmb/plugins/terminal/ciscosmb.py
 ${PYSITELIB}/ansible_collections/community/ciscosmb/plugins/terminal/ciscosmb.pyc
 ${PYSITELIB}/ansible_collections/community/ciscosmb/plugins/terminal/ciscosmb.pyo
 ${PYSITELIB}/ansible_collections/community/ciscosmb/requirements-dev.txt
-${PYSITELIB}/ansible_collections/community/crypto/Apache-2.0.txt
 ${PYSITELIB}/ansible_collections/community/crypto/CHANGELOG.rst
 ${PYSITELIB}/ansible_collections/community/crypto/COPYING
 ${PYSITELIB}/ansible_collections/community/crypto/FILES.json
+${PYSITELIB}/ansible_collections/community/crypto/LICENSES/Apache-2.0.txt
+${PYSITELIB}/ansible_collections/community/crypto/LICENSES/BSD-2-Clause.txt
+${PYSITELIB}/ansible_collections/community/crypto/LICENSES/BSD-3-Clause.txt
+${PYSITELIB}/ansible_collections/community/crypto/LICENSES/GPL-3.0-or-later.txt
+${PYSITELIB}/ansible_collections/community/crypto/LICENSES/PSF-2.0.txt
 ${PYSITELIB}/ansible_collections/community/crypto/MANIFEST.json
-${PYSITELIB}/ansible_collections/community/crypto/PSF-license.txt
 ${PYSITELIB}/ansible_collections/community/crypto/README.md
 ${PYSITELIB}/ansible_collections/community/crypto/changelogs/changelog.yaml
 ${PYSITELIB}/ansible_collections/community/crypto/changelogs/config.yaml
@@ -13771,7 +13811,6 @@ ${PYSITELIB}/ansible_collections/community/crypto/plugins/modules/x509_crl_info.
 ${PYSITELIB}/ansible_collections/community/crypto/plugins/plugin_utils/action_module.py
 ${PYSITELIB}/ansible_collections/community/crypto/plugins/plugin_utils/action_module.pyc
 ${PYSITELIB}/ansible_collections/community/crypto/plugins/plugin_utils/action_module.pyo
-${PYSITELIB}/ansible_collections/community/crypto/simplified_bsd.txt
 ${PYSITELIB}/ansible_collections/community/digitalocean/CHANGELOG.rst
 ${PYSITELIB}/ansible_collections/community/digitalocean/COPYING
 ${PYSITELIB}/ansible_collections/community/digitalocean/FILES.json
@@ -13962,6 +14001,7 @@ ${PYSITELIB}/ansible_collections/community/digitalocean/scripts/inventory/digita
 ${PYSITELIB}/ansible_collections/community/digitalocean/scripts/inventory/digital_ocean.pyc
 ${PYSITELIB}/ansible_collections/community/digitalocean/scripts/inventory/digital_ocean.pyo
 ${PYSITELIB}/ansible_collections/community/dns/CHANGELOG.rst
+${PYSITELIB}/ansible_collections/community/dns/CHANGELOG.rst.license
 ${PYSITELIB}/ansible_collections/community/dns/CODE_OF_CONDUCT.md
 ${PYSITELIB}/ansible_collections/community/dns/COPYING
 ${PYSITELIB}/ansible_collections/community/dns/FILES.json
@@ -13971,6 +14011,7 @@ ${PYSITELIB}/ansible_collections/community/dns/MANIFEST.json
 ${PYSITELIB}/ansible_collections/community/dns/README.md
 ${PYSITELIB}/ansible_collections/community/dns/TESTING.md
 ${PYSITELIB}/ansible_collections/community/dns/changelogs/changelog.yaml
+${PYSITELIB}/ansible_collections/community/dns/changelogs/changelog.yaml.license
 ${PYSITELIB}/ansible_collections/community/dns/changelogs/config.yaml
 ${PYSITELIB}/ansible_collections/community/dns/changelogs/fragments/.keep
 ${PYSITELIB}/ansible_collections/community/dns/codecov.yml
@@ -14153,6 +14194,7 @@ ${PYSITELIB}/ansible_collections/community/dns/plugins/plugin_utils/templated_op
 ${PYSITELIB}/ansible_collections/community/dns/plugins/plugin_utils/templated_options.pyc
 ${PYSITELIB}/ansible_collections/community/dns/plugins/plugin_utils/templated_options.pyo
 ${PYSITELIB}/ansible_collections/community/dns/plugins/public_suffix_list.dat
+${PYSITELIB}/ansible_collections/community/dns/plugins/public_suffix_list.dat.license
 ${PYSITELIB}/ansible_collections/community/dns/update-docs-fragments.py
 ${PYSITELIB}/ansible_collections/community/dns/update-docs-fragments.pyc
 ${PYSITELIB}/ansible_collections/community/dns/update-docs-fragments.pyo
@@ -14408,14 +14450,19 @@ ${PYSITELIB}/ansible_collections/community/fortios/plugins/modules/fmgr_secprof_
 ${PYSITELIB}/ansible_collections/community/fortios/plugins/modules/fmgr_secprof_web.pyc
 ${PYSITELIB}/ansible_collections/community/fortios/plugins/modules/fmgr_secprof_web.pyo
 ${PYSITELIB}/ansible_collections/community/general/CHANGELOG.rst
+${PYSITELIB}/ansible_collections/community/general/CHANGELOG.rst.license
 ${PYSITELIB}/ansible_collections/community/general/CONTRIBUTING.md
 ${PYSITELIB}/ansible_collections/community/general/COPYING
 ${PYSITELIB}/ansible_collections/community/general/FILES.json
+${PYSITELIB}/ansible_collections/community/general/LICENSES/BSD-2-Clause.txt
+${PYSITELIB}/ansible_collections/community/general/LICENSES/GPL-3.0-or-later.txt
+${PYSITELIB}/ansible_collections/community/general/LICENSES/MIT.txt
+${PYSITELIB}/ansible_collections/community/general/LICENSES/PSF-2.0.txt
 ${PYSITELIB}/ansible_collections/community/general/MANIFEST.json
-${PYSITELIB}/ansible_collections/community/general/PSF-license.txt
 ${PYSITELIB}/ansible_collections/community/general/README.md
 ${PYSITELIB}/ansible_collections/community/general/changelogs/.gitignore
 ${PYSITELIB}/ansible_collections/community/general/changelogs/changelog.yaml
+${PYSITELIB}/ansible_collections/community/general/changelogs/changelog.yaml.license
 ${PYSITELIB}/ansible_collections/community/general/changelogs/config.yaml
 ${PYSITELIB}/ansible_collections/community/general/changelogs/fragments/.keep
 ${PYSITELIB}/ansible_collections/community/general/commit-rights.md
@@ -14681,6 +14728,9 @@ ${PYSITELIB}/ansible_collections/community/general/plugins/doc_fragments/xenserv
 ${PYSITELIB}/ansible_collections/community/general/plugins/filter/counter.py
 ${PYSITELIB}/ansible_collections/community/general/plugins/filter/counter.pyc
 ${PYSITELIB}/ansible_collections/community/general/plugins/filter/counter.pyo
+${PYSITELIB}/ansible_collections/community/general/plugins/filter/crc32.py
+${PYSITELIB}/ansible_collections/community/general/plugins/filter/crc32.pyc
+${PYSITELIB}/ansible_collections/community/general/plugins/filter/crc32.pyo
 ${PYSITELIB}/ansible_collections/community/general/plugins/filter/dict.py
 ${PYSITELIB}/ansible_collections/community/general/plugins/filter/dict.pyc
 ${PYSITELIB}/ansible_collections/community/general/plugins/filter/dict.pyo
@@ -14977,6 +15027,9 @@ ${PYSITELIB}/ansible_collections/community/general/plugins/module_utils/opennebu
 ${PYSITELIB}/ansible_collections/community/general/plugins/module_utils/oracle/oci_utils.py
 ${PYSITELIB}/ansible_collections/community/general/plugins/module_utils/oracle/oci_utils.pyc
 ${PYSITELIB}/ansible_collections/community/general/plugins/module_utils/oracle/oci_utils.pyo
+${PYSITELIB}/ansible_collections/community/general/plugins/module_utils/pipx.py
+${PYSITELIB}/ansible_collections/community/general/plugins/module_utils/pipx.pyc
+${PYSITELIB}/ansible_collections/community/general/plugins/module_utils/pipx.pyo
 ${PYSITELIB}/ansible_collections/community/general/plugins/module_utils/proxmox.py
 ${PYSITELIB}/ansible_collections/community/general/plugins/module_utils/proxmox.pyc
 ${PYSITELIB}/ansible_collections/community/general/plugins/module_utils/proxmox.pyo
@@ -16690,7 +16743,6 @@ ${PYSITELIB}/ansible_collections/community/general/plugins/modules/web_infrastru
 ${PYSITELIB}/ansible_collections/community/general/plugins/test/a_module.py
 ${PYSITELIB}/ansible_collections/community/general/plugins/test/a_module.pyc
 ${PYSITELIB}/ansible_collections/community/general/plugins/test/a_module.pyo
-${PYSITELIB}/ansible_collections/community/general/simplified_bsd.txt
 ${PYSITELIB}/ansible_collections/community/google/CHANGELOG.rst
 ${PYSITELIB}/ansible_collections/community/google/FILES.json
 ${PYSITELIB}/ansible_collections/community/google/LICENSE
@@ -16783,6 +16835,7 @@ ${PYSITELIB}/ansible_collections/community/grafana/changelogs/fragments/186_chec
 ${PYSITELIB}/ansible_collections/community/grafana/changelogs/fragments/239_keyerror_grafana_url.yml
 ${PYSITELIB}/ansible_collections/community/grafana/changelogs/fragments/248_ds_update_error_grafana_9.yml
 ${PYSITELIB}/ansible_collections/community/grafana/changelogs/fragments/257_pretty_printed_dashboard_export.yml
+${PYSITELIB}/ansible_collections/community/grafana/changelogs/fragments/265-url-encode-user.yml
 ${PYSITELIB}/ansible_collections/community/grafana/changelogs/fragments/datasource-issue-204.yml
 ${PYSITELIB}/ansible_collections/community/grafana/changelogs/fragments/fix_slashes_in_datasources.yml
 ${PYSITELIB}/ansible_collections/community/grafana/changelogs/fragments/grafana_users_note.yaml
@@ -16910,6 +16963,9 @@ ${PYSITELIB}/ansible_collections/community/hashi_vault/plugins/module_utils/_aut
 ${PYSITELIB}/ansible_collections/community/hashi_vault/plugins/module_utils/_auth_method_aws_iam.py
 ${PYSITELIB}/ansible_collections/community/hashi_vault/plugins/module_utils/_auth_method_aws_iam.pyc
 ${PYSITELIB}/ansible_collections/community/hashi_vault/plugins/module_utils/_auth_method_aws_iam.pyo
+${PYSITELIB}/ansible_collections/community/hashi_vault/plugins/module_utils/_auth_method_azure.py
+${PYSITELIB}/ansible_collections/community/hashi_vault/plugins/module_utils/_auth_method_azure.pyc
+${PYSITELIB}/ansible_collections/community/hashi_vault/plugins/module_utils/_auth_method_azure.pyo
 ${PYSITELIB}/ansible_collections/community/hashi_vault/plugins/module_utils/_auth_method_cert.py
 ${PYSITELIB}/ansible_collections/community/hashi_vault/plugins/module_utils/_auth_method_cert.pyc
 ${PYSITELIB}/ansible_collections/community/hashi_vault/plugins/module_utils/_auth_method_cert.pyo
@@ -16968,6 +17024,7 @@ ${PYSITELIB}/ansible_collections/community/hashi_vault/plugins/plugin_utils/_has
 ${PYSITELIB}/ansible_collections/community/hashi_vault/plugins/plugin_utils/_hashi_vault_plugin.pyc
 ${PYSITELIB}/ansible_collections/community/hashi_vault/plugins/plugin_utils/_hashi_vault_plugin.pyo
 ${PYSITELIB}/ansible_collections/community/hrobot/CHANGELOG.rst
+${PYSITELIB}/ansible_collections/community/hrobot/CHANGELOG.rst.license
 ${PYSITELIB}/ansible_collections/community/hrobot/COPYING
 ${PYSITELIB}/ansible_collections/community/hrobot/FILES.json
 ${PYSITELIB}/ansible_collections/community/hrobot/LICENSES/BSD-2-Clause.txt
@@ -16975,6 +17032,7 @@ ${PYSITELIB}/ansible_collections/community/hrobot/LICENSES/GPL-3.0-or-later.txt
 ${PYSITELIB}/ansible_collections/community/hrobot/MANIFEST.json
 ${PYSITELIB}/ansible_collections/community/hrobot/README.md
 ${PYSITELIB}/ansible_collections/community/hrobot/changelogs/changelog.yaml
+${PYSITELIB}/ansible_collections/community/hrobot/changelogs/changelog.yaml.license
 ${PYSITELIB}/ansible_collections/community/hrobot/changelogs/config.yaml
 ${PYSITELIB}/ansible_collections/community/hrobot/changelogs/fragments/.keep
 ${PYSITELIB}/ansible_collections/community/hrobot/codecov.yml
@@ -17029,7 +17087,6 @@ ${PYSITELIB}/ansible_collections/community/libvirt/CHANGELOG.rst
 ${PYSITELIB}/ansible_collections/community/libvirt/CONTRIBUTING.md
 ${PYSITELIB}/ansible_collections/community/libvirt/COPYING
 ${PYSITELIB}/ansible_collections/community/libvirt/FILES.json
-${PYSITELIB}/ansible_collections/community/libvirt/LICENSE
 ${PYSITELIB}/ansible_collections/community/libvirt/MAINTAINERS
 ${PYSITELIB}/ansible_collections/community/libvirt/MAINTAINING.md
 ${PYSITELIB}/ansible_collections/community/libvirt/MANIFEST.json
@@ -17436,6 +17493,7 @@ ${PYSITELIB}/ansible_collections/community/mysql/plugins/modules/mysql_user.pyo
 ${PYSITELIB}/ansible_collections/community/mysql/plugins/modules/mysql_variables.py
 ${PYSITELIB}/ansible_collections/community/mysql/plugins/modules/mysql_variables.pyc
 ${PYSITELIB}/ansible_collections/community/mysql/plugins/modules/mysql_variables.pyo
+${PYSITELIB}/ansible_collections/community/mysql/simplified_bsd.txt
 ${PYSITELIB}/ansible_collections/community/network/103-nclu-check-diff.yaml
 ${PYSITELIB}/ansible_collections/community/network/CHANGELOG.rst
 ${PYSITELIB}/ansible_collections/community/network/CONTRIBUTING.md
@@ -19557,13 +19615,16 @@ ${PYSITELIB}/ansible_collections/community/skydive/requirements.txt
 ${PYSITELIB}/ansible_collections/community/skydive/test-requirements.txt
 ${PYSITELIB}/ansible_collections/community/skydive/tox.ini
 ${PYSITELIB}/ansible_collections/community/sops/CHANGELOG.rst
+${PYSITELIB}/ansible_collections/community/sops/CHANGELOG.rst.license
 ${PYSITELIB}/ansible_collections/community/sops/CONTRIBUTING.md
 ${PYSITELIB}/ansible_collections/community/sops/COPYING
 ${PYSITELIB}/ansible_collections/community/sops/FILES.json
+${PYSITELIB}/ansible_collections/community/sops/LICENSES/BSD-2-Clause.txt
+${PYSITELIB}/ansible_collections/community/sops/LICENSES/GPL-3.0-or-later.txt
 ${PYSITELIB}/ansible_collections/community/sops/MANIFEST.json
 ${PYSITELIB}/ansible_collections/community/sops/README.md
-${PYSITELIB}/ansible_collections/community/sops/changelogs/.plugin-cache.yaml
 ${PYSITELIB}/ansible_collections/community/sops/changelogs/changelog.yaml
+${PYSITELIB}/ansible_collections/community/sops/changelogs/changelog.yaml.license
 ${PYSITELIB}/ansible_collections/community/sops/changelogs/config.yaml
 ${PYSITELIB}/ansible_collections/community/sops/changelogs/fragments/.keep
 ${PYSITELIB}/ansible_collections/community/sops/codecov.yml
@@ -19598,11 +19659,12 @@ ${PYSITELIB}/ansible_collections/community/sops/plugins/plugin_utils/action_modu
 ${PYSITELIB}/ansible_collections/community/sops/plugins/vars/sops.py
 ${PYSITELIB}/ansible_collections/community/sops/plugins/vars/sops.pyc
 ${PYSITELIB}/ansible_collections/community/sops/plugins/vars/sops.pyo
-${PYSITELIB}/ansible_collections/community/sops/simplified_bsd.txt
 ${PYSITELIB}/ansible_collections/community/vmware/CHANGELOG.rst
 ${PYSITELIB}/ansible_collections/community/vmware/COPYING
 ${PYSITELIB}/ansible_collections/community/vmware/FILES.json
 ${PYSITELIB}/ansible_collections/community/vmware/LICENSE
+${PYSITELIB}/ansible_collections/community/vmware/LICENSES/BSD-2-Clause.txt
+${PYSITELIB}/ansible_collections/community/vmware/LICENSES/GPL-3.0-or-later.txt
 ${PYSITELIB}/ansible_collections/community/vmware/MANIFEST.json
 ${PYSITELIB}/ansible_collections/community/vmware/README.md
 ${PYSITELIB}/ansible_collections/community/vmware/changelogs/changelog.yaml
@@ -20542,6 +20604,7 @@ ${PYSITELIB}/ansible_collections/community/zabbix/CODE_OF_CONDUCT.md
 ${PYSITELIB}/ansible_collections/community/zabbix/CONTRIBUTING.md
 ${PYSITELIB}/ansible_collections/community/zabbix/FILES.json
 ${PYSITELIB}/ansible_collections/community/zabbix/LICENSE
+${PYSITELIB}/ansible_collections/community/zabbix/MAINTAINERS
 ${PYSITELIB}/ansible_collections/community/zabbix/MANIFEST.json
 ${PYSITELIB}/ansible_collections/community/zabbix/PSF-license.txt
 ${PYSITELIB}/ansible_collections/community/zabbix/README.md
@@ -20758,6 +20821,9 @@ ${PYSITELIB}/ansible_collections/community/zabbix/plugins/modules/zabbix_templat
 ${PYSITELIB}/ansible_collections/community/zabbix/plugins/modules/zabbix_user.py
 ${PYSITELIB}/ansible_collections/community/zabbix/plugins/modules/zabbix_user.pyc
 ${PYSITELIB}/ansible_collections/community/zabbix/plugins/modules/zabbix_user.pyo
+${PYSITELIB}/ansible_collections/community/zabbix/plugins/modules/zabbix_user_directory.py
+${PYSITELIB}/ansible_collections/community/zabbix/plugins/modules/zabbix_user_directory.pyc
+${PYSITELIB}/ansible_collections/community/zabbix/plugins/modules/zabbix_user_directory.pyo
 ${PYSITELIB}/ansible_collections/community/zabbix/plugins/modules/zabbix_user_info.py
 ${PYSITELIB}/ansible_collections/community/zabbix/plugins/modules/zabbix_user_info.pyc
 ${PYSITELIB}/ansible_collections/community/zabbix/plugins/modules/zabbix_user_info.pyo
@@ -20819,6 +20885,7 @@ ${PYSITELIB}/ansible_collections/community/zabbix/roles/zabbix_agent/vars/RedHat
 ${PYSITELIB}/ansible_collections/community/zabbix/roles/zabbix_agent/vars/Sangoma.yml
 ${PYSITELIB}/ansible_collections/community/zabbix/roles/zabbix_agent/vars/Suse.yml
 ${PYSITELIB}/ansible_collections/community/zabbix/roles/zabbix_agent/vars/Windows.yml
+${PYSITELIB}/ansible_collections/community/zabbix/roles/zabbix_agent/vars/main.yml
 ${PYSITELIB}/ansible_collections/community/zabbix/roles/zabbix_agent/vars/zabbix.yml
 ${PYSITELIB}/ansible_collections/community/zabbix/roles/zabbix_javagateway/README.md
 ${PYSITELIB}/ansible_collections/community/zabbix/roles/zabbix_javagateway/defaults/main.yml
@@ -20848,6 +20915,8 @@ ${PYSITELIB}/ansible_collections/community/zabbix/roles/zabbix_proxy/tasks/selin
 ${PYSITELIB}/ansible_collections/community/zabbix/roles/zabbix_proxy/tasks/sqlite3.yml
 ${PYSITELIB}/ansible_collections/community/zabbix/roles/zabbix_proxy/templates/zabbix_proxy.conf.j2
 ${PYSITELIB}/ansible_collections/community/zabbix/roles/zabbix_proxy/vars/Amazon.yml
+${PYSITELIB}/ansible_collections/community/zabbix/roles/zabbix_proxy/vars/Debian.yml
+${PYSITELIB}/ansible_collections/community/zabbix/roles/zabbix_proxy/vars/RedHat.yml
 ${PYSITELIB}/ansible_collections/community/zabbix/roles/zabbix_proxy/vars/main.yml
 ${PYSITELIB}/ansible_collections/community/zabbix/roles/zabbix_proxy/vars/zabbix.yml
 ${PYSITELIB}/ansible_collections/community/zabbix/roles/zabbix_server/README.md
@@ -22929,6 +22998,7 @@ ${PYSITELIB}/ansible_collections/f5networks/f5_modules/FILES.json
 ${PYSITELIB}/ansible_collections/f5networks/f5_modules/MANIFEST.json
 ${PYSITELIB}/ansible_collections/f5networks/f5_modules/README.md
 ${PYSITELIB}/ansible_collections/f5networks/f5_modules/builds/.gitkeep
+${PYSITELIB}/ansible_collections/f5networks/f5_modules/changelogs/.plugin-cache.yaml
 ${PYSITELIB}/ansible_collections/f5networks/f5_modules/changelogs/changelog.yaml
 ${PYSITELIB}/ansible_collections/f5networks/f5_modules/changelogs/config.yaml
 ${PYSITELIB}/ansible_collections/f5networks/f5_modules/changelogs/fragments/.gitkeep
@@ -26316,6 +26386,9 @@ ${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/module_utils/fortios/a
 ${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/module_utils/fortios/comparison.py
 ${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/module_utils/fortios/comparison.pyc
 ${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/module_utils/fortios/comparison.pyo
+${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/module_utils/fortios/data_post_processor.py
+${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/module_utils/fortios/data_post_processor.pyc
+${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/module_utils/fortios/data_post_processor.pyo
 ${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/module_utils/fortios/facts/__init__.py
 ${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/module_utils/fortios/facts/__init__.pyc
 ${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/module_utils/fortios/facts/__init__.pyo
@@ -26331,6 +26404,9 @@ ${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/module_utils/fortios/f
 ${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/module_utils/fortios/fortios.py
 ${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/module_utils/fortios/fortios.pyc
 ${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/module_utils/fortios/fortios.pyo
+${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/module_utils/fortios/secret_field.py
+${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/module_utils/fortios/secret_field.pyc
+${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/module_utils/fortios/secret_field.pyo
 ${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/__init__.py
 ${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/__init__.pyc
 ${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/__init__.pyo
@@ -26379,6 +26455,9 @@ ${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/fortios_authen
 ${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/fortios_authentication_setting.py
 ${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/fortios_authentication_setting.pyc
 ${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/fortios_authentication_setting.pyo
+${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/fortios_automation_setting.py
+${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/fortios_automation_setting.pyc
+${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/fortios_automation_setting.pyo
 ${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/fortios_certificate_ca.py
 ${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/fortios_certificate_ca.pyc
 ${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/fortios_certificate_ca.pyo
@@ -26403,6 +26482,12 @@ ${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/fortios_config
 ${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/fortios_credential_store_domain_controller.py
 ${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/fortios_credential_store_domain_controller.pyc
 ${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/fortios_credential_store_domain_controller.pyo
+${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/fortios_dlp_data_type.py
+${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/fortios_dlp_data_type.pyc
+${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/fortios_dlp_data_type.pyo
+${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/fortios_dlp_dictionary.py
+${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/fortios_dlp_dictionary.pyc
+${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/fortios_dlp_dictionary.pyo
 ${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/fortios_dlp_filepattern.py
 ${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/fortios_dlp_filepattern.pyc
 ${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/fortios_dlp_filepattern.pyo
@@ -26412,6 +26497,9 @@ ${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/fortios_dlp_fp
 ${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/fortios_dlp_fp_sensitivity.py
 ${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/fortios_dlp_fp_sensitivity.pyc
 ${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/fortios_dlp_fp_sensitivity.pyo
+${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/fortios_dlp_profile.py
+${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/fortios_dlp_profile.pyc
+${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/fortios_dlp_profile.pyo
 ${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/fortios_dlp_sensitivity.py
 ${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/fortios_dlp_sensitivity.pyc
 ${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/fortios_dlp_sensitivity.pyo
@@ -26859,6 +26947,9 @@ ${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/fortios_icap_p
 ${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/fortios_icap_server.py
 ${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/fortios_icap_server.pyc
 ${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/fortios_icap_server.pyo
+${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/fortios_icap_server_group.py
+${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/fortios_icap_server_group.pyc
+${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/fortios_icap_server_group.pyo
 ${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/fortios_ips_custom.py
 ${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/fortios_ips_custom.pyc
 ${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/fortios_ips_custom.pyo
@@ -27483,6 +27574,9 @@ ${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/fortios_system
 ${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/fortios_system_fortimanager.py
 ${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/fortios_system_fortimanager.pyc
 ${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/fortios_system_fortimanager.pyo
+${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/fortios_system_fortindr.py
+${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/fortios_system_fortindr.pyc
+${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/fortios_system_fortindr.pyo
 ${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/fortios_system_fortisandbox.py
 ${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/fortios_system_fortisandbox.pyc
 ${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/fortios_system_fortisandbox.pyo
@@ -27732,6 +27826,9 @@ ${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/fortios_system
 ${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/fortios_system_snmp_community.py
 ${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/fortios_system_snmp_community.pyc
 ${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/fortios_system_snmp_community.pyo
+${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/fortios_system_snmp_mib_view.py
+${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/fortios_system_snmp_mib_view.pyc
+${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/fortios_system_snmp_mib_view.pyo
 ${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/fortios_system_snmp_sysinfo.py
 ${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/fortios_system_snmp_sysinfo.pyc
 ${PYSITELIB}/ansible_collections/fortinet/fortios/plugins/modules/fortios_system_snmp_sysinfo.pyo
@@ -31274,6 +31371,7 @@ ${PYSITELIB}/ansible_collections/netapp/cloudmanager/COPYING
 ${PYSITELIB}/ansible_collections/netapp/cloudmanager/FILES.json
 ${PYSITELIB}/ansible_collections/netapp/cloudmanager/MANIFEST.json
 ${PYSITELIB}/ansible_collections/netapp/cloudmanager/README.md
+${PYSITELIB}/ansible_collections/netapp/cloudmanager/changelogs/.plugin-cache.yaml
 ${PYSITELIB}/ansible_collections/netapp/cloudmanager/changelogs/changelog.yaml
 ${PYSITELIB}/ansible_collections/netapp/cloudmanager/changelogs/config.yaml
 ${PYSITELIB}/ansible_collections/netapp/cloudmanager/changelogs/fragments/DEVOPS-3803.yaml
@@ -31330,6 +31428,7 @@ ${PYSITELIB}/ansible_collections/netapp/cloudmanager/changelogs/fragments/DEVOPS
 ${PYSITELIB}/ansible_collections/netapp/cloudmanager/changelogs/fragments/DEVOPS-4820.yaml
 ${PYSITELIB}/ansible_collections/netapp/cloudmanager/changelogs/fragments/DEVOPS-5002.yaml
 ${PYSITELIB}/ansible_collections/netapp/cloudmanager/changelogs/fragments/DEVOPS-5151.yaml
+${PYSITELIB}/ansible_collections/netapp/cloudmanager/changelogs/fragments/DEVOPS-5252.yaml
 ${PYSITELIB}/ansible_collections/netapp/cloudmanager/meta/runtime.yml
 ${PYSITELIB}/ansible_collections/netapp/cloudmanager/plugins/README.md
 ${PYSITELIB}/ansible_collections/netapp/cloudmanager/plugins/doc_fragments/netapp.py
@@ -31495,6 +31594,7 @@ ${PYSITELIB}/ansible_collections/netapp/ontap/COPYING
 ${PYSITELIB}/ansible_collections/netapp/ontap/FILES.json
 ${PYSITELIB}/ansible_collections/netapp/ontap/MANIFEST.json
 ${PYSITELIB}/ansible_collections/netapp/ontap/README.md
+${PYSITELIB}/ansible_collections/netapp/ontap/changelogs/.plugin-cache.yaml
 ${PYSITELIB}/ansible_collections/netapp/ontap/changelogs/changelog.yaml
 ${PYSITELIB}/ansible_collections/netapp/ontap/changelogs/config.yaml
 ${PYSITELIB}/ansible_collections/netapp/ontap/changelogs/fragments/0-copy_ignore_txt.yml
@@ -31513,6 +31613,7 @@ ${PYSITELIB}/ansible_collections/netapp/ontap/changelogs/fragments/20.8.0.yaml
 ${PYSITELIB}/ansible_collections/netapp/ontap/changelogs/fragments/20.9.0.yaml
 ${PYSITELIB}/ansible_collections/netapp/ontap/changelogs/fragments/DEVOPS-1661.yaml
 ${PYSITELIB}/ansible_collections/netapp/ontap/changelogs/fragments/DEVOPS-1665.yaml
+${PYSITELIB}/ansible_collections/netapp/ontap/changelogs/fragments/DEVOPS-1926.yaml
 ${PYSITELIB}/ansible_collections/netapp/ontap/changelogs/fragments/DEVOPS-2353.yaml
 ${PYSITELIB}/ansible_collections/netapp/ontap/changelogs/fragments/DEVOPS-2422.yaml
 ${PYSITELIB}/ansible_collections/netapp/ontap/changelogs/fragments/DEVOPS-2426.yaml
@@ -31725,6 +31826,7 @@ ${PYSITELIB}/ansible_collections/netapp/ontap/changelogs/fragments/DEVOPS-4645.y
 ${PYSITELIB}/ansible_collections/netapp/ontap/changelogs/fragments/DEVOPS-4648.yaml
 ${PYSITELIB}/ansible_collections/netapp/ontap/changelogs/fragments/DEVOPS-4676.yaml
 ${PYSITELIB}/ansible_collections/netapp/ontap/changelogs/fragments/DEVOPS-4679.yaml
+${PYSITELIB}/ansible_collections/netapp/ontap/changelogs/fragments/DEVOPS-4691.yaml
 ${PYSITELIB}/ansible_collections/netapp/ontap/changelogs/fragments/DEVOPS-4711.yaml
 ${PYSITELIB}/ansible_collections/netapp/ontap/changelogs/fragments/DEVOPS-4719.yml
 ${PYSITELIB}/ansible_collections/netapp/ontap/changelogs/fragments/DEVOPS-4729.yml
@@ -31738,6 +31840,8 @@ ${PYSITELIB}/ansible_collections/netapp/ontap/changelogs/fragments/DEVOPS-4747.y
 ${PYSITELIB}/ansible_collections/netapp/ontap/changelogs/fragments/DEVOPS-4764.yaml
 ${PYSITELIB}/ansible_collections/netapp/ontap/changelogs/fragments/DEVOPS-4769.yaml
 ${PYSITELIB}/ansible_collections/netapp/ontap/changelogs/fragments/DEVOPS-4770.yaml
+${PYSITELIB}/ansible_collections/netapp/ontap/changelogs/fragments/DEVOPS-4773.yaml
+${PYSITELIB}/ansible_collections/netapp/ontap/changelogs/fragments/DEVOPS-4776.yaml
 ${PYSITELIB}/ansible_collections/netapp/ontap/changelogs/fragments/DEVOPS-4779.yaml
 ${PYSITELIB}/ansible_collections/netapp/ontap/changelogs/fragments/DEVOPS-4780.yaml
 ${PYSITELIB}/ansible_collections/netapp/ontap/changelogs/fragments/DEVOPS-4781.yaml
@@ -31760,10 +31864,12 @@ ${PYSITELIB}/ansible_collections/netapp/ontap/changelogs/fragments/DEVOPS-4818.y
 ${PYSITELIB}/ansible_collections/netapp/ontap/changelogs/fragments/DEVOPS-4830.yaml
 ${PYSITELIB}/ansible_collections/netapp/ontap/changelogs/fragments/DEVOPS-4832.yml
 ${PYSITELIB}/ansible_collections/netapp/ontap/changelogs/fragments/DEVOPS-4834.yaml
+${PYSITELIB}/ansible_collections/netapp/ontap/changelogs/fragments/DEVOPS-4857.yaml
 ${PYSITELIB}/ansible_collections/netapp/ontap/changelogs/fragments/DEVOPS-4863.yaml
 ${PYSITELIB}/ansible_collections/netapp/ontap/changelogs/fragments/DEVOPS-4864.yaml
 ${PYSITELIB}/ansible_collections/netapp/ontap/changelogs/fragments/DEVOPS-4872.yaml
 ${PYSITELIB}/ansible_collections/netapp/ontap/changelogs/fragments/DEVOPS-4879.yaml
+${PYSITELIB}/ansible_collections/netapp/ontap/changelogs/fragments/DEVOPS-4882.yaml
 ${PYSITELIB}/ansible_collections/netapp/ontap/changelogs/fragments/DEVOPS-4898.yaml
 ${PYSITELIB}/ansible_collections/netapp/ontap/changelogs/fragments/DEVOPS-4975.yaml
 ${PYSITELIB}/ansible_collections/netapp/ontap/changelogs/fragments/DEVOPS-4981.yaml
@@ -31803,6 +31909,17 @@ ${PYSITELIB}/ansible_collections/netapp/ontap/changelogs/fragments/DEVOPS-5216.y
 ${PYSITELIB}/ansible_collections/netapp/ontap/changelogs/fragments/DEVOPS-5220.yaml
 ${PYSITELIB}/ansible_collections/netapp/ontap/changelogs/fragments/DEVOPS-5228.yaml
 ${PYSITELIB}/ansible_collections/netapp/ontap/changelogs/fragments/DEVOPS-5229.yaml
+${PYSITELIB}/ansible_collections/netapp/ontap/changelogs/fragments/DEVOPS-5241.yaml
+${PYSITELIB}/ansible_collections/netapp/ontap/changelogs/fragments/DEVOPS-5243.yaml
+${PYSITELIB}/ansible_collections/netapp/ontap/changelogs/fragments/DEVOPS-5246.yaml
+${PYSITELIB}/ansible_collections/netapp/ontap/changelogs/fragments/DEVOPS-5263.yaml
+${PYSITELIB}/ansible_collections/netapp/ontap/changelogs/fragments/DEVOPS-5268.yaml
+${PYSITELIB}/ansible_collections/netapp/ontap/changelogs/fragments/DEVOPS-5270.yaml
+${PYSITELIB}/ansible_collections/netapp/ontap/changelogs/fragments/DEVOPS-5271.yaml
+${PYSITELIB}/ansible_collections/netapp/ontap/changelogs/fragments/DEVOPS-5287.yaml
+${PYSITELIB}/ansible_collections/netapp/ontap/changelogs/fragments/DEVOPS-5297.yaml
+${PYSITELIB}/ansible_collections/netapp/ontap/changelogs/fragments/DEVOPS-5299.yaml
+${PYSITELIB}/ansible_collections/netapp/ontap/changelogs/fragments/DEVOPS-5304.yaml
 ${PYSITELIB}/ansible_collections/netapp/ontap/changelogs/fragments/github-56.yaml
 ${PYSITELIB}/ansible_collections/netapp/ontap/changelogs/fragments/no-story-1.yaml
 ${PYSITELIB}/ansible_collections/netapp/ontap/meta/runtime.yml
@@ -32459,6 +32576,7 @@ ${PYSITELIB}/ansible_collections/netapp_eseries/santricity/ansible.cfg
 ${PYSITELIB}/ansible_collections/netapp_eseries/santricity/changelogs/.plugin-cache.yaml
 ${PYSITELIB}/ansible_collections/netapp_eseries/santricity/changelogs/changelog.yaml
 ${PYSITELIB}/ansible_collections/netapp_eseries/santricity/changelogs/config.yaml
+${PYSITELIB}/ansible_collections/netapp_eseries/santricity/changelogs/fragments/fix_nvme_roce_mtu_default.yml
 ${PYSITELIB}/ansible_collections/netapp_eseries/santricity/meta/runtime.yml
 ${PYSITELIB}/ansible_collections/netapp_eseries/santricity/plugins/doc_fragments/netapp.py
 ${PYSITELIB}/ansible_collections/netapp_eseries/santricity/plugins/doc_fragments/netapp.pyc
@@ -34192,6 +34310,7 @@ ${PYSITELIB}/ansible_collections/ovirt/ovirt/roles/hosted_engine_setup/tasks/pre
 ${PYSITELIB}/ansible_collections/ovirt/ovirt/roles/hosted_engine_setup/tasks/pre_checks/validate_services_status.yml
 ${PYSITELIB}/ansible_collections/ovirt/ovirt/roles/hosted_engine_setup/tasks/pre_checks/validate_vcpus_count.yml
 ${PYSITELIB}/ansible_collections/ovirt/ovirt/roles/hosted_engine_setup/tasks/restore_backup.yml
+${PYSITELIB}/ansible_collections/ovirt/ovirt/roles/hosted_engine_setup/tasks/restore_host_redeploy.yml
 ${PYSITELIB}/ansible_collections/ovirt/ovirt/roles/hosted_engine_setup/tasks/search_available_network_subnet.yaml
 ${PYSITELIB}/ansible_collections/ovirt/ovirt/roles/hosted_engine_setup/tasks/sync_on_engine_machine.yml
 ${PYSITELIB}/ansible_collections/ovirt/ovirt/roles/hosted_engine_setup/tasks/validate_ip_prefix.yml
