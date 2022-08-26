@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2022/08/26 09:22:27 khorben Exp $
+# $NetBSD: Makefile,v 1.8 2022/08/26 10:14:21 wiz Exp $
 
 DISTNAME=	dnsdiag-2.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	2-clause-bsd
 DEPENDS+=	${PYPKGPREFIX}-cymruwhois>=1.6:../../net/py-cymruwhois
 DEPENDS+=	${PYPKGPREFIX}-dns>=1.16.0:../../net/py-dns
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.21.0:../../devel/py-requests
-DEPENDS+=	${PYPKGPREFIX}-requests>=0.9.1:../../devel/py-requests-toolbelt
+DEPENDS+=	${PYPKGPREFIX}-requests-toolbelt>=0.9.1:../../devel/py-requests-toolbelt
 
 USE_LANGUAGES=	# none
 
