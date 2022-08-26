@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4075 2022/08/26 09:22:39 khorben Exp $
+$NetBSD: CHANGES-2022,v 1.4076 2022/08/26 10:11:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5950,3 +5950,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/libextractor to 1.11 [adam 2022-08-26]
 	Updated devel/py-astroid to 2.12.4 [adam 2022-08-26]
 	Updated net/py-dnsdiag to 2.0.2 [khorben 2022-08-26]
+	Updated sysutils/ansible-core to 2.13.3 [adam 2022-08-26]
+	Updated sysutils/ansible to 6.3.0 [adam 2022-08-26]
