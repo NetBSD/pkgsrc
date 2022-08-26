@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4079 2022/08/26 11:17:32 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4080 2022/08/26 11:20:39 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5955,3 +5955,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/syncthing to 1.20.4 [triaxx 2022-08-26]
 	Updated geography/qgis to 3.22.10 [gdt 2022-08-26]
 	Updated devel/ruby-rgl to 0.5.8 [taca 2022-08-26]
+	Updated devel/ruby-rspec-mocks to 3.11.1 [taca 2022-08-26]
