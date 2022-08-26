@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2022/03/06 09:00:43 taca Exp $
+@comment $NetBSD: PLIST,v 1.11 2022/08/26 15:36:33 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/braintree.gemspec
@@ -52,6 +52,12 @@ ${GEM_LIBDIR}/lib/braintree/error_codes.rb
 ${GEM_LIBDIR}/lib/braintree/error_result.rb
 ${GEM_LIBDIR}/lib/braintree/errors.rb
 ${GEM_LIBDIR}/lib/braintree/exceptions.rb
+${GEM_LIBDIR}/lib/braintree/exchange_rate.rb
+${GEM_LIBDIR}/lib/braintree/exchange_rate_quote.rb
+${GEM_LIBDIR}/lib/braintree/exchange_rate_quote_gateway.rb
+${GEM_LIBDIR}/lib/braintree/exchange_rate_quote_input.rb
+${GEM_LIBDIR}/lib/braintree/exchange_rate_quote_request.rb
+${GEM_LIBDIR}/lib/braintree/exchange_rate_quote_response.rb
 ${GEM_LIBDIR}/lib/braintree/facilitated_details.rb
 ${GEM_LIBDIR}/lib/braintree/facilitator_details.rb
 ${GEM_LIBDIR}/lib/braintree/gateway.rb
@@ -93,6 +99,7 @@ ${GEM_LIBDIR}/lib/braintree/processor_response_types.rb
 ${GEM_LIBDIR}/lib/braintree/resource_collection.rb
 ${GEM_LIBDIR}/lib/braintree/revoked_payment_method_metadata.rb
 ${GEM_LIBDIR}/lib/braintree/risk_data.rb
+${GEM_LIBDIR}/lib/braintree/risk_data/liability_shift.rb
 ${GEM_LIBDIR}/lib/braintree/samsung_pay_card.rb
 ${GEM_LIBDIR}/lib/braintree/settlement_batch_summary.rb
 ${GEM_LIBDIR}/lib/braintree/settlement_batch_summary_gateway.rb
@@ -181,6 +188,7 @@ ${GEM_LIBDIR}/spec/integration/braintree/dispute_search_spec.rb
 ${GEM_LIBDIR}/spec/integration/braintree/dispute_spec.rb
 ${GEM_LIBDIR}/spec/integration/braintree/document_upload_spec.rb
 ${GEM_LIBDIR}/spec/integration/braintree/error_codes_spec.rb
+${GEM_LIBDIR}/spec/integration/braintree/exchange_rate_quote_spec.rb
 ${GEM_LIBDIR}/spec/integration/braintree/graphql_client_spec.rb
 ${GEM_LIBDIR}/spec/integration/braintree/http_spec.rb
 ${GEM_LIBDIR}/spec/integration/braintree/merchant_account_spec.rb
@@ -230,6 +238,11 @@ ${GEM_LIBDIR}/spec/unit/braintree/document_upload_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/enriched_customer_data_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/error_result_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/errors_spec.rb
+${GEM_LIBDIR}/spec/unit/braintree/exchange_rate_quote_input_spec.rb
+${GEM_LIBDIR}/spec/unit/braintree/exchange_rate_quote_request_spec.rb
+${GEM_LIBDIR}/spec/unit/braintree/exchange_rate_quote_response_spec.rb
+${GEM_LIBDIR}/spec/unit/braintree/exchange_rate_quote_spec.rb
+${GEM_LIBDIR}/spec/unit/braintree/exchange_rate_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/http_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/local_payment_completed_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/local_payment_expired_spec.rb
@@ -243,6 +256,7 @@ ${GEM_LIBDIR}/spec/unit/braintree/payment_method_nonce_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/payment_method_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/paypal_account_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/resource_collection_spec.rb
+${GEM_LIBDIR}/spec/unit/braintree/risk_data/liability_shift.rb
 ${GEM_LIBDIR}/spec/unit/braintree/risk_data_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/sha256_digest_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/signature_service_spec.rb
