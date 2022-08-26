@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/10/26 10:19:49 nia Exp $
+$NetBSD: distinfo,v 1.15 2022/08/26 11:35:45 taca Exp $
 
-BLAKE2s (stream-0.5.3.gem) = 5f6d1982c546af93d7029c8d952c635165394340a397d09144edf7ede25a1a7a
-SHA512 (stream-0.5.3.gem) = 1ca9431220908859b9c8a38b486be1c750964d15adf86f6a0f0f6596d29865e996c4fd3fdd2a951fef4056a8c15bb7f15e4125dbd88cc737dacb568893af06ba
-Size (stream-0.5.3.gem) = 15360 bytes
+BLAKE2s (stream-0.5.4.gem) = 3e9d793ad2fa71511d169fc00f1182d2c2dbd45793e4e1a8623bd170fd4f5cdf
+SHA512 (stream-0.5.4.gem) = 640e0017a6b2d2aed624291c9c4c39e13c38689ee5206b775dd1f6d9a7e6c09a7459d785b005fb4a62cb86a46a2af0cccbce7e4dcedebf073cc7e1c6cc1e262c
+Size (stream-0.5.4.gem) = 14848 bytes
