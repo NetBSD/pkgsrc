@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.9 2021/12/17 07:46:35 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2022/08/26 16:23:10 tron Exp $
 ${PYSITELIB}/MySQLdb/__init__.py
 ${PYSITELIB}/MySQLdb/__init__.pyc
 ${PYSITELIB}/MySQLdb/__init__.pyo
-${PYSITELIB}/MySQLdb/compat.py
-${PYSITELIB}/MySQLdb/compat.pyc
-${PYSITELIB}/MySQLdb/compat.pyo
+${PYSITELIB}/MySQLdb/_exceptions.py
+${PYSITELIB}/MySQLdb/_exceptions.pyc
+${PYSITELIB}/MySQLdb/_exceptions.pyo
+${PYSITELIB}/MySQLdb/_mysql.so
 ${PYSITELIB}/MySQLdb/connections.py
 ${PYSITELIB}/MySQLdb/connections.pyc
 ${PYSITELIB}/MySQLdb/connections.pyo
@@ -23,9 +24,6 @@ ${PYSITELIB}/MySQLdb/constants/FIELD_TYPE.pyo
 ${PYSITELIB}/MySQLdb/constants/FLAG.py
 ${PYSITELIB}/MySQLdb/constants/FLAG.pyc
 ${PYSITELIB}/MySQLdb/constants/FLAG.pyo
-${PYSITELIB}/MySQLdb/constants/REFRESH.py
-${PYSITELIB}/MySQLdb/constants/REFRESH.pyc
-${PYSITELIB}/MySQLdb/constants/REFRESH.pyo
 ${PYSITELIB}/MySQLdb/constants/__init__.py
 ${PYSITELIB}/MySQLdb/constants/__init__.pyc
 ${PYSITELIB}/MySQLdb/constants/__init__.pyo
@@ -41,10 +39,6 @@ ${PYSITELIB}/MySQLdb/release.pyo
 ${PYSITELIB}/MySQLdb/times.py
 ${PYSITELIB}/MySQLdb/times.pyc
 ${PYSITELIB}/MySQLdb/times.pyo
-${PYSITELIB}/_mysql.so
-${PYSITELIB}/_mysql_exceptions.py
-${PYSITELIB}/_mysql_exceptions.pyc
-${PYSITELIB}/_mysql_exceptions.pyo
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
