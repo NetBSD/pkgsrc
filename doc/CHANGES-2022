@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4083 2022/08/26 11:32:59 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4084 2022/08/26 11:36:12 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5959,3 +5959,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/ruby-rspec-rails to 5.1.2 [taca 2022-08-26]
 	Updated devel/ruby-semverse to 3.0.2 [taca 2022-08-26]
 	Updated devel/ruby-sexp-processor to 4.16.1 [taca 2022-08-26]
+	Updated devel/ruby-stream to 0.5.4 [taca 2022-08-26]
