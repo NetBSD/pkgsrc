@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 11:01:12 nia Exp $
+$NetBSD: distinfo,v 1.10 2022/08/26 06:40:25 adam Exp $
 
-BLAKE2s (mp4v2-4.1.6.tar.gz) = f0e2013be528cf5154212e6de164854da81b2b3ffdb0f495834f1dd208411e17
-SHA512 (mp4v2-4.1.6.tar.gz) = 91f5183d38c9d7fd754ba4b5e149b00600d5b6cb8da063667e5c3a6c8edb4e5efc919d6c4381acd6e011ef56dce3f722a78c51b984066f5c0cc54aae735f3611
-Size (mp4v2-4.1.6.tar.gz) = 4322307 bytes
+BLAKE2s (mp4v2-5.0.1.tar.gz) = e43bc4237475b3e573347e71b441900207b0dd04c81498d5cd9985366f9af6d7
+SHA512 (mp4v2-5.0.1.tar.gz) = 662b85e2d5cd1c190e7cbc7074914f750939694f8391ebf1402ecb90c533a35acc5bb5a1cfa852fc06e39c0b7e92142d26f8ee94fa2e6df2c0b1ed94fc2c63d7
+Size (mp4v2-5.0.1.tar.gz) = 4323658 bytes
 SHA1 (patch-include_mp4v2_file.h) = bfb8ed37208a1e04c2cb2ca4a8409e4b2b274065
 SHA1 (patch-libutil_Utility.h) = 982a92307e50061cefb8b979382c227cae144358
 SHA1 (patch-src_mp4.cpp) = 53435290d3f3fd9ecc552357f674c54f5c6ec98d
