@@ -1,5 +1,5 @@
 #! @PYTHONBIN@
-# $NetBSD: url2pkg.py,v 1.44 2022/07/16 09:16:50 rillig Exp $
+# $NetBSD: url2pkg.py,v 1.45 2022/08/26 20:11:35 rillig Exp $
 
 # Copyright (c) 2019 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -123,14 +123,13 @@ class Globals:
     def pkgsrc_license(self, license_name: str) -> str:
         comment = ''
 
-        def suffix(suf: str, comm: str):
-            nonlocal license_name, comment
-            if comment == '' and license_name.endswith(suf):
-                comment = f'\t# {comm}'
-                license_name = license_name[:-len(suf)].rstrip()
+        if comment == '' and license_name.endswith('| file LICENSE'):
+            comment = f'\t# OR file LICENSE'
+            license_name = license_name[:-len('| file LICENSE')].rstrip()
 
-        suffix('| file LICENSE', 'OR file LICENSE')
-        suffix('+ file LICENSE', '+ file LICENSE')
+        if comment == '' and license_name.endswith('+ file LICENSE'):
+            comment = f'\t# + file LICENSE'
+            license_name = license_name[:-len('+ file LICENSE')].rstrip()
 
         known_licenses = (
             ('2-clause-bsd', 'BSD-2', 'bsd2', 'BSD_2_clause'),
