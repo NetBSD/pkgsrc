@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2022Q2,v 1.1.2.4 2022/07/27 19:06:56 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2022Q2,v 1.1.2.5 2022/08/27 19:45:03 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2022Q2 branch:
 
@@ -95,4 +95,29 @@ chat/finch: security update
 chat/pidgin: security update
 chat/pidgin-sametime: security update
 chat/pidgin-silc: security update
+
+Pullup ticket #6660 - requested by khorben
+editors/vim-gtk2: security update
+editors/vim-gtk3: security update
+editors/vim-motif: security update
+editors/vim-share: security update
+editors/vim-xaw: security update
+
+Pullup ticket #6661 - requested by taca
+time/ruby-tzinfo1: security update
+
+Pullup ticket #6662 - requested by taca
+www/drupal7: security update
+
+Pullup ticket #6663 - requested by taca
+www/drupal9: security update
+
+Pullup ticket #6665 - requested by khorben
+net/rsync: security update
+
+Pullup ticket #6666 - requested by khorben
+net/unbound: security update
+
+Pullup ticket #6667 - requested by khorben
+security/openssl: security update
 
