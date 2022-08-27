@@ -1,7 +1,7 @@
-# $NetBSD: version.mk,v 1.137 2022/04/09 15:22:20 morr Exp $
+# $NetBSD: version.mk,v 1.137.2.1 2022/08/27 15:35:48 spz Exp $
 
 VIM_VERSION=		8.2
-VIM_PATCHLEVEL=		4721
+VIM_PATCHLEVEL=		5172
 # Changelog: see http://ftp.vim.org/pub/vim/patches/8.2/
 VIM_SUBDIR=		vim82
 
