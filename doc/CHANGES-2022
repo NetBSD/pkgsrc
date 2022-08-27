@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4096 2022/08/26 22:32:42 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4097 2022/08/27 04:40:29 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5972,3 +5972,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/py-mysqldb to 2.1.1 [tron 2022-08-26]
 	Updated fonts/libfontenc to 1.1.5 [wiz 2022-08-26]
 	Updated x11/gtk4 to 4.6.6nb1 [wiz 2022-08-26]
+	Updated mail/rss2email to 3.14 [schmonz 2022-08-27]
