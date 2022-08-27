@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4099 2022/08/27 08:27:28 adam Exp $
+$NetBSD: CHANGES-2022,v 1.4100 2022/08/27 11:38:25 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5976,3 +5976,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/goredo to 1.26.0 [schmonz 2022-08-27]
 	Updated devel/py-hatchling to 1.8.1 [adam 2022-08-27]
 	Updated devel/py-distlib to 0.3.6 [adam 2022-08-27]
+	Updated misc/calibre to 5.44.0 [rhialto 2022-08-27]
