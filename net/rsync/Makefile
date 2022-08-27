@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.120 2022/04/20 20:09:55 wiz Exp $
+# $NetBSD: Makefile,v 1.120.2.1 2022/08/27 15:42:20 spz Exp $
 
-DISTNAME=	rsync-3.2.4
+DISTNAME=	rsync-3.2.5
 CATEGORIES=	net
 MASTER_SITES=	http://rsync.samba.org/ftp/rsync/
 MASTER_SITES+=	http://rsync.samba.org/ftp/rsync/old-versions/
@@ -17,7 +17,6 @@ CONFIGURE_ARGS+=	--with-included-zlib=no
 PKG_SYSCONFSUBDIR=	rsync
 TEST_TARGET=		test
 
-REPLACE_SH=		cmdormsg
 REPLACE_BASH=		rsync-ssl
 
 RCD_SCRIPTS=		rsyncd
