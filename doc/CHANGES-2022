@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4101 2022/08/27 18:16:20 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4102 2022/08/27 21:16:11 jun Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5978,3 +5978,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-distlib to 0.3.6 [adam 2022-08-27]
 	Updated misc/calibre to 5.44.0 [rhialto 2022-08-27]
 	Updated x11/gtk4 to 4.6.6nb2 [wiz 2022-08-27]
+	Updated emulators/nono to 0.4.3 [jun 2022-08-28]
