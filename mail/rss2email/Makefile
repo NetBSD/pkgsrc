@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.57 2022/06/30 11:18:35 nia Exp $
+# $NetBSD: Makefile,v 1.58 2022/08/27 04:40:23 schmonz Exp $
 
-DISTNAME=		rss2email-3.13.1
-PKGREVISION=		2
+DISTNAME=		${GITHUB_PROJECT}-3.14
 CATEGORIES=		mail python
 MASTER_SITES=		${MASTER_SITE_GITHUB:=rss2email/}
+GITHUB_PROJECT=		rss2email
 GITHUB_TAG=		v${PKGVERSION_NOREV}
-DIST_SUBDIR=		${PKGNAME_NOREV}
 
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		https://github.com/rss2email/rss2email/
