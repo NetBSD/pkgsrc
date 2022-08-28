@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:17:56 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/08/28 05:52:22 taca Exp $
 
-BLAKE2s (openssl-cmac-2.0.1.gem) = fcd3bbbe7a723bfaf6ed7fabe60d166fc2f8cfb7c3a525128092f933d15affb8
-SHA512 (openssl-cmac-2.0.1.gem) = 4257eda512477d3d73835b402d551f68796d90151ef029f1017c504dff36a6b2239eee7d33cf2c041788b247de6122cd3e27ec1c27a65dbb04c13857173ff64f
-Size (openssl-cmac-2.0.1.gem) = 9728 bytes
+BLAKE2s (openssl-cmac-2.0.2.gem) = a526025a5b2e9c486f4d37dabd5bd1c9f22cc726c507b4472645ca4412552d77
+SHA512 (openssl-cmac-2.0.2.gem) = dbe4083ee3e1f2d1254a035d7d6c46a927e4dcde69d466ae9af5fa53ded89519f58c30095019fc5fa258f0c14493870e05c2b32cfba0921c451c6709710be3b4
+Size (openssl-cmac-2.0.2.gem) = 9728 bytes
