@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2022/03/06 09:05:17 taca Exp $
+$NetBSD: distinfo,v 1.21 2022/08/28 04:03:09 taca Exp $
 
-BLAKE2s (sprockets-4.0.3.gem) = b1609d9e927de364a647ed90a7742f45e5bd2b86243b4632847d0e02e0f762fc
-SHA512 (sprockets-4.0.3.gem) = 4a98467375088ea456a2d90cb0407ffe29dba7d14f836a33554e5a0999146168fdcc6ecb8a7a454c6608ee262afb36d66cda94ad5633e7f309ff499f79097815
-Size (sprockets-4.0.3.gem) = 82432 bytes
+BLAKE2s (sprockets-4.1.1.gem) = 1f322deeb4fbe7e3da0a99da0e6ad6947085eb37857bb4b81e1c2aaaad475aab
+SHA512 (sprockets-4.1.1.gem) = 6750fd62ddc8fb17961e3ad44af0aad2bbcee59294a8d9eb26c4acba4aecaef52b493de06d08a3ccf71a1f1a41080c93f72c331bf4862980c69b46c9310775a0
+Size (sprockets-4.1.1.gem) = 82944 bytes
