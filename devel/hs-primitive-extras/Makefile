@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2022/08/20 08:08:18 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/08/28 11:54:49 mef Exp $
 
-DISTNAME=	primitive-extras-0.10.1.4
-PKGREVISION=	2
+DISTNAME=	primitive-extras-0.10.1.5
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
