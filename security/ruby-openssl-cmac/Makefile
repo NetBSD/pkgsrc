@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2020/06/10 14:32:26 taca Exp $
+# $NetBSD: Makefile,v 1.2 2022/08/28 05:52:22 taca Exp $
 
-DISTNAME=	openssl-cmac-2.0.1
+DISTNAME=	openssl-cmac-2.0.2
 CATEGORIES=	security
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
