@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2022/08/01 14:34:15 pin Exp $
+# $NetBSD: Makefile,v 1.4 2022/08/28 16:17:06 pin Exp $
 
-DISTNAME=	csvlens-0.1.7
+DISTNAME=	csvlens-0.1.8
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=YS-L/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
