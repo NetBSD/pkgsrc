@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2022/02/11 09:47:34 pin Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/08/28 16:12:04 pin Exp $
 bin/atomx
 bin/chwb
 bin/chwso
@@ -6,6 +6,7 @@ bin/ignw
 bin/killw
 bin/lsw
 bin/mapw
+bin/pdw
 bin/pfw
 bin/slw
 bin/wattr
