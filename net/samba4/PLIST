@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.43 2022/03/20 21:53:53 adam Exp $
+@comment $NetBSD: PLIST,v 1.43.4.1 2022/08/28 08:13:40 spz Exp $
 bin/cifsdd
 bin/dbwrap_tool
 bin/dumpmscat
@@ -174,6 +174,7 @@ lib/libsmbclient.so.0
 lib/libsmbclient.so.0.7.0
 lib/libsmbconf.so
 lib/libsmbconf.so.0
+lib/libsmbconf.so.0.0.1
 ${PLIST.ldap}lib/libsmbldap.so
 ${PLIST.ldap}lib/libsmbldap.so.2
 ${PLIST.ldap}lib/libsmbldap.so.2.1.0
@@ -461,6 +462,7 @@ ${PYSITELIB}/samba/tests/krb5/kcrypto.py
 ${PYSITELIB}/samba/tests/krb5/kdc_base_test.py
 ${PYSITELIB}/samba/tests/krb5/kdc_tests.py
 ${PYSITELIB}/samba/tests/krb5/kdc_tgs_tests.py
+${PYSITELIB}/samba/tests/krb5/kpasswd_tests.py
 ${PYSITELIB}/samba/tests/krb5/ms_kile_client_principal_lookup_tests.py
 ${PYSITELIB}/samba/tests/krb5/raw_testcase.py
 ${PYSITELIB}/samba/tests/krb5/rfc4120_constants.py
@@ -601,6 +603,7 @@ ${PLIST.ads}lib/samba/bind9/dlz_bind9_11.${SOEXT}
 ${PLIST.ads}lib/samba/bind9/dlz_bind9_12.${SOEXT}
 ${PLIST.ads}lib/samba/bind9/dlz_bind9_14.${SOEXT}
 ${PLIST.ads}lib/samba/bind9/dlz_bind9_16.${SOEXT}
+${PLIST.ads}lib/samba/bind9/dlz_bind9_18.${SOEXT}
 ${PLIST.ads}lib/samba/gensec/krb5.${SOEXT}
 ${PLIST.ads}lib/samba/idmap/ad.${SOEXT}
 lib/samba/idmap/autorid.${SOEXT}
@@ -1057,3 +1060,4 @@ ${PLIST.ads}share/samba/setup/ypServ30.ldif
 @pkgdir var/db/samba4/private
 @pkgdir var/log
 @pkgdir var/run
+
