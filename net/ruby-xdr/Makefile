@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2021/01/13 15:08:19 taca Exp $
+# $NetBSD: Makefile,v 1.7 2022/08/28 04:58:40 taca Exp $
 
-DISTNAME=	xdr-3.0.2
+DISTNAME=	xdr-3.0.3
 CATEGORIES=	net
 
 MAINTAINER=	minskim@NetBSD.org
@@ -13,7 +13,7 @@ DEPENDS+=	${RUBY_ACTIVEMODEL_DEPENDS}
 
 USE_LANGUAGES=	# none
 
-RUBY_RAILS_ACCEPTED=	52 60
+RUBY_RAILS_ACCEPTED=	# empty
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
