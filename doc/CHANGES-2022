@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4111 2022/08/28 04:20:53 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4112 2022/08/28 04:28:51 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5988,3 +5988,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/ruby-net-ldap to 0.17.1 [taca 2022-08-28]
 	Added net/ruby-net-smtp version 0.3.1 [taca 2022-08-28]
 	Updated net/ruby-netaddr to 2.0.6 [taca 2022-08-28]
+	Updated net/ruby-recog to 3.0.2 [taca 2022-08-28]
