@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2020/03/24 15:46:22 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/08/28 05:09:07 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.circleci/config.yml
 ${GEM_LIBDIR}/.github/release-drafter.yml
 ${GEM_LIBDIR}/.github/workflows/push.yml
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rubocop.yml
-${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/CODE_OF_CONDUCT.md
 ${GEM_LIBDIR}/CONTRIBUTING.md
@@ -18,7 +18,6 @@ ${GEM_LIBDIR}/airbrussh.gemspec
 ${GEM_LIBDIR}/appveyor.yml
 ${GEM_LIBDIR}/bin/console
 ${GEM_LIBDIR}/bin/setup
-${GEM_LIBDIR}/bin/test_all.rb
 ${GEM_LIBDIR}/lib/airbrussh.rb
 ${GEM_LIBDIR}/lib/airbrussh/capistrano.rb
 ${GEM_LIBDIR}/lib/airbrussh/capistrano/tasks.rb
