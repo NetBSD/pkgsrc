@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.5 2019/02/06 15:30:56 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/08/28 03:24:04 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.codeclimate.yml
 ${GEM_LIBDIR}/.github/issue_template.md
 ${GEM_LIBDIR}/.github/pull_request_template.md
+${GEM_LIBDIR}/.github/workflows/ruby.yml
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rubocop.yml
 ${GEM_LIBDIR}/.simplecov
-${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/Guardfile
@@ -65,6 +65,7 @@ ${GEM_LIBDIR}/spec/fixtures/vcr_cassettes/google_drive_set.yml
 ${GEM_LIBDIR}/spec/helpers.rb
 ${GEM_LIBDIR}/spec/lib/roo/base_spec.rb
 ${GEM_LIBDIR}/spec/lib/roo/csv_spec.rb
+${GEM_LIBDIR}/spec/lib/roo/excelx/cell/time_spec.rb
 ${GEM_LIBDIR}/spec/lib/roo/excelx/format_spec.rb
 ${GEM_LIBDIR}/spec/lib/roo/excelx/relationships_spec.rb
 ${GEM_LIBDIR}/spec/lib/roo/excelx/sheet_doc_spec.rb
