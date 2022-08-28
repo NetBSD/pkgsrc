@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1475 2022/08/28 04:17:17 taca Exp $
+# $NetBSD: Makefile,v 1.1476 2022/08/28 16:21:25 pin Exp $
 #
 
 COMMENT=	Networking tools
@@ -643,6 +643,7 @@ SUBDIR+=	php-xmlrpc
 SUBDIR+=	php-yaz
 SUBDIR+=	pim6dd
 SUBDIR+=	pim6sd
+SUBDIR+=	piratebay
 SUBDIR+=	pload
 SUBDIR+=	podcastdl
 SUBDIR+=	poink
