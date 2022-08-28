@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4137 2022/08/28 16:14:21 pin Exp $
+$NetBSD: CHANGES-2022,v 1.4138 2022/08/28 16:15:52 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6014,3 +6014,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/ruby-listen to 3.7.1 [taca 2022-08-28]
 	Updated wm/wmutils-core to 1.7 [pin 2022-08-28]
 	Updated graphics/oculante to 0.6.3 [pin 2022-08-28]
+	Updated devel/difftastic to 0.34.0 [pin 2022-08-28]
