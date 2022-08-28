@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.53 2022/03/06 09:03:06 taca Exp $
+$NetBSD: distinfo,v 1.54 2022/08/28 03:35:43 taca Exp $
 
-BLAKE2s (bundler-2.3.8.gem) = 7707814ec50cc21401adf2ced71bb3b3f283e678c6d4914389dbd159bf40414a
-SHA512 (bundler-2.3.8.gem) = e04bc9762135bdab7eb70bde4f21289375b7ea9bee795775dc614f31a6f145a5406396dbc638bdac778ac7c39d60c953e5ba38376b8bc72e7a8cfd1c40b25585
-Size (bundler-2.3.8.gem) = 403968 bytes
+BLAKE2s (bundler-2.3.21.gem) = 6da9dcedd76a7d62752b669dfcd111a9c66544630904834322fb278e26e08b54
+SHA512 (bundler-2.3.21.gem) = ee55cee4dafba5f55967d02a46147ec19e1beb6c3c42912a1c62e7ca46fdc6c8f22919ffea8c7743e6adc76168cfde8fafd3192171585ec588b0c16faef3d0d4
+Size (bundler-2.3.21.gem) = 410624 bytes
