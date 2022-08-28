@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.61 2022/07/27 15:13:11 khorben Exp $
+@comment $NetBSD: PLIST,v 1.62 2022/08/28 19:49:13 morr Exp $
 bin/xxd
 man/man1/evim.1
 man/man1/vim.1
@@ -9,6 +9,7 @@ share/vim/${VIM_SUBDIR}/autoload/README.txt
 share/vim/${VIM_SUBDIR}/autoload/RstFold.vim
 share/vim/${VIM_SUBDIR}/autoload/ada.vim
 share/vim/${VIM_SUBDIR}/autoload/adacomplete.vim
+share/vim/${VIM_SUBDIR}/autoload/bitbake.vim
 share/vim/${VIM_SUBDIR}/autoload/ccomplete.vim
 share/vim/${VIM_SUBDIR}/autoload/clojurecomplete.vim
 share/vim/${VIM_SUBDIR}/autoload/context.vim
@@ -31,6 +32,7 @@ share/vim/${VIM_SUBDIR}/autoload/netrwSettings.vim
 share/vim/${VIM_SUBDIR}/autoload/netrw_gitignore.vim
 share/vim/${VIM_SUBDIR}/autoload/paste.vim
 share/vim/${VIM_SUBDIR}/autoload/phpcomplete.vim
+share/vim/${VIM_SUBDIR}/autoload/python.vim
 share/vim/${VIM_SUBDIR}/autoload/python3complete.vim
 share/vim/${VIM_SUBDIR}/autoload/pythoncomplete.vim
 share/vim/${VIM_SUBDIR}/autoload/rubycomplete.vim
@@ -41,6 +43,7 @@ share/vim/${VIM_SUBDIR}/autoload/sqlcomplete.vim
 share/vim/${VIM_SUBDIR}/autoload/syntaxcomplete.vim
 share/vim/${VIM_SUBDIR}/autoload/tar.vim
 share/vim/${VIM_SUBDIR}/autoload/tohtml.vim
+share/vim/${VIM_SUBDIR}/autoload/typeset.vim
 share/vim/${VIM_SUBDIR}/autoload/vimball.vim
 share/vim/${VIM_SUBDIR}/autoload/xml/html32.vim
 share/vim/${VIM_SUBDIR}/autoload/xml/html401f.vim
@@ -67,14 +70,17 @@ share/vim/${VIM_SUBDIR}/colors/delek.vim
 share/vim/${VIM_SUBDIR}/colors/desert.vim
 share/vim/${VIM_SUBDIR}/colors/elflord.vim
 share/vim/${VIM_SUBDIR}/colors/evening.vim
+share/vim/${VIM_SUBDIR}/colors/habamax.vim
 share/vim/${VIM_SUBDIR}/colors/industry.vim
 share/vim/${VIM_SUBDIR}/colors/koehler.vim
 share/vim/${VIM_SUBDIR}/colors/lists/csscolors.vim
 share/vim/${VIM_SUBDIR}/colors/lists/default.vim
+share/vim/${VIM_SUBDIR}/colors/lunaperche.vim
 share/vim/${VIM_SUBDIR}/colors/morning.vim
 share/vim/${VIM_SUBDIR}/colors/murphy.vim
 share/vim/${VIM_SUBDIR}/colors/pablo.vim
 share/vim/${VIM_SUBDIR}/colors/peachpuff.vim
+share/vim/${VIM_SUBDIR}/colors/quiet.vim
 share/vim/${VIM_SUBDIR}/colors/ron.vim
 share/vim/${VIM_SUBDIR}/colors/shine.vim
 share/vim/${VIM_SUBDIR}/colors/slate.vim
@@ -200,6 +206,8 @@ share/vim/${VIM_SUBDIR}/doc/farsi.txt
 share/vim/${VIM_SUBDIR}/doc/filetype.txt
 share/vim/${VIM_SUBDIR}/doc/fold.txt
 share/vim/${VIM_SUBDIR}/doc/ft_ada.txt
+share/vim/${VIM_SUBDIR}/doc/ft_context.txt
+share/vim/${VIM_SUBDIR}/doc/ft_mp.txt
 share/vim/${VIM_SUBDIR}/doc/ft_ps1.txt
 share/vim/${VIM_SUBDIR}/doc/ft_raku.txt
 share/vim/${VIM_SUBDIR}/doc/ft_rust.txt
@@ -354,6 +362,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/awk.vim
 share/vim/${VIM_SUBDIR}/ftplugin/bash.vim
 share/vim/${VIM_SUBDIR}/ftplugin/basic.vim
 share/vim/${VIM_SUBDIR}/ftplugin/bdf.vim
+share/vim/${VIM_SUBDIR}/ftplugin/bitbake.vim
 share/vim/${VIM_SUBDIR}/ftplugin/bst.vim
 share/vim/${VIM_SUBDIR}/ftplugin/btm.vim
 share/vim/${VIM_SUBDIR}/ftplugin/bzl.vim
@@ -382,6 +391,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/cvsrc.vim
 share/vim/${VIM_SUBDIR}/ftplugin/debchangelog.vim
 share/vim/${VIM_SUBDIR}/ftplugin/debcontrol.vim
 share/vim/${VIM_SUBDIR}/ftplugin/denyhosts.vim
+share/vim/${VIM_SUBDIR}/ftplugin/desktop.vim
 share/vim/${VIM_SUBDIR}/ftplugin/dictconf.vim
 share/vim/${VIM_SUBDIR}/ftplugin/dictdconf.vim
 share/vim/${VIM_SUBDIR}/ftplugin/diff.vim
@@ -400,6 +410,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/elm.vim
 share/vim/${VIM_SUBDIR}/ftplugin/erlang.vim
 share/vim/${VIM_SUBDIR}/ftplugin/eruby.vim
 share/vim/${VIM_SUBDIR}/ftplugin/eterm.vim
+share/vim/${VIM_SUBDIR}/ftplugin/expect.vim
 share/vim/${VIM_SUBDIR}/ftplugin/falcon.vim
 share/vim/${VIM_SUBDIR}/ftplugin/fennel.vim
 share/vim/${VIM_SUBDIR}/ftplugin/fetchmail.vim
@@ -555,6 +566,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/sql.vim
 share/vim/${VIM_SUBDIR}/ftplugin/sshconfig.vim
 share/vim/${VIM_SUBDIR}/ftplugin/sudoers.vim
 share/vim/${VIM_SUBDIR}/ftplugin/svg.vim
+share/vim/${VIM_SUBDIR}/ftplugin/swayconfig.vim
 share/vim/${VIM_SUBDIR}/ftplugin/swift.vim
 share/vim/${VIM_SUBDIR}/ftplugin/swiftgyb.vim
 share/vim/${VIM_SUBDIR}/ftplugin/sysctl.vim
@@ -582,6 +594,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/verilog.vim
 share/vim/${VIM_SUBDIR}/ftplugin/vhdl.vim
 share/vim/${VIM_SUBDIR}/ftplugin/vim.vim
 share/vim/${VIM_SUBDIR}/ftplugin/vroom.vim
+share/vim/${VIM_SUBDIR}/ftplugin/vue.vim
 share/vim/${VIM_SUBDIR}/ftplugin/wast.vim
 share/vim/${VIM_SUBDIR}/ftplugin/wget.vim
 share/vim/${VIM_SUBDIR}/ftplugin/wget2.vim
@@ -610,6 +623,7 @@ share/vim/${VIM_SUBDIR}/indent/awk.vim
 share/vim/${VIM_SUBDIR}/indent/bash.vim
 share/vim/${VIM_SUBDIR}/indent/basic.vim
 share/vim/${VIM_SUBDIR}/indent/bib.vim
+share/vim/${VIM_SUBDIR}/indent/bitbake.vim
 share/vim/${VIM_SUBDIR}/indent/bst.vim
 share/vim/${VIM_SUBDIR}/indent/bzl.vim
 share/vim/${VIM_SUBDIR}/indent/c.vim
@@ -641,6 +655,7 @@ share/vim/${VIM_SUBDIR}/indent/elm.vim
 share/vim/${VIM_SUBDIR}/indent/erlang.vim
 share/vim/${VIM_SUBDIR}/indent/eruby.vim
 share/vim/${VIM_SUBDIR}/indent/eterm.vim
+share/vim/${VIM_SUBDIR}/indent/expect.vim
 share/vim/${VIM_SUBDIR}/indent/falcon.vim
 share/vim/${VIM_SUBDIR}/indent/fennel.vim
 share/vim/${VIM_SUBDIR}/indent/fortran.vim
@@ -898,6 +913,7 @@ share/vim/${VIM_SUBDIR}/syntax/bc.vim
 share/vim/${VIM_SUBDIR}/syntax/bdf.vim
 share/vim/${VIM_SUBDIR}/syntax/bib.vim
 share/vim/${VIM_SUBDIR}/syntax/bindzone.vim
+share/vim/${VIM_SUBDIR}/syntax/bitbake.vim
 share/vim/${VIM_SUBDIR}/syntax/blank.vim
 share/vim/${VIM_SUBDIR}/syntax/bsdl.vim
 share/vim/${VIM_SUBDIR}/syntax/bst.vim
@@ -1335,6 +1351,12 @@ share/vim/${VIM_SUBDIR}/syntax/sgml.vim
 share/vim/${VIM_SUBDIR}/syntax/sgmldecl.vim
 share/vim/${VIM_SUBDIR}/syntax/sgmllnx.vim
 share/vim/${VIM_SUBDIR}/syntax/sh.vim
+share/vim/${VIM_SUBDIR}/syntax/shared/README.txt
+share/vim/${VIM_SUBDIR}/syntax/shared/context-data-context.vim
+share/vim/${VIM_SUBDIR}/syntax/shared/context-data-interfaces.vim
+share/vim/${VIM_SUBDIR}/syntax/shared/context-data-metafun.vim
+share/vim/${VIM_SUBDIR}/syntax/shared/context-data-tex.vim
+share/vim/${VIM_SUBDIR}/syntax/shared/typescriptcommon.vim
 share/vim/${VIM_SUBDIR}/syntax/sicad.vim
 share/vim/${VIM_SUBDIR}/syntax/sieve.vim
 share/vim/${VIM_SUBDIR}/syntax/sil.vim
@@ -1389,6 +1411,7 @@ share/vim/${VIM_SUBDIR}/syntax/structurizr.vim
 share/vim/${VIM_SUBDIR}/syntax/sudoers.vim
 share/vim/${VIM_SUBDIR}/syntax/svg.vim
 share/vim/${VIM_SUBDIR}/syntax/svn.vim
+share/vim/${VIM_SUBDIR}/syntax/swayconfig.vim
 share/vim/${VIM_SUBDIR}/syntax/swift.vim
 share/vim/${VIM_SUBDIR}/syntax/swiftgyb.vim
 share/vim/${VIM_SUBDIR}/syntax/syncolor.vim
@@ -1433,7 +1456,6 @@ share/vim/${VIM_SUBDIR}/syntax/tt2.vim
 share/vim/${VIM_SUBDIR}/syntax/tt2html.vim
 share/vim/${VIM_SUBDIR}/syntax/tt2js.vim
 share/vim/${VIM_SUBDIR}/syntax/typescript.vim
-share/vim/${VIM_SUBDIR}/syntax/typescriptcommon.vim
 share/vim/${VIM_SUBDIR}/syntax/typescriptreact.vim
 share/vim/${VIM_SUBDIR}/syntax/uc.vim
 share/vim/${VIM_SUBDIR}/syntax/udevconf.vim
