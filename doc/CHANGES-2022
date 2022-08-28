@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4139 2022/08/28 16:17:26 pin Exp $
+$NetBSD: CHANGES-2022,v 1.4140 2022/08/28 16:21:54 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6016,3 +6016,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/oculante to 0.6.3 [pin 2022-08-28]
 	Updated devel/difftastic to 0.34.0 [pin 2022-08-28]
 	Updated textproc/csvlens to 0.1.8 [pin 2022-08-28]
+	Added net/piratebay version 0.1.4 [pin 2022-08-28]
