@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.33 2022/02/13 06:47:15 taca Exp $
+@comment $NetBSD: PLIST,v 1.34 2022/08/28 03:35:43 taca Exp $
 bin/bundle2-${RUBY_SUFFIX}
 bin/bundler2-${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -118,6 +118,8 @@ ${GEM_LIBDIR}/lib/bundler/man/bundle-outdated.1
 ${GEM_LIBDIR}/lib/bundler/man/bundle-outdated.1.ronn
 ${GEM_LIBDIR}/lib/bundler/man/bundle-platform.1
 ${GEM_LIBDIR}/lib/bundler/man/bundle-platform.1.ronn
+${GEM_LIBDIR}/lib/bundler/man/bundle-plugin.1
+${GEM_LIBDIR}/lib/bundler/man/bundle-plugin.1.ronn
 ${GEM_LIBDIR}/lib/bundler/man/bundle-pristine.1
 ${GEM_LIBDIR}/lib/bundler/man/bundle-pristine.1.ronn
 ${GEM_LIBDIR}/lib/bundler/man/bundle-remove.1
@@ -133,7 +135,9 @@ ${GEM_LIBDIR}/lib/bundler/man/bundle.1.ronn
 ${GEM_LIBDIR}/lib/bundler/man/gemfile.5
 ${GEM_LIBDIR}/lib/bundler/man/gemfile.5.ronn
 ${GEM_LIBDIR}/lib/bundler/man/index.txt
+${GEM_LIBDIR}/lib/bundler/match_metadata.rb
 ${GEM_LIBDIR}/lib/bundler/match_platform.rb
+${GEM_LIBDIR}/lib/bundler/match_remote_metadata.rb
 ${GEM_LIBDIR}/lib/bundler/mirror.rb
 ${GEM_LIBDIR}/lib/bundler/plugin.rb
 ${GEM_LIBDIR}/lib/bundler/plugin/api.rb
