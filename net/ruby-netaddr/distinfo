@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/11/28 07:59:47 taca Exp $
+$NetBSD: distinfo,v 1.11 2022/08/28 04:20:25 taca Exp $
 
-BLAKE2s (netaddr-2.0.5.gem) = 5606de2e167caf0303a09fd2e5bc8300035a00c21b962c3bb107d339fef25d31
-SHA512 (netaddr-2.0.5.gem) = 7062aa5a1b96f82d777e5238c2a4ee6eb3bf9d747f707965cd58cc4888c905784331b2b9d2d1b3113ef97c020e0d65b8c4603f1bc88b538125636f7fcb7b51fa
-Size (netaddr-2.0.5.gem) = 23552 bytes
+BLAKE2s (netaddr-2.0.6.gem) = 77c4e816c301b4d7df0696443a97b0e16e50b3b5d4c0a072e9e0510a7c58e544
+SHA512 (netaddr-2.0.6.gem) = ba1f54b8bfc1032e24b85830b641300f3a9db3e00dbd7bd40fda695547791285d9397211bd9e3305a653a30657edd798ddd057bad0c220ccd00fce38c0adfdc5
+Size (netaddr-2.0.6.gem) = 23552 bytes
