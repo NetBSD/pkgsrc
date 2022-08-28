@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4135 2022/08/28 13:08:03 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4136 2022/08/28 16:12:30 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6012,3 +6012,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/ruby-vault to 0.17.0 [taca 2022-08-28]
 	Updated sysutils/capistrano to 3.17.1 [taca 2022-08-28]
 	Updated sysutils/ruby-listen to 3.7.1 [taca 2022-08-28]
+	Updated wm/wmutils-core to 1.7 [pin 2022-08-28]
