@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4106 2022/08/28 04:03:38 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4107 2022/08/28 04:06:45 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5983,3 +5983,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated misc/ruby-bundler to 2.3.21 [taca 2022-08-28]
 	Updated misc/ruby-slop to 4.9.2 [taca 2022-08-28]
 	Updated misc/ruby-sprockets to 4.1.1 [taca 2022-08-28]
+	Updated misc/ruby-windows_error to 0.1.4 [taca 2022-08-28]
