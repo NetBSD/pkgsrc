@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:17:56 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/08/28 05:50:37 taca Exp $
 
-BLAKE2s (openssl-ccm-1.2.2.gem) = 0ced9a68cf359aca651a641f5c711383fe78972d65a7c8fb99d29087d53c8979
-SHA512 (openssl-ccm-1.2.2.gem) = 5f04af1ac65608e519fcf68259b2690f12882781cdba411939f809e1a6cb602723bf23d9cb920949e8eb7c4bfddb3e65446ae16d0276af78992de21cbfcdfc49
-Size (openssl-ccm-1.2.2.gem) = 24576 bytes
+BLAKE2s (openssl-ccm-1.2.3.gem) = 93fbeb7baeaba9147e523fb03d325fbdfcd3e76e2a7a57ec282fd03ebbda22bf
+SHA512 (openssl-ccm-1.2.3.gem) = 4070a570da5864dce582d02916dffccea74db279dd8f4f419a29a4837e66bd6778ba742f6e06037ee5bc5542954e52b2271384b0a321ea282024bc60df3b81e1
+Size (openssl-ccm-1.2.3.gem) = 24576 bytes
