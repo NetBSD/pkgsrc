@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2021/02/03 14:29:18 taca Exp $
+# $NetBSD: Makefile,v 1.4 2022/08/28 04:35:24 taca Exp $
 
-DISTNAME=	train-winrm-0.2.12
+DISTNAME=	train-winrm-0.2.13
 CATEGORIES=	net
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
