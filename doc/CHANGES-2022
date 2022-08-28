@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4141 2022/08/28 19:50:37 morr Exp $
+$NetBSD: CHANGES-2022,v 1.4142 2022/08/28 21:38:54 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6018,3 +6018,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/csvlens to 0.1.8 [pin 2022-08-28]
 	Added net/piratebay version 0.1.4 [pin 2022-08-28]
 	Updated editors/vim-share to 9.0.0305 [morr 2022-08-28]
+	Updated converters/hs-lens-aeson to 1.2.2 [mef 2022-08-28]
