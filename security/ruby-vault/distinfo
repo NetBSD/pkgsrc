@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2021/12/11 14:07:31 taca Exp $
+$NetBSD: distinfo,v 1.2 2022/08/28 12:53:19 taca Exp $
 
-BLAKE2s (vault-0.16.0.gem) = d81b0dcf22656296f4d959c39683413e6ceaa5fd3f7990ab0539d8002e9559b0
-SHA512 (vault-0.16.0.gem) = 4bb8e6c4472d483734be9f12ecb898d531a0a7f4df92ef26d9f83fd2cccbe58f4fee1fa870c0d6737d93c84929cbcb211fef6caad74f5a5f895cce0776ca51cd
-Size (vault-0.16.0.gem) = 49664 bytes
+BLAKE2s (vault-0.17.0.gem) = df333dd4635b740b0530eea5afef250cb25d2d489644345654f85232ca0e304a
+SHA512 (vault-0.17.0.gem) = d0e0284d884c200a19cec568ef5158ef0acb74530fd8958b9d8792c69c20960e73fdcfc44a4a87a5690a0b58a0dd16e8a239844b630fe8f5609b5e51d8780fbc
+Size (vault-0.17.0.gem) = 50176 bytes
