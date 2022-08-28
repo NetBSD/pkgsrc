@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2020/09/14 14:02:14 taca Exp $
+# $NetBSD: Makefile,v 1.13 2022/08/28 05:13:33 taca Exp $
 
-DISTNAME=	bcrypt-3.1.16
+DISTNAME=	bcrypt-3.1.18
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	security
 
