@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.26 2022/02/14 14:15:28 taca Exp $
+$NetBSD: distinfo,v 1.27 2022/08/28 05:06:07 taca Exp $
 
-BLAKE2s (pdf-reader-2.9.1.gem) = 7ea553ab0aa61379450f65328a74f6195e758433f37e08657ddb4f6401e5b9c5
-SHA512 (pdf-reader-2.9.1.gem) = b1eb7f45a1cebd557b33b6224dbb8059dfa01f84f587fcba3a7bab0449ec0c47ef9d4bef54bc1a1822485738fd21976eb07680ab5009553cd0065d9d0c8a47a5
-Size (pdf-reader-2.9.1.gem) = 232960 bytes
+BLAKE2s (pdf-reader-2.10.0.gem) = 16fa6e112743a71db3d870fe14679e0e47dcd2420ef9401d03d45830c39a182c
+SHA512 (pdf-reader-2.10.0.gem) = 912738d3252d467efe600ad757a6536c0d0c41e9e01a05c2b537040f0bdbaa95ecffb525ba8bc5c2012bedc6f7660b365947af03184f19a960d8ed7829e28b4b
+Size (pdf-reader-2.10.0.gem) = 235008 bytes
