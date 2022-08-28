@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4119 2022/08/28 05:16:02 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4120 2022/08/28 05:19:47 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5996,3 +5996,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/ruby-airbrussh to 1.4.1 [taca 2022-08-28]
 	Updated security/ruby-bcrypt to 3.1.18 [taca 2022-08-28]
 	Updated security/ruby-metasploit-concern to 4.0.4 [taca 2022-08-28]
+	Updated security/ruby-metasploit-model to 4.0.6 [taca 2022-08-28]
