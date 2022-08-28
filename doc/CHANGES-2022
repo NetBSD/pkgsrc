@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4133 2022/08/28 12:53:54 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4134 2022/08/28 12:58:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6010,3 +6010,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/ruby-rex-socket to 0.1.41 [taca 2022-08-28]
 	Updated security/ruby-rex-text to 0.2.39 [taca 2022-08-28]
 	Updated security/ruby-vault to 0.17.0 [taca 2022-08-28]
+	Updated sysutils/capistrano to 3.17.1 [taca 2022-08-28]
