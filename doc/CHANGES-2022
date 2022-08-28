@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4127 2022/08/28 12:23:17 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4128 2022/08/28 12:34:25 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6004,3 +6004,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/ruby-chef-vault to 4.1.10 [taca 2022-08-28]
 	Updated devel/hs-primitive-extras to 0.10.1.5 [mef 2022-08-28]
 	Updated security/ruby-rex-core to 0.1.28 [taca 2022-08-28]
+	Updated security/ruby-rex-exploitation to 0.1.35 [taca 2022-08-28]
