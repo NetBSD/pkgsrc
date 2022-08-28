@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4117 2022/08/28 05:09:33 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4118 2022/08/28 05:14:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5994,3 +5994,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/ruby-xdr to 3.0.3 [taca 2022-08-28]
 	Updated print/ruby-pdf-reader to 2.10.0 [taca 2022-08-28]
 	Updated security/ruby-airbrussh to 1.4.1 [taca 2022-08-28]
+	Updated security/ruby-bcrypt to 3.1.18 [taca 2022-08-28]
