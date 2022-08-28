@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2022/02/11 09:47:34 pin Exp $
+# $NetBSD: Makefile,v 1.4 2022/08/28 16:12:04 pin Exp $
 
-DISTNAME=	wmutils-core-1.6
+DISTNAME=	wmutils-core-1.7
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wmutils/}
 GITHUB_PROJECT=	core

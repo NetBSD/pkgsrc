@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2022/02/11 09:47:34 pin Exp $
+$NetBSD: distinfo,v 1.5 2022/08/28 16:12:04 pin Exp $
 
-BLAKE2s (wmutils-core-1.6.tar.gz) = d99f8394f40d4d13d5c4856055e3c050ec6107c18ba75c6bdee2da56a4ace2b3
-SHA512 (wmutils-core-1.6.tar.gz) = 001bb0c80f454c5947237e7157d347ef42b4022e3b35524137044f06e15b286a3d438e5d0f6a8cd1536cc1841aec04ca38028a0be5c936d6b6eef517b4de2bad
-Size (wmutils-core-1.6.tar.gz) = 12026 bytes
+BLAKE2s (wmutils-core-1.7.tar.gz) = d953e77067336b5b9202676d7d6a9092011d3c11c43f8353687abd6ec4527013
+SHA512 (wmutils-core-1.7.tar.gz) = 726fb328f503c6338f3b855ea77d797db647a78d1de02cfbb3778f27d10dbaa6cec14f46558d46da866b33467a1ab7871634075800d8f2ef00d3e0b5d331c65a
+Size (wmutils-core-1.7.tar.gz) = 12284 bytes
