@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/07/13 19:45:45 alnsn Exp $
+# $NetBSD: Makefile,v 1.3 2022/08/28 18:34:15 he Exp $
 #
 
 DISTNAME=	fplll-5.3.2
@@ -21,6 +21,7 @@ TEST_TARGET=	check
 pre-configure:
 	cd ${WRKSRC} && ./autogen.sh
 
+.include "../../mk/atomic64.mk"
 .include "../../devel/gmp/buildlink3.mk"
 BUILDLINK_API_DEPENDS.mpfr+=	mpfr>=2.0.3
 .include "../../math/mpfr/buildlink3.mk"
