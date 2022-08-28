@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2022Q2,v 1.1.2.6 2022/08/28 08:15:06 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2022Q2,v 1.1.2.7 2022/08/28 14:59:18 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2022Q2 branch:
 
@@ -124,4 +124,8 @@ security/openssl: security update
 Pullup tickets #6664 #6669 - requested by taca
 net/samba4: security update
 databases/ldb: dependency update
+
+Pullup ticket #6668 - requested by khorben
+lang/openjdk8: security update
+lang/openjdk11: security update
 
