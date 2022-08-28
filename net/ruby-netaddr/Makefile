@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2021/11/28 07:59:47 taca Exp $
+# $NetBSD: Makefile,v 1.10 2022/08/28 04:20:25 taca Exp $
 
-DISTNAME=	netaddr-2.0.5
+DISTNAME=	netaddr-2.0.6
 CATEGORIES=	net
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
