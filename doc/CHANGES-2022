@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4115 2022/08/28 04:59:07 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4116 2022/08/28 05:06:45 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5992,3 +5992,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/ruby-ruby_smb to 3.1.7 [taca 2022-08-28]
 	Updated net/ruby-train-winrm to 0.2.13 [taca 2022-08-28]
 	Updated net/ruby-xdr to 3.0.3 [taca 2022-08-28]
+	Updated print/ruby-pdf-reader to 2.10.0 [taca 2022-08-28]
