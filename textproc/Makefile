@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1322 2022/08/29 12:55:48 taca Exp $
+# $NetBSD: Makefile,v 1.1323 2022/08/29 13:21:01 taca Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1215,6 +1215,7 @@ SUBDIR+=	ruby-haml
 SUBDIR+=	ruby-hikidoc
 SUBDIR+=	ruby-hpricot
 SUBDIR+=	ruby-html-parser
+SUBDIR+=	ruby-html-pipeline
 SUBDIR+=	ruby-htmlentities
 SUBDIR+=	ruby-htree
 SUBDIR+=	ruby-inifile
