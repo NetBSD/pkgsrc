@@ -1,5 +1,9 @@
+bin/de-gfm @PREFIX@/bin/de-gfm@RUBY_SUFFIX@
 bin/doilit @PREFIX@/bin/doilit@RUBY_SUFFIX@
 bin/kdrfc @PREFIX@/bin/kdrfc@RUBY_SUFFIX@
+bin/kramdown-rfc-autolink-iref-cleanup @PREFIX@/bin/kramdown-rfc-autolink-iref-cleanup@RUBY_SUFFIX@
 bin/kramdown-rfc-cache-i-d-bibxml @PREFIX@/bin/kramdown-rfc-cache-i-d-bibxml@RUBY_SUFFIX@
+bin/kramdown-rfc-cache-subseries-bibxml @PREFIX@/bin/kramdown-rfc-cache-subseries-bibxml@RUBY_SUFFIX@
 bin/kramdown-rfc-extract-markdown @PREFIX@/bin/kramdown-rfc-extract-markdown@RUBY_SUFFIX@
 bin/kramdown-rfc2629 @PREFIX@/bin/kramdown-rfc2629@RUBY_SUFFIX@
+bin/kramdown-rfc @PREFIX@/bin/kramdown-rfc@RUBY_SUFFIX@
