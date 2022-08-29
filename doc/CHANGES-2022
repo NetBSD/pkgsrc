@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4165 2022/08/29 14:48:53 thor Exp $
+$NetBSD: CHANGES-2022,v 1.4166 2022/08/29 15:54:18 thor Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6044,3 +6044,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/ruby-kramdown-rfc2629 to 1.6.17 [taca 2022-08-29]
 	Updated textproc/ruby-libxml to 3.2.3 [taca 2022-08-29]
 	Updated devel/py-colorlog to 6.6.0 [thor 2022-08-29]
+	Updated math/py-pyerfa to 2.0.0.1 [thor 2022-08-29]
