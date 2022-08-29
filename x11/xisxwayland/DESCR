@@ -1,0 +1,4 @@
+xisxwayland connects to the X server and exits with status code 0
+if that server is Xwayland. This tool is intended to be used in
+shell scripts and/or to make it easier for users to check whether
+they're on a Wayland or X session.
