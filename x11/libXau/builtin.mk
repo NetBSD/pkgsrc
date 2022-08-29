@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.7 2019/11/03 09:14:10 rillig Exp $
+# $NetBSD: builtin.mk,v 1.8 2022/08/29 09:44:32 wiz Exp $
 
 BUILTIN_PKG:=	libXau
 
@@ -31,10 +31,10 @@ USE_BUILTIN.libXau=	no
 .  else
 USE_BUILTIN.libXau=	${IS_BUILTIN.libXau}
 .    if defined(BUILTIN_PKG.libXau) && \
-        !empty(IS_BUILTIN.libXau:M[yY][eE][sS])
+        ${IS_BUILTIN.libXau:M[yY][eE][sS]}
 USE_BUILTIN.libXau=	yes
 .      for _dep_ in ${BUILDLINK_API_DEPENDS.libXau}
-.        if !empty(USE_BUILTIN.libXau:M[yY][eE][sS])
+.        if ${USE_BUILTIN.libXau:M[yY][eE][sS]}
 USE_BUILTIN.libXau!=							\
 	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.libXau:Q}; then \
 		${ECHO} yes;						\
@@ -51,11 +51,11 @@ MAKEVARS+=		USE_BUILTIN.libXau
 .include "../../mk/x11.builtin.mk"
 
 CHECK_BUILTIN.libXau?=	no
-.if !empty(CHECK_BUILTIN.libXau:M[nN][oO])
+.if ${CHECK_BUILTIN.libXau:M[nN][oO]}
 
 # If we are using the builtin version, check whether it has a xau.pc
 # file or not.  If the latter, generate a fake one.
-.  if !empty(USE_BUILTIN.libXau:M[Yy][Ee][Ss])
+.  if ${USE_BUILTIN.libXau:M[Yy][Ee][Ss]}
 BUILDLINK_TARGETS+=	xau-fake-pc
 
 xau-fake-pc:
