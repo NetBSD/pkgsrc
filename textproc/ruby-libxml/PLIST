@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2021/01/14 14:46:16 taca Exp $
+@comment $NetBSD: PLIST,v 1.22 2022/08/29 13:39:26 taca Exp $
 ${GEM_HOME}/build_info/${GEM_NAME}.info
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
@@ -8,7 +8,6 @@ ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/MANIFEST
 ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/ext/libxml/extconf.h
 ${GEM_LIBDIR}/ext/libxml/extconf.rb
 ${GEM_LIBDIR}/ext/libxml/libxml.c
 ${GEM_LIBDIR}/ext/libxml/libxml_ruby.def
@@ -164,9 +163,10 @@ ${GEM_LIBDIR}/test/model/shiporder.rnc
 ${GEM_LIBDIR}/test/model/shiporder.rng
 ${GEM_LIBDIR}/test/model/shiporder.xml
 ${GEM_LIBDIR}/test/model/shiporder.xsd
+${GEM_LIBDIR}/test/model/shiporder_bad.xsd
+${GEM_LIBDIR}/test/model/shiporder_import.xsd
 ${GEM_LIBDIR}/test/model/soap.xml
 ${GEM_LIBDIR}/test/model/xinclude.xml
-${GEM_LIBDIR}/test/test.xml
 ${GEM_LIBDIR}/test/test_attr.rb
 ${GEM_LIBDIR}/test/test_attr_decl.rb
 ${GEM_LIBDIR}/test/test_attributes.rb
