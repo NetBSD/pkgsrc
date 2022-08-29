@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2021/08/30 14:55:50 taca Exp $
+# $NetBSD: Makefile,v 1.2 2022/08/29 13:23:44 taca Exp $
 
-DISTNAME=	jmespath-1.4.0
+DISTNAME=	jmespath-1.6.1
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
