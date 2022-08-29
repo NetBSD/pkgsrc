@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4160 2022/08/29 13:09:12 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4161 2022/08/29 13:21:19 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6038,3 +6038,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/ruby-csv to 3.2.5 [taca 2022-08-29]
 	Updated textproc/ruby-erubi to 1.11.0 [taca 2022-08-29]
 	Updated textproc/ruby-gyoku to 1.4.0 [taca 2022-08-29]
+	Added textproc/ruby-html-pipeline version 2.14.2 [taca 2022-08-29]
