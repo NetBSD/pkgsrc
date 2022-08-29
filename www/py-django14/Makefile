@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2022/01/10 09:03:53 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2022/08/29 10:33:05 wiz Exp $
 
 DISTNAME=	Django-1.4.22
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -25,9 +25,7 @@ USE_PKG_RESOURCES=	yes
 .include "options.mk"
 
 pre-configure:
-.if empty(PKG_OPTIONS:Mmysql)
 	rm -r ${WRKSRC}/django/db/backends/mysql
-.endif
 .if empty(PKG_OPTIONS:Moracle)
 	rm -r ${WRKSRC}/django/db/backends/oracle
 .endif
@@ -41,7 +39,6 @@ pre-configure:
 BACKEND_PATH=		${PYSITELIB}/django/db/backends
 BACKEND_PATH_PLIST=	$${PYSITELIB}/django/db/backends
 
-PRINT_PLIST_AWK+=	{ gsub("^${BACKEND_PATH}/mysql/", "$${PLIST.mysql}${BACKEND_PATH_PLIST}/mysql/") }
 PRINT_PLIST_AWK+=	{ gsub("^${BACKEND_PATH}/oracle/", "$${PLIST.oracle}${BACKEND_PATH_PLIST}/oracle/") }
 PRINT_PLIST_AWK+=	{ gsub("^${BACKEND_PATH}/postgresql_psycopg2/", "$${PLIST.pgsql}${BACKEND_PATH_PLIST}/postgresql_psycopg2/") }
 PRINT_PLIST_AWK+=	{ gsub("^${BACKEND_PATH}/sqlite3/", "$${PLIST.sqlite}${BACKEND_PATH_PLIST}/sqlite3/") }
