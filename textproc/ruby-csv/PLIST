@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/01/16 15:01:48 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/08/29 12:59:17 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/NEWS.md
@@ -32,10 +32,8 @@ ${GEM_LIBDIR}/doc/csv/recipes/recipes.rdoc
 ${GEM_LIBDIR}/lib/csv.rb
 ${GEM_LIBDIR}/lib/csv/core_ext/array.rb
 ${GEM_LIBDIR}/lib/csv/core_ext/string.rb
-${GEM_LIBDIR}/lib/csv/delete_suffix.rb
 ${GEM_LIBDIR}/lib/csv/fields_converter.rb
 ${GEM_LIBDIR}/lib/csv/input_record_separator.rb
-${GEM_LIBDIR}/lib/csv/match_p.rb
 ${GEM_LIBDIR}/lib/csv/parser.rb
 ${GEM_LIBDIR}/lib/csv/row.rb
 ${GEM_LIBDIR}/lib/csv/table.rb
