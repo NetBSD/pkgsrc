@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2022/07/07 10:41:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2022/08/29 16:11:02 thor Exp $
 bin/jsonschema-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -7,7 +7,7 @@ ${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
-${PYSITELIB}/${WHEEL_INFODIR}/license_files/COPYING
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING
 ${PYSITELIB}/jsonschema/__init__.py
 ${PYSITELIB}/jsonschema/__init__.pyc
 ${PYSITELIB}/jsonschema/__main__.py
