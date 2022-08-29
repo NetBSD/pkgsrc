@@ -1,10 +1,10 @@
-$NetBSD: patch-src_crypto_crypto__rsa.cc,v 1.1 2022/06/05 06:56:15 mef Exp $
+$NetBSD: patch-src_crypto_crypto__rsa.cc,v 1.2 2022/08/29 06:28:38 adam Exp $
 
 Fix build with old OpenSSL 1.1.1d, as in NetBSD 9.0
 
---- src/crypto/crypto_rsa.cc.orig	2022-06-02 04:23:16.000000000 +0900
-+++ src/crypto/crypto_rsa.cc	2022-06-05 15:40:17.350690631 +0900
-@@ -13,6 +13,30 @@
+--- src/crypto/crypto_rsa.cc.orig	2022-08-16 06:43:18.000000000 +0000
++++ src/crypto/crypto_rsa.cc
+@@ -12,6 +12,30 @@
  #include <openssl/bn.h>
  #include <openssl/rsa.h>
  
@@ -34,4 +34,4 @@ Fix build with old OpenSSL 1.1.1d, as in NetBSD 9.0
 +
  namespace node {
  
- using v8::FunctionCallbackInfo;
+ using v8::ArrayBuffer;
