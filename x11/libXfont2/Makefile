@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2022/04/10 08:53:15 nia Exp $
+# $NetBSD: Makefile,v 1.14 2022/08/29 09:46:49 wiz Exp $
 
-DISTNAME=		libXfont2-2.0.5
+DISTNAME=		libXfont2-2.0.6
 CATEGORIES=		x11 devel fonts
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
-EXTRACT_SUFX=		.tar.bz2
+EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/
