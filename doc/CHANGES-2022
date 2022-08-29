@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4150 2022/08/29 11:21:55 pin Exp $
+$NetBSD: CHANGES-2022,v 1.4151 2022/08/29 11:22:54 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6028,3 +6028,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated converters/hs-cborg-json to 0.2.4.0 [wiz 2022-08-29]
 	Updated devel/goredo to 1.27.0 [schmonz 2022-08-29]
 	Updated sysutils/felix to 1.1.2 [pin 2022-08-29]
+	Updated graphics/oculante to 0.6.5 [pin 2022-08-29]
