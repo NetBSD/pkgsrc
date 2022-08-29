@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/08/29 12:21:41 wiz Exp $
+
+BLAKE2s (xisxwayland-2.tar.xz) = 275be54b7eba0581a13d4950dd53cfa540e712fd60075c83e722242746e89422
+SHA512 (xisxwayland-2.tar.xz) = b89e19c85a5cd7e62a52e22772f80f03bfea069e31412ca11ac38174c4a2994be559e9d5fb49e6d1921b3f1b06ee71b50ede48990a1e7804a96207b08fc7827f
+Size (xisxwayland-2.tar.xz) = 5220 bytes
