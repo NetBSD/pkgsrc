@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2020/01/18 23:35:51 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2022/08/29 09:45:50 wiz Exp $
 
-DISTNAME=	libXaw3d-1.6.3
+DISTNAME=	libXaw3d-1.6.4
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=lib/}
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://xorg.freedesktop.org/
