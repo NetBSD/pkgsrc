@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2022/05/24 18:51:47 jaapb Exp $
+# $NetBSD: Makefile,v 1.104 2022/08/29 16:14:41 wiz Exp $
 #
 
 DISTNAME=	frama-c-Phosphorus-20170501
@@ -23,6 +23,7 @@ OCAML_USE_FINDLIB=	yes
 # (not the default) or the build fails with missing module "Dgraph".
 
 .include "../../devel/ocamlgraph/buildlink3.mk"
+.include "../../math/ocaml-num/buildlink3.mk"
 .include "../../math/ocaml-zarith/buildlink3.mk"
 
 .include "../../lang/ocaml/ocaml.mk"
