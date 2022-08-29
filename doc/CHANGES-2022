@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4163 2022/08/29 13:27:07 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4164 2022/08/29 13:39:46 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6041,3 +6041,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Added textproc/ruby-html-pipeline version 2.14.2 [taca 2022-08-29]
 	Updated textproc/ruby-jmespath to 1.6.1 [taca 2022-08-29]
 	Updated textproc/ruby-kramdown to 2.4.0 [taca 2022-08-29]
+	Updated textproc/ruby-kramdown-rfc2629 to 1.6.17 [taca 2022-08-29]
+	Updated textproc/ruby-libxml to 3.2.3 [taca 2022-08-29]
