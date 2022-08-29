@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4144 2022/08/29 09:43:18 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4145 2022/08/29 09:44:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6022,3 +6022,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/nodejs16 to 16.17.0 [adam 2022-08-29]
 	Updated lang/nodejs to 18.8.0 [adam 2022-08-29]
 	Updated x11/libFS to 1.0.9 [wiz 2022-08-29]
+	Updated x11/libXau to 1.0.10 [wiz 2022-08-29]
