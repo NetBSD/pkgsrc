@@ -1,0 +1,2 @@
+A fast, safe, extensible parser for CommonMark.  This wraps the
+official libcmark library.
