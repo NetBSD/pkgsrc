@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2021/06/01 14:50:56 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2022/08/29 12:37:51 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE.txt
@@ -485,6 +485,7 @@ ${GEM_LIBDIR}/spec/host_inventory/aix/filesystem_spec.rb
 ${GEM_LIBDIR}/spec/host_inventory/base/group_spec.rb
 ${GEM_LIBDIR}/spec/host_inventory/base/user_spec.rb
 ${GEM_LIBDIR}/spec/host_inventory/darwin/filesystem_spec.rb
+${GEM_LIBDIR}/spec/host_inventory/darwin/kernel_spec.rb
 ${GEM_LIBDIR}/spec/host_inventory/freebsd/filesystem_spec.rb
 ${GEM_LIBDIR}/spec/host_inventory/linux/block_device_spec.rb
 ${GEM_LIBDIR}/spec/host_inventory/linux/cpu_spec.rb
