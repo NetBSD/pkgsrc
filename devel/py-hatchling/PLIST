@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2022/06/01 10:54:22 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/08/29 13:42:00 adam Exp $
 bin/hatchling-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -7,7 +7,7 @@ ${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
-${PYSITELIB}/${WHEEL_INFODIR}/license_files/LICENSE.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
 ${PYSITELIB}/hatchling/__about__.py
 ${PYSITELIB}/hatchling/__about__.pyc
 ${PYSITELIB}/hatchling/__init__.py
@@ -38,6 +38,8 @@ ${PYSITELIB}/hatchling/builders/hooks/plugin/hooks.py
 ${PYSITELIB}/hatchling/builders/hooks/plugin/hooks.pyc
 ${PYSITELIB}/hatchling/builders/hooks/plugin/interface.py
 ${PYSITELIB}/hatchling/builders/hooks/plugin/interface.pyc
+${PYSITELIB}/hatchling/builders/hooks/version.py
+${PYSITELIB}/hatchling/builders/hooks/version.pyc
 ${PYSITELIB}/hatchling/builders/plugin/__init__.py
 ${PYSITELIB}/hatchling/builders/plugin/__init__.pyc
 ${PYSITELIB}/hatchling/builders/plugin/hooks.py
@@ -70,6 +72,8 @@ ${PYSITELIB}/hatchling/licenses/supported.py
 ${PYSITELIB}/hatchling/licenses/supported.pyc
 ${PYSITELIB}/hatchling/metadata/__init__.py
 ${PYSITELIB}/hatchling/metadata/__init__.pyc
+${PYSITELIB}/hatchling/metadata/classifiers.py
+${PYSITELIB}/hatchling/metadata/classifiers.pyc
 ${PYSITELIB}/hatchling/metadata/core.py
 ${PYSITELIB}/hatchling/metadata/core.pyc
 ${PYSITELIB}/hatchling/metadata/custom.py
@@ -96,6 +100,7 @@ ${PYSITELIB}/hatchling/plugin/specs.py
 ${PYSITELIB}/hatchling/plugin/specs.pyc
 ${PYSITELIB}/hatchling/plugin/utils.py
 ${PYSITELIB}/hatchling/plugin/utils.pyc
+${PYSITELIB}/hatchling/py.typed
 ${PYSITELIB}/hatchling/utils/__init__.py
 ${PYSITELIB}/hatchling/utils/__init__.pyc
 ${PYSITELIB}/hatchling/utils/constants.py
@@ -106,6 +111,8 @@ ${PYSITELIB}/hatchling/utils/fs.py
 ${PYSITELIB}/hatchling/utils/fs.pyc
 ${PYSITELIB}/hatchling/version/__init__.py
 ${PYSITELIB}/hatchling/version/__init__.pyc
+${PYSITELIB}/hatchling/version/core.py
+${PYSITELIB}/hatchling/version/core.pyc
 ${PYSITELIB}/hatchling/version/scheme/__init__.py
 ${PYSITELIB}/hatchling/version/scheme/__init__.pyc
 ${PYSITELIB}/hatchling/version/scheme/plugin/__init__.py
