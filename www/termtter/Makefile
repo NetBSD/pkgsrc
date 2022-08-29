@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2022/01/14 16:22:17 taca Exp $
+# $NetBSD: Makefile,v 1.19 2022/08/29 14:20:57 wiz Exp $
 
 DISTNAME=	termtter-2.2.8
 PKGREVISION=	1
@@ -19,6 +19,8 @@ OVERRIDE_GEMSPEC+=	highline>=1.5.0
 OVERRIDE_GEMSPEC+=	json_pure:json>=1.1.3
 OVERRIDE_GEMSPEC+=	termcolor>=1.0.0
 RUBYGEM_OPTIONS+=	--format-executable
+
+RUBY_VERSIONS_INCOMPATIBLE=	26 # ruby-oauth via ruby-rubytter
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"

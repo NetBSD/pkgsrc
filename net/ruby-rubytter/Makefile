@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2017/07/30 22:32:20 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2022/08/29 14:20:56 wiz Exp $
 
 DISTNAME=	rubytter-1.5.1
 CATEGORIES=	net
@@ -9,6 +9,8 @@ COMMENT=	Simple twitter library
 LICENSE=	mit
 
 DEPENDS+=	${RUBY_PKGPREFIX}-oauth>=0.3.6:../../security/ruby-oauth
+
+RUBY_VERSIONS_INCOMPATIBLE=	26 # ruby-oauth
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
