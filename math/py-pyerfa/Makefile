@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/08/29 15:54:08 thor Exp $
+# $NetBSD: Makefile,v 1.7 2022/08/29 15:56:18 wiz Exp $
 
 DISTNAME=	pyerfa-2.0.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,7 @@ MAKE_ENV+=	PYERFA_USE_SYSTEM_LIBERFA=1
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37 # py-numpy
 
 DEPENDS+=	${PYPKGPREFIX}-numpy>=1.18.0:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.10.3:../../textproc/py-jinja2
