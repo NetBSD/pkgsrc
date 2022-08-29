@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2022/06/13 19:27:45 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/08/29 16:08:26 thor Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -6,7 +6,7 @@ ${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
-${PYSITELIB}/${WHEEL_INFODIR}/license_files/LICENSE.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
 ${PYSITELIB}/hatch_vcs/__about__.py
 ${PYSITELIB}/hatch_vcs/__about__.pyc
 ${PYSITELIB}/hatch_vcs/__init__.py
