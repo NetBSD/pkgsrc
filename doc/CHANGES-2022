@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4156 2022/08/29 12:50:48 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4157 2022/08/29 12:56:05 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6034,3 +6034,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/ruby-serverspec to 2.42.0 [taca 2022-08-29]
 	Updated sysutils/ruby-specinfra to 2.83.3 [taca 2022-08-29]
 	Added textproc/ruby-deckar01-task_list version 2.3.2 [taca 2022-08-29]
+	Added textproc/ruby-commonmarker version 0.23.5 [taca 2022-08-29]
