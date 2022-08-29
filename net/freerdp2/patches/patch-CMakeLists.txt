@@ -1,4 +1,4 @@
-$NetBSD: patch-CMakeLists.txt,v 1.2 2022/08/15 20:05:12 tnn Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.3 2022/08/29 10:36:51 nia Exp $
 
 Find epoll-shim using pkg-config on all BSDs.
 
@@ -8,7 +8,7 @@ Find epoll-shim using pkg-config on all BSDs.
  	if(${CMAKE_SYSTEM_NAME} MATCHES "OpenBSD")
  		set(OPENBSD TRUE)
  	endif()
-+	pkg_check_modules (EPOLL_SHIM REQUIRED epoll-shim)
++	pkg_check_modules (EPOLLSHIM REQUIRED epoll-shim)
  endif()
  
  if(${CMAKE_SYSTEM_NAME} MATCHES "DragonFly")
@@ -24,3 +24,26 @@ Find epoll-shim using pkg-config on all BSDs.
  # Configure MSVC Runtime
  if(MSVC)
  	include(MSVCRuntime)
+@@ -631,16 +627,16 @@ endif()
+ 
+ if(UNIX OR CYGWIN)
+ 	check_include_files(aio.h HAVE_AIO_H)
+-	check_include_files(sys/eventfd.h HAVE_SYS_EVENTFD_H)
+-	if (HAVE_SYS_EVENTFD_H)
+-		check_symbol_exists(eventfd_read sys/eventfd.h WITH_EVENTFD_READ_WRITE)
+-	endif()
+-	if (FREEBSD)
++	if (BSD)
+ 		list(APPEND CMAKE_REQUIRED_INCLUDES ${EPOLLSHIM_INCLUDE_DIR})
++		list(APPEND CMAKE_REQUIRED_LIBRARIES ${EPOLLSHIM_LIBRARIES})
+ 	endif()
++	check_include_files(sys/eventfd.h HAVE_SYS_EVENTFD_H)
+ 	check_include_files(sys/timerfd.h HAVE_SYS_TIMERFD_H)
+-	if (FREEBSD)
++	check_symbol_exists(eventfd_read sys/eventfd.h WITH_EVENTFD_READ_WRITE)
++	if (BSD)
+ 		list(REMOVE_ITEM CMAKE_REQUIRED_INCLUDES ${EPOLLSHIM_INCLUDE_DIR})
++		list(REMOVE_ITEM CMAKE_REQUIRED_LIBRARIES ${EPOLLSHIM_LIBRARIES})
+ 	endif()
+ 	check_include_files(poll.h HAVE_POLL_H)
+ 	list(APPEND CMAKE_REQUIRED_LIBRARIES m)
