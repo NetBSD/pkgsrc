@@ -1,0 +1,9 @@
+HTML::Pipeline
+
+HTML processing filters and utilities.  This module includes a small
+framework for defining DOM based content filters and applying them to user
+provided content.
+
+This project was started at GitHub.  While GitHub still uses a similar
+design and pattern for rendering content, this gem should be considered
+standalone and independent from GitHub.
