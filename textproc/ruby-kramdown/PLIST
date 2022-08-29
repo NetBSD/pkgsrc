@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2021/03/18 10:20:24 fcambus Exp $
+@comment $NetBSD: PLIST,v 1.21 2022/08/29 13:26:46 taca Exp $
 bin/kramdown${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/AUTHORS
@@ -90,6 +90,8 @@ ${GEM_LIBDIR}/test/testcases/block/03_paragraph/one_para.html
 ${GEM_LIBDIR}/test/testcases/block/03_paragraph/one_para.text
 ${GEM_LIBDIR}/test/testcases/block/03_paragraph/standalone_image.html
 ${GEM_LIBDIR}/test/testcases/block/03_paragraph/standalone_image.text
+${GEM_LIBDIR}/test/testcases/block/03_paragraph/to_kramdown.kramdown
+${GEM_LIBDIR}/test/testcases/block/03_paragraph/to_kramdown.text
 ${GEM_LIBDIR}/test/testcases/block/03_paragraph/two_para.html
 ${GEM_LIBDIR}/test/testcases/block/03_paragraph/two_para.text
 ${GEM_LIBDIR}/test/testcases/block/03_paragraph/with_html_to_native.html
