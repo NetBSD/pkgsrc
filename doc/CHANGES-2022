@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4143 2022/08/29 06:30:29 adam Exp $
+$NetBSD: CHANGES-2022,v 1.4144 2022/08/29 09:43:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6021,3 +6021,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated converters/hs-lens-aeson to 1.2.2 [mef 2022-08-28]
 	Updated lang/nodejs16 to 16.17.0 [adam 2022-08-29]
 	Updated lang/nodejs to 18.8.0 [adam 2022-08-29]
+	Updated x11/libFS to 1.0.9 [wiz 2022-08-29]
