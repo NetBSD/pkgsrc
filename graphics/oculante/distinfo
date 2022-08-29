@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2022/08/28 16:14:01 pin Exp $
+$NetBSD: distinfo,v 1.5 2022/08/29 11:22:35 pin Exp $
 
 BLAKE2s (ab_glyph-0.2.16.crate) = bed0ba08196fcb3f64003e2c8e4171efe9673c92f2aa3349a97f3de3fb81da7b
 SHA512 (ab_glyph-0.2.16.crate) = 8b57a351108c71d4fff0701589d7112b1ef582c56afe3bca7ed144255d3aa02704a1ef9e44ab729db07d22b589b4d4ad30f5a90d1a848a2d0dba895fbab4ffd4
@@ -489,9 +489,9 @@ Size (libwebp-sys-0.6.0.crate) = 5098211 bytes
 BLAKE2s (linked-hash-map-0.5.6.crate) = 06eec16c1a2dd3fc12933a669b9ddc465cceeb3845eb15197228e0d319366ce3
 SHA512 (linked-hash-map-0.5.6.crate) = 031a87645381c96beff33572e4bac1a9877e52fd2f99d39918fbede17d72291b35e2eb69e07edec20c3058554c35cc38fe85b8f175c2a3c69366136fcc71f707
 Size (linked-hash-map-0.5.6.crate) = 15049 bytes
-BLAKE2s (lock_api-0.4.7.crate) = 5a9edfbf4f9a1dead442261c649f91d375519ad8d675d14f5da83be5e3827b6e
-SHA512 (lock_api-0.4.7.crate) = b1a5227fd131edaa70e017f7ddb43af8b4efa58488007b898ca1dfc818a3a441b732b7adbf1270e72a68ee5d2a99a5d48f33b2bca8e2cf78694953d20d27636d
-Size (lock_api-0.4.7.crate) = 25371 bytes
+BLAKE2s (lock_api-0.4.8.crate) = dfcff8523566fd93f5f9f617e152d108093b52432a63ac11b30c665a529de37a
+SHA512 (lock_api-0.4.8.crate) = 2dd90be33a732cb8111b522cf65fbf37926ab3121c4dba20dbf66403805575ee597d90d776807c13be1a48ddc5920a691ef78dce734adc6a26b52d4ad44b9785
+Size (lock_api-0.4.8.crate) = 25677 bytes
 BLAKE2s (log-0.4.17.crate) = 6994234f481cfe97b62255329a6c6f4a07dcdb193cc54d2c7ddda0519b41d214
 SHA512 (log-0.4.17.crate) = 2477d88db42b1d92c30708d88823212e236f613b3465e85eb425f83f8d16fadfaf0352f06c2999a1852102edd2f6ffb10ecb539d8a3b6c48f552a25622ccffa2
 Size (log-0.4.17.crate) = 38028 bytes
@@ -693,9 +693,9 @@ Size (objc_exception-0.1.2.crate) = 2251 bytes
 BLAKE2s (objc_id-0.1.1.crate) = 1bc76100eb8a059b580ecd9b12111a7055936856bbb9059e7d8f28a3bfb362ef
 SHA512 (objc_id-0.1.1.crate) = ec36fae6f5cefda00f3e44618b3c9fe6ec8f528f70d1a95def6421704bfa128a6e5b4a32e9dd686bf6ff60c4f87fe8094aa5e1c8070bcde58b17fdc06f49f9f5
 Size (objc_id-0.1.1.crate) = 3258 bytes
-BLAKE2s (oculante-0.6.3.tar.gz) = fe55f77bab10b4dbbfb37d026b3babec7db01e3e9cf65af5d16d867a3a6dddcc
-SHA512 (oculante-0.6.3.tar.gz) = 3d8b0137e2985b25793fd9b77144711e077ef837c007c046be0accef7f1619cbedbc4a1e5b8239fd818d546dc4ddeccfa15e86b8b196dbb14c48a861bebc58b9
-Size (oculante-0.6.3.tar.gz) = 3836660 bytes
+BLAKE2s (oculante-0.6.5.tar.gz) = 4e35038f3d775e5fe2d43ce9a55e7ae3d65c78be5c3337c14ac01a08d7467165
+SHA512 (oculante-0.6.5.tar.gz) = 101eaad75db31d466b887f81f1636f3ee6aeb1aae081f14ae85feadcd058399ccbe24834501ba0d8539e538967d5f507c7faf85350f0b300b1447d2427dea7c3
+Size (oculante-0.6.5.tar.gz) = 3837273 bytes
 BLAKE2s (once_cell-1.13.1.crate) = ab93c03e004fa9981ac55e51b7e9564477d5765bd107d407a4a27df387a1ca02
 SHA512 (once_cell-1.13.1.crate) = 492831607d12846923107b464a70de62f5997845faaae1625f3e54e2610e96b0355ce9e554051c2fae28f7e6e558ed456a6fc0b3c6a71b26f7443ede5eff5b32
 Size (once_cell-1.13.1.crate) = 31335 bytes

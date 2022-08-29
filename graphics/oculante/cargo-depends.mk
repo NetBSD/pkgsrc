@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.2 2022/08/28 16:14:01 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.3 2022/08/29 11:22:35 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	ab_glyph-0.2.16
 CARGO_CRATE_DEPENDS+=	ab_glyph_rasterizer-0.1.5
@@ -163,7 +163,7 @@ CARGO_CRATE_DEPENDS+=	libc-0.2.132
 CARGO_CRATE_DEPENDS+=	libloading-0.7.3
 CARGO_CRATE_DEPENDS+=	libwebp-sys-0.6.0
 CARGO_CRATE_DEPENDS+=	linked-hash-map-0.5.6
-CARGO_CRATE_DEPENDS+=	lock_api-0.4.7
+CARGO_CRATE_DEPENDS+=	lock_api-0.4.8
 CARGO_CRATE_DEPENDS+=	log-0.4.17
 CARGO_CRATE_DEPENDS+=	lyon-0.17.10
 CARGO_CRATE_DEPENDS+=	lyon_algorithms-0.17.7
