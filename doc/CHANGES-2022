@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4147 2022/08/29 09:47:02 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4148 2022/08/29 10:41:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6025,3 +6025,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/libXau to 1.0.10 [wiz 2022-08-29]
 	Updated x11/libXaw3d to 1.6.4 [wiz 2022-08-29]
 	Updated x11/libXfont2 to 2.0.6 [wiz 2022-08-29]
+	Updated converters/hs-cborg-json to 0.2.4.0 [wiz 2022-08-29]
