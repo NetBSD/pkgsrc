@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.26 2022/04/10 13:21:24 fcambus Exp $
+$NetBSD: distinfo,v 1.27 2022/08/29 13:26:46 taca Exp $
 
-BLAKE2s (kramdown-2.3.2.gem) = a792a5fe6ade06838babc1b29b290515fe2203e7103641741a2b41ce42489485
-SHA512 (kramdown-2.3.2.gem) = 268b55b45ad2c6dd02776abd5777c7f51ea8724c64b03d8a859bd809b54b181e018fcf5ca38170c89acfac5cef2e6de253f1c6037fe642c6c093e339fd8f4d1b
-Size (kramdown-2.3.2.gem) = 122368 bytes
+BLAKE2s (kramdown-2.4.0.gem) = 0610c10d245c12073a865c9a53d866894a772642cefeab81ea0fdb9131fa49ec
+SHA512 (kramdown-2.4.0.gem) = 8e52c5cc53d2f0085e30188aa7bf67f92dfe7f0801297c6a45293cca307e3442baa06443638c1161dad4a4aa332cbc5b4f9b6281ba4c6346122a9fff5a3743c7
+Size (kramdown-2.4.0.gem) = 122368 bytes
