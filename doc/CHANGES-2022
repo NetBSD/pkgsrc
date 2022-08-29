@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4142 2022/08/28 21:38:54 mef Exp $
+$NetBSD: CHANGES-2022,v 1.4143 2022/08/29 06:30:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6019,3 +6019,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Added net/piratebay version 0.1.4 [pin 2022-08-28]
 	Updated editors/vim-share to 9.0.0305 [morr 2022-08-28]
 	Updated converters/hs-lens-aeson to 1.2.2 [mef 2022-08-28]
+	Updated lang/nodejs16 to 16.17.0 [adam 2022-08-29]
+	Updated lang/nodejs to 18.8.0 [adam 2022-08-29]
