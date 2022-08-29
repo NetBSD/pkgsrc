@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/12/19 14:26:57 mef Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/08/29 15:54:08 thor Exp $
 ${PYSITELIB}/erfa/__init__.py
 ${PYSITELIB}/erfa/__init__.pyc
 ${PYSITELIB}/erfa/__init__.pyo
@@ -20,6 +20,9 @@ ${PYSITELIB}/erfa/tests/helper.pyo
 ${PYSITELIB}/erfa/tests/test_erfa.py
 ${PYSITELIB}/erfa/tests/test_erfa.pyc
 ${PYSITELIB}/erfa/tests/test_erfa.pyo
+${PYSITELIB}/erfa/tests/test_ufunc.py
+${PYSITELIB}/erfa/tests/test_ufunc.pyc
+${PYSITELIB}/erfa/tests/test_ufunc.pyo
 ${PYSITELIB}/erfa/ufunc.so
 ${PYSITELIB}/erfa/version.py
 ${PYSITELIB}/erfa/version.pyc
