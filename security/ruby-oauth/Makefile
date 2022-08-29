@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2022/08/28 05:54:26 taca Exp $
+# $NetBSD: Makefile,v 1.20 2022/08/29 14:20:56 wiz Exp $
 
 DISTNAME=	oauth-1.0.0
 CATEGORIES=	security
@@ -11,6 +11,8 @@ LICENSE=	mit
 USE_LANGUAGES=	# none
 
 RUBYGEM_OPTIONS+=	--format-executable
+
+RUBY_VERSIONS_INCOMPATIBLE=	26
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
