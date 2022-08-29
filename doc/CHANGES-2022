@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4154 2022/08/29 12:36:01 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4155 2022/08/29 12:38:16 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6032,3 +6032,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/hs-purescript-cst to 0.5.0.0 [wiz 2022-08-29]
 	Added x11/xisxwayland version 2 [wiz 2022-08-29]
 	Updated sysutils/ruby-serverspec to 2.42.0 [taca 2022-08-29]
+	Updated sysutils/ruby-specinfra to 2.83.3 [taca 2022-08-29]
