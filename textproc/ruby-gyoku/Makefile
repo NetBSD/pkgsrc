@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2020/01/19 09:10:24 taca Exp $
+# $NetBSD: Makefile,v 1.2 2022/08/29 13:08:54 taca Exp $
 
-DISTNAME=	gyoku-1.3.1
+DISTNAME=	gyoku-1.4.0
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
