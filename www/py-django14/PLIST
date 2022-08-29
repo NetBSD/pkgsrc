@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/01/14 17:52:06 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/08/29 10:33:05 wiz Exp $
 bin/django-admin.py
 ${PYSITELIB}/${EGG_INFODIR}
 ${PYSITELIB}/django/__init__.py
@@ -4849,27 +4849,6 @@ ${PYSITELIB}/django/db/backends/dummy/__init__.pyo
 ${PYSITELIB}/django/db/backends/dummy/base.py
 ${PYSITELIB}/django/db/backends/dummy/base.pyc
 ${PYSITELIB}/django/db/backends/dummy/base.pyo
-${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/__init__.py
-${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/__init__.pyc
-${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/__init__.pyo
-${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/base.py
-${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/base.pyc
-${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/base.pyo
-${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/client.py
-${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/client.pyc
-${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/client.pyo
-${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/compiler.py
-${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/compiler.pyc
-${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/compiler.pyo
-${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/creation.py
-${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/creation.pyc
-${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/creation.pyo
-${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/introspection.py
-${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/introspection.pyc
-${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/introspection.pyo
-${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/validation.py
-${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/validation.pyc
-${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/validation.pyo
 ${PLIST.oracle}${PYSITELIB}/django/db/backends/oracle/__init__.py
 ${PLIST.oracle}${PYSITELIB}/django/db/backends/oracle/__init__.pyc
 ${PLIST.oracle}${PYSITELIB}/django/db/backends/oracle/__init__.pyo
