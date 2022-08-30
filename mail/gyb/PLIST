@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2022/08/30 12:20:14 sborrill Exp $
+bin/gyb
+${PYSITELIB}/fmbox.py
+${PYSITELIB}/labellang.py
