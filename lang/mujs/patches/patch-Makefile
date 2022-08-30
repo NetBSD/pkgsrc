@@ -1,0 +1,109 @@
+$NetBSD: patch-Makefile,v 1.1 2022/08/30 12:47:02 nia Exp $
+
+- Don't invoke git.
+- Honor user's CFLAGS/LDFLAGS.
+- libtoolize shared object creation.
+- The PHONY target is removed to allow PKGCONFIG_OVERRIDE to work.
+
+--- Makefile.orig	2021-12-08 11:56:12.000000000 +0000
++++ Makefile
+@@ -9,21 +9,11 @@ bindir ?= $(prefix)/bin
+ incdir ?= $(prefix)/include
+ libdir ?= $(prefix)/lib
+ 
+-ifeq "$(wildcard .git)" ".git"
+-  VERSION := $(shell git describe --tags --always)
+-else
+-  VERSION := $(shell basename $$PWD | sed -e s,^mujs-,,)
+-endif
+-
+-ifeq ($(shell uname),Darwin)
+-	SO_EXT := dylib
+-else
+-	SO_EXT := so
+-endif
++SO_EXT := la
+ 
+ # Compiler flags for various configurations:
+ 
+-CFLAGS := -std=c99 -pedantic -Wall -Wextra -Wno-unused-parameter
++CFLAGS += -std=c99 -pedantic -Wall -Wextra -Wno-unused-parameter
+ 
+ ifeq "$(CC)" "clang"
+   CFLAGS += -Wunreachable-code
+@@ -33,16 +23,6 @@ ifeq "$(shell uname)" "Linux"
+   HAVE_READLINE := yes
+ endif
+ 
+-ifeq "$(build)" "debug"
+-  CFLAGS += -g
+-else ifeq "$(build)" "sanitize"
+-  CFLAGS += -pipe -g -fsanitize=address -fno-omit-frame-pointer
+-  LDFLAGS += -fsanitize=address
+-else ifeq "$(build)" "release"
+-  CFLAGS += -O2
+-  LDFLAGS += -Wl,-s
+-endif
+-
+ ifeq "$(HAVE_READLINE)" "yes"
+   CFLAGS += -DHAVE_READLINE
+   LIBREADLINE += -lreadline
+@@ -74,31 +54,30 @@ one.c: $(SRCS)
+ 
+ jsdump.c: astnames.h opnames.h
+ 
+-$(OUT)/%.o: %.c $(HDRS)
++$(OUT)/%.lo: %.c $(HDRS)
+ 	@ mkdir -p $(dir $@)
+-	$(CC) $(CFLAGS) $(CPPFLAGS) -o $@ -c $<
++	$(LIBTOOL) --quiet --tag=CC --mode=compile $(CC) $(CFLAGS) $(CPPFLAGS) -o $@ -c $<
+ 
+-$(OUT)/libmujs.o: one.c $(HDRS)
++$(OUT)/libmujs.lo: one.c $(HDRS)
+ 	@ mkdir -p $(dir $@)
+-	$(CC) $(CFLAGS) $(CPPFLAGS) -o $@ -c $<
++	$(LIBTOOL) --quiet --tag=CC --mode=compile $(CC) $(CFLAGS) $(CPPFLAGS) -o $@ -c $<
+ 
+-$(OUT)/libmujs.a: $(OUT)/libmujs.o
++$(OUT)/libmujs.a: $(OUT)/libmujs.lo
+ 	@ mkdir -p $(dir $@)
+ 	$(AR) cr $@ $^
+ 
+-$(OUT)/libmujs.$(SO_EXT): one.c $(HDRS)
++$(OUT)/libmujs.$(SO_EXT): $(OUT)/libmujs.lo $(HDRS)
+ 	@ mkdir -p $(dir $@)
+-	$(CC) $(CFLAGS) $(CPPFLAGS) -fPIC -shared $(LDFLAGS) -o $@ $< -lm
++	$(LIBTOOL) --quiet --tag=CC --mode=link $(CC) $(LDFLAGS) -rpath $(PREFIX)/lib -o $@ $< -lm
+ 
+-$(OUT)/mujs: $(OUT)/libmujs.o $(OUT)/main.o
++$(OUT)/mujs: $(OUT)/libmujs.lo $(OUT)/main.lo
+ 	@ mkdir -p $(dir $@)
+-	$(CC) $(LDFLAGS) -o $@ $^ $(LIBREADLINE) -lm
++	$(LIBTOOL) --quiet --tag=CC --mode=link $(CC) $(LDFLAGS) -o $@ $^ $(LIBREADLINE) -lm
+ 
+-$(OUT)/mujs-pp: $(OUT)/libmujs.o $(OUT)/pp.o
++$(OUT)/mujs-pp: $(OUT)/libmujs.lo $(OUT)/pp.lo
+ 	@ mkdir -p $(dir $@)
+-	$(CC) $(LDFLAGS) -o $@ $^ -lm
++	$(LIBTOOL) --quiet --tag=CC --mode=link $(CC) $(LDFLAGS) -o $@ $^ -lm
+ 
+-.PHONY: $(OUT)/mujs.pc
+ $(OUT)/mujs.pc:
+ 	@ echo Creating $@
+ 	@ echo > $@ Name: mujs
+@@ -118,13 +97,13 @@ install-common: $(OUT)/mujs $(OUT)/mujs.
+ 	install -d $(DESTDIR)$(bindir)
+ 	install -m 644 mujs.h $(DESTDIR)$(incdir)
+ 	install -m 644 $(OUT)/mujs.pc $(DESTDIR)$(libdir)/pkgconfig
+-	install -m 755 $(OUT)/mujs $(DESTDIR)$(bindir)
++	$(LIBTOOL) --quiet --tag=CC --mode=install install -m 755 $(OUT)/mujs $(DESTDIR)$(bindir)
+ 
+ install-static: install-common $(OUT)/libmujs.a
+ 	install -m 644 $(OUT)/libmujs.a $(DESTDIR)$(libdir)
+ 
+ install-shared: install-common $(OUT)/libmujs.$(SO_EXT)
+-	install -m 755 $(OUT)/libmujs.$(SO_EXT) $(DESTDIR)$(libdir)
++	$(LIBTOOL) --quiet --tag=CC --mode=install install -m 755 $(OUT)/libmujs.$(SO_EXT) $(DESTDIR)$(libdir)
+ 
+ install: install-static
+ 
