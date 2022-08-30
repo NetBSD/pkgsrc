@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4178 2022/08/30 15:38:25 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4179 2022/08/30 15:40:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6058,3 +6058,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/ruby-review to 5.5.0 [taca 2022-08-30]
 	Updated textproc/ruby-rqrcode to 2.1.2 [taca 2022-08-30]
 	Added textproc/ruby-sanitize version 6.0.0 [taca 2022-08-30]
+	Updated textproc/ruby-simplecov_json_formatter to 0.1.4 [taca 2022-08-30]
