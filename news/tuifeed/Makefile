@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2022/08/19 10:15:58 pin Exp $
+# $NetBSD: Makefile,v 1.6 2022/08/30 11:20:43 pin Exp $
 
-DISTNAME=	tuifeed-0.2.1
+DISTNAME=	tuifeed-0.3.2
 CATEGORIES=	news
 MASTER_SITES=	${MASTER_SITE_GITHUB:=veeso/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
