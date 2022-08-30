@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4171 2022/08/30 11:47:16 sborrill Exp $
+$NetBSD: CHANGES-2022,v 1.4172 2022/08/30 12:11:30 sborrill Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6051,3 +6051,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated news/tuifeed to 0.3.2 [pin 2022-08-30]
 	Updated www/py-google-api-python-client to 2.58.0 [sborrill 2022-08-30]
 	Updated security/py-google-auth-oauthlib to 0.5.2 [sborrill 2022-08-30]
+	Updated security/py-google-auth to 2.11.0 [sborrill 2022-08-30]
