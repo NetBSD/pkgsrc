@@ -1,0 +1,3 @@
+Sanitize is an allowlist-based HTML and CSS sanitizer.  It removes all HTML
+and/or CSS from a string except the elements, attributes, and properties you
+choose to allow.
