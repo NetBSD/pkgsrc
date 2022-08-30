@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.3 2022/08/19 10:15:58 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.4 2022/08/30 11:20:43 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
 CARGO_CRATE_DEPENDS+=	aho-corasick-0.7.18
@@ -50,7 +50,7 @@ CARGO_CRATE_DEPENDS+=	lazy-regex-2.3.0
 CARGO_CRATE_DEPENDS+=	lazy-regex-proc_macros-2.3.0
 CARGO_CRATE_DEPENDS+=	lazy_static-1.4.0
 CARGO_CRATE_DEPENDS+=	libc-0.2.132
-CARGO_CRATE_DEPENDS+=	lock_api-0.4.7
+CARGO_CRATE_DEPENDS+=	lock_api-0.4.8
 CARGO_CRATE_DEPENDS+=	log-0.4.17
 CARGO_CRATE_DEPENDS+=	matches-0.1.9
 CARGO_CRATE_DEPENDS+=	memchr-2.5.0
@@ -84,9 +84,9 @@ CARGO_CRATE_DEPENDS+=	rustls-0.20.6
 CARGO_CRATE_DEPENDS+=	ryu-1.0.11
 CARGO_CRATE_DEPENDS+=	scopeguard-1.1.0
 CARGO_CRATE_DEPENDS+=	sct-0.7.0
-CARGO_CRATE_DEPENDS+=	serde-1.0.143
-CARGO_CRATE_DEPENDS+=	serde_derive-1.0.143
-CARGO_CRATE_DEPENDS+=	serde_json-1.0.83
+CARGO_CRATE_DEPENDS+=	serde-1.0.144
+CARGO_CRATE_DEPENDS+=	serde_derive-1.0.144
+CARGO_CRATE_DEPENDS+=	serde_json-1.0.85
 CARGO_CRATE_DEPENDS+=	serial_test-0.9.0
 CARGO_CRATE_DEPENDS+=	serial_test_derive-0.9.0
 CARGO_CRATE_DEPENDS+=	signal-hook-0.3.14
