@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4177 2022/08/30 15:35:28 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4178 2022/08/30 15:38:25 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6057,3 +6057,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated print/zathura-pdf-mupdf to 0.3.9 [nia 2022-08-30]
 	Updated textproc/ruby-review to 5.5.0 [taca 2022-08-30]
 	Updated textproc/ruby-rqrcode to 2.1.2 [taca 2022-08-30]
+	Added textproc/ruby-sanitize version 6.0.0 [taca 2022-08-30]
