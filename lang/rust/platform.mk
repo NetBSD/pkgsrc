@@ -1,4 +1,4 @@
-# $NetBSD: platform.mk,v 1.15 2022/05/25 21:31:26 he Exp $
+# $NetBSD: platform.mk,v 1.16 2022/08/30 19:22:17 he Exp $
 
 # This file encodes whether a given platform has support for rust.
 
@@ -7,8 +7,7 @@
 
 .if !defined(PLATFORM_SUPPORTS_RUST)
 
-.  include "../../mk/bsd.fast.prefs.mk"
-
+# Rust needs NetBSD>7
 .  for rust_arch in aarch64 earmv7hf i386 powerpc sparc64 x86_64
 .    for rust_os in Darwin FreeBSD Linux NetBSD SunOS
 .      if ${OPSYS} != "NetBSD" || empty(OS_VERSION:M[0-7].*)

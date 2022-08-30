@@ -72,7 +72,10 @@ while [ $# -gt 0 ]; do
 			args="$args -I=/usr/include/krb5"
 			;;
 		-I/usr/pkg/include)
-			args="$args -I=/usr/pkg/include"
+# Try to drop this...
+			if ! $native; then
+				args="$args -I=/usr/pkg/include"
+			fi
 			;;
 		-I)
 			if [ $2 = "/usr/include" ]; then
@@ -82,7 +85,10 @@ while [ $# -gt 0 ]; do
 				args="$args -I=/usr/include/krb5"
 				shift
 			elif [ $2 = "/usr/pkg/include" ]; then
-				args="$args -I=/usr/pkg/include"
+# Try to drop this too...
+				if ! $native; then
+					args="$args -I=/usr/pkg/include"
+				fi
 				shift
 			else
 				args="$args -I"
@@ -149,7 +155,9 @@ done
 if $native; then
 	# Try to avoid cwrappers, which does "undocumented magic"
 	# by invoking the compiler "directly".
-	cmd="/usr/bin/${who} $args"
+	#cmd="/usr/bin/${who} $args"
+	# (however, this wrapper isn't used when buliding natively...)
+	cmd="${who} $args"
 else
 	cmd="${root}/tools/bin/${gnuarch}-${who} \
 		--sysroot=${root}/dest \

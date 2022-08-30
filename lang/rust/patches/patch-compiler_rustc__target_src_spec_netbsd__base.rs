@@ -1,13 +1,13 @@
-$NetBSD: patch-compiler_rustc__target_src_spec_netbsd__base.rs,v 1.5 2021/11/20 16:09:46 he Exp $
+$NetBSD: patch-compiler_rustc__target_src_spec_netbsd__base.rs,v 1.6 2022/08/30 19:22:17 he Exp $
 
 For the benefit of powerpc, when libatomic-links is installed,
 search the directory containing the symlinks to -latomic.
 
---- compiler/rustc_target/src/spec/netbsd_base.rs.orig	2021-09-06 18:42:35.000000000 +0000
+--- compiler/rustc_target/src/spec/netbsd_base.rs.orig	2022-05-18 01:29:36.000000000 +0000
 +++ compiler/rustc_target/src/spec/netbsd_base.rs
 @@ -1,6 +1,14 @@
--use crate::spec::{RelroLevel, TargetOptions};
-+use crate::spec::{LinkArgs, LinkerFlavor, RelroLevel, TargetOptions};
+-use crate::spec::{cvs, RelroLevel, TargetOptions};
++use crate::spec::{cvs, RelroLevel, LinkArgs, LinkerFlavor, TargetOptions};
  
  pub fn opts() -> TargetOptions {
 +    let mut args = LinkArgs::new();
@@ -15,14 +15,14 @@ search the directory containing the symlinks to -latomic.
 +        LinkerFlavor::Gcc,
 +        vec![
 +            // For the benefit of powerpc, when libatomic-links is installed,
-+            "-Wl,-L@PREFIX@/lib/libatomic".to_string(),
++            "-Wl,-L@PREFIX@/lib/libatomic".into(),
 +        ],
 +    );
      TargetOptions {
-         os: "netbsd".to_string(),
+         os: "netbsd".into(),
          dynamic_linking: true,
 @@ -8,6 +16,7 @@ pub fn opts() -> TargetOptions {
-         families: vec!["unix".to_string()],
+         families: cvs!["unix"],
          no_default_libraries: false,
          has_rpath: true,
 +        pre_link_args: args,
