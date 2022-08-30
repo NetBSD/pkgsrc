@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.42 2022/07/02 16:53:21 ryoon Exp $
+# $NetBSD: Makefile,v 1.43 2022/08/30 23:47:05 gdt Exp $
 #
 
-DISTNAME=	gpsbabel-1.6.0
-PKGREVISION=	18
+GITHUB_PROJECT=	gpsbabel
+VERSION=	1.8.0
+GH_VERSION=	1_8_0
+GITHUB_TAG=	refs/tags/gpsbabel_${GH_VERSION}
+DISTNAME=	gpsbabel_${GH_VERSION}
+PKGNAME=	gpsbabel-${VERSION}
 CATEGORIES=	geography
-MASTER_SITES=	${MASTER_SITE_BACKUP}
-# Download from official site apparently only via interactive form,
-# but code is gnu-gpl-v2 so hosted elsewhere.
-# older versions were at
-# MASTER_SITES+=	http://archlinux-stuff.googlecode.com/files/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=GPSBabel/}
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://www.gpsbabel.org/
@@ -16,29 +16,24 @@ HOMEPAGE=	https://www.gpsbabel.org/
 COMMENT=	Utility to convert and fetch GPS related data
 LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES=	c c++11
-USE_TOOLS=	gmake
+WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${DISTNAME}
 
-TEST_TARGET=	check
+USE_LANGUAGES+=	c c++11
+USE_TOOLS+=	pkg-config
+QMAKE=		${QTDIR}/bin/qmake
+QMAKE_ARGS+=	WITH_LIBUSB=no
+QMAKE_ARGS+=	WITH_LIBUSB=pkgconfig
+QMAKE_ARGS+=	WITH_ZLIB=pkgconfig
 
-# \todo Upstream recommends trying qmake.
-GNU_CONFIGURE=	yes
+do-configure:
+	cd ${WRKSRC} && ${QMAKE} ${QMAKE_ARGS} GPSBabel.pro
 
-CONFIGURE_ENV+=	QMAKE=${QTDIR}/bin/qmake
-CONFIGURE_ENV+=	LUPDATE=${QTDIR}/bin/lupdate
-CONFIGURE_ENV+=	LRELEASE=${QTDIR}/bin/lrelease
+INSTALLATION_DIRS+=	bin
+do-install:
+	${INSTALL} ${WRKSRC}/gpsbabel ${DESTDIR}${PREFIX}/bin
 
-# \todo This seems like a bug; explain why.
-LIBS.Darwin+=	-lexpat
-
-# \todo Figure out stdarg warnings for code that looks correct.
-# util.cc: In function 'int xasprintf(char**, const char*, ...)':
-# util.cc:233:22: warning: second parameter of 'va_start' not last named argument [-Wvarargs]
-#    va_start(args, fmt);
-#                       ^
-
-# gpsbabel 1.6.0 really does need libusb 0.1, and uses usb_interrupt_read
-.include "../../mk/libusb.buildlink3.mk"
+.include "../../devel/libusb1/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qttools/buildlink3.mk"
