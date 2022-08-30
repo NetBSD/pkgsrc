@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2022/08/24 14:38:56 ryoon Exp $
+# $NetBSD: Makefile,v 1.79 2022/08/30 07:13:02 he Exp $
 #
 # When updating this, please also update:
 # devel/include-what-you-use
@@ -116,8 +116,20 @@ CXXFLAGS+=	-march=i586
 
 .if ${MACHINE_ARCH:Mpowerpc*}
 # Needed to avoid "relocation truncated to fit: R_PPC_REL24"
-CFLAGS+=	-mlongcall -mno-pltseq
-CXXFLAGS+=	-mlongcall -mno-pltseq
+CFLAGS+=	-mlongcall
+CXXFLAGS+=	-mlongcall
+.  if ${OPSYS} == "NetBSD"
+.    if empty(OS_VERSION:M8.*) && empty(OS_VERSION:M9.[012345678]*)
+# The -mno-pltseq option is not available in gcc7, but is needed for
+# the above-mentioned relocation truncation issue in newer GCC
+CFLAGS+=	-mno-pltseq
+CXXFLAGS+=	-mno-pltseq
+.    endif
+.  else # Not NetBSD
+# Let's just insist on newer gcc -- untested.
+CFLAGS+=	-mno-pltseq
+CXXFLAGS+=	-mno-pltseq
+.  endif
 .endif
 
 .if ${OPSYS} == "NetBSD"
