@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.148 2022/08/09 17:56:09 adam Exp $
+# $NetBSD: Makefile,v 1.149 2022/08/30 17:47:50 jperkin Exp $
 
 DISTNAME=	samba-4.16.4
 CATEGORIES=	net
@@ -99,18 +99,6 @@ CONFIGURE_ARGS+=	--jobs=${MAKE_JOBS}
 CONFIGURE_ARGS+=	--jobs=1
 .endif
 CONFIGURE_ARGS+=	--without-gpgme
-
-# XXX: currenlty Samba requires embedded Heimdall
-#.include "../../mk/krb5.buildlink3.mk"
-#.if ${KRB5_TYPE} == "mit-krb5"
-#BUILDLINK_API_DEPENDS.mit-krb5+=	mit-krb5>=1.19.0
-#CONFIGURE_ARGS+=	--with-experimental-mit-ad-dc
-#CONFIGURE_ARGS+=	--with-system-mitkdc=${KRB5BASE}/sbin/krb5kdc
-#CONFIGURE_ARGS+=	--with-system-mitkrb5
-#.else
-# XXX: does not work with AD
-#CONFIGURE_ARGS+=	--with-system-heimdalkrb5
-#.endif
 
 # Depends on ncurses, explicitly disable for now.
 CONFIGURE_ARGS+=	--without-regedit
