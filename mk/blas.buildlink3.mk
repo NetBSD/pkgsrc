@@ -1,4 +1,4 @@
-# $NetBSD: blas.buildlink3.mk,v 1.2 2021/06/15 04:41:51 thor Exp $
+# $NetBSD: blas.buildlink3.mk,v 1.3 2022/08/30 14:54:22 thor Exp $
 #
 # This Makefile fragment is meant to be included by packages that use any
 # BLAS (Basic Linear Algebra System) implementation instead of one particular
@@ -73,6 +73,9 @@
 # BLAS_INCLUDES
 #   Preprocessor flags to locate/use C interfaces
 #   (both for CBLAS and LAPACKE)
+# BLAS_PC, CBLAS_PC, LAPACK_PC, LAPACKE_PC
+#   Names of pkg-config modules for the respective API. For optimized BLAS,
+#   they will usually be identical.
 
 .if !defined(MK_BLAS_BUILDLINK3_MK)
 MK_BLAS_BUILDLINK3_MK=
@@ -129,6 +132,10 @@ LAPACK_LIBS=		-llapack${_BLAS_64} ${BLAS_LIBS}
 CBLAS_LIBS=		-lcblas${_BLAS_64} ${BLAS_LIBS}
 LAPACKE_LIBS=		-llapacke${_BLAS_64} ${LAPACK_LIBS}
 BLAS_INCLUDES=		-I${PREFIX}/include/netlib${_BLAS_64}
+BLAS_PC=		blas${_BLAS_64}
+LAPACK_PC=		lapack${_BLAS_64}
+CBLAS_PC=		cblas${_BLAS_64}
+LAPACKE_PC=		lapacke${_BLAS_64}
 .  if ${_BLAS_64} == "64"
 BLAS_INCLUDES+= -DWeirdNEC -DHAVE_LAPACK_CONFIG_H -DLAPACK_ILP64
 .  endif
@@ -139,6 +146,10 @@ LAPACK_LIBS=	${BLAS_LIBS}
 CBLAS_LIBS=	${BLAS_LIBS}
 LAPACKE_LIBS=	${BLAS_LIBS}
 BLAS_INCLUDES=	-I${PREFIX}/include/openblas${_BLAS_64}
+BLAS_PC=	openblas${_BLAS_64}
+LAPACK_PC=	${BLAS_PC}
+CBLAS_PC=	${BLAS_PC}
+LAPACKE_PC=	${BLAS_PC}
 .elif ${BLAS_TYPE} == "openblas_pthread"
 _BLAS_PKGPATH=	math/openblas${_BLAS_64}_pthread
 BLAS_LIBS=	-lopenblas${_BLAS_64}_pthread
@@ -146,6 +157,10 @@ LAPACK_LIBS=	${BLAS_LIBS}
 CBLAS_LIBS=	${BLAS_LIBS}
 LAPACKE_LIBS=	${BLAS_LIBS}
 BLAS_INCLUDES=	-I${PREFIX}/include/openblas64_pthread
+BLAS_PC=	openblas${_BLAS_64}_pthread
+LAPACK_PC=	${BLAS_PC}
+CBLAS_PC=	${BLAS_PC}
+LAPACKE_PC=	${BLAS_PC}
 .elif ${BLAS_TYPE} == "openblas_openmp"
 _BLAS_PKGPATH=	math/openblas${_BLAS_64}_openmp
 BLAS_LIBS=	-lopenblas${_BLAS_64}_openmp
@@ -153,6 +168,10 @@ LAPACK_LIBS=	${BLAS_LIBS}
 CBLAS_LIBS=	${BLAS_LIBS}
 LAPACKE_LIBS=	${BLAS_LIBS}
 BLAS_INCLUDES=	-I${PREFIX}/include/openblas${_BLAS_64}_openmp
+BLAS_PC=	openblas${_BLAS_64}_openmp
+LAPACK_PC=	${BLAS_PC}
+CBLAS_PC=	${BLAS_PC}
+LAPACKE_PC=	${BLAS_PC}
 .elif ${BLAS_TYPE} == "accelerate.framework"
 # No 64 bit variant yet. Excluded above.
 # Actually, only CBLAS_LIBS is safe to use. Others have g77/f2c calling
@@ -165,6 +184,8 @@ BLAS_INCLUDES=	# not delivered yet
 # Idea for cblas.h including Accelerate/Accelerate.h (would work the same
 # for Intel MKL with -DBLASWRAP_MKL for mkl_cblas.h).
 #BLAS_INCLUDES=	-I${PREFIX}/include/blaswrap -DBLASWRAP_ACCELERATE
+# Same idea: Add accelerate_framework.pc in the blaswrap package and then set
+#BLAS_PC=	accelerate_framework
 .else # invalid or unimplemented type
 PKG_FAIL_REASON+=	\
 	"There is no acceptable BLAS for ${PKGNAME} in: ${PKGSRC_BLAS_TYPES}."
@@ -183,6 +204,8 @@ PKG_FAIL_REASON+=	\
 .  endif
 .else
 .  undef	BLAS_INCLUDES
+.  undef	CBLAS_PC
+.  undef	LAPACKE_PC
 .endif
 
 .endif # BLAS_BUILDLINK3_MK
