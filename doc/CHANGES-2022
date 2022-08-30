@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4168 2022/08/30 10:01:34 adam Exp $
+$NetBSD: CHANGES-2022,v 1.4169 2022/08/30 11:21:07 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6048,3 +6048,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated math/py-asdf to 2.11.0 [thor 2022-08-29]
 	Updated devel/py-astroid to 2.12.5 [adam 2022-08-30]
 	Updated devel/py-pylint to 2.15.0 [adam 2022-08-30]
+	Updated news/tuifeed to 0.3.2 [pin 2022-08-30]
