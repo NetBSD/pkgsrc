@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2021/12/11 14:41:21 taca Exp $
+$NetBSD: distinfo,v 1.16 2022/08/30 15:47:42 taca Exp $
 
-BLAKE2s (yard-0.9.27.gem) = 0a88a3a8ff64d0d7f2e7b69254fa07732b3710e622e3dec00219d7edd9e55c51
-SHA512 (yard-0.9.27.gem) = e2320b658d2d3f2c134b6f7217ca4be1b5c2bf1daa13103c1194ef9ac5ef5ca4873d3b287b00c9cb45799d6bf23cf4c86dc63b870b9840ef852514f47cdfe5b2
-Size (yard-0.9.27.gem) = 758784 bytes
+BLAKE2s (yard-0.9.28.gem) = 221b2de53a4a306618e584157b004225c901a0a524a0079ef76bded276958ee8
+SHA512 (yard-0.9.28.gem) = 52b45775693dbba9c3e04eccdcad2d348a97e9dbab9482af143d31c7b0e4cea029f9e1f1de25cbfbc8c428cac032f2d991e548912770917eba5be228292740f0
+Size (yard-0.9.28.gem) = 758784 bytes
