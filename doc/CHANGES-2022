@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4186 2022/08/30 17:55:37 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.4187 2022/08/30 18:04:18 osa Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6066,3 +6066,6 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/ruby-yajl to 1.4.3 [taca 2022-08-30]
 	Updated math/py-astropy to 5.0.4 [thor 2022-08-30]
 	Updated security/tlswrapper to 20220814nb1 [buildbox 2022-08-30]
+	Updated www/nginx to 1.22.0nb6 [osa 2022-08-30]
+	Updated www/nginx-devel to 1.23.1nb1 [osa 2022-08-30]
+	Updated lang/njs to 0.7.7 [osa 2022-08-30]
