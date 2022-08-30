@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.26 2022/07/11 20:13:50 jperkin Exp $
+# $NetBSD: options.mk,v 1.27 2022/08/30 19:22:17 he Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.rust
 PKG_SUPPORTED_OPTIONS+=	rust-cargo-static rust-docs
@@ -12,6 +12,11 @@ PKG_SUPPORTED_OPTIONS+=		rust-internal-llvm
 .  if !empty(HAVE_LLVM) || !empty(MACHINE_PLATFORM:MDarwin-*-aarch64)
 PKG_SUGGESTED_OPTIONS+=		rust-internal-llvm
 .  endif
+.endif
+
+# If cross-building, always use the internal LLVM
+.if !empty(TARGET)
+PKG_SUGGESTED_OPTIONS+=		rust-internal-llvm
 .endif
 
 # Bundle OpenSSL and curl into the cargo binary when producing
