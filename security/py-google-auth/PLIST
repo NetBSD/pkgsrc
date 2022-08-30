@@ -1,11 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2021/07/27 05:24:28 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/${EGG_NAME}-nspkg.pth
+@comment $NetBSD: PLIST,v 1.11 2022/08/30 12:01:51 sborrill Exp $
 ${PYSITELIB}/google/auth/__init__.py
 ${PYSITELIB}/google/auth/__init__.pyc
 ${PYSITELIB}/google/auth/__init__.pyo
@@ -96,12 +89,18 @@ ${PYSITELIB}/google/auth/impersonated_credentials.pyo
 ${PYSITELIB}/google/auth/jwt.py
 ${PYSITELIB}/google/auth/jwt.pyc
 ${PYSITELIB}/google/auth/jwt.pyo
+${PYSITELIB}/google/auth/pluggable.py
+${PYSITELIB}/google/auth/pluggable.pyc
+${PYSITELIB}/google/auth/pluggable.pyo
 ${PYSITELIB}/google/auth/transport/__init__.py
 ${PYSITELIB}/google/auth/transport/__init__.pyc
 ${PYSITELIB}/google/auth/transport/__init__.pyo
 ${PYSITELIB}/google/auth/transport/_aiohttp_requests.py
 ${PYSITELIB}/google/auth/transport/_aiohttp_requests.pyc
 ${PYSITELIB}/google/auth/transport/_aiohttp_requests.pyo
+${PYSITELIB}/google/auth/transport/_custom_tls_signer.py
+${PYSITELIB}/google/auth/transport/_custom_tls_signer.pyc
+${PYSITELIB}/google/auth/transport/_custom_tls_signer.pyo
 ${PYSITELIB}/google/auth/transport/_http_client.py
 ${PYSITELIB}/google/auth/transport/_http_client.pyc
 ${PYSITELIB}/google/auth/transport/_http_client.pyo
@@ -150,6 +149,9 @@ ${PYSITELIB}/google/oauth2/challenges.pyo
 ${PYSITELIB}/google/oauth2/credentials.py
 ${PYSITELIB}/google/oauth2/credentials.pyc
 ${PYSITELIB}/google/oauth2/credentials.pyo
+${PYSITELIB}/google/oauth2/gdch_credentials.py
+${PYSITELIB}/google/oauth2/gdch_credentials.pyc
+${PYSITELIB}/google/oauth2/gdch_credentials.pyo
 ${PYSITELIB}/google/oauth2/id_token.py
 ${PYSITELIB}/google/oauth2/id_token.pyc
 ${PYSITELIB}/google/oauth2/id_token.pyo
@@ -165,3 +167,10 @@ ${PYSITELIB}/google/oauth2/sts.pyo
 ${PYSITELIB}/google/oauth2/utils.py
 ${PYSITELIB}/google/oauth2/utils.pyc
 ${PYSITELIB}/google/oauth2/utils.pyo
+${PYSITELIB}/${EGG_NAME}-nspkg.pth
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
