@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4183 2022/08/30 15:48:15 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4184 2022/08/30 15:51:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6063,3 +6063,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/ruby-tilt to 2.0.11 [taca 2022-08-30]
 	Updated textproc/ruby-unicode-display_width to 2.2.0 [taca 2022-08-30]
 	Updated textproc/ruby-yard to 0.9.28 [taca 2022-08-30]
+	Updated textproc/ruby-yajl to 1.4.3 [taca 2022-08-30]
