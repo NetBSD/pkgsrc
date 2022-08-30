@@ -1,0 +1,5 @@
+Got Your Back (GYB) is a command line tool for backing up your Gmail
+messages to your computer using Gmail's API over HTTPS.
+
+Full documentation can be found at:
+https://github.com/GAM-team/got-your-back/wiki
