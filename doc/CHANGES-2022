@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4188 2022/08/30 19:23:28 he Exp $
+$NetBSD: CHANGES-2022,v 1.4189 2022/08/30 19:38:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6048,6 +6048,8 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated math/py-asdf to 2.11.0 [thor 2022-08-29]
 	Updated devel/py-astroid to 2.12.5 [adam 2022-08-30]
 	Updated devel/py-pylint to 2.15.0 [adam 2022-08-30]
+	Added devel/py-littleutils version 0.2.2 [adam 2022-08-30]
+	Updated sysutils/py-stack-data to 0.5.0 [adam 2022-08-30]
 	Updated news/tuifeed to 0.3.2 [pin 2022-08-30]
 	Updated www/py-google-api-python-client to 2.58.0 [sborrill 2022-08-30]
 	Updated security/py-google-auth-oauthlib to 0.5.2 [sborrill 2022-08-30]
