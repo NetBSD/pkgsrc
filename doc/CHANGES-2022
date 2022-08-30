@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4181 2022/08/30 15:43:32 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4182 2022/08/30 15:46:11 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6061,3 +6061,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/ruby-simplecov_json_formatter to 0.1.4 [taca 2022-08-30]
 	Updated editors/neovim to 0.7.2 [bsiegert 2022-08-30]
 	Updated textproc/ruby-tilt to 2.0.11 [taca 2022-08-30]
+	Updated textproc/ruby-unicode-display_width to 2.2.0 [taca 2022-08-30]
