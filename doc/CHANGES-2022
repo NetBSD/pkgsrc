@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4174 2022/08/30 12:47:20 nia Exp $
+$NetBSD: CHANGES-2022,v 1.4175 2022/08/30 12:48:15 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6054,3 +6054,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/py-google-auth to 2.11.0 [sborrill 2022-08-30]
 	Added mail/gyb version 1.70 [sborrill 2022-08-30]
 	Added lang/mujs version 1.2.0 [nia 2022-08-30]
+	Updated print/zathura-pdf-mupdf to 0.3.9 [nia 2022-08-30]
