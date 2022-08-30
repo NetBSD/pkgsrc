@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2022/04/20 05:28:56 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2022/08/30 18:36:36 wiz Exp $
 
 DISTNAME=		xauth-1.1.2
 CATEGORIES=		x11
@@ -11,7 +11,6 @@ COMMENT=		X authentication utility
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
-CPPFLAGS.NetBSD+=	-D_OPENBSD_SOURCE
 
 X11_BIN_NAME=	xauth
 .include "../../meta-pkgs/modular-xorg/avoid-duplicate.mk"
