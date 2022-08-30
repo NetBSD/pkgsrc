@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.43 2022/07/02 16:53:06 ryoon Exp $
+# $NetBSD: Makefile,v 1.44 2022/08/30 20:39:22 pin Exp $
 
-# ncspot-0.10.0 needs enum-map-derive v0.9.0, which requires rust-1.61
-DISTNAME=	ncspot-0.9.8
-PKGREVISION=	1
+DISTNAME=	ncspot-0.11.0
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hrkfdn/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -29,7 +27,8 @@ CARGO_NO_DEFAULT_FEATURES=	YES
 .include "options.mk"
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/ncspot ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/target/release/ncspot \
+		${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/python/tool.mk"
 .include "../../lang/rust/cargo.mk"
