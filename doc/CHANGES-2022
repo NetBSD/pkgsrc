@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4190 2022/08/30 20:39:44 pin Exp $
+$NetBSD: CHANGES-2022,v 1.4191 2022/08/30 20:40:57 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6073,3 +6073,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/njs to 0.7.7 [osa 2022-08-30]
 	Updated lang/rust to 1.62.1 [he 2022-08-30]
 	Updated audio/ncspot to 0.11.0 [pin 2022-08-30]
+	Updated www/hackernews-tui to 0.10.2 [pin 2022-08-30]
