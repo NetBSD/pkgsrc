@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4187 2022/08/30 18:04:18 osa Exp $
+$NetBSD: CHANGES-2022,v 1.4188 2022/08/30 19:23:28 he Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6069,3 +6069,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/nginx to 1.22.0nb6 [osa 2022-08-30]
 	Updated www/nginx-devel to 1.23.1nb1 [osa 2022-08-30]
 	Updated lang/njs to 0.7.7 [osa 2022-08-30]
+	Updated lang/rust to 1.62.1 [he 2022-08-30]
