@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.17 2021/10/26 11:15:14 nia Exp $
+$NetBSD: distinfo,v 1.18 2022/08/30 12:47:51 nia Exp $
 
-BLAKE2s (zathura-pdf-mupdf-0.3.7.tar.xz) = a6aa41980cde5b666715356217ca9a26918f4e83d7246d0497ee7ad1019786c9
-SHA512 (zathura-pdf-mupdf-0.3.7.tar.xz) = 709c34b1478e22f7da6a10bc8c59aa5bd1cbffd221caa38154d2e3efbea58dd2930fef3932687acac5d5ebccbd884303d81008a138a6276057f335aed0d570c0
-Size (zathura-pdf-mupdf-0.3.7.tar.xz) = 8328 bytes
+BLAKE2s (zathura-pdf-mupdf-0.3.9.tar.xz) = 147d127c61be82e0fbfd063cf80d28a683c1474cf0c4b7c87266495db090d2e0
+SHA512 (zathura-pdf-mupdf-0.3.9.tar.xz) = 6a81e562965a0d6a2a25e301b0cc20ee70ada43ed7261f5d4ef6c132de1136f0222ebee0088d80cc2e0d1d60595e335cb1a1a914cb761aad36b487d7c16ac034
+Size (zathura-pdf-mupdf-0.3.9.tar.xz) = 8640 bytes
 SHA1 (patch-document.c) = ad929680aa1de6f21b71cabc06da9ba54491687a
