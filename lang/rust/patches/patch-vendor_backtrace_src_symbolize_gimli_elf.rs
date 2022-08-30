@@ -1,4 +1,4 @@
-$NetBSD: patch-vendor_backtrace_src_symbolize_gimli_elf.rs,v 1.3 2022/05/25 21:31:26 he Exp $
+$NetBSD: patch-vendor_backtrace_src_symbolize_gimli_elf.rs,v 1.4 2022/08/30 19:22:17 he Exp $
 
 Make NetBSD also find its debug libraries, if present.
 
@@ -10,7 +10,7 @@ Make NetBSD also find its debug libraries, if present.
  
 +#[cfg(target_os = "netbsd")]
 +const DEBUG_PATH: &[u8] = b"/usr/libdata/debug";
-+#[cfg(not(target_os = "netbsd"))]
++#[cfg(target_os != "netbsd")]
  const DEBUG_PATH: &[u8] = b"/usr/lib/debug";
  
  fn debug_path_exists() -> bool {
