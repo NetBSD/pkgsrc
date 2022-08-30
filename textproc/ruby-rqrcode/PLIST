@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/05/09 15:15:15 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/08/30 15:35:08 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.github/workflows/ruby.yml
 ${GEM_LIBDIR}/.gitignore
@@ -11,7 +11,6 @@ ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/_config.yml
 ${GEM_LIBDIR}/bin/console
-${GEM_LIBDIR}/bin/setup
 ${GEM_LIBDIR}/images/ansi-screen-shot.png
 ${GEM_LIBDIR}/images/github-qrcode.png
 ${GEM_LIBDIR}/images/github-qrcode.svg
