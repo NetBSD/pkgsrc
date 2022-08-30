@@ -1,0 +1,14 @@
+$NetBSD: patch-randombytes.h-01getentropy,v 1.1 2022/08/30 17:55:31 schmonz Exp $
+
+Apply upstream commit 0cb7bb4 to fall back to /dev/urandom on systems
+where getentropy() is not present.
+
+--- randombytes.h-01getentropy.orig	2022-08-14 12:18:16.000000000 +0000
++++ randombytes.h-01getentropy
+@@ -2,5 +2,6 @@
+ #define _RANDOMBYTES_H____
+ 
+ extern void randombytes(void *, long long);
++#define randombytes_getentropy 1
+ 
+ #endif

@@ -1,0 +1,38 @@
+$NetBSD: patch-randombytes.c-01getentropy,v 1.1 2022/08/30 17:55:31 schmonz Exp $
+
+Apply upstream commit 0cb7bb4 to fall back to /dev/urandom on systems
+where getentropy() is not present.
+
+--- randombytes.c-01getentropy.orig	2022-08-30 17:47:01.000000000 +0000
++++ randombytes.c-01getentropy
+@@ -0,0 +1,30 @@
++/*
++version 20220222
++*/
++
++#include <unistd.h>
++#ifdef __APPLE__
++#include <sys/random.h>
++#endif
++#include "randombytes.h"
++
++void randombytes(void *xv, long long xlen) {
++
++    long long i;
++    unsigned char *x = (unsigned char *) xv;
++
++    while (xlen > 0) {
++        if (xlen < 256)
++            i = xlen;
++        else
++            i = 256;
++
++        if (getentropy(x, i) == -1) {
++            sleep(1);
++            continue;
++        }
++        x += i;
++        xlen -= i;
++    }
++    __asm__ __volatile__("" : : "r"(xv) : "memory");
++}
