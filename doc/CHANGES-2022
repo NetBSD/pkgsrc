@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4167 2022/08/29 16:20:29 thor Exp $
+$NetBSD: CHANGES-2022,v 1.4168 2022/08/30 10:01:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6046,3 +6046,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-colorlog to 6.6.0 [thor 2022-08-29]
 	Updated math/py-pyerfa to 2.0.0.1 [thor 2022-08-29]
 	Updated math/py-asdf to 2.11.0 [thor 2022-08-29]
+	Updated devel/py-astroid to 2.12.5 [adam 2022-08-30]
+	Updated devel/py-pylint to 2.15.0 [adam 2022-08-30]
