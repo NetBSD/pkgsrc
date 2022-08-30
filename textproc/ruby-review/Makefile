@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2021/12/11 14:37:48 taca Exp $
+# $NetBSD: Makefile,v 1.8 2022/08/30 15:33:18 taca Exp $
 
-DISTNAME=	review-5.3.0
+DISTNAME=	review-5.5.0
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -18,6 +18,11 @@ RUBYGEM_OPTIONS+=	--format-executable
 
 pre-configure:
 	cd ${WRKSRC}/bin && ${CHMOD} ${BINMODE} *
+
+.include "../../lang/ruby/rubyversion.mk"
+.if ${RUBY_VER} == "26" || ${RUBY_VER} == "27"
+DEPENDS+=	${RUBY_PKGPREFIX}-rexml>=3.2<4:../../textproc/ruby-rexml
+.endif
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
