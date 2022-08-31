@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2021/10/05 12:14:28 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2022/08/31 09:42:12 adam Exp $
 bin/dirmngr
 bin/dirmngr-client
 bin/g13
@@ -57,6 +57,7 @@ share/doc/gnupg/examples/README
 share/doc/gnupg/examples/VS-NfD.prf
 share/doc/gnupg/examples/debug.prf
 share/doc/gnupg/examples/gpgconf.conf
+share/doc/gnupg/examples/gpgconf.rnames
 share/doc/gnupg/examples/pwpattern.list
 share/doc/gnupg/examples/scd-event
 share/doc/gnupg/examples/systemd-user/README
