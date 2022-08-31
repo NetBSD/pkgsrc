@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4208 2022/08/31 16:01:56 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4209 2022/08/31 16:06:00 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6093,3 +6093,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/ruby-rack to 2.2.4 [taca 2022-08-31]
 	Updated www/ruby-rack16 to 1.6.13 [taca 2022-08-31]
 	Updated www/ruby-unicorn to 6.1.0 [taca 2022-08-31]
+	Updated www/ruby-request_store to 1.5.1 [taca 2022-08-31]
