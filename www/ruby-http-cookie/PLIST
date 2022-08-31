@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2013/09/15 17:03:01 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/08/31 14:51:50 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.github/workflows/ci.yml
 ${GEM_LIBDIR}/.gitignore
-${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE.txt
@@ -26,4 +26,3 @@ ${GEM_LIBDIR}/test/simplecov_start.rb
 ${GEM_LIBDIR}/test/test_http_cookie.rb
 ${GEM_LIBDIR}/test/test_http_cookie_jar.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
-@pkgdir lib/ruby/gems/2.0.0/build_info
