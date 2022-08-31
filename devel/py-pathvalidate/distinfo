@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/08/31 08:23:29 sborrill Exp $
+
+BLAKE2s (pathvalidate-2.5.2.tar.gz) = f274476423f3db08a3c16288e2c4b55978883d6b2bc605cbe34ff1a304105662
+SHA512 (pathvalidate-2.5.2.tar.gz) = 44c9d329f60deb81590854e0aa4699e4105821535aa5bf306c78df395c510ce851075db246937a459f46ee2f9abc54538a4a48995b94f5eb031f14fe60c769ce
+Size (pathvalidate-2.5.2.tar.gz) = 26715 bytes
