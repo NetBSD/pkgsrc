@@ -1,4 +1,4 @@
-This package provides ico, a program to display an animated icosahedron
-or other polhedrons.
-
-This is from the modular X.org X11 project.
+ico is a simple animation program that may be used for testing
+various X11 operations and extensions.  It displays a wire-frame
+rotating polyhedron, with hidden lines removed, or a solid-fill
+polyhedron with hidden faces removed.
