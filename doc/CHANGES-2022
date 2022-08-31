@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4204 2022/08/31 15:47:02 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4205 2022/08/31 15:48:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6089,3 +6089,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/ruby-jquery-rails to 4.5.0 [taca 2022-08-31]
 	Updated www/ruby-mechanize to 2.8.5 [taca 2022-08-31]
 	Updated www/ruby-puma to 5.6.5 [taca 2022-08-31]
+	Updated www/ruby-pygments.rb to 2.3.0 [taca 2022-08-31]
