@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2021/03/21 13:17:45 taca Exp $
+@comment $NetBSD: PLIST,v 1.15 2022/08/31 16:01:30 taca Exp $
 bin/unicorn${RUBY_SUFFIX}
 bin/unicorn_rails${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -53,6 +53,7 @@ ${GEM_LIBDIR}/examples/unicorn@.service
 ${GEM_LIBDIR}/ext/unicorn_http/CFLAGS
 ${GEM_LIBDIR}/ext/unicorn_http/c_util.h
 ${GEM_LIBDIR}/ext/unicorn_http/common_field_optimization.h
+${GEM_LIBDIR}/ext/unicorn_http/epollexclusive.h
 ${GEM_LIBDIR}/ext/unicorn_http/ext_help.h
 ${GEM_LIBDIR}/ext/unicorn_http/extconf.rb
 ${GEM_LIBDIR}/ext/unicorn_http/global_variables.h
@@ -72,6 +73,7 @@ ${GEM_LIBDIR}/lib/unicorn/http_server.rb
 ${GEM_LIBDIR}/lib/unicorn/launcher.rb
 ${GEM_LIBDIR}/lib/unicorn/oob_gc.rb
 ${GEM_LIBDIR}/lib/unicorn/preread_input.rb
+${GEM_LIBDIR}/lib/unicorn/select_waiter.rb
 ${GEM_LIBDIR}/lib/unicorn/socket_helper.rb
 ${GEM_LIBDIR}/lib/unicorn/stream_input.rb
 ${GEM_LIBDIR}/lib/unicorn/tee_input.rb
@@ -163,6 +165,7 @@ ${GEM_LIBDIR}/test/unit/test_stream_input.rb
 ${GEM_LIBDIR}/test/unit/test_tee_input.rb
 ${GEM_LIBDIR}/test/unit/test_upload.rb
 ${GEM_LIBDIR}/test/unit/test_util.rb
+${GEM_LIBDIR}/test/unit/test_waiter.rb
 ${GEM_LIBDIR}/unicorn.gemspec
 ${GEM_LIBDIR}/unicorn_1
 ${GEM_LIBDIR}/unicorn_rails_1
