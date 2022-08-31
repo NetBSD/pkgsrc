@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2020/01/18 23:35:49 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2022/08/31 19:21:41 wiz Exp $
 
-DISTNAME=		ico-1.0.5
+DISTNAME=		ico-1.0.6
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=app/}
-EXTRACT_SUFX=		.tar.bz2
+EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/
