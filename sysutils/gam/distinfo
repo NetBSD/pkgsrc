@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/08/31 10:10:17 sborrill Exp $
+
+BLAKE2s (gam-6.24.tar.gz) = dca26e9d9999de08b3423af91c406c0df4423c2f0998812a51c8de9c1ecaec14
+SHA512 (gam-6.24.tar.gz) = 2e5dc1287cb184eb9b7d7ce49c11f5ee12e888bf6774786a42ceb17674547ee30fc7098455f98fbc5d662062a6d189762a90b133d1638c28dd3508ee661f7477
+Size (gam-6.24.tar.gz) = 324096 bytes
