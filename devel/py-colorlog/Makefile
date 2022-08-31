@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/08/29 14:48:41 thor Exp $
+# $NetBSD: Makefile,v 1.2 2022/08/31 19:38:02 wiz Exp $
 
 DISTNAME=	colorlog-6.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,6 +11,8 @@ COMMENT=	Log formatting with colors
 LICENSE=	mit
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
