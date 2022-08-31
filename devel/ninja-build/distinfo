@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.18 2022/05/27 12:22:35 adam Exp $
+$NetBSD: distinfo,v 1.19 2022/08/31 08:07:19 adam Exp $
 
-BLAKE2s (ninja-1.11.0.tar.gz) = 2c30ba470f88a1745b8848c87f6aa40bcf6822ee7719ddbd2b50a200fe546b6b
-SHA512 (ninja-1.11.0.tar.gz) = 9b9c8dae2251f9ddba50680911271b8504c292994fd90a0da94902f64c69a9edc72212217df5c651ddfc2f79c2ae03e84c99b805497dcd7497c53a1617de83e7
-Size (ninja-1.11.0.tar.gz) = 229475 bytes
+BLAKE2s (ninja-1.11.1.tar.gz) = 31edc9a8845b6b1c0f54b8db714d2927b84cf2d0af15754838fcd7c646834a95
+SHA512 (ninja-1.11.1.tar.gz) = 1bca38877c70ee6613f347ffccef5adc02ba0a3947c62ae004ea97f918442b5a3de92378e4f820ae2a7676bc7609d25fbc7d41f6cfb3a61e5e4b26ec3639e403
+Size (ninja-1.11.1.tar.gz) = 229479 bytes
 SHA1 (patch-src_subprocess-posix.cc) = aff45ff1080c8556bc9a749666c532896bd73609
