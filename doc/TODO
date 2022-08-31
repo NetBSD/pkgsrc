@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22161 2022/08/30 20:39:44 pin Exp $
+$NetBSD: TODO,v 1.22162 2022/08/31 16:17:40 taca Exp $
 
 Suggested new packages
 ======================
@@ -1466,7 +1466,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o sqlrelay-1.9.2
 	o squeak-5.0
 	o squeak-vm-4.10.2.2765
-	o squid-5.5
 	o sqwebmail-5.8.2
 	o ssh-askpass-1.2.4.1
 	o sshguard-1.6.4
