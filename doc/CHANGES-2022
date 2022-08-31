@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4198 2022/08/31 14:21:20 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4199 2022/08/31 14:48:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6083,3 +6083,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/py-lexicon to 3.11.4 [adam 2022-08-31]
 	Added sysutils/gam 6.24 [sborrill 2022-08-31]
 	Updated www/ruby-capybara to 3.37.1 [taca 2022-08-31]
+	Updated www/ruby-html-proofer to 4.4.0 [taca 2022-08-31]
