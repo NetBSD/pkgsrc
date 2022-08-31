@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4195 2022/08/31 08:25:10 sborrill Exp $
+$NetBSD: CHANGES-2022,v 1.4196 2022/08/31 09:46:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6079,3 +6079,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/ninja-build to 1.11.1 [adam 2022-08-31]
 	Updated net/qbittorrent to 4.4.5 [adam 2022-08-31]
 	Added devel/py-pathvalidate 2.5.2 [sborrill 2022-08-31]
+	Updated security/gnupg2 to 2.2.37 [adam 2022-08-31]
+	Updated net/py-lexicon to 3.11.4 [adam 2022-08-31]
