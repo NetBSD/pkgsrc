@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:24:23 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/08/31 19:23:06 wiz Exp $
 
-BLAKE2s (oclock-1.0.4.tar.bz2) = fb5d2afeee54240185572ac7684453522159d9e26082132a341449924984bd28
-SHA512 (oclock-1.0.4.tar.bz2) = 6e0d36a84572a153226b2929f2253cb7adc3c9e5e3af168aeaf8c487ade2e43517b271a8e9cdb2a2c4a67ca56ed0b99c194ca63a4a822b68bfc72ca6518335e7
-Size (oclock-1.0.4.tar.bz2) = 132835 bytes
+BLAKE2s (oclock-1.0.5.tar.xz) = de7fc968daa00257e4360fde5caff6dc801a144f43cbf116470fa13f320cd720
+SHA512 (oclock-1.0.5.tar.xz) = a87e89afdb25a91c36077e030b05c3907ddc063c6bdc0715a01bfc16edef8730b3b5a0347399ef4c8b2a13e70e068cba9ec5fe8d411f08548c0aa790a1873aff
+Size (oclock-1.0.5.tar.xz) = 126404 bytes
