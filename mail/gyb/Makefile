@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2022/08/30 12:20:14 sborrill Exp $
+# $NetBSD: Makefile,v 1.2 2022/08/31 08:21:31 sborrill Exp $
 
 DISTNAME=	gyb-1.70
-#PKGNAME=	v${VERSION}
-#PKGNAME=	gyb
 CATEGORIES=	mail python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=GAM-team/}
 GITHUB_PROJECT=	got-your-back
