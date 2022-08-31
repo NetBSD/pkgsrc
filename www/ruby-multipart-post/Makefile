@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2020/03/21 16:58:04 taca Exp $
+# $NetBSD: Makefile,v 1.9 2022/08/31 16:16:47 taca Exp $
 
-DISTNAME=	multipart-post-2.1.1
+DISTNAME=	multipart-post-2.2.3
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
