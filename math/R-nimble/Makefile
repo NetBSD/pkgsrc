@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/04/28 15:52:38 mef Exp $
+# $NetBSD: Makefile,v 1.5 2022/08/31 18:41:07 brook Exp $
 
 R_PKGNAME=	nimble
 R_PKGVER=	0.12.2
@@ -14,6 +14,7 @@ DEPENDS+=	R-igraph>=1.2.4.1:../../math/R-igraph
 TEST_DEPENDS+=	R-testthat-[0-9]*:../../devel/R-testthat
 
 USE_LANGUAGES=	c++ fortran
+USE_TOOLS+=	gmake
 
 EIGEN_FILES+=	PardisoSupport
 EIGEN_FILES+=	src/Core/Assign_MKL.h
