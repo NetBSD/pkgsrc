@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4193 2022/08/30 23:47:15 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.4194 2022/08/31 08:08:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6076,3 +6076,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/hackernews-tui to 0.10.2 [pin 2022-08-30]
 	Updated textproc/csview to 1.1.0 [pin 2022-08-30]
 	Updated geography/gpsbabel to 1.8.0 [gdt 2022-08-30]
+	Updated devel/ninja-build to 1.11.1 [adam 2022-08-31]
+	Updated net/qbittorrent to 4.4.5 [adam 2022-08-31]
