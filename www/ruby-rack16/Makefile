@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2020/01/18 23:35:45 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2022/08/31 15:57:16 taca Exp $
 
-DISTNAME=	rack-1.6.11
+DISTNAME=	rack-1.6.13
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/rack/rack16/}
 CATEGORIES=	www
 
