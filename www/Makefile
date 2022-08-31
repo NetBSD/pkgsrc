@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1636 2022/08/24 12:48:12 wiz Exp $
+# $NetBSD: Makefile,v 1.1637 2022/08/31 16:09:27 taca Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -1019,6 +1019,7 @@ SUBDIR+=	spawn-fcgi
 SUBDIR+=	spdylay
 SUBDIR+=	sqtop
 SUBDIR+=	squid4
+SUBDIR+=	squid5
 SUBDIR+=	squidGuard
 SUBDIR+=	squidanalyzer
 SUBDIR+=	squidclamav
