@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4200 2022/08/31 14:52:14 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4201 2022/08/31 14:56:42 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6085,3 +6085,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/ruby-capybara to 3.37.1 [taca 2022-08-31]
 	Updated www/ruby-html-proofer to 4.4.0 [taca 2022-08-31]
 	Updated www/ruby-http-cookie to 1.0.5 [taca 2022-08-31]
+	Updated www/ruby-http-accept to 2.2.0 [taca 2022-08-31]
