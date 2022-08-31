@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1013 2022/08/25 11:12:32 adam Exp $
+# $NetBSD: Makefile,v 1.1014 2022/08/31 10:11:09 sborrill Exp $
 #
 
 COMMENT=	System utilities
@@ -239,6 +239,7 @@ SUBDIR+=	fscd
 SUBDIR+=	fsviewer
 SUBDIR+=	ftwin
 SUBDIR+=	fzf
+SUBDIR+=	gam
 SUBDIR+=	gamin
 SUBDIR+=	gcdmaster
 SUBDIR+=	gcombust
