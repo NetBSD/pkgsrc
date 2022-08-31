@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.21 2021/10/26 11:31:06 nia Exp $
+$NetBSD: distinfo,v 1.22 2022/08/31 16:01:30 taca Exp $
 
-BLAKE2s (unicorn-6.0.0.gem) = b195ec9405e9d2dcc66c10ae220c04410b01da74b51477033289bcbf6fe0ae8e
-SHA512 (unicorn-6.0.0.gem) = adc5710761ef09b5b07bf294dd1e96a75644eca9c316a13a2b13ca381bd7b1020b58b99be06fd67a7bd45a167155319042f5b8e9c7f62eee00fc9abb56954044
-Size (unicorn-6.0.0.gem) = 224256 bytes
+BLAKE2s (unicorn-6.1.0.gem) = 25c023bd812db52a54c8ab71918619155b920d02a9fbe1903fa002f3a5fcb357
+SHA512 (unicorn-6.1.0.gem) = 35f81d1e5fc47048e4b07486fea81cf91650ea47307b69ee0d6f5493af3dac559b70215f1df5840c548a0686bd2dcb62433acdcc9e1d3b1b0b4b665e0fd38fa0
+Size (unicorn-6.1.0.gem) = 227328 bytes
