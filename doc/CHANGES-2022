@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4211 2022/08/31 16:17:12 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4212 2022/08/31 19:19:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6096,3 +6096,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/ruby-request_store to 1.5.1 [taca 2022-08-31]
 	Added www/squid5 version 5.6 [taca 2022-08-31]
 	Updated www/ruby-multipart-post to 2.2.3 [taca 2022-08-31]
+	Updated fonts/libfontenc to 1.1.6 [wiz 2022-08-31]
