@@ -1,0 +1,14 @@
+$NetBSD: distinfo,v 1.1 2022/08/31 16:08:44 taca Exp $
+
+BLAKE2s (squid-5.6.tar.xz) = cb853d16242f43da0e40cf2b0d10893f187b7875e9b43128b244566cffb31622
+SHA512 (squid-5.6.tar.xz) = 940a4d21ea8e3384642951d80c501a192178d1220f06a59a7bc54ce86d49caea0a86b6e789e28bcb7125ffa2a564ca1aca886a96cccf6356314121a81f38221a
+Size (squid-5.6.tar.xz) = 2565032 bytes
+SHA1 (patch-compat_compat.h) = 839381a5e1f46e7d9b822bbb53d82a53c996ddc0
+SHA1 (patch-configure) = a97e61553398348b88dd5e18341b24d6e5673518
+SHA1 (patch-errors_Makefile.in) = 84cbf5c836f02ed5fbfff140888c6d3aadeac326
+SHA1 (patch-src_Makefile.in) = afc5aefd97c46d1ffab43e97aeaeade3a5a8c648
+SHA1 (patch-src_acl_external_kerberos__ldap__group_support__resolv.cc) = 0ea41d55e32d689a16e012391a9eea67631daf3a
+SHA1 (patch-src_comm_ModKqueue.cc) = d8c5d235f07a48731275101d60fcbf2e22f77b96
+SHA1 (patch-src_esi_VarState.cc) = d9418e59cdc390b2d970195167a99bb7ed392c38
+SHA1 (patch-src_fs_ufs_RebuildState.h) = 76ee5c437b3dad05e428ae89cd5af6c052a40e59
+SHA1 (patch-tools_Makefile.in) = d098c0c9dc4af577f74e562d99f07ed98be5ae01
