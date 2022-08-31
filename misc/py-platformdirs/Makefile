@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2022/06/13 19:29:44 adam Exp $
+# $NetBSD: Makefile,v 1.8 2022/08/31 05:56:22 mef Exp $
 
 DISTNAME=	platformdirs-2.5.2
+PKGREVISION=	1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	misc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/platformdirs/}
