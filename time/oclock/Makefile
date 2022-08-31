@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2020/01/18 23:35:37 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2022/08/31 19:23:06 wiz Exp $
 
-DISTNAME=	oclock-1.0.4
+DISTNAME=	oclock-1.0.5
 CATEGORIES=	time x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://xorg.freedesktop.org/
