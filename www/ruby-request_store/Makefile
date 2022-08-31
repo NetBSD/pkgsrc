@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2020/05/25 14:40:23 taca Exp $
+# $NetBSD: Makefile,v 1.2 2022/08/31 16:05:38 taca Exp $
 
-DISTNAME=	request_store-1.5.0
-CATEGORIES=	devel
+DISTNAME=	request_store-1.5.1
+CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/steveklabnik/request_store
