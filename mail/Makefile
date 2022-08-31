@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.582 2022/08/24 14:00:45 wiz Exp $
+# $NetBSD: Makefile,v 1.583 2022/08/31 08:20:52 sborrill Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -108,6 +108,7 @@ SUBDIR+=	gnus
 SUBDIR+=	greetdelay
 SUBDIR+=	grepmail
 SUBDIR+=	greylisting-spp
+SUBDIR+=	gyb
 SUBDIR+=	heirloom-mailx
 SUBDIR+=	hypermail
 SUBDIR+=	ifile
