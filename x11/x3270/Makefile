@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.48 2022/04/03 16:14:03 rhialto Exp $
+# $NetBSD: Makefile,v 1.49 2022/09/01 18:44:08 rhialto Exp $
 
-DISTNAME=	suite3270-4.1ga13-src
-PKGNAME=	x3270-4.1ga13
+DISTNAME=	suite3270-4.2ga4-src
+PKGNAME=	x3270-4.2ga4
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=x3270/}
 EXTRACT_SUFX=	.tgz
@@ -13,7 +13,7 @@ LICENSE=	modified-bsd
 
 GNU_CONFIGURE=	yes
 
-WRKSRC=		${WRKDIR}/suite3270-4.1
+WRKSRC=		${WRKDIR}/suite3270-4.2
 USE_TOOLS+=	bdftopcf gmake
 
 FONTS_DIRS.x11+=	${PREFIX}/share/fonts/X11/misc
