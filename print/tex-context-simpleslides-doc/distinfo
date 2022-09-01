@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:13:00 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/09/01 03:42:27 markd Exp $
 
-BLAKE2s (tex-context-simpleslides-34438/context-simpleslides.doc.tar.xz) = 0796452f47bae5ad7d84011332a0aacd9fa6c68a72c995f1832008680676dfbb
-SHA512 (tex-context-simpleslides-34438/context-simpleslides.doc.tar.xz) = 10b838056e923ad83b5b0c6e8098cc7175067e29a1090b764b850ba8a645038f548ef3fd51704748ab242740d3e34cc2ac355b951e866d476bfaf6a6255e9347
-Size (tex-context-simpleslides-34438/context-simpleslides.doc.tar.xz) = 849572 bytes
+BLAKE2s (context-simpleslides.doc.r63903.tar.xz) = c7b0948a1351bebcd189b7cab1bbc8e4a07266bd919a790d7231d9c075db0d2a
+SHA512 (context-simpleslides.doc.r63903.tar.xz) = 532a9a142b30c8fe2ff3431d24988ef96e5da63276cd0084fe8b69b3e9cb572a0beab8d7ee4291d00a4b1d725f3d23ed47632811fde7e2aca41998c5d44a0481
+Size (context-simpleslides.doc.r63903.tar.xz) = 849560 bytes
