@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2022/04/14 02:33:16 markd Exp $
+$NetBSD: distinfo,v 1.19 2022/09/01 04:44:31 markd Exp $
 
-BLAKE2s (memoir.doc.r62105.tar.xz) = 735227e71f1fd04108742163b0f49375f7096db2fa426b8fed296ce3d1d38456
-SHA512 (memoir.doc.r62105.tar.xz) = a96bf91f04d6c09c86b48be5e0797da15bef53661495b18e9873cf68ac1707b8d4ea44a8784e625bfc0ed8303d4c5433f02b48dbafac8582dd177ad8772c4f4e
-Size (memoir.doc.r62105.tar.xz) = 3137488 bytes
+BLAKE2s (memoir.doc.r64001.tar.xz) = eab21a4da395ab762fd009f9a88b0589f2e188db69beb18bfab866bed46c3cf3
+SHA512 (memoir.doc.r64001.tar.xz) = 9ca4f01e8c676ff6f73c9a04dc977ddd59ce23a5a7c896f2f61d470849805065aa00261edf6b8f44299215247fd928314831d1613f420c276630016ecb0b1375
+Size (memoir.doc.r64001.tar.xz) = 3136484 bytes
