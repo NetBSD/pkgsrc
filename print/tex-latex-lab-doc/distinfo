@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/09/01 04:32:39 markd Exp $
+
+BLAKE2s (latex-lab.doc.r63527.tar.xz) = c55877c5a926e3bd06f90b8713dadfb9ae2c9f4ab8f53a9f3c7b4205522ee947
+SHA512 (latex-lab.doc.r63527.tar.xz) = c1d5c5b961e9e15306a16de25aafbacbe9f8371bedcb36322f1ec500203c3da22faf5050e7e5d4bc60c580994ca4068e324f2ff97470c03bc888a6b481e959f2
+Size (latex-lab.doc.r63527.tar.xz) = 1869528 bytes
