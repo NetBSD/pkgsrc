@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4253 2022/09/01 16:34:50 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4254 2022/09/01 18:44:19 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6295,3 +6295,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated mail/ruby-roadie-rails to 3.0.0 [taca 2022-09-01]
 	Updated lang/php81 to 8.1.10 [taca 2022-09-01]
 	Updated lang/php80 to 8.0.23 [taca 2022-09-01]
+	Updated x11/x3270 to 4.2ga4 [rhialto 2022-09-01]
