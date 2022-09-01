@@ -1,10 +1,8 @@
-$NetBSD: patch-src_bootstrap_lib.rs,v 1.15 2022/08/30 19:22:17 he Exp $
+$NetBSD: patch-src_bootstrap_lib.rs,v 1.16 2022/09/01 09:59:46 jperkin Exp $
 
 Don't filter out optimization flags.
 FreeBSD has a particular C++ runtime library name
 
---- src/bootstrap/lib.rs.orig	2021-09-06 18:42:35.000000000 +0000
-+++ src/bootstrap/lib.rs
 --- src/bootstrap/lib.rs.orig	2022-07-16 08:49:08.000000000 +0000
 +++ src/bootstrap/lib.rs
 @@ -1029,14 +1029,13 @@ impl Build {

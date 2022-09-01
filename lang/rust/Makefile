@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.265 2022/08/30 19:22:17 he Exp $
+# $NetBSD: Makefile,v 1.266 2022/09/01 09:59:46 jperkin Exp $
 
 DISTNAME=	rustc-1.62.1-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -28,29 +28,29 @@ BROKEN_ON_PLATFORM+=	NetBSD-8.*-*arm*
 BROKEN_ON_PLATFORM+=	NetBSD-8.*-aarch64
 BROKEN_ON_PLATFORM+=	NetBSD-8.*-sparc64
 
-HAS_CONFIGURE=			yes
-PYTHON_FOR_BUILD_ONLY=		yes
-CONFIG_SHELL=			${PYTHONBIN}
-CONFIGURE_SCRIPT=		src/bootstrap/configure.py
-CONFIGURE_ARGS+=		--prefix=${PREFIX}
-CONFIGURE_ARGS+=		--mandir=${PREFIX}/${PKGMANDIR}
-CONFIGURE_ARGS+=		--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=		--python=${PYTHONBIN}
-CONFIGURE_ARGS+=		--release-channel=stable
-CONFIGURE_ARGS+=		--local-rust-root=${RUST_BOOTSTRAP_PATH}
-CONFIGURE_ARGS+=		--enable-extended	# Build and install cargo too.
-CONFIGURE_ARGS+=		--enable-rpath
-CONFIGURE_ARGS+=		--disable-codegen-tests
-CONFIGURE_ARGS+=		--disable-compiler-docs
-CONFIGURE_ARGS+=		--disable-llvm-static-stdcpp
-CONFIGURE_ARGS+=		--disable-ninja
-CONFIGURE_ARGS+=		--dist-compression-formats=xz
+HAS_CONFIGURE=		yes
+PYTHON_FOR_BUILD_ONLY=	yes
+CONFIG_SHELL=		${PYTHONBIN}
+CONFIGURE_SCRIPT=	src/bootstrap/configure.py
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--python=${PYTHONBIN}
+CONFIGURE_ARGS+=	--release-channel=stable
+CONFIGURE_ARGS+=	--local-rust-root=${RUST_BOOTSTRAP_PATH}
+CONFIGURE_ARGS+=	--enable-extended	# Build and install cargo too.
+CONFIGURE_ARGS+=	--enable-rpath
+CONFIGURE_ARGS+=	--disable-codegen-tests
+CONFIGURE_ARGS+=	--disable-compiler-docs
+CONFIGURE_ARGS+=	--disable-llvm-static-stdcpp
+CONFIGURE_ARGS+=	--disable-ninja
+CONFIGURE_ARGS+=	--dist-compression-formats=xz
 
 # Include (optional) settings to cross-build rust
 .include "cross.mk"
 
 # optional from do-cross.mk
-CONFIGURE_ARGS+=		${ADD_CONFIGURE_ARGS}
+CONFIGURE_ARGS+=	${ADD_CONFIGURE_ARGS}
 
 # Getting RPATH with $ORIGIN into bootstrap may be troublesome, so
 # uncommenting the LD_LIBRARY_PATH setting may be required to run
@@ -310,39 +310,39 @@ SITES.${RUST_STD_STAGE0}=	${MASTER_SITE_LOCAL:=rust/}
 
 .endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-aarch64) || make(distinfo) || make (makesum) || make(mdi)
-RUST_STAGE0_VER=	1.61.0
-RUST_ARCH=		aarch64-unknown-netbsd
-RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
-RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
-DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
-SITES.${RUST_STAGE0}=	${MASTER_SITE_LOCAL:=rust/}
+RUST_STAGE0_VER=		1.61.0
+RUST_ARCH=			aarch64-unknown-netbsd
+RUST_STAGE0:=			rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
+RUST_STD_STAGE0:=		rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
+DISTFILES:=			${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
+SITES.${RUST_STAGE0}=		${MASTER_SITE_LOCAL:=rust/}
 SITES.${RUST_STD_STAGE0}=	${MASTER_SITE_LOCAL:=rust/}
 .endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-aarch64eb) || make(distinfo) || make (makesum) || make(mdi)
-RUST_STAGE0_VER=	1.61.0
-RUST_ARCH=		aarch64_be-unknown-netbsd
-RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
-RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
-DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
-SITES.${RUST_STAGE0}=	${MASTER_SITE_LOCAL:=rust/}
+RUST_STAGE0_VER=		1.61.0
+RUST_ARCH=			aarch64_be-unknown-netbsd
+RUST_STAGE0:=			rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
+RUST_STD_STAGE0:=		rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
+DISTFILES:=			${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
+SITES.${RUST_STAGE0}=		${MASTER_SITE_LOCAL:=rust/}
 SITES.${RUST_STD_STAGE0}=	${MASTER_SITE_LOCAL:=rust/}
 .endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-sparc64) || make(distinfo) || make (makesum) || make(mdi)
-RUST_STAGE0_VER=	1.61.0
-RUST_ARCH=		sparc64-unknown-netbsd
-RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
-RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
-DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
-SITES.${RUST_STAGE0}=	${MASTER_SITE_LOCAL:=rust/}
+RUST_STAGE0_VER=		1.61.0
+RUST_ARCH=			sparc64-unknown-netbsd
+RUST_STAGE0:=			rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
+RUST_STD_STAGE0:=		rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
+DISTFILES:=			${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
+SITES.${RUST_STAGE0}=		${MASTER_SITE_LOCAL:=rust/}
 SITES.${RUST_STD_STAGE0}=	${MASTER_SITE_LOCAL:=rust/}
 .endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-earmv7hf) || make(distinfo) || make (makesum) || make(mdi)
-RUST_ARCH=		armv7-unknown-netbsd-eabihf
-RUST_STAGE0_VER=	1.61.0
-RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
-RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
-DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
-SITES.${RUST_STAGE0}=	${MASTER_SITE_LOCAL:=rust/}
+RUST_ARCH=			armv7-unknown-netbsd-eabihf
+RUST_STAGE0_VER=		1.61.0
+RUST_STAGE0:=			rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
+RUST_STD_STAGE0:=		rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
+DISTFILES:=			${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
+SITES.${RUST_STAGE0}=		${MASTER_SITE_LOCAL:=rust/}
 SITES.${RUST_STD_STAGE0}=	${MASTER_SITE_LOCAL:=rust/}
 .endif
 
@@ -544,7 +544,7 @@ stage0-bootstrap: install
 		${CP} `${PKG_CC} -print-file-name=$${lib}` \
 		    ${BOOTSTRAP_TMPDIR}/lib/pkgsrc/; \
 	done; \
-	for lib in libLLVM-13.so libcrypto.so.1.1 libcurl.so.4 \
+	for lib in libLLVM-14.so libcrypto.so.1.1 libcurl.so.4 \
 		   libssl.so.1.1 libz.so.1; do \
 		${CP} ${PREFIX}/lib/$${lib} ${BOOTSTRAP_TMPDIR}/lib/pkgsrc/; \
 	done; \
