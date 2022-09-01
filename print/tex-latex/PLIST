@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2022/04/15 03:45:24 markd Exp $
+@comment $NetBSD: PLIST,v 1.10 2022/09/01 04:28:24 markd Exp $
 share/texmf-dist/makeindex/latex/gglo.ist
 share/texmf-dist/makeindex/latex/gind.ist
 share/texmf-dist/tex/latex/base/alltt.sty
@@ -25,7 +25,8 @@ share/texmf-dist/tex/latex/base/cp852.def
 share/texmf-dist/tex/latex/base/cp858.def
 share/texmf-dist/tex/latex/base/cp865.def
 share/texmf-dist/tex/latex/base/decmulti.def
-share/texmf-dist/tex/latex/base/doc-v3beta.sty
+share/texmf-dist/tex/latex/base/doc-2016-02-15.sty
+share/texmf-dist/tex/latex/base/doc-2021-06-01.sty
 share/texmf-dist/tex/latex/base/doc.sty
 share/texmf-dist/tex/latex/base/docstrip.tex
 share/texmf-dist/tex/latex/base/exscale.sty
@@ -67,6 +68,7 @@ share/texmf-dist/tex/latex/base/ltluatex.lua
 share/texmf-dist/tex/latex/base/ltluatex.tex
 share/texmf-dist/tex/latex/base/ltnews.cls
 share/texmf-dist/tex/latex/base/ltxcheck.tex
+share/texmf-dist/tex/latex/base/ltxdoc.cfg
 share/texmf-dist/tex/latex/base/ltxdoc.cls
 share/texmf-dist/tex/latex/base/ltxguide.cls
 share/texmf-dist/tex/latex/base/ly1enc.dfu
