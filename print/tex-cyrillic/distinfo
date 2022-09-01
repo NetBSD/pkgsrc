@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 11:13:05 nia Exp $
+$NetBSD: distinfo,v 1.10 2022/09/01 03:45:31 markd Exp $
 
-BLAKE2s (tex-cyrillic-47350/cyrillic.tar.xz) = c73d19cdbe5c7adb29da9a2e6299d6e613820256b97d8297070cdbd1aae055b6
-SHA512 (tex-cyrillic-47350/cyrillic.tar.xz) = 94e0619912878579b58758cb5b5f53d3c08b562c9146bc298a1f130910c78ce3b2eed1558a146340b221289751955e62e8ad5760cc57aea20aecced10c60310b
-Size (tex-cyrillic-47350/cyrillic.tar.xz) = 15816 bytes
+BLAKE2s (cyrillic.r63613.tar.xz) = bdec1b5032ebf86ff6b4c83220ef3a7dbf2b53322d1818e3492b46b3f405a9cd
+SHA512 (cyrillic.r63613.tar.xz) = 1b8889d33e5433b32d0b84bd31ef7ea96fe338456ef8e1732ea6c254dfe2f21d3600766b1e51bafa4ddbf0144e8420ad8ba6ad593eaa32c3d45dde99b0b4ec8c
+Size (cyrillic.r63613.tar.xz) = 15776 bytes
