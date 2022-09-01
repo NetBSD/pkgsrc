@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2016/07/17 21:59:32 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/09/01 03:42:27 markd Exp $
+share/texmf-dist/doc/context/third/simpleslides/VERSION
 share/texmf-dist/doc/context/third/simpleslides/example.pdf
 share/texmf-dist/doc/context/third/simpleslides/example.tex
 share/texmf-dist/doc/context/third/simpleslides/simpleslides.pdf
