@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2020/05/01 02:30:51 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/09/01 04:02:28 markd Exp $
 share/texmf-dist/tex/latex/graphics/color.sty
 share/texmf-dist/tex/latex/graphics/dvipdf.def
 share/texmf-dist/tex/latex/graphics/dvipsnam.def
@@ -11,6 +11,7 @@ share/texmf-dist/tex/latex/graphics/graphics.sty
 share/texmf-dist/tex/latex/graphics/graphicx.sty
 share/texmf-dist/tex/latex/graphics/keyval.sty
 share/texmf-dist/tex/latex/graphics/lscape.sty
+share/texmf-dist/tex/latex/graphics/mathcolor.ltx
 share/texmf-dist/tex/latex/graphics/pctex32.def
 share/texmf-dist/tex/latex/graphics/pctexhp.def
 share/texmf-dist/tex/latex/graphics/pctexps.def
