@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2022/09/01 04:32:39 markd Exp $
+share/texmf-dist/doc/latex/latex-lab/README.md
+share/texmf-dist/doc/latex/latex-lab/changes.txt
+share/texmf-dist/doc/latex/latex-lab/documentmetadata-support-code.pdf
+share/texmf-dist/doc/latex/latex-lab/documentmetadata-support-code.tex
+share/texmf-dist/doc/latex/latex-lab/documentmetadata-support-doc.pdf
+share/texmf-dist/doc/latex/latex-lab/documentmetadata-support-doc.tex
+share/texmf-dist/doc/latex/latex-lab/latex-lab-footnotes.pdf
+share/texmf-dist/doc/latex/latex-lab/latex-lab-new-or.pdf
+share/texmf-dist/doc/latex/latex-lab/latex-lab-testphase.pdf
+share/texmf-dist/doc/latex/latex-lab/usage-of-footnotemark.txt
+share/texmf-dist/doc/latex/latex-lab/usage-of-footnotetext.txt
+share/texmf-dist/doc/latex/latex-lab/usage-of-kern-kern.txt
