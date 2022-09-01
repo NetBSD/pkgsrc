@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2022/04/15 03:45:24 markd Exp $
+$NetBSD: distinfo,v 1.20 2022/09/01 04:28:24 markd Exp $
 
-BLAKE2s (latex.doc.r61232.tar.xz) = f8d92f9cf507bcd11b2435042fd3eb84d1c2804d07dbcb92c27341918148ea31
-SHA512 (latex.doc.r61232.tar.xz) = 4a14a06407bcd763bcd361a89ef8d77e32bdfde63400d79de69ed87ab49f2e240f7de8a3a71e1de5416d56185e2d06ac9d78ea36bf97728f6f30d6577d0d52f2
-Size (latex.doc.r61232.tar.xz) = 28265900 bytes
+BLAKE2s (latex.doc.r63825.tar.xz) = 4a6058e934e0c5a4f46704c936f690ed21c147e8df5789673014eaf794adc297
+SHA512 (latex.doc.r63825.tar.xz) = 6e2df5cfcd70693ae2903ec74fa78169eb91e92d6438292b27e4dc25670d5211ef0b4a81e150cf1beb12e5ca939f62b515a7b6ddd13bb664bb7a579af8b6fe07
+Size (latex.doc.r63825.tar.xz) = 30604708 bytes
