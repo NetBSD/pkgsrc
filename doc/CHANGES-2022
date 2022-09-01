@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4235 2022/09/01 13:59:29 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4236 2022/09/01 14:17:47 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6278,3 +6278,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/ruby-sinatra to 2.2.2 [taca 2022-09-01]
 	Updated www/ruby-sinatra-contrib to 2.2.2 [taca 2022-09-01]
 	Updated www/ruby-rack-test to 2.0.2 [taca 2022-09-01]
+	Updated www/ruby-selenium-webdriver to 4.4.0 [taca 2022-09-01]
