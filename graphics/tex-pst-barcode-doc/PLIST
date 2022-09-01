@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2018/01/30 06:32:20 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/09/01 05:02:22 markd Exp $
 share/texmf-dist/doc/generic/pst-barcode/Changes
 share/texmf-dist/doc/generic/pst-barcode/README.md
 share/texmf-dist/doc/generic/pst-barcode/images/auspost-1.eps
@@ -9,6 +9,7 @@ share/texmf-dist/doc/generic/pst-barcode/images/aztec-3.eps
 share/texmf-dist/doc/generic/pst-barcode/images/aztec-4.eps
 share/texmf-dist/doc/generic/pst-barcode/images/aztec-5.eps
 share/texmf-dist/doc/generic/pst-barcode/images/aztec-6.eps
+share/texmf-dist/doc/generic/pst-barcode/images/barcode.jpg
 share/texmf-dist/doc/generic/pst-barcode/images/bc412-1.eps
 share/texmf-dist/doc/generic/pst-barcode/images/bc412-2.eps
 share/texmf-dist/doc/generic/pst-barcode/images/bc412-3.eps
@@ -62,6 +63,8 @@ share/texmf-dist/doc/generic/pst-barcode/images/databartruncatedcomposite-1.eps
 share/texmf-dist/doc/generic/pst-barcode/images/datamatrix-1.eps
 share/texmf-dist/doc/generic/pst-barcode/images/datamatrix-2.eps
 share/texmf-dist/doc/generic/pst-barcode/images/datamatrix-3.eps
+share/texmf-dist/doc/generic/pst-barcode/images/datamatrix-4.eps
+share/texmf-dist/doc/generic/pst-barcode/images/dotcode-1.eps
 share/texmf-dist/doc/generic/pst-barcode/images/ean128-1.eps
 share/texmf-dist/doc/generic/pst-barcode/images/ean128-2.eps
 share/texmf-dist/doc/generic/pst-barcode/images/ean128composite-1.eps
@@ -84,6 +87,8 @@ share/texmf-dist/doc/generic/pst-barcode/images/gs1composite-1.eps
 share/texmf-dist/doc/generic/pst-barcode/images/gs1composite-2.eps
 share/texmf-dist/doc/generic/pst-barcode/images/gs1composite-3.eps
 share/texmf-dist/doc/generic/pst-barcode/images/gs1datamatrix-1.eps
+share/texmf-dist/doc/generic/pst-barcode/images/gs1dotcode-1.eps
+share/texmf-dist/doc/generic/pst-barcode/images/gs1northamericancoupon-1.eps
 share/texmf-dist/doc/generic/pst-barcode/images/gs1qrcode-1.eps
 share/texmf-dist/doc/generic/pst-barcode/images/gs1qrcode-2.eps
 share/texmf-dist/doc/generic/pst-barcode/images/hanxin-1.eps
@@ -164,11 +169,13 @@ share/texmf-dist/doc/generic/pst-barcode/images/resize2.eps
 share/texmf-dist/doc/generic/pst-barcode/images/resize3.eps
 share/texmf-dist/doc/generic/pst-barcode/images/rm4scc-1.eps
 share/texmf-dist/doc/generic/pst-barcode/images/sscc18-1.eps
+share/texmf-dist/doc/generic/pst-barcode/images/swissqrcode-1.eps
 share/texmf-dist/doc/generic/pst-barcode/images/telepen-1.eps
 share/texmf-dist/doc/generic/pst-barcode/images/telepen-2.eps
 share/texmf-dist/doc/generic/pst-barcode/images/telepen-3.eps
 share/texmf-dist/doc/generic/pst-barcode/images/telepen-4.eps
 share/texmf-dist/doc/generic/pst-barcode/images/telepen-5.eps
+share/texmf-dist/doc/generic/pst-barcode/images/ultracode-1.eps
 share/texmf-dist/doc/generic/pst-barcode/images/upca-1.eps
 share/texmf-dist/doc/generic/pst-barcode/images/upca-2.eps
 share/texmf-dist/doc/generic/pst-barcode/images/upcacomposite-1.eps
