@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.885 2022/08/21 17:14:12 wiz Exp $
+# $NetBSD: Makefile,v 1.886 2022/09/01 04:33:51 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -1038,6 +1038,8 @@ SUBDIR+=	tex-latex-doc-ptr-doc
 SUBDIR+=	tex-latex-firstaid-dev
 SUBDIR+=	tex-latex-firstaid-dev-doc
 SUBDIR+=	tex-latex-graphics-companion-doc
+SUBDIR+=	tex-latex-lab
+SUBDIR+=	tex-latex-lab-doc
 SUBDIR+=	tex-latex-referenz-doc
 SUBDIR+=	tex-latex-tabellen-doc
 SUBDIR+=	tex-latex-veryshortguide-doc
