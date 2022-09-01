@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2022/04/14 02:46:05 markd Exp $
+$NetBSD: distinfo,v 1.15 2022/09/01 04:46:32 markd Exp $
 
-BLAKE2s (microtype.r62717.tar.xz) = c8ace427f43b88181d8edd4e7d951acfc97ef71a439cb88d7ee6a1be7b36af3b
-SHA512 (microtype.r62717.tar.xz) = a07cbd12b55d6a1d207770ded633e5bf104b883f6e9086474e50654c8ec8fad356cbfdbdd31889236e8c783578f74dec1a3bb4ec089c7059e4e8715b2fcaac61
-Size (microtype.r62717.tar.xz) = 55796 bytes
+BLAKE2s (microtype.r63708.tar.xz) = 1673641910801d850486f44aa5b21f1b7a2b4b0c5a4c64e2c6504f102a7a2658
+SHA512 (microtype.r63708.tar.xz) = 62da418a9800c5f259ee607218e6eef9aad036f06245d5ae1a9d9bbd40a2972798cc07668d6ae7e518c49c5cf713033a67d7791b5b7a06428dcbd805aa8a9022
+Size (microtype.r63708.tar.xz) = 56296 bytes
