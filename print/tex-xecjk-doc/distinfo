@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/04/16 01:47:13 markd Exp $
+$NetBSD: distinfo,v 1.2 2022/09/01 11:17:22 markd Exp $
 
-BLAKE2s (xecjk.doc.r61529.tar.xz) = 2e33b96edb7f65c6b6c9b4ca64dc05b4a64c09011bfa26931b6d34f3af65985c
-SHA512 (xecjk.doc.r61529.tar.xz) = 92bca289bd907817c95924340256df9130f0dc7c0a57b9586d8f0e9b8e74d87d67f01c51b48c40c723b6a33299d30839c44fe56ad687a548fa9e6ce3057e6e2a
-Size (xecjk.doc.r61529.tar.xz) = 1540612 bytes
+BLAKE2s (xecjk.doc.r64059.tar.xz) = 963cfc88b96782d6166197ce195a07b96fedb9458cef22cddadace0fc7a16091
+SHA512 (xecjk.doc.r64059.tar.xz) = b2dd0caf3317d708cc001b5aba57979f86eaa20d9d38d360650b45fbb683603e2075658a0c0a9c0631c81ea06ecac27694c45df47f053d9e7440901d66280295
+Size (xecjk.doc.r64059.tar.xz) = 1622808 bytes
