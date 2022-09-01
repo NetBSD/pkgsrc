@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/28 11:49:45 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/09/01 10:46:47 markd Exp $
 share/texmf-dist/tex/latex/kotex-utf/contrib/dhucs-cmap.sty
 share/texmf-dist/tex/latex/kotex-utf/contrib/dhucs-enumerate.sty
 share/texmf-dist/tex/latex/kotex-utf/contrib/dhucs-enumitem.sty
@@ -16,6 +16,7 @@ share/texmf-dist/tex/latex/kotex-utf/dhucs-nanumfont.sty
 share/texmf-dist/tex/latex/kotex-utf/dhucs.sty
 share/texmf-dist/tex/latex/kotex-utf/hfontspec.default
 share/texmf-dist/tex/latex/kotex-utf/kosections-utf.sty
+share/texmf-dist/tex/latex/kotex-utf/kotex-sections.sty
 share/texmf-dist/tex/latex/kotex-utf/kotex.cfg
 share/texmf-dist/tex/latex/kotex-utf/kotexutf.sty
 share/texmf-dist/tex/latex/kotex-utf/lucenc.dfu
