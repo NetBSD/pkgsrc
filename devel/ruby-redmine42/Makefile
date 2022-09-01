@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2022/09/01 16:19:28 taca Exp $
+# $NetBSD: Makefile,v 1.13 2022/09/01 16:20:32 taca Exp $
 
 DISTNAME=	redmine-${RM_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/redmine/redmine${RM_VER}/}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://www.redmine.org/releases/
 
