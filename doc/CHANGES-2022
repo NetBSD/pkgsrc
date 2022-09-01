@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4255 2022/09/01 20:22:02 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4256 2022/09/01 20:23:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6297,3 +6297,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/php80 to 8.0.23 [taca 2022-09-01]
 	Updated x11/x3270 to 4.2ga4 [rhialto 2022-09-01]
 	Updated devel/py-jupyter_client to 7.3.4nb1 [wiz 2022-09-01]
+	Updated net/freeradius-python to 3.0.25nb2 [wiz 2022-09-01]
