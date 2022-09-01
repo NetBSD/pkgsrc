@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.23 2022/05/15 04:13:43 markd Exp $
+$NetBSD: distinfo,v 1.24 2022/09/01 03:20:03 markd Exp $
 
-BLAKE2s (babel.r63189.tar.xz) = 83fffb5a535af169ad50e254f65cb4beca2f7789c27eb6bba204c15cd9e356b6
-SHA512 (babel.r63189.tar.xz) = 9f2235a91b6ca2f1225c81b67c7e91a38833bec8f80335447e4afe9e09a9e511f7a818abe3e9ee70254cd2b645c206ec09dc36807a5cdcc3d8cfc6da5301f27b
-Size (babel.r63189.tar.xz) = 184320 bytes
+BLAKE2s (babel.r64232.tar.xz) = 79e94a1e3c65b238fd5c77840ed36541d73185676ed66d5cf289d92898bf9a57
+SHA512 (babel.r64232.tar.xz) = e40cb7f7f209731978644920f54aa58784f31b5df56f91173f7aa4ad9e895f1bcba08ec431e030c8ad9dfaa4903f1253c2fc53f12d2f9c1e2a393fefd37a77b8
+Size (babel.r64232.tar.xz) = 190400 bytes
