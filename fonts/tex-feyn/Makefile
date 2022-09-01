@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.4 2020/01/18 23:31:30 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2022/09/01 10:33:24 markd Exp $
 
 DISTNAME=	feyn
-PKGNAME=	tex-${DISTNAME}-0.4.1
-TEXLIVE_REV=	45679
+PKGNAME=	tex-${DISTNAME}-0.4.3
+TEXLIVE_REV=	63945
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/feyn
 COMMENT=	Font for in-text Feynman diagrams
-LICENSE=	modified-bsd
+LICENSE=	2-clause-bsd
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
