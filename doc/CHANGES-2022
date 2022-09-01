@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4237 2022/09/01 14:43:39 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4238 2022/09/01 14:46:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6280,3 +6280,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/ruby-rack-test to 2.0.2 [taca 2022-09-01]
 	Updated www/ruby-selenium-webdriver to 4.4.0 [taca 2022-09-01]
 	Added math/ruby-matrix version 0.4.2 [taca 2022-09-01]
+	Updated textproc/ruby-classifier-reborn to 2.3.0 [taca 2022-09-01]
