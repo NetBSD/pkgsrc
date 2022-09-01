@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2022/04/08 20:55:02 markd Exp $
+$NetBSD: distinfo,v 1.6 2022/09/01 10:21:00 markd Exp $
 
-BLAKE2s (csvsimple.doc.r61839.tar.xz) = ff2208fb03d17e4105f2b167ced1dafdcf29f7131cc22f14470113055109fd45
-SHA512 (csvsimple.doc.r61839.tar.xz) = bf8ffb88fdf31c8a8b9430a163fd381e8aec891613d6fd572f3247e08890ca232f83657f194fd9a1fe093d7297b75dcbaccd28fa3116e12cc23f98b42a4fae98
-Size (csvsimple.doc.r61839.tar.xz) = 1644696 bytes
+BLAKE2s (csvsimple.doc.r63678.tar.xz) = dee28d7e09fb1f4426561cc72a9e68ab896bb10471cbee71f8ba3425936717bb
+SHA512 (csvsimple.doc.r63678.tar.xz) = e046c02b38ceba6bcd06ae1f285c5022d4909e5700e447c8e601ed6b23adca51f297a8bd247b25549e2a92fdfce9a9621beebc05d6619f55b3113e153f3158f5
+Size (csvsimple.doc.r63678.tar.xz) = 1645376 bytes
