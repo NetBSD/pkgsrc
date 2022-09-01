@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2020/01/18 23:33:55 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2022/09/01 03:42:27 markd Exp $
 
 DISTNAME=	context-simpleslides
-PKGNAME=	tex-${DISTNAME}-2015
-TEXLIVE_REV=	34438
+PKGNAME=	tex-${DISTNAME}-2022
+TEXLIVE_REV=	63903
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/context-simpleslides
@@ -11,6 +11,5 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	tex-context-[0-9]*:../../print/tex-context
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
