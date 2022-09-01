@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2018/03/14 15:40:07 taca Exp $
+# $NetBSD: Makefile,v 1.5 2022/09/01 14:46:27 taca Exp $
 
-DISTNAME=	classifier-reborn-2.2.0
-PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
+DISTNAME=	classifier-reborn-2.3.0
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -12,6 +11,12 @@ LICENSE=	gnu-lgpl-v2.1
 DEPENDS=	${RUBY_PKGPREFIX}-fast-stemmer>=1.0<2:../../textproc/ruby-fast-stemmer
 
 RUBYGEM_OPTIONS+=	--format-executable
+
+.include "../../lang/ruby/rubyversion.mk"
+
+.if ${RUBY_VER} != 31
+DEPENDS+=	${RUBY_PKGPREFIX}-matrix>=0.4:../../math/ruby-matrix
+.endif
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
