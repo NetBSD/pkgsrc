@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4233 2022/09/01 13:51:15 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4234 2022/09/01 13:51:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6276,3 +6276,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/ruby-mustermann to 2.0.2 [taca 2022-09-01]
 	Updated www/ruby-rack-protection to 2.2.2 [taca 2022-09-01]
 	Updated www/ruby-sinatra to 2.2.2 [taca 2022-09-01]
+	Updated www/ruby-sinatra-contrib to 2.2.2 [taca 2022-09-01]
