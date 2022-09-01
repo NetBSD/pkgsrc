@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.71 2022/08/22 12:02:44 markd Exp $
+# $NetBSD: Makefile,v 1.72 2022/09/01 06:15:44 markd Exp $
 
 DISTNAME=	collection-latexextra
 PKGNAME=	texlive-${DISTNAME}-2022pre5
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	64141
+TEXLIVE_REV=	64204
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -99,6 +99,7 @@ DEPENDS+=	tex-beamertheme-phnompenh-[0-9]*:../../print/tex-beamertheme-phnompenh
 # depend beamertheme-pure-minimalistic
 DEPENDS+=	tex-beamertheme-saintpetersburg-[0-9]*:../../print/tex-beamertheme-saintpetersburg
 # depend beamertheme-simpledarkblue
+# depend beamertheme-tcolorbox
 # depend beamertheme-trigon
 DEPENDS+=	tex-beamertheme-upenn-bc-[0-9]*:../../print/tex-beamertheme-upenn-bc
 # depend beamerthemeamurmaple
@@ -1253,6 +1254,7 @@ DEPENDS+=	tex-supertabular-[0-9]*:../../print/tex-supertabular
 DEPENDS+=	tex-svn-prov-[0-9]*:../../print/tex-svn-prov
 DEPENDS+=	tex-svninfo-[0-9]*:../../print/tex-svninfo
 # depend swfigure
+# depend swungdash
 # depend syntax
 # depend syntrace
 # depend synttree
