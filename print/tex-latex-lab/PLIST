@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2022/09/01 04:32:39 markd Exp $
+share/texmf-dist/tex/latex/latex-lab/documentmetadata-support.ltx
+share/texmf-dist/tex/latex/latex-lab/latex-lab-footmisc.ltx
+share/texmf-dist/tex/latex/latex-lab/latex-lab-footnotes.ltx
+share/texmf-dist/tex/latex/latex-lab/latex-lab-testphase-new-or.sty
+share/texmf-dist/tex/latex/latex-lab/new-or-latex-lab-testphase.ltx
+share/texmf-dist/tex/latex/latex-lab/phase-I-latex-lab-testphase.ltx
+share/texmf-dist/tex/latex/latex-lab/phase-II-latex-lab-testphase.ltx
+share/texmf-dist/tex/latex/latex-lab/tagpdf-latex-lab-testphase.ltx
