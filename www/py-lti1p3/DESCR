@@ -1,0 +1,5 @@
+Python implementation of the similar PHP tool. This library contains adapters
+for use with the Django and Flask web frameworks. However, there are no
+difficulties with adapting it to other frameworks; you just need to re-implement
+the OIDCLogin and MessageLaunch classes as it is already done in existing
+adapters.
