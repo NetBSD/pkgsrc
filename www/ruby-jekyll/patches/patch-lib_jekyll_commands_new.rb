@@ -1,4 +1,4 @@
-$NetBSD: patch-lib_jekyll_commands_new.rb,v 1.3 2021/12/12 13:40:34 taca Exp $
+$NetBSD: patch-lib_jekyll_commands_new.rb,v 1.4 2022/09/01 14:53:14 taca Exp $
 
 Do not use bundle unless specify --execute-bundle option.
 
