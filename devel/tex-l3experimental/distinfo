@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2022/04/15 05:32:03 markd Exp $
+$NetBSD: distinfo,v 1.19 2022/09/01 04:16:51 markd Exp $
 
-BLAKE2s (l3experimental.r63007.tar.xz) = 8fde56e65221da54293538c59e26ccc9cc1b372cb4ea273bd118745b45c1dee9
-SHA512 (l3experimental.r63007.tar.xz) = 0f3ca72f6610ba297470776d96d9f271acf90fd58d26cd05cb9df21c9c6c88d3d8a0df91b5d8dbcfc10917c45fca7a20355f65751683c081007950257123ca69
-Size (l3experimental.r63007.tar.xz) = 23628 bytes
+BLAKE2s (l3experimental.r63089.tar.xz) = 56f39a3813eb6e4825bd6626b312b604d043b733bea0b2ea8ce28d17b5fdc3db
+SHA512 (l3experimental.r63089.tar.xz) = aa8f499d84578afcd72e29a48e8c5ff337d2b1acb4cbf3b4b3754925d60e2bf1f2003e82bafc859701c295d61f572305135bb5d078c194fd0d747059ac69f2ea
+Size (l3experimental.r63089.tar.xz) = 23644 bytes
