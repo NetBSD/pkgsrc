@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2021/02/20 10:57:30 markd Exp $
+# $NetBSD: Makefile,v 1.27 2022/09/01 05:27:20 markd Exp $
 
 DISTNAME=	textpos
-PKGNAME=	tex-${DISTNAME}-1.10
-TEXLIVE_REV=	56441
+PKGNAME=	tex-${DISTNAME}-1.10.1
+TEXLIVE_REV=	63967
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/textpos

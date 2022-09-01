@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 11:14:51 nia Exp $
+$NetBSD: distinfo,v 1.13 2022/09/01 05:27:20 markd Exp $
 
-BLAKE2s (textpos.r56441.tar.xz) = b51ce67e6e4e0dc169f7411b9831e891700f918f2d73a61da01851468988c9bc
-SHA512 (textpos.r56441.tar.xz) = b7213e61a54addaafac6bf831273a000bf300939d74311e25a1412744e2baabcc35594b084a9ccb6eb5e8b91b105e0acf97686323f89f0623a8ee9749e33bbf9
-Size (textpos.r56441.tar.xz) = 4196 bytes
+BLAKE2s (textpos.r63967.tar.xz) = 07c22e5fe344a12a69fa53388199b020916c9d17b5d67bb08dd2b1de3e7c76b1
+SHA512 (textpos.r63967.tar.xz) = 77451d38b88f76b80b063267e2dde1e6e6c771c3e4b176a006d3e38351b823a9ac735455dffd6ffb3e23d6198ea7e2e7828c5d9a4e0b0bcfd5c07567901a05aa
+Size (textpos.r63967.tar.xz) = 4216 bytes
