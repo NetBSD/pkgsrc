@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 11:31:00 nia Exp $
+$NetBSD: distinfo,v 1.10 2022/09/01 14:51:15 taca Exp $
 
-BLAKE2s (jekyll-sass-converter-2.1.0.gem) = 6706d223ec2b1d02514648b5a888208edd08fee8bb7722ef8f127058bea08ebc
-SHA512 (jekyll-sass-converter-2.1.0.gem) = 45ba2bbd23f80d6f4c5496687663610dcd485dee77eff5907a8c71a3b797edfb273893b5d38b0adb84017a1e24c6e5ebed9fc9dc51302012d36e331b569c43b4
-Size (jekyll-sass-converter-2.1.0.gem) = 7680 bytes
+BLAKE2s (jekyll-sass-converter-2.2.0.gem) = 4ea780703f1ae289bb46b4ca13da62a839bd0cd431400e2d4ee682cf52ca9120
+SHA512 (jekyll-sass-converter-2.2.0.gem) = f18e7f90951101ef8f49b0962ef52db0e8d81f1a52166dc63753bbe22b71d21aca1a609a637e17d08531e4613ceb1fd81fe9cf8b5506f78a956a4c5e33b408ac
+Size (jekyll-sass-converter-2.2.0.gem) = 8192 bytes
