@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2020/05/01 00:15:10 markd Exp $
+# $NetBSD: Makefile,v 1.6 2022/09/01 10:13:59 markd Exp $
 
 DISTNAME=	chess-problem-diagrams.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.15
-TEXLIVE_REV=	53302
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.21
+TEXLIVE_REV=	63708
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/chess-problem-diagrams
