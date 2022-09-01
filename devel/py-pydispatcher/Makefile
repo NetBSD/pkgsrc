@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/09/01 07:32:03 adam Exp $
+# $NetBSD: Makefile,v 1.6 2022/09/01 07:32:52 adam Exp $
 
 DISTNAME=	PyDispatcher-2.0.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -6,7 +6,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyDispatcher/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://pydispatcher.sourceforge.net/
+HOMEPAGE=	https://github.com/mcfletch/pydispatcher
 COMMENT=	Multi-producer-multi-consumer signal dispatching mechanism
 LICENSE=	modified-bsd
 
