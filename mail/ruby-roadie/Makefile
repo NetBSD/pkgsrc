@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2020/05/25 14:06:14 taca Exp $
+# $NetBSD: Makefile,v 1.2 2022/09/01 16:27:16 taca Exp $
 
-DISTNAME=	roadie-4.0.0
+DISTNAME=	roadie-5.0.1
 CATEGORIES=	mail
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

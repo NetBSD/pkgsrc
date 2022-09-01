@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2020/05/25 14:06:14 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/09/01 16:27:16 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.autotest
+${GEM_LIBDIR}/.github/workflows/main.yml
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rubocop.yml
-${GEM_LIBDIR}/.travis.yml
+${GEM_LIBDIR}/.solargraph.yml
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/Changelog.md
 ${GEM_LIBDIR}/Gemfile
