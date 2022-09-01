@@ -1,5 +1,10 @@
-This bundle provides the ucs package, and utf8x.def, together with a
-large number of support files. The utf8x.def definition file for use
-with inputenc covers a wider range of Unicode characters than does
-utf8.def in the LaTeX distribution. The ucs package provides facilities
-for efficient use of large sets of Unicode characters.
+The bundle provides the ucs package, and utf8x.def, together
+with a large number of support files. The utf8x.def definition
+file for use with inputenc covers a wider range of Unicode
+characters than does utf8.def in the LaTeX distribution. The
+package provides facilities for efficient use of its large sets
+of Unicode characters. Glyph production may be controlled by
+various options, which permits use of non-ASCII characters when
+coding mathematical formulae. Note that the bundle previously
+had an alias "unicode"; that alias has now been withdrawn, and
+no package of that name now exists.
