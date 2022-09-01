@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2022/04/17 11:20:41 markd Exp $
+# $NetBSD: Makefile,v 1.17 2022/09/01 05:58:20 markd Exp $
 
 DISTNAME=	collection-latex
-PKGNAME=	texlive-${DISTNAME}-2022
+PKGNAME=	texlive-${DISTNAME}-2022.63515
 CATEGORIES=	meta-pkgs
-TEXLIVE_REV=	57048
+TEXLIVE_REV=	63515
 MASTER_SITES=	# empty
 
 MAINTAINER=	minskim@NetBSD.org
@@ -49,6 +49,7 @@ DEPENDS+=	tex-l3packages-[0-9]*:../../devel/tex-l3packages
 DEPENDS+=	tex-latex>=2010:../../print/tex-latex
 DEPENDS+=	tex-latex-bin>=2010:../../print/tex-latex-bin
 DEPENDS+=	tex-latex-fonts>=2009:../../fonts/tex-latex-fonts
+DEPENDS+=	tex-latex-lab-[0-9]*:../../print/tex-latex-lab
 DEPENDS+=	tex-latexconfig>=2010.20663:../../print/tex-latexconfig
 DEPENDS+=	tex-letltxmacro-[0-9]*:../../print/tex-letltxmacro
 DEPENDS+=	tex-ltxcmds-[0-9]*:../../print/tex-ltxcmds
