@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2021/02/03 14:22:12 taca Exp $
+# $NetBSD: Makefile,v 1.3 2022/09/01 16:29:35 taca Exp $
 
-DISTNAME=	roadie-rails-2.2.0
+DISTNAME=	roadie-rails-3.0.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/rails/rails${RUBY_RAILS}/}
 CATEGORIES=	mail
 
@@ -10,11 +10,12 @@ COMMENT=	Hooks Roadie into your Rails application
 LICENSE=	mit
 
 DEPENDS+=	${RUBY_RAILTIES_DEPENDS}
-DEPENDS+=	${RUBY_PKGPREFIX}-roadie>=3.1:../../mail/ruby-roadie
+DEPENDS+=	${RUBY_PKGPREFIX}-roadie>=5.0<6:../../mail/ruby-roadie
 
 USE_LANGUAGES=	# none
 
-RUBY_RAILS_ACCEPTED=	# empty
+RUBY_VERSIONS_ACCEPTED=	30 31
+RUBY_RAILS_ACCEPTED=	${RUBY_RAILS_REQDRUBY_RAILS}
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
