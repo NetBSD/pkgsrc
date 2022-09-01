@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2022/04/09 03:04:35 markd Exp $
+# $NetBSD: Makefile,v 1.7 2022/09/01 05:12:36 markd Exp $
 
 DISTNAME=	showlabels.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.9.1
-TEXLIVE_REV=	60877
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.9.2
+TEXLIVE_REV=	63940
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/showlabels
