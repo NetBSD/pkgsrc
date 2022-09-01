@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2021/06/03 04:54:57 markd Exp $
+# $NetBSD: Makefile,v 1.8 2022/09/01 03:15:59 markd Exp $
 
 DISTNAME=	arabtex
-PKGNAME=	tex-${DISTNAME}-3.17.59150
-TEXLIVE_REV=	59150
+PKGNAME=	tex-${DISTNAME}-3.17.63519
+TEXLIVE_REV=	63519
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://ctan.org/pkg/arabtex
