@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2022/04/16 01:43:19 markd Exp $
+# $NetBSD: Makefile,v 1.2 2022/09/01 11:19:18 markd Exp $
 
 DISTNAME=	xpinyin.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2.9
-TEXLIVE_REV=	56709
+PKGNAME=	tex-${DISTNAME:S/./-/}-3.1
+TEXLIVE_REV=	63897
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/xpinyin
