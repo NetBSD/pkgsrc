@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2022/04/16 00:52:11 markd Exp $
+# $NetBSD: Makefile,v 1.2 2022/09/01 04:37:11 markd Exp $
 
 DISTNAME=	luafindfont
-PKGNAME=	tex-${DISTNAME}-0.06
-TEXLIVE_REV=	61959
+PKGNAME=	tex-${DISTNAME}-0.09
+TEXLIVE_REV=	63265
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/luafindfont
