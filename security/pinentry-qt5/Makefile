@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2022/04/18 19:12:01 adam Exp $
+# $NetBSD: Makefile,v 1.6 2022/09/01 09:15:16 adam Exp $
 
 PKGNAME=	${DISTNAME:S/pinentry-/pinentry-qt5-/}
-PKGREVISION=	1
 COMMENT=	Applications for entering PINs or Passphrases, qt5 enabled
 CONFLICTS=	pinentry-qt4-[0-9]*
 
@@ -17,6 +16,7 @@ CONFIGURE_ARGS+=	--disable-pinentry-gnome3
 CONFIGURE_ARGS+=	--disable-pinentry-gtk2
 CONFIGURE_ARGS+=	--disable-libsecret
 CONFIGURE_ARGS+=	--enable-pinentry-qt
+CONFIGURE_ENV+=		RCC="${QTDIR}/bin/rcc"
 
 INSTALL_DIRS=		qt
 
