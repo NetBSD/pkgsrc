@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/23 04:07:39 minskim Exp $
-share/texmf-dist/doc/fonts/ly1/README
+@comment $NetBSD: PLIST,v 1.2 2022/09/01 04:39:30 markd Exp $
+share/texmf-dist/doc/latex/ly1/README.md

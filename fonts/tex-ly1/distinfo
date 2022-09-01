@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:28:12 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/09/01 04:39:30 markd Exp $
 
-BLAKE2s (tex-ly1-47848/ly1.tar.xz) = cd2678f9de943b9b09f563d98fa3d87175aeeefe6b0f3d611c7e14f2378ede24
-SHA512 (tex-ly1-47848/ly1.tar.xz) = a744e7d5d5670dbc7317412684f41d57c584cf70b5b4356993bfdec8c7f5e3cc7581fe0a1432c3e8d3126c2f3d95caa8684eaf60be5e5f32f14d28febffb2fcf
-Size (tex-ly1-47848/ly1.tar.xz) = 54904 bytes
+BLAKE2s (ly1.r63565.tar.xz) = e7b001a3cb53b64e3a52bca6da3f897f01ed1224321cd40017f7f2616c4e120c
+SHA512 (ly1.r63565.tar.xz) = 79ec3f1971587a3266d3351cf4d97e44d7871ace695c7f229b92c819f1334c2032a3c906a2e7e74e98fea5f01ef4dabac9c2dbdbecf68f0d5512c637288e8297
+Size (ly1.r63565.tar.xz) = 54900 bytes
