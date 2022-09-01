@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2022/08/30 10:01:18 adam Exp $
+# $NetBSD: Makefile,v 1.68 2022/09/01 20:25:30 wiz Exp $
 
 DISTNAME=	pylint-2.15.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,6 +10,7 @@ HOMEPAGE=	https://www.pylint.org/
 COMMENT=	Python source code analyzer
 LICENSE=	gnu-gpl-v2
 
+BUILD_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-astroid>=2.12.4:../../devel/py-astroid
 DEPENDS+=	${PYPKGPREFIX}-dill>=0.2:../../textproc/py-dill
 DEPENDS+=	${PYPKGPREFIX}-isort>=4.2.5:../../devel/py-isort
@@ -22,8 +23,6 @@ DEPENDS+=	${PYPKGPREFIX}-tomli>=1.1.0:../../textproc/py-tomli
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-USE_PKG_RESOURCES=	yes
 
 .include "../../lang/python/pyversion.mk"
 .if ${_PYTHON_VERSION} < 310
