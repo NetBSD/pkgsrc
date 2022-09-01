@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2022/01/13 08:05:48 adam Exp $
+# $NetBSD: Makefile.common,v 1.17 2022/09/01 09:15:16 adam Exp $
 #
 # used by security/pinentry/Makefile
 # used by security/pinentry-fltk/Makefile
@@ -6,7 +6,7 @@
 # used by security/pinentry-gtk2/Makefile
 # used by security/pinentry-qt5/Makefile
 
-DISTNAME=	pinentry-1.2.0
+DISTNAME=	pinentry-1.2.1
 
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/pinentry/
