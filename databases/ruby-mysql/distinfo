@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2021/10/26 10:10:03 nia Exp $
+$NetBSD: distinfo,v 1.20 2022/09/01 15:29:29 taca Exp $
 
-BLAKE2s (ruby-mysql-2.9.14.tar.gz) = 82a0d00236c02b04fee60b62cdb65b996051e9123ba44e8172a0e95cc14f4e36
-SHA512 (ruby-mysql-2.9.14.tar.gz) = 7aaea3f40a37645c6b2e38b8bd0efa42e520dd7e3c1f9a907f772cfd7661a16045ce81c935f3ccc995d0c809e5df614bff3808d54a41fcf02ea8e936ea54f349
-Size (ruby-mysql-2.9.14.tar.gz) = 58759 bytes
+BLAKE2s (ruby-mysql-3.0.1.gem) = 05d97895110a0daa8eb2744b116ac01d75e74a25da4dd76507fde9eaf528fc26
+SHA512 (ruby-mysql-3.0.1.gem) = 75d39845f3cd1276632491d04130fe14663f7dddad34bc6c0d294144776a7651c87944ea5bdb3f3408a53222387db5dce3264a2caf779e44942d610c3f7fd915
+Size (ruby-mysql-3.0.1.gem) = 47616 bytes
