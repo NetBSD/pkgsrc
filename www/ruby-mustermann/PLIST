@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/06/04 15:26:43 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/09/01 13:46:30 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
@@ -45,7 +45,6 @@ ${GEM_LIBDIR}/spec/composite_spec.rb
 ${GEM_LIBDIR}/spec/concat_spec.rb
 ${GEM_LIBDIR}/spec/equality_map_spec.rb
 ${GEM_LIBDIR}/spec/expander_spec.rb
-${GEM_LIBDIR}/spec/extension_spec.rb
 ${GEM_LIBDIR}/spec/identity_spec.rb
 ${GEM_LIBDIR}/spec/mapper_spec.rb
 ${GEM_LIBDIR}/spec/mustermann_spec.rb
