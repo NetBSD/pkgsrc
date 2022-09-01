@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/09/01 11:32:29 markd Exp $
+
+BLAKE2s (canvasapi-2.2.0.tar.gz) = 571e0ea60f8cd48de448e1f2f0c91f004684d61782e0c8e2e670d1d1da475b72
+SHA512 (canvasapi-2.2.0.tar.gz) = d4e583dd2097a87bbeaca80493dab9fa102dfa4cd6775b7ed6df720f0398ffb4b59c42e93b3f6dd4340e9a1270f82a0f1b83009d41e60ab935509e4e1cf3a11c
+Size (canvasapi-2.2.0.tar.gz) = 80616 bytes
