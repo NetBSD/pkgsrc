@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.33 2022/08/22 11:33:49 markd Exp $
+# $NetBSD: Makefile,v 1.34 2022/09/01 06:18:44 markd Exp $
 
 DISTNAME=	collection-pictures
 PKGNAME=	texlive-${DISTNAME}-2022pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	63957
+TEXLIVE_REV=	64199
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -176,6 +176,7 @@ DEPENDS+=	tex-tikz-3dplot-[0-9]*:../../graphics/tex-tikz-3dplot
 DEPENDS+=	tex-tikz-cd-[0-9]*:../../graphics/tex-tikz-cd
 # depend tikz-dependency
 # depend tikz-dimline
+# depend tikz-ext
 # depend tikz-feynhand
 # depend tikz-feynman
 # depend tikz-imagelabels
@@ -212,6 +213,7 @@ DEPENDS+=	tex-tikzorbital-[0-9]*:../../graphics/tex-tikzorbital
 DEPENDS+=	tex-tikzpagenodes-[0-9]*:../../graphics/tex-tikzpagenodes
 # depend tikzpeople
 DEPENDS+=	tex-tikzpfeile-[0-9]*:../../graphics/tex-tikzpfeile
+# depend tikzpingus
 DEPENDS+=	tex-tikzposter-[0-9]*:../../graphics/tex-tikzposter
 DEPENDS+=	tex-tikzscale-[0-9]*:../../graphics/tex-tikzscale
 DEPENDS+=	tex-tikzsymbols-[0-9]*:../../graphics/tex-tikzsymbols
