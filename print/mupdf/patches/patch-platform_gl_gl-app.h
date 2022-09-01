@@ -1,7 +1,6 @@
-$NetBSD: patch-platform_gl_gl-app.h,v 1.4 2020/05/07 20:42:57 leot Exp $
+$NetBSD: patch-platform_gl_gl-app.h,v 1.5 2022/09/01 13:56:53 nia Exp $
 
-- Do not force freeglut GLUT implementation to every non-APPLE platforms.
-- Adjust the glut.h include.
+- Use freeglut everywhere.
 
 --- platform/gl/gl-app.h.orig	2020-05-05 11:29:09.000000000 +0000
 +++ platform/gl/gl-app.h
