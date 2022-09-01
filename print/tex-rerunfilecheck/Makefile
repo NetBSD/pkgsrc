@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2020/05/03 05:30:43 markd Exp $
+# $NetBSD: Makefile,v 1.2 2022/09/01 11:09:48 markd Exp $
 
 DISTNAME=	rerunfilecheck
-PKGNAME=	tex-${DISTNAME}-1.9
-TEXLIVE_REV=	54841
+PKGNAME=	tex-${DISTNAME}-1.10
+TEXLIVE_REV=	63869
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/rerunfilecheck
