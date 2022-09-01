@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2022/07/13 11:48:05 nat Exp $
+# $NetBSD: Makefile,v 1.8 2022/09/01 20:46:51 nat Exp $
 
-VERSION=	0.4
+VERSION=	0.5
 GITHUB_PROJECT= diffbreaker
 DISTNAME=       ${GITHUB_PROJECT}-${VERSION}
 PKGNAME=        ${GITHUB_PROJECT}-${VERSION}

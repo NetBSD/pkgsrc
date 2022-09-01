@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/07/13 11:48:05 nat Exp $
+$NetBSD: distinfo,v 1.2 2022/09/01 20:46:51 nat Exp $
 
-BLAKE2s (diffbreaker-0.4.zip) = 2bacad24b044c351b68c911d0c7a60bf08b07fda54cad0ef21cf18a0b1ea9a8c
-SHA512 (diffbreaker-0.4.zip) = 6be72e4db473d5015c741a3c00407ce97b9efd4da0eb20014275124bc61f127c9dd670db83871929f2c71ed3effc20f84c7d18f1a9dd363e4b6620c680055885
-Size (diffbreaker-0.4.zip) = 8919 bytes
+BLAKE2s (diffbreaker-0.5.zip) = 482c18adfbc4a9dc3aef0fa73ca3191b25c632ee872fad8a9255a79721cdadbc
+SHA512 (diffbreaker-0.5.zip) = 1577b8d2a55866fa200dd61e2093b29a94ef29c4abf8de1a6e1cd17200e0e47284ec7cc0aad6cda460481ac82fd632ceb89de648331f8304908e9bbd5c82badf
+Size (diffbreaker-0.5.zip) = 8964 bytes
