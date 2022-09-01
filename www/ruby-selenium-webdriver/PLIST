@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2021/12/11 15:50:00 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2022/09/01 14:17:27 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGES
 ${GEM_LIBDIR}/Gemfile
@@ -13,6 +13,8 @@ ${GEM_LIBDIR}/lib/selenium/webdriver/atoms/findElements.js
 ${GEM_LIBDIR}/lib/selenium/webdriver/atoms/getAttribute.js
 ${GEM_LIBDIR}/lib/selenium/webdriver/atoms/isDisplayed.js
 ${GEM_LIBDIR}/lib/selenium/webdriver/atoms/mutationListener.js
+${GEM_LIBDIR}/lib/selenium/webdriver/bidi.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/bidi/session.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/chrome.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/chrome/driver.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/chrome/features.rb
@@ -28,6 +30,7 @@ ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/full_page_screensh
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/has_addons.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/has_apple_permissions.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/has_authentication.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/has_bidi.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/has_casting.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/has_cdp.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/has_context.rb
@@ -42,7 +45,6 @@ ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/has_network_connec
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/has_network_interception.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/has_permissions.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/has_pinned_scripts.rb
-${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/has_remote_status.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/has_session_id.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/has_web_storage.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/prints_page.rb
@@ -59,8 +61,18 @@ ${GEM_LIBDIR}/lib/selenium/webdriver/common/interactions/interactions.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/interactions/key_actions.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/interactions/key_input.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/interactions/none_input.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/common/interactions/pause.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/interactions/pointer_actions.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/common/interactions/pointer_cancel.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/common/interactions/pointer_event_properties.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/interactions/pointer_input.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/common/interactions/pointer_move.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/common/interactions/pointer_press.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/common/interactions/scroll.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/common/interactions/scroll_origin.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/common/interactions/typing_interaction.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/common/interactions/wheel_actions.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/common/interactions/wheel_input.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/keys.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/log_entry.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/logger.rb
@@ -81,13 +93,18 @@ ${GEM_LIBDIR}/lib/selenium/webdriver/common/socket_poller.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/takes_screenshot.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/target_locator.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/timeouts.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/common/virtual_authenticator/credential.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/common/virtual_authenticator/virtual_authenticator.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/common/virtual_authenticator/virtual_authenticator_options.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/wait.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/common/websocket_connection.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/window.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/zipper.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/devtools.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/devtools/console_event.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/devtools/exception_event.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/devtools/mutation_event.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/devtools/network_interceptor.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/devtools/pinned_script.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/devtools/request.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/devtools/response.rb
@@ -105,6 +122,7 @@ ${GEM_LIBDIR}/lib/selenium/webdriver/firefox/options.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/firefox/profile.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/firefox/profiles_ini.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/firefox/service.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/firefox/util.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/ie.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/ie/driver.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/ie/options.rb
@@ -117,7 +135,6 @@ ${GEM_LIBDIR}/lib/selenium/webdriver/remote/driver.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/remote/http/common.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/remote/http/curb.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/remote/http/default.rb
-${GEM_LIBDIR}/lib/selenium/webdriver/remote/http/persistent.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/remote/response.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/remote/server_error.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/safari.rb
