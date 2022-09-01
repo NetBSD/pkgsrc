@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4220 2022/09/01 01:19:50 gutteridge Exp $
+$NetBSD: CHANGES-2022,v 1.4221 2022/09/01 01:24:14 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6105,3 +6105,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/piratebay to 0.1.5 [pin 2022-08-31]
 	Added graphics/cliris version 0.2.0 [pin 2022-08-31]
 	Updated x11/vte3 to 0.68.0nb7 [gutteridge 2022-09-01]
+	Updated x11/mate-terminal to 1.26.0 [gutteridge 2022-09-01]
