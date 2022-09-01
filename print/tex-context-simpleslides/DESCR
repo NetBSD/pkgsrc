@@ -1,1 +1,7 @@
-Simple slide module for ConTeXt.
+This ConTeXt module provides an easy-to-use interface for
+creating presentations for use with a digital projector. The
+presentations are not interactive (no buttons, hyperlinks or
+navigational tools such as tables of contents). Graphics may be
+mixed with the text of slides. The module provides several
+predefined styles, designed for academic presentation. Most
+styles are configurable, and it is easy to design new styles.
