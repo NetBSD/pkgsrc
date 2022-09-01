@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2022/04/07 05:19:28 markd Exp $
+$NetBSD: distinfo,v 1.18 2022/09/01 03:22:57 markd Exp $
 
-BLAKE2s (beamer.doc.r61954.tar.xz) = e9f4a9e39d79bd671b0bc59ae3fdb9021d581dd34b0d128e6cd60572d36541a0
-SHA512 (beamer.doc.r61954.tar.xz) = 8e5ca18d718e8798a592164e360731d095bf388e739daa6d88521d7ff2e5a4819357d0f3cff2a5d014e35a6bd33e10f6dec2a9c76fefca2fad28a2387a62756d
-Size (beamer.doc.r61954.tar.xz) = 2954020 bytes
+BLAKE2s (beamer.doc.r63321.tar.xz) = 7eddcb3ae95eb155a926ad0961f4780d34d1ec45fabc14540e3b6180f38ac1fb
+SHA512 (beamer.doc.r63321.tar.xz) = f2e35c19325eb9599c42c18828c9dce8eed4931390ddb7af6ca863a711d611ab0cab58b09f7d711fbcd27a5925604d756ec92b5a2b079b3ee445b4adea292d34
+Size (beamer.doc.r63321.tar.xz) = 2954024 bytes
