@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4226 2022/09/01 11:22:38 markd Exp $
+$NetBSD: CHANGES-2022,v 1.4227 2022/09/01 11:35:41 markd Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6269,3 +6269,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated print/tex-xecjk-doc to 3.9.1 [markd 2022-09-01]
 	Updated print/tex-xpinyin to 3.1 [markd 2022-09-01]
 	Updated print/tex-xpinyin-doc to 3.1 [markd 2022-09-01]
+	Added devel/py-canvasapi version 2.2.0 [markd 2022-09-01]
