@@ -1,20 +1,24 @@
-$NetBSD: patch-bin_epstopdf,v 1.2 2013/12/03 19:55:56 minskim Exp $
+$NetBSD: patch-bin_epstopdf,v 1.3 2022/09/01 10:30:55 markd Exp $
 
 Fix paths to commands: gs and kpathsea.
 
---- bin/epstopdf.orig	2010-05-19 23:29:01.000000000 +0000
+--- bin/epstopdf.orig	2022-08-30 19:53:18.000000000 +0000
 +++ bin/epstopdf
-@@ -165,5 +164,5 @@ my $on_windows_or_cygwin = $on_windows |
+@@ -205,7 +205,7 @@ my $on_windows = $^O =~ /^(MSWin|msys$)/
+ my $on_windows_or_cygwin = $on_windows || $^O eq "cygwin";
  
  ### ghostscript command name
--my $GS = $on_windows ? "gswin32c" : "gs";
+-my $GS = "gs";
 +my $GS = "@GHOSTSCRIPT@";
- 
- ### restricted mode
-@@ -257,5 +256,5 @@ debug "Restricted mode activated" if $re
+ if ($on_windows) {
+   if ($ENV{"PROCESSOR_ARCHITECTURE"} eq "AMD64"
+       || $ENV{"PROCESSOR_ARCHITEW6432"} eq "AMD64") {
+@@ -482,7 +482,7 @@ sub warnerr    { $restricted ? error(@_)
+ debug "Restricted mode activated" if $restricted;
  
  ### safer external commands for Windows in restricted mode
 -my $kpsewhich = 'kpsewhich';
 +my $kpsewhich = '@KPSEWHICH@';
  if ($restricted && $on_windows) {
    use File::Basename;
+   my $mydirname = dirname $0;
