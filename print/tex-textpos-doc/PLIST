@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2021/02/20 10:57:30 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/09/01 05:27:20 markd Exp $
 share/texmf-dist/doc/latex/textpos/LICENCE
 share/texmf-dist/doc/latex/textpos/README
-share/texmf-dist/doc/latex/textpos/VERSION-1.10
+share/texmf-dist/doc/latex/textpos/VERSION-
 share/texmf-dist/doc/latex/textpos/examples/README.examples
 share/texmf-dist/doc/latex/textpos/examples/t1.tex
 share/texmf-dist/doc/latex/textpos/examples/t10.tex
