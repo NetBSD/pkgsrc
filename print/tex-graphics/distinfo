@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2022/04/15 03:32:42 markd Exp $
+$NetBSD: distinfo,v 1.21 2022/09/01 04:02:28 markd Exp $
 
-BLAKE2s (graphics.r61315.tar.xz) = 5c29431f6d60c43e34511069c0362b813a361992ad0ea3f6d75f2fc097f5325e
-SHA512 (graphics.r61315.tar.xz) = 692b47e11cb0f25c3383d64ca8a71bc479da6157002b870e131250caa0539dc48d52409f932ab41cc75c1a9f463524ea3be4f73458bb0fae24059bc9ce828e20
-Size (graphics.r61315.tar.xz) = 15180 bytes
+BLAKE2s (graphics.r63514.tar.xz) = e063b2322fe40900cbe02025b4b088d9664ef45a6aa96326df6aae9b45c72b09
+SHA512 (graphics.r63514.tar.xz) = 2160674b5ad0ffdd26611d3d5afe4ad9772591a63dcdc33d3243d1854d01afed0b267cf166d22c895aa772deae885eff73c0c613d4a7c474e1cbc7057859f86c
+Size (graphics.r63514.tar.xz) = 15936 bytes
