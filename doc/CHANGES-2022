@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4243 2022/09/01 15:30:05 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4244 2022/09/01 16:03:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6286,3 +6286,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/ruby-jekyll to 4.2.2 [taca 2022-09-01]
 	Updated www/ruby-jekyll-seo-tag to 2.8.0 [taca 2022-09-01]
 	Updated databases/ruby-mysql to 3.0.1 [taca 2022-09-01]
+	Updated devel/ruby-parser to 3.19.1 [taca 2022-09-01]
