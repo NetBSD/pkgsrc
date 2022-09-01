@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 11:13:48 nia Exp $
+$NetBSD: distinfo,v 1.8 2022/09/01 10:46:47 markd Exp $
 
-BLAKE2s (tex-kotex-utf-38558/kotex-utf.tar.xz) = 7e3425b47506cef4501a9ac42ec4dce58ba260b66109c022c757e8bc9dc89a40
-SHA512 (tex-kotex-utf-38558/kotex-utf.tar.xz) = 149886906d7cd37e6753218e72be7d1db8fc91a2c186d05b1ea44892d404cc4387d58d0d9ae168a7b42d5e579b1f68b0c2cb483adbfb9e24d029d9057ff0f608
-Size (tex-kotex-utf-38558/kotex-utf.tar.xz) = 20500 bytes
+BLAKE2s (kotex-utf.r63690.tar.xz) = 1902c794256cf4360343bf9df13b4e2f076abfd877615e45a851b4185324b041
+SHA512 (kotex-utf.r63690.tar.xz) = be75556f3857a405d235f920866f8089f105a57f9accff07a541fe110bb8124e049ebe75368ce3282bcd329cc6a02eed0ccffdfad49020986d61221839cae4b5
+Size (kotex-utf.r63690.tar.xz) = 21076 bytes
