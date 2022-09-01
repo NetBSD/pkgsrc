@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4240 2022/09/01 14:51:45 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4241 2022/09/01 14:53:39 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6283,3 +6283,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/ruby-classifier-reborn to 2.3.0 [taca 2022-09-01]
 	Updated www/ruby-jekyll-feed to 0.16.0 [taca 2022-09-01]
 	Updated www/ruby-jekyll-sass-converter to 2.2.0 [taca 2022-09-01]
+	Updated www/ruby-jekyll to 4.2.2 [taca 2022-09-01]
