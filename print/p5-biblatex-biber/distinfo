@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2022/04/15 00:53:08 markd Exp $
+$NetBSD: distinfo,v 1.14 2022/09/01 03:28:26 markd Exp $
 
-BLAKE2s (biber-2.17.tar.gz) = 3c4bc4b1c6fa78dcac6127f644f000773744a98baa3b08936e090728eab83bb5
-SHA512 (biber-2.17.tar.gz) = 5dc076b6a2e42986e54dbadbcdab5ff9c01235e301f8bd4e9b52b0b823f1939ebe881810fb138de9b6c2f06bb1e894e934769a6946da42ce1cba96415de06430
-Size (biber-2.17.tar.gz) = 1607708 bytes
+BLAKE2s (biber-2.18.tar.gz) = 5d6dca049bb9d4caa3a44cda8ddb16915518c659d0270bb3e3b7b5abe18c7663
+SHA512 (biber-2.18.tar.gz) = 319d8918520eb3e674d51b4ae8c17ac37d91e783c202914f6b0b7d2e3cc36bd3376049eef2f2953503311fbcd3b4a257cde24051e120f7053504da39af0817e0
+Size (biber-2.18.tar.gz) = 1619235 bytes
