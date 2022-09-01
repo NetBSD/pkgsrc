@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2022/04/03 05:23:26 taca Exp $
+# $NetBSD: Makefile,v 1.11 2022/09/01 16:18:25 taca Exp $
 
 DISTNAME=	redmine-${RM_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/redmine/redmine${RM_VER}/}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://www.redmine.org/releases/
 
@@ -30,7 +31,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-request_store>=1.4.1:../../www/ruby-request_store
 # ruby-mail depends it.
 #DEPENDS+=	${RUBY_PKGPREFIX}-mini_mime>=1.0.1<1.1:../../mail/ruby-mini_mime
 DEPENDS+=	${RUBY_PKGPREFIX}-actionpack${RUBY_RAILS}-xml_parser>=2.0:../../textproc/ruby-actionpack-xml_parser
-DEPENDS+=	${RUBY_PKGPREFIX}-roadie-rails${RUBY_RAILS}>=2.1.0:../../mail/ruby-roadie-rails
+DEPENDS+=	${RUBY_PKGPREFIX}-roadie-rails2_${RUBY_RAILS}>=2.1.0:../../mail/ruby-roadie-rails2
 DEPENDS+=	${RUBY_PKGPREFIX}-mail>=2.7.1<2.8:../../mail/ruby-mail
 DEPENDS+=	${RUBY_PKGPREFIX}-csv>=3.1.1:../../textproc/ruby-csv
 DEPENDS+=	${RUBY_PKGPREFIX}-nokogiri>=1.11.0:../../textproc/ruby-nokogiri
