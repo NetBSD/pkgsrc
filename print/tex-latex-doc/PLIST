@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2022/04/15 03:45:24 markd Exp $
+@comment $NetBSD: PLIST,v 1.11 2022/09/01 04:28:24 markd Exp $
 share/texmf-dist/doc/latex/base/README.md
 share/texmf-dist/doc/latex/base/alltt.pdf
 share/texmf-dist/doc/latex/base/bugs.txt
@@ -12,6 +12,8 @@ share/texmf-dist/doc/latex/base/clsguide.tex
 share/texmf-dist/doc/latex/base/cmfonts.pdf
 share/texmf-dist/doc/latex/base/cyrguide.pdf
 share/texmf-dist/doc/latex/base/cyrguide.tex
+share/texmf-dist/doc/latex/base/doc-code.pdf
+share/texmf-dist/doc/latex/base/doc-code.tex
 share/texmf-dist/doc/latex/base/doc.pdf
 share/texmf-dist/doc/latex/base/docstrip.pdf
 share/texmf-dist/doc/latex/base/encguide.pdf
@@ -25,8 +27,6 @@ share/texmf-dist/doc/latex/base/ifthen.pdf
 share/texmf-dist/doc/latex/base/inputenc.pdf
 share/texmf-dist/doc/latex/base/lamport-manual.err
 share/texmf-dist/doc/latex/base/lamport-manual.pdf
-share/texmf-dist/doc/latex/base/latexchanges.pdf
-share/texmf-dist/doc/latex/base/latexchanges.tex
 share/texmf-dist/doc/latex/base/latexrelease.pdf
 share/texmf-dist/doc/latex/base/latexsym.pdf
 share/texmf-dist/doc/latex/base/lb2.err
@@ -53,6 +53,10 @@ share/texmf-dist/doc/latex/base/lthooks-code.tex
 share/texmf-dist/doc/latex/base/lthooks-doc.pdf
 share/texmf-dist/doc/latex/base/lthooks-doc.tex
 share/texmf-dist/doc/latex/base/ltluatex.pdf
+share/texmf-dist/doc/latex/base/ltmarks-code.pdf
+share/texmf-dist/doc/latex/base/ltmarks-code.tex
+share/texmf-dist/doc/latex/base/ltmarks-doc.pdf
+share/texmf-dist/doc/latex/base/ltmarks-doc.tex
 share/texmf-dist/doc/latex/base/ltnews.pdf
 share/texmf-dist/doc/latex/base/ltnews.tex
 share/texmf-dist/doc/latex/base/ltnews01.pdf
@@ -123,6 +127,8 @@ share/texmf-dist/doc/latex/base/ltnews33.pdf
 share/texmf-dist/doc/latex/base/ltnews33.tex
 share/texmf-dist/doc/latex/base/ltnews34.pdf
 share/texmf-dist/doc/latex/base/ltnews34.tex
+share/texmf-dist/doc/latex/base/ltnews35.pdf
+share/texmf-dist/doc/latex/base/ltnews35.tex
 share/texmf-dist/doc/latex/base/ltpara-code.pdf
 share/texmf-dist/doc/latex/base/ltpara-code.tex
 share/texmf-dist/doc/latex/base/ltpara-doc.pdf
@@ -145,8 +151,6 @@ share/texmf-dist/doc/latex/base/slifonts.pdf
 share/texmf-dist/doc/latex/base/source2e.pdf
 share/texmf-dist/doc/latex/base/source2e.tex
 share/texmf-dist/doc/latex/base/syntonly.pdf
-share/texmf-dist/doc/latex/base/tex2.txt
-share/texmf-dist/doc/latex/base/texpert.txt
 share/texmf-dist/doc/latex/base/tlc2.err
 share/texmf-dist/doc/latex/base/tlc2.pdf
 share/texmf-dist/doc/latex/base/tulm.pdf
