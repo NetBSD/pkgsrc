@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2022/04/16 00:40:49 markd Exp $
+$NetBSD: distinfo,v 1.13 2022/09/01 03:53:20 markd Exp $
 
-BLAKE2s (fancyvrb.doc.r63012.tar.xz) = 5bc122d82c371bf7f1cbbfdea4768450c877ff74a7de166e169149dd61cf1832
-SHA512 (fancyvrb.doc.r63012.tar.xz) = e03a89f707b6a7f87c6a4e1abb7096c1cf30f8f2161088861dbc9e8303401d678421afe466c3ea8f8de7d6f3c4b6a50811f13168656aacbf6ca31d60f2c1ce88
-Size (fancyvrb.doc.r63012.tar.xz) = 149556 bytes
+BLAKE2s (fancyvrb.doc.r63496.tar.xz) = d2ca6409597283f1e8c79533b09575f9478b6d5cdfb4a7ca3723aea26dd83438
+SHA512 (fancyvrb.doc.r63496.tar.xz) = e1710447f7187ffb02e4b1d19153d9b8de8df5f26b2e8f610c6e2e73a9d04d7b5e6e26f608b33df021048fbeaf1b20a49f88c9a2d2673e875ae40c90315d2f53
+Size (fancyvrb.doc.r63496.tar.xz) = 151780 bytes
