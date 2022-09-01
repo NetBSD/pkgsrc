@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:12:50 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/09/01 10:13:59 markd Exp $
 
-BLAKE2s (chess-problem-diagrams.doc.r53302.tar.xz) = 697f38178e14380fdccdc83cb64801c75f68d5dbd1a92e9351acb5de2ac29639
-SHA512 (chess-problem-diagrams.doc.r53302.tar.xz) = a329c412da558e092d52bbe429cfe2dd815a7e5709022d2ace45ca9f42588a7b563b16259222214680e955c77adc38d044a4f19639ecbfd8d85cb97c6e82b8a0
-Size (chess-problem-diagrams.doc.r53302.tar.xz) = 299316 bytes
+BLAKE2s (chess-problem-diagrams.doc.r63708.tar.xz) = 7cae1dbc9679a2233a98f27447c1172b623458e1cb859eab3e18f6b46bcb66be
+SHA512 (chess-problem-diagrams.doc.r63708.tar.xz) = 47c2e1fa3790f7229a2402b5e20edded8c2c7908d48e16a228c55bd5b23e94d77a5e1cc9d00790238a6fec4fdfcce1915251a08b6aa487ff63e18fadea6c62f3
+Size (chess-problem-diagrams.doc.r63708.tar.xz) = 305800 bytes
