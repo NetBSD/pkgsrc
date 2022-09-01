@@ -1,11 +1,12 @@
-@comment $NetBSD: PLIST,v 1.2 2015/04/25 05:20:08 markd Exp $
-share/texmf-dist/doc/latex/ucs/FAQ
+@comment $NetBSD: PLIST,v 1.3 2022/09/01 05:47:16 markd Exp $
+share/texmf-dist/doc/latex/ucs/FAQ.txt
 share/texmf-dist/doc/latex/ucs/GNUmakefile
-share/texmf-dist/doc/latex/ucs/INSTALL
-share/texmf-dist/doc/latex/ucs/LICENSE
-share/texmf-dist/doc/latex/ucs/README
+share/texmf-dist/doc/latex/ucs/INSTALL.txt
+share/texmf-dist/doc/latex/ucs/LICENSE.txt
 share/texmf-dist/doc/latex/ucs/README.TEXLIVE
-share/texmf-dist/doc/latex/ucs/VERSION
+share/texmf-dist/doc/latex/ucs/README.txt
+share/texmf-dist/doc/latex/ucs/VERSION.txt
+share/texmf-dist/doc/latex/ucs/cenccmn.tex
 share/texmf-dist/doc/latex/ucs/config/ascii.ucf
 share/texmf-dist/doc/latex/ucs/config/boxdraw.ucf
 share/texmf-dist/doc/latex/ucs/config/braille.ucf
@@ -45,10 +46,9 @@ share/texmf-dist/doc/latex/ucs/discovermacro.pl
 share/texmf-dist/doc/latex/ucs/latexout.pl
 share/texmf-dist/doc/latex/ucs/ltxmacrs.txt
 share/texmf-dist/doc/latex/ucs/makeunidef.pl
-share/texmf-dist/doc/latex/ucs/ucs.dtx
-share/texmf-dist/doc/latex/ucs/ucs.ins
 share/texmf-dist/doc/latex/ucs/ucs.pdf
-share/texmf-dist/doc/latex/ucs/unsupported/README
+share/texmf-dist/doc/latex/ucs/unsupported/README.txt
 share/texmf-dist/doc/latex/ucs/unsupported/sym-to-fontenc.txt
 share/texmf-dist/doc/latex/ucs/unsupported/tables.inc
 share/texmf-dist/doc/latex/ucs/unsupported/u2ps
+share/texmf-dist/doc/latex/ucs/utils/UnicodeT.sfd
