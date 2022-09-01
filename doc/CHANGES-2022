@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4256 2022/09/01 20:23:32 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4257 2022/09/01 20:50:41 nat Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6298,3 +6298,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/x3270 to 4.2ga4 [rhialto 2022-09-01]
 	Updated devel/py-jupyter_client to 7.3.4nb1 [wiz 2022-09-01]
 	Updated net/freeradius-python to 3.0.25nb2 [wiz 2022-09-01]
+	Updated devel/diffbreaker to 0.5 [nat 2022-09-01]
