@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/10 21:21:20 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/09/01 05:49:54 markd Exp $
 share/texmf-dist/doc/latex/xcolor/ChangeLog
-share/texmf-dist/doc/latex/xcolor/README
+share/texmf-dist/doc/latex/xcolor/README.md
 share/texmf-dist/doc/latex/xcolor/xcolor.lox
 share/texmf-dist/doc/latex/xcolor/xcolor.pdf
 share/texmf-dist/doc/latex/xcolor/xcolor1.tex
