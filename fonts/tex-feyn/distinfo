@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:27:57 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/09/01 10:33:24 markd Exp $
 
-BLAKE2s (tex-feyn-45679/feyn.tar.xz) = 4da330456533dbe9ccf3f62f8f3be9203c27a8db098568195a8f74a46cd7421c
-SHA512 (tex-feyn-45679/feyn.tar.xz) = 73027c19e958ceab78b1205b3bed875c1b0ddc4bbe1fa1740a305e56bf2129e73eb7e0394db2245689d8449a38034b95e3ed9e560f9c8a068c46e732f50bf17b
-Size (tex-feyn-45679/feyn.tar.xz) = 13484 bytes
+BLAKE2s (feyn.r63945.tar.xz) = d699da2f4914c916084bc49d8a7d9d9d99e8045b88c4ed4c95eacda1e6b24e77
+SHA512 (feyn.r63945.tar.xz) = 30e3ca5e633d040fe2eaa88463a8c9fa6004b86c4ae264af9b8a9a3bf55f71f7e1eb21e656f2fa194ebc751648f411a094fe40fc6a2cade1fc31aa586da1317c
+Size (feyn.r63945.tar.xz) = 13508 bytes
