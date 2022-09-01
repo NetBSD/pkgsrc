@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1638 2022/09/01 11:40:57 markd Exp $
+# $NetBSD: Makefile,v 1.1639 2022/09/01 11:51:56 markd Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -786,6 +786,7 @@ SUBDIR+=	py-hyperlink
 SUBDIR+=	py-idna
 SUBDIR+=	py-ipywidgets
 SUBDIR+=	py-jonpy
+SUBDIR+=	py-jwcrypto
 SUBDIR+=	py-klein
 SUBDIR+=	py-landslide
 SUBDIR+=	py-livereload
