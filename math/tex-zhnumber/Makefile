@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2022/04/16 01:20:10 markd Exp $
+# $NetBSD: Makefile,v 1.2 2022/09/01 05:54:10 markd Exp $
 
 DISTNAME=	zhnumber
-PKGNAME=	tex-${DISTNAME}-2.8
-TEXLIVE_REV=	54960
+PKGNAME=	tex-${DISTNAME}-3.0
+TEXLIVE_REV=	63898
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/zhnumber
