@@ -1,9 +1,9 @@
-$NetBSD: patch-Makethird,v 1.13 2021/10/23 15:22:07 leot Exp $
+$NetBSD: patch-Makethird,v 1.14 2022/09/01 13:56:53 nia Exp $
 
 - Avoid to need third party lcms2
 - Add mujs building support with libtool
 
---- Makethird.orig	2021-10-05 10:44:43.000000000 +0000
+--- Makethird.orig	2022-06-14 12:19:22.000000000 +0000
 +++ Makethird
 @@ -120,12 +120,6 @@ endif
  ifeq ($(USE_SYSTEM_LCMS2),yes)
@@ -18,15 +18,6 @@ $NetBSD: patch-Makethird,v 1.13 2021/10/23 15:22:07 leot Exp $
  endif
  
  # --- MuJS ---
-@@ -137,7 +131,7 @@ else
-   THIRD_CFLAGS += $(MUJS_CFLAGS)
-   THIRD_LIBS += $(MUJS_LIBS)
-   THIRD_SRC += $(MUJS_SRC)
--$(OUT)/thirdparty/mujs/%.o: thirdparty/mujs/%.c
-+$(OUT)/thirdparty/mujs/%.lo: thirdparty/mujs/%.c
- 	$(CC_CMD) $(LIB_CFLAGS) $(MUJS_CFLAGS) $(MUJS_BUILD_CFLAGS)
- endif
- 
 @@ -241,7 +235,7 @@ endif
  THIRD_CFLAGS += $(EXTRACT_CFLAGS)
  THIRD_LIBS += $(EXTRACT_LIBS)
