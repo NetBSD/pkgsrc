@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.148 2022/08/30 19:22:17 he Exp $
+$NetBSD: distinfo,v 1.149 2022/09/01 09:59:46 jperkin Exp $
 
 BLAKE2s (rust-1.61.0-aarch64-apple-darwin.tar.gz) = 302f636b2e73cdd5233e520bdfec0a2071d7c0c3c299780e2de75e727024fb38
 SHA512 (rust-1.61.0-aarch64-apple-darwin.tar.gz) = 248c5d1c3b440aa1ebb8d8d519651259566407f3efd0c33724d274a4f85a371c1b3ead79be24bf38cbca8b57740cb017b26634a4c34c1f3c605d28a8d181a8af
@@ -116,7 +116,7 @@ SHA1 (patch-library_unwind_build.rs) = 7ece6de566ead1d9aae490ba91d81ac2d0bc50a8
 SHA1 (patch-src_bootstrap_bootstrap.py) = f836e7fc935680eeb725e2d07ed5905b8ffd1d1f
 SHA1 (patch-src_bootstrap_builder.rs) = e17ec4c4fbcac0824f0e45fb60f35c2db842bc6c
 SHA1 (patch-src_bootstrap_compile.rs) = 858e3b74fc9132d228e07f56ffafacb8e3ba76b8
-SHA1 (patch-src_bootstrap_lib.rs) = a033c8ae319a6e6e0f6ea5f98b952878a58f887e
+SHA1 (patch-src_bootstrap_lib.rs) = d0f4e9fe2ba34ad4fed678d7b4c90e4542faa199
 SHA1 (patch-src_llvm-project_llvm_CMakeLists.txt) = fb1b9ea0c81bf96abb5a88fcb523631c42cd8f14
 SHA1 (patch-src_llvm-project_llvm_cmake_modules_AddLLVM.cmake) = fef9f055d2b918c4480fbf8ee68e259197490a0f
 SHA1 (patch-src_llvm-project_llvm_include_llvm-c_DataTypes.h) = cb011fc19957883c01725797f7c85ed1b20f96f1
