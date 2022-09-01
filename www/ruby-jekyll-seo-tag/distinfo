@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:31:00 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/09/01 14:55:18 taca Exp $
 
-BLAKE2s (jekyll-seo-tag-2.7.1.gem) = 700f832b7f0f79e408fd1bf7e9f03e975db4f9b07ee41859c453eca782ae4b68
-SHA512 (jekyll-seo-tag-2.7.1.gem) = a8d1128984b25992872a15970ed7bae7b7f5ea5c54a8cc4d099184ac178acb3e828408b90fac4c0affa0dc2ab576e0757ca5590b992166121cf169c82ee3a14a
-Size (jekyll-seo-tag-2.7.1.gem) = 20480 bytes
+BLAKE2s (jekyll-seo-tag-2.8.0.gem) = 4e43db575e7738ee1aa16b403a8e7417bb5bd4eb988e08165ea4ed62f7a0ae1b
+SHA512 (jekyll-seo-tag-2.8.0.gem) = cf8de6ce7eff52ac6d282ebc0618c4ce817f35ba9d7a0d18829ce9ec9c5ff105b99656ee9931e876207019b850a43b80f703a98ad65ebbd57f5bc5234ee548d4
+Size (jekyll-seo-tag-2.8.0.gem) = 22016 bytes
