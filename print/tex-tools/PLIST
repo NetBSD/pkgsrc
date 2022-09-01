@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2022/04/15 04:53:13 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2022/09/01 05:43:30 markd Exp $
 share/texmf-dist/tex/latex/tools/.tex
 share/texmf-dist/tex/latex/tools/afterpage.sty
 share/texmf-dist/tex/latex/tools/array-2016-10-06.sty
@@ -20,12 +20,14 @@ share/texmf-dist/tex/latex/tools/layout.sty
 share/texmf-dist/tex/latex/tools/longtable-2020-01-07.sty
 share/texmf-dist/tex/latex/tools/longtable.sty
 share/texmf-dist/tex/latex/tools/multicol-2017-04-11.sty
+share/texmf-dist/tex/latex/tools/multicol-2019-10-01.sty
 share/texmf-dist/tex/latex/tools/multicol.sty
 share/texmf-dist/tex/latex/tools/q.tex
 share/texmf-dist/tex/latex/tools/r.tex
 share/texmf-dist/tex/latex/tools/rawfonts.sty
 share/texmf-dist/tex/latex/tools/s.tex
 share/texmf-dist/tex/latex/tools/shellesc.sty
+share/texmf-dist/tex/latex/tools/showkeys-2014-10-28.sty
 share/texmf-dist/tex/latex/tools/showkeys.sty
 share/texmf-dist/tex/latex/tools/somedefs.sty
 share/texmf-dist/tex/latex/tools/tabularx.sty
