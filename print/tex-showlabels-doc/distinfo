@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2022/04/09 03:04:35 markd Exp $
+$NetBSD: distinfo,v 1.8 2022/09/01 05:12:36 markd Exp $
 
-BLAKE2s (showlabels.doc.r60877.tar.xz) = 4270dc5f30c149f89d2785d65909fc4d609e37da26cb7e1110b1f83c94cfc7ac
-SHA512 (showlabels.doc.r60877.tar.xz) = 154da3583e03b13794e366926bf4430961e8159558bddd86f8d080f53f12bf3936c4caaff8f4aef131e7d84685145ff5fc8d644134f5c982367cc106ff505066
-Size (showlabels.doc.r60877.tar.xz) = 231580 bytes
+BLAKE2s (showlabels.doc.r63940.tar.xz) = 6f95addb6b2c503fda584dd4b640e7d0aa25a8d15080572fcca7720293df90ea
+SHA512 (showlabels.doc.r63940.tar.xz) = 0e624e36f96b8f0d06abc41c301753e3d71671daac4ab01a3914cbd45a5b07f4574011f93c5ce62129fbd77021712fb39364c240eb9b394b204597033ab13df1
+Size (showlabels.doc.r63940.tar.xz) = 232956 bytes
