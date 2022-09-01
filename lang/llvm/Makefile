@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2022/09/01 01:32:29 gutteridge Exp $
+# $NetBSD: Makefile,v 1.81 2022/09/01 01:36:42 gutteridge Exp $
 #
 # When updating this, please also update:
 # devel/include-what-you-use
@@ -123,7 +123,6 @@ CXXFLAGS+=	-mlongcall
 # the above-mentioned relocation truncation issue in newer GCC
 CFLAGS+=	-mno-pltseq
 CXXFLAGS+=	-mno-pltseq
-.    endif
 .  else # Not NetBSD
 # Let's just insist on newer gcc -- untested.
 CFLAGS+=	-mno-pltseq
