@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4250 2022/09/01 16:27:36 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4251 2022/09/01 16:30:10 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6292,3 +6292,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/ruby-redmine41 to 4.1.7nb1 [taca 2022-09-01]
 	Updated devel/ruby-redmine42 to 4.2.7nb1 [taca 2022-09-01]
 	Updated mail/ruby-roadie to 5.0.1 [taca 2022-09-01]
+	Updated mail/ruby-roadie-rails to 3.0.0 [taca 2022-09-01]
