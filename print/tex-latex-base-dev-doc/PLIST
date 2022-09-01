@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/04/15 03:48:27 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/09/01 10:52:52 markd Exp $
 share/texmf-dist/doc/latex-dev/base/README.md
 share/texmf-dist/doc/latex-dev/base/alltt.pdf
 share/texmf-dist/doc/latex-dev/base/bugs.txt
@@ -53,6 +53,10 @@ share/texmf-dist/doc/latex-dev/base/lthooks-code.tex
 share/texmf-dist/doc/latex-dev/base/lthooks-doc.pdf
 share/texmf-dist/doc/latex-dev/base/lthooks-doc.tex
 share/texmf-dist/doc/latex-dev/base/ltluatex.pdf
+share/texmf-dist/doc/latex-dev/base/ltmarks-code.pdf
+share/texmf-dist/doc/latex-dev/base/ltmarks-code.tex
+share/texmf-dist/doc/latex-dev/base/ltmarks-doc.pdf
+share/texmf-dist/doc/latex-dev/base/ltmarks-doc.tex
 share/texmf-dist/doc/latex-dev/base/ltnews.pdf
 share/texmf-dist/doc/latex-dev/base/ltnews.tex
 share/texmf-dist/doc/latex-dev/base/ltnews01.pdf
@@ -125,6 +129,8 @@ share/texmf-dist/doc/latex-dev/base/ltnews34.pdf
 share/texmf-dist/doc/latex-dev/base/ltnews34.tex
 share/texmf-dist/doc/latex-dev/base/ltnews35.pdf
 share/texmf-dist/doc/latex-dev/base/ltnews35.tex
+share/texmf-dist/doc/latex-dev/base/ltnews36.pdf
+share/texmf-dist/doc/latex-dev/base/ltnews36.tex
 share/texmf-dist/doc/latex-dev/base/ltpara-code.pdf
 share/texmf-dist/doc/latex-dev/base/ltpara-code.tex
 share/texmf-dist/doc/latex-dev/base/ltpara-doc.pdf
