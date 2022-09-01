@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2022/04/15 00:26:20 markd Exp $
+@comment $NetBSD: PLIST,v 1.13 2022/09/01 03:20:02 markd Exp $
 share/texmf-dist/makeindex/babel/bbglo.ist
 share/texmf-dist/makeindex/babel/bbind.ist
 share/texmf-dist/tex/generic/babel/UKenglish.sty
@@ -9,6 +9,11 @@ share/texmf-dist/tex/generic/babel/american.sty
 share/texmf-dist/tex/generic/babel/austrian.sty
 share/texmf-dist/tex/generic/babel/babel-bidi-basic-r.lua
 share/texmf-dist/tex/generic/babel/babel-bidi-basic.lua
+share/texmf-dist/tex/generic/babel/babel-ca-buddhist.tex
+share/texmf-dist/tex/generic/babel/babel-ca-coptic.tex
+share/texmf-dist/tex/generic/babel/babel-ca-hebrew.tex
+share/texmf-dist/tex/generic/babel/babel-ca-islamic.tex
+share/texmf-dist/tex/generic/babel/babel-ca-persian.tex
 share/texmf-dist/tex/generic/babel/babel-data-bidi.lua
 share/texmf-dist/tex/generic/babel/babel-data-cjk.lua
 share/texmf-dist/tex/generic/babel/babel-transforms.lua
@@ -51,15 +56,36 @@ share/texmf-dist/tex/generic/babel/locale/ak/babel-akan.tex
 share/texmf-dist/tex/generic/babel/locale/am/babel-am.ini
 share/texmf-dist/tex/generic/babel/locale/am/babel-amharic.tex
 share/texmf-dist/tex/generic/babel/locale/ar/babel-ar-DZ.ini
+share/texmf-dist/tex/generic/babel/locale/ar/babel-ar-EG.ini
+share/texmf-dist/tex/generic/babel/locale/ar/babel-ar-IQ.ini
+share/texmf-dist/tex/generic/babel/locale/ar/babel-ar-JO.ini
+share/texmf-dist/tex/generic/babel/locale/ar/babel-ar-LB.ini
 share/texmf-dist/tex/generic/babel/locale/ar/babel-ar-MA.ini
+share/texmf-dist/tex/generic/babel/locale/ar/babel-ar-PS.ini
+share/texmf-dist/tex/generic/babel/locale/ar/babel-ar-SA.ini
 share/texmf-dist/tex/generic/babel/locale/ar/babel-ar-SY.ini
+share/texmf-dist/tex/generic/babel/locale/ar/babel-ar-TN.ini
 share/texmf-dist/tex/generic/babel/locale/ar/babel-ar.ini
 share/texmf-dist/tex/generic/babel/locale/ar/babel-arabic-algeria.tex
 share/texmf-dist/tex/generic/babel/locale/ar/babel-arabic-dz.tex
+share/texmf-dist/tex/generic/babel/locale/ar/babel-arabic-eg.tex
+share/texmf-dist/tex/generic/babel/locale/ar/babel-arabic-egypt.tex
+share/texmf-dist/tex/generic/babel/locale/ar/babel-arabic-iq.tex
+share/texmf-dist/tex/generic/babel/locale/ar/babel-arabic-iraq.tex
+share/texmf-dist/tex/generic/babel/locale/ar/babel-arabic-jo.tex
+share/texmf-dist/tex/generic/babel/locale/ar/babel-arabic-jordan.tex
+share/texmf-dist/tex/generic/babel/locale/ar/babel-arabic-lb.tex
+share/texmf-dist/tex/generic/babel/locale/ar/babel-arabic-lebanon.tex
 share/texmf-dist/tex/generic/babel/locale/ar/babel-arabic-ma.tex
 share/texmf-dist/tex/generic/babel/locale/ar/babel-arabic-morocco.tex
+share/texmf-dist/tex/generic/babel/locale/ar/babel-arabic-palestinianterritories.tex
+share/texmf-dist/tex/generic/babel/locale/ar/babel-arabic-ps.tex
+share/texmf-dist/tex/generic/babel/locale/ar/babel-arabic-sa.tex
+share/texmf-dist/tex/generic/babel/locale/ar/babel-arabic-saudiarabia.tex
 share/texmf-dist/tex/generic/babel/locale/ar/babel-arabic-sy.tex
 share/texmf-dist/tex/generic/babel/locale/ar/babel-arabic-syria.tex
+share/texmf-dist/tex/generic/babel/locale/ar/babel-arabic-tn.tex
+share/texmf-dist/tex/generic/babel/locale/ar/babel-arabic-tunisia.tex
 share/texmf-dist/tex/generic/babel/locale/ar/babel-arabic.tex
 share/texmf-dist/tex/generic/babel/locale/as/babel-as.ini
 share/texmf-dist/tex/generic/babel/locale/as/babel-assamese.tex
@@ -87,6 +113,7 @@ share/texmf-dist/tex/generic/babel/locale/bg/babel-bg.ini
 share/texmf-dist/tex/generic/babel/locale/bg/babel-bulgarian.tex
 share/texmf-dist/tex/generic/babel/locale/bm/babel-bambara.tex
 share/texmf-dist/tex/generic/babel/locale/bm/babel-bm.ini
+share/texmf-dist/tex/generic/babel/locale/bn/babel-bangla.tex
 share/texmf-dist/tex/generic/babel/locale/bn/babel-bengali.tex
 share/texmf-dist/tex/generic/babel/locale/bn/babel-bn.ini
 share/texmf-dist/tex/generic/babel/locale/bo/babel-bo.ini
@@ -158,7 +185,7 @@ share/texmf-dist/tex/generic/babel/locale/de/babel-german.tex
 share/texmf-dist/tex/generic/babel/locale/de/babel-naustrian.tex
 share/texmf-dist/tex/generic/babel/locale/de/babel-ngerman.tex
 share/texmf-dist/tex/generic/babel/locale/de/babel-nswissgerman.tex
-share/texmf-dist/tex/generic/babel/locale/de/babel-swissgerman.tex
+share/texmf-dist/tex/generic/babel/locale/de/babel-swisshighgerman.tex
 share/texmf-dist/tex/generic/babel/locale/dje/babel-dje.ini
 share/texmf-dist/tex/generic/babel/locale/dje/babel-zarma.tex
 share/texmf-dist/tex/generic/babel/locale/dsb/babel-dsb.ini
@@ -180,9 +207,13 @@ share/texmf-dist/tex/generic/babel/locale/el/babel-greek.tex
 share/texmf-dist/tex/generic/babel/locale/el/babel-monotonicgreek.tex
 share/texmf-dist/tex/generic/babel/locale/el/babel-polytonicgreek.tex
 share/texmf-dist/tex/generic/babel/locale/en/babel-american.tex
+share/texmf-dist/tex/generic/babel/locale/en/babel-americanenglish.tex
 share/texmf-dist/tex/generic/babel/locale/en/babel-australian.tex
+share/texmf-dist/tex/generic/babel/locale/en/babel-australianenglish.tex
 share/texmf-dist/tex/generic/babel/locale/en/babel-british.tex
+share/texmf-dist/tex/generic/babel/locale/en/babel-britishenglish.tex
 share/texmf-dist/tex/generic/babel/locale/en/babel-canadian.tex
+share/texmf-dist/tex/generic/babel/locale/en/babel-canadianenglish.tex
 share/texmf-dist/tex/generic/babel/locale/en/babel-en-AU.ini
 share/texmf-dist/tex/generic/babel/locale/en/babel-en-CA.ini
 share/texmf-dist/tex/generic/babel/locale/en/babel-en-GB.ini
@@ -208,6 +239,7 @@ share/texmf-dist/tex/generic/babel/locale/eo/babel-esperanto.tex
 share/texmf-dist/tex/generic/babel/locale/es/babel-es-MX.ini
 share/texmf-dist/tex/generic/babel/locale/es/babel-es.ini
 share/texmf-dist/tex/generic/babel/locale/es/babel-mexican.tex
+share/texmf-dist/tex/generic/babel/locale/es/babel-mexicanspanish.tex
 share/texmf-dist/tex/generic/babel/locale/es/babel-spanish-mexico.tex
 share/texmf-dist/tex/generic/babel/locale/es/babel-spanish-mx.tex
 share/texmf-dist/tex/generic/babel/locale/es/babel-spanish.tex
@@ -236,9 +268,11 @@ share/texmf-dist/tex/generic/babel/locale/fr/babel-french-be.tex
 share/texmf-dist/tex/generic/babel/locale/fr/babel-french-belgium.tex
 share/texmf-dist/tex/generic/babel/locale/fr/babel-french-ca.tex
 share/texmf-dist/tex/generic/babel/locale/fr/babel-french-canada.tex
+share/texmf-dist/tex/generic/babel/locale/fr/babel-french-canadianfrench.tex
 share/texmf-dist/tex/generic/babel/locale/fr/babel-french-ch.tex
 share/texmf-dist/tex/generic/babel/locale/fr/babel-french-lu.tex
 share/texmf-dist/tex/generic/babel/locale/fr/babel-french-luxembourg.tex
+share/texmf-dist/tex/generic/babel/locale/fr/babel-french-swissfrench.tex
 share/texmf-dist/tex/generic/babel/locale/fr/babel-french-switzerland.tex
 share/texmf-dist/tex/generic/babel/locale/fr/babel-french.tex
 share/texmf-dist/tex/generic/babel/locale/fur/babel-friulian.tex
@@ -254,6 +288,7 @@ share/texmf-dist/tex/generic/babel/locale/gl/babel-gl.ini
 share/texmf-dist/tex/generic/babel/locale/grc/babel-ancientgreek.tex
 share/texmf-dist/tex/generic/babel/locale/grc/babel-grc.ini
 share/texmf-dist/tex/generic/babel/locale/gsw/babel-gsw.ini
+share/texmf-dist/tex/generic/babel/locale/gsw/babel-swissgerman.tex
 share/texmf-dist/tex/generic/babel/locale/gu/babel-gu.ini
 share/texmf-dist/tex/generic/babel/locale/gu/babel-gujarati.tex
 share/texmf-dist/tex/generic/babel/locale/guz/babel-gusii.tex
@@ -450,6 +485,7 @@ share/texmf-dist/tex/generic/babel/locale/oc/babel-oc.ini
 share/texmf-dist/tex/generic/babel/locale/oc/babel-occitan.tex
 share/texmf-dist/tex/generic/babel/locale/om/babel-om.ini
 share/texmf-dist/tex/generic/babel/locale/om/babel-oromo.tex
+share/texmf-dist/tex/generic/babel/locale/or/babel-odia.tex
 share/texmf-dist/tex/generic/babel/locale/or/babel-or.ini
 share/texmf-dist/tex/generic/babel/locale/or/babel-oriya.tex
 share/texmf-dist/tex/generic/babel/locale/os/babel-os.ini
@@ -483,7 +519,11 @@ share/texmf-dist/tex/generic/babel/locale/rm/babel-rm.ini
 share/texmf-dist/tex/generic/babel/locale/rm/babel-romansh.tex
 share/texmf-dist/tex/generic/babel/locale/rn/babel-rn.ini
 share/texmf-dist/tex/generic/babel/locale/rn/babel-rundi.tex
+share/texmf-dist/tex/generic/babel/locale/ro/babel-moldavian.tex
+share/texmf-dist/tex/generic/babel/locale/ro/babel-ro-MD.ini
 share/texmf-dist/tex/generic/babel/locale/ro/babel-ro.ini
+share/texmf-dist/tex/generic/babel/locale/ro/babel-romanian-md.tex
+share/texmf-dist/tex/generic/babel/locale/ro/babel-romanian-moldova.tex
 share/texmf-dist/tex/generic/babel/locale/ro/babel-romanian.tex
 share/texmf-dist/tex/generic/babel/locale/rof/babel-rof.ini
 share/texmf-dist/tex/generic/babel/locale/rof/babel-rombo.tex
@@ -500,6 +540,7 @@ share/texmf-dist/tex/generic/babel/locale/sa/babel-sa-Knda.ini
 share/texmf-dist/tex/generic/babel/locale/sa/babel-sa-Mlym.ini
 share/texmf-dist/tex/generic/babel/locale/sa/babel-sa-Telu.ini
 share/texmf-dist/tex/generic/babel/locale/sa/babel-sa.ini
+share/texmf-dist/tex/generic/babel/locale/sa/babel-sanskrit-bangla.tex
 share/texmf-dist/tex/generic/babel/locale/sa/babel-sanskrit-beng.tex
 share/texmf-dist/tex/generic/babel/locale/sa/babel-sanskrit-bengali.tex
 share/texmf-dist/tex/generic/babel/locale/sa/babel-sanskrit-deva.tex
