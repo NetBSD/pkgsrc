@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4268 2022/09/02 15:34:04 ryoon Exp $
+$NetBSD: CHANGES-2022,v 1.4269 2022/09/02 15:35:18 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6314,3 +6314,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added net/ruby-net-pop version 0.1.1 [taca 2022-09-02]
 	Updated geography/gama to 2.22 [gdt 2022-09-02]
 	Updated www/firefox to 104.0.1 [ryoon 2022-09-02]
+	Updated www/firefox-l10n to 104.0.1 [ryoon 2022-09-02]
