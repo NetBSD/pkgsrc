@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.481 2022/08/13 12:56:39 ryoon Exp $
+$NetBSD: distinfo,v 1.482 2022/09/02 15:33:19 ryoon Exp $
 
-BLAKE2s (firefox-103.0.2.source.tar.xz) = c18a54d1d068918c4ab9535e9b540c798db0ff83df3064612cc46bd1e663d0f7
-SHA512 (firefox-103.0.2.source.tar.xz) = f13984bb551039c80ef731931f08a284f070142ecb479b31a4caad026a6b535e3fc7ae506b629e933ba5f5a1676f14b6b36d031d22584170492676f8727c822a
-Size (firefox-103.0.2.source.tar.xz) = 481280156 bytes
+BLAKE2s (firefox-104.0.1.source.tar.xz) = a40cc6b01c59192c2a2b6cadd21c6a825027350d14ca63498118045668755dad
+SHA512 (firefox-104.0.1.source.tar.xz) = ad80fccfde34a201fc4b596c2a0a1d959abc132946dde0865b6da624a07fd9c57381bc268c394a17f295e0e183d122b2cf5c5126e8a0bc99684affaa6212e246
+Size (firefox-104.0.1.source.tar.xz) = 485616148 bytes
 BLAKE2s (nodejs-output-95.0.tgz) = c44b37d3605524a49157002f01c29f568f04194b0e635bc312de7ffdeb9a74c9
 SHA512 (nodejs-output-95.0.tgz) = 2faf326f4e100b66f8597c365cc2eb5d0eee26aae92a7e2446891f2178041aa71ba16eae37000acacd43a657025ec11c18db73b112f5c49cc21cdb882da6d798
 Size (nodejs-output-95.0.tgz) = 200627 bytes
@@ -37,6 +37,7 @@ SHA1 (patch-third__party_js_cfworker_build.sh) = 46cdf97b99cf01080f290ae8d9a33b5
 SHA1 (patch-third__party_libwebrtc_modules_video__capture_linux_device__info__linux.cc) = 2e951d7d91934751608e99628fc144632d8a3b5c
 SHA1 (patch-third__party_libwebrtc_system__wrappers_source_cpu__features__linux.cc) = b90e22b50879f7adcc1da3a993f52c0701b720f8
 SHA1 (patch-third__party_wasm2c_wasm2c_wasm-rt-os-unix.c) = 9b8ce4b823fd06951aac59bdb4a5642f256b8e3f
+SHA1 (patch-toolkit_components_protobuf_src_google_protobuf_arenastring.cc) = 5bfd94022f7defc0e4aafb2ee82c3c77eae1fb5f
 SHA1 (patch-toolkit_components_terminator_nsTerminator.cpp) = bd7b2a0f2407c3ab95515b2f143c41c3ca6fb0c4
 SHA1 (patch-toolkit_modules_subprocess_subprocess__shared__unix.js) = 2303b753066298305ccae80d72765dbc4da5e0dc
 SHA1 (patch-toolkit_moz.configure) = 8de54693dc47b0993f220cc5a04af98925de1fb5
