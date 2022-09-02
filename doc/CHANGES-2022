@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4262 2022/09/02 11:47:48 pin Exp $
+$NetBSD: CHANGES-2022,v 1.4263 2022/09/02 11:49:49 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6307,3 +6307,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/dust to 0.8.3 [pin 2022-09-02]
 	Updated sysutils/zoxide to 0.8.3 [pin 2022-09-02]
 	Updated textproc/git-delta to 0.14.0 [pin 2022-09-02]
+	Updated audio/spotify-player to 0.9.6 [pin 2022-09-02]
