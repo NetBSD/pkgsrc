@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4258 2022/09/02 07:37:41 adam Exp $
+$NetBSD: CHANGES-2022,v 1.4259 2022/09/02 10:47:01 he Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6303,3 +6303,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/py-grpcio-testing to 1.48.1 [adam 2022-09-02]
 	Updated net/py-grpcio-tools to 1.48.1 [adam 2022-09-02]
 	Updated textproc/py-natsort to 8.2.0 [adam 2022-09-02]
+	Updated lang/rust-src to 1.62.1 [he 2022-09-02]
