@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.7 2022/08/24 05:18:15 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.8 2022/09/02 11:45:17 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-0.7.18
 CARGO_CRATE_DEPENDS+=	ansi_term-0.12.1
@@ -7,11 +7,13 @@ CARGO_CRATE_DEPENDS+=	atty-0.2.14
 CARGO_CRATE_DEPENDS+=	autocfg-1.1.0
 CARGO_CRATE_DEPENDS+=	bitflags-1.3.2
 CARGO_CRATE_DEPENDS+=	bstr-0.2.17
+CARGO_CRATE_DEPENDS+=	cc-1.0.73
 CARGO_CRATE_DEPENDS+=	cfg-if-1.0.0
 CARGO_CRATE_DEPENDS+=	clap-3.2.17
 CARGO_CRATE_DEPENDS+=	clap_complete-3.2.4
 CARGO_CRATE_DEPENDS+=	clap_lex-0.2.4
 CARGO_CRATE_DEPENDS+=	config-file-0.2.3
+CARGO_CRATE_DEPENDS+=	core-foundation-sys-0.8.3
 CARGO_CRATE_DEPENDS+=	crossbeam-channel-0.5.6
 CARGO_CRATE_DEPENDS+=	crossbeam-deque-0.8.2
 CARGO_CRATE_DEPENDS+=	crossbeam-epoch-0.9.10
@@ -33,6 +35,7 @@ CARGO_CRATE_DEPENDS+=	libc-0.2.132
 CARGO_CRATE_DEPENDS+=	lscolors-0.7.1
 CARGO_CRATE_DEPENDS+=	memchr-2.5.0
 CARGO_CRATE_DEPENDS+=	memoffset-0.6.5
+CARGO_CRATE_DEPENDS+=	ntapi-0.3.7
 CARGO_CRATE_DEPENDS+=	num_cpus-1.13.1
 CARGO_CRATE_DEPENDS+=	once_cell-1.13.1
 CARGO_CRATE_DEPENDS+=	os_str_bytes-6.3.0
@@ -55,6 +58,7 @@ CARGO_CRATE_DEPENDS+=	serde_derive-1.0.143
 CARGO_CRATE_DEPENDS+=	stfu8-0.2.5
 CARGO_CRATE_DEPENDS+=	strsim-0.10.0
 CARGO_CRATE_DEPENDS+=	syn-1.0.99
+CARGO_CRATE_DEPENDS+=	sysinfo-0.15.9
 CARGO_CRATE_DEPENDS+=	tempfile-3.3.0
 CARGO_CRATE_DEPENDS+=	termcolor-1.1.3
 CARGO_CRATE_DEPENDS+=	terminal_size-0.1.17
