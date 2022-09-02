@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2022/06/30 11:18:34 nia Exp $
+# $NetBSD: Makefile,v 1.7 2022/09/02 10:46:21 he Exp $
 
-DISTNAME=	rust-src-1.60.0
-PKGREVISION=	1
+DISTNAME=	rust-src-1.62.1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_LOCAL:=rust/}
 
@@ -9,6 +8,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.rust-lang.org/
 COMMENT=	Source for the rust std library
 LICENSE=	mit OR apache-2.0
+EXTRACT_SUFX=	.tar.xz
 
 USE_TOOLS+=	bash sh
 
