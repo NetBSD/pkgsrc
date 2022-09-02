@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2022/05/26 07:17:30 he Exp $
+# $NetBSD: Makefile,v 1.38 2022/09/02 12:57:10 he Exp $
 
-DISTNAME=	rust-1.60.0
+DISTNAME=	rust-1.62.1
 PKGNAME=	${DISTNAME:S/rust/rust-bin/1}
 CATEGORIES=	lang
 MASTER_SITES=	https://static.rust-lang.org/dist/
@@ -97,45 +97,45 @@ NBSUF=
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-aarch64) || make(distinfo) || make(makesum) || make(mdi)
 RUST_ARCH:=	aarch64-unknown-netbsd
 DN:=		${DISTNAME}${NBSUF}
-DISTFILES:=	${DISTFILES} ${DN}-${RUST_ARCH}.tar.gz
-SITES.${DN}-${RUST_ARCH}.tar.gz= \
-		${NETBSD_REPO}
+EXTRACT_SUFX=	.tar.xz
+DISTFILES:=	${DISTFILES} ${DN}-${RUST_ARCH}${EXTRACT_SUFX}
+SITES.${DN}-${RUST_ARCH}${EXTRACT_SUFX}= ${NETBSD_REPO}
 .endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-earmv7hf) || make(distinfo) || make(makesum) || make(mdi)
 RUST_ARCH:=	armv7-unknown-netbsd-eabihf
 DN:=		${DISTNAME}${NBSUF}
-DISTFILES:=	${DISTFILES} ${DN}-${RUST_ARCH}.tar.gz
-SITES.${DN}-${RUST_ARCH}.tar.gz= \
-		${NETBSD_REPO}
+EXTRACT_SUFX=	.tar.xz
+DISTFILES:=	${DISTFILES} ${DN}-${RUST_ARCH}${EXTRACT_SUFX}
+SITES.${DN}-${RUST_ARCH}${EXTRACT_SUFX}= ${NETBSD_REPO}
 .endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-i386) || make(distinfo) || make(makesum) || make(mdi)
 RUST_ARCH:=	i586-unknown-netbsd
 DN:=		${DISTNAME}${NBSUF}
-DISTFILES:=	${DISTFILES} ${DN}-${RUST_ARCH}.tar.gz
-SITES.${DN}-${RUST_ARCH}.tar.gz= \
-		${NETBSD_REPO}
+EXTRACT_SUFX=	.tar.xz
+DISTFILES:=	${DISTFILES} ${DN}-${RUST_ARCH}${EXTRACT_SUFX}
+SITES.${DN}-${RUST_ARCH}${EXTRACT_SUFX}= ${NETBSD_REPO}
 .endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-powerpc) || make(distinfo) || make(makesum) || make(mdi)
 .  if ${OPSYS_VERSION} >= 090000
 RUST_ARCH:=	powerpc-unknown-netbsd90
 DN:=		${DISTNAME}${NBSUF}
-DISTFILES:=	${DISTFILES} ${DN}-${RUST_ARCH}.tar.gz
-SITES.${DN}-${RUST_ARCH}.tar.gz= \
-		${NETBSD_REPO}
+EXTRACT_SUFX=	.tar.xz
+DISTFILES:=	${DISTFILES} ${DN}-${RUST_ARCH}${EXTRACT_SUFX}
+SITES.${DN}-${RUST_ARCH}${EXTRACT_SUFX}= ${NETBSD_REPO}
 .  else
 RUST_ARCH:=	powerpc-unknown-netbsd
 DN:=		${DISTNAME}${NBSUF}
-DISTFILES:=	${DISTFILES} ${DN}-${RUST_ARCH}.tar.gz
-SITES.${DN}-${RUST_ARCH}.tar.gz= \
-		${NETBSD_REPO}
+EXTRACT_SUFX=	.tar.xz
+DISTFILES:=	${DISTFILES} ${DN}-${RUST_ARCH}${EXTRACT_SUFX}
+SITES.${DN}-${RUST_ARCH}${EXTRACT_SUFX}= ${NETBSD_REPO}
 .  endif
 .endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-sparc64) || make(distinfo) || make(makesum) || make(mdi)
 RUST_ARCH:=	sparc64-unknown-netbsd
 DN:=		${DISTNAME}${NBSUF}
-DISTFILES:=	${DISTFILES} ${DN}-${RUST_ARCH}.tar.gz
-SITES.${DN}-${RUST_ARCH}.tar.gz= \
-		${NETBSD_REPO}
+EXTRACT_SUFX=	.tar.xz
+DISTFILES:=	${DISTFILES} ${DN}-${RUST_ARCH}${EXTRACT_SUFX}
+SITES.${DN}-${RUST_ARCH}${EXTRACT_SUFX}= ${NETBSD_REPO}
 .endif
 
 # Binary still extracts to plain non-nb'ed directory
