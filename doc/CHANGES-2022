@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4260 2022/09/02 11:45:36 pin Exp $
+$NetBSD: CHANGES-2022,v 1.4261 2022/09/02 11:46:35 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6305,3 +6305,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/py-natsort to 8.2.0 [adam 2022-09-02]
 	Updated lang/rust-src to 1.62.1 [he 2022-09-02]
 	Updated sysutils/dust to 0.8.3 [pin 2022-09-02]
+	Updated sysutils/zoxide to 0.8.3 [pin 2022-09-02]
