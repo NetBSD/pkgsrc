@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/09/01 14:46:27 taca Exp $
+# $NetBSD: Makefile,v 1.6 2022/09/02 17:10:06 wiz Exp $
 
 DISTNAME=	classifier-reborn-2.3.0
 CATEGORIES=	textproc
@@ -11,6 +11,8 @@ LICENSE=	gnu-lgpl-v2.1
 DEPENDS=	${RUBY_PKGPREFIX}-fast-stemmer>=1.0<2:../../textproc/ruby-fast-stemmer
 
 RUBYGEM_OPTIONS+=	--format-executable
+
+RUBY_VERSIONS_INCOMPATIBLE=	26 # ruby-matrix
 
 .include "../../lang/ruby/rubyversion.mk"
 
