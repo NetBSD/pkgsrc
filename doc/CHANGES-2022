@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4265 2022/09/02 14:47:35 adam Exp $
+$NetBSD: CHANGES-2022,v 1.4266 2022/09/02 14:51:46 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6311,3 +6311,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/rust-bin to 1.62.1 [he 2022-09-02]
 	Updated devel/py-prompt_toolkit to 3.0.31 [adam 2022-09-02]
 	Updated devel/py-test to 7.1.3 [adam 2022-09-02]
+	Added net/ruby-net-pop version 0.1.1 [taca 2022-09-02]
