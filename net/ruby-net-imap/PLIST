@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2022/08/28 04:09:37 taca Exp $
-${GEM_HOME}/cache/${GEM_NAME}.gem
+@comment $NetBSD: PLIST,v 1.2 2022/09/03 04:10:15 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.github/workflows/test.yml
 ${GEM_LIBDIR}/.gitignore
