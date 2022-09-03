@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2022/06/30 11:18:18 nia Exp $
+# $NetBSD: Makefile,v 1.9 2022/09/03 14:03:21 taca Exp $
 
-DISTNAME=	iruby-0.7.0
-PKGREVISION=	2
+DISTNAME=	iruby-0.7.4
 CATEGORIES=	devel
 
 MAINTAINER=	ryoon@NetBSD.org
@@ -9,13 +8,11 @@ HOMEPAGE=	https://github.com/SciRuby/iruby
 COMMENT=	Ruby kernel for Jupyter/IPython frontends
 LICENSE=	mit
 
-DEPENDS+=	${RUBY_PKGPREFIX}-bond>=0.5.1:../../devel/ruby-bond
 DEPENDS+=	${RUBY_PKGPREFIX}-data_uri>=0.1.0:../../www/ruby-data_uri
+DEPENDS+=	${RUBY_PKGPREFIX}-ffi-rzmq-[0-9]*:../../net/ruby-ffi-rzmq
 DEPENDS+=	${RUBY_PKGPREFIX}-mime-types>=3.3.1:../../mail/ruby-mime-types
 DEPENDS+=	${RUBY_PKGPREFIX}-multi_json>=1.11:../../textproc/ruby-multi_json
-
-DEPENDS+=	${RUBY_PKGPREFIX}-pycall>=1.3.1:../../devel/ruby-pycall
-DEPENDS+=	${RUBY_PKGPREFIX}-ffi-rzmq-[0-9]*:../../net/ruby-ffi-rzmq
+#DEPENDS+=	${RUBY_PKGPREFIX}-native-package-installer>=0:../../devel/ruby-native-package-installer
 
 DEPENDS+=	${PYPKGPREFIX}-ipython>=6.0.0:../../devel/py-ipython
 

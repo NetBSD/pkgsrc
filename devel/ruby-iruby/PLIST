@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2021/05/29 15:04:31 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/09/03 14:03:21 taca Exp $
 bin/iruby${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/.github/workflows/ubuntu.yml
+${GEM_EXTSDIR}/gem.build_complete
+${GEM_LIBDIR}/.github/workflows/ci.yml
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/CHANGES.md
 ${GEM_LIBDIR}/Gemfile
@@ -14,6 +15,7 @@ ${GEM_LIBDIR}/ci/Dockerfile.main.erb
 ${GEM_LIBDIR}/ci/requirements.txt
 ${GEM_LIBDIR}/docker/setup.sh
 ${GEM_LIBDIR}/docker/test.sh
+${GEM_LIBDIR}/ext/Rakefile
 ${GEM_LIBDIR}/iruby.gemspec
 ${GEM_LIBDIR}/lib/iruby.rb
 ${GEM_LIBDIR}/lib/iruby/assets/kernel.css
@@ -56,7 +58,6 @@ ${GEM_LIBDIR}/lib/iruby/session/mixin.rb
 ${GEM_LIBDIR}/lib/iruby/session_adapter.rb
 ${GEM_LIBDIR}/lib/iruby/session_adapter/cztop_adapter.rb
 ${GEM_LIBDIR}/lib/iruby/session_adapter/ffirzmq_adapter.rb
-${GEM_LIBDIR}/lib/iruby/session_adapter/pyzmq_adapter.rb
 ${GEM_LIBDIR}/lib/iruby/session_adapter/test_adapter.rb
 ${GEM_LIBDIR}/lib/iruby/utils.rb
 ${GEM_LIBDIR}/lib/iruby/version.rb
@@ -69,6 +70,7 @@ ${GEM_LIBDIR}/test/helper.rb
 ${GEM_LIBDIR}/test/integration_test.rb
 ${GEM_LIBDIR}/test/iruby/backend_test.rb
 ${GEM_LIBDIR}/test/iruby/command_test.rb
+${GEM_LIBDIR}/test/iruby/display_test.rb
 ${GEM_LIBDIR}/test/iruby/event_manager_test.rb
 ${GEM_LIBDIR}/test/iruby/jupyter_test.rb
 ${GEM_LIBDIR}/test/iruby/kernel_test.rb
@@ -79,5 +81,6 @@ ${GEM_LIBDIR}/test/iruby/session_adapter/ffirzmq_adapter_test.rb
 ${GEM_LIBDIR}/test/iruby/session_adapter/session_adapter_test_base.rb
 ${GEM_LIBDIR}/test/iruby/session_adapter_test.rb
 ${GEM_LIBDIR}/test/iruby/session_test.rb
+${GEM_LIBDIR}/test/iruby/utils_test.rb
 ${GEM_LIBDIR}/test/run-test.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
