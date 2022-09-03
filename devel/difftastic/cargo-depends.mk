@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.6 2022/08/28 16:15:33 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.7 2022/09/03 20:22:10 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-0.7.18
 CARGO_CRATE_DEPENDS+=	ansi_term-0.12.1
@@ -66,6 +66,7 @@ CARGO_CRATE_DEPENDS+=	scopeguard-1.1.0
 CARGO_CRATE_DEPENDS+=	static_assertions-1.1.0
 CARGO_CRATE_DEPENDS+=	strsim-0.10.0
 CARGO_CRATE_DEPENDS+=	syn-1.0.95
+CARGO_CRATE_DEPENDS+=	term_size-0.3.2
 CARGO_CRATE_DEPENDS+=	termcolor-1.1.3
 CARGO_CRATE_DEPENDS+=	terminal_size-0.1.17
 CARGO_CRATE_DEPENDS+=	terminal_size-0.2.1
