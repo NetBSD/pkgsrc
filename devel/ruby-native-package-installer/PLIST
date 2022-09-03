@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/02/12 12:35:37 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/09/03 14:35:29 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
@@ -10,15 +10,17 @@ ${GEM_LIBDIR}/lib/native-package-installer/executable-finder.rb
 ${GEM_LIBDIR}/lib/native-package-installer/os-release.rb
 ${GEM_LIBDIR}/lib/native-package-installer/platform.rb
 ${GEM_LIBDIR}/lib/native-package-installer/platform/alt-linux.rb
+${GEM_LIBDIR}/lib/native-package-installer/platform/amazon-linux.rb
 ${GEM_LIBDIR}/lib/native-package-installer/platform/arch-linux.rb
 ${GEM_LIBDIR}/lib/native-package-installer/platform/debian.rb
 ${GEM_LIBDIR}/lib/native-package-installer/platform/fedora.rb
 ${GEM_LIBDIR}/lib/native-package-installer/platform/freebsd.rb
+${GEM_LIBDIR}/lib/native-package-installer/platform/gentoo-linux.rb
 ${GEM_LIBDIR}/lib/native-package-installer/platform/homebrew.rb
 ${GEM_LIBDIR}/lib/native-package-installer/platform/macports.rb
 ${GEM_LIBDIR}/lib/native-package-installer/platform/msys2.rb
 ${GEM_LIBDIR}/lib/native-package-installer/platform/pld-linux.rb
-${GEM_LIBDIR}/lib/native-package-installer/platform/redhat.rb
+${GEM_LIBDIR}/lib/native-package-installer/platform/red-hat-enterprise-linux.rb
 ${GEM_LIBDIR}/lib/native-package-installer/platform/suse.rb
 ${GEM_LIBDIR}/lib/native-package-installer/platform/ubuntu.rb
 ${GEM_LIBDIR}/lib/native-package-installer/platform/unknown.rb
