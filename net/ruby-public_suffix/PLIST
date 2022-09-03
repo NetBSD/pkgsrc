@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.6 2022/04/16 15:59:17 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/09/03 04:44:20 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.github/FUNDING.yml
 ${GEM_LIBDIR}/.github/dependabot.yml
+${GEM_LIBDIR}/.github/workflows/psl-update.yml
 ${GEM_LIBDIR}/.github/workflows/release.yml
 ${GEM_LIBDIR}/.github/workflows/tests.yml
 ${GEM_LIBDIR}/.gitignore
