@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2022/02/12 12:35:37 taca Exp $
+# $NetBSD: Makefile,v 1.8 2022/09/03 14:35:29 taca Exp $
 
-DISTNAME=	native-package-installer-1.1.3
+DISTNAME=	native-package-installer-1.1.5
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
