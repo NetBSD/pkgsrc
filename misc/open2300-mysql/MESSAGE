@@ -1,11 +1,11 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.6 2022/09/03 12:52:00 martin Exp $
+$NetBSD: MESSAGE,v 1.7 2022/09/03 13:04:32 martin Exp $
 
 Before you can use this program, you need to configure the MySQL
 connection in the open2300.conf file. The mysql user used by the
 program only needs "insert" priviledges.
 
-You need to creat a table 'weather' in the configured database.
+You need to create a table 'weather' in the configured database.
 The program code suggests the following table structure:
 
    CREATE TABLE `weather` (
