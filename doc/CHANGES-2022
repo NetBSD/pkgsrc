@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4285 2022/09/03 14:38:40 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4286 2022/09/03 14:41:02 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6331,3 +6331,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/ruby-iruby to 0.7.4 [taca 2022-09-03]
 	Updated inputmethod/ibus to 1.5.27 [tsutsui 2022-09-03]
 	Updated devel/ruby-native-package-installer to 1.1.5 [taca 2022-09-03]
+	Updated devel/ruby-rb-fsevent to 0.11.2 [taca 2022-09-03]
