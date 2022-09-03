@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4293 2022/09/03 17:06:10 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4294 2022/09/03 20:22:32 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6339,3 +6339,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/ruby-cairo to 1.17.8 [tsutsui 2022-09-03]
 	Updated print/poppler to 22.09.0 [wiz 2022-09-03]
 	Updated print/xpdf4 to 4.04 [wiz 2022-09-03]
+	Updated devel/difftastic to 0.35.0 [pin 2022-09-03]
