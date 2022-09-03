@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2022/02/12 12:41:01 taca Exp $
+$NetBSD: distinfo,v 1.10 2022/09/03 14:40:27 taca Exp $
 
-BLAKE2s (rb-fsevent-0.11.1.gem) = d12c8b80a885e2734bd5061bebf93e31023f89f7ae958adb15d38f837355c9f3
-SHA512 (rb-fsevent-0.11.1.gem) = d4bc76613d3e70eaafeac62c419ab598851c651221d9d27c663c12f0543b4d5bdc665c318ea0079b334e21100ccc02c8cbe67b5cd5e099b36ba4ed1e24862237
-Size (rb-fsevent-0.11.1.gem) = 66560 bytes
+BLAKE2s (rb-fsevent-0.11.2.gem) = 409ae96cf990b012a33c8ee467b10604b9f3575a5ec1ab4c9787622dd586f2e0
+SHA512 (rb-fsevent-0.11.2.gem) = 2741efe65f374481aaa1054cf7fe9f27d8f129113cb08ec7b9d405cc79f3b188cae72a1fc3428a9798927c9f8601e730b7ca9d35f2ff0bbdd54002542bd8b1af
+Size (rb-fsevent-0.11.2.gem) = 66560 bytes
