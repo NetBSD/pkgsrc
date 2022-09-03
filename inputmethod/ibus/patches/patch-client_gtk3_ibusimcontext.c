@@ -1,11 +1,11 @@
-$NetBSD: patch-client_gtk3_ibusimcontext.c,v 1.3 2021/08/21 17:40:17 tsutsui Exp $
+$NetBSD: patch-client_gtk3_ibusimcontext.c,v 1.4 2022/09/03 14:14:41 tsutsui Exp $
 
 NetBSD 6.99.25's gcc says:
    error: #pragma GCC diagnostic not allowed inside functions
 
---- client/gtk3/ibusimcontext.c.orig	2021-08-20 00:48:40.000000000 +0000
+--- client/gtk3/ibusimcontext.c.orig	2022-08-22 15:32:16.000000000 +0000
 +++ client/gtk3/ibusimcontext.c
-@@ -714,6 +714,9 @@ daemon_name_vanished (GDBusConnection *c
+@@ -801,6 +801,9 @@ daemon_name_vanished (GDBusConnection *c
      _daemon_is_running = FALSE;
  }
  
@@ -15,7 +15,7 @@ NetBSD 6.99.25's gcc says:
  static void
  ibus_im_context_class_init (IBusIMContextClass *class)
  {
-@@ -834,10 +837,7 @@ ibus_im_context_class_init (IBusIMContex
+@@ -921,10 +924,7 @@ ibus_im_context_class_init (IBusIMContex
  #if !GTK_CHECK_VERSION (3, 98, 4)
      /* always install snooper */
      if (_key_snooper_id == 0) {
@@ -26,7 +26,7 @@ NetBSD 6.99.25's gcc says:
      }
  #endif
  
-@@ -849,23 +849,24 @@ ibus_im_context_class_init (IBusIMContex
+@@ -936,23 +936,24 @@ ibus_im_context_class_init (IBusIMContex
                                                NULL,
                                                NULL);
  }
@@ -52,5 +52,5 @@ NetBSD 6.99.25's gcc says:
  }
 +#pragma GCC diagnostic pop
  
- /* Copied from gtk+2.0-2.20.1/modules/input/imcedilla.c to fix crosbug.com/11421.
-  * Overwrite the original Gtk+'s compose table in gtk+-2.x.y/gtk/gtkimcontextsimple.c. */
+ static void
+ ibus_im_context_init (GObject *obj)
