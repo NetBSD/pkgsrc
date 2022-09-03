@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.90 2022/08/11 05:08:51 gutteridge Exp $
+# $NetBSD: Makefile,v 1.91 2022/09/03 14:14:41 tsutsui Exp $
 
-PKGREVISION= 4
 .include "Makefile.common"
 
 COMMENT=	Intelligent Input Bus
@@ -38,6 +37,11 @@ SUBST_CLASSES+=		dbus
 SUBST_STAGE.dbus=	post-configure
 SUBST_FILES.dbus=	src/ibusshare.c
 SUBST_SED.dbus=		-e 's,/var/lib/dbus/machine-id,${VARBASE}/lib/dbus/machine-id,g'
+
+# Workaround for unconditional -ldl for ubuntu
+#  https://github.com/ibus/ibus/pull/2442
+.include "../../mk/dlopen.buildlink3.mk"
+BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
 
 BUILD_DEFS+=	PKG_SYSCONFBASE VARBASE
 MANCOMPRESSED=	yes
