@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4271 2022/09/02 21:10:39 pin Exp $
+$NetBSD: CHANGES-2022,v 1.4272 2022/09/03 04:03:27 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6317,3 +6317,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/firefox-l10n to 104.0.1 [ryoon 2022-09-02]
 	Updated security/trufflehog to 3.10.2 [leot 2022-09-02]
 	Updated graphics/oculante to 0.6.6 [pin 2022-09-02]
+	Added security/ruby-digest version 3.1.0 [taca 2022-09-03]
