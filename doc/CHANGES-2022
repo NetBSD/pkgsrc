@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4277 2022/09/03 04:44:39 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4278 2022/09/03 04:47:08 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6323,3 +6323,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/ruby-net-imap to 0.2.3nb1 [taca 2022-09-03]
 	Updated net/ruby-net-smtp to 0.3.1nb1 [taca 2022-09-03]
 	Updated net/ruby-public_suffix to 5.0.0 [taca 2022-09-03]
+	Updated net/ruby-addressable to 2.8.1 [taca 2022-09-03]
