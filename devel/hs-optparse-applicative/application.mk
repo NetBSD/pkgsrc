@@ -1,9 +1,9 @@
-# $NetBSD: application.mk,v 1.1 2022/02/23 16:08:02 pho Exp $
+# $NetBSD: application.mk,v 1.2 2022/09/03 16:27:56 pho Exp $
 #
 # Generate shell completion scripts automatically.
 #
 # This mk fragment should be included in packages that install executables
-# which parses command-line arguments using optparse-applicative. If the
+# which parse command-line arguments using optparse-applicative. If the
 # package installs a library too, and the library depends on
 # optparse-applicative, the package should include both "application.mk"
 # and "buildlink3.mk" so that pkgtools/createbuildlink works correctly.
