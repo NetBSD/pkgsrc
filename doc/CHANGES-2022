@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4280 2022/09/03 12:38:14 nia Exp $
+$NetBSD: CHANGES-2022,v 1.4281 2022/09/03 13:55:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6326,3 +6326,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/ruby-addressable to 2.8.1 [taca 2022-09-03]
 	Updated graphics/feh to 3.9.1 [nia 2022-09-03]
 	Updated audio/exaile to 4.1.2 [nia 2022-09-03]
+	Added devel/ruby-redmine50 version 5.0.2 [taca 2022-09-03]
