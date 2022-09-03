@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4287 2022/09/03 14:43:17 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4288 2022/09/03 14:48:00 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6333,3 +6333,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/ruby-native-package-installer to 1.1.5 [taca 2022-09-03]
 	Updated devel/ruby-rb-fsevent to 0.11.2 [taca 2022-09-03]
 	Updated devel/ruby-rgl to 0.5.9 [taca 2022-09-03]
+	Updated devel/ruby-stream to 0.5.5 [taca 2022-09-03]
