@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2022/08/26 11:16:57 taca Exp $
+$NetBSD: distinfo,v 1.15 2022/09/03 14:42:56 taca Exp $
 
-BLAKE2s (rgl-0.5.8.gem) = c0bc71e97eb72fba57c9d9a93b77727050d38eea546d1a26d16c125959d1efdc
-SHA512 (rgl-0.5.8.gem) = 3a444a1b6b213967e963d3e8c746e8a9db78fff6e8e325cb8caeb54b7fada2bc892c9395ee58727133a1e25eb8d99444a7079a3c1542777cb992e4fabb87bed9
-Size (rgl-0.5.8.gem) = 65024 bytes
+BLAKE2s (rgl-0.5.9.gem) = 9eca6c2608761cea365bc30919ce5d7cfe2301a8b7a2aad5739095c519a9bc9b
+SHA512 (rgl-0.5.9.gem) = b92f8f55326aeece1bb6d238db099f5d7a634be50f68897227c51acb81d0f97df33fe7b291310eb53df4301aea25f38bfdef6bef7aeb501958830094d3a9da59
+Size (rgl-0.5.9.gem) = 65024 bytes
