@@ -1,4 +1,4 @@
-# $NetBSD: rails.mk,v 1.132 2022/07/13 14:48:47 taca Exp $
+# $NetBSD: rails.mk,v 1.133 2022/09/03 13:15:06 taca Exp $
 
 .if !defined(_RUBY_RAILS_MK)
 _RUBY_RAILS_MK=	# defined
@@ -113,11 +113,11 @@ _RAILS_TEENY=	${RAILS_VERSION:C/([0-9]+)\.([0-9]+)\.([0-9]+).*/\3/}
 #
 
 .if !empty(RUBY_RAILS_STRICT_DEP:M[yY][eE][sS])
-_RAILS_NEXT!=	${EXPR} ${_RAILS_TEENY} + 1
+_RAILS_NEXT!=	expr ${_RAILS_TEENY} + 1
 _RAILS_DEP=	\
 	${RUBY_RAILS}>=${RAILS_VERSION}<${_RAILS_MAJOR}.${_RAILS_MINOR}.${_RAILS_NEXT}
 .else
-_RAILS_NEXT!=	${EXPR} ${_RAILS_MINOR} + 1
+_RAILS_NEXT!=	expr ${_RAILS_MINOR} + 1
 _RAILS_DEP=	${RUBY_RAILS}>=${RAILS_VERSION}<${_RAILS_MAJOR}.${_RAILS_NEXT}
 .endif
 
