@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4279 2022/09/03 12:09:47 nia Exp $
+$NetBSD: CHANGES-2022,v 1.4280 2022/09/03 12:38:14 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6325,3 +6325,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/ruby-public_suffix to 5.0.0 [taca 2022-09-03]
 	Updated net/ruby-addressable to 2.8.1 [taca 2022-09-03]
 	Updated graphics/feh to 3.9.1 [nia 2022-09-03]
+	Updated audio/exaile to 4.1.2 [nia 2022-09-03]
