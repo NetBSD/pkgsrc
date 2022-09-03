@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4289 2022/09/03 14:51:02 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4290 2022/09/03 14:53:56 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6335,3 +6335,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/ruby-rgl to 0.5.9 [taca 2022-09-03]
 	Updated devel/ruby-stream to 0.5.5 [taca 2022-09-03]
 	Updated converters/ruby-unf_ext to 0.0.8.2 [taca 2022-09-03]
+	Updated devel/libgit2 to 1.5.0 [taca 2022-09-03]
