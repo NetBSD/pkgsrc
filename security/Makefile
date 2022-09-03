@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.869 2022/08/22 22:59:07 tnn Exp $
+# $NetBSD: Makefile,v 1.870 2022/09/03 04:03:09 taca Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -526,6 +526,7 @@ SUBDIR+=	ruby-bcrypt
 SUBDIR+=	ruby-bcrypt_pbkdf
 SUBDIR+=	ruby-certified
 SUBDIR+=	ruby-chef-vault
+SUBDIR+=	ruby-digest
 SUBDIR+=	ruby-ed25519
 SUBDIR+=	ruby-ezcrypto
 SUBDIR+=	ruby-gssapi
