@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4300 2022/09/04 11:56:18 tnn Exp $
+$NetBSD: CHANGES-2022,v 1.4301 2022/09/04 12:16:31 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6349,3 +6349,6 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/promscale to 0.14.0 [tnn 2022-09-04]
 	Updated databases/timescaledb-tune to 0.14.1 [tnn 2022-09-04]
 	Updated databases/postgresql-promscale_extension to 0.6.0 [tnn 2022-09-04]
+	Updated devel/git-lfs to 3.2.0 [tnn 2022-09-04]
+	Updated www/varnish to 7.1.1 [tnn 2022-09-04]
+	Updated x11/picom to 9.1 [tnn 2022-09-04]
