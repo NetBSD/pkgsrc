@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2022/08/28 12:38:41 taca Exp $
+$NetBSD: distinfo,v 1.12 2022/09/04 13:24:55 taca Exp $
 
-BLAKE2s (rex-powershell-0.1.96.gem) = fcbbb6891d220d7b7e51c08c83716b62aaeab70053a1ff177a313d67a3f39fe6
-SHA512 (rex-powershell-0.1.96.gem) = bb83a4741da735efd0ab94146b89449f18f0f96da6663782fd1daaa10989954ba3026fdb8e34810677963ae2e164e332a587758922d54ab8d848cd10ce9ee683
-Size (rex-powershell-0.1.96.gem) = 31744 bytes
+BLAKE2s (rex-powershell-0.1.97.gem) = 3c92f4cadab41a3364b9bd7a4fbef847e7eb746bd9bb21472c973114f05bf6c8
+SHA512 (rex-powershell-0.1.97.gem) = c55b9ddfb5277dbf160aa008f8898c79917097961ecff0a98d67e1d0aac93bb0cef146cc25b6b2546f1235209bdcc7084d46c795c6cce7bd4098a9f6c3007e1a
+Size (rex-powershell-0.1.97.gem) = 31744 bytes
