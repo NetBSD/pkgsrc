@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2022/07/19 19:40:32 tnn Exp $
+# $NetBSD: Makefile,v 1.17 2022/09/04 11:55:41 tnn Exp $
 
-DISTNAME=	promscale_extension-0.5.2
+DISTNAME=	promscale_extension-0.6.0
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=timescale/}
@@ -15,7 +15,7 @@ LICENSE=	apache-2.0
 DEPENDS+=	postgresql${PGSQL_VERSION}-server>=0:../../databases/postgresql${PGSQL_VERSION}-server
 
 # Depends on an unpublished crate. Can't use cargo.mk to fetch it.
-PGX_REV=	ee52db6bbaa006f6f3674bddeff8516c3b914e71
+PGX_REV=	96ece243
 DISTFILES=	${DEFAULT_DISTFILES}
 DISTFILES+=	pgx-${PGX_REV}.tar.gz
 SITES.pgx-${PGX_REV}.tar.gz+= -${MASTER_SITE_GITHUB:=timescale/}pgx/archive/${PGX_REV}.tar.gz
