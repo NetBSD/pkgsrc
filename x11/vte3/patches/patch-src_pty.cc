@@ -1,7 +1,8 @@
-$NetBSD: patch-src_pty.cc,v 1.8 2022/09/01 01:17:27 gutteridge Exp $
+$NetBSD: patch-src_pty.cc,v 1.9 2022/09/04 19:26:10 gutteridge Exp $
 
 Use correct includes on SunOS.
 Functional fix of posix_openpt() on NetBSD.
+https://gitlab.gnome.org/GNOME/vte/-/issues/2575
 
 --- src/pty.cc.orig	2022-03-27 17:52:19.000000000 +0000
 +++ src/pty.cc
@@ -23,9 +24,9 @@ Functional fix of posix_openpt() on NetBSD.
 -        bool need_cloexec = false, need_nonblocking = false;
 +#ifdef __NetBSD__
 +        /*
-+         * NetBSD's posix_openpt() will pass along flags that don't actually get applied,
-+         * so it will return an FD with only O_RDWR actually set, and we need to force the
-+         * fallbacks below.
++         * NetBSD's posix_openpt() will accept flags that don't actually get applied, so it
++         * will return an FD with only O_RDWR actually set. Unlike other BSDs, it doesn't
++         * return EINVAL when given inapplicable flags. We need to force the fallbacks below.
 +         */
 +        bool need_cloexec = true;
 +        bool need_nonblocking = true;
