@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4309 2022/09/04 13:29:16 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4310 2022/09/04 13:31:00 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6360,3 +6360,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/ruby-rex-powershell to 0.1.97 [taca 2022-09-04]
 	Updated security/ruby-rex-random_identifier to 0.1.9 [taca 2022-09-04]
 	Updated security/ruby-rex-socket to 0.1.42 [taca 2022-09-04]
+	Updated security/ruby-rex-sslscan to 0.1.8 [taca 2022-09-04]
