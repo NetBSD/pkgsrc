@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4295 2022/09/04 00:31:12 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.4296 2022/09/04 05:37:48 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6341,3 +6341,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated print/xpdf4 to 4.04 [wiz 2022-09-03]
 	Updated devel/difftastic to 0.35.0 [pin 2022-09-03]
 	Updated databases/postgresql-postgis2 to 3.3.0 [gdt 2022-09-04]
+	Updated devel/ruby-i18n to 1.10.0 [taca 2022-09-04]
