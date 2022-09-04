@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4299 2022/09/04 10:57:29 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.4300 2022/09/04 11:56:18 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6345,3 +6345,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated chat/ircd-hybrid to 8.2.42 [fox 2022-09-04]
 	Updated security/wolfssl to 5.5.0 [fox 2022-09-04]
 	Updated chat/matrix-synapse to 1.64.0 [gdt 2022-09-04]
+	Updated databases/postgresql-timescaledb to 2.8.0 [tnn 2022-09-04]
+	Updated databases/promscale to 0.14.0 [tnn 2022-09-04]
+	Updated databases/timescaledb-tune to 0.14.1 [tnn 2022-09-04]
+	Updated databases/postgresql-promscale_extension to 0.6.0 [tnn 2022-09-04]
