@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/12/12 12:59:31 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/09/04 15:42:05 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/LICENSE.txt
@@ -89,6 +89,7 @@ ${GEM_LIBDIR}/lib/aws-sdk-s3/plugins/object_lambda_endpoint.rb
 ${GEM_LIBDIR}/lib/aws-sdk-s3/plugins/redirects.rb
 ${GEM_LIBDIR}/lib/aws-sdk-s3/plugins/s3_host_id.rb
 ${GEM_LIBDIR}/lib/aws-sdk-s3/plugins/s3_signer.rb
+${GEM_LIBDIR}/lib/aws-sdk-s3/plugins/skip_whole_multipart_get_checksums.rb
 ${GEM_LIBDIR}/lib/aws-sdk-s3/plugins/sse_cpk.rb
 ${GEM_LIBDIR}/lib/aws-sdk-s3/plugins/streaming_retry.rb
 ${GEM_LIBDIR}/lib/aws-sdk-s3/plugins/url_encoded_keys.rb
