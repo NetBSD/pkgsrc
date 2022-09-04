@@ -1,9 +1,12 @@
-@comment $NetBSD: PLIST,v 1.2 2021/12/12 12:48:19 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/09/04 15:34:58 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/VERSION
 ${GEM_LIBDIR}/ca-bundle.crt
+${GEM_LIBDIR}/lib/aws-defaults.rb
+${GEM_LIBDIR}/lib/aws-defaults/default_configuration.rb
+${GEM_LIBDIR}/lib/aws-defaults/defaults_mode_config_resolver.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/arn.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/arn_parser.rb
@@ -51,9 +54,12 @@ ${GEM_LIBDIR}/lib/aws-sdk-core/plugins/api_key.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/plugins/apig_authorizer_token.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/plugins/apig_credentials_configuration.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/plugins/apig_user_agent.rb
+${GEM_LIBDIR}/lib/aws-sdk-core/plugins/bearer_authorization.rb
+${GEM_LIBDIR}/lib/aws-sdk-core/plugins/checksum_algorithm.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/plugins/client_metrics_plugin.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/plugins/client_metrics_send_plugin.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/plugins/credentials_configuration.rb
+${GEM_LIBDIR}/lib/aws-sdk-core/plugins/defaults_mode.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/plugins/endpoint_discovery.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/plugins/endpoint_pattern.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/plugins/event_stream_configuration.rb
@@ -72,6 +78,7 @@ ${GEM_LIBDIR}/lib/aws-sdk-core/plugins/protocols/json_rpc.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/plugins/protocols/query.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/plugins/protocols/rest_json.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/plugins/protocols/rest_xml.rb
+${GEM_LIBDIR}/lib/aws-sdk-core/plugins/recursion_detection.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/plugins/regional_endpoint.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/plugins/response_paging.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/plugins/retries/client_rate_limiter.rb
@@ -92,6 +99,7 @@ ${GEM_LIBDIR}/lib/aws-sdk-core/query/param.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/query/param_builder.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/query/param_list.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/refreshing_credentials.rb
+${GEM_LIBDIR}/lib/aws-sdk-core/refreshing_token.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/resources/collection.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/rest.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/rest/handler.rb
@@ -107,6 +115,8 @@ ${GEM_LIBDIR}/lib/aws-sdk-core/rest/response/status_code.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/shared_config.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/shared_credentials.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/sso_credentials.rb
+${GEM_LIBDIR}/lib/aws-sdk-core/sso_token_provider.rb
+${GEM_LIBDIR}/lib/aws-sdk-core/static_token_provider.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/structure.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/stubbing/data_applicator.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/stubbing/empty_stub.rb
@@ -119,6 +129,9 @@ ${GEM_LIBDIR}/lib/aws-sdk-core/stubbing/protocols/rest_json.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/stubbing/protocols/rest_xml.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/stubbing/stub_data.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/stubbing/xml_error.rb
+${GEM_LIBDIR}/lib/aws-sdk-core/token.rb
+${GEM_LIBDIR}/lib/aws-sdk-core/token_provider.rb
+${GEM_LIBDIR}/lib/aws-sdk-core/token_provider_chain.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/type_builder.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/util.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/waiters.rb
@@ -147,6 +160,13 @@ ${GEM_LIBDIR}/lib/aws-sdk-sso/customizations.rb
 ${GEM_LIBDIR}/lib/aws-sdk-sso/errors.rb
 ${GEM_LIBDIR}/lib/aws-sdk-sso/resource.rb
 ${GEM_LIBDIR}/lib/aws-sdk-sso/types.rb
+${GEM_LIBDIR}/lib/aws-sdk-ssooidc.rb
+${GEM_LIBDIR}/lib/aws-sdk-ssooidc/client.rb
+${GEM_LIBDIR}/lib/aws-sdk-ssooidc/client_api.rb
+${GEM_LIBDIR}/lib/aws-sdk-ssooidc/customizations.rb
+${GEM_LIBDIR}/lib/aws-sdk-ssooidc/errors.rb
+${GEM_LIBDIR}/lib/aws-sdk-ssooidc/resource.rb
+${GEM_LIBDIR}/lib/aws-sdk-ssooidc/types.rb
 ${GEM_LIBDIR}/lib/aws-sdk-sts.rb
 ${GEM_LIBDIR}/lib/aws-sdk-sts/client.rb
 ${GEM_LIBDIR}/lib/aws-sdk-sts/client_api.rb
