@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/08/31 09:36:03 adam Exp $
+# $NetBSD: Makefile,v 1.3 2022/09/04 18:56:05 wiz Exp $
 
 DISTNAME=	pathvalidate-2.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,6 +12,8 @@ LICENSE=	mit
 
 USE_LANGUAGES=	# none
 USE_TOOLS+=	pkg-config
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
