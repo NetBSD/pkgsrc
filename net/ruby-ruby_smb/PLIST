@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2022/08/28 04:33:32 taca Exp $
+@comment $NetBSD: PLIST,v 1.12 2022/09/04 13:00:16 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.github/workflows/verify.yml
 ${GEM_LIBDIR}/.gitignore
@@ -80,6 +80,9 @@ ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/epm/epm_ept_map_response.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/epm/epm_twrt.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/error.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/fault.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/icpr.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/icpr/cert_server_request_request.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/icpr/cert_server_request_response.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/ndr.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/netlogon.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/netlogon/netr_server_authenticate3_request.rb
@@ -244,6 +247,7 @@ ${GEM_LIBDIR}/lib/ruby_smb/nbss/session_header.rb
 ${GEM_LIBDIR}/lib/ruby_smb/nbss/session_request.rb
 ${GEM_LIBDIR}/lib/ruby_smb/ntlm.rb
 ${GEM_LIBDIR}/lib/ruby_smb/ntlm/client.rb
+${GEM_LIBDIR}/lib/ruby_smb/peer_info.rb
 ${GEM_LIBDIR}/lib/ruby_smb/server.rb
 ${GEM_LIBDIR}/lib/ruby_smb/server/cli.rb
 ${GEM_LIBDIR}/lib/ruby_smb/server/server_client.rb
@@ -440,6 +444,9 @@ ${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/encrypting_file_system/efs_rpc_encrypt_fi
 ${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/encrypting_file_system/efs_rpc_encrypt_file_srv_response_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/encrypting_file_system/efs_rpc_open_file_raw_request_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/encrypting_file_system/efs_rpc_open_file_raw_response_spec.rb
+${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/icpr/cert_server_request_request_spec.rb
+${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/icpr/cert_server_request_response_spec.rb
+${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/icpr/cert_trans_blob_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/ndr_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/netlogon/netr_server_authenticate3_request_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/netlogon/netr_server_authenticate3_response_spec.rb
