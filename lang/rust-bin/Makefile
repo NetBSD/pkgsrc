@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2022/09/04 09:57:13 he Exp $
+# $NetBSD: Makefile,v 1.41 2022/09/04 17:09:13 he Exp $
 
 DISTNAME=	rust-1.62.1
 PKGNAME=	${DISTNAME:S/rust/rust-bin/1}
@@ -41,7 +41,7 @@ MKPIE_SUPPORTED=	no
 
 NO_BUILD=	yes
 USE_TOOLS+=	bash pax
-WRKSRC=		${WRKDIR}/${DISTFILES:S/.tar.gz//}
+WRKSRC=		${WRKDIR}/${DISTFILES:C/.tar.[gx]z//}
 
 GENERATE_PLIST+=	find ${DESTDIR}${PREFIX} \( -type f -o -type l \) -print | \
 			sed 's,${DESTDIR}${PREFIX}/,,' | ${SORT} ;
