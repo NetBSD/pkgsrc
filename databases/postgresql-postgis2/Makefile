@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.115 2022/06/28 11:31:32 wiz Exp $
+# $NetBSD: Makefile,v 1.116 2022/09/04 00:31:01 gdt Exp $
 
 # Note that the directory is still postgis2, for historical reasons.
 # It remains, due to inertia and the pain of renaming outweighing the
 # benefit.  So far it looks more likely than not that postgis will not
 # need to be versioned again soon.
-MAJOR=		3.2
-DISTNAME=	postgis-${MAJOR}.1
+MAJOR=		3.3
+DISTNAME=	postgis-${MAJOR}.0
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
-PKGREVISION=	4
 CATEGORIES=	databases geography
 MASTER_SITES=	https://download.osgeo.org/postgis/source/
 
@@ -41,12 +40,14 @@ USE_TOOLS+=		gmake lex pax perl pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-rpath
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/postgresql/contrib
+# Documented requirement is pgsql >= 11
+PGSQL_VERSIONS_ACCEPTED=	14 13 12 11
 
-# The address standardizer needs more modules; see
-# share/doc/postgresql/extension/README.address_standardizer
-# for details.  Until they are required, disable it to ensure
-# repeatable builds.
-CONFIGURE_ARGS+=	--without-address-standardizer
+# This isn't an option, but could be.
+CONFIGURE_ARGS+=	--with-address-standardizer
+
+# \todo Add sfcgal >=1.3.2 https://gitlab.com/Oslandia/SFCGAL
+# and CGAL >=4.1.
 
 BUILD_TARGET=		all docs
 INSTALL_TARGET=		install docs-install
@@ -57,6 +58,7 @@ PLIST_SUBST+=		MAJOR=${MAJOR}
 PRINT_PLIST_AWK+=	{ gsub(/postgis-${MAJOR:S|/|\\/|g}/, "postgis-$${MAJOR}") }
 PRINT_PLIST_AWK+=	{ gsub(/topology-${MAJOR:S|/|\\/|g}/, "topology-$${MAJOR}") }
 
+# \todo Remove or file bugs upstream
 INSTALLATION_DIRS=	${DOCDIR} ${DOCDIR}/images ${PKGMANDIR}/man1
 
 REPLACE_PERL+=		utils/postgis_restore.pl.in
@@ -80,8 +82,18 @@ CONFIGURE_ARGS+=	-with-xsldir=${PREFIX}/share/xsl/docbook
 MAKE_ENV+=		"XSLTPROCFLAGS=--timing"
 
 # These are really all BUILD_DEPENDS.
+# \todo Report upstream; they are not mentioned in README.postgis.
 .include "../../graphics/ImageMagick/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
+
+# address standardizer (separate for possible future option)
+.include "../../devel/pcre2/buildlink3.mk"
+
+# MISSING DEPEENDS
+# "GNU gettext 0.14" for the loader
+
+# OMITTED DEPENDS
+# gtk 2.2.0, for GUI version of shp2pgsql
 
 # NORMAL DEPENDS
 .include "../../devel/protobuf-c/buildlink3.mk"
