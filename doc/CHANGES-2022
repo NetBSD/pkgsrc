@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4305 2022/09/04 13:19:41 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4306 2022/09/04 13:23:11 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6356,3 +6356,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/ruby-ruby_smb to 3.2.0 [taca 2022-09-04]
 	Updated security/ruby-metasploit-concern to 4.0.5 [taca 2022-09-04]
 	Updated security/ruby-metasploit_payloads-mettle to 1.0.19 [taca 2022-09-04]
+	Updated security/ruby-rex-exploitation to 0.1.36 [taca 2022-09-04]
