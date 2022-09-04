@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2022/09/01 14:17:27 taca Exp $
+# $NetBSD: Makefile,v 1.16 2022/09/04 19:03:53 wiz Exp $
 
 DISTNAME=	selenium-webdriver-4.4.0
 CATEGORIES=	www
@@ -14,8 +14,10 @@ DEPENDS+=	${RUBY_PKGPREFIX}-websocket>=1.0<2:../../www/ruby-websocket
 
 USE_LANGUAGES=	# none
 
+RUBY_VERSIONS_INCOMPATIBLE=	26
+
 .include "../../lang/ruby/rubyversion.mk"
-.if ${RUBY_VER} == "26" || ${RUBY_VER} == "27"
+.if ${RUBY_VER} == "27"
 DEPENDS+=	${RUBY_PKGPREFIX}-rexml>=3.2<4:../../textproc/ruby-rexml
 .endif
 
