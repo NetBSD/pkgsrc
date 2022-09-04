@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.57 2022/07/21 18:57:02 gdt Exp $
+# $NetBSD: Makefile,v 1.58 2022/09/04 10:57:20 gdt Exp $
 
-DISTNAME=	matrix-synapse-1.63.1
+DISTNAME=	matrix-synapse-1.64.0
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=matrix-org/}
 GITHUB_PROJECT=	synapse
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	js@pkgsrc.org
+MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://github.com/matrix-org/synapse/
 COMMENT=	Reference homeserver for the Matrix decentralised comms protocol
 LICENSE=	apache-2.0
