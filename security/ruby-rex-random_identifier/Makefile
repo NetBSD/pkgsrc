@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2021/09/19 17:05:20 taca Exp $
+# $NetBSD: Makefile,v 1.5 2022/09/04 13:27:12 taca Exp $
 
-DISTNAME=	rex-random_identifier-0.1.8
+DISTNAME=	rex-random_identifier-0.1.9
 CATEGORIES=	security
 
 MAINTAINER=	minskim@NetBSD.org
