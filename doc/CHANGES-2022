@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4328 2022/09/04 16:26:42 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4329 2022/09/04 16:35:11 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6379,3 +6379,6 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/ruby-sawyer to 0.9.2 [taca 2022-09-04]
 	Updated net/ruby-train-core to 3.10.1 [taca 2022-09-04]
 	Updated sysutils/ruby-inspec-core to 4.56.20 [taca 2022-09-04]
+	Updated sysutils/ruby-chef to 17.10.0 [taca 2022-09-04]
+	Updated sysutils/ruby-chef-config to 17.10.0 [taca 2022-09-04]
+	Updated sysutils/ruby-chef-utils to 17.10.0 [taca 2022-09-04]
