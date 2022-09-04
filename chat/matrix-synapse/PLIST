@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2022/09/04 10:57:20 gdt Exp $
+@comment $NetBSD: PLIST,v 1.31 2022/09/04 14:16:29 gdt Exp $
 bin/export_signing_key
 bin/generate_config
 bin/generate_log_config
@@ -627,6 +627,8 @@ ${PYSITELIB}/synapse/rest/client/login.py
 ${PYSITELIB}/synapse/rest/client/login.pyc
 ${PYSITELIB}/synapse/rest/client/logout.py
 ${PYSITELIB}/synapse/rest/client/logout.pyc
+${PYSITELIB}/synapse/rest/client/models.py
+${PYSITELIB}/synapse/rest/client/models.pyc
 ${PYSITELIB}/synapse/rest/client/mutual_rooms.py
 ${PYSITELIB}/synapse/rest/client/mutual_rooms.pyc
 ${PYSITELIB}/synapse/rest/client/notifications.py
@@ -723,6 +725,8 @@ ${PYSITELIB}/synapse/rest/media/v1/thumbnailer.py
 ${PYSITELIB}/synapse/rest/media/v1/thumbnailer.pyc
 ${PYSITELIB}/synapse/rest/media/v1/upload_resource.py
 ${PYSITELIB}/synapse/rest/media/v1/upload_resource.pyc
+${PYSITELIB}/synapse/rest/models.py
+${PYSITELIB}/synapse/rest/models.pyc
 ${PYSITELIB}/synapse/rest/synapse/__init__.py
 ${PYSITELIB}/synapse/rest/synapse/__init__.pyc
 ${PYSITELIB}/synapse/rest/synapse/client/__init__.py
