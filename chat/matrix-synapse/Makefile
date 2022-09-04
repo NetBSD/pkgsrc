@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.59 2022/09/04 12:24:21 gdt Exp $
+# $NetBSD: Makefile,v 1.60 2022/09/04 14:16:29 gdt Exp $
 
-DISTNAME=	matrix-synapse-1.65.0
+DISTNAME=	matrix-synapse-1.66.0
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=matrix-org/}
 GITHUB_PROJECT=	synapse
@@ -15,8 +15,10 @@ LICENSE=	apache-2.0
 TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-[0-9]*:../../devel/py-poetry
 
 # Dependencies as defined by synapse's build system (in theory):
+# \todo Go over poetry.lock
 DEPENDS+=	${PYPKGPREFIX}-asn1-modules>=0.0.7:../../security/py-asn1-modules
 DEPENDS+=	${PYPKGPREFIX}-asn1>=0.1.9:../../security/py-asn1
+DEPENDS+=	${PYPKGPREFIX}-pydantic>=1.9.1:../../devel/py-pydantic
 DEPENDS+=	${PYPKGPREFIX}-attrs>=19.2.0:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-bcrypt>=3.1.0:../../security/py-bcrypt
 DEPENDS+=	${PYPKGPREFIX}-bleach>=1.4.3:../../www/py-bleach
