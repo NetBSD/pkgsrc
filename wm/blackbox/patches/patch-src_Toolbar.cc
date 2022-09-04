@@ -1,10 +1,18 @@
-$NetBSD: patch-src_Toolbar.cc,v 1.1 2021/06/10 12:48:50 nia Exp $
+$NetBSD: patch-src_Toolbar.cc,v 1.2 2022/09/04 19:16:13 gutteridge Exp $
 
-Fix build failure when time_t is 64 bits on a 32-bit machine.
+* Fix build failure when time_t is 64 bits on a 32-bit machine.
+* Fix build with GCC 12 (missing <time.h> include)
+https://github.com/bbidulock/blackboxwm/commit/adb18c673fae698bfdcf979349aaf665ef224035
 
---- src/Toolbar.cc.orig	2016-07-10 16:31:38.000000000 +0000
+--- src/Toolbar.cc.orig	2013-09-24 17:20:15.000000000 +0000
 +++ src/Toolbar.cc
-@@ -43,8 +43,10 @@
+@@ -38,13 +38,16 @@
+ #include <X11/Xutil.h>
+ #include <sys/time.h>
+ #include <assert.h>
++#include <time.h>
+ 
+ 
  long nextTimeout(int resolution)
  {
    timeval now;
