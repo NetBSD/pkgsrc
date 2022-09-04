@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4318 2022/09/04 15:06:09 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4319 2022/09/04 15:09:00 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6369,3 +6369,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/binaryen to 110 [fcambus 2022-09-04]
 	Updated devel/mold to 1.4.2 [fcambus 2022-09-04]
 	Updated www/ruby-aws-partitions to 1.626.0 [taca 2022-09-04]
+	Updated archivers/arqiver to 0.10.0 [pin 2022-09-04]
