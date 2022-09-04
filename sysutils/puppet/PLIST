@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.34 2022/04/28 14:54:53 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.35 2022/09/04 17:00:14 taca Exp $
 bin/puppet${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CODEOWNERS
@@ -2324,6 +2324,7 @@ ${GEM_LIBDIR}/spec/unit/util/windows/security_descriptor_spec.rb
 ${GEM_LIBDIR}/spec/unit/util/windows/service_spec.rb
 ${GEM_LIBDIR}/spec/unit/util/windows/sid_spec.rb
 ${GEM_LIBDIR}/spec/unit/util/windows/string_spec.rb
+${GEM_LIBDIR}/spec/unit/util/windows_spec.rb
 ${GEM_LIBDIR}/spec/unit/util/yaml_spec.rb
 ${GEM_LIBDIR}/spec/unit/util_spec.rb
 ${GEM_LIBDIR}/spec/unit/version_spec.rb
