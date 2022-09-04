@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.122 2022/06/07 09:54:01 jperkin Exp $
+# $NetBSD: Makefile,v 1.123 2022/09/04 21:38:47 rillig Exp $
 #
 
 COMMENT=	Tools for use in the packages collection
@@ -16,6 +16,7 @@ SUBDIR+=	cwrappers
 SUBDIR+=	dfdisk
 SUBDIR+=	digest
 SUBDIR+=	distbb
+#SUBDIR+=	distlint	# early prototype
 SUBDIR+=	genpkgng
 SUBDIR+=	genrpm
 SUBDIR+=	gensolpkg

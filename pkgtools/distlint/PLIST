@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2022/09/04 21:38:47 rillig Exp $
+bin/distlint
