@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4315 2022/09/04 14:35:52 pin Exp $
+$NetBSD: CHANGES-2022,v 1.4316 2022/09/04 14:36:29 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6366,3 +6366,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated time/ruby-timers to 4.3.4 [taca 2022-09-04]
 	Updated chat/matrix-synapse to 1.66.0 [gdt 2022-09-04]
 	Updated shells/ksh93 to 1.0.3 [pin 2022-09-04]
+	Updated devel/binaryen to 110 [fcambus 2022-09-04]
