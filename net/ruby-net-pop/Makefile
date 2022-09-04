@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/09/03 04:08:41 taca Exp $
+# $NetBSD: Makefile,v 1.3 2022/09/04 05:22:41 taca Exp $
 
 DISTNAME=	net-pop-0.1.1
 PKGREVISION=	1
@@ -9,8 +9,8 @@ HOMEPAGE=	https://github.com/ruby/net-pop
 COMMENT=	Ruby client library for POP3
 LICENSE=	2-clause-bsd OR ruby-license
 
-DEPENDS+=	${RUBY_PKGPREFIX}-net-protocol:../../net/ruby-net-protocol
-DEPENDS+=	${RUBY_PKGPREFIX}-digest:../../security/ruby-digest
+DEPENDS+=	${RUBY_PKGPREFIX}-net-protocol>=0:../../net/ruby-net-protocol
+DEPENDS+=	${RUBY_PKGPREFIX}-digest>=0:../../security/ruby-digest
 
 # This package is mainly for redmine50 on Ruby 2.7.
 
