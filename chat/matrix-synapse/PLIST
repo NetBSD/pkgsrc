@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2022/07/21 18:57:02 gdt Exp $
+@comment $NetBSD: PLIST,v 1.30 2022/09/04 10:57:20 gdt Exp $
 bin/export_signing_key
 bin/generate_config
 bin/generate_log_config
@@ -483,36 +483,20 @@ ${PYSITELIB}/synapse/replication/slave/__init__.py
 ${PYSITELIB}/synapse/replication/slave/__init__.pyc
 ${PYSITELIB}/synapse/replication/slave/storage/__init__.py
 ${PYSITELIB}/synapse/replication/slave/storage/__init__.pyc
-${PYSITELIB}/synapse/replication/slave/storage/_base.py
-${PYSITELIB}/synapse/replication/slave/storage/_base.pyc
 ${PYSITELIB}/synapse/replication/slave/storage/_slaved_id_tracker.py
 ${PYSITELIB}/synapse/replication/slave/storage/_slaved_id_tracker.pyc
-${PYSITELIB}/synapse/replication/slave/storage/account_data.py
-${PYSITELIB}/synapse/replication/slave/storage/account_data.pyc
-${PYSITELIB}/synapse/replication/slave/storage/appservice.py
-${PYSITELIB}/synapse/replication/slave/storage/appservice.pyc
-${PYSITELIB}/synapse/replication/slave/storage/deviceinbox.py
-${PYSITELIB}/synapse/replication/slave/storage/deviceinbox.pyc
 ${PYSITELIB}/synapse/replication/slave/storage/devices.py
 ${PYSITELIB}/synapse/replication/slave/storage/devices.pyc
-${PYSITELIB}/synapse/replication/slave/storage/directory.py
-${PYSITELIB}/synapse/replication/slave/storage/directory.pyc
 ${PYSITELIB}/synapse/replication/slave/storage/events.py
 ${PYSITELIB}/synapse/replication/slave/storage/events.pyc
 ${PYSITELIB}/synapse/replication/slave/storage/filtering.py
 ${PYSITELIB}/synapse/replication/slave/storage/filtering.pyc
 ${PYSITELIB}/synapse/replication/slave/storage/keys.py
 ${PYSITELIB}/synapse/replication/slave/storage/keys.pyc
-${PYSITELIB}/synapse/replication/slave/storage/profile.py
-${PYSITELIB}/synapse/replication/slave/storage/profile.pyc
 ${PYSITELIB}/synapse/replication/slave/storage/push_rule.py
 ${PYSITELIB}/synapse/replication/slave/storage/push_rule.pyc
 ${PYSITELIB}/synapse/replication/slave/storage/pushers.py
 ${PYSITELIB}/synapse/replication/slave/storage/pushers.pyc
-${PYSITELIB}/synapse/replication/slave/storage/receipts.py
-${PYSITELIB}/synapse/replication/slave/storage/receipts.pyc
-${PYSITELIB}/synapse/replication/slave/storage/registration.py
-${PYSITELIB}/synapse/replication/slave/storage/registration.pyc
 ${PYSITELIB}/synapse/replication/tcp/__init__.py
 ${PYSITELIB}/synapse/replication/tcp/__init__.pyc
 ${PYSITELIB}/synapse/replication/tcp/client.py
@@ -1260,6 +1244,10 @@ ${PYSITELIB}/synapse/storage/schema/main/delta/71/02event_push_summary_unique.sq
 ${PYSITELIB}/synapse/storage/schema/main/delta/72/01add_room_type_to_state_stats.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/72/01event_push_summary_receipt.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/72/02event_push_actions_index.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/72/03bg_populate_events_columns.py
+${PYSITELIB}/synapse/storage/schema/main/delta/72/03bg_populate_events_columns.pyc
+${PYSITELIB}/synapse/storage/schema/main/delta/72/03drop_event_reference_hashes.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/72/03remove_groups.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/application_services.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/event_edges.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/event_signatures.sql
