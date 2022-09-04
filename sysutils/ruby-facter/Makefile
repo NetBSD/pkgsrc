@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2021/12/14 14:32:57 taca Exp $
+# $NetBSD: Makefile,v 1.47 2022/09/04 13:46:11 taca Exp $
 
-DISTNAME=	facter-4.2.6
+DISTNAME=	facter-4.2.11
 CATEGORIES=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
