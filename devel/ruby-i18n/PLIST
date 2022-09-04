@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2019/02/03 15:12:37 taca Exp $
+@comment $NetBSD: PLIST,v 1.13 2022/09/04 05:37:23 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/MIT-LICENSE
 ${GEM_LIBDIR}/README.md
@@ -14,13 +14,13 @@ ${GEM_LIBDIR}/lib/i18n/backend/flatten.rb
 ${GEM_LIBDIR}/lib/i18n/backend/gettext.rb
 ${GEM_LIBDIR}/lib/i18n/backend/interpolation_compiler.rb
 ${GEM_LIBDIR}/lib/i18n/backend/key_value.rb
+${GEM_LIBDIR}/lib/i18n/backend/lazy_loadable.rb
 ${GEM_LIBDIR}/lib/i18n/backend/memoize.rb
 ${GEM_LIBDIR}/lib/i18n/backend/metadata.rb
 ${GEM_LIBDIR}/lib/i18n/backend/pluralization.rb
 ${GEM_LIBDIR}/lib/i18n/backend/simple.rb
 ${GEM_LIBDIR}/lib/i18n/backend/transliterator.rb
 ${GEM_LIBDIR}/lib/i18n/config.rb
-${GEM_LIBDIR}/lib/i18n/core_ext/hash.rb
 ${GEM_LIBDIR}/lib/i18n/exceptions.rb
 ${GEM_LIBDIR}/lib/i18n/gettext.rb
 ${GEM_LIBDIR}/lib/i18n/gettext/helpers.rb
@@ -46,5 +46,6 @@ ${GEM_LIBDIR}/lib/i18n/tests/localization/time.rb
 ${GEM_LIBDIR}/lib/i18n/tests/lookup.rb
 ${GEM_LIBDIR}/lib/i18n/tests/pluralization.rb
 ${GEM_LIBDIR}/lib/i18n/tests/procs.rb
+${GEM_LIBDIR}/lib/i18n/utils.rb
 ${GEM_LIBDIR}/lib/i18n/version.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
