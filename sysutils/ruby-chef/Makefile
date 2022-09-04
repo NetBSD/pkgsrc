@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2022/01/16 14:29:47 taca Exp $
+# $NetBSD: Makefile,v 1.30 2022/09/04 16:33:48 taca Exp $
 
-DISTNAME=	chef-17.8.25
+DISTNAME=	chef-17.10.0
 CATEGORIES=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -8,8 +8,8 @@ HOMEPAGE=	https://github.com/opscode/chef
 COMMENT=	Configuration management tool for infrastructure automation
 LICENSE=	apache-2.0
 
-DEPENDS+=	${RUBY_PKGPREFIX}-chef-config>=17.8.25<17.9:../../sysutils/ruby-chef-config
-#DEPENDS+=	${RUBY_PKGPREFIX}-chef-utils>=17.8.25<17.9:../../sysutils/ruby-chef-utils
+DEPENDS+=	${RUBY_PKGPREFIX}-chef-config>=17.10.0<17.11:../../sysutils/ruby-chef-config
+#DEPENDS+=	${RUBY_PKGPREFIX}-chef-utils>=17.10.0<17.11:../../sysutils/ruby-chef-utils
 #DEPENDS+=	${RUBY_PKGPREFIX}-train-core>=3.2<4:../../net/ruby-train-core
 DEPENDS+=	${RUBY_PKGPREFIX}-train-winrm>=0.2.5:../../net/ruby-train-winrm
 #DEPENDS+=	${RUBY_PKGPREFIX}-license-acceptance>=1.0.5:../../misc/ruby-license-acceptance
