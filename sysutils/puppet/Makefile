@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.54 2022/04/28 14:54:53 jperkin Exp $
+# $NetBSD: Makefile,v 1.55 2022/09/04 17:00:14 taca Exp $
 
-DISTNAME=		puppet-7.13.1
+DISTNAME=		puppet-7.18.0
 CATEGORIES=		sysutils
 #MASTER_SITES=		http://puppetlabs.com/downloads/puppet/
 
