@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4316 2022/09/04 14:36:29 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.4317 2022/09/04 14:37:27 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6367,3 +6367,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated chat/matrix-synapse to 1.66.0 [gdt 2022-09-04]
 	Updated shells/ksh93 to 1.0.3 [pin 2022-09-04]
 	Updated devel/binaryen to 110 [fcambus 2022-09-04]
+	Updated devel/mold to 1.4.2 [fcambus 2022-09-04]
