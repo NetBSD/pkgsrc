@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2021/12/12 13:16:23 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/09/04 16:26:21 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
@@ -90,6 +90,7 @@ ${GEM_LIBDIR}/lib/inspec/plugin/v2/plugin_types/dsl.rb
 ${GEM_LIBDIR}/lib/inspec/plugin/v2/plugin_types/input.rb
 ${GEM_LIBDIR}/lib/inspec/plugin/v2/plugin_types/mock.rb
 ${GEM_LIBDIR}/lib/inspec/plugin/v2/plugin_types/reporter.rb
+${GEM_LIBDIR}/lib/inspec/plugin/v2/plugin_types/streaming_reporter.rb
 ${GEM_LIBDIR}/lib/inspec/plugin/v2/registry.rb
 ${GEM_LIBDIR}/lib/inspec/plugin/v2/status.rb
 ${GEM_LIBDIR}/lib/inspec/profile.rb
@@ -165,6 +166,7 @@ ${GEM_LIBDIR}/lib/inspec/resources/iptables.rb
 ${GEM_LIBDIR}/lib/inspec/resources/json.rb
 ${GEM_LIBDIR}/lib/inspec/resources/kernel_module.rb
 ${GEM_LIBDIR}/lib/inspec/resources/kernel_parameter.rb
+${GEM_LIBDIR}/lib/inspec/resources/kernel_parameters.rb
 ${GEM_LIBDIR}/lib/inspec/resources/key_rsa.rb
 ${GEM_LIBDIR}/lib/inspec/resources/ksh.rb
 ${GEM_LIBDIR}/lib/inspec/resources/launchd_service.rb
@@ -230,6 +232,7 @@ ${GEM_LIBDIR}/lib/inspec/resources/sybase_session.rb
 ${GEM_LIBDIR}/lib/inspec/resources/sys_info.rb
 ${GEM_LIBDIR}/lib/inspec/resources/systemd_service.rb
 ${GEM_LIBDIR}/lib/inspec/resources/sysv_service.rb
+${GEM_LIBDIR}/lib/inspec/resources/timezone.rb
 ${GEM_LIBDIR}/lib/inspec/resources/toml.rb
 ${GEM_LIBDIR}/lib/inspec/resources/upstart_service.rb
 ${GEM_LIBDIR}/lib/inspec/resources/user.rb
