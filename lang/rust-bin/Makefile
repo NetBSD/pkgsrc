@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2022/09/02 12:57:10 he Exp $
+# $NetBSD: Makefile,v 1.39 2022/09/04 06:58:57 he Exp $
 
 DISTNAME=	rust-1.62.1
 PKGNAME=	${DISTNAME:S/rust/rust-bin/1}
@@ -96,6 +96,13 @@ NBSUF=
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-aarch64) || make(distinfo) || make(makesum) || make(mdi)
 RUST_ARCH:=	aarch64-unknown-netbsd
+DN:=		${DISTNAME}${NBSUF}
+EXTRACT_SUFX=	.tar.xz
+DISTFILES:=	${DISTFILES} ${DN}-${RUST_ARCH}${EXTRACT_SUFX}
+SITES.${DN}-${RUST_ARCH}${EXTRACT_SUFX}= ${NETBSD_REPO}
+.endif
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-aarch64_be) || make(distinfo) || make(makesum) || make(mdi)
+RUST_ARCH:=	aarch64_be-unknown-netbsd
 DN:=		${DISTNAME}${NBSUF}
 EXTRACT_SUFX=	.tar.xz
 DISTFILES:=	${DISTFILES} ${DN}-${RUST_ARCH}${EXTRACT_SUFX}
