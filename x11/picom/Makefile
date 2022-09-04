@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2022/07/29 21:16:32 tnn Exp $
+# $NetBSD: Makefile,v 1.8 2022/09/04 12:12:01 tnn Exp $
 
-DISTNAME=	picom-8.2
-PKGREVISION=	1
+DISTNAME=	picom-9.1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=yshui/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -22,11 +21,6 @@ MESON_ARGS+=		-Dwith_docs=true
 REPLACE_SH+=		bin/picom-trans
 PYTHON_FOR_BUILD_ONLY=	tool
 INSTALLATION_DIRS+=	share/examples/picom
-
-SUBST_CLASSES+=		mandir
-SUBST_STAGE.mandir=	pre-configure
-SUBST_FILES.mandir=	man/meson.build
-SUBST_VARS.mandir=	PKGMANDIR
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/picom.sample.conf ${DESTDIR}${PREFIX}/share/examples/picom/picom.sample.conf
