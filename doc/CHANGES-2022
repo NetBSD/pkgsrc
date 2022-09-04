@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4331 2022/09/04 18:53:08 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4332 2022/09/04 19:01:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6384,3 +6384,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/ruby-chef-utils to 17.10.0 [taca 2022-09-04]
 	Updated sysutils/puppet to 7.18.0 [taca 2022-09-04]
 	Updated devel/py-ipykernel to 6.15.1nb1 [wiz 2022-09-04]
+	Updated textproc/py-wcmatch to 8.4nb1 [wiz 2022-09-04]
