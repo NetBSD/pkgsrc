@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4312 2022/09/04 13:47:00 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4313 2022/09/04 14:01:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6363,3 +6363,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/ruby-rex-sslscan to 0.1.8 [taca 2022-09-04]
 	Updated security/ruby-rex-text to 0.2.44 [taca 2022-09-04]
 	Updated sysutils/ruby-facter to 4.2.11 [taca 2022-09-04]
+	Updated time/ruby-timers to 4.3.4 [taca 2022-09-04]
