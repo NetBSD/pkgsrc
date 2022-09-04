@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/09/03 04:10:15 taca Exp $
+# $NetBSD: Makefile,v 1.3 2022/09/04 05:21:52 taca Exp $
 
 DISTNAME=	net-imap-0.2.3
 PKGREVISION=	1
@@ -18,8 +18,8 @@ RUBY_VERSIONS_ACCEPTED=	27 30
 
 .include "../../lang/ruby/rubyversion.mk"
 .if ${RUBY_VER} == 27
-DEPENDS+=	${RUBY_PKGPREFIX}-net-protocol:../../net/ruby-net-protocol
-DEPENDS+=	${RUBY_PKGPREFIX}-digest:../../security/ruby-digest
+DEPENDS+=	${RUBY_PKGPREFIX}-net-protocol>=0:../../net/ruby-net-protocol
+DEPENDS+=	${RUBY_PKGPREFIX}-digest>=0:../../security/ruby-digest
 .endif
 
 .include "../../lang/ruby/gem.mk"
