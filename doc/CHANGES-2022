@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4314 2022/09/04 14:16:44 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.4315 2022/09/04 14:35:52 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6365,3 +6365,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/ruby-facter to 4.2.11 [taca 2022-09-04]
 	Updated time/ruby-timers to 4.3.4 [taca 2022-09-04]
 	Updated chat/matrix-synapse to 1.66.0 [gdt 2022-09-04]
+	Updated shells/ksh93 to 1.0.3 [pin 2022-09-04]
