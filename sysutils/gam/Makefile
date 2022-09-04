@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/08/31 10:10:17 sborrill Exp $
+# $NetBSD: Makefile,v 1.2 2022/09/04 18:56:05 wiz Exp $
 
 DISTNAME=	gam-6.24
 CATEGORIES=	sysutils python
@@ -28,6 +28,8 @@ REPLACE_PYTHON=	gam.py
 WRKSRC=		${WRKDIR}/GAM-${PKGVERSION_NOREV}/src
 
 INSTALLATION_DIRS=	bin ${PYSITELIB}
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-pathvalidate
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
