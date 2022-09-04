@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4302 2022/09/04 12:24:38 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.4303 2022/09/04 13:00:46 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6353,3 +6353,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/varnish to 7.1.1 [tnn 2022-09-04]
 	Updated x11/picom to 9.1 [tnn 2022-09-04]
 	Updated chat/matrix-synapse to 1.65.0 [gdt 2022-09-04]
+	Updated net/ruby-ruby_smb to 3.2.0 [taca 2022-09-04]
