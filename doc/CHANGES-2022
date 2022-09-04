@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4297 2022/09/04 08:25:34 fox Exp $
+$NetBSD: CHANGES-2022,v 1.4298 2022/09/04 08:42:22 fox Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6343,3 +6343,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/postgresql-postgis2 to 3.3.0 [gdt 2022-09-04]
 	Updated devel/ruby-i18n to 1.10.0 [taca 2022-09-04]
 	Updated chat/ircd-hybrid to 8.2.42 [fox 2022-09-04]
+	Updated security/wolfssl to 5.5.0 [fox 2022-09-04]
