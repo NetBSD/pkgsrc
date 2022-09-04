@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2021/12/12 13:07:02 taca Exp $
+@comment $NetBSD: PLIST,v 1.12 2022/09/04 16:33:48 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
@@ -364,7 +364,6 @@ ${GEM_LIBDIR}/lib/chef/provider/group/groupadd.rb
 ${GEM_LIBDIR}/lib/chef/provider/group/groupmod.rb
 ${GEM_LIBDIR}/lib/chef/provider/group/pw.rb
 ${GEM_LIBDIR}/lib/chef/provider/group/solaris.rb
-${GEM_LIBDIR}/lib/chef/provider/group/suse.rb
 ${GEM_LIBDIR}/lib/chef/provider/group/usermod.rb
 ${GEM_LIBDIR}/lib/chef/provider/group/windows.rb
 ${GEM_LIBDIR}/lib/chef/provider/http_request.rb
@@ -1536,7 +1535,6 @@ ${GEM_LIBDIR}/spec/unit/provider/group/groupadd_spec.rb
 ${GEM_LIBDIR}/spec/unit/provider/group/groupmod_spec.rb
 ${GEM_LIBDIR}/spec/unit/provider/group/pw_spec.rb
 ${GEM_LIBDIR}/spec/unit/provider/group/solaris_spec.rb
-${GEM_LIBDIR}/spec/unit/provider/group/suse_spec.rb
 ${GEM_LIBDIR}/spec/unit/provider/group/usermod_spec.rb
 ${GEM_LIBDIR}/spec/unit/provider/group/windows_spec.rb
 ${GEM_LIBDIR}/spec/unit/provider/group_spec.rb
