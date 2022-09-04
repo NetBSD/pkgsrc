@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2022/08/25 01:48:08 taca Exp $
+# $NetBSD: Makefile,v 1.5 2022/09/04 15:49:47 taca Exp $
 
-DISTNAME=	sawyer-0.9.1
+DISTNAME=	sawyer-0.9.2
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
