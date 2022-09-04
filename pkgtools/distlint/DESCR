@@ -1,0 +1,2 @@
+Distlint verifies that the distfiles that are uploaded to a server
+satisfy the requirements of the packages.
