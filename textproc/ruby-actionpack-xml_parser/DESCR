@@ -1,2 +1,4 @@
 A XML parameters parser for Action Pack (removed from core in Rails
 4.0)
+
+This is for Ruby on Rails 5.2 package.
