@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.49 2022/05/10 16:58:03 adam Exp $
+$NetBSD: distinfo,v 1.50 2022/09/05 13:28:07 adam Exp $
 
-BLAKE2s (python-ldap-3.4.0.tar.gz) = 44b9c665ecb72c279d0c89d45193bb53bab10a1e854f4b50e1774e6df02c36a0
-SHA512 (python-ldap-3.4.0.tar.gz) = d10c10f1d416a0f67e7669c6c0b5460a3484bc31f4af471d581a9207689e5687c08d1ad78ba8d47e0ce0c35d24d79e4b848b4c503534f211a36c1b882bee3605
-Size (python-ldap-3.4.0.tar.gz) = 376169 bytes
+BLAKE2s (python-ldap-3.4.2.tar.gz) = 19a6df7745c29f23728a2769e320bcae4210760237077d7e99cb3a3d624e286b
+SHA512 (python-ldap-3.4.2.tar.gz) = 49edfabe7541d9f9a0574423fdb7b6098485f52e16b0d561780e9983e0fdfc072c82c55e8e485e527e2bdc6b18e0feb248198dc5ca8a8cbec50f59c95beacf81
+Size (python-ldap-3.4.2.tar.gz) = 378058 bytes
 SHA1 (patch-Lib_slapdtest___slapdtest.py) = d2f024e735106e97f0b5d48b667e9a40794d3c35
 SHA1 (patch-Makefile) = ef130a8711a94cc070f11baf0d481bbc69ff3910
