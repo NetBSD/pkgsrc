@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/05/18 11:34:56 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/09/05 14:15:55 adam Exp $
 bin/ansible-lint
 ${PYSITELIB}/${WHEEL_INFODIR}/COPYING
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
@@ -32,6 +32,7 @@ ${PYSITELIB}/ansiblelint/config.py
 ${PYSITELIB}/ansiblelint/config.pyc
 ${PYSITELIB}/ansiblelint/constants.py
 ${PYSITELIB}/ansiblelint/constants.pyc
+${PYSITELIB}/ansiblelint/data/profiles.yml
 ${PYSITELIB}/ansiblelint/errors.py
 ${PYSITELIB}/ansiblelint/errors.pyc
 ${PYSITELIB}/ansiblelint/file_utils.py
@@ -53,6 +54,7 @@ ${PYSITELIB}/ansiblelint/rules/command_instead_of_shell.py
 ${PYSITELIB}/ansiblelint/rules/command_instead_of_shell.pyc
 ${PYSITELIB}/ansiblelint/rules/custom/__init__.py
 ${PYSITELIB}/ansiblelint/rules/custom/__init__.pyc
+${PYSITELIB}/ansiblelint/rules/deprecated_bare_vars.md
 ${PYSITELIB}/ansiblelint/rules/deprecated_bare_vars.py
 ${PYSITELIB}/ansiblelint/rules/deprecated_bare_vars.pyc
 ${PYSITELIB}/ansiblelint/rules/deprecated_command_syntax.py
@@ -73,6 +75,9 @@ ${PYSITELIB}/ansiblelint/rules/ignore_errors.py
 ${PYSITELIB}/ansiblelint/rules/ignore_errors.pyc
 ${PYSITELIB}/ansiblelint/rules/inline_env_var.py
 ${PYSITELIB}/ansiblelint/rules/inline_env_var.pyc
+${PYSITELIB}/ansiblelint/rules/jinja.md
+${PYSITELIB}/ansiblelint/rules/jinja.py
+${PYSITELIB}/ansiblelint/rules/jinja.pyc
 ${PYSITELIB}/ansiblelint/rules/key_order.py
 ${PYSITELIB}/ansiblelint/rules/key_order.pyc
 ${PYSITELIB}/ansiblelint/rules/literal_compare.py
@@ -85,6 +90,9 @@ ${PYSITELIB}/ansiblelint/rules/meta_no_tags.py
 ${PYSITELIB}/ansiblelint/rules/meta_no_tags.pyc
 ${PYSITELIB}/ansiblelint/rules/meta_video_links.py
 ${PYSITELIB}/ansiblelint/rules/meta_video_links.pyc
+${PYSITELIB}/ansiblelint/rules/name.md
+${PYSITELIB}/ansiblelint/rules/name.py
+${PYSITELIB}/ansiblelint/rules/name.pyc
 ${PYSITELIB}/ansiblelint/rules/no_changed_when.py
 ${PYSITELIB}/ansiblelint/rules/no_changed_when.pyc
 ${PYSITELIB}/ansiblelint/rules/no_handler.py
@@ -125,12 +133,8 @@ ${PYSITELIB}/ansiblelint/rules/schema.py
 ${PYSITELIB}/ansiblelint/rules/schema.pyc
 ${PYSITELIB}/ansiblelint/rules/syntax_check.py
 ${PYSITELIB}/ansiblelint/rules/syntax_check.pyc
-${PYSITELIB}/ansiblelint/rules/unnamed_task.py
-${PYSITELIB}/ansiblelint/rules/unnamed_task.pyc
 ${PYSITELIB}/ansiblelint/rules/var_naming.py
 ${PYSITELIB}/ansiblelint/rules/var_naming.pyc
-${PYSITELIB}/ansiblelint/rules/var_spacing.py
-${PYSITELIB}/ansiblelint/rules/var_spacing.pyc
 ${PYSITELIB}/ansiblelint/rules/yaml.md
 ${PYSITELIB}/ansiblelint/rules/yaml.py
 ${PYSITELIB}/ansiblelint/rules/yaml.pyc
