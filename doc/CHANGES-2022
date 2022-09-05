@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4341 2022/09/05 13:28:26 adam Exp $
+$NetBSD: CHANGES-2022,v 1.4342 2022/09/05 14:15:50 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6402,3 +6402,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/grep to 3.8 [ryoon 2022-09-05]
 	Updated time/py-arrow to 1.2.3 [adam 2022-09-05]
 	Updated databases/py-ldap to 3.4.2 [adam 2022-09-05]
+	Updated misc/wthrr to 0.2.0 [pin 2022-09-05]
