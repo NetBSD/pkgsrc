@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4333 2022/09/04 19:57:05 pin Exp $
+$NetBSD: CHANGES-2022,v 1.4334 2022/09/05 08:32:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6386,3 +6386,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-ipykernel to 6.15.1nb1 [wiz 2022-09-04]
 	Updated textproc/py-wcmatch to 8.4nb1 [wiz 2022-09-04]
 	Updated sysutils/cchmod to 0.1.3 [pin 2022-09-04]
+	Updated devel/py-ipykernel to 6.15.2 [adam 2022-09-05]
+	Updated sysutils/py-psutil to 5.9.2 [adam 2022-09-05]
