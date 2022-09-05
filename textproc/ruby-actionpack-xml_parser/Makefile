@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/09/01 16:42:12 taca Exp $
+# $NetBSD: Makefile,v 1.3 2022/09/05 15:44:37 taca Exp $
 
 DISTNAME=	actionpack-xml_parser-2.0.1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/actionpack/actionpack${RUBY_RAILS}/}
@@ -14,7 +14,7 @@ DEPENDS+=	${RUBY_RAILTIES_DEPENDS}
 
 USE_LANGUAGES=	# none
 
-RUBY_RAILS_ACCEPTED?=	${RUBY_RAILS}
+RUBY_RAILS_ACCEPTED=	61
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
