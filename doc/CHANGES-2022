@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4343 2022/09/05 14:16:42 pin Exp $
+$NetBSD: CHANGES-2022,v 1.4344 2022/09/05 14:17:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6404,3 +6404,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/py-ldap to 3.4.2 [adam 2022-09-05]
 	Updated misc/wthrr to 0.2.0 [pin 2022-09-05]
 	Updated sysutils/lsd to 0.23.0 [pin 2022-09-05]
+	Added devel/py-hatch-fancy-pypi-readme version 22.3.0 [adam 2022-09-05]
+	Added devel/py-pkgutil_resolve_name version 1.3.10 [adam 2022-09-05]
+	Updated textproc/py-jsonschema to 4.15.0 [adam 2022-09-05]
+	Updated sysutils/ansible-lint to 6.5.2 [adam 2022-09-05]
