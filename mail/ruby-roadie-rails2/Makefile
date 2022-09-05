@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/09/01 16:23:44 taca Exp $
+# $NetBSD: Makefile,v 1.3 2022/09/05 15:33:14 taca Exp $
 
 DISTNAME=	roadie-rails-2.2.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/rails/rails2_${RUBY_RAILS}/}
@@ -15,7 +15,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-roadie4>=3.1:../../mail/ruby-roadie4
 USE_LANGUAGES=	# none
 
 RUBY_VERSIONS_ACCEPTED=	26 27
-RUBY_RAILS_ACCEPTED=	# empty
+RUBY_RAILS_ACCEPTED=	52
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
