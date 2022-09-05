@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2022/07/11 13:32:24 adam Exp $
+# $NetBSD: Makefile,v 1.21 2022/09/05 13:25:48 adam Exp $
 
-DISTNAME=	arrow-1.2.2
+DISTNAME=	arrow-1.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	time python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/arrow/}
