@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2022/08/29 16:11:02 thor Exp $
+@comment $NetBSD: PLIST,v 1.10 2022/09/05 14:14:17 adam Exp $
 bin/jsonschema-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -16,8 +16,6 @@ ${PYSITELIB}/jsonschema/_format.py
 ${PYSITELIB}/jsonschema/_format.pyc
 ${PYSITELIB}/jsonschema/_legacy_validators.py
 ${PYSITELIB}/jsonschema/_legacy_validators.pyc
-${PYSITELIB}/jsonschema/_reflect.py
-${PYSITELIB}/jsonschema/_reflect.pyc
 ${PYSITELIB}/jsonschema/_types.py
 ${PYSITELIB}/jsonschema/_types.pyc
 ${PYSITELIB}/jsonschema/_utils.py
