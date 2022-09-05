@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2022/09/04 05:48:05 martin Exp $
+# $NetBSD: Makefile,v 1.43 2022/09/05 07:38:41 martin Exp $
 
 DISTNAME=	Pygments-2.13.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -18,11 +18,10 @@ USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-# XXXX the < comparision does not work!
-# .include "../../lang/python/pyversion.mk"
-# .if ${_PYTHON_VERSION} < 38
-# DEPENDS+=	${PYPKGPREFIX}-importlib-metadata-[0-9]*:../../devel/py-importlib-metadata
-# .endif
+.include "../../lang/python/pyversion.mk"
+.if ${_PYTHON_VERSION} < 38
+DEPENDS+=	${PYPKGPREFIX}-importlib-metadata-[0-9]*:../../devel/py-importlib-metadata
+.endif
 
 USE_PKG_RESOURCES=	yes
 
