@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.63 2022/06/28 11:36:10 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2022/09/05 13:24:27 ryoon Exp $
 
-DISTNAME=	grep-3.7
-PKGREVISION=	1
+DISTNAME=	grep-3.8
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GNU:=grep/}
 EXTRACT_SUFX=	.tar.xz
@@ -40,5 +39,5 @@ post-install:
 .endfor
 
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/pcre/buildlink3.mk"
+.include "../../devel/pcre2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
