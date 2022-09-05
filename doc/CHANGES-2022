@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4346 2022/09/05 19:10:07 adam Exp $
+$NetBSD: CHANGES-2022,v 1.4347 2022/09/05 20:53:49 leot Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6410,3 +6410,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/ansible-lint to 6.5.2 [adam 2022-09-05]
 	Added textproc/ruby-actionpack52-xml_parser version 2.0.1 [taca 2022-09-05]
 	Updated lang/rust-analyzer to 0.0.2022.08.22 [adam 2022-09-05]
+	Updated textproc/json2tsv to 1.0 [leot 2022-09-05]
