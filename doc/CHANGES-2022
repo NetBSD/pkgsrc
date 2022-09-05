@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4344 2022/09/05 14:17:03 adam Exp $
+$NetBSD: CHANGES-2022,v 1.4345 2022/09/05 15:38:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6408,3 +6408,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/py-pkgutil_resolve_name version 1.3.10 [adam 2022-09-05]
 	Updated textproc/py-jsonschema to 4.15.0 [adam 2022-09-05]
 	Updated sysutils/ansible-lint to 6.5.2 [adam 2022-09-05]
+	Added textproc/ruby-actionpack52-xml_parser version 2.0.1 [taca 2022-09-05]
