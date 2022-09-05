@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4335 2022/09/05 09:11:25 adam Exp $
+$NetBSD: CHANGES-2022,v 1.4336 2022/09/05 09:17:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6390,3 +6390,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/py-psutil to 5.9.2 [adam 2022-09-05]
 	Updated databases/py-apsw to 3.39.2.1 [adam 2022-09-05]
 	Updated devel/py-hypothesis to 6.54.5 [adam 2022-09-05]
+	Updated net/haproxy to 2.6.5 [adam 2022-09-05]
+	Updated devel/meson to 0.63.2 [adam 2022-09-05]
