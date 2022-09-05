@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2022/07/10 21:02:43 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2022/09/05 14:14:17 adam Exp $
 
-DISTNAME=	jsonschema-4.6.2
+DISTNAME=	jsonschema-4.15.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jsonschema/}
@@ -11,6 +11,7 @@ COMMENT=	Implementation of JSON Schema for Python
 LICENSE=	modified-bsd
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
+BUILD_DEPENDS+=	${PYPKGPREFIX}-hatch-fancy-pypi-readme-[0-9]*:../../devel/py-hatch-fancy-pypi-readme
 BUILD_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs-[0-9]*:../../devel/py-hatch-vcs
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-attrs>=17.4.0:../../devel/py-attrs
@@ -28,6 +29,7 @@ DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensio
 .endif
 .if ${_PYTHON_VERSION} < 39
 DEPENDS+=	${PYPKGPREFIX}-importlib-resources>=1.4.0:../../devel/py-importlib-resources
+DEPENDS+=	${PYPKGPREFIX}-pkgutil_resolve_name>=1.3.10:../../devel/py-pkgutil_resolve_name
 .endif
 
 post-install:
