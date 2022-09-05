@@ -1,10 +1,6 @@
-$NetBSD: distinfo,v 1.1 2022/01/10 02:30:23 khorben Exp $
+$NetBSD: distinfo,v 1.2 2022/09/05 11:13:56 adam Exp $
 
-BLAKE2s (hashcat-6.2.5.tar.gz) = 425d720ca0bb48e585988dc0557a829b3906d697ad14722c68e34fb5b4f7ebaa
-SHA512 (hashcat-6.2.5.tar.gz) = 2b881146c625172c91cb74b33851473155dcde2421fba1b4acfba28116499b9cff832a62c4dbc24e16df06a827494f30699a7d0e5195d5ed107704f525255383
-Size (hashcat-6.2.5.tar.gz) = 6341872 bytes
-SHA1 (patch-include_sort__r.h) = 75ea3e5ceb01383d603cd86e449f69299bc22fcd
-SHA1 (patch-src_Makefile) = 427c7d162ff8373d6b180718fff4845bdb119d1c
-SHA1 (patch-src_affinity.c) = e0cd6c909f7e29b7a6cb09b0a9399f6964147fa2
-SHA1 (patch-src_folder.c) = 58cde3211ccb057eda93de587404c82542224b54
-SHA1 (patch-src_terminal.c) = 40b52cdb1f9030b9ad7649bf0a9a4cf17b1f52fe
+BLAKE2s (hashcat-6.2.6.tar.gz) = 133a66fb6851bd63c675f4780d318cf31c65b04255a86ac10ef1b98518e95026
+SHA512 (hashcat-6.2.6.tar.gz) = b5e4f40fb5ed0a47977243e1f95bf1deae0b04bd5ca26338395305c42573fe5b17557835f6f5d8b7402812e8eadda2b260d6b927ce99429fd1b87eb26f002f8a
+Size (hashcat-6.2.6.tar.gz) = 14234640 bytes
+SHA1 (patch-src_Makefile) = a9f4cee8cb4142872d364cdda67fd8147ba1c525
