@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2022/07/05 18:06:28 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/09/06 19:44:57 wiz Exp $
 bin/ipcluster-${PYVERSSUFFIX}
 bin/ipcontroller-${PYVERSSUFFIX}
 bin/ipengine-${PYVERSSUFFIX}
@@ -12,7 +12,7 @@ ${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
-${PYSITELIB}/${WHEEL_INFODIR}/license_files/COPYING.md
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING.md
 ${PYSITELIB}/ipyparallel/__init__.py
 ${PYSITELIB}/ipyparallel/__init__.pyc
 ${PYSITELIB}/ipyparallel/_async.py
