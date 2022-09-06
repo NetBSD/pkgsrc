@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4366 2022/09/06 19:51:41 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4367 2022/09/06 20:46:55 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6440,3 +6440,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/py310-html-docs to 3.10.7 [adam 2022-09-06]
 	Updated time/hs-clock to 0.8.3 [pho 2022-09-06]
 	Updated parallel/py-ipyparallel to 8.4.1nb1 [wiz 2022-09-06]
+	Updated shells/nushell to 0.68.0 [pin 2022-09-06]
