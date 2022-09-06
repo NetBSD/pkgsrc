@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2022/04/08 21:20:36 markd Exp $
+$NetBSD: distinfo,v 1.8 2022/09/06 20:47:39 markd Exp $
 
-BLAKE2s (etoc.doc.r60589.tar.xz) = c1e619bb5590ab00548a98a9e6ad14f38c6b20ea1f449a618924ac652d4b41f1
-SHA512 (etoc.doc.r60589.tar.xz) = 85c82e7e7b5cf655aeea010e58a7b7c90801f6626e9dccc8cc555b29220b50deaf1d7f822524f95b5a516fb628f93578c6c605b178b2b2a78e64c6f19602499b
-Size (etoc.doc.r60589.tar.xz) = 1134960 bytes
+BLAKE2s (etoc.doc.r64249.tar.xz) = 3857cfb2c6a8cd373035a55485f190c3250dec30c2cc255b7db4f153d69394a0
+SHA512 (etoc.doc.r64249.tar.xz) = 22eb0681eae3592886089902b7091da7a8b714eb528aa5732e50a897e767e175b3ab6b2295103d08a03ae5886fc6c5c82cf0efc71a468f4b9e6facbd96fe7553
+Size (etoc.doc.r64249.tar.xz) = 784640 bytes
