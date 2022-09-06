@@ -3,3 +3,6 @@ Release version of the Mozilla Firefox web browser. In case there are multiple
 versions available, this package points to the most recent available version.
 
 It is intended to allow easy upgrades to the most recent ESR release.
+
+Note: Due to upstream's trademark policies, this package identifies as
+"Nightly" rather than "Firefox" by default.
