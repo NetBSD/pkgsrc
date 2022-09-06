@@ -1,4 +1,4 @@
-# $NetBSD: srcdist.mk,v 1.41 2021/12/30 21:33:09 tnn Exp $
+# $NetBSD: srcdist.mk,v 1.42 2022/09/06 09:05:59 nia Exp $
 
 .include "../../lang/python/pyversion.mk"
 
@@ -7,7 +7,7 @@
 PYSUBDIR=	${DISTNAME}
 WRKSRC=		${WRKDIR}/${PYSUBDIR}
 
-.if defined(PYDISTUTILSPKG)
+.if !empty(PYDISTUTILSPKG:M[yY][eE][sS])
 # This is used for standard modules shipped with Python but build as
 # separate packages.
 
