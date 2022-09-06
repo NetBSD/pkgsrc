@@ -1,5 +1,2 @@
-@comment $NetBSD: PLIST,v 1.6 2021/10/14 16:49:59 pin Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/09/06 20:46:24 pin Exp $
 bin/nu
-bin/nu_plugin_core_inc
-bin/nu_plugin_core_match
-bin/nu_plugin_core_textview

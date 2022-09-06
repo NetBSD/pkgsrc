@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.19 2022/03/23 09:15:32 pin Exp $
+# $NetBSD: Makefile,v 1.20 2022/09/06 20:46:24 pin Exp $
 
-DISTNAME=	nushell-0.44.0
+DISTNAME=	nushell-0.68.0
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nushell/}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://www.nushell.sh/
 COMMENT=	New type of shell
 LICENSE=	mit
@@ -14,6 +14,7 @@ LICENSE=	mit
 USE_TOOLS+=	pkg-config
 
 INSTALLATION_DIRS=	bin
+PKG_SHELL=		bin/nu
 
 MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
@@ -21,13 +22,15 @@ RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libX11}/lib
 RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.libX11}/lib
 
 CARGO_NO_DEFAULT_FEATURES=	YES
-CARGO_FEATURES+=		default inc textview
+# 'trash-support' feature is default but, does not build on NetBSD.
+# Extra features 'dataframe' and 'database' do build.
+# Uncomment them if you wish to enable these at  build time.
+# Be aware that doing so will increase the package build time.
+CARGO_FEATURES+=		plugin which-support #dataframe database
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/nu ${DESTDIR}${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/nu_plugin_core_inc ${DESTDIR}${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/nu_plugin_core_match ${DESTDIR}${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/nu_plugin_core_textview ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/target/release/nu \
+		${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/rust/cargo.mk"
 .include "../../security/openssl/buildlink3.mk"
