@@ -1,0 +1,2 @@
+Open2300-pgsql reads data from a Weather Station 23xx and inserts
+it into a postgres database.

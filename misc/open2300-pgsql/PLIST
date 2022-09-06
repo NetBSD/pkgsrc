@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2022/09/06 15:56:53 martin Exp $
+bin/pgsql2300

@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.7 2010/02/05 19:36:16 martin Exp $
+$NetBSD: patch-aa,v 1.8 2022/09/06 15:56:53 martin Exp $
 
 --- Makefile.orig	2005-03-15 08:14:48.000000000 +0100
-+++ Makefile	2010-02-04 18:52:12.000000000 +0100
++++ Makefile	2022-09-03 14:59:32.476411369 +0200
 @@ -14,11 +14,11 @@
  
  prefix = /usr/local
@@ -36,7 +36,7 @@ $NetBSD: patch-aa,v 1.7 2010/02/05 19:36:16 martin Exp $
  
  pgsql2300: $(PGSQLOBJ)
  	$(CC) $(CFLAGS) -o $@ $(PGSQLOBJ) $(CC_LDFLAGS) $(CC_WINFLAG) -I/usr/include/pgsql -L/usr/lib/pgsql -lpq
-@@ -94,19 +94,23 @@
+@@ -94,19 +94,26 @@
  	$(CC) $(CFLAGS) -o $@ $(MINMAXOBJ) $(CC_LDFLAGS) $(CC_WINFLAG)
  
  install:
@@ -70,10 +70,13 @@ $NetBSD: patch-aa,v 1.7 2010/02/05 19:36:16 martin Exp $
 +install-mysql:
 +	${BSD_INSTALL_PROGRAM} mysql2300 $(DESTDIR)$(bindir)
 +
++install-pgsql:
++	${BSD_INSTALL_PROGRAM} pgsql2300 $(DESTDIR)$(bindir)
++
  uninstall:
  	rm -f $(bindir)/open2300 $(bindir)/dump2300 $(bindir)/log2300 $(bindir)/fetch2300 $(bindir)/wu2300 $(bindir)/cw2300 $(bindir)/xml2300 $(bindir)/light2300 $(bindir)/interval2300 $(bindir)/minmax2300
  
-@@ -114,4 +118,4 @@
+@@ -114,4 +121,4 @@
  	rm -f *~ *.o open2300 dump2300 log2300 fetch2300 wu2300 cw2300 history2300 histlog2300 bin2300 xml2300 mysql2300 pgsql2300 light2300 interval2300 minmax2300
  
  cleanexe:

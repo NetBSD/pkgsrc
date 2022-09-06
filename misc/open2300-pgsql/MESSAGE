@@ -1,0 +1,48 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2022/09/06 15:56:53 martin Exp $
+
+Before you can use this program, you need to configure the PostgresSQL
+connection in the open2300.conf file. The sql user used by the
+program only needs "insert" priviledges.
+
+You need to create a table as named in the config file in the configured
+database. Here is a working sequence of commands:
+
+CREATE TYPE wind_direction AS
+     enum('N','NNE','NE','ENE','E','ESE','SE','SSE','S',
+          'SSW','SW','WSW','W','WNW','NW','NNW');
+CREATE TYPE tendency AS
+     enum('Steady','Rising','Falling');
+CREATE TYPE forecast AS
+     enum('Rainy','Cloudy','Sunny');
+CREATE TABLE weather (
+     station varchar(24) NOT NULL default '',
+     timestamp timestamp NOT NULL default '1970-01-01 00:00:00',
+     rec_date date NOT NULL default '1970-01-01',
+     rec_time time NOT NULL default '00:00:00',
+     temp_in float NOT NULL default '0',
+     temp_out float NOT NULL default '0',
+     dewpoint float NOT NULL default '0',
+     rel_hum_in integer NOT NULL default '0',
+     rel_hum_out integer NOT NULL default '0',
+     windspeed float NOT NULL default '0',
+     wind_angle float NOT NULL default '0',
+     wind_direction wind_direction NOT NULL default 'N',
+     wind_chill float NOT NULL default '0',
+     rain_1h float NOT NULL default '0',
+     rain_24h float NOT NULL default '0',
+     rain_total float NOT NULL default '0',
+     rel_pressure float NOT NULL default '0',
+     tendency tendency NOT NULL default 'Steady',
+     forecast forecast NOT NULL default 'Rainy',
+     PRIMARY KEY  (timestamp)
+   );
+GRANT INSERT ON TABLE weather TO open2300;
+
+Note that the actual field names are not used, but the structure
+needs to be compatible.
+
+The program will not output anything, unless errors occur. This
+makes it easy to use it in cron jobs.
+
+===========================================================================
