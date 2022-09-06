@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4353 2022/09/06 15:39:20 nia Exp $
+$NetBSD: CHANGES-2022,v 1.4354 2022/09/06 15:42:28 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6420,3 +6420,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated pkgtools/pkgin to 22.9.0 [jperkin 2022-09-06]
 	Updated www/firefox91-l10n to 91.13.0 [nia 2022-09-06]
 	Updated www/firefox91 to 91.13.0 [nia 2022-09-06]
+	Updated emulators/libretro-sameboy to 0.15.5 [nia 2022-09-06]
+	Updated emulators/sameboy to 0.15.5 [nia 2022-09-06]
