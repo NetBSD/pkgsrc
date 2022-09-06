@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4367 2022/09/06 20:46:55 pin Exp $
+$NetBSD: CHANGES-2022,v 1.4368 2022/09/06 21:04:32 markd Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6441,3 +6441,14 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated time/hs-clock to 0.8.3 [pho 2022-09-06]
 	Updated parallel/py-ipyparallel to 8.4.1nb1 [wiz 2022-09-06]
 	Updated shells/nushell to 0.68.0 [pin 2022-09-06]
+	Updated print/tex-etoc to 1.09f [markd 2022-09-06]
+	Updated print/tex-etoc-doc to 1.09f [markd 2022-09-06]
+	Updated print/tex-koma-script to 3.37 [markd 2022-09-06]
+	Updated fonts/tex-luafindfont to 0.10 [markd 2022-09-06]
+	Updated fonts/tex-luafindfont-doc to 0.10 [markd 2022-09-06]
+	Updated textproc/tex-lwarp to 0.908 [markd 2022-09-06]
+	Updated textproc/tex-lwarp-doc to 0.908 [markd 2022-09-06]
+	Updated print/tex-media9 to 1.25 [markd 2022-09-06]
+	Updated print/tex-media9-doc to 1.25 [markd 2022-09-06]
+	Updated print/tex-pmhanguljamo to 0.5 [markd 2022-09-06]
+	Updated print/tex-pmhanguljamo-doc to 0.5 [markd 2022-09-06]
