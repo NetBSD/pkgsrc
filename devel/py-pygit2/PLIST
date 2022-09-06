@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2021/02/03 13:51:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2022/09/06 09:26:27 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -12,6 +12,7 @@ ${PYSITELIB}/pygit2/_build.py
 ${PYSITELIB}/pygit2/_build.pyc
 ${PYSITELIB}/pygit2/_build.pyo
 ${PYSITELIB}/pygit2/_libgit2.abi3.so
+${PYSITELIB}/pygit2/_pygit2.pyi
 ${PYSITELIB}/pygit2/_pygit2.so
 ${PYSITELIB}/pygit2/_run.py
 ${PYSITELIB}/pygit2/_run.pyc
@@ -34,6 +35,7 @@ ${PYSITELIB}/pygit2/decl/buffer.h
 ${PYSITELIB}/pygit2/decl/callbacks.h
 ${PYSITELIB}/pygit2/decl/checkout.h
 ${PYSITELIB}/pygit2/decl/clone.h
+${PYSITELIB}/pygit2/decl/commit.h
 ${PYSITELIB}/pygit2/decl/common.h
 ${PYSITELIB}/pygit2/decl/config.h
 ${PYSITELIB}/pygit2/decl/describe.h
