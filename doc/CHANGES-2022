@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4362 2022/09/06 19:11:38 bsiegert Exp $
+$NetBSD: CHANGES-2022,v 1.4363 2022/09/06 19:14:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6434,3 +6434,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/lemon to 1.0.3.39.3 [adam 2022-09-06]
 	Updated www/hs-bower-json to 1.1.0.0 [pho 2022-09-06]
 	Updated lang/go119 to 1.19.1 [bsiegert 2022-09-06]
+	Updated devel/py-astroid to 2.12.8 [adam 2022-09-06]
+	Updated devel/py-ipython to 8.5.0 [adam 2022-09-06]
+	Updated lang/python310 to 3.10.7 [adam 2022-09-06]
+	Updated lang/py310-html-docs to 3.10.7 [adam 2022-09-06]
