@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4360 2022/09/06 19:00:22 adam Exp $
+$NetBSD: CHANGES-2022,v 1.4361 2022/09/06 19:03:42 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6432,3 +6432,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/sqlite3-docs to 3.39.3 [adam 2022-09-06]
 	Updated databases/sqlite3-tcl to 3.39.3 [adam 2022-09-06]
 	Updated devel/lemon to 1.0.3.39.3 [adam 2022-09-06]
+	Updated www/hs-bower-json to 1.1.0.0 [pho 2022-09-06]
