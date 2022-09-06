@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4347 2022/09/05 20:53:49 leot Exp $
+$NetBSD: CHANGES-2022,v 1.4348 2022/09/06 06:44:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6411,3 +6411,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Added textproc/ruby-actionpack52-xml_parser version 2.0.1 [taca 2022-09-05]
 	Updated lang/rust-analyzer to 0.0.2022.08.22 [adam 2022-09-05]
 	Updated textproc/json2tsv to 1.0 [leot 2022-09-05]
+	Updated graphics/oxipng to 6.0.0 [adam 2022-09-06]
+	Updated devel/py-astroid to 2.12.6 [adam 2022-09-06]
