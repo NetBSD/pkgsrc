@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4348 2022/09/06 06:44:20 adam Exp $
+$NetBSD: CHANGES-2022,v 1.4349 2022/09/06 08:37:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6413,3 +6413,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/json2tsv to 1.0 [leot 2022-09-05]
 	Updated graphics/oxipng to 6.0.0 [adam 2022-09-06]
 	Updated devel/py-astroid to 2.12.6 [adam 2022-09-06]
+	Updated x11/libXft to 2.3.5 [wiz 2022-09-06]
