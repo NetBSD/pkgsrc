@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2022/02/11 09:46:16 pho Exp $
+$NetBSD: distinfo,v 1.9 2022/09/06 18:41:45 pho Exp $
 
-BLAKE2s (ansi-terminal-0.11.1.tar.gz) = 10aa4524581a54a2699580204c346f7ce1741a5bdd183301af6c230c162fb136
-SHA512 (ansi-terminal-0.11.1.tar.gz) = 184d1183a6ff3b5ffe053f9857d3e724909bc2b34efb37ed9d3ca332b90265c4eb40f5e174bd5fc588f697f92497d31cbe50cf55e7233e67c34508a04ad3902d
-Size (ansi-terminal-0.11.1.tar.gz) = 36857 bytes
+BLAKE2s (ansi-terminal-0.11.3.tar.gz) = 3bb209c33b1dd25894bff895ffeda4a940d84a8d31f0fbd3f4ee0ad5e1d0533d
+SHA512 (ansi-terminal-0.11.3.tar.gz) = 726b3c4494431940f4678b24ddccf809ce1d6b7a64595642edc019277e9989a4a9380cd979f3e72a921ae7185403fd3c9afe3c9e7431ae10796029aff2e3f3ca
+Size (ansi-terminal-0.11.3.tar.gz) = 37868 bytes
