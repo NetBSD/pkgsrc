@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2022/04/15 04:05:46 markd Exp $
+$NetBSD: distinfo,v 1.15 2022/09/06 20:59:14 markd Exp $
 
-BLAKE2s (lwarp.r62952.tar.xz) = 1cf7057701fc1ce168375b0fbd425eea6c05f859213e8b8652a217426de93ec0
-SHA512 (lwarp.r62952.tar.xz) = 649fac290658f746c221be7adcb2a62bdd993bd845f9811f23237ba62769c844bb67df5186112b0db48cf3e670192592eeff78a81ed3beb87d4a1242480295f3
-Size (lwarp.r62952.tar.xz) = 213084 bytes
+BLAKE2s (lwarp.r63905.tar.xz) = 23342f7bbe6562c5afbef1110bd9455b071d7b7cac806b0c8190b344f8855dfd
+SHA512 (lwarp.r63905.tar.xz) = 306b6181c767c21db2fa7068c6eac2583e9699968f0e5ba41f277c5b44f18aec7f38d5724f37a3da1e1709f66d8aa6d28c7ef33506efcd83305382acfb9c88d8
+Size (lwarp.r63905.tar.xz) = 213184 bytes
