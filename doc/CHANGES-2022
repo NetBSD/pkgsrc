@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4368 2022/09/06 21:04:32 markd Exp $
+$NetBSD: CHANGES-2022,v 1.4369 2022/09/06 22:47:33 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6452,3 +6452,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated print/tex-media9-doc to 1.25 [markd 2022-09-06]
 	Updated print/tex-pmhanguljamo to 0.5 [markd 2022-09-06]
 	Updated print/tex-pmhanguljamo-doc to 0.5 [markd 2022-09-06]
+	Updated x11/xfce4-notifyd to 0.6.4 [gutteridge 2022-09-06]
