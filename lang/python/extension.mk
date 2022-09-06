@@ -1,4 +1,4 @@
-# $NetBSD: extension.mk,v 1.59 2022/01/12 08:34:34 wiz Exp $
+# $NetBSD: extension.mk,v 1.60 2022/09/06 09:05:59 nia Exp $
 
 .include "../../lang/python/pyversion.mk"
 
@@ -8,7 +8,7 @@
 # eggs (see egg.mk), via wheels (see wheel.mk), or via more ad hoc
 # methods.
 
-.if defined(PYDISTUTILSPKG)
+.if !empty(PYDISTUTILSPKG:M[yY][eE][sS])
 .include "../../mk/bsd.prefs.mk"
 
 PYSETUP?=		setup.py
