@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/09/06 09:26:27 nia Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/09/06 11:05:55 nia Exp $
 bin/bmpanel2
 bin/bmpanel2cfg
 ${PYSITELIB}/bmpanel2.py
@@ -7,7 +7,7 @@ ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-@comment man/man1/bmpanel2.1
+man/man1/bmpanel2.1
 share/bmpanel2/themes/alduin-glossy/default_icon.png
 share/bmpanel2/themes/alduin-glossy/launchbar-arrow.png
 share/bmpanel2/themes/alduin-glossy/tb-left-active-hover.png
