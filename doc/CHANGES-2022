@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4357 2022/09/06 18:37:02 pho Exp $
+$NetBSD: CHANGES-2022,v 1.4358 2022/09/06 18:41:53 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6424,3 +6424,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated emulators/sameboy to 0.15.5 [nia 2022-09-06]
 	Added misc/open2300-pgsql 1.10nb1 [martin 2022-09-06]
 	Updated converters/hs-aeson-better-errors to 0.9.1.1 [pho 2022-09-06]
+	Updated devel/hs-ansi-terminal to 0.11.3 [pho 2022-09-06]
