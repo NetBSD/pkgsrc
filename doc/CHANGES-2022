@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4355 2022/09/06 15:57:34 martin Exp $
+$NetBSD: CHANGES-2022,v 1.4356 2022/09/06 15:58:58 martin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6422,4 +6422,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/firefox91 to 91.13.0 [nia 2022-09-06]
 	Updated emulators/libretro-sameboy to 0.15.5 [nia 2022-09-06]
 	Updated emulators/sameboy to 0.15.5 [nia 2022-09-06]
-	Updated misc/open2300-pgsql to 1.10nb1 [martin 2022-09-06]
+	Added misc/open2300-pgsql 1.10nb1 [martin 2022-09-06]
