@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2022/07/05 18:06:28 adam Exp $
+# $NetBSD: Makefile,v 1.8 2022/09/06 19:44:57 wiz Exp $
 
 DISTNAME=	ipyparallel-8.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
+PKGREVISION=	1
 CATEGORIES=	parallel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/ipyparallel/}
 
@@ -31,7 +32,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-testpath-[0-9]*:../../devel/py-testpath
 
 USE_LANGUAGES=	# none
 
-USE_PKG_RESOURCES=	yes
 PYTHON_SELF_CONFLICT=	yes
 
 REPLACE_PYTHON+=	ipyparallel/apps/iploggerapp.py
