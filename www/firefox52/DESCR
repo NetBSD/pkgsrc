@@ -12,3 +12,6 @@ CSS, JavaScript, C++, etc. Many extensions are available.
 This package provides Firefox 52 ESR. It is now unsupported and is
 provided only for platforms where the Rust toolchain required in
 newer Firefox versions is problematic.
+
+Note: Due to upstream's trademark policies, this package identifies as
+"Nightly" rather than "Firefox" by default.
