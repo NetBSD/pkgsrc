@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2022/08/20 08:08:12 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2022/09/06 18:36:43 pho Exp $
 
 BUILDLINK_TREE+=	hs-aeson-better-errors
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-aeson-better-errors
 HS_AESON_BETTER_ERRORS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-aeson-better-errors+=	hs-aeson-better-errors>=0.9.1
-BUILDLINK_ABI_DEPENDS.hs-aeson-better-errors+=	hs-aeson-better-errors>=0.9.1.0nb2
+BUILDLINK_ABI_DEPENDS.hs-aeson-better-errors+=	hs-aeson-better-errors>=0.9.1.1
 BUILDLINK_PKGSRCDIR.hs-aeson-better-errors?=	../../converters/hs-aeson-better-errors
 
 .include "../../converters/hs-aeson/buildlink3.mk"

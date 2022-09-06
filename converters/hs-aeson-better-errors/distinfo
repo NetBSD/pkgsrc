@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/02/23 16:08:53 pho Exp $
+$NetBSD: distinfo,v 1.2 2022/09/06 18:36:43 pho Exp $
 
-BLAKE2s (aeson-better-errors-0.9.1.0.tar.gz) = 624b0cd5a9158b53c8f584b744b1a6f8b879d08048579f639971ec2d1db66001
-SHA512 (aeson-better-errors-0.9.1.0.tar.gz) = 3ff1a0f85f39df01f8cfa0fe4682a97f69a324c8b344f7bb005a84e4adb4c0dabe463e3a029a74012b101413532d3f5d3a4be92671d14b5387fb61ca8e1540c6
-Size (aeson-better-errors-0.9.1.0.tar.gz) = 8401 bytes
-SHA1 (patch-src_Data_Aeson_BetterErrors_Internal.hs) = 544645a1da856bae7c5a62e2b8323ba13b814df9
+BLAKE2s (aeson-better-errors-0.9.1.1.tar.gz) = 0a1a2eab10d726175e96c3c0b4784ebad7c2a8c05181421f7c7a890fa853a124
+SHA512 (aeson-better-errors-0.9.1.1.tar.gz) = 9da060f700d1f62a43a2cde336e7440f684dff7e3859d9f4e4e6a318484373531add4da0b0fe63000450e606c37a95819eb5aed25c57fe31e35c9a20aee3f53a
+Size (aeson-better-errors-0.9.1.1.tar.gz) = 8585 bytes
