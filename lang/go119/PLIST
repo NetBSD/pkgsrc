@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2022/08/21 11:42:19 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/09/06 19:11:13 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go119/CONTRIBUTING.md
@@ -2634,6 +2634,7 @@ go119/src/cmd/go/testdata/script/help.txt
 go119/src/cmd/go/testdata/script/import_cycle.txt
 go119/src/cmd/go/testdata/script/import_ignore.txt
 go119/src/cmd/go/testdata/script/import_main.txt
+go119/src/cmd/go/testdata/script/import_unix_tag.txt
 go119/src/cmd/go/testdata/script/index.txt
 go119/src/cmd/go/testdata/script/install_cgo_excluded.txt
 go119/src/cmd/go/testdata/script/install_cleans_build.txt
@@ -3102,6 +3103,7 @@ go119/src/cmd/go/testdata/script/test_race.txt
 go119/src/cmd/go/testdata/script/test_race_cover_mode_issue20435.txt
 go119/src/cmd/go/testdata/script/test_race_install.txt
 go119/src/cmd/go/testdata/script/test_race_install_cgo.txt
+go119/src/cmd/go/testdata/script/test_race_tag.txt
 go119/src/cmd/go/testdata/script/test_rebuildall.txt
 go119/src/cmd/go/testdata/script/test_regexps.txt
 go119/src/cmd/go/testdata/script/test_relative_cmdline.txt
@@ -11214,7 +11216,12 @@ go119/test/fixedbugs/issue53619.go
 go119/test/fixedbugs/issue53635.go
 go119/test/fixedbugs/issue53653.go
 go119/test/fixedbugs/issue53653.out
+go119/test/fixedbugs/issue53702.go
 go119/test/fixedbugs/issue5373.go
+go119/test/fixedbugs/issue53982.go
+go119/test/fixedbugs/issue54220.go
+go119/test/fixedbugs/issue54467.go
+go119/test/fixedbugs/issue54638.go
 go119/test/fixedbugs/issue5470.dir/a.go
 go119/test/fixedbugs/issue5470.dir/b.go
 go119/test/fixedbugs/issue5470.go
@@ -12073,6 +12080,9 @@ go119/test/typeparam/issue53419.go
 go119/test/typeparam/issue53477.go
 go119/test/typeparam/issue53762.go
 go119/test/typeparam/issue54135.go
+go119/test/typeparam/issue54302.dir/a.go
+go119/test/typeparam/issue54302.dir/main.go
+go119/test/typeparam/issue54302.go
 go119/test/typeparam/list.go
 go119/test/typeparam/list2.go
 go119/test/typeparam/listimp.dir/a.go
