@@ -1,12 +1,17 @@
-# $NetBSD: Makefile,v 1.3 2022/08/20 08:08:12 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/09/06 18:36:43 pho Exp $
 
-DISTNAME=	aeson-better-errors-0.9.1.0
-PKGREVISION=	2
+DISTNAME=	aeson-better-errors-0.9.1.1
 CATEGORIES=	converters
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Better error messages when decoding JSON values
 LICENSE=	mit
+
+# Relax version constraints.
+SUBST_CLASSES+=		cabal
+SUBST_STAGE.cabal=	post-extract
+SUBST_FILES.cabal=	aeson-better-errors.cabal
+SUBST_SED.cabal=	-e 's/aeson >=0.7 && <1.6 || >=2.0 && <2.1/aeson/'
 
 .include "../../converters/hs-aeson/buildlink3.mk"
 .include "../../devel/hs-dlist/buildlink3.mk"
