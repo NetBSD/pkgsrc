@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:24:20 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/09/06 19:18:33 pho Exp $
 
-BLAKE2s (clock-0.8.2.tar.gz) = c8ea45800d69470ec3af201311100c69fdbd5c51ae9055d7f16e4cbe8315aa56
-SHA512 (clock-0.8.2.tar.gz) = 42a7681ae8f1357c4ae39f51a15d7a00f3d587c8fc787d648308f914702471e6f9b32ee51fa1e8164a77f195600fdab8e27d45aa13a7052a921c4b8c246b891e
-Size (clock-0.8.2.tar.gz) = 7604 bytes
+BLAKE2s (clock-0.8.3.tar.gz) = 67854ccfbbbb4f86e55342b3017d5ba34e71fab0c8696facf5ddab7fcad0c340
+SHA512 (clock-0.8.3.tar.gz) = 86424c9593b9851a3c59ceb23a1665526a0f7e47a18322aa772feff2babb8799c1c2187005639882e4a1553cc327e78a25e85ebe87dec6de17cad050b526ff6f
+Size (clock-0.8.3.tar.gz) = 9099 bytes
 SHA1 (patch-System_Clock.hsc) = 4f36a3d3626de93814b028e06ee788f7ce1ba6bb
