@@ -1,13 +1,17 @@
-@comment $NetBSD: PLIST,v 1.2 2021/04/24 05:17:54 pho Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/09/06 19:18:33 pho Exp $
 lib/clock-${PKGVERSION}/${HS_VERSION}/package-description
 lib/clock-${PKGVERSION}/${HS_VERSION}/package-id
 lib/${HS_PLATFORM}/${HS_PKGID}/System/Clock.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/System/Clock.hi
 lib/${HS_PLATFORM}/${HS_PKGID}/System/Clock.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/System/Clock/Seconds.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/System/Clock/Seconds.hi
+lib/${HS_PLATFORM}/${HS_PKGID}/System/Clock/Seconds.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 share/doc/${HS_PLATFORM}/clock-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/clock-${PKGVERSION}/html/System-Clock-Seconds.html
 share/doc/${HS_PLATFORM}/clock-${PKGVERSION}/html/System-Clock.html
 share/doc/${HS_PLATFORM}/clock-${PKGVERSION}/html/clock.haddock
 share/doc/${HS_PLATFORM}/clock-${PKGVERSION}/html/doc-index.html
