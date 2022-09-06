@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.568 2022/08/15 14:44:58 wiz Exp $
+# $NetBSD: Makefile,v 1.569 2022/09/06 15:56:52 martin Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -213,6 +213,7 @@ SUBDIR+=	ocaml-opam-file-format
 SUBDIR+=	ocaml-topkg
 SUBDIR+=	open2300
 SUBDIR+=	open2300-mysql
+SUBDIR+=	open2300-pgsql
 SUBDIR+=	orca
 SUBDIR+=	p5-App-MrShell
 SUBDIR+=	p5-Array-PrintCols
