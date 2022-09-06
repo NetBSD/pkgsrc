@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2022/04/08 21:20:36 markd Exp $
+# $NetBSD: Makefile,v 1.8 2022/09/06 20:47:39 markd Exp $
 
 DISTNAME=	etoc
-PKGNAME=	tex-${DISTNAME}-1.09e
-TEXLIVE_REV=	60589
+PKGNAME=	tex-${DISTNAME}-1.09f
+TEXLIVE_REV=	64249
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/etoc
