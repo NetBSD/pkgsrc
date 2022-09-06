@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4359 2022/09/06 18:48:46 adam Exp $
+$NetBSD: CHANGES-2022,v 1.4360 2022/09/06 19:00:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6428,3 +6428,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/nmap to 7.93 [adam 2022-09-06]
 	Updated net/ndiff to 7.93 [adam 2022-09-06]
 	Updated net/zenmap to 7.93 [adam 2022-09-06]
+	Updated databases/sqlite3 to 3.39.3 [adam 2022-09-06]
+	Updated databases/sqlite3-docs to 3.39.3 [adam 2022-09-06]
+	Updated databases/sqlite3-tcl to 3.39.3 [adam 2022-09-06]
+	Updated devel/lemon to 1.0.3.39.3 [adam 2022-09-06]
