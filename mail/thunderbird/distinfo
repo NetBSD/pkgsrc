@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.251 2021/10/26 10:54:32 nia Exp $
+$NetBSD: distinfo,v 1.252 2022/09/07 09:37:15 pho Exp $
 
 BLAKE2s (thunderbird-78.12.0.source.tar.xz) = a16874486907a6f374d61c016d43258ed1765669bdef665610b46e796f28faf9
 SHA512 (thunderbird-78.12.0.source.tar.xz) = 8a9275f6a454b16215e9440d8b68926e56221dbb416f77ea0cd0a42853bdd26f35514e792564879c387271bd43d8ee966577f133f8ae7781f43e8bec9ab78696
@@ -16,6 +16,7 @@ SHA1 (patch-gfx_angle_checkout_src_compiler_translator_InfoSink.h) = 434ba731268
 SHA1 (patch-gfx_cairo_cairo_src_cairo-type1-subset.c) = 92287c76edfecf2de6aebdd401d77c26f69b2e81
 SHA1 (patch-gfx_skia_skia_src_core_SkCpu.cpp) = 62d0d3a41fd0302c7b066ed60b15ed9db9f485de
 SHA1 (patch-gfx_thebes_gfxPlatform.cpp) = c1644366c4f40c52446d102209a337aadfad696c
+SHA1 (patch-gfx_webrender__bindings_webrender__ffi.h) = 2084d03b2ea9f78dff4a51c3543cd78420695fe1
 SHA1 (patch-ipc_chromium_src_base_message__pump__libevent.cc) = 2a0d47b075ae09d7bd697714919c8861e690772a
 SHA1 (patch-ipc_chromium_src_base_platform__thread__posix.cc) = 64475f51534ac683c5b42bcbbd767db87d0ef87b
 SHA1 (patch-ipc_glue_GeckoChildProcessHost.cpp) = 76ea3f4d4cb2cac5ddf713b73cf9c5da47ae40f0
