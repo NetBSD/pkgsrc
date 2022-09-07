@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2022/08/12 16:15:04 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/09/07 06:36:33 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go118/AUTHORS
@@ -585,7 +585,6 @@ go118/pkg/${GO_PLATFORM}/cmd/vendor/github.com/google/pprof/internal/symbolizer.
 go118/pkg/${GO_PLATFORM}/cmd/vendor/github.com/google/pprof/internal/symbolz.a
 go118/pkg/${GO_PLATFORM}/cmd/vendor/github.com/google/pprof/internal/transport.a
 go118/pkg/${GO_PLATFORM}/cmd/vendor/github.com/google/pprof/profile.a
-go118/pkg/${GO_PLATFORM}/cmd/vendor/github.com/google/pprof/third_party/d3.a
 go118/pkg/${GO_PLATFORM}/cmd/vendor/github.com/google/pprof/third_party/d3flamegraph.a
 go118/pkg/${GO_PLATFORM}/cmd/vendor/github.com/google/pprof/third_party/svgpan.a
 go118/pkg/${GO_PLATFORM}/cmd/vendor/github.com/ianlancetaylor/demangle.a
@@ -3014,6 +3013,7 @@ go118/src/cmd/go/testdata/script/test_race.txt
 go118/src/cmd/go/testdata/script/test_race_cover_mode_issue20435.txt
 go118/src/cmd/go/testdata/script/test_race_install.txt
 go118/src/cmd/go/testdata/script/test_race_install_cgo.txt
+go118/src/cmd/go/testdata/script/test_race_tag.txt
 go118/src/cmd/go/testdata/script/test_rebuildall.txt
 go118/src/cmd/go/testdata/script/test_regexps.txt
 go118/src/cmd/go/testdata/script/test_relative_cmdline.txt
@@ -3531,6 +3531,14 @@ go118/src/cmd/vendor/github.com/google/pprof/internal/driver/driver_focus.go
 go118/src/cmd/vendor/github.com/google/pprof/internal/driver/fetch.go
 go118/src/cmd/vendor/github.com/google/pprof/internal/driver/flags.go
 go118/src/cmd/vendor/github.com/google/pprof/internal/driver/flamegraph.go
+go118/src/cmd/vendor/github.com/google/pprof/internal/driver/html/common.css
+go118/src/cmd/vendor/github.com/google/pprof/internal/driver/html/common.js
+go118/src/cmd/vendor/github.com/google/pprof/internal/driver/html/flamegraph.html
+go118/src/cmd/vendor/github.com/google/pprof/internal/driver/html/graph.html
+go118/src/cmd/vendor/github.com/google/pprof/internal/driver/html/header.html
+go118/src/cmd/vendor/github.com/google/pprof/internal/driver/html/plaintext.html
+go118/src/cmd/vendor/github.com/google/pprof/internal/driver/html/source.html
+go118/src/cmd/vendor/github.com/google/pprof/internal/driver/html/top.html
 go118/src/cmd/vendor/github.com/google/pprof/internal/driver/interactive.go
 go118/src/cmd/vendor/github.com/google/pprof/internal/driver/options.go
 go118/src/cmd/vendor/github.com/google/pprof/internal/driver/settings.go
@@ -3560,11 +3568,15 @@ go118/src/cmd/vendor/github.com/google/pprof/profile/merge.go
 go118/src/cmd/vendor/github.com/google/pprof/profile/profile.go
 go118/src/cmd/vendor/github.com/google/pprof/profile/proto.go
 go118/src/cmd/vendor/github.com/google/pprof/profile/prune.go
-go118/src/cmd/vendor/github.com/google/pprof/third_party/d3/LICENSE
-go118/src/cmd/vendor/github.com/google/pprof/third_party/d3/README.md
-go118/src/cmd/vendor/github.com/google/pprof/third_party/d3/d3.go
-go118/src/cmd/vendor/github.com/google/pprof/third_party/d3flamegraph/LICENSE
+go118/src/cmd/vendor/github.com/google/pprof/third_party/d3flamegraph/D3_FLAME_GRAPH_LICENSE
+go118/src/cmd/vendor/github.com/google/pprof/third_party/d3flamegraph/D3_LICENSE
+go118/src/cmd/vendor/github.com/google/pprof/third_party/d3flamegraph/README.md
 go118/src/cmd/vendor/github.com/google/pprof/third_party/d3flamegraph/d3_flame_graph.go
+go118/src/cmd/vendor/github.com/google/pprof/third_party/d3flamegraph/index.js
+go118/src/cmd/vendor/github.com/google/pprof/third_party/d3flamegraph/package-lock.json
+go118/src/cmd/vendor/github.com/google/pprof/third_party/d3flamegraph/package.json
+go118/src/cmd/vendor/github.com/google/pprof/third_party/d3flamegraph/update.sh
+go118/src/cmd/vendor/github.com/google/pprof/third_party/d3flamegraph/webpack.config.js
 go118/src/cmd/vendor/github.com/google/pprof/third_party/svgpan/LICENSE
 go118/src/cmd/vendor/github.com/google/pprof/third_party/svgpan/svgpan.go
 go118/src/cmd/vendor/github.com/ianlancetaylor/demangle/.gitignore
@@ -3756,6 +3768,7 @@ go118/src/cmd/vendor/golang.org/x/sys/unix/syscall_freebsd_arm64.go
 go118/src/cmd/vendor/golang.org/x/sys/unix/syscall_illumos.go
 go118/src/cmd/vendor/golang.org/x/sys/unix/syscall_linux.go
 go118/src/cmd/vendor/golang.org/x/sys/unix/syscall_linux_386.go
+go118/src/cmd/vendor/golang.org/x/sys/unix/syscall_linux_alarm.go
 go118/src/cmd/vendor/golang.org/x/sys/unix/syscall_linux_amd64.go
 go118/src/cmd/vendor/golang.org/x/sys/unix/syscall_linux_amd64_gc.go
 go118/src/cmd/vendor/golang.org/x/sys/unix/syscall_linux_arm.go
@@ -10787,6 +10800,9 @@ go118/test/fixedbugs/issue5260.dir/a.go
 go118/test/fixedbugs/issue5260.dir/b.go
 go118/test/fixedbugs/issue5260.go
 go118/test/fixedbugs/issue52612.go
+go118/test/fixedbugs/issue52788.go
+go118/test/fixedbugs/issue52788a.go
+go118/test/fixedbugs/issue52788a.out
 go118/test/fixedbugs/issue5291.dir/pkg1.go
 go118/test/fixedbugs/issue5291.dir/prog.go
 go118/test/fixedbugs/issue5291.go
@@ -10797,7 +10813,9 @@ go118/test/fixedbugs/issue53454.go
 go118/test/fixedbugs/issue5358.go
 go118/test/fixedbugs/issue53600.go
 go118/test/fixedbugs/issue53600.out
+go118/test/fixedbugs/issue53702.go
 go118/test/fixedbugs/issue5373.go
+go118/test/fixedbugs/issue54467.go
 go118/test/fixedbugs/issue5470.dir/a.go
 go118/test/fixedbugs/issue5470.dir/b.go
 go118/test/fixedbugs/issue5470.go
