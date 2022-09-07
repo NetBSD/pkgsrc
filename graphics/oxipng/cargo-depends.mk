@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.4 2022/09/06 06:40:12 adam Exp $
+# $NetBSD: cargo-depends.mk,v 1.5 2022/09/07 19:48:47 adam Exp $
 
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
 CARGO_CRATE_DEPENDS+=	adler32-1.2.0
@@ -22,9 +22,9 @@ CARGO_CRATE_DEPENDS+=	crossbeam-channel-0.5.6
 CARGO_CRATE_DEPENDS+=	crossbeam-deque-0.8.2
 CARGO_CRATE_DEPENDS+=	crossbeam-epoch-0.9.10
 CARGO_CRATE_DEPENDS+=	crossbeam-utils-0.8.11
-CARGO_CRATE_DEPENDS+=	deflate-1.0.0
 CARGO_CRATE_DEPENDS+=	either-1.8.0
 CARGO_CRATE_DEPENDS+=	filetime-0.2.17
+CARGO_CRATE_DEPENDS+=	flate2-1.0.24
 CARGO_CRATE_DEPENDS+=	glob-0.3.0
 CARGO_CRATE_DEPENDS+=	hashbrown-0.12.3
 CARGO_CRATE_DEPENDS+=	hermit-abi-0.1.19
@@ -45,7 +45,7 @@ CARGO_CRATE_DEPENDS+=	num-traits-0.2.15
 CARGO_CRATE_DEPENDS+=	num_cpus-1.13.1
 CARGO_CRATE_DEPENDS+=	once_cell-1.14.0
 CARGO_CRATE_DEPENDS+=	os_str_bytes-6.3.0
-CARGO_CRATE_DEPENDS+=	png-0.17.5
+CARGO_CRATE_DEPENDS+=	png-0.17.6
 CARGO_CRATE_DEPENDS+=	rayon-1.5.3
 CARGO_CRATE_DEPENDS+=	rayon-core-1.9.3
 CARGO_CRATE_DEPENDS+=	redox_syscall-0.2.16
@@ -70,4 +70,4 @@ CARGO_CRATE_DEPENDS+=	windows_i686_gnu-0.36.1
 CARGO_CRATE_DEPENDS+=	windows_i686_msvc-0.36.1
 CARGO_CRATE_DEPENDS+=	windows_x86_64_gnu-0.36.1
 CARGO_CRATE_DEPENDS+=	windows_x86_64_msvc-0.36.1
-CARGO_CRATE_DEPENDS+=	zopfli-0.7.0
+CARGO_CRATE_DEPENDS+=	zopfli-0.7.1
