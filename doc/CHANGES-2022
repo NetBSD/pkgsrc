@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4378 2022/09/07 08:04:42 adam Exp $
+$NetBSD: CHANGES-2022,v 1.4379 2022/09/07 15:14:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6463,3 +6463,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/hs-protolude to 0.3.2nb1 [pho 2022-09-07]
 	Updated security/py-cryptography to 38.0.0 [adam 2022-09-07]
 	Updated security/py-cryptography_vectors to 38.0.0 [adam 2022-09-07]
+	Updated math/py-numpy to 1.23.2 [adam 2022-09-07]
+	Updated fonts/py-fonttools to 4.37.1 [adam 2022-09-07]
