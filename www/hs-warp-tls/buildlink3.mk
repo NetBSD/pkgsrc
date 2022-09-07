@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2022/08/22 10:13:26 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2022/09/07 06:50:52 pho Exp $
 
 BUILDLINK_TREE+=	hs-warp-tls
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-warp-tls
 HS_WARP_TLS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-warp-tls+=	hs-warp-tls>=3.3.2
-BUILDLINK_ABI_DEPENDS.hs-warp-tls+=	hs-warp-tls>=3.3.2nb4
+BUILDLINK_ABI_DEPENDS.hs-warp-tls+=	hs-warp-tls>=3.3.2nb5
 BUILDLINK_PKGSRCDIR.hs-warp-tls?=	../../www/hs-warp-tls
 
 .include "../../security/hs-cryptonite/buildlink3.mk"

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2022/02/26 03:58:22 pho Exp $
+# $NetBSD: Makefile,v 1.5 2022/09/07 06:50:50 pho Exp $
 
 DISTNAME=	tls-session-manager-0.0.4
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	security
 
 MAINTAINER=	pho@cielonegro.org

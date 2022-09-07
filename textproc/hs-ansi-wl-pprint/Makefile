@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2022/02/26 03:58:24 pho Exp $
+# $NetBSD: Makefile,v 1.6 2022/09/07 06:50:51 pho Exp $
 
 DISTNAME=	ansi-wl-pprint-0.6.9
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	textproc
 
 MAINTAINER=	pho@cielonegro.org
