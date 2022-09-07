@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.97 2022/06/07 11:23:03 jperkin Exp $
+# $NetBSD: Makefile,v 1.98 2022/09/07 15:11:56 adam Exp $
 
-DISTNAME=	numpy-1.22.4
+DISTNAME=	numpy-1.23.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/numpy/}
-EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.numpy.org/
@@ -15,6 +13,7 @@ LICENSE=	modified-bsd
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.2.0:../../devel/py-typing-extensions
 
 # error: 'for' loop initial declarations are only allowed in C99 mode
 USE_LANGUAGES=		c99 c++11 fortran
@@ -65,7 +64,7 @@ post-install:
 
 do-test:
 	cd ${WRKDIR} && \
-	${RUN} PYTHONPATH=${DESTDIR}${PREFIX}/${PYSITELIB} ${PYTHONBIN} -c "import numpy; numpy.test()"
+	${SETENV} ${TEST_ENV} PYTHONPATH=${DESTDIR}${PREFIX}/${PYSITELIB} ${PYTHONBIN} -c "import numpy; numpy.test()"
 
 BUILDLINK_API_DEPENDS.py-cython+=	${PYPKGPREFIX}-cython>=0.29.21
 .include "../../devel/py-cython/buildlink3.mk"
