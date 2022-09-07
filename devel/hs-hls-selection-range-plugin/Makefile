@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2022/08/22 10:13:23 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/09/07 06:50:47 pho Exp $
 
 DISTNAME=	hls-selection-range-plugin-1.0.0.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

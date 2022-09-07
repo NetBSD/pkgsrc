@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2022/08/29 12:06:42 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/09/07 06:50:49 pho Exp $
 
 DISTNAME=	purescript-cst-0.5.0.0
+PKGREVISION=	1
 CATEGORIES=	lang
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
