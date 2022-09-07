@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/09/07 02:56:00 pho Exp $
+
+BLAKE2s (newtype-0.2.2.0.tar.gz) = 56e1cba3ee7d98ed60d9384407df0bdb86e6faf577b6e756f573fd484c18cf16
+SHA512 (newtype-0.2.2.0.tar.gz) = 9d8b344ac5f6ff62d8100b95dd879715639af2d8d1f63a8cb17a18fa7c4f427eade49aa3d6b47034351ac0f2cb5061013f6321038bff1053eb3aa84faf157a5b
+Size (newtype-0.2.2.0.tar.gz) = 4853 bytes
