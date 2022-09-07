@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4380 2022/09/07 15:34:00 adam Exp $
+$NetBSD: CHANGES-2022,v 1.4381 2022/09/07 19:51:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6469,3 +6469,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/python39 to 3.9.14 [adam 2022-09-07]
 	Updated lang/py38-html-docs to 3.8.14 [adam 2022-09-07]
 	Updated lang/py39-html-docs to 3.9.14 [adam 2022-09-07]
+	Updated graphics/oxipng to 6.0.1 [adam 2022-09-07]
+	Updated converters/py-fastbencode to 0.0.11 [adam 2022-09-07]
