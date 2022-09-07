@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22165 2022/09/05 19:10:07 adam Exp $
+$NetBSD: TODO,v 1.22166 2022/09/07 22:42:29 taca Exp $
 
 Suggested new packages
 ======================
@@ -1413,6 +1413,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rvm-1.20
 	o sabayon-2.30.1
 	o sablecc-3.7
+	o samba-4.16.5
 	o sarg-2.4.0
 	o sasm-3.12.1
 	o saytime-20050127
