@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2022/09/07 02:53:51 pho Exp $
+# $NetBSD: Makefile,v 1.7 2022/09/07 06:50:53 pho Exp $
 
 DISTNAME=	purescript-0.15.4
 PKGNAME=	${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	lang
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
