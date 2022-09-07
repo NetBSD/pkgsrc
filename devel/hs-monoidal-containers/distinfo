@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/09/07 02:57:02 pho Exp $
+
+BLAKE2s (monoidal-containers-0.6.2.0.tar.gz) = 2482dcb32a6c6ebdbd94d3b853383bbb72a60473d4fd6c30d90af7778f04d556
+SHA512 (monoidal-containers-0.6.2.0.tar.gz) = 4572c628ebc7c7e5b467157772b21f33af716d852280d92aedf35329b84837beb7017b3350248579876f7519db89ee24b5eaebced1a216151e57df751c4fda6c
+Size (monoidal-containers-0.6.2.0.tar.gz) = 12868 bytes
