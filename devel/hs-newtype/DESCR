@@ -1,0 +1,3 @@
+Per Conor McBride, the "Newtype" typeclass represents the packing and
+unpacking of a newtype, and allows you to operate under that newtype with
+functions such as "ala".
