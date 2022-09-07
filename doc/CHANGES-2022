@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4370 2022/09/07 00:58:55 pho Exp $
+$NetBSD: CHANGES-2022,v 1.4371 2022/09/07 01:36:40 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6454,3 +6454,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated print/tex-pmhanguljamo-doc to 0.5 [markd 2022-09-06]
 	Updated x11/xfce4-notifyd to 0.6.4 [gutteridge 2022-09-06]
 	Updated security/hs-cryptonite to 0.30 [pho 2022-09-07]
+	Updated devel/hs-memory to 0.18.0 [pho 2022-09-07]
