@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4371 2022/09/07 01:36:40 pho Exp $
+$NetBSD: CHANGES-2022,v 1.4372 2022/09/07 02:18:16 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6455,3 +6455,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/xfce4-notifyd to 0.6.4 [gutteridge 2022-09-06]
 	Updated security/hs-cryptonite to 0.30 [pho 2022-09-07]
 	Updated devel/hs-memory to 0.18.0 [pho 2022-09-07]
+	Updated sysutils/hs-typed-process to 0.2.10.1 [pho 2022-09-07]
