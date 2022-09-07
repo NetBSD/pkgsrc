@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2022/08/22 10:13:26 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2022/09/07 02:53:51 pho Exp $
 
-DISTNAME=	purescript-0.14.5
+DISTNAME=	purescript-0.15.4
 PKGNAME=	${DISTNAME}
-PKGREVISION=	4
 CATEGORIES=	lang
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -30,6 +29,28 @@ HASKELL_ENABLE_LIBRARY_PROFILING=	no
 OPTPARSE_APPLICATIVE_EXECUTABLES+=	purs
 .include "../../devel/hs-optparse-applicative/application.mk"
 
+# Relax version constraints.
+SUBST_CLASSES+=		cabal
+SUBST_STAGE.cabal=	post-extract
+SUBST_FILES.cabal=	purescript.cabal
+#   These constraints can only be resolved with GHC 9.2.3 which we haven't
+#   packaged yet.
+SUBST_SED.cabal+=	-e 's/Cabal >=3.6.3.0 && <3.7/Cabal/'
+SUBST_SED.cabal+=	-e 's/base >=4.16.2.0 && <4.17/base/'
+SUBST_SED.cabal+=	-e 's/bytestring >=0.11.3.1 && <0.12/bytestring/'
+SUBST_SED.cabal+=	-e 's/deepseq >=1.4.6.1 && <1.5/deepseq/'
+SUBST_SED.cabal+=	-e 's/filepath >=1.4.2.2 && <1.5/filepath/'
+SUBST_SED.cabal+=	-e 's/parsec >=3.1.15.0 && <3.2/parsec/'
+SUBST_SED.cabal+=	-e 's/stm >=2.5.0.2 && <2.6/stm/'
+SUBST_SED.cabal+=	-e 's/process ==1.6.13.1/process/'
+#   These constraints can only be resolved with older packages than what we
+#   provide.
+SUBST_SED.cabal+=	-e 's/aeson >=2.0.3.0 && <2.1/aeson/'
+SUBST_SED.cabal+=	-e 's/language-javascript ==0.7.0.0/language-javascript/'
+SUBST_SED.cabal+=	-e 's/lens >=5.1.1 && <5.2/lens/'
+SUBST_SED.cabal+=	-e 's/memory >=0.17.0 && <0.18/memory/'
+SUBST_SED.cabal+=	-e 's/vector >=0.12.3.1 && <0.13/vector/'
+
 # lib:purescript
 .include "../../converters/hs-aeson/buildlink3.mk"
 .include "../../converters/hs-aeson-better-errors/buildlink3.mk"
@@ -50,17 +71,16 @@ OPTPARSE_APPLICATIVE_EXECUTABLES+=	purs
 .include "../../devel/hs-fsnotify/buildlink3.mk"
 .include "../../textproc/hs-Glob/buildlink3.mk"
 .include "../../lang/hs-language-javascript/buildlink3.mk"
+.include "../../devel/hs-lens/buildlink3.mk"
 .include "../../devel/hs-lifted-async/buildlink3.mk"
 .include "../../devel/hs-lifted-base/buildlink3.mk"
 .include "../../devel/hs-memory/buildlink3.mk"
-.include "../../devel/hs-microlens/buildlink3.mk"
-.include "../../devel/hs-microlens-platform/buildlink3.mk"
 .include "../../devel/hs-monad-control/buildlink3.mk"
 .include "../../devel/hs-monad-logger/buildlink3.mk"
+.include "../../devel/hs-monoidal-containers/buildlink3.mk"
 .include "../../devel/hs-parallel/buildlink3.mk"
 .include "../../devel/hs-pattern-arrows/buildlink3.mk"
 .include "../../devel/hs-protolude/buildlink3.mk"
-.include "../../lang/hs-purescript-cst/buildlink3.mk"
 .include "../../textproc/hs-regex-tdfa/buildlink3.mk"
 .include "../../devel/hs-safe/buildlink3.mk"
 .include "../../math/hs-scientific/buildlink3.mk"
@@ -74,6 +94,7 @@ OPTPARSE_APPLICATIVE_EXECUTABLES+=	purs
 .include "../../devel/hs-these/buildlink3.mk"
 .include "../../devel/hs-transformers-base/buildlink3.mk"
 .include "../../devel/hs-transformers-compat/buildlink3.mk"
+.include "../../sysutils/hs-typed-process/buildlink3.mk"
 .include "../../devel/hs-unordered-containers/buildlink3.mk"
 .include "../../devel/hs-utf8-string/buildlink3.mk"
 .include "../../devel/hs-vector/buildlink3.mk"
