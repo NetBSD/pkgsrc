@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2022/02/11 13:10:15 pho Exp $
+$NetBSD: distinfo,v 1.6 2022/09/07 00:58:45 pho Exp $
 
-BLAKE2s (cryptonite-0.29.tar.gz) = 2fd21184176bc46bdcad80c9194c66d6dbecd159b1ecdcc436d854922bc435ef
-SHA512 (cryptonite-0.29.tar.gz) = 7f80268e429a9f700709ebdb00da1e2831f2edca064feaa06a9050060fea572abc2fdfee976f60b18a4085cf3a3533e70129104c82e7b050358a97e8575928f2
-Size (cryptonite-0.29.tar.gz) = 622119 bytes
-SHA1 (patch-Crypto_Internal_CompatPrim.hs) = 8828755bbae0cd36e3e934a83216876be5b93138
+BLAKE2s (cryptonite-0.30.tar.gz) = 00b434b71d9c3c1d8808186d0cf036e5497bdd2858ecd8b3f936456b9fc3d4fe
+SHA512 (cryptonite-0.30.tar.gz) = 519120263fb7c2b9f910e48cf43feaca07f7e705ea70c578da362dafa637b654cab90e3b9484497e33a6fdd5b8f867c0ede60d0dddba02602044b9b3de502d16
+Size (cryptonite-0.30.tar.gz) = 621062 bytes
