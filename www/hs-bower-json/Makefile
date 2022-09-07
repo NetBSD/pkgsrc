@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2022/09/06 19:18:14 pho Exp $
+# $NetBSD: Makefile,v 1.6 2022/09/07 06:50:52 pho Exp $
 
 DISTNAME=	bower-json-1.1.0.0
+PKGREVISION=	1
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2022/02/26 03:58:21 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2022/09/07 06:50:50 pho Exp $
 
 BUILDLINK_TREE+=	hs-tls
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-tls
 HS_TLS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-tls+=	hs-tls>=1.5.7
-BUILDLINK_ABI_DEPENDS.hs-tls+=	hs-tls>=1.5.7nb2
+BUILDLINK_ABI_DEPENDS.hs-tls+=	hs-tls>=1.5.7nb3
 BUILDLINK_PKGSRCDIR.hs-tls?=	../../security/hs-tls
 
 .include "../../devel/hs-asn1-encoding/buildlink3.mk"
