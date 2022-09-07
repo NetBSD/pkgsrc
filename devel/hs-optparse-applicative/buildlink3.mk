@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2022/02/26 03:58:03 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2022/09/07 06:50:48 pho Exp $
 
 BUILDLINK_TREE+=	hs-optparse-applicative
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-optparse-applicative
 HS_OPTPARSE_APPLICATIVE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-optparse-applicative+=	hs-optparse-applicative>=0.17.0
-BUILDLINK_ABI_DEPENDS.hs-optparse-applicative+=	hs-optparse-applicative>=0.17.0.0nb2
+BUILDLINK_ABI_DEPENDS.hs-optparse-applicative+=	hs-optparse-applicative>=0.17.0.0nb3
 BUILDLINK_PKGSRCDIR.hs-optparse-applicative?=	../../devel/hs-optparse-applicative
 
 .include "../../textproc/hs-ansi-wl-pprint/buildlink3.mk"
