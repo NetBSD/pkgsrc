@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.21 2022/06/30 11:18:34 nia Exp $
+# $NetBSD: Makefile,v 1.22 2022/09/07 15:33:19 adam Exp $
 
-PKGREVISION= 1
 .include "dist.mk"
 
 PKGNAME=	python39-${PY_DISTVERSION}
