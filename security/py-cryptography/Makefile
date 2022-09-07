@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.88 2022/07/09 18:18:00 gutteridge Exp $
+# $NetBSD: Makefile,v 1.89 2022/09/07 08:04:18 adam Exp $
 
-DISTNAME=	cryptography-37.0.4
+DISTNAME=	cryptography-38.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cryptography/}
@@ -39,7 +39,7 @@ post-install:
 .endif
 
 do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
 .include "cargo-depends.mk"
 
