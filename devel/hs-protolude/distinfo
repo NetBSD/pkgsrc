@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/02/23 16:18:22 pho Exp $
+$NetBSD: distinfo,v 1.2 2022/09/07 06:43:41 pho Exp $
 
-BLAKE2s (protolude-0.3.0.tar.gz) = 5a3480875bcea6b86ba51e72256d319083d53837ede620b9a69cec7bb285aea8
-SHA512 (protolude-0.3.0.tar.gz) = 0941e344320e09fca457ce0be31b1fbb7c715a11ea371263d029942cb649bfb1194b012493e31697c5a05bd3e4de5108bcd2c82c79c9f2f30b260959ec8f0738
-Size (protolude-0.3.0.tar.gz) = 19645 bytes
-SHA1 (patch-protolude.cabal) = 60c89036c59010a6071c277684260ca3a9c4f387
-SHA1 (patch-src_Protolude.hs) = c86fce59c022fcde9094a8c6b2164e7f9ff3d1b5
-SHA1 (patch-src_Protolude_Base.hs) = 7f0de4a09aa66ce79cc60d25e86a01f6607fe156
+BLAKE2s (protolude-0.3.2.tar.gz) = d21df8a2c8575b4c156f75a563b2bbbd84dd64dc5516a5667929c2b2c52594c1
+SHA512 (protolude-0.3.2.tar.gz) = 575b955e13a32948286181db04f696776fd44678697a6788fc8a39ca2577342802ad4b46235940ef5137487c60b9ee195bee9aca1966ec448523a515f616afb2
+Size (protolude-0.3.2.tar.gz) = 19288 bytes
