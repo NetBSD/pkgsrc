@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.41 2022/04/27 09:43:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.42 2022/09/07 15:13:52 adam Exp $
 bin/fonttools-${PYVERSSUFFIX}
 bin/pyftmerge-${PYVERSSUFFIX}
 bin/pyftsubset-${PYVERSSUFFIX}
@@ -246,9 +246,15 @@ ${PYSITELIB}/fontTools/misc/timeTools.pyo
 ${PYSITELIB}/fontTools/misc/transform.py
 ${PYSITELIB}/fontTools/misc/transform.pyc
 ${PYSITELIB}/fontTools/misc/transform.pyo
+${PYSITELIB}/fontTools/misc/treeTools.py
+${PYSITELIB}/fontTools/misc/treeTools.pyc
+${PYSITELIB}/fontTools/misc/treeTools.pyo
 ${PYSITELIB}/fontTools/misc/vector.py
 ${PYSITELIB}/fontTools/misc/vector.pyc
 ${PYSITELIB}/fontTools/misc/vector.pyo
+${PYSITELIB}/fontTools/misc/visitor.py
+${PYSITELIB}/fontTools/misc/visitor.pyc
+${PYSITELIB}/fontTools/misc/visitor.pyo
 ${PYSITELIB}/fontTools/misc/xmlReader.py
 ${PYSITELIB}/fontTools/misc/xmlReader.pyc
 ${PYSITELIB}/fontTools/misc/xmlReader.pyo
@@ -294,6 +300,9 @@ ${PYSITELIB}/fontTools/pens/basePen.pyo
 ${PYSITELIB}/fontTools/pens/boundsPen.py
 ${PYSITELIB}/fontTools/pens/boundsPen.pyc
 ${PYSITELIB}/fontTools/pens/boundsPen.pyo
+${PYSITELIB}/fontTools/pens/cairoPen.py
+${PYSITELIB}/fontTools/pens/cairoPen.pyc
+${PYSITELIB}/fontTools/pens/cairoPen.pyo
 ${PYSITELIB}/fontTools/pens/cocoaPen.py
 ${PYSITELIB}/fontTools/pens/cocoaPen.pyc
 ${PYSITELIB}/fontTools/pens/cocoaPen.pyo
@@ -309,9 +318,11 @@ ${PYSITELIB}/fontTools/pens/freetypePen.pyo
 ${PYSITELIB}/fontTools/pens/hashPointPen.py
 ${PYSITELIB}/fontTools/pens/hashPointPen.pyc
 ${PYSITELIB}/fontTools/pens/hashPointPen.pyo
+${PYSITELIB}/fontTools/pens/momentsPen.c
 ${PYSITELIB}/fontTools/pens/momentsPen.py
 ${PYSITELIB}/fontTools/pens/momentsPen.pyc
 ${PYSITELIB}/fontTools/pens/momentsPen.pyo
+${PYSITELIB}/fontTools/pens/momentsPen.so
 ${PYSITELIB}/fontTools/pens/perimeterPen.py
 ${PYSITELIB}/fontTools/pens/perimeterPen.pyc
 ${PYSITELIB}/fontTools/pens/perimeterPen.pyo
@@ -405,6 +416,9 @@ ${PYSITELIB}/fontTools/ttLib/macUtils.pyo
 ${PYSITELIB}/fontTools/ttLib/removeOverlaps.py
 ${PYSITELIB}/fontTools/ttLib/removeOverlaps.pyc
 ${PYSITELIB}/fontTools/ttLib/removeOverlaps.pyo
+${PYSITELIB}/fontTools/ttLib/scaleUpem.py
+${PYSITELIB}/fontTools/ttLib/scaleUpem.pyc
+${PYSITELIB}/fontTools/ttLib/scaleUpem.pyo
 ${PYSITELIB}/fontTools/ttLib/sfnt.py
 ${PYSITELIB}/fontTools/ttLib/sfnt.pyc
 ${PYSITELIB}/fontTools/ttLib/sfnt.pyo
@@ -690,6 +704,9 @@ ${PYSITELIB}/fontTools/ttLib/tables/otData.pyo
 ${PYSITELIB}/fontTools/ttLib/tables/otTables.py
 ${PYSITELIB}/fontTools/ttLib/tables/otTables.pyc
 ${PYSITELIB}/fontTools/ttLib/tables/otTables.pyo
+${PYSITELIB}/fontTools/ttLib/tables/otTraverse.py
+${PYSITELIB}/fontTools/ttLib/tables/otTraverse.pyc
+${PYSITELIB}/fontTools/ttLib/tables/otTraverse.pyo
 ${PYSITELIB}/fontTools/ttLib/tables/sbixGlyph.py
 ${PYSITELIB}/fontTools/ttLib/tables/sbixGlyph.pyc
 ${PYSITELIB}/fontTools/ttLib/tables/sbixGlyph.pyo
@@ -706,6 +723,12 @@ ${PYSITELIB}/fontTools/ttLib/ttCollection.pyo
 ${PYSITELIB}/fontTools/ttLib/ttFont.py
 ${PYSITELIB}/fontTools/ttLib/ttFont.pyc
 ${PYSITELIB}/fontTools/ttLib/ttFont.pyo
+${PYSITELIB}/fontTools/ttLib/ttGlyphSet.py
+${PYSITELIB}/fontTools/ttLib/ttGlyphSet.pyc
+${PYSITELIB}/fontTools/ttLib/ttGlyphSet.pyo
+${PYSITELIB}/fontTools/ttLib/ttVisitor.py
+${PYSITELIB}/fontTools/ttLib/ttVisitor.pyc
+${PYSITELIB}/fontTools/ttLib/ttVisitor.pyo
 ${PYSITELIB}/fontTools/ttLib/woff2.py
 ${PYSITELIB}/fontTools/ttLib/woff2.pyc
 ${PYSITELIB}/fontTools/ttLib/woff2.pyo
@@ -796,9 +819,11 @@ ${PYSITELIB}/fontTools/varLib/interpolatable.pyo
 ${PYSITELIB}/fontTools/varLib/interpolate_layout.py
 ${PYSITELIB}/fontTools/varLib/interpolate_layout.pyc
 ${PYSITELIB}/fontTools/varLib/interpolate_layout.pyo
+${PYSITELIB}/fontTools/varLib/iup.c
 ${PYSITELIB}/fontTools/varLib/iup.py
 ${PYSITELIB}/fontTools/varLib/iup.pyc
 ${PYSITELIB}/fontTools/varLib/iup.pyo
+${PYSITELIB}/fontTools/varLib/iup.so
 ${PYSITELIB}/fontTools/varLib/merger.py
 ${PYSITELIB}/fontTools/varLib/merger.pyc
 ${PYSITELIB}/fontTools/varLib/merger.pyo
