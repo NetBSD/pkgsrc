@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4377 2022/09/07 06:44:51 pho Exp $
+$NetBSD: CHANGES-2022,v 1.4378 2022/09/07 08:04:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6461,3 +6461,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/hs-monoidal-containers version 0.6.2.0 [pho 2022-09-07]
 	Updated lang/go118 to 1.18.6 [bsiegert 2022-09-07]
 	Updated devel/hs-protolude to 0.3.2nb1 [pho 2022-09-07]
+	Updated security/py-cryptography to 38.0.0 [adam 2022-09-07]
+	Updated security/py-cryptography_vectors to 38.0.0 [adam 2022-09-07]
