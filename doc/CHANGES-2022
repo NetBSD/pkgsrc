@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4390 2022/09/08 18:16:00 bsiegert Exp $
+$NetBSD: CHANGES-2022,v 1.4391 2022/09/08 19:54:55 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6498,3 +6498,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/py-uvicorn to 0.18.3 [adam 2022-09-08]
 	Updated www/caddy to 2.5.2 [bsiegert 2022-09-08]
 	Updated net/gvproxy to 0.4.0 [bsiegert 2022-09-08]
+	Updated www/firefox to 104.0.2 [ryoon 2022-09-08]
