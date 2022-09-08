@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.44 2022/07/23 07:14:54 wiz Exp $
+# $NetBSD: haskell.mk,v 1.45 2022/09/08 03:42:10 pho Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages. Package
 # configuration, building, installation, registration and unregistration
@@ -12,6 +12,12 @@
 # HOMEPAGE
 # MASTER_SITES
 #	Default to HackageDB URLs.
+#
+# HASKELL_PKG_NAME
+#	The name of the corresponding Cabal package, in case it differs
+#	from ${DISTNAME}.
+#
+#	Default value: ${DISTNAME}
 #
 # HASKELL_OPTIMIZATION_LEVEL
 #	Optimization level for compilation.
@@ -64,14 +70,13 @@ _USER_VARS.haskell= \
 	HASKELL_ENABLE_LIBRARY_PROFILING \
 	HASKELL_ENABLE_HADDOCK_DOCUMENTATION \
 	HS_UPDATE_PLIST
-_SYS_VARS.haskell= \
-	PKGNAME DISTNAME MASTER_SITES MASTER_SITE_HASKELL_HACKAGE \
-	HOMEPAGE UNLIMIT_RESOURCES PREFIX
-_DEF_VARS.haskell= \
-	BUILDLINK_PASSTHRU_DIRS \
+_PKG_VARS.haskell= \
 	HASKELL_ENABLE_DYNAMIC_EXECUTABLE \
 	HASKELL_OPTIMIZATION_LEVEL \
 	HASKELL_PKG_NAME \
+	PKGNAME HOMEPAGE MASTER_SITES
+_DEF_VARS.haskell= \
+	BUILDLINK_PASSTHRU_DIRS \
 	USE_LANGUAGES \
 	CONFIGURE_ARGS \
 	PLIST_SUBST \
@@ -82,6 +87,7 @@ _DEF_VARS.haskell= \
 	INSTALLATION_DIRS \
 	INSTALL_TEMPLATES \
 	DEINSTALL_TEMPLATES \
+	UNLIMIT_RESOURCES \
 	_HASKELL_VERSION_CMD \
 	_HASKELL_BIN \
 	_HASKELL_PKG_BIN \
@@ -89,9 +95,12 @@ _DEF_VARS.haskell= \
 	_HASKELL_PKG_ID_FILE \
 	_HASKELL_VERSION
 _USE_VARS.haskell= \
+	DISTNAME \
 	PKG_VERBOSE \
 	BUILDLINK_PREFIX.ghc \
+	MASTER_SITE_HASKELL_HACKAGE \
 	PKGDIR DESTDIR \
+	PREFIX \
 	WRKSRC
 _LISTED_VARS.haskell= \
 	BUILDLINK_PASSTHRU_DIRS \
