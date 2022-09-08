@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.47 2022/09/08 05:26:16 wiz Exp $
+# $NetBSD: haskell.mk,v 1.48 2022/09/08 07:38:50 pho Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages. Package
 # configuration, building, installation, registration and unregistration
@@ -191,26 +191,35 @@ PKGSRC_OVERRIDE_MKPIE=	yes
 CONFIGURE_ARGS+=	--ghc-option=-fPIC --ghc-option=-pie
 .endif
 
-.if ${HASKELL_ENABLE_DYNAMIC_EXECUTABLE} == "yes"
+.if ${HASKELL_ENABLE_DYNAMIC_EXECUTABLE:tl} == "yes"
 CONFIGURE_ARGS+=	--enable-executable-dynamic
 .else
 CONFIGURE_ARGS+=	--disable-executable-dynamic
 .endif
 
-.if ${HASKELL_ENABLE_SHARED_LIBRARY} == "yes"
+PLIST_VARS+=		shlibs
+PRINT_PLIST_AWK+=	/(\.dyn_hi|\/lib[^\/]+\.so)$$/ { $$0 = "$${PLIST.shlibs}" $$0 }
+.if ${HASKELL_ENABLE_SHARED_LIBRARY:tl} == "yes"
 CONFIGURE_ARGS+=	--enable-shared
+PLIST.shlibs=		yes
 .else
 CONFIGURE_ARGS+=	--disable-shared
 .endif
 
-.if ${HASKELL_ENABLE_LIBRARY_PROFILING} == "yes"
+PLIST_VARS+=		prof
+PRINT_PLIST_AWK+=	/(\.p_hi|\/lib[^\/]+_p\.a)$$/ { $$0 = "$${PLIST.prof}" $$0 }
+.if ${HASKELL_ENABLE_LIBRARY_PROFILING:tl} == "yes"
 CONFIGURE_ARGS+=	--enable-library-profiling
+PLIST.prof=		yes
 .else
 CONFIGURE_ARGS+=	--disable-library-profiling
 .endif
 
-.if ${HASKELL_ENABLE_HADDOCK_DOCUMENTATION} == "yes"
+PLIST_VARS+=		doc
+PRINT_PLIST_AWK+=	/\/doc\// { $$0 = "$${PLIST.doc}" $$0 }
+.if ${HASKELL_ENABLE_HADDOCK_DOCUMENTATION:tl} == "yes"
 CONFIGURE_ARGS+=	--with-haddock=${BUILDLINK_PREFIX.ghc:Q}/bin/haddock
+PLIST.doc=		yes
 .endif
 
 CONFIGURE_ARGS+=	-O${HASKELL_OPTIMIZATION_LEVEL}
