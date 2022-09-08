@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.57 2022/07/07 11:49:50 adam Exp $
+# $NetBSD: Makefile,v 1.58 2022/09/08 07:46:09 adam Exp $
 
-DISTNAME=	virtualenv-20.15.1
+DISTNAME=	virtualenv-20.16.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/virtualenv/}
@@ -11,26 +11,23 @@ COMMENT=	Virtual Python Environment builder
 LICENSE=	mit
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
-DEPENDS+=	${PYPKGPREFIX}-distlib>=0.3.1:../../devel/py-distlib
-DEPENDS+=	${PYPKGPREFIX}-filelock>=3.2:../../devel/py-filelock
-DEPENDS+=	${PYPKGPREFIX}-platformdirs>=2:../../misc/py-platformdirs
-DEPENDS+=	${PYPKGPREFIX}-six>=1.9.0:../../lang/py-six
-TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=4:../../devel/py-coverage
+DEPENDS+=	${PYPKGPREFIX}-distlib>=0.3.5:../../devel/py-distlib
+DEPENDS+=	${PYPKGPREFIX}-filelock>=3.4.1:../../devel/py-filelock
+DEPENDS+=	${PYPKGPREFIX}-platformdirs>=2.4:../../misc/py-platformdirs
+TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=6.2:../../devel/py-coverage
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-enable-subprocess>=1:../../devel/py-coverage-enable-subprocess
-TEST_DEPENDS+=	${PYPKGPREFIX}-flaky>=3:../../devel/py-flaky
-TEST_DEPENDS+=	${PYPKGPREFIX}-packaging>=20.0:../../devel/py-packaging
-TEST_DEPENDS+=	${PYPKGPREFIX}-pip-[0-9]*:../../devel/py-pip
-TEST_DEPENDS+=	${PYPKGPREFIX}-test>=4:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-flaky>=3.7:../../devel/py-flaky
+TEST_DEPENDS+=	${PYPKGPREFIX}-packaging>=21.3:../../devel/py-packaging
+TEST_DEPENDS+=	${PYPKGPREFIX}-test>=7.0.1:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-env>=0.6.2:../../devel/py-test-env
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-freezegun>=0.4.1:../../devel/py-test-freezegun
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock>=2:../../devel/py-test-mock
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-randomly>=1:../../devel/py-test-randomly
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout>=1:../../devel/py-test-timeout
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-freezegun>=0.4.2:../../devel/py-test-freezegun
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock>=3.6.1:../../devel/py-test-mock
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-randomly>=3.10.3:../../devel/py-test-randomly
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout>=2.1:../../devel/py-test-timeout
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-filelock, py-platformdirs, py-packaging
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
-
 .if ${_PYTHON_VERSION} == 37
 DEPENDS+=	${PYPKGPREFIX}-importlib-metadata-[0-9]*:../../devel/py-importlib-metadata
 .endif
