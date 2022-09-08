@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.48 2022/09/08 07:38:50 pho Exp $
+# $NetBSD: haskell.mk,v 1.49 2022/09/08 15:18:48 pho Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages. Package
 # configuration, building, installation, registration and unregistration
@@ -162,7 +162,7 @@ _HASKELL_BUILD_SETUP_OPTS=	-package-env -
 # GHC requires C compiler.
 USE_LANGUAGES+=	c
 
-# Haskell packages don't use semvars but it uses something similar to it,
+# Haskell packages don't use semvars but they use something similar to it,
 # which is called Haskell PVP (https://pvp.haskell.org/). Packages usually
 # have version constraints on their dependencies that specify not only
 # lower bounds but also upper bounds. The problem is that, while lower
