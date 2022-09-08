@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4388 2022/09/08 15:23:41 adam Exp $
+$NetBSD: CHANGES-2022,v 1.4389 2022/09/08 17:53:40 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6496,3 +6496,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/py-certbot-nginx to 1.30.0 [adam 2022-09-08]
 	Updated devel/py-dotenv to 0.21.0 [adam 2022-09-08]
 	Updated www/py-uvicorn to 0.18.3 [adam 2022-09-08]
+	Updated www/caddy to 2.5.2 [bsiegert 2022-09-08]
