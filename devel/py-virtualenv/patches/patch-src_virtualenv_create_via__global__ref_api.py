@@ -1,22 +1,21 @@
-$NetBSD: patch-src_virtualenv_create_via__global__ref_api.py,v 1.1 2022/05/09 22:08:10 wiz Exp $
+$NetBSD: patch-src_virtualenv_create_via__global__ref_api.py,v 1.2 2022/09/08 07:46:09 adam Exp $
 
 Copy distutils distro config file to virtualenv.
 https://github.com/pypa/virtualenv/issues/2313
 
---- src/virtualenv/create/via_global_ref/api.py.orig	2022-04-11 10:38:39.000000000 +0000
+--- src/virtualenv/create/via_global_ref/api.py.orig	2022-09-08 02:18:47.000000000 +0000
 +++ src/virtualenv/create/via_global_ref/api.py
-@@ -4,6 +4,9 @@ import logging
+@@ -2,6 +2,8 @@ import logging
  import os
  from abc import ABCMeta
- 
+ from pathlib import Path
 +from shutil import copy
 +from sysconfig import get_paths
-+
- from six import add_metaclass
  
  from virtualenv.info import fs_supports_symlink
-@@ -98,6 +101,10 @@ class ViaGlobalRefApi(Creator):
-             logging.debug("create %s", ensure_text(str(dest_path)))
+ 
+@@ -92,6 +94,10 @@ class ViaGlobalRefApi(Creator, metaclass
+             logging.debug("create %s", dest_path)
              dest_path.write_text(text)
  
 +        distutils_distro_config = get_paths()["platlib"] + "/_distutils_system_mod.py"
