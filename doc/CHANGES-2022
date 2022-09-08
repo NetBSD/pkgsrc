@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4392 2022/09/08 19:55:49 ryoon Exp $
+$NetBSD: CHANGES-2022,v 1.4393 2022/09/08 20:28:17 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6500,3 +6500,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/gvproxy to 0.4.0 [bsiegert 2022-09-08]
 	Updated www/firefox to 104.0.2 [ryoon 2022-09-08]
 	Updated www/firefox-l10n to 104.0.2 [ryoon 2022-09-08]
+	Updated www/seamonkey to 2.53.13 [ryoon 2022-09-08]
