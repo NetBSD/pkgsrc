@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.71 2022/09/07 08:04:18 adam Exp $
+$NetBSD: distinfo,v 1.72 2022/09/08 05:08:52 adam Exp $
 
 BLAKE2s (Inflector-0.11.4.crate) = 2f8b4a805230be3b58267c7fb6b9c26c2ec966378d195673d1128a851cca515d
 SHA512 (Inflector-0.11.4.crate) = f1f6463e033b6d3c16c51dc1e1a3f5569954308b95b59058294b7f9310919bbda797e99e6a07529071bb83f0688867a243997d33795a7136b0af73977004296e
@@ -9,12 +9,12 @@ Size (aliasable-0.1.3.crate) = 6169 bytes
 BLAKE2s (android_system_properties-0.1.5.crate) = e405a7701baf9817ca6e946b78ab2ae83f4667112c19c5214606cd863ca5c765
 SHA512 (android_system_properties-0.1.5.crate) = b09f51339f9772c0e2e4241b36cf51573c6b96b19ffc1fbbc94b1c1d1d2fdfe8eac3134af54174a675ab05d18ef4f6bcb2c7fcc20114bbeef6e17e3692202191
 Size (android_system_properties-0.1.5.crate) = 5243 bytes
-BLAKE2s (asn1-0.12.1.crate) = f6e1b5137610300a39939b31e7133b86ebae970192068f08ee29af101107d6db
-SHA512 (asn1-0.12.1.crate) = eddb46b83d5d064e355ed293eaa071578a2bdf699a28b15b468f90fe1d08b54feeb304d97afcfde815a6375c91b8ba853cdf8e6bb21a2f87deea6646a5ddfd80
-Size (asn1-0.12.1.crate) = 32928 bytes
-BLAKE2s (asn1_derive-0.12.1.crate) = 91370a4bf9075172a686c5be729ca374e38004627690c5e72f6af6df4f8cbf47
-SHA512 (asn1_derive-0.12.1.crate) = 04525b4be722d199681b0d86ed31284fc67695a0869c957ddecfc021884575d9353af38db83607feabcaebf4afd925039c1beb41cd5b86b24a1ab2ad4c85d8aa
-Size (asn1_derive-0.12.1.crate) = 4912 bytes
+BLAKE2s (asn1-0.12.2.crate) = dcf04c827b3f6ac1c144fb6b2bb8ba512c139bd45e50f38edba170b3193e2830
+SHA512 (asn1-0.12.2.crate) = 5483bf701de379ce0d755d53880f49786794d3eb69a9f93abf557d49d76d75b6196f4b6b4d3c26e1ba49f63ac78e4d82927914452f26d33858f1d177bfcbba57
+Size (asn1-0.12.2.crate) = 33145 bytes
+BLAKE2s (asn1_derive-0.12.2.crate) = 89b02353205152e026842e71fd46e30c2dcbbd8ad335d1c55373c829fb7774ed
+SHA512 (asn1_derive-0.12.2.crate) = 70c56d2088b3b3f956b74c6e71bea3e0d1d7ae36b4144b3d1c065a2bae872113961776ed149ee8ca5eaf2a9ecc291e73988b4737bb0385c2bf7bb3e42972a268
+Size (asn1_derive-0.12.2.crate) = 4914 bytes
 BLAKE2s (autocfg-1.1.0.crate) = dd57bc2348994ace592664469f4b2389f230343402c627a9981eb582f10b0060
 SHA512 (autocfg-1.1.0.crate) = df972c09abbdc0b6cb6bb55b1e29c7fed706ece38a62613d9e275bac46a19574a7f96f0152cccb0239efea04ee90083a146b58b15307696c4c81878cd12de28f
 Size (autocfg-1.1.0.crate) = 13272 bytes
@@ -36,9 +36,9 @@ Size (chrono-0.4.22.crate) = 185570 bytes
 BLAKE2s (core-foundation-sys-0.8.3.crate) = 679c01a6f663daba747856f9e5c72ad3f1ef1dafb2f6f7211cc1e1c6637ba049
 SHA512 (core-foundation-sys-0.8.3.crate) = a3ba3184cef65dafe8318c4db7e59eb2749dcde7b2370ad20272b0735ded0032daf2de3fd0cf55eb48448a335f5b81e8e745f2a647f9a43bb85946ce714bfd82
 Size (core-foundation-sys-0.8.3.crate) = 17519 bytes
-BLAKE2s (cryptography-38.0.0.tar.gz) = 07f258d9980223ea4858bcad64140c27d06508a158f157c9a520a47cf921d975
-SHA512 (cryptography-38.0.0.tar.gz) = 4fa254031e9704b1572d4c5ba564c33cb01dd7b35e0f8341924dd0c998b3457e64842d3020f7be5287aa9f6086f17bc3cc66041c5058fe4857d85236cd316d74
-Size (cryptography-38.0.0.tar.gz) = 599268 bytes
+BLAKE2s (cryptography-38.0.1.tar.gz) = 5a1a985789c2c19cff24768ac5d95dbeaf199a245c92ac8e12dc55fae9a91fa6
+SHA512 (cryptography-38.0.1.tar.gz) = a0e9eb645888a74e01377c0ed79427d066a50d10a9b628828195e82b7ee44ff59866f3659f2028541856bba818340c404e00061645c2676bc63f8ece42fd511e
+Size (cryptography-38.0.1.tar.gz) = 599412 bytes
 BLAKE2s (iana-time-zone-0.1.47.crate) = cf37107075f1cb612fdeccfcf951a0d68b5552f8122ea63ad7d7d851f3c85bd0
 SHA512 (iana-time-zone-0.1.47.crate) = c1817555149f05ae45f7e54046b79c732f80f5af382680d626dd3e970167092cdc176b259941d3c1533518bef511a92ed24c3aa538897e9d082984684d99f55b
 Size (iana-time-zone-0.1.47.crate) = 16974 bytes

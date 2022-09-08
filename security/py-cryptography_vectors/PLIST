@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2022/09/07 08:04:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2022/09/08 05:08:52 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -2227,6 +2227,7 @@ ${PYSITELIB}/cryptography_vectors/x509/custom/cp_user_notice_no_explicit_text.pe
 ${PYSITELIB}/cryptography_vectors/x509/custom/cp_user_notice_with_explicit_text.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/cp_user_notice_with_notice_reference.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/crl_all_reasons.pem
+${PYSITELIB}/cryptography_vectors/x509/custom/crl_almost_10k.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/crl_bad_version.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/crl_delta_crl_indicator.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/crl_dup_entry_ext.pem
