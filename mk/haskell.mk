@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.45 2022/09/08 03:42:10 pho Exp $
+# $NetBSD: haskell.mk,v 1.46 2022/09/08 04:45:44 pho Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages. Package
 # configuration, building, installation, registration and unregistration
@@ -31,6 +31,15 @@
 #
 #	Possible values: yes, no
 #	Default value: inherits ${HASKELL_ENABLE_SHARED_LIBRARY}
+#
+# HASKELL_UNRESTRICT_DEPENDENCIES
+#	A list of Cabal packages that the package depends on, whose version
+#	constraints are way too restricted to solve. Listing packages in
+#	this variable will cause the *.cabal file to be rewritten so that
+#	any version is accepted. Use this with care, because not every
+#	incompatibilities are caught during build time.
+#
+#	Default value: empty
 #
 # User-settable variables:
 #
@@ -74,6 +83,7 @@ _PKG_VARS.haskell= \
 	HASKELL_ENABLE_DYNAMIC_EXECUTABLE \
 	HASKELL_OPTIMIZATION_LEVEL \
 	HASKELL_PKG_NAME \
+	HASKELL_UNRESTRICT_DEPENDENCIES \
 	PKGNAME HOMEPAGE MASTER_SITES
 _DEF_VARS.haskell= \
 	BUILDLINK_PASSTHRU_DIRS \
@@ -102,6 +112,8 @@ _USE_VARS.haskell= \
 	PKGDIR DESTDIR \
 	PREFIX \
 	WRKSRC
+_SORTED_VARS.haskell= \
+	HASKELL_UNRESTRICT_DEPENDENCIES
 _LISTED_VARS.haskell= \
 	BUILDLINK_PASSTHRU_DIRS \
 	CONFIGURE_ARGS \
@@ -123,6 +135,7 @@ HASKELL_ENABLE_DYNAMIC_EXECUTABLE?=	${HASKELL_ENABLE_SHARED_LIBRARY}
 HASKELL_ENABLE_SHARED_LIBRARY?=		yes
 HASKELL_ENABLE_LIBRARY_PROFILING?=	yes
 HASKELL_ENABLE_HADDOCK_DOCUMENTATION?=	yes
+HASKELL_UNRESTRICT_DEPENDENCIES?=	# empty
 
 .include "../../lang/ghc92/buildlink3.mk"
 
@@ -148,6 +161,24 @@ _HASKELL_BUILD_SETUP_OPTS=	-package-env -
 
 # GHC requires C compiler.
 USE_LANGUAGES+=	c
+
+# Haskell packages don't use semvars but it uses something similar to it,
+# which is called Haskell PVP (https://pvp.haskell.org/). Packages usually
+# have version constraints on their dependencies that specify not only
+# lower bounds but also upper bounds. The problem is that, while lower
+# bounds are mostly acculate, package authors can not be sure about upper
+# bounds so they tend to be too pessimistic about compatibility.
+.if !empty(HASKELL_UNRESTRICT_DEPENDENCIES)
+SUBST_CLASSES+=		cabal
+SUBST_STAGE.cabal?=	post-extract
+SUBST_FILES.cabal?=	${HASKELL_PKG_NAME:C/-[[:digit:].]+$//}.cabal
+SUBST_MESSAGE.cabal?=	Relaxing version constraints on dependencies
+.  for _pkg_ in ${HASKELL_UNRESTRICT_DEPENDENCIES}
+# Leading whitespaces or commas to avoid mismatches, remove version
+# constraints up to end of line or ','.
+SUBST_SED.cabal+=	-Ee 's/((^|,)[[:space:]]*${_pkg_})[^[:alpha:],]+(,|$$)/\1\3/g'
+.  endfor
+.endif
 
 # Declarations for ../../mk/configure/configure.mk
 CONFIGURE_ARGS+=	--ghc
