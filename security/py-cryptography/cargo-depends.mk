@@ -1,10 +1,10 @@
-# $NetBSD: cargo-depends.mk,v 1.2 2022/09/07 08:04:18 adam Exp $
+# $NetBSD: cargo-depends.mk,v 1.3 2022/09/08 05:08:52 adam Exp $
 
 CARGO_CRATE_DEPENDS+=	Inflector-0.11.4
 CARGO_CRATE_DEPENDS+=	aliasable-0.1.3
 CARGO_CRATE_DEPENDS+=	android_system_properties-0.1.5
-CARGO_CRATE_DEPENDS+=	asn1-0.12.1
-CARGO_CRATE_DEPENDS+=	asn1_derive-0.12.1
+CARGO_CRATE_DEPENDS+=	asn1-0.12.2
+CARGO_CRATE_DEPENDS+=	asn1_derive-0.12.2
 CARGO_CRATE_DEPENDS+=	autocfg-1.1.0
 CARGO_CRATE_DEPENDS+=	base64-0.13.0
 CARGO_CRATE_DEPENDS+=	bitflags-1.3.2
