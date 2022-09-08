@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4382 2022/09/08 05:09:35 adam Exp $
+$NetBSD: CHANGES-2022,v 1.4383 2022/09/08 07:21:24 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6473,3 +6473,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated converters/py-fastbencode to 0.0.11 [adam 2022-09-07]
 	Updated security/py-cryptography to 38.0.1 [adam 2022-09-08]
 	Updated security/py-cryptography_vectors to 38.0.1 [adam 2022-09-08]
+	Updated benchmarks/hyperfine to 1.15.0 [pin 2022-09-08]
