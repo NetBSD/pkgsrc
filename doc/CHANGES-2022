@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4384 2022/09/08 07:22:24 pin Exp $
+$NetBSD: CHANGES-2022,v 1.4385 2022/09/08 07:46:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6475,3 +6475,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/py-cryptography_vectors to 38.0.1 [adam 2022-09-08]
 	Updated benchmarks/hyperfine to 1.15.0 [pin 2022-09-08]
 	Updated graphics/oculante to 0.6.8 [pin 2022-09-08]
+	Updated devel/py-test-randomly to 3.12.0 [adam 2022-09-08]
+	Updated devel/py-virtualenv to 20.16.5 [adam 2022-09-08]
