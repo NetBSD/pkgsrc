@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.13 2022/07/11 22:36:36 dholland Exp $
+# $NetBSD: mozilla-common.mk,v 1.14 2022/09/08 20:27:32 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -63,6 +63,9 @@ USE_TOOLS+=		bsdtar
 .if ${MACHINE_ARCH} == "i386"
 # This is required for SSE2 code under i386.
 CXXFLAGS+=		-mstackrealign
+# At least for NetBSD/i386 9.2, encoding_rs failed to build with simd_funcs
+# and packed_simd crates.
+CONFIGURE_ARGS+=	--disable-rust-simd
 .endif
 
 CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}security/nss/tests/libpkix/libpkix.sh
@@ -89,6 +92,7 @@ CONFIGURE_ARGS+=	--with-system-icu
 CONFIGURE_ARGS+=	--with-system-nss
 CONFIGURE_ARGS+=	--with-system-nspr
 #CONFIGURE_ARGS+=	--with-system-jpeg
+CONFIGURE_ARGS+=	--with-system-webp
 CONFIGURE_ARGS+=	--with-system-zlib
 CONFIGURE_ARGS+=	--with-system-bz2
 #CONFIGURE_ARGS+=	--with-system-libevent=${BUILDLINK_PREFIX.libevent}
@@ -216,6 +220,7 @@ BUILDLINK_API_DEPENDS.nss+=	nss>=3.35
 .include "../../devel/nss/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 #.include "../../mk/jpeg.buildlink3.mk"
+.include "../../graphics/libwebp/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 #BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.10.2nb4
 #.include "../../graphics/cairo/buildlink3.mk"
@@ -232,5 +237,4 @@ RUST_REQ=	1.23.0
 .include "../../x11/libXt/buildlink3.mk"
 BUILDLINK_API_DEPENDS.pixman+= pixman>=0.25.2
 .include "../../x11/pixman/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"

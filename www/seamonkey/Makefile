@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.247 2022/08/11 05:09:24 gutteridge Exp $
+# $NetBSD: Makefile,v 1.248 2022/09/08 20:27:32 ryoon Exp $
 
 DISTNAME=	seamonkey-${SM_VER}.source
 PKGNAME=	seamonkey-${SM_VER:S/b/beta/}
-PKGREVISION=	6
-SM_VER=		2.53.10
+SM_VER=		2.53.13
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=seamonkey/releases/${SM_VER}/source/}
 EXTRACT_SUFX=	.tar.xz
@@ -39,7 +38,9 @@ CONFIG_GUESS_OVERRIDE+=	ldap/sdks/c-sdk/config/autoconf/config.guess
 CONFIG_SUB_OVERRIDE+=	ldap/sdks/c-sdk/config/autoconf/config.sub
 
 CONFIGURE_ARGS+=	--enable-application=comm/suite
-CONFIGURE_ARGS+=	--enable-extensions=default
+CONFIGURE_ARGS+=	--enable-calendar
+CONFIGURE_ARGS+=	--enable-irc
+CONFIGURE_ARGS+=	--enable-dominspector
 
 ALL_ENV+=		MOZILLA_PKG_NAME=${PKGBASE}
 #ALL_ENV+=		MOZ_APP_NAME=${PKGBASE}
@@ -61,11 +62,6 @@ CKSUM_CRATES+=	third_party/rust/libc
 # patch-mozilla_third__party_rust_libc_src_unix_bsd_netbsdlike_netbsd_other_mod.rs
 CKSUMS+=	4d9f7091af8e166943ac6f42ce85558909e5b6e61325039bff7adfbcf4b90212
 CKSUMS+=	30c5211b393d9314f880f63e29833785c8b55369102eec21170a0fe0fd1c4a16
-
-CKSUM_CRATES+=	third_party/rust/packed_simd
-# patches/patch-third__party_rust_packed__simd_src_lib.rs
-CKSUMS+=	f2e2d0867734a62e1f468e5d3e15fbd01a15f8aafd5d65a8a3cb7ab95ffd61c4
-CKSUMS+=	41c2a5c5fb42225ce9c6a267653870fdb8af30f933b3b8534d57a15fb96ebb39
 
 SUBST_CLASSES+=		cksum
 SUBST_STAGE.cksum=	pre-configure

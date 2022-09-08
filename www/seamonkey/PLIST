@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.70 2021/11/30 15:41:24 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.71 2022/09/08 20:27:32 ryoon Exp $
 bin/seamonkey
 lib/seamonkey/application.ini
 lib/seamonkey/blocklist.xml
@@ -65,10 +65,11 @@ lib/seamonkey/defaults/profile/panels.rdf
 lib/seamonkey/dependentlibs.list
 lib/seamonkey/dictionaries/en-US.aff
 lib/seamonkey/dictionaries/en-US.dic
+lib/seamonkey/extensions/inspector@mozilla.org.xpi
 lib/seamonkey/extensions/modern@themes.mozilla.org.xpi
+lib/seamonkey/extensions/{59c81df5-4b7a-477b-912d-4e0fdf64e5f2}.xpi
 lib/seamonkey/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}.xpi
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}.xpi
-lib/seamonkey/gtk2/libmozgtk.so
 lib/seamonkey/isp/Bogofilter.sfd
 lib/seamonkey/isp/DSPAM.sfd
 lib/seamonkey/isp/POPFile.sfd
