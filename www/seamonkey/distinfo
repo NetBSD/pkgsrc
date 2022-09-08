@@ -1,11 +1,12 @@
-$NetBSD: distinfo,v 1.175 2021/11/30 15:41:24 ryoon Exp $
+$NetBSD: distinfo,v 1.176 2022/09/08 20:27:32 ryoon Exp $
 
-BLAKE2s (seamonkey-2.53.10.source.tar.xz) = ab1e1c5aa3104a353cd9a3252f1a5750f4653adf5e1440ec72b31f5afe9f51ce
-SHA512 (seamonkey-2.53.10.source.tar.xz) = 90e58d0c34218f88ff148a215849bc0561bf93f99850690d8a484e8509631cb8aa6a756126cdaeb38cf2557ceca69989f015156d51131edc1233d242721a3101
-Size (seamonkey-2.53.10.source.tar.xz) = 284344996 bytes
+BLAKE2s (seamonkey-2.53.13.source.tar.xz) = 20a58c1cf3a43955311d3a65bddba9c882c6ebfc0fff3173c1e83c517e198f26
+SHA512 (seamonkey-2.53.13.source.tar.xz) = f95fcec1dd732c3ca8218e6359c51260d44c40c8c2f34ad11ee160166f4df7c2184dd5d7e02b4ee363700d189e8652fabe7aeec8d0917ea9589ec1baa714f7a2
+Size (seamonkey-2.53.13.source.tar.xz) = 253664548 bytes
 SHA1 (patch-build_moz.configure_rust.configure) = 38ba5e8a0e41352afc4e767c25388c3c772b0457
 SHA1 (patch-dom_indexedDB_IDBTransaction.h) = 7882f1264889d5f17af0bafa68bfa5aff5b57634
-SHA1 (patch-gfx_angle_checkout_src_compiler_translator_SymbolTable__autogen.cpp) = c002337ca566e5d0124d071bf39e5fb9daa7e059
+SHA1 (patch-gfx_angle_checkout_src_compiler_translator_SymbolTable__ESSL__autogen.cpp) = 915fbe98d20ff405f031636add07d4bd610b5939
+SHA1 (patch-gfx_angle_checkout_src_compiler_translator_SymbolTable__autogen.cpp) = c78ada128986334d04ae07ec98545ecf611a7dfc
 SHA1 (patch-ldap_c-sdk_include_portable.h) = b742b070a45507678f592428110477e484c52659
 SHA1 (patch-mailnews_base_search_src_nsMsgSearchTerm.cpp) = 5a5890c5347cdb1a0899eebe4f014584fa460c10
 SHA1 (patch-mozilla_browser_branding_unofficial_locales_en-US_brand.dtd) = 5c6074fb8e0baf4e7dc2dd49718bfd285e65e3e1
@@ -39,4 +40,3 @@ SHA1 (patch-mozilla_xpcom_base_nscore.h) = ccacde8a2222fc427e48e012175426ba4886d
 SHA1 (patch-mozilla_xpcom_build_BinaryPath.h) = 54d07ee72b6fc60a5a94c99316725866fdebe9aa
 SHA1 (patch-mozilla_xpcom_reflect_xptcall_md_unix_xptcinvoke__sparc64__netbsd.cpp) = 3f172488ed177aca966b9d0e6b953459db8750af
 SHA1 (patch-suite_installer_Makefile.in) = 174fe46811de70b8e8e5f40308355d7616f3570f
-SHA1 (patch-third__party_rust_packed__simd_src_lib.rs) = 284a05cdc984c1bc4184fbafd39d419c68d697d9
