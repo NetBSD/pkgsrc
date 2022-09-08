@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2022/09/07 06:50:53 pho Exp $
+# $NetBSD: Makefile,v 1.8 2022/09/08 04:46:41 pho Exp $
 
 DISTNAME=	purescript-0.15.4
 PKGNAME=	${DISTNAME}
@@ -25,32 +25,30 @@ HASKELL_ENABLE_SHARED_LIBRARY=	no
 # isn't meant to be used as a library.
 HASKELL_ENABLE_LIBRARY_PROFILING=	no
 
+# These constraints can only be solved with GHC 9.2.3 which we haven't
+# packaged yet.
+HASKELL_UNRESTRICT_DEPENDENCIES+= \
+	Cabal \
+	base \
+	bytestring \
+	deepseq \
+	filepath \
+	parsec \
+	stm \
+	process
+# These constraints can only be solved with older packages than what we
+# provide.
+HASKELL_UNRESTRICT_DEPENDENCIES+= \
+	aeson \
+	language-javascript \
+	lens \
+	memory \
+	vector
+
 # purs is built with optparse-applicative, and can generate shell
 # completion scripts automatically.
 OPTPARSE_APPLICATIVE_EXECUTABLES+=	purs
 .include "../../devel/hs-optparse-applicative/application.mk"
-
-# Relax version constraints.
-SUBST_CLASSES+=		cabal
-SUBST_STAGE.cabal=	post-extract
-SUBST_FILES.cabal=	purescript.cabal
-#   These constraints can only be resolved with GHC 9.2.3 which we haven't
-#   packaged yet.
-SUBST_SED.cabal+=	-e 's/Cabal >=3.6.3.0 && <3.7/Cabal/'
-SUBST_SED.cabal+=	-e 's/base >=4.16.2.0 && <4.17/base/'
-SUBST_SED.cabal+=	-e 's/bytestring >=0.11.3.1 && <0.12/bytestring/'
-SUBST_SED.cabal+=	-e 's/deepseq >=1.4.6.1 && <1.5/deepseq/'
-SUBST_SED.cabal+=	-e 's/filepath >=1.4.2.2 && <1.5/filepath/'
-SUBST_SED.cabal+=	-e 's/parsec >=3.1.15.0 && <3.2/parsec/'
-SUBST_SED.cabal+=	-e 's/stm >=2.5.0.2 && <2.6/stm/'
-SUBST_SED.cabal+=	-e 's/process ==1.6.13.1/process/'
-#   These constraints can only be resolved with older packages than what we
-#   provide.
-SUBST_SED.cabal+=	-e 's/aeson >=2.0.3.0 && <2.1/aeson/'
-SUBST_SED.cabal+=	-e 's/language-javascript ==0.7.0.0/language-javascript/'
-SUBST_SED.cabal+=	-e 's/lens >=5.1.1 && <5.2/lens/'
-SUBST_SED.cabal+=	-e 's/memory >=0.17.0 && <0.18/memory/'
-SUBST_SED.cabal+=	-e 's/vector >=0.12.3.1 && <0.13/vector/'
 
 # lib:purescript
 .include "../../converters/hs-aeson/buildlink3.mk"
