@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.6 2022/04/24 19:24:56 leot Exp $
+# $NetBSD: go-modules.mk,v 1.7 2022/09/08 11:23:02 leot Exp $
 
 GO_MODULE_FILES+=	bitbucket.org/bertimus9/systemstat/@v/v0.0.0-20180207000608-0eeff89b0690.mod
 GO_MODULE_FILES+=	bitbucket.org/bertimus9/systemstat/@v/v0.0.0-20180207000608-0eeff89b0690.zip
@@ -260,8 +260,8 @@ GO_MODULE_FILES+=	github.com/golangplus/testing/@v/v0.0.0-20180327235837-af21d9c
 GO_MODULE_FILES+=	github.com/golangplus/testing/@v/v0.0.0-20180327235837-af21d9c3145e.zip
 GO_MODULE_FILES+=	github.com/google/btree/@v/v1.0.1.mod
 GO_MODULE_FILES+=	github.com/google/btree/@v/v1.0.1.zip
-GO_MODULE_FILES+=	github.com/google/cadvisor/@v/v0.39.3.mod
-GO_MODULE_FILES+=	github.com/google/cadvisor/@v/v0.39.3.zip
+GO_MODULE_FILES+=	github.com/google/cadvisor/@v/v0.39.4.mod
+GO_MODULE_FILES+=	github.com/google/cadvisor/@v/v0.39.4.zip
 GO_MODULE_FILES+=	github.com/google/go-cmp/@v/v0.5.5.mod
 GO_MODULE_FILES+=	github.com/google/go-cmp/@v/v0.5.5.zip
 GO_MODULE_FILES+=	github.com/google/gofuzz/@v/v1.1.0.mod
