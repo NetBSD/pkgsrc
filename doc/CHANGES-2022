@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4386 2022/09/08 11:23:08 leot Exp $
+$NetBSD: CHANGES-2022,v 1.4387 2022/09/08 15:13:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6478,3 +6478,19 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-test-randomly to 3.12.0 [adam 2022-09-08]
 	Updated devel/py-virtualenv to 20.16.5 [adam 2022-09-08]
 	Updated net/kubectl to 1.22.13 [leot 2022-09-08]
+	Updated security/py-acme to 1.30.0 [adam 2022-09-08]
+	Updated security/py-certbot to 1.30.0 [adam 2022-09-08]
+	Updated security/py-certbot-apache to 1.30.0 [adam 2022-09-08]
+	Updated security/py-certbot-dns-digitalocean to 1.30.0 [adam 2022-09-08]
+	Updated security/py-certbot-dns-dnsimple to 1.30.0 [adam 2022-09-08]
+	Updated security/py-certbot-dns-dnsmadeeasy to 1.30.0 [adam 2022-09-08]
+	Updated security/py-certbot-dns-gehirn to 1.30.0 [adam 2022-09-08]
+	Updated security/py-certbot-dns-google to 1.30.0 [adam 2022-09-08]
+	Updated security/py-certbot-dns-linode to 1.30.0 [adam 2022-09-08]
+	Updated security/py-certbot-dns-luadns to 1.30.0 [adam 2022-09-08]
+	Updated security/py-certbot-dns-nsone to 1.30.0 [adam 2022-09-08]
+	Updated security/py-certbot-dns-ovh to 1.30.0 [adam 2022-09-08]
+	Updated security/py-certbot-dns-rfc2136 to 1.30.0 [adam 2022-09-08]
+	Updated security/py-certbot-dns-route53 to 1.30.0 [adam 2022-09-08]
+	Updated security/py-certbot-dns-sakuracloud to 1.30.0 [adam 2022-09-08]
+	Updated security/py-certbot-nginx to 1.30.0 [adam 2022-09-08]
