@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2022/04/24 19:24:56 leot Exp $
+$NetBSD: distinfo,v 1.9 2022/09/08 11:23:02 leot Exp $
 
 BLAKE2s (bitbucket.org_bertimus9_systemstat_@v_v0.0.0-20180207000608-0eeff89b0690.mod) = 2bdab90e86ecfc031f0d32325c7f7ec258b8cf6929c33085b301cefdd0904b64
 SHA512 (bitbucket.org_bertimus9_systemstat_@v_v0.0.0-20180207000608-0eeff89b0690.mod) = 76e5e25a5eef22d4af4425416b389bc878264d7be9ba920d1bc05831e30b322f74fafe29d892982d71897d5b6b006b0711597bf63e1c1003525a7dd00151664a
@@ -780,12 +780,12 @@ Size (github.com_google_btree_@v_v1.0.1.mod) = 629 bytes
 BLAKE2s (github.com_google_btree_@v_v1.0.1.zip) = abfc4ccb1a7f9cb0e7f4087a6f78db8a6f9f89e6b0efa962c90d51954350f052
 SHA512 (github.com_google_btree_@v_v1.0.1.zip) = b82644edae6e2d95dcbc7a7575e5eff35765fae183459dc809f44f337826ed38cf84ebfd01f142b79e3cdecfa3c0b65f9ff83aa91fb33a1a0c7c0bf48d472c63
 Size (github.com_google_btree_@v_v1.0.1.zip) = 18241 bytes
-BLAKE2s (github.com_google_cadvisor_@v_v0.39.3.mod) = ccbfdb65ac031f313cc72884a5e732118f5275eb6b2351c96a31d2f42b46a1a9
-SHA512 (github.com_google_cadvisor_@v_v0.39.3.mod) = b944734881a43f0ccad25d178e3d0103f89153259d09702577e5db4dfaaa3c38caa876aad09cc3258377c0541ddafb2efe47e514479ce77d340eb899a23c48c3
-Size (github.com_google_cadvisor_@v_v0.39.3.mod) = 2211 bytes
-BLAKE2s (github.com_google_cadvisor_@v_v0.39.3.zip) = 7e5dff902eea35dcb4ff8d5023be43b9931bd7cc4f0a0b823678e57fb0ccaccd
-SHA512 (github.com_google_cadvisor_@v_v0.39.3.zip) = 3aa1eefe5dbb233547d86abc63b8043f539c49d6f9969f7256949ccf73fe43807ff54c5e8cb8c154fa4ccb1c5e6b8edec356069d44d501a325a4442778180d07
-Size (github.com_google_cadvisor_@v_v0.39.3.zip) = 1271052 bytes
+BLAKE2s (github.com_google_cadvisor_@v_v0.39.4.mod) = ccbfdb65ac031f313cc72884a5e732118f5275eb6b2351c96a31d2f42b46a1a9
+SHA512 (github.com_google_cadvisor_@v_v0.39.4.mod) = b944734881a43f0ccad25d178e3d0103f89153259d09702577e5db4dfaaa3c38caa876aad09cc3258377c0541ddafb2efe47e514479ce77d340eb899a23c48c3
+Size (github.com_google_cadvisor_@v_v0.39.4.mod) = 2211 bytes
+BLAKE2s (github.com_google_cadvisor_@v_v0.39.4.zip) = 55eb911558b6243388c7bca17b7120dd1273e7ec45b017030676700ed25e0ab9
+SHA512 (github.com_google_cadvisor_@v_v0.39.4.zip) = 5268a58bc802e9b6010da9d4e04834d18064920b9ba553e1803abf6d28b7c491b16b47ca79e2d0003fe9364bb153d3c2ee5def3bcd945c471de7766606463f5f
+Size (github.com_google_cadvisor_@v_v0.39.4.zip) = 1271247 bytes
 BLAKE2s (github.com_google_go-cmp_@v_v0.5.5.mod) = 54befdbebc1a7ed8c2f5de2cc688fab3ab3337a212c5f36bde6d427830820200
 SHA512 (github.com_google_go-cmp_@v_v0.5.5.mod) = cb203760fc6ca9c9d64811cf1342752faa5a95f27934c298407dc865f9561081210dd1b82b15ee2f5337b70d4c55d102d8884b5b9a5f70d9cbf85227a32b9713
 Size (github.com_google_go-cmp_@v_v0.5.5.mod) = 105 bytes
@@ -2106,9 +2106,9 @@ Size (k8s.io_utils_@v_v0.0.0-20211116205334-6203023598ed.mod) = 167 bytes
 BLAKE2s (k8s.io_utils_@v_v0.0.0-20211116205334-6203023598ed.zip) = 9057b9e116f651092862ed1dc7ac9f06a9fd8ee865edc5dd8a4dad9aa4244655
 SHA512 (k8s.io_utils_@v_v0.0.0-20211116205334-6203023598ed.zip) = 572f8b2fe029fb13426d5bebbca18f26c957458f99dc94d08332750c6faeaaed1c49dda8871bb3207f0e82f8302bba3ab394a9ddbe4d60db0595fd0ed08cdaf1
 Size (k8s.io_utils_@v_v0.0.0-20211116205334-6203023598ed.zip) = 185466 bytes
-BLAKE2s (kubectl-1.22.9.tar.gz) = d55403b9b4576919efac18379660078a88d17764872a96f39140b2b543531741
-SHA512 (kubectl-1.22.9.tar.gz) = de2b3aee416ac32e2ed0c98db49dab0a38bf8654e7014e0d88f976356dc3b84b2376015ddf90371f8a8e77862101fd36f102ad8ee41ac0dbdd37f91c2a7894e1
-Size (kubectl-1.22.9.tar.gz) = 36068589 bytes
+BLAKE2s (kubectl-1.22.13.tar.gz) = 5453390baefffbf945c0759a519853a7feb7b5e7de5eeed99b1879292a5464e9
+SHA512 (kubectl-1.22.13.tar.gz) = 29bda4adf6970ab2f18fb71a8b932360c27a6b6cb1d0d797ce99a0e8d8469548ac6f54e666a8c8717e5ac44344a9cd34c8dba1c1eeee2074cff88637f60fdf69
+Size (kubectl-1.22.13.tar.gz) = 36093191 bytes
 BLAKE2s (modernc.org_cc_@v_v1.0.0.mod) = b91132e37bd1387037f899bad9b85b3b304bcea19e12253a2ab2d29f92c15dfd
 SHA512 (modernc.org_cc_@v_v1.0.0.mod) = 22847329a9a431f222a2bde9c743aa5d76e737e2535b53273c31cb641c89fa4b73e51de12f84fb6da532b060a1daa084c5150502e3ab4e311eaff351f10617fa
 Size (modernc.org_cc_@v_v1.0.0.mod) = 22 bytes
