@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.46 2022/09/08 04:45:44 pho Exp $
+# $NetBSD: haskell.mk,v 1.47 2022/09/08 05:26:16 wiz Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages. Package
 # configuration, building, installation, registration and unregistration
@@ -36,7 +36,7 @@
 #	A list of Cabal packages that the package depends on, whose version
 #	constraints are way too restricted to solve. Listing packages in
 #	this variable will cause the *.cabal file to be rewritten so that
-#	any version is accepted. Use this with care, because not every
+#	any version is accepted. Use this with care, because not all
 #	incompatibilities are caught during build time.
 #
 #	Default value: empty
@@ -166,7 +166,7 @@ USE_LANGUAGES+=	c
 # which is called Haskell PVP (https://pvp.haskell.org/). Packages usually
 # have version constraints on their dependencies that specify not only
 # lower bounds but also upper bounds. The problem is that, while lower
-# bounds are mostly acculate, package authors can not be sure about upper
+# bounds are mostly accurate, package authors can not be sure about upper
 # bounds so they tend to be too pessimistic about compatibility.
 .if !empty(HASKELL_UNRESTRICT_DEPENDENCIES)
 SUBST_CLASSES+=		cabal
@@ -174,7 +174,7 @@ SUBST_STAGE.cabal?=	post-extract
 SUBST_FILES.cabal?=	${HASKELL_PKG_NAME:C/-[[:digit:].]+$//}.cabal
 SUBST_MESSAGE.cabal?=	Relaxing version constraints on dependencies
 .  for _pkg_ in ${HASKELL_UNRESTRICT_DEPENDENCIES}
-# Leading whitespaces or commas to avoid mismatches, remove version
+# Leading whitespace or commas to avoid mismatches, remove version
 # constraints up to end of line or ','.
 SUBST_SED.cabal+=	-Ee 's/((^|,)[[:space:]]*${_pkg_})[^[:alpha:],]+(,|$$)/\1\3/g'
 .  endfor
