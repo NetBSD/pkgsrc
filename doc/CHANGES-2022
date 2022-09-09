@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4408 2022/09/09 15:21:22 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4409 2022/09/09 15:24:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6516,3 +6516,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/cvise to 2.5.0 [wiz 2022-09-09]
 	Updated textproc/hunspell to 1.7.1 [wiz 2022-09-09]
 	Updated graphics/graphene to 1.10.8 [wiz 2022-09-09]
+	Updated security/libtasn1 to 4.19.0 [wiz 2022-09-09]
