@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4398 2022/09/09 13:12:04 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4399 2022/09/09 13:18:32 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6506,3 +6506,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/lok to 0.2.2 [pin 2022-09-09]
 	Added security/p5-Net-SSH2 version 0.73 [he 2022-09-09]
 	Updated misc/ruby-bundler to 2.3.22 [taca 2022-09-09]
+	Updated databases/ruby-sqlite3 to 1.5.0 [taca 2022-09-09]
