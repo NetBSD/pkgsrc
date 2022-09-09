@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2022/05/09 21:47:01 pin Exp $
+$NetBSD: distinfo,v 1.8 2022/09/09 08:46:31 pin Exp $
 
 BLAKE2s (ansi_term-0.12.1.crate) = 9d7961fca7b2680f17660048cf2d6171faa0def807ea66b5b5b9110f0623a12f
 SHA512 (ansi_term-0.12.1.crate) = b840e28b3e7700689a69a39659b1e066560078dd4a58326b91a028915819e7af883399ee53e920db68fd974c58d35bb1ddf8d427af5937d5f696f57c4376b671
@@ -24,15 +24,15 @@ Size (clap-2.34.0.crate) = 202210 bytes
 BLAKE2s (const_fn-0.4.5.crate) = b16cd7c5bdc1e1349667e1cc83ab19ca3efbcbb4619b03ae38bb82ca2b83ce7a
 SHA512 (const_fn-0.4.5.crate) = 6e41e2d5b185178ea0b7efe8303b7a3a532d3c7d7c7c4c9f093007c81edef2ed5ac8d456da167247b53a128c12ba3a6e1c32497ca11b7c5cb1b03ae37c7c897c
 Size (const_fn-0.4.5.crate) = 13107 bytes
-BLAKE2s (crossbeam-deque-0.8.1.crate) = 9275d9f073fd32bc240417aa95325620fba8dd4f8e26c4d6f67ee89e091f2de9
-SHA512 (crossbeam-deque-0.8.1.crate) = 44a4fe1d4ab7457e2b0950be787b76b15e1bb0b1c108d032381ce3fe99bf7bf76f3d1718085660083d813e2639e66fdd3635d9186e85a9eb7267063b117eaca4
-Size (crossbeam-deque-0.8.1.crate) = 20852 bytes
+BLAKE2s (crossbeam-deque-0.8.2.crate) = bcf57ecb82e3225e313aa692726e05bd81637d208792de29feb436c56ea5f773
+SHA512 (crossbeam-deque-0.8.2.crate) = a50a878d843d6eb1b5b92321ce6bfb87a23d3c16e820b1ff55472f0bd3d29b41d09ea95e1b9ccb2790f6687c043dd9ada1cd5124705e24292ccbd8fae1f243b3
+Size (crossbeam-deque-0.8.2.crate) = 21237 bytes
 BLAKE2s (crossbeam-epoch-0.9.1.crate) = 16e3003124f47925f960743a1ab9d4e664651047cc55bb507a785e0322c47ba5
 SHA512 (crossbeam-epoch-0.9.1.crate) = 63d03e71013f7ffbc7b7a8ec5fe478323e7cf679bd126f03980c5e0790b57f5c48ce0ddb5e9c7ece31bd7380a944c1a1d462a9a1bf0126f9851e549739d8afc4
 Size (crossbeam-epoch-0.9.1.crate) = 39561 bytes
-BLAKE2s (crossbeam-utils-0.8.1.crate) = d625e898958264e9a1bae6f46a7ee461888c9e44a524c0d31ed0a24f99115937
-SHA512 (crossbeam-utils-0.8.1.crate) = c9f3a513fd139dab3c8091366cd6d378ef8a4d00eb43a6c26d107361fea470a5ab180950a1204c1a8881c2ed1106500327d598ccb09c79d0eba2db11299aa286
-Size (crossbeam-utils-0.8.1.crate) = 35914 bytes
+BLAKE2s (crossbeam-utils-0.8.8.crate) = dec4af9b7a4a875a50593f68bb4da771a47c61014cd72b0589d207cf9e77a934
+SHA512 (crossbeam-utils-0.8.8.crate) = ab960afdb82863160a3fa1c21c64b35b3112725bd72fc8e0724175937f4b23d0628253032229501938cd86a8e406a59c06cb44e8bdf34619de781a84ebb46ea0
+Size (crossbeam-utils-0.8.8.crate) = 39681 bytes
 BLAKE2s (glob-0.3.0.crate) = a60fa0dbb50f7da285b5ad2a74a36139efc9e6fe2f33c9ac81cf2c2db6b024f0
 SHA512 (glob-0.3.0.crate) = 87098ffdbc518442995c422120cef71f83069c8f88a1970ecec5105b0f284ddd92bcee929f5c230d5b90ae1ead7e1214c3eea26f4a8b26715a00c1ab8b09bc46
 Size (glob-0.3.0.crate) = 18724 bytes
@@ -42,9 +42,9 @@ Size (lazy_static-1.4.0.crate) = 10443 bytes
 BLAKE2s (libc-0.2.70.crate) = 43bbe9469f3e1aa0eb4940b9861f73417aa6c52910bbab6e932a97ebec141942
 SHA512 (libc-0.2.70.crate) = a543b972e73d5bf142988464cd62f4402b782796074aabf4ec9396e341050d545b83212c7e4c62c224d5e06de4d794c67fea91b83d605626df115b30d8f326de
 Size (libc-0.2.70.crate) = 472909 bytes
-BLAKE2s (lok-0.2.1.tar.gz) = 78d86a872abc3877159cfab6ba0849a411d80c276322ebcba07c597f85695d5b
-SHA512 (lok-0.2.1.tar.gz) = fda12f23959f544d421472973f7c29972ff7479afd28702dc8ff1e6c9ef3cb59c8472833a2af48ceb4c48559648446b06262e344ed5df64add95b21e9b431500
-Size (lok-0.2.1.tar.gz) = 12971 bytes
+BLAKE2s (lok-0.2.2.tar.gz) = 256559541e3043e6b9386ff612eb2c17a18f1fa54337728eacab497ed9e7945f
+SHA512 (lok-0.2.2.tar.gz) = 659446f01f4dfbff82e639db38368374541402b655901f3f6bf9a91121465f214176443c37060b3fc36abb64404c0f9e8528b5a9502d551bb84916b1117ee06c
+Size (lok-0.2.2.tar.gz) = 13149 bytes
 BLAKE2s (memoffset-0.6.1.crate) = 5b864adb907a191398a7e184d79986ce39544f49045035ed838c6698386a9a80
 SHA512 (memoffset-0.6.1.crate) = 74d081af00b7e442198b786d79e4ef35c243d2e78347ab9cb50e127569aed3fd77b47b95df6f361a716abce27c8cc6cb1dfa12c92b0b2208b21f9eb9527b61be
 Size (memoffset-0.6.1.crate) = 7706 bytes
