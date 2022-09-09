@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2022/09/05 14:10:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/09/09 22:47:53 wiz Exp $
 bin/hatch-fancy-pypi-readme-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -7,8 +7,8 @@ ${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
-${PYSITELIB}/${WHEEL_INFODIR}/license_files/AUTHORS.md
-${PYSITELIB}/${WHEEL_INFODIR}/license_files/LICENSE.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/AUTHORS.md
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
 ${PYSITELIB}/hatch_fancy_pypi_readme/__init__.py
 ${PYSITELIB}/hatch_fancy_pypi_readme/__init__.pyc
 ${PYSITELIB}/hatch_fancy_pypi_readme/__main__.py
