@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.103 2022/07/11 20:56:27 wiz Exp $
+# $NetBSD: Makefile,v 1.104 2022/09/09 15:28:16 wiz Exp $
 
-DISTNAME=		libdrm-2.4.112
+DISTNAME=		libdrm-2.4.113
 CATEGORIES=		x11 graphics
 MASTER_SITES=		https://dri.freedesktop.org/libdrm/
 EXTRACT_SUFX=		.tar.xz
@@ -44,40 +44,40 @@ ATOMIC_OPS_CHECK=	1
 
 PLIST_VARS+=	intel arm
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
-MESON_ARGS+=	-Dintel=true
-MESON_ARGS+=	-Dvmwgfx=true
+MESON_ARGS+=	-Dintel=enabled
+MESON_ARGS+=	-Dvmwgfx=enabled
 .include "../../sysutils/libpciaccess/buildlink3.mk"
 PLIST.intel=	yes
 .else
-MESON_ARGS+=	-Dintel=false
-MESON_ARGS+=	-Dvmwgfx=false
+MESON_ARGS+=	-Dintel=disabled
+MESON_ARGS+=	-Dvmwgfx=disabled
 .endif
 
-MESON_ARGS+=	-Dradeon=true
-MESON_ARGS+=	-Damdgpu=true
-MESON_ARGS+=	-Dnouveau=true
+MESON_ARGS+=	-Dradeon=enabled
+MESON_ARGS+=	-Damdgpu=enabled
+MESON_ARGS+=	-Dnouveau=enabled
 
 .if ${MACHINE_ARCH:Marm*} || \
       ${MACHINE_ARCH:Mearm*} || \
       ${MACHINE_ARCH} == "aarch64"
-MESON_ARGS+=	-Detnaviv=true
-MESON_ARGS+=	-Dexynos=true
-MESON_ARGS+=	-Dfreedreno=true
-MESON_ARGS+=	-Dvc4=true
-MESON_ARGS+=	-Domap=true
-MESON_ARGS+=	-Dtegra=true
+MESON_ARGS+=	-Detnaviv=enabled
+MESON_ARGS+=	-Dexynos=enabled
+MESON_ARGS+=	-Dfreedreno=enabled
+MESON_ARGS+=	-Dvc4=enabled
+MESON_ARGS+=	-Domap=enabled
+MESON_ARGS+=	-Dtegra=enabled
 PLIST.arm=	yes
 .else
-MESON_ARGS+=	-Detnaviv=false
-MESON_ARGS+=	-Dexynos=false
-MESON_ARGS+=	-Dfreedreno=false
-MESON_ARGS+=	-Domap=false
-MESON_ARGS+=	-Dtegra=false
-MESON_ARGS+=	-Dvc4=false
+MESON_ARGS+=	-Detnaviv=disabled
+MESON_ARGS+=	-Dexynos=disabled
+MESON_ARGS+=	-Dfreedreno=disabled
+MESON_ARGS+=	-Domap=disabled
+MESON_ARGS+=	-Dtegra=disabled
+MESON_ARGS+=	-Dvc4=disabled
 .endif
 
-MESON_ARGS+=	-Dman-pages=false
-MESON_ARGS+=	-Dvalgrind=false
+MESON_ARGS+=	-Dman-pages=disabled
+MESON_ARGS+=	-Dvalgrind=disabled
 
 LDFLAGS.NetBSD+=	-lpci
 CPPFLAGS.SunOS+=	-D__EXTENSIONS__	# posix_memalign, ...
