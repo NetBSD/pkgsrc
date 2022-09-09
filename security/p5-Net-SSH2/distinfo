@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/09/09 09:04:24 he Exp $
+
+BLAKE2s (Net-SSH2-0.73.tar.gz) = b1de9a8ebb81b786034e9e5cd2ace0f6f654369fd4dbc01289cdbddaed04b82a
+SHA512 (Net-SSH2-0.73.tar.gz) = 9d0f06f3404127e953a2b625e48de733dca122f95a467a5785ddaedac79c693874dbd904f0dad91c5539688fb89c5dc00e32ff34f005efb1e220784121788c92
+Size (Net-SSH2-0.73.tar.gz) = 146435 bytes
