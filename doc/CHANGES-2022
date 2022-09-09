@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4415 2022/09/09 15:52:53 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4416 2022/09/09 16:06:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6523,3 +6523,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/libatomic_ops to 7.6.14 [wiz 2022-09-09]
 	Updated editors/Sigil to 1.9.20 [wiz 2022-09-09]
 	Updated math/harmbase2 to 20220109 [taca 2022-09-09]
+	Updated security/py-pip-audit to 2.4.4 [wiz 2022-09-09]
