@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2022/05/04 06:44:12 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/09/09 15:04:37 wiz Exp $
 include/toml++/impl/array.h
 include/toml++/impl/array.inl
 include/toml++/impl/at_path.h
@@ -20,6 +20,8 @@ include/toml++/impl/parse_error.h
 include/toml++/impl/parse_result.h
 include/toml++/impl/parser.h
 include/toml++/impl/parser.inl
+include/toml++/impl/path.h
+include/toml++/impl/path.inl
 include/toml++/impl/preprocessor.h
 include/toml++/impl/print_to_stream.h
 include/toml++/impl/print_to_stream.inl
@@ -33,6 +35,7 @@ include/toml++/impl/std_optional.h
 include/toml++/impl/std_string.h
 include/toml++/impl/std_string.inl
 include/toml++/impl/std_utility.h
+include/toml++/impl/std_variant.h
 include/toml++/impl/std_vector.h
 include/toml++/impl/table.h
 include/toml++/impl/table.inl
