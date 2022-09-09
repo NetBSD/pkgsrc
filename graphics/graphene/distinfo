@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:46:16 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/09/09 15:21:13 wiz Exp $
 
-BLAKE2s (graphene-1.10.2.tar.xz) = 7fcc82c3a02684d2e8453e32ee982a2b16d3d546dbc1034fd7b791627b603a32
-SHA512 (graphene-1.10.2.tar.xz) = a8a8ef1e4ccffee2313a18b9b8dda06c7ede6d49fdde8578694500634e3c90278fd30af7d88938d5ecb08c519cc3e09d21fe69d0f21cb766e056ceedbb3eafb0
-Size (graphene-1.10.2.tar.xz) = 292372 bytes
+BLAKE2s (graphene-1.10.8.tar.gz) = 853c27bfd1dca1a5e54b0b1ad3bb6d1d2d24f25744dcee34278ff5393cdebbdf
+SHA512 (graphene-1.10.8.tar.gz) = 526b0c17049459b687ceb7f6c26c9d982535e4048e74a0b6282704f9811d3c2e7e0e6cfef166aa953306b6cf77add6677bc600ae0c66cc052dc04c3d0345bd68
+Size (graphene-1.10.8.tar.gz) = 178557 bytes

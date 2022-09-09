@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/09/04 11:21:41 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/09/09 15:21:13 wiz Exp $
 include/graphene-1.0/graphene-box.h
 include/graphene-1.0/graphene-euler.h
 include/graphene-1.0/graphene-frustum.h
@@ -28,7 +28,7 @@ lib/girepository-1.0/Graphene-1.0.typelib
 lib/graphene-1.0/include/graphene-config.h
 lib/libgraphene-1.0.so
 lib/libgraphene-1.0.so.0
-lib/libgraphene-1.0.so.0.1000.2
+lib/libgraphene-1.0.so.0.1000.8
 lib/pkgconfig/graphene-1.0.pc
 lib/pkgconfig/graphene-gobject-1.0.pc
 share/gir-1.0/Graphene-1.0.gir
