@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22167 2022/09/09 06:52:46 wiz Exp $
+$NetBSD: TODO,v 1.22168 2022/09/09 15:04:50 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1541,7 +1541,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o tn5250-0.17.3 [at http://tn5250.sourceforge.net/]
 	o tob-0.26
 	o tomboy-1.10.2
-	o tomlplusplus-3.2.0
 	o top-3.8beta1
 	o topgit-0.8
 	o tor-browser-11.0.9 [wip]
