@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4405 2022/09/09 15:04:50 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4406 2022/09/09 15:14:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6513,3 +6513,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/ruby-aws-partitions to 1.627.0 [taca 2022-09-09]
 	Updated www/ruby-aws-sdk-core to 3.143.0 [taca 2022-09-09]
 	Updated devel/tomlplusplus to 3.2.0 [wiz 2022-09-09]
+	Updated devel/cvise to 2.5.0 [wiz 2022-09-09]
