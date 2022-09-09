@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/02/28 22:16:01 plunky Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/09/09 15:39:32 taca Exp $
 bin/fixup_datums
 bin/hbexport
 share/harmbase2/Debian.sh
@@ -10,6 +10,7 @@ share/harmbase2/dwf-export.sh
 share/harmbase2/getPreds.rb
 share/harmbase2/harmbase2.sql
 share/harmbase2/importNOS.rb
+share/harmbase2/importNOS_CurRefs.rb
 share/harmbase2/importNOS_CurSubs.rb
 share/harmbase2/importNOS_DodgyCode.rb
 share/harmbase2/importNOS_Geogroups.rb
@@ -25,4 +26,5 @@ share/harmbase2/sample.rb
 share/harmbase2/scrape-MDAPI-0-stationlists.sh
 share/harmbase2/scrape-MDAPI-1-tiderefs.rb
 share/harmbase2/scrape-MDAPI-2-geogroups.rb
+share/harmbase2/scrape-MDAPI-3-currefs.rb
 share/harmbase2/scrape-currents-regions-lists.sh
