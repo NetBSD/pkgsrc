@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2022/08/07 08:02:11 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2022/09/09 16:21:17 wiz Exp $
 
-DISTNAME=	texlab-4.2.1
+DISTNAME=	texlab-4.2.2
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_GITHUB:=latex-lsp/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
