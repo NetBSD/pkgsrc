@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.9 2020/03/24 16:20:05 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2022/09/09 13:38:46 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.github/dependabot.yml
 ${GEM_LIBDIR}/.github/release-drafter.yml
 ${GEM_LIBDIR}/.github/workflows/push.yml
 ${GEM_LIBDIR}/.gitignore
