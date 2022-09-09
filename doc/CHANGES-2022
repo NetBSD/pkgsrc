@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4397 2022/09/09 09:05:19 he Exp $
+$NetBSD: CHANGES-2022,v 1.4398 2022/09/09 13:12:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6505,3 +6505,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated shells/nushell to 0.68.1 [pin 2022-09-09]
 	Updated textproc/lok to 0.2.2 [pin 2022-09-09]
 	Added security/p5-Net-SSH2 version 0.73 [he 2022-09-09]
+	Updated misc/ruby-bundler to 2.3.22 [taca 2022-09-09]
