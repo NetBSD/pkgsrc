@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.68 2022/07/31 19:10:19 wiz Exp $
+@comment $NetBSD: PLIST,v 1.69 2022/09/09 18:28:26 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -363,7 +363,9 @@ share/mame/hash/kc_cass.xml
 share/mame/hash/kc_flop.xml
 share/mame/hash/kim1_cass.xml
 share/mame/hash/korvet_flop.xml
-share/mame/hash/lantutor.xml
+share/mame/hash/kpython2.xml
+share/mame/hash/lanteach.xml
+share/mame/hash/lantrans.xml
 share/mame/hash/laser2001_cart.xml
 share/mame/hash/laser2001_flop.xml
 share/mame/hash/leapfrog_didj_cart.xml
@@ -673,6 +675,7 @@ share/mame/hash/trs80_flop.xml
 share/mame/hash/trs80_quik.xml
 share/mame/hash/trs80m2.xml
 share/mame/hash/trsm100.xml
+share/mame/hash/tsconf_betadisc_flop.xml
 share/mame/hash/ttwist_brainquest_cart.xml
 share/mame/hash/turboextreme_cart.xml
 share/mame/hash/tutor.xml
