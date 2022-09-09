@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4396 2022/09/09 08:46:50 pin Exp $
+$NetBSD: CHANGES-2022,v 1.4397 2022/09/09 09:05:19 he Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6504,3 +6504,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/seamonkey-l10n to 2.53.13 [ryoon 2022-09-08]
 	Updated shells/nushell to 0.68.1 [pin 2022-09-09]
 	Updated textproc/lok to 0.2.2 [pin 2022-09-09]
+	Added security/p5-Net-SSH2 version 0.73 [he 2022-09-09]
