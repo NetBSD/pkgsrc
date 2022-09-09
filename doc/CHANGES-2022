@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4401 2022/09/09 13:37:35 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4402 2022/09/09 13:39:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6509,3 +6509,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/ruby-sqlite3 to 1.5.0 [taca 2022-09-09]
 	Removed devel/ruby-gettext-setup [taca 2022-09-09]
 	Updated security/ruby-rex-text to 0.2.45 [taca 2022-09-09]
+	Updated security/ruby-sshkit to 1.21.3 [taca 2022-09-09]
