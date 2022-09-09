@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4418 2022/09/09 17:24:51 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4419 2022/09/09 18:28:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6526,3 +6526,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/py-pip-audit to 2.4.4 [wiz 2022-09-09]
 	Updated print/texlab to 4.2.2 [wiz 2022-09-09]
 	Updated devel/py-mercurial to 6.2.2 [wiz 2022-09-09]
+	Updated emulators/mame to 0.247 [wiz 2022-09-09]
