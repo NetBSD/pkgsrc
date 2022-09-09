@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2022/09/05 09:00:21 adam Exp $
+# $NetBSD: Makefile,v 1.45 2022/09/09 22:50:35 wiz Exp $
 
 DISTNAME=	apsw-3.39.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-r1//}
@@ -16,6 +16,8 @@ LICENSE=	zlib
 EGG_NAME=	${DISTNAME:S/-r1/.post1/}
 
 PYSETUPBUILDARGS+=	--enable=load_extension
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 BUILDLINK_API_DEPENDS.sqlite3+= sqlite3>=3.39.2
 .include "../../databases/sqlite3/buildlink3.mk"
