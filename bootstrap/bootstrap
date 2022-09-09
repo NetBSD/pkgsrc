@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.312 2022/06/16 22:12:20 charlotte Exp $
+# $NetBSD: bootstrap,v 1.313 2022/09/09 10:58:15 jperkin Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -587,7 +587,6 @@ CYGWIN_*)
 Darwin)
 	root_group=wheel
 	machine_arch=`get_machine_arch_darwin`
-	CC=${CC:-"cc -isystem /usr/include"}; export CC
 	check_compiler=yes
 
 	# Combine major.minor product version for simpler numerical tests.
