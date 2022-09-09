@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.34 2022/08/28 03:35:43 taca Exp $
+@comment $NetBSD: PLIST,v 1.35 2022/09/09 13:11:42 taca Exp $
 bin/bundle2-${RUBY_SUFFIX}
 bin/bundler2-${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -94,12 +94,16 @@ ${GEM_LIBDIR}/lib/bundler/man/bundle-clean.1
 ${GEM_LIBDIR}/lib/bundler/man/bundle-clean.1.ronn
 ${GEM_LIBDIR}/lib/bundler/man/bundle-config.1
 ${GEM_LIBDIR}/lib/bundler/man/bundle-config.1.ronn
+${GEM_LIBDIR}/lib/bundler/man/bundle-console.1
+${GEM_LIBDIR}/lib/bundler/man/bundle-console.1.ronn
 ${GEM_LIBDIR}/lib/bundler/man/bundle-doctor.1
 ${GEM_LIBDIR}/lib/bundler/man/bundle-doctor.1.ronn
 ${GEM_LIBDIR}/lib/bundler/man/bundle-exec.1
 ${GEM_LIBDIR}/lib/bundler/man/bundle-exec.1.ronn
 ${GEM_LIBDIR}/lib/bundler/man/bundle-gem.1
 ${GEM_LIBDIR}/lib/bundler/man/bundle-gem.1.ronn
+${GEM_LIBDIR}/lib/bundler/man/bundle-help.1
+${GEM_LIBDIR}/lib/bundler/man/bundle-help.1.ronn
 ${GEM_LIBDIR}/lib/bundler/man/bundle-info.1
 ${GEM_LIBDIR}/lib/bundler/man/bundle-info.1.ronn
 ${GEM_LIBDIR}/lib/bundler/man/bundle-init.1
@@ -128,6 +132,8 @@ ${GEM_LIBDIR}/lib/bundler/man/bundle-show.1
 ${GEM_LIBDIR}/lib/bundler/man/bundle-show.1.ronn
 ${GEM_LIBDIR}/lib/bundler/man/bundle-update.1
 ${GEM_LIBDIR}/lib/bundler/man/bundle-update.1.ronn
+${GEM_LIBDIR}/lib/bundler/man/bundle-version.1
+${GEM_LIBDIR}/lib/bundler/man/bundle-version.1.ronn
 ${GEM_LIBDIR}/lib/bundler/man/bundle-viz.1
 ${GEM_LIBDIR}/lib/bundler/man/bundle-viz.1.ronn
 ${GEM_LIBDIR}/lib/bundler/man/bundle.1
@@ -152,6 +158,7 @@ ${GEM_LIBDIR}/lib/bundler/plugin/source_list.rb
 ${GEM_LIBDIR}/lib/bundler/process_lock.rb
 ${GEM_LIBDIR}/lib/bundler/remote_specification.rb
 ${GEM_LIBDIR}/lib/bundler/resolver.rb
+${GEM_LIBDIR}/lib/bundler/resolver/base.rb
 ${GEM_LIBDIR}/lib/bundler/resolver/spec_group.rb
 ${GEM_LIBDIR}/lib/bundler/retry.rb
 ${GEM_LIBDIR}/lib/bundler/ruby_dsl.rb
