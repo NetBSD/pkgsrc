@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.3 2022/05/09 21:47:01 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.4 2022/09/09 08:46:31 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	ansi_term-0.12.1
 CARGO_CRATE_DEPENDS+=	atty-0.2.13
@@ -8,9 +8,9 @@ CARGO_CRATE_DEPENDS+=	bright-0.4.1
 CARGO_CRATE_DEPENDS+=	cfg-if-1.0.0
 CARGO_CRATE_DEPENDS+=	clap-2.34.0
 CARGO_CRATE_DEPENDS+=	const_fn-0.4.5
-CARGO_CRATE_DEPENDS+=	crossbeam-deque-0.8.1
+CARGO_CRATE_DEPENDS+=	crossbeam-deque-0.8.2
 CARGO_CRATE_DEPENDS+=	crossbeam-epoch-0.9.1
-CARGO_CRATE_DEPENDS+=	crossbeam-utils-0.8.1
+CARGO_CRATE_DEPENDS+=	crossbeam-utils-0.8.8
 CARGO_CRATE_DEPENDS+=	glob-0.3.0
 CARGO_CRATE_DEPENDS+=	lazy_static-1.4.0
 CARGO_CRATE_DEPENDS+=	libc-0.2.70
