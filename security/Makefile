@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.870 2022/09/03 04:03:09 taca Exp $
+# $NetBSD: Makefile,v 1.871 2022/09/09 09:05:47 he Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -339,6 +339,7 @@ SUBDIR+=	p5-Net-DNS-SEC-Maint-Key
 SUBDIR+=	p5-Net-OpenSSH
 SUBDIR+=	p5-Net-SFTP
 SUBDIR+=	p5-Net-SSH
+SUBDIR+=	p5-Net-SSH2
 SUBDIR+=	p5-Net-SSLeay
 SUBDIR+=	p5-Netpgp-Verify
 SUBDIR+=	p5-SHA
