@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2022/09/06 20:46:24 pin Exp $
+# $NetBSD: Makefile,v 1.21 2022/09/09 08:45:19 pin Exp $
 
-DISTNAME=	nushell-0.68.0
+DISTNAME=	nushell-0.68.1
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nushell/}
 
@@ -21,12 +21,16 @@ RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libX11}/lib
 RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.libX11}/lib
 
-CARGO_NO_DEFAULT_FEATURES=	YES
-# 'trash-support' feature is default but, does not build on NetBSD.
-# Extra features 'dataframe' and 'database' do build.
+# The 'trash-support' feature is default but, does not build on NetBSD.
+# Extra features 'dataframe' and 'database' do build on NetBSD.
 # Uncomment them if you wish to enable these at  build time.
 # Be aware that doing so will increase the package build time.
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} != "Linux"
+CARGO_NO_DEFAULT_FEATURES=	YES
 CARGO_FEATURES+=		plugin which-support #dataframe database
+.endif
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/nu \
