@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4412 2022/09/09 15:39:57 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4413 2022/09/09 15:41:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6520,3 +6520,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/libdrm to 2.4.113 [wiz 2022-09-09]
 	Updated graphics/libheif to 1.13.0 [wiz 2022-09-09]
 	Updated lang/vala to 0.56.3 [wiz 2022-09-09]
+	Updated devel/libatomic_ops to 7.6.14 [wiz 2022-09-09]
