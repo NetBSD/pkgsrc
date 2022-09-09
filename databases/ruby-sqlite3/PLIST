@@ -1,17 +1,17 @@
-@comment $NetBSD: PLIST,v 1.18 2022/08/11 04:16:28 taca Exp $
+@comment $NetBSD: PLIST,v 1.19 2022/09/09 13:17:47 taca Exp $
+${GEM_HOME}/build_info/${GEM_NAME}.info
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/sqlite3/sqlite3_native.${RUBY_DLEXT}
 ${GEM_LIBDIR}/.gemtest
-${GEM_LIBDIR}/API_CHANGES.rdoc
-${GEM_LIBDIR}/CHANGELOG.rdoc
+${GEM_LIBDIR}/API_CHANGES.md
+${GEM_LIBDIR}/CHANGELOG.md
+${GEM_LIBDIR}/CONTRIBUTING.md
 ${GEM_LIBDIR}/ChangeLog.cvs
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
-${GEM_LIBDIR}/Manifest.txt
-${GEM_LIBDIR}/README.rdoc
-${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/appveyor.yml
+${GEM_LIBDIR}/LICENSE-DEPENDENCIES
+${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/ext/sqlite3/aggregator.c
 ${GEM_LIBDIR}/ext/sqlite3/aggregator.h
 ${GEM_LIBDIR}/ext/sqlite3/backup.c
@@ -25,6 +25,7 @@ ${GEM_LIBDIR}/ext/sqlite3/sqlite3.c
 ${GEM_LIBDIR}/ext/sqlite3/sqlite3_ruby.h
 ${GEM_LIBDIR}/ext/sqlite3/statement.c
 ${GEM_LIBDIR}/ext/sqlite3/statement.h
+${GEM_LIBDIR}/faq/faq.md
 ${GEM_LIBDIR}/faq/faq.rb
 ${GEM_LIBDIR}/faq/faq.yml
 ${GEM_LIBDIR}/lib/sqlite3.rb
@@ -38,11 +39,6 @@ ${GEM_LIBDIR}/lib/sqlite3/statement.rb
 ${GEM_LIBDIR}/lib/sqlite3/translator.rb
 ${GEM_LIBDIR}/lib/sqlite3/value.rb
 ${GEM_LIBDIR}/lib/sqlite3/version.rb
-${GEM_LIBDIR}/rakelib/faq.rake
-${GEM_LIBDIR}/rakelib/gem.rake
-${GEM_LIBDIR}/rakelib/native.rake
-${GEM_LIBDIR}/rakelib/vendor_sqlite3.rake
-${GEM_LIBDIR}/setup.rb
 ${GEM_LIBDIR}/test/helper.rb
 ${GEM_LIBDIR}/test/test_backup.rb
 ${GEM_LIBDIR}/test/test_collation.rb
