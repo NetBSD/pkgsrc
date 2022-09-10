@@ -1,0 +1,34 @@
+# $NetBSD: cargo-depends.mk,v 1.1 2022/09/10 16:16:27 pin Exp $
+
+CARGO_CRATE_DEPENDS+=	aho-corasick-0.7.18
+CARGO_CRATE_DEPENDS+=	ansi_term-0.12.1
+CARGO_CRATE_DEPENDS+=	argh-0.1.7
+CARGO_CRATE_DEPENDS+=	argh_derive-0.1.7
+CARGO_CRATE_DEPENDS+=	argh_shared-0.1.7
+CARGO_CRATE_DEPENDS+=	autocfg-1.1.0
+CARGO_CRATE_DEPENDS+=	block-0.1.6
+CARGO_CRATE_DEPENDS+=	chrono-0.4.19
+CARGO_CRATE_DEPENDS+=	heck-0.3.3
+CARGO_CRATE_DEPENDS+=	lazy_static-1.4.0
+CARGO_CRATE_DEPENDS+=	libc-0.2.123
+CARGO_CRATE_DEPENDS+=	locale_config-0.3.0
+CARGO_CRATE_DEPENDS+=	malloc_buf-0.0.6
+CARGO_CRATE_DEPENDS+=	memchr-2.4.1
+CARGO_CRATE_DEPENDS+=	num-integer-0.1.44
+CARGO_CRATE_DEPENDS+=	num-traits-0.2.14
+CARGO_CRATE_DEPENDS+=	objc-0.2.7
+CARGO_CRATE_DEPENDS+=	objc-foundation-0.1.1
+CARGO_CRATE_DEPENDS+=	objc_id-0.1.1
+CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.37
+CARGO_CRATE_DEPENDS+=	pure-rust-locales-0.5.6
+CARGO_CRATE_DEPENDS+=	quote-1.0.18
+CARGO_CRATE_DEPENDS+=	regex-1.5.5
+CARGO_CRATE_DEPENDS+=	regex-syntax-0.6.25
+CARGO_CRATE_DEPENDS+=	syn-1.0.91
+CARGO_CRATE_DEPENDS+=	time-0.1.44
+CARGO_CRATE_DEPENDS+=	unicode-segmentation-1.9.0
+CARGO_CRATE_DEPENDS+=	unicode-xid-0.2.2
+CARGO_CRATE_DEPENDS+=	wasi-0.10.0+wasi-snapshot-preview1
+CARGO_CRATE_DEPENDS+=	winapi-0.3.9
+CARGO_CRATE_DEPENDS+=	winapi-i686-pc-windows-gnu-0.4.0
+CARGO_CRATE_DEPENDS+=	winapi-x86_64-pc-windows-gnu-0.4.0
