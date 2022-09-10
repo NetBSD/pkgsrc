@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4422 2022/09/10 06:33:19 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4423 2022/09/10 06:34:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6530,3 +6530,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-hatch-fancy-pypi-readme to 22.3.0nb1 [wiz 2022-09-09]
 	Updated www/otter-browser to 1.0.03 [gutteridge 2022-09-10]
 	Updated graphics/exiv2 to 0.27.5nb1 [wiz 2022-09-10]
+	Updated graphics/gexiv2 to 0.14.0 [wiz 2022-09-10]
