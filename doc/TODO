@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22184 2022/09/10 09:48:03 wiz Exp $
+$NetBSD: TODO,v 1.22185 2022/09/10 10:38:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -494,7 +494,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o bioperl-1.7.8
 	o bird-2.0.8
 	o bird6-2.0.8
-	o blender-3.2
+	o blender-3.3
 	o bliz++-0.10
 	o blur6ex-0.3.462
 	o boolean-7.1
@@ -544,7 +544,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o colord-1.4.5
 	o colortail-0.3.3
 	o commit-patch-2.6
-	o compiz-0.8.10
+	o compiz-0.9.14.2
 	o concurrencykit-0.6.0
 	o cone-0.92
 	o conserver8-8.2.6
@@ -987,6 +987,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o linpsk-1.2 [ld: cannot find -lqt-mt with qt4]
 	o liquidwar-6.0.0.11
 	o lirc-0.9.3
+	o llvm-15.0
 	o lmbench-3
 	o log4cxx-0.11.0
 	o lohit-fonts-2.4.2
@@ -1355,7 +1356,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o qca2-qt5-ossl-2.3.2
 	o qconf-2.5
 	o qdirstat-1.8.1
-	o qemu-7.0
+	o qemu-7.1
+	o qt5-5.15.6
 	o qt6-6.3.1 [in wip]
 	o qtcreator-6.0
 	o quazip-1.1
