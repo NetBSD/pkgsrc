@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4429 2022/09/10 10:38:47 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4430 2022/09/10 12:50:43 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6561,3 +6561,16 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/babl to 0.1.96 [wiz 2022-09-10]
 	Updated x11/gtk4 to 4.8.0 [wiz 2022-09-10]
 	Updated editors/PageEdit to 1.9.20 [wiz 2022-09-10]
+	Updated devel/ruby-activesupport70 to 7.0.4 [taca 2022-09-10]
+	Updated devel/ruby-activemodel70 to 7.0.4 [taca 2022-09-10]
+	Updated devel/ruby-activejob70 to 7.0.4 [taca 2022-09-10]
+	Updated www/ruby-actionview70 to 7.0.4 [taca 2022-09-10]
+	Updated www/ruby-actionpack70 to 7.0.4 [taca 2022-09-10]
+	Updated databases/ruby-activerecord70 to 7.0.4 [taca 2022-09-10]
+	Updated devel/ruby-activestorage70 to 7.0.4 [taca 2022-09-10]
+	Updated mail/ruby-actionmailer70 to 7.0.4 [taca 2022-09-10]
+	Updated mail/ruby-actionmailbox70 to 7.0.4 [taca 2022-09-10]
+	Updated www/ruby-actioncable70 to 7.0.4 [taca 2022-09-10]
+	Updated devel/ruby-railties70 to 7.0.4 [taca 2022-09-10]
+	Updated textproc/ruby-actiontext70 to 7.0.4 [taca 2022-09-10]
+	Updated www/ruby-rails70 to 7.0.4 [taca 2022-09-10]
