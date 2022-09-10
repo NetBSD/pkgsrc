@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4436 2022/09/10 15:59:16 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4437 2022/09/10 16:00:34 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6583,3 +6583,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/ruby to 3.1.2nb1 [taca 2022-09-10]
 	Updated graphics/gexiv2 to 0.14.0nb1 [ryoon 2022-09-10]
 	Updated www/php-http3 to 3.3.0 [taca 2022-09-10]
+	Updated www/php-http4 to 4.2.3 [taca 2022-09-10]
