@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4440 2022/09/10 16:13:59 pin Exp $
+$NetBSD: CHANGES-2022,v 1.4441 2022/09/10 16:17:47 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6587,3 +6587,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/ruby-rouge to 3.30.0 [taca 2022-09-10]
 	Updated misc/wthrr to 0.2.1 [pin 2022-09-10]
 	Updated shells/starship to 1.10.3 [pin 2022-09-10]
+	Added time/rusti-cal version 0.4.5 [pin 2022-09-10]
