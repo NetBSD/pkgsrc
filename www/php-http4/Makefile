@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2022/05/28 15:00:18 taca Exp $
+# $NetBSD: Makefile,v 1.5 2022/09/10 16:00:10 taca Exp $
 
 MODNAME=		http
-PECL_VERSION=		4.2.2
+PECL_VERSION=		4.2.3
 CATEGORIES+=		www
 
 PECL_DISTNAME=		pecl_http-${PECL_VERSION}
