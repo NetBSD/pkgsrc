@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4423 2022/09/10 06:34:45 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4424 2022/09/10 08:21:36 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6531,3 +6531,16 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/otter-browser to 1.0.03 [gutteridge 2022-09-10]
 	Updated graphics/exiv2 to 0.27.5nb1 [wiz 2022-09-10]
 	Updated graphics/gexiv2 to 0.14.0 [wiz 2022-09-10]
+	Updated devel/ruby-activesupport60 to 6.0.6 [taca 2022-09-10]
+	Updated devel/ruby-activemodel60 to 6.0.6 [taca 2022-09-10]
+	Updated devel/ruby-activejob60 to 6.0.6 [taca 2022-09-10]
+	Updated www/ruby-actionview60 to 6.0.6 [taca 2022-09-10]
+	Updated www/ruby-actionpack60 to 6.0.6 [taca 2022-09-10]
+	Updated databases/ruby-activerecord60 to 6.0.6 [taca 2022-09-10]
+	Updated mail/ruby-actionmailer60 to 6.0.6 [taca 2022-09-10]
+	Updated devel/ruby-activestorage60 to 6.0.6 [taca 2022-09-10]
+	Updated mail/ruby-actionmailbox60 to 6.0.6 [taca 2022-09-10]
+	Updated www/ruby-actioncable60 to 6.0.6 [taca 2022-09-10]
+	Updated devel/ruby-railties60 to 6.0.6 [taca 2022-09-10]
+	Updated textproc/ruby-actiontext60 to 6.0.6 [taca 2022-09-10]
+	Updated www/ruby-rails60 to 6.0.6 [taca 2022-09-10]
