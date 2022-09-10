@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4432 2022/09/10 13:07:35 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4433 2022/09/10 13:16:39 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6576,3 +6576,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/ruby-rails70 to 7.0.4 [taca 2022-09-10]
 	Updated www/ruby-aws-partitions to 1.628.0 [taca 2022-09-10]
 	Updated www/ruby-aws-sdk-core to 3.144.0 [taca 2022-09-10]
+	Updated devel/ruby-redmine50 to 5.0.2nb1 [taca 2022-09-10]
