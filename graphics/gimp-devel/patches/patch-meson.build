@@ -1,4 +1,4 @@
-$NetBSD: patch-meson.build,v 1.2 2022/09/10 13:47:01 wiz Exp $
+$NetBSD: patch-meson.build,v 1.3 2022/09/10 16:32:37 wiz Exp $
 
 Avoid libdl dependency on NetBSD.
 https://gitlab.gnome.org/GNOME/gimp/-/issues/8604
@@ -8,23 +8,16 @@ https://gitlab.gnome.org/GNOME/gimp/-/issues/8605
 
 --- meson.build.orig	2022-08-21 19:21:38.000000000 +0000
 +++ meson.build
-@@ -127,6 +127,10 @@ platform_linux = (
-   host_os.contains('linux')
- )
- 
-+platform_netbsd = (
-+  host_os.contains('netbsd')
-+)
-+
- platform_windows = (
-   host_os.contains('mingw') or
-   host_os.contains('cygwin') or
-@@ -321,7 +325,7 @@ conf.set('ENABLE_RELOCATABLE_RESOURCES',
+@@ -321,7 +321,11 @@ conf.set('ENABLE_RELOCATABLE_RESOURCES',
  
  
  math              = cc.find_library('m')
 -dl                = platform_windows ? no_dep : cc.find_library('dl')
-+dl                = (platform_windows or platform_netbsd) ? no_dep : cc.find_library('dl')
++# libdl is only required on Linux. On Windows and some (all?) BSD, it
++# doesn't exist, but the API exists in libc by default (see #8604). On
++# macOS, it apparently exists but linking it explicitly is actually
++# unneeded as well.
++dl                = cc.find_library('dl', required: platform_linux)
  rpc               = platform_windows ? cc.find_library('rpcrt4') : no_dep
  dbghelp           = platform_windows ? cc.find_library('dbghelp') : no_dep
  winsock           = platform_windows ? cc.find_library('ws2_32') : no_dep
