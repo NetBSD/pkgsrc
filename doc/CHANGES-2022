@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4428 2022/09/10 09:48:03 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4429 2022/09/10 10:38:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6560,3 +6560,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/gimp-devel to 2.99.12 [wiz 2022-09-10]
 	Updated graphics/babl to 0.1.96 [wiz 2022-09-10]
 	Updated x11/gtk4 to 4.8.0 [wiz 2022-09-10]
+	Updated editors/PageEdit to 1.9.20 [wiz 2022-09-10]
