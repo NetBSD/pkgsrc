@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4420 2022/09/09 22:48:02 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4421 2022/09/10 02:16:50 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6528,3 +6528,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-mercurial to 6.2.2 [wiz 2022-09-09]
 	Updated emulators/mame to 0.247 [wiz 2022-09-09]
 	Updated devel/py-hatch-fancy-pypi-readme to 22.3.0nb1 [wiz 2022-09-09]
+	Updated www/otter-browser to 1.0.03 [gutteridge 2022-09-10]
