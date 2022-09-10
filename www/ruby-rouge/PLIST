@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2022/02/04 07:56:11 fcambus Exp $
+@comment $NetBSD: PLIST,v 1.18 2022/09/10 16:08:33 taca Exp $
 bin/rougify${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
@@ -89,11 +89,13 @@ ${GEM_LIBDIR}/lib/rouge/demos/html
 ${GEM_LIBDIR}/lib/rouge/demos/http
 ${GEM_LIBDIR}/lib/rouge/demos/hylang
 ${GEM_LIBDIR}/lib/rouge/demos/idlang
+${GEM_LIBDIR}/lib/rouge/demos/idris
 ${GEM_LIBDIR}/lib/rouge/demos/igorpro
 ${GEM_LIBDIR}/lib/rouge/demos/ini
 ${GEM_LIBDIR}/lib/rouge/demos/io
 ${GEM_LIBDIR}/lib/rouge/demos/irb
 ${GEM_LIBDIR}/lib/rouge/demos/irb_output
+${GEM_LIBDIR}/lib/rouge/demos/isabelle
 ${GEM_LIBDIR}/lib/rouge/demos/isbl
 ${GEM_LIBDIR}/lib/rouge/demos/j
 ${GEM_LIBDIR}/lib/rouge/demos/janet
@@ -109,6 +111,7 @@ ${GEM_LIBDIR}/lib/rouge/demos/jsx
 ${GEM_LIBDIR}/lib/rouge/demos/julia
 ${GEM_LIBDIR}/lib/rouge/demos/kotlin
 ${GEM_LIBDIR}/lib/rouge/demos/lasso
+${GEM_LIBDIR}/lib/rouge/demos/lean
 ${GEM_LIBDIR}/lib/rouge/demos/liquid
 ${GEM_LIBDIR}/lib/rouge/demos/literate_coffeescript
 ${GEM_LIBDIR}/lib/rouge/demos/literate_haskell
@@ -124,6 +127,7 @@ ${GEM_LIBDIR}/lib/rouge/demos/markdown
 ${GEM_LIBDIR}/lib/rouge/demos/mason
 ${GEM_LIBDIR}/lib/rouge/demos/mathematica
 ${GEM_LIBDIR}/lib/rouge/demos/matlab
+${GEM_LIBDIR}/lib/rouge/demos/meson
 ${GEM_LIBDIR}/lib/rouge/demos/minizinc
 ${GEM_LIBDIR}/lib/rouge/demos/moonscript
 ${GEM_LIBDIR}/lib/rouge/demos/mosel
@@ -132,6 +136,7 @@ ${GEM_LIBDIR}/lib/rouge/demos/mxml
 ${GEM_LIBDIR}/lib/rouge/demos/nasm
 ${GEM_LIBDIR}/lib/rouge/demos/nesasm
 ${GEM_LIBDIR}/lib/rouge/demos/nginx
+${GEM_LIBDIR}/lib/rouge/demos/nial
 ${GEM_LIBDIR}/lib/rouge/demos/nim
 ${GEM_LIBDIR}/lib/rouge/demos/nix
 ${GEM_LIBDIR}/lib/rouge/demos/objective_c
@@ -145,6 +150,7 @@ ${GEM_LIBDIR}/lib/rouge/demos/perl
 ${GEM_LIBDIR}/lib/rouge/demos/php
 ${GEM_LIBDIR}/lib/rouge/demos/plaintext
 ${GEM_LIBDIR}/lib/rouge/demos/plist
+${GEM_LIBDIR}/lib/rouge/demos/plsql
 ${GEM_LIBDIR}/lib/rouge/demos/pony
 ${GEM_LIBDIR}/lib/rouge/demos/postscript
 ${GEM_LIBDIR}/lib/rouge/demos/powershell
@@ -188,6 +194,8 @@ ${GEM_LIBDIR}/lib/rouge/demos/stata
 ${GEM_LIBDIR}/lib/rouge/demos/supercollider
 ${GEM_LIBDIR}/lib/rouge/demos/swift
 ${GEM_LIBDIR}/lib/rouge/demos/systemd
+${GEM_LIBDIR}/lib/rouge/demos/syzlang
+${GEM_LIBDIR}/lib/rouge/demos/syzprog
 ${GEM_LIBDIR}/lib/rouge/demos/tap
 ${GEM_LIBDIR}/lib/rouge/demos/tcl
 ${GEM_LIBDIR}/lib/rouge/demos/terraform
@@ -322,10 +330,12 @@ ${GEM_LIBDIR}/lib/rouge/lexers/html.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/http.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/hylang.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/idlang.rb
+${GEM_LIBDIR}/lib/rouge/lexers/idris.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/igorpro.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/ini.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/io.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/irb.rb
+${GEM_LIBDIR}/lib/rouge/lexers/isabelle.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/isbl.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/isbl/builtins.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/j.rb
@@ -343,6 +353,7 @@ ${GEM_LIBDIR}/lib/rouge/lexers/julia.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/kotlin.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/lasso.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/lasso/keywords.rb
+${GEM_LIBDIR}/lib/rouge/lexers/lean.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/liquid.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/literate_coffeescript.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/literate_haskell.rb
@@ -363,6 +374,7 @@ ${GEM_LIBDIR}/lib/rouge/lexers/mathematica/keywords.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/matlab.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/matlab/builtins.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/matlab/keywords.rb
+${GEM_LIBDIR}/lib/rouge/lexers/meson.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/minizinc.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/moonscript.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/mosel.rb
@@ -371,6 +383,7 @@ ${GEM_LIBDIR}/lib/rouge/lexers/mxml.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/nasm.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/nesasm.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/nginx.rb
+${GEM_LIBDIR}/lib/rouge/lexers/nial.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/nim.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/nix.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/objective_c.rb
@@ -387,6 +400,7 @@ ${GEM_LIBDIR}/lib/rouge/lexers/php.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/php/keywords.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/plain_text.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/plist.rb
+${GEM_LIBDIR}/lib/rouge/lexers/plsql.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/pony.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/postscript.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/powershell.rb
@@ -432,6 +446,8 @@ ${GEM_LIBDIR}/lib/rouge/lexers/stata.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/supercollider.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/swift.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/systemd.rb
+${GEM_LIBDIR}/lib/rouge/lexers/syzlang.rb
+${GEM_LIBDIR}/lib/rouge/lexers/syzprog.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/tap.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/tcl.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/terraform.rb
@@ -485,4 +501,3 @@ ${GEM_LIBDIR}/lib/rouge/util.rb
 ${GEM_LIBDIR}/lib/rouge/version.rb
 ${GEM_LIBDIR}/rouge.gemspec
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
-@pkgdir lib/ruby/gems/2.7.0/extensions
