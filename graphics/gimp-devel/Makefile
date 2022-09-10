@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/09/10 09:32:33 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2022/09/10 13:47:01 wiz Exp $
 
 DISTNAME=	gimp-2.99.12
 PKGNAME=	${DISTNAME:S/gimp/gimp-devel/}
@@ -54,11 +54,6 @@ CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/gimp/2.99/${f}
 _TOOLS_USE_PKGSRC.xgettext=	yes
 
 .include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} != "Linux"
-# https://gitlab.gnome.org/GNOME/gimp/-/issues/8604
-MESON_ARGS+=	-Dlinux-input=disabled
-.endif
 
 # msgfmt: unknown option -- desktop
 .if ${OPSYS} == "NetBSD"
