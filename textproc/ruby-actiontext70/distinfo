@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2022/07/13 14:48:48 taca Exp $
+$NetBSD: distinfo,v 1.8 2022/09/10 12:48:10 taca Exp $
 
-BLAKE2s (actiontext-7.0.3.1.gem) = 4723b07d8eb018e0693238f8724022de6e05bdc3812248ee6396df8cceb2685c
-SHA512 (actiontext-7.0.3.1.gem) = 1615d6f64db7ca7bd225afd181585a0cbe23673ec5607801bb72a3c347f47763e54925de3451d4f19cee0387b0456d7ea830d7881759d511b1a1a80505a2eb92
-Size (actiontext-7.0.3.1.gem) = 92160 bytes
+BLAKE2s (actiontext-7.0.4.gem) = 0910fa7e8dbb40b86756ba906637c571aacae32b2d077594e6165fff09bd8ac3
+SHA512 (actiontext-7.0.4.gem) = 172dc16ef50266ec985d18b99b9c9e69132cd7afe93f8c5afc3ee8f5c224b906f46f54b191bcfdcc9ed1cf2a782f10d7572d3988df6e54b9e2a289ebd5f77c10
+Size (actiontext-7.0.4.gem) = 92160 bytes
