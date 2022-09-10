@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2019/07/15 22:07:08 nia Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/09/10 06:34:36 wiz Exp $
 include/gexiv2/gexiv2-enums.h
 include/gexiv2/gexiv2-log.h
 include/gexiv2/gexiv2-managed-stream.h
@@ -11,8 +11,9 @@ include/gexiv2/gexiv2.h
 lib/girepository-1.0/GExiv2-0.10.typelib
 lib/libgexiv2.so
 lib/libgexiv2.so.2
-lib/libgexiv2.so.2.0.0
+lib/libgexiv2.so.2.14.0
 lib/pkgconfig/gexiv2.pc
+${PYSITELIB}/gi/overrides/GExiv2.py
 share/gir-1.0/GExiv2-0.10.gir
 share/vala/vapi/gexiv2.deps
 share/vala/vapi/gexiv2.vapi
