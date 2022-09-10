@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2022/08/11 05:08:41 gutteridge Exp $
+# $NetBSD: Makefile,v 1.5 2022/09/10 09:24:48 wiz Exp $
 
-DISTNAME=	gimp-2.99.10
+DISTNAME=	gimp-2.99.12
 PKGNAME=	${DISTNAME:S/gimp/gimp-devel/}
-PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	https://download.gimp.org/pub/gimp/v${PKGVERSION_NOREV:R}/
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	https://www.gimp.org/
@@ -18,33 +17,24 @@ TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 DEPENDS+=	glib-networking>=2.36.2:../../net/glib-networking
 DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
 DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
+#DEPENDS+=	gjs-[0-9]*:../../lang/gjs
 
 CONFLICTS+=	gimp-[0-9]*
 
 USE_LANGUAGES+=		c c++14
-USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 
-USE_TOOLS+=		gmake pkg-config perl
+USE_TOOLS+=		pkg-config perl
 USE_TOOLS+=		intltool msgfmt msgmerge xgettext
 USE_TOOLS+=		gdbus-codegen
 
-GNU_CONFIGURE=		yes
-
-CONFIGURE_ARGS+=	--disable-alsatest
-CONFIGURE_ARGS+=	--disable-glibtest
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--without-linux-input
-
-PKG_SYSCONFSUBDIR=	gimp/2.99
 PKGCONFIG_OVERRIDE=	gimp.pc.in
 UNLIMIT_RESOURCES+=	datasize
 
-# https://gitlab.gnome.org/GNOME/gimp/-/issues/8377
-PKGSRC_USE_STACK_CHECK=	no
-
 # example files
 CHECK_INTERPRETER_SKIP+=	lib/gimp/2.99/extensions/org.gimp.extension.goat-exercises/*
+CHECK_INTERPRETER_SKIP+=	lib/gimp/2.99/plug-ins/test-sphere-v3/test-sphere-v3.scm
+CHECK_INTERPRETER_SKIP+=	lib/gimp/2.99/plug-ins/ts-helloworld/ts-helloworld.scm
 
 REPLACE_PYTHON+=	plug-ins/python/*.py
 REPLACE_PYTHON+=	plug-ins/python/*/*.py
@@ -54,24 +44,37 @@ REPLACE_PYTHON+=	extensions/goat-exercises/goat-exercise-py3.py
 # GCC 4.x C++14 support is not new enough.
 GCC_REQD+=	5
 
-.include "../../mk/bsd.prefs.mk"
-
-EGDIR=			${PREFIX}/share/examples/gimp-2.99
+MAKE_DIRS+=		${PKG_SYSCONFDIR}/gimp/2.99
+EGDIR=			${PREFIX}/share/examples/gimp
 .for f in controllerrc gimp.css gimprc menurc sessionrc templaterc toolrc unitrc
-CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
+CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/gimp/2.99/${f}
 .endfor
 
 # checking for xgettext version (>= 0.19)... no
 _TOOLS_USE_PKGSRC.xgettext=	yes
 
-# Ensure we export symbols in the linked shared object.
-#LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
+.include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "Darwin"
-PLIST_SUBST+=	GIMP_DEBUG_TOOL_DIR="bin"
-.else
-PLIST_SUBST+=	GIMP_DEBUG_TOOL_DIR="libexec"
+.if ${OPSYS} != "Linux"
+# https://gitlab.gnome.org/GNOME/gimp/-/issues/8604
+MESON_ARGS+=	-Dlinux-input=disabled
 .endif
+
+# msgfmt: unknown option -- desktop
+.if ${OPSYS} == "NetBSD"
+TOOLS_PLATFORM.msgfmt=
+.endif
+
+INSTALLATION_DIRS=	share/examples
+
+SUBST_CLASSES+=		python
+SUBST_FILES.python+=	output/plug-ins/python/pygimp.interp
+SUBST_STAGE.python=	post-build
+SUBST_MESSAGE.python=	Fixing interpreter paths.
+SUBST_SED.python+=	-e "s,${BUILDLINK_DIR}/bin/python3,${PYTHONBIN},"
+
+post-install:
+	${MV} ${DESTDIR}${PREFIX}/etc/gimp/2.99 ${DESTDIR}${PREFIX}/share/examples/gimp
 
 .include "options.mk"
 .include "../../archivers/xz/buildlink3.mk"
@@ -85,12 +88,13 @@ BUILDLINK_API_DEPENDS.freetype2+=	freetype2>=2.8.1
 .include "../../devel/gettext-lib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.fontconfig+=	fontconfig>=2.12.4
 .include "../../fonts/fontconfig/buildlink3.mk"
-.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 BUILDLINK_API_DEPENDS.babl+=		babl>=0.1.92nb1
 .include "../../graphics/babl/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gegl+=		gegl>=0.4.36nb4
+BUILDLINK_API_DEPENDS.gegl+=		gegl>=0.4.38
 .include "../../graphics/gegl/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
+BUILDLINK_API_DEPENDS.gexiv2+=		gexiv2>=0.14
 .include "../../graphics/gexiv2/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../graphics/libart/buildlink3.mk"
@@ -104,6 +108,7 @@ BUILDLINK_API_DEPENDS.gegl+=		gegl>=0.4.36nb4
 .include "../../graphics/openjpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
+BUILDLINK_API_DEPENDS.tiff+=	tiff>=4.0
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../graphics/libwmf/buildlink3.mk"
 .include "../../lang/vala/buildlink3.mk"
@@ -116,4 +121,6 @@ BUILDLINK_API_DEPENDS.gegl+=		gegl>=0.4.36nb4
 .include "../../x11/libICE/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../devel/meson/build.mk"
+.include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"
