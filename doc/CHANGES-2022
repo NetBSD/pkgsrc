@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4425 2022/09/10 08:25:32 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4426 2022/09/10 09:25:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6557,3 +6557,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/ruby-railties61 to 6.1.7 [taca 2022-09-10]
 	Updated textproc/ruby-actiontext61 to 6.1.7 [taca 2022-09-10]
 	Updated www/ruby-rails61 to 6.1.7 [taca 2022-09-10]
+	Updated graphics/gimp-devel to 2.99.12 [wiz 2022-09-10]
