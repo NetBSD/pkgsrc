@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.234 2022/06/29 07:54:42 wiz Exp $
+# $NetBSD: Makefile,v 1.235 2022/09/10 16:17:21 pin Exp $
 #
 
 COMMENT=	Clocks, calendars, daily planners and other time related applications
@@ -189,6 +189,7 @@ SUBDIR+=	ruby-timers
 SUBDIR+=	ruby-tzinfo
 SUBDIR+=	ruby-tzinfo-data
 SUBDIR+=	ruby-tzinfo1
+SUBDIR+=	rusti-cal
 SUBDIR+=	saytime
 SUBDIR+=	sunclock
 SUBDIR+=	swisswatch
