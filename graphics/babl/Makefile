@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.49 2022/07/17 16:38:25 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2022/09/10 09:34:16 wiz Exp $
 
-DISTNAME=	babl-0.1.92
-PKGREVISION=	1
+DISTNAME=	babl-0.1.96
 CATEGORIES=	graphics
 MASTER_SITES=	https://download.gimp.org/pub/babl/${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.xz
