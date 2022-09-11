@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:30:18 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/09/11 01:53:25 wen Exp $
 
-BLAKE2s (Test-LWP-UserAgent-0.034.tar.gz) = 50b0eae443a9c1545272ced87bb01125471db854f03bf0b098075e8bad618936
-SHA512 (Test-LWP-UserAgent-0.034.tar.gz) = c1c7daf78744028ab4b35323fce5c7fcb3b223751a6bc0eb7abcc9b11322c5e340825b9f2546f01a96025e2d78a41a91202c0969b86d07c0551aee14c2b674e3
-Size (Test-LWP-UserAgent-0.034.tar.gz) = 50898 bytes
+BLAKE2s (Test-LWP-UserAgent-0.036.tar.gz) = def1f1b54fc074486e56cde9a69cad1cb77261a878f61a1e4d268a2b12224bd4
+SHA512 (Test-LWP-UserAgent-0.036.tar.gz) = 6cf34dbd9c6fee3ab25ee31a97694f24499c7f41cd3d08e915176235148e69729f9434d58da78645e306d966031d2807f333f9847ddcc53b33474e6e6bea9e8e
+Size (Test-LWP-UserAgent-0.036.tar.gz) = 50654 bytes
