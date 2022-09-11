@@ -1,22 +1,20 @@
-@comment $NetBSD: PLIST,v 1.4 2019/12/05 14:51:01 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.5 2022/09/11 16:01:23 wiz Exp $
 ${PYSITELIB}/daemon/__init__.py
 ${PYSITELIB}/daemon/__init__.pyc
-${PYSITELIB}/daemon/__init__.pyo
 ${PYSITELIB}/daemon/_metadata.py
 ${PYSITELIB}/daemon/_metadata.pyc
-${PYSITELIB}/daemon/_metadata.pyo
 ${PYSITELIB}/daemon/daemon.py
 ${PYSITELIB}/daemon/daemon.pyc
-${PYSITELIB}/daemon/daemon.pyo
 ${PYSITELIB}/daemon/pidfile.py
 ${PYSITELIB}/daemon/pidfile.pyc
-${PYSITELIB}/daemon/pidfile.pyo
 ${PYSITELIB}/daemon/runner.py
 ${PYSITELIB}/daemon/runner.pyc
-${PYSITELIB}/daemon/runner.pyo
+${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.ASF-2
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.GPL-3
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
