@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/01/04 20:53:38 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/09/11 17:12:49 wiz Exp $
 
 DISTNAME=	sentry-sdk-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,6 +15,8 @@ DEPENDS+=	${PYPKGPREFIX}-certifi>=0:../../security/py-certifi
 DEPENDS+=	${PYPKGPREFIX}-urllib3>=1.10.0:../../www/py-urllib3
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
