@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2019/08/05 15:35:12 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2022/09/11 12:29:54 wiz Exp $
 bin/flac
 bin/metaflac
 include/FLAC++/all.h
@@ -24,23 +24,5 @@ man/man1/metaflac.1
 share/aclocal/libFLAC++.m4
 share/aclocal/libFLAC.m4
 share/doc/flac/FLAC.tag
-share/doc/flac/changelog.html
-share/doc/flac/developers.html
-share/doc/flac/documentation.html
-share/doc/flac/documentation_bugs.html
-share/doc/flac/documentation_example_code.html
-share/doc/flac/documentation_format_overview.html
-share/doc/flac/documentation_tools.html
-share/doc/flac/documentation_tools_flac.html
-share/doc/flac/documentation_tools_metaflac.html
-share/doc/flac/faq.html
-share/doc/flac/favicon.ico
-share/doc/flac/features.html
-share/doc/flac/flac.css
-share/doc/flac/format.html
-share/doc/flac/id.html
 share/doc/flac/images/logo.svg
 share/doc/flac/images/logo130.gif
-share/doc/flac/index.html
-share/doc/flac/license.html
-share/doc/flac/ogg_mapping.html
