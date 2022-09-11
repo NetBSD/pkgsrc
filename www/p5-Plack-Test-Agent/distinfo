@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:30:14 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/09/11 01:58:35 wen Exp $
 
-BLAKE2s (Plack-Test-Agent-1.4.tar.gz) = 3b9069f6101d8ec0e5c513f0b0a6a10980e67cbafad1747e27c8091bf4a50fb1
-SHA512 (Plack-Test-Agent-1.4.tar.gz) = 20593f0e7f789198ea28eb1df250b4950c42a0c5e74ecbd620452261fd2a2cd895300deefaabf82a595efbe00ffb13145ba8875b908594ce7a489b737f7b0613
-Size (Plack-Test-Agent-1.4.tar.gz) = 23628 bytes
+BLAKE2s (Plack-Test-Agent-1.5.tar.gz) = 4b2ad235e2e89836dd49109d526bb6970981d1ee99ecbfe31cd156968da5c388
+SHA512 (Plack-Test-Agent-1.5.tar.gz) = bc618d7c6f7dccdb889314da7282fb1aeb5c7cef63bc69fa0fed154d2053796ecad17eb7328c5a712326d6d15b012edeac66468cffae7f8094f87916672a5f27
+Size (Plack-Test-Agent-1.5.tar.gz) = 26047 bytes
