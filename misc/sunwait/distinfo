@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:59:33 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/09/11 11:58:20 martin Exp $
 
 BLAKE2s (sunwait-0.8.tar.gz) = 48255222ed8e06c92d718315bc77c63ed7b86b6aae48ce41c32cc96e581bfba2
 SHA512 (sunwait-0.8.tar.gz) = 974aec925e08d42f6b9d617cd033ab21af314b04a0bab100f9b473e038df7eb65a86de2240ef2d5308af5385c929607d591c6f7b738925622e38040af6368166
 Size (sunwait-0.8.tar.gz) = 20302 bytes
-SHA1 (patch-Makefile) = a3ba723c2868ce7628f5bc4b93633a3abacd5c56
+SHA1 (patch-Makefile) = 38be640d9a2c80026ee2323d38505c96d402b0ce
 SHA1 (patch-sunriset.cpp) = 759aa1f2c0301f8fab3a264167d25a077ed205ee
 SHA1 (patch-sunwait.cpp) = cf5b2251a4b0de5e95cdbd06a432824b623df42b
