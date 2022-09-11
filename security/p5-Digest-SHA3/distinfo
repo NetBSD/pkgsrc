@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 11:17:31 nia Exp $
+$NetBSD: distinfo,v 1.14 2022/09/11 14:17:22 wen Exp $
 
-BLAKE2s (Digest-SHA3-1.04.tar.gz) = ea815b0677d8920b03278be934e67613cbfa28c0ca86866e81ac70bd176149c9
-SHA512 (Digest-SHA3-1.04.tar.gz) = 2737780f2ca6c8bef18477fd9311754e69bb4d00831e7e2cd4bbf170f3e312bdf86cb84ed0693efb3f386dfa6c03d56ef48cb4021d6b02fdc44b3fb8e973ac29
-Size (Digest-SHA3-1.04.tar.gz) = 29660 bytes
+BLAKE2s (Digest-SHA3-1.05.tar.gz) = c8b2d2c94921b0e798c55cff704cf6b0b31738b6adc960e54c4a754794ed47ad
+SHA512 (Digest-SHA3-1.05.tar.gz) = ca98baa404353b1f3615b7207470c70b9e1fe12eca961348291cbdb697c3e373b745efecbdfeee9ca23d511fa0e346dea831460e61189a526ac673c989192739
+Size (Digest-SHA3-1.05.tar.gz) = 29416 bytes
