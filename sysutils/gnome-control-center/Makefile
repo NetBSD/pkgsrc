@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2022/08/11 05:09:15 gutteridge Exp $
+# $NetBSD: Makefile,v 1.18 2022/09/11 12:52:06 wiz Exp $
 
 DISTNAME=	gnome-control-center-40.0
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	sysutils gnome
 EXTRACT_SUFX=	.tar.xz
 

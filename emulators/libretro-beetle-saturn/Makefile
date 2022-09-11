@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2020/06/01 19:36:32 nia Exp $
+# $NetBSD: Makefile,v 1.8 2022/09/11 12:51:32 wiz Exp $
 
 DISTNAME=	libretro-beetle-saturn-20200526
+PKGREVISION=	1
 CATEGORIES=	emulators
 GITHUB_PROJECT=	beetle-saturn-libretro
 GITHUB_TAG=	7ba4ff3aed62a60e99e0758a92dbb1924c63d0fa
