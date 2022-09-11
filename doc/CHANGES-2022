@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4461 2022/09/11 11:59:03 martin Exp $
+$NetBSD: CHANGES-2022,v 1.4462 2022/09/11 12:25:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6608,3 +6608,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/oculante to 0.6.9 [pin 2022-09-11]
 	Updated sysutils/xplr to 0.19.3 [pin 2022-09-11]
 	Updated misc/sunwait to 0.8nb1 [martin 2022-09-11]
+	Updated devel/boehm-gc to 8.2.2 [wiz 2022-09-11]
