@@ -1,4 +1,4 @@
-# $NetBSD: versioned_dependencies.mk,v 1.85 2022/08/24 09:18:59 wiz Exp $
+# $NetBSD: versioned_dependencies.mk,v 1.86 2022/09/11 18:10:43 wiz Exp $
 #
 # This file determines which separate distribution of a Python
 # package is used as dependency, depending on the Python version
@@ -9,7 +9,7 @@
 # PYTHON_VERSIONED_DEPENDENCIES
 #       The Python package which should be added as a dependency.
 #
-#       Possible values: Pillow X cairo chardet click coverage cryptography dns flake8 hypothesis importlib-metadata jinja2 lama markdown mccabe more-itertools pip packaging pygments pyphen rsa setuptools setuptools_scm test test-cov twisted
+#       Possible values: Pillow X cairo chardet click coverage cryptography dns flake8 hypothesis importlib-metadata jinja2 lama markdown mccabe more-itertools pip packaging pygments pyphen rsa setuptools setuptools_scm test test-cov
 #       Default: (nothing)
 #
 
@@ -43,7 +43,6 @@ _SUPPORTED_PACKAGES+=	setuptools devel/py-setuptools44 devel/py-setuptools
 _SUPPORTED_PACKAGES+=	setuptools_scm devel/py-setuptools_scm5 devel/py-setuptools_scm
 _SUPPORTED_PACKAGES+=	test devel/py-test4 devel/py-test
 _SUPPORTED_PACKAGES+=	test-cov devel/py27-test-cov devel/py-test-cov
-_SUPPORTED_PACKAGES+=	twisted net/py-twisted19 net/py-twisted
 
 .for pattern in ${PYTHON_VERSIONED_DEPENDENCIES}
 _PKG_MATCHED=	no
