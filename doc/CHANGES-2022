@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4483 2022/09/11 16:53:16 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4484 2022/09/11 17:23:03 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6630,3 +6630,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/pcsc-lite to 1.9.9 [gdt 2022-09-11]
 	Removed devel/py-txgithub [wiz 2022-09-11]
 	Updated security/py-ndg_httpsclient to 0.5.1 [wiz 2022-09-11]
+	Updated net/dbip-asn-lite to 2022.09 [fcambus 2022-09-11]
