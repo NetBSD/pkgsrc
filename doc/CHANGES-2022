@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4474 2022/09/11 14:25:08 wen Exp $
+$NetBSD: CHANGES-2022,v 1.4475 2022/09/11 14:29:16 wen Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6621,3 +6621,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/p5-Digest-SHA3 to 1.05 [wen 2022-09-11] 
 	Updated textproc/p5-Text-Balanced to 2.06 [wen 2022-09-11]
 	Updated textproc/p5-Text-CSV to 2.02 [wen 2022-09-11]
+	Updated textproc/p5-Text-CSV_XS to 1.48 [wen 2022-09-11]
