@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4479 2022/09/11 16:30:44 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4480 2022/09/11 16:38:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6626,3 +6626,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/ruby-sqlite3 to 1.5.0nb1 [taca 2022-09-11]
 	Updated textproc/py-readme_renderer to 37.1 [wiz 2022-09-11]
 	Updated net/py-twine to 4.0.1nb1 [wiz 2022-09-11]
+	Removed audio/py-musique [wiz 2022-09-11]
