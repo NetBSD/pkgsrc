@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.65 2022/09/11 12:51:03 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2022/09/11 13:46:19 wiz Exp $
 
-DISTNAME=	fluidsynth-2.2.8
-PKGREVISION=	2
+DISTNAME=	fluidsynth-2.2.9
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=FluidSynth/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
