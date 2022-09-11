@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4496 2022/09/11 18:11:19 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4497 2022/09/11 18:15:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6645,3 +6645,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/fdupes to 2.2.1 [fcambus 2022-09-11]
 	Removed www/py-nevow [wiz 2022-09-11]
 	Removed net/py-twisted19 [wiz 2022-09-11]
+	Updated security/py-OpenSSL to 22.0.0 [wiz 2022-09-11]
