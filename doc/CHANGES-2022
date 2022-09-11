@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4485 2022/09/11 17:24:17 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4486 2022/09/11 17:24:30 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6632,3 +6632,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/py-ndg_httpsclient to 0.5.1 [wiz 2022-09-11]
 	Updated net/dbip-asn-lite to 2022.09 [fcambus 2022-09-11]
 	Removed net/coherence [wiz 2022-09-11]
+	Updated net/dbip-city-lite to 2022.09 [fcambus 2022-09-11]
