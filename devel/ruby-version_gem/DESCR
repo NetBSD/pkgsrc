@@ -1,0 +1,16 @@
+VersionGem
+
+Alternatives
+
+This gem has a very niche purpose, which is:
+
+1. providing introspection of a Version module based on a Version::VERSION
+   constant string,
+2. while not interfering with gemspec parsing where the VERSION string is
+   traditionally used.
+
+If this isn't precisely your use case you may be better off looking at
+Versionaire, a wonderful, performant, well-maintained, gem from the
+Alchemists.
+
+For more discussion about this see issue #2
