@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4475 2022/09/11 14:29:16 wen Exp $
+$NetBSD: CHANGES-2022,v 1.4476 2022/09/11 15:55:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6622,3 +6622,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/p5-Text-Balanced to 2.06 [wen 2022-09-11]
 	Updated textproc/p5-Text-CSV to 2.02 [wen 2022-09-11]
 	Updated textproc/p5-Text-CSV_XS to 1.48 [wen 2022-09-11]
+	Updated math/py-numexpr to 2.8.3 [wiz 2022-09-11]
