@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4498 2022/09/11 19:16:13 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.4499 2022/09/11 19:18:56 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6647,3 +6647,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed net/py-twisted19 [wiz 2022-09-11]
 	Updated security/py-OpenSSL to 22.0.0 [wiz 2022-09-11]
 	Updated converters/bdf2psf to 1.210 [fcambus 2022-09-11]
+	Updated fonts/recursive-ttf to 1.085 [rhialto 2022-09-11]
