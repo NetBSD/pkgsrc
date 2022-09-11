@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/09/11 17:46:07 wiz Exp $
+
+BLAKE2s (lunr-0.6.2.tar.gz) = ea708c703c882fe84bef15c047bce3f61a7aa608445e953165c7a2419596bb53
+SHA512 (lunr-0.6.2.tar.gz) = 6b7c29d30a8a64b71246ff884e473cceeef5e00e382ad54474e7855dcafcf3817dcc14c29c1bb2eb3371f1cb5ab1485a7840dbe41d345a4503294052aa9cd644
+Size (lunr-0.6.2.tar.gz) = 45968 bytes
