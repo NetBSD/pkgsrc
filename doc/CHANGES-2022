@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4451 2022/09/11 01:54:12 wen Exp $
+$NetBSD: CHANGES-2022,v 1.4452 2022/09/11 01:59:18 wen Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6598,3 +6598,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/p5-HTTP-Message to 6.37 [wen 2022-09-11]
 	Updated www/p5-HTTP-Tinyish to 0.18 [wen 2022-09-11]
 	Updated www/p5-Test-LWP-UserAgent to 0.036 [wen 2022-09-11]
+	Updated www/p5-Plack-Test-Agent to 1.5 [wen 2022-09-11]
