@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:30:01 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/09/11 01:04:59 wen Exp $
 
-BLAKE2s (HTTP-CookieJar-0.012.tar.gz) = 50e073b3d970dc08746f72db4e4ed473a7cb2a4b94285d05469f80dccfb792e5
-SHA512 (HTTP-CookieJar-0.012.tar.gz) = 3b4b0cd2228d53dfa9c1a75cf108f9b2a328c3bf054f0c7d8308bc0a71375340684b165ab05cb7868cdbeb232e4ceb4b465177a43c7573863e9274f8aa4034af
-Size (HTTP-CookieJar-0.012.tar.gz) = 28223 bytes
+BLAKE2s (HTTP-CookieJar-0.014.tar.gz) = 1ddf131ff5c670664786c973b20221348aa10c37eebc9d7f4bda1d54ead5418a
+SHA512 (HTTP-CookieJar-0.014.tar.gz) = 98e6834574e28d8e278ba6f23817d7a4b0a072fea144f97db78e20881f622c01ddf4edff1dc5563c0fc46b22ba94fd9acfd18c9c81118c8c18c7d810f7534467
+Size (HTTP-CookieJar-0.014.tar.gz) = 29036 bytes
