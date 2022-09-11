@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4472 2022/09/11 14:18:20 wen Exp $
+$NetBSD: CHANGES-2022,v 1.4473 2022/09/11 14:21:56 wen Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6619,3 +6619,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/wireshark to 3.6.8 [wiz 2022-09-11]
 	Updated security/p5-CryptX to 0.077 [wen 2022-09-11]
 	Updated security/p5-Digest-SHA3 to 1.05 [wen 2022-09-11] 
+	Updated textproc/p5-Text-Balanced to 2.06 [wen 2022-09-11]
