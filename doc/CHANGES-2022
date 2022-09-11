@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4444 2022/09/11 00:52:19 wen Exp $
+$NetBSD: CHANGES-2022,v 1.4445 2022/09/11 00:55:02 wen Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6591,3 +6591,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated ham/chirp to 20220909nb1 [gdt 2022-09-11]
 	Updated www/p5-Plack to 1.0050 [wen 2022-09-11]
 	Updated www/p5-HTML-Parser to 3.78 [wen 2022-09-11]
+	Updated www/p5-HTML-Selector-XPath to 0.26 [wen 2022-09-11]
