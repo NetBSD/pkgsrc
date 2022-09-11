@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2019/01/16 14:43:22 martin Exp $
+# $NetBSD: Makefile,v 1.2 2022/09/11 11:58:20 martin Exp $
 
 DISTNAME=	sunwait-0.8
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=klada/}
 
