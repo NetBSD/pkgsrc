@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2021/12/29 11:49:49 rhialto Exp $
+# $NetBSD: Makefile,v 1.8 2022/09/11 19:18:46 rhialto Exp $
 
 GITHUB_PROJECT=	recursive
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 DISTNAME=	ArrowType-Recursive-${PKGVERSION_NOREV}
-PKGNAME=	recursive-ttf-1.084
-PKGREVISION=	1
+PKGNAME=	recursive-ttf-1.085
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_GITHUB:=arrowtype/}
 EXTRACT_SUFX=	.zip
