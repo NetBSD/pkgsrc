@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4477 2022/09/11 16:05:40 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4478 2022/09/11 16:15:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6624,3 +6624,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/p5-Text-CSV_XS to 1.48 [wen 2022-09-11]
 	Updated math/py-numexpr to 2.8.3 [wiz 2022-09-11]
 	Updated databases/ruby-sqlite3 to 1.5.0nb1 [taca 2022-09-11]
+	Updated textproc/py-readme_renderer to 37.1 [wiz 2022-09-11]
