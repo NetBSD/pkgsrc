@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/02/13 09:44:10 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/09/11 18:10:03 wiz Exp $
 
 DISTNAME=	tubes-0.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,13 +15,13 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-characteristic-[0-9]*:../../devel/py-characteristic
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 
-PYTHON_VERSIONED_DEPENDENCIES+=	twisted
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=	# none
 
 EGG_NAME=	Tubes-${PKGVERSION_NOREV}
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
