@@ -1,5 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2016/11/11 09:09:02 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/09/11 16:53:08 wiz Exp $
 bin/ndg_httpclient
+${PYSITELIB}/ndg/__init__.py
+${PYSITELIB}/ndg/__init__.pyc
+${PYSITELIB}/ndg/__init__.pyo
 ${PYSITELIB}/ndg/httpsclient/LICENSE
 ${PYSITELIB}/ndg/httpsclient/__init__.py
 ${PYSITELIB}/ndg/httpsclient/__init__.pyc
@@ -23,8 +26,7 @@ ${PYSITELIB}/ndg/httpsclient/test/README
 ${PYSITELIB}/ndg/httpsclient/test/__init__.py
 ${PYSITELIB}/ndg/httpsclient/test/__init__.pyc
 ${PYSITELIB}/ndg/httpsclient/test/__init__.pyo
-${PYSITELIB}/ndg/httpsclient/test/pki/ca/08bd99c7.0
-${PYSITELIB}/ndg/httpsclient/test/pki/ca/ade0138a.0
+${PYSITELIB}/ndg/httpsclient/test/pki/ca/7e15277f.0
 ${PYSITELIB}/ndg/httpsclient/test/pki/localhost.crt
 ${PYSITELIB}/ndg/httpsclient/test/pki/localhost.key
 ${PYSITELIB}/ndg/httpsclient/test/scripts/openssl_https_server.sh
@@ -43,12 +45,10 @@ ${PYSITELIB}/ndg/httpsclient/urllib2_build_opener.pyo
 ${PYSITELIB}/ndg/httpsclient/utils.py
 ${PYSITELIB}/ndg/httpsclient/utils.pyc
 ${PYSITELIB}/ndg/httpsclient/utils.pyo
-${PYSITELIB}/${EGG_NAME}-nspkg.pth
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
