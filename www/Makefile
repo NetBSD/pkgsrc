@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1641 2022/09/11 17:58:46 wiz Exp $
+# $NetBSD: Makefile,v 1.1642 2022/09/11 18:04:04 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -800,7 +800,6 @@ SUBDIR+=	py-multipart
 SUBDIR+=	py-nbclient
 SUBDIR+=	py-nbconvert
 SUBDIR+=	py-nbformat
-SUBDIR+=	py-nevow
 SUBDIR+=	py-notebook
 SUBDIR+=	py-parsel
 SUBDIR+=	py-paste
