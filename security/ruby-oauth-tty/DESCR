@@ -1,0 +1,7 @@
+OAuth::TTY
+
+A TTY Command Line Interface for interacting with OAuth 1.0 services.
+
+This library was written originally by Thiago Pinto in 2016 and bundled with
+the oauth gem.  It was extracted into a separate library by Peter Boling in
+2022 as part of the move to a stable version 1.0 for the oauth gem.
