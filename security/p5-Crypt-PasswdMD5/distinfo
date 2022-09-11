@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:17:28 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/09/11 14:08:05 wen Exp $
 
-BLAKE2s (Crypt-PasswdMD5-1.41.tgz) = 22cfef45890358fb3a9cf5e2985fd9c4dc5a47a05cc8fb0c5627cabc4f801aad
-SHA512 (Crypt-PasswdMD5-1.41.tgz) = eee16e08f5cdca4d5bc2056e39e18bbbeb5e8bcf403fb44eb632a9a09496fc8b34ede4b2feaffacceafef99be390e44ca49767d98c05a62a2208e1c7e7ff5430
-Size (Crypt-PasswdMD5-1.41.tgz) = 14275 bytes
+BLAKE2s (Crypt-PasswdMD5-1.42.tgz) = 4fcdeabbcef7ca00ae6a3d9eb405b486f0ddb9ae8d994ec14600a1cbc3b0d6f2
+SHA512 (Crypt-PasswdMD5-1.42.tgz) = 92b18cb50061ff0d017e26ebeb4ebf07199d7833518974c3f130d81a30f37a01cd299f4776bfa1e8cd1ca4e6e5adcd72d93ea4dcfed7a573084f0a9c7245eef8
+Size (Crypt-PasswdMD5-1.42.tgz) = 14300 bytes
