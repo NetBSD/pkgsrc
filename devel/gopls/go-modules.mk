@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.28 2022/08/22 11:05:49 wiz Exp $
+# $NetBSD: go-modules.mk,v 1.29 2022/09/11 13:49:38 wiz Exp $
 
 GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v1.2.0.mod
 GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v1.2.0.zip
@@ -22,6 +22,8 @@ GO_MODULE_FILES+=	github.com/sergi/go-diff/@v/v1.1.0.mod
 GO_MODULE_FILES+=	github.com/sergi/go-diff/@v/v1.1.0.zip
 GO_MODULE_FILES+=	github.com/stretchr/objx/@v/v0.1.0.mod
 GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.4.0.mod
+GO_MODULE_FILES+=	golang.org/x/exp/@v/v0.0.0-20220722155223-a9213eeb770e.mod
+GO_MODULE_FILES+=	golang.org/x/exp/@v/v0.0.0-20220722155223-a9213eeb770e.zip
 GO_MODULE_FILES+=	golang.org/x/exp/typeparams/@v/v0.0.0-20220722155223-a9213eeb770e.mod
 GO_MODULE_FILES+=	golang.org/x/exp/typeparams/@v/v0.0.0-20220722155223-a9213eeb770e.zip
 GO_MODULE_FILES+=	golang.org/x/mod/@v/v0.6.0-dev.0.20220419223038-86c51ed26bb4.mod
@@ -35,10 +37,10 @@ GO_MODULE_FILES+=	golang.org/x/text/@v/v0.3.3.mod
 GO_MODULE_FILES+=	golang.org/x/text/@v/v0.3.7.mod
 GO_MODULE_FILES+=	golang.org/x/text/@v/v0.3.7.zip
 GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.0.0-20180917221912-90fa682c2a6e.mod
-GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.1.13-0.20220812184215-3f9b119300de.mod
-GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.1.13-0.20220812184215-3f9b119300de.zip
-GO_MODULE_FILES+=	golang.org/x/vuln/@v/v0.0.0-20220725105440-4151a5aca1df.mod
-GO_MODULE_FILES+=	golang.org/x/vuln/@v/v0.0.0-20220725105440-4151a5aca1df.zip
+GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.1.13-0.20220908144252-ce397412b6a4.mod
+GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.1.13-0.20220908144252-ce397412b6a4.zip
+GO_MODULE_FILES+=	golang.org/x/vuln/@v/v0.0.0-20220901221904-62b0186a1058.mod
+GO_MODULE_FILES+=	golang.org/x/vuln/@v/v0.0.0-20220901221904-62b0186a1058.zip
 GO_MODULE_FILES+=	gopkg.in/check.v1/@v/v0.0.0-20161208181325-20d25e280405.mod
 GO_MODULE_FILES+=	gopkg.in/check.v1/@v/v1.0.0-20180628173108-788fd7840127.mod
 GO_MODULE_FILES+=	gopkg.in/check.v1/@v/v1.0.0-20190902080502-41f04d3bba15.mod
