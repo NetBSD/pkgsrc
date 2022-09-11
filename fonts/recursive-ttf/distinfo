@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/12/29 11:49:49 rhialto Exp $
+$NetBSD: distinfo,v 1.8 2022/09/11 19:18:46 rhialto Exp $
 
-BLAKE2s (ArrowType-Recursive-1.084.zip) = 11ac59518fc490f44e83fd6fa23933ad5a12cea30a24490daf5b35c8f9f98a45
-SHA512 (ArrowType-Recursive-1.084.zip) = d2143efe909ff117017081e339c96c4a7651f664ee9b13cf3b643bff74a687a88f69ca4b7ecc3f2c66d8cfe9ca680d1077ff4793149eb9985fffb0598f7c6039
-Size (ArrowType-Recursive-1.084.zip) = 49244512 bytes
+BLAKE2s (ArrowType-Recursive-1.085.zip) = 1325f719586168e5707a594d8f9b1ae9903f0368b97551e1f5136b9bab8c2aa6
+SHA512 (ArrowType-Recursive-1.085.zip) = b161242ad6b77fdbe2a9b4452cb1bc5828c35a26c4ade550c279d1dbb174606049219b60de3723c7f42a01055c2bd897aa4cd1fac5eca9504ed2773d968fce60
+Size (ArrowType-Recursive-1.085.zip) = 50440082 bytes
