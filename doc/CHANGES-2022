@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4489 2022/09/11 17:45:12 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.4490 2022/09/11 17:46:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6637,3 +6637,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed news/lottanzb [wiz 2022-09-11]
 	Removed news/hellanzb [wiz 2022-09-11]
 	Updated devel/tig to 2.5.7 [fcambus 2022-09-11]
+	Added textproc/py-lunr version 0.6.2 [wiz 2022-09-11]
