@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22186 2022/09/10 13:11:51 taca Exp $
+$NetBSD: TODO,v 1.22187 2022/09/11 08:20:26 wiz Exp $
 
 Suggested new packages
 ======================
@@ -497,6 +497,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o blender-3.3
 	o bliz++-0.10
 	o blur6ex-0.3.462
+	o boehm-gc-8.2.2
 	o boolean-7.1
 	o bos-2.5
 	o bottlerocket-0.05b3
@@ -656,10 +657,12 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o felt-3.07 [wip]
 	o fet-6.0.1
 	o filerunner-14.06.18.10
+	o flac-1.4.0
 	o flashplayer-0.4.13
 	o flatbuffers-1.12.0
 	o flow-tools-0.411
 	o fluent-bit-1.7.4
+	o fluidsynth-2.2.9
 	o foomatic-filters-4.0.12
 	o foomatic4-db-20210421
 	o fop-2.6
@@ -689,6 +692,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ganglia-3.7.5
 	o ganglia-webfrontend-3.7.5
 	o gap-4r4p9
+	o gawk-5.2.0
 	o gbrainy-2.43
 	o gcal-4.1
 	o gcc-mips-current-7.1.0
@@ -791,6 +795,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o golem-0.0.6
 	o goocanvas-2.0.2
 	o google-glog-2.2.2
+	o gopls-0.9.5
 	o gossip-0.31
 	o got-0.74
 	o gourmet-0.13.3
@@ -1027,7 +1032,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o md-whois-5.5.9
 	o mdd-20201207
 	o mecab-ipadic-2.7.0.20070801
-	o meld-3.21.3
+	o meld-3.22.0
 	o memached-1.5.6
 	o memtestplus-5.31b
 	o merkaator-0.18.3
@@ -1078,6 +1083,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o nas-auscope-1.9.4
 	o ncview-2.1.8
 	o nedit-5.7
+	o neon-0.32.3
 	o netbt-hcidump-5.58
 	o netramet-50
 	o newmail-1.0.2
@@ -1392,6 +1398,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rp-l2tp-0.4
 	o rp-pppoe-3.11
 	o rpc2-2.14
+	o rsync-3.2.6
 	o rsyslog-8.2204.1
 	o rt4-4.4.4
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
@@ -1408,6 +1415,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o sarg-2.4.0
 	o sasm-3.12.1
 	o saytime-20050127
+	o sbcl-2.2.8
 	o scala-2.13.5
 	o scamper-20210324
 	o scew-1.1.7
@@ -1595,6 +1603,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o wine-7.0
 	o wine-devel-3.7
 	o wiredtiger-10.0.0
+	o wireshark-3.6.8
 	o wkhtmltopdf-0.12.6
 	o wmi-11
 	o wordwarvi-1.0.4
