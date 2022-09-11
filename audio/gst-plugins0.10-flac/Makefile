@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.19 2022/04/18 19:10:21 adam Exp $
+# $NetBSD: Makefile,v 1.20 2022/09/11 12:51:16 wiz Exp $
 #
 
 GST_PLUGINS0.10_NAME=	flac
 GST_PLUGINS0.10_DIRS=	ext/flac
 GST_PLUGINS0.10_FLAGS=	flac
-PKGREVISION=		8
+PKGREVISION=		9
 
 .include "../../multimedia/gst-plugins0.10-good/Makefile.common"
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2022/03/28 10:43:40 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2022/09/11 12:51:05 wiz Exp $
 
 BUILDLINK_TREE+=	sweep
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	sweep
 SWEEP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.sweep+=	sweep>=0.8.2nb6
-BUILDLINK_ABI_DEPENDS.sweep+=	sweep>=0.9.3nb38
+BUILDLINK_ABI_DEPENDS.sweep+=	sweep>=0.9.3nb39
 BUILDLINK_PKGSRCDIR.sweep?=	../../audio/sweep
 
 .include "../../audio/libmad/buildlink3.mk"

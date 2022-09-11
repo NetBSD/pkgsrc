@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.40 2022/08/11 05:08:11 gutteridge Exp $
+# $NetBSD: buildlink3.mk,v 1.41 2022/09/11 12:51:07 wiz Exp $
 
 BUILDLINK_TREE+=	ktexteditor
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ktexteditor
 KTEXTEDITOR_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ktexteditor+=	ktexteditor>=5.21.0
-BUILDLINK_ABI_DEPENDS.ktexteditor?=	ktexteditor>=5.93.0nb3
+BUILDLINK_ABI_DEPENDS.ktexteditor?=	ktexteditor>=5.93.0nb4
 BUILDLINK_PKGSRCDIR.ktexteditor?=	../../devel/ktexteditor
 
 .include "../../devel/kparts/buildlink3.mk"

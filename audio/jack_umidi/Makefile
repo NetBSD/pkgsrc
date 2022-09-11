@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2022/03/28 10:43:34 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2022/09/11 12:51:18 wiz Exp $
 
 DISTNAME=	jack_umidi-1.1.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hselasky/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

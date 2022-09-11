@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2022/07/23 23:02:14 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2022/09/11 12:51:20 wiz Exp $
 
 MPG123_MODULE=	jack
 
-PKGREVISION=	2
+PKGREVISION=	3
 .include "../../audio/mpg123/Makefile.common"
 
 .include "../../audio/mpg123/buildlink3.mk"

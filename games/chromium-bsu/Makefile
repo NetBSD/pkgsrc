@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2022/08/11 05:08:24 gutteridge Exp $
+# $NetBSD: Makefile,v 1.29 2022/09/11 12:51:38 wiz Exp $
 
 DISTNAME=		chromium-bsu-0.9.16.1
-PKGREVISION=		7
+PKGREVISION=		8
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=chromium-bsu/}
 

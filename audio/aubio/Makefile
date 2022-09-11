@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2022/03/28 10:43:30 tnn Exp $
+# $NetBSD: Makefile,v 1.25 2022/09/11 12:51:03 wiz Exp $
 
 DISTNAME=	aubio-0.4.9
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	audio
 MASTER_SITES=	https://aubio.org/pub/
 EXTRACT_SUFX=	.tar.bz2

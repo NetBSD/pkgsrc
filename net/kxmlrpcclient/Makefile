@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.52 2022/08/11 05:09:10 gutteridge Exp $
+# $NetBSD: Makefile,v 1.53 2022/09/11 12:51:10 wiz Exp $
 
 DISTNAME=	kxmlrpcclient-${KF5VER}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 
 HOMEPAGE=	https://community.kde.org/Frameworks
