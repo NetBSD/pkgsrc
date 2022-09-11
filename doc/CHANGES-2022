@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4448 2022/09/11 01:05:43 wen Exp $
+$NetBSD: CHANGES-2022,v 1.4449 2022/09/11 01:08:31 wen Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6595,3 +6595,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/p5-HTML-Template-Pro to 0.9524 [wen 2022-09-11]
 	Updated www/p5-HTML-Tiny to 1.08 [wen 2022-09-11]
 	Updated www/p5-HTTP-CookieJar to 0.014 [wen 2022-09-11]
+	Updated www/p5-HTTP-Message to 6.37 [wen 2022-09-11]
