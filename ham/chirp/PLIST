@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2022/06/13 11:50:39 gdt Exp $
+@comment $NetBSD: PLIST,v 1.15 2022/09/11 00:35:38 gdt Exp $
 bin/chirpw
 bin/rpttool
 ${PYSITELIB}/${EGG_INFODIR}
@@ -275,6 +275,9 @@ ${PYSITELIB}/chirp/drivers/kenwood_itm.pyo
 ${PYSITELIB}/chirp/drivers/kenwood_live.py
 ${PYSITELIB}/chirp/drivers/kenwood_live.pyc
 ${PYSITELIB}/chirp/drivers/kenwood_live.pyo
+${PYSITELIB}/chirp/drivers/kg935g.py
+${PYSITELIB}/chirp/drivers/kg935g.pyc
+${PYSITELIB}/chirp/drivers/kg935g.pyo
 ${PYSITELIB}/chirp/drivers/kguv8d.py
 ${PYSITELIB}/chirp/drivers/kguv8d.pyc
 ${PYSITELIB}/chirp/drivers/kguv8d.pyo
@@ -320,6 +323,9 @@ ${PYSITELIB}/chirp/drivers/radtel_t18.pyo
 ${PYSITELIB}/chirp/drivers/repeaterbook.py
 ${PYSITELIB}/chirp/drivers/repeaterbook.pyc
 ${PYSITELIB}/chirp/drivers/repeaterbook.pyo
+${PYSITELIB}/chirp/drivers/retevis_rb15.py
+${PYSITELIB}/chirp/drivers/retevis_rb15.pyc
+${PYSITELIB}/chirp/drivers/retevis_rb15.pyo
 ${PYSITELIB}/chirp/drivers/retevis_rb17p.py
 ${PYSITELIB}/chirp/drivers/retevis_rb17p.pyc
 ${PYSITELIB}/chirp/drivers/retevis_rb17p.pyo
@@ -591,6 +597,7 @@ share/chirp/stock_configs/EU LPD and PMR Channels.csv
 share/chirp/stock_configs/FR Marine VHF Channels.csv
 share/chirp/stock_configs/KDR444.csv
 share/chirp/stock_configs/NOAA Weather Alert.csv
+share/chirp/stock_configs/SE Jaktradio 155MHz.csv
 share/chirp/stock_configs/UK Business Radio Simple Light Frequencies.csv
 share/chirp/stock_configs/US 60 meter channels (Center).csv
 share/chirp/stock_configs/US 60 meter channels (Dial).csv
