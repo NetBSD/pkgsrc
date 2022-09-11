@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4464 2022/09/11 13:46:29 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4465 2022/09/11 13:47:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6611,3 +6611,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/boehm-gc to 8.2.2 [wiz 2022-09-11]
 	Updated audio/flac to 1.4.0 [wiz 2022-09-11]
 	Updated audio/fluidsynth to 2.2.9 [wiz 2022-09-11]
+	Updated www/neon to 0.32.3 [wiz 2022-09-11]
