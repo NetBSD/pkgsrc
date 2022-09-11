@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2022/05/11 10:23:11 adam Exp $
+# $NetBSD: Makefile,v 1.19 2022/09/11 17:08:49 wiz Exp $
 
 DISTNAME=	barman-2.19
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,6 +19,8 @@ DEPENDS+=	rsync-[0-9]*:../../net/rsync
 USE_LANGUAGES=	# none
 
 PYTHON_SELF_CONFLICT=	yes
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_PKG_RESOURCES=	yes
 
