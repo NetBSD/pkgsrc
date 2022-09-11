@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4501 2022/09/11 19:41:26 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.4502 2022/09/11 19:43:26 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6650,3 +6650,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated fonts/recursive-ttf to 1.085 [rhialto 2022-09-11]
 	Updated security/tlswrapper to 20220901 [schmonz 2022-09-11]
 	Updated devel/py-approvaltests to 5.7.1 [schmonz 2022-09-11]
+	Updated devel/goredo to 1.27.1 [schmonz 2022-09-11]
