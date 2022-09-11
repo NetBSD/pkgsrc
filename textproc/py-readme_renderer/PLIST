@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2019/03/13 18:00:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/09/11 16:15:16 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/readme_renderer/__about__.py
@@ -17,15 +16,10 @@ ${PYSITELIB}/readme_renderer/__main__.pyo
 ${PYSITELIB}/readme_renderer/clean.py
 ${PYSITELIB}/readme_renderer/clean.pyc
 ${PYSITELIB}/readme_renderer/clean.pyo
-${PYSITELIB}/readme_renderer/integration/__init__.py
-${PYSITELIB}/readme_renderer/integration/__init__.pyc
-${PYSITELIB}/readme_renderer/integration/__init__.pyo
-${PYSITELIB}/readme_renderer/integration/distutils.py
-${PYSITELIB}/readme_renderer/integration/distutils.pyc
-${PYSITELIB}/readme_renderer/integration/distutils.pyo
 ${PYSITELIB}/readme_renderer/markdown.py
 ${PYSITELIB}/readme_renderer/markdown.pyc
 ${PYSITELIB}/readme_renderer/markdown.pyo
+${PYSITELIB}/readme_renderer/py.typed
 ${PYSITELIB}/readme_renderer/rst.py
 ${PYSITELIB}/readme_renderer/rst.pyc
 ${PYSITELIB}/readme_renderer/rst.pyo
