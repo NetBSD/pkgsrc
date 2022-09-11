@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2022/01/04 20:55:35 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2022/09/11 17:12:49 wiz Exp $
 
 DISTNAME=	selenium-3.141.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,6 +14,8 @@ LICENSE=	apache-2.0
 DEPENDS+=	${PYPKGPREFIX}-urllib3-[0-9]*:../../www/py-urllib3
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 # these are for Linux only; see selenium/webdriver/firefox/firefox_binary.py
 CHECK_SHLIBS_SKIP+=	${PYSITELIB}/selenium/webdriver/firefox/amd64/x_ignore_nofocus.so
