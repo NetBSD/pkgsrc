@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2022/02/13 08:53:44 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2022/09/11 18:10:03 wiz Exp $
 
 DISTNAME=	txAMQP-0.8.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -12,11 +12,11 @@ COMMENT=	Python library for communicating with AMQP using Twisted
 LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 
-PYTHON_VERSIONED_DEPENDENCIES+=	twisted
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
