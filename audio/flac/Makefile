@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.57 2022/02/21 08:19:41 adam Exp $
+# $NetBSD: Makefile,v 1.58 2022/09/11 12:29:54 wiz Exp $
 
-DISTNAME=	flac-1.3.4
+DISTNAME=	flac-1.4.0
 CATEGORIES=	audio archivers
 MASTER_SITES=	http://downloads.xiph.org/releases/flac/
 EXTRACT_SUFX=	.tar.xz
@@ -11,7 +11,7 @@ COMMENT=	Free lossless audio codec
 LICENSE=	modified-bsd AND gnu-gpl-v2 AND gnu-lgpl-v2.1
 
 USE_LIBTOOL=		yes
-USE_TOOLS+=		aclocal autoconf autoheader automake gmake
+USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-doxygen-docs
@@ -53,9 +53,6 @@ CFLAGS+=	-D__inline=inline
 .if !empty(PKGSRC_COMPILER:Mclang)
 BUILDLINK_TRANSFORM+=	rm:-fgnu89-inline
 .endif
-
-pre-configure:
-	cd ${WRKSRC} && autoreconf
 
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
