@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4470 2022/09/11 14:12:12 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4471 2022/09/11 14:14:18 wen Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6617,3 +6617,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/p5-Crypt-OpenSSL-RSA to 0.33 [wen 2022-09-11]
 	Updated security/p5-Crypt-PasswdMD5 to 1.42 [wen 2022-09-11]
 	Updated net/wireshark to 3.6.8 [wiz 2022-09-11]
+	Updated security/p5-CryptX to 0.077 [wen 2022-09-11]
