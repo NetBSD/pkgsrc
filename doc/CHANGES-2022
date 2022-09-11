@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4463 2022/09/11 12:30:03 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4464 2022/09/11 13:46:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6610,3 +6610,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated misc/sunwait to 0.8nb1 [martin 2022-09-11]
 	Updated devel/boehm-gc to 8.2.2 [wiz 2022-09-11]
 	Updated audio/flac to 1.4.0 [wiz 2022-09-11]
+	Updated audio/fluidsynth to 2.2.9 [wiz 2022-09-11]
