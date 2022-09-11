@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4467 2022/09/11 13:52:49 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4468 2022/09/11 14:05:17 wen Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6614,3 +6614,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/neon to 0.32.3 [wiz 2022-09-11]
 	Updated devel/gopls to 0.9.5 [wiz 2022-09-11]
 	Updated net/rsync to 3.2.6 [wiz 2022-09-11]
+	Updated security/p5-Crypt-OpenSSL-RSA to 0.33 [wen 2022-09-11]
