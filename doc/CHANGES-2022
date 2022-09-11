@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4457 2022/09/11 05:47:29 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4458 2022/09/11 08:20:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6604,3 +6604,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added security/ruby-snaky_hash version 2.0.0 [taca 2022-09-11]
 	Added security/ruby-oauth-tty version 1.0.3 [taca 2022-09-11]
 	Updated security/ruby-oauth to 1.1.0 [taca 2022-09-11]
+	Updated x11/libXft to 2.3.6 [wiz 2022-09-11]
