@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2020/04/20 17:39:13 nia Exp $
+# $NetBSD: Makefile,v 1.10 2022/09/11 12:51:21 wiz Exp $
 
 DISTNAME=	opus-tools-0.2
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	https://downloads.xiph.org/releases/opus/
 

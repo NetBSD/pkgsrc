@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2022/04/18 19:10:23 adam Exp $
+# $NetBSD: Makefile,v 1.18 2022/09/11 12:51:16 wiz Exp $
 #
 
 GST_PLUGINS0.10_NAME=	twolame
 GST_PLUGINS0.10_DIRS=	ext/twolame
-PKGREVISION=		10
+PKGREVISION=		11
 
 .include "../../multimedia/gst-plugins0.10-ugly/Makefile.common"
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2020/03/20 11:57:22 nia Exp $
+# $NetBSD: Makefile,v 1.17 2022/09/11 12:51:19 wiz Exp $
 #
 
 DISTNAME=	libmp3splt-0.9.2
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mp3splt/}
 

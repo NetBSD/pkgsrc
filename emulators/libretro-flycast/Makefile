@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2020/06/28 15:20:26 nia Exp $
+# $NetBSD: Makefile,v 1.6 2022/09/11 12:51:32 wiz Exp $
 
 DISTNAME=	libretro-flycast-20200529
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	emulators
 GITHUB_PROJECT=	flycast
 GITHUB_TAG=	e595af5dfbff2e49fbcb95bec5b240785c8b4f4f

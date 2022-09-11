@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2020/01/26 05:26:09 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2022/09/11 12:51:16 wiz Exp $
 
 DISTNAME=	flac123-0.0.12-release
 PKGNAME=	${DISTNAME:S/-release//}
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=flac-tools/}
 

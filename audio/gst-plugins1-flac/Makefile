@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2021/11/15 22:01:16 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/09/11 12:51:17 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/plugins/plugins1/:S/-good/-flac/}
+PKGREVISION=	1
 CATEGORIES=	audio gnome
 
 COMMENT=	Open source multimedia framework - FLAC plugin
