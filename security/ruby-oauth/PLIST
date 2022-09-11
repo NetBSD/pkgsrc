@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2021/11/28 14:11:14 taca Exp $
-bin/oauth${RUBY_SUFFIX}
+@comment $NetBSD: PLIST,v 1.11 2022/09/11 05:47:10 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/CODE_OF_CONDUCT.md
@@ -8,15 +7,7 @@ ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/SECURITY.md
 ${GEM_LIBDIR}/TODO
-${GEM_LIBDIR}/bin/oauth
 ${GEM_LIBDIR}/lib/oauth.rb
-${GEM_LIBDIR}/lib/oauth/cli.rb
-${GEM_LIBDIR}/lib/oauth/cli/authorize_command.rb
-${GEM_LIBDIR}/lib/oauth/cli/base_command.rb
-${GEM_LIBDIR}/lib/oauth/cli/help_command.rb
-${GEM_LIBDIR}/lib/oauth/cli/query_command.rb
-${GEM_LIBDIR}/lib/oauth/cli/sign_command.rb
-${GEM_LIBDIR}/lib/oauth/cli/version_command.rb
 ${GEM_LIBDIR}/lib/oauth/client.rb
 ${GEM_LIBDIR}/lib/oauth/client/action_controller_request.rb
 ${GEM_LIBDIR}/lib/oauth/client/em_http.rb
