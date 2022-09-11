@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4487 2022/09/11 17:28:09 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.4488 2022/09/11 17:28:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6634,3 +6634,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed net/coherence [wiz 2022-09-11]
 	Updated net/dbip-city-lite to 2022.09 [fcambus 2022-09-11]
 	Updated net/dbip-country-lite to 2022.09 [fcambus 2022-09-11]
+	Removed news/lottanzb [wiz 2022-09-11]
+	Removed news/hellanzb [wiz 2022-09-11]
