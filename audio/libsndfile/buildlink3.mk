@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2022/03/28 10:43:35 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2022/09/11 12:51:04 wiz Exp $
 
 BUILDLINK_TREE+=	libsndfile
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libsndfile
 LIBSNDFILE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libsndfile+=	libsndfile>=1.0.0
-BUILDLINK_ABI_DEPENDS.libsndfile+=	libsndfile>=1.1.0nb1
+BUILDLINK_ABI_DEPENDS.libsndfile+=	libsndfile>=1.1.0nb2
 BUILDLINK_PKGSRCDIR.libsndfile?=	../../audio/libsndfile
 
 .include "../../audio/flac/buildlink3.mk"

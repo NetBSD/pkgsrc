@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2022/07/02 16:53:09 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2022/09/11 12:51:25 wiz Exp $
 
 DISTNAME=	minimodem-0.24
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	comms audio
 MASTER_SITES=	http://www.whence.com/minimodem/
 

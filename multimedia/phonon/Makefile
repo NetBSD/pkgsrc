@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.73 2022/07/02 16:53:31 ryoon Exp $
+# $NetBSD: Makefile,v 1.74 2022/09/11 12:52:03 wiz Exp $
 
 DISTNAME=	phonon-4.10.3
 
 COMMENT=	Multimedia API for KDE and QT
-PKGREVISION=	11
+PKGREVISION=	12
 
 .include "Makefile.common"
 

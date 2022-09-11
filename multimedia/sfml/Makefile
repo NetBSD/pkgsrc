@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2022/03/28 10:45:25 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2022/09/11 12:51:10 wiz Exp $
 
 DISTNAME=	SFML-2.5.1-sources
 PKGNAME=	${DISTNAME:S/-sources//:tl}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	multimedia
 MASTER_SITES=	http://www.sfml-dev.org/files/
 EXTRACT_SUFX=	.zip
