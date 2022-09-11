@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.104 2021/11/07 20:59:17 wiz Exp $
+# $NetBSD: Makefile,v 1.105 2022/09/11 12:25:23 wiz Exp $
 
-DISTNAME=	gc-8.2.0
+DISTNAME=	gc-8.2.2
 PKGNAME=	${DISTNAME:S/gc/boehm-gc/}
-PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.hboehm.info/gc/gc_source/
 
