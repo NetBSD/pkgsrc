@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3793 2022/09/09 13:32:39 taca Exp $
+# $NetBSD: Makefile,v 1.3794 2022/09/11 05:32:27 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -3191,6 +3191,7 @@ SUBDIR+=	ruby-turn
 SUBDIR+=	ruby-uglifier
 SUBDIR+=	ruby-uuidtools
 SUBDIR+=	ruby-validatable
+SUBDIR+=	ruby-version_gem
 SUBDIR+=	ruby-wisper
 SUBDIR+=	ruby-wmi-lite
 SUBDIR+=	ruby-yell
