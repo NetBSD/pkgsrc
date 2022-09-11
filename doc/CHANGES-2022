@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4492 2022/09/11 17:54:57 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4493 2022/09/11 17:58:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6640,3 +6640,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Added textproc/py-lunr version 0.6.2 [wiz 2022-09-11]
 	Updated devel/py-doctor to 22.7.0 [wiz 2022-09-11]
 	Removed devel/py-jersey [wiz 2022-09-11]
+	Removed www/py-graphite-web [wiz 2022-09-11]
+	Removed databases/py-carbon [wiz 2022-09-11]
