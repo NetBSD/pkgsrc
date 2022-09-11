@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2020/05/30 14:59:10 nia Exp $
+# $NetBSD: Makefile,v 1.10 2022/09/11 12:51:32 wiz Exp $
 
 LIBRETRO_CORE=	mednafen_psx
 
+PKGREVISION= 1
 .include "Makefile.common"
 
 MAINTAINER=	nia@NetBSD.org

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2020/06/01 19:12:38 nia Exp $
+# $NetBSD: Makefile,v 1.7 2022/09/11 12:51:32 wiz Exp $
 
 DISTNAME=	libretro-genesis-plus-gx-20200208
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	emulators
 GITHUB_PROJECT=	Genesis-Plus-GX
 GITHUB_TAG=	50551066f71f8a5ea782ea3747891fd6d24ebe67

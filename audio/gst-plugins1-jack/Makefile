@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2022/04/18 12:36:05 nia Exp $
+# $NetBSD: Makefile,v 1.11 2022/09/11 12:51:17 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/plugins/plugins1/:S/-good/-jack/}
+PKGREVISION=	1
 CATEGORIES=	audio gnome
 
 COMMENT=	Open source multimedia framework - JACK plugin

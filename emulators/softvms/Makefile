@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2020/01/26 17:31:09 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2022/09/11 12:51:35 wiz Exp $
 
 DISTNAME=	softvms
 PKGNAME=	softvms-1.10
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	http://mc.pp.se/dc/files/
 MASTER_SITES+=	https://travispaul.me/distfiles/
