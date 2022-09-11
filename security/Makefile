@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.872 2022/09/11 05:36:10 taca Exp $
+# $NetBSD: Makefile,v 1.873 2022/09/11 05:42:23 taca Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -545,6 +545,7 @@ SUBDIR+=	ruby-net-ssh-gateway
 SUBDIR+=	ruby-net-ssh-multi
 SUBDIR+=	ruby-nexpose
 SUBDIR+=	ruby-oauth
+SUBDIR+=	ruby-oauth-tty
 SUBDIR+=	ruby-openid
 SUBDIR+=	ruby-openssl-ccm
 SUBDIR+=	ruby-openssl-cmac
