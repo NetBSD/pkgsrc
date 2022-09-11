@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.656 2022/07/03 16:09:15 nia Exp $
+# $NetBSD: Makefile,v 1.657 2022/09/11 16:38:42 wiz Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -417,7 +417,6 @@ SUBDIR+=	py-mpd
 SUBDIR+=	py-mpd2
 SUBDIR+=	py-music21
 SUBDIR+=	py-musicbrainz-ngs
-SUBDIR+=	py-musique
 SUBDIR+=	py-mutagen
 SUBDIR+=	py-soundfile
 SUBDIR+=	qjackctl
