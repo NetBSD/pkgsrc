@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:17:47 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/09/11 16:53:08 wiz Exp $
 
-BLAKE2s (ndg_httpsclient-0.4.2.tar.gz) = b13863a1267446f7d434c88e7a4f17092642976b62e16abae3665f119a903334
-SHA512 (ndg_httpsclient-0.4.2.tar.gz) = dab796c7a09be895fe017ab742cbcbd81ec5674bf1faddef0ce7f97a56e5af3726b946b4169cfae61891ac8447d41ccbb859dec1bade9ce5f52f57d8c0cd8102
-Size (ndg_httpsclient-0.4.2.tar.gz) = 27112 bytes
+BLAKE2s (ndg_httpsclient-0.5.1.tar.gz) = c24eb2cc310f9644d6ce5c5e1dd7d1d29857d708b2efce27bc951955d9df4851
+SHA512 (ndg_httpsclient-0.5.1.tar.gz) = 00f83f357289ba4c958b7a2857a577e11f62783243b40ad302c321d6a8718558e092f96a57ada4d8f5d4c3f97f3d26fb2674140f78e5633ab5bad65502d1b414
+Size (ndg_httpsclient-0.5.1.tar.gz) = 24054 bytes
