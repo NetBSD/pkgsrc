@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2022/08/11 05:08:23 gutteridge Exp $
+# $NetBSD: Makefile,v 1.11 2022/09/11 12:51:36 wiz Exp $
 
 DISTNAME=	arx-libertatis-1.2
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	games
 MASTER_SITES=	https://arx-libertatis.org/files/
 EXTRACT_SUFX=	.tar.xz
