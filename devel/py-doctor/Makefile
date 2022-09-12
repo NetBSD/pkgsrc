@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2022/09/11 17:52:22 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2022/09/12 06:54:04 wiz Exp $
 
 DISTNAME=	pydoctor-22.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -25,7 +25,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 TEST_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
-PYTHON_VERSIONS_INCOMPATIBLE+=	27
+PYTHON_VERSIONS_INCOMPATIBLE+=	27 37
 
 .include "../../lang/python/pyversion.mk"
 
