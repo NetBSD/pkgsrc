@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2022/07/12 08:27:34 adam Exp $
+# $NetBSD: Makefile,v 1.4 2022/09/12 10:57:05 adam Exp $
 
-DISTNAME=	parsimonious-0.9.0
+DISTNAME=	parsimonious-0.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/parsimonious/}
