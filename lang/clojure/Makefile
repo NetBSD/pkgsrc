@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2019/10/09 12:41:13 fox Exp $
+# $NetBSD: Makefile,v 1.10 2022/09/12 18:44:09 ryoon Exp $
 
-DISTNAME=	clojure-tools-1.10.1.469
+DISTNAME=	clojure-tools-1.11.1.1155
 PKGNAME=	${DISTNAME:S/-tools//}
 CATEGORIES=	lang
 MASTER_SITES=	https://download.clojure.org/install/
@@ -37,7 +37,9 @@ SUBST_CLASSES+=		set-base
 SUBST_STAGE.set-base=	pre-configure
 SUBST_MESSAGE.set-base=	Setting package base path.
 SUBST_FILES.set-base=	clojure
+SUBST_FILES.set-base+=	clj
 SUBST_SED.set-base=	-e 's,PREFIX,${PREFIX}/clojure,g'
+SUBST_SED.set-base+=	-e 's,BINDIR,${PREFIX}/bin,g'
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/*.edn ${DESTDIR}${PREFIX}/clojure
