@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.75 2022/06/18 21:07:14 wiz Exp $
+# $NetBSD: Makefile,v 1.76 2022/09/12 08:08:01 adam Exp $
 
-DISTNAME=	matplotlib-3.5.2
+DISTNAME=	matplotlib-3.5.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/matplotlib/}
@@ -14,7 +14,9 @@ DEPENDS+=	${PYPKGPREFIX}-Pillow>=6.2.0:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo
 DEPENDS+=	${PYPKGPREFIX}-cycler>=0.10:../../graphics/py-cycler
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.7:../../time/py-dateutil
+DEPENDS+=	${PYPKGPREFIX}-fonttools>=4.22.0:../../fonts/py-fonttools
 DEPENDS+=	${PYPKGPREFIX}-kiwisolver>=1.0.1:../../math/py-kiwisolver
+DEPENDS+=	${PYPKGPREFIX}-packaging>=20.0:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-pyparsing>=2.2.1:../../devel/py-pyparsing
 BUILD_DEPENDS+=	${PYPKGPREFIX}-certifi>=2020.06.20:../../security/py-certifi
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=4:../../devel/py-setuptools_scm
