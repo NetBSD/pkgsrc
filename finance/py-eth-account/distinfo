@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2022/07/12 07:37:53 adam Exp $
+$NetBSD: distinfo,v 1.7 2022/09/12 11:04:18 adam Exp $
 
-BLAKE2s (eth-account-0.6.1.tar.gz) = 179fb72f05b457865540c3189f0bd15cf9c643e49eb8b78d3baf7cd260bc271a
-SHA512 (eth-account-0.6.1.tar.gz) = 9eb5879c3b1a4bd8dae1cedebd5ff13769127391ee9d1e1b4afa48637ee9d0d9a873602149c980864a341c3a669144c5a59f07aa67796cf936c61780ceb258da
-Size (eth-account-0.6.1.tar.gz) = 3938053 bytes
+BLAKE2s (eth-account-0.7.0.tar.gz) = 01c849850e48470bbd7ad74697ca21094cd1f59b744e71756fbc4bb42303ebe0
+SHA512 (eth-account-0.7.0.tar.gz) = 575582a3e588d7f5b947edc2c674725b5f4c06e70d54942db86b4772742a413385e83040ae3ba9c0d868d78bb58e9a87ab19c555be016336b7eeeea41650c775
+Size (eth-account-0.7.0.tar.gz) = 960377 bytes
