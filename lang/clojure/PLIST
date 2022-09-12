@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2019/10/08 23:40:37 fox Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/09/12 18:44:09 ryoon Exp $
 bin/clj
 bin/clojure
 clojure/deps.edn
 clojure/example-deps.edn
 clojure/libexec/clojure-tools-${PKGVERSION}.jar
+clojure/libexec/exec.jar
+clojure/tools.edn
 man/man1/clj.1
 man/man1/clojure.1
