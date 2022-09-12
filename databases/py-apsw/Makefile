@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.45 2022/09/09 22:50:35 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2022/09/12 08:22:18 adam Exp $
 
-DISTNAME=	apsw-3.39.2.1
+DISTNAME=	apsw-3.39.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-r1//}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rogerbinns/}
@@ -19,7 +19,7 @@ PYSETUPBUILDARGS+=	--enable=load_extension
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-BUILDLINK_API_DEPENDS.sqlite3+= sqlite3>=3.39.2
+BUILDLINK_API_DEPENDS.sqlite3+= sqlite3>=3.39.3
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
