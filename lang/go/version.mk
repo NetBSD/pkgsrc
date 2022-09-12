@@ -1,4 +1,4 @@
-# $NetBSD: version.mk,v 1.158 2022/09/07 06:36:32 bsiegert Exp $
+# $NetBSD: version.mk,v 1.159 2022/09/12 12:16:05 jperkin Exp $
 
 #
 # If bsd.prefs.mk is included before go-package.mk in a package, then this
@@ -46,6 +46,10 @@ GOCHAR=			8
 .elif ${MACHINE_ARCH} == "x86_64"
 GOARCH=			amd64
 GOCHAR=			6
+# go118 hardcodes GOARCH=arm64 even when running in an x86_64 chroot
+.  if ${OPSYS} == "Darwin"
+GOOPT+=			GOHOSTARCH=amd64
+.  endif
 .elif ${MACHINE_ARCH} == "earmv6hf" || ${MACHINE_ARCH} == "earmv7hf"
 GOARCH=			arm
 GOCHAR=			5
