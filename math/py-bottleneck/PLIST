@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2022/04/27 10:36:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/09/12 08:15:35 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -60,6 +60,8 @@ ${PYSITELIB}/bottleneck/tests/__init__.pyo
 ${PYSITELIB}/bottleneck/tests/common.py
 ${PYSITELIB}/bottleneck/tests/common.pyc
 ${PYSITELIB}/bottleneck/tests/common.pyo
+${PYSITELIB}/bottleneck/tests/data/template_test/test_template.c
+${PYSITELIB}/bottleneck/tests/data/template_test/truth.c
 ${PYSITELIB}/bottleneck/tests/input_modification_test.py
 ${PYSITELIB}/bottleneck/tests/input_modification_test.pyc
 ${PYSITELIB}/bottleneck/tests/input_modification_test.pyo
