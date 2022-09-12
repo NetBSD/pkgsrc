@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1480 2022/09/11 18:11:19 wiz Exp $
+# $NetBSD: Makefile,v 1.1481 2022/09/12 06:55:39 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -985,7 +985,6 @@ SUBDIR+=	unifi
 SUBDIR+=	unison
 SUBDIR+=	unworkable
 SUBDIR+=	upclient
-SUBDIR+=	upnpinspector
 SUBDIR+=	urlgfe
 SUBDIR+=	userppp
 SUBDIR+=	uucp
