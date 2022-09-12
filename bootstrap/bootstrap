@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.313 2022/09/09 10:58:15 jperkin Exp $
+# $NetBSD: bootstrap,v 1.314 2022/09/12 12:32:30 jperkin Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -588,6 +588,14 @@ Darwin)
 	root_group=wheel
 	machine_arch=`get_machine_arch_darwin`
 	check_compiler=yes
+
+	if [ -n "${MACOSX_DEPLOYMENT_TARGET}" ]; then
+		SDK_PATH=`/usr/bin/xcrun \
+			--sdk macosx${MACOSX_DEPLOYMENT_TARGET} \
+			--show-sdk-path 2>/dev/null || echo /nonexistent`
+		CFLAGS="-isysroot ${SDK_PATH} ${CFLAGS}"
+		export CFLAGS
+	fi
 
 	# Combine major.minor product version for simpler numerical tests.
 	macos_version=`sw_vers -productVersion | \
@@ -1392,6 +1400,10 @@ if test -n "$LDFLAGS"; then
 fi
 if test -n "$LIBS"; then
 	echo "LIBS+=		$LIBS" >> ${TARGET_MKCONF}
+fi
+if test -n "$MACOSX_DEPLOYMENT_TARGET"; then
+	echo "MACOSX_DEPLOYMENT_TARGET=	$MACOSX_DEPLOYMENT_TARGET" >>${TARGET_MKCONF}
+	echo "MACOSX_DEPLOYMENT_TARGET=	$MACOSX_DEPLOYMENT_TARGET" >>${BOOTSTRAP_MKCONF}
 fi
 
 # opsys specific fiddling
