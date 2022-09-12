@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4510 2022/09/12 09:56:05 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4511 2022/09/12 11:05:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6664,3 +6664,8 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-astroid to 2.12.9 [adam 2022-09-12]
 	Updated devel/py-pylint to 2.15.2 [adam 2022-09-12]
 	Updated lang/gawk to 5.2.0 [wiz 2022-09-12]
+	Updated finance/py-eth-hash to 0.5.0 [adam 2022-09-12]
+	Updated textproc/py-parsimonious to 0.10.0 [adam 2022-09-12]
+	Updated finance/py-eth-abi to 3.0.1 [adam 2022-09-12]
+	Updated devel/py-hexbytes to 0.3.0 [adam 2022-09-12]
+	Updated finance/py-eth-account to 0.7.0 [adam 2022-09-12]
