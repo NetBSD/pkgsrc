@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.115 2022/07/22 00:53:58 schmonz Exp $
+# $NetBSD: Darwin.mk,v 1.116 2022/09/12 12:32:31 jperkin Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -101,13 +101,6 @@ MAKEFLAGS+=		OSX_VERSION=${OSX_VERSION:Q}
 # into /usr/include, so we need to query their location if /usr/include is
 # not available.
 #
-# Use current system version SDK (avoid newer SDKs).
-#
-.if exists(/usr/include/stdio.h)
-_OPSYS_INCLUDE_DIRS?=	/usr/include
-.elif exists(/usr/bin/xcrun)
-.  if !defined(OSX_SDK_PATH)
-#
 # Apple do not always keep the SDK version in step with the OS version.  When
 # that happens add a mapping below, but only within the same OS release major.
 #
@@ -119,6 +112,25 @@ OSX_SDK_MAP.12.2=	12.1
 OSX_SDK_MAP.12.4=	12.3
 OSX_SDK_MAP.12.5=	12.3
 #
+# If the user has set MACOSX_DEPLOYMENT_TARGET (ideally at bootstrap time) to
+# select a specific SDK then we prefer that.
+#
+.if defined(MACOSX_DEPLOYMENT_TARGET)
+.  if !defined(OSX_SDK_PATH)
+OSX_SDK_PATH!=	/usr/bin/xcrun --sdk macosx${MACOSX_DEPLOYMENT_TARGET} \
+		    --show-sdk-path 2>/dev/null || echo /nonexistent
+.  endif
+ALL_ENV+=		MACOSX_DEPLOYMENT_TARGET=${MACOSX_DEPLOYMENT_TARGET}
+MAKEFLAGS+=		OSX_SDK_PATH=${OSX_SDK_PATH:Q}
+_OPSYS_INCLUDE_DIRS?=	${OSX_SDK_PATH}/usr/include
+CWRAPPERS_APPEND.cc+=	-isysroot ${OSX_SDK_PATH}
+CWRAPPERS_APPEND.cxx+=	-isysroot ${OSX_SDK_PATH}
+_WRAP_EXTRA_ARGS.CC+=	-isysroot ${OSX_SDK_PATH}
+_WRAP_EXTRA_ARGS.CXX+=	-isysroot ${OSX_SDK_PATH}
+.elif exists(/usr/include/stdio.h)
+_OPSYS_INCLUDE_DIRS?=	/usr/include
+.elif exists(/usr/bin/xcrun)
+.  if !defined(OSX_SDK_PATH)
 OSX_SDK_PATH!=	/usr/bin/xcrun \
 		    --sdk macosx${OSX_SDK_MAP.${OSX_VERSION}:U${OSX_VERSION}} \
 		    --show-sdk-path 2>/dev/null || echo /nonexistent
