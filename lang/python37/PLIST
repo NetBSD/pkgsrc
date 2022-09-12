@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2022/03/19 18:55:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2022/09/12 07:58:55 adam Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -49,6 +49,7 @@ include/python${PY_VER_SUFFIX}/internal/hamt.h
 include/python${PY_VER_SUFFIX}/internal/hash.h
 include/python${PY_VER_SUFFIX}/internal/import.h
 include/python${PY_VER_SUFFIX}/internal/mem.h
+include/python${PY_VER_SUFFIX}/internal/pycore_long.h
 include/python${PY_VER_SUFFIX}/internal/pygetopt.h
 include/python${PY_VER_SUFFIX}/internal/pystate.h
 include/python${PY_VER_SUFFIX}/internal/warnings.h
