@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2022/08/15 10:37:15 tnn Exp $
+# $NetBSD: Makefile,v 1.14 2022/09/12 12:12:51 jperkin Exp $
 
 PKGNAME=	go-bin-1.18.5
 CATEGORIES=	lang
@@ -93,9 +93,9 @@ do-install:
 # running them outside.  We're left with no choice but to make it configurable
 # by the user.
 #
-.if !empty(MACHINE_PLATFORM:MDarwin-*-aarch64) && defined(DARWIN_CHROOTED)
+.if !empty(MACHINE_PLATFORM:MDarwin-*-*) && defined(DARWIN_CHROOTED)
 	for f in ${DESTDIR}${PREFIX}/go-bin/bin/* \
-		 ${DESTDIR}${PREFIX}/go-bin/pkg/tool/darwin_arm64/*; do \
+		 ${DESTDIR}${PREFIX}/go-bin/pkg/tool/darwin_*/*; do \
 		/usr/bin/codesign --remove-signature $$f; \
 	done
 .endif
