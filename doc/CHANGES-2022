@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4503 2022/09/11 20:48:19 leot Exp $
+$NetBSD: CHANGES-2022,v 1.4504 2022/09/12 06:55:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6652,3 +6652,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-approvaltests to 5.7.1 [schmonz 2022-09-11]
 	Updated devel/goredo to 1.27.1 [schmonz 2022-09-11]
 	Updated devel/opa to 0.44.0 [leot 2022-09-11]
+	Removed net/upnpinspector [wiz 2022-09-12]
