@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2022/09/10 13:47:01 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2022/09/12 17:48:52 ryoon Exp $
 
 DISTNAME=	gimp-2.99.12
 PKGNAME=	${DISTNAME:S/gimp/gimp-devel/}
@@ -30,6 +30,10 @@ USE_TOOLS+=		gdbus-codegen
 
 PKGCONFIG_OVERRIDE=	gimp.pc.in
 UNLIMIT_RESOURCES+=	datasize
+
+# Disable documentation for developers explicitly.
+MESON_ARGS+=	-Dgi-docgen=disabled
+MESON_ARGS+=	-Dg-ir-doc=false
 
 # example files
 CHECK_INTERPRETER_SKIP+=	lib/gimp/2.99/extensions/org.gimp.extension.goat-exercises/*
