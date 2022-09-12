@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4505 2022/09/12 07:59:44 adam Exp $
+$NetBSD: CHANGES-2022,v 1.4506 2022/09/12 08:08:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6655,3 +6655,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed net/upnpinspector [wiz 2022-09-12]
 	Updated lang/python37 to 3.7.14 [adam 2022-09-12]
 	Updated lang/py37-html-docs to 3.7.14 [adam 2022-09-12]
+	Updated math/py-numpy to 1.23.3 [adam 2022-09-12]
+	Updated graphics/py-matplotlib to 3.5.3 [adam 2022-09-12]
