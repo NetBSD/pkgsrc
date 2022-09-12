@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4514 2022/09/12 16:10:45 adam Exp $
+$NetBSD: CHANGES-2022,v 1.4515 2022/09/12 18:44:51 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6673,3 +6673,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/nspr to 4.35 [wiz 2022-09-12]
 	Updated net/samba4 to 4.16.5 [adam 2022-09-12]
 	Updated net/py-zeroconf to 0.39.1 [adam 2022-09-12]
+	Updated lang/clojure to 1.11.1.1155 [ryoon 2022-09-12]
