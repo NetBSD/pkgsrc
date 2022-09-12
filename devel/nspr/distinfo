@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.68 2022/08/10 10:16:24 wiz Exp $
+$NetBSD: distinfo,v 1.69 2022/09/12 13:12:44 wiz Exp $
 
-BLAKE2s (nspr-4.34.1.tar.gz) = fe7e0fbf8796c93e2843fbf7a781be866e8d3d2cea0380eab424878618f997a2
-SHA512 (nspr-4.34.1.tar.gz) = b77226c3fbba6fc9acc90deb8496370dba1384de72ce564524c03bc239846fd17c27d7e1fd7ce99161faafdd8c92413ee58ce1a74a41c786759210bbab478991
-Size (nspr-4.34.1.tar.gz) = 1096874 bytes
+BLAKE2s (nspr-4.35.tar.gz) = c6c0e92a5198ff08e84ff1342b0ca2106e77062ca3109704f17d7d9c34084dbe
+SHA512 (nspr-4.35.tar.gz) = 502815833116e25f79ddf71d1526484908aa92fbc55f8a892729cb404a4daafcc0470a89854cd080d2d20299fdb7d9662507c5362c7ae661cbacf308ac56ef7f
+Size (nspr-4.35.tar.gz) = 1096974 bytes
 SHA1 (patch-ab) = 008f5b84994ad20e3b1a0de1e0f7a028932d03d2
 SHA1 (patch-ac) = c751b8397744c969e6141f609cb3914db6e699e3
 SHA1 (patch-ba) = 35f7cc7bbe7fa0f72eb7b506094ad1812b754aa5
