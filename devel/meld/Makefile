@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.121 2022/09/13 23:06:21 wiz Exp $
+# $NetBSD: Makefile,v 1.122 2022/09/13 23:11:19 wiz Exp $
 
 DISTNAME=		meld-3.22.0
 CATEGORIES=		devel
@@ -30,6 +30,7 @@ SUBST_STAGE.python3=	pre-configure
 SUBST_MESSAGE.python3=	Fix python binary name.
 
 # compile step in meson_post_install.py does not support DESTDIR
+# https://gitlab.gnome.org/GNOME/meld/-/issues/709
 post-install:
 	${PYTHONBIN} -m compileall compile_dir ${DESTDIR}${PREFIX}/${PYSITELIB}
 
