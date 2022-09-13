@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2022/08/02 09:45:58 adam Exp $
+# $NetBSD: Makefile,v 1.3 2022/09/13 12:35:26 adam Exp $
 
-DISTNAME=	yamllint-1.27.1
+DISTNAME=	yamllint-1.28.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=y/yamllint/}
