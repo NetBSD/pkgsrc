@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2022/04/26 18:45:53 adam Exp $
+$NetBSD: distinfo,v 1.9 2022/09/13 11:41:34 adam Exp $
 
-BLAKE2s (immutables-0.17.tar.gz) = 2e5326845dfae9e8cce3d5b3823a9a9a0d6a62be9adae5efde9d0eae067a86c4
-SHA512 (immutables-0.17.tar.gz) = 5d89653d5c1ce61e0f088c75eb6f76cd9188b701e8eb410503e96eaa2600edfca155f778ca60ed2ed205ed99957d7b9bb4581215f30220fdc38f99c25704f9ca
-Size (immutables-0.17.tar.gz) = 84531 bytes
+BLAKE2s (immutables-0.18.tar.gz) = 60eefd7cd84b10ea66c43ced5f34f8f312aafcb3cc38e06c94c5c23cfcc528c9
+SHA512 (immutables-0.18.tar.gz) = c904c02e2568f0d98b75a175ac11645e5f1a584aa1a7f1923119339cdd154a6594af49aafb1fc8ea0de0cf9799264a0ccc94e8afc38deabb5719609e666b352c
+Size (immutables-0.18.tar.gz) = 84799 bytes
