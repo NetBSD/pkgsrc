@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2022/04/06 22:40:38 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/09/13 23:36:13 wiz Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -3716,6 +3716,8 @@ share/emacs/${PKGVERSION}/lisp/term/common-win.el.gz
 share/emacs/${PKGVERSION}/lisp/term/common-win.elc
 share/emacs/${PKGVERSION}/lisp/term/cygwin.el.gz
 share/emacs/${PKGVERSION}/lisp/term/cygwin.elc
+share/emacs/${PKGVERSION}/lisp/term/fbterm.el.gz
+share/emacs/${PKGVERSION}/lisp/term/fbterm.elc
 share/emacs/${PKGVERSION}/lisp/term/internal.el.gz
 share/emacs/${PKGVERSION}/lisp/term/internal.elc
 share/emacs/${PKGVERSION}/lisp/term/iris-ansi.el.gz
