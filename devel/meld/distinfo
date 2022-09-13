@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.67 2022/07/03 09:12:07 wiz Exp $
+$NetBSD: distinfo,v 1.68 2022/09/13 23:06:21 wiz Exp $
 
-BLAKE2s (meld-3.21.2.tar.xz) = 999dc1feef0c1f2940c3b5b9d83d30dc9e3db536ddcb6f816757826b02e176df
-SHA512 (meld-3.21.2.tar.xz) = f715ce8356c4a0cfdb57dfdde4c66af059de08e9ad5f3755ab03adb355075523280ec7cf5c4d86bd587191d854b4dc6d2f6600540dd7d974a1a7b957c7c8bcb5
-Size (meld-3.21.2.tar.xz) = 673076 bytes
+BLAKE2s (meld-3.22.0.tar.xz) = c1b26cef3ea87c693d2b20d927251fada8ce3835e114792ba199553586531448
+SHA512 (meld-3.22.0.tar.xz) = 4cc1c9a76379401c1f116292bb4730301ec0f2413cdab7b463ed519ea7ee0ee86143a9c83a13f1ef09860aad192c04769d111bfb1eb10b5e1bc81fb44c530526
+Size (meld-3.22.0.tar.xz) = 674212 bytes

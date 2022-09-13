@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.120 2022/08/11 05:08:13 gutteridge Exp $
+# $NetBSD: Makefile,v 1.121 2022/09/13 23:06:21 wiz Exp $
 
-DISTNAME=		meld-3.21.2
-PKGREVISION=		1
+DISTNAME=		meld-3.22.0
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/meld/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=		.tar.xz
@@ -17,8 +16,11 @@ DEPENDS+=		gsettings-desktop-schemas-[0-9]*:../../sysutils/gsettings-desktop-sch
 DEPENDS+=		dconf-[0-9]*:../../devel/dconf
 
 USE_TOOLS+=		msgfmt pkg-config itstool
-# only used when building the python way (not meson)
-USE_TOOLS+=		intltool
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+PY_PATCHPLIST=			yes
+
+REPLACE_PYTHON+=		bin/meld
 
 SUBST_CLASSES+=		python3
 SUBST_FILES.python3=	meson.build
@@ -27,21 +29,9 @@ SUBST_SED.python3+=	-e "s,'python3','python-${PYVERSSUFFIX}',"
 SUBST_STAGE.python3=	pre-configure
 SUBST_MESSAGE.python3=	Fix python binary name.
 
-# Compiled files are not installed, see
-# https://gitlab.gnome.org/GNOME/meld/-/issues/456
-# post-install:
-# something like:
-# python -m compileall "$pkgdir"/path/to/python3/files
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 # not supported any longer
-PLIST_SUBST+=			PYSITELIB=${PYSITELIB}
-REPLACE_PYTHON+=		bin/meld
-
-SUBST_CLASSES+=		man
-SUBST_FILES.man=	setup.py
-SUBST_SED.man+=		-e "s,share/man/man1,${PKGMANDIR}/man1,"
-SUBST_STAGE.man=	pre-build
-SUBST_MESSAGE.man=	Fixing man page installation path.
+# compile step in meson_post_install.py does not support DESTDIR
+post-install:
+	${PYTHONBIN} -m compileall compile_dir ${DESTDIR}${PREFIX}/${PYSITELIB}
 
 .include "../../devel/py-gobject3-common/buildlink3.mk"
 .include "../../graphics/adwaita-icon-theme/buildlink3.mk"
@@ -58,7 +48,7 @@ BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.20
 .include "../../x11/gtk3/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gtksourceview4?=	gtksourceview4>=4.6.0nb1
 .include "../../x11/gtksourceview4/buildlink3.mk"
-.include "../../lang/python/egg.mk"
-# not ready yet as of 3.21.0
-#.include "../../devel/meson/build.mk"
+.include "../../lang/python/extension.mk"
+.include "../../lang/python/tool.mk"
+.include "../../devel/meson/build.mk"
 .include "../../mk/bsd.pkg.mk"
