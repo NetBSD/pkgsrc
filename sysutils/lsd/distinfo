@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2022/09/05 14:16:24 pin Exp $
+$NetBSD: distinfo,v 1.8 2022/09/13 17:54:26 pin Exp $
 
 BLAKE2s (aho-corasick-0.7.18.crate) = 8925e88e2df4b5ca3b31783f527e1bb31dbe27846f409f631148fa239f3b2935
 SHA512 (aho-corasick-0.7.18.crate) = 7a23b16231a90d23ee60ad4c81bc225410599a4560d33d3a203138fc540c39cf1000100fed3aed40dcc371c3635656a3792545dca5dd1aefbde00d8774eebd00
@@ -132,9 +132,9 @@ Size (log-0.4.16.crate) = 37758 bytes
 BLAKE2s (lscolors-0.9.0.crate) = 40df275c3e934688e798aae7d99f8d79eb32a64623b7328e0066b7a63085deda
 SHA512 (lscolors-0.9.0.crate) = eafca6524657ffd16a77d05c7bf4a2e6eb842618767be39c516ad1b14ea181c9dff4d02b78e246194a2088798ebd6e22b1aa6ff1498df7de1f43cb3920a47d7f
 Size (lscolors-0.9.0.crate) = 20899 bytes
-BLAKE2s (lsd-0.23.0.tar.gz) = f038f7014db8bf1ac7cad135d73adaf1b136eb0c910ce7f10c798a8412514796
-SHA512 (lsd-0.23.0.tar.gz) = 9bfefacf66037cd46e2c955c35afa739c2350a29b3ea7fa588b5408b22b6fed26203e70a2319edc45bb56d4f1f37ebb5b9ab21c1d41a14f98d453d2fd4a9e840
-Size (lsd-0.23.0.tar.gz) = 88258 bytes
+BLAKE2s (lsd-0.23.1.tar.gz) = 5c603a1d6c513b351857d2da0798d177fe3bb960182ec74b86100fd55068a04c
+SHA512 (lsd-0.23.1.tar.gz) = 20ce3b0bb81f2bb2025025ed9af35ce7fc2089d6bdeb4a55312358fecf8dd15c4665c732a0c5cc8642ecc2c90457ed05587aa8290818429a419a4f05a6c19db6
+Size (lsd-0.23.1.tar.gz) = 89137 bytes
 BLAKE2s (matches-0.1.9.crate) = d657fb7534ee934ab693dc86433fc23db4c6fd1fd46efe2e55a13c23a3d1d0b8
 SHA512 (matches-0.1.9.crate) = 6a2809687d30ff04ea97bf9d1610d746e097699a4c3625ffd1b7b1e4a9673ece9d559058c9f760b99d6ab509024f7b338e7cfa6fe767499c983efa98bfb98305
 Size (matches-0.1.9.crate) = 2246 bytes
