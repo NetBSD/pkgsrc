@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4524 2022/09/13 17:55:49 pin Exp $
+$NetBSD: CHANGES-2022,v 1.4525 2022/09/13 21:34:13 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6686,3 +6686,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/qt5 to 5.15.6 [adam 2022-09-13]
 	Updated sysutils/lsd to 0.23.1 [pin 2022-09-13]
 	Updated sysutils/broot to 1.14.3 [pin 2022-09-13]
+	Updated textproc/libxslt to 1.1.34nb10 [gutteridge 2022-09-13]
