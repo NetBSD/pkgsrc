@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4521 2022/09/13 14:03:11 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4522 2022/09/13 17:18:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6683,3 +6683,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/py-yamllint to 1.28.0 [adam 2022-09-13]
 	Updated devel/ruby-rspec-support to 3.11.1 [taca 2022-09-13]
 	Updated devel/ruby-rspec-expectations to 3.11.1 [taca 2022-09-13]
+	Updated x11/qt5 to 5.15.6 [adam 2022-09-13]
