@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4518 2022/09/13 11:43:43 adam Exp $
+$NetBSD: CHANGES-2022,v 1.4519 2022/09/13 12:35:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6679,3 +6679,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-traitlets to 5.4.0 [adam 2022-09-13]
 	Updated misc/py-immutables to 0.18 [adam 2022-09-13]
 	Updated devel/py-jupyter_client to 7.3.5 [adam 2022-09-13]
+	Updated security/py-oauthlib to 3.2.1 [adam 2022-09-13]
+	Updated textproc/py-yamllint to 1.28.0 [adam 2022-09-13]
