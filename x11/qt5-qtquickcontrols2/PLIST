@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2022/07/08 18:10:54 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.16 2022/09/13 17:18:05 adam Exp $
 lib/pkgconfig/Qt5QuickControls2.pc
 qt5/include/QtQuickControls2/${PKGVERSION}/QtQuickControls2/private/qquickanimatednode_p.h
 qt5/include/QtQuickControls2/${PKGVERSION}/QtQuickControls2/private/qquickattachedobject_p.h
@@ -134,7 +134,6 @@ qt5/include/QtQuickTemplates2/${PKGVERSION}/QtQuickTemplates2/private/qquicktumb
 qt5/include/QtQuickTemplates2/${PKGVERSION}/QtQuickTemplates2/private/qquickvelocitycalculator_p_p.h
 qt5/include/QtQuickTemplates2/${PKGVERSION}/QtQuickTemplates2/private/qtquicktemplates2-config_p.h
 qt5/include/QtQuickTemplates2/${PKGVERSION}/QtQuickTemplates2/private/qtquicktemplates2global_p.h
-qt5/include/QtQuickTemplates2/${PKGVERSION}/QtQuickTemplates2/private/qquickpopupitem_p.h
 qt5/include/QtQuickTemplates2/QtQuickTemplates2
 qt5/include/QtQuickTemplates2/QtQuickTemplates2Depends
 qt5/include/QtQuickTemplates2/QtQuickTemplates2Version

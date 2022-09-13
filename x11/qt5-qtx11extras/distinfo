@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.25 2022/07/01 16:13:40 adam Exp $
+$NetBSD: distinfo,v 1.26 2022/09/13 17:18:07 adam Exp $
 
-BLAKE2s (qtx11extras-everywhere-opensource-src-5.15.5.tar.xz) = b8e53a1ec9e28a529069f42d2c39980636b5e899594b12491f7a6f1021f7fad8
-SHA512 (qtx11extras-everywhere-opensource-src-5.15.5.tar.xz) = 19ca14f0d4bcee08077cbbe81a8e6537fcc134036da1217c9744411d53ca5ebc14e96a8c25b15eb81795697628e6f64611dd3bc822621adcd4420a58a0c335b1
-Size (qtx11extras-everywhere-opensource-src-5.15.5.tar.xz) = 145540 bytes
+BLAKE2s (qtx11extras-everywhere-opensource-src-5.15.6.tar.xz) = dd27c16d66926a57b352d0e2d24f53601769ed0aa853bde1011dab41e3f7798d
+SHA512 (qtx11extras-everywhere-opensource-src-5.15.6.tar.xz) = 6c651cdfd5c3420877e8d9e5a90119401f516beb42d814255520c8223b34dbaca40da23f8d8e218ce933a76fd415e62a2aa0334359594053ce6becaf08150cd6
+Size (qtx11extras-everywhere-opensource-src-5.15.6.tar.xz) = 145672 bytes
