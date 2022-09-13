@@ -1,0 +1,25 @@
+$NetBSD: patch-share_Makefile.in,v 1.1 2022/09/13 10:56:36 tnn Exp $
+
+Don't nest .a-files; ld(1) from latest xcode chokes on it.
+  For libpicture.a, use base64.o directly instead of libbase64.a.
+
+--- share/Makefile.in.orig	2021-01-21 09:14:19.000000000 +0000
++++ share/Makefile.in
+@@ -131,7 +131,7 @@ libgetopt_a_LIBADD =
+ am_libgetopt_a_OBJECTS = getopt.$(OBJEXT) getopt1.$(OBJEXT)
+ libgetopt_a_OBJECTS = $(am_libgetopt_a_OBJECTS)
+ libpicture_a_AR = $(AR) $(ARFLAGS)
+-libpicture_a_DEPENDENCIES = libbase64.a
++libpicture_a_DEPENDENCIES = base64.$(OBJEXT)
+ am_libpicture_a_OBJECTS = picture.$(OBJEXT)
+ libpicture_a_OBJECTS = $(am_libpicture_a_OBJECTS)
+ libutf8_a_AR = $(AR) $(ARFLAGS)
+@@ -407,7 +407,7 @@ libutf8_a_SOURCES = charset.c charset.h 
+ libgetopt_a_SOURCES = getopt.c getopt1.c
+ libbase64_a_SOURCES = base64.c
+ libpicture_a_SOURCES = picture.c
+-libpicture_a_LIBADD = libbase64.a
++libpicture_a_LIBADD = base64.$(OBJEXT)
+ EXTRA_DIST = charmaps.h makemap.c charset_test.c charsetmap.h
+ all: all-am
+ 
