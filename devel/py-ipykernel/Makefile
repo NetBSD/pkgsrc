@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.41 2022/09/05 08:26:12 adam Exp $
+# $NetBSD: Makefile,v 1.42 2022/09/14 10:53:53 adam Exp $
 
-DISTNAME=	ipykernel-6.15.2
+DISTNAME=	ipykernel-6.15.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/ipykernel/}
@@ -33,6 +33,8 @@ DEPENDS+=	${PYPKGPREFIX}-appnope-[0-9]*:../../sysutils/py-appnope
 .endif
 
 USE_LANGUAGES=	# none
+
+PYTHON_SELF_CONFLICT=	yes
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 37
 
