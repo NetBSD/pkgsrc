@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2022/01/04 20:53:20 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2022/09/14 10:31:36 adam Exp $
 
-DISTNAME=	pathspec-0.9.0
+DISTNAME=	pathspec-0.10.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pathspec/}
 
@@ -12,6 +11,8 @@ COMMENT=	Utility library for gitignore style pattern matching of file paths
 LICENSE=	mpl-2.0
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
