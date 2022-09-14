@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.9 2022/06/02 17:04:31 osa Exp $
+$NetBSD: distinfo,v 1.10 2022/09/14 05:31:41 osa Exp $
 
-BLAKE2s (unit-1.27.0.tar.gz) = 76f22e36ff5b3bb5723be2c417247a7b47f6820c5f21daed45fa2abe369da264
-SHA512 (unit-1.27.0.tar.gz) = 2f34ceccc966bffb790e3149f02c3769f6a41e6bb3cbaf4c5a9bcc512d9f1baf919e13b6d87fa29885561a449f72afd32b771206aa5d71daff9604bdbd7725a6
-Size (unit-1.27.0.tar.gz) = 871783 bytes
+BLAKE2s (unit-1.28.0.tar.gz) = fe95e41bc6876ae30070ef0a1cba33181df6813bc69d3a246c71c25ff6193d2a
+SHA512 (unit-1.28.0.tar.gz) = 7d2033be3d8e9d15db21b5431348be73a10fbc19bcab7e83d3c5a770e11e23a53967afe051ec53e236896ac9e021d9146501bc32b87254f9b25778b4bc5d1cbe
+Size (unit-1.28.0.tar.gz) = 878878 bytes
 SHA1 (patch-auto_events) = 0347dfefbedaacd206c8c2bfd8ea38b18995dd9f
 SHA1 (patch-auto_os_conf) = 6d1cd7aef662a60d4288014eb6fadbe8c1268e55
 SHA1 (patch-auto_shmem) = cb37c368c19205c2cc1750f4a847af23be8bfa25
