@@ -1,8 +1,11 @@
-@comment $NetBSD: PLIST,v 1.2 2018/02/25 21:32:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/09/14 10:03:03 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/imagesize.py
-${PYSITELIB}/imagesize.pyc
-${PYSITELIB}/imagesize.pyo
+${PYSITELIB}/imagesize/__init__.py
+${PYSITELIB}/imagesize/__init__.pyc
+${PYSITELIB}/imagesize/__init__.pyo
+${PYSITELIB}/imagesize/imagesize.py
+${PYSITELIB}/imagesize/imagesize.pyc
+${PYSITELIB}/imagesize/imagesize.pyo
