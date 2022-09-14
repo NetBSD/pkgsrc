@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4533 2022/09/14 10:05:52 adam Exp $
+$NetBSD: CHANGES-2022,v 1.4534 2022/09/14 10:35:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6703,3 +6703,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/pcre2 to 10.40nb1 [wiz 2022-09-14]
 	Updated www/py-django3 to 3.2.15 [adam 2022-09-14]
 	Updated graphics/py-imagesize to 1.4.1 [adam 2022-09-14]
+	Updated devel/py-pathspec to 0.10.1 [adam 2022-09-14]
+	Updated textproc/py-black to 22.8.0 [adam 2022-09-14]
