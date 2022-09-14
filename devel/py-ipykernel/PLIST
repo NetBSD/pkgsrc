@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2022/09/04 18:52:57 wiz Exp $
+@comment $NetBSD: PLIST,v 1.17 2022/09/14 10:53:53 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -93,6 +93,7 @@ ${PYSITELIB}/ipykernel/pylab/config.py
 ${PYSITELIB}/ipykernel/pylab/config.pyc
 ${PYSITELIB}/ipykernel/resources/logo-32x32.png
 ${PYSITELIB}/ipykernel/resources/logo-64x64.png
+${PYSITELIB}/ipykernel/resources/logo-svg.svg
 ${PYSITELIB}/ipykernel/serialize.py
 ${PYSITELIB}/ipykernel/serialize.pyc
 ${PYSITELIB}/ipykernel/tests/__init__.py
@@ -140,3 +141,4 @@ ${PYSITELIB}/ipykernel_launcher.pyc
 share/jupyter/kernels/python3/kernel.json
 share/jupyter/kernels/python3/logo-32x32.png
 share/jupyter/kernels/python3/logo-64x64.png
+share/jupyter/kernels/python3/logo-svg.svg
