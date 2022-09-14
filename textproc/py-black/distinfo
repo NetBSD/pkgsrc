@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2022/07/11 08:52:49 adam Exp $
+$NetBSD: distinfo,v 1.9 2022/09/14 10:34:27 adam Exp $
 
-BLAKE2s (black-22.6.0.tar.gz) = c9f070c18390d6f14b3ff8e56588534cf498ea34392411801af9817e18d5d4ac
-SHA512 (black-22.6.0.tar.gz) = 8d1e2871abb4872d6e368b62e07112c791e8626154ae323639414393f1fbffdab219389e89785f46cc2cda23a4109a2de9c5b672bdd76ff42cc860fd21472f2c
-Size (black-22.6.0.tar.gz) = 566106 bytes
+BLAKE2s (black-22.8.0.tar.gz) = bdbe5a6cfd8b40445f6e1bb8369612961b20446228850ab44284a219454b2273
+SHA512 (black-22.8.0.tar.gz) = 27c742e632dadbd01dc658226d19941cf01f5f98ae013c0d6bcc7303cfe1faef13bb4e5a0eb784171d5f59c3bbcbd6dd94f7d3a59e9458eb5a67c9d8fbba8ad5
+Size (black-22.8.0.tar.gz) = 577317 bytes
