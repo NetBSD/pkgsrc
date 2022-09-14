@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4528 2022/09/14 04:04:06 rillig Exp $
+$NetBSD: CHANGES-2022,v 1.4529 2022/09/14 05:35:32 osa Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6690,3 +6690,9 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/meld to 3.22.0 [wiz 2022-09-13]
 	Updated editors/emacs28 to 28.2 [wiz 2022-09-13]
 	Updated pkgtools/lintpkgsrc to 2022.09.14 [rillig 2022-09-14]
+	Updated devel/libunit to 1.28.0 [osa 2022-09-14]
+	Updated www/unit to 1.28.0 [osa 2022-09-14]
+	Updated www/unit-perl to 1.28.0 [osa 2022-09-14]
+	Updated www/unit-php to 1.28.0 [osa 2022-09-14]
+	Updated www/unit-python to 1.28.0 [osa 2022-09-14]
+	Updated www/unit-ruby to 1.28.0 [osa 2022-09-14]
