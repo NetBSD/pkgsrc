@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2022/04/13 10:41:39 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/09/14 10:49:32 adam Exp $
 
-DISTNAME=	ConfigUpdater-3.1
+DISTNAME=	ConfigUpdater-3.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/configupdater/}
