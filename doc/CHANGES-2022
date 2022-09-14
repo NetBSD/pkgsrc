@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4538 2022/09/14 11:14:51 adam Exp $
+$NetBSD: CHANGES-2022,v 1.4539 2022/09/14 11:21:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6713,3 +6713,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/py-jsonschema to 4.16.0 [adam 2022-09-14]
 	Updated converters/py-charset-normalizer to 2.1.1 [adam 2022-09-14]
 	Updated devel/py-dulwich to 0.20.46 [adam 2022-09-14]
+	Updated sysutils/ansible-lint to 6.5.2nb1 [wiz 2022-09-14]
