@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.62 2022/07/27 08:40:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.63 2022/09/14 07:24:06 adam Exp $
 bin/wesnoth
 bin/wesnothd
 man/ca/man6/wesnoth.6
@@ -3389,6 +3389,9 @@ share/wesnoth/data/core/images/help/l10n/sk/tooltip.png
 share/wesnoth/data/core/images/help/l10n/vi/hpxp.png
 share/wesnoth/data/core/images/help/l10n/vi/recruit.png
 share/wesnoth/data/core/images/help/l10n/vi/tooltip.png
+share/wesnoth/data/core/images/help/l10n/zh_CN/hpxp.png
+share/wesnoth/data/core/images/help/l10n/zh_CN/recruit.png
+share/wesnoth/data/core/images/help/l10n/zh_CN/tooltip.png
 share/wesnoth/data/core/images/help/moving1.png
 share/wesnoth/data/core/images/help/moving2.png
 share/wesnoth/data/core/images/help/orb-blue.png
