@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2022/04/29 12:07:43 adam Exp $
+# $NetBSD: Makefile,v 1.13 2022/09/14 10:56:57 adam Exp $
 
-DISTNAME=	OpenEXR-1.3.8
+DISTNAME=	OpenEXR-1.3.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=O/OpenEXR/}
