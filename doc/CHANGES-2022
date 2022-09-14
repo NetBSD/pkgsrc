@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4540 2022/09/14 11:28:18 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4541 2022/09/14 11:35:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6716,3 +6716,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/ansible-lint to 6.5.2nb1 [wiz 2022-09-14]
 	Removed audio/bmp-flac [wiz 2022-09-14]
 	Removed audio/xmms-flac [wiz 2022-09-14]
+	Updated devel/py-colorlog to 6.7.0 [adam 2022-09-14]
+	Updated devel/py-cwcwidth to 0.1.7 [adam 2022-09-14]
