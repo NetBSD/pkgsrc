@@ -1,5 +1,5 @@
 #!@PERL5@
-# $NetBSD: lintpkgsrc.pl,v 1.128 2022/08/19 18:23:41 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.129 2022/09/14 04:03:51 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -1558,7 +1558,11 @@ sub check_outdated_installed_packages($pkgsrcdir) {
 		while (<PKGINFO>) {
 			print " $1" if /^(.*?)-\d/;
 		}
-		close(PKGINFO) or die;
+		# Ignore exit status, for backwards compatibility.
+		# This case occurs with packages like py*-expat, due to
+		# canonicalize_pkgname, as lintpkgsrc cannot handle
+		# multi-versioned packages.
+		close(PKGINFO) or do {};
 		print "\n";
 	}
 
