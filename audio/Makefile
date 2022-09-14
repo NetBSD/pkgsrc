@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.657 2022/09/11 16:38:42 wiz Exp $
+# $NetBSD: Makefile,v 1.658 2022/09/14 11:28:18 wiz Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -38,7 +38,6 @@ SUBDIR+=	blop
 SUBDIR+=	bml
 SUBDIR+=	bmp
 SUBDIR+=	bmp-crossfade
-SUBDIR+=	bmp-flac
 SUBDIR+=	bmp-mac
 SUBDIR+=	bmp-musepack
 SUBDIR+=	bmp-pulse
@@ -513,7 +512,6 @@ SUBDIR+=	xmmix
 SUBDIR+=	xmms
 SUBDIR+=	xmms-cdread
 SUBDIR+=	xmms-crossfade
-SUBDIR+=	xmms-flac
 SUBDIR+=	xmms-mac
 SUBDIR+=	xmms-mad
 SUBDIR+=	xmms-meta-input
