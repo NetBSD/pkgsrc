@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4534 2022/09/14 10:35:32 adam Exp $
+$NetBSD: CHANGES-2022,v 1.4535 2022/09/14 10:54:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6705,3 +6705,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/py-imagesize to 1.4.1 [adam 2022-09-14]
 	Updated devel/py-pathspec to 0.10.1 [adam 2022-09-14]
 	Updated textproc/py-black to 22.8.0 [adam 2022-09-14]
+	Updated devel/py-configupdater to 3.1.1 [adam 2022-09-14]
+	Updated devel/py-ipykernel to 6.15.3 [adam 2022-09-14]
