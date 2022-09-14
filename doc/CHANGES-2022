@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4536 2022/09/14 11:00:12 adam Exp $
+$NetBSD: CHANGES-2022,v 1.4537 2022/09/14 11:05:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6709,3 +6709,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-ipykernel to 6.15.3 [adam 2022-09-14]
 	Updated graphics/py-openexr to 1.3.9 [adam 2022-09-14]
 	Updated net/py-minio to 7.1.11 [adam 2022-09-14]
+	Updated devel/py-packageurl to 0.10.1 [adam 2022-09-14]
+	Updated textproc/py-jsonschema to 4.16.0 [adam 2022-09-14]
