@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2022/08/31 19:38:02 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/09/14 11:29:28 adam Exp $
 
-DISTNAME=	colorlog-6.6.0
+DISTNAME=	colorlog-6.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/colorlog/}
