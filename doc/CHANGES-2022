@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4530 2022/09/14 07:24:22 adam Exp $
+$NetBSD: CHANGES-2022,v 1.4531 2022/09/14 08:40:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6698,3 +6698,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/unit-ruby to 1.28.0 [osa 2022-09-14]
 	Updated sysutils/ansible-core to 2.13.4 [adam 2022-09-14]
 	Updated games/wesnoth to 1.16.6 [adam 2022-09-14]
+	Updated devel/py-typing-inspect to 0.8.0 [adam 2022-09-14]
+	Updated lang/py-libcst to 0.4.7 [adam 2022-09-14]
