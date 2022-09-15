@@ -1,12 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2020/10/05 21:12:19 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/${EGG_NAME}-nspkg.pth
+@comment $NetBSD: PLIST,v 1.4 2022/09/15 22:24:23 wiz Exp $
 ${PYSITELIB}/google/api_core/__init__.py
 ${PYSITELIB}/google/api_core/__init__.pyc
 ${PYSITELIB}/google/api_core/__init__.pyo
@@ -25,6 +17,9 @@ ${PYSITELIB}/google/api_core/datetime_helpers.pyo
 ${PYSITELIB}/google/api_core/exceptions.py
 ${PYSITELIB}/google/api_core/exceptions.pyc
 ${PYSITELIB}/google/api_core/exceptions.pyo
+${PYSITELIB}/google/api_core/extended_operation.py
+${PYSITELIB}/google/api_core/extended_operation.pyc
+${PYSITELIB}/google/api_core/extended_operation.pyo
 ${PYSITELIB}/google/api_core/future/__init__.py
 ${PYSITELIB}/google/api_core/future/__init__.pyc
 ${PYSITELIB}/google/api_core/future/__init__.pyo
@@ -82,6 +77,9 @@ ${PYSITELIB}/google/api_core/operation_async.pyo
 ${PYSITELIB}/google/api_core/operations_v1/__init__.py
 ${PYSITELIB}/google/api_core/operations_v1/__init__.pyc
 ${PYSITELIB}/google/api_core/operations_v1/__init__.pyo
+${PYSITELIB}/google/api_core/operations_v1/abstract_operations_client.py
+${PYSITELIB}/google/api_core/operations_v1/abstract_operations_client.pyc
+${PYSITELIB}/google/api_core/operations_v1/abstract_operations_client.pyo
 ${PYSITELIB}/google/api_core/operations_v1/operations_async_client.py
 ${PYSITELIB}/google/api_core/operations_v1/operations_async_client.pyc
 ${PYSITELIB}/google/api_core/operations_v1/operations_async_client.pyo
@@ -91,6 +89,18 @@ ${PYSITELIB}/google/api_core/operations_v1/operations_client.pyo
 ${PYSITELIB}/google/api_core/operations_v1/operations_client_config.py
 ${PYSITELIB}/google/api_core/operations_v1/operations_client_config.pyc
 ${PYSITELIB}/google/api_core/operations_v1/operations_client_config.pyo
+${PYSITELIB}/google/api_core/operations_v1/pagers.py
+${PYSITELIB}/google/api_core/operations_v1/pagers.pyc
+${PYSITELIB}/google/api_core/operations_v1/pagers.pyo
+${PYSITELIB}/google/api_core/operations_v1/transports/__init__.py
+${PYSITELIB}/google/api_core/operations_v1/transports/__init__.pyc
+${PYSITELIB}/google/api_core/operations_v1/transports/__init__.pyo
+${PYSITELIB}/google/api_core/operations_v1/transports/base.py
+${PYSITELIB}/google/api_core/operations_v1/transports/base.pyc
+${PYSITELIB}/google/api_core/operations_v1/transports/base.pyo
+${PYSITELIB}/google/api_core/operations_v1/transports/rest.py
+${PYSITELIB}/google/api_core/operations_v1/transports/rest.pyc
+${PYSITELIB}/google/api_core/operations_v1/transports/rest.pyo
 ${PYSITELIB}/google/api_core/page_iterator.py
 ${PYSITELIB}/google/api_core/page_iterator.pyc
 ${PYSITELIB}/google/api_core/page_iterator.pyo
@@ -103,6 +113,13 @@ ${PYSITELIB}/google/api_core/path_template.pyo
 ${PYSITELIB}/google/api_core/protobuf_helpers.py
 ${PYSITELIB}/google/api_core/protobuf_helpers.pyc
 ${PYSITELIB}/google/api_core/protobuf_helpers.pyo
+${PYSITELIB}/google/api_core/py.typed
+${PYSITELIB}/google/api_core/rest_helpers.py
+${PYSITELIB}/google/api_core/rest_helpers.pyc
+${PYSITELIB}/google/api_core/rest_helpers.pyo
+${PYSITELIB}/google/api_core/rest_streaming.py
+${PYSITELIB}/google/api_core/rest_streaming.pyc
+${PYSITELIB}/google/api_core/rest_streaming.pyo
 ${PYSITELIB}/google/api_core/retry.py
 ${PYSITELIB}/google/api_core/retry.pyc
 ${PYSITELIB}/google/api_core/retry.pyo
@@ -115,3 +132,11 @@ ${PYSITELIB}/google/api_core/timeout.pyo
 ${PYSITELIB}/google/api_core/version.py
 ${PYSITELIB}/google/api_core/version.pyc
 ${PYSITELIB}/google/api_core/version.pyo
+${PYSITELIB}/${EGG_NAME}-nspkg.pth
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
