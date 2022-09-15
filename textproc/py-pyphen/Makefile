@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2022/04/25 08:11:15 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2022/09/15 19:08:38 adam Exp $
 
-DISTNAME=	pyphen-0.12.0
+DISTNAME=	pyphen-0.13.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyphen/}
@@ -17,8 +17,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-flake8-[0-9]*:../../devel/py-test-flake8
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-isort-[0-9]*:../../devel/py-test-isort
 
 USE_LANGUAGES=	# none
-
-#PYSETUP=	-c 'from setuptools import setup; setup(name="pyphen", version="${PKGVERSION_NOREV}", packages=["pyphen"], package_data={"": ["*"]})'
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
