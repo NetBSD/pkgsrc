@@ -1,11 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2021/03/05 19:29:58 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/${EGG_NAME}-nspkg.pth
+@comment $NetBSD: PLIST,v 1.4 2022/09/15 22:13:43 wiz Exp $
 ${PYSITELIB}/google/api/__init__.py
 ${PYSITELIB}/google/api/__init__.pyc
 ${PYSITELIB}/google/api/__init__.pyo
@@ -57,6 +50,10 @@ ${PYSITELIB}/google/api/endpoint.proto
 ${PYSITELIB}/google/api/endpoint_pb2.py
 ${PYSITELIB}/google/api/endpoint_pb2.pyc
 ${PYSITELIB}/google/api/endpoint_pb2.pyo
+${PYSITELIB}/google/api/error_reason.proto
+${PYSITELIB}/google/api/error_reason_pb2.py
+${PYSITELIB}/google/api/error_reason_pb2.pyc
+${PYSITELIB}/google/api/error_reason_pb2.pyo
 ${PYSITELIB}/google/api/field_behavior.proto
 ${PYSITELIB}/google/api/field_behavior_pb2.py
 ${PYSITELIB}/google/api/field_behavior_pb2.pyc
@@ -105,6 +102,10 @@ ${PYSITELIB}/google/api/resource.proto
 ${PYSITELIB}/google/api/resource_pb2.py
 ${PYSITELIB}/google/api/resource_pb2.pyc
 ${PYSITELIB}/google/api/resource_pb2.pyo
+${PYSITELIB}/google/api/routing.proto
+${PYSITELIB}/google/api/routing_pb2.py
+${PYSITELIB}/google/api/routing_pb2.pyc
+${PYSITELIB}/google/api/routing_pb2.pyo
 ${PYSITELIB}/google/api/service.proto
 ${PYSITELIB}/google/api/service_pb2.py
 ${PYSITELIB}/google/api/service_pb2.pyc
@@ -121,6 +122,18 @@ ${PYSITELIB}/google/api/usage.proto
 ${PYSITELIB}/google/api/usage_pb2.py
 ${PYSITELIB}/google/api/usage_pb2.pyc
 ${PYSITELIB}/google/api/usage_pb2.pyo
+${PYSITELIB}/google/api/visibility.proto
+${PYSITELIB}/google/api/visibility_pb2.py
+${PYSITELIB}/google/api/visibility_pb2.pyc
+${PYSITELIB}/google/api/visibility_pb2.pyo
+${PYSITELIB}/google/cloud/extended_operations.proto
+${PYSITELIB}/google/cloud/extended_operations_pb2.py
+${PYSITELIB}/google/cloud/extended_operations_pb2.pyc
+${PYSITELIB}/google/cloud/extended_operations_pb2.pyo
+${PYSITELIB}/google/cloud/location/locations.proto
+${PYSITELIB}/google/cloud/location/locations_pb2.py
+${PYSITELIB}/google/cloud/location/locations_pb2.pyc
+${PYSITELIB}/google/cloud/location/locations_pb2.pyo
 ${PYSITELIB}/google/gapic/metadata/__init__.py
 ${PYSITELIB}/google/gapic/metadata/__init__.pyc
 ${PYSITELIB}/google/gapic/metadata/__init__.pyo
@@ -206,6 +219,10 @@ ${PYSITELIB}/google/type/dayofweek.proto
 ${PYSITELIB}/google/type/dayofweek_pb2.py
 ${PYSITELIB}/google/type/dayofweek_pb2.pyc
 ${PYSITELIB}/google/type/dayofweek_pb2.pyo
+${PYSITELIB}/google/type/decimal.proto
+${PYSITELIB}/google/type/decimal_pb2.py
+${PYSITELIB}/google/type/decimal_pb2.pyc
+${PYSITELIB}/google/type/decimal_pb2.pyo
 ${PYSITELIB}/google/type/expr.proto
 ${PYSITELIB}/google/type/expr_pb2.py
 ${PYSITELIB}/google/type/expr_pb2.pyc
@@ -214,10 +231,18 @@ ${PYSITELIB}/google/type/fraction.proto
 ${PYSITELIB}/google/type/fraction_pb2.py
 ${PYSITELIB}/google/type/fraction_pb2.pyc
 ${PYSITELIB}/google/type/fraction_pb2.pyo
+${PYSITELIB}/google/type/interval.proto
+${PYSITELIB}/google/type/interval_pb2.py
+${PYSITELIB}/google/type/interval_pb2.pyc
+${PYSITELIB}/google/type/interval_pb2.pyo
 ${PYSITELIB}/google/type/latlng.proto
 ${PYSITELIB}/google/type/latlng_pb2.py
 ${PYSITELIB}/google/type/latlng_pb2.pyc
 ${PYSITELIB}/google/type/latlng_pb2.pyo
+${PYSITELIB}/google/type/localized_text.proto
+${PYSITELIB}/google/type/localized_text_pb2.py
+${PYSITELIB}/google/type/localized_text_pb2.pyc
+${PYSITELIB}/google/type/localized_text_pb2.pyo
 ${PYSITELIB}/google/type/money.proto
 ${PYSITELIB}/google/type/money_pb2.py
 ${PYSITELIB}/google/type/money_pb2.pyc
@@ -226,6 +251,10 @@ ${PYSITELIB}/google/type/month.proto
 ${PYSITELIB}/google/type/month_pb2.py
 ${PYSITELIB}/google/type/month_pb2.pyc
 ${PYSITELIB}/google/type/month_pb2.pyo
+${PYSITELIB}/google/type/phone_number.proto
+${PYSITELIB}/google/type/phone_number_pb2.py
+${PYSITELIB}/google/type/phone_number_pb2.pyc
+${PYSITELIB}/google/type/phone_number_pb2.pyo
 ${PYSITELIB}/google/type/postal_address.proto
 ${PYSITELIB}/google/type/postal_address_pb2.py
 ${PYSITELIB}/google/type/postal_address_pb2.pyc
@@ -238,3 +267,10 @@ ${PYSITELIB}/google/type/timeofday.proto
 ${PYSITELIB}/google/type/timeofday_pb2.py
 ${PYSITELIB}/google/type/timeofday_pb2.pyc
 ${PYSITELIB}/google/type/timeofday_pb2.pyo
+${PYSITELIB}/${EGG_NAME}-nspkg.pth
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
