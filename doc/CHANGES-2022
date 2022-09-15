@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4552 2022/09/15 19:56:02 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4553 2022/09/15 22:13:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6734,3 +6734,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/py-pyphen to 0.13.0 [adam 2022-09-15]
 	Updated net/stagit-gopher to 1.2 [leot 2022-09-15]
 	Updated devel/nss to 3.83 [wiz 2022-09-15]
+	Updated devel/py-googleapis-common-protos to 1.56.4 [wiz 2022-09-15]
