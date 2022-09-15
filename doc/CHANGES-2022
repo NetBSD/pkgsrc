@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4549 2022/09/15 17:56:44 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.4550 2022/09/15 19:08:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6730,3 +6730,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-curtsies to 0.4.0 [adam 2022-09-15]
 	Updated devel/bpython to 0.23 [adam 2022-09-15]
 	Updated devel/py-approvaltests to 5.9.0 [schmonz 2022-09-15]
+	Updated fonts/py-fonttools to 4.37.2 [adam 2022-09-15]
+	Updated textproc/py-pyphen to 0.13.0 [adam 2022-09-15]
