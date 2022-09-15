@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:06:58 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/09/15 19:20:02 leot Exp $
 
-BLAKE2s (stagit-gopher-0.9.5.tar.gz) = 80e3ec47007377a0f9233398639b05913b751638d79e6f60c9ff87c0beae07b8
-SHA512 (stagit-gopher-0.9.5.tar.gz) = 98d252fc05ade27a316afbde98d90c69c16a155106b852aca0831cdc7750aec1c6d72b03110cf9d5f10503ccdf0e029df670a957acce26d27fcc230d69a0a2e3
-Size (stagit-gopher-0.9.5.tar.gz) = 17658 bytes
+BLAKE2s (stagit-gopher-1.2.tar.gz) = c277ab40ad6e26f58566037ed3b0978526024e0f6ce71a4b793dc25295ffbf2c
+SHA512 (stagit-gopher-1.2.tar.gz) = 07a21862471134c1cc02350627e336fc30f2a6dce97758fc5bb3a04ac8aafe1c3227003f8dd83e330bc257a3b05374b603cd700e0244c6eb45e2dec3676621ac
+Size (stagit-gopher-1.2.tar.gz) = 18411 bytes
