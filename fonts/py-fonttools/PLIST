@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.42 2022/09/07 15:13:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.43 2022/09/15 19:05:27 adam Exp $
 bin/fonttools-${PYVERSSUFFIX}
 bin/pyftmerge-${PYVERSSUFFIX}
 bin/pyftsubset-${PYVERSSUFFIX}
@@ -57,6 +57,9 @@ ${PYSITELIB}/fontTools/cu2qu/__init__.pyo
 ${PYSITELIB}/fontTools/cu2qu/__main__.py
 ${PYSITELIB}/fontTools/cu2qu/__main__.pyc
 ${PYSITELIB}/fontTools/cu2qu/__main__.pyo
+${PYSITELIB}/fontTools/cu2qu/benchmark.py
+${PYSITELIB}/fontTools/cu2qu/benchmark.pyc
+${PYSITELIB}/fontTools/cu2qu/benchmark.pyo
 ${PYSITELIB}/fontTools/cu2qu/cli.py
 ${PYSITELIB}/fontTools/cu2qu/cli.pyc
 ${PYSITELIB}/fontTools/cu2qu/cli.pyo
@@ -110,9 +113,11 @@ ${PYSITELIB}/fontTools/feaLib/builder.pyo
 ${PYSITELIB}/fontTools/feaLib/error.py
 ${PYSITELIB}/fontTools/feaLib/error.pyc
 ${PYSITELIB}/fontTools/feaLib/error.pyo
+${PYSITELIB}/fontTools/feaLib/lexer.c
 ${PYSITELIB}/fontTools/feaLib/lexer.py
 ${PYSITELIB}/fontTools/feaLib/lexer.pyc
 ${PYSITELIB}/fontTools/feaLib/lexer.pyo
+${PYSITELIB}/fontTools/feaLib/lexer.so
 ${PYSITELIB}/fontTools/feaLib/location.py
 ${PYSITELIB}/fontTools/feaLib/location.pyc
 ${PYSITELIB}/fontTools/feaLib/location.pyo
