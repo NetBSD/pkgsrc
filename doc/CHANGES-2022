@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4545 2022/09/15 11:02:21 leot Exp $
+$NetBSD: CHANGES-2022,v 1.4546 2022/09/15 13:11:59 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6723,3 +6723,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/ruby-unicode-display_width to 2.3.0 [taca 2022-09-14]
 	Updated sysutils/macchina to 6.1.1 [pin 2022-09-15]
 	Updated misc/less to 608 [leot 2022-09-15]
+	Updated geography/gdal-lib to 3.5.2 [gdt 2022-09-15]
