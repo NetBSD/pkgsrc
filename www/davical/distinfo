@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.22 2022/06/27 06:50:07 nia Exp $
+$NetBSD: distinfo,v 1.23 2022/09/15 12:59:15 hauke Exp $
 
 BLAKE2s (davical-1.1.10/davical-1.1.10.tar.gz) = 160dcd270bb2c87c26dd3662f748caeec2f48d95124ff53ea87fc0637e1bd8dc
 SHA512 (davical-1.1.10/davical-1.1.10.tar.gz) = c46b75c2a9605ebb9db801b4cc28b4ea340992b0e59e8b2598e93ac22e64aacbed9da2e0485bc1c01291e03f444ed4c03095674570c66a4cc8939903f40e7bd4
@@ -8,3 +8,4 @@ SHA1 (patch-ab) = 7ae06c595f54d3a959db481d303978b29ebbd899
 SHA1 (patch-ac) = 357abb2ad470121f3f30d19a4602692c77661872
 SHA1 (patch-ad) = ecbac45e18ed6cea2915caadfb4dca1a2ce32667
 SHA1 (patch-ae) = cb753f0490ef3e5c5d8ff67b8d0aec7c4fe7d384
+SHA1 (patch-inc_ui_principal-edit.php) = 57d69d52d036d942f043299dd9f66ea8ab40bf96
