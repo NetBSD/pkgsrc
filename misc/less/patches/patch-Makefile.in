@@ -1,0 +1,18 @@
+$NetBSD: patch-Makefile.in,v 1.1 2022/09/15 11:02:14 leot Exp $
+
+Adjust GNU-isms to BSD-isms (ifneq is supported only by GNU make).
+
+--- Makefile.in.orig	2022-07-22 19:26:24.000000000 +0000
++++ Makefile.in
+@@ -52,9 +52,9 @@ OBJ = \
+ 	output.${O} pattern.${O} position.${O} prompt.${O} search.${O} signal.${O} \
+ 	tags.${O} ttyin.${O} version.${O} xbuf.${O}  @REGEX_O@
+ 
+-ifneq (@SECURE_COMPILE@,1)
++.if @SECURE_COMPILE@ != 1
+ OBJ += lesskey_parse.${O}
+-endif
++.endif
+ 
+ all: less$(EXEEXT) lesskey$(EXEEXT) lessecho$(EXEEXT)
+ 
