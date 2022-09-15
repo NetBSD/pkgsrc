@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4543 2022/09/14 13:34:50 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4544 2022/09/15 03:56:09 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6721,3 +6721,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/py-matplotlib-venn to 0.11.7 [adam 2022-09-14]
 	Updated net/yt-dlp to 2022.9.1 [adam 2022-09-14]
 	Updated textproc/ruby-unicode-display_width to 2.3.0 [taca 2022-09-14]
+	Updated sysutils/macchina to 6.1.1 [pin 2022-09-15]
