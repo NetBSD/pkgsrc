@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4548 2022/09/15 17:56:01 adam Exp $
+$NetBSD: CHANGES-2022,v 1.4549 2022/09/15 17:56:44 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6729,3 +6729,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/py-blessed version 1.19.1 [adam 2022-09-15]
 	Updated devel/py-curtsies to 0.4.0 [adam 2022-09-15]
 	Updated devel/bpython to 0.23 [adam 2022-09-15]
+	Updated devel/py-approvaltests to 5.9.0 [schmonz 2022-09-15]
