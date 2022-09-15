@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22202 2022/09/13 23:06:34 wiz Exp $
+$NetBSD: TODO,v 1.22203 2022/09/15 14:46:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1250,6 +1250,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o plasma-wayland-protocols-1.2.0
 	o ploticus-examples-230
 	o ply-3.11
+	o png-1.6.38
 	o pocl-3.0
 	o poco-1.7.5
 	o podcastdl-0.3.3
@@ -1402,6 +1403,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rvm-1.20
 	o sabayon-2.30.1
 	o sablecc-3.7
+	o samba-4.17
 	o sarg-2.4.0
 	o sasm-3.12.1
 	o saytime-20050127
