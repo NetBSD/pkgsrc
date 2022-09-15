@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2021/11/08 16:47:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/09/15 17:55:32 adam Exp $
 bin/bpdb
 bin/bpython
 bin/bpython-curses
@@ -27,6 +27,9 @@ ${PYSITELIB}/bpython/__main__.pyo
 ${PYSITELIB}/bpython/_internal.py
 ${PYSITELIB}/bpython/_internal.pyc
 ${PYSITELIB}/bpython/_internal.pyo
+${PYSITELIB}/bpython/_typing_compat.py
+${PYSITELIB}/bpython/_typing_compat.pyc
+${PYSITELIB}/bpython/_typing_compat.pyo
 ${PYSITELIB}/bpython/_version.py
 ${PYSITELIB}/bpython/_version.pyc
 ${PYSITELIB}/bpython/_version.pyo
@@ -153,6 +156,9 @@ ${PYSITELIB}/bpython/test/test_args.pyo
 ${PYSITELIB}/bpython/test/test_autocomplete.py
 ${PYSITELIB}/bpython/test/test_autocomplete.pyc
 ${PYSITELIB}/bpython/test/test_autocomplete.pyo
+${PYSITELIB}/bpython/test/test_brackets_completion.py
+${PYSITELIB}/bpython/test/test_brackets_completion.pyc
+${PYSITELIB}/bpython/test/test_brackets_completion.pyo
 ${PYSITELIB}/bpython/test/test_config.py
 ${PYSITELIB}/bpython/test/test_config.pyc
 ${PYSITELIB}/bpython/test/test_config.pyo
