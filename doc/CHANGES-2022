@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4551 2022/09/15 19:20:09 leot Exp $
+$NetBSD: CHANGES-2022,v 1.4552 2022/09/15 19:56:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6733,3 +6733,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated fonts/py-fonttools to 4.37.2 [adam 2022-09-15]
 	Updated textproc/py-pyphen to 0.13.0 [adam 2022-09-15]
 	Updated net/stagit-gopher to 1.2 [leot 2022-09-15]
+	Updated devel/nss to 3.83 [wiz 2022-09-15]
