@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4550 2022/09/15 19:08:56 adam Exp $
+$NetBSD: CHANGES-2022,v 1.4551 2022/09/15 19:20:09 leot Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6732,3 +6732,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-approvaltests to 5.9.0 [schmonz 2022-09-15]
 	Updated fonts/py-fonttools to 4.37.2 [adam 2022-09-15]
 	Updated textproc/py-pyphen to 0.13.0 [adam 2022-09-15]
+	Updated net/stagit-gopher to 1.2 [leot 2022-09-15]
