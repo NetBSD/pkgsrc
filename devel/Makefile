@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3796 2022/09/11 17:54:57 wiz Exp $
+# $NetBSD: Makefile,v 1.3797 2022/09/15 17:51:06 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2343,6 +2343,7 @@ SUBDIR+=	py-binaryornot
 SUBDIR+=	py-bintrees
 SUBDIR+=	py-bitarray
 SUBDIR+=	py-bitstring
+SUBDIR+=	py-blessed
 SUBDIR+=	py-blessings
 SUBDIR+=	py-blinker
 SUBDIR+=	py-boltons
