@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.314 2022/09/12 12:32:30 jperkin Exp $
+# $NetBSD: bootstrap,v 1.315 2022/09/15 11:53:05 jperkin Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -615,6 +615,13 @@ Darwin)
 	# non-system shell is unaffected, at least for now.
 	if [ $macos_version -ge 1011 ]; then
 		need_mksh=yes
+	fi
+
+	# Old compiler versions looked in /usr/local/include where software
+	# installed from MacPorts could affect builds.  PR#26143
+	if [ $macos_version -lt 1006 ]; then
+		CC=${CC:-"cc -isystem /usr/include"}
+		export CC
 	fi
 
 	unset macos_version
