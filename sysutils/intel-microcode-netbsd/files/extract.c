@@ -1,4 +1,4 @@
-/* $NetBSD: extract.c,v 1.5 2019/05/10 18:26:46 maxv Exp $ */
+/* $NetBSD: extract.c,v 1.6 2022/09/15 14:39:03 msaitoh Exp $ */
 
 #include <sys/stat.h>
 #include <stdlib.h>
@@ -106,13 +106,18 @@ writeout(struct intel1_ucode_header *uh, int len,
 	}
 	if (eh) {
 		printf("%s: Check the extended header.\n", __func__);
+		/*
+		 * The processor signature structure table start from the next
+		 * to the header. The header size is 20.
+		 */
+		eps = (struct intel1_ucode_proc_signature *)
+		    ((uint8_t *)eh + 20);
 		for (j = 0; j < eh->uet_count; j++) {
-			eps = &eh->uet_proc_sig[j];
 			for (i = 0; i < 8; i++) {
-				if (!(eps->ups_proc_flags & (1 << i)))
+				if (!(eps[j].ups_proc_flags & (1 << i)))
 					continue;
 				snprintf(alias, sizeof(alias), "%08x-%d",
-				    eps->ups_signature, i);
+				    eps[j].ups_signature, i);
 				used += link_unless_newer_exists(name, alias,
 				    uh->uh_rev);
 			}
