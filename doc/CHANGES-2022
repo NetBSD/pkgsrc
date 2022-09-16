@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4562 2022/09/16 06:23:36 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4563 2022/09/16 06:36:39 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6744,3 +6744,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/ruby-facter to 4.2.12 [taca 2022-09-16]
 	Updated www/ruby-css-parser to 1.12.0 [taca 2022-09-16]
 	Updated www/ruby-loofah to 2.19.0 [taca 2022-09-16]
+	Updated games/termatrix to 2.0.0 [pin 2022-09-16]
