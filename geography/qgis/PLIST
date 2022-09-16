@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2022/08/26 10:50:36 gdt Exp $
+@comment $NetBSD: PLIST,v 1.21 2022/09/16 12:33:17 gdt Exp $
 bin/qgis
 bin/qgis_bench
 bin/qgis_process
@@ -4368,6 +4368,7 @@ share/qgis/resources/qgis_global_settings.ini
 share/qgis/resources/spatialite.db
 share/qgis/resources/srs.db
 share/qgis/resources/symbology-style.xml
+share/qgis/resources/themes/Blend of Gray/icons/arrow-down-disabled.svg
 share/qgis/resources/themes/Blend of Gray/icons/arrow-down.svg
 share/qgis/resources/themes/Blend of Gray/icons/arrow-up.svg
 share/qgis/resources/themes/Blend of Gray/icons/caret-down.svg
@@ -4390,6 +4391,7 @@ share/qgis/resources/themes/Blend of Gray/palette.txt
 share/qgis/resources/themes/Blend of Gray/qscintilla.ini
 share/qgis/resources/themes/Blend of Gray/style.qss
 share/qgis/resources/themes/Blend of Gray/variables.qss
+share/qgis/resources/themes/Night Mapping/icons/arrow-down-disabled.svg
 share/qgis/resources/themes/Night Mapping/icons/arrow-down.svg
 share/qgis/resources/themes/Night Mapping/icons/arrow-up.svg
 share/qgis/resources/themes/Night Mapping/icons/caret-down.svg
