@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4565 2022/09/16 12:33:30 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.4566 2022/09/16 13:05:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6747,3 +6747,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated games/termatrix to 2.0.0 [pin 2022-09-16]
 	Updated sysutils/macchina to 6.1.2 [pin 2022-09-16]
 	Updated geography/qgis to 3.22.11 [gdt 2022-09-16]
+	Updated devel/py-uvloop to 0.17.0 [adam 2022-09-16]
+	Updated devel/py-packageurl to 0.10.3 [adam 2022-09-16]
