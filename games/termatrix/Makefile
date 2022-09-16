@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2022/05/03 12:58:32 pin Exp $
+# $NetBSD: Makefile,v 1.4 2022/09/16 06:36:05 pin Exp $
 
-DISTNAME=	termatrix-1.0.2
+DISTNAME=	termatrix-2.0.0
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=joeledwards/}
-GITHUB_TAG=	a104487894b7c581ef6b008367f99e1ed44221d1
+GITHUB_TAG=	1c057be9cca5b71d72fed55971b3bc43bfe4d856
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/joeledwards/termatrix/
