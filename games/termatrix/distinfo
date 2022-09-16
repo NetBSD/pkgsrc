@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2022/05/03 12:58:32 pin Exp $
+$NetBSD: distinfo,v 1.3 2022/09/16 06:36:05 pin Exp $
 
 BLAKE2s (ahash-0.7.6.crate) = 5a260485860dccfc4af4ad41b107d11c1a1a0fadb036ef801484ecc98d4a6bc8
 SHA512 (ahash-0.7.6.crate) = 61354688b6fb096359faefb6f34be958cd2215d56b88c22c737d24183eaad433f811bc9e64f927e4852c87d2799c22fda82b55cfbef2ed6357ff74f0c4ffec68
@@ -183,9 +183,9 @@ Size (syn-1.0.86.crate) = 235126 bytes
 BLAKE2s (term_size-0.3.2.crate) = cfdf577b24eb1617ac7187c9dbd23a5f0452d1f3b63b052d78e12323c81c12d8
 SHA512 (term_size-0.3.2.crate) = 7e820ca667f841719e82cf97e90bd2546cdd7ecd4834c68f8eeadd2e530bb13ced1d058ea7beda5db77eabacfaef64b8c3699c482bd912ff570f6ab78149dc88
 Size (term_size-0.3.2.crate) = 10917 bytes
-BLAKE2s (termatrix-1.0.2-a104487894b7c581ef6b008367f99e1ed44221d1.tar.gz) = d1bfc414eeee450144fbd13406d22da823b65a13c58282dc761193ee2e0814ca
-SHA512 (termatrix-1.0.2-a104487894b7c581ef6b008367f99e1ed44221d1.tar.gz) = fa887f2f33e5291472d746b6bff1fbc05c63c8ceb565c4adef8babca57c52cbb045c1440ac93947ee26eaa2f0c6f0102e75a468d164c2dfcab5cc348b8c9e93a
-Size (termatrix-1.0.2-a104487894b7c581ef6b008367f99e1ed44221d1.tar.gz) = 9567 bytes
+BLAKE2s (termatrix-2.0.0-1c057be9cca5b71d72fed55971b3bc43bfe4d856.tar.gz) = cc7641d4197e3f03a1effe100bd7b4871e02a596cc41db0d153d7198d3f72de4
+SHA512 (termatrix-2.0.0-1c057be9cca5b71d72fed55971b3bc43bfe4d856.tar.gz) = c9ae4bc4ea9c4e652f263160f480c2835be310bcc5eb5c632a79aeebc3697e363ac5b6a82481e19b9a44cf8bde7aacdfeddbd526d7f87fe713fc2dacefde7c30
+Size (termatrix-2.0.0-1c057be9cca5b71d72fed55971b3bc43bfe4d856.tar.gz) = 10726 bytes
 BLAKE2s (termcolor-1.1.3.crate) = 883230b86f7f9bd79101af7c2fe83f0b3b76831712b963ae422d7609ee7c5f12
 SHA512 (termcolor-1.1.3.crate) = 5838fcbfd70f300cb4b62aab50565db52074c56b152ccc8ac1173e4676c0d5a636271bf5a645a77da6e1d4edbf0091af2cd4dd6d73b85c3d198c760898c06f3a
 Size (termcolor-1.1.3.crate) = 17242 bytes
