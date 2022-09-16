@@ -1,18 +1,11 @@
-@comment $NetBSD: PLIST,v 1.3 2021/05/09 04:37:23 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/09/16 06:13:53 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/.github/workflows/ci.yml
-${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/Changes.md
-${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
-${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/connection_pool.gemspec
 ${GEM_LIBDIR}/lib/connection_pool.rb
 ${GEM_LIBDIR}/lib/connection_pool/timed_stack.rb
 ${GEM_LIBDIR}/lib/connection_pool/version.rb
 ${GEM_LIBDIR}/lib/connection_pool/wrapper.rb
-${GEM_LIBDIR}/test/helper.rb
-${GEM_LIBDIR}/test/test_connection_pool.rb
-${GEM_LIBDIR}/test/test_connection_pool_timed_stack.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
