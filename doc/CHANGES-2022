@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4564 2022/09/16 11:13:57 pin Exp $
+$NetBSD: CHANGES-2022,v 1.4565 2022/09/16 12:33:30 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6746,3 +6746,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/ruby-loofah to 2.19.0 [taca 2022-09-16]
 	Updated games/termatrix to 2.0.0 [pin 2022-09-16]
 	Updated sysutils/macchina to 6.1.2 [pin 2022-09-16]
+	Updated geography/qgis to 3.22.11 [gdt 2022-09-16]
