@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4567 2022/09/16 17:39:19 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.4568 2022/09/16 19:56:39 leot Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6750,3 +6750,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-uvloop to 0.17.0 [adam 2022-09-16]
 	Updated devel/py-packageurl to 0.10.3 [adam 2022-09-16]
 	Updated devel/py-approvaltests to 5.10.0 [schmonz 2022-09-16]
+	Updated www/webkit-gtk to 2.36.8 [leot 2022-09-16]
