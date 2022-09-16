@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4560 2022/09/16 06:17:41 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4561 2022/09/16 06:20:45 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6742,3 +6742,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/puppet to 7.19.0 [taca 2022-09-16]
 	Updated net/ruby-connection_pool to 2.3.0 [taca 2022-09-16]
 	Updated sysutils/ruby-facter to 4.2.12 [taca 2022-09-16]
+	Updated www/ruby-css-parser to 1.12.0 [taca 2022-09-16]
