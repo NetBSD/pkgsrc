@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2022/02/12 18:08:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/09/16 13:05:04 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -20,6 +20,9 @@ ${PYSITELIB}/packageurl/contrib/django/filters.pyo
 ${PYSITELIB}/packageurl/contrib/django/models.py
 ${PYSITELIB}/packageurl/contrib/django/models.pyc
 ${PYSITELIB}/packageurl/contrib/django/models.pyo
+${PYSITELIB}/packageurl/contrib/django/utils.py
+${PYSITELIB}/packageurl/contrib/django/utils.pyc
+${PYSITELIB}/packageurl/contrib/django/utils.pyo
 ${PYSITELIB}/packageurl/contrib/purl2url.py
 ${PYSITELIB}/packageurl/contrib/purl2url.pyc
 ${PYSITELIB}/packageurl/contrib/purl2url.pyo
