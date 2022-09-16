@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4558 2022/09/16 06:10:24 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4559 2022/09/16 06:14:16 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6740,3 +6740,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/mob to 3.2.0 [schmonz 2022-09-16]
 	Updated mail/squirrelmail to 1.4.23pre14977 [taca 2022-09-16]
 	Updated sysutils/puppet to 7.19.0 [taca 2022-09-16]
+	Updated net/ruby-connection_pool to 2.3.0 [taca 2022-09-16]
