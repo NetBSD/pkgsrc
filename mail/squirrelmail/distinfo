@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.74 2021/10/26 10:54:31 nia Exp $
+$NetBSD: distinfo,v 1.75 2022/09/16 05:49:08 taca Exp $
 
-BLAKE2s (squirrelmail-webmail-1.4.23pre14904.tar.xz) = ab2dff695088b8018d800145ea3058a093174254e151746d8d129f645fe40094
-SHA512 (squirrelmail-webmail-1.4.23pre14904.tar.xz) = 53a080703a3abf6668c7ccda3b95c08196ee46aba10fdeefdc3e9549884f39efd4c761ae6e4339e7ac259650144ca0846b0668a385523529ab67a124dd5a17f2
-Size (squirrelmail-webmail-1.4.23pre14904.tar.xz) = 521380 bytes
+BLAKE2s (squirrelmail-webmail-1.4.23pre14977.tar.xz) = bc836400c2dbf5a1f4f7e4816197a25fe85455155d0681ee2ae03acdb4f926f6
+SHA512 (squirrelmail-webmail-1.4.23pre14977.tar.xz) = bddcbc3b7712b29cc7d87c719d654aee303ca5e55b25a0ce9546ef9cd30efaf5a18263c6fa2ee6be0622d39725d42a91308704f3235e2fb96642469e42946b1b
+Size (squirrelmail-webmail-1.4.23pre14977.tar.xz) = 523908 bytes
 SHA1 (patch-aa) = 4ba7ea0a85308816b9dc77c0af3c927359ed1275
 SHA1 (patch-ab) = 30bf68c730f20e817fbe81d18bc2a95899ee3fd0
 SHA1 (patch-ai) = e1a23673bf19bbbd88b00fb6bab3d6d1c8c11575
