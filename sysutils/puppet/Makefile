@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.55 2022/09/04 17:00:14 taca Exp $
+# $NetBSD: Makefile,v 1.56 2022/09/16 06:10:03 taca Exp $
 
-DISTNAME=		puppet-7.18.0
+DISTNAME=		puppet-7.19.0
 CATEGORIES=		sysutils
 #MASTER_SITES=		http://puppetlabs.com/downloads/puppet/
 
@@ -21,7 +21,6 @@ DEPENDS+=	${RUBY_PKGPREFIX}-deep_merge>=1.0<2:../../devel/ruby-deep_merge
 DEPENDS+=	${RUBY_PKGPREFIX}-scanf>=1.0.0<2:../../devel/ruby-scanf
 
 RUBYGEM_OPTIONS+=	--format-executable
-OVERRIDE_GEMSPEC+=	fast_gettext>=1.1
 USE_LANAUGES=		# none
 
 PKG_SYSCONFSUBDIR=	puppet
