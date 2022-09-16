@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4569 2022/09/16 20:24:31 abs Exp $
+$NetBSD: CHANGES-2022,v 1.4570 2022/09/16 23:39:35 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6752,3 +6752,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-approvaltests to 5.10.0 [schmonz 2022-09-16]
 	Updated www/webkit-gtk to 2.36.8 [leot 2022-09-16]
 	Updated filesystems/cloudfuse to 1.0 [abs 2022-09-16]
+	Updated databases/postgresql-postgis2 to 3.3.1 [gdt 2022-09-16]
