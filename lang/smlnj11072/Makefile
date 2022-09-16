@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2020/01/26 17:31:32 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2022/09/16 19:53:44 he Exp $
 #
 
 DISTNAME=	boot.${BOX}-unix
@@ -98,20 +98,6 @@ post-extract:
 # make the necessary copy of the runtime, _after_ patching src
 post-patch:
 	cd ${WRKDIR}/src && pax -rw runtime ${WRKDIR}/base/
-
-# Turn of nlffi on powerpc (I guess it doesn't work?)
-#
-# XXX: this switch doesn't work any more as the line in question doesn't
-# exist in the current version. Someone with a PPC build machine,
-# please check it out and either change it to match the file if still
-# needed, or get rid of it.
-.if ${MACHINE_ARCH} == "powerpc"
-SUBST_CLASSES+=		nlffi
-SUBST_STAGE.nlffi=	pre-configure
-SUBST_MESSAGE.nlffi=	Turning off nlffi
-SUBST_FILES.nlffi=	config/targets
-SUBST_SED.nlffi=	-e '/^request nlffi$$/d'
-.endif # powerpc
 
 # resolve definition of SML_BASE
 SUBST_CLASSES+=		smlbase
