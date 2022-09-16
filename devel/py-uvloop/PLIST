@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2021/02/10 08:18:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2022/09/16 13:00:15 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -26,6 +26,8 @@ ${PYSITELIB}/uvloop/handles/basetransport.pxd
 ${PYSITELIB}/uvloop/handles/basetransport.pyx
 ${PYSITELIB}/uvloop/handles/check.pxd
 ${PYSITELIB}/uvloop/handles/check.pyx
+${PYSITELIB}/uvloop/handles/fsevent.pxd
+${PYSITELIB}/uvloop/handles/fsevent.pyx
 ${PYSITELIB}/uvloop/handles/handle.pxd
 ${PYSITELIB}/uvloop/handles/handle.pyx
 ${PYSITELIB}/uvloop/handles/idle.pxd
