@@ -1,0 +1,7 @@
+ripdrag is an application that lets you drag and drop files from and to the
+terminal.
+
+It's designed to be feature to feature compatible with dragon, while being
+written in modern Rust and GTK4.
+Although, some features like --on-top can't be ported over because of
+limitations in gtk4.
