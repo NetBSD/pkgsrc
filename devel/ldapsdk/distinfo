@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2022/05/15 02:19:36 dholland Exp $
+$NetBSD: distinfo,v 1.12 2022/09/17 17:17:44 he Exp $
 
 BLAKE2s (ldapsdk_12311998.tar.gz) = eb99121e1a286a42be4f46cc1d818aebc38156e5b9be0caad45773ec979291cb
 SHA512 (ldapsdk_12311998.tar.gz) = 0e6a1fc33d4d70bba2a376336a0cf93fe7aa1e2147256ba6bc5de323c62139824ac0df66b2ebef6edcda457ba6437ca251112370c9e154bc09960c40429416b4
@@ -10,5 +10,6 @@ SHA1 (patch-ad) = 023fb7d066a3b0e9fde391e37ce14751c7816e7d
 SHA1 (patch-ae) = fe40aa1668206bd63861844fc34574c749aa22f0
 SHA1 (patch-af) = 20869b8cbc7becee026adece14b9b9a250531d8a
 SHA1 (patch-config-bsdecho.c) = a5f916c44c55a812793c25760771bff5a1400ed0
+SHA1 (patch-config_NetBSD.mk) = b32a56257eae24b2760bce6185da2ec839e30798
 SHA1 (patch-config_darwin.mk) = d713cd4d018825a1ad8c7631e25f3a070de3f9c2
 SHA1 (patch-config_rules_mk) = 6ddd1ee99f4058eeddd3f34f6921c1573abcd125
