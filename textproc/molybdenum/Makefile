@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2022/05/12 20:21:16 pin Exp $
+# $NetBSD: Makefile,v 1.7 2022/09/17 15:51:50 pin Exp $
 
-DISTNAME=	molybdenum-0.1.8
+DISTNAME=	molybdenum-0.1.9
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gfannes/}
-GITHUB_PROJECT=	molybdenum
-GITHUB_TAG=	8515c20610c3fd04537897f662fb5e6a83bfad97
+GITHUB_TAG=	release-v${PKGVERSION_NOREV}
 
 MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/gfannes/molybdenum/
