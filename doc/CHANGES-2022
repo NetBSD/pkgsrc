@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4572 2022/09/17 09:30:32 spz Exp $
+$NetBSD: CHANGES-2022,v 1.4573 2022/09/17 09:55:47 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6756,3 +6756,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated ham/trustedQSL to 2.6.5 [mef 2022-09-17]
 	Added net/p5-Net-LibIDN2 version 1.01 [spz 2022-09-17]
 	Updated mail/amavisd-new to 2.12.2 [spz 2022-09-17]
+	Updated emulators/qemu to 7.1.0 [tnn 2022-09-17]
