@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/09/17 08:56:42 spz Exp $
+
+BLAKE2s (Net-LibIDN2-1.01.tar.gz) = df8e9eefb6675df9b77b65ec1484e0d45bda85288770fab30fa69065c0e75b5e
+SHA512 (Net-LibIDN2-1.01.tar.gz) = b3eb430c99a458e9e5fbd16fb6b059bd660a995be7ebe806b44b46160db7a5502806d503ec03667ef9865634f403db2e665c3dcad58f4e221e918ef4d78eabd0
+Size (Net-LibIDN2-1.01.tar.gz) = 24496 bytes
