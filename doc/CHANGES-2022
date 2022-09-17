@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4575 2022/09/17 11:04:01 leot Exp $
+$NetBSD: CHANGES-2022,v 1.4576 2022/09/17 11:53:53 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6759,3 +6759,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated emulators/qemu to 7.1.0 [tnn 2022-09-17]
 	Updated devel/errcheck to 1.6.2 [bsiegert 2022-09-17]
 	Updated security/trufflehog to 3.10.3 [leot 2022-09-17]
+	Updated emulators/libretro-genesis-plus-gx to 20220901 [nia 2022-09-17]
