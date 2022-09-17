@@ -1,4 +1,4 @@
-# $NetBSD: go-module.mk,v 1.8 2022/01/20 21:37:11 tnn Exp $
+# $NetBSD: go-module.mk,v 1.9 2022/09/17 15:27:41 bsiegert Exp $
 #
 # This file implements common logic for compiling Go programs in pkgsrc.
 #
@@ -9,7 +9,7 @@
 #	In most cases, the default is fine.
 #
 #	Default:
-#		"...", which means all files below the top-level directory.
+#		"./...", which means all files below the top-level directory.
 #
 # GO_MODULE_FILES (optional)
 #	List of dependency files to be downloaded from the Go module proxy.
@@ -31,7 +31,7 @@
 
 .include "../../lang/go/version.mk"
 
-GO_BUILD_PATTERN?=	...
+GO_BUILD_PATTERN?=	./...
 GO_EXTRA_MOD_DIRS?=
 
 MAKE_JOBS_SAFE=		no
