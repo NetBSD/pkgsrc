@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.291 2022/08/24 12:57:35 ryoon Exp $
+# $NetBSD: Makefile,v 1.292 2022/09/17 23:56:03 ryoon Exp $
 
-VERREL=		7.4.0
-VERRC=		3
+VERREL=		7.4.1
+VERRC=		2
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
 CATEGORIES=	misc
@@ -125,13 +125,12 @@ MORE_DISTFILES= \
 	noto-fonts-20171024.tar.gz \
 	Scheherazade-2.100.zip \
 	lxml-4.1.1.tgz \
-	Amiri-0.111.zip \
-	ReemKufi-0.7.zip \
+	Amiri-0.117.zip \
+	ReemKufi-1.2.zip \
 	pdfium-5058.tar.bz2 \
 	dtoa-20180411.tgz \
 	skia-m103-b301ff025004c9cd82816c86c547588e6c24b466.tar.xz \
 	libcmis-0.5.2.tar.xz \
-	libcuckoo-93217f8d391718380c508a722ab9acd5e9081233.tar.gz
 
 #	libjpeg-turbo-2.1.1.tar.gz
 
@@ -260,7 +259,6 @@ CONFIGURE_ARGS+=	--without-system-graphite
 # sbin might not be in PATH
 CONFIGURE_ARGS+=	ac_cv_path_SYSTEM_GENCCODE=${BUILDLINK_PREFIX.icu}/sbin/genccode
 CONFIGURE_ARGS+=	ac_cv_path_SYSTEM_GENCMN=${BUILDLINK_PREFIX.icu}/sbin/gencmn
-CONFIGURE_ARGS+=	--without-system-cuckoo
 CONFIGURE_ARGS+=	--with-system-libtommath
 CONFIGURE_ARGS+=	--with-system-openjpeg
 CONFIGURE_ARGS+=	--with-help
