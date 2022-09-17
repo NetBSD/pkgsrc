@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.82 2022/09/17 09:54:56 tnn Exp $
+@comment $NetBSD: PLIST,v 1.83 2022/09/17 14:05:36 tnn Exp $
 bin/elf2dmp
 ${PLIST.aarch64}bin/qemu-aarch64
 ${PLIST.aarch64_be}bin/qemu-aarch64_be
@@ -14,6 +14,7 @@ ${PLIST.i386}bin/qemu-i386
 bin/qemu-img
 bin/qemu-io
 ${PLIST.keymap}bin/qemu-keymap
+${PLIST.loongarch64}bin/qemu-loongarch64
 ${PLIST.m68k}bin/qemu-m68k
 ${PLIST.microblaze}bin/qemu-microblaze
 ${PLIST.microblazeel}bin/qemu-microblazeel
