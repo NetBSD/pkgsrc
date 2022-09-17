@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/12/20 00:00:55 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2022/09/17 17:25:54 he Exp $
 
 DISTNAME=	stockfish-9-src
 PKGNAME=	${DISTNAME:S/-src//}
@@ -23,4 +23,5 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/stockfish ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKDIR}/Readme.md ${DESTDIR}${PREFIX}/share/doc/stockfish
 
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
