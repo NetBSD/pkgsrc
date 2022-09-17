@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:15:08 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/09/17 16:13:10 he Exp $
 
 BLAKE2s (kBuild-r3127.tar.gz) = ba9cdf0c2e04f3a258f38e1c6ff257eb54275f31cd824c74a9d5d252eb0b145b
 SHA512 (kBuild-r3127.tar.gz) = 6a724892d32c25a08dede7969d3878dea2c18f47da30908b147451e36297f77fdb806c34c457524010d3eadf199858843a92ca4cef774a0b8a700471708cb36c
 Size (kBuild-r3127.tar.gz) = 17579258 bytes
+SHA1 (patch-kBuild_env.sh) = 3e4d46951a6b14dfaff94f0338dd10e24d2230f8
 SHA1 (patch-kBuild_header.kmk) = bcba91ea5f4ae200087aa0adf4632b461661ed26
 SHA1 (patch-src_kmk_Makefile.kmk) = 7647322e79030bf794caa900feaf5dbe293a2247
 SHA1 (patch-src_kmk_kmkbuiltin_osdep.c) = de8a40b3a454abaf82b3384f0c44dd98794d0267
