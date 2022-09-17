@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.42 2021/12/19 13:21:26 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2022/09/17 05:39:25 jdolecek Exp $
 
 PKGNAME=	${PYPKGPREFIX}-gdbm-${PY_DISTVERSION}
 PKGREVISION=	1
 CATEGORIES=	databases python
 
-MAINTAINER=	dolecek@ics.muni.cz
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://docs.python.org/3/library/dbm.html#module-dbm.gnu
 COMMENT=	Python interface to gdbm - GNU database manager
 
