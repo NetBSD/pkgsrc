@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4581 2022/09/17 15:55:39 pin Exp $
+$NetBSD: CHANGES-2022,v 1.4582 2022/09/17 15:59:14 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6765,3 +6765,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated pkgtools/pkglint to 22.2.7 [bsiegert 2022-09-17]
 	Updated textproc/molybdenum to 0.1.9 [pin 2022-09-17]
 	Added graphics/simp version 3.1.0 [pin 2022-09-17]
+	Added chat/senpai version 0.1.0 [pin 2022-09-17]
