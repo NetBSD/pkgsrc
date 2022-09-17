@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2022/02/25 19:17:15 schmonz Exp $
+$NetBSD: distinfo,v 1.20 2022/09/17 12:15:01 schmonz Exp $
 
-BLAKE2s (FindBin-libs-v3.0.1.tar.gz) = ff420458bacf836f4d5a5af355e77676de133aab8415521fbc6ab6ceb4db9729
-SHA512 (FindBin-libs-v3.0.1.tar.gz) = 19d35646975b7f3dbcc80dafa6d9727e4b69117d06afeebb6ff92798f7cb8863af3ffec4effe3f07a2c279d3dce52924dc18bfdd54446760177c9e4caee3c34d
-Size (FindBin-libs-v3.0.1.tar.gz) = 36151 bytes
+BLAKE2s (FindBin-libs-v3.0.2.tar.gz) = 43aa28c4896be30dda17f413df2738b8c48a11d94eb2f80e04b095e0c1c8e920
+SHA512 (FindBin-libs-v3.0.2.tar.gz) = 95e449118eba27bd5edd44933e9c751fec73852b96f405e43e562deec4ad7c5223330e95fbd3765e5755da26b28c38433fc02c76537ef7a49cb1b513b752d281
+Size (FindBin-libs-v3.0.2.tar.gz) = 37223 bytes
