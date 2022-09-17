@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.81 2022/05/19 16:10:15 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.82 2022/09/17 09:54:56 tnn Exp $
 bin/elf2dmp
 ${PLIST.aarch64}bin/qemu-aarch64
 ${PLIST.aarch64_be}bin/qemu-aarch64_be
@@ -46,6 +46,7 @@ bin/qemu-system-avr
 bin/qemu-system-cris
 bin/qemu-system-hppa
 bin/qemu-system-i386
+bin/qemu-system-loongarch64
 bin/qemu-system-m68k
 bin/qemu-system-microblaze
 bin/qemu-system-microblazeel
@@ -125,6 +126,7 @@ share/doc/qemu/devel/qapi-code-gen.html
 share/doc/qemu/devel/qgraph.html
 share/doc/qemu/devel/qom.html
 share/doc/qemu/devel/qtest.html
+share/doc/qemu/devel/replay.html
 share/doc/qemu/devel/reset.html
 share/doc/qemu/devel/s390-dasd-ipl.html
 share/doc/qemu/devel/secure-coding-practices.html
@@ -140,6 +142,7 @@ share/doc/qemu/devel/tracing.html
 share/doc/qemu/devel/trivial-patches.html
 share/doc/qemu/devel/ui.html
 share/doc/qemu/devel/vfio-migration.html
+share/doc/qemu/devel/virtio-backends.html
 share/doc/qemu/devel/writing-monitor-commands.html
 share/doc/qemu/genindex.html
 share/doc/qemu/index.html
@@ -169,6 +172,7 @@ share/doc/qemu/specs/acpi_hw_reduced_hotplug.html
 share/doc/qemu/specs/acpi_mem_hotplug.html
 share/doc/qemu/specs/acpi_nvdimm.html
 share/doc/qemu/specs/acpi_pci_hotplug.html
+share/doc/qemu/specs/fw_cfg.html
 share/doc/qemu/specs/index.html
 share/doc/qemu/specs/ppc-spapr-hcalls.html
 share/doc/qemu/specs/ppc-spapr-hotplug.html
@@ -218,6 +222,9 @@ share/doc/qemu/system/confidential-guest-support.html
 share/doc/qemu/system/cpu-hotplug.html
 share/doc/qemu/system/device-emulation.html
 share/doc/qemu/system/devices/can.html
+share/doc/qemu/system/devices/canokey.html
+share/doc/qemu/system/devices/ccid.html
+share/doc/qemu/system/devices/cxl.html
 share/doc/qemu/system/devices/ivshmem.html
 share/doc/qemu/system/devices/net.html
 share/doc/qemu/system/devices/nvme.html
@@ -230,6 +237,7 @@ share/doc/qemu/system/generic-loader.html
 share/doc/qemu/system/guest-loader.html
 share/doc/qemu/system/i386/amd-memory-encryption.html
 share/doc/qemu/system/i386/cpu.html
+share/doc/qemu/system/i386/hyperv.html
 share/doc/qemu/system/i386/kvm-pv.html
 share/doc/qemu/system/i386/microvm.html
 share/doc/qemu/system/i386/pc.html
@@ -239,6 +247,7 @@ share/doc/qemu/system/index.html
 share/doc/qemu/system/invocation.html
 share/doc/qemu/system/keys.html
 share/doc/qemu/system/linuxboot.html
+share/doc/qemu/system/loongarch/loongson3.html
 share/doc/qemu/system/managed-startup.html
 share/doc/qemu/system/monitor.html
 share/doc/qemu/system/multi-process.html
@@ -254,6 +263,7 @@ share/doc/qemu/system/qemu-block-drivers.html
 share/doc/qemu/system/qemu-cpu-models.html
 share/doc/qemu/system/qemu-manpage.html
 share/doc/qemu/system/quickstart.html
+share/doc/qemu/system/replay.html
 share/doc/qemu/system/riscv/microchip-icicle-kit.html
 share/doc/qemu/system/riscv/shakti-c.html
 share/doc/qemu/system/riscv/sifive_u.html
@@ -309,6 +319,7 @@ ${PLIST.gtk}share/locale/hu/LC_MESSAGES/qemu.mo
 ${PLIST.gtk}share/locale/it/LC_MESSAGES/qemu.mo
 ${PLIST.gtk}share/locale/sv/LC_MESSAGES/qemu.mo
 ${PLIST.gtk}share/locale/tr/LC_MESSAGES/qemu.mo
+${PLIST.gtk}share/locale/uk/LC_MESSAGES/qemu.mo
 ${PLIST.gtk}share/locale/zh_CN/LC_MESSAGES/qemu.mo
 share/qemu/QEMU,cgthree.bin
 share/qemu/QEMU,tcx.bin
