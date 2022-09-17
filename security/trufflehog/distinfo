@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2022/09/02 19:28:16 leot Exp $
+$NetBSD: distinfo,v 1.3 2022/09/17 11:03:56 leot Exp $
 
 BLAKE2s (cloud.google.com_go_@v_v0.100.2.mod) = 6b0f28a5b451457b741799da390ec9083b3f23e5a178b3a0b457603c1398b34e
 SHA512 (cloud.google.com_go_@v_v0.100.2.mod) = 510c4bd48b8d3cd45b69b5f46729e8ce34d52255848d2b0856410c621c5dd3b302df607ac71dcd2bf29aacbe3087233d9452c71d78649de9330d3d3ad556c7a9
@@ -2790,7 +2790,7 @@ Size (rsc.io_quote_v3_@v_v3.1.0.mod) = 55 bytes
 BLAKE2s (rsc.io_sampler_@v_v1.3.0.mod) = 6d4d3ba7c381b9a923679a73562a7cf3d6b7d49f94f585f274c8955bb1b932b4
 SHA512 (rsc.io_sampler_@v_v1.3.0.mod) = 2137507eb25fbae419605e0cd6bca4cfa584110eebc276cd759a4dcb6f97e52928e5b2d9b276e76bcabcec3bbfc2c42f97fa29f54695d27fb00f9423e1638863
 Size (rsc.io_sampler_@v_v1.3.0.mod) = 88 bytes
-BLAKE2s (trufflehog-3.10.2.tar.gz) = 81fe07762081ca258a2fbe5f6f896b7947714b35acbd9c874c47a785df69a8d6
-SHA512 (trufflehog-3.10.2.tar.gz) = d65260921962bd75ba48c26187e3a9bc3e28d4d3e80da5db4bdf5908155cde7d25439ec308c34b6405c5050fe07b5174712af8c57a438c13081c1ecdf0200edf
-Size (trufflehog-3.10.2.tar.gz) = 503243 bytes
+BLAKE2s (trufflehog-3.10.3.tar.gz) = 13eee309d25129e3ce7f715b4a3a075126a5d0b6d781e38ee9668056dde572d2
+SHA512 (trufflehog-3.10.3.tar.gz) = 5308e7719bd7b8887d51b3f0584dbec36ddb3d7c91bce31c62095798023b9ba45e7057e86b6383a0eba50287e2d717b6a480bc069a3fdce237c45b10e0835397
+Size (trufflehog-3.10.3.tar.gz) = 503074 bytes
 SHA1 (patch-main.go) = 296da0aa0ba5745cc6a2263ee2a73c9255487971
