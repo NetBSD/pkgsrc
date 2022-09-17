@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4570 2022/09/16 23:39:35 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.4571 2022/09/17 02:39:55 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6753,3 +6753,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/webkit-gtk to 2.36.8 [leot 2022-09-16]
 	Updated filesystems/cloudfuse to 1.0 [abs 2022-09-16]
 	Updated databases/postgresql-postgis2 to 3.3.1 [gdt 2022-09-16]
+	Updated ham/trustedQSL to 2.6.5 [mef 2022-09-17]
