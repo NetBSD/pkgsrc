@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.272 2022/05/15 19:12:11 nia Exp $
+# $NetBSD: Makefile,v 1.273 2022/09/17 15:58:48 pin Exp $
 #
 
 COMMENT=	Communication programs
@@ -122,6 +122,7 @@ SUBDIR+=	riece
 SUBDIR+=	roxirc
 SUBDIR+=	ruby-net-irc
 SUBDIR+=	scrollz
+SUBDIR+=	senpai
 SUBDIR+=	silc-client
 SUBDIR+=	silc-client-icb
 SUBDIR+=	silc-server
