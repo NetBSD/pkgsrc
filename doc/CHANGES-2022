@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4583 2022/09/17 16:03:45 pin Exp $
+$NetBSD: CHANGES-2022,v 1.4584 2022/09/17 18:46:47 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6767,3 +6767,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added graphics/simp version 3.1.0 [pin 2022-09-17]
 	Added chat/senpai version 0.1.0 [pin 2022-09-17]
 	Added sysutils/ripdrag version 0.2.0 [pin 2022-09-17]
+	Updated sysutils/macchina to 6.1.4 [pin 2022-09-17]
