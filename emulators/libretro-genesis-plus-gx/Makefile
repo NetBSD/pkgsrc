@@ -1,17 +1,16 @@
-# $NetBSD: Makefile,v 1.7 2022/09/11 12:51:32 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2022/09/17 11:53:42 nia Exp $
 
-DISTNAME=	libretro-genesis-plus-gx-20200208
-PKGREVISION=	2
+DISTNAME=	libretro-genesis-plus-gx-20220901
 CATEGORIES=	emulators
 GITHUB_PROJECT=	Genesis-Plus-GX
-GITHUB_TAG=	50551066f71f8a5ea782ea3747891fd6d24ebe67
+GITHUB_TAG=	aea7b9d5475ec02427fbb00a9093cae74b87ff8a
 
 MAINTAINER=	nia@NetBSD.org
 HOMEPAGE=	https://docs.libretro.com/library/genesis_plus_gx/
 COMMENT=	Libretro core based on the Genesis Plus Sega 8/16 bit emulator
 LICENSE=	mame-license
 
-LDFLAGS+=	-lFLAC -lz
+LDFLAGS+=	-lz
 
 LIBRETRO_CORE=	genesis_plus_gx
 
@@ -27,7 +26,6 @@ MAKE_FLAGS+=	ENDIANNESS_DEFINES="-DBYTE_ORDER=BIG_ENDIAN -DCPU_IS_BIG_ENDIAN=1 -
 
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=./libretro/link.T
 
-.include "../../audio/flac/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
