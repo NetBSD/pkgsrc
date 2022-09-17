@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:23:55 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/09/17 11:53:42 nia Exp $
 
-BLAKE2s (libretro-genesis-plus-gx-20200208-50551066f71f8a5ea782ea3747891fd6d24ebe67.tar.gz) = 1f354eb6b98dffa1ec6a643279016e938f7d4408858d39f71190f7354f372d77
-SHA512 (libretro-genesis-plus-gx-20200208-50551066f71f8a5ea782ea3747891fd6d24ebe67.tar.gz) = bc5f0b0b4f6c5077fa90bb18e78f79baa08e6253eadce13b1ca0d884c54d2c2669b53e856feb05f2293a4b642707773df155a4393a8a64db766f805a2b71d63a
-Size (libretro-genesis-plus-gx-20200208-50551066f71f8a5ea782ea3747891fd6d24ebe67.tar.gz) = 6506880 bytes
-SHA1 (patch-Makefile.libretro) = d48bd0e6e752ecc44de1d78eb49cbcc7515b6999
-SHA1 (patch-libretro_Makefile.common) = c32fdd3a80a75c44ddeb2678b7d5579e8a045717
+BLAKE2s (libretro-genesis-plus-gx-20220901-aea7b9d5475ec02427fbb00a9093cae74b87ff8a.tar.gz) = 2bdc40da84b1617bd4cd97f1923f8913cac6a14fa9ace1f287515dbee52fe154
+SHA512 (libretro-genesis-plus-gx-20220901-aea7b9d5475ec02427fbb00a9093cae74b87ff8a.tar.gz) = 9d06f6d6f49bb0e63f631c53e52a35a2b6959eef94911923032f47e81ca9862c2f99264b67f28a9e55883f80d7b6296d1499ef5866b53a3fa13798a7975a03bf
+Size (libretro-genesis-plus-gx-20220901-aea7b9d5475ec02427fbb00a9093cae74b87ff8a.tar.gz) = 14207056 bytes
+SHA1 (patch-Makefile.libretro) = fd38f35cb4f82dd1d6f25402dc204df20168fdbf
+SHA1 (patch-libretro_Makefile.common) = da1f91e2db5e813c42db44e670ce59acf7e821df
