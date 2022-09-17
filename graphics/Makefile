@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.981 2022/08/31 20:30:30 pin Exp $
+# $NetBSD: Makefile,v 1.982 2022/09/17 15:55:05 pin Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -582,6 +582,7 @@ SUBDIR+=	silgraphite
 SUBDIR+=	silgraphite-ft
 SUBDIR+=	silgraphite-xft
 SUBDIR+=	simage
+SUBDIR+=	simp
 SUBDIR+=	skencil
 SUBDIR+=	slim-themes
 SUBDIR+=	spcaview
