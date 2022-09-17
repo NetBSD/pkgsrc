@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4587 2022/09/17 21:26:40 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4588 2022/09/17 23:56:43 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6771,3 +6771,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/bat to 0.22.1 [fox 2022-09-17]
 	Updated devel/py-tortoisehg to 6.2.2 [nros 2022-09-17]
 	Updated time/py-dateparser to 1.1.1nb1 [wiz 2022-09-17]
+	Updated misc/libreoffice to 7.4.1.2 [ryoon 2022-09-17]
