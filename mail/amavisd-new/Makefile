@@ -1,23 +1,19 @@
-# $NetBSD: Makefile,v 1.31 2022/06/28 11:34:16 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2022/09/17 09:26:12 spz Exp $
 
-DISTNAME=	amavisd-new-${VERSION}${PATCHLEVEL}
-PKGNAME=	amavisd-new-${VERSION}${PATCHLEVEL:S/-//}
-PKGREVISION=	4
+# pkgname kept as amavisd-new even though that migrated to be amavis again
+PKGNAME=	amavisd-new-${VERSION}
+DISTNAME=	amavis-${GITLAB_TAG}
+VERSION=	2.12.2
+
 CATEGORIES=	mail security
-MASTER_SITES=	https://www.ijs.si/software/amavisd/
-MASTER_SITES+=	http://mirrors.catpipe.net/amavisd-new/
-MASTER_SITES+=	http://mirror.mainloop.se/amavisd/
-MASTER_SITES+=	http://mirror.cedratnet.com/amavisd-new/
-MASTER_SITES+=	http://mirror.omroep.nl/amavisd-new/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_GITLAB:=amavis/}
+GITLAB_PROJECT=	amavis
+GITLAB_TAG=	v${VERSION}
 
 MAINTAINER=	spz@NetBSD.org
-HOMEPAGE=	https://www.ijs.si/software/amavisd/
+HOMEPAGE=	https://www.amavis.org/
 COMMENT=	Daemonized interface between MTA and content checkers
 LICENSE=	gnu-gpl-v2
-
-VERSION=	2.11.1
-PATCHLEVEL=	# empty
 
 DEPENDS+=	p5-Archive-Zip>=1.14:../../archivers/p5-Archive-Zip
 DEPENDS+=	p5-BerkeleyDB-[0-9]*:../../databases/p5-BerkeleyDB
@@ -27,12 +23,12 @@ DEPENDS+=	p5-File-LibMagic>=1.0:../../devel/p5-File-LibMagic
 DEPENDS+=	p5-Mail-DKIM>=0.31:../../mail/p5-Mail-DKIM
 DEPENDS+=	p5-MIME-tools>=5.417:../../mail/p5-MIME-tools
 DEPENDS+=	p5-MailTools>=1.58:../../mail/p5-MailTools
-DEPENDS+=	p5-Net-LibIDN-[0-9]*:../../net/p5-Net-LibIDN
+DEPENDS+=	p5-Net-LibIDN2>=1.0.0:../../net/p5-Net-LibIDN2
 DEPENDS+=	p5-IO-stringy-[0-9]*:../../devel/p5-IO-stringy
 DEPENDS+=	p5-Net-Server>=0.88:../../net/p5-Net-Server
 DEPENDS+=	p5-Unix-Syslog-[0-9]*:../../sysutils/p5-Unix-Syslog
 
-WRKSRC=		${WRKDIR}/amavisd-new-${VERSION}
+WRKSRC=		${WRKDIR}/${DISTNAME}
 
 CONFLICTS+=	amavis-[0-9]*
 CONFLICTS+=	amavis-perl-[0-9]*
