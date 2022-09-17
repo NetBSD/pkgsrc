@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2016/09/14 18:20:30 spz Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/09/17 09:26:12 spz Exp $
 sbin/amavisd
 sbin/amavisd-agent
 sbin/amavisd-nanny
@@ -28,6 +28,7 @@ share/doc/amavisd-new/README.policy-on-notifications
 share/doc/amavisd-new/README.postfix
 share/doc/amavisd-new/README.postfix.html
 share/doc/amavisd-new/README.protocol
+share/doc/amavisd-new/README.rspamd
 share/doc/amavisd-new/README.sendmail
 share/doc/amavisd-new/README.sendmail-dual
 share/doc/amavisd-new/README.sendmail-dual.old
