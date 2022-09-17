@@ -1,15 +1,17 @@
-$NetBSD: patch-Makefile.libretro,v 1.1 2020/06/01 19:12:38 nia Exp $
+$NetBSD: patch-Makefile.libretro,v 1.2 2022/09/17 11:53:42 nia Exp $
 
-This is not C++.
+Do not force -O2.
 
---- Makefile.libretro.orig	2020-02-08 21:59:22.000000000 +0000
+--- Makefile.libretro.orig	2022-09-01 18:13:56.000000000 +0000
 +++ Makefile.libretro
-@@ -715,7 +715,7 @@ else
- 	LD = link.exe
+@@ -772,8 +772,8 @@ ifneq (,$(findstring msvc,$(platform)))
+    CFLAGS   += -MT
+    CXXFLAGS += -MT
  endif
- else
--	LD = $(CXX)
-+	LD = $(CC)
+-   CFLAGS   += -O2 -DNDEBUG
+-   CXXFLAGS += -O2 -DNDEBUG
++   CFLAGS   += -DNDEBUG
++   CXXFLAGS += -DNDEBUG
  endif
  
- ifeq ($(platform), theos_ios)
+ ifeq ($(SHARED_LIBVORBIS),)
