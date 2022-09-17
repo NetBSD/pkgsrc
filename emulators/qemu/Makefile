@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.303 2022/09/17 09:54:56 tnn Exp $
+# $NetBSD: Makefile,v 1.304 2022/09/17 14:05:36 tnn Exp $
 
 DISTNAME=	qemu-7.1.0
 CATEGORIES=	emulators
@@ -105,6 +105,7 @@ UE_ARCHS+=		aarch64 aarch64_be
 UE_ARCHS+=		alpha arm armeb cris
 UE_ARCHS+=		hexagon hppa
 UE_ARCHS+=		i386
+UE_ARCHS+=		loongarch64
 UE_ARCHS+=		m68k microblaze microblazeel
 UE_ARCHS+=		mips mips64 mips64el mipsel mipsn32 mipsn32el
 UE_ARCHS+=		nios2
