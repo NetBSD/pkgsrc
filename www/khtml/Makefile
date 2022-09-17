@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2022/09/11 12:51:11 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2022/09/17 21:34:01 he Exp $
 
 DISTNAME=	khtml-${KF5VER}
 PKGREVISION=	4
@@ -12,6 +12,9 @@ LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v2.1
 MASTER_SITES=	${MASTER_SITE_KDE:=frameworks/${KF5VER:R}/portingAids/}
 
 USE_TOOLS+=	perl msgfmt
+# Need gnu variant for built-in alloca()
+BUILDLINK_TRANSFORM+=	opt:-std=c99:-std=gnu99
+BUILDLINK_TRANSFORM+=	opt:-std=c++17:-std=gnu++17
 
 CMAKE_ARGS.SunOS+=	-DHAVE_ALLOCA_H=1
 
