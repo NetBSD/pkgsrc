@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.49 2022/08/22 13:58:32 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.50 2022/09/17 23:56:03 ryoon Exp $
 bin/libreoffice
 bin/lobase
 bin/localc
@@ -13416,6 +13416,7 @@ ${PKGNAME}/lib/libreoffice/share/fonts/truetype/NotoSerifHebrew-Bold.ttf
 ${PKGNAME}/lib/libreoffice/share/fonts/truetype/NotoSerifHebrew-Regular.ttf
 ${PKGNAME}/lib/libreoffice/share/fonts/truetype/NotoSerifLao-Bold.ttf
 ${PKGNAME}/lib/libreoffice/share/fonts/truetype/NotoSerifLao-Regular.ttf
+${PKGNAME}/lib/libreoffice/share/fonts/truetype/ReemKufi-Bold.ttf
 ${PKGNAME}/lib/libreoffice/share/fonts/truetype/ReemKufi-Regular.ttf
 ${PKGNAME}/lib/libreoffice/share/fonts/truetype/Rubik-Bold.ttf
 ${PKGNAME}/lib/libreoffice/share/fonts/truetype/Rubik-BoldItalic.ttf
