@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/07/13 15:02:02 bsiegert Exp $
+# $NetBSD: Makefile,v 1.5 2022/09/17 10:13:56 bsiegert Exp $
 
 .include "../../lang/go/version.mk"
 .include "../../lang/go/bootstrap.mk"
@@ -107,7 +107,7 @@ do-build:
 		GOROOT_FINAL=${GOROOT_FINAL:Q} \
 		${GOOPT} \
 		GOCACHE=${WRKDIR}/.cache/go-build \
-		${BASH} ./make.bash
+		${BASH} ./make.bash -v
 # for RELRO build:
 #	cd ${WRKSRC}/src && env GOROOT_BOOTSTRAP=${GOROOT_BOOTSTRAP:Q} GOROOT_FINAL=${GOROOT_FINAL:Q} GO_LDFLAGS="-buildmode=pie" ${GOOPT} ${BASH} ./make.bash
 
