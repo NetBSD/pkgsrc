@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4585 2022/09/17 18:54:24 fox Exp $
+$NetBSD: CHANGES-2022,v 1.4586 2022/09/17 19:19:46 nros Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6769,3 +6769,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added sysutils/ripdrag version 0.2.0 [pin 2022-09-17]
 	Updated sysutils/macchina to 6.1.4 [pin 2022-09-17]
 	Updated textproc/bat to 0.22.1 [fox 2022-09-17]
+	Updated devel/py-tortoisehg to 6.2.2 [nros 2022-09-17]
