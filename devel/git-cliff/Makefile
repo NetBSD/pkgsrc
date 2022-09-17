@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2022/08/22 18:16:48 pin Exp $
+# $NetBSD: Makefile,v 1.18 2022/09/17 15:03:24 wiz Exp $
 
-DISTNAME=	git-cliff-0.8.1
+DISTNAME=	git-cliff-0.9.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=orhun/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -20,5 +20,8 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/git-cliff \
 		${DESTDIR}${PREFIX}/bin
 
+# for libgit2-sys crate
+.include "../../devel/libgit2/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
