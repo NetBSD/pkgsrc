@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22203 2022/09/15 14:46:00 wiz Exp $
+$NetBSD: TODO,v 1.22204 2022/09/17 09:55:47 tnn Exp $
 
 Suggested new packages
 ======================
@@ -1355,7 +1355,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o qca2-qt5-ossl-2.3.2
 	o qconf-2.5
 	o qdirstat-1.8.1
-	o qemu-7.1
 	o qt6-6.3.1 [in wip]
 	o qtcreator-6.0
 	o quazip-1.1
