@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4571 2022/09/17 02:39:55 mef Exp $
+$NetBSD: CHANGES-2022,v 1.4572 2022/09/17 09:30:32 spz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6754,3 +6754,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated filesystems/cloudfuse to 1.0 [abs 2022-09-16]
 	Updated databases/postgresql-postgis2 to 3.3.1 [gdt 2022-09-16]
 	Updated ham/trustedQSL to 2.6.5 [mef 2022-09-17]
+	Added net/p5-Net-LibIDN2 version 1.01 [spz 2022-09-17]
+	Updated mail/amavisd-new to 2.12.2 [spz 2022-09-17]
