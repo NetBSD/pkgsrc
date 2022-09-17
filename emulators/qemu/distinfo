@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.194 2022/09/17 09:54:56 tnn Exp $
+$NetBSD: distinfo,v 1.195 2022/09/17 13:50:42 tnn Exp $
 
 BLAKE2s (palcode-clipper-qemu-5.2.0nb8) = d388c896a80c1cc3d4785c8434d6688bbcfd54c28f7252ce550ab162a0bba321
 SHA512 (palcode-clipper-qemu-5.2.0nb8) = 33695d6001d86a19793a92d5e31775607c4dfc9ab9eea019ea6c4d543a2e11e8c07f83cca4934811a13ef829b528737ea37d9d2aaf66cba6f2746d44d2aa0b43
@@ -12,7 +12,6 @@ SHA1 (patch-hw-mips-Kconfig) = c7199ad26ac45116ab4d38252db4234ae93bdf9a
 SHA1 (patch-hw-mips-mipssim.c) = 1f682b74b34398b3ff15f9e7f24a85f4b8bb4853
 SHA1 (patch-hw_display_omap__dss.c) = 6b13242f28e32346bc70548c216c578d98fd3420
 SHA1 (patch-hw_mips_meson.build) = d9a07a81fe6d3c9e2bd45f41fe876cd927a40ced
-SHA1 (patch-hw_mips_mipssim__virtio.c) = 64e5b8c7a7628a71a3c8f267db882d96ba528941
 SHA1 (patch-hw_net_etraxfs__eth.c) = e5dd1661d60dbcd27b332403e0843500ba9544bc
 SHA1 (patch-hw_net_xilinx__axienet.c) = ebcd2676d64ce6f31e4a8c976d4fdf530ad5e8b7
 SHA1 (patch-hw_rtc_mc146818rtc.c) = cc7a3b28010966b65b7a16db756226ac2669f310
