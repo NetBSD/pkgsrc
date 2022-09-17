@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2022/09/17 15:57:58 pin Exp $
+bin/senpai
+man/man1/senpai.1
+man/man5/senpai.5
