@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4578 2022/09/17 15:03:35 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4579 2022/09/17 15:51:10 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6762,3 +6762,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated emulators/libretro-genesis-plus-gx to 20220901 [nia 2022-09-17]
 	Updated devel/p5-FindBin-libs to 3.0.2 [schmonz 2022-09-17]
 	Updated devel/git-cliff to 0.9.0 [wiz 2022-09-17]
+	Updated pkgtools/pkglint to 22.2.7 [bsiegert 2022-09-17]
