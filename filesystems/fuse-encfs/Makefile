@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2022/01/22 18:32:47 pho Exp $
+# $NetBSD: Makefile,v 1.22 2022/09/18 18:33:51 he Exp $
 #
 
 GITHUB_PROJECT=	encfs
@@ -41,4 +41,5 @@ post-extract:
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/fuse.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
