@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2022/08/26 15:42:51 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/09/18 12:28:23 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.github/workflows/check.yml
 ${GEM_LIBDIR}/.github/workflows/rubocop.yml
@@ -60,4 +60,5 @@ ${GEM_LIBDIR}/spec/images/xbm/16x32.xbm
 ${GEM_LIBDIR}/spec/images/xbm/crlf.16x32.xbm
 ${GEM_LIBDIR}/spec/images/xpm/24x32.xpm
 ${GEM_LIBDIR}/spec/images/xpm/crlf.24x32.xpm
+${GEM_LIBDIR}/spec/test_server.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
