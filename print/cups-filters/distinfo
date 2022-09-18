@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.78 2022/05/10 20:57:35 markd Exp $
+$NetBSD: distinfo,v 1.79 2022/09/18 14:41:07 he Exp $
 
 BLAKE2s (cups-filters-1.28.15.tar.xz) = f13ded9ee7fdcde6debe2590ef189a2a2a2df16ae952e601a1609e650ff90abe
 SHA512 (cups-filters-1.28.15.tar.xz) = cc8d43bba6edb2b839f3be5fcbcdeb7633ed0f0f0c2737bcc6957cf95fb4ded8ee412358cc95fdbf289ae897dd0b7f32e689f02d191a8f15930eb4d2deefd74c
@@ -7,3 +7,4 @@ SHA1 (patch-filter_gstoraster.c) = 4eef8d91d8ca26a5a874e29885b836e9670d9e5d
 SHA1 (patch-filter_mupdftoraster.c) = 81a06cbb3be9a7fd3e797a2effa5ef0aecfc2621
 SHA1 (patch-fontembed_test__pdf.c) = 5ffb13a59ed4d860a3ae4355e364059973715290
 SHA1 (patch-fontembed_test__ps.c) = 70f9ab9c8f74ab96abe04cda926a7116386d5f2e
+SHA1 (patch-utils_cups-browsed.c) = 7aca6e830eebe8dde48e23f04b5d3b5a4820b208
