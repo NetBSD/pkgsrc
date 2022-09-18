@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.165 2022/09/18 14:41:07 he Exp $
+# $NetBSD: Makefile,v 1.166 2022/09/18 14:51:23 he Exp $
 
 DISTNAME=	cups-filters-1.28.15
 PKGREVISION=	2
@@ -78,6 +78,8 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/cups-browsed-daemonize.sh ${DESTDIR}${PREFIX}/libexec/cups-browsed
 
 .include "options.mk"
+
+USE_BUILTIN.heimdal=no # needs -lhcrypto etc.
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
