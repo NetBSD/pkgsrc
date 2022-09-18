@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:20:30 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/09/18 13:49:00 he Exp $
 
 BLAKE2s (zidrav4unix-1.2.0.tar.gz) = 98e5ecb4f8f8548e6993deb468d1259753ce5496e840d54a9be877f1a648efc2
 SHA512 (zidrav4unix-1.2.0.tar.gz) = f1fc2b2621e3d02bf51995241f7f95e40b58bca17132a0a296babb586c489d1667fbc2901b5dc02890f89e685ce1f4c068a950bb58e1e445d278acc234d03951
 Size (zidrav4unix-1.2.0.tar.gz) = 18448 bytes
 SHA1 (patch-aa) = 7e1c6bcb375d38a1aa7f3eaa4fa00e779465860a
-SHA1 (patch-core.h) = f5497f376545fe24554a3ecb7f7f12c59b30e3f9
+SHA1 (patch-core.h) = 48f815a68f24c1c531b5beff93ae4492ea4c5d8a
