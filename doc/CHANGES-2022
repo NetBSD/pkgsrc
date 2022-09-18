@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4600 2022/09/18 11:44:02 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4601 2022/09/18 11:46:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6784,3 +6784,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/lighttpd to 1.4.67 [schmonz 2022-09-18]
 	Updated devel/py-approvaltests to 5.11.0 [schmonz 2022-09-18]
 	Updated fonts/noto-emoji-ttf to 2.038 [wiz 2022-09-18]
+	Updated fonts/unifont to 15.0.01 [wiz 2022-09-18]
