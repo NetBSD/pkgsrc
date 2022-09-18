@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.96 2022/08/11 05:09:35 gutteridge Exp $
+# $NetBSD: Makefile,v 1.97 2022/09/18 22:56:14 gutteridge Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=		xfce4-session-4.16.0
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		x11
 MASTER_SITES+=		https://archive.xfce.org/src/xfce/xfce4-session/4.16/
 
@@ -41,7 +41,6 @@ CONF_FILES=	${EGDIR}/autostart/xscreensaver.desktop					\
 
 .include "options.mk"
 
-.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libwnck3/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/libxfce4ui/buildlink3.mk"
