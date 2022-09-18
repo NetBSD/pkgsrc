@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2021/08/22 14:47:26 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2022/09/18 12:32:00 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
@@ -42,6 +42,7 @@ ${GEM_LIBDIR}/lib/shoulda/matchers/active_model/numericality_matchers/numeric_ty
 ${GEM_LIBDIR}/lib/shoulda/matchers/active_model/numericality_matchers/odd_number_matcher.rb
 ${GEM_LIBDIR}/lib/shoulda/matchers/active_model/numericality_matchers/only_integer_matcher.rb
 ${GEM_LIBDIR}/lib/shoulda/matchers/active_model/qualifiers.rb
+${GEM_LIBDIR}/lib/shoulda/matchers/active_model/qualifiers/allow_blank.rb
 ${GEM_LIBDIR}/lib/shoulda/matchers/active_model/qualifiers/allow_nil.rb
 ${GEM_LIBDIR}/lib/shoulda/matchers/active_model/qualifiers/ignore_interference_by_writer.rb
 ${GEM_LIBDIR}/lib/shoulda/matchers/active_model/qualifiers/ignoring_interference_by_writer.rb
