@@ -1,16 +1,25 @@
-@comment $NetBSD: PLIST,v 1.4 2022/04/20 21:29:08 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/09/18 11:53:56 wiz Exp $
 ${PYSITELIB}/cyclonedx/__init__.py
 ${PYSITELIB}/cyclonedx/__init__.pyc
 ${PYSITELIB}/cyclonedx/__init__.pyo
 ${PYSITELIB}/cyclonedx/exception/__init__.py
 ${PYSITELIB}/cyclonedx/exception/__init__.pyc
 ${PYSITELIB}/cyclonedx/exception/__init__.pyo
+${PYSITELIB}/cyclonedx/exception/factory.py
+${PYSITELIB}/cyclonedx/exception/factory.pyc
+${PYSITELIB}/cyclonedx/exception/factory.pyo
 ${PYSITELIB}/cyclonedx/exception/model.py
 ${PYSITELIB}/cyclonedx/exception/model.pyc
 ${PYSITELIB}/cyclonedx/exception/model.pyo
 ${PYSITELIB}/cyclonedx/exception/output.py
 ${PYSITELIB}/cyclonedx/exception/output.pyc
 ${PYSITELIB}/cyclonedx/exception/output.pyo
+${PYSITELIB}/cyclonedx/factory/__init__.py
+${PYSITELIB}/cyclonedx/factory/__init__.pyc
+${PYSITELIB}/cyclonedx/factory/__init__.pyo
+${PYSITELIB}/cyclonedx/factory/license.py
+${PYSITELIB}/cyclonedx/factory/license.pyc
+${PYSITELIB}/cyclonedx/factory/license.pyo
 ${PYSITELIB}/cyclonedx/model/__init__.py
 ${PYSITELIB}/cyclonedx/model/__init__.pyc
 ${PYSITELIB}/cyclonedx/model/__init__.pyo
@@ -83,6 +92,9 @@ ${PYSITELIB}/cyclonedx/schema/ext/vulnerability-1.0-SNAPSHOT.schema.json
 ${PYSITELIB}/cyclonedx/schema/ext/vulnerability-1.0.xsd
 ${PYSITELIB}/cyclonedx/schema/spdx.schema.json
 ${PYSITELIB}/cyclonedx/schema/spdx.xsd
+${PYSITELIB}/cyclonedx/spdx.py
+${PYSITELIB}/cyclonedx/spdx.pyc
+${PYSITELIB}/cyclonedx/spdx.pyo
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
