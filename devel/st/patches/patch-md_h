@@ -1,10 +1,10 @@
-$NetBSD: patch-md_h,v 1.2 2015/04/18 20:41:44 joerg Exp $
+$NetBSD: patch-md_h,v 1.3 2022/09/18 15:03:33 he Exp $
 
-Support for NetBSD/amd64 and NetBSD/arm.
+Support for NetBSD/amd64, NetBSD/arm and NetBSD/powerpc.
 
---- md.h~	2007-03-14 02:53:10.000000000 +0000
+--- md.h.orig	2009-10-01 18:46:43.000000000 +0000
 +++ md.h
-@@ -482,6 +482,10 @@ extern void _st_md_cxt_restore(jmp_buf e
+@@ -486,6 +486,12 @@ extern void _st_md_cxt_restore(jmp_buf e
  #define MD_JB_SP   0
  #elif defined(__vax__)
  #define MD_JB_SP   2
@@ -12,6 +12,8 @@ Support for NetBSD/amd64 and NetBSD/arm.
 +#define MD_JB_SP   _JB_RSP
 +#elif defined(__arm__)
 +#define MD_JB_SP   _JB_REG_R13
++#elif defined(__powerpc__)
++#define MD_JB_SP  0
  #else
  #error Unknown CPU architecture
  #endif
