@@ -1,10 +1,27 @@
-$NetBSD: patch-ab,v 1.4 2019/11/02 15:46:05 rillig Exp $
+$NetBSD: patch-ab,v 1.5 2022/09/18 13:03:12 nia Exp $
 
+Link with the compiler so LDFLAGS applies properly.
 Add support for DragonFly.
 
 --- configure.orig	2006-09-10 00:32:55.000000000 +0000
 +++ configure
-@@ -7381,7 +7381,7 @@ echo "${ECHO_T}$tcl_cv_ld_elf" >&6
+@@ -7279,13 +7279,13 @@ echo "$as_me: WARNING: 64bit mode not su
+ 	NetBSD-*|FreeBSD-[1-2].*)
+ 	    # NetBSD/SPARC needs -fPIC, -fpic will not do.
+ 	    SHLIB_CFLAGS="-fPIC"
+-	    SHLIB_LD="ld -Bshareable -x"
++	    SHLIB_LD="cc -shared"
+ 	    SHLIB_LD_LIBS='${LIBS}'
+ 	    SHLIB_SUFFIX=".so"
+ 	    DL_OBJS="tclLoadDl.o"
+ 	    DL_LIBS=""
+ 	    CC_SEARCH_FLAGS='-Wl,-rpath,${LIB_RUNTIME_DIR},-rpath,${LIB_PGTCL_RUNTIME_DIR}'
+-	    LD_SEARCH_FLAGS='-rpath ${LIB_RUNTIME_DIR} -rpath ${LIB_PGTCL_RUNTIME_DIR}'
++	    LD_SEARCH_FLAGS='-Wl,-R${LIB_RUNTIME_DIR} -Wl,-R${LIB_PGTCL_RUNTIME_DIR}'
+ 	    echo "$as_me:$LINENO: checking for ELF" >&5
+ echo $ECHO_N "checking for ELF... $ECHO_C" >&6
+ if test "${tcl_cv_ld_elf+set}" = set; then
+@@ -7381,10 +7381,10 @@ echo "${ECHO_T}$tcl_cv_ld_elf" >&6
  	    UNSHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.a'
  	    TCL_LIB_VERSIONS_OK=nodots
  	    ;;
@@ -12,7 +29,11 @@ Add support for DragonFly.
 +	FreeBSD-*|DragonFly-*)
  	    # FreeBSD 3.* and greater have ELF.
  	    SHLIB_CFLAGS="-fPIC"
- 	    SHLIB_LD="ld -Bshareable -x"
+-	    SHLIB_LD="ld -Bshareable -x"
++	    SHLIB_LD="cc $LDFLAGS -shared"
+ 	    SHLIB_LD_LIBS='${LIBS}'
+ 	    SHLIB_SUFFIX=".so"
+ 	    DL_OBJS="tclLoadDl.o"
 @@ -7398,14 +7398,9 @@ echo "${ECHO_T}$tcl_cv_ld_elf" >&6
  		CFLAGS="$CFLAGS -pthread"
  	    	LDFLAGS="$LDFLAGS -pthread"
@@ -31,6 +52,15 @@ Add support for DragonFly.
  	    ;;
  	Darwin-*)
  	    CFLAGS_OPTIMIZE="-Os"
+@@ -7639,7 +7634,7 @@ _ACEOF
+ 	    # QNX RTP
+ 	    # This may work for all QNX, but it was only reported for v6.
+ 	    SHLIB_CFLAGS="-fPIC"
+-	    SHLIB_LD="ld -Bshareable -x"
++	    SHLIB_LD="cc -shared"
+ 	    SHLIB_LD_LIBS=""
+ 	    SHLIB_SUFFIX=".so"
+ 	    DL_OBJS="tclLoadDl.o"
 @@ -7941,7 +7936,7 @@ fi;
  		    ;;
  		IRIX*)
