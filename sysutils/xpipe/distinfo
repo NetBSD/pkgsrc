@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/09/18 22:38:44 jschauma Exp $
+
+BLAKE2s (xpipe-2.2.tar.gz) = 88d5d04b765bbbabbac366aa91d5f7f7d8ec610dc25dc275a54a5bd27445aae1
+SHA512 (xpipe-2.2.tar.gz) = 768cba31c265a0b7f150f29804c150d660eb97aeb2f28aa47ee018fdd60563523c3d753aabe1efaf363c02353f09158fda5d3da87a182a227c52fe3737d1a424
+Size (xpipe-2.2.tar.gz) = 14611 bytes
