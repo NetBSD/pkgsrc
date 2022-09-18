@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22207 2022/09/18 08:25:48 bsiegert Exp $
+$NetBSD: TODO,v 1.22208 2022/09/18 09:59:18 wiz Exp $
 
 Suggested new packages
 ======================
@@ -826,6 +826,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o h8300-elf-gcc-7.1.0
 	o hamster-applet-2.32.1
 	o hanzim-3.5
+	o harfbuzz-5.2.0
 	o harminv-1.4.1
 	o hashcash-1.23
 	o haskell-mode-13.20
@@ -838,7 +839,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o horde-5.2.9
 	o howm-1.4.7
 	o hplip-3.22.2
+	o hs-bifunctors-5.5.13
 	o hs-hie-bios-0.10.0
+	o hs-th-abstraction-0.4.5.0
 	o html2wml-0.4.11
 	o http_load-20140814
 	o hyperscan-5.4.0
@@ -979,6 +982,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libxslt-1.1.37 [now a GNOME project: https://gitlab.gnome.org/GNOME/libxslt]
 	o libzookeeper-3.7.0
 	o libzrtpcpp-4.6.6
+	o lighttpd-1.4.67
 	o lilypond-2.22.2
 	o lincvs-2.1.4 [now called CrossVC]
 	o linpsk-1.2 [ld: cannot find -lqt-mt with qt4]
@@ -1074,11 +1078,13 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o nas-auscope-1.9.4
 	o ncview-2.1.8
 	o nedit-5.7
+	o neon-0.32.4
 	o netbt-hcidump-5.58
 	o netramet-50
 	o newmail-1.0.2
 	o nickle-2.90
 	o nios2-binutils-2.36.1
+	o noto-emoji-ttf-2.038
 	o npm-8.19.1
 	o ns-3.14.1
 	o ns-plugger-common-5.1.3
@@ -1278,6 +1284,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o privoxy-3.0.33
 	o profit-2.5.3
 	o proj-8.0.0
+	o protobuf-21.6
 	o ps2eps-1.70
 	o psmisc-22.20
 	o pspp-1.4.1
@@ -1293,6 +1300,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-barman-3.0.1
 	o py-cassa-1.11.0
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
+	o py-cyclonedx-python-lib-3.1.0
 	o py-django-4.1
 	o py-django-debug-toolbar-3.2.1
 	o py-django-tagging-0.5.0
@@ -1395,7 +1403,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rudiments-1.4.2
 	o rump-20131213
 	o rust-1.63.0
-	o rust-analyzer-0.0.20220905 [requires rust 1.63.0]
+	o rust-analyzer-0.0.20220912 [requires rust 1.63.0]
 	o rvault-0.4
 	o rvm-1.20
 	o sabayon-2.30.1
@@ -1550,6 +1558,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ufoai-2.3.1
 	o uhttpmock-0.5.3
 	o unicode-screensaver-0.5.2
+	o unifont-15.0.01
 	o units-2.21
 	o upower-0.99.20 [switches to build with meson]
 	o urlgrabber-3.10.2
