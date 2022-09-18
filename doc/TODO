@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22206 2022/09/18 06:13:13 mef Exp $
+$NetBSD: TODO,v 1.22207 2022/09/18 08:25:48 bsiegert Exp $
 
 Suggested new packages
 ======================
@@ -777,7 +777,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o go-logrus-1.8.1
 	o go-mkcert-1.4.3
 	o go-org-1.5.0
-	o go-protobuf-1.5.2
 	o go-siphash-1.2.2
 	o go-text-0.3.6
 	o go-toml-pelletier-1.9.0
