@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2022/04/25 09:09:58 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/09/18 11:46:32 wiz Exp $
 bin/bdfimplode
 bin/hex2bdf
 bin/hex2otf
@@ -59,9 +59,13 @@ share/fonts/X11/misc/unifont.pcf.gz
 share/fonts/X11/misc/unifont_csur.pcf.gz
 share/fonts/X11/misc/unifont_sample.pcf.gz
 share/fonts/consolefonts/Unifont-APL8x16.psf.gz
+share/fonts/truetype/unifont/unifont.otf
 share/fonts/truetype/unifont/unifont.ttf
+share/fonts/truetype/unifont/unifont_csur.otf
 share/fonts/truetype/unifont/unifont_csur.ttf
+share/fonts/truetype/unifont/unifont_jp.otf
 share/fonts/truetype/unifont/unifont_sample.ttf
+share/fonts/truetype/unifont/unifont_upper.otf
 share/fonts/truetype/unifont/unifont_upper.ttf
 share/unifont/plane00-combining.txt
 share/unifont/unifont.bmp.gz
