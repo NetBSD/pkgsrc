@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2022/05/23 19:05:34 plunky Exp $
+# $NetBSD: Makefile,v 1.2 2022/09/18 05:40:01 mef Exp $
 #
 
-DISTNAME=	fstl-0.9.4
+DISTNAME=	fstl-0.10.0
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fstl-app/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
