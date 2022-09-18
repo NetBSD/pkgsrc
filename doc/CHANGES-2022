@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4617 2022/09/18 16:26:36 pin Exp $
+$NetBSD: CHANGES-2022,v 1.4618 2022/09/18 20:02:35 he Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6801,3 +6801,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated print/cups-filters to 1.28.15nb2 [he 2022-09-18]
 	Updated sysutils/macchina to 6.1.5 [pin 2022-09-18]
 	Updated textproc/csvlens to 0.1.9 [pin 2022-09-18]
+	Updated net/ldns to 1.8.3 [he 2022-09-18]
