@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2022/01/10 18:17:36 wiz Exp $
+$NetBSD: distinfo,v 1.19 2022/09/18 12:02:00 he Exp $
 
-BLAKE2s (exabgp-4.2.17.tar.gz) = a5d6d55689ae8160a77cc5b4e1f4aa0fda48a5571972a4089da14563770eadb2
-SHA512 (exabgp-4.2.17.tar.gz) = 2000856f540dcaed12dfaf54b689f6b04670f0ec8f19ec7a811ea8e54663afec68a7ae97ed79a001cc09ed42e6a1c5bd2d94ae0c3e3c8bde2da446cf00d66374
-Size (exabgp-4.2.17.tar.gz) = 2933104 bytes
+BLAKE2s (exabgp-4.2.21.tar.gz) = 16efdd84722201dc7dac7297a9367535c1b5184f952728123a856a93ec4e302a
+SHA512 (exabgp-4.2.21.tar.gz) = 0efc7143191e8b557297e9329354c01e2418e0c4c45753941eba3a1f063e77d17a0efa7a14a3062764e45e709f0598f491c10e2c02e751590bb7c0943b61932b
+Size (exabgp-4.2.21.tar.gz) = 2933721 bytes
