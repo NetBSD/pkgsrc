@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4603 2022/09/18 11:54:06 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4604 2022/09/18 11:55:42 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6787,3 +6787,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated fonts/unifont to 15.0.01 [wiz 2022-09-18]
 	Updated www/neon to 0.32.4 [wiz 2022-09-18]
 	Updated security/py-cyclonedx-python-lib to 3.1.0 [wiz 2022-09-18]
+	Updated textproc/sift to 0.9.0 [bsiegert 2022-09-18]
