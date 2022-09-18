@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4611 2022/09/18 12:52:59 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4612 2022/09/18 12:54:27 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6795,3 +6795,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/ruby-rex-socket to 0.1.43 [taca 2022-09-18]
 	Updated cad/klayout to 0.27.11 [mef 2022-09-18]
 	Updated www/ruby-aws-partitions to 1.631.0 [taca 2022-09-18]
+	Updated www/ruby-aws-sdk-core to 3.149.0 [taca 2022-09-18]
