@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2020/05/14 19:33:30 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2022/09/18 12:47:15 nia Exp $
 
 DISTNAME=		pearpc-0.5
+PKGREVISION=		1
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pearpc/}
 EXTRACT_SUFX=		.tar.bz2
@@ -11,8 +12,6 @@ COMMENT=		PowerPC emulator
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++03
-
-BUILDLINK_TRANSFORM+=	rm:-Wall
 
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 CONF_FILES=		${EGDIR}/ppccfg.example ${PKG_SYSCONFDIR}/ppccfg.conf
@@ -27,14 +26,14 @@ MAKE_ENV+=	AM_CCASFLAGS=${CCASFLAGS:Q}
 
 .if ${MACHINE_ARCH} == "i386"
 BUILD_DEPENDS+=		nasm-[0-9]*:../../devel/nasm
-CONFIGURE_ARGS+=	--enable-cpu=jitc_x86
 .endif
 
+# JIT is incompatible with PIE on NetBSD/x86 and causes other compilation
+# failures on NetBSD 9.99.x.
+CONFIGURE_ARGS+=	--enable-cpu=generic
 CONFIGURE_ARGS+=	--disable-debug
 
 INSTALLATION_DIRS=	share/${PKGBASE} ${EGDIR} bin
-
-NOT_PAX_MPROTECT_SAFE+=	share/pearpc/ppc
 
 do-install:
 	${SED}	-e "s,@PREFIX@,${PREFIX}," \
