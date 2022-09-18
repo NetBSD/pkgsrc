@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3797 2022/09/15 17:51:06 adam Exp $
+# $NetBSD: Makefile,v 1.3798 2022/09/18 08:16:54 bsiegert Exp $
 #
 
 COMMENT=	Development utilities
@@ -424,7 +424,6 @@ SUBDIR+=	gnustep-examples
 SUBDIR+=	gnustep-make
 SUBDIR+=	gnustep-objc
 SUBDIR+=	gnustep-objc-lf2
-SUBDIR+=	go-check
 SUBDIR+=	go-ed25519
 SUBDIR+=	go-flags-svent
 SUBDIR+=	go-gocode
