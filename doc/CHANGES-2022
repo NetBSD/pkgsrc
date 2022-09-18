@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4615 2022/09/18 14:42:08 he Exp $
+$NetBSD: CHANGES-2022,v 1.4616 2022/09/18 16:25:19 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6799,3 +6799,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/gallery-dl to 1.23.1 [leot 2022-09-18]
 	Updated sysutils/zidrav to 1.20nb1 [he 2022-09-18]
 	Updated print/cups-filters to 1.28.15nb2 [he 2022-09-18]
+	Updated sysutils/macchina to 6.1.5 [pin 2022-09-18]
