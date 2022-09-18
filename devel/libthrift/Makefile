@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2022/06/28 11:31:47 wiz Exp $
+# $NetBSD: Makefile,v 1.93 2022/09/18 11:45:47 he Exp $
 
 PKGREVISION= 2
 .include "../../devel/thrift/Makefile.common"
@@ -18,6 +18,7 @@ PKGCONFIG_OVERRIDE=	lib/cpp/thrift-nb.pc.in
 PKGCONFIG_OVERRIDE+=	lib/cpp/thrift-z.pc.in
 PKGCONFIG_OVERRIDE+=	lib/cpp/thrift.pc.in
 
+.include "../../mk/atomic64.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/libevent/buildlink3.mk"
