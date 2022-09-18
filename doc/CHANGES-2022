@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4599 2022/09/18 11:30:47 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.4600 2022/09/18 11:44:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6783,3 +6783,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added meta-pkgs/bulk-test-go version 20220918 [bsiegert 2022-09-18]
 	Updated www/lighttpd to 1.4.67 [schmonz 2022-09-18]
 	Updated devel/py-approvaltests to 5.11.0 [schmonz 2022-09-18]
+	Updated fonts/noto-emoji-ttf to 2.038 [wiz 2022-09-18]
