@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4598 2022/09/18 11:29:21 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.4599 2022/09/18 11:30:47 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6782,3 +6782,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/grafana to 9.1.5 [triaxx 2022-09-18]
 	Added meta-pkgs/bulk-test-go version 20220918 [bsiegert 2022-09-18]
 	Updated www/lighttpd to 1.4.67 [schmonz 2022-09-18]
+	Updated devel/py-approvaltests to 5.11.0 [schmonz 2022-09-18]
