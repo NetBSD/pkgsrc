@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2021/10/28 20:17:34 pin Exp $
+# $NetBSD: options.mk,v 1.5 2022/09/18 09:49:50 pin Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.ncspot
 PKG_OPTIONS_OPTIONAL_GROUPS=	backend ui
@@ -6,7 +6,7 @@ PKG_OPTIONS_GROUP.backend=	alsa portaudio pulseaudio rodio
 PKG_OPTIONS_GROUP.ui=		ncursesw termion
 
 PKG_SUPPORTED_OPTIONS=	dbus xcb
-PKG_SUGGESTED_OPTIONS=	portaudio ncursesw
+PKG_SUGGESTED_OPTIONS=	portaudio termion
 
 .include "../../mk/bsd.options.mk"
 
@@ -40,7 +40,7 @@ RUSTFLAGS+=		-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.ncursesw}/lib
 .endif
 
 .if !empty(PKG_OPTIONS:Mtermion)
-CARGO_FEATURES+=	cursive/termion-backend
+CARGO_FEATURES+=	termion_backend
 .endif
 
 .if !empty(PKG_OPTIONS:Mdbus)
