@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1015 2022/09/17 16:03:12 pin Exp $
+# $NetBSD: Makefile,v 1.1016 2022/09/18 22:38:44 jschauma Exp $
 #
 
 COMMENT=	System utilities
@@ -907,6 +907,7 @@ SUBDIR+=	xmbmon
 SUBDIR+=	xmeter
 SUBDIR+=	xnc
 SUBDIR+=	xosview
+SUBDIR+=	xpipe
 SUBDIR+=	xplr
 SUBDIR+=	xps
 SUBDIR+=	xuvmstat
