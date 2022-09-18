@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/07/28 22:18:05 fcambus Exp $
+# $NetBSD: Makefile,v 1.7 2022/09/18 12:21:45 nia Exp $
 
 DISTNAME=	swirc-3.3.5
 CATEGORIES=	chat
@@ -19,6 +19,7 @@ MAKE_FLAGS+=	DEST_MANUAL=${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 MAKE_FLAGS+=	DEST_CONFMAN=${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
 
 .include "../../devel/libidn/buildlink3.mk"
+# Relies on ncurses struct internals - cannot use NetBSD libcurses.
 .include "../../devel/ncursesw/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
