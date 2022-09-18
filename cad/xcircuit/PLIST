@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2019/11/10 14:23:59 mef Exp $
+@comment $NetBSD: PLIST,v 1.11 2022/09/18 06:12:57 mef Exp $
 bin/xcircuit
 lib/xcircuit-${PKGVERSION_MAJMIN}/analog.lps
 lib/xcircuit-${PKGVERSION_MAJMIN}/analoglib2.lps
@@ -112,6 +112,7 @@ lib/xcircuit-${PKGVERSION_MAJMIN}/signal.lps
 lib/xcircuit-${PKGVERSION_MAJMIN}/sinusoid.tcl
 lib/xcircuit-${PKGVERSION_MAJMIN}/standard_cells.cir
 lib/xcircuit-${PKGVERSION_MAJMIN}/standard_cells_3V.cir
+lib/xcircuit-${PKGVERSION_MAJMIN}/sue.lps
 lib/xcircuit-${PKGVERSION_MAJMIN}/sue_xc.tcl
 lib/xcircuit-${PKGVERSION_MAJMIN}/synopsys.tcl
 lib/xcircuit-${PKGVERSION_MAJMIN}/symbol.tcl
