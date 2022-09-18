@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.34 2021/10/26 11:05:42 nia Exp $
+$NetBSD: distinfo,v 1.35 2022/09/18 20:04:30 he Exp $
 
 BLAKE2s (gtk-gnutella-1.1.11.tar.bz2) = c8df89d48086fdcdab21c7e2f8a87fe27c51ca10f6dbbd612bc14cdf02a3acb3
 SHA512 (gtk-gnutella-1.1.11.tar.bz2) = 87d2d66b555180c0db7c360106377133b9e1f8ad8d28fc0f9a38498f3b4502a817650f9683cf92919b7d3a1b3602f7136143d2f1c920e10727576c703e233d07
 Size (gtk-gnutella-1.1.11.tar.bz2) = 19966423 bytes
 SHA1 (patch-Configure) = 926736a79a7bc469810f4887b5d0cecfedbac201
 SHA1 (patch-config__h.SH) = 2ed9d100cc044e10f2633a614cfc4100edc4cc02
+SHA1 (patch-src_lib_memusage.c) = db65ae1b7d43326f8b8eacdc95705deba0a94b5d
 SHA1 (patch-src_lib_pow2.h) = f8a36d58f84ef782535e363df6144bbfc766013e
