@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2022/09/18 22:56:14 gutteridge Exp $
+# $NetBSD: Makefile,v 1.98 2022/09/18 23:04:00 gutteridge Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -26,13 +26,13 @@ MAKE_DIRS+=	${PKG_SYSCONFDIR} ${PKG_SYSCONFDIR}/autostart
 MAKE_DIRS+=	${EGDIR} ${EGDIR}/autostart ${EGDIR}/xfconf
 MAKE_DIRS+=	${EGDIR}/xfconf/xfce-perchannel-xml
 
-CONF_FILES=	${EGDIR}/autostart/xscreensaver.desktop					\
-		${PKG_SYSCONFDIR}/autostart/xscreensaver.desktop			\
-		${EGDIR}/xfconf/xfce-perchannel-xml/xfce4-session.xml			\
-		${PKG_SYSCONFDIR}/xfce4/xfconf/xfce-perchannel-xml/xfce4-session.xml	\
-		${EGDIR}/Xft.xrdb							\
-		${PKG_SYSCONFDIR}/xfce4/Xft.xrdb					\
-		${EGDIR}/xinitrc							\
+CONF_FILES=	${EGDIR}/autostart/xscreensaver.desktop			\
+		${PKG_SYSCONFDIR}/autostart/xscreensaver.desktop	\
+		${EGDIR}/xfconf/xfce-perchannel-xml/xfce4-session.xml	\
+		${PKG_SYSCONFDIR}/xfce4/xfconf/xfce-perchannel-xml/xfce4-session.xml \
+		${EGDIR}/Xft.xrdb					\
+		${PKG_SYSCONFDIR}/xfce4/Xft.xrdb			\
+		${EGDIR}/xinitrc					\
 		${PKG_SYSCONFDIR}/xfce4/xinitrc
 
 .if ${OPSYS} == Darwin
