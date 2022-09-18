@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2022/09/10 16:13:39 pin Exp $
+# $NetBSD: Makefile,v 1.18 2022/09/18 09:47:08 pin Exp $
 
 DISTNAME=	starship-1.10.3
 CATEGORIES=	shells
@@ -10,6 +10,7 @@ HOMEPAGE=	https://github.com/starship/starship/
 COMMENT=	Fast, customizable cross-shell prompt
 LICENSE=	isc
 
+BUILD_DEPENDS+=		cmake-[0-9]*:../../devel/cmake
 # The libc and rust-battery crates currently have limited platform support
 ONLY_FOR_PLATFORM=	Darwin-*-* DragonFly-*-* FreeBSD-*-* Linux-*-* NetBSD-*-*
 
