@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4614 2022/09/18 13:50:00 he Exp $
+$NetBSD: CHANGES-2022,v 1.4615 2022/09/18 14:42:08 he Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6798,3 +6798,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/ruby-aws-sdk-core to 3.149.0 [taca 2022-09-18]
 	Updated net/gallery-dl to 1.23.1 [leot 2022-09-18]
 	Updated sysutils/zidrav to 1.20nb1 [he 2022-09-18]
+	Updated print/cups-filters to 1.28.15nb2 [he 2022-09-18]
