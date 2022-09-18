@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.61 2022/07/17 16:19:04 leot Exp $
+@comment $NetBSD: PLIST,v 1.62 2022/09/18 13:34:20 leot Exp $
 bin/gallery-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -99,6 +99,9 @@ ${PYSITELIB}/gallery_dl/extractor/booru.pyo
 ${PYSITELIB}/gallery_dl/extractor/bunkr.py
 ${PYSITELIB}/gallery_dl/extractor/bunkr.pyc
 ${PYSITELIB}/gallery_dl/extractor/bunkr.pyo
+${PYSITELIB}/gallery_dl/extractor/catbox.py
+${PYSITELIB}/gallery_dl/extractor/catbox.pyc
+${PYSITELIB}/gallery_dl/extractor/catbox.pyo
 ${PYSITELIB}/gallery_dl/extractor/comicvine.py
 ${PYSITELIB}/gallery_dl/extractor/comicvine.pyc
 ${PYSITELIB}/gallery_dl/extractor/comicvine.pyo
@@ -198,6 +201,9 @@ ${PYSITELIB}/gallery_dl/extractor/hiperdex.pyo
 ${PYSITELIB}/gallery_dl/extractor/hitomi.py
 ${PYSITELIB}/gallery_dl/extractor/hitomi.pyc
 ${PYSITELIB}/gallery_dl/extractor/hitomi.pyo
+${PYSITELIB}/gallery_dl/extractor/hotleak.py
+${PYSITELIB}/gallery_dl/extractor/hotleak.pyc
+${PYSITELIB}/gallery_dl/extractor/hotleak.pyo
 ${PYSITELIB}/gallery_dl/extractor/idolcomplex.py
 ${PYSITELIB}/gallery_dl/extractor/idolcomplex.pyc
 ${PYSITELIB}/gallery_dl/extractor/idolcomplex.pyo
@@ -516,6 +522,9 @@ ${PYSITELIB}/gallery_dl/extractor/xvideos.pyo
 ${PYSITELIB}/gallery_dl/extractor/ytdl.py
 ${PYSITELIB}/gallery_dl/extractor/ytdl.pyc
 ${PYSITELIB}/gallery_dl/extractor/ytdl.pyo
+${PYSITELIB}/gallery_dl/extractor/zerochan.py
+${PYSITELIB}/gallery_dl/extractor/zerochan.pyc
+${PYSITELIB}/gallery_dl/extractor/zerochan.pyo
 ${PYSITELIB}/gallery_dl/formatter.py
 ${PYSITELIB}/gallery_dl/formatter.pyc
 ${PYSITELIB}/gallery_dl/formatter.pyo
