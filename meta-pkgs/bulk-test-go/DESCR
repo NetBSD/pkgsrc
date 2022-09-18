@@ -1,0 +1,2 @@
+Meta-package for testing Go updates. It depends on all packages written
+in Go.
