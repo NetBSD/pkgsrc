@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2022/09/18 22:38:44 jschauma Exp $
+bin/xpipe
+man/man1/xpipe.1
