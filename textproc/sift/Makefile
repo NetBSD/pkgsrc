@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.53 2022/09/07 09:32:18 bsiegert Exp $
+# $NetBSD: Makefile,v 1.54 2022/09/18 11:54:51 bsiegert Exp $
 
-DISTNAME=	sift-0.6.0
-PKGREVISION=	51
+DISTNAME=	sift-0.9.0
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=svent/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -11,14 +10,10 @@ HOMEPAGE=	https://sift-tool.org/
 COMMENT=	Fast and powerful open source alternative to grep
 LICENSE=	gnu-gpl-v3
 
-GO_DIST_BASE=	${DISTNAME}
-GO_SRCPATH=	github.com/svent/sift
+post-extract:
+	${CP} files/go.mod files/go.sum ${WRKSRC}/
 
-post-install:
-	find ${DESTDIR}${PREFIX}/gopkg/src/${GO_SRCPATH} -name "*.orig" -exec ${RM} \{\} \;
+.include "go-modules.mk"
 
-.include "../../security/go-crypto/buildlink3.mk"
-.include "../../devel/go-nbreader/buildlink3.mk"
-.include "../../devel/go-flags-svent/buildlink3.mk"
-.include "../../lang/go/go-package.mk"
+.include "../../lang/go/go-module.mk"
 .include "../../mk/bsd.pkg.mk"
