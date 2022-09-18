@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4593 2022/09/18 08:25:48 bsiegert Exp $
+$NetBSD: CHANGES-2022,v 1.4594 2022/09/18 09:48:24 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6777,3 +6777,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated cad/xcircuit to 3.10.30 [mef 2022-09-18]
 	Removed devel/go-check [bsiegert 2022-09-18]
 	Removed devel/go-protobuf [bsiegert 2022-09-18]
+	Updated devel/difftastic to 0.36.1 [pin 2022-09-18]
