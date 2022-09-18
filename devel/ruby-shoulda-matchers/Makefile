@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2022/02/12 13:42:29 taca Exp $
+# $NetBSD: Makefile,v 1.20 2022/09/18 12:32:00 taca Exp $
 
-DISTNAME=	shoulda-matchers-5.1.0
-PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
-CATEGORIES=	devel ruby
+DISTNAME=	shoulda-matchers-5.2.0
+CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://thoughtbot.com/community/
@@ -12,7 +11,7 @@ LICENSE=	mit
 DEPENDS+=	${RUBY_ACTIVESUPPORT_DEPENDS}
 
 USE_LANGUAGES=		# none
-RUBY_RAILS_ACCEPTED=	# defined
+RUBY_RAILS_ACCEPTED=	# empty
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
