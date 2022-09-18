@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4595 2022/09/18 09:50:12 pin Exp $
+$NetBSD: CHANGES-2022,v 1.4596 2022/09/18 10:09:25 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6779,3 +6779,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed devel/go-protobuf [bsiegert 2022-09-18]
 	Updated devel/difftastic to 0.36.1 [pin 2022-09-18]
 	Updated audio/ncspot to 0.11.1 [pin 2022-09-18]
+	Updated www/grafana to 9.1.5 [triaxx 2022-09-18]
