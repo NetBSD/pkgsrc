@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22205 2022/09/17 10:19:21 bsiegert Exp $
+$NetBSD: TODO,v 1.22206 2022/09/18 06:13:13 mef Exp $
 
 Suggested new packages
 ======================
@@ -1602,7 +1602,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o x16-rom-38
 	o x2vnc-1.31
 	o xaric-0.13.9
-	o xcircuit-3.10.30
 	o xcoral-3.14
 	o xcursor-capitaine-4
 	o xerces-j-2.4.0 [pkg/21725]

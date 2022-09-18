@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4590 2022/09/18 06:03:06 mef Exp $
+$NetBSD: CHANGES-2022,v 1.4591 2022/09/18 06:13:13 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6774,3 +6774,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated misc/libreoffice to 7.4.1.2 [ryoon 2022-09-17]
 	Updated cad/fstl to 0.10.0 [mef 2022-09-18]
 	Updated cad/py-gdstk to 0.9.0 [mef 2022-09-18]
+	Updated cad/xcircuit to 3.10.30 [mef 2022-09-18]
