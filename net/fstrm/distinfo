@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:05:37 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/09/18 12:11:28 he Exp $
 
-BLAKE2s (fstrm-0.6.0.tar.gz) = dcf37fac44a1b8980eb913f45b9ef3175321cdb1d233a6fc178251f4d9d3d073
-SHA512 (fstrm-0.6.0.tar.gz) = 8e327f40fb49b36998d8bb9353b30b9924630b85adf1e4462ce4b456daa7eea727892a59f43ddd48de5bf5059a450fef54726b09af6d7f210fa182c4055d65f4
-Size (fstrm-0.6.0.tar.gz) = 135214 bytes
-SHA1 (patch-libmy_argv.c) = 1caf771043eb6648a04da402c33607744542cb04
+BLAKE2s (fstrm-0.6.1.tar.gz) = 1147d82b3f969014052d78313c20ecce31beb251884ec7515f0461a8b437c466
+SHA512 (fstrm-0.6.1.tar.gz) = 7bf2728e2d0d1fdbd4e93069ddb03a01dc56909dbac57650ed530c80f761170b257c7191a3d789d4661df1f09c15594f20ec93a4eb5e5deb7ea3a7eabe56806c
+Size (fstrm-0.6.1.tar.gz) = 135425 bytes
