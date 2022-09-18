@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.47 2020/05/03 17:22:50 rillig Exp $
+# $NetBSD: Makefile,v 1.48 2022/09/18 22:46:25 he Exp $
 
 DISTNAME=	delegate9.9.1
 PKGNAME=	delegate-9.9.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	http://www.delegate.org/anonftp/DeleGate/
 MASTER_SITES+=	ftp://ftp.u-aizu.ac.jp/pub/net/DeleGate/delegate.org/
