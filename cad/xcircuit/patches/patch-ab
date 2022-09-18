@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.14 2018/02/07 11:58:31 hauke Exp $
+$NetBSD: patch-ab,v 1.15 2022/09/18 06:12:57 mef Exp $
 
 Hunt down, stomp out and eradicate bashisms.
 
@@ -116,7 +116,7 @@ Hunt down, stomp out and eradicate bashisms.
  
      # Construct shared library build arguments the painful way
      # This is not expected to be necessary, so the number of
-@@ -9046,7 +9048,7 @@ echo "Configuration results:"
+@@ -9046,7 +9046,7 @@ echo "Configuration results:"
  echo "----------------------------------------------------"
  echo ""
  
@@ -125,7 +125,7 @@ Hunt down, stomp out and eradicate bashisms.
     if test "x$PYTHON" != x; then
        echo "Using Python interface (not recommended)"
     else
-@@ -9059,7 +9061,7 @@ else
+@@ -9059,7 +9059,7 @@ else
  fi
  echo ""
  
