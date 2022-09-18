@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2022/06/27 15:29:14 fcambus Exp $
+# $NetBSD: Makefile,v 1.8 2022/09/18 14:54:39 he Exp $
 
 DISTNAME=	mimalloc-2.0.6
 CATEGORIES=	devel
@@ -20,4 +20,5 @@ INSTALLATION_DIRS+=	lib/cmake/mimalloc
 post-install:
 	${RM} -f ${DESTDIR}${PREFIX}/lib/mimalloc.o
 
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
