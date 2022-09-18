@@ -1,0 +1,15 @@
+$NetBSD: patch-random_Makefile.in,v 1.1 2022/09/18 08:42:45 nros Exp $
+
+* Support removal of -O and -Oz compiler options
+
+--- random/Makefile.in.orig	2022-09-18 07:52:40.446196827 +0000
++++ random/Makefile.in
+@@ -409,7 +409,7 @@ jitterentropy-base.c jitterentropy.h jit
+ @ENABLE_O_FLAG_MUNGING_FALSE@o_flag_munging = cat
+ 
+ # The rndjent module needs to be compiled without optimization.  */
+-@ENABLE_O_FLAG_MUNGING_TRUE@o_flag_munging = sed -e 's/-O\([1-9sg][1-9sg]*\)/-O0/g' -e 's/-Ofast/-O0/g'
++@ENABLE_O_FLAG_MUNGING_TRUE@o_flag_munging = sed -e 's/-O\([1-9sgz][1-9sgz]*\)/-O0/g' -e 's/-Ofast/-O0/g' -e 's/-O /-O0 /g'
+ all: all-am
+ 
+ .SUFFIXES:
