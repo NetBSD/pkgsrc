@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2022/08/02 20:09:00 triaxx Exp $
+# $NetBSD: Makefile,v 1.7 2022/09/19 03:34:15 triaxx Exp $
 
-DISTNAME=	dotclear-2.22
-PKGREVISION=	1
+DISTNAME=	dotclear-2.23.1
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	https://download.dotclear.org/latest/ \
