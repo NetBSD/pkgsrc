@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.10 2022/06/08 13:43:38 bacon Exp $
+@comment $NetBSD: PLIST,v 1.11 2022/09/19 13:13:28 bacon Exp $
 bin/auto-append-line
 bin/auto-ask
 bin/auto-backup-file
+bin/auto-clean-pkgsrc
 bin/auto-fastest-mirror
 bin/auto-get-ip
 bin/auto-get-netmask
@@ -25,6 +26,7 @@ bin/auto-ssh-authorize
 bin/auto-ssh-reverse-authorize
 bin/auto-update-pkgsrc
 bin/auto-using-pkgsrc
+bin/auto-wacom-map-display
 man/man1/auto-add-swap.1
 man/man1/auto-admin.1
 man/man1/auto-update-system.1
@@ -49,7 +51,6 @@ sbin/auto-change-primary-group
 sbin/auto-change-uid
 sbin/auto-check-ports-branch
 sbin/auto-clean-disk
-sbin/auto-clean-pkgsrc
 sbin/auto-clean-ports
 sbin/auto-clean-tmp
 sbin/auto-cuda-install
@@ -155,8 +156,10 @@ sbin/auto-update-system
 sbin/auto-upgrade-base
 sbin/auto-user-admin
 sbin/auto-useradd
+sbin/auto-wacom-setup
 sbin/auto-web-self-sign
 sbin/auto-web-setup
+sbin/auto-webcam-setup
 sbin/auto-wifi-failover
 sbin/auto-write-cache-toggle
 sbin/auto-xdm-toggle
