@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4621 2022/09/18 22:47:08 he Exp $
+$NetBSD: CHANGES-2022,v 1.4622 2022/09/19 03:34:45 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6805,3 +6805,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/syncthing to 1.21.0 [triaxx 2022-09-18]
 	Added sysutils/xpipe version 2.2 [jschauma 2022-09-18]
 	Updated net/delegate to 9.9.1nb3 [he 2022-09-18]
+	Updated www/php-dotclear to 2.23.1 [triaxx 2022-09-19]
