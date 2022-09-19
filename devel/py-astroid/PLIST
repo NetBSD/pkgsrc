@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2022/07/18 18:57:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.20 2022/09/19 07:51:50 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -13,6 +13,9 @@ ${PYSITELIB}/astroid/__pkginfo__.pyo
 ${PYSITELIB}/astroid/_ast.py
 ${PYSITELIB}/astroid/_ast.pyc
 ${PYSITELIB}/astroid/_ast.pyo
+${PYSITELIB}/astroid/_cache.py
+${PYSITELIB}/astroid/_cache.pyc
+${PYSITELIB}/astroid/_cache.pyo
 ${PYSITELIB}/astroid/arguments.py
 ${PYSITELIB}/astroid/arguments.pyc
 ${PYSITELIB}/astroid/arguments.pyo
