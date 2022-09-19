@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4629 2022/09/19 15:19:34 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4630 2022/09/19 16:17:39 abs Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6820,3 +6820,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/py-zope.proxy to 4.5.1 [adam 2022-09-19]
 	Updated sysutils/auto-admin to 0.7.13 [bacon 2022-09-19]
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2022Q3 branch [wiz 2022-09-19]
+	Updated databases/p5-Rose-DB-Object to 0.820 [abs 2022-09-19]
