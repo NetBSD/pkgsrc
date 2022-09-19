@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2022/05/26 21:08:37 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/09/19 03:34:15 triaxx Exp $
 share/dotclear/admin/_charte.php
 share/dotclear/admin/auth.php
 share/dotclear/admin/blog.php
@@ -89,7 +89,8 @@ share/dotclear/admin/images/menu/update-dark.svg
 share/dotclear/admin/images/menu/update.svg
 share/dotclear/admin/images/menu/user-pref.svg
 share/dotclear/admin/images/menu/users.svg
-share/dotclear/admin/images/module.png
+share/dotclear/admin/images/module-dark.svg
+share/dotclear/admin/images/module.svg
 share/dotclear/admin/images/noscreenshot.png
 share/dotclear/admin/images/outgoing-link.svg
 share/dotclear/admin/images/pagination/first.svg
@@ -863,7 +864,6 @@ share/dotclear/plugins/dcCKEditor/js/ckeditor/lang/uk.js
 share/dotclear/plugins/dcCKEditor/js/ckeditor/lang/vi.js
 share/dotclear/plugins/dcCKEditor/js/ckeditor/lang/zh-cn.js
 share/dotclear/plugins/dcCKEditor/js/ckeditor/lang/zh.js
-share/dotclear/plugins/dcCKEditor/js/ckeditor/package-lock.json
 share/dotclear/plugins/dcCKEditor/js/ckeditor/plugins/a11yhelp/dialogs/a11yhelp.js
 share/dotclear/plugins/dcCKEditor/js/ckeditor/plugins/a11yhelp/dialogs/lang/_translationstatus.txt
 share/dotclear/plugins/dcCKEditor/js/ckeditor/plugins/a11yhelp/dialogs/lang/af.js
