@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2022/02/23 08:27:29 adam Exp $
+$NetBSD: distinfo,v 1.11 2022/09/19 08:36:20 adam Exp $
 
-BLAKE2s (httptools-0.4.0.tar.gz) = ef82085255352fc27859ede5ff0e0f3772454f6f4068ffa8ca0d36d433dcba3f
-SHA512 (httptools-0.4.0.tar.gz) = 19cfe9209844921c43905212eaf272334fd0a360712fdce495797abd6836c946108d9fe75d921d88d469b7afdc2bbfe6090f953748afe1d609f3e17f1f8c43d8
-Size (httptools-0.4.0.tar.gz) = 174553 bytes
+BLAKE2s (httptools-0.5.0.tar.gz) = 75574abdae51c79b967c3e7cd1a76309cd23995e8361a2c10cbc7075e6eac4b1
+SHA512 (httptools-0.5.0.tar.gz) = 36a10541eaa44c1fe42f79d793d75d1828a536f0e111e61b046e5a055ddaed77cdc1f6f44d98eb9752560bcb62890a54d17cc602e3641b59ea6be068656428ac
+Size (httptools-0.5.0.tar.gz) = 177697 bytes
