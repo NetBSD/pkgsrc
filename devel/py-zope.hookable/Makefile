@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2022/02/11 11:20:07 adam Exp $
+# $NetBSD: Makefile,v 1.6 2022/09/19 08:46:29 adam Exp $
 
-DISTNAME=	zope.hookable-5.1.0
+DISTNAME=	zope.hookable-5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zope.hookable/}
