@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2020/08/21 12:42:13 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/09/19 08:44:59 adam Exp $
 bin/zope-testrunner
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -24,6 +24,9 @@ ${PYSITELIB}/zope/testrunner/coverage.pyo
 ${PYSITELIB}/zope/testrunner/debug.py
 ${PYSITELIB}/zope/testrunner/debug.pyc
 ${PYSITELIB}/zope/testrunner/debug.pyo
+${PYSITELIB}/zope/testrunner/digraph.py
+${PYSITELIB}/zope/testrunner/digraph.pyc
+${PYSITELIB}/zope/testrunner/digraph.pyo
 ${PYSITELIB}/zope/testrunner/eggsupport.py
 ${PYSITELIB}/zope/testrunner/eggsupport.pyc
 ${PYSITELIB}/zope/testrunner/eggsupport.pyo
@@ -87,6 +90,10 @@ ${PYSITELIB}/zope/testrunner/tb_format.pyo
 ${PYSITELIB}/zope/testrunner/tests/__init__.py
 ${PYSITELIB}/zope/testrunner/tests/__init__.pyc
 ${PYSITELIB}/zope/testrunner/tests/__init__.pyo
+${PYSITELIB}/zope/testrunner/tests/logsupport/log.ini
+${PYSITELIB}/zope/testrunner/tests/test_digraph.py
+${PYSITELIB}/zope/testrunner/tests/test_digraph.pyc
+${PYSITELIB}/zope/testrunner/tests/test_digraph.pyo
 ${PYSITELIB}/zope/testrunner/tests/test_doctest.py
 ${PYSITELIB}/zope/testrunner/tests/test_doctest.pyc
 ${PYSITELIB}/zope/testrunner/tests/test_doctest.pyo
@@ -96,12 +103,18 @@ ${PYSITELIB}/zope/testrunner/tests/test_filter.pyo
 ${PYSITELIB}/zope/testrunner/tests/test_find.py
 ${PYSITELIB}/zope/testrunner/tests/test_find.pyc
 ${PYSITELIB}/zope/testrunner/tests/test_find.pyo
+${PYSITELIB}/zope/testrunner/tests/test_logsupport.py
+${PYSITELIB}/zope/testrunner/tests/test_logsupport.pyc
+${PYSITELIB}/zope/testrunner/tests/test_logsupport.pyo
 ${PYSITELIB}/zope/testrunner/tests/test_runner.py
 ${PYSITELIB}/zope/testrunner/tests/test_runner.pyc
 ${PYSITELIB}/zope/testrunner/tests/test_runner.pyo
 ${PYSITELIB}/zope/testrunner/tests/test_subunit.py
 ${PYSITELIB}/zope/testrunner/tests/test_subunit.pyc
 ${PYSITELIB}/zope/testrunner/tests/test_subunit.pyo
+${PYSITELIB}/zope/testrunner/tests/test_threadsupport.py
+${PYSITELIB}/zope/testrunner/tests/test_threadsupport.pyc
+${PYSITELIB}/zope/testrunner/tests/test_threadsupport.pyo
 ${PYSITELIB}/zope/testrunner/tests/testrunner-arguments.rst
 ${PYSITELIB}/zope/testrunner/tests/testrunner-colors.rst
 ${PYSITELIB}/zope/testrunner/tests/testrunner-coverage-win32.rst
@@ -166,6 +179,9 @@ ${PYSITELIB}/zope/testrunner/tests/testrunner-ex/README.rst
 ${PYSITELIB}/zope/testrunner/tests/testrunner-ex/brokenlayer.py
 ${PYSITELIB}/zope/testrunner/tests/testrunner-ex/brokenlayer.pyc
 ${PYSITELIB}/zope/testrunner/tests/testrunner-ex/brokenlayer.pyo
+${PYSITELIB}/zope/testrunner/tests/testrunner-ex/gc-after-test.py
+${PYSITELIB}/zope/testrunner/tests/testrunner-ex/gc-after-test.pyc
+${PYSITELIB}/zope/testrunner/tests/testrunner-ex/gc-after-test.pyo
 ${PYSITELIB}/zope/testrunner/tests/testrunner-ex/gc0.py
 ${PYSITELIB}/zope/testrunner/tests/testrunner-ex/gc0.pyc
 ${PYSITELIB}/zope/testrunner/tests/testrunner-ex/gc0.pyo
@@ -398,6 +414,7 @@ ${PYSITELIB}/zope/testrunner/tests/testrunner-ex/usecompiled/package/__init__.py
 ${PYSITELIB}/zope/testrunner/tests/testrunner-ex/usecompiled/package/compiletest.py
 ${PYSITELIB}/zope/testrunner/tests/testrunner-ex/usecompiled/package/compiletest.pyc
 ${PYSITELIB}/zope/testrunner/tests/testrunner-ex/usecompiled/package/compiletest.pyo
+${PYSITELIB}/zope/testrunner/tests/testrunner-gc-after-test.rst
 ${PYSITELIB}/zope/testrunner/tests/testrunner-gc.rst
 ${PYSITELIB}/zope/testrunner/tests/testrunner-knit.rst
 ${PYSITELIB}/zope/testrunner/tests/testrunner-layers-api.rst
@@ -431,3 +448,9 @@ ${PYSITELIB}/zope/testrunner/tests/testrunner-unexpected-success.rst
 ${PYSITELIB}/zope/testrunner/tests/testrunner-verbose.rst
 ${PYSITELIB}/zope/testrunner/tests/testrunner-wo-source.rst
 ${PYSITELIB}/zope/testrunner/tests/testrunner.rst
+${PYSITELIB}/zope/testrunner/threadsupport.py
+${PYSITELIB}/zope/testrunner/threadsupport.pyc
+${PYSITELIB}/zope/testrunner/threadsupport.pyo
+${PYSITELIB}/zope/testrunner/util.py
+${PYSITELIB}/zope/testrunner/util.pyc
+${PYSITELIB}/zope/testrunner/util.pyo
