@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/10/28 15:17:47 taca Exp $
-${PYSITELIB}/${EGG_NAME}-nspkg.pth
+@comment $NetBSD: PLIST,v 1.2 2022/09/19 08:46:29 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -7,6 +6,7 @@ ${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${EGG_NAME}-nspkg.pth
 ${PYSITELIB}/zope/hookable/__init__.py
 ${PYSITELIB}/zope/hookable/__init__.pyc
 ${PYSITELIB}/zope/hookable/__init__.pyo
@@ -15,6 +15,9 @@ ${PYSITELIB}/zope/hookable/_zope_hookable.so
 ${PYSITELIB}/zope/hookable/tests/__init__.py
 ${PYSITELIB}/zope/hookable/tests/__init__.pyc
 ${PYSITELIB}/zope/hookable/tests/__init__.pyo
+${PYSITELIB}/zope/hookable/tests/test_compile_flags.py
+${PYSITELIB}/zope/hookable/tests/test_compile_flags.pyc
+${PYSITELIB}/zope/hookable/tests/test_compile_flags.pyo
 ${PYSITELIB}/zope/hookable/tests/test_hookable.py
 ${PYSITELIB}/zope/hookable/tests/test_hookable.pyc
 ${PYSITELIB}/zope/hookable/tests/test_hookable.pyo
