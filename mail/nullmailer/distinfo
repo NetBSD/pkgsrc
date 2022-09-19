@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.23 2021/10/26 10:54:10 nia Exp $
+$NetBSD: distinfo,v 1.24 2022/09/19 15:15:49 schmonz Exp $
 
 BLAKE2s (nullmailer-2.2.tar.gz) = 2341e461f23373f325336b603c7e8136883c6e4c3d07b1c0da08d406baa8fe7d
 SHA512 (nullmailer-2.2.tar.gz) = 21b29d59f3c386c13ce4541ae11dc5cd69f842085479d7fc9a69a540abc608ce5c1825f06bd3566536b392931f7eeb1b2d35addd816849e6f431877bb18c8268
@@ -7,6 +7,7 @@ SHA1 (patch-Makefile.in) = 56ce789f85f4feccce623c540dfb41d84e655c1a
 SHA1 (patch-doc_nullmailer-queue.8) = 6d2651b4ebc2500504ce4f5620842ffc6bf0c2f6
 SHA1 (patch-doc_nullmailer-send.8) = 1ab434a1a3293c11db87781217a1694798ba6f23
 SHA1 (patch-lib_fdbuf_fdobuf.h) = 716854a1421ef2021f5383f3e63bd19ece900a23
+SHA1 (patch-lib_mergelib.sh) = f4160cd0e0981b2d3dcb7a2b09d06e775bb71f38
 SHA1 (patch-lib_selfpipe.cc) = a5d7e24bfbf3fa823cbd4e696a1c6488586e3512
 SHA1 (patch-test_Makefile.am) = 744771972ca47f154fbc4d8a59dc0fc9b3c616f8
 SHA1 (patch-test_Makefile.in) = 5250f65a0758a9442aa6aec076b67af18ea2444c
