@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2022/07/11 06:17:55 adam Exp $
+$NetBSD: distinfo,v 1.3 2022/09/19 07:59:12 adam Exp $
 
-BLAKE2s (types-ujson-5.4.0.tar.gz) = cd72d4d5a56d26a2c34c867dfa1a69ca1aca0bfccf9bea0bde1eb08c10573b12
-SHA512 (types-ujson-5.4.0.tar.gz) = e070ed0e7647e1799cf283e56ecd7cd631e858255815e017dd9e4e9fc30776fcfcb83e9d35e7a68d64fbdb832911e60aa1bfcc43801dc178e10cbe0a5eae573b
-Size (types-ujson-5.4.0.tar.gz) = 2313 bytes
+BLAKE2s (types-ujson-5.5.0.tar.gz) = 3c7e382c150e2f97c1d4bbcaaf501d569fc6751df81431cb289ee2f191832d15
+SHA512 (types-ujson-5.5.0.tar.gz) = 15e7fe875d02cd1a223f70e8ba71ca69aeeb1ff6cdace799ee8db33222b4bb2a95bc87f46e23efe2632a38dcb3e1b3fafd21d76e085ed38bff4614b56c4dbe37
+Size (types-ujson-5.5.0.tar.gz) = 2374 bytes
