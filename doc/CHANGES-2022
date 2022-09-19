@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4625 2022/09/19 08:36:41 adam Exp $
+$NetBSD: CHANGES-2022,v 1.4626 2022/09/19 08:48:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6814,3 +6814,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/ansible-lint to 6.6.0 [adam 2022-09-19]
 	Updated graphics/py-wand to 0.6.10 [adam 2022-09-19]
 	Updated www/py-httptools to 0.5.0 [adam 2022-09-19]
+	Updated devel/py-ZopeSchema to 6.2.1 [adam 2022-09-19]
+	Updated devel/py-ZopeTestrunner to 5.5.1 [adam 2022-09-19]
+	Updated devel/py-zope.hookable to 5.2 [adam 2022-09-19]
+	Updated www/py-zope.proxy to 4.5.1 [adam 2022-09-19]
