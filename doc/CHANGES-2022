@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4622 2022/09/19 03:34:45 triaxx Exp $
+$NetBSD: CHANGES-2022,v 1.4623 2022/09/19 07:59:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6806,3 +6806,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Added sysutils/xpipe version 2.2 [jschauma 2022-09-18]
 	Updated net/delegate to 9.9.1nb3 [he 2022-09-18]
 	Updated www/php-dotclear to 2.23.1 [triaxx 2022-09-19]
+	Updated devel/py-astroid to 2.12.10 [adam 2022-09-19]
+	Updated textproc/py-JWT to 2.5.0 [adam 2022-09-19]
+	Updated textproc/py-ujson to 5.5.0 [adam 2022-09-19]
+	Updated devel/py-types-ujson to 5.5.0 [adam 2022-09-19]
