@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2021/10/16 19:46:41 tm Exp $
+# $NetBSD: Makefile.common,v 1.14 2022/09/19 17:36:25 nia Exp $
 
 # used by net/proftpd/Makefile
 # used by net/proftpd/Makefile.module
@@ -42,6 +42,7 @@ CFLAGS.SunOS+=	-Du_int64_t=uint64_t -Du_int32_t=uint32_t -Du_int16_t=uint16_t -D
 BUILD_DEFS+=		VARBASE
 
 CHECK_SHLIBS_SKIP=	libexec/proftpd/*.a
+CHECK_RELRO_SKIP+=	libexec/proftpd/*.a
 CHECK_SSP_SKIP=		${CHECK_SHLIBS_SKIP}
 
 pre-configure:

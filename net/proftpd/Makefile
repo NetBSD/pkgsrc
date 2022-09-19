@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2022/06/28 11:35:19 wiz Exp $
+# $NetBSD: Makefile,v 1.96 2022/09/19 17:36:25 nia Exp $
 
 #PKGREVISION= 2
 PKGREVISION= 1
@@ -53,8 +53,6 @@ CONF_FILES=		${PREFIX}/share/examples/proftpd/basic.conf \
 INSTALLATION_DIRS+=	lib/proftpd
 INSTALLATION_DIRS+=	share/doc/proftpd
 INSTALLATION_DIRS+=	share/examples/proftpd
-
-CHECK_RELRO_SKIP+=	libexec/proftpd/*.a
 
 post-install:
 .for i in NEWS README.md README.LDAP README.modules
