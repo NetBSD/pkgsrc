@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4623 2022/09/19 07:59:38 adam Exp $
+$NetBSD: CHANGES-2022,v 1.4624 2022/09/19 08:27:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6810,3 +6810,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/py-JWT to 2.5.0 [adam 2022-09-19]
 	Updated textproc/py-ujson to 5.5.0 [adam 2022-09-19]
 	Updated devel/py-types-ujson to 5.5.0 [adam 2022-09-19]
+	Updated sysutils/ansible to 6.4.0 [adam 2022-09-19]
+	Updated sysutils/ansible-lint to 6.6.0 [adam 2022-09-19]
