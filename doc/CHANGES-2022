@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4633 2022/09/20 10:11:57 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4634 2022/09/20 13:55:18 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6824,3 +6824,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/lxtask to 0.1.10 [gutteridge 2022-09-20]
 	Updated graphics/netpbm to 10.86.34 [wiz 2022-09-20]
 	Updated graphics/gdk-pixbuf2 to 2.42.9 [wiz 2022-09-20]
+	Updated devel/py-approvaltests to 5.13.0 [schmonz 2022-09-20]
