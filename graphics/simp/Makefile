@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/09/17 15:54:23 pin Exp $
+# $NetBSD: Makefile,v 1.2 2022/09/20 07:38:49 wiz Exp $
 
 DISTNAME=	simp-3.1.0
 CATEGORIES=	graphics
@@ -9,6 +9,9 @@ MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/Kl4rry/simp/
 COMMENT=	Fast and simple GPU-accelerated image manipulation program
 LICENSE=	apache-2.0
+
+# called during build (build.rs line 35)
+TOOL_DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 
 .include "cargo-depends.mk"
 
