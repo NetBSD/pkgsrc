@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.205 2022/06/30 11:18:33 nia Exp $
+# $NetBSD: Makefile,v 1.206 2022/09/20 06:18:36 nia Exp $
 
 DISTNAME=	mono-6.12.0.122
 PKGREVISION=	7
@@ -134,6 +134,9 @@ CONFIGURE_ARGS+=	--enable-dtrace=no
 CONFIGURE_ARGS+=	--with-sigaltstack=no
 CONFIGURE_ENV+=		ac_cv_func_getdomainname=no
 CONFIGURE_ENV+=		ac_cv_func_setdomainname=no
+CONFIGURE_ENV+=		ac_cv_func_epoll_ctl=no
+CONFIGURE_ENV+=		ac_cv_func_epoll_create1=no
+CONFIGURE_ENV+=		ac_cv_header_sys_epoll_h=no
 ULIMIT_CMD_datasize=	ulimit -d 524288
 ULIMIT_CMD_stacksize=	ulimit -s 10240
 .elif ${OPSYS} == "NetBSD"
