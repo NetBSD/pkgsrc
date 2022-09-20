@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2021/12/20 20:41:38 nia Exp $
+@comment $NetBSD: PLIST,v 1.18 2022/09/20 09:52:40 wiz Exp $
 bin/411toppm
 bin/anytopnm
 bin/asciitopgm
@@ -454,6 +454,7 @@ man/man1/pamarith.1
 man/man1/pambackground.1
 man/man1/pambayer.1
 man/man1/pambrighten.1
+man/man1/pamcat.1
 man/man1/pamchannel.1
 man/man1/pamcomp.1
 man/man1/pamcrater.1
@@ -475,6 +476,7 @@ man/man1/pamfunc.1
 man/man1/pamgauss.1
 man/man1/pamgetcolor.1
 man/man1/pamgradient.1
+man/man1/pamhomography.1
 man/man1/pamhue.1
 man/man1/pamlevels.1
 man/man1/pamlookup.1
@@ -488,6 +490,7 @@ man/man1/pamperspective.1
 man/man1/pampick.1
 man/man1/pampop9.1
 man/man1/pamrecolor.1
+man/man1/pamrestack.1
 man/man1/pamrgbatopng.1
 man/man1/pamrubber.1
 man/man1/pamscale.1
@@ -495,6 +498,7 @@ man/man1/pamseq.1
 man/man1/pamshadedrelief.1
 man/man1/pamsharpmap.1
 man/man1/pamsharpness.1
+man/man1/pamshuffle.1
 man/man1/pamsistoaglyph.1
 man/man1/pamslice.1
 man/man1/pamsplit.1
@@ -521,6 +525,7 @@ man/man1/pamtopdbimg.1
 man/man1/pamtopfm.1
 man/man1/pamtopng.1
 man/man1/pamtopnm.1
+man/man1/pamtoqoi.1
 man/man1/pamtosrf.1
 man/man1/pamtosvg.1
 man/man1/pamtotga.1
@@ -539,6 +544,7 @@ man/man1/pbmlife.1
 man/man1/pbmmake.1
 man/man1/pbmmask.1
 man/man1/pbmminkowski.1
+man/man1/pbmnoise.1
 man/man1/pbmpage.1
 man/man1/pbmpscale.1
 man/man1/pbmreduce.1
@@ -748,6 +754,7 @@ man/man1/ppmtv.1
 man/man1/ppmwheel.1
 man/man1/psidtopgm.1
 man/man1/pstopnm.1
+man/man1/qoitopam.1
 man/man1/qrttoppm.1
 man/man1/rasttopnm.1
 man/man1/rawtopgm.1
