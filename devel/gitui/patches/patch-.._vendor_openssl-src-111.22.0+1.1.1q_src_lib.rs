@@ -1,9 +1,9 @@
-$NetBSD: patch-openssl-src-111.22.0+1.1.1q_src_lib.rs,v 1.1 2022/09/18 21:04:03 he Exp $
+$NetBSD: patch-.._vendor_openssl-src-111.22.0+1.1.1q_src_lib.rs,v 1.1 2022/09/20 19:30:51 wiz Exp $
 
 Add recognition of the various rust-supporting NetBSD variants.
 
---- vendor/openssl-src-111.22.0+1.1.1q/src/lib.rs.orig	2022-09-18 20:18:31.577292069 +0000
-+++ vendor/openssl-src-111.22.0+1.1.1q/src/lib.rs
+--- ../vendor/openssl-src-111.22.0+1.1.1q/src/lib.rs.orig	2022-09-18 20:18:31.577292069 +0000
++++ ../vendor/openssl-src-111.22.0+1.1.1q/src/lib.rs
 @@ -230,6 +230,8 @@ impl Build {
              "aarch64-unknown-freebsd" => "BSD-generic64",
              "aarch64-unknown-linux-gnu" => "linux-aarch64",
