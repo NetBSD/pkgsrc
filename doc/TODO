@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22216 2022/09/20 10:11:57 wiz Exp $
+$NetBSD: TODO,v 1.22217 2022/09/20 10:13:21 wiz Exp $
 
 Suggested new packages
 ======================
@@ -698,7 +698,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gcombust-0.1.55
 	o gdb-12.1
 	o gdb7-7.12
-	o gdk-pixbuf2-2.48.9
 	o geeklog-2.2.1sr1
 	o geneweb-7.0.0
 	o genius-1.0.26
