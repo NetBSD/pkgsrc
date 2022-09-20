@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 09:59:35 nia Exp $
+$NetBSD: distinfo,v 1.9 2022/09/20 06:30:48 nia Exp $
 
 BLAKE2s (wmsmixer-0.5.1.tar.gz) = 93f9149904deff7b9addadda90a4350e4e30a86de7fac2bd8e422a0ec08823d9
 SHA512 (wmsmixer-0.5.1.tar.gz) = 2731645addb9888b30cbfcaa1f9609c036855d3ee864628535fc5a0dd4c005d01b111bac3dd7f9d11f4794f55f22be65564ccafe598f098b13abdfa9277da299
 Size (wmsmixer-0.5.1.tar.gz) = 33350 bytes
 SHA1 (patch-aa) = 0db2abe3d917778545e420fe61e4cefce03ce0c6
-SHA1 (patch-ab) = 78ede51033648a4a79d884ebb3d5c6b0b5e9ba86
+SHA1 (patch-mixctl.h) = 1d239e7b2f5c16045fdd59546547cc8ab93b06d2
