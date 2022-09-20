@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.56 2022/07/14 23:46:22 dholland Exp $
+# $NetBSD: Makefile,v 1.57 2022/09/20 10:11:47 wiz Exp $
 
-DISTNAME=	gdk-pixbuf-2.42.8
+DISTNAME=	gdk-pixbuf-2.42.9
 PKGNAME=	${DISTNAME:S/pixbuf/pixbuf2/}
-PKGREVISION=	1
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gdk-pixbuf/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -12,8 +11,8 @@ HOMEPAGE=	https://developer.gnome.org/gdk-pixbuf
 COMMENT=	Library for image loading and manipulation
 LICENSE=	gnu-gpl-v2
 
-TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
-TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+# for man pages
+TOOL_DEPENDS+=	${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
 
 CONFLICTS+=	gtk2+<2.22
 
@@ -21,6 +20,12 @@ USE_TOOLS+=	pkg-config xgettext
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/gdk-pixbuf
 # For Darwin
 MAKE_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/output/gdk-pixbuf
+
+SUBST_CLASSES+=		rst2man
+SUBST_MESSAGE.rst2man=	Fixing rst2man name used by pkgsrc due to versioning.
+SUBST_STAGE.rst2man=	pre-configure
+SUBST_FILES.rst2man=	docs/meson.build
+SUBST_SED.rst2man=	-e "s,'rst2man','rst2man-${PYVERSSUFFIX}',g"
 
 .include "../../mk/bsd.prefs.mk"
 
