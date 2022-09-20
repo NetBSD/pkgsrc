@@ -1,0 +1,137 @@
+$NetBSD: patch-auto.def,v 1.1 2022/09/20 17:13:24 nikita Exp $
+
+Improve Berkeley DB detection, account for more flavours
+Fixes #3525
+upstream commited as c12b986765091933bdadbf3d0a341e66bd42404a
+
+--- auto.def.orig	2022-04-29 14:15:32.000000000 +0200
++++ auto.def	2022-09-20 11:49:33.294171932 +0200
+@@ -166,8 +166,8 @@
+   # relative --enable-opt to true. This allows "--with-opt=/usr" to be used as
+   # a shortcut for "--opt --with-opt=/usr".
+   foreach opt {
+-    bdb gdbm gnutls gpgme gss homespool idn idn2 kyotocabinet lmdb lua lz4 
+-    mixmaster nls notmuch pcre2 qdbm rocksdb sasl sqlite ssl tdb tokyocabinet 
++    bdb gdbm gnutls gpgme gss homespool idn idn2 kyotocabinet lmdb lua lz4
++    mixmaster nls notmuch pcre2 qdbm rocksdb sasl sqlite ssl tdb tokyocabinet
+     zlib zstd
+   } {
+     if {[opt-val with-$opt] ne {}} {
+@@ -311,6 +311,7 @@
+     lappend extensions -D_ALL_SOURCE=1
+     lappend extensions -D_GNU_SOURCE=1
+     lappend extensions -D__EXTENSIONS__
++    lappend extensions -D_XOPEN_SOURCE_EXTENDED
+     define-append CFLAGS_FOR_BUILD {*}$extensions
+     define-append CFLAGS {*}$extensions
+   }
+@@ -502,18 +503,17 @@
+     msg-result $gpgme_version
+     if {[get-define want-autocrypt]} {
+       if {$gpgme_maj < 1 || $gpgme_min < 8} {
++        # GPGME v1.8.0 was released on 2016-11-16
+         user-error "Found GPGME version $gpgme_version, need 1.8.0 for AutoCrypt"
+       }
+     } else {
+       if {$gpgme_maj < 1 || $gpgme_min < 4} {
++        # GPGME v1.4.0 was released on 2013-02-26
+         user-error "Found GPGME version $gpgme_version, need 1.4.0"
+       }
+     }
+     define GPGME_VERSION_NUMBER [format "0x%02x%02x%02x" $gpgme_maj $gpgme_min $gpgme_patch]
+ 
+-    # RHEL6 doesn't have this function yet
+-    cc-check-function-in-lib gpgme_op_export_keys gpgme
+-
+     # CFLAGS
+     if {[catch {exec-with-stderr $gpgme_config --cflags} res err]} {
+       user-error "Could not derive --cflags from $gpgme_config"
+@@ -945,28 +941,16 @@
+ ###############################################################################
+ # Header cache - bdb
+ if {[get-define want-bdb]} {
+-  set bdb_versions [opt-val with-bdb-version { 5.3 6.2 4.8 }] ;# Will be checked in order
+-  set bdb_prefix [opt-val with-bdb $prefix]
+-
+-  foreach ver $bdb_versions {
+-    lassign [split $ver .] maj min
+-    # This is ugly, but it allows us to not have an inner loop
+-    lappend bdb_majors   $maj $maj         $maj           $maj        $maj    $maj
+-    lappend bdb_minors   $min $min         $min           $min        $min    $min
+-    lappend bdb_exploded ""   db-$maj-$min db${maj}${min} db$maj.$min db-$maj db$maj
+-  }
+-
+-  foreach maj $bdb_majors min $bdb_minors ver $bdb_exploded {
+-    set ver_inc_dir $bdb_prefix/include/$ver
+-    set ver_lib_dir $bdb_prefix/$::libdir_tail/$ver
++  proc find_bdb {bdb_prefix maj min path_tail lib_names} {
++    set ver_inc_dir $bdb_prefix/include/$path_tail
++    set ver_lib_dir $bdb_prefix/$::libdir_tail/$path_tail
+     set ver_inc_file $ver_inc_dir/db.h
+-    set ver_lib_file  db-$maj.$min
+ 
+     # File exists?
+     msg-checking "Checking for BerkeleyDB in $ver_inc_dir..."
+     if {![file exists $ver_inc_file]} {
+       msg-result "no"
+-      continue
++      return 0
+     }
+ 
+     # Version is coherent?
+@@ -975,23 +959,44 @@
+     if {$inc_maj eq {}   || $inc_min eq {} ||
+         $inc_maj != $maj || $inc_min != $min} {
+       msg-result "no (expecting $maj.$min, got $inc_maj.$inc_min)"
+-      continue
++      return 0
+     }
+     msg-result "yes"
+ 
+     # Can link?
+-    cc-with [list -libs -L$ver_lib_dir -cflags -I$ver_inc_dir] {
+-      if {![check-inc-and-lib bdb {} db.h db_env_create db-$maj.$min]} {
+-        msg-result "no"
+-        continue
++    foreach lib_name $lib_names {
++      cc-with [list -libs -L$ver_lib_dir -cflags -I$ver_inc_dir] {
++        check-inc-and-lib bdb {} db.h db_env_create $lib_name
++      }
++      if {[have-feature bdb]} {
++        define-append CFLAGS  -I$ver_inc_dir
++        define-append LDFLAGS -L$ver_lib_dir
++        define-append LIBS    -l$lib_name
++        define-append HCACHE_BACKENDS "bdb"
++        define USE_HCACHE
++        return 1
++      }
++    }
++    return 0
++  }
++
++  set bdb_versions [opt-val with-bdb-version { 5.3 6.2 4.8 }] ;# Will be checked in order
++  set bdb_prefix [opt-val with-bdb $prefix]
++
++  foreach ver $bdb_versions {
++    if {[have-feature bdb]} {
++      break
++    }
++    lassign [split $ver .] maj min
++    foreach path_tail [list "" db-$maj-$min db${maj}${min} db$maj.$min db-$maj db$maj] {
++      if {[have-feature bdb]} {
++        break
++      }
++      set lib_names [list db$maj-$maj.$min db$maj-$maj db-$maj.$min db-$maj]
++      if {[find_bdb $bdb_prefix $maj $min $path_tail $lib_names]} {
++        break
+       }
+     }
+-    define-append CFLAGS  -I$ver_inc_dir
+-    define-append LDFLAGS -L$ver_lib_dir
+-    define-append LIBS    -ldb-$maj.$min
+-    define-append HCACHE_BACKENDS "bdb"
+-    define USE_HCACHE
+-    break
+   }
+ 
+   if {![have-feature bdb]} {
