@@ -1,20 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1 2022/04/20 10:10:59 khorben Exp $
-bin/autobahn
+@comment $NetBSD: PLIST,v 1.2 2022/09/20 19:21:30 wiz Exp $
 bin/bus
-bin/chat
-bin/command
 bin/context
-bin/etw-provider-gen
-bin/filewatch
 bin/macat
-bin/mkwinsyscall
 bin/pair
 bin/perf
 bin/pipeline
 bin/pubsub
 bin/raw
 bin/reqrep
-bin/sample
 bin/survey
-bin/validate
 bin/websocket
