@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.60 2022/04/29 13:47:42 wiz Exp $
+$NetBSD: distinfo,v 1.61 2022/09/20 17:13:24 nikita Exp $
 
 BLAKE2s (neomutt-20220429-20220429.tar.gz) = c049d271b5c4083b3f7b1e12dfd2d3c879f02acb2767fb9942c4825ac6a411e3
 SHA512 (neomutt-20220429-20220429.tar.gz) = ce151cabe9fe0c45f379dd7a71790f600faa9283c79a486c1421b5fe3b19b7f12d71dc36ec330e1b28b26ed83bf4c47b656ca823c484105ea3f80ef9166e7f0b
 Size (neomutt-20220429-20220429.tar.gz) = 3774374 bytes
+SHA1 (patch-auto.def) = c7acaa8ec5ecad6f2465d293a5a27a58529a25d0
