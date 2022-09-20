@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.29 2022/05/17 13:12:13 ryoon Exp $
+# $NetBSD: options.mk,v 1.30 2022/09/20 06:20:47 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mpv
 
@@ -21,7 +21,11 @@ PKG_SUGGESTED_OPTIONS.Linux+=	alsa pulseaudio
 .include "../../mk/bsd.fast.prefs.mk"
 
 .if ${OPSYS} != "Darwin"
-PKG_SUGGESTED_OPTIONS+=		opengl libdrm x11
+PKG_SUGGESTED_OPTIONS+=		opengl x11
+.endif
+
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "Linux"
+PKG_SUGGESTED_OPTIONS+=		libdrm
 .endif
 
 .include "../../multimedia/libva/available.mk"
