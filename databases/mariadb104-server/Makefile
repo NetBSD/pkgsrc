@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2022/06/28 11:31:18 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2022/09/20 06:49:18 nia Exp $
 
 PKGNAME=	${DISTNAME:S/-/-server-/}
 PKGREVISION=	7
@@ -19,6 +19,8 @@ PLIST_VARS+=		auth_pam mariabackup
 .if ${OPSYS} != "SunOS"
 PLIST.auth_pam=		yes
 PLIST.mariabackup=	yes
+.elif ${OS_VARIANT} != "Solaris"
+PLIST.auth_pam=		yes
 .endif
 
 MARIADB_USER?=		${MYSQL_USER:Umariadb}
