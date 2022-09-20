@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2022/06/28 11:34:09 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2022/09/20 07:02:04 nia Exp $
 
 DISTNAME=	xcin-2.5.3.pre2
 PKGNAME=	xcin-2.5.3rc2
@@ -15,7 +15,6 @@ MAKE_JOBS_SAFE=	no
 
 WRKSRC=			${WRKDIR}/xcin
 USE_LIBTOOL=		yes
-USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		msgfmt pax perl:run
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
