@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2021/06/23 20:33:18 nia Exp $
+# $NetBSD: Makefile,v 1.40 2022/09/20 07:05:12 nia Exp $
 #
 
 DISTNAME=	efltk-2.0.5
@@ -15,7 +15,6 @@ LICENSE=	gnu-lgpl-v2 # or later
 WRKSRC=			${WRKDIR}/efltk
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++03
-USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake msgfmt pkg-config
 USE_LIBTOOL=		yes
 
