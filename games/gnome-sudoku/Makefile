@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2022/08/11 05:08:27 gutteridge Exp $
+# $NetBSD: Makefile,v 1.45 2022/09/20 06:59:53 nia Exp $
 
 DISTNAME=	gnome-sudoku-40.2
 PKGREVISION=	6
@@ -12,7 +12,6 @@ COMMENT=	Number grid logic puzzle
 LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=		c c++11
-USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		msgfmt pkg-config itstool
 
 PYTHON_FOR_BUILD_ONLY=    tool
