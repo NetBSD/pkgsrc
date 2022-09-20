@@ -1,9 +1,45 @@
-$NetBSD: patch-configure,v 1.1 2020/11/20 13:50:23 nia Exp $
+$NetBSD: patch-configure,v 1.2 2022/09/20 06:56:51 nia Exp $
 
 Correct installation paths.
 
 --- configure.orig	2008-03-05 21:58:16.000000000 +0000
 +++ configure
+@@ -4582,7 +4582,7 @@ cat >>confdefs.h <<\_ACEOF
+ #define SOUNDDEV "/dev/dsp"
+ _ACEOF
+ 
+-        SOUNDSRVDIR=""
++        SOUNDSRVDIR="/libexec"
+ 
+ cat >>confdefs.h <<\_ACEOF
+ #define SOUND 1
+@@ -4595,7 +4595,7 @@ _ACEOF
+ #define SOUNDDEV "/dev/dsp"
+ _ACEOF
+ 
+-        SOUNDSRVDIR=""
++        SOUNDSRVDIR="/libexec"
+ 	cat >>confdefs.h <<\_ACEOF
+ #define SOUND 1
+ _ACEOF
+@@ -4619,7 +4619,7 @@ _ACEOF
+ #define SOUNDDEV "/dev/audio"
+ _ACEOF
+ 
+-        SOUNDSRVDIR=""
++        SOUNDSRVDIR="/libexec"
+   	cat >>confdefs.h <<\_ACEOF
+ #define SOUND 1
+ _ACEOF
+@@ -4631,7 +4631,7 @@ _ACEOF
+ #define SOUNDDEV "/dev/audio"
+ _ACEOF
+ 
+-        SOUNDSRVDIR=""
++        SOUNDSRVDIR="/libexec"
+ 	cat >>confdefs.h <<\_ACEOF
+ #define SOUND 1
+ _ACEOF
 @@ -4664,10 +4664,10 @@ cat >>confdefs.h <<_ACEOF
  _ACEOF
  
