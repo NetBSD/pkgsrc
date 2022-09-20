@@ -1,10 +1,11 @@
-# $NetBSD: options.mk,v 1.17 2021/10/22 17:11:54 wiz Exp $
+# $NetBSD: options.mk,v 1.18 2022/09/20 17:13:24 nikita Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.neomutt
 PKG_OPTIONS_REQUIRED_GROUPS=	display
 PKG_OPTIONS_GROUP.display=	curses ncurses ncursesw
-PKG_SUPPORTED_OPTIONS=		debug gpgme gssapi idn ssl smime sasl
-PKG_SUPPORTED_OPTIONS+=		tokyocabinet notmuch lua
+PKG_SUPPORTED_OPTIONS=		tokyocabinet lmdb
+PKG_SUPPORTED_OPTIONS+=		debug gpgme gssapi idn ssl smime sasl
+PKG_SUPPORTED_OPTIONS+=		notmuch lua
 PKG_SUGGESTED_OPTIONS=		gpgme gssapi idn ncursesw sasl smime ssl
 PKG_SUGGESTED_OPTIONS+=		tokyocabinet notmuch
 
@@ -87,7 +88,12 @@ CONFIGURE_ARGS+=	--disable-smime
 ###
 ### Header cache
 ###
-.if !empty(PKG_OPTIONS:Mtokyocabinet)
+.if !empty(PKG_OPTIONS:Mlmdb)
+.include "../../databases/lmdb/buildlink3.mk"
+CONFIGURE_ARGS+=	--lmdb
+CONFIGURE_ARGS+=	--disable-gdbm
+CONFIGURE_ARGS+=	--disable-bdb
+.elif !empty(PKG_OPTIONS:Mtokyocabinet)
 .include "../../databases/tokyocabinet/buildlink3.mk"
 CONFIGURE_ARGS+=	--tokyocabinet
 CONFIGURE_ARGS+=	--disable-gdbm
