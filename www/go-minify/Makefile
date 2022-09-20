@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2022/09/07 09:32:21 bsiegert Exp $
+# $NetBSD: Makefile,v 1.46 2022/09/20 19:38:26 wiz Exp $
 
 DISTNAME=	minify-2.9.21
 PKGNAME=	go-${DISTNAME}
@@ -12,9 +12,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/tdewolff/minify
 COMMENT=	Command line tool that minifies web formats concurrently
 LICENSE=	mit
-
-post-install:
-	${RM} ${DESTDIR}${PREFIX}/bin/mkwinsyscall
 
 .include "go-modules.mk"
 .include "../../lang/go/go-module.mk"
