@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:29:29 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/09/20 19:38:26 wiz Exp $
 
 BLAKE2s (github.com_cheekybits_is_@v_v0.0.0-20150225183255-68e9c0620927.mod) = 015185c7f669ff0a052607a4447129665b8a2980e4fef75aa9a6a66d9dac08ba
 SHA512 (github.com_cheekybits_is_@v_v0.0.0-20150225183255-68e9c0620927.mod) = bac95e43558eaf04fc634b9b87039bc3e7ffa17e84cd94c6be19a6ffc0fe1c90dfe67b43b5d6c4262b4fb2c6ddb30f19090320ffbc20cc75c1a1649bb4441e27
@@ -54,3 +54,4 @@ Size (golang.org_x_sys_@v_v0.0.0-20210510120138-977fb7262007.zip) = 1634371 byte
 BLAKE2s (minify-2.9.21.tar.gz) = 9a39b4e93db13fbe0315d28f308a8f1eca5de066d00bda35a92ea4569a15a1bc
 SHA512 (minify-2.9.21.tar.gz) = 7e401398f7dcf88adbfc97e1366bd98470e06c8f971f426b20d7c0f0e159d599256c9b28dd9791c24434056831ced7680a10863b4bd20f08d3e114c33d15d87e
 Size (minify-2.9.21.tar.gz) = 4045371 bytes
+SHA1 (patch-Makefile) = b36df07100c47feedeee77716a5ede26e9819de6
