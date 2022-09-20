@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2022Q2,v 1.1.2.7 2022/08/28 14:59:18 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2022Q2,v 1.1.2.8 2022/09/20 18:31:55 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2022Q2 branch:
 
@@ -128,4 +128,11 @@ databases/ldb: dependency update
 Pullup ticket #6668 - requested by khorben
 lang/openjdk8: security update
 lang/openjdk11: security update
+
+Pullup ticket #6671 - requested by gutteridge
+textproc/libxslt: security fix
+
+Pullup ticket #6670 - requested by nia
+www/firefox91: security fix
+www/firefox91-l10n: dependent update
 
