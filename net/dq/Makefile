@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/08/25 17:59:08 schmonz Exp $
+# $NetBSD: Makefile,v 1.3 2022/09/20 00:17:25 schmonz Exp $
 
 DISTNAME=		${GITHUB_PROJECT}
 PKGNAME=		${GITHUB_PROJECT}-${GITHUB_TAG}
@@ -25,7 +25,6 @@ SUBST_FILES.prefix=	Makefile
 SUBST_VARS.prefix=	PREFIX
 
 EGDIR=			share/examples/${PKGBASE}
-INSTALLATION_DIRS=	${EGDIR}
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/dqcache/servers
 
 CONF_FILES+=		${PREFIX}/${EGDIR}/dnscurveroots.global \
@@ -39,7 +38,9 @@ RCD_SCRIPTS=		dqcache
 FILES_SUBST+=		DQCACHE_USER=${DQCACHE_USER:Q}
 FILES_SUBST+=		PKGNAME=${PKGNAME:Q}
 
-INSTALLATION_DIRS+=	bin sbin man/man1 man/man8
+LDFLAGS.SunOS+=		-lsocket
+
+INSTALLATION_DIRS+=	bin sbin man/man1 man/man8 ${EGDIR}
 
 post-install:
 	for i in ${WRKSRC}/man/dq*.1; do \
