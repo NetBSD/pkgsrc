@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.16 2021/10/26 10:44:33 nia Exp $
+$NetBSD: distinfo,v 1.17 2022/09/20 06:56:51 nia Exp $
 
 BLAKE2s (xgalaga-2.1.1.0.tar.gz) = 8fa8e2d881763255bf39f7e598456718d1bf362607737b9bab5c1a1b9a1630b2
 SHA512 (xgalaga-2.1.1.0.tar.gz) = 087db9e0501cedb042bb673a217f9de32640d3e4f4f529a29fd25ed682a1aece9ae1beacdc2ee77fc93ac931411a1051e2cd19873578ccffe5f03a083bffe513
 Size (xgalaga-2.1.1.0.tar.gz) = 331621 bytes
 SHA1 (patch-Makefile.in) = f8eacc067c760dd5071fc9799a4587c6ee2b0a2c
-SHA1 (patch-configure) = 695098c4ea95139496d2dfb76dcf7164943c3f64
+SHA1 (patch-configure) = 5b72e28930cffd1dc0ab050a044e280e66713519
 SHA1 (patch-main.c) = a2743012bd84882c728f90990a1ec586273724ba
 SHA1 (patch-title.c) = cd94537f8ebcedf737af4208686f80bb42da00e7
