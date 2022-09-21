@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4639 2022/09/21 12:59:22 he Exp $
+$NetBSD: CHANGES-2022,v 1.4640 2022/09/21 13:52:43 ast Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6830,3 +6830,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/expat to 2.4.9 [wiz 2022-09-21]
 	Updated net/unbound to 1.16.3 [he 2022-09-21]
 	Updated net/bind916 to 9.16.33 [he 2022-09-21]
+	Updated devel/radare2 to 5.7.8 and fixed build [ast 2022-09-21]
