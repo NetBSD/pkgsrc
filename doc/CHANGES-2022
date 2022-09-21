@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4637 2022/09/21 10:53:01 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4638 2022/09/21 11:31:16 he Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6828,3 +6828,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated mail/neomutt to 20220429nb2 [nikita 2022-09-20]
 	Updated net/mangos to 3.4.1nb6 [wiz 2022-09-20]
 	Updated textproc/expat to 2.4.9 [wiz 2022-09-21]
+	Updated net/unbound to 1.16.3 [he 2022-09-21]
