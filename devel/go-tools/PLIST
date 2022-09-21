@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2021/05/08 16:52:26 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.8 2022/09/21 00:06:34 schmonz Exp $
 bin/authtest
 bin/benchcmp
 bin/bundle
@@ -24,7 +24,7 @@ bin/html2article
 bin/netrcauth
 bin/present
 bin/present2md
-bin/splitdwarf
+${PLIST.splitdwarf}bin/splitdwarf
 bin/ssadump
 bin/stress
 bin/stringer
