@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4636 2022/09/20 19:21:40 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4637 2022/09/21 10:53:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6827,3 +6827,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-approvaltests to 5.13.0 [schmonz 2022-09-20]
 	Updated mail/neomutt to 20220429nb2 [nikita 2022-09-20]
 	Updated net/mangos to 3.4.1nb6 [wiz 2022-09-20]
+	Updated textproc/expat to 2.4.9 [wiz 2022-09-21]
