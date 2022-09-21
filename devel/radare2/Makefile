@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2022/09/21 13:49:39 ast Exp $
+# $NetBSD: Makefile,v 1.36 2022/09/21 15:43:53 wiz Exp $
 
 DISTNAME=	radare2-5.7.8
 CATEGORIES=	devel
@@ -8,6 +8,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.radare.org/
 COMMENT=	Reverse engineering framework
 LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v3
+
+TOOL_DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 
 HAS_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
