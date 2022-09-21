@@ -1,0 +1,33 @@
+$NetBSD: patch-shlr-sdb-src-Makefile,v 1.1 2022/09/21 13:49:39 ast Exp $
+
+* CC is not defined in MAKEFLAGS here, but _CC is so we use that
+
+--- shlr/sdb/src/Makefile.orig	2022-09-13 18:08:16.000000000 +0200
++++ shlr/sdb/src/Makefile	2022-09-21 12:16:05.786393040 +0200
+@@ -65,7 +65,7 @@
+ ifneq ($(SILENT),)
+ 	@echo BIN ${BIN}
+ endif
+-	$(CC) ${LDFLAGS} -o ${BIN} main.o ${OBJ}
++	$(_CC) ${LDFLAGS} -o ${BIN} main.o ${OBJ}
+ 
+ mrproper clean:
+ 	rm -rf ${OBJ} ${SOBJ} main.o libsdb.a a.out ${BIN} sdb.dSYM
+@@ -76,7 +76,7 @@
+ ifneq ($(SILENT),)
+ 	@echo LD $<
+ endif
+-	$(CC) $(LDFLAGS) -c $(CFLAGS) -o $@ $<
++	$(_CC) $(LDFLAGS) -c $(CFLAGS) -o $@ $<
+ 
+ S=$
+ 
+@@ -84,7 +84,7 @@
+ ifneq ($(SILENT),)
+ 	@echo CC $<
+ endif
+-	$(CC) -c ${CPPFLAGS} ${CFLAGS} ${CFLAGS_SHARED} -o $@ $<
++	$(_CC) -c ${CPPFLAGS} ${CFLAGS} ${CFLAGS_SHARED} -o $@ $<
+ 
+ %.o.o: %.c
+ ifneq ($(SILENT),)
