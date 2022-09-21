@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.14 2021/10/26 10:19:19 nia Exp $
+$NetBSD: distinfo,v 1.15 2022/09/21 13:49:39 ast Exp $
 
-BLAKE2s (radare2-5.1.1.tar.gz) = 071969c87933ede43a75fa20af7762e10be0e625d8343dc7ba2f32f26cca4d09
-SHA512 (radare2-5.1.1.tar.gz) = b6728bb59788804f5442d5eec8141f62c3b51f589955589b310733b3aeb28beedb969af540649f454dad96710231df384e389d8b4a1d55627d8370e4d3da454f
-Size (radare2-5.1.1.tar.gz) = 7920840 bytes
+BLAKE2s (radare2-5.7.8.tar.gz) = 3e07c2d806d5c094046f52924d60cd410c8e367eb82f2990d4bb2e0b13d92821
+SHA512 (radare2-5.7.8.tar.gz) = 7c819a052f5e4b3da72b945915fca92a747c52dc2e2fa8483a8c2d8e71479ce374efbbe2bc02b1b4af26db6a891b6e44cdbb9e062de2f13b22a258cceab561f6
+Size (radare2-5.7.8.tar.gz) = 10324020 bytes
+SHA1 (patch-shlr-sdb-src-Makefile) = a285400cdb72ace9cc6bebbea6d2c970f25886ca
 SHA1 (patch-sys_ios-sdk.sh) = 3f50b49e75dea1ac02f6d2ce8c556c77276e51d6
