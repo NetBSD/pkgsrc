@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1481 2022/09/12 06:55:39 wiz Exp $
+# $NetBSD: Makefile,v 1.1482 2022/09/22 05:59:26 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -555,6 +555,7 @@ SUBDIR+=	p5-Net-Interface
 SUBDIR+=	p5-Net-Jifty
 SUBDIR+=	p5-Net-LDAP-Server
 SUBDIR+=	p5-Net-LibIDN
+SUBDIR+=	p5-Net-LibIDN2
 SUBDIR+=	p5-Net-Libdnet
 SUBDIR+=	p5-Net-Libdnet6
 SUBDIR+=	p5-Net-MAC
