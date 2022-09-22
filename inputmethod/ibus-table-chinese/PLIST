@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/08/24 06:46:24 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/09/22 09:39:25 adam Exp $
 share/doc/ibus-table-chinese/AUTHORS
 share/doc/ibus-table-chinese/COPYING
 share/doc/ibus-table-chinese/ChangeLog
@@ -10,6 +10,7 @@ share/ibus-table/icons/cangjie3.svg
 share/ibus-table/icons/cangjie5.svg
 share/ibus-table/icons/cantonese.png
 share/ibus-table/icons/cantonhk.png
+share/ibus-table/icons/cantonyale.png
 share/ibus-table/icons/easy-big.png
 share/ibus-table/icons/erbi-qs.svg
 share/ibus-table/icons/erbi.png
@@ -30,6 +31,7 @@ share/ibus-table/tables/cangjie3.db
 share/ibus-table/tables/cangjie5.db
 share/ibus-table/tables/cantonese.db
 share/ibus-table/tables/cantonhk.db
+share/ibus-table/tables/cantonyale.db
 share/ibus-table/tables/easy-big.db
 share/ibus-table/tables/erbi-qs.db
 share/ibus-table/tables/erbi.db
