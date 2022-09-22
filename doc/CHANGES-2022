@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4644 2022/09/22 09:55:14 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4645 2022/09/22 10:10:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6835,3 +6835,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated inputmethod/ibus-table-chinese to 1.8.3 [adam 2022-09-22]
 	Removed devel/radare2-cutter [wiz 2022-09-22]
 	Removed editors/p5-Padre-Plugin-Vi [wiz 2022-09-22]
+	Updated print/tex-cweb to 4.3.63787nb1 [wiz 2022-09-22]
