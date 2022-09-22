@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2021/02/25 09:55:55 ryoon Exp $
+# $NetBSD: options.mk,v 1.2 2022/09/22 09:22:21 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gtk4
 PKG_SUPPORTED_OPTIONS=	cups debug
@@ -8,9 +8,12 @@ PKG_OPTIONS_GROUP.gui=		x11
 
 .if exists(/System/Library/Frameworks/Quartz.framework)
 PKG_OPTIONS_GROUP.gui+=	quartz
+PKG_SUGGESTED_OPTIONS+=	quartz
+.else
+PKG_SUGGESTED_OPTIONS+=	x11
 .endif
 
-PKG_SUGGESTED_OPTIONS+=	cups x11
+PKG_SUGGESTED_OPTIONS+=	cups
 
 .include "../../mk/bsd.options.mk"
 
