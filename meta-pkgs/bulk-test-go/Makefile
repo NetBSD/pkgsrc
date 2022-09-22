@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/09/18 09:39:01 bsiegert Exp $
+# $NetBSD: Makefile,v 1.2 2022/09/22 06:01:07 wiz Exp $
 
 DISTNAME=	bulk-test-go-20220918
 CATEGORIES=	meta-pkgs
@@ -105,7 +105,7 @@ BUILD_DEPENDS+=	fzf-[0-9]*:../../sysutils/fzf
 BUILD_DEPENDS+=	beats-[0-9]*:../../sysutils/beats
 BUILD_DEPENDS+=	consul-[0-9]*:../../sysutils/consul
 BUILD_DEPENDS+=	lf-[0-9]*:../../sysutils/lf
-BUILD_DEPENDS+=	goreman-[0-9]*:../../sysutils/goreman
+BUILD_DEPENDS+=	go-goreman-[0-9]*:../../sysutils/goreman
 BUILD_DEPENDS+=	node_exporter-[0-9]*:../../sysutils/node_exporter
 BUILD_DEPENDS+=	vultr-[0-9]*:../../sysutils/vultr
 BUILD_DEPENDS+=	direnv-[0-9]*:../../sysutils/direnv
