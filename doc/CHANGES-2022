@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4647 2022/09/22 13:46:24 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4648 2022/09/22 20:33:23 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6838,3 +6838,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated print/tex-cweb to 4.3.63787nb1 [wiz 2022-09-22]
 	Updated net/routinator to 0.11.3 [he 2022-09-22]
 	Updated textproc/ruby-commonmarker to 0.23.6 [taca 2022-09-22]
+	Updated databases/mariadb106-client to 10.6.10 [nia 2022-09-22]
+	Updated databases/mariadb106-server to 10.6.10 [nia 2022-09-22]
