@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4646 2022/09/22 12:32:23 he Exp $
+$NetBSD: CHANGES-2022,v 1.4647 2022/09/22 13:46:24 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6837,3 +6837,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed editors/p5-Padre-Plugin-Vi [wiz 2022-09-22]
 	Updated print/tex-cweb to 4.3.63787nb1 [wiz 2022-09-22]
 	Updated net/routinator to 0.11.3 [he 2022-09-22]
+	Updated textproc/ruby-commonmarker to 0.23.6 [taca 2022-09-22]
