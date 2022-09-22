@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/06/28 11:34:10 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/09/22 11:35:27 wiz Exp $
 
 GCC_PKGNAME=		gcc10-aux
 PKGREVISION=		1
@@ -23,6 +23,9 @@ BUILD_DEPENDS+=		gcc6-aux-[0-9]*:../../lang/gcc6-aux
 
 # Relocations result in a linker error on AArch64, but not x86.
 MKPIE_SUPPORTED=	no
+
+# gcc6-aux does not support -fstack-clash-protection
+PKGSRC_USE_STACK_CHECK=	no
 
 CHECK_RELRO_SKIP+=	${GCC_PKGNAME}/lib/*
 
