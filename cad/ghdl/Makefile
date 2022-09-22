@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2022/05/19 16:05:11 ryoon Exp $
+# $NetBSD: Makefile,v 1.10 2022/09/22 11:47:14 wiz Exp $
 
 DISTNAME=	ghdl-2.0.0
 CATEGORIES=	cad
@@ -25,7 +25,7 @@ REPLACE_BASH=		scripts/vendors/*.sh
 ## because Ada language would not accept symbols start with '_'.
 #.include "../../mk/bsd.prefs.mk"
 #.if ${OPSYS} == "NetBSD"
-#SUBST_CLASSES+=		time
+#SUBST_CLASSES+=	time
 #SUBST_STAGE.time=	pre-configure
 #SUBST_MESSAGE.time=	Use correct functions in time.h
 #SUBST_FILES.time+=	src/grt/grt-vcd.adb
