@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3799 2022/09/18 08:24:40 bsiegert Exp $
+# $NetBSD: Makefile,v 1.3800 2022/09/22 09:53:49 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2929,7 +2929,6 @@ SUBDIR+=	qtscriptgenerator
 SUBDIR+=	quilt
 SUBDIR+=	radamsa
 SUBDIR+=	radare2
-SUBDIR+=	radare2-cutter
 SUBDIR+=	ragel
 SUBDIR+=	rainbow-delimiters-el
 SUBDIR+=	range-v3
