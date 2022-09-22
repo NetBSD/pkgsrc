@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.8 2022/05/21 09:36:02 nia Exp $
+# $NetBSD: Makefile.common,v 1.9 2022/09/22 20:30:09 nia Exp $
 #
 # used by databases/mariadb106-client/Makefile
 # used by databases/mariadb106-server/Makefile
 
-DISTNAME=	mariadb-10.6.8
+DISTNAME=	mariadb-10.6.10
 CATEGORIES=	databases
 MASTER_SITES=	https://archive.mariadb.org/${DISTNAME}/source/
 
@@ -89,6 +89,7 @@ CMAKE_ARGS+=		-DDTRACE_FLAGS="-${ABI}"
 .endif
 
 CFLAGS.SunOS+=		-fPIC
+CFLAGS.NetBSD+=		-DIOAPI_NO_64
 
 REPLACE_PERL+=		scripts/mytop.sh
 REPLACE_PERL+=		sql-bench/*.sh
@@ -107,6 +108,7 @@ CHECK_PORTABILITY_SKIP+=	BUILD/compile-pentium-gcov
 PKGCONFIG_OVERRIDE+=	support-files/mariadb.pc.in
 PKGCONFIG_OVERRIDE+=	libmariadb/mariadb_config/libmariadb.pc.in
 
+.include "../../archivers/zstd/buildlink3.mk"
 .include "../../devel/pcre2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
