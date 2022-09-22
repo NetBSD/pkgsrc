@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 10:49:35 nia Exp $
+$NetBSD: distinfo,v 1.13 2022/09/22 09:39:25 adam Exp $
 
-BLAKE2s (ibus-table-chinese-1.8.2.tar.gz) = cba07d995263253b15b2e0404159ceb677fce800574f736814dc10b1a0268e4d
-SHA512 (ibus-table-chinese-1.8.2.tar.gz) = 30fd1c7ee8416cd62d8e26bc2646a667ac45c4579a7cb191c77e80fecccbc576c34f33ec0b5c55669c073a633298cfda1711e4b9d89a9ef8f6146acdc0167c1a
-Size (ibus-table-chinese-1.8.2.tar.gz) = 10576111 bytes
+BLAKE2s (ibus-table-chinese-1.8.3.tar.gz) = f7def64d4f38c82ed8e466ab5b07bd191e5be16bf9406d0ca1be33555e44de78
+SHA512 (ibus-table-chinese-1.8.3.tar.gz) = 610455343d9c9bf6577c7fd7aef9435c339c2f23c4d5f7ae2cbbc2366a9eb6a8a124e86621387497cc624e3276bf739b55602355ad41c4127f45f6d85cc5b4dc
+Size (ibus-table-chinese-1.8.3.tar.gz) = 10824912 bytes
 SHA1 (patch-ab) = cd75ce5cbad9610607cfa5f68fec245a139f8b6b
 SHA1 (patch-ac) = 6691cde876c3cfa64c1790294a6660b18f986d03
 SHA1 (patch-tables_array_CMakeLists.txt) = d4c441e74314731305b66843cdadd16e2edd4281
