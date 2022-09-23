@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4648 2022/09/22 20:33:23 nia Exp $
+$NetBSD: CHANGES-2022,v 1.4649 2022/09/23 08:29:52 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6840,3 +6840,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/ruby-commonmarker to 0.23.6 [taca 2022-09-22]
 	Updated databases/mariadb106-client to 10.6.10 [nia 2022-09-22]
 	Updated databases/mariadb106-server to 10.6.10 [nia 2022-09-22]
+	Updated databases/mariadb105-client to 10.5.17 [nia 2022-09-23]
+	Updated databases/mariadb105-server to 10.5.17 [nia 2022-09-23]
