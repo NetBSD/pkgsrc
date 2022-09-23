@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2022/09/22 20:30:09 nia Exp $
+# $NetBSD: Makefile.common,v 1.10 2022/09/23 10:31:50 wiz Exp $
 #
 # used by databases/mariadb106-client/Makefile
 # used by databases/mariadb106-server/Makefile
@@ -103,6 +103,7 @@ SUBST_SED.perl+=	-e "s,/usr/local/bin/perl,${TOOLS_PATH.perl},g"
 CHECK_INTERPRETER_SKIP+=	share/mysql/test/*
 CHECK_PORTABILITY_SKIP+=	storage/columnstore/columnstore/oam/cloud/*.sh.in
 CHECK_PORTABILITY_SKIP+=	storage/columnstore/columnstore/oam/install_scripts/*.sh.in
+CHECK_PORTABILITY_SKIP+=	storage/columnstore/columnstore/oam/install_scripts/*.in
 CHECK_PORTABILITY_SKIP+=	BUILD/compile-pentium-gcov
 
 PKGCONFIG_OVERRIDE+=	support-files/mariadb.pc.in
