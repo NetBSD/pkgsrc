@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.16 2022/05/21 10:38:25 nia Exp $
+# $NetBSD: Makefile.common,v 1.17 2022/09/23 08:28:05 nia Exp $
 #
 # used by databases/mariadb105-client/Makefile
 # used by databases/mariadb105-server/Makefile
 
-DISTNAME=	mariadb-10.5.16
+DISTNAME=	mariadb-10.5.17
 CATEGORIES=	databases
 MASTER_SITES=	https://archive.mariadb.org/${DISTNAME}/source/
 
@@ -91,6 +91,7 @@ CMAKE_ARGS+=		-DDTRACE_FLAGS="-${ABI}"
 .endif
 
 CFLAGS.SunOS+=		-fPIC
+CFLAGS.NetBSD+=		-DIOAPI_NO_64
 
 REPLACE_PERL+=		scripts/mytop.sh
 REPLACE_PERL+=		sql-bench/*.sh
