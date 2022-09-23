@@ -1,13 +1,12 @@
-$NetBSD: distinfo,v 1.13 2022/05/21 10:38:25 nia Exp $
+$NetBSD: distinfo,v 1.14 2022/09/23 08:28:05 nia Exp $
 
-BLAKE2s (mariadb-10.5.16.tar.gz) = bafab69afbafc1e6dc34cd8cd7a50fa9383abb5a971ecae5762bb116479c3e75
-SHA512 (mariadb-10.5.16.tar.gz) = 28cea63cc3c5e1b236fb13593285e5d4b9aac5eaf259784e760def42bca8b09954510d39014a7a7c9e8656d61f5995a356df2f2ebb0df2696dd739ff3de5865d
-Size (mariadb-10.5.16.tar.gz) = 105798374 bytes
+BLAKE2s (mariadb-10.5.17.tar.gz) = e2b29683aa1e6ff33bb3ef1e16fabd4c0611d517688225cd72b630c4390e2d39
+SHA512 (mariadb-10.5.17.tar.gz) = 5a68126aac7072bed549404c89f7215bc47dede8f72559076988469372b96523a800fd6bbf11ff3003a277ee30788ca99a21507b7d7e2b7e98437ca70b5ca0fc
+Size (mariadb-10.5.17.tar.gz) = 113314849 bytes
 SHA1 (patch-BUILD_compile-pentium32-gcov) = 89a7da728f94f19c153b4d2d2d6ba5462acc941f
 SHA1 (patch-CMakeLists.txt) = 574131db46854715758c60ba5f026498f5b29564
 SHA1 (patch-client_CMakeLists.txt) = 8fdd8a182304f0b84e120ce95334ace23d02ce88
 SHA1 (patch-client_mysql.cc) = 89fe80fb66b8791131a8c6d1b209e57082804a01
-SHA1 (patch-extra_wolfssl_wolfssl_certs_intermediate_genintcerts.sh) = cd9a982889b88f811c3e14ebdf9795b0fa5d1fad
 SHA1 (patch-include_my__global.h) = a3b831f91ba2efea9f78e70ab4f706da23b80403
 SHA1 (patch-mysys_my__context.c) = f9c7e6b3b68b857e7781cf5f36c49e88051cfb66
 SHA1 (patch-plugin_auth__socket_CMakeLists.txt) = 00cfaf5826cc97084bc77033985e6686e1ce1628
@@ -15,7 +14,6 @@ SHA1 (patch-plugin_auth__socket_auth__socket.c) = 850e94faff382a7e962f6d4d6ff960
 SHA1 (patch-scripts_CMakeLists.txt) = 54591a4d255a8133e06ab5d52bad262acffcddda
 SHA1 (patch-scripts_mysqld__safe.sh) = 4124e4c8df1527049f5eec9f3d2d4bbe80e7c33f
 SHA1 (patch-sql_mysqld.cc) = 19d325124cde1b45376c9710cdd104dc460f4bea
-SHA1 (patch-storage_connect_ioapi.c) = 804e2d9d3722fbe4d5ed773cc98a4114fe4cf8a3
 SHA1 (patch-storage_connect_tabvct.cpp) = 2e3c7cd7e4b0a86d443da47d3cc514b8b276d836
 SHA1 (patch-storage_rocksdb_rdb__io__watchdog.cc) = 85ee5007cfda0d3070ec20b2b774738b01f8e083
 SHA1 (patch-storage_rocksdb_rdb__io__watchdog.h) = d790c092d7d35d014c5ef209635c18614c3a8301
