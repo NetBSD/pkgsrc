@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2022/06/28 11:31:18 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2022/09/23 08:28:23 nia Exp $
 
 PKGNAME=	${DISTNAME:S/-/-server-/}
-PKGREVISION=	1
 COMMENT=	MariaDB 10.5, a free MySQL compatible database (server)
 
 CONFLICTS=	mysql-server-[0-9]*
