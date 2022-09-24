@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/01/18 21:50:50 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2022/09/24 08:13:10 nia Exp $
 
 DISTNAME=	WCMCommander-0.20.0
 PKGREVISION=	2
@@ -17,6 +17,9 @@ USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 CMAKE_ARGS+=	-DWITH_SMBCLIENT:BOOL=OFF
+
+# Needs gnu for alloca builtin
+BUILDLINK_TRANSFORM+=	opt:-std=c++11:-std=gnu++11
 
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../security/libssh2/buildlink3.mk"
