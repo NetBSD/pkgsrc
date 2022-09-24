@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2022/09/22 06:01:07 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/09/24 07:49:55 bsiegert Exp $
 
-DISTNAME=	bulk-test-go-20220918
+DISTNAME=	bulk-test-go-20220924
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -122,7 +122,7 @@ BUILD_DEPENDS+=	go-ffuf-[0-9]*:../../www/go-ffuf
 BUILD_DEPENDS+=	gitea-[0-9]*:../../www/gitea
 BUILD_DEPENDS+=	grafana-[0-9]*:../../www/grafana
 BUILD_DEPENDS+=	go-minify-[0-9]*:../../www/go-minify
-BUILD_DEPENDS+=	hugo-[0-9]*:../../www/hugo
+BUILD_DEPENDS+=	go-hugo-[0-9]*:../../www/hugo
 BUILD_DEPENDS+=	apisprout-[0-9]*:../../www/apisprout
 BUILD_DEPENDS+=	jira-cli-[0-9]*:../../www/jira-cli
 BUILD_DEPENDS+=	restish-[0-9]*:../../www/restish
