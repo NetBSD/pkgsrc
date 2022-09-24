@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2022/09/11 12:51:49 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2022/09/24 08:31:23 nia Exp $
 
 DISTNAME=	warzone2100_src
 PKGNAME=	warzone2100-4.2.7
@@ -43,6 +43,9 @@ CFLAGS.NetBSD+=		-D_NETBSD_SOURCE
 LDFLAGS.DragonFly+=	-lX11 -lintl
 
 BUILDLINK_TRANSFORM+=	rm:-Werror
+
+# Needs gnu standard variant to get alloca builtin.
+BUILDLINK_TRANSFORM+=	opt:-std=c++11:-std=gnu++11
 
 pre-configure:
 	${RUN}${MKDIR} ${WRKSRC}/build
