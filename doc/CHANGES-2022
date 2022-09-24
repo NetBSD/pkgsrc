@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4652 2022/09/23 22:53:18 nia Exp $
+$NetBSD: CHANGES-2022,v 1.4653 2022/09/24 06:00:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6846,3 +6846,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/squid4 to 4.17nb4 [taca 2022-09-23]
 	Updated www/firefox102-l10n to 102.3.0 [nia 2022-09-23]
 	Updated www/firefox102 to 102.3.0 [nia 2022-09-23]
+	Removed editors/mule [wiz 2022-09-24]
