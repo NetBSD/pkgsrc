@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:17:12 joerg Exp $
-bin/OdfConverter
-share/doc/OdfConverter/README.TXT

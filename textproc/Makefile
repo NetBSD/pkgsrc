@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1326 2022/09/11 17:46:40 wiz Exp $
+# $NetBSD: Makefile,v 1.1327 2022/09/24 06:54:37 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -10,7 +10,6 @@ SUBDIR+=	GutenMark
 SUBDIR+=	GutenMark-words
 SUBDIR+=	LDoc
 SUBDIR+=	Markdown
-SUBDIR+=	OdfConverter
 SUBDIR+=	PEGTL
 SUBDIR+=	R-DT
 SUBDIR+=	R-brew
