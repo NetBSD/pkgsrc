@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.43 2021/12/08 16:05:37 adam Exp $
-#
+# $NetBSD: Makefile,v 1.44 2022/09/24 06:30:43 wiz Exp $
 
-DISTNAME=	gelemental-1.2.0
-PKGREVISION=	35
+DISTNAME=	gelemental-2.0.1
 CATEGORIES=	misc
-MASTER_SITES=	http://www.kdau.com/files/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_GITHUB:=ginggs/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-#HOMEPAGE=	http://www.kdau.com/projects/gelemental/
+HOMEPAGE=	https://github.com/ginggs/gelemental
 COMMENT=	Periodic table viewer
+LICENSE=	mit AND gnu-gpl-v3
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

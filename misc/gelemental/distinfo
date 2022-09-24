@@ -1,13 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:59:04 nia Exp $
+$NetBSD: distinfo,v 1.9 2022/09/24 06:30:43 wiz Exp $
 
-BLAKE2s (gelemental-1.2.0.tar.bz2) = af560a458f6f1ad19ddf0c4567aabbc979a48727f33dd07481db65ee6fc6e867
-SHA512 (gelemental-1.2.0.tar.bz2) = 2e6ef2c22b389cff69728b01e1eb397578974362356f5132098f29a9e01a64be228a24686738bd84ea575cee5aef068d9ab3d6c20233f995ccc5f1a1cb5d5673
-Size (gelemental-1.2.0.tar.bz2) = 460757 bytes
-SHA1 (patch-aa) = bef3bc522e630b5f5674b75bb9713a844e38b66f
-SHA1 (patch-libelemental_misc_extras_cc) = 5b65d9d3b26ff81f96a3af9a0de2552c79b2c957
-SHA1 (patch-libelemental_misc_widgets_cc) = 1de3021e6b4790e8f879f7ed8859281bf6f768ff
-SHA1 (patch-libelemental_value.cc) = 1db6a3d81c98749bf71a66ee88af8a18f3b2608d
-SHA1 (patch-libelemental_value.hh) = bc630930c5e6a801419b7e48986814b7a96c4e89
-SHA1 (patch-libelemental_value.tcc) = d07bd0eda624514bf4e22a2f995cc0176d1e6a6c
-SHA1 (patch-src_dialogs.cc) = 50b665acb4c2657d218a65a429d5c62b77d3e247
-SHA1 (patch-src_main_cc) = efd05b15c0e4fc2d19c07c525ac5f20e9fb05b1c
+BLAKE2s (gelemental-2.0.1.tar.gz) = ed616e7104f7cd50f33c718b59a6b26ceeca31df7680fb6adc47ce38d67760ef
+SHA512 (gelemental-2.0.1.tar.gz) = e3f8e1757ff3e7843f2a860ffd41413e15a8382a3d4bd41d850b629857764b1e1508de8e825d257e5232617395d56bc5f517797301d9fe13849ceb0e48a68da2
+Size (gelemental-2.0.1.tar.gz) = 779930 bytes
+SHA1 (patch-libelemental_value.cc) = 7f59e162d90696c3c49eeff07f512c70dc5ea72a
