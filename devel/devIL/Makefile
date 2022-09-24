@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2020/06/05 12:48:59 jperkin Exp $
+# $NetBSD: Makefile,v 1.43 2022/09/24 21:06:42 he Exp $
 #
 
 DISTNAME=	DevIL-${DEVIL_VERSION}
@@ -24,6 +24,11 @@ INFO_FILES=		yes
 
 CONFIGURE_ARGS+=	--enable-ILU
 CONFIGURE_ARGS+=	--enable-ILUT
+
+.if (${MACHINE_ARCH} == "powerpc")
+# Uses __vector deep in the gcc10 includes...
+CFLAGS+=	-maltivec
+.endif
 
 .include "options.mk"
 .include "../../devel/SDL/buildlink3.mk"

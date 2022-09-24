@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2021/10/26 10:14:32 nia Exp $
+$NetBSD: distinfo,v 1.16 2022/09/24 21:06:42 he Exp $
 
 BLAKE2s (DevIL-1.7.8.tar.gz) = 135843f792b50024862d04d63a924d053d4f810d2f50c4f49bcafa4ee2d79bb1
 SHA512 (DevIL-1.7.8.tar.gz) = a67e1488d6cb366431d9fcb460b8fe5b8a1dd79426ac77f8abd0db4a5aad7512697f72ef0c49ddb0e806469cc37ba1319e10ccd2ebd73942332df2c3c507458e
@@ -10,5 +10,8 @@ SHA1 (patch-ad) = c8885607457c9af2d89dcf2d9e163fd224e0fa35
 SHA1 (patch-include_IL_il.h) = 553b2fbbd930ff6bab4b5bc790d13ebcccbfffba
 SHA1 (patch-lib_Makefile.in) = a2ae8d1a97f2cbd9c46b2f5923be06839dd6c64f
 SHA1 (patch-src-ILU_ilur_ilur.c) = 611f0068a98f4da6771c11c8b267cafbea7cb76a
+SHA1 (patch-src-IL_include_altivec__common.h) = ac14657153ff7dbe3292b69bf57eb5d1bed4a945
 SHA1 (patch-src-IL_include_il__endian.h) = 25ed5f24fc871ceebb685e1c242a4c7b724142a2
 SHA1 (patch-src-IL_src_il__jp2.c) = 7474bdc6507f4a9daa42800fa626ec9ffe6892fe
+SHA1 (patch-src-IL_src_il__quantizer.c) = 0744471f7b92f746d5dbb5ba207c79803c97bf82
+SHA1 (patch-src-IL_src_il__sgi.c) = d01754446dd2a51b2f0b6a6b91700a3b85508487
