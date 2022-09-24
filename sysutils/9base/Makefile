@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2021/04/13 08:05:30 nia Exp $
+# $NetBSD: Makefile,v 1.22 2022/09/24 08:27:52 nia Exp $
 
 DISTNAME=	9base-6
 PKGNAME=	9base-20100604
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils shells
 MASTER_SITES=	http://dl.suckless.org/tools/
 
@@ -20,19 +20,8 @@ PKG_SHELL=		bin/rc
 # commits utter sins with sprintf() macros; glhf
 FORTIFY_SUPPORTED=	no
 
-.include "../../mk/bsd.prefs.mk"
-
-# Darwin doesn't support static link.
-# See http://developer.apple.com/library/mac/#qa/qa1118/_index.html
-.if ${OPSYS} == "Darwin"
-BUILDLINK_TRANSFORM+=	rm:-static
-.elif ${OPSYS} == "SunOS"
-BUILDLINK_TRANSFORM+=	rm:-static
-CFLAGS+=		-DPLAN9PORT
-LDFLAGS+=		-lsocket -lnsl
-.else
-LDFLAGS+=		-static
-.endif
+CFLAGS.SunOS+=		-DPLAN9PORT
+LDFLAGS.SunOS+=		-lsocket -lnsl
 
 PREFIX9P=	${PREFIX}/9base
 
