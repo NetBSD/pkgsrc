@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1642 2022/09/11 18:04:04 wiz Exp $
+# $NetBSD: Makefile,v 1.1643 2022/09/24 06:59:32 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -1091,6 +1091,5 @@ SUBDIR+=	yahttp
 SUBDIR+=	yaws
 SUBDIR+=	z-push
 SUBDIR+=	zola
-SUBDIR+=	zopeedit
 
 .include "../mk/misc/category.mk"
