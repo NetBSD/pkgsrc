@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2021/11/21 07:43:31 fcambus Exp $
+# $NetBSD: Makefile,v 1.4 2022/09/24 07:54:17 nia Exp $
 
 DISTNAME=	ytree-2.04
 CATEGORIES=	sysutils
@@ -13,8 +13,10 @@ BUILD_TARGET=	ytree
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly" || \
-    ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD"
+.if ${OPSYS} == "NetBSD"
+LDFLAGS+=	${BUILDLINK_LDADD.curses} -lcompat_p -lreadline
+.elif ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly" || \
+    ${OPSYS} == "OpenBSD"
 LDFLAGS+=	${BUILDLINK_LDADD.curses} -lcompat -lreadline
 .else
 LDFLAGS+=	${BUILDLINK_LDADD.curses} -lreadline
