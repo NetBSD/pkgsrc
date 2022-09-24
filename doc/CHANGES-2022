@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4657 2022/09/24 06:34:04 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4658 2022/09/24 06:37:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6851,3 +6851,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed devel/adacurses [wiz 2022-09-24]
 	Updated misc/gelemental to 2.0.1 [wiz 2022-09-24]
 	Removed misc/root [wiz 2022-09-24]
+	Removed misc/rump [wiz 2022-09-24]
+	Removed filesystems/fs-utils [wiz 2022-09-24]
