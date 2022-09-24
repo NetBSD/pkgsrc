@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.91 2022/08/15 12:23:05 tnn Exp $
+$NetBSD: distinfo,v 1.92 2022/09/24 09:51:54 nia Exp $
 
 BLAKE2s (openjdk7/bootstrap-jdk-1.7.76-freebsd-10-amd64-20150301.tar.xz) = 8745b980e290e509c0dd09706398b89afce85fee1405b9367b6684c83d56b96a
 SHA512 (openjdk7/bootstrap-jdk-1.7.76-freebsd-10-amd64-20150301.tar.xz) = 6ed928cc68503c27edd6f3a90f94e1e762192d41997b12903e37071f4fcd34f5579fa970e59c240928eaae60729300fbfdb02a5ec1136bc757ee24f1ee554af4
@@ -65,6 +65,7 @@ SHA1 (patch-hotspot_src_os__cpu_bsd__aarch64_vm_bytes__bsd__aarch64.inline.hpp) 
 SHA1 (patch-hotspot_src_os__cpu_bsd__aarch64_vm_os__bsd__aarch64.cpp) = 461717b25728884add18a8c68221ccea4ef81bbe
 SHA1 (patch-hotspot_src_os__cpu_bsd__aarch64_vm_vm__version__bsd__aarch64.cpp) = d6762bb2a9fe6e158ccf23f7d04aa0cba588e78e
 SHA1 (patch-hotspot_src_os__cpu_bsd__zero_vm_atomic__bsd__zero.inline.hpp) = f46713855507654be42707b1f80a779796929069
+SHA1 (patch-hotspot_src_os__cpu_bsd__zero_vm_os__bsd__zero.cpp) = dcce100a83519f844fe9833c93c924a00bfa4f2d
 SHA1 (patch-hotspot_src_os__cpu_solaris__x86_vm_atomic__solaris__x86.inline.hpp) = 2bf9147643be4ac711d1bf94eb0e6ae4abad20c6
 SHA1 (patch-hotspot_src_os__cpu_solaris__x86_vm_orderAccess__solaris__x86.inline.hpp) = 82818bc8d8fee46403b88cf52a7c978b5ea0005c
 SHA1 (patch-hotspot_src_os__cpu_solaris__x86_vm_os__solaris__x86.cpp) = 6a6b719a52408e88b27d3f2a5a41789dc15ef39d
