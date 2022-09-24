@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2022/09/24 20:21:25 adam Exp $
+lib/gstreamer-1.0/libgstosxaudio.so
