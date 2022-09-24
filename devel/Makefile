@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3800 2022/09/22 09:53:49 wiz Exp $
+# $NetBSD: Makefile,v 1.3801 2022/09/24 06:18:43 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -116,7 +116,6 @@ SUBDIR+=	accerciser
 SUBDIR+=	acme
 SUBDIR+=	acr
 SUBDIR+=	acunia-jam
-SUBDIR+=	adacurses
 SUBDIR+=	adocman
 SUBDIR+=	aegis
 SUBDIR+=	afl
