@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2022/07/18 07:30:43 adam Exp $
+# $NetBSD: Makefile,v 1.26 2022/09/24 08:43:45 nia Exp $
 
 DISTNAME=	libtorrent-rasterbar-2.0.7
 CATEGORIES=	net
@@ -12,7 +12,8 @@ COMMENT=	Feature complete C++ bittorrent implementation
 LICENSE=	modified-bsd
 
 USE_CMAKE=	yes
-USE_LANGUAGES=	c c++17
+# Use GNU language variant to get builtin alloca definition.
+USE_LANGUAGES=	c gnu++14
 USE_TOOLS+=	pkg-config
 
 GCC_REQD+=	6 # c++14
