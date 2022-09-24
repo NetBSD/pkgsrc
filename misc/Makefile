@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.569 2022/09/06 15:56:52 martin Exp $
+# $NetBSD: Makefile,v 1.570 2022/09/24 06:34:04 wiz Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -304,7 +304,6 @@ SUBDIR+=	reed
 SUBDIR+=	rhash
 SUBDIR+=	rlwrap
 SUBDIR+=	rocs
-SUBDIR+=	root
 SUBDIR+=	root-tail
 SUBDIR+=	routeplanner-cli
 SUBDIR+=	rox-memo
