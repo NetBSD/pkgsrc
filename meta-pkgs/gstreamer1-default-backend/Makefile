@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2021/08/17 14:36:36 nia Exp $
+# $NetBSD: Makefile,v 1.3 2022/09/24 20:41:29 adam Exp $
 
-DISTNAME=	gstreamer1-default-backend-1.0
+DISTNAME=	gstreamer1-default-backend-1.1
 CATEGORIES=	meta-pkgs audio multimedia
 MASTER_SITES=	# empty
 
@@ -31,6 +31,11 @@ DEPENDS+=	gst-plugins1-alsa-[0-9]*:../../audio/gst-plugins1-alsa
 
 .if !empty(PKG_OPTIONS:Moss)
 DEPENDS+=	gst-plugins1-oss-[0-9]*:../../audio/gst-plugins1-oss
+.endif
+
+.if ${OPSYS} == "Darwin"
+DEPENDS+=	gst-plugins1-osxaudio-[0-9]*:../../audio/gst-plugins1-osxaudio
+DEPENDS+=	gst-plugins1-osxvideo-[0-9]*:../../multimedia/gst-plugins1-osxvideo
 .endif
 
 .if !empty(PKG_OPTIONS:Mpulseaudio)
