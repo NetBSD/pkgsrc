@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 11:21:29 nia Exp $
-
-BLAKE2s (OdfAddinForOffice-src-3.0.zip) = 8c37b9ef9577db31a4c787ca5177cfd2978ead8907c6aae2300d9c95e35fc1e1
-SHA512 (OdfAddinForOffice-src-3.0.zip) = 1988d164aa55ba64e7a6e6a2b465466dfe9ca2781dfff80be4b911c07869a6fc6d4692a46168954e87130ca115c4cacec2ef0e35ee42f0fb74e45ddee6e1341d
-Size (OdfAddinForOffice-src-3.0.zip) = 34547426 bytes
-SHA1 (patch-aa) = cf6b802a221f7dbec6a92a6c20e5892055fd03e4
-SHA1 (patch-ab) = 1240ea11736009463bf937ccc547e5037d411626
-SHA1 (patch-ac) = 5e48d1f5a0a40912f56154bbbaaeea74819cd202
-SHA1 (patch-build_common.mk) = 08f61bb2459aad674f2d9db20a44280e3702ab94
