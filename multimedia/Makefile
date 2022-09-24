@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.324 2022/04/24 10:57:28 tnn Exp $
+# $NetBSD: Makefile,v 1.325 2022/09/24 20:22:49 adam Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -82,6 +82,7 @@ SUBDIR+=	gst-plugins1-mpeg2dec
 SUBDIR+=	gst-plugins1-ogg
 SUBDIR+=	gst-plugins1-omx
 SUBDIR+=	gst-plugins1-openh264
+SUBDIR+=	gst-plugins1-osxvideo
 SUBDIR+=	gst-plugins1-resindvd
 SUBDIR+=	gst-plugins1-theora
 SUBDIR+=	gst-plugins1-transcoder
