@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.117 2022/09/20 15:59:33 he Exp $
+$NetBSD: distinfo,v 1.118 2022/09/24 07:48:06 nia Exp $
 
 BLAKE2s (mono-6.12.0.122.tar.xz) = 0f4ef4106e8974fea9ddc2b61ab1b0ebd2a8182fb9f098ec9c46655b4ac1b867
 SHA512 (mono-6.12.0.122.tar.xz) = 0fbd4147498cc81e384933147eb6aa5c559d17a794a308af7ffa43dce51e0faefde24fc75e987ed804dcb161b52756944bc3611100fc0a4adcc260ca97ddaecd
@@ -13,6 +13,7 @@ SHA1 (patch-data_net__4__0_Browsers_Makefile.am) = 0ada5af132816efb41dfbd7ce2ba2
 SHA1 (patch-data_net__4__0_Makefile.am) = 7c0fa175047f01a556f61503b2fcfabdedd2c606
 SHA1 (patch-data_net__4__5_Browsers_Makefile.am) = 80bd57a2ac3fc95adef18acd9cfd7744ca112b01
 SHA1 (patch-data_net__4__5_Makefile.am) = d7591e835bfdd27fa0fba4b669b778924c811be4
+SHA1 (patch-external_boringssl_crypto_cpu-aarch64-linux.c) = 7c876a1e937e21758199a1842bfc15c205069922
 SHA1 (patch-external_boringssl_include_openssl_thread.h) = a0855fa36e98111961e58338e7c810c5e0568bfb
 SHA1 (patch-external_corert_src_Native_gc_env_gcenv.structs.h) = 91b37d93c1c3aadcdb383c443142fe28f50ad8e6
 SHA1 (patch-mcs_class_System_System.Net.NetworkInformation_UnixNetworkInterfaceFactory.cs) = 90cb31154f325c19ae82a9e7dd52b4de0ee7b2d2
