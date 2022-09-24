@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.658 2022/09/14 11:28:18 wiz Exp $
+# $NetBSD: Makefile,v 1.659 2022/09/24 20:21:25 adam Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -191,6 +191,7 @@ SUBDIR+=	gst-plugins1-mpg123
 SUBDIR+=	gst-plugins1-musepack
 SUBDIR+=	gst-plugins1-opus
 SUBDIR+=	gst-plugins1-oss
+SUBDIR+=	gst-plugins1-osxaudio
 SUBDIR+=	gst-plugins1-pulse
 SUBDIR+=	gst-plugins1-sid
 SUBDIR+=	gst-plugins1-sndfile
