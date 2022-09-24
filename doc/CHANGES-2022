@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4660 2022/09/24 06:59:33 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4661 2022/09/24 07:01:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6855,3 +6855,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed filesystems/fs-utils [wiz 2022-09-24]
 	Removed textproc/OdfConverter [wiz 2022-09-24]
 	Removed www/zopeedit [wiz 2022-09-24]
+	Removed x11/gtkada [wiz 2022-09-24]
