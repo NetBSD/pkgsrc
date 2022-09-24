@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:07:21 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/09/24 06:30:43 wiz Exp $
 bin/gelemental
 include/libelemental/element.hh
 include/libelemental/element.tcc
@@ -20,6 +20,7 @@ share/icons/hicolor/24x24/apps/gelemental.png
 share/icons/hicolor/32x32/apps/gelemental.png
 share/icons/hicolor/48x48/apps/gelemental.png
 share/icons/hicolor/scalable/apps/gelemental.svg
+share/locale/cs/LC_MESSAGES/gelemental.mo
 share/locale/da/LC_MESSAGES/gelemental.mo
 share/locale/de/LC_MESSAGES/gelemental.mo
 share/locale/en_CA/LC_MESSAGES/gelemental.mo
