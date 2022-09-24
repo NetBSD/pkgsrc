@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/02/04 08:34:23 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2022/09/24 08:05:56 nia Exp $
 
 DISTNAME=	findcrcs-0.3
 CATEGORIES=	sysutils
@@ -16,6 +16,9 @@ TEST_TARGET=		test
 INSTALLATION_DIRS=	bin share/doc/findcrcs
 
 .include "../../mk/compiler.mk"
+
+# Lots of nasty assumptions about things like SSE being available.
+BROKEN_EXCEPT_ON_PLATFORM+=	*-*-x86_64
 
 .if !empty(CC_VERSION:Mgcc*)
 CXXFLAGS+=	-mcrc32
