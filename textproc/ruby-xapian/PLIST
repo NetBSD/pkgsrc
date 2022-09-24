@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2019/12/25 14:29:24 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.8 2022/09/24 19:07:20 schmonz Exp $
 ${RUBY_SITEARCHLIB}/_xapian.a
 ${RUBY_SITEARCHLIB}/_xapian.${RUBY_DLEXT}
 ${RUBY_SITELIB}/xapian.rb
@@ -8,26 +8,23 @@ share/doc/xapian-bindings/${RUBY_PKGPREFIX}/examples/simplematchdecider.rb
 share/doc/xapian-bindings/${RUBY_PKGPREFIX}/examples/simplesearch.rb
 share/doc/xapian-bindings/${RUBY_PKGPREFIX}/index.html
 share/doc/xapian-bindings/${RUBY_PKGPREFIX}/rdocs/Xapian.html
-${PLIST.oldruby}share/doc/xapian-bindings/${RUBY_PKGPREFIX}/rdocs/Xapian/Xapian.html
 share/doc/xapian-bindings/${RUBY_PKGPREFIX}/rdocs/Xapian/LatLongCoord.html
 share/doc/xapian-bindings/${RUBY_PKGPREFIX}/rdocs/Xapian/MultiValueKeyMaker.html
 share/doc/xapian-bindings/${RUBY_PKGPREFIX}/rdocs/Xapian/MultiValueKeyMaker/KeySpec.html
-share/doc/xapian-bindings/${RUBY_PKGPREFIX}/rdocs/${XAPIAN_RDOC_PATH}/Database.html
-share/doc/xapian-bindings/${RUBY_PKGPREFIX}/rdocs/${XAPIAN_RDOC_PATH}/Document.html
-share/doc/xapian-bindings/${RUBY_PKGPREFIX}/rdocs/${XAPIAN_RDOC_PATH}/ESet.html
-share/doc/xapian-bindings/${RUBY_PKGPREFIX}/rdocs/${XAPIAN_RDOC_PATH}/Enquire.html
-share/doc/xapian-bindings/${RUBY_PKGPREFIX}/rdocs/${XAPIAN_RDOC_PATH}/ExpandTerm.html
-share/doc/xapian-bindings/${RUBY_PKGPREFIX}/rdocs/${XAPIAN_RDOC_PATH}/LatLongCoords.html
-share/doc/xapian-bindings/${RUBY_PKGPREFIX}/rdocs/${XAPIAN_RDOC_PATH}/MSet.html
-share/doc/xapian-bindings/${RUBY_PKGPREFIX}/rdocs/${XAPIAN_RDOC_PATH}/Match.html
-share/doc/xapian-bindings/${RUBY_PKGPREFIX}/rdocs/${XAPIAN_RDOC_PATH}/Posting.html
-share/doc/xapian-bindings/${RUBY_PKGPREFIX}/rdocs/${XAPIAN_RDOC_PATH}/Query.html
-share/doc/xapian-bindings/${RUBY_PKGPREFIX}/rdocs/${XAPIAN_RDOC_PATH}/QueryParser.html
-${PLIST.oldruby}share/doc/xapian-bindings/${RUBY_PKGPREFIX}/rdocs/Xapian/Xapian/Xapian.html
-${PLIST.oldruby}share/doc/xapian-bindings/${RUBY_PKGPREFIX}/rdocs/Xapian/Xapian/Xapian/Term.html
-${PLIST.newruby}share/doc/xapian-bindings/${RUBY_PKGPREFIX}/rdocs/Xapian/Term.html
-share/doc/xapian-bindings/${RUBY_PKGPREFIX}/rdocs/${XAPIAN_RDOC_PATH}/Value.html
-share/doc/xapian-bindings/${RUBY_PKGPREFIX}/rdocs/${XAPIAN_RDOC_PATH}/ValueCountMatchSpy.html
+share/doc/xapian-bindings/${RUBY_PKGPREFIX}/rdocs/Xapian/Database.html
+share/doc/xapian-bindings/${RUBY_PKGPREFIX}/rdocs/Xapian/Document.html
+share/doc/xapian-bindings/${RUBY_PKGPREFIX}/rdocs/Xapian/ESet.html
+share/doc/xapian-bindings/${RUBY_PKGPREFIX}/rdocs/Xapian/Enquire.html
+share/doc/xapian-bindings/${RUBY_PKGPREFIX}/rdocs/Xapian/ExpandTerm.html
+share/doc/xapian-bindings/${RUBY_PKGPREFIX}/rdocs/Xapian/LatLongCoords.html
+share/doc/xapian-bindings/${RUBY_PKGPREFIX}/rdocs/Xapian/MSet.html
+share/doc/xapian-bindings/${RUBY_PKGPREFIX}/rdocs/Xapian/Match.html
+share/doc/xapian-bindings/${RUBY_PKGPREFIX}/rdocs/Xapian/Posting.html
+share/doc/xapian-bindings/${RUBY_PKGPREFIX}/rdocs/Xapian/Query.html
+share/doc/xapian-bindings/${RUBY_PKGPREFIX}/rdocs/Xapian/QueryParser.html
+share/doc/xapian-bindings/${RUBY_PKGPREFIX}/rdocs/Xapian/Term.html
+share/doc/xapian-bindings/${RUBY_PKGPREFIX}/rdocs/Xapian/Value.html
+share/doc/xapian-bindings/${RUBY_PKGPREFIX}/rdocs/Xapian/ValueCountMatchSpy.html
 share/doc/xapian-bindings/${RUBY_PKGPREFIX}/rdocs/created.rid
 share/doc/xapian-bindings/${RUBY_PKGPREFIX}/rdocs/css/fonts.css
 share/doc/xapian-bindings/${RUBY_PKGPREFIX}/rdocs/css/rdoc.css
