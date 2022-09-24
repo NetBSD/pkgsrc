@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4655 2022/09/24 06:18:43 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4656 2022/09/24 06:30:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6849,3 +6849,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed editors/mule [wiz 2022-09-24]
 	Removed mail/gnus [wiz 2022-09-24]
 	Removed devel/adacurses [wiz 2022-09-24]
+	Updated misc/gelemental to 2.0.1 [wiz 2022-09-24]
