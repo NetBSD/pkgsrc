@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2014/10/03 11:51:54 obache Exp $
-#
+# $NetBSD: Makefile,v 1.8 2022/09/24 06:48:55 wiz Exp $
 
 DISTNAME=	libbind-6.0
 PKGREVISION=	1
@@ -12,6 +11,8 @@ COMMENT=	ISC Standard Resolver Library
 LICENSE=	isc
 
 CONFLICTS=		man-pages-[0-9]*
+
+NOT_FOR_PLATFORM=	NetBSD-*-*
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
