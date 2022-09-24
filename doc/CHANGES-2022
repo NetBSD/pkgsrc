@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4654 2022/09/24 06:09:05 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4655 2022/09/24 06:18:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6848,3 +6848,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/firefox102 to 102.3.0 [nia 2022-09-23]
 	Removed editors/mule [wiz 2022-09-24]
 	Removed mail/gnus [wiz 2022-09-24]
+	Removed devel/adacurses [wiz 2022-09-24]
