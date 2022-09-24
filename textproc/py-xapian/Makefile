@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2022/07/10 19:08:30 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2022/09/24 19:11:20 schmonz Exp $
 
 PKGNAME=	${PYPKGPREFIX}-${PKGNAME_MODULE}
 COMMENT=	Python bindings for Xapian search engine
@@ -10,7 +10,6 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 CONFIGURE_ARGS+=	--with-python3 PYTHON3=${PYTHONBIN}
 
-PLIST_SUBST+=		PYTHON_3_OR_PYTHON=python3
 PY_PATCHPLIST=		yes
 PYTHON_SELF_CONFLICT=	yes
 
