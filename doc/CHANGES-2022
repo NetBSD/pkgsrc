@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4662 2022/09/24 20:30:21 adam Exp $
+$NetBSD: CHANGES-2022,v 1.4663 2022/09/24 20:41:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6858,3 +6858,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed x11/gtkada [wiz 2022-09-24]
 	Added audio/gst-plugins1-osxaudio version 1.20.3 [adam 2022-09-24]
 	Added multimedia/gst-plugins1-osxvideo version 1.20.3 [adam 2022-09-24]
+	Updated meta-pkgs/gstreamer1-default-backend to 1.1 [adam 2022-09-24]
