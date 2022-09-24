@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST.SunOS,v 1.3 2018/01/01 22:29:44 rillig Exp $
-lib/librumpkern_sys_sunos.a
-lib/librumpkern_sys_sunos.so
-lib/librumpkern_sys_sunos.so.0
-lib/librumpkern_sys_sunos.so.0.0
-lib/librumpkern_sys_sunos_pic.a
