@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4661 2022/09/24 07:01:27 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4662 2022/09/24 20:30:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6856,3 +6856,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed textproc/OdfConverter [wiz 2022-09-24]
 	Removed www/zopeedit [wiz 2022-09-24]
 	Removed x11/gtkada [wiz 2022-09-24]
+	Added audio/gst-plugins1-osxaudio version 1.20.3 [adam 2022-09-24]
+	Added multimedia/gst-plugins1-osxvideo version 1.20.3 [adam 2022-09-24]
