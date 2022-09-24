@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2020/10/24 22:39:48 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2022/09/24 08:09:27 nia Exp $
 
 COLLECTD_PACKAGE=	varnish
 
 COMMENT=		Statistics collection daemon - varnish plugin
+
+BROKEN+=		"fatal error: vapi/vsc.h: No such file or directory"
 
 .include "../../www/varnish/buildlink3.mk"
 COLLECTD_LIB.varnish=	${BUILDLINK_PREFIX.varnish}
