@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/10/28 17:46:58 agc Exp $
+# $NetBSD: Makefile,v 1.2 2022/09/24 08:17:16 nia Exp $
 
 DISTNAME=	libstark-20191018
 CATEGORIES=	security devel
@@ -18,6 +18,9 @@ USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++11
 
 AUTO_MKDIRS=	yes
+
+# supposedly requires sse4
+ONLY_FOR_PLATFORM+=	*-*-x86_64
 
 do-install:
 	for f in stark-dpm stark-tinyram; do				\
