@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2020/04/25 21:49:38 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2022/09/24 08:33:19 nia Exp $
 #
 
 DISTNAME=	veleng10
@@ -19,6 +19,7 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 
 # These platforms cannot build 32-on-64 binaries.
 NOT_FOR_PLATFORM+=	*-*-alpha
+NOT_FOR_PLATFORM+=	*-*-aarch64*
 NOT_FOR_PLATFORM+=	DragonFly-*-x86_64
 
 EXTRACT_OPTS_ZIP=	-LLaqo
