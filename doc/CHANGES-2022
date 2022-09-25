@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4667 2022/09/25 12:26:07 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.4668 2022/09/25 12:28:57 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6863,3 +6863,10 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated math/z3 to 4.8.3nb4 [he 2022-09-25]
 	Updated textproc/xapian to 1.4.21 [schmonz 2022-09-25]
 	Updated textproc/xapian-omega to 1.4.21 [schmonz 2022-09-25]
+	Updated textproc/csharp-xapian to 1.4.21 [schmonz 2022-09-25]
+	Updated textproc/lua-xapian to 1.4.21 [schmonz 2022-09-25]
+	Updated textproc/p5-Xapian to 1.4.21 [schmonz 2022-09-25]
+	Updated textproc/php-xapian to 1.4.21 [schmonz 2022-09-25]
+	Updated textproc/py-xapian to 1.4.21 [schmonz 2022-09-25]
+	Updated textproc/ruby-xapian to 1.4.21 [schmonz 2022-09-25]
+	Updated textproc/tcl-xapian to 1.4.21 [schmonz 2022-09-25]
