@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2022/05/24 18:51:53 jaapb Exp $
+# $NetBSD: Makefile,v 1.17 2022/09/25 11:01:34 he Exp $
 
 .include "Makefile.common"
-PKGREVISION=	3
+PKGREVISION=	4
 COMMENT=	The Z3 theorem prover / SMT solver
 
 .include "options.mk"
