@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2008/08/07 18:23:18 drochner Exp $
+$NetBSD: patch-aa,v 1.7 2022/09/25 14:43:27 he Exp $
 
 --- configure.orig	2008-07-18 16:41:54.000000000 +0200
 +++ configure
@@ -11,3 +11,50 @@ $NetBSD: patch-aa,v 1.6 2008/08/07 18:23:18 drochner Exp $
      { echo "$as_me:$LINENO: checking if $CC supports $TRY_CFLAGS flags" >&5
  echo $ECHO_N "checking if $CC supports $TRY_CFLAGS flags... $ECHO_C" >&6; }
      SAVE_CFLAGS="$CFLAGS"
+@@ -4981,6 +4981,7 @@ cat confdefs.h >>conftest.$ac_ext
+ cat >>conftest.$ac_ext <<_ACEOF
+ /* end confdefs.h.  */
+ 
++#include <altivec.h>
+ int
+ main ()
+ {
+@@ -5007,8 +5008,12 @@ eval "echo \"\$as_me:$LINENO: $ac_try_ec
+ 	 test -z "$ac_c_werror_flag" ||
+ 	 test ! -s conftest.err
+        } && test -s conftest.$ac_objext; then
+-  have_altivec=yes; { echo "$as_me:$LINENO: result: no" >&5
+-echo "${ECHO_T}no" >&6; }
++cat >>confdefs.h <<\_ACEOF
++#define HAVE_ALTIVEC_H
++_ACEOF
++
++			 have_altivec=yes; { echo "$as_me:$LINENO: result: yes" >&5
++echo "${ECHO_T}yes" >&6; }
+ else
+   echo "$as_me: failed program was:" >&5
+ sed 's/^/| /' conftest.$ac_ext >&5
+@@ -5019,7 +5024,6 @@ _ACEOF
+ cat confdefs.h >>conftest.$ac_ext
+ cat >>conftest.$ac_ext <<_ACEOF
+ /* end confdefs.h.  */
+-#include <altivec.h>
+ int
+ main ()
+ {
+@@ -5045,13 +5049,8 @@ eval "echo \"\$as_me:$LINENO: $ac_try_ec
+ 	 test -z "$ac_c_werror_flag" ||
+ 	 test ! -s conftest.err
+        } && test -s conftest.$ac_objext; then
+-
+-cat >>confdefs.h <<\_ACEOF
+-#define HAVE_ALTIVEC_H
+-_ACEOF
+-
+-			 have_altivec=yes; { echo "$as_me:$LINENO: result: yes" >&5
+-echo "${ECHO_T}yes" >&6; }
++  have_altivec=yes; { echo "$as_me:$LINENO: result: no" >&5
++echo "${ECHO_T}no" >&6; }
+ else
+   echo "$as_me: failed program was:" >&5
+ sed 's/^/| /' conftest.$ac_ext >&5
