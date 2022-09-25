@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4665 2022/09/25 11:02:23 he Exp $
+$NetBSD: CHANGES-2022,v 1.4666 2022/09/25 12:25:04 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6861,3 +6861,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated meta-pkgs/gstreamer1-default-backend to 1.1 [adam 2022-09-24]
 	Updated www/felinks to 0.15.1 [tnn 2022-09-25]
 	Updated math/z3 to 4.8.3nb4 [he 2022-09-25]
+	Updated textproc/xapian to 1.4.21 [schmonz 2022-09-25]
