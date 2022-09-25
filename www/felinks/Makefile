@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/09/25 10:13:59 tnn Exp $
+# $NetBSD: Makefile,v 1.7 2022/09/25 10:20:49 tnn Exp $
 
 DISTNAME=	elinks-0.15.1
 PKGNAME=	${DISTNAME:S/elinks/felinks/}
@@ -19,6 +19,7 @@ GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake pkg-config
 USE_TOOLS+=		msgfmt xgettext
+
 post-install:
 	${RM} -f ${DESTDIR}${PREFIX}/lib/charset.alias
 
@@ -37,6 +38,7 @@ LIBS+=	-lexecinfo
 .endif
 
 .include "options.mk"
+
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/libidn/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
