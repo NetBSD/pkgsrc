@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22228 2022/09/25 10:14:39 tnn Exp $
+$NetBSD: TODO,v 1.22229 2022/09/25 12:56:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1669,7 +1669,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o yorick-2.1.05
 	o yudit-3.0.7
 	o z-push-2.6.1
-	o z3-4.8.10
+	o z3-4.11.2
 	o z80-asm-2.4
 	o zabbix-4.4.4
 	o zabbix-frontend-4.4.4
