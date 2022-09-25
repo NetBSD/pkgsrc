@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.83 2022/08/30 18:00:49 osa Exp $
+$NetBSD: distinfo,v 1.84 2022/09/25 15:10:11 osa Exp $
 
 BLAKE2s (array-var-nginx-module-0.05.tar.gz) = 2f9af1e0eb209b7c20aa58cd8ec2afb1eb1cc122c5f4ea169e34131c463c1c26
 SHA512 (array-var-nginx-module-0.05.tar.gz) = 7c9fa9b76bc7cd2473ceae6d5ffb8de26993be9293ea967908d6c4550e086affa7016df4c936fb0b79f1142dc0aa1a5f2058d417e6433b5a3497a45d7e866e84
@@ -12,9 +12,9 @@ Size (encrypted-session-nginx-module-0.09.tar.gz) = 11847 bytes
 BLAKE2s (form-input-nginx-module-0.12.tar.gz) = b08fc95c3e15bfdc0846e2d1e8157171954f353bd301f4ac4aca56113620e91d
 SHA512 (form-input-nginx-module-0.12.tar.gz) = 1c5c5ab74156cac09da44a2dcdd84f7c03c9919a23a847e63613e00e3781ecd73d5ad12446174b4fdef9d064257a31570a8dbcccc00d8266f7048e3dcde0362e
 Size (form-input-nginx-module-0.12.tar.gz) = 11090 bytes
-BLAKE2s (lua-nginx-module-0.10.21.tar.gz) = 26e07caf6902c84ee45e1a11aa6f516065259de68ee9819bb521345a4d99311a
-SHA512 (lua-nginx-module-0.10.21.tar.gz) = c7594be48a3a5a8cc7bbda9288cb836c4c854ad22f91766dba944316d471ab8857a6b6a52813eb041af81939df73614db54ccd3ed35af87036d76317ebbe2e97
-Size (lua-nginx-module-0.10.21.tar.gz) = 690938 bytes
+BLAKE2s (lua-nginx-module-0.10.22.tar.gz) = 745f552a68bdccc5a3ea869970ebaad7dcf7c850b41124233871ea2168d58761
+SHA512 (lua-nginx-module-0.10.22.tar.gz) = 03e2504e8bc80efaf4af819ed9345285ca42ceecc647eda225e3be3b1e3617435f3949aa8034341955d8cce4826af9d1a8615b914109834f6b6b20e78be35ef9
+Size (lua-nginx-module-0.10.22.tar.gz) = 690975 bytes
 BLAKE2s (nbs-system-naxsi-29793dc_GH.tar.gz) = 561b875a1d01bef80a45580268a56f90ef7dfd74acfa01a7ab1ab667486e4abb
 SHA512 (nbs-system-naxsi-29793dc_GH.tar.gz) = 8c943daa14ee9a0d308bf6425e28123860bdd5db269ad0e481126915538fa3fcdf6607e1692b7819c9eec4a1206ec19060f5b85ee11d93e713f60a8870fc5d26
 Size (nbs-system-naxsi-29793dc_GH.tar.gz) = 236932 bytes
