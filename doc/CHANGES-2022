@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4664 2022/09/25 10:14:39 tnn Exp $
+$NetBSD: CHANGES-2022,v 1.4665 2022/09/25 11:02:23 he Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6860,3 +6860,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added multimedia/gst-plugins1-osxvideo version 1.20.3 [adam 2022-09-24]
 	Updated meta-pkgs/gstreamer1-default-backend to 1.1 [adam 2022-09-24]
 	Updated www/felinks to 0.15.1 [tnn 2022-09-25]
+	Updated math/z3 to 4.8.3nb4 [he 2022-09-25]
