@@ -1,11 +1,14 @@
-$NetBSD: distinfo,v 1.12 2022/05/13 10:41:38 jperkin Exp $
+$NetBSD: distinfo,v 1.13 2022/09/25 11:01:34 he Exp $
 
 BLAKE2s (z3-4.8.3.tar.gz) = 18b9f2b708f35c57c4dfb425521106dd7f938296738087ff761f030bff7a3491
 SHA512 (z3-4.8.3.tar.gz) = 34a2dca0083ed469fdaf5ac062dda26248633245607ddd9ef90629c5f76ae30f87bfa4191c04ba9be7a617bf182a1bd00b59fd2274699e12ece69b86088c8044
 Size (z3-4.8.3.tar.gz) = 4119116 bytes
 SHA1 (patch-scripts_mk__genfile__common.py) = 442da5eb2dcdfa4e4a5d70dc377c29053f58be5a
 SHA1 (patch-scripts_mk__util.py) = f7059330a8ea44a566448557fae3967051e237cb
+SHA1 (patch-src_parsers_util_scanner.cpp) = 284f9ef965c4d4f4954fcbb6437c143c57dde516
+SHA1 (patch-src_parsers_util_scanner.h) = ad1b385672615501a9249b20829256052ce82dbd
 SHA1 (patch-src_sat_ba__solver.cpp) = 1e80b79c76f8e3766a60be3065ff8bd932249178
 SHA1 (patch-src_sat_sat__lookahead.cpp) = c091d8b267b5476e438888e82c9161599873264c
 SHA1 (patch-src_sat_sat__solver.cpp) = 3421afbf641c47cf3b44ece9168ff3f768168343
 SHA1 (patch-src_solver_parallel__tactic.cpp) = 029a2625e19cfcfb18c4b69279dea257cfd5482f
+SHA1 (patch-src_util_mpz.cpp) = 499062b5107572184adcb7353ccde7c9f7b28951
