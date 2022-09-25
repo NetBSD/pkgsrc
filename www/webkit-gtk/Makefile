@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.237 2022/09/16 19:56:33 leot Exp $
+# $NetBSD: Makefile,v 1.238 2022/09/25 08:57:51 nia Exp $
 
 DISTNAME=	webkitgtk-2.36.8
 PKGNAME=	${DISTNAME:S/webkitgtk/webkit-gtk/}
@@ -26,6 +26,13 @@ CTF_SUPPORTED=	no
 
 # GCC >= 8 is required, it no longer builds with lower versions.
 GCC_REQD+=		8
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 099915
+USE_PKGSRC_GCC=		yes
+USE_PKGSRC_GCC_RUNTIME=	yes
+.endif
 
 PKGCONFIG_OVERRIDE+=	Source/JavaScriptCore/javascriptcoregtk.pc.in
 PKGCONFIG_OVERRIDE+=	Source/WebKit/gtk/webkit2gtk-web-extension.pc.in
