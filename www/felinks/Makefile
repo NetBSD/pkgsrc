@@ -1,27 +1,26 @@
-# $NetBSD: Makefile,v 1.5 2021/12/08 16:06:55 adam Exp $
+# $NetBSD: Makefile,v 1.6 2022/09/25 10:13:59 tnn Exp $
 
-DISTNAME=	felinks-0.13.2
-PKGREVISION=	3
+DISTNAME=	elinks-0.15.1
+PKGNAME=	${DISTNAME:S/elinks/felinks/}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rkd77/}
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+GITHUB_PROJECT=	elinks
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
+DIST_SUBDIR=	felinks
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/rkd77/felinks
+HOMEPAGE=	https://github.com/rkd77/elinks
 COMMENT=	Fork of elinks, the text web browser
 LICENSE=	gnu-gpl-v2
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake pkg-config aclocal autoconf autoheader automake
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		gmake pkg-config
 USE_TOOLS+=		msgfmt xgettext
-
-pre-configure:
-	cd ${WRKSRC} && ${CONFIG_SHELL} autogen.sh
-
 post-install:
 	${RM} -f ${DESTDIR}${PREFIX}/lib/charset.alias
-
 
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/${PKGBASE}
 CONFIGURE_ARGS+=	--enable-256-colors
