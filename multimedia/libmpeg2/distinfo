@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.15 2021/10/26 11:01:09 nia Exp $
+$NetBSD: distinfo,v 1.16 2022/09/25 14:43:27 he Exp $
 
 BLAKE2s (libmpeg2-0.5.1.tar.gz) = 052e01bcc751539f594f48d9b370fc2dc0ca0bda86e94c041eb2e1ef2270d3d4
 SHA512 (libmpeg2-0.5.1.tar.gz) = 3648a2b3d7e2056d5adb328acd2fb983a1fa9a05ccb6f9388cc686c819445421811f42e8439418a0491a13080977f074a0d8bf8fa6bc101ff245ddea65a46fbc
 Size (libmpeg2-0.5.1.tar.gz) = 524776 bytes
-SHA1 (patch-aa) = 6e6d47232ba20a307ac3a378b09fb08b50f80445
+SHA1 (patch-aa) = 925383d3e5eab74ba2b37d9def5a270ad0def3fc
 SHA1 (patch-ab) = e732e35208eb62101f54bbf4a7800a3c4cf9adf0
+SHA1 (patch-configure.ac) = 05620d548994cf8e1125a816c545a9b12c5c2cd8
