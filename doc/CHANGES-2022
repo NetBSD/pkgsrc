@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4676 2022/09/26 11:11:17 kleink Exp $
+$NetBSD: CHANGES-2022,v 1.4677 2022/09/26 11:13:52 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6880,3 +6880,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/haproxy to 2.6.6 [adam 2022-09-26]
 	Updated textproc/p5-XML-Atom-SimpleFeed to 0.905 [kleink 2022-09-26]
 	Updated www/py-flask-login to 0.6.2 [kleink 2022-09-26]
+	Updated textproc/py-cssselect2 to 0.7.0 [kleink 2022-09-26]
