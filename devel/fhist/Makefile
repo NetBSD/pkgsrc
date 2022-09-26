@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2020/01/26 05:26:23 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2022/09/26 10:21:32 nros Exp $
 #
 
 DISTNAME=		fhist-1.16
@@ -9,6 +9,7 @@ MASTER_SITES=		http://fhist.sourceforge.net/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://fhist.sourceforge.net/
 COMMENT=		File history and comparison tools
+LICENSE=		gnu-gpl-v2
 
 USE_TOOLS+=		gsoelim msgfmt yacc
 GNU_CONFIGURE=		YES
