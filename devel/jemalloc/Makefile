@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2022/06/28 11:31:45 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2022/09/26 18:02:21 wiz Exp $
 
-DISTNAME=	jemalloc-5.2.1
-PKGREVISION=	4
+DISTNAME=	jemalloc-5.3.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jemalloc/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -30,5 +29,4 @@ TEST_TARGET=		check
 TEST_ENV=		LD_LIBRARY_PATH=${WRKSRC}/lib
 
 .include "options.mk"
-
 .include "../../mk/bsd.pkg.mk"
