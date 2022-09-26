@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2022/05/22 15:07:50 kleink Exp $
+$NetBSD: distinfo,v 1.8 2022/09/26 11:13:38 kleink Exp $
 
-BLAKE2s (cssselect2-0.6.0.tar.gz) = 2fec4e8bf62d6c35fde7bfb7e07dc07928afb45221ac427734df3ceb8ced047c
-SHA512 (cssselect2-0.6.0.tar.gz) = 10cb55ebaaa16b755d85f1e511ae0281fb017d6937750392ae1da7f32d51ff944fb14c6d1c9ea5f42734450b719157ded116dc14ef471a9a20fcc43fb6682308
-Size (cssselect2-0.6.0.tar.gz) = 35442 bytes
+BLAKE2s (cssselect2-0.7.0.tar.gz) = 256f1bba7d2ac850f1bf4ed9bc045b3fa82180969e4ecd4f0107b7905c8aa492
+SHA512 (cssselect2-0.7.0.tar.gz) = e3c975fe159d3bec53002bda31c72d9cb346f40529272d8d5bef6aa13142ce60f1e8aa20b039d93ff5ff3d2cd34119b8b2d406f889964eded69e770e4f04e949
+Size (cssselect2-0.7.0.tar.gz) = 35888 bytes
