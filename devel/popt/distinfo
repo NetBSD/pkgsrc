@@ -1,9 +1,7 @@
-$NetBSD: distinfo,v 1.28 2021/10/26 10:18:05 nia Exp $
+$NetBSD: distinfo,v 1.29 2022/09/26 17:40:19 wiz Exp $
 
-BLAKE2s (popt-1.18.tar.gz) = 0f39644a50b1023e12efb2b3c58e90f14fd931a21c95687a8ff2d4cbf9cb36a2
-SHA512 (popt-1.18.tar.gz) = 86422e8762adda3d02d46c20ac74ffe389d4f991d552b6fea729f007345b6426cbeb71160284e2deaa2ce44ce754a9e6cf6ccbd64bff9bc2253df40cdc2f79a5
-Size (popt-1.18.tar.gz) = 580569 bytes
+BLAKE2s (popt-1.19.tar.gz) = 1934a5a6bbec2b186f5fdc2ec29b3035ea670685b791d7b4f55861a27c6086cb
+SHA512 (popt-1.19.tar.gz) = 5d1b6a15337e4cd5991817c1957f97fc4ed98659870017c08f26f754e34add31d639d55ee77ca31f29bb631c0b53368c1893bd96cf76422d257f7997a11f6466
+Size (popt-1.19.tar.gz) = 596676 bytes
 SHA1 (patch-src_lookup3.c) = f91cf9edcaa7f27b933829aff91fa4faf9d23129
-SHA1 (patch-src_poptconfig.c) = 238436fe53a60463428e1b254d44a2c3a4eb0e50
 SHA1 (patch-src_poptint.h) = 9a850dc35df8d256b6a585a8c6237341ce94e1f0
-SHA1 (patch-tests_testit.sh) = 72c55195f41bd47c689023bb74f367162b334b11
