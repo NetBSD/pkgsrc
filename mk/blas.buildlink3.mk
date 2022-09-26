@@ -1,4 +1,4 @@
-# $NetBSD: blas.buildlink3.mk,v 1.3 2022/08/30 14:54:22 thor Exp $
+# $NetBSD: blas.buildlink3.mk,v 1.4 2022/09/26 09:33:01 thor Exp $
 #
 # This Makefile fragment is meant to be included by packages that use any
 # BLAS (Basic Linear Algebra System) implementation instead of one particular
@@ -156,7 +156,7 @@ BLAS_LIBS=	-lopenblas${_BLAS_64}_pthread
 LAPACK_LIBS=	${BLAS_LIBS}
 CBLAS_LIBS=	${BLAS_LIBS}
 LAPACKE_LIBS=	${BLAS_LIBS}
-BLAS_INCLUDES=	-I${PREFIX}/include/openblas64_pthread
+BLAS_INCLUDES=	-I${PREFIX}/include/openblas${_BLAS_64}_pthread
 BLAS_PC=	openblas${_BLAS_64}_pthread
 LAPACK_PC=	${BLAS_PC}
 CBLAS_PC=	${BLAS_PC}
