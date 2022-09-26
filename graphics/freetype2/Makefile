@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.125 2022/05/01 20:03:24 adam Exp $
+# $NetBSD: Makefile,v 1.126 2022/09/26 20:28:58 ryoon Exp $
 
 DISTNAME=	freetype-2.12.1
 PKGNAME=	${DISTNAME:S/-/2-/}
@@ -55,8 +55,5 @@ post-configure:
 .endif
 
 .include "../../archivers/bzip2/buildlink3.mk"
-# Avoid creating a fake zlib.pc, because if it does
-# we will add a Requires for it to our .pc file
-CHECK_BUILTIN.zlib:=yes
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
