@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4699 2022/09/26 17:50:27 adam Exp $
+$NetBSD: CHANGES-2022,v 1.4700 2022/09/26 17:57:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6908,3 +6908,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated multimedia/libbluray to 1.3.3 [wiz 2022-09-26]
 	Updated databases/prometheus to 2.37.1 [adam 2022-09-26]
 	Updated devel/py-pylint to 2.15.3 [adam 2022-09-26]
+	Updated www/nghttp2 to 1.50.0 [adam 2022-09-26]
+	Updated security/py-OpenSSL to 22.1.0 [adam 2022-09-26]
