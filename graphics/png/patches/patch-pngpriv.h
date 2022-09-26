@@ -1,15 +1,15 @@
-$NetBSD: patch-pngpriv.h,v 1.1 2017/07/05 04:59:16 maya Exp $
+$NetBSD: patch-pngpriv.h,v 1.2 2022/09/26 17:08:37 adam Exp $
 
 Don't typedef types when included by assembler files
 
---- pngpriv.h.orig	2017-06-28 18:46:03.000000000 +0000
+--- pngpriv.h.orig	2022-09-26 17:03:37.000000000 +0000
 +++ pngpriv.h
-@@ -464,7 +464,7 @@
+@@ -496,7 +496,7 @@
     static_cast<type>(static_cast<void*>(value))
  #  define png_aligncastconst(type, value) \
     static_cast<type>(static_cast<const void*>(value))
 -#else
 +#elif !defined(__ASSEMBLER__)
  #  define png_voidcast(type, value) (value)
- #  ifdef _WIN64
- #     ifdef __GNUC__
+ #  define png_constcast(type, value) ((type)(void*)(const void*)(value))
+ #  define png_aligncast(type, value) ((void*)(value))
