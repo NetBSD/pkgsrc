@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2022/06/30 11:18:17 nia Exp $
+# $NetBSD: Makefile,v 1.32 2022/09/26 16:22:10 ryoon Exp $
 
 DISTNAME=	reposurgeon-3.41
 PKGREVISION=	3
@@ -13,6 +13,8 @@ LICENSE=	2-clause-bsd
 
 BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
 BUILD_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
+
+PYTHON_VERSIONS_ACCEPTED=	27
 
 USE_TOOLS+=	gmake
 USE_LANGUAGES=	# none
