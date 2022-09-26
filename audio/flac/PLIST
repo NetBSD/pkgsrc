@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2022/09/11 12:29:54 wiz Exp $
+@comment $NetBSD: PLIST,v 1.17 2022/09/26 09:48:55 adam Exp $
 bin/flac
 bin/metaflac
 include/FLAC++/all.h
@@ -23,6 +23,5 @@ man/man1/flac.1
 man/man1/metaflac.1
 share/aclocal/libFLAC++.m4
 share/aclocal/libFLAC.m4
-share/doc/flac/FLAC.tag
 share/doc/flac/images/logo.svg
 share/doc/flac/images/logo130.gif
