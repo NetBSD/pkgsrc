@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22230 2022/09/26 09:15:58 wiz Exp $
+$NetBSD: TODO,v 1.22231 2022/09/26 09:24:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1647,7 +1647,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o xrmap-flags-2.9
 	o xrmap-hymns-1.4
 	o xsc-1.6
-	o xscreensaver-6.05.1 [wiz]
 	o xteddy-2.2
 	o xtermcontrol-3.7
 	o xtrace-1.4.0
