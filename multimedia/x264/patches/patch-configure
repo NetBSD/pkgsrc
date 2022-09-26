@@ -1,0 +1,135 @@
+$NetBSD: patch-configure,v 1.1 2022/09/26 17:00:21 adam Exp $
+
+Add support for DragonFly.
+Use 'amd64' as a synonym for 'x86_64'.
+Avoid endian test failure for -flto.
+Do not force compiler optimisations.
+If we fail an assembly test, continue as if --disable-asm
+was passed.
+
+--- configure.orig	2022-09-13 09:25:28.000000000 +0000
++++ configure
+@@ -664,6 +664,10 @@ case $host_os in
+         SYS="FREEBSD"
+         libm="-lm"
+         ;;
++    dragonfly*)
++        SYS="DRAGONFLY"
++        LDFLAGS="$LDFLAGS -lm"
++        ;;
+     kfreebsd*-gnu)
+         SYS="FREEBSD"
+         define HAVE_MALLOC_H
+@@ -764,7 +768,7 @@ case $host_cpu in
+             ASFLAGS="$ASFLAGS -f elf32"
+         fi
+         ;;
+-    x86_64)
++    x86_64|amd64)
+         ARCH="X86_64"
+         AS="${AS-nasm}"
+         AS_EXT=".asm"
+@@ -793,14 +797,15 @@ case $host_cpu in
+         fi
+         ;;
+     powerpc*)
+-        ARCH="PPC"
+         if [ $asm = auto ] ; then
+             define HAVE_ALTIVEC
+             AS="${AS-${CC}}"
+             AS_EXT=".c"
+             if [ $SYS = MACOSX ] ; then
++                ARCH="POWERPC"
+                 CFLAGS="$CFLAGS -faltivec -fastf -mcpu=G4"
+             else
++                ARCH="PPC"
+                 CFLAGS="$CFLAGS -maltivec -mabi=altivec"
+                 define HAVE_ALTIVEC_H
+             fi
+@@ -839,6 +844,18 @@ case $host_cpu in
+             AS="${AS-${CC}}"
+         fi
+         ;;
++    aarch64|arm64*)
++        ARCH="AARCH64"
++        stack_alignment=16
++        if [ "$SYS" = MACOSX ] ; then
++            AS="${AS-${CC}}"
++            ASFLAGS="$ASFLAGS -DPREFIX -DPIC"
++        elif [ "$SYS" = WINDOWS ] && [ "$compiler" = CL ] ; then
++            AS="${AS-${SRCPATH}/tools/gas-preprocessor.pl -arch aarch64 -as-type armasm -- armasm64 -nologo}"
++        else
++            AS="${AS-${CC}}"
++        fi
++        ;;
+     arm*)
+         ARCH="ARM"
+         if [ "$SYS" = MACOSX ] ; then
+@@ -985,8 +1002,8 @@ if [ $asm = auto -a $ARCH = ARM ] ; then
+         ASFLAGS="$ASFLAGS -c"
+     else
+         echo "You specified a pre-ARMv6 or Thumb-1 CPU in your CFLAGS."
+-        echo "If you really want to run on such a CPU, configure with --disable-asm."
+-        exit 1
++	echo "Disabling asm"
++	asm="no"
+     fi
+ fi
+ 
+@@ -1000,8 +1017,8 @@ if [ $asm = auto -a $ARCH = AARCH64 ] ; 
+         ASFLAGS="$ASFLAGS -c"
+     else
+         echo "no NEON support, try adding -mfpu=neon to CFLAGS"
+-        echo "If you really want to run on such a CPU, configure with --disable-asm."
+-        exit 1
++	echo "Disabling asm"
++	asm="no"
+     fi
+ fi
+ 
+@@ -1019,8 +1036,8 @@ if [ $asm = auto -a $ARCH = MIPS ] ; the
+         define HAVE_MSA
+     else
+         echo "You specified a pre-MSA CPU in your CFLAGS."
+-        echo "If you really want to run on such a CPU, configure with --disable-asm."
+-        exit 1
++	echo "Disabling asm"
++	asm="no"
+     fi
+ fi
+ 
+@@ -1037,7 +1054,7 @@ ASFLAGS="$ASFLAGS -DSTACK_ALIGNMENT=$sta
+ CPU_ENDIAN="little-endian"
+ if [ $compiler = GNU ]; then
+     echo "int i[2] = {0x42494745,0}; double f[2] = {0x1.0656e6469616ep+102,0};" > conftest.c
+-    $CC $CFLAGS -fno-lto conftest.c -c -o conftest.o 2>/dev/null || die "endian test failed"
++    $CC $CPPFLAGS -fno-lto conftest.c -c -o conftest.o 2>/dev/null || die "endian test failed"
+     if (${STRINGS} -a conftest.o | grep -q BIGE) && (${STRINGS} -a conftest.o | grep -q FPendian) ; then
+         define WORDS_BIGENDIAN
+         CPU_ENDIAN="big-endian"
+@@ -1060,7 +1077,7 @@ fi
+ 
+ # autodetect options that weren't forced nor disabled
+ 
+-libpthread=""
++libpthread="$PTHREAD_LDFLAGS $PTHREAD_LIBS"
+ if [ "$SYS" = "WINDOWS" -a "$thread" = "posix" ] ; then
+     if [ "$gpl" = "no" ] ; then
+         echo "Warning: pthread-win32 is LGPL and is therefore not supported with --disable-gpl"
+@@ -1319,7 +1336,7 @@ if [ "$pic" = "yes" ] ; then
+     [ "$SYS" != WINDOWS -a "$SYS" != CYGWIN ] && CFLAGS="$CFLAGS -fPIC"
+     [[ "$ASFLAGS" != *"-DPIC"* ]] && ASFLAGS="$ASFLAGS -DPIC"
+     # resolve textrels in the x86 asm
+-    cc_check stdio.h "-shared -Wl,-Bsymbolic" && SOFLAGS="$SOFLAGS -Wl,-Bsymbolic"
++    cc_check stdio.h "-Wl,-Bsymbolic" && LDFLAGS="$LDFLAGS -Wl,-Bsymbolic"
+     [ $SYS = SunOS -a "$ARCH" = "X86" ] && SOFLAGS="$SOFLAGS -mimpure-text"
+ fi
+ 
+@@ -1335,7 +1352,6 @@ if [ "$debug" = "yes" ]; then
+     CFLAGS="-O1 -g $CFLAGS"
+     RCFLAGS="$RCFLAGS -DDEBUG"
+ else
+-    CFLAGS="-O3 -ffast-math $CFLAGS"
+     if [ "$lto" = "auto" ] && [ $compiler = GNU ] && cc_check "" "-flto" ; then
+         lto="yes"
+         CFLAGS="$CFLAGS -flto"
