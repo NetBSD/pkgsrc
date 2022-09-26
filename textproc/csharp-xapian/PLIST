@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2022/09/24 08:21:59 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/09/26 16:13:47 wiz Exp $
 lib/_XapianSharp.a
 lib/_XapianSharp.so
 lib/mono/XapianSharp/XapianSharp.dll
-lib/mono/gac/XapianSharp/${PKGVERSION}.0__0ac93885735b79a2/XapianSharp.dll
+lib/mono/gac/XapianSharp/${PKGVERSION}.0__2f7abfc144803344/XapianSharp.dll
 share/doc/xapian-bindings/csharp/examples/SimpleExpand.cs
 share/doc/xapian-bindings/csharp/examples/SimpleIndex.cs
 share/doc/xapian-bindings/csharp/examples/SimpleSearch.cs
