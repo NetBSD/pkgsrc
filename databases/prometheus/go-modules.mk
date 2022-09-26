@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.6 2022/07/21 19:12:58 tnn Exp $
+# $NetBSD: go-modules.mk,v 1.7 2022/09/26 17:47:27 adam Exp $
 
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.100.2.mod
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.102.0.mod
@@ -197,8 +197,9 @@ GO_MODULE_FILES+=	github.com/edsrzf/mmap-go/@v/v1.1.0.mod
 GO_MODULE_FILES+=	github.com/edsrzf/mmap-go/@v/v1.1.0.zip
 GO_MODULE_FILES+=	github.com/elazarl/goproxy/@v/v0.0.0-20180725130230-947c36da3153.mod
 GO_MODULE_FILES+=	github.com/emicklei/go-restful/@v/v0.0.0-20170410110728-ff4f55a20633.mod
+GO_MODULE_FILES+=	github.com/emicklei/go-restful/@v/v2.16.0+incompatible.mod
+GO_MODULE_FILES+=	github.com/emicklei/go-restful/@v/v2.16.0+incompatible.zip
 GO_MODULE_FILES+=	github.com/emicklei/go-restful/@v/v2.9.5+incompatible.mod
-GO_MODULE_FILES+=	github.com/emicklei/go-restful/@v/v2.9.5+incompatible.zip
 GO_MODULE_FILES+=	github.com/envoyproxy/go-control-plane/@v/v0.10.2-0.20220325020618-49ff273808a1.mod
 GO_MODULE_FILES+=	github.com/envoyproxy/go-control-plane/@v/v0.10.3.mod
 GO_MODULE_FILES+=	github.com/envoyproxy/go-control-plane/@v/v0.10.3.zip
