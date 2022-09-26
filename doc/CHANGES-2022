@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4681 2022/09/26 13:39:38 adam Exp $
+$NetBSD: CHANGES-2022,v 1.4682 2022/09/26 13:49:03 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6888,3 +6888,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/py-peewee to 3.15.3 [adam 2022-09-26]
 	Updated devel/cmake to 3.24.2 [adam 2022-09-26]
 	Updated sysutils/py-ansible-compat to 2.2.1 [adam 2022-09-26]
+	Updated audio/spotify-player to 0.9.8 [pin 2022-09-26]
