@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4687 2022/09/26 14:00:11 pin Exp $
+$NetBSD: CHANGES-2022,v 1.4688 2022/09/26 14:03:37 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6894,3 +6894,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/csview to 1.2.1 [pin 2022-09-26]
 	Updated sysutils/dusage to 0.3.2 [pin 2022-09-26]
 	Updated graphics/kvantum to 1.0.5 [pin 2022-09-26]
+	Added math/apecrunch version 0.0.3 [pin 2022-09-26]
