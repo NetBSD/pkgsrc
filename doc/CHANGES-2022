@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4692 2022/09/26 16:13:59 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4693 2022/09/26 17:08:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6899,3 +6899,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Added fonts/noto-fonts version 20220810 [ryoon 2022-09-26]
 	Added fonts/noto-cjk-fonts version 20220816 [ryoon 2022-09-26]
 	Updated textproc/csharp-xapian to 1.4.21nb1 [wiz 2022-09-26]
+	Added multimedia/x264 version 20220601 [adam 2022-09-26]
+	Updated graphics/png to 1.6.38 [adam 2022-09-26]
