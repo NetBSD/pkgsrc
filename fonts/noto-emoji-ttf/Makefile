@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/09/18 11:43:53 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2022/09/26 15:56:39 ryoon Exp $
 
 DISTNAME=		noto-emoji-2.038
 PKGNAME=		${DISTNAME:S/emoji/emoji-ttf/}
@@ -11,6 +11,8 @@ MAINTAINER=		ryoon@NetBSD.org
 HOMEPAGE=		https://www.google.com/get/noto/
 COMMENT=		Noto Emoji Font from Google
 LICENSE=		ofl-v1.1
+
+CONFLICTS+=		noto-ttf-[0-9]*
 
 NO_BUILD=		yes
 USE_LANGUAGES=		# none
