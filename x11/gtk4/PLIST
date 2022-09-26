@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/09/10 09:47:52 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/09/26 17:26:57 wiz Exp $
 bin/gtk4-builder-tool
 bin/gtk4-demo
 bin/gtk4-demo-application
@@ -377,7 +377,7 @@ ${PLIST.lpr}lib/gtk-4.0/4.0.0/printbackends/libprintbackend-lpr.so
 lib/libgtk-4.${SOEXT}
 ${PLIST.dylib}lib/libgtk-4.1.dylib
 ${PLIST.no-dylib}lib/libgtk-4.so.1
-${PLIST.no-dylib}lib/libgtk-4.so.1.800.0
+${PLIST.no-dylib}lib/libgtk-4.so.1.800.1
 ${PLIST.quartz}lib/pkgconfig/gtk4-macos.pc
 lib/pkgconfig/gtk4-unix-print.pc
 ${PLIST.x11}lib/pkgconfig/gtk4-x11.pc
