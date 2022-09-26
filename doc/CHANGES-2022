@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4674 2022/09/26 09:53:15 adam Exp $
+$NetBSD: CHANGES-2022,v 1.4675 2022/09/26 11:06:10 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6878,3 +6878,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/xscreensaver to 6.05.1 [wiz 2022-09-26]
 	Updated audio/flac to 1.4.1 [adam 2022-09-26]
 	Updated net/haproxy to 2.6.6 [adam 2022-09-26]
+	Updated textproc/p5-XML-Atom-SimpleFeed to 0.905 [kleink 2022-09-26]
