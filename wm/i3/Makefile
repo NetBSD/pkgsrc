@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.50 2022/08/09 12:08:31 jperkin Exp $
+# $NetBSD: Makefile,v 1.51 2022/09/26 18:10:59 wiz Exp $
 
-DISTNAME=	i3-4.20.1
-PKGREVISION=	2
+DISTNAME=	i3-4.21
 CATEGORIES=	wm
 MASTER_SITES=	https://i3wm.org/downloads/
 EXTRACT_SUFX=	.tar.xz
@@ -33,7 +32,7 @@ post-install:
 .include "../../devel/meson/build.mk"
 .include "../../devel/libev/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
-.include "../../devel/pcre/buildlink3.mk"
+.include "../../devel/pcre2/buildlink3.mk"
 .include "../../devel/yajl/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
