@@ -1,16 +1,16 @@
-$NetBSD: patch-src_dump.c,v 1.1 2018/10/30 11:16:06 jperkin Exp $
+$NetBSD: patch-src_dump.c,v 1.2 2022/09/26 13:23:31 adam Exp $
 
 Add IPDEFTTL compat.
 
---- src/dump.c.orig	2018-10-18 18:21:55.000000000 +0000
+--- src/dump.c.orig	2022-09-09 11:53:49.000000000 +0000
 +++ src/dump.c
-@@ -148,6 +148,9 @@ void dump_packet(int mask, void *packet,
+@@ -195,6 +195,9 @@ static void do_dump_packet(int mask, voi
+       
        ip.ip_v = IPVERSION;
        ip.ip_hl = sizeof(struct ip) / 4;
-       ip.ip_len = htons(sizeof(struct ip) + sizeof(struct udphdr) + len); 
 +#ifndef IPDEFTTL
-+#define IPDEFTTL	64
++#define IPDEFTTL 64
 +#endif
        ip.ip_ttl = IPDEFTTL;
-       ip.ip_p = IPPROTO_UDP;
-       
+ 
+       if ((ip.ip_p = proto) == IPPROTO_UDP)
