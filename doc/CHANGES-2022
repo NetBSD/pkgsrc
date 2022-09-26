@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4685 2022/09/26 13:53:08 pin Exp $
+$NetBSD: CHANGES-2022,v 1.4686 2022/09/26 13:54:29 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6892,3 +6892,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/git-cliff to 0.9.2 [pin 2022-09-26]
 	Updated sysutils/broot to 1.15.0 [pin 2022-09-26]
 	Updated textproc/csview to 1.2.1 [pin 2022-09-26]
+	Updated sysutils/dusage to 0.3.2 [pin 2022-09-26]
