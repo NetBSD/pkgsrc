@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4702 2022/09/26 18:11:08 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4703 2022/09/26 18:37:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6912,3 +6912,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/py-OpenSSL to 22.1.0 [adam 2022-09-26]
 	Updated devel/jemalloc to 5.3.0 [wiz 2022-09-26]
 	Updated wm/i3 to 4.21 [wiz 2022-09-26]
+	Updated finance/gnucash to 4.12 [wiz 2022-09-26]
