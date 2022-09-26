@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.49 2020/08/15 01:02:42 tnn Exp $
-#
+# $NetBSD: Makefile,v 1.50 2022/09/26 17:40:19 wiz Exp $
 
-DISTNAME=	popt-1.18
+DISTNAME=	popt-1.19
 CATEGORIES=	devel
 MASTER_SITES=	http://ftp.rpm.org/popt/releases/popt-1.x/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/rpm-software-management/popt
 COMMENT=	Command line option parsing library
-# mit license with advertising clause
 LICENSE=	mit
 
 CONFLICTS=		ORBit<=0.5.3
