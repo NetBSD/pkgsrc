@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.118 2022/08/24 12:54:35 wiz Exp $
+# $NetBSD: Makefile,v 1.119 2022/09/26 15:58:45 wiz Exp $
 #
 
 COMMENT=	Software for geographical-related uses
@@ -103,7 +103,6 @@ SUBDIR+=	spatialindex
 SUBDIR+=	tex-pst-geo
 SUBDIR+=	tex-pst-geo-doc
 SUBDIR+=	viking
-SUBDIR+=	vis5d+
 SUBDIR+=	xrmap
 SUBDIR+=	xrmap-anthems
 SUBDIR+=	xrmap-base
