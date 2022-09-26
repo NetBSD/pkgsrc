@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4689 2022/09/26 15:58:45 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4690 2022/09/26 16:05:49 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6896,3 +6896,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/kvantum to 1.0.5 [pin 2022-09-26]
 	Added math/apecrunch version 0.0.3 [pin 2022-09-26]
 	Removed geography/vis5d+ [wiz 2022-09-26]
+	Added fonts/noto-fonts version 20220810 [ryoon 2022-09-26]
