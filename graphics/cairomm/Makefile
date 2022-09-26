@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.52 2022/06/28 11:33:59 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2022/09/26 17:16:14 wiz Exp $
 
-DISTNAME=	cairomm-1.14.3
-PKGREVISION=	1
+DISTNAME=	cairomm-1.14.4
 CATEGORIES=	graphics
 MASTER_SITES=	https://cairographics.org/releases/
 EXTRACT_SUFX=	.tar.xz
@@ -13,7 +12,7 @@ LICENSE=	gnu-lgpl-v2
 
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		perl pkg-config
+USE_TOOLS+=		pkg-config
 PKGCONFIG_OVERRIDE+=	data/cairomm-1.0.pc.in
 PKGCONFIG_OVERRIDE+=	data/cairomm-ft-1.0.pc.in
 PKGCONFIG_OVERRIDE+=	data/cairomm-pdf-1.0.pc.in
@@ -34,6 +33,7 @@ PLIST_VARS+=	x11 quartz
 
 .include "../../devel/libsigc++/buildlink3.mk"
 .include "../../devel/meson/build.mk"
+BUILDLINK_API_DEPENDS.mm-common+=	mm-common>=1.0.4
 .include "../../devel/mm-common/buildlink3.mk"
 BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.12
 .include "../../graphics/cairo/buildlink3.mk"
