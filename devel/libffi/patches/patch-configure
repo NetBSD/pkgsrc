@@ -1,17 +1,17 @@
-$NetBSD: patch-configure,v 1.3 2022/01/09 20:07:00 tm Exp $
+$NetBSD: patch-configure,v 1.4 2022/09/26 18:43:48 adam Exp $
 
 Cannot use malloc on this target (NetBSD, Solaris), so, we revert to
 alternative means. Important is *-*-netbsd* and the change from *-pc-solaris*
 to *-*-solaris*.
 
---- configure.orig	2019-11-23 13:59:04.000000000 +0000
+--- configure.orig	2022-09-19 16:22:23.000000000 +0000
 +++ configure
-@@ -18483,7 +18483,7 @@ case "$target" in
- $as_echo "#define FFI_EXEC_TRAMPOLINE_TABLE 1" >>confdefs.h
+@@ -19721,7 +19721,7 @@ case "$target" in
+ printf "%s\n" "#define FFI_EXEC_TRAMPOLINE_TABLE 1" >>confdefs.h
  
       ;;
 -     *-apple-* | *-*-freebsd* | *-*-kfreebsd* | *-*-openbsd* | *-pc-solaris* | *-linux-android*)
 +     *-apple-* | *-*-freebsd* | *-*-kfreebsd* | *-*-netbsd* |  *-*-openbsd* | *-*-solaris* | *-linux-android*)
  
- $as_echo "#define FFI_MMAP_EXEC_WRIT 1" >>confdefs.h
+ printf "%s\n" "#define FFI_MMAP_EXEC_WRIT 1" >>confdefs.h
  
