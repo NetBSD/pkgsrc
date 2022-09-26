@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4694 2022/09/26 17:16:24 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4695 2022/09/26 17:27:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6902,3 +6902,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added multimedia/x264 version 20220601 [adam 2022-09-26]
 	Updated graphics/png to 1.6.38 [adam 2022-09-26]
 	Updated graphics/cairomm to 1.14.4 [wiz 2022-09-26]
+	Updated x11/gtk4 to 4.8.1 [wiz 2022-09-26]
