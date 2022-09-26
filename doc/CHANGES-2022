@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4669 2022/09/25 15:16:18 osa Exp $
+$NetBSD: CHANGES-2022,v 1.4670 2022/09/26 05:22:35 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6872,3 +6872,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/tcl-xapian to 1.4.21 [schmonz 2022-09-25]
 	Updated www/nginx to 1.22.0nb7 [osa 2022-09-25]
 	Updated www/nginx-devel to 1.23.1nb2 [osa 2022-09-25]
+	Updated comms/op_panel to 0.30nb5 [jnemeth 2022-09-26]
