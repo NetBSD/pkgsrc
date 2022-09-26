@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4679 2022/09/26 12:39:04 adam Exp $
+$NetBSD: CHANGES-2022,v 1.4680 2022/09/26 13:24:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6884,3 +6884,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-blinker to 1.5 [kleink 2022-09-26]
 	Updated multimedia/ffmpeg5 to 5.1.2 [adam 2022-09-26]
 	Updated multimedia/ffplay5 to 5.1.2 [adam 2022-09-26]
+	Updated net/dnsmasq to 2.87 [adam 2022-09-26]
+	Updated databases/py-peewee to 3.15.3 [adam 2022-09-26]
