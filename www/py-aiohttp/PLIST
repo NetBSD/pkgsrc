@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2022/01/15 23:35:13 js Exp $
+@comment $NetBSD: PLIST,v 1.11 2022/09/26 18:55:02 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -17,21 +17,15 @@ ${PYSITELIB}/aiohttp/__init__.py
 ${PYSITELIB}/aiohttp/__init__.pyc
 ${PYSITELIB}/aiohttp/__init__.pyo
 ${PYSITELIB}/aiohttp/_cparser.pxd
-${PYSITELIB}/aiohttp/_find_header.c
-${PYSITELIB}/aiohttp/_find_header.h
 ${PYSITELIB}/aiohttp/_find_header.pxd
 ${PYSITELIB}/aiohttp/_headers.pxi
-${PYSITELIB}/aiohttp/_helpers.c
 ${PYSITELIB}/aiohttp/_helpers.pyi
 ${PYSITELIB}/aiohttp/_helpers.pyx
 ${PYSITELIB}/aiohttp/_helpers.so
-${PYSITELIB}/aiohttp/_http_parser.c
 ${PYSITELIB}/aiohttp/_http_parser.pyx
 ${PYSITELIB}/aiohttp/_http_parser.so
-${PYSITELIB}/aiohttp/_http_writer.c
 ${PYSITELIB}/aiohttp/_http_writer.pyx
 ${PYSITELIB}/aiohttp/_http_writer.so
-${PYSITELIB}/aiohttp/_websocket.c
 ${PYSITELIB}/aiohttp/_websocket.pyx
 ${PYSITELIB}/aiohttp/_websocket.so
 ${PYSITELIB}/aiohttp/abc.py
