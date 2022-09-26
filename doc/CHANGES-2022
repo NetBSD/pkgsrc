@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4703 2022/09/26 18:37:42 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4704 2022/09/26 18:47:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6913,3 +6913,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/jemalloc to 5.3.0 [wiz 2022-09-26]
 	Updated wm/i3 to 4.21 [wiz 2022-09-26]
 	Updated finance/gnucash to 4.12 [wiz 2022-09-26]
+	Updated devel/libffi to 3.4.3 [adam 2022-09-26]
+	Updated devel/py-setuptools to 65.4.0 [adam 2022-09-26]
