@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2019/04/29 22:24:31 gdt Exp $
+# $NetBSD: Makefile,v 1.36 2022/09/26 16:31:20 wiz Exp $
 
 DISTNAME=		cfs-1.4.1
 PKGREVISION=		6
@@ -45,7 +45,7 @@ CFS_SUBST+=		getpassword->getpass
 CFLAGS+=		-DHAVE_GETPASS
 CFS_BUILD_SCRIPT=	${WRKSRC}/netbsd_make_with_bad_rpcgen
 .elif ${OPSYS} == "SunOS"
-.  if !empty(CC_VERSION:Mgcc)
+.  if ${CC_VERSION} == gcc
 CFLAGS+=		-traditional
 .  endif
 CFLAGS+=		-DPROTOTYPES=1
@@ -56,7 +56,7 @@ MAKE_ENV+=		COMPAT=
 MAKE_ENV+=		RPCOPTS=
 CFS_BUILD_SCRIPT=	${WRKSRC}/make_with_bad_rpcgen
 .elif ${OPSYS} == "Linux"
-.  if !empty(CC_VERSION:Mgcc)
+.  if ${CC_VERSION} == gcc
 CFLAGS+=		-traditional
 .  endif
 CFLAGS+=		-DPROTOTYPES=1
