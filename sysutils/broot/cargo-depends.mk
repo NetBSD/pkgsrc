@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.41 2022/09/13 17:55:28 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.42 2022/09/26 13:51:24 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
 CARGO_CRATE_DEPENDS+=	ahash-0.4.7
@@ -177,7 +177,7 @@ CARGO_CRATE_DEPENDS+=	smallvec-1.9.0
 CARGO_CRATE_DEPENDS+=	snafu-0.7.1
 CARGO_CRATE_DEPENDS+=	snafu-derive-0.7.1
 CARGO_CRATE_DEPENDS+=	spin-0.9.4
-CARGO_CRATE_DEPENDS+=	splitty-0.1.0
+CARGO_CRATE_DEPENDS+=	splitty-1.0.0
 CARGO_CRATE_DEPENDS+=	str-buf-1.0.6
 CARGO_CRATE_DEPENDS+=	strict-0.1.4
 CARGO_CRATE_DEPENDS+=	strsim-0.10.0
