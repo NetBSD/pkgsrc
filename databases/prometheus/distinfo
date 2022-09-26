@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.33 2022/07/21 19:12:58 tnn Exp $
+$NetBSD: distinfo,v 1.34 2022/09/26 17:47:27 adam Exp $
 
 BLAKE2s (cloud.google.com_go_@v_v0.100.2.mod) = 6b0f28a5b451457b741799da390ec9083b3f23e5a178b3a0b457603c1398b34e
 SHA512 (cloud.google.com_go_@v_v0.100.2.mod) = 510c4bd48b8d3cd45b69b5f46729e8ce34d52255848d2b0856410c621c5dd3b302df607ac71dcd2bf29aacbe3087233d9452c71d78649de9330d3d3ad556c7a9
@@ -591,12 +591,15 @@ Size (github.com_elazarl_goproxy_@v_v0.0.0-20180725130230-947c36da3153.mod) = 34
 BLAKE2s (github.com_emicklei_go-restful_@v_v0.0.0-20170410110728-ff4f55a20633.mod) = 75b7524ddfe2257c6ae53acc85c0282652dcff50b2d7b6e4ff761438be9b22bd
 SHA512 (github.com_emicklei_go-restful_@v_v0.0.0-20170410110728-ff4f55a20633.mod) = d4d6319d58284419a3bfbe6eef0623570cacf0cd75a192cf5ce49846d75f02dee4188a68b9c62a6c38864503a7884e08d03a44a35296d1a077ea46ad5d68c820
 Size (github.com_emicklei_go-restful_@v_v0.0.0-20170410110728-ff4f55a20633.mod) = 38 bytes
+BLAKE2s (github.com_emicklei_go-restful_@v_v2.16.0+incompatible.mod) = 75b7524ddfe2257c6ae53acc85c0282652dcff50b2d7b6e4ff761438be9b22bd
+SHA512 (github.com_emicklei_go-restful_@v_v2.16.0+incompatible.mod) = d4d6319d58284419a3bfbe6eef0623570cacf0cd75a192cf5ce49846d75f02dee4188a68b9c62a6c38864503a7884e08d03a44a35296d1a077ea46ad5d68c820
+Size (github.com_emicklei_go-restful_@v_v2.16.0+incompatible.mod) = 38 bytes
+BLAKE2s (github.com_emicklei_go-restful_@v_v2.16.0+incompatible.zip) = 83e99dc9d3a64486105ef14d946183911209e2da1687538a025f45f3372ce46b
+SHA512 (github.com_emicklei_go-restful_@v_v2.16.0+incompatible.zip) = 9d0f7b3388c51e435a9b8119cec5ab80740839ce8ee8ab8187ad4d6138e665d21adcd17d9e8abcd6aba7c7da8b8ead1a261b380f58969e546b9ab0f9916ee095
+Size (github.com_emicklei_go-restful_@v_v2.16.0+incompatible.zip) = 94365 bytes
 BLAKE2s (github.com_emicklei_go-restful_@v_v2.9.5+incompatible.mod) = 75b7524ddfe2257c6ae53acc85c0282652dcff50b2d7b6e4ff761438be9b22bd
 SHA512 (github.com_emicklei_go-restful_@v_v2.9.5+incompatible.mod) = d4d6319d58284419a3bfbe6eef0623570cacf0cd75a192cf5ce49846d75f02dee4188a68b9c62a6c38864503a7884e08d03a44a35296d1a077ea46ad5d68c820
 Size (github.com_emicklei_go-restful_@v_v2.9.5+incompatible.mod) = 38 bytes
-BLAKE2s (github.com_emicklei_go-restful_@v_v2.9.5+incompatible.zip) = 3cf5e5299ccd427e04358e28e381b16eea1bd1cdf531ca60efdd277af6337818
-SHA512 (github.com_emicklei_go-restful_@v_v2.9.5+incompatible.zip) = 76a4e22da8f3a310cbb6d1460ab5c7a8cc4ff869c43eed060f062577e0632a11e722b7c8bfcb2ab22b2164d488e9725c4628fefaa97a840fa894260e8901c240
-Size (github.com_emicklei_go-restful_@v_v2.9.5+incompatible.zip) = 111939 bytes
 BLAKE2s (github.com_envoyproxy_go-control-plane_@v_v0.10.2-0.20220325020618-49ff273808a1.mod) = 842a3379e34e9033206d5cb8c0f89fb8b693fa23af9e13b69e352c80ceda4f60
 SHA512 (github.com_envoyproxy_go-control-plane_@v_v0.10.2-0.20220325020618-49ff273808a1.mod) = ece1b22774e21870ed1c92a84bdf6a6d130d3948cdc4e96ef459819e1753f392562f128010a12bce0a4075c00385c56140429a71ddc4254ae33f74bba7bd3481
 Size (github.com_envoyproxy_go-control-plane_@v_v0.10.2-0.20220325020618-49ff273808a1.mod) = 711 bytes
@@ -4422,12 +4425,12 @@ Size (k8s.io_utils_@v_v0.0.0-20220210201930-3a6ce19ff2f9.mod) = 167 bytes
 BLAKE2s (k8s.io_utils_@v_v0.0.0-20220210201930-3a6ce19ff2f9.zip) = d3ba420b2a673aeb3ff42e5d3b57f7ed8df51e81c57047bf178041ad571da61c
 SHA512 (k8s.io_utils_@v_v0.0.0-20220210201930-3a6ce19ff2f9.zip) = c49c0efb56780f035b37d8c8da543956d459408a901a613bf08052535ef997a0aa4d69f9c2c224853ba0eb8acdad2bac3b25bc4786bf63ddb4bcd1ca716a3b71
 Size (k8s.io_utils_@v_v0.0.0-20220210201930-3a6ce19ff2f9.zip) = 186705 bytes
-BLAKE2s (prometheus-2.37.0-react-ui.tar.gz) = 6bfa9b9a2c03f697c2a9e14cdb9140b08e24b289f01a468f3437a80522176b09
-SHA512 (prometheus-2.37.0-react-ui.tar.gz) = 6875307123eec0bb81bc8f1b37001fa6e0f2ae2d1d09755dfac0e263d0e4c4a32a4839a8581b52ab8ff2c1921c8c326cb1d044773e95cef0aff3c6d39faa9a7e
-Size (prometheus-2.37.0-react-ui.tar.gz) = 2489911 bytes
-BLAKE2s (prometheus-2.37.0.tar.gz) = a935cb37d02ee0f9922b6c386ad7b5c37d64f39132dceca208d321b906bbb358
-SHA512 (prometheus-2.37.0.tar.gz) = fa25378ac3f32c514ef7bd489b433d9c3f667fe68c39395b8a0fe4b4723e2733eea906c68e7886ac0b0b222235932e45c6ea73a8f1e1da1a1b2203256ad16c58
-Size (prometheus-2.37.0.tar.gz) = 6048114 bytes
+BLAKE2s (prometheus-2.37.1-react-ui.tar.gz) = 0493bb0c976195cbd8fd942a775b0c5d76b9908fcb1a2a074a6e8e5d2f7561d3
+SHA512 (prometheus-2.37.1-react-ui.tar.gz) = db590af4c8cd06d293b1d6feea7cd9f34f1b7e9001510cd82851a38336570785875d0b5c75f1f049c44da80c50edceb1bcfb60b884951ea42a9c722ecc088784
+Size (prometheus-2.37.1-react-ui.tar.gz) = 2490039 bytes
+BLAKE2s (prometheus-2.37.1.tar.gz) = e66298f17172b77148fbfe87383ad98a4054731aac6144079f64e932ac7863b6
+SHA512 (prometheus-2.37.1.tar.gz) = 30114e34d8615ec6cd25663d8eb27c11aa402a4960f64b4e8c5ee9399d65913b05041deba4402761281b714743db99e5348c04ac06d85ac3a202c31224effe00
+Size (prometheus-2.37.1.tar.gz) = 6049188 bytes
 BLAKE2s (rsc.io_binaryregexp_@v_v0.2.0.mod) = 351240374eb48b99bb43b8b52aa8467662e22b18ebf216f4c123858fe706c2f8
 SHA512 (rsc.io_binaryregexp_@v_v0.2.0.mod) = db50ff677b0bdccbc1a1ad3df7c5cc76f2fcccf3ab99d08d1c2868440eb9b893fe89452f4286f7d42f2f16abf0f4acda67fe86e174dcfa730a743aafcc166774
 Size (rsc.io_binaryregexp_@v_v0.2.0.mod) = 36 bytes
