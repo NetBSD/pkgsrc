@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.73 2022/07/06 07:25:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.74 2022/09/26 18:46:59 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -186,15 +186,9 @@ ${PYSITELIB}/setuptools/_distutils/command/bdist.pyo
 ${PYSITELIB}/setuptools/_distutils/command/bdist_dumb.py
 ${PYSITELIB}/setuptools/_distutils/command/bdist_dumb.pyc
 ${PYSITELIB}/setuptools/_distutils/command/bdist_dumb.pyo
-${PYSITELIB}/setuptools/_distutils/command/bdist_msi.py
-${PYSITELIB}/setuptools/_distutils/command/bdist_msi.pyc
-${PYSITELIB}/setuptools/_distutils/command/bdist_msi.pyo
 ${PYSITELIB}/setuptools/_distutils/command/bdist_rpm.py
 ${PYSITELIB}/setuptools/_distutils/command/bdist_rpm.pyc
 ${PYSITELIB}/setuptools/_distutils/command/bdist_rpm.pyo
-${PYSITELIB}/setuptools/_distutils/command/bdist_wininst.py
-${PYSITELIB}/setuptools/_distutils/command/bdist_wininst.pyc
-${PYSITELIB}/setuptools/_distutils/command/bdist_wininst.pyo
 ${PYSITELIB}/setuptools/_distutils/command/build.py
 ${PYSITELIB}/setuptools/_distutils/command/build.pyc
 ${PYSITELIB}/setuptools/_distutils/command/build.pyo
@@ -544,6 +538,9 @@ ${PYSITELIB}/setuptools/command/dist_info.pyo
 ${PYSITELIB}/setuptools/command/easy_install.py
 ${PYSITELIB}/setuptools/command/easy_install.pyc
 ${PYSITELIB}/setuptools/command/easy_install.pyo
+${PYSITELIB}/setuptools/command/editable_wheel.py
+${PYSITELIB}/setuptools/command/editable_wheel.pyc
+${PYSITELIB}/setuptools/command/editable_wheel.pyo
 ${PYSITELIB}/setuptools/command/egg_info.py
 ${PYSITELIB}/setuptools/command/egg_info.pyc
 ${PYSITELIB}/setuptools/command/egg_info.pyo
