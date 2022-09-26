@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.56 2022/06/13 09:46:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.57 2022/09/26 09:24:42 wiz Exp $
 bin/xscreensaver
 bin/xscreensaver-command
 bin/xscreensaver-demo
@@ -765,20 +765,9 @@ man/man6/xscreensaver-systemd.6
 man/man6/xscreensaver-text.6
 man/man6/xspirograph.6
 man/man6/zoom.6
-share/applications/xscreensaver-settings.desktop
-share/applications/xscreensaver.desktop
 share/doc/xscreensaver/README.pkgsrc
 share/fonts/xscreensaver/OCRAStd.otf
 share/fonts/xscreensaver/SpecialElite.ttf
 share/fonts/xscreensaver/clacon.ttf
 share/fonts/xscreensaver/gallant12x22.ttf
 share/fonts/xscreensaver/luximr.ttf
-share/pixmaps/xscreensaver.png
-share/xscreensaver/ui/screensaver-cmndln.png
-share/xscreensaver/ui/screensaver-colorselector.png
-share/xscreensaver/ui/screensaver-diagnostic.png
-share/xscreensaver/ui/screensaver-locking.png
-share/xscreensaver/ui/screensaver-power.png
-share/xscreensaver/ui/screensaver-snap.png
-share/xscreensaver/ui/xscreensaver.ui
-share/xscreensaver/xscreensaver.service
