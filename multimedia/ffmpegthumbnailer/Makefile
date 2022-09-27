@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2021/10/09 15:35:08 nia Exp $
+# $NetBSD: Makefile,v 1.29 2022/09/27 20:58:25 wiz Exp $
 
 DISTNAME=	ffmpegthumbnailer-2.2.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dirkvdb/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
