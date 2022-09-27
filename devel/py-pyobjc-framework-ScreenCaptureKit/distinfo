@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/09/27 18:12:59 adam Exp $
+
+BLAKE2s (pyobjc-framework-ScreenCaptureKit-8.5.1.tar.gz) = f16c1b82989881b0cc07fd9b1ceffdae5111bc996ccca92d2e1cd3e66e05874e
+SHA512 (pyobjc-framework-ScreenCaptureKit-8.5.1.tar.gz) = 22b80d3d9547ab67d4e5fa90f3e5d26c42bc912843492389d1026a72af8bff7cfa305ebc18ef19357ef8d2d852c045719fe3bbd77a01f3157b1c3436da2912a5
+Size (pyobjc-framework-ScreenCaptureKit-8.5.1.tar.gz) = 21216 bytes

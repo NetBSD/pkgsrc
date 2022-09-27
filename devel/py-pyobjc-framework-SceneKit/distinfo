@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 10:18:57 nia Exp $
+$NetBSD: distinfo,v 1.12 2022/09/27 18:12:59 adam Exp $
 
-BLAKE2s (pyobjc-framework-SceneKit-6.2.2.tar.gz) = 48c37ad960601146cffef4f45088f5adc76b937223fe92d8ccd44bec0bbec880
-SHA512 (pyobjc-framework-SceneKit-6.2.2.tar.gz) = 9f794a0c112d536acd931a39bfae25558cfc1176319ca088227203cd0745c7e486d4719487f32d094f8a21ed5bcd3f5930ce5d2298cafc4a7dd9c3e9f966c3ae
-Size (pyobjc-framework-SceneKit-6.2.2.tar.gz) = 90356 bytes
+BLAKE2s (pyobjc-framework-SceneKit-8.5.1.tar.gz) = deb9e6eebf30759ae2345de17e245047f8d0e9e3867955ffb30b6282edfb66aa
+SHA512 (pyobjc-framework-SceneKit-8.5.1.tar.gz) = 92a7cc8dd46e98eeabea308b8ed5b07efd27a640f6fdf8ec0b9f0871f27a425360004db185caca0cb4eb7816696bd3192b2357a618a479faa514b0fa180112ef
+Size (pyobjc-framework-SceneKit-8.5.1.tar.gz) = 218618 bytes

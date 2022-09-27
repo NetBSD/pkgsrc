@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/09/27 18:12:52 adam Exp $
+
+BLAKE2s (pyobjc-framework-ExecutionPolicy-8.5.1.tar.gz) = 055d96e7d66b8e6d8bbfc9bb6cd15bd3b43c9ca353ab67b7182de7764d3dc5e8
+SHA512 (pyobjc-framework-ExecutionPolicy-8.5.1.tar.gz) = ab86e5000a6b561dbc7eda9658caf4085984091659b89bb815320815bf417c2c55153e74824ef8581f8c52c271dc97ca979db3a6eb9c4844de64ace600f8531c
+Size (pyobjc-framework-ExecutionPolicy-8.5.1.tar.gz) = 12091 bytes

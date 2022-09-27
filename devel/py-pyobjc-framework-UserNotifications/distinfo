@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/09/27 18:13:02 adam Exp $
+
+BLAKE2s (pyobjc-framework-UserNotifications-8.5.1.tar.gz) = 8d744144a5eeb163d008816fee7d9f20e01f67fb53d77b1dd1b28ba1ee130df0
+SHA512 (pyobjc-framework-UserNotifications-8.5.1.tar.gz) = d383b35f80884a42094c113499b18a03566ea22561e0ebbbe657b544b7c73ac3f23c4438e7136670e782a5c165abc61d16f06d25a753e10c3c896739ee8cb702
+Size (pyobjc-framework-UserNotifications-8.5.1.tar.gz) = 38266 bytes

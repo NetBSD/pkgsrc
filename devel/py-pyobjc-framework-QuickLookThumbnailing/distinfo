@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/09/27 18:12:59 adam Exp $
+
+BLAKE2s (pyobjc-framework-QuickLookThumbnailing-8.5.1.tar.gz) = 00659323ad0199e15f8f1d0b6194aad32b7027b07856861fa301d269ad503013
+SHA512 (pyobjc-framework-QuickLookThumbnailing-8.5.1.tar.gz) = d405c4e8b11357cb99438d59b55580b2d74e70a4f3374cc638298c403145d0fdab0794e22d843aade2ee2250b07962956f101bd866d2af5cb8a1ecdbe061d76d
+Size (pyobjc-framework-QuickLookThumbnailing-8.5.1.tar.gz) = 14245 bytes

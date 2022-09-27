@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/09/27 18:12:57 adam Exp $
+
+BLAKE2s (pyobjc-framework-Network-8.5.1.tar.gz) = fc7ecf49bc953d74c468a873a17c37c2c1c9d243af6df28d91a27dd5d3a776f6
+SHA512 (pyobjc-framework-Network-8.5.1.tar.gz) = 58b00928f78a44f5c1abc92959b97fb4153cd5633b7475faf71aeccb7730a33e22175733d19bfc0d7607524e833c7660fef9b9e64f00c463bd7bfc1241bbabfc
+Size (pyobjc-framework-Network-8.5.1.tar.gz) = 80524 bytes
