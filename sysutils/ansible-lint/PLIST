@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2022/09/19 08:27:34 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2022/09/27 07:52:32 adam Exp $
 bin/ansible-lint
 ${PYSITELIB}/${WHEEL_INFODIR}/COPYING
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
@@ -98,6 +98,9 @@ ${PYSITELIB}/ansiblelint/rules/latest.pyc
 ${PYSITELIB}/ansiblelint/rules/literal_compare.md
 ${PYSITELIB}/ansiblelint/rules/literal_compare.py
 ${PYSITELIB}/ansiblelint/rules/literal_compare.pyc
+${PYSITELIB}/ansiblelint/rules/loop_var_prefix.md
+${PYSITELIB}/ansiblelint/rules/loop_var_prefix.py
+${PYSITELIB}/ansiblelint/rules/loop_var_prefix.pyc
 ${PYSITELIB}/ansiblelint/rules/meta_incorrect.md
 ${PYSITELIB}/ansiblelint/rules/meta_incorrect.py
 ${PYSITELIB}/ansiblelint/rules/meta_incorrect.pyc
@@ -125,8 +128,6 @@ ${PYSITELIB}/ansiblelint/rules/no_jinja_when.pyc
 ${PYSITELIB}/ansiblelint/rules/no_log_password.md
 ${PYSITELIB}/ansiblelint/rules/no_log_password.py
 ${PYSITELIB}/ansiblelint/rules/no_log_password.pyc
-${PYSITELIB}/ansiblelint/rules/no_loop_var_prefix.py
-${PYSITELIB}/ansiblelint/rules/no_loop_var_prefix.pyc
 ${PYSITELIB}/ansiblelint/rules/no_prompting.py
 ${PYSITELIB}/ansiblelint/rules/no_prompting.pyc
 ${PYSITELIB}/ansiblelint/rules/no_relative_paths.py
