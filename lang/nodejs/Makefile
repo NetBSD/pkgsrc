@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.240 2022/08/29 06:30:11 adam Exp $
+# $NetBSD: Makefile,v 1.241 2022/09/27 07:59:10 adam Exp $
 
-DISTNAME=	node-v18.8.0
+DISTNAME=	node-v18.9.1
 EXTRACT_SUFX=	.tar.xz
 
 USE_LANGUAGES=	c gnu++17
@@ -31,9 +31,9 @@ CXXFLAGS+=	-mstackrealign
 .include "options.mk"
 
 # Node turns on -latomic for arm, mips and ppc.
-.if !empty(MACHINE_ARCH:M*arm*) || \
-    !empty(MACHINE_ARCH:M*powerpc*) || \
-    !empty(MACHINE_ARCH:M*mips*)
+.if ${MACHINE_ARCH:M*arm*} || \
+    ${MACHINE_ARCH:M*powerpc*} || \
+    ${MACHINE_ARCH:M*mips*}
 .include "../../devel/libatomic/buildlink3.mk"
 .endif
 
