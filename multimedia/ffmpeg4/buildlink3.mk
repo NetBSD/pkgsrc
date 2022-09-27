@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2022/06/28 11:34:54 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2022/09/27 20:57:54 wiz Exp $
 
 BUILDLINK_TREE+=	ffmpeg4
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ffmpeg4
 FFMPEG4_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ffmpeg4+=	ffmpeg4>=4.0
-BUILDLINK_ABI_DEPENDS.ffmpeg4+=	ffmpeg4>=4.4.2nb1
+BUILDLINK_ABI_DEPENDS.ffmpeg4+=	ffmpeg4>=4.4.2nb5
 BUILDLINK_PKGSRCDIR.ffmpeg4?=	../../multimedia/ffmpeg4
 
 pkgbase := ffmpeg4
@@ -35,7 +35,7 @@ pkgbase := ffmpeg4
 .endif
 
 .if ${PKG_BUILD_OPTIONS.ffmpeg4:Mx264}
-.  include "../../multimedia/x264-devel/buildlink3.mk"
+.  include "../../multimedia/x264/buildlink3.mk"
 .endif
 
 .if ${PKG_BUILD_OPTIONS.ffmpeg4:Mlibvpx}
