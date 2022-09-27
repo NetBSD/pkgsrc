@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2022/05/27 10:02:19 wiz Exp $
+@comment $NetBSD: PLIST,v 1.20 2022/09/27 07:45:50 pin Exp $
 bin/kitty
 lib/kitty/__main__.py
 lib/kitty/__main__.pyc
@@ -282,6 +282,9 @@ lib/kitty/kitty/cli_stub.pyo
 lib/kitty/kitty/client.py
 lib/kitty/kitty/client.pyc
 lib/kitty/kitty/client.pyo
+lib/kitty/kitty/clipboard.py
+lib/kitty/kitty/clipboard.pyc
+lib/kitty/kitty/clipboard.pyo
 lib/kitty/kitty/complete.py
 lib/kitty/kitty/complete.pyc
 lib/kitty/kitty/complete.pyo
@@ -306,6 +309,9 @@ lib/kitty/kitty/constants.pyo
 lib/kitty/kitty/debug_config.py
 lib/kitty/kitty/debug_config.pyc
 lib/kitty/kitty/debug_config.pyo
+lib/kitty/kitty/entry_points.py
+lib/kitty/kitty/entry_points.pyc
+lib/kitty/kitty/entry_points.pyo
 lib/kitty/kitty/fast_data_types.so
 lib/kitty/kitty/file_transmission.py
 lib/kitty/kitty/file_transmission.pyc
@@ -405,6 +411,9 @@ lib/kitty/kitty/options/utils.pyo
 lib/kitty/kitty/os_window_size.py
 lib/kitty/kitty/os_window_size.pyc
 lib/kitty/kitty/os_window_size.pyo
+lib/kitty/kitty/prewarm.py
+lib/kitty/kitty/prewarm.pyc
+lib/kitty/kitty/prewarm.pyo
 lib/kitty/kitty/rc/__init__.py
 lib/kitty/kitty/rc/__init__.pyc
 lib/kitty/kitty/rc/__init__.pyo
@@ -571,6 +580,8 @@ lib/kitty/logo/beam-cursor@2x.png
 lib/kitty/logo/kitty-128.png
 lib/kitty/logo/kitty.png
 lib/kitty/shell-integration/bash/kitty.bash
+lib/kitty/shell-integration/fish/vendor_completions.d/clone-in-kitty.fish
+lib/kitty/shell-integration/fish/vendor_completions.d/edit-in-kitty.fish
 lib/kitty/shell-integration/fish/vendor_completions.d/kitty.fish
 lib/kitty/shell-integration/fish/vendor_conf.d/kitty-shell-integration.fish
 lib/kitty/shell-integration/ssh/askpass.py
@@ -656,6 +667,7 @@ share/doc/kitty/html/_sources/shell-integration.rst.txt
 share/doc/kitty/html/_sources/support.rst.txt
 share/doc/kitty/html/_sources/underlines.rst.txt
 share/doc/kitty/html/_sources/unscroll.rst.txt
+share/doc/kitty/html/_static/_sphinx_javascript_frameworks_compat.js
 share/doc/kitty/html/_static/basic.css
 share/doc/kitty/html/_static/check-solid.svg
 share/doc/kitty/html/_static/clipboard.min.js
@@ -665,10 +677,12 @@ share/doc/kitty/html/_static/copybutton.js
 share/doc/kitty/html/_static/copybutton_funcs.js
 share/doc/kitty/html/_static/custom.css
 share/doc/kitty/html/_static/custom.js
+share/doc/kitty/html/_static/debug.css
 share/doc/kitty/html/_static/doctools.js
 share/doc/kitty/html/_static/documentation_options.js
 share/doc/kitty/html/_static/file.png
 share/doc/kitty/html/_static/jquery-3.5.1.js
+share/doc/kitty/html/_static/jquery-3.6.0.js
 share/doc/kitty/html/_static/jquery.js
 share/doc/kitty/html/_static/kitty.svg
 share/doc/kitty/html/_static/language_data.js
@@ -681,6 +695,7 @@ share/doc/kitty/html/_static/scripts/furo.js
 share/doc/kitty/html/_static/scripts/furo.js.LICENSE.txt
 share/doc/kitty/html/_static/scripts/furo.js.map
 share/doc/kitty/html/_static/searchtools.js
+share/doc/kitty/html/_static/skeleton.css
 share/doc/kitty/html/_static/styles/furo-extensions.css
 share/doc/kitty/html/_static/styles/furo-extensions.css.map
 share/doc/kitty/html/_static/styles/furo.css

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2022/08/11 05:09:28 gutteridge Exp $
+# $NetBSD: Makefile,v 1.36 2022/09/27 07:45:50 pin Exp $
 
-DISTNAME=	kitty-0.25.1
-PKGREVISION=	2
+DISTNAME=	kitty-0.26.3
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kovidgoyal/}
 GITHUB_PROJECT=	kitty
@@ -73,6 +72,7 @@ do-install:
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/tool.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
