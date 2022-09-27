@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4705 2022/09/26 18:55:23 adam Exp $
+$NetBSD: CHANGES-2022,v 1.4706 2022/09/27 01:20:53 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6917,3 +6917,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-setuptools to 65.4.0 [adam 2022-09-26]
 	Updated devel/py-setuptools-rust to 1.5.2 [adam 2022-09-26]
 	Updated www/py-aiohttp to 3.8.3 [adam 2022-09-26]
+	Updated security/zoneminder to 1.30.5nb2 [gdt 2022-09-27]
