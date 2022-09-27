@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2021/10/09 15:35:11 nia Exp $
+# $NetBSD: Makefile,v 1.4 2022/09/27 20:58:27 wiz Exp $
 
 DISTNAME=	mkvserver_mk2-0.0.0.20200117
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=klaxa/}
 GITHUB_PROJECT=	mkvserver_mk2
