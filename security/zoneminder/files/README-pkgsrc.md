@@ -1,10 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.5 2021/12/31 12:07:55 dsainty Exp $
-
-All documentation for ZoneMinder is now online at:
-
-  https://www.zoneminder.com
-
+$NetBSD: README-pkgsrc.md,v 1.1 2022/09/27 01:20:39 gdt Exp $
 
 Performance:
 

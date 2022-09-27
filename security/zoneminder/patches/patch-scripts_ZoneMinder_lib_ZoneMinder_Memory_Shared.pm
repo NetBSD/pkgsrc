@@ -1,4 +1,4 @@
-$NetBSD: patch-scripts_ZoneMinder_lib_ZoneMinder_Memory_Shared.pm,v 1.1 2020/08/25 16:42:21 gdt Exp $
+$NetBSD: patch-scripts_ZoneMinder_lib_ZoneMinder_Memory_Shared.pm,v 1.2 2022/09/27 01:20:39 gdt Exp $
 
 Adjust for (more) modern perl.
 
