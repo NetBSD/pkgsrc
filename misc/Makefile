@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.571 2022/09/24 06:37:45 wiz Exp $
+# $NetBSD: Makefile,v 1.572 2022/09/27 07:49:22 pin Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -12,6 +12,7 @@ SUBDIR+=	R-pillar
 SUBDIR+=	R-praise
 SUBDIR+=	abduco
 SUBDIR+=	ansiweather
+SUBDIR+=	aschord
 SUBDIR+=	ascii
 SUBDIR+=	asr-manpages
 SUBDIR+=	astrolog
