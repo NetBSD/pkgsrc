@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2022/09/11 12:52:03 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2022/09/27 20:58:26 wiz Exp $
 
 DISTNAME=	obs-studio-26.1.2
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=obsproject/}
 
