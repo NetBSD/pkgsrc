@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4716 2022/09/27 12:49:33 adam Exp $
+$NetBSD: CHANGES-2022,v 1.4717 2022/09/27 18:27:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6933,3 +6933,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated wm/evilwm to 1.4.0 [jperkin 2022-09-27]
 	Updated security/libksba to 1.6.1 [adam 2022-09-27]
 	Updated security/gnupg2 to 2.2.39 [adam 2022-09-27]
+	Updated devel/py-pyobjc to 8.5.1 [adam 2022-09-27]
