@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2022/08/27 08:20:28 adam Exp $
+# $NetBSD: Makefile,v 1.5 2022/09/27 08:20:34 adam Exp $
 
-DISTNAME=	hatchling-1.8.1
+DISTNAME=	hatchling-1.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hatchling/}
