@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2022/06/01 10:58:39 adam Exp $
+$NetBSD: distinfo,v 1.6 2022/09/27 08:21:08 adam Exp $
 
-BLAKE2s (wcmatch-8.4.tar.gz) = 269f50f827377d40194069c3b183ef25835af998c29d2a2b14f0af78ba062013
-SHA512 (wcmatch-8.4.tar.gz) = 59d85723a104ac74f03a7c2fee505a82c23b55d5f2fd4b6a53dc1bff9a558e879dec2756023ad347aa2fe46edb9a10166fa5752fc33d8668d37ec04aabdf9338
-Size (wcmatch-8.4.tar.gz) = 115994 bytes
+BLAKE2s (wcmatch-8.4.1.tar.gz) = ed43e04304002c57f42ed1b29bacbae397b4909b3f9049ce76bffeacb3374b1a
+SHA512 (wcmatch-8.4.1.tar.gz) = 2ce84ebde2f6fcb7470eb35abda7c3cd7bc3a317694c4fe276bce8ff77d0e53373ad8c0744495c97e9aee63ce6ef2503c584980942c9e1de3ea862c4203b5ccf
+Size (wcmatch-8.4.1.tar.gz) = 114362 bytes
