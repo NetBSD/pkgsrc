@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2020/10/11 08:53:28 nia Exp $
+# $NetBSD: Makefile,v 1.40 2022/09/27 12:33:08 jperkin Exp $
 
-DISTNAME=	evilwm-1.1.1
-PKGREVISION=	1
+DISTNAME=	evilwm-1.4.0
 CATEGORIES=	wm x11
 MASTER_SITES=	http://www.6809.org.uk/evilwm/
 
@@ -14,16 +13,20 @@ USE_TOOLS+=	gmake
 
 CPPFLAGS.NetBSD+=	-D_NETBSD_SOURCE
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/evilwm
+INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
+INSTALLATION_DIRS+=	share/applications share/doc/evilwm
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/evilwm ${DESTDIR}${PREFIX}/bin/evilwm
 	${INSTALL_MAN} ${WRKSRC}/evilwm.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/evilwm.1
-	for docfile in ChangeLog README TODO; \
-	do \
-	    ${INSTALL_DATA} ${WRKSRC}/$$docfile ${DESTDIR}${PREFIX}/share/doc/evilwm/; \
+	for docfile in ChangeLog README TODO; do \
+		${INSTALL_DATA} ${WRKSRC}/$$docfile \
+			${DESTDIR}${PREFIX}/share/doc/evilwm/; \
 	done
+	${INSTALL_DATA} ${WRKSRC}/evilwm.desktop \
+		${DESTDIR}${PREFIX}/share/applications/evilwm.desktop
 
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
