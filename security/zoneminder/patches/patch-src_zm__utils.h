@@ -1,4 +1,4 @@
-$NetBSD: patch-src_zm__utils.h,v 1.3 2020/08/25 16:42:21 gdt Exp $
+$NetBSD: patch-src_zm__utils.h,v 1.4 2022/09/27 01:20:39 gdt Exp $
 
 \todo Explain
 
