@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4710 2022/09/27 07:46:12 pin Exp $
+$NetBSD: CHANGES-2022,v 1.4711 2022/09/27 07:49:48 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6922,3 +6922,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/libXtst to 1.2.4 [wiz 2022-09-27]
 	Updated games/termatrix to 2.2.0 [pin 2022-09-27]
 	Updated x11/kitty to 0.26.3 [pin 2022-09-27]
+	Added misc/aschord version 0.3.3 [pin 2022-09-27]
