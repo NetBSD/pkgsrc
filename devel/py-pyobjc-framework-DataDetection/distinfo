@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/09/27 18:12:51 adam Exp $
+
+BLAKE2s (pyobjc-framework-DataDetection-8.5.1.tar.gz) = 6f0cdee5b38e41f554e91018ea1793c887e7ecfa8ca9031285c93d2e55206860
+SHA512 (pyobjc-framework-DataDetection-8.5.1.tar.gz) = 5b286353e1d25ceffa1cf48f3c75945e70fd34b32420ad2077d627faebd552117bd0b663fd1e28fb773ccf73da55f737b8a8d0e752c091d227838385919acb2a
+Size (pyobjc-framework-DataDetection-8.5.1.tar.gz) = 11851 bytes

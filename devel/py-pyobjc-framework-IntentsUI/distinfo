@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/09/27 18:12:54 adam Exp $
+
+BLAKE2s (pyobjc-framework-IntentsUI-8.5.1.tar.gz) = 9bced24bddb887bf56aeb17b1c87deba51558b1888335aaa88bac743a510e2c1
+SHA512 (pyobjc-framework-IntentsUI-8.5.1.tar.gz) = 640e81ddba6c23a751b8a1d9f638dbd977736863cb5662dfe8c9ab5c07b3788d4a8cd6198ec1c42192fab92a27e77bc55bd2ddcf2d72e9c4bbeae9d88311ac1a
+Size (pyobjc-framework-IntentsUI-8.5.1.tar.gz) = 19418 bytes

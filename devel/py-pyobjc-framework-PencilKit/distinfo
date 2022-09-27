@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/09/27 18:12:58 adam Exp $
+
+BLAKE2s (pyobjc-framework-PencilKit-8.5.1.tar.gz) = 1c748d74ccf898b62aacf6a14f44cbc814d85f25e27be145e0ef5c1625281463
+SHA512 (pyobjc-framework-PencilKit-8.5.1.tar.gz) = 97a0178945d24c4947a5c216199fa24c2ded5c0226ceeb6127a24f4973f091f145b531bc74b132e95b8a982ad2e406374a504634f691f5662be8b1e6b2b56796
+Size (pyobjc-framework-PencilKit-8.5.1.tar.gz) = 14536 bytes

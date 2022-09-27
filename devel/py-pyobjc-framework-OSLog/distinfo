@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/09/27 18:12:58 adam Exp $
+
+BLAKE2s (pyobjc-framework-OSLog-8.5.1.tar.gz) = a8bf560c26d64d6aee5f0aa81d5cf14f6743c07f585a9cb34081b98f05c7d490
+SHA512 (pyobjc-framework-OSLog-8.5.1.tar.gz) = fe0a9d6af0b8b15e2aeaf151e02dd20197b5c092a32421e276932a39f3e8a74c3cdeb1461c335f427491c55c4723211512a4107ac4f537e98fabd8a3ae9aa37d
+Size (pyobjc-framework-OSLog-8.5.1.tar.gz) = 21042 bytes

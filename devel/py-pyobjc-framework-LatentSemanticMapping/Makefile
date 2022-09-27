@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.4 2022/01/04 20:53:29 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/09/27 18:12:55 adam Exp $
 
-PKGREVISION= 1
 .include "../../devel/py-pyobjc/Makefile.common"
 
 DISTNAME=	pyobjc-framework-LatentSemanticMapping-${PYOBJC_VERS}
@@ -8,7 +7,7 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyobjc-framework-LatentSemanticMapping/}
 
-COMMENT=	Bridge between Python and Objective-C (LatentSemanticMapping framework)
+COMMENT=	Wrappers for the framework LatentSemanticMapping on macOS
 
 USE_LANGUAGES=	c objc
 

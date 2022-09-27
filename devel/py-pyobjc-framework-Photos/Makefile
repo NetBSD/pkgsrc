@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.2 2022/01/04 20:53:31 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/09/27 18:12:58 adam Exp $
 
-PKGREVISION= 1
 .include "../../devel/py-pyobjc/Makefile.common"
 
 DISTNAME=	pyobjc-framework-Photos-${PYOBJC_VERS}
@@ -8,7 +7,9 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyobjc-framework-Photos/}
 
-COMMENT=	Bridge between Python and Objective-C (Photos framework)
+COMMENT=	Wrappers for the framework Photos on macOS
+
+NOT_FOR_PLATFORM=	Darwin-1[0-4].*-* Darwin-[0-9].*-* # 10.11+
 
 USE_LANGUAGES=	c objc
 

@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.2 2022/01/04 20:53:32 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/09/27 18:13:00 adam Exp $
 
-PKGREVISION= 1
 .include "../../devel/py-pyobjc/Makefile.common"
 
 DISTNAME=	pyobjc-framework-Security-${PYOBJC_VERS}
@@ -8,7 +7,7 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyobjc-framework-Security/}
 
-COMMENT=	Bridge between Python and Objective-C (Security framework)
+COMMENT=	Wrappers for the framework Security on macOS
 
 USE_LANGUAGES=	c objc
 

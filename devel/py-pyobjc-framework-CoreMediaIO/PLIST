@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2022/09/27 18:12:50 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/CoreMediaIO/_CoreMediaIO.abi3.so
+${PYSITELIB}/CoreMediaIO/__init__.py
+${PYSITELIB}/CoreMediaIO/__init__.pyc
+${PYSITELIB}/CoreMediaIO/__init__.pyo
+${PYSITELIB}/CoreMediaIO/_metadata.py
+${PYSITELIB}/CoreMediaIO/_metadata.pyc
+${PYSITELIB}/CoreMediaIO/_metadata.pyo

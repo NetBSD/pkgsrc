@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/09/27 18:12:50 adam Exp $
+
+BLAKE2s (pyobjc-framework-CoreMIDI-8.5.1.tar.gz) = 0e6f17f20d784c415a13e22b15206b4de66f484b11249e29f185cda0e77af7b5
+SHA512 (pyobjc-framework-CoreMIDI-8.5.1.tar.gz) = 33468e3c75da89a72780a065cc66f0bcd6125c4c022c2874368917c63c8d572a7950dc353a049f027dfb490d5462fa32308d62fe359240fb13b504521b4eb3b7
+Size (pyobjc-framework-CoreMIDI-8.5.1.tar.gz) = 60023 bytes

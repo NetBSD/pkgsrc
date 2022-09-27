@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2022/09/27 18:12:47 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/AudioVideoBridging/__init__.py
+${PYSITELIB}/AudioVideoBridging/__init__.pyc
+${PYSITELIB}/AudioVideoBridging/__init__.pyo
+${PYSITELIB}/AudioVideoBridging/_metadata.py
+${PYSITELIB}/AudioVideoBridging/_metadata.pyc
+${PYSITELIB}/AudioVideoBridging/_metadata.pyo

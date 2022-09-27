@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 10:18:52 nia Exp $
+$NetBSD: distinfo,v 1.12 2022/09/27 18:12:52 adam Exp $
 
-BLAKE2s (pyobjc-framework-ExternalAccessory-6.2.2.tar.gz) = 2d9a770df85fcd972cd856dad36ac37d47456a4ccabee7fb42f17d57f5efb892
-SHA512 (pyobjc-framework-ExternalAccessory-6.2.2.tar.gz) = a20b2bee0d8232665619cdc25a39481be87a34afefd1093fc5d9af73c28295488bf798aa443b478b3704143f7f58656c8505a58d13c78603e4ff4ed1686272f1
-Size (pyobjc-framework-ExternalAccessory-6.2.2.tar.gz) = 16537 bytes
+BLAKE2s (pyobjc-framework-ExternalAccessory-8.5.1.tar.gz) = 38d218c8a5518bd4b26bfe688e03350cacadabc911c194a50dcdca129b2205c3
+SHA512 (pyobjc-framework-ExternalAccessory-8.5.1.tar.gz) = 92b8b2b6fe922ba2527c11b82adc77525130fa26082a0e02ead4bf6986d6b6e69d2d39bd8ad3d5c9104588a1dccfa6418ee8339afc222c3e678f0aa5eeea1ec6
+Size (pyobjc-framework-ExternalAccessory-8.5.1.tar.gz) = 20485 bytes
