@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2022/09/27 01:20:39 gdt Exp $
+@comment $NetBSD: PLIST,v 1.8 2022/09/27 01:22:09 gdt Exp $
 bin/zma
 bin/zmaudit.pl
 bin/zmc
@@ -6031,6 +6031,7 @@ man/man8/zoneminder-zmupdate.pl.8
 man/man8/zoneminder-zmvideo.pl.8
 man/man8/zoneminder-zmwatch.pl.8
 man/man8/zoneminder-zmx10.pl.8
+share/doc/zoneminder/README-pkgsrc.md
 ${PLIST.rcd}share/examples/rc.d/zoneminder
 share/examples/zoneminder/apache/zoneminder.conf
 share/examples/zoneminder/config/zm.conf
@@ -7654,4 +7655,3 @@ ${ZM_HTTPD_ROOT}/tools/mootools/mootools-core.js
 ${ZM_HTTPD_ROOT}/tools/mootools/mootools-more-1.5.1.js
 ${ZM_HTTPD_ROOT}/tools/mootools/mootools-more.js
 ${ZM_HTTPD_ROOT}/views/image.php
-share/doc/zoneminder/README-pkgsrc.md
