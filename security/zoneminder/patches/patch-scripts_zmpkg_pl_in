@@ -1,0 +1,20 @@
+$NetBSD: patch-scripts_zmpkg_pl_in,v 1.1 2022/09/27 01:20:39 gdt Exp $
+
+The systemd check in zmpkg.pl does not work, even on systems that use systemd.
+It fails to start, eventually timing out, if there is any parent process
+between zmpkg.pl and systemd or init - such as /etc/init.d/zoneminder
+
+But everything does seem to work ok from systemd without this roundabout code
+anyway, so just inhibit it.
+
+--- scripts/zmpkg.pl.in.orig	2021-09-26 20:28:10.324733138 +1300
++++ scripts/zmpkg.pl.in	2021-09-26 20:28:30.414613144 +1300
+@@ -168,7 +168,7 @@
+ }
+ 
+ # Check if we are running systemd and if we have been called by the system
+-if ( $command =~ /^(start|stop|restart)$/ )
++if ( 0 && $command =~ /^(start|stop|restart)$/ )
+ {
+     # We have to detaint to keep perl from complaining
+     $command = $1;

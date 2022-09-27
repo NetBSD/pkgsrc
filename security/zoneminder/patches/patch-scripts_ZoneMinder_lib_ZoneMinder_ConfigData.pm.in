@@ -1,0 +1,28 @@
+$NetBSD: patch-scripts_ZoneMinder_lib_ZoneMinder_ConfigData.pm.in,v 1.1 2022/09/27 01:20:39 gdt Exp $
+
+Inhibit a couple of "phone home" options that are enabled by default.  These
+should be opt-in rather than opt-out.
+
+The ConfigData.pm module determines what the default setting is for new
+options during an upgrade as well as on an initial installation.
+
+--- scripts/ZoneMinder/lib/ZoneMinder/ConfigData.pm.in.orig	2022-01-23 22:09:24.000000000 +1300
++++ scripts/ZoneMinder/lib/ZoneMinder/ConfigData.pm.in	2022-01-23 22:11:28.000000000 +1300
+@@ -2787,7 +2787,7 @@
+   },
+   {
+     name        => "ZM_CHECK_FOR_UPDATES",
+-    default     => "yes",
++    default     => "no",
+     description => "Check with zoneminder.com for updated versions",
+     help        => qqq("
+         From ZoneMinder version 1.17.0 onwards new versions are
+@@ -2805,7 +2805,7 @@
+   },
+   {
+     name        => "ZM_TELEMETRY_DATA",
+-    default     => "yes",
++    default     => "no",
+     description => "Send usage information to ZoneMinder",
+     help        => qqq("
+         Enable collection of usage information of the local system and send

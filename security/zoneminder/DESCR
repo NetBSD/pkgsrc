@@ -8,3 +8,6 @@ of Pan/Tilt/Zoom cameras using a variety of protocols.  It is suitable for use
 as a DIY home video security system and for commercial or professional video
 security and surveillance.  It can also be integrated into a home automation
 system via X.10 or other protocols.
+
+Users are cautioned that this release is old and that it is a bit
+cantankerous to get running.
