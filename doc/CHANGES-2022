@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4714 2022/09/27 11:56:33 pin Exp $
+$NetBSD: CHANGES-2022,v 1.4715 2022/09/27 12:33:17 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6930,3 +6930,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-hatchling to 1.10.0 [adam 2022-09-27]
 	Updated textproc/py-wcmatch to 8.4.1 [adam 2022-09-27]
 	Updated sysutils/macchina to 6.1.6 [pin 2022-09-27]
+	Updated wm/evilwm to 1.4.0 [jperkin 2022-09-27]
