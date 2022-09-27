@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4713 2022/09/27 08:21:23 adam Exp $
+$NetBSD: CHANGES-2022,v 1.4714 2022/09/27 11:56:33 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6929,3 +6929,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/nodejs to 18.9.1 [adam 2022-09-27]
 	Updated devel/py-hatchling to 1.10.0 [adam 2022-09-27]
 	Updated textproc/py-wcmatch to 8.4.1 [adam 2022-09-27]
+	Updated sysutils/macchina to 6.1.6 [pin 2022-09-27]
