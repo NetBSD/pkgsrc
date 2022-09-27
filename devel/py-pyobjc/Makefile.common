@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2022/09/27 18:12:46 adam Exp $
+# $NetBSD: Makefile.common,v 1.14 2022/09/27 18:23:51 adam Exp $
 # used by devel/py-pyobjc-core/Makefile
 # used by devel/py-pyobjc-framework-AdServices/Makefile
 # used by devel/py-pyobjc-framework-AdSupport/Makefile
@@ -143,7 +143,7 @@ MAINTAINER?=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pyobjc.readthedocs.io/
 LICENSE=	mit
 
-ONLY_FOR_PLATFORM=	Darwin-*-*
+ONLY_FOR_PLATFORM=	Darwin-*-* # only for macOS
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
