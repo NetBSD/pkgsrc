@@ -1,4 +1,4 @@
-$NetBSD: patch-scripts_zm_in,v 1.4 2020/08/25 16:42:21 gdt Exp $
+$NetBSD: patch-scripts_zm_in,v 1.5 2022/09/27 01:20:39 gdt Exp $
 
 /etc/rc.d/init.d/functions doesn't commonly exist.
 
