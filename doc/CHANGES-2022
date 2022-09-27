@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4707 2022/09/27 07:24:00 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4708 2022/09/27 07:26:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6919,3 +6919,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/py-aiohttp to 3.8.3 [adam 2022-09-26]
 	Updated security/zoneminder to 1.30.5nb2 [gdt 2022-09-27]
 	Updated x11/libXxf86vm to 1.1.5 [wiz 2022-09-27]
+	Updated x11/libXtst to 1.2.4 [wiz 2022-09-27]
