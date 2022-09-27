@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.2 2022/01/04 20:53:29 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/09/27 18:12:56 adam Exp $
 
-PKGREVISION= 1
 .include "../../devel/py-pyobjc/Makefile.common"
 
 DISTNAME=	pyobjc-framework-MediaAccessibility-${PYOBJC_VERS}
@@ -8,7 +7,9 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyobjc-framework-MediaAccessibility/}
 
-COMMENT=	Bridge between Python and Objective-C (MediaAccessibility framework)
+COMMENT=	Wrappers for the framework MediaAccessibility on macOS
+
+NOT_FOR_PLATFORM=	Darwin-1[0-2].*-* Darwin-[0-9].*-* # 10.9+
 
 USE_LANGUAGES=	c objc
 

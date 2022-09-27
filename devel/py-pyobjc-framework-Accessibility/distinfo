@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/09/27 18:12:46 adam Exp $
+
+BLAKE2s (pyobjc-framework-Accessibility-8.5.1.tar.gz) = df0f4c1fda0389edeb2d8e975659fc4845e233d80961928c78bf9dd72627f296
+SHA512 (pyobjc-framework-Accessibility-8.5.1.tar.gz) = 3a4edfd8a14f94df5a24cc190d8c7ad11d5af03360faff96d377b64aca9f7246a27020ab1004248587f0bf38d17545ede0dc215d4a260263914dcef8db4fa48c
+Size (pyobjc-framework-Accessibility-8.5.1.tar.gz) = 28211 bytes

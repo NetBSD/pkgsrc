@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/09/27 18:12:58 adam Exp $
+
+BLAKE2s (pyobjc-framework-OSAKit-8.5.1.tar.gz) = be8b017f4ea06c68cc42c2b2ae013887133c2eda9384e16890c9d4b63b5e599d
+SHA512 (pyobjc-framework-OSAKit-8.5.1.tar.gz) = af2592cfd9e409d8058230a87c20a4884b088d90cf4b57930ed6f67977b3c4e115c83f9f141ad95484711636b7e23ea87d3e699d3e4e5fb6aa6bca44f528e33f
+Size (pyobjc-framework-OSAKit-8.5.1.tar.gz) = 16402 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 10:18:49 nia Exp $
+$NetBSD: distinfo,v 1.14 2022/09/27 18:12:46 adam Exp $
 
-BLAKE2s (pyobjc-framework-Accounts-6.2.2.tar.gz) = 997979bb63c315a08317122a09c781a90b0712117781b8d648dc702b6202d203
-SHA512 (pyobjc-framework-Accounts-6.2.2.tar.gz) = 34a7d9f6ba1029f91995fd57a61ad5c175d39aa19329168b46d9351f4bf188e57bd4ffaccc1bf77e432a23bf692d76d4569d104518c81fa54dfb793153f299db
-Size (pyobjc-framework-Accounts-6.2.2.tar.gz) = 13262 bytes
+BLAKE2s (pyobjc-framework-Accounts-8.5.1.tar.gz) = a230c53e00584f16e2675fc95e583307a9265059f002d20cdc09ba7bdb97b90a
+SHA512 (pyobjc-framework-Accounts-8.5.1.tar.gz) = 3521734276726b2c27ed38d5120e05a8b83aa57b3839125a9730fd1553b82e7bbf81daa0cd175b4cbf2aa3034c9aba0730c64aea026dd7ee03555dd57d0c7d6c
+Size (pyobjc-framework-Accounts-8.5.1.tar.gz) = 15292 bytes

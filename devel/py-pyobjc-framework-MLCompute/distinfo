@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/09/27 18:12:55 adam Exp $
+
+BLAKE2s (pyobjc-framework-MLCompute-8.5.1.tar.gz) = d9cf46ce469c7ea5cc32c1ed0595a67751b05596ac958b9ec33c0b7a67e5cb1f
+SHA512 (pyobjc-framework-MLCompute-8.5.1.tar.gz) = 84cbfb188fd47c46f744da1a669ab4cdd27687727bdb3a260268fe1648ccf828a1dbc4cf84a5efeb2a2543fedff6c62d51d770c9988cf5f5867d1b82eed97476
+Size (pyobjc-framework-MLCompute-8.5.1.tar.gz) = 67032 bytes

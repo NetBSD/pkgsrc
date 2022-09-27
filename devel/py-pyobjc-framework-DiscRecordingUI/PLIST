@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2022/09/27 18:12:52 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/DiscRecordingUI/__init__.py
+${PYSITELIB}/DiscRecordingUI/__init__.pyc
+${PYSITELIB}/DiscRecordingUI/__init__.pyo
+${PYSITELIB}/DiscRecordingUI/_metadata.py
+${PYSITELIB}/DiscRecordingUI/_metadata.pyc
+${PYSITELIB}/DiscRecordingUI/_metadata.pyo
