@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4717 2022/09/27 18:27:34 adam Exp $
+$NetBSD: CHANGES-2022,v 1.4718 2022/09/27 20:33:10 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6934,3 +6934,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/libksba to 1.6.1 [adam 2022-09-27]
 	Updated security/gnupg2 to 2.2.39 [adam 2022-09-27]
 	Updated devel/py-pyobjc to 8.5.1 [adam 2022-09-27]
+	Updated games/trader to 7.18 [fcambus 2022-09-27]
