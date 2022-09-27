@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/09/27 18:12:48 adam Exp $
+
+BLAKE2s (pyobjc-framework-AuthenticationServices-8.5.1.tar.gz) = 356c5a5553dcf07e5f37cf659649de3ac029bd06e4bf2e3c7c68a57c05348437
+SHA512 (pyobjc-framework-AuthenticationServices-8.5.1.tar.gz) = fac70884e890cce773da895b1bbe6704a0eaf13e063f9c271c060834627db6f8e810afde918bc501c61b37864925a3e851fc162df9da83a2b5b376d9686782ac
+Size (pyobjc-framework-AuthenticationServices-8.5.1.tar.gz) = 52366 bytes

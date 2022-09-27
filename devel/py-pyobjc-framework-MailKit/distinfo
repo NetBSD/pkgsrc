@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/09/27 18:12:55 adam Exp $
+
+BLAKE2s (pyobjc-framework-MailKit-8.5.1.tar.gz) = 445773c2c5c6725f37fe6f949dc0eb652e61c260ee35ef116504a21d397ed5c1
+SHA512 (pyobjc-framework-MailKit-8.5.1.tar.gz) = 7129174d42b0869d82f9ac2dafd302d6412335f0c37728f463e7ebb6e963e5ed4b414050754124d4b60644758382b50c4e08777786669b7df0dac0b83d200675
+Size (pyobjc-framework-MailKit-8.5.1.tar.gz) = 25026 bytes

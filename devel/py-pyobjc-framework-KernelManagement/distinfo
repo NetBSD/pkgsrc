@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/09/27 18:12:54 adam Exp $
+
+BLAKE2s (pyobjc-framework-KernelManagement-8.5.1.tar.gz) = 61fe128961b96628cdef642d49bf7e101a3fd877cc965c27a14eb77576d94e72
+SHA512 (pyobjc-framework-KernelManagement-8.5.1.tar.gz) = 071d7f0eb74850a2ce3e31af66f0f4a3c8f614cec2d7feea0e860c196f5e01378e36cdec5c2f4671a0c5ae6a544490753bed26e670186b8168fa3b51f3eea384
+Size (pyobjc-framework-KernelManagement-8.5.1.tar.gz) = 11341 bytes

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/09/27 18:12:52 adam Exp $
+
+BLAKE2s (pyobjc-framework-DiscRecordingUI-8.5.1.tar.gz) = 87e435aaeceb03a92fe964f218ad5ab0b671c28a285d486fad5659ca26d8849b
+SHA512 (pyobjc-framework-DiscRecordingUI-8.5.1.tar.gz) = 7f236b19e1cbc32b79dbbcd457c235c540c0c67ba5178c639cd12185b321790a3b40b270917393ffcfc40059fbae897d138f5b5533e926b1867a8e9219f5b50a
+Size (pyobjc-framework-DiscRecordingUI-8.5.1.tar.gz) = 17108 bytes

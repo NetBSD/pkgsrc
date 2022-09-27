@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/09/27 18:12:56 adam Exp $
+
+BLAKE2s (pyobjc-framework-MediaToolbox-8.5.1.tar.gz) = e21aba29b5ee506f8c4295eafe30fb6ddcc9534e1f18dedf3873b222679d10a2
+SHA512 (pyobjc-framework-MediaToolbox-8.5.1.tar.gz) = 0bf4dee1c495d9b8475935145342a055ad3e09c8a3dc211d988f9e21cb3950eb3253101f7d6acb135ec4b410b923c1038628a12175cda6afe1bc1df035e82040
+Size (pyobjc-framework-MediaToolbox-8.5.1.tar.gz) = 21328 bytes

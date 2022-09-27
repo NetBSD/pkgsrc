@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.5 2022/01/04 20:53:31 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2022/09/27 18:12:58 adam Exp $
 
-PKGREVISION= 1
 .include "../../devel/py-pyobjc/Makefile.common"
 
 DISTNAME=	pyobjc-framework-PubSub-${PYOBJC_VERS}
@@ -8,9 +7,9 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyobjc-framework-PubSub/}
 
-COMMENT=	Bridge between Python and Objective-C (PubSub framework)
+COMMENT=	Wrappers for the framework PubSub on macOS
 
-NOT_FOR_PLATFORM=	Darwin-19.*-*
+NOT_FOR_PLATFORM=	Darwin-19.*-* Darwin-2[0-9].*-*
 
 USE_LANGUAGES=	c objc
 

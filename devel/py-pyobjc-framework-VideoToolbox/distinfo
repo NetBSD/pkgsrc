@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/09/27 18:13:02 adam Exp $
+
+BLAKE2s (pyobjc-framework-VideoToolbox-8.5.1.tar.gz) = fbbcd88e3f279f18d4de81d587f30e756fe846d5a4f348cb34439e48bba4c457
+SHA512 (pyobjc-framework-VideoToolbox-8.5.1.tar.gz) = f071167f24fde79060a49ffa50643ccc34298002b987f5045721a7aafa9f412c5d1751e72f60a62c03bb2c0def68f4f35a364c29cea4c198d58369d4aeee1cad
+Size (pyobjc-framework-VideoToolbox-8.5.1.tar.gz) = 53739 bytes
