@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2020/01/18 23:35:53 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2022/09/27 07:23:47 wiz Exp $
 
-DISTNAME=		libXxf86vm-1.1.4
-PKGREVISION=		1
+DISTNAME=		libXxf86vm-1.1.5
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
-EXTRACT_SUFX=		.tar.bz2
+EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/
@@ -17,8 +16,6 @@ GNU_CONFIGURE=		yes
 
 PKGCONFIG_OVERRIDE+=	xxf86vm.pc.in
 CONFIGURE_ENV+=		LIB_MAN_SUFFIX=3
-
-CONFIGURE_ARGS.NetBSD+=	--disable-malloc0returnsnull
 
 .include "../../meta-pkgs/modular-xorg/hacks.mk"
 

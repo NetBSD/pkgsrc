@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 11:34:08 nia Exp $
+$NetBSD: distinfo,v 1.11 2022/09/27 07:23:47 wiz Exp $
 
-BLAKE2s (libXxf86vm-1.1.4.tar.bz2) = fe8978f828b8e0ef7e16e867a9d59e05715cdc3a3055f1fa610193f0d0ca6f36
-SHA512 (libXxf86vm-1.1.4.tar.bz2) = c5f92d86e143db02ebb36bcd25618acaa2cb2831f5a23800a06dd431cd73b6702d95de8fe7407ce626336bf614c288d5256f4d87ea7781fad2ab6c517cbf09e0
-Size (libXxf86vm-1.1.4.tar.bz2) = 295346 bytes
+BLAKE2s (libXxf86vm-1.1.5.tar.xz) = c22a7f1dea90abf3b299416c1212a50d57cf9e305756b4560d54343b487c37b6
+SHA512 (libXxf86vm-1.1.5.tar.xz) = 68226fcb9773a583ea417ab413146203dd7db6ff8a4d388285da972353355e11e179861a77c9fa284aefac025bb3bbf5a9537fa0bf246c782e0116a667c9d9b6
+Size (libXxf86vm-1.1.5.tar.xz) = 265384 bytes
