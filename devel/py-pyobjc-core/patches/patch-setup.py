@@ -1,29 +1,43 @@
-$NetBSD: patch-setup.py,v 1.2 2020/05/23 07:03:41 adam Exp $
+$NetBSD: patch-setup.py,v 1.3 2022/09/27 18:12:46 adam Exp $
 
 Do not add debug symbols.
 Do not override compiler optimiztion flags.
 Avoid a hack.
 
---- setup.py.orig	2020-03-22 17:36:26.000000000 +0000
+--- setup.py.orig	2022-08-12 08:06:27.000000000 +0000
 +++ setup.py
-@@ -56,7 +56,6 @@ def get_sdk_level(sdk):
+@@ -67,7 +67,6 @@ def get_sdk_level(sdk):
  
  # CFLAGS for the objc._objc extension:
  CFLAGS = [
 -    "-g",
      "-fexceptions",
-     # Loads of warning flags
-     "-Wall",
-@@ -126,7 +125,7 @@ if get_config_var("Py_DEBUG"):
-         elif isinstance(cfg_vars[k], str) and "-O3" in cfg_vars[k]:
-             cfg_vars[k] = cfg_vars[k].replace("-O3", "-O1 -g")
+     # Explicitly opt-out of ARC
+     "-fno-objc-arc",
+@@ -90,8 +89,6 @@ CFLAGS = [
+     "-I/usr/include/ffi",
+     "-fvisibility=hidden",
+     # "-O0",
+-    "-g",
+-    "-O3",
+     "-flto=thin",
+ ]
  
--else:
-+elif False:
-     # Enable -O4, which enables link-time optimization with
-     # clang. This appears to have a positive effect on performance.
-     cfg_vars = get_config_vars()
-@@ -247,8 +246,6 @@ class oc_test(test.test):
+@@ -105,13 +102,10 @@ OBJC_LDFLAGS = [
+     "-framework",
+     "Foundation",
+     # "-fvisibility=protected",
+-    "-g",
+     "-lffi",
+     # "-fsanitize=address", "-fsanitize=undefined", "-fno-sanitize=vptr",
+     "-fvisibility=hidden",
+     # "-O0",
+-    "-g",
+-    "-O3",
+     "-flto=thin",
+ ]
+ 
+@@ -249,8 +243,6 @@ class oc_test(test.test):
          self.__old_path = sys.path[:]
          self.__old_modules = sys.modules.copy()
  

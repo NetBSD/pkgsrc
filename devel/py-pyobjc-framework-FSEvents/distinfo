@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 10:18:52 nia Exp $
+$NetBSD: distinfo,v 1.14 2022/09/27 18:12:53 adam Exp $
 
-BLAKE2s (pyobjc-framework-FSEvents-6.2.2.tar.gz) = f46036a5017bb12e43dcb9c6726d95292168a07074436ed41172e12cc08fcdcb
-SHA512 (pyobjc-framework-FSEvents-6.2.2.tar.gz) = 8d08000f3c9c27a8165f9c08c08c1c3eaa971c1734a1087b58be08c8933324d5f417f764371c5c97034ab14be1d81ef2485c61c1a6ad51e318287ebcd10a9062
-Size (pyobjc-framework-FSEvents-6.2.2.tar.gz) = 23398 bytes
+BLAKE2s (pyobjc-framework-FSEvents-8.5.1.tar.gz) = d34609ac99f8373d77d66f451e137e385781702aa84bb506d2fa22f938e16327
+SHA512 (pyobjc-framework-FSEvents-8.5.1.tar.gz) = 05f2a05d1367820dd3fd68e1e0c5acf8c662d7e677634c62eb14fe7c3c47620e1f54935d54c78b5c65d24795200df38cad445d87ddaa8fa02d5c67b73a5dbea0
+Size (pyobjc-framework-FSEvents-8.5.1.tar.gz) = 27069 bytes

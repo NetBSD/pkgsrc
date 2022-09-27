@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.2 2022/01/04 20:53:29 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/09/27 18:12:54 adam Exp $
 
-PKGREVISION= 1
 .include "../../devel/py-pyobjc/Makefile.common"
 
 DISTNAME=	pyobjc-framework-Intents-${PYOBJC_VERS}
@@ -8,7 +7,9 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyobjc-framework-Intents/}
 
-COMMENT=	Bridge between Python and Objective-C (Intents framework)
+COMMENT=	Wrappers for the framework Intents on macOS
+
+NOT_FOR_PLATFORM=	Darwin-1[0-5].*-* Darwin-[0-9].*-* # 10.12+
 
 USE_LANGUAGES=	c objc
 

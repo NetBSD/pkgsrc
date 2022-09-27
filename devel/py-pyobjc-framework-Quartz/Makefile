@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.4 2022/01/04 20:53:31 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/09/27 18:12:59 adam Exp $
 
-PKGREVISION= 1
 .include "../../devel/py-pyobjc/Makefile.common"
 
 DISTNAME=	pyobjc-framework-Quartz-${PYOBJC_VERS}
@@ -8,7 +7,7 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyobjc-framework-Quartz/}
 
-COMMENT=	Bridge between Python and Objective-C (Quartz framework)
+COMMENT=	Wrappers for the framework Quartz on macOS
 
 USE_LANGUAGES=	c objc
 

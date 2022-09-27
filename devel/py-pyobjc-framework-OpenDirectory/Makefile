@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.4 2022/01/04 20:53:30 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/09/27 18:12:58 adam Exp $
 
-PKGREVISION= 1
 .include "../../devel/py-pyobjc/Makefile.common"
 
 DISTNAME=	pyobjc-framework-OpenDirectory-${PYOBJC_VERS}
@@ -8,7 +7,9 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyobjc-framework-OpenDirectory/}
 
-COMMENT=	Bridge between Python and Objective-C (OpenDirectory framework)
+COMMENT=	Wrappers for the framework OpenDirectory on macOS
+
+NOT_FOR_PLATFORM=	Darwin-[0-9].*-* # 10.6+
 
 USE_LANGUAGES=	c objc
 

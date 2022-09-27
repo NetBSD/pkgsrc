@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/09/27 18:12:50 adam Exp $
+
+BLAKE2s (pyobjc-framework-CoreMediaIO-8.5.1.tar.gz) = b6935b4e821bc08b7322a65c913718a32634866e44099e4f7773aca696b78516
+SHA512 (pyobjc-framework-CoreMediaIO-8.5.1.tar.gz) = d3b00235f7df2cb4d0ed67e20d4eb1cddd763aa20e4982c0c39bdd42ece6ee66dbc5cfde9b7ce690f909f668240dcde949108e87b050a4571b275c53350c374e
+Size (pyobjc-framework-CoreMediaIO-8.5.1.tar.gz) = 81662 bytes

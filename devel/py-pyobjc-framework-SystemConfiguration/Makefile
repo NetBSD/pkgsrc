@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.4 2022/01/04 20:53:33 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/09/27 18:13:02 adam Exp $
 
-PKGREVISION= 1
 .include "../../devel/py-pyobjc/Makefile.common"
 
 DISTNAME=	pyobjc-framework-SystemConfiguration-${PYOBJC_VERS}
@@ -8,7 +7,7 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyobjc-framework-SystemConfiguration/}
 
-COMMENT=	Bridge between Python and Objective-C (SystemConfiguration framework)
+COMMENT=	Wrappers for the framework SystemConfiguration on macOS
 
 USE_LANGUAGES=	c objc
 

@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2022/09/27 18:12:56 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/MetalPerformanceShadersGraph/__init__.py
+${PYSITELIB}/MetalPerformanceShadersGraph/__init__.pyc
+${PYSITELIB}/MetalPerformanceShadersGraph/__init__.pyo
+${PYSITELIB}/MetalPerformanceShadersGraph/_metadata.py
+${PYSITELIB}/MetalPerformanceShadersGraph/_metadata.pyc
+${PYSITELIB}/MetalPerformanceShadersGraph/_metadata.pyo

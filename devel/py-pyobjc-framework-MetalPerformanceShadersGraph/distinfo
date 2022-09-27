@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/09/27 18:12:56 adam Exp $
+
+BLAKE2s (pyobjc-framework-MetalPerformanceShadersGraph-8.5.1.tar.gz) = e896e6579dcf828fb3e91e6a67bee79966f0d7dc99da2f40a772f3ae5fc3395f
+SHA512 (pyobjc-framework-MetalPerformanceShadersGraph-8.5.1.tar.gz) = 4c080e035d9a950a4f12716eb7aea4773461834c833e59926c85e5383b92297bed936916a172d8bf2fd4467e304452d4a3f59d22d3243a1d3b00957cb9503238
+Size (pyobjc-framework-MetalPerformanceShadersGraph-8.5.1.tar.gz) = 48415 bytes

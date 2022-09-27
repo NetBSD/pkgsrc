@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/09/27 18:12:58 adam Exp $
+
+BLAKE2s (pyobjc-framework-PassKit-8.5.1.tar.gz) = e5083b97bf6b8b0aa6e216243b37b16d7b778e5d433b01c8592435fb832cc0c2
+SHA512 (pyobjc-framework-PassKit-8.5.1.tar.gz) = 2ea8884f6a40084f99228efcc30b2367df27fc5fc1e1d83fe619598e26b0124afb715378859f59e19f7445f9c6f2759e7006340a522ba25aad5642f833090a13
+Size (pyobjc-framework-PassKit-8.5.1.tar.gz) = 65120 bytes

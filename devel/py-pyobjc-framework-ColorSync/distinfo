@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 10:18:50 nia Exp $
+$NetBSD: distinfo,v 1.12 2022/09/27 18:12:49 adam Exp $
 
-BLAKE2s (pyobjc-framework-ColorSync-6.2.2.tar.gz) = 918f6088b1c290ecbc3fb496d8f250d662efc79a82f6794212a4a3e7dae9d117
-SHA512 (pyobjc-framework-ColorSync-6.2.2.tar.gz) = 5e4fe28e20e550f8f4e3114c50e161e20bad8a4a865362ddae9ae1243c59ac26e7475e931d3c6e7648205dff6407152b9396eea0913fa7b12b12b21ffd33434a
-Size (pyobjc-framework-ColorSync-6.2.2.tar.gz) = 16221 bytes
+BLAKE2s (pyobjc-framework-ColorSync-8.5.1.tar.gz) = 062ab718a75d8ff537e115e16d7eab5d0b86710b6a2a92c5e87b1354ce8697b4
+SHA512 (pyobjc-framework-ColorSync-8.5.1.tar.gz) = 8c6d825f18091dbf549006cdf83325c0a9aa58f768e7948a6994bcdaab7ee76e3959bf30efe20983851fefefa7df44e73b599ba367f3b855272d82b1c2cfe244
+Size (pyobjc-framework-ColorSync-8.5.1.tar.gz) = 21839 bytes

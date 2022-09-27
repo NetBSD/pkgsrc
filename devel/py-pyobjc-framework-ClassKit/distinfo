@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/09/27 18:12:48 adam Exp $
+
+BLAKE2s (pyobjc-framework-ClassKit-8.5.1.tar.gz) = e31f0c17380fb808f92a670b3669280ca3ad7c797f3bc605b2c8d5841d06294d
+SHA512 (pyobjc-framework-ClassKit-8.5.1.tar.gz) = 2634e0fc0412fdbca6d47059e416ef98d267c3ba77af7587bd03c75384c01bb6b2ba24a342b569d73ed0efa650cfebd594c84da7f6578db86881564ff50a6807
+Size (pyobjc-framework-ClassKit-8.5.1.tar.gz) = 32300 bytes

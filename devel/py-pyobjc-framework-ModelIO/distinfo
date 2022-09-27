@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 10:18:55 nia Exp $
+$NetBSD: distinfo,v 1.12 2022/09/27 18:12:57 adam Exp $
 
-BLAKE2s (pyobjc-framework-ModelIO-6.2.2.tar.gz) = 188ff2b80717eee253f7c29dc962e39e084d1a293c12ef85fb839b33e124b7fd
-SHA512 (pyobjc-framework-ModelIO-6.2.2.tar.gz) = a0b4f19d118f57a773851eb2f932c3b285158de9f7665746cd6ed59f6582c4f7ac83e0a8bed11ad8a2a1209880d6a4c68cebead8e86f56f90f03b138b41e5f56
-Size (pyobjc-framework-ModelIO-6.2.2.tar.gz) = 39853 bytes
+BLAKE2s (pyobjc-framework-ModelIO-8.5.1.tar.gz) = 01c38cd095e29d4be4bfd48fb7304626259f201e644827f110c73caa068a771e
+SHA512 (pyobjc-framework-ModelIO-8.5.1.tar.gz) = 53416f465934932fc42d8433a26b2ac626c3c235ed9c3ac5babf35407981e1361e8644705fe95cb7ebad90e05eefdbf2564dc1deaf95ddc84f3e97352e6e4027
+Size (pyobjc-framework-ModelIO-8.5.1.tar.gz) = 114278 bytes
