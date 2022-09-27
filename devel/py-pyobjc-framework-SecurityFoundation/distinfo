@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/09/27 18:13:00 adam Exp $
+
+BLAKE2s (pyobjc-framework-SecurityFoundation-8.5.1.tar.gz) = 70096b86d1f97d6e6e192128abd5e7e266a887a1f89abd134c01b923ad3876d8
+SHA512 (pyobjc-framework-SecurityFoundation-8.5.1.tar.gz) = 12b2881fb08a7cc251535c340353d7833af922034acdbb8f8a1ea42a590c57b20f0bbbb596a0e9a119a7ff3d17046a76b30a37bba92316d56faf4d820785c14b
+Size (pyobjc-framework-SecurityFoundation-8.5.1.tar.gz) = 11954 bytes

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/09/27 18:12:50 adam Exp $
+
+BLAKE2s (pyobjc-framework-CoreMotion-8.5.1.tar.gz) = 079db28b4b252027d1474b7c8c612cd04d671feabbf9561d7582089c616f7a6a
+SHA512 (pyobjc-framework-CoreMotion-8.5.1.tar.gz) = 44f8d1111d210e6b6e9dbf077a931ecf90a26aeeb532faac5e8a6ec8e66e48e9318aee9f9b61828964c9f3e2c61c36ae2299220cc7e1aea33c5e0b8230c8b66b
+Size (pyobjc-framework-CoreMotion-8.5.1.tar.gz) = 35078 bytes

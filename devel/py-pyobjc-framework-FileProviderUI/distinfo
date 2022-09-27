@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/09/27 18:12:53 adam Exp $
+
+BLAKE2s (pyobjc-framework-FileProviderUI-8.5.1.tar.gz) = bfbac686abcca9433c0b301010ce91bc18f97237a858d9934bb58805577e5ff3
+SHA512 (pyobjc-framework-FileProviderUI-8.5.1.tar.gz) = f127e51d0cc047bc02ac08e4bceef7568a07445880116e80fca155495b6282f70230cd7f0e10e3ee1a4607f2825c7538734d15b0e09a780fcb5abb55a6b0a623
+Size (pyobjc-framework-FileProviderUI-8.5.1.tar.gz) = 11951 bytes

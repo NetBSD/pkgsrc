@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 10:18:51 nia Exp $
+$NetBSD: distinfo,v 1.12 2022/09/27 18:12:51 adam Exp $
 
-BLAKE2s (pyobjc-framework-CoreSpotlight-6.2.2.tar.gz) = 30b214dc691e934af0470c8d67135f1ce48a04fd0c9553935566b1d0310e596a
-SHA512 (pyobjc-framework-CoreSpotlight-6.2.2.tar.gz) = 1d0717d4cbd2a140ad3aea33e2598cf05de5a2d0bafd31cc748003d33f8fc6ccaf8162450bb16178673290afe33e71933d69ad1e164cb4a935dbf029af453285
-Size (pyobjc-framework-CoreSpotlight-6.2.2.tar.gz) = 17755 bytes
+BLAKE2s (pyobjc-framework-CoreSpotlight-8.5.1.tar.gz) = 4992c492ebe750de236c782458cd23c668d56f4ea0a9b6610ba632ea0d0a39ce
+SHA512 (pyobjc-framework-CoreSpotlight-8.5.1.tar.gz) = eedcee9bbf012314a181fe14e70e9d7f502753c02e438d72681d0f58933a265e6caed725095bb06b61c58be72dbd713c2a480d8a82adb5591063ad16fe17480d
+Size (pyobjc-framework-CoreSpotlight-8.5.1.tar.gz) = 52731 bytes
