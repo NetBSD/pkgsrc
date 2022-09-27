@@ -1,4 +1,4 @@
-$NetBSD: patch-src_utils.c,v 1.1 2021/05/04 08:19:42 fcambus Exp $
+$NetBSD: patch-src_utils.c,v 1.2 2022/09/27 20:32:56 fcambus Exp $
 
 - Do not use err_exit() to generate error messages when locale initialization
   fails as in this case curs_set() is called before initscr(), which causes
@@ -7,9 +7,9 @@ $NetBSD: patch-src_utils.c,v 1.1 2021/05/04 08:19:42 fcambus Exp $
 - Avoid using strfmon(3) on NetBSD, there are formatting issues when LANG is
   set to anything else than C.
 
---- src/utils.c.orig	2021-01-19 05:42:38.000000000 +0000
+--- src/utils.c.orig	2022-08-03 10:12:04.000000000 +0000
 +++ src/utils.c
-@@ -591,8 +591,9 @@ extern void init_locale (void)
+@@ -698,8 +698,9 @@ extern void init_locale (void)
  
      // Initialise the current locale
      if (setlocale(LC_ALL, "") == NULL) {
@@ -21,7 +21,7 @@ $NetBSD: patch-src_utils.c,v 1.1 2021/05/04 08:19:42 fcambus Exp $
      }
  
      // Use correct message catalogs for the locale
-@@ -682,7 +683,11 @@ ssize_t xwcsfmon (wchar_t *restrict buf,
+@@ -789,7 +790,11 @@ ssize_t xwcsfmon (wchar_t *restrict buf,
         produce "12345" instead of something like "-$123.45"!  The
         following code overcomes these limitations by using snprintf(). */
  
