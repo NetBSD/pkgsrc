@@ -1,4 +1,4 @@
-# $NetBSD: Linux.mk,v 1.90 2022/05/01 08:10:11 nia Exp $
+# $NetBSD: Linux.mk,v 1.91 2022/09/27 08:46:33 jperkin Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -133,6 +133,7 @@ _STRIPFLAG_CC?=		${_INSTALL_UNSTRIPPED:D:U-s}	# cc(1) option to strip
 _STRIPFLAG_INSTALL?=	${_INSTALL_UNSTRIPPED:D:U-s}	# install(1) option to strip
 
 _OPSYS_SUPPORTS_CWRAPPERS=	yes
+_OPSYS_SUPPORTS_MKTOOLS=	yes
 
 _OPSYS_CAN_CHECK_SHLIBS=	yes # use readelf in check/bsd.check-vars.mk
 _OPSYS_CAN_CHECK_SSP=		no  # only supports libssp at this time

@@ -1,4 +1,4 @@
-# $NetBSD: NetBSD.mk,v 1.72 2022/05/21 07:37:39 nia Exp $
+# $NetBSD: NetBSD.mk,v 1.73 2022/09/27 08:46:33 jperkin Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -198,6 +198,7 @@ PKG_DBDIR_ERROR=	Compatibility pkgdb location exists, but PKG_DBDIR not specifie
 .endif
 
 _OPSYS_SUPPORTS_CWRAPPERS=	yes
+_OPSYS_SUPPORTS_MKTOOLS=	yes
 
 # use readelf in check/bsd.check-vars.mk
 _OPSYS_CAN_CHECK_RELRO=		yes
