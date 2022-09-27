@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.117 2022/09/13 05:37:50 tnn Exp $
+# $NetBSD: Darwin.mk,v 1.118 2022/09/27 08:46:33 jperkin Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -227,6 +227,7 @@ BUILDLINK_TRANSFORM+=	rm:-Wl,--gc-sections
 BUILDLINK_TRANSFORM+=	rm:-Wl,--no-undefined
 
 _OPSYS_SUPPORTS_CWRAPPERS=	yes
+_OPSYS_SUPPORTS_MKTOOLS=	yes
 
 _OPSYS_CAN_CHECK_SHLIBS=	yes # check shared libraries using otool(1)
 

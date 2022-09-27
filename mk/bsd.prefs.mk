@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.426 2022/08/06 07:38:44 nia Exp $
+# $NetBSD: bsd.prefs.mk,v 1.427 2022/09/27 08:46:32 jperkin Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -880,7 +880,9 @@ _USE_CWRAPPERS=		no
 
 # Use C-based tools to speed up pkgsrc infrastructure tasks.
 .if empty(PKGPATH:Mpkgtools/mktools) && \
-    ${PKGSRC_USE_MKTOOLS:tl} == "yes"
+    (${PKGSRC_USE_MKTOOLS:tl} == "yes" || \
+    (${PKGSRC_USE_MKTOOLS:tl} == "auto" && \
+     ${_OPSYS_SUPPORTS_MKTOOLS:Uno} == "yes"))
 _PKGSRC_USE_MKTOOLS=	yes
 .else
 _PKGSRC_USE_MKTOOLS=	no
