@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4711 2022/09/27 07:49:48 pin Exp $
+$NetBSD: CHANGES-2022,v 1.4712 2022/09/27 07:59:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6923,3 +6923,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated games/termatrix to 2.2.0 [pin 2022-09-27]
 	Updated x11/kitty to 0.26.3 [pin 2022-09-27]
 	Added misc/aschord version 0.3.3 [pin 2022-09-27]
+	Updated sysutils/ansible-lint to 6.7.0 [adam 2022-09-27]
+	Updated lang/nodejs14 to 14.20.1 [adam 2022-09-27]
+	Updated lang/nodejs16 to 16.17.1 [adam 2022-09-27]
+	Updated lang/nodejs to 18.9.1 [adam 2022-09-27]
