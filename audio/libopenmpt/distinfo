@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.48 2022/06/15 10:06:50 fcambus Exp $
+$NetBSD: distinfo,v 1.49 2022/09/27 20:37:17 fcambus Exp $
 
-BLAKE2s (libopenmpt-0.6.4+release.autotools.tar.gz) = 610eb1e6d803f4cabc81d14dea9684bdc372f086b4c1579770201cc1408bd3c9
-SHA512 (libopenmpt-0.6.4+release.autotools.tar.gz) = 7306ddbe030b8e82ad24fc85083d13d7ca680870f4dbe7215399719cd63ee9ed9e5c4c6229e9f17fb5a2005e86b21ceed0dab158d3f0b73c606579654434421f
-Size (libopenmpt-0.6.4+release.autotools.tar.gz) = 1547663 bytes
+BLAKE2s (libopenmpt-0.6.6+release.autotools.tar.gz) = 4626c7eb89db3f5e30a1141047ebbf5b67732078aebe10e9b554019db231f1e4
+SHA512 (libopenmpt-0.6.6+release.autotools.tar.gz) = b634c556f13dc51d1008f4216936a9b7cab25a6fb0d5218da0b692ec848de21905ed1981223ac9ecdebea9ce6c5376e91ff92e1655dd0be491fce0114e3230bf
+Size (libopenmpt-0.6.6+release.autotools.tar.gz) = 1554516 bytes
