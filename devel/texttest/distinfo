@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2022/06/08 21:03:45 schmonz Exp $
+$NetBSD: distinfo,v 1.10 2022/09/28 18:10:41 schmonz Exp $
 
-BLAKE2s (texttest-4.1.2.tar.gz) = 64550b4eab47374a29ac93e7cb2a178c0942599ed279a2dcd92340dd7b722ebe
-SHA512 (texttest-4.1.2.tar.gz) = b4a0a1b8b3fa4ac5d00864be38eb85c68acfa4ac16b18da00b64f86c2125d00837a8b4895b451376eb822e2b61fa03e9aea58951d36437ebe4df2e68a297b912
-Size (texttest-4.1.2.tar.gz) = 609158 bytes
+BLAKE2s (texttest-4.2.1.tar.gz) = fa59dfe42925581cdec1a439641384578daa8408c7feeb6577e5aeb196e13cf3
+SHA512 (texttest-4.2.1.tar.gz) = e618ba1aca2a917647e2eac7eae0ef69e2b9b18e50b2f96dd70a9d3f8c4d36c25cdac50a1d2d3ae5c6addabfe1a2cbdba126ac33cc0aa4850f68eb9214591556
+Size (texttest-4.2.1.tar.gz) = 612497 bytes
 SHA1 (patch-texttestlib_default_____init____.py) = 87fae6e9c04d2340510c4286b8ae5351ebc38fd5
