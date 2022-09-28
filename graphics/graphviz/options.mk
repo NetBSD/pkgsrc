@@ -1,11 +1,14 @@
-# $NetBSD: options.mk,v 1.34 2022/07/22 12:04:46 micha Exp $
+# $NetBSD: options.mk,v 1.35 2022/09/28 19:58:26 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.graphviz
 PKG_SUPPORTED_OPTIONS=	gd ghostscript gtk lua perl poppler svg tcl x11
 .if exists(/System/Library/Frameworks/Quartz.framework)
 PKG_SUPPORTED_OPTIONS+=	quartz
+PKG_SUGGESTED_OPTIONS+=	quartz
+.else
+PKG_SUGGESTED_OPTIONS+=	x11
 .endif
-PKG_SUGGESTED_OPTIONS=	gd x11
+PKG_SUGGESTED_OPTIONS=	gd
 # Explanation of consequence of options, to help those trying to slim down:
 #   lua tcl perl: extension language support
 #   x11: Omits all linking with x11, which means x11 graphics supports as
