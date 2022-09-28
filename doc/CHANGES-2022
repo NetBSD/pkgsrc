@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4729 2022/09/28 22:03:26 gutteridge Exp $
+$NetBSD: CHANGES-2022,v 1.4730 2022/09/28 23:54:50 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6947,3 +6947,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/py-kb to 0.1.7 [leot 2022-09-28]
 	Updated print/mupdf to 1.20.3 [leot 2022-09-28]
 	Updated x11/xfce4-dashboard to 1.0.0 [gutteridge 2022-09-28]
+	Updated time/xfce4-datetime-plugin to 0.8.2 [gutteridge 2022-09-28]
