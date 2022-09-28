@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2022/09/20 13:55:13 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.25 2022/09/28 18:02:26 schmonz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -203,6 +203,9 @@ ${PYSITELIB}/approvaltests/utilities/logger/logging_instance.pyo
 ${PYSITELIB}/approvaltests/utilities/logger/simple_logger.py
 ${PYSITELIB}/approvaltests/utilities/logger/simple_logger.pyc
 ${PYSITELIB}/approvaltests/utilities/logger/simple_logger.pyo
+${PYSITELIB}/approvaltests/utilities/logger/simple_logger_approvals.py
+${PYSITELIB}/approvaltests/utilities/logger/simple_logger_approvals.pyc
+${PYSITELIB}/approvaltests/utilities/logger/simple_logger_approvals.pyo
 ${PYSITELIB}/approvaltests/utilities/map_reduce.py
 ${PYSITELIB}/approvaltests/utilities/map_reduce.pyc
 ${PYSITELIB}/approvaltests/utilities/map_reduce.pyo
@@ -218,6 +221,9 @@ ${PYSITELIB}/approvaltests/utilities/os_utilities.pyo
 ${PYSITELIB}/approvaltests/utilities/string_wrapper.py
 ${PYSITELIB}/approvaltests/utilities/string_wrapper.pyc
 ${PYSITELIB}/approvaltests/utilities/string_wrapper.pyo
+${PYSITELIB}/approvaltests/utilities/time_utilities.py
+${PYSITELIB}/approvaltests/utilities/time_utilities.pyc
+${PYSITELIB}/approvaltests/utilities/time_utilities.pyo
 ${PYSITELIB}/approvaltests/utils.py
 ${PYSITELIB}/approvaltests/utils.pyc
 ${PYSITELIB}/approvaltests/utils.pyo
