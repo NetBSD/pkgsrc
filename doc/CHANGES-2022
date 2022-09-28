@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4726 2022/09/28 18:10:47 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.4727 2022/09/28 18:58:06 leot Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6944,3 +6944,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/py-tomlkit to 0.11.5 [adam 2022-09-28]
 	Updated devel/py-approvaltests to 6.1.0 [schmonz 2022-09-28]
 	Updated devel/texttest to 4.2.1 [schmonz 2022-09-28]
+	Updated databases/py-kb to 0.1.7 [leot 2022-09-28]
