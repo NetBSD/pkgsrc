@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.4 2022/09/28 10:02:26 markd Exp $
+# $NetBSD: build.mk,v 1.5 2022/09/28 10:05:35 markd Exp $
 #
 # This Makefile fragment supports building using the CMake build tool.
 #
@@ -57,7 +57,7 @@ _CMAKE_BUILD_SYSTEM?=	Ninja
 _CMAKE_BUILD_TOOL?=	ninja
 .else
 _CMAKE_BUILD_SYSTEM?=	Unix Makefiles
-_CMAKE_BUILD_TOOL?=	${MAKE}
+_CMAKE_BUILD_TOOL?=	${MAKE_PROGRAM}
 .endif
 
 CONFIGURE_DIRS?=	.
