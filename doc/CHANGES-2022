@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4720 2022/09/27 21:04:13 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4721 2022/09/28 06:55:51 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6937,3 +6937,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated games/trader to 7.18 [fcambus 2022-09-27]
 	Updated audio/libopenmpt to 0.6.6 [fcambus 2022-09-27]
 	Updated security/p5-Authen-SASL to 2.16nb11 [wiz 2022-09-27]
+	Updated shells/nushell to 0.69.1 [pin 2022-09-28]
