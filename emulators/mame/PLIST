@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.69 2022/09/09 18:28:26 wiz Exp $
+@comment $NetBSD: PLIST,v 1.70 2022/09/28 11:11:28 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -216,6 +216,7 @@ share/mame/hash/database.xml
 share/mame/hash/dc.xml
 share/mame/hash/dgnalpha_flop.xml
 share/mame/hash/dgnbeta_flop.xml
+share/mame/hash/digiblast_cart.xml
 share/mame/hash/digilog320.xml
 share/mame/hash/dim68k.xml
 share/mame/hash/dmv.xml
