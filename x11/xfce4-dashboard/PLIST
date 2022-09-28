@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2021/12/18 20:36:09 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/09/28 22:03:08 gutteridge Exp $
 bin/xfdashboard
 bin/xfdashboard-settings
 include/xfdashboard/libxfdashboard/action-button.h
@@ -89,10 +89,12 @@ include/xfdashboard/libxfdashboard/windows-view.h
 include/xfdashboard/libxfdashboard/workspace-selector.h
 lib/libxfdashboard.la
 lib/pkgconfig/libxfdashboard.pc
+lib/xfdashboard/plugins/autopin-windows.la
 lib/xfdashboard/plugins/clock-view.la
 lib/xfdashboard/plugins/gnome-shell-search-provider.la
 lib/xfdashboard/plugins/hot-corner.la
 lib/xfdashboard/plugins/middle-click-window-close.la
+lib/xfdashboard/plugins/recently-used-search-provider.la
 share/applications/org.xfce.xfdashboard-settings.desktop
 share/applications/org.xfce.xfdashboard.desktop
 share/examples/xfce4/autostart/org.xfce.xfdashboard-autostart.desktop
