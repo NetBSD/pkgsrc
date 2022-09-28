@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2022/01/05 15:40:59 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/09/28 18:58:01 leot Exp $
 
-DISTNAME=	kb-manager-0.1.6
+DISTNAME=	kb-manager-0.1.7
 EGGNAME=	${DISTNAME:S/-manager//}
 PKGNAME=	${PYPKGPREFIX}-${EGGNAME}
-PKGREVISION=	2
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=k/kb-manager/}
 

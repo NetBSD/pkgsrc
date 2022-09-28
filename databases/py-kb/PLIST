@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2021/05/29 10:22:25 leot Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/09/28 18:58:01 leot Exp $
 bin/kb
-${PYSITELIB}/kb/.coverage
 ${PYSITELIB}/kb/__init__.py
 ${PYSITELIB}/kb/__init__.pyc
 ${PYSITELIB}/kb/__init__.pyo
