@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3802 2022/09/27 18:12:46 adam Exp $
+# $NetBSD: Makefile,v 1.3803 2022/09/28 11:05:56 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2651,6 +2651,7 @@ SUBDIR+=	py-progressbar2
 SUBDIR+=	py-prompt_toolkit
 SUBDIR+=	py-prompt_toolkit1
 SUBDIR+=	py-proteus
+SUBDIR+=	py-proto-plus
 SUBDIR+=	py-protobuf
 SUBDIR+=	py-py
 SUBDIR+=	py-py2app
@@ -2757,6 +2758,7 @@ SUBDIR+=	py-pyobjc-framework-ModelIO
 SUBDIR+=	py-pyobjc-framework-MultipeerConnectivity
 SUBDIR+=	py-pyobjc-framework-NaturalLanguage
 SUBDIR+=	py-pyobjc-framework-NetFS
+SUBDIR+=	py-pyobjc-framework-Network
 SUBDIR+=	py-pyobjc-framework-NetworkExtension
 SUBDIR+=	py-pyobjc-framework-NotificationCenter
 SUBDIR+=	py-pyobjc-framework-OSAKit
