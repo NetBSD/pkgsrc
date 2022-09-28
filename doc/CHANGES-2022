@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4722 2022/09/28 11:06:08 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4723 2022/09/28 11:11:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6939,3 +6939,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/p5-Authen-SASL to 2.16nb11 [wiz 2022-09-27]
 	Updated shells/nushell to 0.69.1 [pin 2022-09-28]
 	Added devel/py-proto-plus version 1.22.1 [wiz 2022-09-28]
+	Updated emulators/mame to 0.248 [wiz 2022-09-28]
