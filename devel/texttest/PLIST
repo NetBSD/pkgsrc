@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2022/04/19 16:50:15 schmonz Exp $
-bin/filter_fpdiff.py
-bin/filter_rundependent.py
+@comment $NetBSD: PLIST,v 1.7 2022/09/28 18:10:41 schmonz Exp $
 bin/interpretcore
 bin/texttest
 ${PYSITELIB}/TextTest-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/PKG-INFO
@@ -65,6 +63,9 @@ ${PYSITELIB}/texttestlib/default/comparetest.pyo
 ${PYSITELIB}/texttestlib/default/console.py
 ${PYSITELIB}/texttestlib/default/console.pyc
 ${PYSITELIB}/texttestlib/default/console.pyo
+${PYSITELIB}/texttestlib/default/database_data.py
+${PYSITELIB}/texttestlib/default/database_data.pyc
+${PYSITELIB}/texttestlib/default/database_data.pyo
 ${PYSITELIB}/texttestlib/default/fpdiff.py
 ${PYSITELIB}/texttestlib/default/fpdiff.pyc
 ${PYSITELIB}/texttestlib/default/fpdiff.pyo
@@ -155,6 +156,9 @@ ${PYSITELIB}/texttestlib/default/gtkgui/version_control/vcs_independent.pyo
 ${PYSITELIB}/texttestlib/default/knownbugs/__init__.py
 ${PYSITELIB}/texttestlib/default/knownbugs/__init__.pyc
 ${PYSITELIB}/texttestlib/default/knownbugs/__init__.pyo
+${PYSITELIB}/texttestlib/default/knownbugs/azdevops.py
+${PYSITELIB}/texttestlib/default/knownbugs/azdevops.pyc
+${PYSITELIB}/texttestlib/default/knownbugs/azdevops.pyo
 ${PYSITELIB}/texttestlib/default/knownbugs/bugzilla.py
 ${PYSITELIB}/texttestlib/default/knownbugs/bugzilla.pyc
 ${PYSITELIB}/texttestlib/default/knownbugs/bugzilla.pyo
