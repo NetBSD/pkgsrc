@@ -1,4 +1,4 @@
-# $NetBSD: emulator.mk,v 1.11 2020/10/08 10:42:49 nia Exp $
+# $NetBSD: emulator.mk,v 1.12 2022/09/28 14:09:38 wiz Exp $
 #
 # This file is included by linux-suse.mk in the emulator framework.
 #
@@ -40,6 +40,7 @@ DEPENDS_suse-13.1.gc?=		suse_libgc${_SUSE_VERSION_REQD}:../../emulators/suse131_
 DEPENDS_suse-13.1.glx?=		suse_glx${_SUSE_VERSION_REQD}:../../emulators/suse131_glx
 DEPENDS_suse-13.1.gstreamer?=	suse_gstreamer${_SUSE_VERSION_REQD}:../../emulators/suse131_gstreamer
 DEPENDS_suse-13.1.gtk2?=	suse_gtk2${_SUSE_VERSION_REQD}:../../emulators/suse131_gtk2
+DEPENDS_suse-13.1.gtk3?=	suse_gtk3${_SUSE_VERSION_REQD}:../../emulators/suse131_gtk3
 DEPENDS_suse-13.1.jpeg?=	suse_libjpeg${_SUSE_VERSION_REQD}:../../emulators/suse131_libjpeg
 DEPENDS_suse-13.1.krb5?=	suse_krb5${_SUSE_VERSION_REQD}:../../emulators/suse131_krb5
 DEPENDS_suse-13.1.libSDL?=	suse_libSDL${_SUSE_VERSION_REQD}:../../emulators/suse131_libSDL
