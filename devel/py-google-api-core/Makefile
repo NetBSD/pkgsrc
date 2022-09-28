@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2022/09/15 22:24:23 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2022/09/28 11:06:45 wiz Exp $
 
 DISTNAME=	google-api-core-2.10.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -20,19 +20,15 @@ DEPENDS+=	${PYPKGPREFIX}-grpcio>=1.33.2:../../net/py-grpcio
 #DEPENDS+=	${PYPKGPREFIX}-grpcio-gcp>=0.2.2:../../net/py-grpcio-gcp
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-proto-plus-[0-9]*:../../devel/py-proto-plus
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=	# none
 
-# uses 'proto' module which is not provided
-# https://github.com/googleapis/python-api-core/issues/448
-pre-test:
-	${RM} -f ${WRKSRC}/tests/unit/test_rest_streaming.py
-
 # needs to be installed for testing
 # as of 2.10.1:
-# 7 failed, 559 passed, 71 skipped, 138 warnings
+# 5 failed, 572 passed, 71 skipped, 138 warnings
 TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
