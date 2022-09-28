@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.11 2022/09/06 20:46:24 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.12 2022/09/28 06:55:19 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	Inflector-0.11.4
 CARGO_CRATE_DEPENDS+=	addr2line-0.17.0
@@ -76,7 +76,7 @@ CARGO_CRATE_DEPENDS+=	convert_case-0.4.0
 CARGO_CRATE_DEPENDS+=	core-foundation-0.9.3
 CARGO_CRATE_DEPENDS+=	core-foundation-sys-0.8.3
 CARGO_CRATE_DEPENDS+=	cortex-m-0.7.5
-CARGO_CRATE_DEPENDS+=	cpufeatures-0.2.2
+CARGO_CRATE_DEPENDS+=	cpufeatures-0.2.5
 CARGO_CRATE_DEPENDS+=	crc32fast-1.3.2
 CARGO_CRATE_DEPENDS+=	criterion-0.3.6
 CARGO_CRATE_DEPENDS+=	criterion-plot-0.4.5
@@ -379,7 +379,7 @@ CARGO_CRATE_DEPENDS+=	rayon-core-1.9.3
 CARGO_CRATE_DEPENDS+=	rdrand-0.4.0
 CARGO_CRATE_DEPENDS+=	redox_syscall-0.2.15
 CARGO_CRATE_DEPENDS+=	redox_users-0.4.3
-CARGO_CRATE_DEPENDS+=	reedline-0.11.0
+CARGO_CRATE_DEPENDS+=	reedline-0.12.0
 CARGO_CRATE_DEPENDS+=	regex-1.6.0
 CARGO_CRATE_DEPENDS+=	regex-automata-0.1.10
 CARGO_CRATE_DEPENDS+=	regex-syntax-0.6.27
@@ -446,7 +446,7 @@ CARGO_CRATE_DEPENDS+=	smawk-0.3.1
 CARGO_CRATE_DEPENDS+=	snap-1.0.5
 CARGO_CRATE_DEPENDS+=	socket2-0.4.4
 CARGO_CRATE_DEPENDS+=	spin-0.9.4
-CARGO_CRATE_DEPENDS+=	sqlparser-0.16.0
+CARGO_CRATE_DEPENDS+=	sqlparser-0.23.0
 CARGO_CRATE_DEPENDS+=	stable_deref_trait-1.2.0
 CARGO_CRATE_DEPENDS+=	static_assertions-1.1.0
 CARGO_CRATE_DEPENDS+=	streaming-decompression-0.1.0
@@ -466,7 +466,7 @@ CARGO_CRATE_DEPENDS+=	sxd-document-0.3.2
 CARGO_CRATE_DEPENDS+=	sxd-xpath-0.4.2
 CARGO_CRATE_DEPENDS+=	syn-1.0.98
 CARGO_CRATE_DEPENDS+=	sys-locale-0.2.1
-CARGO_CRATE_DEPENDS+=	sysinfo-0.25.2
+CARGO_CRATE_DEPENDS+=	sysinfo-0.26.2
 CARGO_CRATE_DEPENDS+=	tabled-0.8.0
 CARGO_CRATE_DEPENDS+=	tabled_derive-0.4.0
 CARGO_CRATE_DEPENDS+=	tempdir-0.3.7
