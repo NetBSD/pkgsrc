@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.5 2020/01/19 11:07:56 nros Exp $
+# $NetBSD: Makefile,v 1.6 2022/09/28 19:54:56 nros Exp $
 
 libfpx_ver=	1.3.1
 DISTNAME=	libfpx-${libfpx_ver}-10
 PKGNAME=	libfpx-${libfpx_ver}
 PKGREVISION=	2
 CATEGORIES=	graphics
-MASTER_SITES=	ftp://ftp.imagemagick.org/pub/ImageMagick/delegates/
-MASTER_SITES+=	http://www.imagemagick.org/download/delegates/
+MASTER_SITES=	https://imagemagick.org/archive/delegates/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	nros@NetBSD.org
-HOMEPAGE=	http://www.imagemagick.org/
+HOMEPAGE=	https://imagemagick.org/
 COMMENT=	Library for reading and writing FlashPix images
 LICENSE=	flashpix-license
 
