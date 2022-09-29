@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.65 2022/09/27 07:59:10 adam Exp $
+@comment $NetBSD: PLIST,v 1.66 2022/09/29 19:38:07 adam Exp $
 bin/node
 include/node/common.gypi
 include/node/config.gypi
@@ -63,6 +63,8 @@ include/node/v8-wasm.h
 include/node/v8-weak-callback-info.h
 include/node/v8.h
 include/node/v8config.h
+lib/dtrace/node.d
 man/man1/node.1
 share/doc/node/gdbinit
 share/doc/node/lldb_commands.py
+share/systemtap/tapset/node.stp
