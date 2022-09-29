@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2022/04/25 06:27:25 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2022/09/29 01:09:06 markd Exp $
 include/KF5/KXmlRpcClient/KXmlRpcClient/Client
 include/KF5/KXmlRpcClient/kxmlrpcclient/client.h
 include/KF5/KXmlRpcClient/kxmlrpcclient/kxmlrpcclient_export.h
@@ -40,6 +40,7 @@ share/locale/ia/LC_MESSAGES/libkxmlrpcclient5.mo
 share/locale/id/LC_MESSAGES/libkxmlrpcclient5.mo
 share/locale/it/LC_MESSAGES/libkxmlrpcclient5.mo
 share/locale/ja/LC_MESSAGES/libkxmlrpcclient5.mo
+share/locale/ka/LC_MESSAGES/libkxmlrpcclient5.mo
 share/locale/kk/LC_MESSAGES/libkxmlrpcclient5.mo
 share/locale/km/LC_MESSAGES/libkxmlrpcclient5.mo
 share/locale/ko/LC_MESSAGES/libkxmlrpcclient5.mo
