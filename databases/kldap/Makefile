@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2022/09/11 12:51:26 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2022/09/29 00:26:00 markd Exp $
 
 DISTNAME=	kldap-${KAPPSVER}
-PKGREVISION=	9
 CATEGORIES=	databases
 
 HOMEPAGE=	https://community.kde.org/KDE_PIM
@@ -17,6 +16,7 @@ USE_TOOLS+=	msgmerge
 .include "../../databases/openldap-client/buildlink3.mk"
 .include "../../devel/kio/buildlink3.mk"
 .include "../../security/cyrus-sasl/buildlink3.mk"
+.include "../../security/qt5-qtkeychain/buildlink3.mk"
 .include "../../textproc/kcompletion/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
