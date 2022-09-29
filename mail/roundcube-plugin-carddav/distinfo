@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2022/07/11 09:59:06 triaxx Exp $
+$NetBSD: distinfo,v 1.8 2022/09/29 17:55:49 triaxx Exp $
 
-BLAKE2s (carddav-v4.4.2.tar.gz) = 9ddb742719e08d2bb4dd149867a6a1cd2f2bcc648b19b29bc6f8c3bcec44155e
-SHA512 (carddav-v4.4.2.tar.gz) = 89e79338260d86564cdf7341f94e97b7ad50f537851dbae3129993cc390a8d19d238965c94ffcefd4f78cd4de7f5d6a1398548e86204e3c0400142ba2cdfa074
-Size (carddav-v4.4.2.tar.gz) = 633317 bytes
+BLAKE2s (carddav-v4.4.3.tar.gz) = 3a208d6777664539d45665e477322efbc4cdabe9d99bac831340ef1e50d66a28
+SHA512 (carddav-v4.4.3.tar.gz) = f71dc7ac40215ec212ac802f50e0ce2039fa1f94fbefe0c07bf38bab4df946528e56a2340853b99919de8ac82d33e097e0ae0faab9ff8a3cbf389a6147914ab4
+Size (carddav-v4.4.3.tar.gz) = 645339 bytes
 SHA1 (patch-carddav.php) = ccec1326d322abad53bdc509d2819ea7156a53f9
