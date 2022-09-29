@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2022/04/25 06:11:45 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/09/29 01:03:16 markd Exp $
 include/KF5/KDAV/KDAV/DavCollection
 include/KF5/KDAV/KDAV/DavCollectionDeleteJob
 include/KF5/KDAV/KDAV/DavCollectionModifyJob
@@ -51,6 +51,7 @@ lib/libKF5DAV.so.${PKGVERSION}
 qt5/mkspecs/modules/qt_KDAV.pri
 share/locale/ar/LC_MESSAGES/libkdav.mo
 share/locale/az/LC_MESSAGES/libkdav.mo
+share/locale/bg/LC_MESSAGES/libkdav.mo
 share/locale/ca/LC_MESSAGES/libkdav.mo
 share/locale/ca@valencia/LC_MESSAGES/libkdav.mo
 share/locale/cs/LC_MESSAGES/libkdav.mo
@@ -67,6 +68,7 @@ share/locale/hi/LC_MESSAGES/libkdav.mo
 share/locale/ia/LC_MESSAGES/libkdav.mo
 share/locale/it/LC_MESSAGES/libkdav.mo
 share/locale/ja/LC_MESSAGES/libkdav.mo
+share/locale/ka/LC_MESSAGES/libkdav.mo
 share/locale/ko/LC_MESSAGES/libkdav.mo
 share/locale/lt/LC_MESSAGES/libkdav.mo
 share/locale/nb/LC_MESSAGES/libkdav.mo
