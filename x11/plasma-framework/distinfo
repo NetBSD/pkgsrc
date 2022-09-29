@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2022/04/25 09:31:13 markd Exp $
+$NetBSD: distinfo,v 1.17 2022/09/29 01:28:24 markd Exp $
 
-BLAKE2s (plasma-framework-5.93.0.tar.xz) = d34ee552eaeffbe86a7463390c8bc1104cdeaf42c4973ac8d8efb08b9f590038
-SHA512 (plasma-framework-5.93.0.tar.xz) = df876c422d2de82325537bfdce4db016dc649202f334de063403c15f44d554c4b0f6707e02c8890e269bdb71c17fdd31f651fad3ed7506f23a110d725fd8ccf8
-Size (plasma-framework-5.93.0.tar.xz) = 3148720 bytes
+BLAKE2s (plasma-framework-5.98.0.tar.xz) = 4d24e8ae4777ef09a5860c0067f2a24ea5f4544245f22bd9191eb5958bfab33f
+SHA512 (plasma-framework-5.98.0.tar.xz) = a016b5376ed620d4650c7581b282601c99aea2e6b7948d87f7a99bb747a3913ae2cc96a168deb7d25797fb9f936f4c76d05682036693a8515e756b7f20dab46d
+Size (plasma-framework-5.98.0.tar.xz) = 3148664 bytes

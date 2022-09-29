@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2022/04/25 08:35:56 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/09/29 01:28:23 markd Exp $
 bin/kdebugdialog5
 bin/kf5-config
 include/KF5/KDELibs4Support/KDE/ConversionCheck/QVconvertible
@@ -997,6 +997,7 @@ lib/libKF5KDELibs4Support.so.${PKGVERSION}
 libexec/kf5/filesharelist
 libexec/kf5/fileshareset
 man/ca/man1/kf5-config.1
+man/ca@valencia/man1/kf5-config.1
 man/de/man1/kf5-config.1
 man/es/man1/kf5-config.1
 man/fr/man1/kf5-config.1
@@ -1021,6 +1022,10 @@ share/doc/HTML/ca/kcontrol5/kcm_ssl/index.docbook
 share/doc/HTML/ca/kcontrol5/kcm_ssl/module.png
 share/doc/HTML/ca/kdebugdialog5/index.cache.bz2
 share/doc/HTML/ca/kdebugdialog5/index.docbook
+share/doc/HTML/ca@valencia/kcontrol5/kcm_ssl/index.cache.bz2
+share/doc/HTML/ca@valencia/kcontrol5/kcm_ssl/index.docbook
+share/doc/HTML/ca@valencia/kdebugdialog5/index.cache.bz2
+share/doc/HTML/ca@valencia/kdebugdialog5/index.docbook
 share/doc/HTML/de/kcontrol5/kcm_ssl/index.cache.bz2
 share/doc/HTML/de/kcontrol5/kcm_ssl/index.docbook
 share/doc/HTML/de/kdebugdialog5/index.cache.bz2
