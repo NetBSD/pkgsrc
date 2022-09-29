@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2021/04/07 12:28:28 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/09/29 01:03:53 markd Exp $
 bin/kwordquiz
 share/applications/org.kde.kwordquiz.desktop
 share/config.kcfg/kwordquiz.kcfg
@@ -74,6 +74,8 @@ share/doc/HTML/pt/kwordquiz/index.cache.bz2
 share/doc/HTML/pt/kwordquiz/index.docbook
 share/doc/HTML/pt_BR/kwordquiz/index.cache.bz2
 share/doc/HTML/pt_BR/kwordquiz/index.docbook
+share/doc/HTML/ru/kwordquiz/index.cache.bz2
+share/doc/HTML/ru/kwordquiz/index.docbook
 share/doc/HTML/sv/kwordquiz/index.cache.bz2
 share/doc/HTML/sv/kwordquiz/index.docbook
 share/doc/HTML/sv/kwordquiz/kwq-dlg-characters.png
@@ -276,6 +278,7 @@ share/kwordquiz/icons/hicolor/scalable/actions/question.svgz
 share/kwordquiz/icons/hicolor/scalable/actions/unmarkasblank.svgz
 share/kxmlgui5/kwordquiz/kwordquizui.rc
 share/locale/ar/LC_MESSAGES/kwordquiz.mo
+share/locale/be/LC_MESSAGES/kwordquiz.mo
 share/locale/bg/LC_MESSAGES/kwordquiz.mo
 share/locale/bs/LC_MESSAGES/kwordquiz.mo
 share/locale/ca/LC_MESSAGES/kwordquiz.mo
@@ -317,9 +320,13 @@ share/locale/pt/LC_MESSAGES/kwordquiz.mo
 share/locale/pt_BR/LC_MESSAGES/kwordquiz.mo
 share/locale/ro/LC_MESSAGES/kwordquiz.mo
 share/locale/ru/LC_MESSAGES/kwordquiz.mo
+share/locale/se/LC_MESSAGES/kwordquiz.mo
 share/locale/sk/LC_MESSAGES/kwordquiz.mo
 share/locale/sl/LC_MESSAGES/kwordquiz.mo
+share/locale/sq/LC_MESSAGES/kwordquiz.mo
 share/locale/sv/LC_MESSAGES/kwordquiz.mo
+share/locale/ta/LC_MESSAGES/kwordquiz.mo
+share/locale/tg/LC_MESSAGES/kwordquiz.mo
 share/locale/tr/LC_MESSAGES/kwordquiz.mo
 share/locale/ug/LC_MESSAGES/kwordquiz.mo
 share/locale/uk/LC_MESSAGES/kwordquiz.mo
