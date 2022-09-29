@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2022/04/25 08:41:36 markd Exp $
+$NetBSD: distinfo,v 1.15 2022/09/29 01:28:23 markd Exp $
 
-BLAKE2s (kguiaddons-5.93.0.tar.xz) = 7dd138b763a2c244c6b7d2b9a8314cbc5c230df4776fdcc3db73aeaa9938442f
-SHA512 (kguiaddons-5.93.0.tar.xz) = 53723941aca717155fad72ffcad29803a249d19033ae91570108001113bdf3af33281d52640f27c2a3dc6d1619219f77e697e09b50aaa90506e93d178ba53b0d
-Size (kguiaddons-5.93.0.tar.xz) = 72608 bytes
+BLAKE2s (kguiaddons-5.98.0.tar.xz) = 9bbb6ab348266624f42b43a6cc89a4fdc701b3a7b5cc9c8b2eb151a367601091
+SHA512 (kguiaddons-5.98.0.tar.xz) = ca3102f5dc4c146581172382a79824c90ce17e0496d4bc02569ae64b007747907b1696e3c2664d4bad5c719ebb2ac819cdf9744279767a788927873999421234
+Size (kguiaddons-5.98.0.tar.xz) = 73780 bytes
