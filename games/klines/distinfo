@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 10:44:08 nia Exp $
+$NetBSD: distinfo,v 1.13 2022/09/29 00:47:29 markd Exp $
 
-BLAKE2s (klines-20.12.3.tar.xz) = 90e3771cb5b043ef8e3464b3a2d370cb7466fcfb0e37591d53a4b19af94a96ec
-SHA512 (klines-20.12.3.tar.xz) = 8e580603b78e405c52dea0d7c9c122d47018898d6c6a9999f1945c43c2afbb97e38fdcf35d5782ed38549843d1fff9f00b1bed62e4fad529a9cb55aa64d2b83a
-Size (klines-20.12.3.tar.xz) = 1790320 bytes
+BLAKE2s (klines-22.08.1.tar.xz) = d78129e4faab7a75a3a07df406a9d379cb1e781ff89c1b0c5dd7d1c3e220a2cf
+SHA512 (klines-22.08.1.tar.xz) = dd528b583e0365b96df7b263fcbaec9d5d5f4912da393f9a62ee804407482b61abdd7c92056c1b8238cfc1149cc88213552fc9cb2287bf9721902012861099b4
+Size (klines-22.08.1.tar.xz) = 1728116 bytes
