@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2021/04/07 12:28:28 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/09/29 01:03:52 markd Exp $
 bin/ktouch
 man/ca/man1/ktouch.1
 man/de/man1/ktouch.1
@@ -12,6 +12,7 @@ man/nl/man1/ktouch.1
 man/pl/man1/ktouch.1
 man/pt/man1/ktouch.1
 man/pt_BR/man1/ktouch.1
+man/ru/man1/ktouch.1
 man/sv/man1/ktouch.1
 man/uk/man1/ktouch.1
 share/applications/org.kde.ktouch.desktop
@@ -107,6 +108,8 @@ share/doc/HTML/pt/ktouch/index.cache.bz2
 share/doc/HTML/pt/ktouch/index.docbook
 share/doc/HTML/pt_BR/ktouch/index.cache.bz2
 share/doc/HTML/pt_BR/ktouch/index.docbook
+share/doc/HTML/ru/ktouch/index.cache.bz2
+share/doc/HTML/ru/ktouch/index.docbook
 share/doc/HTML/sv/ktouch/color_options.png
 share/doc/HTML/sv/ktouch/general_options.png
 share/doc/HTML/sv/ktouch/index.cache.bz2
@@ -178,6 +181,8 @@ share/ktouch/courses/fr.dvarok.xml
 share/ktouch/courses/fr.xml
 share/ktouch/courses/gb.xml
 share/ktouch/courses/gr.xml
+share/ktouch/courses/in.mal_enhanced1.xml
+share/ktouch/courses/in.mal_enhanced2.xml
 share/ktouch/courses/ir.xml
 share/ktouch/courses/it.xml
 share/ktouch/courses/it2.xml
@@ -223,6 +228,7 @@ share/ktouch/keyboardlayouts/gb.xml
 share/ktouch/keyboardlayouts/hu.xml
 share/ktouch/keyboardlayouts/il.xml
 share/ktouch/keyboardlayouts/in.kan.xml
+share/ktouch/keyboardlayouts/in.mal_enhanced.xml
 share/ktouch/keyboardlayouts/in.tam_unicode.xml
 share/ktouch/keyboardlayouts/ir.xml
 share/ktouch/keyboardlayouts/it.xml
@@ -250,6 +256,7 @@ share/ktouch/schemata/course.xsd
 share/ktouch/schemata/data.xsd
 share/ktouch/schemata/keyboardlayout.xsd
 share/locale/ar/LC_MESSAGES/ktouch.mo
+share/locale/be/LC_MESSAGES/ktouch.mo
 share/locale/bg/LC_MESSAGES/ktouch.mo
 share/locale/bs/LC_MESSAGES/ktouch.mo
 share/locale/ca/LC_MESSAGES/ktouch.mo
@@ -273,11 +280,13 @@ share/locale/hi/LC_MESSAGES/ktouch.mo
 share/locale/hr/LC_MESSAGES/ktouch.mo
 share/locale/hu/LC_MESSAGES/ktouch.mo
 share/locale/ia/LC_MESSAGES/ktouch.mo
+share/locale/id/LC_MESSAGES/ktouch.mo
 share/locale/is/LC_MESSAGES/ktouch.mo
 share/locale/it/LC_MESSAGES/ktouch.mo
 share/locale/ja/LC_MESSAGES/ktouch.mo
 share/locale/kk/LC_MESSAGES/ktouch.mo
 share/locale/km/LC_MESSAGES/ktouch.mo
+share/locale/ko/LC_MESSAGES/ktouch.mo
 share/locale/lt/LC_MESSAGES/ktouch.mo
 share/locale/lv/LC_MESSAGES/ktouch.mo
 share/locale/ml/LC_MESSAGES/ktouch.mo
@@ -292,9 +301,13 @@ share/locale/pt/LC_MESSAGES/ktouch.mo
 share/locale/pt_BR/LC_MESSAGES/ktouch.mo
 share/locale/ro/LC_MESSAGES/ktouch.mo
 share/locale/ru/LC_MESSAGES/ktouch.mo
+share/locale/se/LC_MESSAGES/ktouch.mo
 share/locale/sk/LC_MESSAGES/ktouch.mo
 share/locale/sl/LC_MESSAGES/ktouch.mo
+share/locale/sq/LC_MESSAGES/ktouch.mo
 share/locale/sv/LC_MESSAGES/ktouch.mo
+share/locale/ta/LC_MESSAGES/ktouch.mo
+share/locale/tg/LC_MESSAGES/ktouch.mo
 share/locale/tr/LC_MESSAGES/ktouch.mo
 share/locale/ug/LC_MESSAGES/ktouch.mo
 share/locale/uk/LC_MESSAGES/ktouch.mo

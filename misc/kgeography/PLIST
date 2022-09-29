@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2021/04/07 12:28:27 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2022/09/29 01:03:51 markd Exp $
 bin/kgeography
 share/applications/org.kde.kgeography.desktop
 share/config.kcfg/kgeography.kcfg
@@ -21,6 +21,7 @@ share/doc/HTML/de/kgeography/index.cache.bz2
 share/doc/HTML/de/kgeography/index.docbook
 share/doc/HTML/de/kgeography/kgeography.png
 share/doc/HTML/de/kgeography/zoom.png
+share/doc/HTML/en/kgeography/dialog-information.png
 share/doc/HTML/en/kgeography/first-start1.png
 share/doc/HTML/en/kgeography/first-start10.png
 share/doc/HTML/en/kgeography/first-start11.png
@@ -70,6 +71,8 @@ share/doc/HTML/pt_BR/kgeography/index.cache.bz2
 share/doc/HTML/pt_BR/kgeography/index.docbook
 share/doc/HTML/pt_BR/kgeography/kgeography.png
 share/doc/HTML/pt_BR/kgeography/zoom.png
+share/doc/HTML/ru/kgeography/index.cache.bz2
+share/doc/HTML/ru/kgeography/index.docbook
 share/doc/HTML/sv/kgeography/first-start1.png
 share/doc/HTML/sv/kgeography/first-start10.png
 share/doc/HTML/sv/kgeography/first-start11.png
@@ -1063,6 +1066,8 @@ share/kgeography/venezuela.kgm
 share/kgeography/venezuela.png
 share/kgeography/vietnam.kgm
 share/kgeography/vietnam.png
+share/kgeography/virginia.kgm
+share/kgeography/virginia.png
 share/kgeography/waters_world-class.kgm
 share/kgeography/waters_world-class.png
 share/kgeography/westbengal.kgm
@@ -1085,6 +1090,7 @@ share/kgeography/zimbabwe_districts.kgm
 share/kgeography/zimbabwe_districts.png
 share/kxmlgui5/kgeography/kgeographyui.rc
 share/locale/ar/LC_MESSAGES/kgeography.mo
+share/locale/be/LC_MESSAGES/kgeography.mo
 share/locale/bg/LC_MESSAGES/kgeography.mo
 share/locale/bs/LC_MESSAGES/kgeography.mo
 share/locale/ca/LC_MESSAGES/kgeography.mo
@@ -1136,9 +1142,13 @@ share/locale/pt/LC_MESSAGES/kgeography.mo
 share/locale/pt_BR/LC_MESSAGES/kgeography.mo
 share/locale/ro/LC_MESSAGES/kgeography.mo
 share/locale/ru/LC_MESSAGES/kgeography.mo
+share/locale/se/LC_MESSAGES/kgeography.mo
 share/locale/sk/LC_MESSAGES/kgeography.mo
 share/locale/sl/LC_MESSAGES/kgeography.mo
+share/locale/sq/LC_MESSAGES/kgeography.mo
 share/locale/sv/LC_MESSAGES/kgeography.mo
+share/locale/ta/LC_MESSAGES/kgeography.mo
+share/locale/tg/LC_MESSAGES/kgeography.mo
 share/locale/tr/LC_MESSAGES/kgeography.mo
 share/locale/ug/LC_MESSAGES/kgeography.mo
 share/locale/uk/LC_MESSAGES/kgeography.mo

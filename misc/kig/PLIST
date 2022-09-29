@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2021/04/07 12:28:27 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/09/29 01:03:52 markd Exp $
 bin/kig
 bin/pykig.py
 man/ca/man1/kig.1
@@ -13,7 +13,7 @@ man/pt_BR/man1/kig.1
 man/ru/man1/kig.1
 man/sv/man1/kig.1
 man/uk/man1/kig.1
-qt5/plugins/kigpart.so
+qt5/plugins/kf5/parts/kigpart.so
 share/applications/org.kde.kig.desktop
 share/doc/HTML/ca/kig/index.cache.bz2
 share/doc/HTML/ca/kig/index.docbook
@@ -38,16 +38,22 @@ share/doc/HTML/en/kig/constructed_a_point.png
 share/doc/HTML/en/kig/constructed_script_object.png
 share/doc/HTML/en/kig/constructing_a_circle.png
 share/doc/HTML/en/kig/constructing_a_circle_2.png
+share/doc/HTML/en/kig/edit-delete.png
 share/doc/HTML/en/kig/edit_types_dialog.png
 share/doc/HTML/en/kig/index.cache.bz2
 share/doc/HTML/en/kig/index.docbook
+share/doc/HTML/en/kig/kig_text.png
+share/doc/HTML/en/kig/locus.png
 share/doc/HTML/en/kig/macro_wizard.png
 share/doc/HTML/en/kig/macros_at_work.png
+share/doc/HTML/en/kig/process-stop.png
 share/doc/HTML/en/kig/script_wizard.png
 share/doc/HTML/en/kig/script_wizard_entering_code.png
 share/doc/HTML/en/kig/selecting_objects.png
 share/doc/HTML/en/kig/simple_locus_construction.png
+share/doc/HTML/en/kig/system-run.png
 share/doc/HTML/en/kig/test_run_macro.png
+share/doc/HTML/en/kig/text-x-python3.png
 share/doc/HTML/en/kig/text_label_attaching.png
 share/doc/HTML/en/kig/text_label_wizard.png
 share/doc/HTML/en/kig/text_label_wizard__select_property.png
@@ -61,6 +67,8 @@ share/doc/HTML/nl/kig/index.cache.bz2
 share/doc/HTML/nl/kig/index.docbook
 share/doc/HTML/pt_BR/kig/index.cache.bz2
 share/doc/HTML/pt_BR/kig/index.docbook
+share/doc/HTML/ru/kig/index.cache.bz2
+share/doc/HTML/ru/kig/index.docbook
 share/doc/HTML/sv/kig/index.cache.bz2
 share/doc/HTML/sv/kig/index.docbook
 share/doc/HTML/uk/kig/constructed_a_point.png
@@ -381,6 +389,7 @@ share/kservices5/kig_part.desktop
 share/kxmlgui5/kig/kigpartui.rc
 share/kxmlgui5/kig/kigui.rc
 share/locale/ar/LC_MESSAGES/kig.mo
+share/locale/be/LC_MESSAGES/kig.mo
 share/locale/bg/LC_MESSAGES/kig.mo
 share/locale/bs/LC_MESSAGES/kig.mo
 share/locale/ca/LC_MESSAGES/kig.mo
@@ -421,9 +430,13 @@ share/locale/pt/LC_MESSAGES/kig.mo
 share/locale/pt_BR/LC_MESSAGES/kig.mo
 share/locale/ro/LC_MESSAGES/kig.mo
 share/locale/ru/LC_MESSAGES/kig.mo
+share/locale/se/LC_MESSAGES/kig.mo
 share/locale/sk/LC_MESSAGES/kig.mo
 share/locale/sl/LC_MESSAGES/kig.mo
+share/locale/sq/LC_MESSAGES/kig.mo
 share/locale/sv/LC_MESSAGES/kig.mo
+share/locale/ta/LC_MESSAGES/kig.mo
+share/locale/tg/LC_MESSAGES/kig.mo
 share/locale/tr/LC_MESSAGES/kig.mo
 share/locale/ug/LC_MESSAGES/kig.mo
 share/locale/uk/LC_MESSAGES/kig.mo
