@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2021/03/30 10:58:23 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/09/29 00:36:33 markd Exp $
 bin/kf5kross
 include/KF5/KrossCore/Kross/Core/Action
 include/KF5/KrossCore/Kross/Core/ActionCollection
@@ -47,6 +47,7 @@ lib/libKF5KrossUi.so
 lib/libKF5KrossUi.so.5
 lib/libKF5KrossUi.so.${PKGVERSION}
 man/ca/man1/kf5kross.1
+man/ca@valencia/man1/kf5kross.1
 man/de/man1/kf5kross.1
 man/es/man1/kf5kross.1
 man/it/man1/kf5kross.1
