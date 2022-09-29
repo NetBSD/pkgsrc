@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.13 2022/06/30 11:18:21 nia Exp $
+# $NetBSD: Makefile,v 1.14 2022/09/29 09:27:13 adam Exp $
 
-DISTNAME=	fs-uae-arcade-3.0.5
-PKGREVISION=	3
+DISTNAME=	fs-uae-arcade-3.1.63
 CATEGORIES=	emulators
-MASTER_SITES=	http://fs-uae.net/stable/${PKGVERSION_NOREV}/
+MASTER_SITES=	https://fs-uae.net/files/FS-UAE-Arcade/Stable/${PKGVERSION_NOREV}/
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	https://fs-uae.net/
 COMMENT=	Graphical launcher for FS-UAE, the Amiga Emulator
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	fs-uae>=${PKGVERSION_NOREV}:../../emulators/fs-uae
+DEPENDS+=	fs-uae>=3.1.66:../../emulators/fs-uae
 DEPENDS+=	${PYPKGPREFIX}-lhafile-[0-9]*:../../archivers/py-lhafile
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-qt5>=5.4:../../x11/py-qt5
