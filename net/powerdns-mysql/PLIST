@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.8 2020/07/02 13:04:16 otis Exp $
+@comment $NetBSD: PLIST,v 1.9 2022/09/29 13:51:51 jperkin Exp $
 lib/pdns/libgmysqlbackend.la
 share/doc/pdns/3.4.0_to_4.1.0_schema.mysql.sql
 share/doc/pdns/4.1.0_to_4.2.0_schema.mysql.sql
 share/doc/pdns/4.2.0_to_4.3.0_schema.mysql.sql
-share/doc/pdns/enable-foreign-keys.mysql.sql
 share/doc/pdns/dnssec-3.x_to_3.4.0_schema.mysql.sql
+share/doc/pdns/enable-foreign-keys.mysql.sql
 share/doc/pdns/nodnssec-3.x_to_3.4.0_schema.mysql.sql
 share/doc/pdns/schema.mysql.sql
