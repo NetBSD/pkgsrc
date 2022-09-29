@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.14 2021/10/26 11:01:12 nia Exp $
+$NetBSD: distinfo,v 1.15 2022/09/29 00:06:48 markd Exp $
 
-BLAKE2s (mlt-6.26.1.tar.gz) = 1f1e5779597380f554ed7ca79bf1d44ad19d37762e87a026f288df8bb7e8279e
-SHA512 (mlt-6.26.1.tar.gz) = 6a3ef572cddee48c3089b19b2920de84936aa913a3f35b6f06e4bece2dc7a5a168daecfbaa8111c799b5316f967c37b09d485c000a4eba69af4f7ee3dc8db9e4
-Size (mlt-6.26.1.tar.gz) = 1366022 bytes
+BLAKE2s (mlt-7.8.0.tar.gz) = b5b1b20d1db2e52afccad244bb9f6d41b558ca127f84b48777e586f83b29ea9e
+SHA512 (mlt-7.8.0.tar.gz) = da24e59a8fab719eb5352fd3583578938e7f2161f022747e476fe817746ea4c44b8e4319d1b7fefcf075087c255664efdbed1ce81dd22904b68335b5b218f7b2
+Size (mlt-7.8.0.tar.gz) = 1221406 bytes
 SHA1 (patch-src_framework_mlt__properties.c) = 5e8b30cdabb90ed96a122a2654dc254f74a87374
 SHA1 (patch-src_framework_mlt__property.h) = d477cd70b6fecba00f26a5c8f155c9bab73aea03
