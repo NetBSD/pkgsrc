@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2022/04/25 08:31:34 markd Exp $
+@comment $NetBSD: PLIST,v 1.11 2022/09/29 01:28:23 markd Exp $
 bin/preparetips5
 include/KF5/KConfigWidgets/KCModule
 include/KF5/KConfigWidgets/KCodecAction
@@ -49,6 +49,7 @@ lib/libKF5ConfigWidgets.so
 lib/libKF5ConfigWidgets.so.5
 lib/libKF5ConfigWidgets.so.${PKGVERSION}
 man/ca/man1/preparetips5.1
+man/ca@valencia/man1/preparetips5.1
 man/de/man1/preparetips5.1
 man/es/man1/preparetips5.1
 man/fr/man1/preparetips5.1
@@ -241,6 +242,7 @@ share/locale/tg/LC_MESSAGES/kconfigwidgets5.mo
 share/locale/tg/kf5_entry.desktop
 share/locale/th/LC_MESSAGES/kconfigwidgets5.mo
 share/locale/th/kf5_entry.desktop
+share/locale/tok/kf5_entry.desktop
 share/locale/tr/LC_MESSAGES/kconfigwidgets5.mo
 share/locale/tr/kf5_entry.desktop
 share/locale/tt/LC_MESSAGES/kconfigwidgets5.mo

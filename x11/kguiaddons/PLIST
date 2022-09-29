@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/04/25 08:41:36 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/09/29 01:28:23 markd Exp $
 bin/kde-geo-uri-handler
 include/KF5/KGuiAddons/KColorCollection
 include/KF5/KGuiAddons/KColorMimeData
@@ -36,7 +36,6 @@ lib/libKF5GuiAddons.so
 lib/libKF5GuiAddons.so.5
 lib/libKF5GuiAddons.so.${PKGVERSION}
 qt5/mkspecs/modules/qt_KGuiAddons.pri
-qt5/plugins/kf5/kguiaddons/kmodifierkey/kmodifierkey_xcb.so
 share/applications/google-maps-geo-handler.desktop
 share/applications/openstreetmap-geo-handler.desktop
 share/applications/qwant-maps-geo-handler.desktop

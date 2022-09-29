@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2022/04/25 08:43:34 markd Exp $
+$NetBSD: distinfo,v 1.15 2022/09/29 01:28:24 markd Exp $
 
-BLAKE2s (kinit-5.93.0.tar.xz) = 5a2b2ad38efd9d58d52024a1caf6b37fe9fc62878737e465887fd1036397bdf2
-SHA512 (kinit-5.93.0.tar.xz) = 01d303185d9b214add1269736236cd2b6ea3c6d404509e71d306896213f26d5ffabef9477d1fcbb5920a1eba80a8618ccd0f3cdd872041280f4cb138af75ce38
-Size (kinit-5.93.0.tar.xz) = 119256 bytes
+BLAKE2s (kinit-5.98.0.tar.xz) = 0b19b499f554a46e409fc9873e37ffbc33154d5c68bfa067b207c6278e43cd61
+SHA512 (kinit-5.98.0.tar.xz) = f6d52b6d69e2069a78bd5af0061164b3b344f5d0bebcc3f2ce22e67aeba7e273dc1eab9246c51519e3f046baac8dfa31f8fad2283450f8fb13e29bf6109b5091
+Size (kinit-5.98.0.tar.xz) = 119492 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2022/04/25 08:37:12 markd Exp $
+$NetBSD: distinfo,v 1.15 2022/09/29 01:28:23 markd Exp $
 
-BLAKE2s (kdesignerplugin-5.93.0.tar.xz) = 26f81e8fdc1ebc1ce6fabaa0c5dced941f8960638624b6389d4c5e0dd672a6d0
-SHA512 (kdesignerplugin-5.93.0.tar.xz) = aa2ffaa6b9b02688f40eda5389bbae1650701bd7f05e4bd0cd7702a6a0319a33ba9bf7f87151796a22d0f99dfbc4c3eaaa27f7844ac9d2bff8bf59be0c4caf87
-Size (kdesignerplugin-5.93.0.tar.xz) = 75640 bytes
+BLAKE2s (kdesignerplugin-5.98.0.tar.xz) = 6b67c8f254230d96df5205446777a6a77fba418f15e7e5f3940804761f9011a3
+SHA512 (kdesignerplugin-5.98.0.tar.xz) = 522b9673279b001f66b3269d3f26ac9c287a8c3ad978f99c0ba2039c5815970ebfc8d1abd3c685d46f870c8891d097fa8162402edadc88028bd30290737bd490
+Size (kdesignerplugin-5.98.0.tar.xz) = 75960 bytes
