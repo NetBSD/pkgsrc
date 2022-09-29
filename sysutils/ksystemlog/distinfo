@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 11:19:45 nia Exp $
+$NetBSD: distinfo,v 1.11 2022/09/29 01:16:44 markd Exp $
 
-BLAKE2s (ksystemlog-20.12.3.tar.xz) = 4e1533a7c5969c897c2635e37d900ce49a226df3ee84df5982f46b5f33224395
-SHA512 (ksystemlog-20.12.3.tar.xz) = a7b7d5bdeb7c118469888adcf5c0856758e0a0802d76f6bc8b3afafa7df2de7df7810f0ba73d8867b4bd55003b6c042a6b76e3292f28f1387247fd5e6adc5faa
-Size (ksystemlog-20.12.3.tar.xz) = 1938596 bytes
+BLAKE2s (ksystemlog-22.08.1.tar.xz) = e7173985725732f05b055f657db1a029e62d655bbceb928b334159320e3ead90
+SHA512 (ksystemlog-22.08.1.tar.xz) = a4dd645da571231b66f82a2553dcaf28831f98b06f49159e5b9d04487160a24842f34999e280afeaf3ada5969f4e01dea26f46badd2836ebb551fd6fc1110ef3
+Size (ksystemlog-22.08.1.tar.xz) = 1969980 bytes

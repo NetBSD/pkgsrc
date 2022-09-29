@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/11/26 18:10:55 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/09/29 01:16:44 markd Exp $
 bin/kfloppy
 share/applications/org.kde.kfloppy.desktop
 share/doc/HTML/de/kfloppy/index.cache.bz2
@@ -36,6 +36,7 @@ share/icons/hicolor/32x32/apps/kfloppy.png
 share/icons/hicolor/48x48/apps/kfloppy.png
 share/icons/hicolor/64x64/apps/kfloppy.png
 share/locale/ar/LC_MESSAGES/kfloppy.mo
+share/locale/be/LC_MESSAGES/kfloppy.mo
 share/locale/bg/LC_MESSAGES/kfloppy.mo
 share/locale/bs/LC_MESSAGES/kfloppy.mo
 share/locale/ca/LC_MESSAGES/kfloppy.mo
@@ -79,10 +80,14 @@ share/locale/pt/LC_MESSAGES/kfloppy.mo
 share/locale/pt_BR/LC_MESSAGES/kfloppy.mo
 share/locale/ro/LC_MESSAGES/kfloppy.mo
 share/locale/ru/LC_MESSAGES/kfloppy.mo
+share/locale/se/LC_MESSAGES/kfloppy.mo
 share/locale/sk/LC_MESSAGES/kfloppy.mo
 share/locale/sl/LC_MESSAGES/kfloppy.mo
+share/locale/sq/LC_MESSAGES/kfloppy.mo
 share/locale/sr/LC_MESSAGES/kfloppy.mo
 share/locale/sv/LC_MESSAGES/kfloppy.mo
+share/locale/ta/LC_MESSAGES/kfloppy.mo
+share/locale/tg/LC_MESSAGES/kfloppy.mo
 share/locale/tr/LC_MESSAGES/kfloppy.mo
 share/locale/ug/LC_MESSAGES/kfloppy.mo
 share/locale/uk/LC_MESSAGES/kfloppy.mo
