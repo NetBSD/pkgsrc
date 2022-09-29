@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.29 2022/09/13 17:18:04 adam Exp $
+# $NetBSD: Makefile.common,v 1.30 2022/09/29 06:18:55 markd Exp $
 # used by x11/qt5-qtbase/Makefile.common
 # used by inputmethod/qt5-uim/Makefile
 
@@ -12,7 +12,7 @@ EXTRACT_SUFX=	.tar.xz
 EXTRACT_USING=	bsdtar
 
 MAINTAINER?=	ryoon@NetBSD.org
-HOMEPAGE=	http://qt-project.org/
+HOMEPAGE=	https://qt-project.org/
 LICENSE=	gnu-lgpl-v2.1 AND gnu-lgpl-v3 AND gnu-gpl-v2 AND gnu-gpl-v3
 
 QTPREFIX=	${PREFIX}/qt5
