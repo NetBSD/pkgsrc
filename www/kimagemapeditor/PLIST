@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2019/11/17 04:42:29 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/09/29 01:24:01 markd Exp $
 bin/kimagemapeditor
-qt5/plugins/kimagemapeditor.so
+qt5/plugins/kf5/parts/kimagemapeditorpart.so
 share/applications/org.kde.kimagemapeditor.desktop
 share/doc/HTML/ca/kimagemapeditor/configure.png
 share/doc/HTML/ca/kimagemapeditor/index.cache.bz2
@@ -21,6 +21,8 @@ share/doc/HTML/fr/kimagemapeditor/index.docbook
 share/doc/HTML/fr/kimagemapeditor/mainwindow.png
 share/doc/HTML/it/kimagemapeditor/index.cache.bz2
 share/doc/HTML/it/kimagemapeditor/index.docbook
+share/doc/HTML/ko/kimagemapeditor/index.cache.bz2
+share/doc/HTML/ko/kimagemapeditor/index.docbook
 share/doc/HTML/nl/kimagemapeditor/index.cache.bz2
 share/doc/HTML/nl/kimagemapeditor/index.docbook
 share/doc/HTML/pl/kimagemapeditor/index.cache.bz2
@@ -29,6 +31,8 @@ share/doc/HTML/pt/kimagemapeditor/index.cache.bz2
 share/doc/HTML/pt/kimagemapeditor/index.docbook
 share/doc/HTML/pt_BR/kimagemapeditor/index.cache.bz2
 share/doc/HTML/pt_BR/kimagemapeditor/index.docbook
+share/doc/HTML/ru/kimagemapeditor/index.cache.bz2
+share/doc/HTML/ru/kimagemapeditor/index.docbook
 share/doc/HTML/sv/kimagemapeditor/index.cache.bz2
 share/doc/HTML/sv/kimagemapeditor/index.docbook
 share/doc/HTML/uk/kimagemapeditor/configure.png
@@ -57,9 +61,8 @@ share/kimagemapeditor/freehandcursor.png
 share/kimagemapeditor/polygoncursor.png
 share/kimagemapeditor/removepointcursor.png
 share/kservices5/kimagemapeditorpart.desktop
-share/kxmlgui5/kimagemapeditor/kimagemapeditorpartui.rc
-share/kxmlgui5/kimagemapeditor/kimagemapeditorui.rc
 share/locale/ar/LC_MESSAGES/kimagemapeditor.mo
+share/locale/be/LC_MESSAGES/kimagemapeditor.mo
 share/locale/bg/LC_MESSAGES/kimagemapeditor.mo
 share/locale/bs/LC_MESSAGES/kimagemapeditor.mo
 share/locale/ca/LC_MESSAGES/kimagemapeditor.mo
@@ -99,9 +102,12 @@ share/locale/pt/LC_MESSAGES/kimagemapeditor.mo
 share/locale/pt_BR/LC_MESSAGES/kimagemapeditor.mo
 share/locale/ro/LC_MESSAGES/kimagemapeditor.mo
 share/locale/ru/LC_MESSAGES/kimagemapeditor.mo
+share/locale/se/LC_MESSAGES/kimagemapeditor.mo
 share/locale/sk/LC_MESSAGES/kimagemapeditor.mo
 share/locale/sl/LC_MESSAGES/kimagemapeditor.mo
 share/locale/sv/LC_MESSAGES/kimagemapeditor.mo
+share/locale/ta/LC_MESSAGES/kimagemapeditor.mo
+share/locale/tg/LC_MESSAGES/kimagemapeditor.mo
 share/locale/tr/LC_MESSAGES/kimagemapeditor.mo
 share/locale/ug/LC_MESSAGES/kimagemapeditor.mo
 share/locale/uk/LC_MESSAGES/kimagemapeditor.mo
