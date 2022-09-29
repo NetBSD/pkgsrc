@@ -1,12 +1,12 @@
-# $NetBSD: options.mk,v 1.9 2022/04/01 08:07:28 wiz Exp $
+# $NetBSD: options.mk,v 1.10 2022/09/29 13:49:50 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.powerdns
-PKG_SUPPORTED_OPTIONS=	bind botan luarecords pipe random remote sqlite tools zeromq
-PKG_SUGGESTED_OPTIONS=	bind luarecords pipe random
+PKG_SUPPORTED_OPTIONS=	bind botan luarecords pipe remote sqlite tools zeromq
+PKG_SUGGESTED_OPTIONS=	bind luarecords pipe
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		bind luarecords pipe random remote sqlite tools
+PLIST_VARS+=		bind pipe remote sqlite tools
 
 .if !empty(PKG_OPTIONS:Mbind)
 PDNS_MODULES+=		bind
@@ -29,11 +29,6 @@ PLIST.pipe=		yes
 PDNS_MODULES+=		pipe
 .endif
 
-.if !empty(PKG_OPTIONS:Mrandom)
-PLIST.random=		yes
-PDNS_MODULES+=		random
-.endif
-
 .if !empty(PKG_OPTIONS:Mremote)
 PLIST.remote=		yes
 PDNS_MODULES+=		remote
@@ -51,11 +46,11 @@ PLIST.tools=		yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mzeromq)
-.  if empty(PKG_OPTIONS:Mremote)
-PKG_FAIL_REASON+=	"The 'zeromq' option requires the 'remote' option enabled."
-.  else
+.  if !empty(PKG_OPTIONS:Mremote)
 CONFIGURE_ARGS+=	--enable-remotebackend-zeromq=yes
 .include "../../net/zeromq/buildlink3.mk"
+.  else
+PKG_FAIL_REASON+=	"The 'zeromq' option requires the 'remote' option enabled."
 .  endif
 .else
 CONFIGURE_ARGS+=	--enable-remotebackend-zeromq=no
