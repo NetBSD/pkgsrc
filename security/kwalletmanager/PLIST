@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.5 2021/04/07 12:28:30 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/09/29 01:13:35 markd Exp $
 bin/kwalletmanager5
 libexec/kauth/kcm_kwallet_helper5
 qt5/plugins/kcm_kwallet5.so
 share/applications/kwalletmanager5-kwalletd.desktop
 share/applications/org.kde.kwalletmanager5.desktop
+share/dbus-1/services/org.kde.kwalletmanager5.service
 share/dbus-1/system-services/org.kde.kcontrol.kcmkwallet5.service
 share/doc/HTML/ca/kwallet5/index.cache.bz2
 share/doc/HTML/ca/kwallet5/index.docbook
@@ -65,9 +66,12 @@ share/icons/hicolor/64x64/apps/kwalletmanager.png
 share/icons/hicolor/64x64/apps/kwalletmanager2.png
 share/kservices5/kwalletconfig5.desktop
 share/kservices5/kwalletmanager5_show.desktop
-share/kxmlgui5/kwalletmanager5/kwalletmanager.rc
 share/locale/ar/LC_MESSAGES/kcmkwallet.mo
 share/locale/ar/LC_MESSAGES/kwalletmanager.mo
+share/locale/az/LC_MESSAGES/kcmkwallet.mo
+share/locale/az/LC_MESSAGES/kwalletmanager.mo
+share/locale/be/LC_MESSAGES/kcmkwallet.mo
+share/locale/be/LC_MESSAGES/kwalletmanager.mo
 share/locale/bg/LC_MESSAGES/kcmkwallet.mo
 share/locale/bg/LC_MESSAGES/kwalletmanager.mo
 share/locale/bs/LC_MESSAGES/kcmkwallet.mo
@@ -152,20 +156,29 @@ share/locale/ro/LC_MESSAGES/kcmkwallet.mo
 share/locale/ro/LC_MESSAGES/kwalletmanager.mo
 share/locale/ru/LC_MESSAGES/kcmkwallet.mo
 share/locale/ru/LC_MESSAGES/kwalletmanager.mo
+share/locale/se/LC_MESSAGES/kcmkwallet.mo
+share/locale/se/LC_MESSAGES/kwalletmanager.mo
 share/locale/sk/LC_MESSAGES/kcmkwallet.mo
 share/locale/sk/LC_MESSAGES/kwalletmanager.mo
 share/locale/sl/LC_MESSAGES/kcmkwallet.mo
 share/locale/sl/LC_MESSAGES/kwalletmanager.mo
+share/locale/sq/LC_MESSAGES/kcmkwallet.mo
+share/locale/sq/LC_MESSAGES/kwalletmanager.mo
 share/locale/sr/LC_MESSAGES/kcmkwallet.mo
 share/locale/sr/LC_MESSAGES/kwalletmanager.mo
 share/locale/sv/LC_MESSAGES/kcmkwallet.mo
 share/locale/sv/LC_MESSAGES/kwalletmanager.mo
+share/locale/ta/LC_MESSAGES/kcmkwallet.mo
+share/locale/ta/LC_MESSAGES/kwalletmanager.mo
+share/locale/tg/LC_MESSAGES/kcmkwallet.mo
+share/locale/tg/LC_MESSAGES/kwalletmanager.mo
 share/locale/tr/LC_MESSAGES/kcmkwallet.mo
 share/locale/tr/LC_MESSAGES/kwalletmanager.mo
 share/locale/ug/LC_MESSAGES/kcmkwallet.mo
 share/locale/ug/LC_MESSAGES/kwalletmanager.mo
 share/locale/uk/LC_MESSAGES/kcmkwallet.mo
 share/locale/uk/LC_MESSAGES/kwalletmanager.mo
+share/locale/vi/LC_MESSAGES/kcmkwallet.mo
 share/locale/zh_CN/LC_MESSAGES/kcmkwallet.mo
 share/locale/zh_CN/LC_MESSAGES/kwalletmanager.mo
 share/locale/zh_TW/LC_MESSAGES/kcmkwallet.mo
