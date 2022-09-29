@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.7 2019/11/03 17:12:03 rillig Exp $
+# $NetBSD: Makefile.common,v 1.8 2022/09/29 05:35:49 markd Exp $
 
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_KDE:=phonon/phonon-backend-vlc/0.10.3/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	markd@NetBSD.org
-HOMEPAGE=	https://phonon.kde.org/
+HOMEPAGE=	https://community.kde.org/Phonon
 LICENSE=	gnu-lgpl-v2.1
 
 PATCHDIR=	${.CURDIR}/../../multimedia/phonon-backend-vlc/patches

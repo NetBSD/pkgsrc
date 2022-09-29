@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2021/03/30 09:03:32 markd Exp $
+# $NetBSD: Makefile,v 1.6 2022/09/29 05:35:49 markd Exp $
 
 DISTNAME=	phonon-backend-gstreamer-4.10.0
 PKGNAME=	${DISTNAME:S/-4/-shared-4/}
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	markd@NetBSD.org
 COMMENT=	Multimedia API for KF5 - GStreamer backend shared files
-HOMEPAGE=	https://phonon.kde.org/
+HOMEPAGE=	https://community.kde.org/Phonon
 LICENSE=	gnu-lgpl-v2.1
 
 DISTINFO_FILE=	${.CURDIR}/../../multimedia/phonon-qt5-backend-gstreamer/distinfo
