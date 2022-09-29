@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.6 2021/04/07 12:28:31 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/09/29 01:16:44 markd Exp $
 bin/kdf
 bin/kwikdisk
-lib/libkdfprivate.so.20
+lib/libkdfprivate.so.22
 lib/libkdfprivate.so.${PKGVERSION}
 qt5/plugins/libkcm_kdf.so
 share/applications/org.kde.kdf.desktop
@@ -94,6 +94,7 @@ share/icons/hicolor/64x64/apps/kwikdisk.png
 share/kservices5/kcmdf.desktop
 share/kxmlgui5/kdf/kdfui.rc
 share/locale/ar/LC_MESSAGES/kdf.mo
+share/locale/be/LC_MESSAGES/kdf.mo
 share/locale/bg/LC_MESSAGES/kdf.mo
 share/locale/bs/LC_MESSAGES/kdf.mo
 share/locale/ca/LC_MESSAGES/kdf.mo
@@ -137,10 +138,14 @@ share/locale/pt/LC_MESSAGES/kdf.mo
 share/locale/pt_BR/LC_MESSAGES/kdf.mo
 share/locale/ro/LC_MESSAGES/kdf.mo
 share/locale/ru/LC_MESSAGES/kdf.mo
+share/locale/se/LC_MESSAGES/kdf.mo
 share/locale/sk/LC_MESSAGES/kdf.mo
 share/locale/sl/LC_MESSAGES/kdf.mo
+share/locale/sq/LC_MESSAGES/kdf.mo
 share/locale/sr/LC_MESSAGES/kdf.mo
 share/locale/sv/LC_MESSAGES/kdf.mo
+share/locale/ta/LC_MESSAGES/kdf.mo
+share/locale/tg/LC_MESSAGES/kdf.mo
 share/locale/tr/LC_MESSAGES/kdf.mo
 share/locale/ug/LC_MESSAGES/kdf.mo
 share/locale/uk/LC_MESSAGES/kdf.mo
