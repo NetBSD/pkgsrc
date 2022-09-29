@@ -1,6 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2019/11/18 09:29:32 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/09/29 00:47:27 markd Exp $
 bin/kapman
 share/applications/org.kde.kapman.desktop
+share/doc/HTML/ca/kapman/config.png
+share/doc/HTML/ca/kapman/index.cache.bz2
+share/doc/HTML/ca/kapman/index.docbook
+share/doc/HTML/ca/kapman/kapman.png
 share/doc/HTML/de/kapman/config.png
 share/doc/HTML/de/kapman/index.cache.bz2
 share/doc/HTML/de/kapman/index.docbook
@@ -60,7 +64,6 @@ share/kapman/themes/mummies_crypt_preview.png
 share/kapman/themes/retro.desktop
 share/kapman/themes/retro.svgz
 share/kapman/themes/retro_preview.png
-share/kxmlgui5/kapman/kapmanui.rc
 share/locale/ar/LC_MESSAGES/kapman.mo
 share/locale/bg/LC_MESSAGES/kapman.mo
 share/locale/bs/LC_MESSAGES/kapman.mo
@@ -104,6 +107,7 @@ share/locale/ro/LC_MESSAGES/kapman.mo
 share/locale/ru/LC_MESSAGES/kapman.mo
 share/locale/sk/LC_MESSAGES/kapman.mo
 share/locale/sl/LC_MESSAGES/kapman.mo
+share/locale/sq/LC_MESSAGES/kapman.mo
 share/locale/sr/LC_MESSAGES/kapman.mo
 share/locale/sv/LC_MESSAGES/kapman.mo
 share/locale/tr/LC_MESSAGES/kapman.mo

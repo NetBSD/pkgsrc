@@ -1,6 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2021/04/07 12:28:21 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/09/29 00:47:30 markd Exp $
 bin/kollision
 share/applications/org.kde.kollision.desktop
+share/doc/HTML/ca/kollision/gameboard.png
+share/doc/HTML/ca/kollision/index.cache.bz2
+share/doc/HTML/ca/kollision/index.docbook
 share/doc/HTML/cs/kollision/index.cache.bz2
 share/doc/HTML/cs/kollision/index.docbook
 share/doc/HTML/de/kollision/index.cache.bz2
@@ -52,6 +55,8 @@ share/kollision/sounds/ball_leaving.ogg
 share/kollision/sounds/hit_wall.ogg
 share/kollision/sounds/start.ogg
 share/kollision/sounds/you_lose.ogg
+share/locale/ar/LC_MESSAGES/kollision.mo
+share/locale/bg/LC_MESSAGES/kollision.mo
 share/locale/bs/LC_MESSAGES/kollision.mo
 share/locale/ca/LC_MESSAGES/kollision.mo
 share/locale/ca@valencia/LC_MESSAGES/kollision.mo
@@ -92,6 +97,7 @@ share/locale/ro/LC_MESSAGES/kollision.mo
 share/locale/ru/LC_MESSAGES/kollision.mo
 share/locale/sk/LC_MESSAGES/kollision.mo
 share/locale/sl/LC_MESSAGES/kollision.mo
+share/locale/sq/LC_MESSAGES/kollision.mo
 share/locale/sr/LC_MESSAGES/kollision.mo
 share/locale/sv/LC_MESSAGES/kollision.mo
 share/locale/tr/LC_MESSAGES/kollision.mo

@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.5 2021/04/07 12:28:19 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/09/29 00:47:29 markd Exp $
 bin/kigo
 share/applications/org.kde.kigo.desktop
 share/config.kcfg/kigo.kcfg
+share/doc/HTML/ca/kigo/index.cache.bz2
+share/doc/HTML/ca/kigo/index.docbook
 share/doc/HTML/de/kigo/get-new-games.png
 share/doc/HTML/de/kigo/hint.png
 share/doc/HTML/de/kigo/index.cache.bz2
@@ -77,7 +79,8 @@ share/kigo/themes/kigo_plain.svgz
 share/kigo/themes/plain.desktop
 share/knsrcfiles/kigo-games.knsrc
 share/knsrcfiles/kigo.knsrc
-share/kxmlgui5/kigo/kigoui.rc
+share/locale/ar/LC_MESSAGES/kigo.mo
+share/locale/bg/LC_MESSAGES/kigo.mo
 share/locale/bs/LC_MESSAGES/kigo.mo
 share/locale/ca/LC_MESSAGES/kigo.mo
 share/locale/ca@valencia/LC_MESSAGES/kigo.mo
