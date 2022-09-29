@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.8 2021/04/07 12:28:14 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2022/09/29 00:24:54 markd Exp $
 bin/ark
-lib/libkerfuffle.so.20
+lib/libkerfuffle.so.22
 lib/libkerfuffle.so.${PKGVERSION}
 man/ca/man1/ark.1
 man/de/man1/ark.1
@@ -15,7 +15,6 @@ man/pt_BR/man1/ark.1
 man/sr/man1/ark.1
 man/sv/man1/ark.1
 man/uk/man1/ark.1
-qt5/plugins/arkpart.so
 qt5/plugins/kerfuffle/kerfuffle_cli7z.so
 qt5/plugins/kerfuffle/kerfuffle_clirar.so
 qt5/plugins/kerfuffle/kerfuffle_cliunarchiver.so
@@ -29,8 +28,11 @@ qt5/plugins/kerfuffle/kerfuffle_libzip.so
 qt5/plugins/kf5/kfileitemaction/compressfileitemaction.so
 qt5/plugins/kf5/kfileitemaction/extractfileitemaction.so
 qt5/plugins/kf5/kio_dnd/extracthere.so
+qt5/plugins/kf5/parts/arkpart.so
 share/applications/org.kde.ark.desktop
 share/config.kcfg/ark.kcfg
+share/doc/HTML/ca/ark/index.cache.bz2
+share/doc/HTML/ca/ark/index.docbook
 share/doc/HTML/de/ark/ark-mainwindow.png
 share/doc/HTML/de/ark/index.cache.bz2
 share/doc/HTML/de/ark/index.docbook
@@ -86,8 +88,10 @@ share/icons/hicolor/64x64/apps/ark.png
 share/icons/hicolor/scalable/apps/ark.svgz
 share/kservices5/ark_part.desktop
 share/kservicetypes5/kerfufflePlugin.desktop
-share/kxmlgui5/ark/ark_viewer.rc
 share/locale/ar/LC_MESSAGES/ark.mo
+share/locale/ast/LC_MESSAGES/ark.mo
+share/locale/az/LC_MESSAGES/ark.mo
+share/locale/be/LC_MESSAGES/ark.mo
 share/locale/bg/LC_MESSAGES/ark.mo
 share/locale/bs/LC_MESSAGES/ark.mo
 share/locale/ca/LC_MESSAGES/ark.mo
@@ -131,10 +135,14 @@ share/locale/pt/LC_MESSAGES/ark.mo
 share/locale/pt_BR/LC_MESSAGES/ark.mo
 share/locale/ro/LC_MESSAGES/ark.mo
 share/locale/ru/LC_MESSAGES/ark.mo
+share/locale/se/LC_MESSAGES/ark.mo
 share/locale/sk/LC_MESSAGES/ark.mo
 share/locale/sl/LC_MESSAGES/ark.mo
+share/locale/sq/LC_MESSAGES/ark.mo
 share/locale/sr/LC_MESSAGES/ark.mo
 share/locale/sv/LC_MESSAGES/ark.mo
+share/locale/ta/LC_MESSAGES/ark.mo
+share/locale/tg/LC_MESSAGES/ark.mo
 share/locale/tr/LC_MESSAGES/ark.mo
 share/locale/ug/LC_MESSAGES/ark.mo
 share/locale/uk/LC_MESSAGES/ark.mo
