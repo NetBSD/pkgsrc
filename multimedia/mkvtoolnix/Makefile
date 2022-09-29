@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.200 2022/09/11 12:52:02 wiz Exp $
+# $NetBSD: Makefile,v 1.201 2022/09/29 08:13:17 mrg Exp $
 
 DISTNAME=	mkvtoolnix-70.0.0
 PKGREVISION=	1
@@ -12,7 +12,6 @@ COMMENT=	Set of tools to create, alter and inspect Matroska files
 LICENSE=	gnu-gpl-v2
 
 BUILD_DEPENDS+=	docbook-xsl>=1.79.1nb5:../../textproc/docbook-xsl
-BUILD_DEPENDS+=	po4a-[0-9]*:../../textproc/po4a
 BUILD_DEPENDS+=	${RUBY_BASE}>=${RUBY_VERSION}:${RUBY_SRCDIR}
 
 # 'The following features of the C++17 standards are not supported by c++:
