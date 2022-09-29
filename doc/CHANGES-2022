@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4739 2022/09/29 13:53:20 jperkin Exp $
+$NetBSD: CHANGES-2022,v 1.4740 2022/09/29 15:03:30 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7176,3 +7176,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/powerdns-mysql to 4.6.3 [jperkin 2022-09-29]
 	Updated net/powerdns-odbc to 4.6.3 [jperkin 2022-09-29]
 	Updated net/powerdns-pgsql to 4.6.3 [jperkin 2022-09-29]
+	Updated geography/libmaxminddb to 1.7.0 [fcambus 2022-09-29]
