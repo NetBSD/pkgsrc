@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2021/04/07 12:28:24 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2022/09/29 00:53:11 markd Exp $
 bin/kolourpaint
 lib/libkolourpaint_lgpl.so
 lib/libkolourpaint_lgpl.so.5
@@ -343,6 +343,7 @@ share/kolourpaint/icons/hicolor/scalable/actions/tool_spraycan.svgz
 share/kolourpaint/icons/hicolor/scalable/actions/tool_text.svgz
 share/kxmlgui5/kolourpaint/kolourpaintui.rc
 share/locale/ar/LC_MESSAGES/kolourpaint.mo
+share/locale/be/LC_MESSAGES/kolourpaint.mo
 share/locale/bg/LC_MESSAGES/kolourpaint.mo
 share/locale/bs/LC_MESSAGES/kolourpaint.mo
 share/locale/ca/LC_MESSAGES/kolourpaint.mo
@@ -366,6 +367,7 @@ share/locale/hi/LC_MESSAGES/kolourpaint.mo
 share/locale/hr/LC_MESSAGES/kolourpaint.mo
 share/locale/hu/LC_MESSAGES/kolourpaint.mo
 share/locale/ia/LC_MESSAGES/kolourpaint.mo
+share/locale/id/LC_MESSAGES/kolourpaint.mo
 share/locale/is/LC_MESSAGES/kolourpaint.mo
 share/locale/it/LC_MESSAGES/kolourpaint.mo
 share/locale/ja/LC_MESSAGES/kolourpaint.mo
@@ -386,9 +388,13 @@ share/locale/pt/LC_MESSAGES/kolourpaint.mo
 share/locale/pt_BR/LC_MESSAGES/kolourpaint.mo
 share/locale/ro/LC_MESSAGES/kolourpaint.mo
 share/locale/ru/LC_MESSAGES/kolourpaint.mo
+share/locale/se/LC_MESSAGES/kolourpaint.mo
 share/locale/sk/LC_MESSAGES/kolourpaint.mo
 share/locale/sl/LC_MESSAGES/kolourpaint.mo
+share/locale/sq/LC_MESSAGES/kolourpaint.mo
 share/locale/sv/LC_MESSAGES/kolourpaint.mo
+share/locale/ta/LC_MESSAGES/kolourpaint.mo
+share/locale/tg/LC_MESSAGES/kolourpaint.mo
 share/locale/tr/LC_MESSAGES/kolourpaint.mo
 share/locale/ug/LC_MESSAGES/kolourpaint.mo
 share/locale/uk/LC_MESSAGES/kolourpaint.mo

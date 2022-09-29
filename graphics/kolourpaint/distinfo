@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2021/10/26 10:46:23 nia Exp $
+$NetBSD: distinfo,v 1.19 2022/09/29 00:53:11 markd Exp $
 
-BLAKE2s (kolourpaint-20.12.3.tar.xz) = 0dd89ea83dd0f4e6e990dcd0cd74951682eb947dab8dd4924405a3654b7d4124
-SHA512 (kolourpaint-20.12.3.tar.xz) = 03a2312932fbbb0a22bc2291b12af639c4cf2895068d25efed4f2307fcc124ce6d22f5580eb3ddcb4501c18dbfbf4c88572cce106c9795196afc117099157fc5
-Size (kolourpaint-20.12.3.tar.xz) = 5686472 bytes
+BLAKE2s (kolourpaint-22.08.1.tar.xz) = fa82af14f538d885a3bdc12e24e64c0d9d678c0273045acc262088942f15f1dd
+SHA512 (kolourpaint-22.08.1.tar.xz) = 8ca538439f6f5091a4cf6b55332d07435e0fdb95b70887ff182a76152a621bd293f2f08c0f95c21383a0ac4be71a419757865d0613fbfb5eabbf86fae7092c65
+Size (kolourpaint-22.08.1.tar.xz) = 5718616 bytes
