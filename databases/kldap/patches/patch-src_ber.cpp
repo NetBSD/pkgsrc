@@ -1,8 +1,8 @@
-$NetBSD: patch-src_ber.cpp,v 1.2 2021/04/07 12:28:15 markd Exp $
+$NetBSD: patch-src_ber.cpp,v 1.3 2022/09/29 00:26:00 markd Exp $
 
---- src/core/ber.cpp.orig	2020-01-14 16:17:11.814803692 +0000
+--- src/core/ber.cpp.orig	2022-08-05 11:31:27.000000000 +0000
 +++ src/core/ber.cpp
-@@ -124,7 +124,7 @@ QByteArray Ber::flatten() const
+@@ -110,7 +110,7 @@ QByteArray Ber::flatten() const
      return ret;
  }
  
@@ -11,10 +11,10 @@ $NetBSD: patch-src_ber.cpp,v 1.2 2021/04/07 12:28:15 markd Exp $
  {
      char fmt[2];
      va_list args;
-@@ -132,8 +132,8 @@ int Ber::printf(QString format, ...)
-     fmt[1] = '\0';
+@@ -119,8 +119,8 @@ int Ber::printf(QString format, ...)
  
-     int i = 0, ret = 0;
+     int i = 0;
+     int ret = 0;
 -    while (i < format.length()) {
 -        fmt[0] = format[i].toLatin1();
 +    while (format[i]) {
@@ -22,7 +22,7 @@ $NetBSD: patch-src_ber.cpp,v 1.2 2021/04/07 12:28:15 markd Exp $
          i++;
          switch (fmt[0]) {
          case 'b':
-@@ -229,7 +229,7 @@ int Ber::printf(QString format, ...)
+@@ -206,7 +206,7 @@ int Ber::printf(QString format, ...)
      return ret;
  }
  
@@ -31,10 +31,10 @@ $NetBSD: patch-src_ber.cpp,v 1.2 2021/04/07 12:28:15 markd Exp $
  {
      char fmt[2];
      va_list args;
-@@ -237,8 +237,8 @@ int Ber::scanf(QString format, ...)
-     fmt[1] = '\0';
+@@ -215,8 +215,8 @@ int Ber::scanf(QString format, ...)
  
-     int i = 0, ret = 0;
+     int i = 0;
+     int ret = 0;
 -    while (i < format.length()) {
 -        fmt[0] = format[i].toLatin1();
 +    while (format[i]) {
