@@ -1,10 +1,14 @@
-@comment $NetBSD: PLIST,v 1.6 2021/04/07 12:28:32 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/09/29 01:29:05 markd Exp $
 bin/konsole
 bin/konsoleprofile
-lib/libkdeinit5_konsole.so
-lib/libkonsoleprivate.so.20
+lib/kconf_update_bin/konsole_globalaccel
+lib/libkonsoleapp.so.1
+lib/libkonsoleapp.so.${PKGVERSION}
+lib/libkonsoleprivate.so.1
 lib/libkonsoleprivate.so.${PKGVERSION}
 qt5/plugins/konsolepart.so
+qt5/plugins/konsoleplugins/konsole_quickcommandsplugin.so
+qt5/plugins/konsoleplugins/konsole_sshmanagerplugin.so
 share/applications/org.kde.konsole.desktop
 share/doc/HTML/ca/konsole/draganddrop-contextmenu.png
 share/doc/HTML/ca/konsole/index.cache.bz2
@@ -35,9 +39,13 @@ share/doc/HTML/uk/konsole/index.cache.bz2
 share/doc/HTML/uk/konsole/index.docbook
 share/doc/HTML/zh_CN/konsole/index.cache.bz2
 share/doc/HTML/zh_CN/konsole/index.docbook
-share/khotkeys/konsole.khotkeys
+share/kconf_update/konsole_globalaccel.upd
+share/kio/servicemenus/konsolerun.desktop
 share/knotifications5/konsole.notifyrc
 share/knsrcfiles/konsole.knsrc
+share/konsole/1x2-terminals.json
+share/konsole/2x1-terminals.json
+share/konsole/2x2-terminals.json
 share/konsole/BlackOnLightYellow.colorscheme
 share/konsole/BlackOnRandomLight.colorscheme
 share/konsole/BlackOnWhite.colorscheme
@@ -54,12 +62,12 @@ share/konsole/default.keytab
 share/konsole/linux.keytab
 share/konsole/macos.keytab
 share/konsole/solaris.keytab
-share/kservices5/ServiceMenus/konsolehere.desktop
-share/kservices5/ServiceMenus/konsolerun.desktop
 share/kservices5/konsolepart.desktop
 share/kservicetypes5/terminalemulator.desktop
 share/locale/ar/LC_MESSAGES/konsole.mo
 share/locale/ast/LC_MESSAGES/konsole.mo
+share/locale/az/LC_MESSAGES/konsole.mo
+share/locale/be/LC_MESSAGES/konsole.mo
 share/locale/bg/LC_MESSAGES/konsole.mo
 share/locale/bs/LC_MESSAGES/konsole.mo
 share/locale/ca/LC_MESSAGES/konsole.mo
@@ -104,13 +112,18 @@ share/locale/pt/LC_MESSAGES/konsole.mo
 share/locale/pt_BR/LC_MESSAGES/konsole.mo
 share/locale/ro/LC_MESSAGES/konsole.mo
 share/locale/ru/LC_MESSAGES/konsole.mo
+share/locale/se/LC_MESSAGES/konsole.mo
 share/locale/sk/LC_MESSAGES/konsole.mo
 share/locale/sl/LC_MESSAGES/konsole.mo
+share/locale/sq/LC_MESSAGES/konsole.mo
 share/locale/sr/LC_MESSAGES/konsole.mo
 share/locale/sv/LC_MESSAGES/konsole.mo
+share/locale/ta/LC_MESSAGES/konsole.mo
+share/locale/tg/LC_MESSAGES/konsole.mo
 share/locale/tr/LC_MESSAGES/konsole.mo
 share/locale/ug/LC_MESSAGES/konsole.mo
 share/locale/uk/LC_MESSAGES/konsole.mo
+share/locale/vi/LC_MESSAGES/konsole.mo
 share/locale/wa/LC_MESSAGES/konsole.mo
 share/locale/zh_CN/LC_MESSAGES/konsole.mo
 share/locale/zh_TW/LC_MESSAGES/konsole.mo
