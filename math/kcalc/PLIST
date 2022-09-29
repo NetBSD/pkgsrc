@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2019/11/17 04:28:49 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/09/29 00:57:55 markd Exp $
 bin/kcalc
-lib/libkdeinit5_kcalc.so
 share/applications/org.kde.kcalc.desktop
 share/config.kcfg/kcalc.kcfg
+share/doc/HTML/ca/kcalc/commands.docbook
+share/doc/HTML/ca/kcalc/index.cache.bz2
+share/doc/HTML/ca/kcalc/index.docbook
 share/doc/HTML/de/kcalc/commands.docbook
 share/doc/HTML/de/kcalc/index.cache.bz2
 share/doc/HTML/de/kcalc/index.docbook
@@ -48,10 +50,10 @@ share/doc/HTML/sv/kcalc/index.docbook
 share/doc/HTML/uk/kcalc/commands.docbook
 share/doc/HTML/uk/kcalc/index.cache.bz2
 share/doc/HTML/uk/kcalc/index.docbook
-share/kcalc/scienceconstants.xml
 share/kconf_update/kcalcrc.upd
-share/kxmlgui5/kcalc/kcalcui.rc
 share/locale/ar/LC_MESSAGES/kcalc.mo
+share/locale/az/LC_MESSAGES/kcalc.mo
+share/locale/be/LC_MESSAGES/kcalc.mo
 share/locale/bg/LC_MESSAGES/kcalc.mo
 share/locale/bs/LC_MESSAGES/kcalc.mo
 share/locale/ca/LC_MESSAGES/kcalc.mo
@@ -95,10 +97,14 @@ share/locale/pt/LC_MESSAGES/kcalc.mo
 share/locale/pt_BR/LC_MESSAGES/kcalc.mo
 share/locale/ro/LC_MESSAGES/kcalc.mo
 share/locale/ru/LC_MESSAGES/kcalc.mo
+share/locale/se/LC_MESSAGES/kcalc.mo
 share/locale/sk/LC_MESSAGES/kcalc.mo
 share/locale/sl/LC_MESSAGES/kcalc.mo
+share/locale/sq/LC_MESSAGES/kcalc.mo
 share/locale/sr/LC_MESSAGES/kcalc.mo
 share/locale/sv/LC_MESSAGES/kcalc.mo
+share/locale/ta/LC_MESSAGES/kcalc.mo
+share/locale/tg/LC_MESSAGES/kcalc.mo
 share/locale/tr/LC_MESSAGES/kcalc.mo
 share/locale/ug/LC_MESSAGES/kcalc.mo
 share/locale/uk/LC_MESSAGES/kcalc.mo
