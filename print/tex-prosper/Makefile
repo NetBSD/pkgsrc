@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.19 2019/12/06 20:23:07 markd Exp $
+# $NetBSD: Makefile,v 1.20 2022/09/29 06:14:01 markd Exp $
 
 DISTNAME=	prosper
 PKGNAME=	tex-${DISTNAME}-1.5
 TEXLIVE_REV=	15878
 
 MAINTAINER=	nico@orgrim.net
-HOMEPAGE=	https://sourceforge.net/projects/prosper/
+HOMEPAGE=	https://ctan.org/pkg/prosper
 COMMENT=	LaTeX class for high quality slides
 LICENSE=	lppl-1.2
 
