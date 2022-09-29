@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.22 2022/09/11 12:51:31 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2022/09/29 09:24:00 adam Exp $
 
-DISTNAME=	fs-uae-3.0.5
-PKGREVISION=	7
+DISTNAME=	fs-uae-3.1.66
 CATEGORIES=	emulators
-MASTER_SITES=	https://fs-uae.net/stable/${PKGVERSION_NOREV}/
+MASTER_SITES=	https://fs-uae.net/files/FS-UAE/Stable/${PKGVERSION_NOREV}/
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	https://fs-uae.net/
-COMMENT=	FS-UAE Amiga Emulator
+COMMENT=	Amiga emulator
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=		c gnu++03
@@ -37,9 +37,7 @@ NOT_PAX_MPROTECT_SAFE+=	bin/fs-uae
 # This may produce unexpected results with long process names.
 BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
 
-.if ${OPSYS} == "Darwin"
-#OPENAL_CFLAGS="-framework OpenAL"
-.else
+.if ${OPSYS} != "Darwin"
 .include "../../audio/openal-soft/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
