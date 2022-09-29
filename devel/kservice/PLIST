@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2022/04/25 05:06:22 markd Exp $
+@comment $NetBSD: PLIST,v 1.11 2022/09/29 00:36:33 markd Exp $
 bin/kbuildsycoca5
 include/KF5/KService/KApplicationTrader
 include/KF5/KService/KAutostart
@@ -44,6 +44,8 @@ lib/libKF5Service.so.5
 lib/libKF5Service.so.${PKGVERSION}
 man/ca/man8/desktoptojson.8
 man/ca/man8/kbuildsycoca5.8
+man/ca@valencia/man8/desktoptojson.8
+man/ca@valencia/man8/kbuildsycoca5.8
 man/de/man8/desktoptojson.8
 man/de/man8/kbuildsycoca5.8
 man/es/man8/desktoptojson.8
