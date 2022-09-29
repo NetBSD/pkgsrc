@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.256 2022/06/13 09:35:44 wiz Exp $
+# $NetBSD: Makefile.common,v 1.257 2022/09/29 09:21:11 nros Exp $
 #
 # used by graphics/p5-PerlMagick/Makefile
 #
@@ -31,7 +31,6 @@ GNU_CONFIGURE=		yes
 # For things for which we do not specify an explicit dependency above, disable
 # so that we don't cause implicit "hidden" dependencies.
 CONFIGURE_ARGS+=	--without-dps
-CONFIGURE_ARGS+=	--without-fpx
 CONFIGURE_ARGS+=	--without-gvc
 CONFIGURE_ARGS+=	--without-jbig
 CONFIGURE_ARGS+=	--without-lqr

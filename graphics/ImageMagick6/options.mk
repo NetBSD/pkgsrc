@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.4 2021/02/26 12:48:29 nia Exp $
+# $NetBSD: options.mk,v 1.5 2022/09/29 09:21:11 nros Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.ImageMagick
-PKG_SUPPORTED_OPTIONS=		doc x11 jp2 djvu openexr wmf
+PKG_SUPPORTED_OPTIONS=		doc x11 jp2 djvu openexr wmf fpx
 PKG_SUGGESTED_OPTIONS=		doc x11 jp2
 PKG_OPTIONS_LEGACY_OPTS+=	jasper:jp2
 
@@ -49,4 +49,11 @@ CONFIGURE_ARGS+=	--without-openexr
 CONFIGURE_ARGS+=	--with-wmf
 .else
 CONFIGURE_ARGS+=	--without-wmf
+.endif
+
+.if !empty(PKG_OPTIONS:Mfpx)
+.include "../../graphics/libfpx/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-fpx
+.else
+CONFIGURE_ARGS+=	--without-fpx
 .endif
