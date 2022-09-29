@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.14 2022/05/13 15:00:04 jperkin Exp $
+$NetBSD: distinfo,v 1.15 2022/09/29 01:29:05 markd Exp $
 
-BLAKE2s (konsole-20.12.3.tar.xz) = 9ecfd4599123ffcf934020afeba6db4ee0130541241a01b36a184b2b128640bd
-SHA512 (konsole-20.12.3.tar.xz) = a48eaa0080b26369f5f163f3ae345bca7f35aa06d581ecc0bbeca54fee2e9b900a4b648f940a67f506ecb00dba971220f1c1c7a699efcbb6e27ee0932c27e37a
-Size (konsole-20.12.3.tar.xz) = 1250536 bytes
+BLAKE2s (konsole-22.08.1.tar.xz) = 9612c6a5ab4229df1fc2316cde9f06dd887f26ef913a4f5b17197c5aa72d3e84
+SHA512 (konsole-22.08.1.tar.xz) = 42a469c249f22908167396d44bfab6b335e77c31c00685b3c1757bfe72913ba93f3edb07d97570b44f4a30d82938f9bd3775211bf5d9f1252dfafe33a143d80a
+Size (konsole-22.08.1.tar.xz) = 1502288 bytes
 SHA1 (patch-src_ProcessInfo.cpp) = 6ca72a192f0fd852a2dcd1576715f2cb423af2bb
+SHA1 (patch-src_characters_CharacterColor.h) = 47e4d0d9660e4bc059c3416dd16a4b16c2f17f38
