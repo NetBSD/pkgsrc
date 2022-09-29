@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2022/04/25 08:17:33 markd Exp $
+$NetBSD: distinfo,v 1.14 2022/09/29 01:23:23 markd Exp $
 
-BLAKE2s (kjsembed-5.93.0.tar.xz) = 3d16c194a647001a55b4cebbaf22efab2122272b3d695ce3d5d948f2e4010c7b
-SHA512 (kjsembed-5.93.0.tar.xz) = e845272e3c886336644b9a831c40ceafb6fe007c3b6e7dab73e82d4d96728cecefe81327af5fbdbea1a9dd8ee9c4c8028c3789c773a31f04bd6567ee9abe9255
-Size (kjsembed-5.93.0.tar.xz) = 171888 bytes
+BLAKE2s (kjsembed-5.98.0.tar.xz) = 1e607b51ed0b035386512a07603928073e6b2d1e01cd16b5fd3ff2b095c79750
+SHA512 (kjsembed-5.98.0.tar.xz) = 7645a63f1772d4b3eeef41ce19cccdc0402162d8a0d4b2ad60096063059cdf08efe724fca684531c6650ff800ac76c7bcea1e2dd2a1203ea60e16f3719c3dbb0
+Size (kjsembed-5.98.0.tar.xz) = 172264 bytes
