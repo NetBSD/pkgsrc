@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22243 2022/09/28 20:16:42 leot Exp $
+$NetBSD: TODO,v 1.22244 2022/09/29 12:47:43 jperkin Exp $
 
 Suggested new packages
 ======================
@@ -1271,7 +1271,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o powerdns-mysql-4.4.3
 	o powerdns-odbc-4.4.3
 	o powerdns-pgsql-4.4.3
-	o powerdns-recursor-4.4.3
 	o powerpc-none-elf-binutils-2.36.1
 	o powerpc-none-elf-gcc-9.3.0
 	o powwow-1.2.22
