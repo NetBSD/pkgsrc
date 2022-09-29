@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2022/04/25 06:42:20 markd Exp $
+@comment $NetBSD: PLIST,v 1.12 2022/09/29 19:32:48 markd Exp $
 include/KF5/KFileMetaData/KFileMetaData/EmbeddedImageData
 include/KF5/KFileMetaData/KFileMetaData/ExtractionResult
 include/KF5/KFileMetaData/KFileMetaData/Extractor
@@ -32,6 +32,7 @@ include/KF5/KFileMetaData/kfilemetadata/writedata.h
 include/KF5/KFileMetaData/kfilemetadata/writer.h
 include/KF5/KFileMetaData/kfilemetadata/writercollection.h
 include/KF5/KFileMetaData/kfilemetadata/writerplugin.h
+include/KF5/KFileMetaData/kfilemetadata_version.h
 lib/cmake/KF5FileMetaData/KF5FileMetaDataConfig.cmake
 lib/cmake/KF5FileMetaData/KF5FileMetaDataConfigVersion.cmake
 lib/cmake/KF5FileMetaData/KF5FileMetaDataTargets-noconfig.cmake
@@ -48,6 +49,7 @@ qt5/plugins/kf5/kfilemetadata/kfilemetadata_odfextractor.so
 qt5/plugins/kf5/kfilemetadata/kfilemetadata_office2007extractor.so
 qt5/plugins/kf5/kfilemetadata/kfilemetadata_officeextractor.so
 qt5/plugins/kf5/kfilemetadata/kfilemetadata_plaintextextractor.so
+qt5/plugins/kf5/kfilemetadata/kfilemetadata_pngextractor.so
 qt5/plugins/kf5/kfilemetadata/kfilemetadata_poextractor.so
 qt5/plugins/kf5/kfilemetadata/kfilemetadata_popplerextractor.so
 qt5/plugins/kf5/kfilemetadata/kfilemetadata_postscriptdscextractor.so
@@ -97,6 +99,7 @@ share/locale/sr@ijekavian/LC_MESSAGES/kfilemetadata5.mo
 share/locale/sr@ijekavianlatin/LC_MESSAGES/kfilemetadata5.mo
 share/locale/sr@latin/LC_MESSAGES/kfilemetadata5.mo
 share/locale/sv/LC_MESSAGES/kfilemetadata5.mo
+share/locale/ta/LC_MESSAGES/kfilemetadata5.mo
 share/locale/tg/LC_MESSAGES/kfilemetadata5.mo
 share/locale/tr/LC_MESSAGES/kfilemetadata5.mo
 share/locale/uk/LC_MESSAGES/kfilemetadata5.mo
