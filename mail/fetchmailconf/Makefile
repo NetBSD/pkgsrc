@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.117 2022/06/30 11:18:34 nia Exp $
+# $NetBSD: Makefile,v 1.118 2022/09/29 19:27:32 triaxx Exp $
 
-DISTNAME=	fetchmail-6.4.30
+DISTNAME=	fetchmail-6.4.33
 PKGNAME=	${DISTNAME:S/fetchmail/fetchmailconf/}
-PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fetchmail/}
 EXTRACT_SUFX=	.tar.xz
@@ -23,6 +22,7 @@ PATCHDIR=		${.CURDIR}/../../mail/fetchmail/patches
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-hesiod
+CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_PREFIX.openssl}
 LDFLAGS+=		${CFLAGS}
 USE_TOOLS+=		msgfmt tbl
 USE_LANGUAGES+=		c
