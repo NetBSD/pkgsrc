@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2021/04/07 12:28:20 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/09/29 00:47:30 markd Exp $
 bin/knavalbattle
 share/applications/org.kde.knavalbattle.desktop
+share/doc/HTML/ca/knavalbattle/gameboard.png
 share/doc/HTML/ca/knavalbattle/index.cache.bz2
 share/doc/HTML/ca/knavalbattle/index.docbook
 share/doc/HTML/de/knavalbattle/index.cache.bz2
@@ -39,16 +40,14 @@ share/icons/hicolor/22x22/apps/knavalbattle.png
 share/icons/hicolor/32x32/apps/knavalbattle.png
 share/icons/hicolor/48x48/apps/knavalbattle.png
 share/icons/hicolor/64x64/apps/knavalbattle.png
-share/kconf_update/knavalbattle.upd
 share/knavalbattle/pictures/default.desktop
 share/knavalbattle/pictures/default_theme.svgz
 share/knavalbattle/sounds/ship-player-shoot-water.ogg
 share/knavalbattle/sounds/ship-player1-shoot.ogg
 share/knavalbattle/sounds/ship-player2-shoot.ogg
 share/knavalbattle/sounds/ship-sink.ogg
-share/kservices5/knavalbattle.protocol
-share/kxmlgui5/knavalbattle/knavalbattleui.rc
 share/locale/ar/LC_MESSAGES/knavalbattle.mo
+share/locale/be/LC_MESSAGES/knavalbattle.mo
 share/locale/bg/LC_MESSAGES/knavalbattle.mo
 share/locale/bs/LC_MESSAGES/knavalbattle.mo
 share/locale/ca/LC_MESSAGES/knavalbattle.mo
@@ -92,13 +91,18 @@ share/locale/pt/LC_MESSAGES/knavalbattle.mo
 share/locale/pt_BR/LC_MESSAGES/knavalbattle.mo
 share/locale/ro/LC_MESSAGES/knavalbattle.mo
 share/locale/ru/LC_MESSAGES/knavalbattle.mo
+share/locale/se/LC_MESSAGES/knavalbattle.mo
 share/locale/sk/LC_MESSAGES/knavalbattle.mo
 share/locale/sl/LC_MESSAGES/knavalbattle.mo
+share/locale/sq/LC_MESSAGES/knavalbattle.mo
 share/locale/sr/LC_MESSAGES/knavalbattle.mo
 share/locale/sv/LC_MESSAGES/knavalbattle.mo
+share/locale/ta/LC_MESSAGES/knavalbattle.mo
+share/locale/tg/LC_MESSAGES/knavalbattle.mo
 share/locale/tr/LC_MESSAGES/knavalbattle.mo
 share/locale/ug/LC_MESSAGES/knavalbattle.mo
 share/locale/uk/LC_MESSAGES/knavalbattle.mo
+share/locale/vi/LC_MESSAGES/knavalbattle.mo
 share/locale/zh_CN/LC_MESSAGES/knavalbattle.mo
 share/locale/zh_TW/LC_MESSAGES/knavalbattle.mo
 share/metainfo/org.kde.knavalbattle.appdata.xml

@@ -1,7 +1,11 @@
-@comment $NetBSD: PLIST,v 1.5 2021/04/07 12:28:21 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/09/29 00:47:31 markd Exp $
 bin/ksnakeduel
 share/applications/org.kde.ksnakeduel.desktop
 share/config.kcfg/ksnakeduel.kcfg
+share/doc/HTML/ca/ksnakeduel/index.cache.bz2
+share/doc/HTML/ca/ksnakeduel/index.docbook
+share/doc/HTML/ca/ksnakeduel/settings-general.png
+share/doc/HTML/ca/ksnakeduel/settings-theme.png
 share/doc/HTML/de/ksnakeduel/index.cache.bz2
 share/doc/HTML/de/ksnakeduel/index.docbook
 share/doc/HTML/de/ksnakeduel/settings-general.png
@@ -45,7 +49,9 @@ share/ksnakeduel/themes/default.png
 share/ksnakeduel/themes/default.svgz
 share/ksnakeduel/themes/neon.desktop
 share/ksnakeduel/themes/neon.png
-share/ksnakeduel/themes/neon.svg
+share/ksnakeduel/themes/neon.svgz
+share/locale/ar/LC_MESSAGES/ksnakeduel.mo
+share/locale/bg/LC_MESSAGES/ksnakeduel.mo
 share/locale/bs/LC_MESSAGES/ksnakeduel.mo
 share/locale/ca/LC_MESSAGES/ksnakeduel.mo
 share/locale/ca@valencia/LC_MESSAGES/ksnakeduel.mo
@@ -85,6 +91,7 @@ share/locale/ro/LC_MESSAGES/ksnakeduel.mo
 share/locale/ru/LC_MESSAGES/ksnakeduel.mo
 share/locale/sk/LC_MESSAGES/ksnakeduel.mo
 share/locale/sl/LC_MESSAGES/ksnakeduel.mo
+share/locale/sq/LC_MESSAGES/ksnakeduel.mo
 share/locale/sr/LC_MESSAGES/ksnakeduel.mo
 share/locale/sv/LC_MESSAGES/ksnakeduel.mo
 share/locale/tr/LC_MESSAGES/ksnakeduel.mo

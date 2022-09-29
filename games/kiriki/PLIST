@@ -1,6 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 2020/06/09 11:56:08 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/09/29 00:47:29 markd Exp $
 bin/kiriki
 share/applications/org.kde.kiriki.desktop
+share/doc/HTML/ca/kiriki/configuration.png
+share/doc/HTML/ca/kiriki/gameboard.png
+share/doc/HTML/ca/kiriki/index.cache.bz2
+share/doc/HTML/ca/kiriki/index.docbook
 share/doc/HTML/de/kiriki/index.cache.bz2
 share/doc/HTML/de/kiriki/index.docbook
 share/doc/HTML/en/kiriki/configuration.png
@@ -42,8 +46,9 @@ share/kiriki/images/dice-4.png
 share/kiriki/images/dice-5.png
 share/kiriki/images/dice-6.png
 share/kiriki/images/dice-none.png
-share/kxmlgui5/kiriki/kirikiui.rc
 share/locale/ar/LC_MESSAGES/kiriki.mo
+share/locale/be/LC_MESSAGES/kiriki.mo
+share/locale/bg/LC_MESSAGES/kiriki.mo
 share/locale/bs/LC_MESSAGES/kiriki.mo
 share/locale/ca/LC_MESSAGES/kiriki.mo
 share/locale/ca@valencia/LC_MESSAGES/kiriki.mo
@@ -82,6 +87,7 @@ share/locale/pt/LC_MESSAGES/kiriki.mo
 share/locale/pt_BR/LC_MESSAGES/kiriki.mo
 share/locale/ro/LC_MESSAGES/kiriki.mo
 share/locale/ru/LC_MESSAGES/kiriki.mo
+share/locale/se/LC_MESSAGES/kiriki.mo
 share/locale/sk/LC_MESSAGES/kiriki.mo
 share/locale/sl/LC_MESSAGES/kiriki.mo
 share/locale/sr/LC_MESSAGES/kiriki.mo

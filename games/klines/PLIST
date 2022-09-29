@@ -1,7 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2021/04/07 12:28:20 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/09/29 00:47:29 markd Exp $
 bin/klines
 share/applications/org.kde.klines.desktop
 share/config.kcfg/klines.kcfg
+share/doc/HTML/ca/klines/gamescreen.png
+share/doc/HTML/ca/klines/index.cache.bz2
+share/doc/HTML/ca/klines/index.docbook
 share/doc/HTML/de/klines/gamescreen.png
 share/doc/HTML/de/klines/index.cache.bz2
 share/doc/HTML/de/klines/index.docbook
@@ -49,6 +52,7 @@ share/klines/themes/pool.desktop
 share/klines/themes/pool.png
 share/klines/themes/pool.svgz
 share/locale/ar/LC_MESSAGES/klines.mo
+share/locale/be/LC_MESSAGES/klines.mo
 share/locale/bg/LC_MESSAGES/klines.mo
 share/locale/bs/LC_MESSAGES/klines.mo
 share/locale/ca/LC_MESSAGES/klines.mo
@@ -92,10 +96,14 @@ share/locale/pt/LC_MESSAGES/klines.mo
 share/locale/pt_BR/LC_MESSAGES/klines.mo
 share/locale/ro/LC_MESSAGES/klines.mo
 share/locale/ru/LC_MESSAGES/klines.mo
+share/locale/se/LC_MESSAGES/klines.mo
 share/locale/sk/LC_MESSAGES/klines.mo
 share/locale/sl/LC_MESSAGES/klines.mo
+share/locale/sq/LC_MESSAGES/klines.mo
 share/locale/sr/LC_MESSAGES/klines.mo
 share/locale/sv/LC_MESSAGES/klines.mo
+share/locale/ta/LC_MESSAGES/klines.mo
+share/locale/tg/LC_MESSAGES/klines.mo
 share/locale/tr/LC_MESSAGES/klines.mo
 share/locale/ug/LC_MESSAGES/klines.mo
 share/locale/uk/LC_MESSAGES/klines.mo
