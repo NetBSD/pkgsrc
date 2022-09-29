@@ -1,4 +1,4 @@
-# $NetBSD: kf5.mk,v 1.13 2022/04/25 03:24:33 markd Exp $
+# $NetBSD: kf5.mk,v 1.14 2022/09/29 00:22:13 markd Exp $
 # used by archivers/karchive/Makefile
 # used by devel/kbookmarks/Makefile
 # used by devel/kcmutils/Makefile
@@ -78,7 +78,7 @@
 # used by x11/plasma-framework/Makefile
 # used by x11/qqc2-desktop-style/Makefile
 
-KF5VER=		5.93.0
+KF5VER=		5.98.0
 CATEGORIES+=	kde
 MASTER_SITES=	${MASTER_SITE_KDE:=frameworks/${KF5VER:R}/}
 EXTRACT_SUFX=	.tar.xz
