@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:18:23 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/09/29 10:08:14 adam Exp $
 
-BLAKE2s (distro-1.6.0.tar.gz) = da11aebf7b45e0ff20707f415620d7befe92ac3020b869a4fc4a526b3499f44f
-SHA512 (distro-1.6.0.tar.gz) = d30334ed1137c54ddc70e041b75be905b7e13398483d0d92117eca0407d2a7b60424d96fd7af885a2e3ea3676b1aef620e91598a53309ae0da12a360d57ac013
-Size (distro-1.6.0.tar.gz) = 53518 bytes
+BLAKE2s (distro-1.7.0.tar.gz) = 32bd67ba76bc5fc7f553f488989c5b328565be728e5e992b3de2fad2df45fcad
+SHA512 (distro-1.7.0.tar.gz) = 14516ecab33ee8c57c35a8279eb515fd699031fabac7d8886092ea98696797d55503179870aeb513a85e1a66c7e69f2f60bb6ea9fc935be975cb5135e1917ecc
+Size (distro-1.7.0.tar.gz) = 58164 bytes
