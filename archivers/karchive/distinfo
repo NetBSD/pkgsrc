@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2022/04/25 03:28:33 markd Exp $
+$NetBSD: distinfo,v 1.17 2022/09/29 00:24:04 markd Exp $
 
-BLAKE2s (karchive-5.93.0.tar.xz) = 64a419c25514bf724b8521ce4a979e57a6786401751759d07785588307845d69
-SHA512 (karchive-5.93.0.tar.xz) = 16f2fcbba6d25ef3dafe28ff16f6ef8594a265c07fbbdf27c7899107fbf577e5776b04c725d3681f22e2974a8036bd5c3ae829c2601392f3ff525874793403bf
-Size (karchive-5.93.0.tar.xz) = 986312 bytes
+BLAKE2s (karchive-5.98.0.tar.xz) = 0b8c9b278afd2f3191f1e6eeb38a9a9994a27ec34f092e159901c5775de83cd0
+SHA512 (karchive-5.98.0.tar.xz) = 98892391845882dc1c68763bb125249cee543a47eef522c86209fb5c16b643112e8dda4468fd3dbeeda4c284aed24ab9232a1ade6293bc987e25a60af70455d2
+Size (karchive-5.98.0.tar.xz) = 986608 bytes
