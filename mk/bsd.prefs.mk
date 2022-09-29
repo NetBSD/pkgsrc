@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.427 2022/09/27 08:46:32 jperkin Exp $
+# $NetBSD: bsd.prefs.mk,v 1.428 2022/09/29 02:25:16 charlotte Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -171,10 +171,6 @@ LOWER_VENDOR?=		ibm
 
 .elif ${OPSYS} == "BSDOS"
 LOWER_OPSYS?=		bsdi
-
-.elif ${OPSYS} == "Bitrig"
-LOWER_OPSYS?= 		bitrig
-LOWER_VENDOR?= 		unknown
 
 .elif ${OPSYS} == "Cygwin"
 LOWER_OPSYS?=		cygwin
