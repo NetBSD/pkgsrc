@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4744 2022/09/29 19:27:09 triaxx Exp $
+$NetBSD: CHANGES-2022,v 1.4745 2022/09/29 19:27:48 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7181,3 +7181,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated multimedia/libaom to 3.5.0 [ryoon 2022-09-29]
 	Updated mail/roundcube-plugin-carddav to 4.4.3 [triaxx 2022-09-29]
 	Updated mail/fetchmail to 6.4.33 [triaxx 2022-09-29]
+	Updated mail/fetchmailconf to 6.4.33 [triaxx 2022-09-29]
