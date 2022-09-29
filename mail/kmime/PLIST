@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/04/07 12:28:25 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/09/29 00:56:13 markd Exp $
 include/KF5/KMime/KMime/Content
 include/KF5/KMime/KMime/ContentIndex
 include/KF5/KMime/KMime/DateFormatter
@@ -21,16 +21,17 @@ include/KF5/KMime/kmime/kmime_message.h
 include/KF5/KMime/kmime/kmime_newsarticle.h
 include/KF5/KMime/kmime/kmime_types.h
 include/KF5/KMime/kmime/kmime_util.h
-include/KF5/kmime_version.h
+include/KF5/KMime/kmime_version.h
 lib/cmake/KF5Mime/KF5MimeConfig.cmake
 lib/cmake/KF5Mime/KF5MimeConfigVersion.cmake
 lib/cmake/KF5Mime/KF5MimeTargets-noconfig.cmake
 lib/cmake/KF5Mime/KF5MimeTargets.cmake
 lib/libKF5Mime.so
 lib/libKF5Mime.so.5
-lib/libKF5Mime.so.5.16.3
+lib/libKF5Mime.so.5.21.1
 qt5/mkspecs/modules/qt_KMime.pri
 share/locale/ar/LC_MESSAGES/libkmime5.mo
+share/locale/be/LC_MESSAGES/libkmime5.mo
 share/locale/bg/LC_MESSAGES/libkmime5.mo
 share/locale/bs/LC_MESSAGES/libkmime5.mo
 share/locale/ca/LC_MESSAGES/libkmime5.mo
@@ -70,10 +71,13 @@ share/locale/pt/LC_MESSAGES/libkmime5.mo
 share/locale/pt_BR/LC_MESSAGES/libkmime5.mo
 share/locale/ro/LC_MESSAGES/libkmime5.mo
 share/locale/ru/LC_MESSAGES/libkmime5.mo
+share/locale/se/LC_MESSAGES/libkmime5.mo
 share/locale/sk/LC_MESSAGES/libkmime5.mo
 share/locale/sl/LC_MESSAGES/libkmime5.mo
+share/locale/sq/LC_MESSAGES/libkmime5.mo
 share/locale/sr/LC_MESSAGES/libkmime5.mo
 share/locale/sv/LC_MESSAGES/libkmime5.mo
+share/locale/ta/LC_MESSAGES/libkmime5.mo
 share/locale/tr/LC_MESSAGES/libkmime5.mo
 share/locale/ug/LC_MESSAGES/libkmime5.mo
 share/locale/uk/LC_MESSAGES/libkmime5.mo

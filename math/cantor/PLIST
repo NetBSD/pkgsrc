@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2021/04/07 12:28:26 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2022/09/29 00:57:54 markd Exp $
 bin/cantor
 bin/cantor_pythonserver
 bin/cantor_scripteditor
@@ -57,11 +57,12 @@ qt5/plugins/cantor/backends/cantor_pythonbackend.so
 qt5/plugins/cantor/backends/cantor_qalculatebackend.so
 qt5/plugins/cantor/backends/cantor_sagebackend.so
 qt5/plugins/cantor/backends/cantor_scilabbackend.so
+qt5/plugins/cantor/panels/cantor_documentationpanelplugin.so
 qt5/plugins/cantor/panels/cantor_filebrowserpanelplugin.so
 qt5/plugins/cantor/panels/cantor_helppanelplugin.so
 qt5/plugins/cantor/panels/cantor_tocpanelplugin.so
 qt5/plugins/cantor/panels/cantor_variablemanagerplugin.so
-qt5/plugins/libcantorpart.so
+qt5/plugins/kf5/parts/cantorpart.so
 share/applications/org.kde.cantor.desktop
 share/cantor/latex/preview.sty
 share/cantor/maximabackend/cantor-initmaxima.lisp
@@ -77,7 +78,7 @@ share/config.kcfg/cantor.kcfg
 share/config.kcfg/cantor_libs.kcfg
 share/config.kcfg/kalgebrabackend.kcfg
 share/config.kcfg/maximabackend.kcfg
-share/config.kcfg/octavebackend.kcfg
+share/config.kcfg/octavebackend.kcfg.in
 share/config.kcfg/pythonbackend.kcfg
 share/config.kcfg/qalculatebackend.kcfg
 share/config.kcfg/sagebackend.kcfg
@@ -163,6 +164,7 @@ share/icons/hicolor/48x48/apps/rbackend.png
 share/icons/hicolor/48x48/apps/sagebackend.png
 share/icons/hicolor/48x48/apps/scilabbackend.png
 share/icons/hicolor/64x64/apps/cantor.png
+share/knsrcfiles/cantor-documentation.knsrc
 share/knsrcfiles/cantor.knsrc
 share/knsrcfiles/cantor_kalgebra.knsrc
 share/knsrcfiles/cantor_maxima.knsrc
@@ -187,6 +189,8 @@ share/kxmlgui5/cantor/cantor_runscript_assistant.rc
 share/kxmlgui5/cantor/cantor_scripteditor.rc
 share/kxmlgui5/cantor/cantor_shell.rc
 share/kxmlgui5/cantor/cantor_solve_assistant.rc
+share/locale/ar/LC_MESSAGES/cantor.mo
+share/locale/bg/LC_MESSAGES/cantor.mo
 share/locale/bs/LC_MESSAGES/cantor.mo
 share/locale/ca/LC_MESSAGES/cantor.mo
 share/locale/ca@valencia/LC_MESSAGES/cantor.mo
@@ -233,3 +237,4 @@ share/locale/uk/LC_MESSAGES/cantor.mo
 share/locale/zh_CN/LC_MESSAGES/cantor.mo
 share/locale/zh_TW/LC_MESSAGES/cantor.mo
 share/metainfo/org.kde.cantor.appdata.xml
+share/mime/packages/cantor.xml
