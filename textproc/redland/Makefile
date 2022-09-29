@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2022/06/28 11:36:49 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2022/09/29 05:42:36 markd Exp $
 
 DISTNAME=	redland-1.0.17
 PKGREVISION=	33
@@ -6,7 +6,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	http://download.librdf.org/source/
 
 MAINTAINER=	markd@NetBSD.org
-HOMEPAGE=	http://librdf.org/
+HOMEPAGE=	https://librdf.org/
 COMMENT=	Libraries supporting the Resource Description Framework (RDF)
 LICENSE=	gnu-lgpl-v2.1 OR apache-2.0
 
