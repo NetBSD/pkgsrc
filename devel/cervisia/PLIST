@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2021/04/07 12:28:15 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/09/29 00:38:15 markd Exp $
 bin/cervisia
 bin/cvsaskpass
 bin/cvsservice5
@@ -133,6 +133,10 @@ share/kxmlgui5/cervisia/cervisiashellui.rc
 share/kxmlgui5/cervisiapart/cervisiaui.rc
 share/locale/ar/LC_MESSAGES/cervisia.mo
 share/locale/ar/LC_MESSAGES/cvsservice.mo
+share/locale/be/LC_MESSAGES/cervisia.mo
+share/locale/be/LC_MESSAGES/cvsservice.mo
+share/locale/bg/LC_MESSAGES/cervisia.mo
+share/locale/bg/LC_MESSAGES/cvsservice.mo
 share/locale/bs/LC_MESSAGES/cervisia.mo
 share/locale/bs/LC_MESSAGES/cvsservice.mo
 share/locale/ca/LC_MESSAGES/cervisia.mo
@@ -211,12 +215,20 @@ share/locale/ro/LC_MESSAGES/cervisia.mo
 share/locale/ro/LC_MESSAGES/cvsservice.mo
 share/locale/ru/LC_MESSAGES/cervisia.mo
 share/locale/ru/LC_MESSAGES/cvsservice.mo
+share/locale/se/LC_MESSAGES/cervisia.mo
+share/locale/se/LC_MESSAGES/cvsservice.mo
 share/locale/sk/LC_MESSAGES/cervisia.mo
 share/locale/sk/LC_MESSAGES/cvsservice.mo
 share/locale/sl/LC_MESSAGES/cervisia.mo
 share/locale/sl/LC_MESSAGES/cvsservice.mo
+share/locale/sq/LC_MESSAGES/cervisia.mo
+share/locale/sq/LC_MESSAGES/cvsservice.mo
 share/locale/sv/LC_MESSAGES/cervisia.mo
 share/locale/sv/LC_MESSAGES/cvsservice.mo
+share/locale/ta/LC_MESSAGES/cervisia.mo
+share/locale/ta/LC_MESSAGES/cvsservice.mo
+share/locale/tg/LC_MESSAGES/cervisia.mo
+share/locale/tg/LC_MESSAGES/cvsservice.mo
 share/locale/tr/LC_MESSAGES/cervisia.mo
 share/locale/tr/LC_MESSAGES/cvsservice.mo
 share/locale/ug/LC_MESSAGES/cervisia.mo
