@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2021/10/26 10:59:09 nia Exp $
+$NetBSD: distinfo,v 1.19 2022/09/29 01:03:51 markd Exp $
 
-BLAKE2s (kgeography-20.12.3.tar.xz) = 8ece08757b9f0a5d946f97b5f96ca5f3fc83289dfca497a1ededdd80cbd2c619
-SHA512 (kgeography-20.12.3.tar.xz) = b77f334c063364608875f783795b362aefd0360af1e06f6a3a2eb8047ab3f84a6853bde23e76e38f3f4ca5c348d358551af79fb8290e26d9d6615752df9746ab
-Size (kgeography-20.12.3.tar.xz) = 10764016 bytes
+BLAKE2s (kgeography-22.08.1.tar.xz) = ed6f2db48c3dffbdb767793b98fd8f298352de87693b7a7085160a07408453cc
+SHA512 (kgeography-22.08.1.tar.xz) = fd5f845b67277ebf106f22f47ebb945d020cf177e02052a508df9e27d6aae086b44ee31213df6c65957a874d4ae5766a029f8611b6cdb798e23c55d271eae6c5
+Size (kgeography-22.08.1.tar.xz) = 11085312 bytes

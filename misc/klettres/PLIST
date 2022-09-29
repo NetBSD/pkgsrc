@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2021/04/07 12:28:27 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/09/29 01:03:52 markd Exp $
 bin/klettres
 share/applications/org.kde.klettres.desktop
 share/config.kcfg/klettres.kcfg
@@ -1740,6 +1740,36 @@ share/klettres/nl/syllab/ad-6.ogg
 share/klettres/nl/syllab/ad-7.ogg
 share/klettres/nl/syllab/ad-8.ogg
 share/klettres/nl/syllab/ad-9.ogg
+share/klettres/nn/alpha/U0061.opus
+share/klettres/nn/alpha/U0062.opus
+share/klettres/nn/alpha/U0063.opus
+share/klettres/nn/alpha/U0064.opus
+share/klettres/nn/alpha/U0065.opus
+share/klettres/nn/alpha/U0066.opus
+share/klettres/nn/alpha/U0067.opus
+share/klettres/nn/alpha/U0068.opus
+share/klettres/nn/alpha/U0069.opus
+share/klettres/nn/alpha/U006A.opus
+share/klettres/nn/alpha/U006B.opus
+share/klettres/nn/alpha/U006C.opus
+share/klettres/nn/alpha/U006D.opus
+share/klettres/nn/alpha/U006E.opus
+share/klettres/nn/alpha/U006F.opus
+share/klettres/nn/alpha/U0070.opus
+share/klettres/nn/alpha/U0071.opus
+share/klettres/nn/alpha/U0072.opus
+share/klettres/nn/alpha/U0073.opus
+share/klettres/nn/alpha/U0074.opus
+share/klettres/nn/alpha/U0075.opus
+share/klettres/nn/alpha/U0076.opus
+share/klettres/nn/alpha/U0077.opus
+share/klettres/nn/alpha/U0078.opus
+share/klettres/nn/alpha/U0079.opus
+share/klettres/nn/alpha/U007A.opus
+share/klettres/nn/alpha/U00E5.opus
+share/klettres/nn/alpha/U00E6.opus
+share/klettres/nn/alpha/U00F8.opus
+share/klettres/nn/sounds.xml
 share/klettres/pics/aqua/klettres_aqua.svg
 share/klettres/pics/desert/klettres_desert.svg
 share/klettres/pics/kids/klettres_kids.svg
@@ -2044,6 +2074,7 @@ share/klettres/uk/syllab/zyk.ogg
 share/knsrcfiles/klettres.knsrc
 share/kxmlgui5/klettres/klettresui.rc
 share/locale/ar/LC_MESSAGES/klettres.mo
+share/locale/be/LC_MESSAGES/klettres.mo
 share/locale/bg/LC_MESSAGES/klettres.mo
 share/locale/bs/LC_MESSAGES/klettres.mo
 share/locale/ca/LC_MESSAGES/klettres.mo
@@ -2072,6 +2103,7 @@ share/locale/it/LC_MESSAGES/klettres.mo
 share/locale/ja/LC_MESSAGES/klettres.mo
 share/locale/kk/LC_MESSAGES/klettres.mo
 share/locale/km/LC_MESSAGES/klettres.mo
+share/locale/ko/LC_MESSAGES/klettres.mo
 share/locale/lt/LC_MESSAGES/klettres.mo
 share/locale/lv/LC_MESSAGES/klettres.mo
 share/locale/ml/LC_MESSAGES/klettres.mo
@@ -2086,12 +2118,17 @@ share/locale/pt/LC_MESSAGES/klettres.mo
 share/locale/pt_BR/LC_MESSAGES/klettres.mo
 share/locale/ro/LC_MESSAGES/klettres.mo
 share/locale/ru/LC_MESSAGES/klettres.mo
+share/locale/se/LC_MESSAGES/klettres.mo
 share/locale/sk/LC_MESSAGES/klettres.mo
 share/locale/sl/LC_MESSAGES/klettres.mo
+share/locale/sq/LC_MESSAGES/klettres.mo
 share/locale/sv/LC_MESSAGES/klettres.mo
+share/locale/ta/LC_MESSAGES/klettres.mo
+share/locale/tg/LC_MESSAGES/klettres.mo
 share/locale/tr/LC_MESSAGES/klettres.mo
 share/locale/ug/LC_MESSAGES/klettres.mo
 share/locale/uk/LC_MESSAGES/klettres.mo
+share/locale/vi/LC_MESSAGES/klettres.mo
 share/locale/wa/LC_MESSAGES/klettres.mo
 share/locale/zh_CN/LC_MESSAGES/klettres.mo
 share/locale/zh_TW/LC_MESSAGES/klettres.mo

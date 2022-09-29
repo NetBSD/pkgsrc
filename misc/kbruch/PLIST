@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/04/07 12:28:26 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/09/29 01:03:51 markd Exp $
 bin/kbruch
 man/ca/man1/kbruch.1
 man/de/man1/kbruch.1
@@ -104,6 +104,19 @@ share/doc/HTML/pt_BR/kbruch/percentage.png
 share/doc/HTML/pt_BR/kbruch/reduced.png
 share/doc/HTML/pt_BR/kbruch/settings.png
 share/doc/HTML/pt_BR/kbruch/statistics.png
+share/doc/HTML/ru/kbruch/checked.png
+share/doc/HTML/ru/kbruch/compare.png
+share/doc/HTML/ru/kbruch/convert.png
+share/doc/HTML/ru/kbruch/factorize.png
+share/doc/HTML/ru/kbruch/gui_main.png
+share/doc/HTML/ru/kbruch/gui_mode.png
+share/doc/HTML/ru/kbruch/index.cache.bz2
+share/doc/HTML/ru/kbruch/index.docbook
+share/doc/HTML/ru/kbruch/learning.png
+share/doc/HTML/ru/kbruch/percentage.png
+share/doc/HTML/ru/kbruch/reduced.png
+share/doc/HTML/ru/kbruch/settings.png
+share/doc/HTML/ru/kbruch/statistics.png
 share/doc/HTML/sv/kbruch/checked.png
 share/doc/HTML/sv/kbruch/compare.png
 share/doc/HTML/sv/kbruch/convert.png
@@ -150,6 +163,7 @@ share/kxmlgui5/kbruch/AppMenuWidgetui.rc
 share/kxmlgui5/kbruch/FractionRingWidgetui.rc
 share/kxmlgui5/kbruch/kbruchui.rc
 share/locale/ar/LC_MESSAGES/kbruch.mo
+share/locale/be/LC_MESSAGES/kbruch.mo
 share/locale/bg/LC_MESSAGES/kbruch.mo
 share/locale/bs/LC_MESSAGES/kbruch.mo
 share/locale/ca/LC_MESSAGES/kbruch.mo
@@ -177,6 +191,7 @@ share/locale/it/LC_MESSAGES/kbruch.mo
 share/locale/ja/LC_MESSAGES/kbruch.mo
 share/locale/kk/LC_MESSAGES/kbruch.mo
 share/locale/km/LC_MESSAGES/kbruch.mo
+share/locale/ko/LC_MESSAGES/kbruch.mo
 share/locale/lt/LC_MESSAGES/kbruch.mo
 share/locale/lv/LC_MESSAGES/kbruch.mo
 share/locale/ml/LC_MESSAGES/kbruch.mo
@@ -191,9 +206,13 @@ share/locale/pt/LC_MESSAGES/kbruch.mo
 share/locale/pt_BR/LC_MESSAGES/kbruch.mo
 share/locale/ro/LC_MESSAGES/kbruch.mo
 share/locale/ru/LC_MESSAGES/kbruch.mo
+share/locale/se/LC_MESSAGES/kbruch.mo
 share/locale/sk/LC_MESSAGES/kbruch.mo
 share/locale/sl/LC_MESSAGES/kbruch.mo
+share/locale/sq/LC_MESSAGES/kbruch.mo
 share/locale/sv/LC_MESSAGES/kbruch.mo
+share/locale/ta/LC_MESSAGES/kbruch.mo
+share/locale/tg/LC_MESSAGES/kbruch.mo
 share/locale/tr/LC_MESSAGES/kbruch.mo
 share/locale/ug/LC_MESSAGES/kbruch.mo
 share/locale/uk/LC_MESSAGES/kbruch.mo
