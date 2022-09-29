@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2020/05/10 04:32:07 markd Exp $
+# $NetBSD: Makefile,v 1.18 2022/09/29 06:16:00 markd Exp $
 
 DISTNAME=	xmltex
 PKGNAME=	tex-${DISTNAME}-1.9
@@ -6,7 +6,7 @@ PKGREVISION=	11
 TEXLIVE_REV=	35755
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://www.dcarlisle.demon.co.uk/xmltex/manual.html
+HOMEPAGE=	https://ctan.org/pkg/xmltex
 COMMENT=	Non-validating XML parser implemented in TeX
 LICENSE=	lppl-1.3c
 
