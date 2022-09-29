@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.8 2021/04/07 12:28:30 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2022/09/29 01:16:44 markd Exp $
 bin/filelight
 share/applications/org.kde.filelight.desktop
+share/doc/HTML/ca/filelight/index.cache.bz2
+share/doc/HTML/ca/filelight/index.docbook
 share/doc/HTML/de/filelight/config_appear.png
 share/doc/HTML/de/filelight/config_scan.png
 share/doc/HTML/de/filelight/index.cache.bz2
@@ -49,7 +51,9 @@ share/icons/hicolor/32x32/apps/filelight.png
 share/icons/hicolor/48x48/apps/filelight.png
 share/icons/hicolor/64x64/apps/filelight.png
 share/kxmlgui5/filelight/filelightui.rc
+share/locale/ar/LC_MESSAGES/filelight.mo
 share/locale/ast/LC_MESSAGES/filelight.mo
+share/locale/az/LC_MESSAGES/filelight.mo
 share/locale/bg/LC_MESSAGES/filelight.mo
 share/locale/bs/LC_MESSAGES/filelight.mo
 share/locale/ca/LC_MESSAGES/filelight.mo
@@ -69,6 +73,7 @@ share/locale/ga/LC_MESSAGES/filelight.mo
 share/locale/gl/LC_MESSAGES/filelight.mo
 share/locale/hu/LC_MESSAGES/filelight.mo
 share/locale/ia/LC_MESSAGES/filelight.mo
+share/locale/is/LC_MESSAGES/filelight.mo
 share/locale/it/LC_MESSAGES/filelight.mo
 share/locale/ja/LC_MESSAGES/filelight.mo
 share/locale/kk/LC_MESSAGES/filelight.mo
@@ -89,6 +94,7 @@ share/locale/sk/LC_MESSAGES/filelight.mo
 share/locale/sl/LC_MESSAGES/filelight.mo
 share/locale/sr/LC_MESSAGES/filelight.mo
 share/locale/sv/LC_MESSAGES/filelight.mo
+share/locale/ta/LC_MESSAGES/filelight.mo
 share/locale/tr/LC_MESSAGES/filelight.mo
 share/locale/ug/LC_MESSAGES/filelight.mo
 share/locale/uk/LC_MESSAGES/filelight.mo

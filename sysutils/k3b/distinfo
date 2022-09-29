@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.31 2021/10/26 11:19:44 nia Exp $
+$NetBSD: distinfo,v 1.32 2022/09/29 01:16:44 markd Exp $
 
-BLAKE2s (k3b-20.12.3.tar.xz) = c045614cf1a1e7a7ea7ea95470531a730a7534dce4a59f5ae5b8677da6e371db
-SHA512 (k3b-20.12.3.tar.xz) = e0c85d4faa6749d271d92a945e54c68876582b7d5c5719682950ca9305b75d0a46226f080e9c0bac300e63e32387ebb034d48f6ddc3b2d1a4fa2487db53f4039
-Size (k3b-20.12.3.tar.xz) = 10688136 bytes
-SHA1 (patch-cmake_modules_FindFFmpeg.cmake) = 4bdd745f48e66a3851bf99e8846b0cf564fe2281
+BLAKE2s (k3b-22.08.1.tar.xz) = bdb19835060e0a7a80a909ce63d566ed151e463086521976ba2a37b9c72be1fe
+SHA512 (k3b-22.08.1.tar.xz) = d3ae22cfcc1192facb18da6e003c58fd7c4d2806c806be1a26583e1efc74a9be1aee4d592a89b1660f743ed8b8895711fe82485316b4543d58725fbd0db5f68e
+Size (k3b-22.08.1.tar.xz) = 10762800 bytes
