@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.79 2022/09/27 20:58:26 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2022/09/29 01:07:05 markd Exp $
 
 DISTNAME=	kdenlive-${KAPPSVER}
-PKGREVISION=	11
 CATEGORIES=	multimedia
 
 HOMEPAGE=	https://www.kdenlive.org/
 COMMENT=	KDE video editor
 LICENSE=	gnu-gpl-v2
 
-KAPPSVER=	20.12.3
 .include "../../meta-pkgs/kde/applications.mk"
 
 BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
@@ -33,6 +31,7 @@ CMAKE_ARGS+=		-DFFMPEG_SUFFIX=4
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/kfilemetadata5/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt5-qtnetworkauth/buildlink3.mk"
 .include "../../x11/qt5-qtquickcontrols2/buildlink3.mk"
 CMAKE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_Qt5WebEngineWidgets:BOOL=TRUE
 #.include "../../x11/qt5-qtwebengine/buildlink3.mk"
