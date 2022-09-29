@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.65 2022/09/11 12:51:59 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2022/09/29 01:03:52 markd Exp $
 
 DISTNAME=	ktouch-${KAPPSVER}
-PKGREVISION=	9
 CATEGORIES=	misc
 
 HOMEPAGE=	https://kde.org/applications/education/ktouch/

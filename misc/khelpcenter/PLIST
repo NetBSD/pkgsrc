@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.2 2021/04/07 12:28:27 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/09/29 01:03:51 markd Exp $
 bin/khelpcenter
-lib/libkdeinit5_khelpcenter.so
 libexec/khc_mansearch.pl
 libexec/khc_xapianindexer
 libexec/khc_xapiansearch
-share/applications/org.kde.Help.desktop
+share/applications/org.kde.khelpcenter.desktop
 share/config.kcfg/khelpcenter.kcfg
+share/dbus-1/services/org.kde.khelpcenter.service
 share/doc/HTML/ca/fundamentals/colors.png
 share/doc/HTML/ca/fundamentals/config.docbook
 share/doc/HTML/ca/fundamentals/files-locationbar-breadcrumb.png
@@ -299,6 +299,9 @@ share/doc/HTML/ru/fundamentals/visualdict-titlebar.png
 share/doc/HTML/ru/fundamentals/visualdict-tree-view.png
 share/doc/HTML/ru/fundamentals/visualdict-window.png
 share/doc/HTML/ru/fundamentals/visualdict-window2.png
+share/doc/HTML/ru/khelpcenter/glossary/index.cache.bz2
+share/doc/HTML/ru/khelpcenter/glossary/index.docbook
+share/doc/HTML/ru/khelpcenter/glossary/kdeprintingglossary.docbook
 share/doc/HTML/ru/khelpcenter/index.cache.bz2
 share/doc/HTML/ru/khelpcenter/index.docbook
 share/doc/HTML/ru/onlinehelp/index.cache.bz2
@@ -371,7 +374,7 @@ share/khelpcenter/plugins/fundamentals.desktop
 share/khelpcenter/plugins/info.desktop
 share/khelpcenter/plugins/kcontrolmodules.desktop
 share/khelpcenter/plugins/kicmodules.desktop
-share/khelpcenter/plugins/kioslaves.desktop
+share/khelpcenter/plugins/kioworkers.desktop
 share/khelpcenter/plugins/konquerorcontrolmodules.desktop
 share/khelpcenter/plugins/onlinehelp.desktop
 share/khelpcenter/plugins/othercontrolmodules.desktop
@@ -383,9 +386,9 @@ share/khelpcenter/templates/glossary.html
 share/khelpcenter/templates/index.html
 share/khelpcenter/templates/search.html
 share/kservices5/khelpcenter.desktop
-share/kxmlgui5/khelpcenter/khelpcenterui.rc
 share/locale/ar/LC_MESSAGES/khelpcenter5.mo
 share/locale/ast/LC_MESSAGES/khelpcenter5.mo
+share/locale/be/LC_MESSAGES/khelpcenter5.mo
 share/locale/bg/LC_MESSAGES/khelpcenter5.mo
 share/locale/bs/LC_MESSAGES/khelpcenter5.mo
 share/locale/ca/LC_MESSAGES/khelpcenter5.mo
@@ -430,15 +433,20 @@ share/locale/pt/LC_MESSAGES/khelpcenter5.mo
 share/locale/pt_BR/LC_MESSAGES/khelpcenter5.mo
 share/locale/ro/LC_MESSAGES/khelpcenter5.mo
 share/locale/ru/LC_MESSAGES/khelpcenter5.mo
+share/locale/se/LC_MESSAGES/khelpcenter5.mo
 share/locale/sk/LC_MESSAGES/khelpcenter5.mo
 share/locale/sl/LC_MESSAGES/khelpcenter5.mo
+share/locale/sq/LC_MESSAGES/khelpcenter5.mo
 share/locale/sr/LC_MESSAGES/khelpcenter5.mo
 share/locale/sv/LC_MESSAGES/khelpcenter5.mo
+share/locale/ta/LC_MESSAGES/khelpcenter5.mo
+share/locale/tg/LC_MESSAGES/khelpcenter5.mo
 share/locale/tr/LC_MESSAGES/khelpcenter5.mo
 share/locale/ug/LC_MESSAGES/khelpcenter5.mo
 share/locale/uk/LC_MESSAGES/khelpcenter5.mo
+share/locale/vi/LC_MESSAGES/khelpcenter5.mo
 share/locale/wa/LC_MESSAGES/khelpcenter5.mo
 share/locale/zh_CN/LC_MESSAGES/khelpcenter5.mo
 share/locale/zh_TW/LC_MESSAGES/khelpcenter5.mo
-share/metainfo/org.kde.Help.appdata.xml
+share/metainfo/org.kde.khelpcenter.metainfo.xml
 share/qlogging-categories5/khelpcenter.categories
