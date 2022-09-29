@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4736 2022/09/29 12:47:43 jperkin Exp $
+$NetBSD: CHANGES-2022,v 1.4737 2022/09/29 12:49:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7168,3 +7168,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated emulators/fs-uae-arcade to 3.1.63 [adam 2022-09-29]
 	Updated time/ruby-tzinfo-data to 1.2022.4 [taca 2022-09-29]
 	Updated net/powerdns-recursor to 4.7.3 [jperkin 2022-09-29]
+	Updated devel/py-distro to 1.7.0 [adam 2022-09-29]
+	Updated devel/py-test-forked to 1.4.0 [adam 2022-09-29]
