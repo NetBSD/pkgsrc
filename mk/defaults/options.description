@@ -241,6 +241,7 @@ fontconfig		Enable FONTCONFIG (fonts/fontconfig) support.
 fortran			Support programs written in Fortran.
 fossil-system-sqlite	Use pkgsrc sqlite for fossil instead of built-in.
 fossil-th1-hooks	Add support for TH1 scripts in fossil.
+fpx			Enable Flashpix support.
 freediameter-all-extensions	Build all extensions for freeDiameter (except test and debug).
 freeradius-simul-use	Enable Simultaneous-Use.
 freeswitch-08k		8000Hz Audio Files
