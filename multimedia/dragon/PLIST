@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2021/04/07 12:28:29 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/09/29 01:07:05 markd Exp $
 bin/dragon
 man/ca/man1/dragon.1
 man/de/man1/dragon.1
@@ -79,6 +79,7 @@ share/icons/oxygen/scalable/actions/player-volume-muted.svgz
 share/kservices5/ServiceMenus/dragonplayer_play_dvd.desktop
 share/kservices5/dragonplayer_part.desktop
 share/locale/ar/LC_MESSAGES/dragonplayer.mo
+share/locale/be/LC_MESSAGES/dragonplayer.mo
 share/locale/bg/LC_MESSAGES/dragonplayer.mo
 share/locale/bs/LC_MESSAGES/dragonplayer.mo
 share/locale/ca/LC_MESSAGES/dragonplayer.mo
@@ -122,6 +123,7 @@ share/locale/ro/LC_MESSAGES/dragonplayer.mo
 share/locale/ru/LC_MESSAGES/dragonplayer.mo
 share/locale/sk/LC_MESSAGES/dragonplayer.mo
 share/locale/sl/LC_MESSAGES/dragonplayer.mo
+share/locale/sq/LC_MESSAGES/dragonplayer.mo
 share/locale/sr/LC_MESSAGES/dragonplayer.mo
 share/locale/sv/LC_MESSAGES/dragonplayer.mo
 share/locale/tr/LC_MESSAGES/dragonplayer.mo

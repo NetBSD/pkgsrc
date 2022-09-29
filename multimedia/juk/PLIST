@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2021/04/05 06:51:04 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/09/29 01:07:05 markd Exp $
 bin/juk
 share/applications/org.kde.juk.desktop
 share/dbus-1/interfaces/org.kde.juk.collection.xml
@@ -101,11 +101,12 @@ share/icons/hicolor/48x48/apps/juk.png
 share/icons/hicolor/64x64/apps/juk.png
 share/juk/pics/playing.png
 share/juk/pics/theme.svg
+share/kio/servicemenus/jukservicemenu.desktop
 share/knotifications5/juk.notifyrc
-share/kservices5/ServiceMenus/jukservicemenu.desktop
 share/kxmlgui5/juk/jukui-rtl.rc
 share/kxmlgui5/juk/jukui.rc
 share/locale/ar/LC_MESSAGES/juk.mo
+share/locale/be/LC_MESSAGES/juk.mo
 share/locale/bg/LC_MESSAGES/juk.mo
 share/locale/bs/LC_MESSAGES/juk.mo
 share/locale/ca/LC_MESSAGES/juk.mo
@@ -149,10 +150,14 @@ share/locale/pt/LC_MESSAGES/juk.mo
 share/locale/pt_BR/LC_MESSAGES/juk.mo
 share/locale/ro/LC_MESSAGES/juk.mo
 share/locale/ru/LC_MESSAGES/juk.mo
+share/locale/se/LC_MESSAGES/juk.mo
 share/locale/sk/LC_MESSAGES/juk.mo
 share/locale/sl/LC_MESSAGES/juk.mo
+share/locale/sq/LC_MESSAGES/juk.mo
 share/locale/sr/LC_MESSAGES/juk.mo
 share/locale/sv/LC_MESSAGES/juk.mo
+share/locale/ta/LC_MESSAGES/juk.mo
+share/locale/tg/LC_MESSAGES/juk.mo
 share/locale/tr/LC_MESSAGES/juk.mo
 share/locale/ug/LC_MESSAGES/juk.mo
 share/locale/uk/LC_MESSAGES/juk.mo
