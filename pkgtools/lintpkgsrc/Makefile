@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.55 2022/09/14 04:03:51 rillig Exp $
+# $NetBSD: Makefile,v 1.56 2022/09/29 21:26:23 rillig Exp $
 
-PKGNAME=	lintpkgsrc-2022.09.14
+PKGNAME=	lintpkgsrc-2022.09.29
 CATEGORIES=	pkgtools
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -29,7 +29,7 @@ AUTO_MKDIRS=	yes
     ${SYSCONFBASE:=/mk.conf} \
     ${LOCALBASE:=/etc/mk.conf}
 .  if exists(${conf})
-LINTPKGSRC_MAKECONF=	${conf}
+LINTPKGSRC_MAKECONF?=	${conf}
 .  endif
 .endfor
 LINTPKGSRC_MAKECONF?=	/etc/mk.conf
