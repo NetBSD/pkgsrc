@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/03/31 23:08:28 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/09/29 01:30:09 markd Exp $
 bin/kscreen-doctor
 include/KF5/KScreen/KScreen/Config
 include/KF5/KScreen/KScreen/ConfigMonitor
@@ -33,6 +33,7 @@ lib/libKF5Screen.so
 lib/libKF5Screen.so.${PKGVERSION}
 lib/libKF5Screen.so.7
 lib/pkgconfig/kscreen2.pc
+lib/systemd/user/plasma-kscreen.service
 libexec/kf5/kscreen_backend_launcher
 qt5/mkspecs/modules/qt_KScreen.pri
 qt5/plugins/kf5/kscreen/KSC_Fake.so
