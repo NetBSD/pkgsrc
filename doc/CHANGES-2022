@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4741 2022/09/29 15:21:52 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.4742 2022/09/29 15:49:08 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7178,3 +7178,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/powerdns-pgsql to 4.6.3 [jperkin 2022-09-29]
 	Updated geography/libmaxminddb to 1.7.0 [fcambus 2022-09-29]
 	Updated devel/mold to 1.5.0 [fcambus 2022-09-29]
+	Updated multimedia/libaom to 3.5.0 [ryoon 2022-09-29]
