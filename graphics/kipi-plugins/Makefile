@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.155 2022/09/11 12:51:08 wiz Exp $
+# $NetBSD: Makefile,v 1.156 2022/09/29 00:53:11 markd Exp $
 
 DISTNAME=	kipi-plugins-${KAPPSVER}
-PKGREVISION=	9
 CATEGORIES=	graphics
 
 HOMEPAGE=	https://userbase.kde.org/KIPI/
@@ -11,6 +10,14 @@ LICENSE=	gnu-gpl-v2
 .include "../../meta-pkgs/kde/applications.mk"
 
 USE_TOOLS+=	msgmerge pkg-config
+
+SUBST_CLASSES+=		fix-moc
+SUBST_STAGE.fix-moc=	post-configure
+SUBST_MESSAGE.fix-moc=	Cleaning up MOC includes
+SUBST_FILES.fix-moc=	_KDE_build/*/CMakeFiles/*_autogen.dir/AutogenInfo.json
+SUBST_FILES.fix-moc+=	_KDE_build/common/*/CMakeFiles/*_autogen.dir/AutogenInfo.json
+SUBST_NOOP_OK.fix-moc=	yes
+SUBST_SED.fix-moc=	-e 's;"${PREFIX}/include",;;g'
 
 .include "../../devel/kio/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"

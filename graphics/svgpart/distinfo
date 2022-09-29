@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2021/10/26 10:46:55 nia Exp $
+$NetBSD: distinfo,v 1.19 2022/09/29 00:53:12 markd Exp $
 
-BLAKE2s (svgpart-20.12.3.tar.xz) = 20ff9bc33638468f27cdb294d5b3adff0c6742b1cfdb0236db6889fc78b407b9
-SHA512 (svgpart-20.12.3.tar.xz) = 4c7dfc802a4a24d376d18c749743f1e8e248dd26f7794dc482952a9fc969c7c547ddb5462ec5dfdba9229e1f56f4c0886417b3422819beb9ae911ab75d4a4558
-Size (svgpart-20.12.3.tar.xz) = 23348 bytes
+BLAKE2s (svgpart-22.08.1.tar.xz) = 639908d4ee1c8ee87c8d03cf347a4495a8e15bb553c2c736809182b04d9b116a
+SHA512 (svgpart-22.08.1.tar.xz) = 6a653d0add8ec333c6ea48ade8063ff4a1bbbfd0d01b1f8c180fa9ce168e61b12b9d06a5b4747ffc12bb6398870b5c4e822e060e618067c3891ee3ef64dd2549
+Size (svgpart-22.08.1.tar.xz) = 27552 bytes

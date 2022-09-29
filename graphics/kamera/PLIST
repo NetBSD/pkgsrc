@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2021/04/07 12:28:23 markd Exp $
-qt5/plugins/kcm_kamera.so
-qt5/plugins/kio_kamera.so
+@comment $NetBSD: PLIST,v 1.6 2022/09/29 00:53:11 markd Exp $
+qt5/plugins/kf5/kio/kio_kamera.so
+qt5/plugins/plasma/kcms/systemsettings_qwidgets/kamera.so
+share/applications/kamera.desktop
 share/doc/HTML/ca/kcontrol/kamera/index.cache.bz2
 share/doc/HTML/ca/kcontrol/kamera/index.docbook
 share/doc/HTML/cs/kcontrol/kamera/index.cache.bz2
@@ -33,10 +34,14 @@ share/doc/HTML/sv/kcontrol/kamera/index.cache.bz2
 share/doc/HTML/sv/kcontrol/kamera/index.docbook
 share/doc/HTML/uk/kcontrol/kamera/index.cache.bz2
 share/doc/HTML/uk/kcontrol/kamera/index.docbook
-share/kservices5/camera.protocol
-share/kservices5/kamera.desktop
 share/locale/ar/LC_MESSAGES/kcmkamera.mo
+share/locale/ar/LC_MESSAGES/kio5_kamera.mo
+share/locale/ast/LC_MESSAGES/kio5_kamera.mo
+share/locale/az/LC_MESSAGES/kcmkamera.mo
+share/locale/az/LC_MESSAGES/kio5_kamera.mo
+share/locale/be/LC_MESSAGES/kcmkamera.mo
 share/locale/bg/LC_MESSAGES/kcmkamera.mo
+share/locale/bg/LC_MESSAGES/kio5_kamera.mo
 share/locale/bs/LC_MESSAGES/kcmkamera.mo
 share/locale/ca/LC_MESSAGES/kcmkamera.mo
 share/locale/ca/LC_MESSAGES/kio5_kamera.mo
@@ -71,9 +76,11 @@ share/locale/he/LC_MESSAGES/kcmkamera.mo
 share/locale/hi/LC_MESSAGES/kcmkamera.mo
 share/locale/hr/LC_MESSAGES/kcmkamera.mo
 share/locale/hu/LC_MESSAGES/kcmkamera.mo
+share/locale/hu/LC_MESSAGES/kio5_kamera.mo
 share/locale/ia/LC_MESSAGES/kcmkamera.mo
 share/locale/ia/LC_MESSAGES/kio5_kamera.mo
 share/locale/is/LC_MESSAGES/kcmkamera.mo
+share/locale/is/LC_MESSAGES/kio5_kamera.mo
 share/locale/it/LC_MESSAGES/kcmkamera.mo
 share/locale/it/LC_MESSAGES/kio5_kamera.mo
 share/locale/ja/LC_MESSAGES/kcmkamera.mo
@@ -105,16 +112,23 @@ share/locale/ro/LC_MESSAGES/kcmkamera.mo
 share/locale/ro/LC_MESSAGES/kio5_kamera.mo
 share/locale/ru/LC_MESSAGES/kcmkamera.mo
 share/locale/ru/LC_MESSAGES/kio5_kamera.mo
+share/locale/se/LC_MESSAGES/kcmkamera.mo
 share/locale/sk/LC_MESSAGES/kcmkamera.mo
 share/locale/sk/LC_MESSAGES/kio5_kamera.mo
 share/locale/sl/LC_MESSAGES/kcmkamera.mo
 share/locale/sl/LC_MESSAGES/kio5_kamera.mo
+share/locale/sq/LC_MESSAGES/kcmkamera.mo
 share/locale/sv/LC_MESSAGES/kcmkamera.mo
 share/locale/sv/LC_MESSAGES/kio5_kamera.mo
+share/locale/ta/LC_MESSAGES/kcmkamera.mo
+share/locale/tg/LC_MESSAGES/kcmkamera.mo
 share/locale/tr/LC_MESSAGES/kcmkamera.mo
+share/locale/tr/LC_MESSAGES/kio5_kamera.mo
 share/locale/ug/LC_MESSAGES/kcmkamera.mo
 share/locale/uk/LC_MESSAGES/kcmkamera.mo
 share/locale/uk/LC_MESSAGES/kio5_kamera.mo
+share/locale/vi/LC_MESSAGES/kcmkamera.mo
+share/locale/vi/LC_MESSAGES/kio5_kamera.mo
 share/locale/zh_CN/LC_MESSAGES/kcmkamera.mo
 share/locale/zh_CN/LC_MESSAGES/kio5_kamera.mo
 share/locale/zh_TW/LC_MESSAGES/kcmkamera.mo
