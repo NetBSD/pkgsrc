@@ -1,15 +1,15 @@
-$NetBSD: patch-CMakeLists.txt,v 1.3 2021/09/01 11:14:47 markd Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.4 2022/09/29 01:07:05 markd Exp $
 
 Add $ENV{LIBOSSAUDIO}
 
---- CMakeLists.txt.orig	2021-08-30 05:16:46.750048434 +0000
+--- CMakeLists.txt.orig	2022-08-10 21:53:52.000000000 +0000
 +++ CMakeLists.txt
-@@ -214,6 +214,8 @@ if (CANBERRA_FOUND)
-   target_link_libraries(kmixcore PRIVATE ${CANBERRA_LIBRARIES})
- endif (CANBERRA_FOUND)
+@@ -231,6 +231,8 @@ if (CANBERRA_FOUND)
+   target_link_libraries(kmixcore PUBLIC Canberra::Canberra)
+ endif ()
  
 +target_link_libraries(kmixcore PRIVATE $ENV{LIBOSSAUDIO})
 +
  install(TARGETS kmixcore DESTINATION ${KDE_INSTALL_LIBDIR} LIBRARY NAMELINK_SKIP)
+ install(FILES core/settings.kcfg RENAME kmixsettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
  
- ####################################################################################################
