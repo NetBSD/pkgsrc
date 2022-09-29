@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.55 2022/09/11 12:51:40 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2022/09/29 00:47:28 markd Exp $
 
 DISTNAME=	katomic-${KAPPSVER}
-PKGREVISION=	9
 CATEGORIES=	games
 
 HOMEPAGE=	https://kde.org/applications/games/katomic/
@@ -14,7 +13,7 @@ BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
 USE_TOOLS+=	msgmerge
 
-REPLACE_PERL+=	katomic-levelset-upd.pl
+REPLACE_PERL+=	src/katomic-levelset-upd.pl
 
 .include "../../games/libkdegames/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"

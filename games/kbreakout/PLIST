@@ -1,6 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2019/11/18 09:40:12 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/09/29 00:47:28 markd Exp $
 bin/kbreakout
 share/applications/org.kde.kbreakout.desktop
+share/doc/HTML/ca/kbreakout/gameboard.png
+share/doc/HTML/ca/kbreakout/index.cache.bz2
+share/doc/HTML/ca/kbreakout/index.docbook
 share/doc/HTML/de/kbreakout/index.cache.bz2
 share/doc/HTML/de/kbreakout/index.docbook
 share/doc/HTML/en/kbreakout/BreakableBrick.png
@@ -70,15 +73,15 @@ share/kbreakout/qml/main.qml
 share/kbreakout/themes/IceWorld.desktop
 share/kbreakout/themes/IceWorld.svgz
 share/kbreakout/themes/IceWorld_preview.png
-share/kbreakout/themes/alien_preview.png
 share/kbreakout/themes/alienbreakout.desktop
 share/kbreakout/themes/alienbreakout.svgz
+share/kbreakout/themes/alienbreakout_preview.png
 share/kbreakout/themes/crystal.desktop
 share/kbreakout/themes/crystal.svgz
 share/kbreakout/themes/crystal_preview.png
 share/kbreakout/themes/default.desktop
-share/kbreakout/themes/egyptian_breakout_preview.png
 share/kbreakout/themes/egyptianbreakout.svgz
+share/kbreakout/themes/egyptianbreakout_preview.png
 share/kbreakout/themes/simple.desktop
 share/kbreakout/themes/simple.svgz
 share/kbreakout/themes/simple_preview.png
@@ -127,6 +130,7 @@ share/locale/ro/LC_MESSAGES/kbreakout.mo
 share/locale/ru/LC_MESSAGES/kbreakout.mo
 share/locale/sk/LC_MESSAGES/kbreakout.mo
 share/locale/sl/LC_MESSAGES/kbreakout.mo
+share/locale/sq/LC_MESSAGES/kbreakout.mo
 share/locale/sr/LC_MESSAGES/kbreakout.mo
 share/locale/sv/LC_MESSAGES/kbreakout.mo
 share/locale/tr/LC_MESSAGES/kbreakout.mo

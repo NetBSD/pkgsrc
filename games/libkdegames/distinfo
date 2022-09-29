@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 10:44:11 nia Exp $
+$NetBSD: distinfo,v 1.14 2022/09/29 00:47:32 markd Exp $
 
-BLAKE2s (libkdegames-20.12.3.tar.xz) = 90be3fd1c3e4a3f8b254d67bb6250dac88688e982ad03aedecac6afaf07e21c8
-SHA512 (libkdegames-20.12.3.tar.xz) = a9b02c395b8e025f68b43f7bb5219cc3407ce6bbf9342c1542c53bf80881354f5410820f3f97dc496cdbc7dbbfd8c72e15b0fd07ea504235f40c9e3cd4123756
-Size (libkdegames-20.12.3.tar.xz) = 6389576 bytes
+BLAKE2s (libkdegames-22.08.1.tar.xz) = bd3d49e4747b14b7e05a35dc5727a8758dbe314382cd3b42b485d96554d50413
+SHA512 (libkdegames-22.08.1.tar.xz) = f7896391bc911ed4ec397af07ea6b9179f91c8fb1853fb3b8129fc4113a5ec0323c34aeee69782d899d59f9afc683f9c148e49b149a971065bcd26c782d8bc5c
+Size (libkdegames-22.08.1.tar.xz) = 5949544 bytes

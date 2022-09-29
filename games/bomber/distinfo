@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 10:43:48 nia Exp $
+$NetBSD: distinfo,v 1.13 2022/09/29 00:47:27 markd Exp $
 
-BLAKE2s (bomber-20.12.3.tar.xz) = df30b31c9332839829a94211dce4cca1769fa2a676d1e42d341a79231dcbdc9f
-SHA512 (bomber-20.12.3.tar.xz) = 4a40b968507ee3c0b9db4fd0adb87a734a11e170599513fc2bccf4086047eb9991ca566109f82b7b147cb551efe50e9ecb95d9a3a8b723a8c2c7823cebbde50c
-Size (bomber-20.12.3.tar.xz) = 825104 bytes
+BLAKE2s (bomber-22.08.1.tar.xz) = 1bf7d1f9fa8f98b399902bf27a33b6680cf8ff98877754bced46bb29df6b92c9
+SHA512 (bomber-22.08.1.tar.xz) = 5c30c9261ff22c0788c9bb0627b77dba13f979ba34e8a1888b407b6690c7c83fdeee40356bf564cad54847413c13a2227f43b5c5853dba5382bb6d7ce44bc493
+Size (bomber-22.08.1.tar.xz) = 834276 bytes

@@ -1,9 +1,18 @@
-@comment $NetBSD: PLIST,v 1.4 2020/06/09 11:56:10 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/09/29 00:47:31 markd Exp $
 bin/kreversi
 share/applications/org.kde.kreversi.desktop
+share/doc/HTML/ca/kreversi/index.cache.bz2
+share/doc/HTML/ca/kreversi/index.docbook
+share/doc/HTML/ca/kreversi/kreversi1.png
+share/doc/HTML/ca/kreversi/kreversi2.png
 share/doc/HTML/de/kreversi/index.cache.bz2
 share/doc/HTML/de/kreversi/index.docbook
 share/doc/HTML/de/kreversi/kreversi1.png
+share/doc/HTML/en/kreversi/actions-lastmoves.png
+share/doc/HTML/en/kreversi/actions-legalmoves.png
+share/doc/HTML/en/kreversi/document-new.png
+share/doc/HTML/en/kreversi/edit-undo.png
+share/doc/HTML/en/kreversi/games-hint.png
 share/doc/HTML/en/kreversi/index.cache.bz2
 share/doc/HTML/en/kreversi/index.docbook
 share/doc/HTML/en/kreversi/kreversi1.png
@@ -65,6 +74,7 @@ share/kreversi/qml/globals.js
 share/kreversi/sounds/reversi-click.wav
 share/kreversi/sounds/reversi-won.wav
 share/locale/ar/LC_MESSAGES/kreversi.mo
+share/locale/be/LC_MESSAGES/kreversi.mo
 share/locale/bg/LC_MESSAGES/kreversi.mo
 share/locale/bs/LC_MESSAGES/kreversi.mo
 share/locale/ca/LC_MESSAGES/kreversi.mo
@@ -108,10 +118,14 @@ share/locale/pt/LC_MESSAGES/kreversi.mo
 share/locale/pt_BR/LC_MESSAGES/kreversi.mo
 share/locale/ro/LC_MESSAGES/kreversi.mo
 share/locale/ru/LC_MESSAGES/kreversi.mo
+share/locale/se/LC_MESSAGES/kreversi.mo
 share/locale/sk/LC_MESSAGES/kreversi.mo
 share/locale/sl/LC_MESSAGES/kreversi.mo
+share/locale/sq/LC_MESSAGES/kreversi.mo
 share/locale/sr/LC_MESSAGES/kreversi.mo
 share/locale/sv/LC_MESSAGES/kreversi.mo
+share/locale/ta/LC_MESSAGES/kreversi.mo
+share/locale/tg/LC_MESSAGES/kreversi.mo
 share/locale/tr/LC_MESSAGES/kreversi.mo
 share/locale/ug/LC_MESSAGES/kreversi.mo
 share/locale/uk/LC_MESSAGES/kreversi.mo

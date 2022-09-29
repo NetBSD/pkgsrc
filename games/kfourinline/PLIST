@@ -1,8 +1,12 @@
-@comment $NetBSD: PLIST,v 1.3 2020/06/09 11:56:08 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/09/29 00:47:28 markd Exp $
 bin/kfourinline
 bin/kfourinlineproc
 share/applications/org.kde.kfourinline.desktop
 share/config.kcfg/kwin4.kcfg
+share/doc/HTML/ca/kfourinline/gameboard.png
+share/doc/HTML/ca/kfourinline/index.cache.bz2
+share/doc/HTML/ca/kfourinline/index.docbook
+share/doc/HTML/ca/kfourinline/settings.png
 share/doc/HTML/de/kfourinline/index.cache.bz2
 share/doc/HTML/de/kfourinline/index.docbook
 share/doc/HTML/en/kfourinline/gameboard.png
@@ -49,6 +53,7 @@ share/kfourinline/grafix/yellow.svg
 share/kfourinline/grafix/yellow_reflection.desktop
 share/kfourinline/grafix/yellow_reflection.rc
 share/locale/ar/LC_MESSAGES/kfourinline.mo
+share/locale/be/LC_MESSAGES/kfourinline.mo
 share/locale/bg/LC_MESSAGES/kfourinline.mo
 share/locale/bs/LC_MESSAGES/kfourinline.mo
 share/locale/ca/LC_MESSAGES/kfourinline.mo
@@ -95,6 +100,8 @@ share/locale/sk/LC_MESSAGES/kfourinline.mo
 share/locale/sl/LC_MESSAGES/kfourinline.mo
 share/locale/sr/LC_MESSAGES/kfourinline.mo
 share/locale/sv/LC_MESSAGES/kfourinline.mo
+share/locale/ta/LC_MESSAGES/kfourinline.mo
+share/locale/tg/LC_MESSAGES/kfourinline.mo
 share/locale/tr/LC_MESSAGES/kfourinline.mo
 share/locale/ug/LC_MESSAGES/kfourinline.mo
 share/locale/uk/LC_MESSAGES/kfourinline.mo

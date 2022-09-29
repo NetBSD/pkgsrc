@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/04/08 19:56:27 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/09/29 00:47:30 markd Exp $
 bin/kpat
 lib/libkcardgame.so
 man/ca/man6/kpat.6
@@ -15,6 +15,8 @@ man/sv/man6/kpat.6
 man/uk/man6/kpat.6
 share/applications/org.kde.kpat.desktop
 share/config.kcfg/kpat.kcfg
+share/doc/HTML/ca/kpat/index.cache.bz2
+share/doc/HTML/ca/kpat/index.docbook
 share/doc/HTML/cs/kpat/index.cache.bz2
 share/doc/HTML/cs/kpat/index.docbook
 share/doc/HTML/de/kpat/index.cache.bz2
@@ -69,8 +71,10 @@ share/kpat/previews/11.png
 share/kpat/previews/12.png
 share/kpat/previews/17.png
 share/kpat/previews/18.png
+share/kpat/previews/19.png
 share/kpat/previews/2.png
 share/kpat/previews/3.png
+share/kpat/previews/4.png
 share/kpat/previews/5.png
 share/kpat/previews/7.png
 share/kpat/previews/8.png
@@ -86,11 +90,11 @@ share/kpat/themes/cleangreen.svgz
 share/kpat/themes/greenblaze.desktop
 share/kpat/themes/greenblaze.png
 share/kpat/themes/greenblaze.svgz
-share/kpat/themes/oldertheme.desktop
-share/kpat/themes/oldertheme.png
-share/kpat/themes/oldertheme.svgz
-share/kxmlgui5/kpat/kpatui.rc
+share/kpat/themes/royalhearts.desktop
+share/kpat/themes/royalhearts.png
+share/kpat/themes/royalhearts.svgz
 share/locale/ar/LC_MESSAGES/kpat.mo
+share/locale/be/LC_MESSAGES/kpat.mo
 share/locale/bg/LC_MESSAGES/kpat.mo
 share/locale/bs/LC_MESSAGES/kpat.mo
 share/locale/ca/LC_MESSAGES/kpat.mo
@@ -134,10 +138,14 @@ share/locale/pt/LC_MESSAGES/kpat.mo
 share/locale/pt_BR/LC_MESSAGES/kpat.mo
 share/locale/ro/LC_MESSAGES/kpat.mo
 share/locale/ru/LC_MESSAGES/kpat.mo
+share/locale/se/LC_MESSAGES/kpat.mo
 share/locale/sk/LC_MESSAGES/kpat.mo
 share/locale/sl/LC_MESSAGES/kpat.mo
+share/locale/sq/LC_MESSAGES/kpat.mo
 share/locale/sr/LC_MESSAGES/kpat.mo
 share/locale/sv/LC_MESSAGES/kpat.mo
+share/locale/ta/LC_MESSAGES/kpat.mo
+share/locale/tg/LC_MESSAGES/kpat.mo
 share/locale/tr/LC_MESSAGES/kpat.mo
 share/locale/ug/LC_MESSAGES/kpat.mo
 share/locale/uk/LC_MESSAGES/kpat.mo

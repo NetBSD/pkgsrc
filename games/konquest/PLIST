@@ -1,6 +1,11 @@
-@comment $NetBSD: PLIST,v 1.3 2020/06/09 11:56:09 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/09/29 00:47:30 markd Exp $
 bin/konquest
 share/applications/org.kde.konquest.desktop
+share/doc/HTML/ca/konquest/index.cache.bz2
+share/doc/HTML/ca/konquest/index.docbook
+share/doc/HTML/ca/konquest/ingame_window.png
+share/doc/HTML/ca/konquest/main_game_window.png
+share/doc/HTML/ca/konquest/new_game_settings.png
 share/doc/HTML/de/konquest/index.cache.bz2
 share/doc/HTML/de/konquest/index.docbook
 share/doc/HTML/en/konquest/index.cache.bz2
@@ -43,8 +48,8 @@ share/icons/hicolor/48x48/apps/konquest.png
 share/icons/hicolor/64x64/apps/konquest.png
 share/konquest/pics/default_theme.svgz
 share/konquest/pics/konquest-splash.png
-share/kxmlgui5/konquest/konquestui.rc
 share/locale/ar/LC_MESSAGES/konquest.mo
+share/locale/be/LC_MESSAGES/konquest.mo
 share/locale/bg/LC_MESSAGES/konquest.mo
 share/locale/bs/LC_MESSAGES/konquest.mo
 share/locale/ca/LC_MESSAGES/konquest.mo
@@ -87,10 +92,14 @@ share/locale/pt/LC_MESSAGES/konquest.mo
 share/locale/pt_BR/LC_MESSAGES/konquest.mo
 share/locale/ro/LC_MESSAGES/konquest.mo
 share/locale/ru/LC_MESSAGES/konquest.mo
+share/locale/se/LC_MESSAGES/konquest.mo
 share/locale/sk/LC_MESSAGES/konquest.mo
 share/locale/sl/LC_MESSAGES/konquest.mo
+share/locale/sq/LC_MESSAGES/konquest.mo
 share/locale/sr/LC_MESSAGES/konquest.mo
 share/locale/sv/LC_MESSAGES/konquest.mo
+share/locale/ta/LC_MESSAGES/konquest.mo
+share/locale/tg/LC_MESSAGES/konquest.mo
 share/locale/tr/LC_MESSAGES/konquest.mo
 share/locale/ug/LC_MESSAGES/konquest.mo
 share/locale/uk/LC_MESSAGES/konquest.mo

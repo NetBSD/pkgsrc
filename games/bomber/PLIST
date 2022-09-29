@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/11/18 09:19:49 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/09/29 00:47:27 markd Exp $
 bin/bomber
 share/applications/org.kde.bomber.desktop
 share/bomber/sounds/bomb.ogg
@@ -42,11 +42,12 @@ share/doc/HTML/sv/bomber/index.docbook
 share/doc/HTML/uk/bomber/index.cache.bz2
 share/doc/HTML/uk/bomber/index.docbook
 share/doc/HTML/uk/bomber/mainscreen.png
+share/doc/HTML/zh_CN/bomber/index.cache.bz2
+share/doc/HTML/zh_CN/bomber/index.docbook
 share/icons/hicolor/128x128/apps/bomber.png
 share/icons/hicolor/32x32/apps/bomber.png
 share/icons/hicolor/48x48/apps/bomber.png
 share/icons/hicolor/64x64/apps/bomber.png
-share/kxmlgui5/bomber/bomberui.rc
 share/locale/ar/LC_MESSAGES/bomber.mo
 share/locale/bg/LC_MESSAGES/bomber.mo
 share/locale/bs/LC_MESSAGES/bomber.mo
@@ -91,6 +92,7 @@ share/locale/ro/LC_MESSAGES/bomber.mo
 share/locale/ru/LC_MESSAGES/bomber.mo
 share/locale/sk/LC_MESSAGES/bomber.mo
 share/locale/sl/LC_MESSAGES/bomber.mo
+share/locale/sq/LC_MESSAGES/bomber.mo
 share/locale/sr/LC_MESSAGES/bomber.mo
 share/locale/sv/LC_MESSAGES/bomber.mo
 share/locale/tr/LC_MESSAGES/bomber.mo

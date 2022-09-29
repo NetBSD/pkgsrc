@@ -1,13 +1,20 @@
-@comment $NetBSD: PLIST,v 1.3 2020/06/09 11:56:10 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/09/29 00:47:31 markd Exp $
 bin/kspaceduel
 share/applications/org.kde.kspaceduel.desktop
 share/config.kcfg/kspaceduel.kcfg
+share/doc/HTML/ca/kspaceduel/index.cache.bz2
+share/doc/HTML/ca/kspaceduel/index.docbook
+share/doc/HTML/ca/kspaceduel/kspaceduel3.png
 share/doc/HTML/de/kspaceduel/index.cache.bz2
 share/doc/HTML/de/kspaceduel/index.docbook
 share/doc/HTML/de/kspaceduel/kspaceduel3.png
+share/doc/HTML/en/kspaceduel/bullet.png
+share/doc/HTML/en/kspaceduel/energy.png
 share/doc/HTML/en/kspaceduel/index.cache.bz2
 share/doc/HTML/en/kspaceduel/index.docbook
 share/doc/HTML/en/kspaceduel/kspaceduel3.png
+share/doc/HTML/en/kspaceduel/mine.png
+share/doc/HTML/en/kspaceduel/shield.png
 share/doc/HTML/es/kspaceduel/index.cache.bz2
 share/doc/HTML/es/kspaceduel/index.docbook
 share/doc/HTML/et/kspaceduel/index.cache.bz2
@@ -63,8 +70,8 @@ share/kspaceduel/sprites/playerinfo/ship21.png
 share/kspaceduel/sprites/playerinfo/ship22.png
 share/kspaceduel/sprites/playerinfo/ship23.png
 share/kspaceduel/sprites/playerinfo/win.png
-share/kxmlgui5/kspaceduel/kspaceduelui.rc
 share/locale/ar/LC_MESSAGES/kspaceduel.mo
+share/locale/be/LC_MESSAGES/kspaceduel.mo
 share/locale/bg/LC_MESSAGES/kspaceduel.mo
 share/locale/bs/LC_MESSAGES/kspaceduel.mo
 share/locale/ca/LC_MESSAGES/kspaceduel.mo
@@ -107,10 +114,14 @@ share/locale/pt/LC_MESSAGES/kspaceduel.mo
 share/locale/pt_BR/LC_MESSAGES/kspaceduel.mo
 share/locale/ro/LC_MESSAGES/kspaceduel.mo
 share/locale/ru/LC_MESSAGES/kspaceduel.mo
+share/locale/se/LC_MESSAGES/kspaceduel.mo
 share/locale/sk/LC_MESSAGES/kspaceduel.mo
 share/locale/sl/LC_MESSAGES/kspaceduel.mo
+share/locale/sq/LC_MESSAGES/kspaceduel.mo
 share/locale/sr/LC_MESSAGES/kspaceduel.mo
 share/locale/sv/LC_MESSAGES/kspaceduel.mo
+share/locale/ta/LC_MESSAGES/kspaceduel.mo
+share/locale/tg/LC_MESSAGES/kspaceduel.mo
 share/locale/tr/LC_MESSAGES/kspaceduel.mo
 share/locale/ug/LC_MESSAGES/kspaceduel.mo
 share/locale/uk/LC_MESSAGES/kspaceduel.mo

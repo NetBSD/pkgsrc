@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2021/04/07 12:28:21 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/09/29 00:47:31 markd Exp $
 bin/ksirk
 bin/ksirkskineditor
 lib/libiris_ksirk.so
@@ -8,10 +8,15 @@ share/applications/org.kde.ksirk.desktop
 share/applications/org.kde.ksirkskineditor.desktop
 share/config.kcfg/ksirksettings.kcfg
 share/config.kcfg/ksirkskineditorsettings.kcfg
+share/doc/HTML/ca/ksirk/index.cache.bz2
+share/doc/HTML/ca/ksirk/index.docbook
+share/doc/HTML/ca/ksirkskineditor/index.cache.bz2
+share/doc/HTML/ca/ksirkskineditor/index.docbook
 share/doc/HTML/de/ksirk/index.cache.bz2
 share/doc/HTML/de/ksirk/index.docbook
 share/doc/HTML/de/ksirkskineditor/index.cache.bz2
 share/doc/HTML/de/ksirkskineditor/index.docbook
+share/doc/HTML/en/ksirk/application-exit.png
 share/doc/HTML/en/ksirk/attackOne.png
 share/doc/HTML/en/ksirk/attackThree.png
 share/doc/HTML/en/ksirk/attackTwo.png
@@ -20,6 +25,7 @@ share/doc/HTML/en/ksirk/autoattack.png
 share/doc/HTML/en/ksirk/defensedialog.png
 share/doc/HTML/en/ksirk/displaygoalmessage.png
 share/doc/HTML/en/ksirk/displaygoalwarningmessage.png
+share/doc/HTML/en/ksirk/document-new.png
 share/doc/HTML/en/ksirk/firing-screenshot.png
 share/doc/HTML/en/ksirk/index.cache.bz2
 share/doc/HTML/en/ksirk/index.docbook
@@ -30,13 +36,11 @@ share/doc/HTML/en/ksirk/joueurSuivant.png
 share/doc/HTML/en/ksirk/justjoined.png
 share/doc/HTML/en/ksirk/messagesent.png
 share/doc/HTML/en/ksirk/moveArmies.png
-share/doc/HTML/en/ksirk/newGame.png
 share/doc/HTML/en/ksirk/newgamedialog.png
 share/doc/HTML/en/ksirk/numnetplayersdialog.png
 share/doc/HTML/en/ksirk/placingarmies.png
 share/doc/HTML/en/ksirk/playersetupdialog.png
 share/doc/HTML/en/ksirk/preferences.png
-share/doc/HTML/en/ksirk/quit.png
 share/doc/HTML/en/ksirk/recycling.png
 share/doc/HTML/en/ksirk/recyclingFinished.png
 share/doc/HTML/en/ksirk/shownumberofarmies.png
@@ -49,13 +53,14 @@ share/doc/HTML/en/ksirkskineditor/cannon.png
 share/doc/HTML/en/ksirkskineditor/cavalry.png
 share/doc/HTML/en/ksirkskineditor/defendOne.png
 share/doc/HTML/en/ksirkskineditor/defendTwo.png
+share/doc/HTML/en/ksirkskineditor/document-open.png
+share/doc/HTML/en/ksirkskineditor/document-save.png
 share/doc/HTML/en/ksirkskineditor/exploding.png
 share/doc/HTML/en/ksirkskineditor/firing.png
 share/doc/HTML/en/ksirkskineditor/index.cache.bz2
 share/doc/HTML/en/ksirkskineditor/index.docbook
 share/doc/HTML/en/ksirkskineditor/infantry.png
 share/doc/HTML/en/ksirkskineditor/italy.png
-share/doc/HTML/en/ksirkskineditor/load.png
 share/doc/HTML/en/ksirkskineditor/main-snapshot.png
 share/doc/HTML/en/ksirkskineditor/map-mask.png
 share/doc/HTML/en/ksirkskineditor/map.png
@@ -66,7 +71,6 @@ share/doc/HTML/en/ksirkskineditor/nextPlayer.png
 share/doc/HTML/en/ksirkskineditor/recycling.png
 share/doc/HTML/en/ksirkskineditor/recyclingFinished.png
 share/doc/HTML/en/ksirkskineditor/reddices.png
-share/doc/HTML/en/ksirkskineditor/save.png
 share/doc/HTML/es/ksirk/index.cache.bz2
 share/doc/HTML/es/ksirk/index.docbook
 share/doc/HTML/es/ksirkskineditor/index.cache.bz2
@@ -167,6 +171,9 @@ share/ksirkskineditor/target.png
 share/kxmlgui5/ksirk/ksirkui.rc
 share/kxmlgui5/ksirkskineditor/ksirkskineditorui.rc
 share/locale/ar/LC_MESSAGES/ksirk.mo
+share/locale/be/LC_MESSAGES/ksirk.mo
+share/locale/bg/LC_MESSAGES/ksirk.mo
+share/locale/bg/LC_MESSAGES/ksirkskineditor.mo
 share/locale/bs/LC_MESSAGES/ksirk.mo
 share/locale/bs/LC_MESSAGES/ksirkskineditor.mo
 share/locale/ca/LC_MESSAGES/ksirk.mo

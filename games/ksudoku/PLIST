@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2021/04/07 12:28:22 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/09/29 00:47:31 markd Exp $
 bin/ksudoku
 share/applications/org.kde.ksudoku.desktop
 share/doc/HTML/ca/ksudoku/index.cache.bz2
@@ -152,8 +152,8 @@ share/ksudoku/themes/ksudoku_egyptian.svg
 share/ksudoku/themes/ksudoku_scrible.desktop
 share/ksudoku/themes/ksudoku_scrible.svg
 share/ksudoku/themes/scribble_preview.png
-share/kxmlgui5/ksudoku/ksudokuui.rc
 share/locale/ar/LC_MESSAGES/ksudoku.mo
+share/locale/be/LC_MESSAGES/ksudoku.mo
 share/locale/bg/LC_MESSAGES/ksudoku.mo
 share/locale/bs/LC_MESSAGES/ksudoku.mo
 share/locale/ca/LC_MESSAGES/ksudoku.mo
@@ -195,6 +195,7 @@ share/locale/pt/LC_MESSAGES/ksudoku.mo
 share/locale/pt_BR/LC_MESSAGES/ksudoku.mo
 share/locale/ro/LC_MESSAGES/ksudoku.mo
 share/locale/ru/LC_MESSAGES/ksudoku.mo
+share/locale/se/LC_MESSAGES/ksudoku.mo
 share/locale/sk/LC_MESSAGES/ksudoku.mo
 share/locale/sl/LC_MESSAGES/ksudoku.mo
 share/locale/sr/LC_MESSAGES/ksudoku.mo

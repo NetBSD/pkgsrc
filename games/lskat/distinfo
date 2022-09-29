@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 10:44:13 nia Exp $
+$NetBSD: distinfo,v 1.13 2022/09/29 00:47:32 markd Exp $
 
-BLAKE2s (lskat-20.12.3.tar.xz) = 0a0d34d55627a6c04512222ba4f9a3aa94d0e1e936222e6f7328d882fb07cfe4
-SHA512 (lskat-20.12.3.tar.xz) = 8e06137de8ad315cd0c885c382de0e7f85d76ace3d99a110e7d3f17e9a03011ebfe392c6236a9ca8523079d635421d4fc9fa1bcc0865807fad8a65b1d8093759
-Size (lskat-20.12.3.tar.xz) = 1225308 bytes
+BLAKE2s (lskat-22.08.1.tar.xz) = 8cd64c4542995c58f61b0fb91268d718b67e4ce4f4206f0302633a1525d3d692
+SHA512 (lskat-22.08.1.tar.xz) = cf8d80e6a642bee0be02415c0b5ea626fa1e1e5f4ed2e8c4263de6956e0dedf090ceb05ba4924c576e2b743095aea9be4f691a79741d5ba7fb9c1f70971ffde8
+Size (lskat-22.08.1.tar.xz) = 1235348 bytes

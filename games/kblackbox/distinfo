@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 10:44:06 nia Exp $
+$NetBSD: distinfo,v 1.13 2022/09/29 00:47:28 markd Exp $
 
-BLAKE2s (kblackbox-20.12.3.tar.xz) = 02f99e2051a8737d700c273ca12b644da68f6846d40e0fc618c7aeb59744d0ff
-SHA512 (kblackbox-20.12.3.tar.xz) = 5e641009fa3482e8e1dac73b01224a66a6ce14c1a4180d011d08b812815919a74c9c9285a5a7aa49ea2567ac744475327eef3311fae505e4cd52400b998b6310
-Size (kblackbox-20.12.3.tar.xz) = 450304 bytes
+BLAKE2s (kblackbox-22.08.1.tar.xz) = 9f748bec7c0fcc7ab7d5adb1b43238554aa6ddd21ae01f6473aa05ace5daf656
+SHA512 (kblackbox-22.08.1.tar.xz) = 95a4fd4f78b4bbcace1d47b178ee834cc9fb3194a6fd0f89c6c616ea37b8e24cc78a34096ec143e04b8018fb51ab2d42f8984f007f7361df8eff8fc42c7644e2
+Size (kblackbox-22.08.1.tar.xz) = 528484 bytes
