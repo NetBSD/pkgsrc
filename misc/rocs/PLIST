@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2021/04/07 12:28:29 markd Exp $
+@comment $NetBSD: PLIST,v 1.10 2022/09/29 01:03:53 markd Exp $
 bin/rocs
 include/rocs/edge.h
 include/rocs/graphdocument.h
@@ -7,6 +7,7 @@ lib/librocsgraphtheory.so
 lib/librocsgraphtheory.so.0
 qt5/plugins/rocs/editorplugins/assignvaluesplugin.so
 qt5/plugins/rocs/editorplugins/generategraphplugin.so
+qt5/plugins/rocs/editorplugins/graphlayoutplugin.so
 qt5/plugins/rocs/editorplugins/transformedgesplugin.so
 qt5/plugins/rocs/fileformats/dotfileformat.so
 qt5/plugins/rocs/fileformats/gmlfileformat.so
@@ -20,27 +21,19 @@ share/doc/HTML/ca/rocs/index.cache.bz2
 share/doc/HTML/ca/rocs/index.docbook
 share/doc/HTML/de/rocs/index.cache.bz2
 share/doc/HTML/de/rocs/index.docbook
-share/doc/HTML/en/rocs/hi22-action-rocsalignbottom.png
-share/doc/HTML/en/rocs/hi22-action-rocsaligncircle.png
-share/doc/HTML/en/rocs/hi22-action-rocsalignhmiddle.png
-share/doc/HTML/en/rocs/hi22-action-rocsalignleft.png
-share/doc/HTML/en/rocs/hi22-action-rocsalignright.png
-share/doc/HTML/en/rocs/hi22-action-rocsaligntop.png
-share/doc/HTML/en/rocs/hi22-action-rocsaligntree.png
-share/doc/HTML/en/rocs/hi22-action-rocsalignvmiddle.png
-share/doc/HTML/en/rocs/hi22-action-rocsproperties.png
-share/doc/HTML/en/rocs/hi22-actions-control-stop.png
-share/doc/HTML/en/rocs/hi22-actions-controls-run.png
-share/doc/HTML/en/rocs/hi22-actions-rocsdelete.png
-share/doc/HTML/en/rocs/hi22-actions-rocsedge.png
-share/doc/HTML/en/rocs/hi22-actions-rocsnode.png
-share/doc/HTML/en/rocs/hi22-actions-rocsselectmove.png
+share/doc/HTML/en/rocs/document-properties.png
+share/doc/HTML/en/rocs/force-based-layout-ui-screenshot.png
 share/doc/HTML/en/rocs/index.cache.bz2
 share/doc/HTML/en/rocs/index.docbook
-share/doc/HTML/en/rocs/rocs-control-engine-debug.png
-share/doc/HTML/en/rocs/rocs-control-engine-step.png
+share/doc/HTML/en/rocs/media-playback-start.png
+share/doc/HTML/en/rocs/process-stop.png
+share/doc/HTML/en/rocs/radial-tree-layout-ui-screenshot.png
 share/doc/HTML/en/rocs/rocs-interfaces.png
 share/doc/HTML/en/rocs/rocs-screenshot.png
+share/doc/HTML/en/rocs/sc-actions-rocsdelete.png
+share/doc/HTML/en/rocs/sc-actions-rocsedge.png
+share/doc/HTML/en/rocs/sc-actions-rocsnode.png
+share/doc/HTML/en/rocs/sc-actions-rocsselect.png
 share/doc/HTML/es/rocs/apiConsole.docbook
 share/doc/HTML/es/rocs/apiDatastructure.docbook
 share/doc/HTML/es/rocs/apiGraphstructure.docbook
@@ -71,6 +64,12 @@ share/doc/HTML/pt/rocs/index.cache.bz2
 share/doc/HTML/pt/rocs/index.docbook
 share/doc/HTML/pt_BR/rocs/index.cache.bz2
 share/doc/HTML/pt_BR/rocs/index.docbook
+share/doc/HTML/ru/rocs/index.cache.bz2
+share/doc/HTML/ru/rocs/index.docbook
+share/doc/HTML/ru/rocs/rocs-interfaces.png
+share/doc/HTML/ru/rocs/rocs-screenshot.png
+share/doc/HTML/ru/rocs/rocs-toolbar-alignment.png
+share/doc/HTML/ru/rocs/rocs-toolbar-main.png
 share/doc/HTML/sv/rocs/index.cache.bz2
 share/doc/HTML/sv/rocs/index.docbook
 share/doc/HTML/uk/rocs/index.cache.bz2
@@ -101,6 +100,10 @@ share/icons/hicolor/scalable/actions/rocsunidirectional.svgz
 share/icons/hicolor/scalable/actions/rocsvisible.svgz
 share/icons/hicolor/scalable/apps/rocs.svgz
 share/kxmlgui5/rocs/rocsui.rc
+share/locale/ar/LC_MESSAGES/libgraphtheory.mo
+share/locale/ar/LC_MESSAGES/rocs.mo
+share/locale/bg/LC_MESSAGES/libgraphtheory.mo
+share/locale/bg/LC_MESSAGES/rocs.mo
 share/locale/bs/LC_MESSAGES/libgraphtheory.mo
 share/locale/bs/LC_MESSAGES/rocs.mo
 share/locale/ca/LC_MESSAGES/libgraphtheory.mo
@@ -141,6 +144,8 @@ share/locale/ja/LC_MESSAGES/libgraphtheory.mo
 share/locale/ja/LC_MESSAGES/rocs.mo
 share/locale/kk/LC_MESSAGES/libgraphtheory.mo
 share/locale/kk/LC_MESSAGES/rocs.mo
+share/locale/ko/LC_MESSAGES/libgraphtheory.mo
+share/locale/ko/LC_MESSAGES/rocs.mo
 share/locale/lt/LC_MESSAGES/libgraphtheory.mo
 share/locale/lt/LC_MESSAGES/rocs.mo
 share/locale/lv/LC_MESSAGES/libgraphtheory.mo

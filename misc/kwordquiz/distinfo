@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2021/10/26 10:59:11 nia Exp $
+$NetBSD: distinfo,v 1.16 2022/09/29 01:03:53 markd Exp $
 
-BLAKE2s (kwordquiz-20.12.3.tar.xz) = 4820875a5445365f62cbe0d78fbe429a41591a40f6a6e0ebfbfd07bde061031b
-SHA512 (kwordquiz-20.12.3.tar.xz) = 2192c8e0b9bdd9d26ed5b0596baa208450bf31b89855c106c125b63465ec505e61e180bc05d60c36809ac93cc31cc9ef814e3636d8a7833909332755aced3872
-Size (kwordquiz-20.12.3.tar.xz) = 4187776 bytes
+BLAKE2s (kwordquiz-22.08.1.tar.xz) = 09f3795bf0d4e60a88db5e596c0b77ece819b6606cb1ddde132cc25dd28a8567
+SHA512 (kwordquiz-22.08.1.tar.xz) = 078189e16f461e4890465e93ef0c29fa9f96988f6f2cd0326d0d92693b833ad18eaa57f362b709745c2eab94e44cd67eb3898bad4b4b6debd5b113ad9e17961c
+Size (kwordquiz-22.08.1.tar.xz) = 4216632 bytes

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2021/04/07 12:28:27 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/09/29 01:03:51 markd Exp $
 share/apps/kvtml/bg/animals.kvtml
 share/apps/kvtml/bg/easy.kvtml
 share/apps/kvtml/bg/hard.kvtml
@@ -339,6 +339,10 @@ share/apps/kvtml/sv/sports.kvtml
 share/apps/kvtml/sv/transportation.kvtml
 share/apps/kvtml/sv/vegetables.kvtml
 share/apps/kvtml/sv/worldcapitals.kvtml
+share/apps/kvtml/tg/animals.kvtml
+share/apps/kvtml/tg/easy.kvtml
+share/apps/kvtml/tg/hard.kvtml
+share/apps/kvtml/tg/medium.kvtml
 share/apps/kvtml/tr/animals.kvtml
 share/apps/kvtml/tr/easy.kvtml
 share/apps/kvtml/tr/hard.kvtml

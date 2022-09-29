@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2021/10/26 10:59:10 nia Exp $
+$NetBSD: distinfo,v 1.18 2022/09/29 01:03:52 markd Exp $
 
-BLAKE2s (kmag-20.12.3.tar.xz) = 1c9884682569df66e5fe4cf5f78ea6d40f88bc09bb87a9eea8ea59d5fd2c03db
-SHA512 (kmag-20.12.3.tar.xz) = 6c80bbb0ef4e54ad9f4cd6275da7cdfb878d93f8826e78ea68d1330ca75e438474b0f288a676f544feac144a8190fcace37e53f94752ab40fdf93373c1aa1be0
-Size (kmag-20.12.3.tar.xz) = 700412 bytes
+BLAKE2s (kmag-22.08.1.tar.xz) = 941173e4ba10b27264e5050dcd810be7e28c2f20904cf60dda1493b4c50f846d
+SHA512 (kmag-22.08.1.tar.xz) = 2f26cf1ae8c6a9b424c461bac27e859900ee0aacc8dc393d3e5a11d0fc275fe93844456d5edbbf09ea53039e17215cbfcc5a633f227cdd9beac48cc97763cb48
+Size (kmag-22.08.1.tar.xz) = 710452 bytes
