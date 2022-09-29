@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.75 2022/09/11 12:51:10 wiz Exp $
+# $NetBSD: Makefile,v 1.76 2022/09/29 01:12:53 markd Exp $
 
 DISTNAME=	kwallet-${KF5VER}
-PKGREVISION=	3
 CATEGORIES=	security
 
 HOMEPAGE=	https://community.kde.org/Frameworks
@@ -22,5 +21,6 @@ LDFLAGS.SunOS+=	-lsocket
 .include "../../graphics/kiconthemes/buildlink3.mk"
 .include "../../security/gpgme/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
+.include "../../security/qca2-qt5/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
