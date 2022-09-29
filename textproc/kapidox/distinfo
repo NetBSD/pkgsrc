@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2022/04/25 06:50:21 markd Exp $
+$NetBSD: distinfo,v 1.15 2022/09/29 01:18:44 markd Exp $
 
-BLAKE2s (kapidox-5.93.0.tar.xz) = a02dd26305cd464512df6383f3c02a01811acfb5185ddbab40acb2d79d26b109
-SHA512 (kapidox-5.93.0.tar.xz) = 827b529f19ec5456b56c2f3de693e1c0f3b4aecd375875cd2609262491fdc5b986f8eae66ea70a754f8f260a9d6a89ff60ef106fc971d0fbecee05fdd9df3705
-Size (kapidox-5.93.0.tar.xz) = 197432 bytes
+BLAKE2s (kapidox-5.98.0.tar.xz) = f5b9c1fe1f5f7c16d65b80203c418c717a1a6fdb66b0ccf313347df93a04859c
+SHA512 (kapidox-5.98.0.tar.xz) = ff93ccc275dd1f123c12176354356458d3e5d1ebb17eb66854db241639a70bdf9d3a7cfdadff459396cd90fc45f32b878b957529d45b2d2dbff2a08dc9ce7f59
+Size (kapidox-5.98.0.tar.xz) = 198520 bytes
