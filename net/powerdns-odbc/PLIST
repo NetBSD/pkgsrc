@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2020/07/03 11:31:22 otis Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/09/29 13:51:51 jperkin Exp $
 lib/pdns/libgodbcbackend.la
-share/doc/pdns/4.2.0_to_4.3.0_schema.mssql.sql
 share/doc/pdns/4.0.0_to_4.2.0_schema.mssql.sql
+share/doc/pdns/4.2.0_to_4.3.0_schema.mssql.sql
 share/doc/pdns/schema.mssql.sql
