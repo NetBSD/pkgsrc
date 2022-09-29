@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/04/25 03:35:50 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/09/29 00:36:30 markd Exp $
 include/KF5/KCMUtils/KCModuleContainer
 include/KF5/KCMUtils/KCModuleData
 include/KF5/KCMUtils/KCModuleInfo
@@ -23,17 +23,31 @@ include/KF5/KCMUtils/ksettings/PluginPage
 include/KF5/KCMUtils/ksettings/dialog.h
 include/KF5/KCMUtils/ksettings/dispatcher.h
 include/KF5/KCMUtils/ksettings/pluginpage.h
+include/KF5/KCMUtilsCore/KPluginModel
+include/KF5/KCMUtilsCore/kcmutilscore_export.h
+include/KF5/KCMUtilsCore/kpluginmodel.h
 lib/cmake/KF5KCMUtils/KF5KCMUtilsConfig.cmake
 lib/cmake/KF5KCMUtils/KF5KCMUtilsConfigVersion.cmake
 lib/cmake/KF5KCMUtils/KF5KCMUtilsMacros.cmake
 lib/cmake/KF5KCMUtils/KF5KCMUtilsTargets-noconfig.cmake
 lib/cmake/KF5KCMUtils/KF5KCMUtilsTargets.cmake
+lib/cmake/KF5KCMUtils/KF5KCMUtilsToolingTargets-noconfig.cmake
+lib/cmake/KF5KCMUtils/KF5KCMUtilsToolingTargets.cmake
 lib/cmake/KF5KCMUtils/kcmutilsgeneratemoduledata.cpp.in
 lib/cmake/KF5KCMUtils/kcmutilsgeneratemoduledata.h.in
 lib/libKF5KCMUtils.so
 lib/libKF5KCMUtils.so.5
 lib/libKF5KCMUtils.so.${PKGVERSION}
+lib/libKF5KCMUtilsCore.so
+lib/libKF5KCMUtilsCore.so.5
+lib/libKF5KCMUtilsCore.so.${PKGVERSION}
+libexec/kf5/kcmdesktopfilegenerator
 qt5/mkspecs/modules/qt_KCMUtils.pri
+qt5/qml/org/kde/kcmutils/components/KPluginDelegate.qml
+qt5/qml/org/kde/kcmutils/components/KPluginSelector.qml
+qt5/qml/org/kde/kcmutils/components/private/AboutPlugin.qml
+qt5/qml/org/kde/kcmutils/libkcmutilsqmlplugin.so
+qt5/qml/org/kde/kcmutils/qmldir
 share/kservicetypes5/kcmodule.desktop
 share/kservicetypes5/kcmoduleinit.desktop
 share/locale/af/LC_MESSAGES/kcmutils5.mo

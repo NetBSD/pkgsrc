@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2022/04/25 03:59:20 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2022/09/29 00:36:32 markd Exp $
 bin/checkXML5
 bin/meinproc5
 include/KF5/KDocTools/docbookxslt.h
@@ -17,6 +17,10 @@ man/ca/man1/checkXML5.1
 man/ca/man1/meinproc5.1
 man/ca/man7/kf5options.7
 man/ca/man7/qt5options.7
+man/ca@valencia/man1/checkXML5.1
+man/ca@valencia/man1/meinproc5.1
+man/ca@valencia/man7/kf5options.7
+man/ca@valencia/man7/qt5options.7
 man/de/man1/checkXML5.1
 man/de/man1/meinproc5.1
 man/de/man7/kf5options.7
@@ -1115,6 +1119,7 @@ share/locale/id/LC_MESSAGES/kdoctools5.mo
 share/locale/is/LC_MESSAGES/kdoctools5.mo
 share/locale/it/LC_MESSAGES/kdoctools5.mo
 share/locale/ja/LC_MESSAGES/kdoctools5.mo
+share/locale/ka/LC_MESSAGES/kdoctools5.mo
 share/locale/kk/LC_MESSAGES/kdoctools5.mo
 share/locale/km/LC_MESSAGES/kdoctools5.mo
 share/locale/kn/LC_MESSAGES/kdoctools5.mo

@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.8 2022/04/25 05:26:49 markd Exp $
+$NetBSD: distinfo,v 1.9 2022/09/29 00:36:34 markd Exp $
 
-BLAKE2s (kwayland-5.93.0.tar.xz) = 7eb79f98062bb656ca7d5a44a70cf701ff9724f7f7643d5d4ed9d5ad13bb638e
-SHA512 (kwayland-5.93.0.tar.xz) = 26157575ee49916ff1e75fccccfbd192536dbb1f914432c6e784d52eb95343c61caf26b5d3e5e6ddf1f7f439494debadbd29263631cb9489e12b98b1b9eb30c4
-Size (kwayland-5.93.0.tar.xz) = 335328 bytes
+BLAKE2s (kwayland-5.98.0.tar.xz) = 4b9722b4b5be3371e044909a66f0c445d1adecbd07e9080ce9a18ad2b0707a59
+SHA512 (kwayland-5.98.0.tar.xz) = e714e4a23cda911819d56cf949c0d1f3e83dcac3f59abad01d25424fa615620e381390a2716a9a318ed205e2cc8f83ba0e4fa9322bcbb4522703534384c3b8e9
+Size (kwayland-5.98.0.tar.xz) = 336144 bytes
 SHA1 (patch-autotests_client_test__fake__input.cpp) = 56064dee8ee51c3d2e679c58b39a28501d7c1c9b
 SHA1 (patch-autotests_client_test__plasma__window__model.cpp) = 39a0016d99a1f3d3bcf9cf44133b7124afd81921
 SHA1 (patch-src_client_fakeinput.cpp) = 061318f6490efb8fd60b0f61d003433d7fa6bfae

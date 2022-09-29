@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2022/04/25 04:48:55 markd Exp $
+$NetBSD: distinfo,v 1.15 2022/09/29 00:36:32 markd Exp $
 
-BLAKE2s (kpackage-5.93.0.tar.xz) = 27c8e0034b3b425e3e303af2db8b1acaf686d63f0404e1ce58530a620584e618
-SHA512 (kpackage-5.93.0.tar.xz) = 0ec7737bdca823f00d7f778ee37326a6536391da850135be2dc1aa75e30d75e454cbdf59b95360104634d92db52402b4c449524a6ef7782085a7a7affedcb26b
-Size (kpackage-5.93.0.tar.xz) = 141384 bytes
+BLAKE2s (kpackage-5.98.0.tar.xz) = 6049e0deda4468b59798206b38eef9146da4c407a0a3e505887fbb0a58898b01
+SHA512 (kpackage-5.98.0.tar.xz) = 7cd6b8a22521d6c2c39b869962cdc0cb27238721bc039a9f6809258153501fa2d3f5a4250420554bfaf5ae95210cf51ca0640086fb47e2eaeb4294412857f015
+Size (kpackage-5.98.0.tar.xz) = 140944 bytes
