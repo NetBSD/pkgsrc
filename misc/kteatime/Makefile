@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.48 2022/09/29 01:03:52 markd Exp $
+# $NetBSD: Makefile,v 1.49 2022/09/29 05:23:16 markd Exp $
 
 DISTNAME=	kteatime-${KAPPSVER}
 CATEGORIES=	misc
 
-HOMEPAGE=	https://kde.org/applications/games/kteatime/
+HOMEPAGE=	https://apps.kde.org/kteatime/
 COMMENT=	KDE Tea Cooker
 LICENSE=	gnu-lgpl-v2 AND gnu-gpl-v3 AND gnu-fdl-v1.2
 
