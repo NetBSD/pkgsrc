@@ -1,7 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2021/04/07 12:28:18 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/09/29 00:47:28 markd Exp $
 bin/kblocks
 share/applications/org.kde.kblocks.desktop
 share/config.kcfg/kblocks.kcfg
+share/doc/HTML/ca/kblocks/gameboard.png
+share/doc/HTML/ca/kblocks/index.cache.bz2
+share/doc/HTML/ca/kblocks/index.docbook
 share/doc/HTML/de/kblocks/index.cache.bz2
 share/doc/HTML/de/kblocks/index.docbook
 share/doc/HTML/en/kblocks/gameboard.png
@@ -42,13 +45,12 @@ share/kblocks/sounds/block-remove.ogg
 share/kblocks/themes/default.desktop
 share/kblocks/themes/default_block_fall.ogg
 share/kblocks/themes/default_block_move.ogg
-share/kblocks/themes/egyptian.svg
+share/kblocks/themes/egyptian.svgz
 share/kblocks/themes/egyptian_preview.png
 share/kblocks/themes/oxygen.desktop
-share/kblocks/themes/oxygen.svg
+share/kblocks/themes/oxygen.svgz
 share/kblocks/themes/oxygen_preview.png
 share/knsrcfiles/kblocks.knsrc
-share/kxmlgui5/kblocks/kblocksui.rc
 share/locale/ar/LC_MESSAGES/kblocks.mo
 share/locale/bg/LC_MESSAGES/kblocks.mo
 share/locale/bs/LC_MESSAGES/kblocks.mo
@@ -92,6 +94,7 @@ share/locale/ro/LC_MESSAGES/kblocks.mo
 share/locale/ru/LC_MESSAGES/kblocks.mo
 share/locale/sk/LC_MESSAGES/kblocks.mo
 share/locale/sl/LC_MESSAGES/kblocks.mo
+share/locale/sq/LC_MESSAGES/kblocks.mo
 share/locale/sr/LC_MESSAGES/kblocks.mo
 share/locale/sv/LC_MESSAGES/kblocks.mo
 share/locale/tr/LC_MESSAGES/kblocks.mo

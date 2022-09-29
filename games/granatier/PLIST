@@ -1,7 +1,15 @@
-@comment $NetBSD: PLIST,v 1.3 2020/06/09 11:56:07 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/09/29 00:47:27 markd Exp $
 bin/granatier
 share/applications/org.kde.granatier.desktop
 share/config.kcfg/granatier.kcfg
+share/doc/HTML/ca/granatier/config_arena.png
+share/doc/HTML/ca/granatier/config_arena_random_mode.png
+share/doc/HTML/ca/granatier/config_general.png
+share/doc/HTML/ca/granatier/config_player.png
+share/doc/HTML/ca/granatier/config_theme.png
+share/doc/HTML/ca/granatier/granatier.png
+share/doc/HTML/ca/granatier/index.cache.bz2
+share/doc/HTML/ca/granatier/index.docbook
 share/doc/HTML/cs/granatier/index.cache.bz2
 share/doc/HTML/cs/granatier/index.docbook
 share/doc/HTML/de/granatier/index.cache.bz2
@@ -52,6 +60,8 @@ share/doc/HTML/pt/granatier/index.cache.bz2
 share/doc/HTML/pt/granatier/index.docbook
 share/doc/HTML/pt_BR/granatier/index.cache.bz2
 share/doc/HTML/pt_BR/granatier/index.docbook
+share/doc/HTML/ru/granatier/index.cache.bz2
+share/doc/HTML/ru/granatier/index.docbook
 share/doc/HTML/sv/granatier/index.cache.bz2
 share/doc/HTML/sv/granatier/index.docbook
 share/doc/HTML/uk/granatier/config_arena.png
@@ -174,7 +184,6 @@ share/icons/hicolor/22x22/apps/granatier.png
 share/icons/hicolor/32x32/apps/granatier.png
 share/icons/hicolor/48x48/apps/granatier.png
 share/icons/hicolor/64x64/apps/granatier.png
-share/kxmlgui5/granatier/granatierui.rc
 share/locale/ar/LC_MESSAGES/granatier.mo
 share/locale/bg/LC_MESSAGES/granatier.mo
 share/locale/bs/LC_MESSAGES/granatier.mo

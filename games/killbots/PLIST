@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2021/04/07 12:28:19 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/09/29 00:47:29 markd Exp $
 bin/killbots
 share/applications/org.kde.killbots.desktop
 share/config.kcfg/killbots.kcfg
+share/doc/HTML/ca/killbots/index.cache.bz2
+share/doc/HTML/ca/killbots/index.docbook
 share/doc/HTML/de/killbots/index.cache.bz2
 share/doc/HTML/de/killbots/index.docbook
 share/doc/HTML/de/killbots/status.png
@@ -59,6 +61,8 @@ share/killbots/themes/mummymadness.svgz
 share/killbots/themes/robotkill.desktop
 share/killbots/themes/robotkill.png
 share/killbots/themes/robotkill.svgz
+share/locale/ar/LC_MESSAGES/killbots.mo
+share/locale/bg/LC_MESSAGES/killbots.mo
 share/locale/bs/LC_MESSAGES/killbots.mo
 share/locale/ca/LC_MESSAGES/killbots.mo
 share/locale/ca@valencia/LC_MESSAGES/killbots.mo

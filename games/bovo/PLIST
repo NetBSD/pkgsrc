@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2020/06/09 11:56:06 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/09/29 00:47:27 markd Exp $
 bin/bovo
 share/applications/org.kde.bovo.desktop
 share/bovo/themes/gomoku/theme.svg
@@ -9,6 +9,9 @@ share/bovo/themes/scribble/theme.svg
 share/bovo/themes/scribble/themerc
 share/bovo/themes/spacy/theme.svg
 share/bovo/themes/spacy/themerc
+share/doc/HTML/ca/bovo/index.cache.bz2
+share/doc/HTML/ca/bovo/index.docbook
+share/doc/HTML/ca/bovo/mainscreen.png
 share/doc/HTML/cs/bovo/index.cache.bz2
 share/doc/HTML/cs/bovo/index.docbook
 share/doc/HTML/de/bovo/index.cache.bz2
@@ -42,6 +45,7 @@ share/icons/hicolor/32x32/apps/bovo.png
 share/icons/hicolor/48x48/apps/bovo.png
 share/icons/hicolor/64x64/apps/bovo.png
 share/locale/ar/LC_MESSAGES/bovo.mo
+share/locale/be/LC_MESSAGES/bovo.mo
 share/locale/bg/LC_MESSAGES/bovo.mo
 share/locale/bs/LC_MESSAGES/bovo.mo
 share/locale/ca/LC_MESSAGES/bovo.mo
@@ -83,8 +87,10 @@ share/locale/pt/LC_MESSAGES/bovo.mo
 share/locale/pt_BR/LC_MESSAGES/bovo.mo
 share/locale/ro/LC_MESSAGES/bovo.mo
 share/locale/ru/LC_MESSAGES/bovo.mo
+share/locale/se/LC_MESSAGES/bovo.mo
 share/locale/sk/LC_MESSAGES/bovo.mo
 share/locale/sl/LC_MESSAGES/bovo.mo
+share/locale/sq/LC_MESSAGES/bovo.mo
 share/locale/sr/LC_MESSAGES/bovo.mo
 share/locale/sv/LC_MESSAGES/bovo.mo
 share/locale/tr/LC_MESSAGES/bovo.mo

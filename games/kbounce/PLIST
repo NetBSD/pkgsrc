@@ -1,6 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2021/04/07 12:28:18 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/09/29 00:47:28 markd Exp $
 bin/kbounce
 share/applications/org.kde.kbounce.desktop
+share/doc/HTML/ca/kbounce/index.cache.bz2
+share/doc/HTML/ca/kbounce/index.docbook
+share/doc/HTML/ca/kbounce/kbounce_corridor1.png
+share/doc/HTML/ca/kbounce/kbounce_corridor2.png
 share/doc/HTML/de/kbounce/button-new.png
 share/doc/HTML/de/kbounce/button-pause.png
 share/doc/HTML/de/kbounce/index.cache.bz2
@@ -69,8 +73,8 @@ share/kbounce/themes/roads_preview.png
 share/kbounce/themes/the_beach.desktop
 share/kbounce/themes/the_beach.svgz
 share/kbounce/themes/thebeach_preview.png
-share/kxmlgui5/kbounce/kbounceui.rc
 share/locale/ar/LC_MESSAGES/kbounce.mo
+share/locale/be/LC_MESSAGES/kbounce.mo
 share/locale/bg/LC_MESSAGES/kbounce.mo
 share/locale/bs/LC_MESSAGES/kbounce.mo
 share/locale/ca/LC_MESSAGES/kbounce.mo
@@ -114,13 +118,19 @@ share/locale/pt/LC_MESSAGES/kbounce.mo
 share/locale/pt_BR/LC_MESSAGES/kbounce.mo
 share/locale/ro/LC_MESSAGES/kbounce.mo
 share/locale/ru/LC_MESSAGES/kbounce.mo
+share/locale/se/LC_MESSAGES/kbounce.mo
 share/locale/sk/LC_MESSAGES/kbounce.mo
 share/locale/sl/LC_MESSAGES/kbounce.mo
+share/locale/sq/LC_MESSAGES/kbounce.mo
 share/locale/sr/LC_MESSAGES/kbounce.mo
 share/locale/sv/LC_MESSAGES/kbounce.mo
+share/locale/ta/LC_MESSAGES/kbounce.mo
+share/locale/tg/LC_MESSAGES/kbounce.mo
 share/locale/tr/LC_MESSAGES/kbounce.mo
 share/locale/ug/LC_MESSAGES/kbounce.mo
 share/locale/uk/LC_MESSAGES/kbounce.mo
+share/locale/vi/LC_MESSAGES/kbounce.mo
 share/locale/zh_CN/LC_MESSAGES/kbounce.mo
 share/locale/zh_TW/LC_MESSAGES/kbounce.mo
 share/metainfo/org.kde.kbounce.appdata.xml
+share/qlogging-categories5/kbounce.categories
