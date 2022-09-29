@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.89 2022/09/27 20:58:28 wiz Exp $
+# $NetBSD: Makefile,v 1.90 2022/09/29 19:32:48 markd Exp $
 
 DISTNAME=	kfilemetadata-${KF5VER}
 PKGNAME=	${DISTNAME:S/-/5-/}
-PKGREVISION=	5
 CATEGORIES=	sysutils
 
 HOMEPAGE=	https://community.kde.org/Frameworks
