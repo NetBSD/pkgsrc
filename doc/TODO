@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22244 2022/09/29 12:47:43 jperkin Exp $
+$NetBSD: TODO,v 1.22245 2022/09/29 13:50:03 jperkin Exp $
 
 Suggested new packages
 ======================
@@ -1265,7 +1265,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o postgresql-pljava-1.6.2
 	o pound-3.0d
 	o povray-3.7.0.0
-	o powerdns-4.4.3
 	o powerdns-geoip-4.4.3
 	o powerdns-ldap-4.4.3
 	o powerdns-mysql-4.4.3
