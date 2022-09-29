@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2021/02/25 03:23:49 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/09/29 01:07:05 markd Exp $
 include/KF5/KCompactDisc/KCompactDisc
 include/KF5/KCompactDisc/kcompactdisc.h
 include/KF5/KCompactDisc/kcompactdisc_export.h
@@ -10,8 +10,8 @@ lib/cmake/KF5CompactDisc/KF5CompactDiscTargets.cmake
 lib/libKF5CompactDisc.so
 lib/libKF5CompactDisc.so.5
 lib/libKF5CompactDisc.so.5.0.0
-qt5/mkspecs/modules/qt_KCompactDisc.pri
 share/locale/ar/LC_MESSAGES/libkcompactdisc.mo
+share/locale/be/LC_MESSAGES/libkcompactdisc.mo
 share/locale/bg/LC_MESSAGES/libkcompactdisc.mo
 share/locale/bs/LC_MESSAGES/libkcompactdisc.mo
 share/locale/ca/LC_MESSAGES/libkcompactdisc.mo
@@ -53,8 +53,10 @@ share/locale/pt/LC_MESSAGES/libkcompactdisc.mo
 share/locale/pt_BR/LC_MESSAGES/libkcompactdisc.mo
 share/locale/ro/LC_MESSAGES/libkcompactdisc.mo
 share/locale/ru/LC_MESSAGES/libkcompactdisc.mo
+share/locale/se/LC_MESSAGES/libkcompactdisc.mo
 share/locale/sk/LC_MESSAGES/libkcompactdisc.mo
 share/locale/sl/LC_MESSAGES/libkcompactdisc.mo
+share/locale/sq/LC_MESSAGES/libkcompactdisc.mo
 share/locale/sr/LC_MESSAGES/libkcompactdisc.mo
 share/locale/sv/LC_MESSAGES/libkcompactdisc.mo
 share/locale/tr/LC_MESSAGES/libkcompactdisc.mo
