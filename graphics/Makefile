@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.982 2022/09/17 15:55:05 pin Exp $
+# $NetBSD: Makefile,v 1.983 2022/09/29 00:10:39 markd Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -291,12 +291,14 @@ SUBDIR+=	jpegquality
 SUBDIR+=	jxrlib
 SUBDIR+=	kamera
 SUBDIR+=	kcolorchooser
+SUBDIR+=	kcolorpicker
 SUBDIR+=	kde-base-artwork
 SUBDIR+=	kdegraphics-mobipocket
 SUBDIR+=	kdegraphics-strigi-analyzer
 SUBDIR+=	kdegraphics-thumbnailers
 SUBDIR+=	kgamma
 SUBDIR+=	kiconthemes
+SUBDIR+=	kimageannotator
 SUBDIR+=	kimageformats
 SUBDIR+=	kipi-plugins
 SUBDIR+=	kolourpaint
