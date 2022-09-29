@@ -1,12 +1,9 @@
-# $NetBSD: Makefile,v 1.32 2022/09/29 00:17:01 markd Exp $
+# $NetBSD: Makefile,v 1.33 2022/09/29 06:39:31 markd Exp $
 
 DISTNAME=	scribus-1.5.8
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=scribus/}
 EXTRACT_SUFX=	.tar.xz
-#MASTER_SITES=	${MASTER_SITE_GITHUB:=scribusproject/}
-#GITHUB_PROJECT=	scribus
-#GITHUB_TAG=	37c361f2fcd24dea40c61a7f9638e6248ea3e68a
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://www.scribus.net/
@@ -40,7 +37,7 @@ CMAKE_ARGS+=	-DWANT_CPP17=ON
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../graphics/osg/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
-.include "../../print/cups-base/buildlink3.mk"
+.include "../../print/libcups/buildlink3.mk"
 .include "../../print/podofo/buildlink3.mk"
 .include "../../print/poppler-cpp/buildlink3.mk"
 .include "../../print/poppler-includes/buildlink3.mk"
