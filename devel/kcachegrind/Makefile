@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.57 2022/09/11 12:51:27 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2022/09/29 00:38:16 markd Exp $
 
 DISTNAME=	kcachegrind-${KAPPSVER}
-PKGREVISION=	12
 CATEGORIES=	devel
 
 HOMEPAGE=	https://kde.org/applications/development/kcachegrind/
@@ -18,14 +17,14 @@ REPLACE_PERL+=	converters/dprof2calltree
 REPLACE_PERL+=	converters/memprof2calltree
 REPLACE_PERL+=	converters/op2calltree
 
+REPLACE_PYTHON+=	converters/hotshot2calltree.in
+
 # REPLACE_PHP+= converters/pprof2calltree
 SUBST_CLASSES+=		php
 SUBST_MESSAGE.php=	Fixing PHP path
 SUBST_STAGE.php=	post-configure
 SUBST_FILES.php=	converters/pprof2calltree
 SUBST_SED.php=		-e 's,/usr/bin/env php,${PREFIX}/bin/php,'
-
-REPLACE_PYTHON+=	converters/hotshot2calltree.cmake
 
 .include "../../lang/php/phpversion.mk"
 .include "${PHPPKGSRCDIR}/buildlink3.mk"
