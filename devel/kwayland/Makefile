@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2022/08/11 05:08:11 gutteridge Exp $
+# $NetBSD: Makefile,v 1.18 2022/09/29 00:36:34 markd Exp $
 
 DISTNAME=	kwayland-${KF5VER}
-PKGREVISION=	1
 CATEGORIES=	x11
 
 HOMEPAGE=	https://community.kde.org/Frameworks
@@ -10,7 +9,7 @@ LICENSE=	gnu-lgpl-v2.1
 
 .include "../../meta-pkgs/kde/kf5.mk"
 
-BUILD_DEPENDS+=	plasma-wayland-protocols>=1.4:../../devel/plasma-wayland-protocols
+BUILD_DEPENDS+=	plasma-wayland-protocols>=1.7:../../devel/plasma-wayland-protocols
 
 USE_TOOLS+=	pkg-config
 # Don't do autotests.  Some builds are linux specific.

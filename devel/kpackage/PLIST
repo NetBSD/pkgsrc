@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2022/04/25 04:48:55 markd Exp $
+@comment $NetBSD: PLIST,v 1.10 2022/09/29 00:36:32 markd Exp $
 bin/kpackagetool5
 include/KF5/KPackage/KPackage/Package
 include/KF5/KPackage/KPackage/PackageLoader
@@ -21,6 +21,7 @@ lib/libKF5Package.so
 lib/libKF5Package.so.5
 lib/libKF5Package.so.${PKGVERSION}
 man/ca/man1/kpackagetool5.1
+man/ca@valencia/man1/kpackagetool5.1
 man/de/man1/kpackagetool5.1
 man/es/man1/kpackagetool5.1
 man/fr/man1/kpackagetool5.1
