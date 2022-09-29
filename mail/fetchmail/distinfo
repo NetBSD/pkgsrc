@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.65 2022/05/26 06:18:23 triaxx Exp $
+$NetBSD: distinfo,v 1.66 2022/09/29 19:26:55 triaxx Exp $
 
-BLAKE2s (fetchmail-6.4.30.tar.xz) = 148763089ad7e19584e50aec9d232b7bfb705221f353ddebc331f7da4b7dfb3b
-SHA512 (fetchmail-6.4.30.tar.xz) = 0ec540c4102267e6e72fefa5e76aa76f45d25a0e68ec40f1fd834719f2a4b5f3f78c587b050fc33d97dd8fc6f674950949e5c23f960ebcd3046d5cc2e06db1d0
-Size (fetchmail-6.4.30.tar.xz) = 1333524 bytes
-SHA1 (patch-Makefile.in) = 599e4eaada7466165ad8dbe41671b4ee46c0469d
-SHA1 (patch-configure) = 00384d048361bdb9e8244148e729242251540bb3
-SHA1 (patch-configure.ac) = 7cf2e63e2df2836417eca0ad34fa846f9af003fb
+BLAKE2s (fetchmail-6.4.33.tar.xz) = bdf79c2dc68ecd5f943143eab202a6a6940c3a233c248734e1a2f6ebafe94005
+SHA512 (fetchmail-6.4.33.tar.xz) = b95b89eaecdc98a92e1542f1bbdc6e1e51d38d392b564462413b602b3d5ebb004e4f4354694e369e6aceb6724753db55957e31a290e231fded74f1f523af41ac
+Size (fetchmail-6.4.33.tar.xz) = 1330708 bytes
+SHA1 (patch-Makefile.in) = b2300fc13e0d748ce90b37503a0e1a4e450b7d02
+SHA1 (patch-configure) = cb5174b911bfe93a0a33e7088c6aa2a92ee81471
+SHA1 (patch-configure.ac) = 1b6304098ffd0b697069e38727e99ddaa3bf6354
