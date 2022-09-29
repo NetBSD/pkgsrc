@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.34 2015/07/08 17:49:49 wiz Exp $
+# $NetBSD: Makefile.common,v 1.35 2022/09/29 06:18:55 markd Exp $
 # used by x11/qt4-libs/Makefile.common
 # used by x11/qt4-tools/Makefile
 
 QTVERSION=	4.8.7
 
 MAINTAINER?=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://qt-project.org/
+HOMEPAGE=	https://qt-project.org/
 
 LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v3
