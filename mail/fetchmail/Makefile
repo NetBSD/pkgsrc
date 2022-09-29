@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.204 2022/05/26 06:18:23 triaxx Exp $
+# $NetBSD: Makefile,v 1.205 2022/09/29 19:26:55 triaxx Exp $
 
 # Note to updaters: mail/fetchmailconf reaches over here, make sure it builds.
-DISTNAME=	fetchmail-6.4.30
+DISTNAME=	fetchmail-6.4.33
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fetchmail/}
 EXTRACT_SUFX=	.tar.xz
