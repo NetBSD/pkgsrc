@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2021/11/21 16:40:02 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.15 2022/09/29 22:05:39 charlotte Exp $
 bin/nim
 bin/nim-gdb
 bin/nim-gdb.bash
@@ -105,6 +105,7 @@ nim/compiler/nversion.nim
 nim/compiler/optimizer.nim
 nim/compiler/options.nim
 nim/compiler/packagehandling.nim
+nim/compiler/packages.nim
 nim/compiler/parampatterns.nim
 nim/compiler/parser.nim
 nim/compiler/passaux.nim
