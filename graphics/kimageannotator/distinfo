@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/09/29 00:09:28 markd Exp $
+
+BLAKE2s (kimageannotator-0.6.0.tar.gz) = df8efa939400bd5633f838b46104a63d158733a4e84c89e589d712c242f34bee
+SHA512 (kimageannotator-0.6.0.tar.gz) = 5782acd552af2297813164c0612810ec0d2127c174773040d99ec9d281f3575832b06667736a5521e88fa2d57ea6410e42a5d95232cb2dbdd9608917e5d6e896
+Size (kimageannotator-0.6.0.tar.gz) = 257662 bytes
