@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2021/03/30 10:58:30 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/09/29 01:28:24 markd Exp $
 bin/kdeinit5
 bin/kdeinit5_shutdown
 bin/kdeinit5_wrapper
@@ -13,6 +13,7 @@ libexec/kf5/klauncher
 libexec/kf5/start_kdeinit
 libexec/kf5/start_kdeinit_wrapper
 man/ca/man8/kdeinit5.8
+man/ca@valencia/man8/kdeinit5.8
 man/de/man8/kdeinit5.8
 man/es/man8/kdeinit5.8
 man/fr/man8/kdeinit5.8

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2022/04/25 09:37:06 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2022/09/29 01:28:25 markd Exp $
 lib/cmake/KF5QQC2DeskopStyle/KF5QQC2DeskopStyleConfig.cmake
 lib/cmake/KF5QQC2DeskopStyle/KF5QQC2DeskopStyleConfigVersion.cmake
 lib/cmake/KF5QQC2DesktopStyle/KF5QQC2DesktopStyleConfig.cmake
@@ -38,6 +38,7 @@ qt5/qml/QtQuick/Controls.2/org.kde.desktop/ScrollBar.qml
 qt5/qml/QtQuick/Controls.2/org.kde.desktop/ScrollView.qml
 qt5/qml/QtQuick/Controls.2/org.kde.desktop/Slider.qml
 qt5/qml/QtQuick/Controls.2/org.kde.desktop/SpinBox.qml
+qt5/qml/QtQuick/Controls.2/org.kde.desktop/StackView.qml
 qt5/qml/QtQuick/Controls.2/org.kde.desktop/Switch.qml
 qt5/qml/QtQuick/Controls.2/org.kde.desktop/SwitchDelegate.qml
 qt5/qml/QtQuick/Controls.2/org.kde.desktop/SwitchIndicator.qml
