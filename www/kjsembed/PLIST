@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/03/30 10:58:29 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/09/29 01:23:23 markd Exp $
 bin/kjscmd5
 bin/kjsconsole
 include/KF5/KJsEmbed/KJsEmbed/KJsEmbed
@@ -17,6 +17,7 @@ lib/libKF5JsEmbed.so
 lib/libKF5JsEmbed.so.5
 lib/libKF5JsEmbed.so.${PKGVERSION}
 man/ca/man1/kjscmd5.1
+man/ca@valencia/man1/kjscmd5.1
 man/de/man1/kjscmd5.1
 man/es/man1/kjscmd5.1
 man/fr/man1/kjscmd5.1
