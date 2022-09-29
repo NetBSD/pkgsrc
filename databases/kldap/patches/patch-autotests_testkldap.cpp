@@ -1,8 +1,8 @@
-$NetBSD: patch-autotests_testkldap.cpp,v 1.1 2020/02/18 16:49:13 joerg Exp $
+$NetBSD: patch-autotests_testkldap.cpp,v 1.2 2022/09/29 00:26:00 markd Exp $
 
---- autotests/testkldap.cpp.orig	2020-01-14 16:28:11.689663234 +0000
+--- autotests/testkldap.cpp.orig	2022-08-05 11:31:27.000000000 +0000
 +++ autotests/testkldap.cpp
-@@ -89,37 +89,37 @@ void KLdapTest::testBer()
+@@ -84,37 +84,37 @@ void KLdapTest::testBer()
  
      ainteger = 23543;
  
@@ -21,13 +21,13 @@ $NetBSD: patch-autotests_testkldap.cpp,v 1.1 2020/02/18 16:49:13 joerg Exp $
 +    ber6.printf("{V}", &alist2);
 +    ber7.printf("oi{v}O", &aoctetString1, ainteger, &alist2, &aoctetString2);
  
-     //test integer:
+     // test integer:
      bber = ber1;
 -    bber.scanf(QStringLiteral("i"), &binteger);
 +    bber.scanf("i", &binteger);
      QCOMPARE(ainteger, binteger);
  
-     //test octet strings:
+     // test octet strings:
      bber = ber2;
 -    bber.scanf(QStringLiteral("o"), &boctetString1);
 +    bber.scanf("o", &boctetString1);
@@ -41,7 +41,7 @@ $NetBSD: patch-autotests_testkldap.cpp,v 1.1 2020/02/18 16:49:13 joerg Exp $
 +    bber.scanf("o", &boctetString3);
      QCOMPARE(aoctetString3, boctetString3);
  
-     //test sequence of octet strings:
+     // test sequence of octet strings:
      bber = ber5;
 -    bber.scanf(QStringLiteral("v"), &blist1);
 +    bber.scanf("v", &blist1);
@@ -52,8 +52,8 @@ $NetBSD: patch-autotests_testkldap.cpp,v 1.1 2020/02/18 16:49:13 joerg Exp $
 +    bber.scanf("v", &blist2);
      QCOMPARE(alist2, blist2);
  
-     //complex tests
-@@ -129,7 +129,7 @@ void KLdapTest::testBer()
+     // complex tests
+@@ -124,7 +124,7 @@ void KLdapTest::testBer()
      blist2.clear();
  
      bber = ber7;
