@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2022/09/29 00:08:22 markd Exp $
+include/kColorPicker/KColorPicker.h
+include/kColorPicker/KColorPickerExport.h
+lib/cmake/kColorPicker/kColorPicker-targets-noconfig.cmake
+lib/cmake/kColorPicker/kColorPicker-targets.cmake
+lib/cmake/kColorPicker/kColorPickerConfig-version.cmake
+lib/cmake/kColorPicker/kColorPickerConfig.cmake
+lib/libkColorPicker.so
+lib/libkColorPicker.so.0
+lib/libkColorPicker.so.${PKGVERSION}
