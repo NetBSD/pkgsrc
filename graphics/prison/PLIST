@@ -1,4 +1,9 @@
-@comment $NetBSD: PLIST,v 1.5 2022/04/25 06:03:10 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/09/29 00:52:15 markd Exp $
+include/KF5/Prison/Prison/AbstractBarcode
+include/KF5/Prison/Prison/Prison
+include/KF5/Prison/Prison/abstractbarcode.h
+include/KF5/Prison/Prison/prison.h
+include/KF5/Prison/Prison/prison_export.h
 include/KF5/Prison/prison/AbstractBarcode
 include/KF5/Prison/prison/Prison
 include/KF5/Prison/prison/abstractbarcode.h
@@ -6,6 +11,13 @@ include/KF5/Prison/prison/prison.h
 include/KF5/Prison/prison/prison_export.h
 include/KF5/Prison/prison/prison_version.h
 include/KF5/Prison/prison_version.h
+include/KF5/PrisonScanner/Prison/Format
+include/KF5/PrisonScanner/Prison/ScanResult
+include/KF5/PrisonScanner/Prison/VideoScanner
+include/KF5/PrisonScanner/Prison/format.h
+include/KF5/PrisonScanner/Prison/prisonscanner_export.h
+include/KF5/PrisonScanner/Prison/scanresult.h
+include/KF5/PrisonScanner/Prison/videoscanner.h
 lib/cmake/KF5Prison/KF5PrisonConfig.cmake
 lib/cmake/KF5Prison/KF5PrisonConfigVersion.cmake
 lib/cmake/KF5Prison/KF5PrisonTargets-noconfig.cmake
@@ -13,8 +25,13 @@ lib/cmake/KF5Prison/KF5PrisonTargets.cmake
 lib/libKF5Prison.so
 lib/libKF5Prison.so.5
 lib/libKF5Prison.so.${PKGVERSION}
+lib/libKF5PrisonScanner.so
+lib/libKF5PrisonScanner.so.5
+lib/libKF5PrisonScanner.so.${PKGVERSION}
 qt5/mkspecs/modules/qt_Prison.pri
 qt5/qml/org/kde/prison/libprisonquickplugin.so
 qt5/qml/org/kde/prison/qmldir
+qt5/qml/org/kde/prison/scanner/libprisonscannerquickplugin.so
+qt5/qml/org/kde/prison/scanner/qmldir
 share/qlogging-categories5/prison.categories
 share/qlogging-categories5/prison.renamecategories
