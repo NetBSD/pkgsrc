@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:12:18 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/09/29 00:17:01 markd Exp $
 
-BLAKE2s (scribus-1.5.6pre20200611-37c361f2fcd24dea40c61a7f9638e6248ea3e68a.tar.gz) = a02e3c343ea0e0ab4e225f6ba6018b3a3b61a238cfbb3410f8a4de1db5cd5504
-SHA512 (scribus-1.5.6pre20200611-37c361f2fcd24dea40c61a7f9638e6248ea3e68a.tar.gz) = d2d3ce3c4ca2bbe7e8950f5ad4f967d90b4d7cb300dfb0d475f501055304cf6dd58fec3fc977890dca5f1725108da8c5c4b55209ab75c65c2fb147613f880049
-Size (scribus-1.5.6pre20200611-37c361f2fcd24dea40c61a7f9638e6248ea3e68a.tar.gz) = 87492633 bytes
-SHA1 (patch-CMakeLists__Dependencies.cmake) = 583d1b0f0e0fe2c3dda674b5d4a2b172a4b1624f
-SHA1 (patch-scribus_plugins_import_pdf_slaoutput.cpp) = 03c33ecab1b3041da24942081a7f1df2a09c432b
-SHA1 (patch-scribus_plugins_import_pdf_slaoutput.h) = 56c4773d1422cc51c4747a2410f974acdc5560bb
-SHA1 (patch-scribus_ui_colorlistmodel.cpp) = c5ac59338ba07f46a42bd882c6a876c2c7c8404a
-SHA1 (patch-scribus_ui_colorlistmodel.h) = 781b1dc06e6abd9e494a58b6a80d2f8e97936c49
+BLAKE2s (scribus-1.5.8.tar.xz) = 5c417889a7b89f75f069a738d1789d0f96bd0d091e5309a553740311396dff0c
+SHA512 (scribus-1.5.8.tar.xz) = eb46be0165eeb0d8974aa744fc8ffac321b206ca0015da39bb2f50d9fd4a5e28300a49ada0f963b4e0cf9a3301dc746ffba74f359f5e76d308d80b71ee669c2d
+Size (scribus-1.5.8.tar.xz) = 74543476 bytes
+SHA1 (patch-CMakeLists__Dependencies.cmake) = 80fc0e787829031da3ec7085724e4b06e6106303
+SHA1 (patch-scribus_plugins_import_pdf_importpdf.cpp) = 28ce7f6abbc92f6760dfe8e37b2b050bad4a539b
+SHA1 (patch-scribus_plugins_import_pdf_slaoutput.cpp) = 3dd733201d8f2629a145528ec9bbe37a2bef2dbb

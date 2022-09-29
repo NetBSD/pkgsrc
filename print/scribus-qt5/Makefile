@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.31 2022/09/11 12:52:05 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2022/09/29 00:17:01 markd Exp $
 
-DISTNAME=	scribus-1.5.6pre20200611
-PKGREVISION=	28
+DISTNAME=	scribus-1.5.8
 CATEGORIES=	print
-MASTER_SITES=	${MASTER_SITE_GITHUB:=scribusproject/}
-GITHUB_PROJECT=	scribus
-GITHUB_TAG=	37c361f2fcd24dea40c61a7f9638e6248ea3e68a
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=scribus/}
+EXTRACT_SUFX=	.tar.xz
+#MASTER_SITES=	${MASTER_SITE_GITHUB:=scribusproject/}
+#GITHUB_PROJECT=	scribus
+#GITHUB_TAG=	37c361f2fcd24dea40c61a7f9638e6248ea3e68a
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://www.scribus.net/
@@ -13,10 +14,10 @@ COMMENT=	Publishing layout with graphical interface (Qt5 port)
 LICENSE=	gnu-gpl-v2
 
 USE_CMAKE=	yes
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++17
 USE_TOOLS+=	pkg-config
 
-BROKEN+=	"Poppler headers want C++17, this package is C++11"
+CMAKE_ARGS+=	-DWANT_CPP17=ON
 
 .include "../../converters/libcdr/buildlink3.mk"
 .include "../../converters/libfreehand/buildlink3.mk"
@@ -37,6 +38,7 @@ BROKEN+=	"Poppler headers want C++17, this package is C++11"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
+.include "../../graphics/osg/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../print/cups-base/buildlink3.mk"
 .include "../../print/podofo/buildlink3.mk"
