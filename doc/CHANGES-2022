@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4742 2022/09/29 15:49:08 ryoon Exp $
+$NetBSD: CHANGES-2022,v 1.4743 2022/09/29 17:56:19 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7179,3 +7179,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated geography/libmaxminddb to 1.7.0 [fcambus 2022-09-29]
 	Updated devel/mold to 1.5.0 [fcambus 2022-09-29]
 	Updated multimedia/libaom to 3.5.0 [ryoon 2022-09-29]
+	Updated mail/roundcube-plugin-carddav to 4.4.3 [triaxx 2022-09-29]
