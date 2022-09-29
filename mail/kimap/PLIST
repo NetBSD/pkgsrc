@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/04/07 12:28:25 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/09/29 00:56:13 markd Exp $
 include/KF5/KIMAP/KIMAP/Acl
 include/KF5/KIMAP/KIMAP/AclJobBase
 include/KF5/KIMAP/KIMAP/AppendJob
@@ -126,18 +126,19 @@ include/KF5/KIMAP/kimap/statusjob.h
 include/KF5/KIMAP/kimap/storejob.h
 include/KF5/KIMAP/kimap/subscribejob.h
 include/KF5/KIMAP/kimap/unsubscribejob.h
-include/KF5/kimap_version.h
-include/KF5/kimaptest/fakeserver.h
-include/KF5/kimaptest/mockjob.h
+include/KF5/KIMAP/kimap_version.h
+include/KF5/KIMAPTest/kimaptest/fakeserver.h
+include/KF5/KIMAPTest/kimaptest/mockjob.h
 lib/cmake/KF5IMAP/KF5IMAPConfig.cmake
 lib/cmake/KF5IMAP/KF5IMAPConfigVersion.cmake
 lib/cmake/KF5IMAP/KF5IMAPTargets-noconfig.cmake
 lib/cmake/KF5IMAP/KF5IMAPTargets.cmake
 lib/libKF5IMAP.so
 lib/libKF5IMAP.so.5
-lib/libKF5IMAP.so.5.16.3
+lib/libKF5IMAP.so.5.21.1
 lib/libkimaptest.a
 qt5/mkspecs/modules/qt_KIMAP.pri
+share/locale/ar/LC_MESSAGES/libkimap5.mo
 share/locale/bs/LC_MESSAGES/libkimap5.mo
 share/locale/ca/LC_MESSAGES/libkimap5.mo
 share/locale/ca@valencia/LC_MESSAGES/libkimap5.mo
@@ -175,6 +176,7 @@ share/locale/ro/LC_MESSAGES/libkimap5.mo
 share/locale/ru/LC_MESSAGES/libkimap5.mo
 share/locale/sk/LC_MESSAGES/libkimap5.mo
 share/locale/sl/LC_MESSAGES/libkimap5.mo
+share/locale/sq/LC_MESSAGES/libkimap5.mo
 share/locale/sr/LC_MESSAGES/libkimap5.mo
 share/locale/sv/LC_MESSAGES/libkimap5.mo
 share/locale/tr/LC_MESSAGES/libkimap5.mo

@@ -1,17 +1,17 @@
-@comment $NetBSD: PLIST,v 1.4 2021/04/07 12:28:25 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/09/29 00:56:13 markd Exp $
 include/KF5/KMbox/KMbox/MBox
 include/KF5/KMbox/KMbox/MBoxEntry
 include/KF5/KMbox/kmbox/kmbox_export.h
 include/KF5/KMbox/kmbox/mbox.h
 include/KF5/KMbox/kmbox/mboxentry.h
-include/KF5/kmbox_version.h
+include/KF5/KMbox/kmbox_version.h
 lib/cmake/KF5Mbox/KF5MboxConfig.cmake
 lib/cmake/KF5Mbox/KF5MboxConfigVersion.cmake
 lib/cmake/KF5Mbox/KF5MboxTargets-noconfig.cmake
 lib/cmake/KF5Mbox/KF5MboxTargets.cmake
 lib/libKF5Mbox.so
 lib/libKF5Mbox.so.5
-lib/libKF5Mbox.so.5.16.3
+lib/libKF5Mbox.so.5.21.1
 qt5/mkspecs/modules/qt_KMbox.pri
 share/qlogging-categories5/kmbox.categories
 share/qlogging-categories5/kmbox.renamecategories
