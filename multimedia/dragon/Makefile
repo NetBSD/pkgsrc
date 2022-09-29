@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.55 2022/09/29 01:07:05 markd Exp $
+# $NetBSD: Makefile,v 1.56 2022/09/29 05:54:42 markd Exp $
 
 DISTNAME=	dragon-${KAPPSVER}
 CATEGORIES=	multimedia
 
-HOMEPAGE=	https://kde.org/applications/multimedia/dragon/
+HOMEPAGE=	https://apps.kde.org/dragonplayer/
 COMMENT=	Simple video player for KDE
 LICENSE=	gnu-gpl-v2
 
