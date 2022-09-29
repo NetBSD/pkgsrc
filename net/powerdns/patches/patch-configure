@@ -1,4 +1,6 @@
-$NetBSD: patch-configure,v 1.11 2020/12/21 00:26:51 otis Exp $
+$NetBSD: patch-configure,v 1.12 2022/09/29 13:49:50 jperkin Exp $
+
+Shell portability.
 
 --- configure.orig	2020-12-17 14:49:10.000000000 +0000
 +++ configure

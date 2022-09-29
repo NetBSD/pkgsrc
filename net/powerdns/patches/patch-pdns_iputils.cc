@@ -1,9 +1,11 @@
-$NetBSD: patch-pdns_iputils.cc,v 1.1 2018/04/01 20:28:21 joerg Exp $
+$NetBSD: patch-pdns_iputils.cc,v 1.2 2022/09/29 13:49:50 jperkin Exp $
 
---- pdns/iputils.cc.orig	2018-04-01 17:24:16.523211468 +0000
+Fix build on NetBSD?
+
+--- pdns/iputils.cc.orig	2022-07-11 13:54:25.000000000 +0000
 +++ pdns/iputils.cc
-@@ -150,14 +150,14 @@ bool HarvestDestinationAddress(const str
-   for (cmsg = CMSG_FIRSTHDR(msgh); cmsg != NULL; cmsg = CMSG_NXTHDR(const_cast<struct msghdr*>(msgh), const_cast<struct cmsghdr*>(cmsg))) {
+@@ -228,14 +228,14 @@ bool HarvestDestinationAddress(const str
+   for (cmsg = CMSG_FIRSTHDR(msgh); cmsg != nullptr; cmsg = CMSG_NXTHDR(const_cast<struct msghdr*>(msgh), const_cast<struct cmsghdr*>(cmsg))) {
  #if defined(IP_PKTINFO)
       if ((cmsg->cmsg_level == IPPROTO_IP) && (cmsg->cmsg_type == IP_PKTINFO)) {
 -        struct in_pktinfo *i = (struct in_pktinfo *) CMSG_DATA(cmsg);
@@ -19,7 +21,7 @@ $NetBSD: patch-pdns_iputils.cc,v 1.1 2018/04/01 20:28:21 joerg Exp $
        destination->sin4.sin_addr = *i;
        destination->sin4.sin_family = AF_INET;      
        return true;
-@@ -165,7 +165,7 @@ bool HarvestDestinationAddress(const str
+@@ -243,7 +243,7 @@ bool HarvestDestinationAddress(const str
  #endif
  
      if ((cmsg->cmsg_level == IPPROTO_IPV6) && (cmsg->cmsg_type == IPV6_PKTINFO)) {
