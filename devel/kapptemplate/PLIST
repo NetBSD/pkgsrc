@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/04/07 12:28:15 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/09/29 00:38:16 markd Exp $
 bin/kapptemplate
 share/applications/org.kde.kapptemplate.desktop
 share/config.kcfg/kapptemplate.kcfg
@@ -41,6 +41,7 @@ share/icons/hicolor/64x64/apps/kapptemplate.png
 share/icons/hicolor/scalable/apps/kapptemplate.svg
 share/kdevappwizard/templates/kde-frameworks5-simple.tar.bz2
 share/kdevappwizard/templates/kde-frameworks5.tar.bz2
+share/locale/bg/LC_MESSAGES/kapptemplate.mo
 share/locale/bs/LC_MESSAGES/kapptemplate.mo
 share/locale/ca/LC_MESSAGES/kapptemplate.mo
 share/locale/ca@valencia/LC_MESSAGES/kapptemplate.mo
@@ -75,6 +76,7 @@ share/locale/pt_BR/LC_MESSAGES/kapptemplate.mo
 share/locale/ru/LC_MESSAGES/kapptemplate.mo
 share/locale/sk/LC_MESSAGES/kapptemplate.mo
 share/locale/sl/LC_MESSAGES/kapptemplate.mo
+share/locale/sq/LC_MESSAGES/kapptemplate.mo
 share/locale/sr/LC_MESSAGES/kapptemplate.mo
 share/locale/sv/LC_MESSAGES/kapptemplate.mo
 share/locale/tr/LC_MESSAGES/kapptemplate.mo
@@ -83,3 +85,4 @@ share/locale/uk/LC_MESSAGES/kapptemplate.mo
 share/locale/zh_CN/LC_MESSAGES/kapptemplate.mo
 share/locale/zh_TW/LC_MESSAGES/kapptemplate.mo
 share/metainfo/org.kde.kapptemplate.appdata.xml
+share/qlogging-categories5/kapptemplate.categories
