@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.315 2022/09/15 11:53:05 jperkin Exp $
+# $NetBSD: bootstrap,v 1.316 2022/09/29 02:25:15 charlotte Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -562,11 +562,6 @@ AIX)
 	need_ksh=yes
 	need_fixed_strip=yes
 	machine_arch=`get_machine_arch_aix`
-	;;
-Bitrig)
-	root_group=wheel
-	machine_arch=`arch -s`
-	check_compiler=yes
 	;;
 CYGWIN_*)
 	is_root () {
