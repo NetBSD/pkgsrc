@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 10:15:09 nia Exp $
+$NetBSD: distinfo,v 1.13 2022/09/29 00:38:16 markd Exp $
 
-BLAKE2s (kde-dev-utils-20.12.3.tar.xz) = d0a0384d0e317054d6de97f02de4e8c730b33d0c3ce0f4db5016cd2bd6f8674f
-SHA512 (kde-dev-utils-20.12.3.tar.xz) = 72f5eccb3a67c4ac1a1bf9a8b81879a622dcae23b23df9caafa90f13f16de449a6c4750b0de55d99146a823716cf3c8845d1547360824c51d3b94882ca83cb7c
-Size (kde-dev-utils-20.12.3.tar.xz) = 65832 bytes
+BLAKE2s (kde-dev-utils-22.08.1.tar.xz) = 3aef224a32d90571b6e1564193e4a50d4f0a66a9962313d82c7db183c645434a
+SHA512 (kde-dev-utils-22.08.1.tar.xz) = fe55c307b2295e7938c5af5e10418d23f4fcf26958108b63cfa217839290e8dacb1ea4de2eab569904415d0cb6ca0653cfe68e53c4ea21b01803c9338680b4bd
+Size (kde-dev-utils-22.08.1.tar.xz) = 68584 bytes
