@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4735 2022/09/29 10:49:10 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4736 2022/09/29 12:47:43 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7167,3 +7167,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated emulators/fs-uae-launcher to 3.1.68 [adam 2022-09-29]
 	Updated emulators/fs-uae-arcade to 3.1.63 [adam 2022-09-29]
 	Updated time/ruby-tzinfo-data to 1.2022.4 [taca 2022-09-29]
+	Updated net/powerdns-recursor to 4.7.3 [jperkin 2022-09-29]
