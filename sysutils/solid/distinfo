@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.17 2022/04/25 06:46:54 markd Exp $
+$NetBSD: distinfo,v 1.18 2022/09/29 01:16:11 markd Exp $
 
-BLAKE2s (solid-5.93.0.tar.xz) = 972ab477d3b90aa5789202af5d5c1cb28535288db96de7b57846807018101d5f
-SHA512 (solid-5.93.0.tar.xz) = 028e045da3759586a7dcdf6fc00ae1d359eef87aef0c02251b669e81b8a076fea1ef69193d5122b21871d89b4232eec1aad3e469d9f1541e4aea629a0b1288bb
-Size (solid-5.93.0.tar.xz) = 258144 bytes
+BLAKE2s (solid-5.98.0.tar.xz) = 6eb4ac02ab2d9e45954e01914815aa07d012181cb0c8e4a7ec47674edcdd33d4
+SHA512 (solid-5.98.0.tar.xz) = 0a291f771cc77ac7e4ed804d619cd2d4638cf505e6c813f2e7e7a4ca6ffc60726939e346fc87053666c1d71e855fa1907712c9f59d235ce8bb2cca3ee730afb6
+Size (solid-5.98.0.tar.xz) = 259180 bytes
 SHA1 (patch-src_solid_devices_backends_fstab_fstabhandling.cpp) = 93c094ba7d0396d80c00f5c044029a2d567ad9c8
