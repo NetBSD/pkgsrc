@@ -1,7 +1,15 @@
-@comment $NetBSD: PLIST,v 1.4 2020/06/09 11:56:08 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/09/29 00:47:29 markd Exp $
 bin/klickety
 share/applications/org.kde.klickety.desktop
 share/applications/org.kde.ksame.desktop
+share/doc/HTML/ca/klickety/config-background.png
+share/doc/HTML/ca/klickety/config-customgame.png
+share/doc/HTML/ca/klickety/config-general.png
+share/doc/HTML/ca/klickety/config-theme.png
+share/doc/HTML/ca/klickety/gamescreen.png
+share/doc/HTML/ca/klickety/index.cache.bz2
+share/doc/HTML/ca/klickety/index.docbook
+share/doc/HTML/ca/klickety/numbered.png
 share/doc/HTML/de/klickety/index.cache.bz2
 share/doc/HTML/de/klickety/index.docbook
 share/doc/HTML/en/klickety/config-background.png
@@ -73,7 +81,7 @@ share/klickety/themes/ksame_old.desktop
 share/klickety/themes/ksame_old.svg
 share/klickety/themes/ksame_old_preview.png
 share/klickety/themes/ksame_preview.png
-share/kxmlgui5/klickety/klicketyui.rc
+share/locale/bg/LC_MESSAGES/klickety.mo
 share/locale/bs/LC_MESSAGES/klickety.mo
 share/locale/ca/LC_MESSAGES/klickety.mo
 share/locale/ca@valencia/LC_MESSAGES/klickety.mo

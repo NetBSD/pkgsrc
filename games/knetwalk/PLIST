@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.6 2020/06/09 11:56:09 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/09/29 00:47:30 markd Exp $
 bin/knetwalk
 share/applications/org.kde.knetwalk.desktop
+share/doc/HTML/ca/knetwalk/index.cache.bz2
+share/doc/HTML/ca/knetwalk/index.docbook
 share/doc/HTML/cs/knetwalk/index.cache.bz2
 share/doc/HTML/cs/knetwalk/index.docbook
 share/doc/HTML/de/knetwalk/index.cache.bz2
@@ -29,6 +31,8 @@ share/doc/HTML/pt/knetwalk/index.cache.bz2
 share/doc/HTML/pt/knetwalk/index.docbook
 share/doc/HTML/pt_BR/knetwalk/index.cache.bz2
 share/doc/HTML/pt_BR/knetwalk/index.docbook
+share/doc/HTML/ru/knetwalk/index.cache.bz2
+share/doc/HTML/ru/knetwalk/index.docbook
 share/doc/HTML/sv/knetwalk/index.cache.bz2
 share/doc/HTML/sv/knetwalk/index.docbook
 share/doc/HTML/uk/knetwalk/gameboard.png
@@ -57,6 +61,7 @@ share/knetwalk/themes/electronic.desktop
 share/knetwalk/themes/electronic.svgz
 share/knetwalk/themes/electronic_preview.png
 share/locale/ar/LC_MESSAGES/knetwalk.mo
+share/locale/be/LC_MESSAGES/knetwalk.mo
 share/locale/bg/LC_MESSAGES/knetwalk.mo
 share/locale/bs/LC_MESSAGES/knetwalk.mo
 share/locale/ca/LC_MESSAGES/knetwalk.mo
@@ -100,8 +105,10 @@ share/locale/pt/LC_MESSAGES/knetwalk.mo
 share/locale/pt_BR/LC_MESSAGES/knetwalk.mo
 share/locale/ro/LC_MESSAGES/knetwalk.mo
 share/locale/ru/LC_MESSAGES/knetwalk.mo
+share/locale/se/LC_MESSAGES/knetwalk.mo
 share/locale/sk/LC_MESSAGES/knetwalk.mo
 share/locale/sl/LC_MESSAGES/knetwalk.mo
+share/locale/sq/LC_MESSAGES/knetwalk.mo
 share/locale/sr/LC_MESSAGES/knetwalk.mo
 share/locale/sv/LC_MESSAGES/knetwalk.mo
 share/locale/tr/LC_MESSAGES/knetwalk.mo
