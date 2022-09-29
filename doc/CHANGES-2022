@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4746 2022/09/29 19:41:56 adam Exp $
+$NetBSD: CHANGES-2022,v 1.4747 2022/09/29 21:26:33 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7186,3 +7186,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated finance/bitcoin to 23.0 [adam 2022-09-29]
 	Updated lang/nodejs to 18.10.0 [adam 2022-09-29]
 	Updated finance/py-eth-typing to 3.2.0 [adam 2022-09-29]
+	Updated pkgtools/lintpkgsrc to 2022.09.29 [rillig 2022-09-29]
