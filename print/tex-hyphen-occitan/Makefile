@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2021/05/30 08:04:46 markd Exp $
+# $NetBSD: Makefile,v 1.5 2022/09/29 06:08:17 markd Exp $
 
 DISTNAME=	hyphen-occitan
 PKGNAME=	tex-${DISTNAME}-2021
 TEXLIVE_REV=	58652
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://ctan.org/pkg/hyphen-occitan
+#HOMEPAGE=	https://ctan.org/pkg/hyphen-occitan
 COMMENT=	Occitan hyphenation patterns
 
 DEPENDS+=	tex-hyph-utf8-[0-9]*:../../print/tex-hyph-utf8
