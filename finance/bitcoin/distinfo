@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.15 2021/12/26 05:27:37 mef Exp $
+$NetBSD: distinfo,v 1.16 2022/09/29 19:37:12 adam Exp $
 
-BLAKE2s (bitcoin-22.0.tar.gz) = 8e0526c33180ff5036637b774aeff354ecaff92806422239103a6e22a5394bf6
-SHA512 (bitcoin-22.0.tar.gz) = a39dcc6e89f42c9da2d9aad503071c615bde76b17c829d2b460754691ad07c3eef66c36555252d31ddc8f3b13d0e6893e40cfb042ba20ef19144bcd15d89ceb2
-Size (bitcoin-22.0.tar.gz) = 7972234 bytes
-SHA1 (patch-configure.ac) = af27ab90a784633464e2d6554d61723a7610257d
+BLAKE2s (bitcoin-23.0.tar.gz) = d86c4783fd8d31bdd0f46de2916f22602aad1977c93c8549b67276153bf211ae
+SHA512 (bitcoin-23.0.tar.gz) = c76defcb54618ac46ab9cc92e6df40d9a3d0e387bf9c2f253c5b66052c2ad449c533a9bf823f54a1a1c2e63c3ef0aa04d3146d686f6859c1b6a0e5aa39d75904
+Size (bitcoin-23.0.tar.gz) = 10978750 bytes
 SHA1 (patch-src_netbase.cpp) = d160078c9a7aedc5b569a89ebf9afa98b0d2022b
