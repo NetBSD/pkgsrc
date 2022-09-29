@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/04/07 12:28:31 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/09/29 01:19:25 markd Exp $
 include/KF5/KPIMTextEdit/KPIMTextEdit/AbstractMarkupBuilder
 include/KF5/KPIMTextEdit/KPIMTextEdit/AbstractTextToSpeechInterface
 include/KF5/KPIMTextEdit/KPIMTextEdit/EditorUtil
@@ -34,6 +34,7 @@ include/KF5/KPIMTextEdit/kpimtextedit/abstractmarkupbuilder.h
 include/KF5/KPIMTextEdit/kpimtextedit/abstracttexttospeechinterface.h
 include/KF5/KPIMTextEdit/kpimtextedit/editorutil.h
 include/KF5/KPIMTextEdit/kpimtextedit/emoticonunicodetab.h
+include/KF5/KPIMTextEdit/kpimtextedit/kpimtextedit-texttospeech.h
 include/KF5/KPIMTextEdit/kpimtextedit/kpimtextedit_export.h
 include/KF5/KPIMTextEdit/kpimtextedit/markupdirector.h
 include/KF5/KPIMTextEdit/kpimtextedit/plaintexteditfindbar.h
@@ -62,17 +63,18 @@ include/KF5/KPIMTextEdit/kpimtextedit/texttospeechactions.h
 include/KF5/KPIMTextEdit/kpimtextedit/texttospeechinterface.h
 include/KF5/KPIMTextEdit/kpimtextedit/texttospeechwidget.h
 include/KF5/KPIMTextEdit/kpimtextedit/textutils.h
-include/KF5/kpimtextedit_version.h
+include/KF5/KPIMTextEdit/kpimtextedit_version.h
 lib/cmake/KF5PimTextEdit/KF5PimTextEditConfig.cmake
 lib/cmake/KF5PimTextEdit/KF5PimTextEditConfigVersion.cmake
 lib/cmake/KF5PimTextEdit/KF5PimTextEditTargets-noconfig.cmake
 lib/cmake/KF5PimTextEdit/KF5PimTextEditTargets.cmake
 lib/libKF5PimTextEdit.so
 lib/libKF5PimTextEdit.so.5
-lib/libKF5PimTextEdit.so.5.16.3
+lib/libKF5PimTextEdit.so.5.21.1
 qt5/mkspecs/modules/qt_KPIMTextEdit.pri
 qt5/plugins/designer/kpimtexteditwidgets.so
 share/locale/ar/LC_MESSAGES/libkpimtextedit.mo
+share/locale/az/LC_MESSAGES/libkpimtextedit.mo
 share/locale/bs/LC_MESSAGES/libkpimtextedit.mo
 share/locale/ca/LC_MESSAGES/libkpimtextedit.mo
 share/locale/ca@valencia/LC_MESSAGES/libkpimtextedit.mo
@@ -110,6 +112,7 @@ share/locale/ro/LC_MESSAGES/libkpimtextedit.mo
 share/locale/ru/LC_MESSAGES/libkpimtextedit.mo
 share/locale/sk/LC_MESSAGES/libkpimtextedit.mo
 share/locale/sl/LC_MESSAGES/libkpimtextedit.mo
+share/locale/sq/LC_MESSAGES/libkpimtextedit.mo
 share/locale/sr/LC_MESSAGES/libkpimtextedit.mo
 share/locale/sv/LC_MESSAGES/libkpimtextedit.mo
 share/locale/tr/LC_MESSAGES/libkpimtextedit.mo
