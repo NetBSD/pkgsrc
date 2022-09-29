@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2022/04/25 06:31:34 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/09/29 01:12:53 markd Exp $
 include/KF5/KDESu/KDESu/Client
 include/KF5/KDESu/KDESu/PtyProcess
 include/KF5/KDESu/KDESu/SshProcess
@@ -29,6 +29,7 @@ qt5/mkspecs/modules/qt_KDESu.pri
 share/locale/ar/LC_MESSAGES/kdesud5.mo
 share/locale/ast/LC_MESSAGES/kdesud5.mo
 share/locale/az/LC_MESSAGES/kdesud5.mo
+share/locale/bg/LC_MESSAGES/kdesud5.mo
 share/locale/bs/LC_MESSAGES/kdesud5.mo
 share/locale/ca/LC_MESSAGES/kdesud5.mo
 share/locale/ca@valencia/LC_MESSAGES/kdesud5.mo
@@ -50,6 +51,7 @@ share/locale/ia/LC_MESSAGES/kdesud5.mo
 share/locale/id/LC_MESSAGES/kdesud5.mo
 share/locale/it/LC_MESSAGES/kdesud5.mo
 share/locale/ja/LC_MESSAGES/kdesud5.mo
+share/locale/ka/LC_MESSAGES/kdesud5.mo
 share/locale/ko/LC_MESSAGES/kdesud5.mo
 share/locale/lt/LC_MESSAGES/kdesud5.mo
 share/locale/ml/LC_MESSAGES/kdesud5.mo
@@ -74,6 +76,7 @@ share/locale/sv/LC_MESSAGES/kdesud5.mo
 share/locale/tg/LC_MESSAGES/kdesud5.mo
 share/locale/tr/LC_MESSAGES/kdesud5.mo
 share/locale/uk/LC_MESSAGES/kdesud5.mo
+share/locale/vi/LC_MESSAGES/kdesud5.mo
 share/locale/zh_CN/LC_MESSAGES/kdesud5.mo
 share/locale/zh_TW/LC_MESSAGES/kdesud5.mo
 share/qlogging-categories5/ksu.categories
