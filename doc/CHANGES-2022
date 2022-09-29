@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4745 2022/09/29 19:27:48 triaxx Exp $
+$NetBSD: CHANGES-2022,v 1.4746 2022/09/29 19:41:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7182,3 +7182,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated mail/roundcube-plugin-carddav to 4.4.3 [triaxx 2022-09-29]
 	Updated mail/fetchmail to 6.4.33 [triaxx 2022-09-29]
 	Updated mail/fetchmailconf to 6.4.33 [triaxx 2022-09-29]
+	Updated devel/abseil to 20220623.1 [adam 2022-09-29]
+	Updated finance/bitcoin to 23.0 [adam 2022-09-29]
+	Updated lang/nodejs to 18.10.0 [adam 2022-09-29]
+	Updated finance/py-eth-typing to 3.2.0 [adam 2022-09-29]
