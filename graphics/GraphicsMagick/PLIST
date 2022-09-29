@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2021/12/14 19:56:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.32 2022/09/29 09:21:10 nros Exp $
 bin/GraphicsMagick++-config
 bin/GraphicsMagick-config
 bin/GraphicsMagickWand-config
@@ -107,6 +107,7 @@ lib/${PKGNAME}/modules-Q8/coders/dpx.la
 lib/${PKGNAME}/modules-Q8/coders/ept.la
 lib/${PKGNAME}/modules-Q8/coders/fax.la
 lib/${PKGNAME}/modules-Q8/coders/fits.la
+${PLIST.fpx}lib/${PKGNAME}/modules-Q8/coders/fpx.la
 lib/${PKGNAME}/modules-Q8/coders/gif.la
 lib/${PKGNAME}/modules-Q8/coders/gradient.la
 lib/${PKGNAME}/modules-Q8/coders/gray.la
