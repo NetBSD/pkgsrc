@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2021/12/03 15:15:39 micha Exp $
+# $NetBSD: Makefile.common,v 1.9 2022/09/30 15:27:14 micha Exp $
 # used by archivers/star/Makefile
 # used by archivers/tartest/Makefile
 # used by devel/smake/Makefile
@@ -10,6 +10,11 @@
 # All packages based on the schilytools tarball should include this Makefile
 # fragment to inherit and share the same pkgsrc platform specific code.
 
+WRKSRC=		${WRKDIR}/schilytools
+
+# smake ignores the "-j" option
+MAKE_JOBS_SAFE=	no
+
 # Map PKGSRC_COMPILER to CCOM used by schilytools build system.
 .if !empty(PKGSRC_COMPILER:Mgcc)
 MAKE_FLAGS+=	CCOM=gcc
@@ -19,6 +24,8 @@ MAKE_FLAGS+=	CCOM=clang
 .else
 MAKE_FLAGS+=	CCOM=cc
 .endif
+
+MAKE_FLAGS+=	LINKMODE=static
 
 # OS rules
 # Some rules were copied from old packages (that are now part of schilytools
