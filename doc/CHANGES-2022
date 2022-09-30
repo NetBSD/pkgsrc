@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4770 2022/09/30 15:58:28 micha Exp $
+$NetBSD: CHANGES-2022,v 1.4771 2022/09/30 16:10:22 micha Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7213,3 +7213,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated shells/bosh to 20220918 [micha 2022-09-30]
 	Updated shells/pbosh to 20220918 [micha 2022-09-30]
 	Updated sysutils/cdrtools to 3.02a10nb1 [micha 2022-09-30]
+	Updated graphics/graphviz to 6.0.1 [micha 2022-09-30]
