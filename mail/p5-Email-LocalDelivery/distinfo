@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:54:12 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/09/30 12:23:06 wen Exp $
 
-BLAKE2s (Email-LocalDelivery-1.200.tar.gz) = 40657fc89947502da83dfb2c8a5a18a3fb6fb09da867c1658159dcfda36b49cb
-SHA512 (Email-LocalDelivery-1.200.tar.gz) = a635e18b15fe01ede787b4e4c3c6511a547a5b4a35f80b4c8089bfe75b2cf9e7beec4ff3f7b00380163e671c54df79b0486137663e7bf49a50c1b1c302bc0258
-Size (Email-LocalDelivery-1.200.tar.gz) = 15809 bytes
+BLAKE2s (Email-LocalDelivery-1.201.tar.gz) = 34187ee2370fa7aed43e5c076f3046cbd67013db0ef4139ad5ac2a043d84df2b
+SHA512 (Email-LocalDelivery-1.201.tar.gz) = b0d467ef716b7e04d61a2a578c4646fe88a6aa287e7800799cac10c9fb2dbd33c29c4193a375c1ae6ade9552981b396be7f30f7257f093548687d3841b92cd39
+Size (Email-LocalDelivery-1.201.tar.gz) = 19179 bytes
