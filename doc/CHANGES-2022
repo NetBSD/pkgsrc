@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4773 2022/09/30 19:42:35 pin Exp $
+$NetBSD: CHANGES-2022,v 1.4774 2022/09/30 21:45:14 leot Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7217,3 +7217,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/doxygen to 1.9.5 [adam 2022-09-30]
 	Updated ham/uhd to 4.3.0.0 [adam 2022-09-30]
 	Added wm/lefthk version 0.1.8 [pin 2022-09-30]
+	Updated sysutils/direnv to 2.32.1 [leot 2022-09-30]
