@@ -1,23 +1,22 @@
-# $NetBSD: Makefile,v 1.126 2022/08/09 12:08:33 jperkin Exp $
+# $NetBSD: Makefile,v 1.127 2022/09/30 15:57:28 micha Exp $
 
-DISTNAME=	schily-2021-09-18
+DISTNAME=	2022-09-18
 PKGNAME=	cdrtools-3.02a10
+PKGREVISION=	1
 CATEGORIES=	sysutils
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=schilytools/}
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	https://codeberg.org/schilytools/schilytools/archive/
+DIST_SUBDIR=	schilytools
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://sourceforge.net/projects/schilytools/
+HOMEPAGE=	https://codeberg.org/schilytools/schilytools/
 COMMENT=	Software for creating ISO9660 images and writing CD/DVD/Blu-ray
 LICENSE=	cddl-1.0 AND gnu-gpl-v2 AND gnu-lgpl-v2.1 AND 2-clause-bsd
-
-MAKE_JOBS_SAFE=	no
 
 LDFLAGS.Darwin+=	-liconv
 
 .include "../../mk/bsd.prefs.mk"
 
-TOOL_DEPENDS+=	smake>=1.3nb11:../../devel/smake
+TOOL_DEPENDS+=	smake>=1.6nb2:../../devel/smake
 SMAKE=		MAKEFLAGS= smake
 MAKE_FLAGS+=	DESTDIR=${DESTDIR} INS_BASE=${PREFIX} DEFMANBASE=. MANDIR=${PKGMANDIR}
 # Honor CPPFLAGS, CFLAGS and LDFLAGS
