@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.69 2022/07/08 14:26:11 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2022/09/30 18:12:44 adam Exp $
 
-DISTNAME=	uhd-4.1.0.5
-PKGREVISION=	3
+DISTNAME=	uhd-4.3.0.0
 CATEGORIES=	ham
 MASTER_SITES=	${MASTER_SITE_GITHUB:=EttusResearch/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -11,8 +10,11 @@ HOMEPAGE=	https://github.com/EttusResearch/uhd
 COMMENT=	USRP (Universal Software Radio Peripheral) Hardware Drivers
 LICENSE=	gnu-gpl-v3
 
-DEPENDS+=	${PYPKGPREFIX}-mako-[0-9]*:../../devel/py-mako
-DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
+DEPENDS+=	${PYPKGPREFIX}-mako>=0.4.2:../../devel/py-mako
+# Does not build
+#DEPENDS+=	${PYPKGPREFIX}-numpy>=1.11:../../math/py-numpy
+DEPENDS+=	${PYPKGPREFIX}-requests>=2.0:../../devel/py-requests
+DEPENDS+=	${PYPKGPREFIX}-ruamel-yaml>=0.15:../../devel/py-ruamel-yaml
 
 CMAKE_ARGS+=	-DLIB_SUFFIX=""
 CMAKE_ARGS+=	-DENABLE_MAN_PAGE_COMPRESSION=OFF
@@ -55,6 +57,7 @@ REPLACE_PYTHON+=	utils/uhd_power_cal.py
 REPLACE_PYTHON+=	utils/usrp2_card_burner.py
 REPLACE_PYTHON+=	utils/usrp2_card_burner_gui.py
 REPLACE_PYTHON+=	utils/usrp2_recovery.py
+REPLACE_PYTHON+=	utils/usrpctl.py
 REPLACE_PYTHON+=	tests/devtest/benchmark_rate_test.py
 REPLACE_PYTHON+=	tests/devtest/multi_usrp_test.py
 REPLACE_PYTHON+=	tests/devtest/python_api_test.py
