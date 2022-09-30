@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4748 2022/09/29 22:07:18 charlotte Exp $
+$NetBSD: CHANGES-2022,v 1.4749 2022/09/30 04:57:20 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7188,3 +7188,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated finance/py-eth-typing to 3.2.0 [adam 2022-09-29]
 	Updated pkgtools/lintpkgsrc to 2022.09.29 [rillig 2022-09-29]
 	Updated lang/nim to 1.6.8 [charlotte 2022-09-29]
+	Updated www/grafana to 9.1.6 [triaxx 2022-09-30]
