@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2022/01/04 20:52:31 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2022/09/30 09:05:40 wiz Exp $
 
 DISTNAME=	lz4-3.1.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,6 +19,11 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+# builds the same object files for different targets
+# e.g.
+# ld: build/temp.netbsd-9.0-amd64-cpython-310/lz4libs/lz4.o: file not recognized: file truncated
+MAKE_JOBS_SAFE=	no
 
 .include "../../archivers/lz4/buildlink3.mk"
 .include "../../lang/python/egg.mk"
