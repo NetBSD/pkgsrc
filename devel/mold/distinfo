@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.21 2022/09/29 15:21:41 fcambus Exp $
+$NetBSD: distinfo,v 1.22 2022/09/30 06:34:00 fcambus Exp $
 
-BLAKE2s (mold-1.5.0.tar.gz) = 53ce644511e57eda6b29c1bdff14913f5e225a638d7e34812a578206a86fa32e
-SHA512 (mold-1.5.0.tar.gz) = e750ffd23604a33e174444f8f303fa25d13de4ca07585bf000948d2ed7190c925646ec2ad06bfac50f3c504dab83e1bdfa288deb6dd8248a85f8d793210938c3
-Size (mold-1.5.0.tar.gz) = 8256474 bytes
+BLAKE2s (mold-1.5.1.tar.gz) = f52f96c4d299d952becd2dce05177182a8d0071670ee2a4614080f1622b208cf
+SHA512 (mold-1.5.1.tar.gz) = 340a45c5190ce5ba87eaa05238da7c70400bf4a2788a095935b9675593078ad76bbd95e67aa36b3ec683428724a3c6bc27c7e0a69569afce461682dc4bd16b10
+Size (mold-1.5.1.tar.gz) = 8254552 bytes
