@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4759 2022/09/30 12:26:56 wen Exp $
+$NetBSD: CHANGES-2022,v 1.4760 2022/09/30 12:32:39 wen Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7202,3 +7202,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated mail/p5-Email-Address-XS to 1.05 [wen 2022-09-30]
 	Updated mail/p5-Email-LocalDelivery to 1.201 [wen 2022-09-30]
 	Updated mail/p5-Email-MIME-ContentType to 1.027 [wen 2022-09-30]
+	Updated mail/p5-Email-Valid to 1.203 [wen 2022-09-30]
