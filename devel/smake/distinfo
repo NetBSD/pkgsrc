@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2021/10/26 10:19:56 nia Exp $
+$NetBSD: distinfo,v 1.21 2022/09/30 15:27:14 micha Exp $
 
-BLAKE2s (schily-2021-09-18.tar.bz2) = 1ee4b41d2f684e695d40cf03e4335ad0e699cbf0bb99b46e197e202d79ccc949
-SHA512 (schily-2021-09-18.tar.bz2) = d25765074ac39ca2db63cb9841288dd4457f55588e0389a58ad78da62f745a766b4608d3d137a1908e2ca60511784d5f0af67bab1d1612478dbf120188ed5f31
-Size (schily-2021-09-18.tar.bz2) = 4952788 bytes
+BLAKE2s (schilytools/2022-09-18.tar.gz) = b081f23ec688681a17d035a6b0a684affe36f41aa1594934755ba2972c2850af
+SHA512 (schilytools/2022-09-18.tar.gz) = 48550db10e428b1430094a18bfad4781d1f6614eb5c273df7d579fff3e062a8d7ff8ff782c97e6929aaa9ad96b9d0c4f9fde62be0a3ae7fdd99c3f8336e24bde
+Size (schilytools/2022-09-18.tar.gz) = 5904117 bytes
