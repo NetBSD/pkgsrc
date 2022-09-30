@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4755 2022/09/30 10:56:58 nros Exp $
+$NetBSD: CHANGES-2022,v 1.4756 2022/09/30 11:54:08 wen Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7198,3 +7198,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-protobuf to 4.21.7 [adam 2022-09-30]
 	Updated www/moodle to 4.0.4 [wen 2022-09-30]
 	Updated textproc/iso-codes to 4.11.0 [nros 2022-09-30]
+	Updated www/mediawiki to 1.38.4 [wen 2022-09-30]
