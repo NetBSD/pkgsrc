@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4768 2022/09/30 15:44:35 micha Exp $
+$NetBSD: CHANGES-2022,v 1.4769 2022/09/30 15:46:50 micha Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7211,3 +7211,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated archivers/tartest to 1.24nb1 [micha 2022-09-30]
 	Updated security/mdigest to 1.10 [micha 2022-09-30]
 	Updated shells/bosh to 20220918 [micha 2022-09-30]
+	Updated shells/pbosh to 20220918 [micha 2022-09-30]
