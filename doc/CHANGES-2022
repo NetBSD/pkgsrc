@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4776 2022/09/30 23:39:46 wen Exp $
+$NetBSD: CHANGES-2022,v 1.4777 2022/09/30 23:42:40 wen Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7220,3 +7220,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/direnv to 2.32.1 [leot 2022-09-30]
 	Updated converters/p5-Convert-Color to 0.12 [wen 2022-09-30]
 	Updated converters/p5-Convert-UUlib to 1.8 [wen 2022-09-30]
+	Updated converters/p5-Cpanel-JSON-X to 4.32 [wen 2022-09-30]
