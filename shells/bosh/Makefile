@@ -1,21 +1,19 @@
-# $NetBSD: Makefile,v 1.21 2021/11/19 11:13:27 micha Exp $
+# $NetBSD: Makefile,v 1.22 2022/09/30 15:43:31 micha Exp $
 
-DISTNAME=	schily-2021-09-18
-PKGNAME=	bosh-20210918
+DISTNAME=	2022-09-18
+PKGNAME=	bosh-20220918
 CATEGORIES=	shells
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=schilytools/}
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	https://codeberg.org/schilytools/schilytools/archive/
+DIST_SUBDIR=	schilytools
 
 MAINTAINER=	micha@NetBSD.org
-HOMEPAGE=	https://sourceforge.net/projects/schilytools/
+HOMEPAGE=	https://codeberg.org/schilytools/schilytools/
 COMMENT=	The Schily Bourne Shell
 LICENSE=	cddl-1.0
 
-MAKE_JOBS_SAFE=	no
-
 .include "../../mk/bsd.prefs.mk"
 
-TOOL_DEPENDS+=	smake>=1.3nb11:../../devel/smake
+TOOL_DEPENDS+=	smake>=1.6nb2:../../devel/smake
 SMAKE=		MAKEFLAGS= smake
 MAKE_FLAGS+=	DESTDIR=${DESTDIR} INS_BASE=${PREFIX} DEFMANBASE=. MANDIR=${PKGMANDIR}
 # Honor CPPFLAGS, CFLAGS and LDFLAGS
