@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4757 2022/09/30 12:01:04 wen Exp $
+$NetBSD: CHANGES-2022,v 1.4758 2022/09/30 12:23:52 wen Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7200,3 +7200,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/iso-codes to 4.11.0 [nros 2022-09-30]
 	Updated www/mediawiki to 1.38.4 [wen 2022-09-30]
 	Updated mail/p5-Email-Address-XS to 1.05 [wen 2022-09-30]
+	Updated mail/p5-Email-LocalDelivery to 1.201 [wen 2022-09-30]
