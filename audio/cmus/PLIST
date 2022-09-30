@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2021/02/03 09:46:08 nia Exp $
+@comment $NetBSD: PLIST,v 1.20 2022/09/30 13:07:09 triaxx Exp $
 bin/cmus
 bin/cmus-remote
 ${PLIST.faad}lib/cmus/ip/aac.so
@@ -39,6 +39,7 @@ share/cmus/night.theme
 share/cmus/rc
 share/cmus/solarized-dark.theme
 share/cmus/solarized-light.theme
+share/cmus/spotify.theme
 share/cmus/xterm-white.theme
 share/cmus/zenburn.theme
 share/doc/cmus/examples/cmus-status-display
