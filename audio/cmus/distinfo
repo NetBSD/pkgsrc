@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.27 2021/10/26 09:58:50 nia Exp $
+$NetBSD: distinfo,v 1.28 2022/09/30 13:07:09 triaxx Exp $
 
-BLAKE2s (cmus-2.9.1.tar.gz) = e58edef1d34ac031335a78941ca0d2e1b73c5f7368ba5ef752f6193ca2cff8e4
-SHA512 (cmus-2.9.1.tar.gz) = b417e58a68c54e97db92b8760a49a3071e81f1594f2144911eed3ccceb68499dedf0699ae313babcb822d71b37add8880dfb2018686cb572e89f8627446d5e05
-Size (cmus-2.9.1.tar.gz) = 321004 bytes
+BLAKE2s (cmus-2.10.0.tar.gz) = 7524960bc1671eaaa3f675d05aed80137575dabbc44b84b6202d11928b2cafe8
+SHA512 (cmus-2.10.0.tar.gz) = c055dc974a88f32c7f19fb2e4260ede37fbddc3f23707a98e7f669032c1b4fd9a1032eb5c808cf5ee635617d3abf176e78d1e8596cbe669bbad95cd5c50dde7c
+Size (cmus-2.10.0.tar.gz) = 324121 bytes
 SHA1 (patch-op_alsa.c) = 3a50d91fb0ec04dcb67c926fb3ed80abd4baacd3
-SHA1 (patch-op_mixer__sun.c) = 13cb31e8b4aeab487b10af2aceeff9e248eb4b58
+SHA1 (patch-op_mixer__sun.c) = 2400a15fc543b845e2de2ca2cbc41218f795b180
 SHA1 (patch-op_sun.c) = 30c402c44617ec0163e5885aa40a024e9a0deeac
