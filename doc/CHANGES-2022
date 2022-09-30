@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4762 2022/09/30 13:07:46 jperkin Exp $
+$NetBSD: CHANGES-2022,v 1.4763 2022/09/30 15:14:42 micha Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7205,3 +7205,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated mail/p5-Email-Valid to 1.203 [wen 2022-09-30]
 	Updated audio/cmus to 2.10.0 [triaxx 2022-09-30]
 	Updated sysutils/node_exporter to 1.4.0 [jperkin 2022-09-30]
+	Updated games/woof to 10.3.0 [micha 2022-09-30]
