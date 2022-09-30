@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4760 2022/09/30 12:32:39 wen Exp $
+$NetBSD: CHANGES-2022,v 1.4761 2022/09/30 13:07:21 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7203,3 +7203,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated mail/p5-Email-LocalDelivery to 1.201 [wen 2022-09-30]
 	Updated mail/p5-Email-MIME-ContentType to 1.027 [wen 2022-09-30]
 	Updated mail/p5-Email-Valid to 1.203 [wen 2022-09-30]
+	Updated audio/cmus to 2.10.0 [triaxx 2022-09-30]
