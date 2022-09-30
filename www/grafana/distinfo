@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.27 2022/09/18 08:51:59 triaxx Exp $
+$NetBSD: distinfo,v 1.28 2022/09/30 04:55:27 triaxx Exp $
 
 BLAKE2s (bazil.org_fuse_@v_v0.0.0-20160811212531-371fbbdaa898.mod) = ff8095283662ae2d2a1968bf429516c54586b1a6c4dc744657162e6781aa8ece
 SHA512 (bazil.org_fuse_@v_v0.0.0-20160811212531-371fbbdaa898.mod) = 7b3ef87f98485bb9ec325680f57d43a9bd76e90bdcfb1e798458f28f7d3addf91dbb6a07b654749468860981413ad2267df2d5f3535c85579e9f79d9328d355c
@@ -10260,12 +10260,12 @@ Size (gotest.tools_v3_@v_v3.0.2.mod) = 194 bytes
 BLAKE2s (gotest.tools_v3_@v_v3.0.3.mod) = 139458d80f28acbdd716ff629a2b16f184569b6ee0988096a9272bc81764ac7e
 SHA512 (gotest.tools_v3_@v_v3.0.3.mod) = 027bab5202a25d01ab9b9a87feaf66333ef376daa9c5c12d5bfeaf1624537a895e770c8e927a474589b23af2456d2a7f5a03708f80464cdb3351a64981a4a9dd
 Size (gotest.tools_v3_@v_v3.0.3.mod) = 194 bytes
-BLAKE2s (grafana-9.1.5.linux-amd64.tar.gz) = f6979ac6619b79883434635beae5cc73d9cca59a1718ca25c725dbf11261b092
-SHA512 (grafana-9.1.5.linux-amd64.tar.gz) = 0bc6c6ebffba96e5c94c2bfb928ffb52ebebb7bf616f070674c617c408e04156e67507482a7d8a31083b21489872d343227de8687ed40a0930b3682c8cd3a888
-Size (grafana-9.1.5.linux-amd64.tar.gz) = 80981857 bytes
-BLAKE2s (grafana-9.1.5.tar.gz) = faa1541ff686ec282cc96b563e35fa8d44f7074e49320bb1286319e3c8696783
-SHA512 (grafana-9.1.5.tar.gz) = 0c4684c0e2b31ed4bd6ce381ee14616c2e323c2c94bfa140f7ceea97ae7126a5e23a8f9f818ec587453831ee5ee337696363f2911360b08df2749ad1bbedfa83
-Size (grafana-9.1.5.tar.gz) = 23672368 bytes
+BLAKE2s (grafana-9.1.6.linux-amd64.tar.gz) = cf14a284ce9ece4ce4c44b6600cc94ca6bb9fffd73b585025bb6e2f0a1faa291
+SHA512 (grafana-9.1.6.linux-amd64.tar.gz) = 10cc25005b7e7dadf8a7c9fbede2c293b0dd2d1f8e264d534cfa21a0edabcda8844a65e6274e253b76467625532c36ac927fe4a0b407eb91fcea7020b9c35bd4
+Size (grafana-9.1.6.linux-amd64.tar.gz) = 81057482 bytes
+BLAKE2s (grafana-9.1.6.tar.gz) = ab5a08ee9ad1fa15e593b2924b0b5281bc175cf439d26791f6942f7388ea7e79
+SHA512 (grafana-9.1.6.tar.gz) = 6334e74e9e24ba67db05c9e836e6331078d028ddb6c1909f23aa732e683352f2ca80bb4a03d897352484964c0f12a044397243ab08d9dbaac24a20cfcdff62ef
+Size (grafana-9.1.6.tar.gz) = 23702122 bytes
 BLAKE2s (honnef.co_go_tools_@v_v0.0.0-20180728063816-88497007e858.mod) = 38e66bb2bbbbabd21beff5a5718735267b1611dbdf7da56c7fb6500d6cb784f1
 SHA512 (honnef.co_go_tools_@v_v0.0.0-20180728063816-88497007e858.mod) = d00ae74b24e7fb3ff351ff68b88e59636153bbcf92b36e81e91556e3e75a7ccfb08ce471f757f92fd7612378944de3d7309c73923812e2df6a26b74e999ca9ce
 Size (honnef.co_go_tools_@v_v0.0.0-20180728063816-88497007e858.mod) = 26 bytes
