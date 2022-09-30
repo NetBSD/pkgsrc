@@ -1,0 +1,5 @@
+LeftHK - A hotkey daemon written in Rust
+
+Standalone package for lefthk, the built-in hotkey daemon of leftwm > 0.3.0.
+This package allows lefthk to be used as a hotkey daemon with other window
+managers.
