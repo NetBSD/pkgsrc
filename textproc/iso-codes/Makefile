@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.63 2022/05/20 11:01:15 fcambus Exp $
+# $NetBSD: Makefile,v 1.64 2022/09/30 10:25:37 nros Exp $
 
-DISTNAME=	iso-codes-3.77
-PKGREVISION=	1
+DISTNAME=	iso-codes-v4.11.0
+PKGNAME=	${DISTNAME:S/v//}
 CATEGORIES=	textproc
-#MASTER_SITES=	https://pkg-isocodes.alioth.debian.org/downloads/
-EXTRACT_SUFX=	.tar.xz
+MASTER_SITES=	https://salsa.debian.org/iso-codes-team/iso-codes/-/archive/v${PKGVERSION_NOREV}/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://salsa.debian.org/iso-codes-team/iso-codes
@@ -18,7 +18,6 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake msgfmt
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE=	iso-codes.pc.in
-WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
 REPLACE_PYTHON+=	bin/check_valid_utf8.py
 REPLACE_PYTHON+=	bin/pot_from_json.py
