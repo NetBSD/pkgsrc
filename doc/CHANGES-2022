@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4752 2022/09/30 07:57:48 adam Exp $
+$NetBSD: CHANGES-2022,v 1.4753 2022/09/30 08:18:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7194,3 +7194,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated multimedia/ffmpeg3 to 3.4.11nb4 [adam 2022-09-30]
 	Updated multimedia/ffmpeg2 to 2.8.20nb4 [adam 2022-09-30]
 	Updated multimedia/gst-plugins0.10-x264 to 0.10.19nb11 [adam 2022-09-30]
+	Updated devel/protobuf to 3.21.7 [adam 2022-09-30]
+	Updated devel/py-protobuf to 4.21.7 [adam 2022-09-30]
