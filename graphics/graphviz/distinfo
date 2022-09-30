@@ -1,11 +1,10 @@
-$NetBSD: distinfo,v 1.72 2022/07/22 12:04:46 micha Exp $
+$NetBSD: distinfo,v 1.73 2022/09/30 16:08:52 micha Exp $
 
-BLAKE2s (graphviz-5.0.0.tar.gz) = 6755b14a2b5fed1365c5dbfe1d72406e8bb6707f29c7955c4372afcc32aa09f1
-SHA512 (graphviz-5.0.0.tar.gz) = ea21c39b8735215073972af94affae20f76ee04e7f6c8833c9018d6b1fdcb763cec48cde8972f7443f08b2febd1a04ecb7d07ec48ea74ae785f0af98cc5e136a
-Size (graphviz-5.0.0.tar.gz) = 27590532 bytes
+BLAKE2s (graphviz-6.0.1.tar.gz) = c6e9a24e3652ac5e4f533b7ed0e6616655b806ebc496c2e8de24c8896370dedc
+SHA512 (graphviz-6.0.1.tar.gz) = 5d48eab092097f892c62e006e25041b6ab9ddf08d380488d0a8a0b69dd78f5111ad5e52c843b25ce6a46165c3840e6b87175af58aab87dfbc1425195e7a4e045
+Size (graphviz-6.0.1.tar.gz) = 27587111 bytes
 SHA1 (patch-config_config__perl.pl) = 430acb7d7ee3e149de0af9832c5a29602884f83e
 SHA1 (patch-configure.ac) = 1c39f0b25cfc995de10a07492656c2f12a24686f
 SHA1 (patch-lib_gvc_Makefile.am) = b5d793ec0a676c5d4b257c6fec1eb182ee93718b
 SHA1 (patch-plugin_gs_gvloadimage__gs.c) = d777c822ef11b15eff992f36a9f4073c02cd4ca6
 SHA1 (patch-plugin_xlib_gvdevice__xlib.c) = 05d1549db3b9221f5bcb947173034775b0df7c6c
-SHA1 (patch-tclpkg_gv_Makefile.am) = 47e15ae0342d39db7ef88e414491495c18e2c45c
