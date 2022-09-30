@@ -1,13 +1,13 @@
-$NetBSD: patch-CMakeLists.txt,v 1.4 2021/12/11 17:39:56 tnn Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.5 2022/09/30 18:12:44 adam Exp $
 
 Allow overrides on PKG_MAN_DIR.
 https://github.com/EttusResearch/uhd/issues/301
 
 Do not use Numpy.
 
---- CMakeLists.txt.orig	2021-09-29 14:25:58.000000000 +0000
+--- CMakeLists.txt.orig	2022-09-14 14:19:33.000000000 +0000
 +++ CMakeLists.txt
-@@ -124,8 +124,9 @@ endif()
+@@ -127,8 +127,9 @@ endif()
  if(NOT DEFINED PKG_DOC_DIR)
      set(PKG_DOC_DIR share/doc/uhd)
  endif()
@@ -18,15 +18,18 @@ Do not use Numpy.
  ########################################################################
  # UHD config files
  ########################################################################
-@@ -327,11 +328,6 @@ PYTHON_CHECK_MODULE(
-     HAVE_PYTHON_MODULE_REQUESTS
+@@ -337,14 +338,6 @@ PYTHON_CHECK_MODULE_VERSION(
  )
  
--PYTHON_CHECK_MODULE(
--    "numpy ${NUMPY_MIN_VERSION} or greater"
--    "numpy" "LooseVersion(numpy.__version__) >= LooseVersion('${NUMPY_MIN_VERSION}')"
+ PYTHON_CHECK_MODULE_VERSION(
+-    "numpy module"
+-    "numpy"
+-    "numpy.__version__"
+-    ${NUMPY_MIN_VERSION}
 -    HAVE_PYTHON_MODULE_NUMPY
 -)
- 
- PYTHON_CHECK_MODULE(
-     "ruamel.yaml ${RUAMEL.YAML_MIN_VERSION} or greater"
+-
+-PYTHON_CHECK_MODULE_VERSION(
+     "ruamel.yaml module"
+     "ruamel.yaml"
+     "ruamel.yaml.__version__"

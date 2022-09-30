@@ -1,10 +1,8 @@
-$NetBSD: patch-lib_usrp_mpmd_mpmd__link__if__ctrl__udp.cpp,v 1.1 2022/03/27 17:03:28 tnn Exp $
+$NetBSD: patch-lib_usrp_mpmd_mpmd__link__if__ctrl__udp.cpp,v 1.2 2022/09/30 18:12:44 adam Exp $
 
-work around namespace pollution in NetBSD-9's <net/if.h> before 1.282
-
---- lib/usrp/mpmd/mpmd_link_if_ctrl_udp.cpp.orig	2021-12-14 18:37:20.000000000 +0000
+--- lib/usrp/mpmd/mpmd_link_if_ctrl_udp.cpp.orig	2022-09-14 14:19:33.000000000 +0000
 +++ lib/usrp/mpmd/mpmd_link_if_ctrl_udp.cpp
-@@ -79,10 +79,10 @@ mpmd_link_if_ctrl_udp::udp_link_info_map
+@@ -78,10 +78,10 @@ mpmd_link_if_ctrl_udp::udp_link_info_map
                                       ? std::stoul(link_info.at("link_rate"))
                                       : MAX_RATE_1GIGE;
          const std::string link_type = link_info.at("type");
@@ -17,7 +15,7 @@ work around namespace pollution in NetBSD-9's <net/if.h> before 1.282
      }
  
      return result;
-@@ -275,8 +275,8 @@ mpmd_link_if_ctrl_udp::mpmd_link_if_ctrl
+@@ -316,8 +316,8 @@ mpmd_link_if_ctrl_udp::mpmd_link_if_ctrl
              if (info.link_type == "internal") {
                  UHD_LOG_TRACE("MPMD::XPORT::UDP",
                      "MTU for internal interface " << ip_addr << " is "
@@ -26,5 +24,5 @@ work around namespace pollution in NetBSD-9's <net/if.h> before 1.282
 +                                                  << std::to_string(info.if_mtu_));
 +                _mtu = std::min(_mtu, info.if_mtu_);
              } else {
-                 _mtu = std::min(_mtu, discover_mtu_for_ip(ip_addr));
-             }
+                 _mtu = std::min(_mtu, discover_mtu_for_ip(ip_addr,
+                                     info.link_rate == MAX_RATE_1GIGE ?
