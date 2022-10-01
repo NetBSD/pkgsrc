@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4811 2022/10/01 19:09:40 pin Exp $
+$NetBSD: CHANGES-2022,v 1.4812 2022/10/01 19:10:49 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7258,3 +7258,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/goaccess to 1.6.4 [wiedi 2022-10-01]
 	Updated misc/wthrr to 0.3.0 [pin 2022-10-01]
 	Updated graphics/oculante to 0.6.11 [pin 2022-10-01]
+	Updated sysutils/felix to 1.2.0 [pin 2022-10-01]
