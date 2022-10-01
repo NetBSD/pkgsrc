@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4806 2022/10/01 15:15:50 wen Exp $
+$NetBSD: CHANGES-2022,v 1.4807 2022/10/01 15:25:12 wen Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7253,3 +7253,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/p5-TheSchwartz to 1.17 [wen 2022-10-01]
 	Updated devel/p5-Tie-Cycle to 1.227 [wen 2022-10-01]
 	Updated devel/p5-Try-Tiny to 0.31 [wen 2022-10-01]
+	Updated devel/p5-Exporter-Tiny to 1.004003 [wen 2022-10-01]
