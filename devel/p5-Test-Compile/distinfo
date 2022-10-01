@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2021/10/26 10:17:38 nia Exp $
+$NetBSD: distinfo,v 1.18 2022/10/01 08:04:17 wen Exp $
 
-BLAKE2s (Test-Compile-v3.0.1.tar.gz) = f34b7630e3f3f7074a47d0ae18197dc3163851a63e9a3876227c7ff027c8b7e9
-SHA512 (Test-Compile-v3.0.1.tar.gz) = a8e5d0fabaaa0c8d4de716da85279c8d4abdcfb8e453159f5b47d10e1845d2f80164d099bcd3906d74afae1137fd9d4430d47b8bdcb3afc6d81b8043bd585715
-Size (Test-Compile-v3.0.1.tar.gz) = 18490 bytes
+BLAKE2s (Test-Compile-v3.1.0.tar.gz) = bd7e338b7634ca312876aafcbf67e80d675faebad7f2f3d972758b365ca8fe82
+SHA512 (Test-Compile-v3.1.0.tar.gz) = 16d21797535e79a58c22e830938d564eb3a576993cc8f6b32c7aff934e4dc14b4b6e6774777d023407b4b9541877b68f621ad9f11703f5c0f0d5ccaf6cde25d5
+Size (Test-Compile-v3.1.0.tar.gz) = 18826 bytes
