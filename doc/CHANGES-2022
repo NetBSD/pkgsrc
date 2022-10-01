@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4790 2022/10/01 08:31:50 wen Exp $
+$NetBSD: CHANGES-2022,v 1.4791 2022/10/01 09:03:46 wen Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7234,3 +7234,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/p5-Test-File to 1.992 [wen 2022-10-01]
 	Updated devel/p5-Test-HTTP-LocalServer to 0.74 [wen 2022-10-01]
 	Updated devel/p5-Test-Lib to 0.003 [wen 2022-10-01]
+	Updated devel/p5-Test-Manifest to 2.023 [wen 2022-10-01]
