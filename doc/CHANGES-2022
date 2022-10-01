@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4807 2022/10/01 15:25:12 wen Exp $
+$NetBSD: CHANGES-2022,v 1.4808 2022/10/01 15:45:13 wen Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7254,3 +7254,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/p5-Tie-Cycle to 1.227 [wen 2022-10-01]
 	Updated devel/p5-Try-Tiny to 0.31 [wen 2022-10-01]
 	Updated devel/p5-Exporter-Tiny to 1.004003 [wen 2022-10-01]
+	Updated devel/p5-Type-Tiny to 2.000001 [wen 2022-10-01]
