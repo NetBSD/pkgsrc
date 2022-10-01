@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4782 2022/10/01 00:28:32 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4783 2022/10/01 00:45:49 wen Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7226,3 +7226,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/php74 to 7.4.32 [taca 2022-10-01]
 	Updated lang/php81 to 8.1.11 [taca 2022-10-01]
 	Updated lang/php80 to 8.0.24 [taca 2022-10-01]
+	Updated databases/p5-DBD-CSV to 0.59 [wen 2022-10-01]
