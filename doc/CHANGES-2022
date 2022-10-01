@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4800 2022/10/01 11:50:15 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.4801 2022/10/01 11:50:36 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7247,3 +7247,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed lang/go117 [bsiegert 2022-10-01]
 	Updated security/wolfssl to 5.5.1 [fox 2022-10-01]
 	Updated net/dbip-asn-lite to 2022.10 [fcambus 2022-10-01]
+	Updated net/dbip-city-lite to 2022.10 [fcambus 2022-10-01]
