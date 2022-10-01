@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.25 2022/03/07 16:40:36 nia Exp $
+# $NetBSD: Makefile.common,v 1.26 2022/10/01 15:09:02 wiz Exp $
 #
 # used by emulators/suse131_alsa/Makefile
 # used by emulators/suse131_aspell/Makefile
@@ -13,6 +13,7 @@
 # used by emulators/suse131_glib2/Makefile
 # used by emulators/suse131_glx/Makefile
 # used by emulators/suse131_gtk2/Makefile
+# used by emulators/suse131_gtk3/Makefile
 # used by emulators/suse131_krb5/Makefile
 # used by emulators/suse131_libSDL/Makefile
 # used by emulators/suse131_libaudiofile/Makefile
