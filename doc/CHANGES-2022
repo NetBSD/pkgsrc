@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4785 2022/10/01 08:05:37 wen Exp $
+$NetBSD: CHANGES-2022,v 1.4786 2022/10/01 08:11:28 wen Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7229,3 +7229,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/p5-DBD-CSV to 0.59 [wen 2022-10-01]
 	Updated graphics/oculante to 0.6.10 [pin 2022-10-01]
 	Updated devel/p5-Test-Compile to 3.1.0 [wen 2022-10-01]
+	Updated devel/p5-Test-Differences to 0.69 [wen 2022-10-01]
