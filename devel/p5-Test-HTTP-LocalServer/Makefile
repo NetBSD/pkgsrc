@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2022/06/28 11:33:24 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2022/10/01 08:28:13 wen Exp $
 
-DISTNAME=	Test-HTTP-LocalServer-0.71
+DISTNAME=	Test-HTTP-LocalServer-0.74
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/C/CO/CORION/}
 
