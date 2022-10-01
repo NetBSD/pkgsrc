@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4780 2022/10/01 00:25:56 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4781 2022/10/01 00:27:29 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7224,3 +7224,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated converters/p5-JSON-MaybeXS to 1.004004 [wen 2022-09-30]
 	Updated converters/p5-JSON-Parse to 0.62 [wen 2022-09-30]
 	Updated lang/php74 to 7.4.32 [taca 2022-10-01]
+	Updated lang/php81 to 8.1.11 [taca 2022-10-01]
