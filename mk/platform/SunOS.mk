@@ -1,4 +1,4 @@
-# $NetBSD: SunOS.mk,v 1.84 2022/09/27 08:46:33 jperkin Exp $
+# $NetBSD: SunOS.mk,v 1.85 2022/10/01 14:23:26 jperkin Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -136,7 +136,9 @@ _OPSYS_SUPPORTS_CWRAPPERS=	yes
 
 _OPSYS_SUPPORTS_CTF=		yes # Compact Type Format conversion.
 _OPSYS_SUPPORTS_FORTIFY=	yes # Requires GCC
-_OPSYS_SUPPORTS_MKTOOLS=	yes
+.if ${OPSYS_VERSION} >= 051100
+_OPSYS_SUPPORTS_MKTOOLS=	yes # Requires err.h
+.endif
 _OPSYS_SUPPORTS_SSP?=		yes # Requires GCC
 _OPSYS_CAN_CHECK_SHLIBS=	yes # Requires readelf
 
