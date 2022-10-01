@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4803 2022/10/01 12:00:31 fox Exp $
+$NetBSD: CHANGES-2022,v 1.4804 2022/10/01 14:40:33 wen Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7250,3 +7250,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/dbip-city-lite to 2022.10 [fcambus 2022-10-01]
 	Updated net/dbip-country-lite to 2022.10 [fcambus 2022-10-01]
 	Updated chat/ircd-hybrid to 8.2.43 [fox 2022-10-01]
+	Updated devel/p5-TheSchwartz to 1.17 [wen 2022-10-01]
