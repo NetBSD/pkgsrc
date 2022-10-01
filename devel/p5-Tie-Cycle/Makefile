@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2022/06/28 11:33:34 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2022/10/01 15:05:24 wen Exp $
 
-DISTNAME=	Tie-Cycle-1.226
+DISTNAME=	Tie-Cycle-1.227
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Tie/}
 
