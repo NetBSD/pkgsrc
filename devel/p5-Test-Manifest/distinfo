@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:17:42 nia Exp $
+$NetBSD: distinfo,v 1.11 2022/10/01 09:02:31 wen Exp $
 
-BLAKE2s (Test-Manifest-2.022.tar.gz) = ecde767a8ba967f54b2082e269bf4ae1d5e4c9ddd9f0a66ddbc3f51e50520a75
-SHA512 (Test-Manifest-2.022.tar.gz) = e72f5c7c23bac5453afddb81c9175a3b07b9a8f935c37d0fe5ed7e0f6861742c2e9596396b9cb84d62bf2229bc9956bad26c47d7eaab6777ec7628927e294209
-Size (Test-Manifest-2.022.tar.gz) = 14664 bytes
+BLAKE2s (Test-Manifest-2.023.tar.gz) = 54325f44726ded6c4a117897ec596f818b004388b6f21785e23760887181ff1e
+SHA512 (Test-Manifest-2.023.tar.gz) = 7a3b25e5cf468f72ed43e9cec7c79b6f58bf797851019a3c381abf3cca7c2ba3ca9d864339c90eb42bd0c451110f92b6f5af1cf94e033815d0164476053bbf6a
+Size (Test-Manifest-2.023.tar.gz) = 14721 bytes
