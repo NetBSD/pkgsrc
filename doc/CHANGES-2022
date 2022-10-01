@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4810 2022/10/01 19:08:28 pin Exp $
+$NetBSD: CHANGES-2022,v 1.4811 2022/10/01 19:09:40 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7257,3 +7257,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/p5-Type-Tiny to 2.000001 [wen 2022-10-01]
 	Updated www/goaccess to 1.6.4 [wiedi 2022-10-01]
 	Updated misc/wthrr to 0.3.0 [pin 2022-10-01]
+	Updated graphics/oculante to 0.6.11 [pin 2022-10-01]
