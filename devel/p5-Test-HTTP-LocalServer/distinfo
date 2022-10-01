@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:17:40 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/10/01 08:28:13 wen Exp $
 
-BLAKE2s (Test-HTTP-LocalServer-0.71.tar.gz) = 2940655032d690eeeb11568905564bbb7c72e788c8abc1dc52924a11de66202d
-SHA512 (Test-HTTP-LocalServer-0.71.tar.gz) = c596053e40a70a94b30c6f8ac107981afd130adcc1e7bfacbb3b6a639a1905ca69f6687104393ec7b4576c5b1fb7c9e9e5165d279dfa744cf53feee2a092706e
-Size (Test-HTTP-LocalServer-0.71.tar.gz) = 29860 bytes
+BLAKE2s (Test-HTTP-LocalServer-0.74.tar.gz) = cfae9418286df188a673b7ff8226a077d8d9f8a390d654c45419d946a4355a11
+SHA512 (Test-HTTP-LocalServer-0.74.tar.gz) = b061e0295f10bcdff284105d61e3b733c22412f71011d306dc3de0e2640bf24412f2a80a62b3c97ecf4ac375359fed703a7279e2374ec59ca8b7dec090f0ab79
+Size (Test-HTTP-LocalServer-0.74.tar.gz) = 30236 bytes
