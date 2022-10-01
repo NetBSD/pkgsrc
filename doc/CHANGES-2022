@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4795 2022/10/01 09:21:38 wen Exp $
+$NetBSD: CHANGES-2022,v 1.4796 2022/10/01 09:47:29 fox Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7239,3 +7239,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/p5-Test-Trap to 0.3.5 [wen 2022-10-01]
 	Updated devel/p5-Test-Warn to 0.37 [wen 2022-10-01]
 	Updated devel/p5-Test2-Suite to 0.000145 [wen 2022-10-01]
+	Updated audio/din to 55 [fox 2022-10-01]
