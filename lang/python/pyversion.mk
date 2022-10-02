@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.141 2022/06/30 10:45:36 nia Exp $
+# $NetBSD: pyversion.mk,v 1.142 2022/10/02 22:58:52 gdt Exp $
 
 # This file determines which Python version is used as a dependency for
 # a package.
@@ -131,6 +131,8 @@ MULTI+=	PYTHON_VERSION_REQD=${_PYTHON_VERSION}
 .if !defined(_PYTHON_VERSION)
 _PYTHON_VERSION=	none
 PKG_FAIL_REASON+=	"No valid Python version"
+PYPKGPREFIX=		none
+PYVERSSUFFIX=		none
 .endif
 
 # Additional CONFLICTS
