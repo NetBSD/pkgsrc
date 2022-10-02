@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2022/10/02 17:17:18 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2022/10/02 20:57:41 wiz Exp $
 
 PKGNAME=	suse_gtk3-${SUSE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	emulators
 RPMPKGS+=	gdk-pixbuf-query-loaders-2.42.9-150400.5.6.1.${SUSE_ARCH}
 RPMPKGS+=	gtk3-immodule-xim-3.24.34-150400.3.3.1.${SUSE_ARCH}
