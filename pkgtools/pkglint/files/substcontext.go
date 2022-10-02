@@ -526,7 +526,7 @@ func (b *substBlock) suggestSubstVars(mkline *MkLine) {
 		fix.Apply()
 
 		// At this point the number of SUBST_SED assignments is one
-		// less than before. Therefore it is possible to adjust the
+		// less than before. Therefore, it is possible to adjust the
 		// assignment operators on them. It's probably not worth the
 		// effort, though.
 
@@ -607,7 +607,8 @@ func (*substBlock) extractVarname(token string) string {
 }
 
 func (b *substBlock) isComplete() bool {
-	return b.allSeen().hasAll(ssStage | ssFiles | ssTransform)
+	seen := b.allSeen()
+	return seen.hasAll(ssStage | ssFiles | ssTransform)
 }
 
 func (b *substBlock) hasSeen(part substSeen) bool {
@@ -789,6 +790,6 @@ func (s *substSeen) has(part substSeen) bool {
 	return *s&part != 0
 }
 
-func (s substSeen) hasAll(other substSeen) bool { return s&other == other }
-func (s *substSeen) addAll(other substSeen)     { *s |= other }
-func (s *substSeen) retainAll(other substSeen)  { *s &= other }
+func (s *substSeen) hasAll(other substSeen) bool { return *s&other == other }
+func (s *substSeen) addAll(other substSeen)      { *s |= other }
+func (s *substSeen) retainAll(other substSeen)   { *s &= other }

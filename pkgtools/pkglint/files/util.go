@@ -275,7 +275,7 @@ func assertNotNil(obj interface{}) {
 	}
 }
 
-// assert checks that the condition is true. Otherwise it terminates the
+// assert checks that the condition is true. Otherwise, it terminates the
 // process with a fatal error message, prefixed with "Pkglint internal error".
 //
 // This method must only be used for programming errors.
@@ -286,7 +286,7 @@ func assert(cond bool) {
 	}
 }
 
-// assertf checks that the condition is true. Otherwise it terminates the
+// assertf checks that the condition is true. Otherwise, it terminates the
 // process with a fatal error message, prefixed with "Pkglint internal error".
 //
 // This method must only be used for programming errors.
@@ -434,7 +434,7 @@ func alignWith(str, other string) string {
 }
 
 // alignmentTo returns the whitespace that is necessary to
-// bring str to the same width as other.
+// bring str to the same width as the other one.
 func alignmentTo(str, other string) string {
 	strWidth := tabWidth(str)
 	otherWidth := tabWidth(other)
