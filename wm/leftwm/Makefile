@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2022/04/25 19:05:34 pin Exp $
+# $NetBSD: Makefile,v 1.5 2022/10/02 06:15:59 pin Exp $
 
-DISTNAME=	leftwm-0.3.0
+DISTNAME=	leftwm-0.4.0
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=leftwm/}
 
@@ -17,13 +17,25 @@ RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libX11}/lib
 RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.libX11}/lib
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/leftwm ${DESTDIR}${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/leftwm-check ${DESTDIR}${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/leftwm-command ${DESTDIR}${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/leftwm-state ${DESTDIR}${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/leftwm-worker ${DESTDIR}${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/leftwm/doc/leftwm.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/leftwm.1
-	${INSTALL_DATA} ${WRKSRC}/leftwm.desktop ${DESTDIR}${PREFIX}/share/xsessions
+	${INSTALL_PROGRAM} ${WRKSRC}/target/release/lefthk-worker \
+		${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/target/release/leftwm \
+		${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/target/release/leftwm-check \
+		${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/target/release/leftwm-command \
+		${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/target/release/leftwm-state \
+		${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/target/release/leftwm-worker \
+		${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/leftwm/doc/leftwm.1 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/leftwm.1
+	${INSTALL_DATA} ${WRKSRC}/leftwm.desktop \
+		${DESTDIR}${PREFIX}/share/xsessions
+
+CARGO_NO_DEFAULT_FEATURES=	YES
+CARGO_FEATURES+=		lefthk sys-log
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} != "NetBSD" || ${X11_TYPE} == "modular"
