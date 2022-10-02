@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: pgsql.sh,v 1.1 2021/10/08 10:23:44 adam Exp $
+# $NetBSD: pgsql.sh,v 1.2 2022/10/02 14:24:50 martin Exp $
 #
 # PostgreSQL database rc.d control script
 #
@@ -30,6 +30,7 @@ procname="@PREFIX@/bin/postgres"
 : ${pgsql_group:=@PGGROUP@}
 : ${pgsql_home:=@PGHOME@}
 
+pgsql_nfiles=4096
 extra_commands="initdb reload"
 initdb_cmd="pgsql_initdb"
 start_precmd="pgsql_precmd"
@@ -39,7 +40,7 @@ restart_cmd="pgsql_restart"
 stop_cmd="pgsql_stop"
 reload_cmd="pgsql_reload"
 
-if [ -f /etc/rc.subr -a -d /etc/rc.d -a -f /etc/rc.d/DAEMON ]; then
+if [ -f /etc/rc.subr ] && [ -d /etc/rc.d ] && [ -f /etc/rc.d/DAEMON ]; then
 	load_rc_config $name
 elif [ -f /etc/rc.conf ]; then
 	. /etc/rc.conf
@@ -48,13 +49,14 @@ fi
 cd /
 
 command_args="-w -s -D ${pgsql_home}/data -m fast -l ${pgsql_home}/errlog"
+command_args_daemon="${command_args}"
 if [ -n "${pgsql_flags}" ]; then
-	command_args="${command_args} -o \\\"${pgsql_flags}\\\""
+	command_args_daemon="${command_args} -o \"${pgsql_flags}\""
 fi
 
 pgsql_precmd()
 {
-	ulimit -n 4096
+	ulimit -n ${pgsql_nfiles}
 	if [ ! -d ${pgsql_home}/data/base ]; then
 		pgsql_initdb
 	fi
@@ -71,40 +73,35 @@ pgsql_initdb()
 		@CHOWN@ ${pgsql_user} ${pgsql_home}
 		@CHGRP@ ${pgsql_group} ${pgsql_home}
 		@CHMOD@ 0700 ${pgsql_home}
-		doit="@SU@ -m ${pgsql_user} -c '${command} init ${command_args}'"
-		eval $doit
+		@SU@ -m ${pgsql_user} -c "${command} init ${command_args}"
 	fi
 }
 
 pgsql_start()
 {
 	@ECHO@ "Starting ${name}."
-	doit="@SU@ -m ${pgsql_user} -c '${command} start ${command_args}'"
-	eval $doit
+	@SU@ -m ${pgsql_user} -c "${command} start ${command_args_daemon}"
 }
 
 pgsql_restart()
 {
 	@ECHO@ "Restarting ${name}."
-	doit="@SU@ -m ${pgsql_user} -c '${command} restart ${command_args}'"
-	eval $doit
+	@SU@ -m ${pgsql_user} -c "${command} restart ${command_args_daemon}"
 }
 
 pgsql_stop()
 {
 	@ECHO@ "Stopping ${name}."
-	doit="@SU@ -m ${pgsql_user} -c '${command} stop ${command_args}'"
-	eval $doit
+	@SU@ -m ${pgsql_user} -c "${command} stop ${command_args}"
 }
 
 pgsql_reload()
 {
 	@ECHO@ "Reloading ${name}."
-	doit="@SU@ -m ${pgsql_user} -c '${command} reload ${command_args}'"
-	eval $doit
+	@SU@ -m ${pgsql_user} -c "${command} reload ${command_args_daemon}"
 }
 
-if [ -f /etc/rc.subr -a -d /etc/rc.d -a -f /etc/rc.d/DAEMON ]; then
+if [ -f /etc/rc.subr ] && [ -d /etc/rc.d ] && [ -f /etc/rc.d/DAEMON ]; then
 	run_rc_command "$1"
 else
 	pidfile="${pgsql_home}/data/postmaster.pid"
