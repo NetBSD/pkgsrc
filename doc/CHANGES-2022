@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4819 2022/10/02 17:23:35 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4820 2022/10/02 18:49:14 nros Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7287,3 +7287,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added emulators/suse15_openssl version 15.5 [wiz 2022-10-02]
 	Added emulators/suse15_pulseaudio version 15.5 [wiz 2022-10-02]
 	Added emulators/suse15_x11 version 15.5 [wiz 2022-10-02]
+	Updated net/dhcpcd to 9.4.1 [nros 2022-10-02]
