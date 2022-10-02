@@ -1,11 +1,8 @@
-# $NetBSD: Makefile,v 1.111 2021/02/18 17:09:33 nia Exp $
+# $NetBSD: Makefile,v 1.112 2022/10/02 18:47:50 nros Exp $
 
-DISTNAME=		dhcpcd-9.4.0
-PKGNAME=		${DISTNAME:S/-rc/rc/}
+DISTNAME=		dhcpcd-9.4.1
 CATEGORIES=		net
-MASTER_SITES=		ftp://roy.marples.name/pub/dhcpcd/
-MASTER_SITES+=		https://www.aydogan.net/distfiles/roy/dhcpcd/
-MASTER_SITES+=		http://cflags.cc/roy/dhcpcd/
+MASTER_SITES=		https://roy.marples.name/downloads/dhcpcd/
 EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		roy@NetBSD.org
