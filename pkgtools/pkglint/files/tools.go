@@ -14,7 +14,7 @@ type Tool struct {
 	Name    string // e.g. "sed", "gzip"
 	Varname string // e.g. "SED", "GZIP_CMD"
 
-	// Some of the very simple tools (echo, printf, test) differ in their implementations.
+	// Some basic tools (echo, printf, test) differ in their implementations.
 	//
 	// When bmake encounters a "simple" command line, it bypasses the
 	// call to a shell (see devel/bmake/files/compat.c:/useShell/).
