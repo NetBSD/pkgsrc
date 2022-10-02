@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4815 2022/10/02 12:38:30 leot Exp $
+$NetBSD: CHANGES-2022,v 1.4816 2022/10/02 13:47:01 nros Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7261,3 +7261,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/felix to 1.2.0 [pin 2022-10-01]
 	Updated x11/x3270 to 4.2ga6 [rhialto 2022-10-01]
 	Updated wm/leftwm to 0.4.0 [pin 2022-10-02]
+	Added audio/SDL2_sound version 2.0.1 [nros 2022-10-02]
