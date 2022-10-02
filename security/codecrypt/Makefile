@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2020/11/25 21:48:54 nia Exp $
+# $NetBSD: Makefile,v 1.4 2022/10/02 16:34:33 nros Exp $
 
 DISTNAME=	codecrypt-1.8
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=exaexa/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
