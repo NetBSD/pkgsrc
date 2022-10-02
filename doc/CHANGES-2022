@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4813 2022/10/01 21:08:01 rhialto Exp $
+$NetBSD: CHANGES-2022,v 1.4814 2022/10/02 06:16:23 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7260,3 +7260,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/oculante to 0.6.11 [pin 2022-10-01]
 	Updated sysutils/felix to 1.2.0 [pin 2022-10-01]
 	Updated x11/x3270 to 4.2ga6 [rhialto 2022-10-01]
+	Updated wm/leftwm to 0.4.0 [pin 2022-10-02]
