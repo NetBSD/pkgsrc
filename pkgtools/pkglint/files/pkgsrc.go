@@ -438,7 +438,7 @@ func (src *Pkgsrc) checkRemovedAfterLastFreeze() {
 
 	for _, change := range wrong {
 		// The original line of the change is not available anymore.
-		// Therefore it is necessary to load the whole file again.
+		// Therefore, it is necessary to load the whole file again.
 		lines := Load(change.Location.Filename, MustSucceed)
 		line := lines.Lines[change.Location.lineno-1]
 		line.Errorf("Package %s must either exist or be marked as removed.", change.Pkgpath.String())
@@ -1127,7 +1127,7 @@ func (src *Pkgsrc) guessVariableType(varname string) (vartype *Vartype) {
 	// looked up from the pkgsrc infrastructure.
 	//
 	// As of May 2019, pkglint only distinguishes plain variables and
-	// list variables, but not "unknown". Therefore the above patterns
+	// list variables, but not "unknown". Therefore, the above patterns
 	// must take precedence over this rule, because otherwise, list
 	// variables from the infrastructure would be guessed to be plain
 	// variables.
