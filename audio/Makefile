@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.659 2022/09/24 20:21:25 adam Exp $
+# $NetBSD: Makefile,v 1.660 2022/10/02 13:41:54 nros Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
 
 SUBDIR+=	SDL2_mixer
+SUBDIR+=	SDL2_sound
 SUBDIR+=	SDL_mixer
 SUBDIR+=	SDL_sound
 SUBDIR+=	abcde

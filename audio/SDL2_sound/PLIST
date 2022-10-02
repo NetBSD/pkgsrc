@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2022/10/02 13:41:55 nros Exp $
+include/SDL2/SDL_sound.h
+lib/libSDL2_sound.a
+lib/libSDL2_sound.so
+lib/libSDL2_sound.so.2
+lib/libSDL2_sound.so.${PKGVERSION}
