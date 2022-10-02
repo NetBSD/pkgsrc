@@ -1,0 +1,67 @@
+# $NetBSD: Makefile,v 1.1 2022/10/02 17:17:20 wiz Exp $
+
+PKGNAME=	suse_x11-${SUSE_VERSION}
+CATEGORIES=	emulators
+RPMPKGS+=	libFS6-1.0.7-1.22.${SUSE_ARCH}
+RPMPKGS+=	libICE6-1.0.9-1.25.${SUSE_ARCH}
+RPMPKGS+=	libSM6-1.2.2-1.23.${SUSE_ARCH}
+RPMPKGS+=	libX11-6-1.6.5-3.21.1.${SUSE_ARCH}
+RPMPKGS+=	libX11-xcb1-1.6.5-3.21.1.${SUSE_ARCH}
+RPMPKGS+=	libXau6-1.0.8-1.26.${SUSE_ARCH}
+RPMPKGS+=	libXaw6-1.0.13-3.3.8.${SUSE_ARCH}
+RPMPKGS+=	libXaw7-1.0.13-3.3.8.${SUSE_ARCH}
+RPMPKGS+=	libXaw8-1.0.13-3.3.8.${SUSE_ARCH}
+RPMPKGS+=	libXcomposite1-0.4.4-1.23.${SUSE_ARCH}
+RPMPKGS+=	libXcursor1-1.1.15-1.18.${SUSE_ARCH}
+RPMPKGS+=	libXdamage1-1.1.4-1.23.${SUSE_ARCH}
+RPMPKGS+=	libXdmcp6-1.1.2-1.23.${SUSE_ARCH}
+RPMPKGS+=	libXext6-1.3.3-1.30.${SUSE_ARCH}
+RPMPKGS+=	libXevie1-1.0.3-1.23.${SUSE_ARCH}
+RPMPKGS+=	libXfixes3-6.0.0-150400.1.4.${SUSE_ARCH}
+RPMPKGS+=	libXfont1-1.5.4-1.17.${SUSE_ARCH}
+RPMPKGS+=	libXfontcache1-1.0.5-1.22.${SUSE_ARCH}
+RPMPKGS+=	libXft2-2.3.2-1.33.${SUSE_ARCH}
+RPMPKGS+=	libXi6-1.7.9-3.2.1.${SUSE_ARCH}
+RPMPKGS+=	libXinerama1-1.1.3-1.22.${SUSE_ARCH}
+RPMPKGS+=	libXmu6-1.1.2-1.30.${SUSE_ARCH}
+RPMPKGS+=	libXp6-1.0.3-1.24.${SUSE_ARCH}
+RPMPKGS+=	libXpm4-3.5.12-1.33.${SUSE_ARCH}
+RPMPKGS+=	libXprintAppUtil1-1.0.1-1.22.${SUSE_ARCH}
+RPMPKGS+=	libXprintUtil1-1.0.1-1.24.${SUSE_ARCH}
+RPMPKGS+=	libXrender1-0.9.10-1.30.${SUSE_ARCH}
+RPMPKGS+=	libXss1-1.2.2-3.4.${SUSE_ARCH}
+RPMPKGS+=	libXt6-1.1.5-2.24.${SUSE_ARCH}
+RPMPKGS+=	libXtst6-1.2.3-1.24.${SUSE_ARCH}
+RPMPKGS+=	libXv1-1.0.11-1.23.${SUSE_ARCH}
+RPMPKGS+=	libXvMC1-1.0.10-1.23.${SUSE_ARCH}
+RPMPKGS+=	libXrandr2-1.5.1-2.17.${SUSE_ARCH}
+RPMPKGS+=	libXRes1-1.2.0-1.18.${SUSE_ARCH}
+RPMPKGS+=	libXTrap6-1.0.1-1.23.${SUSE_ARCH}
+RPMPKGS+=	libXxf86dga1-1.1.4-1.24.${SUSE_ARCH}
+RPMPKGS+=	libXxf86misc1-1.0.3-1.23.${SUSE_ARCH}
+RPMPKGS+=	libXxf86vm1-1.1.4-1.23.${SUSE_ARCH}
+RPMPKGS+=	libdmx1-1.1.3-1.23.${SUSE_ARCH}
+RPMPKGS+=	libfontenc1-1.1.3-1.22.${SUSE_ARCH}
+RPMPKGS+=	liblbxutil1-1.1.0-1.23.${SUSE_ARCH}
+RPMPKGS+=	liboldX6-1.0.1-1.24.${SUSE_ARCH}
+RPMPKGS+=	libpixman-1-0-0.40.0-150400.1.6.${SUSE_ARCH}
+RPMPKGS+=	libxcb1-1.13-150000.3.9.1.${SUSE_ARCH}
+RPMPKGS+=	libxcb-dri2-0-1.13-150000.3.9.1.${SUSE_ARCH}
+RPMPKGS+=	libxcb-dri3-0-1.13-150000.3.9.1.${SUSE_ARCH}
+RPMPKGS+=	libxcb-glx0-1.13-150000.3.9.1.${SUSE_ARCH}
+RPMPKGS+=	libxcb-present0-1.13-150000.3.9.1.${SUSE_ARCH}
+RPMPKGS+=	libxcb-render0-1.13-150000.3.9.1.${SUSE_ARCH}
+RPMPKGS+=	libxcb-shm0-1.13-150000.3.9.1.${SUSE_ARCH}
+RPMPKGS+=	libxcb-sync1-1.13-150000.3.9.1.${SUSE_ARCH}
+RPMPKGS+=	libxcb-xfixes0-1.13-150000.3.9.1.${SUSE_ARCH}
+RPMPKGS+=	libxkbfile1-1.0.9-1.26.${SUSE_ARCH}
+RPMPKGS+=	libxkbui1-1.0.2-1.24.${SUSE_ARCH}
+RPMPKGS+=	libxshmfence1-1.2-1.23.${SUSE_ARCH}
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+COMMENT=	Linux compatibility package for X11
+
+EMUL_MODULES.linux=	base
+
+.include "../../emulators/suse15_linux/Makefile.common"
+.include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.345 2022/06/06 14:20:45 rhialto Exp $
+# $NetBSD: Makefile,v 1.346 2022/10/02 17:17:16 wiz Exp $
 #
 
 COMMENT=	Emulators for other machines and systems
@@ -388,6 +388,28 @@ SUBDIR+=	suse131_qt4
 SUBDIR+=	suse131_slang
 SUBDIR+=	suse131_sqlite3
 SUBDIR+=	suse131_x11
+SUBDIR+=	suse15_alsa
+SUBDIR+=	suse15_base
+SUBDIR+=	suse15_binutils
+SUBDIR+=	suse15_expat
+SUBDIR+=	suse15_fontconfig
+SUBDIR+=	suse15_freetype2
+SUBDIR+=	suse15_glib2
+SUBDIR+=	suse15_glx
+SUBDIR+=	suse15_gtk3
+SUBDIR+=	suse15_libdbus
+SUBDIR+=	suse15_libdrm
+SUBDIR+=	suse15_libffi
+SUBDIR+=	suse15_libjpeg
+SUBDIR+=	suse15_libpng
+SUBDIR+=	suse15_libsndfile
+SUBDIR+=	suse15_libsystemd
+SUBDIR+=	suse15_libtiff
+SUBDIR+=	suse15_libxml2
+SUBDIR+=	suse15_locale
+SUBDIR+=	suse15_openssl
+SUBDIR+=	suse15_pulseaudio
+SUBDIR+=	suse15_x11
 SUBDIR+=	swarm
 SUBDIR+=	sys161
 SUBDIR+=	tcl-hp-15c
