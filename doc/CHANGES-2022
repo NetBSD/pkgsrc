@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4823 2022/10/02 20:19:52 nros Exp $
+$NetBSD: CHANGES-2022,v 1.4824 2022/10/02 20:21:51 nros Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7291,3 +7291,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/dhcpcd-dbus to 0.6.1 [nros 2022-10-02]
 	Updated net/dhcpcd-icons to 0.7.8 [nros 2022-10-02]
 	Updated net/dhcpcd-gtk to 0.7.8 [nros 2022-10-02]
+	Updated net/dhcpcd-qt to 0.7.8 [nros 2022-10-02]
