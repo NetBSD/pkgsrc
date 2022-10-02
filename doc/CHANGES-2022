@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4818 2022/10/02 16:22:48 nros Exp $
+$NetBSD: CHANGES-2022,v 1.4819 2022/10/02 17:23:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7264,3 +7264,26 @@ Changes to the packages collection and infrastructure in 2022:
 	Added audio/SDL2_sound version 2.0.1 [nros 2022-10-02]
 	Updated pkgtools/pkglint to 22.3.0 [rillig 2022-10-02]
 	Updated security/crypto++ to 8.7.0 [nros 2022-10-02]
+	Added emulators/suse15_alsa version 15.5 [wiz 2022-10-02]
+	Added emulators/suse15_base version 15.5 [wiz 2022-10-02]
+	Added emulators/suse15_binutils version 15.5 [wiz 2022-10-02]
+	Added emulators/suse15_expat version 15.5 [wiz 2022-10-02]
+	Added emulators/suse15_fontconfig version 15.5 [wiz 2022-10-02]
+	Added emulators/suse15_freetype2 version 15.5 [wiz 2022-10-02]
+	Added emulators/suse15_glib2 version 15.5 [wiz 2022-10-02]
+	Added emulators/suse15_glx version 15.5 [wiz 2022-10-02]
+	Added emulators/suse15_gtk3 version 15.5 [wiz 2022-10-02]
+	Added emulators/suse15_libdbus version 15.5 [wiz 2022-10-02]
+	Added emulators/suse15_libdrm version 15.5 [wiz 2022-10-02]
+	Added emulators/suse15_libffi version 15.5 [wiz 2022-10-02]
+	Added emulators/suse15_libjpeg version 15.5 [wiz 2022-10-02]
+	Added emulators/suse15_libpng version 15.5 [wiz 2022-10-02]
+	Added emulators/suse15_libsndfile version 15.5 [wiz 2022-10-02]
+	Added emulators/suse15_libsystemd version 15.5 [wiz 2022-10-02]
+	Added emulators/suse15_libtiff version 15.5 [wiz 2022-10-02]
+	Added emulators/suse15_libxml2 version 15.5 [wiz 2022-10-02]
+	Added emulators/suse15_linux version 15.5 [wiz 2022-10-02]
+	Added emulators/suse15_locale version 15.5 [wiz 2022-10-02]
+	Added emulators/suse15_openssl version 15.5 [wiz 2022-10-02]
+	Added emulators/suse15_pulseaudio version 15.5 [wiz 2022-10-02]
+	Added emulators/suse15_x11 version 15.5 [wiz 2022-10-02]
