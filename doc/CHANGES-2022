@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4817 2022/10/02 14:39:50 rillig Exp $
+$NetBSD: CHANGES-2022,v 1.4818 2022/10/02 16:22:48 nros Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7263,3 +7263,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated wm/leftwm to 0.4.0 [pin 2022-10-02]
 	Added audio/SDL2_sound version 2.0.1 [nros 2022-10-02]
 	Updated pkgtools/pkglint to 22.3.0 [rillig 2022-10-02]
+	Updated security/crypto++ to 8.7.0 [nros 2022-10-02]
