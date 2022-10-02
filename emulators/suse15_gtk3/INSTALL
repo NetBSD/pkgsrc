@@ -1,4 +1,4 @@
-# $NetBSD: INSTALL,v 1.1 2022/10/02 17:17:18 wiz Exp $
+# $NetBSD: INSTALL,v 1.2 2022/10/02 20:57:41 wiz Exp $
 #
 # Initialize gtk module configuration.
 #
@@ -11,5 +11,6 @@ POST-INSTALL)
 
 	${ECHO} "${PKGNAME}: initializing GTK module configuration"
 	${GNOME_BINDIR}/gtk-query-immodules-3.0@BINSUFFIX@ --update-cache
+	${GNOME_BINDIR}/update-mime-database ${PKG_PREFIX}/@EMULSUBDIR@/usr/share/mime
 	;;
 esac
