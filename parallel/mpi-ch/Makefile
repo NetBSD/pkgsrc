@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2022/08/25 21:46:53 thor Exp $
+# $NetBSD: Makefile,v 1.100 2022/10/02 15:35:23 he Exp $
 
 DISTNAME=	mpich-3.4.3
 CATEGORIES=	parallel
@@ -51,6 +51,12 @@ CHECK_WRKREF_SKIP+=	bin/mpirun
 .include "options.mk"
 
 TEST_TARGET=	check
+
+.if ${OPSYS} == "NetBSD"
+# Needed for <ISO_Fortran_binding.h>
+USE_PKGSRC_GCC=		yes
+GCC_REQD=		10
+.endif
 
 # Re-enable when at version 2.x.
 #.include "../../parallel/hwloc/buildlink3.mk"
