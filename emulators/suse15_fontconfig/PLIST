@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2022/10/02 17:17:17 wiz Exp $
+${EMULSUBDIRSLASH}etc/fonts/local.conf
