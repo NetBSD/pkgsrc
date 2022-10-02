@@ -1,4 +1,4 @@
-# $NetBSD: linux-suse.mk,v 1.8 2013/12/05 11:42:12 obache Exp $
+# $NetBSD: linux-suse.mk,v 1.9 2022/10/02 17:17:16 wiz Exp $
 #
 # SuSE Linux
 #
@@ -21,6 +21,9 @@ EMUL_TYPE.linux=	suse-${SUSE_VERSION}
 
 .elif !empty(EMUL_TYPE.linux:Msuse-13.[1x])
 .  include "${PKGSRCDIR}/emulators/suse131_linux/emulator.mk"
+
+.elif !empty(EMUL_TYPE.linux:Msuse-15.[0-9])
+.  include "${PKGSRCDIR}/emulators/suse15_linux/emulator.mk"
 
 .else
 EMUL_DISTRO=		suse-0
