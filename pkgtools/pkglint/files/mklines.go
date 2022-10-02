@@ -377,10 +377,10 @@ func (mklines *MkLines) collectPlistVars() {
 			required := mklines.allVars.LastValue("PKG_OPTIONS_REQUIRED_GROUPS")
 
 			for _, opt := range mkline.ValueFields(optional) {
-				supported.value += mklines.allVars.LastValue("PKG_OPTIONS_GROUP." + opt)
+				supported.value += " " + mklines.allVars.LastValue("PKG_OPTIONS_GROUP."+opt)
 			}
 			for _, opt := range mkline.ValueFields(required) {
-				supported.value += mklines.allVars.LastValue("PKG_OPTIONS_GROUP." + opt)
+				supported.value += " " + mklines.allVars.LastValue("PKG_OPTIONS_GROUP."+opt)
 			}
 		}
 
