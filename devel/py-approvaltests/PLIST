@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2022/09/28 18:02:26 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.26 2022/10/02 23:45:51 schmonz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -124,9 +124,6 @@ ${PYSITELIB}/approvaltests/reporters/generic_diff_reporter_config.pyo
 ${PYSITELIB}/approvaltests/reporters/generic_diff_reporter_factory.py
 ${PYSITELIB}/approvaltests/reporters/generic_diff_reporter_factory.pyc
 ${PYSITELIB}/approvaltests/reporters/generic_diff_reporter_factory.pyo
-${PYSITELIB}/approvaltests/reporters/introduction_reporter.py
-${PYSITELIB}/approvaltests/reporters/introduction_reporter.pyc
-${PYSITELIB}/approvaltests/reporters/introduction_reporter.pyo
 ${PYSITELIB}/approvaltests/reporters/multi_reporter.py
 ${PYSITELIB}/approvaltests/reporters/multi_reporter.pyc
 ${PYSITELIB}/approvaltests/reporters/multi_reporter.pyo
@@ -167,6 +164,9 @@ ${PYSITELIB}/approvaltests/reporters/testing_reporter.pyo
 ${PYSITELIB}/approvaltests/scrubbers/__init__.py
 ${PYSITELIB}/approvaltests/scrubbers/__init__.pyc
 ${PYSITELIB}/approvaltests/scrubbers/__init__.pyo
+${PYSITELIB}/approvaltests/scrubbers/date_scrubber.py
+${PYSITELIB}/approvaltests/scrubbers/date_scrubber.pyc
+${PYSITELIB}/approvaltests/scrubbers/date_scrubber.pyo
 ${PYSITELIB}/approvaltests/scrubbers/scrubbers.py
 ${PYSITELIB}/approvaltests/scrubbers/scrubbers.pyc
 ${PYSITELIB}/approvaltests/scrubbers/scrubbers.pyo
@@ -182,6 +182,9 @@ ${PYSITELIB}/approvaltests/utilities/__init__.pyo
 ${PYSITELIB}/approvaltests/utilities/clipboard_utilities.py
 ${PYSITELIB}/approvaltests/utilities/clipboard_utilities.pyc
 ${PYSITELIB}/approvaltests/utilities/clipboard_utilities.pyo
+${PYSITELIB}/approvaltests/utilities/deprecated.py
+${PYSITELIB}/approvaltests/utilities/deprecated.pyc
+${PYSITELIB}/approvaltests/utilities/deprecated.pyo
 ${PYSITELIB}/approvaltests/utilities/exceptions/__init__.py
 ${PYSITELIB}/approvaltests/utilities/exceptions/__init__.pyc
 ${PYSITELIB}/approvaltests/utilities/exceptions/__init__.pyo
@@ -218,12 +221,18 @@ ${PYSITELIB}/approvaltests/utilities/multiline_string_utils.pyo
 ${PYSITELIB}/approvaltests/utilities/os_utilities.py
 ${PYSITELIB}/approvaltests/utilities/os_utilities.pyc
 ${PYSITELIB}/approvaltests/utilities/os_utilities.pyo
+${PYSITELIB}/approvaltests/utilities/stack_frame_utilities.py
+${PYSITELIB}/approvaltests/utilities/stack_frame_utilities.pyc
+${PYSITELIB}/approvaltests/utilities/stack_frame_utilities.pyo
 ${PYSITELIB}/approvaltests/utilities/string_wrapper.py
 ${PYSITELIB}/approvaltests/utilities/string_wrapper.pyc
 ${PYSITELIB}/approvaltests/utilities/string_wrapper.pyo
 ${PYSITELIB}/approvaltests/utilities/time_utilities.py
 ${PYSITELIB}/approvaltests/utilities/time_utilities.pyc
 ${PYSITELIB}/approvaltests/utilities/time_utilities.pyo
+${PYSITELIB}/approvaltests/utilities/wrapper.py
+${PYSITELIB}/approvaltests/utilities/wrapper.pyc
+${PYSITELIB}/approvaltests/utilities/wrapper.pyo
 ${PYSITELIB}/approvaltests/utils.py
 ${PYSITELIB}/approvaltests/utils.pyc
 ${PYSITELIB}/approvaltests/utils.pyo
