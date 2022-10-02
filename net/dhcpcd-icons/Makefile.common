@@ -1,13 +1,11 @@
-# $NetBSD: Makefile.common,v 1.6 2019/12/03 15:40:05 roy Exp $
+# $NetBSD: Makefile.common,v 1.7 2022/10/02 20:18:51 nros Exp $
 
 # used by net/dhcpcd-gtk/Makefile
 # used by net/dhcpcd-qt/Makefile
 
-DHCPCD_UI_VERSION=	0.7.7
+DHCPCD_UI_VERSION=	0.7.8
 DISTNAME=		dhcpcd-ui-${DHCPCD_UI_VERSION}
 MASTER_SITES=		https://roy.marples.name/downloads/dhcpcd/
-MASTER_SITES+=		ftp://roy.marples.name/pub/dhcpcd/
-MASTER_SITES+=		http://roy.aydogan.net/dhcpcd/
 EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		roy@NetBSD.org
