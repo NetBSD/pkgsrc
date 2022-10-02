@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.30 2022/08/25 21:46:53 thor Exp $
+$NetBSD: distinfo,v 1.31 2022/10/02 15:35:23 he Exp $
 
 BLAKE2s (mpich-3.4.3.tar.gz) = 5d4f3a8e6c80e78e23065a8160c0113c720125074bbaccea32f78b2b3190be36
 SHA512 (mpich-3.4.3.tar.gz) = d8455a3e7150dc720ba8a0660bfbbec364b62729f4a319928bb910644d20ee68d267baf9e9e2c322540a725e41858b416ed5fff001fb1f6aa45d1c08db8dad1a
@@ -8,6 +8,10 @@ SHA1 (patch-configure) = 3fd9d0029536c134c2a8e7569ac7867a8264ba09
 SHA1 (patch-modules_libfabric_configure) = 58a60869a1f0e20c341336a69e3dc29a2b7ea7b7
 SHA1 (patch-modules_ucx_configure) = cba7bc2bbd1378015721cd6935cf9adf6ceccfe2
 SHA1 (patch-src_mpi_romio_configure) = 44dc0a5c655a1e45728bf1aad9ed4480b695df71
+SHA1 (patch-src_mpi_romio_mpl_src_sock_mpl__sockaddr.c) = e058d8d1e8b48590ab0a68d0ace1d4b78326f04f
 SHA1 (patch-src_mpid_ch3_channels_nemesis_include_mpidi_ch3_impl.h) = ec7d063fb22fbfb3fc1ee85197afd6f4c4db22bd
 SHA1 (patch-src_mpid_ch3_channels_nemesis_src_ch3__init.c) = 7b7947271b7a94a3df91515238216b212344177b
+SHA1 (patch-src_mpl_src_sock_mpl__sockaddr.c) = eeb256399e191300e94ade7ad1a8932943b60a3b
+SHA1 (patch-src_pm_hydra2_mpl_src_sock_mpl__sockaddr.c) = fb689800613546391292b9529ec039d5ce2e40da
 SHA1 (patch-src_pm_hydra_configure) = 814abcb0c6424ae9a1718c016e5b0a7f3ad85e59
+SHA1 (patch-src_pm_hydra_mpl_src_sock_mpl__sockaddr.c) = 9526cf793d8c3ef9d3418f798179126e0a5818ef
