@@ -1,21 +1,21 @@
-$NetBSD: patch-GNUmakefile,v 1.3 2020/03/22 17:52:52 tnn Exp $
+$NetBSD: patch-GNUmakefile,v 1.4 2022/10/02 16:20:26 nros Exp $
 
 Avoid -march=native compiler flag.
 On Darwin, use absolute path to avoid conflict with devel/libtool.
 Fix dylib name.
 
---- GNUmakefile.orig	2019-04-28 23:36:50.000000000 +0000
+--- GNUmakefile.orig	2022-08-07 19:52:03.000000000 +0000
 +++ GNUmakefile
-@@ -27,7 +27,7 @@ CHMOD ?= chmod
+@@ -33,7 +33,7 @@ CHMOD ?= chmod
  MKDIR ?= mkdir -p
  
  LN ?= ln -sf
 -LDCONF ?= /sbin/ldconfig -n
 +LDCONF ?= true
  
- # Solaris provides a non-Posix grep at /usr/bin
- ifneq ($(wildcard /usr/xpg4/bin/grep),)
-@@ -83,7 +83,7 @@ endif
+ # Solaris provides a non-Posix sed and grep at /usr/bin
+ # Solaris 10 is missing AR in /usr/bin
+@@ -87,7 +87,7 @@ INTEL_COMPILER := $(shell $(CXX) --versi
  
  # Enable shared object versioning for Linux and Solaris
  HAS_SOLIB_VERSION ?= 0
@@ -24,49 +24,50 @@ Fix dylib name.
    HAS_SOLIB_VERSION := 1
  endif
  
-@@ -140,7 +140,7 @@ endif
- ifneq ($(IS_DARWIN),0)
-   CXX ?= c++
-   # CXXFLAGS += -stdlib=libc++
--  AR = libtool
-+  AR = /usr/bin/libtool
-   ARFLAGS = -static -o
+@@ -969,42 +969,6 @@ ARFLAGS = -xar -o
+ RANLIB = true
  endif
- 
-@@ -846,32 +846,6 @@ ifeq ($(findstring no-asm,$(MAKECMDGOALS
-   endif # CXXFLAGS
- endif # No ASM
  
 -# Native build testing. Issue 'make native'.
 -ifeq ($(findstring native,$(MAKECMDGOALS)),native)
 -  NATIVE_OPT =
 -
 -  # Try GCC and compatibles first
--  TPROG = TestPrograms/test_cxx.cxx
+-  TPROG = TestPrograms/test_cxx.cpp
 -  TOPT = -march=native
--  HAVE_OPT = $(shell $(CXX) $(TCXXFLAGS) $(ZOPT) $(TOPT) $(TPROG) -o $(TOUT) 2>&1 | tr ' ' '\n' | wc -l)
+-  HAVE_OPT = $(shell $(TCOMMAND) 2>&1 | wc -w)
 -  ifeq ($(strip $(HAVE_OPT)),0)
 -    NATIVE_OPT = -march=native
 -  endif # NATIVE_OPT
 -
+-  # And tune
+-  ifeq ($(NATIVE_OPT),)
+-    TOPT = -mtune=native
+-    HAVE_OPT = $(shell $(TCOMMAND) 2>&1 | wc -w)
+-    ifeq ($(strip $(HAVE_OPT)),0)
+-      NATIVE_OPT = -mtune=native
+-    endif # NATIVE_OPT
+-  endif
+-
 -  # Try SunCC next
 -  ifeq ($(NATIVE_OPT),)
 -    TOPT = -native
--    HAVE_OPT = $(shell $(CXX) $(TCXXFLAGS) $(ZOPT) $(TOPT) $(TPROG) -o $(TOUT) 2>&1 | tr ' ' '\n' | wc -l)
+-    HAVE_OPT = $(shell $(TCOMMAND) 2>&1 | wc -w)
 -    ifeq ($(strip $(HAVE_OPT)),0)
 -      NATIVE_OPT = -native
 -    endif # NATIVE_OPT
 -  endif
 -
 -  ifneq ($(NATIVE_OPT),)
--    CXXFLAGS += $(NATIVE_OPT)
+-    CRYPTOPP_CXXFLAGS += $(NATIVE_OPT)
 -  endif
 -
 -endif # Native
- 
+-
  # Undefined Behavior Sanitizer (UBsan) testing. Issue 'make ubsan'.
  ifeq ($(findstring ubsan,$(MAKECMDGOALS)),ubsan)
-@@ -1006,9 +980,9 @@ ifeq ($(HAS_SOLIB_VERSION),1)
+   CRYPTOPP_CXXFLAGS := $(CRYPTOPP_CXXFLAGS:-g%=-g3)
+@@ -1139,9 +1103,9 @@ ifeq ($(HAS_SOLIB_VERSION),1)
  # Different patchlevels and minors are compatible since 6.1
  SOLIB_COMPAT_SUFFIX=.$(LIB_MAJOR)
  # Linux uses -Wl,-soname
@@ -78,20 +79,12 @@ Fix dylib name.
  SOLIB_FLAGS=-Wl,-soname,libcryptopp.so$(SOLIB_COMPAT_SUFFIX)
  endif
  # Solaris uses -Wl,-h
-@@ -1248,7 +1222,7 @@ ifneq ($(wildcard libcryptopp.dylib),)
+@@ -1443,7 +1407,7 @@ ifneq ($(wildcard libcryptopp.dylib),)
  	@-$(MKDIR) $(DESTDIR)$(LIBDIR)
  	$(CP) libcryptopp.dylib $(DESTDIR)$(LIBDIR)
- 	$(CHMOD) 0755 $(DESTDIR)$(LIBDIR)/libcryptopp.dylib
+ 	$(CHMOD) u=rwx,go=rx $(DESTDIR)$(LIBDIR)/libcryptopp.dylib
 -	-install_name_tool -id $(DESTDIR)$(LIBDIR)/libcryptopp.dylib $(DESTDIR)$(LIBDIR)/libcryptopp.dylib
 +	-install_name_tool -id $(LIBDIR)/libcryptopp.dylib $(DESTDIR)$(LIBDIR)/libcryptopp.dylib
  endif
  ifneq ($(wildcard libcryptopp.so$(SOLIB_VERSION_SUFFIX)),)
  	@-$(MKDIR) $(DESTDIR)$(LIBDIR)
-@@ -1256,6 +1230,7 @@ ifneq ($(wildcard libcryptopp.so$(SOLIB_
- 	$(CHMOD) 0755 $(DESTDIR)$(LIBDIR)/libcryptopp.so$(SOLIB_VERSION_SUFFIX)
- ifeq ($(HAS_SOLIB_VERSION),1)
- 	-$(LN) libcryptopp.so$(SOLIB_VERSION_SUFFIX) $(DESTDIR)$(LIBDIR)/libcryptopp.so
-+	-$(LN) libcryptopp.so$(SOLIB_VERSION_SUFFIX) $(DESTDIR)$(LIBDIR)/libcryptopp.so$(SOLIB_COMPAT_SUFFIX)
- 	$(LDCONF) $(DESTDIR)$(LIBDIR)
- endif
- endif
