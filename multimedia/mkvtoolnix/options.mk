@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.6 2022/09/29 08:13:17 mrg Exp $
+# $NetBSD: options.mk,v 1.7 2022/10/02 18:39:42 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mkvtoolnix
 PKG_SUPPORTED_OPTIONS=	gui doc
-PKG_DEFAULT_OPTIONS=	doc
+PKG_SUGGESTED_OPTIONS=	doc
 
 .include "../../mk/bsd.options.mk"
 
@@ -20,7 +20,7 @@ CONFIGURE_ARGS+=	--disable-gui
 .if !empty(PKG_OPTIONS:Mdoc)
 PLIST_SRC+=		PLIST.po4a
 CONFIGURE_ARGS+=	--with-po4a
-BUILD_DEPENDS+=	po4a-[0-9]*:../../textproc/po4a
+BUILD_DEPENDS+=		po4a-[0-9]*:../../textproc/po4a
 .else
 CONFIGURE_ARGS+=	--without-po4a
 .endif
