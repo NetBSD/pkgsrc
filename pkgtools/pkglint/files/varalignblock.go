@@ -466,7 +466,7 @@ func (l *varalignMkLine) isMultiEmpty() bool {
 
 // rightMargin calculates the column in which the continuation backslashes
 // should be placed.
-// In addition it returns whether the right margin is already in its
+// In addition, it returns whether the right margin is already in its
 // canonical form.
 func (l *varalignMkLine) rightMargin() (ok bool, margin int) {
 	restIndex := condInt(l.infos[0].value == "", 1, 0)

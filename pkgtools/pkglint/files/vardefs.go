@@ -1926,8 +1926,8 @@ func (reg *VarTypeRegistry) parsePermissions(varname, globs, perms string) ACLPe
 	// more general. Most variables that can be used at load time
 	// can also be used at run time.
 	//
-	// Using a variable at load time is a special access that
-	// applies to fewer variables. Therefore it comes last.
+	// Using a variable at load time occurs rarely, and it
+	// applies to fewer variables. Therefore, it comes last.
 	remove("use", aclpUse)
 	remove("use-loadtime", aclpUseLoadtime)
 
