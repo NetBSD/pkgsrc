@@ -368,6 +368,22 @@ func (mklines *MkLines) defineVar(mkline *MkLine, varname string) {
 func (mklines *MkLines) collectPlistVars() {
 	// TODO: The PLIST_VARS code above looks very similar.
 	for _, mkline := range mklines.mklines {
+
+		// In options.mk, add option groups to PKG_SUPPORTED_OPTIONS.
+		if mkline.IsInclude() && mkline.IncludedFile() == "../../mk/bsd.options.mk" {
+			mklines.allVars.def("PKG_SUPPORTED_OPTIONS", mkline)
+			supported := mklines.allVars.vs["PKG_SUPPORTED_OPTIONS"]
+			optional := mklines.allVars.LastValue("PKG_OPTIONS_OPTIONAL_GROUPS")
+			required := mklines.allVars.LastValue("PKG_OPTIONS_REQUIRED_GROUPS")
+
+			for _, opt := range mkline.ValueFields(optional) {
+				supported.value += mklines.allVars.LastValue("PKG_OPTIONS_GROUP." + opt)
+			}
+			for _, opt := range mkline.ValueFields(required) {
+				supported.value += mklines.allVars.LastValue("PKG_OPTIONS_GROUP." + opt)
+			}
+		}
+
 		if mkline.IsVarassign() {
 			switch mkline.Varcanon() {
 			case "PLIST_VARS":
