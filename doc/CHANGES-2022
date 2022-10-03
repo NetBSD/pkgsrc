@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4832 2022/10/03 12:28:35 adam Exp $
+$NetBSD: CHANGES-2022,v 1.4833 2022/10/03 12:38:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7305,3 +7305,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/sqlite3-docs to 3.39.4 [adam 2022-10-03]
 	Updated databases/sqlite3-tcl to 3.39.4 [adam 2022-10-03]
 	Updated devel/lemon to 1.0.3.39.4 [adam 2022-10-03]
+	Updated comms/py-rich to 12.6.0 [adam 2022-10-03]
+	Updated devel/py-jaraco.classes to 3.2.3 [adam 2022-10-03]
