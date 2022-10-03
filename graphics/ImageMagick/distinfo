@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.278 2022/06/20 20:49:26 dholland Exp $
+$NetBSD: distinfo,v 1.279 2022/10/03 12:55:13 wiz Exp $
 
-BLAKE2s (ImageMagick-7.1.0-37.tar.xz) = c03be05ebcb1c3cda0eee6963c745fd714a0d99a901fc4e9c10d7953d95936aa
-SHA512 (ImageMagick-7.1.0-37.tar.xz) = 43f116a3a6bb9794b8c8440c57a537eab29b0dac7b8ace574e3cc1e6d484054557c9e44235eb799b843ef761c6f22d29ef959f6de6b80a45a3898bee4d2f16da
-Size (ImageMagick-7.1.0-37.tar.xz) = 10345216 bytes
-SHA1 (patch-config_policy.xml) = f8d130dcb1e81cd78a7856ca9b334f6ebf95c18f
+BLAKE2s (ImageMagick-7.1.0-49.tar.xz) = ee9e83035ad119d82ad4f5f05bbf5dbac516a28543bb217b1a774227fe1754c4
+SHA512 (ImageMagick-7.1.0-49.tar.xz) = 2f602dc26c8b159b3065f8920a3aa06fa0ef0d9d35ed4c86882b9a34477bc5ca66386a7c3495bbc44fa896bd2f10db9024eb5bc2bfb14420d7abe1af9b021841
+Size (ImageMagick-7.1.0-49.tar.xz) = 10362492 bytes
+SHA1 (patch-config_policy.xml) = 0ae88934acb31681dc3cd7738075362ae2c17c10
 SHA1 (patch-ghostscript-private.h) = 98d88220cf8814f2e4841c382de5e2e9e0ae9287
