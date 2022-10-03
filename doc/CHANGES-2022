@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4842 2022/10/03 16:40:32 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.4843 2022/10/03 18:09:57 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7319,3 +7319,6 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/py-grpcio-testing to 1.49.1 [adam 2022-10-03]
 	Updated net/py-grpcio-tools to 1.49.1 [adam 2022-10-03]
 	Updated filesystems/tahoe-lafs to 1.18.0 [gdt 2022-10-03]
+	Updated textproc/libhighlight to 4.3 [schmonz 2022-10-03]
+	Updated textproc/highlight to 4.3 [schmonz 2022-10-03]
+	Updated textproc/p5-highlight to 4.3 [schmonz 2022-10-03]
