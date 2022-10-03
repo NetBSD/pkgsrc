@@ -1,8 +1,8 @@
-$NetBSD: patch-makefile,v 1.7 2022/07/13 00:52:31 schmonz Exp $
+$NetBSD: patch-makefile,v 1.8 2022/10/03 18:09:12 schmonz Exp $
 
 Use pkgsrc-provided paths and tools.
 
---- makefile.orig	2022-03-22 20:58:01.000000000 +0000
+--- makefile.orig	2022-09-28 17:52:30.000000000 +0000
 +++ makefile
 @@ -7,7 +7,7 @@
  DESTDIR =
@@ -11,29 +11,36 @@ Use pkgsrc-provided paths and tools.
 -PREFIX = /usr
 +#PREFIX = /usr
  
- # Location of the highlight data files:
- data_dir = ${PREFIX}/share/highlight/
-@@ -19,7 +19,7 @@ bin_dir = ${PREFIX}/bin/
+ # Data file directory
+ data_dir = ${PREFIX}/share/
+@@ -22,7 +22,7 @@ bin_dir = ${PREFIX}/bin/
  lib_dir = ${PREFIX}/lib/
  
  # Location of the highlight man pages:
--man_dir = ${PREFIX}/share/man/
+-man_dir = ${data_dir}man/
 +man_dir = ${PREFIX}/${PKGMANDIR}/
  
- # Location of the highlight documentation:
- doc_dir = ${PREFIX}/share/doc/highlight/
-@@ -28,8 +28,8 @@ doc_dir = ${PREFIX}/share/doc/highlight/
- examples_dir = ${doc_dir}extras/
+ # Documentation directory
+ doc_dir = ${data_dir}doc/
+@@ -34,11 +34,12 @@ hl_doc_dir = ${doc_dir}highlight/
+ examples_dir = ${hl_doc_dir}extras/
+ 
+ # Location of system-wide config files:
+-ifeq (${PREFIX},/usr)
+-	conf_dir = /etc/
+-else
+-	conf_dir = ${PREFIX}/etc/
+-endif
++#ifeq (${PREFIX},/usr)
++#	conf_dir = /etc/
++#else
++#	conf_dir = ${PREFIX}/etc/
++#endif
++conf_dir = ${PREFIX}/share/examples/
  
  # Location of the highlight config files:
--conf_dir = /etc/highlight/
--#conf_dir = ${PREFIX}/etc/highlight/
-+#conf_dir = /etc/highlight/
-+conf_dir = ${PREFIX}/share/examples/highlight/
- 
- # Location of additional gui files
- desktop_apps = ${PREFIX}/share/applications/
-@@ -37,10 +37,10 @@ desktop_icons = ${PREFIX}/share/icons/hi
+ hl_conf_dir = ${conf_dir}highlight/
+@@ -58,10 +59,10 @@ desktop_icons = ${data_dir}icons/hicolor
  
  # Commands:
  GZIP=gzip -9f
@@ -47,28 +54,31 @@ Use pkgsrc-provided paths and tools.
 +RMDIR=${RM} -r -f
  
  all cli:
- 	${MAKE} -C ./src -f ./makefile HL_DATA_DIR=${data_dir} HL_CONFIG_DIR=${conf_dir}
-@@ -85,19 +85,12 @@ install:
- 		${DESTDIR}${data_dir}themes/base16 \
- 		${DESTDIR}${data_dir}langDefs \
- 		${DESTDIR}${data_dir}plugins
+ 	${MAKE} -C ./src -f ./makefile HL_DATA_DIR=${hl_data_dir} HL_CONFIG_DIR=${hl_conf_dir}
+@@ -109,22 +110,15 @@ install:
+ 		${DESTDIR}${hl_data_dir}themes/base16 \
+ 		${DESTDIR}${hl_data_dir}langDefs \
+ 		${DESTDIR}${hl_data_dir}plugins
 -	${MKDIR} ${DESTDIR}${man_dir}man1/
 -	${MKDIR} ${DESTDIR}${man_dir}man5/
+ 	${MKDIR} ${DESTDIR}${bash_comp_dir}
+ 	${MKDIR} ${DESTDIR}${fish_comp_dir}
+ 	${MKDIR} ${DESTDIR}${zsh_comp_dir}
 -	${MKDIR} ${DESTDIR}${bin_dir}
  
- 	${INSTALL_DATA} ./langDefs/*.lang ${DESTDIR}${data_dir}langDefs/
- 	${INSTALL_DATA} ./*.conf ${DESTDIR}${conf_dir}
- 	${INSTALL_DATA} ./themes/*.theme ${DESTDIR}${data_dir}themes/
- 	${INSTALL_DATA} ./themes/base16/*.theme ${DESTDIR}${data_dir}themes/base16/
- 	${INSTALL_DATA} ./plugins/*.lua ${DESTDIR}${data_dir}plugins/
+ 	${INSTALL_DATA} ./langDefs/*.lang ${DESTDIR}${hl_data_dir}langDefs/
+ 	${INSTALL_DATA} ./*.conf ${DESTDIR}${hl_conf_dir}
+ 	${INSTALL_DATA} ./themes/*.theme ${DESTDIR}${hl_data_dir}themes/
+ 	${INSTALL_DATA} ./themes/base16/*.theme ${DESTDIR}${hl_data_dir}themes/base16/
+ 	${INSTALL_DATA} ./plugins/*.lua ${DESTDIR}${hl_data_dir}plugins/
 -	${INSTALL_DATA} ./man/highlight.1 ${DESTDIR}${man_dir}man1/
 -	${GZIP} ${DESTDIR}${man_dir}man1/highlight.1
 -	${INSTALL_DATA} ./man/filetypes.conf.5 ${DESTDIR}${man_dir}man5/
 -	${GZIP} ${DESTDIR}${man_dir}man5/filetypes.conf.5
  
- 	${INSTALL_DATA} ./AUTHORS ${DESTDIR}${doc_dir}
- 	${INSTALL_DATA} ./README* ${DESTDIR}${doc_dir}
-@@ -114,15 +107,27 @@ install:
+ 	${INSTALL_DATA} ./sh-completion/highlight.bash ${DESTDIR}${bash_comp_dir}highlight
+ 	${INSTALL_DATA} ./sh-completion/highlight.fish ${DESTDIR}${fish_comp_dir}
+@@ -145,12 +139,11 @@ install:
  	${INSTALL_DATA} ./extras/themes-resources/css-themes/* ${DESTDIR}${examples_dir}themes-resources/css-themes
  	${INSTALL_DATA} ./extras/highlight_pipe.* ${DESTDIR}${examples_dir}
  	${INSTALL_DATA} ./extras/*.py ${DESTDIR}${examples_dir}
@@ -81,6 +91,10 @@ Use pkgsrc-provided paths and tools.
 +	@echo "Execute 'make install-cli' to install the highlight CLI ('make cli')."
  	@echo "Execute 'make install-gui' to install the highlight GUI ('make gui')."
  	@echo "Do not hesitate to report problems. Unknown bugs are hard to fix."
+ 
+@@ -169,6 +162,19 @@ install-gui:
+ 	${INSTALL_DATA} ./src/gui-qt/highlight.png ${DESTDIR}${desktop_icons}
+ 	${INSTALL_PROGRAM} ./src/highlight-gui ${DESTDIR}${bin_dir}
  
 +install-cli:
 +	@echo "Installing files for the CLI..."
@@ -95,17 +109,17 @@ Use pkgsrc-provided paths and tools.
 +	@echo "Done."
 +	@echo "Type highlight --help or man highlight for instructions."
 +
- install-gui:
- 	@echo "Installing files for the GUI..."
- 	${MKDIR} ${DESTDIR}${data_dir} \
-@@ -147,8 +152,8 @@ uninstall:
- 	${RMDIR} ${DESTDIR}${doc_dir}
- 	${RMDIR} ${DESTDIR}${conf_dir}
+ install-lib-shared:
+ 	${INSTALL_DATA} ./src/libhighlight.so.4.0 ${DESTDIR}${lib_dir}
+ 
+@@ -178,8 +184,8 @@ uninstall:
+ 	${RMDIR} ${DESTDIR}${hl_doc_dir}
+ 	${RMDIR} ${DESTDIR}${hl_conf_dir}
  	${RMDIR} ${DESTDIR}${examples_dir}
 -	rm -rf ${DESTDIR}${man_dir}man1/highlight.1.gz
 -	rm -rf ${DESTDIR}${man_dir}man5/filetypes.conf.5.gz
 +	rm -rf ${DESTDIR}${man_dir}man1/highlight.1*
 +	rm -rf ${DESTDIR}${man_dir}man5/filetypes.conf.5*
+ 	rm -rf ${DESTDIR}${bash_comp_dir}highlight.bash
+ 	rm -rf ${DESTDIR}${fish_comp_dir}highlight.fish
  
- 	rm -rf ${DESTDIR}${bin_dir}highlight
- 	rm -rf ${DESTDIR}${bin_dir}highlight-gui
