@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2022/10/03 13:47:20 nros Exp $
+include/libthreadar/barrier.hpp
+include/libthreadar/condition.hpp
+include/libthreadar/exceptions.hpp
+include/libthreadar/fast_tampon.hpp
+include/libthreadar/freezer.hpp
+include/libthreadar/libthreadar.hpp
+include/libthreadar/libthreadar_config.h
+include/libthreadar/mutex.hpp
+include/libthreadar/ratelier_gather.hpp
+include/libthreadar/ratelier_scatter.hpp
+include/libthreadar/semaphore.hpp
+include/libthreadar/tampon.hpp
+include/libthreadar/thread.hpp
+lib/libthreadar.la
+lib/pkgconfig/libthreadar.pc
