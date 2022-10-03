@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.85 2022/09/27 20:58:25 wiz Exp $
+# $NetBSD: Makefile,v 1.86 2022/10/03 10:46:05 adam Exp $
 
 DISTNAME=	HandBrake-1.5.1-source
 PKGNAME=	${DISTNAME:tl:S/-source//}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=HandBrake/}
 EXTRACT_SUFX=	.tar.bz2
 GITHUB_PROJECT=	HandBrake
-GITHUB_RELEASE=	1.5.1
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://handbrake.fr/
@@ -39,6 +39,7 @@ BUILDLINK_TRANSFORM.NetBSD+=	rm:-ldl
 PLIST_SRC+=	${PKGDIR}/PLIST
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--disable-xcode
 CONFIGURE_ARGS+=	--enable-nls
 
 MAKE_FILE=		GNUmakefile
@@ -49,7 +50,7 @@ BUILD_DEPENDS+=		cmake-[0-9]*:../../devel/cmake
 BUILD_DEPENDS+=		nasm>=2.05.01:../../devel/nasm
 BUILD_DEPENDS+=		meson-[0-9]*:../../devel/meson
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../mk/compiler.mk"
 
 .if !empty(PKGSRC_COMPILER:Mclang)
 CFLAGS+=	-fheinous-gnu-extensions
@@ -64,7 +65,7 @@ post-build:
 	set -e; cd ${WRKSRC};							\
 	for po in ${GHB_LOCALES}; do						\
 		mo="../.destdir/usr/pkg/share/locale/$${po%%.po}/LC_MESSAGES" ;	\
-		${MKDIR} $${mo} ; ${ECHO} -n "msgfmt $${po}:	" ;		\
+		${MKDIR} $${mo} ; ${ECHO_N} "msgfmt $${po}:	" ;		\
 		${SED} -e '/^"Project-Id-Version:/ s/PACKAGE VERSION/ghb 0.1/'	\
 			gtk/po/$${po}.po | ${TOOLS_DIR}/bin/msgfmt -v -c -	\
 						-o $${mo}/ghb.mo ;		\
@@ -91,17 +92,13 @@ post-build:
 .include "../../multimedia/libdvdread/buildlink3.mk"
 .include "../../multimedia/libtheora/buildlink3.mk"
 .include "../../multimedia/libvpx/buildlink3.mk"
-.include "../../multimedia/x264-devel/buildlink3.mk"
+.include "../../multimedia/x264/buildlink3.mk"
 .include "../../multimedia/x265/buildlink3.mk"
 .include "../../textproc/jansson/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-
 # Note that libjpeg-turbo is required by the Handbrake library libhb: when gtk3 is
 # enabled (as per default) it is built and linked statically in the build phase as
 # not to conflict with the "default" jpeg required by gtk3
-JPEG_DEFAULT=	jpeg
+#JPEG_DEFAULT=	jpeg
 .include "../../mk/jpeg.buildlink3.mk"
-
-.include "../../mk/compiler.mk"
-
 .include "../../mk/bsd.pkg.mk"
