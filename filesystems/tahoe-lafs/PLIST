@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2022/06/15 22:31:44 gdt Exp $
+@comment $NetBSD: PLIST,v 1.15 2022/10/03 16:40:21 gdt Exp $
 bin/tahoe
 ${PYSITELIB}/allmydata/__init__.py
 ${PYSITELIB}/allmydata/__init__.pyc
@@ -273,6 +273,9 @@ ${PYSITELIB}/allmydata/storage/expirer.pyo
 ${PYSITELIB}/allmydata/storage/http_client.py
 ${PYSITELIB}/allmydata/storage/http_client.pyc
 ${PYSITELIB}/allmydata/storage/http_client.pyo
+${PYSITELIB}/allmydata/storage/http_common.py
+${PYSITELIB}/allmydata/storage/http_common.pyc
+${PYSITELIB}/allmydata/storage/http_common.pyo
 ${PYSITELIB}/allmydata/storage/http_server.py
 ${PYSITELIB}/allmydata/storage/http_server.pyc
 ${PYSITELIB}/allmydata/storage/http_server.pyo
@@ -309,6 +312,9 @@ ${PYSITELIB}/allmydata/test/__init__.pyo
 ${PYSITELIB}/allmydata/test/_win_subprocess.py
 ${PYSITELIB}/allmydata/test/_win_subprocess.pyc
 ${PYSITELIB}/allmydata/test/_win_subprocess.pyo
+${PYSITELIB}/allmydata/test/certs.py
+${PYSITELIB}/allmydata/test/certs.pyc
+${PYSITELIB}/allmydata/test/certs.pyo
 ${PYSITELIB}/allmydata/test/cli/__init__.py
 ${PYSITELIB}/allmydata/test/cli/__init__.pyc
 ${PYSITELIB}/allmydata/test/cli/__init__.pyo
@@ -360,6 +366,9 @@ ${PYSITELIB}/allmydata/test/cli/test_run.pyo
 ${PYSITELIB}/allmydata/test/cli/test_status.py
 ${PYSITELIB}/allmydata/test/cli/test_status.pyc
 ${PYSITELIB}/allmydata/test/cli/test_status.pyo
+${PYSITELIB}/allmydata/test/cli/wormholetesting.py
+${PYSITELIB}/allmydata/test/cli/wormholetesting.pyc
+${PYSITELIB}/allmydata/test/cli/wormholetesting.pyo
 ${PYSITELIB}/allmydata/test/cli_node_api.py
 ${PYSITELIB}/allmydata/test/cli_node_api.pyc
 ${PYSITELIB}/allmydata/test/cli_node_api.pyo
@@ -382,9 +391,11 @@ ${PYSITELIB}/allmydata/test/data/lease_checker.history.txt
 ${PYSITELIB}/allmydata/test/data/lease_checker.state.txt
 ${PYSITELIB}/allmydata/test/data/openssh-rsa-2048.pub.txt
 ${PYSITELIB}/allmydata/test/data/openssh-rsa-2048.txt
+${PYSITELIB}/allmydata/test/data/pycryptopp-rsa-1024-priv.txt
 ${PYSITELIB}/allmydata/test/data/pycryptopp-rsa-2048-priv.txt
 ${PYSITELIB}/allmydata/test/data/pycryptopp-rsa-2048-pub.txt
 ${PYSITELIB}/allmydata/test/data/pycryptopp-rsa-2048-sig.txt
+${PYSITELIB}/allmydata/test/data/pycryptopp-rsa-32768-priv.txt
 ${PYSITELIB}/allmydata/test/eliotutil.py
 ${PYSITELIB}/allmydata/test/eliotutil.pyc
 ${PYSITELIB}/allmydata/test/eliotutil.pyo
@@ -616,6 +627,9 @@ ${PYSITELIB}/allmydata/test/test_storage_client.pyo
 ${PYSITELIB}/allmydata/test/test_storage_http.py
 ${PYSITELIB}/allmydata/test/test_storage_http.pyc
 ${PYSITELIB}/allmydata/test/test_storage_http.pyo
+${PYSITELIB}/allmydata/test/test_storage_https.py
+${PYSITELIB}/allmydata/test/test_storage_https.pyc
+${PYSITELIB}/allmydata/test/test_storage_https.pyo
 ${PYSITELIB}/allmydata/test/test_storage_web.py
 ${PYSITELIB}/allmydata/test/test_storage_web.pyc
 ${PYSITELIB}/allmydata/test/test_storage_web.pyo
@@ -778,6 +792,9 @@ ${PYSITELIB}/allmydata/util/netstring.pyo
 ${PYSITELIB}/allmydata/util/observer.py
 ${PYSITELIB}/allmydata/util/observer.pyc
 ${PYSITELIB}/allmydata/util/observer.pyo
+${PYSITELIB}/allmydata/util/pid.py
+${PYSITELIB}/allmydata/util/pid.pyc
+${PYSITELIB}/allmydata/util/pid.pyo
 ${PYSITELIB}/allmydata/util/pipeline.py
 ${PYSITELIB}/allmydata/util/pipeline.pyc
 ${PYSITELIB}/allmydata/util/pipeline.pyo
