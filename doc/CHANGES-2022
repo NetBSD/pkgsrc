@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4843 2022/10/03 18:09:57 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.4844 2022/10/03 19:27:13 markd Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7322,3 +7322,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/libhighlight to 4.3 [schmonz 2022-10-03]
 	Updated textproc/highlight to 4.3 [schmonz 2022-10-03]
 	Updated textproc/p5-highlight to 4.3 [schmonz 2022-10-03]
+	Added print/tex-orcidlink version 1.0.4 [markd 2022-10-03]
+	Added print/tex-orcidlink-doc version 1.0.4 [markd 2022-10-03]
