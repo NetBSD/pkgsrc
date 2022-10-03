@@ -1,8 +1,8 @@
-$NetBSD: patch-src_makefile,v 1.11 2020/12/18 18:45:08 schmonz Exp $
+$NetBSD: patch-src_makefile,v 1.12 2022/10/03 18:09:12 schmonz Exp $
 
 Use pkgsrc-specified compiler and flags.
 
---- src/makefile.orig	2020-11-13 20:00:38.000000000 +0000
+--- src/makefile.orig	2022-09-28 17:52:30.000000000 +0000
 +++ src/makefile
 @@ -13,11 +13,11 @@
  # See src/gui-qt/highlight.pro for the Qt GUI compilation options
@@ -18,12 +18,16 @@ Use pkgsrc-specified compiler and flags.
  
  #CFLAGS:= -fPIC -O2 -g -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fexceptions -fstack-protector-strong -grecord-gcc-switches -fasynchronous-unwind-tables -fstack-clash-protection
  
-@@ -68,14 +68,17 @@ ifdef PIC
+@@ -68,16 +68,20 @@ ifdef PIC
  	CFLAGS+=-fPIC
  endif
  
+-ifneq ($(OS), Windows_NT)
 -LDFLAGS = -ldl
+-endif
++#ifneq ($(OS), Windows_NT)
 +#LDFLAGS = -ldl
++#endif
  # Do not strip by default (Mac OS X lazy pointer issues)
  # Add -static to avoid linking with shared libs (can cause trouble when highlight
  # is run as service)
@@ -31,6 +35,7 @@ Use pkgsrc-specified compiler and flags.
  #LDFLAGS= -Wl,--as-needed
  
 -CXX_COMPILE=${CXX} ${CFLAGS} -c -I ${INCLUDE_DIR} ${LUA_CFLAGS}
++
 +LSO_VERSION=$(shell echo ${SO_VERSION} | awk -F. '{ printf "%d:%d:0\n", $$1 - 1, $$2 }')
 +LIBTOOL=libtool --tag=CXX
 +
@@ -38,7 +43,7 @@ Use pkgsrc-specified compiler and flags.
  
  # Data directories (data dir, configuration file dir)
  CXX_DIR=-DHL_DATA_DIR=\"${HL_DATA_DIR}\" -DHL_CONFIG_DIR=\"${HL_CONFIG_DIR}\"
-@@ -103,18 +106,18 @@ GUI_OBJECTS:=${GUI_QT_DIR}main.cpp ${GUI
+@@ -105,18 +109,18 @@ GUI_OBJECTS:=${GUI_QT_DIR}main.cpp ${GUI
  	${GUI_QT_DIR}showtextfile.cpp
  
  
@@ -61,7 +66,7 @@ Use pkgsrc-specified compiler and flags.
  	cd gui-qt && \
  	${QMAKE} 'DEFINES+=DATA_DIR=\\\"${HL_DATA_DIR}\\\" CONFIG_DIR=\\\"${HL_CONFIG_DIR}\\\" DOC_DIR=\\\"${HL_DOC_DIR}\\\" ' && \
  	$(MAKE)
-@@ -123,7 +126,7 @@ $(OBJECTFILES) : makefile
+@@ -125,7 +129,7 @@ $(OBJECTFILES) : makefile
  
  
  datadir.o: ${CORE_DIR}datadir.cpp ${INCLUDE_DIR}datadir.h ${INCLUDE_DIR}platform_fs.h
@@ -70,7 +75,7 @@ Use pkgsrc-specified compiler and flags.
  
  platform_fs.o: ${CORE_DIR}platform_fs.cpp ${INCLUDE_DIR}platform_fs.h
  	${CXX_COMPILE} ${CORE_DIR}platform_fs.cpp
-@@ -207,7 +210,7 @@ main.o: ${CLI_DIR}main.cpp ${CLI_DIR}mai
+@@ -212,7 +216,7 @@ main.o: ${CLI_DIR}main.cpp ${CLI_DIR}mai
  	${INCLUDE_DIR}syntaxreader.h ${INCLUDE_DIR}themereader.h ${INCLUDE_DIR}elementstyle.h \
  	${INCLUDE_DIR}stylecolour.h  ${INCLUDE_DIR}preformatter.h \
  	${CLI_DIR}help.h ${INCLUDE_DIR}version.h

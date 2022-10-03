@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.18 2022/07/13 00:52:30 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.19 2022/10/03 18:09:12 schmonz Exp $
 lib/libhighlight.la
+share/bash-completion/completions/highlight
 share/doc/highlight/AUTHORS
 share/doc/highlight/COPYING
 share/doc/highlight/ChangeLog.adoc
@@ -59,6 +60,7 @@ share/doc/highlight/extras/themes-resources/css-themes/hl-theme-boilerplate.css
 share/doc/highlight/extras/themes-resources/css-themes/hl-theme-boilerplate.scss
 share/examples/highlight/filetypes.conf
 share/examples/highlight/lsp.conf
+share/fish/vendor_completions.d/highlight.fish
 share/highlight/langDefs/abap.lang
 share/highlight/langDefs/abc.lang
 share/highlight/langDefs/abnf.lang
@@ -95,6 +97,7 @@ share/highlight/langDefs/bms.lang
 share/highlight/langDefs/bnf.lang
 share/highlight/langDefs/boo.lang
 share/highlight/langDefs/c.lang
+share/highlight/langDefs/carbon.lang
 share/highlight/langDefs/ceylon.lang
 share/highlight/langDefs/charmm.lang
 share/highlight/langDefs/chill.lang
@@ -550,3 +553,4 @@ share/highlight/themes/xoria256.theme
 share/highlight/themes/zellner.theme
 share/highlight/themes/zenburn.theme
 share/highlight/themes/zmrok.theme
+share/zsh/site-functions/_highlight
