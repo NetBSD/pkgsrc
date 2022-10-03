@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2022/10/03 13:59:05 nros Exp $
+@comment $NetBSD: PLIST,v 1.15 2022/10/03 16:09:53 nros Exp $
 bin/dar
 bin/dar_cp
 bin/dar_manager
@@ -89,8 +89,8 @@ include/dar/user_interaction_blind.hpp
 include/dar/user_interaction_callback.hpp
 include/dar/user_interaction_callback5.hpp
 include/dar/wrapperlib.hpp
-lib/libdar64.la
-lib/pkgconfig/libdar64.pc
+lib/libdar${DARBITS}.la
+lib/pkgconfig/libdar${DARBITS}.pc
 man/man1/dar.1
 man/man1/dar_cp.1
 man/man1/dar_manager.1
