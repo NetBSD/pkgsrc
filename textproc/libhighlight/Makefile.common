@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.21 2022/10/03 18:09:12 schmonz Exp $
+# $NetBSD: Makefile.common,v 1.22 2022/10/03 18:10:51 schmonz Exp $
 # used by textproc/highlight/Makefile
 # used by textproc/libhighlight/Makefile
 # used by textproc/p5-highlight/Makefile
@@ -9,7 +9,7 @@ CATEGORIES=		textproc
 MASTER_SITES=		http://www.andre-simon.de/zip/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
+MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://www.andre-simon.de/
 COMMENT=		Converts source code to formatted text with syntax highlighting
 LICENSE=		gnu-gpl-v3
