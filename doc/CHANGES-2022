@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4838 2022/10/03 12:55:53 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4839 2022/10/03 13:49:10 nros Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7312,3 +7312,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated shells/bash to 5.2 [wiz 2022-10-03]
 	Updated graphics/ImageMagick to 7.1.0.49 [wiz 2022-10-03]
 	Updated graphics/p5-PerlMagick to 7.1.0.49 [wiz 2022-10-03]
+	Added devel/libthreadar version 1.4.0 [nros 2022-10-03]
