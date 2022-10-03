@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.56 2022/06/30 11:18:23 nia Exp $
+# $NetBSD: Makefile,v 1.57 2022/10/03 16:40:21 gdt Exp $
 
-VERSION_BASE=	1.17.1
+VERSION_BASE=	1.18.0
 VERSION_RC=
 DISTNAME=	tahoe-lafs-${VERSION_BASE}${VERSION_RC}
-PKGREVISION=	1
 CATEGORIES=	filesystems
 MASTER_SITES=	https://tahoe-lafs.org/downloads/
 
@@ -14,9 +13,6 @@ LICENSE=	gnu-gpl-v2
 
 USE_TOOLS=	gmake
 
-# tahoe works with 27, but it depends on things which are not
-# available for 27 in pkgsrc, and $MAINTAINER is not interested in
-# spending time on that.
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_PKG_RESOURCES=	yes
