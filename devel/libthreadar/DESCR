@@ -1,0 +1,3 @@
+libthreadar provides C++ classes for manipulating threads and
+propagating back exception from thread to parent thread when the
+parent calls the join() method.
