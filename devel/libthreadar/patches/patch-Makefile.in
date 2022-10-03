@@ -1,0 +1,17 @@
+$NetBSD: patch-Makefile.in,v 1.1 2022/10/03 13:47:20 nros Exp $
+
+* don't generate and install docs, if doxygen is not
+  found it just installs a README mentioning the html
+  docs.
+
+--- Makefile.in.orig	2022-10-03 11:57:46.096267685 +0000
++++ Makefile.in
+@@ -338,7 +338,7 @@ tmp = @tmp@
+ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+-SUBDIRS = src doc
++SUBDIRS = src
+ dist_noinst_DATA = INSTALL README THANKS AUTHORS COPYING COPYING.LESSER
+ all: config.h
+ 	$(MAKE) $(AM_MAKEFLAGS) all-recursive

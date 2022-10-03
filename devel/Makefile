@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3803 2022/09/28 11:05:56 wiz Exp $
+# $NetBSD: Makefile,v 1.3804 2022/10/03 13:47:20 nros Exp $
 #
 
 COMMENT=	Development utilities
@@ -941,6 +941,7 @@ SUBDIR+=	libtar
 SUBDIR+=	libtecla
 SUBDIR+=	libtermkey
 SUBDIR+=	libthai
+SUBDIR+=	libthreadar
 SUBDIR+=	libthrift
 SUBDIR+=	libthrift_c_glib
 SUBDIR+=	libtool
