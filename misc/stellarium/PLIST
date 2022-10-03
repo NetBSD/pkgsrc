@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.46 2022/07/11 10:23:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.47 2022/10/03 09:07:03 adam Exp $
 bin/stellarium
 man/man1/stellarium.1
 ${PLIST.desktop}share/applications/org.stellarium.Stellarium.desktop
@@ -1288,6 +1288,7 @@ share/stellarium/scenery3d/Sterngarten/description.gl.utf8
 share/stellarium/scenery3d/Sterngarten/description.ko.utf8
 share/stellarium/scenery3d/Sterngarten/description.nl.utf8
 share/stellarium/scenery3d/Sterngarten/description.pt_BR.utf8
+share/stellarium/scenery3d/Sterngarten/description.ro.utf8
 share/stellarium/scenery3d/Sterngarten/description.ru.utf8
 share/stellarium/scenery3d/Sterngarten/description.sk.utf8
 share/stellarium/scenery3d/Sterngarten/description.uk.utf8
@@ -1340,6 +1341,7 @@ share/stellarium/scenery3d/Testscene/description.gl.utf8
 share/stellarium/scenery3d/Testscene/description.ko.utf8
 share/stellarium/scenery3d/Testscene/description.nl.utf8
 share/stellarium/scenery3d/Testscene/description.pt_BR.utf8
+share/stellarium/scenery3d/Testscene/description.ro.utf8
 share/stellarium/scenery3d/Testscene/description.ru.utf8
 share/stellarium/scenery3d/Testscene/description.sk.utf8
 share/stellarium/scenery3d/Testscene/description.uk.utf8
@@ -1510,6 +1512,7 @@ share/stellarium/skycultures/arabic_indigenous/description.en.utf8
 share/stellarium/skycultures/arabic_indigenous/description.es.utf8
 share/stellarium/skycultures/arabic_indigenous/description.gl.utf8
 share/stellarium/skycultures/arabic_indigenous/description.nl.utf8
+share/stellarium/skycultures/arabic_indigenous/description.ru.utf8
 share/stellarium/skycultures/arabic_indigenous/description.sk.utf8
 share/stellarium/skycultures/arabic_indigenous/description.uk.utf8
 share/stellarium/skycultures/arabic_indigenous/dso_names.fab
@@ -1634,8 +1637,20 @@ share/stellarium/skycultures/babylonian_mulapin/info.ini
 share/stellarium/skycultures/babylonian_mulapin/planet_names.fab
 share/stellarium/skycultures/babylonian_mulapin/star_names.fab
 share/stellarium/skycultures/babylonian_mulapin/ukadua_bg.png
+share/stellarium/skycultures/babylonian_seleucid/JNG_01_fische_bab_1024.png
+share/stellarium/skycultures/babylonian_seleucid/JNG_02_Aries_sk_1024.png
+share/stellarium/skycultures/babylonian_seleucid/JNG_03_taurus_bab_1024.png
+share/stellarium/skycultures/babylonian_seleucid/JNG_04_gemini_bab_1024.png
+share/stellarium/skycultures/babylonian_seleucid/JNG_05_Cancer_sk_1024.png
+share/stellarium/skycultures/babylonian_seleucid/JNG_06_leo_bab_1024.png
+share/stellarium/skycultures/babylonian_seleucid/JNG_08_libra_bab_1024.png
+share/stellarium/skycultures/babylonian_seleucid/JNG_10_sagittarius_bab_1024.png
+share/stellarium/skycultures/babylonian_seleucid/JNG_12_aquarius_bab_ohnevogel_1024.png
+share/stellarium/skycultures/babylonian_seleucid/JNG_13_scorpius_sk_1024.png
 share/stellarium/skycultures/babylonian_seleucid/asterism_lines.fab
+share/stellarium/skycultures/babylonian_seleucid/cap_blau_1024.png
 share/stellarium/skycultures/babylonian_seleucid/constellation_names.eng.fab
+share/stellarium/skycultures/babylonian_seleucid/constellationsart.fab
 share/stellarium/skycultures/babylonian_seleucid/constellationship.fab
 share/stellarium/skycultures/babylonian_seleucid/description.bn.utf8
 share/stellarium/skycultures/babylonian_seleucid/description.de.utf8
@@ -1804,6 +1819,7 @@ share/stellarium/skycultures/chinese_contemporary/crux.png
 share/stellarium/skycultures/chinese_contemporary/cygnus.png
 share/stellarium/skycultures/chinese_contemporary/delphinus.png
 share/stellarium/skycultures/chinese_contemporary/description.bn.utf8
+share/stellarium/skycultures/chinese_contemporary/description.de.utf8
 share/stellarium/skycultures/chinese_contemporary/description.en.utf8
 share/stellarium/skycultures/chinese_contemporary/description.es.utf8
 share/stellarium/skycultures/chinese_contemporary/description.gl.utf8
@@ -2224,6 +2240,7 @@ share/stellarium/skycultures/indian/description.zh_CN.utf8
 share/stellarium/skycultures/indian/description.zh_HK.utf8
 share/stellarium/skycultures/indian/description.zh_TW.utf8
 share/stellarium/skycultures/indian/dhaniShThA.png
+share/stellarium/skycultures/indian/eridanus.png
 share/stellarium/skycultures/indian/gemini.png
 share/stellarium/skycultures/indian/hasta.png
 share/stellarium/skycultures/indian/hydra.png
@@ -2365,6 +2382,8 @@ share/stellarium/skycultures/khoi-san/constellation_names.eng.fab
 share/stellarium/skycultures/khoi-san/constellationsart.fab
 share/stellarium/skycultures/khoi-san/constellationship.fab
 share/stellarium/skycultures/khoi-san/description.en.utf8
+share/stellarium/skycultures/khoi-san/description.es.utf8
+share/stellarium/skycultures/khoi-san/description.gl.utf8
 share/stellarium/skycultures/khoi-san/description.ru.utf8
 share/stellarium/skycultures/khoi-san/description.sk.utf8
 share/stellarium/skycultures/khoi-san/description.uk.utf8
@@ -2747,6 +2766,17 @@ share/stellarium/skycultures/sami/description.uk.utf8
 share/stellarium/skycultures/sami/description.zh_CN.utf8
 share/stellarium/skycultures/sami/info.ini
 share/stellarium/skycultures/sami/star_names.fab
+share/stellarium/skycultures/samoan/constellation_names.eng.fab
+share/stellarium/skycultures/samoan/constellationship.fab
+share/stellarium/skycultures/samoan/description.en.utf8
+share/stellarium/skycultures/samoan/description.es.utf8
+share/stellarium/skycultures/samoan/description.ru.utf8
+share/stellarium/skycultures/samoan/description.sk.utf8
+share/stellarium/skycultures/samoan/description.uk.utf8
+share/stellarium/skycultures/samoan/dso_names.fab
+share/stellarium/skycultures/samoan/info.ini
+share/stellarium/skycultures/samoan/planet_names.fab
+share/stellarium/skycultures/samoan/star_names.fab
 share/stellarium/skycultures/sardinian/constellation_names.eng.fab
 share/stellarium/skycultures/sardinian/constellationsart.fab
 share/stellarium/skycultures/sardinian/constellationship.fab
