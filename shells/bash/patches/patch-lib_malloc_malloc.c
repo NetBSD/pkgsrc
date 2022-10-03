@@ -1,17 +1,17 @@
-$NetBSD: patch-lib_malloc_malloc.c,v 1.2 2020/03/17 21:59:48 rillig Exp $
+$NetBSD: patch-lib_malloc_malloc.c,v 1.3 2022/10/03 12:50:27 wiz Exp $
 
 Fix array subscript with char index.
 
 https://lists.gnu.org/archive/html/bug-bash/2020-03/msg00056.html
 
---- lib/malloc/malloc.c.orig	2018-06-20 13:55:09.000000000 +0000
+--- lib/malloc/malloc.c.orig	2022-04-18 16:37:56.000000000 +0000
 +++ lib/malloc/malloc.c
-@@ -266,7 +266,7 @@ static const unsigned long binsizes[NBUC
+@@ -299,7 +299,7 @@ static const unsigned long binsizes[NBUC
  };
  
- /* binsizes[x] == (1 << ((x) + 3)) */
+ /* binsizes[x] == (1 << ((x) + 5)) */
 -#define binsize(x)	binsizes[(x)]
 +#define binsize(x)	binsizes[(size_t) (x)]
  
- #if !defined (errno)
- extern int errno;
+ #define MAXALLOC_SIZE	binsizes[NBUCKETS-1]
+ 
