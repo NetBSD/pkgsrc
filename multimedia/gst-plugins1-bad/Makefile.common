@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.42 2022/07/18 15:40:56 wiz Exp $
+# $NetBSD: Makefile.common,v 1.43 2022/10/03 11:27:40 nia Exp $
 
 DISTNAME=	gst-plugins-bad-1.20.3
 MASTER_SITES=	https://gstreamer.freedesktop.org/src/gst-plugins-bad/
@@ -8,7 +8,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://gstreamer.freedesktop.org/
 LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES=	c c++
+# "error: 'for' loop initial declarations are only allowed in C99 mode"
+USE_LANGUAGES=	c99 c++
 
 USE_TOOLS+=	pkg-config
 
