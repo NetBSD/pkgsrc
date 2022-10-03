@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4835 2022/10/03 12:45:43 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4836 2022/10/03 12:50:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7309,3 +7309,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-jaraco.classes to 3.2.3 [adam 2022-10-03]
 	Updated sysutils/dbus to 1.14.2 [wiz 2022-10-03]
 	Updated devel/readline to 8.2 [wiz 2022-10-03]
+	Updated shells/bash to 5.2 [wiz 2022-10-03]
