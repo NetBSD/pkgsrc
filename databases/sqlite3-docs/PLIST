@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.117 2022/09/06 18:59:11 adam Exp $
+@comment $NetBSD: PLIST,v 1.118 2022/10/03 12:27:52 adam Exp $
 share/doc/sqlite3/34to35.html
 share/doc/sqlite3/35to36.html
 share/doc/sqlite3/about.html
@@ -275,7 +275,6 @@ share/doc/sqlite3/favicon.ico
 share/doc/sqlite3/features.html
 share/doc/sqlite3/fileformat.html
 share/doc/sqlite3/fileformat2.html
-share/doc/sqlite3/fileio.html
 share/doc/sqlite3/flextypegood.html
 share/doc/sqlite3/floatingpoint.html
 share/doc/sqlite3/footprint.html
@@ -651,6 +650,7 @@ share/doc/sqlite3/releaselog/3_39_0.html
 share/doc/sqlite3/releaselog/3_39_1.html
 share/doc/sqlite3/releaselog/3_39_2.html
 share/doc/sqlite3/releaselog/3_39_3.html
+share/doc/sqlite3/releaselog/3_39_4.html
 share/doc/sqlite3/releaselog/3_3_0.html
 share/doc/sqlite3/releaselog/3_3_1.html
 share/doc/sqlite3/releaselog/3_3_10.html
@@ -846,7 +846,6 @@ share/doc/sqlite3/sqlanalyze.html
 share/doc/sqlite3/sqlar.html
 share/doc/sqlite3/sqldiff.html
 share/doc/sqlite3/sqlite.css
-share/doc/sqlite3/sqlite.css~
 share/doc/sqlite3/sqlite.html
 share/doc/sqlite3/stmt.html
 share/doc/sqlite3/stricttables.html
