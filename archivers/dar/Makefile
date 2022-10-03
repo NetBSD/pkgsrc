@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.59 2022/06/28 11:30:51 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2022/10/03 13:59:05 nros Exp $
 
-DISTNAME=	dar-2.4.13
-PKGREVISION=	3
+DISTNAME=	dar-2.7.7
+#PKGREVISION=	3
 CATEGORIES=	archivers sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dar/}
 
@@ -10,7 +10,7 @@ HOMEPAGE=	http://dar.linux.free.fr/
 COMMENT=	Disk archiver
 LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES=		c c++03
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake groff gsed pkg-config bash:run
@@ -81,6 +81,7 @@ CONF_FILES=		${EGDIR}/darrc ${PKG_SYSCONFDIR}/darrc
 USE_FEATURES.openssl+=	threads
 PTHREAD_AUTO_VARS=	yes
 BUILDLINK_TRANSFORM+=	rm:-lpthread
+.include "../../devel/libthreadar/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-thread-safe
 .endif
@@ -108,10 +109,16 @@ BUILDLINK_TRANSFORM+=	l:execinfo:execinfo:elf
 .endif
 
 .include "../../archivers/bzip2/buildlink3.mk"
+.include "../../archivers/lzo/buildlink3.mk"
+.include "../../archivers/lz4/buildlink3.mk"
+.include "../../archivers/zstd/buildlink3.mk"
+.include "../../archivers/xz/buildlink3.mk"
 .include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../net/librsync/buildlink3.mk"
+.include "../../security/argon2/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
-
+.include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

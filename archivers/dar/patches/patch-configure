@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2022/10/03 13:59:05 nros Exp $
+
+* compatability fix
+
+--- configure.orig	2022-08-07 10:42:43.000000000 +0000
++++ configure
+@@ -27616,7 +27616,7 @@ $as_echo "$as_me: WARNING: python bindin
+ 
+ else
+ 
+-                 if test "x$enable_shared" != "xyes" -o "$debug_static" == "yes" ; then
++                 if test "x$enable_shared" != "xyes" -o "$debug_static" = "yes" ; then
+                    { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: Cannot build python binding without shared library support" >&5
+ $as_echo "$as_me: WARNING: Cannot build python binding without shared library support" >&2;}
+                    local_python="no"
