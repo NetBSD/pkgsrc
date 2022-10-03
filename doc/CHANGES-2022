@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4841 2022/10/03 16:30:55 adam Exp $
+$NetBSD: CHANGES-2022,v 1.4842 2022/10/03 16:40:32 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7318,3 +7318,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/py-grpcio to 1.49.1 [adam 2022-10-03]
 	Updated net/py-grpcio-testing to 1.49.1 [adam 2022-10-03]
 	Updated net/py-grpcio-tools to 1.49.1 [adam 2022-10-03]
+	Updated filesystems/tahoe-lafs to 1.18.0 [gdt 2022-10-03]
