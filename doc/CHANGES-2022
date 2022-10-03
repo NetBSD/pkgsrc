@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4829 2022/10/03 10:46:52 adam Exp $
+$NetBSD: CHANGES-2022,v 1.4830 2022/10/03 11:07:44 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7298,3 +7298,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated misc/stellarium to 1.0 [adam 2022-10-03]
 	Updated time/py-pytz to 2022.4 [adam 2022-10-03]
 	Updated multimedia/handbrake to 1.5.1nb6 [adam 2022-10-03]
+	Updated sysutils/dusage to 0.3.3 [pin 2022-10-03]
