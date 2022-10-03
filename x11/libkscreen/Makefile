@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2022/09/29 01:30:09 markd Exp $
+# $NetBSD: Makefile,v 1.13 2022/10/03 18:40:34 markd Exp $
 
 DISTNAME=	libkscreen-${PLASMAVER}
 CATEGORIES=	x11
@@ -14,6 +14,7 @@ USE_TOOLS+=	pkg-config
 PKGCONFIG_OVERRIDE+=	src/kscreen2.pc.in
 
 .include "../../devel/kwayland/buildlink3.mk"
+.include "../../devel/plasma-wayland-protocols/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtx11extras/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
