@@ -1,11 +1,10 @@
-$NetBSD: patch-make-include-main.defs,v 1.2 2022/08/22 13:56:41 ast Exp $
+$NetBSD: patch-make-include-main.defs,v 1.3 2022/10/03 10:46:05 adam Exp $
 
 Use comon pkgsrc libraries
 
-
---- make/include/main.defs.orig	2022-01-10 20:11:37.000000000 +0100
-+++ make/include/main.defs	2022-08-22 13:43:55.300892530 +0200
-@@ -13,46 +13,43 @@
+--- make/include/main.defs.orig	2022-01-10 19:11:37.000000000 +0000
++++ make/include/main.defs
+@@ -13,47 +13,10 @@ ifneq ($(HAS.bz2),1)
  endif
  endif
  
@@ -31,33 +30,7 @@ Use comon pkgsrc libraries
 -    MODULES += contrib/jansson
 -    MODULES += contrib/x264
 -endif
-+## MODULES += contrib/zimg
-+## MODULES += contrib/ffmpeg
-+MODULES += contrib/libjpeg-turbo
-+
-+## ifneq (,$(filter $(HOST.system),darwin cygwin mingw))
-+##     MODULES += contrib/freetype
-+##     MODULES += contrib/fribidi
-+##     MODULES += contrib/harfbuzz
-+##     MODULES += contrib/libxml2
-+##     MODULES += contrib/libass
-+##     MODULES += contrib/libogg
-+##     MODULES += contrib/libvorbis
-+##     MODULES += contrib/libopus
-+##     MODULES += contrib/libspeex
-+##     MODULES += contrib/libtheora
-+##     MODULES += contrib/lame
-+##     MODULES += contrib/x264
-+##     MODULES += contrib/jansson
-+##     MODULES += contrib/libvpx
-+##     MODULES += contrib/libjpeg-turbo
-+## endif
-+## 
-+## ifeq (1,$(FEATURE.flatpak))
-+##     MODULES += contrib/jansson
-+##     MODULES += contrib/x264
-+## endif
- 
+-
  ifeq (1,$(FEATURE.fdk_aac))
      MODULES += contrib/fdk-aac
  endif
@@ -75,12 +48,7 @@ Use comon pkgsrc libraries
 -MODULES += contrib/libdvdread
 -MODULES += contrib/libdvdnav
 -MODULES += contrib/libbluray
-+## ifeq (1,$(FEATURE.x265))
-+##     MODULES += contrib/x265
-+##     MODULES += contrib/x265_8bit
-+##     MODULES += contrib/x265_10bit
-+##     MODULES += contrib/x265_12bit
-+## endif
- 
+-
  ifeq (1,$(FEATURE.qsv))
  ifeq (,$(filter $(HOST.system),freebsd))
+     MODULES += contrib/libvpl
