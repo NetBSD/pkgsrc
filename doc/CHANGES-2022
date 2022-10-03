@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4837 2022/10/03 12:55:28 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4838 2022/10/03 12:55:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7311,3 +7311,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/readline to 8.2 [wiz 2022-10-03]
 	Updated shells/bash to 5.2 [wiz 2022-10-03]
 	Updated graphics/ImageMagick to 7.1.0.49 [wiz 2022-10-03]
+	Updated graphics/p5-PerlMagick to 7.1.0.49 [wiz 2022-10-03]
