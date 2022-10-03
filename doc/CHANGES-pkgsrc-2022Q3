@@ -1,4 +1,22 @@
-$NetBSD: CHANGES-pkgsrc-2022Q3,v 1.1.2.1 2022/09/26 09:14:41 wiz Exp $
+$NetBSD: CHANGES-pkgsrc-2022Q3,v 1.1.2.2 2022/10/03 15:33:39 bsiegert Exp $
 
-  Changes to packages and infrastructure on the $BRANCH branch:
+  Changes to packages and infrastructure on the 2022Q3 branch:
+
+Pullup ticket #6673 - requested by thor
+blas: build fix for BLAS_TYPE=openblas_pthread
+
+Pullup ticket #6674 - requested by taca
+lang/nodejs14: security fix
+
+Pullup ticket #6675 - requested by taca
+lang/php74: security fix
+
+Pullup ticket #6676 - requested by taca
+lang/php81: security fix
+
+Pullup ticket #6677 - requested by taca
+lang/php80: security fix
+
+Pullup ticket #6678 - requested by taca
+lang/nodejs: security fix
 
