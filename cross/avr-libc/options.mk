@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2022/01/19 03:47:41 dsainty Exp $
+# $NetBSD: options.mk,v 1.9 2022/10/04 09:30:59 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.avr-libc
 PKG_SUPPORTED_OPTIONS+=		doc
@@ -9,7 +9,7 @@ PLIST_VARS+=			doc
 
 .if !empty(PKG_OPTIONS:Mdoc)
 CONFIGURE_ARGS+=	--enable-doc
-BUILD_DEPENDS+=		doxygen>=1.8.20:../../devel/doxygen
+BUILD_DEPENDS+=		doxygen>=1.9.5:../../devel/doxygen
 BUILD_DEPENDS+=		tex-psnfss-[0-9]*:../../fonts/tex-psnfss
 BUILD_DEPENDS+=		tex-wasysym-[0-9]*:../../fonts/tex-wasysym
 BUILD_DEPENDS+=		netpbm-[0-9]*:../../graphics/netpbm
