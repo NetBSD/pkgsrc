@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.x4xx,v 1.1 2022/10/04 09:45:53 wiz Exp $
+lib/uhd/tests/x4xx_radio_block_test
