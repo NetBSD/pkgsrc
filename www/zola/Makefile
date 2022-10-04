@@ -1,30 +1,33 @@
-# $NetBSD: Makefile,v 1.11 2022/09/11 12:52:10 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2022/10/04 10:53:05 wiz Exp $
 
-DISTNAME=	zola-0.15.3
-PKGREVISION=	3
+DISTNAME=	zola-0.16.1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=getzola/}
 GITHUB_PROJECT=	zola
-GITHUB_TAG=	v0.15.3
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.getzola.org/
 COMMENT=	Static website generator
 LICENSE=	mit
+
 USE_LANGUAGES+=	c c++
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake pkg-config
+
+TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 
 .include "cargo-depends.mk"
 
 INSTALLATION_DIRS=	bin
 
 MAKE_ENV+=		OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
-RUSTFLAGS+=		-C link-arg=-L${BUILDLINK_PREFIX.SDL2}/lib
+RUSTFLAGS+=		-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libsass}/lib
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/zola ${DESTDIR}${PREFIX}/bin
 
-.include "../../devel/SDL2/buildlink3.mk"
 .include "../../lang/rust/cargo.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../graphics/libwebp/buildlink3.mk"
+.include "../../www/libsass/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
