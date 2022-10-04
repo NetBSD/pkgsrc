@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.316 2022/09/29 02:25:15 charlotte Exp $
+# $NetBSD: bootstrap,v 1.317 2022/10/04 11:47:45 jperkin Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -1432,13 +1432,19 @@ build_package_nopreserve() {
 }
 
 #
-# cwrappers is special, we don't want to set it as a BOOTSTRAP_PKG but must
-# build it (if required) without -DPKG_PRESERVE set so that it can be deleted.
+# Special packages that we don't want marked with BOOTSTRAP_PKG, but must be
+# built (if required) without -DPKG_PRESERVE set so that they can be deleted.
 #
 use_cwrappers=`(cd $pkgsrcdir/devel/bmake && $bmake show-var VARNAME=_USE_CWRAPPERS)`
 case "$use_cwrappers" in
 yes)
 	build_package_nopreserve "pkgtools/cwrappers"
+	;;
+esac
+use_mktools=`(cd $pkgsrcdir/devel/bmake && $bmake show-var VARNAME=_PKGSRC_USE_MKTOOLS)`
+case "$use_mktools" in
+yes)
+	build_package_nopreserve "pkgtools/mktools"
 	;;
 esac
 
