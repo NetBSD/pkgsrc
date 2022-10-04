@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2022/09/25 09:53:28 kim Exp $
+# $NetBSD: Makefile,v 1.31 2022/10/04 07:14:57 kim Exp $
 
 DISTNAME=	htop-3.2.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=htop-dev/}
 
@@ -16,12 +16,6 @@ USE_TOOLS+=	autoreconf automake
 USE_CURSES=	getmouse
 
 .include "options.mk"
-.include "../../mk/curses.buildlink3.mk"
-
-.if ${CURSES_TYPE} != "ncursesw"
-# See netbsd/README.md
-CONFIGURE_ARGS+=	--disable-unicode
-.endif
 
 pre-configure:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./autogen.sh
