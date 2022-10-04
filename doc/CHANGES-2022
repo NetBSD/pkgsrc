@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4851 2022/10/04 10:53:18 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4852 2022/10/04 11:22:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7332,3 +7332,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated multimedia/obs-studio to 26.1.2nb18 [wiz 2022-10-04]
 	Updated multimedia/libtheora-docs to 1.1.1nb6 [wiz 2022-10-04]
 	Updated www/zola to 0.16.1 [wiz 2022-10-04]
+	Updated emulators/fs-uae-arcade to 3.1.63nb1 [wiz 2022-10-04]
