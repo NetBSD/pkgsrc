@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2022/09/30 18:12:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.23 2022/10/04 09:45:53 wiz Exp $
 bin/rfnoc_image_builder
 bin/uhd_adc_self_cal
 bin/uhd_cal_rx_iq_balance
@@ -362,9 +362,6 @@ share/uhd/cal/cal_metadata.fbs
 share/uhd/cal/dsa_cal.fbs
 share/uhd/cal/iq_cal.fbs
 share/uhd/cal/pwr_cal.fbs
-@pkgdir share/uhd/firmware
-@pkgdir share/uhd/fpga
-@pkgdir share/uhd/images
 share/uhd/rfnoc/blocks/addsub.yml
 share/uhd/rfnoc/blocks/axi_ram_fifo.yml
 share/uhd/rfnoc/blocks/ddc.yml
