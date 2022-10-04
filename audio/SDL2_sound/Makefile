@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2022/10/02 13:41:55 nros Exp $
+# $NetBSD: Makefile,v 1.2 2022/10/04 07:54:28 wiz Exp $
 
 DISTNAME=	SDL_sound-2.0.1
 PKGNAME=	${DISTNAME:S/SDL/SDL2/}
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=icculus/}
-GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
+GITHUB_PROJECT=	SDL_sound
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://icculus.org/SDL_sound/
