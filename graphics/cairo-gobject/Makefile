@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2021/12/08 16:02:07 adam Exp $
+# $NetBSD: Makefile,v 1.41 2022/10/04 07:34:07 wiz Exp $
 
 .include "../../graphics/cairo/Makefile.common"
 
@@ -22,10 +22,10 @@ post-install:
 ###
 ### This matches the logic in ../../graphics/cairo/options.mk
 ###
-.if !empty(PKG_BUILD_OPTIONS.cairo:Mx11) || !empty(PKG_BUILD_OPTIONS.cairo:Mxcb)
+.if ${PKG_BUILD_OPTIONS.cairo:Mx11} || ${PKG_BUILD_OPTIONS.cairo:Mxcb}
 CONFIGURE_ARGS+=	--enable-xlib
 CONFIGURE_ARGS+=	--enable-xlib-xrender
-.  if !empty(PKG_BUILD_OPTIONS.cairo:Mxcb)
+.  if ${PKG_BUILD_OPTIONS.cairo:Mxcb}
 CONFIGURE_ARGS+=	--enable-xcb
 .  else
 CONFIGURE_ARGS+=	--disable-xcb
@@ -36,7 +36,7 @@ CONFIGURE_ARGS+=	--disable-xlib-xrender
 CONFIGURE_ARGS+=	--disable-xcb
 .endif
 
-BUILDLINK_ABI_DEPENDS.glib2+=	glib2>=2.14.0
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.14.0
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
