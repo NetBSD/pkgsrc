@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4846 2022/10/04 09:31:11 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4847 2022/10/04 09:58:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7326,3 +7326,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Added print/tex-orcidlink-doc version 1.0.4 [markd 2022-10-03]
 	Updated comms/openobex to 1.7.2nb1 [wiz 2022-10-04]
 	Updated cross/avr-libc to 2.1.0nb2 [wiz 2022-10-04]
+	Updated math/volk to 2.5.2 [adam 2022-10-04]
+	Updated misc/py-immutables to 0.19 [adam 2022-10-04]
