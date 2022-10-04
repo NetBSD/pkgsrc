@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2022/05/11 12:19:47 micha Exp $
+@comment $NetBSD: PLIST,v 1.29 2022/10/04 09:30:59 wiz Exp $
 avr/include/alloca.h
 avr/include/assert.h
 avr/include/avr/boot.h
@@ -926,6 +926,7 @@ ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/atomic_8h.html
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/atomic_8h_source.html
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/avrs.png
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/bc_s.png
+${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/bc_sd.png
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/bdwn.png
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/benchmarks.html
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/boot_8h.html
@@ -965,6 +966,7 @@ ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/dir_000014.html
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/dir_000015.html
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/dir_000016.html
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/doc.png
+${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/docd.png
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/dox.css
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/doxygen.css
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/dtoa__conv_8h_source.html
@@ -1115,8 +1117,10 @@ ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/math_8h_source.html
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/mem_sections.html
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/modules.html
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/nav_f.png
+${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/nav_fd.png
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/nav_g.png
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/nav_h.png
+${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/nav_hd.png
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/open.png
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/optimization.html
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/overview.html
@@ -1144,6 +1148,7 @@ ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/signature_8h_source.html
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/sleep_8h.html
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/sleep_8h_source.html
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/splitbar.png
+${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/splitbard.png
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/stdint_8h.html
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/stdint_8h_source.html
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/stdio_8h.html
@@ -1162,9 +1167,13 @@ ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/structweek__date.html
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/sync_off.png
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/sync_on.png
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/tab_a.png
+${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/tab_ad.png
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/tab_b.png
+${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/tab_bd.png
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/tab_h.png
+${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/tab_hd.png
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/tab_s.png
+${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/tab_sd.png
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/tabs.css
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/time_8h.html
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/time_8h_source.html
