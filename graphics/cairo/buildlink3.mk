@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.61 2020/08/17 20:17:27 leot Exp $
+# $NetBSD: buildlink3.mk,v 1.62 2022/10/04 07:14:11 wiz Exp $
 
 BUILDLINK_TREE+=	cairo
 
@@ -16,11 +16,11 @@ BUILDLINK_API_DEPENDS.Xrender+=	Xrender>=0.8
 pkgbase := cairo
 .include "../../mk/pkg-build-options.mk"
 
-.if !empty(PKG_BUILD_OPTIONS.cairo:Mxcb)
+.if ${PKG_BUILD_OPTIONS.cairo:Mxcb}
 .include "../../x11/libxcb/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS.cairo:Mx11)
+.if ${PKG_BUILD_OPTIONS.cairo:Mx11} || ${PKG_BUILD_OPTIONS.cairo:Mxcb}
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXrender/buildlink3.mk"
 .endif
