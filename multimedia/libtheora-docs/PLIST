@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.12 2021/12/19 14:03:38 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2022/10/04 10:51:06 wiz Exp $
 share/doc/libtheora-${PKGVERSION}/color.html
 share/doc/libtheora-${PKGVERSION}/doxygen-build.stamp
 share/doc/libtheora-${PKGVERSION}/draft-ietf-avt-rtp-theora-00.txt
 share/doc/libtheora-${PKGVERSION}/draft-ietf-avt-rtp-theora-00.xml
 share/doc/libtheora-${PKGVERSION}/html/annotated.html
 share/doc/libtheora-${PKGVERSION}/html/bc_s.png
+share/doc/libtheora-${PKGVERSION}/html/bc_sd.png
 share/doc/libtheora-${PKGVERSION}/html/bdwn.png
 share/doc/libtheora-${PKGVERSION}/html/classes.html
 share/doc/libtheora-${PKGVERSION}/html/closed.png
@@ -13,6 +14,7 @@ share/doc/libtheora-${PKGVERSION}/html/codec_8h_source.html
 share/doc/libtheora-${PKGVERSION}/html/dir_000000.html
 share/doc/libtheora-${PKGVERSION}/html/dir_000001.html
 share/doc/libtheora-${PKGVERSION}/html/doc.png
+share/doc/libtheora-${PKGVERSION}/html/docd.png
 share/doc/libtheora-${PKGVERSION}/html/doxygen.css
 share/doc/libtheora-${PKGVERSION}/html/doxygen.png
 share/doc/libtheora-${PKGVERSION}/html/doxygen.svg
@@ -39,10 +41,13 @@ share/doc/libtheora-${PKGVERSION}/html/menu.js
 share/doc/libtheora-${PKGVERSION}/html/menudata.js
 share/doc/libtheora-${PKGVERSION}/html/modules.html
 share/doc/libtheora-${PKGVERSION}/html/nav_f.png
+share/doc/libtheora-${PKGVERSION}/html/nav_fd.png
 share/doc/libtheora-${PKGVERSION}/html/nav_g.png
 share/doc/libtheora-${PKGVERSION}/html/nav_h.png
+share/doc/libtheora-${PKGVERSION}/html/nav_hd.png
 share/doc/libtheora-${PKGVERSION}/html/open.png
 share/doc/libtheora-${PKGVERSION}/html/splitbar.png
+share/doc/libtheora-${PKGVERSION}/html/splitbard.png
 share/doc/libtheora-${PKGVERSION}/html/structth__comment.html
 share/doc/libtheora-${PKGVERSION}/html/structth__huff__code.html
 share/doc/libtheora-${PKGVERSION}/html/structth__img__plane.html
@@ -57,12 +62,16 @@ share/doc/libtheora-${PKGVERSION}/html/structyuv__buffer.html
 share/doc/libtheora-${PKGVERSION}/html/sync_off.png
 share/doc/libtheora-${PKGVERSION}/html/sync_on.png
 share/doc/libtheora-${PKGVERSION}/html/tab_a.png
+share/doc/libtheora-${PKGVERSION}/html/tab_ad.png
 share/doc/libtheora-${PKGVERSION}/html/tab_b.gif
 share/doc/libtheora-${PKGVERSION}/html/tab_b.png
+share/doc/libtheora-${PKGVERSION}/html/tab_bd.png
 share/doc/libtheora-${PKGVERSION}/html/tab_h.png
+share/doc/libtheora-${PKGVERSION}/html/tab_hd.png
 share/doc/libtheora-${PKGVERSION}/html/tab_l.gif
 share/doc/libtheora-${PKGVERSION}/html/tab_r.gif
 share/doc/libtheora-${PKGVERSION}/html/tab_s.png
+share/doc/libtheora-${PKGVERSION}/html/tab_sd.png
 share/doc/libtheora-${PKGVERSION}/html/tabs.css
 share/doc/libtheora-${PKGVERSION}/html/theora_8h.html
 share/doc/libtheora-${PKGVERSION}/html/theora_8h_source.html
