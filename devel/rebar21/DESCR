@@ -5,4 +5,5 @@ configuration work. rebar also provides dependency management, enabling
 application writers to easily re-use common libraries from a variety of
 locations (git, hg, etc).
 
-This version is specifically for erlang20.
+This version is specifically for erlang21, for packages that do not yet
+support the newer versions that devel/rebar is built against.
