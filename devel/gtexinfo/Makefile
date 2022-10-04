@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.112 2022/06/28 11:31:44 wiz Exp $
+# $NetBSD: Makefile,v 1.113 2022/10/04 07:51:33 wiz Exp $
 
 DISTNAME=		texinfo-6.8
 PKGNAME=		g${DISTNAME}
@@ -22,6 +22,7 @@ GNU_CONFIGURE_STRICT=	no # otherwise MiscXS.pm won't be installed
 CONFIGURE_ARGS+=	--with-external-libintl-perl
 CONFIGURE_ARGS+=	--with-external-Text-Unidecode
 CONFIGURE_ARGS+=	--with-external-Unicode-EastAsianWidth
+CONFIGURE_ARGS+=	--enable-perl-xs
 CONFIGURE_ARGS+=	PERL_EXT_CFLAGS=${CFLAGS:Q}
 CONFIGURE_ARGS+=	PERL_EXT_LDFLAGS=${LDFLAGS:Q}
 
