@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4848 2022/10/04 10:38:36 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4849 2022/10/04 10:45:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7329,3 +7329,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated math/volk to 2.5.2 [adam 2022-10-04]
 	Updated misc/py-immutables to 0.19 [adam 2022-10-04]
 	Updated multimedia/transcode to 1.1.7nb55 [wiz 2022-10-04]
+	Updated multimedia/obs-studio to 26.1.2nb18 [wiz 2022-10-04]
