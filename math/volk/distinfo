@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.7 2022/03/11 20:59:42 tnn Exp $
+$NetBSD: distinfo,v 1.8 2022/10/04 09:54:03 adam Exp $
 
-BLAKE2s (volk-2.5.1.tar.gz) = d9e7d750c196691e9a5963f62393aef8b52d48cf7f4f6016c27cdc711ad837b9
-SHA512 (volk-2.5.1.tar.gz) = cc2029fd401761549b5095c72d193a7636af4589508e6a5dad24ea46515fddd957e010ccefdbfe86ff479dbf979c9e0d9de1d7789f28703ac27c7c195a4f7f5e
-Size (volk-2.5.1.tar.gz) = 388203 bytes
+BLAKE2s (volk-2.5.2.tar.xz) = e14317152e5a299e6d672f67bf0e162724ef912203d4836a55b27a24eb25a581
+SHA512 (volk-2.5.2.tar.xz) = a1ce5a2e04d7ec33a040dc5be4b4f12908d74ace5eb6d045c9d087f16c0d8361ba393d215a65eb1b8a4f546d7b150fddab588ebc9fc5446c067d56b232748020
+Size (volk-2.5.2.tar.xz) = 402240 bytes
 SHA1 (patch-include_volk_volk__common.h) = 53e7aa38deaa9cdf68ca12fff6c176be471cf162
 SHA1 (patch-include_volk_volk__complex.h) = a7b161754abcc0433e93c79c78db8bfde71a4ba2
