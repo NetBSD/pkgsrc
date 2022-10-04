@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.6 2022/10/01 04:19:39 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.7 2022/10/04 11:23:29 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	ab_glyph-0.2.17
 CARGO_CRATE_DEPENDS+=	ab_glyph_rasterizer-0.1.7
@@ -239,7 +239,7 @@ CARGO_CRATE_DEPENDS+=	openssl-0.10.42
 CARGO_CRATE_DEPENDS+=	openssl-macros-0.1.0
 CARGO_CRATE_DEPENDS+=	openssl-probe-0.1.5
 CARGO_CRATE_DEPENDS+=	openssl-sys-0.9.76
-CARGO_CRATE_DEPENDS+=	ordered-float-3.1.0
+CARGO_CRATE_DEPENDS+=	ordered-float-3.2.0
 CARGO_CRATE_DEPENDS+=	os_str_bytes-6.3.0
 CARGO_CRATE_DEPENDS+=	osmesa-sys-0.1.2
 CARGO_CRATE_DEPENDS+=	owned_ttf_parser-0.15.2
@@ -315,7 +315,7 @@ CARGO_CRATE_DEPENDS+=	simplecss-0.2.1
 CARGO_CRATE_DEPENDS+=	siphasher-0.3.10
 CARGO_CRATE_DEPENDS+=	slab-0.4.7
 CARGO_CRATE_DEPENDS+=	slotmap-1.0.6
-CARGO_CRATE_DEPENDS+=	smallvec-1.9.0
+CARGO_CRATE_DEPENDS+=	smallvec-1.10.0
 CARGO_CRATE_DEPENDS+=	smithay-client-toolkit-0.16.0
 CARGO_CRATE_DEPENDS+=	socket2-0.4.7
 CARGO_CRATE_DEPENDS+=	spin-0.9.4

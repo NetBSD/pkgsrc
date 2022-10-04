@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2022/10/01 19:09:19 pin Exp $
+$NetBSD: distinfo,v 1.11 2022/10/04 11:23:29 pin Exp $
 
 BLAKE2s (ab_glyph-0.2.17.crate) = 6a1753510519e8df90eab3d20c056d9ddbb511460970d5c837bdf6f9d8707734
 SHA512 (ab_glyph-0.2.17.crate) = 180b24fc99748db5fcb65cf7967032ad63fe8164909cf13390a658bf683e7e971f4a19fb8f2310238fa1d7e769e32e316671a99be46cf07a788c3bfaaf4df10f
@@ -702,9 +702,9 @@ Size (objc_exception-0.1.2.crate) = 2251 bytes
 BLAKE2s (objc_id-0.1.1.crate) = 1bc76100eb8a059b580ecd9b12111a7055936856bbb9059e7d8f28a3bfb362ef
 SHA512 (objc_id-0.1.1.crate) = ec36fae6f5cefda00f3e44618b3c9fe6ec8f528f70d1a95def6421704bfa128a6e5b4a32e9dd686bf6ff60c4f87fe8094aa5e1c8070bcde58b17fdc06f49f9f5
 Size (objc_id-0.1.1.crate) = 3258 bytes
-BLAKE2s (oculante-0.6.11.tar.gz) = a17f6eea81cdf008d8fc9fc03993323404c0400d06a4b9898216e39a9f052d53
-SHA512 (oculante-0.6.11.tar.gz) = cdd6b7fa12dc29704be6bfadc1bc5ed26ab5184e15d39b09214d4497dd8af33a2f245e75c1c2694b3d77a1b2af66803e4108d09490490ff0042d47fa32f3068f
-Size (oculante-0.6.11.tar.gz) = 7277973 bytes
+BLAKE2s (oculante-0.6.12.tar.gz) = abde8fb687a7f37411937b051231434987053668b3972baefce7585b509fac1c
+SHA512 (oculante-0.6.12.tar.gz) = 71411d0c4aaa133700b334b3e7dbbd36ee03e672f0aaae7a142c5d95c19958ecd8abdf081375e2b6ef0b7433d3a52460d3ebd093b062ba26872c4393bca1663e
+Size (oculante-0.6.12.tar.gz) = 7278003 bytes
 BLAKE2s (once_cell-1.15.0.crate) = bb7a35ae1252f0ceeb7f7c8ff715940c986430728d4891dcf369ef493c93bed6
 SHA512 (once_cell-1.15.0.crate) = 934a7c3631e9ca4fa78d9577b6672ca0b2f926a8d6c3be9542b906c5968033446f98f76ae6f368a1a5b92ab9064c31a57d74ab6d2097108029a7ea951541ff7e
 Size (once_cell-1.15.0.crate) = 31460 bytes
@@ -720,9 +720,9 @@ Size (openssl-probe-0.1.5.crate) = 7227 bytes
 BLAKE2s (openssl-sys-0.9.76.crate) = abaf27859c26a9182981f3825c41bf9ca94048b8427670d36971ae0327486de9
 SHA512 (openssl-sys-0.9.76.crate) = 97be18c56c37484e77f4638454cfb396dc7aaba6c8c710c882dc13b0ae36e44617e6cdddcf8f6a3fca8a5aed28ff9528c59c01f5a48064790491ff985de5e649
 Size (openssl-sys-0.9.76.crate) = 60561 bytes
-BLAKE2s (ordered-float-3.1.0.crate) = be6de5e3a910e9c6667d956a387aeee79041fbfd029fe57d51d2ea02f16dfacd
-SHA512 (ordered-float-3.1.0.crate) = 2c2bb6207e4b1a7d3c7c26ef357c53de42a67acbf2caae6152c4e7640b34210b98f38065bf5902374f0d6a5e66f50b69755982a5ecd1ab5e71e012c1be1090e0
-Size (ordered-float-3.1.0.crate) = 16203 bytes
+BLAKE2s (ordered-float-3.2.0.crate) = f6679e7dce0a520d35c3ff5cba1572e3c6bc14b1417e50dcaf4e23946c5fbb07
+SHA512 (ordered-float-3.2.0.crate) = c3225f8b6174e22f8588d72f8d7736bda42fb0c54f9f57492bef2bd6b22cd0663fb0ca326f4bc5d72ee8499ce4d2cffed74173d0ef7e35bb10aeb0445f6b8240
+Size (ordered-float-3.2.0.crate) = 16239 bytes
 BLAKE2s (os_str_bytes-6.3.0.crate) = 2b32aa3fcf6070d01ce76f8420116f64158cf5a41ac0060c0527ce9b70b32f92
 SHA512 (os_str_bytes-6.3.0.crate) = 34f861a15543933c9fcb560a835bd943231ffcef2c68126d8633f8e792d2d59a20765947feddb0c795a15329d74260d6c2bf74a1f10ee88f355f47240acbb42e
 Size (os_str_bytes-6.3.0.crate) = 22928 bytes
@@ -948,9 +948,9 @@ Size (slab-0.4.7.crate) = 16647 bytes
 BLAKE2s (slotmap-1.0.6.crate) = d355535dea11cbffd024ccc525fbb29d4b88320391979c45c993aa947ba9eed3
 SHA512 (slotmap-1.0.6.crate) = 1e0fad77d39cf937fbbf32913595e836b9d8067a81e8ad9a6653cdea023f2c8ce511c0216a1222c056e57419cdfd56977af7a6e83a9cc8b5708310a17353b145
 Size (slotmap-1.0.6.crate) = 58954 bytes
-BLAKE2s (smallvec-1.9.0.crate) = 6e8e99380278d160cdfab23047654630418866982e6909c5e84d7024ca27ec6b
-SHA512 (smallvec-1.9.0.crate) = e7158393d4257564eeb8fa53a630fdfc13edb33f3c555e41606edcfdbe9189e5c59c25d255dd21d02d4abad1ab2931e21744ec6c2f91ad4db66f87e748a45e56
-Size (smallvec-1.9.0.crate) = 28396 bytes
+BLAKE2s (smallvec-1.10.0.crate) = 41329e6ed51a5092aa320d548b7b5f9f343f67bd54472d6fbc30a39ad5128860
+SHA512 (smallvec-1.10.0.crate) = a09110184582dcc01d7a0d3fa8f74c17bf726935126d3654667b8e9c4bc43ad16ccfd8fa94feae7d9b31913aa7ee030fe5936e4b44a36302b6ce5fe37372a7ae
+Size (smallvec-1.10.0.crate) = 31564 bytes
 BLAKE2s (smithay-client-toolkit-0.16.0.crate) = 5ea4eac71187f154f4d63e74bd0d036d0cc08890d0914e24d3c4bf52b8042a82
 SHA512 (smithay-client-toolkit-0.16.0.crate) = 448c122ca20dce7017ab2ffdd8af51fe0314ceee987e0b0f151623876f43403cb0b4a18ef54cabf78cf9ad6adaeda3c5c10dc62dfbbb339e74e816ce8b10eb38
 Size (smithay-client-toolkit-0.16.0.crate) = 132020 bytes
