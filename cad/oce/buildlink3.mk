@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2020/08/17 20:17:17 leot Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2022/10/04 10:21:19 wiz Exp $
 
 BUILDLINK_TREE+=	oce
 
@@ -14,7 +14,7 @@ BUILDLINK_INCDIRS.oce+=	include/oce
 pkgbase := oce
 .include "../../mk/pkg-build-options.mk"
 
-.if !empty(PKG_BUILD_OPTIONS.oce:Mx11)
+.if ${PKG_BUILD_OPTIONS.oce:Mx11}
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
