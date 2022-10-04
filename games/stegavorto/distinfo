@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:44:26 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/10/04 20:18:07 adam Exp $
 
-BLAKE2s (stegavorto-src-2009.01.22.tar.bz2) = bbbef092ab7a20f2aa9d605a7333fc3c261d2ab1c7f5ab282f7aaee9d31a9433
-SHA512 (stegavorto-src-2009.01.22.tar.bz2) = a72cd1320f7535b5f5cd611427c4adfd15db08b0ba55018500dcae0dedb00c4aa52442748ee1a53ca620c94271c6b1d4b14422ad11c4aa45b4a893832bca1ee7
-Size (stegavorto-src-2009.01.22.tar.bz2) = 2163488 bytes
+BLAKE2s (stegavorto-src-2011.05.26.tar.bz2) = f020ca5f0387e73808939f3e6b614028e0e3a40a4b5d1d9a9b1360775eab0f6d
+SHA512 (stegavorto-src-2011.05.26.tar.bz2) = 4ba6ec9a53419727793c1dae833ec197d7336fed1ddd5d942843b542f77ac42b0449e5ed6bd254ceb43ca36f1cddfc88e6ad6186bb641f5feb484e8e3d5002ef
+Size (stegavorto-src-2011.05.26.tar.bz2) = 2155110 bytes

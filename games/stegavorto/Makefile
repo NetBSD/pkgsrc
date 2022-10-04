@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2022/06/30 11:18:26 nia Exp $
-#
+# $NetBSD: Makefile,v 1.24 2022/10/04 20:18:07 adam Exp $
 
-DISTNAME=	stegavorto-src-2009.01.22
+DISTNAME=	stegavorto-src-2011.05.26
 PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	17
 CATEGORIES=	games
 MASTER_SITES=	http://hamsterrepublic.com/games/stegavorto/
 EXTRACT_SUFX=	.tar.bz2
@@ -11,9 +9,14 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://james.hamsterrepublic.com/?p=130
 COMMENT=	Discover secret messages embedded in the works of great authors
+LICENSE=	gnu-gpl-v2
+
+DEPENDS+=	${PYPKGPREFIX}-game-[0-9]*:../../devel/py-game
 
 WRKSRC=		${WRKDIR}/stegavorto-src
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_ACCEPTED=	27
 
 INSTALLATION_DIRS=	bin share/stegavorto/data
 
@@ -28,6 +31,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/data/* \
 		${DESTDIR}${PREFIX}/share/stegavorto/data
 
-.include "../../devel/py-game/buildlink3.mk"
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/pyversion.mk"
 .include "../../mk/bsd.pkg.mk"
