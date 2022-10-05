@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2022/09/30 13:07:34 jperkin Exp $
+# $NetBSD: Makefile,v 1.42 2022/10/05 11:33:06 bsiegert Exp $
 
 DISTNAME=	node_exporter-1.4.0
 MASTER_SITES=	${MASTER_SITE_GITHUB:=prometheus/}
+PKGREVISION=	1
 CATEGORIES=	sysutils
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 

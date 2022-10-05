@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2022/09/26 18:40:23 bsiegert Exp $
+# $NetBSD: Makefile,v 1.33 2022/10/05 11:32:59 bsiegert Exp $
 #
 
 DISTNAME=		go-xerrors-20190719
-PKGREVISION=		31
+PKGREVISION=		32
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=golang/}
 GITHUB_PROJECT=		xerrors
