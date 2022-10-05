@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.54 2022/09/26 18:40:19 bsiegert Exp $
+# $NetBSD: Makefile,v 1.55 2022/10/05 11:33:06 bsiegert Exp $
 #
 
 DISTNAME=		lf-13
-PKGREVISION=		26
+PKGREVISION=		27
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_GITHUB:=gokcehan/}
 GITHUB_TAG=		r13
