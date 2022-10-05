@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2022/03/31 07:28:01 adam Exp $
+# $NetBSD: Makefile,v 1.12 2022/10/05 20:53:35 adam Exp $
 
-DISTNAME=	pybind11-2.9.2
+DISTNAME=	pybind11-2.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pybind11/}
@@ -15,6 +15,8 @@ USE_LANGUAGES=	# none
 PYTHON_SELF_CONFLICT=	yes
 
 USE_PKG_RESOURCES=	yes
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
