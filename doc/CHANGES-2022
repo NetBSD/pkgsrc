@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4861 2022/10/05 11:20:41 bsiegert Exp $
+$NetBSD: CHANGES-2022,v 1.4862 2022/10/05 13:20:27 wen Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7344,3 +7344,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/wabt to 1.0.30 [fcambus 2022-10-05]
 	Updated lang/go118 to 1.18.7 [bsiegert 2022-10-05]
 	Updated lang/go119 to 1.19.2 [bsiegert 2022-10-05]
+	Updated devel/p5-Specio to 0.48 [wen 2022-10-05]
