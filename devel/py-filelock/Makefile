@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2022/06/08 17:29:40 adam Exp $
+# $NetBSD: Makefile,v 1.11 2022/10/05 07:58:15 adam Exp $
 
-DISTNAME=	filelock-3.7.1
+DISTNAME=	filelock-3.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/filelock/}
