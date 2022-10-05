@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.60 2022/07/30 16:13:47 he Exp $
+# $NetBSD: Makefile,v 1.61 2022/10/05 20:54:31 adam Exp $
 
-DISTNAME=	scipy-1.8.1
-PKGREVISION=	3
+DISTNAME=	scipy-1.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scipy/}
@@ -72,7 +71,7 @@ BUILDLINK_API_DEPENDS.boost-headers+=	boost-headers>=1.77.0nb1
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../math/fftw/buildlink3.mk"
-BUILDLINK_API_DEPENDS.py-numpy+=	${PYPKGPREFIX}-numpy>=1.17.3
+BUILDLINK_API_DEPENDS.py-numpy+=	${PYPKGPREFIX}-numpy>=1.18.5
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../math/py-pythran/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
