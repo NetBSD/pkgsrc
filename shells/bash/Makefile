@@ -1,17 +1,15 @@
-# $NetBSD: Makefile,v 1.104 2022/10/03 12:50:27 wiz Exp $
+# $NetBSD: Makefile,v 1.105 2022/10/05 18:16:42 kre Exp $
 
 BASH_VERSION=		5.2
+BASH_PATCHLEVEL=	2
 
 DISTNAME=	bash-${BASH_VERSION}
-#PKGNAME=	bash-${BASH_VERSION}.${BASH_PATCHLEVEL}
+PKGNAME=	bash-${BASH_VERSION}.${BASH_PATCHLEVEL}
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GNU:=bash/}
 
-#PATCH_SITES=	${MASTER_SITES:=bash-5.1-patches/}
-#PATCHFILES+=	bash51-001 bash51-002 bash51-003 bash51-004
-#PATCHFILES+=	bash51-005 bash51-006 bash51-007 bash51-008
-#PATCHFILES+=	bash51-009 bash51-010 bash51-011 bash51-012
-#PATCHFILES+=	bash51-013 bash51-014 bash51-015 bash51-016
+PATCH_SITES=	${MASTER_SITES:=bash-5.2-patches/}
+PATCHFILES+=	bash52-001 bash52-002
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.gnu.org/software/bash/bash.html
