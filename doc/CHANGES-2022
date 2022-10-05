@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4859 2022/10/05 08:32:47 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.4860 2022/10/05 11:10:39 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7342,3 +7342,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-filelock to 3.8.0 [adam 2022-10-05]
 	Updated net/py-tldextract to 3.4.0 [adam 2022-10-05]
 	Updated devel/wabt to 1.0.30 [fcambus 2022-10-05]
+	Updated lang/go118 to 1.18.7 [bsiegert 2022-10-05]
