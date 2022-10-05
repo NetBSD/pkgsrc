@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.44 2022/03/31 09:50:54 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.45 2022/10/05 16:16:54 taca Exp $
 #
 # used by net/isc-dhcp4/Makefile
 # used by net/isc-dhcpd4/Makefile
@@ -17,7 +17,7 @@ LICENSE=		mpl-2.0
 
 CONFLICTS+=		isc-dhcp-base-3.*
 
-VERSION=		4.4.3
+VERSION=		4.4.3-P1
 
 .include "../../mk/bsd.prefs.mk"
 
