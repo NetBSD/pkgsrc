@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4866 2022/10/05 18:18:17 kre Exp $
+$NetBSD: CHANGES-2022,v 1.4867 2022/10/05 20:56:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7352,3 +7352,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/isc-dhcrelay4 to 4.4.3p1 [taca 2022-10-05]
 	Updated pkgtools/pkgin to 22.10.0 [jperkin 2022-10-05]
 	Updated shells/bash to 5.2.2 [kre 2022-10-05]
+	Updated devel/py-setuptools to 65.4.1 [adam 2022-10-05]
+	Updated devel/py-pybind11 to 2.10.0 [adam 2022-10-05]
+	Updated math/py-scipy to 1.9.1 [adam 2022-10-05]
+	Updated devel/py-types-setuptools to 65.4.0.0 [adam 2022-10-05]
