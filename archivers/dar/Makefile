@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.60 2022/10/03 13:59:05 nros Exp $
+# $NetBSD: Makefile,v 1.61 2022/10/05 09:36:52 nros Exp $
 
 DISTNAME=	dar-2.7.7
-#PKGREVISION=	3
 CATEGORIES=	archivers sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dar/}
 
@@ -32,59 +31,10 @@ CHECK_INTERPRETER_SKIP+=	share/dar/samples/*
 REPLACE_PERL+=			doc/samples/dar_backup
 REPLACE_BASH+=			doc/samples/*.bash doc/samples/*.sh doc/samples/*.duc
 
-## Our threading check here is the same as the one used in devel/perl5.
-#
-CHECK_BUILTIN.pthread:=yes
-.include "../../mk/pthread.builtin.mk"
-CHECK_BUILTIN.pthread:=no
-
-## XXX I'm following the USE_FEATURES semantics used in security/openssl.
-#
-.if !empty(USE_BUILTIN.pthread:tl:Myes)
-USE_FEATURES.dar=	threads
-.else
-USE_FEATURES.dar=	# empty
-.endif
-
-PKG_OPTIONS_VAR=		PKG_OPTIONS.dar
-PKG_OPTIONS_OPTIONAL_GROUPS=	int
-PKG_OPTIONS_GROUP.int=		dar-int32 dar-int64
-PKG_SUGGESTED_OPTIONS=		dar-int64 ${USE_FEATURES.dar}
-PKG_SUPPORTED_OPTIONS=		threads
-
-.include "../../mk/bsd.options.mk"
-
-## Dar is built by default with an arbitrary-size-integer library for
-## managing all file length/timestamp details.  If 32-bit or 64-bit
-## integers (with overflow protection) are sufficient for requirements,
-## the following options can significantly reduce the run-time memory
-## and CPU overheads of Dar.
-#
-DARBITS=		${PKG_OPTIONS:C/[^[:digit:]]*//:M[36][24]}
-PLIST_SUBST+=		DARBITS=${DARBITS}
-
-.if !empty(DARBITS)
-CONFIGURE_ARGS+=	--enable-mode=${DARBITS:Q}
-.endif
-
 EGDIR=			${PREFIX}/share/examples/dar
 INSTALL_MAKE_FLAGS+=	sysconfdir=${EGDIR}
 
 CONF_FILES=		${EGDIR}/darrc ${PKG_SYSCONFDIR}/darrc
-
-## We want the threading library to be specified by pkgsrc, and only
-## when desired, viz. in the case below.  Using PTHREAD_AUTO_VARS
-## with the accompanying BUILDLINK_TRANSFORM directive is easier
-## then patching configure.
-#
-.if !empty(PKG_OPTIONS:Mthreads)
-USE_FEATURES.openssl+=	threads
-PTHREAD_AUTO_VARS=	yes
-BUILDLINK_TRANSFORM+=	rm:-lpthread
-.include "../../devel/libthreadar/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--disable-thread-safe
-.endif
 
 UNLIMIT_RESOURCES=	datasize
 
@@ -107,6 +57,8 @@ SUBST_SED.static=	-e 's,-all-static,-static,g'
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD"
 BUILDLINK_TRANSFORM+=	l:execinfo:execinfo:elf
 .endif
+
+.include "options.mk"
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/lzo/buildlink3.mk"
