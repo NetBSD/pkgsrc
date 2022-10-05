@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4864 2022/10/05 16:18:26 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4865 2022/10/05 17:23:11 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7350,3 +7350,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/isc-dhclient4 to 4.4.3p1 [taca 2022-10-05]
 	Updated net/isc-dhcpd4 to 4.4.3p1 [taca 2022-10-05]
 	Updated net/isc-dhcrelay4 to 4.4.3p1 [taca 2022-10-05]
+	Updated pkgtools/pkgin to 22.10.0 [jperkin 2022-10-05]
