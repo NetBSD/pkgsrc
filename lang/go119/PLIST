@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2022/09/06 19:11:13 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/10/05 11:20:24 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go119/CONTRIBUTING.md
@@ -960,6 +960,7 @@ go119/src/archive/tar/testdata/issue12435.tar
 go119/src/archive/tar/testdata/neg-size.tar
 go119/src/archive/tar/testdata/nil-uid.tar
 go119/src/archive/tar/testdata/pax-bad-hdr-file.tar
+go119/src/archive/tar/testdata/pax-bad-hdr-large.tar.bz2
 go119/src/archive/tar/testdata/pax-bad-mtime-file.tar
 go119/src/archive/tar/testdata/pax-global-records.tar
 go119/src/archive/tar/testdata/pax-multi-hdrs.tar
@@ -11225,7 +11226,11 @@ go119/test/fixedbugs/issue54638.go
 go119/test/fixedbugs/issue5470.dir/a.go
 go119/test/fixedbugs/issue5470.dir/b.go
 go119/test/fixedbugs/issue5470.go
+go119/test/fixedbugs/issue54911.go
 go119/test/fixedbugs/issue5493.go
+go119/test/fixedbugs/issue54991.go
+go119/test/fixedbugs/issue55122.go
+go119/test/fixedbugs/issue55122b.go
 go119/test/fixedbugs/issue5515.go
 go119/test/fixedbugs/issue5581.go
 go119/test/fixedbugs/issue5607.go
@@ -12080,6 +12085,7 @@ go119/test/typeparam/issue53419.go
 go119/test/typeparam/issue53477.go
 go119/test/typeparam/issue53762.go
 go119/test/typeparam/issue54135.go
+go119/test/typeparam/issue54225.go
 go119/test/typeparam/issue54302.dir/a.go
 go119/test/typeparam/issue54302.dir/main.go
 go119/test/typeparam/issue54302.go
