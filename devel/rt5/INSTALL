@@ -1,0 +1,17 @@
+#!@SH@
+#
+# $NetBSD: INSTALL,v 1.1 2022/10/06 02:18:16 markd Exp $
+
+WWWGRP="@WWWGRP@"
+WWWOWN="@WWWOWN@"
+RT5DIR="@RT5DIR@"
+RT5ETCDIR="@RT5ETCDIR@"
+
+case "${STAGE}" in
+POST-INSTALL)
+	cd ${RT4DIR} &&
+		${CHOWN} -R ${WWWOWN} ${RT5DIR} &&
+		${CHOWN} -R ${WWWOWN} ${RT5ETCDIR} &&
+		${CHGRP} -R ${WWWGRP} ${RT5DIR}
+	;;
+esac

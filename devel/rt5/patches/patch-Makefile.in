@@ -1,0 +1,24 @@
+$NetBSD: patch-Makefile.in,v 1.1 2022/10/06 02:18:17 markd Exp $
+
+NetBSD find doesn't know about "-not" so use "!"
+
+--- Makefile.in.orig	2019-01-31 14:39:47.000000000 +0000
++++ Makefile.in
+@@ -302,7 +302,7 @@ fixperms:
+ 
+ 	# Make upgrade scripts executable if they are in the source.
+ 	#
+-	( cd etc/upgrade && find . -type f -not -name '*.in' -perm @FINDPERM@0111 -print ) | while read file ; do \
++	( cd etc/upgrade && find . -type f '!' -name '*.in' -perm @FINDPERM@0111 -print ) | while read file ; do \
+ 		chmod a+x "$(DESTDIR)$(RT_ETC_PATH)/upgrade/$$file" ; \
+ 	done
+ 
+@@ -459,7 +459,7 @@ etc-install:
+ @COMMENT_INPLACE_LAYOUT@	-( cd etc/upgrade && find . -type d -print ) | while read dir ; do \
+ @COMMENT_INPLACE_LAYOUT@	    $(INSTALL) -m 0755 -d "$(DESTDIR)$(RT_ETC_PATH)/upgrade/$$dir" ; \
+ @COMMENT_INPLACE_LAYOUT@	done
+-@COMMENT_INPLACE_LAYOUT@	-( cd etc/upgrade && find . -type f -not -name '*.in' -print ) | while read file ; do \
++@COMMENT_INPLACE_LAYOUT@	-( cd etc/upgrade && find . -type f '!' -name '*.in' -print ) | while read file ; do \
+ @COMMENT_INPLACE_LAYOUT@	    $(INSTALL) -m 0644 "etc/upgrade/$$file" "$(DESTDIR)$(RT_ETC_PATH)/upgrade/$$file" ; \
+ @COMMENT_INPLACE_LAYOUT@	done
+ 
