@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.2 2022/07/11 11:49:48 adam Exp $
+$NetBSD: distinfo,v 1.3 2022/10/06 08:41:03 nros Exp $
 
 BLAKE2s (gerbera-1.11.0.tar.gz) = b5262860214cd153029adb3895f4c6d332a3ebd40d38f45728af001b80a71eaa
 SHA512 (gerbera-1.11.0.tar.gz) = ae2b3342b3b57ce6d656d0ebadfd73b5f2764f2164314f6b0deac170a82e6861349c37732e6914454918112124038b221dbd4882001b5de51a49326432ccd70f
 Size (gerbera-1.11.0.tar.gz) = 4115178 bytes
+SHA1 (patch-CMakeLists.txt) = 97f56d9c927c40ad8179d80f97f338441fae142f
 SHA1 (patch-src_main.cc) = b7b59975bc477141c8a92af9200ba2b301e55926
+SHA1 (patch-src_util_string__converter.cc) = f60a91b8ccdb851c5e939254e429ac08f5715196

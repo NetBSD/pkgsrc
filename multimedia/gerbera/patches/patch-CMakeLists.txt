@@ -1,0 +1,23 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2022/10/06 08:41:03 nros Exp $
+
+* fix build on systems that have const in second argument to iconv
+
+--- CMakeLists.txt.orig	2022-05-03 17:39:25.000000000 +0000
++++ CMakeLists.txt
+@@ -326,6 +326,16 @@ target_link_libraries(libgerbera PUBLIC 
+ 
+ find_package(Iconv REQUIRED)
+ target_link_libraries(libgerbera PUBLIC Iconv::Iconv)
++include(CheckPrototypeDefinition)
++set(CMAKE_REQUIRED_LIBRARIES Iconv::Iconv)
++check_prototype_definition(iconv
++  "size_t iconv(iconv_t cd, const char ** src, size_t * srcl, char ** dst, size_t * dstl)"
++  0 "iconv.h" ICONV_CONST)
++if(ICONV_CONST)
++    target_compile_definitions(libgerbera PRIVATE ICONV_CONST)
++endif()
++unset(CMAKE_REQUIRED_LIBRARIES)
++
+ 
+ find_package(UUID REQUIRED)
+ target_link_libraries(libgerbera PUBLIC UUID::UUID)
