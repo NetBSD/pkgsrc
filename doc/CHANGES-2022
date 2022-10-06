@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4887 2022/10/06 19:47:12 pin Exp $
+$NetBSD: CHANGES-2022,v 1.4888 2022/10/06 21:30:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7385,3 +7385,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/wxGTK32 to 3.2.1 [adam 2022-10-06]
 	Updated lang/py-mypy to 0.982 [adam 2022-10-06]
 	Updated sysutils/xplr to 0.19.4 [pin 2022-10-06]
+	Updated sysutils/dbus to 1.14.4 [wiz 2022-10-06]
