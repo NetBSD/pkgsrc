@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2022/09/29 19:37:12 adam Exp $
+# $NetBSD: Makefile,v 1.55 2022/10/06 20:17:43 nros Exp $
 
 DISTNAME=	bitcoin-23.0
 CATEGORIES=	finance
@@ -12,7 +12,7 @@ LICENSE=	mit
 RCD_SCRIPTS=	bitcoind
 
 USE_LANGUAGES=		c c++
-GCC_REQD+=		7 # C++17
+GCC_REQD+=		8 # C++17 and std::filesystem
 USE_LIBTOOL=		yes
 USE_TOOLS+=		autoconf automake gmake pkg-config
 GNU_CONFIGURE=		yes
