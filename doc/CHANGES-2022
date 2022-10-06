@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4874 2022/10/06 10:13:16 pin Exp $
+$NetBSD: CHANGES-2022,v 1.4875 2022/10/06 10:50:59 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7368,3 +7368,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added mail/ktnef version 22.08.1 [markd 2022-10-06]
 	Added multimedia/t-rec version 0.7.5 [pin 2022-10-06]
 	Updated sysutils/tealdeer to 1.6.0 [pin 2022-10-06]
+	Updated x11/ocaml-lablgtk to 2.18.13 [gdt 2022-10-06]
