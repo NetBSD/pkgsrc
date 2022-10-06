@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4884 2022/10/06 14:29:04 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4885 2022/10/06 14:31:14 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7381,3 +7381,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/ruby-sqlite3 to 1.5.2 [taca 2022-10-06]
 	Updated archivers/php-pecl-zip to 1.21.1 [taca 2022-10-06]
 	Updated www/php-apcu to 5.1.22 [taca 2022-10-06]
+	Updated devel/ruby2ruby to 2.5.0 [taca 2022-10-06]
