@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3804 2022/10/03 13:47:20 nros Exp $
+# $NetBSD: Makefile,v 1.3805 2022/10/06 02:18:16 markd Exp $
 #
 
 COMMENT=	Development utilities
@@ -3013,6 +3013,7 @@ SUBDIR+=	rsltc
 SUBDIR+=	rt-mysql
 SUBDIR+=	rt-pgsql
 SUBDIR+=	rt4
+SUBDIR+=	rt5
 SUBDIR+=	rttr
 SUBDIR+=	ruby-SDL
 SUBDIR+=	ruby-abstract
