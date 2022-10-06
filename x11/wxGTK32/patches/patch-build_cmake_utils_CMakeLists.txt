@@ -1,18 +1,14 @@
-$NetBSD: patch-build_cmake_utils_CMakeLists.txt,v 1.2 2022/08/10 05:19:57 dbj Exp $
-
-Fix use of DESTDIR
-https://github.com/wxWidgets/wxWidgets/issues/22610
+$NetBSD: patch-build_cmake_utils_CMakeLists.txt,v 1.3 2022/10/06 19:35:04 adam Exp $
 
 Respect ${CMAKE_INSTALL_BINDIR} instead of assuming bin
 
---- build/cmake/utils/CMakeLists.txt.orig	2022-07-06 14:19:50.000000000 +0000
+--- build/cmake/utils/CMakeLists.txt.orig	2022-09-29 16:26:19.000000000 +0000
 +++ build/cmake/utils/CMakeLists.txt
-@@ -25,22 +25,25 @@ if(wxUSE_XRC)
+@@ -25,9 +25,10 @@ if(wxUSE_XRC)
  
      set_target_properties(wxrc PROPERTIES FOLDER "Utilities")
  
 +    include(GNUInstallDirs)
-+
      wx_install(TARGETS wxrc
 -        RUNTIME DESTINATION "bin"
 -        BUNDLE DESTINATION "bin"
@@ -20,21 +16,14 @@ Respect ${CMAKE_INSTALL_BINDIR} instead of assuming bin
 +        BUNDLE DESTINATION "${CMAKE_INSTALL_BINDIR}"
          )
  
--    if(NOT WIN32_MSVC_NAMING)
-+    if(NOT WIN32_MSVC_NAMING AND wxBUILD_INSTALL)
-         if(IPHONE)
-             set(EXE_SUFFIX ".app")
-         else()
-             set(EXE_SUFFIX ${CMAKE_EXECUTABLE_SUFFIX})
-         endif()
- 
--        wx_install(CODE "execute_process( \
-+        # Don't use wx_install() here to preserve escaping.
-+        install(CODE "execute_process( \
+     if(NOT WIN32_MSVC_NAMING AND wxBUILD_INSTALL)
+@@ -40,8 +41,8 @@ if(wxUSE_XRC)
+         # Don't use wx_install() here to preserve escaping.
+         install(CODE "execute_process( \
              COMMAND ${CMAKE_COMMAND} -E create_symlink \
--            ${CMAKE_INSTALL_PREFIX}/bin/${wxrc_output_name}${EXE_SUFFIX} \
--            ${CMAKE_INSTALL_PREFIX}/bin/wxrc${EXE_SUFFIX} \
-+            ${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_BINDIR}/${wxrc_output_name}${EXE_SUFFIX} \
+-            \"${CMAKE_INSTALL_PREFIX}/bin/${wxrc_output_name}${EXE_SUFFIX}\" \
+-            \"\$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/wxrc${EXE_SUFFIX}\" \
++            \"${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_BINDIR}/${wxrc_output_name}${EXE_SUFFIX}\" \
 +            \"\$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_BINDIR}/wxrc${EXE_SUFFIX}\" \
              )"
          )
