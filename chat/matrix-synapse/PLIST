@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2022/09/04 14:16:29 gdt Exp $
+@comment $NetBSD: PLIST,v 1.32 2022/10/06 13:57:53 gdt Exp $
 bin/export_signing_key
 bin/generate_config
 bin/generate_log_config
@@ -404,16 +404,18 @@ ${PYSITELIB}/synapse/logging/scopecontextmanager.py
 ${PYSITELIB}/synapse/logging/scopecontextmanager.pyc
 ${PYSITELIB}/synapse/metrics/__init__.py
 ${PYSITELIB}/synapse/metrics/__init__.pyc
-${PYSITELIB}/synapse/metrics/_exposition.py
-${PYSITELIB}/synapse/metrics/_exposition.pyc
 ${PYSITELIB}/synapse/metrics/_gc.py
 ${PYSITELIB}/synapse/metrics/_gc.pyc
+${PYSITELIB}/synapse/metrics/_legacy_exposition.py
+${PYSITELIB}/synapse/metrics/_legacy_exposition.pyc
 ${PYSITELIB}/synapse/metrics/_reactor_metrics.py
 ${PYSITELIB}/synapse/metrics/_reactor_metrics.pyc
 ${PYSITELIB}/synapse/metrics/_types.py
 ${PYSITELIB}/synapse/metrics/_types.pyc
 ${PYSITELIB}/synapse/metrics/background_process_metrics.py
 ${PYSITELIB}/synapse/metrics/background_process_metrics.pyc
+${PYSITELIB}/synapse/metrics/common_usage_metrics.py
+${PYSITELIB}/synapse/metrics/common_usage_metrics.pyc
 ${PYSITELIB}/synapse/metrics/jemalloc.py
 ${PYSITELIB}/synapse/metrics/jemalloc.pyc
 ${PYSITELIB}/synapse/module_api/__init__.py
@@ -1252,6 +1254,9 @@ ${PYSITELIB}/synapse/storage/schema/main/delta/72/03bg_populate_events_columns.p
 ${PYSITELIB}/synapse/storage/schema/main/delta/72/03bg_populate_events_columns.pyc
 ${PYSITELIB}/synapse/storage/schema/main/delta/72/03drop_event_reference_hashes.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/72/03remove_groups.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/72/04drop_column_application_services_state_last_txn.sql.postgres
+${PYSITELIB}/synapse/storage/schema/main/delta/72/04drop_column_application_services_state_last_txn.sql.sqlite
+${PYSITELIB}/synapse/storage/schema/main/delta/72/05remove_unstable_private_read_receipts.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/application_services.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/event_edges.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/event_signatures.sql
@@ -1330,6 +1335,8 @@ ${PYSITELIB}/synapse/util/caches/treecache.py
 ${PYSITELIB}/synapse/util/caches/treecache.pyc
 ${PYSITELIB}/synapse/util/caches/ttlcache.py
 ${PYSITELIB}/synapse/util/caches/ttlcache.pyc
+${PYSITELIB}/synapse/util/cancellation.py
+${PYSITELIB}/synapse/util/cancellation.pyc
 ${PYSITELIB}/synapse/util/check_dependencies.py
 ${PYSITELIB}/synapse/util/check_dependencies.pyc
 ${PYSITELIB}/synapse/util/daemonize.py
