@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4886 2022/10/06 19:39:17 adam Exp $
+$NetBSD: CHANGES-2022,v 1.4887 2022/10/06 19:47:12 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7384,3 +7384,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/ruby2ruby to 2.5.0 [taca 2022-10-06]
 	Updated x11/wxGTK32 to 3.2.1 [adam 2022-10-06]
 	Updated lang/py-mypy to 0.982 [adam 2022-10-06]
+	Updated sysutils/xplr to 0.19.4 [pin 2022-10-06]
