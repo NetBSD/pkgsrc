@@ -1,12 +1,12 @@
-$NetBSD: patch-src_tools_Makefile.in,v 1.4 2020/03/06 19:48:48 jnemeth Exp $
+$NetBSD: patch-src_tools_Makefile.in,v 1.5 2022/10/06 02:58:17 markd Exp $
 
 - use the .la files for linking
 - remove tests that don't link (using functions not in libraries)
 
---- src/tools/Makefile.in.orig	2020-02-26 14:11:43.000000000 +0000
+--- src/tools/Makefile.in.orig	2022-08-05 15:13:35.000000000 +0000
 +++ src/tools/Makefile.in
-@@ -58,27 +58,27 @@ all: Makefile $(TOOLS) gigaslam grow
- 	@echo " "
+@@ -97,17 +97,17 @@ bsparse: bsparse.c
+ 	$(CXX) -Wall -o $@ bsparse.c
  
  bsmtp: Makefile bsmtp.o ../lib/libbac$(DEFAULT_ARCHIVE_TYPE)	    
 -	$(LIBTOOL_LINK) $(CXX) $(LDFLAGS) -L../lib -o $@ bsmtp.o -lbac -lm $(DLIB) $(LIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS)
@@ -21,17 +21,32 @@ $NetBSD: patch-src_tools_Makefile.in,v 1.4 2020/03/06 19:48:48 jnemeth Exp $
 -	$(LIBTOOL_LINK) $(CXX) $(LDFLAGS) -L../lib -o $@ bregtest.o -lbac -lm $(DLIB) $(LIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS)
 +	$(LIBTOOL_LINK) $(CXX) $(LDFLAGS) -L../lib -o $@ bregtest.o ../lib/libbac.la -lm $(DLIB) $(LIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS)
  
+ hdtest: Makefile hdtest.o ../lib/libbac$(DEFAULT_ARCHIVE_TYPE)	   
+-	$(LIBTOOL_LINK) $(CXX) $(LDFLAGS) -L../lib -o $@ hdtest.o -lbac -lm $(DLIB) $(LIBS)
++	$(LIBTOOL_LINK) $(CXX) $(LDFLAGS) -L../lib -o $@ hdtest.o ../lib/libbac.la -lm $(DLIB) $(LIBS)
+ 
+ thread: Makefile thread.o 
+ 	$(CXX) $(LDFLAGS) -o $@ thread.o -lpthread
+@@ -115,14 +115,14 @@ thread: Makefile thread.o 
  dbcheck: Makefile dbcheck.o ../lib/libbac$(DEFAULT_ARCHIVE_TYPE) ../lib/libbaccfg$(DEFAULT_ARCHIVE_TYPE) \
- 	 ../cats/libbacsql$(DEFAULT_ARCHIVE_TYPE) ../cats/libbaccats$(DEFAULT_ARCHIVE_TYPE) $(DIRCONFOBJS) \
- 	 ../findlib/libbacfind$(DEFAULT_ARCHIVE_TYPE)
- 	$(LIBTOOL_LINK) $(CXX) $(LDFLAGS) -L. -L../lib -L../findlib -L../cats -o $@ dbcheck.o $(DIRCONFOBJS) \
--	  $(DLIB) -lbaccats -lbacsql -lbacfind -lbaccfg -lbac -lm $(DB_LIBS) $(LIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS)
-+	  $(DLIB) ../cats/libbaccats.la ../cats/libbacsql.la ../findlib/libbacfind.la ../lib/libbaccfg.la ../lib/libbac.la -lm $(DB_LIBS) $(LIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS)
+ 	 ../cats/libbacsql$(DEFAULT_ARCHIVE_TYPE) ../cats/libbaccats$(DEFAULT_ARCHIVE_TYPE) $(DIRCONFOBJS)
+ 	$(LIBTOOL_LINK) $(CXX) $(LDFLAGS) -L../lib -L../cats -L../findlib -o $@ dbcheck.o $(DIRCONFOBJS) \
+-	  -lbaccats -lbacsql -lbaccfg -lbac -lbacfind -lm $(ZLIBS) $(DB_LIBS) $(LIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS)
++	  ../cats/libbaccats.la ../cats/libbacsql.la ../lib/libbaccfg.la ../lib/libbac.la ../findlib/libbacfind.la -lm $(ZLIBS) $(DB_LIBS) $(LIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS)
  
  fstype: Makefile fstype.o ../lib/libbac$(DEFAULT_ARCHIVE_TYPE) ../findlib/libbacfind$(DEFAULT_ARCHIVE_TYPE)
 -	$(LIBTOOL_LINK) $(CXX) $(LDFLAGS) -L../lib -L../findlib -o $@ fstype.o -lbacfind -lbac -lm \
 +	$(LIBTOOL_LINK) $(CXX) $(LDFLAGS) -L../lib -L../findlib -o $@ fstype.o ../findlib/libbacfind.la ../lib/libbac.la -lm \
  	  $(DLIB) $(LIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS)
+ 
+ bnet_test: Makefile bnet_test.o ../lib/libbac$(DEFAULT_ARCHIVE_TYPE) ../findlib/libbacfind$(DEFAULT_ARCHIVE_TYPE)
+-	$(LIBTOOL_LINK) $(CXX) $(LDFLAGS) -L../lib -L../findlib -o $@ bnet_test.o -lbacfind -lbac -lm \
++	$(LIBTOOL_LINK) $(CXX) $(LDFLAGS) -L../lib -L../findlib -o $@ bnet_test.o ../findlib/libbacfind.la ../lib/libbac.la -lbac -lm \
+ 	  $(DLIB) $(LIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS)
+ 
+ tags_test: Makefile test_tags.o ../lib/libbac$(DEFAULT_ARCHIVE_TYPE) ../lib/unittests.o
+@@ -131,7 +131,7 @@ tags_test: Makefile test_tags.o ../lib/l
+ 	$(LIBTOOL_INSTALL) $(INSTALL_PROGRAM) $@ $(DESTDIR)$(sbindir)/
  
  drivetype: Makefile drivetype.o ../lib/libbac$(DEFAULT_ARCHIVE_TYPE) ../findlib/libbacfind$(DEFAULT_ARCHIVE_TYPE)
 -	$(LIBTOOL_LINK) $(CXX) $(LDFLAGS) -L../lib -L../findlib -o $@ drivetype.o -lbacfind -lbac -lm \
@@ -39,7 +54,7 @@ $NetBSD: patch-src_tools_Makefile.in,v 1.4 2020/03/06 19:48:48 jnemeth Exp $
  	  $(DLIB) $(LIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS)
  
  dird_conf.o: ../dird/dird_conf.c
-@@ -97,29 +97,29 @@ timelimit: timelimit.o
+@@ -150,29 +150,29 @@ timelimit: timelimit.o
  testfind: Makefile ../lib/libbac$(DEFAULT_ARCHIVE_TYPE) ../lib/libbaccfg$(DEFAULT_ARCHIVE_TYPE) \
  	  ../findlib/libbacfind$(DEFAULT_ARCHIVE_TYPE) $(FINDOBJS)
  	$(LIBTOOL_LINK) $(CXX) -g $(LDFLAGS) -o $@ $(FINDOBJS) -L. -L../lib -L../findlib \
@@ -62,10 +77,10 @@ $NetBSD: patch-src_tools_Makefile.in,v 1.4 2020/03/06 19:48:48 jnemeth Exp $
 +	  $(DLIB) ../lib/libbac.la -lm $(LIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS)
  
  bbatch: Makefile ../lib/libbac$(DEFAULT_ARCHIVE_TYPE) ../cats/libbacsql$(DEFAULT_ARCHIVE_TYPE) \
- 	../cats/libbaccats$(DEFAULT_ARCHIVE_TYPE) ../findlib/libbacfind$(DEFAULT_ARCHIVE_TYPE) bbatch.o
+ 	../cats/libbaccats$(DEFAULT_ARCHIVE_TYPE) bbatch.o
  	$(LIBTOOL_LINK) $(CXX) -g $(LDFLAGS) -L../cats -L. -L../lib -L../findlib -o $@ bbatch.o \
--	  $(DLIB) -lbaccats -lbacsql -lbacfind -lbac -lm $(ZLIBS) $(DB_LIBS) $(LIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS)
-+	  $(DLIB) ../cats/libbaccats.la ../cats/libbacsql.la ../findlib/libbacfind.la ../lib/libbac.la -lm $(ZLIBS) $(DB_LIBS) $(LIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS)
+-	  -lbaccats -lbacsql -lbac -lbacfind -lm $(ZLIBS) $(DB_LIBS) $(LIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS)
++	  ../cats/libbaccats.la ../cats/libbacsql.la ../lib/libbac.la ../findlib/libbacfind.la -lm $(ZLIBS) $(DB_LIBS) $(LIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS)
  
  bvfs_test: Makefile ../findlib/libbacfind$(DEFAULT_ARCHIVE_TYPE) ../lib/libbac$(DEFAULT_ARCHIVE_TYPE) \
  	   ../cats/libbacsql$(DEFAULT_ARCHIVE_TYPE) ../cats/libbaccats$(DEFAULT_ARCHIVE_TYPE) bvfs_test.o
@@ -73,18 +88,9 @@ $NetBSD: patch-src_tools_Makefile.in,v 1.4 2020/03/06 19:48:48 jnemeth Exp $
 -	  -lbaccats -lbacsql -lbacfind -lbac -lm $(ZLIBS) $(DB_LIBS) $(LIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS)
 +	  ../cats/libbaccats.la ../cats/libbacsql.la ../findlib/libbacfind.la ../lib/libbac.la -lm $(ZLIBS) $(DB_LIBS) $(LIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS)
  
- cats_test.o: cats_test.c
- 	echo "Compiling $<"
-@@ -127,7 +127,7 @@ cats_test.o: cats_test.c
- 
- cats_test: Makefile ../findlib/libbacfind$(DEFAULT_ARCHIVE_TYPE) ../lib/libbac$(DEFAULT_ARCHIVE_TYPE) ../cats/libbacsql$(DEFAULT_ARCHIVE_TYPE) cats_test.o
- 	$(LIBTOOL_LINK) $(CXX) -g $(LDFLAGS) -L../cats -L. -L../lib -L../findlib -o $@ cats_test.o  \
--	  -lbaccats -lbacsql -lbacfind -lbac -lm $(DB_LIBS) $(LIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS)
-+	  ../cats/libbaccats.la ../cats/libbacsql.la ../findlib/libbacfind.la ../lib/libbac.la -lm $(DB_LIBS) $(LIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS)
- 
- gigaslam.o: gigaslam.c
- 	$(CXX) $(CFLAGS) -c $(CPPFLAGS) $<
-@@ -136,13 +136,13 @@ gigaslam: gigaslam.o
+ # Turn on cats_test when it builds correctly
+ #cats_test.o: cats_test.c
+@@ -190,13 +190,13 @@ gigaslam: gigaslam.o
  	$(LIBTOOL_LINK) $(CXX) $(LDFLAGS) -o $@ gigaslam.o
  
  grow: Makefile grow.o ../lib/libbac$(DEFAULT_ARCHIVE_TYPE)
@@ -98,5 +104,14 @@ $NetBSD: patch-src_tools_Makefile.in,v 1.4 2020/03/06 19:48:48 jnemeth Exp $
 -	$(LIBTOOL_LINK) $(CXX) $(LDFLAGS) -L../lib -o $@ bpluginfo.o -lbac $(DLIB) $(LIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS)
 +	$(LIBTOOL_LINK) $(CXX) $(LDFLAGS) -L../lib -o $@ bpluginfo.o ../lib/libbac.la $(DLIB) $(LIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS)
  
- Makefile: $(srcdir)/Makefile.in $(topdir)/config.status
- 	cd $(topdir) \
+ TESTDEDUPOBJS = ../stored/bitarray.o ../stored/dedupengine.o test-dedup.o
+ 
+@@ -205,7 +205,7 @@ test-dedup.o: test-dedup.c
+ 
+ test-dedup: Makefile $(TESTDEDUPOBJS) ../lib/libbaccfg$(DEFAULT_ARCHIVE_TYPE) ../lib/libbac$(DEFAULT_ARCHIVE_TYPE)
+ 	$(LIBTOOL_LINK) $(CXX) $(LDFLAGS) -static -L../lib -o $@ $(TESTDEDUPOBJS) $(ZLIBS) \
+-	   -lbaccfg -lbac -lm $(TOKYOCABINET_LIBS) $(DLIB) $(LIBS) $(WRAPLIBS) \
++	   ../lib/libbaccfg.la ../lib/libbac.la -lm $(TOKYOCABINET_LIBS) $(DLIB) $(LIBS) $(WRAPLIBS) \
+ 	$(GETTEXT_LIBS) $(OPENSSL_LIBS) $(CAP_LIBS)
+ 
+ 
