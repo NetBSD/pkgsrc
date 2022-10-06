@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/10/06 03:25:00 markd Exp $
+
+BLAKE2s (ktnef-22.08.1.tar.xz) = 34a8e5c0aa2017e509bbc63e4fab69d3170548a32f3abf40bac611365b6fe9de
+SHA512 (ktnef-22.08.1.tar.xz) = ee38ef2beb3a16eb9b65b7bc102825e8580d416102a1532b12862eb378593086139b47db122f4cd9c9a84d1dee9cb9c75dbec98ff3abfd35f345aa4dab043b2b
+Size (ktnef-22.08.1.tar.xz) = 303944 bytes
