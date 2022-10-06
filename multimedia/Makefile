@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.326 2022/09/26 17:00:21 adam Exp $
+# $NetBSD: Makefile,v 1.327 2022/10/06 07:44:15 pin Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -207,6 +207,7 @@ SUBDIR+=	smpeg2
 SUBDIR+=	ssr
 SUBDIR+=	streamlink
 SUBDIR+=	subtitleeditor
+SUBDIR+=	t-rec
 SUBDIR+=	totem
 SUBDIR+=	totem-pl-parser
 SUBDIR+=	transcode
