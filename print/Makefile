@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.887 2022/10/03 19:26:18 markd Exp $
+# $NetBSD: Makefile,v 1.888 2022/10/06 10:12:19 jnemeth Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -1253,7 +1253,6 @@ SUBDIR+=	tex-optional-doc
 SUBDIR+=	tex-options
 SUBDIR+=	tex-options-doc
 SUBDIR+=	tex-orcidlink
-SUBDIR+=	tex-orcidlink-doc
 SUBDIR+=	tex-ordinalpt
 SUBDIR+=	tex-ordinalpt-doc
 SUBDIR+=	tex-otibet
