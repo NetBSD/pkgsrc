@@ -1,20 +1,11 @@
-$NetBSD: patch-src_stored_Makefile.in,v 1.3 2020/12/02 01:36:49 jnemeth Exp $
+$NetBSD: patch-src_stored_Makefile.in,v 1.4 2022/10/06 02:58:17 markd Exp $
 
 - use %%EXAMPLESDIR%% instead of sysconfdir
 - use the .la files for linking
 
---- src/stored/Makefile.in.orig	2020-09-21 12:30:41.000000000 +0000
+--- src/stored/Makefile.in.orig	2022-08-05 15:13:35.000000000 +0000
 +++ src/stored/Makefile.in
-@@ -97,7 +97,7 @@ ZLIBS=@ZLIBS@
- LZO_LIBS= @LZO_LIBS@
- LZO_INC= @LZO_INC@
- 
--SD_LIBS = -lbacsd -lbaccfg -lbac
-+SD_LIBS = libbacsd.la ../lib/libbaccfg.la ../lib/libbac.la
- 
- 
- .SUFFIXES:	.c .o .lo
-@@ -155,7 +155,7 @@ bacula-sd-aligned-driver.la: Makefile $(
+@@ -252,7 +252,7 @@ bacula-sd-aligned-driver.la: Makefile $(
  bsdjson: Makefile $(JSONOBJS) ../lib/libbaccfg$(DEFAULT_ARCHIVE_TYPE) ../lib/libbac$(DEFAULT_ARCHIVE_TYPE)
  	@echo "Linking $@ ..."
  	$(LIBTOOL_LINK) $(CXX) $(WLDFLAGS) $(LDFLAGS) -L../lib -o $@ $(JSONOBJS) $(ZLIBS) \
@@ -23,26 +14,8 @@ $NetBSD: patch-src_stored_Makefile.in,v 1.3 2020/12/02 01:36:49 jnemeth Exp $
  	   $(GETTEXT_LIBS) $(OPENSSL_LIBS) $(CAP_LIBS)
  
  static-bacula-sd: Makefile $(SDOBJS) ../lib/libbaccfg$(DEFAULT_ARCHIVE_TYPE) ../lib/libbac$(DEFAULT_ARCHIVE_TYPE)
-@@ -191,7 +191,7 @@ bls.o:	bls.c
- bls:	Makefile $(BLSOBJS) libbacsd.la $(DRIVERS)  ../findlib/libbacfind$(DEFAULT_ARCHIVE_TYPE) ../lib/libbaccfg$(DEFAULT_ARCHIVE_TYPE) ../lib/libbac$(DEFAULT_ARCHIVE_TYPE)
- 	@echo "Linking $@ ..."
- 	$(LIBTOOL_LINK) $(CXX) $(TTOOL_LDFLAGS) $(LDFLAGS) -L../lib -L../findlib -o $@ $(BLSOBJS) $(DLIB) \
--	   $(SD_LIBS) -lbacfind -lm $(LIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS)
-+	   $(SD_LIBS) ../findlib/libbacfind.la -lm $(LIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS)
- 
- bextract.o: bextract.c
- 	@echo "Compiling $<"
-@@ -201,7 +201,7 @@ bextract.o: bextract.c
- bextract: Makefile $(BEXTOBJS) libbacsd.la $(DRIVERS) ../findlib/libbacfind$(DEFAULT_ARCHIVE_TYPE) ../lib/libbaccfg$(DEFAULT_ARCHIVE_TYPE) ../lib/libbac$(DEFAULT_ARCHIVE_TYPE)
- 	@echo "Linking $@ ..."
- 	$(LIBTOOL_LINK) $(CXX) $(TTOOL_LDFLAGS) $(LDFLAGS) -L../lib -L../findlib -o $@ $(BEXTOBJS) $(DLIB) $(ZLIBS) $(LZO_LIBS) \
--	   $(SD_LIBS) -lbacfind -lm $(LIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS)
-+	   $(SD_LIBS) ../findlib/libbacfind.la -lm $(LIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS)
- 
- bscan.o: bscan.c
- 	@echo "Compiling $<"
-@@ -211,7 +211,7 @@ bscan.o: bscan.c
- bscan:	Makefile $(SCNOBJS) libbacsd.la $(DRIVERS) ../findlib/libbacfind$(DEFAULT_ARCHIVE_TYPE) ../lib/libbaccfg$(DEFAULT_ARCHIVE_TYPE) \
+@@ -317,7 +317,7 @@ bscan.o: bscan.c
+ bscan:	Makefile $(SCNOBJS) libbacsd.la drivers ../findlib/libbacfind$(DEFAULT_ARCHIVE_TYPE) ../lib/libbaccfg$(DEFAULT_ARCHIVE_TYPE) \
  	../cats/libbacsql$(DEFAULT_ARCHIVE_TYPE) ../cats/libbaccats$(DEFAULT_ARCHIVE_TYPE)
  	$(LIBTOOL_LINK) $(CXX) $(TTOOL_LDFLAGS) $(LDFLAGS) -L../lib -L../cats -L../findlib -o $@ $(SCNOBJS) \
 -	   $(SD_LIBS) -lbacsql -lbaccats $(DB_LIBS) $(ZLIBS) -lbacfind -lbaccfg -lbac -lm $(LIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS)
@@ -50,7 +23,7 @@ $NetBSD: patch-src_stored_Makefile.in,v 1.3 2020/12/02 01:36:49 jnemeth Exp $
  
  bcopy.o: bcopy.c
  	@echo "Compiling $<"
-@@ -225,7 +225,7 @@ bcopy:	Makefile $(COPYOBJS) libbacsd.la 
+@@ -331,7 +331,7 @@ bcopy:	Makefile $(COPYOBJS) libbacsd.la 
  cloud_parts_test: Makefile cloud_parts.c
  	$(RMF) cloud_parts.o
  	$(CXX) -DTEST_PROGRAM $(DEFS) $(DEBUG) -c $(CPPFLAGS) -I$(srcdir) -I$(basedir) $(DINCLUDE)  $(CFLAGS) cloud_parts.c
@@ -59,7 +32,7 @@ $NetBSD: patch-src_stored_Makefile.in,v 1.3 2020/12/02 01:36:49 jnemeth Exp $
  	rm -f cloud_parts.o
  	$(CXX) $(DEFS) $(DEBUG) -c $(CPPFLAGS) -I$(srcdir) -I$(basedir) $(DINCLUDE) $(CFLAGS) cloud_parts.c
  
-@@ -254,16 +254,16 @@ install: all @LIBTOOL_INSTALL_TARGET@
+@@ -382,16 +382,16 @@ install: all @LIBTOOL_INSTALL_TARGET@ $(
  	   $(LIBTOOL_INSTALL) $(INSTALL_PROGRAM) static-bacula-sd $(DESTDIR)$(sbindir)/static-bacula-sd; \
  	fi
  	@srcconf=bacula-sd.conf; \
@@ -79,4 +52,4 @@ $NetBSD: patch-src_stored_Makefile.in,v 1.3 2020/12/02 01:36:49 jnemeth Exp $
 +	   chgrp -f ${sd_group} ${DESTDIR}%%EXAMPLESDIR%%/$$destconf; \
  	fi
  
- install-cloud: bacula-sd-cloud-driver.la
+ install-acsls-changer: acsls-changer

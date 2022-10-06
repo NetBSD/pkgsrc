@@ -1,12 +1,12 @@
-$NetBSD: patch-src_qt-console_bat.pro.in,v 1.1 2012/10/06 17:54:53 christos Exp $
+$NetBSD: patch-src_qt-console_bat.pro.in,v 1.2 2022/10/06 02:58:17 markd Exp $
 
 - comment out the confs paths and command
 - use just the compiler not libtool for QMAKE_LINK
 
---- src/qt-console/bat.pro.in.orig	2012-09-13 04:51:19.000000000 -0400
-+++ src/qt-console/bat.pro.in	2012-10-05 11:17:23.000000000 -0400
-@@ -10,8 +10,8 @@
- 
+--- src/qt-console/bat.pro.in.orig	2022-08-05 15:13:35.000000000 +0000
++++ src/qt-console/bat.pro.in
+@@ -13,8 +13,8 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += 
+ datarootdir = @datarootdir@
  bins.path = /$(DESTDIR)@sbindir@
  bins.files = bat
 -confs.path = /$(DESTDIR)@sysconfdir@
@@ -16,7 +16,7 @@ $NetBSD: patch-src_qt-console_bat.pro.in,v 1.1 2012/10/06 17:54:53 christos Exp 
  help.path = /$(DESTDIR)@docdir@
  help.files = help/*.html images/status.png images/mail-message-new.png
  
-@@ -22,7 +22,7 @@
+@@ -25,7 +25,7 @@ INCLUDEPATH += .. . ./console ./restore 
  LIBS        += -L../lib -lbaccfg -lbac -L../findlib -lbacfind @OPENSSL_LIBS@
  LIBTOOL_LINK = @QMAKE_LIBTOOL@ --silent --tag=CXX --mode=link
  LIBTOOL_INSTALL = @QMAKE_LIBTOOL@ --silent --mode=install
