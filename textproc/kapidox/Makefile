@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2022/06/30 11:18:54 nia Exp $
+# $NetBSD: Makefile,v 1.11 2022/10/06 01:30:02 markd Exp $
 
 DISTNAME=	kapidox-${KF5VER}
-PKGREVISION=	1
 CATEGORIES=	textproc
 
 HOMEPAGE=	https://community.kde.org/Frameworks
@@ -10,6 +9,8 @@ LICENSE=	2-clause-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
+
+INSTALL_DIRS=	# dont do cmake install, only python
 
 .include "../../meta-pkgs/kde/kf5.mk"
 
