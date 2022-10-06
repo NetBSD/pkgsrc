@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2022/07/21 14:08:34 gdt Exp $
+# $NetBSD: Makefile,v 1.7 2022/10/06 13:43:34 gdt Exp $
 
 DISTNAME=	matrix-python-common-${PKGVERSION_NOREV}
-PKGNAME=	${PYPKGPREFIX}-matrix-common-1.2.1
+PKGNAME=	${PYPKGPREFIX}-matrix-common-1.3.0
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=matrix-org/}
 GITHUB_PROJECT=	matrix-python-common
