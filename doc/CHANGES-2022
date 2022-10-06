@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4871 2022/10/06 03:01:21 markd Exp $
+$NetBSD: CHANGES-2022,v 1.4872 2022/10/06 03:38:26 markd Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7365,3 +7365,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/bacula-qt5-console to 13.0.1 [markd 2022-10-06]
 	Updated sysutils/bacula-tray-monitor to 13.0.1 [markd 2022-10-06]
 	Updated sysutils/bacula-tray-monitor-qt5 to 13.0.1 [markd 2022-10-06]
+	Added mail/ktnef version 22.08.1 [markd 2022-10-06]
