@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4881 2022/10/06 14:16:33 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4882 2022/10/06 14:19:23 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7378,3 +7378,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/drupal9 to 9.3.22 [taca 2022-10-06]
 	Updated meta-pkgs/bulk-medium to 20221006 [taca 2022-10-06]
 	Updated databases/ruby-sequel to 5.61.0 [taca 2022-10-06]
+	Updated databases/ruby-sqlite3 to 1.5.2 [taca 2022-10-06]
