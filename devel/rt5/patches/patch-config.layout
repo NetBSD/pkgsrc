@@ -1,0 +1,40 @@
+$NetBSD: patch-config.layout,v 1.1 2022/10/06 02:18:17 markd Exp $
+
+* Add layout for pkgsrc.
+
+--- config.layout.orig	2021-09-14 21:42:01.000000000 +0000
++++ config.layout
+@@ -187,6 +187,33 @@
+   customlibdir:		${customdir}/lib
+   customplugindir:  ${customdir}/plugins
+ </Layout>
++<Layout pkgsrc>
++  prefix:		@PREFIX@
++  exec_prefix:		${prefix}
++  bindir:		@RT5DIR@/bin
++  sbindir:		@RT5DIR@/sbin
++  sysconfdir:		@PKG_SYSCONFDIR@
++  mandir:		@PREFIX@/@PKGMANDIR@
++  plugindir:		@RT5DIR@/plugins
++  libdir:		@RT5DIR@/lib
++  datadir:		@RT5DIR@/data
++  htmldir:		${datadir}/html
++  fontdir:		${datadir}/fonts
++  lexdir:		${datadir}/po
++  manualdir:		${datadir}/docs
++  localstatedir:	@RT_VAR_DIR@
++  logfiledir:		${localstatedir}/log
++  masonstatedir:	${localstatedir}/mason_data
++  sessionstatedir:	${localstatedir}/session_data
++  staticdir:	${datadir}/static
++  customdir:		@RT_LOCAL_DIR@
++  custometcdir:		${customdir}/etc
++  customhtmldir:	${customdir}/html
++  customlexdir:		${customdir}/po
++  customlibdir:		${customdir}/lib
++  customplugindir:		${customdir}/plugins
++  customstaticdir:	${customdir}/static
++</Layout>
+ <Layout vessel>
+   prefix:		/opt/rt5
+   exec_prefix:		${prefix}
