@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:05:27 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/10/06 14:28:03 nros Exp $
 
 BLAKE2s (telepathy-qt-0.9.8.tar.gz) = e5b5cc7d1e1e743ad2ece9b3fafc66c0412e9fce93ac4a6047cb064a8c6806b7
 SHA512 (telepathy-qt-0.9.8.tar.gz) = fad662c02417c8e4e239d438ea3549226e589442aea8418c8922a6b78ff88422a36c1cc0d2e3591240fac115390a7fbdb1b4deea98187051cc811175b60b9e8b
@@ -9,6 +9,7 @@ SHA1 (patch-TelepathyQt_Farstream_TelepathyQtFarstream.pc.in) = 1b5c5ec551c6b07f
 SHA1 (patch-TelepathyQt_TelepathyQt.pc.in) = 95aa392effba29f5c949c3d864432c468ce52444
 SHA1 (patch-TelepathyQt_TelepathyQtService.pc.in) = 92f3add54fbf7365f4517d0bc718cfcfd9de2c37
 SHA1 (patch-TelepathyQt_referenced-handles.cpp) = 927724288977b0d0991d9a82d9f5b72e309808dc
+SHA1 (patch-cmake_modules_FindGIOUnix.cmake) = 3d2779c24885f66baaef77bf74de363726cf9ce2
 SHA1 (patch-tests_channel-class-spec.cpp) = 2d78aabad331815871785f81a9495e7dd131f963
 SHA1 (patch-tests_dbus_account-basics.cpp) = ea9f85062411832b4d0c2846491826df7f6bb5a3
 SHA1 (patch-tests_dbus_client.cpp) = 51be87a5a40d69883cd9e7ce154eaa2d2756d2a5
