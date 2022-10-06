@@ -1,0 +1,15 @@
+$NetBSD: patch-configure.ac,v 1.1 2022/10/06 00:51:49 perseant Exp $
+
+Supply -lutil and -lprop, required for the NetBSD disk size routine.
+
+--- configure.ac	2018-09-14 22:03:24.000000000 -0700
++++ configure.ac	2022-09-27 08:59:46.680435126 -0700
+@@ -38,6 +38,8 @@
+     [Define if block devices are not supported.])
+ ], [:])
+ PKG_CHECK_MODULES([FUSE], [fuse])
++AC_CHECK_LIB(util, opendisk)
++AC_CHECK_LIB(prop, prop_dictionary_get_int64)
+ AC_CONFIG_HEADERS([libexfat/config.h])
+ AC_CONFIG_FILES([
+ 	libexfat/Makefile
