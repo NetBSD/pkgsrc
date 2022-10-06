@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4879 2022/10/06 14:10:18 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4880 2022/10/06 14:13:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7376,3 +7376,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated chat/py-matrix-common to 1.3.0 [gdt 2022-10-06]
 	Updated chat/matrix-synapse to 1.67.0 [gdt 2022-10-06]
 	Updated www/drupal9 to 9.3.22 [taca 2022-10-06]
+	Updated meta-pkgs/bulk-medium to 20221006 [taca 2022-10-06]
