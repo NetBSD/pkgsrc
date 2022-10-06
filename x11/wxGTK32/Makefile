@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2022/10/02 11:33:43 rhialto Exp $
+# $NetBSD: Makefile,v 1.18 2022/10/06 19:35:04 adam Exp $
 
-DISTNAME=	wxWidgets-3.2.0
+DISTNAME=	wxWidgets-3.2.1
 PKGNAME=	${DISTNAME:S/wxWidgets/wxGTK32/}
-PKGREVISION=	7
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wxWidgets/}
 GITHUB_PROJECT=	wxWidgets
@@ -115,7 +114,7 @@ post-build:
 	# So instead, we do:
 	for f in ${WRKSRC}/locale/*.po; do \
 	  lang=`basename $${f} .po`; \
-	  ${TOOLS_PATH.msgfmt:Q} -c -o "${WRKSRC}/locale/$${lang}.mo" "$${f}"; \
+	  ${TOOLS_PATH.msgfmt} -c -o "${WRKSRC}/locale/$${lang}.mo" "$${f}"; \
 	done
 
 post-install:
