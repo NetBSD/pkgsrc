@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.49 2022/07/14 23:46:25 dholland Exp $
+# $NetBSD: Makefile,v 1.50 2022/10/06 02:09:42 markd Exp $
 
 .include "../../print/cups/Makefile.common"
 
 PKGNAME=	cups-base-${CUPS_VERS}
-PKGREVISION=	1
+PKGREVISION=	2
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenPrinting/}
 
 MAINTAINER=	sbd@NetBSD.org
@@ -35,6 +35,7 @@ CONFIGURE_ARGS+=	--enable-libpaper
 CONFIGURE_ARGS+=	--without-bundledir
 CONFIGURE_ARGS+=	--without-icondir
 CONFIGURE_ARGS+=	--without-menudir
+CONFIGURE_ARGS+=	--with-tls=gnutls
 
 CONFIGURE_ENV+=		DSOFLAGS=${LDFLAGS:M*:Q}
 
