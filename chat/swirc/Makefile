@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2022/09/18 12:21:45 nia Exp $
+# $NetBSD: Makefile,v 1.8 2022/10/07 14:24:07 fcambus Exp $
 
-DISTNAME=	swirc-3.3.5
+DISTNAME=	swirc-3.3.6
 CATEGORIES=	chat
 MASTER_SITES=	https://www.nifty-networks.net/swirc/releases/
 EXTRACT_SUFX=	.tgz
