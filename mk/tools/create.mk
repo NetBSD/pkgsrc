@@ -1,4 +1,4 @@
-# $NetBSD: create.mk,v 1.14 2020/05/10 14:36:18 rillig Exp $
+# $NetBSD: create.mk,v 1.15 2022/10/07 11:42:51 jperkin Exp $
 #
 # Copyright (c) 2005, 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -152,8 +152,8 @@ override-tools: ${TOOLS_CMD.${_t_}}
 # probably adding a program to USE_TOOLS that is not a valid tool name.
 # For instance, "split" is handled outside of the tools framework.
 ${TOOLS_CMD.${_t_}}:
-	${RUN} ${TEST} -d ${.TARGET:H:Q} || ${MKDIR} ${.TARGET:H:Q}
 	${RUN}								\
+	${TEST} -d ${.TARGET:H:Q} || ${MKDIR} ${.TARGET:H:Q};		\
 	if ${TEST} -n ${TOOLS_SCRIPT.${_t_}:Q}""; then			\
 		create=wrapper;						\
 		script=${TOOLS_SCRIPT.${_t_}:Q};			\
