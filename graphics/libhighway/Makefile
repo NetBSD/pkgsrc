@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2022/07/17 19:32:46 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2022/10/07 11:15:54 nros Exp $
 
-DISTNAME=	highway-0.17.0
+DISTNAME=	highway-1.0.1
 PKGNAME=	lib${DISTNAME}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
@@ -14,13 +14,18 @@ LICENSE=	apache-2.0
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
+GCC_REQD+=	8 # -latomic and gcc 7 gives internal compiler error
 
 CMAKE_ARGS+=	-DHWY_SYSTEM_GTEST:BOOL=TRUE
+CMAKE_ARGS+=	-DBUILD_SHARED_LIBS:BOOL=TRUE
 
 PKGCONFIG_OVERRIDE+=	libhwy-contrib.pc.in
 PKGCONFIG_OVERRIDE+=	libhwy-test.pc.in
 PKGCONFIG_OVERRIDE+=	libhwy.pc.in
 
+# libhighway run executables during build and
+# they need to find its own shared libs
+MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}
 TEST_TARGET=	test
 
 BUILDLINK_API_DEPENDS.googletest+=	googletest>=1.10.0nb1
