@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22271 2022/10/07 10:10:28 adam Exp $
+$NetBSD: TODO,v 1.22272 2022/10/07 18:06:27 nros Exp $
 
 Suggested new packages
 ======================
@@ -799,7 +799,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gst-rtsp-server-1.20.3 [needs libcgroup]
 	o gthumb-3.4.0
 	o gtk-gnutella-1.2.0
-	o gtkglarea-2.1.0
 	o gtklevel9-5.1
 	o gtklife-5.2
 	o gtkmagnetic-23
