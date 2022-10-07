@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4891 2022/10/07 10:10:28 adam Exp $
+$NetBSD: CHANGES-2022,v 1.4892 2022/10/07 11:10:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7404,3 +7404,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/py-certbot-dns-sakuracloud to 1.31.0 [adam 2022-10-07]
 	Updated security/py-certbot-nginx to 1.31.0 [adam 2022-10-07]
 	Updated devel/git to 2.38.0 [adam 2022-10-07]
+	Updated sysutils/ansible-lint to 6.8.0 [adam 2022-10-07]
+	Updated graphics/py-altgraph to 0.17.3 [adam 2022-10-07]
