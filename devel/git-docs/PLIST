@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2022/05/03 01:26:55 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.21 2022/10/07 10:10:05 adam Exp $
 man/man1/git-add.1
 man/man1/git-am.1
 man/man1/git-annotate.1
@@ -37,6 +37,7 @@ man/man1/git-cvsimport.1
 man/man1/git-cvsserver.1
 man/man1/git-daemon.1
 man/man1/git-describe.1
+man/man1/git-diagnose.1
 man/man1/git-diff-files.1
 man/man1/git-diff-index.1
 man/man1/git-diff-tree.1
@@ -159,12 +160,24 @@ man/man1/git-write-tree.1
 man/man1/git.1
 man/man1/gitk.1
 man/man1/gitweb.1
+man/man1/scalar.1
 man/man3/Git.3pm
 man/man5/gitattributes.5
+man/man5/gitformat-bundle.5
+man/man5/gitformat-chunk.5
+man/man5/gitformat-commit-graph.5
+man/man5/gitformat-index.5
+man/man5/gitformat-pack.5
+man/man5/gitformat-signature.5
 man/man5/githooks.5
 man/man5/gitignore.5
 man/man5/gitmailmap.5
 man/man5/gitmodules.5
+man/man5/gitprotocol-capabilities.5
+man/man5/gitprotocol-common.5
+man/man5/gitprotocol-http.5
+man/man5/gitprotocol-pack.5
+man/man5/gitprotocol-v2.5
 man/man5/gitrepository-layout.5
 man/man5/gitweb.conf.5
 man/man7/gitcli.7
