@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.48 2021/12/08 16:02:51 adam Exp $
+# $NetBSD: Makefile,v 1.49 2022/10/07 17:52:22 nros Exp $
 
-DISTNAME=	gtkglarea-2.0.1
+DISTNAME=	gtkglarea-2.1.0
 PKGNAME=	${DISTNAME:S/gtkglarea/gtkglarea2/}
-PKGREVISION=	29
 CATEGORIES=	x11
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtkglarea/2.0/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtkglarea/2.1/}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	OpenGL widget for the GTK+2 GUI toolkit
@@ -19,7 +19,6 @@ CONFIG_SUB_OVERRIDE+=	.auto/config.sub
 
 PKGCONFIG_OVERRIDE=	gtkgl-2.0.pc.in
 
-.include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
