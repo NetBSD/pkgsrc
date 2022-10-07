@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4893 2022/10/07 11:24:52 nros Exp $
+$NetBSD: CHANGES-2022,v 1.4894 2022/10/07 14:24:21 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7407,3 +7407,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/ansible-lint to 6.8.0 [adam 2022-10-07]
 	Updated graphics/py-altgraph to 0.17.3 [adam 2022-10-07]
 	Updated graphics/libhighway to 1.0.1 [nros 2022-10-07]
+	Updated chat/swirc to 3.3.6 [fcambus 2022-10-07]
