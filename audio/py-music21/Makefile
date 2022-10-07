@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2022/05/11 23:34:04 gutteridge Exp $
+# $NetBSD: Makefile,v 1.20 2022/10/07 03:54:06 gutteridge Exp $
 
-VERSION=	7.3.3
+VERSION=	8.1.0
 DISTNAME=	music21-noCorpus-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-music21-${VERSION}
 CATEGORIES=	audio python
@@ -11,15 +11,12 @@ GITHUB_RELEASE=	v${VERSION}
 MAINTAINER=	gutteridge@NetBSD.org
 HOMEPAGE=	https://github.com/cuthbertLab/music21
 COMMENT=	Python toolkit for computer-aided musical analysis
-LICENSE=	modified-bsd OR gnu-lgpl-v3
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37 # py-scipy
-
-EGG_NAME=	music21-${VERSION}
+LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-chardet-[0-9]*:../../converters/py-chardet
 DEPENDS+=	${PYPKGPREFIX}-joblib-[0-9]*:../../devel/py-joblib
 DEPENDS+=	${PYPKGPREFIX}-more-itertools-[0-9]*:../../devel/py-more-itertools
+DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
 DEPENDS+=	${PYPKGPREFIX}-scipy-[0-9]*:../../math/py-scipy
 DEPENDS+=	${PYPKGPREFIX}-Levenshtein-[0-9]*:../../textproc/py-Levenshtein
@@ -32,8 +29,11 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-guppy3-[0-9]*:../../devel/py-guppy3
 
 USE_LANGUAGES=	# none
 
+# This package now only supports >= 3.8. (Same with its scipy dependency.)
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37
+
 .include "options.mk"
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
