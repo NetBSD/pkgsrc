@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2022/09/27 07:52:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2022/10/07 11:07:25 adam Exp $
 bin/ansible-lint
 ${PYSITELIB}/${WHEEL_INFODIR}/COPYING
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
@@ -19,6 +19,7 @@ ${PYSITELIB}/ansiblelint/_internal/__init__.pyc
 ${PYSITELIB}/ansiblelint/_internal/internal_error.md
 ${PYSITELIB}/ansiblelint/_internal/rules.py
 ${PYSITELIB}/ansiblelint/_internal/rules.pyc
+${PYSITELIB}/ansiblelint/_internal/warning.md
 ${PYSITELIB}/ansiblelint/_mockings.py
 ${PYSITELIB}/ansiblelint/_mockings.pyc
 ${PYSITELIB}/ansiblelint/_version.py
@@ -49,6 +50,9 @@ ${PYSITELIB}/ansiblelint/logger.pyc
 ${PYSITELIB}/ansiblelint/py.typed
 ${PYSITELIB}/ansiblelint/rules/__init__.py
 ${PYSITELIB}/ansiblelint/rules/__init__.pyc
+${PYSITELIB}/ansiblelint/rules/avoid_implicit.md
+${PYSITELIB}/ansiblelint/rules/avoid_implicit.py
+${PYSITELIB}/ansiblelint/rules/avoid_implicit.pyc
 ${PYSITELIB}/ansiblelint/rules/command_instead_of_module.md
 ${PYSITELIB}/ansiblelint/rules/command_instead_of_module.py
 ${PYSITELIB}/ansiblelint/rules/command_instead_of_module.pyc
@@ -74,9 +78,9 @@ ${PYSITELIB}/ansiblelint/rules/deprecated_module.pyc
 ${PYSITELIB}/ansiblelint/rules/empty_string_compare.md
 ${PYSITELIB}/ansiblelint/rules/empty_string_compare.py
 ${PYSITELIB}/ansiblelint/rules/empty_string_compare.pyc
-${PYSITELIB}/ansiblelint/rules/fqcn_builtins.md
-${PYSITELIB}/ansiblelint/rules/fqcn_builtins.py
-${PYSITELIB}/ansiblelint/rules/fqcn_builtins.pyc
+${PYSITELIB}/ansiblelint/rules/fqcn.md
+${PYSITELIB}/ansiblelint/rules/fqcn.py
+${PYSITELIB}/ansiblelint/rules/fqcn.pyc
 ${PYSITELIB}/ansiblelint/rules/galaxy.md
 ${PYSITELIB}/ansiblelint/rules/galaxy.py
 ${PYSITELIB}/ansiblelint/rules/galaxy.pyc
@@ -119,6 +123,9 @@ ${PYSITELIB}/ansiblelint/rules/name.pyc
 ${PYSITELIB}/ansiblelint/rules/no_changed_when.md
 ${PYSITELIB}/ansiblelint/rules/no_changed_when.py
 ${PYSITELIB}/ansiblelint/rules/no_changed_when.pyc
+${PYSITELIB}/ansiblelint/rules/no_free_form.md
+${PYSITELIB}/ansiblelint/rules/no_free_form.py
+${PYSITELIB}/ansiblelint/rules/no_free_form.pyc
 ${PYSITELIB}/ansiblelint/rules/no_handler.md
 ${PYSITELIB}/ansiblelint/rules/no_handler.py
 ${PYSITELIB}/ansiblelint/rules/no_handler.pyc
@@ -128,22 +135,31 @@ ${PYSITELIB}/ansiblelint/rules/no_jinja_when.pyc
 ${PYSITELIB}/ansiblelint/rules/no_log_password.md
 ${PYSITELIB}/ansiblelint/rules/no_log_password.py
 ${PYSITELIB}/ansiblelint/rules/no_log_password.pyc
+${PYSITELIB}/ansiblelint/rules/no_prompting.md
 ${PYSITELIB}/ansiblelint/rules/no_prompting.py
 ${PYSITELIB}/ansiblelint/rules/no_prompting.pyc
+${PYSITELIB}/ansiblelint/rules/no_relative_paths.md
 ${PYSITELIB}/ansiblelint/rules/no_relative_paths.py
 ${PYSITELIB}/ansiblelint/rules/no_relative_paths.pyc
+${PYSITELIB}/ansiblelint/rules/no_same_owner.md
 ${PYSITELIB}/ansiblelint/rules/no_same_owner.py
 ${PYSITELIB}/ansiblelint/rules/no_same_owner.pyc
+${PYSITELIB}/ansiblelint/rules/no_tabs.md
 ${PYSITELIB}/ansiblelint/rules/no_tabs.py
 ${PYSITELIB}/ansiblelint/rules/no_tabs.pyc
+${PYSITELIB}/ansiblelint/rules/only_builtins.md
 ${PYSITELIB}/ansiblelint/rules/only_builtins.py
 ${PYSITELIB}/ansiblelint/rules/only_builtins.pyc
+${PYSITELIB}/ansiblelint/rules/package_latest.md
 ${PYSITELIB}/ansiblelint/rules/package_latest.py
 ${PYSITELIB}/ansiblelint/rules/package_latest.pyc
+${PYSITELIB}/ansiblelint/rules/partial_become.md
 ${PYSITELIB}/ansiblelint/rules/partial_become.py
 ${PYSITELIB}/ansiblelint/rules/partial_become.pyc
+${PYSITELIB}/ansiblelint/rules/playbook_extension.md
 ${PYSITELIB}/ansiblelint/rules/playbook_extension.py
 ${PYSITELIB}/ansiblelint/rules/playbook_extension.pyc
+${PYSITELIB}/ansiblelint/rules/risky_file_permissions.md
 ${PYSITELIB}/ansiblelint/rules/risky_file_permissions.py
 ${PYSITELIB}/ansiblelint/rules/risky_file_permissions.pyc
 ${PYSITELIB}/ansiblelint/rules/risky_octal.py
@@ -158,9 +174,6 @@ ${PYSITELIB}/ansiblelint/rules/schema.pyc
 ${PYSITELIB}/ansiblelint/rules/syntax_check.md
 ${PYSITELIB}/ansiblelint/rules/syntax_check.py
 ${PYSITELIB}/ansiblelint/rules/syntax_check.pyc
-${PYSITELIB}/ansiblelint/rules/template-instead-of-copy.md
-${PYSITELIB}/ansiblelint/rules/template_instead_of_copy.py
-${PYSITELIB}/ansiblelint/rules/template_instead_of_copy.pyc
 ${PYSITELIB}/ansiblelint/rules/var_naming.py
 ${PYSITELIB}/ansiblelint/rules/var_naming.pyc
 ${PYSITELIB}/ansiblelint/rules/yaml.md
@@ -184,6 +197,8 @@ ${PYSITELIB}/ansiblelint/schemas/tasks.json
 ${PYSITELIB}/ansiblelint/schemas/vars.json
 ${PYSITELIB}/ansiblelint/skip_utils.py
 ${PYSITELIB}/ansiblelint/skip_utils.pyc
+${PYSITELIB}/ansiblelint/stats.py
+${PYSITELIB}/ansiblelint/stats.pyc
 ${PYSITELIB}/ansiblelint/testing/__init__.py
 ${PYSITELIB}/ansiblelint/testing/__init__.pyc
 ${PYSITELIB}/ansiblelint/testing/fixtures.py
