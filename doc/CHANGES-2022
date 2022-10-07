@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4894 2022/10/07 14:24:21 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.4895 2022/10/07 17:54:07 nros Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7408,3 +7408,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/py-altgraph to 0.17.3 [adam 2022-10-07]
 	Updated graphics/libhighway to 1.0.1 [nros 2022-10-07]
 	Updated chat/swirc to 3.3.6 [fcambus 2022-10-07]
+	Updated x11/gtkglarea2 to 2.1.0 [nros 2022-10-07]
