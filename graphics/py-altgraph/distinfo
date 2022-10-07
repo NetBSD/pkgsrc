@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:46:43 nia Exp $
+$NetBSD: distinfo,v 1.11 2022/10/07 11:10:37 adam Exp $
 
-BLAKE2s (altgraph-0.17.2.tar.gz) = f34412a09fd1d679b01138ff87f0c259cce6e026a223b8c274a5225935202c2c
-SHA512 (altgraph-0.17.2.tar.gz) = b452353b03a8d5588822fd250d37dac72529b22a1f7ce4c797fb6d24d9625b946059995722ef33d035743d5cac97cbbcb47d8eda8df172878bf3631059c3e9bb
-Size (altgraph-0.17.2.tar.gz) = 48186 bytes
+BLAKE2s (altgraph-0.17.3.tar.gz) = 210913a09125991cc1ecb2efb1016d7324b87f331e0ea8644125c295839e3d00
+SHA512 (altgraph-0.17.3.tar.gz) = 5e0ab6829d85013ff9a2dfdd6bf7f8606643c8d97a28ac3b3daf43f1180cc451a31f3ba463dd03056ab123f331051bdccbcbbf1bad6e8b19c2c40db01b3e5913
+Size (altgraph-0.17.3.tar.gz) = 48328 bytes
