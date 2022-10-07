@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.37 2022/05/03 01:26:55 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.38 2022/10/07 10:10:05 adam Exp $
 bin/git
 bin/git-cvsserver
 bin/git-receive-pack
 bin/git-shell
 bin/git-upload-archive
 bin/git-upload-pack
+bin/scalar
 ${PERL5_SUB_INSTALLVENDORLIB}/FromCPAN/Error.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/FromCPAN/Mail/Address.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Git.pm
@@ -65,6 +66,7 @@ libexec/git-core/git-cvsimport
 libexec/git-core/git-cvsserver
 libexec/git-core/git-daemon
 libexec/git-core/git-describe
+libexec/git-core/git-diagnose
 libexec/git-core/git-diff
 libexec/git-core/git-diff-files
 libexec/git-core/git-diff-index
@@ -189,6 +191,7 @@ libexec/git-core/git-var
 libexec/git-core/git-verify-commit
 libexec/git-core/git-verify-pack
 libexec/git-core/git-verify-tag
+libexec/git-core/git-version
 libexec/git-core/git-web--browse
 libexec/git-core/git-whatchanged
 libexec/git-core/git-worktree
@@ -216,6 +219,7 @@ libexec/git-core/mergetools/tortoisemerge
 libexec/git-core/mergetools/vimdiff
 libexec/git-core/mergetools/winmerge
 libexec/git-core/mergetools/xxdiff
+libexec/git-core/scalar
 share/bash-completion/completions/git
 share/examples/git/git-prompt.sh
 share/examples/git/templates/description
