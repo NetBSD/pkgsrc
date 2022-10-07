@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2022/07/06 11:53:59 adam Exp $
+# $NetBSD: Makefile,v 1.46 2022/10/07 10:10:05 adam Exp $
 
 .include "../../devel/git/Makefile.common"
 
@@ -7,9 +7,7 @@ CATEGORIES=	www
 
 COMMENT=	Web interface for GIT repositories
 
-#DEPENDS+=	apache-[0-9]*:../../www/apache24
 DEPENDS+=	git-base>=${GIT_VERSION}:../../devel/git-base
-#DEPENDS+=	{perl>=5.15.8,p5-Time-HiRes>=1.9725}:../../time/p5-Time-HiRes
 DEPENDS+=	p5-CGI-[0-9]*:../../www/p5-CGI
 
 USE_TOOLS+=	perl:run
@@ -24,6 +22,7 @@ MAKE_FLAGS+=	GITWEB_HOMETEXT=${GITWEB_HTDOCS}/indextext.html
 MAKE_FLAGS+=	GITWEB_LOGO=/gitweb/git-logo.png
 MAKE_FLAGS+=	GITWEB_JS=/gitweb/gitweb.js
 MAKE_FLAGS+=	PERL_PATH=${PERL5:Q}
+MAKE_FLAGS+=	MAK_DIR_GITWEB=./
 
 GITWEB_CONFIG=	${PKG_SYSCONFDIR}/gitweb.conf
 GITWEB_CGIBIN=	${PREFIX}/libexec/cgi-bin
