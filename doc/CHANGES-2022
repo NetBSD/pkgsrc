@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4889 2022/10/07 03:54:17 gutteridge Exp $
+$NetBSD: CHANGES-2022,v 1.4890 2022/10/07 07:27:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7387,3 +7387,19 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/xplr to 0.19.4 [pin 2022-10-06]
 	Updated sysutils/dbus to 1.14.4 [wiz 2022-10-06]
 	Updated audio/py-music21 to 8.1.0 [gutteridge 2022-10-07]
+	Updated security/py-acme to 1.31.0 [adam 2022-10-07]
+	Updated security/py-certbot to 1.31.0 [adam 2022-10-07]
+	Updated security/py-certbot-apache to 1.31.0 [adam 2022-10-07]
+	Updated security/py-certbot-dns-digitalocean to 1.31.0 [adam 2022-10-07]
+	Updated security/py-certbot-dns-dnsimple to 1.31.0 [adam 2022-10-07]
+	Updated security/py-certbot-dns-dnsmadeeasy to 1.31.0 [adam 2022-10-07]
+	Updated security/py-certbot-dns-gehirn to 1.31.0 [adam 2022-10-07]
+	Updated security/py-certbot-dns-google to 1.31.0 [adam 2022-10-07]
+	Updated security/py-certbot-dns-linode to 1.31.0 [adam 2022-10-07]
+	Updated security/py-certbot-dns-luadns to 1.31.0 [adam 2022-10-07]
+	Updated security/py-certbot-dns-nsone to 1.31.0 [adam 2022-10-07]
+	Updated security/py-certbot-dns-ovh to 1.31.0 [adam 2022-10-07]
+	Updated security/py-certbot-dns-rfc2136 to 1.31.0 [adam 2022-10-07]
+	Updated security/py-certbot-dns-route53 to 1.31.0 [adam 2022-10-07]
+	Updated security/py-certbot-dns-sakuracloud to 1.31.0 [adam 2022-10-07]
+	Updated security/py-certbot-nginx to 1.31.0 [adam 2022-10-07]
