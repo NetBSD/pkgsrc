@@ -1,49 +1,19 @@
-$NetBSD: patch-configure,v 1.5 2022/10/07 20:22:56 he Exp $
+$NetBSD: patch-m4_atomic__operations.m4,v 1.1 2022/10/07 20:22:56 he Exp $
 
-Portability.
 Also, test whether we can do atomics on time_t,
 not possible on 32-bit CPUs running NetBSD (where time_t is __int64_t)
 
---- configure.orig	2018-09-17 11:27:47.000000000 +0000
-+++ configure
-@@ -15579,7 +15579,7 @@ $as_echo "#define OS_AIX 1" >>confdefs.h
- 
-   ;;
- esac
-- if test x$os_type == xapple; then
-+ if test x$os_type = xapple; then
-   OS_APPLE_TRUE=
-   OS_APPLE_FALSE='#'
- else
-@@ -15587,7 +15587,7 @@ else
-   OS_APPLE_FALSE=
- fi
- 
-- if test x$os_type == xlinux; then
-+ if test x$os_type = xlinux; then
-   OS_LINUX_TRUE=
-   OS_LINUX_FALSE='#'
- else
-@@ -15595,7 +15595,7 @@ else
-   OS_LINUX_FALSE=
- fi
- 
-- if test x$os_type == xaix; then
-+ if test x$os_type = xaix; then
-   OS_AIX_TRUE=
-   OS_AIX_FALSE='#'
- else
-@@ -17265,40 +17265,54 @@ else
- else
-   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
- /* end confdefs.h.  */
+--- m4/atomic_operations.m4.orig	2018-05-04 09:37:56.000000000 +0000
++++ m4/atomic_operations.m4
+@@ -10,39 +10,52 @@
+ AC_DEFUN([RS_ATOMIC_OPERATIONS],
+ [AC_CACHE_CHECK([whether the compiler provides atomic builtins], [ap_cv_atomic_builtins],
+ [AC_TRY_RUN([
 +#include <sys/types.h>
- 
  int main()
  {
      unsigned long val = 1010, tmp, *mem = &val;
 +    time_t tval = 1010, ttmp, *tmem = &tval;
-+
  
      if (__sync_fetch_and_add(&val, 1010) != 1010 || val != 2020)
          return 1;
@@ -94,5 +64,5 @@ not possible on 32-bit CPUs running NetBSD (where time_t is __int64_t)
 +        return 1;
 +
      return 0;
- }
- _ACEOF
+ }], [ap_cv_atomic_builtins=yes], [ap_cv_atomic_builtins=no], [ap_cv_atomic_builtins=no])])
+ 
