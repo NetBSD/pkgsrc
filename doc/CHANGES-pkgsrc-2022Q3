@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2022Q3,v 1.1.2.2 2022/10/03 15:33:39 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2022Q3,v 1.1.2.3 2022/10/07 18:48:15 bsiegert Exp $
 
   Changes to packages and infrastructure on the 2022Q3 branch:
 
@@ -19,4 +19,22 @@ lang/php80: security fix
 
 Pullup ticket #6678 - requested by taca
 lang/nodejs: security fix
+
+Pullup ticket #6679 - requested by taca
+lang/go118: security fix
+
+Pullup ticket #6681 - requested by taca
+net/isc-dhcp4: security fix
+
+Pullup ticket #6680 - requested by taca
+lang/go119: security fix
+
+Pullup ticket #6682 - requested by taca
+www/drupal9: security fix
+
+Pullup ticket #6682 - requested by taca
+www/drupal9: security fix
+
+Pullup ticket #6683 - requested by wiz
+graphics/cairo-gobject: macOS build fix
 
