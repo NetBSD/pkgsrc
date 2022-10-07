@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4892 2022/10/07 11:10:54 adam Exp $
+$NetBSD: CHANGES-2022,v 1.4893 2022/10/07 11:24:52 nros Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7406,3 +7406,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/git to 2.38.0 [adam 2022-10-07]
 	Updated sysutils/ansible-lint to 6.8.0 [adam 2022-10-07]
 	Updated graphics/py-altgraph to 0.17.3 [adam 2022-10-07]
+	Updated graphics/libhighway to 1.0.1 [nros 2022-10-07]
