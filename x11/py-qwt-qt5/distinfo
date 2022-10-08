@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:34:20 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/10/08 13:26:55 adam Exp $
 
-BLAKE2s (pyqt-qwt-1.02.00.tar.gz) = 76f50d292845e1a6621cb414891da16bdbb7e77e512d9fa47690be85ad027181
-SHA512 (pyqt-qwt-1.02.00.tar.gz) = f2b54bd4097b726bcf4df897b910d49489efd2bc9d06d239037b0ecb7ed1420c76499e65b84a49efe2e8ba2313857ece92d8d50d157ccc38fda0cc0dac5ab178
-Size (pyqt-qwt-1.02.00.tar.gz) = 103588 bytes
-SHA1 (patch-mk__distinfo.py) = 180ce6d00f21142878f2a01805921d5c1fd63637
-SHA1 (patch-sip_qwt.sip) = f2491af157af22410ac78f1fb8bf05b332feb58e
-SHA1 (patch-sip_qwt__transform.sip) = 1e6f0e26e5cd5368bf39ce8ade529fef8464e34a
+BLAKE2s (pyqt-qwt-1.02.02.tar.gz) = 70ec253f564f0cbae48901c16a3a89b1c09d797a902cc38f94d8262f3f8736f9
+SHA512 (pyqt-qwt-1.02.02.tar.gz) = 2892827fb7e4e71c0f770ba481ef4653f2ef09a68767c178e4f810bb9c2f1e80362c7a37867c9b5d3525aed8118aef6c503ddc28323db02fe159055efed2a71d
+Size (pyqt-qwt-1.02.02.tar.gz) = 120948 bytes
