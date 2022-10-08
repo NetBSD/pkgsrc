@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2022/08/22 22:21:53 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2022/10/08 20:02:06 he Exp $
 
 R_PKGNAME=	s2
 R_PKGVER=	1.0.6
+PKGREVISION=	1
 CATEGORIES=	geography
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -14,4 +15,5 @@ USE_LANGUAGES=	c c++
 .include "../../devel/R-Rcpp/buildlink3.mk"
 .include "../../geography/R-wk/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
