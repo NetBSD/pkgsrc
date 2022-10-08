@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3805 2022/10/06 02:18:16 markd Exp $
+# $NetBSD: Makefile,v 1.3806 2022/10/08 13:19:22 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2366,6 +2366,7 @@ SUBDIR+=	py-canonicaljson
 SUBDIR+=	py-canvasapi
 SUBDIR+=	py-capstone
 SUBDIR+=	py-case
+SUBDIR+=	py-cbor2
 SUBDIR+=	py-cffi
 SUBDIR+=	py-characteristic
 SUBDIR+=	py-checker
