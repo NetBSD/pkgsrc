@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4903 2022/10/08 15:04:04 tonio Exp $
+$NetBSD: CHANGES-2022,v 1.4904 2022/10/08 16:38:11 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7420,3 +7420,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated ham/soapy-sdr to 0.8.1 [adam 2022-10-08]
 	Updated x11/py-qwt-qt5 to 1.02.02 [adam 2022-10-08]
 	Added devel/ocaml-ppx_import version 1.10.0 [tonio 2022-10-08]
+	Added devel/why3 version 1.5.1 [tonio 2022-10-08]
