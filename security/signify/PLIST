@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2022/10/08 11:30:27 bsiegert Exp $
+bin/signify
+man/man1/signify.1
