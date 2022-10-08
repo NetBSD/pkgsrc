@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/10/08 13:15:07 adam Exp $
+
+BLAKE2s (cppzmq-4.8.1.tar.gz) = 3986060a98cf8c1a7b686f70de075faf276ad523e493ac135efc81a970bd7e1a
+SHA512 (cppzmq-4.8.1.tar.gz) = 02f9b77f67dd46557705511195eb3f4f4e52381256bc9687f36d3e69db6a628c19cfff02209b6e6b53822a60781ab0850eb064d8f020e059fc1aca4d191b66db
+Size (cppzmq-4.8.1.tar.gz) = 46316 bytes
