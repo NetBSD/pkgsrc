@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4901 2022/10/08 13:21:06 adam Exp $
+$NetBSD: CHANGES-2022,v 1.4902 2022/10/08 13:28:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7417,3 +7417,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Added net/cppzmq version 4.8.1 [adam 2022-10-08]
 	Added textproc/py-pygccxml version 2.2.1 [adam 2022-10-08]
 	Added devel/py-cbor2 version 5.4.3 [adam 2022-10-08]
+	Updated ham/soapy-sdr to 0.8.1 [adam 2022-10-08]
+	Updated x11/py-qwt-qt5 to 1.02.02 [adam 2022-10-08]
