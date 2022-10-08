@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22272 2022/10/07 18:06:27 nros Exp $
+$NetBSD: TODO,v 1.22273 2022/10/08 13:28:04 adam Exp $
 
 Suggested new packages
 ======================
@@ -1306,7 +1306,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-pymc3-3.8
 	o py-qtgraph-qt5-0.12.1
 	o py-quixote-3.3
-	o py-qwt-qt5-1.02.01
 	o py-rarfile-4.0
 	o py-rebulk-3.0.1
 	o py-requests-kerberos-0.14.0
