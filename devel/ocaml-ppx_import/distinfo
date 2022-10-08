@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/10/08 15:01:01 tonio Exp $
+
+BLAKE2s (ppx_import-1.10.0.tar.gz) = cb3bca5f6dc5b78b6a105648b865bc020aadec9fcc2646fee2f62a5bcaf92109
+SHA512 (ppx_import-1.10.0.tar.gz) = 7d4aeab6512014b5a16fdcc4d26ac29cc22223e18c7ab26e26f9fdd5bcd625c22aa9ff2e6c2106f45408316eaaf755437979961d97139da5973026038c210935
+Size (ppx_import-1.10.0.tar.gz) = 13927 bytes
