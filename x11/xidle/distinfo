@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2022/10/08 10:06:51 bsiegert Exp $
+
+BLAKE2s (xidle-20220718/xidle-20220718.tar.xz) = fb40e18d9bfe7b8379b57390e79e35a7df2f06223632f8c71da4c20244eaff92
+SHA512 (xidle-20220718/xidle-20220718.tar.xz) = f72fdc91a2c9173ca26291d46ed3857624a1be7c44918bf7e985f0dae184eb8c0201c4e0fb0cda5f33e6f488835f7a68e888aebc180c1eca3c4396a67e659c86
+Size (xidle-20220718/xidle-20220718.tar.xz) = 5640 bytes
+SHA1 (patch-Makefile) = f93b2ffc31da13d143dd157d670e299f0568713a
+SHA1 (patch-xidle.1) = dcb4906dd1ca4780925ffd96193afd3cdb3b6401
+SHA1 (patch-xidle.c) = 02058baddefbad2ba42784eba6fce980a1020314
