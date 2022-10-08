@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.239 2022/09/02 16:34:09 gutteridge Exp $
+# $NetBSD: mozilla-common.mk,v 1.240 2022/10/08 21:18:55 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -101,6 +101,8 @@ CONFIGURE_ARGS+=	--with-system-webp
 #CONFIGURE_ARGS+=	--enable-readline
 CONFIGURE_ARGS+=	--disable-icf
 CONFIGURE_ARGS+=	--disable-updater
+
+CONFIGURE_ARGS+=	--enable-new-pass-manager
 
 .include "../../mk/compiler.mk"
 
