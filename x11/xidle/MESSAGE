@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2022/10/08 10:06:51 bsiegert Exp $
+
+Unless told otherwise, xidle will attempt to start xlock(1) as default
+screen locker.
+
+Install x11/xlockmore if you wish for this behaviour to take effect.
+
+===========================================================================
