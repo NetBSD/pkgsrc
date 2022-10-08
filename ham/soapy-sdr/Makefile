@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2021/04/28 09:11:16 nia Exp $
+# $NetBSD: Makefile,v 1.4 2022/10/08 13:25:34 adam Exp $
 
-DISTNAME=	soapy-sdr-0.7.2
-PKGREVISION=	1
+DISTNAME=	soapy-sdr-0.8.1
 CATEGORIES=	ham
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pothosware/}
 GITHUB_PROJECT=	SoapySDR
@@ -13,8 +12,8 @@ COMMENT=	Vendor and platform neutral SDR support library
 LICENSE=	boost-license
 
 USE_CMAKE=	yes
-USE_TOOLS+=	pkg-config
 USE_LANGUAGES+=	c c++
+USE_TOOLS+=	pkg-config
 
 # Do not use /lib64
 CMAKE_ARGS+=	-DLIB_SUFFIX=""
@@ -24,12 +23,6 @@ SUBST_STAGE.getopt=	pre-configure
 SUBST_MESSAGE.getopt=	Fixing getopt_long_only
 SUBST_FILES.getopt+=	apps/SoapySDRUtil.cpp
 SUBST_SED.getopt+=	-e s,getopt_long_only,getopt_long,
-
-SUBST_CLASSES+=		mandir
-SUBST_STAGE.mandir=	pre-configure
-SUBST_MESSAGE.mandir=	Fixing manpage directory
-SUBST_FILES.mandir+=	apps/CMakeLists.txt
-SUBST_SED.mandir+=	-e 's,share/man,${PKGMANDIR},'
 
 # boost's posix_thread header causes pthread_create() reference
 LDFLAGS+=		-lpthread
