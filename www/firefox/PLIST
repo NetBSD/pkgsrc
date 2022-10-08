@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.180 2022/03/01 13:35:33 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.181 2022/10/08 21:18:55 ryoon Exp $
 bin/firefox
 lib/firefox/application.ini
 lib/firefox/browser/chrome/icons/default/default128.png
@@ -6,7 +6,6 @@ lib/firefox/browser/chrome/icons/default/default16.png
 lib/firefox/browser/chrome/icons/default/default32.png
 lib/firefox/browser/chrome/icons/default/default48.png
 lib/firefox/browser/chrome/icons/default/default64.png
-lib/firefox/browser/features/doh-rollout@mozilla.org.xpi
 lib/firefox/browser/features/formautofill@mozilla.org.xpi
 lib/firefox/browser/features/pictureinpicture@mozilla.org.xpi
 lib/firefox/browser/features/screenshots@mozilla.org.xpi
