@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2022/10/08 13:15:07 adam Exp $
+include/zmq.hpp
+include/zmq_addon.hpp
+share/cmake/cppzmq/cppzmqConfig.cmake
+share/cmake/cppzmq/cppzmqConfigVersion.cmake
+share/cmake/cppzmq/cppzmqTargets.cmake
+share/cmake/cppzmq/libzmq-pkg-config/FindZeroMQ.cmake
