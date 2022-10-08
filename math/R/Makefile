@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.234 2022/06/28 11:34:35 wiz Exp $
+# $NetBSD: Makefile,v 1.235 2022/10/08 19:53:33 he Exp $
 
 #
 # If updating this package, please try to ensure PLIST.Darwin is kept in sync
 # to avoid unnecessarily breaking macOS users.
 #
 DISTNAME=	R-4.2.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=base/R-4/}
 
@@ -200,4 +200,5 @@ DEINSTALL_TEMPLATES+=	../../math/R/files/pkg-index.tmpl
 PRINT_PLIST_AWK+=	/^lib\/R\/doc\/html\/packages.html$$/ { next; }
 
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
