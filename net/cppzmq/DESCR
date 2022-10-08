@@ -1,0 +1,16 @@
+cppzmq is a C++ binding for libzmq. It has the following design goals:
+
+* cppzmq maps the libzmq C API to C++ concepts. In particular:
+  - it is type-safe (the libzmq C API exposes various class-like concepts as
+    void*)
+  - it provides exception-based error handling (the libzmq C API provides
+    errno-based error handling)
+  - it provides RAII-style classes that automate resource management (the
+    libzmq C API requires the user to take care to free resources explicitly)
+
+* cppzmq is a light-weight, header-only binding. You only need to include the
+  header file zmq.hpp (and maybe zmq_addon.hpp) to use it.
+
+* zmq.hpp is meant to contain direct mappings of the abstractions provided by
+  the libzmq C API, while zmq_addon.hpp provides additional higher-level
+  abstractions.
