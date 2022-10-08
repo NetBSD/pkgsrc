@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1482 2022/09/22 05:59:26 wiz Exp $
+# $NetBSD: Makefile,v 1.1483 2022/10/08 13:15:07 adam Exp $
 #
 
 COMMENT=	Networking tools
@@ -80,6 +80,7 @@ SUBDIR+=	corebird
 SUBDIR+=	corkscrew
 SUBDIR+=	couriertcpd
 SUBDIR+=	coursera-dl
+SUBDIR+=	cppzmq
 SUBDIR+=	csup
 SUBDIR+=	czds
 SUBDIR+=	dante
