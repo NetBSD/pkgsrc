@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.238 2022/09/25 08:57:51 nia Exp $
+# $NetBSD: Makefile,v 1.239 2022/10/08 11:06:35 nia Exp $
 
 DISTNAME=	webkitgtk-2.36.8
 PKGNAME=	${DISTNAME:S/webkitgtk/webkit-gtk/}
@@ -51,6 +51,10 @@ CMAKE_ARGS+=		-DUSE_GSTREAMER_GL=OFF
 CMAKE_ARGS+=		-DUSE_LIBHYPHEN=OFF
 CMAKE_ARGS+=		-DUSE_OPENJPEG=OFF
 CMAKE_ARGS+=		-DUSE_SOUP2=ON
+
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-aarch64*)
+CMAKE_ARGS+=		-DAVOID_INT128=ON
+.endif
 
 REPLACE_PERL+=	Source/JavaScriptCore/Scripts/*.pl
 REPLACE_PERL+=	Source/JavaScriptCore/create_hash_table
