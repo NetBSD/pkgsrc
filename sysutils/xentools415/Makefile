@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2022/08/21 20:20:29 markd Exp $
+# $NetBSD: Makefile,v 1.21 2022/10/08 11:05:57 bouyer Exp $
 #
 # VERSION is set in version.mk as it is shared with other packages
 .include        "version.mk"
@@ -24,7 +24,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 PKG_SYSCONFSUBDIR=	xen
 
-ONLY_FOR_PLATFORM=	NetBSD-9.99.6[4-9]-x86_64 NetBSD-9.99.[7-9]*-x86_64
+ONLY_FOR_PLATFORM=	NetBSD-9.99.*-x86_64
 ONLY_FOR_PLATFORM+=	NetBSD-9.[1-9]-x86_64
 ONLY_FOR_PLATFORM+=	NetBSD-9.[1-9]_*-x86_64
 ONLY_FOR_PLATFORM+=	NetBSD-9.0_STABLE-x86_64
