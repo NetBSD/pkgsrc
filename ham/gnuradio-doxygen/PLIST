@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2022/10/04 11:54:13 adam Exp $
+@comment $NetBSD: PLIST,v 1.31 2022/10/08 11:12:48 mef Exp $
 share/doc/gnuradio-${PKGVERSION}/html/ConstellationDisplayPlot_8h.html
 share/doc/gnuradio-${PKGVERSION}/html/ConstellationDisplayPlot_8h__dep__incl.map
 share/doc/gnuradio-${PKGVERSION}/html/ConstellationDisplayPlot_8h__dep__incl.md5
@@ -4469,9 +4469,7 @@ share/doc/gnuradio-${PKGVERSION}/html/dir_000042.js
 share/doc/gnuradio-${PKGVERSION}/html/dir_000043.html
 share/doc/gnuradio-${PKGVERSION}/html/dir_000043.js
 share/doc/gnuradio-${PKGVERSION}/html/dir_000044.html
-share/doc/gnuradio-${PKGVERSION}/html/dir_000044.js
 share/doc/gnuradio-${PKGVERSION}/html/dir_000045.html
-share/doc/gnuradio-${PKGVERSION}/html/dir_000045.js
 share/doc/gnuradio-${PKGVERSION}/html/dir_000046.html
 share/doc/gnuradio-${PKGVERSION}/html/dir_000047.html
 share/doc/gnuradio-${PKGVERSION}/html/dir_000048.html
@@ -4483,7 +4481,9 @@ share/doc/gnuradio-${PKGVERSION}/html/dir_000053.html
 share/doc/gnuradio-${PKGVERSION}/html/dir_000054.html
 share/doc/gnuradio-${PKGVERSION}/html/dir_000055.html
 share/doc/gnuradio-${PKGVERSION}/html/dir_000056.html
+share/doc/gnuradio-${PKGVERSION}/html/dir_000056.js
 share/doc/gnuradio-${PKGVERSION}/html/dir_000057.html
+share/doc/gnuradio-${PKGVERSION}/html/dir_000057.js
 share/doc/gnuradio-${PKGVERSION}/html/dir_000058.html
 share/doc/gnuradio-${PKGVERSION}/html/dir_000058.js
 share/doc/gnuradio-${PKGVERSION}/html/dir_000059.html
@@ -4715,7 +4715,6 @@ share/doc/gnuradio-${PKGVERSION}/html/dir_000171.js
 share/doc/gnuradio-${PKGVERSION}/html/dir_000172.html
 share/doc/gnuradio-${PKGVERSION}/html/dir_000172.js
 share/doc/gnuradio-${PKGVERSION}/html/dir_000173.html
-share/doc/gnuradio-${PKGVERSION}/html/dir_000173.js
 share/doc/gnuradio-${PKGVERSION}/html/dir_000174.html
 share/doc/gnuradio-${PKGVERSION}/html/dir_000174.js
 share/doc/gnuradio-${PKGVERSION}/html/dir_000175.html
@@ -4727,6 +4726,7 @@ share/doc/gnuradio-${PKGVERSION}/html/dir_000177.js
 share/doc/gnuradio-${PKGVERSION}/html/dir_000178.html
 share/doc/gnuradio-${PKGVERSION}/html/dir_000178.js
 share/doc/gnuradio-${PKGVERSION}/html/dir_000179.html
+share/doc/gnuradio-${PKGVERSION}/html/dir_000179.js
 share/doc/gnuradio-${PKGVERSION}/html/dir_000180.html
 share/doc/gnuradio-${PKGVERSION}/html/dir_000180.js
 share/doc/gnuradio-${PKGVERSION}/html/dir_000181.html
@@ -4815,24 +4815,6 @@ share/doc/gnuradio-${PKGVERSION}/html/dir_000222.html
 share/doc/gnuradio-${PKGVERSION}/html/dir_000222.js
 share/doc/gnuradio-${PKGVERSION}/html/dir_000223.html
 share/doc/gnuradio-${PKGVERSION}/html/dir_000223.js
-share/doc/gnuradio-${PKGVERSION}/html/dir_000224.html
-share/doc/gnuradio-${PKGVERSION}/html/dir_000224.js
-share/doc/gnuradio-${PKGVERSION}/html/dir_000225.html
-share/doc/gnuradio-${PKGVERSION}/html/dir_000225.js
-share/doc/gnuradio-${PKGVERSION}/html/dir_000226.html
-share/doc/gnuradio-${PKGVERSION}/html/dir_000226.js
-share/doc/gnuradio-${PKGVERSION}/html/dir_000227.html
-share/doc/gnuradio-${PKGVERSION}/html/dir_000227.js
-share/doc/gnuradio-${PKGVERSION}/html/dir_000228.html
-share/doc/gnuradio-${PKGVERSION}/html/dir_000228.js
-share/doc/gnuradio-${PKGVERSION}/html/dir_000229.html
-share/doc/gnuradio-${PKGVERSION}/html/dir_000229.js
-share/doc/gnuradio-${PKGVERSION}/html/dir_000230.html
-share/doc/gnuradio-${PKGVERSION}/html/dir_000230.js
-share/doc/gnuradio-${PKGVERSION}/html/dir_000231.html
-share/doc/gnuradio-${PKGVERSION}/html/dir_000231.js
-share/doc/gnuradio-${PKGVERSION}/html/dir_000232.html
-share/doc/gnuradio-${PKGVERSION}/html/dir_000232.js
 share/doc/gnuradio-${PKGVERSION}/html/display__qt_8h.html
 share/doc/gnuradio-${PKGVERSION}/html/display__qt_8h.js
 share/doc/gnuradio-${PKGVERSION}/html/display__qt_8h__incl.map
@@ -13691,15 +13673,6 @@ share/doc/gnuradio-${PKGVERSION}/xml/dir_000220.xml
 share/doc/gnuradio-${PKGVERSION}/xml/dir_000221.xml
 share/doc/gnuradio-${PKGVERSION}/xml/dir_000222.xml
 share/doc/gnuradio-${PKGVERSION}/xml/dir_000223.xml
-share/doc/gnuradio-${PKGVERSION}/xml/dir_000224.xml
-share/doc/gnuradio-${PKGVERSION}/xml/dir_000225.xml
-share/doc/gnuradio-${PKGVERSION}/xml/dir_000226.xml
-share/doc/gnuradio-${PKGVERSION}/xml/dir_000227.xml
-share/doc/gnuradio-${PKGVERSION}/xml/dir_000228.xml
-share/doc/gnuradio-${PKGVERSION}/xml/dir_000229.xml
-share/doc/gnuradio-${PKGVERSION}/xml/dir_000230.xml
-share/doc/gnuradio-${PKGVERSION}/xml/dir_000231.xml
-share/doc/gnuradio-${PKGVERSION}/xml/dir_000232.xml
 share/doc/gnuradio-${PKGVERSION}/xml/display__qt_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/displayform_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/displayform__pydoc__template_8h.xml
