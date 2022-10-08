@@ -1,0 +1,15 @@
+$NetBSD: patch-xidle.1,v 1.1 2022/10/08 10:06:52 bsiegert Exp $
+
+Do not hard-code xlock path.
+
+--- xidle.1.orig	2015-05-26 05:22:15.000000000 +0000
++++ xidle.1
+@@ -127,7 +127,7 @@ Run
+ using the flying bats mode if no activity is detected in 300 seconds or the
+ pointer sits in the southwest corner for more than 5 seconds:
+ .Bd -literal -offset indent
+-$ xidle -delay 5 -sw -program "/usr/X11R6/bin/xlock -mode bat" \e
++$ xidle -delay 5 -sw -program "@PREFIX@/bin/xlock -mode bat" \e
+ 	-timeout 300
+ .Ed
+ .Sh SEE ALSO

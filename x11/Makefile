@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.964 2022/09/24 07:01:26 wiz Exp $
+# $NetBSD: Makefile,v 1.965 2022/10/08 10:06:51 bsiegert Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -611,6 +611,7 @@ SUBDIR+=	xgrk
 SUBDIR+=	xhangglider
 SUBDIR+=	xhost
 SUBDIR+=	xicc
+SUBDIR+=	xidle
 SUBDIR+=	xinit
 SUBDIR+=	xinput
 SUBDIR+=	xisxwayland
