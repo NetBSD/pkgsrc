@@ -1,12 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1 2020/08/30 08:21:15 tnn Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/10/08 13:26:55 adam Exp $
 ${PYSITELIB}/PyQt5/Qwt.pyi
 ${PYSITELIB}/PyQt5/Qwt.so
-${PYSITELIB}/Qwt-6.1.2.dist-info/INSTALLER
-${PYSITELIB}/Qwt-6.1.2.dist-info/METADATA
-${PYSITELIB}/Qwt-6.1.2.dist-info/RECORD
+${PYSITELIB}/Qwt-1.02.02.dist-info/INSTALLER
+${PYSITELIB}/Qwt-1.02.02.dist-info/METADATA
+${PYSITELIB}/Qwt-1.02.02.dist-info/RECORD
+share/sip${PYVERSSUFFIX}/PyQt5/Qwt/Qwt_Qt4.sip
+share/sip${PYVERSSUFFIX}/PyQt5/Qwt/Qwt_Qt5.sip
 share/sip${PYVERSSUFFIX}/PyQt5/Qwt/conversions.sip
 share/sip${PYVERSSUFFIX}/PyQt5/Qwt/qmap_convert.sip
-share/sip${PYVERSSUFFIX}/PyQt5/Qwt/qwt.sip
 share/sip${PYVERSSUFFIX}/PyQt5/Qwt/qwt_abstract_legend.sip
 share/sip${PYVERSSUFFIX}/PyQt5/Qwt/qwt_abstract_scale.sip
 share/sip${PYVERSSUFFIX}/PyQt5/Qwt/qwt_abstract_scale_draw.sip
