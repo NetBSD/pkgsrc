@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4899 2022/10/08 10:07:16 bsiegert Exp $
+$NetBSD: CHANGES-2022,v 1.4900 2022/10/08 11:30:53 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7413,3 +7413,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/fmtlib to 9.1.0 [bsiegert 2022-10-08]
 	Updated net/gh to 2.17.0 [bsiegert 2022-10-08]
 	Added x11/xidle version 20220718 [bsiegert 2022-10-08]
+	Added security/signify version 0.10 [bsiegert 2022-10-08]
