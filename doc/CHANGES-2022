@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4897 2022/10/08 09:43:40 bsiegert Exp $
+$NetBSD: CHANGES-2022,v 1.4898 2022/10/08 10:04:13 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7411,3 +7411,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/gtkglarea2 to 2.1.0 [nros 2022-10-07]
 	Updated geography/libmaxminddb to 1.7.1 [fcambus 2022-10-07]
 	Updated textproc/fmtlib to 9.1.0 [bsiegert 2022-10-08]
+	Updated net/gh to 2.17.0 [bsiegert 2022-10-08]
