@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4906 2022/10/08 21:19:49 ryoon Exp $
+$NetBSD: CHANGES-2022,v 1.4907 2022/10/08 21:20:44 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7424,3 +7424,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated math/R to 4.2.0nb2 [he 2022-10-08]
 	Updated geography/R-s2 to 1.0.6nb1 [he 2022-10-08]
 	Updated www/firefox to 105.0.3 [ryoon 2022-10-08]
+	Updated www/firefox-l10n to 105.0.3 [ryoon 2022-10-08]
