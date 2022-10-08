@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2022/09/11 08:59:14 tnn Exp $
+# $NetBSD: Makefile,v 1.53 2022/10/08 11:15:53 nia Exp $
 
 DISTNAME=	babl-0.1.96
 CATEGORIES=	graphics
@@ -35,6 +35,10 @@ PLIST_VARS+=		x86_64
 PLIST.x86_64=		yes
 .endif
 
+PLIST_VARS+=		arm
+.if !empty(MACHINE_ARCH:Mearm*)
+PLIST.arm=		yes
+.endif
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.babl
 PKG_SUPPORTED_OPTIONS=
