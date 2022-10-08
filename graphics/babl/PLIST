@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2022/09/10 09:34:16 wiz Exp $
+@comment $NetBSD: PLIST,v 1.24 2022/10/08 11:15:53 nia Exp $
 bin/babl
 include/babl-0.1/babl/babl-introspect.h
 include/babl-0.1/babl/babl-macros.h
@@ -33,6 +33,18 @@ lib/babl-0.1/sse4-int8.${SOEXT}
 lib/babl-0.1/two-table.${SOEXT}
 lib/babl-0.1/u16.${SOEXT}
 lib/babl-0.1/u32.${SOEXT}
+${PLIST.arm}lib/babl-0.1/arm-neon-CIE.so
+${PLIST.arm}lib/babl-0.1/arm-neon-cairo.so
+${PLIST.arm}lib/babl-0.1/arm-neon-double.so
+${PLIST.arm}lib/babl-0.1/arm-neon-float.so
+${PLIST.arm}lib/babl-0.1/arm-neon-gegl-fixups.so
+${PLIST.arm}lib/babl-0.1/arm-neon-gggl-lies.so
+${PLIST.arm}lib/babl-0.1/arm-neon-gggl.so
+${PLIST.arm}lib/babl-0.1/arm-neon-grey.so
+${PLIST.arm}lib/babl-0.1/arm-neon-simple.so
+${PLIST.arm}lib/babl-0.1/arm-neon-u16.so
+${PLIST.arm}lib/babl-0.1/arm-neon-u32.so
+${PLIST.arm}lib/babl-0.1/arm-neon-ycbcr.so
 ${PLIST.x86_64}lib/babl-0.1/x86-64-v2-CIE.${SOEXT}
 ${PLIST.x86_64}lib/babl-0.1/x86-64-v2-cairo.${SOEXT}
 ${PLIST.x86_64}lib/babl-0.1/x86-64-v2-double.${SOEXT}
