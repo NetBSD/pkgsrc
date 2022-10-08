@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4900 2022/10/08 11:30:53 bsiegert Exp $
+$NetBSD: CHANGES-2022,v 1.4901 2022/10/08 13:21:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7414,3 +7414,6 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/gh to 2.17.0 [bsiegert 2022-10-08]
 	Added x11/xidle version 20220718 [bsiegert 2022-10-08]
 	Added security/signify version 0.10 [bsiegert 2022-10-08]
+	Added net/cppzmq version 4.8.1 [adam 2022-10-08]
+	Added textproc/py-pygccxml version 2.2.1 [adam 2022-10-08]
+	Added devel/py-cbor2 version 5.4.3 [adam 2022-10-08]
