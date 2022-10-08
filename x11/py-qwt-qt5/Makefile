@@ -1,25 +1,22 @@
-# $NetBSD: Makefile,v 1.6 2022/05/14 17:00:25 tnn Exp $
+# $NetBSD: Makefile,v 1.7 2022/10/08 13:26:55 adam Exp $
 
-VERSION=	1.02.00
+VERSION=	1.02.02
 DISTNAME=	pyqt-qwt-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-qwt-qt5-${DISTNAME:S/pyqt-qwt-//}
-PKGREVISION=	4
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=GauiStori/}
 GITHUB_PROJECT=	PyQt-Qwt
-GITHUB_TAG=	pyqt-qwt-${VERSION}
+GITHUB_TAG=	v${VERSION}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/GauiStori/PyQt-Qwt/
+HOMEPAGE=	https://github.com/GauiStori/PyQt-Qwt
 COMMENT=	Python PyQt wrapper for Qwt6
-#LICENSE=	# gnu-lgpl-v2.1 with exception (Qwt License)
+LICENSE=	gnu-lgpl-v2.1 # with exception (Qwt License)
 
 BUILD_DEPENDS+=	qt5-qtbase-[0-9]*:../../x11/qt5-qtbase
 
-WRKSRC=		${WRKDIR}/PyQt-Qwt-pyqt-qwt-${VERSION}
-
 CONFIGURE_ENV+=	QT_SELECT=qt5
-MAKE_ENV+=	PATH=${PATH}:${PREFIX}/qt5/bin
+MAKE_ENV+=	PATH=${PATH:Q}:${PREFIX}/qt5/bin
 INSTALL_ENV+=	INSTALL_ROOT=${DESTDIR}
 ALL_ENV+=	LFLAGS=${COMPILER_RPATH_FLAG}${PREFIX}/${BUILDLINK_LIBDIRS.qwt6-qt5}
 USE_LANGUAGES=	c++
@@ -36,7 +33,7 @@ do-configure:
 	  --sip=${PREFIX}/bin/sip${PYVERSSUFFIX}			\
 	  --qmake=${PREFIX}/qt5/bin/qmake				\
 	  --pyqt-sipdir=${PREFIX}/share/sip${PYVERSSUFFIX}/PyQt5	\
-	  --verbose
+	  --no-qwt-api --verbose
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -44,8 +41,7 @@ do-configure:
 # clang: error: invalid argument '-bundle' not allowed with '-dynamiclib'
 BUILDLINK_TRANSFORM+=	rm:-bundle
 post-install:
-	install_name_tool	\
-	        -id ${PREFIX}/${PYSITELIB}/PyQt5/Qwt.so	\
+	install_name_tool -id ${PREFIX}/${PYSITELIB}/PyQt5/Qwt.so	\
 	  ${DESTDIR}${PREFIX}/${PYSITELIB}/PyQt5/Qwt.so
 .endif
 
