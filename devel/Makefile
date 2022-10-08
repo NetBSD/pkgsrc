@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3807 2022/10/08 15:03:18 tonio Exp $
+# $NetBSD: Makefile,v 1.3808 2022/10/08 16:37:39 tonio Exp $
 #
 
 COMMENT=	Development utilities
@@ -3382,6 +3382,7 @@ SUBDIR+=	wabt
 SUBDIR+=	waf
 SUBDIR+=	wayland
 SUBDIR+=	wayland-protocols
+SUBDIR+=	why3
 SUBDIR+=	woboq_codebrowser
 SUBDIR+=	xa65
 SUBDIR+=	xdelta
