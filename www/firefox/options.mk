@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.71 2022/07/27 17:09:46 tnn Exp $
+# $NetBSD: options.mk,v 1.72 2022/10/08 21:18:55 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.firefox
 
@@ -7,9 +7,8 @@ PKG_SUPPORTED_OPTIONS+=	debug debug-info mozilla-jemalloc webrtc
 PKG_SUPPORTED_OPTIONS+=	dbus
 PKG_SUPPORTED_OPTIONS+=	alsa pulseaudio sunaudio jack
 
-PKG_SUGGESTED_OPTIONS+=	dbus
-
 .if ${OPSYS} == "Linux"
+PKG_SUGGESTED_OPTIONS+=	dbus
 PKG_SUGGESTED_OPTIONS+=	pulseaudio mozilla-jemalloc webrtc
 .endif
 
