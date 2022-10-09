@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22274 2022/10/08 21:19:50 ryoon Exp $
+$NetBSD: TODO,v 1.22275 2022/10/09 06:39:39 wiz Exp $
 
 Suggested new packages
 ======================
@@ -370,6 +370,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o GNUMail-1.2.2
 	o Gorm-1.2.26
 	o HElib-2.1.0
+	o ImageMagick-7.1.0.50
 	o ImageMagick6-6.9.12.8
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
@@ -588,6 +589,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o distccmon-gnome-3.3.5
 	o distccmon-gtk-3.3.5
 	o dmalloc-5.6.5
+	o dmenu-5.2
 	o dnsbl-milter-6.78
 	o doclifter-2.19
 	o drawpile-2.1.20
@@ -788,6 +790,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gprolog-1.5.0 [adds arm64 support]
 	o gps-17.0
 	o gradle-7.0
+	o grafx2-2.8.3137
 	o gramps5-5.1.4
 	o grantlee-5.0.0
 	o greed-4.2
@@ -941,6 +944,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libgfshare-2.0.0
 	o libgiigic-1.1.2
 	o libgnomekbd-3.4.0.2
+	o libgpg-error-1.46
 	o libiconv-1.16
 	o libisoburn-1.5.4
 	o libisofs-1.5.4
@@ -1246,6 +1250,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o policyd-weight-0.1.15.2
 	o polkit-121
 	o poppass-4.0.14
+	o poppler-22.10.0
 	o posh-0.14.1
 	o postal-0.72
 	o postgres_exporter-0.9.0
@@ -1293,6 +1298,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-input-pad-1.4.2
 	o py-keybinder-0.3.2
 	o py-llvmlite-0.39.0
+	o py-mercurial-6.2.3
 	o py-musicbrainz-0.7.4
 	o py-musicbrainz-ngs-0.7.1
 	o py-newt-0.52.21
@@ -1532,6 +1538,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o unicode-screensaver-0.5.2
 	o units-2.21
 	o upower-0.99.20 [switches to build with meson]
+	o uriparser-0.9.7
 	o urlgrabber-3.10.2
 	o userppp-030706
 	o userspace-rcu-0.12.2
@@ -1563,6 +1570,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o wbm-virtual-server-6.16
 	o wcalc-2.4
 	o wcslib-7.6
+	o webkit-gtk-2.38.0
 	o webmin-2.0
 	o websvn-2.6.0
 	o wgetpaste-2.30
@@ -1572,6 +1580,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o wine-7.0
 	o wine-devel-3.7
 	o wiredtiger-10.0.0
+	o wireshark-4.0.0
 	o wkhtmltopdf-0.12.6
 	o wmi-11
 	o wordwarvi-1.0.4
