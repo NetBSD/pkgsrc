@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2022/01/07 13:18:49 leot Exp $
+# $NetBSD: Makefile,v 1.22 2022/10/09 13:06:03 leot Exp $
 
-DISTNAME=	dwm-6.3
+DISTNAME=	dwm-6.4
 CATEGORIES=	wm
-MASTER_SITES=	http://dl.suckless.org/dwm/
+MASTER_SITES=	https://dl.suckless.org/dwm/
 
 MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	https://dwm.suckless.org/
