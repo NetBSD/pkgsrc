@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2022/08/24 13:26:52 taca Exp $
+@comment $NetBSD: PLIST,v 1.15 2022/10/09 07:21:45 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/msgpack/msgpack.${RUBY_DLEXT}
@@ -12,6 +12,7 @@ ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/appveyor.yml
 ${GEM_LIBDIR}/bench/bench.rb
+${GEM_LIBDIR}/bin/console
 ${GEM_LIBDIR}/doclib/msgpack.rb
 ${GEM_LIBDIR}/doclib/msgpack/buffer.rb
 ${GEM_LIBDIR}/doclib/msgpack/core_ext.rb
