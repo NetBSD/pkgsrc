@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4944 2022/10/09 15:33:25 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4945 2022/10/09 15:37:12 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7497,3 +7497,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated ham/hackrf to 2022.09.1 [mef 2022-10-09]
 	Updated devel/ruby-redmine42 to 4.2.8 [taca 2022-10-09]
 	Updated devel/ruby-redmine50 to 5.0.3 [taca 2022-10-09]
+	Removed devel/ruby-redmine41 [taca 2022-10-09]
