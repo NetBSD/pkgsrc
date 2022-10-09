@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4952 2022/10/09 18:51:02 rhialto Exp $
+$NetBSD: CHANGES-2022,v 1.4953 2022/10/09 19:21:07 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7505,3 +7505,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added sysutils/repofetch version 0.3.3 [pin 2022-10-09]
 	Added editors/bred version 0.2.2 [pin 2022-10-09]
 	Updated emulators/open-simh to 4.0.0.20221008 [rhialto 2022-10-09]
+	Updated graphics/simp to 3.2.0 [pin 2022-10-09]
