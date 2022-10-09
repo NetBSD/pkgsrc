@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.37 2022/05/26 15:20:09 mef Exp $
+@comment $NetBSD: PLIST,v 1.38 2022/10/09 07:56:09 adam Exp $
 bin/gnuradio-config-info
 bin/gr_filter_design
 include/gnuradio/analog/agc.h
@@ -61,6 +61,8 @@ include/gnuradio/blocks/annotator_alltoall.h
 include/gnuradio/blocks/annotator_raw.h
 include/gnuradio/blocks/api.h
 include/gnuradio/blocks/argmax.h
+include/gnuradio/blocks/blockinterleaver_xx.h
+include/gnuradio/blocks/blockinterleaving.h
 include/gnuradio/blocks/burst_tagger.h
 include/gnuradio/blocks/char_to_float.h
 include/gnuradio/blocks/char_to_short.h
@@ -100,6 +102,7 @@ include/gnuradio/blocks/float_to_int.h
 include/gnuradio/blocks/float_to_short.h
 include/gnuradio/blocks/float_to_uchar.h
 include/gnuradio/blocks/head.h
+include/gnuradio/blocks/host_buffer_copy.h
 include/gnuradio/blocks/int_to_float.h
 include/gnuradio/blocks/integrate.h
 include/gnuradio/blocks/interleave.h
@@ -370,26 +373,26 @@ lib/cmake/gnuradio/gnuradio-runtimeConfig.cmake
 lib/cmake/gnuradio/gnuradio-runtimeTargets-release.cmake
 lib/cmake/gnuradio/gnuradio-runtimeTargets.cmake
 lib/libgnuradio-analog.so
-lib/libgnuradio-analog.so.${PKGVER_MICRO}
 lib/libgnuradio-analog.so.${PKGVERSION}
+lib/libgnuradio-analog.so.${PKGVER_MICRO}
 lib/libgnuradio-audio.so
-lib/libgnuradio-audio.so.${PKGVER_MICRO}
 lib/libgnuradio-audio.so.${PKGVERSION}
+lib/libgnuradio-audio.so.${PKGVER_MICRO}
 lib/libgnuradio-blocks.so
-lib/libgnuradio-blocks.so.${PKGVER_MICRO}
 lib/libgnuradio-blocks.so.${PKGVERSION}
+lib/libgnuradio-blocks.so.${PKGVER_MICRO}
 lib/libgnuradio-fft.so
-lib/libgnuradio-fft.so.${PKGVER_MICRO}
 lib/libgnuradio-fft.so.${PKGVERSION}
+lib/libgnuradio-fft.so.${PKGVER_MICRO}
 lib/libgnuradio-filter.so
-lib/libgnuradio-filter.so.${PKGVER_MICRO}
 lib/libgnuradio-filter.so.${PKGVERSION}
+lib/libgnuradio-filter.so.${PKGVER_MICRO}
 lib/libgnuradio-pmt.so
-lib/libgnuradio-pmt.so.${PKGVER_MICRO}
 lib/libgnuradio-pmt.so.${PKGVERSION}
+lib/libgnuradio-pmt.so.${PKGVER_MICRO}
 lib/libgnuradio-runtime.so
-lib/libgnuradio-runtime.so.${PKGVER_MICRO}
 lib/libgnuradio-runtime.so.${PKGVERSION}
+lib/libgnuradio-runtime.so.${PKGVER_MICRO}
 lib/pkgconfig/gnuradio-analog.pc
 lib/pkgconfig/gnuradio-audio.pc
 lib/pkgconfig/gnuradio-blocks.pc

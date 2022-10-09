@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2022/05/26 15:20:08 mef Exp $
+@comment $NetBSD: PLIST,v 1.16 2022/10/09 07:56:09 adam Exp $
 bin/gnuradio-companion
 bin/grcc
 ${PYSITELIB}/gnuradio/grc/__init__.py
@@ -344,6 +344,7 @@ share/gnuradio/grc/blocks/blocks_add_xx.block.yml
 share/gnuradio/grc/blocks/blocks_and_const_xx.block.yml
 share/gnuradio/grc/blocks/blocks_and_xx.block.yml
 share/gnuradio/grc/blocks/blocks_argmax_xx.block.yml
+share/gnuradio/grc/blocks/blocks_blockinterleaver_xx.block.yml
 share/gnuradio/grc/blocks/blocks_burst_tagger.block.yml
 share/gnuradio/grc/blocks/blocks_char_to_float.block.yml
 share/gnuradio/grc/blocks/blocks_char_to_short.block.yml
@@ -509,6 +510,7 @@ share/gnuradio/grc/blocks/filter_root_raised_cosine_filter.block.yml
 share/gnuradio/grc/blocks/filter_single_pole_iir_filter_xx.block.yml
 share/gnuradio/grc/blocks/grc.tree.yml
 share/gnuradio/grc/blocks/import.block.yml
+share/gnuradio/grc/blocks/json_config.block.yml
 share/gnuradio/grc/blocks/message.domain.yml
 share/gnuradio/grc/blocks/note.block.yml
 share/gnuradio/grc/blocks/options.block.yml
@@ -529,6 +531,7 @@ share/gnuradio/grc/blocks/variable_rrc_filter_taps.block.yml
 share/gnuradio/grc/blocks/variable_struct.block.yml
 share/gnuradio/grc/blocks/xmlrpc_client.block.yml
 share/gnuradio/grc/blocks/xmlrpc_server.block.yml
+share/gnuradio/grc/blocks/yaml_config.block.yml
 share/gnuradio/grc/freedesktop/gnuradio-grc.desktop
 share/gnuradio/grc/freedesktop/gnuradio-grc.xml
 share/gnuradio/grc/freedesktop/grc-icon-128.png
@@ -547,5 +550,3 @@ share/icons/hicolor/48x48/apps/gnuradio-grc.png
 share/icons/hicolor/64x64/apps/gnuradio-grc.png
 share/metainfo/org.gnuradio.grc.metainfo.xml
 share/mime/packages/gnuradio-grc.xml
-share/gnuradio/grc/blocks/json_config.block.yml
-share/gnuradio/grc/blocks/yaml_config.block.yml

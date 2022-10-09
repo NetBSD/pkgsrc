@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.41 2022/05/26 15:20:09 mef Exp $
+# $NetBSD: Makefile.common,v 1.42 2022/10/09 07:56:09 adam Exp $
 # This Makefile fragment is included in the package Makefiles for
 # GNU Radio distributed packages (they all share common configure and build
 # settings).
@@ -22,7 +22,7 @@
 # used by ham/gnuradio-wavelet/Makefile
 # used by ham/gnuradio-zeromq/Makefile
 
-.include	"../../ham/gnuradio-core/version.mk"
+.include "../../ham/gnuradio-core/version.mk"
 
 DISTNAME?=	gnuradio-${VERSION}
 CATEGORIES+=	ham
@@ -36,22 +36,24 @@ MAINTAINER?=	pkgsrc-users@NetBSD.org
 HOMEPAGE?=	https://www.gnu.org/software/gnuradio/
 LICENSE=	gnu-gpl-v3
 
-USE_LANGUAGES=		c c++
-USE_TOOLS=		perl gmake cmake pkg-config
-USE_CMAKE=		yes
+USE_CMAKE=	yes
+USE_LANGUAGES=	c c++
+USE_TOOLS=	gmake perl pkg-config
 
-GCC_REQD+=		8
+GCC_REQD+=	8
 
+DEPENDS+=	${PYPKGPREFIX}-jsonschema-[0-9]*:../../textproc/py-jsonschema
 DEPENDS+=	${PYPKGPREFIX}-scipy-[0-9]*:../../math/py-scipy
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
+DEPENDS+=	${PYPKGPREFIX}-pygccxml-[0-9]*:../../textproc/py-pygccxml
 # for companion
+DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo
 DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 DEPENDS+=	${PYPKGPREFIX}-mako-[0-9]*:../../devel/py-mako
-DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
-DISTINFO_FILE=		${.CURDIR}/../../ham/gnuradio-core/distinfo
-PATCHDIR=		${.CURDIR}/../../ham/gnuradio-core/patches
+DISTINFO_FILE=	${.CURDIR}/../../ham/gnuradio-core/distinfo
+PATCHDIR=	${.CURDIR}/../../ham/gnuradio-core/patches
 
 # see CMakeLists.txt GR_PYTHON_MIN_VERSION
 PYTHON_VERSIONS_INCOMPATIBLE=	27 37 # py-scipy
@@ -136,26 +138,24 @@ pre-configure:
 do-install:
 	cd ${WRKSRC}/${BUILD_DIRS} && ${GMAKE} DESTDIR=${DESTDIR} install
 
-
-.include	"../../audio/gsm/buildlink3.mk"
-.include	"../../audio/jack/buildlink3.mk"
-.include	"../../audio/portaudio/buildlink3.mk"
-
-.include	"../../devel/boost-headers/buildlink3.mk"
-.include	"../../devel/boost-libs/buildlink3.mk"
-.include	"../../devel/cppunit/buildlink3.mk"
-.include	"../../devel/gmp/buildlink3.mk"
-.include	"../../devel/spdlog/buildlink3.mk"
+.include "../../audio/gsm/buildlink3.mk"
+.include "../../audio/jack/buildlink3.mk"
+.include "../../audio/portaudio/buildlink3.mk"
+.include "../../devel/boost-headers/buildlink3.mk"
+.include "../../devel/boost-libs/buildlink3.mk"
+.include "../../devel/cppunit/buildlink3.mk"
+.include "../../devel/gmp/buildlink3.mk"
+.include "../../devel/spdlog/buildlink3.mk"
 BUILDLINK_API_DEPENDS.py-pybind11+=	${PYPKGPREFIX}-pybind11>=2.6.0
-.include	"../../devel/py-pybind11/buildlink3.mk"
-.include	"../../graphics/cairo/buildlink3.mk"
-.include	"../../graphics/cairo-gobject/buildlink3.mk"
+.include "../../devel/py-pybind11/buildlink3.mk"
+.include "../../graphics/cairo/buildlink3.mk"
+.include "../../graphics/cairo-gobject/buildlink3.mk"
 # FIXME should be optional
-.include	"../../lang/libunwind/buildlink3.mk"
-.include	"../../lang/python/application.mk"
-.include	"../../math/py-numpy/buildlink3.mk"
-.include	"../../math/fftw/buildlink3.mk"
-.include	"../../math/gsl/buildlink3.mk"
-.include	"../../math/volk/buildlink3.mk"
-.include	"../../textproc/icu/buildlink3.mk"
-.include	"../../x11/gtk3/buildlink3.mk"
+.include "../../lang/libunwind/buildlink3.mk"
+.include "../../lang/python/application.mk"
+.include "../../math/fftw/buildlink3.mk"
+.include "../../math/gsl/buildlink3.mk"
+.include "../../math/py-numpy/buildlink3.mk"
+.include "../../math/volk/buildlink3.mk"
+.include "../../textproc/icu/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
