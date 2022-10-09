@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4913 2022/10/09 07:22:03 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4914 2022/10/09 07:26:43 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7445,3 +7445,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/ruby-bindata to 2.4.12 [taca 2022-10-09]
 	Updated devel/ruby-mocha to 1.15.0 [taca 2022-10-09]
 	Updated devel/ruby-msgpack to 1.6.0 [taca 2022-10-09]
+	Updated devel/ruby-red-datasets to 0.1.5 [taca 2022-10-09]
