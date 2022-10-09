@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4910 2022/10/09 07:03:04 tonio Exp $
+$NetBSD: CHANGES-2022,v 1.4911 2022/10/09 07:17:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7442,3 +7442,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated cross/mingw-w64 to 10.0.0 [ryoon 2022-10-09]
 	Updated devel/why3 to 1.5.1nb1 [tonio 2022-10-09]
 	Updated devel/frama-c to 25.0 [tonio 2022-10-09]
+	Updated devel/ruby-bindata to 2.4.12 [taca 2022-10-09]
