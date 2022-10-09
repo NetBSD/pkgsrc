@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4951 2022/10/09 16:13:24 pin Exp $
+$NetBSD: CHANGES-2022,v 1.4952 2022/10/09 18:51:02 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7504,3 +7504,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/hackernews-tui to 0.11.0 [pin 2022-10-09]
 	Added sysutils/repofetch version 0.3.3 [pin 2022-10-09]
 	Added editors/bred version 0.2.2 [pin 2022-10-09]
+	Updated emulators/open-simh to 4.0.0.20221008 [rhialto 2022-10-09]
