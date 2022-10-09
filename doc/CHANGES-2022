@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4938 2022/10/09 12:41:02 leot Exp $
+$NetBSD: CHANGES-2022,v 1.4939 2022/10/09 12:52:26 leot Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7491,3 +7491,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/ruby-html-proofer to 4.4.3 [taca 2022-10-09]
 	Updated x11/tabbed to 0.7 [leot 2022-10-09]
 	Updated x11/st-term to 0.9 [leot 2022-10-09]
+	Updated x11/slock to 1.5 [leot 2022-10-09]
