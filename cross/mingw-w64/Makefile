@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2021/08/27 14:11:06 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2022/10/09 03:01:45 ryoon Exp $
 
-DISTNAME=		mingw-w64-9.0.0
+DISTNAME=		mingw-w64-10.0.0
 CATEGORIES=		cross
 MASTER_SITES=		# empty
 DISTFILES=		# empty
