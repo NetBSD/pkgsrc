@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2021/08/22 13:48:10 taca Exp $
+@comment $NetBSD: PLIST,v 1.29 2022/10/09 07:20:04 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gemtest
 ${GEM_LIBDIR}/.github/FUNDING.yml
@@ -63,7 +63,6 @@ ${GEM_LIBDIR}/lib/mocha/integration/test_unit/gem_version_201_to_202.rb
 ${GEM_LIBDIR}/lib/mocha/integration/test_unit/gem_version_203_to_220.rb
 ${GEM_LIBDIR}/lib/mocha/integration/test_unit/gem_version_230_to_250.rb
 ${GEM_LIBDIR}/lib/mocha/integration/test_unit/nothing.rb
-${GEM_LIBDIR}/lib/mocha/integration/test_unit/ruby_version_185_and_below.rb
 ${GEM_LIBDIR}/lib/mocha/integration/test_unit/ruby_version_186_and_above.rb
 ${GEM_LIBDIR}/lib/mocha/invocation.rb
 ${GEM_LIBDIR}/lib/mocha/is_a.rb
@@ -107,7 +106,6 @@ ${GEM_LIBDIR}/lib/mocha/ruby_version.rb
 ${GEM_LIBDIR}/lib/mocha/sequence.rb
 ${GEM_LIBDIR}/lib/mocha/setup.rb
 ${GEM_LIBDIR}/lib/mocha/single_return_value.rb
-${GEM_LIBDIR}/lib/mocha/singleton_class.rb
 ${GEM_LIBDIR}/lib/mocha/state_machine.rb
 ${GEM_LIBDIR}/lib/mocha/stubbed_method.rb
 ${GEM_LIBDIR}/lib/mocha/stubbing_error.rb
