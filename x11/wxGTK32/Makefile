@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2022/10/06 19:35:04 adam Exp $
+# $NetBSD: Makefile,v 1.19 2022/10/09 12:45:08 rhialto Exp $
 
 DISTNAME=	wxWidgets-3.2.1
 PKGNAME=	${DISTNAME:S/wxWidgets/wxGTK32/}
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wxWidgets/}
 GITHUB_PROJECT=	wxWidgets
@@ -39,7 +40,9 @@ REPLACE_SH=		wx-config.in wx-config-inplace.in
 # and remove support for building with GNU_CONFIGURE
 PKG_OPTIONS_VAR=	PKG_OPTIONS.wxGTK32
 PKG_SUPPORTED_OPTIONS=	cmake
-PKG_SUGGESTED_OPTIONS=	cmake
+# broken: https://github.com/wxWidgets/wxWidgets/issues/22841
+#         https://github.com/wxWidgets/wxWidgets/issues/22858
+#PKG_SUGGESTED_OPTIONS=	cmake
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mcmake)
