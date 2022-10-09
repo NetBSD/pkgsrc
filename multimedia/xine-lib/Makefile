@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.185 2022/09/27 20:58:21 wiz Exp $
+# $NetBSD: Makefile,v 1.186 2022/10/09 07:45:00 wiz Exp $
 
-PKGREVISION= 8
+PKGREVISION= 9
 .include "Makefile.common"
 
 COMMENT=		Multimedia player library
@@ -27,6 +27,8 @@ CONFIGURE_ARGS+=	--enable-vdpau
 .endif
 
 CONFIGURE_ARGS+=	--without-esound
+CONFIGURE_ARGS+=	--with-fontconfig
+CONFIGURE_ARGS+=	--with-freetype
 
 SUBST_CLASSES+=		oss
 SUBST_STAGE.oss=	pre-configure
