@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.200 2022/09/26 13:37:32 adam Exp $
+$NetBSD: distinfo,v 1.201 2022/10/09 12:06:05 rhialto Exp $
 
 BLAKE2s (cmake-3.24.2.tar.gz) = b863499a7acf9e8d88ed73bc34c5df8232f9df3461b6de3488541452fafab9af
 SHA512 (cmake-3.24.2.tar.gz) = 6f0e8e29bf0336f555ba72c4d83f35d820f8a5159cc999d48795dc57a6627b4ee3966dda84ca97d39906e35dd476ea00cf80023672cc0fad862e2996194c0674
@@ -10,6 +10,7 @@ SHA1 (patch-Modules_FindBLAS.cmake) = 08bd13da02b78c16af5ee0bf47e2fd1c515925b1
 SHA1 (patch-Modules_FindCurses.cmake) = 98cac805a6abafcfb8b61e441b50a1d6aec27ad0
 SHA1 (patch-Modules_FindGTK2.cmake) = 51b7520d35fdec2a7bfcf494fe35ce0e3863e4ee
 SHA1 (patch-Modules_FindLAPACK.cmake) = ded20237fdc8b3e9c488102367c0ee33713c21be
+SHA1 (patch-Modules_FindOpenGL.cmake) = 365d422b50a1b1279cab04a8fd11e05633f52833
 SHA1 (patch-Modules_FindPythonInterp.cmake) = d1b39bdcd654f2a4fc63463cd20de656cce3cf8f
 SHA1 (patch-Modules_FindPythonLibs.cmake) = b5cedc6a2354beaf08e06d416c150154a7dc1f05
 SHA1 (patch-Modules_FindPython_Support.cmake) = aaec7767cad795dd269c851bd110ccefbfc87eb3
