@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.7 2021/08/27 14:11:07 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.8 2022/10/09 02:37:03 ryoon Exp $
 #
 # used by cross/mingw-w64-i686-crt/Makefile
 # used by cross/mingw-w64-x86_64-crt/Makefile
 
-DISTNAME=		mingw-w64-v9.0.0
+DISTNAME=		mingw-w64-v10.0.0
 CATEGORIES=		cross
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=mingw-w64/}
 EXTRACT_SUFX=		.tar.bz2
@@ -28,6 +28,7 @@ GNU_CONFIGURE_PREFIX=	${PREFIX}/cross/${MINGW_TARGET}/mingw
 CONFIGURE_ARGS+=	--host=${MINGW_TARGET}
 CONFIGURE_ARGS+=	--with-sysroot=${PREFIX}/cross/${MINGW_TARGET}
 CONFIGURE_ARGS+=	--enable-wildcard
+CONFIGURE_ARGS+=	--with-default-msvcrt=ucrt
 CONFIGURE_ENV+=		ac_cv_prog_CC=${MINGW_TARGET}-gcc
 
 PREPEND_PATH+=		${PREFIX}/cross/${MINGW_TARGET}/bin
