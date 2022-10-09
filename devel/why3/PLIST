@@ -1,6 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1 2022/10/08 16:36:47 tonio Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/10/09 06:46:57 tonio Exp $
 bin/isabelle_client
 bin/why3
+lib/ocaml/site-lib/why3/META
+lib/ocaml/site-lib/why3/why3.a
+lib/ocaml/site-lib/why3/why3.cmi
+lib/ocaml/site-lib/why3/why3.cmt
+lib/ocaml/site-lib/why3/why3.cmx
+lib/ocaml/site-lib/why3/why3.cmxa
+lib/ocaml/site-lib/why3/why3.cmxs
 lib/why3/commands/why3config.cmxs
 lib/why3/commands/why3doc.cmxs
 lib/why3/commands/why3execute.cmxs
