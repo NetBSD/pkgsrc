@@ -1,0 +1,17 @@
+$NetBSD: patch-Makefile,v 1.1 2022/10/09 12:32:03 leot Exp $
+
+Avoid to install xembed(1).
+
+Accidentally not present in tabbed-0.7 distfile.
+
+--- Makefile.orig	2022-10-04 17:39:51.000000000 +0000
++++ Makefile
+@@ -51,8 +51,6 @@ install: all
+ 	@mkdir -p "${DESTDIR}${MANPREFIX}/man1"
+ 	@sed "s/VERSION/${VERSION}/g" < tabbed.1 > "${DESTDIR}${MANPREFIX}/man1/tabbed.1"
+ 	@chmod 644 "${DESTDIR}${MANPREFIX}/man1/tabbed.1"
+-	@sed "s/VERSION/${VERSION}/g" < xembed.1 > "${DESTDIR}${MANPREFIX}/man1/xembed.1"
+-	@chmod 644 "${DESTDIR}${MANPREFIX}/man1/xembed.1"
+ 
+ uninstall:
+ 	@echo removing executable files from ${DESTDIR}${PREFIX}/bin
