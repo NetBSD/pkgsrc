@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2022/09/11 12:51:33 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/10/09 18:50:44 rhialto Exp $
 
 DISTNAME=	open-simh-4.0.0
-PKGNAME=	open-simh-4.0.0.20220814
-PKGREVISION=	1
+PKGNAME=	open-simh-4.0.0.20221008
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=open-simh/}
 GITHUB_PROJECT=	simh
-GITHUB_TAG=	d862d024ea5f6f0cc915e7347a199bfce2a5ea96
+GITHUB_TAG=	3a7ec4788f919757e85b74552d2d193149ff4442
 
 MAINTAINER=	rhialto@NetBSD.org
 HOMEPAGE=	http://simh.trailing-edge.com/
@@ -50,12 +49,14 @@ INSTALLATION_DIRS=	bin share/simh share/simh/TX-0 share/doc/simh
 MAKE_FILE=		makefile
 INCLUDES=		${PREFIX:Q}/include:\
 			${BUILDLINK_PREFIX.SDL2:Q}/include/SDL2:\
+			${BUILDLINK_PREFIX.editline:Q}/include:\
 			${BUILDLINK_PREFIX.libpcap:Q}/include/pcap:\
 			${BUILDLINK_PREFIX.pcre:Q}/include/pcre:\
 			${BUILDLINK_PREFIX.png:Q}/include:\
 			/usr/include
 LIBRARIES=		${PREFIX:Q}/lib:\
 			${BUILDLINK_PREFIX.SDL2:Q}/lib${LIBABISUFFIX}:\
+			${BUILDLINK_PREFIX.editline:Q}/lib${LIBABISUFFIX}:\
 			${BUILDLINK_PREFIX.libpcap:Q}/lib${LIBABISUFFIX}:\
 			${BUILDLINK_PREFIX.pcre:Q}/lib${LIBABISUFFIX}:\
 			${BUILDLINK_PREFIX.png:Q}/lib${LIBABISUFFIX}:\
@@ -73,15 +74,15 @@ post-extract:
 	${MKDIR} ${WRKSRC}/BIN
 
 do-install:
-	(cd ${WRKSRC}/BIN && for BIN in *; do				\
-		if [ -f $$BIN ] ; then					\
+	(cd ${WRKSRC}/BIN && for BIN in *; do \
+		if [ -f $$BIN ] ; then \
 		${INSTALL_PROGRAM} $$BIN ${DESTDIR}${PREFIX}/bin/simh-$$BIN; \
-		fi ;							\
+		fi ; \
 	done)
 
 	${INSTALL_DATA} ${WRKSRC}/TX-0/*.bin ${DESTDIR}${PREFIX}/share/simh/TX-0
-	(cd ${WRKSRC} && for TXT in *.txt */*.txt; do			\
-		${INSTALL_DATA} "$$TXT" ${DESTDIR}${PREFIX}/share/doc/simh;		\
+	(cd ${WRKSRC} && for TXT in *.txt */*.txt; do \
+		${INSTALL_DATA} "$$TXT" ${DESTDIR}${PREFIX}/share/doc/simh; \
 	done)
 
 # Note: tests require shm (/var/shm is a tmpfs) for the uc15.
@@ -90,8 +91,11 @@ do-test:
 	cd ${WRKSRC} && ${TEST_MAKE_CMD} clean
 	cd ${WRKSRC} && ${TEST_MAKE_CMD} all
 
+USE_BUILTIN.editline=	no	# simh uses <editline/readline.h>
+
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../fonts/SDL2_ttf/buildlink3.mk"
+.include "../../devel/editline/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
