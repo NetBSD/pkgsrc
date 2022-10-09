@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2022/06/30 11:18:30 nia Exp $
+# $NetBSD: Makefile,v 1.13 2022/10/09 13:28:26 mef Exp $
 
-DISTNAME=		hackrf-2021.03.1
-PKGREVISION=		1
+DISTNAME=		hackrf-2022.09.1
 CATEGORIES=		ham
 MASTER_SITES=		${MASTER_SITE_GITHUB:=mossmann/}
 GITHUB_RELEASE=		v${PKGVERSION_NOREV}
@@ -15,7 +14,7 @@ LICENSE=		gnu-gpl-v2
 
 USE_LANGUAGES=		c c++
 USE_CMAKE=		yes
-USE_TOOLS=		pkg-config
+USE_TOOLS=		pkg-config tar
 
 # Suppress warning for developer
 CMAKE_ARGS+=		-Wno-dev
@@ -36,7 +35,7 @@ pre-patch:
 post-install:
 #	(${MKDIR} ${DESTDIR}${PREFIX}/share/hackerRF )
 	(cd ${WRKSRC}; tar cf - \
-	COPYING  RELEASENOTES Readme.md TRADEMARK doc firmware firmware-bin hardware |\
+	COPYING  RELEASENOTES Readme.md doc firmware firmware-bin hardware |\
 	(cd ${DESTDIR}${PREFIX}/share/hackerRF ; tar xf - ) )
 
 .include "../../lang/python/application.mk"
