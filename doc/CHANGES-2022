@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4947 2022/10/09 16:03:06 pin Exp $
+$NetBSD: CHANGES-2022,v 1.4948 2022/10/09 16:04:33 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7500,3 +7500,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed devel/ruby-redmine41 [taca 2022-10-09]
 	Updated sysutils/broot to 1.16.0 [pin 2022-10-09]
 	Updated textproc/csview to 1.2.2 [pin 2022-10-09]
+	Updated editors/featherpad to 1.3.3 [pin 2022-10-09]
