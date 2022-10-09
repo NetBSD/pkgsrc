@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2016/11/23 08:20:21 leot Exp $
+# $NetBSD: Makefile,v 1.12 2022/10/09 12:52:21 leot Exp $
 
-DISTNAME=		slock-1.4
+DISTNAME=		slock-1.5
 CATEGORIES=		x11
-MASTER_SITES=		http://dl.suckless.org/tools/
+MASTER_SITES=		https://dl.suckless.org/tools/
 
 MAINTAINER=		reed@reedmedia.net
-HOMEPAGE=		http://tools.suckless.org/slock
+HOMEPAGE=		https://tools.suckless.org/slock
 COMMENT=		Simple X11 screen locker
 LICENSE=		mit
 
