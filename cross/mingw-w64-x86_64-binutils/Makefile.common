@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.10 2021/08/27 14:11:07 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.11 2022/10/09 02:37:03 ryoon Exp $
 #
 # used by cross/mingw-w64-x86_64-binutils/Makefile
 # used by cross/mingw-w64-i686-binutils/Makefile
 
-DISTNAME=	binutils-2.37
+DISTNAME=	binutils-2.39
 CATEGORIES=	cross
 MASTER_SITES=	${MASTER_SITE_GNU:=binutils/}
 EXTRACT_SUFX=	.tar.bz2
@@ -21,6 +21,9 @@ GNU_CONFIGURE_STRICT=	no # several sub-configures know --enable-nls
 GNU_CONFIGURE_PREFIX=	${PREFIX}/cross/${MINGW_TARGET}
 CONFIGURE_ARGS+=	--target=${MINGW_TARGET}
 CONFIGURE_ARGS+=	--disable-nls
+CONFIGURE_ARGS+=	--enable-lto
+CONFIGURE_ARGS+=	--enable-plugins
+CONFIGURE_ARGS+=	--enable-deterministic-archives
 INFO_FILES=		yes
 
 BUILDLINK_TRANSFORM+=	rm:-Werror
