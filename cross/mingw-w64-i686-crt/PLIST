@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2021/08/27 14:11:07 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/10/09 02:37:02 ryoon Exp $
 cross/i686-w64-mingw32/mingw/include/agtctl_i.c
 cross/i686-w64-mingw32/mingw/include/agtsvr_i.c
 cross/i686-w64-mingw32/mingw/include/cdoex_i.c
@@ -39,6 +39,7 @@ cross/i686-w64-mingw32/mingw/lib/libavicap32.a
 cross/i686-w64-mingw32/mingw/lib/libavifil32.a
 cross/i686-w64-mingw32/mingw/lib/libavrt.a
 cross/i686-w64-mingw32/mingw/lib/libbcrypt.a
+cross/i686-w64-mingw32/mingw/lib/libbits.a
 cross/i686-w64-mingw32/mingw/lib/libbluetoothapis.a
 cross/i686-w64-mingw32/mingw/lib/libbootvid.a
 cross/i686-w64-mingw32/mingw/lib/libbrowcli.a
@@ -172,6 +173,7 @@ cross/i686-w64-mingw32/mingw/lib/libesent.a
 cross/i686-w64-mingw32/mingw/lib/libevr.a
 cross/i686-w64-mingw32/mingw/lib/libfaultrep.a
 cross/i686-w64-mingw32/mingw/lib/libfeclient.a
+cross/i686-w64-mingw32/mingw/lib/libfontsub.a
 cross/i686-w64-mingw32/mingw/lib/libfwpuclnt.a
 cross/i686-w64-mingw32/mingw/lib/libgdi32.a
 cross/i686-w64-mingw32/mingw/lib/libgdiplus.a
@@ -248,11 +250,16 @@ cross/i686-w64-mingw32/mingw/lib/libmsvcr110.a
 cross/i686-w64-mingw32/mingw/lib/libmsvcr120.a
 cross/i686-w64-mingw32/mingw/lib/libmsvcr120_app.a
 cross/i686-w64-mingw32/mingw/lib/libmsvcr120d.a
+cross/i686-w64-mingw32/mingw/lib/libmsvcr70.a
+cross/i686-w64-mingw32/mingw/lib/libmsvcr71.a
 cross/i686-w64-mingw32/mingw/lib/libmsvcr80.a
 cross/i686-w64-mingw32/mingw/lib/libmsvcr90.a
 cross/i686-w64-mingw32/mingw/lib/libmsvcr90d.a
 cross/i686-w64-mingw32/mingw/lib/libmsvcrt-os.a
 cross/i686-w64-mingw32/mingw/lib/libmsvcrt.a
+cross/i686-w64-mingw32/mingw/lib/libmsvcrt10.a
+cross/i686-w64-mingw32/mingw/lib/libmsvcrt20.a
+cross/i686-w64-mingw32/mingw/lib/libmsvcrt40.a
 cross/i686-w64-mingw32/mingw/lib/libmsvfw32.a
 cross/i686-w64-mingw32/mingw/lib/libmswsock.a
 cross/i686-w64-mingw32/mingw/lib/libncrypt.a
@@ -270,6 +277,7 @@ cross/i686-w64-mingw32/mingw/lib/libntdllcrt.a
 cross/i686-w64-mingw32/mingw/lib/libntdsapi.a
 cross/i686-w64-mingw32/mingw/lib/libntmsapi.a
 cross/i686-w64-mingw32/mingw/lib/libntoskrnl.a
+cross/i686-w64-mingw32/mingw/lib/libntquery.a
 cross/i686-w64-mingw32/mingw/lib/libodbc32.a
 cross/i686-w64-mingw32/mingw/lib/libodbccp32.a
 cross/i686-w64-mingw32/mingw/lib/libole32.a
@@ -297,6 +305,7 @@ cross/i686-w64-mingw32/mingw/lib/libprntvpt.a
 cross/i686-w64-mingw32/mingw/lib/libpropsys.a
 cross/i686-w64-mingw32/mingw/lib/libpsapi.a
 cross/i686-w64-mingw32/mingw/lib/libquartz.a
+cross/i686-w64-mingw32/mingw/lib/libquery.a
 cross/i686-w64-mingw32/mingw/lib/libqutil.a
 cross/i686-w64-mingw32/mingw/lib/libqwave.a
 cross/i686-w64-mingw32/mingw/lib/librapi.a
@@ -376,6 +385,7 @@ cross/i686-w64-mingw32/mingw/lib/libwdsimage.a
 cross/i686-w64-mingw32/mingw/lib/libwdstptc.a
 cross/i686-w64-mingw32/mingw/lib/libwdsupgcompl.a
 cross/i686-w64-mingw32/mingw/lib/libwdsutil.a
+cross/i686-w64-mingw32/mingw/lib/libwebauthn.a
 cross/i686-w64-mingw32/mingw/lib/libwebsocket.a
 cross/i686-w64-mingw32/mingw/lib/libwecapi.a
 cross/i686-w64-mingw32/mingw/lib/libwer.a

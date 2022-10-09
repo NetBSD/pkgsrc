@@ -1,19 +1,19 @@
-@comment $NetBSD: PLIST,v 1.4 2021/08/27 14:11:07 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/10/09 02:37:02 ryoon Exp $
 cross/i686-w64-mingw32-bootstrap/bin/i686-w64-mingw32-cpp
 cross/i686-w64-mingw32-bootstrap/bin/i686-w64-mingw32-gcc
 cross/i686-w64-mingw32-bootstrap/bin/i686-w64-mingw32-gcc-${PKGVERSION}
 cross/i686-w64-mingw32-bootstrap/bin/i686-w64-mingw32-gcc-ar
 cross/i686-w64-mingw32-bootstrap/bin/i686-w64-mingw32-gcc-nm
 cross/i686-w64-mingw32-bootstrap/bin/i686-w64-mingw32-gcc-ranlib
-cross/i686-w64-mingw32-bootstrap/bin/i686-w64-mingw32-gcov
-cross/i686-w64-mingw32-bootstrap/bin/i686-w64-mingw32-gcov-dump
-cross/i686-w64-mingw32-bootstrap/bin/i686-w64-mingw32-gcov-tool
 cross/i686-w64-mingw32-bootstrap/bin/i686-w64-mingw32-lto-dump
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include-fixed/README
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include-fixed/limits.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include-fixed/syslimits.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/adxintrin.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/ammintrin.h
+cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/amxbf16intrin.h
+cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/amxint8intrin.h
+cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/amxtileintrin.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/avx2intrin.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/avx5124fmapsintrin.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/avx5124vnniwintrin.h
@@ -25,6 +25,8 @@ cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/avx512dqintrin.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/avx512erintrin.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/avx512fintrin.h
+cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/avx512fp16intrin.h
+cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/avx512fp16vlintrin.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/avx512ifmaintrin.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/avx512ifmavlintrin.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/avx512pfintrin.h
@@ -42,6 +44,7 @@ cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/avx512vpopcntdqintrin.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/avx512vpopcntdqvlintrin.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/avxintrin.h
+cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/avxvnniintrin.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/bmi2intrin.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/bmiintrin.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/bmmintrin.h
@@ -61,15 +64,18 @@ cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/fmaintrin.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/fxsrintrin.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/gfniintrin.h
+cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/hresetintrin.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/ia32intrin.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/immintrin.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/iso646.h
+cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/keylockerintrin.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/lwpintrin.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/lzcntintrin.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/mm3dnow.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/mm_malloc.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/mmintrin.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/movdirintrin.h
+cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/mwaitintrin.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/mwaitxintrin.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/nmmintrin.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/pconfigintrin.h
@@ -79,6 +85,7 @@ cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/prfchwintrin.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/rdseedintrin.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/rtmintrin.h
+cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/serializeintrin.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/sgxintrin.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/shaintrin.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/smmintrin.h
@@ -94,12 +101,15 @@ cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/tbmintrin.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/tgmath.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/tmmintrin.h
+cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/tsxldtrkintrin.h
+cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/uintrintrin.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/vaesintrin.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/varargs.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/vpclmulqdqintrin.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/waitpkgintrin.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/wbnoinvdintrin.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/wmmintrin.h
+cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/x86gprintrin.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/x86intrin.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/xmmintrin.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/xopintrin.h
@@ -124,6 +134,7 @@ cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/i
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/ansidecl.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/array-traits.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/asan.h
+cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/attr-fnspec.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/attribs.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/auto-host.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/auto-profile.h
@@ -132,7 +143,6 @@ cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/i
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/basic-block.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/bb-reorder.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/bitmap.h
-cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/brig-builtins.def
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/builtin-attrs.def
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/builtin-types.def
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/builtins.def
@@ -169,6 +179,7 @@ cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/i
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/config/i386/bsd.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/config/i386/cygming.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/config/i386/gas.h
+cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/config/i386/i386-isa.def
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/config/i386/i386-opts.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/config/i386/i386-protos.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/config/i386/i386.h
@@ -192,6 +203,7 @@ cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/i
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/cppdefault.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/cpplib.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/cselib.h
+cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/ctfc.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/d/d-tree.def
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/data-streamer.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/dbgcnt.def
@@ -208,6 +220,7 @@ cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/i
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/diagnostic-event-id.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/diagnostic-metadata.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/diagnostic-path.h
+cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/diagnostic-spec.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/diagnostic-url.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/diagnostic.def
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/diagnostic.h
@@ -219,6 +232,7 @@ cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/i
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/dump-context.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/dumpfile.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/dwarf2asm.h
+cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/dwarf2ctf.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/dwarf2out.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/edit-context.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/emit-rtl.h
@@ -254,15 +268,25 @@ cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/i
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/gensupport.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/ggc-internal.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/ggc.h
+cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/gimple-array-bounds.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/gimple-builder.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/gimple-expr.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/gimple-fold.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/gimple-iterator.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/gimple-low.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/gimple-match.h
+cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/gimple-predicate-analysis.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/gimple-predict.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/gimple-pretty-print.h
+cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/gimple-range-cache.h
+cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/gimple-range-edge.h
+cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/gimple-range-fold.h
+cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/gimple-range-gori.h
+cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/gimple-range-path.h
+cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/gimple-range-trace.h
+cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/gimple-range.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/gimple-ssa-evrp-analyze.h
+cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/gimple-ssa-warn-access.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/gimple-ssa-warn-restrict.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/gimple-ssa.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/gimple-streamer.h
@@ -294,9 +318,6 @@ cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/i
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/hooks.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/hosthooks-def.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/hosthooks.h
-cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/hsa-brig-format.h
-cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/hsa-builtins.def
-cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/hsa-common.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/hw-doloop.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/hwint.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/ifcvt.h
@@ -321,6 +342,8 @@ cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/i
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/ipa-icf-gimple.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/ipa-icf.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/ipa-inline.h
+cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/ipa-modref-tree.h
+cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/ipa-modref.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/ipa-param-manipulation.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/ipa-predicate.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/ipa-prop.h
@@ -330,6 +353,7 @@ cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/i
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/ira-int.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/ira.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/is-a.h
+cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/iterator-utils.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/json.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/langhooks-def.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/langhooks.h
@@ -354,12 +378,13 @@ cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/i
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/memmodel.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/memory-block.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/mode-classes.def
+cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/mux-utils.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/objc/objc-tree.def
+cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/obstack-utils.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/obstack.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/omp-builtins.def
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/omp-expand.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/omp-general.h
-cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/omp-grid.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/omp-low.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/omp-offload.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/omp-simd-clone.h
@@ -384,6 +409,7 @@ cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/i
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/plugin-version.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/plugin.def
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/plugin.h
+cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/pointer-query.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/poly-int-types.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/poly-int.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/predict.def
@@ -410,8 +436,10 @@ cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/i
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/resource.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/rtl-error.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/rtl-iter.h
+cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/rtl-ssa.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/rtl.def
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/rtl.h
+cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/rtlanal.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/rtlhash.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/rtlhooks-def.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/rtx-vector-builder.h
@@ -433,6 +461,7 @@ cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/i
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/sparseset.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/spellcheck-tree.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/spellcheck.h
+cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/splay-tree-utils.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/splay-tree.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/sreal.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/ssa-iterators.h
@@ -445,6 +474,8 @@ cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/i
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/stringpool.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/substring-locations.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/symbol-summary.h
+cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/symtab-clones.h
+cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/symtab-thunks.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/symtab.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/sync-builtins.def
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/system.h
@@ -490,6 +521,7 @@ cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/i
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/tree-scalar-evolution.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/tree-sra.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/tree-ssa-address.h
+cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/tree-ssa-alias-compare.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/tree-ssa-alias.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/tree-ssa-ccp.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/tree-ssa-coalesce.h
@@ -501,8 +533,10 @@ cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/i
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/tree-ssa-loop-manip.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/tree-ssa-loop-niter.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/tree-ssa-loop.h
+cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/tree-ssa-math-opts.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/tree-ssa-operands.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/tree-ssa-propagate.h
+cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/tree-ssa-reassoc.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/tree-ssa-sccvn.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/tree-ssa-scopedtables.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/tree-ssa-strlen.h
@@ -527,8 +561,12 @@ cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/i
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/typed-splay-tree.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/ubsan.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/valtrack.h
+cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/value-pointer-equiv.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/value-prof.h
+cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/value-query.h
+cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/value-range-equiv.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/value-range.h
+cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/value-relation.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/varasm.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/vec-perm-indices.h
 cross/i686-w64-mingw32-bootstrap/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/vec.h

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.9 2021/08/27 14:11:08 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.10 2022/10/09 02:37:03 ryoon Exp $
 #
 # used by cross/mingw-w64-i686-gcc/Makefile
 # used by cross/mingw-w64-x86_64-gcc/Makefile
 
-DISTNAME=		gcc-10.3.0
+DISTNAME=		gcc-12.2.0
 CATEGORIES=		cross
 MASTER_SITES=		${MASTER_SITE_GNU:=gcc/gcc-${PKGVERSION_NOREV}/}
 EXTRACT_SUFX=		.tar.xz
@@ -37,6 +37,7 @@ CONFIGURE_ARGS+=	--enable-fully-dynamic-string
 CONFIGURE_ARGS+=	--enable-libstdcxx-time=yes
 CONFIGURE_ARGS+=	--disable-dw2-exceptions
 CONFIGURE_ARGS+=	--disable-multilib
+CONFIGURE_ARGS+=	--disable-gcov # sys/mman.h not found errors
 
 PREPEND_PATH+=		${PREFIX}/cross/${MINGW_TARGET}/bin
 PREPEND_PATH+=		${PREFIX}/cross/${MINGW_TARGET}-bootstrap/bin
@@ -44,6 +45,7 @@ PREPEND_PATH+=		${PREFIX}/cross/${MINGW_TARGET}-bootstrap/bin
 INFO_FILES=		yes
 
 CHECK_PORTABILITY_SKIP+=	contrib/*
+CHECK_PORTABILITY_SKIP+=	gcc/config/nvptx/gen-opt.sh
 
 pre-configure:
 	${RUN} cd ${WRKSRC} && ${MKDIR} ${OBJDIR}
