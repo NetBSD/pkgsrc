@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 10:07:54 nia Exp $
+$NetBSD: distinfo,v 1.10 2022/10/09 02:37:03 ryoon Exp $
 
-BLAKE2s (binutils-2.37.tar.bz2) = cbcd25c08c84f0fca9c77936991cef9b3a2c6f8350ecb98a7877fc0107f34db9
-SHA512 (binutils-2.37.tar.bz2) = b3f5184697f77e94c95d48f6879de214eb5e17aa6ef8e96f65530d157e515b1ae2f290e98453e4ff126462520fa0f63852b6e1c8fbb397ed2e41984336bc78c6
-Size (binutils-2.37.tar.bz2) = 33888611 bytes
+BLAKE2s (binutils-2.39.tar.bz2) = 79c9e003be8c3793764b1a79ac04ce9de89425360f6e7c9573d10fe92c6149b1
+SHA512 (binutils-2.39.tar.bz2) = faa592dd48fc715901ad704ac96dbd34b1792c51e77c7a92a387964b0700703c74be07de45cc4751945c8c0674368c73dc17bbc563d1d2cd235b5ebd8c6e7efb
+Size (binutils-2.39.tar.bz2) = 36782148 bytes
