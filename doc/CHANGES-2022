@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4937 2022/10/09 12:32:09 leot Exp $
+$NetBSD: CHANGES-2022,v 1.4938 2022/10/09 12:41:02 leot Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7490,3 +7490,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/ruby-selenium-webdriver to 4.5.0 [taca 2022-10-09]
 	Updated www/ruby-html-proofer to 4.4.3 [taca 2022-10-09]
 	Updated x11/tabbed to 0.7 [leot 2022-10-09]
+	Updated x11/st-term to 0.9 [leot 2022-10-09]
