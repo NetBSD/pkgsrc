@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4924 2022/10/09 07:59:33 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4925 2022/10/09 08:01:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7458,3 +7458,22 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/libgpg-error to 1.46 [adam 2022-10-09]
 	Updated security/libksba to 1.6.2 [adam 2022-10-09]
 	Updated graphics/ruby-RMagick to 5.0.0 [taca 2022-10-09]
+	Updated ham/gnuradio-channels to 3.10.4.0 [adam 2022-10-09]
+	Updated ham/gnuradio-companion to 3.10.4.0 [adam 2022-10-09]
+	Updated ham/gnuradio-core to 3.10.4.0 [adam 2022-10-09]
+	Updated ham/gnuradio-ctrlport to 3.10.4.0 [adam 2022-10-09]
+	Updated ham/gnuradio-digital to 3.10.4.0 [adam 2022-10-09]
+	Updated ham/gnuradio-doxygen to 3.10.4.0 [adam 2022-10-09]
+	Updated ham/gnuradio-dtv to 3.10.4.0 [adam 2022-10-09]
+	Updated ham/gnuradio-fec to 3.10.4.0 [adam 2022-10-09]
+	Updated ham/gnuradio-network to 3.10.4.0 [adam 2022-10-09]
+	Updated ham/gnuradio-pdu to 3.10.4.0 [adam 2022-10-09]
+	Updated ham/gnuradio-qtgui to 3.10.4.0 [adam 2022-10-09]
+	Updated ham/gnuradio-soapy-sdr to 3.10.4.0 [adam 2022-10-09]
+	Updated ham/gnuradio-trellis to 3.10.4.0 [adam 2022-10-09]
+	Updated ham/gnuradio-uhd to 3.10.4.0 [adam 2022-10-09]
+	Updated ham/gnuradio-utils to 3.10.4.0 [adam 2022-10-09]
+	Updated ham/gnuradio-video-sdl to 3.10.4.0 [adam 2022-10-09]
+	Updated ham/gnuradio-vocoder to 3.10.4.0 [adam 2022-10-09]
+	Updated ham/gnuradio-wavelet to 3.10.4.0 [adam 2022-10-09]
+	Updated ham/gnuradio-zeromq to 3.10.4.0 [adam 2022-10-09]
