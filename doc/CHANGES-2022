@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4921 2022/10/09 07:45:10 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4922 2022/10/09 07:53:48 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7453,3 +7453,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/ruby-zeitwerk to 2.6.1 [taca 2022-10-09]
 	Updated x11/xf86-input-vmmouse to 13.2.0 [wiz 2022-10-09]
 	Updated multimedia/xine-lib to 1.2.12nb9 [wiz 2022-10-09]
+	Updated finance/ruby-braintree to 4.9.0 [taca 2022-10-09]
