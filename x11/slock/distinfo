@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:34:28 nia Exp $
+$NetBSD: distinfo,v 1.9 2022/10/09 12:52:21 leot Exp $
 
-BLAKE2s (slock-1.4.tar.gz) = eae66ee72be3bf6c225ea20f57a2f166d843f76122245d64f00d23c59d2b021a
-SHA512 (slock-1.4.tar.gz) = ad285360dd3f16a225159abaf2f82fabf2c675bd74478cf717f68cbe5941a6c620e3c88544ce675ce3ff19af4bb0675c9405685e0f74ee4e84f7d34c61a0532f
-Size (slock-1.4.tar.gz) = 6889 bytes
+BLAKE2s (slock-1.5.tar.gz) = e8a21fe93bd41eda88a6c1b19fb2be43d28c85ee731c20a7e19b7cbd37b2eb96
+SHA512 (slock-1.5.tar.gz) = 2402b1e49f5dbe06cca2f3a31efedce6359413b240f2b98c57147483591a873c3c5457dbf6707485167002ff6d7ee0e9005d9fa506a51bf71337624e8728bb43
+Size (slock-1.5.tar.gz) = 6898 bytes
