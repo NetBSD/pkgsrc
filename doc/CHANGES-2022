@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4928 2022/10/09 08:24:45 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4929 2022/10/09 08:26:39 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7481,3 +7481,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated misc/ruby-slop to 4.9.3 [taca 2022-10-09]
 	Updated security/ruby-metasploit-payloads to 2.0.97 [taca 2022-10-09]
 	Updated security/ruby-oauth-tty to 1.0.5 [taca 2022-10-09]
+	Updated security/ruby-snaky_hash to 2.0.1 [taca 2022-10-09]
