@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22277 2022/10/09 07:54:17 adam Exp $
+$NetBSD: TODO,v 1.22278 2022/10/09 12:56:45 leot Exp $
 
 Suggested new packages
 ======================
@@ -589,7 +589,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o distccmon-gnome-3.3.5
 	o distccmon-gtk-3.3.5
 	o dmalloc-5.6.5
-	o dmenu-5.2
 	o dnsbl-milter-6.78
 	o doclifter-2.19
 	o drawpile-2.1.20
