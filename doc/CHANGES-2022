@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4923 2022/10/09 07:54:17 adam Exp $
+$NetBSD: CHANGES-2022,v 1.4924 2022/10/09 07:59:33 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7457,3 +7457,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/catch2 to 2.13.9 [adam 2022-10-09]
 	Updated security/libgpg-error to 1.46 [adam 2022-10-09]
 	Updated security/libksba to 1.6.2 [adam 2022-10-09]
+	Updated graphics/ruby-RMagick to 5.0.0 [taca 2022-10-09]
