@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4934 2022/10/09 09:10:43 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4935 2022/10/09 09:13:45 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7487,3 +7487,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/ruby-aws-sigv4 to 1.5.2 [taca 2022-10-09]
 	Updated www/ruby-aws-sdk-core to 3.159.0 [taca 2022-10-09]
 	Updated www/ruby-aws-sdk-secretsmanager to 1.66.0 [taca 2022-10-09]
+	Updated www/ruby-selenium-webdriver to 4.5.0 [taca 2022-10-09]
