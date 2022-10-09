@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.84 2022/04/08 06:39:42 adam Exp $
+# $NetBSD: Makefile,v 1.85 2022/10/09 07:50:29 adam Exp $
 
-DISTNAME=	libgpg-error-1.45
+DISTNAME=	libgpg-error-1.46
 CATEGORIES=	security
 MASTER_SITES=	https://www.gnupg.org/ftp/gcrypt/libgpg-error/
 MASTER_SITES+=	ftp://ftp.gnupg.org/gcrypt/libgpg-error/
@@ -16,6 +16,7 @@ USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--enable-install-gpg-error-config
 INFO_FILES=		yes
 TEST_TARGET=		check
 
