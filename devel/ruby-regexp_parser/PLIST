@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2022/08/24 16:31:03 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2022/10/09 07:29:16 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/Gemfile
@@ -26,6 +26,7 @@ ${GEM_LIBDIR}/lib/regexp_parser/expression/classes/posix_class.rb
 ${GEM_LIBDIR}/lib/regexp_parser/expression/classes/root.rb
 ${GEM_LIBDIR}/lib/regexp_parser/expression/classes/unicode_property.rb
 ${GEM_LIBDIR}/lib/regexp_parser/expression/methods/construct.rb
+${GEM_LIBDIR}/lib/regexp_parser/expression/methods/human_name.rb
 ${GEM_LIBDIR}/lib/regexp_parser/expression/methods/match.rb
 ${GEM_LIBDIR}/lib/regexp_parser/expression/methods/match_length.rb
 ${GEM_LIBDIR}/lib/regexp_parser/expression/methods/options.rb
