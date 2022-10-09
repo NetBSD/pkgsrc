@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/09/11 05:41:36 taca Exp $
+$NetBSD: distinfo,v 1.2 2022/10/09 08:24:23 taca Exp $
 
-BLAKE2s (oauth-tty-1.0.3.gem) = 03d1579d4cba9d2a7eef275f46d26964a5e5df8804aa7dc60e19891ebf79f22a
-SHA512 (oauth-tty-1.0.3.gem) = c888660f0ceb57991ab9114058fe3b31968752aab6ffae3ed403e7c46fb792d745df46ebe7ebe81f65553f1cdc23611f28b20e126d8757d7b721e6db9cedf08a
-Size (oauth-tty-1.0.3.gem) = 13312 bytes
+BLAKE2s (oauth-tty-1.0.5.gem) = 820d4d2f2ad66ab7ce027e8b438688e9b7d70fe639581dc536f8bb25abdd05bc
+SHA512 (oauth-tty-1.0.5.gem) = bedd3c386c62ccac6284293520f4b0ae12cd8ee81e304413b6bea41c61b87763ef2704fba297bdc255bf2acfaec7dce4259c5c57b8b25e21f566f91935fdc996
+Size (oauth-tty-1.0.5.gem) = 18944 bytes
