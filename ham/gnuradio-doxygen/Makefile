@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.58 2022/10/04 11:54:13 adam Exp $
+# $NetBSD: Makefile,v 1.59 2022/10/09 07:56:10 adam Exp $
 
 PKGNAME=	gnuradio-doxygen-${VERSION}
-PKGREVISION=	3
 COMMENT=	Doxygen documentation of GNU Radio
 
-.include	"../../ham/gnuradio-core/Makefile.common"
-.include	"../../ham/gnuradio-core/Nocore.mk"
+.include "../../ham/gnuradio-core/Makefile.common"
+.include "../../ham/gnuradio-core/Nocore.mk"
 
 BUILD_DEPENDS+=	doxygen>=1.9.5:../../devel/doxygen
 BUILD_DEPENDS+=	graphviz-[0-9]*:../../graphics/graphviz
@@ -18,6 +17,6 @@ DEPENDS+=	tex-newunicodechar-[0-9]*:../../print/tex-newunicodechar
 CMAKE_ARGS+=	-DENABLE_DEFAULT=OFF
 CMAKE_ARGS+=	-DENABLE_DOXYGEN=ON
 
-MAKE_JOBS_SAFE=	no
+#MAKE_JOBS_SAFE=	no
 
 .include "../../mk/bsd.pkg.mk"

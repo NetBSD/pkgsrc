@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.99 2022/09/11 12:51:54 wiz Exp $
+# $NetBSD: Makefile,v 1.100 2022/10/09 07:56:09 adam Exp $
 
 PKGNAME=	gnuradio-core-${VERSION}
-PKGREVISION=	4
 COMMENT=	Core part of GNU Radio, all others need this
 
 PLIST_MINUS=	# empty
@@ -12,7 +11,7 @@ PLIST_MINUS=	# empty
 #CONF_FILES+=	${EGDIR}/gr-audio-portaudio.conf ${PKG_SYSCONFDIR}/gr-audio-portaudio.conf
 #CONF_FILES+=	${EGDIR}/gr-audio.conf		${PKG_SYSCONFDIR}/gr-audio.conf
 
-.include	"../../mk/oss.buildlink3.mk"
+.include "../../mk/oss.buildlink3.mk"
 .if ${OSS_TYPE} != "none"
 #CONF_FILES+=	${EGDIR}/gr-audio-oss.conf	${PKG_SYSCONFDIR}/gr-audio-oss.conf
 PLIST_SRC=	${PKGDIR}/PLIST ${PKGDIR}/PLIST.oss
@@ -26,4 +25,4 @@ CMAKE_ARGS+=	-DENABLE_DEFAULT=OFF
 #	${MV} ${DESTDIR}${PREFIX}/etc/gnuradio/conf.d/* \
 #	      ${DESTDIR}${PREFIX}/${EGDIR}/
 
-.include	"../../mk/bsd.pkg.mk"
+.include "../../mk/bsd.pkg.mk"
