@@ -1,14 +1,8 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 10:14:39 nia Exp $
+$NetBSD: distinfo,v 1.12 2022/10/09 07:02:47 tonio Exp $
 
-BLAKE2s (frama-c-Phosphorus-20170501.tar.gz) = b208a3503faa6b35aeeea99a630a859113ecc4609e5bd34a1aa084a5672daab8
-SHA512 (frama-c-Phosphorus-20170501.tar.gz) = b3b73932378cba7be8ac0cbb1f7311e8f60dde68cad55c10659ffa40e76ab3f106d554e245ccd90ffb5307b9a42b6ce51154a5b9c006687b8c5808c77ca4c2f3
-Size (frama-c-Phosphorus-20170501.tar.gz) = 7431131 bytes
-SHA1 (patch-Makefile) = d9a23653196d4586c3cca87091518aea6791ddcc
-SHA1 (patch-configure) = 84c96178f487a65fe875a336e0f271a7d101e5a7
+BLAKE2s (frama-c-25.0-Manganese.tar.gz) = 589c14ead33b8371a96e6e65ac2f58434e8de7066d71b821cf285ff01bb6e233
+SHA512 (frama-c-25.0-Manganese.tar.gz) = 8fdc71ee252e7dd0ca5782d16d54df8d126a3fbcc324cf250dd96bcb5b743a4a387ec65fe633583a976d6b692d147f657faf49160ccbd519e04a2664b0d68f0f
+Size (frama-c-25.0-Manganese.tar.gz) = 7670862 bytes
+SHA1 (patch-Makefile) = 87c7dc7dd9246aae396cdcae7c410f834b92ec4b
 SHA1 (patch-share_Makefile.common) = f5230aee768e6af4c7458d96f1f210172daa9bb2
-SHA1 (patch-src_libraries_utils_c__bindings.c) = b37db1c51e9082e4a328a6a7189f57db3f12d624
-SHA1 (patch-src_plugins_e-acsl_Makefile.in) = 8b1c4838ecd609504c1070917c0b61433f1e1f12
-SHA1 (patch-src_plugins_gui_gtk__helper.ml) = 9870ffaaa9b042d4052d3eff1affaec6e254597b
-SHA1 (patch-src_plugins_wp_configure) = a32631ddfe6f5c639b98cac2778aa9f5279e1033
-SHA1 (patch-src_plugins_wp_configure.ac) = a68d7ecebae07106d0d76ddbed4bf01ba0026e1a
-SHA1 (patch-src_plugins_wp_share_coqwp_Zbits.v) = 26fac23dc015087b7126e40a47d566eb49a24293
+SHA1 (patch-src_libraries_utils_c__bindings.c) = b634836b18c3be97c9b026a65c454cab6552b6f4
