@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2021/08/22 13:58:06 taca Exp $
+# $NetBSD: Makefile,v 1.3 2022/10/09 07:26:25 taca Exp $
 
-DISTNAME=	red-datasets-0.1.4
+DISTNAME=	red-datasets-0.1.5
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -12,6 +12,8 @@ LICENSE=	mit
 #DEPENDS+=	${RUBY_PKGPREFIX}-csv>=3.0.5:../../textproc/ruby-csv
 #DEPENDS+=	${RUBY_PKGPREFIX}-rexml>=0:../../textproc/ruby-rexml
 DEPENDS+=	${RUBY_PKGPREFIX}-zip>=0:../../archivers/ruby-zip
+
+RUBY_VERSIONS_INCOMPATIBLE=	26
 
 USE_LANGUAGES=	# none
 
