@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4945 2022/10/09 15:37:12 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4946 2022/10/09 16:01:47 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7498,3 +7498,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/ruby-redmine42 to 4.2.8 [taca 2022-10-09]
 	Updated devel/ruby-redmine50 to 5.0.3 [taca 2022-10-09]
 	Removed devel/ruby-redmine41 [taca 2022-10-09]
+	Updated sysutils/broot to 1.16.0 [pin 2022-10-09]
