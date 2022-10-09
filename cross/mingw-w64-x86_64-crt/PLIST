@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2021/08/27 14:11:07 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/10/09 02:37:03 ryoon Exp $
 cross/x86_64-w64-mingw32/mingw/include/agtctl_i.c
 cross/x86_64-w64-mingw32/mingw/include/agtsvr_i.c
 cross/x86_64-w64-mingw32/mingw/include/cdoex_i.c
@@ -70,6 +70,7 @@ cross/x86_64-w64-mingw32/mingw/lib/libbasesrv.a
 cross/x86_64-w64-mingw32/mingw/lib/libbatmeter.a
 cross/x86_64-w64-mingw32/mingw/lib/libbatt.a
 cross/x86_64-w64-mingw32/mingw/lib/libbcrypt.a
+cross/x86_64-w64-mingw32/mingw/lib/libbits.a
 cross/x86_64-w64-mingw32/mingw/lib/libbluetoothapis.a
 cross/x86_64-w64-mingw32/mingw/lib/libbootvid.a
 cross/x86_64-w64-mingw32/mingw/lib/libbrowser.a
@@ -105,6 +106,9 @@ cross/x86_64-w64-mingw32/mingw/lib/libcolbact.a
 cross/x86_64-w64-mingw32/mingw/lib/libcomctl32.a
 cross/x86_64-w64-mingw32/mingw/lib/libcomdlg32.a
 cross/x86_64-w64-mingw32/mingw/lib/libcompstui.a
+cross/x86_64-w64-mingw32/mingw/lib/libcomputecore.a
+cross/x86_64-w64-mingw32/mingw/lib/libcomputenetwork.a
+cross/x86_64-w64-mingw32/mingw/lib/libcomputestorage.a
 cross/x86_64-w64-mingw32/mingw/lib/libcomres.a
 cross/x86_64-w64-mingw32/mingw/lib/libcomsetup.a
 cross/x86_64-w64-mingw32/mingw/lib/libcomsnap.a
@@ -114,7 +118,6 @@ cross/x86_64-w64-mingw32/mingw/lib/libconnect.a
 cross/x86_64-w64-mingw32/mingw/lib/libconsole.a
 cross/x86_64-w64-mingw32/mingw/lib/libcorpol.a
 cross/x86_64-w64-mingw32/mingw/lib/libcredui.a
-cross/x86_64-w64-mingw32/mingw/lib/libcrtdll.a
 cross/x86_64-w64-mingw32/mingw/lib/libcrypt32.a
 cross/x86_64-w64-mingw32/mingw/lib/libcryptdlg.a
 cross/x86_64-w64-mingw32/mingw/lib/libcryptdll.a
@@ -566,6 +569,7 @@ cross/x86_64-w64-mingw32/mingw/lib/libntmsapi.a
 cross/x86_64-w64-mingw32/mingw/lib/libntoc.a
 cross/x86_64-w64-mingw32/mingw/lib/libntoskrnl.a
 cross/x86_64-w64-mingw32/mingw/lib/libntprint.a
+cross/x86_64-w64-mingw32/mingw/lib/libntquery.a
 cross/x86_64-w64-mingw32/mingw/lib/libntshrui.a
 cross/x86_64-w64-mingw32/mingw/lib/libntvdm64.a
 cross/x86_64-w64-mingw32/mingw/lib/libnwprovau.a
@@ -819,6 +823,7 @@ cross/x86_64-w64-mingw32/mingw/lib/libwdsimage.a
 cross/x86_64-w64-mingw32/mingw/lib/libwdstptc.a
 cross/x86_64-w64-mingw32/mingw/lib/libwdsupgcompl.a
 cross/x86_64-w64-mingw32/mingw/lib/libwdsutil.a
+cross/x86_64-w64-mingw32/mingw/lib/libwebauthn.a
 cross/x86_64-w64-mingw32/mingw/lib/libwebcheck.a
 cross/x86_64-w64-mingw32/mingw/lib/libwebclnt.a
 cross/x86_64-w64-mingw32/mingw/lib/libwebhits.a
