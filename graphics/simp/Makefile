@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2022/09/20 07:38:49 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/10/09 19:20:27 pin Exp $
 
-DISTNAME=	simp-3.1.0
+DISTNAME=	simp-3.2.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Kl4rry/}
-GITHUB_TAG=	ae385db9995b20f5801ac8dade10d8756513c11d
 
 MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/Kl4rry/simp/
