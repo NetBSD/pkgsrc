@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22276 2022/10/09 07:03:04 tonio Exp $
+$NetBSD: TODO,v 1.22277 2022/10/09 07:54:17 adam Exp $
 
 Suggested new packages
 ======================
@@ -943,7 +943,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libgfshare-2.0.0
 	o libgiigic-1.1.2
 	o libgnomekbd-3.4.0.2
-	o libgpg-error-1.46
 	o libiconv-1.16
 	o libisoburn-1.5.4
 	o libisofs-1.5.4
