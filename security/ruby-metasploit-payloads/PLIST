@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2022/08/28 05:37:29 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/10/09 08:20:48 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/CONTRIBUTING.md
@@ -31,6 +31,10 @@ ${GEM_LIBDIR}/data/meterpreter/elevator.x64.debug.dll
 ${GEM_LIBDIR}/data/meterpreter/elevator.x64.dll
 ${GEM_LIBDIR}/data/meterpreter/elevator.x86.debug.dll
 ${GEM_LIBDIR}/data/meterpreter/elevator.x86.dll
+${GEM_LIBDIR}/data/meterpreter/ext_server_bofloader.x64.debug.dll
+${GEM_LIBDIR}/data/meterpreter/ext_server_bofloader.x64.dll
+${GEM_LIBDIR}/data/meterpreter/ext_server_bofloader.x86.debug.dll
+${GEM_LIBDIR}/data/meterpreter/ext_server_bofloader.x86.dll
 ${GEM_LIBDIR}/data/meterpreter/ext_server_espia.x64.debug.dll
 ${GEM_LIBDIR}/data/meterpreter/ext_server_espia.x64.dll
 ${GEM_LIBDIR}/data/meterpreter/ext_server_espia.x86.debug.dll
