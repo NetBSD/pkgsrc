@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4936 2022/10/09 09:17:24 taca Exp $
+$NetBSD: CHANGES-2022,v 1.4937 2022/10/09 12:32:09 leot Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7489,3 +7489,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/ruby-aws-sdk-secretsmanager to 1.66.0 [taca 2022-10-09]
 	Updated www/ruby-selenium-webdriver to 4.5.0 [taca 2022-10-09]
 	Updated www/ruby-html-proofer to 4.4.3 [taca 2022-10-09]
+	Updated x11/tabbed to 0.7 [leot 2022-10-09]
