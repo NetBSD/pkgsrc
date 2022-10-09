@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2022/09/03 13:53:58 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/10/09 15:32:55 taca Exp $
 bin/redmine50_generate_secret_token${RUBY_SUFFIX}.sh
 bin/redmine50_load_default_data${RUBY_SUFFIX}.sh
 bin/redmine50_migrate_db${RUBY_SUFFIX}.sh
@@ -1267,6 +1267,8 @@ share/${RUBY_NAME}-redmine50/public/help/da/wiki_syntax_detailed_markdown.html
 share/${RUBY_NAME}-redmine50/public/help/da/wiki_syntax_detailed_textile.html
 share/${RUBY_NAME}-redmine50/public/help/da/wiki_syntax_markdown.html
 share/${RUBY_NAME}-redmine50/public/help/da/wiki_syntax_textile.html
+share/${RUBY_NAME}-redmine50/public/help/de/wiki_syntax_common_mark.html
+share/${RUBY_NAME}-redmine50/public/help/de/wiki_syntax_detailed_common_mark.html
 share/${RUBY_NAME}-redmine50/public/help/de/wiki_syntax_detailed_markdown.html
 share/${RUBY_NAME}-redmine50/public/help/de/wiki_syntax_detailed_textile.html
 share/${RUBY_NAME}-redmine50/public/help/de/wiki_syntax_markdown.html
@@ -1536,7 +1538,6 @@ share/${RUBY_NAME}-redmine50/public/images/milestone_late.png
 share/${RUBY_NAME}-redmine50/public/images/milestone_todo.png
 share/${RUBY_NAME}-redmine50/public/images/move.png
 share/${RUBY_NAME}-redmine50/public/images/news.png
-share/${RUBY_NAME}-redmine50/public/images/openid-bg.gif
 share/${RUBY_NAME}-redmine50/public/images/package.png
 share/${RUBY_NAME}-redmine50/public/images/plugin.png
 share/${RUBY_NAME}-redmine50/public/images/project_marker.png
@@ -1627,7 +1628,7 @@ share/${RUBY_NAME}-redmine50/public/javascripts/i18n/datepicker-uk.js
 share/${RUBY_NAME}-redmine50/public/javascripts/i18n/datepicker-vi.js
 share/${RUBY_NAME}-redmine50/public/javascripts/i18n/datepicker-zh-CN.js
 share/${RUBY_NAME}-redmine50/public/javascripts/i18n/datepicker-zh-TW.js
-share/${RUBY_NAME}-redmine50/public/javascripts/jquery-3.6.0-ui-1.13.1-ujs-6.1.3.1.js
+share/${RUBY_NAME}-redmine50/public/javascripts/jquery-3.6.1-ui-1.13.2-ujs-6.1.7.js
 share/${RUBY_NAME}-redmine50/public/javascripts/jstoolbar/common_mark.js
 share/${RUBY_NAME}-redmine50/public/javascripts/jstoolbar/jstoolbar.js
 share/${RUBY_NAME}-redmine50/public/javascripts/jstoolbar/lang/jstoolbar-ar.js
@@ -1699,7 +1700,7 @@ share/${RUBY_NAME}-redmine50/public/stylesheets/jquery/images/ui-icons_777620_25
 share/${RUBY_NAME}-redmine50/public/stylesheets/jquery/images/ui-icons_777777_256x240.png
 share/${RUBY_NAME}-redmine50/public/stylesheets/jquery/images/ui-icons_cc0000_256x240.png
 share/${RUBY_NAME}-redmine50/public/stylesheets/jquery/images/ui-icons_ffffff_256x240.png
-share/${RUBY_NAME}-redmine50/public/stylesheets/jquery/jquery-ui-1.13.1.css
+share/${RUBY_NAME}-redmine50/public/stylesheets/jquery/jquery-ui-1.13.2.css
 share/${RUBY_NAME}-redmine50/public/stylesheets/jstoolbar.css
 share/${RUBY_NAME}-redmine50/public/stylesheets/responsive.css
 share/${RUBY_NAME}-redmine50/public/stylesheets/rtl.css
