@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4925 2022/10/09 08:01:46 adam Exp $
+$NetBSD: CHANGES-2022,v 1.4926 2022/10/09 08:05:31 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7477,3 +7477,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated ham/gnuradio-vocoder to 3.10.4.0 [adam 2022-10-09]
 	Updated ham/gnuradio-wavelet to 3.10.4.0 [adam 2022-10-09]
 	Updated ham/gnuradio-zeromq to 3.10.4.0 [adam 2022-10-09]
+	Updated misc/ruby-bundler to 2.3.23 [taca 2022-10-09]
+	Updated misc/ruby-slop to 4.9.3 [taca 2022-10-09]
