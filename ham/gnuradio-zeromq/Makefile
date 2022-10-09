@@ -1,19 +1,10 @@
-# $NetBSD: Makefile,v 1.42 2022/09/11 12:51:56 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2022/10/09 07:56:11 adam Exp $
 
 PKGNAME=	gnuradio-zeromq-${VERSION}
-PKGREVISION=	2
 COMMENT=	All of the zeromq blocks, utilities, and examples
 
-#  zmq.hpp: No such file or directory
-# https://github.com/zeromq/cppzmq.git
-
-#GIT_REPOSITORIES=	master
-#GIT_REPO.master=	https://github.com/zeromq/cppzmq.git
-#GIT_MODULE.master=	cppzmq
-# for work around, the file is copied to files directory
-
-.include	"../../ham/gnuradio-core/Makefile.common"
-.include	"../../ham/gnuradio-core/Nocore.mk"
+.include "../../ham/gnuradio-core/Makefile.common"
+.include "../../ham/gnuradio-core/Nocore.mk"
 
 CMAKE_ARGS+=	-DENABLE_DEFAULT=OFF
 CMAKE_ARGS+=	-DENABLE_GR_ZEROMQ=ON
@@ -22,8 +13,5 @@ CMAKE_ARGS+=	-DENABLE_GRC=ON
 
 PLIST_MINUS+=	companion
 
-post-patch:
-	${CP}	${PKGDIR}/files/zmq.hpp ${WRKSRC}/gr-zeromq/include/
-
-.include	"../../net/zeromq/buildlink3.mk"
-.include	"../../mk/bsd.pkg.mk"
+.include "../../net/cppzmq/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
