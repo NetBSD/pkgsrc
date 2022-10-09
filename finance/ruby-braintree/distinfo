@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2022/08/26 15:36:33 taca Exp $
+$NetBSD: distinfo,v 1.16 2022/10/09 07:53:31 taca Exp $
 
-BLAKE2s (braintree-4.8.0.gem) = b28d75fc4f5fca1cd3094c3115f5a0f58b59e2b210a6174bc82af5d40ec3b67d
-SHA512 (braintree-4.8.0.gem) = 67218a49d34aedbfc3de0bb7531726e8289dddef9bf219fbecab2fd16f998de487650c9eb1596bdacfe67cb87bc88658282d9fe9ca0a9b6dc4ccf3ef75787d80
-Size (braintree-4.8.0.gem) = 229888 bytes
+BLAKE2s (braintree-4.9.0.gem) = 9b35c7634656c992e969f632beb226ae91fc803ea70c952f76729804136b4650
+SHA512 (braintree-4.9.0.gem) = 16d5c8a370ea9a0e67fde3103f59784ef4d0816eac17c812c75cc5fd54ff027615e438b5b59d45d64a39a98c3074108d60792408627ea7683afd6c249801a15d
+Size (braintree-4.9.0.gem) = 230400 bytes
