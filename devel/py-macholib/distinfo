@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2022/04/15 16:02:26 adam Exp $
+$NetBSD: distinfo,v 1.16 2022/10/10 10:09:46 adam Exp $
 
-BLAKE2s (macholib-1.16.tar.gz) = b5f4d4e9dea4cb6d9e6353044173c30d788be655863b323e96b95ee007da1b93
-SHA512 (macholib-1.16.tar.gz) = 5a3b93275726b02a3cc93f272940a98c4543effbcfcfad741a0a5c3d6fde267ae388eabac8b776b37d87180196ad07cfae914a48430dbbd4d71ec157cf7b9766
-Size (macholib-1.16.tar.gz) = 59086 bytes
+BLAKE2s (macholib-1.16.2.tar.gz) = 44cae1953c97c9dbeeea3bf0b6d770fe22f9a27c9bd813256ae1d1270d0c36d7
+SHA512 (macholib-1.16.2.tar.gz) = 8de00c926bb0aa3475675c75e208bd35ac3eeeee16d93fb22f63b34c34b909feb5e3ac441d7a085430fa73d29cd2a61d13a7ab9f993ae2fade36e116bdd42947
+Size (macholib-1.16.2.tar.gz) = 59027 bytes
