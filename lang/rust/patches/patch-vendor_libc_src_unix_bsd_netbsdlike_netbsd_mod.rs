@@ -1,10 +1,10 @@
-$NetBSD: patch-vendor_libc_src_unix_bsd_netbsdlike_netbsd_mod.rs,v 1.2 2022/08/30 19:22:17 he Exp $
+$NetBSD: patch-vendor_libc_src_unix_bsd_netbsdlike_netbsd_mod.rs,v 1.3 2022/10/10 20:34:15 he Exp $
 
 Copy execinfo function definitions from openbsd's mod.rs.
 
 --- vendor/libc/src/unix/bsd/netbsdlike/netbsd/mod.rs.orig	2022-05-10 20:59:35.217463943 +0000
 +++ vendor/libc/src/unix/bsd/netbsdlike/netbsd/mod.rs
-@@ -2807,6 +2807,22 @@ extern "C" {
+@@ -2821,6 +2821,22 @@ extern "C" {
      pub fn kinfo_getvmmap(pid: ::pid_t, cntp: *mut ::size_t) -> *mut kinfo_vmentry;
  }
  
