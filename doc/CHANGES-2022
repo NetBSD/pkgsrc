@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4958 2022/10/10 08:06:51 adam Exp $
+$NetBSD: CHANGES-2022,v 1.4959 2022/10/10 08:09:06 he Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7514,3 +7514,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated multimedia/mkvtoolnix to 71.1.0 [adam 2022-10-10]
 	Updated devel/py-ZopeInterface to 5.5.0 [adam 2022-10-10]
 	Updated databases/py-apsw to 3.39.4.0 [adam 2022-10-10]
+	Updated lang/rust-analyzer to 0.0.2022.08.22nb1 [he 2022-10-10]
