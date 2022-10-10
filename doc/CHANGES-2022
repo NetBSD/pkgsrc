@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4967 2022/10/10 20:36:24 he Exp $
+$NetBSD: CHANGES-2022,v 1.4968 2022/10/10 21:14:31 he Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7527,3 +7527,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated multimedia/ffplay4 to 4.4.3 [adam 2022-10-10]
 	Updated textproc/split-thai to 2.20 [scole 2022-10-10]
 	Updated lang/rust to 1.63.0 [he 2022-10-10]
+	Updated lang/rust-bin to 1.63.0 [he 2022-10-10]
