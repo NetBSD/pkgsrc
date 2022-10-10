@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2022/10/02 06:15:59 pin Exp $
+# $NetBSD: Makefile,v 1.6 2022/10/10 07:18:36 pin Exp $
 
 DISTNAME=	leftwm-0.4.0
+PKGREVISION=	1
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=leftwm/}
 
@@ -8,6 +9,8 @@ MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://leftwm.org/
 COMMENT=	Tiling window manager for adventurers
 LICENSE=	mit
+
+CONFLICTS=	lefthk-[0-9]*
 
 .include "cargo-depends.mk"
 
