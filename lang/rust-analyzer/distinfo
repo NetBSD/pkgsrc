@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.18 2022/10/10 08:08:28 he Exp $
+$NetBSD: distinfo,v 1.19 2022/10/10 19:04:52 he Exp $
 
 BLAKE2s (addr2line-0.17.0.crate) = f7fa3b016f0e80c4ea9967f8947de15edc9fa39d0c0cdea692dccd0c41c28039
 SHA512 (addr2line-0.17.0.crate) = ef3bbd7c6d1dfdd0b47e3be1fb4c8b15ed61a769bed7e80dce80461a1ee13ef21c75e62e9a66328504f862341f1e808abec5790ac79784e18655afcc16206b95
@@ -513,4 +513,4 @@ Size (xshell-0.2.2.crate) = 23846 bytes
 BLAKE2s (xshell-macros-0.2.2.crate) = 21b45d4c73fe60a536e4762405e28a321e64fe7411890a36ebdd9f35774c14a9
 SHA512 (xshell-macros-0.2.2.crate) = a477f18810d2b647c78cbc06d59b8b84817ee5e54cc8785897ecae743d263c6d0fab3563f66aed6a5e81b790bab317871162513c8ff14364d936afaa082f1ff4
 Size (xshell-macros-0.2.2.crate) = 2848 bytes
-SHA1 (patch-vendor_kqueue-1.0.6_src_time.rs) = d46b71aebe930dd01effe2f81cfa13f823285e93
+SHA1 (patch-vendor_kqueue-1.0.6_src_time.rs) = bc6df7987e0c4b2677d4c6015d2779dc8e9de170
