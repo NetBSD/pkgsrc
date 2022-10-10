@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4956 2022/10/10 07:18:57 pin Exp $
+$NetBSD: CHANGES-2022,v 1.4957 2022/10/10 07:40:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7509,3 +7509,6 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed lang/ruby26 [taca 2022-10-10]
 	Removed lang/ruby26-base [taca 2022-10-10]
 	Updated wm/leftwm to 0.4.0nb1 [pin 2022-10-10]
+	Updated devel/libebml to 1.4.4 [adam 2022-10-10]
+	Updated multimedia/libmatroska to 1.7.1 [adam 2022-10-10]
+	Updated multimedia/mkvtoolnix to 71.1.0 [adam 2022-10-10]
