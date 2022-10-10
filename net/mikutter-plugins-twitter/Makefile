@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2022/03/27 06:45:51 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2022/10/10 03:36:49 taca Exp $
 
 PKGNAME=	${RUBY_PKGPREFIX}-mikutter-plugins-twitter-5.0
 PKGREVISION=	1
@@ -62,8 +62,6 @@ post-extract:
 do-install:
 	(cd ${WRKSRC} && pax -rwpp -s '/.*\.orig//' . \
 	    ${DESTDIR}${PREFIX}/share/mikutter/${PLUGINDIR})
-
-RUBY_VERSIONS_INCOMPATIBLE=	26 # ruby-diva via mikutter
 
 .include "../../lang/ruby/replace.mk"
 .include "../../mk/bsd.pkg.mk"
