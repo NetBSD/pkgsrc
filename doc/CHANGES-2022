@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4953 2022/10/09 19:21:07 pin Exp $
+$NetBSD: CHANGES-2022,v 1.4954 2022/10/10 03:22:27 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7506,3 +7506,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added editors/bred version 0.2.2 [pin 2022-10-09]
 	Updated emulators/open-simh to 4.0.0.20221008 [rhialto 2022-10-09]
 	Updated graphics/simp to 3.2.0 [pin 2022-10-09]
+	Removed lang/ruby26 [taca 2022-10-10]
