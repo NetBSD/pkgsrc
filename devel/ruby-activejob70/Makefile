@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/03/27 06:43:11 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/10/10 03:36:48 taca Exp $
 
 DISTNAME=	activejob-${RAILS_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-activejob${RUBY_RAILS}-${RAILS_VERSION}
@@ -16,8 +16,6 @@ USE_LANGUAGES=	# none
 
 RUBY_RAILS_ACCEPTED=	70
 RUBY_RAILS_STRICT_DEP=	yes
-
-RUBY_VERSIONS_INCOMPATIBLE=	26
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
