@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2022/10/10 03:42:14 taca Exp $
+# $NetBSD: Makefile,v 1.10 2022/10/10 03:44:54 taca Exp $
 
 DISTNAME=	review-5.5.0
 CATEGORIES=	textproc
@@ -20,7 +20,7 @@ pre-configure:
 	cd ${WRKSRC}/bin && ${CHMOD} ${BINMODE} *
 
 .include "../../lang/ruby/rubyversion.mk"
-.if ${RUBY_VER} == "27"
+.if ${RUBY_VER} == 27
 DEPENDS+=	${RUBY_PKGPREFIX}-rexml>=3.2<4:../../textproc/ruby-rexml
 .endif
 
