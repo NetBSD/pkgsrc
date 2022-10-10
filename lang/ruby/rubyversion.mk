@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.252 2022/05/17 00:42:33 gutteridge Exp $
+# $NetBSD: rubyversion.mk,v 1.253 2022/10/10 03:31:44 taca Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -10,7 +10,7 @@
 # RUBY_VERSION_DEFAULT
 #	The preferred Ruby version to use.
 #
-#		Possible values: 26 27 30 31
+#		Possible values: 27 30 31
 #		Default: 27
 #
 # RUBY_BUILD_DOCUMENT
@@ -34,13 +34,13 @@
 # RUBY_VERSIONS_ACCEPTED
 #	The Ruby versions that are acceptable for the package.
 #
-#		Possible values: 26 27 30 31
-#		Default: 27 30 31 26
+#		Possible values: 27 30 31
+#		Default: 27 30 31
 #
 # RUBY_VERSIONS_INCOMPATIBLE
 #	The Ruby versions that are incompatible for the package.
 #
-#		Possible values: 26 27 30 31
+#		Possible values: 27 30 31
 #		Default: empty
 #
 # RUBY_NOVERSION
@@ -68,7 +68,7 @@
 # RUBY_VER
 #	Really selected version of ruby.
 #
-#		Possible values: 26 27 30 31
+#		Possible values: 27 30 31
 #
 #	Use this variable in pkgsrc's Makefile
 #
@@ -77,7 +77,7 @@
 #	use RUBY_PKGPREFIX with Ruby-related packages since you can supply
 #	different binary packages for each version of Ruby.
 #
-#		Possible values: ruby26 ruby27 ruby30 ruby31
+#		Possible values: ruby27 ruby30 ruby31
 #
 # RUBY_ABI_VERSION
 #	Ruby's ABI version.
@@ -106,7 +106,7 @@
 # RUBY_SUFFIX
 #	Extra string for each ruby commands; ruby, irb and so on.
 #
-#		Possible values: 26 27 30 31
+#		Possible values: 27 30 31
 #
 # RUBY_VERSION
 #	Version of Ruby's version.
@@ -213,13 +213,11 @@ RUBY_VERSION_REQD?=	${PKGNAME_REQD:C/ruby([0-9][0-9])-.*/\1/}
 .endif
 
 # current supported Ruby's version
-RUBY26_VERSION=		2.6.10
 RUBY27_VERSION=		2.7.6
 RUBY30_VERSION=		3.0.4
 RUBY31_VERSION=		3.1.2
 
 # current API compatible version; used for version of shared library
-RUBY26_API_VERSION=	2.6.0
 RUBY27_API_VERSION=	2.7.0
 RUBY30_API_VERSION=	3.0.0
 RUBY31_API_VERSION=	3.1.0
@@ -228,9 +226,9 @@ RUBY31_API_VERSION=	3.1.0
 RUBY_VERSION_DEFAULT?=	27
 
 # supported Ruby's version
-RUBY_VERSIONS_SUPPORTED=	26 27 30 31
+RUBY_VERSIONS_SUPPORTED=	27 30 31
 
-RUBY_VERSIONS_ACCEPTED?=	27 30 31 26
+RUBY_VERSIONS_ACCEPTED?=	27 30 31
 RUBY_VERSIONS_INCOMPATIBLE?=
 
 .if empty(RUBY_VERSIONS_SUPPORTED:M${RUBY_VERSION_DEFAULT})
@@ -269,59 +267,7 @@ RUBY_VER:=	${RUBY_VER_MAP.${RUBY_VER}:U${RUBY_VER}}
 
 RUBY_SUFFIX?=	${_RUBY_VER_MAJOR}${_RUBY_VER_MINOR}${_RUBY_VER_TEENY}
 
-.if ${RUBY_VER} == "26"
-RUBY_VERSION=		${RUBY26_VERSION}
-RUBY_ABI_VERSION=	${RUBY_VERSION}
-RUBY_SUFFIX=		${_RUBY_VER_MAJOR}${_RUBY_VER_MINOR}
-
-# bundled gems
-RUBY_RUBYGEMS_VER=		3.0.3.1
-RUBY_BIGDECIMAL_VER=		1.4.1
-RUBY_BUNDLER_VER=		1.17.2
-RUBY_CMATH_VER=			1.0.0
-RUBY_CSV_VER=			3.0.9
-RUBY_DATE_VER=			2.0.3
-RUBY_DBM_VER=			1.0.0
-RUBY_DID_YOU_MEAN_VER=		1.3.0
-RUBY_E2MMAP_VER=		0.1.0
-RUBY_ETC_VER=			1.0.1
-RUBY_FCNTL_VER=			1.0.0
-RUBY_FIDDLE_VER=		1.0.0
-RUBY_FILEUTILS_VER=		1.1.0
-RUBY_FORWARDABLE_VER=		1.2.0
-RUBY_IO_CONSOLE_VER=		0.4.7
-RUBY_IPADDR_VER=		1.2.2
-RUBY_IRB_VER=			1.0.0
-RUBY_JSON_VER=			2.1.0
-RUBY_LOGGER_VER=		1.3.0
-RUBY_MATRIX_VER=		0.1.0
-RUBY_MINITEST_VER=		5.11.3
-RUBY_MUTEX_M_VER=		0.1.0
-RUBY_NET_TELNET_VER=		0.2.0
-RUBY_OPENSSL_VER=		2.1.2
-RUBY_OSTRUCT_VER=		0.1.0
-RUBY_POWER_ASSERT_VER=		1.1.3
-RUBY_PRIME_VER=			0.1.0
-RUBY_PSYCH_VER=			3.1.0
-RUBY_RAKE_VER=			12.3.3
-RUBY_RDOC_VER=			6.1.2.1
-RUBY_REXML_VER=			3.1.9.1
-RUBY_RSS_VER=			0.2.7
-RUBY_SCANF_VER=			1.0.0
-RUBY_SDBM_VER=			1.0.0
-RUBY_SHELL_VER=			0.7
-RUBY_STRINGIO_VER=		0.0.2
-RUBY_STRSCAN_VER=		1.0.0
-RUBY_SYNC_VER=			0.5.0
-RUBY_TEST_UNIT_VER=		3.2.9
-RUBY_THWAIT_VER=		0.1.0
-RUBY_TRACER_VER=		0.1.0
-RUBY_SYNC_VER=			0.5.0
-RUBY_WEBRICK_VER=		1.4.4
-RUBY_XMLRPC_VER=		0.3.0
-RUBY_ZLIB_VER=			1.0.0
-
-.elif ${RUBY_VER} == "27"
+.if ${RUBY_VER} == "27"
 RUBY_VERSION=		${RUBY27_VERSION}
 RUBY_ABI_VERSION=	${RUBY_VERSION}
 RUBY_SUFFIX=		${_RUBY_VER_MAJOR}${_RUBY_VER_MINOR}
@@ -584,7 +530,7 @@ MULTI+=	RUBY_VER=${RUBY_VERS:U${RUBY_VERSION_DEFAULT}}
 #	any specific version of ruby command.  In this case, package's
 #	name begin with "ruby-".
 #	If RUBY_NOVERSION is "No" (default), the package's name begins
-#	with ${RUBY_NAME}; "ruby26", "ruby27" and so on.
+#	with ${RUBY_NAME}; "ruby27", "ruby30" and so on.
 #
 #	It also affects to RUBY_DOC, RUBY_EG...
 #
