@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2022/09/10 16:02:41 taca Exp $
+# $NetBSD: Makefile,v 1.14 2022/10/10 03:24:52 taca Exp $
 
 DISTNAME=	redmine-plugins-1.3.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/redmine/redmine${RM_VER}/}
@@ -18,7 +18,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-redmine${RM_VER}-work_time-[0-9]*:../../devel/ruby-r
 META_PACKAGE=		yes
 MESSAGE_SRC+=		${.CURDIR}/MESSAGE.common ${.CURDIR}/MESSAGE
 
-RUBY_VERSIONS_ACCEPTED=	26 27 30 31
+RUBY_VERSIONS_ACCEPTED=	27 30 31
 
 MESSAGE_SUBST+=	RM_SVER=${RM_SVER}
 
