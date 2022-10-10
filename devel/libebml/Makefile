@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.51 2022/10/03 11:50:19 adam Exp $
+# $NetBSD: Makefile,v 1.52 2022/10/10 07:37:54 adam Exp $
 
-DISTNAME=	libebml-1.4.3
+DISTNAME=	libebml-1.4.4
 CATEGORIES=	devel
 MASTER_SITES=	http://dl.matroska.org/downloads/libebml/
 EXTRACT_SUFX=	.tar.xz
