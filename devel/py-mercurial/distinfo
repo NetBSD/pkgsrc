@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.122 2022/09/09 17:24:40 wiz Exp $
+$NetBSD: distinfo,v 1.123 2022/10/10 11:04:11 wiz Exp $
 
-BLAKE2s (mercurial-6.2.2.tar.gz) = a9f19be96cf0cc332fbb3722c404e70efe7f94f1a8fbbd5279dc3fa91915f727
-SHA512 (mercurial-6.2.2.tar.gz) = b5a89588146b58c8552c20f24a472098c6fbb9863c59571d0e70b1d4cc5ea6d4a29e9660a26dfc87aa5124df9b65182a7c65b8558a21acf0164d0d90358addbd
-Size (mercurial-6.2.2.tar.gz) = 8057375 bytes
+BLAKE2s (mercurial-6.2.3.tar.gz) = e4fbaca02fab3c00d9b79c304ea7668de5b37fadd75b959145c6747a3f88d0a7
+SHA512 (mercurial-6.2.3.tar.gz) = 0d82582e6d40ceabcc32419bf0423dd9f49b72b72c91a0f575181f92b355699a88f0426a192c46ca47f3105e47cb45dc3ac1a6499f4c83e01fa31e31c1ffdfbb
+Size (mercurial-6.2.3.tar.gz) = 8058864 bytes
