@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2022/10/03 07:50:27 nia Exp $
+# $NetBSD: Makefile.common,v 1.23 2022/10/10 12:06:19 gdt Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -67,6 +67,12 @@ CONFIGURE_ARGS+=	--with-readline
 CONFIGURE_ARGS+=	--without-perl
 CONFIGURE_ARGS+=	--without-python
 CONFIGURE_ARGS+=	--without-tcl
+
+# Work around a bug in autoconf, that thinks almost all mkdir
+# implementations are deficient, and a bug someplace between postgis
+# and pgxs, that causes topology/Makefile.in to run pgxs's install-sh
+# but without a path.
+CONFIGURE_ENV+=		ac_cv_path_mkdir="mkdir"
 
 # avoid pointing to a wrapper
 CONFIGURE_ENV+=		MSGFMT=${TOOLS_PATH.msgfmt}
