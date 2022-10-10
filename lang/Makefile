@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.657 2022/10/10 03:22:11 taca Exp $
+# $NetBSD: Makefile,v 1.658 2022/10/10 03:28:55 taca Exp $
 #
 
 COMMENT=	Programming languages
@@ -266,7 +266,6 @@ SUBDIR+=	ruby-cucumber-gherkin
 SUBDIR+=	ruby-doc-stdlib
 SUBDIR+=	ruby-execjs
 SUBDIR+=	ruby-rkelly-remix
-SUBDIR+=	ruby26-base
 SUBDIR+=	ruby27
 SUBDIR+=	ruby27-base
 SUBDIR+=	ruby30
