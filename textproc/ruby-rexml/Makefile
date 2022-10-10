@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2022/08/30 15:24:32 taca Exp $
+# $NetBSD: Makefile,v 1.16 2022/10/10 03:24:52 taca Exp $
 
 DISTNAME=	rexml-3.2.5
 CATEGORIES=	textproc
@@ -9,7 +9,7 @@ COMMENT=	XML toolkit for Ruby
 LICENSE=	2-clause-bsd
 
 # Ruby 3.0 and 3.1 contain the same version of rexml.
-RUBY_VERSIONS_ACCEPTED=	26 27
+RUBY_VERSIONS_ACCEPTED=	27
 
 USE_LANGUAGES=	# empty
 

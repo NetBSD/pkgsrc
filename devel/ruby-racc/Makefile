@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2022/01/16 14:55:18 taca Exp $
+# $NetBSD: Makefile,v 1.31 2022/10/10 03:24:52 taca Exp $
 
 DISTNAME=	racc-1.6.0
 CATEGORIES=	devel
@@ -11,7 +11,7 @@ LICENSE=	gnu-lgpl-v2
 #
 # Ruby 3.1 has the same conflicting version 1.6.0.
 #
-RUBY_VERSIONS_ACCEPTED=	26 27 30
+RUBY_VERSIONS_ACCEPTED=	27 30
 
 RUBYGEM_OPTIONS+=	--format-executable
 
