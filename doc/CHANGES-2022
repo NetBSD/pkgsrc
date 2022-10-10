@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4962 2022/10/10 11:04:21 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4963 2022/10/10 12:13:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7520,3 +7520,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-macholib to 1.16.2 [adam 2022-10-10]
 	Updated devel/py-tenacity to 8.1.0 [adam 2022-10-10]
 	Updated devel/py-mercurial to 6.2.3 [wiz 2022-10-10]
+	Updated textproc/p5-Text-Autoformat to 1.75nb4 [wiz 2022-10-10]
