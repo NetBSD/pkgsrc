@@ -1,12 +1,10 @@
-# $NetBSD: Makefile.common,v 1.46 2022/01/16 14:01:32 taca Exp $
+# $NetBSD: Makefile.common,v 1.47 2022/10/10 03:31:44 taca Exp $
 #
 # Ruby base distribution common definition
 #
 # used by databases/ruby-gdbm/Makefile
 # used by devel/ruby-readline/Makefile
 # used by devel/ruby-mode/Makefile
-# used by lang/ruby26/Makefile
-# used by lang/ruby26-base/Makefile
 # used by lang/ruby27/Makefile
 # used by lang/ruby27-base/Makefile
 # used by lang/ruby30/Makefile
