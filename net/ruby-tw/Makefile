@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2022/08/29 14:20:56 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2022/10/10 03:36:50 taca Exp $
 
 DISTNAME=	tw-1.3.1
 CATEGORIES=	net
@@ -16,8 +16,6 @@ DEPENDS+=	${RUBY_PKGPREFIX}-twitter>=6.2.0:../../net/ruby-twitter
 DEPENDS+=	${RUBY_PKGPREFIX}-oauth>=0.5.4:../../security/ruby-oauth
 
 OVERRIDE_GEMSPEC+=	json>=${RUBY_JSON_VER}
-
-RUBY_VERSIONS_INCOMPATIBLE=	26 # ruby-oauth
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"

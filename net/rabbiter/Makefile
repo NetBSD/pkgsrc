@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2022/08/29 14:20:56 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2022/10/10 03:36:49 taca Exp $
 
 DISTNAME=	rabbiter-2.0.1
 PKGREVISION=	2
@@ -23,8 +23,6 @@ USE_RUBY_SETUP_PKG=	yes
 CONFIGURE_ARGS+=	--siteruby=${PREFIX}/${RUBY_VENDORLIB_BASE} \
 			--siterubyver=${PREFIX}/${RUBY_VENDORLIB} \
 			--siterubyverarch=${PREFIX}/${RUBY_VENDORARCHLIB}
-
-RUBY_VERSIONS_INCOMPATIBLE=	26 # ruby-oauth via ruby-twitter_oauth
 
 # let locale data to be installed with setup.rb
 post-extract:
