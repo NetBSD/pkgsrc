@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4957 2022/10/10 07:40:58 adam Exp $
+$NetBSD: CHANGES-2022,v 1.4958 2022/10/10 08:06:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7512,3 +7512,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/libebml to 1.4.4 [adam 2022-10-10]
 	Updated multimedia/libmatroska to 1.7.1 [adam 2022-10-10]
 	Updated multimedia/mkvtoolnix to 71.1.0 [adam 2022-10-10]
+	Updated devel/py-ZopeInterface to 5.5.0 [adam 2022-10-10]
+	Updated databases/py-apsw to 3.39.4.0 [adam 2022-10-10]
