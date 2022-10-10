@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2022/09/06 09:24:01 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2022/10/10 03:36:50 taca Exp $
 
 DISTNAME=	train-core-3.10.1
 CATEGORIES=	net
@@ -15,8 +15,6 @@ DEPENDS+=	${RUBY_PKGPREFIX}-net-scp>=1.2<4.0:../../security/ruby-net-scp
 #DEPENDS+=	${RUBY_PKGPREFIX}-net-ssh>=2.9<7.0:../../security/ruby-net-ssh
 
 USE_LANGUAGES=	# none
-
-RUBY_VERSIONS_INCOMPATIBLE=	26
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
