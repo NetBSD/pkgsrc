@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2020/06/08 13:18:06 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2022/10/10 07:57:40 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -120,6 +120,9 @@ ${PYSITELIB}/zope/interface/tests/test_adapter.pyo
 ${PYSITELIB}/zope/interface/tests/test_advice.py
 ${PYSITELIB}/zope/interface/tests/test_advice.pyc
 ${PYSITELIB}/zope/interface/tests/test_advice.pyo
+${PYSITELIB}/zope/interface/tests/test_compile_flags.py
+${PYSITELIB}/zope/interface/tests/test_compile_flags.pyc
+${PYSITELIB}/zope/interface/tests/test_compile_flags.pyo
 ${PYSITELIB}/zope/interface/tests/test_declarations.py
 ${PYSITELIB}/zope/interface/tests/test_declarations.pyc
 ${PYSITELIB}/zope/interface/tests/test_declarations.pyo
