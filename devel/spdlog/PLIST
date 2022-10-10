@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2022/04/20 20:42:45 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2022/10/10 12:46:32 adam Exp $
 include/spdlog/async.h
 include/spdlog/async_logger-inl.h
 include/spdlog/async_logger.h
@@ -36,20 +36,6 @@ include/spdlog/details/udp_client-windows.h
 include/spdlog/details/udp_client.h
 include/spdlog/details/windows_include.h
 include/spdlog/fmt/bin_to_hex.h
-include/spdlog/fmt/bundled/args.h
-include/spdlog/fmt/bundled/chrono.h
-include/spdlog/fmt/bundled/color.h
-include/spdlog/fmt/bundled/compile.h
-include/spdlog/fmt/bundled/core.h
-include/spdlog/fmt/bundled/fmt.license.rst
-include/spdlog/fmt/bundled/format-inl.h
-include/spdlog/fmt/bundled/format.h
-include/spdlog/fmt/bundled/locale.h
-include/spdlog/fmt/bundled/os.h
-include/spdlog/fmt/bundled/ostream.h
-include/spdlog/fmt/bundled/printf.h
-include/spdlog/fmt/bundled/ranges.h
-include/spdlog/fmt/bundled/xchar.h
 include/spdlog/fmt/chrono.h
 include/spdlog/fmt/compile.h
 include/spdlog/fmt/fmt.h
@@ -103,9 +89,7 @@ lib/cmake/spdlog/spdlogConfig.cmake
 lib/cmake/spdlog/spdlogConfigTargets-release.cmake
 lib/cmake/spdlog/spdlogConfigTargets.cmake
 lib/cmake/spdlog/spdlogConfigVersion.cmake
-lib/libspdlog.${SOEXT}
-${PLIST.dylib}lib/libspdlog.1.${SOEXT}
-${PLIST.dylib}lib/libspdlog.${PKGVERSION}.${SOEXT}
-${PLIST.notdylib}lib/libspdlog.${SOEXT}.1
-${PLIST.notdylib}lib/libspdlog.${SOEXT}.${PKGVERSION}
+lib/libspdlog.so
+lib/libspdlog.so.${PKGVERSION}
+lib/libspdlog.so.1
 lib/pkgconfig/spdlog.pc
