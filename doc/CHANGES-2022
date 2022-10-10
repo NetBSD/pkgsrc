@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4965 2022/10/10 17:14:29 adam Exp $
+$NetBSD: CHANGES-2022,v 1.4966 2022/10/10 18:28:48 scole Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7525,3 +7525,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated multimedia/gerbera to 1.11.0nb3 [adam 2022-10-10]
 	Updated multimedia/ffmpeg4 to 4.4.3 [adam 2022-10-10]
 	Updated multimedia/ffplay4 to 4.4.3 [adam 2022-10-10]
+	Updated textproc/split-thai to 2.20 [scole 2022-10-10]
