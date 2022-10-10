@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2022/10/10 03:31:44 taca Exp $
+# $NetBSD: Makefile,v 1.73 2022/10/10 03:44:54 taca Exp $
 
 DISTNAME=	# empty
 PKGNAME=	ruby-${RUBY_VERSION}
@@ -20,11 +20,11 @@ NO_BUILD=	yes
 
 DEPENDS+=	${RUBY_BASE}>=${RUBY_VERSION}:${RUBY_SRCDIR}
 
-.if ${RUBY_VER} == "27"
+.if ${RUBY_VER} == 27
 RUBY_COMMANDS=	bundle bundler erb gem irb racc rake racc2y rdoc ri ruby y2racc
-.elif ${RUBY_VER} == "30"
+.elif ${RUBY_VER} == 30
 RUBY_COMMANDS=	bundle bundler erb gem irb racc rake rbs rdoc ri ruby typeprof
-.elif ${RUBY_VER} == "31"
+.elif ${RUBY_VER} == 31
 RUBY_COMMANDS=	bundle bundler erb gem irb racc rake rbs rdbg rdoc ri ruby typeprof
 .endif
 
