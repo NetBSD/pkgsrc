@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4963 2022/10/10 12:13:07 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4964 2022/10/10 12:48:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7521,3 +7521,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-tenacity to 8.1.0 [adam 2022-10-10]
 	Updated devel/py-mercurial to 6.2.3 [wiz 2022-10-10]
 	Updated textproc/p5-Text-Autoformat to 1.75nb4 [wiz 2022-10-10]
+	Updated devel/spdlog to 1.10.0nb1 [adam 2022-10-10]
+	Updated multimedia/gerbera to 1.11.0nb3 [adam 2022-10-10]
