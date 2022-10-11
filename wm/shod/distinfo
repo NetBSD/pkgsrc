@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2022/03/14 10:22:49 pin Exp $
+$NetBSD: distinfo,v 1.8 2022/10/11 20:47:37 pin Exp $
 
-BLAKE2s (shod-2.4.0.tar.gz) = f58aa519a469e62b7c8cee8a7af319278c9475359eda4fb9ef57723f7f82f206
-SHA512 (shod-2.4.0.tar.gz) = d935e8d45452d7106bd43a596fa4ab0067aab30014fb136a9c00ad730307776060f1db0f95ddaae0298e29887f08be95e7344ebb033479f5f69655f6e6f3871c
-Size (shod-2.4.0.tar.gz) = 50881 bytes
+BLAKE2s (shod-2.5.0.tar.gz) = 5931c0a3f55eff3e8ff78af8e7e4b62c6bbd92787fef837f61f46e91902ccabd
+SHA512 (shod-2.5.0.tar.gz) = ec359ffac14388c77be15a808660f1ad7ac7d78d48e3c5ea5aa190de0bd6625cf982159f13f9228723a06d7053034d622b8bee4a328f721fc18a8ddad534ab59
+Size (shod-2.5.0.tar.gz) = 61980 bytes
