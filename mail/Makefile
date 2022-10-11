@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.587 2022/10/06 03:25:00 markd Exp $
+# $NetBSD: Makefile,v 1.588 2022/10/11 13:44:25 wiz Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -205,6 +205,7 @@ SUBDIR+=	p5-Email-MIME-ContentType
 SUBDIR+=	p5-Email-MIME-Encodings
 SUBDIR+=	p5-Email-MIME-RFC2047
 SUBDIR+=	p5-Email-MessageID
+SUBDIR+=	p5-Email-Outlook-Message
 SUBDIR+=	p5-Email-Reply
 SUBDIR+=	p5-Email-Send
 SUBDIR+=	p5-Email-Sender
