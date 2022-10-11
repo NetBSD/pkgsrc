@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4972 2022/10/11 13:15:50 adam Exp $
+$NetBSD: CHANGES-2022,v 1.4973 2022/10/11 13:24:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7534,3 +7534,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-test4 to 4.6.11 [adam 2022-10-11]
 	Updated devel/py-pluggy to 1.0.0 [adam 2022-10-11]
 	Updated textproc/py-black to 22.10.0 [adam 2022-10-11]
+	Updated sysutils/py-stack-data to 0.5.1 [adam 2022-10-11]
+	Updated net/py-lexicon to 3.11.5 [adam 2022-10-11]
