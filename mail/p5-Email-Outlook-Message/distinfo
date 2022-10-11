@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/10/11 13:43:53 wiz Exp $
+
+BLAKE2s (Email-Outlook-Message-0.921.tar.gz) = 009e07ca122f7b41d3beb28f776ce26d300abe14b3bb8b74886e93da81d73ea8
+SHA512 (Email-Outlook-Message-0.921.tar.gz) = 1127c805bb3d9e18a61560ea901f5d7ad601238f6b6c69fee64a1619e6efe5348203f9f2bcfc1445e0d609a61e7dd2927c59b9467d2b78371a481ab4266a0bf9
+Size (Email-Outlook-Message-0.921.tar.gz) = 48444 bytes
