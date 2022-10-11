@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4970 2022/10/11 10:54:25 pin Exp $
+$NetBSD: CHANGES-2022,v 1.4971 2022/10/11 11:53:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7530,3 +7530,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/rust-bin to 1.63.0 [he 2022-10-10]
 	Updated sysutils/dmidecode to 3.4 [msaitoh 2022-10-11]
 	Updated graphics/oculante to 0.6.13 [pin 2022-10-11]
+	Added devel/py27-pluggy version 0.13.1nb2 [adam 2022-10-11]
+	Updated devel/py-test4 to 4.6.11 [adam 2022-10-11]
