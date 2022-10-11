@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4973 2022/10/11 13:24:27 adam Exp $
+$NetBSD: CHANGES-2022,v 1.4974 2022/10/11 13:44:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7536,3 +7536,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/py-black to 22.10.0 [adam 2022-10-11]
 	Updated sysutils/py-stack-data to 0.5.1 [adam 2022-10-11]
 	Updated net/py-lexicon to 3.11.5 [adam 2022-10-11]
+	Added mail/p5-Email-Outlook-Message version 0.921 [wiz 2022-10-11]
