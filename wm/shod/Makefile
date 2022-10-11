@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2022/05/12 09:37:44 pin Exp $
+# $NetBSD: Makefile,v 1.7 2022/10/11 20:47:37 pin Exp $
 
-DISTNAME=	shod-2.4.0
+DISTNAME=	shod-2.5.0
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=phillbush/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
