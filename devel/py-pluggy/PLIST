@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2018/10/23 09:00:34 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/10/11 13:14:15 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -7,18 +7,21 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/pluggy/__init__.py
 ${PYSITELIB}/pluggy/__init__.pyc
 ${PYSITELIB}/pluggy/__init__.pyo
+${PYSITELIB}/pluggy/_callers.py
+${PYSITELIB}/pluggy/_callers.pyc
+${PYSITELIB}/pluggy/_callers.pyo
+${PYSITELIB}/pluggy/_hooks.py
+${PYSITELIB}/pluggy/_hooks.pyc
+${PYSITELIB}/pluggy/_hooks.pyo
+${PYSITELIB}/pluggy/_manager.py
+${PYSITELIB}/pluggy/_manager.pyc
+${PYSITELIB}/pluggy/_manager.pyo
+${PYSITELIB}/pluggy/_result.py
+${PYSITELIB}/pluggy/_result.pyc
+${PYSITELIB}/pluggy/_result.pyo
 ${PYSITELIB}/pluggy/_tracing.py
 ${PYSITELIB}/pluggy/_tracing.pyc
 ${PYSITELIB}/pluggy/_tracing.pyo
 ${PYSITELIB}/pluggy/_version.py
 ${PYSITELIB}/pluggy/_version.pyc
 ${PYSITELIB}/pluggy/_version.pyo
-${PYSITELIB}/pluggy/callers.py
-${PYSITELIB}/pluggy/callers.pyc
-${PYSITELIB}/pluggy/callers.pyo
-${PYSITELIB}/pluggy/hooks.py
-${PYSITELIB}/pluggy/hooks.pyc
-${PYSITELIB}/pluggy/hooks.pyo
-${PYSITELIB}/pluggy/manager.py
-${PYSITELIB}/pluggy/manager.pyc
-${PYSITELIB}/pluggy/manager.pyo
