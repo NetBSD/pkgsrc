@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2022/08/18 15:18:06 hauke Exp $
+# $NetBSD: Makefile,v 1.17 2022/10/11 14:38:10 taca Exp $
 
 VERSION_TAG=	0.4.2
 
 DISTNAME=	Unburden-Home-Dir-${VERSION_TAG}
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	sysutils perl5
 MASTER_SITES=	-https://codeload.github.com/xtaran/unburden-home-dir/tar.gz/${VERSION_TAG}
 
@@ -75,7 +76,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-ronn-[0-9]*:../../devel/ruby-ronn
 .PHONY:		unburden-update-manpage
 unburden-update-manpage:	patch
 	( cd ${WRKSRC} && \
-	  ronn${RUBY_VER} --manual="Unburden Your Home Directory" -r \
+	  ronn${RUBY_SUFFIX} --manual="Unburden Your Home Directory" -r \
 	  --pipe < docs/unburden-home-dir.1.md > unburden-home-dir.1 )
 	cp ${WRKSRC}/unburden-home-dir.1 ${PKGDIR}/files/
 
