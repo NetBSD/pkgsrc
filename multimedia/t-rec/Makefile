@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/10/06 07:43:28 pin Exp $
+# $NetBSD: Makefile,v 1.2 2022/10/11 10:55:34 pin Exp $
 
 DISTNAME=	t-rec-rs-0.7.5
 PKGNAME=	t-rec-0.7.5
@@ -29,4 +29,5 @@ do-install:
 
 .include "../../lang/rust/cargo.mk"
 .include "../../graphics/ImageMagick/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
