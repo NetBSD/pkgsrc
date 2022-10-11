@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3809 2022/10/09 15:35:07 taca Exp $
+# $NetBSD: Makefile,v 1.3810 2022/10/11 11:51:54 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2974,6 +2974,7 @@ SUBDIR+=	py-zope.exceptions
 SUBDIR+=	py-zope.hookable
 SUBDIR+=	py-zope.testing
 SUBDIR+=	py27-coverage
+SUBDIR+=	py27-pluggy
 SUBDIR+=	py27-test-cov
 SUBDIR+=	pycharm-bin
 SUBDIR+=	pythontidy
