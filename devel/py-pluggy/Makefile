@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2022/01/25 09:05:11 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2022/10/11 13:14:15 adam Exp $
 
-DISTNAME=	pluggy-0.13.1
+DISTNAME=	pluggy-1.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pluggy/}
 
@@ -11,18 +10,21 @@ HOMEPAGE=	https://github.com/pytest-dev/pluggy
 COMMENT=	Plugin and hook calling mechanisms for python
 LICENSE=	mit
 
-.include "../../lang/python/pyversion.mk"
-.if ${_PYTHON_VERSION} < 38
-PYTHON_VERSIONED_DEPENDENCIES+=	importlib-metadata
-.endif
-
-PYTHON_VERSIONED_DEPENDENCIES+=	test:test setuptools_scm:build
+BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-benchmark-[0-9]*:../../devel/py-test-benchmark
 
 USE_LANGUAGES=	# none
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+.include "../../lang/python/pyversion.mk"
+.if ${_PYTHON_VERSION} < 38
+DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=0.12:../../devel/py-importlib-metadata
+.endif
+
 do-test:
-	cd ${WRKSRC} && pytest-${PYVERSSUFFIX} testing
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} testing
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
