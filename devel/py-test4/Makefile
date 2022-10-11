@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2022/07/13 19:14:16 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2022/10/11 11:52:44 adam Exp $
 
-DISTNAME=	pytest-4.6.10
+DISTNAME=	pytest-4.6.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest/}
 
@@ -20,7 +19,7 @@ DEPENDS+=	${PYPKGPREFIX}-importlib-metadata-[0-9]*:../../devel/py-importlib-meta
 DEPENDS+=	${PYPKGPREFIX}-more-itertools-[0-9]*:../../devel/py-more-itertools2
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging2
 DEPENDS+=	${PYPKGPREFIX}-pathlib2>=2.2.0:../../devel/py-pathlib2
-DEPENDS+=	${PYPKGPREFIX}-pluggy>=0.12:../../devel/py-pluggy
+DEPENDS+=	${PYPKGPREFIX}-pluggy>=0.12:../../devel/py27-pluggy
 DEPENDS+=	${PYPKGPREFIX}-py>=1.5.0:../../devel/py-py
 DEPENDS+=	${PYPKGPREFIX}-six>=1.10.0:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-wcwidth-[0-9]*:../../devel/py-wcwidth
@@ -31,12 +30,12 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 # does not support python 2.7
 #TEST_DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 
-PYTHON_VERSIONS_ACCEPTED=	27
+USE_LANGUAGES=	# none
+USE_TOOLS+=	bash:build
 
 USE_PKG_RESOURCES=	yes
 
-USE_LANGUAGES=	# none
-USE_TOOLS+=	bash:build
+PYTHON_VERSIONS_ACCEPTED=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
@@ -44,7 +43,7 @@ post-install:
 	${MV} pytest pytest-${PYVERSSUFFIX} || ${TRUE}
 
 do-test:
-	cd ${WRKSRC}/testing && pytest-${PYVERSSUFFIX}
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} testing
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
