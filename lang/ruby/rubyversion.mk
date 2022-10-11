@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.254 2022/10/10 03:44:54 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.255 2022/10/11 14:36:06 taca Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -11,7 +11,7 @@
 #	The preferred Ruby version to use.
 #
 #		Possible values: 27 30 31
-#		Default: 27
+#		Default: 31
 #
 # RUBY_BUILD_DOCUMENT
 #	Build documentation of this package so that installs formatted
@@ -35,7 +35,7 @@
 #	The Ruby versions that are acceptable for the package.
 #
 #		Possible values: 27 30 31
-#		Default: 27 30 31
+#		Default: 31 30 27
 #
 # RUBY_VERSIONS_INCOMPATIBLE
 #	The Ruby versions that are incompatible for the package.
@@ -223,12 +223,12 @@ RUBY30_API_VERSION=	3.0.0
 RUBY31_API_VERSION=	3.1.0
 
 #
-RUBY_VERSION_DEFAULT?=	27
+RUBY_VERSION_DEFAULT?=	31
 
 # supported Ruby's version
 RUBY_VERSIONS_SUPPORTED=	27 30 31
 
-RUBY_VERSIONS_ACCEPTED?=	27 30 31
+RUBY_VERSIONS_ACCEPTED?=	31 30 27
 RUBY_VERSIONS_INCOMPATIBLE?=
 
 .if empty(RUBY_VERSIONS_SUPPORTED:M${RUBY_VERSION_DEFAULT})
