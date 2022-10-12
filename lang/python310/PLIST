@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2022/09/06 19:13:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2022/10/12 08:02:25 adam Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -5242,6 +5242,12 @@ lib/python${PY_VER_SUFFIX}/test/tracedmodules/__init__.pyo
 lib/python${PY_VER_SUFFIX}/test/tracedmodules/testmod.py
 lib/python${PY_VER_SUFFIX}/test/tracedmodules/testmod.pyc
 lib/python${PY_VER_SUFFIX}/test/tracedmodules/testmod.pyo
+lib/python${PY_VER_SUFFIX}/test/typinganndata/__init__.py
+lib/python${PY_VER_SUFFIX}/test/typinganndata/__init__.pyc
+lib/python${PY_VER_SUFFIX}/test/typinganndata/__init__.pyo
+lib/python${PY_VER_SUFFIX}/test/typinganndata/ann_module9.py
+lib/python${PY_VER_SUFFIX}/test/typinganndata/ann_module9.pyc
+lib/python${PY_VER_SUFFIX}/test/typinganndata/ann_module9.pyo
 lib/python${PY_VER_SUFFIX}/test/win_console_handler.py
 lib/python${PY_VER_SUFFIX}/test/win_console_handler.pyc
 lib/python${PY_VER_SUFFIX}/test/win_console_handler.pyo
