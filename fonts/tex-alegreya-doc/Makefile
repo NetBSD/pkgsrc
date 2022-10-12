@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2020/04/26 12:21:11 markd Exp $
+# $NetBSD: Makefile,v 1.10 2022/10/12 22:13:15 markd Exp $
 
 DISTNAME=	alegreya.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2020
-TEXLIVE_REV=	54512
+PKGNAME=	tex-${DISTNAME:S/./-/}-2022
+TEXLIVE_REV=	64384
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/alegreya
