@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2021/02/20 00:22:06 markd Exp $
+# $NetBSD: Makefile,v 1.6 2022/10/12 22:37:36 markd Exp $
 
 DISTNAME=	merriweather.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2020.56365
-TEXLIVE_REV=	56365
+PKGNAME=	tex-${DISTNAME:S/./-/}-2022
+TEXLIVE_REV=	64452
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/merriweather
