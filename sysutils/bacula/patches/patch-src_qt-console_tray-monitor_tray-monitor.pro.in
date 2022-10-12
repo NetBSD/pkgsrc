@@ -1,11 +1,19 @@
-$NetBSD: patch-src_qt-console_tray-monitor_tray-monitor.pro.in,v 1.2 2022/10/06 02:58:17 markd Exp $
+$NetBSD: patch-src_qt-console_tray-monitor_tray-monitor.pro.in,v 1.3 2022/10/12 20:59:18 markd Exp $
 
+- need libinotify on not linux
 - comment out the confs paths and command
 - use just the compiler not libtool for QMAKE_LINK
 
 --- src/qt-console/tray-monitor/tray-monitor.pro.in.orig	2022-08-05 15:13:35.000000000 +0000
 +++ src/qt-console/tray-monitor/tray-monitor.pro.in
-@@ -27,8 +27,8 @@ cross-win32 {
+@@ -23,12 +23,14 @@ cross-win32 {
+ !cross-win32 {
+   LIBS        += -L../../lib -lbaccfg -lbac -L../../findlib -lbacfind @OPENSSL_LIBS@
+ }
+-
++!linux* {
++  LIBS        += -linotify
++}
  
  bins.path = /$(DESTDIR)@sbindir@
  bins.files = bacula-tray-monitor
@@ -16,7 +24,7 @@ $NetBSD: patch-src_qt-console_tray-monitor_tray-monitor.pro.in,v 1.2 2022/10/06 
  
  TEMPLATE     = app
  TARGET       = bacula-tray-monitor
-@@ -38,7 +38,7 @@ INCLUDEPATH += ../.. .
+@@ -38,7 +40,7 @@ INCLUDEPATH += ../.. .
  QMAKE_CC = $(CXX) 
  LIBTOOL_LINK = @QMAKE_LIBTOOL@ --silent --tag=CXX --mode=link
  LIBTOOL_INSTALL = @QMAKE_LIBTOOL@ --silent --mode=install
