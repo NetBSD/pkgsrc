@@ -1,7 +1,7 @@
 The package provides LaTeX, pdfLaTeX, XeLaTeX and LuaLaTeX
 support for the Quattrocento and Quattrocento Sans families of
 fonts, designed by Pablo Impallari; the fonts themselves are
-also provided, in both Type 1 and OpenType format. Quattrocento
+also provided, in both TrueType and Type1 format. Quattrocento
 is a classic typeface with wide and open letterforms, and great
 x-height, which makes it very legible for body text at small
 sizes. Tiny details that only show up at bigger sizes make it
