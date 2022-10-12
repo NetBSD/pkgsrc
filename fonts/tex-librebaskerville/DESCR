@@ -1,5 +1,5 @@
-Libre Baskerville is designed by Pablo Impallari. It is
-primarily intended to be a web font but is also attractive as a
-TeX font. As there is currently no bold italic variant, an
-artificially slanted version of the bold variant has been
-generated.
+This package provides the Libre Baskerville family of fonts,
+designed by Pablo Impallari, for use with LaTeX, pdfLaTeX,
+XeLaTeX or LuaLaTeX. It is primarily intended to be a web font
+but is also attractive as a text font. A BoldItalic variant has
+been artificially generated.
