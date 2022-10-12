@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2021/02/20 00:17:58 markd Exp $
+# $NetBSD: Makefile,v 1.6 2022/10/12 22:34:01 markd Exp $
 
 DISTNAME=	librecaslon.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2020.56003
-TEXLIVE_REV=	56003
+PKGNAME=	tex-${DISTNAME:S/./-/}-2022
+TEXLIVE_REV=	64432
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/librecaslon
