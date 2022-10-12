@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:28:11 nia Exp $
+$NetBSD: distinfo,v 1.8 2022/10/12 22:34:01 markd Exp $
 
-BLAKE2s (librecaslon.doc.r56003.tar.xz) = 696422dfcf0ee4d4113a59c62c073f85bda5cd8e507cb79a0b81a6c4a86d069a
-SHA512 (librecaslon.doc.r56003.tar.xz) = c41ea29708c5f830ef69d02444eb2735a307c545bbd3b876e9d367006bcea0df55d43fb740b15f1fba2849a9133ecf9edc617b9f2e143789c317821ea5573cdd
-Size (librecaslon.doc.r56003.tar.xz) = 107932 bytes
+BLAKE2s (librecaslon.doc.r64432.tar.xz) = a41a560cf0dbe83dadd3e4d8aa367bdccc21a13ed23718dde1d176b971f07e72
+SHA512 (librecaslon.doc.r64432.tar.xz) = 9f7c6662af462f0c73b97de098cc4bbff5a3060e44a72ce294b175c5d5a3f520a93026b1bab17bdaf5c48d2de55c4045730386f7f8f046b3ff797c4d715acb8f
+Size (librecaslon.doc.r64432.tar.xz) = 107940 bytes
