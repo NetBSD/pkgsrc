@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4979 2022/10/12 13:35:12 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4980 2022/10/12 13:40:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7551,3 +7551,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/python37 to 3.7.15 [adam 2022-10-12]
 	Updated lang/py37-html-docs to 3.7.15 [adam 2022-10-12]
 	Updated security/openssh to 9.1.1 [wiz 2022-10-12]
+	Updated security/openssl to 1.1.1r [wiz 2022-10-12]
