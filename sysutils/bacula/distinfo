@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.61 2022/10/06 02:58:17 markd Exp $
+$NetBSD: distinfo,v 1.62 2022/10/12 20:59:18 markd Exp $
 
 BLAKE2s (bacula-13.0.1.tar.gz) = 3989f1eb9b469efba8244d5b3baf64a2ee358c0c72eaf1bbe2837132b1bda559
 SHA512 (bacula-13.0.1.tar.gz) = fd10857d12bb637b9f6e51a03888d8cc93604ba1e793f888304f3c115d48800d7f0d69e30a843355c6760ff8e9b5481c174a24ace1c2adc106cf4ec73646b426
@@ -24,6 +24,6 @@ SHA1 (patch-src_lib_attr.c) = 287851ff2ce2a0868d597cf1d7471a6766f6f7c1
 SHA1 (patch-src_plugins_fd_Makefile) = 7fb44bdf1253e0c0f7bc9d621133fc3ba23617a0
 SHA1 (patch-src_plugins_fd_docker_baculatar_baculatar) = ba5fb5edc8ee98f09d31f36e840d68facfe48233
 SHA1 (patch-src_qt-console_bat.pro.in) = 2d9ca83fc9c30bb3be92e051e260f992d7c5b049
-SHA1 (patch-src_qt-console_tray-monitor_tray-monitor.pro.in) = eac1fffd0f79328346f5024527fdc452d06062aa
+SHA1 (patch-src_qt-console_tray-monitor_tray-monitor.pro.in) = bc6a8694987879bda890102088dcb40f29d994d0
 SHA1 (patch-src_stored_Makefile.in) = 4a00b4da8dfca59c5346968b9e534c15c950449a
 SHA1 (patch-src_tools_Makefile.in) = 11caa8f1b4a1b381613ec1d089523dcf43c4078a
