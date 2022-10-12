@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2021/02/20 00:15:43 markd Exp $
+# $NetBSD: Makefile,v 1.6 2022/10/12 22:31:26 markd Exp $
 
 DISTNAME=	librebaskerville
-PKGNAME=	tex-${DISTNAME}-2020
-TEXLIVE_REV=	56018
+PKGNAME=	tex-${DISTNAME}-2022
+TEXLIVE_REV=	64421
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/librebaskerville
