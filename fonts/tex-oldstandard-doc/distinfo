@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:28:21 nia Exp $
+$NetBSD: distinfo,v 1.9 2022/10/12 22:42:59 markd Exp $
 
-BLAKE2s (oldstandard.doc.r57213.tar.xz) = 7aa2389e5ee17c082ebef950298a08e3197520d0ba2c4b1f9c2abb893d5fc6fb
-SHA512 (oldstandard.doc.r57213.tar.xz) = 13d73f373b75de8be6e013595eb257ad4f2cb601f56ce5ee57a16cb427068ae597f3fb802b781f9c60e5e1e502f253b09ec3d2740355929ccb236a1d55ae1933
-Size (oldstandard.doc.r57213.tar.xz) = 301996 bytes
+BLAKE2s (oldstandard.doc.r64464.tar.xz) = b191fd029203418907914e97b1b47ab5ac9758b898736746eb99a4e26c7ef4cb
+SHA512 (oldstandard.doc.r64464.tar.xz) = b685cc4cd397ec413b5ce8aaed4f0a9aa1b1f213a1d57747233a8914fd868fd1d7fa50a199379430ec214106b5ab35bc1c86ef9d53d4628e2810a412c98d99f0
+Size (oldstandard.doc.r64464.tar.xz) = 302028 bytes

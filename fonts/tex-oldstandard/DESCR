@@ -6,6 +6,7 @@ almost completely abandoned later. The font supports
 typesetting of Old and Middle English, Old Icelandic, Cyrillic
 (with historical characters, extensions for Old Slavonic and
 localised forms), Gothic transliterations, critical editions of
-Classical Greek and Latin, and many more. Old Standard works
+Classical Greek and Latin, and many more. This package works
 with TeX engines that directly support OpenType features, such
-as XeTeX and LuaTeX.
+as XeTeX and LuaTeX, as well as traditional engines such as TeX
+and pdfTeX.
