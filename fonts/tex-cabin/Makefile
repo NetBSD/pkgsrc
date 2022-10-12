@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.10 2021/02/20 00:06:05 markd Exp $
+# $NetBSD: Makefile,v 1.11 2022/10/12 22:15:40 markd Exp $
 
 DISTNAME=	cabin
-PKGNAME=	tex-${DISTNAME}-2020.55907
-TEXLIVE_REV=	55907
+PKGNAME=	tex-${DISTNAME}-2022
+TEXLIVE_REV=	64371
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/cabin
 COMMENT=	Humanist Sans Serif font, with LaTeX support
-LICENSE=	ofl-v1.1
+LICENSE=	ofl-v1.1 AND lppl-1.3c
 
 TEX_MAP_FILES+=	cabin.map
 
