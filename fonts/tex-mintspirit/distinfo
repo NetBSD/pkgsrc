@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:28:16 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/10/12 22:39:17 markd Exp $
 
-BLAKE2s (tex-mintspirit-32069/mintspirit.tar.xz) = cf881c5b247606cfa319bea79f5dac033a8992d849b0746e3f4df2a73a3e987c
-SHA512 (tex-mintspirit-32069/mintspirit.tar.xz) = f45d0058c36d52a1e8a7b7a5e07f9b769ce8a3ec8fc435fd91e42515570747191e425103f8f469b0f1b2cba8157402705387b79325578d7668a2f80ee626bd33
-Size (tex-mintspirit-32069/mintspirit.tar.xz) = 1105444 bytes
+BLAKE2s (mintspirit.r64461.tar.xz) = e403c089b600186a93c450f88b6bf6b9c12a1e4fb14a3aaca3fea894170ea003
+SHA512 (mintspirit.r64461.tar.xz) = 18167b9d0b5c167e2679cfb135812e3cbc20a90a182acb3eef15a54f4029298ebb39f6db626b5cbd8368389c9f0656f7575eb4f1970fd242d77d976762ca8d5b
+Size (mintspirit.r64461.tar.xz) = 1105472 bytes
