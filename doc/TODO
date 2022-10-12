@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22282 2022/10/12 13:40:15 wiz Exp $
+$NetBSD: TODO,v 1.22283 2022/10/12 14:33:34 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1114,6 +1114,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o openrct2-0.3.3
 	o openslp-2.0.0
 	o opensmtpd-6.8.0p2
+	o openssl-1.1.1r [do not update, https://mta.openssl.org/pipermail/openssl-announce/2022-October/000237.html]
 	o openssl-3.0.6
 	o openxenmanager-0.83
 	o opera-26
@@ -1237,7 +1238,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pinfo-0.6.10
 	o pks-0.9.6
 	o plan-1.10.1
-	o plasma-5.25.1
+	o plasma-5.26
 	o ploticus-examples-230
 	o ply-3.11
 	o pocl-3.0
