@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/10/09 06:46:57 tonio Exp $
+# $NetBSD: Makefile,v 1.3 2022/10/12 10:22:30 wiz Exp $
 
 DISTNAME=	why3-1.5.1
 PKGREVISION=	1
@@ -19,4 +19,5 @@ CONFIGURE_ARGS+=	--disable-ide
 INSTALL_TARGET=		install install-lib
 
 .include "../../lang/ocaml/buildlink3.mk"
+.include "../../math/ocaml-num/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
