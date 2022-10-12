@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2022/09/01 05:10:34 markd Exp $
+# $NetBSD: Makefile,v 1.11 2022/10/12 22:52:29 markd Exp $
 
 DISTNAME=	roboto.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2022.63389
-TEXLIVE_REV=	63389
+PKGNAME=	tex-${DISTNAME:S/./-/}-2022.64350
+TEXLIVE_REV=	64350
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/roboto
