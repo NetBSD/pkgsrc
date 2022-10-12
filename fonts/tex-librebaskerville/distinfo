@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:28:10 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/10/12 22:31:26 markd Exp $
 
-BLAKE2s (librebaskerville.r56018.tar.xz) = f12da3f38dc44ce5bf8c4ff78819790ca24981ba2e38497106b5b1ac1e2a5cb8
-SHA512 (librebaskerville.r56018.tar.xz) = 49e0fce1bb4d31cb12f323e45a9e9cdd8688951f89e69c22c9cb576d2d0e222eafe74e02b07a9a854fdca2a32debadbca32ded1ec5a0b2efaff4a0d20e7ea3a1
-Size (librebaskerville.r56018.tar.xz) = 576200 bytes
+BLAKE2s (librebaskerville.r64421.tar.xz) = 7b89aef147a87bbca5904d19187f4b2e4db91492085be1edb5e2df84e3121436
+SHA512 (librebaskerville.r64421.tar.xz) = 671894db7ebd325e35efba47a8b84dc9afbeb213358503f65e246e97af090be03f6591fe124d4f5b4c53ae99bdc7a56bf84d385597ed7564fa63f7fad5265e4e
+Size (librebaskerville.r64421.tar.xz) = 575508 bytes
