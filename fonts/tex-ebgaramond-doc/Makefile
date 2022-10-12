@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2020/04/26 12:21:13 markd Exp $
+# $NetBSD: Makefile,v 1.7 2022/10/12 22:23:34 markd Exp $
 
 DISTNAME=	ebgaramond.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2020
-TEXLIVE_REV=	54721
+PKGNAME=	tex-${DISTNAME:S/./-/}-2022
+TEXLIVE_REV=	64343
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/ebgaramond
