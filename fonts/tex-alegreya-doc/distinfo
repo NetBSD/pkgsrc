@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:27:27 nia Exp $
+$NetBSD: distinfo,v 1.11 2022/10/12 22:13:15 markd Exp $
 
-BLAKE2s (alegreya.doc.r54512.tar.xz) = 44c6ca124b08908ebc5ae2d398041a34ae764b2a6e8e3c859ef6adb21cd3ae00
-SHA512 (alegreya.doc.r54512.tar.xz) = fb152014915f9bf56ded5eef117169453923a86a8dfb165facd4e3e1db278f31aeab91e49e5e66d6d4a08ea10cba91ee762b4937f75f9623c77ff73b37965ddd
-Size (alegreya.doc.r54512.tar.xz) = 1107112 bytes
+BLAKE2s (alegreya.doc.r64384.tar.xz) = 2c10e716ec76063fbb03923bb374e38f7eb9e54c3922447e1e1c7a507b3ead1c
+SHA512 (alegreya.doc.r64384.tar.xz) = dcff5d4a47c3649155a79659012aa07123e5108b85804da9c1697d1f93d7b336ef7e37e1272c8e2e8f283971bfbfebc2e0cd2ebae3ff8ee69531629635ed7d74
+Size (alegreya.doc.r64384.tar.xz) = 1107116 bytes
