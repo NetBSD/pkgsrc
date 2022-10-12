@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4975 2022/10/11 20:47:59 pin Exp $
+$NetBSD: CHANGES-2022,v 1.4976 2022/10/12 07:45:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7538,3 +7538,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/py-lexicon to 3.11.5 [adam 2022-10-11]
 	Added mail/p5-Email-Outlook-Message version 0.921 [wiz 2022-10-11]
 	Updated wm/shod to 2.5.0 [pin 2022-10-11]
+	Updated devel/libusb1 to 1.0.26 [adam 2022-10-12]
+	Updated net/py-lexicon to 3.11.6 [adam 2022-10-12]
+	Updated devel/py-astroid to 2.12.11 [adam 2022-10-12]
+	Updated devel/py-pylint to 2.15.4 [adam 2022-10-12]
