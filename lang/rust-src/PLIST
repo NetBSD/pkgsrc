@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2022/09/02 10:46:21 he Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/10/12 08:48:33 he Exp $
 lib/rustlib/manifest-rust-src
 lib/rustlib/src/rust/Cargo.lock
 lib/rustlib/src/rust/library/alloc/Cargo.toml
@@ -39,6 +39,7 @@ lib/rustlib/src/rust/library/alloc/src/collections/btree/remove.rs
 lib/rustlib/src/rust/library/alloc/src/collections/btree/search.rs
 lib/rustlib/src/rust/library/alloc/src/collections/btree/set.rs
 lib/rustlib/src/rust/library/alloc/src/collections/btree/set/tests.rs
+lib/rustlib/src/rust/library/alloc/src/collections/btree/set_val.rs
 lib/rustlib/src/rust/library/alloc/src/collections/btree/split.rs
 lib/rustlib/src/rust/library/alloc/src/collections/btree/testing/crash_test.rs
 lib/rustlib/src/rust/library/alloc/src/collections/btree/testing/mod.rs
@@ -133,7 +134,6 @@ lib/rustlib/src/rust/library/backtrace/ci/docker/x86_64-linux-android/Dockerfile
 lib/rustlib/src/rust/library/backtrace/ci/docker/x86_64-pc-windows-gnu/Dockerfile
 lib/rustlib/src/rust/library/backtrace/ci/docker/x86_64-unknown-linux-gnu/Dockerfile
 lib/rustlib/src/rust/library/backtrace/ci/docker/x86_64-unknown-linux-musl/Dockerfile
-lib/rustlib/src/rust/library/backtrace/ci/miri-rustup.sh
 lib/rustlib/src/rust/library/backtrace/ci/run-docker.sh
 lib/rustlib/src/rust/library/backtrace/ci/run.sh
 lib/rustlib/src/rust/library/backtrace/ci/runtest-android.rs
@@ -152,10 +152,8 @@ lib/rustlib/src/rust/library/backtrace/src/print.rs
 lib/rustlib/src/rust/library/backtrace/src/print/fuchsia.rs
 lib/rustlib/src/rust/library/backtrace/src/symbolize/dbghelp.rs
 lib/rustlib/src/rust/library/backtrace/src/symbolize/gimli.rs
-lib/rustlib/src/rust/library/backtrace/src/symbolize/gimli.rs.orig
 lib/rustlib/src/rust/library/backtrace/src/symbolize/gimli/coff.rs
 lib/rustlib/src/rust/library/backtrace/src/symbolize/gimli/elf.rs
-lib/rustlib/src/rust/library/backtrace/src/symbolize/gimli/elf.rs.orig
 lib/rustlib/src/rust/library/backtrace/src/symbolize/gimli/libs_dl_iterate_phdr.rs
 lib/rustlib/src/rust/library/backtrace/src/symbolize/gimli/libs_haiku.rs
 lib/rustlib/src/rust/library/backtrace/src/symbolize/gimli/libs_illumos.rs
@@ -218,12 +216,15 @@ lib/rustlib/src/rust/library/core/src/array/equality.rs
 lib/rustlib/src/rust/library/core/src/array/iter.rs
 lib/rustlib/src/rust/library/core/src/array/mod.rs
 lib/rustlib/src/rust/library/core/src/ascii.rs
+lib/rustlib/src/rust/library/core/src/asserting.rs
 lib/rustlib/src/rust/library/core/src/async_iter/async_iter.rs
 lib/rustlib/src/rust/library/core/src/async_iter/from_iter.rs
 lib/rustlib/src/rust/library/core/src/async_iter/mod.rs
 lib/rustlib/src/rust/library/core/src/bool.rs
 lib/rustlib/src/rust/library/core/src/borrow.rs
 lib/rustlib/src/rust/library/core/src/cell.rs
+lib/rustlib/src/rust/library/core/src/cell/lazy.rs
+lib/rustlib/src/rust/library/core/src/cell/once.rs
 lib/rustlib/src/rust/library/core/src/char/convert.rs
 lib/rustlib/src/rust/library/core/src/char/decode.rs
 lib/rustlib/src/rust/library/core/src/char/methods.rs
@@ -296,6 +297,7 @@ lib/rustlib/src/rust/library/core/src/iter/range.rs
 lib/rustlib/src/rust/library/core/src/iter/sources.rs
 lib/rustlib/src/rust/library/core/src/iter/sources/empty.rs
 lib/rustlib/src/rust/library/core/src/iter/sources/from_fn.rs
+lib/rustlib/src/rust/library/core/src/iter/sources/from_generator.rs
 lib/rustlib/src/rust/library/core/src/iter/sources/once.rs
 lib/rustlib/src/rust/library/core/src/iter/sources/once_with.rs
 lib/rustlib/src/rust/library/core/src/iter/sources/repeat.rs
@@ -425,6 +427,7 @@ lib/rustlib/src/rust/library/core/tests/alloc.rs
 lib/rustlib/src/rust/library/core/tests/any.rs
 lib/rustlib/src/rust/library/core/tests/array.rs
 lib/rustlib/src/rust/library/core/tests/ascii.rs
+lib/rustlib/src/rust/library/core/tests/asserting.rs
 lib/rustlib/src/rust/library/core/tests/atomic.rs
 lib/rustlib/src/rust/library/core/tests/bool.rs
 lib/rustlib/src/rust/library/core/tests/cell.rs
@@ -631,6 +634,7 @@ lib/rustlib/src/rust/library/proc_macro/src/bridge/handle.rs
 lib/rustlib/src/rust/library/proc_macro/src/bridge/mod.rs
 lib/rustlib/src/rust/library/proc_macro/src/bridge/rpc.rs
 lib/rustlib/src/rust/library/proc_macro/src/bridge/scoped_cell.rs
+lib/rustlib/src/rust/library/proc_macro/src/bridge/selfless_reify.rs
 lib/rustlib/src/rust/library/proc_macro/src/bridge/server.rs
 lib/rustlib/src/rust/library/proc_macro/src/diagnostic.rs
 lib/rustlib/src/rust/library/proc_macro/src/lib.rs
@@ -712,7 +716,6 @@ lib/rustlib/src/rust/library/std/src/io/util.rs
 lib/rustlib/src/rust/library/std/src/io/util/tests.rs
 lib/rustlib/src/rust/library/std/src/keyword_docs.rs
 lib/rustlib/src/rust/library/std/src/lazy.rs
-lib/rustlib/src/rust/library/std/src/lazy/tests.rs
 lib/rustlib/src/rust/library/std/src/lib.rs
 lib/rustlib/src/rust/library/std/src/macros.rs
 lib/rustlib/src/rust/library/std/src/net/addr.rs
@@ -762,6 +765,9 @@ lib/rustlib/src/rust/library/std/src/os/haiku/mod.rs
 lib/rustlib/src/rust/library/std/src/os/haiku/raw.rs
 lib/rustlib/src/rust/library/std/src/os/hermit/ffi.rs
 lib/rustlib/src/rust/library/std/src/os/hermit/mod.rs
+lib/rustlib/src/rust/library/std/src/os/horizon/fs.rs
+lib/rustlib/src/rust/library/std/src/os/horizon/mod.rs
+lib/rustlib/src/rust/library/std/src/os/horizon/raw.rs
 lib/rustlib/src/rust/library/std/src/os/illumos/fs.rs
 lib/rustlib/src/rust/library/std/src/os/illumos/mod.rs
 lib/rustlib/src/rust/library/std/src/os/illumos/raw.rs
@@ -833,6 +839,7 @@ lib/rustlib/src/rust/library/std/src/os/windows/io/handle.rs
 lib/rustlib/src/rust/library/std/src/os/windows/io/mod.rs
 lib/rustlib/src/rust/library/std/src/os/windows/io/raw.rs
 lib/rustlib/src/rust/library/std/src/os/windows/io/socket.rs
+lib/rustlib/src/rust/library/std/src/os/windows/io/tests.rs
 lib/rustlib/src/rust/library/std/src/os/windows/mod.rs
 lib/rustlib/src/rust/library/std/src/os/windows/process.rs
 lib/rustlib/src/rust/library/std/src/os/windows/raw.rs
@@ -852,6 +859,8 @@ lib/rustlib/src/rust/library/std/src/sync/barrier.rs
 lib/rustlib/src/rust/library/std/src/sync/barrier/tests.rs
 lib/rustlib/src/rust/library/std/src/sync/condvar.rs
 lib/rustlib/src/rust/library/std/src/sync/condvar/tests.rs
+lib/rustlib/src/rust/library/std/src/sync/lazy_lock.rs
+lib/rustlib/src/rust/library/std/src/sync/lazy_lock/tests.rs
 lib/rustlib/src/rust/library/std/src/sync/mod.rs
 lib/rustlib/src/rust/library/std/src/sync/mpsc/blocking.rs
 lib/rustlib/src/rust/library/std/src/sync/mpsc/cache_aligned.rs
@@ -870,6 +879,8 @@ lib/rustlib/src/rust/library/std/src/sync/mutex.rs
 lib/rustlib/src/rust/library/std/src/sync/mutex/tests.rs
 lib/rustlib/src/rust/library/std/src/sync/once.rs
 lib/rustlib/src/rust/library/std/src/sync/once/tests.rs
+lib/rustlib/src/rust/library/std/src/sync/once_lock.rs
+lib/rustlib/src/rust/library/std/src/sync/once_lock/tests.rs
 lib/rustlib/src/rust/library/std/src/sync/poison.rs
 lib/rustlib/src/rust/library/std/src/sync/rwlock.rs
 lib/rustlib/src/rust/library/std/src/sync/rwlock/tests.rs
@@ -1080,6 +1091,7 @@ lib/rustlib/src/rust/library/std/src/sys_common/condvar.rs
 lib/rustlib/src/rust/library/std/src/sys_common/condvar/check.rs
 lib/rustlib/src/rust/library/std/src/sys_common/fs.rs
 lib/rustlib/src/rust/library/std/src/sys_common/io.rs
+lib/rustlib/src/rust/library/std/src/sys_common/lazy_box.rs
 lib/rustlib/src/rust/library/std/src/sys_common/memchr.rs
 lib/rustlib/src/rust/library/std/src/sys_common/memchr/tests.rs
 lib/rustlib/src/rust/library/std/src/sys_common/mod.rs
@@ -1115,7 +1127,6 @@ lib/rustlib/src/rust/library/std/tests/thread.rs
 lib/rustlib/src/rust/library/stdarch/.cirrus.yml
 lib/rustlib/src/rust/library/stdarch/.github/workflows/main.yml
 lib/rustlib/src/rust/library/stdarch/CONTRIBUTING.md
-lib/rustlib/src/rust/library/stdarch/Cargo.toml
 lib/rustlib/src/rust/library/stdarch/LICENSE-APACHE
 lib/rustlib/src/rust/library/stdarch/LICENSE-MIT
 lib/rustlib/src/rust/library/stdarch/README.md

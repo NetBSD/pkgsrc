@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2022/09/02 10:46:21 he Exp $
+# $NetBSD: Makefile,v 1.8 2022/10/12 08:48:33 he Exp $
 
-DISTNAME=	rust-src-1.62.1
+DISTNAME=	rust-src-1.63.0
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_LOCAL:=rust/}
 
@@ -32,9 +32,10 @@ REPLACE_SH+=		${SRCLIB}/backtrace/ci/android-sdk.sh
 
 NO_INTERPRETER+=	${SRCLIB}/backtrace/ci/android-ndk.sh
 NO_INTERPRETER+=	${SRCLIB}/backtrace/ci/debuglink-docker.sh
-NO_INTERPRETER+=	${SRCLIB}/backtrace/ci/miri-rustup.sh
 NO_INTERPRETER+=	${SRCLIB}/backtrace/ci/run-docker.sh
 
+ORIG_FILES+=		${LIBDIR}/backtrace/src/symbolize/gimli.rs.orig
+ORIG_FILES+=		${LIBDIR}/backtrace/src/symbolize/gimli/elf.rs.orig
 ORIG_FILES+=		${LIBDIR}/std/src/sys/unix/mod.rs.orig
 ORIG_FILES+=		${LIBDIR}/std/src/sys/unix/thread.rs.orig
 ORIG_FILES+=		${LIBDIR}/unwind/build.rs.orig
