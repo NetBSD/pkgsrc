@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:27:40 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/10/12 22:19:36 markd Exp $
 
-BLAKE2s (cinzel.r54512.tar.xz) = fbc9c52d57dbf0f4a159f19896df075586db6211963cb8ea457717c8162806e9
-SHA512 (cinzel.r54512.tar.xz) = 7242b771113d9164231d060169e70f6ae6425fc992edebb86fae8e76128a294f1aba290c2340c9b28ad9e4a7d90f9dc44dbc793f6f171b10b13005bfa848e239
-Size (cinzel.r54512.tar.xz) = 533316 bytes
+BLAKE2s (cinzel.r64550.tar.xz) = ca2e03aa6da53bf0de25c6af01e15afdd00cbd047fe01333a0b2473ffde2befe
+SHA512 (cinzel.r64550.tar.xz) = 5e02892250c5b787e4c6288beae9be2b9a2a2929a31a18c40ab3bb7609a23741e829747aaaa639f8579f229005a2171070853ca79e23b7185ee5edfa090bcf13
+Size (cinzel.r64550.tar.xz) = 533312 bytes
