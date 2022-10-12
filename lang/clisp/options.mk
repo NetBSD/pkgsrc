@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.13 2017/09/10 20:03:49 wiz Exp $
+# $NetBSD: options.mk,v 1.14 2022/10/12 07:34:18 nros Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.clisp
 
@@ -47,6 +47,7 @@ USE_TOOLS+=		dvipdf groff
 .else
 # suppress generation of printable documentation
 CONFIGURE_ENV+=		PS2PDF= ac_cv_prog_PS2PDF=
+CONFIGURE_ENV+=		ac_cv_prog_GROFF=
 .endif
 
 
