@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2022/09/01 05:10:34 markd Exp $
+$NetBSD: distinfo,v 1.13 2022/10/12 22:52:29 markd Exp $
 
-BLAKE2s (roboto.doc.r63389.tar.xz) = 9446c8ec664869202caf48d98d7fe09dde9b9e8b535712c8992e228bcb9347cb
-SHA512 (roboto.doc.r63389.tar.xz) = 655d9aac326604320abbc6771021ddc05afd17e4c9b69e21afc228a09eff6143506c071451d1aaa93696744f59ac70217e406f73fec22035ed1c2a0df5a1e0b8
-Size (roboto.doc.r63389.tar.xz) = 514096 bytes
+BLAKE2s (roboto.doc.r64350.tar.xz) = 935e6cd889f7cc34c35849eb14ae73ca27478224d3c3408b52c625e525900da8
+SHA512 (roboto.doc.r64350.tar.xz) = 2ceaedd2b273c252e8510a98cb05d581dad8aff94f3c8be1dc47fbbc9b52a0546ba8025c6bf0c51d97d0573d208af2f8a635c0cf405a980ae8cf8e4a1f13e499
+Size (roboto.doc.r64350.tar.xz) = 514128 bytes
