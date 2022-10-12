@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2020/04/26 12:21:12 markd Exp $
+# $NetBSD: Makefile,v 1.5 2022/10/12 22:19:36 markd Exp $
 
 DISTNAME=	cinzel.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2020
-TEXLIVE_REV=	54512
+PKGNAME=	tex-${DISTNAME:S/./-/}-2022
+TEXLIVE_REV=	64550
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/cinzel
