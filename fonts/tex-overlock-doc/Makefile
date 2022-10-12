@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2021/02/20 00:35:37 markd Exp $
+# $NetBSD: Makefile,v 1.6 2022/10/12 22:45:33 markd Exp $
 
 DISTNAME=	overlock.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2020.56079
-TEXLIVE_REV=	56079
+PKGNAME=	tex-${DISTNAME:S/./-/}-2022
+TEXLIVE_REV=	64495
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/overlock
