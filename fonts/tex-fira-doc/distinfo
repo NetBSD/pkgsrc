@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/10/26 10:27:57 nia Exp $
+$NetBSD: distinfo,v 1.15 2022/10/12 22:26:14 markd Exp $
 
-BLAKE2s (fira.doc.r55437.tar.xz) = 26621a9cf01212d124f79bbe6dd1c01623fb6758890c3b19c4466d3216cabc01
-SHA512 (fira.doc.r55437.tar.xz) = 933810948368f3847cb7a3ad9f72724a82a995418caca97ebaf49569351d192a37357b502adf0aa0c7ff624994505c677ff8b5ed3b8739fd6bd2949dbafc85d5
-Size (fira.doc.r55437.tar.xz) = 1303884 bytes
+BLAKE2s (fira.doc.r64422.tar.xz) = 11e44f7cff9556782c22b30134eb8cb827bb15af4ea30a3c9a5d783ae4403715
+SHA512 (fira.doc.r64422.tar.xz) = b97fa7ebaefc3a057eae0a3fd14f43fad1a9789af0b2c43ca8a0c6969610b1786e24508b1367002527841a8095486d6eea180c59d95b1df904df846c943b88f2
+Size (fira.doc.r64422.tar.xz) = 2147384 bytes
