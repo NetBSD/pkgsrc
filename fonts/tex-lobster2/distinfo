@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:28:12 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/10/12 22:35:46 markd Exp $
 
-BLAKE2s (lobster2.r56019.tar.xz) = 3f7103c8979df0f847deb4dd87abd2465441c3097f1476ca1129c58a86c1c53d
-SHA512 (lobster2.r56019.tar.xz) = d104589256496cab2cd55625f9ea252d21971eb2bb97ec91a9515ea8fd8d749ad02d1234c16bc3bd378f2a509df510951fc2764a73d839d982b630505ef44041
-Size (lobster2.r56019.tar.xz) = 514092 bytes
+BLAKE2s (lobster2.r64442.tar.xz) = 4df59d313f89bd2d2102a8bc2cf402d80dca1f463b7155376d6dfa454a6de27a
+SHA512 (lobster2.r64442.tar.xz) = ff9a64e40eb1e8d19ed353e4c6e46472f48eaa057a1283e8203eafd895cc622c031a849cf2cd941a664b07c4acc0e9fa18ca65acf6420cb3d40ce09c6ab6f391
+Size (lobster2.r64442.tar.xz) = 514076 bytes
