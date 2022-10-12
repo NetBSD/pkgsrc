@@ -1,4 +1,5 @@
-Lobster Two is a family of script fonts designed bt Pablo
-Impallari. It has many ligatures and terminal forms, but most
-of these can be accessed only using XeLaTeX or LuaLaTeX. Font
-access and use is supported in LaTeX.
+This package provides LaTeX, pdfLaTeX, XeLaTeX and LuaLaTeX
+support for the Lobster Two family of fonts, designed by Pablo
+Impallari. This is a family of script fonts with many ligatures
+and terminal forms; for the best results, use XeLaTeX or
+LuaLaTeX. There are two weights and italic variants for both.
