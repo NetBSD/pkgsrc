@@ -1,4 +1,5 @@
-The package provides LaTeX, pdfLaTeX, XeLaTeX and LuaLaTeX support
-for the IBM Plex families of fonts. Serif, Sans and Mono families
-are available in eight weights: Regular, Light, ExtraLight, Thin,
-Bold, Text, Medium and SemiBold (with corresponding italics).
+The package provides LaTeX, pdfLaTeX, XeLaTeX and LuaLaTeX
+support for the IBM Plex families of fonts. Serif, Sans and
+Mono families are available in eight weights: Regular, Light,
+ExtraLight, Thin, Bold, Text, Medium and SemiBold (with
+corresponding italics).
