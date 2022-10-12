@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2022/09/11 12:52:09 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2022/10/12 16:09:28 nia Exp $
 
-DISTNAME=	arcticfox-39.2
-PKGREVISION=	1
+DISTNAME=	arcticfox-40.0
 CATEGORIES=	www
-MASTER_SITES=	${MASTER_SITE_GITHUB:=wicknix/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=rmottola/}
 GITHUB_PROJECT=	Arctic-Fox
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
@@ -21,6 +20,7 @@ USE_LANGUAGES=	c c++
 CONFIGURE_ARGS+=	--disable-crashreporter
 CONFIGURE_ARGS+=	--disable-tests
 CONFIGURE_ARGS+=	--disable-debug
+CONFIGURE_ARGS+=	--disable-gstreamer
 CONFIGURE_ARGS+=	--disable-updater
 CONFIGURE_ARGS+=	--disable-mozril-geoloc
 CONFIGURE_ARGS+=	--disable-webrtc
@@ -95,6 +95,7 @@ pre-configure:
 
 post-install:
 	${RM} -rf ${DESTDIR}${PREFIX}/include
+	${RM} -rf ${DESTDIR}${PREFIX}/share/idl
 	${INSTALL_DATA} ${WRKSRC}/browser/branding/arcticfox/default16.png \
 	    ${DESTDIR}${PREFIX}/share/icons/hicolor/16x16/apps/arcticfox.png
 	${INSTALL_DATA} ${WRKSRC}/browser/branding/arcticfox/default32.png \
@@ -109,7 +110,7 @@ post-install:
 .include "options.mk"
 .include "../../archivers/bzip2/buildlink3.mk"
 .if ${OPSYS} == "Linux"
-.include "../../audio/alsa-lib/buildlink3.mk"
+.  include "../../audio/alsa-lib/buildlink3.mk"
 .endif
 .include "../../devel/nspr/buildlink3.mk"
 .include "../../devel/nss/buildlink3.mk"
