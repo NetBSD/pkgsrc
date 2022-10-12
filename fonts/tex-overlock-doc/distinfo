@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:28:21 nia Exp $
+$NetBSD: distinfo,v 1.8 2022/10/12 22:45:33 markd Exp $
 
-BLAKE2s (overlock.doc.r56079.tar.xz) = 82d1aa3eb7e1b2393353003a149e917e0508a821ec76bf712a4bb7f9295fa0d2
-SHA512 (overlock.doc.r56079.tar.xz) = e65417e21722d510ff6b41286ea5018513704f0bd346a77c8984b70339346a555dd1ade9c944868318f25ff07e73401807b1882a0eec90259ed55bfd50ff4382
-Size (overlock.doc.r56079.tar.xz) = 39568 bytes
+BLAKE2s (overlock.doc.r64495.tar.xz) = 55fdb5f84f619263122de5fa9e90da82ad55372c8203d4f64195430111b05ac5
+SHA512 (overlock.doc.r64495.tar.xz) = 44aec04d96e2867a074ca1ac85fb3449cd276d6a14c893c8cd73dfaa91e60ef5f98ec7ed3859cc57efe746ae1454a5fcd01b44ac580369a87f69bf5cff3e3b22
+Size (overlock.doc.r64495.tar.xz) = 39916 bytes
