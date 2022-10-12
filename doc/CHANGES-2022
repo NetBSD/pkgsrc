@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4983 2022/10/12 16:09:44 nia Exp $
+$NetBSD: CHANGES-2022,v 1.4984 2022/10/12 16:20:15 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7553,3 +7553,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/openssh to 9.1.1 [wiz 2022-10-12]
 	Updated audio/termusic to 0.7.4 [pin 2022-10-12]
 	Updated www/arcticfox to 40.0 [nia 2022-10-12]
+	Updated x11/xterm to 374 [pin 2022-10-12]
