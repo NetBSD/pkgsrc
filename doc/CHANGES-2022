@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4989 2022/10/13 10:18:49 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4990 2022/10/13 10:19:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7598,3 +7598,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/yt-dlp to 2022.10.4 [adam 2022-10-13]
 	Updated audio/py-mutagen to 1.46.0 [adam 2022-10-13]
 	Updated textproc/dict-server to 1.13.1 [wiz 2022-10-13]
+	Updated textproc/dict-client to 1.13.1 [wiz 2022-10-13]
