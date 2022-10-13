@@ -1,29 +1,27 @@
-# $NetBSD: Makefile,v 1.74 2022/04/18 19:10:45 adam Exp $
+# $NetBSD: Makefile,v 1.75 2022/10/13 11:08:43 wiz Exp $
 
-DISTNAME=	shared-mime-info-1.10
-PKGREVISION=	6
+DISTNAME=	shared-mime-info-2.2
 CATEGORIES=	databases
-MASTER_SITES=	http://people.freedesktop.org/~hadess/
-EXTRACT_SUFX=	.tar.xz
+MASTER_SITES=	https://gitlab.freedesktop.org/xdg/shared-mime-info/-/archive/${PKGVERSION_NOREV}/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.freedesktop.org/wiki/Software/shared-mime-info
 COMMENT=	Core database of common types
 LICENSE=	gnu-gpl-v2
 
-GNU_CONFIGURE=		YES
+TOOL_DEPENDS+=		gettext-tools>=0.19.8:../../devel/gettext-tools
+TOOL_DEPENDS+=		xmlto>=0:../../textproc/xmlto
+
 USE_LANGUAGES+=		c99
-USE_LIBTOOL=		YES
-USE_PKGLOCALEDIR=	YES
-USE_TOOLS+=		gmake intltool msgfmt pkg-config xgettext
-MAKE_JOBS_SAFE=		no
-
-CONFIGURE_ARGS+=	--disable-update-mimedb
-
-# patched in Makefile.in
-CHECK_PORTABILITY_SKIP+=	Makefile.am
+USE_TOOLS+=		bash:test intltool msgfmt pkg-config xgettext
 
 .include "../../mk/bsd.prefs.mk"
+
+# msgfmt: unknown option --xml
+.if ${OPSYS} == "NetBSD"
+TOOLS_PLATFORM.msgfmt=
+.endif
 
 CPPFLAGS+=		-DPREFIX="\"${PREFIX}\""
 
@@ -33,7 +31,10 @@ FILES_SUBST+=		UPDATE_MIMEDB="${PREFIX}/bin/update-mime-database"
 PRINT_PLIST_AWK+=	/^share\/mime\/packages/ { print; next; }
 PRINT_PLIST_AWK+=	/^share\/mime/ { next; }
 
+# for tests
+.include "../../lang/python/tool.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+.include "../../devel/meson/build.mk"
 .include "../../mk/bsd.pkg.mk"
