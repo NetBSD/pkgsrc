@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4998 2022/10/13 16:05:00 adam Exp $
+$NetBSD: CHANGES-2022,v 1.4999 2022/10/13 16:14:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7609,3 +7609,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/ansible-lint to 6.8.1 [adam 2022-10-13]
 	Added graphics/py-contourpy version 1.0.5 [adam 2022-10-13]
 	Updated graphics/py-matplotlib to 3.6.1 [adam 2022-10-13]
+	Updated devel/py-typing-extensions to 4.4.0 [adam 2022-10-13]
+	Updated devel/py-requests-mock to 1.10.0 [adam 2022-10-13]
