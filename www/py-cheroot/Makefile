@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2022/04/29 23:33:05 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2022/10/13 16:24:20 adam Exp $
 
 DISTNAME=	cheroot-6.5.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,8 +13,7 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-six>=1.11.0:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-more-itertools-[0-9]*:../../devel/py-more-itertools
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm_git_archive>=1.0:../../devel/py-setuptools_scm_git_archive
+BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=7.0.0:../../devel/py-setuptools_scm
 TEST_DEPENDS+=	${PYPKGPREFIX}-OpenSSL-[0-9]*:../../security/py-OpenSSL
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=4.5.3:../../devel/py-coverage
 TEST_DEPENDS+=	${PYPKGPREFIX}-ddt-[0-9]*:../../devel/py-ddt
