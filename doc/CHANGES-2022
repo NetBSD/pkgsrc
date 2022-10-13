@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4988 2022/10/13 09:10:32 adam Exp $
+$NetBSD: CHANGES-2022,v 1.4989 2022/10/13 10:18:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7597,3 +7597,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated finance/py-stripe to 4.2.0 [adam 2022-10-13]
 	Updated net/yt-dlp to 2022.10.4 [adam 2022-10-13]
 	Updated audio/py-mutagen to 1.46.0 [adam 2022-10-13]
+	Updated textproc/dict-server to 1.13.1 [wiz 2022-10-13]
