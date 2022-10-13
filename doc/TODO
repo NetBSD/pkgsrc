@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22287 2022/10/13 11:08:54 wiz Exp $
+$NetBSD: TODO,v 1.22288 2022/10/13 11:22:37 wiz Exp $
 
 Suggested new packages
 ======================
@@ -970,7 +970,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libvirt-2.3
 	o libxdg-basedir-1.2.3
 	o libxml2-2.10.2
-	o libxslt-1.1.37 [now a GNOME project: https://gitlab.gnome.org/GNOME/libxslt]
 	o libzookeeper-3.7.0
 	o libzrtpcpp-4.6.6
 	o lilypond-2.22.2

@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4993 2022/10/13 11:08:54 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4994 2022/10/13 11:22:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7602,3 +7602,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/ImageMagick to 7.1.0.50 [wiz 2022-10-13]
 	Updated print/poppler to 22.10.0 [wiz 2022-10-13]
 	Updated databases/shared-mime-info to 2.2 [wiz 2022-10-13]
+	Updated textproc/libxslt to 1.1.37 [wiz 2022-10-13]
