@@ -1,6 +1,9 @@
-@comment $NetBSD: PLIST,v 1.24 2018/08/16 12:45:23 wiz Exp $
+@comment $NetBSD: PLIST,v 1.25 2022/10/13 11:08:43 wiz Exp $
 bin/update-mime-database
 man/man1/update-mime-database.1
+share/gettext/its/shared-mime-info.its
+share/gettext/its/shared-mime-info.loc
+share/locale/af/LC_MESSAGES/shared-mime-info.mo
 share/locale/ar/LC_MESSAGES/shared-mime-info.mo
 share/locale/as/LC_MESSAGES/shared-mime-info.mo
 share/locale/ast/LC_MESSAGES/shared-mime-info.mo
@@ -41,6 +44,7 @@ share/locale/ka/LC_MESSAGES/shared-mime-info.mo
 share/locale/kk/LC_MESSAGES/shared-mime-info.mo
 share/locale/kn/LC_MESSAGES/shared-mime-info.mo
 share/locale/ko/LC_MESSAGES/shared-mime-info.mo
+share/locale/ky/LC_MESSAGES/shared-mime-info.mo
 share/locale/lt/LC_MESSAGES/shared-mime-info.mo
 share/locale/lv/LC_MESSAGES/shared-mime-info.mo
 share/locale/ml/LC_MESSAGES/shared-mime-info.mo
