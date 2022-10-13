@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4987 2022/10/13 08:49:35 adam Exp $
+$NetBSD: CHANGES-2022,v 1.4988 2022/10/13 09:10:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7595,3 +7595,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated fonts/tex-universalis-doc to 2022 [markd 2022-10-12]
 	Updated devel/py-pyelftools to 0.29 [adam 2022-10-13]
 	Updated finance/py-stripe to 4.2.0 [adam 2022-10-13]
+	Updated net/yt-dlp to 2022.10.4 [adam 2022-10-13]
+	Updated audio/py-mutagen to 1.46.0 [adam 2022-10-13]
