@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.984 2022/09/29 00:54:18 markd Exp $
+# $NetBSD: Makefile,v 1.985 2022/10/13 16:01:42 adam Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -500,6 +500,7 @@ SUBDIR+=	py-cairo
 SUBDIR+=	py-cairo118
 SUBDIR+=	py-cairocffi
 SUBDIR+=	py-chart
+SUBDIR+=	py-contourpy
 SUBDIR+=	py-cycler
 SUBDIR+=	py-dot
 SUBDIR+=	py-exifread
