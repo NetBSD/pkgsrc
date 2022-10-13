@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2021/11/20 20:07:10 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.16 2022/10/13 09:10:13 adam Exp $
 bin/mid3cp
 bin/mid3iconv
 bin/mid3v2
@@ -25,36 +25,6 @@ ${PYSITELIB}/mutagen/_iff.pyo
 ${PYSITELIB}/mutagen/_riff.py
 ${PYSITELIB}/mutagen/_riff.pyc
 ${PYSITELIB}/mutagen/_riff.pyo
-${PYSITELIB}/mutagen/_senf/__init__.py
-${PYSITELIB}/mutagen/_senf/__init__.pyc
-${PYSITELIB}/mutagen/_senf/__init__.pyo
-${PYSITELIB}/mutagen/_senf/_argv.py
-${PYSITELIB}/mutagen/_senf/_argv.pyc
-${PYSITELIB}/mutagen/_senf/_argv.pyo
-${PYSITELIB}/mutagen/_senf/_compat.py
-${PYSITELIB}/mutagen/_senf/_compat.pyc
-${PYSITELIB}/mutagen/_senf/_compat.pyo
-${PYSITELIB}/mutagen/_senf/_environ.py
-${PYSITELIB}/mutagen/_senf/_environ.pyc
-${PYSITELIB}/mutagen/_senf/_environ.pyo
-${PYSITELIB}/mutagen/_senf/_fsnative.py
-${PYSITELIB}/mutagen/_senf/_fsnative.pyc
-${PYSITELIB}/mutagen/_senf/_fsnative.pyo
-${PYSITELIB}/mutagen/_senf/_print.py
-${PYSITELIB}/mutagen/_senf/_print.pyc
-${PYSITELIB}/mutagen/_senf/_print.pyo
-${PYSITELIB}/mutagen/_senf/_stdlib.py
-${PYSITELIB}/mutagen/_senf/_stdlib.pyc
-${PYSITELIB}/mutagen/_senf/_stdlib.pyo
-${PYSITELIB}/mutagen/_senf/_temp.py
-${PYSITELIB}/mutagen/_senf/_temp.pyc
-${PYSITELIB}/mutagen/_senf/_temp.pyo
-${PYSITELIB}/mutagen/_senf/_winansi.py
-${PYSITELIB}/mutagen/_senf/_winansi.pyc
-${PYSITELIB}/mutagen/_senf/_winansi.pyo
-${PYSITELIB}/mutagen/_senf/_winapi.py
-${PYSITELIB}/mutagen/_senf/_winapi.pyc
-${PYSITELIB}/mutagen/_senf/_winapi.pyo
 ${PYSITELIB}/mutagen/_tags.py
 ${PYSITELIB}/mutagen/_tags.pyc
 ${PYSITELIB}/mutagen/_tags.pyo
@@ -196,6 +166,7 @@ ${PYSITELIB}/mutagen/oggvorbis.pyo
 ${PYSITELIB}/mutagen/optimfrog.py
 ${PYSITELIB}/mutagen/optimfrog.pyc
 ${PYSITELIB}/mutagen/optimfrog.pyo
+${PYSITELIB}/mutagen/py.typed
 ${PYSITELIB}/mutagen/smf.py
 ${PYSITELIB}/mutagen/smf.pyc
 ${PYSITELIB}/mutagen/smf.pyo
