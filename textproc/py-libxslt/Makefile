@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.63 2022/04/18 19:12:12 adam Exp $
+# $NetBSD: Makefile,v 1.64 2022/10/13 11:22:25 wiz Exp $
 
-PKGREVISION= 7
 .include "../../textproc/libxslt/Makefile.common"
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +11,6 @@ COMMENT=	Python wrapper for libxslt
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 DEPENDS+=	${PYPKGPREFIX}-libxml2>=2.6.8:../../textproc/py-libxml2
 
-PYTHON_VERSIONS_ACCEPTED=	27
 EGG_NAME=			libxslt_python-${PKGVERSION_NOREV}
 
 PYSETUPSUBDIR=	python
@@ -31,8 +29,6 @@ SUBST_SED.setup+=	-e "s,@LIBXML2DIR@,${BUILDLINK_PREFIX.libxml2},g"
 SUBST_SED.setup+=	-e "s,@LIBXSLTDIR@,${BUILDLINK_PREFIX.libxslt},g"
 SUBST_SED.setup+=	-e "s,@PYSHLIBDIR@,${PYSITEDIR},g"
 
-# BUILDLINK_TRANSFORM.Darwin+=	opt:-bundle:-dynamiclib
-
 post-extract: setuppy
 .PHONY: setuppy
 setuppy:
@@ -44,7 +40,6 @@ setuppy:
 .include "../../textproc/py-libxml2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libxslt+=	libxslt>=${PKGVERSION_NOREV}
 .include "../../textproc/libxslt/buildlink3.mk"
-.include "../../lang/python/extension.mk"
 .include "../../lang/python/egg.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
