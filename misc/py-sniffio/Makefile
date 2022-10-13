@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2022/01/04 20:54:19 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2022/10/13 16:41:03 adam Exp $
 
-DISTNAME=	sniffio-1.2.0
+DISTNAME=	sniffio-1.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	misc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sniffio/}
 
