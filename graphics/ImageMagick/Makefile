@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.307 2022/10/03 12:55:13 wiz Exp $
+# $NetBSD: Makefile,v 1.308 2022/10/13 10:44:12 wiz Exp $
 
 .include "Makefile.common"
 
@@ -86,7 +86,7 @@ CTF_FILES_SKIP+=	lib/libMagickCore-7.Q16HDRI.so.*
 CTF_FILES_SKIP+=	lib/libMagickWand-7.Q16HDRI.so.*
 
 .include "../../print/ghostscript/buildlink3.mk"
-.if !empty(PKG_BUILD_OPTIONS.ghostscript:Mghostscript-gpl)
+.if ${PKG_BUILD_OPTIONS.ghostscript:Mghostscript-gpl}
 CFLAGS+=		-DPKGSRC_USE_OLD_GHOSTSCRIPT
 .endif
 
