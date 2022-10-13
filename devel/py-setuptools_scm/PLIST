@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2022/01/19 12:58:43 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2022/10/13 12:11:12 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -12,9 +12,21 @@ ${PYSITELIB}/setuptools_scm/__init__.pyo
 ${PYSITELIB}/setuptools_scm/__main__.py
 ${PYSITELIB}/setuptools_scm/__main__.pyc
 ${PYSITELIB}/setuptools_scm/__main__.pyo
+${PYSITELIB}/setuptools_scm/_cli.py
+${PYSITELIB}/setuptools_scm/_cli.pyc
+${PYSITELIB}/setuptools_scm/_cli.pyo
 ${PYSITELIB}/setuptools_scm/_entrypoints.py
 ${PYSITELIB}/setuptools_scm/_entrypoints.pyc
 ${PYSITELIB}/setuptools_scm/_entrypoints.pyo
+${PYSITELIB}/setuptools_scm/_integration/__init__.py
+${PYSITELIB}/setuptools_scm/_integration/__init__.pyc
+${PYSITELIB}/setuptools_scm/_integration/__init__.pyo
+${PYSITELIB}/setuptools_scm/_integration/pyproject_reading.py
+${PYSITELIB}/setuptools_scm/_integration/pyproject_reading.pyc
+${PYSITELIB}/setuptools_scm/_integration/pyproject_reading.pyo
+${PYSITELIB}/setuptools_scm/_integration/setuptools.py
+${PYSITELIB}/setuptools_scm/_integration/setuptools.pyc
+${PYSITELIB}/setuptools_scm/_integration/setuptools.pyo
 ${PYSITELIB}/setuptools_scm/_overrides.py
 ${PYSITELIB}/setuptools_scm/_overrides.pyc
 ${PYSITELIB}/setuptools_scm/_overrides.pyo
