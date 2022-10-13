@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2022/09/29 22:05:39 charlotte Exp $
+# $NetBSD: Makefile,v 1.29 2022/10/13 01:17:14 charlotte Exp $
 
 DISTNAME=	nim-1.6.8
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	http://nim-lang.org/download/
 EXTRACT_SUFX=	.tar.xz
@@ -12,7 +13,7 @@ LICENSE=	mit
 
 DEPENDS+=	coreutils-[0-9]*:../../sysutils/coreutils
 
-USE_TOOLS+=	bash
+USE_TOOLS+=	bash pax
 REPLACE_BASH+=	bin/nim-gdb
 
 INSTALLATION_DIRS=	bin
@@ -44,6 +45,7 @@ do-install:
 	${INSTALL} ${WRKSRC}/bin/nim-gdb ${DESTDIR}${PREFIX}/bin/nim-gdb
 	${INSTALL} ${WRKSRC}/bin/nim-gdb.bash ${DESTDIR}${PREFIX}/bin/nim-gdb.bash
 	${INSTALL} ${WRKSRC}/bin/nim-gdb ${DESTDIR}${PREFIX}/bin/nim_dbg
+	cd ${WRKSRC}/nimsuggest && ${PAX} -r -w . ${DESTDIR}${PREFIX}/nim/nimsuggest
 
 do-test:
 	cd ${WRKSRC} && ./bin/nim compile koch.nim
