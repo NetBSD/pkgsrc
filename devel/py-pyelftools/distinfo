@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2022/08/01 10:09:34 adam Exp $
+$NetBSD: distinfo,v 1.7 2022/10/13 08:46:21 adam Exp $
 
-BLAKE2s (pyelftools-0.28.tar.gz) = 34243ecfa06af282421af44149761fd3b9f6904f8ef1e7fb9d09debbc96a1e56
-SHA512 (pyelftools-0.28.tar.gz) = 1b998f9260cd50101f3c25c73f3200b6a773583542adf2e8c522c4a413c5f492eeaaeadf063b55fd345f4bebbc0f94dc3a01517bbd6575a563064a00137c4d4b
-Size (pyelftools-0.28.tar.gz) = 2683152 bytes
+BLAKE2s (pyelftools-0.29.tar.gz) = f7694162fdde425794e494ee9a834eee6705fc550f6b6af70d11c9ab3d52f5ae
+SHA512 (pyelftools-0.29.tar.gz) = c2694b27a8ffe3c8ad52a0b14be9fcb372bd15f8cc673573056c458edc1483d2475fde59ed538b62ece1ffb800f95f6c59f0934011b9e464379013a3a52efd1d
+Size (pyelftools-0.29.tar.gz) = 14079429 bytes

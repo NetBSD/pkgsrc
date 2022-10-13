@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/01/16 21:18:55 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/10/13 08:46:21 adam Exp $
 bin/readelf-${PYVERSSUFFIX}.py
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -73,6 +73,9 @@ ${PYSITELIB}/elftools/dwarf/compileunit.pyo
 ${PYSITELIB}/elftools/dwarf/constants.py
 ${PYSITELIB}/elftools/dwarf/constants.pyc
 ${PYSITELIB}/elftools/dwarf/constants.pyo
+${PYSITELIB}/elftools/dwarf/datatype_cpp.py
+${PYSITELIB}/elftools/dwarf/datatype_cpp.pyc
+${PYSITELIB}/elftools/dwarf/datatype_cpp.pyo
 ${PYSITELIB}/elftools/dwarf/descriptions.py
 ${PYSITELIB}/elftools/dwarf/descriptions.pyc
 ${PYSITELIB}/elftools/dwarf/descriptions.pyo
@@ -82,6 +85,9 @@ ${PYSITELIB}/elftools/dwarf/die.pyo
 ${PYSITELIB}/elftools/dwarf/dwarf_expr.py
 ${PYSITELIB}/elftools/dwarf/dwarf_expr.pyc
 ${PYSITELIB}/elftools/dwarf/dwarf_expr.pyo
+${PYSITELIB}/elftools/dwarf/dwarf_util.py
+${PYSITELIB}/elftools/dwarf/dwarf_util.pyc
+${PYSITELIB}/elftools/dwarf/dwarf_util.pyo
 ${PYSITELIB}/elftools/dwarf/dwarfinfo.py
 ${PYSITELIB}/elftools/dwarf/dwarfinfo.pyc
 ${PYSITELIB}/elftools/dwarf/dwarfinfo.pyo
