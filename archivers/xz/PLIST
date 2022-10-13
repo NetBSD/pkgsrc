@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2022/08/24 06:58:13 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2022/10/13 16:35:10 adam Exp $
 bin/lzcat
 bin/lzcmp
 bin/lzdiff
@@ -131,6 +131,7 @@ ${PLIST.nls}share/locale/pt_BR/LC_MESSAGES/xz.mo
 ${PLIST.nls}share/locale/ro/LC_MESSAGES/xz.mo
 ${PLIST.nls}share/locale/sr/LC_MESSAGES/xz.mo
 ${PLIST.nls}share/locale/sv/LC_MESSAGES/xz.mo
+${PLIST.nls}share/locale/tr/LC_MESSAGES/xz.mo
 ${PLIST.nls}share/locale/uk/LC_MESSAGES/xz.mo
 ${PLIST.nls}share/locale/vi/LC_MESSAGES/xz.mo
 ${PLIST.nls}share/locale/zh_CN/LC_MESSAGES/xz.mo
