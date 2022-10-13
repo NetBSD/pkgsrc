@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4999 2022/10/13 16:14:03 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5000 2022/10/13 16:21:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7611,3 +7611,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/py-matplotlib to 3.6.1 [adam 2022-10-13]
 	Updated devel/py-typing-extensions to 4.4.0 [adam 2022-10-13]
 	Updated devel/py-requests-mock to 1.10.0 [adam 2022-10-13]
+	Updated textproc/py-regex to 2022.9.13 [adam 2022-10-13]
+	Updated devel/py-test-pylint to 0.19.0 [adam 2022-10-13]
