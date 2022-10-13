@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2022/01/04 20:53:42 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2022/10/13 16:21:21 adam Exp $
 
-DISTNAME=	pytest-pylint-0.18.0
+DISTNAME=	pytest-pylint-0.19.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-pylint/}
 
