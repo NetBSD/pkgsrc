@@ -1,16 +1,16 @@
-# $NetBSD: Makefile.common,v 1.6 2019/11/06 13:23:45 wiz Exp $
+# $NetBSD: Makefile.common,v 1.7 2022/10/13 11:22:24 wiz Exp $
 #
 # used by textproc/libxslt/Makefile
 # used by textproc/py-libxslt/Makefile
 
-DISTNAME=	libxslt-1.1.34
+DISTNAME=	libxslt-1.1.37
 CATEGORIES=	textproc
-MASTER_SITES=	ftp://xmlsoft.org/libxslt/
-MASTER_SITES+=	http://xmlsoft.org/sources/
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libxslt/${PKGVERSION_NOREV:R}/}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://xmlsoft.org/XSLT/
-COMMENT=	XSLT parser library from the GNOME project
+HOMEPAGE=	https://gitlab.gnome.org/GNOME/libxslt
+COMMENT=	XSLT parser library
 LICENSE=	mit # with advertisement clause
 
 PATCHDIR=	${.CURDIR}/../../textproc/libxslt/patches
