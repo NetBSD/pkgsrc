@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4995 2022/10/13 11:22:46 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.4996 2022/10/13 12:09:39 he Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7604,3 +7604,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/shared-mime-info to 2.2 [wiz 2022-10-13]
 	Updated textproc/libxslt to 1.1.37 [wiz 2022-10-13]
 	Updated textproc/py-libxslt to 1.1.37 [wiz 2022-10-13]
+	Updated net/unbound to 1.17.0 [he 2022-10-13]
