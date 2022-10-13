@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2022/07/26 11:19:42 leot Exp $
+# $NetBSD: Makefile,v 1.15 2022/10/13 16:07:52 adam Exp $
 
-DISTNAME=	typing_extensions-4.3.0
+DISTNAME=	typing_extensions-4.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_WHEEL:=typing-extensions/}
 

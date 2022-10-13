@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2022/07/26 11:19:42 leot Exp $
+$NetBSD: distinfo,v 1.14 2022/10/13 16:07:52 adam Exp $
 
-BLAKE2s (typing_extensions-4.3.0-py3-none-any.whl) = f94cdd0aa49ea9f98b9c76f06cb051134d306c9b70dc45599f6f1ff5a2395dc7
-SHA512 (typing_extensions-4.3.0-py3-none-any.whl) = 6538edf5912e90287ea02716bad89efab407becb7c96cab8d01606e8a8f7e2418e5c7ca80943357c2b09411954e011f8505497fac5f2fc99f2ae611432d799bf
-Size (typing_extensions-4.3.0-py3-none-any.whl) = 25596 bytes
+BLAKE2s (typing_extensions-4.4.0-py3-none-any.whl) = ebf99284a932dddf613afbedd1fd049ef0f0c5d3cafd36508342d9dd79ff4bd7
+SHA512 (typing_extensions-4.4.0-py3-none-any.whl) = 3c5adf0a36516d284a2ede363051edc1bcc9df925c5a8a9fa2e03cab579dd8d847fdad42f7fd5ba35992e08234c97d2dbfec40a9d12eec61c8dc03758f2bd88e
+Size (typing_extensions-4.4.0-py3-none-any.whl) = 26662 bytes
