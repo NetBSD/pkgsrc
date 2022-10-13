@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.26 2021/10/26 11:21:49 nia Exp $
+$NetBSD: distinfo,v 1.27 2022/10/13 10:18:37 wiz Exp $
 
-BLAKE2s (dictd-1.13.0.tar.gz) = db17bb24b79ac00e7f970957b62d324986abdacbc920df5331dc3f841bdb632a
-SHA512 (dictd-1.13.0.tar.gz) = 86871aaf34a182d1d7aac1a1282d4a75f2d7c112c762e92f303924c324f665dae75c51e7ca91e3cc1dde2053ad8e2d1fd50a76934a5f84ff70975aa858e26439
-Size (dictd-1.13.0.tar.gz) = 395455 bytes
+BLAKE2s (dictd-1.13.1.tar.gz) = 4257a0fb91de3feb667b9943a65f350bff6de966b2fb685f4313cdb8fbb36b94
+SHA512 (dictd-1.13.1.tar.gz) = 31a2e67feaa672e773b86d16ecb9f41fdcd2d5f907759cc110261af30147b3972a2c7d742b4d61b67eb3b8c84c08e179106b9a30e998a425c9b437ec933b03ea
+Size (dictd-1.13.1.tar.gz) = 395619 bytes
