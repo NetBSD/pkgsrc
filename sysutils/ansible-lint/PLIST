@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2022/10/07 11:07:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2022/10/13 12:12:09 adam Exp $
 bin/ansible-lint
 ${PYSITELIB}/${WHEEL_INFODIR}/COPYING
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
@@ -162,10 +162,13 @@ ${PYSITELIB}/ansiblelint/rules/playbook_extension.pyc
 ${PYSITELIB}/ansiblelint/rules/risky_file_permissions.md
 ${PYSITELIB}/ansiblelint/rules/risky_file_permissions.py
 ${PYSITELIB}/ansiblelint/rules/risky_file_permissions.pyc
+${PYSITELIB}/ansiblelint/rules/risky_octal.md
 ${PYSITELIB}/ansiblelint/rules/risky_octal.py
 ${PYSITELIB}/ansiblelint/rules/risky_octal.pyc
+${PYSITELIB}/ansiblelint/rules/risky_shell_pipe.md
 ${PYSITELIB}/ansiblelint/rules/risky_shell_pipe.py
 ${PYSITELIB}/ansiblelint/rules/risky_shell_pipe.pyc
+${PYSITELIB}/ansiblelint/rules/role_name.md
 ${PYSITELIB}/ansiblelint/rules/role_name.py
 ${PYSITELIB}/ansiblelint/rules/role_name.pyc
 ${PYSITELIB}/ansiblelint/rules/schema.md
