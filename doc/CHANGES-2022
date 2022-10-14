@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5011 2022/10/14 09:56:11 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5012 2022/10/14 11:00:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7630,3 +7630,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-ipykernel to 6.16.0 [adam 2022-10-14]
 	Updated net/py-pyftpdlib to 1.5.7 [adam 2022-10-14]
 	Updated lang/py-pygls to 0.12.2 [adam 2022-10-14]
+	Updated audio/fluidsynth to 2.3.0 [adam 2022-10-14]
+	Updated net/iperf3 to 3.12 [adam 2022-10-14]
