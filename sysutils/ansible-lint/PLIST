@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2022/10/13 12:12:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2022/10/14 11:29:51 adam Exp $
 bin/ansible-lint
 ${PYSITELIB}/${WHEEL_INFODIR}/COPYING
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
@@ -177,6 +177,7 @@ ${PYSITELIB}/ansiblelint/rules/schema.pyc
 ${PYSITELIB}/ansiblelint/rules/syntax_check.md
 ${PYSITELIB}/ansiblelint/rules/syntax_check.py
 ${PYSITELIB}/ansiblelint/rules/syntax_check.pyc
+${PYSITELIB}/ansiblelint/rules/var_naming.md
 ${PYSITELIB}/ansiblelint/rules/var_naming.py
 ${PYSITELIB}/ansiblelint/rules/var_naming.pyc
 ${PYSITELIB}/ansiblelint/rules/yaml.md
