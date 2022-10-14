@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:14:37 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/10/14 16:50:37 triaxx Exp $
 
-BLAKE2s (mqtree-1.0.13.tar.gz) = 64ada70e74672d3bdea45692554c68eae1757f533c797943313a5c7e505e921c
-SHA512 (mqtree-1.0.13.tar.gz) = eb429fbe348be62f3a6401caee41ad330cc480be8543a513cfb2928645fceb5b8ffcacdd14356230df5359dcdde696bb2f120ae47951db20251195923d392bf2
-Size (mqtree-1.0.13.tar.gz) = 229077 bytes
+BLAKE2s (mqtree-1.0.15.tar.gz) = dbcd4eb47edb19eb7811fe94c3e4f6e0393a52d619723369d0d55b17f4e06827
+SHA512 (mqtree-1.0.15.tar.gz) = e50066c39bb7feb4bea6a0fcff65ec4e73fca3aeeafa85be10ef7fe354e582a037369dc27163e47796f021e8cb70c40c396e5edce0ebf8255d4e452c4df0d4da
+Size (mqtree-1.0.15.tar.gz) = 265445 bytes
