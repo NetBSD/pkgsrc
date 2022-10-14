@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2021/05/20 14:18:43 triaxx Exp $
+# $NetBSD: Makefile,v 1.18 2022/10/14 19:31:13 triaxx Exp $
 
-DISTNAME=	xmpp-1.5.3
+DISTNAME=	xmpp-1.6.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
 
@@ -9,12 +9,12 @@ HOMEPAGE=	https://github.com/processone/xmpp/
 COMMENT=	XMPP parsing and serialization library on top of Fast XML
 LICENSE=	apache-2.0
 
-DEPENDS+=	erlang-p1_utils>=1.0.21:../../misc/erlang-p1_utils
-DEPENDS+=	erlang-fast_xml>=1.1.45:../../textproc/erlang-fast_xml
-DEPENDS+=	erlang-fast_tls>=1.1.10:../../security/erlang-fast_tls
-DEPENDS+=	erlang-ezlib>=1.0.9:../../devel/erlang-ezlib
+DEPENDS+=	erlang-p1_utils>=1.0.25:../../misc/erlang-p1_utils
+DEPENDS+=	erlang-fast_xml>=1.1.49:../../textproc/erlang-fast_xml
+DEPENDS+=	erlang-fast_tls>=1.1.16:../../security/erlang-fast_tls
+DEPENDS+=	erlang-ezlib>=1.0.12:../../devel/erlang-ezlib
 DEPENDS+=	erlang-idna>=6.0.0:../../net/erlang-idna
-DEPENDS+=	erlang-stringprep>=1.0.24:../../textproc/erlang-stringprep
+DEPENDS+=	erlang-stringprep>=1.0.29:../../textproc/erlang-stringprep
 
 GITHUB_PROJECT=	xmpp
 

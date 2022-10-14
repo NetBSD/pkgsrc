@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2021/05/20 14:18:43 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.12 2022/10/14 19:31:13 triaxx Exp $
 lib/erlang/lib/xmpp
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/XmppAddr.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/captcha_form.beam
@@ -76,6 +76,7 @@ lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0280.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0297.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0300.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0313.beam
+lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0317.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0319.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0328.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0333.beam
@@ -88,6 +89,7 @@ lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0359.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0363.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0369.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0377.beam
+lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0403.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0405.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0417.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0430.beam
