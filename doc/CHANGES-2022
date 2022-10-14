@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5010 2022/10/14 09:44:49 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5011 2022/10/14 09:56:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7628,3 +7628,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/py-authlib to 1.1.0 [adam 2022-10-14]
 	Updated devel/py-nest-asyncio to 1.5.6 [adam 2022-10-14]
 	Updated devel/py-ipykernel to 6.16.0 [adam 2022-10-14]
+	Updated net/py-pyftpdlib to 1.5.7 [adam 2022-10-14]
+	Updated lang/py-pygls to 0.12.2 [adam 2022-10-14]
