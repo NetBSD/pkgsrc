@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5009 2022/10/14 09:06:52 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5010 2022/10/14 09:44:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7626,3 +7626,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/py-sanic to 22.9.0 [adam 2022-10-14]
 	Updated devel/py-gitpython to 3.1.29 [adam 2022-10-14]
 	Updated security/py-authlib to 1.1.0 [adam 2022-10-14]
+	Updated devel/py-nest-asyncio to 1.5.6 [adam 2022-10-14]
+	Updated devel/py-ipykernel to 6.16.0 [adam 2022-10-14]
