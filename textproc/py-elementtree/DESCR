@@ -1,7 +1,0 @@
-The Element type is a simple but flexible container object, designed
-to store hierarchical data structures, such as simplified XML infosets,
-in memory.
-
-The ElementTree toolkit contains an Element implementation in Python,
-and code to read XML and HTML files into trees of Element objects, and
-write them out as XML.
