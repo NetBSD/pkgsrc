@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2021/05/20 15:04:44 triaxx Exp $
+# $NetBSD: Makefile,v 1.12 2022/10/14 19:18:11 triaxx Exp $
 
-DISTNAME=	p1_mysql-1.0.18
+DISTNAME=	p1_mysql-1.0.20
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
 
