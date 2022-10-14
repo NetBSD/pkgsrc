@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.16 2022/03/24 07:56:00 wiz Exp $
+# $NetBSD: builtin.mk,v 1.17 2022/10/14 07:43:57 wiz Exp $
 
 BUILTIN_PKG:=	zlib
 
@@ -28,7 +28,7 @@ MAKEVARS+=		IS_BUILTIN.zlib
 ### a package name to represent the built-in package.
 ###
 .if !defined(BUILTIN_PKG.zlib) && \
-    !empty(IS_BUILTIN.zlib:M[yY][eE][sS]) && \
+    ${IS_BUILTIN.zlib:M[yY][eE][sS]} && \
     empty(H_ZLIB:M__nonexistent__)
 BUILTIN_VERSION.zlib!=							\
 	${AWK} '/\#define[ 	]*ZLIB_VERSION/ {			\
@@ -52,10 +52,10 @@ USE_BUILTIN.zlib=	no
 .  else
 USE_BUILTIN.zlib=	${IS_BUILTIN.zlib}
 .    if defined(BUILTIN_PKG.zlib) && \
-        !empty(IS_BUILTIN.zlib:M[yY][eE][sS])
+        ${IS_BUILTIN.zlib:M[yY][eE][sS]}
 USE_BUILTIN.zlib=	yes
 .      for _dep_ in ${BUILDLINK_API_DEPENDS.zlib}
-.        if !empty(USE_BUILTIN.zlib:M[yY][eE][sS])
+.        if ${USE_BUILTIN.zlib:M[yY][eE][sS]}
 USE_BUILTIN.zlib!=	\
 	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.zlib:Q}; then	\
 		${ECHO} yes;						\
@@ -73,7 +73,7 @@ MAKEVARS+=		USE_BUILTIN.zlib
 # implementation.
 #
 .if defined(USE_ZLIB)
-.  if !empty(IS_BUILTIN.zlib:M[nN][oO])
+.  if ${IS_BUILTIN.zlib:M[nN][oO]}
 USE_BUILTIN.zlib=	no
 .  endif
 .endif
@@ -83,8 +83,8 @@ USE_BUILTIN.zlib=	no
 ### solely to determine whether a built-in implementation exists.
 ###
 CHECK_BUILTIN.zlib?=	no
-.if !empty(CHECK_BUILTIN.zlib:M[nN][oO])
-.  if !empty(USE_BUILTIN.zlib:M[yY][eE][sS])
+.if ${CHECK_BUILTIN.zlib:M[nN][oO]}
+.  if ${USE_BUILTIN.zlib:M[yY][eE][sS]}
 
 BUILDLINK_TARGETS+=	fake-zlib-pc
 
