@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2022/10/14 07:51:59 pin Exp $
+# $NetBSD: Makefile,v 1.18 2022/10/14 14:23:40 tnn Exp $
 
 DISTNAME=	alacritty-0.11.0
 CATEGORIES=	x11
@@ -37,7 +37,7 @@ RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.freetype2}/lib
 SUBST_CLASSES+=		rtld
 SUBST_MESSAGE.rtld=	amend RTLD_GLOBAL
 SUBST_STAGE.rtld=	pre-configure
-SUBST_FILES.rtld=	../vendor/x11-dl-2.19.1/src/link.rs
+SUBST_FILES.rtld=	../vendor/x11-dl-*/src/link.rs
 SUBST_SED.rtld=		-e 's,libc::RTLD_LAZY,& | libc::RTLD_GLOBAL,g'
 .endif
 
