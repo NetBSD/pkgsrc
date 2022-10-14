@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2021/12/03 10:59:16 micha Exp $
+# $NetBSD: Makefile,v 1.8 2022/10/14 11:39:56 micha Exp $
 
 DISTNAME=	libcanlock-3.3.0
 PKGNAME=	${DISTNAME:S/libcanlock/canlock-hp/}
@@ -7,7 +7,7 @@ MASTER_SITES=	http://micha.freeshell.org/libcanlock/src/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	micha@NetBSD.org
-HOMEPAGE=	http://micha.freeshell.org/canlock-hp/
+HOMEPAGE=	https://micha.freeshell.org/libcanlock/
 COMMENT=	Parsers for RFC 5536 message headers and RFC 8315 header fields
 LICENSE=	mit
 
