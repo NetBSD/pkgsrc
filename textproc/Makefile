@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1328 2022/10/08 13:17:21 adam Exp $
+# $NetBSD: Makefile,v 1.1329 2022/10/14 12:32:09 adam Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1005,7 +1005,6 @@ SUBDIR+=	py-docx
 SUBDIR+=	py-dominate
 SUBDIR+=	py-ejson
 SUBDIR+=	py-elementpath
-SUBDIR+=	py-elementtree
 SUBDIR+=	py-empy
 SUBDIR+=	py-enchant
 SUBDIR+=	py-epr-reader
