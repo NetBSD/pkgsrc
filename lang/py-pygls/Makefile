@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2022/08/10 10:51:34 adam Exp $
+# $NetBSD: Makefile,v 1.5 2022/10/14 09:55:51 adam Exp $
 
-DISTNAME=	pygls-0.12.1
+DISTNAME=	pygls-0.12.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pygls/}
