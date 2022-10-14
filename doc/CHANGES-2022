@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5026 2022/10/14 19:25:59 triaxx Exp $
+$NetBSD: CHANGES-2022,v 1.5027 2022/10/14 19:31:38 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7650,3 +7650,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/erlang-p1_mysql to 1.0.20 [triaxx 2022-10-14]
 	Updated databases/erlang-p1_pgsql to 1.1.19 [triaxx 2022-10-14]
 	Updated databases/erlang-sqlite3 to 1.1.13 [triaxx 2022-10-14]
+	Updated net/erlang-xmpp to 1.6.0 [triaxx 2022-10-14]
