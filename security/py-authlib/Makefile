@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2022/04/21 11:00:00 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2022/10/14 09:06:36 adam Exp $
 
-DISTNAME=	Authlib-0.15.5
+DISTNAME=	Authlib-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=A/Authlib/}
 
@@ -11,12 +10,11 @@ HOMEPAGE=	https://authlib.org/
 COMMENT=	Ultimate Python library in building OAuth and OpenID Connect servers
 LICENSE=	modified-bsd
 
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
-
-PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
+DEPENDS+=	${PYPKGPREFIX}-cryptography>=3.2:../../security/py-cryptography
 
 USE_LANGUAGES=	# none
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
