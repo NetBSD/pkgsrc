@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5022 2022/10/14 19:06:14 triaxx Exp $
+$NetBSD: CHANGES-2022,v 1.5023 2022/10/14 19:11:20 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7646,3 +7646,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/erlang-eimp to 1.0.22 [triaxx 2022-10-14]
 	Updated devel/erlang-mqtree to 1.0.15 [triaxx 2022-10-14]
 	Updated devel/erlang-ezlib to 1.0.12 [triaxx 2022-10-14]
+	Updated devel/erlang-cache_tab to 1.0.30 [triaxx 2022-10-14]
