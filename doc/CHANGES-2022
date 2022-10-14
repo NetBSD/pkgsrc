@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5017 2022/10/14 12:35:09 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5018 2022/10/14 14:03:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7641,3 +7641,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated mail/gyb to 1.71 [sborrill 2022-10-14]
 	Removed textproc/py-elementtree [adam 2022-10-14]
 	Updated www/py-bottle to 0.12.23 [adam 2022-10-14]
+	Updated devel/py-setuptools_scm to 7.0.5nb1 [wiz 2022-10-14]
