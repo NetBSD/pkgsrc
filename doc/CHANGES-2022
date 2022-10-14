@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5005 2022/10/14 07:44:14 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.5006 2022/10/14 07:51:16 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7620,3 +7620,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-curtsies to 0.4.1 [adam 2022-10-13]
 	Updated devel/nss to 3.84 [wiz 2022-10-14]
 	Updated devel/zlib to 1.2.13 [wiz 2022-10-14]
+	Updated sysutils/broot to 1.16.1 [pin 2022-10-14]
