@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5019 2022/10/14 16:44:11 triaxx Exp $
+$NetBSD: CHANGES-2022,v 1.5020 2022/10/14 16:46:45 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7643,3 +7643,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/py-bottle to 0.12.23 [adam 2022-10-14]
 	Updated devel/py-setuptools_scm to 7.0.5nb1 [wiz 2022-10-14]
 	Updated misc/erlang-p1_utils to 1.0.25 [triaxx 2022-10-14]
+	Updated graphics/erlang-eimp to 1.0.22 [triaxx 2022-10-14]
