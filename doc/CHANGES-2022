@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5013 2022/10/14 11:30:11 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5014 2022/10/14 11:56:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7635,3 +7635,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/ansible-core to 2.13.5 [adam 2022-10-14]
 	Updated sysutils/ansible to 6.5.0 [adam 2022-10-14]
 	Updated sysutils/ansible-lint to 6.8.2 [adam 2022-10-14]
+	Updated archivers/py-rarfile to 4.0 [adam 2022-10-14]
+	Updated time/py-goocalendar to 0.7.2 [adam 2022-10-14]
