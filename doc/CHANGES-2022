@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5018 2022/10/14 14:03:10 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.5019 2022/10/14 16:44:11 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7642,3 +7642,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed textproc/py-elementtree [adam 2022-10-14]
 	Updated www/py-bottle to 0.12.23 [adam 2022-10-14]
 	Updated devel/py-setuptools_scm to 7.0.5nb1 [wiz 2022-10-14]
+	Updated misc/erlang-p1_utils to 1.0.25 [triaxx 2022-10-14]
