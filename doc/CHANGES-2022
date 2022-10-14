@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5015 2022/10/14 12:02:28 sborrill Exp $
+$NetBSD: CHANGES-2022,v 1.5016 2022/10/14 12:27:30 sborrill Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7638,3 +7638,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated archivers/py-rarfile to 4.0 [adam 2022-10-14]
 	Updated time/py-goocalendar to 0.7.2 [adam 2022-10-14]
 	Updated sysutils/gam to 6.25 [sborrill 2022-10-14]
+	Updated mail/gyb to 1.71 [sborrill 2022-10-14]
