@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.53 2022/09/22 10:11:19 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2022/10/14 11:27:41 adam Exp $
 
-DISTNAME=	ansible-6.4.0
+DISTNAME=	ansible-6.5.0
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/ansible/}
 
@@ -65,6 +65,7 @@ CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/vmware/vmware_rest/man
 
 post-extract:
 	${FIND} ${WRKSRC}/ansible_collections -name .DS_Store -delete
+	${RM} -r ${WRKSRC}/ansible_collections/inspur/sm/venv
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
