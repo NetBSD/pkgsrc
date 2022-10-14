@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2022/01/04 20:52:31 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/10/14 11:48:48 adam Exp $
 
-DISTNAME=	rarfile-3.3
+DISTNAME=	rarfile-4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	archivers python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rarfile/}
 
@@ -14,6 +13,8 @@ LICENSE=	isc
 DEPENDS+=	bsdtar-[0-9]*:../../archivers/bsdtar
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
