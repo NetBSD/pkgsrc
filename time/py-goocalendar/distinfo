@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:24:33 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/10/14 11:56:16 adam Exp $
 
-BLAKE2s (GooCalendar-0.7.1.tar.gz) = 85ce09a1b8fd2ebdc8e5b285925fc1c2d028f739ea48bbf9f330f8fe26f31a1c
-SHA512 (GooCalendar-0.7.1.tar.gz) = 1b35e9e831ac88b3b11fdc4c0ae25179a76631ff9525a837347e34b6e33bfc22ff77cb266f5c02432d0c1c1c12247d8ec2a602af81874163b11375c8d5f02616
-Size (GooCalendar-0.7.1.tar.gz) = 30821 bytes
+BLAKE2s (GooCalendar-0.7.2.tar.gz) = c7609f360fbb902f4d0073dd6dfbe9399c0e2a7255a65778cfc6a9e9280969bf
+SHA512 (GooCalendar-0.7.2.tar.gz) = beae60423de205dfa4bc9c7dbd5c10903ac644abc452f72728eb4ae9581a7415950eadcacb569df805efb1be608a29977bc98d674f23fd131504e4adfc9961f9
+Size (GooCalendar-0.7.2.tar.gz) = 30679 bytes
