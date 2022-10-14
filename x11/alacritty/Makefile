@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2022/03/30 16:15:13 pin Exp $
+# $NetBSD: Makefile,v 1.17 2022/10/14 07:51:59 pin Exp $
 
-DISTNAME=	alacritty-0.10.1
+DISTNAME=	alacritty-0.11.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=alacritty/}
 GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
@@ -48,10 +48,14 @@ PYTHON_FOR_BUILD_ONLY=		tool
 INSTALLATION_DIRS=	bin share/examples/alacritty ${PKGMANDIR}/man1
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/alacritty ${DESTDIR}${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/alacritty.yml ${DESTDIR}${PREFIX}/share/examples/alacritty
-	${INSTALL_MAN} ${WRKSRC}/extra/alacritty.man ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/alacritty.1
-	${INSTALL_MAN} ${WRKSRC}/extra/alacritty-msg.man ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/alacritty-msg.1
+	${INSTALL_PROGRAM} ${WRKSRC}/target/release/alacritty \
+		${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/alacritty.yml \
+		${DESTDIR}${PREFIX}/share/examples/alacritty
+	${INSTALL_MAN} ${WRKSRC}/extra/alacritty.man \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/alacritty.1
+	${INSTALL_MAN} ${WRKSRC}/extra/alacritty-msg.man \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/alacritty-msg.1
 
 .include "../../lang/python/tool.mk"
 .include "../../lang/rust/cargo.mk"
