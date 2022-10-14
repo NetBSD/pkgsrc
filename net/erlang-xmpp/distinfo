@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2021/10/26 11:05:34 nia Exp $
+$NetBSD: distinfo,v 1.17 2022/10/14 19:31:13 triaxx Exp $
 
-BLAKE2s (xmpp-1.5.3.tar.gz) = f196c964bcdc2fe0644c386670e9f6bce3645d4b489bba8958a6aa21cf5d1cc9
-SHA512 (xmpp-1.5.3.tar.gz) = 44b79eb73143ce3559ec8fe112af5ff22a7ecbffa935c8e76c645f7845005e7459a6ac1b726312be4eff22199eafd27ff5aab06cec1b1d961c80374ce83b7898
-Size (xmpp-1.5.3.tar.gz) = 510756 bytes
+BLAKE2s (xmpp-1.6.0.tar.gz) = a3851d375a2abc8f8d9d30c5b8ca856b61c8523541df265c6859563433f0e632
+SHA512 (xmpp-1.6.0.tar.gz) = 296a2f6c06e1a82e74e5484ae082124ad9ba05830aee2ecfea49ccf01a4fc4d46d94b8960ac5309911db66f0e8f2d06f48a0571f31cd5873c6e003b394f34300
+Size (xmpp-1.6.0.tar.gz) = 561026 bytes
