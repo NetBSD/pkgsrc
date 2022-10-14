@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2022/09/04 18:56:05 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/10/14 12:01:17 sborrill Exp $
 
-DISTNAME=	gam-6.24
+DISTNAME=	gam-6.25
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=GAM-team/}
 GITHUB_PROJECT=	GAM
@@ -20,7 +20,7 @@ DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-filelock-[0-9]*:../../devel/py-filelock
 DEPENDS+=	${PYPKGPREFIX}-passlib>=1.7.2:../../security/py-passlib
 
-EGG_NAME=	GAM_for_Google_Workspace-6.0.23
+EGG_NAME=	GAM_for_Google_Workspace-6.25
 
 NO_BUILD=	yes
 PLIST_SUBST+=	PYSITELIB=${PYSITELIB}
