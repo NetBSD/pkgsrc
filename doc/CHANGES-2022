@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5008 2022/10/14 08:40:08 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5009 2022/10/14 09:06:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7624,3 +7624,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/alacritty to 0.11.0 [pin 2022-10-14]
 	Updated www/py-sanic-routing to 22.8.0 [adam 2022-10-14]
 	Updated www/py-sanic to 22.9.0 [adam 2022-10-14]
+	Updated devel/py-gitpython to 3.1.29 [adam 2022-10-14]
+	Updated security/py-authlib to 1.1.0 [adam 2022-10-14]
