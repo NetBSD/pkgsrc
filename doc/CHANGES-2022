@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5037 2022/10/15 12:02:12 triaxx Exp $
+$NetBSD: CHANGES-2022,v 1.5038 2022/10/15 12:04:58 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7661,3 +7661,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added graphics/gradient version 0.3.3 [pin 2022-10-15]
 	Updated security/erlang-pkix to 1.0.9 [triaxx 2022-10-15]
 	Updated security/erlang-fast_tls to 1.1.16 [triaxx 2022-10-15]
+	Updated security/erlang-epam to 1.0.12 [triaxx 2022-10-15]
