@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:09:17 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/10/15 17:49:34 triaxx Exp $
 
-BLAKE2s (eredis-1.0.8-bf12ecb30253c84a2331f4f0d93fd68856fcb9f4.tar.gz) = 48a2f692f9d72cacd0ee859c6869a5a4458032c6d1c8698b4d98af7832124e1a
-SHA512 (eredis-1.0.8-bf12ecb30253c84a2331f4f0d93fd68856fcb9f4.tar.gz) = f94d843e9afaf99bcc444e39cf5b0ba6f7b57034eea643f08b2caa6fcf327b3f120a170ab8808db22a24d3941fc799c10868c89ad2ae1f55255ca765f743e810
-Size (eredis-1.0.8-bf12ecb30253c84a2331f4f0d93fd68856fcb9f4.tar.gz) = 125164 bytes
+BLAKE2s (eredis-1.2.0.tar.gz) = b18f8286b9f2c797f442a16b7cbfe2ce177729bf5d2ce7fe29248b07e708a4cc
+SHA512 (eredis-1.2.0.tar.gz) = c72ae291389e47d1ac4c1de69dccb6121f4f9195283665d490904226b2ea15cb7671b48bb08db507a5e62c6bced62d890a9ecb9752da6e0aad24a28da137907c
+Size (eredis-1.2.0.tar.gz) = 28568 bytes
