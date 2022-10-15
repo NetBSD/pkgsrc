@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2020/01/18 23:36:00 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2022/10/15 23:11:48 wiz Exp $
 
-DISTNAME=	xditview-1.0.5
+DISTNAME=	xditview-1.0.6
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://xorg.freedesktop.org/
