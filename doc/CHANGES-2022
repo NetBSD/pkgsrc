@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5032 2022/10/15 07:08:50 pin Exp $
+$NetBSD: CHANGES-2022,v 1.5033 2022/10/15 07:10:07 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7656,3 +7656,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/erlang-p1_oauth2 to 0.6.11 [triaxx 2022-10-14]
 	Updated security/erlang-p1_acme to 1.0.20 [triaxx 2022-10-14]
 	Updated devel/difftastic to 0.37.0 [pin 2022-10-15]
+	Updated graphics/oculante to 0.6.14 [pin 2022-10-15]
