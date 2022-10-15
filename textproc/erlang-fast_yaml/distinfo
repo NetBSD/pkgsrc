@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/10/26 11:21:52 nia Exp $
+$NetBSD: distinfo,v 1.15 2022/10/15 12:15:25 triaxx Exp $
 
-BLAKE2s (fast_yaml-1.0.29.tar.gz) = 4a0952238cf2bb73cd5df9a59fa3aa00ea292e982103148d5f32d58659e57846
-SHA512 (fast_yaml-1.0.29.tar.gz) = 39c96d251c3265fd7c29a6603ab2879ee6856d610908b314b979ffb4fe97c17a91c59724f5f32e75c62c6b9e98b1d00948ceb33a2148cf1bfcc96720dd407cd3
-Size (fast_yaml-1.0.29.tar.gz) = 59122 bytes
+BLAKE2s (fast_yaml-1.0.34.tar.gz) = f063eb43415ebccfdebe0b42496577169345d534628f10852aa299acfb811178
+SHA512 (fast_yaml-1.0.34.tar.gz) = d1f0081075fe0009658d83eb23da046f4e12a25eda293cb061ff33825324445059cafeec95c3e53f3eca94085188c63b436d2057b6266b32076c33b9ecd1e347
+Size (fast_yaml-1.0.34.tar.gz) = 60367 bytes
