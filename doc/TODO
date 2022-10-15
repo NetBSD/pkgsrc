@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22290 2022/10/15 18:04:25 triaxx Exp $
+$NetBSD: TODO,v 1.22291 2022/10/15 18:29:38 triaxx Exp $
 
 Suggested new packages
 ======================
@@ -1626,7 +1626,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o yacas-1.6.1
 	o yafc-1.1
 	o yahttp-0.2.1
-	o yaws-2.1.1
 	o yaz-5.30.3
 	o yed-3.17.1
 	o yelp-tools-3.38.0
