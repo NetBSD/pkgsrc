@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5042 2022/10/15 12:15:39 triaxx Exp $
+$NetBSD: CHANGES-2022,v 1.5043 2022/10/15 12:21:25 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7666,3 +7666,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/erlang-yconf to 1.0.14 [triaxx 2022-10-15]
 	Updated textproc/erlang-stringprep to 1.0.29 [triaxx 2022-10-15]
 	Updated textproc/erlang-fast_yaml to 1.0.34 [triaxx 2022-10-15]
+	Updated textproc/erlang-jiffy to 1.1.1 [triaxx 2022-10-15]
