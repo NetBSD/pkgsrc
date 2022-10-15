@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.3 2022/04/25 12:51:11 nikita Exp $
+# $NetBSD: module.mk,v 1.4 2022/10/15 18:04:10 triaxx Exp $
 #
 # Simple Erlang module package framework
 #
@@ -7,6 +7,7 @@ PKGNAME?=	erlang-${DISTNAME}
 
 .if defined(REBAR3_BUILD)
 BUILD_DEPENDS+=	rebar3-[0-9]*:../../devel/rebar3
+REBAR=		${PREFIX}/bin/rebar3
 .else
 BUILD_DEPENDS+=	rebar-[0-9]*:../../devel/rebar
 .endif

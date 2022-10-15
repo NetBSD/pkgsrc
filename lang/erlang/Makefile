@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.109 2022/06/28 11:34:10 wiz Exp $
+# $NetBSD: Makefile,v 1.110 2022/10/15 18:04:10 triaxx Exp $
 
 DISTNAME=	erlang-${DIST_VERSION_MAJOR}.${DIST_VERSION_MINOR}${!empty(DIST_VERSION_PATCH):?.:}${DIST_VERSION_PATCH}
 PKGNAME=	${DISTNAME:S/OTP-/erlang-/}
-PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=erlang/}
 GITHUB_PROJECT=	otp
@@ -18,6 +17,7 @@ EXTRACT_USING=	bsdtar
 WRKSRC=		${WRKDIR}/otp-${GITHUB_TAG}
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	autoconf awk gmake perl:run flex
+USE_LANGUAGES+=	c c++
 
 # "This run-time was supposed be compiled with all code below 2Gb,
 # but the instruction 'allocate_tt' is located at 00000001c586f34c."
@@ -25,11 +25,15 @@ MKPIE_SUPPORTED=	no
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !empty(MACHINE_ARCH:M*armv6*) || !empty(MACHINE_ARCH:M*armv7*)
+.if ${MACHINE_ARCH:M*armv6*} || ${MACHINE_ARCH:M*armv7*}
 MAKE_FLAGS+=	ARCH=arm
 .endif
 
-USE_GNU_CONFIGURE_HOST=	${USE_CROSS_COMPILE}
+.if !empty(USE_CROSS_COMPILE:M[Yy][Ee][Ss])
+USE_GNU_CONFIGURE_HOST=	yes
+.else
+USE_GNU_CONFIGURE_HOST=	no
+.endif
 OVERRIDE_DIRDEPTH=	4
 
 CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_PREFIX.openssl}
@@ -43,10 +47,9 @@ REPLACE_INTERPRETER+=	escript
 REPLACE.escript.old=	.*escript
 REPLACE.escript.new=	${PREFIX}/bin/escript
 REPLACE_FILES.escript+=	lib/diameter/bin/diameterc
+REPLACE_FILES.escript+=	lib/edoc/bin/edoc
 REPLACE_FILES.escript+=	lib/erl_docgen/priv/bin/codeline_preprocessing.escript
 REPLACE_FILES.escript+=	lib/erl_docgen/priv/bin/xml_from_edoc.escript
-REPLACE_FILES.escript+=	lib/reltool/examples/display_args
-REPLACE_FILES.escript+=	lib/reltool/examples/mnesia_core_dump_viewer
 REPLACE_FILES.escript+=	lib/snmp/src/compile/snmpc.src
 
 SUBST_CLASSES+=		target
