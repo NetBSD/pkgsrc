@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 11:34:30 nia Exp $
+$NetBSD: distinfo,v 1.8 2022/10/15 23:10:56 wiz Exp $
 
-BLAKE2s (viewres-1.0.6.tar.bz2) = 97f59fe0e78914d3e01e0cca07c571d85c04da618a5d04f829bd39fef4e7f430
-SHA512 (viewres-1.0.6.tar.bz2) = 3f4cfc61608bc6c9b35ef66ceb473661ca01946d3306d54040d32803e8e0eec506a0ce37ea22bfe514544a6ba9645fd30f39b20c063aff696b3c0fda3fe95dff
-Size (viewres-1.0.6.tar.bz2) = 135200 bytes
+BLAKE2s (viewres-1.0.7.tar.xz) = 7b15e56749f4399635c4fbc08803ee46a2ffc9345aa9b9c979f0e4d79ed081e0
+SHA512 (viewres-1.0.7.tar.xz) = 75878faee001163891adf8472c79b31273f794e23dd775c80b33acdd1ce76df708eb27a49c20f79b7101ad676e1d50d9c857c2e2e0930c6209eeb7af8a11397c
+Size (viewres-1.0.7.tar.xz) = 128608 bytes
