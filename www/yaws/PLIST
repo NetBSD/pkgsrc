@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2018/09/27 21:16:40 tnn Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/10/15 18:29:21 triaxx Exp $
 bin/yaws
 lib/pkgconfig/yaws.pc
 lib/yaws/ebin/haxe.beam
@@ -26,7 +26,6 @@ lib/yaws/ebin/yaws_generated.beam
 lib/yaws/ebin/yaws_html.beam
 lib/yaws/ebin/yaws_jsonrpc.beam
 lib/yaws/ebin/yaws_log.beam
-lib/yaws/ebin/yaws_log_file_h.beam
 lib/yaws/ebin/yaws_logger.beam
 lib/yaws/ebin/yaws_ls.beam
 lib/yaws/ebin/yaws_multipart.beam
@@ -82,6 +81,7 @@ man/man1/yaws.1
 man/man5/yaws.conf.5
 man/man5/yaws_api.5
 man/man5/yaws_soap_lib.5
+share/doc/yaws/yaws.pdf
 share/examples/yaws/dhparams.pem
 share/examples/yaws/yaws-cert.pem
 share/examples/yaws/yaws-key.pem
@@ -91,7 +91,6 @@ share/yaws/www/END
 share/yaws/www/END2
 share/yaws/www/HEAD
 share/yaws/www/TAB.inc
-share/yaws/www/api.yaws
 share/yaws/www/appmods.yaws
 share/yaws/www/arg.yaws
 share/yaws/www/arg2.yaws
@@ -111,7 +110,6 @@ share/yaws/www/cookies.yaws
 share/yaws/www/doc.yaws
 share/yaws/www/dynamic.yaws
 share/yaws/www/embed.yaws
-share/yaws/www/examples.yaws
 share/yaws/www/favicon.ico
 share/yaws/www/form.yaws
 share/yaws/www/haxe_intro.yaws
@@ -247,7 +245,7 @@ share/yaws/www/json_sample.html
 share/yaws/www/json_sample.yaws
 share/yaws/www/logger_mod.yaws
 share/yaws/www/man.yaws
-share/yaws/www/motivation.yaws
+share/yaws/www/multiple_accept_headers.yaws
 share/yaws/www/news
 share/yaws/www/pcookie.yaws
 share/yaws/www/post.yaws
@@ -295,7 +293,6 @@ share/yaws/www/static.html
 share/yaws/www/stats_ex.yaws
 share/yaws/www/stil.css
 share/yaws/www/stream.yaws
-share/yaws/www/todo.yaws
 share/yaws/www/upload.yaws
 share/yaws/www/upload0.yaws
 share/yaws/www/urandom.yaws
@@ -307,7 +304,10 @@ share/yaws/www/websockets_example_endpoint.yaws
 share/yaws/www/yapp_intro.yaws
 share/yaws/www/yaws-1.55_to_1.56.patch
 share/yaws/www/yaws.eps
+share/yaws/www/yaws.pdf
+share/yaws/www/yaws.ps
 share/yaws/www/ybed.erl
 share/yaws/www/ybed_sup.erl
 share/yaws/www/yman.yaws
+@pkgdir var/log/yaws
 @pkgdir lib/yaws/examples/include

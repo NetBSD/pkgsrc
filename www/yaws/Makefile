@@ -1,20 +1,22 @@
-# $NetBSD: Makefile,v 1.22 2022/06/28 11:37:52 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2022/10/15 18:29:21 triaxx Exp $
 #
 
-DISTNAME=		yaws-2.0.6
-PKGREVISION=		5
+DISTNAME=		yaws-2.1.1
 CATEGORIES=		www
-MASTER_SITES=		http://yaws.hyber.org/download/
+MASTER_SITES=		${MASTER_SITE_GITHUB:=erlyaws/}
+GITHUB_TAG=		${DISTNAME}
 
 MAINTAINER=		bartosz.kuzma@gmail.com
 HOMEPAGE=		http://yaws.hyber.org/
 COMMENT=		High perfomance HTTP 1.1 webserver written in Erlang
 LICENSE=		modified-bsd
 
+WRKSRC=			${WRKDIR}/yaws-${DISTNAME}
+
 BUILD_DEFS+=		VARBASE
 
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake perl tar
+USE_TOOLS+=		aclocal autoconf automake autoreconf gmake perl tar
 GNU_CONFIGURE=		yes
 
 PKG_SYSCONFSUBDIR=	yaws
@@ -50,6 +52,9 @@ FILES_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 post-extract:
 	cd ${WRKSRC} && ${CHMOD} -R g-w www
 	${RM} -Rf ${WRKSRC}/www/testdir
+
+pre-configure:
+	cd ${WRKSRC} && autoreconf -fi
 
 post-configure:
 	${SED} -e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g" \
