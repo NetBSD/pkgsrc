@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.21 2021/01/16 21:19:33 triaxx Exp $
+$NetBSD: patch-ae,v 1.22 2022/10/15 18:20:40 triaxx Exp $
 
 - Default locations.
 - Use 'su -' instead of just 'su'. Fixes priv delegation on SunOS
@@ -8,18 +8,9 @@ $NetBSD: patch-ae,v 1.21 2021/01/16 21:19:33 triaxx Exp $
 - Portable grep calls.
 - Fix spool directory.
 
---- ejabberdctl.template.orig	2020-12-15 14:40:16.000000000 +0000
+--- ejabberdctl.template.orig	2022-05-06 13:12:22.000000000 +0000
 +++ ejabberdctl.template
-@@ -57,7 +57,7 @@ done
- # define ejabberd variables if not already defined from the command line
- : "${ETC_DIR:="{{sysconfdir}}/ejabberd"}"
- : "${LOGS_DIR:="{{localstatedir}}/log/ejabberd"}"
--: "${SPOOL_DIR:="{{localstatedir}}/lib/ejabberd"}"
-+: "${SPOOL_DIR:="{{localstatedir}}/spool/ejabberd"}"
- : "${EJABBERD_CONFIG_PATH:="$ETC_DIR/ejabberd.yml"}"
- : "${EJABBERDCTL_CONFIG_PATH:="$ETC_DIR/ejabberdctl.cfg"}"
- # Allows passing extra Erlang command-line arguments in vm.args file
-@@ -110,7 +110,7 @@ export ERL_LIBS
+@@ -112,7 +112,7 @@ export SCRIPT_DIR
  exec_cmd()
  {
      case $EXEC_CMD in
@@ -28,7 +19,7 @@ $NetBSD: patch-ae,v 1.21 2021/01/16 21:19:33 triaxx Exp $
          as_current_user) "$@" ;;
      esac
  }
-@@ -217,14 +217,14 @@ uid()
+@@ -218,14 +218,14 @@ uid()
  # stop epmd if there is no other running node
  stop_epmd()
  {
