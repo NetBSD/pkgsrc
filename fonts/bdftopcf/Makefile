@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2020/01/18 23:31:00 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2022/10/15 23:14:49 wiz Exp $
 
-DISTNAME=		bdftopcf-1.1
-PKGREVISION=		1
+DISTNAME=		bdftopcf-1.1.1
 CATEGORIES=		fonts
-MASTER_SITES=		${MASTER_SITE_XORG:=app/}
-EXTRACT_SUFX=		.tar.bz2
+MASTER_SITES=		https://xorg.freedesktop.org/archive/individual/util/
+EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/
