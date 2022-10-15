@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.985 2022/10/13 16:01:42 adam Exp $
+# $NetBSD: Makefile,v 1.986 2022/10/15 07:14:26 pin Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -230,6 +230,7 @@ SUBDIR+=	gpick
 SUBDIR+=	gpicview
 SUBDIR+=	gqview
 SUBDIR+=	gqview-devel
+SUBDIR+=	gradient
 SUBDIR+=	grafx2
 SUBDIR+=	grap
 SUBDIR+=	graphene
