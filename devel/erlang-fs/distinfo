@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2022/10/15 17:42:05 triaxx Exp $
+$NetBSD: distinfo,v 1.6 2022/10/15 17:43:23 triaxx Exp $
 
 BLAKE2s (fs-6.1.tar.gz) = 66a80a402b64e77e365e26617f1a36fd7e44720c65d826e502d41c635a4e2548
 SHA512 (fs-6.1.tar.gz) = 67c2e82891e05eedef1709ff15d8d5d98feff67ae5cdda0abd4a82960aaca4b62c79de89b1a14c517072bfd6e600423a7d54cca4bcc42c32bc7b76b48a438837
 Size (fs-6.1.tar.gz) = 24465 bytes
-SHA1 (patch-src_fs__sup.erl) = 468aadce60bd9beaaa47aff3942006527b127908
