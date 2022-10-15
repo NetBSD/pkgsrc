@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.58 2021/04/13 08:02:24 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.59 2022/10/15 18:20:40 triaxx Exp $
 lib/${PKGNAME}/COPYING
 lib/${PKGNAME}/ebin/ELDAPv3.beam
 lib/${PKGNAME}/ebin/acl.beam
@@ -18,6 +18,7 @@ lib/${PKGNAME}/ebin/ejabberd_auth_mnesia.beam
 lib/${PKGNAME}/ebin/ejabberd_auth_pam.beam
 lib/${PKGNAME}/ebin/ejabberd_auth_sql.beam
 lib/${PKGNAME}/ebin/ejabberd_backend_sup.beam
+lib/${PKGNAME}/ebin/ejabberd_batch.beam
 lib/${PKGNAME}/ebin/ejabberd_bosh.beam
 lib/${PKGNAME}/ebin/ejabberd_c2s.beam
 lib/${PKGNAME}/ebin/ejabberd_c2s_config.beam
@@ -122,12 +123,16 @@ lib/${PKGNAME}/ebin/mod_carboncopy.beam
 lib/${PKGNAME}/ebin/mod_client_state.beam
 lib/${PKGNAME}/ebin/mod_client_state_opt.beam
 lib/${PKGNAME}/ebin/mod_configure.beam
+lib/${PKGNAME}/ebin/mod_conversejs.beam
+lib/${PKGNAME}/ebin/mod_conversejs_opt.beam
 lib/${PKGNAME}/ebin/mod_delegation.beam
 lib/${PKGNAME}/ebin/mod_delegation_opt.beam
 lib/${PKGNAME}/ebin/mod_disco.beam
 lib/${PKGNAME}/ebin/mod_disco_opt.beam
 lib/${PKGNAME}/ebin/mod_fail2ban.beam
 lib/${PKGNAME}/ebin/mod_fail2ban_opt.beam
+lib/${PKGNAME}/ebin/mod_host_meta.beam
+lib/${PKGNAME}/ebin/mod_host_meta_opt.beam
 lib/${PKGNAME}/ebin/mod_http_api.beam
 lib/${PKGNAME}/ebin/mod_http_api_opt.beam
 lib/${PKGNAME}/ebin/mod_http_fileserver.beam
@@ -165,6 +170,7 @@ lib/${PKGNAME}/ebin/mod_mqtt_sql.beam
 lib/${PKGNAME}/ebin/mod_mqtt_ws.beam
 lib/${PKGNAME}/ebin/mod_muc.beam
 lib/${PKGNAME}/ebin/mod_muc_admin.beam
+lib/${PKGNAME}/ebin/mod_muc_admin_opt.beam
 lib/${PKGNAME}/ebin/mod_muc_log.beam
 lib/${PKGNAME}/ebin/mod_muc_log_opt.beam
 lib/${PKGNAME}/ebin/mod_muc_mnesia.beam
@@ -323,6 +329,7 @@ lib/${PKGNAME}/priv/img/vcss.png
 lib/${PKGNAME}/priv/js/admin.js
 lib/${PKGNAME}/priv/js/muc.js
 lib/${PKGNAME}/priv/lua/redis_sm.lua
+lib/${PKGNAME}/priv/msgs/ar.msg
 lib/${PKGNAME}/priv/msgs/ca.msg
 lib/${PKGNAME}/priv/msgs/cs.msg
 lib/${PKGNAME}/priv/msgs/de.msg
@@ -367,6 +374,5 @@ share/examples/ejabberd/ejabberd.yml
 share/examples/ejabberd/ejabberdctl.cfg
 share/examples/ejabberd/inetrc
 @pkgdir var/spool/ejabberd
-@pkgdir var/run/ejabberd
 @pkgdir var/log/ejabberd
 @pkgdir bin

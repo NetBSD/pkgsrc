@@ -1,52 +1,50 @@
-# $NetBSD: Makefile,v 1.96 2021/04/15 08:28:11 wiz Exp $
+# $NetBSD: Makefile,v 1.97 2022/10/15 18:20:40 triaxx Exp $
 
-DISTNAME=	ejabberd-21.04
-PKGREVISION=	1
+DISTNAME=	ejabberd-22.05
 CATEGORIES=	chat
 MASTER_SITES=	https://www.process-one.net/downloads/downloads-action.php?file=/${PKGVERSION_NOREV}/
-EXTRACT_SUFX=	.tgz
-# remove on next update
-# https://github.com/processone/ejabberd/issues/3570
-DIST_SUBDIR=	${DISTNAME}-20210414
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.ejabberd.im/
 COMMENT=	Free and Open Source distributed fault-tolerant Jabber server
 LICENSE=	gnu-gpl-v2
 
+DEPENDS+=	elixir>=1.4.4:../../lang/elixir
 DEPENDS+=	erlang-base64url>=1.0.1:../../devel/erlang-base64url
-DEPENDS+=	erlang-cache_tab>=1.0.26:../../devel/erlang-cache_tab
-DEPENDS+=	erlang-epam>=1.0.10:../../security/erlang-epam
-DEPENDS+=	erlang-eredis>=1.0.8.20150910:../../databases/erlang-eredis
-DEPENDS+=	erlang-eimp>=1.0.18:../../graphics/erlang-eimp
-DEPENDS+=	erlang-esip>=1.0.39:../../net/erlang-esip
-DEPENDS+=	erlang-ezlib>=1.0.9:../../devel/erlang-ezlib
-DEPENDS+=	erlang-fast_tls>=1.1.10:../../security/erlang-fast_tls
-DEPENDS+=	erlang-fast_xml>=1.1.45:../../textproc/erlang-fast_xml
-DEPENDS+=	erlang-fast_yaml>=1.0.29:../../textproc/erlang-fast_yaml
-DEPENDS+=	erlang-jiffy>=1.0.5:../../textproc/erlang-jiffy
-DEPENDS+=	erlang-jose>=1.9.0:../../security/erlang-jose
-DEPENDS+=	erlang-lager>=3.6.10.:../../sysutils/erlang-lager
-DEPENDS+=	erlang-luerl>=0.3:../../lang/erlang-luerl
-DEPENDS+=	erlang-mqtree>=1.0.11:../../devel/erlang-mqtree
-DEPENDS+=	erlang-p1_acme>=1.0.10:../../security/erlang-p1_acme
-DEPENDS+=	erlang-p1_mysql>=1.0.6:../../databases/erlang-p1_mysql
-DEPENDS+=	erlang-p1_oauth2>=0.6.8:../../security/erlang-p1_oauth2
-DEPENDS+=	erlang-p1_pgsql>=1.1.6:../../databases/erlang-p1_pgsql
-DEPENDS+=	erlang-p1_utils>=1.0.21:../../misc/erlang-p1_utils
-DEPENDS+=	erlang-pkix>=1.0.7:../../security/erlang-pkix
-DEPENDS+=	erlang-stringprep>=1.0.24:../../textproc/erlang-stringprep
-DEPENDS+=	erlang-stun>=1.0.40:../../net/erlang-stun
-DEPENDS+=	erlang-xmpp>=1.5.1:../../net/erlang-xmpp
-DEPENDS+=	erlang-yconf>=1.0.9:../../textproc/erlang-yconf
+DEPENDS+=	erlang-cache_tab>=1.0.30:../../devel/erlang-cache_tab
+DEPENDS+=	erlang-epam>=1.0.12:../../security/erlang-epam
+DEPENDS+=	erlang-eredis>=1.2.0:../../databases/erlang-eredis
+DEPENDS+=	erlang-eimp>=1.0.22:../../graphics/erlang-eimp
+DEPENDS+=	erlang-esip>=1.0.47:../../net/erlang-esip
+DEPENDS+=	erlang-ezlib>=1.0.12:../../devel/erlang-ezlib
+DEPENDS+=	erlang-fast_tls>=1.1.15:../../security/erlang-fast_tls
+DEPENDS+=	erlang-fast_xml>=1.1.49:../../textproc/erlang-fast_xml
+DEPENDS+=	erlang-fast_yaml>=1.0.33:../../textproc/erlang-fast_yaml
+DEPENDS+=	erlang-idna>=6.0.0:../../net/erlang-idna
+DEPENDS+=	erlang-jiffy>=1.1.1:../../textproc/erlang-jiffy
+DEPENDS+=	erlang-jose>=1.11.1:../../security/erlang-jose
+DEPENDS+=	erlang-lager>=3.9.1.:../../sysutils/erlang-lager
+DEPENDS+=	erlang-luerl>=1.0:../../lang/erlang-luerl
+DEPENDS+=	erlang-mqtree>=1.0.15:../../devel/erlang-mqtree
+DEPENDS+=	erlang-p1_acme>=1.0.19:../../security/erlang-p1_acme
+DEPENDS+=	erlang-p1_mysql>=1.0.19:../../databases/erlang-p1_mysql
+DEPENDS+=	erlang-p1_oauth2>=0.6.11:../../security/erlang-p1_oauth2
+DEPENDS+=	erlang-p1_pgsql>=1.1.18:../../databases/erlang-p1_pgsql
+DEPENDS+=	erlang-p1_utils>=1.0.25:../../misc/erlang-p1_utils
+DEPENDS+=	erlang-pkix>=1.0.9:../../security/erlang-pkix
+DEPENDS+=	erlang-sqlite3>=1.1.13:../../databases/erlang-sqlite3
+DEPENDS+=	erlang-stringprep>=1.0.28:../../textproc/erlang-stringprep
+DEPENDS+=	erlang-stun>=1.2.2:../../net/erlang-stun
+DEPENDS+=	erlang-xmpp>=1.5.8:../../net/erlang-xmpp
+DEPENDS+=	erlang-yconf>=1.0.13:../../textproc/erlang-yconf
 
 GNU_CONFIGURE=		yes
 USE_GCC_RUNTIME=	yes
-USE_TOOLS+=		bash:run gmake patch
+USE_TOOLS+=		aclocal autoconf automake bash:run gmake patch perl
 
 CONFIGURE_ARGS+=	--disable-debug
 CONFIGURE_ARGS+=	--enable-system-deps
-CONFIGURE_ARGS+=	--enable-iconv
+CONFIGURE_ARGS+=	--enable-erlang-version-check=no
 CONFIGURE_ARGS+=	--enable-mysql
 CONFIGURE_ARGS+=	--enable-odbc
 CONFIGURE_ARGS+=	--enable-pam
@@ -117,6 +115,9 @@ SUBST_VARS.paths+=	PKG_SYSCONFDIR PREFIX LOCALBASE
 
 post-extract:
 	cd ${WRKSRC} && ${MKDIR} deps && ${TOUCH} deps/.got deps/.built
+
+pre-configure:
+	cd ${WRKSRC} && ${SH} autogen.sh
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/tools/ejabberdctl.bc			\
