@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.114 2022/10/06 22:30:22 rin Exp $
+# $NetBSD: Makefile,v 1.115 2022/10/15 02:45:01 rin Exp $
 
 DISTNAME=		texinfo-6.8
 PKGNAME=		g${DISTNAME}
@@ -16,8 +16,6 @@ BUILD_DEPENDS+=		help2man-[0-9]*:../../converters/help2man
 DEPENDS+=		p5-Locale-libintl-[0-9]*:../../misc/p5-Locale-libintl
 DEPENDS+=		p5-Text-Unidecode-[0-9]*:../../textproc/p5-Text-Unidecode
 DEPENDS+=		p5-Unicode-EastAsianWidth-[0-9]*:../../converters/p5-Unicode-EastAsianWidth
-
-MAKE_JOBS_SAFE=		no
 
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_STRICT=	no # otherwise MiscXS.pm won't be installed
