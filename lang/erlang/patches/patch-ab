@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.6 2013/06/08 06:48:24 asau Exp $
+$NetBSD: patch-ab,v 1.7 2022/10/15 18:04:10 triaxx Exp $
 
 Build all .java files.
 
 --- make/otp.mk.in.orig	2013-02-25 19:21:31.000000000 +0000
 +++ make/otp.mk.in
-@@ -179,7 +179,7 @@ endif
+@@ -195,7 +195,7 @@ endif
  
  
  $(JAVA_DEST_ROOT)$(JAVA_CLASS_SUBDIR)%.class: %.java
