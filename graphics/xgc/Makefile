@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2020/01/18 23:32:38 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2022/10/15 23:12:35 wiz Exp $
 
-DISTNAME=	xgc-1.0.5
+DISTNAME=	xgc-1.0.6
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://xorg.freedesktop.org/
