@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2017/07/30 22:32:10 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/10/15 17:49:34 triaxx Exp $
 
-DISTNAME=	eredis-1.0.8
-PKGNAME=	erlang-${DISTNAME}.20150910
-PKGREVISION=	1
+DISTNAME=	eredis-1.2.0
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wooga/}
 
@@ -12,8 +10,7 @@ COMMENT=	Erlang Redis client
 LICENSE=	mit
 
 GITHUB_PROJECT=	eredis
-GITHUB_TAG=	bf12ecb30253c84a2331f4f0d93fd68856fcb9f4
-WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 ERL_MOD_DIR=	lib/erlang/lib/${DISTNAME}
 
