@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5048 2022/10/15 18:04:25 triaxx Exp $
+$NetBSD: CHANGES-2022,v 1.5049 2022/10/15 18:05:33 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7672,3 +7672,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/erlang-jose to 1.11.2 [triaxx 2022-10-15]
 	Updated lang/erlang-luerl to 1.0 [triaxx 2022-10-15]
 	Updated lang/erlang to 25.1 [triaxx 2022-10-15]
+	Updated lang/erlang-doc to 25.1 [triaxx 2022-10-15]
