@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5045 2022/10/15 17:49:51 triaxx Exp $
+$NetBSD: CHANGES-2022,v 1.5046 2022/10/15 17:53:01 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7669,3 +7669,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/erlang-jiffy to 1.1.1 [triaxx 2022-10-15]
 	Updated devel/erlang-fs to 6.1 [triaxx 2022-10-15]
 	Updated databases/erlang-eredis to 1.2.0 [triaxx 2022-10-15]
+	Updated security/erlang-jose to 1.11.2 [triaxx 2022-10-15]
