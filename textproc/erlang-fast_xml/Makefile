@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2021/05/20 20:03:28 triaxx Exp $
+# $NetBSD: Makefile,v 1.18 2022/10/15 12:08:33 triaxx Exp $
 
-DISTNAME=	fast_xml-1.1.46
+DISTNAME=	fast_xml-1.1.49
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
 
@@ -11,7 +11,7 @@ LICENSE=	apache-2.0
 
 GITHUB_PROJECT=	fast_xml
 
-DEPENDS+=	erlang-p1_utils>=1.0.21:../../misc/erlang-p1_utils
+DEPENDS+=	erlang-p1_utils>=1.0.25:../../misc/erlang-p1_utils
 
 GNU_CONFIGURE=	yes
 
