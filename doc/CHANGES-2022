@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5034 2022/10/15 07:11:23 pin Exp $
+$NetBSD: CHANGES-2022,v 1.5035 2022/10/15 07:14:54 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7658,3 +7658,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/difftastic to 0.37.0 [pin 2022-10-15]
 	Updated graphics/oculante to 0.6.14 [pin 2022-10-15]
 	Updated shells/starship to 1.11.0 [pin 2022-10-15]
+	Added graphics/gradient version 0.3.3 [pin 2022-10-15]
