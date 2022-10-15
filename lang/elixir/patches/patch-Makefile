@@ -1,10 +1,10 @@
-$NetBSD: patch-Makefile,v 1.4 2019/08/01 09:52:52 nia Exp $
+$NetBSD: patch-Makefile,v 1.5 2022/10/15 18:13:42 triaxx Exp $
 
 Use portable sed calls to avoid gsed.
 
 --- Makefile.orig	2019-07-18 10:17:13.000000000 +0000
 +++ Makefile
-@@ -120,7 +120,7 @@ install: compile
+@@ -123,7 +123,7 @@ install: compile
  		$(INSTALL_DATA) $$dir/ebin/* "$(DESTDIR)$(PREFIX)/$(LIBDIR)/elixir/$$dir/ebin"; \
  	done
  	$(Q) $(INSTALL_DIR) "$(DESTDIR)$(PREFIX)/$(LIBDIR)/elixir/bin"
@@ -13,7 +13,7 @@ Use portable sed calls to avoid gsed.
  	$(Q) $(INSTALL_DIR) "$(DESTDIR)$(PREFIX)/$(BINDIR)"
  	$(Q) for file in "$(DESTDIR)$(PREFIX)"/$(LIBDIR)/elixir/bin/*; do \
  		ln -sf "../$(LIBDIR)/elixir/bin/$${file##*/}" "$(DESTDIR)$(PREFIX)/$(BINDIR)/"; \
-@@ -296,14 +296,14 @@ build_man: man/iex.1 man/elixir.1
+@@ -304,14 +304,14 @@ build_man: man/iex.1 man/elixir.1
  
  man/iex.1:
  	$(Q) cp man/iex.1.in man/iex.1
