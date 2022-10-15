@@ -1,0 +1,8 @@
+Command-line tool for playing with color gradients.
+
+Features
+- Lots of preset gradients.
+- Custom gradient.
+- Read gradients from SVG & GIMP gradient (ggr) file.
+- Display gradient in the terminal.
+- Get colors from gradient.
