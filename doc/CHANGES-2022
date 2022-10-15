@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5059 2022/10/15 23:11:57 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.5060 2022/10/15 23:12:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7683,3 +7683,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated mail/postfix to 3.7.3 [triaxx 2022-10-15]
 	Updated x11/viewres to 1.0.7 [wiz 2022-10-15]
 	Updated x11/xditview to 1.0.6 [wiz 2022-10-15]
+	Updated graphics/xgc to 1.0.6 [wiz 2022-10-15]
