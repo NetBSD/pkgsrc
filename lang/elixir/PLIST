@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2021/06/12 09:25:24 nia Exp $
+@comment $NetBSD: PLIST,v 1.8 2022/10/15 18:13:42 triaxx Exp $
 bin/elixir
 bin/elixirc
 bin/iex
@@ -11,7 +11,6 @@ lib/elixir/lib/eex/ebin/Elixir.EEx.Compiler.beam
 lib/elixir/lib/eex/ebin/Elixir.EEx.Engine.beam
 lib/elixir/lib/eex/ebin/Elixir.EEx.SmartEngine.beam
 lib/elixir/lib/eex/ebin/Elixir.EEx.SyntaxError.beam
-lib/elixir/lib/eex/ebin/Elixir.EEx.Tokenizer.beam
 lib/elixir/lib/eex/ebin/Elixir.EEx.beam
 lib/elixir/lib/eex/ebin/eex.app
 lib/elixir/lib/elixir/ebin/Elixir.Access.beam
@@ -35,8 +34,10 @@ lib/elixir/lib/elixir/ebin/Elixir.Calendar.UTCOnlyTimeZoneDatabase.beam
 lib/elixir/lib/elixir/ebin/Elixir.Calendar.beam
 lib/elixir/lib/elixir/ebin/Elixir.CaseClauseError.beam
 lib/elixir/lib/elixir/ebin/Elixir.Code.Formatter.beam
+lib/elixir/lib/elixir/ebin/Elixir.Code.Fragment.beam
 lib/elixir/lib/elixir/ebin/Elixir.Code.Identifier.beam
 lib/elixir/lib/elixir/ebin/Elixir.Code.LoadError.beam
+lib/elixir/lib/elixir/ebin/Elixir.Code.Normalizer.beam
 lib/elixir/lib/elixir/ebin/Elixir.Code.Typespec.beam
 lib/elixir/lib/elixir/ebin/Elixir.Code.beam
 lib/elixir/lib/elixir/ebin/Elixir.Collectable.BitString.beam
@@ -109,6 +110,7 @@ lib/elixir/lib/elixir/ebin/Elixir.Inspect.Float.beam
 lib/elixir/lib/elixir/ebin/Elixir.Inspect.Function.beam
 lib/elixir/lib/elixir/ebin/Elixir.Inspect.HashDict.beam
 lib/elixir/lib/elixir/ebin/Elixir.Inspect.HashSet.beam
+lib/elixir/lib/elixir/ebin/Elixir.Inspect.Inspect.Error.beam
 lib/elixir/lib/elixir/ebin/Elixir.Inspect.Integer.beam
 lib/elixir/lib/elixir/ebin/Elixir.Inspect.List.beam
 lib/elixir/lib/elixir/ebin/Elixir.Inspect.Macro.Env.beam
@@ -124,6 +126,7 @@ lib/elixir/lib/elixir/ebin/Elixir.Inspect.Regex.beam
 lib/elixir/lib/elixir/ebin/Elixir.Inspect.Stream.beam
 lib/elixir/lib/elixir/ebin/Elixir.Inspect.Time.beam
 lib/elixir/lib/elixir/ebin/Elixir.Inspect.Tuple.beam
+lib/elixir/lib/elixir/ebin/Elixir.Inspect.URI.beam
 lib/elixir/lib/elixir/ebin/Elixir.Inspect.Version.Requirement.beam
 lib/elixir/lib/elixir/ebin/Elixir.Inspect.Version.beam
 lib/elixir/lib/elixir/ebin/Elixir.Inspect.beam
@@ -165,6 +168,7 @@ lib/elixir/lib/elixir/ebin/Elixir.NaiveDateTime.beam
 lib/elixir/lib/elixir/ebin/Elixir.Node.beam
 lib/elixir/lib/elixir/ebin/Elixir.OptionParser.ParseError.beam
 lib/elixir/lib/elixir/ebin/Elixir.OptionParser.beam
+lib/elixir/lib/elixir/ebin/Elixir.PartitionSupervisor.beam
 lib/elixir/lib/elixir/ebin/Elixir.Path.Wildcard.beam
 lib/elixir/lib/elixir/ebin/Elixir.Path.beam
 lib/elixir/lib/elixir/ebin/Elixir.Port.beam
@@ -184,7 +188,6 @@ lib/elixir/lib/elixir/ebin/Elixir.Set.beam
 lib/elixir/lib/elixir/ebin/Elixir.Stream.Reducers.beam
 lib/elixir/lib/elixir/ebin/Elixir.Stream.beam
 lib/elixir/lib/elixir/ebin/Elixir.String.Break.beam
-lib/elixir/lib/elixir/ebin/Elixir.String.Casing.beam
 lib/elixir/lib/elixir/ebin/Elixir.String.Chars.Atom.beam
 lib/elixir/lib/elixir/ebin/Elixir.String.Chars.BitString.beam
 lib/elixir/lib/elixir/ebin/Elixir.String.Chars.Date.beam
@@ -198,6 +201,8 @@ lib/elixir/lib/elixir/ebin/Elixir.String.Chars.URI.beam
 lib/elixir/lib/elixir/ebin/Elixir.String.Chars.Version.Requirement.beam
 lib/elixir/lib/elixir/ebin/Elixir.String.Chars.Version.beam
 lib/elixir/lib/elixir/ebin/Elixir.String.Chars.beam
+lib/elixir/lib/elixir/ebin/Elixir.String.Tokenizer.ScriptSet.beam
+lib/elixir/lib/elixir/ebin/Elixir.String.Tokenizer.Security.beam
 lib/elixir/lib/elixir/ebin/Elixir.String.Tokenizer.beam
 lib/elixir/lib/elixir/ebin/Elixir.String.Unicode.beam
 lib/elixir/lib/elixir/ebin/Elixir.String.beam
@@ -206,6 +211,7 @@ lib/elixir/lib/elixir/ebin/Elixir.Supervisor.Default.beam
 lib/elixir/lib/elixir/ebin/Elixir.Supervisor.Spec.beam
 lib/elixir/lib/elixir/ebin/Elixir.Supervisor.beam
 lib/elixir/lib/elixir/ebin/Elixir.SyntaxError.beam
+lib/elixir/lib/elixir/ebin/Elixir.System.EnvError.beam
 lib/elixir/lib/elixir/ebin/Elixir.System.SignalHandler.beam
 lib/elixir/lib/elixir/ebin/Elixir.System.beam
 lib/elixir/lib/elixir/ebin/Elixir.SystemLimitError.beam
@@ -216,6 +222,7 @@ lib/elixir/lib/elixir/ebin/Elixir.Time.beam
 lib/elixir/lib/elixir/ebin/Elixir.TokenMissingError.beam
 lib/elixir/lib/elixir/ebin/Elixir.TryClauseError.beam
 lib/elixir/lib/elixir/ebin/Elixir.Tuple.beam
+lib/elixir/lib/elixir/ebin/Elixir.URI.Error.beam
 lib/elixir/lib/elixir/ebin/Elixir.URI.beam
 lib/elixir/lib/elixir/ebin/Elixir.UndefinedFunctionError.beam
 lib/elixir/lib/elixir/ebin/Elixir.UnicodeConversionError.beam
@@ -403,6 +410,7 @@ lib/elixir/lib/mix/ebin/Elixir.Mix.Tasks.Escript.Build.beam
 lib/elixir/lib/mix/ebin/Elixir.Mix.Tasks.Escript.Install.beam
 lib/elixir/lib/mix/ebin/Elixir.Mix.Tasks.Escript.Uninstall.beam
 lib/elixir/lib/mix/ebin/Elixir.Mix.Tasks.Escript.beam
+lib/elixir/lib/mix/ebin/Elixir.Mix.Tasks.Eval.beam
 lib/elixir/lib/mix/ebin/Elixir.Mix.Tasks.Format.beam
 lib/elixir/lib/mix/ebin/Elixir.Mix.Tasks.Help.beam
 lib/elixir/lib/mix/ebin/Elixir.Mix.Tasks.Iex.beam

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2021/09/19 07:02:00 nia Exp $
+# $NetBSD: Makefile,v 1.28 2022/10/15 18:13:42 triaxx Exp $
 
-DISTNAME=	elixir-1.12.3
+DISTNAME=	elixir-1.14.0
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=elixir-lang/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
