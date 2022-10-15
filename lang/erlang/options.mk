@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.13 2021/02/20 01:02:29 gutteridge Exp $
+# $NetBSD: options.mk,v 1.14 2022/10/15 18:04:10 triaxx Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.erlang
 PKG_SUPPORTED_OPTIONS=		java erlang-hipe
@@ -24,7 +24,7 @@ PKG_SUPPORTED_OPTIONS+=	dtrace
 .include "../../mk/bsd.options.mk"
 
 PLIST_SRC=	${PLIST_SRC_DFLT}
-PLIST_VARS+=	odbc dtrace
+PLIST_VARS+=	odbc
 
 .if !empty(PKG_OPTIONS:Mjava)
 USE_JAVA=		yes
@@ -69,7 +69,6 @@ CONFIGURE_ARGS+=	--with-dynamic-trace=dtrace
 .  elif ${OPSYS} == "Linux"
 CONFIGURE_ARGS+=	--with-dynamic-trace=systemtap
 .  endif
-PLIST.dtrace=		yes
 .else
 CONFIGURE_ARGS+=	--without-dynamic-trace
 .endif
