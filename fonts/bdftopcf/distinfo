@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:27:03 nia Exp $
+$NetBSD: distinfo,v 1.11 2022/10/15 23:14:49 wiz Exp $
 
-BLAKE2s (bdftopcf-1.1.tar.bz2) = cc944e95eee03815dcb5ea7ec4130a446bb8c67d617231f48a77b4c8669167c5
-SHA512 (bdftopcf-1.1.tar.bz2) = 7b790e8d512ca2812ac889c156ef91c48798b4744a6857e5b17e0128764b5afa8c5426fe5de05a9819d64745116718db4221b3e657e3c2633465e87179c44bec
-Size (bdftopcf-1.1.tar.bz2) = 150815 bytes
+BLAKE2s (bdftopcf-1.1.1.tar.xz) = 721a8b4568c440bf38437b4f9fbf4d768b8ef8568c475cae43d5950ba238f651
+SHA512 (bdftopcf-1.1.1.tar.xz) = 257dc9ae29f2cf1496aad91ccba534348d87f881d75431aa6611a8154cb817d17588c464ab6c6c6bc51e6060baa8dcfcb9fd8c037cdaea8d18287651fa6b7ea9
+Size (bdftopcf-1.1.1.tar.xz) = 142716 bytes
