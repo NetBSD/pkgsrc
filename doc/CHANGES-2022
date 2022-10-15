@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5056 2022/10/15 20:30:35 he Exp $
+$NetBSD: CHANGES-2022,v 1.5057 2022/10/15 20:35:12 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7680,3 +7680,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/yaws to 2.1.1 [triaxx 2022-10-15]
 	Updated mail/rspamd to 3.3 [triaxx 2022-10-15]
 	Updated security/py-denyhosts to 3.0nb2 [he 2022-10-15]
+	Updated mail/postfix to 3.7.3 [triaxx 2022-10-15]
