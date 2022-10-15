@@ -1,8 +1,7 @@
-# $NetBSD: cargo-depends.mk,v 1.7 2022/09/03 20:22:10 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.8 2022/10/15 07:08:23 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-0.7.18
 CARGO_CRATE_DEPENDS+=	ansi_term-0.12.1
-CARGO_CRATE_DEPENDS+=	archery-0.4.0
 CARGO_CRATE_DEPENDS+=	atty-0.2.14
 CARGO_CRATE_DEPENDS+=	autocfg-1.1.0
 CARGO_CRATE_DEPENDS+=	bitflags-1.3.2
@@ -58,12 +57,10 @@ CARGO_CRATE_DEPENDS+=	rayon-1.5.3
 CARGO_CRATE_DEPENDS+=	rayon-core-1.9.3
 CARGO_CRATE_DEPENDS+=	regex-1.5.6
 CARGO_CRATE_DEPENDS+=	regex-syntax-0.6.26
-CARGO_CRATE_DEPENDS+=	rpds-0.10.0
 CARGO_CRATE_DEPENDS+=	rustc-hash-1.1.0
 CARGO_CRATE_DEPENDS+=	rustix-0.35.9
 CARGO_CRATE_DEPENDS+=	same-file-1.0.6
 CARGO_CRATE_DEPENDS+=	scopeguard-1.1.0
-CARGO_CRATE_DEPENDS+=	static_assertions-1.1.0
 CARGO_CRATE_DEPENDS+=	strsim-0.10.0
 CARGO_CRATE_DEPENDS+=	syn-1.0.95
 CARGO_CRATE_DEPENDS+=	term_size-0.3.2
@@ -71,7 +68,7 @@ CARGO_CRATE_DEPENDS+=	termcolor-1.1.3
 CARGO_CRATE_DEPENDS+=	terminal_size-0.1.17
 CARGO_CRATE_DEPENDS+=	terminal_size-0.2.1
 CARGO_CRATE_DEPENDS+=	textwrap-0.15.0
-CARGO_CRATE_DEPENDS+=	tree-sitter-0.20.6
+CARGO_CRATE_DEPENDS+=	tree-sitter-0.20.9
 CARGO_CRATE_DEPENDS+=	tree_magic_mini-3.0.3
 CARGO_CRATE_DEPENDS+=	typed-arena-2.0.1
 CARGO_CRATE_DEPENDS+=	unicode-ident-1.0.0
