@@ -1,13 +1,21 @@
-@comment $NetBSD: PLIST,v 1.3 2021/05/20 19:57:45 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/10/15 17:55:28 triaxx Exp $
+lib/erlang/lib/luerl-${PKGVERSION}/ebin/.gitignore
+lib/erlang/lib/luerl-${PKGVERSION}/ebin/Elixir.Luerl.New.beam
+lib/erlang/lib/luerl-${PKGVERSION}/ebin/Elixir.Luerl.beam
+lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl.app
 lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl.beam
+lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_anno.beam
 lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_app.beam
 lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_comp.beam
 lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_comp_cg.beam
 lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_comp_env.beam
+lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_comp_lint.beam
 lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_comp_locf.beam
+lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_comp_normalise.beam
 lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_comp_peep.beam
 lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_comp_vars.beam
 lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_emul.beam
+lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_heap.beam
 lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_lib.beam
 lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_lib_basic.beam
 lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_lib_bit32.beam
@@ -19,9 +27,14 @@ lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_lib_package.beam
 lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_lib_string.beam
 lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_lib_string_format.beam
 lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_lib_table.beam
+lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_lib_utf8.beam
+lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_new.beam
+lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_old.beam
 lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_parse.beam
 lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_sandbox.beam
 lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_scan.beam
 lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_sup.beam
+lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_util.beam
 lib/erlang/lib/luerl-${PKGVERSION}/ebin/ttdict.beam
 lib/erlang/lib/luerl-${PKGVERSION}/ebin/ttsets.beam
+lib/erlang/lib/luerl-${PKGVERSION}/include/luerl.hrl
