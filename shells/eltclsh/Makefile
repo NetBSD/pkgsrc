@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2022/10/06 22:39:51 rin Exp $
+# $NetBSD: Makefile,v 1.16 2022/10/15 02:45:01 rin Exp $
 
 DISTNAME=	eltclsh-1.9
 PKGREVISION=	7
@@ -15,8 +15,6 @@ CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl}/lib
 USE_LANGUAGES=		c
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
-
-MAKE_JOB_SAFE=		no
 
 .include "options.mk"
 
