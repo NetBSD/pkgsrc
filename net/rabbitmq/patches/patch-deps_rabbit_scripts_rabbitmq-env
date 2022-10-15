@@ -1,10 +1,10 @@
-$NetBSD: patch-deps_rabbit_scripts_rabbitmq-env,v 1.2 2019/07/23 16:12:39 jperkin Exp $
+$NetBSD: patch-deps_rabbit_scripts_rabbitmq-env,v 1.3 2022/10/15 18:26:27 triaxx Exp $
 
 Remove cumbersome symlink handling, we know where stuff is.
 
 --- deps/rabbit/scripts/rabbitmq-env.orig	2019-07-23 15:31:05.072674789 +0000
 +++ deps/rabbit/scripts/rabbitmq-env
-@@ -20,29 +20,7 @@ if [ "$RABBITMQ_ENV_LOADED" = 1 ]; then
+@@ -11,29 +11,7 @@ if [ "$RABBITMQ_ENV_LOADED" = 1 ]; then
  fi
  
  if [ -z "$RABBITMQ_SCRIPTS_DIR" ]; then
