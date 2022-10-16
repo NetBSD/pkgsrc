@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2022/10/14 14:03:01 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2022/10/16 06:32:00 wiz Exp $
 
 DISTNAME=	setuptools_scm-7.0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -25,7 +25,8 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 .include "../../lang/python/pyversion.mk"
 
 .if ${_PYTHON_VERSION} == 37
-DEPENDS+=	${PYPKGPREFIX}-importlib-metadata-[0-9]*:../../devel/py-importlib-metadata
+# required per setup.cfg, but this introduces a cyclic dependency
+#DEPENDS+=	${PYPKGPREFIX}-importlib-metadata-[0-9]*:../../devel/py-importlib-metadata
 .endif
 
 USE_LANGUAGES=	# none
