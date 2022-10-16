@@ -1,4 +1,4 @@
-$NetBSD: patch-instsetoo__native_inc__openoffice_unix_find-requires-x11.sh,v 1.4 2022/10/16 11:57:44 tnn Exp $
+$NetBSD: patch-instsetoo__native_inc__openoffice_unix_find-requires-x11.sh,v 1.5 2022/10/16 12:01:57 tnn Exp $
 
 shell portability
 
@@ -16,7 +16,7 @@ shell portability
  else
    echo "libfreetype.so.6${mark64}"
 -  if [[ "${XINERAMA_LINK}" == "dynamic" ]]; then
-+  if [[ "${XINERAMA_LINK}" = "dynamic" ]]; then
++  if [ "${XINERAMA_LINK}" = "dynamic" ]; then
      echo "libXinerama.so.1${mark64}"
    fi
  fi
