@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5068 2022/10/16 20:36:04 triaxx Exp $
+$NetBSD: CHANGES-2022,v 1.5069 2022/10/16 21:05:25 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7692,3 +7692,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated audio/ncspot to 0.11.2 [pin 2022-10-16]
 	Updated mail/fetchmail to 6.4.34 [triaxx 2022-10-16]
 	Updated mail/fetchmailconf to 6.4.34 [triaxx 2022-10-16]
+	Updated lang/erlang to 25.1.1 [triaxx 2022-10-16]
