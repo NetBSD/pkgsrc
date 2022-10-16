@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5062 2022/10/15 23:14:57 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.5063 2022/10/16 04:17:43 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7686,3 +7686,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/xgc to 1.0.6 [wiz 2022-10-15]
 	Updated x11/xkbprint to 1.0.6 [wiz 2022-10-15]
 	Updated fonts/bdftopcf to 1.1.1 [wiz 2022-10-15]
+	Updated www/ruby-jekyll to 4.2.2nb1 [taca 2022-10-16]
