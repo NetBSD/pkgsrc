@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5064 2022/10/16 05:06:25 triaxx Exp $
+$NetBSD: CHANGES-2022,v 1.5065 2022/10/16 05:16:48 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7688,3 +7688,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated fonts/bdftopcf to 1.1.1 [wiz 2022-10-15]
 	Updated www/ruby-jekyll to 4.2.2nb1 [taca 2022-10-16]
 	Updated net/syncthing to 1.22.0 [triaxx 2022-10-16]
+	Updated www/grafana to 9.2.0 [triaxx 2022-10-16]
