@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.42 2022/09/01 14:53:14 taca Exp $
+# $NetBSD: Makefile,v 1.43 2022/10/16 04:17:23 taca Exp $
 
 DISTNAME=	jekyll-4.2.2
+PKGREVISION=	1
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -29,6 +30,12 @@ DEPENDS+=	${RUBY_PKGPREFIX}-jekyll-feed>=0.12<1:../../www/ruby-jekyll-feed
 USE_LANGUAGES=	# empty
 
 RUBYGEM_OPTIONS+=	--format-executable
+
+.include "../../lang/ruby/rubyversion.mk"
+
+.if ${RUBY_VER} >= 30
+DEPENDS+=	${RUBY_PKGPREFIX}-webrick>=1.6.0:../../www/ruby-webrick
+.endif
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
