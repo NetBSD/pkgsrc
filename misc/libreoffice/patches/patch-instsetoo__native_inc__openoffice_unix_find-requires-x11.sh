@@ -1,10 +1,10 @@
-$NetBSD: patch-instsetoo__native_inc__openoffice_unix_find-requires-x11.sh,v 1.3 2022/07/17 10:58:12 tnn Exp $
+$NetBSD: patch-instsetoo__native_inc__openoffice_unix_find-requires-x11.sh,v 1.4 2022/10/16 11:57:44 tnn Exp $
 
 shell portability
 
---- instsetoo_native/inc_openoffice/unix/find-requires-x11.sh.orig	2022-04-27 11:23:38.000000000 +0000
+--- instsetoo_native/inc_openoffice/unix/find-requires-x11.sh.orig	2022-09-09 18:45:51.000000000 +0000
 +++ instsetoo_native/inc_openoffice/unix/find-requires-x11.sh
-@@ -18,8 +18,8 @@
+@@ -18,12 +18,12 @@
  #
  
  cat > /dev/null
@@ -15,3 +15,8 @@ shell portability
    echo "libfreetype.a(libfreetype.so.6${mark64})"
  else
    echo "libfreetype.so.6${mark64}"
+-  if [[ "${XINERAMA_LINK}" == "dynamic" ]]; then
++  if [[ "${XINERAMA_LINK}" = "dynamic" ]]; then
+     echo "libXinerama.so.1${mark64}"
+   fi
+ fi
