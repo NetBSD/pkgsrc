@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/10/16 10:41:09 tonio Exp $
+# $NetBSD: Makefile,v 1.5 2022/10/16 10:51:45 tonio Exp $
 
 DISTNAME=	why3-1.5.1
 PKGREVISION=	1
@@ -21,5 +21,6 @@ INSTALL_TARGET=		install install-lib
 DEPENDS+=		coq>=8.6:../../lang/coq
 
 .include "../../lang/ocaml/buildlink3.mk"
+.include "../../devel/ocamlgraph/buildlink3.mk"
 .include "../../math/ocaml-num/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
