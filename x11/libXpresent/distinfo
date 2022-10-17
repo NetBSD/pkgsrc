@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:34:07 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/10/17 22:31:00 wiz Exp $
 
-BLAKE2s (libXpresent-1.0.0.tar.bz2) = d2021b46aa56b13f2792ba8763af1c061d9e49ab7307d3ced8d5013b7c0108eb
-SHA512 (libXpresent-1.0.0.tar.bz2) = e88b4ec4fcbc0417a0cbecc0ecd73f8085c496dc6d1a4902b6550750a69a1cb8bb76c436c7941ee3bf3c61ffc85bbd8f8327fca30f14815dbef1cd53bb8db16b
-Size (libXpresent-1.0.0.tar.bz2) = 263461 bytes
+BLAKE2s (libXpresent-1.0.1.tar.xz) = b71af9f797f303ddab4307bb63e2a4bda43511bf5e6fb683019677241b35722f
+SHA512 (libXpresent-1.0.1.tar.xz) = a4551f49a68f4487eb70dc5b50b7f745fbc8b6842cfa60422afe3834af41c504a37bcfddb4e7e9ee084b250df256034290776c8eb7d8838e392eb626fff55d25
+Size (libXpresent-1.0.1.tar.xz) = 257136 bytes
