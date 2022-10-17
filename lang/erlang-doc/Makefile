@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2022/10/15 18:05:19 triaxx Exp $
+# $NetBSD: Makefile,v 1.27 2022/10/17 00:20:15 gutteridge Exp $
 
 DISTNAME=		otp_doc_html_${DIST_VERSION_MAJOR}.${DIST_VERSION_MINOR}
 PKGNAME=		${DISTNAME:S/otp_doc_html_/erlang-doc-/}
+PKGREVISION=		1
 CATEGORIES=		lang
 MASTER_SITES=		https://www.erlang.org/download/
 
