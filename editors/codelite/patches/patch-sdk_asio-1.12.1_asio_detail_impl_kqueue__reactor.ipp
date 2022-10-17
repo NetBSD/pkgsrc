@@ -1,4 +1,6 @@
-$NetBSD: patch-sdk_asio-1.12.1_asio_detail_impl_kqueue__reactor.ipp,v 1.1 2020/03/26 21:53:07 joerg Exp $
+$NetBSD: patch-sdk_asio-1.12.1_asio_detail_impl_kqueue__reactor.ipp,v 1.2 2022/10/17 16:50:03 andvar Exp $
+
+Deal with kqueue changes in NetBSD.
 
 --- sdk/asio-1.12.1/asio/detail/impl/kqueue_reactor.ipp.orig	2020-03-26 12:10:17.919075389 +0000
 +++ sdk/asio-1.12.1/asio/detail/impl/kqueue_reactor.ipp
