@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5079 2022/10/17 16:58:18 andvar Exp $
+$NetBSD: CHANGES-2022,v 1.5080 2022/10/17 21:41:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7706,3 +7706,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added cross/ppc-morphos-gcc-11 version 11.2.0nb1 [js 2022-10-17]
 	Updated textproc/split-thai to 2.21 [scole 2022-10-17]
 	Updated editors/codelite to 16.0 [andvar 2022-10-17]
+	Updated x11/libXmu to 1.1.4 [wiz 2022-10-17]
