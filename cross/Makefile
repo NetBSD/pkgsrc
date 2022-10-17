@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2022/07/18 03:43:05 thorpej Exp $
+# $NetBSD: Makefile,v 1.104 2022/10/17 13:25:31 js Exp $
 #
 
 COMMENT=	Cross-platform development utilities
@@ -70,8 +70,9 @@ SUBDIR+=	pdp11-aout-gcc
 SUBDIR+=	powerpc-none-elf-binutils
 SUBDIR+=	powerpc-none-elf-gcc
 SUBDIR+=	ppc-morphos-binutils
-SUBDIR+=	ppc-morphos-gcc-10
 SUBDIR+=	ppc-morphos-gcc-9
+SUBDIR+=	ppc-morphos-gcc-10
+SUBDIR+=	ppc-morphos-gcc-11
 SUBDIR+=	ppc-morphos-sdk
 SUBDIR+=	stlink
 SUBDIR+=	uisp

@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.1 2022/10/17 13:25:31 js Exp $
+
+BLAKE2s (sdk-source-20220302.tar.xz) = 7c55130c19db6253bc32882f5fa37fc8b2ac57a821e22e89d0cb2fd03a961a4b
+SHA512 (sdk-source-20220302.tar.xz) = 4f476eae9d70fbe6c184dbf6aa2613873830a1fe02fc2bf60f5becea5209429600d14f09ac3442ba3f6cfcd1de348383edb947692232161f5a46af3dd3173084
+Size (sdk-source-20220302.tar.xz) = 553259612 bytes
+SHA1 (patch-config_override.m4) = 1ee0186b006a987dc57151a9d112654eabd24db9
+SHA1 (patch-gcc_config_host-darwin.c) = 62d75a4ce61a0ae42a756c9fd1476a329bb44600
+SHA1 (patch-gcc_config_rs6000_morphos.h) = c788e480f3f510b61292f5b1ec5b84646b33ab93
+SHA1 (patch-libcc1_configure.ac) = ca40be7af4a4ffc3a4fba1a0dbda76fcde1fa2d9
+SHA1 (patch-libstdc++-v3_configure.ac) = d436423f31b5b9b977bfa27078d160ced4f3ed94
+SHA1 (patch-libstdc++-v3_crossconfig.m4) = 0d0d20f9a1444bd77520decd275ac22d2a6e4890
+SHA1 (patch-libstdc++-v3_libsupc++_unwind-cxx.h) = 0234e780171554bf60858b884ab1181cad36f8b2
