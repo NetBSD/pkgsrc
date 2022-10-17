@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5078 2022/10/17 16:11:32 scole Exp $
+$NetBSD: CHANGES-2022,v 1.5079 2022/10/17 16:58:18 andvar Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7705,3 +7705,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/py-pygraphviz to 1.10 [adam 2022-10-17]
 	Added cross/ppc-morphos-gcc-11 version 11.2.0nb1 [js 2022-10-17]
 	Updated textproc/split-thai to 2.21 [scole 2022-10-17]
+	Updated editors/codelite to 16.0 [andvar 2022-10-17]
