@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2022/04/10 08:53:16 nia Exp $
+# $NetBSD: Makefile,v 1.6 2022/10/17 22:31:00 wiz Exp $
 
-DISTNAME=		libXpresent-1.0.0
-PKGREVISION=		1
+DISTNAME=		libXpresent-1.0.1
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
-EXTRACT_SUFX=		.tar.bz2
+EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/
