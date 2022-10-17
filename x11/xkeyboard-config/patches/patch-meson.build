@@ -1,0 +1,21 @@
+$NetBSD: patch-meson.build,v 1.1 2022/10/17 14:54:00 ryoon Exp $
+
+* Do not find xsltproc from textproc/libxslt.
+
+--- meson.build.orig	2022-10-04 16:32:15.000000000 +0000
++++ meson.build
+@@ -36,6 +36,7 @@ endforeach
+ subdir('rules')
+ 
+ # man page
++if false
+ xsltproc = find_program('xsltproc', required: false)
+ if xsltproc.found()
+   man_substs = configuration_data()
+@@ -57,5 +58,6 @@ if xsltproc.found()
+                           install_dir: dir_man7)
+ 
+ endif
++endif
+ 
+ subdir('po')
