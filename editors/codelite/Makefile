@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2022/08/11 05:08:15 gutteridge Exp $
+# $NetBSD: Makefile,v 1.46 2022/10/17 16:50:03 andvar Exp $
 
-DISTNAME=	codelite-15.0
-PKGREVISION=	7
+DISTNAME=	codelite-16.0
+GITHUB_TAG=	16.0.0-1
 CATEGORIES=	editors x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=eranif/}
 
@@ -37,17 +37,18 @@ SUBST_SED.ena-netbsd+=		-e 's,IS_NETBSD 0,IS_NETBSD 1,g'
 SUBST_CLASSES+=			fix-bash
 SUBST_STAGE.fix-bash=		pre-configure
 SUBST_MESSAGE.fix-bash=		Fix bash path
-SUBST_FILES.fix-bash+=		codelite_terminal/wxTerminalCtrl.cpp
+SUBST_FILES.fix-bash+=		CodeLite/TerminalEmulator.cpp
 SUBST_FILES.fix-bash+=		CodeLite/clConsoleBash.cpp
 SUBST_FILES.fix-bash+=		CodeLite/clConsoleGnomeTerminal.cpp
 SUBST_FILES.fix-bash+=		CodeLite/clConsoleRXVTerminal.cpp
-SUBST_FILES.fix-bash+=		CodeLite/TerminalEmulator.cpp
 SUBST_FILES.fix-bash+=		CodeLite/fileutils.cpp
-SUBST_FILES.fix-bash+=		Docker/clDockerDriver.cpp
-SUBST_FILES.fix-bash+=		Plugin/clRemoteBuilder.cpp
 SUBST_FILES.fix-bash+=		Plugin/custombuildrequest.cpp
 SUBST_FILES.fix-bash+=		Plugin/pipedprocess.cpp
 SUBST_FILES.fix-bash+=		Plugin/wxterminal.cpp
+SUBST_FILES.fix-bash+=		Remoty/RemotyWorkspace.cpp
+SUBST_FILES.fix-bash+=		cmake/Modules/UtilsHelper.cmake
+SUBST_FILES.fix-bash+=		codelite_terminal/wxTerminalCtrl.cpp
+SUBST_FILES.fix-bash+=		ctagsd/lib/Settings.cpp
 SUBST_SED.fix-bash+=		-e 's,/bin/bash,${BASH},g'
 
 SUBST_CLASSES+=			fix-man-path
@@ -56,8 +57,10 @@ SUBST_MESSAGE.fix-man-path=	Fix man path
 SUBST_FILES.fix-man-path=	LiteEditor/CMakeLists.txt
 SUBST_SED.fix-man-path+=	-e 's,${CL_PREFIX}/share/man,${CL_PREFIX}/${PKGMANDIR},g'
 
+REPLACE_BASH+=		docs/docs/deploy.sh
 REPLACE_BASH+=		make-weekly
 REPLACE_NODEJS+=	LanguageServer/codelite-lsp/codelite-lsp-helper
+REPLACE_PYTHON+=	Runtime/codelite-remote
 REPLACE_PYTHON+=	codelite_open_helper.py
 
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/codelite
@@ -74,5 +77,5 @@ BUILDLINK_TRANSFORM+=	opt:-std=c++11:-std=gnu++11 # alloca
 .include "../../textproc/hunspell/buildlink3.mk"
 .include "../../textproc//uchardet/buildlink3.mk"
 .include "../../security/libssh/buildlink3.mk"
-.include "../../x11/wxGTK30/buildlink3.mk"
+.include "../../x11/wxGTK31/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,0 +1,16 @@
+$NetBSD: patch-ctagsd_CMakeLists.txt,v 1.1 2022/10/17 16:50:03 andvar Exp $
+
+Portability patch, not all systems have libdl.
+
+--- ctagsd/CMakeLists.txt.orig
++++ ctagsd/CMakeLists.txt	2022-10-15 19:55:44.830876033 +0300
+@@ -42,7 +42,8 @@ include_directories("${CL_SRC_ROOT}/Plug
+ 
+ set(UTIL_LIB "")
+ if(UNIX)
+-    set(UTIL_LIB "-lutil -ldl")
++    set(UTIL_LIB "-lutil")
++    list(APPEND UTIL_LIB ${CMAKE_DL_LIBS})
+ endif(UNIX)
+ 
+ FILE(GLOB LIBSRC "lib/*.cpp")
