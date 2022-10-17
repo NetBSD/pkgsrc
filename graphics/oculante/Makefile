@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2022/10/15 07:09:41 pin Exp $
+# $NetBSD: Makefile,v 1.16 2022/10/17 07:59:35 pin Exp $
 
-DISTNAME=	oculante-0.6.14
+DISTNAME=	oculante-0.6.16
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=woelper/}
 
@@ -22,6 +22,8 @@ MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libX11}/lib
 RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.libX11}/lib
+
+CARGO_NO_DEFAULT_FEATURES=	YES
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/oculante \
