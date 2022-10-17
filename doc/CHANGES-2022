@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5072 2022/10/17 07:45:39 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.5073 2022/10/17 07:59:58 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7696,3 +7696,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/deforaos-asm to 0.2.7 [khorben 2022-10-17]
 	Updated audio/musicpd to 0.23.10 [triaxx 2022-10-17]
 	Updated x11/xkeyboard-config to 2.37 [wiz 2022-10-17]
+	Updated graphics/oculante to 0.6.16 [pin 2022-10-17]
