@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5076 2022/10/17 12:14:07 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5077 2022/10/17 13:25:53 js Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7703,3 +7703,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/nodejs to 18.11.0 [adam 2022-10-17]
 	Updated devel/catch2 to 2.13.10 [adam 2022-10-17]
 	Updated graphics/py-pygraphviz to 1.10 [adam 2022-10-17]
+	Added cross/ppc-morphos-gcc-11 version 11.2.0nb1 [js 2022-10-17]
