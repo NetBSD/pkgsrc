@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2022/02/10 10:53:43 adam Exp $
+$NetBSD: distinfo,v 1.11 2022/10/17 12:13:38 adam Exp $
 
-BLAKE2s (pygraphviz-1.9.zip) = 5377741433663607470d5ca082c546f896389f4d4a1b797f53a89d8f7fc1e45b
-SHA512 (pygraphviz-1.9.zip) = 0a963b2cfe526c5444379b037797504380898c300256ab3b4800687f46b6230d8bc0adb5f499004a8009544c6cc804221689921c08a4f4b71b86ae01dc39cb7e
-Size (pygraphviz-1.9.zip) = 119946 bytes
+BLAKE2s (pygraphviz-1.10.zip) = 42bc2f7517e61eed24ab8ae69968b8589afd6a21fe6bc79e4fdd5aef28c6afa9
+SHA512 (pygraphviz-1.10.zip) = 571c35f7a8013d5f128fcfbbd68372c8660560847afa0648737eae6d305a9283b69dce23a1b1aeb808bd4eac9c9cefa72b1d358fbc47b724a0b70997ea3f6d84
+Size (pygraphviz-1.10.zip) = 120582 bytes
