@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.141 2022/08/22 10:59:45 wiz Exp $
+$NetBSD: distinfo,v 1.142 2022/10/17 07:45:13 triaxx Exp $
 
-BLAKE2s (mpd-0.23.9.tar.xz) = 3e1cfa083da618d6bc5a8a67ab282e997dd8e81d9feb288e447c8e3085e9bda1
-SHA512 (mpd-0.23.9.tar.xz) = 67db093e35693f79267f955463ecaa284773b5e47a38f1548a0d16c9ba82aecc3434fd805e224b78782c5978c07e16d26f7632823e536f5304f557985f028d6e
-Size (mpd-0.23.9.tar.xz) = 774156 bytes
+BLAKE2s (mpd-0.23.10.tar.xz) = d5a0293945c3932381fad5418c1b554a0a82d1eed08e5c5b492c2995de79517a
+SHA512 (mpd-0.23.10.tar.xz) = 15e51a1fab2e187529141ebb25f0bb6cc9c2ad5127c1a9f4c40d1a944ed5bc4e7e76b26eb71f659ddd8a5ce448089e6d3dcf0c302ced8a4d08951ef1b1f09c49
+Size (mpd-0.23.10.tar.xz) = 774196 bytes
 SHA1 (patch-doc_mpd.conf.5.rst) = ee22092564075cdf7917e4e66687f6ab98b5817c
+SHA1 (patch-src_archive_plugins_meson.build) = 6405df1516b765051a9c09d644ebde882a2dca9f
 SHA1 (patch-src_decoder_plugins_meson.build) = 8033d6e19da05f472f14f3562a5dfc2f410da98b
 SHA1 (patch-src_net_IPv6Address.hxx) = f89b838ad5e946c5db8d95a6dd560e02bdccae29
 SHA1 (patch-src_util_WStringAPI.hxx) = 92f39096770943c26d8aaae8a7581d4daca2d233
