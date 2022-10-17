@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2021/07/15 10:56:21 wiz Exp $
+@comment $NetBSD: PLIST,v 1.22 2022/10/17 07:45:28 wiz Exp $
 share/X11/xkb/compat/README
 share/X11/xkb/compat/accessx
 share/X11/xkb/compat/basic
@@ -79,9 +79,6 @@ share/X11/xkb/rules/evdev
 share/X11/xkb/rules/evdev.extras.xml
 share/X11/xkb/rules/evdev.lst
 share/X11/xkb/rules/evdev.xml
-share/X11/xkb/rules/xfree86
-share/X11/xkb/rules/xfree86.lst
-share/X11/xkb/rules/xfree86.xml
 share/X11/xkb/rules/xfree98
 share/X11/xkb/rules/xkb.dtd
 share/X11/xkb/rules/xorg
@@ -100,6 +97,7 @@ share/X11/xkb/symbols/ba
 share/X11/xkb/symbols/bd
 share/X11/xkb/symbols/be
 share/X11/xkb/symbols/bg
+share/X11/xkb/symbols/bqn
 share/X11/xkb/symbols/br
 share/X11/xkb/symbols/brai
 share/X11/xkb/symbols/bt
@@ -154,7 +152,6 @@ share/X11/xkb/symbols/is
 share/X11/xkb/symbols/it
 share/X11/xkb/symbols/jolla_vndr/sbj
 share/X11/xkb/symbols/jp
-share/X11/xkb/symbols/jv
 share/X11/xkb/symbols/ke
 share/X11/xkb/symbols/keypad
 share/X11/xkb/symbols/kg
@@ -295,6 +292,7 @@ share/X11/xkb/types/nokia
 share/X11/xkb/types/numpad
 share/X11/xkb/types/pc
 share/locale/af/LC_MESSAGES/xkeyboard-config.mo
+share/locale/ar/LC_MESSAGES/xkeyboard-config.mo
 share/locale/az/LC_MESSAGES/xkeyboard-config.mo
 share/locale/bg/LC_MESSAGES/xkeyboard-config.mo
 share/locale/ca/LC_MESSAGES/xkeyboard-config.mo
@@ -310,6 +308,7 @@ share/locale/fi/LC_MESSAGES/xkeyboard-config.mo
 share/locale/fr/LC_MESSAGES/xkeyboard-config.mo
 share/locale/fur/LC_MESSAGES/xkeyboard-config.mo
 share/locale/gl/LC_MESSAGES/xkeyboard-config.mo
+share/locale/he/LC_MESSAGES/xkeyboard-config.mo
 share/locale/hr/LC_MESSAGES/xkeyboard-config.mo
 share/locale/hu/LC_MESSAGES/xkeyboard-config.mo
 share/locale/id/LC_MESSAGES/xkeyboard-config.mo
