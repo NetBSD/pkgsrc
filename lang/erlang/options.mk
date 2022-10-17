@@ -1,20 +1,11 @@
-# $NetBSD: options.mk,v 1.14 2022/10/15 18:04:10 triaxx Exp $
+# $NetBSD: options.mk,v 1.15 2022/10/17 01:47:17 gutteridge Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.erlang
-PKG_SUPPORTED_OPTIONS=		java erlang-hipe
+PKG_SUPPORTED_OPTIONS=		java
 PKG_OPTIONS_OPTIONAL_GROUPS=	odbc
 PKG_OPTIONS_GROUP.odbc=		iodbc unixodbc
 
 PKG_SUGGESTED_OPTIONS=	# empty
-###
-### Activate HiPE by default on some systems or if the user has
-### defined the erlang-hipe option in mk.conf
-###
-.if (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64") &&	\
-    (${OPSYS} == "FreeBSD" || ${OPSYS} == "Linux" ||			\
-     ${OPSYS} == "NetBSD"  || ${OPSYS} == "OpenBSD" || ${OPSYS} == "SunOS")
-PKG_SUGGESTED_OPTIONS+=	erlang-hipe
-.endif
 
 .if ${OPSYS} == "SunOS" || ${OPSYS} == "Darwin" || ${OPSYS} == "FreeBSD" || \
     ${OPSYS} == "Linux"
@@ -33,16 +24,6 @@ USE_JAVA2=		yes
 PLIST_SRC+=		PLIST.java
 .else
 CONFIGURE_ARGS+=	--without-javac
-.endif
-
-# Some hipe-related files are still installed even when --disable-hipe
-# is supplied, and these should remain in the general PLIST.
-.if !empty(PKG_OPTIONS:Merlang-hipe)
-CONFIGURE_ARGS+=	--enable-hipe
-PLIST_SRC+=		PLIST.hipe
-USE_TOOLS+=		gm4	# needs -P
-.else
-CONFIGURE_ARGS+=	--disable-hipe
 .endif
 
 ###
