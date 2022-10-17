@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.256 2022/09/30 16:08:52 micha Exp $
+# $NetBSD: Makefile,v 1.257 2022/10/17 09:12:53 adam Exp $
 
-DISTNAME=	graphviz-6.0.1
+DISTNAME=	graphviz-6.0.2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITLAB:=api/v4/projects/4207231/packages/generic/graphviz-releases/${PKGVERSION_NOREV}/}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	micha@NetBSD.org
 HOMEPAGE=	https://www.graphviz.org/
