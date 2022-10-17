@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5073 2022/10/17 07:59:58 pin Exp $
+$NetBSD: CHANGES-2022,v 1.5074 2022/10/17 09:13:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7697,3 +7697,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated audio/musicpd to 0.23.10 [triaxx 2022-10-17]
 	Updated x11/xkeyboard-config to 2.37 [wiz 2022-10-17]
 	Updated graphics/oculante to 0.6.16 [pin 2022-10-17]
+	Updated security/gnupg2 to 2.2.40 [adam 2022-10-17]
+	Updated graphics/graphviz to 6.0.2 [adam 2022-10-17]
