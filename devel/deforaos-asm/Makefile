@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2022/08/25 07:00:13 khorben Exp $
+# $NetBSD: Makefile,v 1.13 2022/10/17 00:19:00 khorben Exp $
 
-DISTNAME=	Asm-0.2.6
-PKGNAME=	deforaos-asm-0.2.6
-PKGREVISION=	1
+DISTNAME=	Asm-0.2.7
+PKGNAME=	deforaos-asm-0.2.7
 CATEGORIES=	devel
 MASTER_SITES=	https://ftp.defora.org/pub/DeforaOS/Apps/Devel/src/Asm/
 
