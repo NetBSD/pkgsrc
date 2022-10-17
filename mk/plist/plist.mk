@@ -1,4 +1,4 @@
-# $NetBSD: plist.mk,v 1.56 2021/11/30 09:39:50 jperkin Exp $
+# $NetBSD: plist.mk,v 1.57 2022/10/17 18:08:02 jperkin Exp $
 #
 # This Makefile fragment handles the creation of PLISTs for use by
 # pkg_create(8).
@@ -86,7 +86,9 @@ PLIST_SRC?=		${PLIST_SRC_DFLT}
 
 # This is the path to the generated PLIST file.
 PLIST=		${WRKDIR}/.PLIST
-_PLIST_NOKEYWORDS=${PLIST}_nokeywords
+
+# The nokeywords PLIST file strips out any pkg_create(1) "@" commands.
+_PLIST_NOKEYWORDS=	${PLIST}_nokeywords
 
 ######################################################################
 
@@ -266,18 +268,9 @@ ${PLIST}:
 	${RUN} ${PKGSRC_SETENV} ${_PLIST_AWK_ENV} ${AWK} ${_PLIST_AWK} < ${.TARGET}-2mac > ${.TARGET}-3mag
 	${RUN} ${PKGSRC_SETENV} ${_PLIST_AWK_ENV} ${AWK} ${_PLIST_SHLIB_AWK} < ${.TARGET}-3mag > ${.TARGET}
 
-# for list of keywords see pkg_create(1)
 ${_PLIST_NOKEYWORDS}: ${PLIST}
-	${RUN} ${AWK} < ${PLIST} > ${.TARGET} '	\
-		BEGIN {							\
-			FILTER="@(";					\
-			FILTER=FILTER"cd|cwd|src|exec|unexec|mode|option";\
-			FILTER=FILTER"|owner|group|comment|ignore";	\
-			FILTER=FILTER"|ignore_inst|name|dirrm|mtree";	\
-			FILTER=FILTER"|display|pkgdep|blddep|pkgcfl";	\
-			FILTER=FILTER")[[:space:]]";			\
-		};							\
-		$$0 ~ FILTER { next };					\
+	${RUN} ${AWK} < ${PLIST} > ${.TARGET} '				\
+		$$0 ~ /^@/ { next };					\
 		{ print }'
 
 .if defined(INFO_FILES)
