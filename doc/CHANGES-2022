@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5071 2022/10/17 07:45:30 triaxx Exp $
+$NetBSD: CHANGES-2022,v 1.5072 2022/10/17 07:45:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7695,3 +7695,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/erlang to 25.1.1 [triaxx 2022-10-16]
 	Updated devel/deforaos-asm to 0.2.7 [khorben 2022-10-17]
 	Updated audio/musicpd to 0.23.10 [triaxx 2022-10-17]
+	Updated x11/xkeyboard-config to 2.37 [wiz 2022-10-17]
