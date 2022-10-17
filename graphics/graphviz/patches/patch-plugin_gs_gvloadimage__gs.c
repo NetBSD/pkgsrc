@@ -1,10 +1,10 @@
-$NetBSD: patch-plugin_gs_gvloadimage__gs.c,v 1.3 2022/07/22 12:04:46 micha Exp $
+$NetBSD: patch-plugin_gs_gvloadimage__gs.c,v 1.4 2022/10/17 09:12:53 adam Exp $
 
 ghostscript-agpl enforces using gserrors.h which is not included
 by default in ghostscript-gpl, so conditionalise based upon which
 one is being used.
 
---- plugin/gs/gvloadimage_gs.c.orig	2021-10-16 16:39:12.000000000 +0000
+--- plugin/gs/gvloadimage_gs.c.orig	2022-10-11 18:31:29.000000000 +0000
 +++ plugin/gs/gvloadimage_gs.c
 @@ -77,6 +77,16 @@ static void gs_error(GVJ_t * job, const 
  
@@ -29,5 +29,5 @@ one is being used.
  	errsrc = "Ghostscript internal error";
 +#endif
  
-     job->common->errorfn("%s: %s() returned: %d \"%s\" (%s)\n",
- 		name, funstr, err, gs_error_names[-err - 1], errsrc);
+     job->common->errorfn("%s: %s() returned: %d (%s)\n",
+ 		name, funstr, err, errsrc);

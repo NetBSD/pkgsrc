@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.57 2022/07/27 12:29:08 micha Exp $
+@comment $NetBSD: PLIST,v 1.58 2022/10/17 09:12:53 adam Exp $
 bin/acyclic
 bin/bcomps
 bin/ccomps
@@ -168,12 +168,10 @@ share/doc/graphviz/COPYING
 share/doc/graphviz/Dot.ref
 share/doc/graphviz/FAQ.html
 share/doc/graphviz/NEWS
-share/doc/graphviz/addingLayout.txt
 share/doc/graphviz/build.html
 share/doc/graphviz/char.html
 share/doc/graphviz/cpl1.0.txt
 share/doc/graphviz/dotguide.pdf
-share/doc/graphviz/fontfaq.txt
 share/doc/graphviz/gdtclft.entities.example.png
 share/doc/graphviz/index.html
 share/doc/graphviz/info/arrows.html
