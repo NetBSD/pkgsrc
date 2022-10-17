@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5069 2022/10/16 21:05:25 triaxx Exp $
+$NetBSD: CHANGES-2022,v 1.5070 2022/10/17 00:19:18 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7693,3 +7693,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated mail/fetchmail to 6.4.34 [triaxx 2022-10-16]
 	Updated mail/fetchmailconf to 6.4.34 [triaxx 2022-10-16]
 	Updated lang/erlang to 25.1.1 [triaxx 2022-10-16]
+	Updated devel/deforaos-asm to 0.2.7 [khorben 2022-10-17]
