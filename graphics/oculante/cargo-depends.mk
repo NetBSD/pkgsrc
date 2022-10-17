@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.8 2022/10/11 10:54:04 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.9 2022/10/17 07:59:35 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	ab_glyph-0.2.17
 CARGO_CRATE_DEPENDS+=	ab_glyph_rasterizer-0.1.7
@@ -348,6 +348,8 @@ CARGO_CRATE_DEPENDS+=	tracing-0.1.37
 CARGO_CRATE_DEPENDS+=	tracing-core-0.1.30
 CARGO_CRATE_DEPENDS+=	try-lock-0.2.3
 CARGO_CRATE_DEPENDS+=	ttf-parser-0.15.2
+CARGO_CRATE_DEPENDS+=	turbojpeg-0.5.2
+CARGO_CRATE_DEPENDS+=	turbojpeg-sys-0.2.2
 CARGO_CRATE_DEPENDS+=	twox-hash-1.6.3
 CARGO_CRATE_DEPENDS+=	typenum-1.15.0
 CARGO_CRATE_DEPENDS+=	unicase-2.6.0

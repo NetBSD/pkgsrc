@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2022/10/15 07:09:41 pin Exp $
+$NetBSD: distinfo,v 1.14 2022/10/17 07:59:35 pin Exp $
 
 BLAKE2s (ab_glyph-0.2.17.crate) = 6a1753510519e8df90eab3d20c056d9ddbb511460970d5c837bdf6f9d8707734
 SHA512 (ab_glyph-0.2.17.crate) = 180b24fc99748db5fcb65cf7967032ad63fe8164909cf13390a658bf683e7e971f4a19fb8f2310238fa1d7e769e32e316671a99be46cf07a788c3bfaaf4df10f
@@ -693,9 +693,9 @@ Size (objc_exception-0.1.2.crate) = 2251 bytes
 BLAKE2s (objc_id-0.1.1.crate) = 1bc76100eb8a059b580ecd9b12111a7055936856bbb9059e7d8f28a3bfb362ef
 SHA512 (objc_id-0.1.1.crate) = ec36fae6f5cefda00f3e44618b3c9fe6ec8f528f70d1a95def6421704bfa128a6e5b4a32e9dd686bf6ff60c4f87fe8094aa5e1c8070bcde58b17fdc06f49f9f5
 Size (objc_id-0.1.1.crate) = 3258 bytes
-BLAKE2s (oculante-0.6.14.tar.gz) = 34e17a77b28c36562f65e0c80edc6e200b4ffae5ca9ec1a2a65a3b3ab7619140
-SHA512 (oculante-0.6.14.tar.gz) = 9c90385790cd5687f7047fd4ce4ae5f990334e13c1e4b94addad6cb8b54ec3ba4d639d05adbdac770994413ed7837638f9574a3d607a03b1785ad929de4c8fca
-Size (oculante-0.6.14.tar.gz) = 10384748 bytes
+BLAKE2s (oculante-0.6.16.tar.gz) = 633dd84f91ba2c75bd637e6d2f514ac0e19e1b27055b57f1aeef542da043f381
+SHA512 (oculante-0.6.16.tar.gz) = 1515c4f0812e97d2d2725614dd2df3507266afb06df88acb074a4ecf174439fa9776028c335e702eca0df0e1aba5c5f524a8b1d0909f863fe5c6ece8659847b2
+Size (oculante-0.6.16.tar.gz) = 10384954 bytes
 BLAKE2s (once_cell-1.15.0.crate) = bb7a35ae1252f0ceeb7f7c8ff715940c986430728d4891dcf369ef493c93bed6
 SHA512 (once_cell-1.15.0.crate) = 934a7c3631e9ca4fa78d9577b6672ca0b2f926a8d6c3be9542b906c5968033446f98f76ae6f368a1a5b92ab9064c31a57d74ab6d2097108029a7ea951541ff7e
 Size (once_cell-1.15.0.crate) = 31460 bytes
@@ -1047,6 +1047,12 @@ Size (try-lock-0.2.3.crate) = 4158 bytes
 BLAKE2s (ttf-parser-0.15.2.crate) = 381d7179b99e04f9c12194b2cf8c2bb40f6efe6a60c2b4262c3b5406c53cf9fc
 SHA512 (ttf-parser-0.15.2.crate) = a985eb92b8904d4a715654289d3905b178a93500689f8787cac1bfb6034c8e8afb97f3785dd3c38d11c8140a352c60350970a50114a35f5617f646231957462b
 Size (ttf-parser-0.15.2.crate) = 136251 bytes
+BLAKE2s (turbojpeg-0.5.2.crate) = 893c208256c4cc67677323133ec4293a1bd174eff22a4d7daf86ebd0b2986ac2
+SHA512 (turbojpeg-0.5.2.crate) = 7368619648f2b05057e418791a8ae1d46559694c12342132994abab1cdd15890db52e2b1a3e4c025e249925710ef91504a94035568ecd123b6bfaf6611bf4de4
+Size (turbojpeg-0.5.2.crate) = 54343 bytes
+BLAKE2s (turbojpeg-sys-0.2.2.crate) = ceed2d692fa44fa3f3eb0122934fa630ea6f5340f88e041e41055305b74072e3
+SHA512 (turbojpeg-sys-0.2.2.crate) = 44c60f1240e029f79dcdd2d0e99e15b0b014d9111d3ae254217da4255658f9901a055beddcf4f5ed29de0320bda36bc28bb3acf0bf79c2eb17188f85a3d55d3c
+Size (turbojpeg-sys-0.2.2.crate) = 932785 bytes
 BLAKE2s (twox-hash-1.6.3.crate) = 6888f8241e7cf60aa6f0fb0cc1b49f3012d580b57410bd90691fa307256921ce
 SHA512 (twox-hash-1.6.3.crate) = f7ce63e6e5ca79ce9330caf40b32578a5d2088c5d8ed371604268760d6e212d447d9e3a95378378a283024155bccdaea47597902c488a94c5d5f79770baec8fc
 Size (twox-hash-1.6.3.crate) = 21842 bytes
