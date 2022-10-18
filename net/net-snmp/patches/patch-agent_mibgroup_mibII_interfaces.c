@@ -1,4 +1,4 @@
-$NetBSD: patch-ap,v 1.3 2013/03/17 00:15:29 gdt Exp $
+$NetBSD: patch-agent_mibgroup_mibII_interfaces.c,v 1.1 2022/10/18 12:01:52 adam Exp $
 
 Some systems define ifnet.if_lastchange as struct timespec (with a
 tv_nsec field measured in nanoseconds), while other systems define it

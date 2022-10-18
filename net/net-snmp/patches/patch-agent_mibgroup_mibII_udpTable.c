@@ -1,5 +1,4 @@
-$NetBSD: patch-agent_mibgroup_mibII_udpTable.c,v 1.2 2020/06/12 02:22:08 sevan Exp $
-
+$NetBSD: patch-agent_mibgroup_mibII_udpTable.c,v 1.3 2022/10/18 12:01:52 adam Exp $
 
 --- agent/mibgroup/mibII/udpTable.c.orig	2020-06-12 01:53:58.092446674 +0100
 +++ agent/mibgroup/mibII/udpTable.c	2020-06-12 02:01:40.556941658 +0100
