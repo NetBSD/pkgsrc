@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.138 2022/06/28 11:35:04 wiz Exp $
+# $NetBSD: Makefile,v 1.139 2022/10/18 12:01:52 adam Exp $
 
-PKGREVISION= 4
 .include "Makefile.common"
 CATEGORIES=	net
 
@@ -68,6 +67,8 @@ CONFIGURE_ARGS+=	--with-persistent-directory=${NET_SNMP_PERSISTENTDIR}
 CONFIGURE_ARGS+=	--with-mibdirs=${NET_SNMP_MIBDIRS:Q}
 .endif
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "SunOS"
+CONFIGURE_ARGS+=	--with-mib-modules="smux host ucd-snmp/diskio mibII/kernel_netbsd"
+.elif ${OPSYS} == "SunOS"
 CONFIGURE_ARGS+=	--with-mib-modules="smux host ucd-snmp/diskio"
 .else
 CONFIGURE_ARGS+=	--with-mib-modules="smux host"
@@ -94,12 +95,6 @@ CONFIGURE_ARGS+=	--with-dummy-values
 #
 CONFIGURE_ARGS+=	--enable-ucd-snmp-compatibility
 
-CFLAGS.Darwin+=		-framework ApplicationServices
-CFLAGS.Darwin+=		-framework CoreFoundation
-CFLAGS.Darwin+=		-framework CoreServices
-CFLAGS.Darwin+=		-framework DiskArbitration
-CFLAGS.Darwin+=		-framework IOKit
-
 # Handle ${PREFIX}/share/snmp in the DEINSTALL script since it may contain
 # leftover config files or pidfiles after deinstallation.
 #
@@ -109,21 +104,12 @@ SMF_NAME=	snmp
 SMF_INSTANCES=	default snmptrapd
 
 USE_TOOLS+=		sh:run
-REPLACE_INTERPRETER+=	bash
-REPLACE.bash.old=	/bin/bash
-REPLACE.bash.new=	${SH}
-REPLACE_FILES.bash=	local/mib2c-update
 
 INSTALLATION_DIRS+=	share/examples/net-snmp
 
 post-extract:
 .if ${OPSYS} == "DragonFly"
-	cp ${FILESDIR}/cpu_dragonfly.c ${WRKSRC}/agent/mibgroup/hardware/cpu/cpu_nlist.c
-.elif ${OPSYS} == "Darwin"
-	${LN} -s ${WRKSRC}/include/net-snmp/system/darwin17.h ${WRKSRC}/include/net-snmp/system/darwin18.h
-	${LN} -s ${WRKSRC}/include/net-snmp/system/darwin17.h ${WRKSRC}/include/net-snmp/system/darwin19.h
-	${LN} -s ${WRKSRC}/include/net-snmp/system/darwin17.h ${WRKSRC}/include/net-snmp/system/darwin20.h
-	${LN} -s ${WRKSRC}/include/net-snmp/system/darwin17.h ${WRKSRC}/include/net-snmp/system/darwin21.h
+	${CP} ${FILESDIR}/cpu_dragonfly.c ${WRKSRC}/agent/mibgroup/hardware/cpu/cpu_nlist.c
 .endif
 
 post-wrapper:

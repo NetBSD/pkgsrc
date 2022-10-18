@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.14 2016/06/06 14:11:35 he Exp $
+$NetBSD: patch-agent_mibgroup_host_hr__swrun.c,v 1.1 2022/10/18 12:01:52 adam Exp $
 
 --- agent/mibgroup/host/hr_swrun.c.orig	2014-12-08 20:23:22.000000000 +0000
 +++ agent/mibgroup/host/hr_swrun.c
