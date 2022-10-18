@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.2 2019/11/03 11:45:44 rillig Exp $
+# $NetBSD: builtin.mk,v 1.3 2022/10/18 12:01:52 adam Exp $
 
 BUILTIN_PKG:=	net-snmp
 
@@ -52,7 +52,7 @@ USE_BUILTIN.net-snmp=	yes
 .      for _dep_ in ${BUILDLINK_API_DEPENDS.net-snmp}
 .        if !empty(USE_BUILTIN.net-snmp:M[yY][eE][sS])
 USE_BUILTIN.net-snmp!=							\
-	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.net-snmp:Q}; then \
+	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.net-snmp}; then \
 		${ECHO} yes;						\
 	else								\
 		${ECHO} no;						\

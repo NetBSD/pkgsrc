@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2022/08/05 10:55:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.30 2022/10/18 12:01:52 adam Exp $
 bin/agentxtrap
 ${PLIST.perl}bin/checkbandwidth
 bin/encode_keychange
@@ -102,7 +102,6 @@ include/net-snmp/library/container_null.h
 include/net-snmp/library/data_list.h
 include/net-snmp/library/default_store.h
 include/net-snmp/library/dir_utils.h
-include/net-snmp/library/factory.h
 include/net-snmp/library/fd_event_manager.h
 include/net-snmp/library/file_utils.h
 include/net-snmp/library/getopt.h
@@ -123,6 +122,7 @@ include/net-snmp/library/snmp-tc.h
 include/net-snmp/library/snmp.h
 include/net-snmp/library/snmpAliasDomain.h
 include/net-snmp/library/snmpCallbackDomain.h
+include/net-snmp/library/snmpIPBaseDomain.h
 include/net-snmp/library/snmpIPv4BaseDomain.h
 ${PLIST.inet6}include/net-snmp/library/snmpIPv6BaseDomain.h
 include/net-snmp/library/snmpSocketBaseDomain.h
@@ -174,23 +174,14 @@ include/net-snmp/system/bsdi3.h
 include/net-snmp/system/bsdi4.h
 include/net-snmp/system/cygwin.h
 include/net-snmp/system/darwin.h
-include/net-snmp/system/darwin10.h
-include/net-snmp/system/darwin11.h
-include/net-snmp/system/darwin12.h
-include/net-snmp/system/darwin13.h
-include/net-snmp/system/darwin14.h
-include/net-snmp/system/darwin15.h
-include/net-snmp/system/darwin16.h
-include/net-snmp/system/darwin17.h
-include/net-snmp/system/darwin7.h
-include/net-snmp/system/darwin8.h
-include/net-snmp/system/darwin9.h
 include/net-snmp/system/dragonfly.h
 include/net-snmp/system/dynix.h
 include/net-snmp/system/freebsd.h
 include/net-snmp/system/freebsd10.h
 include/net-snmp/system/freebsd11.h
 include/net-snmp/system/freebsd12.h
+include/net-snmp/system/freebsd13.h
+include/net-snmp/system/freebsd14.h
 include/net-snmp/system/freebsd2.h
 include/net-snmp/system/freebsd3.h
 include/net-snmp/system/freebsd4.h
@@ -274,6 +265,8 @@ lib/libnetsnmphelpers.la
 lib/libnetsnmpmibs.la
 lib/libnetsnmptrapd.la
 lib/libsnmp.la
+lib/pkgconfig/netsnmp-agent.pc
+lib/pkgconfig/netsnmp.pc
 man/man1/agentxtrap.1
 man/man1/encode_keychange.1
 man/man1/fixproc.1
