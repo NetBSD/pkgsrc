@@ -1,7 +1,8 @@
-$NetBSD: patch-pixman_pixman-vmx.c,v 1.1 2016/04/21 21:39:36 he Exp $
+$NetBSD: patch-pixman_pixman-vmx.c,v 1.2 2022/10/18 12:53:10 wiz Exp $
 
 Add a fix so that this builds on NetBSD/powerpc.  Otherwise we get
 pixman-vmx.c:2936:5: error: subscripted value is neither array nor pointer
+https://gitlab.freedesktop.org/pixman/pixman/-/merge_requests/64/
 
 --- pixman/pixman-vmx.c.orig	2016-01-04 09:13:54.000000000 +0000
 +++ pixman/pixman-vmx.c
