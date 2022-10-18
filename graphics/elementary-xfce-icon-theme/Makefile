@@ -1,13 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2022/10/18 01:18:14 gutteridge Exp $
+# $NetBSD: Makefile,v 1.10 2022/10/18 07:29:58 wiz Exp $
 
-VERSION=	0.17
-DISTNAME=	v${VERSION}
-PKGNAME=	elementary-xfce-icon-theme-${VERSION}
+DISTNAME=	elementary-xfce-icon-theme-0.17
 PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=shimmerproject/}
 GITHUB_PROJECT=	elementary-xfce
-GITHUB_TAG=	v${VERSION}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	youri@NetBSD.org
 HOMEPAGE=	https://github.com/shimmerproject/elementary-xfce
@@ -17,8 +15,6 @@ LICENSE=	gnu-gpl-v2
 NO_BUILD=	YES
 USE_LANGUAGES=	# none, not even C
 USE_TOOLS+=	pax
-
-DIST_SUBDIR=	${PKGBASE}
 
 FILES_SUBST+=		GTK_UPDATE_ICON_CACHE="${PREFIX}/bin/gtk-update-icon-cache"
 FILES_SUBST+=		ICON_THEME_DIR="${PREFIX}/share/icons"
