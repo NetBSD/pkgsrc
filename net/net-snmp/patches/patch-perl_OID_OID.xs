@@ -1,4 +1,4 @@
-$NetBSD: patch-el,v 1.5 2016/06/06 14:11:35 he Exp $
+$NetBSD: patch-perl_OID_OID.xs,v 1.1 2022/10/18 12:01:52 adam Exp $
 
 Adopt FreeBSD's patch to make this build with perl 5.24, ref.
 https://svnweb.freebsd.org/ports/head/net-mgmt/net-snmp/files/patch-perl5.23?view=co

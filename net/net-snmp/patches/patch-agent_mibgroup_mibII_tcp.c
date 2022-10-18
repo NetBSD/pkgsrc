@@ -1,4 +1,4 @@
-$NetBSD: patch-dl,v 1.6 2013/03/17 00:15:29 gdt Exp $
+$NetBSD: patch-agent_mibgroup_mibII_tcp.c,v 1.1 2022/10/18 12:01:52 adam Exp $
 
 --- agent/mibgroup/mibII/tcp.c.orig	2012-10-09 22:28:58.000000000 +0000
 +++ agent/mibgroup/mibII/tcp.c

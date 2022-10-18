@@ -1,10 +1,10 @@
-$NetBSD: patch-agent_mibgroup_kernel__sunos5.c,v 1.1 2015/08/20 13:51:03 jperkin Exp $
+$NetBSD: patch-agent_mibgroup_kernel__sunos5.c,v 1.2 2022/10/18 12:01:52 adam Exp $
 
 Support Crossbow.
 
---- agent/mibgroup/kernel_sunos5.c.orig	2014-12-08 20:23:22.000000000 +0000
+--- agent/mibgroup/kernel_sunos5.c.orig	2022-07-13 21:14:14.000000000 +0000
 +++ agent/mibgroup/kernel_sunos5.c
-@@ -291,8 +291,8 @@ init_kernel_sunos5(void)
+@@ -285,8 +285,8 @@ init_kernel_sunos5(void)
  
  
  int
@@ -15,7 +15,7 @@ Support Crossbow.
  {
      kstat_ctl_t    *ksc;
      kstat_t        *ks;
-@@ -373,7 +373,7 @@ getKstatInt(const char *classname, const
+@@ -368,7 +368,7 @@ getKstatInt(const char *classname, const
  }
  
  int
@@ -24,7 +24,7 @@ Support Crossbow.
  {
      kstat_ctl_t    *ksc;
      kstat_t        *ks, *kstat_data;
-@@ -537,7 +537,7 @@ getKstat(const char *statname, const cha
+@@ -534,7 +534,7 @@ getKstat(const char *statname, const cha
  }
  
  int
@@ -33,23 +33,23 @@ Support Crossbow.
                 char *value, size_t value_len)
  {
      kstat_ctl_t    *ksc;
-@@ -1642,9 +1642,9 @@ set_if_info(mib2_ifEntry_t *ifp, unsigne
-     ifp->ifSpeed = 0;
+@@ -1643,9 +1643,9 @@ set_if_info(mib2_ifEntry_t *ifp, unsigne
+     ifp->ifHighSpeed = 0;
  
      /*
 -     * Get link speed
 +     * Get link speed, try the "link" module first, then fallback to NULL (ie: unix)
       */
--    if ((getKstatInt(NULL, name, "ifspeed", &ifp->ifSpeed) == 0)) {
+-    if ((getKstat(name, "ifspeed", &ifspeed) == 0)) {
 +    if ((getKstatInt("link", name, "ifspeed", &ifp->ifSpeed) == 0)) {
          /*
           * check for SunOS patch with half implemented ifSpeed 
           */
-@@ -1652,7 +1652,10 @@ set_if_info(mib2_ifEntry_t *ifp, unsigne
-             ifp->ifSpeed *= 1000000;
+@@ -1653,7 +1653,10 @@ set_if_info(mib2_ifEntry_t *ifp, unsigne
+             ifspeed *= 1000000;
          }
  	havespeed = B_TRUE;
--    } else if (getKstatInt(NULL, name, "ifSpeed", &ifp->ifSpeed) == 0) {
+-    } else if (getKstat(name, "ifSpeed", &ifspeed) == 0) {
 +	/* WORKAROUND: If this is a link and DLPI doesn't know, its probly a VNIC */
 +	if (ifp->ifType == 1 || ifp->ifType == 0)
 +		ifp->ifType = 6;
@@ -57,7 +57,7 @@ Support Crossbow.
          /*
           * this is good 
           */
-@@ -1683,6 +1686,9 @@ set_if_info(mib2_ifEntry_t *ifp, unsigne
+@@ -1689,6 +1692,9 @@ set_if_info(mib2_ifEntry_t *ifp, unsigne
  
      /*
       * Set link Type and Speed (if it could not be determined from kstat)
@@ -67,9 +67,9 @@ Support Crossbow.
       */
      if (ifp->ifType == 24) {
          ifp->ifSpeed = 127000000;
-@@ -1765,15 +1771,31 @@ get_if_stats(mib2_ifEntry_t *ifp)
+@@ -1771,15 +1777,31 @@ get_if_stats(mib2_ifEntry_t *ifp)
  {
-     Counter l_tmp;
+     int l_tmp;
      char *name = ifp->ifDescr.o_bytes;
 +    char classname[32];
  
@@ -100,7 +100,7 @@ Support Crossbow.
          if (getKstatInt(NULL, name, "ipackets", &ifp->ifInUcastPkts) != 0) {
              return (-1);
          }
-@@ -1781,7 +1803,7 @@ get_if_stats(mib2_ifEntry_t *ifp)
+@@ -1787,7 +1809,7 @@ get_if_stats(mib2_ifEntry_t *ifp)
              ifp->ifInUcastPkts = (uint32_t)(ifp->ifHCInUcastPkts & 0xffffffff); 
      }
      
@@ -109,7 +109,7 @@ Support Crossbow.
          if (getKstatInt(NULL, name, "rbytes", &ifp->ifInOctets) != 0) {
              ifp->ifInOctets = ifp->ifInUcastPkts * 308; 
          }
-@@ -1789,7 +1811,7 @@ get_if_stats(mib2_ifEntry_t *ifp)
+@@ -1795,7 +1817,7 @@ get_if_stats(mib2_ifEntry_t *ifp)
              ifp->ifInOctets = (uint32_t)(ifp->ifHCInOctets & 0xffffffff);
      }
     
@@ -118,7 +118,7 @@ Support Crossbow.
          if (getKstatInt(NULL, name, "opackets", &ifp->ifOutUcastPkts) != 0) {
              return (-1);
          }
-@@ -1797,7 +1819,7 @@ get_if_stats(mib2_ifEntry_t *ifp)
+@@ -1803,7 +1825,7 @@ get_if_stats(mib2_ifEntry_t *ifp)
           ifp->ifOutUcastPkts = (uint32_t)(ifp->ifHCOutUcastPkts & 0xffffffff);
      }
      
@@ -127,7 +127,7 @@ Support Crossbow.
          if (getKstatInt(NULL, name, "obytes", &ifp->ifOutOctets) != 0) { 
              ifp->ifOutOctets = ifp->ifOutUcastPkts * 308;    /* XXX */
          }
-@@ -1809,31 +1831,31 @@ get_if_stats(mib2_ifEntry_t *ifp)
+@@ -1815,31 +1837,31 @@ get_if_stats(mib2_ifEntry_t *ifp)
          return (0);
  
      /* some? VLAN interfaces don't have error counters, so ignore failure */
