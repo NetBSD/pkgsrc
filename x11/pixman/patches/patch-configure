@@ -1,6 +1,7 @@
-$NetBSD: patch-configure,v 1.1 2022/10/18 10:58:01 wiz Exp $
+$NetBSD: patch-configure,v 1.2 2022/10/18 11:14:18 wiz Exp $
 
 Fix unportable test(1) operator.
+https://gitlab.freedesktop.org/pixman/pixman/-/issues/65
 
 --- configure.orig	2022-10-18 07:48:30.000000000 +0000
 +++ configure
