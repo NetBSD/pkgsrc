@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 11:06:11 nia Exp $
+$NetBSD: distinfo,v 1.14 2022/10/18 01:18:10 schmonz Exp $
 
-BLAKE2s (openconnect-8.10.tar.gz) = 66f456ad82bf911e6aa63b460f486906066cd148756f3e02f97701e32500acd5
-SHA512 (openconnect-8.10.tar.gz) = a36a106cf5c637602fc5bd3cd12df8f6dfe55217c1aae93c66ca33208507f3f8cda15e3a46d75615c7fcea1859d1a04017a07674ad0246876154467305477356
-Size (openconnect-8.10.tar.gz) = 2084534 bytes
-SHA1 (patch-configure) = d9ecd9e7f726dc6982f401871f5c67ffc0ca7a15
+BLAKE2s (openconnect-9.01.tar.gz) = a56f3914b696aa3a11ea5a1732dec1b77c2aa8d6de72c3fb8f8abb3f9078ccfd
+SHA512 (openconnect-9.01.tar.gz) = b7428847a90f8ca9d1f1f61653c1f2486f0a07989f3b7435b746c5e901998194f4ee2b4f9569a548a23bba368bb1e9f273674c0759aac9df30208d2a6a303c34
+Size (openconnect-9.01.tar.gz) = 2718526 bytes
