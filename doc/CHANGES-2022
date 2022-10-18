@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5091 2022/10/18 10:58:10 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.5092 2022/10/18 12:02:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7719,3 +7719,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/py-h11 to 0.14.0 [adam 2022-10-18]
 	Updated devel/py-packageurl to 0.10.4 [adam 2022-10-18]
 	Updated x11/pixman to 0.42.0 [wiz 2022-10-18]
+	Updated net/net-snmp to 5.9.3 [adam 2022-10-18]
+	Updated net/py-netsnmp to 5.9.3 [adam 2022-10-18]
