@@ -1,4 +1,4 @@
-$NetBSD: patch-du,v 1.4 2014/12/31 10:06:57 adam Exp $
+$NetBSD: patch-agent_mibgroup_hardware_memory_memory__freebsd.c,v 1.1 2022/10/18 12:01:52 adam Exp $
 
 --- agent/mibgroup/hardware/memory/memory_freebsd.c.orig	2014-12-08 20:23:22.000000000 +0000
 +++ agent/mibgroup/hardware/memory/memory_freebsd.c

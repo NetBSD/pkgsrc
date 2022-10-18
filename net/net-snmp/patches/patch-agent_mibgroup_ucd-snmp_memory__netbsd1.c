@@ -1,4 +1,4 @@
-$NetBSD: patch-es,v 1.3 2013/03/17 00:15:29 gdt Exp $
+$NetBSD: patch-agent_mibgroup_ucd-snmp_memory__netbsd1.c,v 1.1 2022/10/18 12:01:52 adam Exp $
 
 --- agent/mibgroup/ucd-snmp/memory_netbsd1.c.orig	2012-10-09 22:28:58.000000000 +0000
 +++ agent/mibgroup/ucd-snmp/memory_netbsd1.c

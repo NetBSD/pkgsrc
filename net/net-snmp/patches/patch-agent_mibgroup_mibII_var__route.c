@@ -1,4 +1,4 @@
-$NetBSD: patch-agent_mibgroup_var__route.c,v 1.1 2016/04/29 19:47:21 adam Exp $
+$NetBSD: patch-agent_mibgroup_mibII_var__route.c,v 1.1 2022/10/18 12:01:52 adam Exp $
 
 Fix for systems with RTF_LLDATA in place of RTF_LLINFO.
 

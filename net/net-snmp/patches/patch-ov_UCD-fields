@@ -1,4 +1,4 @@
-$NetBSD: patch-da,v 1.2 2013/03/17 00:15:29 gdt Exp $
+$NetBSD: patch-ov_UCD-fields,v 1.1 2022/10/18 12:01:52 adam Exp $
 
 --- ov/UCD-fields.orig	2012-10-09 22:28:58.000000000 +0000
 +++ ov/UCD-fields
