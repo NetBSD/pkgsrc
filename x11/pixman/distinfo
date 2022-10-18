@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.69 2022/10/18 11:14:18 wiz Exp $
+$NetBSD: distinfo,v 1.70 2022/10/18 12:53:09 wiz Exp $
 
 BLAKE2s (pixman-0.42.0.tar.xz) = 9846ec6a902afa54328b18a9a58cbdf7ad066aa69cbbfddb145b1475c6ad8899
 SHA512 (pixman-0.42.0.tar.xz) = 43d43d1aef9b8a6167098ab68ce2cfd8c0429c4825d40a4fb468b5b51dc1a2035f8bd1b70413e4ecd77deb469b5d558f42171b423e348d5ddd8604c466ffc7d9
 Size (pixman-0.42.0.tar.xz) = 652780 bytes
 SHA1 (patch-Makefile.in) = 244969af69e43472d43d8cd1556abacf9ec679e0
 SHA1 (patch-configure) = 909bf50acfd69700b26bd55a47f93fd77b49226c
-SHA1 (patch-pixman_pixman-vmx.c) = d96dad41d94bf8dfb956afda00a5a175a9c1f6fc
+SHA1 (patch-pixman_pixman-vmx.c) = 993dde53047d20102d17d10420940cf2210a2049
