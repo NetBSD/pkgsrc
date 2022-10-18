@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2022/09/16 13:05:04 adam Exp $
+$NetBSD: distinfo,v 1.8 2022/10/18 08:52:52 adam Exp $
 
-BLAKE2s (packageurl-python-0.10.3.tar.gz) = cd28a78723ab2bc96472bc22c758daf69cfa4611655b54d670ee4ed9e1b260e0
-SHA512 (packageurl-python-0.10.3.tar.gz) = 94314f9be81577a14e831a4cc79cbc62c54d419d8b261bfd9bb8faa5f4aa73290c3f57af3a2e5d77989db4181e6e47dae156cf485ed250bfcdf3b4e478670676
-Size (packageurl-python-0.10.3.tar.gz) = 31693 bytes
+BLAKE2s (packageurl-python-0.10.4.tar.gz) = c5e96cf455c303bcff6686e23d3daf5df67dfd41edc10c2ec7947df49708a18f
+SHA512 (packageurl-python-0.10.4.tar.gz) = d997c209870c45d0842164d3ae82c32ebb702409a3a65949430dbaccf1d8feb22ee6214b41b7a93bacfa0afe809f0be34b300355d390cc7c2728efee58a41e3d
+Size (packageurl-python-0.10.4.tar.gz) = 34187 bytes
