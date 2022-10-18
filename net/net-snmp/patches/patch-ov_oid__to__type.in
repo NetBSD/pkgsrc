@@ -1,4 +1,4 @@
-$NetBSD: patch-db,v 1.2 2013/03/17 00:15:29 gdt Exp $
+$NetBSD: patch-ov_oid__to__type.in,v 1.1 2022/10/18 12:01:52 adam Exp $
 
 --- ov/oid_to_type.in.orig	2012-10-09 22:28:58.000000000 +0000
 +++ ov/oid_to_type.in
