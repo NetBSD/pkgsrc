@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.7 2018/05/15 21:30:55 youri Exp $
+# $NetBSD: Makefile,v 1.8 2022/10/18 00:41:41 gutteridge Exp $
 
-GHCOMMIT=	9efbd4a14cbae1a8b05536afff262b67ead6d33e
-DISTNAME=	${GHCOMMIT}
-PKGNAME=	elementary-xfce-icon-theme-0.11
+VERSION=	0.17
+DISTNAME=	v${VERSION}
+PKGNAME=	elementary-xfce-icon-theme-${VERSION}
 CATEGORIES=	graphics
-MASTER_SITES=	${MASTER_SITE_GITHUB:=shimmerproject/elementary-xfce/archive/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=shimmerproject/}
+GITHUB_PROJECT=	elementary-xfce
+GITHUB_TAG=	v${VERSION}
 
 MAINTAINER=	youri@NetBSD.org
 HOMEPAGE=	https://github.com/shimmerproject/elementary-xfce
@@ -15,9 +17,7 @@ NO_BUILD=	YES
 USE_LANGUAGES=	# none, not even C
 USE_TOOLS+=	pax
 
-WRKSRC=		${WRKDIR}/elementary-xfce-${GHCOMMIT}
-
-FILES_SUBST+=		GTK_UPDATE_ICON_CACHE="${LOCALBASE}/bin/gtk-update-icon-cache"
+FILES_SUBST+=		GTK_UPDATE_ICON_CACHE="${PREFIX}/bin/gtk-update-icon-cache"
 FILES_SUBST+=		ICON_THEME_DIR="${PREFIX}/share/icons"
 INSTALL_TEMPLATES+=	../../graphics/elementary-xfce-icon-theme/files/icon-cache.tmpl
 DEINSTALL_TEMPLATES+=	../../graphics/elementary-xfce-icon-theme/files/icon-cache.tmpl
