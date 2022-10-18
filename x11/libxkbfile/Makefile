@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2020/01/18 23:35:54 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2022/10/18 07:50:27 wiz Exp $
 
-DISTNAME=		libxkbfile-1.1.0
+DISTNAME=		libxkbfile-1.1.1
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
-EXTRACT_SUFX=		.tar.bz2
+EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/
