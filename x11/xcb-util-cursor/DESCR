@@ -1,3 +1,1 @@
-XCB util-cursor module provides the following libraries:
-
-  - cursor: port of libxcursor
+The XCB util-cursor module provides an xcb port of libXcursor.
