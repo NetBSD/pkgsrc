@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2022/10/17 13:48:28 js Exp $
+# $NetBSD: Makefile,v 1.3 2022/10/18 19:47:30 js Exp $
 
-DISTNAME=	sdk-source-20220302
+DISTNAME=	sdk-source-20220309
 PKGNAME=	ppc-morphos-gcc-11-11.2.0
 PKGREVISION=	2
 CATEGORIES=	cross
