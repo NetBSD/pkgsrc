@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5081 2022/10/17 22:31:10 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.5082 2022/10/18 00:41:53 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7708,3 +7708,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated editors/codelite to 16.0 [andvar 2022-10-17]
 	Updated x11/libXmu to 1.1.4 [wiz 2022-10-17]
 	Updated x11/libXpresent to 1.0.1 [wiz 2022-10-17]
+	Updated graphics/elementary-xfce-icon-theme to 0.17 [gutteridge 2022-10-18]
