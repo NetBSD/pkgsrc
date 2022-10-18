@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2022/10/17 13:48:28 js Exp $
+$NetBSD: distinfo,v 1.3 2022/10/18 19:47:30 js Exp $
 
-BLAKE2s (sdk-source-20220302.tar.xz) = 7c55130c19db6253bc32882f5fa37fc8b2ac57a821e22e89d0cb2fd03a961a4b
-SHA512 (sdk-source-20220302.tar.xz) = 4f476eae9d70fbe6c184dbf6aa2613873830a1fe02fc2bf60f5becea5209429600d14f09ac3442ba3f6cfcd1de348383edb947692232161f5a46af3dd3173084
-Size (sdk-source-20220302.tar.xz) = 553259612 bytes
+BLAKE2s (sdk-source-20220309.tar.xz) = 7c55130c19db6253bc32882f5fa37fc8b2ac57a821e22e89d0cb2fd03a961a4b
+SHA512 (sdk-source-20220309.tar.xz) = 4f476eae9d70fbe6c184dbf6aa2613873830a1fe02fc2bf60f5becea5209429600d14f09ac3442ba3f6cfcd1de348383edb947692232161f5a46af3dd3173084
+Size (sdk-source-20220309.tar.xz) = 553259612 bytes
 SHA1 (patch-config_override.m4) = 1ee0186b006a987dc57151a9d112654eabd24db9
 SHA1 (patch-gcc_c_c-typeck.c) = c2eb246b7cc7e03a535a71d642e7552f4d8d290f
 SHA1 (patch-gcc_config_host-darwin.c) = 62d75a4ce61a0ae42a756c9fd1476a329bb44600
