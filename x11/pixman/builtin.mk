@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.9 2016/07/09 10:22:29 rillig Exp $
+# $NetBSD: builtin.mk,v 1.10 2022/10/18 11:06:46 wiz Exp $
 
 BUILTIN_PKG:=		pixman
 PKGCONFIG_FILE.pixman=	${X11BASE}/lib/pkgconfig/pixman-1.pc
@@ -11,8 +11,8 @@ PKGCONFIG_FILE.pixman+=	${X11BASE}/lib${LIBABISUFFIX}/pkgconfig/pixman-1.pc
 # Mac OS 10.5.4 or newer which references a non-existing version of the
 # PNG shared library.
 CHECK_BUILTIN.pixman?=	no
-.if !empty(CHECK_BUILTIN.pixman:M[nN][oO]) && \
-    !empty(USE_BUILTIN.pixman:M[Yy][Ee][Ss]) && \
+.if ${CHECK_BUILTIN.pixman:M[nN][oO]} && \
+    ${USE_BUILTIN.pixman:M[Yy][Ee][Ss]} && \
     !empty(MACHINE_PLATFORM:MDarwin-9.*-*)
 BUILDLINK_TRANSFORM+=	opt:-lpixman-1.0.10.0:-lpixman-1
 .endif
