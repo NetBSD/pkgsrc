@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5085 2022/10/18 01:18:15 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.5086 2022/10/18 07:44:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7712,3 +7712,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated meta-pkgs/xfce4 to 4.16.0nb8 [gutteridge 2022-10-18]
 	Updated net/vpnc-script to 20220917 [schmonz 2022-10-18]
 	Updated net/openconnect to 9.01 [schmonz 2022-10-18]
+	Updated sysutils/libpciaccess to 0.17 [wiz 2022-10-18]
