@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/09/11 16:46:59 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2022/10/19 14:25:18 nia Exp $
 
 DISTNAME=	dnc-0.2.0
 PKGREVISION=	1
@@ -15,7 +15,6 @@ LICENSE=	2-clause-bsd
 USE_LANGUAGES=	# none
 
 DEPENDS+=	${PYPKGPREFIX}-dns-[0-9]*:../../net/py-dns
-DEPENDS+=	${PYPKGPREFIX}-OpenSSL-[0-9]*:../../security/py-OpenSSL
 DEPENDS+=	${PYPKGPREFIX}-prettytable-[0-9]*:../../textproc/py-prettytable
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
@@ -33,4 +32,6 @@ do-install:
 	                     ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../lang/python/application.mk"
+PYTHON_VERSIONED_DEPENDENCIES+=	OpenSSL
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
