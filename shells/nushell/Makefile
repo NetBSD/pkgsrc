@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2022/09/28 06:55:19 pin Exp $
+# $NetBSD: Makefile,v 1.23 2022/10/19 09:42:32 pin Exp $
 
-DISTNAME=	nushell-0.69.1
+DISTNAME=	nushell-0.70.0
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nushell/}
 
@@ -23,7 +23,7 @@ RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.libX11}/lib
 
 # The 'trash-support' feature is default but, does not build on NetBSD.
 # Extra features 'dataframe' and 'database' do build on NetBSD.
-# Uncomment them if you wish to enable these at  build time.
+# Uncomment them if you wish to enable these at build time.
 # Be aware that doing so will increase the package build time.
 
 .include "../../mk/bsd.prefs.mk"
