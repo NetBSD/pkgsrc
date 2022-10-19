@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5110 2022/10/19 12:38:57 nia Exp $
+$NetBSD: CHANGES-2022,v 1.5111 2022/10/19 13:18:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7741,3 +7741,11 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/py-approval-utilities version 7.2.0 [schmonz 2022-10-19]
 	Updated devel/py-approvaltests to 7.2.0 [schmonz 2022-10-19]
 	Added security/py-cryptography-norust version 3.3.2 [nia 2022-10-19]
+	Added databases/postgresql15 to 15.0 [adam 2022-10-19]
+	Added databases/postgresql15-client version 15.0 [adam 2022-10-19]
+	Added databases/postgresql15-contrib version 15.0 [adam 2022-10-19]
+	Added databases/postgresql15-docs version 15.0 [adam 2022-10-19]
+	Added databases/postgresql15-plperl version 15.0 [adam 2022-10-19]
+	Added databases/postgresql15-plpython version 15.0 [adam 2022-10-19]
+	Added databases/postgresql15-pltcl version 15.0 [adam 2022-10-19]
+	Added databases/postgresql15-server version 15.0 [adam 2022-10-19]
