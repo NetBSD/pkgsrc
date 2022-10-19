@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2022/10/19 13:56:34 nia Exp $
+# $NetBSD: Makefile,v 1.42 2022/10/19 14:25:20 nia Exp $
 
 DISTNAME=	urllib3-1.26.12
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,6 @@ HOMEPAGE=	https://urllib3.readthedocs.io/
 COMMENT=	HTTP library with thread-safe connection pooling
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=0.14:../../security/py-OpenSSL
 DEPENDS+=	${PYPKGPREFIX}-Socks>=1.6.0:../../net/py-Socks
 DEPENDS+=	${PYPKGPREFIX}-certifi-[0-9]*:../../security/py-certifi
 DEPENDS+=	${PYPKGPREFIX}-idna>=2.0.0:../../www/py-idna
@@ -27,5 +26,6 @@ USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
 PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
+PYTHON_VERSIONED_DEPENDENCIES+=	OpenSSL
 .include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

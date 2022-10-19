@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2022/07/08 12:57:26 leot Exp $
+# $NetBSD: Makefile,v 1.42 2022/10/19 14:25:18 nia Exp $
 
 DISTNAME=	mitmproxy-8.1.1
 CATEGORIES=	net
@@ -10,7 +10,6 @@ HOMEPAGE=	https://mitmproxy.org/
 COMMENT=	Interactive console program for inspecting and editing traffic flows
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=21.0:../../security/py-OpenSSL
 DEPENDS+=	${PYPKGPREFIX}-asgiref>=3.2.10:../../www/py-asgiref
 DEPENDS+=	${PYPKGPREFIX}-blinker>=1.4:../../devel/py-blinker
 DEPENDS+=	${PYPKGPREFIX}-brotli>=1.0:../../archivers/py-brotli
@@ -53,4 +52,6 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
+PYTHON_VERSIONED_DEPENDENCIES+=	OpenSSL
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
