@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5100 2022/10/19 08:10:30 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5101 2022/10/19 08:29:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7731,3 +7731,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated wm/fvwm3 to 1.0.5 [gutteridge 2022-10-19]
 	Updated devel/git to 2.38.1 [adam 2022-10-19]
 	Updated databases/repmgr to 5.3.3 [adam 2022-10-19]
+	Updated x11/xcb-util-errors to 1.0.1 [wiz 2022-10-19]
