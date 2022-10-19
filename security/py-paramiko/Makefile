@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2022/07/13 20:06:23 adam Exp $
+# $NetBSD: Makefile,v 1.47 2022/10/19 13:56:33 nia Exp $
 
 DISTNAME=	paramiko-2.11.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	SSH2 protocol library
 LICENSE=	gnu-lgpl-v2.1
 
 DEPENDS+=	${PYPKGPREFIX}-bcrypt>=3.1.3:../../security/py-bcrypt
-DEPENDS+=	${PYPKGPREFIX}-cryptography>=2.5:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-nacl>=1.0.1:../../security/py-nacl
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock>=2.0.0:../../devel/py-mock
@@ -25,4 +24,6 @@ do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
 .include "../../lang/python/egg.mk"
+PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

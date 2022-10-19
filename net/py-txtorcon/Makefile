@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/01/04 20:54:34 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/10/19 13:56:32 nia Exp $
 
 DISTNAME=	txtorcon-20.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,6 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-ZopeInterface>=3.6.1:../../devel/py-ZopeInterface
 DEPENDS+=	${PYPKGPREFIX}-automat-[0-9]*:../../devel/py-automat
-DEPENDS+=	${PYPKGPREFIX}-cryptography-[0-9]*:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-incremental-[0-9]*:../../devel/py-incremental
 DEPENDS+=	${PYPKGPREFIX}-twisted>=15.5.0:../../net/py-twisted
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
@@ -28,4 +27,6 @@ do-test:
 	cd ${WRKSRC} && pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
+PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

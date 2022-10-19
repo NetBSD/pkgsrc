@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2022/02/15 15:32:09 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2022/10/19 13:56:32 nia Exp $
 
 DISTNAME=	moto-3.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-boto3>=1.9.201:../../net/py-boto3
 DEPENDS+=	${PYPKGPREFIX}-botocore-[0-9]*:../../net/py-botocore
-DEPENDS+=	${PYPKGPREFIX}-cryptography>=3.3.1:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.5:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-xmltodict-[0-9]*:../../textproc/py-xmltodict
 DEPENDS+=	${PYPKGPREFIX}-werkzeug-[0-9]*:../../www/py-werkzeug
@@ -48,4 +47,6 @@ do-test:
 	cd ${WRKSRC}/tests && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
+PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2022/10/14 11:08:50 adam Exp $
+# $NetBSD: Makefile,v 1.9 2022/10/19 13:56:34 nia Exp $
 
 DISTNAME=	ansible-core-2.13.5
 CATEGORIES=	sysutils python
@@ -11,7 +11,6 @@ LICENSE=	gnu-gpl-v3
 
 CONFLICTS+=	ansible<2.10
 
-DEPENDS+=	${PYPKGPREFIX}-cryptography-[0-9]*:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=3.0.0:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-paramiko-[0-9]*:../../security/py-paramiko
@@ -60,4 +59,6 @@ post-install:
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../lang/python/tool.mk"
+PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
