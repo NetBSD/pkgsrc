@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2022/10/19 11:36:40 schmonz Exp $
+
+BLAKE2s (approval_utilities-7.2.0.tar.gz) = 1afe88919ab586d1cd16623e83aba58c307e861aec7611e9664bde29687c55f2
+SHA512 (approval_utilities-7.2.0.tar.gz) = 9eb54b828736c1cfcebd1fea210addd9919821d7cae88f710f68da0ceba430382bc515fdc85814ed117f3b4febf264cc5dc26f52556ef5ddd49c62f62d1e83dd
+Size (approval_utilities-7.2.0.tar.gz) = 16148 bytes
+SHA1 (patch-setup__utils.py) = e33a5fc5d203d7c29883e9afc296ec699343e9e3
