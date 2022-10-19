@@ -1,0 +1,25 @@
+$NetBSD: patch-src_backend_Makefile,v 1.1 2022/10/19 13:16:45 adam Exp $
+
+--- src/backend/Makefile.orig	2022-10-10 20:57:37.000000000 +0000
++++ src/backend/Makefile
+@@ -17,6 +17,10 @@ subdir = src/backend
+ top_builddir = ../..
+ include $(top_builddir)/src/Makefile.global
+ 
++CFLAGS+= $(DL_CFLAGS)
++LDFLAGS+= $(DL_LDFLAGS)
++LIBS+= $(DL_LIBS)
++
+ SUBDIRS = access backup bootstrap catalog parser commands executor \
+ 	foreign lib libpq \
+ 	main nodes optimizer partitioning port postmaster \
+@@ -117,6 +121,9 @@ endif # aix
+ 
+ $(top_builddir)/src/port/libpgport_srv.a: | submake-libpgport
+ 
++$(top_builddir)/src/common/libpgcommon_srv.a: | submake-libpgport
++utils: | catalog
++
+ 
+ # The postgres.o target is needed by the rule in Makefile.global that
+ # creates the exports file when MAKE_EXPORTS = true.
