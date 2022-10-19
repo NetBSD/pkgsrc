@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2017/08/16 20:21:18 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2022/10/19 08:32:36 wiz Exp $
 
-DISTNAME=	xcb-util-renderutil-0.3.9
+DISTNAME=	xcb-util-renderutil-0.3.10
 CATEGORIES=	x11
 MASTER_SITES=	https://xcb.freedesktop.org/dist/
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://xcb.freedesktop.org/
