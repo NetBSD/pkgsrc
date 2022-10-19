@@ -1,16 +1,19 @@
-# $NetBSD: options.mk,v 1.23 2022/08/11 05:11:40 gutteridge Exp $
+# $NetBSD: options.mk,v 1.24 2022/10/19 10:36:59 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gtk3
 PKG_SUPPORTED_OPTIONS+=	gtk3-atk-bridge cups debug
 PKG_SUPPORTED_OPTIONS+=	wayland x11
 .if exists(/System/Library/Frameworks/Quartz.framework)
 PKG_SUPPORTED_OPTIONS+=	quartz
+PKG_SUGGESTED_OPTIONS+=	quartz
+.else
+PKG_SUGGESTED_OPTIONS+=	x11
 .endif
 .include "../../devel/wayland/platform.mk"
 .if ${PLATFORM_SUPPORTS_WAYLAND} == "yes"
 PKG_SUGGESTED_OPTIONS+=	wayland
 .endif
-PKG_SUGGESTED_OPTIONS+=	gtk3-atk-bridge x11 cups
+PKG_SUGGESTED_OPTIONS+=	gtk3-atk-bridge cups
 
 .include "../../mk/bsd.options.mk"
 
