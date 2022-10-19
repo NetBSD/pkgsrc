@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.876 2022/10/19 13:15:36 nia Exp $
+# $NetBSD: Makefile,v 1.877 2022/10/19 14:10:03 nia Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -504,6 +504,7 @@ SUBDIR+=	py-yara
 SUBDIR+=	py-yubiauth
 SUBDIR+=	py-yubikey-manager
 SUBDIR+=	py27-cryptography
+SUBDIR+=	py27-OpenSSL
 SUBDIR+=	pyca
 SUBDIR+=	qca2
 SUBDIR+=	qca2-gnupg
