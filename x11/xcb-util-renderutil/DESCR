@@ -1,3 +1,1 @@
-XCB util-renderutil module provides the following library:
-
-  - renderutil: Convenience functions for the Render extension.
+This library provides convenience functions for the Render extension.
