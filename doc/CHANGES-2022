@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5109 2022/10/19 11:38:17 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.5110 2022/10/19 12:38:57 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7740,3 +7740,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/bind916 to 9.16.34 [taca 2022-10-19]
 	Added devel/py-approval-utilities version 7.2.0 [schmonz 2022-10-19]
 	Updated devel/py-approvaltests to 7.2.0 [schmonz 2022-10-19]
+	Added security/py-cryptography-norust version 3.3.2 [nia 2022-10-19]
