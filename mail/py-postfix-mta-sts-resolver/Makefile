@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/08/19 20:36:48 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/10/19 13:56:31 nia Exp $
 
 DISTNAME=	postfix_mta_sts_resolver-1.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
@@ -10,7 +10,6 @@ HOMEPAGE=	https://github.com/Snawoot/postfix-mta-sts-resolver
 COMMENT=	Daemon providing TLS client policy for Postfix based on MTA-STS policy
 LICENSE=	mit
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-cryptography>=1.6:../../security/py-cryptography
 BUILD_DEPENDS+=	${PYPKGPREFIX}-pylint>=0:../../devel/py-pylint
 BUILD_DEPENDS+=	${PYPKGPREFIX}-tox>=0:../../devel/py-tox
 BUILD_DEPENDS+=	${PYPKGPREFIX}-twine>=1.11.0:../../net/py-twine
@@ -35,4 +34,6 @@ post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} mta-sts-query mta-sts-query-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
+PYTHON_VERSIONED_DEPENDENCIES+=	cryptography:build
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

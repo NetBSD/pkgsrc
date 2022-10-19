@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2022/01/05 15:41:17 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2022/10/19 13:56:32 nia Exp $
 
 DISTNAME=	OnionBalance-0.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -12,7 +12,6 @@ COMMENT=	Tor onion service load balancer
 LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-cryptodome-[0-9]*:../../security/py-cryptodome
-DEPENDS+=	${PYPKGPREFIX}-cryptography>=2.5:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-future>=0.14.0:../../devel/py-future
 DEPENDS+=	${PYPKGPREFIX}-setproctitle-[0-9]*:../../sysutils/py-setproctitle
 DEPENDS+=	${PYPKGPREFIX}-stem>=1.8:../../devel/py-stem
@@ -30,6 +29,7 @@ PYSETUPTESTTARGET=	pytest
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYTHON_VERSIONED_DEPENDENCIES+=	setuptools
+PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
 
 USE_PKG_RESOURCES=	yes
 

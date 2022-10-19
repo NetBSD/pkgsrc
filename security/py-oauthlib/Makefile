@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2022/09/13 12:32:55 adam Exp $
+# $NetBSD: Makefile,v 1.25 2022/10/19 13:56:33 nia Exp $
 
 DISTNAME=	oauthlib-3.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,11 +12,12 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-JWT>=2.0.0:../../textproc/py-JWT
 DEPENDS+=	${PYPKGPREFIX}-blinker>=1.4.0:../../devel/py-blinker
-DEPENDS+=	${PYPKGPREFIX}-cryptography>=3.0.0:../../security/py-cryptography
 
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
+PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
