@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2022/01/05 15:41:16 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2022/10/19 14:25:19 nia Exp $
 
 DISTNAME=	gsutil-4.68
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ HOMEPAGE=	https://cloud.google.com/storage/docs/gsutil
 COMMENT=	Command line tool for interacting with cloud storage services
 LICENSE=	apache-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=0.13:../../security/py-OpenSSL
 DEPENDS+=	${PYPKGPREFIX}-argcomplete>=1.9.4:../../devel/py-argcomplete
 DEPENDS+=	${PYPKGPREFIX}-crcmod>=1.7:../../security/py-crcmod
 DEPENDS+=	${PYPKGPREFIX}-fasteners>=0.14.1:../../devel/py-fasteners
@@ -45,4 +44,6 @@ post-install:
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
+PYTHON_VERSIONED_DEPENDENCIES+=	OpenSSL
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

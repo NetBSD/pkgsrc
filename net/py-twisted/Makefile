@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2022/08/10 08:59:35 adam Exp $
+# $NetBSD: Makefile,v 1.52 2022/10/19 14:25:19 nia Exp $
 
 .include "../../net/py-twisted/Makefile.common"
 
@@ -13,8 +13,6 @@ DEPENDS+=	${PYPKGPREFIX}-hamcrest>=1.9.0:../../devel/py-hamcrest
 DEPENDS+=	${PYPKGPREFIX}-hyperlink>=17.1.1:../../www/py-hyperlink
 DEPENDS+=	${PYPKGPREFIX}-incremental>=21.3.0:../../devel/py-incremental
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.6.5:../../devel/py-typing-extensions
-# TLS
-DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=16.0.0:../../security/py-OpenSSL
 DEPENDS+=	${PYPKGPREFIX}-service_identity>=18.1.0:../../security/py-service_identity
 DEPENDS+=	${PYPKGPREFIX}-idna>=2.4:../../www/py-idna
 
@@ -35,4 +33,6 @@ post-install:
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
+PYTHON_VERSIONED_DEPENDENCIES+=	OpenSSL
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
