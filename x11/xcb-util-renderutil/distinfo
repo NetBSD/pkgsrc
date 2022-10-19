@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:34:35 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/10/19 08:32:36 wiz Exp $
 
-BLAKE2s (xcb-util-renderutil-0.3.9.tar.bz2) = 794e6adfca8724130427f79539c1cbd3ba673d88deef5ac233f2d12d881d50aa
-SHA512 (xcb-util-renderutil-0.3.9.tar.bz2) = 24b567992ecde7e69a406efd0ffb62266610d73b4dc0e5c71093221090fa134c14b850680d1d28dc1f8f4a6f497b4118491e1894ec7c73d2c6ce959d106771cc
-Size (xcb-util-renderutil-0.3.9.tar.bz2) = 292898 bytes
+BLAKE2s (xcb-util-renderutil-0.3.10.tar.xz) = 303e888d8525f7f6007639dd87e56850bd43265c444265e8cfe7803029b2843d
+SHA512 (xcb-util-renderutil-0.3.10.tar.xz) = 9cfa9201be2df7c0b832e1e1fe506e7c7a1e0f2b1b1d4a4b58620eadc241190a36478fa3ea27c32047fa79bf199f17dcd0b106853dbf5eda8cd584f3fc2b0c15
+Size (xcb-util-renderutil-0.3.10.tar.xz) = 262028 bytes
