@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2022/09/26 17:26:57 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/10/19 18:00:02 nros Exp $
 bin/gtk4-builder-tool
 bin/gtk4-demo
 bin/gtk4-demo-application
@@ -371,6 +371,7 @@ lib/girepository-1.0/Gdk-4.0.typelib
 ${PLIST.x11}lib/girepository-1.0/GdkX11-4.0.typelib
 lib/girepository-1.0/Gsk-4.0.typelib
 lib/girepository-1.0/Gtk-4.0.typelib
+lib/gtk-4.0/4.0.0/media/libmedia-ffmpeg.so
 ${PLIST.cups}lib/gtk-4.0/4.0.0/printbackends/libprintbackend-cups.so
 lib/gtk-4.0/4.0.0/printbackends/libprintbackend-file.so
 ${PLIST.lpr}lib/gtk-4.0/4.0.0/printbackends/libprintbackend-lpr.so
