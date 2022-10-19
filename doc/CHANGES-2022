@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5098 2022/10/19 03:29:21 triaxx Exp $
+$NetBSD: CHANGES-2022,v 1.5099 2022/10/19 03:41:00 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7728,3 +7728,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated biology/molsketch to 0.7.3 [pin 2022-10-18]
 	Updated x11/xcb-util-image to 0.4.1 [wiz 2022-10-18]
 	Updated www/grafana to 9.2.1 [triaxx 2022-10-19]
+	Updated wm/fvwm3 to 1.0.5 [gutteridge 2022-10-19]
