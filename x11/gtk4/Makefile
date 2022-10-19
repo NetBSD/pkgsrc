@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2022/09/26 17:26:57 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2022/10/19 18:00:02 nros Exp $
 
 DISTNAME=	gtk-4.8.1
 PKGNAME=	${DISTNAME:S/gtk/gtk4/}
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtk/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -26,6 +27,8 @@ USE_LANGUAGES=		c c++
 MESON_ARGS+=		-Dgtk_doc=false
 # needs gstreamer-gl
 MESON_ARGS+=		-Dmedia-gstreamer=disabled
+# ffmpeg backend is disabled by default
+MESON_ARGS+=		-Dmedia-ffmpeg=enabled
 
 PKGCONFIG_OVERRIDE+=	output/meson-private/gtk4.pc
 PKGCONFIG_OVERRIDE+=	output/meson-private/gtk4-x11.pc
@@ -59,9 +62,7 @@ BUILDLINK_API_DEPENDS.pango+=	pango>=1.47.0
 # librsvg is required by a demo only.
 #.include "../../graphics/librsvg/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-bad/buildlink3.mk"
-# not detected even when added
-# TODO: fix
-#.include "../../multimedia/ffmpeg5/buildlink3.mk"
+.include "../../multimedia/ffmpeg5/buildlink3.mk"
 .include "../../textproc/iso-codes/buildlink3.mk"
 .include "../../devel/meson/build.mk"
 .include "../../lang/python/tool.mk"
