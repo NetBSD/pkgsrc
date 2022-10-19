@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5099 2022/10/19 03:41:00 gutteridge Exp $
+$NetBSD: CHANGES-2022,v 1.5100 2022/10/19 08:10:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7729,3 +7729,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/xcb-util-image to 0.4.1 [wiz 2022-10-18]
 	Updated www/grafana to 9.2.1 [triaxx 2022-10-19]
 	Updated wm/fvwm3 to 1.0.5 [gutteridge 2022-10-19]
+	Updated devel/git to 2.38.1 [adam 2022-10-19]
+	Updated databases/repmgr to 5.3.3 [adam 2022-10-19]
