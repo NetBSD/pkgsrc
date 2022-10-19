@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2022/10/19 14:11:01 nia Exp $
+
+BLAKE2s (pyOpenSSL-21.0.0.tar.gz) = 498287e93820caab4741b4e5222d202fd57913d9edee456a6621bf9ffbb3d00f
+SHA512 (pyOpenSSL-21.0.0.tar.gz) = ca772a420b13b1e3c421170baab031d4769d77539eb5ad3eb0fda409aa8692596ce85d21b244b6e49e70fd35609b64190dcbc4fc8d4493292bac19b7856d5175
+Size (pyOpenSSL-21.0.0.tar.gz) = 175652 bytes
+SHA1 (patch-tests_memdbg.py) = a2d2395a0fe1dd1934a50b065fe68f47907f0b87
