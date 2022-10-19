@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5103 2022/10/19 08:32:46 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.5104 2022/10/19 08:35:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7734,3 +7734,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/xcb-util-errors to 1.0.1 [wiz 2022-10-19]
 	Updated x11/xcb-util-keysyms to 0.4.1 [wiz 2022-10-19]
 	Updated x11/xcb-util-renderutil to 0.3.10 [wiz 2022-10-19]
+	Updated x11/xcb-util-wm to 0.4.2 [wiz 2022-10-19]
