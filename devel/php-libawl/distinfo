@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.17 2022/06/22 10:19:50 nia Exp $
+$NetBSD: distinfo,v 1.18 2022/10/19 14:04:24 hauke Exp $
 
-BLAKE2s (awl-r0.60/libawl-0.60.tar.gz) = 51658386243710000c62cb274e0af25b71435c8d7178fb60bbec608897ed334c
-SHA512 (awl-r0.60/libawl-0.60.tar.gz) = 214a17aa4a03929bf12fb4d5ede3394f02740e98047175e82b1bcc8c7ed1976e2f77169bb18a81028c902359ad276ae76fff6647ef56c92dbe2a7e087f4d0493
-Size (awl-r0.60/libawl-0.60.tar.gz) = 601575 bytes
+BLAKE2s (libawl-0.63.tar.gz) = c64840f159b9ef4f2fbfed80966c92e4a7d166d0af2a8a4e292a44e70b2daadd
+SHA512 (libawl-0.63.tar.gz) = 9ea5aad9762ec889fdc7f870a793cec82eaa374f08bead122de219c98d255677f55baf943f529cbd5008381cdf0f61283babfaa780c2d9468c9e56c739a092ea
+Size (libawl-0.63.tar.gz) = 605057 bytes
 SHA1 (patch-Makefile) = 5781f80363a91549ad8e8aaba2640d5bb960012e
