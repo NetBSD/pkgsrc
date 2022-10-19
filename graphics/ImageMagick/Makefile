@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.308 2022/10/13 10:44:12 wiz Exp $
+# $NetBSD: Makefile,v 1.309 2022/10/19 15:43:19 jperkin Exp $
 
 .include "Makefile.common"
 
@@ -41,6 +41,8 @@ GCC_REQD+=		3.0
 .if ${MACHINE_ARCH} == "mipsel"
 CFLAGS+=		-O
 .endif
+
+LDFLAGS.SunOS+=		-lsendfile
 
 PKG_SYSCONFSUBDIR=	ImageMagick-${IM_MAJOR_LIB_VER}
 EGDIR=			${PREFIX}/share/examples/ImageMagick
