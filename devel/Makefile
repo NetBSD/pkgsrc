@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3811 2022/10/13 16:28:29 adam Exp $
+# $NetBSD: Makefile,v 1.3812 2022/10/19 11:37:19 schmonz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2310,6 +2310,7 @@ SUBDIR+=	py-anyio
 SUBDIR+=	py-anytree
 SUBDIR+=	py-apipkg
 SUBDIR+=	py-appdirs
+SUBDIR+=	py-approval-utilities
 SUBDIR+=	py-approvaltests
 SUBDIR+=	py-archinfo
 SUBDIR+=	py-argcomplete
