@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2022/09/11 17:14:22 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2022/10/19 13:56:34 nia Exp $
 
 DISTNAME=	urllib3-1.26.12
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,6 @@ LICENSE=	mit
 DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=0.14:../../security/py-OpenSSL
 DEPENDS+=	${PYPKGPREFIX}-Socks>=1.6.0:../../net/py-Socks
 DEPENDS+=	${PYPKGPREFIX}-certifi-[0-9]*:../../security/py-certifi
-DEPENDS+=	${PYPKGPREFIX}-cryptography>=0:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-idna>=2.0.0:../../www/py-idna
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
@@ -27,4 +26,6 @@ PYSETUPTESTTARGET=	pytest
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
+PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
