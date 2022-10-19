@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2022/08/25 07:34:41 tnn Exp $
+# $NetBSD: Makefile,v 1.22 2022/10/19 08:10:12 adam Exp $
 
-DISTNAME=	repmgr-5.3.2
+DISTNAME=	repmgr-5.3.3
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
 CATEGORIES=	databases
 MASTER_SITES=	https://repmgr.org/download/
@@ -29,17 +29,19 @@ CONF_FILES_PERMS+=	${EGDIR}/repmgr.conf.sample \
 			${PKG_SYSCONFDIR}/repmgr.conf \
 			${REAL_ROOT_USER} ${PGGROUP} 0640
 
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/repmgr.conf.sample \
+		${DESTDIR}${PREFIX}/${EGDIR}
+
 PLIST_VARS+=	llvm
 .include "../../mk/pgsql.buildlink3.mk"
 .if !empty(PKG_OPTIONS.postgresql${PGSQL_VERSION}:Mllvm)
 PLIST.llvm=	yes
 .endif
-
-post-install:
-	${INSTALL_DATA} ${WRKSRC}/README.md \
-		${DESTDIR}${PREFIX}/${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/repmgr.conf.sample \
-		${DESTDIR}${PREFIX}/${EGDIR}
+#.if !empty(PKG_OPTIONS.postgresql${PGSQL_VERSION}:Mlz4)
+#.include "../../archivers/lz4/buildlink3.mk"
+#.endif
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
