@@ -1,24 +1,24 @@
-# $NetBSD: Makefile,v 1.41 2022/09/11 12:51:56 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2022/10/19 18:38:29 adam Exp $
 
-DISTNAME=		gr-osmosdr-0.2.3.20210128
-PKGREVISION=		8
-CATEGORIES=		ham
+DISTNAME=	gr-osmosdr-0.2.3.20210128
+PKGREVISION=	8
+CATEGORIES=	ham
 # main git repo doesn't allow snapshots to be downloaded
-#MASTER_SITES=		https://git.osmocom.org/gr-osmosdr/snapshot/
-MASTER_SITES=		${MASTER_SITE_GITHUB:=osmocom/}
-GITHUB_TAG=		a100eb024c0210b95e4738b6efd836d48225bd03
+#MASTER_SITES=	https://git.osmocom.org/gr-osmosdr/snapshot/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=osmocom/}
+GITHUB_TAG=	a100eb024c0210b95e4738b6efd836d48225bd03
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://git.osmocom.org/gr-osmosdr
-COMMENT=		SDR Hardware support for OsmoSDR and so many more
-LICENSE=		gnu-gpl-v2
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://git.osmocom.org/gr-osmosdr
+COMMENT=	SDR Hardware support for OsmoSDR and so many more
+LICENSE=	gnu-gpl-v2
 
 # for docs/doxygen/update_pydoc.py
 BUILD_DEPENDS+=		${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
-USE_LANGUAGES=		c c++
-USE_TOOLS=		cmake
-USE_CMAKE=		yes
+USE_CMAKE=	yes
+USE_LANGUAGES=	c c++11
+USE_TOOLS=	cmake
 
 # Suppress warning for developer
 CMAKE_ARGS+=	-Wno-dev
