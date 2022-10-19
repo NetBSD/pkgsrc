@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.18 2019/11/03 09:14:08 rillig Exp $
+# $NetBSD: options.mk,v 1.19 2022/10/19 10:36:47 jperkin Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.gtk2
 PKG_SUPPORTED_OPTIONS=		cups debug
@@ -6,8 +6,10 @@ PKG_OPTIONS_REQUIRED_GROUPS=	gdk-target
 PKG_OPTIONS_GROUP.gdk-target=	x11
 .if exists(/System/Library/Frameworks/Quartz.framework)
 PKG_OPTIONS_GROUP.gdk-target+=	quartz
-.endif
+PKG_SUGGESTED_OPTIONS=		quartz
+.else
 PKG_SUGGESTED_OPTIONS=		x11
+.endif
 
 .include "../../mk/bsd.options.mk"
 
