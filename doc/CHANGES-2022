@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5112 2022/10/19 14:01:22 hauke Exp $
+$NetBSD: CHANGES-2022,v 1.5113 2022/10/19 14:04:38 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7750,3 +7750,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added databases/postgresql15-pltcl version 15.0 [adam 2022-10-19]
 	Added databases/postgresql15-server version 15.0 [adam 2022-10-19]
 	Updated www/davical to 1.1.11 [hauke 2022-10-19]
+	Updated devel/php-libawl to 0.63 [hauke 2022-10-19]
