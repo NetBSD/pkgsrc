@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5114 2022/10/19 14:17:16 osa Exp $
+$NetBSD: CHANGES-2022,v 1.5115 2022/10/19 17:15:17 he Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7753,3 +7753,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/php-libawl to 0.63 [hauke 2022-10-19]
 	Updated www/nginx to 1.22.1 [osa 2022-10-19]
 	Updated www/nginx-devel to 1.23.2 [osa 2022-10-19]
+	Updated x11/pixman to 0.42.0nb2 [he 2022-10-19]
