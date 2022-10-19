@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5115 2022/10/19 17:15:17 he Exp $
+$NetBSD: CHANGES-2022,v 1.5116 2022/10/19 17:28:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7754,3 +7754,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/nginx to 1.22.1 [osa 2022-10-19]
 	Updated www/nginx-devel to 1.23.2 [osa 2022-10-19]
 	Updated x11/pixman to 0.42.0nb2 [he 2022-10-19]
+	Updated devel/py-traitlets to 5.5.0 [adam 2022-10-19]
+	Updated math/py-numpy to 1.23.4 [adam 2022-10-19]
