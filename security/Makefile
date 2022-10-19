@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.874 2022/10/08 11:30:26 bsiegert Exp $
+# $NetBSD: Makefile,v 1.875 2022/10/19 12:38:26 nia Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -442,6 +442,7 @@ SUBDIR+=	py-crcmod
 SUBDIR+=	py-cryptkit
 SUBDIR+=	py-cryptodome
 SUBDIR+=	py-cryptography
+SUBDIR+=	py-cryptography-norust
 SUBDIR+=	py-cryptography_vectors
 SUBDIR+=	py-cybox
 SUBDIR+=	py-cyclonedx-bom
