@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:34:35 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/10/19 08:31:22 wiz Exp $
 
-BLAKE2s (xcb-util-keysyms-0.4.0.tar.bz2) = a03a9135bbbe0ce2903592533eb55f868c21a7339932bf432d06ad7721c48d54
-SHA512 (xcb-util-keysyms-0.4.0.tar.bz2) = b14b3100c3ae2379f9df799c0780a1ee39267101e58e4c1c6f390f039348ca2b370bb1df203b9bc68a170d664188d9c73e3553a7ba24d98abea3ed353e8dc0c4
-Size (xcb-util-keysyms-0.4.0.tar.bz2) = 289880 bytes
+BLAKE2s (xcb-util-keysyms-0.4.1.tar.xz) = b4bf1ed2b0103474afe2e9a8546e826de0c791d60349df7dbd1d907c5fedc588
+SHA512 (xcb-util-keysyms-0.4.1.tar.xz) = dd53a36b52647f22bf0da8cded4b2974a51899eaac799797017ed8534f14bc2d2d339a14fa5ef387ae4528b7d9a5d31920bb0c71b09ca34f58e5081e768e2bbf
+Size (xcb-util-keysyms-0.4.1.tar.xz) = 259860 bytes
