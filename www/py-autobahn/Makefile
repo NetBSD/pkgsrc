@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2022/01/05 15:41:29 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2022/10/19 13:56:34 nia Exp $
 
 DISTNAME=	autobahn-20.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ HOMEPAGE=	https://crossbar.io/autobahn/
 COMMENT=	WebSocket client and server library, WAMP real-time framework
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-cryptography>=2.7:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-nacl>=1.0.1:../../security/py-nacl
 DEPENDS+=	${PYPKGPREFIX}-six>=1.11.0:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-txaio>=18.8.1:../../devel/py-txaio
@@ -29,4 +28,6 @@ post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} wamp wamp-${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
+PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

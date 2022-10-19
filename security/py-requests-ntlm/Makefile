@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/07/08 14:47:14 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2022/10/19 13:56:33 nia Exp $
 
 DISTNAME=	requests_ntlm-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -13,11 +13,12 @@ LICENSE=	isc
 
 DEPENDS+=	${PYPKGPREFIX}-ntlm-auth>=1.0.2:../../security/py-ntlm-auth
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.0.0:../../devel/py-requests
-DEPENDS+=	${PYPKGPREFIX}-cryptography-[0-9]*:../../security/py-cryptography
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
+PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
