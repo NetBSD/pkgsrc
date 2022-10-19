@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2022/10/12 07:40:42 adam Exp $
+# $NetBSD: Makefile,v 1.80 2022/10/19 13:56:32 nia Exp $
 
 DISTNAME=	dns_lexicon-3.11.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/dns_//}
@@ -11,7 +11,6 @@ COMMENT=	Manipulate DNS records on various DNS providers
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4>=4:../../www/py-beautifulsoup4
-DEPENDS+=	${PYPKGPREFIX}-cryptography>=2:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-requests>=2:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-tldextract>=2:../../net/py-tldextract
 DEPENDS+=	${PYPKGPREFIX}-yaml>=5:../../textproc/py-yaml
@@ -32,4 +31,6 @@ do-test:
 	cd ${WRKSRC}/lexicon && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests/test_*
 
 .include "../../lang/python/egg.mk"
+PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

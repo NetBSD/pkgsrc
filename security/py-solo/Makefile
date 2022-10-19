@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/12/14 09:26:36 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2022/10/19 13:56:33 nia Exp $
 
 GITHUB_PROJECT=	solo-python
 GITHUB_TAG=	0.0.26
@@ -22,7 +22,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-flit>=0:../../devel/py-flit
 TOOL_DEPENDS+=	${PYPKGPREFIX}-pip>=0:../../devel/py-pip
 
 DEPENDS+=	${PYPKGPREFIX}-click>=7.0:../../devel/py-click
-DEPENDS+=	${PYPKGPREFIX}-cryptography>=0:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-fido2>=0.8:../../security/py-fido2
 DEPENDS+=	${PYPKGPREFIX}-intelhex>=0:../../devel/py-intelhex
 DEPENDS+=	${PYPKGPREFIX}-requests>=0:../../devel/py-requests
@@ -57,4 +56,6 @@ do-test:;
 
 PY_PATCHPLIST=	yes
 .include "../../lang/python/extension.mk"
+PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
