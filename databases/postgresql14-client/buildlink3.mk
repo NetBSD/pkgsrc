@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2022/06/28 11:31:36 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2022/10/19 08:09:40 adam Exp $
 
 BUILDLINK_TREE+=	postgresql14-client
 
@@ -10,8 +10,15 @@ BUILDLINK_ABI_DEPENDS.postgresql14-client+=	postgresql14-client>=14.4nb1
 BUILDLINK_PKGSRCDIR.postgresql14-client?=	../../databases/postgresql14-client
 
 # This variable contains the libraries need to link most clients.
-BUILDLINK_LDADD.postgresql14-client=	-lpq ${BUILDLINK_LDADD.gettext}
+BUILDLINK_LDADD.postgresql14-client+=	-lpq ${BUILDLINK_LDADD.gettext}
 BUILDLINK_FILES.postgresql14-client+=	bin/pg_config
+
+pkgbase := postgresql14-client
+.include "../../mk/pkg-build-options.mk"
+
+.if ${PKG_BUILD_OPTIONS.postgresql14-client:Mlz4}
+.include "../../archivers/lz4/buildlink3.mk"
+.endif
 
 .include "../../mk/bsd.fast.prefs.mk"
 .if ${OPSYS} == "SunOS"
