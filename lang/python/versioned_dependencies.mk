@@ -1,4 +1,4 @@
-# $NetBSD: versioned_dependencies.mk,v 1.86 2022/09/11 18:10:43 wiz Exp $
+# $NetBSD: versioned_dependencies.mk,v 1.87 2022/10/19 13:37:21 nia Exp $
 #
 # This file determines which separate distribution of a Python
 # package is used as dependency, depending on the Python version
@@ -49,7 +49,11 @@ _PKG_MATCHED=	no
 pkg:=	${pattern:C/:.*//}
 type:=	${pattern:C/[^:]*//}
 .  for name py2dir py3dir in ${_SUPPORTED_PACKAGES}
-.    if "${pkg}" == "${name}"
+.    if "${pkg}" == "cryptography"
+# Special due to Rust handling.
+_PKG_MATCHED=	yes
+.      include "../../security/py-cryptography/dependency.mk"
+.    elif "${pkg}" == "${name}"
 _PKG_MATCHED=	yes
 .      if ${_PYTHON_VERSION} == 27
 dir:=	${py2dir}
