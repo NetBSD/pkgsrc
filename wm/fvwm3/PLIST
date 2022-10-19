@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2021/08/20 18:08:13 nia Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/10/19 03:40:37 gutteridge Exp $
 bin/FvwmCommand
 bin/fvwm-config
 bin/fvwm-convert-2.6
@@ -49,6 +49,11 @@ man/man1/fvwm-menu-xlock.1
 man/man1/fvwm-perllib.1
 man/man1/fvwm-root.1
 man/man1/fvwm3.1
+man/man1/fvwm3_manpage_source.1
+man/man1/fvwm3all.1
+man/man1/fvwm3commands.1
+man/man1/fvwm3menus.1
+man/man1/fvwm3styles.1
 share/fvwm3/ConfigFvwmBacker
 share/fvwm3/ConfigFvwmButtons
 share/fvwm3/ConfigFvwmDefaults
