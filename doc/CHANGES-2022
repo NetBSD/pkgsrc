@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5105 2022/10/19 09:42:52 pin Exp $
+$NetBSD: CHANGES-2022,v 1.5106 2022/10/19 10:29:01 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7736,3 +7736,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/xcb-util-renderutil to 0.3.10 [wiz 2022-10-19]
 	Updated x11/xcb-util-wm to 0.4.2 [wiz 2022-10-19]
 	Updated shells/nushell to 0.70.0 [pin 2022-10-19]
+	Updated devel/mob to 4.0.0 [schmonz 2022-10-19]
