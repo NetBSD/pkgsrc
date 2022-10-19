@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.15 2022/05/26 08:44:11 adam Exp $
+$NetBSD: distinfo,v 1.16 2022/10/19 08:10:12 adam Exp $
 
-BLAKE2s (repmgr-5.3.2.tar.gz) = 5b4a6f76fb2a2f765919220a9162167fda13eb6f2ff5dd9b2e266fa8628141aa
-SHA512 (repmgr-5.3.2.tar.gz) = 803f94ea99454f59cd753db4a8f64066f3988e347b5b8e3de08b941c09ac9128ba48beeecaface7a729b0b4f296ccb4470c18128fdd6c2e418e8e3fbbefcda1e
-Size (repmgr-5.3.2.tar.gz) = 456455 bytes
-SHA1 (patch-Makefile.in) = 9f9a41e4366bc8f7246eaef707ff33127659c777
+BLAKE2s (repmgr-5.3.3.tar.gz) = 2523c0cff8e3a2c3a3b0ebc0f6c16786e4c2060595aa6db40fd38dd5420ffb46
+SHA512 (repmgr-5.3.3.tar.gz) = 938eabd6a73296e657c199878050a7fac82285da9613d0fff861e969865a4c3725a13b548e84a17ee035ef536a738b67411b9c93fdafd8698bb76844f0834d15
+Size (repmgr-5.3.3.tar.gz) = 456931 bytes
+SHA1 (patch-Makefile.in) = 0d506e0ec234cd19a693aaf710a6a8eec3fe4c67
