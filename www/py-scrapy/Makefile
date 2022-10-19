@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2022/10/19 13:56:34 nia Exp $
+# $NetBSD: Makefile,v 1.16 2022/10/19 14:25:20 nia Exp $
 
 DISTNAME=	Scrapy-2.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -11,7 +11,6 @@ HOMEPAGE=	https://scrapy.org/
 COMMENT=	High-level Web Crawling and Web Scraping framework
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=16.2.0:../../security/py-OpenSSL
 DEPENDS+=	${PYPKGPREFIX}-ZopeInterface>=4.1.3:../../devel/py-ZopeInterface
 DEPENDS+=	${PYPKGPREFIX}-cssselect>=0.9.1:../../textproc/py-cssselect
 DEPENDS+=	${PYPKGPREFIX}-itemloaders>=1.0.1:../../textproc/py-itemloaders
@@ -37,5 +36,6 @@ post-install:
 
 .include "../../lang/python/egg.mk"
 PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
+PYTHON_VERSIONED_DEPENDENCIES+=	OpenSSL
 .include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

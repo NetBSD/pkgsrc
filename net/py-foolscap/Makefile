@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2022/09/11 16:49:01 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2022/10/19 14:25:18 nia Exp $
 
 DISTNAME=	foolscap-21.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,6 @@ HOMEPAGE=	https://foolscap.lothar.com/trac
 COMMENT=	RPC protocol for Twisted
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=0.6:../../security/py-OpenSSL
 DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 DEPENDS+=	${PYPKGPREFIX}-ZopeInterface>=3.6.1:../../devel/py-ZopeInterface
 
@@ -35,4 +34,6 @@ post-install:
 		${DESTDIR}${PREFIX}/share/doc/py-foolscap
 
 .include "../../lang/python/egg.mk"
+PYTHON_VERSIONED_DEPENDENCIES+=	OpenSSL
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

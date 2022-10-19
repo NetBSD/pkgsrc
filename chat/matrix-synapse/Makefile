@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2022/10/06 13:57:53 gdt Exp $
+# $NetBSD: Makefile,v 1.62 2022/10/19 14:25:18 nia Exp $
 
 DISTNAME=	matrix-synapse-1.67.0
 CATEGORIES=	chat
@@ -35,7 +35,6 @@ DEPENDS+=	${PYPKGPREFIX}-matrix-common>=1.2.0:../../chat/py-matrix-common
 DEPENDS+=	${PYPKGPREFIX}-msgpack>=0.5.2:../../devel/py-msgpack
 DEPENDS+=	${PYPKGPREFIX}-nacl>=1.2.1:../../security/py-nacl
 DEPENDS+=	${PYPKGPREFIX}-netaddr>=0.7.18:../../net/py-netaddr
-DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=16.0.0:../../security/py-OpenSSL
 DEPENDS+=	${PYPKGPREFIX}-phonenumbers>=8.2.0:../../textproc/py-phonenumbers
 DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-prometheus_client>=0.4.0:../../net/py-prometheus_client
@@ -108,4 +107,6 @@ do-test:
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/wheel.mk"
+PYTHON_VERSIONED_DEPENDENCIES+=	OpenSSL
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
