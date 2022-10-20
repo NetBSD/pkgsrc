@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2022/10/18 01:17:53 schmonz Exp $
+# $NetBSD: Makefile,v 1.10 2022/10/20 19:13:41 schmonz Exp $
 
 DISTNAME=	vpnc-script-20220917
 CATEGORIES=	net security
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITLAB:=openconnect/vpnc-scripts/-/raw/fc87e112/}
 DIST_SUBDIR=	${PKGNAME_NOREV}
 DISTFILES=	vpnc-script
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	schmonz@NetBSD.org
 HOMEPAGE=	http://www.infradead.org/openconnect/vpnc-script.html
 COMMENT=	Improved config script for OpenConnect and vpnc
 LICENSE=	gnu-gpl-v2
