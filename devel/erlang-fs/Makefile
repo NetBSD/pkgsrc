@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2022/10/15 17:42:05 triaxx Exp $
+# $NetBSD: Makefile,v 1.5 2022/10/20 03:57:33 triaxx Exp $
 
-DISTNAME=	fs-6.1
+DISTNAME=	fs-8.6.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=synrc/}
+GITHUB_TAG=	73784d45ed0547e730ffb8907f1e0b2378f440a0
 
 HOMEPAGE=	https://synrc.github.io/fs/
 COMMENT=	Native Filesystem Listeners
@@ -12,6 +13,13 @@ GITHUB_PROJECT=	fs
 
 BUILD_DEPENDS+=	rebar3-[0-9]*:../../devel/rebar3
 REBAR=		${PREFIX}/bin/rebar3
+
+.include "../../mk/bsd.prefs.mk"
+
+PLIST_VARS+=	macos
+.if ${OPSYS} == "Darwin"
+PLIST.macos=	yes
+.endif
 
 post-extract:
 	${RM} -f ${WRKSRC}/priv/inotifywait.exe
