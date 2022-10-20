@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.986 2022/10/15 07:14:26 pin Exp $
+# $NetBSD: Makefile,v 1.987 2022/10/20 11:01:17 nros Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -538,8 +538,6 @@ SUBDIR+=	py-wand
 SUBDIR+=	py-wcag-contrast-ratio
 SUBDIR+=	qimageblitz
 SUBDIR+=	qiv
-SUBDIR+=	qore-glut-module
-SUBDIR+=	qore-opengl-module
 SUBDIR+=	qr-code-generator
 SUBDIR+=	qr-code-generator16
 SUBDIR+=	qrrs
