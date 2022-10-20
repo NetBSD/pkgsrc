@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.113 2022/09/05 15:55:42 riastradh Exp $
+# $NetBSD: Makefile,v 1.114 2022/10/20 00:30:46 gutteridge Exp $
 
 DISTNAME=	openbox-3.6.1
-PKGREVISION=	20
+PKGREVISION=	21
 CATEGORIES=	wm x11
 MASTER_SITES=	http://openbox.org/dist/openbox/
 
@@ -10,6 +10,7 @@ HOMEPAGE=	http://openbox.org/
 COMMENT=	Standards compliant, light-weight, and extensible window manager
 LICENSE=	gnu-gpl-v2
 
+DEPENDS+=		${PYPKGPREFIX}-xdg-[0-9]*:../../devel/py-xdg
 DEPENDS+=		vera-ttf>=1.10:../../fonts/vera-ttf
 
 GNU_CONFIGURE=		YES
