@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.67 2022/09/11 12:51:57 wiz Exp $
+# $NetBSD: Makefile,v 1.68 2022/10/20 15:49:12 nros Exp $
 
-DISTNAME=		bibletime-3.0
-PKGREVISION=		15
+DISTNAME=		bibletime-3.0.3
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_GITHUB:=bibletime/}
 GITHUB_RELEASE=		v${PKGVERSION_NOREV}
@@ -25,6 +24,11 @@ CMAKE_ARGS+=		-DBUILD_HANDBOOK_PDF=OFF
 CMAKE_ARGS+=		-DBUILD_HOWTO_PDF=OFF
 CMAKE_ARGS+=		-DBT_DOCBOOK_XSL_HTML_CHUNK_XSL:PATH="${PREFIX}/share/xsl/docbook/html/chunk.xsl"
 CMAKE_ARGS+=		-DBT_RUNTIME_DOCDIR="${PREFIX}/share/doc/bibletime"
+
+# macs need this to install correctly
+CMAKE_ARGS+=		-DBT_BINDIR:PATH=${PREFIX}/bin
+CMAKE_ARGS+=		-DBT_DATAROOTDIR:PATH=${PREFIX}/share
+CMAKE_ARGS+=		-DBT_DATADIR:PATH=${PREFIX}/share
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../misc/sword/buildlink3.mk"
