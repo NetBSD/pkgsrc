@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2022/01/27 17:39:45 nros Exp $
+# $NetBSD: Makefile,v 1.22 2022/10/20 11:35:08 nros Exp $
 
-DISTNAME=	qore-1.2
+DISTNAME=	qore-1.12.0
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=qorelanguage/}
 EXTRACT_SUFX=	.tar.bz2
@@ -11,7 +11,6 @@ MAINTAINER=	nros@NetBSD.org
 COMMENT=	Embeddable multithreaded scripting language
 HOMEPAGE=	http://www.qore.org/
 LICENSE=	gnu-gpl-v2 OR gnu-lgpl-v2.1 OR mit
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}.0
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
