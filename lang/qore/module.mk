@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.2 2016/07/20 11:58:40 nros Exp $
+# $NetBSD: module.mk,v 1.3 2022/10/20 10:14:01 nros Exp $
 #
 # This file should be included in the makefile of packages that install
 # Qore modules.
@@ -37,3 +37,6 @@ PLIST_SUBST+=QORE_MODULE_API="${qore-module-api:sh}"
 PLIST_SUBST+=QORE_MODULE_DIR="${qore-module-dir:sh:C,^${PREFIX}/,,W}"
 PLIST_SUBST+=QORE_LATEST_MODULE_API="${qore-latest-module-api:sh}"
 PLIST_SUBST+=QORE_USER_MODULE_DIR="${qore-user-module-dir:sh:C,^${PREFIX}/,,W}"
+PRINT_PLIST_AWK+= { gsub("^${qore-module-dir:sh:C,^${PREFIX}/,,W}", "$${QORE_MODULE_DIR}"); }
+PRINT_PLIST_AWK+= { gsub("^${qore-user-module-dir:sh:C,^${PREFIX}/,,W}", "$${QORE_USER_MODULE_DIR}"); }
+PRINT_PLIST_AWK+= /.*\.qmod$$/ { gsub("${qore-latest-module-api:sh}", "$${QORE_LATEST_MODULE_API}"); }
