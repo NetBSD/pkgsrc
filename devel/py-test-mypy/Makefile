@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2022/02/08 09:12:48 adam Exp $
+# $NetBSD: Makefile,v 1.4 2022/10/20 08:58:20 adam Exp $
 
-DISTNAME=	pytest-mypy-0.9.1
+DISTNAME=	pytest-mypy-0.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-mypy/}
@@ -11,8 +11,8 @@ COMMENT=	Mypy static type checker plugin for Pytest
 LICENSE=	mit
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
-DEPENDS+=	${PYPKGPREFIX}-filelock>=3.0.12:../../devel/py-filelock
-DEPENDS+=	${PYPKGPREFIX}-test>=6.0.2:../../devel/py-test
+DEPENDS+=	${PYPKGPREFIX}-filelock>=3.0:../../devel/py-filelock
+DEPENDS+=	${PYPKGPREFIX}-test>=6.2:../../devel/py-test
 DEPENDS+=	${PYPKGPREFIX}-mypy>=0.782:../../lang/py-mypy
 
 USE_LANGUAGES=	# none
