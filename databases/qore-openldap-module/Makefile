@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2022/01/27 17:52:03 nros Exp $
+# $NetBSD: Makefile,v 1.11 2022/10/20 12:11:51 nros Exp $
 
 DISTNAME=	qore-openldap-module-1.2
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=qorelanguage/}
 EXTRACT_SUFX=	.tar.bz2
