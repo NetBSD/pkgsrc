@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5120 2022/10/20 09:13:24 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5121 2022/10/20 11:07:12 nros Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7762,3 +7762,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-progressbar2 to 4.1.1 [adam 2022-10-20]
 	Updated devel/py-anyio to 3.6.2 [adam 2022-10-20]
 	Updated graphics/py-matplotlib-inline to 0.1.6 [adam 2022-10-20]
+	Removed graphics/qore-glut-module [nros 2022-10-20]
+	Removed graphics/qore-opengl-module [nros 2022-10-20]
