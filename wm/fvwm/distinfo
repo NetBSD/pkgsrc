@@ -1,7 +1,10 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 11:25:13 nia Exp $
+$NetBSD: distinfo,v 1.10 2022/10/20 00:39:50 gutteridge Exp $
 
 BLAKE2s (fvwm-2.6.9.tar.gz) = 59e97f514d9192e4d8c6de287ab63a78ba6f742dfbce87597f26f6f5cf642915
 SHA512 (fvwm-2.6.9.tar.gz) = a9c2214ad19edd17da81446a6d4250284cc50b59b53c233212f2a9354c01143dbb870521392752f272f00af50bee2dd8f0b6bf6176b0d4b3075694d2a61a623e
 Size (fvwm-2.6.9.tar.gz) = 3942859 bytes
 SHA1 (patch-ab) = d9e960ed7be624a36af5a8a3ad4422f4ed4ce64e
+SHA1 (patch-fvwm_events.c) = effd8fd31a3c1f28a3e71dbcb9569621d996cc31
 SHA1 (patch-fvwm_fvwm-reproducible.c) = 96515959482750a25bfe59e9a370d0ef0295bc89
+SHA1 (patch-libs_FEvent.c) = 358243d198251c6ea0bf546e31a94cb089355e45
+SHA1 (patch-libs_FEvent.h) = 0dae96a21839945ac9627269608aa1bbafaa8d65
