@@ -1,4 +1,4 @@
-$NetBSD: patch-pixman_pixman-vmx.c,v 1.3 2022/10/19 17:14:32 he Exp $
+$NetBSD: patch-pixman_pixman-vmx.c,v 1.4 2022/10/20 09:35:15 jperkin Exp $
 
 Add a fix so that this builds on NetBSD/powerpc.  Otherwise we get
 pixman-vmx.c:2936:5: error: subscripted value is neither array nor pointer
@@ -7,9 +7,8 @@ vector registers from single 32-bit ints.
 
 https://gitlab.freedesktop.org/pixman/pixman/-/merge_requests/64/
 
---- pixman/pixman-vmx.c.orig	2016-01-04 09:13:54.000000000 +0000
+--- pixman/pixman-vmx.c.orig	2021-03-01 13:49:17.000000000 +0000
 +++ pixman/pixman-vmx.c
-@@ -2913,32 +2913,29 @@ scaled_nearest_scanline_vmx_8888_8888_OV
 @@ -292,7 +292,9 @@ create_mask_1x32_128 (const uint32_t *sr
  static force_inline vector unsigned int
  create_mask_32_128 (uint32_t mask)
