@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/01/27 19:18:12 nros Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/10/20 11:43:03 nros Exp $
 bin/soaputil
 bin/webdav-server
 ${QORE_MODULE_DIR}/xml-api-${QORE_LATEST_MODULE_API}.qmod
@@ -50,7 +50,6 @@ share/doc/qore-xml-module/SalesforceSoapClient/html/navtree.js
 share/doc/qore-xml-module/SalesforceSoapClient/html/navtreedata.js
 share/doc/qore-xml-module/SalesforceSoapClient/html/navtreeindex0.js
 share/doc/qore-xml-module/SalesforceSoapClient/html/open.png
-share/doc/qore-xml-module/SalesforceSoapClient/html/pages.html
 share/doc/qore-xml-module/SalesforceSoapClient/html/qore-logo-55x200.png
 share/doc/qore-xml-module/SalesforceSoapClient/html/resize.js
 share/doc/qore-xml-module/SalesforceSoapClient/html/search/all_0.html
@@ -176,8 +175,6 @@ share/doc/qore-xml-module/SalesforceSoapClient/html/search/namespaces_3.js
 share/doc/qore-xml-module/SalesforceSoapClient/html/search/nomatches.html
 share/doc/qore-xml-module/SalesforceSoapClient/html/search/pages_0.html
 share/doc/qore-xml-module/SalesforceSoapClient/html/search/pages_0.js
-share/doc/qore-xml-module/SalesforceSoapClient/html/search/pages_1.html
-share/doc/qore-xml-module/SalesforceSoapClient/html/search/pages_1.js
 share/doc/qore-xml-module/SalesforceSoapClient/html/search/search.css
 share/doc/qore-xml-module/SalesforceSoapClient/html/search/search.js
 share/doc/qore-xml-module/SalesforceSoapClient/html/search/search_l.png
@@ -273,7 +270,6 @@ share/doc/qore-xml-module/SoapClient/html/navtree.js
 share/doc/qore-xml-module/SoapClient/html/navtreedata.js
 share/doc/qore-xml-module/SoapClient/html/navtreeindex0.js
 share/doc/qore-xml-module/SoapClient/html/open.png
-share/doc/qore-xml-module/SoapClient/html/pages.html
 share/doc/qore-xml-module/SoapClient/html/qore-logo-55x200.png
 share/doc/qore-xml-module/SoapClient/html/resize.js
 share/doc/qore-xml-module/SoapClient/html/search/all_0.html
@@ -399,8 +395,6 @@ share/doc/qore-xml-module/SoapClient/html/search/namespaces_3.js
 share/doc/qore-xml-module/SoapClient/html/search/nomatches.html
 share/doc/qore-xml-module/SoapClient/html/search/pages_0.html
 share/doc/qore-xml-module/SoapClient/html/search/pages_0.js
-share/doc/qore-xml-module/SoapClient/html/search/pages_1.html
-share/doc/qore-xml-module/SoapClient/html/search/pages_1.js
 share/doc/qore-xml-module/SoapClient/html/search/search.css
 share/doc/qore-xml-module/SoapClient/html/search/search.js
 share/doc/qore-xml-module/SoapClient/html/search/search_l.png
@@ -507,7 +501,6 @@ share/doc/qore-xml-module/SoapDataProvider/html/navtree.js
 share/doc/qore-xml-module/SoapDataProvider/html/navtreedata.js
 share/doc/qore-xml-module/SoapDataProvider/html/navtreeindex0.js
 share/doc/qore-xml-module/SoapDataProvider/html/open.png
-share/doc/qore-xml-module/SoapDataProvider/html/pages.html
 share/doc/qore-xml-module/SoapDataProvider/html/qore-logo-55x200.png
 share/doc/qore-xml-module/SoapDataProvider/html/resize.js
 share/doc/qore-xml-module/SoapDataProvider/html/search/all_0.html
@@ -633,8 +626,6 @@ share/doc/qore-xml-module/SoapDataProvider/html/search/namespaces_3.js
 share/doc/qore-xml-module/SoapDataProvider/html/search/nomatches.html
 share/doc/qore-xml-module/SoapDataProvider/html/search/pages_0.html
 share/doc/qore-xml-module/SoapDataProvider/html/search/pages_0.js
-share/doc/qore-xml-module/SoapDataProvider/html/search/pages_1.html
-share/doc/qore-xml-module/SoapDataProvider/html/search/pages_1.js
 share/doc/qore-xml-module/SoapDataProvider/html/search/search.css
 share/doc/qore-xml-module/SoapDataProvider/html/search/search.js
 share/doc/qore-xml-module/SoapDataProvider/html/search/search_l.png
@@ -727,7 +718,6 @@ share/doc/qore-xml-module/SoapHandler/html/navtree.js
 share/doc/qore-xml-module/SoapHandler/html/navtreedata.js
 share/doc/qore-xml-module/SoapHandler/html/navtreeindex0.js
 share/doc/qore-xml-module/SoapHandler/html/open.png
-share/doc/qore-xml-module/SoapHandler/html/pages.html
 share/doc/qore-xml-module/SoapHandler/html/qore-logo-55x200.png
 share/doc/qore-xml-module/SoapHandler/html/resize.js
 share/doc/qore-xml-module/SoapHandler/html/search/all_0.html
@@ -833,8 +823,6 @@ share/doc/qore-xml-module/SoapHandler/html/search/namespaces_2.js
 share/doc/qore-xml-module/SoapHandler/html/search/nomatches.html
 share/doc/qore-xml-module/SoapHandler/html/search/pages_0.html
 share/doc/qore-xml-module/SoapHandler/html/search/pages_0.js
-share/doc/qore-xml-module/SoapHandler/html/search/pages_1.html
-share/doc/qore-xml-module/SoapHandler/html/search/pages_1.js
 share/doc/qore-xml-module/SoapHandler/html/search/search.css
 share/doc/qore-xml-module/SoapHandler/html/search/search.js
 share/doc/qore-xml-module/SoapHandler/html/search/search_l.png
@@ -1038,7 +1026,6 @@ share/doc/qore-xml-module/WSDL/html/navtree.js
 share/doc/qore-xml-module/WSDL/html/navtreedata.js
 share/doc/qore-xml-module/WSDL/html/navtreeindex0.js
 share/doc/qore-xml-module/WSDL/html/open.png
-share/doc/qore-xml-module/WSDL/html/pages.html
 share/doc/qore-xml-module/WSDL/html/qore-logo-55x200.png
 share/doc/qore-xml-module/WSDL/html/resize.js
 share/doc/qore-xml-module/WSDL/html/search/all_0.html
@@ -1162,8 +1149,6 @@ share/doc/qore-xml-module/WSDL/html/search/namespaces_2.js
 share/doc/qore-xml-module/WSDL/html/search/nomatches.html
 share/doc/qore-xml-module/WSDL/html/search/pages_0.html
 share/doc/qore-xml-module/WSDL/html/search/pages_0.js
-share/doc/qore-xml-module/WSDL/html/search/pages_1.html
-share/doc/qore-xml-module/WSDL/html/search/pages_1.js
 share/doc/qore-xml-module/WSDL/html/search/search.css
 share/doc/qore-xml-module/WSDL/html/search/search.js
 share/doc/qore-xml-module/WSDL/html/search/search_l.png
@@ -1288,7 +1273,6 @@ share/doc/qore-xml-module/WebDavHandler/html/navtree.js
 share/doc/qore-xml-module/WebDavHandler/html/navtreedata.js
 share/doc/qore-xml-module/WebDavHandler/html/navtreeindex0.js
 share/doc/qore-xml-module/WebDavHandler/html/open.png
-share/doc/qore-xml-module/WebDavHandler/html/pages.html
 share/doc/qore-xml-module/WebDavHandler/html/qore-logo-55x200.png
 share/doc/qore-xml-module/WebDavHandler/html/resize.js
 share/doc/qore-xml-module/WebDavHandler/html/search/all_0.html
@@ -1414,8 +1398,6 @@ share/doc/qore-xml-module/WebDavHandler/html/search/namespaces_2.js
 share/doc/qore-xml-module/WebDavHandler/html/search/nomatches.html
 share/doc/qore-xml-module/WebDavHandler/html/search/pages_0.html
 share/doc/qore-xml-module/WebDavHandler/html/search/pages_0.js
-share/doc/qore-xml-module/WebDavHandler/html/search/pages_1.html
-share/doc/qore-xml-module/WebDavHandler/html/search/pages_1.js
 share/doc/qore-xml-module/WebDavHandler/html/search/search.css
 share/doc/qore-xml-module/WebDavHandler/html/search/search.js
 share/doc/qore-xml-module/WebDavHandler/html/search/search_l.png
@@ -1508,7 +1490,6 @@ share/doc/qore-xml-module/XmlRpcConnection/html/navtree.js
 share/doc/qore-xml-module/XmlRpcConnection/html/navtreedata.js
 share/doc/qore-xml-module/XmlRpcConnection/html/navtreeindex0.js
 share/doc/qore-xml-module/XmlRpcConnection/html/open.png
-share/doc/qore-xml-module/XmlRpcConnection/html/pages.html
 share/doc/qore-xml-module/XmlRpcConnection/html/qore-logo-55x200.png
 share/doc/qore-xml-module/XmlRpcConnection/html/resize.js
 share/doc/qore-xml-module/XmlRpcConnection/html/search/all_0.html
@@ -1680,7 +1661,6 @@ share/doc/qore-xml-module/XmlRpcHandler/html/navtree.js
 share/doc/qore-xml-module/XmlRpcHandler/html/navtreedata.js
 share/doc/qore-xml-module/XmlRpcHandler/html/navtreeindex0.js
 share/doc/qore-xml-module/XmlRpcHandler/html/open.png
-share/doc/qore-xml-module/XmlRpcHandler/html/pages.html
 share/doc/qore-xml-module/XmlRpcHandler/html/qore-logo-55x200.png
 share/doc/qore-xml-module/XmlRpcHandler/html/resize.js
 share/doc/qore-xml-module/XmlRpcHandler/html/search/all_0.html
@@ -2009,8 +1989,6 @@ share/doc/qore-xml-module/xml/html/search/pages_0.html
 share/doc/qore-xml-module/xml/html/search/pages_0.js
 share/doc/qore-xml-module/xml/html/search/pages_1.html
 share/doc/qore-xml-module/xml/html/search/pages_1.js
-share/doc/qore-xml-module/xml/html/search/pages_2.html
-share/doc/qore-xml-module/xml/html/search/pages_2.js
 share/doc/qore-xml-module/xml/html/search/search.css
 share/doc/qore-xml-module/xml/html/search/search.js
 share/doc/qore-xml-module/xml/html/search/search_l.png
@@ -2035,7 +2013,6 @@ share/doc/qore-xml-module/xml/html/tab_b.png
 share/doc/qore-xml-module/xml/html/tab_h.png
 share/doc/qore-xml-module/xml/html/tab_s.png
 share/doc/qore-xml-module/xml/html/tabs.css
-share/doc/qore-xml-module/xml/html/xml_generation_opts.html
 ${QORE_USER_MODULE_DIR}/SalesforceSoapClient.qm
 ${QORE_USER_MODULE_DIR}/SoapClient.qm
 ${QORE_USER_MODULE_DIR}/SoapDataProvider/SoapDataProvider.qc
