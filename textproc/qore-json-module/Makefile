@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2022/01/27 19:14:31 nros Exp $
+# $NetBSD: Makefile,v 1.11 2022/10/20 11:39:41 nros Exp $
 
-DISTNAME=	qore-json-module-1.8
+DISTNAME=	qore-json-module-1.8.1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=qorelanguage/}
 EXTRACT_SUFX=	.tar.bz2
