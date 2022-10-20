@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2022/10/15 17:42:05 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/10/20 03:57:33 triaxx Exp $
 lib/erlang/lib/fs-${PKGVERSION}/ebin/fs.app
 lib/erlang/lib/fs-${PKGVERSION}/ebin/fs.beam
 lib/erlang/lib/fs-${PKGVERSION}/ebin/fs_app.beam
@@ -10,4 +10,4 @@ lib/erlang/lib/fs-${PKGVERSION}/ebin/inotifywait.beam
 lib/erlang/lib/fs-${PKGVERSION}/ebin/inotifywait_win32.beam
 lib/erlang/lib/fs-${PKGVERSION}/ebin/kqueue.beam
 lib/erlang/lib/fs-${PKGVERSION}/include/api.hrl
-lib/erlang/lib/fs-${PKGVERSION}/priv/mac_listener
+${PLIST.macos}lib/erlang/lib/fs-${PKGVERSION}/priv/mac_listener
