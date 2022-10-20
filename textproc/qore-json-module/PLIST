@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/01/27 19:14:31 nros Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/10/20 11:39:41 nros Exp $
 ${QORE_MODULE_DIR}/json-api-${QORE_LATEST_MODULE_API}.qmod
 share/doc/qore-json-module/COPYING.LGPL
 share/doc/qore-json-module/COPYING.MIT
@@ -7,9 +7,6 @@ share/doc/qore-json-module/JsonRpcConnection/html/annotated.html
 share/doc/qore-json-module/JsonRpcConnection/html/annotated_dup.js
 share/doc/qore-json-module/JsonRpcConnection/html/bc_s.png
 share/doc/qore-json-module/JsonRpcConnection/html/bdwn.png
-share/doc/qore-json-module/JsonRpcConnection/html/class_json_rpc_connection_1_1_json_rpc_connection-members.html
-share/doc/qore-json-module/JsonRpcConnection/html/class_json_rpc_connection_1_1_json_rpc_connection.html
-share/doc/qore-json-module/JsonRpcConnection/html/class_json_rpc_connection_1_1_json_rpc_connection.js
 share/doc/qore-json-module/JsonRpcConnection/html/classes.html
 share/doc/qore-json-module/JsonRpcConnection/html/closed.png
 share/doc/qore-json-module/JsonRpcConnection/html/dir_1935124a1d355a6bc0fee3e0733e48ca.html
@@ -104,7 +101,6 @@ share/doc/qore-json-module/JsonRpcHandler/html/annotated.html
 share/doc/qore-json-module/JsonRpcHandler/html/annotated_dup.js
 share/doc/qore-json-module/JsonRpcHandler/html/bc_s.png
 share/doc/qore-json-module/JsonRpcHandler/html/bdwn.png
-share/doc/qore-json-module/JsonRpcHandler/html/class_json_rpc_handler_1_1_json_rpc_handler-members.html
 share/doc/qore-json-module/JsonRpcHandler/html/class_json_rpc_handler_1_1_json_rpc_handler.html
 share/doc/qore-json-module/JsonRpcHandler/html/class_json_rpc_handler_1_1_json_rpc_handler.js
 share/doc/qore-json-module/JsonRpcHandler/html/classes.html
