@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2022/10/19 18:00:02 nros Exp $
+# $NetBSD: Makefile,v 1.19 2022/10/20 12:38:56 adam Exp $
 
 DISTNAME=	gtk-4.8.1
 PKGNAME=	${DISTNAME:S/gtk/gtk4/}
@@ -21,8 +21,8 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "options.mk"
 
-USE_TOOLS+=		pkg-config gdbus-codegen
-USE_LANGUAGES=		c c++
+USE_TOOLS+=	gdbus-codegen msgfmt msgmerge pkg-config xgettext
+USE_LANGUAGES=	c c++
 
 MESON_ARGS+=		-Dgtk_doc=false
 # needs gstreamer-gl
