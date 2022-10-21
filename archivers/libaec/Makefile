@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2019/04/29 15:51:23 bacon Exp $
+# $NetBSD: Makefile,v 1.2 2022/10/21 12:55:31 adam Exp $
 
-DISTNAME=	libaec-1.0.4
+DISTNAME=	libaec-1.0.6
 CATEGORIES=	archivers
-MASTER_SITES=	https://gitlab.dkrz.de/k202009/libaec/uploads/ea0b7d197a950b0c110da8dfdecbb71f/
+MASTER_SITES=	https://gitlab.dkrz.de/k202009/libaec/uploads/45b10e42123edd26ab7b3ad92bcf7be2/
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://gitlab.dkrz.de/k202009/libaec
