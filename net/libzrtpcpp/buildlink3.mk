@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.30 2022/04/18 19:10:03 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.31 2022/10/21 16:10:37 nros Exp $
 
 BUILDLINK_TREE+=	libzrtpcpp
 
@@ -6,13 +6,13 @@ BUILDLINK_TREE+=	libzrtpcpp
 LIBZRTPCPP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libzrtpcpp+=	libzrtpcpp>=4.4.0
-BUILDLINK_ABI_DEPENDS.libzrtpcpp?=	libzrtpcpp>=4.4.0nb26
+BUILDLINK_ABI_DEPENDS.libzrtpcpp?=	libzrtpcpp>=4.7.0
 BUILDLINK_PKGSRCDIR.libzrtpcpp?=	../../net/libzrtpcpp
 
 pkgbase := libzrtpcpp
 .include "../../mk/pkg-build-options.mk"
 
-.if !empty(PKG_BUILD_OPTIONS.libzrtpcpp:Msqlite3)
+.if ${PKG_BUILD_OPTIONS.libzrtpcpp:Msqlite3}
 .include "../../databases/sqlite3/buildlink3.mk"
 .endif
 

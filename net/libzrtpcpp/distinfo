@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:05:57 nia Exp $
+$NetBSD: distinfo,v 1.9 2022/10/21 16:10:37 nros Exp $
 
-BLAKE2s (libzrtpcpp/V4.4.0.tar.gz) = 6be8b9adacc5b69a7d1d8f93e875c0cd55d995165e512bcebfddea52c2b1af5f
-SHA512 (libzrtpcpp/V4.4.0.tar.gz) = 56cc44cf05a505b6d62043f4ee621bc00fd38d1b0f27f9d21ed6169aae3d08f948cf2af91f8a094f24db82080fc9c553aa50c34d06926b68cd767f258454c204
-Size (libzrtpcpp/V4.4.0.tar.gz) = 1933037 bytes
-SHA1 (patch-CMakeLists.txt) = 1c56d64b67a381cda790bbdab3892f3be408231f
+BLAKE2s (libzrtpcpp-4.7.0.tar.gz) = 5c3d4fb9aed62b3a368aeed5ace6fa8c047177b68979e42dbde4c2a619186bc7
+SHA512 (libzrtpcpp-4.7.0.tar.gz) = 7ea7458edf06944c5248973ece871af7a44319935fb7e761ffee256c83ca6feeb887c108ed7193563a7cd2be29b79657e659c69c46bc3a27b94b4eb4c664fac4
+Size (libzrtpcpp-4.7.0.tar.gz) = 2235691 bytes
+SHA1 (patch-CMakeLists.txt) = 96540d42cd0ff7cbf837d337fb62a0ca0deccdc2
+SHA1 (patch-cryptcommon_ZrtpRandom.h) = e0724c674ce528afd1803585268ce92be0488101
