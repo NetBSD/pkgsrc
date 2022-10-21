@@ -1,25 +1,16 @@
-$NetBSD: patch-CMakeLists.txt,v 1.3 2015/04/18 03:36:23 rodent Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.4 2022/10/21 16:10:37 nros Exp $
 
-Don't set LIB_SUFFIX for pkgsrc. LIBDIRNAME is set via CMAKE_ARGS.
+* respect LIB_SUFFIX set to an empty string, so
+  that LIB_SUFFIX can be set to nothing for pkgsrc
 
---- CMakeLists.txt.orig	2015-03-29 10:38:44.000000000 +0000
+--- CMakeLists.txt.orig	2022-10-20 16:44:38.408278688 +0000
 +++ CMakeLists.txt
-@@ -85,18 +85,6 @@ include(CheckLibraryExists)
+@@ -101,7 +101,7 @@ include(CheckLibraryExists)
  include(CheckIncludeFiles)
  include(CheckFunctionExists)
  
 -if (NOT LIB_SUFFIX)
--    set(LIBDIRNAME "lib")
--    # this caused problems in debian where it has to always be lib....
--    if (NOT EXISTS /etc/debian_version)
--        if ( "${CMAKE_SYSTEM_PROCESSOR}" STREQUAL "x86_64" )
--            set(LIBDIRNAME "lib64")
--        endif()
--    endif()
--else()
--    set(LIBDIRNAME "lib${LIB_SUFFIX}")
--endif()
--
- MESSAGE(STATUS "Configuring GNU ${PROJECT_NAME} ${VERSION} for ${PACKAGE}, commit: ${GIT_COMMIT} ...")
- 
- 
++if (NOT DEFINED LIB_SUFFIX)
+     set(LIBDIRNAME "lib")
+     # this caused problems in debian where it has to always be lib....
+     if (NOT EXISTS /etc/debian_version)
