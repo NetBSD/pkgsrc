@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.1 2022/07/03 12:36:06 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2022/10/21 17:48:13 adam Exp $
 
-DISTNAME=	exceptiongroup-1.0.0rc8
+DISTNAME=	exceptiongroup-1.0.0rc9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/exceptiongroup/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://pypi.org/project/exceptiongroup/
+HOMEPAGE=	https://github.com/agronholm/exceptiongroup
 COMMENT=	Backport of PEP 654 (exception groups)
 LICENSE=	mit
 
