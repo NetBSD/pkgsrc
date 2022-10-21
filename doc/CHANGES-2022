@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5130 2022/10/21 09:05:39 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5131 2022/10/21 09:32:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7777,3 +7777,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/imake to 1.0.9 [wiz 2022-10-21]
 	Updated net/py-zeroconf to 0.39.2 [adam 2022-10-21]
 	Updated archivers/py-zipp to 3.9.0 [adam 2022-10-21]
+	Updated devel/py-ruamel-yaml-clib to 0.2.7 [adam 2022-10-21]
+	Updated devel/py-ipykernel to 6.16.1 [adam 2022-10-21]
