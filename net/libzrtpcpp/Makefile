@@ -1,34 +1,32 @@
-# $NetBSD: Makefile,v 1.38 2022/04/18 19:10:03 adam Exp $
+# $NetBSD: Makefile,v 1.39 2022/10/21 16:10:37 nros Exp $
 
-GITHUB_TAG=	V4.4.0
-DISTNAME=	${GITHUB_TAG}
-PKGNAME=	libzrtpcpp${DISTNAME:S/V/-/1}
-PKGREVISION=	26
+DISTNAME=	libzrtpcpp-4.7.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wernerd/}
 GITHUB_PROJECT=	ZRTPCPP
-DIST_SUBDIR=	${PKGBASE}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-#HOMEPAGE=	http://www.gnutelephony.org/index.php/GNU_ZRTP
+HOMEPAGE=	https://www.gnu.org/software/ccrtp/zrtp.html
 COMMENT=	ZRTP extension for GNU ccRTP
-LICENSE=	gnu-gpl-v3
+LICENSE=	apache-2.0
 
 WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 
-USE_PKGLOCALEDIR=	yes
-GCC_REQD+=		4.7
 USE_TOOLS+=		pkg-config
 USE_LIBTOOL=		yes
 USE_LANGUAGES+=		c c++
 USE_CMAKE=		yes
-PKG_DESTDIR_SUPPORT=	destdir
-CMAKE_ARGS+=		-DLIBDIRNAME=lib
+CMAKE_ARGS+=		-DCCRTP=ON
+CMAKE_ARGS+=		-DLIB_SUFFIX=""
+
+CMAKE_USE_GNU_INSTALL_DIRS=	no
+
+PKGCONFIG_OVERRIDE=	libzrtpcpp.pc.cmake
 
 .include "options.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../net/ccrtp/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
-.include "../../net/ccrtp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
