@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5132 2022/10/21 11:31:49 pin Exp $
+$NetBSD: CHANGES-2022,v 1.5133 2022/10/21 11:33:22 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7780,3 +7780,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-ruamel-yaml-clib to 0.2.7 [adam 2022-10-21]
 	Updated devel/py-ipykernel to 6.16.1 [adam 2022-10-21]
 	Updated misc/wthrr to 0.4.0 [pin 2022-10-21]
+	Updated editors/tp-note to 1.18.0 [pin 2022-10-21]
