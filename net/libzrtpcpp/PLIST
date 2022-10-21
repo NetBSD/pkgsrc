@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2015/04/18 03:36:23 rodent Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/10/21 16:10:37 nros Exp $
 include/libzrtpcpp/CcrtpTimeoutProvider.h
 include/libzrtpcpp/ZrtpCWrapper.h
 include/libzrtpcpp/ZrtpCallback.h
@@ -10,5 +10,5 @@ include/libzrtpcpp/common/osSpecifics.h
 include/libzrtpcpp/zrtpccrtp.h
 lib/libzrtpcpp.so
 lib/libzrtpcpp.so.4
-lib/libzrtpcpp.so.4.4.0
+lib/libzrtpcpp.so.${PKGVERSION}
 lib/pkgconfig/libzrtpcpp.pc
