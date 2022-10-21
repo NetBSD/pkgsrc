@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2022/08/16 07:51:51 pin Exp $
+# $NetBSD: Makefile,v 1.10 2022/10/21 11:32:53 pin Exp $
 
-DISTNAME=	tp-note-1.17.3
+DISTNAME=	tp-note-1.18.0
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITLAB:=getreu/}
-#GITLAB_RELEASE=	v${PKGVERSION_NOREV}
-GITLAB_TAG=	38c9c72747938a916111012863f40a12a06d4023
+GITLAB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://blog.getreu.net/projects/tp-note/
@@ -15,7 +14,7 @@ BUILD_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 .include "cargo-depends.mk"
 
-WRKSRC=		${WRKDIR}/tp-note-${GITLAB_TAG}
+WRKSRC=		${WRKDIR}/tp-note-v1.18.0-0e22e82cd9ba2bc3166d8d8036be5abfb3577f50
 
 USE_TOOLS+=	pkg-config
 
@@ -31,7 +30,7 @@ RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.gtk3}/lib
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/tpnote \
 		${DESTDIR}${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/docs/build/man/man1/tpnote.1.gz \
+	${INSTALL_MAN} ${WRKSRC}/docs/build/man/man1/tpnote.1 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA} ${WRKSRC}/assets/tpnote.svg  \
 		${DESTDIR}${PREFIX}/share/pixmaps
