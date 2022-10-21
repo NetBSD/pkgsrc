@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5137 2022/10/21 13:00:54 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5138 2022/10/21 16:11:00 nros Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7787,3 +7787,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/py-respx to 0.20.0 [adam 2022-10-21]
 	Updated archivers/libaec to 1.0.6 [adam 2022-10-21]
 	Removed multimedia/x264-devel successor multimedia/x264 [adam 2022-10-21]
+	Updated net/libzrtpcpp to 4.7.0 [nros 2022-10-21]
