@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2022/10/01 19:08:01 pin Exp $
+# $NetBSD: Makefile,v 1.6 2022/10/21 11:31:28 pin Exp $
 
-DISTNAME=	wthrr-the-weathercrab-0.3.0
-PKGNAME=	wthrr-0.3.0
+DISTNAME=	wthrr-the-weathercrab-0.4.0
+PKGNAME=	wthrr-0.4.0
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tobealive/}
 GITHUB_PROJECT=	wthrr-the-weathercrab
