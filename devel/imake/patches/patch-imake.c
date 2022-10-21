@@ -1,4 +1,4 @@
-$NetBSD: patch-imake.c,v 1.7 2016/09/04 21:33:53 dholland Exp $
+$NetBSD: patch-imake.c,v 1.8 2022/10/21 08:51:19 wiz Exp $
 
 Beat some sense in.
 
@@ -23,7 +23,7 @@ Also,
    - Force use of just "gcc" for pkgsrc, so as to not bypass the
      wrappers (hunk 8)
 
---- imake.c.orig	2013-08-17 10:11:50.000000000 +0000
+--- imake.c.orig	2022-10-19 17:33:50.000000000 +0000
 +++ imake.c
 @@ -303,9 +303,9 @@ void KludgeOutputLine(char **), KludgeRe
  const char *cpp = NULL;
@@ -46,8 +46,8 @@ Also,
  boolean haveImakefileC = FALSE;
  const char	*cleanedImakefile = NULL;
  const char	*program;
-@@ -412,7 +412,8 @@ main(int argc, char *argv[])
- 		fd = mkstemp(tmpMakefileName);
+@@ -407,7 +407,8 @@ main(int argc, char *argv[])
+ 
  		if (fd == -1 || (tmpfd = fdopen(fd, "w+")) == NULL) {
  		   if (fd != -1) {
 -		      unlink(tmpMakefileName); close(fd);
@@ -56,7 +56,7 @@ Also,
  		   }
  		   LogFatal("Cannot create temporary file %s.", tmpMakefileName);
  		}
-@@ -454,12 +455,14 @@ showit(FILE *fd)
+@@ -449,12 +450,14 @@ showit(FILE *fd)
  void
  wrapup(void)
  {
@@ -70,8 +70,8 @@ Also,
 +#endif
  }
  
- #ifdef SIGNALRETURNSINT
-@@ -488,6 +491,10 @@ init(void)
+ void
+@@ -479,6 +482,10 @@ init(void)
  	while (cpp_argv[ cpp_argindex ] != NULL)
  		cpp_argindex++;
  
@@ -82,7 +82,7 @@ Also,
  #if defined CROSSCOMPILE
  	if (sys == netBSD)
  	  if (CrossCompiling) {
-@@ -773,6 +780,13 @@ doit(FILE *outfd, const char *cmd, const
+@@ -764,6 +771,13 @@ doit(FILE *outfd, const char *cmd, const
  {
  	int		pid;
  	waitType	status;
@@ -96,7 +96,7 @@ Also,
  
  	/*
  	 * Fork and exec the command.
-@@ -1158,7 +1172,9 @@ get_binary_format(FILE *inFile)
+@@ -1149,7 +1163,9 @@ get_binary_format(FILE *inFile)
    } else
        strcpy (cmd, "objformat");
  
@@ -107,7 +107,7 @@ Also,
        (objprog = popen(cmd, "r")) != NULL &&
        fgets(buf, sizeof(buf), objprog) != NULL &&
        strncmp(buf, "elf", 3) == 0)
-@@ -1337,54 +1353,8 @@ get_gcc_version(FILE *inFile, char *name
+@@ -1328,54 +1344,8 @@ get_gcc_version(FILE *inFile, char *name
  static boolean
  get_gcc(char *cmd)
  {
@@ -137,7 +137,7 @@ Also,
 -    };
 -
 -    if (CrossCompiling) {
--	int i;
+-	unsigned int i;
 -	for (i = 0; i < sizeof (cross_cc_name) / sizeof cross_cc_name[0]; i++){
 -	    strcpy (cmd, CrossCompileDir);
 -	    strcat (cmd, "/");
@@ -150,7 +150,7 @@ Also,
 -    } else
 -#endif
 -      {
--	int i;
+-	unsigned int i;
 -	for (i = 0; i < sizeof (gcc_path) / sizeof gcc_path[0]; i++) {
 -	    if (lstat (gcc_path[i], &sb) == 0) {
 -		strcpy (cmd, gcc_path[i]);
@@ -159,12 +159,12 @@ Also,
 -	}
 -      }
 -    return FALSE;
-+	strcpy(cmd, "gcc");
-+	return TRUE;
++    strcpy(cmd, "gcc");
++    return TRUE;
  }
  
  #ifdef CROSSCOMPILE
-@@ -1795,12 +1765,15 @@ CleanCppInput(const char *imakefile)
+@@ -1786,12 +1756,15 @@ CleanCppInput(const char *imakefile)
  			    outFile = fdopen(fd, "w");
  			if (outFile == NULL) {
  			    if (fd != -1) {
