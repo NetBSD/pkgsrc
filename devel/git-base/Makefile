@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.99 2022/10/07 10:10:05 adam Exp $
+# $NetBSD: Makefile,v 1.100 2022/10/21 17:31:18 schmonz Exp $
 
 .include "../../devel/git/Makefile.common"
 
 PKGNAME=	git-base-${GIT_VERSION}
+PKGREVISION=	1
 COMMENT=	GIT Tree History Storage Tool (base package)
 
 CONFLICTS+=	scmgit-base-[0-9]*
@@ -73,6 +74,11 @@ GIT_TEMPLATE_INSTDIR=	${EGDIR}/${GIT_TEMPLATEDIR}
 MAKE_ENV+=		GIT_TEMPLATE_INSTDIR=${GIT_TEMPLATE_INSTDIR}
 MESSAGE_SUBST+=		GIT_TEMPLATE_INSTDIR=${GIT_TEMPLATE_INSTDIR}
 
+SUBST_CLASSES+=		paths
+SUBST_FILES.paths=	contrib/completion/git-completion.zsh
+SUBST_STAGE.paths=	pre-configure
+SUBST_VARS.paths=	PREFIX
+
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "SunOS" || ${OPSYS} == "OSF1" || ${OPSYS} == "HPUX" || ${OPSYS} == "QNX" || ${OPSYS} == "UnixWare"
@@ -102,11 +108,14 @@ INSTALL_ENV+=		NO_CROSS_DIRECTORY_HARDLINKS=1
 INSTALL_ENV+=		NO_INSTALL_HARDLINKS=1
 
 INSTALLATION_DIRS+=	share/bash-completion/completions
+INSTALLATION_DIRS+=	share/zsh/site-functions
 INSTALLATION_DIRS+=	${EGDIR}
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/contrib/completion/git-completion.bash \
 		${DESTDIR}${PREFIX}/share/bash-completion/completions/git
+	${INSTALL_DATA} ${WRKSRC}/contrib/completion/git-completion.zsh \
+		${DESTDIR}${PREFIX}/share/zsh/site-functions/_git
 	${INSTALL_DATA} ${WRKSRC}/contrib/completion/git-prompt.sh \
 		${DESTDIR}${EGDIR}
 
