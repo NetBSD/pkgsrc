@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5136 2022/10/21 12:29:48 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5137 2022/10/21 13:00:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7785,3 +7785,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Added net/termscp version 0.10.0 [pin 2022-10-21]
 	Updated graphics/gnuplot to 5.4.5 [adam 2022-10-21]
 	Updated www/py-respx to 0.20.0 [adam 2022-10-21]
+	Updated archivers/libaec to 1.0.6 [adam 2022-10-21]
+	Removed multimedia/x264-devel successor multimedia/x264 [adam 2022-10-21]
