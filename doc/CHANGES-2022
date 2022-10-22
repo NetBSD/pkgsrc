@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5140 2022/10/21 17:55:02 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5141 2022/10/22 11:43:18 andvar Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7788,7 +7788,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated archivers/libaec to 1.0.6 [adam 2022-10-21]
 	Removed multimedia/x264-devel successor multimedia/x264 [adam 2022-10-21]
 	Updated net/libzrtpcpp to 4.7.0 [nros 2022-10-21]
-	Updated devel/git-base to 2.38.0nb1 [schmonz 2022-10-21]
+	Updated devel/git-base to 2.38.1nb1 [schmonz 2022-10-21]
 	Updated devel/py-test-asyncio to 0.20.1 [adam 2022-10-21]
 	Updated devel/py-exceptiongroup to 1.0.0rc9 [adam 2022-10-21]
 	Updated devel/py-test-localserver to 0.7.0 [adam 2022-10-21]
