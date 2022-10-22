@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5147 2022/10/22 16:55:03 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.5148 2022/10/22 17:01:50 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7799,3 +7799,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/SDL2 to 2.24.1 [nia 2022-10-22]
 	Updated x11/xfsinfo to 1.0.7 [wiz 2022-10-22]
 	Updated x11/libXrender to 0.9.11 [wiz 2022-10-22]
+	Updated wm/jwm to 2.4.3 [tsutsui 2022-10-22]
