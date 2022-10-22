@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2022/09/05 15:43:29 taca Exp $
+# $NetBSD: Makefile,v 1.14.2.1 2022/10/22 10:22:10 bsiegert Exp $
 
 DISTNAME=	redmine-${RM_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/redmine/redmine${RM_VER}/}
-PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://www.redmine.org/releases/
 
@@ -13,7 +12,7 @@ LICENSE=	gnu-gpl-v2 # and so on.
 
 USE_TOOLS+=	pax
 
-RM_VERSION=	4.2.7
+RM_VERSION=	4.2.8
 
 NO_BUILD=	yes
 
@@ -21,8 +20,7 @@ RUBY_VERSIONS_ACCEPTED=	26 27
 
 RUBY_RAILS_ACCEPTED=	52
 
-OVERRIDE_GEMSPEC+=	csv>=3.1.1 i18n>=1.8.2 nokogiri>=1.11.0 \
-			mini_mime>=1.0.1
+OVERRIDE_GEMSPEC+=	csv>=3.1.1 i18n>=1.8.2 mini_mime>=1.0.1
 
 REPLACE_RUBY+=	bin/*
 REPLACE_RUBY+=	extra/mail_handler/rdm-mailhandler.rb
@@ -36,13 +34,13 @@ DEPENDS+=	${RUBY_RAILS_DEPENDS}
 DEPENDS+=	${RUBY_PKGPREFIX}-rouge>=3.26:../../www/ruby-rouge
 DEPENDS+=	${RUBY_PKGPREFIX}-request_store>=1.5.0<1.6:../../www/ruby-request_store
 # ruby-mail depends it.
-#DEPENDS+=	${RUBY_PKGPREFIX}-mini_mime>=1.0.1<1.1:../../mail/ruby-mini_mime
+#DEPENDS+=	${RUBY_PKGPREFIX}-mini_mime>=1.0.1:../../mail/ruby-mini_mime
 DEPENDS+=	${RUBY_PKGPREFIX}-actionpack52-xml_parser>=2.0:../../textproc/ruby-actionpack52-xml_parser
 DEPENDS+=	${RUBY_PKGPREFIX}-roadie-rails2_${RUBY_RAILS}>=2.2.0<2.3:../../mail/ruby-roadie-rails2
 DEPENDS+=	${RUBY_PKGPREFIX}-marcel>=1.0.0:../../devel/ruby-marcel
 DEPENDS+=	${RUBY_PKGPREFIX}-mail>=2.7.1<2.8:../../mail/ruby-mail
 DEPENDS+=	${RUBY_PKGPREFIX}-csv>=3.1.1:../../textproc/ruby-csv
-DEPENDS+=	${RUBY_PKGPREFIX}-nokogiri>=1.11.1:../../textproc/ruby-nokogiri
+DEPENDS+=	${RUBY_PKGPREFIX}-nokogiri>=1.13.6:../../textproc/ruby-nokogiri
 DEPENDS+=	${RUBY_PKGPREFIX}-i18n>=1.8.2<2:../../devel/ruby-i18n
 DEPENDS+=	${RUBY_PKGPREFIX}-rbpdf>=1.20.0<1.21:../../print/ruby-rbpdf
 DEPENDS+=	${RUBY_PKGPREFIX}-addressable>=0:../../net/ruby-addressable
