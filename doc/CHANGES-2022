@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5141 2022/10/22 11:43:18 andvar Exp $
+$NetBSD: CHANGES-2022,v 1.5142 2022/10/22 12:22:40 he Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7793,3 +7793,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-exceptiongroup to 1.0.0rc9 [adam 2022-10-21]
 	Updated devel/py-test-localserver to 0.7.0 [adam 2022-10-21]
 	Updated devel/py-setuptools to 65.5.0 [adam 2022-10-21]
+	Updated x11/pixman to 0.42.0nb3 [he 2022-10-22]
