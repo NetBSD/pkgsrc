@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5149 2022/10/22 21:13:40 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.5150 2022/10/22 21:34:34 nros Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7801,3 +7801,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/libXrender to 0.9.11 [wiz 2022-10-22]
 	Updated wm/jwm to 2.4.3 [tsutsui 2022-10-22]
 	Updated audio/schismtracker to 20221020 [fcambus 2022-10-22]
+	Updated devel/cssc to 1.4.1 [nros 2022-10-22]
