@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5143 2022/10/22 15:59:47 nia Exp $
+$NetBSD: CHANGES-2022,v 1.5144 2022/10/22 16:00:38 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7795,3 +7795,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-setuptools to 65.5.0 [adam 2022-10-21]
 	Updated x11/pixman to 0.42.0nb3 [he 2022-10-22]
 	Updated www/firefox102 to 102.4.0 [nia 2022-10-22]
+	Updated www/firefox102-l10n to 102.4.0 [nia 2022-10-22]
