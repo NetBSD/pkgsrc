@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2022/05/03 19:34:52 jaapb Exp $
+$NetBSD: distinfo,v 1.7 2022/10/22 18:02:35 wiz Exp $
 
 BLAKE2s (checkseum-0.3.3.tar.gz) = f8a482eb36f05286150a06f151e639e215eed016ab8bdc238969186493415a2a
 SHA512 (checkseum-0.3.3.tar.gz) = 85d7b1972061505b9ba428794ee2999d4f06556922cac50d925a8882012d10ae8ea97612c36542b89300f33dd2c1039145e7c114458224f7779dc5cbd98097df
 Size (checkseum-0.3.3.tar.gz) = 37691 bytes
+SHA1 (patch-src-c_native_ptrdiff__t.h) = a44b32d58e0107a2a45484d7caefd14a15997690
