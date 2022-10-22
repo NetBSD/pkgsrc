@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5145 2022/10/22 16:31:05 nia Exp $
+$NetBSD: CHANGES-2022,v 1.5146 2022/10/22 16:53:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7797,3 +7797,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/firefox102 to 102.4.0 [nia 2022-10-22]
 	Updated www/firefox102-l10n to 102.4.0 [nia 2022-10-22]
 	Updated devel/SDL2 to 2.24.1 [nia 2022-10-22]
+	Updated x11/xfsinfo to 1.0.7 [wiz 2022-10-22]
