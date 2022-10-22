@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5148 2022/10/22 17:01:50 tsutsui Exp $
+$NetBSD: CHANGES-2022,v 1.5149 2022/10/22 21:13:40 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7800,3 +7800,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/xfsinfo to 1.0.7 [wiz 2022-10-22]
 	Updated x11/libXrender to 0.9.11 [wiz 2022-10-22]
 	Updated wm/jwm to 2.4.3 [tsutsui 2022-10-22]
+	Updated audio/schismtracker to 20221020 [fcambus 2022-10-22]
