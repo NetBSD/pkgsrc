@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2020/01/18 23:36:08 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2022/10/22 16:53:28 wiz Exp $
 
-DISTNAME=	xfsinfo-1.0.6
-CATEGORIES=	fonts x11
+DISTNAME=	xfsinfo-1.0.7
+CATEGORIES=	x11 fonts
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://xorg.freedesktop.org/
