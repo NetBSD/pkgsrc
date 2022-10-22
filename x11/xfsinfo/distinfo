@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:34:49 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/10/22 16:53:28 wiz Exp $
 
-BLAKE2s (xfsinfo-1.0.6.tar.bz2) = 3e62880697c1ec858a17a087c4d916a31f93728ea722071bd44ef225240b1242
-SHA512 (xfsinfo-1.0.6.tar.bz2) = 901fc3817d7c95f2ba75ed0c51de91abd8efa67bbb93ad6b7d66e56a2f721af9db364e92f9ef2e719835fd48e934a5ea7402e5565c0ccd9b6b82633e869dc57b
-Size (xfsinfo-1.0.6.tar.bz2) = 124948 bytes
+BLAKE2s (xfsinfo-1.0.7.tar.xz) = 08629e6daf8e3d10f864bc230fc47d9e9f139d5f5d884789f9f4f8d61ba1f5c1
+SHA512 (xfsinfo-1.0.7.tar.xz) = 1914916bf995c08a520bd009ddfa57c7e4a997a829380232d359f9bf68852c67650efb8f1fe3cc8a11889b2ec067f50ac38df711ffaf4536802a0b530dc1789c
+Size (xfsinfo-1.0.7.tar.xz) = 119244 bytes
