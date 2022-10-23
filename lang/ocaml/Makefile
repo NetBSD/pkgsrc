@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.146 2022/10/08 11:11:16 nia Exp $
+# $NetBSD: Makefile,v 1.147 2022/10/23 13:09:30 he Exp $
 
 .include "Makefile.common"
 
@@ -29,6 +29,10 @@ BUILD_TARGET=		world
 # configure: error: fma does not work, enable emulation with --enable-imprecise-c99-float-ops
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-i386) || \
     !empty(MACHINE_PLATFORM:MNetBSD-*-earm*)
+CONFIGURE_ARGS+=	--enable-imprecise-c99-float-ops
+.endif
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-powerpc) && (${OPSYS_VERSION} < 99999)
+# fma(3) was added for powerpc between 9.99.98 and 9.99.99
 CONFIGURE_ARGS+=	--enable-imprecise-c99-float-ops
 .endif
 
