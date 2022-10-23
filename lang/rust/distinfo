@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.150 2022/10/10 20:34:15 he Exp $
+$NetBSD: distinfo,v 1.151 2022/10/23 14:48:31 he Exp $
 
 BLAKE2s (rust-1.62.0-x86_64-unknown-illumos.tar.gz) = 2732461c3d84cd516563afedc5513f377e3a6796c931ef03601fdcbcc4e6fe33
 SHA512 (rust-1.62.0-x86_64-unknown-illumos.tar.gz) = e99f53fd801d09f28dfd0568a8f2e97a5c4d5d0de7bea28f5afdc91d02f27ff887627f7717c032b90af412e4c04fc11c80c91f42e4b8dab885a311d56fdd5542
@@ -113,7 +113,7 @@ SHA1 (patch-library_backtrace_src_symbolize_gimli_elf.rs) = 56621c10310914672a85
 SHA1 (patch-library_std_src_sys_unix_mod.rs) = ef9e2b2e78602d5779e5d17e979347b0237ea4a6
 SHA1 (patch-library_std_src_sys_unix_thread.rs) = aafa957d5cfa0f48a6e43c20cfa346261ec7aa76
 SHA1 (patch-library_unwind_build.rs) = 7ece6de566ead1d9aae490ba91d81ac2d0bc50a8
-SHA1 (patch-src_bootstrap_bootstrap.py) = acd1839b8381ed39e907652213627e6eb713da48
+SHA1 (patch-src_bootstrap_bootstrap.py) = b840c3ca90955b8b8327ee0db2807abc5dad18f0
 SHA1 (patch-src_bootstrap_builder.rs) = ef84496eaeca753200e7a8fc7cf1c460ca3c464c
 SHA1 (patch-src_bootstrap_compile.rs) = 4dfce147e78968b67c5e32edbadf487cea21c613
 SHA1 (patch-src_bootstrap_lib.rs) = 5815a67cbb5b40f652dfe60d1b715e69bdeec1b5
@@ -135,7 +135,7 @@ SHA1 (patch-vendor_libc-0.2.119_src_unix_bsd_netbsdlike_netbsd_mod.rs) = e447bd3
 SHA1 (patch-vendor_libc_src_unix_bsd_netbsdlike_netbsd_mod.rs) = 31b1f5d1c9d289ecbd219b8bb2fd3839db5e7862
 SHA1 (patch-vendor_libc_src_unix_solarish_mod.rs) = 5b45640b2f0015142bd1eda5d5f02c7dbfe9210c
 SHA1 (patch-vendor_lzma-sys_config.h) = b654c7e129fa02697734bc87173f89b3056a5437
-SHA1 (patch-vendor_openssl-src_src_lib.rs) = e62697daa7e7fa3d7b89f338c3a26066b93d7b34
+SHA1 (patch-vendor_openssl-src_src_lib.rs) = 6995ddbf7d17bcd1cb6733a73c29ccdae4f2ab97
 SHA1 (patch-vendor_rustc-ap-rustc__target_src_spec_aarch64__be__unknown__netbsd.rs) = 4e86aec4c89db9a331950a12f8ec7b8aaa50eed7
 SHA1 (patch-vendor_stacker_src_lib.rs) = e00a1e95eb16540ff182715db778bf97ebd07a5e
 SHA1 (patch-vendor_target-lexicon_src_targets.rs) = 421aa776a05a64674ffa447b85cfe463075160a2
