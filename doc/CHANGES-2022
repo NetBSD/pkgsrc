@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5156 2022/10/23 15:49:35 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.5157 2022/10/23 15:53:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7809,3 +7809,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-daemon to 2.3.2 [adam 2022-10-23]
 	Updated audio/flac to 1.4.2 [adam 2022-10-23]
 	Updated chat/swirc to 3.3.7 [fcambus 2022-10-23]
+	Updated net/py-gevent to 22.10.1 [adam 2022-10-23]
+	Updated net/py-geventhttpclient to 2.0.8 [adam 2022-10-23]
