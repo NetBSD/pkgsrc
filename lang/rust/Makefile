@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.267 2022/10/10 20:34:15 he Exp $
+# $NetBSD: Makefile,v 1.268 2022/10/23 14:48:31 he Exp $
 
 DISTNAME=	rustc-1.63.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -399,7 +399,7 @@ CKSUMS+=	79915b243d02df1dc698f5c2de3a9356c6c296d2dedb06d9035dbcc2f8972cf4
 
 CKSUM_CRATES+=	vendor/openssl-src
 CKSUMS+=	65a4daf6f0d6ad80a83d63614288c3a9df9adcebe5f3d7ff2ad34dd3d2c75196
-CKSUMS+=	7ff3cb1d807d93defda37c2ec01e01223295bcc3d20d218436c07e89cae80fe2
+CKSUMS+=	a2fbabba485081fcad2ea712f4c1b38f111ade4c75ca61d3c8579c99aa5a173d
 
 SUBST_CLASSES+=		cksum
 SUBST_STAGE.cksum=	pre-configure

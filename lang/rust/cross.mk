@@ -1,4 +1,4 @@
-# $NetBSD: cross.mk,v 1.7 2021/05/31 10:17:53 he Exp $
+# $NetBSD: cross.mk,v 1.8 2022/10/23 14:48:31 he Exp $
 
 # These settings may be used to cross-build rust.
 #
@@ -13,6 +13,7 @@
 # to do a cross-build.  The wrapper script assumes dest/ and tools/
 # as a result of a cross-build of NetBSD as subdirectories of this root
 #CROSS_ROOT=		/u/evbarm-armv7hf
+#CROSS_ROOT=		/u/evbarm-armv6hf
 #CROSS_ROOT=		/u/sparc64
 #CROSS_ROOT=		/u/macppc
 #CROSS_ROOT=		/u/9.0-macppc
@@ -24,6 +25,7 @@
 
 # The GNU cross target designation
 #GNU_CROSS_TARGET=	armv7--netbsdelf-eabihf
+#GNU_CROSS_TARGET=	armv6--netbsdelf-eabihf
 #GNU_CROSS_TARGET=	sparc64--netbsd
 #GNU_CROSS_TARGET=	powerpc--netbsd
 #GNU_CROSS_TARGET=	aarch64--netbsd
@@ -36,6 +38,7 @@
 # host the compiler is supposed to run on.
 # Rust's target designation
 #TARGET=		armv7-unknown-netbsd-eabihf
+#TARGET=		armv6-unknown-netbsd-eabihf
 #TARGET=		sparc64-unknown-netbsd
 #TARGET=		powerpc-unknown-netbsd
 #TARGET=		aarch64-unknown-netbsd
