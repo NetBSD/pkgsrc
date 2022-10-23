@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.128 2022/09/11 12:52:00 wiz Exp $
+# $NetBSD: Makefile,v 1.129 2022/10/23 14:50:35 adam Exp $
 #
 
 DISTNAME=	avidemux_2.5.4
@@ -72,7 +72,7 @@ post-install:
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/spidermonkey/buildlink3.mk"
 .include "../../multimedia/xvidcore/buildlink3.mk"
-.include "../../multimedia/x264-devel/buildlink3.mk"
+.include "../../multimedia/x264/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
