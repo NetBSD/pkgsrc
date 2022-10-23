@@ -1,4 +1,4 @@
-# $NetBSD: do-cross.mk,v 1.3 2022/09/01 09:59:46 jperkin Exp $
+# $NetBSD: do-cross.mk,v 1.4 2022/10/23 14:48:31 he Exp $
 # Do all the NetBSD cross builds
 # Collect the bootstrap kits in dist/
 
@@ -6,6 +6,7 @@ VERSION!=	make show-var VARNAME=PKGVERSION
 V_NOREV!=	make show-var VARNAME=PKGVERSION_NOREV
 
 SHORT_TARGETS+=	armv7
+SHORT_TARGETS+=	armv6
 SHORT_TARGETS+=	sparc64
 SHORT_TARGETS+=	powerpc
 SHORT_TARGETS+=	powerpc90
@@ -19,6 +20,7 @@ SHORT_TARGETS+=	i386
 # Root of target directories.
 # Must have dest/ (build.sh's DESTDIR) and tools/ subdirectories
 ROOT.armv7?=		/u/evbarm-armv7hf
+ROOT.armv6?=		/u/evbarm-armv6hf
 ROOT.sparc64?=		/u/sparc64
 ROOT.powerpc?=		/u/macppc
 ROOT.powerpc90?=	/u/9.0-macppc
@@ -28,6 +30,7 @@ ROOT.i386?=		/u/i386
 
 # Mapping to GNU triple
 G_TGT.armv7=		armv7--netbsdelf-eabihf
+G_TGT.armv6=		armv6--netbsdelf-eabihf
 G_TGT.sparc64=		sparc64--netbsd
 G_TGT.powerpc=		powerpc--netbsd
 G_TGT.powerpc90=	powerpc--netbsd
@@ -37,6 +40,7 @@ G_TGT.i386=		i486--netbsdelf
 
 # Mapping to rust's TARGET specification
 TGT.armv7=		armv7-unknown-netbsd-eabihf
+TGT.armv6=		armv6-unknown-netbsd-eabihf
 TGT.sparc64=		sparc64-unknown-netbsd
 TGT.powerpc=		powerpc-unknown-netbsd
 TGT.powerpc90=		powerpc-unknown-netbsd

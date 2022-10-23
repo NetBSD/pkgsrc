@@ -1,4 +1,4 @@
-$NetBSD: patch-src_bootstrap_bootstrap.py,v 1.13 2022/10/10 20:34:15 he Exp $
+$NetBSD: patch-src_bootstrap_bootstrap.py,v 1.14 2022/10/23 14:48:31 he Exp $
 
 Use `uname -p` on NetBSD, as that is reliable and sensible there.
 Handle earmv7hf for NetBSD.
@@ -26,11 +26,15 @@ Default to non-verbose compilation.
          'amd64': 'x86_64',
          'arm64': 'aarch64',
          'i386': 'i686',
-@@ -369,10 +375,12 @@ def default_build_triple(verbose):
+@@ -369,10 +375,16 @@ def default_build_triple(verbose):
              ostype = 'linux-androideabi'
          else:
              ostype += 'eabihf'
 -    elif cputype in {'armv7l', 'armv8l'}:
++    elif cputype == 'armv6hf':
++        cputype = 'armv6'
++        if ostype == 'unknown-netbsd':
++            ostype += '-eabihf'
 +    elif cputype in {'armv7l', 'armv8l', 'earmv7hf'}:
          cputype = 'armv7'
          if ostype == 'linux-android':
@@ -40,7 +44,7 @@ Default to non-verbose compilation.
          else:
              ostype += 'eabihf'
      elif cputype == 'mips':
-@@ -791,7 +799,7 @@ class RustBuild(object):
+@@ -791,7 +803,7 @@ class RustBuild(object):
                  self.cargo()))
          args = [self.cargo(), "build", "--manifest-path",
                  os.path.join(self.rust_root, "src/bootstrap/Cargo.toml")]
