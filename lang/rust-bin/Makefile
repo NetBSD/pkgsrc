@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2022/10/13 02:26:12 gutteridge Exp $
+# $NetBSD: Makefile,v 1.44 2022/10/23 14:59:31 he Exp $
 
 DISTNAME=	rust-1.63.0
 PKGNAME=	${DISTNAME:S/rust/rust-bin/1}
@@ -25,6 +25,7 @@ ONLY_FOR_PLATFORM+=	Linux-*-x86_64
 ONLY_FOR_PLATFORM+=	NetBSD-*-aarch64
 ONLY_FOR_PLATFORM+=	NetBSD-*-aarch64eb
 ONLY_FOR_PLATFORM+=	NetBSD-*-earmv7hf
+ONLY_FOR_PLATFORM+=	NetBSD-*-earmv6hf
 ONLY_FOR_PLATFORM+=	NetBSD-*-i386
 ONLY_FOR_PLATFORM+=	NetBSD-*-powerpc
 ONLY_FOR_PLATFORM+=	NetBSD-*-sparc64
@@ -35,6 +36,7 @@ CHECK_RELRO_SKIP+=	lib/rustlib/*/bin/*
 
 # Bootstraps built for 9.0.
 BROKEN_ON_PLATFORM+=	NetBSD-8.*-earmv7hf
+BROKEN_ON_PLATFORM+=	NetBSD-8.*-earmv6hf
 
 # Binary distributions aren't built as PIE.
 MKPIE_SUPPORTED=	no
@@ -105,6 +107,14 @@ SITES.${DF}=	${NETBSD_REPO}
 .endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-aarch64eb) || make(distinfo) || make(makesum) || make(mdi)
 RUST_ARCH:=	aarch64_be-unknown-netbsd
+DN:=		${DISTNAME}${NBSUF}
+EXTRACT_SUFX=	.tar.xz
+DF:=		${DN}-${RUST_ARCH}${EXTRACT_SUFX}
+DISTFILES:=	${DISTFILES} ${DF}
+SITES.${DF}=	${NETBSD_REPO}
+.endif
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-earmv6hf) || make(distinfo) || make(makesum) || make(mdi)
+RUST_ARCH:=	armv6-unknown-netbsd-eabihf
 DN:=		${DISTNAME}${NBSUF}
 EXTRACT_SUFX=	.tar.xz
 DF:=		${DN}-${RUST_ARCH}${EXTRACT_SUFX}
