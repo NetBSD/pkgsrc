@@ -1,4 +1,2 @@
-XCB util-wm module provides the following libraries:
-
-  - ewmh: Both client and window-manager helpers for EWMH.
-  - icccm: Both client and window-manager helpers for ICCCM.
+This module provides libraries that offer both client and window-manager
+helpers for ICCCM & EWMH.
