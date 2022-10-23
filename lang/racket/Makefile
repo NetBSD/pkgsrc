@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2022/04/18 19:11:31 adam Exp $
+# $NetBSD: Makefile,v 1.89 2022/10/23 15:05:29 jperkin Exp $
 
 PKGNAME=		racket-6.12
 PKGREVISION=		13
@@ -22,6 +22,9 @@ COMMENT=	Scheme-based dialect of Lisp
 LICENSE=	gnu-lgpl-v2
 
 CONFLICTS+=	drscheme-[0-9]* mzscheme-[0-9]* racket-textual-[0-9]*
+
+# Spins until killed.
+NOT_FOR_BULK_PLATFORM+=	SunOS-*-*
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
