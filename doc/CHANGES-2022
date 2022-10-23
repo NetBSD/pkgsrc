@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5154 2022/10/23 07:34:17 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.5155 2022/10/23 10:45:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7806,3 +7806,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/oculante to 0.6.18 [pin 2022-10-23]
 	Updated sysutils/onefetch to 2.13.1 [pin 2022-10-23]
 	Updated x11/xcb-util-wm to 0.4.2nb1 [wiz 2022-10-23]
+	Updated devel/py-daemon to 2.3.2 [adam 2022-10-23]
+	Updated audio/flac to 1.4.2 [adam 2022-10-23]
