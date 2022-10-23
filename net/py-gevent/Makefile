@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2022/01/04 20:54:27 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2022/10/23 15:48:33 adam Exp $
 
-DISTNAME=	gevent-21.12.0
+DISTNAME=	gevent-22.10.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gevent/}
 
@@ -11,15 +10,17 @@ HOMEPAGE=	http://www.gevent.org/
 COMMENT=	Python-gevent a coroutine-based Python networking library
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-cffi>=1.11.5:../../devel/py-cffi
-DEPENDS+=	${PYPKGPREFIX}-greenlet>=0.4.14:../../devel/py-greenlet
+DEPENDS+=	${PYPKGPREFIX}-cffi>=1.12.2:../../devel/py-cffi
+DEPENDS+=	${PYPKGPREFIX}-greenlet>=1.1.3:../../devel/py-greenlet
 DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-ZopeEvent-[0-9]*:../../devel/py-ZopeEvent
 DEPENDS+=	${PYPKGPREFIX}-ZopeInterface-[0-9]*:../../devel/py-ZopeInterface
 
-MAKE_ENV+=	CARES_EMBED=0
-MAKE_ENV+=	LIBEV_EMBED=0
-MAKE_ENV+=	LIBUV_EMBED=0
+MAKE_ENV+=	GEVENTSETUP_EMBED_CARES=0
+MAKE_ENV+=	GEVENTSETUP_EMBED_LIBEV=0
+MAKE_ENV+=	GEVENTSETUP_EMBED_LIBUV=0
+
+CHECK_PORTABILITY_SKIP=	deps/libuv/autogen.sh
 
 USE_LANGUAGES=	c c++
 
