@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.59 2022/09/26 09:48:55 adam Exp $
+# $NetBSD: Makefile,v 1.60 2022/10/23 10:45:21 adam Exp $
 
-DISTNAME=	flac-1.4.1
+DISTNAME=	flac-1.4.2
 CATEGORIES=	audio archivers
 MASTER_SITES=	http://downloads.xiph.org/releases/flac/
 EXTRACT_SUFX=	.tar.xz
@@ -15,19 +15,17 @@ USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-doxygen-docs
-CONFIGURE_ARGS+=	--disable-xmms-plugin
 PKGCONFIG_OVERRIDE+=	src/libFLAC++/flac++.pc.in
 PKGCONFIG_OVERRIDE+=	src/libFLAC/flac.pc.in
+TEST_TARGET=		check
 
 BUILD_DEFS+=		PKGSRC_MKPIE
 
 .include "../../mk/bsd.prefs.mk"
 
 .if ${MACHINE_ARCH} == "i386"
-.  if ${PKGSRC_MKPIE:tl} == "yes"
+.  if ${PKGSRC_MKPIE:tl} == "yes" || ${OPSYS} == "Darwin"
 CONFIGURE_ARGS+=	--disable-asm-optimizations
-.  else
-TOOL_DEPENDS+=		nasm>=0.98:../../devel/nasm
 .  endif
 .endif
 
@@ -36,10 +34,6 @@ TOOL_DEPENDS+=		nasm>=0.98:../../devel/nasm
 CONFIGURE_ARGS+=	--disable-asm-optimizations
 CONFIGURE_ARGS+=	--disable-altivec
 .  endif
-.endif
-
-.if !empty(MACHINE_PLATFORM:MDarwin-*-i386)
-CONFIGURE_ARGS+=	--disable-asm-optimizations
 .endif
 
 .include "../../mk/compiler.mk"
