@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5152 2022/10/23 07:11:41 pin Exp $
+$NetBSD: CHANGES-2022,v 1.5153 2022/10/23 07:12:54 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7804,3 +7804,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/cssc to 1.4.1 [nros 2022-10-22]
 	Updated sysutils/felix to 1.3.2 [pin 2022-10-23]
 	Updated graphics/oculante to 0.6.18 [pin 2022-10-23]
+	Updated sysutils/onefetch to 2.13.1 [pin 2022-10-23]
