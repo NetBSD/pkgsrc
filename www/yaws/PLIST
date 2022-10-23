@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2022/10/15 18:29:21 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.8 2022/10/23 13:45:57 nros Exp $
 bin/yaws
 lib/pkgconfig/yaws.pc
 lib/yaws/ebin/haxe.beam
@@ -81,7 +81,6 @@ man/man1/yaws.1
 man/man5/yaws.conf.5
 man/man5/yaws_api.5
 man/man5/yaws_soap_lib.5
-share/doc/yaws/yaws.pdf
 share/examples/yaws/dhparams.pem
 share/examples/yaws/yaws-cert.pem
 share/examples/yaws/yaws-key.pem
@@ -304,8 +303,6 @@ share/yaws/www/websockets_example_endpoint.yaws
 share/yaws/www/yapp_intro.yaws
 share/yaws/www/yaws-1.55_to_1.56.patch
 share/yaws/www/yaws.eps
-share/yaws/www/yaws.pdf
-share/yaws/www/yaws.ps
 share/yaws/www/ybed.erl
 share/yaws/www/ybed_sup.erl
 share/yaws/www/yman.yaws
