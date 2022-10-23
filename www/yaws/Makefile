@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2022/10/15 18:29:21 triaxx Exp $
+# $NetBSD: Makefile,v 1.24 2022/10/23 13:45:57 nros Exp $
 #
 
 DISTNAME=		yaws-2.1.1
@@ -27,6 +27,9 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--with-extrainclude=${PAMBASE}/include/security
 CONFIGURE_ARGS+=	ERLANG_INSTALL_LIB_DIR_yaws=${PREFIX}/lib/yaws
 CONFIGURE_ARGS+=	wwwdir=${WWWDIR}
+
+# supress generation of pdf and ps files
+CONFIGURE_ENV+=		ac_cv_prog_DVIPS=
 
 # Not compatible with SunOS PAM headers
 .if ${OPSYS} == "SunOS"
