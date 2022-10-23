@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2022/10/23 14:59:31 he Exp $
+# $NetBSD: Makefile,v 1.45 2022/10/23 21:38:28 he Exp $
 
 DISTNAME=	rust-1.63.0
 PKGNAME=	${DISTNAME:S/rust/rust-bin/1}
@@ -213,7 +213,7 @@ TOOL_DEPENDS+=		patchelf-[0-9]*:../../devel/patchelf
 # The llvm utilities need a specific libstdc++ version from compat80
 .  if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} >= 090000
 .    if ${MACHINE_ARCH} != "aarch64" && ${MACHINE_ARCH} != "earmv7hf" && \
-        ${MACHINE_ARCH} != "powerpc"
+        ${MACHINE_ARCH} != "powerpc" && ${MACHINE_ARCH} != "earmv6hf"
 DEPENDS+=		compat80-[0-9]*:../../emulators/compat80
 RUST_LLVM_RPATH=	${PREFIX}/emul/netbsd/usr/lib:${PREFIX}/lib
 FORCE_RPATH=
