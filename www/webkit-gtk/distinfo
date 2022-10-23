@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.172 2022/10/08 11:06:35 nia Exp $
+$NetBSD: distinfo,v 1.173 2022/10/23 07:33:51 mcf Exp $
 
 BLAKE2s (webkitgtk-2.36.8.tar.xz) = 277ba5935bda3e3867083b4c736499d974b9c733dbd05bf574510857dde481a1
 SHA512 (webkitgtk-2.36.8.tar.xz) = 50576f13ea84c0634d174ccf0b70d0eb28752589b2b9ce7a82ffeee1b4b6c849a802f7ae83a3c5a74d0da2b7e3321876ead33e819d8006b8153376074cb57036
@@ -38,6 +38,7 @@ SHA1 (patch-Source_WebKit_Platform_IPC_unix_ConnectionUnix.cpp) = f2ee81bf200fe1
 SHA1 (patch-Source_WebKit_Platform_classifier_ResourceLoadStatisticsClassifier.cpp) = 920376ec8697780637f376b2fff312b7e214a7f6
 SHA1 (patch-Source_WebKit_Scripts_check-xcfilelists.sh) = 22cc5ba1ababc6395aa0ef467db0c27c2fbf6878
 SHA1 (patch-Source_WebKit_Scripts_generate-unified-sources.sh) = def930cf3f706ac657b2f8835c8c0278ade8f663
+SHA1 (patch-Source_WebKit_WebProcess_WebPage_CoordinatedGraphics_LayerTreeHost.h) = 91a3002d47c469375e70fcde7d575ec352f642f9
 SHA1 (patch-Source_bmalloc_bmalloc_AvailableMemory.cpp) = 18915c691d6f4e2a8870f8fee0909bd1a609cc05
 SHA1 (patch-Source_bmalloc_bmalloc_BPlatform.h) = 28d1f657fde427062a729b26398e96825082fc4d
 SHA1 (patch-Source_bmalloc_bmalloc_VMAllocate.h) = 22c23689fa79c930145068ed7966844bbf92a6a9
