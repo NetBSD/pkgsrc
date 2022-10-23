@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.20 2022/10/10 21:13:54 he Exp $
+$NetBSD: distinfo,v 1.21 2022/10/23 14:59:31 he Exp $
 
 BLAKE2s (rust-bin-1.63.0/rust-1.63.0-aarch64-unknown-linux-gnu.tar.gz) = 58ede5121c9ee8b61edfa792771851da61b75a08e63379f9b836395e9e61bbb5
 SHA512 (rust-bin-1.63.0/rust-1.63.0-aarch64-unknown-linux-gnu.tar.gz) = 04d2a917e64c66b15cda3bbe9353d61737c57eb1ee4d9a2207d976b9f8f588e447f8682c7f87cf33cbc3cf14c37195795c8f259202509d3229ce9c5c175311f4
@@ -12,6 +12,9 @@ Size (rust-bin-1.63.0/rust-1.63.0-aarch64-unknown-netbsd.tar.xz) = 153412536 byt
 BLAKE2s (rust-bin-1.63.0/rust-1.63.0-aarch64_be-unknown-netbsd.tar.xz) = 0b3fed187c6701c687e028857085f5c09fd4a93bb67b91897c938c5a52427c69
 SHA512 (rust-bin-1.63.0/rust-1.63.0-aarch64_be-unknown-netbsd.tar.xz) = 766344c17c59007fe3c6fdfd4caefb9bf0eec3b6c8fec878744f71979069e3edafc3b023727341f9526c7c5169b13d0fc234a0e3f5118858218149a5c7d85a08
 Size (rust-bin-1.63.0/rust-1.63.0-aarch64_be-unknown-netbsd.tar.xz) = 152749160 bytes
+BLAKE2s (rust-bin-1.63.0/rust-1.63.0-armv6-unknown-netbsd-eabihf.tar.xz) = 3b9eef9621283979f385c91814721099120169eb08ed9d6f769d7b04831d2ded
+SHA512 (rust-bin-1.63.0/rust-1.63.0-armv6-unknown-netbsd-eabihf.tar.xz) = 9a4d2c8d31ef62bb9d5bd5854503dc71587fbf6f1d0044c468a6e6de6a9c41b627c086c57b91d4bd466db7c9990a890212f9a8d6b5283c86822b58626b154e94
+Size (rust-bin-1.63.0/rust-1.63.0-armv6-unknown-netbsd-eabihf.tar.xz) = 152484384 bytes
 BLAKE2s (rust-bin-1.63.0/rust-1.63.0-armv7-unknown-netbsd-eabihf.tar.xz) = e07fdec17a5292b99df1a517349a7b15c1ac2c15c2cd3d5c1620a55f2e222cf7
 SHA512 (rust-bin-1.63.0/rust-1.63.0-armv7-unknown-netbsd-eabihf.tar.xz) = d27f655ede43e38e4a1654c3117346332da73032d8b45a5b79d8bd52ae20acc083fe263b1e32c1bb5b394a33c0b6ac7dcbdc1623da227b505c92f0744e140da3
 Size (rust-bin-1.63.0/rust-1.63.0-armv7-unknown-netbsd-eabihf.tar.xz) = 134099348 bytes
