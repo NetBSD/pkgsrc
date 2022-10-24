@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2022/01/14 01:14:04 gdt Exp $
+# $NetBSD: Makefile,v 1.17 2022/10/24 13:57:24 wiz Exp $
 
-DISTNAME=	libunistring-1.0
+DISTNAME=	libunistring-1.1
 CATEGORIES=	textproc
 MASTER_SITES=	http://ftp.gnu.org/gnu/libunistring/
 
