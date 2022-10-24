@@ -1,16 +1,17 @@
-$NetBSD: distinfo,v 1.64 2021/12/15 17:20:57 adam Exp $
+$NetBSD: distinfo,v 1.65 2022/10/24 18:02:18 adam Exp $
 
-BLAKE2s (octave-6.4.0.tar.xz) = 633559d461a1bcadb70419620cb7321bac3de673984e689e140133eff6abcda9
-SHA512 (octave-6.4.0.tar.xz) = d239edde22877f0669314a66eb0d5ae787c387b1601a18e38d0b6971fe25b934801d1050679126974b716a6b7b27a3b51ecbfcff14a4ea529e51291f4028318b
-Size (octave-6.4.0.tar.xz) = 25354780 bytes
+BLAKE2s (octave-7.2.0.tar.xz) = 6d193370aae741e875dfd6993ebebd09052b6be562e5bed3c3e5621c3069cadb
+SHA512 (octave-7.2.0.tar.xz) = 64eb3e49fd62c53c24b0cbbb5a8b454c52cff5afa6308d6a0738b763971a3973913f057a9c64472130ddc847b7437faae2bce465f3528d960af3563fd8d4d564
+Size (octave-7.2.0.tar.xz) = 26224708 bytes
+SHA1 (patch-Makefile.in) = 056c2c43ffe0387ece0a26fe4f2b644257c7ac36
 SHA1 (patch-configure.ac) = 48a2dee11b33ce80a477367479ad348056c2c1f9
 SHA1 (patch-doc_interpreter_module.mk) = 66389cceddbe71fca0c8197275a839170d64ad5b
 SHA1 (patch-libgnu_fseeko.c) = b38e7a38be2e0b323cd7f168f1d22d3df998691c
-SHA1 (patch-libgnu_stdio.in.h) = 952e8683a70615b5219d034b9232420998cef44a
-SHA1 (patch-libinterp_dldfcn_config-module.awk) = 54b64357b1ef80c5e55eb5eccf742d2267eb277d
-SHA1 (patch-libinterp_dldfcn_module.mk) = 2362d824497a8892078437c24757ae1e40e2e556
+SHA1 (patch-libgnu_stdio.in.h) = 83c8fbecba26868fe9db70a7fb08f67353c982ea
+SHA1 (patch-libinterp_dldfcn_config-module.awk) = a9b6ed5580d670ab0a3632780d90bbeb36f9197c
+SHA1 (patch-libinterp_dldfcn_module.mk) = 8975e881cade802cf1b14bd8256f9fced6c50e38
 SHA1 (patch-liboctave_util_quit.cc) = 17ace431c53de1e5b72b86bb2bf4e15bdc6d4db9
-SHA1 (patch-m4_acinclude.m4) = 8d684f3036e25714738379156e766af9cd34afd8
-SHA1 (patch-scripts_miscellaneous_unpack.m) = 82c9ca170762e223c8e5a6f88a7dd9fe2a2a33d0
-SHA1 (patch-scripts_pkg_private_configure__make.m) = 7d4b620f889faa66c4c9c581ef8a7e7692b68c94
+SHA1 (patch-m4_acinclude.m4) = 60e497f4a2f40ab4ba18b236a55f422f9692e0bd
+SHA1 (patch-scripts_miscellaneous_unpack.m) = 0f979fd4bcef8926a5d64149d9cc925ef1d2d727
+SHA1 (patch-scripts_pkg_private_configure__make.m) = 7a73a32322a9ba39a2c9597b3e406c2b5a9c8b40
 SHA1 (patch-scripts_plot_util_____gnuplot__drawnow____.m) = 449b178aefd78c5c1b03ffd960f2e8be3874efc2

@@ -1,12 +1,12 @@
-$NetBSD: patch-scripts_miscellaneous_unpack.m,v 1.1 2017/08/01 11:06:18 maya Exp $
+$NetBSD: patch-scripts_miscellaneous_unpack.m,v 1.2 2022/10/24 18:02:19 adam Exp $
 
 Unpack with bsdtar. if we get PaxHeaders.1234 files, we trip an octave-forge
 sanity check
 
---- scripts/miscellaneous/unpack.m.orig	2016-11-13 15:16:10.000000000 +0000
+--- scripts/miscellaneous/unpack.m.orig	2022-07-28 13:08:26.000000000 +0000
 +++ scripts/miscellaneous/unpack.m
-@@ -174,15 +174,15 @@ function filelist = unpack (file, dir = 
-                        'bzip2 -d -f "%s"', ...
+@@ -200,15 +200,15 @@ function filelist = unpack (file, dir = 
+                        'bzip2 -d -k -f "%s"', ...
                         @__parse_bzip2__, true};
      commandlist.bz = commandlist.bz2;
 -    commandlist.tar = {'tar xvf "%s"', ...
