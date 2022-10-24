@@ -1,0 +1,4 @@
+Lzlib is a data compression library providing in-memory LZMA compression and
+decompression functions, including integrity checking of the decompressed data.
+The compressed data format used by the library is the lzip format.
+Lzlib is written in C.
