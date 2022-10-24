@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5175 2022/10/24 16:48:36 gutteridge Exp $
+$NetBSD: CHANGES-2022,v 1.5176 2022/10/24 18:02:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7833,3 +7833,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/ImageMagick to 7.1.0.51 [wiz 2022-10-24]
 	Updated databases/ldb to 2.6.1 [wiz 2022-10-24]
 	Updated wm/enlightenment16 to 1.0.26 [gutteridge 2022-10-24]
+	Updated net/libtorrent-rasterbar to 2.0.8 [adam 2022-10-24]
+	Updated math/octave to 7.2.0 [adam 2022-10-24]
