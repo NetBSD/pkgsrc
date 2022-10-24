@@ -1,10 +1,10 @@
-$NetBSD: patch-scripts_pkg_private_configure__make.m,v 1.1 2016/02/16 04:21:40 dbj Exp $
+$NetBSD: patch-scripts_pkg_private_configure__make.m,v 1.2 2022/10/24 18:02:19 adam Exp $
 
 Provide path to GNU make, since this is what assumed here.
 
---- scripts/pkg/private/configure_make.m.orig	2015-05-23 14:21:53.000000000 +0000
+--- scripts/pkg/private/configure_make.m.orig	2022-07-28 13:08:26.000000000 +0000
 +++ scripts/pkg/private/configure_make.m
-@@ -88,7 +88,7 @@ function configure_make (desc, packdir, 
+@@ -110,7 +110,7 @@ function configure_make (desc, packdir, 
      endif
  
      if (exist (fullfile (src, "Makefile"), "file"))
@@ -12,4 +12,4 @@ Provide path to GNU make, since this is what assumed here.
 +      [status, output] = shell (sprintf ("%s @GMAKE@ --jobs %i --directory '%s'",
                                           scenv, jobs, src), verbose);
        if (status != 0)
-         rmdir (desc.dir, "s");
+         disp (output);
