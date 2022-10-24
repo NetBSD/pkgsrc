@@ -1,10 +1,10 @@
-$NetBSD: patch-libgnu_stdio.in.h,v 1.4 2021/05/31 07:16:51 thor Exp $
+$NetBSD: patch-libgnu_stdio.in.h,v 1.5 2022/10/24 18:02:19 adam Exp $
 
 Do not re-define gets() on SunOS, incompatible prototype.
 
---- libgnu/stdio.in.h.orig	2021-02-19 17:36:34.000000000 +0000
+--- libgnu/stdio.in.h.orig	2022-07-28 13:08:26.000000000 +0000
 +++ libgnu/stdio.in.h
-@@ -838,10 +838,12 @@ _GL_WARN_ON_USE (getline, "getline is un
+@@ -934,10 +934,12 @@ _GL_WARN_ON_USE (getline, "getline is un
  /* It is very rare that the developer ever has full control of stdin,
     so any use of gets warrants an unconditional warning; besides, C11
     removed it.  */
@@ -15,5 +15,5 @@ Do not re-define gets() on SunOS, incompatible prototype.
  #endif
 +#endif
  
- #if defined _WIN32 && !defined __CYGWIN__
- # undef getw
+ #if @GNULIB_MDA_GETW@
+ /* On native Windows, map 'getw' to '_getw', so that -loldnames is not

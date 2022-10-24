@@ -1,6 +1,6 @@
-$NetBSD: patch-libinterp_dldfcn_module.mk,v 1.4 2019/03/05 11:11:12 ryoon Exp $
+$NetBSD: patch-libinterp_dldfcn_module.mk,v 1.5 2022/10/24 18:02:19 adam Exp $
 
-install .oct loadable modules with INSTALL_LIB to avoid stripping them
+Install .oct loadable modules with INSTALL_LIB to avoid stripping them.
 
 --- libinterp/dldfcn/module.mk.orig	2019-02-23 17:33:37.000000000 +0000
 +++ libinterp/dldfcn/module.mk
