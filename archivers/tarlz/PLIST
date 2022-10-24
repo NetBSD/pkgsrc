@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2022/10/24 07:49:42 fcambus Exp $
+bin/tarlz
+info/tarlz.info
+man/man1/tarlz.1
