@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5165 2022/10/24 11:56:27 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5166 2022/10/24 13:57:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7823,3 +7823,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/dnsdist to 1.7.2 [jperkin 2022-10-24]
 	Updated devel/protobuf to 3.21.8 [adam 2022-10-24]
 	Updated devel/py-protobuf to 4.21.8 [adam 2022-10-24]
+	Updated textproc/libunistring to 1.1 [wiz 2022-10-24]

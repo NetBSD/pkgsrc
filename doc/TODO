@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22304 2022/10/24 10:29:38 adam Exp $
+$NetBSD: TODO,v 1.22305 2022/10/24 13:57:34 wiz Exp $
 
 Suggested new packages
 ======================
@@ -969,7 +969,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libtecla-1.6.3
 	o libthai-0.2.2
 	o libtrace-4.0.16
-	o libunistring-1.1
 	o libvirt-2.3
 	o libxdg-basedir-1.2.3
 	o libxml2-2.10.2
@@ -1265,7 +1264,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o privoxy-3.0.33
 	o profit-2.5.3
 	o proj-8.0.0
-	o protobuf-21.8
 	o ps2eps-1.70
 	o psmisc-22.20
 	o pspp-1.4.1
