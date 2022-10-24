@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/10/24 07:52:02 fcambus Exp $
+
+BLAKE2s (plzip-1.10.tar.gz) = 43a58989c1788de858aa82d596da4c7e56ae6f57f46be36dbc148ed999341abc
+SHA512 (plzip-1.10.tar.gz) = 7fd7ec288800950deaec9337b3112db72cde059721a0143a091650fc20ba2a3d9d7eebbd7a312e5bbb1a61ca6c902d2450e6c3c7172dccf9c0c8b86db7c2a944
+Size (plzip-1.10.tar.gz) = 94541 bytes
