@@ -1,0 +1,13 @@
+Plzip is a massively parallel (multi-threaded) implementation of lzip, fully
+compatible with lzip 1.4 or newer. Plzip uses the compression library lzlib.
+
+Lzip is a lossless data compressor with a user interface similar to the one
+of gzip or bzip2. Lzip uses a simplified form of the 'Lempel-Ziv-Markov
+chain-Algorithm' (LZMA) stream format and provides a 3 factor integrity
+checking to maximize interoperability and optimize safety. Lzip can compress
+about as fast as gzip (lzip -0) or compress most files more than bzip2
+(lzip -9). Decompression speed is intermediate between gzip and bzip2.
+Lzip is better than gzip and bzip2 from a data recovery perspective. Lzip
+has been designed, written, and tested with great care to replace gzip and
+bzip2 as the standard general-purpose compressed format for unix-like
+systems.
