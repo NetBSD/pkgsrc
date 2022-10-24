@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/07/25 11:12:29 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2022/10/24 12:50:25 adam Exp $
 
 DISTNAME=	rapidjson-1.1.0
 PKGREVISION=	1
@@ -13,10 +13,12 @@ LICENSE=	modified-bsd
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c++11
+TEST_TARGET=	test
 
 CMAKE_ARGS+=		-DCMAKE_DISABLE_FIND_PACKAGE_Doxygen=TRUE
 
 PKGCONFIG_OVERRIDE+=	RapidJSON.pc.in
 BUILDLINK_TRANSFORM+=	rm:-march=native rm:-Werror
 
+.include "../../devel/googletest/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
