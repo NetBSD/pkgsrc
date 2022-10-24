@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2022/09/11 12:51:22 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/10/24 10:38:49 adam Exp $
 
-DISTNAME=	SoundFile-0.10.3.post1
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl:S/post//}
-PKGREVISION=	2
+DISTNAME=	soundfile-0.11.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	audio python
-MASTER_SITES=	${MASTER_SITE_PYPI:=S/SoundFile/}
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/soundfile/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://pysoundfile.readthedocs.io/en/latest/
+HOMEPAGE=	https://pysoundfile.readthedocs.io/
 COMMENT=	Audio library based on libsndfile, CFFI and NumPy
 LICENSE=	modified-bsd
 
