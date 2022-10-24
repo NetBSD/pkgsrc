@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2022/08/06 17:21:05 he Exp $
+# $NetBSD: Makefile,v 1.18 2022/10/24 11:08:14 jperkin Exp $
 
-DISTNAME=	dnsdist-1.5.1
-PKGREVISION=	3
+DISTNAME=	dnsdist-1.7.2
 CATEGORIES=	net
 MASTER_SITES=	https://downloads.powerdns.com/releases/
 EXTRACT_SUFX=	.tar.bz2
@@ -31,14 +30,16 @@ CONF_FILES+=	share/examples/dnsdist/dnsdist.conf \
 
 CONFIGURE_ARGS+=	--enable-dns-over-tls
 CONFIGURE_ARGS+=	--enable-dnscrypt
-CONFIGURE_ARGS+=	--enable-fstrm
+CONFIGURE_ARGS+=	--enable-dnstap
 CONFIGURE_ARGS+=	--with-libsodium
 CONFIGURE_ARGS+=	--with-libssl
-CONFIGURE_ARGS+=	--with-protobuf
+CONFIGURE_ARGS+=	--with-lua
+CONFIGURE_ARGS+=	--with-nghttp2
 CONFIGURE_ARGS+=	--with-re2
 CONFIGURE_ARGS+=	--without-net-snmp
-CONFIGURE_ENV+=		LIBEDIT_CFLAGS="-I${BUILDLINK_PREFIX.libedit}/include"
-CONFIGURE_ENV+=		LIBEDIT_LIBS="-L${BUILDLINK_PREFIX.libedit}/lib -ledit"
+
+CONFIGURE_ENV+=		LIBEDIT_CFLAGS="-I${BUILDLINK_PREFIX.editlinereadline}/include"
+CONFIGURE_ENV+=		LIBEDIT_LIBS="-L${BUILDLINK_PREFIX.editlinereadline}/lib ${BUILDLINK_LDADD.editlinereadline}"
 
 INSTALLATION_DIRS+=	share/examples/dnsdist
 RCD_SCRIPTS+=		dnsdist
@@ -48,12 +49,12 @@ post-install:
 		${DESTDIR}${PREFIX}/share/examples/dnsdist
 
 .include "../../devel/boost-headers/buildlink3.mk"
-.include "../../devel/editline/buildlink3.mk"
-.include "../../devel/protobuf/buildlink3.mk"
 .include "../../devel/re2/buildlink3.mk"
 .include "../../lang/lua/buildlink3.mk"
+.include "../../mk/atomic64.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../net/fstrm/buildlink3.mk"
 .include "../../security/libsodium/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
-.include "../../mk/atomic64.mk"
+.include "../../www/nghttp2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
