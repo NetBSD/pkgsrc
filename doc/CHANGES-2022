@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5161 2022/10/24 09:47:50 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5162 2022/10/24 10:29:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7816,3 +7816,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Added archivers/plzip version 1.10 [fcambus 2022-10-24]
 	Updated devel/dejagnu to 1.6.3 [adam 2022-10-24]
 	Updated devel/libffi to 3.4.4 [adam 2022-10-24]
+	Updated net/rsync to 3.2.7 [adam 2022-10-24]
+	Updated security/sudo to 1.9.12 [adam 2022-10-24]
