@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.192 2022/10/24 07:47:05 fcambus Exp $
+# $NetBSD: Makefile,v 1.193 2022/10/24 07:50:29 fcambus Exp $
 #
 
 COMMENT=	Archivers and compression tools
@@ -131,6 +131,7 @@ SUBDIR+=	sarab
 SUBDIR+=	squsq
 SUBDIR+=	star
 SUBDIR+=	szip
+SUBDIR+=	tarlz
 SUBDIR+=	tartest
 SUBDIR+=	torrentzip
 SUBDIR+=	trrntzip
