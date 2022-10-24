@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/10/24 07:49:42 fcambus Exp $
+
+BLAKE2s (tarlz-0.22.tar.lz) = 741239eb594d6f61cfefe8915881738b1b766d5194cc726cfacdc90958ea90bf
+SHA512 (tarlz-0.22.tar.lz) = 4e241ea0571e421c93fbeeb54a20e73fd4a7e9c85dc3b24295caec1a52e156cdcf5e85f4ee41f5dfae712b851d17fe0e96955380bb86306d8002f4187d0c60ec
+Size (tarlz-0.22.tar.lz) = 105724 bytes
