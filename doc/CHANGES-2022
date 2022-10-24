@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5157 2022/10/23 15:53:43 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5158 2022/10/24 07:47:28 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7811,3 +7811,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated chat/swirc to 3.3.7 [fcambus 2022-10-23]
 	Updated net/py-gevent to 22.10.1 [adam 2022-10-23]
 	Updated net/py-geventhttpclient to 2.0.8 [adam 2022-10-23]
+	Added archivers/lzlib version 1.13 [fcambus 2022-10-24]
