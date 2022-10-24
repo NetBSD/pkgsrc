@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5176 2022/10/24 18:02:43 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5177 2022/10/24 18:18:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7835,3 +7835,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated wm/enlightenment16 to 1.0.26 [gutteridge 2022-10-24]
 	Updated net/libtorrent-rasterbar to 2.0.8 [adam 2022-10-24]
 	Updated math/octave to 7.2.0 [adam 2022-10-24]
+	Updated net/py-pika to 1.3.1 [adam 2022-10-24]
+	Updated math/py-scipy to 1.9.3 [adam 2022-10-24]
