@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2022/10/24 07:46:20 fcambus Exp $
+include/lzlib.h
+info/lzlib.info
+lib/liblz.a
+lib/liblz.so
+lib/liblz.so.1
+lib/liblz.so.${PKGVERSION}
