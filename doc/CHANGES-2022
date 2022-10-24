@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5168 2022/10/24 14:13:17 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.5169 2022/10/24 14:13:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7826,3 +7826,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/libunistring to 1.1 [wiz 2022-10-24]
 	Updated devel/slib to 3.2.7 [wiz 2022-10-24]
 	Updated devel/guile-slib to 3.2.7 [wiz 2022-10-24]
+	Updated devel/guile22-slib to 3.2.7 [wiz 2022-10-24]
