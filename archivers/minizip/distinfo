@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2022/04/20 20:19:26 wiz Exp $
+$NetBSD: distinfo,v 1.5 2022/10/24 14:15:17 wiz Exp $
 
-BLAKE2s (zlib-1.2.12.tar.xz) = 497227a7d386ae38885f747dd9e27b8f33591bed0c02161a584cbdb71f3be8ab
-SHA512 (zlib-1.2.12.tar.xz) = 12940e81e988f7661da52fa20bdc333314ae86a621fdb748804a20840b065a1d6d984430f2d41f3a057de0effc6ff9bcf42f9ee9510b88219085f59cbbd082bd
-Size (zlib-1.2.12.tar.xz) = 1288864 bytes
+BLAKE2s (zlib-1.2.13.tar.xz) = a7379d82dbff33a861dd6bbafb45b330a8922a6aff1c4be5b1dd415af4029bd0
+SHA512 (zlib-1.2.13.tar.xz) = 9e7ac71a1824855ae526506883e439456b74ac0b811d54e94f6908249ba8719bec4c8d7672903c5280658b26cb6b5e93ecaaafe5cdc2980c760fa196773f0725
+Size (zlib-1.2.13.tar.xz) = 1296496 bytes
