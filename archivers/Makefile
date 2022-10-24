@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.193 2022/10/24 07:50:29 fcambus Exp $
+# $NetBSD: Makefile,v 1.194 2022/10/24 07:52:54 fcambus Exp $
 #
 
 COMMENT=	Archivers and compression tools
@@ -97,6 +97,7 @@ SUBDIR+=	php-zip
 SUBDIR+=	php-zlib
 SUBDIR+=	pigz
 SUBDIR+=	pixz
+SUBDIR+=	plzip
 SUBDIR+=	ppmd
 SUBDIR+=	ppunpack
 SUBDIR+=	pxz
