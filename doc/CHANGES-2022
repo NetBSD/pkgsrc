@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5172 2022/10/24 14:18:30 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.5173 2022/10/24 14:33:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7830,3 +7830,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/xdg-user-dirs to 0.18 [wiz 2022-10-24]
 	Updated archivers/minizip to 1.2.13 [wiz 2022-10-24]
 	Updated textproc/xerces-c to 3.2.4 [wiz 2022-10-24]
+	Updated graphics/ImageMagick to 7.1.0.51 [wiz 2022-10-24]
