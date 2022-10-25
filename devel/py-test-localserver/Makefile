@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2022/10/21 17:48:58 adam Exp $
+# $NetBSD: Makefile,v 1.10 2022/10/25 07:06:14 adam Exp $
 
 DISTNAME=	pytest-localserver-0.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -10,6 +10,7 @@ HOMEPAGE=	https://github.com/pytest-dev/pytest-localserver
 COMMENT=	Py.test plugin to test server connections locally
 LICENSE=	mit
 
+BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4.1:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-werkzeug>=0.10:../../www/py-werkzeug
 TEST_DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
