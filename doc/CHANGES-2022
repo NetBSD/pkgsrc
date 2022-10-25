@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5184 2022/10/25 09:29:52 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5185 2022/10/25 09:33:34 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7854,3 +7854,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-modulegraph to 0.19.3 [adam 2022-10-25]
 	Updated devel/py-astroid to 2.12.12 [adam 2022-10-25]
 	Updated devel/py-pylint to 2.15.5 [adam 2022-10-25]
+	Updated x11/xterm to 375 [pin 2022-10-25]
