@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2022/04/19 12:12:09 tnn Exp $
+# $NetBSD: Makefile,v 1.10 2022/10/25 15:56:21 adam Exp $
 
-DISTNAME=	landslide-1.1.8
+DISTNAME=	landslide-1.1.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/landslide/}
 
@@ -12,11 +11,15 @@ COMMENT=	Generate HTML5 slideshows from markdown, ReST, or textile
 LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-docutils>=0.14:../../textproc/py-docutils
+DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.10.1:../../textproc/py-jinja2
+DEPENDS+=	${PYPKGPREFIX}-markdown>=2.6.11:../../textproc/py-markdown
+DEPENDS+=	${PYPKGPREFIX}-markupsafe>=1.1.1:../../textproc/py-markupsafe
+DEPENDS+=	${PYPKGPREFIX}-pygments>=2.2.0:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-six>=1.11.0:../../lang/py-six
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONED_DEPENDENCIES=	jinja2 markdown pygments
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
@@ -26,5 +29,4 @@ do-test:
 	cd ${WRKSRC} && ${PYTHONBIN} tests.py
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
