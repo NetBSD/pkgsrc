@@ -1,21 +1,16 @@
-# $NetBSD: Makefile,v 1.18 2022/08/11 05:08:12 gutteridge Exp $
+# $NetBSD: Makefile,v 1.19 2022/10/25 08:02:56 prlw1 Exp $
 
-DISTNAME=	libhandy-1.5.91
-PKGREVISION=	3
+DISTNAME=	libhandy-1.8.0
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libhandy/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://gitlab.gnome.org/GNOME/libhandy/
+HOMEPAGE=	https://gnome.pages.gitlab.gnome.org/libhandy/
 COMMENT=	Building blocks for modern adaptive GNOME apps
 LICENSE=	gnu-lgpl-v2.1
 
 USE_TOOLS+=	pkg-config
-
-# workaround for build failure
-# https://gitlab.gnome.org/GNOME/json-glib/issues/35
-#MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/src
 
 PYTHON_FOR_BUILD_ONLY=	tool
 
