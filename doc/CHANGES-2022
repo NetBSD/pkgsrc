@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5181 2022/10/25 08:03:22 prlw1 Exp $
+$NetBSD: CHANGES-2022,v 1.5182 2022/10/25 08:38:53 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7845,3 +7845,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-test-mock to 3.10.0 [adam 2022-10-25]
 	Updated www/py-httpie to 3.2.1 [adam 2022-10-25]
 	Updated devel/libhandy to 1.8.0 [prlw1 2022-10-25]
+	Added print/evince version 43.0 [prlw1 2022-10-25]
