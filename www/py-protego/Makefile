@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2022/01/04 20:55:32 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/10/25 19:04:38 adam Exp $
 
-DISTNAME=	Protego-0.1.16
+DISTNAME=	Protego-0.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/Protego/}
 
@@ -12,11 +11,14 @@ COMMENT=	Pure-Python robots.txt parser with support for modern conventions
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 USE_LANGUAGES=	# none
 
-PYSETUPTESTTARGET=	pytest
+PYTHON_VERSIONED_DEPENDENCIES=	test:test
+
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
