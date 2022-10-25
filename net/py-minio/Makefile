@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2022/09/14 10:59:55 adam Exp $
+# $NetBSD: Makefile,v 1.11 2022/10/25 11:00:38 adam Exp $
 
-DISTNAME=	minio-7.1.11
+DISTNAME=	minio-7.1.12
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/minio/}
