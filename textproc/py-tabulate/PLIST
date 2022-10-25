@@ -1,11 +1,15 @@
-@comment $NetBSD: PLIST,v 1.3 2019/01/28 14:17:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/10/25 19:00:50 adam Exp $
 bin/tabulate-${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/tabulate.py
-${PYSITELIB}/tabulate.pyc
-${PYSITELIB}/tabulate.pyo
+${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/tabulate/__init__.py
+${PYSITELIB}/tabulate/__init__.pyc
+${PYSITELIB}/tabulate/version.py
+${PYSITELIB}/tabulate/version.pyc
