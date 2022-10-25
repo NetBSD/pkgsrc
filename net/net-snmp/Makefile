@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.139 2022/10/18 12:01:52 adam Exp $
+# $NetBSD: Makefile,v 1.140 2022/10/25 19:33:14 jperkin Exp $
 
 .include "Makefile.common"
 CATEGORIES=	net
@@ -66,7 +66,7 @@ CONFIGURE_ARGS+=	--with-persistent-directory=${NET_SNMP_PERSISTENTDIR}
 .if !empty(NET_SNMP_MIBDIRS)
 CONFIGURE_ARGS+=	--with-mibdirs=${NET_SNMP_MIBDIRS:Q}
 .endif
-.if ${OPSYS} == "NetBSD" || ${OPSYS} == "SunOS"
+.if ${OPSYS} == "NetBSD"
 CONFIGURE_ARGS+=	--with-mib-modules="smux host ucd-snmp/diskio mibII/kernel_netbsd"
 .elif ${OPSYS} == "SunOS"
 CONFIGURE_ARGS+=	--with-mib-modules="smux host ucd-snmp/diskio"
