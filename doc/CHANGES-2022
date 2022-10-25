@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5190 2022/10/25 15:54:46 nia Exp $
+$NetBSD: CHANGES-2022,v 1.5191 2022/10/25 16:16:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7862,3 +7862,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-fasteners to 0.18 [adam 2022-10-25]
 	Updated www/py-rfc3986 to 2.0.0 [adam 2022-10-25]
 	Updated audio/strawberry to 1.0.10 [nia 2022-10-25]
+	Updated net/samba4 to 4.17.2 [taca 2022-10-25]
