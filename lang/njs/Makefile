@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2022/08/30 18:00:49 osa Exp $
+# $NetBSD: Makefile,v 1.8 2022/10/25 16:35:46 osa Exp $
 
-DISTNAME=	njs-0.7.7
+DISTNAME=	njs-0.7.8
 CATEGORIES=	lang www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nginx/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
