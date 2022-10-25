@@ -1,10 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1 2020/04/18 12:49:47 js Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/${EGG_INFODIR}/zip-safe
-${PYSITELIB}/canonicaljson.py
-${PYSITELIB}/canonicaljson.pyc
-${PYSITELIB}/canonicaljson.pyo
+@comment $NetBSD: PLIST,v 1.2 2022/10/25 07:30:19 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/zip-safe
+${PYSITELIB}/canonicaljson/__init__.py
+${PYSITELIB}/canonicaljson/__init__.pyc
+${PYSITELIB}/canonicaljson/py.typed
