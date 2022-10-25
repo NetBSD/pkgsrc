@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/10/25 21:04:08 nikita Exp $
+
+BLAKE2s (gotags-1.4.1.tar.gz) = 9957b3f013f3847e92f78012049a6256ce0b4020ae26c96868c1b8e7aeb5ebb1
+SHA512 (gotags-1.4.1.tar.gz) = 8d7da91f35dd287075ae8ed346bd547dae5fc937dadbdce192de41c35275928b3711cade7f5c257646cab10a58e54dd1e64efd6d511e161f4e9429c0611b1ae1
+Size (gotags-1.4.1.tar.gz) = 9675 bytes
