@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2022/10/04 09:54:03 adam Exp $
+# $NetBSD: Makefile,v 1.14 2022/10/25 11:18:21 adam Exp $
 
 DISTNAME=	volk-2.5.2
 CATEGORIES=	math ham
@@ -18,6 +18,8 @@ USE_CMAKE=	yes
 USE_LANGUAGES=	c c++17
 USE_TOOLS+=	pkg-config
 TEST_TARGET=	test
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27	# py-mako
 
 # XXX this doesn't work because VolkPython.cmake doesn't conform
 # to PEP 3147 (doesn't place files in __pycache__ when using python 3)
