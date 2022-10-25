@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.34 2022/08/10 08:59:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.35 2022/10/25 18:21:27 adam Exp $
 bin/cftp-${PYVERSSUFFIX}
 bin/ckeygen-${PYVERSSUFFIX}
 bin/conch-${PYVERSSUFFIX}
@@ -1358,12 +1358,7 @@ ${PYSITELIB}/twisted/python/_appdirs.pyo
 ${PYSITELIB}/twisted/python/_inotify.py
 ${PYSITELIB}/twisted/python/_inotify.pyc
 ${PYSITELIB}/twisted/python/_inotify.pyo
-${PYSITELIB}/twisted/python/_pydoctor.py
-${PYSITELIB}/twisted/python/_pydoctor.pyc
-${PYSITELIB}/twisted/python/_pydoctor.pyo
-${PYSITELIB}/twisted/python/_pydoctortemplates/common.html
-${PYSITELIB}/twisted/python/_pydoctortemplates/footer.html
-${PYSITELIB}/twisted/python/_pydoctortemplates/header.html
+${PYSITELIB}/twisted/python/_pydoctortemplates/subheader.html
 ${PYSITELIB}/twisted/python/_release.py
 ${PYSITELIB}/twisted/python/_release.pyc
 ${PYSITELIB}/twisted/python/_release.pyo
@@ -1490,9 +1485,6 @@ ${PYSITELIB}/twisted/python/test/test_htmlizer.pyo
 ${PYSITELIB}/twisted/python/test/test_inotify.py
 ${PYSITELIB}/twisted/python/test/test_inotify.pyc
 ${PYSITELIB}/twisted/python/test/test_inotify.pyo
-${PYSITELIB}/twisted/python/test/test_pydoctor.py
-${PYSITELIB}/twisted/python/test/test_pydoctor.pyc
-${PYSITELIB}/twisted/python/test/test_pydoctor.pyo
 ${PYSITELIB}/twisted/python/test/test_release.py
 ${PYSITELIB}/twisted/python/test/test_release.pyc
 ${PYSITELIB}/twisted/python/test/test_release.pyo
@@ -2007,6 +1999,9 @@ ${PYSITELIB}/twisted/trial/_dist/distreporter.pyo
 ${PYSITELIB}/twisted/trial/_dist/disttrial.py
 ${PYSITELIB}/twisted/trial/_dist/disttrial.pyc
 ${PYSITELIB}/twisted/trial/_dist/disttrial.pyo
+${PYSITELIB}/twisted/trial/_dist/functional.py
+${PYSITELIB}/twisted/trial/_dist/functional.pyc
+${PYSITELIB}/twisted/trial/_dist/functional.pyo
 ${PYSITELIB}/twisted/trial/_dist/managercommands.py
 ${PYSITELIB}/twisted/trial/_dist/managercommands.pyc
 ${PYSITELIB}/twisted/trial/_dist/managercommands.pyo
@@ -2016,6 +2011,9 @@ ${PYSITELIB}/twisted/trial/_dist/options.pyo
 ${PYSITELIB}/twisted/trial/_dist/test/__init__.py
 ${PYSITELIB}/twisted/trial/_dist/test/__init__.pyc
 ${PYSITELIB}/twisted/trial/_dist/test/__init__.pyo
+${PYSITELIB}/twisted/trial/_dist/test/matchers.py
+${PYSITELIB}/twisted/trial/_dist/test/matchers.pyc
+${PYSITELIB}/twisted/trial/_dist/test/matchers.pyo
 ${PYSITELIB}/twisted/trial/_dist/test/test_distreporter.py
 ${PYSITELIB}/twisted/trial/_dist/test/test_distreporter.pyc
 ${PYSITELIB}/twisted/trial/_dist/test/test_distreporter.pyo
@@ -2067,6 +2065,9 @@ ${PYSITELIB}/twisted/trial/test/detests.pyo
 ${PYSITELIB}/twisted/trial/test/erroneous.py
 ${PYSITELIB}/twisted/trial/test/erroneous.pyc
 ${PYSITELIB}/twisted/trial/test/erroneous.pyo
+${PYSITELIB}/twisted/trial/test/matchers.py
+${PYSITELIB}/twisted/trial/test/matchers.pyc
+${PYSITELIB}/twisted/trial/test/matchers.pyo
 ${PYSITELIB}/twisted/trial/test/mockcustomsuite.py
 ${PYSITELIB}/twisted/trial/test/mockcustomsuite.pyc
 ${PYSITELIB}/twisted/trial/test/mockcustomsuite.pyo
@@ -2094,6 +2095,9 @@ ${PYSITELIB}/twisted/trial/test/ordertests.pyo
 ${PYSITELIB}/twisted/trial/test/packages.py
 ${PYSITELIB}/twisted/trial/test/packages.pyc
 ${PYSITELIB}/twisted/trial/test/packages.pyo
+${PYSITELIB}/twisted/trial/test/pyunitcases.py
+${PYSITELIB}/twisted/trial/test/pyunitcases.pyc
+${PYSITELIB}/twisted/trial/test/pyunitcases.pyo
 ${PYSITELIB}/twisted/trial/test/sample.py
 ${PYSITELIB}/twisted/trial/test/sample.pyc
 ${PYSITELIB}/twisted/trial/test/sample.pyo
