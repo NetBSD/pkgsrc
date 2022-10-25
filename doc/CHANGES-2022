@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5194 2022/10/25 18:22:42 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5195 2022/10/25 18:23:32 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7871,3 +7871,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/py-landslide to 1.1.9 [adam 2022-10-25]
 	Updated devel/py-automat to 20.2.0 [adam 2022-10-25]
 	Updated net/py-twisted to 22.8.0 [adam 2022-10-25]
+	Updated net/gh to 2.18.1 [bsiegert 2022-10-25]
