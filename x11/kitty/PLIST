@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2022/09/27 07:45:50 pin Exp $
+@comment $NetBSD: PLIST,v 1.21 2022/10/25 09:34:15 pin Exp $
 bin/kitty
 lib/kitty/__main__.py
 lib/kitty/__main__.pyc
@@ -696,6 +696,7 @@ share/doc/kitty/html/_static/scripts/furo.js.LICENSE.txt
 share/doc/kitty/html/_static/scripts/furo.js.map
 share/doc/kitty/html/_static/searchtools.js
 share/doc/kitty/html/_static/skeleton.css
+share/doc/kitty/html/_static/sphinx_highlight.js
 share/doc/kitty/html/_static/styles/furo-extensions.css
 share/doc/kitty/html/_static/styles/furo-extensions.css.map
 share/doc/kitty/html/_static/styles/furo.css
