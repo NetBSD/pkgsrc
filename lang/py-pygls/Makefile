@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2022/10/14 09:55:51 adam Exp $
+# $NetBSD: Makefile,v 1.6 2022/10/25 09:25:39 adam Exp $
 
-DISTNAME=	pygls-0.12.2
+DISTNAME=	pygls-0.12.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pygls/}
@@ -13,7 +13,7 @@ LICENSE=	apache-2.0
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4.3:../../devel/py-setuptools_scm
 BUILD_DEPENDS+=	${PYPKGPREFIX}-toml-[0-9]*:../../textproc/py-toml
 BUILD_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
-DEPENDS+=	${PYPKGPREFIX}-pydantic>=1.9.1:../../devel/py-pydantic
+DEPENDS+=	${PYPKGPREFIX}-pydantic>=1.10.2:../../devel/py-pydantic
 DEPENDS+=	${PYPKGPREFIX}-typeguard>=2.10.0:../../devel/py-typeguard
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock>=3.0.5:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=7.1.2:../../devel/py-test
