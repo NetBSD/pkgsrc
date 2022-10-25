@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2019/03/21 14:18:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2022/10/25 11:18:04 adam Exp $
 bin/mako-render-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -82,6 +82,27 @@ ${PYSITELIB}/mako/runtime.pyo
 ${PYSITELIB}/mako/template.py
 ${PYSITELIB}/mako/template.pyc
 ${PYSITELIB}/mako/template.pyo
+${PYSITELIB}/mako/testing/__init__.py
+${PYSITELIB}/mako/testing/__init__.pyc
+${PYSITELIB}/mako/testing/__init__.pyo
+${PYSITELIB}/mako/testing/_config.py
+${PYSITELIB}/mako/testing/_config.pyc
+${PYSITELIB}/mako/testing/_config.pyo
+${PYSITELIB}/mako/testing/assertions.py
+${PYSITELIB}/mako/testing/assertions.pyc
+${PYSITELIB}/mako/testing/assertions.pyo
+${PYSITELIB}/mako/testing/config.py
+${PYSITELIB}/mako/testing/config.pyc
+${PYSITELIB}/mako/testing/config.pyo
+${PYSITELIB}/mako/testing/exclusions.py
+${PYSITELIB}/mako/testing/exclusions.pyc
+${PYSITELIB}/mako/testing/exclusions.pyo
+${PYSITELIB}/mako/testing/fixtures.py
+${PYSITELIB}/mako/testing/fixtures.pyc
+${PYSITELIB}/mako/testing/fixtures.pyo
+${PYSITELIB}/mako/testing/helpers.py
+${PYSITELIB}/mako/testing/helpers.pyc
+${PYSITELIB}/mako/testing/helpers.pyo
 ${PYSITELIB}/mako/util.py
 ${PYSITELIB}/mako/util.pyc
 ${PYSITELIB}/mako/util.pyo
