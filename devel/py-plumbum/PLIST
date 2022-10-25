@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2021/10/15 12:20:27 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/10/25 19:21:06 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -41,6 +41,9 @@ ${PYSITELIB}/plumbum/cli/terminal.pyo
 ${PYSITELIB}/plumbum/cli/termsize.py
 ${PYSITELIB}/plumbum/cli/termsize.pyc
 ${PYSITELIB}/plumbum/cli/termsize.pyo
+${PYSITELIB}/plumbum/cmd.py
+${PYSITELIB}/plumbum/cmd.pyc
+${PYSITELIB}/plumbum/cmd.pyo
 ${PYSITELIB}/plumbum/colorlib/__init__.py
 ${PYSITELIB}/plumbum/colorlib/__init__.pyc
 ${PYSITELIB}/plumbum/colorlib/__init__.pyo
