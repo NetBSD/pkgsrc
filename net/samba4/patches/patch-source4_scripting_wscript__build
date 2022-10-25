@@ -1,4 +1,4 @@
-$NetBSD: patch-source4_scripting_wsript_build,v 1.4 2022/03/07 21:40:38 thor Exp $
+$NetBSD: patch-source4_scripting_wscript__build,v 1.1 2022/10/25 07:46:11 wiz Exp $
 
 Avoid getting strange ending # character on interpreter 
 name like: 
