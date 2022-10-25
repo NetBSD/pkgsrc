@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2020/03/04 14:04:51 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2022/10/25 18:00:36 nros Exp $
 
 .include "../../devel/ncurses/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/ncurses/ncursesw/}
+PKGREVISION=	1
 COMMENT=	Wide character CRT screen handling and optimization package
 
 PATCHDIR=	${.CURDIR}/../../devel/ncurses/patches
@@ -28,8 +29,10 @@ post-build:
 	cd ${WRKSRC}/misc && ${SH} gen-pkgconfig
 
 do-install:
-	cd ${WRKSRC}/include &&	\
-	${MAKE_ENV} ${MAKE_PROGRAM} ${INSTALL_MAKE_FLAGS} install
+	for DIR in c++ form include menu panel; do \
+		cd ${WRKSRC}/$${DIR}; \
+		${RUN} ${MAKE_ENV} ${MAKE_PROGRAM} ${INSTALL_MAKE_FLAGS} install.includes; \
+	done
 	${INSTALL_SCRIPT} ${WRKSRC}/misc/ncurses-config ${DESTDIR}${PREFIX}/bin/ncursesw${NC_VERS:R}-config
 	for LIB in gnuform gnumenu ncurses++ ncurses gnupanel; do	\
 		${LIBTOOL} --mode=install ${INSTALL_PROGRAM}	\
