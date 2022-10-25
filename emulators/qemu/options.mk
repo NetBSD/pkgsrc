@@ -1,7 +1,8 @@
-# $NetBSD: options.mk,v 1.17 2021/12/27 10:12:57 nia Exp $
+# $NetBSD: options.mk,v 1.18 2022/10/25 18:42:57 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qemu
 PKG_SUPPORTED_OPTIONS=	debug-info gtk3 iscsi jack sdl spice
+PKG_SUPPORTED_OPTIONS+=	jemalloc
 PKG_SUGGESTED_OPTIONS+=	iscsi spice
 
 .include "../../mk/bsd.fast.prefs.mk"
@@ -20,6 +21,10 @@ PKG_SUGGESTED_OPTIONS+=	opengl sdl
 .  else
 PKG_SUGGESTED_OPTIONS+=	sdl
 .  endif
+.endif
+
+.if ${OPSYS} != "SunOS"
+PKG_SUGGESTED_OPTIONS+=	jemalloc
 .endif
 
 .include "../../mk/bsd.options.mk"
@@ -95,4 +100,9 @@ CONFIGURE_ARGS+=	--enable-libiscsi
 .include "../../net/libiscsi/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-libiscsi
+.endif
+
+.if !empty(PKG_OPTIONS:Mjemalloc)
+CONFIGURE_ARGS+=	--enable-jemalloc
+.include "../../devel/jemalloc/buildlink3.mk"
 .endif
