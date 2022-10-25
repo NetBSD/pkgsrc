@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5196 2022/10/25 18:53:36 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5197 2022/10/25 19:05:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7876,3 +7876,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-stevedore to 4.1.0 [adam 2022-10-25]
 	Updated textproc/py-sphinx to 5.3.0 [adam 2022-10-25]
 	Updated textproc/py-dill to 0.3.6 [adam 2022-10-25]
+	Updated devel/py-scard to 2.0.5 [adam 2022-10-25]
+	Updated sysutils/py-invoke to 1.7.3 [adam 2022-10-25]
+	Updated textproc/py-tabulate to 0.9.0 [adam 2022-10-25]
+	Updated www/py-protego to 0.2.1 [adam 2022-10-25]
