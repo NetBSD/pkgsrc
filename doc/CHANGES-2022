@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5193 2022/10/25 18:12:49 bsiegert Exp $
+$NetBSD: CHANGES-2022,v 1.5194 2022/10/25 18:22:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7867,3 +7867,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/nginx to 1.22.1nb1 [osa 2022-10-25]
 	Updated www/nginx-devel to 1.23.2nb1 [osa 2022-10-25]
 	Updated www/caddy to 2.6.2 [bsiegert 2022-10-25]
+	Updated textproc/py-markdown to 3.4.1 [adam 2022-10-25]
+	Updated www/py-landslide to 1.1.9 [adam 2022-10-25]
+	Updated devel/py-automat to 20.2.0 [adam 2022-10-25]
+	Updated net/py-twisted to 22.8.0 [adam 2022-10-25]
