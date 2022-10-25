@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2022/07/05 12:56:19 adam Exp $
+# $NetBSD: Makefile,v 1.12 2022/10/25 19:00:50 adam Exp $
 
-DISTNAME=	tabulate-0.8.10
+DISTNAME=	tabulate-0.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tabulate/}
@@ -10,11 +10,13 @@ HOMEPAGE=	https://bitbucket.org/astanin/python-tabulate
 COMMENT=	Pretty-print tabular data
 LICENSE=	mit
 
+BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4.3:../../devel/py-setuptools_scm
+BUILD_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	# none
 
-USE_PKG_RESOURCES=	yes
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
@@ -23,5 +25,5 @@ post-install:
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} test
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
