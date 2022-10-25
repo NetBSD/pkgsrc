@@ -1,12 +1,12 @@
-$NetBSD: patch-lib_util_time.h,v 1.1 2022/07/21 09:35:50 adam Exp $
+$NetBSD: patch-lib_util_time.h,v 1.2 2022/10/25 07:46:11 wiz Exp $
 
 Define timeval/timespec.
 
---- lib/util/time.h.orig	2022-07-20 13:08:26.333843041 +0000
+--- lib/util/time.h.orig	2022-08-08 14:15:39.172190700 +0000
 +++ lib/util/time.h
-@@ -28,6 +28,18 @@
- #include <stdint.h>
+@@ -29,6 +29,18 @@
  #include <talloc.h>
+ #include <time.h>
  
 +/* From "system/time.h" */
 +#ifdef TIME_WITH_SYS_TIME
