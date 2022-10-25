@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.150 2022/09/12 16:04:57 adam Exp $
+# $NetBSD: Makefile,v 1.151 2022/10/25 07:46:11 wiz Exp $
 
-DISTNAME=	samba-4.16.5
+DISTNAME=	samba-4.17.1
 CATEGORIES=	net
 MASTER_SITES=	https://download.samba.org/pub/samba/stable/
 
@@ -69,9 +69,7 @@ BROKEN_GETTEXT_DETECTION= yes
 #CONFIGURE_ARGS+=	--fatal-errors
 
 HAS_CONFIGURE=		yes
-CONFIG_SHELL=		${PYTHONBIN}
-CONFIGURE_SCRIPT=	${WRKSRC}/buildtools/bin/waf
-CONFIGURE_ARGS+=	configure
+CONFIGURE_SCRIPT=	${WRKSRC}/configure
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--infodir=${SMB_INFO}
 CONFIGURE_ARGS+=	--mandir=${SMB_MAN}
