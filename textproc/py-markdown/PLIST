@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2021/11/01 21:43:46 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2022/10/25 15:55:35 adam Exp $
 bin/markdown_py${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -81,12 +81,12 @@ ${PYSITELIB}/markdown/extensions/toc.pyo
 ${PYSITELIB}/markdown/extensions/wikilinks.py
 ${PYSITELIB}/markdown/extensions/wikilinks.pyc
 ${PYSITELIB}/markdown/extensions/wikilinks.pyo
+${PYSITELIB}/markdown/htmlparser.py
+${PYSITELIB}/markdown/htmlparser.pyc
+${PYSITELIB}/markdown/htmlparser.pyo
 ${PYSITELIB}/markdown/inlinepatterns.py
 ${PYSITELIB}/markdown/inlinepatterns.pyc
 ${PYSITELIB}/markdown/inlinepatterns.pyo
-${PYSITELIB}/markdown/pep562.py
-${PYSITELIB}/markdown/pep562.pyc
-${PYSITELIB}/markdown/pep562.pyo
 ${PYSITELIB}/markdown/postprocessors.py
 ${PYSITELIB}/markdown/postprocessors.pyc
 ${PYSITELIB}/markdown/postprocessors.pyo
