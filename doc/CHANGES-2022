@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5199 2022/10/25 20:27:53 nikita Exp $
+$NetBSD: CHANGES-2022,v 1.5200 2022/10/25 21:05:14 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7885,3 +7885,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/py-google-auth-oauthlib to 0.6.0 [adam 2022-10-25]
 	Updated devel/py-plumbum to 1.8.0 [adam 2022-10-25]
 	Added devel/pynvim version 0.4.3 [nikita 2022-10-25]
+	Added devel/gotags version 1.4.1 [nikita 2022-10-25]
