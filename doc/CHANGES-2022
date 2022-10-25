@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5186 2022/10/25 09:34:38 pin Exp $
+$NetBSD: CHANGES-2022,v 1.5187 2022/10/25 11:18:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7856,3 +7856,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-pylint to 2.15.5 [adam 2022-10-25]
 	Updated x11/xterm to 375 [pin 2022-10-25]
 	Updated x11/kitty to 0.26.4 [pin 2022-10-25]
+	Updated net/py-minio to 7.1.12 [adam 2022-10-25]
+	Updated devel/py-mako to 1.2.3 [adam 2022-10-25]
