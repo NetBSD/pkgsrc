@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5183 2022/10/25 09:15:33 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5184 2022/10/25 09:29:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7850,3 +7850,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-hypothesis to 6.56.3 [adam 2022-10-25]
 	Updated time/py-iso8601 to 1.1.0 [adam 2022-10-25]
 	Updated devel/py-pydantic to 1.10.2 [adam 2022-10-25]
+	Updated lang/py-pygls to 0.12.3 [adam 2022-10-25]
+	Updated devel/py-modulegraph to 0.19.3 [adam 2022-10-25]
+	Updated devel/py-astroid to 2.12.12 [adam 2022-10-25]
+	Updated devel/py-pylint to 2.15.5 [adam 2022-10-25]
