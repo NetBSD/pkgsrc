@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2022/07/13 12:11:00 adam Exp $
+# $NetBSD: Makefile,v 1.2 2022/10/25 18:56:32 adam Exp $
 
-DISTNAME=	invoke-1.7.1
+DISTNAME=	invoke-1.7.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/invoke/}
