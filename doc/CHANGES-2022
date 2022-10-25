@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5188 2022/10/25 11:39:08 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5189 2022/10/25 13:37:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7860,3 +7860,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-mako to 1.2.3 [adam 2022-10-25]
 	Updated security/py-nacl to 1.5.0 [adam 2022-10-25]
 	Updated devel/py-fasteners to 0.18 [adam 2022-10-25]
+	Updated www/py-rfc3986 to 2.0.0 [adam 2022-10-25]
