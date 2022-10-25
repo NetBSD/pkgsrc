@@ -1,4 +1,11 @@
-@comment $NetBSD: PLIST,v 1.11 2022/08/30 12:01:51 sborrill Exp $
+@comment $NetBSD: PLIST,v 1.12 2022/10/25 19:12:58 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${EGG_NAME}-nspkg.pth
 ${PYSITELIB}/google/auth/__init__.py
 ${PYSITELIB}/google/auth/__init__.pyc
 ${PYSITELIB}/google/auth/__init__.pyo
@@ -14,6 +21,9 @@ ${PYSITELIB}/google/auth/_default.pyo
 ${PYSITELIB}/google/auth/_default_async.py
 ${PYSITELIB}/google/auth/_default_async.pyc
 ${PYSITELIB}/google/auth/_default_async.pyo
+${PYSITELIB}/google/auth/_exponential_backoff.py
+${PYSITELIB}/google/auth/_exponential_backoff.pyc
+${PYSITELIB}/google/auth/_exponential_backoff.pyo
 ${PYSITELIB}/google/auth/_helpers.py
 ${PYSITELIB}/google/auth/_helpers.pyc
 ${PYSITELIB}/google/auth/_helpers.pyo
@@ -77,6 +87,9 @@ ${PYSITELIB}/google/auth/exceptions.pyo
 ${PYSITELIB}/google/auth/external_account.py
 ${PYSITELIB}/google/auth/external_account.pyc
 ${PYSITELIB}/google/auth/external_account.pyo
+${PYSITELIB}/google/auth/external_account_authorized_user.py
+${PYSITELIB}/google/auth/external_account_authorized_user.pyc
+${PYSITELIB}/google/auth/external_account_authorized_user.pyo
 ${PYSITELIB}/google/auth/iam.py
 ${PYSITELIB}/google/auth/iam.pyc
 ${PYSITELIB}/google/auth/iam.pyo
@@ -167,10 +180,3 @@ ${PYSITELIB}/google/oauth2/sts.pyo
 ${PYSITELIB}/google/oauth2/utils.py
 ${PYSITELIB}/google/oauth2/utils.pyc
 ${PYSITELIB}/google/oauth2/utils.pyo
-${PYSITELIB}/${EGG_NAME}-nspkg.pth
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
