@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5197 2022/10/25 19:05:06 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5198 2022/10/25 19:21:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7880,3 +7880,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/py-invoke to 1.7.3 [adam 2022-10-25]
 	Updated textproc/py-tabulate to 0.9.0 [adam 2022-10-25]
 	Updated www/py-protego to 0.2.1 [adam 2022-10-25]
+	Updated security/py-google-auth to 2.13.0 [adam 2022-10-25]
+	Updated devel/py-types-setuptools to 65.5.0.2 [adam 2022-10-25]
+	Updated security/py-google-auth-oauthlib to 0.6.0 [adam 2022-10-25]
+	Updated devel/py-plumbum to 1.8.0 [adam 2022-10-25]
