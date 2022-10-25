@@ -1,1 +1,1 @@
-bin/automat-visualize @PREFIX@/bin/automat-visualize@PYVERSSUFFIX@
+bin/automat-visualize @PREFIX@/bin/automat-visualize-@PYVERSSUFFIX@
