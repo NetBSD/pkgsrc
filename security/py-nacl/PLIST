@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2020/05/27 15:01:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/10/25 11:33:05 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -88,6 +88,7 @@ ${PYSITELIB}/nacl/pwhash/argon2id.pyo
 ${PYSITELIB}/nacl/pwhash/scrypt.py
 ${PYSITELIB}/nacl/pwhash/scrypt.pyc
 ${PYSITELIB}/nacl/pwhash/scrypt.pyo
+${PYSITELIB}/nacl/py.typed
 ${PYSITELIB}/nacl/secret.py
 ${PYSITELIB}/nacl/secret.pyc
 ${PYSITELIB}/nacl/secret.pyo
