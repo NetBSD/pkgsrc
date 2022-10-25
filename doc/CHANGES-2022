@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5179 2022/10/25 07:46:23 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.5180 2022/10/25 08:02:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7842,3 +7842,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/py-oauthlib to 3.2.2 [adam 2022-10-25]
 	Updated devel/py-canonicaljson to 1.6.3 [adam 2022-10-25]
 	Updated net/samba4 to 4.17.1 [wiz 2022-10-25]
+	Updated devel/py-test-mock to 3.10.0 [adam 2022-10-25]
+	Updated www/py-httpie to 3.2.1 [adam 2022-10-25]
