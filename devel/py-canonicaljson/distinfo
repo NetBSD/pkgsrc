@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2022/07/28 06:49:52 adam Exp $
+$NetBSD: distinfo,v 1.8 2022/10/25 07:30:19 adam Exp $
 
-BLAKE2s (canonicaljson-1.6.2.tar.gz) = b95d6a8be0ea36c98495cb6687c9b295ade2310c59e0b1df184222e5e6bdcd38
-SHA512 (canonicaljson-1.6.2.tar.gz) = d7c1a5a2367dfa17e3baf183960247f6866d7f0755f5899a87ead74b7eb98c229e61650b5dee65680fbe25c8ef3c1483e4dd5c11ea302ef46a380b4741c80a9e
-Size (canonicaljson-1.6.2.tar.gz) = 10644 bytes
+BLAKE2s (canonicaljson-1.6.3.tar.gz) = 36efa7d27b03fb2884d8d3b01d8ee5a8978139ab4cb724c48e050e71b0b6422d
+SHA512 (canonicaljson-1.6.3.tar.gz) = e094fb4abc7091f9850f0e045c8c738fe52dd48813da7a64ea726b555e14bae96dd56fec04a194388f086739c0ccefb73918a9ab9f228f3b44af540bfd1afee1
+Size (canonicaljson-1.6.3.tar.gz) = 10754 bytes

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2022/07/28 06:49:52 adam Exp $
+# $NetBSD: Makefile,v 1.8 2022/10/25 07:30:19 adam Exp $
 
-DISTNAME=	canonicaljson-1.6.2
+DISTNAME=	canonicaljson-1.6.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/canonicaljson/}
@@ -22,5 +22,5 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-frozendict
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.0.0:../../devel/py-typing-extensions
 .endif
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
