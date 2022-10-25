@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/03/10 21:20:41 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/10/25 08:02:56 prlw1 Exp $
 bin/handy-1-demo
 include/libhandy-1/handy.h
 include/libhandy-1/hdy-action-row.h
@@ -59,8 +59,11 @@ share/locale/fi/LC_MESSAGES/libhandy.mo
 share/locale/fr/LC_MESSAGES/libhandy.mo
 share/locale/fur/LC_MESSAGES/libhandy.mo
 share/locale/gl/LC_MESSAGES/libhandy.mo
+share/locale/hr/LC_MESSAGES/libhandy.mo
 share/locale/hu/LC_MESSAGES/libhandy.mo
 share/locale/id/LC_MESSAGES/libhandy.mo
+share/locale/ka/LC_MESSAGES/libhandy.mo
+share/locale/ko/LC_MESSAGES/libhandy.mo
 share/locale/nl/LC_MESSAGES/libhandy.mo
 share/locale/oc/LC_MESSAGES/libhandy.mo
 share/locale/pl/LC_MESSAGES/libhandy.mo
@@ -70,6 +73,7 @@ share/locale/ro/LC_MESSAGES/libhandy.mo
 share/locale/sl/LC_MESSAGES/libhandy.mo
 share/locale/sr/LC_MESSAGES/libhandy.mo
 share/locale/sv/LC_MESSAGES/libhandy.mo
+share/locale/tr/LC_MESSAGES/libhandy.mo
 share/locale/uk/LC_MESSAGES/libhandy.mo
 share/locale/zh_CN/LC_MESSAGES/libhandy.mo
 share/vala/vapi/libhandy-1.deps
