@@ -391,6 +391,7 @@ java			Enable Java support.
 javascript		Enable Javascript support.
 jdbc-mysql31		Enable MySQL JDBC driver.
 jdbc-mysql5		Enable MySQL JDBC driver.
+jemalloc		Enable the jemalloc memory allocator.
 jp2			Enable JPEG 2000 support using the openjpeg library.
 jpeg			Enable JPEG support.
 jre-jce			Enable the Java Cryptography Extension.
