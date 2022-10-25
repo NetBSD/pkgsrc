@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5191 2022/10/25 16:16:03 taca Exp $
+$NetBSD: CHANGES-2022,v 1.5192 2022/10/25 16:39:53 osa Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7863,3 +7863,6 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/py-rfc3986 to 2.0.0 [adam 2022-10-25]
 	Updated audio/strawberry to 1.0.10 [nia 2022-10-25]
 	Updated net/samba4 to 4.17.2 [taca 2022-10-25]
+	Updated lang/njs to 0.7.8 [osa 2022-10-25]
+	Updated www/nginx to 1.22.1nb1 [osa 2022-10-25]
+	Updated www/nginx-devel to 1.23.2nb1 [osa 2022-10-25]
