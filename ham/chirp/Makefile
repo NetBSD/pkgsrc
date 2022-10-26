@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2022/09/11 00:35:38 gdt Exp $
+# $NetBSD: Makefile,v 1.51 2022/10/26 17:19:42 gdt Exp $
 
-DISTNAME=	chirp-daily-20220909
+DISTNAME=	chirp-daily-20221025
 PKGNAME=	${DISTNAME:S/-daily//}
-PKGREVISION=	1
 CATEGORIES=	ham
 MASTER_SITES=	https://trac.chirp.danplanet.com/chirp_daily/daily-${PKGVERSION_NOREV}/
 # Chirp does not have what would normally called releasees.  They have
