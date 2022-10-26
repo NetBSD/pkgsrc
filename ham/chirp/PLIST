@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2022/09/11 00:35:38 gdt Exp $
+@comment $NetBSD: PLIST,v 1.16 2022/10/26 17:19:42 gdt Exp $
 bin/chirpw
 bin/rpttool
 ${PYSITELIB}/${EGG_INFODIR}
@@ -266,6 +266,9 @@ ${PYSITELIB}/chirp/drivers/id880.pyo
 ${PYSITELIB}/chirp/drivers/idrp.py
 ${PYSITELIB}/chirp/drivers/idrp.pyc
 ${PYSITELIB}/chirp/drivers/idrp.pyo
+${PYSITELIB}/chirp/drivers/iradio_uv-5118.py
+${PYSITELIB}/chirp/drivers/iradio_uv-5118.pyc
+${PYSITELIB}/chirp/drivers/iradio_uv-5118.pyo
 ${PYSITELIB}/chirp/drivers/kenwood_hmk.py
 ${PYSITELIB}/chirp/drivers/kenwood_hmk.pyc
 ${PYSITELIB}/chirp/drivers/kenwood_hmk.pyo
@@ -590,6 +593,7 @@ share/chirp/locale/nl/LC_MESSAGES/CHIRP.mo
 share/chirp/locale/pl/LC_MESSAGES/CHIRP.mo
 share/chirp/locale/pt_BR/LC_MESSAGES/CHIRP.mo
 share/chirp/locale/ru/LC_MESSAGES/CHIRP.mo
+share/chirp/locale/tr_TR/LC_MESSAGES/CHIRP.mo
 share/chirp/locale/uk_UA/LC_MESSAGES/CHIRP.mo
 share/chirp/locale/zh_CN/LC_MESSAGES/CHIRP.mo
 share/chirp/stock_configs/DE Freenet Frequencies.csv
