@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5205 2022/10/26 12:58:33 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5206 2022/10/26 13:28:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7899,3 +7899,6 @@ Changes to the packages collection and infrastructure in 2022:
 	Added textproc/py-jsonschema-spec version 0.1.2 [adam 2022-10-26]
 	Updated textproc/py-openapi-spec-validator to 0.5.1 [adam 2022-10-26]
 	Updated net/py-moto to 4.0.8 [adam 2022-10-26]
+	Added textproc/py-demjson3 version 3.0.6 [adam 2022-10-26]
+	Removed textproc/py-demjson successor textproc/py-demjson3 [adam 2022-10-26]
+	Updated net/bandcamp-dl to 0.0.13 [adam 2022-10-26]
