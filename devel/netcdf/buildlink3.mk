@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.29 2021/09/29 19:00:06 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.30 2022/10/26 10:31:02 wiz Exp $
 
 BUILDLINK_TREE+=	netcdf
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	netcdf
 NETCDF_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.netcdf+=	netcdf>=3.5
-BUILDLINK_ABI_DEPENDS.netcdf+=	netcdf>=4.6.1nb13
+BUILDLINK_ABI_DEPENDS.netcdf+=	netcdf>=4.6.1nb15
 BUILDLINK_PKGSRCDIR.netcdf?=	../../devel/netcdf
 
 .include "../../devel/hdf5/buildlink3.mk"
