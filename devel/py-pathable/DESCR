@@ -1,0 +1,5 @@
+Object-oriented paths
+
+Key features
+* Traverse resources like paths
+* Access resources on demand with separate accessor layer
