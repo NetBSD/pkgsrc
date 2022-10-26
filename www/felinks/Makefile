@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2022/09/25 10:23:10 tnn Exp $
+# $NetBSD: Makefile,v 1.9 2022/10/26 10:32:04 wiz Exp $
 
 DISTNAME=	elinks-0.15.1
 PKGNAME=	${DISTNAME:S/elinks/felinks/}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rkd77/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2022/07/17 08:25:07 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2022/10/26 10:31:38 wiz Exp $
 
 DISTNAME=	mpop-1.4.10
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	mail
 MASTER_SITES=	https://marlam.de/mpop/releases/
 EXTRACT_SUFX=	.tar.xz

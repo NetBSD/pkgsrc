@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2021/12/08 16:06:53 adam Exp $
+# $NetBSD: Makefile,v 1.7 2022/10/26 10:32:02 wiz Exp $
 
 R_PKGNAME=	RCurl
 R_PKGVER=	1.98-1.5
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
