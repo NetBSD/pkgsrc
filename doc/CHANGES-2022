@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5200 2022/10/25 21:05:14 nikita Exp $
+$NetBSD: CHANGES-2022,v 1.5201 2022/10/26 07:44:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7886,3 +7886,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-plumbum to 1.8.0 [adam 2022-10-25]
 	Added devel/pynvim version 0.4.3 [nikita 2022-10-25]
 	Added devel/gotags version 1.4.1 [nikita 2022-10-25]
+	Updated www/curl to 7.86.0 [wiz 2022-10-26]
