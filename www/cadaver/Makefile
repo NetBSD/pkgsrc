@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.58 2022/10/26 10:32:04 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2022/10/26 15:51:24 manu Exp $
 
 DISTNAME=		cadaver-0.23.3
-PKGREVISION=		11
+PKGREVISION=		12
 CATEGORIES=		www
 MASTER_SITES=		http://www.webdav.org/cadaver/
 
@@ -24,4 +24,5 @@ LIBS+=			${BUILDLINK_LDADD.termcap}
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
+.include "../../www/neon/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
