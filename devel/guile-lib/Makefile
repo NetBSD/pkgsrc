@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2022/03/05 19:39:19 gdt Exp $
+# $NetBSD: Makefile,v 1.32 2022/10/26 10:31:21 wiz Exp $
 
 DISTNAME=	guile-lib-0.2.7
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://download.savannah.gnu.org/releases/guile-lib/
 # http://download.gna.org/guile-lib/

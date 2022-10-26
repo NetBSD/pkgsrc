@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2022/09/11 12:51:51 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2022/10/26 10:31:31 wiz Exp $
 
 DISTNAME=	Drawpile-2.1.17
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=drawpile/}
 

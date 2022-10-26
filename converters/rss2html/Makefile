@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2021/12/08 16:03:36 adam Exp $
+# $NetBSD: Makefile,v 1.46 2022/10/26 10:31:17 wiz Exp $
 
 DISTNAME=		rss2html-0.8.2
-PKGREVISION=		25
+PKGREVISION=		26
 CATEGORIES=		converters
 MASTER_SITES=		# ftp://ftp.nopcode.org/prj/rss2html/
 

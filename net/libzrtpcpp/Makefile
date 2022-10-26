@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2022/10/21 16:10:37 nros Exp $
+# $NetBSD: Makefile,v 1.40 2022/10/26 10:31:06 wiz Exp $
 
 DISTNAME=	libzrtpcpp-4.7.0
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wernerd/}
 GITHUB_PROJECT=	ZRTPCPP
