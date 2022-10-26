@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2020/05/07 09:29:04 adam Exp $
-bin/jsonlint-${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/demjson.py
-${PYSITELIB}/demjson.pyc
-${PYSITELIB}/demjson.pyo
