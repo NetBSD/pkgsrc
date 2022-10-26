@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5211 2022/10/26 20:23:45 pin Exp $
+$NetBSD: CHANGES-2022,v 1.5212 2022/10/26 20:27:25 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7907,3 +7907,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated audio/musicpd to 0.23.10nb2 [wiz 2022-10-26]
 	Updated www/grafana to 9.2.2 [triaxx 2022-10-26]
 	Updated graphics/kvantum to 1.0.6 [pin 2022-10-26]
+	Updated audio/termusic to 0.7.5 [pin 2022-10-26]
