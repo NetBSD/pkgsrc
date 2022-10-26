@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2022/03/07 22:59:50 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2022/10/26 10:32:08 wiz Exp $
 
-PKGREVISION= 2
+PKGREVISION= 3
 .include "Makefile.common"
 
 CONFIGURE_ARGS+=	--disable-tk
