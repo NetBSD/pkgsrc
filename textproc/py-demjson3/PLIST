@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2022/10/26 13:25:20 adam Exp $
+bin/jsonlint-${PYVERSSUFFIX}
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/demjson3.py
+${PYSITELIB}/demjson3.pyc
+${PYSITELIB}/demjson3.pyo
+${PYSITELIB}/jsonlint.py
+${PYSITELIB}/jsonlint.pyc
+${PYSITELIB}/jsonlint.pyo
