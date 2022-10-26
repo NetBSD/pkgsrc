@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1329 2022/10/14 12:32:09 adam Exp $
+# $NetBSD: Makefile,v 1.1330 2022/10/26 12:49:54 adam Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1041,6 +1041,7 @@ SUBDIR+=	py-jsonrpc-server
 SUBDIR+=	py-jsonrpclib
 SUBDIR+=	py-jsonrpclib-pelix
 SUBDIR+=	py-jsonschema
+SUBDIR+=	py-jsonschema-spec
 SUBDIR+=	py-jupyterlab-pygments
 SUBDIR+=	py-jxmlease
 SUBDIR+=	py-libxml2
