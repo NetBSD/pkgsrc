@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5208 2022/10/26 17:19:58 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.5209 2022/10/26 20:04:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7904,3 +7904,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/bandcamp-dl to 0.0.13 [adam 2022-10-26]
 	Added devel/revive version 1.2.4 [nikita 2022-10-26]
 	Updated ham/chirp to 20221025 [gdt 2022-10-26]
+	Updated audio/musicpd to 0.23.10nb2 [wiz 2022-10-26]
