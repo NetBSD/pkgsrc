@@ -1,0 +1,7 @@
+demjson3 is a Python language module for encoding, decoding, and
+syntax-checking JSON data. It works under Python 3.
+
+It comes with a jsonlint script which can be used to validate your JSON
+documents for strict conformance to the JSON specification, and to detect
+potential data portability issues. It can also reformat or pretty-print JSON
+documents; either by re-indenting or removing unnecessary whitespace.
