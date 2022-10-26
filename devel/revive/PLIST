@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2022/10/26 16:03:53 nikita Exp $
+bin/revive

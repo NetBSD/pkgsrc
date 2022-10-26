@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3815 2022/10/26 12:48:29 adam Exp $
+# $NetBSD: Makefile,v 1.3816 2022/10/26 16:03:52 nikita Exp $
 #
 
 COMMENT=	Development utilities
@@ -3007,6 +3007,7 @@ SUBDIR+=	reftools
 SUBDIR+=	remake
 SUBDIR+=	reposurgeon
 SUBDIR+=	retrie
+SUBDIR+=	revive
 SUBDIR+=	rgbds
 SUBDIR+=	rinutils
 SUBDIR+=	robin-map
