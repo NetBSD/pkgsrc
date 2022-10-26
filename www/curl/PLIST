@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.91 2022/09/01 07:05:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.92 2022/10/26 07:44:01 wiz Exp $
 bin/curl
 bin/curl-config
 include/curl/curl.h
@@ -12,6 +12,7 @@ include/curl/stdcheaders.h
 include/curl/system.h
 include/curl/typecheck-gcc.h
 include/curl/urlapi.h
+include/curl/websockets.h
 lib/libcurl.la
 lib/pkgconfig/libcurl.pc
 man/man1/curl-config.1
@@ -396,6 +397,7 @@ man/man3/CURLOPT_VERBOSE.3
 man/man3/CURLOPT_WILDCARDMATCH.3
 man/man3/CURLOPT_WRITEDATA.3
 man/man3/CURLOPT_WRITEFUNCTION.3
+man/man3/CURLOPT_WS_OPTIONS.3
 man/man3/CURLOPT_XFERINFODATA.3
 man/man3/CURLOPT_XFERINFOFUNCTION.3
 man/man3/CURLOPT_XOAUTH2_BEARER.3
@@ -481,6 +483,9 @@ man/man3/curl_url_set.3
 man/man3/curl_url_strerror.3
 man/man3/curl_version.3
 man/man3/curl_version_info.3
+man/man3/curl_ws_meta.3
+man/man3/curl_ws_recv.3
+man/man3/curl_ws_send.3
 man/man3/libcurl-easy.3
 man/man3/libcurl-env.3
 man/man3/libcurl-errors.3
