@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.100 2022/08/11 05:09:23 gutteridge Exp $
+# $NetBSD: Makefile,v 1.101 2022/10/26 10:32:05 wiz Exp $
 
 DISTNAME=	netsurf-all-3.10
 PKGNAME=	${DISTNAME:S/-all//}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	www
 MASTER_SITES=	https://download.netsurf-browser.org/netsurf/releases/source-full/
 
