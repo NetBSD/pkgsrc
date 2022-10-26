@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5209 2022/10/26 20:04:41 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.5210 2022/10/26 20:17:14 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7905,3 +7905,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/revive version 1.2.4 [nikita 2022-10-26]
 	Updated ham/chirp to 20221025 [gdt 2022-10-26]
 	Updated audio/musicpd to 0.23.10nb2 [wiz 2022-10-26]
+	Updated www/grafana to 9.2.2 [triaxx 2022-10-26]
