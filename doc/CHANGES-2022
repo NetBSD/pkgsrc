@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5207 2022/10/26 16:04:42 nikita Exp $
+$NetBSD: CHANGES-2022,v 1.5208 2022/10/26 17:19:58 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7903,3 +7903,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed textproc/py-demjson successor textproc/py-demjson3 [adam 2022-10-26]
 	Updated net/bandcamp-dl to 0.0.13 [adam 2022-10-26]
 	Added devel/revive version 1.2.4 [nikita 2022-10-26]
+	Updated ham/chirp to 20221025 [gdt 2022-10-26]
