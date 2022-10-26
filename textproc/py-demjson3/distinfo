@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/10/26 13:25:20 adam Exp $
+
+BLAKE2s (demjson3-3.0.6.tar.gz) = f19aef9975e17fac5c7404c2a906c26df0c774ebc6e48d37e76de2ea6fbdced8
+SHA512 (demjson3-3.0.6.tar.gz) = d7d8d6fdd151c9c12692cd75f2368296408c00c722457206b8a49cb20ee9847b2c3f28c803ea52d788017631295551f7d8eaf7ae7537063deb618eb2ec8920cc
+Size (demjson3-3.0.6.tar.gz) = 131477 bytes
