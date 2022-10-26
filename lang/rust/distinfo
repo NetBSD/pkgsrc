@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.151 2022/10/23 14:48:31 he Exp $
+$NetBSD: distinfo,v 1.152 2022/10/26 12:51:46 he Exp $
 
 BLAKE2s (rust-1.62.0-x86_64-unknown-illumos.tar.gz) = 2732461c3d84cd516563afedc5513f377e3a6796c931ef03601fdcbcc4e6fe33
 SHA512 (rust-1.62.0-x86_64-unknown-illumos.tar.gz) = e99f53fd801d09f28dfd0568a8f2e97a5c4d5d0de7bea28f5afdc91d02f27ff887627f7717c032b90af412e4c04fc11c80c91f42e4b8dab885a311d56fdd5542
@@ -51,6 +51,9 @@ Size (rust-1.62.1-x86_64-unknown-linux-gnu.tar.gz) = 265631587 bytes
 BLAKE2s (rust-1.62.1-x86_64-unknown-netbsd.tar.xz) = 94e420fe58a0af5359d5947774e3eb89576eeac81830dceaf884474d40f07032
 SHA512 (rust-1.62.1-x86_64-unknown-netbsd.tar.xz) = ff1051a9152cc5706c8c6d6be6d23d73b913313bfc4e8212196f2356503f8016f26c9fc5551564a5d7063a801038ea719024dadca0cded60f47b1d7263737e72
 Size (rust-1.62.1-x86_64-unknown-netbsd.tar.xz) = 172701916 bytes
+BLAKE2s (rust-1.63.0-armv6-unknown-netbsd-eabihf.tar.xz) = 3b9eef9621283979f385c91814721099120169eb08ed9d6f769d7b04831d2ded
+SHA512 (rust-1.63.0-armv6-unknown-netbsd-eabihf.tar.xz) = 9a4d2c8d31ef62bb9d5bd5854503dc71587fbf6f1d0044c468a6e6de6a9c41b627c086c57b91d4bd466db7c9990a890212f9a8d6b5283c86822b58626b154e94
+Size (rust-1.63.0-armv6-unknown-netbsd-eabihf.tar.xz) = 152484384 bytes
 BLAKE2s (rust-std-1.62.1-aarch64-apple-darwin.tar.gz) = a7ad0d562f59962afa64b81c70db13c6d669911a1d3a15da95325930f007b159
 SHA512 (rust-std-1.62.1-aarch64-apple-darwin.tar.gz) = 205dd929ca91999d2377ef474af557d55c18372ff1825d19ebff214903979da02058bb664bc5ffb0989b8b641642249600f2e16bbb5ce4f5b55e2500b28cbce0
 Size (rust-std-1.62.1-aarch64-apple-darwin.tar.gz) = 39464902 bytes
@@ -99,6 +102,9 @@ Size (rust-std-1.62.1-x86_64-unknown-linux-gnu.tar.gz) = 43773106 bytes
 BLAKE2s (rust-std-1.62.1-x86_64-unknown-netbsd.tar.xz) = 99769fb8e8fd92d22e53227ded03d207c4ddeabf1cfb3f1088edfc637727e2be
 SHA512 (rust-std-1.62.1-x86_64-unknown-netbsd.tar.xz) = d72824448ce83c94ec2b559a5fc769c8a8441293df4ca9b491e91ee1c42c0159ec8e2bbc9eaaa68e2d31b889a257d8d5743ef62ec10786caf5f017a8c5e3eca2
 Size (rust-std-1.62.1-x86_64-unknown-netbsd.tar.xz) = 25464592 bytes
+BLAKE2s (rust-std-1.63.0-armv6-unknown-netbsd-eabihf.tar.xz) = 5b6725f8eadbd72384b6fcb6db57710a6bee114dd97aedbcad3427524068e0d1
+SHA512 (rust-std-1.63.0-armv6-unknown-netbsd-eabihf.tar.xz) = fda6ce37ec784eb5a9f57674088ac34d7100dab3a024f44f3eeac04dc3502ac31550e400edcf1c4b5356ed33abf8d3e2b0dc7470d76815a44935672ec0380925
+Size (rust-std-1.63.0-armv6-unknown-netbsd-eabihf.tar.xz) = 20757660 bytes
 BLAKE2s (rustc-1.63.0-src.tar.gz) = 0fd32c49a5e919cc01a7f8faefe66132c4462b5a1275115427ec879c007da894
 SHA512 (rustc-1.63.0-src.tar.gz) = 8c4ce20f0e6ddf86c13e24f222846dbcddc6b8fccc5490b1c41877df3ecf2543bf5fd88431d2e6d23280f90c0395f0d812b4ad7c13098128b043669660911299
 Size (rustc-1.63.0-src.tar.gz) = 203449048 bytes
@@ -113,7 +119,7 @@ SHA1 (patch-library_backtrace_src_symbolize_gimli_elf.rs) = 56621c10310914672a85
 SHA1 (patch-library_std_src_sys_unix_mod.rs) = ef9e2b2e78602d5779e5d17e979347b0237ea4a6
 SHA1 (patch-library_std_src_sys_unix_thread.rs) = aafa957d5cfa0f48a6e43c20cfa346261ec7aa76
 SHA1 (patch-library_unwind_build.rs) = 7ece6de566ead1d9aae490ba91d81ac2d0bc50a8
-SHA1 (patch-src_bootstrap_bootstrap.py) = b840c3ca90955b8b8327ee0db2807abc5dad18f0
+SHA1 (patch-src_bootstrap_bootstrap.py) = a8fe1932417520a3db8811a63ec3410ca46694d8
 SHA1 (patch-src_bootstrap_builder.rs) = ef84496eaeca753200e7a8fc7cf1c460ca3c464c
 SHA1 (patch-src_bootstrap_compile.rs) = 4dfce147e78968b67c5e32edbadf487cea21c613
 SHA1 (patch-src_bootstrap_lib.rs) = 5815a67cbb5b40f652dfe60d1b715e69bdeec1b5
