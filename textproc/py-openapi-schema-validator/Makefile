@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2022/04/09 07:40:34 adam Exp $
+# $NetBSD: Makefile,v 1.4 2022/10/26 10:49:04 adam Exp $
 
-DISTNAME=	openapi-schema-validator-0.2.3
+DISTNAME=	openapi-schema-validator-0.3.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=o/openapi-schema-validator/}
@@ -10,6 +10,7 @@ HOMEPAGE=	https://github.com/p1c2u/openapi-schema-validator
 COMMENT=	OpenAPI schema validation for Python
 LICENSE=	modified-bsd
 
+DEPENDS+=	${PYPKGPREFIX}-attrs>=19.2.0:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-isodate-[0-9]*:../../time/py-isodate
 DEPENDS+=	${PYPKGPREFIX}-jsonschema>=3:../../textproc/py-jsonschema
 
