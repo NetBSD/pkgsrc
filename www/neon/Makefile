@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.90 2022/10/26 10:31:10 wiz Exp $
+# $NetBSD: Makefile,v 1.91 2022/10/26 15:51:24 manu Exp $
 
 DISTNAME=	neon-0.32.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	https://notroj.github.io/neon/
 
@@ -17,11 +17,25 @@ USE_TOOLS+=		pkg-config msgfmt
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--with-expat
+CONFIGURE_ARGS+=	--with-ca-bundle=${SSLCERTS:Q}/ca-certificates.crt
 
 PKGCONFIG_OVERRIDE=	neon.pc.in
 TEST_TARGET=		check
 #selftest needs perl
 USE_TOOLS+=		perl
+
+# Logic borrowed from security/mozilla-rootcerts
+CHECK_BUILTIN.openssl=	yes
+.include "../../security/openssl/builtin.mk"
+CHECK_BUILTIN.openssl=	no
+.if !empty(USE_BUILTIN.openssl:M[yY][eE][sS])
+SSLDIR=		/etc/openssl
+.else
+SSLDIR=		${PKG_SYSCONFDIR}/openssl
+.endif
+
+SSLCERTS=	${SSLDIR}/certs
+MESSAGE_SUBST+=		SSLCERTS=${SSLCERTS:Q}
 
 .include "options.mk"
 
