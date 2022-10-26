@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2022/10/26 12:48:29 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/pathable/__init__.py
+${PYSITELIB}/pathable/__init__.pyc
+${PYSITELIB}/pathable/__init__.pyo
+${PYSITELIB}/pathable/accessors.py
+${PYSITELIB}/pathable/accessors.pyc
+${PYSITELIB}/pathable/accessors.pyo
+${PYSITELIB}/pathable/dataclasses.py
+${PYSITELIB}/pathable/dataclasses.pyc
+${PYSITELIB}/pathable/dataclasses.pyo
+${PYSITELIB}/pathable/parsers.py
+${PYSITELIB}/pathable/parsers.pyc
+${PYSITELIB}/pathable/parsers.pyo
+${PYSITELIB}/pathable/paths.py
+${PYSITELIB}/pathable/paths.pyc
+${PYSITELIB}/pathable/paths.pyo
+${PYSITELIB}/pathable/py.typed
+${PYSITELIB}/pathable/types.py
+${PYSITELIB}/pathable/types.pyc
+${PYSITELIB}/pathable/types.pyo
