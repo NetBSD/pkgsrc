@@ -1,0 +1,7 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2022/10/26 15:51:24 manu Exp $
+
+neon will look for a trusted certificarte bundle at
+        ${SSLCERTS}/ca-certificates.crt
+
+===========================================================================
