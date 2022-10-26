@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2022/10/10 12:47:51 adam Exp $
+# $NetBSD: Makefile,v 1.8 2022/10/26 10:31:43 wiz Exp $
 
 DISTNAME=	gerbera-1.11.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gerbera/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
