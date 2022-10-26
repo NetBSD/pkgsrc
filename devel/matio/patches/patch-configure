@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2022/10/26 09:59:27 nros Exp $
+
+* fix getopt_long configure check
+
+--- configure.orig	2022-10-26 09:08:40.681472642 +0000
++++ configure
+@@ -12530,7 +12530,7 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_
+ int
+ main ()
+ {
+-opt = getopt_long(0,NULL,NULL,NULL,NULL);
++int opt = getopt_long(0,NULL,NULL,NULL,NULL);
+   ;
+   return 0;
+ }
