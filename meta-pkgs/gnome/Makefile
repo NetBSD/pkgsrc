@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.150 2022/10/26 07:28:24 prlw1 Exp $
+# $NetBSD: Makefile,v 1.151 2022/10/26 10:13:33 prlw1 Exp $
 
 PKGNAME=	gnome-3.38.1
+PKGREVISION=	1
 CATEGORIES=	meta-pkgs
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -24,7 +25,7 @@ DEPENDS+=	accountsservice-[0-9]*:../../sysutils/accountsservice
 DEPENDS+=	adwaita-icon-theme-[0-9]*:../../graphics/adwaita-icon-theme
 #DEPENDS+=	cheese-[0-9]*:../../graphics/cheese
 DEPENDS+=	file-roller-[0-9]*:../../archivers/file-roller
-DEPENDS+=	evince-[0-9]*:../../print/evince3
+DEPENDS+=	evince-[0-9]*:../../print/evince
 DEPENDS+=	dconf-[0-9]*:../../devel/dconf-editor
 #DEPENDS+=	evolution-[0-9]*:../../mail/evolution
 #DEPENDS+=	epiphany-[0-9]*:../../www/epiphany
