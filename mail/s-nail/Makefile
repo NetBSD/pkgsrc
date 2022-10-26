@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2021/05/25 17:29:42 nia Exp $
+# $NetBSD: Makefile,v 1.3 2022/10/26 10:31:39 wiz Exp $
 
 DISTNAME=		s-nail-14.9.22
+PKGREVISION=		1
 CATEGORIES=		mail
 MASTER_SITES=		https://www.sdaoden.eu/downloads/
 

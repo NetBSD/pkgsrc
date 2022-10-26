@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.98 2022/06/28 11:37:52 wiz Exp $
+# $NetBSD: Makefile,v 1.99 2022/10/26 10:32:07 wiz Exp $
 
 DISTNAME=	wwwoffle-2.9j
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	www
 MASTER_SITES=	http://www.gedanken.org.uk/software/wwwoffle/download/
 EXTRACT_SUFX=	.tgz
