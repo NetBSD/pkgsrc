@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2022/10/12 16:09:28 nia Exp $
+# $NetBSD: Makefile,v 1.16 2022/10/26 13:55:17 nia Exp $
 
 DISTNAME=	arcticfox-40.0
 CATEGORIES=	www
@@ -16,6 +16,9 @@ USE_TOOLS+=	zip unzip gmake
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
+
+OVERRIDE_GNU_CONFIG_SCRIPTS=	# yes
+OVERRIDE_DIRDEPTH=		3
 
 CONFIGURE_ARGS+=	--disable-crashreporter
 CONFIGURE_ARGS+=	--disable-tests
