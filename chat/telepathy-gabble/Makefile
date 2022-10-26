@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.83 2022/06/30 11:18:06 nia Exp $
+# $NetBSD: Makefile,v 1.84 2022/10/26 10:31:16 wiz Exp $
 
 DISTNAME=	telepathy-gabble-0.18.3
-PKGREVISION=	29
+PKGREVISION=	30
 CATEGORIES=	chat
 MASTER_SITES=	http://telepathy.freedesktop.org/releases/telepathy-gabble/
 
