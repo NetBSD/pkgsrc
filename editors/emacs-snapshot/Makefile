@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.106 2022/08/11 05:08:15 gutteridge Exp $
+# $NetBSD: Makefile,v 1.107 2022/10/26 10:31:23 wiz Exp $
 
 DISTNAME=	emacs-28.0.50_2020-02-10
-PKGVERSION=	28.0.50
-PKGNAME=	emacs28-${PKGVERSION}
-PKGREVISION=	10
+PKGNAME=	emacs28-28.0.50
+PKGREVISION=	11
 MASTER_SITES=	https://alpha.gnu.org/gnu/emacs/pretest/windows/emacs-28/
 CATEGORIES=	editors
 
@@ -44,7 +43,6 @@ CONF_FILES_PERMS+=	/dev/null ${VARBASE}/games/emacs/tetris-scores \
 CHECK_WRKREF_SKIP+=	bin/emacs
 CHECK_WRKREF_SKIP+=	bin/emacs-${PKGVERSION_NOREV}
 CHECK_WRKREF_SKIP+=	libexec/emacs/${PKGVERSION_NOREV}/${MACHINE_GNU_PLATFORM}/emacs.pdmp
-CHECK_WRKREF_SKIP+=	libexec/emacs/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/emacs.pdmp
 
 PRINT_PLIST_AWK+=	{ gsub(/${PKGVERSION_NOREV}/, "$${PKGVERSION}"); \
 			gsub(/${MACHINE_GNU_PLATFORM}/, "$${MACHINE_GNU_PLATFORM}"); \

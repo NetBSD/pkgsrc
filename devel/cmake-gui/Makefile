@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2022/05/26 08:53:59 adam Exp $
+# $NetBSD: Makefile,v 1.29 2022/10/26 10:31:21 wiz Exp $
 
+PKGREVISION= 1
 .include "../../devel/cmake/Makefile.common"
 
 PKGNAME=	cmake-gui-${CMAKE_VERSION}

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2022/03/07 22:59:18 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2022/10/26 10:31:04 wiz Exp $
 
 BUILDLINK_TREE+=	guile20
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	guile20
 GUILE20_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.guile20+=	guile20>=2.0
-BUILDLINK_ABI_DEPENDS.guile20?=	guile20>=2.0.14nb5
+BUILDLINK_ABI_DEPENDS.guile20?=	guile20>=2.0.14nb6
 BUILDLINK_PKGSRCDIR.guile20?=	../../lang/guile20
 
 BUILDLINK_PASSTHRU_DIRS+=		${LOCALBASE}/guile/2.0
