@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5202 2022/10/26 10:33:50 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5203 2022/10/26 10:37:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7891,3 +7891,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/py-s3transfer to 0.6.0 [adam 2022-10-26]
 	Updated net/py-boto3 to 1.25.1 [adam 2022-10-26]
 	Updated net/py-awscli to 1.26.1 [adam 2022-10-26]
+	Updated textproc/expat to 2.5.0 [wiz 2022-10-26]
