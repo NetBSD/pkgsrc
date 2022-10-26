@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2022/07/12 09:18:36 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2022/10/26 10:56:27 adam Exp $
 
-DISTNAME=	importlib_resources-3.0.0
+DISTNAME=	importlib_resources-5.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
-PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/importlib_resources/}
 
@@ -13,15 +12,14 @@ LICENSE=	apache-2.0
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 
+USE_LANGUAGES=	# none
+
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
-
-.if ${_PYTHON_VERSION} < 38
-DEPENDS+=	${PYPKGPREFIX}-zipp-[0-9]*:../../archivers/py-zipp
+.if ${_PYTHON_VERSION} < 310
+DEPENDS+=	${PYPKGPREFIX}-zipp>=3.1.0:../../archivers/py-zipp
 .endif
 
-USE_LANGUAGES=	# none
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
