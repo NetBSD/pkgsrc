@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.43 2022/10/12 14:21:19 pin Exp $
+# $NetBSD: Makefile,v 1.44 2022/10/26 20:26:44 pin Exp $
 
-DISTNAME=	termusic-0.7.4
+DISTNAME=	termusic-0.7.5
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tramhao/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -28,6 +28,7 @@ do-install:
 DEPENDS+=	gst-plugins1-libav-[0-9]*:../../multimedia/gst-plugins1-libav
 DEPENDS+=	gstreamer1-default-backend-[0-9]*:../../meta-pkgs/gstreamer1-default-backend
 DEPENDS+=	yt-dlp-[0-9]*:../../net/yt-dlp
+DEPENDS+=	alsa-plugins-oss-[0-9]*:../../audio/alsa-plugins-oss
 
 .include "../../lang/rust/cargo.mk"
 .include "../../multimedia/gstreamer1/buildlink3.mk"
@@ -35,4 +36,5 @@ DEPENDS+=	yt-dlp-[0-9]*:../../net/yt-dlp
 .include "../../multimedia/gst-plugins1-good/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-bad/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-ugly/buildlink3.mk"
+.include "../../audio/alsa-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
