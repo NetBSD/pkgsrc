@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2022/10/19 13:56:32 nia Exp $
+# $NetBSD: Makefile,v 1.9 2022/10/26 12:58:04 adam Exp $
 
-DISTNAME=	moto-3.0.3
+DISTNAME=	moto-4.0.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/moto/}
@@ -11,40 +11,40 @@ COMMENT=	Mock-up of the boto library
 LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-boto3>=1.9.201:../../net/py-boto3
-DEPENDS+=	${PYPKGPREFIX}-botocore-[0-9]*:../../net/py-botocore
-DEPENDS+=	${PYPKGPREFIX}-requests>=2.5:../../devel/py-requests
-DEPENDS+=	${PYPKGPREFIX}-xmltodict-[0-9]*:../../textproc/py-xmltodict
-DEPENDS+=	${PYPKGPREFIX}-werkzeug-[0-9]*:../../www/py-werkzeug
-DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
+DEPENDS+=	${PYPKGPREFIX}-botocore>=1.12.201:../../net/py-botocore
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.1:../../time/py-dateutil
-DEPENDS+=	${PYPKGPREFIX}-responses>=0.9.0:../../net/py-responses
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.10.1:../../textproc/py-jinja2
+DEPENDS+=	${PYPKGPREFIX}-markupsafe>=2.0.1:../../textproc/py-markupsafe
+DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
+DEPENDS+=	${PYPKGPREFIX}-requests>=2.5:../../devel/py-requests
+DEPENDS+=	${PYPKGPREFIX}-responses>=0.13.0:../../net/py-responses
+DEPENDS+=	${PYPKGPREFIX}-werkzeug>=2.2.2:../../www/py-werkzeug
+DEPENDS+=	${PYPKGPREFIX}-xmltodict-[0-9]*:../../textproc/py-xmltodict
 # unlisted but used
 DEPENDS+=	${PYPKGPREFIX}-flask-[0-9]*:../../www/py-flask
 DEPENDS+=	${PYPKGPREFIX}-pyaml-[0-9]*:../../textproc/py-pyaml
-
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 # unlisted but used
+TEST_DEPENDS+=	${PYPKGPREFIX}-flask-cors-[0-9]*:../../www/py-flask-cors
 TEST_DEPENDS+=	${PYPKGPREFIX}-freezegun-[0-9]*:../../devel/py-freezegun
+TEST_DEPENDS+=	${PYPKGPREFIX}-openapi-spec-validator>=0.2.8:../../textproc/py-openapi-spec-validator
 TEST_DEPENDS+=	${PYPKGPREFIX}-sure>=1.2.24:../../devel/py-sure
 
 USE_PKG_RESOURCES=	yes
 
-TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-sure
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
-
-.if ${PYPKGPREFIX} == "py37"
+.if ${_PYTHON_VERSION} == 37
 DEPENDS+=	${PYPKGPREFIX}-importlib-metadata-[0-9]*:../../devel/py-importlib-metadata
 .endif
 
 post-install:
-	cd ${DESTDIR}${PREFIX}/bin && ${MV} moto_server moto_server${PYVERSSUFFIX} || ${TRUE}
+	cd ${DESTDIR}${PREFIX}/bin && \
+	${MV} moto_server moto_server-${PYVERSSUFFIX} || ${TRUE}
 
 do-test:
-	cd ${WRKSRC}/tests && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
 .include "../../lang/python/egg.mk"
 PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
