@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2022/10/22 12:22:01 he Exp $
+# $NetBSD: Makefile,v 1.86 2022/10/26 08:12:20 jperkin Exp $
 
 DISTNAME=	pixman-0.42.0
 PKGREVISION=	3
@@ -13,13 +13,19 @@ LICENSE=	mit
 
 CHECK_PORTABILITY_SKIP+=	Makefile.am # already patched in Makefile.in
 
-GNU_CONFIGURE=		yes
+GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
+USE_TOOLS+=	perl
+
+.include "../../mk/bsd.prefs.mk"
+
 .if ${MACHINE_ARCH} == i386
 CONFIGURE_ARGS+=	--disable-sse2
 .endif
 
-USE_LIBTOOL=	yes
-USE_TOOLS+=	perl
+.if ${MACHINE_PLATFORM:MDarwin-*-aarch64}
+CONFIGURE_ARGS+=	--disable-arm-a64-neon
+.endif
 
 PKGCONFIG_OVERRIDE+=	pixman-1.pc.in
 PKGCONFIG_OVERRIDE+=	pixman-1-uninstalled.pc.in
