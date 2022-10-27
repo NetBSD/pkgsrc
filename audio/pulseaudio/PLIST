@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.42 2022/07/02 16:44:38 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.43 2022/10/27 08:07:13 nros Exp $
 bin/pa-info
 bin/pacat
 bin/pacmd
@@ -274,7 +274,6 @@ ${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/usb-gaming-headset-output-mono.co
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/usb-gaming-headset-output-stereo.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/virtual-surround-7.1.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/audigy.conf
-${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/behringer-umc22.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/cmedia-high-speed-true-hdaudio.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/default.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/dell-dock-tb16-usb-audio.conf
@@ -296,6 +295,7 @@ ${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/sb-omni-surround-5.1.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/sennheiser-gsx.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/simple-headphones-mic.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/steelseries-arctis-common-usb-audio.conf
+${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/texas-instruments-pcm2902.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/usb-gaming-headset.conf
 share/vala/vapi/libpulse-mainloop-glib.deps
 share/vala/vapi/libpulse-mainloop-glib.vapi
