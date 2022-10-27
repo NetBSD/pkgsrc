@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2022Q3,v 1.1.2.3 2022/10/07 18:48:15 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2022Q3,v 1.1.2.4 2022/10/27 06:36:57 bsiegert Exp $
 
   Changes to packages and infrastructure on the 2022Q3 branch:
 
@@ -37,4 +37,31 @@ www/drupal9: security fix
 
 Pullup ticket #6683 - requested by wiz
 graphics/cairo-gobject: macOS build fix
+
+Pullup ticket #6684 - requested by nia
+graphics/babl: evbarm build fix
+
+Pullup ticket #6685 - requested by nia
+lang/openjdk8: build fix
+
+Pullup ticket #6686 - requested by nia
+lang/ocaml: evbarm build fix
+
+Pullup ticket #6688 - requested by taca
+databases/sqlite3: security fix (for ruby-sqlite3)
+
+Pullup ticket #6689 - requested by taca
+devel/ruby-redmine42: security fix
+
+Pullup ticket #6687 - requested by nia
+www/webkit-gtk: aarch64 build fix
+
+Pullup ticket #6690 - requested by taca
+devel/ruby-redmine50: security fix
+
+Pullup ticket #6693 - requested by nia
+www/firefox102: security fix
+
+Pullup ticket #6691 - requested by taca
+www/ruby-jekyll: critical bugfix
 
