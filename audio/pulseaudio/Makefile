@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.174 2022/09/11 12:51:04 wiz Exp $
+# $NetBSD: Makefile,v 1.175 2022/10/27 08:07:13 nros Exp $
 
 DISTNAME=	pulseaudio-16.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	https://freedesktop.org/software/pulseaudio/releases/
 EXTRACT_SUFX=	.tar.xz
