@@ -1,7 +1,7 @@
-# $NetBSD: pkgconfig-builtin.mk,v 1.6 2018/03/02 15:15:10 wiz Exp $
+# $NetBSD: pkgconfig-builtin.mk,v 1.7 2022/10/27 13:01:44 gdt Exp $
 
 # This file is used to factor out a common pattern in builtin.mk files
-# backed up by the existence of a pkgconfig file.
+# that use pkgconfig files to check for a built-in implementation.
 #
 # Parameters:
 #
