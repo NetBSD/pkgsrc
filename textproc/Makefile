@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1331 2022/10/26 13:26:36 adam Exp $
+# $NetBSD: Makefile,v 1.1332 2022/10/27 15:20:24 nikita Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -519,7 +519,6 @@ SUBDIR+=	man2html
 SUBDIR+=	mandoc
 SUBDIR+=	marisa
 SUBDIR+=	markdown-mode
-SUBDIR+=	markdown2social
 SUBDIR+=	mecab
 SUBDIR+=	mecab-base
 SUBDIR+=	mecab-ipadic
