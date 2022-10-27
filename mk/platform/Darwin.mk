@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.118 2022/09/27 08:46:33 jperkin Exp $
+# $NetBSD: Darwin.mk,v 1.119 2022/10/27 15:56:14 tnn Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -27,6 +27,7 @@
 #	Catalina	10.15.x		19.x.y	11.x	(llvm clang 11)
 #	Big Sur		11.x		20.x.y	12.x	(llvm clang 12)
 #	Monterey	12.x		21.x.y	13.x	(llvm clang 13)
+#	Ventura		13.x		22.x.y	14.x	(llvm clang 14)
 #
 
 # Tiger (and earlier) use Xfree 4.4.0 (and earlier)
@@ -112,6 +113,7 @@ OSX_SDK_MAP.12.2=	12.1
 OSX_SDK_MAP.12.4=	12.3
 OSX_SDK_MAP.12.5=	12.3
 OSX_SDK_MAP.12.6=	12.3
+OSX_SDK_MAP.13.0=	12.3
 #
 # If the user has set MACOSX_DEPLOYMENT_TARGET (ideally at bootstrap time) to
 # select a specific SDK then we prefer that.
