@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2022/04/05 19:11:12 adam Exp $
+@comment $NetBSD: PLIST,v 1.23 2022/10/28 08:58:12 adam Exp $
 bin/py.test-${PYVERSSUFFIX}
 bin/pytest-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -35,6 +35,15 @@ ${PYSITELIB}/_pytest/_io/terminalwriter.pyo
 ${PYSITELIB}/_pytest/_io/wcwidth.py
 ${PYSITELIB}/_pytest/_io/wcwidth.pyc
 ${PYSITELIB}/_pytest/_io/wcwidth.pyo
+${PYSITELIB}/_pytest/_py/__init__.py
+${PYSITELIB}/_pytest/_py/__init__.pyc
+${PYSITELIB}/_pytest/_py/__init__.pyo
+${PYSITELIB}/_pytest/_py/error.py
+${PYSITELIB}/_pytest/_py/error.pyc
+${PYSITELIB}/_pytest/_py/error.pyo
+${PYSITELIB}/_pytest/_py/path.py
+${PYSITELIB}/_pytest/_py/path.pyc
+${PYSITELIB}/_pytest/_py/path.pyo
 ${PYSITELIB}/_pytest/_version.py
 ${PYSITELIB}/_pytest/_version.pyc
 ${PYSITELIB}/_pytest/_version.pyo
@@ -204,6 +213,9 @@ ${PYSITELIB}/_pytest/warning_types.pyo
 ${PYSITELIB}/_pytest/warnings.py
 ${PYSITELIB}/_pytest/warnings.pyc
 ${PYSITELIB}/_pytest/warnings.pyo
+${PYSITELIB}/py.py
+${PYSITELIB}/py.pyc
+${PYSITELIB}/py.pyo
 ${PYSITELIB}/pytest/__init__.py
 ${PYSITELIB}/pytest/__init__.pyc
 ${PYSITELIB}/pytest/__init__.pyo
