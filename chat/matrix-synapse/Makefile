@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2022/10/28 19:19:35 gdt Exp $
+# $NetBSD: Makefile,v 1.65 2022/10/28 19:22:49 gdt Exp $
 
 DISTNAME=	matrix-synapse-1.68.0
 CATEGORIES=	chat
@@ -114,8 +114,6 @@ post-install:
 # 51 warnings, 1 error
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} pytest-${PYVERSSUFFIX}
-
-#CHECK_WRKREF_SKIP+=	lib/python3.10/site-packages/synapse/synapse_rust.abi3.so
 
 # guide says "Prepend .include "cargo-depends.mk" to any other .includes."
 .include "cargo-depends.mk"
