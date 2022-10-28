@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5223 2022/10/28 09:53:08 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5224 2022/10/28 10:37:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7927,3 +7927,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-ipykernel to 6.16.2 [adam 2022-10-28]
 	Updated sysutils/py-xattr to 0.10.0 [adam 2022-10-28]
 	Updated devel/py-virtualenv to 20.16.6 [adam 2022-10-28]
+	Updated textproc/py-tomlkit to 0.11.6 [adam 2022-10-28]
+	Updated net/py-lexicon to 3.11.7 [adam 2022-10-28]
