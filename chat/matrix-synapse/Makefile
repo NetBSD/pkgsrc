@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.62 2022/10/19 14:25:18 nia Exp $
+# $NetBSD: Makefile,v 1.63 2022/10/28 13:07:21 gdt Exp $
 
 DISTNAME=	matrix-synapse-1.67.0
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=matrix-org/}
 GITHUB_PROJECT=	synapse
@@ -42,6 +43,8 @@ DEPENDS+=	${PYPKGPREFIX}-psycopg2>=2.7:../../databases/py-psycopg2
 DEPENDS+=	${PYPKGPREFIX}-service_identity>=18.1.0:../../security/py-service_identity
 DEPENDS+=	${PYPKGPREFIX}-signedjson>=1.1.0:../../security/py-signedjson
 DEPENDS+=	${PYPKGPREFIX}-sortedcontainers>=1.4.4:../../devel/py-sortedcontainers
+# NB: synapse needs features missing in NetBSD base system sqlite, and probably
+# missing in other builds.
 DEPENDS+=	${PYPKGPREFIX}-sqlite3>=0:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-treq>=15.1:../../devel/py-treq
 DEPENDS+=	${PYPKGPREFIX}-twisted>=18.9.0:../../net/py-twisted
@@ -62,11 +65,14 @@ REPLACE_PYTHON+=	synapse/_scripts/*.py
 USE_TOOLS+=	perl:run
 REPLACE_PERL+=	scripts/sync_room_to_group.pl
 
-PKG_SYSCONFSUBDIR=	matrix-synapse
+# Avoid the pyNN- prefix in config, doc, and so on.
+HUMAN_PKGNAME=		matrix-synapse
+PKG_SYSCONFSUBDIR=	${HUMAN_PKGNAME}
+DOCDIR=			${PREFIX}/share/doc/${HUMAN_PKGNAME}
 
 SYNAPSE_USER?=	synapse
 SYNAPSE_GROUP?=	${SYNAPSE_USER}
-SYNAPSE_DATA?=	${VARBASE}/db/matrix-synapse
+SYNAPSE_DATA?=	${VARBASE}/db/${HUMAN_PKGNAME}
 BUILD_DEFS+=	SYNAPSE_USER SYNAPSE_GROUP SYNAPSE_DATA VARBASE
 
 OWN_DIRS_PERMS+=		${SYNAPSE_DATA} ${SYNAPSE_USER} ${SYNAPSE_GROUP} 0770
@@ -98,6 +104,11 @@ BUILD_DEFS+=			SYNAPSE_DEFAULT_CREATOR_PL
 post-patch:
 	# Otherwise, this file is installed and pollutes PLIST.
 	rm ${WRKSRC}/synapse/handlers/room.py.orig
+
+post-install:
+	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} files/README.pkgsrc.txt ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} files/README.pkgsrc.NetBSD.txt ${DESTDIR}${DOCDIR}
 
 # \todo Grok upstream's new test scheme and port to it.
 # test status as of 1.51.0

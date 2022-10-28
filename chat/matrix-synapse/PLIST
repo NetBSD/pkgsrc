@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2022/10/06 13:57:53 gdt Exp $
+@comment $NetBSD: PLIST,v 1.33 2022/10/28 13:07:21 gdt Exp $
 bin/export_signing_key
 bin/generate_config
 bin/generate_log_config
@@ -1389,3 +1389,5 @@ ${PYSITELIB}/synapse/util/wheel_timer.py
 ${PYSITELIB}/synapse/util/wheel_timer.pyc
 ${PYSITELIB}/synapse/visibility.py
 ${PYSITELIB}/synapse/visibility.pyc
+share/doc/matrix-synapse/README.pkgsrc.txt
+share/doc/matrix-synapse/README.pkgsrc.NetBSD.txt
