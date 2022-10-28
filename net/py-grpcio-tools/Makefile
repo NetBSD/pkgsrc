@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.47 2022/10/03 16:30:18 adam Exp $
+# $NetBSD: Makefile,v 1.48 2022/10/28 09:21:01 adam Exp $
 
-DISTNAME=	grpcio-tools-1.49.1
+DISTNAME=	grpcio-tools-1.50.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/grpcio-tools/}
@@ -11,7 +11,7 @@ COMMENT=	Protobuf code generator for gRPC
 LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-grpcio>=${PKGVERSION_NOREV}:../../net/py-grpcio
-DEPENDS+=	${PYPKGPREFIX}-protobuf>=3.5.1:../../devel/py-protobuf
+DEPENDS+=	${PYPKGPREFIX}-protobuf>=4.21.6:../../devel/py-protobuf
 
 CHECK_PORTABILITY_SKIP=	third_party/protobuf/*.sh
 
