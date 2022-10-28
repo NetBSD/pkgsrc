@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.33 2022/10/28 13:07:21 gdt Exp $
+@comment $NetBSD: PLIST,v 1.34 2022/10/28 19:19:35 gdt Exp $
 bin/export_signing_key
 bin/generate_config
 bin/generate_log_config
@@ -1256,7 +1256,19 @@ ${PYSITELIB}/synapse/storage/schema/main/delta/72/03drop_event_reference_hashes.
 ${PYSITELIB}/synapse/storage/schema/main/delta/72/03remove_groups.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/72/04drop_column_application_services_state_last_txn.sql.postgres
 ${PYSITELIB}/synapse/storage/schema/main/delta/72/04drop_column_application_services_state_last_txn.sql.sqlite
+${PYSITELIB}/synapse/storage/schema/main/delta/72/05receipts_event_stream_ordering.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/72/05remove_unstable_private_read_receipts.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/72/06add_consent_ts_to_users.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/72/06thread_notifications.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/72/07force_update_current_state_events_membership.py
+${PYSITELIB}/synapse/storage/schema/main/delta/72/07force_update_current_state_events_membership.pyc
+${PYSITELIB}/synapse/storage/schema/main/delta/72/07thread_receipts.sql.postgres
+${PYSITELIB}/synapse/storage/schema/main/delta/72/07thread_receipts.sql.sqlite
+${PYSITELIB}/synapse/storage/schema/main/delta/72/08begin_cache_invalidation_seq_at_2.sql.postgres
+${PYSITELIB}/synapse/storage/schema/main/delta/72/08thread_receipts.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/72/09partial_indices.sql.sqlite
+${PYSITELIB}/synapse/storage/schema/main/delta/73/01event_failed_pull_attempts.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/73/02room_id_indexes_for_purging.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/application_services.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/event_edges.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/event_signatures.sql
@@ -1275,7 +1287,6 @@ ${PYSITELIB}/synapse/storage/schema/main/full_schemas/54/full.sql.postgres
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/54/full.sql.sqlite
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/54/stream_positions.sql
 ${PYSITELIB}/synapse/storage/schema/state/delta/23/drop_state_index.sql
-${PYSITELIB}/synapse/storage/schema/state/delta/30/state_stream.sql
 ${PYSITELIB}/synapse/storage/schema/state/delta/32/remove_state_indices.sql
 ${PYSITELIB}/synapse/storage/schema/state/delta/35/add_state_index.sql
 ${PYSITELIB}/synapse/storage/schema/state/delta/35/state.sql
@@ -1305,6 +1316,7 @@ ${PYSITELIB}/synapse/streams/config.py
 ${PYSITELIB}/synapse/streams/config.pyc
 ${PYSITELIB}/synapse/streams/events.py
 ${PYSITELIB}/synapse/streams/events.pyc
+${PYSITELIB}/synapse/synapse_rust.abi3.so
 ${PYSITELIB}/synapse/types.py
 ${PYSITELIB}/synapse/types.pyc
 ${PYSITELIB}/synapse/util/__init__.py
@@ -1379,6 +1391,8 @@ ${PYSITELIB}/synapse/util/retryutils.py
 ${PYSITELIB}/synapse/util/retryutils.pyc
 ${PYSITELIB}/synapse/util/rlimit.py
 ${PYSITELIB}/synapse/util/rlimit.pyc
+${PYSITELIB}/synapse/util/rust.py
+${PYSITELIB}/synapse/util/rust.pyc
 ${PYSITELIB}/synapse/util/stringutils.py
 ${PYSITELIB}/synapse/util/stringutils.pyc
 ${PYSITELIB}/synapse/util/templates.py
