@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2022/10/23 07:12:34 pin Exp $
+# $NetBSD: Makefile,v 1.17 2022/10/28 10:15:37 pin Exp $
 
 DISTNAME=	onefetch-2.13.1
 CATEGORIES=	sysutils
@@ -9,6 +9,8 @@ MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/o2sh/onefetch/
 COMMENT=	Git repository summary on your terminal
 LICENSE=	mit
+
+BUILD_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 
 .include "cargo-depends.mk"
 
