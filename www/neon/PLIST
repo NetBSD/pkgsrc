@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2021/10/09 10:54:12 wiz Exp $
+@comment $NetBSD: PLIST,v 1.24 2022/10/28 09:25:26 wiz Exp $
 bin/neon-config
 include/neon/ne_207.h
 include/neon/ne_acl.h
@@ -126,6 +126,7 @@ man/man3/ne_vstrhash.3
 man/man3/ne_xml_create.3
 man/man3/ne_xml_destroy.3
 man/man3/neon.3
+share/doc/${PKGNAME}/README.pkgsrc
 share/doc/${PKGNAME}/html/api.html
 share/doc/${PKGNAME}/html/biblio.html
 share/doc/${PKGNAME}/html/compliance.html
