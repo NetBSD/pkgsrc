@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.7 2022/10/28 17:58:03 he Exp $
+$NetBSD: distinfo,v 1.8 2022/10/28 17:59:47 he Exp $
 
 BLAKE2s (libzdb-3.2.2.tar.gz) = 9df58f68d011a948e1de1a90c74665a89cd61d63ebe1b223adfc588e859d6401
 SHA512 (libzdb-3.2.2.tar.gz) = 1e732f8785322e0369de16a8100c9467e96ad1ca4eee31e8bfc349f4f17d4cc237a691addc060a66e1b46bcfeb99c3aed07b1d5dbe20e70fde4ffbf35dbea2eb
 Size (libzdb-3.2.2.tar.gz) = 752292 bytes
-SHA1 (patch-src_zdbpp.h) = f02ad625e2a93232744444ddf48676ea6b17c963
-SHA1 (patch-test_unit.c) = 148f32b9fcdd660a2f70d7187eae3be611ca7ffe
+SHA1 (patch-src_zdbpp.h) = c1dcdc7cea4ed55408107cb3e794ba38430ee4ae
+SHA1 (patch-test_unit.c) = c7095217e6bf2fa04bb033ae8600fb04d85b4b69
