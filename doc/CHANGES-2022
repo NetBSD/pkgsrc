@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5217 2022/10/28 07:50:55 pin Exp $
+$NetBSD: CHANGES-2022,v 1.5218 2022/10/28 08:36:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7913,3 +7913,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/oculante to 0.6.19 [pin 2022-10-28]
 	Updated editors/tp-note to 1.18.1 [pin 2022-10-28]
 	Updated misc/wthrr to 0.4.1 [pin 2022-10-28]
+	Updated devel/protobuf to 3.21.9 [adam 2022-10-28]
+	Updated devel/py-protobuf to 4.21.9 [adam 2022-10-28]
