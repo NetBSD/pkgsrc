@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.91 2022/10/26 15:51:24 manu Exp $
+# $NetBSD: Makefile,v 1.92 2022/10/28 00:19:25 manu Exp $
 
 DISTNAME=	neon-0.32.4
-PKGREVISION=	2
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	https://notroj.github.io/neon/
 
@@ -34,8 +34,21 @@ SSLDIR=		/etc/openssl
 SSLDIR=		${PKG_SYSCONFDIR}/openssl
 .endif
 
-SSLCERTS=	${SSLDIR}/certs
-MESSAGE_SUBST+=		SSLCERTS=${SSLCERTS:Q}
+SSLCERTS=		${SSLDIR}/certs
+SUBST_CLASSES=		paths
+SUBST_MESSAGE.paths=	Setting CA bundle path in README.pkgsrc
+SUBST_STAGE.paths=	post-build
+SUBST_FILES.paths=	README.pkgsrc
+SUBST_SED.paths=	-e 's,@SSLCERTS@,${SSLCERTS},'
+
+DOCDIR=		${PREFIX}/share/doc/${PKGNAME_NOREV}
+INSTALLATION_DIRS=	${DOCDIR}
+
+post-extract:
+		${CP} ${FILESDIR}/README.pkgsrc ${WRKSRC} || ${TRUE};
+
+post-install:
+		${INSTALL_DATA} ${WRKSRC}/README.pkgsrc ${DESTDIR}${DOCDIR};
 
 .include "options.mk"
 
