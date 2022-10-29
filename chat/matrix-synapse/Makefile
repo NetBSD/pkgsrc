@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.65 2022/10/28 19:22:49 gdt Exp $
+# $NetBSD: Makefile,v 1.66 2022/10/29 00:56:40 gdt Exp $
 
-DISTNAME=	matrix-synapse-1.68.0
+DISTNAME=	matrix-synapse-1.69.0
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=matrix-org/}
 GITHUB_PROJECT=	synapse
@@ -13,8 +13,7 @@ LICENSE=	apache-2.0
 
 # Build tools:
 TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-[0-9]*:../../devel/py-poetry
-# \todo This should be TOOL_, but 1.68 is buggy (fixed in 1.69).
-DEPENDS+=	${PYPKGPREFIX}-setuptools-rust-[0-9]*:../../devel/py-setuptools-rust
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-rust-[0-9]*:../../devel/py-setuptools-rust
 
 # Dependencies as defined by synapse's build system (in theory):
 # \todo Go over poetry.lock
