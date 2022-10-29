@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5233 2022/10/29 14:04:54 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.5234 2022/10/29 14:53:26 he Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7938,3 +7938,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated converters/bdf2psf to 1.211 [fcambus 2022-10-29]
 	Updated devel/patchelf to 0.16.1 [fcambus 2022-10-29]
 	Added security/ssh-audit version 2.5.0 [fcambus 2022-10-29]
+	Updated mail/cyrus-imapd24 to 2.4.20nb21 [he 2022-10-29]
