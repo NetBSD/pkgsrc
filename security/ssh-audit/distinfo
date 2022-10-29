@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/10/29 14:03:09 fcambus Exp $
+
+BLAKE2s (ssh-audit-2.5.0.tar.gz) = 6267b65126ac8674437eaad2204d9bcb76ab316a76eea881238ff1c4b79a8163
+SHA512 (ssh-audit-2.5.0.tar.gz) = 252d29cb95dc5b0c40d2c47f2f884417a924fe08668db49d6284a931806730729569b9e3049157b0cee00515fbb04d99a98c3933ebcfd8ad847ab343d13e234e
+Size (ssh-audit-2.5.0.tar.gz) = 125991 bytes
