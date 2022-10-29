@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5234 2022/10/29 14:53:26 he Exp $
+$NetBSD: CHANGES-2022,v 1.5235 2022/10/29 15:36:31 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7939,3 +7939,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/patchelf to 0.16.1 [fcambus 2022-10-29]
 	Added security/ssh-audit version 2.5.0 [fcambus 2022-10-29]
 	Updated mail/cyrus-imapd24 to 2.4.20nb21 [he 2022-10-29]
+	Updated chat/matrix-synapse to 1.70.1 [gdt 2022-10-29]
