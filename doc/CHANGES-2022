@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5230 2022/10/29 13:35:52 triaxx Exp $
+$NetBSD: CHANGES-2022,v 1.5231 2022/10/29 13:36:32 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7935,3 +7935,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated chat/matrix-synapse to 1.68.0 [gdt 2022-10-28]
 	Updated chat/matrix-synapse to 1.69.0 [gdt 2022-10-29]
 	Updated lang/erlang to 25.1.2 [triaxx 2022-10-29]
+	Updated converters/bdf2psf to 1.211 [fcambus 2022-10-29]
