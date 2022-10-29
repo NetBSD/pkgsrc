@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.66 2022/10/29 00:56:40 gdt Exp $
+# $NetBSD: Makefile,v 1.67 2022/10/29 15:36:17 gdt Exp $
 
-DISTNAME=	matrix-synapse-1.69.0
+DISTNAME=	matrix-synapse-1.70.1
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=matrix-org/}
 GITHUB_PROJECT=	synapse
@@ -115,6 +115,10 @@ do-test:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} pytest-${PYVERSSUFFIX}
 
 # guide says "Prepend .include "cargo-depends.mk" to any other .includes."
+# To start:
+#   make CARGO_ARGS="build --release" build && make print-cargo-depends > cargo-depends.mk
+# To update:
+#   make; make print-cargo-depends > cargo-depends.mk && make distinfo
 .include "cargo-depends.mk"
 
 .include "../../lang/python/application.mk"
