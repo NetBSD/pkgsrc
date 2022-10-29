@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.75 2022/04/18 19:11:33 adam Exp $
+# $NetBSD: Makefile,v 1.76 2022/10/29 15:48:59 tnn Exp $
 
-DISTNAME=	dbmail-3.2.5
-PKGREVISION=	4
+DISTNAME=	dbmail-3.3.1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dbmail/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -50,7 +49,7 @@ post-install:
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.8.0
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libevent/buildlink3.mk"
-.include "../../mail/gmime/buildlink3.mk"
+.include "../../mail/gmime3/buildlink3.mk"
 .include "../../security/mhash/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
