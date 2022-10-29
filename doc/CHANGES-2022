@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5237 2022/10/29 19:16:26 triaxx Exp $
+$NetBSD: CHANGES-2022,v 1.5238 2022/10/29 20:35:04 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7946,3 +7946,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/promscale to 0.16.0 [tnn 2022-10-29]
 	Updated mail/dbmail to 3.3.1 [tnn 2022-10-29]
 	Updated audio/mpg123 to 1.31.0 [triaxx 2022-10-29]
+	Updated sysutils/xplr to 0.20.0 [pin 2022-10-29]
