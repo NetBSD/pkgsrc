@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.29 2022/05/29 19:53:59 gavan Exp $
+$NetBSD: distinfo,v 1.30 2022/10/29 14:44:07 he Exp $
 
 BLAKE2s (cyrus-imapd-2.4.20.tar.gz) = fca8c0a2a00abc61bd61c0b563b36403c843fa0f25e35432692394531da8b158
 SHA512 (cyrus-imapd-2.4.20.tar.gz) = a1e7d8b4bc096c57ba36f74f2853eb520503b40beffc80912a0c081bce1df3fa8cd41b00c789d33097be6325563743c9540c11cc6137c51a747880749d2f5b4d
@@ -11,9 +11,10 @@ SHA1 (patch-ao) = c01c9d32b4d73cbc32d2ad8bfca8b8b021ca2474
 SHA1 (patch-aq) = 101f5d253dae303f187e15eca28aa687f846ba6b
 SHA1 (patch-configure) = 2b4ea2203f446175fedfe2549534f382e4115579
 SHA1 (patch-imap_idlemsg.c) = 112e8077e1f820d526db342f425dab3ba15e71f2
-SHA1 (patch-imap_mailbox.c) = 9a000763a153863f6c40f8939fe19eab41973cea
+SHA1 (patch-imap_mailbox.c) = 53cab0f89e2d64424871d214f7cdd4213388dcfb
 SHA1 (patch-imtest_Makefile.in) = c76d63144a30ea28af12474376451c9e3288be2b
 SHA1 (patch-lib_Makefile.in) = a337c7dc7c22a25d029c4b4d8c7c8b5650bff8f2
+SHA1 (patch-lib_assert.h) = 027a9f6c20ceffee0651dc38f1666d5a307e1ce4
 SHA1 (patch-master_Makefile.in) = ec274fab36541e2c03572e72c6ff8e05f24756ef
 SHA1 (patch-notifyd_Makefile.in) = e66b93338f8fc1713be3ff14ba1edad005cb428b
 SHA1 (patch-perl_sieve_lib_Makefile.in) = a2b9ee49c0d01262d04175498122cbf14d92cc6f
