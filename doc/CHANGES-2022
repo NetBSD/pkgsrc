@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5228 2022/10/28 19:19:53 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.5229 2022/10/29 00:56:47 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7933,3 +7933,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/libzdb to 3.2.2nb8 [he 2022-10-28]
 	Updated databases/libzdb to 3.2.3 [he 2022-10-28]
 	Updated chat/matrix-synapse to 1.68.0 [gdt 2022-10-28]
+	Updated chat/matrix-synapse to 1.69.0 [gdt 2022-10-29]
