@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22315 2022/10/26 21:27:36 gutteridge Exp $
+$NetBSD: TODO,v 1.22316 2022/10/29 15:29:15 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1000,6 +1000,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o mailutis-2.2 [wip]
 	o maketool-0.8.4
 	o makeztxt-1.60
+	o mame-0.249
 	o man-pages-5.11
 	o manedit-1.2.1
 	o mapserver-7.6.2
@@ -1507,7 +1508,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o top-3.8beta1
 	o topgit-0.8
 	o tor-browser-11.0.9 [wip]
-	o tor-browser-11.5.5
+	o tor-browser-11.5.6
 	o torrentzip-2.1.0
 	o toxcore-0.2.12
 	o trafficserver-9.0.1
