@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2022/09/27 20:58:21 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2022/10/29 13:16:19 thor Exp $
 
 DISTNAME=	aubio-0.4.9
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	audio
 MASTER_SITES=	https://aubio.org/pub/
 EXTRACT_SUFX=	.tar.bz2
@@ -18,6 +18,7 @@ PKGCONFIG_OVERRIDE+=	aubio.pc.in
 WAF_ARGS+=	--disable-tests
 
 TOOL_DEPENDS+=	txt2man-[0-9]*:../../converters/txt2man
+BUILD_DEPENDS+=	doxygen-[0-9]*:../../devel/doxygen
 
 CPPFLAGS.SunOS+=	-Du_int8_t=uint8_t -Du_int16_t=uint16_t -Du_int32_t=uint32_t -Du_int64_t=uint64_t
 
