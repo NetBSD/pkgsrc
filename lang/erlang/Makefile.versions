@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.versions,v 1.60 2022/10/16 21:05:05 triaxx Exp $
+# $NetBSD: Makefile.versions,v 1.61 2022/10/29 13:35:15 triaxx Exp $
 
 # When making any update to the versions below (even patch level),
 # please check to see if the erlang-doc or erlang-man packages also
 # need their PLISTs regenerated, as they almost always will.
 DIST_VERSION_MAJOR=		25
 DIST_VERSION_MINOR=		1
-DIST_VERSION_PATCH=		1
+DIST_VERSION_PATCH=		2
 
 .include "versions.mk"
 
