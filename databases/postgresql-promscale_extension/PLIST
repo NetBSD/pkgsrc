@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.7 2022/09/04 11:55:41 tnn Exp $
+@comment $NetBSD: PLIST,v 1.8 2022/10/29 15:29:06 tnn Exp $
 lib/postgresql/promscale-${PKGVERSION}.so
 share/postgresql/extension/promscale--0.0.0--0.5.0.sql
 share/postgresql/extension/promscale--0.0.0--0.5.1.sql
 share/postgresql/extension/promscale--0.0.0--0.5.2.sql
 share/postgresql/extension/promscale--0.0.0--0.5.4.sql
+share/postgresql/extension/promscale--0.0.0--0.6.0.sql
 share/postgresql/extension/promscale--0.0.0--${PKGVERSION}.sql
 share/postgresql/extension/promscale--0.0.0.sql
 share/postgresql/extension/promscale--0.1--0.1.1.sql
@@ -24,18 +25,25 @@ share/postgresql/extension/promscale--0.3.2.sql
 share/postgresql/extension/promscale--0.5.0--0.5.1.sql
 share/postgresql/extension/promscale--0.5.0--0.5.2.sql
 share/postgresql/extension/promscale--0.5.0--0.5.4.sql
+share/postgresql/extension/promscale--0.5.0--0.6.0.sql
 share/postgresql/extension/promscale--0.5.0--${PKGVERSION}.sql
 share/postgresql/extension/promscale--0.5.0.sql
 share/postgresql/extension/promscale--0.5.1--0.5.2.sql
 share/postgresql/extension/promscale--0.5.1--0.5.4.sql
+share/postgresql/extension/promscale--0.5.1--0.6.0.sql
 share/postgresql/extension/promscale--0.5.1--${PKGVERSION}.sql
 share/postgresql/extension/promscale--0.5.1.sql
 share/postgresql/extension/promscale--0.5.2--0.5.4.sql
+share/postgresql/extension/promscale--0.5.2--0.6.0.sql
 share/postgresql/extension/promscale--0.5.2--${PKGVERSION}.sql
 share/postgresql/extension/promscale--0.5.2.sql
 share/postgresql/extension/promscale--0.5.3--0.5.4.sql
+share/postgresql/extension/promscale--0.5.3--0.6.0.sql
 share/postgresql/extension/promscale--0.5.3--${PKGVERSION}.sql
+share/postgresql/extension/promscale--0.5.4--0.6.0.sql
 share/postgresql/extension/promscale--0.5.4--${PKGVERSION}.sql
 share/postgresql/extension/promscale--0.5.4.sql
+share/postgresql/extension/promscale--0.6.0--${PKGVERSION}.sql
+share/postgresql/extension/promscale--0.6.0.sql
 share/postgresql/extension/promscale--${PKGVERSION}.sql
 share/postgresql/extension/promscale.control
