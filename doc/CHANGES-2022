@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5235 2022/10/29 15:36:31 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.5236 2022/10/29 15:51:09 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7940,3 +7940,8 @@ Changes to the packages collection and infrastructure in 2022:
 	Added security/ssh-audit version 2.5.0 [fcambus 2022-10-29]
 	Updated mail/cyrus-imapd24 to 2.4.20nb21 [he 2022-10-29]
 	Updated chat/matrix-synapse to 1.70.1 [gdt 2022-10-29]
+	Updated databases/timescaledb-tune to 0.14.2 [tnn 2022-10-29]
+	Updated databases/postgresql-timescaledb to 2.8.1 [tnn 2022-10-29]
+	Updated databases/postgresql-promscale_extension to 0.7.0 [tnn 2022-10-29]
+	Updated databases/promscale to 0.16.0 [tnn 2022-10-29]
+	Updated mail/dbmail to 3.3.1 [tnn 2022-10-29]
