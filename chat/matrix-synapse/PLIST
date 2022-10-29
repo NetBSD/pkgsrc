@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2022/10/29 00:56:40 gdt Exp $
+@comment $NetBSD: PLIST,v 1.36 2022/10/29 15:36:17 gdt Exp $
 bin/export_signing_key
 bin/generate_config
 bin/generate_log_config
@@ -140,8 +140,6 @@ ${PYSITELIB}/synapse/config/experimental.py
 ${PYSITELIB}/synapse/config/experimental.pyc
 ${PYSITELIB}/synapse/config/federation.py
 ${PYSITELIB}/synapse/config/federation.pyc
-${PYSITELIB}/synapse/config/groups.py
-${PYSITELIB}/synapse/config/groups.pyc
 ${PYSITELIB}/synapse/config/homeserver.py
 ${PYSITELIB}/synapse/config/homeserver.pyc
 ${PYSITELIB}/synapse/config/jwt.py
@@ -655,6 +653,8 @@ ${PYSITELIB}/synapse/rest/client/register.py
 ${PYSITELIB}/synapse/rest/client/register.pyc
 ${PYSITELIB}/synapse/rest/client/relations.py
 ${PYSITELIB}/synapse/rest/client/relations.pyc
+${PYSITELIB}/synapse/rest/client/rendezvous.py
+${PYSITELIB}/synapse/rest/client/rendezvous.pyc
 ${PYSITELIB}/synapse/rest/client/report_event.py
 ${PYSITELIB}/synapse/rest/client/report_event.pyc
 ${PYSITELIB}/synapse/rest/client/room.py
@@ -1278,6 +1278,11 @@ ${PYSITELIB}/synapse/storage/schema/main/delta/73/04partial_join_details.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/73/04pending_device_list_updates.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/73/05old_push_actions.sql.postgres
 ${PYSITELIB}/synapse/storage/schema/main/delta/73/05old_push_actions.sql.sqlite
+${PYSITELIB}/synapse/storage/schema/main/delta/73/06thread_notifications_thread_id_idx.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/73/08thread_receipts_non_null.sql.postgres
+${PYSITELIB}/synapse/storage/schema/main/delta/73/08thread_receipts_non_null.sql.sqlite
+${PYSITELIB}/synapse/storage/schema/main/delta/73/09partial_joined_via_destination.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/73/09threads_table.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/application_services.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/event_edges.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/event_signatures.sql
