@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2022/06/28 11:34:44 wiz Exp $
+# $NetBSD: Makefile,v 1.85 2022/10/29 18:28:06 nros Exp $
 
 DISTNAME=	pari-2.7.6
 PKGREVISION=	10
@@ -13,10 +13,11 @@ LICENSE=	gnu-gpl-v2
 MAKE_JOBS_SAFE=	no
 
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake perl:run
+USE_TOOLS+=		gmake gzip:run perl:run
 USE_LANGUAGES+=		c c++
 HAS_CONFIGURE=		yes
 CONFIGURE_ENV+=		PERL5=${PERL5}
+CONFIGURE_ENV+=		gzip=${TOOLS_PATH.gzip}
 MAKE_ENV+=		PERL_USE_UNSAFE_INC=1
 
 CONFIGURE_SCRIPT=	${WRKSRC}/Configure
