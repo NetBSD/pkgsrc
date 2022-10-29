@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2020/08/15 10:52:50 tnn Exp $
+@comment $NetBSD: PLIST,v 1.14 2022/10/29 15:48:59 tnn Exp $
 ${PLIST.ldap}lib/dbmail/libauth_ldap.la
 lib/dbmail/libauth_sql.la
 lib/dbmail/libdbmail.la
@@ -31,6 +31,8 @@ share/dbmail/sql/mysql/upgrades/32002.mysql
 share/dbmail/sql/mysql/upgrades/32003.mysql
 share/dbmail/sql/mysql/upgrades/32004.mysql
 share/dbmail/sql/mysql/upgrades/32005.mysql
+share/dbmail/sql/mysql/upgrades/32006.mysql
+share/dbmail/sql/mysql/upgrades/upgrade.mysql
 share/dbmail/sql/postgresql/2_1_7-2_2_0.pgsql
 share/dbmail/sql/postgresql/2_2-3_0.pgsql
 share/dbmail/sql/postgresql/2_2_5-2_3_0.pgsql
@@ -46,6 +48,8 @@ share/dbmail/sql/postgresql/upgrades/32002.psql
 share/dbmail/sql/postgresql/upgrades/32003.psql
 share/dbmail/sql/postgresql/upgrades/32004.psql
 share/dbmail/sql/postgresql/upgrades/32005.psql
+share/dbmail/sql/postgresql/upgrades/32006.psql
+share/dbmail/sql/postgresql/upgrades/upgrade.psql
 share/dbmail/sql/sqlite/2_1_7-2_2_0.sqlite
 share/dbmail/sql/sqlite/2_2-3_0.sqlite
 share/dbmail/sql/sqlite/2_2_5-2_3_0.sqlite
@@ -60,6 +64,8 @@ share/dbmail/sql/sqlite/upgrades/32002.sqlite
 share/dbmail/sql/sqlite/upgrades/32003.sqlite
 share/dbmail/sql/sqlite/upgrades/32004.sqlite
 share/dbmail/sql/sqlite/upgrades/32005.sqlite
+share/dbmail/sql/sqlite/upgrades/32006.sqlite
+share/dbmail/sql/sqlite/upgrades/upgrade.sqlite
 share/examples/dbmail/dbmail.conf
 @pkgdir man/man8
 @pkgdir man/man5
