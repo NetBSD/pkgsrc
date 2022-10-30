@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2022/04/18 19:09:56 adam Exp $
+# $NetBSD: Makefile,v 1.30 2022/10/30 10:50:01 taca Exp $
 
 #
 # We can't omit PKGNAME here to handle PKG_OPTIONS.
@@ -49,10 +49,10 @@ CFLAGS+=	-DSQLITE_ENABLE_LOCKING_STYLE=0 -DSQLITE_WITHOUT_ZONEMALLOC
 .endif
 
 post-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/sapi/cli/php ${DESTDIR}${PREFIX}/bin/php
-	${INSTALL_DATA} ${WRKSRC}/sapi/cli/php.1 \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/php.1
-	${INSTALL_PROGRAM} ${WRKSRC}/sapi/cgi/php-cgi ${DESTDIR}${CGIDIR}/php
+#	${INSTALL_PROGRAM} ${WRKSRC}/sapi/cli/php ${DESTDIR}${PREFIX}/bin/php
+#	${INSTALL_DATA} ${WRKSRC}/sapi/cli/php.1 \
+#		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/php.1
+#	${INSTALL_PROGRAM} ${WRKSRC}/sapi/cgi/php-cgi ${DESTDIR}${CGIDIR}/php
 	cd ${WRKSRC}; ${INSTALL_DATA} php.ini-development php.ini-production \
 		${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/php.gif ${DESTDIR}${PREFIX}/share/php
