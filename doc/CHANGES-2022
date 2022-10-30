@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5259 2022/10/30 11:37:59 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.5260 2022/10/30 12:54:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7968,3 +7968,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/keepassxc to 2.7.4 [wiz 2022-10-30]
 	Updated wm/i3 to 4.21.1 [wiz 2022-10-30]
 	Updated lang/rust-analyzer to 0.0.2022.10.24 [wiz 2022-10-30]
+	Updated databases/mysql57-client to 5.7.40 [adam 2022-10-30]
+	Updated databases/mysql57-server to 5.7.40 [adam 2022-10-30]
