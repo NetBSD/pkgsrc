@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22320 2022/10/30 11:15:16 wiz Exp $
+$NetBSD: TODO,v 1.22321 2022/10/30 11:16:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1532,7 +1532,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o uhttpmock-0.5.3
 	o unicode-screensaver-0.5.2
 	o units-2.21
-	o unrar-6.2.1
 	o upower-0.99.20 [switches to build with meson]
 	o uriparser-0.9.7
 	o urlgrabber-3.10.2

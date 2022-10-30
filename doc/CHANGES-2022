@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5254 2022/10/30 11:15:16 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.5255 2022/10/30 11:16:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7963,3 +7963,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/php81 to 8.1.12 [taca 2022-10-30]
 	Updated lang/php80 to 8.0.25 [taca 2022-10-30]
 	Updated audio/taglib to 1.13 [wiz 2022-10-30]
+	Updated archivers/unrar to 6.2.1 [wiz 2022-10-30]
