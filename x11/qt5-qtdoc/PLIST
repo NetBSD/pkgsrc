@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2022/09/13 17:18:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2022/10/30 13:38:29 adam Exp $
 qt5/doc/qtcmake.qch
 qt5/doc/qtcmake/cmake-command-reference.html
 qt5/doc/qtcmake/cmake-get-started.html
@@ -585,6 +585,7 @@ qt5/doc/qtdoc/qtquick-deployment.html
 qt5/doc/qtdoc/qtquick-internationalization.html
 qt5/doc/qtdoc/qtquick-performance.html
 qt5/doc/qtdoc/qtquick-porting-qt5.html
+qt5/doc/qtdoc/qtquick-qml-runtime.html
 qt5/doc/qtdoc/qtquick-qmlscene.html
 qt5/doc/qtdoc/qtquick-usecase-animations.html
 qt5/doc/qtdoc/qtquick-usecase-integratingjs.html
