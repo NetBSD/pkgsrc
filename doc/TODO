@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22317 2022/10/30 01:05:34 wiz Exp $
+$NetBSD: TODO,v 1.22318 2022/10/30 06:50:26 wiz Exp $
 
 Suggested new packages
 ======================
@@ -421,6 +421,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o album-4.17
 	o alephone-20150620
 	o alevt-1.6.2
+	o alsa-lib-1.2.8
 	o alsa-plugins-1.1.0
 	o amass-3.12.2
 	o amavis-perl-0.3.12 [called just amavis]
@@ -836,6 +837,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o html2wml-0.4.11
 	o http_load-20140814
 	o hyperscan-5.4.0
+	o i3-4.21.1
 	o i3lock-2.13
 	o ibus-hangul-1.5.4
 	o icdprog-0.5
@@ -899,6 +901,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o kdevplatform-1.7.1
 	o kdsoap-1.10.0
 	o kea-2.2.0
+	o keepassxc-2.7.4
 	o keybinder-0.3.2
 	o kfilemetadata-5.81.0
 	o kgb-bot-1.55
@@ -942,6 +945,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libgiigic-1.1.2
 	o libgnomekbd-3.4.0.2
 	o libiconv-1.17
+	o libidn2-2.3.4
 	o libisoburn-1.5.4
 	o libisofs-1.5.4
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version; see also wmii+ixp entry]
@@ -1224,6 +1228,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o php-tiki-23.1 [replacing php-tiki6]
 	o php-tt-rss-17.4
 	o php-tt-rss-fever-plugin-1.4.7
+	o php81-8.1.12
 	o phpldapadmin-1.2.5
 	o phraseanet-4.1.2
 	o phraseanet-indexer-3.8.6
@@ -1465,6 +1470,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o tacacs-4.0.4.29a
 	o tacacs-shrubbery-4.0.4.29a
 	o tads-3.0.16
+	o taglib-1.13
 	o taplo-lsp-0.6.0 [wiz]
 	o taplo-lsp-0.7.0
 	o taskwarrior-2.5.3
@@ -1529,6 +1535,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o uhttpmock-0.5.3
 	o unicode-screensaver-0.5.2
 	o units-2.21
+	o unrar-6.2.1
 	o upower-0.99.20 [switches to build with meson]
 	o uriparser-0.9.7
 	o urlgrabber-3.10.2
@@ -1572,7 +1579,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o wine-7.0
 	o wine-devel-3.7
 	o wiredtiger-10.0.0
-	o wireshark-4.0.0
+	o wireshark-4.0.1
 	o wkhtmltopdf-0.12.6
 	o wmi-11
 	o wordwarvi-1.0.4
