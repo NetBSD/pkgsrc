@@ -1,17 +1,19 @@
-$NetBSD: patch-config_get__dlld,v 1.1 2016/03/03 13:28:22 wiz Exp $
+$NetBSD: patch-config_get__dlld,v 1.2 2022/10/30 10:00:15 nros Exp $
 
---- config/get_dlld.orig	2015-03-18 10:33:24.000000000 +0000
+* Add dragonfly support
+
+--- config/get_dlld.orig	2022-07-27 16:29:32.000000000 +0000
 +++ config/get_dlld
 @@ -9,7 +9,7 @@ DLSUFFIX=so
  soname=.$soname_num
  do_dll=yes
  case "$osname" in
--  gnu*|aix|osf1|solaris|linux|freebsd|netbsd)
-+  dragonfly*|gnu*|aix|osf1|solaris|linux|freebsd|netbsd)
+-  gnu*|aix|osf1|solaris|linux|*bsd)
++  dragonfly*|gnu*|aix|osf1|solaris|linux|*bsd)
      case $pari_release_verbose in
        *STABLE*)      sodest=.$version.$patch;; # released version
        *DEVELOPMENT*) sodest=.$patch.0.0;;      # unstable version
-@@ -76,6 +76,7 @@ if test -n "$DLLD"; then
+@@ -77,6 +77,7 @@ if test -n "$DLLD"; then
        aix)     DLLDFLAGS='-r' ;;
        darwin)  DLLDFLAGS="-compatibility_version $compat_ver -current_version $num_ver" ;;
        freebsd) DLLDFLAGS='-Bshareable -x' ;;
@@ -19,7 +21,7 @@ $NetBSD: patch-config_get__dlld,v 1.1 2016/03/03 13:28:22 wiz Exp $
        hpux)    DLLDFLAGS='-b' ;;
        irix)    DLLDFLAGS='-shared -elf -no_unresolved -all' ;;
        osf1)    DLLDFLAGS='-shared' ;;
-@@ -107,7 +108,7 @@ if test -n "$DLLD"; then
+@@ -108,7 +109,7 @@ if test -n "$DLLD"; then
    fi
    case "$osname" in
  # Beware: will run through 'eval' [ hence ${...} instead of \$(...) ]

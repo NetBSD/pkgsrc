@@ -1,4 +1,6 @@
-$NetBSD: patch-config_get__install,v 1.1 2016/03/03 13:28:22 wiz Exp $
+$NetBSD: patch-config_get__install,v 1.2 2022/10/30 10:00:15 nros Exp $
+
+* install man pages in the correct place
 
 --- config/get_install.orig	2014-07-30 13:38:47.000000000 +0000
 +++ config/get_install

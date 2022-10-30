@@ -1,23 +1,22 @@
-$NetBSD: distinfo,v 1.30 2022/10/29 18:28:06 nros Exp $
+$NetBSD: distinfo,v 1.31 2022/10/30 10:00:15 nros Exp $
 
-BLAKE2s (pari-2.7.6.tar.gz) = 13518517347d8c82eb30790eb4400b5bf20e2df211fe9df8fd54f4bf5d67b2a2
-SHA512 (pari-2.7.6.tar.gz) = 9cc623778068fe06878b2be0e4c60b75b585220e78446ed0c5e0197a3688e32cb901ce8a0e794d6dd310dab036784f73c0c9a608628ef89dd3e40fe3d9f7dc48
-Size (pari-2.7.6.tar.gz) = 3160272 bytes
+BLAKE2s (pari-2.15.0.tar.gz) = 30331a9207a8c83538c811b699bfb14a79a4b3916abd990edd24f8cc855cc122
+SHA512 (pari-2.15.0.tar.gz) = 6366734f7746a3982c464646e42b67382d5e5473709b192a359791621be14bb0e7521481a42c35f9a28ac6428485307472eb3fc8bd877bf3466f3610368a9f09
+Size (pari-2.15.0.tar.gz) = 5172089 bytes
 SHA1 (patch-Configure) = e9a50be80b2def703da1bcb10fe1b9854629e9b9
-SHA1 (patch-config_DOC__Make.SH) = 088e1b0ff98a42ed50ef90fae87e3a7989239dea
-SHA1 (patch-config_Makefile.SH) = 7a0c80c195eb5e922d36ff75e94e4386c6db7f20
-SHA1 (patch-config_TOP__Make.SH) = 82e39e82660fbe94b304e4691f0598b8f28a856a
-SHA1 (patch-config_get__PATH) = 6644f898eb784c2131bbb443ad4e1115fafd1bb8
-SHA1 (patch-config_get__X11) = 0bb8f77d5c5adfb29f89ad95ead1b5726c1a3918
-SHA1 (patch-config_get__archos) = f813a841f4795df30ef0b908263bea3d90e42b86
-SHA1 (patch-config_get__dlld) = 2e356255cb84d43f9859a66907bf8ed335639d78
-SHA1 (patch-config_get__install) = 0cccbb2dcf875b287787d88265730fdbeb5abd42
-SHA1 (patch-config_get__ld) = 3a0539211311c2686f3c8b1b289038ad54397134
-SHA1 (patch-config_get__libpth) = 8716d5ad8fb363593c0589196a72e452af727c02
-SHA1 (patch-src_headers_paridecl.h) = 996c1d0d0fcf1a1070699cd46a10def8901718ee
-SHA1 (patch-src_headers_paristio.h) = dd37ba9c6882a72e0d78d28eaaa00e7e18803111
-SHA1 (patch-src_language_anal.c) = 4570cd7fdd0c0d135391630bf0f6612a22ceaea8
-SHA1 (patch-src_language_compile.c) = ea356968c3e5f8d599a61d4413bf04552b673ea6
-SHA1 (patch-src_language_es.c) = ee470a5e050839573e213d7644d1e182fb3a4f0f
-SHA1 (patch-src_language_parsec.h) = 5cf4772aa2c9d7c912e68f2638bbc99de2d388a6
-SHA1 (patch-src_modules_mpqs.c) = 54adabc5bffe06ebbb79f3dd6366a4e7e219a676
+SHA1 (patch-config_DOC__Make.SH) = 0bf95b7d2b88676b2788b94292687dd83ffeebf7
+SHA1 (patch-config_Makefile.SH) = 725ef2222305794b4fd46a6309e7db36331715f0
+SHA1 (patch-config_TOP__Make.SH) = 86837ad721d1671b82f0bbfcb62dfa87b0e0b79f
+SHA1 (patch-config_get__PATH) = 8c474a2976632a41be43c9f0e8ab3fa3d875c06e
+SHA1 (patch-config_get__X11) = f605bd79401a97dc199ea700765946580107df06
+SHA1 (patch-config_get__archos) = 99e349fb6f4a6f3907abfa601e516bf41af010bf
+SHA1 (patch-config_get__dlld) = 9dcf5d7ac29578b41150508eaafe3abe9237f02f
+SHA1 (patch-config_get__fltk) = a46abaf8d34c7fd07bac251452f7f319657087fa
+SHA1 (patch-config_get__install) = 8cc084b48e39d3cf7c41be429feda63cbfc1ddbd
+SHA1 (patch-config_get__ld) = 121253ac21551efc313934ac4c5dde493245a46c
+SHA1 (patch-src_basemath_nflist.c) = 4fb6a5ede81a036727346f3a242ac4dfa3ca0132
+SHA1 (patch-src_basemath_nflistQT.c) = defd07b152766d98c28dbbb479850df6734c392e
+SHA1 (patch-src_headers_paridecl.h) = f22f0258d4ac21bde5c51ae53668058f46021310
+SHA1 (patch-src_language_anal.c) = fa02bddaf90fdf3b3f86b996f4d533c5cbd959ac
+SHA1 (patch-src_language_compile.c) = db29a10dabbc42299d83751d75f3ccb62039b760
+SHA1 (patch-src_language_parsec.h) = 2d74fc3fbcaa23b02fcf84996954eea5a81ca51e
