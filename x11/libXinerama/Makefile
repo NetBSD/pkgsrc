@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2022/04/10 08:53:16 nia Exp $
+# $NetBSD: Makefile,v 1.20 2022/10/30 01:09:52 wiz Exp $
 
-DISTNAME=	libXinerama-1.1.4
+DISTNAME=	libXinerama-1.1.5
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=lib/}
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	https://xorg.freedesktop.org/
@@ -15,8 +15,6 @@ USE_TOOLS+=	pkg-config
 
 CONFIGURE_ENV+=		LIB_MAN_SUFFIX=3
 PKGCONFIG_OVERRIDE+=	xinerama.pc.in
-
-CONFIGURE_ARGS.NetBSD+=	--disable-malloc0returnsnull
 
 X11_LIB_NAME?=		libXinerama
 .include "../../meta-pkgs/modular-xorg/avoid-duplicate.mk"
