@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22319 2022/10/30 10:01:23 nros Exp $
+$NetBSD: TODO,v 1.22320 2022/10/30 11:15:16 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1227,7 +1227,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o php-tiki-23.1 [replacing php-tiki6]
 	o php-tt-rss-17.4
 	o php-tt-rss-fever-plugin-1.4.7
-	o php81-8.1.12
 	o phpldapadmin-1.2.5
 	o phraseanet-4.1.2
 	o phraseanet-indexer-3.8.6
@@ -1469,7 +1468,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o tacacs-4.0.4.29a
 	o tacacs-shrubbery-4.0.4.29a
 	o tads-3.0.16
-	o taglib-1.13
 	o taplo-lsp-0.6.0 [wiz]
 	o taplo-lsp-0.7.0
 	o taskwarrior-2.5.3
