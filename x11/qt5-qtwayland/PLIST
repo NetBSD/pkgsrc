@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2020/06/02 06:41:03 adam Exp $
-lib/pkgconfig/Qt5Wayland.pc
+@comment $NetBSD: PLIST,v 1.6 2022/10/30 13:38:31 adam Exp $
+lib/pkgconfig/Qt5WaylandClient.pc
+lib/pkgconfig/Qt5WaylandCompositor.pc
 qt5/bin/qtwaylandscanner
 qt5/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qtwaylandclient-config_p.h
 qt5/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qtwaylandclientglobal_p.h
