@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2020/01/18 23:35:56 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2022/10/30 01:12:00 wiz Exp $
 
-DISTNAME=	sessreg-1.1.2
+DISTNAME=	sessreg-1.1.3
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	https://xorg.freedesktop.org/
