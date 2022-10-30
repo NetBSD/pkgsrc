@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2019/11/02 16:16:18 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2022/10/30 11:30:29 nros Exp $
 #
 
 CLISP_MODULE=	pari
 
 PKGNAME=	clisp-${CLISP_MODULE}-${CLISP_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=clisp/}
 
@@ -15,7 +15,7 @@ COMMENT=	CLISP pari module
 MAKE_JOBS_SAFE=	no
 
 .include "../../lang/clisp/module.mk"
-.include "../../math/pari/buildlink3.mk"
+.include "../../math/pari23/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 
 ac_cv_libpari_libs=	-L${BUILDLINK_PREFIX.pari}/lib -l${PARI_LIB}
