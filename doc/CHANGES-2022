@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5252 2022/10/30 10:19:27 taca Exp $
+$NetBSD: CHANGES-2022,v 1.5253 2022/10/30 10:37:34 alnsn Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7932,6 +7932,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/libzdb to 3.2.2nb7 [he 2022-10-28]
 	Updated databases/libzdb to 3.2.2nb8 [he 2022-10-28]
 	Updated databases/libzdb to 3.2.3 [he 2022-10-28]
+	Updated math/sollya to 8.0 [alnsn 2022-10-28]
 	Updated chat/matrix-synapse to 1.68.0 [gdt 2022-10-28]
 	Updated chat/matrix-synapse to 1.69.0 [gdt 2022-10-29]
 	Updated lang/erlang to 25.1.2 [triaxx 2022-10-29]
