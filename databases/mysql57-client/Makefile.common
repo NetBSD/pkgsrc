@@ -1,11 +1,12 @@
-# $NetBSD: Makefile.common,v 1.38 2022/04/28 13:19:04 adam Exp $
+# $NetBSD: Makefile.common,v 1.39 2022/10/30 12:53:55 adam Exp $
 #
 # used by databases/mysql57-client/Makefile
 # used by databases/mysql57-server/Makefile
 
-DISTNAME=	mysql-5.7.38
+DISTNAME=	mysql-5.7.40
 CATEGORIES=	databases
-MASTER_SITES=	${MASTER_SITE_MYSQL:=MySQL-5.7/}
+#MASTER_SITES=	${MASTER_SITE_MYSQL:=MySQL-5.7/}
+MASTER_SITES=	https://dev.mysql.com/get/Downloads/MySQL-5.7/
 
 MAINTAINER?=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.mysql.com/
