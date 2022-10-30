@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.26 2022/09/13 17:18:05 adam Exp $
+$NetBSD: distinfo,v 1.27 2022/10/30 13:38:29 adam Exp $
 
-BLAKE2s (qtmacextras-everywhere-opensource-src-5.15.6.tar.xz) = a444f54dac214fd1649e1d921a30b83faf9af8aea8260e9711f9e5cf81b58310
-SHA512 (qtmacextras-everywhere-opensource-src-5.15.6.tar.xz) = 679f752dfa53a4fbfd9e950407da7d1f2ce505e4bf58083a99812d339cc1163c5be5b0ace4a81fee7a58a8a9322fbf8d04ac5835dcfcf1570396dc01ffb25cdc
-Size (qtmacextras-everywhere-opensource-src-5.15.6.tar.xz) = 71240 bytes
+BLAKE2s (qtmacextras-everywhere-opensource-src-5.15.7.tar.xz) = 923c05289ae8bfc15aeea69c983858f73ff02f3256462bc60c8ab57b2bb43e65
+SHA512 (qtmacextras-everywhere-opensource-src-5.15.7.tar.xz) = 62c46302b392bf5dc5da175a5ed1e26a03195c32fe5873e927ccf31ca34cd1f4ab7544148e34b27d064eed090cba496761d61caa8bea4ac863a9a3a6425ba182
+Size (qtmacextras-everywhere-opensource-src-5.15.7.tar.xz) = 71288 bytes
