@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5249 2022/10/30 08:28:43 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.5250 2022/10/30 10:01:22 nros Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7958,3 +7958,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/ruby-nokogiri to 1.13.9 [tsutsui 2022-10-30]
 	Updated finance/gnucash-docs to 4.12 [wiz 2022-10-30]
 	Updated audio/mpc to 0.34nb1 [wiz 2022-10-30]
+	Updated math/pari to 2.15.0 [nros 2022-10-30]
