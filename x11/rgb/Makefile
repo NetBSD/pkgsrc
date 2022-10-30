@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2020/01/18 23:35:55 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2022/10/30 01:11:02 wiz Exp $
 
-DISTNAME=		rgb-1.0.6
-PKGREVISION=		1
+DISTNAME=		rgb-1.1.0
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=app/}
-EXTRACT_SUFX=		.tar.bz2
+EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/
