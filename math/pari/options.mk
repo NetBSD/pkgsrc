@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.13 2020/08/09 23:12:13 joerg Exp $
+# $NetBSD: options.mk,v 1.14 2022/10/30 10:00:15 nros Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pari
 PKG_SUPPORTED_OPTIONS=	doc gmp x11
@@ -11,12 +11,14 @@ PKG_SUGGESTED_OPTIONS=	doc gmp
 PLIST_VARS+=		doc
 .if !empty(PKG_OPTIONS:Mdoc)
 BUILD_DEPENDS+=		tex-amsfonts>=3.0:../../fonts/tex-amsfonts
-BUILD_DEPENDS+=		tex-pdftex>=1.40.11:../../print/tex-pdftex
+BUILD_DEPENDS+=		tex-ec-[0-9]*:../../fonts/tex-ec
+BUILD_DEPENDS+=		tex-metafont-[0-9]*:../../fonts/tex-metafont
+BUILD_DEPENDS+=		tex-latex-bin-[0-9]*:../../print/tex-latex-bin
 BUILD_DEPENDS+=		dvipsk-[0-9]*:../../print/dvipsk
 PLIST.doc=		yes
 BUILD_TARGET+=		doc
 INSTALL_TARGET+=	install-doc
-MAKE_ENV+=		PDFTEX=${PREFIX}/bin/pdftex
+#MAKE_ENV+=		PDFTEX=${PREFIX}/bin/pdftex
 .endif
 
 PLIST_VARS+=		nogmp gmp
