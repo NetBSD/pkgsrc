@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2022/04/28 13:19:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.25 2022/10/30 12:53:55 adam Exp $
 bin/innochecksum
 bin/lz4_decompress
 bin/my_print_defaults
@@ -610,6 +610,7 @@ share/mysql/test/include/have_numa.inc
 share/mysql/test/include/have_openssl.inc
 share/mysql/test/include/have_openssl_binary.inc
 share/mysql/test/include/have_openssl_support.inc
+share/mysql/test/include/have_openssl_version_1.1.0.inc
 share/mysql/test/include/have_optimizer_trace.inc
 share/mysql/test/include/have_outfile.inc
 share/mysql/test/include/have_partition.inc
@@ -1256,6 +1257,8 @@ share/mysql/test/r/func_aes.result
 share/mysql/test/r/func_aes_cfb1.result
 share/mysql/test/r/func_aes_cfb128.result
 share/mysql/test/r/func_aes_cfb8.result
+share/mysql/test/r/func_aes_kdf_hkdf.result
+share/mysql/test/r/func_aes_kdf_pbkdf2_hmac.result
 share/mysql/test/r/func_aes_misc.result
 share/mysql/test/r/func_aes_ofb.result
 share/mysql/test/r/func_analyse.result
@@ -2239,6 +2242,9 @@ share/mysql/test/std_data/parts/t1_will_crash#P#p6_2.MYD
 share/mysql/test/std_data/parts/t1_will_crash#P#p6_3.MYD
 share/mysql/test/std_data/parts/t575.frm
 share/mysql/test/std_data/parts/t575.par
+share/mysql/test/std_data/replicated-bin.000001
+share/mysql/test/std_data/replicated-bin.000002
+share/mysql/test/std_data/replicated-bin.index
 share/mysql/test/std_data/rpl_bug28618.dat
 share/mysql/test/std_data/rpl_loaddata.dat
 share/mysql/test/std_data/rpl_loaddata2.dat
@@ -5217,6 +5223,7 @@ share/mysql/test/suite/innodb/r/i_s_files_debug.result
 share/mysql/test/suite/innodb/r/ibuf_not_empty.result
 share/mysql/test/suite/innodb/r/import.result
 share/mysql/test/suite/innodb/r/import_compress_encrypt.result
+share/mysql/test/suite/innodb/r/import_compress_encrypt_upgrade.result
 share/mysql/test/suite/innodb/r/import_export_4k.result
 share/mysql/test/suite/innodb/r/import_tablespace_page_corrupt.result
 share/mysql/test/suite/innodb/r/import_tablespace_schema_missmatch.result
@@ -5597,6 +5604,7 @@ share/mysql/test/suite/innodb/t/ibuf_not_empty-master.opt
 share/mysql/test/suite/innodb/t/ibuf_not_empty.test
 share/mysql/test/suite/innodb/t/import.test
 share/mysql/test/suite/innodb/t/import_compress_encrypt.test
+share/mysql/test/suite/innodb/t/import_compress_encrypt_upgrade.test
 share/mysql/test/suite/innodb/t/import_export_4k.test
 share/mysql/test/suite/innodb/t/import_tablespace_page_corrupt.test
 share/mysql/test/suite/innodb/t/import_tablespace_schema_missmatch.test
@@ -8450,6 +8458,8 @@ share/mysql/test/suite/perfschema/include/prepared_stmts_deallocation.inc
 share/mysql/test/suite/perfschema/include/prepared_stmts_execution.inc
 share/mysql/test/suite/perfschema/include/prepared_stmts_setup.inc
 share/mysql/test/suite/perfschema/include/privilege.inc
+share/mysql/test/suite/perfschema/include/processlist_load.inc
+share/mysql/test/suite/perfschema/include/processlist_set.inc
 share/mysql/test/suite/perfschema/include/program_cleanup.inc
 share/mysql/test/suite/perfschema/include/program_execution.inc
 share/mysql/test/suite/perfschema/include/program_nested_cleanup.inc
@@ -8561,6 +8571,7 @@ share/mysql/test/suite/perfschema/r/ddl_mutex_instances.result
 share/mysql/test/suite/perfschema/r/ddl_os_global_by_type.result
 share/mysql/test/suite/perfschema/r/ddl_performance_timers.result
 share/mysql/test/suite/perfschema/r/ddl_prepared_statements_instances.result
+share/mysql/test/suite/perfschema/r/ddl_processlist.result
 share/mysql/test/suite/perfschema/r/ddl_replication_applier_configuration.result
 share/mysql/test/suite/perfschema/r/ddl_replication_applier_status.result
 share/mysql/test/suite/perfschema/r/ddl_replication_applier_status_by_coordinator.result
@@ -8652,6 +8663,7 @@ share/mysql/test/suite/perfschema/r/dml_mutex_instances.result
 share/mysql/test/suite/perfschema/r/dml_os_global_by_type.result
 share/mysql/test/suite/perfschema/r/dml_performance_timers.result
 share/mysql/test/suite/perfschema/r/dml_prepared_statements_instances.result
+share/mysql/test/suite/perfschema/r/dml_processlist.result
 share/mysql/test/suite/perfschema/r/dml_replication_applier_configuration.result
 share/mysql/test/suite/perfschema/r/dml_replication_applier_status.result
 share/mysql/test/suite/perfschema/r/dml_replication_applier_status_by_coordinator.result
@@ -8752,6 +8764,7 @@ share/mysql/test/suite/perfschema/r/memory_aggregate_no_u_no_h.result
 share/mysql/test/suite/perfschema/r/memory_table_io.result
 share/mysql/test/suite/perfschema/r/merge_table_io.result
 share/mysql/test/suite/perfschema/r/misc.result
+share/mysql/test/suite/perfschema/r/misc_global_status.result
 share/mysql/test/suite/perfschema/r/multi_table_io.result
 share/mysql/test/suite/perfschema/r/myisam_file_io.result
 share/mysql/test/suite/perfschema/r/myisam_table_io.result
@@ -8769,6 +8782,13 @@ share/mysql/test/suite/perfschema/r/prepared_statements.result
 share/mysql/test/suite/perfschema/r/prepared_stmts_by_stored_programs.result
 share/mysql/test/suite/perfschema/r/privilege.result
 share/mysql/test/suite/perfschema/r/privilege_table_io.result
+share/mysql/test/suite/perfschema/r/processlist.result
+share/mysql/test/suite/perfschema/r/processlist_57.result
+share/mysql/test/suite/perfschema/r/processlist_acl.result
+share/mysql/test/suite/perfschema/r/processlist_anonymous.result
+share/mysql/test/suite/perfschema/r/processlist_no_pfs.result
+share/mysql/test/suite/perfschema/r/processlist_port.result
+share/mysql/test/suite/perfschema/r/processlist_reg_user.result
 share/mysql/test/suite/perfschema/r/query_cache.result
 share/mysql/test/suite/perfschema/r/read_only.result
 share/mysql/test/suite/perfschema/r/relaylog.result
@@ -9009,6 +9029,7 @@ share/mysql/test/suite/perfschema/t/ddl_mutex_instances.test
 share/mysql/test/suite/perfschema/t/ddl_os_global_by_type.test
 share/mysql/test/suite/perfschema/t/ddl_performance_timers.test
 share/mysql/test/suite/perfschema/t/ddl_prepared_statements_instances.test
+share/mysql/test/suite/perfschema/t/ddl_processlist.test
 share/mysql/test/suite/perfschema/t/ddl_replication_applier_configuration.test
 share/mysql/test/suite/perfschema/t/ddl_replication_applier_status.test
 share/mysql/test/suite/perfschema/t/ddl_replication_applier_status_by_coordinator.test
@@ -9102,6 +9123,7 @@ share/mysql/test/suite/perfschema/t/dml_mutex_instances.test
 share/mysql/test/suite/perfschema/t/dml_os_global_by_type.test
 share/mysql/test/suite/perfschema/t/dml_performance_timers.test
 share/mysql/test/suite/perfschema/t/dml_prepared_statements_instances.test
+share/mysql/test/suite/perfschema/t/dml_processlist.test
 share/mysql/test/suite/perfschema/t/dml_replication_applier_configuration.test
 share/mysql/test/suite/perfschema/t/dml_replication_applier_status.test
 share/mysql/test/suite/perfschema/t/dml_replication_applier_status_by_coordinator.test
@@ -9242,6 +9264,8 @@ share/mysql/test/suite/perfschema/t/memory_aggregate_no_u_no_h.test
 share/mysql/test/suite/perfschema/t/memory_table_io.test
 share/mysql/test/suite/perfschema/t/merge_table_io.test
 share/mysql/test/suite/perfschema/t/misc.test
+share/mysql/test/suite/perfschema/t/misc_global_status-master.opt
+share/mysql/test/suite/perfschema/t/misc_global_status.test
 share/mysql/test/suite/perfschema/t/multi_table_io.test
 share/mysql/test/suite/perfschema/t/myisam_file_io.opt
 share/mysql/test/suite/perfschema/t/myisam_file_io.test
@@ -9267,6 +9291,17 @@ share/mysql/test/suite/perfschema/t/prepared_statements.test
 share/mysql/test/suite/perfschema/t/prepared_stmts_by_stored_programs.test
 share/mysql/test/suite/perfschema/t/privilege.test
 share/mysql/test/suite/perfschema/t/privilege_table_io.test
+share/mysql/test/suite/perfschema/t/processlist-master.opt
+share/mysql/test/suite/perfschema/t/processlist.test
+share/mysql/test/suite/perfschema/t/processlist_57.test
+share/mysql/test/suite/perfschema/t/processlist_acl-master.opt
+share/mysql/test/suite/perfschema/t/processlist_acl.test
+share/mysql/test/suite/perfschema/t/processlist_anonymous.test
+share/mysql/test/suite/perfschema/t/processlist_no_pfs-master.opt
+share/mysql/test/suite/perfschema/t/processlist_no_pfs.test
+share/mysql/test/suite/perfschema/t/processlist_port-master.opt
+share/mysql/test/suite/perfschema/t/processlist_port.test
+share/mysql/test/suite/perfschema/t/processlist_reg_user.test
 share/mysql/test/suite/perfschema/t/query_cache-master.opt
 share/mysql/test/suite/perfschema/t/query_cache.test
 share/mysql/test/suite/perfschema/t/read_only.test
@@ -9646,6 +9681,7 @@ share/mysql/test/suite/rpl/r/rpl_alter_repository.result
 share/mysql/test/suite/rpl/r/rpl_alter_user.result
 share/mysql/test/suite/rpl/r/rpl_apply_binlog_with_anonymous_gtid_when_gtid_mode_on.result
 share/mysql/test/suite/rpl/r/rpl_apply_binlog_with_gtid_when_gtid_mode_off.result
+share/mysql/test/suite/rpl/r/rpl_apply_binlog_with_same_server_id.result
 share/mysql/test/suite/rpl/r/rpl_auto_increment.result
 share/mysql/test/suite/rpl/r/rpl_auto_increment_11932.result
 share/mysql/test/suite/rpl/r/rpl_auto_increment_bug33029.result
@@ -10321,6 +10357,7 @@ share/mysql/test/suite/rpl/t/rpl_alter_repository.test
 share/mysql/test/suite/rpl/t/rpl_alter_user.test
 share/mysql/test/suite/rpl/t/rpl_apply_binlog_with_anonymous_gtid_when_gtid_mode_on.test
 share/mysql/test/suite/rpl/t/rpl_apply_binlog_with_gtid_when_gtid_mode_off.test
+share/mysql/test/suite/rpl/t/rpl_apply_binlog_with_same_server_id.test
 share/mysql/test/suite/rpl/t/rpl_auto_increment-master.opt
 share/mysql/test/suite/rpl/t/rpl_auto_increment.test
 share/mysql/test/suite/rpl/t/rpl_auto_increment_11932.test
@@ -11854,8 +11891,6 @@ share/mysql/test/suite/sys_vars/r/myisam_max_sort_file_size_basic_32.result
 share/mysql/test/suite/sys_vars/r/myisam_max_sort_file_size_basic_64.result
 share/mysql/test/suite/sys_vars/r/myisam_mmap_size_basic.result
 share/mysql/test/suite/sys_vars/r/myisam_recover_options_basic.result
-share/mysql/test/suite/sys_vars/r/myisam_repair_threads_basic_32.result
-share/mysql/test/suite/sys_vars/r/myisam_repair_threads_basic_64.result
 share/mysql/test/suite/sys_vars/r/myisam_sort_buffer_size_basic_32.result
 share/mysql/test/suite/sys_vars/r/myisam_sort_buffer_size_basic_64.result
 share/mysql/test/suite/sys_vars/r/myisam_stats_method_basic.result
@@ -11934,6 +11969,7 @@ share/mysql/test/suite/sys_vars/r/pfs_max_thread_instances_basic.result
 share/mysql/test/suite/sys_vars/r/pfs_session_connect_attrs_size_basic.result
 share/mysql/test/suite/sys_vars/r/pfs_setup_actors_size_basic.result
 share/mysql/test/suite/sys_vars/r/pfs_setup_objects_size_basic.result
+share/mysql/test/suite/sys_vars/r/pfs_show_processlist_basic.result
 share/mysql/test/suite/sys_vars/r/pfs_users_size_basic.result
 share/mysql/test/suite/sys_vars/r/pid_file_basic.result
 share/mysql/test/suite/sys_vars/r/plugin_dir_basic.result
@@ -12563,8 +12599,6 @@ share/mysql/test/suite/sys_vars/t/myisam_max_sort_file_size_basic_32.test
 share/mysql/test/suite/sys_vars/t/myisam_max_sort_file_size_basic_64.test
 share/mysql/test/suite/sys_vars/t/myisam_mmap_size_basic.test
 share/mysql/test/suite/sys_vars/t/myisam_recover_options_basic.test
-share/mysql/test/suite/sys_vars/t/myisam_repair_threads_basic_32.test
-share/mysql/test/suite/sys_vars/t/myisam_repair_threads_basic_64.test
 share/mysql/test/suite/sys_vars/t/myisam_sort_buffer_size_basic_32.test
 share/mysql/test/suite/sys_vars/t/myisam_sort_buffer_size_basic_64.test
 share/mysql/test/suite/sys_vars/t/myisam_stats_method_basic.test
@@ -12691,6 +12725,7 @@ share/mysql/test/suite/sys_vars/t/pfs_setup_actors_size_basic-master.opt
 share/mysql/test/suite/sys_vars/t/pfs_setup_actors_size_basic.test
 share/mysql/test/suite/sys_vars/t/pfs_setup_objects_size_basic-master.opt
 share/mysql/test/suite/sys_vars/t/pfs_setup_objects_size_basic.test
+share/mysql/test/suite/sys_vars/t/pfs_show_processlist_basic.test
 share/mysql/test/suite/sys_vars/t/pfs_users_size_basic-master.opt
 share/mysql/test/suite/sys_vars/t/pfs_users_size_basic.test
 share/mysql/test/suite/sys_vars/t/pid_file_basic.test
@@ -13823,6 +13858,8 @@ share/mysql/test/t/func_aes.test
 share/mysql/test/t/func_aes_cfb1.test
 share/mysql/test/t/func_aes_cfb128.test
 share/mysql/test/t/func_aes_cfb8.test
+share/mysql/test/t/func_aes_kdf_hkdf.test
+share/mysql/test/t/func_aes_kdf_pbkdf2_hmac.test
 share/mysql/test/t/func_aes_misc.test
 share/mysql/test/t/func_aes_ofb.test
 share/mysql/test/t/func_analyse.test
