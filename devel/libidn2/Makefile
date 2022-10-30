@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2022/10/30 11:17:47 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2022/10/30 11:19:21 adam Exp $
 
 DISTNAME=	libidn2-2.3.4
 CATEGORIES=	devel
@@ -14,13 +14,14 @@ USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	libidn2.pc.in
 INFO_FILES=		yes
+TEST_TARGET=		check
 
 # XXX: Kludge to avoid uncoditionally pick up some gtkdoc-* tools if gtk-doc
 # XXX: package is installed and then fails in the installation phase.
-CONFIGURE_ENV+=		ac_cv_prog_GTKDOC_CHECK= \
-			ac_cv_path_GTKDOC_CHECK_PATH= \
-			ac_cv_path_GTKDOC_REBASE= \
-			ac_cv_path_GTKDOC_MKPDF=
+CONFIGURE_ENV+=	ac_cv_prog_GTKDOC_CHECK=
+CONFIGURE_ENV+=	ac_cv_path_GTKDOC_CHECK_PATH=
+CONFIGURE_ENV+=	ac_cv_path_GTKDOC_REBASE=
+CONFIGURE_ENV+=	ac_cv_path_GTKDOC_MKPDF=
 
 .include "../../mk/bsd.prefs.mk"
 
