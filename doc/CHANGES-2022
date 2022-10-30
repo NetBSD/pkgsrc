@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5256 2022/10/30 11:17:57 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.5257 2022/10/30 11:25:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7965,3 +7965,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated audio/taglib to 1.13 [wiz 2022-10-30]
 	Updated archivers/unrar to 6.2.1 [wiz 2022-10-30]
 	Updated devel/libidn2 to 2.3.4 [wiz 2022-10-30]
+	Updated security/keepassxc to 2.7.4 [wiz 2022-10-30]
