@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5263 2022/10/30 21:13:53 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.5264 2022/10/30 22:02:32 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7973,3 +7973,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/qt5 to 5.15.7 [adam 2022-10-30]
 	Updated textproc/jo to 1.7 [fcambus 2022-10-30]
 	Updated emulators/mame to 0.249 [wiz 2022-10-30]
+	Updated lang/libLLVM to 13.0.1nb2 [triaxx 2022-10-30]
