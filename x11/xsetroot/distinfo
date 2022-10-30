@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 11:34:57 nia Exp $
+$NetBSD: distinfo,v 1.10 2022/10/30 01:05:24 wiz Exp $
 
-BLAKE2s (xsetroot-1.1.2.tar.bz2) = 825758d911ec1e7edd402cc73ada71ba1c56d5113ec906ad166b383cae2f1904
-SHA512 (xsetroot-1.1.2.tar.bz2) = 0b9df1b72305e5c24f1e1664578aa4411a5ffcdc5d318458117594e641f01c34700205b0d16c08abf4a8106d36128ccdbe1ea1f1035fce9018d6b52801a8b72b
-Size (xsetroot-1.1.2.tar.bz2) = 129091 bytes
+BLAKE2s (xsetroot-1.1.3.tar.xz) = 6f12231728aac4d430160915d557cf00f435913c1477645544d25879e4979bcb
+SHA512 (xsetroot-1.1.3.tar.xz) = f333d1bfd92bb943044da36331ae2cf68a811c8f3891719d9ebc1749e2dd0c67068f86face0794c3c4ae584c4dd189bad4998dccb38fe1ac37a8921e5713e7c0
+Size (xsetroot-1.1.3.tar.xz) = 123200 bytes
