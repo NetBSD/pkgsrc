@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:34:26 nia Exp $
+$NetBSD: distinfo,v 1.9 2022/10/30 01:11:02 wiz Exp $
 
-BLAKE2s (rgb-1.0.6.tar.bz2) = f869ac09a5b854f98e12c56729b69d8dba69f6524674ded8d528995a35fc806b
-SHA512 (rgb-1.0.6.tar.bz2) = 92c8885a0e1482065a8b86f7be890859a5eab6b9d57ff219e916cbbd10cd185deec1c5db25dae8c405a343ab0e2ddaba3ddfe0b567d06534405f102e1845654e
-Size (rgb-1.0.6.tar.bz2) = 139225 bytes
+BLAKE2s (rgb-1.1.0.tar.xz) = 9ff1b543166f527325220907de1db2074eb0072b2d52a6de37cbd6badef4a804
+SHA512 (rgb-1.1.0.tar.xz) = 640888d64b2d328fff4a1652ba1299436e348bc3cbc90710d79c635acfa7f2fce0018adb818123b41ca008197ff1cbf87aab60501de36c163bed2d80d8556008
+Size (rgb-1.1.0.tar.xz) = 132824 bytes
