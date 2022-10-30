@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.70 2022/09/28 11:11:28 wiz Exp $
+@comment $NetBSD: PLIST,v 1.71 2022/10/30 21:13:43 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -164,6 +164,7 @@ share/mame/hash/bdesignm_game_cart.xml
 share/mame/hash/bk0010.xml
 share/mame/hash/bkrankp_cart.xml
 share/mame/hash/bml3_flop.xml
+share/mame/hash/bungo_flop.xml
 share/mame/hash/buzztime_cart.xml
 share/mame/hash/bw12.xml
 share/mame/hash/bw14.xml
@@ -230,6 +231,7 @@ share/mame/hash/e01_flop.xml
 share/mame/hash/easy_karaoke_cart.xml
 share/mame/hash/ec1841.xml
 share/mame/hash/einstein.xml
+share/mame/hash/einstein_rom.xml
 share/mame/hash/ekara_japan.xml
 share/mame/hash/ekara_japan_a.xml
 share/mame/hash/ekara_japan_ac.xml
@@ -442,6 +444,7 @@ share/mame/hash/msxr_flop.xml
 share/mame/hash/mt65_cass.xml
 share/mame/hash/mt65_rom.xml
 share/mame/hash/mt65_snap.xml
+share/mame/hash/mtu130_flop.xml
 share/mame/hash/mtx_cart.xml
 share/mame/hash/mtx_cass.xml
 share/mame/hash/mtx_flop.xml
@@ -575,6 +578,7 @@ share/mame/hash/roland_tnsc1.xml
 share/mame/hash/rwtrntcs.xml
 share/mame/hash/rx78_cart.xml
 share/mame/hash/rx78_cass.xml
+share/mame/hash/rz1_cass.xml
 share/mame/hash/sagafox.xml
 share/mame/hash/sage2.xml
 share/mame/hash/saitek_egr.xml
