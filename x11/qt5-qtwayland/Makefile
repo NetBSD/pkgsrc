@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2022/09/13 17:18:07 adam Exp $
+# $NetBSD: Makefile,v 1.23 2022/10/30 13:38:31 adam Exp $
 
 DISTNAME=	qtwayland-everywhere-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtwayland-${QTVERSION}
@@ -28,7 +28,7 @@ do-configure:
 	    QMAKE_WAYLAND_SCANNER=${PREFIX}/bin/wayland-scanner
 
 post-install:
-.for i in Qt5Wayland.pc
+.for i in Qt5WaylandClient.pc Qt5WaylandCompositor.pc
 	cd ${DESTDIR}${PREFIX}/lib/pkgconfig && \
 	${LN} -f -s ${QTPREFIX}/lib/pkgconfig/${i} ${i}
 .endfor

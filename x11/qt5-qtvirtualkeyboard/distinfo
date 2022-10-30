@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2022/09/13 17:18:07 adam Exp $
+$NetBSD: distinfo,v 1.16 2022/10/30 13:38:31 adam Exp $
 
-BLAKE2s (qtvirtualkeyboard-everywhere-opensource-src-5.15.6.tar.xz) = 771234696abc3d5f0d50554ed0b3f34bfa798b293d634bca7583c04e3d0869c0
-SHA512 (qtvirtualkeyboard-everywhere-opensource-src-5.15.6.tar.xz) = e0aed691a381067c9a5d7f76bdafc15c6df4b5f04f86b09f0dc6d4fced4181dcc676792efd2718bc530d3c50759b0d2666261a9cf6bc522ff75907e2bb717de6
-Size (qtvirtualkeyboard-everywhere-opensource-src-5.15.6.tar.xz) = 10958608 bytes
+BLAKE2s (qtvirtualkeyboard-everywhere-opensource-src-5.15.7.tar.xz) = 0cb2b3421ee1abe07c2aca7a8ac3422b352d8e0ce3a9616b519e894f6cb0e996
+SHA512 (qtvirtualkeyboard-everywhere-opensource-src-5.15.7.tar.xz) = c9dba2ea41850693217617b881e6ff85765e328cf37bf020012f4852c768266713961376706722385cbb39167be62df34f7531c189d9638d9024c9865fd339a1
+Size (qtvirtualkeyboard-everywhere-opensource-src-5.15.7.tar.xz) = 10965436 bytes

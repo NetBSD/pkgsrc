@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.9 2022/09/13 17:18:07 adam Exp $
+$NetBSD: distinfo,v 1.10 2022/10/30 13:38:31 adam Exp $
 
-BLAKE2s (qtwebengine-everywhere-opensource-src-5.15.6.tar.xz) = e8ad183cbd52fa72c09bd890fea6ea9e7e57f3fd20a03351142a89be7424b815
-SHA512 (qtwebengine-everywhere-opensource-src-5.15.6.tar.xz) = 775d44612a81314c914bf03e8d368d6426516cdd9ce15e50513b346a85f94da603a5c65343d3ed6aecd442ac38a2273f38deae161916cd0c008e473b2606962b
-Size (qtwebengine-everywhere-opensource-src-5.15.6.tar.xz) = 316414680 bytes
+BLAKE2s (qtwebengine-everywhere-opensource-src-5.15.7.tar.xz) = c735f6e1de279418a2817ec2651502e28092a39139e06a8d3a9bc2f481b43f4f
+SHA512 (qtwebengine-everywhere-opensource-src-5.15.7.tar.xz) = 26174a9986411ea0cb2d6a919f5163db2cf0ff4ad1bf66f4498ef0eda1f9d8eea112d145f8273c666338a963d66cfbf1e06d2c2752254ef1669f3f76cd68d696
+Size (qtwebengine-everywhere-opensource-src-5.15.7.tar.xz) = 316353404 bytes
 SHA1 (patch-mkspecs_features_functions.prf) = e9c7a9c348cc7b9d09232f4b03f0a8282e9bfeb5
 SHA1 (patch-src_3rdparty_chromium_BUILD.gn) = 97fbda3bd2dc44d4ae97b650240e61516cd108f4
 SHA1 (patch-src_3rdparty_chromium_base_BUILD.gn) = 839b97c34e0aaf1309c89af6c9f8e65ebf77a7e5
@@ -203,7 +203,6 @@ SHA1 (patch-src_3rdparty_chromium_components_network__session__configurator_brow
 SHA1 (patch-src_3rdparty_chromium_components_new__or__sad__tab__strings.grdp) = fd47b825867131aa042ae3ba1846c687ea2a0644
 SHA1 (patch-src_3rdparty_chromium_components_os__crypt_os__crypt.h) = 3e4a0aecd97626d429f469991e6b7bd7f549c885
 SHA1 (patch-src_3rdparty_chromium_components_os__crypt_os__crypt__unittest.cc) = 3c4eb1550adb52766b71ef67d19c4050ce51f582
-SHA1 (patch-src_3rdparty_chromium_components_paint__preview_common_subset__font.cc) = e3fa15ad8c83767a6bbac83ef4b89d4f5b02c907
 SHA1 (patch-src_3rdparty_chromium_components_password__manager_core_browser_BUILD.gn) = fc43902c23a5d276b5053c4fab89477bd0fa1a6c
 SHA1 (patch-src_3rdparty_chromium_components_plugins_renderer_plugin__placeholder.cc) = 92deb07d4b85b4ab2f6d9839db57bcda4053b5aa
 SHA1 (patch-src_3rdparty_chromium_components_policy_BUILD.gn) = 2a9179f10c5945591178a9abd4325372eaa753df
@@ -626,7 +625,6 @@ SHA1 (patch-src_3rdparty_chromium_third__party_skia_gn_BUILD.gn) = 593e083622d3c
 SHA1 (patch-src_3rdparty_chromium_third__party_skia_gn_skia.gni) = d2f7b297fc024ba2c73202fd23c6850ee7a0ef2f
 SHA1 (patch-src_3rdparty_chromium_third__party_skia_src_gpu_GrAutoLocaleSetter.h) = 07b8943dd6969c59dc936db2ea0ed4d7a81787f6
 SHA1 (patch-src_3rdparty_chromium_third__party_skia_src_images_SkJpegEncoder.cpp) = c1f590501fc2ff89f9fbb347770acdf9c3beca69
-SHA1 (patch-src_3rdparty_chromium_third__party_skia_src_pdf_SkPDFSubsetFont.cpp) = ff3f17bd67467b2e18df11f4705a957a09003513
 SHA1 (patch-src_3rdparty_chromium_third__party_skia_src_sksl_SkSLString.h) = 0b2053d7a0318c8803ced24f147589520332162a
 SHA1 (patch-src_3rdparty_chromium_third__party_skia_third__party_libsdl_BUILD.gn) = dc002986a85b324fa3e02abe9b44896e9d58523c
 SHA1 (patch-src_3rdparty_chromium_third__party_skia_third__party_opencl_BUILD.gn) = 3dfc37d46ff77acc784ebbe01906b88c69be5c6f
