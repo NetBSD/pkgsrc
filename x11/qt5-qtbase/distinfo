@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.72 2022/09/13 17:18:04 adam Exp $
+$NetBSD: distinfo,v 1.73 2022/10/30 13:38:28 adam Exp $
 
-BLAKE2s (qtbase-everywhere-opensource-src-5.15.6.tar.xz) = e58034b488c14ca460fa50b48017c9705506a4ada7e0019f2abd41e40a44faf5
-SHA512 (qtbase-everywhere-opensource-src-5.15.6.tar.xz) = 4fc6973b9250cd78c4797ed9bb58bec949243cc5e8c3a546b5fbe8c6e6480d5e0745d273fac812f9f5f1fcd675cd8b867d47f57563bf6d23118b58032550103f
-Size (qtbase-everywhere-opensource-src-5.15.6.tar.xz) = 50240276 bytes
+BLAKE2s (qtbase-everywhere-opensource-src-5.15.7.tar.xz) = 2b34f72c042ca14090918b9da77a513629594a5c91848722e7e8c23237045cff
+SHA512 (qtbase-everywhere-opensource-src-5.15.7.tar.xz) = 316de71fba1d5dd91354155dcd0f77e1ce2a798f8296a8699a795ea5e86ad10b6e233299775a92e23328290f3e041240585947e89ee7bd39eb464c5f0ffec343
+Size (qtbase-everywhere-opensource-src-5.15.7.tar.xz) = 50260196 bytes
 SHA1 (patch-configure) = f5019131cc4e6cd4e35242cc7b598fbf8f5f766b
 SHA1 (patch-mkspecs_common_gcc-base.conf) = 7b461079adff516ac3957d0cdb127dee67dab7ce
 SHA1 (patch-mkspecs_features_qt__module.prf) = a04c4b1fe80250b6b3591f5486ac0fd3b5056c26
