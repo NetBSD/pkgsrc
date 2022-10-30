@@ -1,0 +1,14 @@
+$NetBSD: patch-config_get__fltk,v 1.1 2022/10/30 10:00:15 nros Exp $
+
+* don't explicitly link to GNU c++ standard library
+
+--- config/get_fltk.orig	2022-10-29 22:06:46.208370815 +0000
++++ config/get_fltk
+@@ -12,7 +12,6 @@ cmd="$cxx $CFLAGS $FLTK_LIBS -o $exe has
+ . log_cmd
+ if test -r "$exe"; then
+   echo "Using FLTK library"
+-  FLTK_LIBS="$FLTK_LIBS -lstdc++"
+ else
+   echo "### FLTK not found. Building without FLTK support"
+   FLTK_LIBS=

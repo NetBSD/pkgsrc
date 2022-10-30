@@ -1,11 +1,12 @@
-@comment $NetBSD: PLIST,v 1.12 2018/01/01 22:29:43 rillig Exp $
-bin/gp-2.7
+@comment $NetBSD: PLIST,v 1.13 2022/10/30 10:00:15 nros Exp $
+bin/gp-2.15
 include/pari/genpari.h
 include/pari/mpinl.h
 include/pari/pari.h
 include/pari/paricast.h
 include/pari/paricfg.h
 include/pari/paricom.h
+include/pari/paridbglvl.h
 include/pari/paridecl.h
 include/pari/parierr.h
 include/pari/parigen.h
@@ -20,22 +21,29 @@ include/pari/paritune.h
 ${PLIST.gmp}lib/libpari-gmp.la
 ${PLIST.nogmp}lib/libpari.la
 lib/pari/pari.cfg
-man/man1/gp-2.7.1
+man/man1/gp-2.15.1
 man/man1/gp.1
 man/man1/pari.1
 share/pari/PARI/822.pm
-${PLIST.doc}share/pari/doc/appa.tex
+${PLIST.doc}share/pari/doc/INSTALL.pdf
 ${PLIST.doc}share/pari/doc/appb.tex
 ${PLIST.doc}share/pari/doc/appd.tex
 ${PLIST.doc}share/pari/doc/develop.pdf
 ${PLIST.doc}share/pari/doc/develop.tex
 ${PLIST.doc}share/pari/doc/libpari.pdf
+${PLIST.doc}share/pari/doc/parallel.pdf
 ${PLIST.doc}share/pari/doc/paricfg.tex
 ${PLIST.doc}share/pari/doc/parimacro.tex
 ${PLIST.doc}share/pari/doc/pdfmacs.tex
+${PLIST.doc}share/pari/doc/refcard-ell.pdf
+${PLIST.doc}share/pari/doc/refcard-lfun.pdf
+${PLIST.doc}share/pari/doc/refcard-mf.pdf
+${PLIST.doc}share/pari/doc/refcard-nf.pdf
 ${PLIST.doc}share/pari/doc/refcard.pdf
 ${PLIST.doc}share/pari/doc/refcard.tex
 ${PLIST.doc}share/pari/doc/translations
+${PLIST.doc}share/pari/doc/tutorial-mf.pdf
+${PLIST.doc}share/pari/doc/tutorial-mf.tex
 ${PLIST.doc}share/pari/doc/tutorial.pdf
 ${PLIST.doc}share/pari/doc/tutorial.tex
 ${PLIST.doc}share/pari/doc/users.pdf
@@ -45,6 +53,9 @@ ${PLIST.doc}share/pari/doc/usersch2.tex
 ${PLIST.doc}share/pari/doc/usersch3.tex
 ${PLIST.doc}share/pari/doc/usersch4.tex
 ${PLIST.doc}share/pari/doc/usersch5.tex
+${PLIST.doc}share/pari/doc/usersch6.tex
+${PLIST.doc}share/pari/doc/usersch7.tex
+${PLIST.doc}share/pari/doc/usersch8.tex
 share/pari/examples/EXPLAIN
 share/pari/examples/Inputrc
 share/pari/examples/Makefile
