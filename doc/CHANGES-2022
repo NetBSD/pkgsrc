@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5253 2022/10/30 10:37:34 alnsn Exp $
+$NetBSD: CHANGES-2022,v 1.5254 2022/10/30 11:15:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7962,3 +7962,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated math/pari to 2.15.0 [nros 2022-10-30]
 	Updated lang/php81 to 8.1.12 [taca 2022-10-30]
 	Updated lang/php80 to 8.0.25 [taca 2022-10-30]
+	Updated audio/taglib to 1.13 [wiz 2022-10-30]
