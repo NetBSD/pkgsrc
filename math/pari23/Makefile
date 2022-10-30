@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2022/06/28 11:34:44 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2022/10/30 11:41:46 nros Exp $
 
 DISTNAME=	pari-2.3.5
 PKGREVISION=	27
 CATEGORIES=	math
-MASTER_SITES=	http://pari.math.u-bordeaux.fr/pub/pari/unix/
+MASTER_SITES=	http://pari.math.u-bordeaux.fr/pub/pari/OLD/2.3/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pari.math.u-bordeaux.fr/
