@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.28 2022/04/10 08:53:15 nia Exp $
+# $NetBSD: Makefile,v 1.29 2022/10/30 01:06:46 wiz Exp $
 
-DISTNAME=		libXext-1.3.4
+DISTNAME=		libXext-1.3.5
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
-EXTRACT_SUFX=		.tar.bz2
+EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/
 COMMENT=		X Extension library
+
+TOOL_DEPENDS+=		tradcpp-[0-9]*:../../devel/tradcpp
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
@@ -15,11 +17,6 @@ USE_TOOLS+=		pkg-config
 
 PKGCONFIG_OVERRIDE+=	xext.pc.in
 
-CONFIGURE_ARGS.NetBSD+=	--disable-malloc0returnsnull
-
-.include "../../mk/compiler.mk"
-
-TOOL_DEPENDS+=		tradcpp-[0-9]*:../../devel/tradcpp
 CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${PREFIX}/bin/tradcpp -Uunix"
 
 .include "../../meta-pkgs/modular-xorg/hacks.mk"
