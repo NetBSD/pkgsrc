@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2022/07/10 19:13:22 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2022/10/30 08:28:34 wiz Exp $
 
 DISTNAME=		mpc-0.34
+PKGREVISION=		1
 CATEGORIES=		audio
 MASTER_SITES=		https://www.musicpd.org/download/mpc/0/
 EXTRACT_SUFX=		.tar.xz
@@ -10,7 +11,7 @@ HOMEPAGE=		https://musicpd.org/
 COMMENT=		Command-line client for musicpd
 LICENSE=		gnu-gpl-v2
 
-TOOL_DEPENDS+=		${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
+TOOL_DEPENDS+=		${PYPKGPREFIX}-sphinx>=5.3.0:../../textproc/py-sphinx
 # added as of 0.34. not sure why, but meson complains if it's missing
 TOOL_DEPENDS+=		rsync-[0-9]*:../../net/rsync
 
