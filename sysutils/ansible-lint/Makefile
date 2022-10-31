@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2022/10/14 11:29:51 adam Exp $
+# $NetBSD: Makefile,v 1.16 2022/10/31 12:58:07 adam Exp $
 
-DISTNAME=	ansible-lint-6.8.2
+DISTNAME=	ansible-lint-6.8.4
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/ansible-lint/}
 
@@ -14,7 +14,6 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	ansible-core>=2.12.0:../../sysutils/ansible-core
 DEPENDS+=	${PYPKGPREFIX}-ansible-compat>=2.2.1:../../sysutils/py-ansible-compat
 DEPENDS+=	${PYPKGPREFIX}-black>=22.1.0:../../textproc/py-black
-DEPENDS+=	${PYPKGPREFIX}-enrich>=1.2.6:../../comms/py-enrich
 DEPENDS+=	${PYPKGPREFIX}-filelock-[0-9]*:../../devel/py-filelock
 DEPENDS+=	${PYPKGPREFIX}-jsonschema>=4.9.0:../../textproc/py-jsonschema
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
