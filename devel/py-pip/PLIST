@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2022/08/10 09:17:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.36 2022/10/31 17:17:19 adam Exp $
 bin/pip${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -793,6 +793,9 @@ ${PYSITELIB}/pip/_vendor/packaging/version.pyo
 ${PYSITELIB}/pip/_vendor/pep517/__init__.py
 ${PYSITELIB}/pip/_vendor/pep517/__init__.pyc
 ${PYSITELIB}/pip/_vendor/pep517/__init__.pyo
+${PYSITELIB}/pip/_vendor/pep517/_compat.py
+${PYSITELIB}/pip/_vendor/pep517/_compat.pyc
+${PYSITELIB}/pip/_vendor/pep517/_compat.pyo
 ${PYSITELIB}/pip/_vendor/pep517/build.py
 ${PYSITELIB}/pip/_vendor/pep517/build.pyc
 ${PYSITELIB}/pip/_vendor/pep517/build.pyo
@@ -802,9 +805,6 @@ ${PYSITELIB}/pip/_vendor/pep517/check.pyo
 ${PYSITELIB}/pip/_vendor/pep517/colorlog.py
 ${PYSITELIB}/pip/_vendor/pep517/colorlog.pyc
 ${PYSITELIB}/pip/_vendor/pep517/colorlog.pyo
-${PYSITELIB}/pip/_vendor/pep517/compat.py
-${PYSITELIB}/pip/_vendor/pep517/compat.pyc
-${PYSITELIB}/pip/_vendor/pep517/compat.pyo
 ${PYSITELIB}/pip/_vendor/pep517/dirtools.py
 ${PYSITELIB}/pip/_vendor/pep517/dirtools.pyc
 ${PYSITELIB}/pip/_vendor/pep517/dirtools.pyo
