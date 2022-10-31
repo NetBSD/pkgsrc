@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2022/03/06 17:18:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2022/10/31 17:14:47 adam Exp $
 bin/ipython-${PYVERSSUFFIX}
 bin/ipython3-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -655,6 +655,9 @@ ${PYSITELIB}/IPython/utils/decorators.pyo
 ${PYSITELIB}/IPython/utils/dir2.py
 ${PYSITELIB}/IPython/utils/dir2.pyc
 ${PYSITELIB}/IPython/utils/dir2.pyo
+${PYSITELIB}/IPython/utils/docs.py
+${PYSITELIB}/IPython/utils/docs.pyc
+${PYSITELIB}/IPython/utils/docs.pyo
 ${PYSITELIB}/IPython/utils/encoding.py
 ${PYSITELIB}/IPython/utils/encoding.pyc
 ${PYSITELIB}/IPython/utils/encoding.pyo
