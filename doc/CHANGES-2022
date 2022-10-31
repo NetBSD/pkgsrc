@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5281 2022/10/31 15:41:11 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5282 2022/10/31 17:17:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8002,3 +8002,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-utils to 3.4.5 [adam 2022-10-31]
 	Updated devel/py-progressbar2 to 4.2.0 [adam 2022-10-31]
 	Updated graphics/py-graphviz to 0.20.1 [adam 2022-10-31]
+	Updated lang/py-executing to 1.2.0 [adam 2022-10-31]
+	Updated sysutils/py-stack-data to 0.6.0 [adam 2022-10-31]
+	Updated devel/py-ipython to 8.6.0 [adam 2022-10-31]
+	Updated devel/py-pip to 22.3 [adam 2022-10-31]
