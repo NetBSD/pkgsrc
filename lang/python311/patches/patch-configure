@@ -1,0 +1,81 @@
+$NetBSD: patch-configure,v 1.1 2022/10/31 09:50:40 adam Exp $
+
+Fix linking on Darwin; don't use -stack_size.
+Changes for consistency across pkgsrc platforms.
+Simplify _sysconfigdata to include only platform name.
+detect netcan/can.h on NetBSD
+Disable barrier to cross-compilation.
+
+--- configure.orig	2022-10-24 17:35:39.000000000 +0000
++++ configure
+@@ -3862,7 +3862,7 @@ fi
+ $as_echo "\"$MACHDEP\"" >&6; }
+ 
+ 
+-if test "$cross_compiling" = yes; then
++if false && test "$cross_compiling" = yes; then
+ 	case "$host" in
+ 	*-*-linux*)
+ 		case "$host_cpu" in
+@@ -8066,7 +8066,7 @@ UNIVERSAL_ARCH_FLAGS=
+ # tweak BASECFLAGS based on compiler and platform
+ case $GCC in
+ yes)
+-    CFLAGS_NODIST="$CFLAGS_NODIST -std=c11"
++    CFLAGS_NODIST="$CFLAGS_NODIST -std=gnu11"
+ 
+ 
+ 
+@@ -9564,6 +9564,17 @@ if test "x$ac_cv_type___uint128_t" = xye
+ $as_echo "#define HAVE_GCC_UINT128_T 1" >>confdefs.h
+ 
+ fi
++ac_fn_c_check_header_compile "$LINENO" "netcan/can.h" "ac_cv_header_netcan_can_h" "
++#ifdef HAVE_SYS_SOCKET_H
++#include <sys/socket.h>
++#endif
++
++"
++if test "x$ac_cv_header_netcan_can_h" = xyes
++then :
++  printf "%s\n" "#define HAVE_NETCAN_CAN_H 1" >>confdefs.h
++
++fi
+ 
+ 
+ # Sizes and alignments of various common basic types
+@@ -19684,10 +19695,10 @@ _ACEOF
+ if ac_fn_c_try_compile "$LINENO"; then :
+ 
+ 
+-if grep noonsees conftest.$ac_objext >/dev/null ; then
++if strings -a conftest.$ac_objext | grep noonsees >/dev/null ; then
+   ax_cv_c_float_words_bigendian=yes
+ fi
+-if grep seesnoon conftest.$ac_objext >/dev/null ; then
++if strings -a conftest.$ac_objext | grep seesnoon >/dev/null ; then
+   if test "$ax_cv_c_float_words_bigendian" = unknown; then
+     ax_cv_c_float_words_bigendian=no
+   else
+@@ -20535,7 +20546,7 @@ _ACEOF
+ fi
+ 
+ 
+-EXT_SUFFIX=.${SOABI}${SHLIB_SUFFIX}
++EXT_SUFFIX=${SHLIB_SUFFIX}
+ 
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking LDVERSION" >&5
+ $as_echo_n "checking LDVERSION... " >&6; }
+@@ -20588,11 +20599,7 @@ fi
+ 
+ 
+ 
+-if test x$PLATFORM_TRIPLET = x; then
+-  LIBPL='$(prefix)'"/${PLATLIBDIR}/python${VERSION}/config-${LDVERSION}"
+-else
+-  LIBPL='$(prefix)'"/${PLATLIBDIR}/python${VERSION}/config-${LDVERSION}-${PLATFORM_TRIPLET}"
+-fi
++LIBPL='$(prefix)'"/${PLATLIBDIR}/python${VERSION}/config-${LDVERSION}"
+ 
+ 
+ # Check for --with-wheel-pkg-dir=PATH
