@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2021/12/17 10:29:09 micha Exp $
+# $NetBSD: Makefile,v 1.16 2022/10/31 11:01:05 micha Exp $
 
-DISTNAME=	utf8proc-2.7.0
+DISTNAME=	utf8proc-2.8.0
 CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_GITHUB:=JuliaLang/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -17,7 +17,7 @@ INSTALLATION_DIRS=	include lib lib/pkgconfig
 
 # Use ABI version from CMakeLists.txt to stay compatible with cmake builds
 MAJOR=	2
-MINOR=	5
+MINOR=	6
 PATCH=	0
 
 do-configure:
