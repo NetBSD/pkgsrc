@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5279 2022/10/31 13:45:55 micha Exp $
+$NetBSD: CHANGES-2022,v 1.5280 2022/10/31 14:01:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7996,3 +7996,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed sysutils/manifold [adam 2022-10-31]
 	Updated devel/smake to 1.6nb3 [micha 2022-10-31]
 	Updated archivers/star to 1.6.2nb1 [micha 2022-10-31]
+	Updated devel/py-distro to 1.8.0 [adam 2022-10-31]
+	Updated devel/py-pyrsistent to 0.19.1 [adam 2022-10-31]
