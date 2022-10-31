@@ -1,1 +1,1 @@
-bin/py2applet @PREFIX@/bin/py2applet@PYVERSSUFFIX@
+bin/py2applet @PREFIX@/bin/py2applet-@PYVERSSUFFIX@
