@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5272 2022/10/31 10:27:05 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5273 2022/10/31 10:56:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7984,3 +7984,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Added lang/py311-html-docs version 3.11.0 [adam 2022-10-31]
 	Updated graphics/libimagequant to 2.17.0 [adam 2022-10-31]
 	Updated graphics/py-Pillow to 9.3.0 [adam 2022-10-31]
+	Updated devel/py-google-api-core to 2.10.2 [adam 2022-10-31]
+	Updated security/py-google-auth-oauthlib to 0.7.0 [adam 2022-10-31]
+	Updated www/py-httplib2 to 0.21.0 [adam 2022-10-31]
+	Updated www/py-google-api-python-client to 2.65.0 [adam 2022-10-31]
