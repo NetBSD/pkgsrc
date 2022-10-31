@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2022/03/13 15:22:32 tnn Exp $
+# $NetBSD: options.mk,v 1.6 2022/10/31 14:54:38 triaxx Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libLLVM
 
@@ -8,7 +8,9 @@ LLVM_TARGETS=	AArch64 AMDGPU ARM AVR BPF Hexagon Lanai Mips MSP430 NVPTX PowerPC
 PLIST_VARS+=			${tgt}
 PKG_SUPPORTED_OPTIONS+=		llvm-target-${tgt:tl}
 .endfor
+.if ${OPSYS} != "FreeBSD"
 PKG_SUPPORTED_OPTIONS+=		terminfo
+.endif
 
 # Terminfo is used for colour output, only enable it by default if terminfo
 # is builtin to avoid unnecessary dependencies which could cause bootstrap
@@ -16,7 +18,7 @@ PKG_SUPPORTED_OPTIONS+=		terminfo
 CHECK_BUILTIN.terminfo:=	yes
 .include "../../mk/terminfo.builtin.mk"
 CHECK_BUILTIN.terminfo:=	no
-.if !empty(USE_BUILTIN.terminfo:M[yY][eE][sS])
+.if !empty(USE_BUILTIN.terminfo:M[yY][eE][sS]) && ${OPSYS} != "FreeBSD"
 PKG_SUGGESTED_OPTIONS+=		terminfo
 .endif
 
