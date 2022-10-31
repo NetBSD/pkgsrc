@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2022/06/30 11:18:32 nia Exp $
+# $NetBSD: Makefile,v 1.19 2022/10/31 23:19:47 jperkin Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
@@ -16,7 +16,7 @@ LICENSE=	modified-bsd
 
 MKPIE_SUPPORTED=	no
 
-UNLIMIT_RESOURCES=	datasize virtualsize
+UNLIMIT_RESOURCES=	cputime datasize virtualsize
 
 # GHC requires GHC to build itself. Formerly we could work around this
 # bootstrapping problem by creating a special archive containing C
