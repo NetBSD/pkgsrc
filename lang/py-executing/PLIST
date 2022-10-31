@@ -1,15 +1,23 @@
-@comment $NetBSD: PLIST,v 1.1 2022/01/23 19:25:43 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/10/31 17:12:39 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/executing/__init__.py
 ${PYSITELIB}/executing/__init__.pyc
 ${PYSITELIB}/executing/__init__.pyo
+${PYSITELIB}/executing/_exceptions.py
+${PYSITELIB}/executing/_exceptions.pyc
+${PYSITELIB}/executing/_exceptions.pyo
+${PYSITELIB}/executing/_position_node_finder.py
+${PYSITELIB}/executing/_position_node_finder.pyc
+${PYSITELIB}/executing/_position_node_finder.pyo
 ${PYSITELIB}/executing/executing.py
 ${PYSITELIB}/executing/executing.pyc
 ${PYSITELIB}/executing/executing.pyo
+${PYSITELIB}/executing/py.typed
 ${PYSITELIB}/executing/version.py
 ${PYSITELIB}/executing/version.pyc
 ${PYSITELIB}/executing/version.pyo
