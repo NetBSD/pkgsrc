@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2022/06/30 11:18:33 nia Exp $
+# $NetBSD: Makefile,v 1.22 2022/10/31 23:19:47 jperkin Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
@@ -14,7 +14,7 @@ HOMEPAGE=	https://www.haskell.org/ghc/
 COMMENT=	Compiler for the functional language Haskell - 9.0 Release Series
 LICENSE=	modified-bsd
 
-UNLIMIT_RESOURCES=	datasize virtualsize
+UNLIMIT_RESOURCES=	cputime datasize virtualsize
 
 # GHC requires GHC to build itself. We have to prepare stripped-down
 # binaries sufficient to bootstrap compilers for each platform. If
