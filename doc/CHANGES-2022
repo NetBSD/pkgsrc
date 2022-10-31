@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5275 2022/10/31 12:16:59 micha Exp $
+$NetBSD: CHANGES-2022,v 1.5276 2022/10/31 12:35:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7990,3 +7990,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/py-google-api-python-client to 2.65.0 [adam 2022-10-31]
 	Updated converters/utf8proc to 2.8.0 [micha 2022-10-31]
 	Updated games/woof to 10.4.0 [micha 2022-10-31]
+	Updated devel/py-test-xdist to 3.0.2 [adam 2022-10-31]
+	Updated lang/py-pygls to 0.12.4 [adam 2022-10-31]
