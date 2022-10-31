@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2022/10/11 13:21:43 adam Exp $
+# $NetBSD: Makefile,v 1.7 2022/10/31 17:13:39 adam Exp $
 
-DISTNAME=	stack_data-0.5.1
+DISTNAME=	stack_data-0.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/stack-data/}
@@ -11,13 +11,14 @@ COMMENT=	Extract data from Python stack frames and tracebacks
 LICENSE=	mit
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
-DEPENDS+=	${PYPKGPREFIX}-asttokens>0:../../lang/py-asttokens
-DEPENDS+=	${PYPKGPREFIX}-executing>0:../../lang/py-executing
-DEPENDS+=	${PYPKGPREFIX}-pure-eval>0:../../lang/py-pure-eval
-TEST_DEPENDS+=	${PYPKGPREFIX}-littleutils>0:../../devel/py-littleutils
-TEST_DEPENDS+=	${PYPKGPREFIX}-pygments>0:../../textproc/py-pygments
-TEST_DEPENDS+=	${PYPKGPREFIX}-test>0:../../devel/py-test
-TEST_DEPENDS+=	${PYPKGPREFIX}-typeguard>0:../../devel/py-typeguard
+DEPENDS+=	${PYPKGPREFIX}-asttokens>=2.1.0:../../lang/py-asttokens
+DEPENDS+=	${PYPKGPREFIX}-executing>=1.2.0:../../lang/py-executing
+DEPENDS+=	${PYPKGPREFIX}-pure-eval-[0-9]*:../../lang/py-pure-eval
+TEST_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
+TEST_DEPENDS+=	${PYPKGPREFIX}-littleutils-[0-9]*:../../devel/py-littleutils
+TEST_DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-typeguard-[0-9]*:../../devel/py-typeguard
 
 USE_LANGUAGES=	# none
 
