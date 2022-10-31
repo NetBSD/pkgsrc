@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:23:10 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/10/31 21:49:13 adam Exp $
 
-BLAKE2s (pyaml-18.11.0.tar.gz) = 5c2d8fbc6d9b4370c6db16154b30693c9d81700751e2bf8df2d4af9d63325cc7
-SHA512 (pyaml-18.11.0.tar.gz) = 4b052fd7bccfb1259833238a823048e230bc4a637312f06df3ab01dd9fde2983a87636600aa2cf4b92ee2ff119a6212b17ae6718a9078d915bcaed2f127257f9
-Size (pyaml-18.11.0.tar.gz) = 15922 bytes
+BLAKE2s (pyaml-21.10.1.tar.gz) = 65e6f33e8f019415abfa9f3b1346a53cbad51ec71dabbe94554a1e7ab4285aff
+SHA512 (pyaml-21.10.1.tar.gz) = 3a98a021856446584f079bfb7427c63feaf6fdd1bd0d809d46aa0c646b2cb9533c393ed0167240be587aad7b94209b6e5bfe2c09918b45ec9a86ad9781bdf9f2
+Size (pyaml-21.10.1.tar.gz) = 20466 bytes
