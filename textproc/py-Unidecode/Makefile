@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2022/01/05 15:41:23 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2022/10/31 21:58:01 adam Exp $
 
-DISTNAME=	Unidecode-1.2.0
+DISTNAME=	Unidecode-1.3.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=U/Unidecode/}
 
@@ -14,6 +13,8 @@ LICENSE=	gnu-gpl-v2
 USE_LANGUAGES=	# none
 
 USE_PKG_RESOURCES=	yes
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
