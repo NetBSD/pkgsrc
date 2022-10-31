@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5266 2022/10/31 01:58:00 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.5267 2022/10/31 03:23:28 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7976,3 +7976,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/libLLVM to 13.0.1nb2 [triaxx 2022-10-30]
 	Updated devel/p5-Test-BDD-Cucumber to 0.83 [schmonz 2022-10-31]
 	Updated lang/mujs to 1.3.0 [wiz 2022-10-31]
+	Updated time/p5-DateTime-TimeZone to 2.55 [gutteridge 2022-10-31]
