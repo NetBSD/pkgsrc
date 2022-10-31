@@ -1,11 +1,11 @@
-$NetBSD: patch-Makefile,v 1.1 2022/08/30 12:47:02 nia Exp $
+$NetBSD: patch-Makefile,v 1.2 2022/10/31 01:57:44 wiz Exp $
 
 - Don't invoke git.
 - Honor user's CFLAGS/LDFLAGS.
 - libtoolize shared object creation.
 - The PHONY target is removed to allow PKGCONFIG_OVERRIDE to work.
 
---- Makefile.orig	2021-12-08 11:56:12.000000000 +0000
+--- Makefile.orig	2022-10-11 16:18:55.000000000 +0000
 +++ Makefile
 @@ -9,21 +9,11 @@ bindir ?= $(prefix)/bin
  incdir ?= $(prefix)/include
@@ -89,9 +89,9 @@ $NetBSD: patch-Makefile,v 1.1 2022/08/30 12:47:02 nia Exp $
  
 -.PHONY: $(OUT)/mujs.pc
  $(OUT)/mujs.pc:
+ 	@ mkdir -p $(dir $@)
  	@ echo Creating $@
- 	@ echo > $@ Name: mujs
-@@ -118,13 +97,13 @@ install-common: $(OUT)/mujs $(OUT)/mujs.
+@@ -119,13 +98,13 @@ install-common: $(OUT)/mujs $(OUT)/mujs.
  	install -d $(DESTDIR)$(bindir)
  	install -m 644 mujs.h $(DESTDIR)$(incdir)
  	install -m 644 $(OUT)/mujs.pc $(DESTDIR)$(libdir)/pkgconfig

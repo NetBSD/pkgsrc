@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2022/08/30 12:47:02 nia Exp $
+# $NetBSD: Makefile,v 1.2 2022/10/31 01:57:44 wiz Exp $
 
-DISTNAME=	mujs-1.2.0
+DISTNAME=	mujs-1.3.0
 CATEGORIES=	lang
 MASTER_SITES=	https://mujs.com/downloads/
 
