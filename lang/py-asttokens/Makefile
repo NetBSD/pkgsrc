@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2022/08/23 10:34:48 adam Exp $
+# $NetBSD: Makefile,v 1.20 2022/10/31 08:24:33 adam Exp $
 
-DISTNAME=	asttokens-2.0.8
+DISTNAME=	asttokens-2.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/asttokens/}
