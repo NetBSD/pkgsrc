@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2022/10/30 22:02:11 triaxx Exp $
+# $NetBSD: Makefile,v 1.42 2022/10/31 14:54:38 triaxx Exp $
 
 DISTNAME=	llvm-13.0.1.src
 PKGNAME=	${DISTNAME:S/llvm/libLLVM/:S/.src//}
@@ -120,11 +120,6 @@ CXXFLAGS+=	-march=i586
 # Needed to avoid "relocation truncated to fit: R_PPC_REL24"
 CFLAGS+=	-mlongcall
 CXXFLAGS+=	-mlongcall
-.endif
-
-# LLVM likes to pick up ${LOCALBASE}/lib/libtinfo.so.*
-.if ${OPSYS} == "FreeBSD"
-CMAKE_ARGS+=	-DLLVM_ENABLE_TERMINFO=OFF
 .endif
 
 .include "options.mk"
