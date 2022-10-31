@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5284 2022/10/31 21:27:17 pin Exp $
+$NetBSD: CHANGES-2022,v 1.5285 2022/10/31 21:28:23 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8009,3 +8009,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/salt to 3005.1 [adam 2022-10-31]
 	Updated sysutils/salt-docs to 3005.1 [adam 2022-10-31]
 	Updated graphics/oculante to 0.6.20 [pin 2022-10-31]
+	Updated sysutils/onefetch to 2.13.2 [pin 2022-10-31]
