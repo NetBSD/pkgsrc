@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2022/01/05 20:47:35 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2022/10/31 08:26:13 adam Exp $
 
-DISTNAME=	py2app-0.14
+DISTNAME=	py2app-0.28.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/py2app/}
 
@@ -11,23 +10,20 @@ HOMEPAGE=	https://bitbucket.org/ronaldoussoren/py2app
 COMMENT=	Create standalone Mac OS X applications with Python
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-altgraph>=0.13:../../graphics/py-altgraph
-DEPENDS+=	${PYPKGPREFIX}-modulegraph>=0.15:../../devel/py-modulegraph
-DEPENDS+=	${PYPKGPREFIX}-macholib>=1.8:../../devel/py-macholib
-TEST_DEPENDS+=	${PYPKGPREFIX}-pyobjc-core-[0-9]*:../../devel/py-pyobjc-core
-
-.include "../../lang/python/pyversion.mk"
-.if ${PYPKGPREFIX} == py27
-TEST_DEPENDS=	# none; py-pyobjc-core is incompatible with py27
-do-test:
-.endif
-
 ONLY_FOR_PLATFORM=	Darwin-*-*
+
+DEPENDS+=	${PYPKGPREFIX}-altgraph>=0.16:../../graphics/py-altgraph
+DEPENDS+=	${PYPKGPREFIX}-modulegraph>=0.19.3:../../devel/py-modulegraph
+DEPENDS+=	${PYPKGPREFIX}-macholib>=1.16:../../devel/py-macholib
+TEST_DEPENDS+=	${PYPKGPREFIX}-pyobjc-core-[0-9]*:../../devel/py-pyobjc-core
 
 USE_PKG_RESOURCES=	yes
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
 post-install:
-	cd ${DESTDIR}${PREFIX}/bin && ${MV} py2applet py2applet${PYVERSSUFFIX} || ${TRUE}
+	cd ${DESTDIR}${PREFIX}/bin && \
+	${MV} py2applet py2applet-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
