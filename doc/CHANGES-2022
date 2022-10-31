@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5271 2022/10/31 09:51:27 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5272 2022/10/31 10:27:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -7982,3 +7982,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed print/evince3 successor print/evince [prlw1 2022-10-31]
 	Added lang/python311 version 3.11.0 [adam 2022-10-31]
 	Added lang/py311-html-docs version 3.11.0 [adam 2022-10-31]
+	Updated graphics/libimagequant to 2.17.0 [adam 2022-10-31]
+	Updated graphics/py-Pillow to 9.3.0 [adam 2022-10-31]
