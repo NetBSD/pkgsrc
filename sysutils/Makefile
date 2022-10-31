@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1018 2022/10/09 16:09:30 pin Exp $
+# $NetBSD: Makefile,v 1.1019 2022/10/31 12:59:21 adam Exp $
 #
 
 COMMENT=	System utilities
@@ -426,7 +426,6 @@ SUBDIR+=	lxtask
 SUBDIR+=	m1n1
 SUBDIR+=	macchina
 SUBDIR+=	magicrescue
-SUBDIR+=	manifold
 SUBDIR+=	mate-notification-daemon
 SUBDIR+=	mate-power-manager
 SUBDIR+=	mate-sensors-applet
