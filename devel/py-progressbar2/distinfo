@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2022/10/20 08:59:16 adam Exp $
+$NetBSD: distinfo,v 1.7 2022/10/31 15:27:28 adam Exp $
 
-BLAKE2s (progressbar2-4.1.1.tar.gz) = 69a58a33a704b4ff5bc0965a05cb88569feb1d28c9df778919e41f8ec3d7f447
-SHA512 (progressbar2-4.1.1.tar.gz) = 4df7652584c867589448ea8765ba2da99ce5e4c9cfc27268ff850dfe41efa6342a6a44f19384c5c54ef8c79432db35a755958ed9561cf2d37f98fc661a42099f
-Size (progressbar2-4.1.1.tar.gz) = 638622 bytes
+BLAKE2s (progressbar2-4.2.0.tar.gz) = 0f3f2015ce436ad8eadc0cbffc6fbe21bcf32e32271ff8c22acbae0743f8b127
+SHA512 (progressbar2-4.2.0.tar.gz) = d49c154e48bd730c2a7916ed53272ff20cb6fac8c9752734cf645d4701ffcdf25309bf493d03fdc5b6072a85b5f758332fa7448f307d4acc001ad4ab36303a68
+Size (progressbar2-4.2.0.tar.gz) = 650564 bytes
