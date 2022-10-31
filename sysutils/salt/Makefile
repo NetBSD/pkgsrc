@@ -1,26 +1,19 @@
-# $NetBSD: Makefile,v 1.80 2022/09/30 10:02:12 sborrill Exp $
+# $NetBSD: Makefile,v 1.81 2022/10/31 17:32:46 adam Exp $
 
-DISTNAME=	salt-3004
-PKGREVISION=	3
-CATEGORIES=	sysutils
-MASTER_SITES=	${MASTER_SITE_PYPI:=s/salt/}
+.include "Makefile.common"
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://saltproject.io/
 COMMENT=	Remote execution and configuration management system
-LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-cryptodome>=3.9.8:../../security/py-cryptodome
 DEPENDS+=	${PYPKGPREFIX}-distro>=1.0.1:../../devel/py-distro
 DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
+DEPENDS+=	${PYPKGPREFIX}-jmespath-[0-9]*:../../textproc/py-jmespath
 DEPENDS+=	${PYPKGPREFIX}-markupsafe-[0-9]*:../../textproc/py-markupsafe
 DEPENDS+=	${PYPKGPREFIX}-msgpack>=0.5.6:../../devel/py-msgpack
 DEPENDS+=	${PYPKGPREFIX}-psutil>=5.0.0:../../sysutils/py-psutil
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.5.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 DEPENDS+=	${PYPKGPREFIX}-zmq>=19.0.2:../../net/py-zmq
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_PKG_RESOURCES=	yes
 
