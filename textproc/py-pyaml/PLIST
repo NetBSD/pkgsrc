@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/09/29 13:45:04 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/10/31 21:49:13 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -13,6 +13,6 @@ ${PYSITELIB}/pyaml/__main__.pyo
 ${PYSITELIB}/pyaml/tests/__init__.py
 ${PYSITELIB}/pyaml/tests/__init__.pyc
 ${PYSITELIB}/pyaml/tests/__init__.pyo
-${PYSITELIB}/pyaml/tests/dump.py
-${PYSITELIB}/pyaml/tests/dump.pyc
-${PYSITELIB}/pyaml/tests/dump.pyo
+${PYSITELIB}/pyaml/tests/test_dump.py
+${PYSITELIB}/pyaml/tests/test_dump.pyc
+${PYSITELIB}/pyaml/tests/test_dump.pyo
