@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5282 2022/10/31 17:17:52 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5283 2022/10/31 17:33:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8006,3 +8006,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/py-stack-data to 0.6.0 [adam 2022-10-31]
 	Updated devel/py-ipython to 8.6.0 [adam 2022-10-31]
 	Updated devel/py-pip to 22.3 [adam 2022-10-31]
+	Updated sysutils/salt to 3005.1 [adam 2022-10-31]
+	Updated sysutils/salt-docs to 3005.1 [adam 2022-10-31]
