@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2022/09/30 15:27:14 micha Exp $
+# $NetBSD: Makefile.common,v 1.10 2022/10/31 13:30:33 micha Exp $
 # used by archivers/star/Makefile
 # used by archivers/tartest/Makefile
 # used by devel/smake/Makefile
@@ -72,9 +72,12 @@ pre-configure:
 # with "MANSTYLE= sysv" in the RULES/os-${OPSYS}.def" files must be caught
 # by this check (IRIX and OSF/1 are treated with BSD style by schilytools).
 PLIST_VARS+=	bsd sysv
-.if ${OPSYS} == "AIX" ||	\
-	${OPSYS} == "HPUX" ||	\
-	${OPSYS} == "SunOS"
+.if ${OPSYS} == "AIX" ||		\
+	${OPSYS} == "HPUX" ||		\
+	${OPSYS} == "Interix" ||	\
+	${OPSYS} == "SCO_SV" ||		\
+	${OPSYS} == "SunOS" ||		\
+	${OPSYS} == "UnixWare"
 PLIST.sysv=	yes
 .else
 PLIST.bsd=	yes
