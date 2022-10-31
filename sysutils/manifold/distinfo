@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:19:50 nia Exp $
-
-BLAKE2s (Manifold-0.2.0.tar.gz) = 37f7a9e91d19020eb40b8c6caa6776897616c36afd41fc3951e46914c5c174b9
-SHA512 (Manifold-0.2.0.tar.gz) = f357cad08134817bcdd6f9af0434c0ec80b4762d57df4b166332432c7a1ae571f407b8479a6ffd5c3a8ba7bff80d03f5bb7e4c88d4da01e22d86eb4774845c12
-Size (Manifold-0.2.0.tar.gz) = 5342 bytes
