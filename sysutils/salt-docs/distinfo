@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.15 2021/11/14 20:01:17 adam Exp $
-
-BLAKE2s (salt-3004.tar.gz) = 0cd3a091dffd079f8ce020c365e93012ad659897d6aa2daf346bdd4f74fd6a0b
-SHA512 (salt-3004.tar.gz) = edc609daa5ccb4521950fa0df06383e502b49691e0a9f410f6985f3d1cb127905f89c3b0c88ffb88acf082dfa2011b6dd1aa714666c6af6ad09135aceb7dd228
-Size (salt-3004.tar.gz) = 17663985 bytes
