@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2022/10/28 07:47:03 pin Exp $
+# $NetBSD: Makefile,v 1.20 2022/10/31 21:26:56 pin Exp $
 
-DISTNAME=	oculante-0.6.19
+DISTNAME=	oculante-0.6.20
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=woelper/}
 
