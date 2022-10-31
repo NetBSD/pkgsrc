@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.891 2022/10/27 06:05:10 jnemeth Exp $
+# $NetBSD: Makefile,v 1.892 2022/10/31 09:03:38 prlw1 Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -41,7 +41,6 @@ SUBDIR+=	enscript
 SUBDIR+=	epdfview
 SUBDIR+=	epstool
 SUBDIR+=	evince
-SUBDIR+=	evince3
 SUBDIR+=	fig2dev
 SUBDIR+=	flpsed
 SUBDIR+=	foliate
