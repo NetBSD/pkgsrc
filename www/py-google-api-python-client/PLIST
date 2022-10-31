@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.8 2022/08/30 11:33:50 sborrill Exp $
-${PYSITELIB}/apiclient/__init__.py
-${PYSITELIB}/apiclient/__init__.pyc
-${PYSITELIB}/apiclient/__init__.pyo
+@comment $NetBSD: PLIST,v 1.9 2022/10/31 10:55:39 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/apiclient/__init__.py
+${PYSITELIB}/apiclient/__init__.pyc
+${PYSITELIB}/apiclient/__init__.pyo
 ${PYSITELIB}/googleapiclient/__init__.py
 ${PYSITELIB}/googleapiclient/__init__.pyc
 ${PYSITELIB}/googleapiclient/__init__.pyo
@@ -56,6 +56,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/analytics.v3.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/analyticsadmin.v1alpha.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/analyticsdata.v1alpha.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/analyticsdata.v1beta.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/analyticshub.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/analyticshub.v1beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/analyticsreporting.v4.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/androiddeviceprovisioning.v1.json
@@ -77,6 +78,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/artifactregistry.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/artifactregistry.v1beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/artifactregistry.v1beta2.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/assuredworkloads.v1.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/assuredworkloads.v1beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/authorizedbuyersmarketplace.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/baremetalsolution.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/baremetalsolution.v1alpha1.json
@@ -114,6 +116,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/cloudasset.v1p4beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/cloudasset.v1p5beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/cloudasset.v1p7beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/cloudbilling.v1.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/cloudbilling.v1beta.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/cloudbuild.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/cloudbuild.v1alpha1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/cloudbuild.v1alpha2.json
@@ -164,6 +167,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/containeranalysis.v1alpha
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/containeranalysis.v1beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/content.v2.1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/content.v2.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/contentwarehouse.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/customsearch.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/datacatalog.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/datacatalog.v1beta1.json
@@ -196,6 +200,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/dialogflow.v3beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/digitalassetlinks.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/discovery.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/displayvideo.v1.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/displayvideo.v2.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/dlp.v2.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/dns.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/dns.v1beta2.json
@@ -277,6 +282,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/identitytoolkit.v3.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/ids.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/index.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/indexing.v3.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/integrations.v1alpha.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/jobs.v2.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/jobs.v3.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/jobs.v3p1beta1.json
@@ -340,6 +346,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/playintegrity.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/policyanalyzer.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/policyanalyzer.v1beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/policysimulator.v1.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/policysimulator.v1alpha.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/policysimulator.v1beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/policytroubleshooter.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/policytroubleshooter.v1beta.json
