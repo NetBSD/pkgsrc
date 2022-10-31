@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2022/10/25 09:26:09 adam Exp $
+# $NetBSD: Makefile,v 1.19 2022/10/31 08:12:17 adam Exp $
 
 DISTNAME=	modulegraph-0.19.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,6 +15,8 @@ DEPENDS+=	${PYPKGPREFIX}-altgraph>=0.15:../../graphics/py-altgraph
 USE_LANGUAGES=	# none
 
 USE_PKG_RESOURCES=	yes
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
