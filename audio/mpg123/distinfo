@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.68 2022/10/29 19:16:04 triaxx Exp $
+$NetBSD: distinfo,v 1.69 2022/11/01 09:51:36 jperkin Exp $
 
-BLAKE2s (mpg123-1.31.0.tar.bz2) = bcaf6ecb9fe42b16ef097a4d6ca842d72d00f8d39ffa61270e5d5a521f4ba2b7
-SHA512 (mpg123-1.31.0.tar.bz2) = d8e8626cb5ba69ab96f0d2861b02f6befe240ef039fcf3df2b5fc4e1fbeb7ab4abbdb74f51e68936865e5db8a5c14d84391e08dc8cf0a335c20abfbf7fd37a93
-Size (mpg123-1.31.0.tar.bz2) = 1092978 bytes
+BLAKE2s (mpg123-1.31.1.tar.bz2) = d557adb1c34549a20fee88b54d5d1d6cf5e79f500eeb74adc825b88e07084ec6
+SHA512 (mpg123-1.31.1.tar.bz2) = d007ea94a99fde60919a173320e124c9f0079a28452533eeceb9c7bfed43810b46384ae45459ef6ac185e27ec06e153723bb588aaa4955ee2ad1c51dc58eb132
+Size (mpg123-1.31.1.tar.bz2) = 1093324 bytes
 SHA1 (patch-ad) = f07b637c3fc1d3ea0426013fc25bca8e3aecba56
 SHA1 (patch-src_libout123_modules_sun.c) = aa11e1420fd07f2e1c4a0d911d1642f0fd50b916
