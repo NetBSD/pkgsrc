@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5295 2022/11/01 17:41:27 bsiegert Exp $
+$NetBSD: CHANGES-2022,v 1.5296 2022/11/01 17:59:05 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8026,3 +8026,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/go118 to 1.18.8 [bsiegert 2022-11-01]
 	Updated graphics/lcms2 to 2.14 [gdt 2022-11-01]
 	Updated lang/go119 to 1.19.3 [bsiegert 2022-11-01]
+	Updated lang/nodejs to 18.12.0nb1 [schmonz 2022-11-01]
+	Updated lang/nodejs16 to 16.18.0nb1 [schmonz 2022-11-01]
