@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2022/10/05 11:20:24 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/11/01 17:41:11 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go119/CONTRIBUTING.md
@@ -11235,10 +11235,12 @@ go119/test/fixedbugs/issue5515.go
 go119/test/fixedbugs/issue5581.go
 go119/test/fixedbugs/issue5607.go
 go119/test/fixedbugs/issue5609.go
+go119/test/fixedbugs/issue56105.go
 go119/test/fixedbugs/issue5614.dir/rethinkgo.go
 go119/test/fixedbugs/issue5614.dir/x.go
 go119/test/fixedbugs/issue5614.dir/y.go
 go119/test/fixedbugs/issue5614.go
+go119/test/fixedbugs/issue56141.go
 go119/test/fixedbugs/issue5698.go
 go119/test/fixedbugs/issue5704.go
 go119/test/fixedbugs/issue5753.go
