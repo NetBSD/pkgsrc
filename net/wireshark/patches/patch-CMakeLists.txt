@@ -1,13 +1,13 @@
-$NetBSD: patch-CMakeLists.txt,v 1.7 2021/12/16 09:36:06 tnn Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.8 2022/11/01 08:59:25 adam Exp $
 
 Do not make application bundle on Darwin.
 
 editcap needs -lm, like tfshark:
 editcap.c:(.text.startup+0x5b8): undefined reference to `modf'
 
---- CMakeLists.txt.orig	2021-11-22 18:39:27.000000000 +0000
+--- CMakeLists.txt.orig	2022-10-26 17:36:47.000000000 +0000
 +++ CMakeLists.txt
-@@ -1521,7 +1521,7 @@ else ()
+@@ -1530,7 +1530,7 @@ else ()
  	set(EXTCAP_INSTALL_LIBDIR "${CMAKE_INSTALL_LIBDIR}/${PROJECT_NAME}/extcap" CACHE INTERNAL "The extcap dir")
  endif()
  
@@ -16,7 +16,7 @@ editcap.c:(.text.startup+0x5b8): undefined reference to `modf'
  	#
  	# As https://developer.apple.com/library/archive/technotes/tn2206/_index.html
  	# says,
-@@ -2498,7 +2498,11 @@ if(BUILD_wireshark AND QT_FOUND)
+@@ -2599,7 +2599,11 @@ if(BUILD_wireshark AND QT_FOUND)
  		${MINIZIP_LIBRARIES}
  	)
  
@@ -29,7 +29,7 @@ editcap.c:(.text.startup+0x5b8): undefined reference to `modf'
  	if(WIN32)
  		set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT wireshark)
  	endif()
-@@ -2883,6 +2887,7 @@ endif()
+@@ -3099,6 +3103,7 @@ endif()
  
  if(BUILD_editcap)
  	set(editcap_LIBS
@@ -37,22 +37,3 @@ editcap.c:(.text.startup+0x5b8): undefined reference to `modf'
  		ui
  		wiretap
  		version_info
-@@ -3501,12 +3506,12 @@ endif()
- 
- install(
- 	FILES
--		${CMAKE_MODULE_PATH}/FindGLIB2.cmake
--		${CMAKE_MODULE_PATH}/FindWSLibrary.cmake
--		${CMAKE_MODULE_PATH}/FindWSWinLibs.cmake
--		${CMAKE_MODULE_PATH}/UseAsn2Wrs.cmake
--		${CMAKE_MODULE_PATH}/LocatePythonModule.cmake
--		${CMAKE_MODULE_PATH}/UseMakePluginReg.cmake
-+		cmake/modules/FindGLIB2.cmake
-+		cmake/modules/FindWSLibrary.cmake
-+		cmake/modules/FindWSWinLibs.cmake
-+		cmake/modules/UseAsn2Wrs.cmake
-+		cmake/modules/LocatePythonModule.cmake
-+		cmake/modules/UseMakePluginReg.cmake
- 	DESTINATION
- 		${WIRESHARK_INSTALL_CMAKEDIR}
- )
