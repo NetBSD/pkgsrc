@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.75 2022/11/01 08:59:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.76 2022/11/01 18:28:39 wiz Exp $
 bin/capinfos
 bin/captype
 bin/dumpcap
@@ -675,8 +675,8 @@ lib/wireshark/extcap/sshdump
 lib/wireshark/extcap/udpdump
 lib/wireshark/extcap/wifidump
 lib/wireshark/plugins/4.0/codecs/g711.so
-lib/wireshark/plugins/4.0/codecs/g722.so
-lib/wireshark/plugins/4.0/codecs/g726.so
+${PLIST.spandsp}lib/wireshark/plugins/4.0/codecs/g722.so
+${PLIST.spandsp}lib/wireshark/plugins/4.0/codecs/g726.so
 lib/wireshark/plugins/4.0/codecs/l16mono.so
 lib/wireshark/plugins/4.0/codecs/opus_dec.so
 lib/wireshark/plugins/4.0/epan/ethercat.so
