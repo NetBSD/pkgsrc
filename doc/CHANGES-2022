@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5296 2022/11/01 17:59:05 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.5297 2022/11/01 18:25:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8028,3 +8028,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/go119 to 1.19.3 [bsiegert 2022-11-01]
 	Updated lang/nodejs to 18.12.0nb1 [schmonz 2022-11-01]
 	Updated lang/nodejs16 to 16.18.0nb1 [schmonz 2022-11-01]
+	Updated textproc/py-expat to 3.10.8nb1 [wiz 2022-11-01]
