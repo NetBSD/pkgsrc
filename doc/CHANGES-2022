@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5297 2022/11/01 18:25:48 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.5298 2022/11/01 21:29:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8029,3 +8029,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/nodejs to 18.12.0nb1 [schmonz 2022-11-01]
 	Updated lang/nodejs16 to 16.18.0nb1 [schmonz 2022-11-01]
 	Updated textproc/py-expat to 3.10.8nb1 [wiz 2022-11-01]
+	Updated multimedia/libde265 to 1.0.9 [adam 2022-11-01]
+	Updated math/flann-lib to 1.9.2 [adam 2022-11-01]
