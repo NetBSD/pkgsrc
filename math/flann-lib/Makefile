@@ -1,19 +1,19 @@
-# $NetBSD: Makefile,v 1.2 2021/05/03 09:26:42 thor Exp $
+# $NetBSD: Makefile,v 1.3 2022/11/01 21:29:07 adam Exp $
 
-DISTNAME=	flann-1.9.1
+DISTNAME=	flann-1.9.2
 PKGNAME=	${DISTNAME:S/-/-lib-/}
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mariusmuja/}
 GITHUB_PROJECT=	flann
 
 MAINTAINER=	thomas.orgis@uni-hamburg.de
-HOMEPAGE=	https://github.com/mariusmuja/flann/
+HOMEPAGE=	https://github.com/mariusmuja/flann
 COMMENT=	Fast Library for Approximate Nearest Neighbors
 LICENSE=	modified-bsd
 
 USE_CMAKE=	yes
-USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
+USE_TOOLS+=	pkg-config
 
 CMAKE_ARGS+=	-DBUILD_DOC=OFF
 CMAKE_ARGS+=	-DBUILD_PYTHON_BINDINGS=OFF
@@ -25,6 +25,6 @@ CMAKE_ARGS+=	-DBUILD_CUDA_LIB=OFF
 
 PKGCONFIG_OVERRIDE+=	cmake/flann.pc.in
 
+.include "../../archivers/lz4/buildlink3.mk"
 .include "../../devel/hdf5-c++/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
