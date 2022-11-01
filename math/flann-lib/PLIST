@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/04/27 15:16:46 thor Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/11/01 21:29:07 adam Exp $
 bin/flann_example_c
 bin/flann_example_cpp
 include/flann/algorithms/all_indices.h
@@ -17,8 +17,6 @@ include/flann/algorithms/lsh_index.h
 include/flann/algorithms/nn_index.h
 include/flann/config.h
 include/flann/defines.h
-include/flann/ext/lz4.h
-include/flann/ext/lz4hc.h
 include/flann/flann.h
 include/flann/flann.hpp
 include/flann/general.h
@@ -49,12 +47,16 @@ include/flann/util/sampling.h
 include/flann/util/saving.h
 include/flann/util/serialization.h
 include/flann/util/timer.h
+lib/cmake/flann/flann-config-version.cmake
+lib/cmake/flann/flann-config.cmake
+lib/cmake/flann/flann-targets-relwithdebinfo.cmake
+lib/cmake/flann/flann-targets.cmake
 lib/libflann.so
-lib/libflann.so.1.9
 lib/libflann.so.${PKGVERSION}
+lib/libflann.so.1.9
 lib/libflann_cpp.so
-lib/libflann_cpp.so.1.9
 lib/libflann_cpp.so.${PKGVERSION}
+lib/libflann_cpp.so.1.9
 lib/libflann_cpp_s.a
 lib/libflann_s.a
 lib/pkgconfig/flann.pc
