@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2022/09/11 12:51:20 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2022/11/01 09:52:58 jperkin Exp $
 
 MPG123_MODULE=	pulse
 
-PKGREVISION=	4
 .include "../../audio/mpg123/Makefile.common"
 
 .include "../../audio/mpg123/buildlink3.mk"
