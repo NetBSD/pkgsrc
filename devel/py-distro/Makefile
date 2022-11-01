@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2022/10/31 13:57:36 adam Exp $
+# $NetBSD: Makefile,v 1.10 2022/11/01 18:29:31 wiz Exp $
 
 DISTNAME=	distro-1.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,6 +10,7 @@ HOMEPAGE=	https://github.com/nir0s/distro
 COMMENT=	OS platform information API
 LICENSE=	apache-2.0
 
+BUILD_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	# none
