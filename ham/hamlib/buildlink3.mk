@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2022/06/28 11:34:08 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2022/11/01 17:23:45 gdt Exp $
 
 BUILDLINK_TREE+=	hamlib
 
@@ -8,8 +8,8 @@ HAMLIB_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.hamlib+=	hamlib>=1.1.4
 BUILDLINK_ABI_DEPENDS.hamlib+=	hamlib>=4.3.1nb1
 BUILDLINK_PKGSRCDIR.hamlib?=	../../ham/hamlib
-.endif # HAMLIB_BUILDLINK3_MK
 
 .include "../../devel/libusb1/buildlink3.mk"
+.endif # HAMLIB_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-hamlib
