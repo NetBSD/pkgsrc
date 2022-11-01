@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.27 2022/07/26 22:54:51 tnn Exp $
+# $NetBSD: options.mk,v 1.28 2022/11/01 08:59:25 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.wireshark
 PKG_SUPPORTED_OPTIONS=	http2 lua qt5 spandsp
@@ -50,10 +50,10 @@ INSTALLATION_DIRS+=	share/icons/hicolor/${d}x${d}/mimetypes
 
 .PHONY: install-icons
 install-icons:
-	${INSTALL_DATA} ${WRKSRC}/image/wsicon.svg \
+	${INSTALL_DATA} ${WRKSRC}/resources/icons/wsicon.svg \
 		${DESTDIR}${PREFIX}/share/icons/hicolor/scalable/apps/wireshark.svg
 .    for d in ${MIMEICON_SIZES}
-	${INSTALL_DATA} ${WRKSRC}/image/WiresharkDoc-${d}.png \
+	${INSTALL_DATA} ${WRKSRC}/resources/icons/WiresharkDoc-${d}.png \
 		${DESTDIR}${PREFIX}/share/icons/hicolor/${d}x${d}/mimetypes/application-vnd.tcpdump.pcap.png
 .    endfor
 .  endif
