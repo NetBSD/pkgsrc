@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2022/10/19 13:16:45 adam Exp $
+# $NetBSD: Makefile.common,v 1.2 2022/11/01 10:20:55 jperkin Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -76,6 +76,9 @@ CONFIGURE_ENV+=		ac_cv_path_mkdir="mkdir"
 
 # avoid pointing to a wrapper
 CONFIGURE_ENV+=		MSGFMT=${TOOLS_PATH.msgfmt}
+
+# Avoid picking up a random zstd in PATH.  zstd support is currently disabled.
+CONFIGURE_ENV+=		ac_cv_path_ZSTD=
 
 # sys/ucred.h shouldn't be included on Solaris, causes conflicts between
 # procfs and largefile.
