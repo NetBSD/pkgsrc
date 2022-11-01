@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5294 2022/11/01 17:33:40 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.5295 2022/11/01 17:41:27 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8025,3 +8025,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated ham/hamlib to 4.5nb1 [gdt 2022-11-01]
 	Updated lang/go118 to 1.18.8 [bsiegert 2022-11-01]
 	Updated graphics/lcms2 to 2.14 [gdt 2022-11-01]
+	Updated lang/go119 to 1.19.3 [bsiegert 2022-11-01]
