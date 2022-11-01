@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.176 2022/09/08 20:27:32 ryoon Exp $
+$NetBSD: distinfo,v 1.177 2022/11/01 04:22:19 dholland Exp $
 
 BLAKE2s (seamonkey-2.53.13.source.tar.xz) = 20a58c1cf3a43955311d3a65bddba9c882c6ebfc0fff3173c1e83c517e198f26
 SHA512 (seamonkey-2.53.13.source.tar.xz) = f95fcec1dd732c3ca8218e6359c51260d44c40c8c2f34ad11ee160166f4df7c2184dd5d7e02b4ee363700d189e8652fabe7aeec8d0917ea9589ec1baa714f7a2
 Size (seamonkey-2.53.13.source.tar.xz) = 253664548 bytes
 SHA1 (patch-build_moz.configure_rust.configure) = 38ba5e8a0e41352afc4e767c25388c3c772b0457
 SHA1 (patch-dom_indexedDB_IDBTransaction.h) = 7882f1264889d5f17af0bafa68bfa5aff5b57634
+SHA1 (patch-fac963c3bc00) = 1c4e0289365840700960f42a46d9180dc25b8a29
 SHA1 (patch-gfx_angle_checkout_src_compiler_translator_SymbolTable__ESSL__autogen.cpp) = 915fbe98d20ff405f031636add07d4bd610b5939
 SHA1 (patch-gfx_angle_checkout_src_compiler_translator_SymbolTable__autogen.cpp) = c78ada128986334d04ae07ec98545ecf611a7dfc
 SHA1 (patch-ldap_c-sdk_include_portable.h) = b742b070a45507678f592428110477e484c52659
