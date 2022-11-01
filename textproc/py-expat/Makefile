@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.32 2021/10/09 10:55:00 nia Exp $
+# $NetBSD: Makefile,v 1.33 2022/11/01 18:25:36 wiz Exp $
 
 PKGNAME=	${PYPKGPREFIX}-expat-${PY_DISTVERSION}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.python.org/
 COMMENT=	Python interface to expat
 
-# "error: 'for' loop initial declarations are only allowed in C99 mode"
-USE_LANGUAGES=	c99
+# static_assert()
+USE_LANGUAGES=	c11
 
 USE_GCC_RUNTIME=	yes
 
