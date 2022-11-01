@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.54 2022/06/28 11:34:08 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2022/11/01 17:17:37 gdt Exp $
 #
 
 DISTNAME=	hamlib-${VERSION}
 # V.rcN, VrcN, V~rcN
-VERSION=	4.3.1
+VERSION=	4.5
 VERSIOND=	${VERSION}
 VERSIONF=	${VERSION}
 PKGREVISION=	1
@@ -28,11 +28,6 @@ CONFIGURE_ARGS+=	--without-tcl-binding \
 			--without-python-binding
 
 CHECK_PORTABILITY_SKIP+=	scripts/build-w64-jtsdk.sh
-
-# Reported to upstream mailinglist 20210915
-post-install:
-	mv ${DESTDIR}/${PREFIX}/bin/testlibusb ${DESTDIR}/${PREFIX}/bin/rigctl_testlibusb
-
 
 TEST_TARGET=	check
 
