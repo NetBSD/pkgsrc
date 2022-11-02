@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5303 2022/11/02 09:25:03 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.5304 2022/11/02 09:31:45 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8038,3 +8038,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/py-moto to 4.0.9 [adam 2022-11-02]
 	Updated devel/py-pybind11 to 2.10.1 [adam 2022-11-02]
 	Updated net/dbip-asn-lite to 2022.11 [fcambus 2022-11-02]
+	Updated net/dbip-city-lite to 2022.11 [fcambus 2022-11-02]
