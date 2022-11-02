@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2022/10/05 20:53:35 adam Exp $
+$NetBSD: distinfo,v 1.13 2022/11/02 08:47:52 adam Exp $
 
-BLAKE2s (pybind11-2.10.0.tar.gz) = 55c4d6fa8a5c2c8afd5ef751fdb8580ff6ddbd9d9b99d0b487eedcd0bc577a72
-SHA512 (pybind11-2.10.0.tar.gz) = ea2a49d45ff9e982ddcde1191136fc8029e9f75d3a4172409890adad76106ecc5e83dccf31fbba567f87ce16fd311d5f82ab4c15cee99a5dc80b89afdb83006b
-Size (pybind11-2.10.0.tar.gz) = 193392 bytes
+BLAKE2s (pybind11-2.10.1.tar.gz) = 7adbb8472bdea9998540b74da4e4e788c7e7095ad4cd2f377d3710981c1e9e44
+SHA512 (pybind11-2.10.1.tar.gz) = fc861c29be42f6e37cecf560012f2340572898111884926663acbdd85510ac7bbfe371ea58d82a92c3521aa7d25f8b6e4343697cf934c348381a839844cf1658
+Size (pybind11-2.10.1.tar.gz) = 195936 bytes
