@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/10/31 09:50:40 adam Exp $
+# $NetBSD: Makefile,v 1.2 2022/11/02 11:36:23 jperkin Exp $
 
 .include "dist.mk"
 
@@ -99,6 +99,8 @@ PLIST_SUBST+=	PY_PLATNAME=${PY_PLATNAME:Q}
 .if ${OPSYS} == "Darwin" && exists(${OSX_SDK_PATH:Q}/usr/include)
 CFLAGS+=	-I${OSX_SDK_PATH:Q}/usr/include
 .endif
+
+LDFLAGS.SunOS+=	-lresolv
 
 PLIST_VARS+=	nis
 .for incdir in ${_OPSYS_INCLUDE_DIRS}
