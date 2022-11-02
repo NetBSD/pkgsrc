@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2022/10/05 11:32:56 bsiegert Exp $
+# $NetBSD: Makefile,v 1.39 2022/11/02 19:39:52 bsiegert Exp $
 
 DISTNAME=	postgres_exporter-0.5.1
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wrouesnel/}
-PKGREVISION=	35
+PKGREVISION=	36
 CATEGORIES=	databases
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
