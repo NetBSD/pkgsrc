@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2022/10/26 12:58:04 adam Exp $
+$NetBSD: distinfo,v 1.7 2022/11/02 08:45:29 adam Exp $
 
-BLAKE2s (moto-4.0.8.tar.gz) = 139b810c1b1ce8b9350a92a276471dc6b189512ccfa1c587f45d1682c690442a
-SHA512 (moto-4.0.8.tar.gz) = 9d3d3164bb6a77901bb55b8c536bfc8822e5b5292d79fedfe89a4a7fefaeab24b740d9a898e9487152a45c5a3bfd15d8aaca042a485bea389e1a82bb0a90bdd0
-Size (moto-4.0.8.tar.gz) = 2488253 bytes
+BLAKE2s (moto-4.0.9.tar.gz) = 618a0d5f8c26cd7aa92bbf162520a50086f84a2d2015eef3bb88b71cec7f2e40
+SHA512 (moto-4.0.9.tar.gz) = fedf2c97779a93b1ab3492122be5425f3d91219eb207cc21bf2822ffa52c6efe2c3c8ca233acafd02c725c46e77e883f8f941c29638bb3e32ffa774ed8a5ff69
+Size (moto-4.0.9.tar.gz) = 2496530 bytes
