@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.34 2022/04/10 08:53:18 nia Exp $
+# $NetBSD: Makefile,v 1.35 2022/11/02 08:06:23 wiz Exp $
 
-DISTNAME=	xf86-input-mouse-1.9.3
+DISTNAME=	xf86-input-mouse-1.9.4
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	https://xorg.freedesktop.org/
