@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2022/10/05 11:32:59 bsiegert Exp $
+# $NetBSD: Makefile,v 1.14 2022/11/02 19:39:57 bsiegert Exp $
 
 DISTNAME=	go-wire-0.5.0.20210831
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
 GITHUB_PROJECT=	wire

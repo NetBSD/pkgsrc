@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2022/10/25 21:04:08 nikita Exp $
+# $NetBSD: Makefile,v 1.2 2022/11/02 19:39:57 bsiegert Exp $
 
 DISTNAME=	gotags-1.4.1
 PKGNAME=	go-${DISTNAME}
+PKGREVISION=	1
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jstemmer/}
 CATEGORIES=	devel
 GITHUB_TAG=	v${PKGVERSION_NOREV}
