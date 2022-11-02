@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.2 2022/08/07 18:08:08 nia Exp $
+# $NetBSD: mozilla-common.mk,v 1.3 2022/11/02 20:36:32 gutteridge Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -20,7 +20,7 @@ USE_LANGUAGES+=		c c++
 # ERROR: Only GCC 7.1 or newer is supported (found version 5.5.0).
 GCC_REQD+=		7
 
-TOOL_DEPENDS+=		cbindgen>=0.23.0:../../devel/cbindgen
+TOOL_DEPENDS+=		cbindgen>=0.24.0:../../devel/cbindgen
 
 .if defined(FIREFOX_MAINTAINER) && !defined(MAINTAINER_INTERNAL)
 TOOL_DEPENDS+=		nodejs-[0-9]*:../../lang/nodejs
