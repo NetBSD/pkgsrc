@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.50 2022/10/05 11:33:07 bsiegert Exp $
+# $NetBSD: Makefile,v 1.51 2022/11/02 19:39:49 bsiegert Exp $
 
 DISTNAME=	mmark-2.2.10
 PKGNAME=	go-${DISTNAME}
-PKGREVISION=	18
+PKGREVISION=	19
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mmarkdown/}
 CATEGORIES=	textproc
 GITHUB_TAG=	v${PKGVERSION_NOREV}
