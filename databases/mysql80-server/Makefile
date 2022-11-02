@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2022/06/28 11:31:19 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2022/11/02 17:02:11 jperkin Exp $
 
 PKGNAME=	${DISTNAME:S/-/-server-/}
-PKGREVISION=	7
 COMMENT=	MySQL 8, a free SQL database (server)
 
 CONFLICTS=	mysql3-server-[0-9]*
@@ -11,7 +10,7 @@ CONFLICTS=	mysql3-server-[0-9]*
 CMAKE_ARGS+=		-DINSTALL_INFODIR=${PKGINFODIR}
 CMAKE_ARGS+=		-DWITH_PROTOBUF="system"
 
-PLIST_VARS+=		ndb auth_socket
+PLIST_VARS+=		auth_socket
 
 .if ${OPSYS} == "Linux"
 PLIST.auth_socket=	yes
@@ -72,15 +71,6 @@ SUBST_SED.perlpath=	-e 's,@PERL_PATH@,${PERL5},g'
 
 INSTALLATION_DIRS+=	bin
 TEST_TARGET=		test
-
-.include "../../mk/compiler.mk"
-
-.if !empty(PKGSRC_COMPILER:Msunpro)
-CFLAGS+=		-D_POSIX_C_SOURCE=199506L -D__EXTENSIONS__
-CXXFLAGS+=		-D_POSIX_C_SOURCE=199506L -D__EXTENSIONS__
-.endif
-
-LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/mysqlrouter
 
 CMAKE_ARGS+=		-DWITHOUT_CLIENTLIBS="ON"
 
