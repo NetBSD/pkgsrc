@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/10/05 20:53:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/11/02 08:47:52 adam Exp $
 bin/pybind11-config
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -57,3 +57,4 @@ ${PYSITELIB}/pybind11/share/cmake/pybind11/pybind11ConfigVersion.cmake
 ${PYSITELIB}/pybind11/share/cmake/pybind11/pybind11NewTools.cmake
 ${PYSITELIB}/pybind11/share/cmake/pybind11/pybind11Targets.cmake
 ${PYSITELIB}/pybind11/share/cmake/pybind11/pybind11Tools.cmake
+${PYSITELIB}/pybind11/share/pkgconfig/pybind11.pc
