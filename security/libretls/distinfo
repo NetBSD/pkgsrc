@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/12/18 13:55:18 schmonz Exp $
+$NetBSD: distinfo,v 1.9 2022/11/02 18:57:37 schmonz Exp $
 
-BLAKE2s (libretls-3.4.2.tar.gz) = 4db43b5e22127dda7838787d2bb96df6bd9632efbcc8623d76f5e64335281a1e
-SHA512 (libretls-3.4.2.tar.gz) = 0ded26558b74a00e5e05629d577c07ad9b8a8955aacbd7f97d6d1c81d4e7ccfe7c2fe0cc5bcb03fffb282cd51b8404236371d0074e39508099d1990fc3e065ba
-Size (libretls-3.4.2.tar.gz) = 435457 bytes
+BLAKE2s (libretls-3.5.2.tar.gz) = cdf125019914045d7fac0c07d627aba99cd7da4f008ff0f6372d5f56908506ca
+SHA512 (libretls-3.5.2.tar.gz) = 62eed971cbacb4a50e5ebdad1ea1d57dd3b4f7520634393faf1fc141ef63b6e7d50acbe49747c956fca6b9f2dec8a79ab724df6e08a77858a1624b5a6e3cbe57
+Size (libretls-3.5.2.tar.gz) = 425404 bytes
