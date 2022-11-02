@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5316 2022/11/02 18:10:42 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.5317 2022/11/02 18:57:42 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8055,3 +8055,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/mysql80-server to 8.0.31 [jperkin 2022-11-02]
 	Updated www/links to 2.28 [fcambus 2022-11-02]
 	Updated www/links-gui to 2.28 [fcambus 2022-11-02]
+	Updated security/libretls to 3.5.2 [schmonz 2022-11-02]
