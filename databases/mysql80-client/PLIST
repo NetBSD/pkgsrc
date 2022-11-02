@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/05/13 15:25:20 jdolecek Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/11/02 17:02:10 jperkin Exp $
 bin/mysql
 bin/mysql_client_test
 bin/mysql_config
@@ -29,7 +29,7 @@ include/mysql/mysqld_error.h
 lib/libmysqlclient.a
 lib/libmysqlclient.so
 lib/libmysqlclient.so.21
-lib/libmysqlclient.so.21.1.24
+lib/libmysqlclient.so.21.2.31
 lib/pkgconfig/mysqlclient.pc
 man/man1/comp_err.1
 man/man1/ibd2sdi.1

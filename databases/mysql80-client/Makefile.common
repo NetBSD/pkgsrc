@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.2 2021/06/04 13:44:21 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.3 2022/11/02 17:02:10 jperkin Exp $
 #
 # used by databases/mysql80-client/Makefile
 # used by databases/mysql80-server/Makefile
 
-DISTNAME=	mysql-8.0.24
+DISTNAME=	mysql-8.0.31
 CATEGORIES=	databases
-MASTER_SITES=	${MASTER_SITE_MYSQL:=MySQL-8.0/}
+MASTER_SITES=	https://cdn.mysql.com/Downloads/MySQL-8.0/
 DISTFILES=	mysql-boost-${PKGVERSION_NOREV}${EXTRACT_SUFX}
 
 MAINTAINER?=	pkgsrc-users@NetBSD.org
@@ -15,17 +15,13 @@ LICENSE=	gnu-gpl-v2
 DISTINFO_FILE?=	${.CURDIR}/../../databases/mysql80-client/distinfo
 PATCHDIR?=	${.CURDIR}/../../databases/mysql80-client/patches
 
-BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.11
-
 USE_CMAKE=		yes
-USE_LANGUAGES=		c c++ c++14 # 1.75+ boost requires c++14
+USE_LANGUAGES=		c c++14
 USE_TOOLS+=		bash bison gmake perl:run
 USE_GCC_RUNTIME=	yes
 USE_BUILTIN.libevent=	no
 
 .include "../../mk/bsd.prefs.mk"
-
-.include "options.mk"
 
 # MYSQL_USER		username of the database administrator
 # MYSQL_GROUP		group of the database administrator
@@ -46,8 +42,6 @@ PKG_GROUPS_VARS+=	MYSQL_GROUP
 
 CONFIG_SHELL=		${TOOLS_PATH.bash}
 
-CFLAGS.IRIX+=		-DIRIX5
-
 BUILD_DEFS+=		VARBASE
 
 # paths
@@ -57,16 +51,18 @@ CMAKE_ARGS+=		-DINSTALL_INCLUDEDIR="include/mysql"
 CMAKE_ARGS+=		-DINSTALL_INFODIR="info"
 CMAKE_ARGS+=		-DINSTALL_MANDIR="${PKGMANDIR}"
 CMAKE_ARGS+=		-DINSTALL_MYSQLSHAREDIR="share/mysql"
-CMAKE_ARGS+=		-DINSTALL_MYSQLTESTDIR="share/mysql/test"
+CMAKE_ARGS+=		-DINSTALL_MYSQLTESTDIR=""
 CMAKE_ARGS+=		-DINSTALL_PLUGINDIR="lib/mysql/plugin"
 CMAKE_ARGS+=		-DINSTALL_SBINDIR="sbin"
+CMAKE_ARGS+=		-DINSTALL_SCRIPTDIR="bin"
+CMAKE_ARGS+=		-DINSTALL_SQLBENCHDIR="share/mysql/sql-bench"
 CMAKE_ARGS+=		-DINSTALL_SUPPORTFILESDIR="share/mysql"
-CMAKE_ARGS+=		-DROUTER_INSTALL_LOGROTATEDIR="share/mysql"
 CMAKE_ARGS+=		-DMYSQL_DATADIR=${MYSQL_DATADIR}
+CMAKE_ARGS+=		-DROUTER_INSTALL_LOGROTATEDIR="share/mysql"
 
 CMAKE_ARGS+=		-DCMAKE_BUILD_TYPE=Release
 
-CMAKE_ARGS+=		-DWITH_BOOST="${WRKSRC}/boost"
+CMAKE_ARGS+=		-DLOCAL_BOOST_DIR="${WRKSRC}/boost"
 CMAKE_ARGS+=		-DWITH_ICU="system"
 CMAKE_ARGS+=		-DWITH_LIBEVENT="system"
 CMAKE_ARGS+=		-DWITH_LZ4="system"
@@ -74,11 +70,11 @@ CMAKE_ARGS+=		-DWITH_RAPIDJSON="bundled"
 CMAKE_ARGS+=		-DWITH_SSL="system"
 CMAKE_ARGS+=		-DWITH_ZLIB="system"
 CMAKE_ARGS+=		-DWITH_ZSTD="system"
+
 CMAKE_ARGS+=		-DDEFAULT_CHARSET=${MYSQL_CHARSET}
 CMAKE_ARGS+=		-DDEFAULT_COLLATION=${MYSQL_COLLATION}
 CMAKE_ARGS+=		-DWITH_EXTRA_CHARSETS=${MYSQL_EXTRA_CHARSET}
 CMAKE_ARGS+=		-DWITH_UNIT_TESTS=OFF
-CMAKE_ARGS+=		-DFORCE_INSOURCE_BUILD=1
 
 # we need atomic builtins
 .if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "i386"
@@ -86,32 +82,15 @@ GNU_ARCH.i386=		i586
 CFLAGS+=		-march=i586
 .endif
 
-CPPFLAGS+=		-Dunix
-CFLAGS+=		-DUSE_OLD_FUNCTIONS # 3.23.x compat
-#CFLAGS+=		-D__STDC_FORMAT_MACROS=1 # always defined too late
-
-.if ${OPSYS} != "Interix"
-CFLAGS+=		-fPIC -DPIC
-CXXFLAGS+=		-fPIC -DPIC
-.endif
-
 CMAKE_ARGS.SunOS+=	-DFORCE_UNSUPPORTED_COMPILER=YES
 
 # Force HAVE_CURSES_H on Solaris since the configure script is broken
 # and does not properly detect this, breaking the build later on.  Also
 # explicitly disable epoll support as it is Linux-specific.
-CMAKE_ARGS.SunOS+=	-DHAVE_SYS_EPOLL_H=NO
-CFLAGS.SunOS+=		-DHAVE_CURSES_H
-CXXFLAGS.SunOS+=	-DHAVE_CURSES_H
+CMAKE_ARGS.SunOS+=	-DHAVE_EPOLL=NO
 
-.include "../../mk/pthread.buildlink3.mk"
-
-.if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "pth")
-CFLAGS+=		-DSIGNALS_DONT_BREAK_READ
-CXXFLAGS+=		-DSIGNALS_DONT_BREAK_READ
-.endif
-
-LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/mysql
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/mysql
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/mysqlrouter
 
 SUBST_CLASSES+=		scr
 SUBST_STAGE.scr=	pre-configure
@@ -122,22 +101,27 @@ SUBST_SED.scr+=		-e "s,/bin/sh,${RCD_SCRIPTS_SHELL},g"
 SUBST_SED.scr+=		-e "s,@SHELL_PATH@,${RCD_SCRIPTS_SHELL},g"
 SUBST_MESSAGE.scr=	Fixing scripts.
 
-CMAKE_ARGS+=		-DWITH_EDITLINE="system"
-CMAKE_ARGS+=		-DEDITLINE_INCLUDE_DIR=${BUILDLINK_PREFIX.editline}/${BUILDLINK_INCDIRS.editline}
+.include "../../mk/readline.buildlink3.mk"
+
+.if ${READLINE_TYPE} == "readline"
+CMAKE_ARGS+=	-DWITH_READLINE="system"
+.else
+CMAKE_ARGS+=	-DWITH_EDITLINE="system"
+.endif
 
 .if ${OPSYS} == "NetBSD"
 CFLAGS.NetBSD+=		-DHAVE_ALLOCA_H
 CXXFLAGS.NetBSD+=	-DHAVE_ALLOCA_H
 # MySQL code depends on having <alloca.h>
 post-patch:
-	echo "#define alloca(sz) __builtin_alloca(sz)" > ${WRKSRC}/include/alloca.h
+	${ECHO} "#define alloca(sz) __builtin_alloca(sz)" > ${WRKSRC}/include/alloca.h
 .endif
 
-.include "../../mk/curses.buildlink3.mk"
 .include "../../archivers/lz4/buildlink3.mk"
 .include "../../archivers/zstd/buildlink3.mk"
-.include "../../devel/editline/buildlink3.mk"
 .include "../../devel/libevent/buildlink3.mk"
+BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.11
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
