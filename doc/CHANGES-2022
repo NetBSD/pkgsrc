@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5313 2022/11/02 17:02:28 jperkin Exp $
+$NetBSD: CHANGES-2022,v 1.5314 2022/11/02 17:02:40 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8052,3 +8052,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-futures to 3.4.0 [adam 2022-11-02]
 	Updated sysutils/py-psutil to 5.9.3 [adam 2022-11-02]
 	Updated databases/mysql80-client to 8.0.31 [jperkin 2022-11-02]
+	Updated databases/mysql80-server to 8.0.31 [jperkin 2022-11-02]
