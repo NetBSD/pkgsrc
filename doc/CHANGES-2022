@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5301 2022/11/02 08:41:49 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5302 2022/11/02 08:48:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8035,3 +8035,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/xf86-input-mouse to 1.9.4 [wiz 2022-11-02]
 	Updated security/py-cryptography to 38.0.3 [adam 2022-11-02]
 	Updated security/py-cryptography_vectors to 38.0.3 [adam 2022-11-02]
+	Updated net/py-moto to 4.0.9 [adam 2022-11-02]
+	Updated devel/py-pybind11 to 2.10.1 [adam 2022-11-02]
