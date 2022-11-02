@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2022/10/01 11:50:24 fcambus Exp $
+# $NetBSD: Makefile,v 1.35 2022/11/02 09:27:01 fcambus Exp $
 
-DISTNAME=	dbip-city-lite-2022-10.mmdb
-PKGNAME=	dbip-city-lite-2022.10
+DISTNAME=	dbip-city-lite-2022-11.mmdb
+PKGNAME=	dbip-city-lite-2022.11
 CATEGORIES=	net
 MASTER_SITES=	https://download.db-ip.com/free/
 EXTRACT_SUFX=	.gz
