@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:46:48 nia Exp $
+$NetBSD: distinfo,v 1.9 2022/11/02 10:57:29 adam Exp $
 
-BLAKE2s (pygal-2.4.0.tar.gz) = d4daefc7449f1d2089417c0ec5697a21b62fe4524bb4186ee96b0bdb795fe28e
-SHA512 (pygal-2.4.0.tar.gz) = 5cb95ca5c0cf74ae476953f3503154a305a0b5e42c69191b0b46f6e6cfea8c806713fe175329a69b393654d055997b2063cf3b641e91009a2b7bef219bb49ddb
-Size (pygal-2.4.0.tar.gz) = 74686 bytes
+BLAKE2s (pygal-3.0.0.tar.gz) = 6db705174241a05e379819321f664beefee43ee4304fd7298217297a44ace872
+SHA512 (pygal-3.0.0.tar.gz) = 51ad847539ef8c0a092878c51c0c7f0aea4f7f1f30d8b9487997e4d9f4ad50d1af9d51cbdfebea0144d7675539c5af921994dea412ced691a0d3bb6beae1f86d
+Size (pygal-3.0.0.tar.gz) = 80621 bytes
