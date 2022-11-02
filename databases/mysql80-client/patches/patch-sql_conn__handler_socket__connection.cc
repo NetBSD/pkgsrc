@@ -1,4 +1,6 @@
-$NetBSD: patch-sql_conn__handler_socket__connection.cc,v 1.1 2021/05/13 15:25:20 jdolecek Exp $
+$NetBSD: patch-sql_conn__handler_socket__connection.cc,v 1.2 2022/11/02 17:02:10 jperkin Exp $
+
+XXX: undocumented
 
 --- sql/conn_handler/socket_connection.cc.orig	2019-12-09 19:53:17.000000000 +0000
 +++ sql/conn_handler/socket_connection.cc
