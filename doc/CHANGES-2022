@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5299 2022/11/02 07:21:10 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.5300 2022/11/02 08:06:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8032,3 +8032,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated multimedia/libde265 to 1.0.9 [adam 2022-11-01]
 	Updated math/flann-lib to 1.9.2 [adam 2022-11-01]
 	Updated www/py-uwsgi to 2.0.21 [wiz 2022-11-02]
+	Updated x11/xf86-input-mouse to 1.9.4 [wiz 2022-11-02]
