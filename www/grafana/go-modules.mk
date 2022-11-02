@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.18 2022/10/19 03:28:04 triaxx Exp $
+# $NetBSD: go-modules.mk,v 1.19 2022/11/02 12:48:23 triaxx Exp $
 
 GO_MODULE_FILES+=	bazil.org/fuse/@v/v0.0.0-20160811212531-371fbbdaa898.mod
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.100.1.mod
@@ -3022,7 +3022,8 @@ GO_MODULE_FILES+=	golang.org/x/text/@v/v0.3.4.mod
 GO_MODULE_FILES+=	golang.org/x/text/@v/v0.3.5.mod
 GO_MODULE_FILES+=	golang.org/x/text/@v/v0.3.6.mod
 GO_MODULE_FILES+=	golang.org/x/text/@v/v0.3.7.mod
-GO_MODULE_FILES+=	golang.org/x/text/@v/v0.3.7.zip
+GO_MODULE_FILES+=	golang.org/x/text/@v/v0.4.0.mod
+GO_MODULE_FILES+=	golang.org/x/text/@v/v0.4.0.zip
 GO_MODULE_FILES+=	golang.org/x/time/@v/v0.0.0-20180412165947-fbb02b2291d2.mod
 GO_MODULE_FILES+=	golang.org/x/time/@v/v0.0.0-20181108054448-85acf8d2951c.mod
 GO_MODULE_FILES+=	golang.org/x/time/@v/v0.0.0-20190308202827-9d24e82272b4.mod

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.31 2022/10/26 20:16:36 triaxx Exp $
+$NetBSD: distinfo,v 1.32 2022/11/02 12:48:23 triaxx Exp $
 
 BLAKE2s (bazil.org_fuse_@v_v0.0.0-20160811212531-371fbbdaa898.mod) = ff8095283662ae2d2a1968bf429516c54586b1a6c4dc744657162e6781aa8ece
 SHA512 (bazil.org_fuse_@v_v0.0.0-20160811212531-371fbbdaa898.mod) = 7b3ef87f98485bb9ec325680f57d43a9bd76e90bdcfb1e798458f28f7d3addf91dbb6a07b654749468860981413ad2267df2d5f3535c85579e9f79d9328d355c
@@ -9066,9 +9066,12 @@ Size (golang.org_x_text_@v_v0.3.6.mod) = 97 bytes
 BLAKE2s (golang.org_x_text_@v_v0.3.7.mod) = 267ea3094e99e155a492ecd37e9d71c4ea1243519f281f6783ab66fa47524e68
 SHA512 (golang.org_x_text_@v_v0.3.7.mod) = e77211a503c35d8b6c392fc1b44daed580659b997673cd312ae8e579d1d715d7a53f8f0f0dd2d4dedbc6c5ca5ab7e3d52269a6536a42824cce267c89eb29cbbd
 Size (golang.org_x_text_@v_v0.3.7.mod) = 97 bytes
-BLAKE2s (golang.org_x_text_@v_v0.3.7.zip) = b10b37a149e1f4382565db7b08da3412dbb8f8ce19acec33e4b4d1ea7c85ccd0
-SHA512 (golang.org_x_text_@v_v0.3.7.zip) = fb5d646d5f23fbb33acfe486714d647d7da091fc47cc7ec805afa4f78b070ed3ccc0022428f4672280ff85a7b4d8af3543647647f00ce62f2f3a18a6d425f863
-Size (golang.org_x_text_@v_v0.3.7.zip) = 8610883 bytes
+BLAKE2s (golang.org_x_text_@v_v0.4.0.mod) = fe5eb66d25e871119ece4a071dc3907f9628069539e47210379439c1295cdf87
+SHA512 (golang.org_x_text_@v_v0.4.0.mod) = 3c990818dec261358f7de189c4603e4c27637ae73f676d5a6e644534a43b6cf8c87907c96dd23fd6aa17682cd18f2f0a6579eea5eb3b4b388ac9737e5c5f6b76
+Size (golang.org_x_text_@v_v0.4.0.mod) = 258 bytes
+BLAKE2s (golang.org_x_text_@v_v0.4.0.zip) = 8b1cbff8f433b028e376a691e81936e108cf1196316b1867988cd802ba64bd79
+SHA512 (golang.org_x_text_@v_v0.4.0.zip) = 9c51bb7afb75e08f6e1450f7290b68fbd5e84783372bdd45a25f64bc1199b743889fb50625e9d93eb3fc2e03611194d30b7ca74fbe666ec3d56d5b97a2c23fb9
+Size (golang.org_x_text_@v_v0.4.0.zip) = 8615035 bytes
 BLAKE2s (golang.org_x_time_@v_v0.0.0-20180412165947-fbb02b2291d2.mod) = f8a17647799023d32e6a0af341ba3fc6e74004a882f89f943385a363c1b64af4
 SHA512 (golang.org_x_time_@v_v0.0.0-20180412165947-fbb02b2291d2.mod) = 6e51811c33b84ddd4a7548013579204266e466bd2e87aa9b6e34892570aa09c607ffa806f8a420474e26ca0e277ab23c81bb07b0ebf2c3b6ed193014c1bc37a7
 Size (golang.org_x_time_@v_v0.0.0-20180412165947-fbb02b2291d2.mod) = 25 bytes
@@ -10374,12 +10377,12 @@ Size (gotest.tools_v3_@v_v3.0.2.mod) = 194 bytes
 BLAKE2s (gotest.tools_v3_@v_v3.0.3.mod) = 139458d80f28acbdd716ff629a2b16f184569b6ee0988096a9272bc81764ac7e
 SHA512 (gotest.tools_v3_@v_v3.0.3.mod) = 027bab5202a25d01ab9b9a87feaf66333ef376daa9c5c12d5bfeaf1624537a895e770c8e927a474589b23af2456d2a7f5a03708f80464cdb3351a64981a4a9dd
 Size (gotest.tools_v3_@v_v3.0.3.mod) = 194 bytes
-BLAKE2s (grafana-9.2.2.linux-amd64.tar.gz) = 69598b93af44d8f9bc1f7a5e253d8abed30d5a8abdf6284f864d70cd6b6ab783
-SHA512 (grafana-9.2.2.linux-amd64.tar.gz) = 1d19ee584fa9b8e46ff270bcd2e3af95406b5b028032be44b605597a27552053b9ceaf88f520394195f5a20f9233e6cdb40a0e86f6ea59c5e163ec3f422ff242
-Size (grafana-9.2.2.linux-amd64.tar.gz) = 96893681 bytes
-BLAKE2s (grafana-9.2.2.tar.gz) = 0ddb865daf51a4cfe8bed6a6288d3e885f5e29b6dec910ae37fc0223a45563b4
-SHA512 (grafana-9.2.2.tar.gz) = 72a94d85bedd74c092f2a4ee15e27f705fd8e5df5021fd355bac829953dca09bc9fe441d0a3d5d4996c9d2303b61c6d103506ef917f098d5a4e57eb26e1ae6db
-Size (grafana-9.2.2.tar.gz) = 25242876 bytes
+BLAKE2s (grafana-9.2.3.linux-amd64.tar.gz) = 1d0babfe636ab0e1a2bd593123d5e19f94b576d54cea881edd043a3ebd7c7b72
+SHA512 (grafana-9.2.3.linux-amd64.tar.gz) = d9f89fb84d53dc3de955f90f730f3ab79ea1d3c776637c035d563af56f4923dd7c1e7dc8b82159cfd84fd873b85b4c3dd0038287bb8bc03ee2fa51d4c9cb4239
+Size (grafana-9.2.3.linux-amd64.tar.gz) = 96896894 bytes
+BLAKE2s (grafana-9.2.3.tar.gz) = e892b5bc7f87ccd40406c7760955f9fd0ac78f47ed71a05962b7f55f5ed6b3ba
+SHA512 (grafana-9.2.3.tar.gz) = 7a37d377d411de95120c81c10d97e8f387b017f8986bab2fbb41c10ffbe30a18538053763ed6be9edf5106f4f14402a8fdd8c408e2344ee0bd31cd93f980ac39
+Size (grafana-9.2.3.tar.gz) = 25235347 bytes
 BLAKE2s (honnef.co_go_tools_@v_v0.0.0-20180728063816-88497007e858.mod) = 38e66bb2bbbbabd21beff5a5718735267b1611dbdf7da56c7fb6500d6cb784f1
 SHA512 (honnef.co_go_tools_@v_v0.0.0-20180728063816-88497007e858.mod) = d00ae74b24e7fb3ff351ff68b88e59636153bbcf92b36e81e91556e3e75a7ccfb08ce471f757f92fd7612378944de3d7309c73923812e2df6a26b74e999ca9ce
 Size (honnef.co_go_tools_@v_v0.0.0-20180728063816-88497007e858.mod) = 26 bytes
