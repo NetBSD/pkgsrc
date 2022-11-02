@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.127 2022/09/30 15:57:28 micha Exp $
+# $NetBSD: Makefile,v 1.128 2022/11/02 11:38:27 micha Exp $
 
-DISTNAME=	2022-09-18
+DISTNAME=	2022-10-16
 PKGNAME=	cdrtools-3.02a10
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	https://codeberg.org/schilytools/schilytools/archive/
 DIST_SUBDIR=	schilytools
