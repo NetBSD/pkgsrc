@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2022/10/30 11:15:06 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2022/11/02 22:39:29 tnn Exp $
 
 DISTNAME=	taglib-1.13
 CATEGORIES=	audio
@@ -25,6 +25,16 @@ SUBST_FILES.pc=		taglib-config.cmake
 SUBST_STAGE.pc=		pre-configure
 SUBST_SED.pc=		-e 's|-L\([ 	]*[^ 	]*\)|${COMPILER_RPATH_FLAG}\1 -L\1|g'
 SUBST_MESSAGE.pc=	Fixing rpath in taglib-config.
+
+.include "../../mk/bsd.prefs.mk"
+
+.if !empty(PKGSRC_RUN_TEST:M[yY][eE][sS])
+TEST_TARGET=			test
+CMAKE_ARGS+=			-DBUILD_TESTING=ON
+.include "../../devel/cppunit/buildlink3.mk"
+.else
+CMAKE_ARGS+=			-DBUILD_TESTING=OFF
+.endif
 
 .include "../../mk/compiler.mk"
 #
