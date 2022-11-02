@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2022/01/04 20:53:07 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2022/11/02 13:05:57 adam Exp $
 
-DISTNAME=	futures-3.3.0
+DISTNAME=	futures-3.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/futures/}
 
