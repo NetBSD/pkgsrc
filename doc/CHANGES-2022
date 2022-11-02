@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5310 2022/11/02 12:41:50 leot Exp $
+$NetBSD: CHANGES-2022,v 1.5311 2022/11/02 12:48:39 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8048,3 +8048,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/ansible-lint to 6.8.6 [adam 2022-11-02]
 	Updated sysutils/cdrtools to 3.02a10nb2 [micha 2022-11-02]
 	Updated devel/conftest to 0.35.0 [leot 2022-11-02]
+	Updated www/grafana to 9.2.3 [triaxx 2022-11-02]
