@@ -1,4 +1,6 @@
-$NetBSD: patch-include_my__thread.h,v 1.1 2021/05/13 15:25:20 jdolecek Exp $
+$NetBSD: patch-include_my__thread.h,v 1.2 2022/11/02 17:02:10 jperkin Exp $
+
+NetBSD needs extra headers.
 
 --- include/my_thread.h.orig	2019-12-09 19:53:17.000000000 +0000
 +++ include/my_thread.h
