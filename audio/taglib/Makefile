@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2022/11/02 22:39:29 tnn Exp $
+# $NetBSD: Makefile,v 1.45 2022/11/02 22:54:39 tnn Exp $
 
 DISTNAME=	taglib-1.13
 CATEGORIES=	audio
@@ -43,6 +43,19 @@ CMAKE_ARGS+=			-DBUILD_TESTING=OFF
 .if ${OPSYS} == "NetBSD" && !empty(CC_VERSION:Mgcc-[4-9]*) && ${MACHINE_ARCH} == i386
 GNU_ARCH.i386=		i486
 CFLAGS+=		-march=i486
+.endif
+
+.if ${OPSYS} == "Darwin"
+post-install:
+	install_name_tool -id				\
+	  ${PREFIX}/lib/libtag.1.dylib			\
+	  ${DESTDIR}${PREFIX}/lib/libtag.1.19.0.dylib
+	install_name_tool -id				\
+	  ${PREFIX}/lib/libtag_c.0.dylib		\
+	  ${DESTDIR}${PREFIX}/lib/libtag_c.0.0.0.dylib  \
+	  -change					\
+	  lib/libtag.1.dylib				\
+	  ${PREFIX}/lib/libtag.1.dylib
 .endif
 
 .include "../../devel/zlib/buildlink3.mk"
