@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5305 2022/11/02 09:33:37 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.5306 2022/11/02 10:48:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8040,3 +8040,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/dbip-asn-lite to 2022.11 [fcambus 2022-11-02]
 	Updated net/dbip-city-lite to 2022.11 [fcambus 2022-11-02]
 	Updated net/dbip-country-lite to 2022.11 [fcambus 2022-11-02]
+	Updated misc/dpkg to 1.21.9 [adam 2022-11-02]
+	Updated misc/stellarium to 1.1 [adam 2022-11-02]
