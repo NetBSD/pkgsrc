@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5308 2022/11/02 11:25:11 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5309 2022/11/02 11:40:34 micha Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8046,3 +8046,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated time/py-pytz to 2022.6 [adam 2022-11-02]
 	Updated sysutils/py-ansible-compat to 2.2.4 [adam 2022-11-02]
 	Updated sysutils/ansible-lint to 6.8.6 [adam 2022-11-02]
+	Updated sysutils/cdrtools to 3.02a10nb2 [micha 2022-11-02]
