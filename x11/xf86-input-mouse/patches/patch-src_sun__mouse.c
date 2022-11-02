@@ -1,6 +1,7 @@
-$NetBSD: patch-src_sun__mouse.c,v 1.2 2016/11/17 08:06:52 wiz Exp $
+$NetBSD: patch-src_sun__mouse.c,v 1.3 2022/11/02 08:13:23 wiz Exp $
 
 rearrange includes to fix build on OmniOS. Include unistd.h for ioctl(2).
+https://gitlab.freedesktop.org/xorg/driver/xf86-input-mouse/-/merge_requests/4
 
 --- src/sun_mouse.c.orig	2014-08-12 06:36:34.000000000 +0000
 +++ src/sun_mouse.c
