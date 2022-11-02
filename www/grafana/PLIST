@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.27 2022/10/26 20:16:36 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.28 2022/11/02 12:48:23 triaxx Exp $
 bin/grafana-cli
 bin/grafana-server
+share/examples/rc.d/grafana
 share/grafana/conf/defaults.ini
 share/grafana/conf/ldap.toml
 share/grafana/conf/ldap_multiple.toml
@@ -770,6 +771,7 @@ share/grafana/public/app/features/alerting/unified/types/receiver-form.ts
 share/grafana/public/app/features/alerting/unified/types/rule-form.ts
 share/grafana/public/app/features/alerting/unified/types/silence-form.ts
 share/grafana/public/app/features/alerting/unified/types/time.ts
+share/grafana/public/app/features/alerting/unified/utils/__snapshots__/rule-form.test.ts.snap
 share/grafana/public/app/features/alerting/unified/utils/__snapshots__/rule-id.test.ts.snap
 share/grafana/public/app/features/alerting/unified/utils/access-control.ts
 share/grafana/public/app/features/alerting/unified/utils/accessControlHooks.ts
@@ -795,6 +797,7 @@ share/grafana/public/app/features/alerting/unified/utils/receiver-form.test.ts
 share/grafana/public/app/features/alerting/unified/utils/receiver-form.ts
 share/grafana/public/app/features/alerting/unified/utils/receivers.ts
 share/grafana/public/app/features/alerting/unified/utils/redux.ts
+share/grafana/public/app/features/alerting/unified/utils/rule-form.test.ts
 share/grafana/public/app/features/alerting/unified/utils/rule-form.ts
 share/grafana/public/app/features/alerting/unified/utils/rule-id.test.ts
 share/grafana/public/app/features/alerting/unified/utils/rule-id.ts
@@ -2129,7 +2132,6 @@ share/grafana/public/app/plugins/datasource/cloud-monitoring/components/AliasBy.
 share/grafana/public/app/plugins/datasource/cloud-monitoring/components/Alignment.test.tsx
 share/grafana/public/app/plugins/datasource/cloud-monitoring/components/Alignment.tsx
 share/grafana/public/app/plugins/datasource/cloud-monitoring/components/AlignmentFunction.tsx
-share/grafana/public/app/plugins/datasource/cloud-monitoring/components/AlignmentPeriodLabel.tsx
 share/grafana/public/app/plugins/datasource/cloud-monitoring/components/AnnotationQueryEditor.test.tsx
 share/grafana/public/app/plugins/datasource/cloud-monitoring/components/AnnotationQueryEditor.tsx
 share/grafana/public/app/plugins/datasource/cloud-monitoring/components/AnnotationsHelp.tsx
@@ -2944,6 +2946,7 @@ share/grafana/public/app/plugins/datasource/prometheus/configuration/AzureCreden
 share/grafana/public/app/plugins/datasource/prometheus/configuration/ConfigEditor.tsx
 share/grafana/public/app/plugins/datasource/prometheus/configuration/ExemplarSetting.tsx
 share/grafana/public/app/plugins/datasource/prometheus/configuration/ExemplarsSettings.tsx
+share/grafana/public/app/plugins/datasource/prometheus/configuration/PromFlavorVersions.ts
 share/grafana/public/app/plugins/datasource/prometheus/configuration/PromSettings.test.tsx
 share/grafana/public/app/plugins/datasource/prometheus/configuration/PromSettings.tsx
 share/grafana/public/app/plugins/datasource/prometheus/configuration/mocks.ts
@@ -2955,6 +2958,7 @@ share/grafana/public/app/plugins/datasource/prometheus/datasource.tsx
 share/grafana/public/app/plugins/datasource/prometheus/img/cortex_logo.svg
 share/grafana/public/app/plugins/datasource/prometheus/img/mimir_logo.svg
 share/grafana/public/app/plugins/datasource/prometheus/img/prometheus_logo.svg
+share/grafana/public/app/plugins/datasource/prometheus/img/thanos_logo.svg
 share/grafana/public/app/plugins/datasource/prometheus/language_provider.mock.ts
 share/grafana/public/app/plugins/datasource/prometheus/language_provider.test.ts
 share/grafana/public/app/plugins/datasource/prometheus/language_provider.ts
@@ -3768,9 +3772,9 @@ share/grafana/public/build/3499.cdd66e7ab1c06d0d350f.js.map
 share/grafana/public/build/3590.380638a235539199c060.js
 share/grafana/public/build/3590.380638a235539199c060.js.LICENSE.txt
 share/grafana/public/build/3590.380638a235539199c060.js.map
-share/grafana/public/build/3593.50eee21d2f7b3f7d0151.js
-share/grafana/public/build/3593.50eee21d2f7b3f7d0151.js.LICENSE.txt
-share/grafana/public/build/3593.50eee21d2f7b3f7d0151.js.map
+share/grafana/public/build/3593.68f2b385d6dfe4902410.js
+share/grafana/public/build/3593.68f2b385d6dfe4902410.js.LICENSE.txt
+share/grafana/public/build/3593.68f2b385d6dfe4902410.js.map
 share/grafana/public/build/3675.c3a9877e14ba507c42f3.js
 share/grafana/public/build/3675.c3a9877e14ba507c42f3.js.map
 share/grafana/public/build/3711.57bcf19ff85eb67f09ad.js
@@ -3830,8 +3834,8 @@ share/grafana/public/build/4909.a4f3fea6c12d529804ec.js.LICENSE.txt
 share/grafana/public/build/4909.a4f3fea6c12d529804ec.js.map
 share/grafana/public/build/4933.f04b5a74af75fc7c480e.js
 share/grafana/public/build/4933.f04b5a74af75fc7c480e.js.map
-share/grafana/public/build/5334.96c680682223ff6143ce.js
-share/grafana/public/build/5334.96c680682223ff6143ce.js.map
+share/grafana/public/build/5334.4f3a2f89923436c50ec0.js
+share/grafana/public/build/5334.4f3a2f89923436c50ec0.js.map
 share/grafana/public/build/5386.47ca38d8f7729274aee1.js
 share/grafana/public/build/5386.47ca38d8f7729274aee1.js.LICENSE.txt
 share/grafana/public/build/5386.47ca38d8f7729274aee1.js.map
@@ -3992,12 +3996,14 @@ share/grafana/public/build/9261.1d96fc6e4c5976e37a51.js.map
 share/grafana/public/build/9285.1949c4374b076eef75cc.js
 share/grafana/public/build/9285.1949c4374b076eef75cc.js.LICENSE.txt
 share/grafana/public/build/9285.1949c4374b076eef75cc.js.map
+share/grafana/public/build/935.a0ba73a2d13984edd903.js
+share/grafana/public/build/935.a0ba73a2d13984edd903.js.map
 share/grafana/public/build/9405.1eefaa6a96cbc3b45c92.js
 share/grafana/public/build/9405.1eefaa6a96cbc3b45c92.js.LICENSE.txt
 share/grafana/public/build/9405.1eefaa6a96cbc3b45c92.js.map
-share/grafana/public/build/9467.558169d291f6849e6aa1.js
-share/grafana/public/build/9467.558169d291f6849e6aa1.js.LICENSE.txt
-share/grafana/public/build/9467.558169d291f6849e6aa1.js.map
+share/grafana/public/build/9467.6e8232dddf2d5f7e525f.js
+share/grafana/public/build/9467.6e8232dddf2d5f7e525f.js.LICENSE.txt
+share/grafana/public/build/9467.6e8232dddf2d5f7e525f.js.map
 share/grafana/public/build/9485.5c2fee7271c0613a47d6.js
 share/grafana/public/build/9485.5c2fee7271c0613a47d6.js.LICENSE.txt
 share/grafana/public/build/9485.5c2fee7271c0613a47d6.js.map
@@ -4041,8 +4047,8 @@ share/grafana/public/build/AlertSilences.3266d8837895b0af35ff.js
 share/grafana/public/build/AlertSilences.3266d8837895b0af35ff.js.map
 share/grafana/public/build/AlertTabCtrl.85d6ba5f77a2178ef937.js
 share/grafana/public/build/AlertTabCtrl.85d6ba5f77a2178ef937.js.map
-share/grafana/public/build/AlertingAdmin.e8ac89228a289dd5f765.js
-share/grafana/public/build/AlertingAdmin.e8ac89228a289dd5f765.js.map
+share/grafana/public/build/AlertingAdmin.9adc4a700c40605a5e31.js
+share/grafana/public/build/AlertingAdmin.9adc4a700c40605a5e31.js.map
 share/grafana/public/build/AlertingFeatureTogglePage.41a5cb3260e55a6161c4.js
 share/grafana/public/build/AlertingFeatureTogglePage.41a5cb3260e55a6161c4.js.map
 share/grafana/public/build/AlertingRedirectToRule.770908a0c39340b035bb.js
@@ -4072,10 +4078,10 @@ share/grafana/public/build/CreateTeam.7a5f2bd6e2703d693187.js
 share/grafana/public/build/CreateTeam.7a5f2bd6e2703d693187.js.map
 share/grafana/public/build/DashboardImport.fad12cf0c3dc57672bf8.js
 share/grafana/public/build/DashboardImport.fad12cf0c3dc57672bf8.js.map
-share/grafana/public/build/DashboardListPage.2a595eb8f4c392f8d5bf.js
-share/grafana/public/build/DashboardListPage.2a595eb8f4c392f8d5bf.js.map
-share/grafana/public/build/DashboardPage.addf7c66abb17ffa5168.js
-share/grafana/public/build/DashboardPage.addf7c66abb17ffa5168.js.map
+share/grafana/public/build/DashboardListPage.bcd8038d2439cf0b8d0d.js
+share/grafana/public/build/DashboardListPage.bcd8038d2439cf0b8d0d.js.map
+share/grafana/public/build/DashboardPage.d6b6e66f0fe0876573b4.js
+share/grafana/public/build/DashboardPage.d6b6e66f0fe0876573b4.js.map
 share/grafana/public/build/DataConnectionsPage.28cb45f971cdfca56ab5.js
 share/grafana/public/build/DataConnectionsPage.28cb45f971cdfca56ab5.js.map
 share/grafana/public/build/DataSourceDashboards.5a921852b6536884071b.js
@@ -4180,12 +4186,12 @@ share/grafana/public/build/brace.edb33d518abc1f1a9670.js.map
 share/grafana/public/build/canvasPanel.3375af8ac0a941fcb628.js
 share/grafana/public/build/canvasPanel.3375af8ac0a941fcb628.js.LICENSE.txt
 share/grafana/public/build/canvasPanel.3375af8ac0a941fcb628.js.map
-share/grafana/public/build/cloudMonitoringPlugin.2b54bbcb59c3a987d375.js
-share/grafana/public/build/cloudMonitoringPlugin.2b54bbcb59c3a987d375.js.map
+share/grafana/public/build/cloudMonitoringPlugin.d6634f1059eb01d390e7.js
+share/grafana/public/build/cloudMonitoringPlugin.d6634f1059eb01d390e7.js.map
 share/grafana/public/build/cloudwatchPlugin.b841aaf00f89d609e206.js
 share/grafana/public/build/dark.fa07f40772cfbfcc2378.js
-share/grafana/public/build/elasticsearchPlugin.c50a58d47205bbb81207.js
-share/grafana/public/build/elasticsearchPlugin.c50a58d47205bbb81207.js.map
+share/grafana/public/build/elasticsearchPlugin.da08164816098f4c83d5.js
+share/grafana/public/build/elasticsearchPlugin.da08164816098f4c83d5.js.map
 share/grafana/public/build/explore-feature-toggle-page.6ccfa5690b5777fcdede.js
 share/grafana/public/build/explore-feature-toggle-page.6ccfa5690b5777fcdede.js.map
 share/grafana/public/build/explore.278ac94d79c0c9010b9c.js
@@ -4224,15 +4230,15 @@ share/grafana/public/build/postgresPlugin.af5ed11269fbd6b3b56d.js
 share/grafana/public/build/postgresPlugin.af5ed11269fbd6b3b56d.js.map
 share/grafana/public/build/prom-query-field.c291116a0d6f1677cf0e.js
 share/grafana/public/build/prom-query-field.c291116a0d6f1677cf0e.js.map
-share/grafana/public/build/prometheusPlugin.c86d3007063b808f9ba7.js
-share/grafana/public/build/prometheusPlugin.c86d3007063b808f9ba7.js.map
+share/grafana/public/build/prometheusPlugin.8777016efe723b430d91.js
+share/grafana/public/build/prometheusPlugin.8777016efe723b430d91.js.map
 share/grafana/public/build/react-monaco-editor.2cf36415a1ed29e871a3.js
 share/grafana/public/build/react-monaco-editor.2cf36415a1ed29e871a3.js.map
 share/grafana/public/build/rst2html.3d128ffac9ac95da6ce0.js
 share/grafana/public/build/rst2html.3d128ffac9ac95da6ce0.js.LICENSE.txt
 share/grafana/public/build/rst2html.3d128ffac9ac95da6ce0.js.map
-share/grafana/public/build/runtime.f3375e2e607fd780d766.js
-share/grafana/public/build/runtime.f3375e2e607fd780d766.js.map
+share/grafana/public/build/runtime.7354b393eba1aec64e50.js
+share/grafana/public/build/runtime.7354b393eba1aec64e50.js.map
 share/grafana/public/build/scenes.d32cfb92881b6c3671d9.js
 share/grafana/public/build/scenes.d32cfb92881b6c3671d9.js.map
 share/grafana/public/build/static/img/codicon.b797181c.ttf
