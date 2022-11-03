@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.104 2022/11/03 08:43:27 wiz Exp $
+$NetBSD: distinfo,v 1.105 2022/11/03 20:52:29 triaxx Exp $
 
 BLAKE2s (libdrm-2.4.114.tar.xz) = 3d6b42ff266c0805897a7e7e51c6dcb87f6aef45506eff12a44e87cf68c2cff3
 SHA512 (libdrm-2.4.114.tar.xz) = 8dcd4be5674e3ea2ab4394fa8f461914e5aa7f4f57a2f448c5216d84ee6682e16b45eafabf97b7d9f5c062183d9a6bf3f0c97499d4cb01c19807a51209a0f644
@@ -10,7 +10,7 @@ SHA1 (patch-exynos_exynos__drm.c) = 3fa4c8a592a5f4e0c4001eb6fa1bc7811e398605
 SHA1 (patch-exynos_exynos__fimg2d.c) = 298438b128bdb4ff57a8c0d7d6a081485e64e49a
 SHA1 (patch-include_drm_drm.h) = 48a912f40bf2b2a1c23edbe4446fa7869212f17b
 SHA1 (patch-libsync.h) = 1e0603e72a54a069fc9d2ab2c9559d22381a69d3
-SHA1 (patch-meson.build) = 525c18d9ecb35898c726f95defe1439eeef2ab9b
+SHA1 (patch-meson.build) = e8f0081074c04034c3eb80dbba2422356e91c9f0
 SHA1 (patch-omap_omap__drm.c) = a23eefa9a57315d3ae77e528fd29de70ff9b2648
 SHA1 (patch-tests_exynos_exynos__fimg2d__test.c) = 9fc874ecc9a42db75327f736d04038f7cf8f00ff
 SHA1 (patch-tests_nouveau_threaded.c) = 82b566666e77898c209d66ce804c913b53e53a50
