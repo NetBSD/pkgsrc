@@ -1,4 +1,4 @@
-# $NetBSD: bsd.install-vars.mk,v 1.12 2022/10/12 10:47:00 jperkin Exp $
+# $NetBSD: bsd.install-vars.mk,v 1.13 2022/11/03 08:29:32 jperkin Exp $
 #
 # This Makefile fragment is included separately by bsd.pkg.mk and
 # defines some variables which must be defined earlier than where
@@ -63,11 +63,11 @@ TOOLS_CREATE+=		ctfconvert
 TOOLS_PATH.ctfconvert=	${TOOLS_PLATFORM.ctfconvert}
 TOOLS_ARGS.ctfconvert?=	-i
 CTFCONVERT?=		ctfconvert
-CTF_FILES_SKIP?=	include/* info/* share/* ${PKGMANDIR}/*
+CTF_FILES_SKIP?=
 .endif
 
 STRIP_DEBUG?=		no
-STRIP_FILES_SKIP?=	include/* info/* share/* ${PKGMANDIR}/*
+STRIP_FILES_SKIP?=
 
 .if !empty(_MANCOMPRESSED:M[yY][eE][sS]) && empty(_MANZ:M[yY][eE][sS])
 USE_TOOLS+=	gunzip
