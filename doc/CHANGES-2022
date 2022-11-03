@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5320 2022/11/03 07:50:35 taca Exp $
+$NetBSD: CHANGES-2022,v 1.5321 2022/11/03 08:43:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8059,3 +8059,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated editors/tp-note to 1.18.2 [pin 2022-11-02]
 	Removed audio/py-audiotools [wiz 2022-11-03]
 	Updated time/ruby-tzinfo-data to 1.2022.6 [taca 2022-11-03]
+	Updated x11/libdrm to 2.4.114 [wiz 2022-11-03]
