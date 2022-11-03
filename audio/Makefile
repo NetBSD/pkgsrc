@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.660 2022/10/02 13:41:54 nros Exp $
+# $NetBSD: Makefile,v 1.661 2022/11/03 06:16:31 wiz Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -401,7 +401,6 @@ SUBDIR+=	py-acoustid
 SUBDIR+=	py-ao
 SUBDIR+=	py-audio
 SUBDIR+=	py-audioread
-SUBDIR+=	py-audiotools
 SUBDIR+=	py-beets
 SUBDIR+=	py-cddb
 SUBDIR+=	py-daap
