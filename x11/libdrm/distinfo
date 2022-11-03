@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.103 2022/09/09 15:28:16 wiz Exp $
+$NetBSD: distinfo,v 1.104 2022/11/03 08:43:27 wiz Exp $
 
-BLAKE2s (libdrm-2.4.113.tar.xz) = 46c8ed7c99419d99b969b261e0809440c885ddd3bc6aaaa03a0cce34f70a1293
-SHA512 (libdrm-2.4.113.tar.xz) = fca9834ce090f63ce6dc6d04491a2c5e86162fdddfc8ea70d55a6cdeb401be656388aae1577e58f463a78d8dc502be0a641908784819874e20bbec9a39a057e0
-Size (libdrm-2.4.113.tar.xz) = 457064 bytes
+BLAKE2s (libdrm-2.4.114.tar.xz) = 3d6b42ff266c0805897a7e7e51c6dcb87f6aef45506eff12a44e87cf68c2cff3
+SHA512 (libdrm-2.4.114.tar.xz) = 8dcd4be5674e3ea2ab4394fa8f461914e5aa7f4f57a2f448c5216d84ee6682e16b45eafabf97b7d9f5c062183d9a6bf3f0c97499d4cb01c19807a51209a0f644
+Size (libdrm-2.4.114.tar.xz) = 471664 bytes
 SHA1 (patch-ac) = 67c998df7dfc0dabc86320ea6d015cede3e464ea
 SHA1 (patch-amdgpu_amdgpu__cs.c) = 125eca62cd3e00a6e039066152780174dcde0705
 SHA1 (patch-etnaviv_etnaviv__device.c) = 236b2df05a918c35c4decfee416ff5bfe9c073d4
