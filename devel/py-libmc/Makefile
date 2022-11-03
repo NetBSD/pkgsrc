@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2022/01/10 23:46:48 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2022/11/03 11:50:39 adam Exp $
 
-DISTNAME=	pylibmc-1.6.1
+DISTNAME=	pylibmc-1.6.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pylibmc/}
 
