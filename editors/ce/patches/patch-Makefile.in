@@ -1,0 +1,49 @@
+$NetBSD: patch-Makefile.in,v 1.1 2022/11/03 14:34:02 schmonz Exp $
+
+Support DESTDIR and 'x11' option.
+
+--- Makefile.in.orig	2020-01-07 19:17:43
++++ Makefile.in
+@@ -94,11 +94,11 @@ LINTFLAGS=	-chx
+ 		-DXCEVERSION='"$(XCEVERSION)"' -DHOSTINFO='"$(OS)"'
+ 
+ LINTFLAGS=	-chx
+-DESTDIR=	$(bindir)
+-MANDIR=		$(man1dir)
++BINDIR=		${DESTDIR}$(bindir)
++MANDIR=		${DESTDIR}$(man1dir)
+ 
+ # DOCDIR must agree with the definition for LIBDIR in the source (see ce.h)
+-DOCDIR=		$(libdir)/ce
++DOCDIR=		${DESTDIR}$(libdir)/ce
+ 
+ CFILES=		basic.c bind.c buffer.c bug.c cinfo.c cmode.c \
+ 		complete.c dir.c display.c file.c fileio.c fio.c func.c \
+@@ -249,13 +249,11 @@ install:	${PROG} ${XPROG} installdirs
+ 	@${SHELL} $(SUPPORT_SRC)/mkdirs $(DOCDIR)   
+ 
+ install:	${PROG} ${XPROG} installdirs
+-	-$(MV) ${DESTDIR}/${PROG} ${DESTDIR}/${PROG}.${OLDEXT}
+-	$(INSTALL_PROGRAM) $(PROG) $(DESTDIR)/${PROG}
++	$(INSTALL_PROGRAM) $(PROG) $(BINDIR)/${PROG}
+ 	@-if test "X$(XPROG)" != "X" ; then \
+-		$(MV) ${DESTDIR}/${XPROG} ${DESTDIR}/${XPROG}.${OLDEXT}; \
+-		$(INSTALL_PROGRAM) $(XPROG) $(DESTDIR)/${XPROG}; \
++		$(INSTALL_PROGRAM) $(XPROG) $(BINDIR)/${XPROG}; \
+ 	fi
+-	$(INSTALL_SCRIPT) $(TEACHCE) $(DESTDIR)/$(TEACHCE)
++	$(INSTALL_SCRIPT) $(TEACHCE) $(BINDIR)/$(TEACHCE)
+ 
+ install-strip:
+ 	$(MAKE) $(MFLAGS) INSTALL_PROGRAM='$(INSTALL_PROGRAM) -s' \
+@@ -268,7 +266,9 @@ man-install: installdirs
+ 
+ man-install: installdirs
+ 	${INSTALL_DATA} ${DOC_SRC}/ce.1 $(MANDIR)/ce.1
+-	${INSTALL_DATA} ${DOC_SRC}/xce.1 $(MANDIR)/xce.1
++	@-if test "X$(XPROG)" != "X" ; then \
++		${INSTALL_DATA} ${DOC_SRC}/xce.1 $(MANDIR)/xce.1; \
++	fi
+ 
+ all-install:	install doc-install man-install
+ 
