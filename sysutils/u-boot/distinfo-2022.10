@@ -1,0 +1,6 @@
+$NetBSD: distinfo-2022.10,v 1.1 2022/11/03 10:55:48 jmcneill Exp $
+
+BLAKE2s (u-boot-2022.10.tar.bz2) = 6aa706dd5fa967d9a0d4aff72b3dfc717760035af5c8d9eb8e96b849d651329b
+SHA512 (u-boot-2022.10.tar.bz2) = 95bc1f915a3349f6045e59f46d8514485ca0de1d62303f7026b8e59f3ac539b9545895e0dd736ed7b26f28239db31672ecad2accc3fd99356a55269697039147
+Size (u-boot-2022.10.tar.bz2) = 18365430 bytes
+SHA1 (patch-scripts_Makefile.spl) = 4b92e1e83e09105a57af9b6d7520abfd46b04b17
