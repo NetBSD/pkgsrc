@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5323 2022/11/03 10:46:31 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5324 2022/11/03 10:58:22 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8063,3 +8063,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/pixman to 0.42.2 [wiz 2022-11-03]
 	Updated devel/py-hypothesis to 6.56.4 [adam 2022-11-03]
 	Updated math/py-numexpr to 2.8.4 [adam 2022-11-03]
+	Added sysutils/u-boot-zynq-zturn version 2022.10 [jmcneill 2022-11-03]
