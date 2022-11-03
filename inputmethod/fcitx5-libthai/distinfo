@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2022/04/10 07:59:29 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/11/03 12:35:00 nros Exp $
 
 BLAKE2s (fcitx5-libthai-5.0.2.tar.xz) = cd53e04503c9d895a766ac3196995ccb61aa2db93fd3c28460e5577dde773a87
 SHA512 (fcitx5-libthai-5.0.2.tar.xz) = 660ba7ec3142cc0d568a1af2d77659778ea83c0b3f1a9fd9ca5fe40969f9f2e41fd7cf66f9932cc6479c25d511f2553f6aedfff64950da7bfc06b92bb5100e63
 Size (fcitx5-libthai-5.0.2.tar.xz) = 14556 bytes
-SHA1 (patch-src_iconvwrapper.cpp) = 2856fdb143ef45e3aff65c83e74bda58381ae2ea
+SHA1 (patch-src_iconvwrapper.cpp) = 7091164fa3e3d205500e91e689ca5e0f051845b5
