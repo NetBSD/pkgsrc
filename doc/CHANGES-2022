@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5318 2022/11/02 21:05:01 pin Exp $
+$NetBSD: CHANGES-2022,v 1.5319 2022/11/03 06:16:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8057,3 +8057,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/links-gui to 2.28 [fcambus 2022-11-02]
 	Updated security/libretls to 3.5.2 [schmonz 2022-11-02]
 	Updated editors/tp-note to 1.18.2 [pin 2022-11-02]
+	Removed audio/py-audiotools [wiz 2022-11-03]
