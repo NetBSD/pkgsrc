@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2022/11/03 14:34:02 schmonz Exp $
+# $NetBSD: Makefile,v 1.24 2022/11/03 14:41:22 schmonz Exp $
 
 DISTNAME=		ce-${VERSION}
 VERSION=		4.8
@@ -18,7 +18,6 @@ GNU_CONFIGURE=		yes
 GNU_CONFIGURE_LIBDIR=	${PREFIX}/share/doc
 CONFIGURE_ARGS+=	--without-ce-malloc
 
-#BUILD_TARGET=		ce
 INSTALL_TARGET=		all-install
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/ce
