@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5331 2022/11/03 14:36:12 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.5332 2022/11/03 20:35:07 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8074,3 +8074,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated editors/ce to 4.8 [schmonz 2022-11-03]
 	Removed editors/ce-doc successor editors/ce [schmonz 2022-11-03]
 	Removed editors/ce-x11 successor editors/ce [schmonz 2022-11-03]
+	Updated x11/libdrm to 2.4.113nb1 [triaxx 2022-11-03]
