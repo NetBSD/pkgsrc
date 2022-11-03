@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5321 2022/11/03 08:43:36 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.5322 2022/11/03 08:51:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8060,3 +8060,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed audio/py-audiotools [wiz 2022-11-03]
 	Updated time/ruby-tzinfo-data to 1.2022.6 [taca 2022-11-03]
 	Updated x11/libdrm to 2.4.114 [wiz 2022-11-03]
+	Updated x11/pixman to 0.42.2 [wiz 2022-11-03]
