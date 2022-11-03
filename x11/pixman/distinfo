@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.74 2022/10/22 13:13:39 taca Exp $
+$NetBSD: distinfo,v 1.75 2022/11/03 08:51:25 wiz Exp $
 
-BLAKE2s (pixman-0.42.0.tar.xz) = 9846ec6a902afa54328b18a9a58cbdf7ad066aa69cbbfddb145b1475c6ad8899
-SHA512 (pixman-0.42.0.tar.xz) = 43d43d1aef9b8a6167098ab68ce2cfd8c0429c4825d40a4fb468b5b51dc1a2035f8bd1b70413e4ecd77deb469b5d558f42171b423e348d5ddd8604c466ffc7d9
-Size (pixman-0.42.0.tar.xz) = 652780 bytes
-SHA1 (patch-Makefile.in) = 244969af69e43472d43d8cd1556abacf9ec679e0
-SHA1 (patch-configure) = 909bf50acfd69700b26bd55a47f93fd77b49226c
+BLAKE2s (pixman-0.42.2.tar.xz) = 787db2f251f18541df50cc8681dfdb4da97def41dac52233b79575a0b83836fa
+SHA512 (pixman-0.42.2.tar.xz) = 3476e2676e66756b1af61b1e532cd80c985c191fb7956eb01702b419726cce99e79163b7f287f74f66414680e7396d13c3fee525cd663f12b6ac4877070ff4e8
+Size (pixman-0.42.2.tar.xz) = 652984 bytes
+SHA1 (patch-Makefile.in) = 49a0aa317a84390c1966687312f8466bc8d17ca3
 SHA1 (patch-pixman_pixman-vmx.c) = 8ca3649a5dd0527ce078af1b91fb01611dde9b45
