@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5332 2022/11/03 20:35:07 triaxx Exp $
+$NetBSD: CHANGES-2022,v 1.5333 2022/11/03 20:35:32 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8075,3 +8075,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed editors/ce-doc successor editors/ce [schmonz 2022-11-03]
 	Removed editors/ce-x11 successor editors/ce [schmonz 2022-11-03]
 	Updated x11/libdrm to 2.4.113nb1 [triaxx 2022-11-03]
+	Updated misc/wthrr to 0.4.2 [pin 2022-11-03]
