@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2021/11/23 23:20:14 sjmulder Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/11/03 11:34:14 sjmulder Exp $
 bin/nnn
 man/man1/nnn.1
 share/bash-completion/completions/nnn
@@ -19,8 +19,10 @@ share/examples/nnn/plugins/fzhist
 share/examples/nnn/plugins/fzopen
 share/examples/nnn/plugins/fzplug
 share/examples/nnn/plugins/getplugs
+share/examples/nnn/plugins/gitroot
 share/examples/nnn/plugins/gpgd
 share/examples/nnn/plugins/gpge
+share/examples/nnn/plugins/gsconnect
 share/examples/nnn/plugins/gutenread
 share/examples/nnn/plugins/imgresize
 share/examples/nnn/plugins/imgur
@@ -37,6 +39,7 @@ share/examples/nnn/plugins/nbak
 share/examples/nnn/plugins/nmount
 share/examples/nnn/plugins/nuke
 share/examples/nnn/plugins/oldbigfile
+share/examples/nnn/plugins/openall
 share/examples/nnn/plugins/organize
 share/examples/nnn/plugins/pdfread
 share/examples/nnn/plugins/preview-tabbed
