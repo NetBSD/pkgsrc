@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2022/06/30 11:18:39 nia Exp $
+# $NetBSD: Makefile,v 1.29 2022/11/03 20:13:11 wiz Exp $
 
 DISTNAME=		todoman-4.0.0
 PKGREVISION=		2
@@ -25,6 +25,10 @@ DEPENDS+=	${PYPKGPREFIX}-urwid-[0-9]*:../../devel/py-urwid
 DEPENDS+=	${PYPKGPREFIX}-xdg-[0-9]*:../../devel/py-xdg
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+
+# if zsh completion is used, jq is needed
+#https://github.com/pimutils/todoman/issues/498
+#DEPENDS+=	jq-[0-9]*:../../devel/jq
 
 # TEST_DEPENDS
 BUILD_DEPENDS+=	${PYPKGPREFIX}-flake8-[0-9]*:../../devel/py-flake8
