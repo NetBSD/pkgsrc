@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 10:21:25 nia Exp $
+$NetBSD: distinfo,v 1.12 2022/11/03 14:34:02 schmonz Exp $
 
-BLAKE2s (ce-4.6.tar.gz) = befa56dd455ecc536da8d9b7fe448c9d9e4277435b83b5edd4f385cb7213dce2
-SHA512 (ce-4.6.tar.gz) = 7555f54ff12249b147d0a57257ad21ed085535e3b9ab6a65f5a70985f49f28e66026d2130c5800aac7dc5a58a3b039c3bd7288c5b9d3f8c0cf28be565f73c0f5
-Size (ce-4.6.tar.gz) = 287489 bytes
-SHA1 (patch-aa) = 4d41f468071052a968c1547122a0639e56d4551f
-SHA1 (patch-ab) = d41e4ece57025fe0c65a7897e55e34b51717f659
+BLAKE2s (ce-4.8.tar.gz) = ae1950ce08aaf4e5e294cedfe935541e081f84c64720bce2bbbfabb7693e8c15
+SHA512 (ce-4.8.tar.gz) = 5481b3091ca2e799b592aaec5b05657a6b9546749d3311bd824e9e54df72adf8f41443bc4dcc8d84a6065448fefcc8ebae8c86203bb0fb9ec969a31367ceaa01
+Size (ce-4.8.tar.gz) = 354953 bytes
+SHA1 (patch-aa) = 84383dc89354835380c5fb968f062c1d7fdafcab
+SHA1 (patch-ab) = 044cc6137c7402e685ebfacfbd51eba55cec46b9

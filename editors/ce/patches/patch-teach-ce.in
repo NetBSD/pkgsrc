@@ -1,0 +1,15 @@
+$NetBSD: patch-teach-ce.in,v 1.1 2022/11/03 14:34:02 schmonz Exp $
+
+Substitute pkgsrc's best ${LN} for the platform.
+
+--- teach-ce.in.orig	1999-03-30 17:56:24
++++ teach-ce.in
+@@ -34,7 +34,7 @@ export PATH
+ 
+ export PATH
+ 
+-LN="ln -s"
++LN="@LN@ -s"
+ 
+ TUTORIAL=@libdir@/ce/TUTORIAL
+ CE="@bindir@/ce"
