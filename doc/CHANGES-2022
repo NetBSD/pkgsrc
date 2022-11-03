@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5326 2022/11/03 11:13:23 sjmulder Exp $
+$NetBSD: CHANGES-2022,v 1.5327 2022/11/03 11:34:28 sjmulder Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8066,3 +8066,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added sysutils/u-boot-zynq-zturn version 2022.10 [jmcneill 2022-11-03]
 	Updated editors/micro to 2.0.11 [sjmulder 2022-11-03]
 	Updated multimedia/nostt to 1.2.2 [sjmulder 2022-11-03]
+	Updated sysutils/nnn to 4.6 [sjmulder 2022-11-03]
