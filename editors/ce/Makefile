@@ -1,20 +1,35 @@
-# $NetBSD: Makefile,v 1.22 2014/10/09 14:06:32 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.23 2022/11/03 14:34:02 schmonz Exp $
 
-.include "Makefile.common"
+DISTNAME=		ce-${VERSION}
+VERSION=		4.8
+CATEGORIES=		editors
+MASTER_SITES=		ftp://ftp.cwru.edu/pub/chet/
+MASTER_SITES+=		${HOMEPAGE}dist/
 
-PKGREVISION=		1
-COMMENT+=		, tty version
+MAINTAINER=		schmonz@NetBSD.org
+HOMEPAGE=		http://tiswww.case.edu/php/chet/
+COMMENT=		Chet's Emacs: small, fast emacs-like editor
+LICENSE=		public-domain AND trn-license
 
-REPLACE_INTERPRETER+=	bash
-REPLACE.bash.old=	.*/bin/bash
-REPLACE.bash.new=	${SH}
-REPLACE_FILES.bash=	teach-ce.in
+CONFLICTS+=		ce-doc<=4.6
+CONFLICTS+=		ce-x11<=4.6
 
-BUILD_TARGET=		ce
-INSTALL_TARGET=		install man-install
+GNU_CONFIGURE=		yes
+GNU_CONFIGURE_LIBDIR=	${PREFIX}/share/doc
+CONFIGURE_ARGS+=	--without-ce-malloc
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+#BUILD_TARGET=		ce
+INSTALL_TARGET=		all-install
+
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/ce
+
+SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	pre-configure
+SUBST_FILES.paths=	teach-ce.in
+SUBST_VARS.paths=	LN
+SUBST_SED.paths+=	-e '1s,/bin/bash,'${SH:Q}','
+
+.include "options.mk"
 
 .include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
