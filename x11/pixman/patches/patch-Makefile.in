@@ -1,8 +1,6 @@
-$NetBSD: patch-Makefile.in,v 1.3 2022/10/18 11:14:18 wiz Exp $
+$NetBSD: patch-Makefile.in,v 1.4 2022/11/03 08:51:25 wiz Exp $
 
 Skip building demos and test SUBDIRS
-Shell portability
-https://gitlab.freedesktop.org/pixman/pixman/-/issues/65
 
 --- Makefile.in.orig	2020-04-19 21:53:21.000000000 +0000
 +++ Makefile.in
@@ -15,12 +13,3 @@ https://gitlab.freedesktop.org/pixman/pixman/-/issues/65
  pkgconfigdir = $(libdir)/pkgconfig
  pkgconfig_DATA = pixman-1.pc
  GPGKEY = 3892336E
-@@ -964,7 +964,7 @@ release-remove-old:
- 	$(RM) $(tar_gz) $(tar_xz) $(HASHFILES) $(gpg_file)
- 
- ensure-prev:
--	@if [[ "$(PREV)" == "" ]]; then							\
-+	@if [ "$(PREV)" = "" ]; then							\
- 		echo ""							          &&	\
- 		echo "You must set the PREV variable on the make command line to" &&	\
- 		echo "the last version."				  	  &&	\
