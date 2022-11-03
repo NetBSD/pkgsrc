@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2022/11/03 10:56:49 jmcneill Exp $
+share/u-boot/zynq-zturn/boot.bin
+share/u-boot/zynq-zturn/u-boot.img
