@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5329 2022/11/03 12:49:56 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5330 2022/11/03 14:34:19 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8071,3 +8071,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/py-dominate to 2.7.0 [adam 2022-11-03]
 	Updated www/py-sanic to 22.9.1 [adam 2022-11-03]
 	Updated textproc/py-regex to 2022.10.31 [adam 2022-11-03]
+	Updated editors/ce to 4.8 [schmonz 2022-11-03]
