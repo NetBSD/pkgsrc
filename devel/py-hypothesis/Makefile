@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.113 2022/11/03 10:43:03 adam Exp $
+# $NetBSD: Makefile,v 1.114 2022/11/04 18:34:09 adam Exp $
 #
 # Changelog: https://hypothesis.readthedocs.io/en/latest/changes.html
 
 DISTNAME=	hypothesis-6.56.4
+PKGREVISION=	1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hypothesis/}
@@ -19,13 +20,16 @@ USE_LANGUAGES=	# none
 
 USE_PKG_RESOURCES=	yes
 
-# https://github.com/HypothesisWorks/hypothesis/issues/3500
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
 .if ${_PYTHON_VERSION} != 311
 DEPENDS+=	${PYPKGPREFIX}-exceptiongroup>=1.0.0:../../devel/py-exceptiongroup
 .endif
+
+post-install:
+	cd ${DESTDIR}${PREFIX}/bin && \
+	${MV} hypothesis hypothesis-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
