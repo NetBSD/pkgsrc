@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/02/02 13:38:56 hauke Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/11/04 18:20:49 hauke Exp $
 bin/dsmc
 ${PLIST.java}bin/dsmj
 emul/linux/etc/init.d/dsmcad
@@ -150,7 +150,7 @@ emul/linux/opt/tivoli/tsm/client/api/bin64/sample/makesmp64.linux86
 emul/linux/opt/tivoli/tsm/client/api/bin64/sample/release.h
 emul/linux/opt/tivoli/tsm/client/api/bin64/sample/tsmapifp.h
 emul/linux/opt/tivoli/tsm/client/api/bin64/sample/tsmapitd.h
-emul/linux/opt/tivoli/tsm/client/api/swidtag/ibm.com_IBM_Spectrum_Protect_API-8.1.13.swidtag
+emul/linux/opt/tivoli/tsm/client/api/swidtag/ibm.com_IBM_Spectrum_Protect_API-8.1.15.swidtag
 emul/linux/opt/tivoli/tsm/client/ba/README.htm
 emul/linux/opt/tivoli/tsm/client/ba/bin/CS_CZ/dscjres.txt
 emul/linux/opt/tivoli/tsm/client/ba/bin/CS_CZ/dsmc.hlp
@@ -300,17 +300,17 @@ ${PLIST.java}emul/linux/opt/tivoli/tsm/client/ba/bin/plugins/vcloudsuite/sdk/com
 ${PLIST.java}emul/linux/opt/tivoli/tsm/client/ba/bin/plugins/vcloudsuite/sdk/commons-lang-2.6.jar
 ${PLIST.java}emul/linux/opt/tivoli/tsm/client/ba/bin/plugins/vcloudsuite/sdk/commons-lang3-3.9.jar
 ${PLIST.java}emul/linux/opt/tivoli/tsm/client/ba/bin/plugins/vcloudsuite/sdk/commons-logging-1.2.jar
-${PLIST.java}emul/linux/opt/tivoli/tsm/client/ba/bin/plugins/vcloudsuite/sdk/httpasyncclient-4.1.4.jar
-${PLIST.java}emul/linux/opt/tivoli/tsm/client/ba/bin/plugins/vcloudsuite/sdk/httpclient-4.5.10.jar
-${PLIST.java}emul/linux/opt/tivoli/tsm/client/ba/bin/plugins/vcloudsuite/sdk/httpcore-4.4.12.jar
-${PLIST.java}emul/linux/opt/tivoli/tsm/client/ba/bin/plugins/vcloudsuite/sdk/httpcore-nio-4.4.10.jar
+${PLIST.java}emul/linux/opt/tivoli/tsm/client/ba/bin/plugins/vcloudsuite/sdk/httpasyncclient-4.1.5.jar
+${PLIST.java}emul/linux/opt/tivoli/tsm/client/ba/bin/plugins/vcloudsuite/sdk/httpclient-4.5.13.jar
+${PLIST.java}emul/linux/opt/tivoli/tsm/client/ba/bin/plugins/vcloudsuite/sdk/httpcore-4.4.15.jar
+${PLIST.java}emul/linux/opt/tivoli/tsm/client/ba/bin/plugins/vcloudsuite/sdk/httpcore-nio-4.4.15.jar
 ${PLIST.java}emul/linux/opt/tivoli/tsm/client/ba/bin/plugins/vcloudsuite/sdk/jackson-annotations-2.10.0.jar
 ${PLIST.java}emul/linux/opt/tivoli/tsm/client/ba/bin/plugins/vcloudsuite/sdk/jackson-core-2.10.0.jar
 ${PLIST.java}emul/linux/opt/tivoli/tsm/client/ba/bin/plugins/vcloudsuite/sdk/jackson-databind-2.10.0.jar
-${PLIST.java}emul/linux/opt/tivoli/tsm/client/ba/bin/plugins/vcloudsuite/sdk/log4j-api-2.13.3.jar
-${PLIST.java}emul/linux/opt/tivoli/tsm/client/ba/bin/plugins/vcloudsuite/sdk/log4j-core-2.13.3.jar
-${PLIST.java}emul/linux/opt/tivoli/tsm/client/ba/bin/plugins/vcloudsuite/sdk/log4j-jcl-2.13.3.jar
-${PLIST.java}emul/linux/opt/tivoli/tsm/client/ba/bin/plugins/vcloudsuite/sdk/log4j-slf4j-impl-2.13.3.jar
+${PLIST.java}emul/linux/opt/tivoli/tsm/client/ba/bin/plugins/vcloudsuite/sdk/log4j-api-2.17.1.jar
+${PLIST.java}emul/linux/opt/tivoli/tsm/client/ba/bin/plugins/vcloudsuite/sdk/log4j-core-2.17.1.jar
+${PLIST.java}emul/linux/opt/tivoli/tsm/client/ba/bin/plugins/vcloudsuite/sdk/log4j-jcl-2.17.1.jar
+${PLIST.java}emul/linux/opt/tivoli/tsm/client/ba/bin/plugins/vcloudsuite/sdk/log4j-slf4j-impl-2.17.1.jar
 emul/linux/opt/tivoli/tsm/client/ba/bin/plugins/vcloudsuite/sdk/log4j.properties
 emul/linux/opt/tivoli/tsm/client/ba/bin/plugins/vcloudsuite/sdk/logging.properties
 ${PLIST.java}emul/linux/opt/tivoli/tsm/client/ba/bin/plugins/vcloudsuite/sdk/nsx-vmc-aws-integration-sdk-2.5.1.0.1.15419398.jar
@@ -347,9 +347,9 @@ emul/linux/opt/tivoli/tsm/client/ba/bin/vmtsmvss/register_app.vbs
 ${PLIST.java}emul/linux/opt/tivoli/tsm/client/ba/bin/xercesImpl_2_2_1.jar
 ${PLIST.java}emul/linux/opt/tivoli/tsm/client/ba/bin/xmlParserAPIs_2_2_1.jar
 emul/linux/opt/tivoli/tsm/client/ba/client_message.chg
-emul/linux/opt/tivoli/tsm/client/ba/swidtag/ibm.com_IBM_Spectrum_Protect_Client_and_VSS_Requestor-8.1.13.swidtag
-emul/linux/opt/tivoli/tsm/client/ba/swidtag/ibm.com_IBM_Spectrum_Protect_Client_and_VSS_Requestor-8.1.13.swidtag.configured
-emul/linux/opt/tivoli/tsm/client/ba/swidtag/ibm.com_IBM_Spectrum_Protect_Client_and_VSS_Requestor-8.1.13.swidtag.unconfigured
+emul/linux/opt/tivoli/tsm/client/ba/swidtag/ibm.com_IBM_Spectrum_Protect_Client_and_VSS_Requestor-8.1.15.swidtag
+emul/linux/opt/tivoli/tsm/client/ba/swidtag/ibm.com_IBM_Spectrum_Protect_Client_and_VSS_Requestor-8.1.15.swidtag.configured
+emul/linux/opt/tivoli/tsm/client/ba/swidtag/ibm.com_IBM_Spectrum_Protect_Client_and_VSS_Requestor-8.1.15.swidtag.unconfigured
 emul/linux/opt/tivoli/tsm/license/api/sm/LA_cs.txt
 emul/linux/opt/tivoli/tsm/license/api/sm/LA_de.txt
 emul/linux/opt/tivoli/tsm/license/api/sm/LA_el.txt

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2022/02/02 13:38:56 hauke Exp $
+# $NetBSD: Makefile,v 1.10 2022/11/04 18:20:49 hauke Exp $
 
 DISTNAME=	tsm-${PKGVER}
-PKGVER=		8.1.13.0
+PKGVER=		8.1.15.0
 PKGNAME=	${DISTNAME:C/-/8-/}
 CATEGORIES=	sysutils
-MASTER_SITES=	ftp://ftp.software.ibm.com/storage/tivoli-storage-management/maintenance/client/v8r1/Linux/LinuxX86/BA/v8113/
+MASTER_SITES=	ftp://ftp.software.ibm.com/storage/tivoli-storage-management/maintenance/client/v8r1/Linux/LinuxX86/BA/v8115/
 DISTFILES=	${PKGVER}-TIV-TSMBAC-LinuxX86.tar
 
 # pkgsrc fetch corrupts the distfile download
