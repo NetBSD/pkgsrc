@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.12 2022/11/03 14:34:02 schmonz Exp $
+$NetBSD: distinfo,v 1.13 2022/11/04 01:20:56 schmonz Exp $
 
 BLAKE2s (ce-4.8.tar.gz) = ae1950ce08aaf4e5e294cedfe935541e081f84c64720bce2bbbfabb7693e8c15
 SHA512 (ce-4.8.tar.gz) = 5481b3091ca2e799b592aaec5b05657a6b9546749d3311bd824e9e54df72adf8f41443bc4dcc8d84a6065448fefcc8ebae8c86203bb0fb9ec969a31367ceaa01
 Size (ce-4.8.tar.gz) = 354953 bytes
-SHA1 (patch-aa) = 84383dc89354835380c5fb968f062c1d7fdafcab
-SHA1 (patch-ab) = 044cc6137c7402e685ebfacfbd51eba55cec46b9
+SHA1 (patch-Makefile.in) = 84383dc89354835380c5fb968f062c1d7fdafcab
+SHA1 (patch-teach-ce.in) = 74e38b8e84f6f057467d101e0f3a90c0a52a7881
