@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.9 2017/11/27 13:01:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2022/11/04 18:41:59 adam Exp $
 bin/tidy
 include/tidy/tidy.h
 include/tidy/tidybuffio.h
 include/tidy/tidyenum.h
 include/tidy/tidyplatform.h
+lib/libtidy.a
 lib/libtidy.so
-lib/libtidy.so.5
 lib/libtidy.so.${PKGVERSION}
-lib/libtidys.a
+lib/libtidy.so.58
 lib/pkgconfig/tidy.pc
 man/man1/tidy.1
