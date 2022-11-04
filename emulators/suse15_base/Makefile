@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2022/10/02 17:17:17 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2022/11/04 17:37:20 hauke Exp $
 
 PKGNAME=	suse_base-${SUSE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	emulators
 RPMPKGS+=	aaa_base-84.87+git20180409.04c9dae-3.57.1.${SUSE_ARCH}
 RPMPKGS+=	bash-4.4-150400.25.22.${SUSE_ARCH}
@@ -11,6 +12,7 @@ RPMPKGS+=	keyutils-1.6.3-5.6.1.${SUSE_ARCH}
 RPMPKGS+=	libacl1-2.2.52-4.3.1.${SUSE_ARCH}
 RPMPKGS+=	libattr1-2.4.47-2.19.${SUSE_ARCH}
 RPMPKGS+=	libcap2-2.63-150400.1.7.${SUSE_ARCH}
+RPMPKGS+=	libcrypt1-4.4.15-150300.4.4.3.${SUSE_ARCH}
 RPMPKGS+=	libgcc_s1-11.3.0+git1637-150000.1.11.2.${SUSE_ARCH}
 RPMPKGS+=	libgdbm4-1.12-1.418.${SUSE_ARCH}
 RPMPKGS+=	libgmp10-6.1.2-4.9.1.${SUSE_ARCH}
