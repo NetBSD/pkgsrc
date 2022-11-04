@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5335 2022/11/03 20:43:45 triaxx Exp $
+$NetBSD: CHANGES-2022,v 1.5336 2022/11/04 00:41:29 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8077,3 +8077,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/libdrm to 2.4.114nb1 [triaxx 2022-11-03]
 	Updated misc/wthrr to 0.4.2 [pin 2022-11-03]
 	Updated sysutils/fd-find to 8.5.2 [pin 2022-11-03]
+	Updated lang/php74 to 7.4.33 [taca 2022-11-04]
