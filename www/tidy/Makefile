@@ -1,17 +1,15 @@
-# $NetBSD: Makefile,v 1.55 2020/01/26 17:32:25 rillig Exp $
+# $NetBSD: Makefile,v 1.56 2022/11/04 18:41:59 adam Exp $
 
-DISTNAME=	tidy-html5-5.6.0
+DISTNAME=	tidy-html5-5.8.0
 PKGNAME=	${DISTNAME:S/-html5//}
-PKGREVISION=	1
 CATEGORIES=	www textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=htacg/}
+GITHUB_PROJECT=	tidy-html5
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.html-tidy.org/
 COMMENT=	Fixes and tidies up HTML files
 LICENSE=	mit
-
-GITHUB_PROJECT=	tidy-html5
 
 # for man page
 BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
