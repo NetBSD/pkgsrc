@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.123 2022/10/24 10:29:19 adam Exp $
+$NetBSD: distinfo,v 1.124 2022/11/04 00:58:00 taca Exp $
 
 BLAKE2s (sudo-1.9.12.tar.gz) = e832414e92c0608e173f8ccb06a1cb8632c3be51b5905580d426b0984b049c0f
 SHA512 (sudo-1.9.12.tar.gz) = 34ee165baa2e37ba2530901d49bf0dad30159f27aeccd2519d4719bf93be8281edff71220a49ba2e41dacaa3c58031de1464df48d75a8caea7b9568a76f80b67
@@ -9,4 +9,5 @@ SHA1 (patch-examples_Makefile.in) = a20967ecd88eb5e4a8b47e6a3b80bc18be713409
 SHA1 (patch-lib_logsrv_Makefile.in) = 301c317c806edeee8ce7b44a5431cd38defb3a54
 SHA1 (patch-lib_protobuf-c_Makefile.in) = 122e432fb0da36b998778a1b71130f0c3785f575
 SHA1 (patch-plugins_sudoers_Makefile.in) = d2981bb9841f6bb4b1c80f5c2f2727fbf9579501
+SHA1 (patch-plugins_sudoers_auth_passwd.c) = 8fc437881e5eedef106037ff746116f8a36889da
 SHA1 (patch-src_Makefile.in) = 0642684c2d4b3a89259f7d27908f5ec8070969ec
