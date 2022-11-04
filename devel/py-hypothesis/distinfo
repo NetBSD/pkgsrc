@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.109 2022/11/03 10:43:03 adam Exp $
+$NetBSD: distinfo,v 1.110 2022/11/04 18:34:09 adam Exp $
 
 BLAKE2s (hypothesis-6.56.4.tar.gz) = 34cc00172c0a88f85ea6699233c16af1e7b7b0ab1318ce91e109e789713a737d
 SHA512 (hypothesis-6.56.4.tar.gz) = 7ca2a1e677444f3073e3ebf8a4c39039636f92b51f28f4b296998a6d10cde3ff9321c0d9ee7ff6d5748f3cf4b196bbf795cb5f3e5bd78585b6dc34af5587fe97
 Size (hypothesis-6.56.4.tar.gz) = 333424 bytes
+SHA1 (patch-src_hypothesis_extra_array__api.py) = 788a333566cf2d8b800ad43e2b6583f31ff04597
