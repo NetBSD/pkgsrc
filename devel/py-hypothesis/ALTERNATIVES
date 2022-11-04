@@ -1,0 +1,1 @@
+bin/hypothesis @PREFIX@/bin/hypothesis-@PYVERSSUFFIX@
