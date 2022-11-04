@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5336 2022/11/04 00:41:29 taca Exp $
+$NetBSD: CHANGES-2022,v 1.5337 2022/11/04 00:58:29 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8078,3 +8078,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated misc/wthrr to 0.4.2 [pin 2022-11-03]
 	Updated sysutils/fd-find to 8.5.2 [pin 2022-11-03]
 	Updated lang/php74 to 7.4.33 [taca 2022-11-04]
+	Updated security/sudo to 1.9.12nb1 [taca 2022-11-04]
