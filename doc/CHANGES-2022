@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5339 2022/11/04 18:42:25 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5340 2022/11/04 19:47:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8082,3 +8082,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/tsm8 to 8.1.15.0 [hauke 2022-11-04]
 	Updated devel/py-hypothesis to 6.56.4nb1 [adam 2022-11-04]
 	Updated www/tidy to 5.8.0 [adam 2022-11-04]
+	Updated devel/cmake to 3.24.3 [adam 2022-11-04]
+	Updated devel/cmake-gui to 3.24.3 [adam 2022-11-04]
