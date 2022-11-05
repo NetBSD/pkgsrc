@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2022/06/21 18:48:39 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.13 2022/11/05 18:42:00 wiz Exp $
 bin/c_rehash
 bin/openssl
 include/openssl/aes.h
@@ -2263,6 +2263,8 @@ man/man3/PKCS7_SIGNER_INFO_free.3
 man/man3/PKCS7_SIGNER_INFO_new.3
 man/man3/PKCS7_SIGN_ENVELOPE_free.3
 man/man3/PKCS7_SIGN_ENVELOPE_new.3
+man/man3/PKCS7_add_certificate.3
+man/man3/PKCS7_add_crl.3
 man/man3/PKCS7_decrypt.3
 man/man3/PKCS7_dup.3
 man/man3/PKCS7_encrypt.3
