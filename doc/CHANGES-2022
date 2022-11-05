@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5346 2022/11/05 16:16:41 pin Exp $
+$NetBSD: CHANGES-2022,v 1.5347 2022/11/05 16:41:58 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8090,3 +8090,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated shells/ksh93 to 1.0.4 [pin 2022-11-05]
 	Updated x11/drawterm to 20221013 [pin 2022-11-05]
 	Updated security/signify to 0.12 [pin 2022-11-05]
+	Added shells/yash version 2.53 [pin 2022-11-05]
