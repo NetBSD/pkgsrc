@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2022/11/05 18:13:44 pin Exp $
+bin/xss-lock
+man/man1/xss-lock.1
+share/bash-completion/completions/xss-lock
+share/doc/xss-lock/NEWS
+share/doc/xss-lock/dim-screen.sh
+share/doc/xss-lock/transfer-sleep-lock-generic-delay.sh
+share/doc/xss-lock/transfer-sleep-lock-i3lock.sh
+share/doc/xss-lock/xdg-screensaver.patch
+share/zsh/site-functions/_xss-lock

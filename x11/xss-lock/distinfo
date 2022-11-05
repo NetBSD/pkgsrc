@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2022/11/05 18:13:44 pin Exp $
+
+BLAKE2s (xss-lock-0.3.0/1e158fb20108.zip) = 3d13015d33597dc399b5c3292d9177454b8ea77dd4a11d4d3b40eca05c4209cc
+SHA512 (xss-lock-0.3.0/1e158fb20108.zip) = 6db44edcce4fd21f8788504919cfbb0baccda4f97fc27be844ee7ef24ea9cba7ec9d6f080951021e3ac65592724ba079c38b55841b3caaa2b7c7e8c41efffeb5
+Size (xss-lock-0.3.0/1e158fb20108.zip) = 18436 bytes
+SHA1 (patch-doc_CMakeLists.txt) = 31e2bf67d746cfec5b89cfe0071290f60c9e4e3f
+SHA1 (patch-src_xss-lock.c) = 19afb8f344883f88a1b9a68ca0152321fbf5e51d
