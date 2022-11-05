@@ -1,0 +1,5 @@
+xtrlock is a very minimal X display lock program, which uses
+nothing except the Xlib library. It doesn't obscure the screen,
+it is completely idle while the display is locked and you don't
+type at it, and it doesn't do funny things to the X access control
+lists.
