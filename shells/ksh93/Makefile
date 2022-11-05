@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2022/09/04 14:35:34 pin Exp $
+# $NetBSD: Makefile,v 1.6 2022/11/05 16:10:40 pin Exp $
 
-DISTNAME=	ksh93-1.0.3
+DISTNAME=	ksh93-1.0.4
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ksh93/}
 GITHUB_PROJECT=	ksh
