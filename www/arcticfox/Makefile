@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2022/09/11 12:52:09 wiz Exp $
+# $NetBSD: Makefile,v 1.14.2.1 2022/11/05 18:00:09 bsiegert Exp $
 
 DISTNAME=	arcticfox-39.2
 PKGREVISION=	1
@@ -17,6 +17,9 @@ USE_TOOLS+=	zip unzip gmake
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
+
+OVERRIDE_GNU_CONFIG_SCRIPTS=	# yes
+OVERRIDE_DIRDEPTH=		3
 
 CONFIGURE_ARGS+=	--disable-crashreporter
 CONFIGURE_ARGS+=	--disable-tests
