@@ -1,0 +1,15 @@
+$NetBSD: patch-doc_CMakeLists.txt,v 1.1 2022/11/05 18:13:44 pin Exp $
+
+Fix man page destination.
+
+--- doc/CMakeLists.txt.orig	2014-03-02 10:46:32.000000000 +0000
++++ doc/CMakeLists.txt
+@@ -8,7 +8,7 @@ if(rst2man)
+                        COMMAND ${rst2man} ${man_input} ${man_output}
+                        DEPENDS ${man_input})
+     add_custom_target(man ALL DEPENDS ${man_output})
+-    install(FILES ${man_output} DESTINATION share/man/man1)
++    install(FILES ${man_output} DESTINATION ${CMAKE_INSTALL_MANDIR}/man1)
+ else()
+     message(WARNING "rst2man (docutils) not found, disabling man page generation")
+ endif()
