@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2022/10/08 11:30:27 bsiegert Exp $
+# $NetBSD: Makefile,v 1.2 2022/11/05 16:16:21 pin Exp $
 
-DISTNAME=	outils-0.10
+DISTNAME=	outils-0.12
 PKGNAME=	${DISTNAME:S,outils,signify,}
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=leahneukirchen/}
