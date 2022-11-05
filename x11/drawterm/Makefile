@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2022/07/04 21:52:04 gutteridge Exp $
+# $NetBSD: Makefile,v 1.3 2022/11/05 16:12:49 pin Exp $
 
 DISTNAME=	snap
-BUILD=		20220603
-PKGNAME=	drawterm-${BUILD}
+PKGVER=		20221013
+PKGNAME=	drawterm-${PKGVER}
 CATEGORIES=	x11 plan9
-DIST_SUBDIR=	${PKGNAME_NOREV}-${BUILD}
-MASTER_SITES=	https://git.9front.org/git/plan9front/drawterm/bee4db6507fdf31bddfa98d26a673e135dfd28ad/
+DIST_SUBDIR=	${PKGNAME_NOREV}
+MASTER_SITES=	https://git.9front.org/git/plan9front/drawterm/65e8a26e1dac4a0f589f615126ad87a92c9c11ab/
 
 MAINTAINER=	vms@retrobsd.ddns.net
 HOMEPAGE=	https://drawterm.9front.org/
