@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5342 2022/11/05 15:51:42 pin Exp $
+$NetBSD: CHANGES-2022,v 1.5343 2022/11/05 15:53:04 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8086,3 +8086,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/cmake-gui to 3.24.3 [adam 2022-11-04]
 	Added security/gopass version 1.14.9 [nikita 2022-11-05]
 	Updated sysutils/broot to 1.16.2 [pin 2022-11-05]
+	Updated sysutils/ripdrag to 0.2.1 [pin 2022-11-05]
