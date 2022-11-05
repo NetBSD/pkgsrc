@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2022/11/05 13:42:58 nikita Exp $
+bin/gopass
+share/bash-completion/completions/gopass
+share/fish/vendor_completions.d/gopass.fish
+share/zsh/site-functions/_gopass
