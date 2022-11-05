@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5343 2022/11/05 15:53:04 pin Exp $
+$NetBSD: CHANGES-2022,v 1.5344 2022/11/05 16:11:00 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8087,3 +8087,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added security/gopass version 1.14.9 [nikita 2022-11-05]
 	Updated sysutils/broot to 1.16.2 [pin 2022-11-05]
 	Updated sysutils/ripdrag to 0.2.1 [pin 2022-11-05]
+	Updated shells/ksh93 to 1.0.4 [pin 2022-11-05]
