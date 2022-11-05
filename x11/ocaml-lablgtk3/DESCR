@@ -1,5 +1,5 @@
-LablGTK is an Objective Caml interface to GTK+.  This version
-supports GTK+ version 3.x.
+LablGTK is an Objective Caml interface to GTK+.  This version supports
+GTK+ 3.
 
 It uses the rich type system of Objective Caml to provide a
 strongly typed, yet very comfortable, object-oriented interface to
