@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2022/08/02 11:20:02 adam Exp $
+# $NetBSD: Makefile,v 1.31 2022/11/05 22:24:39 joerg Exp $
 
 DISTNAME=	importlib_metadata-4.12.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -10,7 +10,6 @@ HOMEPAGE=	https://importlib-metadata.readthedocs.io/
 COMMENT=	Read metadata from Python packages
 LICENSE=	apache-2.0
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4.1:../../devel/py-setuptools_scm
 BUILD_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-zipp>=0.5:../../archivers/py-zipp
 TEST_DEPENDS+=	${PYPKGPREFIX}-importlib-resources-[0-9]*:../../devel/py-importlib-resources
@@ -27,6 +26,15 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 .if ${_PYTHON_VERSION} < 38
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.6.4:../../devel/py-typing-extensions
 .endif
+
+pre-build:
+	${RUN} if ! ${GREP} '^version =' ${WRKSRC}/setup.cfg; then \
+		cd ${WRKSRC}; \
+		(${HEAD} -2 setup.cfg; \
+		${GREP} 'Version:' PKG-INFO | ${SED} -e 's,^V',v, -e 's,:, = ,'; \
+		${TAIL} -n +3 setup.cfg \
+		) > setup.cfg.new && ${MV} setup.cfg.new setup.cfg; \
+	fi
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
