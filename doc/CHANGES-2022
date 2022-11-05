@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5348 2022/11/05 16:56:53 scole Exp $
+$NetBSD: CHANGES-2022,v 1.5349 2022/11/05 18:15:01 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8092,3 +8092,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/signify to 0.12 [pin 2022-11-05]
 	Added shells/yash version 2.53 [pin 2022-11-05]
 	Updated textproc/split-thai to 2.22 [scole 2022-11-05]
+	Added x11/xss-lock version 0.3.0 [pin 2022-11-05]
