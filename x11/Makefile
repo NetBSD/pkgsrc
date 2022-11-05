@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.966 2022/11/05 18:14:34 pin Exp $
+# $NetBSD: Makefile,v 1.967 2022/11/05 18:19:09 pin Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -694,6 +694,7 @@ SUBDIR+=	xtermset
 SUBDIR+=	xtoolwait
 SUBDIR+=	xtrace
 SUBDIR+=	xtrans
+SUBDIR+=	xtrlock
 SUBDIR+=	xtruss
 SUBDIR+=	xvattr
 SUBDIR+=	xvidcap
