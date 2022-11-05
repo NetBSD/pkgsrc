@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:34:40 nia Exp $
+$NetBSD: distinfo,v 1.9 2022/11/05 22:36:27 wiz Exp $
 
-BLAKE2s (xf86-input-void-1.4.1.tar.bz2) = b411d6fa0aebf8836de0144e122b34d634eff0fabe33f4d97d1cfe551e0b8cbd
-SHA512 (xf86-input-void-1.4.1.tar.bz2) = 3cbcba9510635fc4a3b610fb940584417d4b3fcace88670b1289906a7da15614e9a286590cecd1840af4bb3bd0c62f246522b1203700067ec384c3cc11b7e94a
-Size (xf86-input-void-1.4.1.tar.bz2) = 271597 bytes
+BLAKE2s (xf86-input-void-1.4.2.tar.xz) = c839b542cb8e9ae67fd71137429753eac9f44edfc73285c6f20b8b4a10c8b66c
+SHA512 (xf86-input-void-1.4.2.tar.xz) = f266494bd0ab62d2e20048d5557cb4724cc704be06b7f04f55970aad070887ca8940341c4a4929bb48a46b4d040e03c4d09ce3ae85b94ce23c70faf28486005d
+Size (xf86-input-void-1.4.2.tar.xz) = 257888 bytes
