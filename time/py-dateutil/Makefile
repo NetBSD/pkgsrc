@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2022/05/12 08:20:36 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2022/11/05 22:31:42 joerg Exp $
 
 DISTNAME=	python-dateutil-2.8.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
@@ -23,6 +23,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-freezegun-[0-9]*:../../devel/py-freezegun
 PYTHON_VERSIONED_DEPENDENCIES=	test:test
 PYTHON_VERSIONED_DEPENDENCIES+=	hypothesis:test
 PYTHON_VERSIONED_DEPENDENCIES+=	setuptools_scm:build
+PYTHON_VERSIONED_DEPENDENCIES+= pip:build
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
