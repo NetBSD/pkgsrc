@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2022/11/06 17:16:07 triaxx Exp $
+$NetBSD: distinfo,v 1.7 2022/11/06 17:21:41 triaxx Exp $
 
 BLAKE2s (libslirp-4.7.0.tar.xz) = ef73fb0de29a83b0c5f5e3d02f7bcd5257e1787ce5217afd34065856a92df973
 SHA512 (libslirp-4.7.0.tar.xz) = 00b943ec758d7c2d3213a239b1cb7376d2d06d851afd9d5a808c787a76dfdd442570253ca509085c6c3ef528472aec9216587dbfc3348d7eb325b92b8f8b1ac3
 Size (libslirp-4.7.0.tar.xz) = 110840 bytes
-SHA1 (patch-src_libslirp.h) = 5a23abb6866b2f431626c68bc483c51d2c189e1b
+SHA1 (patch-src_libslirp.h) = 47b1bf7ec380a8898377a87e71c80287663342a3
