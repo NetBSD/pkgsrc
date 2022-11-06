@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.41 2022/09/27 20:58:23 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2022/11/06 21:31:57 triaxx Exp $
 
-DISTNAME=	dosbox-x-0.83.25
-PKGREVISION=	4
+DISTNAME=	dosbox-x-0.84.3
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=joncampbell123/}
 GITHUB_TAG=	dosbox-x-v${PKGVERSION_NOREV}
@@ -45,6 +44,8 @@ CONFIGURE_ARGS+=	--disable-dynamic-core
 # LOG: Setting execute permission on the code cache has failed
 NOT_PAX_MPROTECT_SAFE+=	bin/dosbox-x
 .endif
+
+LDFLAGS.FreeBSD+=	-lpthread
 
 INSTALLATION_DIRS+=	bin share/dosbox-x
 INSTALLATION_DIRS+=	share/applications
