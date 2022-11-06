@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5370 2022/11/06 22:49:47 bacon Exp $
+$NetBSD: CHANGES-2022,v 1.5371 2022/11/06 23:01:27 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8125,3 +8125,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated shells/zsh to 5.9nb2 [wiz 2022-11-06]
 	Updated emulators/dosbox-x to 0.84.3 [triaxx 2022-11-06]
 	Added biology/fastq-trim version 0.1.1.16 [bacon 2022-11-06]
+	Added biology/gffread version 0.12.7 [bacon 2022-11-06]
