@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5358 2022/11/06 10:58:14 tron Exp $
+$NetBSD: CHANGES-2022,v 1.5359 2022/11/06 11:15:10 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8102,3 +8102,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/p5-PPIx-QuoteLike to 0.023 [wen 2022-11-06]
 	Updated databases/p5-DBIx-Class to 0.082843 [wen 2022-11-06]
 	Updated mail/mutt to 2.2.8 [tron 2022-11-06]
+	Updated lang/rust-analyzer to 0.0.2022.10.31 [nikita 2022-11-06]
