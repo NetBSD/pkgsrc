@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5360 2022/11/06 14:17:27 triaxx Exp $
+$NetBSD: CHANGES-2022,v 1.5361 2022/11/06 16:42:42 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8104,3 +8104,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated mail/mutt to 2.2.8 [tron 2022-11-06]
 	Updated lang/rust-analyzer to 0.0.2022.10.31 [nikita 2022-11-06]
 	Updated multimedia/libbluray to 1.3.3nb1 [triaxx 2022-11-06]
+	Updated math/kalker to 2.0.1 [pin 2022-11-06]
