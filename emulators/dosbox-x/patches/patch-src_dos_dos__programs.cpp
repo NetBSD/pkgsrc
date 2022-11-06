@@ -1,4 +1,4 @@
-$NetBSD: patch-src_dos_dos__programs.cpp,v 1.4 2022/03/07 16:37:52 nia Exp $
+$NetBSD: patch-src_dos_dos__programs.cpp,v 1.5 2022/11/06 21:31:57 triaxx Exp $
 
 dos_programs.cpp: In member function 'bool AUTOTYPE::ReadDoubleArg(const string&, const char*, const double&, const double&, const double&, double&)':
 dos_programs.cpp:5556:12: error: expected unqualified-id before '(' token
@@ -6,7 +6,7 @@ dos_programs.cpp:5556:12: error: expected unqualified-id before '(' token
 
 --- src/dos/dos_programs.cpp.orig	2022-03-01 02:12:39.000000000 +0000
 +++ src/dos/dos_programs.cpp
-@@ -6756,11 +6756,7 @@ bool AUTOTYPE::ReadDoubleArg(const std::
+@@ -6935,11 +6935,7 @@ bool AUTOTYPE::ReadDoubleArg(const std::
  	if (cmd->FindString(flag, str_value, true)) {
  		// Can the user's value be parsed?
  		const double user_value = to_finite<double>(str_value);
