@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/09/05 14:12:15 adam Exp $
+# $NetBSD: Makefile,v 1.2 2022/11/06 13:31:01 gdt Exp $
 
 DISTNAME=	pkgutil_resolve_name-1.3.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,7 +14,7 @@ LICENSE=	mit
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_ACCEPTED=	38 37
+PYTHON_VERSIONS_ACCEPTED=	38
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
