@@ -1,21 +1,24 @@
-# $NetBSD: Makefile,v 1.25 2022/01/10 20:54:11 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2022/11/06 18:34:58 adam Exp $
 
-DISTNAME=	web.py-0.37
+DISTNAME=	web.py-0.62
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www python
-MASTER_SITES=	http://webpy.org/static/
+MASTER_SITES=	${MASTER_SITE_PYPI:=w/web.py/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://webpy.org/
 COMMENT=	Simple, public domain web publishing system
 LICENSE=	public-domain
 
-USE_LANGUAGES=	#none
+DEPENDS+=	${PYPKGPREFIX}-cheroot>=6.0.0:../../www/py-cheroot
+TEST_DEPENDS+=	${PYPKGPREFIX}-test>=5.4.1:../../devel/py-test
 
-REPLACE_PYTHON+=		web/__init__.py web/utils.py
-PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 0.37
+USE_LANGUAGES=	# none
 
-.include "../../lang/python/application.mk"
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
+
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
