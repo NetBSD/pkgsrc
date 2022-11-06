@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5364 2022/11/06 17:20:33 triaxx Exp $
+$NetBSD: CHANGES-2022,v 1.5365 2022/11/06 18:17:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8110,3 +8110,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/hdf5-c++ to 1.10.9 [adam 2022-11-06]
 	Updated math/octave to 7.3.0 [adam 2022-11-06]
 	Updated net/libslirp to 4.7.0nb1 [triaxx 2022-11-06]
+	Updated lang/py-inflect to 6.0.2 [adam 2022-11-06]
+	Added devel/py-jaraco.context version 4.1.2 [adam 2022-11-06]
+	Added textproc/py-jaraco.text version 3.10.0 [adam 2022-11-06]
+	Updated devel/py-jaraco.functools to 3.5.2 [adam 2022-11-06]
