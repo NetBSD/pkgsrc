@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5369 2022/11/06 21:32:24 triaxx Exp $
+$NetBSD: CHANGES-2022,v 1.5370 2022/11/06 22:49:47 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8124,3 +8124,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/py-websockets to 10.4 [adam 2022-11-06]
 	Updated shells/zsh to 5.9nb2 [wiz 2022-11-06]
 	Updated emulators/dosbox-x to 0.84.3 [triaxx 2022-11-06]
+	Added biology/fastq-trim version 0.1.1.16 [bacon 2022-11-06]
