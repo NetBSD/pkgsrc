@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5365 2022/11/06 18:17:11 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5366 2022/11/06 18:36:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8114,3 +8114,9 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/py-jaraco.context version 4.1.2 [adam 2022-11-06]
 	Added textproc/py-jaraco.text version 3.10.0 [adam 2022-11-06]
 	Updated devel/py-jaraco.functools to 3.5.2 [adam 2022-11-06]
+	Updated time/py-tempora to 5.0.2 [adam 2022-11-06]
+	Updated net/py-portend to 3.1.0 [adam 2022-11-06]
+	Updated www/py-cheroot to 8.6.0 [adam 2022-11-06]
+	Added devel/py-jaraco.collections version 3.7.0 [adam 2022-11-06]
+	Updated www/py-cherrypy to 18.8.0 [adam 2022-11-06]
+	Updated www/py-webpy to 0.62 [adam 2022-11-06]
