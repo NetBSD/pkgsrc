@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2022/01/25 09:05:11 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/11/06 18:08:15 adam Exp $
 
-DISTNAME=	inflect-4.1.0
+DISTNAME=	inflect-6.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/inflect/}
 
@@ -11,16 +10,19 @@ HOMEPAGE=	https://github.com/jazzband/inflect
 COMMENT=	Correctly generate plurals, ordinals, indefinite articles for English
 LICENSE=	mit
 
-PYTHON_VERSIONED_DEPENDENCIES+=	setuptools_scm:build
-
-.include "../../lang/python/pyversion.mk"
-
-.if ${_PYTHON_VERSION} < 38
-PYTHON_VERSIONED_DEPENDENCIES+=	importlib-metadata
-.endif
+BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=7.0.0:../../devel/py-setuptools_scm
+DEPENDS+=	${PYPKGPREFIX}-pydantic>=1.9.1:../../devel/py-pydantic
+TEST_DEPENDS+=	${PYPKGPREFIX}-test>=6:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-flake8-[0-9]*:../../devel/py-test-flake8
+TEST_DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
+
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
