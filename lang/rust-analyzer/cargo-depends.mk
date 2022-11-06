@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.13 2022/10/30 11:37:44 wiz Exp $
+# $NetBSD: cargo-depends.mk,v 1.14 2022/11/06 11:09:55 nikita Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.17.0
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
@@ -64,7 +64,7 @@ CARGO_CRATE_DEPENDS+=	libloading-0.7.3
 CARGO_CRATE_DEPENDS+=	libmimalloc-sys-0.1.26
 CARGO_CRATE_DEPENDS+=	lock_api-0.4.9
 CARGO_CRATE_DEPENDS+=	log-0.4.17
-CARGO_CRATE_DEPENDS+=	lsp-types-0.93.1
+CARGO_CRATE_DEPENDS+=	lsp-types-0.93.2
 CARGO_CRATE_DEPENDS+=	matchers-0.1.0
 CARGO_CRATE_DEPENDS+=	memchr-2.5.0
 CARGO_CRATE_DEPENDS+=	memmap2-0.5.7

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.21 2022/10/30 11:37:44 wiz Exp $
+$NetBSD: distinfo,v 1.22 2022/11/06 11:09:55 nikita Exp $
 
 BLAKE2s (addr2line-0.17.0.crate) = f7fa3b016f0e80c4ea9967f8947de15edc9fa39d0c0cdea692dccd0c41c28039
 SHA512 (addr2line-0.17.0.crate) = ef3bbd7c6d1dfdd0b47e3be1fb4c8b15ed61a769bed7e80dce80461a1ee13ef21c75e62e9a66328504f862341f1e808abec5790ac79784e18655afcc16206b95
@@ -192,9 +192,9 @@ Size (lock_api-0.4.9.crate) = 25685 bytes
 BLAKE2s (log-0.4.17.crate) = 6994234f481cfe97b62255329a6c6f4a07dcdb193cc54d2c7ddda0519b41d214
 SHA512 (log-0.4.17.crate) = 2477d88db42b1d92c30708d88823212e236f613b3465e85eb425f83f8d16fadfaf0352f06c2999a1852102edd2f6ffb10ecb539d8a3b6c48f552a25622ccffa2
 Size (log-0.4.17.crate) = 38028 bytes
-BLAKE2s (lsp-types-0.93.1.crate) = c9e267aa8b7c43e8690b9e9881ef18c62dafed5f1db4385f33d658dc05e5d156
-SHA512 (lsp-types-0.93.1.crate) = 31fe4f2b0fb5991ebc21ccdfe7120a823a2613a01f4b5fa8ed14a1fe0c28fe69459852e3b691c9b3debf2c442f18b01f5b1ec1eb023d970dce14410f2d567981
-Size (lsp-types-0.93.1.crate) = 58805 bytes
+BLAKE2s (lsp-types-0.93.2.crate) = e49e4df4cbd5641abff569d1f51873e46b499bb7236fd076f1b04fc5eeec8b48
+SHA512 (lsp-types-0.93.2.crate) = 335378270454c629739f3ae2bf1dc5e9e7033c66010c24261f8f2b894f068020f9d9cdb475c3630dfc6deb1905f7d7fcd5111ea77060fed832c55b6bbfd1bf65
+Size (lsp-types-0.93.2.crate) = 59507 bytes
 BLAKE2s (matchers-0.1.0.crate) = e16e40b59402c6282f2b7ce6e930e3f88bb630b24e68b5bd0a2b1d9fb57f1fac
 SHA512 (matchers-0.1.0.crate) = 84214c1a84952d85631aa1ab5115df7cda223ac64e2acf055b6129ba1aa26ddc87615a8b51ca890ce3fee0419053fa7fe1599ae128f1d211b58c07b0c4af3b19
 Size (matchers-0.1.0.crate) = 6948 bytes
@@ -303,9 +303,9 @@ Size (regex-syntax-0.6.27.crate) = 297300 bytes
 BLAKE2s (rowan-0.15.10.crate) = a75fd73ab996e93a8425f2c37d24ba4c025e4b023833dd0e9761e010bcd41243
 SHA512 (rowan-0.15.10.crate) = b1592079964951f7a5b5f19cada78198fd3e3179350bb54cd48c230ecf9dedca7b5cf7b6bea82e9c46114474e1c63f466b2a490c4de70d104523f97f7e6380a7
 Size (rowan-0.15.10.crate) = 39454 bytes
-BLAKE2s (rust-analyzer-2022-10-24.tar.gz) = 047c0ed512b48d3f7a8cde027b8858b468f880837b19af5fee12114f0385234f
-SHA512 (rust-analyzer-2022-10-24.tar.gz) = e3c99e68138f0f51da560d41a84feebc5fa0859271e79b4f48dc24a61572d063df5b41f4a45bce1febc1823685533e2c1f48b186d463a1900c597bc340dd4c51
-Size (rust-analyzer-2022-10-24.tar.gz) = 2266171 bytes
+BLAKE2s (rust-analyzer-2022-10-31.tar.gz) = e511f58b3976dadbde7cd29cc52384377e378caddae21cbb7d36dc29f3f2c1fd
+SHA512 (rust-analyzer-2022-10-31.tar.gz) = e8894de21d4744f0bb4db3ab2ebda9a84def7fdcf9fcc1fa7236cf5b5a4bc4e0e87a7eded01eb397d92d00ac33a7c34b964acf7c56005dab4e284a9100bf8c95
+Size (rust-analyzer-2022-10-31.tar.gz) = 2268424 bytes
 BLAKE2s (rustc-ap-rustc_lexer-725.0.0.crate) = fb009ee9ee73e83fed1432958ea45d46a6c409955db6c764cd4b20667099c87f
 SHA512 (rustc-ap-rustc_lexer-725.0.0.crate) = 4239c4762d7ca351698be015ab251193f65487bda73a9dfaae5788e5b8395656c12d7f9cb5ee16cbd8c03dd5b9828dfb7d507498f40dc83d6a85ed3d59cc657a
 Size (rustc-ap-rustc_lexer-725.0.0.crate) = 14086 bytes
