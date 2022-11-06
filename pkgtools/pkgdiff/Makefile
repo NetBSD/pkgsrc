@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.101 2022/06/28 11:35:25 wiz Exp $
+# $NetBSD: Makefile,v 1.102 2022/11/06 13:22:01 tnn Exp $
 
 PKGNAME=	pkgdiff-1.10
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	pkgtools devel
 
 MAINTAINER=	wiz@NetBSD.org
@@ -21,7 +21,10 @@ MAKE_ENV+=	PKGSRCDIR=${_PKGSRCDIR:Q}
 
 BUILD_DEFS+=	MANINSTALL
 
-.if ${OPSYS} == "SunOS" || ${OPSYS} == "OSF1"
+.if	\
+	${OPSYS} == "SunOS" ||	\
+	${OPSYS} == "OSF1" ||	\
+	${OPSYS} == "Darwin" && empty(OSX_VERSION:M[0-9].*) && empty(OSX_VERSION:M1[0-2].*)
 DEPENDS+=	diffutils-[0-9]*:../../devel/diffutils
 DIFF?=		${PREFIX}/bin/gdiff
 .else
