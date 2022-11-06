@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2022/01/13 19:31:23 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2022/11/06 18:16:40 adam Exp $
 
-DISTNAME=	jaraco.functools-2.0
+DISTNAME=	jaraco.functools-3.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jaraco.functools/}
 
@@ -11,15 +10,12 @@ HOMEPAGE=	https://github.com/jaraco/jaraco.functools
 COMMENT=	Additional functools in the spirit of stdlib's functools
 LICENSE=	mit
 
-.include "../../lang/python/pyversion.mk"
-.if ${_PYTHON_VERSION} == 27
-DEPENDS+=	${PYPKGPREFIX}-backports.functools_lru_cache>=1.0.3:../../devel/py-backports.functools_lru_cache
-.endif
+BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+DEPENDS+=	${PYPKGPREFIX}-more-itertools-[0-9]*:../../devel/py-more-itertools
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONED_DEPENDENCIES+=	more-itertools setuptools_scm:build
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../lang/python/versioned_dependencies.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
