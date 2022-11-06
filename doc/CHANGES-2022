@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5352 2022/11/05 22:36:36 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.5353 2022/11/06 09:49:39 wen Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8096,3 +8096,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added x11/xtrlock version 2.15 [pin 2022-11-05]
 	Updated security/openssl to 1.1.1s [wiz 2022-11-05]
 	Updated x11/xf86-input-void to 1.4.2 [wiz 2022-11-05]
+	Updated time/p5-DateTime to 1.59 [wen 2022-11-06]
