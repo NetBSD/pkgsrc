@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2022/04/05 18:49:29 bacon Exp $
+# $NetBSD: Makefile,v 1.80 2022/11/06 22:50:02 bacon Exp $
 #
 
 COMMENT=	Software for the biological sciences
@@ -25,6 +25,7 @@ SUBDIR+=	coalesce
 SUBDIR+=	coordgenlibs
 SUBDIR+=	fastDNAml
 SUBDIR+=	fastp
+SUBDIR+=	fastq-trim
 SUBDIR+=	fastqc
 SUBDIR+=	fastx-toolkit
 SUBDIR+=	filter-fastq
