@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 11:30:51 nia Exp $
+$NetBSD: distinfo,v 1.8 2022/11/06 18:34:58 adam Exp $
 
-BLAKE2s (web.py-0.37.tar.gz) = 397b9d3361e1f7b97de1884040a399403d5289b595fdc19e528209b9027766ad
-SHA512 (web.py-0.37.tar.gz) = 766e24d9df6ab1c3a214156794a19c23fcb16ca7a4ee7586a7723f802eab2ba0b8cda4653c2504ef63f773609436ac12dfd40bbe6cf20e2f93bf95493f041628
-Size (web.py-0.37.tar.gz) = 90232 bytes
+BLAKE2s (web.py-0.62.tar.gz) = 46cf2e2d8eca8a943815bc905530dd55764d7629e1e4f12aa2fd567126963137
+SHA512 (web.py-0.62.tar.gz) = b85fae51ae411991b6f0eb03041dbb9584b5b005a240354a6112fe805f82cecfb3e245a378c1f1a232904633afe9e5e1ce5d9d118b368ea9ba5b0ab88f9cccfa
+Size (web.py-0.62.tar.gz) = 623196 bytes
