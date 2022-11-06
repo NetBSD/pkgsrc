@@ -1,5 +1,9 @@
-@comment $NetBSD: PLIST,v 1.9 2022/01/14 17:52:06 wiz Exp $
-${PYSITELIB}/${EGG_INFODIR}
+@comment $NetBSD: PLIST,v 1.10 2022/11/06 18:34:58 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/web/__init__.py
 ${PYSITELIB}/web/__init__.pyc
 ${PYSITELIB}/web/__init__.pyo
@@ -33,9 +37,9 @@ ${PYSITELIB}/web/httpserver.pyo
 ${PYSITELIB}/web/net.py
 ${PYSITELIB}/web/net.pyc
 ${PYSITELIB}/web/net.pyo
-${PYSITELIB}/web/python23.py
-${PYSITELIB}/web/python23.pyc
-${PYSITELIB}/web/python23.pyo
+${PYSITELIB}/web/py3helpers.py
+${PYSITELIB}/web/py3helpers.pyc
+${PYSITELIB}/web/py3helpers.pyo
 ${PYSITELIB}/web/session.py
 ${PYSITELIB}/web/session.pyc
 ${PYSITELIB}/web/session.pyo
@@ -51,18 +55,6 @@ ${PYSITELIB}/web/utils.pyo
 ${PYSITELIB}/web/webapi.py
 ${PYSITELIB}/web/webapi.pyc
 ${PYSITELIB}/web/webapi.pyo
-${PYSITELIB}/web/webopenid.py
-${PYSITELIB}/web/webopenid.pyc
-${PYSITELIB}/web/webopenid.pyo
 ${PYSITELIB}/web/wsgi.py
 ${PYSITELIB}/web/wsgi.pyc
 ${PYSITELIB}/web/wsgi.pyo
-${PYSITELIB}/web/wsgiserver/__init__.py
-${PYSITELIB}/web/wsgiserver/__init__.pyc
-${PYSITELIB}/web/wsgiserver/__init__.pyo
-${PYSITELIB}/web/wsgiserver/ssl_builtin.py
-${PYSITELIB}/web/wsgiserver/ssl_builtin.pyc
-${PYSITELIB}/web/wsgiserver/ssl_builtin.pyo
-${PYSITELIB}/web/wsgiserver/ssl_pyopenssl.py
-${PYSITELIB}/web/wsgiserver/ssl_pyopenssl.pyc
-${PYSITELIB}/web/wsgiserver/ssl_pyopenssl.pyo
