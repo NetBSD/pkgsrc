@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5366 2022/11/06 18:36:00 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5367 2022/11/06 18:46:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8120,3 +8120,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/py-jaraco.collections version 3.7.0 [adam 2022-11-06]
 	Updated www/py-cherrypy to 18.8.0 [adam 2022-11-06]
 	Updated www/py-webpy to 0.62 [adam 2022-11-06]
+	Updated devel/py-jaraco.itertools to 6.2.1 [adam 2022-11-06]
+	Updated www/py-websockets to 10.4 [adam 2022-11-06]
