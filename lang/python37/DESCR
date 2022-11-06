@@ -13,4 +13,6 @@ dynamically loaded. Python is also adaptable as an exten-
 sion language for existing applications. See the internal
 documentation for hints.
 
-This package provides Python version 3.7.x.
+This package provides Python version 3.7.x.  While technically not
+EOL, it is de-supported in pkgsrc in that py37-foo packages are not
+built by default.
