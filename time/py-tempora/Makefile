@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2022/05/12 08:20:36 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2022/11/06 18:18:37 adam Exp $
 
-DISTNAME=	tempora-1.14.1
+DISTNAME=	tempora-5.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	time python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tempora/}
 
@@ -11,32 +10,24 @@ HOMEPAGE=	https://github.com/jaraco/tempora
 COMMENT=	Objects and routines pertaining to date and time
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-jaraco.functools-[0-9]*:../../devel/py-jaraco.functools
+BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4.1:../../devel/py-setuptools_scm
+DEPENDS+=	${PYPKGPREFIX}-jaraco.functools>=1.20:../../devel/py-jaraco.functools
 DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
-DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-flake8-[0-9]*:../../devel/py-test-flake8
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-sugar>=0.9.1:../../devel/py-test-sugar
-
-PYTHON_VERSIONED_DEPENDENCIES+=	test:test
-PYTHON_VERSIONED_DEPENDENCIES+=	setuptools_scm:build
-
-.include "../../lang/python/pyversion.mk"
-
-.if ${_PYTHON_VERSION} != 27
-# freezegun is only available for python 3
-TEST_DEPENDS+=	${PYPKGPREFIX}-freezegun-[0-9]*:../../devel/py-freezegun
-.endif
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-freezegun-[0-9]*:../../devel/py-test-freezegun
 
 USE_LANGUAGES=	# none
 
-USE_PKG_RESOURCES=	yes
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
-	cd ${DESTDIR}${PREFIX}/bin && ${MV} calc-prorate calc-prorate${PYVERSSUFFIX} || ${TRUE}
+	cd ${DESTDIR}${PREFIX}/bin && \
+	${MV} calc-prorate calc-prorate-${PYVERSSUFFIX} || ${TRUE}
 
 do-test:
-	cd ${WRKSRC}/tests && pytest-${PYVERSSUFFIX}
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
-.include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
