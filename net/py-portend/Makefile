@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2022/01/13 19:31:21 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2022/11/06 18:19:52 adam Exp $
 
-DISTNAME=	portend-2.6
+DISTNAME=	portend-3.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/portend/}
 
@@ -11,17 +10,18 @@ HOMEPAGE=	https://github.com/jaraco/portend
 COMMENT=	TCP port monitoring utilities
 LICENSE=	mit
 
+BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-tempora>=1.8:../../time/py-tempora
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-sugar-[0-9]*:../../devel/py-test-sugar
-# missing: pytest-black-multipy
-
-PYTHON_VERSIONED_DEPENDENCIES=	test:test setuptools_scm:build
+TEST_DEPENDS+=	${PYPKGPREFIX}-test>=6:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-flake8-[0-9]*:../../devel/py-test-flake8
 
 USE_LANGUAGES=	# none
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
 do-test:
-	cd ${WRKSRC} && pytest-${PYVERSSUFFIX} test_portend.py
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} test_portend.py
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
