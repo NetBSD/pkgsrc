@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.69 2022/10/22 16:30:49 nia Exp $
+# $NetBSD: Makefile,v 1.70 2022/11/06 16:54:01 triaxx Exp $
 
 DISTNAME=	SDL2-2.24.1
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libsdl-org/}
 GITHUB_PROJECT=	SDL
@@ -32,6 +33,8 @@ CONFIGURE_ARGS+=	--disable-esd
 
 # SDL has native audio(4) support, avoid building ossaudio(4) support.
 CONFIGURE_ARGS.NetBSD+=	--disable-oss
+
+LDFLAGS.FreeBSD+=	-lusb
 
 PKGCONFIG_OVERRIDE+=	sdl2.pc.in
 
