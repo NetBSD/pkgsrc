@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5367 2022/11/06 18:46:14 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5368 2022/11/06 20:58:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8122,3 +8122,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/py-webpy to 0.62 [adam 2022-11-06]
 	Updated devel/py-jaraco.itertools to 6.2.1 [adam 2022-11-06]
 	Updated www/py-websockets to 10.4 [adam 2022-11-06]
+	Updated shells/zsh to 5.9nb2 [wiz 2022-11-06]
