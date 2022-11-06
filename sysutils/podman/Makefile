@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2022/01/09 02:58:52 tnn Exp $
+# $NetBSD: Makefile,v 1.5 2022/11/06 12:39:14 tnn Exp $
 
 DISTNAME=	podman-3.4.4
+PKGREVISION=	1
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=containers/}
@@ -19,11 +20,13 @@ BUILD_DEPENDS+=	${GO_PACKAGE_DEP}
 DEPENDS+=	qemu-[0-9]*:../../emulators/qemu
 DEPENDS+=	gvproxy-[0-9]*:../../net/gvproxy
 
-SUBST_CLASSES+=		gvproxy
-SUBST_FILES.gvproxy=	vendor/github.com/containers/common/pkg/config/config_netbsd.go
-SUBST_STAGE.gvproxy=	pre-configure
-SUBST_MESSAGE.gvproxy=	fix PREFIX inside patch
-SUBST_VARS.gvproxy=	PREFIX
+SUBST_CLASSES+=		prefix
+SUBST_FILES.prefix+=	pkg/machine/qemu/options_darwin_arm64.go
+SUBST_FILES.prefix+=	vendor/github.com/containers/common/pkg/config/config_darwin.go
+SUBST_FILES.prefix+=	vendor/github.com/containers/common/pkg/config/config_netbsd.go
+SUBST_STAGE.prefix=	pre-configure
+SUBST_MESSAGE.prefix=	fix PREFIX inside patch
+SUBST_VARS.prefix=	PREFIX
 
 CHECK_PORTABILITY_SKIP+=	vendor/github.com/containers/buildah/release.sh
 

@@ -1,16 +1,18 @@
-$NetBSD: distinfo,v 1.5 2021/12/18 18:11:48 leot Exp $
+$NetBSD: distinfo,v 1.6 2022/11/06 12:39:14 tnn Exp $
 
 BLAKE2s (podman-3.4.4.tar.gz) = d9923d89d2c36269696e7e8a873cc789988b586121e53d9d8fcd32e156464501
 SHA512 (podman-3.4.4.tar.gz) = cfd295bf50ce86ea70741c3e663b409ed47b1e560c962bc579f319151a0fe2b24cdd3045667660083cce89449a9c5de1508c94a9a02375165a72ce7c16166666
 Size (podman-3.4.4.tar.gz) = 10945990 bytes
 SHA1 (patch-Makefile) = 5671f5452430d4b94af924defbb473eb91732281
 SHA1 (patch-cmd_podman_registry_config.go) = 6d32a7526cad5728a385de0029b2bbe5474e7f1b
+SHA1 (patch-pkg_machine_qemu_options__darwin__arm64.go) = fadd696fae75b58b45edd8bd02f42291675bd242
 SHA1 (patch-pkg_machine_qemu_options__netbsd.go) = a256dcafceb70f29b4f7a1ed013b52b5d6b0f4ba
 SHA1 (patch-pkg_machine_qemu_options__netbsd__amd64.go) = 7f5e4fe206e6e1d8f8e2cd33c8ac18b614c2dd61
 SHA1 (patch-pkg_util_utils__netbsd.go) = 452c7ca070a945cbcc3e703105c1fe0a65eaedc7
 SHA1 (patch-utils_utils__supported.go) = 37c999dbf55ff98017d1a4d017d20d576e28d42d
 SHA1 (patch-vendor_github.com_containers_buildah_util_util__uint64.go) = 3e8b233c63224e5c2785760342bb42ec064a81a1
 SHA1 (patch-vendor_github.com_containers_buildah_util_util__unix.go) = 2073a132dc3bf63436ff29bcd228d960ab3c90d0
+SHA1 (patch-vendor_github.com_containers_common_pkg_config_config__darwin.go) = 72e34c210344d52c08eabd0ce34dc2fd4d7f8bea
 SHA1 (patch-vendor_github.com_containers_common_pkg_config_config__netbsd.go) = 0da82c8c514630fe6afed3041c51869915c3fda8
 SHA1 (patch-vendor_github.com_containers_common_pkg_config_util__supported.go) = 3e02f5ee7d0855d46d8318792f620e18f722d259
 SHA1 (patch-vendor_github.com_containers_storage_drivers_chroot__unix.go) = c2c625898c7651d24ba842a6654d57dd4a0e4428
