@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5363 2022/11/06 17:03:26 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5364 2022/11/06 17:20:33 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8109,3 +8109,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/hdf5 to 1.10.9 [adam 2022-11-06]
 	Updated devel/hdf5-c++ to 1.10.9 [adam 2022-11-06]
 	Updated math/octave to 7.3.0 [adam 2022-11-06]
+	Updated net/libslirp to 4.7.0nb1 [triaxx 2022-11-06]
