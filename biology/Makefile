@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2022/11/06 22:50:02 bacon Exp $
+# $NetBSD: Makefile,v 1.81 2022/11/06 23:01:44 bacon Exp $
 #
 
 COMMENT=	Software for the biological sciences
@@ -33,6 +33,7 @@ SUBDIR+=	fluctuate
 SUBDIR+=	gabedit
 SUBDIR+=	generand
 SUBDIR+=	genesplicer
+SUBDIR+=	gffread
 SUBDIR+=	glimmer
 SUBDIR+=	gnome-chemistry-utils
 SUBDIR+=	gp
