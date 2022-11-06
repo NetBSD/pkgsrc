@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3816 2022/10/26 16:03:52 nikita Exp $
+# $NetBSD: Makefile,v 1.3817 2022/11/06 18:12:59 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2545,6 +2545,7 @@ SUBDIR+=	py-isort
 SUBDIR+=	py-isort4
 SUBDIR+=	py-itanium_demangler
 SUBDIR+=	py-jaraco.classes
+SUBDIR+=	py-jaraco.context
 SUBDIR+=	py-jaraco.envs
 SUBDIR+=	py-jaraco.functools
 SUBDIR+=	py-jaraco.itertools
