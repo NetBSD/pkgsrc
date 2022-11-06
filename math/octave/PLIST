@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.38 2022/10/24 18:02:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.39 2022/11/06 17:02:55 adam Exp $
 bin/${PKGNAME}
 bin/mkoctfile
 bin/mkoctfile-${PKGVERSION}
@@ -998,6 +998,8 @@ share/octave/${PKGVERSION}/etc/tests/fixed/classdef-multiple-inheritance/base_2.
 share/octave/${PKGVERSION}/etc/tests/fixed/classdef-multiple-inheritance/child_from_base_1.m
 share/octave/${PKGVERSION}/etc/tests/fixed/classdef-multiple-inheritance/child_from_base_1_and_2.m
 share/octave/${PKGVERSION}/etc/tests/fixed/classdef-multiple-inheritance/classdef-multiple-inheritance.tst
+share/octave/${PKGVERSION}/etc/tests/fixed/classdef/@class_bug62802/amethod.m
+share/octave/${PKGVERSION}/etc/tests/fixed/classdef/@class_bug62802/class_bug62802.m
 share/octave/${PKGVERSION}/etc/tests/fixed/classdef/bug_60763.m
 share/octave/${PKGVERSION}/etc/tests/fixed/classdef/class_bug52614A.m
 share/octave/${PKGVERSION}/etc/tests/fixed/classdef/class_bug52614B.m
