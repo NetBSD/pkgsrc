@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5354 2022/11/06 09:54:13 wen Exp $
+$NetBSD: CHANGES-2022,v 1.5355 2022/11/06 09:57:58 wen Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8098,3 +8098,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/xf86-input-void to 1.4.2 [wiz 2022-11-05]
 	Updated time/p5-DateTime to 1.59 [wen 2022-11-06]
 	Updated time/p5-DateTime-TimeZone to 2.56 [wen 2022-11-06]
+	Updated time/p5-DateTime-Locale to 1.37 [wen 2022-11-06]
