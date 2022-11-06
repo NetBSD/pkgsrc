@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2022/07/22 14:50:32 thor Exp $
+@comment $NetBSD: PLIST,v 1.31 2022/11/06 17:00:56 adam Exp $
 ${PLIST.hl}bin/gif2h5
 ${PLIST.hl}bin/h52gif
 bin/h5cc
@@ -19,8 +19,6 @@ bin/h5repart
 bin/h5stat
 bin/h5unjam
 ${PLIST.hl}bin/h5watch
-bin/mirror_server
-bin/mirror_server_stop
 include/H5ACpublic.h
 include/H5Apublic.h
 include/H5Cpublic.h
@@ -112,6 +110,8 @@ share/examples/hdf5/c/h5_vds-percival.c
 share/examples/hdf5/c/h5_vds-simpleIO.c
 share/examples/hdf5/c/h5_vds.c
 share/examples/hdf5/c/h5_write.c
+share/examples/hdf5/c/ph5_filtered_writes.c
+share/examples/hdf5/c/ph5_filtered_writes_no_sel.c
 share/examples/hdf5/c/ph5example.c
 share/examples/hdf5/c/run-c-ex.sh
 ${PLIST.hl}share/examples/hdf5/hl/c/ex_ds1.c

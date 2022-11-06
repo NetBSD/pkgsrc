@@ -1,0 +1,20 @@
+$NetBSD: patch-tools_test_h5dump_testh5dump.sh.in,v 1.1 2022/11/06 17:00:56 adam Exp $
+
+Portability fix.
+
+--- tools/test/h5dump/testh5dump.sh.in.orig	2022-11-05 18:51:12.000000000 +0000
++++ tools/test/h5dump/testh5dump.sh.in
+@@ -883,11 +883,11 @@ TOOLTEST_FAIL() {
+     ) >&$actual
+     RET=$?
+     # Segfault occurred
+-    if [ $RET == 139 ] ; then
++    if [ $RET = 139 ] ; then
+         nerrors="`expr $nerrors + 1`"
+         echo "*FAILED - test on $infile failed with segmentation fault"
+     # Should fail but didn't
+-    elif [ $RET == 0 ] ; then
++    elif [ $RET = 0 ] ; then
+         nerrors="`expr $nerrors + 1`"
+         echo "*FAILED - test on $infile did not fail as expected"
+     else
