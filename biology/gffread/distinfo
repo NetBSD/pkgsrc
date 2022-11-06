@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2022/11/06 23:01:18 bacon Exp $
+
+BLAKE2s (gffread-0.12.7.tar.gz) = 4f39c075ca17fe6813595dd7c8d1ff2ff829f76b3d5eed46e28c7cbdaca56255
+SHA512 (gffread-0.12.7.tar.gz) = 33a2308caecd3e891788a76c6b68b79569afd8d0d749bf57a8c528550d26f7a7b61b8ca77e8a37e05a7dfaeac600470c255a22314ea94f63e2b2cac45674f97b
+Size (gffread-0.12.7.tar.gz) = 403734 bytes
+BLAKE2s (gpertea-gclib-v0.12.7.tar.gz) = 68a41720355aac7d8b0602a66c558cfdabd93594a9079761ab5332f7adece277
+SHA512 (gpertea-gclib-v0.12.7.tar.gz) = 2ff7be21f8ae002afdd7e34b6200e308f87077331c174dbea863972a01a0b6758062accda431bb73ef45ae91db44871f9eb0f5ae4bd564252599236282e57f90
+Size (gpertea-gclib-v0.12.7.tar.gz) = 259314 bytes
+SHA1 (patch-Makefile) = 07e83c4b17715f31f0429671dba703a8b1d31118

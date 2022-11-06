@@ -1,0 +1,73 @@
+$NetBSD: patch-Makefile,v 1.1 2022/11/06 23:01:18 bacon Exp $
+
+# Portability and package-friendliness
+
+--- Makefile.orig	2021-07-23 14:21:36.000000000 +0000
++++ Makefile
+@@ -1,11 +1,11 @@
+-GCLDIR := $(if $(GCLDIR),$(GCLDIR),../gclib)
++GCLDIR := $(if $(GCLDIR),$(GCLDIR),gclib)
+ 
+ SEARCHDIRS := -I. -I${GCLDIR}
+ 
+ SYSTYPE :=     $(shell uname)
+ 
+ CXX   := $(if $(CXX),$(CXX),g++)
+-LINKER  := $(if $(LINKER),$(LINKER),g++)
++LINKER  := $(if $(LINKER),$(LINKER),${CXX})
+ 
+ LDFLAGS := $(if $(LDFLAGS),$(LDFLAGS),-g)
+ 
+@@ -15,7 +15,7 @@ BASEFLAGS  := -Wall -Wextra -std=c++11 $
+ 
+ GCCV8 := $(shell expr `${CXX} -dumpversion | cut -f1 -d.` \>= 8)
+ ifeq "$(GCCV8)" "1"
+- BASEFLAGS += -Wno-class-memaccess
++ # BASEFLAGS += -Wno-class-memaccess
+ endif
+ 
+ CXXFLAGS := $(if $(CXXFLAGS),$(BASEFLAGS) $(CXXFLAGS),$(BASEFLAGS))
+@@ -33,7 +33,7 @@ else #debug builds
+     LDFLAGS += -pg
+   else
+     #CXXFLAGS += -g -O0 -DNDEBUG
+-    CXXFLAGS += -g -O0 -DDEBUG -D_DEBUG -DGDEBUG
++    #CXXFLAGS += -g -O0 -DDEBUG -D_DEBUG -DGDEBUG
+   endif
+   ifneq (,$(filter %memcheck %memdebug, $(MAKECMDGOALS)))
+      #use sanitizer in gcc 4.9+
+@@ -79,10 +79,7 @@ OBJS := ${GCLDIR}/GBase.o ${GCLDIR}/GArg
+  
+ .PHONY : all
+ 
+-all static release debug memcheck memdebug profile gprof prof: ../gclib gffread
+-
+-../gclib:
+-	git clone https://github.com/gpertea/gclib.git ../gclib
++all static release debug memcheck memdebug profile gprof prof: ${GCLDIR} gffread
+ 
+ $(OBJS) : $(GCLDIR)/GBase.h $(GCLDIR)/gff.h
+ gffread.o : gff_utils.h $(GCLDIR)/GBase.h $(GCLDIR)/gff.h
+@@ -97,9 +94,21 @@ gffread: $(OBJS) gffread.o
+ 
+ # target for removing all object files
+ 
+-.PHONY : clean
++.PHONY : clean install install-strip
++
+ clean:
+ 	@${RM} gffread gffread.o* gffread.exe $(OBJS)
+ 	@${RM} core.*
+ 
++MKDIR	?= mkdir
++INSTALL	?= install
++STRIP	?= strip
++PREFIX	?= /usr/local
++DESTDIR	?= .
++
++install:
++	${MKDIR} -p ${DESTDIR}${PREFIX}/bin
++	${INSTALL} -c gffread ${DESTDIR}${PREFIX}/bin
+ 
++install-strip: install
++	${STRIP} ${DESTDIR}${PREFIX}/bin/gffread
