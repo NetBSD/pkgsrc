@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/11/05 18:13:44 pin Exp $
+# $NetBSD: Makefile,v 1.2 2022/11/06 08:23:11 wiz Exp $
 
 DISTNAME=	1e158fb20108
 PKGNAME=	xss-lock-0.3.0
@@ -30,6 +30,7 @@ CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 
 WRKSRC=		${WRKDIR}/raymonad-xss-lock-${DISTNAME}
 
+.include "../../lang/python/pyversion.mk"
 .include "../../x11/xcb-util/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
