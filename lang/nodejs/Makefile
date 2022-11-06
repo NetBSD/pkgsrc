@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.245 2022/11/01 17:58:22 schmonz Exp $
+# $NetBSD: Makefile,v 1.246 2022/11/06 16:28:29 triaxx Exp $
 
 DISTNAME=	node-v18.12.0
 PKGREVISION=	1
@@ -17,7 +17,7 @@ CONFIGURE_ARGS+=	--shared-brotli
 CONFIGURE_ARGS+=	--shared-nghttp2
 CONFIGURE_ARGS+=	--with-intl=system-icu
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 311
 
 CHECK_PORTABILITY_SKIP+=	deps/v8/tools/cppgc/export_to_github.sh
 CHECK_PORTABILITY_SKIP+=	deps/v8/tools/cppgc/test_cmake.sh
