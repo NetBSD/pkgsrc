@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/01/04 20:52:51 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/11/06 23:26:58 gdt Exp $
 
 DISTNAME=	backports.cached-property-1.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,7 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_s
 BUILD_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-backports>=1.0nb2:../../devel/py-backports
 
-PYTHON_VERSIONS_ACCEPTED=	37 # included in Python 3.8+
+PYTHON_VERSIONS_ACCEPTED=	# included in Python 3.8+
 
 post-install:
 	${RM} -f -r ${DESTDIR}${PREFIX}/${PYSITELIB}/backports/__init__.*
