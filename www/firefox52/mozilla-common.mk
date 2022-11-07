@@ -1,9 +1,8 @@
-# $NetBSD: mozilla-common.mk,v 1.14 2022/05/15 00:37:26 dholland Exp $
+# $NetBSD: mozilla-common.mk,v 1.15 2022/11/07 01:02:08 gutteridge Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
-# used by www/firefox/Makefile
-# used by www/seamonkey/Makefile
+# used by www/firefox52/Makefile
 
 # GCC 4.6 is required to support nullptr.
 GCC_REQD+=		4.8
