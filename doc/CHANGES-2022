@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5371 2022/11/06 23:01:27 bacon Exp $
+$NetBSD: CHANGES-2022,v 1.5372 2022/11/07 10:44:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8126,3 +8126,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated emulators/dosbox-x to 0.84.3 [triaxx 2022-11-06]
 	Added biology/fastq-trim version 0.1.1.16 [bacon 2022-11-06]
 	Added biology/gffread version 0.12.7 [bacon 2022-11-06]
+	Updated textproc/utf8-cpp to 3.2.2 [adam 2022-11-07]
+	Updated devel/py-jaraco.collections to 3.8.0 [adam 2022-11-07]
