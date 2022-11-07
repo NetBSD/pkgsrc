@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5373 2022/11/07 14:27:15 taca Exp $
+$NetBSD: CHANGES-2022,v 1.5374 2022/11/07 22:38:16 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8129,3 +8129,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/utf8-cpp to 3.2.2 [adam 2022-11-07]
 	Updated devel/py-jaraco.collections to 3.8.0 [adam 2022-11-07]
 	Updated security/sudo to 1.9.12p1 [taca 2022-11-07]
+	Updated devel/patchelf to 0.17.0 [fcambus 2022-11-07]
