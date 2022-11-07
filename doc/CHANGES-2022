@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5372 2022/11/07 10:44:09 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5373 2022/11/07 14:27:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8128,3 +8128,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added biology/gffread version 0.12.7 [bacon 2022-11-06]
 	Updated textproc/utf8-cpp to 3.2.2 [adam 2022-11-07]
 	Updated devel/py-jaraco.collections to 3.8.0 [adam 2022-11-07]
+	Updated security/sudo to 1.9.12p1 [taca 2022-11-07]
