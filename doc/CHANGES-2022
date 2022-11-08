@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5383 2022/11/08 13:50:21 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5384 2022/11/08 15:29:36 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8147,3 +8147,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/pugixml to 1.13 [adam 2022-11-08]
 	Updated devel/py-coverage to 6.5.0 [adam 2022-11-08]
 	Updated devel/py-test-cov to 4.0.0 [adam 2022-11-08]
+	Updated devel/php-igbinary to 3.2.11 [taca 2022-11-08]
