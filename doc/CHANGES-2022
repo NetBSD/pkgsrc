@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5376 2022/11/08 09:04:48 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5377 2022/11/08 09:30:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8135,3 +8135,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-immutabledict to 2.2.3 [adam 2022-11-08]
 	Updated lang/py-mypy to 0.990 [adam 2022-11-08]
 	Updated devel/py-faker to 15.3.1 [adam 2022-11-08]
+	Removed devel/py-typed-ast [adam 2022-11-08]
+	Removed comms/py-enrich [adam 2022-11-08]
