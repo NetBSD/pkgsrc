@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.132 2022/05/07 06:00:37 wiz Exp $
+# $NetBSD: Makefile,v 1.133 2022/11/08 09:29:50 adam Exp $
 #
 
 COMMENT=	Telephony and serial communication utilities
@@ -69,7 +69,6 @@ SUBDIR+=	plp
 SUBDIR+=	py-cleo
 SUBDIR+=	py-clikit
 SUBDIR+=	py-colorama
-SUBDIR+=	py-enrich
 SUBDIR+=	py-esptool
 SUBDIR+=	py-gammu
 SUBDIR+=	py-nodemcu-uploader
