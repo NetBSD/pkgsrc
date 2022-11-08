@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5381 2022/11/08 12:50:57 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5382 2022/11/08 13:01:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8144,3 +8144,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/orc to 0.4.33 [wiz 2022-11-08]
 	Updated databases/slony1 to 2.2.11 [adam 2022-11-08]
 	Updated devel/py-setuptools to 65.5.1 [adam 2022-11-08]
+	Updated textproc/pugixml to 1.13 [adam 2022-11-08]
