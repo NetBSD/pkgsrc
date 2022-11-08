@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.27 2022/05/03 18:44:13 nia Exp $
+$NetBSD: distinfo,v 1.28 2022/11/08 12:44:56 adam Exp $
 
-BLAKE2s (slony1-2.2.10.tar.bz2) = 04f8302ff05bb68947e35d806fa6bfeb2596e79b08ad1051af7ecb71474a9cc7
-SHA512 (slony1-2.2.10.tar.bz2) = 1b41addb7a0be0a130c2efcab1b241e3158d10a5a6e203d83f28353e303dd524e224ab9c04a7e37a0f89cd944237b90feeb8910eb35f717926aa3ad28dbe2d0f
-Size (slony1-2.2.10.tar.bz2) = 1464652 bytes
+BLAKE2s (slony1-2.2.11.tar.bz2) = ba6ae779d7cb5f70182dbc114f997f684ec50c36abbe8a12ef7ac21d4e39999a
+SHA512 (slony1-2.2.11.tar.bz2) = 4fca359eaa8294ca674c0afcff0e7cf8a68f1654bd47aef46f064f8cb3b42e3469b0cc97698a291adc31d610ceacdcb5a4b064e3d38d4c4ad3d5e7831f7ef45c
+Size (slony1-2.2.11.tar.bz2) = 1464951 bytes
 SHA1 (patch-config.h.in) = 7348475c942c06d8d668f8b1a5d4fc4a03189017
 SHA1 (patch-configure) = 67eba0a1a45ef1f68a5a62627deb9e68f967b012
 SHA1 (patch-makefiles_Makefile.netbsd) = 29f668c0a8c58d02c9c832e5d30c3ef08a1b354c
