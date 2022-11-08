@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.24 2022/08/11 06:29:32 adam Exp $
+$NetBSD: distinfo,v 1.25 2022/11/08 11:36:19 adam Exp $
 
-BLAKE2s (xopen-1.6.0.tar.gz) = a163055ee744df0867ee52a301c48b2896d0ccedba674c1b1f6b9e069b8ffee2
-SHA512 (xopen-1.6.0.tar.gz) = 388b33c66ee379c1d3e8f19cfdbc224329decc632db039856154ca688b624d05342e6b6fa35fc2f0f937105cbe0f44cab3c46090a4073bf5c6f10e324ad999ca
-Size (xopen-1.6.0.tar.gz) = 25173 bytes
+BLAKE2s (xopen-1.7.0.tar.gz) = 7515382aaa31fd80e0c9515ae5e4a08542efaab6b4fa1e128cedf4b14db21407
+SHA512 (xopen-1.7.0.tar.gz) = 6f06b1e51a2dffc9db44f48bfbab2b0f8c9fd7e1db0792a479eb3dbb3cbea939b5f5dc212e83713b9fbf069dfb62f6dc9a0e4ad78f8ffde9888a4fe90d979d1e
+Size (xopen-1.7.0.tar.gz) = 27385 bytes
