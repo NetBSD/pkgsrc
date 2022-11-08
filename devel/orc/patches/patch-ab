@@ -1,7 +1,9 @@
-$NetBSD: patch-ab,v 1.5 2019/10/10 13:04:22 wiz Exp $
+$NetBSD: patch-ab,v 1.6 2022/11/08 12:10:18 wiz Exp $
 
 Fix this so that NetBSD is also probed for altivec on powerpc
 (and so that this builds).
+
+https://gitlab.freedesktop.org/gstreamer/orc/-/merge_requests/81
 
 --- orc/orccpu-powerpc.c.orig	2019-09-09 07:21:43.000000000 +0000
 +++ orc/orccpu-powerpc.c

@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.23 2022/11/08 12:00:42 wiz Exp $
+$NetBSD: distinfo,v 1.24 2022/11/08 12:10:17 wiz Exp $
 
 BLAKE2s (orc-0.4.33.tar.xz) = 802a18617eb99204a6ac8e4d19721a03f7bf85d5d1af94d131685859265eeb6f
 SHA512 (orc-0.4.33.tar.xz) = ae8adce5dd62f4054879e6f2db76ce8a7959fd32fef0fb99f73f450ff58c5237e15bca764f6780309a163e40afcf400345f12b0aed5b88dc698064e44f8eede0
 Size (orc-0.4.33.tar.xz) = 199024 bytes
-SHA1 (patch-ab) = 8536500f42ed59f9159597e2b7d51772d103faa5
-SHA1 (patch-orc_orccodemem.c) = 00d940be502ce9f1776a98c4c100c579ce28c0c5
+SHA1 (patch-ab) = f2ccfd917b7f096e4e20e7e0a7088ef6ca4a2cf4
+SHA1 (patch-orc_orccodemem.c) = 0e22586002833f26e0b2e221d37f07dd59c8454e
