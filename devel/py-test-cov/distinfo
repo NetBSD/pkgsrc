@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2022/08/24 10:08:54 wiz Exp $
+$NetBSD: distinfo,v 1.19 2022/11/08 13:50:05 adam Exp $
 
-BLAKE2s (pytest-cov-3.0.0.tar.gz) = 72e3a77921569945ae7586ff313a49622093d746076eb9947ae5fcaaa53989e4
-SHA512 (pytest-cov-3.0.0.tar.gz) = 289d1b1e29dcc3461276de4c1bbd3884e4ec957efb7dd4c330bc3f25f1b978cbee64c0e2882b419eee5f9ccf44c9d1a23ce47a1b7cc7e436b9ebe894e4c11ae8
-Size (pytest-cov-3.0.0.tar.gz) = 61440 bytes
+BLAKE2s (pytest-cov-4.0.0.tar.gz) = 3435207604ac6c361db8a58afd38567a9a8ef9e0dcf62eeefe0ce325e19cfb8e
+SHA512 (pytest-cov-4.0.0.tar.gz) = fb993be4d86b29a44e4f2ccd2309d99ab9fe8e6b291abbc2a8a3fc8b36479491165a242a20bfa9886dfd296fcc827da9984b556fdbe9a3ac496ac5b6ba379012
+Size (pytest-cov-4.0.0.tar.gz) = 62013 bytes
