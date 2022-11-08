@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2021/11/27 11:27:25 adam Exp $
+# $NetBSD: Makefile,v 1.21 2022/11/08 12:00:42 wiz Exp $
 
-DISTNAME=	orc-0.4.32
+DISTNAME=	orc-0.4.33
 CATEGORIES=	devel
 MASTER_SITES=	https://gstreamer.freedesktop.org/src/orc/
 EXTRACT_SUFX=	.tar.xz
