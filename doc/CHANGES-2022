@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5378 2022/11/08 11:44:16 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5379 2022/11/08 11:54:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8139,3 +8139,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed comms/py-enrich [adam 2022-11-08]
 	Updated devel/py-xopen to 1.7.0 [adam 2022-11-08]
 	Updated databases/py-asyncpg to 0.27.0 [adam 2022-11-08]
+	Updated biology/py-pydicom to 2.3.0 [adam 2022-11-08]
+	Updated devel/py-pip to 22.3.1 [adam 2022-11-08]
