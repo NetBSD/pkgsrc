@@ -1,16 +1,17 @@
-$NetBSD: patch-aa,v 1.20 2019/11/02 17:02:56 rillig Exp $
+$NetBSD: patch-aa,v 1.21 2022/11/08 12:47:01 nros Exp $
 
 Override library subdirectory name for consistency.
 Don't use cache file to avoid trailing space problem.
 Support staged installation of modules.
 Fix SunOS linking.
+Fix NetBSD module linking.
 
 https://mail-index.netbsd.org/pkgsrc-users/2019/11/02/msg029846.html
 https://sourceforge.net/p/clisp/bugs/740/ (macOS build failure)
 
 --- src/makemake.in.orig	2010-07-07 15:15:35.000000000 +0000
 +++ src/makemake.in
-@@ -577,8 +577,8 @@
+@@ -577,8 +577,8 @@ case $# in
       CROSS=false
       if [ -z "$HSYS" ]; then # not win32gcc
         # some shells (A/UX and OSF/1) need the parentheses around "arch" below.
@@ -21,7 +22,7 @@ https://sourceforge.net/p/clisp/bugs/740/ (macOS build failure)
         if [ "$HSYS" = 386bsd -o "$HSYS" = sun386 -o "$HSYS" = "386/at" -o "$HSYS" = i86pc ] ; then
           HSYS='i386'
         fi
-@@ -1416,42 +1416,42 @@ if [ "${with_dynamic_modules}" != no ];
+@@ -1416,42 +1416,42 @@ if [ "${with_dynamic_modules}" != no ]; 
        XCC_PICFLAG=''
        ;;
    esac
@@ -32,12 +33,14 @@ https://sourceforge.net/p/clisp/bugs/740/ (macOS build failure)
 -      XCC_CREATESHARED='ld -Bshareable -o $lib $libs /usr/lib/c++rt0.o'
 +      XCC_CREATESHARED='ld -Bshareable -o "${DESTDIR}$lib" $libs /usr/lib/c++rt0.o'
        ;;
-     freebsd2* | netbsd* | openbsd*)
+-    freebsd2* | netbsd* | openbsd*)
 -      XCC_CREATESHARED='ld -Bshareable -o $lib $libs'
++    freebsd2* | openbsd*)
 +      XCC_CREATESHARED='ld -Bshareable -o "${DESTDIR}$lib" $libs'
        ;;
-     freebsd3* | gnu* | linux* | cygwin* | mingw* | k*bsd* | dragonfly*)
+-    freebsd3* | gnu* | linux* | cygwin* | mingw* | k*bsd* | dragonfly*)
 -      XCC_CREATESHARED='${CC} ${CFLAGS} ${CLFLAGS} -shared -o $lib $libs'
++    freebsd3* | gnu* | linux* | cygwin* | mingw* | k*bsd* | dragonfly* | netbsd*)
 +      XCC_CREATESHARED='${CC} ${CFLAGS} ${CLFLAGS} -shared -o "${DESTDIR}$lib" $libs'
        ;;
      hpux9* | hpux10*)
