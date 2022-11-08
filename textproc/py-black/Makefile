@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2022/10/11 13:15:30 adam Exp $
+# $NetBSD: Makefile,v 1.11 2022/11/08 09:05:48 adam Exp $
 
 DISTNAME=	black-22.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -28,10 +28,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
-
-.if ${_PYTHON_VERSION} < 38
-DEPENDS+=	${PYPKGPREFIX}-typed-ast>=1.4.2:../../devel/py-typed-ast
-.endif
 .if ${_PYTHON_VERSION} < 310
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.10.0.0:../../devel/py-typing-extensions
 .endif
