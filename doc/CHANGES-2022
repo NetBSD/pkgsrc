@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5380 2022/11/08 12:00:52 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.5381 2022/11/08 12:50:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8142,3 +8142,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated biology/py-pydicom to 2.3.0 [adam 2022-11-08]
 	Updated devel/py-pip to 22.3.1 [adam 2022-11-08]
 	Updated devel/orc to 0.4.33 [wiz 2022-11-08]
+	Updated databases/slony1 to 2.2.11 [adam 2022-11-08]
+	Updated devel/py-setuptools to 65.5.1 [adam 2022-11-08]
