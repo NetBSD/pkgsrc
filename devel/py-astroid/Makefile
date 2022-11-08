@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2022/10/25 09:27:33 adam Exp $
+# $NetBSD: Makefile,v 1.68 2022/11/08 09:07:10 adam Exp $
 
 DISTNAME=	astroid-2.12.12
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,7 +17,6 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
 .if ${_PYTHON_VERSION} < 310
-DEPENDS+=	${PYPKGPREFIX}-typed-ast>=1.4.0:../../devel/py-typed-ast
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.10:../../devel/py-typing-extensions
 .endif
 
