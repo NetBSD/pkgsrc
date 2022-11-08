@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.142 2022/08/17 20:28:37 wiz Exp $
+# $NetBSD: Makefile,v 1.143 2022/11/08 01:07:09 gdt Exp $
 
-DISTNAME=	unison-2.52.1
-PKGREVISION=	1
+DISTNAME=	unison-2.53.0
+#PKGREVISION=	0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bcpierce00/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -15,8 +15,6 @@ LICENSE=	gnu-gpl-v3
 USE_TOOLS+=	gmake bash
 MAKE_FLAGS+=	CFLAGS=""
 MAKE_ENV+=	HOME=${WRKDIR:Q}
-# https://github.com/bcpierce00/unison/issues/774
-MAKE_JOBS_SAFE=	no
 
 .include "../../lang/ocaml/ocaml.mk"
 
