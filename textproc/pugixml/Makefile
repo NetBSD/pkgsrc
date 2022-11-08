@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2022/02/20 21:12:33 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2022/11/08 12:56:38 adam Exp $
 
-DISTNAME=	pugixml-1.12.1
+DISTNAME=	pugixml-1.13
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=zeux/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
