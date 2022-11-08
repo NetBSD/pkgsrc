@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2022/10/06 19:38:55 adam Exp $
+@comment $NetBSD: PLIST,v 1.24 2022/11/08 08:57:44 adam Exp $
 bin/dmypy-${PYVERSSUFFIX}
 bin/mypy-${PYVERSSUFFIX}
 bin/mypyc-${PYVERSSUFFIX}
@@ -184,6 +184,9 @@ ${PYSITELIB}/mypy/options.pyo
 ${PYSITELIB}/mypy/parse.py
 ${PYSITELIB}/mypy/parse.pyc
 ${PYSITELIB}/mypy/parse.pyo
+${PYSITELIB}/mypy/partially_defined.py
+${PYSITELIB}/mypy/partially_defined.pyc
+${PYSITELIB}/mypy/partially_defined.pyo
 ${PYSITELIB}/mypy/patterns.py
 ${PYSITELIB}/mypy/patterns.pyc
 ${PYSITELIB}/mypy/patterns.pyo
@@ -497,6 +500,7 @@ ${PYSITELIB}/mypy/typeshed/stdlib/_collections_abc.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_compat_pickle.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_compression.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_csv.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/_ctypes.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_curses.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_decimal.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_dummy_thread.pyi
@@ -1332,6 +1336,9 @@ ${PYSITELIB}/mypyc/test-data/irbuild-constant-fold.test
 ${PYSITELIB}/mypyc/test-data/irbuild-dict.test
 ${PYSITELIB}/mypyc/test-data/irbuild-dunders.test
 ${PYSITELIB}/mypyc/test-data/irbuild-generics.test
+${PYSITELIB}/mypyc/test-data/irbuild-glue-methods.test
+${PYSITELIB}/mypyc/test-data/irbuild-i32.test
+${PYSITELIB}/mypyc/test-data/irbuild-i64.test
 ${PYSITELIB}/mypyc/test-data/irbuild-int.test
 ${PYSITELIB}/mypyc/test-data/irbuild-isinstance.test
 ${PYSITELIB}/mypyc/test-data/irbuild-lists.test
@@ -1359,6 +1366,8 @@ ${PYSITELIB}/mypyc/test-data/run-exceptions.test
 ${PYSITELIB}/mypyc/test-data/run-floats.test
 ${PYSITELIB}/mypyc/test-data/run-functions.test
 ${PYSITELIB}/mypyc/test-data/run-generators.test
+${PYSITELIB}/mypyc/test-data/run-i32.test
+${PYSITELIB}/mypyc/test-data/run-i64.test
 ${PYSITELIB}/mypyc/test-data/run-imports.test
 ${PYSITELIB}/mypyc/test-data/run-integers.test
 ${PYSITELIB}/mypyc/test-data/run-lists.test
