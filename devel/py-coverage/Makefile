@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2022/08/24 09:36:50 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2022/11/08 13:39:17 adam Exp $
 
-DISTNAME=	coverage-6.4.4
+DISTNAME=	coverage-6.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/coverage/}
@@ -12,7 +12,6 @@ LICENSE=	apache-2.0
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
-DEPENDS+=	${PYPKGPREFIX}-tomli-[0-9]*:../../textproc/py-tomli
 TEST_DEPENDS+=	${PYPKGPREFIX}-flaky>=3.7.0:../../devel/py-flaky
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=4.57.1:../../devel/py-hypothesis
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock>=3.0.5:../../devel/py-mock
@@ -20,9 +19,14 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test>=0:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=1.34.0:../../devel/py-test-xdist
 TEST_DEPENDS+=	${PYPKGPREFIX}-unittest-mixins>=1.6:../../devel/py-unittest-mixins
 
+USE_PKG_RESOURCES=	yes
+
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-USE_PKG_RESOURCES=	yes
+.include "../../lang/python/pyversion.mk"
+.if ${_PYTHON_VERSION} < 311
+DEPENDS+=	${PYPKGPREFIX}-tomli-[0-9]*:../../textproc/py-tomli
+.endif
 
 post-install:
 	${RM} -f ${DESTDIR}${PREFIX}/bin/coverage ${DESTDIR}${PREFIX}/bin/coverage3
