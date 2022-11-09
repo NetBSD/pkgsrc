@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2020/01/18 23:36:12 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2022/11/09 13:14:31 joerg Exp $
 
 DISTNAME=		xset-1.2.4
 PKGREVISION=		1
@@ -6,7 +6,7 @@ CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		joerg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/
 COMMENT=		X11 user preferences utility
 LICENSE=		mit

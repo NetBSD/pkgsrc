@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2020/01/26 17:31:11 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2022/11/09 13:14:11 joerg Exp $
 #
 
 DISTNAME=		font-bh-ttf-1.0.3
@@ -7,7 +7,7 @@ CATEGORIES=		fonts
 MASTER_SITES=		${MASTER_SITE_XORG:=font/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		joerg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/
 COMMENT=		Standard Bigelow & Holmes TrueType fonts
 

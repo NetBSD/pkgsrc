@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.38 2021/08/02 10:48:26 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2022/11/09 13:14:31 joerg Exp $
 
 DISTNAME=		xorg-cf-files-1.0.7
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=util/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		joerg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/
 COMMENT=		Xorg imake rules
 

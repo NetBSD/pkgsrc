@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.24 2022/04/10 08:53:19 nia Exp $
+# $NetBSD: Makefile,v 1.25 2022/11/09 13:14:25 joerg Exp $
 
 DISTNAME=	xf86-video-apm-1.3.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	joerg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://xorg.freedesktop.org/
 COMMENT=	Modular Xorg Alliance ProtMotion video driver
 

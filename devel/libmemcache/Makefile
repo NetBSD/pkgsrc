@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2020/04/19 12:58:28 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2022/11/09 13:14:08 joerg Exp $
 #
 
 DISTNAME=		libmemcache-1.4.0.b9
@@ -8,7 +8,7 @@ CATEGORIES=		devel
 MASTER_SITES=		https://people.freebsd.org/~seanc/libmemcache/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		joerg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://people.freebsd.org/~seanc/libmemcache/
 COMMENT=		C API for memcached
 LICENSE=		mit

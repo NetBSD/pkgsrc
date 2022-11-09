@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2021/11/09 10:12:43 nia Exp $
+# $NetBSD: Makefile.common,v 1.23 2022/11/09 13:14:24 joerg Exp $
 #
 # used by x11/wxGTK28/Makefile
 # used by x11/wxGTK28-contrib/Makefile
@@ -8,7 +8,7 @@ CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=wxwindows/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		joerg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://www.wxwidgets.org/
 
 PATCHDIR=		${.CURDIR}/../../x11/wxGTK28/patches

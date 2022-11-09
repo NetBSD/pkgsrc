@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.15 2022/08/30 18:23:39 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2022/11/09 13:14:21 joerg Exp $
 
 DISTNAME=		libXfont2-2.0.6
 CATEGORIES=		x11 devel fonts
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.xz
 
-MAINTAINER=		joerg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/
 COMMENT=		X font Library (v2)
 LICENSE=		mit AND modified-bsd

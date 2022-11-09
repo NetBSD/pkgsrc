@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.22 2022/08/11 06:09:17 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2022/11/09 13:14:31 joerg Exp $
 
 DISTNAME=		xorgproto-2022.2
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=proto/}
 EXTRACT_SUFX=		.tar.xz
 
-MAINTAINER=		joerg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/
 COMMENT=		Various X headers from Xorg X11
 LICENSE=		mit

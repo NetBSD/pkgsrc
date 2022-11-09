@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2022/07/13 20:56:31 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2022/11/09 13:14:30 joerg Exp $
 
 DISTNAME=		xmag-1.0.7
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=		.tar.xz
 
-MAINTAINER=		joerg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/
 COMMENT=		Magnify parts of the screen
 

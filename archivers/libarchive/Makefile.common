@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2020/07/03 19:57:23 hauke Exp $
+# $NetBSD: Makefile.common,v 1.14 2022/11/09 13:14:07 joerg Exp $
 # used by archivers/bsdtar/Makefile
 # used by archivers/libarchive/Makefile
 
@@ -7,7 +7,7 @@ CATEGORIES=	archivers
 MASTER_SITES=	https://www.libarchive.org/downloads/
 DISTFILES=	# empty
 
-MAINTAINER?=	joerg@NetBSD.org
+MAINTAINER?=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.libarchive.org/
 LICENSE=	2-clause-bsd
 

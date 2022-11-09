@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.23 2022/08/14 19:25:13 tnn Exp $
+# $NetBSD: Makefile,v 1.24 2022/11/09 13:14:25 joerg Exp $
 
 DISTNAME=	xf86-video-amdgpu-22.0.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	joerg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://xorg.freedesktop.org/
 COMMENT=	Modular Xorg ATI (Tonga, Carrizo, Iceland, Fiji, Stoney) driver
 LICENSE=	mit AND x11
