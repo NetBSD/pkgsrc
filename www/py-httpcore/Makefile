@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2022/05/24 12:30:25 adam Exp $
+# $NetBSD: Makefile,v 1.19 2022/11/09 09:32:18 adam Exp $
 
-DISTNAME=	httpcore-0.15.0
+DISTNAME=	httpcore-0.16.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/httpcore/}
@@ -12,13 +12,13 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-anyio>=3.0.0:../../devel/py-anyio
 DEPENDS+=	${PYPKGPREFIX}-certifi-[0-9]*:../../security/py-certifi
-DEPENDS+=	${PYPKGPREFIX}-h11>=0.11.0:../../www/py-h11
+DEPENDS+=	${PYPKGPREFIX}-h11>=0.13:../../www/py-h11
 DEPENDS+=	${PYPKGPREFIX}-h2>=3.0:../../www/py-h2
 DEPENDS+=	${PYPKGPREFIX}-sniffio>=1.0.0:../../misc/py-sniffio
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-anyio, py-uvloop
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
