@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2022/08/02 09:48:51 adam Exp $
+# $NetBSD: Makefile,v 1.12 2022/11/09 07:55:44 adam Exp $
 
-DISTNAME=	colorama-0.4.5
+DISTNAME=	colorama-0.4.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	comms python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/colorama/}
@@ -12,5 +12,5 @@ LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
