@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.7 2022/01/24 20:50:01 adam Exp $
+# $NetBSD: Makefile,v 1.8 2022/11/09 14:41:16 adam Exp $
 
-DISTNAME=	pythran-0.11.0
+DISTNAME=	pythran-0.12.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pythran/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/serge-sans-paille/pythran
+HOMEPAGE=	https://pythran.readthedocs.io/
 COMMENT=	Ahead of Time compiler for numeric kernels
 LICENSE=	modified-bsd
 
