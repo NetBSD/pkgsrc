@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2022/11/09 22:07:36 khorben Exp $
+@comment $NetBSD: PLIST,v 1.9 2022/11/09 22:10:20 khorben Exp $
 bin/diffoscope-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -108,6 +108,9 @@ ${PYSITELIB}/diffoscope/comparators/haskell.pyo
 ${PYSITELIB}/diffoscope/comparators/hdf.py
 ${PYSITELIB}/diffoscope/comparators/hdf.pyc
 ${PYSITELIB}/diffoscope/comparators/hdf.pyo
+${PYSITELIB}/diffoscope/comparators/html.py
+${PYSITELIB}/diffoscope/comparators/html.pyc
+${PYSITELIB}/diffoscope/comparators/html.pyo
 ${PYSITELIB}/diffoscope/comparators/icc.py
 ${PYSITELIB}/diffoscope/comparators/icc.pyc
 ${PYSITELIB}/diffoscope/comparators/icc.pyo
@@ -138,6 +141,9 @@ ${PYSITELIB}/diffoscope/comparators/llvm.pyo
 ${PYSITELIB}/diffoscope/comparators/lz4.py
 ${PYSITELIB}/diffoscope/comparators/lz4.pyc
 ${PYSITELIB}/diffoscope/comparators/lz4.pyo
+${PYSITELIB}/diffoscope/comparators/lzip.py
+${PYSITELIB}/diffoscope/comparators/lzip.pyc
+${PYSITELIB}/diffoscope/comparators/lzip.pyo
 ${PYSITELIB}/diffoscope/comparators/macho.py
 ${PYSITELIB}/diffoscope/comparators/macho.pyc
 ${PYSITELIB}/diffoscope/comparators/macho.pyo
