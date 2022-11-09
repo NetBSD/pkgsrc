@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5396 2022/11/09 14:53:15 taca Exp $
+$NetBSD: CHANGES-2022,v 1.5397 2022/11/09 14:54:40 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8179,3 +8179,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated math/py-pythran to 0.12.0 [adam 2022-11-09]
 	Updated net/py-subunit to 1.4.1 [adam 2022-11-09]
 	Updated devel/php-xdebug to 3.1.6 [taca 2022-11-09]
+	Updated cad/klayout to 0.27.12 [mef 2022-11-09]
