@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/11/09 22:20:47 khorben Exp $
+# $NetBSD: Makefile,v 1.2 2022/11/09 22:59:49 wiz Exp $
 
 DISTNAME=	rstr-3.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,6 +11,8 @@ COMMENT=	Generate random strings in Python
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
