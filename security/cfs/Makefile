@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2022/09/26 16:31:20 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2022/11/09 15:04:05 wiz Exp $
 
 DISTNAME=		cfs-1.4.1
 PKGREVISION=		6
@@ -6,6 +6,7 @@ CATEGORIES=		security
 MASTER_SITES=		https://www.mattblaze.org/software/cfs-1.4.1.tar.gz
 
 MAINTAINER=		gdt@NetBSD.org
+# newer version on https://www.bayofrum.net/cgi-bin/fossil/cfs/index
 HOMEPAGE=		https://www.mattblaze.org/software/
 COMMENT=		Encrypting file system, using NFS as its interface
 
