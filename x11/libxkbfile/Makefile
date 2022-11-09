@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2022/10/18 07:50:27 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2022/11/09 13:14:23 joerg Exp $
 
 DISTNAME=		libxkbfile-1.1.1
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.xz
 
-MAINTAINER=		joerg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/
 COMMENT=		The xkbfile Library from modular X.org
 

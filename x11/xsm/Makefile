@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.14 2022/04/04 09:47:57 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2022/11/09 13:14:31 joerg Exp $
 
 DISTNAME=		xsm-1.0.5
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=		.tar.xz
 
-MAINTAINER=		joerg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/
 COMMENT=		X Session Manager
 

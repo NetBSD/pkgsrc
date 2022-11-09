@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2021/11/02 08:20:31 nia Exp $
+# $NetBSD: Makefile,v 1.8 2022/11/09 13:14:29 joerg Exp $
 
 DISTNAME=	xf86-video-xgi-1.6.1
 PKGREVISION=	2
@@ -6,7 +6,7 @@ CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	joerg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://xorg.freedesktop.org/
 COMMENT=	Modular Xorg XGI video driver
 

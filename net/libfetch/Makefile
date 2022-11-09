@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2020/01/18 21:48:19 jperkin Exp $
+# $NetBSD: Makefile,v 1.63 2022/11/09 13:14:15 joerg Exp $
 
 DISTNAME=	libfetch-2.39
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	joerg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.FreeBSD.org/
 COMMENT=	Library to access HTTP/FTP server
 LICENSE=	modified-bsd

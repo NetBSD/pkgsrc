@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2022/08/31 19:21:41 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2022/11/09 13:14:19 joerg Exp $
 
 DISTNAME=		ico-1.0.6
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=		.tar.xz
 
-MAINTAINER=		joerg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/
 COMMENT=		Animate icosahedron or other polyhedrons
 

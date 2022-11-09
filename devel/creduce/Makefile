@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.21 2022/06/28 11:31:41 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2022/11/09 13:14:07 joerg Exp $
 
 DISTNAME=	creduce-2.10.0
 PKGREVISION=	11
 CATEGORIES=	devel
 MASTER_SITES=	https://embed.cs.utah.edu/creduce/
 
-MAINTAINER=	joerg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://embed.cs.utah.edu/creduce/
 COMMENT=	Tool for automatic reduction of C/C++ files triggering bugs
 LICENSE=	2-clause-bsd

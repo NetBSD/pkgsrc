@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.18 2022/04/08 06:17:45 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2022/11/09 13:14:25 joerg Exp $
 
 DISTNAME=	xdpyinfo-1.3.3
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	joerg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://xorg.freedesktop.org/
 COMMENT=	Display information utility for X
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2022/08/19 14:01:38 tnn Exp $
+# $NetBSD: Makefile,v 1.13 2022/11/09 13:14:10 joerg Exp $
 
 DISTNAME=	codebrowser-2.1.20220614
 PKGNAME=	woboq_${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	devel lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=KDAB/}
 GITHUB_TAG=	ff3846d2addc75d1077435a3df87fd7606e54485
 
-MAINTAINER=	joerg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://code.woboq.org/
 COMMENT=	Code analysis tool
 LICENSE=	cc-by-nc-sa-v3.0-license

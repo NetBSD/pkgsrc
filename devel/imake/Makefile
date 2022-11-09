@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.29 2022/10/21 08:51:19 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2022/11/09 13:14:08 joerg Exp $
 
 DISTNAME=		imake-1.0.9
 CATEGORIES=		devel x11
 MASTER_SITES=		${MASTER_SITE_XORG:=util/}
 EXTRACT_SUFX=		.tar.xz
 
-MAINTAINER=		joerg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/
 COMMENT=		Obsolete build tool for X software
 

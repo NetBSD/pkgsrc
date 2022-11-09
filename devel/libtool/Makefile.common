@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.86 2022/07/26 16:15:26 wiz Exp $
+# $NetBSD: Makefile.common,v 1.87 2022/11/09 13:14:08 joerg Exp $
 # used by devel/libltdl/Makefile
 # used by devel/libtool-base/Makefile
 # used by devel/libtool-fortran/Makefile
@@ -37,7 +37,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 CATEGORIES=	devel pkgtools
 MASTER_SITES=	${MASTER_SITE_GNU:=libtool/}
 
-OWNER=		joerg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.gnu.org/software/libtool/libtool.html
 LICENSE=	gnu-gpl-v2
 
