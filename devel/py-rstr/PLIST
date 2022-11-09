@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2022/11/09 22:20:47 khorben Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/rstr/__init__.py
+${PYSITELIB}/rstr/__init__.pyc
+${PYSITELIB}/rstr/py.typed
+${PYSITELIB}/rstr/rstr_base.py
+${PYSITELIB}/rstr/rstr_base.pyc
+${PYSITELIB}/rstr/tests/__init__.py
+${PYSITELIB}/rstr/tests/__init__.pyc
+${PYSITELIB}/rstr/tests/test_package_level_access.py
+${PYSITELIB}/rstr/tests/test_package_level_access.pyc
+${PYSITELIB}/rstr/tests/test_rstr.py
+${PYSITELIB}/rstr/tests/test_rstr.pyc
+${PYSITELIB}/rstr/tests/test_xeger.py
+${PYSITELIB}/rstr/tests/test_xeger.pyc
+${PYSITELIB}/rstr/xeger.py
+${PYSITELIB}/rstr/xeger.pyc
