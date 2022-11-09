@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2022/09/20 06:35:05 nia Exp $
+# $NetBSD: Makefile,v 1.49 2022/11/09 13:14:14 joerg Exp $
 
 DISTNAME=	# empty
 PKGNAME=	modular-xorg-drivers-1.19.0
@@ -7,7 +7,7 @@ CATEGORIES=	meta-pkgs x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 DISTFILES=	# empty
 
-MAINTAINER=	joerg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://xorg.freedesktop.org/
 COMMENT=	Modular Xorg driver meta-package
 LICENSE=	2-clause-bsd

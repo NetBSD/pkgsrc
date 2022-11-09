@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2020/07/06 10:24:04 jperkin Exp $
+# $NetBSD: Makefile,v 1.80 2022/11/09 13:14:07 joerg Exp $
 
 DISTNAME=	bmake-20200524
 PKGREVISION=	1
@@ -9,7 +9,7 @@ DISTFILES=	# empty
 # distfile obtained from ftp://ftp.NetBSD.org/pub/NetBSD/misc/sjg/
 # source is kept in files/ for bootstrap purposes
 
-MAINTAINER=	joerg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.crufty.net/help/sjg/bmake.html
 COMMENT=	Portable (autoconf) version of NetBSD 'make' utility
 LICENSE=	modified-bsd

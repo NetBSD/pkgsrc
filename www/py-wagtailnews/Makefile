@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/01/04 20:55:37 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/11/09 13:14:18 joerg Exp $
 
 DISTNAME=	wagtailnews-2.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=neon-jungle/}
 
-MAINTAINER=	joerg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/neon-jungle/wagtailnews
 COMMENT=	News system for the Wagtail CMS
 LICENSE=	2-clause-bsd

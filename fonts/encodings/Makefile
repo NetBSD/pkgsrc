@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2022/07/13 20:51:20 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2022/11/09 13:14:10 joerg Exp $
 
 DISTNAME=		encodings-1.0.6
 CATEGORIES=		fonts x11
 MASTER_SITES=		${MASTER_SITE_XORG:=font/}
 EXTRACT_SUFX=		.tar.xz
 
-MAINTAINER=		joerg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/
 COMMENT=		X11 Font Index Generator
 

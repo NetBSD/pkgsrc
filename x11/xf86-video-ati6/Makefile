@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2021/11/02 08:20:26 nia Exp $
+# $NetBSD: Makefile,v 1.17 2022/11/09 13:14:26 joerg Exp $
 
 DISTNAME=	xf86-video-ati-6.14.6
 PKGNAME=	${DISTNAME:S/ati/ati6/}
@@ -7,7 +7,7 @@ CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	joerg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://xorg.freedesktop.org/
 COMMENT=	Modular Xorg ATI Radeon video driver (v6)
 

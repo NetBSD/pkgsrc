@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/01/18 23:36:09 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2022/11/09 13:14:29 joerg Exp $
 #
 
 DISTNAME=		xkbdata-1.0.1
@@ -7,7 +7,7 @@ CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=data/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		joerg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/
 COMMENT=		Xorg keyboard maps and layouts
 

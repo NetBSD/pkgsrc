@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.23 2021/03/17 08:18:53 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2022/11/09 13:14:29 joerg Exp $
 
 DISTNAME=		xkbcomp-1.4.5
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		joerg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/
 COMMENT=		XKBD keymap compiler
 

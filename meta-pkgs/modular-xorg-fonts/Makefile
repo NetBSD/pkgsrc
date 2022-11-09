@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2020/01/18 23:32:56 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2022/11/09 13:14:14 joerg Exp $
 
 DISTNAME=	# empty
 PKGNAME=	modular-xorg-fonts-1.1
@@ -6,7 +6,7 @@ CATEGORIES=	meta-pkgs fonts x11
 MASTER_SITES=	${MASTER_SITE_XORG:=font/}
 DISTFILES=	# empty
 
-MAINTAINER=	joerg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://xorg.freedesktop.org/
 COMMENT=	Modular Xorg font meta-package
 LICENSE=	2-clause-bsd

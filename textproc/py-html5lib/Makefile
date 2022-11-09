@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2022/01/04 20:54:56 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2022/11/09 13:14:17 joerg Exp $
 
 DISTNAME=	html5lib-1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	textproc www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/html5lib/}
 
-MAINTAINER=	joerg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/html5lib/html5lib-python
 COMMENT=	HTML5 parser and tokenizer
 LICENSE=	mit
