@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2022/04/20 12:28:57 adam Exp $
+# $NetBSD: Makefile,v 1.44 2022/11/09 13:14:18 joerg Exp $
 
 DISTNAME=	Django-2.2.28
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -6,7 +6,7 @@ CATEGORIES=	www python
 MASTER_SITES=	https://www.djangoproject.com/m/releases/${PKGVERSION_NOREV:R}/
 MASTER_SITES+=	${MASTER_SITE_PYPI:=D/Django/}
 
-MAINTAINER=	joerg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.djangoproject.com/
 COMMENT=	Django, a high-level Python Web framework
 LICENSE=	modified-bsd

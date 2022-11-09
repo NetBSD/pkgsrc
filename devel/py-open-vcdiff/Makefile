@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2022/01/04 20:53:19 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2022/11/09 13:14:09 joerg Exp $
 
 DISTNAME=	06d46e3de6f7
 PKGNAME=	${PYPKGPREFIX}-open-vcdiff-0.1pre${DISTNAME}
@@ -8,7 +8,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	https://bitbucket.org/bluehorn/openvcdiff-python/get/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	joerg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://bitbucket.org/bluehorn/openvcdiff-python
 COMMENT=	Python binding for open-vcdiff
 LICENSE=	apache-2.0

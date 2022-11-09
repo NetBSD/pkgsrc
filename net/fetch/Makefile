@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2020/01/18 21:50:12 jperkin Exp $
+# $NetBSD: Makefile,v 1.23 2022/11/09 13:14:15 joerg Exp $
 
 DISTNAME=	fetch-1.9
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	joerg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.FreeBSD.org/
 COMMENT=	Client to fetch URLs
 LICENSE=	modified-bsd

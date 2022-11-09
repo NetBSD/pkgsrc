@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2017/08/01 17:40:17 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/11/09 13:14:19 joerg Exp $
 
 DISTNAME=	elementary-icon-theme-3.0
 CATEGORIES=	graphics
 MASTER_SITES=	https://launchpad.net/elementaryicons/3.x/3.0/+download/
 DISTFILES=	elementary.tar.gz
 
-MAINTAINER=	joerg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	http://elementaryos.org/docs/packaging/themes/elementary-icons
 COMMENT=	Simple and appealing Tango-styled icon theme
 LICENSE=	gnu-gpl-v3

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2021/08/03 08:48:51 ryoon Exp $
+# $NetBSD: Makefile,v 1.13 2022/11/09 13:14:25 joerg Exp $
 
 DISTNAME=	xeyes-1.2.0
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	joerg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://xorg.freedesktop.org/
 COMMENT=	Follow the mouse demo
 LICENSE=	mit

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.25 2022/07/11 19:54:00 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2022/11/09 13:14:27 joerg Exp $
 
 DISTNAME=	xf86-video-mach64-6.9.7
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	joerg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://xorg.freedesktop.org/
 COMMENT=	Modular Xorg ATI Mach64 video driver
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2020/01/18 23:32:50 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2022/11/09 13:14:14 joerg Exp $
 
 DISTNAME=		xbiff-1.0.4
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		joerg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/
 COMMENT=		Mail notification program for X11
 

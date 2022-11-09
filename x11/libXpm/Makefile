@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.24 2022/08/11 13:37:24 jperkin Exp $
+# $NetBSD: Makefile,v 1.25 2022/11/09 13:14:22 joerg Exp $
 
 DISTNAME=		libXpm-3.5.13
 CATEGORIES=		graphics x11
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		joerg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/
 COMMENT=		X PixMap Library from modular Xorg X11
 

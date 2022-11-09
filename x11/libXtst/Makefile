@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.18 2022/09/27 07:26:49 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2022/11/09 13:14:22 joerg Exp $
 
 DISTNAME=		libXtst-1.2.4
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.xz
 
-MAINTAINER=		joerg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/
 COMMENT=		X Tst Library
 

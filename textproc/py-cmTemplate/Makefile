@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.14 2019/09/02 13:20:11 adam Exp $
+# $NetBSD: Makefile,v 1.15 2022/11/09 13:14:16 joerg Exp $
 
 DISTNAME=	cmTemplate-0.3.2
 PKGNAME=	${PYPKGPREFIX}-cmTemplate-0.3.2
 CATEGORIES=	textproc python
 MASTER_SITES=	http://www.bouncingchairs.net/oss/
 
-MAINTAINER=	joerg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.bouncingchairs.net/oss/
 COMMENT=	Simple and fast Python template engine
 

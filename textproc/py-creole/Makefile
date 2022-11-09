@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2022/01/05 15:41:23 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2022/11/09 13:14:16 joerg Exp $
 
 DISTNAME=	python-creole-1.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^python-//}
@@ -6,7 +6,7 @@ PKGREVISION=	2
 CATEGORIES=	textproc www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-creole/}
 
-MAINTAINER=	joerg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/jedie/python-creole
 COMMENT=	Markup converter in pure Python
 LICENSE=	gnu-gpl-v3

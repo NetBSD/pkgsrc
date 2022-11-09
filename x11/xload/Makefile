@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.17 2022/04/04 09:46:08 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2022/11/09 13:14:30 joerg Exp $
 
 DISTNAME=	xload-1.1.4
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	joerg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://xorg.freedesktop.org/
 COMMENT=	System load average display for X
 

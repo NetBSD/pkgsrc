@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.15 2022/04/03 18:38:22 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2022/11/09 13:14:24 joerg Exp $
 
 DISTNAME=		xcalc-1.1.1
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=		.tar.xz
 
-MAINTAINER=		joerg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/
 COMMENT=		Scientific calculator for X
 LICENSE=		mit

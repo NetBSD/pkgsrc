@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2020/08/19 18:28:40 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2022/11/09 13:14:18 joerg Exp $
 
 DISTNAME=	spawn-fcgi-1.6.4
 PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	https://download.lighttpd.net/spawn-fcgi/releases-1.6.x/
 
-MAINTAINER=	joerg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://redmine.lighttpd.net/projects/spawn-fcgi
 COMMENT=	FastCGI deployment tool
 LICENSE=	modified-bsd

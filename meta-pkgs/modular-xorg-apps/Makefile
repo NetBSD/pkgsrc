@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2022/03/10 10:09:42 jperkin Exp $
+# $NetBSD: Makefile,v 1.45 2022/11/09 13:14:14 joerg Exp $
 
 DISTNAME=	# empty
 PKGNAME=	modular-xorg-apps-1.14.1.14
@@ -6,7 +6,7 @@ CATEGORIES=	meta-pkgs x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 DISTFILES=	# empty
 
-MAINTAINER=	joerg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://xorg.freedesktop.org/
 COMMENT=	Modular Xorg application meta-package
 LICENSE=	2-clause-bsd

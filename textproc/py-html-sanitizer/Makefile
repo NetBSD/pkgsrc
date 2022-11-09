@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/01/04 20:54:55 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2022/11/09 13:14:17 joerg Exp $
 
 DISTNAME=	html-sanitizer-1.6.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	textproc converters python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/html-sanitizer/}
 
-MAINTAINER=	joerg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/matthiask/html-sanitizer
 COMMENT=	White-list based HTML sanitizer
 LICENSE=	modified-bsd

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2020/05/01 00:03:10 joerg Exp $
+# $NetBSD: Makefile,v 1.33 2022/11/09 13:14:07 joerg Exp $
 #
 
 DISTNAME=	eet-1.7.10
@@ -6,7 +6,7 @@ CATEGORIES=	devel archivers
 MASTER_SITES=	https://download.enlightenment.org/att/releases/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	joerg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.enlightenment.org/
 COMMENT=	Library for speedy storage, retrieval, and compression
 LICENSE=	2-clause-bsd

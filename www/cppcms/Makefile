@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2022/06/30 11:18:58 nia Exp $
+# $NetBSD: Makefile,v 1.33 2022/11/09 13:14:17 joerg Exp $
 
 DISTNAME=	cppcms-1.0.4
 PKGREVISION=	28
@@ -6,7 +6,7 @@ CATEGORIES=	www devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cppcms/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	joerg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://cppcms.com/
 COMMENT=	High performance C++ web development framework
 LICENSE=	gnu-lgpl-v3

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.224 2022/11/08 12:50:33 adam Exp $
+# $NetBSD: Makefile,v 1.225 2022/11/09 13:14:10 joerg Exp $
 
 DISTNAME=	setuptools-65.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/setuptools/}
 
-MAINTAINER=	joerg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/pypa/setuptools
 COMMENT=	New Python packaging system
 LICENSE=	python-software-foundation OR zpl-2.0

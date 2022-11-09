@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.16 2022/04/10 08:53:14 nia Exp $
+# $NetBSD: Makefile,v 1.17 2022/11/09 13:14:20 joerg Exp $
 
 DISTNAME=		libXScrnSaver-1.2.3
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		joerg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/
 COMMENT=		X11 Screen Saver Library
 

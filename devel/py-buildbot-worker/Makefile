@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2022/04/29 23:29:17 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2022/11/09 13:14:09 joerg Exp $
 
 DISTNAME=	buildbot-worker-2.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ PKGREVISION=	2
 CATEGORIES=	devel net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/buildbot-worker/}
 
-MAINTAINER=	joerg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://buildbot.net/
 COMMENT=	Worker for the buildbot CI system
 LICENSE=	gnu-gpl-v2

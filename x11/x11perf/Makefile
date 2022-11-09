@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.17 2022/10/30 01:08:02 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2022/11/09 13:14:24 joerg Exp $
 
 DISTNAME=		x11perf-1.6.2
 CATEGORIES=		x11
 MASTER_SITES=		https://xorg.freedesktop.org/archive/individual/test/
 EXTRACT_SUFX=		.tar.xz
 
-MAINTAINER=		joerg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/
 COMMENT=		X11 server benchmark suite
 

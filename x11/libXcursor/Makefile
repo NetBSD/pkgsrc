@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2022/04/03 18:33:57 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2022/11/09 13:14:20 joerg Exp $
 
 DISTNAME=		libXcursor-1.2.1
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.xz
 
-MAINTAINER=		joerg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/
 COMMENT=		Client-side cursor loading library for X
 

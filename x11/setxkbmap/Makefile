@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2022/04/03 23:38:30 tnn Exp $
+# $NetBSD: Makefile,v 1.14 2022/11/09 13:14:24 joerg Exp $
 
 DISTNAME=	setxkbmap-1.3.3
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	joerg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://xorg.freedesktop.org/
 COMMENT=	Set the keyboard map using the X Keyboard Extension
 

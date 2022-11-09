@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2021/03/15 16:18:32 ryoon Exp $
+# $NetBSD: Makefile,v 1.58 2022/11/09 13:14:06 joerg Exp $
 #
 
 DISTNAME=	bzip2-1.0.8
@@ -6,7 +6,7 @@ CATEGORIES=	archivers
 MASTER_SITES=	https://sourceware.org/pub/bzip2/
 DISTFILES=	# empty
 
-MAINTAINER=	joerg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://sourceware.org/bzip2/
 COMMENT=	Block-sorting file compressor
 LICENSE=	zlib # ish

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.33 2020/01/18 23:35:58 rillig Exp $
+# $NetBSD: Makefile,v 1.34 2022/11/09 13:14:24 joerg Exp $
 
 DISTNAME=	xcompmgr-1.1.8
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	joerg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.freedesktop.org/
 COMMENT=	Sample compositing manager for X.org >= 6.8.0
 

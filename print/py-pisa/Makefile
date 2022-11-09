@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2022/06/21 22:18:16 joerg Exp $
+# $NetBSD: Makefile,v 1.30 2022/11/09 13:14:16 joerg Exp $
 
 DISTNAME=	pisa-3.0.33
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ PKGREVISION=	5
 CATEGORIES=	print textproc www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pisa/}
 
-OWNER=		joerg@NetBSD.org
+OWNER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pypi.python.org/pypi/pisa/
 COMMENT=	HTML2pdf converter (obsolete, use print/py-weasyprint instead)
 LICENSE=	apache-2.0

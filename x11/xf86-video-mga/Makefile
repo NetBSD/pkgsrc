@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.30 2022/07/11 20:51:33 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2022/11/09 13:14:27 joerg Exp $
 
 DISTNAME=	xf86-video-mga-2.0.1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	joerg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://xorg.freedesktop.org/
 COMMENT=	Modular Xorg Matrox video driver
 

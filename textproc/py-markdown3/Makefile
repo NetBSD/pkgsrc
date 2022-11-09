@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/01/04 20:54:59 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/11/09 13:14:17 joerg Exp $
 
 DISTNAME=	Markdown-3.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=M/Markdown/}
 
-MAINTAINER=	joerg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://Python-Markdown.github.io/
 COMMENT=	XHTML generator using a simple markup (Python 2.x)
 LICENSE=	modified-bsd

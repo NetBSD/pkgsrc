@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.29 2022/10/30 01:06:46 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2022/11/09 13:14:21 joerg Exp $
 
 DISTNAME=		libXext-1.3.5
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.xz
 
-MAINTAINER=		joerg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/
 COMMENT=		X Extension library
 
