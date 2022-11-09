@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2022/10/28 09:46:23 adam Exp $
+# $NetBSD: Makefile,v 1.11 2022/11/09 07:54:20 adam Exp $
 
 DISTNAME=	build-0.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,19 +10,18 @@ HOMEPAGE=	https://github.com/pypa/build
 COMMENT=	Simple, correct PEP517 package builder
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
-DEPENDS+=	${PYPKGPREFIX}-pep517-[0-9]*:../../devel/py-pep517
-DEPENDS+=	${PYPKGPREFIX}-tomli-[0-9]*:../../textproc/py-tomli
-DEPENDS+=	${PYPKGPREFIX}-colorama-[0-9]*:../../comms/py-colorama
+DEPENDS+=	${PYPKGPREFIX}-packaging>=19.0:../../devel/py-packaging
+DEPENDS+=	${PYPKGPREFIX}-pep517>=0.9.1:../../devel/py-pep517
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+USE_LANGUAGES=	# none
 
 USE_PKG_RESOURCES=	yes
 
-.include "../../lang/python/pyversion.mk"
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.if ${PYPKGPREFIX} == "py37"
-DEPENDS+=	${PYPKGPREFIX}-importlib-metadata-[0-9]*:../../devel/py-importlib-metadata
+.include "../../lang/python/pyversion.mk"
+.if ${_PYTHON_VERSION} < 311
+DEPENDS+=	${PYPKGPREFIX}-tomli>=1.0.0:../../textproc/py-tomli
 .endif
 
 post-install:
