@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2022/01/24 20:50:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/11/09 14:41:16 adam Exp $
 bin/pythran-${PYVERSSUFFIX}
 bin/pythran-config-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -70,6 +70,9 @@ ${PYSITELIB}/pythran/analyses/imported_ids.pyo
 ${PYSITELIB}/pythran/analyses/inlinable.py
 ${PYSITELIB}/pythran/analyses/inlinable.pyc
 ${PYSITELIB}/pythran/analyses/inlinable.pyo
+${PYSITELIB}/pythran/analyses/intrinsics.py
+${PYSITELIB}/pythran/analyses/intrinsics.pyc
+${PYSITELIB}/pythran/analyses/intrinsics.pyo
 ${PYSITELIB}/pythran/analyses/is_assigned.py
 ${PYSITELIB}/pythran/analyses/is_assigned.pyc
 ${PYSITELIB}/pythran/analyses/is_assigned.pyo
@@ -103,6 +106,9 @@ ${PYSITELIB}/pythran/analyses/potential_iterator.pyo
 ${PYSITELIB}/pythran/analyses/pure_expressions.py
 ${PYSITELIB}/pythran/analyses/pure_expressions.pyc
 ${PYSITELIB}/pythran/analyses/pure_expressions.pyo
+${PYSITELIB}/pythran/analyses/pure_functions.py
+${PYSITELIB}/pythran/analyses/pure_functions.pyc
+${PYSITELIB}/pythran/analyses/pure_functions.pyo
 ${PYSITELIB}/pythran/analyses/range_values.py
 ${PYSITELIB}/pythran/analyses/range_values.pyc
 ${PYSITELIB}/pythran/analyses/range_values.pyo
@@ -4056,6 +4062,7 @@ ${PYSITELIB}/pythran/pythonic/types/uintp.hpp
 ${PYSITELIB}/pythran/pythonic/types/variant_functor.hpp
 ${PYSITELIB}/pythran/pythonic/types/vectorizable_type.hpp
 ${PYSITELIB}/pythran/pythonic/utils/array_helper.hpp
+${PYSITELIB}/pythran/pythonic/utils/boost_local_config.hpp
 ${PYSITELIB}/pythran/pythonic/utils/broadcast_copy.hpp
 ${PYSITELIB}/pythran/pythonic/utils/functor.hpp
 ${PYSITELIB}/pythran/pythonic/utils/fwd.hpp
