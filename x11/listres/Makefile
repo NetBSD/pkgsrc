@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2022/04/03 19:15:55 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2022/11/09 13:14:23 joerg Exp $
 
 DISTNAME=		listres-1.0.5
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=		.tar.xz
 
-MAINTAINER=		joerg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/
 COMMENT=		List resources in widgets
 LICENSE=		mit

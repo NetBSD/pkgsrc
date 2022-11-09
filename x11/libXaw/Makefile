@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2022/04/04 12:55:28 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2022/11/09 13:14:20 joerg Exp $
 
 DISTNAME=		libXaw-1.0.14
 PKGREVISION=		1
@@ -6,7 +6,7 @@ CATEGORIES=		x11 graphics
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		joerg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/
 COMMENT=		X Athena Widgets Library from modular Xorg X11
 

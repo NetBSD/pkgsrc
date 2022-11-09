@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/01/04 20:55:37 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/11/09 13:14:18 joerg Exp $
 
 DISTNAME=	wagtailmenus-3.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rkhleics/}
 
-MAINTAINER=	joerg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/rkhleics/wagtailmenus
 COMMENT=	Menu system for the Wagtail CMS
 LICENSE=	mit

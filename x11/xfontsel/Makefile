@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2022/07/11 19:35:39 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2022/11/09 13:14:29 joerg Exp $
 
 DISTNAME=		xfontsel-1.1.0
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=		.tar.xz
 
-MAINTAINER=		joerg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/
 COMMENT=		X font selector
 

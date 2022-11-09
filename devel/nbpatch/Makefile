@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2021/06/04 16:06:11 jperkin Exp $
+# $NetBSD: Makefile,v 1.13 2022/11/09 13:14:08 joerg Exp $
 #
 
 DISTNAME=	nbpatch-20151107
@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	joerg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.pkgsrc.org/
 COMMENT=	Patch files using diff output
 

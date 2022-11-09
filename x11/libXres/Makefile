@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.17 2022/04/10 08:53:16 nia Exp $
+# $NetBSD: Makefile,v 1.18 2022/11/09 13:14:22 joerg Exp $
 
 DISTNAME=		libXres-1.2.1
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		joerg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/
 COMMENT=		X Resource Information Extension Library
 

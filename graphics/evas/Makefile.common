@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.18 2020/05/01 00:08:22 joerg Exp $
+# $NetBSD: Makefile.common,v 1.19 2022/11/09 13:14:14 joerg Exp $
 
 # used by graphics/evas-buffer/Makefile
 # used by graphics/evas-edb/Makefile
@@ -19,7 +19,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	https://download.enlightenment.org/att/releases/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	joerg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://enlightenment.org/
 LICENSE=	2-clause-bsd
 
