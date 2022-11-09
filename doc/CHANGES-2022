@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5399 2022/11/09 17:29:47 nikita Exp $
+$NetBSD: CHANGES-2022,v 1.5400 2022/11/09 22:07:57 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8182,3 +8182,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated cad/klayout to 0.27.12 [mef 2022-11-09]
 	Added lang/kona version 0.0.0.2021.12.25 [nikita 2022-11-09]
 	Updated lang/gleam to 0.24.0 [nikita 2022-11-09]
+	Updated sysutils/py-diffoscope to 224 [khorben 2022-11-09]
