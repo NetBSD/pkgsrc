@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2022/08/02 09:48:51 adam Exp $
+$NetBSD: distinfo,v 1.14 2022/11/09 07:55:44 adam Exp $
 
-BLAKE2s (colorama-0.4.5.tar.gz) = 73d44bf9169a89a00d5efd772cd83e310a3b4f90d45d61434b4aabf4a76ff5e0
-SHA512 (colorama-0.4.5.tar.gz) = 17b9a727d032bc6647ad0b48df1f33daea68501fb02e9b06a7fa8d22134cb15a805bdd797d068a9d2de24e011edac7e083ff79f4390a62130ca038043919ee39
-Size (colorama-0.4.5.tar.gz) = 27469 bytes
+BLAKE2s (colorama-0.4.6.tar.gz) = 1a11cc4f067a1e8ec3e205503d8c35cedad4fbee4be43902d8ca5fd09c8d1c0d
+SHA512 (colorama-0.4.6.tar.gz) = 472f00647dec5955562d8a7f7a9078baefc8a449f8f83331a9e73fb246a4588bb4cf07d8d53fb5e53d411d63c7f362ce5f855511a0cf436684258a72dfb2bec0
+Size (colorama-0.4.6.tar.gz) = 27697 bytes
