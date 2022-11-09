@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/11/09 22:26:26 khorben Exp $
+
+BLAKE2s (reprotest-0.7.22.tar.gz) = 5e8c615259eefafe66dec110624fe967c03c576d2008aba6fad2939b4de07c8b
+SHA512 (reprotest-0.7.22.tar.gz) = 85ad59da4f42a84e3ee10f6f90f45da906b5f7c1b2f2f8e6ca91f88e123aec19e64ebc5d76e8e73e3c8d9c560f07a6a1b358dad4cafe918fdb3bc7670aa22abf
+Size (reprotest-0.7.22.tar.gz) = 85355 bytes
