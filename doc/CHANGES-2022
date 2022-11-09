@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5387 2022/11/09 00:42:33 msaitoh Exp $
+$NetBSD: CHANGES-2022,v 1.5388 2022/11/09 07:58:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8151,3 +8151,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated shells/bash to 5.2.9 [kre 2022-11-08]
 	Updated net/sayaka to 3.5.4 [tsutsui 2022-11-08]
 	Updated sysutils/intel-microcode-netbsd to 20221108 [msaitoh 2022-11-08]
+	Updated comms/py-colorama to 0.4.6 [adam 2022-11-09]
+	Updated devel/py-frozenlist to 1.3.3 [adam 2022-11-09]
