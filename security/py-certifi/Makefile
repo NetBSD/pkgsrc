@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2022/01/04 20:54:39 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2022/11/09 08:46:26 adam Exp $
 
-DISTNAME=	certifi-2021.10.8
+DISTNAME=	certifi-2022.9.24
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/certifi/}
 
@@ -12,6 +11,8 @@ COMMENT=	Python package for providing Mozilla's CA Bundle
 LICENSE=	mpl-2.0
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
