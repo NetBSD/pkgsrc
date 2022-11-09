@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2019/12/31 00:32:01 ng0 Exp $
+@comment $NetBSD: PLIST,v 1.8 2022/11/09 22:07:36 khorben Exp $
 bin/diffoscope-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -51,6 +51,9 @@ ${PYSITELIB}/diffoscope/comparators/debian.pyo
 ${PYSITELIB}/diffoscope/comparators/debian_fallback.py
 ${PYSITELIB}/diffoscope/comparators/debian_fallback.pyc
 ${PYSITELIB}/diffoscope/comparators/debian_fallback.pyo
+${PYSITELIB}/diffoscope/comparators/decompile.py
+${PYSITELIB}/diffoscope/comparators/decompile.pyc
+${PYSITELIB}/diffoscope/comparators/decompile.pyo
 ${PYSITELIB}/diffoscope/comparators/device.py
 ${PYSITELIB}/diffoscope/comparators/device.pyc
 ${PYSITELIB}/diffoscope/comparators/device.pyo
@@ -72,6 +75,9 @@ ${PYSITELIB}/diffoscope/comparators/elf.pyo
 ${PYSITELIB}/diffoscope/comparators/ffprobe.py
 ${PYSITELIB}/diffoscope/comparators/ffprobe.pyc
 ${PYSITELIB}/diffoscope/comparators/ffprobe.pyo
+${PYSITELIB}/diffoscope/comparators/fit.py
+${PYSITELIB}/diffoscope/comparators/fit.pyc
+${PYSITELIB}/diffoscope/comparators/fit.pyo
 ${PYSITELIB}/diffoscope/comparators/fontconfig.py
 ${PYSITELIB}/diffoscope/comparators/fontconfig.pyc
 ${PYSITELIB}/diffoscope/comparators/fontconfig.pyo
@@ -99,6 +105,9 @@ ${PYSITELIB}/diffoscope/comparators/gzip.pyo
 ${PYSITELIB}/diffoscope/comparators/haskell.py
 ${PYSITELIB}/diffoscope/comparators/haskell.pyc
 ${PYSITELIB}/diffoscope/comparators/haskell.pyo
+${PYSITELIB}/diffoscope/comparators/hdf.py
+${PYSITELIB}/diffoscope/comparators/hdf.pyc
+${PYSITELIB}/diffoscope/comparators/hdf.pyo
 ${PYSITELIB}/diffoscope/comparators/icc.py
 ${PYSITELIB}/diffoscope/comparators/icc.pyc
 ${PYSITELIB}/diffoscope/comparators/icc.pyo
@@ -150,12 +159,18 @@ ${PYSITELIB}/diffoscope/comparators/ogg.pyo
 ${PYSITELIB}/diffoscope/comparators/openssh.py
 ${PYSITELIB}/diffoscope/comparators/openssh.pyc
 ${PYSITELIB}/diffoscope/comparators/openssh.pyo
+${PYSITELIB}/diffoscope/comparators/openssl.py
+${PYSITELIB}/diffoscope/comparators/openssl.pyc
+${PYSITELIB}/diffoscope/comparators/openssl.pyo
 ${PYSITELIB}/diffoscope/comparators/pcap.py
 ${PYSITELIB}/diffoscope/comparators/pcap.pyc
 ${PYSITELIB}/diffoscope/comparators/pcap.pyo
 ${PYSITELIB}/diffoscope/comparators/pdf.py
 ${PYSITELIB}/diffoscope/comparators/pdf.pyc
 ${PYSITELIB}/diffoscope/comparators/pdf.pyo
+${PYSITELIB}/diffoscope/comparators/pe32.py
+${PYSITELIB}/diffoscope/comparators/pe32.pyc
+${PYSITELIB}/diffoscope/comparators/pe32.pyo
 ${PYSITELIB}/diffoscope/comparators/pgp.py
 ${PYSITELIB}/diffoscope/comparators/pgp.pyc
 ${PYSITELIB}/diffoscope/comparators/pgp.pyo
@@ -168,6 +183,9 @@ ${PYSITELIB}/diffoscope/comparators/ppu.pyo
 ${PYSITELIB}/diffoscope/comparators/ps.py
 ${PYSITELIB}/diffoscope/comparators/ps.pyc
 ${PYSITELIB}/diffoscope/comparators/ps.pyo
+${PYSITELIB}/diffoscope/comparators/python.py
+${PYSITELIB}/diffoscope/comparators/python.pyc
+${PYSITELIB}/diffoscope/comparators/python.pyo
 ${PYSITELIB}/diffoscope/comparators/rdata.py
 ${PYSITELIB}/diffoscope/comparators/rdata.pyc
 ${PYSITELIB}/diffoscope/comparators/rdata.pyo
@@ -180,6 +198,12 @@ ${PYSITELIB}/diffoscope/comparators/rpm_fallback.pyo
 ${PYSITELIB}/diffoscope/comparators/rust.py
 ${PYSITELIB}/diffoscope/comparators/rust.pyc
 ${PYSITELIB}/diffoscope/comparators/rust.pyo
+${PYSITELIB}/diffoscope/comparators/socket_or_fifo.py
+${PYSITELIB}/diffoscope/comparators/socket_or_fifo.pyc
+${PYSITELIB}/diffoscope/comparators/socket_or_fifo.pyo
+${PYSITELIB}/diffoscope/comparators/sphinx.py
+${PYSITELIB}/diffoscope/comparators/sphinx.pyc
+${PYSITELIB}/diffoscope/comparators/sphinx.pyo
 ${PYSITELIB}/diffoscope/comparators/sqlite.py
 ${PYSITELIB}/diffoscope/comparators/sqlite.pyc
 ${PYSITELIB}/diffoscope/comparators/sqlite.pyo
@@ -195,6 +219,9 @@ ${PYSITELIB}/diffoscope/comparators/tar.pyo
 ${PYSITELIB}/diffoscope/comparators/text.py
 ${PYSITELIB}/diffoscope/comparators/text.pyc
 ${PYSITELIB}/diffoscope/comparators/text.pyo
+${PYSITELIB}/diffoscope/comparators/uimage.py
+${PYSITELIB}/diffoscope/comparators/uimage.pyc
+${PYSITELIB}/diffoscope/comparators/uimage.pyo
 ${PYSITELIB}/diffoscope/comparators/utils/__init__.py
 ${PYSITELIB}/diffoscope/comparators/utils/__init__.pyc
 ${PYSITELIB}/diffoscope/comparators/utils/__init__.pyo
@@ -219,15 +246,24 @@ ${PYSITELIB}/diffoscope/comparators/utils/fuzzy.pyo
 ${PYSITELIB}/diffoscope/comparators/utils/libarchive.py
 ${PYSITELIB}/diffoscope/comparators/utils/libarchive.pyc
 ${PYSITELIB}/diffoscope/comparators/utils/libarchive.pyo
+${PYSITELIB}/diffoscope/comparators/utils/operation.py
+${PYSITELIB}/diffoscope/comparators/utils/operation.pyc
+${PYSITELIB}/diffoscope/comparators/utils/operation.pyo
 ${PYSITELIB}/diffoscope/comparators/utils/specialize.py
 ${PYSITELIB}/diffoscope/comparators/utils/specialize.pyc
 ${PYSITELIB}/diffoscope/comparators/utils/specialize.pyo
+${PYSITELIB}/diffoscope/comparators/vmlinuz.py
+${PYSITELIB}/diffoscope/comparators/vmlinuz.pyc
+${PYSITELIB}/diffoscope/comparators/vmlinuz.pyo
 ${PYSITELIB}/diffoscope/comparators/wasm.py
 ${PYSITELIB}/diffoscope/comparators/wasm.pyc
 ${PYSITELIB}/diffoscope/comparators/wasm.pyo
 ${PYSITELIB}/diffoscope/comparators/xml.py
 ${PYSITELIB}/diffoscope/comparators/xml.pyc
 ${PYSITELIB}/diffoscope/comparators/xml.pyo
+${PYSITELIB}/diffoscope/comparators/xmlb.py
+${PYSITELIB}/diffoscope/comparators/xmlb.pyc
+${PYSITELIB}/diffoscope/comparators/xmlb.pyo
 ${PYSITELIB}/diffoscope/comparators/xsb.py
 ${PYSITELIB}/diffoscope/comparators/xsb.pyc
 ${PYSITELIB}/diffoscope/comparators/xsb.pyo
@@ -249,6 +285,9 @@ ${PYSITELIB}/diffoscope/diff.pyo
 ${PYSITELIB}/diffoscope/difference.py
 ${PYSITELIB}/diffoscope/difference.pyc
 ${PYSITELIB}/diffoscope/difference.pyo
+${PYSITELIB}/diffoscope/environ.py
+${PYSITELIB}/diffoscope/environ.pyc
+${PYSITELIB}/diffoscope/environ.pyo
 ${PYSITELIB}/diffoscope/exc.py
 ${PYSITELIB}/diffoscope/exc.pyc
 ${PYSITELIB}/diffoscope/exc.pyo
@@ -261,9 +300,6 @@ ${PYSITELIB}/diffoscope/external_tools.pyo
 ${PYSITELIB}/diffoscope/feeders.py
 ${PYSITELIB}/diffoscope/feeders.pyc
 ${PYSITELIB}/diffoscope/feeders.pyo
-${PYSITELIB}/diffoscope/locale.py
-${PYSITELIB}/diffoscope/locale.pyc
-${PYSITELIB}/diffoscope/locale.pyo
 ${PYSITELIB}/diffoscope/logging.py
 ${PYSITELIB}/diffoscope/logging.pyc
 ${PYSITELIB}/diffoscope/logging.pyo
@@ -321,6 +357,7 @@ ${PYSITELIB}/diffoscope/readers/json.pyo
 ${PYSITELIB}/diffoscope/readers/utils.py
 ${PYSITELIB}/diffoscope/readers/utils.pyc
 ${PYSITELIB}/diffoscope/readers/utils.pyo
+${PYSITELIB}/diffoscope/scripts/extract-vmlinux
 ${PYSITELIB}/diffoscope/tempfiles.py
 ${PYSITELIB}/diffoscope/tempfiles.pyc
 ${PYSITELIB}/diffoscope/tempfiles.pyo
