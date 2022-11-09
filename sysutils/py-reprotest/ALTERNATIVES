@@ -1,0 +1,1 @@
+bin/reprotest @PREFIX@/bin/reprotest-@PYVERSSUFFIX@
