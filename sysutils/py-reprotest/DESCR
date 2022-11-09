@@ -1,0 +1,4 @@
+reprotest builds the same source code twice in different environments, and then
+checks the binaries produced by each build for differences. If any are found,
+then diffoscope(1) (or if unavailable then diff(1)) is used to display them in
+detail for later analysis.
