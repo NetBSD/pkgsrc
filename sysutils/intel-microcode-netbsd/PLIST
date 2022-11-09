@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2022/05/11 09:14:46 msaitoh Exp $
+@comment $NetBSD: PLIST,v 1.24 2022/11/09 00:39:27 msaitoh Exp $
 libdata/firmware/cpu_x86_intel1/00000650-0
 libdata/firmware/cpu_x86_intel1/00000650-1
 libdata/firmware/cpu_x86_intel1/00000650-3
@@ -319,6 +319,7 @@ libdata/firmware/cpu_x86_intel1/000606a6-0
 libdata/firmware/cpu_x86_intel1/000606a6-1
 libdata/firmware/cpu_x86_intel1/000606a6-2
 libdata/firmware/cpu_x86_intel1/000606a6-7
+libdata/firmware/cpu_x86_intel1/000606c1-4
 libdata/firmware/cpu_x86_intel1/000706a1-0
 libdata/firmware/cpu_x86_intel1/000706a8-0
 libdata/firmware/cpu_x86_intel1/000706e5-7
@@ -344,8 +345,10 @@ libdata/firmware/cpu_x86_intel1/000806ec-7
 libdata/firmware/cpu_x86_intel1/00090661-0
 libdata/firmware/cpu_x86_intel1/00090672-0
 libdata/firmware/cpu_x86_intel1/00090672-1
+libdata/firmware/cpu_x86_intel1/00090672-2
 libdata/firmware/cpu_x86_intel1/00090675-0
 libdata/firmware/cpu_x86_intel1/00090675-1
+libdata/firmware/cpu_x86_intel1/00090675-2
 libdata/firmware/cpu_x86_intel1/000906a3-7
 libdata/firmware/cpu_x86_intel1/000906a4-7
 libdata/firmware/cpu_x86_intel1/000906c0-0
@@ -367,7 +370,12 @@ libdata/firmware/cpu_x86_intel1/000a0655-5
 libdata/firmware/cpu_x86_intel1/000a0660-7
 libdata/firmware/cpu_x86_intel1/000a0661-7
 libdata/firmware/cpu_x86_intel1/000a0671-1
+libdata/firmware/cpu_x86_intel1/000b0671-1
+libdata/firmware/cpu_x86_intel1/000b0671-4
+libdata/firmware/cpu_x86_intel1/000b0671-5
 libdata/firmware/cpu_x86_intel1/000b06f2-0
 libdata/firmware/cpu_x86_intel1/000b06f2-1
+libdata/firmware/cpu_x86_intel1/000b06f2-2
 libdata/firmware/cpu_x86_intel1/000b06f5-0
 libdata/firmware/cpu_x86_intel1/000b06f5-1
+libdata/firmware/cpu_x86_intel1/000b06f5-2
