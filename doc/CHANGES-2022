@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5392 2022/11/09 11:40:23 he Exp $
+$NetBSD: CHANGES-2022,v 1.5393 2022/11/09 13:01:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8174,3 +8174,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-prompt_toolkit to 3.0.32 [adam 2022-11-09]
 	Updated www/py-httpcore to 0.16.0 [adam 2022-11-09]
 	Updated security/opendnssec2 to 2.1.12 [he 2022-11-09]
+	Updated mail/evolution to 3.34.1nb17 [wiz 2022-11-09]
