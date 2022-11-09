@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3820 2022/11/08 09:27:08 adam Exp $
+# $NetBSD: Makefile,v 1.3821 2022/11/09 22:21:34 khorben Exp $
 #
 
 COMMENT=	Development utilities
@@ -2843,6 +2843,7 @@ SUBDIR+=	py-retry_decorator
 SUBDIR+=	py-rlp
 SUBDIR+=	py-rope
 SUBDIR+=	py-rply
+SUBDIR+=	py-rstr
 SUBDIR+=	py-ruamel-base
 SUBDIR+=	py-ruamel-ordereddict
 SUBDIR+=	py-ruamel-yaml
