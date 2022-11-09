@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5401 2022/11/09 22:10:31 khorben Exp $
+$NetBSD: CHANGES-2022,v 1.5402 2022/11/09 22:21:53 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8184,3 +8184,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/gleam to 0.24.0 [nikita 2022-11-09]
 	Updated sysutils/py-diffoscope to 224 [khorben 2022-11-09]
 	Updated sysutils/py-diffoscope to 226 [khorben 2022-11-09]
+	Added devel/py-rstr version 3.2.0 [khorben 2022-11-09]
