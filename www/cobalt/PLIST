@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2022/11/09 13:32:49 nikita Exp $
+bin/cobalt
