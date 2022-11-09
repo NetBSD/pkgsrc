@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2022/04/10 08:53:21 nia Exp $
+# $NetBSD: Makefile,v 1.53 2022/11/09 13:14:27 joerg Exp $
 
 PKGNAME=	xf86-video-intel-2.99.917.20210115
 COMMIT_ID=	31486f40f8e8f8923ca0799aea84b58799754564
@@ -8,7 +8,7 @@ CATEGORIES=	x11
 MASTER_SITES=	https://gitlab.freedesktop.org/xorg/driver/xf86-video-intel/-/archive/${COMMIT_ID}/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	joerg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://xorg.freedesktop.org/
 COMMENT=	Modular Xorg Intel video driver
 LICENSE=	x11

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.16 2022/09/27 07:23:47 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2022/11/09 13:14:23 joerg Exp $
 
 DISTNAME=		libXxf86vm-1.1.5
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.xz
 
-MAINTAINER=		joerg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/
 COMMENT=		Library for the XFree86-VidMode X extension
 

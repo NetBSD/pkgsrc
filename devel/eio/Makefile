@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2022/10/26 10:31:01 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2022/11/09 13:14:08 joerg Exp $
 
 DISTNAME=	eio-1.7.10
 PKGREVISION=	7
@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	https://download.enlightenment.org/att/releases/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	joerg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://enlightenment.org/
 COMMENT=	Enlightenned Asynchronous Input Output library
 LICENSE=	gnu-lgpl-v2.1

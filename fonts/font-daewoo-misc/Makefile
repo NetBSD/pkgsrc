@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2020/01/18 23:31:03 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2022/11/09 13:14:12 joerg Exp $
 #
 
 DISTNAME=		font-daewoo-misc-1.0.3
@@ -6,7 +6,7 @@ CATEGORIES=		fonts
 MASTER_SITES=		${MASTER_SITE_XORG:=font/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		joerg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/
 COMMENT=		Daewoo Gothic PCF fonts
 

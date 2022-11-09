@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.16 2022/10/17 21:41:37 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2022/11/09 13:14:22 joerg Exp $
 
 DISTNAME=		libXmu-1.1.4
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.xz
 
-MAINTAINER=		joerg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/
 COMMENT=		X Miscellaneous Utilities library
 

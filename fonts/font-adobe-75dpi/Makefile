@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2020/01/18 23:31:01 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2022/11/09 13:14:10 joerg Exp $
 #
 
 DISTNAME=		font-adobe-75dpi-1.0.3
@@ -6,7 +6,7 @@ CATEGORIES=		fonts
 MASTER_SITES=		${MASTER_SITE_XORG:=font/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		joerg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/
 COMMENT=		Standard 75pi Adobe PCF fonts
 
