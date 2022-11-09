@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5403 2022/11/09 22:26:58 khorben Exp $
+$NetBSD: CHANGES-2022,v 1.5404 2022/11/09 23:26:36 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8186,3 +8186,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/py-diffoscope to 226 [khorben 2022-11-09]
 	Added devel/py-rstr version 3.2.0 [khorben 2022-11-09]
 	Added sysutils/py-reprotest version 0.7.22 [khorben 2022-11-09]
+	Updated www/gitea to 1.16.9 [khorben 2022-11-09]
