@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/11/09 22:26:26 khorben Exp $
+# $NetBSD: Makefile,v 1.2 2022/11/09 22:51:19 wiz Exp $
 
 DISTNAME=	reprotest-0.7.22
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,6 +13,8 @@ LICENSE=	gnu-gpl-v3
 DEPENDS+=	${PYPKGPREFIX}-diffoscope>=226:../../sysutils/py-diffoscope
 DEPENDS+=	${PYPKGPREFIX}-distro>=0:../../devel/py-distro
 DEPENDS+=	${PYPKGPREFIX}-rstr>=0:../../devel/py-rstr
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 REPLACE_PYTHON+=	reprotest/virt/autopkgtest-virt-chroot \
 			reprotest/virt/autopkgtest-virt-lxc    \
