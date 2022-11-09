@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.659 2022/10/31 09:50:40 adam Exp $
+# $NetBSD: Makefile,v 1.660 2022/11/09 16:58:34 nikita Exp $
 #
 
 COMMENT=	Programming languages
@@ -136,6 +136,7 @@ SUBDIR+=	js
 SUBDIR+=	kaffe
 SUBDIR+=	kaffe-x11
 SUBDIR+=	kali
+SUBDIR+=	kona
 SUBDIR+=	konoha
 SUBDIR+=	ksi
 SUBDIR+=	libBlocksRuntime
