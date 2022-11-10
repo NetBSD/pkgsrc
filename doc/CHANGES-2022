@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5420 2022/11/10 22:01:39 pin Exp $
+$NetBSD: CHANGES-2022,v 1.5421 2022/11/10 23:26:12 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8203,3 +8203,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/monolith to 2.7.0 [pin 2022-11-10]
 	Updated net/ncgopher to 0.5.0 [pin 2022-11-10]
 	Updated shells/nushell to 0.71.0 [pin 2022-11-10]
+	Added sysutils/geteltorito version 0.6 [nikita 2022-11-10]
