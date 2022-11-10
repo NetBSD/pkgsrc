@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2022/05/14 13:45:24 jperkin Exp $
+$NetBSD: distinfo,v 1.10 2022/11/10 00:53:13 gutteridge Exp $
 
-BLAKE2s (lxqt-build-tools-0.11.0.tar.xz) = f7914fe91aeffaf55a2ec3d2c4602ec5ab89d4b8d76373dacf74e517088e5dbb
-SHA512 (lxqt-build-tools-0.11.0.tar.xz) = d421aaf74b13efa3b603b5c8a998bfd6091f5d3c45e0201d64e0c1f12d93c45fdc12d9232b0ac1c98ccf47007560c5814612162d1ac879bb3173bad57164408d
-Size (lxqt-build-tools-0.11.0.tar.xz) = 25348 bytes
-SHA1 (patch-cmake_modules_LXQtCompilerSettings.cmake) = 48b92fbd9109ffa69af8b88eaf422472ed730e23
+BLAKE2s (lxqt-build-tools-0.12.0.tar.xz) = 29053c88efab70830a8d3e471d2d973aec3e6c5c0a5a478ba86e92b8847b1424
+SHA512 (lxqt-build-tools-0.12.0.tar.xz) = 6c8f0d8f04a2ba06c1cff935580a88312f18f87b5da99e53f46c053b842f179bf474b3637ddcb0e9a0007f1d03b9e7cfd92a6552e53082ce34348fcfb6436add
+Size (lxqt-build-tools-0.12.0.tar.xz) = 25444 bytes
+SHA1 (patch-cmake_modules_LXQtCompilerSettings.cmake) = 31f7a0743c726b2f9a9a1641351d2a53d4811be3
