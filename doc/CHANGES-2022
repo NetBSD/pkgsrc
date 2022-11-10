@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5406 2022/11/10 01:00:22 gutteridge Exp $
+$NetBSD: CHANGES-2022,v 1.5407 2022/11/10 01:03:49 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8189,3 +8189,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/gitea to 1.16.9 [khorben 2022-11-09]
 	Updated devel/lxqt-build-tools to 0.12.0 [gutteridge 2022-11-10]
 	Updated x11/libqtxdg to 3.10.0 [gutteridge 2022-11-10]
+	Updated x11/qtxdg-tools to 3.10.0 [gutteridge 2022-11-10]
