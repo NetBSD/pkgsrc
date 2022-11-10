@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/11/10 23:25:49 nikita Exp $
+
+BLAKE2s (geteltorito-0.6/geteltorito.pl) = a3d452d191ff2085d9c0dce45506178e5f48676231ea3cd87d5fe480b0ef718d
+SHA512 (geteltorito-0.6/geteltorito.pl) = 84307f44d071ffad67c29bab9dd4b3cef2dc8029b4e89011bb4ad9ee487ff88ebb9d3b257dd0a6d385f966bf58544e6e51716534cd640cf19e331f03d28a0d4f
+Size (geteltorito-0.6/geteltorito.pl) = 6602 bytes
