@@ -1,4 +1,4 @@
-$NetBSD: patch-cmake_modules_LXQtCompilerSettings.cmake,v 1.1 2022/05/14 13:45:24 jperkin Exp $
+$NetBSD: patch-cmake_modules_LXQtCompilerSettings.cmake,v 1.2 2022/11/10 00:53:13 gutteridge Exp $
 
 Avoid -Bsymbolic* on SunOS.
 
@@ -8,11 +8,11 @@ Avoid -Bsymbolic* on SunOS.
          set(NO_UNDEFINED_FLAGS "-Wl,--no-undefined")
          # -Bsymbolic-functions: replace dynamic symbols used internally in
          #                       shared libs with direct addresses.
--        set(SYMBOLIC_FLAGS "-Wl,-Bsymbolic-functions -Wl,-Bsymbolic")
+-        set(SYMBOLIC_FLAGS "-Wl,-Bsymbolic-functions")
 +        if(${CMAKE_SYSTEM_NAME} STREQUAL "SunOS")
 +            set(SYMBOLIC_FLAGS "")
 +        else()
-+            set(SYMBOLIC_FLAGS "-Wl,-Bsymbolic-functions -Wl,-Bsymbolic")
++            set(SYMBOLIC_FLAGS "-Wl,-Bsymbolic-functions")
 +        endif()
      endif()
  
