@@ -1,13 +1,16 @@
-# $NetBSD: Makefile,v 1.56 2022/11/01 17:28:14 gdt Exp $
+# $NetBSD: Makefile,v 1.57 2022/11/10 12:59:13 gdt Exp $
 #
 
 VERSION=	4.5
+PKGREVISION=	1
 DISTNAME=	hamlib-${VERSION}
 CATEGORIES=	ham
-# hamlib is both at github and sourceforge; code is more at github and
+# hamlib is both at github and sourceforge.  Upstream is not clear
+# about which is primary and which is secondary.  The github-fetchable
+# distfile appears broken (or attacked?) as of 2022-11-09.
 # mailinglists are at sourceforge.
-MASTER_SITES=	${MASTER_SITE_GITHUB:=Hamlib/}
-#MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hamlib/}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hamlib/}
+#MASTER_SITES=	${MASTER_SITE_GITHUB:=Hamlib/}
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://hamlib.github.io/
