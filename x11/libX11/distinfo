@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.48 2022/11/10 21:29:16 wiz Exp $
+$NetBSD: distinfo,v 1.49 2022/11/10 21:33:05 wiz Exp $
 
 BLAKE2s (libX11-1.8.2.tar.xz) = e4af15ac627d666ace52ff861da139401207cd63ac06f8e5ca8f6bbd526bd9f8
 SHA512 (libX11-1.8.2.tar.xz) = 662ee8043d9ba27df82f647515b701d6f302a52715f21afdaba391f3b70691753e3649e7ff8322e07858be4297df9cbb19227958d676ed6dea198cce64330d1d
 Size (libX11-1.8.2.tar.xz) = 1823712 bytes
-SHA1 (patch-src_xkb_XKBBind.c) = 3ad94bd3265c3c4a85bcf3e2da0782c16fd461d1
+SHA1 (patch-src_xkb_XKBBind.c) = 88904e6916e56c8460e2d079c4653095a28f85e0
