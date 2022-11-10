@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5412 2022/11/10 12:24:38 nikita Exp $
+$NetBSD: CHANGES-2022,v 1.5413 2022/11/10 13:04:09 he Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8195,3 +8195,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/screengrab to 2.5.0 [gutteridge 2022-11-10]
 	Updated devel/rebar3 to 3.20.0 [nikita 2022-11-10]
 	Added devel/hex version 2.0.0 [nikita 2022-11-10]
+	Updated net/routinator to 0.12.0 [he 2022-11-10]
