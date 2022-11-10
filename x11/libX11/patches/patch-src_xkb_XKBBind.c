@@ -1,9 +1,11 @@
-$NetBSD: patch-src_xkb_XKBBind.c,v 1.1 2021/01/20 09:42:55 nia Exp $
+$NetBSD: patch-src_xkb_XKBBind.c,v 1.2 2022/11/10 21:33:05 wiz Exp $
 
 Don't use pragma inside a function, it breaks compiling with older
 GCCs.
 
 XKBBind.c:230: error: #pragma GCC diagnostic not allowed inside functions
+
+https://gitlab.freedesktop.org/xorg/lib/libx11/-/merge_requests/169
 
 --- src/xkb/XKBBind.c.orig	2020-11-20 19:08:11.000000000 +0000
 +++ src/xkb/XKBBind.c
