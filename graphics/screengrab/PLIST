@@ -1,7 +1,5 @@
-@comment $NetBSD: PLIST,v 1.5 2022/04/24 15:11:12 pin Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/11/10 01:41:25 gutteridge Exp $
 bin/screengrab
-lib/screengrab/libextedit.so
-lib/screengrab/libextedit.so.1.0.0
 share/applications/screengrab.desktop
 share/doc/screengrab/html/default.css
 share/doc/screengrab/html/en/index.html
@@ -10,6 +8,7 @@ share/doc/screengrab/html/ru/index.html
 share/icons/hicolor/scalable/apps/screengrab.svg
 share/metainfo/screengrab.metainfo.xml
 share/screengrab/screengrab.conf
+share/screengrab/translations/screengrab_ar.qm
 share/screengrab/translations/screengrab_arn.qm
 share/screengrab/translations/screengrab_ast.qm
 share/screengrab/translations/screengrab_bg.qm
