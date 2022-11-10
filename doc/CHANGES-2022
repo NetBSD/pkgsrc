@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5416 2022/11/10 19:25:49 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.5417 2022/11/10 21:29:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8199,3 +8199,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/php-igbinary to 3.2.12 [taca 2022-11-10]
 	Updated games/quakespasm to 0.95.1 [snj 2022-11-10]
 	Updated devel/nss to 3.85 [wiz 2022-11-10]
+	Updated x11/libX11 to 1.8.2 [wiz 2022-11-10]
