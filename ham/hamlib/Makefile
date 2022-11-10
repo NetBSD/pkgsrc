@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2022/11/10 12:59:13 gdt Exp $
+# $NetBSD: Makefile,v 1.58 2022/11/10 13:43:05 gdt Exp $
 #
 
 VERSION=	4.5
@@ -6,10 +6,10 @@ PKGREVISION=	1
 DISTNAME=	hamlib-${VERSION}
 CATEGORIES=	ham
 # hamlib is both at github and sourceforge.  Upstream is not clear
-# about which is primary and which is secondary.  The github-fetchable
-# distfile appears broken (or attacked?) as of 2022-11-09.
-# mailinglists are at sourceforge.
+# about which is primary and which is secondary.
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hamlib/}
+# github contains actual releases as assets attached to the tag
+# https://github.com/Hamlib/Hamlib/releases/download/4.5/hamlib-4.5.tar.gz
 #MASTER_SITES=	${MASTER_SITE_GITHUB:=Hamlib/}
 
 MAINTAINER=	gdt@NetBSD.org
