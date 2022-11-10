@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5410 2022/11/10 01:41:38 gutteridge Exp $
+$NetBSD: CHANGES-2022,v 1.5411 2022/11/10 09:34:21 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8193,3 +8193,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/qtermwidget to 1.2.0 [gutteridge 2022-11-10]
 	Updated x11/qterminal to 1.2.0 [gutteridge 2022-11-10]
 	Updated graphics/screengrab to 2.5.0 [gutteridge 2022-11-10]
+	Updated devel/rebar3 to 3.20.0 [nikita 2022-11-10]
