@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2022/11/10 13:43:05 gdt Exp $
+# $NetBSD: Makefile,v 1.59 2022/11/10 14:22:13 gdt Exp $
 #
 
 VERSION=	4.5
@@ -11,6 +11,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hamlib/}
 # github contains actual releases as assets attached to the tag
 # https://github.com/Hamlib/Hamlib/releases/download/4.5/hamlib-4.5.tar.gz
 #MASTER_SITES=	${MASTER_SITE_GITHUB:=Hamlib/}
+#GITHUB_RELEASE=${PKGVERSION_NOREV}
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://hamlib.github.io/
