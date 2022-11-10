@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.32 2022/11/09 23:26:15 khorben Exp $
+$NetBSD: distinfo,v 1.33 2022/11/10 21:12:54 khorben Exp $
 
 BLAKE2s (bazil.org_fuse_@v_v0.0.0-20180421153158-65cc252bf669.mod) = ff8095283662ae2d2a1968bf429516c54586b1a6c4dc744657162e6781aa8ece
 SHA512 (bazil.org_fuse_@v_v0.0.0-20180421153158-65cc252bf669.mod) = 7b3ef87f98485bb9ec325680f57d43a9bd76e90bdcfb1e798458f28f7d3addf91dbb6a07b654749468860981413ad2267df2d5f3535c85579e9f79d9328d355c
@@ -8049,4 +8049,4 @@ Size (xorm.io_xorm_@v_v1.2.5.mod) = 486 bytes
 BLAKE2s (xorm.io_xorm_@v_v1.2.5.zip) = 03755a7c8b10da3dd1ab496969dbf0e54a528749fed1d3bdaeb26237235ff0a7
 SHA512 (xorm.io_xorm_@v_v1.2.5.zip) = e136f8c50d41c46b83cb17b82e6865967105f404a886d93834793c13fa4c9e0ef6c841e9eed19ba5fecf068670650b01a1648303614ed97ff2d046992479d357
 Size (xorm.io_xorm_@v_v1.2.5.zip) = 307259 bytes
-SHA1 (patch-Makefile) = e412ed02de0c2b4e7ea711b829168551bf6f8839
+SHA1 (patch-Makefile) = 289ec07884b772dac8f79dfd89b498c55df9cf83
