@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5418 2022/11/10 21:58:36 pin Exp $
+$NetBSD: CHANGES-2022,v 1.5419 2022/11/10 22:00:09 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8201,3 +8201,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/nss to 3.85 [wiz 2022-11-10]
 	Updated x11/libX11 to 1.8.2 [wiz 2022-11-10]
 	Updated www/monolith to 2.7.0 [pin 2022-11-10]
+	Updated net/ncgopher to 0.5.0 [pin 2022-11-10]
