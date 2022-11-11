@@ -1,0 +1,18 @@
+Console
+
+Provides beautiful console logging for Ruby applications.  Implements fast,
+buffered log output.
+
+Motivation
+
+When Ruby decided to reverse the order of exception backtraces, I finally
+gave up using the built in logging and decided restore sanity to the output
+of my programs once and for all!
+
+Features
+
+* Thread safe global logger with per-fiber context.
+* Carry along context with nested loggers.
+* Enable/disable log levels per-class.
+* Detailed logging of exceptions.
+* Beautiful logging to the terminal or structured logging using JSON.
