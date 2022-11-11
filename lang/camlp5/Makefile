@@ -1,23 +1,22 @@
-# $NetBSD: Makefile,v 1.42 2022/06/03 08:10:56 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2022/11/11 10:33:00 jaapb Exp $
 
 GITHUB_PROJECT=	camlp5
-DISTNAME=	${GITHUB_PROJECT}-7.13
-PKGREVISION=	2
+DISTNAME=	${GITHUB_PROJECT}-8.00.03
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=camlp5/}
-GITHUB_TAG=	rel${PKGVERSION_NOREV:S/.//}
+GITHUB_TAG=	rel${PKGVERSION_NOREV}
 
 MAINTAINER=	tonio@NetBSD.org
 HOMEPAGE=	https://camlp5.github.io/
 COMMENT=	Preprocessor-pretty-printer for ocaml
 LICENSE=	modified-bsd
 
-# https://github.com/camlp5/camlp5/issues/92
-BROKEN=		"does not support ocaml 4.14"
-
 HAS_CONFIGURE=	yes
 USE_LANGUAGES=	c # needed for optimised compiler
+USE_TOOLS+=	perl gmake
 MAKE_JOBS_SAFE=	no
+
+WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}
 
 CONFIGURE_ARGS+=	--bindir ${PREFIX}/bin
 CONFIGURE_ARGS+=	--mandir ${PREFIX}/${PKGMANDIR}
@@ -36,14 +35,9 @@ BUILD_TARGET=	world.opt
 BUILD_TARGET=	world
 .endif
 
-# compensate for upstream not having heard of 4.11.2 yet
-# (should be able to remove this at the next update)
-post-extract:
-	cd ${WRKSRC}/ocaml_stuff && ln -s 4.11.1 4.11.2
-	cd ${WRKSRC}/ocaml_src/lib/versdep && ln -s 4.11.1.ml 4.11.2.ml
-
 post-install:
 	cd ${WRKSRC}/etc && \
 	${INSTALL_DATA} META ${DESTDIR}${PREFIX}/${OCAML_SITELIBDIR}/camlp5
 
+.include "../../devel/camlp-streams/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
