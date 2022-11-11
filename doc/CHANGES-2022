@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5441 2022/11/11 20:11:22 bsiegert Exp $
+$NetBSD: CHANGES-2022,v 1.5442 2022/11/11 20:25:04 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8226,3 +8226,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/spdlog to 1.11.0 [adam 2022-11-11]
 	Updated net/yt-dlp to 2022.11.11 [adam 2022-11-11]
 	Updated sysutils/tealdeer to 1.6.1 [bsiegert 2022-11-11]
+	Updated editors/helix to 22.08.1 [nikita 2022-11-11]
