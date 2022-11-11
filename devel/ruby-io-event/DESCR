@@ -1,0 +1,14 @@
+IO::Event
+
+Provides low level cross-platform primitives for constructing event loops,
+with support for select, kqueue, epoll and io_uring.
+
+Motivation
+
+The initial proof-of-concept Async was built on NIO4r.  It was perfectly
+acceptable and well tested in production, however being built on libev was a
+little bit limiting.  I wanted to directly built my fiber scheduler into the
+fabric of the event loop, which is what this gem exposes - it is
+specifically implemented to support building event loops beneath the fiber
+scheduler interface, providing an efficient C implementation of all the core
+operations.
