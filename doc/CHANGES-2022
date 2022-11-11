@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5426 2022/11/11 12:59:44 taca Exp $
+$NetBSD: CHANGES-2022,v 1.5427 2022/11/11 13:02:14 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8210,3 +8210,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/py-libcst to 0.4.9 [adam 2022-11-11]
 	Updated devel/py-stevedore to 4.1.1 [adam 2022-11-11]
 	Updated databases/ruby-moneta to 1.5.2 [taca 2022-11-11]
+	Updated databases/ruby-pg to 1.4.4 [taca 2022-11-11]
