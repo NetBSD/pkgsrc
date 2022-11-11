@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2022/08/31 14:47:35 taca Exp $
-bin/htmlproofer
+@comment $NetBSD: PLIST,v 1.3 2022/11/11 13:49:57 taca Exp $
+bin/htmlproofer${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/bin/htmlproofer
+${GEM_LIBDIR}/exe/htmlproofer
 ${GEM_LIBDIR}/lib/html-proofer.rb
 ${GEM_LIBDIR}/lib/html_proofer.rb
 ${GEM_LIBDIR}/lib/html_proofer/attribute.rb
@@ -13,12 +13,13 @@ ${GEM_LIBDIR}/lib/html_proofer/check/images.rb
 ${GEM_LIBDIR}/lib/html_proofer/check/links.rb
 ${GEM_LIBDIR}/lib/html_proofer/check/open_graph.rb
 ${GEM_LIBDIR}/lib/html_proofer/check/scripts.rb
+${GEM_LIBDIR}/lib/html_proofer/cli.rb
 ${GEM_LIBDIR}/lib/html_proofer/configuration.rb
 ${GEM_LIBDIR}/lib/html_proofer/element.rb
 ${GEM_LIBDIR}/lib/html_proofer/failure.rb
 ${GEM_LIBDIR}/lib/html_proofer/log.rb
 ${GEM_LIBDIR}/lib/html_proofer/reporter.rb
-${GEM_LIBDIR}/lib/html_proofer/reporter/cli.rb
+${GEM_LIBDIR}/lib/html_proofer/reporter/terminal.rb
 ${GEM_LIBDIR}/lib/html_proofer/runner.rb
 ${GEM_LIBDIR}/lib/html_proofer/url_validator.rb
 ${GEM_LIBDIR}/lib/html_proofer/url_validator/external.rb
