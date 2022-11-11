@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2022/11/11 14:02:52 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.github/workflows/codeql-analysis.yml
+${GEM_LIBDIR}/.github/workflows/test.yml
+${GEM_LIBDIR}/.rspec
+${GEM_LIBDIR}/CHANGELOG.md
+${GEM_LIBDIR}/MIT-LICENSE.txt
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/data/rgb_colors.marshal.gz
+${GEM_LIBDIR}/lib/paint.rb
+${GEM_LIBDIR}/lib/paint/constants.rb
+${GEM_LIBDIR}/lib/paint/pa.rb
+${GEM_LIBDIR}/lib/paint/rgb_colors.rb
+${GEM_LIBDIR}/lib/paint/util.rb
+${GEM_LIBDIR}/lib/paint/version.rb
+${GEM_LIBDIR}/paint.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
