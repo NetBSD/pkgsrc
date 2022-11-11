@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.271 2022/10/26 12:51:46 he Exp $
+# $NetBSD: Makefile,v 1.272 2022/11/11 17:36:39 he Exp $
 
 DISTNAME=	rustc-1.63.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -604,7 +604,9 @@ stage0-bootstrap: install
 
 # rust i386 bootstraps are built for 8.0 and still depend on libstdc++.so.8.
 # Pull in compat80 on 9.x and newer.
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-i386) && empty(OS_VERSION:M8.*)
+.if (!empty(MACHINE_PLATFORM:MNetBSD-*-i386) || \
+     !empty(MACHINE_PLATFORM:MNetBSD-*-sparc64)) \
+    && empty(OS_VERSION:M8.*)
 BUILD_DEPENDS+=	compat80>=0:../../emulators/compat80
 .endif
 
