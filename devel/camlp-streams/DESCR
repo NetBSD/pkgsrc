@@ -1,0 +1,5 @@
+The camlp-streams package provides two library modules:
+- Stream: imperative streams, with in-place update and memoization of
+          the latest element produced.
+- Genlex: a small parameterized lexical analyzer producing streams of
+          tokens from streams of characters.

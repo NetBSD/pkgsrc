@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2022/11/11 10:29:10 jaapb Exp $
+${OCAML_SITELIB}/camlp-streams/META
+${PLIST.ocaml-opt}${OCAML_SITELIB}/camlp-streams/camlp_streams.a
+${OCAML_SITELIB}/camlp-streams/camlp_streams.cma
+${PLIST.ocaml-opt}${OCAML_SITELIB}/camlp-streams/camlp_streams.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/camlp-streams/camlp_streams.cmxs
+${OCAML_SITELIB}/camlp-streams/dune-package
+${OCAML_SITELIB}/camlp-streams/genlex.cmi
+${OCAML_SITELIB}/camlp-streams/genlex.cmt
+${OCAML_SITELIB}/camlp-streams/genlex.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/camlp-streams/genlex.cmx
+${OCAML_SITELIB}/camlp-streams/genlex.ml
+${OCAML_SITELIB}/camlp-streams/genlex.mli
+${OCAML_SITELIB}/camlp-streams/opam
+${OCAML_SITELIB}/camlp-streams/stream.cmi
+${OCAML_SITELIB}/camlp-streams/stream.cmt
+${OCAML_SITELIB}/camlp-streams/stream.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/camlp-streams/stream.cmx
+${OCAML_SITELIB}/camlp-streams/stream.ml
+${OCAML_SITELIB}/camlp-streams/stream.mli
+share/doc/camlp-streams/CHANGES.md
+share/doc/camlp-streams/LICENSE
+share/doc/camlp-streams/README.md
