@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.317 2022/10/04 11:47:45 jperkin Exp $
+# $NetBSD: bootstrap,v 1.318 2022/11/11 17:22:14 jperkin Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -389,6 +389,14 @@ checkarg_sane_relative_path() {
 	*)	;;
 	esac
 }
+
+#
+# If we determine that a native version is good enough to use then it is saved
+# and we later write the appropriate TOOLS_PLATFORM variable to mk.conf to
+# override any further processing from mk/tools.
+#
+bootstrap_awk=
+bootstrap_sed=
 
 bootstrap_sh=${SH-/bin/sh}
 bootstrap_sh_set=${SH+set}
@@ -825,18 +833,29 @@ SunOS)
 	root_group=root
 	need_bsd_install=yes
 	use_bsdinstall=yes
-	if [ ! -x "/usr/gnu/bin/awk" ]; then
+
+	# Use native nawk and sed if available on newer illumos.
+	/usr/bin/nawk --version 2>/dev/null | grep "awk version " >/dev/null
+	if [ $? -eq 0 ]; then
+		bootstrap_awk="/usr/bin/nawk"
+	elif [ ! -x "/usr/gnu/bin/awk" ]; then
 		need_awk=yes
 	fi
-	if [ ! -x "/usr/gnu/bin/sed" ]; then
+
+	/usr/bin/sed -h 2>&1 | grep -- "-i extension" >/dev/null
+	if [ $? -eq 0 ]; then
+		bootstrap_sed="/usr/bin/sed"
+	elif [ ! -x "/usr/gnu/bin/sed" ]; then
 		need_sed=yes
 	fi
+
 	if [ -x "/usr/bin/bash" ]; then
 		bootstrap_sh=${SH:-/usr/bin/bash}
 		bootstrap_sh_set=set
 	else
 		need_mksh=yes
 	fi
+
 	idprog="/usr/xpg4/bin/id"
 	groupsprog="${idprog} -gn"
 	whoamiprog="${idprog} -un"
@@ -1297,6 +1316,12 @@ yes)	echo_msg "Bootstrapping awk"
 	echo "TOOLS_PLATFORM.awk?=		$prefix/bin/nawk" >> ${TARGET_MKCONF}
 	echo "TOOLS_PLATFORM.awk?=		$wrkdir/bin/nawk" >> ${BOOTSTRAP_MKCONF}
 	;;
+*)
+	if [ -n "${bootstrap_awk}" ]; then
+		echo "TOOLS_PLATFORM.awk?=		${bootstrap_awk}" >> ${TARGET_MKCONF}
+		echo "TOOLS_PLATFORM.awk?=		${bootstrap_awk}" >> ${BOOTSTRAP_MKCONF}
+	fi
+	;;
 esac
 
 # bootstrap sed if necessary
@@ -1307,6 +1332,12 @@ yes)	echo_msg "Bootstrapping sed"
 	run_cmd "$install_sh -c -o $user -g $group -m 755 $wrkdir/sed/sed $wrkdir/bin/sed"
 	echo "TOOLS_PLATFORM.sed?=		$prefix/bin/nbsed" >> ${TARGET_MKCONF}
 	echo "TOOLS_PLATFORM.sed?=		$wrkdir/bin/sed" >> ${BOOTSTRAP_MKCONF}
+	;;
+*)
+	if [ -n "${bootstrap_sed}" ]; then
+		echo "TOOLS_PLATFORM.sed?=		${bootstrap_sed}" >> ${TARGET_MKCONF}
+		echo "TOOLS_PLATFORM.sed?=		${bootstrap_sed}" >> ${BOOTSTRAP_MKCONF}
+	fi
 	;;
 esac
 
