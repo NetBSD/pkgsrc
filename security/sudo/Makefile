@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.190 2022/07/05 11:01:38 adam Exp $
+# $NetBSD: Makefile,v 1.190.2.1 2022/11/11 19:59:11 bsiegert Exp $
 
-DISTNAME=	sudo-1.9.11p3
+DISTNAME=	sudo-1.9.12
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	https://www.sudo.ws/dist/
 MASTER_SITES+=	ftp://ftp.sudo.ws/pub/sudo/
@@ -66,7 +67,7 @@ SPECIAL_PERMS+=		bin/sudo ${SETUID_ROOT_PERMS}
 SPECIAL_PERMS+=		bin/sudoreplay ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 511
 
 INSTALLATION_DIRS+=	${EGDIR}
-NOT_FOR_UNPRIVILEGED=	yes
+#NOT_FOR_UNPRIVILEGED=	yes
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/plugins/sudoers/sudoers ${DESTDIR}${PREFIX}/${EGDIR}/sudoers
