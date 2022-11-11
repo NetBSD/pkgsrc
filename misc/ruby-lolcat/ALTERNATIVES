@@ -1,0 +1,1 @@
+bin/lolcat @PREFIX@/bin/lolcat@RUBY_SUFFIX@
