@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.572 2022/09/27 07:49:22 pin Exp $
+# $NetBSD: Makefile,v 1.573 2022/11/11 14:07:17 taca Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -323,6 +323,7 @@ SUBDIR+=	ruby-gem_plugin
 SUBDIR+=	ruby-hashie
 SUBDIR+=	ruby-launchy
 SUBDIR+=	ruby-license-acceptance
+SUBDIR+=	ruby-manpages
 SUBDIR+=	ruby-memoizable
 SUBDIR+=	ruby-method_source
 SUBDIR+=	ruby-mini_portile2
