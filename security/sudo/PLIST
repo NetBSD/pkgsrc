@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2022/07/05 11:01:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.22.2.1 2022/11/11 19:59:11 bsiegert Exp $
 bin/cvtsudoers
 bin/sudo
 bin/sudoedit
@@ -7,7 +7,6 @@ include/sudo_plugin.h
 lib/sudo/audit_json.la
 lib/sudo/group_file.la
 lib/sudo/libsudo_util.la
-lib/sudo/sample_approval.la
 ${PLIST.noexec}lib/sudo/sudo_noexec.la
 lib/sudo/sudoers.la
 lib/sudo/system_group.la
