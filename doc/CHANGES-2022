@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5435 2022/11/11 13:50:23 taca Exp $
+$NetBSD: CHANGES-2022,v 1.5436 2022/11/11 14:01:25 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8219,3 +8219,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/ruby-io-event version 1.1.2 [taca 2022-11-11]
 	Added devel/ruby-async version 2.2.1 [taca 2022-11-11]
 	Updated www/ruby-html-proofer to 5.0.1 [taca 2022-11-11]
+	Added devel/ruby-optimist version 3.0.1 [taca 2022-11-11]
