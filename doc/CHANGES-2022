@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5422 2022/11/11 10:29:29 jaapb Exp $
+$NetBSD: CHANGES-2022,v 1.5423 2022/11/11 10:33:11 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8205,3 +8205,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated shells/nushell to 0.71.0 [pin 2022-11-10]
 	Added sysutils/geteltorito version 0.6 [nikita 2022-11-10]
 	Added devel/camlp-streams version 5.0.1 [jaapb 2022-11-11]
+	Updated lang/camlp5 to 8.00.03 [jaapb 2022-11-11]
