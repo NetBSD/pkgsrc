@@ -1,0 +1,22 @@
+optimist
+
+Description
+
+Optimist is a commandline option parser for Ruby that just gets out of your
+way.  One line of code per option is all you need to write.  For that, you
+get a nice automatically-generated help page, robust option parsing, and
+sensible defaults for everything you don't specify.
+
+Features
+
+* Dirt-simple usage.
+* Single file.  Throw it in lib/ if you don't want to make it a Rubygem
+  dependency.
+* Sensible defaults.  No tweaking necessary, much tweaking possible.
+* Support for long options, short options, subcommands, and automatic type
+  validation and conversion.
+* Automatic help message generation, wrapped to current screen width.
+
+Requirements
+
+* A burning desire to write less code.
