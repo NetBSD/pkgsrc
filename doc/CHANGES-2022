@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5429 2022/11/11 13:16:14 taca Exp $
+$NetBSD: CHANGES-2022,v 1.5430 2022/11/11 13:18:02 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8213,3 +8213,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/ruby-pg to 1.4.4 [taca 2022-11-11]
 	Updated databases/ruby-sequel to 5.62.0 [taca 2022-11-11]
 	Updated databases/ruby-sqlite3 to 1.5.3 [taca 2022-11-11]
+	Updated devel/hoe to 3.26.0 [taca 2022-11-11]
