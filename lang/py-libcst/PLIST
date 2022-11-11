@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2022/09/14 08:39:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/11/11 11:26:10 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -690,6 +690,9 @@ ${PYSITELIB}/libcst/matchers/tests/test_visitors.pyo
 ${PYSITELIB}/libcst/metadata/__init__.py
 ${PYSITELIB}/libcst/metadata/__init__.pyc
 ${PYSITELIB}/libcst/metadata/__init__.pyo
+${PYSITELIB}/libcst/metadata/accessor_provider.py
+${PYSITELIB}/libcst/metadata/accessor_provider.pyc
+${PYSITELIB}/libcst/metadata/accessor_provider.pyo
 ${PYSITELIB}/libcst/metadata/base_provider.py
 ${PYSITELIB}/libcst/metadata/base_provider.pyc
 ${PYSITELIB}/libcst/metadata/base_provider.pyo
@@ -720,6 +723,9 @@ ${PYSITELIB}/libcst/metadata/span_provider.pyo
 ${PYSITELIB}/libcst/metadata/tests/__init__.py
 ${PYSITELIB}/libcst/metadata/tests/__init__.pyc
 ${PYSITELIB}/libcst/metadata/tests/__init__.pyo
+${PYSITELIB}/libcst/metadata/tests/test_accessor_provider.py
+${PYSITELIB}/libcst/metadata/tests/test_accessor_provider.pyc
+${PYSITELIB}/libcst/metadata/tests/test_accessor_provider.pyo
 ${PYSITELIB}/libcst/metadata/tests/test_base_provider.py
 ${PYSITELIB}/libcst/metadata/tests/test_base_provider.pyc
 ${PYSITELIB}/libcst/metadata/tests/test_base_provider.pyo
