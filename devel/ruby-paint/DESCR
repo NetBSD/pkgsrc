@@ -1,0 +1,22 @@
+Ruby Paint
+
+Paint creates terminal colors and effects for you.  It combines the
+strengths of term-ansicolor, rainbow, and similar projects into a simple to
+use, however still flexible terminal colors gem with no core extensions by
+default.
+
+Features
+
+* No string extensions (suitable for library development)
+* Simple API
+* Faster than other terminal color gems (as of July 2022)
+* Supports true color or 256 colors (for capable terminals)
+* Allows you to set any terminal effects
+* Paint.mode: Fall-back modes for terminals with less colors, supported
+  modes:
+
+  o 0xFFFFFF (= 16777215) colors (true color)
+  o 256 colors (palette)
+  o 16 colors (only ANSI colors, combined with bright effect)
+  o 8 colors (only ANSI colors)
+  o 0 colors (no colors / deactivate)
