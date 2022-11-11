@@ -1,0 +1,8 @@
+Fiber::Local
+
+A module to simplify fiber-local state.
+
+Features
+
+* Easily access fiber-local state from a fiber.
+* Default to shared thread-local state.
