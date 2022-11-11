@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3827 2022/11/11 13:42:19 taca Exp $
+# $NetBSD: Makefile,v 1.3828 2022/11/11 14:01:11 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -3159,6 +3159,7 @@ SUBDIR+=	ruby-nenv
 SUBDIR+=	ruby-octokit
 SUBDIR+=	ruby-ole
 SUBDIR+=	ruby-open4
+SUBDIR+=	ruby-optimist
 SUBDIR+=	ruby-pango
 SUBDIR+=	ruby-parseconfig
 SUBDIR+=	ruby-parser
