@@ -1,0 +1,9 @@
+Manpages
+
+This plugin will add man pages support to ruby gems.  Instead of adding a
+new command like gem-man it will try to link the files to a place the man
+command automatically discovers.
+
+With rvm and chruby it works out of the box, but sadly for rbenv we need to
+add hooks that modify the man symlink depending on the ruby version
+currently used.
