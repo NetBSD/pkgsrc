@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2022/11/11 13:58:38 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.travis.yml
+${GEM_LIBDIR}/FAQ.txt
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/History.txt
+${GEM_LIBDIR}/LICENSE.txt
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/lib/optimist.rb
+${GEM_LIBDIR}/optimist.gemspec
+${GEM_LIBDIR}/test/optimist/command_line_error_test.rb
+${GEM_LIBDIR}/test/optimist/help_needed_test.rb
+${GEM_LIBDIR}/test/optimist/parser_educate_test.rb
+${GEM_LIBDIR}/test/optimist/parser_opt_test.rb
+${GEM_LIBDIR}/test/optimist/parser_parse_test.rb
+${GEM_LIBDIR}/test/optimist/parser_test.rb
+${GEM_LIBDIR}/test/optimist/version_needed_test.rb
+${GEM_LIBDIR}/test/optimist_test.rb
+${GEM_LIBDIR}/test/support/assert_helpers.rb
+${GEM_LIBDIR}/test/test_helper.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
