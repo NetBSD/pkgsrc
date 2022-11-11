@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5433 2022/11/11 13:38:41 taca Exp $
+$NetBSD: CHANGES-2022,v 1.5434 2022/11/11 13:42:51 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8217,3 +8217,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/ruby-fiber-local version 1.0.0 [taca 2022-11-11]
 	Added devel/ruby-console version 1.16.2 [taca 2022-11-11]
 	Added devel/ruby-io-event version 1.1.2 [taca 2022-11-11]
+	Added devel/ruby-async version 2.2.1 [taca 2022-11-11]
