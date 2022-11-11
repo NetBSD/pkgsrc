@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/11/11 13:58:38 taca Exp $
+
+BLAKE2s (optimist-3.0.1.gem) = f13b137117c148bec17b184925458197fe8b68befdeeb3f6bcc0ea5b303eb6ae
+SHA512 (optimist-3.0.1.gem) = 209fbb355a7ba75208cef314ccaa188955463551d1c914f10409cac189375b5be40fbcdf0d88a5ce825c527bca7138528fafd6f37cf73f5e68f3b453f3ef8485
+Size (optimist-3.0.1.gem) = 30208 bytes
