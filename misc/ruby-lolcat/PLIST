@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2022/11/11 14:12:34 taca Exp $
+bin/lolcat${RUBY_SUFFIX}
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/ass/nom.jpg
+${GEM_LIBDIR}/ass/screenshot.png
+${GEM_LIBDIR}/bin/lolcat
+${GEM_LIBDIR}/lib/lolcat.rb
+${GEM_LIBDIR}/lib/lolcat/cat.rb
+${GEM_LIBDIR}/lib/lolcat/lol.rb
+${GEM_LIBDIR}/lib/lolcat/version.rb
+${GEM_LIBDIR}/lolcat.gemspec
+${GEM_LIBDIR}/man/lolcat.6
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
+man/man6/lolcat.6
