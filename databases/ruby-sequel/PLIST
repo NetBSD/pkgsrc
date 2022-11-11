@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.100 2022/10/06 14:16:05 taca Exp $
+@comment $NetBSD: PLIST,v 1.101 2022/11/11 13:13:39 taca Exp $
 bin/sequel${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -86,6 +86,7 @@ ${GEM_LIBDIR}/doc/release_notes/5.59.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.6.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.60.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.61.0.txt
+${GEM_LIBDIR}/doc/release_notes/5.62.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.7.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.8.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.9.0.txt
@@ -224,8 +225,10 @@ ${GEM_LIBDIR}/lib/sequel/extensions/null_dataset.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/pagination.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/pg_array.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/pg_array_ops.rb
+${GEM_LIBDIR}/lib/sequel/extensions/pg_auto_parameterize.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/pg_enum.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/pg_extended_date_support.rb
+${GEM_LIBDIR}/lib/sequel/extensions/pg_extended_integer_support.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/pg_hstore.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/pg_hstore_ops.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/pg_inet.rb
@@ -336,6 +339,7 @@ ${GEM_LIBDIR}/lib/sequel/plugins/pg_auto_constraint_validations.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/pg_row.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/prepared_statements.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/prepared_statements_safe.rb
+${GEM_LIBDIR}/lib/sequel/plugins/primary_key_lookup_check_values.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/rcte_tree.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/require_valid_schema.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/serialization.rb
