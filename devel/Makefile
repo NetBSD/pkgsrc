@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3824 2022/11/11 13:26:07 taca Exp $
+# $NetBSD: Makefile,v 1.3825 2022/11/11 13:30:14 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -3067,6 +3067,7 @@ SUBDIR+=	ruby-celluloid-supervision
 SUBDIR+=	ruby-classy_hash
 SUBDIR+=	ruby-cmd
 SUBDIR+=	ruby-concurrent-ruby
+SUBDIR+=	ruby-console
 SUBDIR+=	ruby-contracts
 SUBDIR+=	ruby-cucumber-core
 SUBDIR+=	ruby-cucumber-expressions
