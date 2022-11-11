@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/11/11 10:29:10 jaapb Exp $
+
+BLAKE2s (camlp-streams-5.0.1.tar.gz) = 498dac6f8dc6f3d97c7207265be21f5d790db4e4ca9ff191a58027e713c4cb83
+SHA512 (camlp-streams-5.0.1.tar.gz) = 2efa8dd4a636217c8d49bac1e4e7e5558fc2f45cfea66514140a59fd99dd08d61fb9f1e17804997ff648b71b13820a5d4a1eb70fed9d848aa2abd6e41f853c86
+Size (camlp-streams-5.0.1.tar.gz) = 17392 bytes
