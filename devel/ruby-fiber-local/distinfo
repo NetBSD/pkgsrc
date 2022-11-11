@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/11/11 13:25:16 taca Exp $
+
+BLAKE2s (fiber-local-1.0.0.gem) = b40360e972ac7b3b9d0311c5c20ac954febb933bf38716d3cb5b10695ae8a95f
+SHA512 (fiber-local-1.0.0.gem) = 6784f91c8eb37c553e34e476cc85bf5b985b086913e045dcecc28e2b5ead093d158e10d51f6d7a0e1f16a3e466825ec1fe771071a4688301befd327b78013e81
+Size (fiber-local-1.0.0.gem) = 5632 bytes
