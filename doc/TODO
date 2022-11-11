@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22345 2022/11/11 16:24:16 wiz Exp $
+$NetBSD: TODO,v 1.22346 2022/11/11 20:18:39 bsiegert Exp $
 
 Suggested new packages
 ======================
@@ -684,7 +684,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gcc8-8.5
 	o gcc9-9.5
 	o gcin-1.5.5
-	o gcloud-golang-metadata-0.12.0
 	o gcombust-0.1.55
 	o gdb-12.1
 	o gdb7-7.12
@@ -750,31 +749,13 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gnu-crypto-2.1.0
 	o gnucap-20210107
 	o gnutime-1.9
-	o go-afero-1.6.0
-	o go-appengine-1.6.7
-	o go-asn1-ber-1.5.3
-	o go-buffruneio-0.3.0
-	o go-chroma-0.8.2
-	o go-cli-2.3.0
-	o go-cobra-1.1.3
-	o go-diff-1.2.0
-	o go-errors-0.9.1
 	o go-ffuf-1.3.0
 	o go-fsnotify-1.4.9
-	o go-grpc-1.37.0
-	o go-i18n-2.1.2
-	o go-imaging-1.6.2
-	o go-isatty-0.0.12
 	o go-ldap-3.3.0
 	o go-logrus-1.8.1
 	o go-mkcert-1.4.3
-	o go-org-1.5.0
 	o go-siphash-1.2.2
 	o go-text-0.3.6
-	o go-toml-pelletier-1.9.0
-	o go-viper-1.7.1
-	o go-webhooks-5.17.0
-	o go-xz-0.5.10
 	o gobby-0.6.0
 	o gok-2.30.1
 	o golangci-lint-1.39.0
