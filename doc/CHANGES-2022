@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5440 2022/11/11 18:40:35 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5441 2022/11/11 20:11:22 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8225,3 +8225,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added misc/ruby-lolcat version 100.0.1 [taca 2022-11-11]
 	Updated devel/spdlog to 1.11.0 [adam 2022-11-11]
 	Updated net/yt-dlp to 2022.11.11 [adam 2022-11-11]
+	Updated sysutils/tealdeer to 1.6.1 [bsiegert 2022-11-11]
