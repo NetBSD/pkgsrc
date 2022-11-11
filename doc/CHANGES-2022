@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5439 2022/11/11 14:13:26 taca Exp $
+$NetBSD: CHANGES-2022,v 1.5440 2022/11/11 18:40:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8223,3 +8223,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/ruby-paint version 2.3.0 [taca 2022-11-11]
 	Added misc/ruby-manpages version 0.6.1 [taca 2022-11-11]
 	Added misc/ruby-lolcat version 100.0.1 [taca 2022-11-11]
+	Updated devel/spdlog to 1.11.0 [adam 2022-11-11]
+	Updated net/yt-dlp to 2022.11.11 [adam 2022-11-11]
