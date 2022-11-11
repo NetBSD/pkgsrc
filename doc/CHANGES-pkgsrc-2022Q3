@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2022Q3,v 1.1.2.4 2022/10/27 06:36:57 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2022Q3,v 1.1.2.5 2022/11/11 19:59:34 bsiegert Exp $
 
   Changes to packages and infrastructure on the 2022Q3 branch:
 
@@ -64,4 +64,28 @@ www/firefox102: security fix
 
 Pullup ticket #6691 - requested by taca
 www/ruby-jekyll: critical bugfix
+
+Pullup ticket #6692 - requested by taca
+devel/git: security fix
+
+Pullup ticket #6694 - requested by taca
+devel/samba4: security fix
+
+Pullup ticket #6695 - requested by nia
+www/arcticfox: arm build fix
+
+Pullup ticket #6697 - requested by taca
+www/curl: security fix
+
+Pullup ticket #6699 - requested by taca
+lang/php81: security fix
+
+Pullup ticket #6700 - requested by taca
+lang/php80: security fix
+
+Pullup ticket #6701 - requested by taca
+lang/php74: security fix
+
+Pullup ticket #6702 - requested by taca
+security/sudo: security fix
 
