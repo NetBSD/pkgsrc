@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5438 2022/11/11 14:07:34 taca Exp $
+$NetBSD: CHANGES-2022,v 1.5439 2022/11/11 14:13:26 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8222,3 +8222,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/ruby-optimist version 3.0.1 [taca 2022-11-11]
 	Added devel/ruby-paint version 2.3.0 [taca 2022-11-11]
 	Added misc/ruby-manpages version 0.6.1 [taca 2022-11-11]
+	Added misc/ruby-lolcat version 100.0.1 [taca 2022-11-11]
