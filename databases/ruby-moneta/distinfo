@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2022/06/06 13:28:05 taca Exp $
+$NetBSD: distinfo,v 1.16 2022/11/11 12:59:25 taca Exp $
 
-BLAKE2s (moneta-1.5.1.gem) = 5641bb92bf4927a5d18e7ad545c803cf619cea36a14de98420c4741d556e418a
-SHA512 (moneta-1.5.1.gem) = b44fb3741ea516de85f1f5bd3ef632bf13958f4c1359828f7726d45569ff430f4e64bf85030e144d23a854e7513d016e910f70dcf89b0e1a15c9433dc9a97003
-Size (moneta-1.5.1.gem) = 135680 bytes
+BLAKE2s (moneta-1.5.2.gem) = ab4621976bd7e7c22347cb66076ebb13f0cbde8ca818a92162e608b5435221a8
+SHA512 (moneta-1.5.2.gem) = 519ebee32df9aef2df13dd61ceb5656395aeff4aad52b7b518d183ce97edcd453bb008b88ca9baef0f01086a6d3b576a2dbe9d7f3d3b6b8956953300cb07c8f7
+Size (moneta-1.5.2.gem) = 136192 bytes
