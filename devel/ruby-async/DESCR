@@ -1,0 +1,15 @@
+Async
+
+Async is a composable asynchronous I/O framework for Ruby based on io-event
+and timers.
+
+    "Lately I've been looking into async, as one of my projects -
+    tus-ruby-server - would really benefit from non-blocking I/O.
+    It's really beautifully designed." - janko
+
+Features
+
+* Scalable event-driven I/O for Ruby. Thousands of clients per process!
+* Light weight fiber-based concurrency. No need for callbacks!
+* Multi-thread/process containers for parallelism.
+* Growing eco-system of event-driven components.
