@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:46:01 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/11/12 18:59:20 nros Exp $
 
-BLAKE2s (charls-2.2.0.tar.gz) = 022437844c0ed572affb01053d246c5656b32edb806d6d3e7ce86fcd53033e9b
-SHA512 (charls-2.2.0.tar.gz) = 387293f89bc30b50a59de7d5af23d0047bcdba89bd48cdb81e0437adabbfc9e19e135749129334a9db5c3ae5ad0c75b489e6e6545ee0c8134fc432153413793e
-Size (charls-2.2.0.tar.gz) = 9827594 bytes
+BLAKE2s (charls-2.3.4.tar.gz) = 7d2427a1ba58f596668a82d0dfb066118a88690ed03712641acb9b4fde3b1f11
+SHA512 (charls-2.3.4.tar.gz) = 3f6e1a054d5f7cfa5309e3d1b280d0dbaaeac7f06b08619cefe15677367631d9f6eb96e54b3e5ec921ac50793a570c39178c3e4b52ce9837b731bbccd6a3d0ad
+Size (charls-2.3.4.tar.gz) = 9483782 bytes
