@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5446 2022/11/12 05:01:44 gutteridge Exp $
+$NetBSD: CHANGES-2022,v 1.5447 2022/11/12 05:03:46 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8230,3 +8230,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/liblxqt to 1.2.0 [gutteridge 2022-11-12]
 	Updated graphics/lxqt-themes to 1.2.0 [gutteridge 2022-11-12]
 	Updated audio/pavucontrol-qt to 1.2.0 [gutteridge 2022-11-12]
+	Updated x11/libfm-qt to 1.2.0 [gutteridge 2022-11-12]
