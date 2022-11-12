@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5473 2022/11/12 21:54:44 pin Exp $
+$NetBSD: CHANGES-2022,v 1.5474 2022/11/12 21:56:14 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8258,3 +8258,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/libdecaf to 1.0.2 [fox 2022-11-12]
 	Updated graphics/charls to 2.3.4 [nros 2022-11-12]
 	Updated net/yaydl to 0.11.4 [pin 2022-11-12]
+	Updated editors/tp-note to 1.18.3 [pin 2022-11-12]
