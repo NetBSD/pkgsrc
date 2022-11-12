@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5465 2022/11/12 05:53:09 fox Exp $
+$NetBSD: CHANGES-2022,v 1.5466 2022/11/12 06:03:19 fox Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8249,3 +8249,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated archivers/lxqt-archiver to 0.7.0 [gutteridge 2022-11-12]
 	Updated meta-pkgs/lxqt to 1.2.0 [gutteridge 2022-11-12]
 	Updated security/wolfssl to 5.5.3 [fox 2022-11-12]
+	Updated audio/fasttracker2 to 1.61 [fox 2022-11-12]
