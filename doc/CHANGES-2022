@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5471 2022/11/12 15:19:24 fox Exp $
+$NetBSD: CHANGES-2022,v 1.5472 2022/11/12 18:59:54 nros Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8256,3 +8256,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/py-zeroconf to 0.39.4 [adam 2022-11-12]
 	Updated chat/matrix-synapse to 1.71.0 [gdt 2022-11-12]
 	Updated security/libdecaf to 1.0.2 [fox 2022-11-12]
+	Updated graphics/charls to 2.3.4 [nros 2022-11-12]
