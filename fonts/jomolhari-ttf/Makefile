@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/01/01 22:28:56 uwe Exp $
+# $NetBSD: Makefile,v 1.2 2022/11/12 09:10:23 nikita Exp $
 
 VERSION=	0.3
 PKGNAME=	jomolhari-ttf-${VERSION}
@@ -6,7 +6,7 @@ CATEGORIES=	fonts
 DISTNAME=	jomolhari-alpha003c
 EXTRACT_SUFX=	.zip
 WRKSRC=		${WRKDIR}
-MASTER_SITES=	http://download.savannah.gnu.org/releases/free-tibetan/jomolhari/
+MASTER_SITES=	https://download.savannah.gnu.org/releases/free-tibetan/jomolhari/
 
 MAINTAINER=	uwe@NetBSD.org
 HOMEPAGE=	https://sites.google.com/view/chrisfynn/home/fonts/jomolhari

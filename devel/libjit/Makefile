@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.20 2019/11/03 10:39:17 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2022/11/12 09:10:22 nikita Exp $
 #
 
 DISTNAME=	libjit-0.1.2
 PKGREVISION=	1
 CATEGORIES=	devel
-MASTER_SITES=	http://download.savannah.gnu.org/releases/dotgnu-pnet/libjit-releases/
+MASTER_SITES=	https://download.savannah.gnu.org/releases/dotgnu-pnet/libjit-releases/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.southern-storm.com.au/libjit.html

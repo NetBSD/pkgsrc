@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.50 2021/12/29 23:03:21 dsainty Exp $
+# $NetBSD: Makefile,v 1.51 2022/11/12 09:10:22 nikita Exp $
 
 DISTNAME=		avrdude-6.4
 CATEGORIES=		cross
-MASTER_SITES=		http://download.savannah.gnu.org/releases/avrdude/
+MASTER_SITES=		https://download.savannah.gnu.org/releases/avrdude/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://www.nongnu.org/avrdude/
