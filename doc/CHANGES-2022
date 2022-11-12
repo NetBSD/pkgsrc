@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5470 2022/11/12 13:24:20 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.5471 2022/11/12 15:19:24 fox Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8255,3 +8255,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/py-peewee to 3.15.4 [adam 2022-11-12]
 	Updated net/py-zeroconf to 0.39.4 [adam 2022-11-12]
 	Updated chat/matrix-synapse to 1.71.0 [gdt 2022-11-12]
+	Updated security/libdecaf to 1.0.2 [fox 2022-11-12]
