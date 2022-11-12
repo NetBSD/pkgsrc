@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5475 2022/11/12 21:58:56 pin Exp $
+$NetBSD: CHANGES-2022,v 1.5476 2022/11/12 23:33:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8260,3 +8260,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/yaydl to 0.11.4 [pin 2022-11-12]
 	Updated editors/tp-note to 1.18.3 [pin 2022-11-12]
 	Updated sysutils/felix to 2.0.1 [pin 2022-11-12]
+	Updated x11/xcompmgr to 1.1.9 [wiz 2022-11-12]
