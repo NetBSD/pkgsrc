@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5449 2022/11/12 05:06:29 gutteridge Exp $
+$NetBSD: CHANGES-2022,v 1.5450 2022/11/12 05:07:18 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8233,3 +8233,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/libfm-qt to 1.2.0 [gutteridge 2022-11-12]
 	Updated graphics/lximage-qt to 1.2.0 [gutteridge 2022-11-12]
 	Updated x11/lxqt-about to 1.2.0 [gutteridge 2022-11-12]
+	Updated security/lxqt-policykit to 1.2.0 [gutteridge 2022-11-12]
