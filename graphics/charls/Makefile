@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2021/02/14 12:55:18 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/11/12 18:59:20 nros Exp $
 
-DISTNAME=	charls-2.2.0
+DISTNAME=	charls-2.3.4
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=team-charls/}
 
