@@ -1,7 +1,7 @@
-# $NetBSD: cargo-depends.mk,v 1.3 2022/10/29 15:36:17 gdt Exp $
+# $NetBSD: cargo-depends.mk,v 1.4 2022/11/12 13:24:09 gdt Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-0.7.19
-CARGO_CRATE_DEPENDS+=	anyhow-1.0.65
+CARGO_CRATE_DEPENDS+=	anyhow-1.0.66
 CARGO_CRATE_DEPENDS+=	arc-swap-1.5.1
 CARGO_CRATE_DEPENDS+=	autocfg-1.1.0
 CARGO_CRATE_DEPENDS+=	bitflags-1.3.2
@@ -37,9 +37,9 @@ CARGO_CRATE_DEPENDS+=	regex-1.6.0
 CARGO_CRATE_DEPENDS+=	regex-syntax-0.6.27
 CARGO_CRATE_DEPENDS+=	ryu-1.0.11
 CARGO_CRATE_DEPENDS+=	scopeguard-1.1.0
-CARGO_CRATE_DEPENDS+=	serde-1.0.145
-CARGO_CRATE_DEPENDS+=	serde_derive-1.0.145
-CARGO_CRATE_DEPENDS+=	serde_json-1.0.86
+CARGO_CRATE_DEPENDS+=	serde-1.0.147
+CARGO_CRATE_DEPENDS+=	serde_derive-1.0.147
+CARGO_CRATE_DEPENDS+=	serde_json-1.0.87
 CARGO_CRATE_DEPENDS+=	smallvec-1.10.0
 CARGO_CRATE_DEPENDS+=	subtle-2.4.1
 CARGO_CRATE_DEPENDS+=	syn-1.0.102

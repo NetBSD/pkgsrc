@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2022/10/29 15:36:17 gdt Exp $
+@comment $NetBSD: PLIST,v 1.37 2022/11/12 13:24:09 gdt Exp $
 bin/export_signing_key
 bin/generate_config
 bin/generate_log_config
@@ -520,6 +520,7 @@ ${PYSITELIB}/synapse/replication/tcp/streams/events.pyc
 ${PYSITELIB}/synapse/replication/tcp/streams/federation.py
 ${PYSITELIB}/synapse/replication/tcp/streams/federation.pyc
 ${PYSITELIB}/synapse/res/providers.json
+${PYSITELIB}/synapse/res/templates/_base.html
 ${PYSITELIB}/synapse/res/templates/account_previously_renewed.html
 ${PYSITELIB}/synapse/res/templates/account_renewed.html
 ${PYSITELIB}/synapse/res/templates/add_threepid.html
@@ -564,6 +565,7 @@ ${PYSITELIB}/synapse/res/templates/sso_login_idp_picker.html
 ${PYSITELIB}/synapse/res/templates/sso_new_user_consent.html
 ${PYSITELIB}/synapse/res/templates/sso_partial_profile.html
 ${PYSITELIB}/synapse/res/templates/sso_redirect_confirm.html
+${PYSITELIB}/synapse/res/templates/style.css
 ${PYSITELIB}/synapse/res/templates/terms.html
 ${PYSITELIB}/synapse/rest/__init__.py
 ${PYSITELIB}/synapse/rest/__init__.pyc
@@ -737,6 +739,8 @@ ${PYSITELIB}/synapse/rest/synapse/client/new_user_consent.py
 ${PYSITELIB}/synapse/rest/synapse/client/new_user_consent.pyc
 ${PYSITELIB}/synapse/rest/synapse/client/oidc/__init__.py
 ${PYSITELIB}/synapse/rest/synapse/client/oidc/__init__.pyc
+${PYSITELIB}/synapse/rest/synapse/client/oidc/backchannel_logout_resource.py
+${PYSITELIB}/synapse/rest/synapse/client/oidc/backchannel_logout_resource.pyc
 ${PYSITELIB}/synapse/rest/synapse/client/oidc/callback_resource.py
 ${PYSITELIB}/synapse/rest/synapse/client/oidc/callback_resource.pyc
 ${PYSITELIB}/synapse/rest/synapse/client/password_reset.py
@@ -1283,6 +1287,9 @@ ${PYSITELIB}/synapse/storage/schema/main/delta/73/08thread_receipts_non_null.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/73/08thread_receipts_non_null.sql.sqlite
 ${PYSITELIB}/synapse/storage/schema/main/delta/73/09partial_joined_via_destination.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/73/09threads_table.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/73/10_update_sqlite_fts4_tokenizer.py
+${PYSITELIB}/synapse/storage/schema/main/delta/73/10_update_sqlite_fts4_tokenizer.pyc
+${PYSITELIB}/synapse/storage/schema/main/delta/73/10login_tokens.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/application_services.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/event_edges.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/event_signatures.sql
