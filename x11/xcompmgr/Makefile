@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.34 2022/11/09 13:14:24 joerg Exp $
+# $NetBSD: Makefile,v 1.35 2022/11/12 23:32:51 wiz Exp $
 
-DISTNAME=	xcompmgr-1.1.8
+DISTNAME=	xcompmgr-1.1.9
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.freedesktop.org/
