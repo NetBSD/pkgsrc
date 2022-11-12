@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:17:12 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/11/12 15:19:03 fox Exp $
 
-BLAKE2s (ed448goldilocks-code-0324a955696d3235b5700046a487f8a2086baf1f.zip) = 6b47cee9a39db0ba52d45fc69fc3b50a752ffe0824136aef2525ac7bff7e07e4
-SHA512 (ed448goldilocks-code-0324a955696d3235b5700046a487f8a2086baf1f.zip) = 5ce7417aeb79445ae43ec7bc9d58603732c3f79ca30920581179dbfec3922de989119dd7e9fe4e778567dccfebe2391940bc093200e50b3f89e4c221095c9fe6
-Size (ed448goldilocks-code-0324a955696d3235b5700046a487f8a2086baf1f.zip) = 290123 bytes
+BLAKE2s (ed448goldilocks-code-da2f2f9b2ab1bce9a2bb77e4f37037ee135fdd72.zip) = 2aa571960f926183744850ab8cf9dfbbd679680081b666f40152e66eaf264c92
+SHA512 (ed448goldilocks-code-da2f2f9b2ab1bce9a2bb77e4f37037ee135fdd72.zip) = a98e43f3efbc2b69c48786353fa1ebd7d008813f547f683d9e544b90d8e29a43ff4cf9490ca9f308b87e4bc135b560186941cea57851d6ec117213cb5ba20c48
+Size (ed448goldilocks-code-da2f2f9b2ab1bce9a2bb77e4f37037ee135fdd72.zip) = 288423 bytes
 SHA1 (patch-CMakeLists.txt) = 66a8818bd34c91da92253af54ba33f051387e3b7
 SHA1 (patch-src_CMakeLists.txt) = f9ddfd9e6d3e334d310bfed9f2542477ba2cf9a6
+SHA1 (patch-src_per__curve_eddsa.tmpl.h) = dc7c715b29fe077d8ae5c41385af7245f1f21817
