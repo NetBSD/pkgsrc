@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2022/11/11 18:36:47 adam Exp $
+# $NetBSD: Makefile,v 1.13 2022/11/12 15:06:06 ryoon Exp $
 
 DISTNAME=	spdlog-1.11.0
 CATEGORIES=	devel
@@ -19,6 +19,12 @@ CMAKE_ARGS+=	-DSPDLOG_FMT_EXTERNAL=ON
 PKGCONFIG_OVERRIDE+=	cmake/spdlog.pc.in
 
 LDFLAGS.SunOS+=		-lsocket
+
+CMAKE_ARG_PATH=	..
+CONFIGURE_DIRS=	_build
+
+pre-configure:
+	${MKDIR} ${WRKSRC}/_build
 
 .include "../../lang/python/tool.mk"
 .include "../../textproc/fmtlib/buildlink3.mk"
