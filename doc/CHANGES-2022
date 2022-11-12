@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5468 2022/11/12 07:42:26 nikita Exp $
+$NetBSD: CHANGES-2022,v 1.5469 2022/11/12 11:02:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8252,3 +8252,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated audio/fasttracker2 to 1.61 [fox 2022-11-12]
 	Updated sysutils/py-Glances to 3.3.0.4 [fox 2022-11-12]
 	Updated textproc/guile-json to 4.7.2 [nikita 2022-11-12]
+	Updated databases/py-peewee to 3.15.4 [adam 2022-11-12]
+	Updated net/py-zeroconf to 0.39.4 [adam 2022-11-12]
