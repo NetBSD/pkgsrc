@@ -1,0 +1,15 @@
+$NetBSD: patch-Cargo.toml,v 1.3 2022/11/12 21:58:32 pin Exp $
+
+Don't pull from git, patch vendor crate instead.
+
+--- Cargo.toml.orig	2022-11-12 07:08:32.000000000 +0000
++++ Cargo.toml
+@@ -24,7 +24,7 @@ log = "0.4.16"
+ simplelog = "0.12.0"
+ content_inspector = "0.2.4"
+ crossterm = "0.25.0"
+-syntect = {version = "5.0.0", git = "https://github.com/kyoheiu/syntect"}
++syntect = "5.0.0"
+ serde_yaml = "0.9.14"
+ 
+ [dependencies.serde]
