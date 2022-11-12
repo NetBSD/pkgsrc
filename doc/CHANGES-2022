@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5456 2022/11/12 05:14:34 gutteridge Exp $
+$NetBSD: CHANGES-2022,v 1.5457 2022/11/12 05:15:23 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8240,3 +8240,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/lxqt-openssh-askpass to 1.2.0 [gutteridge 2022-11-12]
 	Updated x11/lxqt-notificationd to 1.2.0 [gutteridge 2022-11-12]
 	Updated sysutils/lxqt-powermanagement to 1.2.0 [gutteridge 2022-11-12]
+	Updated x11/lxqt-qtplugin to 1.2.0 [gutteridge 2022-11-12]
