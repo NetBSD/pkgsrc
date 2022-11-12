@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2020/01/18 23:35:14 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2022/11/12 09:10:24 nikita Exp $
 
 ATTR_VERS=	2.4.47
 PKGNAME=	attr-${ATTR_VERS}
 DISTNAME=	attr-${ATTR_VERS}.src
 PKGREVISION=	1
 CATEGORIES=	sysutils
-MASTER_SITES=	http://download.savannah.gnu.org/releases/attr/
+MASTER_SITES=	https://download.savannah.gnu.org/releases/attr/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://savannah.nongnu.org/projects/attr

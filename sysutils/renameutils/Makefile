@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2020/01/18 23:35:20 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2022/11/12 09:10:24 nikita Exp $
 
 DISTNAME=	renameutils-0.12.0
 CATEGORIES=	sysutils converters
-MASTER_SITES=	http://download.savannah.gnu.org/releases/renameutils/
+MASTER_SITES=	https://download.savannah.gnu.org/releases/renameutils/
 
 MAINTAINER=	mcy@lm7.fr
 HOMEPAGE=	https://www.nongnu.org/renameutils/
