@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2021/03/12 23:01:07 fox Exp $
+# $NetBSD: Makefile,v 1.5 2022/11/12 15:19:03 fox Exp $
 
-PKGNAME=	libdecaf-1.0.1
-DISTNAME=	ed448goldilocks-code-0324a955696d3235b5700046a487f8a2086baf1f
+PKGNAME=	libdecaf-1.0.2
+DISTNAME=	ed448goldilocks-code-da2f2f9b2ab1bce9a2bb77e4f37037ee135fdd72
 CATEGORIES=	security
 MASTER_SITES=   https://sourceforge.net/code-snapshots/git/e/ed/ed448goldilocks/code.git/
 EXTRACT_SUFX=	.zip
