@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2022/08/11 05:09:30 gutteridge Exp $
+# $NetBSD: Makefile,v 1.23 2022/11/12 05:09:25 gutteridge Exp $
 
-DISTNAME=	lxqt-config-1.1.0
-PKGREVISION=	3
+DISTNAME=	lxqt-config-1.2.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -51,7 +50,7 @@ SUBST_VARS.prefix+=	XKBSUB
 pre-configure:
 	${MKDIR} -p ${WRKSRC}/build
 
-TOOL_DEPENDS+=	lxqt-build-tools>=0.11.0:../../devel/lxqt-build-tools
+TOOL_DEPENDS+=	lxqt-build-tools>=0.12.0:../../devel/lxqt-build-tools
 TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
 DEPENDS+=	lxqt-themes-[0-9]*:../../graphics/lxqt-themes
 
