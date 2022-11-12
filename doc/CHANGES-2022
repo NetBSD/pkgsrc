@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5444 2022/11/12 04:56:04 gutteridge Exp $
+$NetBSD: CHANGES-2022,v 1.5445 2022/11/12 04:57:17 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8229,3 +8229,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated editors/helix to 22.08.1 [nikita 2022-11-11]
 	Updated x11/liblxqt to 1.2.0 [disciple 2022-11-12]
 	Updated graphics/lxqt-themes to 1.2.0 [disciple 2022-11-12]
+	Updated audio/pavucontrol-qt to 1.2.0 [disciple 2022-11-12]
