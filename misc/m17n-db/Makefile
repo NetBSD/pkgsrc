@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2020/01/18 23:33:03 rillig Exp $
+# $NetBSD: Makefile,v 1.25 2022/11/12 09:10:23 nikita Exp $
 
 DISTNAME=	m17n-db-1.8.0
 CATEGORIES=	misc
-MASTER_SITES=	http://download.savannah.gnu.org/releases/m17n/
+MASTER_SITES=	https://download.savannah.gnu.org/releases/m17n/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.nongnu.org/m17n/

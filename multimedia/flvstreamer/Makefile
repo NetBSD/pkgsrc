@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2020/01/18 23:33:10 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2022/11/12 09:10:24 nikita Exp $
 
 DISTNAME=	flvstreamer-2.1c1
 WRKSRC=		${WRKDIR}/flvstreamer
 CATEGORIES=	multimedia
-MASTER_SITES=	http://download.savannah.gnu.org/releases/flvstreamer/source/
+MASTER_SITES=	https://download.savannah.gnu.org/releases/flvstreamer/source/
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	https://savannah.nongnu.org/projects/flvstreamer
