@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2020/01/18 23:35:20 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2022/11/12 09:10:24 nikita Exp $
 
 DISTNAME=	sysvinit-2.96
 PKGNAME=	${DISTNAME:S/sysvinit/pidof/}
 CATEGORIES=	sysutils
-MASTER_SITES=	http://download.savannah.gnu.org/releases/sysvinit/
+MASTER_SITES=	https://download.savannah.gnu.org/releases/sysvinit/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
