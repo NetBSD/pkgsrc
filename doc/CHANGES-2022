@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5472 2022/11/12 18:59:54 nros Exp $
+$NetBSD: CHANGES-2022,v 1.5473 2022/11/12 21:54:44 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8257,3 +8257,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated chat/matrix-synapse to 1.71.0 [gdt 2022-11-12]
 	Updated security/libdecaf to 1.0.2 [fox 2022-11-12]
 	Updated graphics/charls to 2.3.4 [nros 2022-11-12]
+	Updated net/yaydl to 0.11.4 [pin 2022-11-12]
