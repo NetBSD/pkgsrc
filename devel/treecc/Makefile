@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.19 2020/01/18 23:30:43 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2022/11/12 09:10:23 nikita Exp $
 #
 
 DISTNAME=	treecc-0.3.10
 PKGREVISION=	1
 CATEGORIES=	devel
-MASTER_SITES=	http://download.savannah.gnu.org/releases/dotgnu-pnet/
+MASTER_SITES=	https://download.savannah.gnu.org/releases/dotgnu-pnet/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.gnu.org/projects/dotgnu/

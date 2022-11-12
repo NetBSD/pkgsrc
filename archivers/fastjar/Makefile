@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.26 2022/06/28 11:30:52 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2022/11/12 09:10:22 nikita Exp $
 
 DISTNAME=	fastjar-0.98
 PKGREVISION=	3
 CATEGORIES=	archivers
-MASTER_SITES=	http://download.savannah.gnu.org/releases/fastjar/
+MASTER_SITES=	https://download.savannah.gnu.org/releases/fastjar/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://savannah.nongnu.org/projects/fastjar
