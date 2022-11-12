@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2022/04/24 15:39:00 pin Exp $
+@comment $NetBSD: PLIST,v 1.8 2022/11/12 05:19:36 gutteridge Exp $
 bin/lxqt-panel
 include/lxqt/ilxqtpanel.h
 include/lxqt/ilxqtpanelplugin.h
@@ -33,11 +33,16 @@ share/lxqt/lxqt-panel/taskbar.desktop
 share/lxqt/lxqt-panel/tray.desktop
 share/lxqt/lxqt-panel/volume.desktop
 share/lxqt/lxqt-panel/worldclock.desktop
+share/lxqt/translations/lxqt-panel/colorpicker/colorpicker_ar.qm
+share/lxqt/translations/lxqt-panel/colorpicker/colorpicker_et.qm
 share/lxqt/translations/lxqt-panel/colorpicker/colorpicker_fr.qm
 share/lxqt/translations/lxqt-panel/colorpicker/colorpicker_he.qm
 share/lxqt/translations/lxqt-panel/colorpicker/colorpicker_it.qm
 share/lxqt/translations/lxqt-panel/colorpicker/colorpicker_ko.qm
+share/lxqt/translations/lxqt-panel/colorpicker/colorpicker_lt.qm
 share/lxqt/translations/lxqt-panel/colorpicker/colorpicker_nl.qm
+share/lxqt/translations/lxqt-panel/colorpicker/colorpicker_pt.qm
+share/lxqt/translations/lxqt-panel/customcommand/customcommand_ar.qm
 share/lxqt/translations/lxqt-panel/customcommand/customcommand_bg.qm
 share/lxqt/translations/lxqt-panel/customcommand/customcommand_ca.qm
 share/lxqt/translations/lxqt-panel/customcommand/customcommand_cs.qm
@@ -411,6 +416,7 @@ share/lxqt/translations/lxqt-panel/spacer/spacer_sk.qm
 share/lxqt/translations/lxqt-panel/spacer/spacer_tr.qm
 share/lxqt/translations/lxqt-panel/spacer/spacer_uk.qm
 share/lxqt/translations/lxqt-panel/spacer/spacer_zh_CN.qm
+share/lxqt/translations/lxqt-panel/statusnotifier/statusnotifier_ar.qm
 share/lxqt/translations/lxqt-panel/statusnotifier/statusnotifier_arn.qm
 share/lxqt/translations/lxqt-panel/statusnotifier/statusnotifier_ast.qm
 share/lxqt/translations/lxqt-panel/statusnotifier/statusnotifier_bg.qm
