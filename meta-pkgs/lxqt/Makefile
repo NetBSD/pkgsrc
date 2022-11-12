@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2022/11/12 05:28:11 gutteridge Exp $
+# $NetBSD: Makefile,v 1.15 2022/11/12 05:48:35 gutteridge Exp $
 
 PKGNAME=	lxqt-1.2.0
 CATEGORIES=	meta-pkgs
@@ -44,7 +44,7 @@ DEPENDS+=	breeze-icons-[0-9]*:../../graphics/breeze-icons
 DEPENDS+=	xscreensaver-[0-9]*:../../x11/xscreensaver
 # This pulls in quite a lot of dependencies, but, if translations are wanted,
 # it's needed.
-DEPENDS+=	qt5-qttranslations>=5.15.2:../../x11/qt5-qttranslations
+DEPENDS+=	qt5-qttranslations>=5.15.7:../../x11/qt5-qttranslations
 # This is needed to be able to correctly use deadkeys
 DEPENDS+=	uim-[0-9]*:../../inputmethod/uim
 
