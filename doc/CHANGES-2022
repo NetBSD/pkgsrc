@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5461 2022/11/12 05:19:45 gutteridge Exp $
+$NetBSD: CHANGES-2022,v 1.5462 2022/11/12 05:20:49 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8245,3 +8245,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/lxqt-sudo to 1.2.0 [gutteridge 2022-11-12]
 	Updated sysutils/pcmanfm-qt to 1.2.0 [gutteridge 2022-11-12]
 	Updated x11/lxqt-panel to 1.2.0 [gutteridge 2022-11-12]
+	Updated x11/lxqt-runner to 1.2.0 [gutteridge 2022-11-12]
