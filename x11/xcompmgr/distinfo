@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2021/10/26 11:34:36 nia Exp $
+$NetBSD: distinfo,v 1.16 2022/11/12 23:32:51 wiz Exp $
 
-BLAKE2s (xcompmgr-1.1.8.tar.bz2) = 9ed95cd38f59e931de6a687262248198323545a5e18839050cb827626c4dc5c5
-SHA512 (xcompmgr-1.1.8.tar.bz2) = ccf29426ffb0797a53653d1ce152de5eee0cec284811fed4b8e634ea0d948180531e4619d96f47e4f9594432c57322624fe0fdaee2c9200efac427fc0904953d
-Size (xcompmgr-1.1.8.tar.bz2) = 138806 bytes
+BLAKE2s (xcompmgr-1.1.9.tar.xz) = 9f51bdcc2e527faea696a6b2b3a912d96aa916af522b0e48e5bfea70d9a0adfc
+SHA512 (xcompmgr-1.1.9.tar.xz) = 699117492af7fd84b36d317dcbf422d5ec86a7f21e29370caa737cd940d8ff866a5c8704ba2e7bd17a64e085d77fd23b628263d619813dead85cd669ff5b860e
+Size (xcompmgr-1.1.9.tar.xz) = 132676 bytes
