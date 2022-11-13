@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/10/24 07:46:20 fcambus Exp $
+# $NetBSD: Makefile,v 1.2 2022/11/13 16:13:16 fcambus Exp $
 
 DISTNAME=	lzlib-1.13
 CATEGORIES=	archivers devel
@@ -16,5 +16,7 @@ USE_TOOLS+=	gmake
 INFO_FILES=	yes
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX} --infodir=${PREFIX}/${PKGINFODIR} --enable-shared
+
+TEST_TARGET=	check
 
 .include "../../mk/bsd.pkg.mk"
