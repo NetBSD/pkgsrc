@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2022/10/19 13:16:45 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/11/13 09:34:27 adam Exp $
 bin/clusterdb
 bin/createdb
 bin/createuser
@@ -1010,9 +1010,25 @@ ${PLIST.nls}share/locale/fr/LC_MESSAGES/psql-15.mo
 ${PLIST.nls}share/locale/he/LC_MESSAGES/pg_config-15.mo
 ${PLIST.nls}share/locale/it/LC_MESSAGES/ecpg-15.mo
 ${PLIST.nls}share/locale/it/LC_MESSAGES/ecpglib6-15.mo
+${PLIST.nls}share/locale/it/LC_MESSAGES/initdb-15.mo
+${PLIST.nls}share/locale/it/LC_MESSAGES/libpq5-15.mo
+${PLIST.nls}share/locale/it/LC_MESSAGES/pg_amcheck-15.mo
+${PLIST.nls}share/locale/it/LC_MESSAGES/pg_archivecleanup-15.mo
+${PLIST.nls}share/locale/it/LC_MESSAGES/pg_basebackup-15.mo
+${PLIST.nls}share/locale/it/LC_MESSAGES/pg_checksums-15.mo
 ${PLIST.nls}share/locale/it/LC_MESSAGES/pg_config-15.mo
 ${PLIST.nls}share/locale/it/LC_MESSAGES/pg_controldata-15.mo
 ${PLIST.nls}share/locale/it/LC_MESSAGES/pg_ctl-15.mo
+${PLIST.nls}share/locale/it/LC_MESSAGES/pg_dump-15.mo
+${PLIST.nls}share/locale/it/LC_MESSAGES/pg_resetwal-15.mo
+${PLIST.nls}share/locale/it/LC_MESSAGES/pg_rewind-15.mo
+${PLIST.nls}share/locale/it/LC_MESSAGES/pg_test_fsync-15.mo
+${PLIST.nls}share/locale/it/LC_MESSAGES/pg_test_timing-15.mo
+${PLIST.nls}share/locale/it/LC_MESSAGES/pg_upgrade-15.mo
+${PLIST.nls}share/locale/it/LC_MESSAGES/pg_verifybackup-15.mo
+${PLIST.nls}share/locale/it/LC_MESSAGES/pg_waldump-15.mo
+${PLIST.nls}share/locale/it/LC_MESSAGES/pgscripts-15.mo
+${PLIST.nls}share/locale/it/LC_MESSAGES/psql-15.mo
 ${PLIST.nls}share/locale/ja/LC_MESSAGES/ecpg-15.mo
 ${PLIST.nls}share/locale/ja/LC_MESSAGES/ecpglib6-15.mo
 ${PLIST.nls}share/locale/ja/LC_MESSAGES/initdb-15.mo
