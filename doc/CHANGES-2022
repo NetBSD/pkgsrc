@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5482 2022/11/13 09:36:07 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5483 2022/11/13 09:59:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8272,3 +8272,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/postgresql13 to 13.9 [adam 2022-11-13]
 	Updated databases/postgresql14 to 14.6 [adam 2022-11-13]
 	Updated databases/postgresql15 to 15.1 [adam 2022-11-13]
+	Updated devel/meson to 0.64.0 [adam 2022-11-13]
+	Updated graphics/gdk-pixbuf2 to 2.42.10 [adam 2022-11-13]
