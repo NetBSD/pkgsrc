@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:34:50 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/11/13 08:07:49 wiz Exp $
 
-BLAKE2s (xkbevd-1.1.4.tar.bz2) = 99730b131a2ab3d921140f59a8d775ea9b6a71f292db701905b9862c7ef1bed3
-SHA512 (xkbevd-1.1.4.tar.bz2) = 7628eddd0e1dc0c4df8e61eb3f6a6bf0e9d92a87e96bb2f5248ba5bd3d99d868885c36860b78e8ea2eaba3bb9a420067ef95c4d58c1254fa3d12fb25dd4e60e7
-Size (xkbevd-1.1.4.tar.bz2) = 151991 bytes
+BLAKE2s (xkbevd-1.1.5.tar.xz) = 279ecbe5b7a02b25de858d445e3de2ae71cad42dd81736129d4c742e873ba22f
+SHA512 (xkbevd-1.1.5.tar.xz) = 9e4a56484771e5eb5444fbd11e7d0bb952a2746eea79b84298e2000ada96896d501b886727c4ef08c120b5dcce550fca2d3e3dd762f4ca0327c38d9609961c5b
+Size (xkbevd-1.1.5.tar.xz) = 146908 bytes
