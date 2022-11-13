@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2022/08/15 20:59:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/11/13 09:34:25 adam Exp $
 bin/postgres
 bin/postmaster
 include/postgresql/server/plpgsql.h
@@ -701,6 +701,7 @@ ${PLIST.nls}share/locale/ko/LC_MESSAGES/postgres-11.mo
 ${PLIST.nls}share/locale/pl/LC_MESSAGES/plpgsql-11.mo
 ${PLIST.nls}share/locale/pl/LC_MESSAGES/postgres-11.mo
 ${PLIST.nls}share/locale/pt_BR/LC_MESSAGES/plpgsql-11.mo
+${PLIST.nls}share/locale/ro/LC_MESSAGES/plpgsql-11.mo
 ${PLIST.nls}share/locale/ru/LC_MESSAGES/plpgsql-11.mo
 ${PLIST.nls}share/locale/ru/LC_MESSAGES/postgres-11.mo
 ${PLIST.nls}share/locale/sv/LC_MESSAGES/plpgsql-11.mo
@@ -1175,6 +1176,7 @@ share/postgresql/timezone/Europe/Jersey
 share/postgresql/timezone/Europe/Kaliningrad
 share/postgresql/timezone/Europe/Kiev
 share/postgresql/timezone/Europe/Kirov
+share/postgresql/timezone/Europe/Kyiv
 share/postgresql/timezone/Europe/Lisbon
 share/postgresql/timezone/Europe/Ljubljana
 share/postgresql/timezone/Europe/London
