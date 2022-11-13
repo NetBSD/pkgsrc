@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22349 2022/11/13 07:47:35 wiz Exp $
+$NetBSD: TODO,v 1.22350 2022/11/13 08:51:50 tron Exp $
 
 Suggested new packages
 ======================
@@ -1034,7 +1034,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o munge-0.5.14
 	o mupdf-1.21.0
 	o muse-0.9.2
-	o mutt-2.2.9
 	o myodbc-8.0.28
 	o mysql-workbench-8.0.23
 	o naev-0.8.2
