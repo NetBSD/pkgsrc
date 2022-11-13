@@ -1,6 +1,4 @@
-${PLIST.llvm}${PLIST.gssapi}lib/postgresql/bitcode/postgres/libpq/be-gssapi-common.bc
-${PLIST.llvm}${PLIST.gssapi}lib/postgresql/bitcode/postgres/libpq/be-secure-gssapi.bc
-@comment $NetBSD: PLIST,v 1.4 2022/08/15 20:59:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/11/13 09:34:27 adam Exp $
 bin/postgres
 bin/postmaster
 include/postgresql/server/plpgsql.h
@@ -310,7 +308,9 @@ ${PLIST.llvm}lib/postgresql/bitcode/postgres/lib/rbtree.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/libpq/auth-scram.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/libpq/auth.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/libpq/be-fsstubs.bc
+${PLIST.llvm}${PLIST.gssapi}lib/postgresql/bitcode/postgres/libpq/be-gssapi-common.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/libpq/be-secure-common.bc
+${PLIST.llvm}${PLIST.gssapi}lib/postgresql/bitcode/postgres/libpq/be-secure-gssapi.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/libpq/be-secure-openssl.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/libpq/be-secure.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/libpq/crypt.bc
@@ -1216,6 +1216,7 @@ share/postgresql/timezone/Europe/Jersey
 share/postgresql/timezone/Europe/Kaliningrad
 share/postgresql/timezone/Europe/Kiev
 share/postgresql/timezone/Europe/Kirov
+share/postgresql/timezone/Europe/Kyiv
 share/postgresql/timezone/Europe/Lisbon
 share/postgresql/timezone/Europe/Ljubljana
 share/postgresql/timezone/Europe/London

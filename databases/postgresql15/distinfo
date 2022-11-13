@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.1 2022/10/19 13:16:45 adam Exp $
+$NetBSD: distinfo,v 1.2 2022/11/13 09:34:27 adam Exp $
 
-BLAKE2s (postgresql-15.0.tar.bz2) = df7ad3bb4103bb2722b5acb57669d7e40dddaf7e7acad8eeb1bb8de819ccd1a1
-SHA512 (postgresql-15.0.tar.bz2) = 537d223be619d8b192756791cb614638f7188532f981e233bbfa8c0245adf5afe94ba5160d771af77f7d4ead41bcf346cbb2197e1358a6411ead06b19e29f120
-Size (postgresql-15.0.tar.bz2) = 22403741 bytes
+BLAKE2s (postgresql-15.1.tar.bz2) = f9a7da05d228f613866220913703a4404e07150e5c317dab2774666c406f42cb
+SHA512 (postgresql-15.1.tar.bz2) = 803900363106d2e343305e6d1546016b6a6a37bbd49d7a84a9a6467c1dc3fc4eb52698411af9c2178590c2f7680967466b1a211a76955dcec5445d0b8b254202
+Size (postgresql-15.1.tar.bz2) = 22666134 bytes
 SHA1 (patch-config_missing) = c2d7d742922ba6861e7660c75b7b53f09e564813
 SHA1 (patch-config_perl.m4) = b3393d0f28e97f89ae20297d85553c508b3896bb
 SHA1 (patch-configure) = 142ba9dc85a2408802e4b9e4943b775312d577c9
