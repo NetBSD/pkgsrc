@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/10/24 07:49:42 fcambus Exp $
+# $NetBSD: Makefile,v 1.2 2022/11/13 16:15:13 fcambus Exp $
 
 DISTNAME=	tarlz-0.22
 CATEGORIES=	archivers
@@ -20,6 +20,8 @@ CONFIGURE_ARGS+=	CXXFLAGS="${CFLAGS}"
 CONFIGURE_ARGS+=	LDFLAGS="${LDFLAGS}"
 
 INFO_FILES=	yes
+
+TEST_TARGET=	check
 
 .include "../../archivers/lzlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
