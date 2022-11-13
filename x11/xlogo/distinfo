@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 11:34:51 nia Exp $
+$NetBSD: distinfo,v 1.8 2022/11/13 08:09:44 wiz Exp $
 
-BLAKE2s (xlogo-1.0.5.tar.bz2) = 466a0bf181b7dbf751ffe1ffa1f0fadd579651a4fd25114d82571873c1bd1183
-SHA512 (xlogo-1.0.5.tar.bz2) = 0d78e269b0be3c5de71de7f362b896bfd9934ecd9d0361b3302399b1269e029c4a9f35418d792121a1edc34405d753f9d69c996cc3a69ac717f2b0d1f736406b
-Size (xlogo-1.0.5.tar.bz2) = 135608 bytes
+BLAKE2s (xlogo-1.0.6.tar.xz) = 73c766b8e81b5384af784e9f7c32e9e1ab4356536c598768d277c8e997d90bfa
+SHA512 (xlogo-1.0.6.tar.xz) = f0c921e0e34d2c0959d95ca0fcb7488395043280b8b35bcad4e8a528224f2b38581fbf60e82239d06760ecd637692cb29c3b1c0c46ac7f269f692a139d954ea0
+Size (xlogo-1.0.6.tar.xz) = 128772 bytes
