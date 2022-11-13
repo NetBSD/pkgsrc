@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5481 2022/11/13 08:51:50 tron Exp $
+$NetBSD: CHANGES-2022,v 1.5482 2022/11/13 09:36:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8266,3 +8266,9 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/xkill to 1.0.6 [wiz 2022-11-13]
 	Updated x11/xlogo to 1.0.6 [wiz 2022-11-13]
 	Updated mail/mutt to 2.2.9 [tron 2022-11-13]
+	Updated databases/postgresql10 to 10.23 [adam 2022-11-13]
+	Updated databases/postgresql11 to 11.18 [adam 2022-11-13]
+	Updated databases/postgresql12 to 12.13 [adam 2022-11-13]
+	Updated databases/postgresql13 to 13.9 [adam 2022-11-13]
+	Updated databases/postgresql14 to 14.6 [adam 2022-11-13]
+	Updated databases/postgresql15 to 15.1 [adam 2022-11-13]
