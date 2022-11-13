@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5487 2022/11/13 21:20:14 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.5488 2022/11/13 21:21:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8279,3 +8279,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/postgresql-postgis2 to 3.3.2 [gdt 2022-11-13]
 	Updated x11/kitty to 0.26.5 [pin 2022-11-13]
 	Updated x11/xlsatoms to 1.1.4 [wiz 2022-11-13]
+	Updated x11/xlsclients to 1.1.5 [wiz 2022-11-13]
