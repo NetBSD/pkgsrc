@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5485 2022/11/13 12:43:50 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.5486 2022/11/13 15:45:15 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8277,3 +8277,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-pathspec to 0.10.2 [adam 2022-11-13]
 	Updated devel/py-types-setuptools to 65.5.0.3 [adam 2022-11-13]
 	Updated databases/postgresql-postgis2 to 3.3.2 [gdt 2022-11-13]
+	Updated x11/kitty to 0.26.5 [pin 2022-11-13]
