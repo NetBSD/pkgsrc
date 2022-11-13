@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5479 2022/11/13 08:09:01 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.5480 2022/11/13 08:09:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8264,3 +8264,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated wm/enlightenment16 to 1.0.26nb1 [gutteridge 2022-11-13]
 	Updated x11/xkbevd to 1.1.5 [wiz 2022-11-13]
 	Updated x11/xkill to 1.0.6 [wiz 2022-11-13]
+	Updated x11/xlogo to 1.0.6 [wiz 2022-11-13]
