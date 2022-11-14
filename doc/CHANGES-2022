@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5508 2022/11/14 19:42:05 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5509 2022/11/14 23:50:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8331,3 +8331,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/py-twill to 3.1 [adam 2022-11-14]
 	Updated security/py-google-auth to 2.14.1 [adam 2022-11-14]
 	Updated security/py-google-auth-oauthlib to 0.7.1 [adam 2022-11-14]
+	Updated math/py-pywavelets to 1.4.1 [wiz 2022-11-14]
