@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2022/10/31 17:32:46 adam Exp $
+# $NetBSD: Makefile,v 1.30 2022/11/14 16:41:10 wiz Exp $
 
 .include "../../sysutils/salt/Makefile.common"
 
@@ -8,8 +8,9 @@ COMMENT=	Documentation for salt
 
 USE_TOOLS+=	gmake pax
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.2.3nb1:../../textproc/py-sphinx
-BUILD_DEPENDS+=	${PYPKGPREFIX}-sqlite3>=1.2.3nb1:../../databases/py-sqlite3
+BUILD_DEPENDS+=	salt-[0-9]*:../../sysutils/salt
+TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.2.3nb1:../../textproc/py-sphinx
+TOOL_DEPENDS+=	${PYPKGPREFIX}-sqlite3>=1.2.3nb1:../../databases/py-sqlite3
 
 NO_CONFIGURE=	yes
 BUILD_DIRS=	doc
