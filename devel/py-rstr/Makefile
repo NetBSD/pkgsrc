@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/11/09 22:59:49 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/11/14 14:36:22 wiz Exp $
 
 DISTNAME=	rstr-3.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pypi.org/project/rstr/
 COMMENT=	Generate random strings in Python
 LICENSE=	modified-bsd
+
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 
