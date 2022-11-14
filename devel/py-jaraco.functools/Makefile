@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2022/11/06 18:16:40 adam Exp $
+# $NetBSD: Makefile,v 1.8 2022/11/14 15:09:33 wiz Exp $
 
 DISTNAME=	jaraco.functools-3.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,8 @@ HOMEPAGE=	https://github.com/jaraco/jaraco.functools
 COMMENT=	Additional functools in the spirit of stdlib's functools
 LICENSE=	mit
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-more-itertools-[0-9]*:../../devel/py-more-itertools
 
 USE_LANGUAGES=	# none
