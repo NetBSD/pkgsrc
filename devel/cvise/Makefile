@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2022/09/09 15:14:38 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2022/11/14 18:54:34 adam Exp $
 
-DISTNAME=	cvise-2.5.0
+DISTNAME=	cvise-2.6.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=marxin/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -28,7 +28,7 @@ CMAKE_ARG_PATH=	..
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	flex
-#TEST_TARGET=	check
+TEST_TARGET=	test
 
 REPLACE_PYTHON+=	cvise.py
 REPLACE_PYTHON+=	cvise-delta.py
