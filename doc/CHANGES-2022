@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5497 2022/11/14 17:24:46 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.5498 2022/11/14 18:21:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8299,3 +8299,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/wiki-tui to 0.6.0 [pin 2022-11-14]
 	Updated devel/py-tortoisehg to 6.2.3 [wiz 2022-11-14]
 	Updated sysutils/py-watchdog to 2.1.9 [wiz 2022-11-14]
+	Updated textproc/py-creole to 1.4.10 [wiz 2022-11-14]
