@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5503 2022/11/14 19:03:23 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5504 2022/11/14 19:19:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8322,3 +8322,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated parallel/spirv-llvm-translator to 15.0.0 [adam 2022-11-14]
 	Updated lang/zig to 0.10.0 [adam 2022-11-14]
 	Updated parallel/opencl-clang to 15.0.0 [adam 2022-11-14]
+	Updated lang/py-cxfreeze to 6.13.1 [wiz 2022-11-14]
