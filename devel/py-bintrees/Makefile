@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/01/04 20:52:52 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2022/11/14 17:52:18 wiz Exp $
 
 DISTNAME=	bintrees-2.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,6 +15,11 @@ LICENSE=	modified-bsd
 DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+# 2.2.0 distfile does not support python 3.11
+post-extract:
+	${RM} ${WRKSRC}/bintrees/cython_trees.c
+	cd ${WRKSRC} && cythonize-${PYVERSSUFFIX} bintrees
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
