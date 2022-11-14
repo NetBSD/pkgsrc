@@ -1,16 +1,17 @@
-# $NetBSD: buildlink3.mk,v 1.19 2022/08/12 08:37:58 pin Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2022/11/14 18:44:05 adam Exp $
 
 BUILDLINK_TREE+=	llvm
 
 .if !defined(LLVM_BUILDLINK3_MK)
 LLVM_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.llvm+=	llvm>=14
+BUILDLINK_API_DEPENDS.llvm+=	llvm>=15
 BUILDLINK_PKGSRCDIR.llvm?=	../../lang/llvm
 
 LLVM_CONFIG_PATH?=		${BUILDLINK_PREFIX.llvm}/bin/llvm-config
 
 BUILDLINK_FILES.llvm+=		bin/FileCheck
+BUILDLINK_FILES.llvm+=		bin/UnicodeNameMappingGenerator
 BUILDLINK_FILES.llvm+=		bin/bugpoint
 BUILDLINK_FILES.llvm+=		bin/count
 BUILDLINK_FILES.llvm+=		bin/dsymutil
@@ -32,11 +33,13 @@ BUILDLINK_FILES.llvm+=		bin/llvm-cvtres
 BUILDLINK_FILES.llvm+=		bin/llvm-cxxdump
 BUILDLINK_FILES.llvm+=		bin/llvm-cxxfilt
 BUILDLINK_FILES.llvm+=		bin/llvm-cxxmap
+BUILDLINK_FILES.llvm+=		bin/llvm-debuginfod
 BUILDLINK_FILES.llvm+=		bin/llvm-debuginfod-find
 BUILDLINK_FILES.llvm+=		bin/llvm-diff
 BUILDLINK_FILES.llvm+=		bin/llvm-dis
 BUILDLINK_FILES.llvm+=		bin/llvm-dlltool
 BUILDLINK_FILES.llvm+=		bin/llvm-dwarfdump
+BUILDLINK_FILES.llvm+=		bin/llvm-dwarfutil
 BUILDLINK_FILES.llvm+=		bin/llvm-dwp
 BUILDLINK_FILES.llvm+=		bin/llvm-exegesis
 BUILDLINK_FILES.llvm+=		bin/llvm-extract
@@ -69,6 +72,7 @@ BUILDLINK_FILES.llvm+=		bin/llvm-rc
 BUILDLINK_FILES.llvm+=		bin/llvm-readelf
 BUILDLINK_FILES.llvm+=		bin/llvm-readobj
 BUILDLINK_FILES.llvm+=		bin/llvm-reduce
+BUILDLINK_FILES.llvm+=		bin/llvm-remark-size-diff
 BUILDLINK_FILES.llvm+=		bin/llvm-rtdyld
 BUILDLINK_FILES.llvm+=		bin/llvm-sim
 BUILDLINK_FILES.llvm+=		bin/llvm-size
@@ -103,6 +107,7 @@ pkgbase := llvm
 .include "../../math/z3/buildlink3.mk"
 .endif
 
+.include "../../archivers/zstd/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .endif	# LLVM_BUILDLINK3_MK
 

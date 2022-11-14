@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2022/08/12 08:49:20 pin Exp $
+# $NetBSD: Makefile,v 1.15 2022/11/14 18:44:07 adam Exp $
 
 .include "../../lang/llvm/version.mk"
 
@@ -20,8 +20,6 @@ USE_TOOLS+=		perl pkg-config
 GCC_REQD+=		4.8
 
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
-CMAKE_ARGS+=	-DCMAKE_C_COMPILER=${CC:Q}
-CMAKE_ARGS+=	-DCMAKE_CXX_COMPILER=${CXX:Q}
 CMAKE_ARGS+=	-DOPENMP_ENABLE_LIBOMPTARGET=OFF
 CMAKE_ARGS+=	-DOPENMP_ENABLE_OMPT_TOOLS=OFF
 

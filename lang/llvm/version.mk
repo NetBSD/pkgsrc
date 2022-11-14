@@ -1,4 +1,4 @@
-# $NetBSD: version.mk,v 1.10 2022/08/24 14:38:56 ryoon Exp $
+# $NetBSD: version.mk,v 1.11 2022/11/14 18:44:05 adam Exp $
 # used by devel/lld
 # used by devel/lldb
 # used by devel/polly
@@ -12,10 +12,22 @@
 # used by lang/wasi-libcxx
 # used by parallel/openmp
 
-LLVM_VERSION=	14.0.6
+LLVM_VERSION=	15.0.4
 MASTER_SITES=	${MASTER_SITE_GITHUB:=llvm/}
 GITHUB_PROJECT=	llvm-project
 GITHUB_RELEASE=	llvmorg-${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.xz
 
 LLVM_MAJOR_VERSION=	${LLVM_VERSION:tu:C/\\.[[:digit:]\.]*//}
+
+# As of v15.0.0 llvm requires cmake source code to build
+CMAKE_DIST=	cmake-${LLVM_VERSION}.src
+EXTRA_DIST+=	${CMAKE_DIST}${EXTRACT_SUFX}
+SITES.${CMAKE_DIST}${EXTRACT_SUFX}=	\
+		${MASTER_SITES:=${GITHUB_PROJECT}/releases/download/${GITHUB_RELEASE}/}
+DISTFILES=	${DEFAULT_DISTFILES} ${EXTRA_DIST}
+
+.PHONY: llvm-cmake-modules
+post-extract: llvm-cmake-modules
+llvm-cmake-modules:
+	${LN} -f -s ${WRKDIR}/${CMAKE_DIST} ${WRKDIR}/cmake

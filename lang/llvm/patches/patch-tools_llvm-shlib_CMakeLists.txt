@@ -1,8 +1,8 @@
-$NetBSD: patch-tools_llvm-shlib_CMakeLists.txt,v 1.7 2021/11/23 20:55:44 wiz Exp $
+$NetBSD: patch-tools_llvm-shlib_CMakeLists.txt,v 1.8 2022/11/14 18:44:05 adam Exp $
 
 Use the Linux style linking everywhere except Darwin and SunOS.
 
---- tools/llvm-shlib/CMakeLists.txt.orig	2021-09-24 16:18:10.000000000 +0000
+--- tools/llvm-shlib/CMakeLists.txt.orig	2022-09-20 06:05:50.000000000 +0000
 +++ tools/llvm-shlib/CMakeLists.txt
 @@ -33,13 +33,11 @@ if(LLVM_BUILD_LLVM_DYLIB)
    add_llvm_library(LLVM SHARED DISABLE_LLVM_LINK_LLVM_DYLIB SONAME ${INSTALL_WITH_TOOLCHAIN} ${SOURCES})

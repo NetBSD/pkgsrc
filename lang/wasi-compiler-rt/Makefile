@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2022/08/13 10:07:26 tnn Exp $
+# $NetBSD: Makefile,v 1.15 2022/11/14 18:44:06 adam Exp $
 
 .include "../../lang/llvm/version.mk"
 
@@ -29,11 +29,7 @@ CMAKE_ARG_PATH=	${WRKSRC}/lib/builtins
 BUILDLINK_TRANSFORM+=	rm:-I/usr/include
 BUILDLINK_TRANSFORM+=	rm:-I${PREFIX}/include
 
-CMAKE_ARGS+=	-DCMAKE_VERBOSE_MAKEFILE=1
-
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
-CMAKE_ARGS+=	-DCMAKE_C_COMPILER=${CC:Q}
-CMAKE_ARGS+=	-DCMAKE_CXX_COMPILER=${CXX:Q}
 CMAKE_ARGS+=	-DCOMPILER_RT_TEST_COMPILER=${CC:Q}
 CMAKE_ARGS+=	-DCOMPILER_RT_OS_DIR:STRING=wasi
 CMAKE_ARGS+=	-DLLVM_CONFIG_PATH=${LLVM_CONFIG_PATH:Q}
@@ -50,6 +46,7 @@ CMAKE_ARGS+=	-DCOMPILER_RT_HAS_VISIBILITY_HIDDEN_FLAG:BOOL=ON
 CMAKE_ARGS+=	-DCOMPILER_RT_HAS_FREESTANDING_FLAG:BOOL=ON
 CMAKE_ARGS+=	-DCOMPILER_RT_HAS_XRAY_COMPILER_FLAG:BOOL=OFF
 CMAKE_ARGS+=	-DCOMPILER_RT_HAS_ATOMIC_KEYWORD:BOOL=ON
+CMAKE_ARGS+=	-DCOMPILER_RT_HAS_BFLOAT16:BOOL=OFF
 CMAKE_ARGS+=	-DCOMPILER_RT_HAS_FLOAT16:BOOL=OFF
 CMAKE_ARGS+=	-DCOMPILER_RT_HAS_ASM_LSE:BOOL=OFF
 CMAKE_ARGS+=	-DCMAKE_C_COMPILER_WORKS=1 # Do not test clang compile
@@ -57,17 +54,22 @@ CMAKE_ARGS+=	-DCMAKE_CXX_COMPILER_WORKS=1 # Do not test clang++ compile
 
 CMAKE_INSTALL_PREFIX=	${PREFIX}/lib/clang/${PKGVERSION_NOREV}
 
+GENERATE_PLIST+=	find ${DESTDIR}${PREFIX} \( -type f -o -type l \) -print | \
+			sed 's,${DESTDIR}${PREFIX}/,,' | ${SORT} ;
+
 post-extract:
 	${MKDIR} ${WRKSRC}/build
+
+.include "../../mk/bsd.prefs.mk"
 
 # Run llvm-ranlib again on the archive. Fixes mystery build failure
 # in Firefox due to missing index (see PR pkg/56590). Might be a MAKE_JOBS
 # problem in this package?
+.if ${OPSYS} != "Darwin"
 post-install:
 	${PREFIX}/bin/llvm-ranlib \
 	  ${DESTDIR}${PREFIX}/lib/clang/${PKGVERSION_NOREV}/lib/wasi/libclang_rt.builtins-wasm32.a
-
-.include "../../mk/bsd.prefs.mk"
+.endif
 
 ABI=			# 32
 CFLAGS=			-O2
