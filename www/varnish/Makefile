@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2022/09/04 12:04:02 tnn Exp $
+# $NetBSD: Makefile,v 1.39 2022/11/14 19:29:13 tnn Exp $
 
-DISTNAME=	varnish-7.1.1
+DISTNAME=	varnish-7.2.1
 CATEGORIES=	www
 MASTER_SITES=	https://varnish-cache.org/_downloads/
 EXTRACT_SUFX=	.tgz
@@ -62,7 +62,7 @@ CONFIGURE_ARGS.SunOS+=	--disable-epoll
 
 # Fixes build on at least SunOS/i386
 # See https://github.com/varnishcache/varnish-cache/issues/1875
-.if !empty(CC_VERSION:Mgcc*) && ${MACHINE_ARCH} == "i386"
+.if ${CC_VERSION:Mgcc*} && ${MACHINE_ARCH} == "i386"
 CFLAGS+=		-fexcess-precision=standard
 .endif
 LDFLAGS.NetBSD+=	-lm	# for ldexp
