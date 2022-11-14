@@ -1,29 +1,30 @@
-# $NetBSD: Makefile,v 1.18 2022/01/05 20:07:11 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2022/11/14 19:29:38 adam Exp $
 
-DISTNAME=	twill-1.8.0
+DISTNAME=	twill-3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	3
-CATEGORIES=	python www
+CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/twill/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://twill.idyll.org/
-COMMENT=	Python package for the twill Web browsing language
+HOMEPAGE=	https://github.com/twill-tools/twill
+COMMENT=	Simple scripting language for web browsing
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-cssselect-[0-9]*:../../textproc/py-cssselect
+DEPENDS+=	${PYPKGPREFIX}-lxml>=4.9:../../textproc/py-lxml
+DEPENDS+=	${PYPKGPREFIX}-pyparsing>=3.0:../../devel/py-pyparsing
+DEPENDS+=	${PYPKGPREFIX}-requests>=2.27:../../devel/py-requests
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_ACCEPTED=	27 # setup fails for 1.8.0
-
 USE_PKG_RESOURCES=	yes
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
 post-install:
-	${MV} ${DESTDIR}${PREFIX}/bin/twill-fork \
-		${DESTDIR}${PREFIX}/bin/twill-fork${PYVERSSUFFIX} || ${TRUE}
-	${MV} ${DESTDIR}${PREFIX}/bin/twill-sh \
-		${DESTDIR}${PREFIX}/bin/twill-sh${PYVERSSUFFIX} || ${TRUE}
+.for bin in twill twill-fork
+	cd ${DESTDIR}${PREFIX}/bin && \
+	${MV} ${bin} ${bin}-${PYVERSSUFFIX} || ${TRUE}
+.endfor
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
