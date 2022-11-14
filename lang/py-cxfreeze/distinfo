@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/12/19 13:59:32 wiz Exp $
+$NetBSD: distinfo,v 1.13 2022/11/14 19:19:24 wiz Exp $
 
-BLAKE2s (cx_Freeze-5.1.1.tar.gz) = 5184521918655ebfa48bb61d9a885247979e5f32ec3fb651987a6769c1c8a88c
-SHA512 (cx_Freeze-5.1.1.tar.gz) = 64f9c3b7f6c3003c1dc439fc2da7d0c13c5f146834e3ab8ece3921f1eb30c6e3eda480ccc84e61cc061597521b360cf8f5ef8e0bbcce1437157360c3d9c1adbc
-Size (cx_Freeze-5.1.1.tar.gz) = 61381 bytes
-SHA1 (patch-setup.py) = 6d4d592acebc944bdfba33c5a63d83e57d85c630
+BLAKE2s (cx_Freeze-6.13.1.tar.gz) = 3b275e0e82743c24fbb3a614e81aaa1c5c33739564ba835b7e0ed8f575397055
+SHA512 (cx_Freeze-6.13.1.tar.gz) = cd57c6fef7ea8bf5e2d7627e0a2ca90c16ad90827eb02d15ef78d555e77d043e71e539aa4ff6fce672db2da334c5532ff78c17e03ef078996701c97672965610
+Size (cx_Freeze-6.13.1.tar.gz) = 1491754 bytes
