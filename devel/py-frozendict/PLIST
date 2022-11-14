@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2022/01/30 10:56:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/11/14 18:37:14 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -7,7 +7,7 @@ ${PYSITELIB}/frozendict/VERSION
 ${PYSITELIB}/frozendict/__init__.py
 ${PYSITELIB}/frozendict/__init__.pyc
 ${PYSITELIB}/frozendict/__init__.pyo
-${PYSITELIB}/frozendict/_frozendict.so
+${PLIST.c}${PYSITELIB}/frozendict/_frozendict.so
 ${PYSITELIB}/frozendict/core.py
 ${PYSITELIB}/frozendict/core.pyc
 ${PYSITELIB}/frozendict/core.pyo

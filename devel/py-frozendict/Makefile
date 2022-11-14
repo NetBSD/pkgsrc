@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2022/07/26 08:43:00 adam Exp $
+# $NetBSD: Makefile,v 1.12 2022/11/14 18:37:14 wiz Exp $
 
 DISTNAME=	frozendict-2.3.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,6 +13,18 @@ LICENSE=	mit
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+PLIST_VARS=	c
+
+.include "../../lang/python/pyversion.mk"
+
+.if ${PYPKGPREFIX} == "py311"
+# as of 2.3.4, python 3.11 is not supported
+# do not build C extension for now
+PYSETUPARGS=	py
+.else
+PLIST.c=	yes
+.endif
 
 DISTUTILS_BUILDDIR_IN_TEST_ENV=	yes
 do-test:
