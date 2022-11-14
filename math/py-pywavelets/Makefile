@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2022/04/15 11:27:41 nia Exp $
+# $NetBSD: Makefile,v 1.9 2022/11/14 23:50:35 wiz Exp $
 
-DISTNAME=	PyWavelets-1.0.3
+DISTNAME=	PyWavelets-1.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	2
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyWavelets/}
 
@@ -13,7 +12,7 @@ LICENSE=	mit
 
 REPLACE_PYTHON+=	pywt/tests/*.py
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37 # numpy
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37
 
 do-test:
 	${PYTHONBIN} -c 'import pywt; pywt.test()'
