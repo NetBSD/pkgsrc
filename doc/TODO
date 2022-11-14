@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22351 2022/11/13 09:59:21 adam Exp $
+$NetBSD: TODO,v 1.22352 2022/11/14 18:49:31 adam Exp $
 
 Suggested new packages
 ======================
@@ -962,7 +962,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o linpsk-1.2 [ld: cannot find -lqt-mt with qt4]
 	o liquidwar-6.0.0.11
 	o lirc-0.9.3
-	o llvm-15.0.1
 	o lmbench-3
 	o log4cxx-0.11.0
 	o lohit-fonts-2.4.2

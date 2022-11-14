@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5498 2022/11/14 18:21:58 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.5499 2022/11/14 18:49:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8300,3 +8300,16 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-tortoisehg to 6.2.3 [wiz 2022-11-14]
 	Updated sysutils/py-watchdog to 2.1.9 [wiz 2022-11-14]
 	Updated textproc/py-creole to 1.4.10 [wiz 2022-11-14]
+	Updated lang/llvm to 15.0.4 [adam 2022-11-14]
+	Updated devel/lld to 15.0.4 [adam 2022-11-14]
+	Updated devel/lldb to 15.0.4 [adam 2022-11-14]
+	Updated devel/polly to 15.0.4 [adam 2022-11-14]
+	Updated lang/clang to 15.0.4 [adam 2022-11-14]
+	Updated lang/clang-tools-extra to 15.0.4 [adam 2022-11-14]
+	Updated lang/compiler-rt to 15.0.4 [adam 2022-11-14]
+	Updated lang/libcxx to 15.0.4 [adam 2022-11-14]
+	Updated lang/libcxxabi to 15.0.4 [adam 2022-11-14]
+	Updated lang/libunwind to 15.0.4 [adam 2022-11-14]
+	Updated lang/wasi-compiler-rt to 15.0.4 [adam 2022-11-14]
+	Updated lang/wasi-libcxx to 15.0.4 [adam 2022-11-14]
+	Updated parallel/openmp to 15.0.4 [adam 2022-11-14]
