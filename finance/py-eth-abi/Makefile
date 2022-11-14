@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/09/12 10:57:49 adam Exp $
+# $NetBSD: Makefile,v 1.7 2022/11/14 14:34:49 wiz Exp $
 
 DISTNAME=	eth_abi-3.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-parsimonious>=0.8.0:../../textproc/py-parsimonious
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 311
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
