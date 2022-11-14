@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2022/08/13 09:58:04 tnn Exp $
+# $NetBSD: Makefile,v 1.20 2022/11/14 18:44:05 adam Exp $
 
 .include "../../lang/clang/Makefile.common"
 
@@ -8,10 +8,8 @@ COMMENT=	Extra Clang tools
 
 DEPENDS+=	clang>=${LLVM_VERSION}:../../lang/clang
 
-EXTRA_DIST=		${DISTNAME:S/clang/clang-tools-extra/}${EXTRACT_SUFX}
+EXTRA_DIST+=		${DISTNAME:S/clang/clang-tools-extra/}${EXTRACT_SUFX}
 SITES.${EXTRA_DIST}=	${MASTER_SITES:=${GITHUB_PROJECT}/releases/download/${GITHUB_RELEASE}/}
-
-DISTFILES=	${DEFAULT_DISTFILES} ${EXTRA_DIST}
 
 BUILD_TARGET=	clang-change-namespace clang-apply-replacements clang-doc
 BUILD_TARGET+=	clang-include-fixer clang-move clang-query clang-reorder-fields
