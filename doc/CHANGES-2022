@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5499 2022/11/14 18:49:31 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5500 2022/11/14 18:51:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8313,3 +8313,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/wasi-compiler-rt to 15.0.4 [adam 2022-11-14]
 	Updated lang/wasi-libcxx to 15.0.4 [adam 2022-11-14]
 	Updated parallel/openmp to 15.0.4 [adam 2022-11-14]
+	Added math/py-gmpy2 version 2.1.2 [wiz 2022-11-14]
