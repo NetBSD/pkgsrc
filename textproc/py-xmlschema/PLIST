@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2022/05/15 19:29:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.17 2022/11/14 10:07:13 adam Exp $
 bin/xmlschema-json2xml-${PYVERSSUFFIX}
 bin/xmlschema-validate-${PYVERSSUFFIX}
 bin/xmlschema-xml2json-${PYVERSSUFFIX}
@@ -47,9 +47,6 @@ ${PYSITELIB}/xmlschema/dataobjects.pyo
 ${PYSITELIB}/xmlschema/documents.py
 ${PYSITELIB}/xmlschema/documents.pyc
 ${PYSITELIB}/xmlschema/documents.pyo
-${PYSITELIB}/xmlschema/etree.py
-${PYSITELIB}/xmlschema/etree.pyc
-${PYSITELIB}/xmlschema/etree.pyo
 ${PYSITELIB}/xmlschema/exceptions.py
 ${PYSITELIB}/xmlschema/exceptions.pyc
 ${PYSITELIB}/xmlschema/exceptions.pyo
