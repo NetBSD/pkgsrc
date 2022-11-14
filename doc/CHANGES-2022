@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5505 2022/11/14 19:32:54 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.5506 2022/11/14 19:34:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8324,3 +8324,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated parallel/opencl-clang to 15.0.0 [adam 2022-11-14]
 	Updated lang/py-cxfreeze to 6.13.1 [wiz 2022-11-14]
 	Updated print/py-xhtml2pdf to 0.2.8 [wiz 2022-11-14]
+	Removed print/py-pisa [wiz 2022-11-14]
