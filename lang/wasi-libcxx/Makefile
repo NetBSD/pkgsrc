@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2022/08/13 12:42:45 ryoon Exp $
+# $NetBSD: Makefile,v 1.14 2022/11/14 18:44:07 adam Exp $
 
 .include "../../lang/llvm/version.mk"
 
@@ -18,14 +18,9 @@ WRKSRC=		${WRKDIR}
 # in both of them to get them to build against each other without causing
 # circular dependencies.  This must be kept in sync with libcxxabi/Makefile.
 LIBCXX=		libcxx-${LLVM_VERSION}.src
-LLVMDIST=	llvm-${LLVM_VERSION}.src
-EXTRA_DIST=	${LIBCXX}${EXTRACT_SUFX} ${LLVMDIST}${EXTRACT_SUFX}
+EXTRA_DIST+=	${LIBCXX}${EXTRACT_SUFX}
 SITES.${LIBCXX}${EXTRACT_SUFX}=	\
 	${MASTER_SITES:=${GITHUB_PROJECT}/releases/download/${GITHUB_RELEASE}/}
-SITES.${LLLVMDIST}${EXTRACT_SUFX}=	\
-	${MASTER_SITES:=${GITHUB_PROJECT}/releases/download/${GITHUB_RELEASE}/}
-
-DISTFILES=	${DEFAULT_DISTFILES} ${EXTRA_DIST}
 
 BUILD_DEPENDS+=	lld-[0-9]*:../../devel/lld
 
@@ -43,11 +38,7 @@ USE_CMAKE=	yes
 SSP_SUPPORTED=		no
 PKGSRC_USE_STACK_CHECK=	no
 
-CMAKE_ARGS+=	-DCMAKE_VERBOSE_MAKEFILE=1
-
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
-CMAKE_ARGS+=	-DCMAKE_C_COMPILER=${CC:Q}
-CMAKE_ARGS+=	-DCMAKE_CXX_COMPILER=${CXX:Q}
 CMAKE_ARGS+=	-DLIBCXXABI_LIBCXX_INCLUDES=${WRKDIR}/libcxx/include
 CMAKE_ARGS+=	-DLIBCXXABI_USE_LLVM_UNWINDER=OFF
 CMAKE_ARGS+=	-DCMAKE_C_COMPILER_WORKS=1
@@ -147,7 +138,7 @@ CMAKE_ARGS+=	-DLIBCXXABI_SUPPORTS_FSTRICT_ALIASING_FLAG:BOOL=ON
 CMAKE_ARGS+=	-DCMAKE_CXX_LINK_FLAGS=${LDFLAGS:Q}
 CMAKE_ARGS+=	-DCMAKE_C_FLAGS=-fno-exceptions
 CMAKE_ARGS+=	-DCMAKE_CXX_FLAGS=-fno-exceptions
-CMAKE_ARGS+=	-DLIBCXX_CXX_ABI=libcxxabi
+CMAKE_ARGS+=	-DLIBCXX_CXX_ABI=system-libcxxabi
 CMAKE_ARGS+=	-DLIBCXX_CXX_ABI_INCLUDE_PATHS=${WRKDIR}/libcxxabi/include
 
 CMAKE_INSTALL_PREFIX=	${PREFIX}/wasi
@@ -160,7 +151,6 @@ post-extract:
 	${MKDIR} ${WRKDIR}/build_libcxxabi
 	${LN} -f -s ${WRKDIR}/${DISTNAME} ${WRKDIR}/libcxxabi
 	${LN} -f -s ${WRKDIR}/${LIBCXX} ${WRKDIR}/libcxx
-	${LN} -f -s ${WRKDIR}/${LLVMDIST} ${WRKDIR}/llvm
 
 do-configure:
 	cd ${WRKSRC} && cd build_libcxx && \

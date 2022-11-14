@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2022/02/04 12:12:12 wiz Exp $
-lib/clang/${PKGVERSION}/lib/wasi/libclang_rt.builtins-wasm32.a
