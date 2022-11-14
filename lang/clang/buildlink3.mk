@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.19 2022/08/12 08:45:44 pin Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2022/11/14 18:44:05 adam Exp $
 
 BUILDLINK_TREE+=	clang
 
@@ -8,17 +8,20 @@ CLANG_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.clang+=	clang>=14.0
 BUILDLINK_PKGSRCDIR.clang?=	../../lang/clang
 
+BUILDLINK_FILES.clang+=		bin/analyze-build
 BUILDLINK_FILES.clang+=		bin/c-index-test
 BUILDLINK_FILES.clang+=		bin/clang
 BUILDLINK_FILES.clang+=		bin/clang++
-BUILDLINK_FILES.clang+=		bin/clang-14
+BUILDLINK_FILES.clang+=		bin/clang-15
 BUILDLINK_FILES.clang+=		bin/clang-check
 BUILDLINK_FILES.clang+=		bin/clang-cl
 BUILDLINK_FILES.clang+=		bin/clang-cpp
 BUILDLINK_FILES.clang+=		bin/clang-extdef-mapping
 BUILDLINK_FILES.clang+=		bin/clang-format
-BUILDLINK_FILES.clang+=		bin/clang-import-test
+BUILDLINK_FILES.clang+=		bin/clang-linker-wrapper
+BUILDLINK_FILES.clang+=		bin/clang-nvlink-wrapper
 BUILDLINK_FILES.clang+=		bin/clang-offload-bundler
+BUILDLINK_FILES.clang+=		bin/clang-offload-packager
 BUILDLINK_FILES.clang+=		bin/clang-offload-wrapper
 BUILDLINK_FILES.clang+=		bin/clang-refactor
 BUILDLINK_FILES.clang+=		bin/clang-rename

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2022/08/12 08:54:31 pin Exp $
+@comment $NetBSD: PLIST,v 1.16 2022/11/14 18:44:05 adam Exp $
 bin/lldb
 bin/lldb-argdumper
 bin/lldb-instr
@@ -107,6 +107,7 @@ include/lldb/Core/Architecture.h
 include/lldb/Core/Communication.h
 include/lldb/Core/DataFileCache.h
 include/lldb/Core/Debugger.h
+include/lldb/Core/DebuggerEvents.h
 include/lldb/Core/Declaration.h
 include/lldb/Core/Disassembler.h
 include/lldb/Core/DumpDataExtractor.h
@@ -179,6 +180,7 @@ include/lldb/DataFormatters/ValueObjectPrinter.h
 include/lldb/DataFormatters/VectorIterator.h
 include/lldb/DataFormatters/VectorType.h
 include/lldb/Expression/DWARFExpression.h
+include/lldb/Expression/DWARFExpressionList.h
 include/lldb/Expression/DiagnosticManager.h
 include/lldb/Expression/DynamicCheckerFunctions.h
 include/lldb/Expression/Expression.h
@@ -283,6 +285,7 @@ include/lldb/Interpreter/CommandHistory.h
 include/lldb/Interpreter/CommandInterpreter.h
 include/lldb/Interpreter/CommandObject.h
 include/lldb/Interpreter/CommandObjectMultiword.h
+include/lldb/Interpreter/CommandOptionArgumentTable.h
 include/lldb/Interpreter/CommandOptionValidators.h
 include/lldb/Interpreter/CommandReturnObject.h
 include/lldb/Interpreter/OptionArgParser.h
@@ -290,6 +293,7 @@ include/lldb/Interpreter/OptionGroupArchitecture.h
 include/lldb/Interpreter/OptionGroupBoolean.h
 include/lldb/Interpreter/OptionGroupFile.h
 include/lldb/Interpreter/OptionGroupFormat.h
+include/lldb/Interpreter/OptionGroupMemoryTag.h
 include/lldb/Interpreter/OptionGroupOutputFile.h
 include/lldb/Interpreter/OptionGroupPlatform.h
 include/lldb/Interpreter/OptionGroupPythonClassWithDict.h
@@ -350,6 +354,7 @@ include/lldb/Symbol/Symbol.h
 include/lldb/Symbol/SymbolContext.h
 include/lldb/Symbol/SymbolContextScope.h
 include/lldb/Symbol/SymbolFile.h
+include/lldb/Symbol/SymbolFileOnDemand.h
 include/lldb/Symbol/SymbolVendor.h
 include/lldb/Symbol/Symtab.h
 include/lldb/Symbol/TaggedASTType.h
@@ -433,8 +438,8 @@ include/lldb/Target/ThreadPlanTracer.h
 include/lldb/Target/ThreadSpec.h
 include/lldb/Target/Trace.h
 include/lldb/Target/TraceCursor.h
+include/lldb/Target/TraceDumper.h
 include/lldb/Target/TraceExporter.h
-include/lldb/Target/TraceInstructionDumper.h
 include/lldb/Target/UnixSignals.h
 include/lldb/Target/Unwind.h
 include/lldb/Target/UnwindAssembly.h
@@ -463,9 +468,9 @@ include/lldb/Utility/IOObject.h
 include/lldb/Utility/Instrumentation.h
 include/lldb/Utility/Iterable.h
 include/lldb/Utility/LLDBAssert.h
+include/lldb/Utility/LLDBLog.h
 include/lldb/Utility/Listener.h
 include/lldb/Utility/Log.h
-include/lldb/Utility/Logging.h
 include/lldb/Utility/NameMatches.h
 include/lldb/Utility/OptionDefinition.h
 include/lldb/Utility/Predicate.h
@@ -481,7 +486,6 @@ include/lldb/Utility/SharedCluster.h
 include/lldb/Utility/State.h
 include/lldb/Utility/Status.h
 include/lldb/Utility/Stream.h
-include/lldb/Utility/StreamCallback.h
 include/lldb/Utility/StreamString.h
 include/lldb/Utility/StreamTee.h
 include/lldb/Utility/StringExtractor.h
@@ -516,8 +520,8 @@ include/lldb/lldb-public.h
 include/lldb/lldb-types.h
 include/lldb/lldb-versioning.h
 lib/liblldb.so
-lib/liblldb.so.14
 lib/liblldb.so.${PKGVERSION}
+lib/liblldb.so.15
 lib/lua/5.3/lldb.so
 ${PYSITELIB}/lldb/__init__.py
 ${PYSITELIB}/lldb/_lldb.so

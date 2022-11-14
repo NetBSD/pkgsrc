@@ -1,0 +1,14 @@
+$NetBSD: patch-libcxxabi_src_CMakeLists.txt,v 1.1 2022/11/14 18:44:07 adam Exp $
+
+Fix build.
+
+--- libcxxabi/src/CMakeLists.txt.orig	2022-11-13 10:23:18.552841671 +0000
++++ libcxxabi/src/CMakeLists.txt
+@@ -57,6 +57,7 @@ if (MSVC_IDE OR XCODE)
+ endif()
+ 
+ # Some files depend on libc++ internals.
++include_directories("${LIBCXXABI_LIBCXX_PATH}/include")
+ include_directories("${LIBCXXABI_LIBCXX_PATH}/src")
+ 
+ if (LIBCXXABI_HAS_CXA_THREAD_ATEXIT_IMPL)
