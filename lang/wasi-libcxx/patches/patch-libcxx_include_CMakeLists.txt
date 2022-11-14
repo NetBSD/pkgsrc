@@ -1,18 +1,19 @@
-$NetBSD: patch-libcxx_include_CMakeLists.txt,v 1.1 2022/08/13 12:42:45 ryoon Exp $
+$NetBSD: patch-libcxx_include_CMakeLists.txt,v 1.2 2022/11/14 18:44:07 adam Exp $
 
 * Generate __config_site under source directory. This is wrong.
   This fixes non-pthreads wasi-libcxx-14.0.6 build.
 
---- libcxx/include/CMakeLists.txt.orig	2022-06-22 16:46:24.000000000 +0000
+--- libcxx/include/CMakeLists.txt.orig	2022-11-13 10:03:36.918375190 +0000
 +++ libcxx/include/CMakeLists.txt
-@@ -540,8 +540,10 @@ set(files
-   wctype.h
-   )
+@@ -795,9 +795,11 @@ foreach(feature LIBCXX_ENABLE_FILESYSTEM
+   endif()
+ endforeach()
  
 +configure_file("__config_site.in" "${CMAKE_CURRENT_SOURCE_DIR}/__config_site" @ONLY)
  configure_file("__config_site.in" "${LIBCXX_GENERATED_INCLUDE_TARGET_DIR}/__config_site" @ONLY)
+ configure_file("module.modulemap.in" "${LIBCXX_GENERATED_INCLUDE_DIR}/module.modulemap" @ONLY)
  
 +set(_all_includes "${CMAKE_CURRENT_SOURCE_DIR}/__config_site")
- set(_all_includes "${LIBCXX_GENERATED_INCLUDE_TARGET_DIR}/__config_site")
+ set(_all_includes "${LIBCXX_GENERATED_INCLUDE_TARGET_DIR}/__config_site"
+                   "${LIBCXX_GENERATED_INCLUDE_DIR}/module.modulemap")
  foreach(f ${files})
-   set(src "${CMAKE_CURRENT_SOURCE_DIR}/${f}")

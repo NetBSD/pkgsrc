@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2022/08/12 08:47:29 pin Exp $
+@comment $NetBSD: PLIST,v 1.10 2022/11/14 18:44:05 adam Exp $
 include/polly/Canonicalization.h
 include/polly/CodeGen/BlockGenerators.h
 include/polly/CodeGen/CodeGeneration.h
@@ -26,6 +26,7 @@ include/polly/JSONExporter.h
 include/polly/LinkAllPasses.h
 include/polly/ManualOptimizer.h
 include/polly/MatmulOptimizer.h
+include/polly/MaximalStaticExpansion.h
 include/polly/Options.h
 include/polly/PolyhedralInfo.h
 include/polly/PruneUnprofitable.h
@@ -35,6 +36,7 @@ include/polly/ScheduleTreeTransform.h
 include/polly/ScopBuilder.h
 include/polly/ScopDetection.h
 include/polly/ScopDetectionDiagnostic.h
+include/polly/ScopGraphPrinter.h
 include/polly/ScopInfo.h
 include/polly/ScopPass.h
 include/polly/Simplify.h

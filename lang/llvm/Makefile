@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2022/09/12 08:59:15 he Exp $
+# $NetBSD: Makefile,v 1.83 2022/11/14 18:44:05 adam Exp $
 #
 # When updating this, please also update:
 # devel/include-what-you-use
@@ -27,7 +27,6 @@
 
 DISTNAME=	llvm-${LLVM_VERSION}.src
 PKGNAME=	${DISTNAME:S/.src//}
-PKGREVISION=	1
 CATEGORIES=	lang devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -103,7 +102,7 @@ PLIST.notdylib=	yes
 PLIST_SUBST+=	SOEXT=${SOEXT}
 PLIST_SUBST+=	LLVM_MAJOR_VERSION=${LLVM_MAJOR_VERSION}
 
-NOTDYLIBS=	LTO Remarks
+NOTDYLIBS=		LTO Remarks
 .for libname in ${NOTDYLIBS}
 PRINT_PLIST_AWK+=	/lib${libname}.${SOEXT}.${LLVM_MAJOR_VERSION}/ { gsub(/\.${SOEXT}\.${LLVM_MAJOR_VERSION}/, ".$${SOEXT}.$${LLVM_MAJOR_VERSION}"); print "$${PLIST.notdylib}" $$0; next }
 .endfor
@@ -143,9 +142,10 @@ CMAKE_ARGS+=	-DPKGSRC_LLVM_PTHREADLIB=-lpthread
 post-extract:
 	${MKDIR} ${WRKSRC}/build
 .for f in config.guess config.sub
-	cp ../../mk/gnu-config/${f} ${WRKSRC}/cmake/${f}
+	${CP} ../../mk/gnu-config/${f} ${WRKSRC}/cmake/${f}
 .endfor
 
+.include "../../archivers/zstd/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/tool.mk"
