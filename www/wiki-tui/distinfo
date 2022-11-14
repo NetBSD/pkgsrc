@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2022/08/02 11:17:11 pin Exp $
+$NetBSD: distinfo,v 1.12 2022/11/14 14:56:01 pin Exp $
 
 BLAKE2s (addr2line-0.16.0.crate) = 24e229c429a7ffc5c9010ec4c102ab2fc3f9982cfa9897b42709fd96b8f83dc7
 SHA512 (addr2line-0.16.0.crate) = 7ea8fffcdff7f8f25c0a588fe2ee652053988ab2e1d39ac740f5199d6e7d30beed0272403d04b86ec5de6ad5459698cdf28f8efd5caab7b6693102df7ec4889c
@@ -87,6 +87,9 @@ Size (crossterm_winapi-0.9.0.crate) = 15561 bytes
 BLAKE2s (cursive-0.17.0.crate) = 9f7d51312d744557a6576aed4dc19a3d65370b94c16d9b68a7b627d0743bdd19
 SHA512 (cursive-0.17.0.crate) = ddefcb59492eea4adec1da22d5fec1277e4a75b57a7cc15b5fda4425cde67fdbcc31bc8435d02859381973c1e3083d594f3786870620a07b40a99070320dd008
 Size (cursive-0.17.0.crate) = 67094 bytes
+BLAKE2s (cursive-aligned-view-0.6.0.crate) = 70180564235f94b26ef74fda6274529a5261de53c4954c01f3f1901f80b44039
+SHA512 (cursive-aligned-view-0.6.0.crate) = 28f77b61c82e228430a69dd007a8641310ab2354228bc9135be866bb09064c9c22c0b2ec8783b62886e1b3383da791f89af63bdedb518ecec972f3d3de5bb373
+Size (cursive-aligned-view-0.6.0.crate) = 36647 bytes
 BLAKE2s (cursive_buffered_backend-0.6.0.crate) = 84b72020ebb1ab8c3abe21630ef90dbd7a3dbf75d7ec69f3be30e89f23082645
 SHA512 (cursive_buffered_backend-0.6.0.crate) = cce26b8612e1e8ae7962cee2554a58dfe5fae7df95d799082e1c764660adb7b876b574583be6b8408c60d96914f9191c2e24f0c10ade803ab2d183bbb643bafc
 Size (cursive_buffered_backend-0.6.0.crate) = 6386 bytes
@@ -579,9 +582,9 @@ Size (tokio-native-tls-0.3.0.crate) = 20759 bytes
 BLAKE2s (tokio-util-0.6.8.crate) = 4760e1a93c9c50e651d99046930f52d4d17a2a5401e22b0cfcdc6f7c1db85b7c
 SHA512 (tokio-util-0.6.8.crate) = b81ee8086a069de580bb2769145a77d12d3ae2c4d8a689d979c58988c64b221ffeeeb0f159181f92f402011931eda8549ff173b227433d6597492dc7f024b7bd
 Size (tokio-util-0.6.8.crate) = 74116 bytes
-BLAKE2s (toml-0.5.8.crate) = c3c1c927b8bb8ed0cfe2f2796712885aef2602f7faa900a994390a5f61e6b2ee
-SHA512 (toml-0.5.8.crate) = 26b7901ee4b7cbb4cf8ea57d365a99ed05e0a76e73452e47d4bcb3b4eeb7bbd393c13eea9ea33dc13622942efcda39acdba9425b74b40c920c9f19673a1f2082
-Size (toml-0.5.8.crate) = 54219 bytes
+BLAKE2s (toml-0.5.9.crate) = 47ed3419b2f8ce5103881721e73fac378a7efd6ace9098234a02f518fabdf35e
+SHA512 (toml-0.5.9.crate) = 7151bcafbe2bdb1d2bb91562daebd357c884819af047843f1b4a56bc3812d4153eaf70683d0f9bff51bd1048700920322d64d41da13ebb4cbf34f0f7822d7ce7
+Size (toml-0.5.9.crate) = 55667 bytes
 BLAKE2s (tower-service-0.3.1.crate) = 3c26f687f05fda7e3eb65868679b8a86a283e0c7b69fe6a13151874ba1a885dd
 SHA512 (tower-service-0.3.1.crate) = d23f9db2d6632f561970b55eaeaac22a20c8b9af18931cd564db193688eb2a2973127b440e175cfd7358f3d0ead53f7a759e34b7b86c293751079af9c2181ba7
 Size (tower-service-0.3.1.crate) = 6299 bytes
@@ -666,9 +669,9 @@ Size (wasm-bindgen-shared-0.2.72.crate) = 6690 bytes
 BLAKE2s (web-sys-0.3.49.crate) = f4a0299a0dee099893de50d089dff882af61df259964713a7979e122d0582470
 SHA512 (web-sys-0.3.49.crate) = b77c4b473b849bef87325c14bb48f08a52145812fef35e81e854ac0631264253a4b8c50bafab8578f79832414a081a929ca71426cd9c90529e5f319e52e58451
 Size (web-sys-0.3.49.crate) = 649549 bytes
-BLAKE2s (wiki-tui-0.5.1.tar.gz) = ec5fe3a67cae192d87e84133d7d2c998d755f0dd9fe2956437e2425087026f03
-SHA512 (wiki-tui-0.5.1.tar.gz) = cb1484dea385a0c222658ee803ef8ee30895c7791494ccb4f673b126915eea495227fba53bf43c282a384a30fc655e3282e6cb7a28e4b69682de673ec8784ac2
-Size (wiki-tui-0.5.1.tar.gz) = 79076 bytes
+BLAKE2s (wiki-tui-0.6.0.tar.gz) = a79841b0243e868421540c538ecaf48aa116bac5f711c62e24accb636298c2ea
+SHA512 (wiki-tui-0.6.0.tar.gz) = cd555131f656a08f8946de5592497acc65d5758d9f3f7d7ab78d8a1dadb0ee9d04ec3014cd32ca6fc72d07d43708f196bc9a6b45abd9c88a8c087349fbd5597b
+Size (wiki-tui-0.6.0.tar.gz) = 15675052 bytes
 BLAKE2s (winapi-0.3.9.crate) = 295083bd8c53c7decc4187da324a1284ad05cbccc9198d31facb6a42e34867ce
 SHA512 (winapi-0.3.9.crate) = ff8b7b78065f3d8999ec03c725a0460ebc059771bf071c7a3df3f0ecd733edf3b0a2450024d4e24e1aedddaecd9038ce1376c0d8bbf45132068cf45cf4a53a97
 Size (winapi-0.3.9.crate) = 1200382 bytes
