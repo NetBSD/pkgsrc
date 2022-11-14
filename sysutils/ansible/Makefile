@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.54 2022/10/14 11:27:41 adam Exp $
+# $NetBSD: Makefile,v 1.55 2022/11/14 09:57:03 adam Exp $
 
-DISTNAME=	ansible-6.5.0
+DISTNAME=	ansible-6.6.0
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/ansible/}
 
@@ -11,9 +11,11 @@ LICENSE=	gnu-gpl-v3
 
 PREV_PKGPATH=	sysutils/ansible2
 
-DEPENDS+=	ansible-core>=2.13.3:../../sysutils/ansible-core
+DEPENDS+=	ansible-core>=2.13.6:../../sysutils/ansible-core
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
 
 CHECK_SHLIBS_SUPPORTED=	no
 CHECK_WRKREF_SKIP=	*
@@ -36,6 +38,7 @@ REPLACE_PYTHON+=	ansible_collections/community/okd/ci/doc_fragment_modules.py
 REPLACE_PYTHON+=	ansible_collections/community/okd/ci/downstream_fragments.py
 REPLACE_PYTHON+=	ansible_collections/community/routeros/update-docs.py
 REPLACE_PYTHON+=	ansible_collections/community/sap_libs/plugins/module_utils/swpm2_parameters_inifile_generate.py
+REPLACE_PYTHON+=	ansible_collections/lowlydba/sqlserver/plugins/modules/*.py
 REPLACE_PYTHON+=	ansible_collections/ngine_io/cloudstack/scripts/inventory/cloudstack.py
 REPLACE_PYTHON+=	ansible_collections/ovirt/ovirt/roles/disaster_recovery/files/*.py
 REPLACE_PYTHON+=	ansible_collections/ovirt/ovirt/roles/disaster_recovery/files/ovirt-dr
@@ -58,6 +61,7 @@ CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/cyberark/conjur/ci/*
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/cyberark/conjur/dev/*
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/cyberark/conjur/roles/conjur_host_identity/tests/test.sh*
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/infinidat/infinibox/bin/*.sh
+CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/lowlydba/sqlserver/plugins/modules/*.ps1
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/ovirt/ovirt/automation/*.sh
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/ovirt/ovirt/build.sh
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/sensu/sensu_go/docker/*.sh
@@ -65,7 +69,6 @@ CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/vmware/vmware_rest/man
 
 post-extract:
 	${FIND} ${WRKSRC}/ansible_collections -name .DS_Store -delete
-	${RM} -r ${WRKSRC}/ansible_collections/inspur/sm/venv
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
