@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/11/06 18:08:15 adam Exp $
+# $NetBSD: Makefile,v 1.6 2022/11/14 15:08:31 wiz Exp $
 
 DISTNAME=	inflect-6.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,8 @@ HOMEPAGE=	https://github.com/jazzband/inflect
 COMMENT=	Correctly generate plurals, ordinals, indefinite articles for English
 LICENSE=	mit
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=7.0.0:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=7.0.0:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-pydantic>=1.9.1:../../devel/py-pydantic
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=6:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
