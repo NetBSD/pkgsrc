@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2022/08/14 13:52:27 tnn Exp $
+# $NetBSD: Makefile,v 1.29 2022/11/14 18:44:06 adam Exp $
 
 .include "../../lang/llvm/version.mk"
-PKGREVISION=	2
 
 DISTNAME=	libunwind-${LLVM_VERSION}.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -12,17 +11,12 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	LLVM libunwind
 LICENSE=	apache-2.0
 
-# libunwind requires llvm and libcxx source code to build
+# libunwind requires libcxx source code to build
 LIBCXX=		libcxx-${LLVM_VERSION}.src
-LLVMDIST=	llvm-${LLVM_VERSION}.src
-EXTRA_DIST=	${LIBCXX}${EXTRACT_SUFX} ${LLVMDIST}${EXTRACT_SUFX}
+EXTRA_DIST+=	${LIBCXX}${EXTRACT_SUFX}
 
 SITES.${LIBCXX}${EXTRACT_SUFX}=	\
 	${MASTER_SITES:=${GITHUB_PROJECT}/releases/download/${GITHUB_RELEASE}/}
-SITES.${LLLVMDIST}${EXTRACT_SUFX}=	\
-	${MASTER_SITES:=${GITHUB_PROJECT}/releases/download/${GITHUB_RELEASE}/}
-
-DISTFILES=	${DEFAULT_DISTFILES} ${EXTRA_DIST}
 
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	${WRKSRC}
@@ -34,15 +28,12 @@ SSP_SUPPORTED=		no
 GCC_REQD+=		10	# must be in sync with libcxx
 
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
-CMAKE_ARGS+=	-DCMAKE_C_COMPILER=${CC:Q}
-CMAKE_ARGS+=	-DCMAKE_CXX_COMPILER=${CXX:Q}
 
 INSTALLATION_DIRS=	include
 
 post-extract:
 	${MKDIR} ${WRKSRC}/build
 	${LN} -f -s ${WRKDIR}/${LIBCXX} ${WRKDIR}/libcxx
-	${LN} -f -s ${WRKDIR}/${LLVMDIST} ${WRKDIR}/llvm
 
 post-install:
 	cd ${WRKSRC}/include && ${PAX} -rw . ${DESTDIR}${PREFIX}/include

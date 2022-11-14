@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2022/08/12 08:52:51 pin Exp $
+@comment $NetBSD: PLIST,v 1.8 2022/11/14 18:44:05 adam Exp $
 bin/ld.lld
 bin/ld64.lld
 bin/lld
@@ -18,26 +18,6 @@ include/lld/Common/Strings.h
 include/lld/Common/TargetOptionsCommandFlags.h
 include/lld/Common/Timer.h
 include/lld/Common/Version.h
-include/lld/Core/AbsoluteAtom.h
-include/lld/Core/ArchiveLibraryFile.h
-include/lld/Core/Atom.h
-include/lld/Core/DefinedAtom.h
-include/lld/Core/Error.h
-include/lld/Core/File.h
-include/lld/Core/Instrumentation.h
-include/lld/Core/LinkingContext.h
-include/lld/Core/Node.h
-include/lld/Core/Pass.h
-include/lld/Core/PassManager.h
-include/lld/Core/Reader.h
-include/lld/Core/Reference.h
-include/lld/Core/Resolver.h
-include/lld/Core/SharedLibraryAtom.h
-include/lld/Core/SharedLibraryFile.h
-include/lld/Core/Simple.h
-include/lld/Core/SymbolTable.h
-include/lld/Core/UndefinedAtom.h
-include/lld/Core/Writer.h
 lib/cmake/lld/LLDConfig.cmake
 lib/cmake/lld/LLDTargets-release.cmake
 lib/cmake/lld/LLDTargets.cmake
