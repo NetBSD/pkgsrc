@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.552 2022/09/26 14:03:10 pin Exp $
+# $NetBSD: Makefile,v 1.553 2022/11/14 18:51:28 wiz Exp $
 
 COMMENT=	Mathematics
 
@@ -386,6 +386,7 @@ SUBDIR+=	py-claripy
 SUBDIR+=	py-ephem
 SUBDIR+=	py-fpconst
 SUBDIR+=	py-gmpy
+SUBDIR+=	py-gmpy2
 SUBDIR+=	py-gwcs
 SUBDIR+=	py-infinity
 SUBDIR+=	py-intervals
