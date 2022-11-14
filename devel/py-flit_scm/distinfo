@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/07/03 12:31:48 wiz Exp $
+$NetBSD: distinfo,v 1.2 2022/11/14 09:13:44 adam Exp $
 
-BLAKE2s (flit_scm-1.6.2.tar.gz) = b3a6f3da58feac79f13296d2c19b415fbb5f9dca7a9ebe320975c7787af6e666
-SHA512 (flit_scm-1.6.2.tar.gz) = 5e1f7580223fcceb6b61a04147083532b2564e69b12b07a78b156ef42bfa9319b31b0a2460370d4c0db9a8e934a14ab1468d6d67fbf260251defa62a2c8de5a5
-Size (flit_scm-1.6.2.tar.gz) = 2364 bytes
+BLAKE2s (flit_scm-1.7.0.tar.gz) = c7a4904ba09190a82e007470ea1b5e89cef1df8d2597f93fbcf3d5bc0c361984
+SHA512 (flit_scm-1.7.0.tar.gz) = feea98fd46a32a5d55d7f64c93aca68ea959b89a49e0e0b59017d8ce0c5c9d1ddcae95c713533dca0f7d39314450f04ae5233111c2460437fdbae40f500c0901
+Size (flit_scm-1.7.0.tar.gz) = 2405 bytes
