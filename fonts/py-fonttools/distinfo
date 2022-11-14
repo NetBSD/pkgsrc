@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.60 2022/10/10 08:47:10 adam Exp $
+$NetBSD: distinfo,v 1.61 2022/11/14 09:58:45 adam Exp $
 
-BLAKE2s (fonttools-4.37.4.zip) = 79224891000bfef5f05bf4619587ef12daa69491714438088b9315648fd6d495
-SHA512 (fonttools-4.37.4.zip) = bc1dc17913ded58496d03b7e1548ef7792800703f0cdc4dfa16114739ffffbb4a060046e5b59e6b0138ae2c155bacea6775bb32fd5e6bf5617404eba68d717e3
-Size (fonttools-4.37.4.zip) = 5061560 bytes
+BLAKE2s (fonttools-4.38.0.zip) = d6f2340439520bb05d3a27dc5a9555a16ac47e1f99ae550532d2a962545e6872
+SHA512 (fonttools-4.38.0.zip) = 4c37d180c8c1bba2d3d1c30ab3425e4416d53cc7d94cf61a0d41a8d4fd2cc3eb10fc389022bffd4f09736dcb8624ed7107f7fabfdcc22a1069c3bbe74067f6d9
+Size (fonttools-4.38.0.zip) = 5071980 bytes
