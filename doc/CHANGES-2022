@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5495 2022/11/14 14:56:26 pin Exp $
+$NetBSD: CHANGES-2022,v 1.5496 2022/11/14 15:52:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8297,3 +8297,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated biology/py-dnaio to 0.9.1 [wiz 2022-11-14]
 	Updated graphics/oculante to 0.6.22 [pin 2022-11-14]
 	Updated www/wiki-tui to 0.6.0 [pin 2022-11-14]
+	Updated devel/py-tortoisehg to 6.2.3 [wiz 2022-11-14]
