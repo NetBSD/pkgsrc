@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2022/09/12 10:51:29 adam Exp $
+# $NetBSD: Makefile,v 1.10 2022/11/14 14:34:49 wiz Exp $
 
 DISTNAME=	eth-hash-0.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,7 +18,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-tox>=3.14.6:../../devel/py-tox
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 311
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
