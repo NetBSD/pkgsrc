@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5488 2022/11/13 21:21:12 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.5489 2022/11/14 09:14:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8280,3 +8280,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/kitty to 0.26.5 [pin 2022-11-13]
 	Updated x11/xlsatoms to 1.1.4 [wiz 2022-11-13]
 	Updated x11/xlsclients to 1.1.5 [wiz 2022-11-13]
+	Updated devel/py-hypothesis to 6.57.1 [adam 2022-11-14]
+	Updated devel/py-flit_core to 3.8.0 [adam 2022-11-14]
+	Updated devel/py-flit to 3.8.0 [adam 2022-11-14]
+	Updated devel/py-flit_scm to 1.7.0 [adam 2022-11-14]
