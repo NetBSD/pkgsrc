@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2022/04/07 12:28:15 adam Exp $
+# $NetBSD: Makefile,v 1.6 2022/11/14 09:09:26 adam Exp $
 
-DISTNAME=	flit_core-3.7.1
+DISTNAME=	flit_core-3.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/flit-core/}
