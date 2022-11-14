@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2022/04/25 08:10:07 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2022/11/14 10:35:15 wiz Exp $
 bin/mscore
 bin/musescore
 man/man1/mscore.1
@@ -55,7 +55,7 @@ share/mscore-3.6/locale/qt_lv.qm
 share/mscore-3.6/locale/qt_nl.qm
 share/mscore-3.6/locale/qt_nn.qm
 share/mscore-3.6/locale/qt_pl.qm
-share/mscore-3.6/locale/qt_pt.qm
+share/mscore-3.6/locale/qt_pt_PT.qm
 share/mscore-3.6/locale/qt_pt_BR.qm
 share/mscore-3.6/locale/qt_ru.qm
 share/mscore-3.6/locale/qt_sk.qm
