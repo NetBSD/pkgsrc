@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/06/17 14:54:57 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/11/14 23:50:35 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -29,12 +29,21 @@ ${PYSITELIB}/pywt/_extensions/_swt.so
 ${PYSITELIB}/pywt/_functions.py
 ${PYSITELIB}/pywt/_functions.pyc
 ${PYSITELIB}/pywt/_functions.pyo
+${PYSITELIB}/pywt/_mra.py
+${PYSITELIB}/pywt/_mra.pyc
+${PYSITELIB}/pywt/_mra.pyo
 ${PYSITELIB}/pywt/_multidim.py
 ${PYSITELIB}/pywt/_multidim.pyc
 ${PYSITELIB}/pywt/_multidim.pyo
 ${PYSITELIB}/pywt/_multilevel.py
 ${PYSITELIB}/pywt/_multilevel.pyc
 ${PYSITELIB}/pywt/_multilevel.pyo
+${PYSITELIB}/pywt/_pytest.py
+${PYSITELIB}/pywt/_pytest.pyc
+${PYSITELIB}/pywt/_pytest.pyo
+${PYSITELIB}/pywt/_pytesttester.py
+${PYSITELIB}/pywt/_pytesttester.pyc
+${PYSITELIB}/pywt/_pytesttester.pyo
 ${PYSITELIB}/pywt/_swt.py
 ${PYSITELIB}/pywt/_swt.pyc
 ${PYSITELIB}/pywt/_swt.pyo
@@ -47,6 +56,9 @@ ${PYSITELIB}/pywt/_utils.pyo
 ${PYSITELIB}/pywt/_wavelet_packets.py
 ${PYSITELIB}/pywt/_wavelet_packets.pyc
 ${PYSITELIB}/pywt/_wavelet_packets.pyo
+${PYSITELIB}/pywt/conftest.py
+${PYSITELIB}/pywt/conftest.pyc
+${PYSITELIB}/pywt/conftest.pyo
 ${PYSITELIB}/pywt/data/__init__.py
 ${PYSITELIB}/pywt/data/__init__.pyc
 ${PYSITELIB}/pywt/data/__init__.pyo
@@ -106,6 +118,9 @@ ${PYSITELIB}/pywt/tests/test_matlab_compatibility_cwt.pyo
 ${PYSITELIB}/pywt/tests/test_modes.py
 ${PYSITELIB}/pywt/tests/test_modes.pyc
 ${PYSITELIB}/pywt/tests/test_modes.pyo
+${PYSITELIB}/pywt/tests/test_mra.py
+${PYSITELIB}/pywt/tests/test_mra.pyc
+${PYSITELIB}/pywt/tests/test_mra.pyo
 ${PYSITELIB}/pywt/tests/test_multidim.py
 ${PYSITELIB}/pywt/tests/test_multidim.pyc
 ${PYSITELIB}/pywt/tests/test_multidim.pyo
@@ -130,6 +145,9 @@ ${PYSITELIB}/pywt/tests/test_wp.pyo
 ${PYSITELIB}/pywt/tests/test_wp2d.py
 ${PYSITELIB}/pywt/tests/test_wp2d.pyc
 ${PYSITELIB}/pywt/tests/test_wp2d.pyo
+${PYSITELIB}/pywt/tests/test_wpnd.py
+${PYSITELIB}/pywt/tests/test_wpnd.pyc
+${PYSITELIB}/pywt/tests/test_wpnd.pyo
 ${PYSITELIB}/pywt/version.py
 ${PYSITELIB}/pywt/version.pyc
 ${PYSITELIB}/pywt/version.pyo
