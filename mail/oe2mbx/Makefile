@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2019/11/02 16:25:24 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.18 2022/11/14 10:51:02 wiz Exp $
 
 DISTNAME=	oe2mbx-1.21
 PKGREVISION=	1
@@ -19,6 +18,9 @@ MAKE_FILE=	makefile
 MAKE_ENV+=	INSTALL_PROGRAM=${INSTALL_PROGRAM:Q} \
 		INSTALL_LIB=${INSTALL_LIB:Q} \
 		INSTALL_DATA=${INSTALL_DATA:Q}
+
+# gcc: error: src/liboe.o: No such file or directory
+MAKE_JOBS_SAFE=	no
 
 BUILD_TARGET=		liboe oe2mbx
 INSTALLATION_DIRS=	bin lib include
