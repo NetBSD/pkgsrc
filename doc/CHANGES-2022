@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5492 2022/11/14 10:12:04 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5493 2022/11/14 10:39:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8294,3 +8294,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/py-xmlschema to 2.1.1 [adam 2022-11-14]
 	Updated devel/py-test-mypy to 0.10.1 [adam 2022-11-14]
 	Updated sysutils/py-filetype to 1.2.0 [adam 2022-11-14]
+	Updated biology/py-dnaio to 0.9.1 [wiz 2022-11-14]
