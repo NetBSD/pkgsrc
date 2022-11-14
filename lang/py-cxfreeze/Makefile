@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2022/11/14 19:19:24 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2022/11/14 19:19:57 wiz Exp $
 
 DISTNAME=	cx_Freeze-6.13.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_F/f/}
@@ -9,6 +9,8 @@ MAINTAINER=	helgoman@users.sourceforge.net
 HOMEPAGE=	http://cx-freeze.sourceforge.net/
 COMMENT=	Freezing python scripts into executables
 LICENSE=	python-software-foundation
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 REPLACE_PYTHON=	cx_Freeze/samples/PyQt5/PyQt5app.py
 
