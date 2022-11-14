@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2022/04/07 12:28:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/11/14 09:09:26 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
@@ -35,6 +36,7 @@ ${PYSITELIB}/flit_core/tests/samples/imported_version/package1/_version.py
 ${PYSITELIB}/flit_core/tests/samples/imported_version/package1/_version.pyc
 ${PYSITELIB}/flit_core/tests/samples/imported_version/pyproject.toml
 ${PYSITELIB}/flit_core/tests/samples/inclusion/LICENSES/README
+${PYSITELIB}/flit_core/tests/samples/inclusion/doc/subdir/subsubdir/test.md
 ${PYSITELIB}/flit_core/tests/samples/inclusion/doc/subdir/test.txt
 ${PYSITELIB}/flit_core/tests/samples/inclusion/doc/test.rst
 ${PYSITELIB}/flit_core/tests/samples/inclusion/doc/test.txt
@@ -53,10 +55,15 @@ ${PYSITELIB}/flit_core/tests/samples/module2.py
 ${PYSITELIB}/flit_core/tests/samples/module2.pyc
 ${PYSITELIB}/flit_core/tests/samples/moduleunimportable.py
 ${PYSITELIB}/flit_core/tests/samples/moduleunimportable.pyc
+${PYSITELIB}/flit_core/tests/samples/moduleunimportabledouble.py
+${PYSITELIB}/flit_core/tests/samples/moduleunimportabledouble.pyc
 ${PYSITELIB}/flit_core/tests/samples/my-description.rst
 ${PYSITELIB}/flit_core/tests/samples/no_docstring-pkg.toml
 ${PYSITELIB}/flit_core/tests/samples/no_docstring.py
 ${PYSITELIB}/flit_core/tests/samples/no_docstring.pyc
+${PYSITELIB}/flit_core/tests/samples/normalization/my_python_module.py
+${PYSITELIB}/flit_core/tests/samples/normalization/my_python_module.pyc
+${PYSITELIB}/flit_core/tests/samples/normalization/pyproject.toml
 ${PYSITELIB}/flit_core/tests/samples/ns1-pkg/EG_README.rst
 ${PYSITELIB}/flit_core/tests/samples/ns1-pkg/ns1/pkg/__init__.py
 ${PYSITELIB}/flit_core/tests/samples/ns1-pkg/ns1/pkg/__init__.pyc
