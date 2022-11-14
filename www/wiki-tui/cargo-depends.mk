@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.4 2022/05/17 18:35:38 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.5 2022/11/14 14:56:01 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.16.0
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
@@ -29,6 +29,7 @@ CARGO_CRATE_DEPENDS+=	crossbeam-utils-0.8.5
 CARGO_CRATE_DEPENDS+=	crossterm-0.22.1
 CARGO_CRATE_DEPENDS+=	crossterm_winapi-0.9.0
 CARGO_CRATE_DEPENDS+=	cursive-0.17.0
+CARGO_CRATE_DEPENDS+=	cursive-aligned-view-0.6.0
 CARGO_CRATE_DEPENDS+=	cursive_buffered_backend-0.6.0
 CARGO_CRATE_DEPENDS+=	cursive_core-0.3.2
 CARGO_CRATE_DEPENDS+=	darling-0.12.4
@@ -193,7 +194,7 @@ CARGO_CRATE_DEPENDS+=	tinyvec_macros-0.1.0
 CARGO_CRATE_DEPENDS+=	tokio-1.12.0
 CARGO_CRATE_DEPENDS+=	tokio-native-tls-0.3.0
 CARGO_CRATE_DEPENDS+=	tokio-util-0.6.8
-CARGO_CRATE_DEPENDS+=	toml-0.5.8
+CARGO_CRATE_DEPENDS+=	toml-0.5.9
 CARGO_CRATE_DEPENDS+=	tower-service-0.3.1
 CARGO_CRATE_DEPENDS+=	tracing-0.1.29
 CARGO_CRATE_DEPENDS+=	tracing-core-0.1.21
