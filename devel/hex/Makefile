@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/11/10 14:23:53 nikita Exp $
+# $NetBSD: Makefile,v 1.3 2022/11/14 17:48:14 nikita Exp $
 
 DISTNAME=	hex-2.0.0
 PKGREVISION=	1
@@ -14,6 +14,8 @@ COMMENT=	Package manager for the Erlang VM
 LICENSE=	apache-2.0
 
 ELIXIR_APP_NAME=	hex
+# does this pull in dependencies over the network?
+MIX_TARGET=		local.hex --force
 
 .include "../../lang/elixir/mix.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,10 +1,11 @@
-# $NetBSD: mix.mk,v 1.1 2022/11/10 14:23:15 nikita Exp $
+# $NetBSD: mix.mk,v 1.2 2022/11/14 17:48:14 nikita Exp $
 #
 # Common logic that can be used by packages that use mix as a build tool.
 #
 # Inspired by elixir.mk from FreeBSD ports.
 #
 # It is not yet fully tested.
+# Should packages set HEX_HOME and HOME on their own?
 # See devel/hex for an example.
 
 DEPENDS+=		elixir>=1.14.0:../../lang/elixir
@@ -22,6 +23,9 @@ MIX_RUN_DEPS?=
 MIX_DOC_DIRS?=
 MIX_DOC_FILES?=
 MIX_ENV?=
+MIX_ENV+=		HEX_OFFLINE="1"
+MIX_ENV+=		HEX_HOME="${WRKSRC}/.home"
+MIX_ENV+=		HOME=${WRKSRC}/_build
 MIX_ENV_NAME?=		prod
 MIX_BUILD_NAME?=	prod
 MIX_TARGET?=		compile
@@ -51,8 +55,14 @@ do-mix-install:
 	${MKDIR} ${ELIXIR_APP_ROOT}/lib
 	cd ${WRKSRC}/lib && ${CP} -R * ${ELIXIR_APP_ROOT}/lib
 	${MKDIR} ${ELIXIR_APP_ROOT}/ebin
-	${INSTALL_DATA} ${WRKSRC}/_build/${MIX_BUILD_NAME}/lib/${ELIXIR_APP_NAME}/ebin/* \
-		${ELIXIR_APP_ROOT}/ebin
+	if test -d ${WRKSRC}/_build/.mix/archives; then \
+		${INSTALL_DATA} ${WRKSRC}/_build/.mix/archives/${ELIXIR_APP_NAME}-${PKGVERSION_NOREV}/${ELIXIR_APP_NAME}-${PKGVERSION_NOREV}/ebin/* \
+			${ELIXIR_APP_ROOT}/ebin; \
+	fi
+	if test -d ${WRKSRC}/_build/${MIX_BUILD_NAME}; then \
+		${INSTALL_DATA} ${WRKSRC}/_build/${MIX_BUILD_NAME}/lib/${ELIXIR_APP_NAME}/ebin/* \
+			${ELIXIR_APP_ROOT}/ebin; \
+	fi
 	if test -d ${WRKSRC}/priv; then \
 		${MKDIR} ${ELIXIR_APP_ROOT}/priv; \
 		cd ${WRKSRC}/priv && ${CP} -R * ${ELIXIR_APP_ROOT}/priv; \
