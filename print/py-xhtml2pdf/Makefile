@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2022/06/22 01:26:35 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2022/11/14 19:32:41 wiz Exp $
 
-DISTNAME=	xhtml2pdf-0.2.5
+DISTNAME=	xhtml2pdf-0.2.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	print python
 MASTER_SITES=	${MASTER_SITE_PYPI:=x/xhtml2pdf/}
 
@@ -19,8 +18,9 @@ DEPENDS+=	${PYPKGPREFIX}-html5lib>=1.0:../../textproc/py-html5lib
 DEPENDS+=	${PYPKGPREFIX}-reportlab>=3.3.0:../../print/py-reportlab
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
-USE_LANGUAGES=	# none
-USE_PKG_RESOURCES=	yes
+USE_LANGUAGES=			# none
+USE_PKG_RESOURCES=		yes
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 .for bin in pisa xhtml2pdf
