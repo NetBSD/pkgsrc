@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5518 2022/11/15 09:30:59 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5519 2022/11/15 10:02:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8346,3 +8346,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed x11/py-sip-qt4 [wiz 2022-11-15]
 	Removed devel/py-argh [adam 2022-11-15]
 	Updated devel/py-exceptiongroup to 1.0.3 [adam 2022-11-15]
+	Updated devel/py-trio to 0.22.0 [adam 2022-11-15]
+	Updated devel/py-test-trio to 0.8.0 [adam 2022-11-15]
