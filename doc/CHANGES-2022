@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5529 2022/11/15 12:18:26 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5530 2022/11/15 15:37:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8360,3 +8360,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/fd-find to 8.5.3 [pin 2022-11-15]
 	Added www/py-test-httpx version 0.21.2 [adam 2022-11-15]
 	Updated net/py-zeep to 4.2.0 [adam 2022-11-15]
+	Updated net/py-prometheus_client to 0.15.0 [wiz 2022-11-15]
