@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.23 2022/01/23 10:04:55 schmonz Exp $
+$NetBSD: distinfo,v 1.24 2022/11/15 08:54:12 adam Exp $
 
-BLAKE2s (po4a-0.66.tar.gz) = 75f02908c46cf6426965892963db39455e6826595697cb03ddb6b1dca9d49575
-SHA512 (po4a-0.66.tar.gz) = f72e1267cbd6ced01ecc362c327b1634c47dff15398b48644548d28e01ba91108d5626e6d4abcfcb360697e4c0affa3228c6993653ce8f257acbbb3d7ae20fc4
-Size (po4a-0.66.tar.gz) = 4240059 bytes
-SHA1 (patch-Po4aBuilder.pm) = ad1db22d66304ca944ec598a4fe3e0ea0be7cf50
+BLAKE2s (po4a-0.68.tar.gz) = dd89f385879a4458793781126cfe2c8940f5afabd0e47299673395201a7e41d6
+SHA512 (po4a-0.68.tar.gz) = d7c60a3647d8f4265ce6f016d33430c72775ae19eb2efb240532545b08280368fea70db3360131f6537eb7cc72c19299dff4b6f938ac09cbef1b2db1a93d996e
+Size (po4a-0.68.tar.gz) = 4605485 bytes
+SHA1 (patch-Po4aBuilder.pm) = 1ce48fe26abeeabbfaddaf4cdb21389cbf18dd4f
