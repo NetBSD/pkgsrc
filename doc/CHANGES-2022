@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5515 2022/11/15 09:14:58 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.5516 2022/11/15 09:17:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8342,3 +8342,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-pyrsistent to 0.19.2 [adam 2022-11-15]
 	Removed devel/bzr-explorer [wiz 2022-11-15]
 	Removed devel/qbzr [wiz 2022-11-15]
+	Removed x11/py-qt4 [wiz 2022-11-15]
