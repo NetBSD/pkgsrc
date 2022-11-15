@@ -1,12 +1,12 @@
-$NetBSD: patch-src_bootstrap_bootstrap.py,v 1.15 2022/10/26 12:51:46 he Exp $
+$NetBSD: patch-src_bootstrap_bootstrap.py,v 1.16 2022/11/15 23:11:14 he Exp $
 
 Use `uname -p` on NetBSD, as that is reliable and sensible there.
 Handle earmv[67]hf for NetBSD.
 Default to non-verbose compilation.
 
---- src/bootstrap/bootstrap.py.orig	2021-02-10 17:36:44.000000000 +0000
+--- src/bootstrap/bootstrap.py.orig	2022-09-19 14:07:21.000000000 +0000
 +++ src/bootstrap/bootstrap.py
-@@ -278,6 +278,11 @@ def default_build_triple(verbose):
+@@ -244,6 +244,11 @@ def default_build_triple(verbose):
          'OpenBSD': 'unknown-openbsd'
      }
  
@@ -18,7 +18,7 @@ Default to non-verbose compilation.
      # Consider the direct transformation first and then the special cases
      if ostype in ostype_mapper:
          ostype = ostype_mapper[ostype]
-@@ -331,6 +336,7 @@ def default_build_triple(verbose):
+@@ -297,6 +302,7 @@ def default_build_triple(verbose):
      cputype_mapper = {
          'BePC': 'i686',
          'aarch64': 'aarch64',
@@ -26,7 +26,7 @@ Default to non-verbose compilation.
          'amd64': 'x86_64',
          'arm64': 'aarch64',
          'i386': 'i686',
-@@ -369,10 +375,16 @@ def default_build_triple(verbose):
+@@ -335,10 +341,16 @@ def default_build_triple(verbose):
              ostype = 'linux-androideabi'
          else:
              ostype += 'eabihf'
@@ -44,7 +44,7 @@ Default to non-verbose compilation.
          else:
              ostype += 'eabihf'
      elif cputype == 'mips':
-@@ -791,7 +803,7 @@ class RustBuild(object):
+@@ -757,7 +769,7 @@ class RustBuild(object):
                  self.cargo()))
          args = [self.cargo(), "build", "--manifest-path",
                  os.path.join(self.rust_root, "src/bootstrap/Cargo.toml")]
