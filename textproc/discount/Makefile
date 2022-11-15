@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2022/07/25 11:12:29 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2022/11/15 11:37:56 schmonz Exp $
 
-DISTNAME=	discount-2.2.7
+DISTNAME=	discount-2.2.7b
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Orc/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
