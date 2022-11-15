@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.29 2022/11/15 15:42:29 wiz Exp $
+# $NetBSD: options.mk,v 1.30 2022/11/15 23:11:14 he Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.rust
 PKG_SUPPORTED_OPTIONS+=	rust-cargo-static rust-docs
@@ -18,9 +18,6 @@ PKG_SUGGESTED_OPTIONS+=		rust-internal-llvm
 .if !empty(TARGET)
 PKG_SUGGESTED_OPTIONS+=		rust-internal-llvm
 .endif
-
-# as llvm 15 does not work with rust 1.63, always use internal llvm for now
-PKG_SUGGESTED_OPTIONS+=		rust-internal-llvm
 
 # Bundle OpenSSL and curl into the cargo binary when producing
 # bootstraps on NetBSD.
