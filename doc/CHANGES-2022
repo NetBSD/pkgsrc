@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5514 2022/11/15 09:13:46 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5515 2022/11/15 09:14:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8340,3 +8340,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated multimedia/mkvtoolnix to 72.0.0 [adam 2022-11-15]
 	Updated devel/py-cwcwidth to 0.1.8 [adam 2022-11-15]
 	Updated devel/py-pyrsistent to 0.19.2 [adam 2022-11-15]
+	Removed devel/bzr-explorer [wiz 2022-11-15]
+	Removed devel/qbzr [wiz 2022-11-15]

@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22352 2022/11/14 18:49:31 adam Exp $
+$NetBSD: TODO,v 1.22353 2022/11/15 09:14:58 wiz Exp $
 
 Suggested new packages
 ======================
@@ -505,7 +505,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o bottlerocket-0.05b3
 	o bugzilla3-3.6.13
 	o byobu-5.133
-	o bzr-explorer-1.3.0
 	o bzr-gtk-0.103.0
 	o bzrtools-2.6.0
 	o c4-1.10
@@ -1308,7 +1307,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o q5go-2.1.1
 	o qalculate-3.18.0
 	o qalculate-gtk-3.18.0
-	o qbzr-0.23.2
 	o qca2-2.3.2
 	o qca2-gnupg-2.3.2
 	o qca2-ossl-2.3.2
