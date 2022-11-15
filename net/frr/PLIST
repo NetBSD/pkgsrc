@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2022/05/16 11:54:19 kardel Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/11/15 09:25:07 wiz Exp $
 bin/mtracebis
 bin/vtysh
 include/frr/agg_table.h
@@ -237,6 +237,7 @@ ${PLIST.doc}share/doc/frr/html/_sources/vrrp.rst.txt
 ${PLIST.doc}share/doc/frr/html/_sources/vtysh.rst.txt
 ${PLIST.doc}share/doc/frr/html/_sources/watchfrr.rst.txt
 ${PLIST.doc}share/doc/frr/html/_sources/zebra.rst.txt
+${PLIST.doc}share/doc/frr/html/_static/_sphinx_javascript_frameworks_compat.js
 ${PLIST.doc}share/doc/frr/html/_static/basic.css
 ${PLIST.doc}share/doc/frr/html/_static/classic.css
 ${PLIST.doc}share/doc/frr/html/_static/default.css
@@ -254,6 +255,7 @@ ${PLIST.doc}share/doc/frr/html/_static/plus.png
 ${PLIST.doc}share/doc/frr/html/_static/pygments.css
 ${PLIST.doc}share/doc/frr/html/_static/searchtools.js
 ${PLIST.doc}share/doc/frr/html/_static/sidebar.js
+${PLIST.doc}share/doc/frr/html/_static/sphinx_highlight.js
 ${PLIST.doc}share/doc/frr/html/_static/underscore.js
 ${PLIST.doc}share/doc/frr/html/babeld.html
 ${PLIST.doc}share/doc/frr/html/basic.html
