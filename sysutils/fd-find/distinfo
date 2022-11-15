@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2022/11/03 20:36:21 pin Exp $
+$NetBSD: distinfo,v 1.8 2022/11/15 12:15:09 pin Exp $
 
 BLAKE2s (aho-corasick-0.7.19.crate) = b13c5789625903a58cfdb854bca6eb074329fde83ffb2581686f105d52d31996
 SHA512 (aho-corasick-0.7.19.crate) = 0d63d29079650bde4e8a9f8529716b9d8c42db076a1d74715116240c2628173f1e86fb29c08a25ad07a0148e48789ab20de0c186a8b3dfb193cbfeb0d76ae78c
@@ -39,15 +39,15 @@ Size (cfg-if-1.0.0.crate) = 7934 bytes
 BLAKE2s (chrono-0.4.22.crate) = b23f880426399cc9de23adc3c7cfd044c935cc90d41215e39d48fad04a15ccbe
 SHA512 (chrono-0.4.22.crate) = de856679ec16afe035176b22125a00ced532d49c8babac0a88fa5f6e4a3d9e526a34ee8bf51639653fc313a5703a202b1be013aa16fdd72a505151d7aafa7c44
 Size (chrono-0.4.22.crate) = 185570 bytes
-BLAKE2s (clap-4.0.18.crate) = 672e7a7b4e974a1b09d750d8c87cc52e55fe88bcbed11996285aeb9104dc14f6
-SHA512 (clap-4.0.18.crate) = d6776eb21327e49dbcbe2f2b42fd70a7c16eee6710f0460db825643979d6b00f66285cd99f2836abbb8c4d94d42e36661ef041411efd0f0b4002981fefc85c11
-Size (clap-4.0.18.crate) = 204914 bytes
-BLAKE2s (clap_complete-4.0.3.crate) = 63242696b2f21423d04062dc50027b52f11bf969ffe04b275af1c45624925bd2
-SHA512 (clap_complete-4.0.3.crate) = 3cb8d02662b2735074dd078ece097aa4c2f4b9415fbe788f1795712b67f9adc8252f838e56355fa34effb79f26808a8aa5419c527d7982831a2868de507843a8
-Size (clap_complete-4.0.3.crate) = 31170 bytes
-BLAKE2s (clap_derive-4.0.18.crate) = 26b9f436f9f663ed4da3473c34c7bbe2474c915af642ab6c44c1f381edb13fab
-SHA512 (clap_derive-4.0.18.crate) = 221523e93f7f5a49fd9be2d4b005a229b1db656aba1280f3cac109564a668fdb4e3e181bdde245c55b1f5a1487a5fbaede70391ab25110e14b446fb72bb2ae40
-Size (clap_derive-4.0.18.crate) = 27348 bytes
+BLAKE2s (clap-4.0.22.crate) = 6efa47cf9be99bd615319d5c5c516d60c3cfaec89f0a6b50ac770e6f60564cdd
+SHA512 (clap-4.0.22.crate) = d6b54e31c4780be7d712bed266b2cee4ad1454c75d9dc542fac301156e1724ca07422228632d901b4e7590eda13ec2c8349ba59c5da12ac1991e9fac540d0c55
+Size (clap-4.0.22.crate) = 205175 bytes
+BLAKE2s (clap_complete-4.0.5.crate) = db8143c6c488a777a7852a8fe01d7282c906cb7efee9f59ba0f1db8558b434ee
+SHA512 (clap_complete-4.0.5.crate) = 45758ff5f93f0e6a866bc6ea2d86238bb3225726b570cc2ddddb110d57f72cc8618d796d123bd8c11b995b1f8876d4772ea9cb1c60cd2b971779dc739c609c37
+Size (clap_complete-4.0.5.crate) = 31996 bytes
+BLAKE2s (clap_derive-4.0.21.crate) = 18d34043fa74f11593abaec57ea4f7ad19e14176479abba4ea47ecd981a5e60d
+SHA512 (clap_derive-4.0.21.crate) = 95bbddfd09de9dc1c64266743e9877aaed086be56f7e0f6e933dc5245724fead7163316a7bb4a744bc81597e4d079fb0abfea891766a17e0b1aafba011dd74df
+Size (clap_derive-4.0.21.crate) = 27567 bytes
 BLAKE2s (clap_lex-0.3.0.crate) = ac411bb59e5fd533a6005707abcdc90ec0c6f33f60a05c82b8880fde255c2554
 SHA512 (clap_lex-0.3.0.crate) = 5e601d540e46e527f6a2ea1959fa5aa035ad823008806f3a5adb4785f1928de4c9fe04e61680c64bcb87ed32b2e991951ec27c5cc5acdcfae51cdc61767ff100
 Size (clap_lex-0.3.0.crate) = 9671 bytes
@@ -96,9 +96,9 @@ Size (errno-dragonfly-0.1.2.crate) = 1810 bytes
 BLAKE2s (faccess-0.2.4.crate) = 7b37597f1813fb42fd3e6035990557ac078be54de6ef21969148b06923a3a30e
 SHA512 (faccess-0.2.4.crate) = 6d3328238dcdad0a310ad33e28ca32e68314c7a1b99b0c88c4bb5b380c5a385ec8deb23bb5e8f6bb2eff957becf0b514c488564eb6bd88d471f6ebd3a1614efd
 Size (faccess-0.2.4.crate) = 7262 bytes
-BLAKE2s (fd-find-8.5.2.tar.gz) = 10b0cc129b357388c7c688b8c7e69a848e2522a863a3a5a77ffbf155d849e844
-SHA512 (fd-find-8.5.2.tar.gz) = 24496f5553eb2e7dfdac295e1844d2ec542e87eef3ffbd888e68aea4f9a235144d4bb5b955dda31510fccbb8f6f1de09f4bfa852ab4990b035e8d8dbbe7a7f70
-Size (fd-find-8.5.2.tar.gz) = 114140 bytes
+BLAKE2s (fd-find-8.5.3.tar.gz) = 3835bd449e79832583a8f0ae94828e598d56f0d74be5504bff4e61630bcfd6d1
+SHA512 (fd-find-8.5.3.tar.gz) = 460167e458c62944629736c9ba513fc30138d7b48498324be9c46ed1bd9b833e2789c5005af50d526f5ae8466368b7c29492924e30dd4a1bb55b7fd79cf84205
+Size (fd-find-8.5.3.tar.gz) = 113931 bytes
 BLAKE2s (filetime-0.2.18.crate) = 815c171a07b472b7da55337b3cfccc5d53232cabe070d3df4bdabe13eaeb4c39
 SHA512 (filetime-0.2.18.crate) = d1631a50d0f1d3f43e316c6348a3595ea4a7d1116e904ac2bf6586b76ea5aef98ba84ff6e6d0b2a08de2515b8ad40f52fb95d6ccfaf1f316cfd7c5f6f8332129
 Size (filetime-0.2.18.crate) = 14622 bytes
