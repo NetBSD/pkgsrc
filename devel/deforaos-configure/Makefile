@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2022/04/13 00:06:21 khorben Exp $
+# $NetBSD: Makefile,v 1.13 2022/11/15 18:32:41 khorben Exp $
 
 DISTNAME=	configure-0.4.3
 PKGNAME=	deforaos-configure-0.4.3
@@ -27,7 +27,7 @@ AUTO_MKDIRS=	yes
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "Darwin"
-LDFLAGS+=-lm
+LDFLAGS+=	-lm
 .endif
 
 .if ${PKGMANDIR} != "share/man"
