@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.22 2022/10/03 18:10:51 schmonz Exp $
+# $NetBSD: Makefile.common,v 1.23 2022/11/15 12:07:29 schmonz Exp $
 # used by textproc/highlight/Makefile
 # used by textproc/libhighlight/Makefile
 # used by textproc/p5-highlight/Makefile
 
 DISTNAME=		highlight-${VERSION}
-VERSION=		4.3
+VERSION=		4.4
 CATEGORIES=		textproc
 MASTER_SITES=		http://www.andre-simon.de/zip/
 EXTRACT_SUFX=		.tar.bz2
