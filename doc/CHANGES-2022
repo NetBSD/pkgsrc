@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5519 2022/11/15 10:02:28 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5520 2022/11/15 10:16:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8348,3 +8348,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-exceptiongroup to 1.0.3 [adam 2022-11-15]
 	Updated devel/py-trio to 0.22.0 [adam 2022-11-15]
 	Updated devel/py-test-trio to 0.8.0 [adam 2022-11-15]
+	Updated math/py-asteval to 0.9.28 [adam 2022-11-15]
+	Updated biology/py-pydicom to 2.3.1 [adam 2022-11-15]
