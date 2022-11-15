@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.64 2022/08/11 05:09:22 gutteridge Exp $
+# $NetBSD: Makefile,v 1.65 2022/11/15 18:27:53 khorben Exp $
 
-DISTNAME=	Surfer-0.3.0
-PKGNAME=	deforaos-surfer-0.3.0
-PKGREVISION=	11
+DISTNAME=	Surfer-0.3.1
+PKGNAME=	deforaos-surfer-0.3.1
 CATEGORIES=	www
 MASTER_SITES=	https://ftp.defora.org/pub/DeforaOS/Apps/Desktop/src/Surfer/
 
@@ -29,14 +28,10 @@ AUTO_MKDIRS=	yes
 
 .if ${PKGMANDIR} != "share/man"
 post-install:
-	${MV} ${DESTDIR}${PREFIX}/share/man/html1/download.html ${DESTDIR}${PREFIX}/${PKGMANDIR}/html1/download.html
-	${MV} ${DESTDIR}${PREFIX}/share/man/html1/htmlapp.html ${DESTDIR}${PREFIX}/${PKGMANDIR}/html1/htmlapp.html
-	${MV} ${DESTDIR}${PREFIX}/share/man/html1/helper.html ${DESTDIR}${PREFIX}/${PKGMANDIR}/html1/helper.html
-	${MV} ${DESTDIR}${PREFIX}/share/man/html1/surfer.html ${DESTDIR}${PREFIX}/${PKGMANDIR}/html1/surfer.html
-	${MV} ${DESTDIR}${PREFIX}/share/man/man1/download.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/download.1
-	${MV} ${DESTDIR}${PREFIX}/share/man/man1/helper.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/helper.1
-	${MV} ${DESTDIR}${PREFIX}/share/man/man1/htmlapp.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/htmlapp.1
-	${MV} ${DESTDIR}${PREFIX}/share/man/man1/surfer.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/surfer.1
+. for page in download helper htmlapp surfer
+	${MV} ${DESTDIR}${PREFIX}/share/man/html1/${page}.html ${DESTDIR}${PREFIX}/${PKGMANDIR}/html1/${page}.html
+	${MV} ${DESTDIR}${PREFIX}/share/man/man1/${page}.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/${page}.1
+. endfor
 	${RMDIR} ${DESTDIR}${PREFIX}/share/man/html1
 	${RMDIR} ${DESTDIR}${PREFIX}/share/man/man1
 	${RMDIR} ${DESTDIR}${PREFIX}/share/man
@@ -44,8 +39,9 @@ post-install:
 
 .include "options.mk"
 
+.include "../../devel/deforaos-configure/deforaos-configure.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../www/webkit24-gtk3/buildlink3.mk"
+.include "../../www/webkit-gtk/buildlink3.mk"
 .include "../../x11/deforaos-libdesktop/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
