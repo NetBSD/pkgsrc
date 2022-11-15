@@ -1,8 +1,8 @@
-$NetBSD: patch-Makefile.in,v 1.3 2019/06/10 13:32:56 schmonz Exp $
+$NetBSD: patch-Makefile.in,v 1.4 2022/11/15 11:37:56 schmonz Exp $
 
 Libtoolize for portability across pkgsrc platforms.
 
---- Makefile.in.orig	2019-04-15 15:28:20.000000000 +0000
+--- Makefile.in.orig	2022-03-30 19:34:50.000000000 +0000
 +++ Makefile.in
 @@ -1,3 +1,4 @@
 +LIBTOOL=libtool --tag=CC
@@ -81,12 +81,3 @@ Libtoolize for portability across pkgsrc platforms.
  
  verify: echo tools/checkbits.sh
  	@./echo -n "headers ... "; tools/checkbits.sh && echo "GOOD"
-@@ -139,7 +146,7 @@ test:	$(PGMS) $(TESTFRAMEWORK) verify
- 
- pandoc_headers.o: tools/pandoc_headers.c config.h
- 	$(BUILD) -c -o pandoc_headers.o tools/pandoc_headers.c
--pandoc_headers: pandoc_headers.o
-+pandoc_headers: pandoc_headers.o $(COMMON) $(MKDLIB)
- 	$(LINK) -o pandoc_headers pandoc_headers.o $(COMMON) -lmarkdown 
- 
- branch.o: tools/branch.c config.h
