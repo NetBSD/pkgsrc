@@ -1,4 +1,4 @@
-$NetBSD: patch-vendor_libc_src_unix_bsd_netbsdlike_netbsd_mod.rs,v 1.3 2022/10/10 20:34:15 he Exp $
+$NetBSD: patch-vendor_libc_src_unix_bsd_netbsdlike_netbsd_mod.rs,v 1.4 2022/11/15 23:11:14 he Exp $
 
 Copy execinfo function definitions from openbsd's mod.rs.
 
@@ -27,3 +27,16 @@ Copy execinfo function definitions from openbsd's mod.rs.
  cfg_if! {
      if #[cfg(target_arch = "aarch64")] {
          mod aarch64;
+@@ -2840,6 +2856,12 @@ cfg_if! {
+     } else if #[cfg(target_arch = "x86")] {
+         mod x86;
+         pub use self::x86::*;
++    } else if #[cfg(target_arch = "mips")] {
++        mod mips;
++        pub use self::mips::*;
++    } else if #[cfg(target_arch = "mipsel")] {
++        mod mips;
++        pub use self::mips::*;
+     } else {
+         // Unknown target_arch
+     }
