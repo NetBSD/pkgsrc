@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5516 2022/11/15 09:17:04 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.5517 2022/11/15 09:17:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8343,3 +8343,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed devel/bzr-explorer [wiz 2022-11-15]
 	Removed devel/qbzr [wiz 2022-11-15]
 	Removed x11/py-qt4 [wiz 2022-11-15]
+	Removed x11/py-sip-qt4 [wiz 2022-11-15]
