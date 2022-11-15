@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/02/23 04:24:38 osa Exp $
+# $NetBSD: Makefile,v 1.5 2022/11/15 12:47:59 wiz Exp $
 
 PKGNAME=	unit-${LANG}${PYVERSSUFFIX}-${UNIT_VERSION}
 COMMENT=	Python module for NGINX Unit
@@ -7,6 +7,9 @@ LANG=		python
 MODNAME=	${LANG}
 
 MAINTAINER=	osa@NetBSD.org
+
+# https://github.com/nginx/unit/issues/710
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 post-configure:
 	${RUN} cd ${WRKSRC} && ${SETENV} ${_CONFIGURE_SCRIPT_ENV}		\
