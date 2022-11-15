@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5513 2022/11/15 08:56:20 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5514 2022/11/15 09:13:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8338,3 +8338,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/py-mod_wsgi to 4.9.4 [wiz 2022-11-15]
 	Updated textproc/po4a to 0.68 [adam 2022-11-15]
 	Updated multimedia/mkvtoolnix to 72.0.0 [adam 2022-11-15]
+	Updated devel/py-cwcwidth to 0.1.8 [adam 2022-11-15]
+	Updated devel/py-pyrsistent to 0.19.2 [adam 2022-11-15]
