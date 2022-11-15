@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2022/10/29 14:03:09 fcambus Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/11/15 15:08:22 fcambus Exp $
 bin/ssh-audit
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -98,3 +98,4 @@ ${PYSITELIB}/ssh_audit/versionvulnerabilitydb.pyo
 ${PYSITELIB}/ssh_audit/writebuf.py
 ${PYSITELIB}/ssh_audit/writebuf.pyc
 ${PYSITELIB}/ssh_audit/writebuf.pyo
+man/man1/ssh-audit.1
