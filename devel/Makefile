@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3829 2022/11/11 14:03:44 taca Exp $
+# $NetBSD: Makefile,v 1.3830 2022/11/15 09:14:28 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -196,7 +196,6 @@ SUBDIR+=	bugzilla3
 SUBDIR+=	bullet
 SUBDIR+=	byacc
 SUBDIR+=	bzr
-SUBDIR+=	bzr-explorer
 SUBDIR+=	bzr-gtk
 SUBDIR+=	bzrtools
 SUBDIR+=	c++gsl
@@ -2985,7 +2984,6 @@ SUBDIR+=	py27-test-cov
 SUBDIR+=	pycharm-bin
 SUBDIR+=	pynvim
 SUBDIR+=	pythontidy
-SUBDIR+=	qbzr
 SUBDIR+=	qconf
 SUBDIR+=	qjson
 SUBDIR+=	qore-uuid-module
