@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2022/11/14 19:19:57 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2022/11/15 12:23:45 wiz Exp $
 
 DISTNAME=	cx_Freeze-6.13.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_F/f/}
@@ -12,7 +12,7 @@ LICENSE=	python-software-foundation
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-REPLACE_PYTHON=	cx_Freeze/samples/PyQt5/PyQt5app.py
+PLIST_SUBST+=	PYVERNODOT=${PYVERSSUFFIX:S/.//g}
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && mv cxfreeze cxfreeze-${PYVERSSUFFIX} || ${TRUE}
