@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5521 2022/11/15 11:38:02 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.5522 2022/11/15 11:48:02 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8351,3 +8351,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated math/py-asteval to 0.9.28 [adam 2022-11-15]
 	Updated biology/py-pydicom to 2.3.1 [adam 2022-11-15]
 	Updated textproc/discount to 2.2.7b [schmonz 2022-11-15]
+	Updated textproc/p5-Text-Markdown-Discount to 0.14 [schmonz 2022-11-15]
