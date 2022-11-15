@@ -1,7 +1,6 @@
-# $NetBSD: Makefile.common,v 1.11 2021/11/07 11:38:26 adam Exp $
+# $NetBSD: Makefile.common,v 1.12 2022/11/15 09:18:20 wiz Exp $
 #
 # used by x11/py-sip/Makefile
-# used by x11/py-sip-qt4/Makefile
 # used by x11/py-sip-qt5/Makefile
 
 DISTNAME=	sip-4.19.25
@@ -43,7 +42,7 @@ CONFIGURE_ARGS+=	LFLAGS_PLUGIN="-bundle -flat_namespace -undefined suppress"
 CONFIGURE_ARGS+=	CFLAGS_SHLIB=-fPIC
 CONFIGURE_ARGS+=	CXXFLAGS_SHLIB=-fPIC
 .  if ${OPSYS} == "SunOS" && \
-      (!empty(CC_VERSION:Mgcc*) || !empty(PKGSRC_COMPILER:Mclang))
+      (${CC_VERSION:Mgcc*} || !empty(PKGSRC_COMPILER:Mclang))
 CONFIGURE_ARGS+=	-p solaris-g++
 # gcc3 uses -mimpure-text to not pass -assert pure-text to the linker
 CONFIGURE_ARGS+=	LFLAGS_SHLIB="-shared -mimpure-text"
@@ -54,7 +53,7 @@ CONFIGURE_ARGS+=	LFLAGS_SHLIB="-shared"
 CONFIGURE_ARGS+=	LFLAGS=${LDFLAGS:Q}
 
 # Hack: gcc on sparc64 miscompiles sipgen/parser.c at -O2
-.if ${MACHINE_ARCH} == "sparc64" && !empty(CC_VERSION:Mgcc*)
+.if ${MACHINE_ARCH} == "sparc64" && ${CC_VERSION:Mgcc*}
 BUILDLINK_TRANSFORM+=	rm:-O2
 .endif
 
