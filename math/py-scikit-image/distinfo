@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:56:04 nia Exp $
+$NetBSD: distinfo,v 1.8 2022/11/15 08:17:19 wiz Exp $
 
-BLAKE2s (scikit-image-0.18.1.tar.gz) = e76452e26272401eb55c5273ff39bddf5c050e76bbc8493dfd06ede811e661d0
-SHA512 (scikit-image-0.18.1.tar.gz) = f2784f13ddaa91e6671b394954b2837f4c0987a85b19e47d3883c89785d9b864760990e7592984188a8a2d902c13ac54ab1836f11e65f5d94ddd574e7d2bd7fc
-Size (scikit-image-0.18.1.tar.gz) = 29663758 bytes
+BLAKE2s (scikit-image-0.19.3.tar.gz) = 9eb4ede334d242ee72a7aff43c7d34e7355948b210b0a5e60df16bac082c3f68
+SHA512 (scikit-image-0.19.3.tar.gz) = cda1699200e19155da13e313eb129771b7bb895913e552b959a3374267fe4f73c33d5e6e2fa2d49326903c901925797e46b9f05342a78c5332df1c266d37471a
+Size (scikit-image-0.19.3.tar.gz) = 22232287 bytes
