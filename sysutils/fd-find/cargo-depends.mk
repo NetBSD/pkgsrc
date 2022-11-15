@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.4 2022/11/03 20:36:21 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.5 2022/11/15 12:15:09 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-0.7.19
 CARGO_CRATE_DEPENDS+=	android_system_properties-0.1.5
@@ -13,9 +13,9 @@ CARGO_CRATE_DEPENDS+=	bumpalo-3.11.1
 CARGO_CRATE_DEPENDS+=	cc-1.0.73
 CARGO_CRATE_DEPENDS+=	cfg-if-1.0.0
 CARGO_CRATE_DEPENDS+=	chrono-0.4.22
-CARGO_CRATE_DEPENDS+=	clap-4.0.18
-CARGO_CRATE_DEPENDS+=	clap_complete-4.0.3
-CARGO_CRATE_DEPENDS+=	clap_derive-4.0.18
+CARGO_CRATE_DEPENDS+=	clap-4.0.22
+CARGO_CRATE_DEPENDS+=	clap_complete-4.0.5
+CARGO_CRATE_DEPENDS+=	clap_derive-4.0.21
 CARGO_CRATE_DEPENDS+=	clap_lex-0.3.0
 CARGO_CRATE_DEPENDS+=	codespan-reporting-0.11.1
 CARGO_CRATE_DEPENDS+=	core-foundation-sys-0.8.3
