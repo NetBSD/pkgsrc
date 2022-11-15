@@ -1,10 +1,10 @@
-$NetBSD: patch-src_llvm-project_llvm_CMakeLists.txt,v 1.9 2022/05/25 21:31:26 he Exp $
+$NetBSD: patch-src_llvm-project_llvm_CMakeLists.txt,v 1.10 2022/11/15 23:11:14 he Exp $
 
 Don't implement sys/regset.h workaround, fix source instead.
 
 --- src/llvm-project/llvm/CMakeLists.txt.orig	2018-03-10 02:51:13.000000000 +0000
 +++ src/llvm-project/llvm/CMakeLists.txt
-@@ -1025,11 +1025,6 @@ if(LLVM_TARGET_IS_CROSSCOMPILE_HOST)
+@@ -939,11 +939,6 @@ if(LLVM_TARGET_IS_CROSSCOMPILE_HOST)
  # (this is a variable that CrossCompile sets on recursive invocations)
  endif()
  
