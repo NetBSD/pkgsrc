@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2022/11/14 09:17:13 adam Exp $
+# $NetBSD: Makefile,v 1.5 2022/11/15 09:30:43 adam Exp $
 
-DISTNAME=	exceptiongroup-1.0.2
+DISTNAME=	exceptiongroup-1.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/exceptiongroup/}
