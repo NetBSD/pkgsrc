@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5532 2022/11/15 18:28:06 khorben Exp $
+$NetBSD: CHANGES-2022,v 1.5533 2022/11/15 18:57:24 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8363,3 +8363,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/py-prometheus_client to 0.15.0 [wiz 2022-11-15]
 	Updated www/grafana to 9.2.4 [jperkin 2022-11-15]
 	Updated www/deforaos-surfer to 0.3.1 [khorben 2022-11-15]
+	Updated mail/serialmail to 0.75nb3 [schmonz 2022-11-15]
