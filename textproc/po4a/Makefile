@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.51 2022/06/28 11:36:48 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2022/11/15 08:54:12 adam Exp $
 
-DISTNAME=	po4a-0.66
-PKGREVISION=	2
+DISTNAME=	po4a-0.68
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mquinson/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
@@ -41,7 +40,7 @@ SUBST_CLASSES+=		path
 SUBST_FILES.path=	po4a
 SUBST_MESSAGE.path=	Fix msgmerge command path (not found)
 SUBST_STAGE.path=	pre-configure
-SUBST_SED.path=		-e 's|\"msgmerge\"|\"${PREFIX}/bin/msgmerge\"|;'
+SUBST_SED.path=		-e 's|"msgmerge"|"${PREFIX}/bin/msgmerge"|;'
 
 .include "../../devel/gettext-tools/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
