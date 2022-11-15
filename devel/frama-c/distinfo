@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2022/10/09 07:02:47 tonio Exp $
+$NetBSD: distinfo,v 1.13 2022/11/15 13:02:42 wiz Exp $
 
 BLAKE2s (frama-c-25.0-Manganese.tar.gz) = 589c14ead33b8371a96e6e65ac2f58434e8de7066d71b821cf285ff01bb6e233
 SHA512 (frama-c-25.0-Manganese.tar.gz) = 8fdc71ee252e7dd0ca5782d16d54df8d126a3fbcc324cf250dd96bcb5b743a4a387ec65fe633583a976d6b692d147f657faf49160ccbd519e04a2664b0d68f0f
@@ -6,3 +6,4 @@ Size (frama-c-25.0-Manganese.tar.gz) = 7670862 bytes
 SHA1 (patch-Makefile) = 87c7dc7dd9246aae396cdcae7c410f834b92ec4b
 SHA1 (patch-share_Makefile.common) = f5230aee768e6af4c7458d96f1f210172daa9bb2
 SHA1 (patch-src_libraries_utils_c__bindings.c) = b634836b18c3be97c9b026a65c454cab6552b6f4
+SHA1 (patch-src_plugins_e-acsl_scripts_e-acsl-gcc.sh) = 3fb87450ff0d0633251730fa1bfb452ef5ff78ad
