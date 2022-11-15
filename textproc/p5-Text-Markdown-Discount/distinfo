@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.15 2021/10/26 11:22:42 nia Exp $
+$NetBSD: distinfo,v 1.16 2022/11/15 11:47:56 schmonz Exp $
 
-BLAKE2s (Text-Markdown-Discount-0.13.tar.gz) = 50f42ce4cd09984bddf5e5c6c8b4b361d3728f231694f97de8dbe13ce4678399
-SHA512 (Text-Markdown-Discount-0.13.tar.gz) = 688cbbc73f8e67f9908ad3a46445b7c68069dcbf0350f77f65cf9c5ddc8de3522ff2c937d37cc5dc12b26201f8f6c8886032f054f112684006060070f97d17cf
-Size (Text-Markdown-Discount-0.13.tar.gz) = 184786 bytes
+BLAKE2s (Text-Markdown-Discount-0.14.tar.gz) = c55cce9f70ca3cf008c1529d70702aaef8a1c700b321494c8c4ebc471bc87ffb
+SHA512 (Text-Markdown-Discount-0.14.tar.gz) = 3b5a632a5f2163fa923176c4076b6dad28714776c87441770285696f9e70c50e0f57cdf71ba0b46d993763f4437f28fb720f5fb8de160b1533d82099c025d3d8
+Size (Text-Markdown-Discount-0.14.tar.gz) = 81041 bytes
 SHA1 (patch-Discount.xs) = 6851538b8c894a9069eb70994a6c32b533510601
 SHA1 (patch-MANIFEST) = 6ff1d67f8210d7a72ac1a000010bd944c06c25ac
-SHA1 (patch-Makefile.PL) = a6474a88f66f9bd0e82a6b324171dbe5e3ab69bc
+SHA1 (patch-Makefile.PL) = 826bb46f40fcf0af289fb48cf0d119226e10a599
 SHA1 (patch-t_12.utf8.t) = cea58d7c8a4e50d97cf031b2e7913314fe46b056
