@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2022/04/10 00:57:15 gutteridge Exp $
+# $NetBSD: Makefile,v 1.15 2022/11/15 08:17:19 wiz Exp $
 
-DISTNAME=	scikit-image-0.18.1
+DISTNAME=	scikit-image-0.19.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
-CATEGORIES=	graphics python
+CATEGORIES=	math graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scikit-image/}
 
 MAINTAINER=	jihbed.research@gmail.com
@@ -11,20 +10,24 @@ HOMEPAGE=	https://scikit-image.org/
 COMMENT=	Image processing routines for SciPy
 LICENSE=	modified-bsd
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-cython>=0.29.21:../../devel/py-cython
-DEPENDS+=	${PYPKGPREFIX}-numpy>=0.19.0:../../math/py-numpy
-DEPENDS+=	${PYPKGPREFIX}-scipy>=1.0.1:../../math/py-scipy
-DEPENDS+=	${PYPKGPREFIX}-matplotlib>=3.2.2:../../graphics/py-matplotlib
-DEPENDS+=	${PYPKGPREFIX}-Pillow>=4.3.0:../../graphics/py-Pillow
-DEPENDS+=	${PYPKGPREFIX}-imageio>=2.3.0:../../graphics/py-imageio
-DEPENDS+=	${PYPKGPREFIX}-tifffile>=2021.2.1:../../graphics/py-tifffile
-DEPENDS+=	${PYPKGPREFIX}-pywavelets>=0.4.0:../../math/py-pywavelets
-DEPENDS+=	${PYPKGPREFIX}-networkx>=2.0:../../math/py-networkx
-DEPENDS+=	${PYPKGPREFIX}-six>=1.9.0:../../lang/py-six
+TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=0.29.24:../../devel/py-cython
+DEPENDS+=	${PYPKGPREFIX}-packaging>=20.0:../../devel/py-packaging
+DEPENDS+=	${PYPKGPREFIX}-numpy>=1.21.4:../../math/py-numpy
+DEPENDS+=	${PYPKGPREFIX}-scipy>=1.4.1:../../math/py-scipy
+DEPENDS+=	${PYPKGPREFIX}-networkx>=2.2:../../math/py-networkx
+DEPENDS+=	${PYPKGPREFIX}-Pillow>=6.1.0:../../graphics/py-Pillow
+DEPENDS+=	${PYPKGPREFIX}-imageio>=2.4.1:../../graphics/py-imageio
+DEPENDS+=	${PYPKGPREFIX}-tifffile>=2019.7.26:../../graphics/py-tifffile
+DEPENDS+=	${PYPKGPREFIX}-pywavelets>=1.1.1:../../math/py-pywavelets
+# optional
+DEPENDS+=	${PYPKGPREFIX}-matplotlib>=3.0.3:../../graphics/py-matplotlib
 
 USE_LANGUAGES=	c c++
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 37 # py-tifffile, py-scipy
+# no python 3.11 support as of 0.19.3
+# https://github.com/scikit-image/scikit-image/issues/6598
+PYTHON_VERSIONS_INCOMPATIBLE+=	311
 
 USE_PKG_RESOURCES=	yes
 
@@ -33,6 +36,7 @@ post-install:
 	${MV} skivi skivi-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../devel/py-cython/buildlink3.mk"
+.include "../../math/py-pythran/buildlink3.mk"
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
