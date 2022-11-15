@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5526 2022/11/15 12:07:51 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.5527 2022/11/15 12:14:30 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8356,3 +8356,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/libhighlight to 4.4 [schmonz 2022-11-15]
 	Updated textproc/p5-highlight to 4.4 [schmonz 2022-11-15]
 	Updated textproc/highlight to 4.4 [schmonz 2022-11-15]
+	Updated misc/wthrr to 0.5.0 [pin 2022-11-15]
