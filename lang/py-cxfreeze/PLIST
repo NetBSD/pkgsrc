@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2022/11/14 19:19:24 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2022/11/15 12:23:45 wiz Exp $
 bin/cxfreeze-${PYVERSSUFFIX}
 bin/cxfreeze-quickstart-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -20,7 +20,7 @@ ${PYSITELIB}/cx_Freeze/_compat.pyo
 ${PYSITELIB}/cx_Freeze/bases/__init__.py
 ${PYSITELIB}/cx_Freeze/bases/__init__.pyc
 ${PYSITELIB}/cx_Freeze/bases/__init__.pyo
-${PYSITELIB}/cx_Freeze/bases/console-cpython-311
+${PYSITELIB}/cx_Freeze/bases/console-cpython-${PYVERNODOT}
 ${PYSITELIB}/cx_Freeze/cli.py
 ${PYSITELIB}/cx_Freeze/cli.pyc
 ${PYSITELIB}/cx_Freeze/cli.pyo
