@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.69 2022/10/15 18:26:27 triaxx Exp $
+# $NetBSD: Makefile,v 1.70 2022/11/15 15:58:02 brad Exp $
 
 DISTNAME=	rabbitmq-server-3.11.1
 PKGNAME=	${DISTNAME:S/-server//}
 CATEGORIES=	net
+PKGREVISION=	2
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rabbitmq/}
 EXTRACT_SUFX=	.tar.xz
 GITHUB_PROJECT=	rabbitmq-server
@@ -70,7 +71,7 @@ SUBST_FILES.paths+=	${SCRIPTS_DIR}/rabbitmq-defaults
 SUBST_SED.paths=	-e 's|/etc/rabbitmq|${PKG_SYSCONFDIR}|g'
 SUBST_SED.paths+=	-e 's|/var/lib|${VARBASE}/db|g'
 SUBST_SED.paths+=	-e 's|/var/log|${VARBASE}/log|g'
-SUBST_SED.paths+=	-e 's|erl|${PREFIX}/bin/erl|g'
+SUBST_SED.paths+=	-e 's|exec erl|exec ${PREFIX}/bin/erl|g'
 SUBST_SED.paths+=	-e 's|@RABBITMQ_HOME@|${PREFIX}/${RABBITMQ_HOME}|g'
 
 SUBST_CLASSES+=		prefix
