@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5510 2022/11/15 05:42:47 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5511 2022/11/15 08:17:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8334,3 +8334,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated math/py-pywavelets to 1.4.1 [wiz 2022-11-14]
 	Updated converters/py-simplejson to 3.18.0 [adam 2022-11-15]
 	Updated finance/py-eth-hash to 0.5.1 [adam 2022-11-15]
+	Updated math/py-scikit-image to 0.19.3 [wiz 2022-11-15]
