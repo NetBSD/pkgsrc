@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2022/10/19 14:25:18 nia Exp $
+# $NetBSD: Makefile,v 1.7 2022/11/15 09:49:38 adam Exp $
 
-DISTNAME=	trio-0.21.0
+DISTNAME=	trio-0.22.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/trio/}
@@ -12,7 +12,6 @@ LICENSE=	mit OR apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-async_generator>=1.9:../../devel/py-async_generator
 DEPENDS+=	${PYPKGPREFIX}-attrs>=19.2.0:../../devel/py-attrs
-DEPENDS+=	${PYPKGPREFIX}-cffi>=1.14:../../devel/py-cffi
 DEPENDS+=	${PYPKGPREFIX}-idna>=2.10:../../www/py-idna
 DEPENDS+=	${PYPKGPREFIX}-outcome>=1.1.0:../../devel/py-outcome
 DEPENDS+=	${PYPKGPREFIX}-sniffio>=1.2.0:../../misc/py-sniffio
@@ -26,6 +25,11 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-trustme-[0-9]*:../../security/py-trustme
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+.include "../../lang/python/pyversion.mk"
+.if ${_PYTHON_VERSION} < 311
+DEPENDS+=	${PYPKGPREFIX}-exceptiongroup>=1.0.0:../../devel/py-exceptiongroup
+.endif
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
