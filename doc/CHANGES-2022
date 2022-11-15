@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5524 2022/11/15 12:07:34 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.5525 2022/11/15 12:07:43 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8354,3 +8354,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/p5-Text-Markdown-Discount to 0.14 [schmonz 2022-11-15]
 	Updated devel/goredo to 1.28.0 [schmonz 2022-11-15]
 	Updated textproc/libhighlight to 4.4 [schmonz 2022-11-15]
+	Updated textproc/p5-highlight to 4.4 [schmonz 2022-11-15]
