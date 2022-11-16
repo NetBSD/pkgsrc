@@ -1,0 +1,21 @@
+$NetBSD: patch-src-modules-cal-config-google-e-google-chooser-button-c,v 1.1.2.2 2022/11/16 17:12:24 bsiegert Exp $
+
+e_webdav_discover_content_get_selected now takes an extra argument for order
+
+--- src/modules/cal-config-google/e-google-chooser-button.c.orig	2019-10-07 08:22:43.000000000 +0100
++++ src/modules/cal-config-google/e-google-chooser-button.c	2022-11-06 22:14:10.184192760 +0000
+@@ -257,12 +257,12 @@
+ 
+ 	if (gtk_dialog_run (dialog) == GTK_RESPONSE_ACCEPT) {
+ 		gchar *href = NULL, *display_name = NULL, *color = NULL, *email;
+-		guint supports = 0;
++		guint supports = 0, order = 0;
+ 		GtkWidget *content;
+ 
+ 		content = e_webdav_discover_dialog_get_content (dialog);
+ 
+-		if (e_webdav_discover_content_get_selected (content, 0, &href, &supports, &display_name, &color)) {
++		if (e_webdav_discover_content_get_selected (content, 0, &href, &supports, &display_name, &color, &order)) {
+ 			soup_uri_free (uri);
+ 			uri = soup_uri_new (href);
+ 
