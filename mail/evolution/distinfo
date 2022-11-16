@@ -1,6 +1,9 @@
-$NetBSD: distinfo,v 1.89 2021/10/26 10:53:59 nia Exp $
+$NetBSD: distinfo,v 1.89.8.1 2022/11/16 17:12:24 bsiegert Exp $
 
 BLAKE2s (evolution-3.34.1.tar.xz) = 5bce69bc6de9df34996eb577efc99fa60e201d150c00e21de4c0fbd331b0267a
 SHA512 (evolution-3.34.1.tar.xz) = d72329b2dde41724cc8818f843b5530c5465e4fd7fceca3208a26180f9d6e286165d03d33ba4066e959a6e69bd1e5d33759d4287a57bb765bf7143410be6102c
 Size (evolution-3.34.1.tar.xz) = 11919428 bytes
 SHA1 (patch-cmake_modules_PrintableOptions.cmake) = 4f6eca93f9e859730b7abe0b7daceb0b4219b345
+SHA1 (patch-src-modules-book-config-carddav-evolution-book-config-carddav-c) = 5c669c2db616f6a7d63565105627d448071b7708
+SHA1 (patch-src-modules-cal-config-caldav-evolution-cal-config-caldav-c) = 0cdbf2ec489c2338e8a3cf860353dc19c411637e
+SHA1 (patch-src-modules-cal-config-google-e-google-chooser-button-c) = 26615d37c56c2619e847d191be1c885835aa8539

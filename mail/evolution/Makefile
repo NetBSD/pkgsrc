@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.262 2022/08/11 05:08:58 gutteridge Exp $
+# $NetBSD: Makefile,v 1.262.2.1 2022/11/16 17:12:24 bsiegert Exp $
 
 DISTNAME=	evolution-3.34.1
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	mail gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/evolution/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -15,8 +15,6 @@ USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config itstool
 USE_TOOLS+=	intltool msgfmt msgmerge xgettext
 USE_TOOLS+=	gdbus-codegen
-
-BROKEN+=	"Incompatible with latest evolution-data-server, needs update"
 
 DEPENDS+=	highlight-[0-9]*:../../textproc/highlight
 
