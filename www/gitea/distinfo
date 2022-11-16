@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.31 2022/05/18 18:38:33 khorben Exp $
+$NetBSD: distinfo,v 1.31.4.1 2022/11/16 19:14:36 bsiegert Exp $
 
 BLAKE2s (bazil.org_fuse_@v_v0.0.0-20180421153158-65cc252bf669.mod) = ff8095283662ae2d2a1968bf429516c54586b1a6c4dc744657162e6781aa8ece
 SHA512 (bazil.org_fuse_@v_v0.0.0-20180421153158-65cc252bf669.mod) = 7b3ef87f98485bb9ec325680f57d43a9bd76e90bdcfb1e798458f28f7d3addf91dbb6a07b654749468860981413ad2267df2d5f3535c85579e9f79d9328d355c
@@ -258,9 +258,9 @@ Size (dmitri.shuralyov.com_gpu_mtl_@v_v0.0.0-20190408044501-666a987793e9.zip) = 
 BLAKE2s (gitea-1.16.1-frontend.tar.gz) = 7b6ab37fc8e58d58cc76b5f5fb4a837e90b6c3e71e7a924aa8bc9fd1ab4e042a
 SHA512 (gitea-1.16.1-frontend.tar.gz) = efca0fcbd024cb8254d78e027c0df9d407e1102108f51c62b0139e2b9a99909d83a9c6766bf90c5186e7e3928c6a38531776d9c7c51f8dcff391566fdd395599
 Size (gitea-1.16.1-frontend.tar.gz) = 8802148 bytes
-BLAKE2s (gitea-1.16.8.tar.gz) = 0c7f64d63c6a50b1327f8d21815ef4776b908fec822d106c7ccccdf44aace4da
-SHA512 (gitea-1.16.8.tar.gz) = a8006662994083cbb35e83fefa716bff36b6f964030806b5c67a42cb4648262ca49c77947ea99be245ecd121a5f393451f5fe049ebee4fde99bfe96487113aa1
-Size (gitea-1.16.8.tar.gz) = 11123248 bytes
+BLAKE2s (gitea-1.16.9.tar.gz) = d45878ce7d26075da3777000bb903067634a87da5f0a31f42a878a2a30f3a2b2
+SHA512 (gitea-1.16.9.tar.gz) = 8f4395bfcf8a5dbf23079553e2e749fec4fb0e07026811061e4e5995d293ea18dc290b02b321e6aa00136215484dc29b4baf4ca49a417aafb0c8da39113b79e1
+Size (gitea-1.16.9.tar.gz) = 11130133 bytes
 BLAKE2s (gitea.com_go-chi_binding_@v_v0.0.0-20220309004920-114340dabecb.mod) = 51eb458bbeb0cbc60b6fd7c36a4f6d76e136fa3495fc9c93c690479bb266d460
 SHA512 (gitea.com_go-chi_binding_@v_v0.0.0-20220309004920-114340dabecb.mod) = c7a8315434e69e8e3bd221dc2930d0043d5636a528c05b0ad4929bddb60e901b6043116bd444847c98b2783cbb40b8e53f0dcbe54ae846c0c64f611cb16252fe
 Size (gitea.com_go-chi_binding_@v_v0.0.0-20220309004920-114340dabecb.mod) = 215 bytes
@@ -8049,4 +8049,4 @@ Size (xorm.io_xorm_@v_v1.2.5.mod) = 486 bytes
 BLAKE2s (xorm.io_xorm_@v_v1.2.5.zip) = 03755a7c8b10da3dd1ab496969dbf0e54a528749fed1d3bdaeb26237235ff0a7
 SHA512 (xorm.io_xorm_@v_v1.2.5.zip) = e136f8c50d41c46b83cb17b82e6865967105f404a886d93834793c13fa4c9e0ef6c841e9eed19ba5fecf068670650b01a1648303614ed97ff2d046992479d357
 Size (xorm.io_xorm_@v_v1.2.5.zip) = 307259 bytes
-SHA1 (patch-Makefile) = e412ed02de0c2b4e7ea711b829168551bf6f8839
+SHA1 (patch-Makefile) = 289ec07884b772dac8f79dfd89b498c55df9cf83
