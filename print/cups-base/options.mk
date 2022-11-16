@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.7 2022/11/16 16:08:11 hauke Exp $
+# $NetBSD: options.mk,v 1.8 2022/11/16 16:24:36 hauke Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.cups-base
-PKG_SUPPORTED_OPTIONS=		acl dnssd kerberos pam tcpwrappers
+PKG_SUPPORTED_OPTIONS=		acl kerberos pam tcpwrappers
 PKG_SUGGESTED_OPTIONS=		dnssd kerberos
 
 PKG_OPTIONS_OPTIONAL_GROUPS=	mdns
-PKG_OPTIONS_GROUP.mdns=		mdnssd
+PKG_OPTIONS_GROUP.mdns=		dnssd
 
 PLIST_VARS+=			apple dbus dnssd dnssd-backend ippfind libusb pam
 
@@ -16,12 +16,12 @@ PKG_OPTIONS_DEPRECATED_WARNINGS+= \
 .endif
 
 .if ${OPSYS} == "Darwin"
-PLIST.apple=		yes
-PLIST.ippfind=		yes
+PLIST.apple=			yes
+PLIST.ippfind=			yes
 .else
 # CUPS on Darwin does not support DBus and libusb
 PKG_SUPPORTED_OPTIONS+=		dbus
-PKG_OPTIONS_GROUP.mdns+=	avahi	
+PKG_OPTIONS_GROUP.mdns+=	avahi
 PKG_SUGGESTED_OPTIONS+=		dbus
 # Neither DragonFly nor SunOS can build libusb1
 .  if ${OPSYS} != "DragonFly" && ${OPSYS} != "SunOS"
