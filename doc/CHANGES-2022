@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5537 2022/11/16 10:40:15 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.5538 2022/11/16 10:41:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8369,3 +8369,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed lang/rust-src successor lang/rust [wiz 2022-11-16]
 	Removed lang/rust-analyzer successor lang/rust [wiz 2022-11-16]
 	Updated archivers/unrar to 6.2.2 [wiz 2022-11-16]
+	Updated textproc/gsed to 4.9 [wiz 2022-11-16]
