@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.50 2022/11/02 19:39:46 bsiegert Exp $
+# $NetBSD: Makefile,v 1.51 2022/11/16 16:10:00 leot Exp $
 
 # Please also update GH_REL_DATE when upgrading to a new release.
 
-DISTNAME=	gh-2.18.1
-PKGREVISION=	1
+DISTNAME=	gh-2.20.2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cli/}
 GITHUB_PROJECT=	cli
@@ -16,20 +15,14 @@ LICENSE=	mit
 
 DEPENDS+=		git-base-[0-9]*:../../devel/git-base
 
-GO_BUILD_PATTERN=	./cmd/gh
-
-GH_REL_DATE=	2022-10-25
-
 # Because we are not calling scripts/build as the Makefile for gh would
 # do, we do not get these flags set. These flags make the output from
 # "gh --version" meaningful.
-
-GH_LDFLAGS=	-X github.com/cli/cli/v2/internal/build.Date=${GH_REL_DATE}
-GH_LDFLAGS+=	-X github.com/cli/cli/v2/internal/build.Version=${PKGVERSION_NOREV}
-
-do-build:
-	${RUN} cd ${WRKSRC} && ${_ULIMIT_CMD} ${PKGSRC_SETENV} ${MAKE_ENV} \
-		${GO} install -v -ldflags "${GH_LDFLAGS}" ${GO_BUILD_PATTERN}
+GH_REL_DATE=		2022-11-15
+GO_BUILD_PATTERN+=	-ldflags ' \
+			-X github.com/cli/cli/v2/internal/build.Date=${GH_REL_DATE} \
+			-X github.com/cli/cli/v2/internal/build.Version=${PKGVERSION_NOREV}'
+GO_BUILD_PATTERN+=	./cmd/gh
 
 .include "go-modules.mk"
 
