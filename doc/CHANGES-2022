@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5535 2022/11/15 23:11:58 he Exp $
+$NetBSD: CHANGES-2022,v 1.5536 2022/11/16 08:37:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8366,3 +8366,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated mail/serialmail to 0.75nb3 [schmonz 2022-11-15]
 	Updated www/luakit to 2.3.1 [nia 2022-11-15]
 	Updated lang/rust to 1.64.0 [he 2022-11-15]
+	Removed lang/rust-src successor lang/rust [wiz 2022-11-16]
+	Removed lang/rust-analyzer successor lang/rust [wiz 2022-11-16]
