@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.51 2022/10/26 10:31:06 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2022/11/16 16:08:11 hauke Exp $
 
 .include "../../print/cups/Makefile.common"
 
 PKGNAME=	cups-base-${CUPS_VERS}
-PKGREVISION=	3
+PKGREVISION=	4
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenPrinting/}
 
 MAINTAINER=	sbd@NetBSD.org
