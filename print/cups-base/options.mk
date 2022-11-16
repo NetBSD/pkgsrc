@@ -1,10 +1,13 @@
-# $NetBSD: options.mk,v 1.6 2022/05/10 20:47:37 markd Exp $
+# $NetBSD: options.mk,v 1.7 2022/11/16 16:08:11 hauke Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.cups-base
-PKG_SUPPORTED_OPTIONS=	acl dnssd kerberos pam tcpwrappers
-PKG_SUGGESTED_OPTIONS=	dnssd kerberos
+PKG_OPTIONS_VAR=		PKG_OPTIONS.cups-base
+PKG_SUPPORTED_OPTIONS=		acl dnssd kerberos pam tcpwrappers
+PKG_SUGGESTED_OPTIONS=		dnssd kerberos
 
-PLIST_VARS+=		apple dbus dnssd dnssd-backend ippfind libusb pam
+PKG_OPTIONS_OPTIONAL_GROUPS=	mdns
+PKG_OPTIONS_GROUP.mdns=		mdnssd
+
+PLIST_VARS+=			apple dbus dnssd dnssd-backend ippfind libusb pam
 
 .if defined(PKG_OPTIONS.cups)
 PKG_LEGACY_OPTIONS+=		${PKG_OPTIONS.cups}
@@ -17,12 +20,13 @@ PLIST.apple=		yes
 PLIST.ippfind=		yes
 .else
 # CUPS on Darwin does not support DBus and libusb
-PKG_SUPPORTED_OPTIONS+=	avahi dbus
-PKG_SUGGESTED_OPTIONS+=	dbus
+PKG_SUPPORTED_OPTIONS+=		dbus
+PKG_OPTIONS_GROUP.mdns+=	avahi	
+PKG_SUGGESTED_OPTIONS+=		dbus
 # Neither DragonFly nor SunOS can build libusb1
 .  if ${OPSYS} != "DragonFly" && ${OPSYS} != "SunOS"
-PKG_SUPPORTED_OPTIONS+=	libusb
-PKG_SUGGESTED_OPTIONS+=	libusb
+PKG_SUPPORTED_OPTIONS+=		libusb
+PKG_SUGGESTED_OPTIONS+=		libusb
 .  endif
 .endif
 
@@ -43,20 +47,24 @@ PLIST.ippfind=		yes
 PLIST.dnssd-backend=	yes
 .endif
 
+.if !empty(PKG_OPTIONS:Mdnssd)
+.include "../../net/mDNSResponder/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-dnssd=mdnsresponder
+PLIST.dnssd=		yes
+PLIST.dnssd-backend=	yes
+PLIST.ippfind=		yes
+.endif
+
+.if empty(PKG_OPTIONS:Mavahi) && empty(PKG_OPTIONS:Mdnssd)
+CONFIGURE_ARGS+=	--with-dnssd=no
+.endif
+
 .if !empty(PKG_OPTIONS:Mdbus)
 .  include "../../sysutils/dbus/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-dbus
 PLIST.dbus=		yes
 .else
 CONFIGURE_ARGS+=	--disable-dbus
-.endif
-
-.if !empty(PKG_OPTIONS:Mdnssd)
-.include "../../net/mDNSResponder/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-dnssd=yes
-PLIST.dnssd=		yes
-PLIST.dnssd-backend=	yes
-PLIST.ippfind=		yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mkerberos)
