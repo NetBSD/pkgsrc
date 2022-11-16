@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5543 2022/11/16 14:01:47 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5544 2022/11/16 16:08:43 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8376,3 +8376,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/bind916 to 9.16.35 [taca 2022-11-16]
 	Updated devel/py-mako to 1.2.4 [adam 2022-11-16]
 	Updated devel/py-cachelib to 0.9.0 [adam 2022-11-16]
+	Updated devel/gobject-introspection to 1.70.0nb3 [jperkin 2022-11-16]
