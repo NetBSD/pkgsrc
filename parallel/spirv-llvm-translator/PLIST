@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2022/11/14 18:58:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/11/16 20:48:24 adam Exp $
 bin/llvm-spirv
 include/LLVMSPIRVLib/LLVMSPIRVExtensions.inc
 include/LLVMSPIRVLib/LLVMSPIRVLib.h
 include/LLVMSPIRVLib/LLVMSPIRVOpts.h
 lib/libLLVMSPIRVLib.so
-lib/libLLVMSPIRVLib.so.14
+lib/libLLVMSPIRVLib.so.15
 lib/pkgconfig/LLVMSPIRVLib.pc
