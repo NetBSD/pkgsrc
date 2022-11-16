@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2022/11/06 18:18:37 adam Exp $
+# $NetBSD: Makefile,v 1.19 2022/11/16 22:54:12 wiz Exp $
 
 DISTNAME=	tempora-5.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,8 @@ HOMEPAGE=	https://github.com/jaraco/tempora
 COMMENT=	Objects and routines pertaining to date and time
 LICENSE=	mit
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4.1:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4.1:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-jaraco.functools>=1.20:../../devel/py-jaraco.functools
 DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
