@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5545 2022/11/16 16:10:14 leot Exp $
+$NetBSD: CHANGES-2022,v 1.5546 2022/11/16 20:55:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8378,3 +8378,16 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-cachelib to 0.9.0 [adam 2022-11-16]
 	Updated devel/gobject-introspection to 1.70.0nb3 [jperkin 2022-11-16]
 	Updated net/gh to 2.20.2 [leot 2022-11-16]
+	Updated lang/llvm to 15.0.5 [adam 2022-11-16]
+	Updated devel/lld to 15.0.5 [adam 2022-11-16]
+	Updated devel/lldb to 15.0.5 [adam 2022-11-16]
+	Updated devel/polly to 15.0.5 [adam 2022-11-16]
+	Updated lang/clang to 15.0.5 [adam 2022-11-16]
+	Updated lang/clang-tools-extra to 15.0.5 [adam 2022-11-16]
+	Updated lang/compiler-rt to 15.0.5 [adam 2022-11-16]
+	Updated lang/libcxx to 15.0.5 [adam 2022-11-16]
+	Updated lang/libcxxabi to 15.0.5 [adam 2022-11-16]
+	Updated lang/libunwind to 15.0.5 [adam 2022-11-16]
+	Updated lang/wasi-compiler-rt to 15.0.5 [adam 2022-11-16]
+	Updated lang/wasi-libcxx to 15.0.5 [adam 2022-11-16]
+	Updated parallel/openmp to 15.0.5 [adam 2022-11-16]
