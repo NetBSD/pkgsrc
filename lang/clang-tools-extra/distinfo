@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.14 2022/11/14 18:44:05 adam Exp $
+$NetBSD: distinfo,v 1.15 2022/11/16 20:53:58 adam Exp $
 
-BLAKE2s (clang-15.0.4.src.tar.xz) = 6a4c1eb4f2b28eae9fa79dc4f081c04b256c60866c1d5bcaed93f58d663e8d0f
-SHA512 (clang-15.0.4.src.tar.xz) = 408061a0331799e8d6313dea75ba8f811daea43277b3d3f078daa694bc7e9eb9dbe9060824f6281417ca6804498359c5a8195f5a6c1949eaa3a9bab0e8c11649
-Size (clang-15.0.4.src.tar.xz) = 18541400 bytes
-BLAKE2s (clang-tools-extra-15.0.4.src.tar.xz) = d1ddc7d9d91c4ae72f212feba4efcd648f0bf7aed4be7d53dd525e0b72637880
-SHA512 (clang-tools-extra-15.0.4.src.tar.xz) = a9969a55449a6d6eecab5bda071304c0cb804674795b643a53ad113b96bf5382678270bde47f1cd061b88156e3477ab2932f1c8e8926b7eb84dc7683341ce6e9
-Size (clang-tools-extra-15.0.4.src.tar.xz) = 3075652 bytes
-BLAKE2s (cmake-15.0.4.src.tar.xz) = 7b5f8ecd490470c57f456046717afccf5a9fe0d62234f7062553d0760c964d4f
-SHA512 (cmake-15.0.4.src.tar.xz) = c983deefbdf128bf47d009a4eed0628f69462146c33e7e670bc43f80aea3dacf9c1367d81afea9512126d15543156b11c7d9eca7944f4b8e4c5c31479c549734
-Size (cmake-15.0.4.src.tar.xz) = 6972 bytes
+BLAKE2s (clang-15.0.5.src.tar.xz) = cc126e6fa33fbc011ffac2390fc592c5c57c3902463a235796a6c92437ebf6cb
+SHA512 (clang-15.0.5.src.tar.xz) = 62b2be15b0e8c1fcfa8c35384e794a89ae13ab195454ce8409f255087abd9cfebea6c70658c794f4daaadfa3f6ecbb046ce6f7ba146afe6e0fc0d7d57471b432
+Size (clang-15.0.5.src.tar.xz) = 18542872 bytes
+BLAKE2s (clang-tools-extra-15.0.5.src.tar.xz) = 90fae3c66ff9ae66442d50ab86236372ace8a703cf876a2338041d9284ab5f46
+SHA512 (clang-tools-extra-15.0.5.src.tar.xz) = f6b64b48408f456922136ac75b42fd55ea05294381e40120d3716bed919b85948f9274af1e334926fbb04957c5339de1c0807b5549f2a750d9d07b62574421ac
+Size (clang-tools-extra-15.0.5.src.tar.xz) = 3075532 bytes
+BLAKE2s (cmake-15.0.5.src.tar.xz) = 5f8beedf1c9349c13dba2f4a5fcfb9d482c96df32c34c284cfe682a681669f35
+SHA512 (cmake-15.0.5.src.tar.xz) = 493825f1b64abef6d56502d28e30056320bdda5a46a478fc85eec3a631c541da2d318fb9c3e3d3e6234f538121b7a1c60d34cba498fd6b7938d3558d24684fed
+Size (cmake-15.0.5.src.tar.xz) = 6976 bytes
