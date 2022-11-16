@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2022Q3,v 1.1.2.5 2022/11/11 19:59:34 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2022Q3,v 1.1.2.6 2022/11/16 19:14:56 bsiegert Exp $
 
   Changes to packages and infrastructure on the 2022Q3 branch:
 
@@ -88,4 +88,10 @@ lang/php74: security fix
 
 Pullup ticket #6702 - requested by taca
 security/sudo: security fix
+
+Pullup ticket #6703 - requested by wiz
+mail/evolution: build fix
+
+Pullup ticket #6704 - requested by khorben
+www/gitea: security fix, build fix
 
