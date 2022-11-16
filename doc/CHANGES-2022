@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5540 2022/11/16 11:27:38 leot Exp $
+$NetBSD: CHANGES-2022,v 1.5541 2022/11/16 11:55:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8372,3 +8372,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/gsed to 4.9 [wiz 2022-11-16]
 	Updated devel/opa to 0.46.1 [leot 2022-11-16]
 	Updated multimedia/mpv to 0.35.0 [leot 2022-11-16]
+	Updated x11/libXft to 2.3.7 [wiz 2022-11-16]
