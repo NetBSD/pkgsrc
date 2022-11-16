@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2022/04/26 18:36:40 adam Exp $
+# $NetBSD: Makefile,v 1.8 2022/11/16 14:01:30 adam Exp $
 
-DISTNAME=	cachelib-0.6.0
+DISTNAME=	cachelib-0.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cachelib/}
@@ -17,9 +17,10 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-uwsgi>=2.0.19.1:../../www/py-uwsgi
 
 USE_LANGUAGES=	# none
 
-PYSETUPTESTTARGET=	pytest
-
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
