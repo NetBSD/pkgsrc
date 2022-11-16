@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2022/09/11 08:20:16 wiz Exp $
+$NetBSD: distinfo,v 1.18 2022/11/16 11:55:44 wiz Exp $
 
-BLAKE2s (libXft-2.3.6.tar.xz) = 5b4f0f6036ea46e6868a71f000538b4b5e413425c0fdd905dfb69c30161040e3
-SHA512 (libXft-2.3.6.tar.xz) = 732f8c635fcac6010012ba8c10c23d2dd6ec79b0f096d6bcc9b7e36d2ca0817387faa7ee5bb6f43cff02adc68e4234c1b8f95021ebc548f61c492e0b76836d90
-Size (libXft-2.3.6.tar.xz) = 304252 bytes
+BLAKE2s (libXft-2.3.7.tar.xz) = 63ca510267da645daa98978466ccea1e422280417e1cf3b79ff754055ac261ac
+SHA512 (libXft-2.3.7.tar.xz) = 9df29d3c7b88a21952df1015604511e5d79856d721b2a61eb2c5a062a9abccf16318132432a7c86c0ef816bf174ae86842fa67dabbaa0b163dfa56d99022de19
+Size (libXft-2.3.7.tar.xz) = 310372 bytes
