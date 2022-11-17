@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2022/11/09 14:45:02 adam Exp $
+# $NetBSD: Makefile,v 1.7 2022/11/17 14:37:13 adam Exp $
 
-DISTNAME=	python-subunit-1.4.1
+DISTNAME=	python-subunit-1.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^python-//}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-subunit/}
