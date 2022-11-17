@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2022/10/25 16:35:46 osa Exp $
+$NetBSD: distinfo,v 1.7 2022/11/17 16:04:26 osa Exp $
 
-BLAKE2s (njs-0.7.8.tar.gz) = 39c2725134b005660cf4f2c190e35c2a65f63f02bd1cec1608ba46d044134e3f
-SHA512 (njs-0.7.8.tar.gz) = 086ddb2e5189a8853598870b795bfa788e9e75da9d2502541a49314e8149d7c279acca0709c4c517db26611a416dc5fb989be807cf1697c7411aded1bd5b8237
-Size (njs-0.7.8.tar.gz) = 613161 bytes
+BLAKE2s (njs-0.7.9.tar.gz) = de8d5fc4e85629bae7649bac0b5cdc713cfb1b9be50ac7569d55e28fd37d8d0c
+SHA512 (njs-0.7.9.tar.gz) = d535dd17802edd444733b59488034feb07fa696599724e05b59df1c289a4584abf90ab2b719bb950aad9dad93654943418949ccf7710a5361d2d867ee2d986f2
+Size (njs-0.7.9.tar.gz) = 617115 bytes
