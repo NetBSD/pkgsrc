@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5546 2022/11/16 20:55:58 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5547 2022/11/17 01:37:45 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8391,3 +8391,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/wasi-compiler-rt to 15.0.5 [adam 2022-11-16]
 	Updated lang/wasi-libcxx to 15.0.5 [adam 2022-11-16]
 	Updated parallel/openmp to 15.0.5 [adam 2022-11-16]
+	Updated x11/xfce4-screenshooter to 1.10.0 [gutteridge 2022-11-17]
