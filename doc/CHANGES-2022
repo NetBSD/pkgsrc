@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5551 2022/11/17 09:21:55 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5552 2022/11/17 09:50:25 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8400,3 +8400,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/lemon to 1.0.3.40.0 [adam 2022-11-17]
 	Updated devel/py-more-itertools to 9.0.0 [adam 2022-11-17]
 	Updated devel/py-ZopeInterface to 5.5.1 [adam 2022-11-17]
+	Updated editors/tp-note to 1.19.0 [pin 2022-11-17]
