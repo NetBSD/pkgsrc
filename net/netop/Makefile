@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2022/06/18 10:05:58 pin Exp $
+# $NetBSD: Makefile,v 1.2 2022/11/17 09:51:11 pin Exp $
 
-DISTNAME=	netop-0.1.0
+DISTNAME=	netop-0.1.1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ZingerLittleBee/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/ZingerLittleBee/netop/
 COMMENT=	Network top
 LICENSE=	mit
