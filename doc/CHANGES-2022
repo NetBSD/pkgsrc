@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5558 2022/11/17 14:37:29 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5559 2022/11/17 14:55:45 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8412,3 +8412,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-ZopeI18NMessageid to 5.1.0 [adam 2022-11-17]
 	Updated net/rabbitmq to 3.11.3 [adam 2022-11-17]
 	Updated net/py-subunit to 1.4.2 [adam 2022-11-17]
+	Updated textproc/p5-Text-Markdown-Discount to 0.16 [schmonz 2022-11-17]
