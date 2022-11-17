@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.9 2022/11/12 21:55:35 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.10 2022/11/17 09:49:57 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.17.0
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
@@ -24,7 +24,7 @@ CARGO_CRATE_DEPENDS+=	cc-1.0.76
 CARGO_CRATE_DEPENDS+=	cesu8-1.1.0
 CARGO_CRATE_DEPENDS+=	cfg-expr-0.11.0
 CARGO_CRATE_DEPENDS+=	cfg-if-1.0.0
-CARGO_CRATE_DEPENDS+=	chrono-0.4.22
+CARGO_CRATE_DEPENDS+=	chrono-0.4.23
 CARGO_CRATE_DEPENDS+=	chrono-tz-0.6.3
 CARGO_CRATE_DEPENDS+=	chrono-tz-build-0.0.3
 CARGO_CRATE_DEPENDS+=	clap-2.34.0
@@ -238,7 +238,7 @@ CARGO_CRATE_DEPENDS+=	unsafe-libyaml-0.2.4
 CARGO_CRATE_DEPENDS+=	url-2.3.1
 CARGO_CRATE_DEPENDS+=	utf8-width-0.1.6
 CARGO_CRATE_DEPENDS+=	vec_map-0.8.2
-CARGO_CRATE_DEPENDS+=	version-compare-0.1.0
+CARGO_CRATE_DEPENDS+=	version-compare-0.1.1
 CARGO_CRATE_DEPENDS+=	version_check-0.9.4
 CARGO_CRATE_DEPENDS+=	walkdir-2.3.2
 CARGO_CRATE_DEPENDS+=	wasi-0.11.0+wasi-snapshot-preview1

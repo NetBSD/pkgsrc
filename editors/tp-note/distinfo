@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2022/11/12 21:55:35 pin Exp $
+$NetBSD: distinfo,v 1.10 2022/11/17 09:49:57 pin Exp $
 
 BLAKE2s (addr2line-0.17.0.crate) = f7fa3b016f0e80c4ea9967f8947de15edc9fa39d0c0cdea692dccd0c41c28039
 SHA512 (addr2line-0.17.0.crate) = ef3bbd7c6d1dfdd0b47e3be1fb4c8b15ed61a769bed7e80dce80461a1ee13ef21c75e62e9a66328504f862341f1e808abec5790ac79784e18655afcc16206b95
@@ -72,9 +72,9 @@ Size (cfg-expr-0.11.0.crate) = 39821 bytes
 BLAKE2s (cfg-if-1.0.0.crate) = fbb02f63b24cc224b045ff2aac3aefd0a77cf7b578df4d5f9da9517a59aaf9bb
 SHA512 (cfg-if-1.0.0.crate) = 0fb16a8882fd30e86b62c5143b1cb18ab564e84e75bd1f28fd12f24ffdc4a42e0d2e012a99abb606c12efe3c11061ff5bf8e24ab053e550ae083f7d90f6576ff
 Size (cfg-if-1.0.0.crate) = 7934 bytes
-BLAKE2s (chrono-0.4.22.crate) = b23f880426399cc9de23adc3c7cfd044c935cc90d41215e39d48fad04a15ccbe
-SHA512 (chrono-0.4.22.crate) = de856679ec16afe035176b22125a00ced532d49c8babac0a88fa5f6e4a3d9e526a34ee8bf51639653fc313a5703a202b1be013aa16fdd72a505151d7aafa7c44
-Size (chrono-0.4.22.crate) = 185570 bytes
+BLAKE2s (chrono-0.4.23.crate) = 538eedc112b3a58729530283ac9fe28731694390fcaf8c4aee7744d8aee73e8b
+SHA512 (chrono-0.4.23.crate) = 697a78ee83eaf38d83011bdf2086b3149b830d3d270e8414828b98ed2426063df43ac6eb4324f2dd694662afb86e6e4f005dee6116dfdd97adaebedefffd43fa
+Size (chrono-0.4.23.crate) = 187259 bytes
 BLAKE2s (chrono-tz-0.6.3.crate) = 919cc3eb5b2155443ae58c0680fa060a15cca706f80ddbec86e6e017d6c84ff3
 SHA512 (chrono-tz-0.6.3.crate) = 9acbd5f04f2840940eb08f2d4d0e1d364a55f44fbc417af6efbf40910a8b8f6620082ceee993623121c4e3645a39814e071d536dac0580f2fb711122d4b29727
 Size (chrono-tz-0.6.3.crate) = 589734 bytes
@@ -651,9 +651,9 @@ Size (tinyvec_macros-0.1.0.crate) = 1817 bytes
 BLAKE2s (toml-0.5.9.crate) = 47ed3419b2f8ce5103881721e73fac378a7efd6ace9098234a02f518fabdf35e
 SHA512 (toml-0.5.9.crate) = 7151bcafbe2bdb1d2bb91562daebd357c884819af047843f1b4a56bc3812d4153eaf70683d0f9bff51bd1048700920322d64d41da13ebb4cbf34f0f7822d7ce7
 Size (toml-0.5.9.crate) = 55667 bytes
-BLAKE2s (tp-note-1.18.3-c596a96a93d57dbb0265d1b9aea4d1c82cd4e9fb.tar.gz) = 8bef8716f944aee661a204effbe5aaf1f558a51e9e2fcce2c31bfa8aba719c67
-SHA512 (tp-note-1.18.3-c596a96a93d57dbb0265d1b9aea4d1c82cd4e9fb.tar.gz) = bcf6177dc9c5504082c2d3a390d2237d389a4314e9537d0f34b1094832a9b2f9ffd9cd174f2274232e43baf4dd440ed277992a8c9665a3aaac6630d82e990f93
-Size (tp-note-1.18.3-c596a96a93d57dbb0265d1b9aea4d1c82cd4e9fb.tar.gz) = 2179250 bytes
+BLAKE2s (tp-note-1.19.0.tar.gz) = 2ed4a614f223b18a02ab66fbed4e63a2419b3ed0be1238b55e54171f360e1a38
+SHA512 (tp-note-1.19.0.tar.gz) = 05584c54213f7e16c8215fa4638679e2d58c8a430a58d61036948a2b894d2c46e4483b7f5971bbcdea1d640a46b0e291d764aa07b012293229bcb7c889289d5f
+Size (tp-note-1.19.0.tar.gz) = 2180621 bytes
 BLAKE2s (tpnote-lib-0.10.1.crate) = 6e34c467e5faf06ad7dcc35718c4c28afaf08a4d06f2d4a77dc60a12b829031f
 SHA512 (tpnote-lib-0.10.1.crate) = 5a16c9df69ebf9391dc7e5bed4501eb3bf0e46741b76b3e6e0023edd9e419bea75781c41c7ee09f01aeb721448d9b1921d33ead5e92731adf5e3738a75d0ff5f
 Size (tpnote-lib-0.10.1.crate) = 40013 bytes
@@ -717,9 +717,9 @@ Size (utf8-width-0.1.6.crate) = 2935 bytes
 BLAKE2s (vec_map-0.8.2.crate) = a40b5b21f51fcfad8f2fa810b929af3cb20cd710bec9216e8750e973dc9ff59a
 SHA512 (vec_map-0.8.2.crate) = 4f1ef59bc2c437e79f1f84fe021bce5aa8ccd581f500f3d5776913d5f17d45b03ccee64f5bd03d47656318cfc9344a1f4311079d471fa409a8e4e94c143973f9
 Size (vec_map-0.8.2.crate) = 14466 bytes
-BLAKE2s (version-compare-0.1.0.crate) = 32046f68218ca3d75efbfba68617c20dd66236234d0788884352304f3679d4eb
-SHA512 (version-compare-0.1.0.crate) = d1b1a96f528e9660e38b6a08adbc186dfa93fa3e698029f68efcdea3de82c3e78cc0a2178e49281186d58de0c24ce3e62ebf1a0ef1aafa9297931cf19408d9c6
-Size (version-compare-0.1.0.crate) = 14169 bytes
+BLAKE2s (version-compare-0.1.1.crate) = e6e69491645e9049034ca048c709aa149aeb5e8b3a626d16e4eb15de13cb7c7c
+SHA512 (version-compare-0.1.1.crate) = efc9441440f702518867e2056c0ab066cd2fa6949112479e463802610f25a4d50c4411eb5fd0ba6ca9b187e358fce8d99579188e0ed9ba0297191172ab7af408
+Size (version-compare-0.1.1.crate) = 13224 bytes
 BLAKE2s (version_check-0.9.4.crate) = a26f24d5e2c5e631462ebe434aa239957f5102009d3824d5dff2bc90d3c79fb0
 SHA512 (version_check-0.9.4.crate) = b172dc9a3759a4a683ffc39b9a40b03b9974b626a088217de87090466cef695226557c226cf3e469b2b25ee7297b7eb0d7719878cab42457f80146a81943c0c8
 Size (version_check-0.9.4.crate) = 14895 bytes
