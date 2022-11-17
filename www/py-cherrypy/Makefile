@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2022/11/06 18:29:10 adam Exp $
+# $NetBSD: Makefile,v 1.44 2022/11/17 10:13:03 adam Exp $
 
 DISTNAME=	CherryPy-18.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -6,7 +6,7 @@ CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=C/CherryPy/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.cherrypy.org/
+HOMEPAGE=	https://cherrypy.dev/
 COMMENT=	Pythonic, object-oriented HTTP framework
 LICENSE=	modified-bsd
 
