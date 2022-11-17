@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.30 2022/09/20 06:20:47 nia Exp $
+# $NetBSD: options.mk,v 1.31 2022/11/17 21:31:22 snj Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mpv
 
@@ -198,6 +198,7 @@ WAF_CONFIGURE_ARGS+=	--disable-wayland
 .if !empty(PKG_OPTIONS:Mx11)
 WAF_CONFIGURE_ARGS+=	--enable-x11
 .include "../../x11/libXinerama/buildlink3.mk"
+.include "../../x11/libXpresent/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libXScrnSaver/buildlink3.mk"
 .include "../../x11/libXv/buildlink3.mk"
