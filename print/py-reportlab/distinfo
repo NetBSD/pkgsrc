@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.47 2022/11/16 12:18:46 gdt Exp $
+$NetBSD: distinfo,v 1.48 2022/11/17 01:49:17 gdt Exp $
 
 BLAKE2s (reportlab-3.6.12.tar.gz) = 5e1fa732615fa14c9639855beb54a679e2709a83aff1a60f2fd25e00f497d46a
 SHA512 (reportlab-3.6.12.tar.gz) = 99e6ab1cf27cc9e661b3bfd8c71290d94189db6de5e71b2429cccd48bfee5659d5fb46dfc5709e6616877b48bc17241c74282e0d2ecddda2ead16df4c1b6818f
 Size (reportlab-3.6.12.tar.gz) = 4519536 bytes
-SHA1 (patch-setup.py) = 9092bda2c09ed81a8c8d009291f8852d94a542bf
+SHA1 (patch-setup.py) = 7fdc8414fc6bdb9a10dfde80899ca26525c0d887
