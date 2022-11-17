@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2022/09/29 00:11:15 gutteridge Exp $
+$NetBSD: distinfo,v 1.12 2022/11/17 01:39:50 gutteridge Exp $
 
-BLAKE2s (xfce4-places-plugin-1.8.2.tar.bz2) = 9b5c82ba4bd3ca465f08135951911ee73f38432161d6701526fb4741afd86bd7
-SHA512 (xfce4-places-plugin-1.8.2.tar.bz2) = ad298407183ea499bd4a7c923e80141886c7ca809f4af4184074a1c98e73c72fbf610e06bccdffe3c1bacce39d945dc094d0ea9a82ca67ff7f8b79c8d9c5c53d
-Size (xfce4-places-plugin-1.8.2.tar.bz2) = 388168 bytes
+BLAKE2s (xfce4-places-plugin-1.8.3.tar.bz2) = 8fe2029d7a708a9daa3e7bfcaa479b4e80cb42b81b98f166622ebb996954dddd
+SHA512 (xfce4-places-plugin-1.8.3.tar.bz2) = 31ab8a47606c6406e93a753c55eb902fb25828f2c89c31814c11534dde327e656678ffcd590b41ebfab0a761bfcf0dae72e1ca3bb84eef5d0592f52114556ac9
+Size (xfce4-places-plugin-1.8.3.tar.bz2) = 388661 bytes

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.55 2022/09/29 00:11:15 gutteridge Exp $
+# $NetBSD: Makefile,v 1.56 2022/11/17 01:39:50 gutteridge Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-VERSION=	1.8.2
+VERSION=	1.8.3
 DISTNAME=	xfce4-places-plugin-${VERSION}
 CATEGORIES=	x11
 MASTER_SITES=	https://archive.xfce.org/src/panel-plugins/xfce4-places-plugin/${VERSION:R}/
