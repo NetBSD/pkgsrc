@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5553 2022/11/17 09:51:31 pin Exp $
+$NetBSD: CHANGES-2022,v 1.5554 2022/11/17 09:52:32 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8402,3 +8402,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-ZopeInterface to 5.5.1 [adam 2022-11-17]
 	Updated editors/tp-note to 1.19.0 [pin 2022-11-17]
 	Updated net/netop to 0.1.1 [pin 2022-11-17]
+	Updated editors/bred to 0.3.1 [pin 2022-11-17]
