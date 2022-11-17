@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.47 2022/11/16 10:40:06 wiz Exp $
+# $NetBSD: Makefile.common,v 1.48 2022/11/17 05:59:19 adam Exp $
 #
 # used by archivers/libunrar/Makefile
 # used by archivers/unrar/Makefile
@@ -19,7 +19,7 @@ LICENSE=	unrar-license
 # You can redistribute either original or modified binaries or sources.
 
 NO_CONFIGURE=	YES
-USE_LANGUAGES=	c++
+USE_LANGUAGES=	c++11
 # XXX: makefile has DOS line endings
 USE_TOOLS+=	gmake
 
