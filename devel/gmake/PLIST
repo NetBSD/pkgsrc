@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2021/05/02 19:03:52 wiz Exp $
+@comment $NetBSD: PLIST,v 1.17 2022/11/17 23:51:33 wiz Exp $
 bin/gmake
 gnu/bin/make
 gnu/man/man1/make.1
@@ -26,6 +26,7 @@ ${PLIST.nls}share/locale/nl/LC_MESSAGES/make.mo
 ${PLIST.nls}share/locale/pl/LC_MESSAGES/make.mo
 ${PLIST.nls}share/locale/pt/LC_MESSAGES/make.mo
 ${PLIST.nls}share/locale/pt_BR/LC_MESSAGES/make.mo
+${PLIST.nls}share/locale/ro/LC_MESSAGES/make.mo
 ${PLIST.nls}share/locale/ru/LC_MESSAGES/make.mo
 ${PLIST.nls}share/locale/sr/LC_MESSAGES/make.mo
 ${PLIST.nls}share/locale/sv/LC_MESSAGES/make.mo
