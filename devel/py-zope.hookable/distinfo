@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2022/11/17 10:41:17 adam Exp $
+$NetBSD: distinfo,v 1.8 2022/11/17 17:08:53 adam Exp $
 
-BLAKE2s (zope.hookable-5.3.tar.gz) = cd0270fe3e8d2eaae94a685d5c81bc9323d2621f95d8f76e342101ec4b7518be
-SHA512 (zope.hookable-5.3.tar.gz) = 98a1d5a2421f3f96f8ab19cff9873c50684e7b94bac8ffdb41fb7f43e5af82b531f1c4cb3b8150b0883eb2ccc2d2405951c6c3cc35176d1e48184a0d0682675a
-Size (zope.hookable-5.3.tar.gz) = 25358 bytes
+BLAKE2s (zope.hookable-5.4.tar.gz) = 57832a1490f4992dc19fa8109f33ddc55d6718934a38568baab8f3f5b892e31a
+SHA512 (zope.hookable-5.4.tar.gz) = aaa1c15927b19c6785de31171d7856b3e60755965538f923b26bba7048e6816749587b55a4dbbe555822021fc77d8ffd2705c4bbcf79016f4bbdc5c75c8ffdad
+Size (zope.hookable-5.4.tar.gz) = 25390 bytes
