@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5555 2022/11/17 10:21:25 jaapb Exp $
+$NetBSD: CHANGES-2022,v 1.5556 2022/11/17 10:32:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8404,3 +8404,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/netop to 0.1.1 [pin 2022-11-17]
 	Updated editors/bred to 0.3.1 [pin 2022-11-17]
 	Updated lang/camlp5 to 8.00.03nb1 [jaapb 2022-11-17]
+	Updated sysutils/py-stack-data to 0.6.1 [adam 2022-11-17]
+	Updated devel/py-exceptiongroup to 1.0.4 [adam 2022-11-17]
