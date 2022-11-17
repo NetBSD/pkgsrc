@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5556 2022/11/17 10:32:59 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5557 2022/11/17 10:46:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8406,3 +8406,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/camlp5 to 8.00.03nb1 [jaapb 2022-11-17]
 	Updated sysutils/py-stack-data to 0.6.1 [adam 2022-11-17]
 	Updated devel/py-exceptiongroup to 1.0.4 [adam 2022-11-17]
+	Updated devel/py-zope.exceptions to 4.6 [adam 2022-11-17]
+	Updated devel/py-zope.hookable to 5.3 [adam 2022-11-17]
+	Updated www/py-zope.proxy to 4.6.1 [adam 2022-11-17]
+	Updated devel/py-ZopeI18NMessageid to 5.1.0 [adam 2022-11-17]
