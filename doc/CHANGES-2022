@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5549 2022/11/17 01:54:55 gutteridge Exp $
+$NetBSD: CHANGES-2022,v 1.5550 2022/11/17 06:21:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8394,3 +8394,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/xfce4-screenshooter to 1.10.0 [gutteridge 2022-11-17]
 	Updated x11/xfce4-places-plugin to 1.8.3 [gutteridge 2022-11-17]
 	Updated meta-pkgs/xfce4-extras to 4.16.0nb4 [gutteridge 2022-11-17]
+	Updated databases/sqlite3 to 3.40.0 [adam 2022-11-17]
+	Updated databases/sqlite3-docs to 3.40.0 [adam 2022-11-17]
+	Updated databases/sqlite3-tcl to 3.40.0 [adam 2022-11-17]
+	Updated devel/lemon to 1.0.3.40.0 [adam 2022-11-17]
