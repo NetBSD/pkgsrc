@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.43 2021/12/07 12:06:16 jperkin Exp $
+$NetBSD: distinfo,v 1.44 2022/11/17 23:51:33 wiz Exp $
 
-BLAKE2s (make-4.3.tar.gz) = 09e086f44defc3367ab2d167711675cf77ea82c79f134b3133c191f8d7ac58ae
-SHA512 (make-4.3.tar.gz) = 9a1185cc468368f4ec06478b1cfa343bf90b5cd7c92c0536567db0315b0ee909af53ecce3d44cfd93dd137dbca1ed13af5713e8663590c4fdd21ea635d78496b
-Size (make-4.3.tar.gz) = 2317073 bytes
+BLAKE2s (make-4.4.tar.gz) = 3ce5b80e72ec1cb49f9a0cf3fb35f11612de00d0f24bd9b166bf8b9af166c4e4
+SHA512 (make-4.4.tar.gz) = 4be73f494295dcfa10034531b0d920cfdb5438bc20625f863f5c878549c140e1e67195162580c53060c3c11c67a2c739c09051f02cdd283e5aa9ebcd68975a1f
+Size (make-4.4.tar.gz) = 2307891 bytes
 SHA1 (patch-af) = 8ff060ecba9d664044eabd98741253881d8c9bbe
 SHA1 (patch-src_hash.c) = 755de04a4f9a63f5bfc2520026344d6dc8654992
-SHA1 (patch-src_job.c) = 3514e409af0d704cb657409721e0819109251051
+SHA1 (patch-src_job.c) = 848eaafc6dfc5086a3d46f9dae387b39d5c514c6

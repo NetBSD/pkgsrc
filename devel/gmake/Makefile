@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.120 2022/06/28 11:31:44 wiz Exp $
+# $NetBSD: Makefile,v 1.121 2022/11/17 23:51:33 wiz Exp $
 
-DISTNAME=	make-4.3
+DISTNAME=	make-4.4
 PKGNAME=	g${DISTNAME}
-PKGREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=make/}
 
