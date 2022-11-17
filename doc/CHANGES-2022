@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5562 2022/11/17 17:33:16 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5563 2022/11/17 21:08:15 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8422,3 +8422,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-ZopeI18NMessageid to 5.1.1 [adam 2022-11-17]
 	Updated archivers/xz to 5.2.8 [adam 2022-11-17]
 	Updated textproc/py-colored to 1.4.4 [adam 2022-11-17]
+	Updated news/pan to 0.153 [rhialto 2022-11-17]
