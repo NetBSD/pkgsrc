@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5559 2022/11/17 14:55:45 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.5560 2022/11/17 16:06:42 osa Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8413,3 +8413,6 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/rabbitmq to 3.11.3 [adam 2022-11-17]
 	Updated net/py-subunit to 1.4.2 [adam 2022-11-17]
 	Updated textproc/p5-Text-Markdown-Discount to 0.16 [schmonz 2022-11-17]
+	Updated lang/njs to 0.7.9 [osa 2022-11-17]
+	Updated www/nginx to 1.22.1nb2 [osa 2022-11-17]
+	Updated www/nginx-devel to 1.23.2nb2 [osa 2022-11-17]
