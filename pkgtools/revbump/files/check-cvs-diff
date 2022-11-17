@@ -1,6 +1,8 @@
 #!@PERL@ -w
 # -*- perl -*-
 #
+# $NetBSD: check-cvs-diff,v 1.4 2022/11/17 00:20:28 gutteridge Exp $
+#
 # read output of (cd /usr/pkgsrc; cvs diff -u ) and check if
 # py* and ruby* strings are left in buildlink3.mk.
 # They are then modified to Variable representation.
@@ -65,7 +67,7 @@ sub main() {
 		#	    print __LINE__, ' ', $file_to_edit,"\n";
 		my ($new_file) = $file_to_edit. '.new';
 		my ($edit) = 0;
-		open(NEW,  "> $new_file" ) || print STDERR "Problem to write $edit: $! \n";
+		open(NEW,  "> $new_file" ) || print STDERR "Problem opening file $new_file: $! \n";
 		open(EDIT, $file_to_edit ) || print STDERR "Problem opening file $file_to_edit: $! \n";
 		while(<EDIT>) {
 		    if ( /^BUILDLINK.*py27/ )    {  $_=~    s/py27/\${PYPKGPREFIX}/   ; $edit++;}
