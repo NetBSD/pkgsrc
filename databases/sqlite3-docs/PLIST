@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.118 2022/10/03 12:27:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.119 2022/11/17 06:20:44 adam Exp $
 share/doc/sqlite3/34to35.html
 share/doc/sqlite3/35to36.html
 share/doc/sqlite3/about.html
@@ -118,6 +118,7 @@ share/doc/sqlite3/c3ref/experimental.html
 share/doc/sqlite3/c3ref/extended_result_codes.html
 share/doc/sqlite3/c3ref/file.html
 share/doc/sqlite3/c3ref/file_control.html
+share/doc/sqlite3/c3ref/filename.html
 share/doc/sqlite3/c3ref/filename_database.html
 share/doc/sqlite3/c3ref/finalize.html
 share/doc/sqlite3/c3ref/free.html
@@ -468,6 +469,7 @@ share/doc/sqlite3/images/sqlite370.jpg
 share/doc/sqlite3/images/sqlite370_banner.gif
 share/doc/sqlite3/images/sqlitepie.jpg
 share/doc/sqlite3/images/src_logo.gif
+share/doc/sqlite3/images/sschart20221116.jpg
 share/doc/sqlite3/images/sw.gif
 share/doc/sqlite3/images/sw.png
 share/doc/sqlite3/images/table-ex1b2.gif
@@ -551,6 +553,7 @@ share/doc/sqlite3/queryplanner.html
 share/doc/sqlite3/quickstart.html
 share/doc/sqlite3/quirks.html
 share/doc/sqlite3/rbu.html
+share/doc/sqlite3/recovery.html
 share/doc/sqlite3/releaselog/3_0_0.html
 share/doc/sqlite3/releaselog/3_0_1.html
 share/doc/sqlite3/releaselog/3_0_2.html
@@ -669,6 +672,7 @@ share/doc/sqlite3/releaselog/3_3_6.html
 share/doc/sqlite3/releaselog/3_3_7.html
 share/doc/sqlite3/releaselog/3_3_8.html
 share/doc/sqlite3/releaselog/3_3_9.html
+share/doc/sqlite3/releaselog/3_40_0.html
 share/doc/sqlite3/releaselog/3_4_0.html
 share/doc/sqlite3/releaselog/3_4_1.html
 share/doc/sqlite3/releaselog/3_4_2.html
@@ -846,6 +850,7 @@ share/doc/sqlite3/sqlanalyze.html
 share/doc/sqlite3/sqlar.html
 share/doc/sqlite3/sqldiff.html
 share/doc/sqlite3/sqlite.css
+share/doc/sqlite3/sqlite.css~
 share/doc/sqlite3/sqlite.html
 share/doc/sqlite3/stmt.html
 share/doc/sqlite3/stricttables.html
