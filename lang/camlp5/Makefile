@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.43 2022/11/11 10:33:00 jaapb Exp $
+# $NetBSD: Makefile,v 1.44 2022/11/17 10:21:14 jaapb Exp $
 
 GITHUB_PROJECT=	camlp5
 DISTNAME=	${GITHUB_PROJECT}-8.00.03
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=camlp5/}
 GITHUB_TAG=	rel${PKGVERSION_NOREV}
+PKGREVISION=	1
 
 MAINTAINER=	tonio@NetBSD.org
 HOMEPAGE=	https://camlp5.github.io/
@@ -23,6 +24,7 @@ CONFIGURE_ARGS+=	--mandir ${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	--libdir ${PREFIX}/lib/ocaml
 
 REPLACE_SH=	tools/*.sh meta/*.sh ocaml_src/tools/*.sh compile/*.sh
+REPLACE_PERL=	etc/mkcamlp5.pl
 
 INSTALLATION_DIRS+=	${OCAML_SITELIBDIR}/camlp5
 
