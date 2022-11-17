@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5548 2022/11/17 01:40:05 gutteridge Exp $
+$NetBSD: CHANGES-2022,v 1.5549 2022/11/17 01:54:55 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8393,3 +8393,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated parallel/openmp to 15.0.5 [adam 2022-11-16]
 	Updated x11/xfce4-screenshooter to 1.10.0 [gutteridge 2022-11-17]
 	Updated x11/xfce4-places-plugin to 1.8.3 [gutteridge 2022-11-17]
+	Updated meta-pkgs/xfce4-extras to 4.16.0nb4 [gutteridge 2022-11-17]
