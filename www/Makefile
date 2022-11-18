@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1646 2022/11/18 10:16:08 jperkin Exp $
+# $NetBSD: Makefile,v 1.1647 2022/11/18 10:21:15 jperkin Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -1071,8 +1071,6 @@ SUBDIR+=	wdg-validate
 SUBDIR+=	webalizer
 SUBDIR+=	webby
 SUBDIR+=	webkit-gtk
-SUBDIR+=	webkit24-gtk
-SUBDIR+=	webkit24-gtk3
 SUBDIR+=	weblint
 SUBDIR+=	webnew
 SUBDIR+=	websvn
