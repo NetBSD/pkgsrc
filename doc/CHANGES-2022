@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5571 2022/11/18 18:43:42 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5572 2022/11/18 18:52:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8435,3 +8435,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated ham/chirp to 20221118 [gdt 2022-11-18]
 	Added devel/py-editables version 0.3 [adam 2022-11-18]
 	Updated devel/py-hatchling to 1.11.1 [adam 2022-11-18]
+	Updated converters/py-charset-normalizer to 3.0.1 [adam 2022-11-18]
+	Updated devel/py-hatch-fancy-pypi-readme to 22.8.0 [adam 2022-11-18]
