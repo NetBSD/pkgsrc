@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1645 2022/11/15 12:17:07 adam Exp $
+# $NetBSD: Makefile,v 1.1646 2022/11/18 10:16:08 jperkin Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -1000,7 +1000,6 @@ SUBDIR+=	ruby-tag
 SUBDIR+=	ruby-typhoeus
 SUBDIR+=	ruby-unicorn
 SUBDIR+=	ruby-url_mount
-SUBDIR+=	ruby-webkit-gtk
 SUBDIR+=	ruby-webrick
 SUBDIR+=	ruby-webrobots
 SUBDIR+=	ruby-websocket
