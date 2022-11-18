@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5568 2022/11/18 10:20:16 jperkin Exp $
+$NetBSD: CHANGES-2022,v 1.5569 2022/11/18 10:25:16 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8430,3 +8430,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-test-asyncio to 0.20.2 [adam 2022-11-18]
 	Updated meta-pkgs/ruby-gnome to 3.5.1nb1 [jperkin 2022-11-18]
 	Removed www/ruby-webkit-gtk [jperkin 2022-11-18]
+	Removed www/webkit24-gtk [jperkin 2022-11-18]
+	Removed www/webkit24-gtk3 [jperkin 2022-11-18]
