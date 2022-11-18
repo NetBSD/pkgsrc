@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5566 2022/11/18 08:59:01 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5567 2022/11/18 10:15:14 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8428,3 +8428,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated converters/py-arabic-reshaper to 2.1.4 [adam 2022-11-18]
 	Updated devel/py-memory-profiler to 0.61.0 [adam 2022-11-18]
 	Updated devel/py-test-asyncio to 0.20.2 [adam 2022-11-18]
+	Updated meta-pkgs/ruby-gnome to 3.5.1nb1 [jperkin 2022-11-18]
