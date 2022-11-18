@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5564 2022/11/17 23:51:43 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.5565 2022/11/18 06:06:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8424,3 +8424,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/py-colored to 1.4.4 [adam 2022-11-17]
 	Updated news/pan to 0.153 [rhialto 2022-11-17]
 	Updated devel/gmake to 4.4 [wiz 2022-11-17]
+	Updated www/py-django3 to 3.2.16 [adam 2022-11-18]
+	Updated converters/py-arabic-reshaper to 2.1.4 [adam 2022-11-18]
