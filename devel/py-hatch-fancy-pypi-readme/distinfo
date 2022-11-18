@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/09/05 14:10:41 adam Exp $
+$NetBSD: distinfo,v 1.2 2022/11/18 18:52:07 adam Exp $
 
-BLAKE2s (hatch_fancy_pypi_readme-22.3.0.tar.gz) = b221a624f0db096806e037b9eef863df1e60184c390fbf9f230a7b7fcaeefc3f
-SHA512 (hatch_fancy_pypi_readme-22.3.0.tar.gz) = e28a680091f747662df0ef634bfd069cf8ad0501e03911cdf0252713cc68bf3b5e95a22a242b9d8c095692158d61559433be55c33262384a851430c113c42e34
-Size (hatch_fancy_pypi_readme-22.3.0.tar.gz) = 22301 bytes
+BLAKE2s (hatch_fancy_pypi_readme-22.8.0.tar.gz) = 58a148d7fb0c348191be4ce9f86a9b935bc3e46514f06f5a67935fca5841cc6f
+SHA512 (hatch_fancy_pypi_readme-22.8.0.tar.gz) = e8f28a9020fc38bb03187e85688531c0fa895fcc56f3deb241bf19a71b2e88f2a354526eabe1a8e0bf7736f97883208eec2a7eac4199e08ddc40988643491632
+Size (hatch_fancy_pypi_readme-22.8.0.tar.gz) = 26511 bytes
