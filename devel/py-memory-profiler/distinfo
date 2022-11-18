@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/12/19 16:57:00 adam Exp $
+$NetBSD: distinfo,v 1.8 2022/11/18 08:56:36 adam Exp $
 
-BLAKE2s (memory_profiler-0.60.0.tar.gz) = 39d8655c2ac0fb14aeae52a62e4987a6ee40553b5d85ee8563c22a9bbcc2daea
-SHA512 (memory_profiler-0.60.0.tar.gz) = 0eed600fe7a5c8ed82ac7ccb121044e081496f056ad486b913dacf0daeef6f730c67e6fdfc6b75772ae8055521956023b9a6db73a4bfc2678527a7ec8e85e053
-Size (memory_profiler-0.60.0.tar.gz) = 38407 bytes
+BLAKE2s (memory_profiler-0.61.0.tar.gz) = 5d801ea02e4781ccc9e455d095b5567c1d777b440525aa0c2d5bea9051968160
+SHA512 (memory_profiler-0.61.0.tar.gz) = b4b4629133221252ad336871781225688ba704c8c19ef32385672e4f18e8a160e7d68b640bde8a34bafe212d9501f1b7f24ba742cfe29d57851966959ef3800a
+Size (memory_profiler-0.61.0.tar.gz) = 35935 bytes
