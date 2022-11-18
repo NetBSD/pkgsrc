@@ -1,4 +1,4 @@
-<!-- $NetBSD: makefile.xml,v 1.30 2019/04/28 11:16:07 rillig Exp $ -->
+<!-- $NetBSD: makefile.xml,v 1.31 2022/11/18 19:35:03 rillig Exp $ -->
 
 <chapter id="makefile"> <?dbhtml filename="makefile.html"?>
   <title>Programming in <filename>Makefile</filename>s</title>
@@ -47,13 +47,13 @@ correct:
     <filename>wrong</filename> will exist, although there was an error
     message in the first run. On the other hand, running <command>make
     correct</command> gives an error message twice, as expected.</para>
-    
+
     <para>You might remember that &man.make.1; sometimes removes
     <literal>${.TARGET}</literal> in case of error, but this only
     happens when it is interrupted, for example by pressing
     <literal>Ctrl+C</literal>. This does <emphasis>not</emphasis> happen
     when one of the commands fails (like &man.false.1; above).</para>
-    
+
     </listitem>
     </itemizedlist>
   </sect1>
@@ -229,7 +229,7 @@ install-examples:   # produces a syntax error in the shell
 To fix this syntax error, use one of the snippets below.</para>
 
 <programlisting>
-EMPTY=          # empty
+EGFILES=        # empty
 
 install-examples:
         for egfile in ${EGFILES} ""; do         \
@@ -255,6 +255,28 @@ enclosed in single or double quotes.</para>
 
 <para>To have a shell command test whether a make variable is empty, use
 the following code: <code>${TEST} -z ${POSSIBLY_EMPTY:Q}""</code>.</para>
+
+</sect2>
+
+<sect2 id="makefile.yesno">
+<title>Testing yes/no variables in conditions</title>
+
+<para>When a variable can have the values <literal>yes</literal> or
+<literal>no</literal>, use the following pattern to test the variable:</para>
+
+<programlisting>
+.if ${VAR:U:tl} == "yes"
+# do something
+.endif
+</programlisting>
+
+<para>The <literal>:U</literal> modifier is only necessary if the variable
+can be undefined. If the variable is guaranteed to be defined, the
+<literal>:U</literal> can be omitted.</para>
+
+<para>The <literal>:tl</literal> modifier converts the variable value to
+lowercase, allowing for the values <literal>yes</literal>,
+<literal>Yes</literal>, <literal>YES</literal>.</para>
 
 </sect2>
 </sect1>
