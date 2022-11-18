@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5570 2022/11/18 13:20:51 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.5571 2022/11/18 18:43:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8433,3 +8433,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed www/webkit24-gtk [jperkin 2022-11-18]
 	Removed www/webkit24-gtk3 [jperkin 2022-11-18]
 	Updated ham/chirp to 20221118 [gdt 2022-11-18]
+	Added devel/py-editables version 0.3 [adam 2022-11-18]
+	Updated devel/py-hatchling to 1.11.1 [adam 2022-11-18]
