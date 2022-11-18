@@ -1,7 +1,7 @@
 #!@PERL@ -w
 # -*- perl -*-
 #
-# $NetBSD: check-cvs-diff,v 1.5 2022/11/17 07:25:30 wiz Exp $
+# $NetBSD: check-cvs-diff,v 1.6 2022/11/18 04:18:22 gutteridge Exp $
 #
 # read output of (cd /usr/pkgsrc; cvs diff -u ) and check if
 # py* and ruby* strings are left in buildlink3.mk.
@@ -71,8 +71,8 @@ sub main() {
 		open(EDIT, $file_to_edit ) || print STDERR "Problem opening file $file_to_edit: $! \n";
 		while(<EDIT>) {
 		    if ( /^BUILDLINK.*py27/ )    {  $_=~    s/py27/\${PYPKGPREFIX}/   ; $edit++;}
-    		    if ( /^BUILDLINK.*py3[0-9]*/ )    {  $_=~    s/py3[0-9]/\${PYPKGPREFIX}/   ;
-						    print STDERR "   py3[0-9] found at $file_to_edit\n";
+    		    if ( /^BUILDLINK.*py3[0-9]*/ )    {  $_=~    s/py3[0-9]*/\${PYPKGPREFIX}/   ;
+						    print STDERR "   py3[0-9]* found at $file_to_edit\n";
 						    ; $edit++;}
 		    if ( /^BUILDLINK.*ruby[0-9][0-9]*/ ) {  $_=~ s/ruby[0-9][0-9]*/\${RUBY_PKGPREFIX}/ ; $edit++;}
 		    print NEW $_;
