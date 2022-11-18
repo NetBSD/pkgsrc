@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2021/08/22 17:02:43 tsutsui Exp $
+# $NetBSD: Makefile,v 1.3 2022/11/18 10:15:04 jperkin Exp $
 #
 
 PKGNAME=	${RUBY_PKGPREFIX}-gnome-${VERSION}
+PKGREVISION=	1
 COMMENT=	Set of Ruby language bindings for GNOME
 CATEGORIES=	meta-pkgs gnome
 
@@ -26,7 +27,6 @@ DEPENDS+=	${RUBY_PKGPREFIX}-rsvg2>=${VERSION}:../../graphics/ruby-rsvg2
 DEPENDS+=	${RUBY_PKGPREFIX}-clutter-gstreamer>=${VERSION}:../../multimedia/ruby-clutter-gstreamer
 DEPENDS+=	${RUBY_PKGPREFIX}-gstreamer>=${VERSION}:../../multimedia/ruby-gstreamer
 DEPENDS+=	${RUBY_PKGPREFIX}-poppler>=${VERSION}:../../print/ruby-poppler
-DEPENDS+=	${RUBY_PKGPREFIX}-webkit-gtk>=${VERSION}:../../www/ruby-webkit-gtk
 DEPENDS+=	${RUBY_PKGPREFIX}-gtk3>=${VERSION}:../../x11/ruby-gtk3
 DEPENDS+=	${RUBY_PKGPREFIX}-gtksourceview3>=${VERSION}:../../x11/ruby-gtksourceview3
 
