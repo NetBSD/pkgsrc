@@ -47,8 +47,15 @@ func (m MkVarUseModifier) String() string {
 	return string(m)
 }
 
-func (m MkVarUseModifier) Quoted() string {
-	return strings.Replace(string(m), ":", "\\:", -1)
+// Quoted returns the source code representation of the modifier, quoting
+// all characters so that they are interpreted literally.
+func (m MkVarUseModifier) Quoted(end string) string {
+	mod := string(m)
+	mod = strings.Replace(mod, ":", "\\:", -1)
+	mod = strings.Replace(mod, end, "\\"+end, -1)
+	mod = strings.Replace(mod, "#", "\\#", -1)
+	// TODO: There may still be uncovered edge cases.
+	return mod
 }
 
 func (m MkVarUseModifier) HasPrefix(prefix string) bool {
@@ -130,13 +137,13 @@ func (MkVarUseModifier) EvalSubst(s string, left bool, from string, right bool, 
 
 // MatchMatch tries to match the modifier to a :M or a :N pattern matching.
 // Examples:
-//  modifier    => ok     positive pattern    exact
-//  ------------------------------------------------
-//  :Mpattern   => true,  true,    "pattern", true
-//  :M*         => true,  true,    "*",       false
-//  :M${VAR}    => true,  true,    "${VAR}",  false
-//  :Npattern   => true,  false,   "pattern", true
-//  :X          => false
+//  modifier    =>   ok     positive  pattern    exact
+//  --------------------------------------------------
+//  :Mpattern   =>   true   true      "pattern"  true
+//  :M*         =>   true   true      "*"        false
+//  :M${VAR}    =>   true   true      "${VAR}"   false
+//  :Npattern   =>   true   false     "pattern"  true
+//  :X          =>   false
 func (m MkVarUseModifier) MatchMatch() (ok bool, positive bool, pattern string, exact bool) {
 	if m.HasPrefix("M") || m.HasPrefix("N") {
 		str := m.String()
