@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.7 2019/11/03 09:14:11 rillig Exp $
+# $NetBSD: builtin.mk,v 1.8 2022/11/19 08:10:45 wiz Exp $
 
 BUILTIN_PKG:=	libXdmcp
 
@@ -31,10 +31,10 @@ USE_BUILTIN.libXdmcp=	no
 .  else
 USE_BUILTIN.libXdmcp=	${IS_BUILTIN.libXdmcp}
 .    if defined(BUILTIN_PKG.libXdmcp) && \
-        !empty(IS_BUILTIN.libXdmcp:M[yY][eE][sS])
+        ${IS_BUILTIN.libXdmcp:M[yY][eE][sS]}
 USE_BUILTIN.libXdmcp=	yes
 .      for _dep_ in ${BUILDLINK_API_DEPENDS.libXdmcp}
-.        if !empty(USE_BUILTIN.libXdmcp:M[yY][eE][sS])
+.        if ${USE_BUILTIN.libXdmcp:M[yY][eE][sS]}
 USE_BUILTIN.libXdmcp!=							\
 	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.libXdmcp:Q}; then \
 		${ECHO} yes;						\
@@ -51,11 +51,11 @@ MAKEVARS+=		USE_BUILTIN.libXdmcp
 .include "../../mk/x11.builtin.mk"
 
 CHECK_BUILTIN.libXdmcp?=	no
-.if !empty(CHECK_BUILTIN.libXdmcp:M[nN][oO])
+.if ${CHECK_BUILTIN.libXdmcp:M[nN][oO]}
 
 # If we are using the builtin version, check whether it has a xdmcp.pc
 # file or not.  If the latter, generate a fake one.
-.  if !empty(USE_BUILTIN.libXdmcp:M[Yy][Ee][Ss])
+.  if ${USE_BUILTIN.libXdmcp:M[Yy][Ee][Ss]}
 BUILDLINK_TARGETS+=	xdmcp-fake-pc
 
 xdmcp-fake-pc:
