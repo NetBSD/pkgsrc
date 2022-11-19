@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/08/15 20:45:21 tnn Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/11/19 12:35:57 adam Exp $
 include/cclang/common_clang.h
 lib/libopencl-clang.so
-lib/libopencl-clang.so.14
+lib/libopencl-clang.so.15
