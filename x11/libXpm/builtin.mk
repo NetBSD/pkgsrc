@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.2 2019/11/03 09:14:12 rillig Exp $
+# $NetBSD: builtin.mk,v 1.3 2022/11/19 21:34:31 wiz Exp $
 
 BUILTIN_PKG:=	libXpm
 
@@ -31,7 +31,7 @@ USE_BUILTIN.libXpm=	no
 .  else
 USE_BUILTIN.libXpm=	${IS_BUILTIN.libXpm}
 .    if defined(BUILTIN_PKG.libXpm) && \
-        !empty(IS_BUILTIN.libXpm:M[yY][eE][sS])
+        ${IS_BUILTIN.libXpm:tl} == yes
 USE_BUILTIN.libX11=	yes
 .    endif
 .  endif  # PREFER.libXpm
