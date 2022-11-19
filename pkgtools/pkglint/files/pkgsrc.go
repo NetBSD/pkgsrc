@@ -363,39 +363,8 @@ func (*Pkgsrc) parseDocChange(line *Line, warn bool) *Change {
 		author = f[n-2]
 	}
 
-	parseAuthorAndDate := func(authorPtr *string, datePtr *string) bool {
-		alex := textproc.NewLexer(*authorPtr)
-		if !alex.SkipByte('[') {
-			return false
-		}
-		*authorPtr = alex.NextBytesSet(textproc.AlnumU)
-		if !alex.EOF() {
-			return false
-		}
-
-		isDigit := func(b byte) bool { return '0' <= b && b <= '9' }
-
-		date := *datePtr
-		if len(date) == 11 &&
-			isDigit(date[0]) &&
-			isDigit(date[1]) &&
-			isDigit(date[2]) &&
-			isDigit(date[3]) &&
-			date[4] == '-' &&
-			isDigit(date[5]) &&
-			isDigit(date[6]) &&
-			date[7] == '-' &&
-			isDigit(date[8]) &&
-			isDigit(date[9]) &&
-			date[10] == ']' {
-			*datePtr = date[:10]
-			return true
-		}
-
-		return false
-	}
-
-	if !parseAuthorAndDate(&author, &date) {
+	author, date = (*Pkgsrc).parseAuthorAndDate(nil, author, date)
+	if author == "" {
 		return invalid()
 	}
 
@@ -417,6 +386,42 @@ func (*Pkgsrc) parseDocChange(line *Line, warn bool) *Change {
 	}
 
 	return invalid()
+}
+
+// parseAuthorAndDate parses the author and date from a line in doc/CHANGES.
+func (*Pkgsrc) parseAuthorAndDate(author, date string) (string, string) {
+	alex := textproc.NewLexer(author)
+	if !alex.SkipByte('[') {
+		return "", ""
+	}
+	author = alex.NextBytesSet(textproc.AlnumU)
+	if !alex.EOF() {
+		return "", ""
+	}
+
+	isDigit := func(b byte) bool { return '0' <= b && b <= '9' }
+
+	if len(date) == 11 &&
+		isDigit(date[0]) &&
+		isDigit(date[1]) &&
+		isDigit(date[2]) &&
+		isDigit(date[3]) &&
+		date[4] == '-' &&
+		isDigit(date[5]) &&
+		isDigit(date[6]) &&
+		10*(date[5]-'0')+(date[6]-'0') >= 1 &&
+		10*(date[5]-'0')+(date[6]-'0') <= 12 &&
+		date[7] == '-' &&
+		isDigit(date[8]) &&
+		isDigit(date[9]) &&
+		10*(date[8]-'0')+(date[9]-'0') >= 1 &&
+		10*(date[8]-'0')+(date[9]-'0') <= 31 &&
+		date[10] == ']' {
+		date = date[:10]
+		return author, date
+	}
+
+	return "", ""
 }
 
 func (src *Pkgsrc) checkRemovedAfterLastFreeze() {

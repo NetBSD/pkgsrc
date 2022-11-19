@@ -69,12 +69,14 @@ func (s *Suite) Test_MkVarUseModifier_Quoted(c *check.C) {
 	t := s.Init(c)
 
 	test := func(mod MkVarUseModifier, quoted string) {
-		t.CheckEquals(mod.Quoted(), quoted)
+		t.CheckEquals(mod.Quoted("}"), quoted)
 	}
 
 	test("Q", "Q")
 	test("S/from/to/1g", "S/from/to/1g")
 	test(":", "\\:")
+	test("}", "\\}")
+	test("#", "\\#")
 }
 
 func (s *Suite) Test_MkVarUseModifier_HasPrefix(c *check.C) {

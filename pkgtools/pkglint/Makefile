@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.733 2022/11/02 19:39:53 bsiegert Exp $
+# $NetBSD: Makefile,v 1.734 2022/11/19 10:51:07 rillig Exp $
 
-PKGNAME=	pkglint-22.3.0
-PKGREVISION=	2
+PKGNAME=	pkglint-22.3.1
 CATEGORIES=	pkgtools
 
 MAINTAINER=	rillig@NetBSD.org
@@ -16,7 +15,7 @@ CHECK_RELRO_SKIP+=	bin/pkglint
 
 SUBST_CLASSES+=		pkglint
 SUBST_STAGE.pkglint=	post-configure
-SUBST_FILES.pkglint+=	${WRKSRC}/pkglint.go
+SUBST_FILES.pkglint+=	pkglint.go
 SUBST_SED.pkglint+=	-e s\|@VERSION@\|${PKGVERSION}\|g
 SUBST_SED.pkglint+=	-e s\|@BMAKE@\|${MAKE:T:Q}\|g
 
@@ -46,7 +45,7 @@ post-install: do-install-man
 PLIST_VARS+=		catinstall0 catinstall maninstall
 .if ${MANINSTALL:Mcatinstall}
 INSTALLATION_DIRS+=	man/cat1
-.  if ${CATMAN_SECTION_SUFFIX:M[Yy][Ee][Ss]}
+.  if ${CATMAN_SECTION_SUFFIX:U:tl} == yes
 PLIST.catinstall=	yes
 .  else
 PLIST.catinstall0=	yes

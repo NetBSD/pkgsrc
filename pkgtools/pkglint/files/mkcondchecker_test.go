@@ -51,7 +51,11 @@ func (s *Suite) Test_MkCondChecker_Check(c *check.C) {
 		"WARN: filename.mk:4: PKGSRC_RUN_TEST should be matched "+
 			"against \"[yY][eE][sS]\" or \"[nN][oO]\", not \"[Y][eE][sS]\".")
 
-	test(".if !empty(IS_BUILTIN.Xfixes:M[yY][eE][sS])")
+	test(".if !empty(IS_BUILTIN.Xfixes:M[yY][eE][sS])",
+		"NOTE: filename.mk:4: "+
+			"\"!empty(IS_BUILTIN.Xfixes:M[yY][eE][sS])\" "+
+			"can be simplified to "+
+			"\"${IS_BUILTIN.Xfixes:U:tl} == yes\".")
 
 	test(".if !empty(${IS_BUILTIN.Xfixes:M[yY][eE][sS]})",
 		"WARN: filename.mk:4: The empty() function takes a variable name as parameter, "+
