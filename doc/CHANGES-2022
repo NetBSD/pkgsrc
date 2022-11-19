@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5581 2022/11/19 18:58:17 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.5582 2022/11/19 21:34:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8447,3 +8447,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/binaryen to 111 [fcambus 2022-11-19]
 	Updated devel/wabt to 1.0.31 [fcambus 2022-11-19]
 	Updated geography/gama to 2.23 [gdt 2022-11-19]
+	Updated x11/libXpm to 3.5.14 [wiz 2022-11-19]
