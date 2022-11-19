@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2022/05/03 15:23:59 tkusumi Exp $
+$NetBSD: distinfo,v 1.16 2022/11/19 10:43:21 tkusumi Exp $
 
-BLAKE2s (fileobj-0.7.108.tar.gz) = 48afce53b054b3f12225713c6b8f60edd831ca08d5131dca3edd848ede794276
-SHA512 (fileobj-0.7.108.tar.gz) = 17e1142111ee826d4e0fcb4fc4f69db5c97bee0b594087bc1799c560f550b0ba2650dc8193c7b0efa7ba612fcf11f84e4c736af1a0d755b3ef84faf295f27fb4
-Size (fileobj-0.7.108.tar.gz) = 193970 bytes
+BLAKE2s (fileobj-0.8.0.tar.gz) = a29dcc69a2407b7958013515fc7f3e878cf3143423c6b374cc21ec92e3a4a59b
+SHA512 (fileobj-0.8.0.tar.gz) = ba0c6bed750445855be0de25f1f7ba16034341f1b0232b2fe9d286e12bce62fdfeb06c99eba7a8f2b04c06ab9d32d30edcd36645d12a67b1684bcdbff234cd34
+Size (fileobj-0.8.0.tar.gz) = 194366 bytes
