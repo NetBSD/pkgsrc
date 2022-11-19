@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5578 2022/11/19 13:01:40 mef Exp $
+$NetBSD: CHANGES-2022,v 1.5579 2022/11/19 17:00:33 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8444,3 +8444,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated pkgtools/pkglint to 22.3.1 [rillig 2022-11-19]
 	Updated cad/gtkwave to 3.3.113 [mef 2022-11-19]
 	Updated cad/py-gdstk to 0.9.34 [mef 2022-11-19]
+	Updated devel/binaryen to 111 [fcambus 2022-11-19]
