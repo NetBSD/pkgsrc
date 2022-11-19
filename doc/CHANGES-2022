@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5577 2022/11/19 13:01:02 mef Exp $
+$NetBSD: CHANGES-2022,v 1.5578 2022/11/19 13:01:40 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8443,3 +8443,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/libXdmcp to 1.1.4 [wiz 2022-11-19]
 	Updated pkgtools/pkglint to 22.3.1 [rillig 2022-11-19]
 	Updated cad/gtkwave to 3.3.113 [mef 2022-11-19]
+	Updated cad/py-gdstk to 0.9.34 [mef 2022-11-19]
