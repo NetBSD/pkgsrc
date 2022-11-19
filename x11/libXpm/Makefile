@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2022/11/09 13:14:22 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2022/11/19 21:34:31 wiz Exp $
 
-DISTNAME=		libXpm-3.5.13
-CATEGORIES=		graphics x11
+DISTNAME=		libXpm-3.5.14
+CATEGORIES=		x11 graphics
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
-EXTRACT_SUFX=		.tar.bz2
+EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/
