@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5575 2022/11/19 08:11:01 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.5576 2022/11/19 10:51:20 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8441,3 +8441,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/py-respx to 0.20.1 [adam 2022-11-18]
 	Updated lang/janet to 1.25.1 [charlotte 2022-11-18]
 	Updated x11/libXdmcp to 1.1.4 [wiz 2022-11-19]
+	Updated pkgtools/pkglint to 22.3.1 [rillig 2022-11-19]
