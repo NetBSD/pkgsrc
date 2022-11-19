@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2022/04/15 11:27:41 nia Exp $
+# $NetBSD: Makefile,v 1.14 2022/11/19 09:58:31 wiz Exp $
 
 DISTNAME=	tables-3.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tables/}
 
@@ -16,6 +16,9 @@ PYSETUPBUILDARGS+=	--bzip2=${BUILDLINK_PREFIX.bzip2}
 PYSETUPBUILDARGS+=	--hdf5=${BUILDLINK_PREFIX.hdf5}
 PYSETUPBUILDARGS+=	--lzo=${BUILDLINK_PREFIX.lzo}
 
+# check if cython dependency and post-extract target are still
+# needed when updating > 3.7.0
+TOOL_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-numexpr>=2.6.2:../../math/py-numexpr
 
@@ -24,6 +27,10 @@ USE_LANGUAGES=	c c++
 PYTHON_VERSIONS_INCOMPATIBLE=	27 37
 
 USE_PKG_RESOURCES=	yes
+
+post-extract:
+	cd ${WRKSRC}/tables && ${RM} _comp_*.c *extension.c
+	cythonize-${PYVERSSUFFIX} -3 ${WRKSRC}/tables/*.pxd
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
