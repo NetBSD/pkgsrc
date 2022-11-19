@@ -1,6 +1,9 @@
 package pkglint
 
-import "netbsd.org/pkglint/textproc"
+import (
+	"netbsd.org/pkglint/textproc"
+	"strings"
+)
 
 // MkCondSimplifier replaces unnecessarily complex conditions with simpler yet
 // equivalent conditions.
@@ -16,6 +19,9 @@ type MkCondSimplifier struct {
 //
 // * neg is true for the form !empty(VAR...), and false for empty(VAR...).
 func (s *MkCondSimplifier) SimplifyVarUse(varuse *MkVarUse, fromEmpty bool, neg bool) {
+	if s.simplifyYesNo(varuse, fromEmpty, neg) {
+		return
+	}
 	s.simplifyMatch(varuse, fromEmpty, neg)
 	s.simplifyWord(varuse, fromEmpty, neg)
 }
@@ -33,6 +39,9 @@ func (s *MkCondSimplifier) simplifyWord(varuse *MkVarUse, fromEmpty bool, neg bo
 	}
 	modsExceptLast := NewMkVarUse("", modifiers[:n-1]...).Mod()
 	vartype := G.Pkgsrc.VariableType(s.MkLines, varname)
+	if vartype == nil || vartype.IsList() {
+		return
+	}
 
 	// replace constructs the state before and after the autofix.
 	// The before state is constructed to ensure that only very simple
@@ -82,12 +91,10 @@ func (s *MkCondSimplifier) simplifyWord(varuse *MkVarUse, fromEmpty bool, neg bo
 	if !ok || !positive && n != 1 {
 		return
 	}
-
-	switch {
-	case !exact,
-		vartype == nil,
-		vartype.IsList(),
-		textproc.NewLexer(pattern).NextBytesSet(mkCondModifierPatternLiteral) != pattern:
+	if !exact {
+		return
+	}
+	if textproc.NewLexer(pattern).NextBytesSet(mkCondModifierPatternLiteral) != pattern {
 		return
 	}
 
@@ -110,6 +117,100 @@ func (s *MkCondSimplifier) simplifyWord(varuse *MkVarUse, fromEmpty bool, neg bo
 		"In such a case, using the :M or :N modifiers is useful and preferred.")
 	fix.Replace(from, to)
 	fix.Apply()
+}
+
+// simplifyYesNo replaces conditions of the form '${VAR:M[yY][eE][sS]}' with
+// the equivalent ${VAR:tl} == yes.
+func (s *MkCondSimplifier) simplifyYesNo(varuse *MkVarUse, fromEmpty bool, neg bool) (done bool) {
+
+	// TODO: Merge the common code from simplifyWord and simplifyYesNo.
+	//  Even better would be to manipulate the conditions in an AST
+	//  instead of working directly with strings, but as of November 2022,
+	//  that is not implemented yet.
+	//  .
+	//  Another useful feature would be to chain multiple autofixes
+	//  together, but to do that, pkglint needs to be able to convert an
+	//  AST back into the source code form.
+
+	toLower := func(p string) string {
+		var sb strings.Builder
+		upper := textproc.Upper
+		lower := textproc.Lower
+		for ; len(p) >= 4 && p[0] == '[' && p[3] == ']'; p = p[4:] {
+			if upper.Contains(p[1]) && p[2] == p[1]-'A'+'a' {
+				sb.WriteByte(p[2])
+			} else if lower.Contains(p[1]) && p[2] == p[1]-'a'+'A' {
+				sb.WriteByte(p[1])
+			} else {
+				return ""
+			}
+		}
+		if p != "" {
+			return ""
+		}
+		return sb.String()
+	}
+
+	varname := varuse.varname
+	modifiers := varuse.modifiers
+
+	n := len(modifiers)
+	if n == 0 {
+		return
+	}
+	modsExceptLast := NewMkVarUse("", modifiers[:n-1]...).Mod()
+	vartype := G.Pkgsrc.VariableType(s.MkLines, varname)
+	if vartype == nil || vartype.IsList() {
+		return
+	}
+
+	// replace constructs the state before and after the autofix.
+	replace := func(positive bool, pattern, lower string) (bool, string, string) {
+		defined := s.isDefined(varname, vartype)
+		if !defined && !positive {
+			// Too many negations; maybe handle this case later.
+			return false, "", ""
+		}
+		uMod := condStr(!defined && !varuse.HasModifier("U"), ":U", "")
+
+		op := condStr(neg == positive, "==", "!=")
+
+		from := sprintf("%s%s%s%s%s%s%s",
+			condStr(neg != fromEmpty, "", "!"),
+			condStr(fromEmpty, "empty(", "${"),
+			varname,
+			modsExceptLast,
+			condStr(positive, ":M", ":N"),
+			pattern,
+			condStr(fromEmpty, ")", "}"))
+
+		to := sprintf(
+			"${%s%s%s:tl} %s %s",
+			varname, uMod, modsExceptLast, op, lower)
+
+		return true, from, to
+	}
+
+	modifier := modifiers[n-1]
+	ok, positive, pattern, exact := modifier.MatchMatch()
+	if !ok || !positive && n != 1 || exact {
+		return
+	}
+	lower := toLower(pattern)
+	if lower == "" {
+		return
+	}
+
+	ok, from, to := replace(positive, pattern, lower)
+	if !ok {
+		return
+	}
+
+	fix := s.MkLine.Autofix()
+	fix.Notef("\"%s\" can be simplified to \"%s\".", from, to)
+	fix.Replace(from, to)
+	fix.Apply()
+	return true
 }
 
 // simplifyMatch replaces:

@@ -4,6 +4,7 @@ import (
 	"gopkg.in/check.v1"
 	"os"
 	"path/filepath"
+	"strings"
 )
 
 func (s *Suite) Test_Pkgsrc__frozen(c *check.C) {
@@ -516,6 +517,45 @@ func (s *Suite) Test_Pkgsrc_parseDocChange(c *check.C) {
 	test("\tUpdated category/pkgpath to version 1.0 [author 2019-01-01]",
 		"WARN: doc/CHANGES-2019:123: Invalid doc/CHANGES line: "+
 			"\tUpdated category/pkgpath to version 1.0 [author 2019-01-01]")
+}
+
+func (s *Suite) Test_Pkgsrc_parseAuthorAndDate(c *check.C) {
+	t := s.Init(c)
+
+	test := func(dateAndAuthor string, expectedAuthor, expectedDate string) {
+		fields := strings.Split(dateAndAuthor, " ")
+		authorIn, dateIn := fields[0], fields[1]
+		author, date := (*Pkgsrc).parseAuthorAndDate(nil, authorIn, dateIn)
+		t.CheckEquals(author, expectedAuthor)
+		t.CheckEquals(date, expectedDate)
+	}
+
+	test("[author 20!9-01-01]", "", "") // bad digit '!' in year
+	test("[author x019-01-01]", "", "") // bad digit 'x' in year
+	test("[author 2x19-01-01]", "", "") // bad digit 'x' in year
+	test("[author 20x9-01-01]", "", "") // bad digit 'x' in year
+	test("[author 201x-01-01]", "", "") // bad digit 'x' in year
+
+	test("[author 2019/01-01]", "", "") // bad separator '/'
+
+	test("[author 2019-x0-01]", "", "") // bad digit 'x' in month
+	test("[author 2019-0x-01]", "", "") // bad digit 'x' in month
+	test("[author 2019-00-01]", "", "") // bad month '00'
+	test("[author 2019-13-01]", "", "") // bad month '13'
+
+	test("[author 2019-01/01]", "", "") // bad separator '/'
+
+	test("[author 2019-01-x0]", "", "") // bad digit 'x' in day
+	test("[author 2019-01-0x]", "", "") // bad digit 'x' in day
+	test("[author 2019-01-00]", "", "") // bad day '00'
+	test("[author 2019-01-32]", "", "") // bad day '32'
+	// No leap year detection, to keep the code fast.
+	test("[author 2019-02-29]", "author", "2019-02-29") // 2019 is not a leap year.
+
+	test("[author 2019-01-01", "", "")  // missing trailing ']'
+	test("[author 2019-01-01+", "", "") // trailing '+' instead of ']'
+
+	test("[author 2019-01-01]", "author", "2019-01-01")
 }
 
 func (s *Suite) Test_Pkgsrc_checkRemovedAfterLastFreeze(c *check.C) {
