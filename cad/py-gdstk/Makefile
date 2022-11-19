@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2022/09/18 06:02:53 mef Exp $
+# $NetBSD: Makefile,v 1.4 2022/11/19 11:01:51 mef Exp $
 
-VERSION=	0.9.0
+VERSION=	0.9.34
 GITHUB_TAG=	v${VERSION}
 DISTNAME=	gdstk-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
