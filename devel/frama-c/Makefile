@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.105 2022/10/09 07:02:47 tonio Exp $
-#
+# $NetBSD: Makefile,v 1.106 2022/11/20 22:15:31 wiz Exp $
 
 DISTNAME=	frama-c-25.0-Manganese
 PKGNAME=	${DISTNAME:S/-Manganese//}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://frama-c.com/download/
 
@@ -11,10 +11,14 @@ HOMEPAGE=	https://frama-c.com/
 COMMENT=	Extensible platform dedicated to source-code analysis of C software
 LICENSE=	gnu-lgpl-v2
 
-USE_TOOLS+=	gmake autoconf
+USE_TOOLS+=	autoconf bash gmake
 GNU_CONFIGURE=	yes
-REPLACE_SH=	src/plugins/e-acsl/scripts/e-acsl-gcc.sh
-REPLACE_PYTHON=	share/analysis-scripts/*.py
+
+REPLACE_SH+=		bin/frama-c-script
+REPLACE_SH+=		src/plugins/e-acsl/scripts/e-acsl-gcc.sh
+REPLACE_SH+=		share/analysis-scripts/*.sh
+REPLACE_PERL+=		share/analysis-scripts/*.pl
+REPLACE_PYTHON+=	share/analysis-scripts/*.py
 
 OCAML_USE_FINDLIB=	yes
 
