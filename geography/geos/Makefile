@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.44 2022/07/08 13:21:59 gdt Exp $
+# $NetBSD: Makefile,v 1.45 2022/11/20 13:02:07 gdt Exp $
 
-VERSION_BASE=	3.11.0
+VERSION_BASE=	3.11.1
 # Accomodate testing unreleased versions.
-VERSION_RC=	rc0
+#VERSION_RC=	rc0
 VERSION=	${VERSION_BASE}${VERSION_RC}
 DISTNAME=	geos-${VERSION}
 EXTRACT_SUFX=	.tar.bz2
