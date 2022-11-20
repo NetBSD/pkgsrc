@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2020/01/26 17:32:19 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2022/11/20 18:26:21 is Exp $
 #
 
-DISTNAME=		saytime_11nov1995
-PKGNAME=		saytime-19951111
+DISTNAME=		saytime_27jan2015
+PKGNAME=		saytime-20150127
 CATEGORIES=		time audio
 MASTER_SITES=		http://www.acme.com/software/saytime/
 
