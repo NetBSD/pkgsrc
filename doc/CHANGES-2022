@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5597 2022/11/20 22:17:54 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.5598 2022/11/20 22:59:02 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8467,3 +8467,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added www/gotosocial version 0.5.2 [nikita 2022-11-20]
 	Updated devel/frama-c to 25.0nb1 [wiz 2022-11-20]
 	Updated x11/libXrandr to 1.5.3 [wiz 2022-11-20]
+	Updated devel/py-approvaltests to 7.3.0 [schmonz 2022-11-20]
