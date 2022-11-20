@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2022/10/19 11:38:12 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.28 2022/11/20 22:58:57 schmonz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -70,6 +70,9 @@ ${PYSITELIB}/approvaltests/mrjob/mrjob_approvals.pyo
 ${PYSITELIB}/approvaltests/namer/__init__.py
 ${PYSITELIB}/approvaltests/namer/__init__.pyc
 ${PYSITELIB}/approvaltests/namer/__init__.pyo
+${PYSITELIB}/approvaltests/namer/cli_namer.py
+${PYSITELIB}/approvaltests/namer/cli_namer.pyc
+${PYSITELIB}/approvaltests/namer/cli_namer.pyo
 ${PYSITELIB}/approvaltests/namer/default_name.py
 ${PYSITELIB}/approvaltests/namer/default_name.pyc
 ${PYSITELIB}/approvaltests/namer/default_name.pyo
