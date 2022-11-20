@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/05/18 12:45:25 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/11/20 23:24:21 adam Exp $
 bin/py.test-benchmark-${PYVERSSUFFIX}
 bin/pytest-benchmark-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -35,9 +35,6 @@ ${PYSITELIB}/pytest_benchmark/hookspec.pyo
 ${PYSITELIB}/pytest_benchmark/logger.py
 ${PYSITELIB}/pytest_benchmark/logger.pyc
 ${PYSITELIB}/pytest_benchmark/logger.pyo
-${PYSITELIB}/pytest_benchmark/pep418.py
-${PYSITELIB}/pytest_benchmark/pep418.pyc
-${PYSITELIB}/pytest_benchmark/pep418.pyo
 ${PYSITELIB}/pytest_benchmark/plugin.py
 ${PYSITELIB}/pytest_benchmark/plugin.pyc
 ${PYSITELIB}/pytest_benchmark/plugin.pyo
