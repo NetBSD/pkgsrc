@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1647 2022/11/18 10:21:15 jperkin Exp $
+# $NetBSD: Makefile,v 1.1648 2022/11/20 20:17:02 nikita Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -135,6 +135,7 @@ SUBDIR+=	gitweb
 SUBDIR+=	go-ffuf
 SUBDIR+=	go-minify
 SUBDIR+=	goaccess
+SUBDIR+=	gotosocial
 SUBDIR+=	grafana
 SUBDIR+=	gtkasp2php
 SUBDIR+=	guile-haunt
