@@ -1,7 +1,9 @@
-DISTNAME=		libXrandr-1.5.2
+# $NetBSD: Makefile,v 1.26 2022/11/20 22:17:45 wiz Exp $
+
+DISTNAME=		libXrandr-1.5.3
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
-EXTRACT_SUFX=		.tar.bz2
+EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/
