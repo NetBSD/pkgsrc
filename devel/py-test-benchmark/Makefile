@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2022/01/05 15:41:08 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2022/11/20 23:24:21 adam Exp $
 
-DISTNAME=	pytest-benchmark-3.4.1
+DISTNAME=	pytest-benchmark-4.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-benchmark/}
 
@@ -12,16 +11,16 @@ COMMENT=	Pytest support for benchmarking
 LICENSE=	2-clause-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-cpuinfo-[0-9]*:../../sysutils/py-cpuinfo
-DEPENDS+=	${PYPKGPREFIX}-elasticsearch-[0-9]*:../../databases/py-elasticsearch
 DEPENDS+=	${PYPKGPREFIX}-pygal-[0-9]*:../../graphics/py-pygal
+DEPENDS+=	${PYPKGPREFIX}-test>=3.8:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-elasticsearch-[0-9]*:../../databases/py-elasticsearch
 TEST_DEPENDS+=	${PYPKGPREFIX}-freezegun-[0-9]*:../../devel/py-freezegun
-TEST_DEPENDS+=	${PYPKGPREFIX}-test>=3.8:../../devel/py-test
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27	# py-pygal
-
 USE_PKG_RESOURCES=	yes
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27	# py-pygal
 
 post-install:
 .for bin in py.test-benchmark pytest-benchmark
@@ -30,7 +29,7 @@ post-install:
 .endfor
 
 do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} py.test-${PYVERSSUFFIX}
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
