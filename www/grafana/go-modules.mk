@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.20 2022/11/15 16:45:26 jperkin Exp $
+# $NetBSD: go-modules.mk,v 1.21 2022/11/20 15:48:07 triaxx Exp $
 
 GO_MODULE_FILES+=	bazil.org/fuse/@v/v0.0.0-20160811212531-371fbbdaa898.mod
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.100.1.mod
@@ -1591,8 +1591,6 @@ GO_MODULE_FILES+=	github.com/jonboulle/clockwork/@v/v0.3.0.mod
 GO_MODULE_FILES+=	github.com/jonboulle/clockwork/@v/v0.3.0.zip
 GO_MODULE_FILES+=	github.com/josharian/intern/@v/v1.0.0.mod
 GO_MODULE_FILES+=	github.com/josharian/intern/@v/v1.0.0.zip
-GO_MODULE_FILES+=	github.com/jperkin/bluge/@v/v0.0.0-20221115094616-edae43d4bbfa.mod
-GO_MODULE_FILES+=	github.com/jperkin/bluge/@v/v0.0.0-20221115094616-edae43d4bbfa.zip
 GO_MODULE_FILES+=	github.com/jperkin/bluge/@v/v0.0.0-20221115155924-ffd91b43c395.mod
 GO_MODULE_FILES+=	github.com/jperkin/bluge/@v/v0.0.0-20221115155924-ffd91b43c395.zip
 GO_MODULE_FILES+=	github.com/jpillora/backoff/@v/v0.0.0-20180909062703-3050d21c67d7.mod
@@ -1779,9 +1777,9 @@ GO_MODULE_FILES+=	github.com/mattn/go-runewidth/@v/v0.0.9.zip
 GO_MODULE_FILES+=	github.com/mattn/go-shellwords/@v/v1.0.3.mod
 GO_MODULE_FILES+=	github.com/mattn/go-sqlite3/@v/v1.10.0.mod
 GO_MODULE_FILES+=	github.com/mattn/go-sqlite3/@v/v1.11.0.mod
+GO_MODULE_FILES+=	github.com/mattn/go-sqlite3/@v/v1.14.16.mod
+GO_MODULE_FILES+=	github.com/mattn/go-sqlite3/@v/v1.14.16.zip
 GO_MODULE_FILES+=	github.com/mattn/go-sqlite3/@v/v1.14.6.mod
-GO_MODULE_FILES+=	github.com/mattn/go-sqlite3/@v/v1.14.7.mod
-GO_MODULE_FILES+=	github.com/mattn/go-sqlite3/@v/v1.14.7.zip
 GO_MODULE_FILES+=	github.com/mattn/go-tty/@v/v0.0.0-20180907095812-13ff1204f104.mod
 GO_MODULE_FILES+=	github.com/mattn/go-xmlrpc/@v/v0.0.3.mod
 GO_MODULE_FILES+=	github.com/matttproud/golang_protobuf_extensions/@v/v1.0.0.mod
@@ -2050,7 +2048,8 @@ GO_MODULE_FILES+=	github.com/prometheus/client_golang/@v/v1.10.0.mod
 GO_MODULE_FILES+=	github.com/prometheus/client_golang/@v/v1.11.0.mod
 GO_MODULE_FILES+=	github.com/prometheus/client_golang/@v/v1.12.1.mod
 GO_MODULE_FILES+=	github.com/prometheus/client_golang/@v/v1.13.0.mod
-GO_MODULE_FILES+=	github.com/prometheus/client_golang/@v/v1.13.0.zip
+GO_MODULE_FILES+=	github.com/prometheus/client_golang/@v/v1.13.1.mod
+GO_MODULE_FILES+=	github.com/prometheus/client_golang/@v/v1.13.1.zip
 GO_MODULE_FILES+=	github.com/prometheus/client_golang/@v/v1.2.0.mod
 GO_MODULE_FILES+=	github.com/prometheus/client_golang/@v/v1.2.1.mod
 GO_MODULE_FILES+=	github.com/prometheus/client_golang/@v/v1.3.0.mod
