@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2022/07/08 13:21:59 gdt Exp $
+@comment $NetBSD: PLIST,v 1.23 2022/11/20 13:02:07 gdt Exp $
 bin/geos-config
 bin/geosop
 include/geos.h
@@ -254,6 +254,7 @@ include/geos/noding/snapround/MCIndexPointSnapper.h
 include/geos/noding/snapround/MCIndexSnapRounder.h
 include/geos/noding/snapround/SnapRoundingIntersectionAdder.h
 include/geos/noding/snapround/SnapRoundingNoder.h
+include/geos/operation/BoundaryOp.h
 include/geos/operation/GeometryGraphOperation.h
 include/geos/operation/buffer/BufferBuilder.h
 include/geos/operation/buffer/BufferCurveSetBuilder.h
@@ -449,8 +450,8 @@ lib/cmake/GEOS/geos-config.cmake
 lib/cmake/GEOS/geos-targets-release.cmake
 lib/cmake/GEOS/geos-targets.cmake
 lib/libgeos.so
-lib/libgeos.so.3.11.0
+lib/libgeos.so.${PKGVERSION}
 lib/libgeos_c.so
 lib/libgeos_c.so.1
-lib/libgeos_c.so.1.17.0
+lib/libgeos_c.so.1.17.1
 lib/pkgconfig/geos.pc
