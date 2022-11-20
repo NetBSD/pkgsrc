@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.16 2021/10/26 10:45:11 nia Exp $
+$NetBSD: distinfo,v 1.17 2022/11/20 16:39:06 gdt Exp $
 
-BLAKE2s (merkaartor-0.18.4.tar.gz) = 653fa83f97e3780c0ae8ecb61fcb8a84ab2562310cffd496a5075dcdea936953
-SHA512 (merkaartor-0.18.4.tar.gz) = 16001688584fd13eb7573159092a21ed0189ae0ce900474bacd5b1e47b8cebb0c4b2bd5b904e13a0029ec01167b68a32a9936914b3f5a1360b389aa31858cf9c
-Size (merkaartor-0.18.4.tar.gz) = 6562065 bytes
-SHA1 (patch-src_Features_Feature.h) = beb00d5258813de2c95abc51d59e741e3dd925d0
+BLAKE2s (merkaartor-0.19.0.tar.gz) = 0a0ff2676b16b71cde97812096b3515a0fa49162da7248ab9154cd88bfd42e6a
+SHA512 (merkaartor-0.19.0.tar.gz) = 2e832ba14fd89861a4ae2940d281c801d039e09aaf30ada996ac508e084a29d033f8ac3d3e4711c78d1f36df84ab133bd0a901e0e8fa72efa098001724940a6d
+Size (merkaartor-0.19.0.tar.gz) = 5665947 bytes
