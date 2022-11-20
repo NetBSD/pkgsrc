@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5588 2022/11/20 16:39:16 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.5589 2022/11/20 17:09:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8454,3 +8454,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/p5-Image-ExifTool to 12.50 [gdt 2022-11-20]
 	Updated www/grafana to 9.2.5 [triaxx 2022-11-20]
 	Updated geography/merkaartor to 0.19.0 [gdt 2022-11-20]
+	Updated devel/py-virtualenv to 20.16.7 [adam 2022-11-20]
+	Updated devel/py-setuptools to 65.6.0 [adam 2022-11-20]
