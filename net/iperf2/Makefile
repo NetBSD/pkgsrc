@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2022/05/29 15:53:44 gdt Exp $
+# $NetBSD: Makefile,v 1.6 2022/11/20 13:07:22 gdt Exp $
 
-DISTNAME=	iperf-2.1.7
+DISTNAME=	iperf-2.1.8
 CATEGORIES=	net benchmarks
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=iperf2/}
 
