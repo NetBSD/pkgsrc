@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.667 2022/10/19 13:16:45 adam Exp $
+# $NetBSD: Makefile,v 1.668 2022/11/20 23:21:14 adam Exp $
 
 COMMENT=	Databases
 
@@ -372,6 +372,7 @@ SUBDIR+=	py-cx_Oracle
 SUBDIR+=	py-datapkg
 SUBDIR+=	py-dbf
 SUBDIR+=	py-dbfread
+SUBDIR+=	py-elastic-transport
 SUBDIR+=	py-elasticsearch
 SUBDIR+=	py-gdbm
 SUBDIR+=	py-kb
