@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2022/07/10 20:09:56 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2022/11/20 23:19:20 adam Exp $
 
 DISTNAME=	requests-2.28.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,6 +12,8 @@ LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-cryptography-[0-9]*:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-certifi>=2017.4.17:../../security/py-certifi
+# TODO: remove chardet once charset-normalizer>=3 is supported
+DEPENDS+=	${PYPKGPREFIX}-chardet>=3.0.2:../../converters/py-chardet
 DEPENDS+=	${PYPKGPREFIX}-charset-normalizer>=2:../../converters/py-charset-normalizer
 DEPENDS+=	${PYPKGPREFIX}-idna>=2.5:../../www/py-idna
 DEPENDS+=	${PYPKGPREFIX}-urllib3>=1.21.1:../../www/py-urllib3
