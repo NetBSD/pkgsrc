@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5594 2022/11/20 20:15:48 leot Exp $
+$NetBSD: CHANGES-2022,v 1.5595 2022/11/20 20:17:53 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8464,3 +8464,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated misc/py-stdnum to 1.18 [adam 2022-11-20]
 	Updated textproc/py-pyphen to 0.13.1 [adam 2022-11-20]
 	Updated net/Geomyidae to 0.69 [leot 2022-11-20]
+	Added www/gotosocial version 0.5.2 [nikita 2022-11-20]
