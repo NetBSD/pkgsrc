@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22360 2022/11/17 23:51:43 wiz Exp $
+$NetBSD: TODO,v 1.22361 2022/11/20 08:41:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -374,7 +374,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ImageMagick6-6.9.12.8
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
-	o MesaLib-22.2.3
+	o MesaLib-22.2.4
 	o OdfConverter-4.0
 	o PACK-0.0.4
 	o Pantomime-1.2.2
@@ -502,6 +502,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o blur6ex-0.3.462
 	o boolean-7.1
 	o bos-2.5
+	o botan2-2.19.3
 	o bottlerocket-0.05b3
 	o bugzilla3-3.6.13
 	o byobu-5.133
@@ -695,6 +696,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gettext-0.21.1
 	o gfract-0.33
 	o ghc-9.4.1
+	o gimp-devel-2.99.14
 	o gimp-docs-de-2.10.0
 	o gimp-docs-en-2.10.0
 	o gimp-docs-es-2.10.0
@@ -936,6 +938,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libmcs-0.7.2
 	o libmilter-8.16.1
 	o libmtag-0.3.6
+	o libnumbertext-1.0.11
 	o libobjc2-2.1
 	o liboobs-2.32.0
 	o liboop-1.0.1
@@ -1025,6 +1028,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o mopher-0.6.0
 	o moserial-2.30.0
 	o mpcomplex-1.2.1
+	o mpfr-4.1.1
 	o mserv-devel-0.41
 	o mtail-1.2.0
 	o multitail-6.4.2
@@ -1258,6 +1262,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-OTXv2-1.5.2
 	o py-Routes-2.5.1
 	o py-barman-3.0.1
+	o py-cairo-1.22.0
 	o py-cassa-1.11.0
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
 	o py-django-4.1
@@ -1274,6 +1279,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-input-pad-1.4.2
 	o py-keybinder-0.3.2
 	o py-llvmlite-0.39.0
+	o py-mercurial-6.3.1
 	o py-musicbrainz-0.7.4
 	o py-musicbrainz-ngs-0.7.1
 	o py-newt-0.52.21
@@ -1358,6 +1364,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rvm-1.20
 	o sabayon-2.30.1
 	o sablecc-3.7
+	o samba4-4.17.3
 	o sarg-2.4.0
 	o sasm-3.12.1
 	o saytime-20050127
