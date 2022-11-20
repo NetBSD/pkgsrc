@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5590 2022/11/20 17:52:42 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5591 2022/11/20 18:30:31 is Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8458,3 +8458,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-setuptools to 65.6.0 [adam 2022-11-20]
 	Updated devel/py-astroid to 2.12.13 [adam 2022-11-20]
 	Updated devel/py-pylint to 2.15.6 [adam 2022-11-20]
+	Updated time/saytime to 20150127 [is 2022-11-20]
