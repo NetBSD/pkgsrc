@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.45 2022/07/08 13:21:59 gdt Exp $
+$NetBSD: distinfo,v 1.46 2022/11/20 13:02:07 gdt Exp $
 
-BLAKE2s (geos-3.11.0rc0.tar.bz2) = 52c96b1ba051b1ae61ce8e27bb519bf93b55d63a97fa47c1ef281312545218c4
-SHA512 (geos-3.11.0rc0.tar.bz2) = 40799ec41a3b16c04aa8a52602c43521ce74e052268d54bdfadb38371c329abfac8040f429e0d0f23b5f534ad893572f94a7fd7a4857dd93b3ef18c59cc296d2
-Size (geos-3.11.0rc0.tar.bz2) = 6727766 bytes
+BLAKE2s (geos-3.11.1.tar.bz2) = 887e363dc8e2e6a9e28f6a90993903119cd1aa497a98635c4bc6125191ef4583
+SHA512 (geos-3.11.1.tar.bz2) = 708500aba9b04208ee46a531d55ddf63a213dfaa2922dae937b524300b2b46c95143ed6cd3ff1414e9099f2be95e5df5a2e0b49df43acf93a9478215259f20d3
+Size (geos-3.11.1.tar.bz2) = 6753232 bytes
 SHA1 (patch-ae) = 253ae5cf5c2705a80d89d996507e3e94f2a11296
 SHA1 (patch-util_geosop_cxxopts.hpp) = 6da706852b026df7275be0a3caddadd1315f6e81
