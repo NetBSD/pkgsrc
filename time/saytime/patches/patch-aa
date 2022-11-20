@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2016/03/30 08:45:32 jperkin Exp $
+$NetBSD: patch-aa,v 1.4 2022/11/20 18:26:21 is Exp $
 
 Use pkgsrc layout/flags.
 
@@ -25,16 +25,6 @@ Use pkgsrc layout/flags.
 +#DEFINES =	-DSOUND_DIR=$(SOUND_DIR) -DCGI
  #DEFINES =	-DSOUND_DIR=$(SOUND_DIR) -DWRITE_STDOUT -DAUDIO_HEADER
  #DEFINES =	-DSOUND_DIR=$(SOUND_DIR) -DWRITE_STDOUT
- 
-@@ -18,8 +15,7 @@ DEFINES =	-DSOUND_DIR=$(SOUND_DIR) -DCGI
- CC =		gcc
- CFLAGS =	-O $(DEFINES)
- 
--#LDFLAGS =	-s
--LDFLAGS =	-s -static
-+LDFLAGS =	-s
- 
- all:		saytime
  
 @@ -30,10 +26,10 @@ saytime:	saytime.o
  	$(CC) $(CFLAGS) -c $<
