@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2020/09/02 00:24:26 gdt Exp $
+@comment $NetBSD: PLIST,v 1.8 2022/11/20 16:39:06 gdt Exp $
 bin/merkaartor
 lib/merkaartor/plugins/background/libMGdalBackgroundPlugin.so
 lib/merkaartor/plugins/background/libMGeoTiffBackgroundPlugin.so
@@ -26,26 +26,22 @@ share/merkaartor/BookmarksList.xml
 share/merkaartor/Projections.xml
 share/merkaartor/TmsServersList.xml
 share/merkaartor/WmsServersList.xml
-share/merkaartor/translations/merkaartor_ar.qm
 share/merkaartor/translations/merkaartor_cs.qm
 share/merkaartor/translations/merkaartor_de.qm
-share/merkaartor/translations/merkaartor_de_AT.qm
 share/merkaartor/translations/merkaartor_en.qm
 share/merkaartor/translations/merkaartor_es.qm
-share/merkaartor/translations/merkaartor_et.qm
+share/merkaartor/translations/merkaartor_fi.qm
 share/merkaartor/translations/merkaartor_fr.qm
 share/merkaartor/translations/merkaartor_hr.qm
 share/merkaartor/translations/merkaartor_hu.qm
+share/merkaartor/translations/merkaartor_id_ID.qm
 share/merkaartor/translations/merkaartor_it.qm
 share/merkaartor/translations/merkaartor_ja.qm
 share/merkaartor/translations/merkaartor_nl.qm
 share/merkaartor/translations/merkaartor_pl.qm
-share/merkaartor/translations/merkaartor_pt.qm
 share/merkaartor/translations/merkaartor_pt_BR.qm
 share/merkaartor/translations/merkaartor_ru.qm
-share/merkaartor/translations/merkaartor_sk.qm
 share/merkaartor/translations/merkaartor_sv.qm
 share/merkaartor/translations/merkaartor_uk.qm
-share/merkaartor/translations/merkaartor_vi.qm
-share/merkaartor/translations/merkaartor_zh_CN.qm
 share/merkaartor/translations/merkaartor_zh_TW.qm
+share/metainfo/org.merkaartor.merkaartor.appdata.xml
