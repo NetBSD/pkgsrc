@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5589 2022/11/20 17:09:56 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5590 2022/11/20 17:52:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8456,3 +8456,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated geography/merkaartor to 0.19.0 [gdt 2022-11-20]
 	Updated devel/py-virtualenv to 20.16.7 [adam 2022-11-20]
 	Updated devel/py-setuptools to 65.6.0 [adam 2022-11-20]
+	Updated devel/py-astroid to 2.12.13 [adam 2022-11-20]
+	Updated devel/py-pylint to 2.15.6 [adam 2022-11-20]
