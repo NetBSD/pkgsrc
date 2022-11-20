@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5587 2022/11/20 15:51:23 triaxx Exp $
+$NetBSD: CHANGES-2022,v 1.5588 2022/11/20 16:39:16 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8453,3 +8453,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/iperf2 to 2.1.8 [gdt 2022-11-20]
 	Updated graphics/p5-Image-ExifTool to 12.50 [gdt 2022-11-20]
 	Updated www/grafana to 9.2.5 [triaxx 2022-11-20]
+	Updated geography/merkaartor to 0.19.0 [gdt 2022-11-20]
