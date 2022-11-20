@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5585 2022/11/20 13:07:28 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.5586 2022/11/20 13:24:18 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8451,3 +8451,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/ruby-sqlite3 to 1.5.4 [taca 2022-11-20]
 	Updated geography/geos to 3.11.1 [gdt 2022-11-20]
 	Updated net/iperf2 to 2.1.8 [gdt 2022-11-20]
+	Updated graphics/p5-Image-ExifTool to 12.50 [gdt 2022-11-20]
