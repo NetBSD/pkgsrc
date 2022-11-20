@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2022/05/29 15:53:44 gdt Exp $
+$NetBSD: distinfo,v 1.7 2022/11/20 13:07:22 gdt Exp $
 
-BLAKE2s (iperf-2.1.7.tar.gz) = 74623387d3fb865a9850ccbeff4587101dbe3b0569a89f0bc6292a8589f284cb
-SHA512 (iperf-2.1.7.tar.gz) = 1a4dc2ddea1b48d6c7db053b593dc83269de3220631d115d11f3a9f0552fd5591cffbcec02ee00305f35e39d76dfe6232309b85d263b65611888afa08c7e2a90
-Size (iperf-2.1.7.tar.gz) = 408216 bytes
+BLAKE2s (iperf-2.1.8.tar.gz) = a651299edb509b5bcd1504e72c86af772c2aa59de60af8f99b45fba4261c0fed
+SHA512 (iperf-2.1.8.tar.gz) = 0b5c3dbb493d6663e7ea8621489aa92d2996c48c19499878b33b5e114a57b2c0184bd56624ab935f259c34ee63842a4a89710a91c249e2f4fb7bb37fb7572df8
+Size (iperf-2.1.8.tar.gz) = 420716 bytes
