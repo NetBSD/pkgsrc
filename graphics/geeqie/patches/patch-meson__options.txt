@@ -1,6 +1,7 @@
-$NetBSD: patch-meson__options.txt,v 1.1 2022/11/21 22:24:08 wiz Exp $
+$NetBSD: patch-meson__options.txt,v 1.2 2022/11/21 22:26:54 wiz Exp $
 
 Allow disabling doxygen detection.
+https://github.com/BestImageViewer/geeqie/pull/1051
 
 --- meson_options.txt.orig	2022-08-12 09:32:25.000000000 +0000
 +++ meson_options.txt
