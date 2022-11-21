@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2022/06/28 11:34:15 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2022/11/21 18:20:43 jperkin Exp $
 
 DISTNAME=	pfe-0.33.71
 PKGREVISION=	16
@@ -25,6 +25,8 @@ TEST_TARGET=	tests
 
 TOOL_DEPENDS+=		xmlto-[0-9]*:../../textproc/xmlto	# documentation
 PYTHON_FOR_BUILD_ONLY=	tool
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--warn-common
 
 .include "../../lang/python/pyversion.mk"
 .include "../../mk/termcap.buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2022/04/18 19:09:43 adam Exp $
+# $NetBSD: Makefile,v 1.22 2022/11/21 18:20:41 jperkin Exp $
 
 DISTNAME=	vsqlite++-0.3.13
 PKGREVISION=	17
@@ -13,6 +13,8 @@ LICENSE=	modified-bsd
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--as-needed
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"

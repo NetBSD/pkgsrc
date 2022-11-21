@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2022/10/26 10:32:02 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2022/11/21 18:20:45 jperkin Exp $
 
 DISTNAME=	odt2tex-0.0.13
 PKGREVISION=	12
@@ -12,6 +12,8 @@ LICENSE=	mit
 
 USE_LANGUAGES=	c99
 USE_TOOLS+=	pkg-config
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-O2
 
 .include "../../archivers/libzip/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"

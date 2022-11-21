@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2022/11/15 22:48:32 nia Exp $
+# $NetBSD: Makefile,v 1.16 2022/11/21 18:20:45 jperkin Exp $
 
 DISTNAME=	luakit-2.3.1
 CATEGORIES=	www lua
@@ -20,6 +20,8 @@ MAKE_FLAGS+=	XDGPREFIX=${PKG_SYSCONFDIR}
 MAKE_FLAGS+=	VERSION=${PKGVERSION}
 
 LDFLAGS.SunOS+=	-lm -lsocket
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--export-dynamic
 
 LUA_VERSIONS_ACCEPTED=	51
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2022/10/26 10:32:07 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2022/11/21 18:20:46 jperkin Exp $
 
 DISTNAME=	gtk-4.8.1
 PKGNAME=	${DISTNAME:S/gtk/gtk4/}
@@ -35,6 +35,8 @@ PKGCONFIG_OVERRIDE+=	output/meson-private/gtk4-x11.pc
 PKGCONFIG_OVERRIDE+=	output/meson-private/gtk4-unix-print.pc
 
 PKGCONFIG_OVERRIDE_STAGE=	post-configure
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--export-dynamic
 
 PLIST_VARS+=		dylib no-dylib
 .if ${SHLIB_TYPE} == "dylib"

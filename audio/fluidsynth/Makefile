@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2022/10/14 10:59:10 adam Exp $
+# $NetBSD: Makefile,v 1.68 2022/11/21 18:20:40 jperkin Exp $
 
 DISTNAME=	fluidsynth-2.3.0
 CATEGORIES=	audio
@@ -23,6 +23,8 @@ CMAKE_ARGS+=	-Denable-framework=OFF
 PKGCONFIG_OVERRIDE=	fluidsynth.pc.in
 
 LDFLAGS.SunOS+=		-lsocket
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--as-needed
 
 .include "../../mk/oss.buildlink3.mk"
 

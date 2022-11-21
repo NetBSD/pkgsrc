@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2022/08/11 05:08:02 gutteridge Exp $
+# $NetBSD: Makefile,v 1.55 2022/11/21 18:20:40 jperkin Exp $
 
 DISTNAME=	libcanberra-0.30
 PKGREVISION=	7
@@ -19,6 +19,10 @@ CONFIGURE_ENV+=		ac_cv_lib_ltdl_lt_dladvise_init=yes
 PKGCONFIG_OVERRIDE+=	libcanberra-gtk.pc.in
 PKGCONFIG_OVERRIDE+=	libcanberra-gtk3.pc.in
 PKGCONFIG_OVERRIDE+=	libcanberra.pc.in
+
+# configure test is broken
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--as-needed
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--gc-sections
 
 REPLACE_SH=		src/libcanberra-logout-sound.sh.in
 

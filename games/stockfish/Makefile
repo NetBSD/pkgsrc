@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/09/17 17:25:54 he Exp $
+# $NetBSD: Makefile,v 1.4 2022/11/21 18:20:42 jperkin Exp $
 
 DISTNAME=	stockfish-9-src
 PKGNAME=	${DISTNAME:S/-src//}
@@ -18,6 +18,7 @@ USE_TOOLS+=	gmake
 INSTALLATION_DIRS=	bin share/doc/stockfish
 
 BUILDLINK_TRANSFORM.NetBSD+=	rm:-flto rm:-m32
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--no-as-needed
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/stockfish ${DESTDIR}${PREFIX}/bin

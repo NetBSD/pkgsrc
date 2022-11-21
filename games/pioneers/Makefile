@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2022/08/11 05:08:34 gutteridge Exp $
+# $NetBSD: Makefile,v 1.78 2022/11/21 18:20:42 jperkin Exp $
 #
 
 DISTNAME=	pioneers-15.6
@@ -15,6 +15,8 @@ GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake pkg-config msgfmt intltool itstool
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--as-needed
 
 BUILDLINK_DEPMETHOD.librsvg=	build	# generates icons
 
