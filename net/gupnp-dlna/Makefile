@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2022/07/22 17:07:14 micha Exp $
+# $NetBSD: Makefile,v 1.39 2022/11/21 18:20:44 jperkin Exp $
 
 DISTNAME=	gupnp-dlna-0.10.3
 PKGREVISION=	23
@@ -18,6 +18,8 @@ USE_TOOLS+=	gmake pkg-config
 PKGCONFIG_OVERRIDE+=	gupnp-dlna-2.0.pc.in
 PKGCONFIG_OVERRIDE+=	gupnp-dlna-gst-2.0.pc.in
 #PKGCONFIG_OVERRIDE+=	gupnp-dlna-metadata-2.0.pc.in
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--no-as-needed
 
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"

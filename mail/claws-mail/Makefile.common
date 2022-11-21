@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.24 2021/07/13 12:35:09 nia Exp $
+# $NetBSD: Makefile.common,v 1.25 2022/11/21 18:20:43 jperkin Exp $
 
 # used by mail/claws-mail/plugins.mk
 
@@ -61,6 +61,8 @@ CONFIGURE_ARGS+=	--disable-spam_report-plugin
 CONFIGURE_ARGS+=	--disable-tnef_parse-plugin
 CONFIGURE_ARGS+=	--disable-perl-plugin
 CONFIGURE_ARGS+=	--disable-vcalendar-plugin
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--export-dynamic
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../mail/libetpan/buildlink3.mk"

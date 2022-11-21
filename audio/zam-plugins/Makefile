@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/09/11 12:51:24 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/11/21 18:20:40 jperkin Exp $
 
 DISTNAME=	zam-plugins-3.14
 PKGREVISION=	1
@@ -17,6 +17,10 @@ USE_TOOLS+=	gmake pkg-config
 USE_LANGUAGES=	c c++
 
 REPLACE_SH+=	dpf/utils/generate-ttl.sh
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--as-needed
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--gc-sections
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-O1
 
 .include "options.mk"
 .include "../../audio/libsamplerate/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2022/08/11 05:09:36 gutteridge Exp $
+# $NetBSD: Makefile,v 1.46 2022/11/21 18:20:46 jperkin Exp $
 
 VERSION=	2.7.1
 DISTNAME=	xfce4-whiskermenu-plugin-${VERSION}
@@ -15,6 +15,9 @@ LICENSE=	gnu-gpl-v2
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake pkg-config msgfmt perl intltool
+
+BUILDLINK_TRANSFORM.SunOS+=     rm:-Wl,--as-needed
+BUILDLINK_TRANSFORM.SunOS+=     rm:-Wl,-O1
 
 .include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../x11/xfce4-garcon/buildlink3.mk"

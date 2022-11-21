@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/11/13 16:13:16 fcambus Exp $
+# $NetBSD: Makefile,v 1.3 2022/11/21 18:20:40 jperkin Exp $
 
 DISTNAME=	lzlib-1.13
 CATEGORIES=	archivers devel
@@ -16,6 +16,8 @@ USE_TOOLS+=	gmake
 INFO_FILES=	yes
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX} --infodir=${PREFIX}/${PKGINFODIR} --enable-shared
+
+BUILDLINK_TRANSFORM.SunOS+=	opt:-Wl,--soname=liblz.so.1:-Wl,-soname,liblz.so.1
 
 TEST_TARGET=	check
 

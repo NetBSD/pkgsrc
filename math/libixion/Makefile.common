@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2022/02/05 04:28:11 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.6 2022/11/21 18:20:43 jperkin Exp $
 #
 # used by math/libixion/Makefile
 # used by math/py-libixion/Makefile
@@ -22,6 +22,7 @@ USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++17
 
 BUILDLINK_TRANSFORM.NetBSD+=	rm:-ldl
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--no-as-needed
 
 PTHREAD_AUTO_VARS=	yes
 

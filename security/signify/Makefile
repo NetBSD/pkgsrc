@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/11/05 16:16:21 pin Exp $
+# $NetBSD: Makefile,v 1.3 2022/11/21 18:20:44 jperkin Exp $
 
 DISTNAME=	outils-0.12
 PKGNAME=	${DISTNAME:S,outils,signify,}
@@ -40,6 +40,8 @@ SUBST_FILES.ints+=	${LIBSRCDIR}/*.c
 SUBST_FILES.ints+=	${LIBSRCDIR}/include/*.h
 SUBST_SED.ints=		-e 's|u_int|uint|g'
 .endif
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--as-needed
 
 LIBS.SunOS+=	-lresolv -lrt
 
