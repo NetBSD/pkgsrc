@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5613 2022/11/21 20:09:21 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5614 2022/11/21 20:22:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8491,3 +8491,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-approval-utilities to 7.3.0 [schmonz 2022-11-21]
 	Updated textproc/py-jsonschema to 4.17.0 [adam 2022-11-21]
 	Updated net/py-zmq to 24.0.1 [adam 2022-11-21]
+	Updated devel/py-vulture to 2.6 [adam 2022-11-21]
+	Updated devel/py-test-subtests to 0.9.0 [adam 2022-11-21]
