@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2022/07/02 09:31:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.17 2022/11/21 20:09:01 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -242,6 +242,7 @@ ${PYSITELIB}/zmq/tests/__init__.pyo
 ${PYSITELIB}/zmq/tests/conftest.py
 ${PYSITELIB}/zmq/tests/conftest.pyc
 ${PYSITELIB}/zmq/tests/conftest.pyo
+${PYSITELIB}/zmq/tests/cython_ext.pyx
 ${PYSITELIB}/zmq/tests/test_asyncio.py
 ${PYSITELIB}/zmq/tests/test_asyncio.pyc
 ${PYSITELIB}/zmq/tests/test_asyncio.pyo
