@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.26 2022/11/21 12:00:01 wiz Exp $
+$NetBSD: distinfo,v 1.27 2022/11/21 22:24:08 wiz Exp $
 
 BLAKE2s (geeqie-2.0.1.tar.xz) = 344660eddf23258c87afb4855c616ba24a6eb0562756c15c554bed30e241ae78
 SHA512 (geeqie-2.0.1.tar.xz) = cd2251c831c6d4d461d92eee84df08590752ad625e1f50d57e1fb5d0fc6ac16a225584a8217e14bf4f993ba247f7df3296498b27fcc4f5f4c7f25307699aadc5
 Size (geeqie-2.0.1.tar.xz) = 1666600 bytes
 SHA1 (patch-ac) = 6cebab3e14ce51c59e70fc902a514d1bbafc3b33
 SHA1 (patch-config.h.in) = 301b461a7c3ce8b699f4651363ddf18017eca0df
+SHA1 (patch-doc_meson.build) = 74f284283050399a6bcc05219f8786ba0ff98220
+SHA1 (patch-meson__options.txt) = fc952d373c01fa54d358c1e15f91be76ed6941e2
