@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:56:05 nia Exp $
+$NetBSD: distinfo,v 1.9 2022/11/21 09:40:59 wiz Exp $
 
-BLAKE2s (statsmodels-0.12.2.tar.gz) = 358ad9df9c1f560312f9c98b0e89fb6a2eab486d462a0a5bba3433e8b9c99856
-SHA512 (statsmodels-0.12.2.tar.gz) = ae4872bc7300ef564407daa8b4076fd70fc180965622ed2173871579e063e2143e000540089923fe171dbb191b7dd872077d8ba6794fe23390331375ec7ce810
-Size (statsmodels-0.12.2.tar.gz) = 17470078 bytes
+BLAKE2s (statsmodels-0.13.5.tar.gz) = 9d8c02dc5b0a78d3ffea3fdf119cac96e13b469f39e42598aaa8775d415fa9a5
+SHA512 (statsmodels-0.13.5.tar.gz) = 9aeeea80c69f52459140179523a0155429834b2951325c9781b28f8c4cbbd0593ff1867e2212078f2b898e4da953689c2fe78183d3c7959caa874e9d758b4ea4
+Size (statsmodels-0.13.5.tar.gz) = 18364957 bytes
