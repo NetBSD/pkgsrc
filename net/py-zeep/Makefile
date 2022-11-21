@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2022/11/15 12:18:05 adam Exp $
+# $NetBSD: Makefile,v 1.14 2022/11/21 09:36:52 adam Exp $
 
-DISTNAME=	zeep-4.2.0
+DISTNAME=	zeep-4.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zeep/}
