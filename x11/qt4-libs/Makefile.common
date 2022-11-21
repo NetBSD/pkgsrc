@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.53 2020/05/02 13:53:09 rillig Exp $
+# $NetBSD: Makefile.common,v 1.54 2022/11/21 18:20:46 jperkin Exp $
 # used by x11/qt4-docs/Makefile
 # used by x11/qt4-libs/Makefile
 # used by x11/qt4-mng/Makefile
@@ -147,6 +147,8 @@ SUBST_SED.lt+=		-e 's,$$$${first(QMAKE_EXT_OBJ)},.lo,'
 .if !empty(CC_VERSION:Mgcc-2.8*)
 CXXFLAGS+=		-DQ_INLINE_TEMPLATES=inline
 .endif
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--gc-sections
 
 # Remove files with portability issues, thereby ~proving they are not used in the build.
 post-extract:

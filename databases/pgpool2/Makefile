@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2022/08/17 17:05:14 tnn Exp $
+# $NetBSD: Makefile,v 1.12 2022/11/21 18:20:41 jperkin Exp $
 
 DISTNAME=	pgpool-II-4.3.2
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME:S/-II/2/}
@@ -16,6 +16,9 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		bash:run gmake
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 GNU_CONFIGURE=		yes
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--as-needed
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--enable-new-dtags
 
 .include "options.mk"
 .include "../../mk/bsd.prefs.mk"

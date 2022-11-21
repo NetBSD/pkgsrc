@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2022/11/02 21:17:32 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.5 2022/11/21 18:20:41 jperkin Exp $
 #
 # used by databases/mysql80-client/Makefile
 # used by databases/mysql80-server/Makefile
@@ -94,6 +94,8 @@ CMAKE_ARGS.SunOS+=	-DFORCE_UNSUPPORTED_COMPILER=YES
 # and does not properly detect this, breaking the build later on.  Also
 # explicitly disable epoll support as it is Linux-specific.
 CMAKE_ARGS.SunOS+=	-DHAVE_EPOLL=NO
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--no-as-needed
 
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/mysql
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/mysqlrouter

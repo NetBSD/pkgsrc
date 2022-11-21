@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/09/11 12:51:24 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2022/11/21 18:20:40 jperkin Exp $
 
 DISTNAME=	ykchorus-v0.2.2-source
 PKGNAME=	${DISTNAME:S/-source//1:S/-v/-/1}
@@ -19,6 +19,10 @@ USE_LANGUAGES=	c c++
 
 # C++0x
 GCC_REQD+=	4.7
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--as-needed
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--gc-sections
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-O1
 
 .include "../../mk/bsd.prefs.mk"
 

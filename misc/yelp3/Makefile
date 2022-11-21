@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2022/08/11 05:09:04 gutteridge Exp $
+# $NetBSD: Makefile,v 1.83 2022/11/21 18:20:43 jperkin Exp $
 
 DISTNAME=		yelp-3.32.0
 PKGREVISION=		13
@@ -19,6 +19,8 @@ GNU_CONFIGURE=		yes
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.38.0
 BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.13.3
 BUILDLINK_API_DEPENDS.libxslt+=	libxslt>=1.1.4
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--no-as-needed
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/gettext-tools/msgfmt-desktop.mk"

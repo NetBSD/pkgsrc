@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2020/05/18 10:26:25 nia Exp $
+# $NetBSD: Makefile,v 1.28 2022/11/21 18:20:46 jperkin Exp $
 
 DISTNAME=	hsetroot-1.0.5
 CATEGORIES=	x11
@@ -10,6 +10,8 @@ COMMENT=	Allows you to compose wallpapers for X
 LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	gmake pkg-config
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--no-as-needed
 
 INSTALLATION_DIRS+=	bin
 
