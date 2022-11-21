@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5599 2022/11/20 23:25:29 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5600 2022/11/21 09:18:44 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8472,3 +8472,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/py-elasticsearch to 8.5.0 [adam 2022-11-20]
 	Updated devel/py-test-benchmark to 4.0.0 [adam 2022-11-20]
 	Updated devel/py-lazy-object-proxy to 1.8.0 [adam 2022-11-20]
+	Updated editors/tp-note to 1.19.2 [pin 2022-11-21]
