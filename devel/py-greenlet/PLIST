@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2021/03/03 18:05:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/11/21 11:28:21 adam Exp $
 ${PYINC}/greenlet/greenlet.h
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -10,14 +10,31 @@ ${PYSITELIB}/greenlet/__init__.py
 ${PYSITELIB}/greenlet/__init__.pyc
 ${PYSITELIB}/greenlet/__init__.pyo
 ${PYSITELIB}/greenlet/_greenlet.so
-${PYSITELIB}/greenlet/greenlet.c
+${PYSITELIB}/greenlet/greenlet.cpp
 ${PYSITELIB}/greenlet/greenlet.h
+${PYSITELIB}/greenlet/greenlet_allocator.hpp
+${PYSITELIB}/greenlet/greenlet_compiler_compat.hpp
+${PYSITELIB}/greenlet/greenlet_cpython_compat.hpp
+${PYSITELIB}/greenlet/greenlet_exceptions.hpp
+${PYSITELIB}/greenlet/greenlet_greenlet.hpp
+${PYSITELIB}/greenlet/greenlet_internal.hpp
+${PYSITELIB}/greenlet/greenlet_refs.hpp
+${PYSITELIB}/greenlet/greenlet_slp_switch.hpp
+${PYSITELIB}/greenlet/greenlet_thread_state.hpp
+${PYSITELIB}/greenlet/greenlet_thread_state_dict_cleanup.hpp
+${PYSITELIB}/greenlet/greenlet_thread_support.hpp
+${PYSITELIB}/greenlet/platform/__init__.py
+${PYSITELIB}/greenlet/platform/__init__.pyc
+${PYSITELIB}/greenlet/platform/__init__.pyo
 ${PYSITELIB}/greenlet/platform/setup_switch_x64_masm.cmd
 ${PYSITELIB}/greenlet/platform/switch_aarch64_gcc.h
 ${PYSITELIB}/greenlet/platform/switch_alpha_unix.h
 ${PYSITELIB}/greenlet/platform/switch_amd64_unix.h
 ${PYSITELIB}/greenlet/platform/switch_arm32_gcc.h
 ${PYSITELIB}/greenlet/platform/switch_arm32_ios.h
+${PYSITELIB}/greenlet/platform/switch_arm64_masm.asm
+${PYSITELIB}/greenlet/platform/switch_arm64_masm.obj
+${PYSITELIB}/greenlet/platform/switch_arm64_msvc.h
 ${PYSITELIB}/greenlet/platform/switch_csky_gcc.h
 ${PYSITELIB}/greenlet/platform/switch_m68k_gcc.h
 ${PYSITELIB}/greenlet/platform/switch_mips_unix.h
@@ -44,6 +61,9 @@ ${PYSITELIB}/greenlet/tests/_test_extension.c
 ${PYSITELIB}/greenlet/tests/_test_extension.so
 ${PYSITELIB}/greenlet/tests/_test_extension_cpp.cpp
 ${PYSITELIB}/greenlet/tests/_test_extension_cpp.so
+${PYSITELIB}/greenlet/tests/leakcheck.py
+${PYSITELIB}/greenlet/tests/leakcheck.pyc
+${PYSITELIB}/greenlet/tests/leakcheck.pyo
 ${PYSITELIB}/greenlet/tests/test_contextvars.py
 ${PYSITELIB}/greenlet/tests/test_contextvars.pyc
 ${PYSITELIB}/greenlet/tests/test_contextvars.pyo
@@ -65,6 +85,9 @@ ${PYSITELIB}/greenlet/tests/test_generator_nested.pyo
 ${PYSITELIB}/greenlet/tests/test_greenlet.py
 ${PYSITELIB}/greenlet/tests/test_greenlet.pyc
 ${PYSITELIB}/greenlet/tests/test_greenlet.pyo
+${PYSITELIB}/greenlet/tests/test_greenlet_trash.py
+${PYSITELIB}/greenlet/tests/test_greenlet_trash.pyc
+${PYSITELIB}/greenlet/tests/test_greenlet_trash.pyo
 ${PYSITELIB}/greenlet/tests/test_leaks.py
 ${PYSITELIB}/greenlet/tests/test_leaks.pyc
 ${PYSITELIB}/greenlet/tests/test_leaks.pyo
