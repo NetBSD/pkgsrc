@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2022/11/21 22:24:08 wiz Exp $
+# $NetBSD: Makefile,v 1.99 2022/11/21 22:28:41 wiz Exp $
 
 DISTNAME=	geeqie-2.0.1
 CATEGORIES=	graphics
@@ -43,4 +43,5 @@ post-install:
 .include "../../graphics/openjpeg/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../devel/gettext-tools/msgfmt-desktop.mk"
+.include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
