@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.22 2021/11/18 19:52:18 adam Exp $
+$NetBSD: distinfo,v 1.23 2022/11/21 17:30:07 adam Exp $
 
-BLAKE2s (sympy-1.9.tar.gz) = cf848401910341851dc514dcbb4c433c6e8c0e048b04bf412359a5fd451a74e9
-SHA512 (sympy-1.9.tar.gz) = cc3a2c4e8a2c81501df873148654487a8d58e38c119d1d8f4e8fffc4c5d82cfdefeed8b896b3cfcde18e1f63cc3a9c2972f0604b30fee0f1fb4a4151befff350
-Size (sympy-1.9.tar.gz) = 6929669 bytes
+BLAKE2s (sympy-1.11.1.tar.gz) = 58032f335154615b8eacf5b53064cd4216e1a5ba5e844585641b66beeac9548b
+SHA512 (sympy-1.11.1.tar.gz) = 00e44566242174dbdc091ae9b88ba05551289c7760f4517b976ba0ef57dcef6c18973c9e2e9a723df3b13f73ed81a30e6ccc24da9da2bca577cbaaca12ba94ad
+Size (sympy-1.11.1.tar.gz) = 12921384 bytes
