@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5612 2022/11/21 17:58:11 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.5613 2022/11/21 20:09:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8489,3 +8489,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated math/py-sympy to 1.11.1 [adam 2022-11-21]
 	Updated devel/py-prompt_toolkit to 3.0.33 [adam 2022-11-21]
 	Updated devel/py-approval-utilities to 7.3.0 [schmonz 2022-11-21]
+	Updated textproc/py-jsonschema to 4.17.0 [adam 2022-11-21]
+	Updated net/py-zmq to 24.0.1 [adam 2022-11-21]
