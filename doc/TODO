@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22361 2022/11/20 08:41:52 wiz Exp $
+$NetBSD: TODO,v 1.22362 2022/11/21 21:01:54 adam Exp $
 
 Suggested new packages
 ======================
@@ -938,7 +938,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libmcs-0.7.2
 	o libmilter-8.16.1
 	o libmtag-0.3.6
-	o libnumbertext-1.0.11
 	o libobjc2-2.1
 	o liboobs-2.32.0
 	o liboop-1.0.1
@@ -1028,7 +1027,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o mopher-0.6.0
 	o moserial-2.30.0
 	o mpcomplex-1.2.1
-	o mpfr-4.1.1
 	o mserv-devel-0.41
 	o mtail-1.2.0
 	o multitail-6.4.2
