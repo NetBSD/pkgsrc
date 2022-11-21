@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2022/07/05 18:02:19 adam Exp $
+# $NetBSD: Makefile,v 1.3 2022/11/21 20:21:57 adam Exp $
 
-DISTNAME=	pytest-subtests-0.8.0
+DISTNAME=	pytest-subtests-0.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-subtests/}
@@ -17,8 +17,6 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 #TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
 # needs to be installed for testing
-# as of 0.7.0
-# 15 passed, 6 skipped, 5 xfailed
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
