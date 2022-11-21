@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.10 2022/11/17 09:49:57 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.11 2022/11/21 09:18:11 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.17.0
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
@@ -43,15 +43,15 @@ CARGO_CRATE_DEPENDS+=	core-graphics-0.22.3
 CARGO_CRATE_DEPENDS+=	core-graphics-types-0.1.1
 CARGO_CRATE_DEPENDS+=	cpufeatures-0.2.5
 CARGO_CRATE_DEPENDS+=	crossbeam-channel-0.5.6
-CARGO_CRATE_DEPENDS+=	crossbeam-utils-0.8.12
+CARGO_CRATE_DEPENDS+=	crossbeam-utils-0.8.13
 CARGO_CRATE_DEPENDS+=	crypto-common-0.1.6
 CARGO_CRATE_DEPENDS+=	cty-0.2.2
-CARGO_CRATE_DEPENDS+=	cxx-1.0.81
-CARGO_CRATE_DEPENDS+=	cxx-build-1.0.81
-CARGO_CRATE_DEPENDS+=	cxxbridge-flags-1.0.81
-CARGO_CRATE_DEPENDS+=	cxxbridge-macro-1.0.81
+CARGO_CRATE_DEPENDS+=	cxx-1.0.82
+CARGO_CRATE_DEPENDS+=	cxx-build-1.0.82
+CARGO_CRATE_DEPENDS+=	cxxbridge-flags-1.0.82
+CARGO_CRATE_DEPENDS+=	cxxbridge-macro-1.0.82
 CARGO_CRATE_DEPENDS+=	deunicode-0.4.3
-CARGO_CRATE_DEPENDS+=	digest-0.10.5
+CARGO_CRATE_DEPENDS+=	digest-0.10.6
 CARGO_CRATE_DEPENDS+=	directories-4.0.1
 CARGO_CRATE_DEPENDS+=	dirs-sys-0.3.7
 CARGO_CRATE_DEPENDS+=	dlib-0.5.0
@@ -103,7 +103,7 @@ CARGO_CRATE_DEPENDS+=	iana-time-zone-0.1.53
 CARGO_CRATE_DEPENDS+=	iana-time-zone-haiku-0.1.1
 CARGO_CRATE_DEPENDS+=	idna-0.3.0
 CARGO_CRATE_DEPENDS+=	ignore-0.4.18
-CARGO_CRATE_DEPENDS+=	indexmap-1.9.1
+CARGO_CRATE_DEPENDS+=	indexmap-1.9.2
 CARGO_CRATE_DEPENDS+=	inotify-0.9.6
 CARGO_CRATE_DEPENDS+=	inotify-sys-0.1.5
 CARGO_CRATE_DEPENDS+=	itoa-1.0.4
@@ -190,7 +190,7 @@ CARGO_CRATE_DEPENDS+=	semver-parser-0.10.2
 CARGO_CRATE_DEPENDS+=	serde-1.0.147
 CARGO_CRATE_DEPENDS+=	serde-xml-rs-0.3.1
 CARGO_CRATE_DEPENDS+=	serde_derive-1.0.147
-CARGO_CRATE_DEPENDS+=	serde_json-1.0.87
+CARGO_CRATE_DEPENDS+=	serde_json-1.0.88
 CARGO_CRATE_DEPENDS+=	serde_yaml-0.9.14
 CARGO_CRATE_DEPENDS+=	sha1-0.10.5
 CARGO_CRATE_DEPENDS+=	siphasher-0.3.10
