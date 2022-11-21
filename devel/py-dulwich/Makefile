@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.54 2022/09/14 11:14:33 adam Exp $
+# $NetBSD: Makefile,v 1.55 2022/11/21 09:52:49 adam Exp $
 
-DISTNAME=	dulwich-0.20.46
+DISTNAME=	dulwich-0.20.50
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dulwich/}
@@ -10,7 +10,6 @@ HOMEPAGE=	https://www.dulwich.io/
 COMMENT=	Python implementation of Git
 LICENSE=	apache-2.0 OR gnu-gpl-v2
 
-DEPENDS+=	${PYPKGPREFIX}-certifi-[0-9]*:../../security/py-certifi
 DEPENDS+=	${PYPKGPREFIX}-urllib3>=1.24.1:../../www/py-urllib3
 TEST_DEPENDS+=	${PYPKGPREFIX}-fastimport-[0-9]*:../../devel/py-fastimport
 TEST_DEPENDS+=	${PYPKGPREFIX}-gevent-[0-9]*:../../net/py-gevent

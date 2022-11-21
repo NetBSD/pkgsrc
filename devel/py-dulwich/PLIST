@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2022/08/05 14:03:36 adam Exp $
+@comment $NetBSD: PLIST,v 1.26 2022/11/21 09:52:49 adam Exp $
 bin/dul-receive-pack-${PYVERSSUFFIX}
 bin/dul-upload-pack-${PYVERSSUFFIX}
 bin/dulwich-${PYVERSSUFFIX}
@@ -83,6 +83,9 @@ ${PYSITELIB}/dulwich/contrib/test_swift.pyo
 ${PYSITELIB}/dulwich/contrib/test_swift_smoke.py
 ${PYSITELIB}/dulwich/contrib/test_swift_smoke.pyc
 ${PYSITELIB}/dulwich/contrib/test_swift_smoke.pyo
+${PYSITELIB}/dulwich/credentials.py
+${PYSITELIB}/dulwich/credentials.pyc
+${PYSITELIB}/dulwich/credentials.pyo
 ${PYSITELIB}/dulwich/diff_tree.py
 ${PYSITELIB}/dulwich/diff_tree.pyc
 ${PYSITELIB}/dulwich/diff_tree.pyo
@@ -217,6 +220,9 @@ ${PYSITELIB}/dulwich/tests/test_client.pyo
 ${PYSITELIB}/dulwich/tests/test_config.py
 ${PYSITELIB}/dulwich/tests/test_config.pyc
 ${PYSITELIB}/dulwich/tests/test_config.pyo
+${PYSITELIB}/dulwich/tests/test_credentials.py
+${PYSITELIB}/dulwich/tests/test_credentials.pyc
+${PYSITELIB}/dulwich/tests/test_credentials.pyo
 ${PYSITELIB}/dulwich/tests/test_diff_tree.py
 ${PYSITELIB}/dulwich/tests/test_diff_tree.pyc
 ${PYSITELIB}/dulwich/tests/test_diff_tree.pyo
