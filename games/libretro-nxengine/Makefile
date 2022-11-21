@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/05/31 16:22:35 nia Exp $
+# $NetBSD: Makefile,v 1.7 2022/11/21 18:20:42 jperkin Exp $
 
 DISTNAME=	libretro-nxengine-20200109
 CATEGORIES=	games
@@ -20,6 +20,7 @@ MAKE_FLAGS+=	SINGLE_PRECISION_FLOATS=1
 MAKE_FLAGS+=	MIN_AUDIO_PROCESSING_PER_FRAME=1
 .endif
 
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-no-undefined
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=nxengine/libretro/link.T
 
 .include "../../emulators/retroarch/core.mk"

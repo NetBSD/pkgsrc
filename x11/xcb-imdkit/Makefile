@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/02/15 15:05:55 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2022/11/21 18:20:46 jperkin Exp $
 
 DISTNAME=	xcb-imdkit-1.0.2
 CATEGORIES=	x11
@@ -17,6 +17,8 @@ USE_TOOLS+=	pkg-config
 USE_LANGUAGES+=	c c++
 
 PKGCONFIG_OVERRIDE+=	src/xcb-imdkit.pc.in
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--as-needed
 
 .include "../../devel/uthash/buildlink3.mk"
 .include "../../x11/libxcb/buildlink3.mk"
