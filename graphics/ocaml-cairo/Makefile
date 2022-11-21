@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2022/06/17 12:35:15 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2022/11/21 13:53:14 gdt Exp $
 
 GITHUB_PROJECT=	ocaml-cairo
-DISTNAME=	${GITHUB_PROJECT}-0.6.3
+DISTNAME=	${GITHUB_PROJECT}-0.6.4
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Chris00/}
-PKGREVISION=	1
 
 MAINTAINER=	jaapb@NetBSD.org
 HOMEPAGE=	https://github.com/Chris00/ocaml-cairo/

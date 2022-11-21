@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2022/06/15 10:59:45 gdt Exp $
+$NetBSD: distinfo,v 1.6 2022/11/21 13:53:14 gdt Exp $
 
-BLAKE2s (ocaml-cairo-0.6.3.tar.gz) = ba5726e95e2b950ed37efad856df4a1bf6c2f287a5e1d60add8045d977c4d392
-SHA512 (ocaml-cairo-0.6.3.tar.gz) = d733ea7cf90e4fbfa4581a78f0e5ba08a882a4325f9d8e34320e02a563f7ffbaa60972af5fd21917b9f3aa394401489763a60c1d128ff3c7f5e3b7c2863611ff
-Size (ocaml-cairo-0.6.3.tar.gz) = 110038 bytes
+BLAKE2s (ocaml-cairo-0.6.4.tar.gz) = 9c0a28c7456d859c111a530fbade625ec4883bb76201bd79d758c515c70c1c7d
+SHA512 (ocaml-cairo-0.6.4.tar.gz) = 1bf8ad724b843c8f75541b842a6c14b7e65a5901c71b77ef53df1e222777f53ec077dffeffe2ef59aa84d81616c7efead81ada8b90f8f9c0473e52999eff91c3
+Size (ocaml-cairo-0.6.4.tar.gz) = 110090 bytes
