@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5610 2022/11/21 13:53:23 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.5611 2022/11/21 17:37:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8486,3 +8486,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/geeqie to 2.0.1 [wiz 2022-11-21]
 	Updated geography/qgis to 3.22.12 [gdt 2022-11-21]
 	Updated graphics/ocaml-cairo to 0.6.4 [gdt 2022-11-21]
+	Updated math/py-sympy to 1.11.1 [adam 2022-11-21]
+	Updated devel/py-prompt_toolkit to 3.0.33 [adam 2022-11-21]
