@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2022/11/04 18:20:49 hauke Exp $
+# $NetBSD: Makefile,v 1.11 2022/11/21 11:47:35 hauke Exp $
 
 DISTNAME=	tsm-${PKGVER}
-PKGVER=		8.1.15.0
+PKGVER=		8.1.15.2
 PKGNAME=	${DISTNAME:C/-/8-/}
 CATEGORIES=	sysutils
-MASTER_SITES=	ftp://ftp.software.ibm.com/storage/tivoli-storage-management/maintenance/client/v8r1/Linux/LinuxX86/BA/v8115/
+MASTER_SITES=	https://public.dhe.ibm.com/storage/tivoli-storage-management/patches/client/v8r1/Linux/LinuxX86/BA/v8115/
+MASTER_SITES+=	ftp://ftp.software.ibm.com/storage/tivoli-storage-management/maintenance/client/v8r1/Linux/LinuxX86/BA/v8115/
 DISTFILES=	${PKGVER}-TIV-TSMBAC-LinuxX86.tar
 
 # pkgsrc fetch corrupts the distfile download
@@ -53,8 +54,8 @@ USE_TOOLS+=		rpm2pkg grep sed
 
 RPMFILES=		${WRKDIR}/TIVsm-BA.x86_64.rpm \
 			${WRKDIR}/TIVsm-API64.x86_64.rpm \
-			${WRKDIR}/gskcrypt64-8.0.55.24.linux.x86_64.rpm \
-			${WRKDIR}/gskssl64-8.0.55.24.linux.x86_64.rpm
+			${WRKDIR}/gskcrypt64-8.0.55.28.linux.x86_64.rpm \
+			${WRKDIR}/gskssl64-8.0.55.28.linux.x86_64.rpm
 
 EMUL_PKG_FMT=		rpm
 RPM2PKG_PREFIX=		${DESTDIR}${PREFIX}

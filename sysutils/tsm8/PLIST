@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2022/11/04 18:20:49 hauke Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/11/21 11:47:35 hauke Exp $
 bin/dsmc
 ${PLIST.java}bin/dsmj
 emul/linux/etc/init.d/dsmcad
@@ -116,7 +116,7 @@ emul/linux/opt/tivoli/tsm/client/api/bin64/libgpfs.so
 emul/linux/opt/tivoli/tsm/client/api/bin64/libssl.so.1.0.2
 emul/linux/opt/tivoli/tsm/client/api/bin64/libtsmxerces-c.so.28.0
 emul/linux/opt/tivoli/tsm/client/api/bin64/libtsmxerces-depdom.so.28.0
-emul/linux/opt/tivoli/tsm/client/api/bin64/libxmlutil-${PKGVERSION}.so
+emul/linux/opt/tivoli/tsm/client/api/bin64/libxmlutil-8.1.15.0.so
 emul/linux/opt/tivoli/tsm/client/api/bin64/sample/callbuff.c
 emul/linux/opt/tivoli/tsm/client/api/bin64/sample/callevnt.c
 emul/linux/opt/tivoli/tsm/client/api/bin64/sample/callhold.c
@@ -304,9 +304,9 @@ ${PLIST.java}emul/linux/opt/tivoli/tsm/client/ba/bin/plugins/vcloudsuite/sdk/htt
 ${PLIST.java}emul/linux/opt/tivoli/tsm/client/ba/bin/plugins/vcloudsuite/sdk/httpclient-4.5.13.jar
 ${PLIST.java}emul/linux/opt/tivoli/tsm/client/ba/bin/plugins/vcloudsuite/sdk/httpcore-4.4.15.jar
 ${PLIST.java}emul/linux/opt/tivoli/tsm/client/ba/bin/plugins/vcloudsuite/sdk/httpcore-nio-4.4.15.jar
-${PLIST.java}emul/linux/opt/tivoli/tsm/client/ba/bin/plugins/vcloudsuite/sdk/jackson-annotations-2.10.0.jar
-${PLIST.java}emul/linux/opt/tivoli/tsm/client/ba/bin/plugins/vcloudsuite/sdk/jackson-core-2.10.0.jar
-${PLIST.java}emul/linux/opt/tivoli/tsm/client/ba/bin/plugins/vcloudsuite/sdk/jackson-databind-2.10.0.jar
+${PLIST.java}emul/linux/opt/tivoli/tsm/client/ba/bin/plugins/vcloudsuite/sdk/jackson-annotations-2.13.3.jar
+${PLIST.java}emul/linux/opt/tivoli/tsm/client/ba/bin/plugins/vcloudsuite/sdk/jackson-core-2.13.3.jar
+${PLIST.java}emul/linux/opt/tivoli/tsm/client/ba/bin/plugins/vcloudsuite/sdk/jackson-databind-2.13.3.jar
 ${PLIST.java}emul/linux/opt/tivoli/tsm/client/ba/bin/plugins/vcloudsuite/sdk/log4j-api-2.17.1.jar
 ${PLIST.java}emul/linux/opt/tivoli/tsm/client/ba/bin/plugins/vcloudsuite/sdk/log4j-core-2.17.1.jar
 ${PLIST.java}emul/linux/opt/tivoli/tsm/client/ba/bin/plugins/vcloudsuite/sdk/log4j-jcl-2.17.1.jar
@@ -513,7 +513,7 @@ emul/linux/usr/bin/dsmtrace
 emul/linux/usr/lib64/libApiTSM64.so
 emul/linux/usr/lib64/libtsmxerces-c.so.28
 emul/linux/usr/lib64/libtsmxerces-depdom.so.28
-emul/linux/usr/lib64/libxmlutil-${PKGVERSION}.so
+emul/linux/usr/lib64/libxmlutil-8.1.15.0.so
 emul/linux/usr/local/ibm/gsk8_64/ReadMe.txt
 emul/linux/usr/local/ibm/gsk8_64/bin/gsk8capicmd_64
 emul/linux/usr/local/ibm/gsk8_64/bin/gsk8ver_64
