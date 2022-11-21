@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2022/11/15 12:14:04 pin Exp $
+$NetBSD: distinfo,v 1.10 2022/11/21 22:14:58 pin Exp $
 
 BLAKE2s (aho-corasick-0.7.19.crate) = b13c5789625903a58cfdb854bca6eb074329fde83ffb2581686f105d52d31996
 SHA512 (aho-corasick-0.7.19.crate) = 0d63d29079650bde4e8a9f8529716b9d8c42db076a1d74715116240c2628173f1e86fb29c08a25ad07a0148e48789ab20de0c186a8b3dfb193cbfeb0d76ae78c
@@ -480,9 +480,9 @@ Size (windows_x86_64_msvc-0.42.0.crate) = 659377 bytes
 BLAKE2s (winreg-0.10.1.crate) = 6932ce51a190f71d7f3d28a5e2e11f3406b5e22f5933ec4e490783ffb67cccd5
 SHA512 (winreg-0.10.1.crate) = 09f2d18f62c3c427ebed40d667b672bb778629502ad3c39541f324b2d5ac41f0822c98b7e5320314144130580da46f1e8e51928941850e7d4af28455a564360c
 Size (winreg-0.10.1.crate) = 25725 bytes
-BLAKE2s (wthrr-the-weathercrab-0.5.0.tar.gz) = 346a4632c8e99d268507bdf7a5c69776b6f55c7ae24f32756b4fef181da4e1d0
-SHA512 (wthrr-the-weathercrab-0.5.0.tar.gz) = 8158246824cb9e3bd31891067f07b6e21f9026afd773c311ea5aeda94ad1ed596719407b239226257e3b13db0c0594046607756bc8ba2a3dc1128cc297d5dd1d
-Size (wthrr-the-weathercrab-0.5.0.tar.gz) = 1011543 bytes
+BLAKE2s (wthrr-the-weathercrab-0.5.1.tar.gz) = a99ebd09f83721860ba6a6717e17a994d0777be464858fba445978973111b79d
+SHA512 (wthrr-the-weathercrab-0.5.1.tar.gz) = 26918c998051fc3a09cc2bf51c1ffbc9cc47e42a75dfe2cf137448fe9cf636c7242c84b31aa8e3562769c037c98f34490991828f64cbf3dd482c60d8066b2f8d
+Size (wthrr-the-weathercrab-0.5.1.tar.gz) = 1011725 bytes
 BLAKE2s (zeroize-1.5.7.crate) = 48ba9497399d04cf29302e06fcb1501c670cd13af58bfdf8d776007569dd06a7
 SHA512 (zeroize-1.5.7.crate) = e0688681bceba324d36ea4dc552791801dc93b5882d106b79dd317af99cb718b711899bfd09917a811d23096693448801e64f0651bd9eeae7895618821d88fa9
 Size (zeroize-1.5.7.crate) = 18861 bytes
