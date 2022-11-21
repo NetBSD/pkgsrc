@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.50 2022/09/14 11:14:33 adam Exp $
+$NetBSD: distinfo,v 1.51 2022/11/21 09:52:49 adam Exp $
 
-BLAKE2s (dulwich-0.20.46.tar.gz) = 5f11b17ff37ad742892513c38ff7b097e04d4bdc3369e4bc39a2fad1539258ff
-SHA512 (dulwich-0.20.46.tar.gz) = 4cc86afe90139d813d11ac2a8b96e84ca60ea28baab83a2af8da9a7cef2f3cdac647af858f5fc3806ae741a0b4fcf592d94f228adf8ab7b5b600be41f6acc356
-Size (dulwich-0.20.46.tar.gz) = 426530 bytes
+BLAKE2s (dulwich-0.20.50.tar.gz) = 28f1edc1f25d17e291662d487ed8759454fb9d3679d74671af59c50a72fbe27a
+SHA512 (dulwich-0.20.50.tar.gz) = 506cc76f7deb8247b910fa4971e28eeda6ddd34703ac3c7a2f3b6525e6a9229bbec527b1965bebf7aa3da17b5adbd146916f247acacf9caf86d2494e60cc8626
+Size (dulwich-0.20.50.tar.gz) = 430389 bytes
