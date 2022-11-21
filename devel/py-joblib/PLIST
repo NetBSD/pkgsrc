@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2021/10/07 19:38:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2022/11/21 09:35:31 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -6,6 +6,9 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/joblib/__init__.py
 ${PYSITELIB}/joblib/__init__.pyc
 ${PYSITELIB}/joblib/__init__.pyo
+${PYSITELIB}/joblib/_cloudpickle_wrapper.py
+${PYSITELIB}/joblib/_cloudpickle_wrapper.pyc
+${PYSITELIB}/joblib/_cloudpickle_wrapper.pyo
 ${PYSITELIB}/joblib/_dask.py
 ${PYSITELIB}/joblib/_dask.pyc
 ${PYSITELIB}/joblib/_dask.pyo
@@ -27,6 +30,9 @@ ${PYSITELIB}/joblib/_parallel_backends.pyo
 ${PYSITELIB}/joblib/_store_backends.py
 ${PYSITELIB}/joblib/_store_backends.pyc
 ${PYSITELIB}/joblib/_store_backends.pyo
+${PYSITELIB}/joblib/_utils.py
+${PYSITELIB}/joblib/_utils.pyc
+${PYSITELIB}/joblib/_utils.pyo
 ${PYSITELIB}/joblib/backports.py
 ${PYSITELIB}/joblib/backports.pyc
 ${PYSITELIB}/joblib/backports.pyo
@@ -66,33 +72,15 @@ ${PYSITELIB}/joblib/externals/loky/backend/__init__.pyo
 ${PYSITELIB}/joblib/externals/loky/backend/_posix_reduction.py
 ${PYSITELIB}/joblib/externals/loky/backend/_posix_reduction.pyc
 ${PYSITELIB}/joblib/externals/loky/backend/_posix_reduction.pyo
-${PYSITELIB}/joblib/externals/loky/backend/_posix_wait.py
-${PYSITELIB}/joblib/externals/loky/backend/_posix_wait.pyc
-${PYSITELIB}/joblib/externals/loky/backend/_posix_wait.pyo
 ${PYSITELIB}/joblib/externals/loky/backend/_win_reduction.py
 ${PYSITELIB}/joblib/externals/loky/backend/_win_reduction.pyc
 ${PYSITELIB}/joblib/externals/loky/backend/_win_reduction.pyo
-${PYSITELIB}/joblib/externals/loky/backend/_win_wait.py
-${PYSITELIB}/joblib/externals/loky/backend/_win_wait.pyc
-${PYSITELIB}/joblib/externals/loky/backend/_win_wait.pyo
-${PYSITELIB}/joblib/externals/loky/backend/compat.py
-${PYSITELIB}/joblib/externals/loky/backend/compat.pyc
-${PYSITELIB}/joblib/externals/loky/backend/compat.pyo
-${PYSITELIB}/joblib/externals/loky/backend/compat_posix.py
-${PYSITELIB}/joblib/externals/loky/backend/compat_posix.pyc
-${PYSITELIB}/joblib/externals/loky/backend/compat_posix.pyo
-${PYSITELIB}/joblib/externals/loky/backend/compat_win32.py
-${PYSITELIB}/joblib/externals/loky/backend/compat_win32.pyc
-${PYSITELIB}/joblib/externals/loky/backend/compat_win32.pyo
 ${PYSITELIB}/joblib/externals/loky/backend/context.py
 ${PYSITELIB}/joblib/externals/loky/backend/context.pyc
 ${PYSITELIB}/joblib/externals/loky/backend/context.pyo
 ${PYSITELIB}/joblib/externals/loky/backend/fork_exec.py
 ${PYSITELIB}/joblib/externals/loky/backend/fork_exec.pyc
 ${PYSITELIB}/joblib/externals/loky/backend/fork_exec.pyo
-${PYSITELIB}/joblib/externals/loky/backend/managers.py
-${PYSITELIB}/joblib/externals/loky/backend/managers.pyc
-${PYSITELIB}/joblib/externals/loky/backend/managers.pyo
 ${PYSITELIB}/joblib/externals/loky/backend/popen_loky_posix.py
 ${PYSITELIB}/joblib/externals/loky/backend/popen_loky_posix.pyc
 ${PYSITELIB}/joblib/externals/loky/backend/popen_loky_posix.pyo
@@ -111,9 +99,6 @@ ${PYSITELIB}/joblib/externals/loky/backend/reduction.pyo
 ${PYSITELIB}/joblib/externals/loky/backend/resource_tracker.py
 ${PYSITELIB}/joblib/externals/loky/backend/resource_tracker.pyc
 ${PYSITELIB}/joblib/externals/loky/backend/resource_tracker.pyo
-${PYSITELIB}/joblib/externals/loky/backend/semlock.py
-${PYSITELIB}/joblib/externals/loky/backend/semlock.pyc
-${PYSITELIB}/joblib/externals/loky/backend/semlock.pyo
 ${PYSITELIB}/joblib/externals/loky/backend/spawn.py
 ${PYSITELIB}/joblib/externals/loky/backend/spawn.pyc
 ${PYSITELIB}/joblib/externals/loky/backend/spawn.pyo
@@ -248,6 +233,9 @@ ${PYSITELIB}/joblib/test/data/joblib_0.9.4.dev0_compressed_cache_size_pickle_py3
 ${PYSITELIB}/joblib/test/test_backports.py
 ${PYSITELIB}/joblib/test/test_backports.pyc
 ${PYSITELIB}/joblib/test/test_backports.pyo
+${PYSITELIB}/joblib/test/test_cloudpickle_wrapper.py
+${PYSITELIB}/joblib/test/test_cloudpickle_wrapper.pyc
+${PYSITELIB}/joblib/test/test_cloudpickle_wrapper.pyo
 ${PYSITELIB}/joblib/test/test_dask.py
 ${PYSITELIB}/joblib/test/test_dask.pyc
 ${PYSITELIB}/joblib/test/test_dask.pyo
@@ -281,6 +269,9 @@ ${PYSITELIB}/joblib/test/test_memmapping.pyo
 ${PYSITELIB}/joblib/test/test_memory.py
 ${PYSITELIB}/joblib/test/test_memory.pyc
 ${PYSITELIB}/joblib/test/test_memory.pyo
+${PYSITELIB}/joblib/test/test_missing_multiprocessing.py
+${PYSITELIB}/joblib/test/test_missing_multiprocessing.pyc
+${PYSITELIB}/joblib/test/test_missing_multiprocessing.pyo
 ${PYSITELIB}/joblib/test/test_module.py
 ${PYSITELIB}/joblib/test/test_module.pyc
 ${PYSITELIB}/joblib/test/test_module.pyo
@@ -305,6 +296,9 @@ ${PYSITELIB}/joblib/test/test_store_backends.pyo
 ${PYSITELIB}/joblib/test/test_testing.py
 ${PYSITELIB}/joblib/test/test_testing.pyc
 ${PYSITELIB}/joblib/test/test_testing.pyo
+${PYSITELIB}/joblib/test/test_utils.py
+${PYSITELIB}/joblib/test/test_utils.pyc
+${PYSITELIB}/joblib/test/test_utils.pyo
 ${PYSITELIB}/joblib/test/testutils.py
 ${PYSITELIB}/joblib/test/testutils.pyc
 ${PYSITELIB}/joblib/test/testutils.pyo
