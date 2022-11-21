@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2022/04/10 00:57:15 gutteridge Exp $
+# $NetBSD: Makefile,v 1.13 2022/11/21 09:40:59 wiz Exp $
 
-DISTNAME=	statsmodels-0.12.2
+DISTNAME=	statsmodels-0.13.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/statsmodels/}
 
