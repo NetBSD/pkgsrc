@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5603 2022/11/21 09:37:11 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5604 2022/11/21 09:41:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8477,3 +8477,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/felix to 2.1.0 [pin 2022-11-21]
 	Updated devel/py-joblib to 1.2.0 [adam 2022-11-21]
 	Updated net/py-zeep to 4.2.1 [adam 2022-11-21]
+	Updated math/py-statsmodels to 0.13.5 [wiz 2022-11-21]
