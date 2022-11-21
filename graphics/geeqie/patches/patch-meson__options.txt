@@ -1,0 +1,14 @@
+$NetBSD: patch-meson__options.txt,v 1.1 2022/11/21 22:24:08 wiz Exp $
+
+Allow disabling doxygen detection.
+
+--- meson_options.txt.orig	2022-08-12 09:32:25.000000000 +0000
++++ meson_options.txt
+@@ -25,6 +25,7 @@ option('gq_localedir', type : 'string', 
+ 
+ option('archive', type : 'feature', value : 'auto', description : 'archive files e.g. zip, gz')
+ option('cms', type : 'feature', value : 'auto', description : 'color management system')
++option('doxygen', type : 'feature', value : 'auto', description : 'doxygen')
+ option('djvu', type : 'feature', value : 'auto', description : 'djvu')
+ option('exiv2', type : 'feature', value : 'auto', description : 'exiv2')
+ option('videothumbnailer', type : 'feature', value : 'auto', description : 'video thumbnailer')
