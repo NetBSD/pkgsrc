@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/11/02 22:37:59 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2022/11/21 18:20:42 jperkin Exp $
 
 DISTNAME=	libbpg-0.9.2
 CATEGORIES=	graphics
@@ -20,9 +20,10 @@ SUBST_STAGE.config=	pre-configure
 SUBST_FILES.config=	config.h
 SUBST_VARS.config=	PREFIX
 
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--gc-sections
+
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

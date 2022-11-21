@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2022/08/11 05:09:24 gutteridge Exp $
+# $NetBSD: Makefile,v 1.30 2022/11/21 18:20:46 jperkin Exp $
 
 DISTNAME=	clipit-1.4.5
 PKGREVISION=	2
@@ -22,6 +22,8 @@ USE_TOOLS+=	pkg-config
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--disable-glibtest
 CONFIGURE_ARGS+=	--with-gtk3
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--as-needed
 
 BUILD_DEFS+=	PKG_SYSCONFBASE
 

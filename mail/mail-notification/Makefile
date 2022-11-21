@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.115 2022/08/11 05:08:58 gutteridge Exp $
+# $NetBSD: Makefile,v 1.116 2022/11/21 18:20:43 jperkin Exp $
 #
 
 DISTNAME=	mail-notification-5.4
@@ -22,6 +22,8 @@ CONFIGURE_ARGS=		prefix="${PREFIX}" destdir="${DESTDIR}" sysconfdir=${PKG_SYSCON
 CONFIGURE_ARGS+=	cc="${CC}" cflags="${CFLAGS}" cppflags="${CPPFLAGS}" ldflags="${LDFLAGS}"
 CONFIGURE_ARGS+=	localedir="${PREFIX}/${PKGLOCALEDIR}/locale"
 CONFIGURE_ENV+=		jb_cppflags="${CPPFLAGS}" jb_ldflags="${LDFLAGS}"
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--export-dynamic
 
 GCONF_SCHEMAS=		mail-notification.schemas
 

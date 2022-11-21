@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2020/09/22 18:22:59 bsiegert Exp $
+# $NetBSD: Makefile,v 1.35 2022/11/21 18:20:45 jperkin Exp $
 
 DISTNAME=	libproxy-0.4.15
 PKGREVISION=	1
@@ -26,6 +26,8 @@ CMAKE_ARGS+=	-DWITH_KDE:BOOL=OFF
 # Need socket libraries on SunOS for both the shared library and test programs.
 CMAKE_ARGS.SunOS+=	-DCMAKE_EXE_LINKER_FLAGS:STRING="-lnsl -lsocket -L${PREFIX}/lib ${COMPILER_RPATH_FLAG}${PREFIX}/lib"
 CMAKE_ARGS.SunOS+=	-DCMAKE_SHARED_LINKER_FLAGS:STRING="-lnsl -lsocket -L${PREFIX}/lib ${COMPILER_RPATH_FLAG}${PREFIX}/lib"
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--no-as-needed
 
 PKGCONFIG_OVERRIDE+=	bindings/csharp/libproxy-sharp-1.0.pc.cmake
 PKGCONFIG_OVERRIDE+=	libproxy/libproxy-1.0.pc.in

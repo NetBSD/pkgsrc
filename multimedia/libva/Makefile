@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2022/07/14 13:16:11 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2022/11/21 18:20:43 jperkin Exp $
 
 DISTNAME=	libva-2.15.0
 CATEGORIES=	multimedia
@@ -44,6 +44,8 @@ PKGCONFIG_OVERRIDE+=	pkgconfig/libva-wayland.pc.in
 PKGCONFIG_OVERRIDE+=	pkgconfig/libva-x11.pc.in
 PKGCONFIG_OVERRIDE+=	pkgconfig/libva.pc.in
 
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-version-script
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,./libva.syms
 
 .include "../../x11/libXfixes/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"

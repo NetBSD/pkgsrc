@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2022/01/17 15:10:15 micha Exp $
+# $NetBSD: Makefile,v 1.14 2022/11/21 18:20:41 jperkin Exp $
 
 VERS=			1.48.10
 PKGNAME=		doomlegacy-${VERS}
@@ -47,6 +47,8 @@ CFLAGS+=		-D__BIG_ENDIAN__
 # Required by extended node patch for ZDoom compressed node format
 CFLAGS+=		-DHAVE_ZLIB
 LDFLAGS+=		-lz
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--warn-common
 
 # No longer matches automatically since SVN revision was appended to distfile
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV:S/-/_/}_source
