@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2022/10/24 15:11:07 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2022/11/21 20:47:46 adam Exp $
 
 DISTNAME=	ldb-2.6.1
 CATEGORIES=	databases
@@ -64,7 +64,7 @@ CONFIGURE_ARGS+=	--without-ldb-lmdb
 .include "../../devel/cmocka/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../devel/talloc/buildlink3.mk"
-BUILDLINK_API_DEPENDS.tevent+=	tevent>=0.11.0
+BUILDLINK_API_DEPENDS.tevent+=	tevent>=0.13.0
 .include "../../devel/tevent/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
