@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5602 2022/11/21 09:21:31 pin Exp $
+$NetBSD: CHANGES-2022,v 1.5603 2022/11/21 09:37:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8475,3 +8475,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated editors/tp-note to 1.19.2 [pin 2022-11-21]
 	Updated devel/git-cliff to 0.10.0 [pin 2022-11-21]
 	Updated sysutils/felix to 2.1.0 [pin 2022-11-21]
+	Updated devel/py-joblib to 1.2.0 [adam 2022-11-21]
+	Updated net/py-zeep to 4.2.1 [adam 2022-11-21]
