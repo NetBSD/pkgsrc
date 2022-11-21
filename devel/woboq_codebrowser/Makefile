@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2022/11/09 13:14:10 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2022/11/21 18:20:41 jperkin Exp $
 
 DISTNAME=	codebrowser-2.1.20220614
 PKGNAME=	woboq_${DISTNAME}
@@ -16,6 +16,8 @@ USE_LANGUAGES=	c c++11
 CMAKE_ARGS+=	-DLLVM_CONFIG_EXECUTABLE=${LLVM_CONFIG_PATH:Q}
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 WRKSRC=		${WRKDIR}/codebrowser-${GITHUB_TAG}
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--as-needed
 
 .include "../../lang/clang/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

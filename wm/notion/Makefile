@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2020/06/30 14:56:36 nia Exp $
+# $NetBSD: Makefile,v 1.29 2022/11/21 18:20:45 jperkin Exp $
 
 DISTNAME=	notion-3-2017050501
 PKGNAME=	${DISTNAME:S/3-/3./}
@@ -66,8 +66,9 @@ CONF_FILES+=	${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 
 # Abuse buildlink to add required libraries.
 BUILDLINK_TRANSFORM.SunOS+=	opt:-Wl,--as-needed:-lsocket
-BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-whole-archive
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--export-dynamic
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-no-whole-archive
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-whole-archive
 
 post-install:
 	cd ${WRKSRC} && pax -rw contrib ${DESTDIR}${EGDIR}
