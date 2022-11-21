@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2022/06/18 22:30:01 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/11/21 20:16:44 adam Exp $
 bin/vulture
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -45,6 +45,9 @@ ${PYSITELIB}/vulture/whitelists/ctypes_whitelist.pyo
 ${PYSITELIB}/vulture/whitelists/logging_whitelist.py
 ${PYSITELIB}/vulture/whitelists/logging_whitelist.pyc
 ${PYSITELIB}/vulture/whitelists/logging_whitelist.pyo
+${PYSITELIB}/vulture/whitelists/pint_whitelist.py
+${PYSITELIB}/vulture/whitelists/pint_whitelist.pyc
+${PYSITELIB}/vulture/whitelists/pint_whitelist.pyo
 ${PYSITELIB}/vulture/whitelists/string_whitelist.py
 ${PYSITELIB}/vulture/whitelists/string_whitelist.pyc
 ${PYSITELIB}/vulture/whitelists/string_whitelist.pyo
