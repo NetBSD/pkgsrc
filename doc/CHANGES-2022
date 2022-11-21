@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5601 2022/11/21 09:20:01 pin Exp $
+$NetBSD: CHANGES-2022,v 1.5602 2022/11/21 09:21:31 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8474,3 +8474,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-lazy-object-proxy to 1.8.0 [adam 2022-11-20]
 	Updated editors/tp-note to 1.19.2 [pin 2022-11-21]
 	Updated devel/git-cliff to 0.10.0 [pin 2022-11-21]
+	Updated sysutils/felix to 2.1.0 [pin 2022-11-21]
