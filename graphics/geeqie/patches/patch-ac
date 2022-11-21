@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.7 2022/05/20 12:03:08 wiz Exp $
+$NetBSD: patch-ac,v 1.8 2022/11/21 11:58:47 wiz Exp $
 
 * first hunk
 
@@ -9,17 +9,17 @@ Comment from 2009/07/24:
 
 This is not known to be reported upstream.
 
---- src/main.c.orig	2022-04-12 09:46:17.000000000 +0000
+--- src/main.c.orig	2022-08-12 09:32:26.000000000 +0000
 +++ src/main.c
-@@ -1223,6 +1223,7 @@ void exit_program(void)
+@@ -1026,6 +1026,7 @@ void exit_program(void)
   */
  /** @FIXME this probably needs some better ifdefs. Please report any compilation problems */
  
 +#if 0
  #if defined(SIGBUS) && defined(SA_SIGINFO)
- static void sigbus_handler_cb(int signum, siginfo_t *info, void *context)
+ static void sigbus_handler_cb(int UNUSED(signum), siginfo_t *info, void *UNUSED(context))
  {
-@@ -1231,9 +1232,11 @@ static void sigbus_handler_cb(int signum
+@@ -1034,9 +1035,11 @@ static void sigbus_handler_cb(int UNUSED
  	mmap((void *)(((unsigned long)info->si_addr / pagesize) * pagesize), pagesize, PROT_READ | PROT_WRITE, MAP_FIXED | MAP_PRIVATE | MAP_ANONYMOUS, -1, 0);
  }
  #endif
@@ -31,7 +31,7 @@ This is not known to be reported upstream.
  #if defined(SIGBUS) && defined(SA_SIGINFO)
  	struct sigaction sigbus_action;
  	sigfillset(&sigbus_action.sa_mask);
-@@ -1242,6 +1245,7 @@ static void setup_sigbus_handler(void)
+@@ -1045,6 +1048,7 @@ static void setup_sigbus_handler(void)
  
  	sigaction(SIGBUS, &sigbus_action, NULL);
  #endif
