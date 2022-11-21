@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2022/05/20 12:03:08 wiz Exp $
+@comment $NetBSD: PLIST,v 1.12 2022/11/21 11:58:47 wiz Exp $
 bin/geeqie
 lib/geeqie/geeqie-camera-import
 lib/geeqie/geeqie-camera-import-hook-script
@@ -13,13 +13,10 @@ lib/geeqie/geocode-parameters.awk
 lib/geeqie/lensID
 man/man1/geeqie.1
 share/applications/geeqie.desktop
-share/doc/${PKGNAME}/AUTHORS
-share/doc/${PKGNAME}/COPYING
-share/doc/${PKGNAME}/ChangeLog
-share/doc/${PKGNAME}/ChangeLog.html
-share/doc/${PKGNAME}/README.lirc
-share/doc/${PKGNAME}/README.md
-share/doc/${PKGNAME}/TODO
+share/doc/geeqie/AUTHORS
+share/doc/geeqie/COPYING
+share/doc/geeqie/README.md
+share/doc/geeqie/TODO
 share/geeqie/applications/camera-import.desktop
 share/geeqie/applications/export-jpeg.desktop
 share/geeqie/applications/image-crop.desktop
