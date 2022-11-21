@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2022/11/21 11:58:47 wiz Exp $
+# $NetBSD: Makefile,v 1.98 2022/11/21 22:24:08 wiz Exp $
 
 DISTNAME=	geeqie-2.0.1
 CATEGORIES=	graphics
@@ -16,6 +16,8 @@ BUILD_DEPENDS+=	gettext-m4-[0-9]*:../../devel/gettext-m4
 TOOL_DEPENDS+=	vim-share-[0-9]*:../../editors/vim-share
 
 LDFLAGS.SunOS+=		-lm -lsocket -lnsl
+
+MESON_ARGS+=	-Ddoxygen=disabled
 
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
