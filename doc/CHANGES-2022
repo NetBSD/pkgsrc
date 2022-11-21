@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5606 2022/11/21 11:30:42 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5607 2022/11/21 11:48:14 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8482,3 +8482,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated time/py-dateparser to 1.1.3 [adam 2022-11-21]
 	Updated devel/py-greenlet to 2.0.1 [adam 2022-11-21]
 	Updated net/py-gevent to 22.10.2 [adam 2022-11-21]
+	Updated sysutils/tsm8 to 8.1.15.2 [hauke 2022-11-21]
