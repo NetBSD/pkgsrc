@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.49 2022/04/18 11:18:15 adam Exp $
+# $NetBSD: Makefile.common,v 1.50 2022/11/21 18:12:17 jperkin Exp $
 # used by x11/qt5-mysql/Makefile
 # used by x11/qt5-odbc/Makefile
 # used by x11/qt5-psql/Makefile
@@ -55,10 +55,6 @@ CXXFLAGS.SunOS+=	-D_Noreturn=""
 
 # for GL_GLEXT_LEGACY with GL/gl.h error, GL_ARB_shader_objects is not defined.
 BUILDLINK_TRANSFORM+=	rm:-Wundef
-
-# SunOS ld doesn't support -rpath-link
-BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-rpath-link,${PREFIX}/qt5/lib
-BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-rpath-link,${WRKSRC}/lib
 
 MAKE_ENV+=		QTPREFIX=${QTPREFIX:Q}
 PLIST_VARS+=		notdarwin
