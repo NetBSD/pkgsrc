@@ -1,4 +1,4 @@
-$NetBSD: patch-vendor_syntect-5.0.0_src_util.rs,v 1.1 2022/11/12 21:58:32 pin Exp $
+$NetBSD: patch-vendor_syntect-5.0.0_src_util.rs,v 1.2 2022/11/21 09:21:11 pin Exp $
 
 Don't pull from git, patch vendor crate instead.
 
