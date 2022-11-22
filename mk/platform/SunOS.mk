@@ -1,4 +1,4 @@
-# $NetBSD: SunOS.mk,v 1.86 2022/11/21 18:25:54 jperkin Exp $
+# $NetBSD: SunOS.mk,v 1.87 2022/11/22 16:57:31 jperkin Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -82,9 +82,6 @@ _OPSYS_MISSING_FEATURES+=	strnlen
 _PATCH_CAN_BACKUP=	yes		# native patch(1) can make backups
 _PATCH_BACKUP_ARG?= 	-b -V simple -z	# switch to patch(1) for backup suffix
 _USE_RPATH=		yes		# add rpath to LDFLAGS
-
-# Convert GNU ld flags to native SunOS ld flags where possible.
-BUILDLINK_TRANSFORM+=	opt:-Wl,--rpath:-Wl,-R
 
 # Remove GCC-specific flags if using clang
 .if ${PKGSRC_COMPILER} == "clang"
