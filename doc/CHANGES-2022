@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5623 2022/11/22 13:24:31 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5624 2022/11/22 13:28:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8511,3 +8511,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated editors/py-jedi to 0.18.2 [adam 2022-11-22]
 	Updated textproc/py-readme_renderer to 37.3 [adam 2022-11-22]
 	Updated www/py-pystache to 0.6.0 [adam 2022-11-22]
+	Updated lang/py-mypy to 0.991 [adam 2022-11-22]
