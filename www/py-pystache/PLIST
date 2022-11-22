@@ -1,11 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1 2017/02/14 07:33:27 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/11/22 13:24:11 adam Exp $
 bin/pystache
 bin/pystache-test
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/zip-safe
 ${PYSITELIB}/pystache/__init__.py
 ${PYSITELIB}/pystache/__init__.pyc
 ${PYSITELIB}/pystache/__init__.pyo

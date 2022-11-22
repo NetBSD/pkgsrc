@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/12/06 14:17:03 wiz Exp $
+$NetBSD: distinfo,v 1.5 2022/11/22 13:24:11 adam Exp $
 
-BLAKE2s (pystache-0.5.4.tar.gz) = 5dd976b9ed5fb277d5cb8385fa57e5b4d3d792d83ae3eaba5da8464a6ecce2b9
-SHA512 (pystache-0.5.4.tar.gz) = 4ac325e1431f58f740218c9ec309821db82d89989ef4ca7fc3536dea0ef1c90e8e85ebaa7df27f33129ca02252b84bcbd7429a1ed999b496f62f174dd66502cb
-Size (pystache-0.5.4.tar.gz) = 75131 bytes
-SHA1 (patch-setup.py) = 401a8d1196a0f0bd870c833671494de9a3902d97
+BLAKE2s (pystache-0.6.0.tar.gz) = 0c302dbf0fc82b1ec92e619e859d63d9ef580c4492c079ffa5eb8b6772638fb3
+SHA512 (pystache-0.6.0.tar.gz) = 802e12795c3ae08fbde37c9e266a60478d46d55a42e2fc339389b664edf3c5ebb2e34069546b820789ad48ed9921f4a2b89f82bb37e72e94846eec0a9ba1568c
+Size (pystache-0.6.0.tar.gz) = 78240 bytes
