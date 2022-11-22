@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.154 2022/06/28 11:35:35 wiz Exp $
+# $NetBSD: Makefile,v 1.155 2022/11/22 12:51:00 adam Exp $
 
-DISTNAME=	heimdal-7.7.0
-PKGREVISION=	5
+DISTNAME=	heimdal-7.8.0
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=heimdal/}
 GITHUB_RELEASE=	${DISTNAME}
@@ -26,8 +25,6 @@ MAKE_ENV+=		INSTALL_CATPAGES=no
 
 BUILD_DEFS+=		VARBASE
 
-WRKSRC=		${WRKDIR}/${DISTNAME}
-
 .include "options.mk"
 
 HEIMDAL_HDB_DIR=	${VARBASE}/heimdal
@@ -39,10 +36,12 @@ CONFIGURE_ARGS+=	--enable-pthread-support
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/krb5
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-hdbdir=${HEIMDAL_HDB_DIR}
+CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.editlinereadline}
 CONFIGURE_ARGS+=	--with-sqlite3=${BUILDLINK_PREFIX.sqlite3}
 CONFIGURE_ARGS+=	--without-x
 CONFIGURE_ARGS+=	${ABI:D--with-mips-abi=${ABI}}
 CONFIGURE_ENV+=		COMPILE_ET=no	# build Heimdal's compile_et(1)
+CONFIGURE_ENV+=		PYTHON=${PYTHONBIN}
 
 .include "../../mk/bdb.buildlink3.mk"
 
@@ -60,10 +59,6 @@ CONFIGURE_ENV.SunOS+=	ac_cv_func_glob_working=no
 # Though Solaris has a <vis.h> header, it does something very unrelated
 # to the BSD <vis.h> header.
 CONFIGURE_ENV.SunOS+=	ac_cv_header_vis_h=no
-
-.include "../../mk/readline.buildlink3.mk"
-
-CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.editlinereadline}
 
 PLIST_VARS+=		glob vis afskauth
 
@@ -111,10 +106,11 @@ PTHREAD_AUTO_VARS=	yes
 PTHREAD_AUTO_VARS=	yes
 .endif
 
-.include "../../mk/termcap.buildlink3.mk"
-.include "../../mk/pthread.buildlink3.mk"
-.include "../../mk/readline.buildlink3.mk"
+.include "../../lang/python/pyversion.mk"
 .include "../../security/openssl/buildlink3.mk"
 # integrated editline configure script that always runs checks for this
 .include "../../mk/curses.buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
+.include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
