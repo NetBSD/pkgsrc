@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5625 2022/11/22 19:14:44 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5626 2022/11/22 19:20:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8516,3 +8516,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/py-redis to 4.3.5 [adam 2022-11-22]
 	Updated devel/cmake to 3.25.0 [adam 2022-11-22]
 	Updated devel/cmake-gui to 3.25.0 [adam 2022-11-22]
+	Updated finance/py-braintree to 4.17.1 [adam 2022-11-22]
+	Updated devel/py-canonicaljson to 1.6.4 [adam 2022-11-22]
