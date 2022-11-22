@@ -1,4 +1,4 @@
-# $NetBSD: tools.SunOS.mk,v 1.54 2022/11/22 09:09:19 jperkin Exp $
+# $NetBSD: tools.SunOS.mk,v 1.55 2022/11/22 09:15:51 jperkin Exp $
 #
 # System-supplied tools for the Solaris and illumos operating systems.
 #
@@ -228,4 +228,19 @@ TOOLS_PLATFORM.zip?=		/usr/bin/zip
 TOOLS_PLATFORM.zipcloak?=	/usr/bin/zipcloak
 TOOLS_PLATFORM.zipnote?=	/usr/bin/zipnote
 TOOLS_PLATFORM.zipsplit?=	/usr/bin/zipsplit
+.endif
+
+#
+# If we've bootstrapped with bash as the default shell then ensure print is a
+# broken wrapper to work around a bug in the libtool configure script that
+# assumes print, if available, is always a builtin.  bash does not have print
+# builtin and /usr/bin/print gets called instead, affecting performance.
+#
+# Also ensure we do use any bash builtins instead of separate commands.
+#
+.if ${TOOLS_PLATFORM.sh:M*bash}
+TOOLS_CREATE+=		print
+TOOLS_PATH.print=	${FALSE}
+
+TOOLS_PLATFORM.printf=	printf
 .endif
