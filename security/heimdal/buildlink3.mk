@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.68 2022/06/28 11:35:35 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.69 2022/11/22 12:51:00 adam Exp $
 
 BUILDLINK_TREE+=	heimdal
 
@@ -22,7 +22,7 @@ pkgbase := heimdal
 CHECK_BUILTIN.heimdal:=	yes
 .include "../../security/heimdal/builtin.mk"
 CHECK_BUILTIN.heimdal:=	no
-.if !empty(USE_BUILTIN.heimdal:M[nN][oO])
+.if ${USE_BUILTIN.heimdal:tl} == no
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../mk/bdb.buildlink3.mk"
 .endif
