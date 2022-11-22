@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2022/05/09 05:42:55 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2022/11/22 19:12:27 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -55,6 +55,9 @@ ${PYSITELIB}/redis/commands/bf/commands.pyo
 ${PYSITELIB}/redis/commands/bf/info.py
 ${PYSITELIB}/redis/commands/bf/info.pyc
 ${PYSITELIB}/redis/commands/bf/info.pyo
+${PYSITELIB}/redis/commands/bf/utils.py
+${PYSITELIB}/redis/commands/bf/utils.pyc
+${PYSITELIB}/redis/commands/bf/utils.pyo
 ${PYSITELIB}/redis/commands/cluster.py
 ${PYSITELIB}/redis/commands/cluster.pyc
 ${PYSITELIB}/redis/commands/cluster.pyo
