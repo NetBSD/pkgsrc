@@ -1,4 +1,4 @@
-# $NetBSD: tools.SunOS.mk,v 1.53 2022/11/22 09:06:08 jperkin Exp $
+# $NetBSD: tools.SunOS.mk,v 1.54 2022/11/22 09:09:19 jperkin Exp $
 #
 # System-supplied tools for the Solaris and illumos operating systems.
 #
@@ -171,7 +171,7 @@ TOOLS_PLATFORM.openssl?=	/usr/bin/openssl
 #TOOLS_PLATFORM.pod2man?=	/usr/perl5/bin/pod2man
 #.endif
 TOOLS_PLATFORM.printf?=		/bin/printf
-TOOLS_PLATFORM.pwd?=		/bin/pwd
+TOOLS_PLATFORM.pwd?=		pwd			# shell builtin
 .if exists(/usr/gnu/bin/readelf)
 TOOLS_PLATFORM.readelf?=	/usr/gnu/bin/readelf
 .elif exists(/usr/sfw/bin/greadelf)
