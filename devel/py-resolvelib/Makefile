@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2022/01/04 20:53:36 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/11/22 13:02:54 adam Exp $
 
-DISTNAME=	resolvelib-0.8.1
+DISTNAME=	resolvelib-0.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/resolvelib/}
 
@@ -12,9 +11,6 @@ COMMENT=	Resolve abstract dependencies into concrete ones
 LICENSE=	isc
 
 USE_LANGUAGES=	# none
-
-post-install:
-	${CHMOD} -R go-w ${DESTDIR}${PREFIX}/${PYSITELIB}/resolvelib
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
