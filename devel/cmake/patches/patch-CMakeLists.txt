@@ -1,20 +1,11 @@
-$NetBSD: patch-CMakeLists.txt,v 1.10 2022/04/18 11:01:33 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.11 2022/11/22 19:14:03 adam Exp $
 
-Don't insist on ncurses.
 On Darwin, don't make application bundle.
 
---- CMakeLists.txt.orig	2022-04-12 14:06:39.000000000 +0000
+--- CMakeLists.txt.orig	2022-11-16 14:42:03.000000000 +0000
 +++ CMakeLists.txt
-@@ -681,7 +681,6 @@ macro (CMAKE_BUILD_UTILITIES)
-   endif ()
-   if(BUILD_CursesDialog)
-     if(UNIX)
--      set(CURSES_NEED_NCURSES TRUE)
-       find_package(Curses)
-       if(NOT CURSES_FOUND)
-         message(WARNING
-@@ -792,7 +791,7 @@ if(NOT CMake_TEST_EXTERNAL_CMAKE)
-   CMAKE_BUILD_UTILITIES()
+@@ -403,7 +403,7 @@ if(NOT CMake_TEST_EXTERNAL_CMAKE)
+   include(CMakeBuildUtilities)
  
    if(BUILD_QtDialog)
 -    if(APPLE)
