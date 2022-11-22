@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.45 2022/10/28 09:47:06 adam Exp $
+# $NetBSD: Makefile,v 1.46 2022/11/22 10:21:37 adam Exp $
 
-DISTNAME=	ipykernel-6.16.2
+DISTNAME=	ipykernel-6.17.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/ipykernel/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://ipython.org/
 COMMENT=	IPython Kernel for Jupyter
 LICENSE=	modified-bsd
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-hatchling>=0.25:../../devel/py-hatchling
+BUILD_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.4:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-debugpy>=1.0.0:../../devel/py-debugpy
 DEPENDS+=	${PYPKGPREFIX}-ipython>=7.23.1:../../devel/py-ipython
 DEPENDS+=	${PYPKGPREFIX}-jupyter_client>=6.1.12:../../devel/py-jupyter_client
