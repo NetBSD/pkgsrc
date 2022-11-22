@@ -1,8 +1,7 @@
-# $NetBSD: tools.SunOS.mk,v 1.52 2022/01/09 17:36:52 tnn Exp $
+# $NetBSD: tools.SunOS.mk,v 1.53 2022/11/22 09:06:08 jperkin Exp $
 #
-# System-supplied tools for the Solaris operating system.
+# System-supplied tools for the Solaris and illumos operating systems.
 #
-# We bootstrap a pdksh shell on this platform.
 
 TOOLS_PLATFORM.[?=		[			# shell builtin
 .if exists(/usr/bin/gawk)
@@ -72,7 +71,7 @@ TOOLS_PLATFORM.fgrep?=		/usr/xpg4/bin/grep -F
 .endif
 TOOLS_PLATFORM.env?=		/usr/bin/env
 TOOLS_PLATFORM.expr?=		/usr/xpg4/bin/expr
-.if exists(/usr/gnu/bin/false)	# if we are using OpenSolaris
+.if exists(/usr/gnu/bin/false)
 TOOLS_PLATFORM.false?=		/usr/gnu/bin/false
 .else
 TOOLS_PLATFORM.false?=		false			# shell builtin
@@ -130,7 +129,7 @@ TOOLS_PLATFORM.install-info?=	/usr/bin/install-info
 .elif exists(/usr/sfw/bin/install-info)
 TOOLS_PLATFORM.install-info?=	/usr/sfw/bin/install-info
 .endif
-.if exists(/usr/bin/ginstall)	# if we are using OpenSolaris
+.if exists(/usr/bin/ginstall)
 TOOLS_PLATFORM.install?=	/usr/bin/ginstall
 .else
 TOOLS_PLATFORM.install?=	/usr/ucb/install
