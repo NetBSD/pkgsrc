@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2022/09/13 11:43:25 adam Exp $
+# $NetBSD: Makefile,v 1.34 2022/11/22 10:20:35 adam Exp $
 
-DISTNAME=	jupyter_client-7.3.5
+DISTNAME=	jupyter_client-7.4.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jupyter_client/}
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-entrypoints-[0-9]*:../../devel/py-entrypoints
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.8.2:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-jupyter_core>=4.9.2:../../devel/py-jupyter_core
 DEPENDS+=	${PYPKGPREFIX}-nest-asyncio>=1.5.4:../../devel/py-nest-asyncio
-DEPENDS+=	${PYPKGPREFIX}-tornado>=6.0:../../www/py-tornado
+DEPENDS+=	${PYPKGPREFIX}-tornado>=6.2:../../www/py-tornado
 DEPENDS+=	${PYPKGPREFIX}-traitlets>=4.1.0:../../devel/py-traitlets
 DEPENDS+=	${PYPKGPREFIX}-zmq>=23.0:../../net/py-zmq
 TEST_DEPENDS+=	${PYPKGPREFIX}-ipykernel>=6.5:../../devel/py-ipykernel
