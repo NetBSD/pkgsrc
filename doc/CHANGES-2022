@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5621 2022/11/22 13:07:32 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5622 2022/11/22 13:14:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8507,3 +8507,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated archivers/py-zipp to 3.10.0 [adam 2022-11-22]
 	Updated devel/py-resolvelib to 0.9.0 [adam 2022-11-22]
 	Updated devel/py-test-sugar to 0.9.6 [adam 2022-11-22]
+	Updated math/py-patsy to 0.5.3 [adam 2022-11-22]
+	Updated editors/py-jedi to 0.18.2 [adam 2022-11-22]
