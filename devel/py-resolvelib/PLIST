@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/11/16 16:00:55 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/11/22 13:02:54 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -14,6 +14,7 @@ ${PYSITELIB}/resolvelib/compat/__init__.pyc
 ${PYSITELIB}/resolvelib/compat/__init__.pyo
 ${PYSITELIB}/resolvelib/compat/collections_abc.py
 ${PYSITELIB}/resolvelib/compat/collections_abc.pyc
+${PYSITELIB}/resolvelib/compat/collections_abc.pyi
 ${PYSITELIB}/resolvelib/compat/collections_abc.pyo
 ${PYSITELIB}/resolvelib/providers.py
 ${PYSITELIB}/resolvelib/providers.pyc
