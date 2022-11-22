@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22362 2022/11/21 21:01:54 adam Exp $
+$NetBSD: TODO,v 1.22363 2022/11/22 12:55:03 adam Exp $
 
 Suggested new packages
 ======================
@@ -804,7 +804,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o harminv-1.4.1
 	o hashcash-1.23
 	o haskell-mode-13.20
-	o heimdal-7.8
 	o herisvm-0.8.2
 	o hesiod-3.2.1
 	o heyu-2.9.0
