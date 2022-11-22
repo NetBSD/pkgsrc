@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5624 2022/11/22 13:28:57 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5625 2022/11/22 19:14:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8512,3 +8512,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/py-readme_renderer to 37.3 [adam 2022-11-22]
 	Updated www/py-pystache to 0.6.0 [adam 2022-11-22]
 	Updated lang/py-mypy to 0.991 [adam 2022-11-22]
+	Updated databases/redis to 7.0.5 [adam 2022-11-22]
+	Updated databases/py-redis to 4.3.5 [adam 2022-11-22]
+	Updated devel/cmake to 3.25.0 [adam 2022-11-22]
+	Updated devel/cmake-gui to 3.25.0 [adam 2022-11-22]
