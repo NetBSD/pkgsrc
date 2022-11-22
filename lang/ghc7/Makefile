@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2022/11/22 14:35:32 nia Exp $
+# $NetBSD: Makefile,v 1.55 2022/11/22 14:52:43 nia Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
@@ -182,10 +182,7 @@ BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 # In a sandboxed build environment, we have to reach over to the
 # installed libraries themselves, since the symlinks compatXX adds
 # to the /usr tree can't be applied.
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-aarch64*) && ${OPSYS_VERSION} >= 099000
-BUILD_DEPENDS+=	compat90-[0-9]*:../../emulators/compat90
-ALL_ENV+=	LD_LIBRARY_PATH=${PREFIX:Q}/emul/netbsd/usr/lib
-.elif ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} >= 090000
+.if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} >= 090000
 BUILD_DEPENDS+=	compat80-[0-9]*:../../emulators/compat80
 ALL_ENV+=	LD_LIBRARY_PATH=${PREFIX:Q}/emul/netbsd/usr/lib
 .endif
