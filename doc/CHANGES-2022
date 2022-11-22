@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5618 2022/11/22 11:10:36 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5619 2022/11/22 11:30:51 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8502,3 +8502,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-ipykernel to 6.17.1 [adam 2022-11-22]
 	Updated misc/py-platformdirs to 2.5.4 [adam 2022-11-22]
 	Updated sysutils/py-ansible-compat to 2.2.5 [adam 2022-11-22]
+	Updated editors/tp-note to 1.19.3 [pin 2022-11-22]
