@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.18 2021/10/21 07:46:02 wiz Exp $
+# $NetBSD: builtin.mk,v 1.19 2022/11/22 12:51:00 adam Exp $
 
 BUILTIN_PKG:=	heimdal
 
@@ -28,7 +28,7 @@ MAKEVARS+=		IS_BUILTIN.heimdal
 ### a package name to represent the built-in package.
 ###
 .if !defined(BUILTIN_PKG.heimdal) && \
-    !empty(IS_BUILTIN.heimdal:M[yY][eE][sS])
+    ${IS_BUILTIN.heimdal:tl} == yes
 .  if empty(SH_KRB5_CONFIG:M__nonexistent__)
 BUILTIN_VERSION.heimdal!=	${SH_KRB5_CONFIG} --version |		\
 				${AWK} '{ print $$2; exit }'
@@ -72,21 +72,21 @@ MAKEVARS+=			BUILTIN_PKG.heimdal
 USE_BUILTIN.heimdal=	no
 .  else
 USE_BUILTIN.heimdal=	${IS_BUILTIN.heimdal}
-.    if !empty(USE_BUILTIN.heimdal:M[yY][eE][sS])
+.    if ${USE_BUILTIN.heimdal:tl} == yes
 CHECK_BUILTIN.openssl:=	yes
 .      include "../../security/openssl/builtin.mk"
 CHECK_BUILTIN.openssl:=	no
-.      if !empty(USE_BUILTIN.openssl:M[Nn][Oo])
+.      if ${USE_BUILTIN.openssl:tl} == no
 USE_BUILTIN.heimdal=	no
 .      endif
 .    endif
 .    if defined(BUILTIN_PKG.heimdal) && \
-        !empty(IS_BUILTIN.heimdal:M[yY][eE][sS])
+       ${IS_BUILTIN.heimdal:tl} == yes
 USE_BUILTIN.heimdal?=	yes
 .      for _dep_ in ${BUILDLINK_API_DEPENDS.heimdal}
-.        if !empty(USE_BUILTIN.heimdal:M[yY][eE][sS])
+.        if ${USE_BUILTIN.heimdal:tl} == yes
 USE_BUILTIN.heimdal!=							\
-	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.heimdal:Q}; then \
+	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.heimdal}; then	\
 		${ECHO} yes;						\
 	else								\
 		${ECHO} no;						\
@@ -103,9 +103,9 @@ MAKEVARS+=	USE_BUILTIN.heimdal
 ### solely to determine whether a built-in implementation exists.
 ###
 CHECK_BUILTIN.heimdal?=	no
-.if !empty(CHECK_BUILTIN.heimdal:M[nN][oO])
+.if ${CHECK_BUILTIN.heimdal:tl} == no
 
-.  if !empty(USE_BUILTIN.heimdal:M[nN][oO])
+.  if ${USE_BUILTIN.heimdal:tl} == no
 BUILDLINK_API_DEPENDS.heimdal+=	heimdal>=0.6
 
 KRB5_CONFIG?=	${BUILDLINK_PREFIX.heimdal}/bin/krb5-config
@@ -113,7 +113,7 @@ CONFIGURE_ENV+=	KRB5_CONFIG=${KRB5_CONFIG:Q}
 MAKE_ENV+=	KRB5_CONFIG=${KRB5_CONFIG:Q}
 .  endif
 
-.  if !empty(USE_BUILTIN.heimdal:M[yY][eE][sS])
+.  if ${USE_BUILTIN.heimdal:tl} == yes
 .    if !empty(SH_KRB5_CONFIG:M__nonexistent__)
 BUILDLINK_TARGETS+=	fake-krb5-config
 
