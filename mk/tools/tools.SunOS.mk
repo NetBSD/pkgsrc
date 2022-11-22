@@ -1,4 +1,4 @@
-# $NetBSD: tools.SunOS.mk,v 1.55 2022/11/22 09:15:51 jperkin Exp $
+# $NetBSD: tools.SunOS.mk,v 1.56 2022/11/22 13:18:59 jperkin Exp $
 #
 # System-supplied tools for the Solaris and illumos operating systems.
 #
@@ -71,11 +71,7 @@ TOOLS_PLATFORM.fgrep?=		/usr/xpg4/bin/grep -F
 .endif
 TOOLS_PLATFORM.env?=		/usr/bin/env
 TOOLS_PLATFORM.expr?=		/usr/xpg4/bin/expr
-.if exists(/usr/gnu/bin/false)
-TOOLS_PLATFORM.false?=		/usr/gnu/bin/false
-.else
 TOOLS_PLATFORM.false?=		false			# shell builtin
-.endif
 TOOLS_PLATFORM.file?=		/usr/bin/file
 .if exists(/usr/gnu/bin/find)
 TOOLS_PLATFORM.find?=		/usr/gnu/bin/find
