@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2022/09/11 16:15:16 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2022/11/22 13:19:55 adam Exp $
 
-DISTNAME=	readme_renderer-37.1
+DISTNAME=	readme_renderer-37.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/readme_renderer/}
