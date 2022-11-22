@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5616 2022/11/21 22:15:21 pin Exp $
+$NetBSD: CHANGES-2022,v 1.5617 2022/11/22 10:22:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8496,3 +8496,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated math/mpfr to 4.1.1 [adam 2022-11-21]
 	Updated math/libnumbertext to 1.0.11 [adam 2022-11-21]
 	Updated misc/wthrr to 0.5.1 [pin 2022-11-21]
+	Updated time/py-dateparser to 1.1.4 [adam 2022-11-22]
+	Updated devel/py-jupyter_core to 5.0.0 [adam 2022-11-22]
+	Updated devel/py-jupyter_client to 7.4.7 [adam 2022-11-22]
+	Updated devel/py-ipykernel to 6.17.1 [adam 2022-11-22]
