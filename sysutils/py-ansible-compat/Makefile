@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2022/11/02 11:23:34 adam Exp $
+# $NetBSD: Makefile,v 1.8 2022/11/22 11:10:13 adam Exp $
 
-DISTNAME=	ansible-compat-2.2.4
+DISTNAME=	ansible-compat-2.2.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/ansible-compat/}
@@ -10,8 +10,8 @@ HOMEPAGE=	https://github.com/ansible-community/ansible-compat
 COMMENT=	Ansible compatibility goodies
 LICENSE=	mit
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
-BUILD_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=7.0.0:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-jsonschema>=4.6.0:../../textproc/py-jsonschema
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-subprocess-tee>=0.3.5:../../sysutils/py-subprocess-tee
