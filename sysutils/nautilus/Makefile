@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.158 2022/08/11 05:09:17 gutteridge Exp $
+# $NetBSD: Makefile,v 1.159 2022/11/23 16:21:08 adam Exp $
 
 DISTNAME=	nautilus-3.38.1
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	sysutils gnome
 EXTRACT_SUFX=	.tar.xz
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.27 2022/04/18 19:10:02 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.28 2022/11/23 16:18:57 adam Exp $
 
 BUILDLINK_TREE+=	libdmapsharing3
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libdmapsharing3
 LIBDMAPSHARING3_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libdmapsharing3+=	libdmapsharing3>=2.9.15
-BUILDLINK_ABI_DEPENDS.libdmapsharing3?=	libdmapsharing3>=2.9.15nb51
+BUILDLINK_ABI_DEPENDS.libdmapsharing3?=	libdmapsharing3>=2.9.15nb52
 BUILDLINK_PKGSRCDIR.libdmapsharing3?=	../../net/libdmapsharing3
 
 .include "../../net/libsoup/buildlink3.mk"

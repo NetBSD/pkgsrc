@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.74 2022/05/18 15:09:55 nia Exp $
+# $NetBSD: Makefile,v 1.75 2022/11/23 16:18:32 adam Exp $
 
 DISTNAME=	audacious-4.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	audio
 MASTER_SITES=	https://distfiles.audacious-media-player.org/
 EXTRACT_SUFX=	.tar.bz2

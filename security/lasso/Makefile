@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.55 2022/06/30 11:18:47 nia Exp $
+# $NetBSD: Makefile,v 1.56 2022/11/23 16:18:59 adam Exp $
 
-PKGREVISION=	6
+PKGREVISION=	7
 
 CONFIGURE_ENV+=		INKSCAPE=/bin/false
 CONFIGURE_ARGS+=	--disable-python

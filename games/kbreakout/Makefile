@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.55 2022/09/29 00:47:28 markd Exp $
+# $NetBSD: Makefile,v 1.56 2022/11/23 16:20:04 adam Exp $
 
 DISTNAME=	kbreakout-${KAPPSVER}
+PKGREVISION=	1
 CATEGORIES=	games
 
 HOMEPAGE=	https://kde.org/applications/games/kbreakout/
