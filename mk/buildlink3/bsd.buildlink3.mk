@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.252 2022/11/23 11:04:42 jperkin Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.253 2022/11/23 11:38:43 jperkin Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -613,7 +613,9 @@ buildlink-directories:
 _BLNK_COOKIE.${_pkg_}=		${BUILDLINK_DIR}/.buildlink_${_pkg_}_done
 
 _BLNK_TARGETS+=			buildlink-${_pkg_}
+.if ${PKG_DEBUG_LEVEL} > 0
 _BLNK_TARGETS.${_pkg_}=		buildlink-${_pkg_}-message
+.endif
 _BLNK_TARGETS.${_pkg_}+=	${_BLNK_COOKIE.${_pkg_}}
 _BLNK_TARGETS.${_pkg_}+=	buildlink-${_pkg_}-cookie
 
