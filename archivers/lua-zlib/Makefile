@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/12/19 09:17:45 nia Exp $
+# $NetBSD: Makefile,v 1.7 2022/11/23 16:25:53 adam Exp $
 
 DISTNAME=	lua-zlib-1.2
 PKGNAME=	${DISTNAME:S/lua-/${LUA_PKGPREFIX}-/1}
@@ -26,8 +26,13 @@ BUILDLINK_TRANSFORM+=	rm:-llua
 
 BUILDLINK_TRANSFORM.Darwin+=	rm:-bundle
 
+.include "../../mk/bsd.prefs.mk"
+
 do-install:
 	${INSTALL_LIB} ${WRKSRC}/zlib.so ${DESTDIR}${PREFIX}/${LUA_CDIR}
+.if ${OPSYS} == "Darwin"
+	install_name_tool -id ${PREFIX}/${LUA_CDIR}/zlib.so ${DESTDIR}${PREFIX}/${LUA_CDIR}/zlib.so
+.endif
 
 .include "../../lang/lua/module.mk"
 .include "../../devel/zlib/buildlink3.mk"
