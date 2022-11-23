@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5633 2022/11/23 11:40:51 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5634 2022/11/23 12:46:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8534,3 +8534,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated fonts/harfbuzz to 5.3.1 [adam 2022-11-23]
 	Updated fonts/harfbuzz-icu to 5.3.1 [adam 2022-11-23]
 	Updated x11/gtk3 to 3.24.35 [adam 2022-11-23]
+	Updated lang/nodejs to 18.12.1 [adam 2022-11-23]
+	Updated lang/nodejs16 to 16.18.1 [adam 2022-11-23]
