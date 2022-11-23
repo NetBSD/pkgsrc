@@ -1,4 +1,4 @@
-# $NetBSD: bsd.install.mk,v 1.17 2019/05/07 19:36:44 rillig Exp $
+# $NetBSD: bsd.install.mk,v 1.18 2022/11/23 11:26:51 jperkin Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and provides all
 # variables and targets related to installing packages.
@@ -58,6 +58,7 @@ stage-install: barrier
 ###
 .PHONY: install-cookie
 install-cookie:
-	${RUN} [ ! -f ${_COOKIE.install} ]
-	${RUN} ${MKDIR} ${_COOKIE.install:H}
-	${RUN} ${ECHO} ${PKGNAME} > ${_COOKIE.install}
+	${RUN}								\
+	[ ! -f ${_COOKIE.install} ];					\
+	${TEST} -d ${_COOKIE.install:H} || ${MKDIR} ${_COOKIE.install:H}; \
+	${ECHO} ${PKGNAME} > ${_COOKIE.install}
