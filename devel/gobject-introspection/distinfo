@@ -1,16 +1,14 @@
-$NetBSD: distinfo,v 1.49 2022/11/16 16:08:34 jperkin Exp $
+$NetBSD: distinfo,v 1.50 2022/11/23 10:56:39 adam Exp $
 
-BLAKE2s (gobject-introspection-1.70.0.tar.xz) = 079f927cf357bc24d4df1d8130c61b9a1f3e5249f53bcf7cfe9db0989e28a4ea
-SHA512 (gobject-introspection-1.70.0.tar.xz) = 216b376ed423f607e36c723dd6b67975dbfb63c253f2d8bd0b3661e3d69f8c8059cf221db8c5260b0262fad1b7d738f3b2e5fbd51fdbc31e40ccb115c209baf0
-Size (gobject-introspection-1.70.0.tar.xz) = 1029372 bytes
+BLAKE2s (gobject-introspection-1.74.0.tar.xz) = 0ad5a8a4c604de9103693f31a6cec1acccbc0a96d2b8772804d9974c2cb80dac
+SHA512 (gobject-introspection-1.74.0.tar.xz) = decff5dda0ec5ec0afda4d6bcd3bdadcbf34289002c0d9c0c77ecf8c5d3f15d196b24d8035041545031006acbdfe76af47c42da061c40e200c87f2c74cd301f0
+Size (gobject-introspection-1.74.0.tar.xz) = 1044008 bytes
 SHA1 (patch-girepository_gitypelib.c) = b5fa0fe0fc22a5dfb2b2916dfbb87e16fc732640
-SHA1 (patch-giscanner_ast.py) = 06b3d8903d126028d2d5144c6d6a508209c834b9
+SHA1 (patch-giscanner_ast.py) = bf9f7f6f5c548ca170d177f4d724481e0b6d1e29
 SHA1 (patch-giscanner_ccompiler.py) = c730488e66caf0bb2f258df04be66d72ca714ab4
 SHA1 (patch-giscanner_doctemplates_devdocs_meson.build) = d65e229db068a99ecf78e03ff0dfae809e731612
 SHA1 (patch-giscanner_doctemplates_mallard_meson.build) = 71e65065b66ae3e58d5212642ac284854da3c13d
-SHA1 (patch-giscanner_meson.build) = f3f482ef460ea725cb45f385cd09eaab5063c46d
 SHA1 (patch-tests_scanner_Regress-1.0-expected.gir) = f6f044a24045d38d78b9c511813be8442ce45b16
-SHA1 (patch-tests_scanner_meson.build) = 85fbe12f24516bf37c24bcd73974162a9249740d
 SHA1 (patch-tools_compiler.c) = 799d5a086338e08378b8b249e6808e8b1a8101dc
 SHA1 (patch-tools_generate.c) = 3fa74dd0e2c7658768a4278b984be38bff729d94
 SHA1 (patch-tools_meson.build) = 01c9aaaaacf1d0855704f55eb568b77bc207cc14
