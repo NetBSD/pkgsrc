@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2018/04/30 10:41:35 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2022/11/23 08:51:46 nikita Exp $
 
 DISTNAME=	915resolution-0.5.3
 CATEGORIES=	sysutils
 MASTER_SITES=	${HOMEPAGE:Q}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://915resolution.mango-lang.org/
+HOMEPAGE=	https://web.archive.org/web/20220409183124/http://915resolution.mango-lang.org/
 COMMENT=	BIOS VESA resolution utility for 8XX/9XX Intel chips
 LICENSE=	public-domain
 
