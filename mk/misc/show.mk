@@ -1,4 +1,4 @@
-# $NetBSD: show.mk,v 1.28 2021/01/13 18:01:49 gdt Exp $
+# $NetBSD: show.mk,v 1.29 2022/11/23 13:12:58 jperkin Exp $
 #
 # This file contains some targets that print information gathered from
 # variables. They do not modify any variables.
@@ -44,10 +44,11 @@ pre-depends-hook: show-build-defs
 
 show-build-defs: .PHONY
 .if !empty(BUILD_DEFS:M*)
-	@${ECHO} "=========================================================================="
-	@${ECHO} "The following variables will affect the build process of this package,"
-	@${ECHO} "${PKGNAME}.  Their current value is shown below:"
-	@${ECHO} ""
+	${RUN}								\
+	${ECHO} "=========================================================================="; \
+	${ECHO} "The following variables will affect the build process of this package,"; \
+	${ECHO} "${PKGNAME}.  Their current value is shown below:";	\
+	${ECHO} ""
 .  for var in ${BUILD_DEFS:O:u}
 .    if !defined(${var})
 	@${ECHO} "        * ${var} (not defined)"
@@ -58,9 +59,10 @@ show-build-defs: .PHONY
 .    endif
 .  endfor
 .  if !empty(BUILD_DEFS_EFFECTS:M*)
-	@${ECHO} ""
-	@${ECHO} "Based on these variables, the following variables have been set:"
-	@${ECHO} ""
+	${RUN}								\
+	${ECHO} "";							\
+	${ECHO} "Based on these variables, the following variables have been set:"; \
+	${ECHO} ""
 .  endif
 .  for var in ${BUILD_DEFS_EFFECTS:O:u}
 .    if !defined(${var})
@@ -71,11 +73,12 @@ show-build-defs: .PHONY
 	@${ECHO} "        * ${var} = "${${var}:Q}
 .    endif
 .  endfor
-	@${ECHO} ""
-	@${ECHO} "You may want to abort the process now with CTRL-C and change the value"
-	@${ECHO} "of variables in the first group before continuing.  Be sure to run"
-	@${ECHO} "\`${MAKE} clean' after the changes."
-	@${ECHO} "=========================================================================="
+	${RUN}								\
+	${ECHO} "";							\
+	${ECHO} "You may want to abort the process now with CTRL-C and change the value"; \
+	${ECHO} "of variables in the first group before continuing.  Be sure to run"; \
+	${ECHO} "\`${MAKE} clean' after the changes.";			\
+	${ECHO} "=========================================================================="
 .endif
 
 # show-all:
