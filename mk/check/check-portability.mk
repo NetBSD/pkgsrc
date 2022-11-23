@@ -1,4 +1,4 @@
-# $NetBSD: check-portability.mk,v 1.19 2020/06/07 10:42:04 rillig Exp $
+# $NetBSD: check-portability.mk,v 1.20 2022/11/23 11:55:43 jperkin Exp $
 #
 # This file checks that the extracted shell programs don't contain
 # bashisms or other constructs that only work on some platforms.
@@ -44,8 +44,8 @@ pre-configure-checks-hook: _check-portability
 .endif
 .PHONY: _check-portability
 _check-portability:
-	@${STEP_MSG} "Checking for portability problems in extracted files"
 	${RUN}								\
+	${STEP_MSG} "Checking for portability problems in extracted files"; \
 	[ -d ${WRKSRC}/. ] || exit 0;					\
 	cd ${WRKSRC};							\
 	${SETENV}							\

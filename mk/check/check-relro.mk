@@ -1,4 +1,4 @@
-# $NetBSD: check-relro.mk,v 1.7 2022/08/18 00:19:34 joerg Exp $
+# $NetBSD: check-relro.mk,v 1.8 2022/11/23 11:55:43 jperkin Exp $
 #
 # This file verifies that RELRO (read-only relocations) was applied
 # accordingly at build-time.
@@ -69,9 +69,8 @@ CHECK_RELRO_NATIVE_ENV+=	CHECK_WRKREF_EXTRA_DIRS=${CHECK_WRKREF_EXTRA_DIRS:Q}
 
 privileged-install-hook: _check-relro
 _check-relro: error-check .PHONY
-	@${STEP_MSG} "Checking for RELRO in ${PKGNAME}"
-	${RUN} rm -f ${ERROR_DIR}/${.TARGET}
-	${RUN}					\
+	${RUN}								\
+	${STEP_MSG} "Checking for RELRO in ${PKGNAME}";			\
 	cd ${DESTDIR:Q}${PREFIX:Q};					\
 	${_CHECK_RELRO_FILELIST_CMD} |					\
 	${EGREP} -h ${_CHECK_RELRO_ERE:Q} |				\

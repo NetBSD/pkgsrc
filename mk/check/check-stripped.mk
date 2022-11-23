@@ -1,4 +1,4 @@
-# $NetBSD: check-stripped.mk,v 1.6 2014/10/12 23:39:17 joerg Exp $
+# $NetBSD: check-stripped.mk,v 1.7 2022/11/23 11:55:43 jperkin Exp $
 #
 # This file checks that after installation, all binaries conform to the
 # setting of INSTALL_UNSTRIPPED.
@@ -37,8 +37,9 @@ USE_TOOLS+=	file
 .endif
 
 _check-stripped: error-check .PHONY
-	@${STEP_MSG} "Checking whether binaries are ${_INSTALL_UNSTRIPPED:Dun:U}stripped."
-	${RUN} cd ${DESTDIR}${PREFIX};					\
+	${RUN}								\
+	${STEP_MSG} "Checking whether binaries are ${_INSTALL_UNSTRIPPED:Dun:U}stripped."; \
+	cd ${DESTDIR}${PREFIX};						\
 	want_stripped=${_INSTALL_UNSTRIPPED:Dno:Uyes};			\
 	${_CHECK_STRIPPED_FILELIST_CMD} | ${SORT} | ${SED} 's,\\,\\\\,g'\
 	| while read file; do						\
