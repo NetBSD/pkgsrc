@@ -1,4 +1,4 @@
-#	$NetBSD: pbulk-index.mk,v 1.26 2022/04/25 10:59:23 jperkin Exp $
+#	$NetBSD: pbulk-index.mk,v 1.27 2022/11/23 10:22:40 jperkin Exp $
 
 # This Makefile fragment is included by bsd.pkg.mk and provides all
 # variables and targets related to the parallel bulk build
@@ -112,24 +112,28 @@ _PBULK_SCAN_DEPENDS:=	${_PBULK_SCAN_DEPENDS:N${_dir_}}
 .endif
 
 pbulk-index-item:
-	@echo "PKGNAME="${PKGNAME:Q}
-	@echo "ALL_DEPENDS="${_ALL_DEPENDS:Q}
-	@echo "PKG_SKIP_REASON="${PKG_SKIP_REASON:Q}
-	@echo "PKG_FAIL_REASON="${PKG_FAIL_REASON:Q}
-	@echo "NO_BIN_ON_FTP="${NO_BIN_ON_FTP:Q}
-	@echo "RESTRICTED="${RESTRICTED:Q}
-	@echo "CATEGORIES="${CATEGORIES:Q}
-	@echo "MAINTAINER="${MAINTAINER:Q}
-	@echo "USE_DESTDIR="${_USE_DESTDIR:Q}
-	@echo "BOOTSTRAP_PKG="${BOOTSTRAP_PKG}
-	@echo "USERGROUP_PHASE="${USERGROUP_PHASE:Q}
-	@echo "SCAN_DEPENDS="${_PBULK_SCAN_DEPENDS:O:u:Q}
+	${RUN} { \
+		echo "PKGNAME="${PKGNAME:Q}; \
+		echo "ALL_DEPENDS="${_ALL_DEPENDS:Q}; \
+		echo "PKG_SKIP_REASON="${PKG_SKIP_REASON:Q}; \
+		echo "PKG_FAIL_REASON="${PKG_FAIL_REASON:Q}; \
+		echo "NO_BIN_ON_FTP="${NO_BIN_ON_FTP:Q}; \
+		echo "RESTRICTED="${RESTRICTED:Q}; \
+		echo "CATEGORIES="${CATEGORIES:Q}; \
+		echo "MAINTAINER="${MAINTAINER:Q}; \
+		echo "USE_DESTDIR="${_USE_DESTDIR:Q}; \
+		echo "BOOTSTRAP_PKG="${BOOTSTRAP_PKG}; \
+		echo "USERGROUP_PHASE="${USERGROUP_PHASE:Q}; \
+		echo "SCAN_DEPENDS="${_PBULK_SCAN_DEPENDS:O:u:Q}; \
+	}
 .if defined(_PBULK_MULTI_NEEDED)
-	@printf "MULTI_VERSION="
-.for _t in ${_PBULK_MULTI_NEEDED}
-	@printf " %s=%s" ${_PBULK_MULTI_VAR.${_t}:Q} ${_PBULK_MULTI_VALUE_${_t}:Q}
-.endfor
-	@printf "\n"
+	${RUN} { \
+		printf "MULTI_VERSION="; \
+		${_PBULK_MULTI_NEEDED:@_t@ \
+			printf " %s=%s" ${_PBULK_MULTI_VAR.${_t}:Q} ${_PBULK_MULTI_VALUE_${_t}:Q}; \
+		@} \
+		printf "\n"; \
+	}
 .endif
 
 pbulk-save-wrkdir:
