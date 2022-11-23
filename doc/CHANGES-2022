@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5638 2022/11/23 18:00:11 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5639 2022/11/23 21:52:22 nros Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8544,3 +8544,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-bitarray to 2.6.0 [adam 2022-11-23]
 	Updated devel/py-setuptools to 65.6.1 [adam 2022-11-23]
 	Updated devel/py-types-setuptools to 65.6.0.1 [adam 2022-11-23]
+	Added textproc/md4c version 0.4.8 [nros 2022-11-23]
