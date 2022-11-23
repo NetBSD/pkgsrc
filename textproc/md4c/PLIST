@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2022/11/23 21:50:46 nros Exp $
+bin/md2html
+include/md4c-html.h
+include/md4c.h
+lib/cmake/md4c/md4cConfig-release.cmake
+lib/cmake/md4c/md4cConfig.cmake
+lib/libmd4c-html.so
+lib/libmd4c-html.so.0
+lib/libmd4c-html.so.${PKGVERSION}
+lib/libmd4c.so
+lib/libmd4c.so.0
+lib/libmd4c.so.${PKGVERSION}
+lib/pkgconfig/md4c-html.pc
+lib/pkgconfig/md4c.pc
+man/man1/md2html.1
