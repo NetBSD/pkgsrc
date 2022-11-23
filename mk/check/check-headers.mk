@@ -1,4 +1,4 @@
-# $NetBSD: check-headers.mk,v 1.7 2014/10/12 23:39:17 joerg Exp $
+# $NetBSD: check-headers.mk,v 1.8 2022/11/23 11:55:43 jperkin Exp $
 #
 # This file checks the C and C++ header files for possible problems.
 #
@@ -32,9 +32,9 @@ pre-build-checks-hook: _check-headers
 
 .PHONY: _check-headers
 _check-headers:
-	@${STEP_MSG} "Checking for possible problems in header files"
 	${RUN}								\
+	${STEP_MSG} "Checking for possible problems in header files";	\
 	[ -d ${WRKSRC}/. ] || exit 0;					\
 	cd ${WRKSRC};							\
-	env	SKIP_FILTER=${CHECK_HEADERS_SKIP:@p@${p}) skip=yes;;@:Q} \
+	env SKIP_FILTER=${CHECK_HEADERS_SKIP:@p@${p}) skip=yes;;@:Q}	\
 		sh ${PKGSRCDIR}/mk/check/check-headers.sh

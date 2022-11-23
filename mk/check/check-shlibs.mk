@@ -1,4 +1,4 @@
-# $NetBSD: check-shlibs.mk,v 1.34 2021/10/11 20:26:28 jperkin Exp $
+# $NetBSD: check-shlibs.mk,v 1.35 2022/11/23 11:55:43 jperkin Exp $
 #
 # This file verifies that all libraries used by the package can be found
 # at run-time.
@@ -49,9 +49,9 @@ CHECK_SHLIBS_SKIP?=		# none
 _CHECK_SHLIBS_ERE=	(bin/|sbin/|libexec/|\.(dylib|sl|so)$$|lib/lib.*\.(dylib|sl|so))
 
 _CHECK_SHLIBS_FILELIST_CMD?=	${SED} -e '/^@/d' ${PLIST} |		\
-	(while read file; do						\
+	while read file; do						\
 		${TEST} -h "$$file" || ${ECHO} "$$file";		\
-	done)
+	done
 
 .if !empty(CHECK_SHLIBS:M[Yy][Ee][Ss]) && \
     !empty(CHECK_SHLIBS_SUPPORTED:M[Yy][Ee][Ss]) && \
@@ -85,9 +85,8 @@ CHECK_SHLIBS_NATIVE_ENV+=	CHECK_SHLIBS_TOXIC=${CHECK_SHLIBS_BLACKLIST:Q}
 
 privileged-install-hook: _check-shlibs
 _check-shlibs: error-check .PHONY
-	@${STEP_MSG} "Checking for missing run-time search paths in ${PKGNAME}"
-	${RUN} rm -f ${ERROR_DIR}/${.TARGET}
-	${RUN}					\
+	${RUN}								\
+	${STEP_MSG} "Checking for missing run-time search paths in ${PKGNAME}"; \
 	cd ${DESTDIR:Q}${PREFIX:Q};					\
 	${_CHECK_SHLIBS_FILELIST_CMD} |					\
 	${EGREP} -h ${_CHECK_SHLIBS_ERE:Q} |				\
