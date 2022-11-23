@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.38 2021/10/26 10:53:55 nia Exp $
+$NetBSD: distinfo,v 1.39 2022/11/23 08:50:20 thor Exp $
 
-BLAKE2s (claws-mail-4.0.0.tar.xz) = 559996ab6cabb5cd6c7dbc432917088cf54da94e5dfb52c2008c9dac43766cfc
-SHA512 (claws-mail-4.0.0.tar.xz) = 26d207fb8b5ce8b814a8a712843a209f58c8c9df3e9623387322b2e70ac351c71ac8b1ff77c52c5df9a14a46be7f65413efc0a4dbcda1e70ecb453f042da153e
-Size (claws-mail-4.0.0.tar.xz) = 6390300 bytes
+BLAKE2s (claws-mail-4.1.1.tar.xz) = 2a2c01686cba72a67c1e745cdd1059a369e1af4d6dbc6d8eba8751f4b483deac
+SHA512 (claws-mail-4.1.1.tar.xz) = 4157772fd0e918bae1df11230ce52691ff86181a0c164c0c5116d1ebb91885910e2e24ff18ae5e5ad4ed1c83ef830773de0b4ab40da988607909e0c17efb26b4
+Size (claws-mail-4.1.1.tar.xz) = 6523688 bytes
 SHA1 (patch-po_Makefile.in.in) = 88cb5106595d2959f31d7825b7474861281b290c
 SHA1 (patch-src_Makefile.in) = 8e8cc2d08ab640aa51c6a761bb8913f518d1ad65
 SHA1 (patch-src_common_unmime.c) = b572895a8a3be4d6d78b34f6466cc2e80fa9d96f

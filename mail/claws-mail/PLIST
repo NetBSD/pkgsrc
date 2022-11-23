@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2021/07/13 12:35:09 nia Exp $
+@comment $NetBSD: PLIST,v 1.31 2022/11/23 08:50:20 thor Exp $
 bin/claws-mail
 include/claws-mail/account.h
 include/claws-mail/action.h
@@ -98,7 +98,6 @@ include/claws-mail/gtk/about.h
 include/claws-mail/gtk/authors.h
 include/claws-mail/gtk/claws-marshal.h
 include/claws-mail/gtk/colorlabel.h
-include/claws-mail/gtk/colorsel.h
 include/claws-mail/gtk/combobox.h
 include/claws-mail/gtk/description_window.h
 include/claws-mail/gtk/filesel.h
