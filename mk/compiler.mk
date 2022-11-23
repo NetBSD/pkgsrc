@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.98 2022/07/05 17:32:24 jperkin Exp $
+# $NetBSD: compiler.mk,v 1.99 2022/11/23 13:30:38 jperkin Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -252,8 +252,8 @@ ${_FAIL_WRAPPER.ADA}: fail-wrapper
 
 .PHONY: fail-wrapper
 fail-wrapper: .USE
-	${RUN}${MKDIR} ${.TARGET:H}
-	${RUN}					\
+	${RUN}								\
+	${TEST} -d ${.TARGET:H} || ${MKDIR} ${.TARGET:H};		\
 	exec 1>${.TARGET};						\
 	${ECHO} '#!'${TOOLS_SHELL:Q};					\
 	${ECHO} 'wrapperlog="$${TOOLS_WRAPPER_LOG-'${_TOOLS_WRAP_LOG:Q}'}"'; \
@@ -263,8 +263,8 @@ fail-wrapper: .USE
 	${ECHO} '${ECHO} "$$msg" > ${WARNING_DIR}/${.TARGET:T}'; \
 	${ECHO} '${ECHO} "PKGSRC-WARNING: Something is trying to run the $$lang compiler," 1>&2'; \
 	${ECHO} '${ECHO} "PKGSRC-WARNING: but it is not added to USE_LANGUAGES in the package Makefile." 1>&2'; \
-	${ECHO} 'exit 1'
-	${RUN}${CHMOD} +x ${.TARGET}
+	${ECHO} 'exit 1';						\
+	${CHMOD} +x ${.TARGET}
 
 .if empty(USE_LANGUAGES:Mc) && empty(USE_LANGUAGES:Mobjc) && empty(USE_LANGUAGES:Mobjc-c++)
 PKG_CC:=		${_FAIL_WRAPPER.CC}

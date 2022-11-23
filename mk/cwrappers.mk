@@ -1,4 +1,4 @@
-# $NetBSD: cwrappers.mk,v 1.37 2022/11/23 10:44:16 jperkin Exp $
+# $NetBSD: cwrappers.mk,v 1.38 2022/11/23 13:30:38 jperkin Exp $
 #
 # This Makefile fragment implements integration of pkgtools/cwrappers.
 
@@ -147,7 +147,7 @@ wrapper-message:
 
 .PHONY: wrapper-dirs
 wrapper-dirs:
-	${RUN}${MKDIR} ${CWRAPPERS_CONFIG_DIR} ${WRAPPER_BINDIR}
+	@${MKDIR} ${CWRAPPERS_CONFIG_DIR} ${WRAPPER_BINDIR}
 
 .PHONY: pre-wrapper do-wrapper post-wrapper
 
@@ -170,6 +170,7 @@ post-wrapper:
 
 .PHONY: wrapper-cookie
 wrapper-cookie:
-	${RUN} [ ! -f ${_COOKIE.wrapper} ]
-	${RUN} ${MKDIR} ${_COOKIE.wrapper:H}
-	${RUN} ${ECHO} ${PKGNAME} > ${_COOKIE.wrapper}
+	${RUN}								\
+	[ ! -f ${_COOKIE.wrapper} ];					\
+	${TEST} -d ${_COOKIE.wrapper:H} || ${MKDIR} ${_COOKIE.wrapper:H}; \
+	${ECHO} ${PKGNAME} > ${_COOKIE.wrapper}

@@ -1,4 +1,4 @@
-# $NetBSD: test.mk,v 1.24 2020/03/23 00:33:48 riastradh Exp $
+# $NetBSD: test.mk,v 1.25 2022/11/23 13:30:38 jperkin Exp $
 #
 # After the "build" phase, many packages provide some sort of self-test
 # that can be run on the not-yet installed package. To enable these
@@ -181,9 +181,10 @@ post-test:
 ###
 .PHONY: test-cookie
 test-cookie:
-	${RUN}${TEST} ! -f ${_COOKIE.test} || ${FALSE}
-	${RUN}${MKDIR} ${_COOKIE.test:H}
-	${RUN}${ECHO} ${PKGNAME} > ${_COOKIE.test}
+	${RUN}								\
+	${TEST} ! -f ${_COOKIE.test} || ${FALSE};			\
+	${TEST} -d ${_COOKIE.test:H} || ${MKDIR} ${_COOKIE.test:H};	\
+	${ECHO} ${PKGNAME} > ${_COOKIE.test}
 
 ######################################################################
 ### test-clean (PRIVATE)
