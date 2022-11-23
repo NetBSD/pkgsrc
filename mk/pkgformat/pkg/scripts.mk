@@ -1,4 +1,4 @@
-# $NetBSD: scripts.mk,v 1.4 2017/06/07 20:24:09 jlam Exp $
+# $NetBSD: scripts.mk,v 1.5 2022/11/23 11:17:51 jperkin Exp $
 #
 # Copyright (c) 2017 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -116,19 +116,21 @@ INSTALL_SRC?=		# empty
 _DEINSTALL_FILE=	${PKG_DB_TMPDIR}/+DEINSTALL
 
 ${_DEINSTALL_FILE}: ${DEINSTALL_SRC}
-	${RUN}${MKDIR} ${.TARGET:H:Q}
-	${RUN}${CAT} ${.ALLSRC} | ${SED} ${FILES_SUBST_SED} > ${.TARGET}.tmp
-	${RUN}${CHMOD} +x ${.TARGET}.tmp
-	${RUN}${MV} -f ${.TARGET}.tmp ${.TARGET}
+	${RUN}								\
+	${TEST} -d ${.TARGET:H:Q} || ${MKDIR} ${.TARGET:H:Q};		\
+	${SED} ${FILES_SUBST_SED} ${.ALLSRC} > ${.TARGET}.tmp;		\
+	${CHMOD} +x ${.TARGET}.tmp;					\
+	${MV} -f ${.TARGET}.tmp ${.TARGET}
 .endif
 .if !empty(INSTALL_SRC)
 _INSTALL_FILE=		${PKG_DB_TMPDIR}/+INSTALL
 
 ${_INSTALL_FILE}: ${INSTALL_SRC}
-	${RUN}${MKDIR} ${.TARGET:H:Q}
-	${RUN}${CAT} ${.ALLSRC} | ${SED} ${FILES_SUBST_SED} > ${.TARGET}.tmp
-	${RUN}${CHMOD} +x ${.TARGET}.tmp
-	${RUN}${MV} -f ${.TARGET}.tmp ${.TARGET}
+	${RUN}								\
+	${TEST} -d ${.TARGET:H:Q} || ${MKDIR} ${.TARGET:H:Q};		\
+	${SED} ${FILES_SUBST_SED} ${.ALLSRC} > ${.TARGET}.tmp;		\
+	${CHMOD} +x ${.TARGET}.tmp;					\
+	${MV} -f ${.TARGET}.tmp ${.TARGET}
 .endif
 
 .PHONY: _pkgformat-generate-install-scripts
