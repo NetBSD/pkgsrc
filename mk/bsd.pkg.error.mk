@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.error.mk,v 1.5 2019/09/08 09:15:01 rillig Exp $
+# $NetBSD: bsd.pkg.error.mk,v 1.6 2022/11/23 15:31:43 jperkin Exp $
 
 ERROR_DIR=		${WRKDIR}/.error
 WARNING_DIR=		${WRKDIR}/.warning
@@ -29,26 +29,32 @@ ${ERROR_DIR} ${WARNING_DIR} ${_ERROR_DONE_DIR} ${_WARNING_DONE_DIR}:
 ###
 error-check: .USE
 	${RUN}								\
-	${RM} -f ${WARNING_DIR}/*.tmp;					\
 	${TEST} -d ${WARNING_DIR} || exit 0;				\
 	cd ${WARNING_DIR};						\
+	if [ `${ECHO} *.tmp` != '*.tmp' ]; then                         \
+		${RM} -f *.tmp;                                         \
+	fi;                                                             \
 	for file in ./*; do						\
 		${TEST} "$$file" != "./*" || exit 0;			\
 		break;							\
 	done;								\
-	${CAT} ./* | ${WARNING_CAT};					\
-	${MV} -f ./* ${_WARNING_DONE_DIR}
+	if ${_NONZERO_FILESIZE_P} ./*; then				\
+		${CAT} ./* | ${WARNING_CAT};				\
+		${MV} -f ./* ${_WARNING_DONE_DIR};			\
+	fi
 
 	${RUN}								\
-	${RM} -f ${ERROR_DIR}/*.tmp;					\
 	${TEST} -d ${ERROR_DIR} || exit 0;				\
 	cd ${ERROR_DIR};						\
+	if [ `${ECHO} *.tmp` != '*.tmp' ]; then                         \
+		${RM} -f *.tmp;                                         \
+	fi;                                                             \
 	for file in ./*; do						\
 		${TEST} "$$file" != "./*" || exit 0;			\
 		break;							\
 	done;								\
-	${CAT} * | ${ERROR_CAT};					\
 	if ${_NONZERO_FILESIZE_P} ./*; then				\
+		${CAT} ./* | ${ERROR_CAT};				\
 		${MV} -f ./* ${_ERROR_DONE_DIR};			\
 		exit 1;							\
 	fi
