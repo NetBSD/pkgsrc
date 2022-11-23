@@ -1,4 +1,4 @@
-# $NetBSD: check-ssp.mk,v 1.3 2020/03/23 09:25:58 jperkin Exp $
+# $NetBSD: check-ssp.mk,v 1.4 2022/11/23 11:55:43 jperkin Exp $
 #
 # This file verifies that stack-smashing protection, commonly known as SSP,
 # was applied correctly at build-time.
@@ -42,9 +42,9 @@ CHECK_SSP_SKIP?=		# none
 _CHECK_SSP_ERE=		(bin/|sbin/|libexec/|\.so$$|lib/lib.*\.so)
 
 _CHECK_SSP_FILELIST_CMD?=	${SED} -e '/^@/d' ${PLIST} |		\
-	(while read file; do						\
+	while read file; do						\
 		${TEST} -h "$$file" || ${ECHO} "$$file";		\
-	done)
+	done
 
 .if !empty(CHECK_SSP:M[Yy][Ee][Ss]) && \
     !empty(CHECK_SSP_SUPPORTED:M[Yy][Ee][Ss]) && \
@@ -67,9 +67,8 @@ CHECK_SSP_NATIVE_ENV+=	CHECK_WRKREF_EXTRA_DIRS=${CHECK_WRKREF_EXTRA_DIRS:Q}
 
 privileged-install-hook: _check-ssp
 _check-ssp: error-check .PHONY
-	@${STEP_MSG} "Checking for SSP in ${PKGNAME}"
-	${RUN} rm -f ${ERROR_DIR}/${.TARGET}
 	${RUN}							\
+	${STEP_MSG} "Checking for SSP in ${PKGNAME}";		\
 	cd ${DESTDIR:Q}${PREFIX:Q};				\
 	${_CHECK_SSP_FILELIST_CMD} |				\
 	${EGREP} -h ${_CHECK_SSP_ERE:Q} |			\
