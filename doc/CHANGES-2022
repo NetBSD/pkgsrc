@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5632 2022/11/23 11:00:04 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5633 2022/11/23 11:40:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8531,3 +8531,6 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/gobject-introspection to 1.74.0 [adam 2022-11-23]
 	Updated devel/pango to 1.50.12 [adam 2022-11-23]
 	Updated devel/atk to 2.38.0 [adam 2022-11-23]
+	Updated fonts/harfbuzz to 5.3.1 [adam 2022-11-23]
+	Updated fonts/harfbuzz-icu to 5.3.1 [adam 2022-11-23]
+	Updated x11/gtk3 to 3.24.35 [adam 2022-11-23]
