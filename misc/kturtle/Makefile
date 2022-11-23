@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.65 2022/09/29 01:03:53 markd Exp $
+# $NetBSD: Makefile,v 1.66 2022/11/23 16:20:40 adam Exp $
 
 DISTNAME=	kturtle-${KAPPSVER}
+PKGREVISION=	1
 CATEGORIES=	misc
 
 HOMEPAGE=	https://kde.org/applications/education/kturtle/

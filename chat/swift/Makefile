@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.79 2022/09/11 12:51:25 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2022/11/23 16:19:30 adam Exp $
 
 DISTNAME=	swift-4.0.2
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	chat
 MASTER_SITES=	https://swift.im/downloads/releases/${DISTNAME}/
 

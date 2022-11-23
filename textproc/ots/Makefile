@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2022/04/18 19:12:10 adam Exp $
+# $NetBSD: Makefile,v 1.10 2022/11/23 16:21:11 adam Exp $
 
 DISTNAME=	ots-0.5.0
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	textproc
 MASTER_SITES=	http://downloads.sf.net/project/libots/libots/${DISTNAME}/
 
