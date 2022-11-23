@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2022/06/30 11:18:57 nia Exp $
+# $NetBSD: Makefile,v 1.38 2022/11/23 16:21:15 adam Exp $
 
 PKGVER=			0.8.4
 DISTNAME=		ccsm-${PKGVER}
-PKGREVISION=		16
+PKGREVISION=		17
 CATEGORIES=		wm gnome
 MASTER_SITES=		http://releases.compiz.org/${PKGVER}/
 

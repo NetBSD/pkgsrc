@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.59 2022/04/18 19:11:39 adam Exp $
+# $NetBSD: Makefile,v 1.60 2022/11/23 16:20:39 adam Exp $
 
 DISTNAME=	kremotecontrol-16.12.0
-PKGREVISION=	25
+PKGREVISION=	26
 CATEGORIES=	misc
 COMMENT=	KDE frontend for your remote controls
 MASTER_SITES=	${MASTER_SITE_KDE:=applications/16.12.0/src/}
