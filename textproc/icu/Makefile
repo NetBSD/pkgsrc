@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.142 2022/04/19 15:54:34 adam Exp $
+# $NetBSD: Makefile,v 1.143 2022/11/23 10:42:50 adam Exp $
 
-DISTNAME=	icu4c-71_1-src
+DISTNAME=	icu4c-72_1-src
 PKGNAME=	${DISTNAME:S/4c//:S/-src//:S/_/./g}
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=unicode-org/}
 EXTRACT_SUFX=	.tgz
 GITHUB_PROJECT=	icu
-GITHUB_RELEASE=	release-71-1
+GITHUB_RELEASE=	release-72-1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://icu.unicode.org/
@@ -49,13 +49,13 @@ BUILDLINK_TRANSFORM+=	rm:-D__STDC__=0
 .  endif
 BUILDLINK_TRANSFORM+=	rm:-ansi
 .elif !empty(MACHINE_PLATFORM:MLinux-*-alpha)
-.  if !empty(CC_VERSION:Mgcc*)
+.  if ${CC_VERSION:Mgcc*}
 PLIST_SUBST+=		MH_NAME=mh-alpha-linux-gcc
 .  else
 PLIST_SUBST+=		MH_NAME=mh-alpha-linux-cc
 .  endif
 .elif !empty(MACHINE_PLATFORM:MLinux-*-powerpc*)
-.  if !empty(CC_VERSION:Mgcc*)
+.  if ${CC_VERSION:Mgcc*}
 PLIST_SUBST+=		MH_NAME=mh-linux
 .  else
 PLIST_SUBST+=		MH_NAME=mh-linux-va
@@ -64,16 +64,16 @@ PLIST_SUBST+=		MH_NAME=mh-linux-va
 PLIST_SUBST+=		MH_NAME=mh-linux
 .elif ${OPSYS} == "Cygwin"
 PLIST_SUBST+=		MH_NAME=mh-cygwin
-.elif !empty(OPSYS:M*BSD*) || ${OPSYS} == "DragonFly" || ${OPSYS} == "Bitrig"
+.elif ${OPSYS:M*BSD*} || ${OPSYS} == "DragonFly"
 PLIST_SUBST+=		MH_NAME=mh-bsd-gcc
 .elif ${OPSYS} == "AIX"
-.  if !empty(CC_VERSION:Mgcc*)
+.  if ${CC_VERSION:Mgcc*}
 PLIST_SUBST+=		MH_NAME=mh-aix-gcc
 .  else
 PLIST_SUBST+=		MH_NAME=mh-aix-va
 .  endif
 .elif ${OPSYS} == "HPUX"
-.  if !empty(CC_VERSION:Mgcc*)
+.  if ${CC_VERSION:Mgcc*}
 PLIST_SUBST+=		MH_NAME=mh-hpux-gcc
 .  else
 PLIST_SUBST+=		MH_NAME=mh-hpux-acc
