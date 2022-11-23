@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5637 2022/11/23 14:04:47 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5638 2022/11/23 18:00:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8542,3 +8542,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-faker to 15.3.3 [adam 2022-11-23]
 	Updated x11/gtk4 to 4.8.2 [adam 2022-11-23]
 	Updated devel/py-bitarray to 2.6.0 [adam 2022-11-23]
+	Updated devel/py-setuptools to 65.6.1 [adam 2022-11-23]
+	Updated devel/py-types-setuptools to 65.6.0.1 [adam 2022-11-23]
