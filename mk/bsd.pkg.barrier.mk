@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.barrier.mk,v 1.21 2020/03/23 00:33:48 riastradh Exp $
+# $NetBSD: bsd.pkg.barrier.mk,v 1.22 2022/11/23 13:30:38 jperkin Exp $
 
 _COOKIE.barrier=	${WRKDIR}/.barrier_cookie
 
@@ -89,5 +89,6 @@ barrier: ${_BARRIER_PRE_TARGETS} ${_COOKIE.barrier}
 ### barrier-cookie creates the "barrier" cookie file.
 ###
 ${_COOKIE.barrier}:
-	${RUN}${MKDIR} ${.TARGET:H}
-	${RUN}${ECHO} ${PKGNAME} > ${.TARGET}
+	${RUN}								\
+	${TEST} -d ${.TARGET:H} || ${MKDIR} ${.TARGET:H};		\
+	${ECHO} ${PKGNAME} > ${.TARGET}
