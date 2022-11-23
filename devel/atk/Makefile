@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.106 2021/12/08 16:01:50 adam Exp $
+# $NetBSD: Makefile,v 1.107 2022/11/23 10:59:11 adam Exp $
 
-DISTNAME=	atk-2.36.0
-PKGREVISION=	1
+DISTNAME=	atk-2.38.0
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/atk/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -13,6 +12,7 @@ LICENSE=	gnu-lgpl-v2
 
 USE_LANGUAGES=	c99
 USE_TOOLS+=	pkg-config msgfmt
+MESON_REQD+=	0.56.2
 
 PKGCONFIG_OVERRIDE=		output/meson-private/atk.pc
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
