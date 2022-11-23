@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.43 2022/10/27 08:07:13 nros Exp $
+@comment $NetBSD: PLIST,v 1.44 2022/11/23 22:33:29 adam Exp $
 bin/pa-info
 bin/pacat
 bin/pacmd
@@ -46,15 +46,15 @@ include/pulse/volume.h
 include/pulse/xmalloc.h
 lib/cmake/PulseAudio/PulseAudioConfig.cmake
 lib/cmake/PulseAudio/PulseAudioConfigVersion.cmake
-lib/libpulse-mainloop-glib.${SOEXT}
-lib/libpulse-mainloop-glib.${SOEXT}.0
-lib/libpulse-mainloop-glib.${SOEXT}.0.0.6
-lib/libpulse-simple.${SOEXT}
-lib/libpulse-simple.${SOEXT}.0
-lib/libpulse-simple.${SOEXT}.0.1.1
-lib/libpulse.${SOEXT}
-lib/libpulse.${SOEXT}.0
-lib/libpulse.${SOEXT}.0.24.2
+lib/libpulse-mainloop-glib.so
+lib/libpulse-mainloop-glib.so.0
+lib/libpulse-mainloop-glib.so.0.0.6
+lib/libpulse-simple.so
+lib/libpulse-simple.so.0
+lib/libpulse-simple.so.0.1.1
+lib/libpulse.so
+lib/libpulse.so.0
+lib/libpulse.so.0.24.2
 lib/pkgconfig/libpulse-mainloop-glib.pc
 lib/pkgconfig/libpulse-simple.pc
 lib/pkgconfig/libpulse.pc
