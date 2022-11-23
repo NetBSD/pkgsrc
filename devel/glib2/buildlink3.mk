@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.32 2021/12/08 16:01:52 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.33 2022/11/23 10:41:41 adam Exp $
 
 BUILDLINK_TREE+=	glib2
 
@@ -16,9 +16,9 @@ TOOL_DEPENDS+=	glib2-tools-[0-9]*:../../devel/glib2-tools
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/pcre/buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
+.include "../../devel/pcre2/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .endif # GLIB2_BUILDLINK3_MK
 

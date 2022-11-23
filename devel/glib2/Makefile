@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.290 2022/08/09 12:08:28 jperkin Exp $
+# $NetBSD: Makefile,v 1.291 2022/11/23 10:41:41 adam Exp $
 
 .include "Makefile.common"
 
@@ -24,7 +24,7 @@ LDFLAGS.SunOS+=		-lnsl -lsocket
 LDFLAGS.FreeBSD+=	-liconv
 
 .include "../../mk/bsd.prefs.mk"
-.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+.if ${USE_CROSS_COMPILE:U:tl} == yes
 MESON_CROSS_ARCH_VARS+=			growing_stack
 MESON_CROSS_OPSYS_VARS+=		have_c99_snprintf
 MESON_CROSS_OPSYS_VARS+=		have_c99_vsnprintf
@@ -85,9 +85,9 @@ post-extract:
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/pcre/buildlink3.mk"
-.include "../../devel/meson/build.mk"
 .include "../../devel/libffi/buildlink3.mk"
+.include "../../devel/meson/build.mk"
+.include "../../devel/pcre2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/tool.mk"
