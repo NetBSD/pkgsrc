@@ -1,4 +1,4 @@
-# $NetBSD: unprivileged.mk,v 1.23 2019/09/02 02:23:02 rillig Exp $
+# $NetBSD: unprivileged.mk,v 1.24 2022/11/23 11:59:38 jperkin Exp $
 #
 # This file collects definitions that are useful when using pkgsrc as an
 # unprivileged (non-root) user. It is included automatically by the
@@ -127,12 +127,15 @@ _UNPRIVILEGED+=		user-destdir
 # Guess which user/group has to be used.
 .  if !defined(UNPRIVILEGED_USER) || empty(UNPRIVILEGED_USER)
 UNPRIVILEGED_USER!=	${ID} -n -u
+MAKEFLAGS+=		UNPRIVILEGED_USER=${UNPRIVILEGED_USER:Q}
 .  endif
 .  if !defined(UNPRIVILEGED_GROUP) || empty(UNPRIVILEGED_GROUP)
 UNPRIVILEGED_GROUP!=	${ID} -n -g
+MAKEFLAGS+=		UNPRIVILEGED_GROUP=${UNPRIVILEGED_GROUP:Q}
 .  endif
 .  if !defined(UNPRIVILEGED_GROUPS) || empty(UNPRIVILEGED_GROUPS)
 UNPRIVILEGED_GROUPS!=	${ID} -n -G
+MAKEFLAGS+=		UNPRIVILEGED_GROUPS=${UNPRIVILEGED_GROUPS:Q}
 .  endif
 
 .  if empty(_UNPRIVILEGED:Munprivileged) && !empty(_UNPRIVILEGED:Muser-destdir)
