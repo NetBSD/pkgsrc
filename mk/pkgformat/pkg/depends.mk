@@ -1,4 +1,4 @@
-# $NetBSD: depends.mk,v 1.15 2022/03/28 10:49:12 tnn Exp $
+# $NetBSD: depends.mk,v 1.16 2022/11/23 11:17:51 jperkin Exp $
 
 # This command prints out the dependency patterns for all full (run-time)
 # dependencies of the package.
@@ -109,11 +109,10 @@ _DEPENDS_INSTALL_CMD=							\
 	esac;								\
 	case $$type in							\
 	bootstrap|tool)							\
-		if expr "${USE_CROSS_COMPILE:Uno}" : '[yY][eE][sS]' >/dev/null; then \
-			extradep="";					\
-		else							\
-			extradep=" ${PKGNAME}";				\
-		fi;							\
+		case "${USE_CROSS_COMPILE:Uno:tl}" in			\
+		yes) extradep="" ;;					\
+		*) extradep=" ${PKGNAME}" ;;				\
+		esac;							\
 		cross=no;						\
 		archopt=TARGET_ARCH=${MACHINE_ARCH};			\
 		pkg=`${_HOST_PKG_BEST_EXISTS} "$$pattern" || ${TRUE}`;	\
@@ -176,8 +175,9 @@ _DEPENDS_INSTALL_CMD=							\
 	esac
 
 ${_DEPENDS_FILE}:
-	${RUN} ${MKDIR} ${.TARGET:H}
-	${RUN} ${_LIST_DEPENDS_CMD} > ${.TARGET} || (${RM} -f ${.TARGET} && ${FALSE})
+	${RUN}								\
+	${TEST} -d ${.TARGET:H} || ${MKDIR} ${.TARGET:H};		\
+	${_LIST_DEPENDS_CMD} > ${.TARGET} || (${RM} -f ${.TARGET} && ${FALSE})
 
 ${_RDEPENDS_FILE}: ${_DEPENDS_FILE}
 	${RUN} ${_RESOLVE_DEPENDS_CMD} > ${.TARGET} || (${RM} -f ${.TARGET} && ${FALSE})
@@ -195,11 +195,10 @@ _pkgformat-install-dependencies: .PHONY ${_DEPENDS_FILE}
 	${RUN}								\
 	${TEST} -n "${PKG_DBDIR_ERROR}" && ${ERROR_MSG} ${PKG_DBDIR_ERROR:Q} && exit 1; \
 	exec 3<&0;							\
-	${CAT} ${_DEPENDS_FILE} | 					\
 	while read type pattern dir; do					\
 		${TEST} "$$type" != "bootstrap" || continue;		\
 		${_DEPENDS_INSTALL_CMD} 0<&3;				\
-	done
+	done < ${_DEPENDS_FILE}
 
 # _pkgformat-post-install-dependencies:
 #	Targets after installing all dependencies.
