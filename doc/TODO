@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22363 2022/11/22 12:55:03 adam Exp $
+$NetBSD: TODO,v 1.22364 2022/11/23 23:09:47 gutteridge Exp $
 
 Suggested new packages
 ======================
@@ -582,6 +582,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o desklaunch-1.1.7
 	o deskmenu-1.4.5
 	o diction-1.14
+	o diffuse-0.7.7
 	o digikam-7.6
 	o dikt-2s1
 	o direvent-5.2
