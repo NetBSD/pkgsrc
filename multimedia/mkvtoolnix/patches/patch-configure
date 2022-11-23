@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.3 2022/11/23 20:34:30 adam Exp $
+
+Fix configuring without po4a.
+
+--- configure.orig	2022-11-23 20:15:43.899410199 +0000
++++ configure
+@@ -11842,7 +11842,7 @@ PO4A_FLAGS="-k $TRANSLATE_PERCENT"
+ 
+ 
+ # Check whether --with-po4a was given.
+-if test ${with_po4a+y}
++if test "x$with_po4a" != "xno"
+ then :
+   withval=$with_po4a;  PO4A="$with_po4a"
+ fi

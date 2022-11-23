@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.204 2022/11/23 16:20:46 adam Exp $
+# $NetBSD: Makefile,v 1.205 2022/11/23 20:34:30 adam Exp $
 
 DISTNAME=	mkvtoolnix-72.0.0
 PKGREVISION=	1
@@ -41,9 +41,9 @@ INSTALL_ENV+=	SHELL=${SH:Q}
 .include "../../mk/bsd.prefs.mk"
 
 pre-build:
-	cd ${WRKSRC} && ${RM} src/common/*/windows.cpp
+	cd ${WRKSRC} && ${RM} -f src/common/*/windows.cpp
 .if ${OPSYS} != "Darwin"
-	cd ${WRKSRC} && ${RM} src/common/*/macos.cpp
+	cd ${WRKSRC} && ${RM} -f src/common/*/macos.cpp
 .endif
 
 do-build:
