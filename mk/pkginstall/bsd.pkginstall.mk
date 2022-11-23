@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.76 2022/05/14 21:48:51 dholland Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.77 2022/11/23 11:32:47 jperkin Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
@@ -279,17 +279,15 @@ _PKG_USERS+=	${_entry_}:${PKG_UID.${e}}:${PKG_GECOS.${e}:Q}:${PKG_HOME.${e}:Q}:$
 .endfor
 
 ${_INSTALL_USERGROUP_DATAFILE}:
-	${RUN}${MKDIR} ${.TARGET:H}
 	${RUN}								\
-	set -- dummy ${_PKG_GROUPS:C/\:*$//}; shift;			\
+	${TEST} -d ${.TARGET:H} || ${MKDIR} ${.TARGET:H};		\
 	exec 1>>${.TARGET};						\
+	set -- dummy ${_PKG_GROUPS:C/\:*$//}; shift;			\
 	while ${TEST} $$# -gt 0; do					\
 		i="$$1"; shift;						\
 		${ECHO} "# GROUP: $$i";					\
-	done
-	${RUN}								\
+	done;								\
 	set -- dummy ${_PKG_USERS:C/\:*$//}; shift;			\
-	exec 1>>${.TARGET};						\
 	while ${TEST} $$# -gt 0; do					\
 		i="$$1"; shift;						\
 		${ECHO} "# USER: $$i";					\
@@ -299,13 +297,13 @@ ${_INSTALL_USERGROUP_FILE}: ${_INSTALL_USERGROUP_DATAFILE}
 ${_INSTALL_USERGROUP_FILE}:						\
 		../../mk/pkginstall/usergroup				\
 		${INSTALL_USERGROUPFUNCS_FILE}
-	${RUN}${MKDIR} ${.TARGET:H}
 	${RUN}								\
-	${SED}	-e "/^# platform-specific adduser\/addgroup functions/r${_INSTALL_USERGROUPFUNCS_FILE}" ../../mk/pkginstall/usergroup |			\
-	${SED} ${FILES_SUBST_SED} > ${.TARGET}
-	${RUN}								\
-	if ${_ZERO_FILESIZE_P} ${_INSTALL_USERGROUP_DATAFILE}; then	\
-		${RM} -f ${.TARGET};					\
+	${TEST} -d ${.TARGET:H} || ${MKDIR} ${.TARGET:H};		\
+	if [ -s ${_INSTALL_USERGROUP_DATAFILE} ]; then			\
+		${SED} -e "/^# platform-specific adduser\/addgroup functions/r${_INSTALL_USERGROUPFUNCS_FILE}" \
+		    ../../mk/pkginstall/usergroup |			\
+			${SED} ${FILES_SUBST_SED} > ${.TARGET};		\
+	else								\
 		${TOUCH} ${TOUCH_ARGS} ${.TARGET};			\
 	fi
 
@@ -314,8 +312,8 @@ _INSTALL_USERGROUP_UNPACKER=	${_PKGINSTALL_DIR}/usergroup-unpack
 ${_INSTALL_USERGROUP_UNPACKER}:						\
 		${_INSTALL_USERGROUP_FILE}				\
 		${_INSTALL_USERGROUP_DATAFILE}
-	${RUN}${MKDIR} ${.TARGET:H}
 	${RUN}								\
+	${TEST} -d ${.TARGET:H} || ${MKDIR} ${.TARGET:H};		\
 	exec 1>${.TARGET};						\
 	${ECHO} "#!${SH}";						\
 	${ECHO} "";							\
@@ -326,9 +324,8 @@ ${_INSTALL_USERGROUP_UNPACKER}:						\
 	${ECHO} "SELF=\$$0";						\
 	${ECHO} "STAGE=UNPACK";						\
 	${ECHO} "";							\
-	${CAT}	${_INSTALL_USERGROUP_FILE}				\
-		${_INSTALL_USERGROUP_DATAFILE}
-	${RUN}${CHMOD} +x ${.TARGET}
+	${CAT} ${_INSTALL_USERGROUP_FILE} ${_INSTALL_USERGROUP_DATAFILE}; \
+	${CHMOD} +x ${.TARGET}
 
 .if defined(USERGROUP_PHASE)
 .  if !empty(USERGROUP_PHASE:M*configure)
@@ -422,8 +419,9 @@ _INSTALL_UNPACK_TMPL+=		${_INSTALL_PERMS_FILE}
 _INSTALL_DATA_TMPL+=		${_INSTALL_PERMS_DATAFILE}
 
 ${_INSTALL_PERMS_DATAFILE}:
-	${RUN}${MKDIR} ${.TARGET:H}
-	${RUN}${_PKGINSTALL_FUNCS_SH};					\
+	${RUN}								\
+	${TEST} -d ${.TARGET:H} || ${MKDIR} ${.TARGET:H};		\
+	${_PKGINSTALL_FUNCS_SH};					\
 	set -- dummy ${SPECIAL_PERMS}; shift;				\
 	exec 1>>${.TARGET};						\
 	while ${TEST} $$# -gt 0; do					\
@@ -435,12 +433,12 @@ ${_INSTALL_PERMS_DATAFILE}:
 
 ${_INSTALL_PERMS_FILE}: ${_INSTALL_PERMS_DATAFILE}
 ${_INSTALL_PERMS_FILE}: ../../mk/pkginstall/perms
-	${RUN}${MKDIR} ${.TARGET:H}
 	${RUN}								\
-	${SED} ${FILES_SUBST_SED} ../../mk/pkginstall/perms > ${.TARGET}
-	${RUN}								\
-	if ${_ZERO_FILESIZE_P} ${_INSTALL_PERMS_DATAFILE}; then		\
-		${RM} -f ${.TARGET};					\
+	${TEST} -d ${.TARGET:H} || ${MKDIR} ${.TARGET:H};		\
+	if [ -s ${_INSTALL_PERMS_DATAFILE} ]; then			\
+		${SED} ${FILES_SUBST_SED} ../../mk/pkginstall/perms	\
+			> ${.TARGET};					\
+	else								\
 		${TOUCH} ${TOUCH_ARGS} ${.TARGET};			\
 	fi
 
@@ -544,19 +542,18 @@ _pkginstall-postinstall-check: .PHONY
 	done
 
 ${_INSTALL_FILES_DATAFILE}:
-	${RUN}${MKDIR} ${.TARGET:H}
-	${RUN}${_PKGINSTALL_FUNCS_SH};					\
-	set -- dummy ${_INSTALL_RCD_SCRIPTS}; shift;			\
+	${RUN}								\
+	${TEST} -d ${.TARGET:H} || ${MKDIR} ${.TARGET:H};		\
+	${_PKGINSTALL_FUNCS_SH};					\
 	exec 1>>${.TARGET};						\
+	set -- dummy ${_INSTALL_RCD_SCRIPTS}; shift;			\
 	while ${TEST} $$# -gt 0; do					\
 		script="$$1"; shift;					\
 		file="${RCD_SCRIPTS_DIR:S/^${PREFIX}\///}/$$script";	\
 		egfile="${RCD_SCRIPTS_EXAMPLEDIR}/$$script";		\
 		${ECHO} "# FILE: $$file cr $$egfile ${RCD_SCRIPTS_MODE}"; \
-	done
-	${RUN}${_PKGINSTALL_FUNCS_SH};					\
+	done;								\
 	set -- dummy ${CONF_FILES}; shift;				\
-	exec 1>>${.TARGET};						\
 	while ${TEST} $$# -gt 0; do					\
 		egfile="$$1"; file="$$2";				\
 		shift; shift;						\
@@ -565,20 +562,16 @@ ${_INSTALL_FILES_DATAFILE}:
 		file=`strip_prefix "$$file"`;				\
 		file=`shquote_backslash "$$file"`;			\
 		${ECHO} "# FILE: $$file c $$egfile ${CONF_FILES_MODE}"; \
-	done
-	${RUN}${_PKGINSTALL_FUNCS_SH};					\
+	done;								\
 	set -- dummy ${REQD_FILES}; shift;				\
-	exec 1>>${.TARGET};						\
 	while ${TEST} $$# -gt 0; do					\
 		egfile="$$1"; file="$$2";				\
 		shift; shift;						\
 		egfile=`strip_prefix "$$egfile"`;			\
 		file=`strip_prefix "$$file"`;				\
 		${ECHO} "# FILE: $$file cf $$egfile ${REQD_FILES_MODE}"; \
-	done
-	${RUN}${_PKGINSTALL_FUNCS_SH};					\
+	done;								\
 	set -- dummy ${CONF_FILES_PERMS}; shift;			\
-	exec 1>>${.TARGET};						\
 	while ${TEST} $$# -gt 0; do					\
 		egfile="$$1"; file="$$2";				\
 		owner="$$3"; group="$$4"; mode="$$5";			\
@@ -586,10 +579,8 @@ ${_INSTALL_FILES_DATAFILE}:
 		egfile=`strip_prefix "$$egfile"`;			\
 		file=`strip_prefix "$$file"`;				\
 		${ECHO} "# FILE: $$file c $$egfile $$mode $$owner $$group"; \
-	done
-	${RUN}${_PKGINSTALL_FUNCS_SH};					\
+	done;								\
 	set -- dummy ${REQD_FILES_PERMS}; shift;			\
-	exec 1>>${.TARGET};						\
 	while ${TEST} $$# -gt 0; do					\
 		egfile="$$1"; file="$$2";				\
 		owner="$$3"; group="$$4"; mode="$$5";			\
@@ -601,12 +592,12 @@ ${_INSTALL_FILES_DATAFILE}:
 
 ${_INSTALL_FILES_FILE}: ${_INSTALL_FILES_DATAFILE}
 ${_INSTALL_FILES_FILE}: ../../mk/pkginstall/files
-	${RUN}${MKDIR} ${.TARGET:H}
 	${RUN}								\
-	${SED} ${FILES_SUBST_SED} ../../mk/pkginstall/files > ${.TARGET}
-	${RUN}								\
-	if ${_ZERO_FILESIZE_P} ${_INSTALL_FILES_DATAFILE}; then		\
-		${RM} -f ${.TARGET};					\
+	${TEST} -d ${.TARGET:H} || ${MKDIR} ${.TARGET:H};		\
+	if [ -s ${_INSTALL_FILES_DATAFILE} ]; then			\
+		${SED} ${FILES_SUBST_SED} ../../mk/pkginstall/files	\
+			> ${.TARGET};					\
+	else								\
 		${TOUCH} ${TOUCH_ARGS} ${.TARGET};			\
 	fi
 
@@ -649,8 +640,9 @@ _INSTALL_UNPACK_TMPL+=	${_INSTALL_DIRS_FILE}
 _INSTALL_DATA_TMPL+=	${_INSTALL_DIRS_DATAFILE}
 
 ${_INSTALL_DIRS_DATAFILE}:
-	${RUN}${MKDIR} ${.TARGET:H}
-	${RUN}${_PKGINSTALL_FUNCS_SH};					\
+	${RUN}								\
+	${TEST} -d ${.TARGET:H} || ${MKDIR} ${.TARGET:H};		\
+	${_PKGINSTALL_FUNCS_SH};					\
 	exec 1>>${.TARGET};						\
 	case ${PKG_SYSCONFSUBDIR:M*:Q}${CONF_FILES:M*:Q}${CONF_FILES_PERMS:M*:Q}"" in \
 	"")	;;							\
@@ -667,58 +659,44 @@ ${_INSTALL_DIRS_DATAFILE}:
 			;;						\
 		esac;							\
 		;;							\
-	esac
-	${RUN}								\
-	exec 1>>${.TARGET};						\
+	esac;								\
 	case ${_INSTALL_RCD_SCRIPTS:M*:Q}"" in				\
 	"")	;;							\
 	*)	${ECHO} "# DIR: ${RCD_SCRIPTS_DIR:S/${PREFIX}\///} m" ;; \
-	esac
-	${RUN}${_PKGINSTALL_FUNCS_SH};					\
+	esac;								\
 	set -- dummy ${MAKE_DIRS}; shift;				\
-	exec 1>>${.TARGET};						\
 	while ${TEST} $$# -gt 0; do					\
 		dir="$$1"; shift;					\
 		dir=`strip_prefix "$$dir"`;				\
 		${ECHO} "# DIR: $$dir m";				\
-	done
-	${RUN}${_PKGINSTALL_FUNCS_SH};					\
+	done;								\
 	set -- dummy ${REQD_DIRS}; shift;				\
-	exec 1>>${.TARGET};						\
 	while ${TEST} $$# -gt 0; do					\
 		dir="$$1"; shift;					\
 		dir=`strip_prefix "$$dir"`;				\
 		${ECHO} "# DIR: $$dir fm";				\
-	done
-	${RUN}${_PKGINSTALL_FUNCS_SH};					\
+	done;								\
 	set -- dummy ${OWN_DIRS}; shift;				\
-	exec 1>>${.TARGET};						\
 	while ${TEST} $$# -gt 0; do					\
 		dir="$$1"; shift;					\
 		dir=`strip_prefix "$$dir"`;				\
 		${ECHO} "# DIR: $$dir mo";				\
-	done
-	${RUN}${_PKGINSTALL_FUNCS_SH};					\
+	done;								\
 	set -- dummy ${MAKE_DIRS_PERMS}; shift;				\
-	exec 1>>${.TARGET};						\
 	while ${TEST} $$# -gt 0; do					\
 		dir="$$1"; owner="$$2"; group="$$3"; mode="$$4";	\
 		shift; shift; shift; shift;				\
 		dir=`strip_prefix "$$dir"`;				\
 		${ECHO} "# DIR: $$dir m $$mode $$owner $$group";	\
-	done
-	${RUN}${_PKGINSTALL_FUNCS_SH};					\
+	done;								\
 	set -- dummy ${REQD_DIRS_PERMS}; shift;				\
-	exec 1>>${.TARGET};						\
 	while ${TEST} $$# -gt 0; do					\
 		dir="$$1"; owner="$$2"; group="$$3"; mode="$$4";	\
 		shift; shift; shift; shift;				\
 		dir=`strip_prefix "$$dir"`;				\
 		${ECHO} "# DIR: $$dir fm $$mode $$owner $$group";	\
-	done
-	${RUN}${_PKGINSTALL_FUNCS_SH};					\
+	done;								\
 	set -- dummy ${OWN_DIRS_PERMS}; shift;				\
-	exec 1>>${.TARGET};						\
 	while ${TEST} $$# -gt 0; do					\
 		dir="$$1"; owner="$$2"; group="$$3"; mode="$$4";	\
 		shift; shift; shift; shift;				\
@@ -728,12 +706,12 @@ ${_INSTALL_DIRS_DATAFILE}:
 
 ${_INSTALL_DIRS_FILE}: ${_INSTALL_DIRS_DATAFILE}
 ${_INSTALL_DIRS_FILE}: ../../mk/pkginstall/dirs
-	${RUN}${MKDIR} ${.TARGET:H}
 	${RUN}								\
-	${SED} ${FILES_SUBST_SED} ../../mk/pkginstall/dirs > ${.TARGET}
-	${RUN}								\
-	if ${_ZERO_FILESIZE_P} ${_INSTALL_DIRS_DATAFILE}; then		\
-		${RM} -f ${.TARGET};					\
+	${TEST} -d ${.TARGET:H} || ${MKDIR} ${.TARGET:H};		\
+	if [ -s ${_INSTALL_DIRS_DATAFILE} ]; then			\
+		${SED} ${FILES_SUBST_SED} ../../mk/pkginstall/dirs	\
+			> ${.TARGET};					\
+	else								\
 		${TOUCH} ${TOUCH_ARGS} ${.TARGET};			\
 	fi
 
@@ -756,18 +734,18 @@ FILES_SUBST+=	INSTALL_INFO=${INSTALL_INFO:Q}
 .endif
 
 ${_INSTALL_INFO_FILES_DATAFILE}:
-	${RUN}${MKDIR} ${.TARGET:H}
-	${RUN}${RM} -f ${.TARGET}
-	${RUN}${TOUCH} ${TOUCH_ARGS} ${.TARGET}
+	${RUN}								\
+	${TEST} -d ${.TARGET:H} || ${MKDIR} ${.TARGET:H};		\
+	${TOUCH} ${TOUCH_ARGS} ${.TARGET}
 
 ${_INSTALL_INFO_FILES_FILE}: ${_INSTALL_INFO_FILES_DATAFILE}
 ${_INSTALL_INFO_FILES_FILE}: ../../mk/pkginstall/info-files
-	${RUN}${MKDIR} ${.TARGET:H}
 	${RUN}								\
+	${TEST} -d ${.TARGET:H} || ${MKDIR} ${.TARGET:H};		\
 	${SED} ${FILES_SUBST_SED} ../../mk/pkginstall/info-files > ${.TARGET}
 .if !defined(INFO_FILES)
 	${RUN}								\
-	if ${_ZERO_FILESIZE_P} ${_INSTALL_INFO_FILES_DATAFILE}; then	\
+	if [ ! -s ${_INSTALL_INFO_FILES_DATAFILE} ]; then		\
 		${RM} -f ${.TARGET};					\
 		${TOUCH} ${TOUCH_ARGS} ${.TARGET};			\
 	fi
@@ -801,7 +779,7 @@ _INSTALL_OFR_FILE=	${_PKGINSTALL_DIR}/ocaml-findlib-register
 _INSTALL_UNPACK_TMPL+=		${_INSTALL_OFR_FILE}
 
 ${_INSTALL_OFR_FILE}: ../../mk/pkginstall/ocaml-findlib-register
-	${RUN}${MKDIR} ${.TARGET:H}
+	${RUN} ${TEST} -d ${.TARGET:H} || ${MKDIR} ${.TARGET:H}
 .if !empty(OCAML_FINDLIB_REGISTER:M[Yy][Ee][Ss])
 	${RUN}${SED} ${FILES_SUBST_SED} \
 		../../mk/pkginstall/ocaml-findlib-register > ${.TARGET}
@@ -832,8 +810,9 @@ _INSTALL_UNPACK_TMPL+=		${_INSTALL_SHELL_FILE}
 _INSTALL_DATA_TMPL+=		${_INSTALL_SHELL_DATAFILE}
 
 ${_INSTALL_SHELL_DATAFILE}:
-	${RUN}${MKDIR} ${.TARGET:H}
-	${RUN}${_PKGINSTALL_FUNCS_SH};					\
+	${RUN}								\
+	${TEST} -d ${.TARGET:H} || ${MKDIR} ${.TARGET:H};		\
+	${_PKGINSTALL_FUNCS_SH};					\
 	set -- dummy ${PKG_SHELL}; shift;				\
 	exec 1>>${.TARGET};						\
 	while ${TEST} $$# -gt 0; do					\
@@ -844,12 +823,12 @@ ${_INSTALL_SHELL_DATAFILE}:
 
 ${_INSTALL_SHELL_FILE}: ${_INSTALL_SHELL_DATAFILE}
 ${_INSTALL_SHELL_FILE}: ../../mk/pkginstall/shell
-	${RUN}${MKDIR} ${.TARGET:H}
 	${RUN}								\
-	${SED} ${FILES_SUBST_SED} ../../mk/pkginstall/shell > ${.TARGET}
-	${RUN}								\
-	if ${_ZERO_FILESIZE_P} ${_INSTALL_SHELL_DATAFILE}; then		\
-		${RM} -f ${.TARGET};					\
+	${TEST} -d ${.TARGET:H} || ${MKDIR} ${.TARGET:H};		\
+	if [ -s ${_INSTALL_SHELL_DATAFILE} ]; then			\
+		${SED} ${FILES_SUBST_SED} ../../mk/pkginstall/shell	\
+			> ${.TARGET};					\
+	else								\
 		${TOUCH} ${TOUCH_ARGS} ${.TARGET};			\
 	fi
 
@@ -879,8 +858,8 @@ _INSTALL_UNPACK_TMPL+=		${_INSTALL_SHLIBS_FILE}
 .endif
 
 ${_INSTALL_SHLIBS_FILE}: ../../mk/pkginstall/shlibs
-	${RUN}${MKDIR} ${.TARGET:H}
 	${RUN}								\
+	${TEST} -d ${.TARGET:H} || ${MKDIR} ${.TARGET:H};		\
 	${SED} ${FILES_SUBST_SED} ../../mk/pkginstall/shlibs > ${.TARGET}
 
 # FONTS_DIRS.<type> are lists of directories in which the font databases
@@ -938,26 +917,23 @@ DEPENDS+=		encodings-[0-9]*:../../fonts/encodings
 FILES_SUBST+=		X11_ENCODINGSDIR=${X11_ENCODINGSDIR:Q}
 
 ${_INSTALL_FONTS_DATAFILE}:
-	${RUN}${MKDIR} ${.TARGET:H}
-	${RUN}${_PKGINSTALL_FUNCS_SH};					\
+	${RUN}								\
+	${TEST} -d ${.TARGET:H} || ${MKDIR} ${.TARGET:H};		\
+	${_PKGINSTALL_FUNCS_SH};					\
 	set -- dummy ${FONTS_DIRS.ttf}; shift;				\
 	exec 1>>${.TARGET};						\
 	while ${TEST} $$# -gt 0; do					\
 		dir="$$1"; shift;					\
 		dir=`strip_prefix "$$dir"`;				\
 		${ECHO} "# FONTS: $$dir ttf";				\
-	done
-	${RUN}${_PKGINSTALL_FUNCS_SH};					\
+	done;								\
 	set -- dummy ${FONTS_DIRS.type1}; shift;			\
-	exec 1>>${.TARGET};						\
 	while ${TEST} $$# -gt 0; do					\
 		dir="$$1"; shift;					\
 		dir=`strip_prefix "$$dir"`;				\
 		${ECHO} "# FONTS: $$dir type1";				\
-	done
-	${RUN}${_PKGINSTALL_FUNCS_SH};					\
+	done;								\
 	set -- dummy ${FONTS_DIRS.x11}; shift;				\
-	exec 1>>${.TARGET};						\
 	while ${TEST} $$# -gt 0; do					\
 		dir="$$1"; shift;					\
 		dir=`strip_prefix "$$dir"`;				\
@@ -966,12 +942,12 @@ ${_INSTALL_FONTS_DATAFILE}:
 
 ${_INSTALL_FONTS_FILE}: ${_INSTALL_FONTS_DATAFILE}
 ${_INSTALL_FONTS_FILE}: ../../mk/pkginstall/fonts
-	${RUN}${MKDIR} ${.TARGET:H}
 	${RUN}								\
-	${SED} ${FILES_SUBST_SED} ../../mk/pkginstall/fonts > ${.TARGET}
-	${RUN}								\
-	if ${_ZERO_FILESIZE_P} ${_INSTALL_FONTS_DATAFILE}; then		\
-		${RM} -f ${.TARGET};					\
+	${TEST} -d ${.TARGET:H} || ${MKDIR} ${.TARGET:H};		\
+	if [ -s ${_INSTALL_FONTS_DATAFILE} ]; then			\
+		${SED} ${FILES_SUBST_SED} ../../mk/pkginstall/fonts	\
+			> ${.TARGET};					\
+	else								\
 		${TOUCH} ${TOUCH_ARGS} ${.TARGET};			\
 	fi
 
@@ -995,9 +971,9 @@ FILES_SUBST+=		GTK3_UPDATE_ICON_CACHE=${LOCALBASE}/bin/gtk-update-icon-cache
 .endif
 
 ${_INSTALL_ICON_THEMES_DATAFILE}:
-	${RUN}${MKDIR} ${.TARGET:H}
-	${RUN}${RM} -f ${.TARGET}
-	${RUN}${TOUCH} ${TOUCH_ARGS} ${.TARGET}
+	${RUN}								\
+	${TEST} -d ${.TARGET:H} || ${MKDIR} ${.TARGET:H};		\
+	${TOUCH} ${TOUCH_ARGS} ${.TARGET}
 
 .if !empty(ICON_THEMES:M[Yy][Ee][Ss])
 .PHONY: install-script-data-icon-themes
@@ -1019,12 +995,12 @@ install-script-data-icon-themes:
 
 ${_INSTALL_ICON_THEMES_FILE}: ${_INSTALL_ICON_THEMES_DATAFILE}
 ${_INSTALL_ICON_THEMES_FILE}: ../../mk/pkginstall/icon-themes
-	${RUN}${MKDIR} ${.TARGET:H}
 	${RUN}								\
+	${TEST} -d ${.TARGET:H} || ${MKDIR} ${.TARGET:H};		\
 	${SED} ${FILES_SUBST_SED} ../../mk/pkginstall/icon-themes > ${.TARGET}
 .if empty(ICON_THEMES:M[Yy][Ee][Ss])
 	${RUN}								\
-	if ${_ZERO_FILESIZE_P} ${_INSTALL_ICON_THEMES_DATAFILE}; then	\
+	if [ ! -s ${_INSTALL_ICON_THEMES_DATAFILE} ]; then		\
 		${RM} -f ${.TARGET};					\
 		${TOUCH} ${TOUCH_ARGS} ${.TARGET};			\
 	fi
@@ -1155,16 +1131,15 @@ generate-install-scripts:						\
 		${_DEINSTALL_FILE} ${_INSTALL_FILE}			\
 		${_DEINSTALL_FILE_DFLT} ${_INSTALL_FILE_DFLT}
 .if !exists(${DEINSTALL_FILE}) || !exists(${INSTALL_FILE})
-	${RUN}${MKDIR} ${INSTALL_FILE:H}
-	${RUN}${MKDIR} ${DEINSTALL_FILE:H}
 	${RUN}								\
+	${TEST} -d ${INSTALL_FILE:H} || ${MKDIR} ${INSTALL_FILE:H};	\
+	${TEST} -d ${DEINSTALL_FILE:H} || ${MKDIR} ${DEINSTALL_FILE:H};	\
 	if ${CMP} -s ${_INSTALL_FILE_DFLT:Q} ${_INSTALL_FILE:Q}; then	\
 		${TRUE};						\
 	else								\
 		${CP} -f ${_INSTALL_FILE} ${INSTALL_FILE};		\
 		${CP} -f ${_DEINSTALL_FILE} ${DEINSTALL_FILE};		\
-	fi
-	${RUN}								\
+	fi;								\
 	if ${CMP} -s ${_DEINSTALL_FILE_DFLT:Q} ${_DEINSTALL_FILE:Q}; then \
 		${TRUE};						\
 	else								\
@@ -1173,36 +1148,38 @@ generate-install-scripts:						\
 .endif
 
 ${_DEINSTALL_FILE_DFLT}: ${_DEINSTALL_TEMPLATES_DFLT}
-	${RUN}${MKDIR} ${.TARGET:H}
-	${RUN}${CAT} ${.ALLSRC} | ${SED} ${FILES_SUBST_SED} > ${.TARGET}
-	${RUN}${CHMOD} +x ${.TARGET}
+	${RUN}								\
+	${TEST} -d ${.TARGET:H} || ${MKDIR} ${.TARGET:H};		\
+	${SED} ${FILES_SUBST_SED} ${.ALLSRC} > ${.TARGET};		\
+	${CHMOD} +x ${.TARGET}
 
 ${_INSTALL_FILE_DFLT}: ${_INSTALL_TEMPLATES_DFLT}
-	${RUN}${MKDIR} ${.TARGET:H}
-	${RUN}${CAT} ${.ALLSRC} | ${SED} ${FILES_SUBST_SED} > ${.TARGET}
-	${RUN}${CHMOD} +x ${.TARGET}
+	${RUN}								\
+	${TEST} -d ${.TARGET:H} || ${MKDIR} ${.TARGET:H};		\
+	${SED} ${FILES_SUBST_SED} ${.ALLSRC} > ${.TARGET};		\
+	${CHMOD} +x ${.TARGET}
 
 ${_DEINSTALL_FILE}: ${DEINSTALL_SRC}
-	${RUN}${MKDIR} ${.TARGET:H}
 	${RUN}								\
+	${TEST} -d ${.TARGET:H} || ${MKDIR} ${.TARGET:H};		\
 	exec 1>>${.TARGET};						\
 	case ${.ALLSRC:Q}"" in						\
 	"")	${ECHO} "#!${SH}" ;					\
 		${ECHO} "exit 0" ;;					\
-	*)	${CAT} ${.ALLSRC} | ${SED} ${FILES_SUBST_SED} ;;	\
-	esac
-	${RUN}${CHMOD} +x ${.TARGET}
+	*)	${SED} ${FILES_SUBST_SED} ${.ALLSRC} ;;			\
+	esac;								\
+	${CHMOD} +x ${.TARGET}
 
 ${_INSTALL_FILE}: ${INSTALL_SRC}
-	${RUN}${MKDIR} ${.TARGET:H}
 	${RUN}								\
+	${TEST} -d ${.TARGET:H} || ${MKDIR} ${.TARGET:H};		\
 	exec 1>>${.TARGET};						\
 	case ${.ALLSRC:Q}"" in						\
 	"")	${ECHO} "#!${SH}" ;					\
 		${ECHO} "exit 0" ;;					\
-	*)	${CAT} ${.ALLSRC} | ${SED} ${FILES_SUBST_SED} ;;	\
-	esac
-	${RUN}${CHMOD} +x ${.TARGET}
+	*)	${SED} ${FILES_SUBST_SED} ${.ALLSRC} ;;			\
+	esac;								\
+	${CHMOD} +x ${.TARGET}
 
 # rc.d scripts are automatically generated and installed into the rc.d
 # scripts example directory at the post-install step.  The following
@@ -1232,10 +1209,11 @@ RCD_SCRIPT_WRK.${_script_}?=	${WRKDIR}/.rc.d/${_script_}
 .  if !empty(RCD_SCRIPT_SRC.${_script_})
 generate-rcd-scripts: ${RCD_SCRIPT_WRK.${_script_}}
 ${RCD_SCRIPT_WRK.${_script_}}: ${RCD_SCRIPT_SRC.${_script_}}
-	@${STEP_MSG} "Creating ${.TARGET}"
-	${RUN}${MKDIR} ${.TARGET:H}
-	${RUN}${CAT} ${.ALLSRC} | ${SED} ${FILES_SUBST_SED} > ${.TARGET}
-	${RUN}${CHMOD} +x ${.TARGET}
+	${RUN}								\
+	${STEP_MSG} "Creating ${.TARGET}";				\
+	${TEST} -d ${.TARGET:H} || ${MKDIR} ${.TARGET:H};		\
+	${SED} ${FILES_SUBST_SED} ${.ALLSRC} > ${.TARGET};		\
+	${CHMOD} +x ${.TARGET}
 
 install-rcd-scripts: install-rcd-${_script_}
 install-rcd-${_script_}: ${RCD_SCRIPT_WRK.${_script_}}
