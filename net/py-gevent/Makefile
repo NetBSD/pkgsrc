@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2022/11/21 11:30:23 adam Exp $
+# $NetBSD: Makefile,v 1.21 2022/11/23 05:56:53 adam Exp $
 
 DISTNAME=	gevent-22.10.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -23,6 +23,8 @@ MAKE_ENV+=	GEVENTSETUP_EMBED_LIBUV=0
 CHECK_PORTABILITY_SKIP=	deps/libuv/autogen.sh
 
 USE_LANGUAGES=	c c++
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 # Explicitly disable inotify on SunOS, assumes Linux statfs.
 MAKE_ENV.SunOS+=	ac_cv_header_sys_inotify_h=no
