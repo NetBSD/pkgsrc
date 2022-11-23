@@ -1,4 +1,4 @@
-# $NetBSD: intltool.mk,v 1.9 2018/08/22 20:48:37 maya Exp $
+# $NetBSD: intltool.mk,v 1.10 2022/11/23 13:06:33 jperkin Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -52,7 +52,7 @@ TOOLS_CREATE+=		${_t_}
 TOOLS_PATH.${_t_}=	${LOCALBASE}/bin/${_t_}
 .    endfor
 .  endif
-.else
+.elif defined(GNU_CONFIGURE)
 .  for _t_ in ${_TOOLS.intltool}
 TOOLS_BROKEN+=		${_t_}
 TOOLS_PATH.${_t_}=	${TOOLS_CMD.${_t_}}
