@@ -1,4 +1,4 @@
-# $NetBSD: package.mk,v 1.17 2021/12/11 09:01:23 schmonz Exp $
+# $NetBSD: package.mk,v 1.18 2022/11/23 11:17:51 jperkin Exp $
 
 .if defined(PKG_SUFX)
 WARNINGS+=		"PKG_SUFX is deprecated, please use PKG_COMPRESSION"
@@ -41,19 +41,23 @@ _PKG_ARGS_PACKAGE+=	-u ${REAL_ROOT_USER} -g ${REAL_ROOT_GROUP}
 .endif
 
 ${STAGE_PKGFILE}: ${_CONTENTS_TARGETS}
-	@${STEP_MSG} "Creating binary package ${.TARGET}"
-	${RUN} ${MKDIR} ${.TARGET:H}; ${_ULIMIT_CMD}			\
+	${RUN}								\
+	${STEP_MSG} "Creating binary package ${.TARGET}";		\
+	${TEST} -d ${.TARGET:H} || ${MKDIR} ${.TARGET:H};		\
+	${_ULIMIT_CMD}							\
 	tmpname=${.TARGET:S,${PKG_SUFX}$,.tmp${PKG_SUFX},};		\
 	if ! ${PKG_CREATE} ${_PKG_ARGS_PACKAGE} "$$tmpname"; then	\
 		exitcode=$$?; ${RM} -f "$$tmpname"; exit $$exitcode;	\
 	fi
 .if !empty(SIGN_PACKAGES:U:Mgpg)
-	@${STEP_MSG} "Signing binary package ${.TARGET} (GPG)"
-	${RUN} tmpname=${.TARGET:S,${PKG_SUFX}$,.tmp${PKG_SUFX},};	\
+	${RUN}								\
+	${STEP_MSG} "Signing binary package ${.TARGET} (GPG)";		\
+	tmpname=${.TARGET:S,${PKG_SUFX}$,.tmp${PKG_SUFX},};		\
 	${PKG_ADMIN} gpg-sign-package "$$tmpname" ${.TARGET}
 .elif !empty(SIGN_PACKAGES:U:Mx509)
-	@${STEP_MSG} "Signing binary package ${.TARGET} (X509)"
-	${RUN} tmpname=${.TARGET:S,${PKG_SUFX}$,.tmp${PKG_SUFX},};	\
+	${RUN}								\
+	${STEP_MSG} "Signing binary package ${.TARGET} (X509)";		\
+	tmpname=${.TARGET:S,${PKG_SUFX}$,.tmp${PKG_SUFX},};		\
 	${PKG_ADMIN} x509-sign-package "$$tmpname" ${.TARGET}		\
 		${X509_KEY} ${X509_CERTIFICATE}
 .else
@@ -63,8 +67,9 @@ ${STAGE_PKGFILE}: ${_CONTENTS_TARGETS}
 
 .if ${PKGFILE} != ${STAGE_PKGFILE}
 ${PKGFILE}: ${STAGE_PKGFILE}
-	@${STEP_MSG} "Creating binary package ${.TARGET}"
-	${RUN} ${MKDIR} ${.TARGET:H};					\
+	${RUN}								\
+	${STEP_MSG} "Creating binary package ${.TARGET}";		\
+	${TEST} -d ${.TARGET:H} || ${MKDIR} ${.TARGET:H};		\
 	${LN} -f ${STAGE_PKGFILE} ${PKGFILE} 2>/dev/null ||		\
 		${CP} -pf ${STAGE_PKGFILE} ${PKGFILE} 2>/dev/null ||	\
 		${CP} -f ${STAGE_PKGFILE} ${PKGFILE}
