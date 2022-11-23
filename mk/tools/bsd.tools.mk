@@ -1,4 +1,4 @@
-# $NetBSD: bsd.tools.mk,v 1.64 2021/05/02 11:06:13 nia Exp $
+# $NetBSD: bsd.tools.mk,v 1.65 2022/11/23 13:30:38 jperkin Exp $
 #
 # Copyright (c) 2005, 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -111,9 +111,10 @@ tools-message:
 ###
 .PHONY: tools-cookie
 tools-cookie:
-	${RUN} ${TEST} ! -f ${_COOKIE.tools} || ${FALSE}
-	${RUN} ${MKDIR} ${_COOKIE.tools:H}
-	${RUN} ${ECHO} ${USE_TOOLS:Q} > ${_COOKIE.tools}
+	${RUN}								\
+	${TEST} ! -f ${_COOKIE.tools} || ${FALSE};			\
+	${TEST} -d ${_COOKIE.tools:H} || ${MKDIR} ${_COOKIE.tools:H};	\
+	${ECHO} ${USE_TOOLS:Q} > ${_COOKIE.tools}
 
 ######################################################################
 ### override-tools (PRIVATE)

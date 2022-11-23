@@ -1,4 +1,4 @@
-# $NetBSD: extract.mk,v 1.43 2022/01/06 10:19:11 schmonz Exp $
+# $NetBSD: extract.mk,v 1.44 2022/11/23 13:30:38 jperkin Exp $
 #
 # The following variables may be set by the package Makefile and
 # specify how extraction happens:
@@ -112,9 +112,9 @@ extract-message:
 
 .PHONY: extract-dir
 extract-dir:
-	${RUN}${MKDIR} ${EXTRACT_DIR}
+	@${MKDIR} ${EXTRACT_DIR}
 .for f in ${EXTRACT_ONLY}
-	${RUN}${MKDIR} ${EXTRACT_DIR.${f}}
+	@${MKDIR} ${EXTRACT_DIR.${f}}
 .endfor
 
 ######################################################################
@@ -126,10 +126,11 @@ extract-dir:
 .PHONY: extract-check-interactive
 extract-check-interactive:
 .if !empty(INTERACTIVE_STAGE:Mextract) && defined(BATCH)
-	@${ERROR_MSG} "The extract stage of this package requires user interaction"
-	@${ERROR_MSG} "Please extract manually with:"
-	@${ERROR_MSG} "    \"cd ${.CURDIR} && ${MAKE} extract\""
-	${RUN} ${FALSE}
+	${RUN}								\
+	${ERROR_MSG} "The extract stage of this package requires user interaction"; \
+	${ERROR_MSG} "Please extract manually with:";			\
+	${ERROR_MSG} "    \"cd ${.CURDIR} && ${MAKE} extract\"";	\
+	${FALSE}
 .else
 	@${DO_NADA}
 .endif
@@ -142,9 +143,10 @@ extract-check-interactive:
 ###
 .PHONY: extract-cookie
 extract-cookie:
-	${RUN}${TEST} ! -f ${_COOKIE.extract} || ${FALSE}
-	${RUN}${MKDIR} ${_COOKIE.extract:H}
-	${RUN}${ECHO} ${PKGNAME} > ${_COOKIE.extract}
+	${RUN}								\
+	${TEST} ! -f ${_COOKIE.extract} || ${FALSE};			\
+	${TEST} -d ${_COOKIE.extract:H} || ${MKDIR} ${_COOKIE.extract:H}; \
+	${ECHO} ${PKGNAME} > ${_COOKIE.extract}
 
 ######################################################################
 ### pre-extract, do-extract, post-extract (PUBLIC, override)
