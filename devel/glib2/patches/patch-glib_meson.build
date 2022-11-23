@@ -1,17 +1,18 @@
-$NetBSD: patch-glib_meson.build,v 1.10 2022/07/24 21:24:56 wiz Exp $
+$NetBSD: patch-glib_meson.build,v 1.11 2022/11/23 10:41:41 adam Exp $
 
 - Don't bother with gtester as it's slated for deprecation anyway:
   https://gitlab.gnome.org/GNOME/glib/issues/1441
 
---- glib/meson.build.orig	2022-05-30 13:26:47.000000000 +0000
+--- glib/meson.build.orig	2022-10-25 12:53:22.000000000 +0000
 +++ glib/meson.build
-@@ -431,25 +431,8 @@ if host_system == 'windows'
+@@ -433,26 +433,8 @@ if host_system == 'windows'
        include_directories : configinc,
        dependencies : [libglib_dep])
    endif
 -else
 -  gtester = executable('gtester', 'gtester.c',
 -    install : true,
+-    install_tag : 'bin-devel',
 -    c_args : ['-UG_DISABLE_ASSERT'],
 -    include_directories : configinc,
 -    dependencies : [libglib_dep])
@@ -24,10 +25,10 @@ $NetBSD: patch-glib_meson.build,v 1.10 2022/07/24 21:24:56 wiz Exp $
 -  input: 'gtester-report.in',
 -  output: 'gtester-report',
 -  install_dir: get_option('bindir'),
+-  install_tag : 'bin-devel',
 -  configuration: report_conf,
 -  install_mode: 'rwxr-xr-x'
 -)
--
- install_data('glib_gdb.py', install_dir : join_paths(glib_pkgdatadir, 'gdb'))
  
- # This is needed to make gdb find glib_gdb.py
+ install_data('glib_gdb.py',
+   install_dir : glib_pkgdatadir / 'gdb',

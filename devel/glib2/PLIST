@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.141 2022/10/06 13:34:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.142 2022/11/23 10:41:41 adam Exp $
 ${PLIST.nococoa}bin/gapplication
 bin/gdbus
 bin/gio
@@ -11,7 +11,6 @@ bin/gresource
 bin/gsettings
 ${PLIST.nococoa}include/gio-unix-2.0/gio/gdesktopappinfo.h
 include/gio-unix-2.0/gio/gfiledescriptorbased.h
-include/gio-unix-2.0/gio/gunixfdlist.h
 include/gio-unix-2.0/gio/gunixfdmessage.h
 include/gio-unix-2.0/gio/gunixinputstream.h
 include/gio-unix-2.0/gio/gunixmounts.h
@@ -167,6 +166,7 @@ include/glib-2.0/gio/gtlspassword.h
 include/glib-2.0/gio/gtlsserverconnection.h
 include/glib-2.0/gio/gunixconnection.h
 include/glib-2.0/gio/gunixcredentialsmessage.h
+include/glib-2.0/gio/gunixfdlist.h
 include/glib-2.0/gio/gunixsocketaddress.h
 include/glib-2.0/gio/gvfs.h
 include/glib-2.0/gio/gvolume.h
@@ -289,19 +289,19 @@ ${PLIST.fam}lib/gio/modules/libgiofam.so
 lib/glib-2.0/include/glibconfig.h
 lib/libgio-2.0.so
 lib/libgio-2.0.so.0
-lib/libgio-2.0.so.0.7200.4
+lib/libgio-2.0.so.0.7400.1
 lib/libglib-2.0.so
 lib/libglib-2.0.so.0
-lib/libglib-2.0.so.0.7200.4
+lib/libglib-2.0.so.0.7400.1
 lib/libgmodule-2.0.so
 lib/libgmodule-2.0.so.0
-lib/libgmodule-2.0.so.0.7200.4
+lib/libgmodule-2.0.so.0.7400.1
 lib/libgobject-2.0.so
 lib/libgobject-2.0.so.0
-lib/libgobject-2.0.so.0.7200.4
+lib/libgobject-2.0.so.0.7400.1
 lib/libgthread-2.0.so
 lib/libgthread-2.0.so.0
-lib/libgthread-2.0.so.0.7200.4
+lib/libgthread-2.0.so.0.7400.1
 lib/pkgconfig/gio-2.0.pc
 lib/pkgconfig/gio-unix-2.0.pc
 lib/pkgconfig/glib-2.0.pc
@@ -310,11 +310,12 @@ lib/pkgconfig/gmodule-export-2.0.pc
 lib/pkgconfig/gmodule-no-export-2.0.pc
 lib/pkgconfig/gobject-2.0.pc
 lib/pkgconfig/gthread-2.0.pc
+${PLIST.nococoa}libexec/gio-launch-desktop
 share/aclocal/glib-2.0.m4
 share/aclocal/glib-gettext.m4
 share/aclocal/gsettings.m4
-share/gdb/auto-load${LOCALBASE}/lib/libglib-2.0.so.0.7200.4-gdb.py
-share/gdb/auto-load${LOCALBASE}/lib/libgobject-2.0.so.0.7200.4-gdb.py
+share/gdb/auto-load${LOCALBASE}/lib/libglib-2.0.so.0.7400.1-gdb.py
+share/gdb/auto-load${LOCALBASE}/lib/libgobject-2.0.so.0.7400.1-gdb.py
 share/gettext/its/gschema.its
 share/gettext/its/gschema.loc
 share/glib-2.0/gdb/glib_gdb.py
@@ -322,6 +323,7 @@ share/glib-2.0/gdb/gobject_gdb.py
 share/glib-2.0/gettext/po/Makefile.in.in
 share/glib-2.0/schemas/gschema.dtd
 share/glib-2.0/valgrind/glib.supp
+share/locale/ab/LC_MESSAGES/glib20.mo
 share/locale/af/LC_MESSAGES/glib20.mo
 share/locale/am/LC_MESSAGES/glib20.mo
 share/locale/an/LC_MESSAGES/glib20.mo
