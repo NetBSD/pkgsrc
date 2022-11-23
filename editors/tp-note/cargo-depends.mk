@@ -1,8 +1,8 @@
-# $NetBSD: cargo-depends.mk,v 1.12 2022/11/22 11:30:10 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.13 2022/11/23 10:45:37 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.17.0
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
-CARGO_CRATE_DEPENDS+=	aho-corasick-0.7.19
+CARGO_CRATE_DEPENDS+=	aho-corasick-0.7.20
 CARGO_CRATE_DEPENDS+=	android_system_properties-0.1.5
 CARGO_CRATE_DEPENDS+=	ansi_term-0.12.1
 CARGO_CRATE_DEPENDS+=	anyhow-1.0.66
@@ -43,7 +43,7 @@ CARGO_CRATE_DEPENDS+=	core-graphics-0.22.3
 CARGO_CRATE_DEPENDS+=	core-graphics-types-0.1.1
 CARGO_CRATE_DEPENDS+=	cpufeatures-0.2.5
 CARGO_CRATE_DEPENDS+=	crossbeam-channel-0.5.6
-CARGO_CRATE_DEPENDS+=	crossbeam-utils-0.8.13
+CARGO_CRATE_DEPENDS+=	crossbeam-utils-0.8.14
 CARGO_CRATE_DEPENDS+=	crypto-common-0.1.6
 CARGO_CRATE_DEPENDS+=	cty-0.2.2
 CARGO_CRATE_DEPENDS+=	cxx-1.0.82
@@ -190,7 +190,7 @@ CARGO_CRATE_DEPENDS+=	semver-parser-0.10.2
 CARGO_CRATE_DEPENDS+=	serde-1.0.147
 CARGO_CRATE_DEPENDS+=	serde-xml-rs-0.3.1
 CARGO_CRATE_DEPENDS+=	serde_derive-1.0.147
-CARGO_CRATE_DEPENDS+=	serde_json-1.0.88
+CARGO_CRATE_DEPENDS+=	serde_json-1.0.89
 CARGO_CRATE_DEPENDS+=	serde_yaml-0.9.14
 CARGO_CRATE_DEPENDS+=	sha1-0.10.5
 CARGO_CRATE_DEPENDS+=	siphasher-0.3.10
