@@ -1,4 +1,4 @@
-# $NetBSD: autoconf.mk,v 1.21 2019/05/15 10:49:28 leot Exp $
+# $NetBSD: autoconf.mk,v 1.22 2022/11/23 13:06:33 jperkin Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -83,9 +83,11 @@ _TOOLS_AC_NAMES+=	autoscan	autoscan-2.13
 _TOOLS_AC_NAMES+=	autoupdate	autoupdate-2.13
 _TOOLS_AC_NAMES+=	ifnames		ifnames-2.13
 
-.for _t_ in ${_TOOLS_AC_NAMES}
+.if defined(GNU_CONFIGURE)
+.  for _t_ in ${_TOOLS_AC_NAMES}
 _TOOLS_AC_TYPE.${_t_}?=	TOOLS_GNU_MISSING
-.endfor _t_
+.  endfor
+.endif
 
 .if !defined(TOOLS_IGNORE.autoconf) && !empty(USE_TOOLS:C/:.*//:Mautoconf)
 .  if !empty(PKGPATH:Mdevel/autoconf)
