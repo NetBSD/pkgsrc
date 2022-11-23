@@ -1,29 +1,30 @@
-$NetBSD: patch-gio_gdbus-2.0_codegen_meson.build,v 1.2 2019/11/14 11:40:30 wiz Exp $
+$NetBSD: patch-gio_gdbus-2.0_codegen_meson.build,v 1.3 2022/11/23 10:41:41 adam Exp $
 
 Leave gdbus-2.0/codegen sudirectory to devel/gdbus-codegen package.
 
---- gio/gdbus-2.0/codegen/meson.build.orig	2019-10-04 11:44:23.000000000 +0000
+--- gio/gdbus-2.0/codegen/meson.build.orig	2022-10-25 12:53:22.000000000 +0000
 +++ gio/gdbus-2.0/codegen/meson.build
-@@ -17,6 +17,7 @@ gdbus_codegen_conf.set('DATADIR', glib_d
+@@ -20,6 +20,7 @@ gdbus_codegen_conf.set('DATADIR', glib_d
  gdbus_codegen = configure_file(input : 'gdbus-codegen.in',
    output : 'gdbus-codegen',
    install_dir : get_option('bindir'),
 +  install : false,
+   install_tag : 'bin-devel',
    configuration : gdbus_codegen_conf
  )
-   # Provide tools for others when we're a subproject and they use the Meson GNOME module
-@@ -28,6 +29,7 @@ gdbus_codegen_built_files = []
+@@ -32,6 +33,7 @@ gdbus_codegen_built_files = []
  gdbus_codegen_built_files += configure_file(input : 'config.py.in',
                                              output : 'config.py',
                                              install_dir : codegen_dir,
 +                                            install : false,
+                                             install_tag : 'bin-devel',
                                              configuration : gdbus_codegen_conf)
  
- foreach f : gdbus_codegen_files
-@@ -35,5 +37,6 @@ foreach f : gdbus_codegen_files
+@@ -40,6 +42,7 @@ foreach f : gdbus_codegen_files
    # and then install it too so that it can be used after installation
    gdbus_codegen_built_files += configure_file(input : f, output : f,
                                                install_dir : codegen_dir,
 +                                              install : false,
+                                               install_tag : 'bin-devel',
                                                copy : true)
  endforeach
