@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2022/06/28 11:31:07 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2022/11/23 08:47:40 nikita Exp $
 #
 
 DISTNAME=	2vcard-0.6
@@ -7,7 +7,7 @@ CATEGORIES=	converters
 MASTER_SITES=	https://www.netmeister.org/apps/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.netmeister.org/apps/2vcard/
+HOMEPAGE=	https://web.archive.org/web/20200722004915/https://www.netmeister.org/apps/2vcard/
 COMMENT=	Convert an addressbook to the popular VCARD file format
 LICENSE=	modified-bsd
 
