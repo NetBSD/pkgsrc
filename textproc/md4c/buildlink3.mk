@@ -1,0 +1,12 @@
+# $NetBSD: buildlink3.mk,v 1.1 2022/11/23 21:50:46 nros Exp $
+
+BUILDLINK_TREE+=	md4c
+
+.if !defined(MD4C_BUILDLINK3_MK)
+MD4C_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.md4c+=	md4c>=0.4.8
+BUILDLINK_PKGSRCDIR.md4c?=	../../textproc/md4c
+.endif	# MD4C_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-md4c
