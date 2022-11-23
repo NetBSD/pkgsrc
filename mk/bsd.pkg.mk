@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.2043 2022/11/23 10:16:44 jperkin Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.2044 2022/11/23 10:53:14 jperkin Exp $
 #
 # This file is in the public domain.
 #
@@ -339,7 +339,7 @@ ERROR_CAT?=		${SED} -e "s|^|ERROR: |" 1>&2
 
 # How to do nothing.  Override if you, for some strange reason, would rather
 # do something.
-DO_NADA?=		${TRUE}
+DO_NADA?=
 
 # the FAIL command executes its arguments and then exits with a non-zero
 # status.

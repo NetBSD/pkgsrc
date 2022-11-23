@@ -1,4 +1,4 @@
-# $NetBSD: djbware.mk,v 1.32 2020/11/19 09:16:38 schmonz Exp $
+# $NetBSD: djbware.mk,v 1.33 2022/11/23 10:53:14 jperkin Exp $
 #
 # Makefile fragment for packages with djb-style build machinery
 #
@@ -24,7 +24,7 @@ DJB_CONFIG_DIR?=	${WRKSRC}
 .endif
 DJB_CONFIG_PREFIX?=	${PREFIX}
 DJB_CONFIG_HOME?=	conf-home
-DJB_CONFIG_CMDS?=	${DO_NADA}
+DJB_CONFIG_CMDS?=	${TRUE}
 
 .if defined(LICENSE) && ${LICENSE} == "djb-nonlicense"
 # Nonlicensed packages that install totally unmodified may want to opt out
