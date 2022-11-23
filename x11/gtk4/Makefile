@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2022/11/21 18:20:46 jperkin Exp $
+# $NetBSD: Makefile,v 1.22 2022/11/23 13:58:42 adam Exp $
 
-DISTNAME=	gtk-4.8.1
+DISTNAME=	gtk-4.8.2
 PKGNAME=	${DISTNAME:S/gtk/gtk4/}
-PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtk/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -24,6 +23,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 USE_TOOLS+=	gdbus-codegen msgfmt msgmerge pkg-config xgettext
 USE_LANGUAGES=	c c++
 
+MESON_REQD+=		0.60.0
 MESON_ARGS+=		-Dgtk_doc=false
 # needs gstreamer-gl
 MESON_ARGS+=		-Dmedia-gstreamer=disabled

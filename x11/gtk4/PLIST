@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2022/10/19 18:00:02 nros Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/11/23 13:58:42 adam Exp $
 bin/gtk4-builder-tool
 bin/gtk4-demo
 bin/gtk4-demo-application
@@ -10,7 +10,6 @@ bin/gtk4-print-editor
 bin/gtk4-query-settings
 bin/gtk4-update-icon-cache
 bin/gtk4-widget-factory
-include/gtk-4.0/gdk/gdk-autocleanup.h
 include/gtk-4.0/gdk/gdk.h
 include/gtk-4.0/gdk/gdkapplaunchcontext.h
 include/gtk-4.0/gdk/gdkcairo.h
@@ -85,7 +84,6 @@ ${PLIST.x11}include/gtk-4.0/gdk/x11/gdkx11selection.h
 ${PLIST.x11}include/gtk-4.0/gdk/x11/gdkx11surface.h
 ${PLIST.x11}include/gtk-4.0/gdk/x11/gdkx11utils.h
 include/gtk-4.0/gsk/gl/gskglrenderer.h
-include/gtk-4.0/gsk/gsk-autocleanup.h
 include/gtk-4.0/gsk/gsk.h
 include/gtk-4.0/gsk/gskcairorenderer.h
 include/gtk-4.0/gsk/gskenums.h
@@ -102,7 +100,6 @@ include/gtk-4.0/gtk/css/gtkcssenumtypes.h
 include/gtk-4.0/gtk/css/gtkcsserror.h
 include/gtk-4.0/gtk/css/gtkcsslocation.h
 include/gtk-4.0/gtk/css/gtkcsssection.h
-include/gtk-4.0/gtk/gtk-autocleanups.h
 include/gtk-4.0/gtk/gtk.h
 include/gtk-4.0/gtk/gtkaboutdialog.h
 include/gtk-4.0/gtk/gtkaccelgroup.h
@@ -378,7 +375,7 @@ ${PLIST.lpr}lib/gtk-4.0/4.0.0/printbackends/libprintbackend-lpr.so
 lib/libgtk-4.${SOEXT}
 ${PLIST.dylib}lib/libgtk-4.1.dylib
 ${PLIST.no-dylib}lib/libgtk-4.so.1
-${PLIST.no-dylib}lib/libgtk-4.so.1.800.1
+${PLIST.no-dylib}lib/libgtk-4.so.1.800.2
 ${PLIST.quartz}lib/pkgconfig/gtk4-macos.pc
 lib/pkgconfig/gtk4-unix-print.pc
 ${PLIST.x11}lib/pkgconfig/gtk4-x11.pc
