@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2022/11/02 19:39:50 bsiegert Exp $
+# $NetBSD: Makefile,v 1.62 2022/11/23 10:07:30 jperkin Exp $
 
 DISTNAME=	caddy-2.6.2
 PKGREVISION=	1
@@ -11,8 +11,14 @@ HOMEPAGE=	https://caddyserver.com/
 COMMENT=	General-purpose web server
 LICENSE=	apache-2.0
 
-GO_BUILD_PATTERN=	./...
 EXTRACT_USING=		bsdtar
+
+# Work around go's lack of conditional compilation.
+pre-patch:
+	${CP} ${WRKSRC}/listen_unix.go ${WRKSRC}/listen_illumos.go
+
+post-patch:
+	${CP} ${WRKSRC}/listen_illumos.go ${WRKSRC}/listen_solaris.go
 
 .include "go-modules.mk"
 
