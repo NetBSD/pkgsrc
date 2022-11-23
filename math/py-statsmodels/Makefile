@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2022/11/21 09:40:59 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2022/11/23 23:48:02 wiz Exp $
 
 DISTNAME=	statsmodels-0.13.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,8 @@ LICENSE=	modified-bsd
 PYTHON_VERSIONS_INCOMPATIBLE=	27 37 # py-scipy
 USE_LANGUAGES=			c
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-cython>=0.29:../../devel/py-cython
+TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=0.29:../../devel/py-cython
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-pandas>=0.21:../../math/py-pandas
 DEPENDS+=	${PYPKGPREFIX}-patsy>=0.5:../../math/py-patsy
 DEPENDS+=	${PYPKGPREFIX}-scipy>=1.1:../../math/py-scipy
