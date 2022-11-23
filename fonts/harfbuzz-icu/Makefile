@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2022/04/20 23:25:58 tnn Exp $
+# $NetBSD: Makefile,v 1.12 2022/11/23 11:39:27 adam Exp $
 
 # XXX: hack to override meson installation
 INSTALL_DIRS=
@@ -10,6 +10,7 @@ PKGNAME=	${DISTNAME:S/^harfbuzz-/harfbuzz-icu-/1}
 COMMENT=	OpenType text shaping engine (ICU integration)
 
 MESON_ARGS+=	-Dicu=enabled
+MESON_ARGS+=	-Dtests=disabled # FIXME: build takes forever
 
 INSTALLATION_DIRS+=	include/harfbuzz
 INSTALLATION_DIRS+=	lib
