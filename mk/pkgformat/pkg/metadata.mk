@@ -1,4 +1,4 @@
-# $NetBSD: metadata.mk,v 1.33 2022/04/04 11:23:07 riastradh Exp $
+# $NetBSD: metadata.mk,v 1.34 2022/11/23 11:17:51 jperkin Exp $
 
 ######################################################################
 ### The targets below are all PRIVATE.
@@ -13,7 +13,7 @@ PKG_DB_TMPDIR=	${WRKDIR}/.pkgdb
 
 unprivileged-install-hook: ${PKG_DB_TMPDIR}
 ${PKG_DB_TMPDIR}:
-	${RUN}${MKDIR} ${.TARGET}
+	@${MKDIR} ${.TARGET}
 
 ######################################################################
 ###
@@ -34,36 +34,43 @@ DARWIN_REQUIRES_FILTER=	${CAT}
 .endif
 
 ${_BUILD_INFO_FILE}: ${_PLIST_NOKEYWORDS}
-	${RUN}${MKDIR} ${.TARGET:H}
-	${RUN}${RM} -f ${.TARGET}.tmp
-	${RUN} (${_BUILD_DEFS:NPATH:@v@${ECHO} ${v}=${_BUILD_DEFS.${v}:Q:U${${v}:Q}} ;@})	\
-		> ${.TARGET}.tmp
-.if !empty(USE_LANGUAGES)
-	${RUN}${ECHO} "CC_VERSION=${CC_VERSION}" >> ${.TARGET}.tmp
-.endif
-.if !empty(USE_TOOLS:Mperl\:run)
-	${RUN}${ECHO} "PERL=`${PERL5} --version 2>/dev/null | ${GREP} 'This is perl'`" >> ${.TARGET}.tmp
-.endif
-.if !empty(USE_TOOLS:Mgmake)
-	${RUN}${ECHO} "GMAKE=`${GMAKE} --version | ${GREP} Make`" >> ${.TARGET}.tmp
-.endif
-	${RUN}${ECHO} "PKGTOOLS_VERSION=${PKGTOOLS_VERSION_REQD}" >> ${.TARGET}.tmp
-.if defined(HOMEPAGE)
-	${RUN}${ECHO} "HOMEPAGE=${HOMEPAGE}" >> ${.TARGET}.tmp
-.endif
-	${RUN}${ECHO} "CATEGORIES=${CATEGORIES}" >> ${.TARGET}.tmp
-	${RUN}${ECHO} "MAINTAINER=${MAINTAINER}" >> ${.TARGET}.tmp
-.if defined(OWNER)
-	${RUN}${ECHO} "OWNER=${OWNER}" >> ${.TARGET}.tmp
-.endif	
-.if defined(PREV_PKGPATH)
-	${RUN}${ECHO} "PREV_PKGPATH=${PREV_PKGPATH}" >> ${.TARGET}.tmp
-.endif
-.if defined(SUPERSEDES)
-	${RUN}${ECHO} "SUPERSEDES=${SUPERSEDES}" >> ${.TARGET}.tmp
-.endif
-	${RUN}${ECHO} "BUILD_DATE=${_BUILD_DATE_cmd:sh}" >> ${.TARGET}.tmp
-	${RUN}${ECHO} "BUILD_HOST=${_BUILD_HOST_cmd:sh}" >> ${.TARGET}.tmp
+	${RUN}								\
+	${TEST} -d ${.TARGET:H} || ${MKDIR} ${.TARGET:H};		\
+	{								\
+		(${_BUILD_DEFS:NPATH:@v@				\
+			${ECHO} ${v}=${_BUILD_DEFS.${v}:Q:U${${v}:Q}};	\
+		@});							\
+		if [ -n "${USE_LANGUAGES}" ]; then			\
+			${ECHO} "CC_VERSION=${CC_VERSION}";		\
+		fi;							\
+		case "${USE_TOOLS}" in					\
+		*perl:run*)						\
+			${ECHO} "PERL=`${PERL5} --version 2>/dev/null |	\
+				${GREP} 'This is perl'`" || ${TRUE};	\
+		esac;							\
+		case "${USE_TOOLS}" in					\
+		*gmake*)						\
+			${ECHO} "GMAKE=`${GMAKE} --version |		\
+				${GREP} Make`" || ${TRUE};		\
+		esac;							\
+		${ECHO} "PKGTOOLS_VERSION=${PKGTOOLS_VERSION_REQD}";	\
+		if [ -n "${HOMEPAGE}" ]; then				\
+			${ECHO} "HOMEPAGE=${HOMEPAGE}";			\
+		fi;							\
+		${ECHO} "CATEGORIES=${CATEGORIES}";			\
+		${ECHO} "MAINTAINER=${MAINTAINER}";			\
+		if [ -n "${OWNER}" ]; then				\
+			${ECHO} "OWNER=${OWNER}";			\
+		fi;							\
+		if [ -n "${PREV_PKGPATH}" ]; then			\
+			${ECHO} "PREV_PKGPATH=${PREV_PKGPATH}";		\
+		fi;							\
+		if [ -n "${SUPERSEDES}" ]; then				\
+			${ECHO} "SUPERSEDES=${SUPERSEDES}";		\
+		fi;							\
+		${ECHO} "BUILD_DATE=${_BUILD_DATE_cmd:sh}";		\
+		${ECHO} "BUILD_HOST=${_BUILD_HOST_cmd:sh}";		\
+	} > ${.TARGET}.tmp
 .if !empty(CHECK_SHLIBS_SUPPORTED:M[yY][eE][sS])
 	${RUN}								\
 	case ${LDD:Q}"" in						\
@@ -124,7 +131,6 @@ ${_BUILD_INFO_FILE}: ${_PLIST_NOKEYWORDS}
 	done
 .endif
 	${RUN}								\
-	rm -f ${.TARGET};						\
 	sort ${.TARGET}.tmp > ${.TARGET};				\
 	rm -f ${.TARGET}.tmp
 
@@ -139,76 +145,68 @@ _BUILD_VERSION_FILE=	${PKG_DB_TMPDIR}/+BUILD_VERSION
 _METADATA_TARGETS+=	${_BUILD_VERSION_FILE}
 .if !empty(USE_PKG_ADMIN_DIGEST:M[Yy][Ee][Ss])
 ${_BUILD_VERSION_FILE}:
-	${RUN}${MKDIR} ${.TARGET:H}
-	${RUN}${RM} -f ${.TARGET}.tmp
 	${RUN}								\
-	exec 1>>${.TARGET}.tmp;						\
-	${FIND} ${FILESDIR} -type f 2> /dev/null | while read f; do	\
-		${TEST} ! -f "$$f" || ${ECHO} "$$f";			\
-	done
-	${RUN}								\
-	exec 1>>${.TARGET}.tmp;						\
-	for f in ${.CURDIR}/Makefile ${PKGDIR}/*; do			\
-		${TEST} ! -f "$$f" || ${ECHO} "$$f";			\
-	done
-	${RUN}								\
-	exec 1>>${.TARGET}.tmp;						\
-	${TEST} -f ${DISTINFO_FILE:Q} || exit 0;			\
-	${CAT} ${DISTINFO_FILE} |					\
-	${AWK} 'NF == 4 && $$3 == "=" { gsub("[()]", "", $$2); print $$2 }' | \
-	while read file; do						\
-		${TEST} ! -f "${PATCHDIR}/$$file" ||			\
-			${ECHO} "${PATCHDIR}/$$file";			\
-	done
-	${RUN}								\
-	exec 1>>${.TARGET}.tmp;						\
-	${TEST} -d ${PATCHDIR} || exit 0;				\
-	cd ${PATCHDIR}; for f in *; do					\
-		case "$$f" in						\
-		"*"|*.orig|*.rej|*~)	;;				\
-		patch-*)		${ECHO} "${PATCHDIR}/$$f" ;;	\
-		esac;							\
-	done
-	${RUN}								\
-	${CAT} ${.TARGET}.tmp |						\
-	${AWK} '{ t=$$0; sub("^${PKGSRCDIR}/", "");			\
-		   printf "%s %s\n", t, $$0 }' |			\
+	${TEST} -d ${.TARGET:H} || ${MKDIR} ${.TARGET:H};		\
+	{								\
+		${FIND} ${FILESDIR} -type f 2>/dev/null |		\
+		while read f; do					\
+			[ -f "$$f" ] && ${ECHO} "$$f";			\
+		done;							\
+		for f in ${.CURDIR}/Makefile ${PKGDIR}/*; do		\
+			[ -f "$$f" ] && ${ECHO} "$$f";			\
+		done;							\
+		if [ -f ${DISTINFO_FILE:Q} ]; then			\
+			${AWK} 'NF == 4 && $$3 == "=" {			\
+				gsub("[()]", "", $$2); print $$2;	\
+			}' ${DISTINFO_FILE} |				\
+			while read file; do				\
+				[ -f "${PATCHDIR}/$$file" ] &&		\
+					${ECHO} "${PATCHDIR}/$$file";	\
+			done;						\
+		fi;							\
+		if [ -d ${PATCHDIR} ]; then				\
+			cd ${PATCHDIR}; for f in *; do			\
+				case "$$f" in				\
+				"*"|*.orig|*.rej|*~) ;;			\
+				patch-*) ${ECHO} "${PATCHDIR}/$$f" ;;	\
+				esac;					\
+			done;						\
+		fi;							\
+	} | ${AWK} '{ t=$$0; sub("^${PKGSRCDIR}/", "");			\
+			printf "%s %s\n", t, $$0 }' |			\
 	while read file relfile; do					\
 		printf "%s: " "$$relfile";				\
 		${PKG_ADMIN} digest "$$file";				\
 	done |								\
-	${SORT} -u > ${.TARGET} && ${RM} -f ${.TARGET}.tmp
+	${SORT} -u > ${.TARGET}
 .else
 ${_BUILD_VERSION_FILE}:
-	${RUN}${MKDIR} ${.TARGET:H}
-	${RUN}${RM} -f ${.TARGET}.tmp
 	${RUN}								\
-	exec 1>>${.TARGET}.tmp;						\
-	for f in ${.CURDIR}/Makefile ${FILESDIR:tA}/* ${PKGDIR:tA}/*; do \
-		${TEST} ! -f "$$f" || ${ECHO} "$$f";			\
-	done
-	${RUN}								\
-	exec 1>>${.TARGET}.tmp;						\
-	${TEST} -f ${DISTINFO_FILE:Q} || exit 0;			\
-	${CAT} ${DISTINFO_FILE} |					\
-	${AWK} 'NF == 4 && $$3 == "=" { gsub("[()]", "", $$2); print $$2 }' | \
-	while read file; do						\
-		${TEST} ! -f "${PATCHDIR}/$$file" ||			\
-			${ECHO} "${PATCHDIR:tA}/$$file";		\
-	done
-	${RUN}								\
-	exec 1>>${.TARGET}.tmp;						\
-	${TEST} -d ${PATCHDIR} || exit 0;				\
-	cd ${PATCHDIR}; for f in *; do					\
-		case "$$f" in						\
-		"*"|*.orig|*.rej|*~)	;;				\
-		patch-*)		${ECHO} "${PATCHDIR:tA}/$$f" ;;	\
-		esac;							\
-	done
-	${RUN}								\
-	${CAT} ${.TARGET}.tmp |						\
-	${AWK} '{ t=$$0; sub("^${PKGSRCDIR}/", "");			\
-		   printf "%s %s\n", t, $$0 }' | \
+	${TEST} -d ${.TARGET:H} || ${MKDIR} ${.TARGET:H};		\
+	{								\
+		for f in ${.CURDIR}/Makefile ${FILESDIR:tA}/*		\
+			${PKGDIR:tA}/*; do				\
+			[ -f "$$f" ] && ${ECHO} "$$f";			\
+		done;							\
+		if [ -f ${DISTINFO_FILE:Q} ]; then			\
+			${AWK} 'NF == 4 && $$3 == "=" {			\
+				gsub("[()]", "", $$2); print $$2;	\
+			}' ${DISTINFO_FILE} |				\
+			while read file; do				\
+				[ -f "${PATCHDIR}/$$file" ] &&		\
+					${ECHO} "${PATCHDIR:tA}/$$file"; \
+			done;						\
+		fi;							\
+		if [ -d ${PATCHDIR} ]; then				\
+			cd ${PATCHDIR}; for f in *; do			\
+				case "$$f" in				\
+				"*"|*.orig|*.rej|*~) ;;			\
+				patch-*) ${ECHO} "${PATCHDIR:tA}/$$f" ;; \
+				esac;					\
+			done;						\
+		fi;							\
+	} | ${AWK} '{ t=$$0; sub("^${PKGSRCDIR}/", "");			\
+			printf "%s %s\n", t, $$0 }' |			\
 	while read file relfile; do					\
 		${GREP}							\
 			-e '\$$NetBSD[:][^$$]*[$$]'			\
@@ -220,7 +218,7 @@ ${_BUILD_VERSION_FILE}:
 		  sub(":.*[$$]NetBSD", ":	$$NetBSD");		\
 		  sub("[$$][^$$]*$$", "$$");				\
 		  print; }' |						\
-	${SORT} -u > ${.TARGET} && ${RM} -f ${.TARGET}.tmp
+	${SORT} -u > ${.TARGET}
 .endif
 
 ######################################################################
@@ -233,8 +231,9 @@ _COMMENT_FILE=		${PKG_DB_TMPDIR}/+COMMENT
 _METADATA_TARGETS+=	${_COMMENT_FILE}
 
 ${_COMMENT_FILE}:
-	${RUN}${MKDIR} ${.TARGET:H}
-	${RUN}${ECHO} ${COMMENT:Q} > ${.TARGET}
+	${RUN}								\
+	${TEST} -d ${.TARGET:H} || ${MKDIR} ${.TARGET:H};		\
+	${ECHO} ${COMMENT:Q} > ${.TARGET}
 
 ######################################################################
 ###
@@ -246,13 +245,15 @@ _DESCR_FILE=		${PKG_DB_TMPDIR}/+DESC
 _METADATA_TARGETS+=	${_DESCR_FILE}
 
 ${_DESCR_FILE}: ${DESCR_SRC}
-	${RUN}${MKDIR} ${.TARGET:H}
-	${RUN}${RM} -f ${.TARGET}
-	${RUN}${CAT} ${.ALLSRC} > ${.TARGET}
+	${RUN}								\
+	${TEST} -d ${.TARGET:H} || ${MKDIR} ${.TARGET:H};		\
+	${CAT} ${.ALLSRC} > ${.TARGET}
 .if defined(HOMEPAGE)
-	${RUN}${ECHO} >> ${.TARGET}
-	${RUN}${ECHO} "Homepage:" >> ${.TARGET}
-	${RUN}${ECHO} ""${HOMEPAGE:Q} >> ${.TARGET}
+	${RUN} {							\
+		${ECHO};						\
+		${ECHO} "Homepage:";					\
+		${ECHO} ""${HOMEPAGE:Q};				\
+	} >> ${.TARGET}
 .endif
 
 ######################################################################
@@ -306,9 +307,9 @@ MESSAGE_SUBST+=	PKGNAME=${PKGNAME}					\
 _MESSAGE_SUBST_SED=	${MESSAGE_SUBST:S/=/}!/:S/$/!g/:S/^/ -e s!\\\${/}
 
 ${_MESSAGE_FILE}: ${MESSAGE_SRC}
-	${RUN}${MKDIR} ${.TARGET:H}
-	${RUN}${CAT} ${.ALLSRC} |			\
-		${SED} ${_MESSAGE_SUBST_SED} > ${.TARGET}
+	${RUN}								\
+	${TEST} -d ${.TARGET:H} || ${MKDIR} ${.TARGET:H};		\
+	${SED} ${_MESSAGE_SUBST_SED} ${.ALLSRC} > ${.TARGET}
 .endif	# MESSAGE_SRC
 
 ######################################################################
@@ -323,8 +324,9 @@ _PRESERVE_FILE=		${PKG_DB_TMPDIR}/+PRESERVE
 _METADATA_TARGETS+=	${_PRESERVE_FILE}
 
 ${_PRESERVE_FILE}:
-	${RUN}${MKDIR} ${.TARGET:H}
-	${RUN}${DATE} > ${.TARGET}
+	${RUN}								\
+	${TEST} -d ${.TARGET:H} || ${MKDIR} ${.TARGET:H};		\
+	${DATE} > ${.TARGET}
 .endif
 
 ######################################################################
@@ -337,13 +339,12 @@ _SIZE_PKG_FILE=		${PKG_DB_TMPDIR}/+SIZE_PKG
 _METADATA_TARGETS+=	${_SIZE_PKG_FILE}
 
 ${_SIZE_PKG_FILE}: ${PLIST}
-	${RUN}${MKDIR} ${.TARGET:H}
-	${RUN} \
-	${CAT} ${PLIST} |						\
+	${RUN}								\
+	${TEST} -d ${.TARGET:H} || ${MKDIR} ${.TARGET:H};		\
 	${AWK} 'BEGIN { base = "${PREFIX}/" }				\
 		/^@cwd/ { base = $$2 "/" }				\
 		/^@/ { next }						\
-		{ print base $$0 }' |					\
+		{ print base $$0 }' ${PLIST} |				\
 	${SORT} -u |							\
 	${SED} -e "s,^/,${DESTDIR}/," -e "s/'/'\\\\''/g" -e "s/.*/'&'/" | \
 	${XARGS} -n 256 ${LS} -ld 2>/dev/null |				\
@@ -361,8 +362,8 @@ _SIZE_ALL_FILE=		${PKG_DB_TMPDIR}/+SIZE_ALL
 _METADATA_TARGETS+=	${_SIZE_ALL_FILE}
 
 ${_SIZE_ALL_FILE}: ${_RDEPENDS_FILE} ${_SIZE_PKG_FILE}
-	${RUN}${MKDIR} ${.TARGET:H}
 	${RUN}								\
+	${TEST} -d ${.TARGET:H} || ${MKDIR} ${.TARGET:H};		\
 	{								\
 		${CAT} ${_SIZE_PKG_FILE} &&				\
 		${_FULL_DEPENDS_CMD} | ${SORT} -u |			\
@@ -462,8 +463,9 @@ _CONTENTS_TARGETS+=	${_SIZE_ALL_FILE}
 _CONTENTS_TARGETS+=	${_SIZE_PKG_FILE}
 
 ${_CONTENTS_FILE}: ${_CONTENTS_TARGETS}
-	${RUN}${MKDIR} ${.TARGET:H}
-	${RUN}${PKG_CREATE} ${_PKG_ARGS_INSTALL} -O ${PKGFILE:T} > ${.TARGET}
+	${RUN}								\
+	${TEST} -d ${.TARGET:H} || ${MKDIR} ${.TARGET:H};		\
+	${PKG_CREATE} ${_PKG_ARGS_INSTALL} -O ${PKGFILE:T} > ${.TARGET}
 
 ######################################################################
 ### _pkgformat-generate-metadata (PRIVATE)

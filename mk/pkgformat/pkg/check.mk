@@ -1,4 +1,4 @@
-# $NetBSD: check.mk,v 1.2 2020/05/28 16:22:58 maya Exp $
+# $NetBSD: check.mk,v 1.3 2022/11/23 11:17:51 jperkin Exp $
 #
 
 # _pkgformat-check-vulnerable:
@@ -24,9 +24,10 @@ _pkgformat-check-vulnerable: .PHONY
 	@${AUDIT_PACKAGES} ${_AUDIT_PACKAGES_CMD} ${AUDIT_PACKAGES_FLAGS} ${PKGNAME} || ${TRUE}
 .    endif
 .  else
-	@${PHASE_MSG} "Skipping vulnerability checks."
-	@${WARNING_MSG} "No ${_VULNFILE} file found."
-	@${WARNING_MSG} "To fix run: \`${DOWNLOAD_VULN_LIST}'."
+	${RUN}								\
+	${PHASE_MSG} "Skipping vulnerability checks.";			\
+	${WARNING_MSG} "No ${_VULNFILE} file found.";			\
+	${WARNING_MSG} "To fix run: \`${DOWNLOAD_VULN_LIST}'."
 .  endif
 
 .endif
