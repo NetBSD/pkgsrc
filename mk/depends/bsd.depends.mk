@@ -1,4 +1,4 @@
-# $NetBSD: bsd.depends.mk,v 1.32 2022/04/13 22:02:36 rillig Exp $
+# $NetBSD: bsd.depends.mk,v 1.33 2022/11/23 13:30:38 jperkin Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and provides all
 # variables and targets related to dependencies.
@@ -112,8 +112,8 @@ install-depends: depends depends-clean
 ### target so that "depends" may be re-invoked.
 ###
 depends-clean:
-	${RUN}${RM} -f ${_COOKIE.depends}
-	${RUN}					\
+	${RUN}								\
+	${RM} -f ${_COOKIE.depends};					\
 	${RMDIR} -p ${_COOKIE.depends:H} 2>/dev/null || ${TRUE}
 
 ######################################################################
@@ -124,9 +124,10 @@ depends-clean:
 ###
 .PHONY: depends-cookie
 depends-cookie:
-	${RUN}${TEST} ! -f ${_COOKIE.depends} || ${FALSE}
-	${RUN}${MKDIR} ${_COOKIE.depends:H}
-	${RUN}${TOUCH} ${TOUCH_ARGS} ${_COOKIE.depends}
+	${RUN}								\
+	${TEST} ! -f ${_COOKIE.depends} || ${FALSE};			\
+	${TEST} -d ${_COOKIE.depends:H} || ${MKDIR} ${_COOKIE.depends:H}; \
+	${TOUCH} ${TOUCH_ARGS} ${_COOKIE.depends}
 
 # show-depends:
 #	Prints the dependencies that need to be installed before this

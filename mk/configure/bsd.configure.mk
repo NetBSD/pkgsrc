@@ -1,4 +1,4 @@
-# $NetBSD: bsd.configure.mk,v 1.12 2019/05/07 19:36:44 rillig Exp $
+# $NetBSD: bsd.configure.mk,v 1.13 2022/11/23 13:30:38 jperkin Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and provides all
 # variables and targets related to configuring packages for building.
@@ -35,6 +35,7 @@ configure: barrier
 
 # Creates the "configure" cookie file.
 _configure-cookie: .PHONY
-	${RUN} [ ! -f ${_COOKIE.configure} ]	# XXX: What's the purpose of this assertion?
-	${RUN} ${MKDIR} ${_COOKIE.configure:H}
-	${RUN} ${ECHO} ${PKGNAME} > ${_COOKIE.configure}
+	${RUN}								\
+	[ ! -f ${_COOKIE.configure} ];					\
+	${TEST} -d ${_COOKIE.configure:H} || ${MKDIR} ${_COOKIE.configure:H}; \
+	${ECHO} ${PKGNAME} > ${_COOKIE.configure}

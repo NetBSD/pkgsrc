@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.2044 2022/11/23 10:53:14 jperkin Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.2045 2022/11/23 13:30:38 jperkin Exp $
 #
 # This file is in the public domain.
 #
@@ -420,7 +420,7 @@ ALL_ENV+=		HOME=${FAKEHOMEDIR}
 .PHONY: fake-home
 fake-home: ${FAKEHOMEDIR}
 ${FAKEHOMEDIR}:
-	${RUN} ${MKDIR} ${.TARGET}
+	@${MKDIR} ${.TARGET}
 
 # Use C-based wrappers or legacy shell versions.
 .if ${_USE_CWRAPPERS} == "yes"
