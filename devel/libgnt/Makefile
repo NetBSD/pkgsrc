@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2022/04/18 19:09:48 adam Exp $
+# $NetBSD: Makefile,v 1.7 2022/11/23 16:18:43 adam Exp $
 
 DISTNAME=	libgnt-2.14.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pidgin/}
 EXTRACT_SUFX=	.tar.xz

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2022/04/18 19:10:04 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2022/11/23 16:18:58 adam Exp $
 
 BUILDLINK_TREE+=	hwloc
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hwloc
 HWLOC_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hwloc+=	hwloc>=1.4
-BUILDLINK_ABI_DEPENDS.hwloc?=	hwloc>=1.11.13nb5
+BUILDLINK_ABI_DEPENDS.hwloc?=	hwloc>=1.11.13nb6
 BUILDLINK_PKGSRCDIR.hwloc?=	../../parallel/hwloc
 
 .include "../../mk/bsd.fast.prefs.mk"

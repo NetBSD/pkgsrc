@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2022/04/18 19:09:42 adam Exp $
+# $NetBSD: Makefile,v 1.12 2022/11/23 16:18:34 adam Exp $
 
 DISTNAME=	SQLiteCpp-2.2.0
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=SRombauts/}
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2022/09/07 06:50:47 pho Exp $
+# $NetBSD: Makefile,v 1.6 2022/11/23 16:18:38 adam Exp $
 
 DISTNAME=	hls-fourmolu-plugin-1.0.2.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

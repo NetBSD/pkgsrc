@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.98 2022/05/04 21:05:42 wiz Exp $
+# $NetBSD: Makefile,v 1.99 2022/11/23 16:19:58 adam Exp $
 
 DISTNAME=	xournal-0.4.8.2016
-PKGREVISION=	20
+PKGREVISION=	21
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xournal/}
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2022/04/18 19:11:20 adam Exp $
+# $NetBSD: Makefile,v 1.26 2022/11/23 16:20:20 adam Exp $
 
 DISTNAME=	kqtquickcharts-${_KDE_VERSION}
-PKGREVISION=	24
+PKGREVISION=	25
 CATEGORIES=	graphics
 COMMENT=	Beautiful and interactive charts for Qt Quick 1.0
 

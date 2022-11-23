@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2022/07/30 01:22:07 tnn Exp $
+# $NetBSD: Makefile,v 1.19 2022/11/23 16:21:15 adam Exp $
 
 DISTNAME=	ntpsec-1.2.1
+PKGREVISION=	1
 CATEGORIES=	time
 MASTER_SITES=	https://ftp.ntpsec.org/pub/releases/
 
