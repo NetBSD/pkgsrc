@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5628 2022/11/23 00:57:35 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.5629 2022/11/23 08:19:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8520,3 +8520,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-canonicaljson to 1.6.4 [adam 2022-11-22]
 	Updated devel/gitui to 0.22.1 [pin 2022-11-22]
 	Updated geography/qgis to 3.22.13 [gdt 2022-11-23]
+	Updated net/openvpn to 2.5.8 [adam 2022-11-23]
+	Updated devel/meson to 0.64.1 [adam 2022-11-23]
