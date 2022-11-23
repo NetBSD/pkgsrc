@@ -1,4 +1,4 @@
-# $NetBSD: create.mk,v 1.15 2022/10/07 11:42:51 jperkin Exp $
+# $NetBSD: create.mk,v 1.16 2022/11/23 16:01:36 jperkin Exp $
 #
 # Copyright (c) 2005, 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -101,9 +101,11 @@ TOOLS_SCRIPT.${_t_}?=	exit 1
 .endfor
 
 .for _t_ in ${TOOLS_FAIL}
+# Ensure the warning file is named correctly for each tool.
+DELAYED_WARNING_MSG.${_t_}?=	${ECHO} >> ${WARNING_DIR}/${_t_:Q}
 TOOLS_CREATE+=		${_t_}
 TOOLS_SCRIPT.${_t_}?=	\
-	${DELAYED_WARNING_MSG} "Please add USE_TOOLS+=${_t_} to the package Makefile."; \
+	${DELAYED_WARNING_MSG.${_t_}} "Please add USE_TOOLS+=${_t_} to the package Makefile."; \
 	${FAIL_MSG} "To use this tool, add USE_TOOLS+=${_t_} to the package Makefile."
 .endfor
 
@@ -145,15 +147,16 @@ TOOLS_CMD.${_t_}?=		${TOOLS_DIR}/bin/${_t_}
 TOOLS_PATH.${_t_}?=		${FALSE}
 TOOLS_SCRIPT_DFLT.${_t_}=	\
 	${TOOLS_PATH.${_t_}} ${TOOLS_ARGS.${_t_}} "$$@"
-
-override-tools: ${TOOLS_CMD.${_t_}}
+.endfor
 
 # Note: if you get a warning about a doubly-defined target here, you are
 # probably adding a program to USE_TOOLS that is not a valid tool name.
 # For instance, "split" is handled outside of the tools framework.
-${TOOLS_CMD.${_t_}}:
+override-tools: ${WRKDIR}/.override_tools_done
+${WRKDIR}/.override_tools_done:
 	${RUN}								\
-	${TEST} -d ${.TARGET:H:Q} || ${MKDIR} ${.TARGET:H:Q};		\
+	${TOOLS_CREATE:@_t_@						\
+	${TEST} -d ${TOOLS_CMD.${_t_}:H:Q} || ${MKDIR} ${TOOLS_CMD.${_t_}:H:Q}; \
 	if ${TEST} -n ${TOOLS_SCRIPT.${_t_}:Q}""; then			\
 		create=wrapper;						\
 		script=${TOOLS_SCRIPT.${_t_}:Q};			\
@@ -186,27 +189,29 @@ ${TOOLS_CMD.${_t_}}:
 		  ${ECHO} 'tools_wrapper_sed='${SED:Q:Q};		\
 		  ${SED} -e '/^$$/d' -e '/^	*#/d' ${PKGSRCDIR}/mk/tools/shquote.sh; \
 		  ${ECHO} 'wrapperlog="$${TOOLS_WRAPPER_LOG-'${_TOOLS_WRAP_LOG:Q}'}"'; \
-		  ${ECHO} 'shquote_args "$$@"';				\
-		  ${ECHO} '${ECHO} "[*] "'${.TARGET:Q}'"$$shquoted_args" >> $$wrapperlog'; \
+		  ${ECHO} 'shquote_args "$$\@"';			\
+		  ${ECHO} '${ECHO} "[*] "'${TOOLS_CMD.${_t_}:Q}'"$$shquoted_args" >> $$wrapperlog'; \
 		  ${ECHO} 'logprefix='$$logprefix;			\
 		  ${ECHO} 'logmain='$$logmain;				\
-		  ${ECHO} "${ECHO} '<.>' \"\$$logprefix\$$logmain$$logsuffix\" >> \$$wrapperlog"; \
+		  ${ECHO} "${ECHO} '<.>' "'"$$logprefix$$logmain'$$logsuffix'" >> $$wrapperlog'; \
 		  ${ECHO} "$$script";					\
-		} > ${.TARGET:Q};					\
-		${CHMOD} +x ${.TARGET:Q};				\
+		} > ${TOOLS_CMD.${_t_}:Q};				\
+		${CHMOD} +x ${TOOLS_CMD.${_t_}:Q};			\
 		;;							\
 	*)								\
-		${LN} -fs ${TOOLS_PATH.${_t_}:Q} ${.TARGET:Q};	\
+		${LN} -fs ${TOOLS_PATH.${_t_}:Q} ${TOOLS_CMD.${_t_}:Q};	\
 		;;							\
-	esac
-.  for _a_ in ${TOOLS_ALIASES.${_t_}}
-	${RUN}								\
-	${TEST} ${.TARGET:Q} = ${.TARGET:H:Q}/${_a_} ||			\
-		${LN} -fs ${.TARGET:T:Q} ${.TARGET:H:Q}/${_a_}
-.  endfor
-.  if defined(_OPSYS_EXE_SUFFIX) && !empty(_OPSYS_EXE_SUFFIX)
-	${RUN}								\
-	${TEST} ${.TARGET:E:Q} = ${_OPSYS_EXE_SUFFIX:E:Q} ||		\
-		${LN} -fs ${.TARGET:T:Q} ${.TARGET:Q}${_OPSYS_EXE_SUFFIX}
-.  endif
-.endfor
+	esac;								\
+	@}								\
+	${TOOLS_CREATE:@_t_@						\
+	for a in ${TOOLS_ALIASES.${_t_}}; do				\
+		${TEST} ${TOOLS_CMD.${_t_}:Q} = ${TOOLS_CMD.${_t_}:H:Q}/$$a || \
+			${LN} -fs ${TOOLS_CMD.${_t_}:T:Q} ${TOOLS_CMD.${_t_}:H:Q}/$$a; \
+	done;								\
+	${_OPSYS_EXE_SUFFIX:D						\
+		${TEST} ${TOOLS_CMD.${_t_}:E:Q} = ${_OPSYS_EXE_SUFFIX:E:Q} || \
+			${LN} -fs ${TOOLS_CMD.${_t_}:T:Q}		\
+				${TOOLS_CMD.${_t_}:Q}${_OPSYS_EXE_SUFFIX}; \
+	}								\
+	@}								\
+	${TOUCH} ${.TARGET}
