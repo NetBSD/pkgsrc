@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2022/10/12 20:59:19 markd Exp $
+# $NetBSD: Makefile,v 1.19 2022/11/23 16:21:03 adam Exp $
 
 PKGNAME=	${DISTNAME:S/-/-tray-monitor-qt5-/}
+PKGREVISION=	1
 COMMENT=	System tray monitor for Bacula - The Network Backup Solution
 
 DISTINFO_FILE=		${.CURDIR}/../../sysutils/bacula/distinfo

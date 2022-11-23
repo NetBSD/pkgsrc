@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2022/10/19 03:40:37 gutteridge Exp $
+# $NetBSD: Makefile,v 1.14 2022/11/23 16:21:16 adam Exp $
 
 DISTNAME=	fvwm3-1.0.5
+PKGREVISION=	1
 CATEGORIES=	wm x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fvwmorg/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}

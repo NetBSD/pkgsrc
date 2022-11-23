@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2022/04/18 19:12:03 adam Exp $
+# $NetBSD: Makefile,v 1.7 2022/11/23 16:21:04 adam Exp $
 
 COLLECTD_PACKAGE=	mongodb
 COLLECTD_PLUGINS=	write_mongodb
 
 COMMENT=		Statistics collection daemon - write_mongodb plugin
-PKGREVISION=		3
+PKGREVISION=		4
 
 .include "../../databases/mongo-c-driver/buildlink3.mk"
 COLLECTD_LIB.mongoc=	yes # help says argument is the path, but everything but "yes" disables

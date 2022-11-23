@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.76 2022/10/29 15:48:59 tnn Exp $
+# $NetBSD: Makefile,v 1.77 2022/11/23 16:20:32 adam Exp $
 
 DISTNAME=	dbmail-3.3.1
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dbmail/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

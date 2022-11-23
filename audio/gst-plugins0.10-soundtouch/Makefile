@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2022/04/18 19:10:22 adam Exp $
+# $NetBSD: Makefile,v 1.8 2022/11/23 16:19:20 adam Exp $
 
 GST_PLUGINS0.10_NAME=	soundtouch
 GST_PLUGINS0.10_DIRS=	ext/soundtouch
 
 USE_LANGUAGES=		c c++
-PKGREVISION= 6
+PKGREVISION= 7
 .include "../../multimedia/gst-plugins0.10-bad/Makefile.common"
 USE_LANGUAGES=		c c++
 

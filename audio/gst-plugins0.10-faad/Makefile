@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2022/04/18 19:10:21 adam Exp $
+# $NetBSD: Makefile,v 1.17 2022/11/23 16:19:19 adam Exp $
 #
 
 GST_PLUGINS0.10_NAME=	faad
 GST_PLUGINS0.10_DIRS=	ext/faad
-PKGREVISION=		8
+PKGREVISION=		9
 
 .include "../../multimedia/gst-plugins0.10-bad/Makefile.common"
 

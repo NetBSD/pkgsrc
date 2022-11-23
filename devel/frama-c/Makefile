@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.106 2022/11/20 22:15:31 wiz Exp $
+# $NetBSD: Makefile,v 1.107 2022/11/23 16:19:48 adam Exp $
 
 DISTNAME=	frama-c-25.0-Manganese
 PKGNAME=	${DISTNAME:S/-Manganese//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	https://frama-c.com/download/
 

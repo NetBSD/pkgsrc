@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.85 2022/04/18 19:10:12 adam Exp $
+# $NetBSD: Makefile,v 1.86 2022/11/23 16:19:07 adam Exp $
 
 GITHUB_PROJECT=	libs-back
 GITHUB_TAG=	back-0_28_0
 DISTNAME=	back-0_28_0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	x11 gnustep
 PKGNAME=	gnustep-${DISTNAME:S/_/./g}
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gnustep/}

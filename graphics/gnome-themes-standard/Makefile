@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2022/08/11 05:08:42 gutteridge Exp $
+# $NetBSD: Makefile,v 1.23 2022/11/23 16:20:16 adam Exp $
 
 DISTNAME=	gnome-themes-standard-3.20.2
-PKGREVISION=	18
+PKGREVISION=	19
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-themes-standard/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz

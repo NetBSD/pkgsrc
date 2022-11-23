@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2022/09/07 06:50:47 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2022/11/23 16:18:38 adam Exp $
 
 BUILDLINK_TREE+=	hs-hls-refine-imports-plugin
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-hls-refine-imports-plugin
 HS_HLS_REFINE_IMPORTS_PLUGIN_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-hls-refine-imports-plugin+=	hs-hls-refine-imports-plugin>=1.0.1
-BUILDLINK_ABI_DEPENDS.hs-hls-refine-imports-plugin+=	hs-hls-refine-imports-plugin>=1.0.1.0nb4
+BUILDLINK_ABI_DEPENDS.hs-hls-refine-imports-plugin+=	hs-hls-refine-imports-plugin>=1.0.1.0nb5
 BUILDLINK_PKGSRCDIR.hs-hls-refine-imports-plugin?=	../../devel/hs-hls-refine-imports-plugin
 
 .include "../../converters/hs-aeson/buildlink3.mk"

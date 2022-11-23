@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.34 2022/10/26 10:31:08 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.35 2022/11/23 16:19:03 adam Exp $
 
 BUILDLINK_TREE+=	liblrdf
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	liblrdf
 LIBLRDF_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.liblrdf+=	liblrdf>=0.4.0nb1
-BUILDLINK_ABI_DEPENDS.liblrdf+=	liblrdf>=0.6.1nb10
+BUILDLINK_ABI_DEPENDS.liblrdf+=	liblrdf>=0.6.1nb11
 BUILDLINK_PKGSRCDIR.liblrdf?=	../../textproc/liblrdf
 
 .include "../../textproc/raptor2/buildlink3.mk"

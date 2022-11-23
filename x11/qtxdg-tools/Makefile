@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2022/11/10 01:03:34 gutteridge Exp $
+# $NetBSD: Makefile,v 1.3 2022/11/23 16:21:28 adam Exp $
 
 DISTNAME=	qtxdg-tools-3.10.0
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}

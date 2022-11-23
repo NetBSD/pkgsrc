@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2022/10/20 12:11:51 nros Exp $
+# $NetBSD: Makefile,v 1.31 2022/11/23 16:19:43 adam Exp $
 
 DISTNAME=	qore-sqlite3-module-1.0.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=qorelanguage/}
 GITHUB_PROJECT=	module-sqlite3

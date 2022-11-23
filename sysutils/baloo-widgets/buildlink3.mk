@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2022/09/11 12:51:10 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2022/11/23 16:19:00 adam Exp $
 
 BUILDLINK_TREE+=	baloo-widgets
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	baloo-widgets
 BALOO_WIDGETS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.baloo-widgets+=	baloo-widgets>=16.04.0
-BUILDLINK_ABI_DEPENDS.baloo-widgets?=	baloo-widgets>=20.12.3nb9
+BUILDLINK_ABI_DEPENDS.baloo-widgets?=	baloo-widgets>=22.08.1nb1
 BUILDLINK_PKGSRCDIR.baloo-widgets?=	../../sysutils/baloo-widgets
 
 .include "../../sysutils/baloo5/buildlink3.mk"

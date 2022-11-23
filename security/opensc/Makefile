@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2022/04/18 19:12:00 adam Exp $
+# $NetBSD: Makefile,v 1.37 2022/11/23 16:21:01 adam Exp $
 
 DISTNAME=	opensc-0.20.0
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenSC/}
 

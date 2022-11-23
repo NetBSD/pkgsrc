@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.53 2022/08/11 05:08:13 gutteridge Exp $
+# $NetBSD: Makefile,v 1.54 2022/11/23 16:19:53 adam Exp $
 TRYTON_MODULE_NAME=	tryton
-PKGREVISION= 4
+PKGREVISION= 5
 .include "../../devel/py-trytond/Makefile.common"
 CATEGORIES=	devel python
 

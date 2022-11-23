@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2022/09/07 06:50:47 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2022/11/23 16:18:38 adam Exp $
 
 BUILDLINK_TREE+=	hs-hls-fourmolu-plugin
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-hls-fourmolu-plugin
 HS_HLS_FOURMOLU_PLUGIN_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-hls-fourmolu-plugin+=	hs-hls-fourmolu-plugin>=1.0.2
-BUILDLINK_ABI_DEPENDS.hs-hls-fourmolu-plugin+=	hs-hls-fourmolu-plugin>=1.0.2.0nb4
+BUILDLINK_ABI_DEPENDS.hs-hls-fourmolu-plugin+=	hs-hls-fourmolu-plugin>=1.0.2.0nb5
 BUILDLINK_PKGSRCDIR.hs-hls-fourmolu-plugin?=	../../devel/hs-hls-fourmolu-plugin
 
 .include "../../devel/fourmolu/buildlink3.mk"

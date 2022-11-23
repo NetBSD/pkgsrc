@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.58 2022/04/18 19:11:41 adam Exp $
+# $NetBSD: Makefile,v 1.59 2022/11/23 16:20:41 adam Exp $
 
 DISTNAME=	sweeper-16.12.0
-PKGREVISION=	25
+PKGREVISION=	26
 CATEGORIES=	sysutils
 COMMENT=	KDE system cleaner
 MASTER_SITES=	${MASTER_SITE_KDE:=applications/16.12.0/src/}

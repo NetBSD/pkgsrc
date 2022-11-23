@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2022/04/18 19:10:06 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2022/11/23 16:19:00 adam Exp $
 
 BUILDLINK_TREE+=	xmlsec1
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	xmlsec1
 XMLSEC1_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.xmlsec1+=	xmlsec1>=1.2.6nb6
-BUILDLINK_ABI_DEPENDS.xmlsec1+=	xmlsec1>=1.2.33nb1
+BUILDLINK_ABI_DEPENDS.xmlsec1+=	xmlsec1>=1.2.33nb2
 BUILDLINK_PKGSRCDIR.xmlsec1?=	../../security/xmlsec1
 BUILDLINK_INCDIRS.xmlsec1+=	include/xmlsec1
 BUILDLINK_CPPFLAGS.xmlsec1+=	-DXMLSEC_CRYPTO_OPENSSL
