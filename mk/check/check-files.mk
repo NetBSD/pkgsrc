@@ -1,4 +1,4 @@
-# $NetBSD: check-files.mk,v 1.37 2020/12/20 19:49:25 gutteridge Exp $
+# $NetBSD: check-files.mk,v 1.38 2022/11/23 11:55:43 jperkin Exp $
 #
 # This file checks that the list of installed files matches the PLIST.
 # For that purpose it records the file list of LOCALBASE before and
@@ -279,7 +279,7 @@ ${_CHECK_FILES_MISSING}: ${_CHECK_FILES_EXPECTED} ${_CHECK_FILES_ADDED}
 
 ${_CHECK_FILES_MISSING_REAL}: ${_CHECK_FILES_MISSING}
 	${RUN}					\
-	${CAT} ${_CHECK_FILES_MISSING} | ${_CHECK_FILES_SKIP_FILTER}	\
+	${_CHECK_FILES_SKIP_FILTER} < ${_CHECK_FILES_MISSING} 		\
 		> ${.TARGET} || ${TRUE}
 
 ${_CHECK_FILES_MISSING_SKIP}:						\
@@ -305,29 +305,26 @@ ${_CHECK_FILES_ERRMSG.prefix}:						\
 		${_CHECK_FILES_MISSING_REAL}				\
 		${_CHECK_FILES_MISSING_SKIP}				\
 		${_CHECK_FILES_EXTRA}
-	${RUN}${RM} -f ${.TARGET}
-	${RUN}					\
-	if ${_NONZERO_FILESIZE_P} ${_CHECK_FILES_DELETED}; then		\
+	${RUN}								\
+	${RM} -f ${.TARGET};						\
+	if [ -s ${_CHECK_FILES_DELETED} ]; then				\
 		${ECHO} "The following files have been deleted"		\
 			"from ${PREFIX}!";				\
 		${SED} "s|^|        |" ${_CHECK_FILES_DELETED};		\
-	fi >> ${.TARGET}
-	${RUN}					\
-	if ${_NONZERO_FILESIZE_P} ${_CHECK_FILES_MISSING_REAL}; then	\
+	fi >> ${.TARGET};						\
+	if [ -s ${_CHECK_FILES_MISSING_REAL} ]; then			\
 		${ECHO} "************************************************************"; \
 		${ECHO} "The following files are in the"		\
-			"PLIST but not in ${DESTDIR}${PREFIX}:";			\
+			"PLIST but not in ${DESTDIR}${PREFIX}:";	\
 		${SED} "s|^|        |" ${_CHECK_FILES_MISSING_REAL};	\
-	fi >> ${.TARGET}
-	${RUN}					\
-	if ${_NONZERO_FILESIZE_P} ${_CHECK_FILES_EXTRA}; then		\
+	fi >> ${.TARGET};						\
+	if [ -s ${_CHECK_FILES_EXTRA} ]; then				\
 		${ECHO} "************************************************************"; \
 		${ECHO} "The following files are in"			\
-			"${DESTDIR}${PREFIX} but not in the PLIST:";		\
+			"${DESTDIR}${PREFIX} but not in the PLIST:";	\
 		${SED} "s|^|        |" ${_CHECK_FILES_EXTRA};		\
-	fi >> ${.TARGET}
-	${RUN}					\
-	if ${_NONZERO_FILESIZE_P} ${_CHECK_FILES_MISSING_SKIP}; then	\
+	fi >> ${.TARGET};						\
+	if [ -s ${_CHECK_FILES_MISSING_SKIP} ]; then			\
 		${ECHO} "************************************************************"; \
 		${ECHO} "The following files are in both the"		\
 			"PLIST and CHECK_FILES_SKIP:";			\
