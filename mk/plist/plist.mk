@@ -1,4 +1,4 @@
-# $NetBSD: plist.mk,v 1.57 2022/10/17 18:08:02 jperkin Exp $
+# $NetBSD: plist.mk,v 1.58 2022/11/23 13:15:02 jperkin Exp $
 #
 # This Makefile fragment handles the creation of PLISTs for use by
 # pkg_create(8).
@@ -262,11 +262,15 @@ plist: ${PLIST} ${_PLIST_NOKEYWORDS}
 ${PLIST}: ${PLIST_SRC}
 .endif
 ${PLIST}:
-	${RUN} ${MKDIR} ${.TARGET:H}
-	${RUN} { ${_GENERATE_PLIST} } > ${.TARGET}-1src
-	${RUN} ${PKGSRC_SETENV} ${_PLIST_AWK_ENV} ${AWK} ${_PLIST_1_AWK} < ${.TARGET}-1src > ${.TARGET}-2mac
-	${RUN} ${PKGSRC_SETENV} ${_PLIST_AWK_ENV} ${AWK} ${_PLIST_AWK} < ${.TARGET}-2mac > ${.TARGET}-3mag
-	${RUN} ${PKGSRC_SETENV} ${_PLIST_AWK_ENV} ${AWK} ${_PLIST_SHLIB_AWK} < ${.TARGET}-3mag > ${.TARGET}
+	${RUN}								\
+	${TEST} -d ${.TARGET:H} || ${MKDIR} ${.TARGET:H};		\
+	{ ${_GENERATE_PLIST} } > ${.TARGET}-1src;			\
+	${PKGSRC_SETENV} ${_PLIST_AWK_ENV} ${AWK}			\
+		${_PLIST_1_AWK} < ${.TARGET}-1src > ${.TARGET}-2mac;	\
+	${PKGSRC_SETENV} ${_PLIST_AWK_ENV} ${AWK}			\
+		${_PLIST_AWK} < ${.TARGET}-2mac > ${.TARGET}-3mag;	\
+	${PKGSRC_SETENV} ${_PLIST_AWK_ENV} ${AWK}			\
+		${_PLIST_SHLIB_AWK} < ${.TARGET}-3mag > ${.TARGET}
 
 ${_PLIST_NOKEYWORDS}: ${PLIST}
 	${RUN} ${AWK} < ${PLIST} > ${.TARGET} '				\
@@ -275,16 +279,15 @@ ${_PLIST_NOKEYWORDS}: ${PLIST}
 
 .if defined(INFO_FILES)
 INFO_FILES_cmd=								\
-	${CAT} ${PLIST} |						\
-	${PKGSRC_SETENV} ${_PLIST_AWK_ENV} ${AWK} ${_PLIST_INFO_AWK} |	\
-	${AWK} '($$0 !~ "-[0-9]*(\\.gz)?$$") { print }'
+	${PKGSRC_SETENV} ${_PLIST_AWK_ENV} ${AWK}			\
+		${_PLIST_INFO_AWK} ${PLIST} |				\
+		${AWK} '($$0 !~ "-[0-9]*(\\.gz)?$$") { print }'
 .endif
 
 ICON_THEMES_cmd=							\
-	${CAT} ${PLIST} |						\
 	${PKGSRC_SETENV} ${_PLIST_AWK_ENV} ${AWK} -F /			\
-	'$$0 ~ "^share/icons/[^/]+/.*$$" { print $$3 }' |		\
-	${SORT} -u
+		'$$0 ~ "^share/icons/[^/]+/.*$$" { print $$3 }'		\
+		${PLIST} | ${SORT} -u
 
 ######################################################################
 ### plist-clean (PRIVATE)
