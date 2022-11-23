@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5630 2022/11/23 08:50:19 thor Exp $
+$NetBSD: CHANGES-2022,v 1.5631 2022/11/23 10:46:05 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8523,3 +8523,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/openvpn to 2.5.8 [adam 2022-11-23]
 	Updated devel/meson to 0.64.1 [adam 2022-11-23]
 	Updated mail/claws-mail to 4.1.1nb5 [thomas 2022-11-23]
+	Updated editors/tp-note to 1.19.4 [pin 2022-11-23]
