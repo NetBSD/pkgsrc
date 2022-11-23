@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.250 2022/07/09 08:19:18 rillig Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.251 2022/11/23 10:57:59 jperkin Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -396,9 +396,7 @@ BUILDLINK_PKGNAME.${_pkg_}?=	${_BLNK_PKG_DBDIR.${_pkg_}:T}
 .  if !defined(BUILDLINK_PREFIX.${_pkg_})
 .    if empty(BUILDLINK_PKGNAME.${_pkg_}:M*not_found)
 BUILDLINK_PREFIX.${_pkg_}!=						\
-	${TRUE} Computing BUILDLINK_PREFIX.${_pkg_:Q};			\
-	${_BLNK_PKG_INFO.${_pkg_}} -qp ${BUILDLINK_PKGNAME.${_pkg_}} |	\
-	${SED}  -e "s,^[^/]*,,;q"
+	${_BLNK_PKG_INFO.${_pkg_}} -Q LOCALBASE ${BUILDLINK_PKGNAME.${_pkg_}}
 .    else
 BUILDLINK_PREFIX.${_pkg_}=	BUILDLINK_PREFIX.${_pkg_}_not_found
 .    endif
