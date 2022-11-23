@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5629 2022/11/23 08:19:04 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5630 2022/11/23 08:50:19 thor Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8522,3 +8522,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated geography/qgis to 3.22.13 [gdt 2022-11-23]
 	Updated net/openvpn to 2.5.8 [adam 2022-11-23]
 	Updated devel/meson to 0.64.1 [adam 2022-11-23]
+	Updated mail/claws-mail to 4.1.1nb5 [thomas 2022-11-23]
