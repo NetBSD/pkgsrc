@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5634 2022/11/23 12:46:46 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5635 2022/11/23 13:11:20 micha Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8536,3 +8536,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/gtk3 to 3.24.35 [adam 2022-11-23]
 	Updated lang/nodejs to 18.12.1 [adam 2022-11-23]
 	Updated lang/nodejs16 to 16.18.1 [adam 2022-11-23]
+	Updated graphics/graphviz to 7.0.2 [micha 2022-11-23]
