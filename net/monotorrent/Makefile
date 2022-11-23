@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2022/04/18 19:10:03 adam Exp $
+# $NetBSD: Makefile,v 1.37 2022/11/23 16:18:58 adam Exp $
 
 DISTNAME=	monotorrent-0.72
-PKGREVISION=	28
+PKGREVISION=	29
 CATEGORIES=	net
 MASTER_SITES=	http://projects.qnetp.net/attachments/download/13/
 

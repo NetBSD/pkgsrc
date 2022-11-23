@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2022/11/15 18:30:07 adam Exp $
+# $NetBSD: Makefile,v 1.22 2022/11/23 16:20:30 adam Exp $
 
+PKGREVISION= 1
 .include "../../lang/clang/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/clang/clang-tools-extra/:S/.src//}

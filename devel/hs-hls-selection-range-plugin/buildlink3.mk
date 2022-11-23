@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2022/09/07 06:50:47 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2022/11/23 16:18:39 adam Exp $
 
 BUILDLINK_TREE+=	hs-hls-selection-range-plugin
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-hls-selection-range-plugin
 HS_HLS_SELECTION_RANGE_PLUGIN_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-hls-selection-range-plugin+=	hs-hls-selection-range-plugin>=1.0.0
-BUILDLINK_ABI_DEPENDS.hs-hls-selection-range-plugin+=	hs-hls-selection-range-plugin>=1.0.0.0nb4
+BUILDLINK_ABI_DEPENDS.hs-hls-selection-range-plugin+=	hs-hls-selection-range-plugin>=1.0.0.0nb5
 BUILDLINK_PKGSRCDIR.hs-hls-selection-range-plugin?=	../../devel/hs-hls-selection-range-plugin
 
 .include "../../converters/hs-aeson/buildlink3.mk"

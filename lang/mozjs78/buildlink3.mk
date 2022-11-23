@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2022/06/28 11:34:14 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2022/11/23 16:18:50 adam Exp $
 
 BUILDLINK_TREE+=	mozjs78
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	mozjs78
 MOZJS78_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.mozjs78+=	mozjs78>=78.3.0
-BUILDLINK_ABI_DEPENDS.mozjs78?=	mozjs78>=78.15.0nb3
+BUILDLINK_ABI_DEPENDS.mozjs78?=	mozjs78>=78.15.0nb4
 BUILDLINK_PKGSRCDIR.mozjs78?=	../../lang/mozjs78
 
 .include "../../devel/zlib/buildlink3.mk"

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.49 2022/10/26 10:31:44 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2022/11/23 16:20:46 adam Exp $
 
 DISTNAME=	kscd-${_KDE_VERSION}
-PKGREVISION=	33
+PKGREVISION=	34
 CATEGORIES=	multimedia
 COMMENT=	KDE CD player
 
