@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.59 2022/11/08 09:04:22 adam Exp $
+$NetBSD: distinfo,v 1.60 2022/11/23 13:19:09 adam Exp $
 
-BLAKE2s (Faker-15.3.1.tar.gz) = 95090ffbbbe054d7288f52bc6399076305a62516c051397a86e1b5f2fae0697b
-SHA512 (Faker-15.3.1.tar.gz) = 8dce318ee0e8959b7f7da4b5fda792476a7b4f8bc22a2acead29131e0f6c97fb0b84522cc2865264276f65606e8559ae3213f4671e4c701301845986920ecf9d
-Size (Faker-15.3.1.tar.gz) = 1598695 bytes
+BLAKE2s (Faker-15.3.3.tar.gz) = 2cb0ff0d36134e5db38fb79e4189ccecd6bcb571fd1f838778a6675e1c15ef5e
+SHA512 (Faker-15.3.3.tar.gz) = 371516d95941921f5180107beba633a40df719a38f6b752f38857be15ae7befcb602c1b3f16ccbbaa7e8aa2c6b158c70aea38a112d65234d334ce1f370c91b87
+Size (Faker-15.3.3.tar.gz) = 1598995 bytes
