@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5635 2022/11/23 13:11:20 micha Exp $
+$NetBSD: CHANGES-2022,v 1.5636 2022/11/23 13:20:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8537,3 +8537,6 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/nodejs to 18.12.1 [adam 2022-11-23]
 	Updated lang/nodejs16 to 16.18.1 [adam 2022-11-23]
 	Updated graphics/graphviz to 7.0.2 [micha 2022-11-23]
+	Updated lang/nodejs14 to 14.21.1 [adam 2022-11-23]
+	Updated sysutils/ansible-lint to 6.8.7 [adam 2022-11-23]
+	Updated devel/py-faker to 15.3.3 [adam 2022-11-23]
