@@ -1,4 +1,4 @@
-# $NetBSD: check-wrkref.mk,v 1.25 2020/04/26 14:23:25 rillig Exp $
+# $NetBSD: check-wrkref.mk,v 1.26 2022/11/23 11:55:43 jperkin Exp $
 #
 # This file checks that the installed files don't contain any strings
 # that point to the directory where the package had been built, to make
@@ -82,10 +82,8 @@ privileged-install-hook: _check-wrkref
 .endif
 
 _check-wrkref: error-check .PHONY
-	@${STEP_MSG} "Checking for work-directory references in ${PKGNAME}"
-	${RUN} rm -f ${ERROR_DIR}/${.TARGET}
-	${RUN}					\
-	exec 1>${ERROR_DIR}/${.TARGET};					\
+	${RUN}								\
+	${STEP_MSG} "Checking for work-directory references in ${PKGNAME}"; \
 	${_CHECK_WRKREF_FILELIST_CMD} | ${SORT} |			\
 	while read file; do						\
 		case "$$file" in					\
@@ -93,12 +91,16 @@ _check-wrkref: error-check .PHONY
 		*) ;;							\
 		esac;							\
 		${SHCOMMENT} "[$$file]";				\
-		${EGREP} ${_CHECK_WRKREF_DIRS:ts|:Q} "${DESTDIR}$$file" \
-		    2>/dev/null | ${SED} -e "s|^|$$file:	|";	\
-	done
-	${RUN}								\
+		${ECHO} "${DESTDIR}$$file" >>${ERROR_DIR}/${.TARGET}.tmp; \
+	done;								\
+	if [ -s ${ERROR_DIR}/${.TARGET}.tmp ]; then			\
+		${XARGS} -n 256 ${EGREP} ${_CHECK_WRKREF_DIRS:ts|:Q}	\
+			< ${ERROR_DIR}/${.TARGET}.tmp 2>/dev/null	\
+			>${ERROR_DIR}/${.TARGET} || ${TRUE};		\
+		${RM} -f ${ERROR_DIR}/${.TARGET}.tmp;			\
+	fi;								\
 	exec 1>>${ERROR_DIR}/${.TARGET};				\
-	if ${_NONZERO_FILESIZE_P} ${ERROR_DIR}/${.TARGET}; then		\
+	if [ -s ${ERROR_DIR}/${.TARGET} ]; then				\
 		${ECHO} "*** The above files still have references to the build directory."; \
 		${ECHO} "    This is possibly an error that should be fixed by unwrapping"; \
 		${ECHO} "    the files or adding missing tools to the package makefile!"; \
