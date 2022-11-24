@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.locale,v 1.12 2019/10/16 21:16:47 wiz Exp $
+@comment $NetBSD: PLIST.locale,v 1.13 2022/11/24 12:16:03 wiz Exp $
 share/locale/ca.us-ascii/LC_MESSAGES/texinfo_document.mo
 share/locale/ca/LC_MESSAGES/texinfo.mo
 share/locale/ca/LC_MESSAGES/texinfo_document.mo
@@ -14,6 +14,7 @@ share/locale/eo/LC_MESSAGES/texinfo_document.mo
 share/locale/es/LC_MESSAGES/texinfo.mo
 share/locale/es/LC_MESSAGES/texinfo_document.mo
 share/locale/fi/LC_MESSAGES/texinfo.mo
+share/locale/fi/LC_MESSAGES/texinfo_document.mo
 share/locale/fr/LC_MESSAGES/texinfo.mo
 share/locale/fr/LC_MESSAGES/texinfo_document.mo
 share/locale/he/LC_MESSAGES/texinfo.mo
@@ -38,9 +39,12 @@ share/locale/pt_BR.us-ascii/LC_MESSAGES/texinfo_document.mo
 share/locale/pt_BR/LC_MESSAGES/texinfo.mo
 share/locale/pt_BR/LC_MESSAGES/texinfo_document.mo
 share/locale/ro/LC_MESSAGES/texinfo.mo
+share/locale/ro/LC_MESSAGES/texinfo_document.mo
 share/locale/ru/LC_MESSAGES/texinfo.mo
 share/locale/rw/LC_MESSAGES/texinfo.mo
 share/locale/sl/LC_MESSAGES/texinfo.mo
+share/locale/sr/LC_MESSAGES/texinfo.mo
+share/locale/sr/LC_MESSAGES/texinfo_document.mo
 share/locale/sv/LC_MESSAGES/texinfo.mo
 share/locale/sv/LC_MESSAGES/texinfo_document.mo
 share/locale/tr/LC_MESSAGES/texinfo.mo
