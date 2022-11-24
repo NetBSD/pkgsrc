@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5646 2022/11/24 11:42:10 nros Exp $
+$NetBSD: CHANGES-2022,v 1.5647 2022/11/24 11:59:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8553,3 +8553,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added x11/qt6-qtbase to 6.4.1 [nros 2022-11-24]
 	Added databases/qt6-odbc version 6.4.1 [nros 2022-11-24]
 	Added databases/qt6-psql version 6.4.1 [nros 2022-11-24]
+	Updated security/botan2 to 2.19.3 [wiz 2022-11-24]
