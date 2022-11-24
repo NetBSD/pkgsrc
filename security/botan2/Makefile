@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2022/11/09 13:14:16 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2022/11/24 11:59:30 wiz Exp $
 
-DISTNAME=	Botan-2.19.2
+DISTNAME=	Botan-2.19.3
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	security
 MASTER_SITES=	https://botan.randombit.net/releases/
@@ -42,9 +42,9 @@ CONFIGURE_ARGS+=	--cpu=i386
 CONFIGURE_ARGS+=	--cpu=ppc
 .elif ${MACHINE_ARCH} == "powerpc64"
 CONFIGURE_ARGS+=	--cpu=ppc64
-.elif !empty(MACHINE_ARCH:Maarch64*)
+.elif ${MACHINE_ARCH:Maarch64*}
 CONFIGURE_ARGS+=	--cpu=arm64
-.elif !empty(MACHINE_ARCH:Mearm*)
+.elif ${MACHINE_ARCH:Mearm*}
 CONFIGURE_ARGS+=	--cpu=arm32
 .endif
 
