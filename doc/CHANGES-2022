@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5640 2022/11/23 22:35:51 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5641 2022/11/24 02:25:54 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8547,3 +8547,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added textproc/md4c version 0.4.8 [nros 2022-11-23]
 	Updated textproc/py-ICU to 2.10.2 [adam 2022-11-23]
 	Updated lang/py-pygls to 0.13.0 [adam 2022-11-23]
+	Updated wm/marco to 1.26.1 [gutteridge 2022-11-24]
