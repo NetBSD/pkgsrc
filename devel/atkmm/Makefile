@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2022/06/28 11:31:39 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2022/11/24 05:54:48 adam Exp $
 
-DISTNAME=	atkmm-2.28.2
-PKGREVISION=	2
+DISTNAME=	atkmm-2.28.3
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/atkmm/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -17,6 +16,8 @@ CONFLICTS+=	gtkmm<2.22.0
 USE_LANGUAGES=		c c++11
 USE_TOOLS+=		perl pkg-config
 PKGCONFIG_OVERRIDE+=	atk/atkmm.pc.in
+
+MESON_REQD+=	0.55.0
 
 .include "../../devel/atk/buildlink3.mk"
 .include "../../devel/glibmm/buildlink3.mk"
