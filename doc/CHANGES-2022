@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5654 2022/11/24 16:31:06 nros Exp $
+$NetBSD: CHANGES-2022,v 1.5655 2022/11/24 19:01:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8562,3 +8562,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Added graphics/qt6-qtsvg version 6.4.1 [nros 2022-11-24]
 	Added graphics/qt6-qtimageformats version 6.4.1 [nros 2022-11-24]
 	Added graphics/qt6-qtshadertools version 6.4.1 [nros 2022-11-24]
+	Updated finance/bitcoin to 24.0 [adam 2022-11-24]
+	Updated devel/py-setuptools to 65.6.3 [adam 2022-11-24]
