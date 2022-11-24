@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.574 2022/11/11 14:13:11 taca Exp $
+# $NetBSD: Makefile,v 1.575 2022/11/24 15:27:02 pin Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -127,6 +127,7 @@ SUBDIR+=	kalzium
 SUBDIR+=	kanjidic
 SUBDIR+=	kanjidic2
 SUBDIR+=	kanjipad
+SUBDIR+=	katbin-cli
 SUBDIR+=	kbruch
 SUBDIR+=	kcharselect
 SUBDIR+=	kchmviewer
