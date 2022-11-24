@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2021/04/08 21:21:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2022/11/24 05:57:12 adam Exp $
 include/gdkmm-3.0/gdkmm.h
 include/gdkmm-3.0/gdkmm/applaunchcontext.h
 include/gdkmm-3.0/gdkmm/color.h
@@ -547,6 +547,7 @@ lib/gdkmm-3.0/include/gdkmmconfig.h
 lib/gtkmm-3.0/include/gtkmmconfig.h
 lib/gtkmm-3.0/proc/m4/child_property.m4
 lib/gtkmm-3.0/proc/m4/class_gtkobject.m4
+lib/gtkmm-3.0/proc/m4/class_shared.m4
 lib/gtkmm-3.0/proc/m4/convert.m4
 lib/gtkmm-3.0/proc/m4/convert_gdk.m4
 lib/gtkmm-3.0/proc/m4/convert_gtk.m4
