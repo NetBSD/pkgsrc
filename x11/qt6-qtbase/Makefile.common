@@ -1,0 +1,83 @@
+# $NetBSD: Makefile.common,v 1.1 2022/11/24 11:11:38 nros Exp $
+# used by x11/qt6-qtbase/Makefile
+
+.include "../../meta-pkgs/qt6/Makefile.common"
+
+.include "../../mk/dlopen.buildlink3.mk"
+BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
+
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		gmake perl:build pkg-config
+
+# https://doc.qt.io/qt-6/supported-platforms.html
+GCC_REQD+=		9
+
+# Avoid failures to due 'register' usage in X11 headers.
+CXXFLAGS+=		-Wno-register
+
+# wcstof(3) etc. is used in C++ code.
+CFLAGS.NetBSD+=		-D_NETBSD_SOURCE
+
+# ld: undefined symbol qt_version_tag
+CFLAGS.SunOS+=		-DQT_NO_VERSION_TAGGING
+
+# include/openssl/e_os2.h:283:25: error: '_Noreturn' does not name a type
+CXXFLAGS.SunOS+=	-D_Noreturn=""
+
+# for GL_GLEXT_LEGACY with GL/gl.h error, GL_ARB_shader_objects is not defined.
+BUILDLINK_TRANSFORM+=	rm:-Wundef
+
+MAKE_ENV+=		QTPREFIX=${QTPREFIX:Q}
+PLIST_VARS+=		notdarwin
+.if ${OPSYS} != "Darwin"
+PLIST.notdarwin=	yes
+.endif
+
+# pkgsrc does not set rpath during build
+# but qdbuscpp2xml and qdbuscpp2xml are
+# executed during build,
+# some libs also link to libs in lib so
+# this is needed by some ld:s to not
+# cause linking errors.
+MAKE_ENV+=		LD_LIBRARY_PATH=${WRKSRC}/lib
+
+
+# avoid creating a .qt directory in the users home directory
+SCRIPTS_ENV+=		HOME=${WRKDIR}
+
+.if "${PKGPATH}" != "x11/qt6-qtbase"
+CONFIGURE_ARGS+=	-cmake-use-default-generator
+.  if ${OPSYS} != "Darwin"
+CONFIGURE_ARGS+=	-- -DCMAKE_SKIP_RPATH:BOOL=TRUE
+.  endif
+QTCONFDIR?=		.
+do-configure:
+	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ${QTPREFIX}/bin/qt-configure-module ${QTCONFDIR} ${CONFIGURE_ARGS}
+.endif
+
+.if ${OPSYS} == "Darwin"
+.PHONY: fix-darwin-install-name
+post-install: fix-darwin-install-name
+fix-darwin-install-name:
+	${FIND} ${DESTDIR}${PREFIX} -name "*.dylib" -print |		\
+		while read lib; do					\
+		libname=`basename $${lib}`;				\
+		libdir=`dirname $${lib} | sed -e 's,${DESTDIR},,'`;	\
+		install_name_tool -id $${libdir}/$${libname} $${lib};	\
+	done
+.endif
+
+PKGCONFIG_OVERRIDE_STAGE=	post-build
+.PHONY: pkgconfig-link
+post-install: pkgconfig-link
+pkgconfig-link:
+	${RUN}	if ${TEST} -d ${DESTDIR}${QTPREFIX}/lib/pkgconfig; then			\
+		${ECHO} -- Linking pkg-config files to pkgconfig dir in prefix;		\
+		${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/pkgconfig;			\
+		${FIND} ${DESTDIR}${QTPREFIX}/lib/pkgconfig -name "*.pc" -print |	\
+			while read pcpath; do						\
+			pcfile=`basename $${pcpath}`;					\
+			cd ${DESTDIR}${PREFIX}/lib/pkgconfig && 			\
+			${LN} -f -s ${QTPREFIX}/lib/pkgconfig/$${pcfile} $${pcfile};	\
+		done									\
+		fi
