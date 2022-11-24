@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2022/11/24 11:41:35 nros Exp $
+qt6/lib/cmake/Qt6Sql/Qt6QPSQLDriverPluginAdditionalTargetInfo.cmake
+qt6/lib/cmake/Qt6Sql/Qt6QPSQLDriverPluginConfig.cmake
+qt6/lib/cmake/Qt6Sql/Qt6QPSQLDriverPluginConfigVersion.cmake
+qt6/lib/cmake/Qt6Sql/Qt6QPSQLDriverPluginConfigVersionImpl.cmake
+qt6/lib/cmake/Qt6Sql/Qt6QPSQLDriverPluginTargets-release.cmake
+qt6/lib/cmake/Qt6Sql/Qt6QPSQLDriverPluginTargets.cmake
+qt6/plugins/sqldrivers/libqsqlpsql.so
