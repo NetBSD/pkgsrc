@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.255 2022/11/24 13:56:14 jperkin Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.256 2022/11/24 13:59:20 jperkin Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -633,7 +633,6 @@ buildlink-${_pkg_}-cookie:
 
 BUILDLINK_CONTENTS_FILTER.${_pkg_}?=					\
 	${EGREP} '(include.*/|\.h$$|\.idl$$|\.pc$$|/lib[^/]*\.[^/]*$$|lib/cmake/|share/cmake/)'
-# XXX: Why not pkg_info -qL?
 BUILDLINK_FILES_CMD.${_pkg_}?=						\
 	${_BLNK_PKG_INFO.${_pkg_}} -f ${BUILDLINK_PKGNAME.${_pkg_}} |	\
 	${SED} -n '/File:/s/^[ 	]*File:[ 	]*//p' |		\
