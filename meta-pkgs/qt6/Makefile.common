@@ -1,0 +1,23 @@
+# $NetBSD: Makefile.common,v 1.1 2022/11/24 11:11:38 nros Exp $
+# used by x11/qt6-qtbase/Makefile.common
+
+QTVERSION=	6.4.1
+
+.include "../../mk/bsd.prefs.mk"
+
+MASTER_SITES=	http://download.qt.io/archive/qt/${QTVERSION:R}/${QTVERSION}/submodules/
+
+EXTRACT_SUFX=	.tar.xz
+EXTRACT_USING=	bsdtar
+
+MAINTAINER?=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://www.qt.io/
+
+# The qt6 packages install with prefix being a qt6 subdirectory, so
+# that it can be installed in parallel with qt5, rather than being an
+# alternative.  Various things may be necessary to use it from outside
+# of pkgsrc:
+#   1) Use the "configure" argument "--with-qt-dir=${PREFIX}/qt6"
+#   2) Use the "cmake" argument "-DCMAKE_SYSTEM_PREFIX_PATH:PATH=${PREFIX}/qt6"
+#   3) you may also have to put ${PREFIX}/qt6/bin in your PATH
+QTPREFIX=	${PREFIX}/qt6

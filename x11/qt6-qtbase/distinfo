@@ -1,0 +1,27 @@
+$NetBSD: distinfo,v 1.1 2022/11/24 11:11:38 nros Exp $
+
+BLAKE2s (qtbase-everywhere-src-6.4.1.tar.xz) = edd9109f0862cc1ea719e84d0aa85c15a1e28f0ad55ba9881a374828ee8ee7b8
+SHA512 (qtbase-everywhere-src-6.4.1.tar.xz) = d5c85a8b05dd32912e213b1c51c928e6bde0ac64cdef1649419f02522604988add9d8e45baa770f53790b5477e6e43e4e66e69db7f2e0c1081a48cfa4052b4af
+Size (qtbase-everywhere-src-6.4.1.tar.xz) = 47988872 bytes
+SHA1 (patch-cmake_QtBaseGlobalTargets.cmake) = c0fc89e5ea4c2ef88bbb8fbd3ef5231520d6d54f
+SHA1 (patch-cmake_QtBuildInternals_QtBuildInternalsConfig.cmake) = f58e8e445c73444d7f0c015dd8fda64a5a662ef7
+SHA1 (patch-cmake_QtFeature.cmake) = a8e83d33467205ce39fb6df70d6dd5fcd4172d89
+SHA1 (patch-cmake_QtProcessConfigureArgs.cmake) = 98fc5a3fd184accddbc39ef5fac04eb6f56f3a8a
+SHA1 (patch-mkspecs_features_qt__module.prf) = a04c4b1fe80250b6b3591f5486ac0fd3b5056c26
+SHA1 (patch-mkspecs_features_toolchain.prf) = 0cf13cb6e859dd6276954239b91953e557add515
+SHA1 (patch-qmake_generators_makefile.cpp) = 1bca636dc88f258876df54bd0c6c64114fa7411d
+SHA1 (patch-qmake_generators_unix_unixmake2.cpp) = 6ea4efd2ce88d7cf3c73e1dc2cdf984fe3b6af04
+SHA1 (patch-src_corelib_global_qglobal.cpp) = 6368692c2d5d64633d956a89c6b4607667c121a7
+SHA1 (patch-src_corelib_global_qversiontagging.h) = 7a91e19fe1eb9a5b97edb6be3a7bcbf6405b3eb8
+SHA1 (patch-src_corelib_io_qstandardpaths_unix.cpp) = b12a41da19b25e34e12fdf80714a37e8c46278f9
+SHA1 (patch-src_corelib_io_qstorageinfo_unix.cpp) = 9919194e9f6b47f1f311b8f8223a6a7519152073
+SHA1 (patch-src_corelib_plugin_qelfparser__p.cpp) = ba60f01a1c712c2da89f6b9edb662757b00119bb
+SHA1 (patch-src_corelib_qt__cmdline.cmake) = 25fe89821ba1e1323edae87ca1ee0bd5ccf0e407
+SHA1 (patch-src_corelib_thread_qmutex__p.h) = 47047f5af4383b622c59c3969145e44c6ac4bf18
+SHA1 (patch-src_corelib_thread_qwaitcondition__unix.cpp) = 9dffdbfc81bc7d3259020cd32b4039b7be6ee2bd
+SHA1 (patch-src_network_configure.cmake) = 754461c21574b99232efc95af3a80765b2edbecc
+SHA1 (patch-src_plugins_platforms_cocoa_qiosurfacegraphicsbuffer.mm) = 01afb2aef1d14370308c897c1d077b05c5e3f0a9
+SHA1 (patch-src_plugins_platforms_xcb_qxcbatom.cpp) = abbd0b04b881666e82f45adc18e49aafdb43d4be
+SHA1 (patch-src_plugins_platforms_xcb_qxcbconnection__basic.h) = e369001cba31e865adf010ab714ad132b96c1bef
+SHA1 (patch-src_tools_moc_main.cpp) = ebdddd657ba1c24657a9ca5624907e31a5d0c8bb
+SHA1 (patch-src_widgets_graphicsview_qgraphicsitem__p.h) = fd55d5ef6fde506849aab07f7ba23e856373b3a1
