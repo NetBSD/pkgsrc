@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.141 2022/11/23 16:20:13 adam Exp $
+# $NetBSD: Makefile,v 1.142 2022/11/24 12:44:09 gdt Exp $
 
 VERSION=		4.0.1
 PKGNAME=		camlimages-${VERSION}
@@ -39,8 +39,10 @@ do-install:
 	cd ${WRKSRC} && OCAMLFIND_DESTDIR=${DESTDIR}${PREFIX}/lib/ocaml/site-lib \
 		OCAMLFIND_LDCONF=/dev/null ${PREFIX}/bin/omake install
 
+OCAML_USE_FINDLIB=	yes
+
 BUILDLINK_API_DEPENDS.ocaml+=	ocaml>=3.11.0
-.include "../../lang/ocaml/buildlink3.mk"
+.include "../../lang/ocaml/ocaml.mk"
 .include "../../devel/nspr/buildlink3.mk"
 .include "../../x11/ocaml-graphics/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
