@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5648 2022/11/24 12:16:12 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.5649 2022/11/24 13:27:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8555,3 +8555,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Added databases/qt6-psql version 6.4.1 [nros 2022-11-24]
 	Updated security/botan2 to 2.19.3 [wiz 2022-11-24]
 	Updated devel/gtexinfo to 7.0 [wiz 2022-11-24]
+	Updated textproc/py-sphinx-copybutton to 0.5.1 [adam 2022-11-24]
+	Updated devel/py-types-toml to 0.10.8.1 [adam 2022-11-24]
