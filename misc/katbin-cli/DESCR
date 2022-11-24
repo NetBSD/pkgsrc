@@ -1,0 +1,4 @@
+CLI for working with katbin.
+
+To use it, simply run katbin 'text' and an URL with your paste will be printed
+to STDOUT.
