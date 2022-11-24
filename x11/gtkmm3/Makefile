@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.53 2022/11/23 16:19:07 adam Exp $
+# $NetBSD: Makefile,v 1.54 2022/11/24 05:57:12 adam Exp $
 
-DISTNAME=	gtkmm-3.24.5
+DISTNAME=	gtkmm-3.24.7
 PKGNAME=	${DISTNAME:S/gtkmm/gtkmm3/1}
-PKGREVISION=	5
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtkmm/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -17,6 +16,8 @@ GCC_REQD+=		4.9
 USE_TOOLS+=		perl pkg-config
 PKGCONFIG_OVERRIDE+=	gdk/gdkmm.pc.in
 PKGCONFIG_OVERRIDE+=	gtk/gtkmm.pc.in
+
+MESON_REQD+=	0.56.0
 
 BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.24.0
 .include "../../x11/gtk3/buildlink3.mk"
@@ -33,7 +34,7 @@ BUILDLINK_API_DEPENDS.glibmm+=	glibmm>=2.49.1
 .include "../../devel/meson/build.mk"
 BUILDLINK_API_DEPENDS.pangomm+=	pangomm>=2.38.2
 .include "../../devel/pangomm/buildlink3.mk"
-BUILDLINK_API_DEPENDS.cairomm+=	cairomm>=1.12.0
+BUILDLINK_API_DEPENDS.cairomm+=	cairomm>=1.14.0
 .include "../../graphics/cairomm/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gdk-pixbuf2+=	gdk-pixbuf2>=2.35.5
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
