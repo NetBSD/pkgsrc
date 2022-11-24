@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.15 2022/07/13 03:57:22 triaxx Exp $
+# $NetBSD: build.mk,v 1.16 2022/11/24 08:56:36 adam Exp $
 
 MESON_REQD?=	0
 .for version in ${MESON_REQD}
@@ -114,7 +114,7 @@ MESON_CROSS_ARGS+=	--cross-file ${MESON_CROSS_FILE:Q}
 do-configure: meson-configure
 meson-configure:
 .for d in ${CONFIGURE_DIRS}
-	cd ${WRKSRC} && cd ${d} && ${SETENV} ${MAKE_ENV} meson \
+	cd ${WRKSRC} && cd ${d} && ${SETENV} ${MAKE_ENV} meson setup \
 		--prefix ${PREFIX} \
 		--libdir lib \
 		--libexecdir libexec \
