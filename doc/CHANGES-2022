@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5649 2022/11/24 13:27:50 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5650 2022/11/24 15:23:59 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8557,3 +8557,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/gtexinfo to 7.0 [wiz 2022-11-24]
 	Updated textproc/py-sphinx-copybutton to 0.5.1 [adam 2022-11-24]
 	Updated devel/py-types-toml to 0.10.8.1 [adam 2022-11-24]
+	Updated editors/bred to 0.3.2 [pin 2022-11-24]
