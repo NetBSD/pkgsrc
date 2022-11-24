@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5653 2022/11/24 16:30:42 nros Exp $
+$NetBSD: CHANGES-2022,v 1.5654 2022/11/24 16:31:06 nros Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8561,3 +8561,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added misc/katbin-cli version 1.3.13 [pin 2022-11-24]
 	Added graphics/qt6-qtsvg version 6.4.1 [nros 2022-11-24]
 	Added graphics/qt6-qtimageformats version 6.4.1 [nros 2022-11-24]
+	Added graphics/qt6-qtshadertools version 6.4.1 [nros 2022-11-24]
