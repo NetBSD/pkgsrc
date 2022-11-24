@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.254 2022/11/24 13:21:22 ryoon Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.255 2022/11/24 13:56:14 jperkin Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -637,7 +637,7 @@ BUILDLINK_CONTENTS_FILTER.${_pkg_}?=					\
 BUILDLINK_FILES_CMD.${_pkg_}?=						\
 	${_BLNK_PKG_INFO.${_pkg_}} -f ${BUILDLINK_PKGNAME.${_pkg_}} |	\
 	${SED} -n '/File:/s/^[ 	]*File:[ 	]*//p' |		\
-	${BUILDLINK_CONTENTS_FILTER.${_pkg_}} | ${CAT}
+	${BUILDLINK_CONTENTS_FILTER.${_pkg_}} || ${TRUE}
 
 # _BLNK_FILES_CMD.<pkg> combines BUILDLINK_FILES_CMD.<pkg> and
 # BUILDLINK_FILES.<pkg> into one command that outputs all of the files
