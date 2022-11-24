@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.78 2022/07/10 22:34:30 wiz Exp $
+@comment $NetBSD: PLIST,v 1.79 2022/11/24 15:25:08 wiz Exp $
 bin/gimp
 bin/gimp-2.10
 bin/gimp-console
@@ -273,7 +273,7 @@ lib/gimp/2.0/plug-ins/despeckle/despeckle
 lib/gimp/2.0/plug-ins/destripe/destripe
 lib/gimp/2.0/plug-ins/edge-dog/edge-dog
 lib/gimp/2.0/plug-ins/emboss/emboss
-${PLIST.aalib}lib/gimp/2.0/plug-ins/file-aa
+${PLIST.aalib}lib/gimp/2.0/plug-ins/file-aa/file-aa
 lib/gimp/2.0/plug-ins/file-bmp/file-bmp
 lib/gimp/2.0/plug-ins/file-cel/file-cel
 lib/gimp/2.0/plug-ins/file-compressor/file-compressor
