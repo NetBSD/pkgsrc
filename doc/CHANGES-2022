@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5643 2022/11/24 11:13:22 nros Exp $
+$NetBSD: CHANGES-2022,v 1.5644 2022/11/24 11:29:15 nros Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8551,3 +8551,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/atkmm to 2.28.3 [adam 2022-11-24]
 	Updated x11/gtkmm3 to 3.24.7 [adam 2022-11-24]
 	Updated x11/qt6-qtbase to 6.4.1 [nros 2022-11-24]
+	Added databases/qt6-odbc version 6.4.1 [nros 2022-11-24]
