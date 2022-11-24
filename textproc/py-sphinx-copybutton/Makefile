@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2022/02/07 15:19:31 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2022/11/24 13:25:38 adam Exp $
 
-DISTNAME=	sphinx-copybutton-0.5.0
+DISTNAME=	sphinx-copybutton-0.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sphinx-copybutton/}
