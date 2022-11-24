@@ -1,4 +1,7 @@
 CLI for working with katbin.
 
+katbin is a small, lightweight pastebin+URL shortener written in Elixir using
+the Phoenix framework, i.e. a tool to share text, source code snippets, ...
+
 To use it, simply run katbin 'text' and an URL with your paste will be printed
 to STDOUT.
