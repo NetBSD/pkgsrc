@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.44 2022/11/23 22:33:29 adam Exp $
+@comment $NetBSD: PLIST,v 1.45 2022/11/24 12:56:03 adam Exp $
 bin/pa-info
 bin/pacat
 bin/pacmd
@@ -98,7 +98,7 @@ ${PLIST.gsettings}lib/pulseaudio/modules/module-gsettings.${SOEXT}
 lib/pulseaudio/modules/module-http-protocol-tcp.${SOEXT}
 lib/pulseaudio/modules/module-http-protocol-unix.${SOEXT}
 lib/pulseaudio/modules/module-intended-roles.${SOEXT}
-${PLIST.oss}lib/pulseaudio/modules/module-ladspa-sink.${SOEXT}
+lib/pulseaudio/modules/module-ladspa-sink.${SOEXT}
 ${PLIST.lirc}lib/pulseaudio/modules/module-lirc.${SOEXT}
 lib/pulseaudio/modules/module-loopback.${SOEXT}
 lib/pulseaudio/modules/module-match.${SOEXT}

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.85 2022/07/02 16:44:39 ryoon Exp $
+$NetBSD: distinfo,v 1.86 2022/11/24 12:56:03 adam Exp $
 
 BLAKE2s (pulseaudio-16.1.tar.xz) = 47f70e6e61a1848ecac531244782db89f3c7bae5fbaac11b87c3375c35201ed6
 SHA512 (pulseaudio-16.1.tar.xz) = 33b0b4292f05e0882f3ec822cf5720414bb34c523d80fe287b9740d6be219787c562e8024c9b0d9e2ee010771ca72c7ae4f27df1bbef9c9cb6bb6a23cbcc412f
@@ -13,7 +13,7 @@ SHA1 (patch-src_pulse_meson.build) = c17321e03fd03034b1974ff51a900ef379342ffd
 SHA1 (patch-src_pulsecore_core-rtclock.c) = f621124e0ae8704ddcbbdf1a03a8c898ba6468e2
 SHA1 (patch-src_pulsecore_creds.h) = a22cd7fa038cb3424f3ce6e4ce48fd86de6f0d9d
 SHA1 (patch-src_pulsecore_iochannel.c) = 7f67854d8a834c2a99e19a46c9013e84bd45bf68
-SHA1 (patch-src_pulsecore_meson.build) = dbb9247b5185b60f600ea21c3954a324cc007e77
+SHA1 (patch-src_pulsecore_meson.build) = 991ec4babd8504c4c71d5f400814d7d2b5c6350b
 SHA1 (patch-src_pulsecore_mix__neon.c) = 6f6d33d38024d65045d637d48276e1ba92b81342
 SHA1 (patch-src_pulsecore_shm.c) = c7079e8ac3461f5069e1415a2816784781aaa59c
 SHA1 (patch-src_tests_rtpoll-test.c) = 3584aeda2b6f7eb14af9cb5c665a31d972a306ae

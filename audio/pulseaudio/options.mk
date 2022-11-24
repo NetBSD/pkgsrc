@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.15 2022/07/02 16:44:39 ryoon Exp $
+# $NetBSD: options.mk,v 1.16 2022/11/24 12:56:03 adam Exp $
 
 .include "../../comms/lirc/available.mk"
 
@@ -21,9 +21,9 @@ MESON_ARGS+=		-Davahi=disabled
 
 .if !empty(PKG_OPTIONS:Mgsettings)
 PLIST.gsettings=	yes
-CONFIGURE_ARGS+=	--enable-gsettings
+MESON_ARGS+=		-Dgsettings=enabled
 .else
-CONFIGURE_ARGS+=	--disable-gsettings
+MESON_ARGS+=		-Dgsettings=disabled
 .endif
 
 .if !empty(PKG_OPTIONS:Mlirc)
