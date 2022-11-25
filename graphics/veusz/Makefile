@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2022/11/23 16:20:23 adam Exp $
+# $NetBSD: Makefile,v 1.76 2022/11/25 13:31:34 wiz Exp $
 
 DISTNAME=		veusz-3.1
 PKGREVISION=		15
@@ -28,6 +28,8 @@ INSTALLATION_DIRS+=	share/mime/packages
 
 ALL_ENV+=		QMAKE_EXE=${QTDIR}/bin/qmake
 ALL_ENV+=		SIP_DIR=${PREFIX}/share/sip${PYVERSSUFFIX}
+
+PYTHON_VERSIONS_INCOMPATIBLE+=	311 # py-sip
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/support/veusz.desktop \
