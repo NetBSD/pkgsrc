@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5672 2022/11/25 14:27:47 nros Exp $
+$NetBSD: CHANGES-2022,v 1.5673 2022/11/25 14:49:09 nros Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8584,3 +8584,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/py-pip-audit to 2.4.6 [adam 2022-11-25]
 	Added graphics/qt6-qtcharts version 6.4.1 [nros 2022-11-25]
 	Added graphics/qt6-qtdatavis3d version 6.4.1 [nros 2022-11-25]
+	Added graphics/qt6-qtlottie version 6.4.1 [nros 2022-11-25]
