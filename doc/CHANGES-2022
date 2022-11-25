@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5664 2022/11/25 10:41:36 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5665 2022/11/25 10:50:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8574,3 +8574,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/samba4 to 4.17.3 [wiz 2022-11-25]
 	Updated databases/hiredis to 1.1.0 [adam 2022-11-25]
 	Updated databases/rrdtool to 1.8.0 [adam 2022-11-25]
+	Updated geography/py-googlemaps to 4.7.3 [adam 2022-11-25]
+	Updated devel/py-gitdb to 4.0.10 [adam 2022-11-25]
