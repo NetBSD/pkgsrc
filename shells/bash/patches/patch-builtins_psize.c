@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.4 2016/06/11 12:54:24 rillig Exp $
+$NetBSD: patch-builtins_psize.c,v 1.1 2022/11/25 23:29:47 adam Exp $
 
 Use the definition of errno from <errno.h>.
 
