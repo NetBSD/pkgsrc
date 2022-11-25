@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/11/25 14:27:11 nros Exp $
+
+BLAKE2s (qtdatavis3d-everywhere-src-6.4.1.tar.xz) = 96883ffbcbd6c4325c24068141ab5e5bfe9b1041abafab8478d2c870d821790a
+SHA512 (qtdatavis3d-everywhere-src-6.4.1.tar.xz) = acb0cad5eecdec73d0f197a6312ce240a20712ec17e3fa8b21b7c84d0e248edda3e38b4f47f4cd70b1107e9229ace27fd3c198630346cbe21e27dc3bb6c11ef4
+Size (qtdatavis3d-everywhere-src-6.4.1.tar.xz) = 5216492 bytes
