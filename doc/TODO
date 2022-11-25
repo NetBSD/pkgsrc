@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22366 2022/11/25 09:21:43 wiz Exp $
+$NetBSD: TODO,v 1.22367 2022/11/25 09:46:59 wiz Exp $
 
 Suggested new packages
 ======================
@@ -698,7 +698,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gettext-0.21.1
 	o gfract-0.33
 	o ghc-9.4.1
-	o gimp-devel-2.99.14
 	o gimp-docs-de-2.10.0
 	o gimp-docs-en-2.10.0
 	o gimp-docs-es-2.10.0
@@ -1495,7 +1494,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o top-3.8beta1
 	o topgit-0.8
 	o tor-browser-11.0.9 [wip]
-	o tor-browser-11.5.7
+	o tor-browser-11.5.8
 	o torrentzip-2.1.0
 	o toxcore-0.2.12
 	o trafficserver-9.0.1
