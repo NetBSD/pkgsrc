@@ -1,0 +1,3 @@
+Qt declarative is a Qt6 module that provides the possibility of writing
+Qt apps in a declarative fashion using the QML language. It also includes
+Qt quick that is standard library for QML applications.

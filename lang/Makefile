@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.662 2022/11/25 10:43:35 nros Exp $
+# $NetBSD: Makefile,v 1.663 2022/11/25 11:50:59 nros Exp $
 #
 
 COMMENT=	Programming languages
@@ -255,6 +255,7 @@ SUBDIR+=	python37
 SUBDIR+=	python38
 SUBDIR+=	python39
 SUBDIR+=	qore
+SUBDIR+=	qt6-qtdeclarative
 SUBDIR+=	qt6-qtlanguageserver
 SUBDIR+=	quickjs
 SUBDIR+=	racket
