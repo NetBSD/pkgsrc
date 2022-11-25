@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5661 2022/11/25 09:54:39 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.5662 2022/11/25 09:56:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8570,3 +8570,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/gimp-devel to 2.99.14 [wiz 2022-11-25]
 	Updated devel/SDL2 to 2.26.0 [wiz 2022-11-25]
 	Updated graphics/ImageMagick to 7.1.0.52 [wiz 2022-11-25]
+	Updated graphics/py-cairo to 1.22.0 [wiz 2022-11-25]
