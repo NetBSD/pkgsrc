@@ -1,2 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2022/11/09 08:22:43 sjmulder Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/11/25 17:22:07 sjmulder Exp $
 bin/tut
+share/doc/tut/README.md
+share/examples/tut/config.example.ini
+share/examples/tut/toot.tmpl
+share/examples/tut/user.tmpl
