@@ -1,15 +1,15 @@
-$NetBSD: patch-src_rrd__graph.c,v 1.2 2017/07/27 18:31:20 adam Exp $
+$NetBSD: patch-src_rrd__graph.c,v 1.3 2022/11/25 10:41:15 adam Exp $
 
 Use <ctype.h> correctly.
 
---- src/rrd_graph.c.orig	2017-05-16 12:26:46.000000000 +0000
+--- src/rrd_graph.c.orig	2022-03-14 14:30:12.000000000 +0000
 +++ src/rrd_graph.c
-@@ -1704,7 +1704,7 @@ static int strfduration(char * const des
-             if ((zpad = *f == '0'))
-                 f++;
+@@ -1735,7 +1735,7 @@ static int strfduration(
+                 if ((zpad = *f == '0'))
+                     f++;
  
--            if (isdigit(*f)) {
-+            if (isdigit((unsigned char)*f)) {
-                 int nread;
-                 sscanf(f, "%d%n", &width, &nread);
-                 f += nread;
+-                if (isdigit(*f)) {
++                if (isdigit((unsigned char)*f)) {
+                     int       nread;
+ 
+                     sscanf(f, "%d%n", &width, &nread);
