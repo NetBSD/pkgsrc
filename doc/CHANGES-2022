@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5668 2022/11/25 11:52:06 nros Exp $
+$NetBSD: CHANGES-2022,v 1.5669 2022/11/25 12:34:21 nros Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8579,3 +8579,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-mercurial to 6.3.1 [wiz 2022-11-25]
 	Added lang/qt6-qtlanguageserver version 6.4.1 [nros 2022-11-25]
 	Added lang/qt6-qtdeclarative version 6.4.1 [nros 2022-11-25]
+	Added net/qt6-qtwebsockets version 6.4.1 [nros 2022-11-25]
