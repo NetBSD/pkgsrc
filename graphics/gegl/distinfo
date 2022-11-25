@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.41 2022/07/24 10:47:36 wiz Exp $
+$NetBSD: distinfo,v 1.42 2022/11/25 09:24:54 wiz Exp $
 
-BLAKE2s (gegl-0.4.38.tar.xz) = 2adcf406ef5ad7344bf7eebd7d9d359c67f9c17ad3fd9ccc2dfe1347f637f01f
-SHA512 (gegl-0.4.38.tar.xz) = 367aa67019557b10a19536c56dfbf6687ade183585eeefec65ce12d3c72f5d78330e02ae0ff403609bb7579dc25340a7132b81d36bbf84327c658a96a2d04d4c
-Size (gegl-0.4.38.tar.xz) = 5722188 bytes
+BLAKE2s (gegl-0.4.40.tar.xz) = e8e713693f1ff2114e4101cdf91fc368437c55670e34eaa56c40f53e071e72bc
+SHA512 (gegl-0.4.40.tar.xz) = 99ace5f1b916e56f31483b60a38f885d0e09652c834122390bba4439d9bb1a137d84770e1518187330c44f3491e53393cfb8802ba9ede20658e1c8122e798888
+Size (gegl-0.4.40.tar.xz) = 5784744 bytes
 SHA1 (patch-gegl_gegl-config.c) = a8e1f5f5394a33be2bcdcb05ec7654d06f7ad4bc
 SHA1 (patch-gegl_gegl-cpuaccel.c) = f32ee8dfb8b89eb0aa117ac071cd35367b7841a5
 SHA1 (patch-operations_external_png-load.c) = 9a03e842597d6c069f7dfa0fa224dd487479b27f
