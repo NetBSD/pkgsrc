@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2022/11/23 16:21:27 adam Exp $
+# $NetBSD: Makefile,v 1.9 2022/11/25 13:31:35 wiz Exp $
 
 VERSION=	1.02.02
 DISTNAME=	pyqt-qwt-${VERSION}
@@ -23,6 +23,8 @@ ALL_ENV+=	LFLAGS=${COMPILER_RPATH_FLAG}${PREFIX}/${BUILDLINK_LIBDIRS.qwt6-qt5}
 USE_LANGUAGES=	c++
 
 PY_PATCHPLIST=	yes
+
+PYTHON_VERSIONS_INCOMPATIBLE+=	311 # py-sip
 
 do-configure:
 	set -e; cd ${WRKSRC};						\
