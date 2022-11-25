@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2022/11/25 15:25:18 sjmulder Exp $
+$NetBSD: distinfo,v 1.3 2022/11/25 17:19:35 sjmulder Exp $
 
 BLAKE2s (github.com__rasmus_lindroth_go-mastodon_@v_v0.0.11.mod) = 66bd90510b2d2cc1e122b1669f139374e4f9f3fe64aee2e66805e9d6536f08d5
 SHA512 (github.com__rasmus_lindroth_go-mastodon_@v_v0.0.11.mod) = c982f4f6a2d12eb952bf3b54ab0d9ea68cfaf6a0b1e173c7b1a7ff798924a8e022ff65f1ecd068dfcd16d51ecc1003775bba87981d845f2c445778d898d10262
@@ -219,6 +219,6 @@ Size (gopkg.in_yaml.v3_@v_v3.0.0-20200313102051-9f266ea9e77c.mod) = 95 bytes
 BLAKE2s (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 17da54ba1894b4653d4c1ab1ae6e9fe03928a96c69cdc8db6b6ea9e34d673991
 SHA512 (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 307ca9123efc577ca04828996ee9d8edbb51794ccb4b8d9f169ba689e7276aa5f6ae106a04b22b7fab853ffacfebcbf74468b64eaefd57445864c1fbc77fad9d
 Size (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 95 bytes
-BLAKE2s (tut-1.0.21.tar.gz) = 5aa4c77a8b2a213c9c3408ebd713902c7376d0661f5da943066e47a417ba3104
-SHA512 (tut-1.0.21.tar.gz) = 3d60556c7e569c857e46be85721c78f527058632013d8e353f1dff6f91581c6b980d5c23c9768a0544d459224902801a8d6028e9a6500719ea91f457d32b6b6f
-Size (tut-1.0.21.tar.gz) = 199860 bytes
+BLAKE2s (tut-1.0.22.tar.gz) = d7b77d56501ad378f5c843dec362abef84b3a443e23bf99d286baa74fa815b2c
+SHA512 (tut-1.0.22.tar.gz) = 4ec2176d37ac537790a7000bd1f187d95852fee8bebf5b3c0e65b3c6ab8edd6a9c7b5b5d4ea8b97816f28ff516fe9204861a88265cfe25657cce9d15e9499623
+Size (tut-1.0.22.tar.gz) = 199959 bytes
