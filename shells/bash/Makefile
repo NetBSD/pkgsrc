@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.107 2022/11/25 18:20:46 kre Exp $
+# $NetBSD: Makefile,v 1.108 2022/11/25 23:29:47 adam Exp $
 
 BASH_VERSION=		5.2
 BASH_PATCHLEVEL=	12
@@ -70,7 +70,7 @@ BUILDLINK_API_DEPENDS.readline+=	readline>=7.0
 .include "../../devel/readline/buildlink3.mk"
 .endif
 
-.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS]) && ${OPSYS} == "NetBSD"
+.if ${USE_CROSS_COMPILE:U:tl} == yes && ${OPSYS} == "NetBSD"
 CONFIGURE_ENV+=		CC_FOR_BUILD=${NATIVE_CC:Q}
 CONFIGURE_ENV+=		ac_cv_c_long_long=yes
 CONFIGURE_ENV+=		ac_cv_c_long_double=yes
