@@ -1,0 +1,3 @@
+Language server implementation for Qt6,
+also includes a json-rpc 2.0 implementation
+used by the language server implentation.
