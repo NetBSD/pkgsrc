@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2022/10/08 11:15:53 nia Exp $
+@comment $NetBSD: PLIST,v 1.25 2022/11/25 09:21:34 wiz Exp $
 bin/babl
 include/babl-0.1/babl/babl-introspect.h
 include/babl-0.1/babl/babl-macros.h
@@ -74,7 +74,7 @@ lib/girepository-1.0/Babl-0.1.typelib
 lib/libbabl-0.1.${SOEXT}
 ${PLIST.Darwin}lib/libbabl-0.1.0.${SOEXT}
 ${PLIST.not_Darwin}lib/libbabl-0.1.${SOEXT}.0
-${PLIST.not_Darwin}lib/libbabl-0.1.${SOEXT}.0.195.1
+${PLIST.not_Darwin}lib/libbabl-0.1.${SOEXT}.0.197.1
 lib/pkgconfig/babl.pc
 share/gir-1.0/Babl-0.1.gir
 share/vala/vapi/babl-0.1.deps

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.53 2022/10/08 11:15:53 nia Exp $
+# $NetBSD: Makefile,v 1.54 2022/11/25 09:21:34 wiz Exp $
 
-DISTNAME=	babl-0.1.96
+DISTNAME=	babl-0.1.98
 CATEGORIES=	graphics
 MASTER_SITES=	https://download.gimp.org/pub/babl/${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.xz
@@ -36,7 +36,7 @@ PLIST.x86_64=		yes
 .endif
 
 PLIST_VARS+=		arm
-.if !empty(MACHINE_ARCH:Mearm*)
+.if ${MACHINE_ARCH:Mearm*}
 PLIST.arm=		yes
 .endif
 
