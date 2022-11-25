@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2022/11/25 14:27:12 nros Exp $
+# $NetBSD: Makefile,v 1.12 2022/11/25 14:48:22 nros Exp $
 
 DISTNAME=	qt6-${QTVERSION}
 
@@ -21,5 +21,6 @@ DEPENDS+=	qt6-qtdeclarative-${QTVERSION}{,nb[0-9]*}:../../lang/qt6-qtdeclarative
 DEPENDS+=	qt6-qtwebsockets-${QTVERSION}{,nb[0-9]*}:../../net/qt6-qtwebsockets
 DEPENDS+=	qt6-qtcharts-${QTVERSION}{,nb[0-9]*}:../../graphics/qt6-qtcharts
 DEPENDS+=	qt6-qtdatavis3d-${QTVERSION}{,nb[0-9]*}:../../graphics/qt6-qtdatavis3d
+DEPENDS+=	qt6-qtlottie-${QTVERSION}{,nb[0-9]*}:../../graphics/qt6-qtlottie
 
 .include "../../mk/bsd.pkg.mk"
