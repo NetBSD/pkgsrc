@@ -1,0 +1,15 @@
+$NetBSD: patch-bindings_tcl_Makefile.in,v 1.1 2022/11/25 10:41:15 adam Exp $
+
+Properly install Tcl extension (e.g. unstripped on some platforms).
+
+--- bindings/tcl/Makefile.in.orig	2022-11-25 10:10:08.000000000 +0000
++++ bindings/tcl/Makefile.in
+@@ -698,7 +698,7 @@ pkgIndex.tcl:
+ 
+ install-exec-local: $(TCL_RRD_LIB)
+ 	@$(NORMAL_INSTALL)
+-	$(INSTALL_PROGRAM) $(TCL_RRD_LIB) $(DESTDIR)$(libdir)/$(TCL_RRD_LIB)
++	${BSD_INSTALL_LIB} $(TCL_RRD_LIB) $(DESTDIR)$(libdir)/$(TCL_RRD_LIB)
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.

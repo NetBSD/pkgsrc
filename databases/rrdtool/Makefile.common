@@ -1,13 +1,15 @@
-# $NetBSD: Makefile.common,v 1.5 2022/04/24 11:41:25 tnn Exp $
+# $NetBSD: Makefile.common,v 1.6 2022/11/25 10:41:15 adam Exp $
 # used by databases/rrdtool/Makefile
 # used by databases/py-rrdtool/Makefile
 # used by databases/ruby-rrdtool/Makefile
 
-DISTNAME=	rrdtool-1.7.2
+DISTNAME=	rrdtool-1.8.0
 CATEGORIES=	databases graphics net
-MASTER_SITES=	https://oss.oetiker.ch/rrdtool/pub/archive/
+#MASTER_SITES=	https://oss.oetiker.ch/rrdtool/pub/archive/
 # When updating past 1.8.0 use this instead:
-#MASTER_SITES=	${MASTER_SITE_GITHUB:=oetiker/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=oetiker/}
+GITHUB_PROJECT=	rrdtool-1.x
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://oss.oetiker.ch/rrdtool/
