@@ -1,0 +1,15 @@
+$NetBSD: patch-src_plugins_renderers_opengl_CMakeLists.txt,v 1.1 2022/11/25 22:19:12 nros Exp $
+
+* enable compiler extensions so that the compiler alloca is used
+
+--- src/plugins/renderers/opengl/CMakeLists.txt.orig	2021-01-28 05:17:13.000000000 +0000
++++ src/plugins/renderers/opengl/CMakeLists.txt
+@@ -129,6 +129,8 @@ qt_internal_extend_target(OpenGLRenderer
+         ${PROJECT_SOURCE_DIR}/src/3rdparty/imgui
+ )
+ 
++set_target_properties(OpenGLRendererPlugin PROPERTIES CXX_EXTENSIONS ON)
++
+ ## Scopes:
+ #####################################################################
+ 
