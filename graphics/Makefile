@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.995 2022/11/25 20:58:55 nros Exp $
+# $NetBSD: Makefile,v 1.996 2022/11/25 22:19:11 nros Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -541,6 +541,7 @@ SUBDIR+=	qiv
 SUBDIR+=	qr-code-generator
 SUBDIR+=	qr-code-generator16
 SUBDIR+=	qrrs
+SUBDIR+=	qt6-qt3d
 SUBDIR+=	qt6-qtcharts
 SUBDIR+=	qt6-qtdatavis3d
 SUBDIR+=	qt6-qtimageformats
