@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.993 2022/11/25 14:48:22 nros Exp $
+# $NetBSD: Makefile,v 1.994 2022/11/25 20:26:46 nros Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -545,6 +545,7 @@ SUBDIR+=	qt6-qtcharts
 SUBDIR+=	qt6-qtdatavis3d
 SUBDIR+=	qt6-qtimageformats
 SUBDIR+=	qt6-qtlottie
+SUBDIR+=	qt6-qtquicktimeline
 SUBDIR+=	qt6-qtshadertools
 SUBDIR+=	qt6-qtsvg
 SUBDIR+=	quesoglc
