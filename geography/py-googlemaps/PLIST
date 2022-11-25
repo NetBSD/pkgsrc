@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/03/21 18:59:57 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/11/25 10:47:05 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -7,6 +7,9 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/googlemaps/__init__.py
 ${PYSITELIB}/googlemaps/__init__.pyc
 ${PYSITELIB}/googlemaps/__init__.pyo
+${PYSITELIB}/googlemaps/addressvalidation.py
+${PYSITELIB}/googlemaps/addressvalidation.pyc
+${PYSITELIB}/googlemaps/addressvalidation.pyo
 ${PYSITELIB}/googlemaps/client.py
 ${PYSITELIB}/googlemaps/client.pyc
 ${PYSITELIB}/googlemaps/client.pyo
