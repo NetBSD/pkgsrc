@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.44 2022/07/10 20:09:56 wiz Exp $
+$NetBSD: distinfo,v 1.45 2022/11/25 10:46:37 adam Exp $
 
 BLAKE2s (requests-2.28.1.tar.gz) = 15383c6cce96f85d3c00f95ac18718cccfc4d6d8e818ab0c89d2632ad8efacab
 SHA512 (requests-2.28.1.tar.gz) = c123ec07171c2c7c34e4173b97750adfa313b4312d91c0d58e4eb8750361604017e5b370c23ec886d2cbf704f9074ec5ad0fa9c2cd8e6f9521532adafff39d41
 Size (requests-2.28.1.tar.gz) = 109805 bytes
-SHA1 (patch-setup.py) = 644ec23fce2579cf26656ddb5518c788c3b6d61d
+SHA1 (patch-setup.py) = 285ebee3e89c46abe043661b5e4cdca3a23dfbd0

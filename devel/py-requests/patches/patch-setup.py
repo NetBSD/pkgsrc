@@ -1,10 +1,17 @@
-$NetBSD: patch-setup.py,v 1.10 2022/07/10 20:09:56 wiz Exp $
+$NetBSD: patch-setup.py,v 1.11 2022/11/25 10:46:37 adam Exp $
 
 Allow newer test dependencies.
 
 --- setup.py.orig	2022-06-29 15:09:45.000000000 +0000
 +++ setup.py
-@@ -65,7 +65,7 @@ requires = [
+@@ -59,13 +59,13 @@ if sys.argv[-1] == "publish":
+     sys.exit()
+ 
+ requires = [
+-    "charset_normalizer>=2,<3",
++    "charset_normalizer>=2",
+     "idna>=2.5,<4",
+     "urllib3>=1.21.1,<1.27",
      "certifi>=2017.4.17",
  ]
  test_requirements = [
