@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5670 2022/11/25 13:38:19 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5671 2022/11/25 14:16:14 nros Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8582,3 +8582,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added net/qt6-qtwebsockets version 6.4.1 [nros 2022-11-25]
 	Updated textproc/py-xlsxwriter to 3.0.3 [adam 2022-11-25]
 	Updated security/py-pip-audit to 2.4.6 [adam 2022-11-25]
+	Added graphics/qt6-qtcharts version 6.4.1 [nros 2022-11-25]
