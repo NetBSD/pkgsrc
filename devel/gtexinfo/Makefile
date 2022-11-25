@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.116 2022/11/24 12:16:03 wiz Exp $
+# $NetBSD: Makefile,v 1.117 2022/11/25 08:25:31 wiz Exp $
 
 DISTNAME=		texinfo-7.0
 PKGNAME=		g${DISTNAME}
@@ -32,7 +32,7 @@ USE_LIBTOOL=		yes
 INFO_FILES=		yes
 TEST_TARGET=		check
 PLIST_SRC=		${PKGDIR}/PLIST
-USE_TOOLS+=		gawk perl:run
+USE_TOOLS+=		perl:run
 
 # Replace deeply nested config.sub files (in vendored perl libraries)
 OVERRIDE_DIRDEPTH=	4
