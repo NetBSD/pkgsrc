@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.4 2022/09/10 16:32:37 wiz Exp $
+$NetBSD: distinfo,v 1.5 2022/11/25 09:46:41 wiz Exp $
 
-BLAKE2s (gimp-2.99.12.tar.xz) = 6ecf4138713bf0c514463a644a54a7a39c69c9d99931cf9af991ef78d4b6809a
-SHA512 (gimp-2.99.12.tar.xz) = 4b87dd40eccc39c560e69a90b4042b1b19506e9ae52e5079ace442325b54bf7c47477662197da8f7655c12aad16e08bae60d11cf269684b8aa291e978d246917
-Size (gimp-2.99.12.tar.xz) = 24282140 bytes
-SHA1 (patch-meson.build) = 539b308e4cb5757180e3a19b1f92934f085fcbb9
-SHA1 (patch-plug-ins_common_file-heif.c) = cf4beb68136aefe460c7cabf53a2c40d602ec682
-SHA1 (patch-tools_extract-vector-icon.sh) = e460c42656bf2611a3735e2f7b4fe1d927a47044
+BLAKE2s (gimp-2.99.14.tar.xz) = 827b0200e85f03313982c9afd8b5598a93ee7b5af7f5d9ae74d0169269aa3b45
+SHA512 (gimp-2.99.14.tar.xz) = 6ea3ca27cb0c830042ad42789d3017989dda195ebbdff38793afbee720f2986d489bec39c077b84889c847c0afc1bc7a2fec2e916574ae08aec42019715cb204
+Size (gimp-2.99.14.tar.xz) = 24346236 bytes
