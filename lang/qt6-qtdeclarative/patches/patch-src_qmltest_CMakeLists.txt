@@ -1,0 +1,17 @@
+$NetBSD: patch-src_qmltest_CMakeLists.txt,v 1.1 2022/11/25 11:50:59 nros Exp $
+
+Workaround linking issue on SunOS
+
+--- src/qmltest/CMakeLists.txt.orig	2021-05-03 10:15:49.000000000 +0000
++++ src/qmltest/CMakeLists.txt
+@@ -47,6 +47,10 @@ qt_internal_extend_target(QuickTest COND
+     DEFINES
+         QT_QML_DEBUG_NO_WARNING
+ )
++qt_internal_extend_target(QuickTest CONDITION SOLARIS
++    LINK_OPTIONS
++        -mimpure-text
++)
+ qt_internal_add_docs(QuickTest
+     doc/qtqmltest.qdocconf
+ )

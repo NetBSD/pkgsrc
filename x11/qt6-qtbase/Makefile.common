@@ -1,9 +1,10 @@
-# $NetBSD: Makefile.common,v 1.7 2022/11/25 10:43:35 nros Exp $
+# $NetBSD: Makefile.common,v 1.8 2022/11/25 11:51:00 nros Exp $
 # used by databases/qt6-odbc/Makefile
 # used by databases/qt6-psql/Makefile
 # used by graphics/qt6-qtimageformats/Makefile
 # used by graphics/qt6-qtshadertools/Makefile
 # used by graphics/qt6-qtsvg/Makefile
+# used by lang/qt6-qtdeclarative/Makefile
 # used by lang/qt6-qtlanguageserver/Makefile
 # used by x11/qt6-qtbase/Makefile
 
