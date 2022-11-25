@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2022/11/23 16:19:53 adam Exp $
+# $NetBSD: Makefile,v 1.89 2022/11/25 13:31:34 wiz Exp $
 
 DISTNAME=		tortoisehg-6.2.3
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
@@ -33,6 +33,7 @@ INSTALLATION_DIRS+=	share/doc/tortoisehg
 PYTHON_SELF_CONFLICT=	yes
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE+=	311 # py-sip via py-qt5-qscintilla
 
 pre-build:
 	${RUN} cd ${WRKSRC}/doc && ${MAKE_PROGRAM} SPHINXBUILD=sphinx-build-${PYVERSSUFFIX} html
