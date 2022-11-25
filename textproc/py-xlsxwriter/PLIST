@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2021/04/28 12:46:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/11/25 13:34:52 adam Exp $
 bin/vba_extract.py
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -46,9 +46,6 @@ ${PYSITELIB}/xlsxwriter/chartsheet.pyo
 ${PYSITELIB}/xlsxwriter/comments.py
 ${PYSITELIB}/xlsxwriter/comments.pyc
 ${PYSITELIB}/xlsxwriter/comments.pyo
-${PYSITELIB}/xlsxwriter/compatibility.py
-${PYSITELIB}/xlsxwriter/compatibility.pyc
-${PYSITELIB}/xlsxwriter/compatibility.pyo
 ${PYSITELIB}/xlsxwriter/contenttypes.py
 ${PYSITELIB}/xlsxwriter/contenttypes.pyc
 ${PYSITELIB}/xlsxwriter/contenttypes.pyo
