@@ -1,6 +1,9 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:19:32 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/11/25 08:35:17 wiz Exp $
 
 BLAKE2s (dupeguru-src-4.0.4_RC.tar.gz) = 643bfac40e5a934322c699e8fb3e290d8b584d7e61104065008b6903da43a5a0
 SHA512 (dupeguru-src-4.0.4_RC.tar.gz) = 991a06afa9fb89ca8294a415d6c1448c6a9fdefb1ff26e08e38686567076ad255be49a7018d7529e72c557597a105b076470750da8a6f87d0ea84444937bb700
 Size (dupeguru-src-4.0.4_RC.tar.gz) = 502389 bytes
 SHA1 (patch-build.py) = 66737c7183cc949f6988a66e06a00d0e6d29d1ec
+SHA1 (patch-hscommon_gui_selectable__list.py) = f2f4802fe202820f42810a3703fdc25338665f68
+SHA1 (patch-hscommon_gui_table.py) = bd0dddec6677535698a8b29dd33b6528be1ceb68
+SHA1 (patch-hscommon_gui_tree.py) = 7369f2df7dfac489c19d5170f0affe546cc73ec0
