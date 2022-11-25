@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5658 2022/11/25 09:25:03 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.5659 2022/11/25 09:46:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8567,3 +8567,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/dupeguru to 4.0.4rc1nb4 [wiz 2022-11-25]
 	Updated graphics/babl to 0.1.98 [wiz 2022-11-25]
 	Updated graphics/gegl to 0.4.40 [wiz 2022-11-25]
+	Updated graphics/gimp-devel to 2.99.14 [wiz 2022-11-25]
