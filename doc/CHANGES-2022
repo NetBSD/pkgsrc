@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5677 2022/11/25 17:19:45 sjmulder Exp $
+$NetBSD: CHANGES-2022,v 1.5678 2022/11/25 18:25:08 kre Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8589,3 +8589,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/nnn to 4.7 [sjmulder 2022-11-25]
 	Updated lang/php81 to 8.1.13 [taca 2022-11-25]
 	Updated net/tut to 1.0.22 [sjmulder 2022-11-25]
+	Updated shells/bash to 5.2.12 [kre 2022-11-25]
