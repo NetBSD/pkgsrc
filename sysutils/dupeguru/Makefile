@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2022/11/14 16:47:24 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2022/11/25 08:35:17 wiz Exp $
 
 DISTNAME=	dupeguru-src-4.0.4_RC
 PKGNAME=	${DISTNAME:S/-src//:S/_RC/rc1/}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	sysutils
 #MASTER_SITES=	https://github.com/arsenetar/dupeguru/releases/download/4.0.4/
 MASTER_SITES=	${MASTER_SITE_GITHUB:=arsenetar/}
@@ -43,8 +43,7 @@ do-install:
 	${RM} -rf ${DESTDIR}${PREFIX}/share/dupeguru/send2trash
 	${LN} -s ${DESTDIR}${PREFIX}/share/dupeguru/run.py ${DESTDIR}${PREFIX}/bin/dupeguru
 	${INSTALL_DATA} ${WRKSRC}/build/dupeguru-arch/dupeguru.desktop ${DESTDIR}${PREFIX}/share/applications
-	${RM} -f ${DESTDIR}${PREFIX}/share/dupeguru/qt/platform.py.orig
-	${RM} -f ${DESTDIR}${PREFIX}/share/dupeguru/hscommon/sphinxgen.py.orig
+	${FIND} ${DESTDIR} -name *.orig -delete
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
