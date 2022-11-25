@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.75 2022/11/25 18:20:46 kre Exp $
+$NetBSD: distinfo,v 1.76 2022/11/25 23:29:47 adam Exp $
 
 BLAKE2s (bash-5.2.tar.gz) = 430755ea2af4903dba2bdbeffd4d861edb9f54c248071362f0d14f15171764cd
 SHA512 (bash-5.2.tar.gz) = 5647636223ba336bf33e0c65e516d8ebcf6932de8b44f37bc468eedb87579c628ad44213f78534beb10f47aebb9c6fa670cb0bed3b4e7717e5faf7e9a1ef81ae
@@ -39,11 +39,12 @@ Size (bash52-011) = 1229 bytes
 BLAKE2s (bash52-012) = b980049d0314616909334aa332dbe55e7f2c4be0cab342a2b35342ca98d4c9af
 SHA512 (bash52-012) = 8f969cb36ee81ac47a4c3c6ee7fbe62159192fa4f14cb48973eccd55c458e6a093adc3045ee1c379544d8183d77813977a43cad5d225322d8816540a1cb8893b
 Size (bash52-012) = 9107 bytes
-SHA1 (patch-af) = e26e3209902247263884cfebc11a2f7e43245062
-SHA1 (patch-ag) = cd3b151e3bb045d2bb609c0a03d7d3df2c871f47
-SHA1 (patch-aj) = 2e4c15afd9b50d44967ee8e1f85bdc908c0eeeb0
+SHA1 (patch-Makefile.in) = 2e4c15afd9b50d44967ee8e1f85bdc908c0eeeb0
+SHA1 (patch-builtins_printf.def) = e26e3209902247263884cfebc11a2f7e43245062
+SHA1 (patch-builtins_psize.c) = cd3b151e3bb045d2bb609c0a03d7d3df2c871f47
 SHA1 (patch-builtins_ulimit.def) = 1390069344607204eb3abbd6ddeb148ff590c55e
 SHA1 (patch-configure) = c4e1ab53a1ee85f3e6121047f0aca8ceb85e6e5d
+SHA1 (patch-examples_loadables_Makefile.in) = 0d27f82399c4ae9fae8ac0f8c48c68a23a3dcbd8
 SHA1 (patch-examples_loadables_fdflags.c) = dce409c76b7d6c838eb25c3ccc7a89ee57ca69b8
 SHA1 (patch-examples_loadables_getconf.c) = a71df9f54d77ee14de453b67bd4b3658ad7123eb
 SHA1 (patch-lib_malloc_malloc.c) = 6e500228972eac0cb4d4defb02e9cf573b7fa207

@@ -1,0 +1,15 @@
+$NetBSD: patch-examples_loadables_Makefile.in,v 1.1 2022/11/25 23:29:47 adam Exp $
+
+Correctly install shared objects (e.g. unstripped on some platforms).
+
+--- examples/loadables/Makefile.in.orig	2022-11-25 23:21:05.000000000 +0000
++++ examples/loadables/Makefile.in
+@@ -281,7 +281,7 @@ install-supported:	all installdirs insta
+ 	@echo installing example loadable builtins in $(DESTDIR)${loadablesdir}
+ 	@for prog in ${ALLPROG}; do \
+ 		echo $$prog ; \
+-		$(INSTALL_PROGRAM) $(INSTALLMODE) $$prog $(DESTDIR)$(loadablesdir)/$$prog ;\
++		${BSD_INSTALL_LIB} $(INSTALLMODE) $$prog $(DESTDIR)$(loadablesdir)/$$prog ;\
+ 	done
+ 
+ uninstall-dev:
