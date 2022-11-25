@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5680 2022/11/25 20:27:33 nros Exp $
+$NetBSD: CHANGES-2022,v 1.5681 2022/11/25 22:20:24 nros Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8592,3 +8592,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated shells/bash to 5.2.12 [kre 2022-11-25]
 	Added security/qt6-qtnetworkauth version 6.4.1 [nros 2022-11-25]
 	Added graphics/qt6-qtquicktimeline version 6.4.1 [nros 2022-11-25]
+	Added graphics/qt6-qtquick3d version 6.4.1 [nros 2022-11-25]
