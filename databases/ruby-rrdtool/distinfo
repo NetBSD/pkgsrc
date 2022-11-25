@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 10:10:03 nia Exp $
+$NetBSD: distinfo,v 1.12 2022/11/25 10:41:15 adam Exp $
 
-BLAKE2s (rrdtool-1.7.2.tar.gz) = 7bee2b6cf988a2f26b0e83ea4c76d3fc9ebd91b797f51f45584197a908cea458
-SHA512 (rrdtool-1.7.2.tar.gz) = 453230efc68aeb4a12842d20a9d246ba478a79c2f6bfd9693a91837c1c1136abe8af177be64fe29aa40bf84ccfce7f2f15296aefe095e89b8b62aef5a7623e29
-Size (rrdtool-1.7.2.tar.gz) = 2883737 bytes
+BLAKE2s (rrdtool-1.8.0.tar.gz) = d0f696e1f608a8938f36840c6cf6aa00624f68877fbcdd339b55c39e475bc613
+SHA512 (rrdtool-1.8.0.tar.gz) = 8ae6f94d119e8d0e1ba7f2d0738f1ba008a4880d1022f1c0c5436f662d961fceec5c42e01c241493ece3d6f55c60fd7d1d264f93e678f3cf1251201dcde027c1
+Size (rrdtool-1.8.0.tar.gz) = 2955398 bytes
 SHA1 (patch-extconf.rb) = 18cce3cb95afd81ea30c03bad4e2a1717c7ab982
