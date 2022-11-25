@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5663 2022/11/25 10:21:22 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.5664 2022/11/25 10:41:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8572,3 +8572,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/ImageMagick to 7.1.0.52 [wiz 2022-11-25]
 	Updated graphics/py-cairo to 1.22.0 [wiz 2022-11-25]
 	Updated net/samba4 to 4.17.3 [wiz 2022-11-25]
+	Updated databases/hiredis to 1.1.0 [adam 2022-11-25]
+	Updated databases/rrdtool to 1.8.0 [adam 2022-11-25]
