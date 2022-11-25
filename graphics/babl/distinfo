@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.38 2022/09/10 09:34:16 wiz Exp $
+$NetBSD: distinfo,v 1.39 2022/11/25 09:21:34 wiz Exp $
 
-BLAKE2s (babl-0.1.96.tar.xz) = 694bc278b69d10e513dec38aaccb96c3205a8c1de5babc574421218e9256fba3
-SHA512 (babl-0.1.96.tar.xz) = 771d68b80f1123baa38256e4b1d7946284cd88997b2ab7c7092a74120e91ea5ee7ab4c001686ae4b3e363b6465484f185a64f9c75515a55d3ffb81fecbeaca42
-Size (babl-0.1.96.tar.xz) = 312184 bytes
+BLAKE2s (babl-0.1.98.tar.xz) = 80a14ee48dda9ba4253e5b3dc17d8b75eb31a7dfead04d1179266b5d72b50358
+SHA512 (babl-0.1.98.tar.xz) = 33b2e3f8fbcd6602bb82d6242dd2911bb2232e69350f7a0e70e14b1472052e27b0e2a1fa6a2b6d0449fc9796353336e311c8d4007c532447cd61f95b684a3120
+Size (babl-0.1.98.tar.xz) = 312516 bytes
 SHA1 (patch-babl_babl-cpuaccel.c) = e06c723627b5449e2311b6d1a8a68def9ddf7033
 SHA1 (patch-babl_meson.build) = ff2ab73080b97cf442e7581932d22a612f4e3093
 SHA1 (patch-extensions_gggl.c) = b88bd62e59c921ea3d71fb6cbf69fd441a0ae4c8
