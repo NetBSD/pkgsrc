@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2022/11/15 09:18:20 wiz Exp $
+# $NetBSD: Makefile.common,v 1.13 2022/11/25 13:31:35 wiz Exp $
 #
 # used by x11/py-sip/Makefile
 # used by x11/py-sip-qt5/Makefile
@@ -32,6 +32,7 @@ CONFIGURE_ARGS+=	LIBDIR=${PREFIX}/lib
 CONFIGURE_ARGS.DragonFly+=	-p freebsd-g++
 
 PY_PATCHPLIST=		yes
+PYTHON_VERSIONS_INCOMPATIBLE+= 311 # as of 4.19.25
 
 .include "../../mk/compiler.mk"
 
