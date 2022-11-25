@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5674 2022/11/25 15:25:34 sjmulder Exp $
+$NetBSD: CHANGES-2022,v 1.5675 2022/11/25 16:10:19 sjmulder Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8586,3 +8586,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added graphics/qt6-qtdatavis3d version 6.4.1 [nros 2022-11-25]
 	Added graphics/qt6-qtlottie version 6.4.1 [nros 2022-11-25]
 	Updated net/tut to 1.0.21 [sjmulder 2022-11-25]
+	Updated sysutils/nnn to 4.7 [sjmulder 2022-11-25]
