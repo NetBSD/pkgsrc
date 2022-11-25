@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.8 2016/06/11 12:54:24 rillig Exp $
+$NetBSD: patch-builtins_printf.def,v 1.1 2022/11/25 23:29:47 adam Exp $
 
 Fixes PRIdMAX and PRIuMAX on AIX < 5.1.
 
