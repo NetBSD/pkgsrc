@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5682 2022/11/25 22:21:32 nros Exp $
+$NetBSD: CHANGES-2022,v 1.5683 2022/11/26 00:49:13 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8594,3 +8594,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added graphics/qt6-qtquicktimeline version 6.4.1 [nros 2022-11-25]
 	Added graphics/qt6-qtquick3d version 6.4.1 [nros 2022-11-25]
 	Added graphics/qt6-qt3d version 6.4.1 [nros 2022-11-25]
+	Updated chat/matrix-synapse to 1.72.0 [gdt 2022-11-26]
