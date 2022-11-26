@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2022/09/15 22:13:43 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2022/11/26 17:55:38 adam Exp $
 
-DISTNAME=	googleapis-common-protos-1.56.4
+DISTNAME=	googleapis-common-protos-1.57.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/googleapis-common-protos/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/googleapis/python-api-common-protos
 COMMENT=	Python support for Public interface definitions of Google APIs
 LICENSE=	apache-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-protobuf>=3.6.0:../../devel/py-protobuf
+DEPENDS+=	${PYPKGPREFIX}-protobuf>=4.21.6:../../devel/py-protobuf
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=0:../../devel/py-test
 
 USE_LANGUAGES=	# none
