@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5686 2022/11/26 13:14:01 taca Exp $
+$NetBSD: CHANGES-2022,v 1.5687 2022/11/26 14:00:57 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8605,3 +8605,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/ruby27-base to 2.7.7 [taca 2022-11-26]
 	Updated databases/ruby-gdbm to 2.7.7 [taca 2022-11-26]
 	Updated lang/ruby27 to 2.7.7 [taca 2022-11-26]
+	Updated geography/proj-doc to 9.1.0 [gdt 2022-11-26]
