@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.119 2022/09/26 15:58:45 wiz Exp $
+# $NetBSD: Makefile,v 1.120 2022/11/26 15:09:46 gdt Exp $
 #
 
 COMMENT=	Software for geographical-related uses
@@ -86,6 +86,7 @@ SUBDIR+=	p5-Geo-Weather
 SUBDIR+=	p5-Geography-Countries
 SUBDIR+=	pdal-lib
 SUBDIR+=	proj
+SUBDIR+=	proj-data
 SUBDIR+=	proj-doc
 SUBDIR+=	py-country
 SUBDIR+=	py-gdal
