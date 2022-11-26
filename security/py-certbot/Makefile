@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2022/10/19 13:56:32 nia Exp $
+# $NetBSD: Makefile,v 1.36 2022/11/26 18:01:35 adam Exp $
 
 .include "../../security/py-certbot/Makefile.common"
 
@@ -15,8 +15,6 @@ DEPENDS+=	${PYPKGPREFIX}-josepy>=1.13.0:../../security/py-josepy
 DEPENDS+=	${PYPKGPREFIX}-parsedatetime>=2.4:../../time/py-parsedatetime
 DEPENDS+=	${PYPKGPREFIX}-pytz>=2019.3:../../time/py-pytz
 DEPENDS+=	${PYPKGPREFIX}-rfc3339-[0-9]*:../../time/py-rfc3339
-DEPENDS+=	${PYPKGPREFIX}-ZopeComponent-[0-9]*:../../devel/py-ZopeComponent
-DEPENDS+=	${PYPKGPREFIX}-ZopeInterface-[0-9]*:../../devel/py-ZopeInterface
 # Needed for the test target
 # https://github.com/certbot/certbot/issues/2956
 TEST_DEPENDS+=	${PYPKGPREFIX}-readline-[0-9]*:../../devel/py-readline
