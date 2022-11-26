@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.37 2022/11/12 13:24:09 gdt Exp $
+@comment $NetBSD: PLIST,v 1.38 2022/11/26 00:49:02 gdt Exp $
 bin/export_signing_key
 bin/generate_config
 bin/generate_log_config
@@ -483,18 +483,6 @@ ${PYSITELIB}/synapse/replication/slave/storage/__init__.py
 ${PYSITELIB}/synapse/replication/slave/storage/__init__.pyc
 ${PYSITELIB}/synapse/replication/slave/storage/_slaved_id_tracker.py
 ${PYSITELIB}/synapse/replication/slave/storage/_slaved_id_tracker.pyc
-${PYSITELIB}/synapse/replication/slave/storage/devices.py
-${PYSITELIB}/synapse/replication/slave/storage/devices.pyc
-${PYSITELIB}/synapse/replication/slave/storage/events.py
-${PYSITELIB}/synapse/replication/slave/storage/events.pyc
-${PYSITELIB}/synapse/replication/slave/storage/filtering.py
-${PYSITELIB}/synapse/replication/slave/storage/filtering.pyc
-${PYSITELIB}/synapse/replication/slave/storage/keys.py
-${PYSITELIB}/synapse/replication/slave/storage/keys.pyc
-${PYSITELIB}/synapse/replication/slave/storage/push_rule.py
-${PYSITELIB}/synapse/replication/slave/storage/push_rule.pyc
-${PYSITELIB}/synapse/replication/slave/storage/pushers.py
-${PYSITELIB}/synapse/replication/slave/storage/pushers.pyc
 ${PYSITELIB}/synapse/replication/tcp/__init__.py
 ${PYSITELIB}/synapse/replication/tcp/__init__.pyc
 ${PYSITELIB}/synapse/replication/tcp/client.py
@@ -1290,6 +1278,7 @@ ${PYSITELIB}/synapse/storage/schema/main/delta/73/09threads_table.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/73/10_update_sqlite_fts4_tokenizer.py
 ${PYSITELIB}/synapse/storage/schema/main/delta/73/10_update_sqlite_fts4_tokenizer.pyc
 ${PYSITELIB}/synapse/storage/schema/main/delta/73/10login_tokens.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/73/11event_search_room_id_n_distinct.sql.postgres
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/application_services.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/event_edges.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/event_signatures.sql
