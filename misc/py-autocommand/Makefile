@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2022/02/02 18:50:49 adam Exp $
+# $NetBSD: Makefile,v 1.2 2022/11/26 17:08:20 adam Exp $
 
-DISTNAME=	autocommand-2.2.1
+DISTNAME=	autocommand-2.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	misc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/autocommand/}
