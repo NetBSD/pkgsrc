@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.39 2022/11/25 07:45:03 mrg Exp $
+$NetBSD: distinfo,v 1.40 2022/11/26 14:45:47 gdt Exp $
 
 BLAKE2s (nut-2.8.0.tar.gz) = 244e154d951f4a1d08172e162826fdb4082c3e0a033a426040adc2b9a420feca
 SHA512 (nut-2.8.0.tar.gz) = 3c413ae54088045a713eb80cf1bdda474f41bb3b67c7c0248aa7a0c4d441dce1ff42627a2735273d7e36892d1f2eeb895220cf28af63fec2fa0c7a267f82d577
@@ -8,4 +8,4 @@ SHA1 (patch-clients_upsclient.c) = 9c521684a5ccf108bd464767f9b31aa2694afae1
 SHA1 (patch-drivers_libhid.c) = 8b4f773d9b32e4c43f7045a4a83854382b08cb5b
 SHA1 (patch-drivers_libusb0.c) = 71719f12cd8a8efd93d07b6b2d50d8334df7daab
 SHA1 (patch-drivers_libusb1.c) = 58d8ffe9507399802ad885c2e2627641978e5438
-SHA1 (patch-drivers_usbhid-ups.c) = bb5cbdca45606152ea0bd5b94cf6955c0d839936
+SHA1 (patch-drivers_usbhid-ups.c) = 3f1a14cc764ef0dbb5befd19910dd6790ab98df9
