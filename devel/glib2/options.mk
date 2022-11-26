@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.23 2022/11/23 10:41:41 adam Exp $
+# $NetBSD: options.mk,v 1.24 2022/11/26 09:55:19 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.glib2
-PKG_SUPPORTED_OPTIONS=	fam
+PKG_SUPPORTED_OPTIONS=	# empty
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "Darwin"
@@ -21,11 +21,4 @@ MESON_ARGS+=	-Dtests=false
 PLIST.cocoa=	yes
 .else
 PLIST.nococoa=	yes
-.endif
-
-PLIST_VARS+=	fam
-.if !empty(PKG_OPTIONS:Mfam)
-MESON_ARGS+=	-Dfam=true
-PLIST.fam=	yes
-.include "../../mk/fam.buildlink3.mk"
 .endif
