@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5690 2022/11/26 15:08:56 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.5691 2022/11/26 17:15:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8609,3 +8609,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/ruby-pg to 1.4.5 [taca 2022-11-26]
 	Updated devel/ruby-bindata to 2.4.14 [taca 2022-11-26]
 	Added geography/proj-data version 1.4 [gdt 2022-11-26]
+	Updated misc/py-autocommand to 2.2.2 [adam 2022-11-26]
+	Updated devel/py-test-mypy to 0.10.2 [adam 2022-11-26]
