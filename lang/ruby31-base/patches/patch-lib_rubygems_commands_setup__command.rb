@@ -1,10 +1,10 @@
-$NetBSD: patch-lib_rubygems_commands_setup__command.rb,v 1.1 2022/01/16 13:57:10 taca Exp $
+$NetBSD: patch-lib_rubygems_commands_setup__command.rb,v 1.2 2022/11/26 13:02:49 taca Exp $
 
 * Make sure to setup under DESTDIR.
 
---- lib/rubygems/commands/setup_command.rb.orig	2018-12-23 00:20:49.000000000 +0000
+--- lib/rubygems/commands/setup_command.rb.orig	2022-11-24 10:20:31.000000000 +0000
 +++ lib/rubygems/commands/setup_command.rb
-@@ -177,7 +177,7 @@ By default, this RubyGems will install g
+@@ -185,7 +185,7 @@ By default, this RubyGems will install g
  
      uninstall_old_gemcutter
  
@@ -13,13 +13,13 @@ $NetBSD: patch-lib_rubygems_commands_setup__command.rb,v 1.1 2022/01/16 13:57:10
  
      say
      if @verbose
-@@ -341,11 +341,15 @@ By default, this RubyGems will install g
+@@ -318,11 +318,15 @@ By default, this RubyGems will install g
      end
    end
  
 -  def install_rdoc
 +  def install_rdoc(install_destdir)
-     gem_doc_dir = File.join Gem.dir, 'doc'
+     gem_doc_dir = File.join Gem.dir, "doc"
      rubygems_name = "rubygems-#{Gem::VERSION}"
      rubygems_doc_dir = File.join gem_doc_dir, rubygems_name
  
@@ -30,12 +30,12 @@ $NetBSD: patch-lib_rubygems_commands_setup__command.rb,v 1.1 2022/01/16 13:57:10
      begin
        Gem.ensure_gem_subdirectories Gem.dir
      rescue SystemCallError
-@@ -356,7 +360,7 @@ By default, this RubyGems will install g
-        (not File.exist? rubygems_doc_dir or
-         File.writable? rubygems_doc_dir)
+@@ -333,7 +337,7 @@ By default, this RubyGems will install g
+        (!File.exist?(rubygems_doc_dir) ||
+         File.writable?(rubygems_doc_dir))
        say "Removing old RubyGems RDoc and ri" if @verbose
--      Dir[File.join(Gem.dir, 'doc', 'rubygems-[0-9]*')].each do |dir|
-+      Dir[File.join(gem_doc_dir, 'rubygems-[0-9]*')].each do |dir|
+-      Dir[File.join(Gem.dir, "doc", "rubygems-[0-9]*")].each do |dir|
++      Dir[File.join(gem_doc_dir, "rubygems-[0-9]*")].each do |dir|
          rm_rf dir
        end
  
