@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2022/07/26 08:41:12 adam Exp $
+$NetBSD: distinfo,v 1.11 2022/11/26 18:00:03 adam Exp $
 
-BLAKE2s (httpx-socks-0.7.4.tar.gz) = 73f6992884a9ffce7ac3cc8840b3c10ff93abf1dd6b6e253dc61597b3aeebb83
-SHA512 (httpx-socks-0.7.4.tar.gz) = 102348eb8615105f380a3bbe45a6b2bbebea50754d953c33c054746eeac161362f3ebde6cf2c301cae6f075153573e5e5978fdbe203dd1edb060858eccd5ed39
-Size (httpx-socks-0.7.4.tar.gz) = 9706 bytes
+BLAKE2s (httpx-socks-0.7.5.tar.gz) = ed9ec6eeb337081f1aaf918a498267860167848462f6bdc633b049324fc4f1a7
+SHA512 (httpx-socks-0.7.5.tar.gz) = 57cdda1d3cf2cbe7f81d08108c109da0ba8291b35c1db32b881ea222043cadaca4f4690c2e551416888a4799430bde00594bd671aaac7ad1bfda02073cc38b34
+Size (httpx-socks-0.7.5.tar.gz) = 9706 bytes
