@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5691 2022/11/26 17:15:54 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5692 2022/11/26 17:56:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8611,3 +8611,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Added geography/proj-data version 1.4 [gdt 2022-11-26]
 	Updated misc/py-autocommand to 2.2.2 [adam 2022-11-26]
 	Updated devel/py-test-mypy to 0.10.2 [adam 2022-11-26]
+	Updated benchmarks/google-benchmark to 1.7.1 [adam 2022-11-26]
+	Updated devel/py-googleapis-common-protos to 1.57.0 [adam 2022-11-26]
