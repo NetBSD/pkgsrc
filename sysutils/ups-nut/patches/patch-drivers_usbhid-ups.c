@@ -1,4 +1,4 @@
-$NetBSD: patch-drivers_usbhid-ups.c,v 1.1 2022/11/25 07:45:03 mrg Exp $
+$NetBSD: patch-drivers_usbhid-ups.c,v 1.2 2022/11/26 14:45:47 gdt Exp $
 
 Avoid re-closing a udev that already was closed.  Avoids a double-close
 that triggers a SEGV in a list-delete operation.
@@ -12,6 +12,9 @@ static int nut_libusb_open(libusb_device_handle **udevp,
 
 as the same double-free list issue occurs here.
 
+
+Fixed upstream slightly differently, but essentially the same, in:
+https://github.com/networkupstools/nut/commit/89dbdd1e60
 
 --- drivers/usbhid-ups.c.orig	2022-04-26 17:03:31.000000000 -0500
 +++ drivers/usbhid-ups.c	2022-11-25 01:36:52.595626560 -0600
