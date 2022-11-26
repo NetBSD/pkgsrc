@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2022/11/02 17:02:10 jperkin Exp $
+$NetBSD: distinfo,v 1.7 2022/11/26 12:25:22 nia Exp $
 
 BLAKE2s (mysql-boost-8.0.31.tar.gz) = 2da23b9233a2c5060aa22074cbe990d0dc1d90b2e55a4cd4b32571d2c77fe3bf
 SHA512 (mysql-boost-8.0.31.tar.gz) = 87b1678de8c2fd640fd6f3ae58266ea63fe240578330e3296d0e5fc209bbe9b0c22996214b6ca4cce8c0d9cc2f9897f4e6723d835b33fc4342983c82929c3d96
@@ -31,5 +31,6 @@ SHA1 (patch-sql_conn__handler_socket__connection.cc) = 91f2f707576618396579809b8
 SHA1 (patch-sql_join__optimizer_bit__utils.h) = 3e75331da6b50935f082b2f738e6c6964afef5f7
 SHA1 (patch-sql_resourcegroups_platform_thread__attrs__api__apple.cc) = e08ed53790ac8b03b38d566fee3a2688ca6065b3
 SHA1 (patch-sql_resourcegroups_platform_thread__attrs__api__solaris.cc) = 1ce0aec798a22f966c37d9ee38b3dee3d855a7e3
+SHA1 (patch-storage_innobase_include_detail_ut_large__page__alloc-linux.h) = cc5bdab29e542f172dc6d4c0d4af1f264e37ba35
 SHA1 (patch-storage_innobase_include_detail_ut_large__page__alloc-solaris.h) = 2b41381af66e22231e897ebc97346c13b1f1e3a7
 SHA1 (patch-vio_viosocket.cc) = fcbe1eccb58fb840857f22178291ed2fb2c870b0
