@@ -1,2 +1,4 @@
 Element (formerly known as Vector and Riot) is a Matrix web client built using
-the Matrix React SDK.
+the Matrix React SDK.  This package contains files that can be served by a web
+server to a client browser that will then execute the javascript.  (It is
+typical to map /element to the installed directory.)
