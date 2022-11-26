@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2013/10/12 13:38:38 obache Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/11/26 19:50:46 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -8,28 +8,14 @@ ${PYSITELIB}/funcparserlib/__init__.pyc
 ${PYSITELIB}/funcparserlib/__init__.pyo
 ${PYSITELIB}/funcparserlib/lexer.py
 ${PYSITELIB}/funcparserlib/lexer.pyc
+${PYSITELIB}/funcparserlib/lexer.pyi
 ${PYSITELIB}/funcparserlib/lexer.pyo
 ${PYSITELIB}/funcparserlib/parser.py
 ${PYSITELIB}/funcparserlib/parser.pyc
+${PYSITELIB}/funcparserlib/parser.pyi
 ${PYSITELIB}/funcparserlib/parser.pyo
-${PYSITELIB}/funcparserlib/tests/__init__.py
-${PYSITELIB}/funcparserlib/tests/__init__.pyc
-${PYSITELIB}/funcparserlib/tests/__init__.pyo
-${PYSITELIB}/funcparserlib/tests/dot.py
-${PYSITELIB}/funcparserlib/tests/dot.pyc
-${PYSITELIB}/funcparserlib/tests/dot.pyo
-${PYSITELIB}/funcparserlib/tests/json.py
-${PYSITELIB}/funcparserlib/tests/json.pyc
-${PYSITELIB}/funcparserlib/tests/json.pyo
-${PYSITELIB}/funcparserlib/tests/test_dot.py
-${PYSITELIB}/funcparserlib/tests/test_dot.pyc
-${PYSITELIB}/funcparserlib/tests/test_dot.pyo
-${PYSITELIB}/funcparserlib/tests/test_json.py
-${PYSITELIB}/funcparserlib/tests/test_json.pyc
-${PYSITELIB}/funcparserlib/tests/test_json.pyo
-${PYSITELIB}/funcparserlib/tests/test_parsing.py
-${PYSITELIB}/funcparserlib/tests/test_parsing.pyc
-${PYSITELIB}/funcparserlib/tests/test_parsing.pyo
+${PYSITELIB}/funcparserlib/py.typed
 ${PYSITELIB}/funcparserlib/util.py
 ${PYSITELIB}/funcparserlib/util.pyc
+${PYSITELIB}/funcparserlib/util.pyi
 ${PYSITELIB}/funcparserlib/util.pyo
