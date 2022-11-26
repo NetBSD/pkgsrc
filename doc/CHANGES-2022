@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5684 2022/11/26 03:40:30 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.5685 2022/11/26 11:27:57 nros Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8596,3 +8596,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added graphics/qt6-qt3d version 6.4.1 [nros 2022-11-25]
 	Updated chat/matrix-synapse to 1.72.0 [gdt 2022-11-26]
 	Updated textproc/po4a to 0.68nb2 [schmonz 2022-11-26]
+	Added net/qt6-qtremoteobjects version 6.4.1 [nros 2022-11-26]
