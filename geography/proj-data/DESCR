@@ -1,0 +1,3 @@
+This package contains data files for proj.  They are used in
+transforms that cannot be described by formulas, but instead have
+values in a geographic grid that should be interpolated.
