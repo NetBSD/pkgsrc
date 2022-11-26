@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5693 2022/11/26 18:00:23 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5694 2022/11/26 18:02:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8615,3 +8615,19 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-googleapis-common-protos to 1.57.0 [adam 2022-11-26]
 	Updated www/py-httpcore to 0.16.2 [adam 2022-11-26]
 	Updated www/py-httpx-socks to 0.7.5 [adam 2022-11-26]
+	Updated security/py-acme to 2.0.0 [adam 2022-11-26]
+	Updated security/py-certbot to 2.0.0 [adam 2022-11-26]
+	Updated security/py-certbot-apache to 2.0.0 [adam 2022-11-26]
+	Updated security/py-certbot-dns-digitalocean to 2.0.0 [adam 2022-11-26]
+	Updated security/py-certbot-dns-dnsimple to 2.0.0 [adam 2022-11-26]
+	Updated security/py-certbot-dns-dnsmadeeasy to 2.0.0 [adam 2022-11-26]
+	Updated security/py-certbot-dns-gehirn to 2.0.0 [adam 2022-11-26]
+	Updated security/py-certbot-dns-google to 2.0.0 [adam 2022-11-26]
+	Updated security/py-certbot-dns-linode to 2.0.0 [adam 2022-11-26]
+	Updated security/py-certbot-dns-luadns to 2.0.0 [adam 2022-11-26]
+	Updated security/py-certbot-dns-nsone to 2.0.0 [adam 2022-11-26]
+	Updated security/py-certbot-dns-ovh to 2.0.0 [adam 2022-11-26]
+	Updated security/py-certbot-dns-rfc2136 to 2.0.0 [adam 2022-11-26]
+	Updated security/py-certbot-dns-route53 to 2.0.0 [adam 2022-11-26]
+	Updated security/py-certbot-dns-sakuracloud to 2.0.0 [adam 2022-11-26]
+	Updated security/py-certbot-nginx to 2.0.0 [adam 2022-11-26]
