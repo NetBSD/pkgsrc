@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.40 2022/11/09 08:37:25 adam Exp $
+$NetBSD: distinfo,v 1.41 2022/11/26 18:01:36 adam Exp $
 
-BLAKE2s (certbot-dns-dnsimple-1.32.0.tar.gz) = 028671696e7128394efc6e6b78bc954932df60fe5d7198599a8da69426a63d08
-SHA512 (certbot-dns-dnsimple-1.32.0.tar.gz) = 0100404facad4bda35621ea650f89765e515d75e6a88c8b7237ccf8f06e26c239e4b3f850fc4e83c984b6c34191dc620bbb3ceaccc50540f6cfd86538aaf81a0
-Size (certbot-dns-dnsimple-1.32.0.tar.gz) = 12453 bytes
+BLAKE2s (certbot-dns-dnsimple-2.0.0.tar.gz) = 62e9eacce2357b31c2b1ff063ef9d702b5ae7bcb957fc13e6b5b2229b06655ee
+SHA512 (certbot-dns-dnsimple-2.0.0.tar.gz) = c59b90bef4b4148da19fe521c368f108abce5ae2caef5f37b462715732063bffc3b28135377cf4637310c8edb3893516635f7af7d2f1e92ac96b330a7785d8e0
+Size (certbot-dns-dnsimple-2.0.0.tar.gz) = 12437 bytes
