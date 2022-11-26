@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2022/11/12 15:06:06 ryoon Exp $
+# $NetBSD: Makefile,v 1.14 2022/11/26 13:47:13 nia Exp $
 
 DISTNAME=	spdlog-1.11.0
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gabime/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -25,6 +26,9 @@ CONFIGURE_DIRS=	_build
 
 pre-configure:
 	${MKDIR} ${WRKSRC}/_build
+
+post-install:
+	${FIND} ${DESTDIR} -name '*.orig' -exec rm -f '{}' ';'
 
 .include "../../lang/python/tool.mk"
 .include "../../textproc/fmtlib/buildlink3.mk"
