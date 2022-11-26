@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.142 2022/11/23 10:41:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.143 2022/11/26 09:55:19 wiz Exp $
 ${PLIST.nococoa}bin/gapplication
 bin/gdbus
 bin/gio
@@ -285,7 +285,6 @@ include/glib-2.0/gobject/gvalue.h
 include/glib-2.0/gobject/gvaluearray.h
 include/glib-2.0/gobject/gvaluecollector.h
 include/glib-2.0/gobject/gvaluetypes.h
-${PLIST.fam}lib/gio/modules/libgiofam.so
 lib/glib-2.0/include/glibconfig.h
 lib/libgio-2.0.so
 lib/libgio-2.0.so.0
