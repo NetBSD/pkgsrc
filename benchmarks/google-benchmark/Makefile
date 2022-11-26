@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2022/07/31 09:52:51 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2022/11/26 17:53:02 adam Exp $
 
-DISTNAME=	benchmark-1.7.0
+DISTNAME=	benchmark-1.7.1
 PKGNAME=	google-${DISTNAME}
 CATEGORIES=	benchmarks
 MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
