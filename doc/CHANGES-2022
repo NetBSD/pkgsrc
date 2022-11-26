@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5695 2022/11/26 19:59:32 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5696 2022/11/26 22:51:15 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8635,3 +8635,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-funcparserlib to 1.0.1 [adam 2022-11-26]
 	Updated lang/py-hy to 0.25.0 [adam 2022-11-26]
 	Removed devel/py-ruamel-ordereddict [adam 2022-11-26]
+	Updated wm/enlightenment16 to 1.0.27 [gutteridge 2022-11-26]
