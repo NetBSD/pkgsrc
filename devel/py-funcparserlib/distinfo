@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/12/16 11:16:14 wiz Exp $
+$NetBSD: distinfo,v 1.7 2022/11/26 19:50:46 adam Exp $
 
-BLAKE2s (funcparserlib-0.3.6.tar.gz) = 72faccec12b02e2e33333df5670de99768b5eecf94d46c13fb7d97aa11105d4b
-SHA512 (funcparserlib-0.3.6.tar.gz) = efa52f788aa902b099660cb8bc60a025085a8c383e52bd0824a0c3ae28a6c13804a0659de0c80b4dcd839ee70491805d4eecda6cea221e35c3750ec569098c24
-Size (funcparserlib-0.3.6.tar.gz) = 30401 bytes
-SHA1 (patch-setup.py) = 60cddcb0ff8e20036f26865f4134bfdb0058f436
+BLAKE2s (funcparserlib-1.0.1.tar.gz) = abf7ceb7431926509a7a5c6688e19aee9f823f26988a27914f9570f6575caff0
+SHA512 (funcparserlib-1.0.1.tar.gz) = 721673b7d79c19cd3cbad8387297644790581057d077139fe6efbaa14bc5ad28dc9074b34728bdd9ea1c00c56c402ce329d9f53728e59030408fd87059339f79
+Size (funcparserlib-1.0.1.tar.gz) = 17238 bytes
