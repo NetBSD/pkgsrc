@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/07/22 08:34:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/11/26 17:53:02 adam Exp $
 include/benchmark/benchmark.h
 include/benchmark/export.h
 lib/cmake/benchmark/benchmarkConfig.cmake
@@ -16,6 +16,7 @@ share/doc/benchmark/perf_counters.md
 share/doc/benchmark/platform_specific_build_instructions.md
 share/doc/benchmark/python_bindings.md
 share/doc/benchmark/random_interleaving.md
+share/doc/benchmark/reducing_variance.md
 share/doc/benchmark/releasing.md
 share/doc/benchmark/tools.md
 share/doc/benchmark/user_guide.md
