@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2022/02/10 21:23:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2022/11/26 18:01:35 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -25,15 +25,9 @@ ${PYSITELIB}/acme/fields.pyo
 ${PYSITELIB}/acme/jws.py
 ${PYSITELIB}/acme/jws.pyc
 ${PYSITELIB}/acme/jws.pyo
-${PYSITELIB}/acme/magic_typing.py
-${PYSITELIB}/acme/magic_typing.pyc
-${PYSITELIB}/acme/magic_typing.pyo
 ${PYSITELIB}/acme/messages.py
 ${PYSITELIB}/acme/messages.pyc
 ${PYSITELIB}/acme/messages.pyo
-${PYSITELIB}/acme/mixins.py
-${PYSITELIB}/acme/mixins.pyc
-${PYSITELIB}/acme/mixins.pyo
 ${PYSITELIB}/acme/py.typed
 ${PYSITELIB}/acme/standalone.py
 ${PYSITELIB}/acme/standalone.pyc
