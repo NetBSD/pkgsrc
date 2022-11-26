@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2022Q3,v 1.1.2.6 2022/11/16 19:14:56 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2022Q3,v 1.1.2.7 2022/11/26 17:33:22 spz Exp $
 
   Changes to packages and infrastructure on the 2022Q3 branch:
 
@@ -94,4 +94,10 @@ mail/evolution: build fix
 
 Pullup ticket #6704 - requested by khorben
 www/gitea: security fix, build fix
+
+Pullup ticket #6696 - requested by bsiegert
+textproc/expat: security update
+
+Pullup ticket #6705 - requested by bsiegert
+databases/redis: security update
 
