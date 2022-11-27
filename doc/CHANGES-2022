@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5726 2022/11/27 05:12:58 gutteridge Exp $
+$NetBSD: CHANGES-2022,v 1.5727 2022/11/27 05:13:58 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8666,3 +8666,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/mate-session-manager to 1.26.0 [gutteridge 2022-11-27]
 	Updated x11/mate-settings-daemon to 1.26.0 [gutteridge 2022-11-27]
 	Updated misc/mate-utils to 1.26.0 [gutteridge 2022-11-27]
+	Updated editors/pluma to 1.26.0 [gutteridge 2022-11-27]
