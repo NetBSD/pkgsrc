@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1487 2022/11/26 11:27:22 nros Exp $
+# $NetBSD: Makefile,v 1.1488 2022/11/27 16:15:20 pin Exp $
 #
 
 COMMENT=	Networking tools
@@ -887,6 +887,7 @@ SUBDIR+=	sitescooper
 SUBDIR+=	slurm
 SUBDIR+=	smokeping
 SUBDIR+=	sniffit
+SUBDIR+=	sniffnet
 SUBDIR+=	sniproxy
 SUBDIR+=	snmptt
 SUBDIR+=	snort
