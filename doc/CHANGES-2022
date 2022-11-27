@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5696 2022/11/26 22:51:15 gutteridge Exp $
+$NetBSD: CHANGES-2022,v 1.5697 2022/11/27 01:10:31 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8636,3 +8636,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/py-hy to 0.25.0 [adam 2022-11-26]
 	Removed devel/py-ruamel-ordereddict [adam 2022-11-26]
 	Updated wm/enlightenment16 to 1.0.27 [gutteridge 2022-11-26]
+	Updated geography/gdal-lib to 3.5.3 [gdt 2022-11-27]
