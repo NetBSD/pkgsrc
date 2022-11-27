@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5709 2022/11/27 04:53:37 gutteridge Exp $
+$NetBSD: CHANGES-2022,v 1.5710 2022/11/27 04:54:30 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8649,3 +8649,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated audio/libmatemixer to 1.26.0 [gutteridge 2022-11-27]
 	Updated misc/libmateweather to 1.26.0 [gutteridge 2022-11-27]
 	Updated x11/mate-applets to 1.26.1 [gutteridge 2022-11-27]
+	Updated graphics/mate-backgrounds to 1.26.0 [gutteridge 2022-11-27]
