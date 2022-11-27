@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2022/11/27 13:30:45 gdt Exp $
+# $NetBSD: Makefile,v 1.30 2022/11/27 13:33:48 gdt Exp $
 
 # An update to 8 or 9 is on hold because I have not yet assessed how
 # much trouble it will cause.  -gdt
-# evaluated how much this will break.
 VERSION_BASE=	7.2.1
 VERSION_RC=
 VERSION=	${VERSION_BASE}${VERSION_RC}
