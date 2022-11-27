@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5741 2022/11/27 13:32:19 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5742 2022/11/27 15:02:33 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8687,3 +8687,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated geography/proj to 7.2.1 [gdt 2022-11-27]
 	Updated www/py-urllib3 to 1.26.13 [adam 2022-11-27]
 	Updated archivers/py-zipp to 3.11.0 [adam 2022-11-27]
+	Updated net/hercules4sdl-telnet to 1.0.0nb20220201 [rhialto 2022-11-27]
