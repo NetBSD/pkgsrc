@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.6 2019/10/21 23:08:52 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/11/27 04:57:41 gutteridge Exp $
 bin/mate-volume-control
 bin/mate-volume-control-status-icon
 libexec/mate-volume-control-applet
-man/man1/mate-volume-control-applet.1
 man/man1/mate-volume-control.1
+man/man1/mate-volume-control-status-icon.1
 share/applications/mate-volume-control.desktop
 share/dbus-1/services/org.mate.panel.applet.GvcAppletFactory.service
 share/examples/mate-media/xdg/autostart/mate-volume-control-status-icon.desktop
