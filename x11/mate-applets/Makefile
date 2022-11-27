@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.45 2022/11/23 16:21:26 adam Exp $
+# $NetBSD: Makefile,v 1.46 2022/11/27 04:53:23 gutteridge Exp $
 
-PKGREVISION= 4
 .include "../../meta-pkgs/mate/Makefile.common"
 
 DISTNAME=	mate-applets-${VERSION:R}.1
@@ -10,14 +9,11 @@ COMMENT=	MATE panel applets
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--libexecdir=${PREFIX}/libexec/mate-applets
+CONFIGURE_ARGS+=	--without-nl
 
 .include "../../mk/bsd.prefs.mk"
 
 PLIST_VARS=		batt cpufreq
-.if ${OPSYS} == "NetBSD" &&  (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64")
-CONFIGURE_ARGS+=	--enable-cpufreq=yes
-PLIST.cpufreq=		yes
-.endif
 
 INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples/mate-applets
 
