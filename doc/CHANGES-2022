@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5729 2022/11/27 05:16:07 gutteridge Exp $
+$NetBSD: CHANGES-2022,v 1.5730 2022/11/27 05:17:11 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8669,3 +8669,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated editors/pluma to 1.26.0 [gutteridge 2022-11-27]
 	Updated sysutils/mate-sensors-applet to 1.26.0 [gutteridge 2022-11-27]
 	Updated x11/mate-screensaver to 1.26.1 [gutteridge 2022-11-27]
+	Updated net/mate-user-share to 1.26.0 [gutteridge 2022-11-27]
