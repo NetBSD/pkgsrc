@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/12/30 23:50:20 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/11/27 05:16:55 gutteridge Exp $
 bin/mate-file-share-properties
 lib/caja/extensions-2.0/libcaja-user-share.la
 libexec/mate-user-share
@@ -327,6 +327,12 @@ share/help/ka/mate-user-share/figures/sharing-over-bluetooth.png
 share/help/ka/mate-user-share/figures/sharing-over-the-network.png
 share/help/ka/mate-user-share/index.docbook
 share/help/ka/mate-user-share/legal.xml
+share/help/kab/mate-user-share/figures/file-sharing-preferences.png
+share/help/kab/mate-user-share/figures/receiving-over-bluetooth.png
+share/help/kab/mate-user-share/figures/sharing-over-bluetooth.png
+share/help/kab/mate-user-share/figures/sharing-over-the-network.png
+share/help/kab/mate-user-share/index.docbook
+share/help/kab/mate-user-share/legal.xml
 share/help/kk/mate-user-share/figures/file-sharing-preferences.png
 share/help/kk/mate-user-share/figures/receiving-over-bluetooth.png
 share/help/kk/mate-user-share/figures/sharing-over-bluetooth.png
