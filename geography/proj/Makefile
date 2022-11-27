@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.28 2022/11/23 16:18:46 adam Exp $
+# $NetBSD: Makefile,v 1.29 2022/11/27 13:30:45 gdt Exp $
 
-# An update to 7 is on hold because I have not yet assessed how much
-# trouble it will cause.  -gdt
-VERSION_BASE=	6.3.2
+# An update to 8 or 9 is on hold because I have not yet assessed how
+# much trouble it will cause.  -gdt
+# evaluated how much this will break.
+VERSION_BASE=	7.2.1
 VERSION_RC=
 VERSION=	${VERSION_BASE}${VERSION_RC}
 #PKGREVISION=	0
@@ -10,24 +11,16 @@ VERSION=	${VERSION_BASE}${VERSION_RC}
 WRKFINAL=	proj-${VERSION_BASE}
 WRKSRC=		${WRKDIR}/${WRKFINAL}
 DISTNAME=	proj-${VERSION}
-PKGREVISION=	6
 CATEGORIES=	geography
 MASTER_SITES=	https://download.osgeo.org/proj/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	gdt@NetBSD.org
-HOMEPAGE=	https://proj4.org/
+HOMEPAGE=	https://proj.org/
 COMMENT=	Cartographic projection software
-
-# \todo: Add pdf manual.
-
-# Grid files also have the following "cc-by ish" licenses:
-# cc-by, 2-clause-bsd,  License Ouverte, cc0 (eu)
-# open-government, cc-by, public-domain (na)
-# cc-by (oceania)
 LICENSE=	mit
 
-.include "options.mk"
+.include "../../mk/bsd.prefs.mk"
 
 PREV_PKGPATH=		misc/proj
 
@@ -43,24 +36,10 @@ GNU_CONFIGURE=		yes
 CFLAGS+=		-DHAVE_C99_MATH=0
 .endif
 
-.if !empty(PKG_OPTIONS:Mproj-grids)
-# Ideally, upstream would have an approach which enables testing with
-# the grids that users ought to have.  Until then, fail if test
-# preconditions are not met.
-do-test:
-	${ECHO} "Tests assume extra grids are not installed."
-	${FALSE}
-.else
 TEST_TARGET=		check
-.endif
-
-# \todo Ideally, the files would be unpacked directly in data.
-# Assume that all of the stray files in ${WRKDIR} came from datumgrids.
-# \todo Some files in the grid tarballs do not get installed by the
-# base Makefile.  Consider an alternate approach.
-post-extract:
-	cd ${WRKDIR} && for f in *; do if [ $$f != ${WRKFINAL} ]; then mv $$f ${WRKFINAL}/data; fi; done
 
 .include "../../databases/sqlite3/buildlink3.mk"
+.include "../../graphics/tiff/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
