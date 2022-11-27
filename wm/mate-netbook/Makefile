@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2022/08/11 05:09:21 gutteridge Exp $
+# $NetBSD: Makefile,v 1.26 2022/11/27 04:59:33 gutteridge Exp $
 
-PKGREVISION= 4
 .include "../../meta-pkgs/mate/Makefile.common"
 
-DISTNAME=	mate-netbook-${VERSION:R}.0
+DISTNAME=	mate-netbook-${VERSION}
 CATEGORIES=	wm
 
 COMMENT=	Simple window management tool for MATE desktop
