@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22373 2022/11/27 02:53:54 taca Exp $
+$NetBSD: TODO,v 1.22374 2022/11/27 11:34:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -678,6 +678,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ganglia-webfrontend-3.7.5
 	o gap-4r4p9
 	o gaupol-1.11
+	o gawk-5.2.1
 	o gbrainy-2.43
 	o gcal-4.1
 	o gcc-mips-current-7.1.0
