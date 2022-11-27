@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2022/11/26 12:25:22 nia Exp $
+$NetBSD: distinfo,v 1.8 2022/11/27 22:12:25 nia Exp $
 
 BLAKE2s (mysql-boost-8.0.31.tar.gz) = 2da23b9233a2c5060aa22074cbe990d0dc1d90b2e55a4cd4b32571d2c77fe3bf
 SHA512 (mysql-boost-8.0.31.tar.gz) = 87b1678de8c2fd640fd6f3ae58266ea63fe240578330e3296d0e5fc209bbe9b0c22996214b6ca4cce8c0d9cc2f9897f4e6723d835b33fc4342983c82929c3d96
@@ -15,6 +15,7 @@ SHA1 (patch-include_my__compare.h) = b66c8cebef8ab3328201fe4c7433a484ba83e203
 SHA1 (patch-include_my__thread.h) = a88fee119c9a9e2c89e54c8b59555b0d5100cbcc
 SHA1 (patch-include_my__thread__os__id.h) = 383923523623d0811915d5d75c523904102dcf43
 SHA1 (patch-include_tables__contained__in.h) = c332b10760ef8b7f16b1e94821b79589f525e4e7
+SHA1 (patch-include_violite.h) = adbdf539d2ec0e225e1c38a7a1ec8b4cfb28f4d0
 SHA1 (patch-libmysql_CMakeLists.txt) = cbc2185e52194de1bcdfe5e2af7bfc857e747acd
 SHA1 (patch-mysys_kqueue__timers.cc) = 837474b779c24dd0af67444c2adbcf07b73e0d36
 SHA1 (patch-mysys_stacktrace.cc) = 6792ceaae3c3b0d70bd8b6c848a128d50397e6f4
