@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 11:19:50 nia Exp $
+$NetBSD: distinfo,v 1.11 2022/11/27 05:05:41 gutteridge Exp $
 
-BLAKE2s (mate-notification-daemon-1.24.2.tar.xz) = be1ef054766cf1e1a42f584e6d1e0f0abc69ecbd96ac4adb2b3abdf90e11ea6c
-SHA512 (mate-notification-daemon-1.24.2.tar.xz) = be9db249bec6dc2206d69998b972f06ab4e2ee5c30b5bcf44c43b508954a9984a37bc9a2fe9989aec55969492256ed742fb2a9618b751e47ff43b66c383c1bd4
-Size (mate-notification-daemon-1.24.2.tar.xz) = 396156 bytes
+BLAKE2s (mate-notification-daemon-1.26.0.tar.xz) = d7c2ecbea7e989fea9775588c02791e2e97c3a8631e91b67e5591de8e2f10419
+SHA512 (mate-notification-daemon-1.26.0.tar.xz) = 5249cf14ba93f2e74b9774226c5d0f5e90a517df07569e16a23af7053f5ef160afe98c8a3452baf80c243272763eee1fde0b84f434f55df1f9de26298361a1dc
+Size (mate-notification-daemon-1.26.0.tar.xz) = 421032 bytes
