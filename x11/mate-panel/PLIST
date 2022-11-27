@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2022/06/28 11:38:05 nia Exp $
+@comment $NetBSD: PLIST,v 1.12 2022/11/27 05:02:21 gutteridge Exp $
 bin/mate-desktop-item-edit
 bin/mate-panel
 bin/mate-panel-test-applets
@@ -809,6 +809,9 @@ share/help/yo/mate-clock/legal.xml
 share/help/yo/mate-fish/figures/fish_applet.png
 share/help/yo/mate-fish/index.docbook
 share/help/yo/mate-fish/legal.xml
+share/help/zh-Hans/mate-clock/figures/clock_applet.png
+share/help/zh-Hans/mate-clock/index.docbook
+share/help/zh-Hans/mate-clock/legal.xml
 share/help/zh-Hans/mate-fish/figures/fish_applet.png
 share/help/zh-Hans/mate-fish/index.docbook
 share/help/zh-Hans/mate-fish/legal.xml
@@ -960,6 +963,7 @@ share/locale/el/LC_MESSAGES/mate-panel.mo
 share/locale/en_AU/LC_MESSAGES/mate-panel.mo
 share/locale/en_CA/LC_MESSAGES/mate-panel.mo
 share/locale/en_GB/LC_MESSAGES/mate-panel.mo
+share/locale/en_US/LC_MESSAGES/mate-panel.mo
 share/locale/eo/LC_MESSAGES/mate-panel.mo
 share/locale/es/LC_MESSAGES/mate-panel.mo
 share/locale/es_AR/LC_MESSAGES/mate-panel.mo
