@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 11:19:24 nia Exp $
+$NetBSD: distinfo,v 1.10 2022/11/27 04:45:21 gutteridge Exp $
 
-BLAKE2s (caja-dropbox-1.24.0.tar.xz) = 127a32d008d51ce39e79f55917f854e67bcdd8ae3acfe474c9e06f4580a3fa05
-SHA512 (caja-dropbox-1.24.0.tar.xz) = 64d699b4c3957d5996ef69936b4b2746641bc2db4efb7b23535febf5eed3ee767330927aeeda67747c0d72e0f052a2979ae2160ffaaf01e4fd82aff68a5f27bf
-Size (caja-dropbox-1.24.0.tar.xz) = 309024 bytes
-SHA1 (patch-Makefile.in) = 7c6147bbf6f53b704cf5256d1175bcead820d70f
+BLAKE2s (caja-dropbox-1.26.0.tar.xz) = 666a9b6c21400a31b40ae4cc3387e66ab214f82dd7a0edbc497f97f912901939
+SHA512 (caja-dropbox-1.26.0.tar.xz) = f96e3ddf4434936b04e992044d6cd5797b6ff77ead573e8e9a6493f4308d9716f47871f1fd7f08b0dbf7f2659f107511b6be65e98632a0892ebfff0a9888dbe7
+Size (caja-dropbox-1.26.0.tar.xz) = 361352 bytes
+SHA1 (patch-Makefile.in) = e160d06a853caa603c445c393db64f90f421ef12
 SHA1 (patch-configure) = 8936af5d30a5992bae2000238e90dbd96d4a08d6
