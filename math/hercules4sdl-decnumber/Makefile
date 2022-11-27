@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2021/11/06 16:40:06 rhialto Exp $
+# $NetBSD: Makefile,v 1.2 2022/11/27 15:07:06 rhialto Exp $
 
 DISTNAME=	hercules4sdl-decnumber-3.68.0
-PKGREVISION=	20210105
+PKGREVISION=	20220201
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=SDL-Hercules-390/}
 GITHUB_PROJECT=	decNumber
-GITHUB_TAG=	da6650957d7dea21b5647c1fa80fa432f2891550 # 5 Jan 2021
+GITHUB_TAG=	3aa2f4531b5fcbd0478ecbaf72ccc47079c67280 # 1 Feb 2022
 
 MAINTAINER=	rhialto@NetBSD.org
 HOMEPAGE=	https://github.com/SDL-Hercules-390/decNumber
