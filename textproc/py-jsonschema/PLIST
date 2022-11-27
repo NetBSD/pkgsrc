@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2022/09/05 14:14:17 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2022/11/27 12:09:29 adam Exp $
 bin/jsonschema-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -41,7 +41,20 @@ ${PYSITELIB}/jsonschema/schemas/draft3.json
 ${PYSITELIB}/jsonschema/schemas/draft4.json
 ${PYSITELIB}/jsonschema/schemas/draft6.json
 ${PYSITELIB}/jsonschema/schemas/draft7.json
-${PYSITELIB}/jsonschema/schemas/vocabularies.json
+${PYSITELIB}/jsonschema/schemas/vocabularies/draft2019-09/applicator
+${PYSITELIB}/jsonschema/schemas/vocabularies/draft2019-09/content
+${PYSITELIB}/jsonschema/schemas/vocabularies/draft2019-09/core
+${PYSITELIB}/jsonschema/schemas/vocabularies/draft2019-09/meta-data
+${PYSITELIB}/jsonschema/schemas/vocabularies/draft2019-09/validation
+${PYSITELIB}/jsonschema/schemas/vocabularies/draft2020-12/applicator
+${PYSITELIB}/jsonschema/schemas/vocabularies/draft2020-12/content
+${PYSITELIB}/jsonschema/schemas/vocabularies/draft2020-12/core
+${PYSITELIB}/jsonschema/schemas/vocabularies/draft2020-12/format
+${PYSITELIB}/jsonschema/schemas/vocabularies/draft2020-12/format-annotation
+${PYSITELIB}/jsonschema/schemas/vocabularies/draft2020-12/format-assertion
+${PYSITELIB}/jsonschema/schemas/vocabularies/draft2020-12/meta-data
+${PYSITELIB}/jsonschema/schemas/vocabularies/draft2020-12/unevaluated
+${PYSITELIB}/jsonschema/schemas/vocabularies/draft2020-12/validation
 ${PYSITELIB}/jsonschema/tests/__init__.py
 ${PYSITELIB}/jsonschema/tests/__init__.pyc
 ${PYSITELIB}/jsonschema/tests/_helpers.py
