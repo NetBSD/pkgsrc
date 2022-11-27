@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.32 2022/08/11 05:09:14 gutteridge Exp $
+# $NetBSD: Makefile,v 1.33 2022/11/27 04:45:21 gutteridge Exp $
 
 # Makefile.common already includes python .mk files, so need to set this here
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-PKGREVISION= 6
 .include "../../meta-pkgs/mate/Makefile.common"
 
-DISTNAME=	caja-dropbox-${VERSION:R}.0
+DISTNAME=	caja-dropbox-${VERSION}
 CATEGORIES=	sysutils
 
 COMMENT=	Dropbox Caja extension
