@@ -1,13 +1,16 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 11:05:20 nia Exp $
+$NetBSD: distinfo,v 1.11 2022/11/27 13:14:00 triaxx Exp $
 
-BLAKE2s (3proxy-0.8.11.tgz) = 21fc38274deb19257b08a6b67bc3d2711567b2d728416c5d6f3ea73009b4e72e
-SHA512 (3proxy-0.8.11.tgz) = 4160684892292a0c4666f8b8f3bdba0c0846842816ef4f6d0ce7286b520a3cda2ceee76580d2e61942afb9404a8ad93aa0260043acd4ffbfc1c38b3e31857c67
-Size (3proxy-0.8.11.tgz) = 511157 bytes
-SHA1 (patch-ab) = 3ad025c8577f1494d6949efcd5bf104672027a0d
-SHA1 (patch-ac) = e4e4a005e815c7cd353103bbcbbfdb849d637517
-SHA1 (patch-ad) = 8081f363dbf0232e5d1db1bc5e09f93ac7cfe95b
-SHA1 (patch-ae) = 467ad84a16ee806da1bbc3d297434bd31a25bb27
-SHA1 (patch-cfg_3proxy.cfg.sample) = 841eb478bd5ca09bd19364d61dcd963b7a15c790
-SHA1 (patch-Makefile.unix) = bcaf278e55d954ecc758a0f01c7e35f8d7a7fca2
-SHA1 (patch-man_3proxy.8) = ea00a3c99c201fc87efb1270bfaab13a4e2f9c75
-SHA1 (patch-man_3proxy.cfg.3) = 52fb754e7241c10612e13bca66127072732b56f1
+BLAKE2s (3proxy-0.9.4.tar.gz) = e207319dbc7b88cac0779ab51f177bfa098392c261ab6594417e03fced40c657
+SHA512 (3proxy-0.9.4.tar.gz) = d3316f6ee1217e580ce593a7bfd9d76672487a89862f247373b0acf3ea207887c758168e33b25db9fc974063deab0826c20d455cab2536d03eee49d8bddda6b5
+Size (3proxy-0.9.4.tar.gz) = 610340 bytes
+SHA1 (patch-Makefile.unix) = aabfa5ad7985ddf8b1240e65bc00c86837d844b0
+SHA1 (patch-ab) = 097103e06e576d6e4ad1830122ab6f4d9ed32a3b
+SHA1 (patch-ac) = a68b7949b22a250b7ed223c7790d420fa7ab624c
+SHA1 (patch-ad) = 625c35af17d4d23203e550f8f7e293175b11813f
+SHA1 (patch-ae) = 9ef8ce232d10603527fcc77cc266a2557e8ec2a3
+SHA1 (patch-cfg_3proxy.cfg.sample) = 7b113b9494ca80d613fb53bde02df0b9e3a40584
+SHA1 (patch-man_3proxy.8) = 69a64574e4b1f543ccd4e90bead39740a638b0f4
+SHA1 (patch-man_3proxy.cfg.3) = 3b650436821b1c0cab72a94c1ca245295c5bfba6
+SHA1 (patch-src_plugins_PamAuth_pamauth.c) = 97674438898ddc9ea7cce9a7da303e378d50bcdf
+SHA1 (patch-src_plugins_TransparentPlugin_transparent__plugin.c) = 1176f14c05443c5bcaaa8a36f68701d8446c6997
+SHA1 (patch-src_version.h) = 774543930f3d64240907a1b1dd798372a09e6362

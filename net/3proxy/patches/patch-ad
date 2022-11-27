@@ -1,11 +1,11 @@
-$NetBSD: patch-ad,v 1.3 2018/02/19 21:25:46 triaxx Exp $
+$NetBSD: patch-ad,v 1.4 2022/11/27 13:14:00 triaxx Exp $
 
 Calling usleep for 1000000 microseconds or more is not allowed, so add a
 myusleep() wrapper to DTRT.
 
---- src/common.c.orig	2017-10-19 14:31:30.000000000 +0000
+--- src/common.c.orig	2021-07-01 16:59:57.000000000 +0000
 +++ src/common.c
-@@ -881,3 +881,21 @@ unsigned long getip46(int family, unsign
+@@ -632,3 +632,21 @@ unsigned long getip46(int family, unsign
  	return 0;
  #endif
  }
