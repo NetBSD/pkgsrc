@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2021/11/06 16:40:06 rhialto Exp $
+$NetBSD: distinfo,v 1.2 2022/11/27 15:12:12 rhialto Exp $
 
-BLAKE2s (hercules4sdl-softfloat-3.5.0-42f2f99a479a724de5b601a0551e46678a5e3c57.tar.gz) = 77aa9b8edaa69d5d6025cab92b94fcc8ac40379b1f3fb359c5ea5d976997acfa
-SHA512 (hercules4sdl-softfloat-3.5.0-42f2f99a479a724de5b601a0551e46678a5e3c57.tar.gz) = 92ee7b5645cb3535064c55a013c160760fbfca8de57ebde570b59205a78c3b9c3253d89004baba0129faa7cb63d2bd862d2c4927b21e69b8ad4c6085ad234030
-Size (hercules4sdl-softfloat-3.5.0-42f2f99a479a724de5b601a0551e46678a5e3c57.tar.gz) = 237166 bytes
+BLAKE2s (hercules4sdl-softfloat-3.5.0-4b0c326008e174610969c92e69178939ed80653d.tar.gz) = c751a8b4201b5758b3c1985001fbdf82aa6b7eec4d7df086d2cc3ee00492556f
+SHA512 (hercules4sdl-softfloat-3.5.0-4b0c326008e174610969c92e69178939ed80653d.tar.gz) = 549b144c63fdbbb0815650dfe9fb443a92fb8baeff33baeca1d25fa6226705ef149a1bdb80236c5debeb161bfaecd4cffe9f8d74298a83175c2ddeebb735c48c
+Size (hercules4sdl-softfloat-3.5.0-4b0c326008e174610969c92e69178939ed80653d.tar.gz) = 237236 bytes
 SHA1 (patch-cflags.txt) = 8e5833c2d43e7973dcf9d6c442976efefac30b26
