@@ -1,0 +1,18 @@
+$NetBSD: patch-Makefile.in,v 1.1 2022/11/27 04:55:40 gutteridge Exp $
+
+Continue to install .mo files. Some other expectation in the build tooling
+isn't working as intended.
+
+--- Makefile.in.orig	2021-08-04 08:39:51.000000000 +0000
++++ Makefile.in
+@@ -830,8 +830,8 @@ dist-hook:
+ 
+ # we don't want to install mo files, all translations are already stored
+ # in xml files
+-install-data-local:
+-	$(MAKE) -C po uninstall
++#install-data-local:
++#	$(MAKE) -C po uninstall
+ 
+ # Build ChangeLog from GIT  history
+ ChangeLog:
