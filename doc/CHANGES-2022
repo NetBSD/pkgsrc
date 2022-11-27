@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5745 2022/11/27 15:44:35 rhialto Exp $
+$NetBSD: CHANGES-2022,v 1.5746 2022/11/27 15:44:50 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8691,3 +8691,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated math/hercules4sdl-decnumber to 3.68.0nb20220201 [rhialto 2022-11-27]
 	Updated emulators/hercules4sdl to 4.5 [rhialto 2022-11-27]
 	Updated math/hercules4sdl-softfloat to 3.5.0nb20220201 [rhialto 2022-11-27]
+	Updated security/hercules4sdl-crypto to 1.0.0nb20220201 [rhialto 2022-11-27]
