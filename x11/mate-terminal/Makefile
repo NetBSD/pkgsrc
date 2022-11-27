@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.33 2022/09/01 01:23:10 gutteridge Exp $
+# $NetBSD: Makefile,v 1.34 2022/11/27 05:20:55 gutteridge Exp $
 
 .include "../../meta-pkgs/mate/Makefile.common"
 
-VERSION=	1.26.0
 DISTNAME=	mate-terminal-${VERSION}
 CATEGORIES=	x11
-MASTER_SITES+=  https://pub.mate-desktop.org/releases/${VERSION:R}/
 
 USE_TOOLS+=	perl:run
 
