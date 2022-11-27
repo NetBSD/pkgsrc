@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5747 2022/11/27 16:15:52 pin Exp $
+$NetBSD: CHANGES-2022,v 1.5748 2022/11/27 20:08:25 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8693,3 +8693,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated math/hercules4sdl-softfloat to 3.5.0nb20220201 [rhialto 2022-11-27]
 	Updated security/hercules4sdl-crypto to 1.0.0nb20220201 [rhialto 2022-11-27]
 	Added net/sniffnet version 1.0.0 [pin 2022-11-27]
+	Updated databases/mariadb106-client to 10.6.11 [nia 2022-11-27]
+	Updated databases/mariadb106-server to 10.6.11 [nia 2022-11-27]
