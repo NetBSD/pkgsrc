@@ -1,13 +1,15 @@
-@comment $NetBSD: PLIST,v 1.6 2020/04/05 16:05:43 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/11/27 05:05:41 gutteridge Exp $
 bin/mate-notification-properties
 lib/mate-notification-daemon/engines/libcoco.la
 lib/mate-notification-daemon/engines/libnodoka.la
 lib/mate-notification-daemon/engines/libslider.la
 lib/mate-notification-daemon/engines/libstandard.la
+libexec/mate-notification-applet
 libexec/mate-notification-daemon
 man/man1/mate-notification-properties.1
 share/applications/mate-notification-properties.desktop
 share/dbus-1/services/org.freedesktop.mate.Notifications.service
+share/dbus-1/services/org.mate.panel.applet.MateNotificationAppletFactory.service
 share/glib-2.0/schemas/org.mate.NotificationDaemon.gschema.xml
 share/icons/hicolor/16x16/apps/mate-notification-properties.png
 share/icons/hicolor/22x22/apps/mate-notification-properties.png
@@ -122,3 +124,4 @@ share/locale/yo/LC_MESSAGES/mate-notification-daemon.mo
 share/locale/zh_CN/LC_MESSAGES/mate-notification-daemon.mo
 share/locale/zh_HK/LC_MESSAGES/mate-notification-daemon.mo
 share/locale/zh_TW/LC_MESSAGES/mate-notification-daemon.mo
+share/mate-panel/applets/org.mate.applets.MateNotificationApplet.mate-panel-applet
