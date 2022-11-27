@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.47 2022/11/23 16:19:57 adam Exp $
+# $NetBSD: Makefile,v 1.48 2022/11/27 05:13:43 gutteridge Exp $
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-PKGREVISION= 9
 .include "../../meta-pkgs/mate/Makefile.common"
 
-DISTNAME=	pluma-${VERSION:R}.2
+DISTNAME=	pluma-${VERSION}
 CATEGORIES=	editors
 
 COMMENT=	Small and lightweight UTF-8 text editor for MATE
@@ -17,6 +16,11 @@ PKGCONFIG_OVERRIDE+=	data/pluma.pc.in
 
 REPLACE_PYTHON+=	plugins/externaltools/data/switch-c.tool.in
 REPLACE_BASH+=		plugins/externaltools/data/search-recursive.tool.in
+REPLACE_SH+=		data/pluma-bugreport.sh.in \
+			plugins/externaltools/data/build.tool.in \
+			plugins/externaltools/data/open-terminal-here.tool.in \
+			plugins/externaltools/data/remove-trailing-spaces.tool.in \
+			plugins/externaltools/data/run-command.tool.in
 
 post-install:
 	find ${DESTDIR}${PREFIX} -type d -name __pycache__ | xargs rm -rf
@@ -27,6 +31,6 @@ post-install:
 .include "../../devel/glib2/schemas.mk"
 .include "../../lang/python/application.mk"
 .include "../../x11/mate-desktop/buildlink3.mk"
-.include "../../x11/gtksourceview3/buildlink3.mk"
+.include "../../x11/gtksourceview4/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
