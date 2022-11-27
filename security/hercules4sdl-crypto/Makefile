@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2021/11/06 16:42:37 rhialto Exp $
+# $NetBSD: Makefile,v 1.2 2022/11/27 15:16:02 rhialto Exp $
 
 DISTNAME=	hercules4sdl-crypto-1.0.0
-PKGREVISION=	20210105
+PKGREVISION=	20220201
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=SDL-Hercules-390/}
 GITHUB_PROJECT=	crypto
-GITHUB_TAG=	837705eff938ca044f2eab5f1ea5cd83b2b0ece7 # 5 Jan 2021
+GITHUB_TAG=	a5096e5dd79f46b568806240c0824cd8cb2fcda2 # 1 Feb 2022
 
 MAINTAINER=	rhialto@NetBSD.org
 HOMEPAGE=	https://github.com/SDL-Hercules-390/crypto
