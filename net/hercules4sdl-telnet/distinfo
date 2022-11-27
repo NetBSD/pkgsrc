@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2021/11/06 16:42:10 rhialto Exp $
+$NetBSD: distinfo,v 1.2 2022/11/27 15:02:17 rhialto Exp $
 
-BLAKE2s (hercules4sdl-telnet-1.0.0-2aca101e06ca84526c1a63c0f65e05fe11522c3b.tar.gz) = 447e3388f2974777ce66649b2f802ae36d5292936a5943ef0ba78000c9bbad20
-SHA512 (hercules4sdl-telnet-1.0.0-2aca101e06ca84526c1a63c0f65e05fe11522c3b.tar.gz) = 78b89d4073e0952b4c5e83b98ab2f30101869a9885759515d4c452e22d665683023e33a79a7ea1957d0190d23d3c9bbcbe70a34a09b9e20edcb550d5acbca2a5
-Size (hercules4sdl-telnet-1.0.0-2aca101e06ca84526c1a63c0f65e05fe11522c3b.tar.gz) = 67165 bytes
+BLAKE2s (hercules4sdl-telnet-1.0.0-e0e2a9150cb0c7cea8b27ea126e1367b3f03b17e.tar.gz) = 73cbebd626977511ea71394633f86e8f65445aa2b928da2258137f06b8e0de5a
+SHA512 (hercules4sdl-telnet-1.0.0-e0e2a9150cb0c7cea8b27ea126e1367b3f03b17e.tar.gz) = 9a6be6909b29431311999eacf2a68effd38d68d6dea4a3c99b37cf51dbca433f74dae49ec7b6eea69f7ed9f74d7fc41ebdeb02a68529537ba9d1d2b134fc2df4
+Size (hercules4sdl-telnet-1.0.0-e0e2a9150cb0c7cea8b27ea126e1367b3f03b17e.tar.gz) = 67268 bytes
 SHA1 (patch-cflags.txt) = ed18a2aaa1da2a7f63c94e5fc061eb9fc0e0f02f
