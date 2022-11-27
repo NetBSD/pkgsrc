@@ -1,14 +1,15 @@
-$NetBSD: patch-plugins_a11y-keyboard_Makefile.in,v 1.2 2019/12/30 22:29:45 gutteridge Exp $
+$NetBSD: patch-plugins_a11y-keyboard_Makefile.in,v 1.3 2022/11/27 05:09:02 gutteridge Exp $
 
 Add libXi.
 
---- plugins/a11y-keyboard/Makefile.in.orig	2019-09-22 13:36:43.000000000 +0000
+--- plugins/a11y-keyboard/Makefile.in.orig	2021-08-05 09:22:32.000000000 +0000
 +++ plugins/a11y-keyboard/Makefile.in
-@@ -498,6 +498,7 @@ liba11y_keyboard_la_LDFLAGS = \
- liba11y_keyboard_la_LIBADD = \
- 	$(SETTINGS_PLUGIN_LIBS)		\
- 	$(LIBNOTIFY_LIBS)		\
-+	$(XINPUT_LIBS)			\
+@@ -506,7 +506,7 @@ liba11y_keyboard_la_LDFLAGS = \
  	$(NULL)
  
+ liba11y_keyboard_la_LIBADD = $(SETTINGS_PLUGIN_LIBS) $(LIBNOTIFY_LIBS) \
+-	$(NULL) $(am__append_3)
++	$(XINPUT_LIBS) $(NULL) $(am__append_3)
  plugin_in_files = \
+ 	a11y-keyboard.mate-settings-plugin.desktop.in	\
+ 	$(NULL)
