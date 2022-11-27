@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 11:34:15 nia Exp $
+$NetBSD: distinfo,v 1.12 2022/11/27 05:17:42 gutteridge Exp $
 
-BLAKE2s (mozo-1.24.1.tar.xz) = 8db76bff371fa07fa7518a387fd1e680a23c005ea121a290da6f1f68600db40a
-SHA512 (mozo-1.24.1.tar.xz) = 04b7e93e7302b46a3959f78655de4a6f8b17896be2c506c0e8a9041a9a2d5247e8c2ac00b5c8f86616f6c39a533584923feacfe4b81ae58d41080632af2a24bd
-Size (mozo-1.24.1.tar.xz) = 231032 bytes
+BLAKE2s (mozo-1.26.2.tar.xz) = 9182e65282faad548bc0278d934cc14d1b5dbf40cc2fbe9e1ac7386ca7a00ed9
+SHA512 (mozo-1.26.2.tar.xz) = c4ea00f97f4dd5c9b33b78e1b438ba80a5e23b69d05f6ea59c522a580c1b07c280cddc0591f266c16f39bbe5f3e07ca28cdbd33753162a02584b551a9857b904
+Size (mozo-1.26.2.tar.xz) = 249672 bytes
