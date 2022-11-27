@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5720 2022/11/27 05:04:58 gutteridge Exp $
+$NetBSD: CHANGES-2022,v 1.5721 2022/11/27 05:05:53 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8660,3 +8660,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/mate-control-center to 1.26.0 [gutteridge 2022-11-27]
 	Updated x11/mate-desktop to 1.26.0 [gutteridge 2022-11-27]
 	Updated x11/mate-indicator-applet to 1.26.0 [gutteridge 2022-11-27]
+	Updated sysutils/mate-notification-daemon to 1.26.0 [gutteridge 2022-11-27]
