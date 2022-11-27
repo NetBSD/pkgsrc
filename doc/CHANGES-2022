@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5699 2022/11/27 02:31:52 gutteridge Exp $
+$NetBSD: CHANGES-2022,v 1.5700 2022/11/27 02:53:33 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8639,3 +8639,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated geography/gdal-lib to 3.5.3 [gdt 2022-11-27]
 	Updated geography/py-gdal to 3.5.3 [gdt 2022-11-27]
 	Updated graphics/mate-themes to 3.22.23 [gutteridge 2022-11-27]
+	Updated lang/php80 to 8.0.26 [taca 2022-11-27]
