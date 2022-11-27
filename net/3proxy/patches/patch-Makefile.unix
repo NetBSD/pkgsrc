@@ -1,29 +1,28 @@
-$NetBSD: patch-Makefile.unix,v 1.1 2018/02/19 21:25:46 triaxx Exp $
+$NetBSD: patch-Makefile.unix,v 1.2 2022/11/27 13:14:00 triaxx Exp $
 
 Fix Makefile inconsistency
 
 From FreeBSD ports
 
---- Makefile.unix.orig	2017-10-19 14:25:42.000000000 +0000
+--- Makefile.unix.orig	2021-07-01 16:59:57.000000000 +0000
 +++ Makefile.unix
 @@ -8,18 +8,18 @@
  # library support. Add -DSAFESQL for poorely written ODBC library / drivers.
  
- BUILDDIR =
+ BUILDDIR = ../bin/
 -CC = gcc
 +CC ?= gcc
  
  # you may need -L/usr/pkg/lib for older NetBSD versions
--CFLAGS = -g -O2 -c -pthread -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL
-+CFLAGS = -c -O2 -pipe -fstack-protector -fno-strict-aliasing -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL
+-CFLAGS = -g -O2 -fno-strict-aliasing -c -pthread -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL
++CFLAGS = -c -O2 -fstack-protector -fno-strict-aliasing -c -pthread -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL
  COUT = -o 
--LN = gcc
--LDFLAGS = -O2 -pthread
-+LN = ${CC}
-+LDFLAGS = -pthread
+ LN = $(CC)
+-LDFLAGS = -O2 -fno-strict-aliasing -pthread
++LDFLAGS = -fstack-protector -fno-strict-aliasing -pthread
  # -lpthreads may be reuqired on some platforms instead of -pthreads
  # -ldl or -lld may be required for some platforms
- DCFLAGS = -fpic
+ DCFLAGS = -fPIC
  DLFLAGS = -shared
 -DLSUFFICS = .ld.so
 +DLSUFFICS = .so
