@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2022/01/04 20:55:38 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2022/11/27 09:55:37 adam Exp $
 
-DISTNAME=	wsproto-1.0.0
+DISTNAME=	wsproto-1.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/wsproto/}
 
