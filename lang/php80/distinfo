@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.26 2022/10/30 10:18:35 taca Exp $
+$NetBSD: distinfo,v 1.27 2022/11/27 02:53:03 taca Exp $
 
-BLAKE2s (php-8.0.25.tar.xz) = 48709affae5ad92c7d8d239a91400c3b784daa28bb71af45e5b4d1091046399c
-SHA512 (php-8.0.25.tar.xz) = 43bb0637e424e2a637e05f3faf0ca2c5309f2d9cc03def9fc9af9b756003ea6efe730b608c70177c3c1b9cb03cef31c27cd6507cca9d9f0fd854aadb5e51aee3
-Size (php-8.0.25.tar.xz) = 10802888 bytes
+BLAKE2s (php-8.0.26.tar.xz) = e71cb18ab1bac16ccf12279fb797875622cbbb347c06027f93db49bdbebf9ae5
+SHA512 (php-8.0.26.tar.xz) = 2c285bd0d4516e188b8f9fe45db12bb0631c8298c97b3fcf99b7d56bed8c90920649d613c19821cbb38592211f5a3e7980679f2a59ad2d920da5b669251a99d5
+Size (php-8.0.26.tar.xz) = 10868588 bytes
 SHA1 (patch-build_libtool.m4) = e58a2bcebe9e9d7dc7255354fd9fe57878e3f8a6
 SHA1 (patch-configure) = 6c3d2537eb4d1c2ed05e8e1e411701d316c67d8b
 SHA1 (patch-disable-filter-url) = 0a2c19c18f089448a8d842e99738b292ab9e5640
