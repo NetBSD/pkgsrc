@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5706 2022/11/27 04:49:29 gutteridge Exp $
+$NetBSD: CHANGES-2022,v 1.5707 2022/11/27 04:50:39 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8646,3 +8646,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated archivers/engrampa to 1.26.0 [gutteridge 2022-11-27]
 	Updated graphics/eom to 1.26.0 [gutteridge 2022-11-27]
 	Updated x11/libmatekbd to 1.26.0 [gutteridge 2022-11-27]
+	Updated audio/libmatemixer to 1.26.0 [gutteridge 2022-11-27]
