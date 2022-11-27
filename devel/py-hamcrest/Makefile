@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2022/01/04 20:53:09 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/11/27 10:41:35 adam Exp $
 
-DISTNAME=	PyHamcrest-1.9.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^PyH/h/}
-PKGREVISION=	1
+DISTNAME=	pyhamcrest-2.0.4
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^pyh/h/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyHamcrest/}
 
@@ -11,9 +10,17 @@ HOMEPAGE=	https://github.com/hamcrest/PyHamcrest
 COMMENT=	Framework for writing matcher objects
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-six>=1.4:../../lang/py-six
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs-[0-9]*:../../devel/py-hatch-vcs
+TEST_DEPENDS+=	${PYPKGPREFIX}-test>=5.0:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/egg.mk"
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
+
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
