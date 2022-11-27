@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5735 2022/11/27 09:26:58 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5736 2022/11/27 10:15:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8677,3 +8677,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/py-dicttoxml to 1.7.6 [adam 2022-11-27]
 	Updated devel/py-flake8-import-order to 0.18.2 [adam 2022-11-27]
 	Updated databases/py-python-sql to 1.4.0 [adam 2022-11-27]
+	Updated www/py-wsproto to 1.2.0 [adam 2022-11-27]
+	Updated audio/py-mpd2 to 3.0.5 [adam 2022-11-27]
