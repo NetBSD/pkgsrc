@@ -1,27 +1,19 @@
-# $NetBSD: Makefile,v 1.13 2018/02/21 15:20:04 triaxx Exp $
-#
+# $NetBSD: Makefile,v 1.14 2022/11/27 13:14:00 triaxx Exp $
 
-DISTNAME=	3proxy-0.8.11
+DISTNAME=	3proxy-0.9.4
 CATEGORIES=	net
-MASTER_SITES=	https://3proxy.ru/${DISTNAME:S/3proxy-//}/
-EXTRACT_SUFX=	.tgz
+MASTER_SITES=	${MASTER_SITE_GITHUB:=3proxy/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://3proxy.ru/
 COMMENT=	Multi-protocol proxy
-# 3proxy-0.5.* is dual-licenced under GPL or custom terms.  It's not
-# clear exactly which version of the GPL is intended; ${WRKSRC}/License
-# says "current version of GNU GPL" without specifying a numeric version
-# number.  3proxy-0.6.* will have a different license.
-# 3proxy-0.7-license is now inspired by BSD license.
-LICENSE=	3proxy-0.7-license
+LICENSE=	3proxy-0.9-license
 
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 REQD_FILES=		${EGDIR}/3proxy.cfg.sample \
 			${PKG_SYSCONFDIR}/${PKGBASE}/3proxy.cfg
 OWN_DIRS+=		${PKG_SYSCONFDIR}/${PKGBASE} ${VARBASE}/log/${PKGBASE}
 RCD_SCRIPTS=		threeproxy
-WRKSRC=			${WRKDIR}/${PKGBASE}
 MAKE_FILE=		Makefile.unix
 MAKE_FLAGS+=		LIBS=${BUILDLINK_LDADD.dl:Q}
 
@@ -42,7 +34,7 @@ SUBST_VARS.cfg+=	VARBASE
 # install the HTML pages, because they provide no more information than
 # the man pages.
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/3proxy ${DESTDIR}${PREFIX}/sbin/.
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/3proxy ${DESTDIR}${PREFIX}/sbin/.
 	${INSTALL_MAN} ${WRKSRC}/man/3proxy.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/.
 	${INSTALL_MAN} ${WRKSRC}/man/3proxy.cfg.3 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/3proxy.cfg.5

@@ -1,22 +1,22 @@
-$NetBSD: patch-ae,v 1.4 2018/02/19 21:25:46 triaxx Exp $
+$NetBSD: patch-ae,v 1.5 2022/11/27 13:14:00 triaxx Exp $
 
 Fix build on OpenBSD and Bitrig.
 Calling usleep for 1000000 microseconds or more is not allowed, so add a
 myusleep() wrapper to DTRT.
 
---- src/proxy.h.orig	2017-10-19 14:25:44.000000000 +0000
+--- src/proxy.h.orig	2021-07-01 16:59:57.000000000 +0000
 +++ src/proxy.h
-@@ -21,7 +21,9 @@
+@@ -21,6 +21,9 @@
  #include <ctype.h>
  #include <sys/types.h>
  #include <sys/stat.h>
 +#if !(defined(__OpenBSD__) || !defined(__Bitrig__))
- #include <sys/timeb.h>
++#include <sys/timeb.h>
 +#endif
  #include <fcntl.h>
  #include <time.h>
  
-@@ -107,6 +109,8 @@
+@@ -100,6 +103,8 @@
  #endif
  void daemonize(void);
  #define SLEEPTIME 1000
