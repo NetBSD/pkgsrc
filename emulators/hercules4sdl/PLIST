@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2021/12/19 19:08:19 rhialto Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/11/27 15:43:13 rhialto Exp $
 bin/cckd2ckd
 bin/cckd642ckd
 bin/cckdcdsk
@@ -74,6 +74,7 @@ man/man1/dasdseq.1
 man/man1/vmfplc2.1
 man/man4/cckd.4
 share/examples/hercules/hercules.cnf
+share/hercules/CMPSC.txt
 share/hercules/TMOUNT.txt
 share/hercules/awssl-v19g
 share/hercules/awswrite.jcl
