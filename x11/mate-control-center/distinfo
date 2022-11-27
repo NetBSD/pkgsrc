@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 11:34:13 nia Exp $
+$NetBSD: distinfo,v 1.12 2022/11/27 05:03:20 gutteridge Exp $
 
-BLAKE2s (mate-control-center-1.24.2.tar.xz) = 4dec2ccffe4eb3cb2355aa277af9ef927fcefa77fce08e0ebbf9a49800ec9d89
-SHA512 (mate-control-center-1.24.2.tar.xz) = 3aecbad0e26521d5222b8483561167e16fdda3bc1a3be09644b71fdba1f9f3f64705ae474fc8df5b702e84c7fef83441a75324040e801da5071f3b667d7a57e5
-Size (mate-control-center-1.24.2.tar.xz) = 3434520 bytes
+BLAKE2s (mate-control-center-1.26.0.tar.xz) = 8572e3f9e23c4f8ce20fb444d8d453a68b4c69f93daeb7188646de3f131eb04b
+SHA512 (mate-control-center-1.26.0.tar.xz) = 958c41200b6fecc5cfbebbe7112038468bb5e8a6a877e2b16a40af3b41c100e32052e176fc87029eba3d0ccc05767f9400b609ab413924a54222cb18748d746f
+Size (mate-control-center-1.26.0.tar.xz) = 3449952 bytes
