@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2022/10/25 18:21:27 adam Exp $
+@comment $NetBSD: PLIST,v 1.36 2022/11/27 10:44:20 adam Exp $
 bin/cftp-${PYVERSSUFFIX}
 bin/ckeygen-${PYVERSSUFFIX}
 bin/conch-${PYVERSSUFFIX}
@@ -1249,9 +1249,6 @@ ${PYSITELIB}/twisted/protocols/amp.pyo
 ${PYSITELIB}/twisted/protocols/basic.py
 ${PYSITELIB}/twisted/protocols/basic.pyc
 ${PYSITELIB}/twisted/protocols/basic.pyo
-${PYSITELIB}/twisted/protocols/dict.py
-${PYSITELIB}/twisted/protocols/dict.pyc
-${PYSITELIB}/twisted/protocols/dict.pyo
 ${PYSITELIB}/twisted/protocols/finger.py
 ${PYSITELIB}/twisted/protocols/finger.pyc
 ${PYSITELIB}/twisted/protocols/finger.pyo
@@ -1464,6 +1461,9 @@ ${PYSITELIB}/twisted/python/test/modules_helpers.pyo
 ${PYSITELIB}/twisted/python/test/pullpipe.py
 ${PYSITELIB}/twisted/python/test/pullpipe.pyc
 ${PYSITELIB}/twisted/python/test/pullpipe.pyo
+${PYSITELIB}/twisted/python/test/strategies.py
+${PYSITELIB}/twisted/python/test/strategies.pyc
+${PYSITELIB}/twisted/python/test/strategies.pyo
 ${PYSITELIB}/twisted/python/test/test_appdirs.py
 ${PYSITELIB}/twisted/python/test/test_appdirs.pyc
 ${PYSITELIB}/twisted/python/test/test_appdirs.pyo
@@ -1801,9 +1801,6 @@ ${PYSITELIB}/twisted/test/test_defer.pyo
 ${PYSITELIB}/twisted/test/test_defgen.py
 ${PYSITELIB}/twisted/test/test_defgen.pyc
 ${PYSITELIB}/twisted/test/test_defgen.pyo
-${PYSITELIB}/twisted/test/test_dict.py
-${PYSITELIB}/twisted/test/test_dict.pyc
-${PYSITELIB}/twisted/test/test_dict.pyo
 ${PYSITELIB}/twisted/test/test_dirdbm.py
 ${PYSITELIB}/twisted/test/test_dirdbm.pyc
 ${PYSITELIB}/twisted/test/test_dirdbm.pyo
@@ -2008,6 +2005,9 @@ ${PYSITELIB}/twisted/trial/_dist/managercommands.pyo
 ${PYSITELIB}/twisted/trial/_dist/options.py
 ${PYSITELIB}/twisted/trial/_dist/options.pyc
 ${PYSITELIB}/twisted/trial/_dist/options.pyo
+${PYSITELIB}/twisted/trial/_dist/stream.py
+${PYSITELIB}/twisted/trial/_dist/stream.pyc
+${PYSITELIB}/twisted/trial/_dist/stream.pyo
 ${PYSITELIB}/twisted/trial/_dist/test/__init__.py
 ${PYSITELIB}/twisted/trial/_dist/test/__init__.pyc
 ${PYSITELIB}/twisted/trial/_dist/test/__init__.pyo
@@ -2020,9 +2020,15 @@ ${PYSITELIB}/twisted/trial/_dist/test/test_distreporter.pyo
 ${PYSITELIB}/twisted/trial/_dist/test/test_disttrial.py
 ${PYSITELIB}/twisted/trial/_dist/test/test_disttrial.pyc
 ${PYSITELIB}/twisted/trial/_dist/test/test_disttrial.pyo
+${PYSITELIB}/twisted/trial/_dist/test/test_matchers.py
+${PYSITELIB}/twisted/trial/_dist/test/test_matchers.pyc
+${PYSITELIB}/twisted/trial/_dist/test/test_matchers.pyo
 ${PYSITELIB}/twisted/trial/_dist/test/test_options.py
 ${PYSITELIB}/twisted/trial/_dist/test/test_options.pyc
 ${PYSITELIB}/twisted/trial/_dist/test/test_options.pyo
+${PYSITELIB}/twisted/trial/_dist/test/test_stream.py
+${PYSITELIB}/twisted/trial/_dist/test/test_stream.pyc
+${PYSITELIB}/twisted/trial/_dist/test/test_stream.pyo
 ${PYSITELIB}/twisted/trial/_dist/test/test_worker.py
 ${PYSITELIB}/twisted/trial/_dist/test/test_worker.pyc
 ${PYSITELIB}/twisted/trial/_dist/test/test_worker.pyo
@@ -2131,6 +2137,9 @@ ${PYSITELIB}/twisted/trial/test/test_loader.pyo
 ${PYSITELIB}/twisted/trial/test/test_log.py
 ${PYSITELIB}/twisted/trial/test/test_log.pyc
 ${PYSITELIB}/twisted/trial/test/test_log.pyo
+${PYSITELIB}/twisted/trial/test/test_matchers.py
+${PYSITELIB}/twisted/trial/test/test_matchers.pyc
+${PYSITELIB}/twisted/trial/test/test_matchers.pyo
 ${PYSITELIB}/twisted/trial/test/test_output.py
 ${PYSITELIB}/twisted/trial/test/test_output.pyc
 ${PYSITELIB}/twisted/trial/test/test_output.pyo
@@ -2245,6 +2254,9 @@ ${PYSITELIB}/twisted/web/iweb.pyo
 ${PYSITELIB}/twisted/web/microdom.py
 ${PYSITELIB}/twisted/web/microdom.pyc
 ${PYSITELIB}/twisted/web/microdom.pyo
+${PYSITELIB}/twisted/web/pages.py
+${PYSITELIB}/twisted/web/pages.pyc
+${PYSITELIB}/twisted/web/pages.pyo
 ${PYSITELIB}/twisted/web/proxy.py
 ${PYSITELIB}/twisted/web/proxy.pyc
 ${PYSITELIB}/twisted/web/proxy.pyo
@@ -2326,6 +2338,9 @@ ${PYSITELIB}/twisted/web/test/test_httpauth.pyo
 ${PYSITELIB}/twisted/web/test/test_newclient.py
 ${PYSITELIB}/twisted/web/test/test_newclient.pyc
 ${PYSITELIB}/twisted/web/test/test_newclient.pyo
+${PYSITELIB}/twisted/web/test/test_pages.py
+${PYSITELIB}/twisted/web/test/test_pages.pyc
+${PYSITELIB}/twisted/web/test/test_pages.pyo
 ${PYSITELIB}/twisted/web/test/test_proxy.py
 ${PYSITELIB}/twisted/web/test/test_proxy.pyc
 ${PYSITELIB}/twisted/web/test/test_proxy.pyo
