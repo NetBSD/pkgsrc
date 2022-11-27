@@ -1,0 +1,16 @@
+Sniffnet is a simple yet insightful application to let you have a glance into
+your network traffic in a straightforward and appealing way.
+
+Features
+ - choose a network adapter to inspect
+ - select filters to apply to the observed traffic
+ - view real-time charts about traffic intensity (bytes and packets per second,
+   incoming and outgoing)
+ - view overall statistics about the filtered traffic
+ - view most relevant connections (most recent, most packets, most bytes)
+ - save complete textual report with detailed information for each connection:
+    - source and destination IP addresses
+    - source and destination ports
+    - carried protocols
+    - amount of exchanged packets and bytes
+    - initial and final timestamp of information exchange
