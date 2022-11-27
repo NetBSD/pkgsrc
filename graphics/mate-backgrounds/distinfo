@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2022/11/27 04:54:18 gutteridge Exp $
+$NetBSD: distinfo,v 1.12 2022/11/27 19:57:39 gutteridge Exp $
 
 BLAKE2s (mate-backgrounds-1.26.0.tar.xz) = 4a498534e6d30a9157a0c791eaf728f1facd8e70913a907f4e234dbf4086e6a9
 SHA512 (mate-backgrounds-1.26.0.tar.xz) = 48ceb91abf6f7840a9fd7f504e887e54d234410df07dd07a2d155b28cf8d6518b743be767e02cbb774bd817e640b755eec2a73abd4d2d3685e3b4377e9a58476
 Size (mate-backgrounds-1.26.0.tar.xz) = 46808396 bytes
-SHA1 (patch-Makefile.in) = 29ff00608208267d9898ca527bab180c23fcb4c8
+SHA1 (patch-po_Makefile.in.in) = 55a20a9ce86fe026559da3d683d8d73be95c0b1d
