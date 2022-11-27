@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5748 2022/11/27 20:08:25 nia Exp $
+$NetBSD: CHANGES-2022,v 1.5749 2022/11/27 23:07:11 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8695,3 +8695,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added net/sniffnet version 1.0.0 [pin 2022-11-27]
 	Updated databases/mariadb106-client to 10.6.11 [nia 2022-11-27]
 	Updated databases/mariadb106-server to 10.6.11 [nia 2022-11-27]
+	Updated mail/mb2md to 3.20nb11 [nikita 2022-11-27]
