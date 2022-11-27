@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2022/01/05 15:41:31 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2022/11/27 23:09:38 wiz Exp $
 
 DISTNAME=	wagtail-2.12.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -26,7 +26,7 @@ DEPENDS+=	${PYPKGPREFIX}-draftjs_exporter>=2.1.5<4.2:../../www/py-draftjs_export
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.11.1<3.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-l18n>=2018.5:../../time/py-l18n
 DEPENDS+=	${PYPKGPREFIX}-tablib>=1.4:../../textproc/py-tablib
-DEPENDS+=	${PYPKGPREFIX}-xlsxwriter>=1.2.8<2.0:../../textproc/py-xlsxwriter
+DEPENDS+=	${PYPKGPREFIX}-xlsxwriter>=1.2.8:../../textproc/py-xlsxwriter
 TEST_DEPENDS+=	${PYPKGPREFIX}-boto3-[0-9]*:../../net/py-boto3
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
 TEST_DEPENDS+=	${PYPKGPREFIX}-elasticsearch-[0-9]*:../../databases/py-elasticsearch
