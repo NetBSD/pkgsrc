@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2021/11/06 16:42:10 rhialto Exp $
+# $NetBSD: Makefile,v 1.2 2022/11/27 15:02:17 rhialto Exp $
 
 DISTNAME=	hercules4sdl-telnet-1.0.0
-PKGREVISION=	20210105
+PKGREVISION=	20220201
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=SDL-Hercules-390/}
 GITHUB_PROJECT=	telnet
-GITHUB_TAG=	2aca101e06ca84526c1a63c0f65e05fe11522c3b # 5 Jan 2021
+GITHUB_TAG=	e0e2a9150cb0c7cea8b27ea126e1367b3f03b17e # 1 Feb 2022
 
 MAINTAINER=	rhialto@NetBSD.org
 HOMEPAGE=	https://github.com/SDL-Hercules-390/telnet
