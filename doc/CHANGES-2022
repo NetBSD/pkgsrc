@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5734 2022/11/27 09:02:07 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5735 2022/11/27 09:26:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8675,3 +8675,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/caja-dropbox to 1.26.0 [gutteridge 2022-11-27]
 	Updated security/py-cryptodome to 3.16.0 [adam 2022-11-27]
 	Updated textproc/py-dicttoxml to 1.7.6 [adam 2022-11-27]
+	Updated devel/py-flake8-import-order to 0.18.2 [adam 2022-11-27]
+	Updated databases/py-python-sql to 1.4.0 [adam 2022-11-27]
