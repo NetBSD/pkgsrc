@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5717 2022/11/27 05:02:38 gutteridge Exp $
+$NetBSD: CHANGES-2022,v 1.5718 2022/11/27 05:03:38 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8657,3 +8657,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated misc/mate-calc to 1.26.0 [gutteridge 2022-11-27]
 	Updated devel/mate-common to 1.26.0 [gutteridge 2022-11-27]
 	Updated x11/mate-panel to 1.26.2 [gutteridge 2022-11-27]
+	Updated x11/mate-control-center to 1.26.0 [gutteridge 2022-11-27]
