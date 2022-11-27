@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2022/11/27 04:53:23 gutteridge Exp $
+# $NetBSD: Makefile,v 1.47 2022/11/27 05:43:00 gutteridge Exp $
 
 .include "../../meta-pkgs/mate/Makefile.common"
 
@@ -13,6 +13,9 @@ CONFIGURE_ARGS+=	--without-nl
 
 .include "../../mk/bsd.prefs.mk"
 
+# cpufreq has been retained (including in PLIST entries) in case it's
+# relevant for Linux (not tested, would require tweaks here) or someone
+# wants to try resurrecting it for NetBSD.
 PLIST_VARS=		batt cpufreq
 
 INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples/mate-applets
