@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2021/11/06 16:42:37 rhialto Exp $
+$NetBSD: distinfo,v 1.2 2022/11/27 15:16:02 rhialto Exp $
 
-BLAKE2s (hercules4sdl-crypto-1.0.0-837705eff938ca044f2eab5f1ea5cd83b2b0ece7.tar.gz) = 04ccab03fe910fb0ae067420b426f1e99fe54fa0763176a2dd6ac062efec0018
-SHA512 (hercules4sdl-crypto-1.0.0-837705eff938ca044f2eab5f1ea5cd83b2b0ece7.tar.gz) = 295d9f04b27e35d9c22a6709583840170675796cf1896350bb2463689e6fe0d5adce6b224bbf924946b7ccb2d2a52496982f5f529411938af12974a2549e4b38
-Size (hercules4sdl-crypto-1.0.0-837705eff938ca044f2eab5f1ea5cd83b2b0ece7.tar.gz) = 81375 bytes
+BLAKE2s (hercules4sdl-crypto-1.0.0-a5096e5dd79f46b568806240c0824cd8cb2fcda2.tar.gz) = c28923ab624b3a890c5d436faea73117e075ba2434e12233fb5e488a569178f2
+SHA512 (hercules4sdl-crypto-1.0.0-a5096e5dd79f46b568806240c0824cd8cb2fcda2.tar.gz) = d55e73d7dfa90da53c173159e32cb733a44780cd8606d539351371e61910f3a82312b8ab9f858b293c89c8f7cc4fe74da86825db2f9a6e73391d95c3f903d94e
+Size (hercules4sdl-crypto-1.0.0-a5096e5dd79f46b568806240c0824cd8cb2fcda2.tar.gz) = 81482 bytes
 SHA1 (patch-cflags.txt) = 8e5833c2d43e7973dcf9d6c442976efefac30b26
