@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2021/08/06 01:11:50 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.8 2022/11/27 02:31:38 gutteridge Exp $
 share/icons/ContrastHigh/16x16/actions/action-unavailable.png
 share/icons/ContrastHigh/16x16/actions/bookmark-add.png
 share/icons/ContrastHigh/16x16/actions/bookmark-new.png
@@ -5174,6 +5174,322 @@ share/themes/TraditionalOk/xfwm4/top-left-inactive.xpm
 share/themes/TraditionalOk/xfwm4/top-right-active.png
 share/themes/TraditionalOk/xfwm4/top-right-active.xpm
 share/themes/TraditionalOk/xfwm4/top-right-inactive.xpm
+share/themes/YaruGreen/COPYING
+share/themes/YaruGreen/gtk-2.0/applications.rc
+share/themes/YaruGreen/gtk-2.0/gtkrc
+share/themes/YaruGreen/gtk-3.0/assets/bullet-symbolic.svg
+share/themes/YaruGreen/gtk-3.0/assets/bullet-symbolic.symbolic.png
+share/themes/YaruGreen/gtk-3.0/assets/check-symbolic.svg
+share/themes/YaruGreen/gtk-3.0/assets/check-symbolic.symbolic.png
+share/themes/YaruGreen/gtk-3.0/assets/dash-symbolic.svg
+share/themes/YaruGreen/gtk-3.0/assets/dash-symbolic.symbolic.png
+share/themes/YaruGreen/gtk-3.0/assets/panel-grid.svg
+share/themes/YaruGreen/gtk-3.0/assets/slider-horz-grip.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-horz-scale-has-marks-above-active-dark.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-horz-scale-has-marks-above-active-dark@2.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-horz-scale-has-marks-above-active.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-horz-scale-has-marks-above-active@2.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-horz-scale-has-marks-above-backdrop-dark.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-horz-scale-has-marks-above-backdrop-dark@2.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-horz-scale-has-marks-above-backdrop-insensitive-dark.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-horz-scale-has-marks-above-backdrop-insensitive-dark@2.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-horz-scale-has-marks-above-backdrop-insensitive.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-horz-scale-has-marks-above-backdrop-insensitive@2.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-horz-scale-has-marks-above-backdrop.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-horz-scale-has-marks-above-backdrop@2.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-horz-scale-has-marks-above-dark.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-horz-scale-has-marks-above-dark@2.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-horz-scale-has-marks-above-hover-dark.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-horz-scale-has-marks-above-hover-dark@2.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-horz-scale-has-marks-above-hover.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-horz-scale-has-marks-above-hover@2.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-horz-scale-has-marks-above-insensitive-dark.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-horz-scale-has-marks-above-insensitive-dark@2.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-horz-scale-has-marks-above-insensitive.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-horz-scale-has-marks-above-insensitive@2.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-horz-scale-has-marks-above.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-horz-scale-has-marks-above@2.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-horz-scale-has-marks-below-active-dark.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-horz-scale-has-marks-below-active-dark@2.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-horz-scale-has-marks-below-active.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-horz-scale-has-marks-below-active@2.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-horz-scale-has-marks-below-backdrop-dark.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-horz-scale-has-marks-below-backdrop-dark@2.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-horz-scale-has-marks-below-backdrop-insensitive-dark.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-horz-scale-has-marks-below-backdrop-insensitive-dark@2.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-horz-scale-has-marks-below-backdrop-insensitive.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-horz-scale-has-marks-below-backdrop-insensitive@2.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-horz-scale-has-marks-below-backdrop.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-horz-scale-has-marks-below-backdrop@2.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-horz-scale-has-marks-below-dark.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-horz-scale-has-marks-below-dark@2.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-horz-scale-has-marks-below-hover-dark.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-horz-scale-has-marks-below-hover-dark@2.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-horz-scale-has-marks-below-hover.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-horz-scale-has-marks-below-hover@2.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-horz-scale-has-marks-below-insensitive-dark.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-horz-scale-has-marks-below-insensitive-dark@2.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-horz-scale-has-marks-below-insensitive.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-horz-scale-has-marks-below-insensitive@2.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-horz-scale-has-marks-below.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-horz-scale-has-marks-below@2.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-vert-grip.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-vert-scale-has-marks-above-active-dark.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-vert-scale-has-marks-above-active-dark@2.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-vert-scale-has-marks-above-active.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-vert-scale-has-marks-above-active@2.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-vert-scale-has-marks-above-backdrop-dark.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-vert-scale-has-marks-above-backdrop-dark@2.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-vert-scale-has-marks-above-backdrop-insensitive-dark.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-vert-scale-has-marks-above-backdrop-insensitive-dark@2.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-vert-scale-has-marks-above-backdrop-insensitive.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-vert-scale-has-marks-above-backdrop-insensitive@2.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-vert-scale-has-marks-above-backdrop.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-vert-scale-has-marks-above-backdrop@2.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-vert-scale-has-marks-above-dark.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-vert-scale-has-marks-above-dark@2.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-vert-scale-has-marks-above-hover-dark.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-vert-scale-has-marks-above-hover-dark@2.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-vert-scale-has-marks-above-hover.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-vert-scale-has-marks-above-hover@2.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-vert-scale-has-marks-above-insensitive-dark.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-vert-scale-has-marks-above-insensitive-dark@2.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-vert-scale-has-marks-above-insensitive.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-vert-scale-has-marks-above-insensitive@2.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-vert-scale-has-marks-above.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-vert-scale-has-marks-above@2.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-vert-scale-has-marks-below-active-dark.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-vert-scale-has-marks-below-active-dark@2.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-vert-scale-has-marks-below-active.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-vert-scale-has-marks-below-active@2.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-vert-scale-has-marks-below-backdrop-dark.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-vert-scale-has-marks-below-backdrop-dark@2.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-vert-scale-has-marks-below-backdrop-insensitive-dark.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-vert-scale-has-marks-below-backdrop-insensitive-dark@2.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-vert-scale-has-marks-below-backdrop-insensitive.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-vert-scale-has-marks-below-backdrop-insensitive@2.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-vert-scale-has-marks-below-backdrop.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-vert-scale-has-marks-below-backdrop@2.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-vert-scale-has-marks-below-dark.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-vert-scale-has-marks-below-dark@2.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-vert-scale-has-marks-below-hover-dark.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-vert-scale-has-marks-below-hover-dark@2.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-vert-scale-has-marks-below-hover.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-vert-scale-has-marks-below-hover@2.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-vert-scale-has-marks-below-insensitive-dark.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-vert-scale-has-marks-below-insensitive-dark@2.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-vert-scale-has-marks-below-insensitive.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-vert-scale-has-marks-below-insensitive@2.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-vert-scale-has-marks-below.png
+share/themes/YaruGreen/gtk-3.0/assets/slider-vert-scale-has-marks-below@2.png
+share/themes/YaruGreen/gtk-3.0/assets/text-select-end-active-dark.png
+share/themes/YaruGreen/gtk-3.0/assets/text-select-end-active-dark@2.png
+share/themes/YaruGreen/gtk-3.0/assets/text-select-end-active.png
+share/themes/YaruGreen/gtk-3.0/assets/text-select-end-active@2.png
+share/themes/YaruGreen/gtk-3.0/assets/text-select-end-dark.png
+share/themes/YaruGreen/gtk-3.0/assets/text-select-end-dark@2.png
+share/themes/YaruGreen/gtk-3.0/assets/text-select-end-hover-dark.png
+share/themes/YaruGreen/gtk-3.0/assets/text-select-end-hover-dark@2.png
+share/themes/YaruGreen/gtk-3.0/assets/text-select-end-hover.png
+share/themes/YaruGreen/gtk-3.0/assets/text-select-end-hover@2.png
+share/themes/YaruGreen/gtk-3.0/assets/text-select-end.png
+share/themes/YaruGreen/gtk-3.0/assets/text-select-end@2.png
+share/themes/YaruGreen/gtk-3.0/assets/text-select-start-active-dark.png
+share/themes/YaruGreen/gtk-3.0/assets/text-select-start-active-dark@2.png
+share/themes/YaruGreen/gtk-3.0/assets/text-select-start-active.png
+share/themes/YaruGreen/gtk-3.0/assets/text-select-start-active@2.png
+share/themes/YaruGreen/gtk-3.0/assets/text-select-start-dark.png
+share/themes/YaruGreen/gtk-3.0/assets/text-select-start-dark@2.png
+share/themes/YaruGreen/gtk-3.0/assets/text-select-start-hover-dark.png
+share/themes/YaruGreen/gtk-3.0/assets/text-select-start-hover-dark@2.png
+share/themes/YaruGreen/gtk-3.0/assets/text-select-start-hover.png
+share/themes/YaruGreen/gtk-3.0/assets/text-select-start-hover@2.png
+share/themes/YaruGreen/gtk-3.0/assets/text-select-start.png
+share/themes/YaruGreen/gtk-3.0/assets/text-select-start@2.png
+share/themes/YaruGreen/gtk-3.0/gtk.css
+share/themes/YaruGreen/gtk-3.0/settings.ini
+share/themes/YaruGreen/index.theme
+share/themes/YaruGreen/metacity-1/metacity-theme-1.xml
+share/themes/YaruOk/COPYING
+share/themes/YaruOk/gtk-2.0/applications.rc
+share/themes/YaruOk/gtk-2.0/gtkrc
+share/themes/YaruOk/gtk-3.0/assets/bullet-symbolic.svg
+share/themes/YaruOk/gtk-3.0/assets/bullet-symbolic.symbolic.png
+share/themes/YaruOk/gtk-3.0/assets/check-symbolic.svg
+share/themes/YaruOk/gtk-3.0/assets/check-symbolic.symbolic.png
+share/themes/YaruOk/gtk-3.0/assets/dash-symbolic.svg
+share/themes/YaruOk/gtk-3.0/assets/dash-symbolic.symbolic.png
+share/themes/YaruOk/gtk-3.0/assets/panel-grid.svg
+share/themes/YaruOk/gtk-3.0/assets/slider-horz-grip.png
+share/themes/YaruOk/gtk-3.0/assets/slider-horz-scale-has-marks-above-active-dark.png
+share/themes/YaruOk/gtk-3.0/assets/slider-horz-scale-has-marks-above-active-dark@2.png
+share/themes/YaruOk/gtk-3.0/assets/slider-horz-scale-has-marks-above-active.png
+share/themes/YaruOk/gtk-3.0/assets/slider-horz-scale-has-marks-above-active@2.png
+share/themes/YaruOk/gtk-3.0/assets/slider-horz-scale-has-marks-above-backdrop-dark.png
+share/themes/YaruOk/gtk-3.0/assets/slider-horz-scale-has-marks-above-backdrop-dark@2.png
+share/themes/YaruOk/gtk-3.0/assets/slider-horz-scale-has-marks-above-backdrop-insensitive-dark.png
+share/themes/YaruOk/gtk-3.0/assets/slider-horz-scale-has-marks-above-backdrop-insensitive-dark@2.png
+share/themes/YaruOk/gtk-3.0/assets/slider-horz-scale-has-marks-above-backdrop-insensitive.png
+share/themes/YaruOk/gtk-3.0/assets/slider-horz-scale-has-marks-above-backdrop-insensitive@2.png
+share/themes/YaruOk/gtk-3.0/assets/slider-horz-scale-has-marks-above-backdrop.png
+share/themes/YaruOk/gtk-3.0/assets/slider-horz-scale-has-marks-above-backdrop@2.png
+share/themes/YaruOk/gtk-3.0/assets/slider-horz-scale-has-marks-above-dark.png
+share/themes/YaruOk/gtk-3.0/assets/slider-horz-scale-has-marks-above-dark@2.png
+share/themes/YaruOk/gtk-3.0/assets/slider-horz-scale-has-marks-above-hover-dark.png
+share/themes/YaruOk/gtk-3.0/assets/slider-horz-scale-has-marks-above-hover-dark@2.png
+share/themes/YaruOk/gtk-3.0/assets/slider-horz-scale-has-marks-above-hover.png
+share/themes/YaruOk/gtk-3.0/assets/slider-horz-scale-has-marks-above-hover@2.png
+share/themes/YaruOk/gtk-3.0/assets/slider-horz-scale-has-marks-above-insensitive-dark.png
+share/themes/YaruOk/gtk-3.0/assets/slider-horz-scale-has-marks-above-insensitive-dark@2.png
+share/themes/YaruOk/gtk-3.0/assets/slider-horz-scale-has-marks-above-insensitive.png
+share/themes/YaruOk/gtk-3.0/assets/slider-horz-scale-has-marks-above-insensitive@2.png
+share/themes/YaruOk/gtk-3.0/assets/slider-horz-scale-has-marks-above.png
+share/themes/YaruOk/gtk-3.0/assets/slider-horz-scale-has-marks-above@2.png
+share/themes/YaruOk/gtk-3.0/assets/slider-horz-scale-has-marks-below-active-dark.png
+share/themes/YaruOk/gtk-3.0/assets/slider-horz-scale-has-marks-below-active-dark@2.png
+share/themes/YaruOk/gtk-3.0/assets/slider-horz-scale-has-marks-below-active.png
+share/themes/YaruOk/gtk-3.0/assets/slider-horz-scale-has-marks-below-active@2.png
+share/themes/YaruOk/gtk-3.0/assets/slider-horz-scale-has-marks-below-backdrop-dark.png
+share/themes/YaruOk/gtk-3.0/assets/slider-horz-scale-has-marks-below-backdrop-dark@2.png
+share/themes/YaruOk/gtk-3.0/assets/slider-horz-scale-has-marks-below-backdrop-insensitive-dark.png
+share/themes/YaruOk/gtk-3.0/assets/slider-horz-scale-has-marks-below-backdrop-insensitive-dark@2.png
+share/themes/YaruOk/gtk-3.0/assets/slider-horz-scale-has-marks-below-backdrop-insensitive.png
+share/themes/YaruOk/gtk-3.0/assets/slider-horz-scale-has-marks-below-backdrop-insensitive@2.png
+share/themes/YaruOk/gtk-3.0/assets/slider-horz-scale-has-marks-below-backdrop.png
+share/themes/YaruOk/gtk-3.0/assets/slider-horz-scale-has-marks-below-backdrop@2.png
+share/themes/YaruOk/gtk-3.0/assets/slider-horz-scale-has-marks-below-dark.png
+share/themes/YaruOk/gtk-3.0/assets/slider-horz-scale-has-marks-below-dark@2.png
+share/themes/YaruOk/gtk-3.0/assets/slider-horz-scale-has-marks-below-hover-dark.png
+share/themes/YaruOk/gtk-3.0/assets/slider-horz-scale-has-marks-below-hover-dark@2.png
+share/themes/YaruOk/gtk-3.0/assets/slider-horz-scale-has-marks-below-hover.png
+share/themes/YaruOk/gtk-3.0/assets/slider-horz-scale-has-marks-below-hover@2.png
+share/themes/YaruOk/gtk-3.0/assets/slider-horz-scale-has-marks-below-insensitive-dark.png
+share/themes/YaruOk/gtk-3.0/assets/slider-horz-scale-has-marks-below-insensitive-dark@2.png
+share/themes/YaruOk/gtk-3.0/assets/slider-horz-scale-has-marks-below-insensitive.png
+share/themes/YaruOk/gtk-3.0/assets/slider-horz-scale-has-marks-below-insensitive@2.png
+share/themes/YaruOk/gtk-3.0/assets/slider-horz-scale-has-marks-below.png
+share/themes/YaruOk/gtk-3.0/assets/slider-horz-scale-has-marks-below@2.png
+share/themes/YaruOk/gtk-3.0/assets/slider-vert-grip.png
+share/themes/YaruOk/gtk-3.0/assets/slider-vert-scale-has-marks-above-active-dark.png
+share/themes/YaruOk/gtk-3.0/assets/slider-vert-scale-has-marks-above-active-dark@2.png
+share/themes/YaruOk/gtk-3.0/assets/slider-vert-scale-has-marks-above-active.png
+share/themes/YaruOk/gtk-3.0/assets/slider-vert-scale-has-marks-above-active@2.png
+share/themes/YaruOk/gtk-3.0/assets/slider-vert-scale-has-marks-above-backdrop-dark.png
+share/themes/YaruOk/gtk-3.0/assets/slider-vert-scale-has-marks-above-backdrop-dark@2.png
+share/themes/YaruOk/gtk-3.0/assets/slider-vert-scale-has-marks-above-backdrop-insensitive-dark.png
+share/themes/YaruOk/gtk-3.0/assets/slider-vert-scale-has-marks-above-backdrop-insensitive-dark@2.png
+share/themes/YaruOk/gtk-3.0/assets/slider-vert-scale-has-marks-above-backdrop-insensitive.png
+share/themes/YaruOk/gtk-3.0/assets/slider-vert-scale-has-marks-above-backdrop-insensitive@2.png
+share/themes/YaruOk/gtk-3.0/assets/slider-vert-scale-has-marks-above-backdrop.png
+share/themes/YaruOk/gtk-3.0/assets/slider-vert-scale-has-marks-above-backdrop@2.png
+share/themes/YaruOk/gtk-3.0/assets/slider-vert-scale-has-marks-above-dark.png
+share/themes/YaruOk/gtk-3.0/assets/slider-vert-scale-has-marks-above-dark@2.png
+share/themes/YaruOk/gtk-3.0/assets/slider-vert-scale-has-marks-above-hover-dark.png
+share/themes/YaruOk/gtk-3.0/assets/slider-vert-scale-has-marks-above-hover-dark@2.png
+share/themes/YaruOk/gtk-3.0/assets/slider-vert-scale-has-marks-above-hover.png
+share/themes/YaruOk/gtk-3.0/assets/slider-vert-scale-has-marks-above-hover@2.png
+share/themes/YaruOk/gtk-3.0/assets/slider-vert-scale-has-marks-above-insensitive-dark.png
+share/themes/YaruOk/gtk-3.0/assets/slider-vert-scale-has-marks-above-insensitive-dark@2.png
+share/themes/YaruOk/gtk-3.0/assets/slider-vert-scale-has-marks-above-insensitive.png
+share/themes/YaruOk/gtk-3.0/assets/slider-vert-scale-has-marks-above-insensitive@2.png
+share/themes/YaruOk/gtk-3.0/assets/slider-vert-scale-has-marks-above.png
+share/themes/YaruOk/gtk-3.0/assets/slider-vert-scale-has-marks-above@2.png
+share/themes/YaruOk/gtk-3.0/assets/slider-vert-scale-has-marks-below-active-dark.png
+share/themes/YaruOk/gtk-3.0/assets/slider-vert-scale-has-marks-below-active-dark@2.png
+share/themes/YaruOk/gtk-3.0/assets/slider-vert-scale-has-marks-below-active.png
+share/themes/YaruOk/gtk-3.0/assets/slider-vert-scale-has-marks-below-active@2.png
+share/themes/YaruOk/gtk-3.0/assets/slider-vert-scale-has-marks-below-backdrop-dark.png
+share/themes/YaruOk/gtk-3.0/assets/slider-vert-scale-has-marks-below-backdrop-dark@2.png
+share/themes/YaruOk/gtk-3.0/assets/slider-vert-scale-has-marks-below-backdrop-insensitive-dark.png
+share/themes/YaruOk/gtk-3.0/assets/slider-vert-scale-has-marks-below-backdrop-insensitive-dark@2.png
+share/themes/YaruOk/gtk-3.0/assets/slider-vert-scale-has-marks-below-backdrop-insensitive.png
+share/themes/YaruOk/gtk-3.0/assets/slider-vert-scale-has-marks-below-backdrop-insensitive@2.png
+share/themes/YaruOk/gtk-3.0/assets/slider-vert-scale-has-marks-below-backdrop.png
+share/themes/YaruOk/gtk-3.0/assets/slider-vert-scale-has-marks-below-backdrop@2.png
+share/themes/YaruOk/gtk-3.0/assets/slider-vert-scale-has-marks-below-dark.png
+share/themes/YaruOk/gtk-3.0/assets/slider-vert-scale-has-marks-below-dark@2.png
+share/themes/YaruOk/gtk-3.0/assets/slider-vert-scale-has-marks-below-hover-dark.png
+share/themes/YaruOk/gtk-3.0/assets/slider-vert-scale-has-marks-below-hover-dark@2.png
+share/themes/YaruOk/gtk-3.0/assets/slider-vert-scale-has-marks-below-hover.png
+share/themes/YaruOk/gtk-3.0/assets/slider-vert-scale-has-marks-below-hover@2.png
+share/themes/YaruOk/gtk-3.0/assets/slider-vert-scale-has-marks-below-insensitive-dark.png
+share/themes/YaruOk/gtk-3.0/assets/slider-vert-scale-has-marks-below-insensitive-dark@2.png
+share/themes/YaruOk/gtk-3.0/assets/slider-vert-scale-has-marks-below-insensitive.png
+share/themes/YaruOk/gtk-3.0/assets/slider-vert-scale-has-marks-below-insensitive@2.png
+share/themes/YaruOk/gtk-3.0/assets/slider-vert-scale-has-marks-below.png
+share/themes/YaruOk/gtk-3.0/assets/slider-vert-scale-has-marks-below@2.png
+share/themes/YaruOk/gtk-3.0/assets/text-select-end-active-dark.png
+share/themes/YaruOk/gtk-3.0/assets/text-select-end-active-dark@2.png
+share/themes/YaruOk/gtk-3.0/assets/text-select-end-active.png
+share/themes/YaruOk/gtk-3.0/assets/text-select-end-active@2.png
+share/themes/YaruOk/gtk-3.0/assets/text-select-end-dark.png
+share/themes/YaruOk/gtk-3.0/assets/text-select-end-dark@2.png
+share/themes/YaruOk/gtk-3.0/assets/text-select-end-hover-dark.png
+share/themes/YaruOk/gtk-3.0/assets/text-select-end-hover-dark@2.png
+share/themes/YaruOk/gtk-3.0/assets/text-select-end-hover.png
+share/themes/YaruOk/gtk-3.0/assets/text-select-end-hover@2.png
+share/themes/YaruOk/gtk-3.0/assets/text-select-end.png
+share/themes/YaruOk/gtk-3.0/assets/text-select-end@2.png
+share/themes/YaruOk/gtk-3.0/assets/text-select-start-active-dark.png
+share/themes/YaruOk/gtk-3.0/assets/text-select-start-active-dark@2.png
+share/themes/YaruOk/gtk-3.0/assets/text-select-start-active.png
+share/themes/YaruOk/gtk-3.0/assets/text-select-start-active@2.png
+share/themes/YaruOk/gtk-3.0/assets/text-select-start-dark.png
+share/themes/YaruOk/gtk-3.0/assets/text-select-start-dark@2.png
+share/themes/YaruOk/gtk-3.0/assets/text-select-start-hover-dark.png
+share/themes/YaruOk/gtk-3.0/assets/text-select-start-hover-dark@2.png
+share/themes/YaruOk/gtk-3.0/assets/text-select-start-hover.png
+share/themes/YaruOk/gtk-3.0/assets/text-select-start-hover@2.png
+share/themes/YaruOk/gtk-3.0/assets/text-select-start.png
+share/themes/YaruOk/gtk-3.0/assets/text-select-start@2.png
+share/themes/YaruOk/gtk-3.0/gtk.css
+share/themes/YaruOk/gtk-3.0/settings.ini
+share/themes/YaruOk/index.theme
+share/themes/YaruOk/metacity-1/metacity-theme-1.xml
+share/themes/YaruOk/openbox-3/themerc
+share/themes/YaruOk/xfwm4/README
+share/themes/YaruOk/xfwm4/bottom-active.xpm
+share/themes/YaruOk/xfwm4/bottom-inactive.xpm
+share/themes/YaruOk/xfwm4/bottom-left-active.xpm
+share/themes/YaruOk/xfwm4/bottom-left-inactive.xpm
+share/themes/YaruOk/xfwm4/bottom-right-active.xpm
+share/themes/YaruOk/xfwm4/bottom-right-inactive.xpm
+share/themes/YaruOk/xfwm4/close-active.xpm
+share/themes/YaruOk/xfwm4/close-inactive.xpm
+share/themes/YaruOk/xfwm4/close-pressed.xpm
+share/themes/YaruOk/xfwm4/hide-active.xpm
+share/themes/YaruOk/xfwm4/hide-inactive.xpm
+share/themes/YaruOk/xfwm4/hide-pressed.xpm
+share/themes/YaruOk/xfwm4/left-active.xpm
+share/themes/YaruOk/xfwm4/left-inactive.xpm
+share/themes/YaruOk/xfwm4/maximize-active.xpm
+share/themes/YaruOk/xfwm4/maximize-inactive.xpm
+share/themes/YaruOk/xfwm4/maximize-pressed.xpm
+share/themes/YaruOk/xfwm4/maximize-toggled-active.xpm
+share/themes/YaruOk/xfwm4/maximize-toggled-inactive.xpm
+share/themes/YaruOk/xfwm4/maximize-toggled-pressed.xpm
+share/themes/YaruOk/xfwm4/menu-active.xpm
+share/themes/YaruOk/xfwm4/menu-inactive.xpm
+share/themes/YaruOk/xfwm4/menu-pressed.xpm
+share/themes/YaruOk/xfwm4/right-active.xpm
+share/themes/YaruOk/xfwm4/right-inactive.xpm
+share/themes/YaruOk/xfwm4/themerc
+share/themes/YaruOk/xfwm4/title-1-active.xpm
+share/themes/YaruOk/xfwm4/title-1-inactive.xpm
+share/themes/YaruOk/xfwm4/title-2-active.xpm
+share/themes/YaruOk/xfwm4/title-2-inactive.xpm
+share/themes/YaruOk/xfwm4/title-3-active.xpm
+share/themes/YaruOk/xfwm4/title-3-inactive.xpm
+share/themes/YaruOk/xfwm4/title-4-active.xpm
+share/themes/YaruOk/xfwm4/title-4-inactive.xpm
+share/themes/YaruOk/xfwm4/title-5-active.xpm
+share/themes/YaruOk/xfwm4/title-5-inactive.xpm
+share/themes/YaruOk/xfwm4/top-left-active.png
+share/themes/YaruOk/xfwm4/top-left-active.xpm
+share/themes/YaruOk/xfwm4/top-left-inactive.xpm
+share/themes/YaruOk/xfwm4/top-right-active.png
+share/themes/YaruOk/xfwm4/top-right-active.xpm
+share/themes/YaruOk/xfwm4/top-right-inactive.xpm
 @pkgdir share/locale/zu/LC_MESSAGES
 @pkgdir share/locale/zh_TW/LC_MESSAGES
 @pkgdir share/locale/zh_HK/LC_MESSAGES
@@ -5184,9 +5500,11 @@ share/themes/TraditionalOk/xfwm4/top-right-inactive.xpm
 @pkgdir share/locale/xh/LC_MESSAGES
 @pkgdir share/locale/wa/LC_MESSAGES
 @pkgdir share/locale/vi/LC_MESSAGES
+@pkgdir share/locale/uz@Latn/LC_MESSAGES
 @pkgdir share/locale/uz/LC_MESSAGES
 @pkgdir share/locale/ur_PK/LC_MESSAGES
 @pkgdir share/locale/ur/LC_MESSAGES
+@pkgdir share/locale/uk_UA/LC_MESSAGES
 @pkgdir share/locale/uk/LC_MESSAGES
 @pkgdir share/locale/ug/LC_MESSAGES
 @pkgdir share/locale/tt/LC_MESSAGES
@@ -5210,12 +5528,14 @@ share/themes/TraditionalOk/xfwm4/top-right-inactive.xpm
 @pkgdir share/locale/sco/LC_MESSAGES
 @pkgdir share/locale/sc/LC_MESSAGES
 @pkgdir share/locale/rw/LC_MESSAGES
+@pkgdir share/locale/ru_RU/LC_MESSAGES
 @pkgdir share/locale/ru/LC_MESSAGES
 @pkgdir share/locale/ro/LC_MESSAGES
 @pkgdir share/locale/pt_BR/LC_MESSAGES
 @pkgdir share/locale/pt/LC_MESSAGES
 @pkgdir share/locale/ps/LC_MESSAGES
 @pkgdir share/locale/pms/LC_MESSAGES
+@pkgdir share/locale/pl_PL/LC_MESSAGES
 @pkgdir share/locale/pl/LC_MESSAGES
 @pkgdir share/locale/pa/LC_MESSAGES
 @pkgdir share/locale/or/LC_MESSAGES
@@ -5276,6 +5596,7 @@ share/themes/TraditionalOk/xfwm4/top-right-inactive.xpm
 @pkgdir share/locale/fy/LC_MESSAGES
 @pkgdir share/locale/fur/LC_MESSAGES
 @pkgdir share/locale/frp/LC_MESSAGES
+@pkgdir share/locale/fr_FR/LC_MESSAGES
 @pkgdir share/locale/fr_CA/LC_MESSAGES
 @pkgdir share/locale/fr/LC_MESSAGES
 @pkgdir share/locale/fo/LC_MESSAGES
@@ -5304,6 +5625,7 @@ share/themes/TraditionalOk/xfwm4/top-right-inactive.xpm
 @pkgdir share/locale/es/LC_MESSAGES
 @pkgdir share/locale/eo/LC_MESSAGES
 @pkgdir share/locale/en_GB/LC_MESSAGES
+@pkgdir share/locale/en_DE/LC_MESSAGES
 @pkgdir share/locale/en_CA/LC_MESSAGES
 @pkgdir share/locale/en_AU/LC_MESSAGES
 @pkgdir share/locale/el/LC_MESSAGES
@@ -5328,6 +5650,7 @@ share/themes/TraditionalOk/xfwm4/top-right-inactive.xpm
 @pkgdir share/locale/az/LC_MESSAGES
 @pkgdir share/locale/ast/LC_MESSAGES
 @pkgdir share/locale/as/LC_MESSAGES
+@pkgdir share/locale/ar_SA/LC_MESSAGES
 @pkgdir share/locale/ar/LC_MESSAGES
 @pkgdir share/locale/an/LC_MESSAGES
 @pkgdir share/locale/am/LC_MESSAGES
