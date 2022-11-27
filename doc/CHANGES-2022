@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5749 2022/11/27 23:07:11 nikita Exp $
+$NetBSD: CHANGES-2022,v 1.5750 2022/11/27 23:11:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8696,3 +8696,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/mariadb106-client to 10.6.11 [nia 2022-11-27]
 	Updated databases/mariadb106-server to 10.6.11 [nia 2022-11-27]
 	Updated mail/mb2md to 3.20nb11 [nikita 2022-11-27]
+	Updated lang/gawk to 5.2.1 [wiz 2022-11-27]
