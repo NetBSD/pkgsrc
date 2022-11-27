@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2021/08/06 00:02:02 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.11 2022/11/27 04:43:12 gutteridge Exp $
 bin/caja
 bin/caja-autorun-software
 bin/caja-connect-server
@@ -50,16 +50,16 @@ share/caja/patterns/camouflage.png
 share/caja/patterns/chalk.jpg
 share/caja/patterns/cork.png
 share/caja/patterns/countertop.png
-share/caja/patterns/dark-mate.jpg
+share/caja/patterns/dark-gnome.jpg
 share/caja/patterns/dots.png
 share/caja/patterns/fibers.png
 share/caja/patterns/fleur_de_lis.png
 share/caja/patterns/floral.png
 share/caja/patterns/fossil.png
+share/caja/patterns/gnome.jpg
 share/caja/patterns/green_weave.png
 share/caja/patterns/ice.png
 share/caja/patterns/manila_paper.png
-share/caja/patterns/mate.jpg
 share/caja/patterns/moss_ridge.png
 share/caja/patterns/numbers.png
 share/caja/patterns/ocean_stripes.png
