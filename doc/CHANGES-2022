@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5723 2022/11/27 05:07:24 gutteridge Exp $
+$NetBSD: CHANGES-2022,v 1.5724 2022/11/27 05:08:22 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8663,3 +8663,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/mate-notification-daemon to 1.26.0 [gutteridge 2022-11-27]
 	Updated sysutils/mate-power-manager to 1.26.0 [gutteridge 2022-11-27]
 	Updated security/mate-polkit to 1.26.1 [gutteridge 2022-11-27]
+	Updated x11/mate-session-manager to 1.26.0 [gutteridge 2022-11-27]
