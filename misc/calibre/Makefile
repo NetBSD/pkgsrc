@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.272 2022/11/23 16:20:37 adam Exp $
+# $NetBSD: Makefile,v 1.273 2022/11/27 23:08:07 wiz Exp $
 
 DISTNAME=	calibre-5.44.0
 PKGREVISION=	1
@@ -45,6 +45,7 @@ EXTRACT_USING=	bsdtar
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 # as of 5.x
 PYTHON_VERSIONS_INCOMPATIBLE+=	310 # as of 5.40.0
+PYTHON_VERSIONS_INCOMPATIBLE+=	311 # py-sip via py-qt5-webengine
 PYTHON_VERSIONED_DEPENDENCIES+=	markdown
 
 USE_LANGUAGES=			c c++
