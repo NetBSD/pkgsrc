@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2020/04/05 16:05:43 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/11/27 05:04:47 gutteridge Exp $
 libexec/mate-indicator-applet
 libexec/mate-indicator-applet-appmenu
 libexec/mate-indicator-applet-complete
@@ -76,6 +76,7 @@ share/locale/it/LC_MESSAGES/mate-indicator-applet.mo
 share/locale/ja/LC_MESSAGES/mate-indicator-applet.mo
 share/locale/jv/LC_MESSAGES/mate-indicator-applet.mo
 share/locale/ka/LC_MESSAGES/mate-indicator-applet.mo
+share/locale/kab/LC_MESSAGES/mate-indicator-applet.mo
 share/locale/kk/LC_MESSAGES/mate-indicator-applet.mo
 share/locale/km/LC_MESSAGES/mate-indicator-applet.mo
 share/locale/kn/LC_MESSAGES/mate-indicator-applet.mo
