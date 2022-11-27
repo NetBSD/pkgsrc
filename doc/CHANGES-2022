@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5738 2022/11/27 12:09:52 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5739 2022/11/27 13:14:19 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8683,3 +8683,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/py-twisted to 22.10.0 [adam 2022-11-27]
 	Updated devel/py-pygit2 to 1.11.1 [adam 2022-11-27]
 	Updated textproc/py-jsonschema to 4.17.1 [adam 2022-11-27]
+	Updated net/3proxy to 0.9.4 [triaxx 2022-11-27]
