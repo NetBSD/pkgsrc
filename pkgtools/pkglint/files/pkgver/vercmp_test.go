@@ -115,6 +115,7 @@ func Test_newVersion(t *testing.T) {
 
 func (s *Suite) Test_newVersion(c *check.C) {
 	// See Test_newVersion.
+	_ = c
 }
 
 func (s *Suite) Test__qa(c *check.C) {
