@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.3 2022/11/25 17:19:35 sjmulder Exp $
+$NetBSD: distinfo,v 1.4 2022/11/28 15:31:13 sjmulder Exp $
 
-BLAKE2s (github.com__rasmus_lindroth_go-mastodon_@v_v0.0.11.mod) = 66bd90510b2d2cc1e122b1669f139374e4f9f3fe64aee2e66805e9d6536f08d5
-SHA512 (github.com__rasmus_lindroth_go-mastodon_@v_v0.0.11.mod) = c982f4f6a2d12eb952bf3b54ab0d9ea68cfaf6a0b1e173c7b1a7ff798924a8e022ff65f1ecd068dfcd16d51ecc1003775bba87981d845f2c445778d898d10262
-Size (github.com__rasmus_lindroth_go-mastodon_@v_v0.0.11.mod) = 172 bytes
-BLAKE2s (github.com__rasmus_lindroth_go-mastodon_@v_v0.0.11.zip) = d0ac10cccdebcc1160e50a02ae521c84bea89b6d788464d8c6ea31072e22b2ed
-SHA512 (github.com__rasmus_lindroth_go-mastodon_@v_v0.0.11.zip) = 7fc45b8eeea7b75d55be184b503fc85a75c8ced9c348428e6bc0556060cbd24ed8c1bc05eadd4769559c46042404949701a1b2fd87de39dd871b53eb648dc979
-Size (github.com__rasmus_lindroth_go-mastodon_@v_v0.0.11.zip) = 51873 bytes
+BLAKE2s (github.com__rasmus_lindroth_go-mastodon_@v_v0.0.14.mod) = 66bd90510b2d2cc1e122b1669f139374e4f9f3fe64aee2e66805e9d6536f08d5
+SHA512 (github.com__rasmus_lindroth_go-mastodon_@v_v0.0.14.mod) = c982f4f6a2d12eb952bf3b54ab0d9ea68cfaf6a0b1e173c7b1a7ff798924a8e022ff65f1ecd068dfcd16d51ecc1003775bba87981d845f2c445778d898d10262
+Size (github.com__rasmus_lindroth_go-mastodon_@v_v0.0.14.mod) = 172 bytes
+BLAKE2s (github.com__rasmus_lindroth_go-mastodon_@v_v0.0.14.zip) = e65ae3384654b77b40a4199f1f5be60c494e794d66fa26e7ce7e9796da981689
+SHA512 (github.com__rasmus_lindroth_go-mastodon_@v_v0.0.14.zip) = 68ba6c75c8bd489c9fa132f7bdd6d1a4435f2130860b26f4e0365e930a340b9e4b33c119b2e8d85a10abc4c59646eb87ac89b3bbfb8c58fdcafffe206b56ad22
+Size (github.com__rasmus_lindroth_go-mastodon_@v_v0.0.14.zip) = 52165 bytes
 BLAKE2s (github.com_atotto_clipboard_@v_v0.1.4.mod) = 1211f40837ef80708c30e12f055eb2dcdfd562de960f2aba6761710935863c3a
 SHA512 (github.com_atotto_clipboard_@v_v0.1.4.mod) = 49d95d7db5b42c6948c50dcbee20a5ec6b554e78f8ee4beec2303b318d6289a32be807084806bd17ee8e680e58c2693f753614fdb6788f424c9d7496790b20ba
 Size (github.com_atotto_clipboard_@v_v0.1.4.mod) = 35 bytes
@@ -129,6 +129,12 @@ Size (github.com_rivo_uniseg_@v_v0.4.3.mod) = 39 bytes
 BLAKE2s (github.com_rivo_uniseg_@v_v0.4.3.zip) = 81532df0ef68e054d29b4a5bea173d03313fc37bee0b1b98dc555ace5db47ab9
 SHA512 (github.com_rivo_uniseg_@v_v0.4.3.zip) = 93ece64627476204f9b1833fdc2ee32944b6612116b43c89c0a6197702ac98af6f877f9ef81964459840bcffd2c4e28a4e10c85e4b420836a413431575a3de84
 Size (github.com_rivo_uniseg_@v_v0.4.3.zip) = 476353 bytes
+BLAKE2s (github.com_spf13_pflag_@v_v1.0.5.mod) = 1b1abf476b994d1f08514612e3291343509d867ac0dbe4ebd4316f0e296a4486
+SHA512 (github.com_spf13_pflag_@v_v1.0.5.mod) = 8071c316d33aff1d8ffcabaeb42e8f9320465d83600cb57ac5ef071569f948d5cfd69e1bd2e92855c061395c1b814e84d1705f42e37f00d5bc713b6e724f29f5
+Size (github.com_spf13_pflag_@v_v1.0.5.mod) = 39 bytes
+BLAKE2s (github.com_spf13_pflag_@v_v1.0.5.zip) = 4b3cdadae11a8d2432c380818c116751885b01f307e8c59fb626cc10f07dfc44
+SHA512 (github.com_spf13_pflag_@v_v1.0.5.zip) = 9a81f0635ca8ac059c48a15cbf625a7c91513f95a9b402ba166d48ab72d5d38cbd941d5309446f5637bd7c23eef35b60fef2f06e8b557f415dd8409a6ddf43e9
+Size (github.com_spf13_pflag_@v_v1.0.5.zip) = 88931 bytes
 BLAKE2s (github.com_stretchr_objx_@v_v0.1.0.mod) = 1eb73df00a63ad02b651d13ef6fec7b4842f22c3ecf50546104fddb717aa1c0b
 SHA512 (github.com_stretchr_objx_@v_v0.1.0.mod) = 4e366e5a60559a8863cb2a50280deb307d8bf885ca5440cce1b49a084b4cc4583b3481240125f35f161226592a43f2c0a426152f117d79b68c92c72a93f751d5
 Size (github.com_stretchr_objx_@v_v0.1.0.mod) = 32 bytes
@@ -219,6 +225,6 @@ Size (gopkg.in_yaml.v3_@v_v3.0.0-20200313102051-9f266ea9e77c.mod) = 95 bytes
 BLAKE2s (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 17da54ba1894b4653d4c1ab1ae6e9fe03928a96c69cdc8db6b6ea9e34d673991
 SHA512 (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 307ca9123efc577ca04828996ee9d8edbb51794ccb4b8d9f169ba689e7276aa5f6ae106a04b22b7fab853ffacfebcbf74468b64eaefd57445864c1fbc77fad9d
 Size (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 95 bytes
-BLAKE2s (tut-1.0.22.tar.gz) = d7b77d56501ad378f5c843dec362abef84b3a443e23bf99d286baa74fa815b2c
-SHA512 (tut-1.0.22.tar.gz) = 4ec2176d37ac537790a7000bd1f187d95852fee8bebf5b3c0e65b3c6ab8edd6a9c7b5b5d4ea8b97816f28ff516fe9204861a88265cfe25657cce9d15e9499623
-Size (tut-1.0.22.tar.gz) = 199959 bytes
+BLAKE2s (tut-1.0.23.tar.gz) = be2499414afc2d305a3aaed2c0e2cee7ec1b882d20623e72e1543060b3411cdd
+SHA512 (tut-1.0.23.tar.gz) = d6aa13e4de477a98e5bfa9eeb933179f5e45d1c0d6feb33deb7909983daf9b376c8f17c29ce2e0ffb3fd03c8ab1aa11d3bfaaf879beada08faba1378c1b1d891
+Size (tut-1.0.23.tar.gz) = 201810 bytes
