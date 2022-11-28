@@ -44,10 +44,9 @@ type version struct {
 }
 
 func newVersion(vstr string) *version {
-	v := new(version)
+	var v version
 	lex := textproc.NewLexer(strings.ToLower(vstr))
 	for !lex.EOF() {
-
 		switch {
 		case lex.TestByteSet(textproc.Digit):
 			num := lex.NextBytesSet(textproc.Digit)
@@ -76,7 +75,7 @@ func newVersion(vstr string) *version {
 			lex.Skip(1)
 		}
 	}
-	return v
+	return &v
 }
 
 //go:noinline
