@@ -605,6 +605,24 @@ func (s *Suite) Test_MkCondChecker_checkCompareVarNum(c *check.C) {
 	mklines := t.NewMkLines("filename.mk",
 		MkCvsID,
 		"",
+		"OS_VERSION=\t6.0",
+		".if ${OS_VERSION} > 6.5 || ${_PYTHON_VERSION} < 38",
+		".endif")
+
+	mklines.Check()
+
+	t.CheckOutputLines(
+		"WARN: filename.mk:4: Numeric comparison > 6.5.",
+		"ERROR: filename.mk:4: The Python version must not be compared numerically.",
+		"WARN: filename.mk:4: _PYTHON_VERSION is used but not defined.")
+}
+
+func (s *Suite) Test_MkCondChecker_checkCompareVarNumVersion(c *check.C) {
+	t := s.Init(c)
+
+	mklines := t.NewMkLines("filename.mk",
+		MkCvsID,
+		"",
 		"OS_VERSION=\t9.0",
 		"",
 		".if ${OS_VERSION} > 6.5",
@@ -618,6 +636,33 @@ func (s *Suite) Test_MkCondChecker_checkCompareVarNum(c *check.C) {
 	t.CheckOutputLines(
 		"WARN: filename.mk:5: Numeric comparison > 6.5.",
 		"WARN: filename.mk:8: Numeric comparison == 6.5.")
+}
+
+func (s *Suite) Test_MkCondChecker_checkCompareVarNumPython(c *check.C) {
+	t := s.Init(c)
+
+	mklines := t.NewMkLines("filename.mk",
+		MkCvsID,
+		"",
+		"_PYTHON_VERSION=\tnone",
+		"",
+		".if ${_PYTHON_VERSION} < 38",
+		".endif",
+		"",
+		".if ${_PYTHON_VERSION} < 310",
+		".endif")
+
+	mklines.Check()
+
+	t.CheckOutputLines(
+		"WARN: filename.mk:3: "+
+			"Variable names starting with an underscore "+
+			"(_PYTHON_VERSION) are reserved "+
+			"for internal pkgsrc use.",
+		"ERROR: filename.mk:5: "+
+			"The Python version must not be compared numerically.",
+		"ERROR: filename.mk:8: "+
+			"The Python version must not be compared numerically.")
 }
 
 func (s *Suite) Test_MkCondChecker_checkCompareVarStrCompiler(c *check.C) {
