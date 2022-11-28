@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.60 2022/11/20 16:52:16 adam Exp $
+# $NetBSD: Makefile,v 1.61 2022/11/28 09:34:42 adam Exp $
 
-DISTNAME=	virtualenv-20.16.7
+DISTNAME=	virtualenv-20.17.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/virtualenv/}
@@ -10,8 +10,8 @@ HOMEPAGE=	https://virtualenv.pypa.io/
 COMMENT=	Virtual Python Environment builder
 LICENSE=	mit
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
-DEPENDS+=	${PYPKGPREFIX}-distlib>=0.3.5:../../devel/py-distlib
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+DEPENDS+=	${PYPKGPREFIX}-distlib>=0.3.6:../../devel/py-distlib
 DEPENDS+=	${PYPKGPREFIX}-filelock>=3.4.1:../../devel/py-filelock
 DEPENDS+=	${PYPKGPREFIX}-platformdirs>=2.4:../../misc/py-platformdirs
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=6.2:../../devel/py-coverage
@@ -26,11 +26,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-randomly>=3.10.3:../../devel/py-test-randomly
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout>=2.1:../../devel/py-test-timeout
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-.include "../../lang/python/pyversion.mk"
-.if ${_PYTHON_VERSION} == 37
-DEPENDS+=	${PYPKGPREFIX}-importlib-metadata-[0-9]*:../../devel/py-importlib-metadata
-.endif
 
 USE_PKG_RESOURCES=	yes
 
