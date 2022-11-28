@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/11/27 10:41:35 adam Exp $
+# $NetBSD: Makefile,v 1.4 2022/11/28 14:18:41 wiz Exp $
 
 DISTNAME=	pyhamcrest-2.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^pyh/h/}
@@ -12,6 +12,7 @@ LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs-[0-9]*:../../devel/py-hatch-vcs
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=5.0:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 
