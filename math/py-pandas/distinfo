@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.28 2021/12/12 20:30:49 adam Exp $
+$NetBSD: distinfo,v 1.29 2022/11/28 21:46:51 adam Exp $
 
-BLAKE2s (pandas-1.3.5.tar.gz) = b49f313a6213116ef5577f9110e1560186337fff9e2d663c6788b2e91d1e86d6
-SHA512 (pandas-1.3.5.tar.gz) = cf3f76894cae19784af6393d4a575d114b55621a3d594edd7e95ac6d5c8588a580135789c859c618acfeceeb710d2a1fdd94188a839a90be6b58af929e00a726
-Size (pandas-1.3.5.tar.gz) = 4736591 bytes
+BLAKE2s (pandas-1.5.2.tar.gz) = 5ee5120f9fc4dd00099ee31f6c3db250366704dba6f9982f4607a51731a485ea
+SHA512 (pandas-1.5.2.tar.gz) = 1e6b653ff418c839895946123f90fffcfafd57f24dfbd6bae4e9988893b7d57d6276ed101112c8f9730af53f600d006fe3a53bbed597c0376856f2cfc90c1f05
+Size (pandas-1.5.2.tar.gz) = 5201551 bytes
