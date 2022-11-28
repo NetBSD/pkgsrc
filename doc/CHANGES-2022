@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5754 2022/11/28 09:34:08 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.5755 2022/11/28 09:51:04 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8704,3 +8704,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/py-apsw to 3.40.0.0 [adam 2022-11-28]
 	Updated sysutils/py-stack-data to 0.6.2 [adam 2022-11-28]
 	Updated chat/swirc to 3.3.8 [fcambus 2022-11-28]
+	Updated sysutils/onefetch to 2.14.2 [pin 2022-11-28]
