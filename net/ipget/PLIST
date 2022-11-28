@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2022/11/28 12:27:04 wiz Exp $
+bin/ipget
