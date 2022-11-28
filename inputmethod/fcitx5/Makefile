@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/03/27 13:17:34 tnn Exp $
+# $NetBSD: Makefile,v 1.6 2022/11/28 19:20:21 jperkin Exp $
 
 DISTNAME=	fcitx5-5.0.5
 PKGREVISION=	3
@@ -41,6 +41,8 @@ CMAKE_ARGS+=		-DENABLE_WAYLAND=off # cairo-egl is required.
 CMAKE_ARGS+=		-DUSE_SYSTEMD=off
 
 CXXFLAGS.NetBSD+=	-DLIBKVM_FOUND
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--as-needed
 
 PKGCONFIG_OVERRIDE+=	src/lib/fcitx-config/Fcitx5Config.pc.in
 PKGCONFIG_OVERRIDE+=	src/lib/fcitx-utils/Fcitx5Utils.pc.in
