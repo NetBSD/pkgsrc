@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5770 2022/11/28 14:25:45 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.5771 2022/11/28 15:31:38 sjmulder Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8723,3 +8723,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added audio/qt6-qtspeech version 6.4.1 [nros 2022-11-28]
 	Added www/qt6-qtwebchannel version 6.4.1 [nros 2022-11-28]
 	Updated geography/qgis to 3.28.1 [gdt 2022-11-28]
+	Updated net/tut to 1.0.23 [sjmulder 2022-11-28]
