@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5761 2022/11/28 10:24:17 morr Exp $
+$NetBSD: CHANGES-2022,v 1.5762 2022/11/28 10:50:32 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8713,3 +8713,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-hg-git to 1.0.1 [wiz 2022-11-28]
 	Updated editors/vim-share to 9.0.0960 [morr 2022-11-28]
 	Updated www/wordpress to 6.1 [morr 2022-11-28]
+	Updated editors/tp-note to 1.19.5 [pin 2022-11-28]
