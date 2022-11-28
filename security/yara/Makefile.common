@@ -1,9 +1,10 @@
-# $NetBSD: Makefile.common,v 1.13 2021/05/30 01:16:28 khorben Exp $
+# $NetBSD: Makefile.common,v 1.14 2022/11/28 18:57:19 adam Exp $
 #
 # used by security/yara/Makefile
 # used by security/py-yara/Makefile
 
-YARA_VERSION=	4.1.0
+YARA_VERSION=	4.2.3
+MASTER_SITES=	${MASTER_SITE_GITHUB:=VirusTotal/}
 GITHUB_TAG=	v${YARA_VERSION}
 
 MAINTAINER=	khorben@defora.org

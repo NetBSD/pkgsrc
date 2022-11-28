@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/10/26 11:17:51 nia Exp $
+$NetBSD: distinfo,v 1.15 2022/11/28 18:57:19 adam Exp $
 
-BLAKE2s (yara-python-4.1.0.tar.gz) = 5c2e2a78b58aec3cb837797217e2e8aaadc757f99a4499dee1e89a2094af7299
-SHA512 (yara-python-4.1.0.tar.gz) = 8b9ce780b6639ab2ee5222adec888c7e0fb6be81c7c64a8b33b033de3f261f9707aa208b7a3a86749f6e86a83fe6d73941c816857faf6eb714399d1f50239b51
-Size (yara-python-4.1.0.tar.gz) = 33717 bytes
+BLAKE2s (yara-python-4.2.3.tar.gz) = aa46b829505087358246258600d22d0b1b7d4dc54c392ef642a9f9d4d8f5c7b9
+SHA512 (yara-python-4.2.3.tar.gz) = 588875d820f4e1b2aa5c6bbe83814ba2756f5ed301ba652efd280d5ca9745f7388f1f9eaa3875d11de5644ce9c41dcb76eebbee86269f8d6723c7d16ffa134be
+Size (yara-python-4.2.3.tar.gz) = 34465 bytes
