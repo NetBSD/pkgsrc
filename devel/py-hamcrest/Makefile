@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/11/28 14:18:41 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/11/28 14:19:49 wiz Exp $
 
 DISTNAME=	pyhamcrest-2.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^pyh/h/}
@@ -20,6 +20,7 @@ USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
+# only works after installation
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
