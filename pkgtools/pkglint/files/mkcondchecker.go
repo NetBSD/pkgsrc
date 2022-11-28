@@ -165,7 +165,7 @@ var mkCondModifierPatternLiteral = textproc.NewByteSet("-+,./0-9<=>@A-Z_a-z")
 func (ck *MkCondChecker) checkCompare(left *MkCondTerm, op string, right *MkCondTerm) {
 	switch {
 	case right.Num != "":
-		ck.checkCompareVarNum(op, right.Num)
+		ck.checkCompareVarNum(left, op, right.Num)
 	case left.Var != nil && right.Var == nil:
 		ck.checkCompareVarStr(left.Var, op, right.Str)
 	}
@@ -209,7 +209,12 @@ func (ck *MkCondChecker) checkCompareVarStr(varuse *MkVarUse, op string, str str
 	}
 }
 
-func (ck *MkCondChecker) checkCompareVarNum(op string, num string) {
+func (ck *MkCondChecker) checkCompareVarNum(left *MkCondTerm, op string, num string) {
+	ck.checkCompareVarNumVersion(op, num)
+	ck.checkCompareVarNumPython(left, op, num)
+}
+
+func (ck *MkCondChecker) checkCompareVarNumVersion(op string, num string) {
 	if !contains(num, ".") {
 		return
 	}
@@ -229,6 +234,25 @@ func (ck *MkCondChecker) checkCompareVarNum(op string, num string) {
 		"The second example needs to be split into two parts",
 		"since with a single comparison of the form ${OS_VERSION:M1.[1-9]*},",
 		"the version number 1.11 would also match, which is not intended.")
+}
+
+func (ck *MkCondChecker) checkCompareVarNumPython(left *MkCondTerm, op string, num string) {
+	if left.Var != nil && left.Var.varname == "_PYTHON_VERSION" &&
+		op != "==" && op != "!=" &&
+		matches(num, `^\d+$`) {
+
+		ck.MkLine.Errorf("The Python version must not be compared numerically.")
+		ck.MkLine.Explain(
+			"The variable _PYTHON_VERSION must not be compared",
+			"against an integer number, as these comparisons are",
+			"not meaningful.",
+			"For example, 27 < 39 < 40 < 41 < 310, which means that",
+			"Python 3.10 would be considered newer than a",
+			"possible future Python 4.0.",
+			"",
+			"In addition, _PYTHON_VERSION can be \"none\",",
+			"which is not a number.")
+	}
 }
 
 func (ck *MkCondChecker) checkCompareVarStrCompiler(op string, value string) {
