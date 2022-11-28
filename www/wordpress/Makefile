@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.105 2022/04/09 15:07:15 morr Exp $
+# $NetBSD: Makefile,v 1.106 2022/11/28 09:26:18 morr Exp $
 
 DISTNAME=		wordpress-${VERSION}
-VERSION=		5.9.3
+VERSION=		6.1
 CATEGORIES=		www
 MASTER_SITES=		https://wordpress.org/
 
