@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.158 2022/11/27 13:55:51 gdt Exp $
+# $NetBSD: Makefile,v 1.159 2022/11/28 14:25:31 gdt Exp $
 
-# This is intentionally 3.22 Long Term Release.  Please do not update
+# This is intentionally 3.28 Long Term Release.  Please do not update
 # to later branches, and instead discuss whether/how we want multiple
 # versions.
-DISTNAME=	qgis-3.22.13
-PKGREVISION=	1
+DISTNAME=	qgis-3.28.1
 CATEGORIES=	geography
 MASTER_SITES=	https://qgis.org/downloads/
 EXTRACT_SUFX=	.tar.bz2
@@ -17,7 +16,7 @@ COMMENT=	Geographic Information System (GIS)
 LICENSE=	gnu-gpl-v2
 
 USE_CMAKE=		yes
-USE_LANGUAGES=		c c++ fortran77
+USE_LANGUAGES=		c c++11 fortran77
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		cmake bison flex perl pkg-config
