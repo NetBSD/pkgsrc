@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.91 2022/11/02 08:41:16 adam Exp $
+# $NetBSD: Makefile,v 1.92 2022/11/28 08:49:08 adam Exp $
 
-DISTNAME=	cryptography-38.0.3
+DISTNAME=	cryptography-38.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cryptography/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/pyca/cryptography
 COMMENT=	Cryptographic recipes and primitives for Python
 LICENSE=	apache-2.0 OR modified-bsd
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools-rust-[0-9]*:../../devel/py-setuptools-rust
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-rust-[0-9]*:../../devel/py-setuptools-rust
 DEPENDS+=	${PYPKGPREFIX}-cffi>=1.11.4:../../devel/py-cffi
 DEPENDS+=	${PYPKGPREFIX}-six>=1.4.1:../../lang/py-six
 TEST_DEPENDS+=	${PYPKGPREFIX}-cryptography_vectors-[0-9]*:../../security/py-cryptography_vectors

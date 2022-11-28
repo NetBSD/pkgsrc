@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.73 2022/11/02 08:41:16 adam Exp $
+$NetBSD: distinfo,v 1.74 2022/11/28 08:49:08 adam Exp $
 
 BLAKE2s (Inflector-0.11.4.crate) = 2f8b4a805230be3b58267c7fb6b9c26c2ec966378d195673d1128a851cca515d
 SHA512 (Inflector-0.11.4.crate) = f1f6463e033b6d3c16c51dc1e1a3f5569954308b95b59058294b7f9310919bbda797e99e6a07529071bb83f0688867a243997d33795a7136b0af73977004296e
@@ -36,9 +36,9 @@ Size (chrono-0.4.22.crate) = 185570 bytes
 BLAKE2s (core-foundation-sys-0.8.3.crate) = 679c01a6f663daba747856f9e5c72ad3f1ef1dafb2f6f7211cc1e1c6637ba049
 SHA512 (core-foundation-sys-0.8.3.crate) = a3ba3184cef65dafe8318c4db7e59eb2749dcde7b2370ad20272b0735ded0032daf2de3fd0cf55eb48448a335f5b81e8e745f2a647f9a43bb85946ce714bfd82
 Size (core-foundation-sys-0.8.3.crate) = 17519 bytes
-BLAKE2s (cryptography-38.0.3.tar.gz) = 8979a9d9179015976719d90e477732a28c67da5637cab6556567be070c54eeae
-SHA512 (cryptography-38.0.3.tar.gz) = f133d83266f386cb0169a3cf2226d258b7d599e7aaad9913f8a4b01ee0841670586a21cee93fb4d4d9f61b0da53109c5dbcf7d91d470cfbb166aa04f4a1d7634
-Size (cryptography-38.0.3.tar.gz) = 599876 bytes
+BLAKE2s (cryptography-38.0.4.tar.gz) = aefb997a9e35e7fa6ae28f5b18472b59b0307dfa5e65b69dc7c49d5c9aaf88ff
+SHA512 (cryptography-38.0.4.tar.gz) = 2dcf3cb8208a5905b930482ce87ac56b77fda0eb02387492f0d6be9df67dc5967c93ec9a2127f83dbea1a9a3d39f1adc98497b020ad654d4afdeb67d2323afa9
+Size (cryptography-38.0.4.tar.gz) = 599786 bytes
 BLAKE2s (iana-time-zone-0.1.47.crate) = cf37107075f1cb612fdeccfcf951a0d68b5552f8122ea63ad7d7d851f3c85bd0
 SHA512 (iana-time-zone-0.1.47.crate) = c1817555149f05ae45f7e54046b79c732f80f5af382680d626dd3e970167092cdc176b259941d3c1533518bef511a92ed24c3aa538897e9d082984684d99f55b
 Size (iana-time-zone-0.1.47.crate) = 16974 bytes
