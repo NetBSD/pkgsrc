@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.8 2022/11/28 02:15:03 jschauma Exp $
+$NetBSD: distinfo,v 1.9 2022/11/28 17:05:08 jschauma Exp $
 
 BLAKE2s (iana-etc-2.30.tar.bz2) = d946204cdea28867e7780b737c5de36f2b8a79339a7b8d4bd3f37b65fa25b4a3
 SHA512 (iana-etc-2.30.tar.bz2) = d841b9c177fb0675bab10c9b0ebc4d3c2b743754c615e3fabcaebb29ffefaf2491278d0e672b99af3cbc9b300138700f56c1026f6d41659783150aea97583936
 Size (iana-etc-2.30.tar.bz2) = 205618 bytes
 SHA1 (patch-Makefile) = 2e4e7e3cc9ba8d96b93020e2f44f377cb2a04073
 SHA1 (patch-get.gawk) = 2316b674ae1b2cbbfcdefd9148b5456f9034b4f0
-SHA1 (patch-protocols.gawk) = 33ec3417f2155146d32b17204dccef534b95e54d
+SHA1 (patch-protocols.gawk) = 9f0062a2b60ecedfa44ff93486a78455828245ea
 SHA1 (patch-services.gawk) = a4ecb6826480366ef45c73b0356e2eeec230c6f0
