@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2022/11/28 17:05:08 jschauma Exp $
+# $NetBSD: Makefile,v 1.10 2022/11/28 17:44:41 jschauma Exp $
 #
 
 DISTNAME=	iana-etc-2.30
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	net
 MASTER_SITES=	http://sethwklein.net/
 EXTRACT_SUFX=	.tar.bz2
