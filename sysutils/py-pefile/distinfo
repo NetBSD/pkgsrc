@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:20:04 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/11/28 18:26:03 adam Exp $
 
-BLAKE2s (pefile-2021.5.24.tar.gz) = 60a98b6857001a64393d7512d0a36861c5dd8aa1f1eccde6d28fc49061b63d75
-SHA512 (pefile-2021.5.24.tar.gz) = 614332a6009b5a30682b295272aa4d8fa7eb5eb9cc4981dc2c66887ef8ab17af8c463c1490f0df1a37fc4a9a6d3e8c12dd986657260f98e5b60e771244d791a8
-Size (pefile-2021.5.24.tar.gz) = 66130 bytes
+BLAKE2s (pefile-2022.5.30.tar.gz) = 66ba3dae1d8ce784a1064ffade13ce306e37ac047e3515b0fef01a3750a96181
+SHA512 (pefile-2022.5.30.tar.gz) = 18f8070bfb13fe9b7005ed55c9d040465d1e4c0ddcc1e8adca9127070f8db7b32272fbe50622c1d5c937d9be3bb110167b6a55502e232e26d7da881a5342a9e3
+Size (pefile-2022.5.30.tar.gz) = 72889 bytes
