@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2022/11/20 23:19:20 adam Exp $
+# $NetBSD: Makefile,v 1.57 2022/11/28 19:07:30 nia Exp $
 
 DISTNAME=	requests-2.28.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,6 @@ HOMEPAGE=	https://requests.readthedocs.io/
 COMMENT=	HTTP library, written in Python, for human beings
 LICENSE=	apache-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-cryptography-[0-9]*:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-certifi>=2017.4.17:../../security/py-certifi
 # TODO: remove chardet once charset-normalizer>=3 is supported
 DEPENDS+=	${PYPKGPREFIX}-chardet>=3.0.2:../../converters/py-chardet
@@ -25,6 +24,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock-[0-9]*:../../devel/py-test-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 TEST_DEPENDS+=	${PYPKGPREFIX}-trustme-[0-9]*:../../security/py-trustme
 
+PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
+
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=		# none
@@ -35,4 +36,5 @@ do-test:
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

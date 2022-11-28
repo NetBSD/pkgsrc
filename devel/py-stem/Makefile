@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2022/10/04 20:21:38 adam Exp $
+# $NetBSD: Makefile,v 1.8 2022/11/28 19:07:30 nia Exp $
 
 DISTNAME=	stem-1.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,12 +15,13 @@ USE_LANGUAGES=	# none
 TOOL_DEPENDS+=	${PYPKGPREFIX}-codestyle-[0-9]*:../../devel/py-codestyle
 TOOL_DEPENDS+=	${PYPKGPREFIX}-flakes-[0-9]*:../../devel/py-flakes
 
-DEPENDS+=	${PYPKGPREFIX}-cryptography-[0-9]*:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-nacl-[0-9]*:../../security/py-nacl
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-tox-[0-9]*:../../devel/py-tox
+
+PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
 
 REPLACE_PYTHON+=	cache_fallback_directories.py
 REPLACE_PYTHON+=	cache_manual.py
@@ -35,4 +36,5 @@ do-test:
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
