@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2022/09/11 12:51:45 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2022/11/28 14:38:53 nia Exp $
 
 PKGNAME=	nxengine-evo-2.6.5.1
 PKGREVISION=	4
@@ -19,6 +19,8 @@ LICENSE=	gnu-gpl-v3
 USE_CMAKE=	yes
 USE_TOOLS+=	pax
 USE_LANGUAGES=	c c++
+
+LDFLAGS+=	-lfmt
 
 WRKSRC=		${WRKDIR}/nxengine-evo-2.6.5-1
 
