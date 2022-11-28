@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2022/09/30 09:05:40 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2022/11/28 13:24:55 adam Exp $
 
-DISTNAME=	lz4-3.1.10
+DISTNAME=	lz4-4.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	archivers python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/lz4/}
 
@@ -11,19 +10,19 @@ HOMEPAGE=	https://github.com/python-lz4/python-lz4
 COMMENT=	Python LZ4 binding
 LICENSE=	modified-bsd
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-pkgconfig-[0-9]*:../../devel/py-pkgconfig
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+TOOL_DEPENDS+=	${PYPKGPREFIX}-pkgconfig-[0-9]*:../../devel/py-pkgconfig
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 TEST_DEPENDS+=	${PYPKGPREFIX}-psutil-[0-9]*:../../sysutils/py-psutil
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test>=3.3.1:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+# build 'stream'
+MAKE_ENV+=	PYLZ4_EXPERIMENTAL=1
 
-# builds the same object files for different targets
-# e.g.
-# ld: build/temp.netbsd-9.0-amd64-cpython-310/lz4libs/lz4.o: file not recognized: file truncated
-MAKE_JOBS_SAFE=	no
+USE_TOOLS+=	pkg-config
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../archivers/lz4/buildlink3.mk"
 .include "../../lang/python/egg.mk"
