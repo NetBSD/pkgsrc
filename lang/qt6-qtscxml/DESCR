@@ -1,0 +1,2 @@
+The qt6 scxml module enables qt applications to embed state machines
+created from state chart XML (scxml) language files.
