@@ -1,9 +1,10 @@
-$NetBSD: patch-protocols.gawk,v 1.1 2022/11/28 02:15:03 jschauma Exp $
+$NetBSD: patch-protocols.gawk,v 1.2 2022/11/28 17:05:08 jschauma Exp $
 
+o If an alias is identical to the name, upper case it (PR 44311).
 o Protocol numbers are authoritatively sourced from IANA
 
---- protocols.gawk.orig	2022-11-27 21:04:38.855183965 -0500
-+++ protocols.gawk	2022-11-27 21:05:09.916463115 -0500
+--- protocols.gawk	2022-11-28 11:49:15.381735930 -0500
++++ protocols.gawk.orig	2006-11-14 13:20:26.000000000 -0500
 @@ -14,7 +14,7 @@
      } else {
  	strip = 0
@@ -13,3 +14,13 @@ o Protocol numbers are authoritatively sourced from IANA
  	format = "%-12s %3s %-12s # %s\n"
  	header_printed = 0
      }
+@@ -26,6 +26,9 @@
+ 	header_printed = 1;
+     }
+     sub(/^[ \t]*/, "", f[3])
++    if (tolower(f[2]) == f[2]) {
++        f[2] = toupper(f[2])
++    }
+     printf format, tolower(f[2]), f[1], f[2], f[3]
+     next
+ }
