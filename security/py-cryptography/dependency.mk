@@ -1,4 +1,4 @@
-# $NetBSD: dependency.mk,v 1.1 2022/10/19 13:37:21 nia Exp $
+# $NetBSD: dependency.mk,v 1.2 2022/11/28 08:49:08 adam Exp $
 #
 # Not for public use - use through versioned_dependencies.mk.
 #
@@ -30,7 +30,7 @@ PYCRYPTOGRAPHY_DIR?=		security/py27-cryptography
 .endif
 
 .if "${type}" == ":build"
-BUILD_DEPENDS:=	${BUILD_DEPENDS} ${PYPKGPREFIX}-${PYCRYPTOGRAPHY_VERSION}:../../${PYCRYPTOGRAPHY_DIR}
+TOOL_DEPENDS:=	${BUILD_DEPENDS} ${PYPKGPREFIX}-${PYCRYPTOGRAPHY_VERSION}:../../${PYCRYPTOGRAPHY_DIR}
 .elif "${type}" == ":test"
 TEST_DEPENDS:=	${TEST_DEPENDS} ${PYPKGPREFIX}-${PYCRYPTOGRAPHY_VERSION}:../../${PYCRYPTOGRAPHY_DIR}
 .elif "${type}" == ":tool"
