@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.661 2022/11/03 06:16:31 wiz Exp $
+# $NetBSD: Makefile,v 1.662 2022/11/28 13:44:14 nros Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -422,6 +422,7 @@ SUBDIR+=	py-soundfile
 SUBDIR+=	qjackctl
 SUBDIR+=	qmmp
 SUBDIR+=	qsynth
+SUBDIR+=	qt6-qtspeech
 SUBDIR+=	qtplay
 SUBDIR+=	quodlibet
 SUBDIR+=	rexima
