@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5760 2022/11/28 10:20:46 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.5761 2022/11/28 10:24:17 morr Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8711,3 +8711,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/py-google-api-python-client to 2.66.0 [adam 2022-11-28]
 	Updated textproc/py-dicttoxml to 1.7.7 [adam 2022-11-28]
 	Updated devel/py-hg-git to 1.0.1 [wiz 2022-11-28]
+	Updated editors/vim-share to 9.0.0960 [morr 2022-11-28]
+	Updated www/wordpress to 6.1 [morr 2022-11-28]
