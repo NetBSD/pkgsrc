@@ -1,18 +1,16 @@
-# $NetBSD: Makefile,v 1.73 2022/11/25 09:56:49 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2022/11/28 18:12:15 adam Exp $
 
-DISTNAME=		pycairo-1.22.0
-PKGNAME=		${PYPKGPREFIX}-${DISTNAME:S/py//}
-CATEGORIES=		graphics
-MASTER_SITES=		${MASTER_SITE_GITHUB:=pygobject/}
-GITHUB_PROJECT=		pycairo
-GITHUB_RELEASE=		v${PKGVERSION_NOREV}
+DISTNAME=	pycairo-1.23.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
+CATEGORIES=	graphics python
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pycairo/}
 
-MAINTAINER=		leuzi@trash.net
-HOMEPAGE=		https://cairographics.org/pycairo/
-COMMENT=		Python bindings for cairo
-LICENSE=		gnu-lgpl-v2.1 OR mpl-1.1
+MAINTAINER=	leuzi@trash.net
+HOMEPAGE=	https://cairographics.org/pycairo/
+COMMENT=	Python bindings for cairo
+LICENSE=	gnu-lgpl-v2.1 OR mpl-1.1
 
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=	pkg-config
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYTHON_SELF_CONFLICT=		yes
