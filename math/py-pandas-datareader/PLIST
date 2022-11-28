@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/12/30 02:16:15 minskim Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/11/28 21:47:29 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -104,15 +104,15 @@ ${PYSITELIB}/pandas_datareader/moex.pyo
 ${PYSITELIB}/pandas_datareader/nasdaq_trader.py
 ${PYSITELIB}/pandas_datareader/nasdaq_trader.pyc
 ${PYSITELIB}/pandas_datareader/nasdaq_trader.pyo
+${PYSITELIB}/pandas_datareader/naver.py
+${PYSITELIB}/pandas_datareader/naver.pyc
+${PYSITELIB}/pandas_datareader/naver.pyo
 ${PYSITELIB}/pandas_datareader/oecd.py
 ${PYSITELIB}/pandas_datareader/oecd.pyc
 ${PYSITELIB}/pandas_datareader/oecd.pyo
 ${PYSITELIB}/pandas_datareader/quandl.py
 ${PYSITELIB}/pandas_datareader/quandl.pyc
 ${PYSITELIB}/pandas_datareader/quandl.pyo
-${PYSITELIB}/pandas_datareader/robinhood.py
-${PYSITELIB}/pandas_datareader/robinhood.pyc
-${PYSITELIB}/pandas_datareader/robinhood.pyo
 ${PYSITELIB}/pandas_datareader/stooq.py
 ${PYSITELIB}/pandas_datareader/stooq.pyc
 ${PYSITELIB}/pandas_datareader/stooq.pyo
@@ -179,15 +179,15 @@ ${PYSITELIB}/pandas_datareader/tests/test_moex.pyo
 ${PYSITELIB}/pandas_datareader/tests/test_nasdaq.py
 ${PYSITELIB}/pandas_datareader/tests/test_nasdaq.pyc
 ${PYSITELIB}/pandas_datareader/tests/test_nasdaq.pyo
+${PYSITELIB}/pandas_datareader/tests/test_naver.py
+${PYSITELIB}/pandas_datareader/tests/test_naver.pyc
+${PYSITELIB}/pandas_datareader/tests/test_naver.pyo
 ${PYSITELIB}/pandas_datareader/tests/test_oecd.py
 ${PYSITELIB}/pandas_datareader/tests/test_oecd.pyc
 ${PYSITELIB}/pandas_datareader/tests/test_oecd.pyo
 ${PYSITELIB}/pandas_datareader/tests/test_quandl.py
 ${PYSITELIB}/pandas_datareader/tests/test_quandl.pyc
 ${PYSITELIB}/pandas_datareader/tests/test_quandl.pyo
-${PYSITELIB}/pandas_datareader/tests/test_robinhood.py
-${PYSITELIB}/pandas_datareader/tests/test_robinhood.pyc
-${PYSITELIB}/pandas_datareader/tests/test_robinhood.pyo
 ${PYSITELIB}/pandas_datareader/tests/test_stooq.py
 ${PYSITELIB}/pandas_datareader/tests/test_stooq.pyc
 ${PYSITELIB}/pandas_datareader/tests/test_stooq.pyo
@@ -236,6 +236,9 @@ ${PYSITELIB}/pandas_datareader/yahoo/daily.pyo
 ${PYSITELIB}/pandas_datareader/yahoo/fx.py
 ${PYSITELIB}/pandas_datareader/yahoo/fx.pyc
 ${PYSITELIB}/pandas_datareader/yahoo/fx.pyo
+${PYSITELIB}/pandas_datareader/yahoo/headers.py
+${PYSITELIB}/pandas_datareader/yahoo/headers.pyc
+${PYSITELIB}/pandas_datareader/yahoo/headers.pyo
 ${PYSITELIB}/pandas_datareader/yahoo/options.py
 ${PYSITELIB}/pandas_datareader/yahoo/options.pyc
 ${PYSITELIB}/pandas_datareader/yahoo/options.pyo
