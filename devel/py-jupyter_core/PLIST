@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2022/11/22 10:18:06 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/11/28 18:06:55 adam Exp $
 bin/jupyter-${PYVERSSUFFIX}
 bin/jupyter-migrate-${PYVERSSUFFIX}
 bin/jupyter-troubleshoot-${PYVERSSUFFIX}
@@ -56,6 +56,8 @@ ${PYSITELIB}/jupyter_core/tests/mocking.py
 ${PYSITELIB}/jupyter_core/tests/mocking.pyc
 ${PYSITELIB}/jupyter_core/tests/test_application.py
 ${PYSITELIB}/jupyter_core/tests/test_application.pyc
+${PYSITELIB}/jupyter_core/tests/test_async.py
+${PYSITELIB}/jupyter_core/tests/test_async.pyc
 ${PYSITELIB}/jupyter_core/tests/test_command.py
 ${PYSITELIB}/jupyter_core/tests/test_command.pyc
 ${PYSITELIB}/jupyter_core/tests/test_migrate.py
