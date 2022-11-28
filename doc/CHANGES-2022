@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5763 2022/11/28 12:28:05 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.5764 2022/11/28 13:08:12 nros Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8715,3 +8715,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/wordpress to 6.1 [morr 2022-11-28]
 	Updated editors/tp-note to 1.19.5 [pin 2022-11-28]
 	Added net/ipget version 0.9.1 [wiz 2022-11-28]
+	Added lang/qt6-qtscxml version 6.4.1 [nros 2022-11-28]
