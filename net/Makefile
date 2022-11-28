@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1488 2022/11/27 16:15:20 pin Exp $
+# $NetBSD: Makefile,v 1.1489 2022/11/28 12:27:53 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -270,6 +270,7 @@ SUBDIR+=	ipcalc
 SUBDIR+=	ipcheck
 SUBDIR+=	iperf2
 SUBDIR+=	iperf3
+SUBDIR+=	ipget
 SUBDIR+=	ipgrab
 SUBDIR+=	iplog
 SUBDIR+=	ipv6calc
