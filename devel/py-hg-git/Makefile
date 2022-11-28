@@ -1,12 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2022/01/14 11:37:24 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2022/11/28 10:20:36 wiz Exp $
 
-VERS=		0.10.0
-#PKGREVISION=	1
-DISTNAME=	hg-git-${VERS}
+DISTNAME=	hg-git-1.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel scm
-MASTER_SITES=	https://foss.heptapod.net/mercurial/hg-git/-/archive/${VERS}/
+MASTER_SITES=	https://foss.heptapod.net/mercurial/hg-git/-/archive/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -14,11 +11,12 @@ HOMEPAGE=	https://hg-git.github.io/
 COMMENT=	Push to and pull from a Git server repository using Mercurial
 LICENSE=	gnu-gpl-v2
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-dulwich>=0.9.7:../../devel/py-dulwich
+DEPENDS+=	${PYPKGPREFIX}-mercurial-[0-9]*:../../devel/py-mercurial
 
 USE_LANGUAGES=	# none
 
-# py-dulwich
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 EGG_NAME=	${DISTNAME:S/-/_/1}
