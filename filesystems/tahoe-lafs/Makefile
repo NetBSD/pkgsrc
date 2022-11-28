@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2022/10/03 16:40:21 gdt Exp $
+# $NetBSD: Makefile,v 1.58 2022/11/28 19:07:30 nia Exp $
 
 VERSION_BASE=	1.18.0
 VERSION_RC=
@@ -27,7 +27,6 @@ DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-zfec>=1.1.0:../../converters/py-zfec
 DEPENDS+=	${PYPKGPREFIX}-ZopeInterface>=3.6.0:../../devel/py-ZopeInterface
 DEPENDS+=	${PYPKGPREFIX}-foolscap>=21.7.0:../../net/py-foolscap
-DEPENDS+=	${PYPKGPREFIX}-cryptography>=2.6:../../security/py-cryptography
 # twisted needs tls, conch options.  pkgsrc has tls.
 # TODO: conch??
 DEPENDS+=	${PYPKGPREFIX}-twisted>=19.10.0:../../net/py-twisted
@@ -46,6 +45,8 @@ DEPENDS+=	${PYPKGPREFIX}-netifaces-[0-9]*:../../net/py-netifaces
 DEPENDS+=	${PYPKGPREFIX}-pyutil>=3.3.0:../../devel/py-pyutil
 DEPENDS+=	${PYPKGPREFIX}-distro>=1.4.0:../../devel/py-distro
 DEPENDS+=	${PYPKGPREFIX}-collections-extended-[0-9]*:../../devel/py-collections-extended
+
+PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
 
 # tor_requires
 DEPENDS+=	${PYPKGPREFIX}-txtorcon>=0.17.0:../../net/py-txtorcon
@@ -87,4 +88,5 @@ PKG_GECOS.tahoes=	tahoe server
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
