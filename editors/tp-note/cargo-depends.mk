@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.13 2022/11/23 10:45:37 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.14 2022/11/28 10:50:05 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.17.0
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
@@ -147,10 +147,10 @@ CARGO_CRATE_DEPENDS+=	parse-hyperlinks-0.23.4
 CARGO_CRATE_DEPENDS+=	parse-hyperlinks-extras-0.23.4
 CARGO_CRATE_DEPENDS+=	parse-zoneinfo-0.3.0
 CARGO_CRATE_DEPENDS+=	percent-encoding-2.2.0
-CARGO_CRATE_DEPENDS+=	pest-2.4.1
-CARGO_CRATE_DEPENDS+=	pest_derive-2.4.1
-CARGO_CRATE_DEPENDS+=	pest_generator-2.4.1
-CARGO_CRATE_DEPENDS+=	pest_meta-2.4.1
+CARGO_CRATE_DEPENDS+=	pest-2.5.0
+CARGO_CRATE_DEPENDS+=	pest_derive-2.5.0
+CARGO_CRATE_DEPENDS+=	pest_generator-2.5.0
+CARGO_CRATE_DEPENDS+=	pest_meta-2.5.0
 CARGO_CRATE_DEPENDS+=	phf-0.11.1
 CARGO_CRATE_DEPENDS+=	phf_codegen-0.11.1
 CARGO_CRATE_DEPENDS+=	phf_generator-0.11.1
@@ -217,7 +217,7 @@ CARGO_CRATE_DEPENDS+=	time-core-0.1.0
 CARGO_CRATE_DEPENDS+=	tinyvec-1.6.0
 CARGO_CRATE_DEPENDS+=	tinyvec_macros-0.1.0
 CARGO_CRATE_DEPENDS+=	toml-0.5.9
-CARGO_CRATE_DEPENDS+=	tpnote-lib-0.10.1
+CARGO_CRATE_DEPENDS+=	tpnote-lib-0.10.2
 CARGO_CRATE_DEPENDS+=	typenum-1.15.0
 CARGO_CRATE_DEPENDS+=	ucd-trie-0.1.5
 CARGO_CRATE_DEPENDS+=	uncased-0.9.7
