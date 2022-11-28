@@ -1,22 +1,7 @@
-$NetBSD: patch-src_core_CMakeLists.txt,v 1.4 2022/02/15 12:59:21 gdt Exp $
+$NetBSD: patch-src_core_CMakeLists.txt,v 1.5 2022/11/28 14:25:31 gdt Exp $
 
 Use Q_WS_MAC to conditionalize frameworks
 This sort-of matches Q_OS_MACX conditionals in main.cpp and qgisapp.cpp
 but more importantly avoids using APPLE which we overwrite in the
 pkgsrc Makefile to disable the MAC application bundle
 
---- src/core/CMakeLists.txt.orig	2022-01-14 12:06:34.000000000 +0000
-+++ src/core/CMakeLists.txt
-@@ -2071,11 +2071,11 @@ if (WIN32)
-   target_link_libraries(qgis_core wsock32 ${SETUPAPI_LIBRARY} dbghelp ${VERSION_LIBRARY})
- endif()
- 
- if (APPLE)
-   target_link_libraries(qgis_core ${LIBTASN1_LIBRARY})
- endif()
- 
--if (APPLE AND NOT IOS)
-+if (Q_WS_MAC)
-   target_link_libraries(qgis_core qgis_native)
- endif()
- 
