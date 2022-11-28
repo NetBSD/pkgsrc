@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5759 2022/11/28 10:16:01 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5760 2022/11/28 10:20:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8710,3 +8710,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added biology/balance-tui version 0.1.0 [pin 2022-11-28]
 	Updated www/py-google-api-python-client to 2.66.0 [adam 2022-11-28]
 	Updated textproc/py-dicttoxml to 1.7.7 [adam 2022-11-28]
+	Updated devel/py-hg-git to 1.0.1 [wiz 2022-11-28]
