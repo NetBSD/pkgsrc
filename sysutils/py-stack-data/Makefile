@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2022/11/17 10:30:14 adam Exp $
+# $NetBSD: Makefile,v 1.9 2022/11/28 09:23:18 adam Exp $
 
-DISTNAME=	stack_data-0.6.1
+DISTNAME=	stack_data-0.6.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/stack-data/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/alexmojaki/stack_data
 COMMENT=	Extract data from Python stack frames and tracebacks
 LICENSE=	mit
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-asttokens>=2.1.0:../../lang/py-asttokens
 DEPENDS+=	${PYPKGPREFIX}-executing>=1.2.0:../../lang/py-executing
 DEPENDS+=	${PYPKGPREFIX}-pure-eval-[0-9]*:../../lang/py-pure-eval
