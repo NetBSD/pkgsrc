@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2022/11/17 10:30:14 adam Exp $
+$NetBSD: distinfo,v 1.8 2022/11/28 09:23:18 adam Exp $
 
-BLAKE2s (stack_data-0.6.1.tar.gz) = 3df78c58d336eb9d2fd4fae6f2f466991dc6fe3d3f43de25cbc28da45bddddc6
-SHA512 (stack_data-0.6.1.tar.gz) = 8cb7621e2c922719081b448c452b51189e6b1d0bfb0bb0b39eebaf4f5dd9ed8812a23f71bd8cf0fdfe154bf183118626fe4e9aa06c2410ada3f7c1a5ddf4c80b
-Size (stack_data-0.6.1.tar.gz) = 43747 bytes
+BLAKE2s (stack_data-0.6.2.tar.gz) = 23205fa3a9c8c7456d8763037bf9cfa7ac0c86a025d2929affc5c9fbfded4f27
+SHA512 (stack_data-0.6.2.tar.gz) = cdc623f8efc2fc4a968fd537c2147f4de90c0878554b3d3d741cf916ae549da8756d6ac943dbdee94721cc6a0c433d04d73e30bccee2b4ec1f5027efc3c9b90d
+Size (stack_data-0.6.2.tar.gz) = 44146 bytes
