@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2022/11/22 10:25:01 adam Exp $
+# $NetBSD: Makefile,v 1.22 2022/11/28 18:06:55 adam Exp $
 
-DISTNAME=	jupyter_core-5.0.0
+DISTNAME=	jupyter_core-5.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jupyter_core/}
@@ -11,15 +11,13 @@ COMMENT=	Jupyter core package
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.4:../../devel/py-hatchling
-DEPENDS+=	${PYPKGPREFIX}-platformdirs-[0-9]*:../../misc/py-platformdirs
-DEPENDS+=	${PYPKGPREFIX}-traitlets-[0-9]*:../../devel/py-traitlets
+DEPENDS+=	${PYPKGPREFIX}-platformdirs>=2.5:../../misc/py-platformdirs
+DEPENDS+=	${PYPKGPREFIX}-traitlets>=5.3:../../devel/py-traitlets
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout-[0-9]*:../../devel/py-test-timeout
 
 USE_LANGUAGES=	# none
-
-USE_PKG_RESOURCES=	yes
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
