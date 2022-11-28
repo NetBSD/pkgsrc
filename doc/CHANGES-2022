@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5756 2022/11/28 09:54:23 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5757 2022/11/28 09:55:16 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8705,5 +8705,10 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/py-stack-data to 0.6.2 [adam 2022-11-28]
 	Updated chat/swirc to 3.3.8 [fcambus 2022-11-28]
 	Updated sysutils/onefetch to 2.14.2 [pin 2022-11-28]
+<<<<<<< CHANGES-2022
+	Added biology/balance-tui version 0.1.0 [pin 2022-11-28]
+=======
 	Updated devel/py-virtualenv to 20.17.0 [adam 2022-11-28]
 	Updated devel/py-tubes to 0.2.1 [adam 2022-11-28]
+>>>>>>> 1.5756
+	Added biology/balance-tui version 0.1.0 [pin 2022-11-28]
