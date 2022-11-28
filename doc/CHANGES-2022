@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5771 2022/11/28 15:31:38 sjmulder Exp $
+$NetBSD: CHANGES-2022,v 1.5772 2022/11/28 18:12:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8724,3 +8724,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Added www/qt6-qtwebchannel version 6.4.1 [nros 2022-11-28]
 	Updated geography/qgis to 3.28.1 [gdt 2022-11-28]
 	Updated net/tut to 1.0.23 [sjmulder 2022-11-28]
+	Updated devel/py-ipython to 8.7.0 [adam 2022-11-28]
+	Updated devel/py-jupyter_core to 5.1.0 [adam 2022-11-28]
+	Updated devel/py-cbor2 to 5.4.4 [adam 2022-11-28]
+	Updated graphics/py-cairo to 1.23.0 [adam 2022-11-28]
