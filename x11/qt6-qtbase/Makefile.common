@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.20 2022/11/28 13:44:14 nros Exp $
+# $NetBSD: Makefile.common,v 1.21 2022/11/28 14:00:53 nros Exp $
 # used by audio/qt6-qtspeech/Makefile
 # used by databases/qt6-odbc/Makefile
 # used by databases/qt6-psql/Makefile
@@ -18,6 +18,7 @@
 # used by net/qt6-qtremoteobjects/Makefile
 # used by net/qt6-qtwebsockets/Makefile
 # used by security/qt6-qtnetworkauth/Makefile
+# used by www/qt6-qtwebchannel/Makefile
 # used by x11/qt6-qtbase/Makefile
 
 .include "../../meta-pkgs/qt6/Makefile.common"
