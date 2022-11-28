@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2022/11/16 20:53:59 adam Exp $
+$NetBSD: distinfo,v 1.18 2022/11/28 20:50:15 jperkin Exp $
 
 BLAKE2s (cmake-15.0.5.src.tar.xz) = 5f8beedf1c9349c13dba2f4a5fcfb9d482c96df32c34c284cfe682a681669f35
 SHA512 (cmake-15.0.5.src.tar.xz) = 493825f1b64abef6d56502d28e30056320bdda5a46a478fc85eec3a631c541da2d318fb9c3e3d3e6234f538121b7a1c60d34cba498fd6b7938d3558d24684fed
@@ -10,3 +10,4 @@ BLAKE2s (libcxxabi-15.0.5.src.tar.xz) = 1792d74a99516c4192ab65b97843805096a4169d
 SHA512 (libcxxabi-15.0.5.src.tar.xz) = 5c4a931a270abfd9fdb64e248d07246a2c678eb7127103a9c8ade63a671d3a33de1d989c0f4a7e9ee2e15519441df5e5e9a8e722b048035b8d74dea6130f756b
 Size (libcxxabi-15.0.5.src.tar.xz) = 568696 bytes
 SHA1 (patch-src_CMakeLists.txt) = da127de7603ed0ea5530c4a8cd2ffcee61d2ff90
+SHA1 (patch-src_demangle_Utility.h) = 78ba9453e373d1719065f856abab384bee8c47e7
