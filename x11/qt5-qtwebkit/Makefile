@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2022/11/23 16:19:15 adam Exp $
+# $NetBSD: Makefile,v 1.100 2022/11/28 19:16:13 jperkin Exp $
 
 QTWKVERSION=	5.212.0-alpha4
 DISTNAME=	qtwebkit-${QTWKVERSION}
@@ -72,6 +72,8 @@ BUILDLINK_TRANSFORM+=	R:${WRKSRC}/lib:${QTDIR}/lib
 .else
 BUILDLINK_TRANSFORM+=	rpath:${WRKSRC}/lib:${QTDIR}/lib
 .endif
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--gc-sections
 
 .if ${OPSYS} == "NetBSD" && !empty(MACHINE_ARCH:M*arm*)
 LDFLAGS+=	-Wl,--no-keep-memory
