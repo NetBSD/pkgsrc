@@ -250,7 +250,7 @@ func (lex *ShellLexer) Lex(lval *shyySymType) (ttype int) {
 		lval.Word = p.ShToken()
 		lex.atCommandStart = false
 
-		// Inside of a case statement, ${PATTERNS:@p@ (${p}) continue ;; @} expands to
+		// Inside a case statement, ${PATTERNS:@p@ (${p}) continue ;; @} expands to
 		// a list of case-items, and after this list a new command starts.
 		// This is necessary to return a following "esac" as tkESAC instead of a
 		// simple word.
