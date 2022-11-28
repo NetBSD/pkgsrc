@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5772 2022/11/28 18:12:42 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5773 2022/11/28 18:42:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8728,3 +8728,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-jupyter_core to 5.1.0 [adam 2022-11-28]
 	Updated devel/py-cbor2 to 5.4.4 [adam 2022-11-28]
 	Updated graphics/py-cairo to 1.23.0 [adam 2022-11-28]
+	Updated sysutils/py-pefile to 2022.5.30 [adam 2022-11-28]
+	Updated devel/py-kaitaistruct to 0.10 [adam 2022-11-28]
