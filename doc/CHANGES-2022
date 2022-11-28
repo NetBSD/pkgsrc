@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5751 2022/11/27 23:35:19 nia Exp $
+$NetBSD: CHANGES-2022,v 1.5752 2022/11/28 08:49:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8699,3 +8699,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/gawk to 5.2.1 [wiz 2022-11-27]
 	Updated databases/mariadb105-client to 10.5.18 [nia 2022-11-27]
 	Updated databases/mariadb105-server to 10.5.18 [nia 2022-11-27]
+	Updated security/py-cryptography to 38.0.4 [adam 2022-11-28]
+	Updated security/py-cryptography_vectors to 38.0.4 [adam 2022-11-28]
