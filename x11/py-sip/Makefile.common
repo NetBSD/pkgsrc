@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2022/11/25 13:31:35 wiz Exp $
+# $NetBSD: Makefile.common,v 1.14 2022/11/28 19:07:52 gdt Exp $
 #
 # used by x11/py-sip/Makefile
 # used by x11/py-sip-qt5/Makefile
@@ -7,9 +7,13 @@ DISTNAME=	sip-4.19.25
 CATEGORIES=	x11 devel python
 MASTER_SITES=	https://www.riverbankcomputing.com/static/Downloads/sip/${PKGVERSION_NOREV}/
 
-# Before updating, please check that any new version works with qgis.
-# Apparently, there are problems with 5 and 6 with qgis 3.16 as of
-# 2021-11.
+# As of 2022-11 the plan seems to be to have sip(4), sip5 and sip6 in
+# parallel.
+# Before updating, please ensure that qgis builds and works.  sip4 and
+# sip5 are not compatible, and apparently one must use the same sip to
+# build py-qt5 and perhaps py-qt5-qscintilla as qgis.  Some hints:
+#  https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=964132
+# 2022-11: qgis 3.28.1 with pkgsrc py-qt5 fails to build with py-sip5
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://riverbankcomputing.com/software/sip/
 
