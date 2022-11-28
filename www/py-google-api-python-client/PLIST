@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2022/10/31 10:55:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2022/11/28 10:13:29 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -83,6 +83,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/authorizedbuyersmarketpla
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/baremetalsolution.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/baremetalsolution.v1alpha1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/baremetalsolution.v2.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/batch.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/beyondcorp.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/beyondcorp.v1alpha.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/bigquery.v2.json
@@ -425,6 +426,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/texttospeech.v1beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/toolresults.v1beta3.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/tpu.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/tpu.v1alpha1.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/tpu.v2.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/tpu.v2alpha1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/trafficdirector.v2.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/transcoder.v1.json
@@ -432,6 +434,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/transcoder.v1beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/translate.v2.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/translate.v3.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/translate.v3beta1.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/travelimpactmodel.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/vault.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/vectortile.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/verifiedaccess.v1.json
