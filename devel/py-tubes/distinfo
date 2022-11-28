@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2022/02/13 09:44:10 wiz Exp $
+$NetBSD: distinfo,v 1.5 2022/11/28 09:53:25 adam Exp $
 
-BLAKE2s (tubes-0.2.0.tar.gz) = 2e6b2cf7f5ed2d07f20bd08fd6e9fde4921942f671806ec8194203afebcb24c1
-SHA512 (tubes-0.2.0.tar.gz) = 6039a3059b61f8a0c84d4e10bb47d9f2bb95505b0353cb0f1eefb6942f0ad0d88c9b02ff0d48ed0300d615d3e3203c5e884990cd6d006c2f1dbd18b88fcb2e9e
-Size (tubes-0.2.0.tar.gz) = 64284 bytes
+BLAKE2s (Tubes-0.2.1.tar.gz) = 01b0c2222a50d1d1fd5e46bab2be45f959a97440996dec20e5d874b69412cac2
+SHA512 (Tubes-0.2.1.tar.gz) = 5aae3d8a01486d6406f9aef60aab74bbaf62084581e0d0788102be8e39bbbc99e7658f2f0af5e547f857749e861e699cf6b0fd8e441256632de9de068f7823ef
+Size (Tubes-0.2.1.tar.gz) = 47699 bytes
