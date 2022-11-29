@@ -1,12 +1,10 @@
-$NetBSD: distinfo,v 1.21 2021/10/26 10:09:15 nia Exp $
+$NetBSD: distinfo,v 1.22 2022/11/29 19:16:04 jperkin Exp $
 
-BLAKE2s (apache-couchdb-2.3.1.tar.gz) = 58701851e546e763526b960946530061f50b24a8ee5f170456f2837ece576b12
-SHA512 (apache-couchdb-2.3.1.tar.gz) = a34a8775b2be3c51f48c9f45c5ccaa01fbd8435d58aa326e1e53f1c82678fdbf657f90003d476ad43d3898bbd3cbedfc2dd9adbd2d98cec31f850ca743c8c64c
-Size (apache-couchdb-2.3.1.tar.gz) = 13473795 bytes
-SHA1 (patch-aa) = c657ce706e3ba0487aff6ac96628ebf3c97b1475
-SHA1 (patch-rebar.config.script) = 628340e6a8085e92d4193ac11905eebd8377a6b6
-SHA1 (patch-rel_files_couchdb.in) = d94bf0e54657fea26dd42e807cc2de36a67e8fda
-SHA1 (patch-rel_overlay_etc_default.ini) = 203af5ee1684288b66103842c30fa0f9135abd4b
+BLAKE2s (apache-couchdb-3.2.2.tar.gz) = 2d2e337f4746ef4fe4c9e26703c5f377bf79138161a914ec4ea398ea35169811
+SHA512 (apache-couchdb-3.2.2.tar.gz) = 2212ee1e7819a703ebdfe201dfbb1359ff674ddcbfe0936db22faa640f84ab8ebfeba7be412adcb9021f7267b14855f2fff53b89cd2d9a7eb98e72e9f3996814
+Size (apache-couchdb-3.2.2.tar.gz) = 16597518 bytes
+SHA1 (patch-aa) = ab69943c33c92f8830643a7ffb75e87ffdc47fd0
+SHA1 (patch-rel_files_couchdb.in) = fb1d38cbda801fb56bc4945ea62a7baacc36de12
+SHA1 (patch-rel_overlay_etc_default.ini) = 01a2c0164a26adcfd9f3d69a8d74626017ea0f94
 SHA1 (patch-src_config_src_config__app.erl) = 62c15c6e48961736dab4dd0d27b0c968847df323
-SHA1 (patch-src_couch_rebar.config.script) = 75f1d2d8aaa32d87f79c1c9820fad9b1d7b2b03b
-SHA1 (patch-src_snappy_rebar.config) = 767157cd1ff73267d8b023c2902d3861aedbc61b
+SHA1 (patch-src_couch_rebar.config.script) = 88b57002859e267e060cf77f3ea611f4e394d705
