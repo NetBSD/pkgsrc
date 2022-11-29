@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/11/24 16:00:18 wiz Exp $
+$NetBSD: distinfo,v 1.6 2022/11/29 17:09:45 adam Exp $
 
-BLAKE2s (nltk-3.6.5.zip) = e339313c2e05f3fdd0c8706346202f1e7dcd010587dbdc3552c4a9a4f1c4facb
-SHA512 (nltk-3.6.5.zip) = afddea56f092bd6e6ee119c769958afbce3f76159d94e8da28da1946e8ab63fa568762ead39e8a6fb6cbe55a548a1056e8b457c50a54e8f8ef6da610ea3bcf4b
-Size (nltk-3.6.5.zip) = 6392760 bytes
+BLAKE2s (nltk-3.7.zip) = 28c8e1bb3b834d1460e41e967473b89641fddc6db6b890e292a1ba8aa60519ee
+SHA512 (nltk-3.7.zip) = 8abe2d11875f769a4d23190b8da5807ee6a924fd5e07bfeb545f1a6e191eb1f49d02cbd80330f4261330598dd0936430c68513291f6e49fc275047c93e7f430a
+Size (nltk-3.7.zip) = 3293449 bytes
