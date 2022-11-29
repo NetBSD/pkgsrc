@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2022/05/15 10:05:15 nia Exp $
+# $NetBSD: Makefile,v 1.8 2022/11/29 17:09:45 adam Exp $
 
-DISTNAME=	nltk-3.6.5
+DISTNAME=	nltk-3.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nltk/}
 EXTRACT_SUFX=	.zip
@@ -54,9 +53,12 @@ TEST_DEPENDS+=	nltk_data-words-[0-9]*:../../textproc/nltk_data-words
 
 REPLACE_PYTHON=		nltk/corpus/reader/knbc.py
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37 # matplotlib
-
 USE_PKG_RESOURCES=	yes
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37 # py-matplotlib
+
+post-extract:
+	${FIND} ${WRKSRC} -type f -exec ${CHMOD} g-w,o-w {} +
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
