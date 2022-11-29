@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5781 2022/11/29 08:42:20 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.5782 2022/11/29 10:27:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8743,3 +8743,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Added security/volatility3 version 2.0.1 [adam 2022-11-29]
 	Updated misc/wthrr to 0.6.0 [pin 2022-11-29]
 	Updated devel/py-kaitaistruct to 0.10nb1 [wiz 2022-11-29]
+	Updated textproc/py-openpyxl to 3.0.10 [adam 2022-11-29]
+	Updated www/py-django-binary-database-files to 1.0.17 [adam 2022-11-29]
