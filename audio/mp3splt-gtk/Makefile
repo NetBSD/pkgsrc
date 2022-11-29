@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2022/08/11 05:08:03 gutteridge Exp $
+# $NetBSD: Makefile,v 1.54 2022/11/29 22:14:05 wiz Exp $
 #
 
 DISTNAME=	mp3splt-gtk-0.9.2
@@ -23,6 +23,7 @@ CONFIGURE_ARGS+=	--disable-doxygen_doc
 CONFIGURE_ARGS+=	--disable-gnome
 
 .include "../../audio/libmp3splt/buildlink3.mk"
+.include "../../devel/pcre/buildlink3.mk"
 .include "../../multimedia/gstreamer1/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
