@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.141 2022/11/23 16:20:40 adam Exp $
+# $NetBSD: Makefile,v 1.142 2022/11/29 17:57:53 adam Exp $
 
 DISTNAME=	stellarium-1.1.1
 PKGNAME=	stellarium-1.1
@@ -12,7 +12,7 @@ HOMEPAGE=	https://stellarium.org/
 COMMENT=	Generate photorealistic skies with OpenGL
 LICENSE=	gnu-gpl-v2
 
-WRKSRC=		${WRKDIR}/${PKGNAME}
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
