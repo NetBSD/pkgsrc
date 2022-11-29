@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2022/11/28 13:26:24 adam Exp $
+# $NetBSD: Makefile,v 1.6 2022/11/29 05:49:01 adam Exp $
 
-DISTNAME=	dicttoxml-1.7.8
+DISTNAME=	dicttoxml-1.7.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dicttoxml/}
