@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5789 2022/11/29 16:41:24 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5790 2022/11/29 17:02:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8754,3 +8754,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/ruby-regexp_parser to 2.6.1 [taca 2022-11-29]
 	Updated net/qbittorrent to 4.5.0 [adam 2022-11-29]
 	Updated www/py-django-extensions to 3.2.1 [adam 2022-11-29]
+	Updated devel/py-pylint to 2.15.7 [adam 2022-11-29]
+	Updated textproc/py-pyphen to 0.13.2 [adam 2022-11-29]
