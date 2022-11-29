@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2022/11/23 16:21:05 adam Exp $
+# $NetBSD: Makefile,v 1.21 2022/11/29 08:34:35 prlw1 Exp $
 
 DISTNAME=	gnome-control-center-40.0
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	sysutils gnome
 EXTRACT_SUFX=	.tar.xz
 
@@ -28,7 +28,7 @@ PKGCONFIG_OVERRIDE+=		output/panels/keyboard/gnome-keybindings.pc
 .include "../../devel/glib2/schemas.mk"
 .include "../../audio/gsound/buildlink3.mk"
 .include "../../audio/pulseaudio/buildlink3.mk"
-.include "../../devel/libhandy1/buildlink3.mk"
+.include "../../devel/libhandy/buildlink3.mk"
 .include "../../graphics/colord/buildlink3.mk"
 .include "../../graphics/colord-gtk/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
