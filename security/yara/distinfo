@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.18 2022/11/28 18:57:19 adam Exp $
+$NetBSD: distinfo,v 1.19 2022/11/29 08:35:01 adam Exp $
 
 BLAKE2s (yara-4.2.3.tar.gz) = fcd5a273fb2f1b7835f9bd80a8963bedf2bc67fa78b971abbcd971571e3fef74
 SHA512 (yara-4.2.3.tar.gz) = 1df23837d14d3f9f72db901190e7412241514a8914d72b753df32ad8a44c7a49ad8f14941a95de83754e4d1dd0f23d712d8e6a43916343341b92cb1bc66f3c09
 Size (yara-4.2.3.tar.gz) = 1288334 bytes
-SHA1 (patch-configure.ac) = 1640083582087e1377d1ee378610e35cd09e08d5
+SHA1 (patch-configure.ac) = 49ad0dddaa2f105a8460304dc163a550d7638b45
