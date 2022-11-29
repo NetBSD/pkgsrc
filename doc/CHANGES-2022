@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5784 2022/11/29 12:39:33 taca Exp $
+$NetBSD: CHANGES-2022,v 1.5785 2022/11/29 12:43:07 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8748,3 +8748,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added textproc/py-markuppy version 1.14 [adam 2022-11-29]
 	Updated textproc/py-tablib to 3.2.1 [adam 2022-11-29]
 	Updated devel/ruby-contracts to 0.17 [taca 2022-11-29]
+	Added devel/ruby-corefoundation version 0.3.13 [taca 2022-11-29]
