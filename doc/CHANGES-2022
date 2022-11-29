@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5782 2022/11/29 10:27:36 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5783 2022/11/29 10:52:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8745,3 +8745,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-kaitaistruct to 0.10nb1 [wiz 2022-11-29]
 	Updated textproc/py-openpyxl to 3.0.10 [adam 2022-11-29]
 	Updated www/py-django-binary-database-files to 1.0.17 [adam 2022-11-29]
+	Added textproc/py-markuppy version 1.14 [adam 2022-11-29]
+	Updated textproc/py-tablib to 3.2.1 [adam 2022-11-29]
