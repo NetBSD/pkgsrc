@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5787 2022/11/29 13:13:16 taca Exp $
+$NetBSD: CHANGES-2022,v 1.5788 2022/11/29 13:15:23 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8751,3 +8751,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/ruby-corefoundation version 0.3.13 [taca 2022-11-29]
 	Updated devel/ruby-mocha to 2.0.2 [taca 2022-11-29]
 	Updated devel/ruby-pkg-config to 1.5.1 [taca 2022-11-29]
+	Updated devel/ruby-regexp_parser to 2.6.1 [taca 2022-11-29]
