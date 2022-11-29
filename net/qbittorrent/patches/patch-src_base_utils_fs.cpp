@@ -1,10 +1,10 @@
-$NetBSD: patch-src_base_utils_fs.cpp,v 1.2 2022/04/19 16:37:16 adam Exp $
+$NetBSD: patch-src_base_utils_fs.cpp,v 1.3 2022/11/29 16:37:59 adam Exp $
 
 Support NetBSD.
 
---- src/base/utils/fs.cpp.orig	2022-03-22 14:14:07.000000000 +0000
+--- src/base/utils/fs.cpp.orig	2022-11-26 21:16:23.000000000 +0000
 +++ src/base/utils/fs.cpp
-@@ -40,7 +40,7 @@
+@@ -42,7 +42,7 @@
  
  #if defined(Q_OS_WIN)
  #include <Windows.h>
@@ -13,7 +13,7 @@ Support NetBSD.
  #include <sys/param.h>
  #include <sys/mount.h>
  #elif defined(Q_OS_HAIKU)
-@@ -50,6 +50,10 @@
+@@ -52,6 +52,10 @@
  #include <unistd.h>
  #endif
  
@@ -21,10 +21,10 @@ Support NetBSD.
 +#define statfs statvfs
 +#endif
 +
+ #include <QDateTime>
  #include <QDebug>
  #include <QDir>
- #include <QDirIterator>
-@@ -356,7 +360,7 @@ bool Utils::Fs::isNetworkFileSystem(cons
+@@ -243,7 +247,7 @@ bool Utils::Fs::isNetworkFileSystem(cons
      if (statfs(file.toLocal8Bit().constData(), &buf) != 0)
          return false;
  
