@@ -1,4 +1,4 @@
-$NetBSD: patch-src_demangle_Utility.h,v 1.1 2022/11/28 20:50:16 jperkin Exp $
+$NetBSD: patch-src_demangle_Utility.h,v 1.2 2022/11/29 09:08:58 jperkin Exp $
 
 Work around ambiguous call on SunOS.
 
@@ -9,7 +9,7 @@ Work around ambiguous call on SunOS.
  
    OutputBuffer &operator<<(long long N) {
 -    return writeUnsigned(static_cast<unsigned long long>(std::abs(N)), N < 0);
-+    return writeUnsigned(static_cast<unsigned long long>(std::abs((long double)N)), N < 0);
++    return writeUnsigned(static_cast<unsigned long long>(std::llabs(N)), N < 0);
    }
  
    OutputBuffer &operator<<(unsigned long long N) {
