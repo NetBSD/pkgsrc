@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.81 2022/11/23 16:19:33 adam Exp $
+# $NetBSD: Makefile,v 1.82 2022/11/29 19:16:04 jperkin Exp $
 
-DISTNAME=		apache-couchdb-2.3.1
+DISTNAME=		apache-couchdb-3.2.2
 PKGNAME=		${DISTNAME:S/apache-//}
-PKGREVISION=		17
 CATEGORIES=		databases
 MASTER_SITES=		${MASTER_SITE_APACHE:=couchdb/source/${PKGVERSION_NOREV}/}
 
@@ -17,7 +16,6 @@ USE_TOOLS+=		gmake pax pkg-config
 USE_LIBTOOL=		yes
 BUILD_DEFS+=		VARBASE
 
-BUILD_DEPENDS+=		help2man-[0-9]*:../../converters/help2man
 BUILD_DEPENDS+=		rebar21>=2.6.0<3:../../devel/rebar21
 
 MAKE_ENV+=		REBAR=${PREFIX}/bin/rebar
@@ -72,6 +70,8 @@ CONFIGURE_ARGS+=	--user\ ${COUCH_USER}
 CONFIGURE_ARGS+=	--skip-deps
 CONFIGURE_ARGS+=	--with-curl
 
+BUILDLINK_TRANSFORM+=	rm:-Werror
+
 BUILD_TARGET=		release
 TEST_TARGET=		check
 
@@ -120,6 +120,7 @@ do-install:
 		${DESTDIR}${PREFIX}/couchdb/share
 	cd ${WRKSRC}/rel/couchdb/etc && ${PAX} -rw -pp *.ini vm.args		\
 		${DESTDIR}${COUCH_EGDIR}
+	${FIND} ${DESTDIR}${PREFIX} -type f -exec ${CHMOD} og-w {} +
 
 # The erlang VM gets embedded, but it may still need the curses lib
 BUILDLINK_DEPMETHOD.erlang=	build
