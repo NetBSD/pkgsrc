@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2022/10/09 07:20:04 taca Exp $
+@comment $NetBSD: PLIST,v 1.30 2022/11/29 13:04:17 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gemtest
 ${GEM_LIBDIR}/.github/FUNDING.yml
@@ -14,7 +14,6 @@ ${GEM_LIBDIR}/RELEASE.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/gemfiles/Gemfile.minitest.latest
 ${GEM_LIBDIR}/gemfiles/Gemfile.test-unit.latest
-${GEM_LIBDIR}/init.rb
 ${GEM_LIBDIR}/lib/mocha.rb
 ${GEM_LIBDIR}/lib/mocha/any_instance_method.rb
 ${GEM_LIBDIR}/lib/mocha/api.rb
@@ -40,30 +39,13 @@ ${GEM_LIBDIR}/lib/mocha/hooks.rb
 ${GEM_LIBDIR}/lib/mocha/in_state_ordering_constraint.rb
 ${GEM_LIBDIR}/lib/mocha/inspect.rb
 ${GEM_LIBDIR}/lib/mocha/instance_method.rb
-${GEM_LIBDIR}/lib/mocha/integration.rb
 ${GEM_LIBDIR}/lib/mocha/integration/assertion_counter.rb
 ${GEM_LIBDIR}/lib/mocha/integration/mini_test.rb
 ${GEM_LIBDIR}/lib/mocha/integration/mini_test/adapter.rb
 ${GEM_LIBDIR}/lib/mocha/integration/mini_test/exception_translation.rb
-${GEM_LIBDIR}/lib/mocha/integration/mini_test/nothing.rb
-${GEM_LIBDIR}/lib/mocha/integration/mini_test/version_13.rb
-${GEM_LIBDIR}/lib/mocha/integration/mini_test/version_140.rb
-${GEM_LIBDIR}/lib/mocha/integration/mini_test/version_141.rb
-${GEM_LIBDIR}/lib/mocha/integration/mini_test/version_142_to_172.rb
-${GEM_LIBDIR}/lib/mocha/integration/mini_test/version_200.rb
-${GEM_LIBDIR}/lib/mocha/integration/mini_test/version_201_to_222.rb
-${GEM_LIBDIR}/lib/mocha/integration/mini_test/version_2110_to_2111.rb
-${GEM_LIBDIR}/lib/mocha/integration/mini_test/version_2112_to_320.rb
-${GEM_LIBDIR}/lib/mocha/integration/mini_test/version_230_to_2101.rb
 ${GEM_LIBDIR}/lib/mocha/integration/monkey_patcher.rb
 ${GEM_LIBDIR}/lib/mocha/integration/test_unit.rb
 ${GEM_LIBDIR}/lib/mocha/integration/test_unit/adapter.rb
-${GEM_LIBDIR}/lib/mocha/integration/test_unit/gem_version_200.rb
-${GEM_LIBDIR}/lib/mocha/integration/test_unit/gem_version_201_to_202.rb
-${GEM_LIBDIR}/lib/mocha/integration/test_unit/gem_version_203_to_220.rb
-${GEM_LIBDIR}/lib/mocha/integration/test_unit/gem_version_230_to_250.rb
-${GEM_LIBDIR}/lib/mocha/integration/test_unit/nothing.rb
-${GEM_LIBDIR}/lib/mocha/integration/test_unit/ruby_version_186_and_above.rb
 ${GEM_LIBDIR}/lib/mocha/invocation.rb
 ${GEM_LIBDIR}/lib/mocha/is_a.rb
 ${GEM_LIBDIR}/lib/mocha/logger.rb
@@ -95,6 +77,7 @@ ${GEM_LIBDIR}/lib/mocha/parameter_matchers/is_a.rb
 ${GEM_LIBDIR}/lib/mocha/parameter_matchers/kind_of.rb
 ${GEM_LIBDIR}/lib/mocha/parameter_matchers/not.rb
 ${GEM_LIBDIR}/lib/mocha/parameter_matchers/optionally.rb
+${GEM_LIBDIR}/lib/mocha/parameter_matchers/positional_or_keyword_hash.rb
 ${GEM_LIBDIR}/lib/mocha/parameter_matchers/regexp_matches.rb
 ${GEM_LIBDIR}/lib/mocha/parameter_matchers/responds_with.rb
 ${GEM_LIBDIR}/lib/mocha/parameter_matchers/yaml_equivalent.rb
@@ -104,7 +87,6 @@ ${GEM_LIBDIR}/lib/mocha/receivers.rb
 ${GEM_LIBDIR}/lib/mocha/return_values.rb
 ${GEM_LIBDIR}/lib/mocha/ruby_version.rb
 ${GEM_LIBDIR}/lib/mocha/sequence.rb
-${GEM_LIBDIR}/lib/mocha/setup.rb
 ${GEM_LIBDIR}/lib/mocha/single_return_value.rb
 ${GEM_LIBDIR}/lib/mocha/state_machine.rb
 ${GEM_LIBDIR}/lib/mocha/stubbed_method.rb
