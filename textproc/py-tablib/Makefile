@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2022/01/04 20:55:07 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2022/11/29 10:51:45 adam Exp $
 
-DISTNAME=	tablib-2.0.0
+DISTNAME=	tablib-3.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tablib/}
 
@@ -11,22 +10,25 @@ HOMEPAGE=	https://tablib.readthedocs.io/
 COMMENT=	Format agnostic tabular data library (XLS, JSON, YAML, CSV)
 LICENSE=	mit
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+# all without pandas
+DEPENDS+=	${PYPKGPREFIX}-markuppy-[0-9]*:../../textproc/py-markuppy
 DEPENDS+=	${PYPKGPREFIX}-odfpy-[0-9]*:../../textproc/py-odfpy
 DEPENDS+=	${PYPKGPREFIX}-openpyxl>=2.6.0:../../textproc/py-openpyxl
 DEPENDS+=	${PYPKGPREFIX}-tabulate-[0-9]*:../../textproc/py-tabulate
 DEPENDS+=	${PYPKGPREFIX}-xlrd-[0-9]*:../../textproc/py-xlrd
 DEPENDS+=	${PYPKGPREFIX}-xlwt-[0-9]*:../../textproc/py-xlwt
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
-#TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-pandas-[0-9]*:../../math/py-pandas
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-# requires py-markuppy
-#do-test:
-#	cd ${WRKSRC} && pytest-${PYVERSSUFFIX} tests/test_tablib.py
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
