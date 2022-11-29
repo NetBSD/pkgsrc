@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2022/11/26 19:53:38 adam Exp $
+# $NetBSD: Makefile,v 1.13 2022/11/29 22:09:15 wiz Exp $
 
 DISTNAME=	hy-0.25.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,6 +10,7 @@ HOMEPAGE=	https://docs.hylang.org/
 COMMENT=	Lisp and Python love each other
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-colorama-[0-9]*:../../comms/py-colorama
 DEPENDS+=	${PYPKGPREFIX}-funcparserlib>=1.0:../../devel/py-funcparserlib
 
