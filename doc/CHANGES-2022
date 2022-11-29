@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5779 2022/11/29 06:00:25 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5780 2022/11/29 07:44:57 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8741,3 +8741,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/py-dicttoxml to 1.7.11 [adam 2022-11-29]
 	Removed security/volatility successor security/volatility3 [adam 2022-11-29]
 	Added security/volatility3 version 2.0.1 [adam 2022-11-29]
+	Updated misc/wthrr to 0.6.0 [pin 2022-11-29]
