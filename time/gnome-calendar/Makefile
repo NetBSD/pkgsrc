@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2022/11/23 16:21:15 adam Exp $
+# $NetBSD: Makefile,v 1.17 2022/11/29 08:35:58 prlw1 Exp $
 
 DISTNAME=	gnome-calendar-40.0
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	time gnome
 EXTRACT_SUFX=	.tar.xz
 
@@ -21,7 +21,7 @@ PYTHON_FOR_BUILD_ONLY=	tool
 .include "../../devel/glib2/schemas.mk"
 .include "../../devel/libdazzle/buildlink3.mk"
 .include "../../devel/libgweather/buildlink3.mk"
-.include "../../devel/libhandy1/buildlink3.mk"
+.include "../../devel/libhandy/buildlink3.mk"
 .include "../../geography/geoclue/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mail/evolution-data-server/buildlink3.mk"
