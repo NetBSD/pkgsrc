@@ -1,88 +1,52 @@
-$NetBSD: patch-src_couch_rebar.config.script,v 1.2 2019/09/06 09:10:48 jperkin Exp $
+$NetBSD: patch-src_couch_rebar.config.script,v 1.3 2022/11/29 19:16:04 jperkin Exp $
 
 Set pkgsrc standard paths.
 Use pkg-config to set SpiderMonkey CFLAGS/LDFLAGS.
 
---- src/couch/rebar.config.script.orig	2019-03-05 22:42:20.000000000 +0000
+--- src/couch/rebar.config.script.orig	2022-04-06 03:31:40.000000000 +0000
 +++ src/couch/rebar.config.script
-@@ -78,23 +78,26 @@ MD5Config = case lists:keyfind(erlang_md
-         []
- end,
+@@ -112,6 +112,11 @@ ProperConfig = case code:lib_dir(proper)
+     _ -> [{d, 'WITH_PROPER'}]
+ end.
  
 +CFLAGS = [os:getenv("CFLAGS")],
 +LDFLAGS = [os:getenv("LDFLAGS")],
 +JSFLAGS = string:strip(os:cmd("pkg-config --cflags mozjs185"), right, $\n),
 +JSLIBS = string:strip(os:cmd("pkg-config --libs mozjs185"), right, $\n),
 +
- %% TODO support curl on Windows
- {JS_CFLAGS, JS_LDFLAGS} = case lists:keyfind(with_curl, 1, CouchConfig) of
-     {with_curl, true} ->
-         case os:type() of
-             {win32, _} ->
-                 {"/DHAVE_CURL /IC:\\relax\\curl\\include", "/LIBPATH:C:\\relax\\js-1.8.5\\js\\src /LIBPATH:C:\\Relax\\curl\\lib\\release-ssl mozjs185-1.0.lib libcurl_imp.lib"};
--            {unix, freebsd} ->
--                {"-DHAVE_CURL -I/usr/local/include", "-DHAVE_CURL -lmozjs185 -lcurl"};
-             _ ->
--                {"-DHAVE_CURL", "-DHAVE_CURL -lmozjs185 -lcurl"}
-+                {"$CFLAGS -DHAVE_CURL " ++ JSFLAGS, "$LDFLAGS -DHAVE_CURL -lcurl " ++ JSLIBS}
-         end;
-     _ ->
-         case os:type() of
-             {win32, _} ->
-                 {"", "/LIBPATH:C:\\relax\\js-1.8.5\\js\\src mozjs185-1.0.lib"};
-             _ ->
--                {"", "-lmozjs185"}
-+                {"$CFLAGS " ++ JSFLAGS, "$LDFLAGS " ++ JSLIBS}
-         end
- end,
+ {JS_CFLAGS, JS_LDFLAGS} = case os:type() of
+     {win32, _} when SMVsn == "1.8.5" ->
+         {
+@@ -120,8 +125,8 @@ end.
+         };
+     {unix, _} when SMVsn == "1.8.5" ->
+         {
+-            "-DXP_UNIX -I/usr/include/js -I/usr/local/include/js",
+-            "-L/usr/local/lib -lmozjs185 -lm"
++            "$CFLAGS -DXP_UNIX " ++ JSFLAGS,
++            "$LDFLAGS -lm " ++ JSLIBS
+         };
+     {win32, _} when SMVsn == "60" ->
+         {
+@@ -187,8 +192,8 @@ CouchJSEnv = case SMVsn of
+         ]
+ end.
  
-@@ -102,33 +105,38 @@ CouchJSSrc = ["priv/couch_js/*.c"],
- 
- IcuPath = "priv/couch_icu_driver.so",
- IcuSrc = ["priv/icu_driver/*.c"],
 -IcuEnv = [{"DRV_CFLAGS",  "$DRV_CFLAGS -DPIC -O2 -fno-common"},
--          {"DRV_LDFLAGS", "$DRV_LDFLAGS -lm -licuuc -licudata -licui18n -lpthread"}],
-+IcuEnv = [{"DRV_CFLAGS", "$CFLAGS $DRV_CFLAGS -DPIC -O2 -fno-common"},
-+          {"DRV_LDFLAGS", "$DRV_LDFLAGS $LDFLAGS -lm -licuuc -licudata -licui18n -lpthread"}],
- IcuDarwinEnv = [{"CFLAGS", "-DXP_UNIX -I/usr/local/opt/icu4c/include"},
-                 {"LDFLAGS", "-L/usr/local/opt/icu4c/lib"}],
+-          {"DRV_LDFLAGS", "$DRV_LDFLAGS -lm -licuuc -licudata -licui18n -lpthread"}].
++IcuEnv = [{"DRV_CFLAGS",  "$CFLAGS $DRV_CFLAGS -DPIC -O2 -fno-common"},
++          {"DRV_LDFLAGS", "$LDFLAGS $DRV_LDFLAGS -lm -licuuc -licudata -licui18n -lpthread"}].
+ IcuDarwinEnv = [{"CFLAGS", "-DXP_UNIX -I/usr/local/opt/icu4c/include -I/opt/homebrew/opt/icu4c/include"},
+                 {"LDFLAGS", "-L/usr/local/opt/icu4c/lib -L/opt/homebrew/opt/icu4c/lib"}].
  IcuBsdEnv = [{"CFLAGS", "-DXP_UNIX -I/usr/local/include"},
-              {"LDFLAGS", "-L/usr/local/lib"}],
- IcuWinEnv = [{"CFLAGS", "/DXP_WIN /IC:\\relax\\icu\\include"},
-              {"LDFLAGS", "/LIBPATH:C:\\relax\\icu\\lib64 icuin.lib icudt.lib icuuc.lib"}],
-+UnixEnv = [{"CFLAGS", " $CFLAGS -DXP_UNIX"},
-+             {"LDFLAGS", " $LDFLAGS -lm"}],
- 
- ComparePath = "priv/couch_ejson_compare.so",
- CompareSrc = ["priv/couch_ejson_compare/*.c"],
- 
- BaseSpecs = [
+@@ -203,9 +208,7 @@ BaseSpecs = [
          %% couchjs
--        {"darwin", CouchJSPath, CouchJSSrc, [{env, [{"CFLAGS", JS_CFLAGS ++ " -DXP_UNIX -I/usr/local/include/js"}, {"LDFLAGS", JS_LDFLAGS ++ " -L/usr/local/lib"}]}]},
--        {"linux",  CouchJSPath, CouchJSSrc, [{env, [{"CFLAGS", JS_CFLAGS ++ " -DXP_UNIX -I/usr/include/js"}, {"LDFLAGS", JS_LDFLAGS ++ " -lm"}]}]},
--        {"bsd",   CouchJSPath, CouchJSSrc, [{env, [{"CFLAGS", JS_CFLAGS ++ " -DXP_UNIX -I/usr/local/include/js"}, {"LDFLAGS", JS_LDFLAGS ++ " -L/usr/local/lib -lm"}]}]},
-+        {"darwin",  CouchJSPath, CouchJSSrc, [{env, [{"CFLAGS", JS_CFLAGS ++ " -DXP_UNIX"}, {"LDFLAGS", JS_LDFLAGS}]}]},
-+        {"linux",   CouchJSPath, CouchJSSrc, [{env, [{"CFLAGS", JS_CFLAGS ++ " -DXP_UNIX"}, {"LDFLAGS", JS_LDFLAGS ++ " -lm"}]}]},
-+        {"bsd",     CouchJSPath, CouchJSSrc, [{env, [{"CFLAGS", JS_CFLAGS ++ " -DXP_UNIX"}, {"LDFLAGS", JS_LDFLAGS ++ " -lm"}]}]},
-+        {"solaris", CouchJSPath, CouchJSSrc, [{env, [{"CFLAGS", JS_CFLAGS ++ " -DXP_UNIX"}, {"LDFLAGS", JS_LDFLAGS ++ " -lm"}]}]},
-         {"win32",  CouchJSPath, CouchJSSrc, [{env, [{"CFLAGS", JS_CFLAGS ++ " /DXP_WIN /IC:\\relax\\js-1.8.5\\js\\src"}, {"LDFLAGS", JS_LDFLAGS}]}]},
-         % ICU
--        {"darwin", IcuPath, IcuSrc, [{env, IcuEnv ++ IcuDarwinEnv}]},
--        {"linux",  IcuPath, IcuSrc, [{env, IcuEnv}]},
--        {"bsd",   IcuPath, IcuSrc, [{env, IcuEnv ++ IcuBsdEnv}]},
-+        {"darwin",  IcuPath, IcuSrc, [{env, IcuEnv ++ UnixEnv}]},
-+        {"linux",   IcuPath, IcuSrc, [{env, IcuEnv ++ UnixEnv}]},
-+        {"bsd",     IcuPath, IcuSrc, [{env, IcuEnv ++ UnixEnv}]},
-+        {"solaris", IcuPath, IcuSrc, [{env, IcuEnv ++ UnixEnv}]},
-         {"win32",  IcuPath, IcuSrc, [{env, IcuWinEnv}]},
+         {".*", CouchJSPath, CouchJSSrc, [{env, CouchJSEnv}]},
          % ejson_compare
 -        {"darwin", ComparePath, CompareSrc, [{env, IcuEnv ++ IcuDarwinEnv}]},
 -        {"linux",  ComparePath, CompareSrc, [{env, IcuEnv}]},
 -        {"bsd",   ComparePath, CompareSrc, [{env, IcuEnv ++ IcuBsdEnv}]},
-+        {"darwin",  ComparePath, CompareSrc, [{env, IcuEnv ++ UnixEnv}]},
-+        {"linux",   ComparePath, CompareSrc, [{env, IcuEnv ++ UnixEnv}]},
-+        {"bsd",     ComparePath, CompareSrc, [{env, IcuEnv ++ UnixEnv}]},
-+        {"solaris", ComparePath, CompareSrc, [{env, IcuEnv ++ UnixEnv}]},
++        {".*",  ComparePath, CompareSrc, [{env, IcuEnv}]},
          {"win32",  ComparePath, CompareSrc, [{env, IcuWinEnv}]}
- ],
+ ].
  
