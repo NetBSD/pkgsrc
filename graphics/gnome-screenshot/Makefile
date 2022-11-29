@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2022/08/11 05:08:41 gutteridge Exp $
+# $NetBSD: Makefile,v 1.6 2022/11/29 08:31:18 prlw1 Exp $
 
 DISTNAME=	gnome-screenshot-3.38.0
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics gnome
 EXTRACT_SUFX=	.tar.xz
 
@@ -19,7 +19,7 @@ PYTHON_FOR_BUILD_ONLY=	tool
 .include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../devel/glib2/schemas.mk"
 .include "../../audio/libcanberra/buildlink3.mk"
-.include "../../devel/libhandy1/buildlink3.mk"
+.include "../../devel/libhandy/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/python/tool.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"

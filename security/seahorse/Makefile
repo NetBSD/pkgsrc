@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.176 2022/11/23 16:21:02 adam Exp $
+# $NetBSD: Makefile,v 1.177 2022/11/29 08:33:12 prlw1 Exp $
 
 DISTNAME=	seahorse-3.38.0.1
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/3.38/}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	security gnome
 EXTRACT_SUFX=	.tar.xz
 
@@ -23,7 +23,7 @@ PYTHON_FOR_BUILD_ONLY=	tool
 .include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../devel/glib2/schemas.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
-.include "../../devel/libhandy1/buildlink3.mk"
+.include "../../devel/libhandy/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/python/tool.mk"
 .include "../../lang/vala/buildlink3.mk"
