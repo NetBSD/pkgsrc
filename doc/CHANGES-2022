@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5793 2022/11/29 20:45:21 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5794 2022/11/29 21:14:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8761,3 +8761,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/couchdb to 3.2.2 [jperkin 2022-11-29]
 	Updated graphics/py-seaborn to 0.12.1 [adam 2022-11-29]
 	Updated www/py-django-debug-toolbar to 3.7.0 [adam 2022-11-29]
+	Updated devel/py-codespell to 2.2.2 [adam 2022-11-29]
+	Updated devel/py-flexmock to 0.11.3 [adam 2022-11-29]
