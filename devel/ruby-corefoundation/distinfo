@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/11/29 12:42:00 taca Exp $
+
+BLAKE2s (corefoundation-0.3.13.gem) = 112009444f2b01e64da1adb308a82b31b8cf68d6e4048003acaeedfa0fc7ae2e
+SHA512 (corefoundation-0.3.13.gem) = 759d67ad0f0cef50afac2327940baaaea5904a70eff28ccd708a284fe8851829920d8af5240ad85d14bcc80122da879fadba191f868986155c4d2236e1c8c32f
+Size (corefoundation-0.3.13.gem) = 12800 bytes
