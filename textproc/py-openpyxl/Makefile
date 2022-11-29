@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2022/11/29 10:20:57 adam Exp $
+# $NetBSD: Makefile,v 1.29 2022/11/29 16:31:53 adam Exp $
 
 DISTNAME=	openpyxl-3.0.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,8 +10,7 @@ HOMEPAGE=	https://openpyxl.readthedocs.io/
 COMMENT=	Python library to read/write Excel xlsx/xlsm files
 LICENSE=	mit
 
-#DEPENDS+=	${PYPKGPREFIX}-jdcal-[0-9]*:../../time/py-jdcal
-DEPENDS+=	${PYPKGPREFIX}-et_xmlfile-[0-9]*:../../textproc/py-et_xmlfile
+DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 
 USE_LANGUAGES=	# none
 
