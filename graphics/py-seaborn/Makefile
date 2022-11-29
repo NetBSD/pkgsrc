@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2022/04/10 00:57:14 gutteridge Exp $
+# $NetBSD: Makefile,v 1.10 2022/11/29 20:36:28 adam Exp $
 
-DISTNAME=	seaborn-0.9.0
+DISTNAME=	seaborn-0.12.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/seaborn/}
 
@@ -11,14 +10,22 @@ HOMEPAGE=	https://seaborn.pydata.org/
 COMMENT=	Statistical data visualization
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-matplotlib>=1.4.3:../../graphics/py-matplotlib
-DEPENDS+=	${PYPKGPREFIX}-numpy>=1.9.3:../../math/py-numpy
-DEPENDS+=	${PYPKGPREFIX}-pandas>=0.15.2:../../math/py-pandas
-DEPENDS+=	${PYPKGPREFIX}-scipy>=0.14.0:../../math/py-scipy
+DEPENDS+=	${PYPKGPREFIX}-matplotlib>=3.6.2:../../graphics/py-matplotlib
+DEPENDS+=	${PYPKGPREFIX}-numpy>=1.17:../../math/py-numpy
+DEPENDS+=	${PYPKGPREFIX}-pandas>=0.25:../../math/py-pandas
+# stats
+DEPENDS+=	${PYPKGPREFIX}-scipy>=1.3:../../math/py-scipy
+DEPENDS+=	${PYPKGPREFIX}-statsmodels>=0.10:../../math/py-statsmodels
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 37 # py-matplotlib, py-scipy
 
-.include "../../lang/python/egg.mk"
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
+
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
