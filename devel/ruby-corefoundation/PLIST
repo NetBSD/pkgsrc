@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2022/11/29 12:42:00 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/lib/corefoundation.rb
+${GEM_LIBDIR}/lib/corefoundation/array.rb
+${GEM_LIBDIR}/lib/corefoundation/base.rb
+${GEM_LIBDIR}/lib/corefoundation/boolean.rb
+${GEM_LIBDIR}/lib/corefoundation/data.rb
+${GEM_LIBDIR}/lib/corefoundation/date.rb
+${GEM_LIBDIR}/lib/corefoundation/dictionary.rb
+${GEM_LIBDIR}/lib/corefoundation/exceptions.rb
+${GEM_LIBDIR}/lib/corefoundation/memory.rb
+${GEM_LIBDIR}/lib/corefoundation/null.rb
+${GEM_LIBDIR}/lib/corefoundation/number.rb
+${GEM_LIBDIR}/lib/corefoundation/preferences.rb
+${GEM_LIBDIR}/lib/corefoundation/range.rb
+${GEM_LIBDIR}/lib/corefoundation/refinements.rb
+${GEM_LIBDIR}/lib/corefoundation/register.rb
+${GEM_LIBDIR}/lib/corefoundation/string.rb
+${GEM_LIBDIR}/lib/corefoundation/version.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
