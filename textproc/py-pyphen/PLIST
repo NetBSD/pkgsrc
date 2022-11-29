@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2022/09/15 19:08:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2022/11/29 17:02:06 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/COPYING.GPL
 ${PYSITELIB}/${WHEEL_INFODIR}/COPYING.LGPL
 ${PYSITELIB}/${WHEEL_INFODIR}/COPYING.MPL
@@ -51,6 +51,7 @@ ${PYSITELIB}/pyphen/dictionaries/hyph_sr.dic
 ${PYSITELIB}/pyphen/dictionaries/hyph_sr_Latn.dic
 ${PYSITELIB}/pyphen/dictionaries/hyph_sv.dic
 ${PYSITELIB}/pyphen/dictionaries/hyph_te_IN.dic
+${PYSITELIB}/pyphen/dictionaries/hyph_th_TH.dic
 ${PYSITELIB}/pyphen/dictionaries/hyph_uk_UA.dic
 ${PYSITELIB}/pyphen/dictionaries/hyph_zu_ZA.dic
 ${PYSITELIB}/pyphen/dictionaries/update.sh
