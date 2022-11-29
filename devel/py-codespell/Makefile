@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2022/01/05 15:41:02 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2022/11/29 21:05:08 adam Exp $
 
-DISTNAME=	codespell-2.1.0
+DISTNAME=	codespell-2.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/codespell/}
 
@@ -11,18 +10,20 @@ HOMEPAGE=	https://github.com/codespell-project/codespell
 COMMENT=	Check code for common misspellings
 LICENSE=	gnu-gpl-v2
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=6.2:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+
 USE_LANGUAGES=	# none
+
+REPLACE_PYTHON=	bin/codespell
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-USE_PKG_RESOURCES=	yes
-
-PYTHON_VERSIONED_DEPENDENCIES+=	test:test
-
 post-install:
-	${MV} ${DESTDIR}${PREFIX}/bin/codespell \
-		${DESTDIR}${PREFIX}/bin/codespell-${PYVERSSUFFIX}
+	cd ${DESTDIR}${PREFIX}/bin && \
+	${MV} codespell codespell-${PYVERSSUFFIX} || ${TRUE}
 
-.include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
+.include "../../lang/python/application.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
