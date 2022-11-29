@@ -1,0 +1,16 @@
+CoreFoundation
+
+FFI based wrappers for a subset of core foundation: various bits of
+CFString, CFData, CFArray, CFDictionary are available.
+
+Although the CF collection classes can store arbitrary pointer sized values
+this wrapper only supports storing CFTypes.
+
+The CF namespace has the raw FFI generated method calls but it's usually
+easier to use the wrapper classes: CF::String, CF::Date, CF::Array,
+CF::Dictionary, CF::Boolean which try to present a rubyish view of the world
+(for example CF::Array implements Enumerable).
+
+These implement methods for creating new instances from ruby objects (eg
+CF::String.from_string("hello world")) but you can also pass build them from
+an FFI::Pointer).
