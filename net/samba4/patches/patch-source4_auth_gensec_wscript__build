@@ -1,0 +1,15 @@
+$NetBSD: patch-source4_auth_gensec_wscript__build,v 1.3 2022/11/29 13:20:23 jperkin Exp $
+
+Build krb5 module statically.  Avoids conflicts with native libkrb5.so.
+
+--- source4/auth/gensec/wscript_build.orig	2022-08-08 14:15:39.536193400 +0000
++++ source4/auth/gensec/wscript_build
+@@ -14,7 +14,7 @@ bld.SAMBA_MODULE('gensec_krb5',
+ 	subsystem='gensec',
+ 	init_function='gensec_krb5_init',
+ 	deps='samba-credentials authkrb5 com_err',
+-	internal_module=False,
++	internal_module=True,
+         enabled=bld.AD_DC_BUILD_IS_ENABLED()
+ 	)
+ 
