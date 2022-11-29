@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.73 2022/11/20 17:52:22 adam Exp $
+# $NetBSD: Makefile,v 1.74 2022/11/29 17:00:45 adam Exp $
 
-DISTNAME=	pylint-2.15.6
+DISTNAME=	pylint-2.15.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pylint/}
@@ -23,10 +23,10 @@ USE_LANGUAGES=	# none
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
-.if ${_PYTHON_VERSION} < 310
+.if ${_PYTHON_VERSION} == 39 || ${_PYTHON_VERSION} == 38
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.10.0:../../devel/py-typing-extensions
 .endif
-.if ${_PYTHON_VERSION} < 311
+.if ${_PYTHON_VERSION} == 310 || ${_PYTHON_VERSION} == 39 || ${_PYTHON_VERSION} == 38
 DEPENDS+=	${PYPKGPREFIX}-tomli>=1.1.0:../../textproc/py-tomli
 .endif
 
