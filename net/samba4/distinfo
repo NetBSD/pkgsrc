@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.86 2022/11/25 10:21:14 wiz Exp $
+$NetBSD: distinfo,v 1.87 2022/11/29 13:20:23 jperkin Exp $
 
 BLAKE2s (samba-4.17.3.tar.gz) = c85427eb0dbd444f3e6b7478f70b45d874ce7dcdf2fbbe216c74a2ce73cbdb46
 SHA512 (samba-4.17.3.tar.gz) = a5482bfe66f7f34fdf855e69b7b0fc2a4f9e756947357201651af70f3b10e236474c1b4ae4d9367b122e2d4565601659c373d3b17717a3c5c66aa9258eb58ff0
@@ -33,6 +33,7 @@ SHA1 (patch-source3_printing_samba-bgqd.c) = e9b83c35fbb24c702650d745b82fe6c9efb
 SHA1 (patch-source3_smbd_quotas.c) = 7f959964fac3ee435c57a115c8f5b6407e57b777
 SHA1 (patch-source3_smbd_smb1__process.c) = ff59b9b4f4bdfff2761613ff84fbd669899ea540
 SHA1 (patch-source3_utils_net__offlinejoin.c) = 773a4686d5e2a7eaebf9430529708e8318d45c77
+SHA1 (patch-source4_auth_gensec_wscript__build) = 01f3cdf787833e05f2e0b49ff0af7c8bbad2c161
 SHA1 (patch-source4_dsdb_samdb_ldb__modules_wscript__build__server) = 47f55ec16b667a0a4d38de5ac89a117f2ac8f898
 SHA1 (patch-source4_scripting_wscript__build) = 816d44f48b6cbc6d999995e00eaea1d2dc477159
 SHA1 (patch-third__party_heimdal__build_roken.h) = 59d5523676fe8c0315e969247f26b4ea2f900402
