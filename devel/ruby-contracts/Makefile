@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2021/05/04 08:19:51 taca Exp $
+# $NetBSD: Makefile,v 1.4 2022/11/29 12:39:05 taca Exp $
 
-DISTNAME=	contracts-0.16.1
+DISTNAME=	contracts-0.17
 CATEGORIES=	devel
 
 MAINTAINER=	minskim@NetBSD.org
@@ -9,6 +9,8 @@ COMMENT=	Contracts for Ruby
 LICENSE=	2-clause-bsd
 
 USE_LANGUAGES=	# none
+
+RUBY_VERSIONS_ACCEPTED=	30 31
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
