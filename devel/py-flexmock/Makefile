@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2022/01/04 20:53:05 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2022/11/29 21:14:10 adam Exp $
 
-DISTNAME=	flexmock-0.10.10
+DISTNAME=	flexmock-0.11.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/flexmock/}
 
@@ -13,8 +12,10 @@ LICENSE=	2-clause-bsd
 
 USE_LANGUAGES=	# none
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
 do-test:
-	cd ${WRKSRC}/tests && ${PYTHONBIN} -m unittest flexmock_test
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} -m unittest discover -v
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
