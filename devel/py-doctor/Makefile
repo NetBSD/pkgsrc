@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2022/09/12 06:54:04 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2022/11/29 17:13:22 adam Exp $
 
-DISTNAME=	pydoctor-22.7.0
+DISTNAME=	pydoctor-22.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pydoctor/}
@@ -12,8 +12,8 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-appdirs-[0-9]*:../../devel/py-appdirs
 DEPENDS+=	${PYPKGPREFIX}-astor>=0.8.1:../../devel/py-astor
-DEPENDS+=	${PYPKGPREFIX}-attrs>=0:../../devel/py-attrs
-DEPENDS+=	${PYPKGPREFIX}-configargparse>=0:../../devel/py-configargparse
+DEPENDS+=	${PYPKGPREFIX}-attrs-[0-9]*:../../devel/py-attrs
+DEPENDS+=	${PYPKGPREFIX}-configargparse-[0-9]*:../../devel/py-configargparse
 DEPENDS+=	${PYPKGPREFIX}-cachecontrol-[0-9]*:../../devel/py-cachecontrol
 DEPENDS+=	${PYPKGPREFIX}-lunr>=0.6.2:../../textproc/py-lunr
 DEPENDS+=	${PYPKGPREFIX}-docutils>=0.17:../../textproc/py-docutils
@@ -25,14 +25,10 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 TEST_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
-PYTHON_VERSIONS_INCOMPATIBLE+=	27 37
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37
 
 .include "../../lang/python/pyversion.mk"
-
-.if ${PYPKGPREFIX} == "py37"
-DEPENDS+=	${PYPKGPREFIX}-importlib-metadata-[0-9]*:../../devel/py-importlib-metadata
-.endif
-.if ${PYPKGPREFIX} == "py37" || ${PYPKGPREFIX} == "py38"
+.if ${_PYTHON_VERSION} == 38
 DEPENDS+=	${PYPKGPREFIX}-importlib-resources-[0-9]*:../../devel/py-importlib-resources
 .endif
 
