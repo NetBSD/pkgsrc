@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2022/11/28 14:14:07 nros Exp $
+# $NetBSD: Makefile.common,v 1.23 2022/11/29 23:19:50 nros Exp $
 # used by audio/qt6-qtspeech/Makefile
 # used by databases/qt6-odbc/Makefile
 # used by databases/qt6-psql/Makefile
@@ -28,7 +28,7 @@
 BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
 
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		gmake perl:build pkg-config
+USE_TOOLS+=		cmake gmake perl:build pkg-config
 
 # https://doc.qt.io/qt-6/supported-platforms.html
 GCC_REQD+=		9
