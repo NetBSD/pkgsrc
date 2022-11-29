@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2022/11/23 16:18:49 adam Exp $
+# $NetBSD: Makefile,v 1.76 2022/11/29 14:44:25 ryoon Exp $
 
 PKGREVISION= 1
 .include "Makefile.common"
@@ -18,4 +18,5 @@ PLIST_VARS+=	ARM
 PLIST.ARM=	yes
 .endif
 
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
