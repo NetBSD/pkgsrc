@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/11/29 05:46:35 adam Exp $
+
+BLAKE2s (python-snappy-0.6.1.tar.gz) = aaa817fe796eb49330f107958296bf36be807cd5ffe9f654306c2575d771c2ad
+SHA512 (python-snappy-0.6.1.tar.gz) = 43301f568633068bbdcb3dc318f37efcabbb5bd3f61a06b3a3a476006c3cbc1dfddea4ac2de0876bb127b354aa81ccc55dc44631dc8fba06036a0b6c7dfbdb9b
+Size (python-snappy-0.6.1.tar.gz) = 24110 bytes
