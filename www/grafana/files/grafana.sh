@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: grafana.sh,v 1.5 2022/05/21 07:41:46 triaxx Exp $
+# $NetBSD: grafana.sh,v 1.6 2022/11/29 22:06:47 wiz Exp $
 #
 # PROVIDE: grafana
 # REQUIRE: DAEMON
@@ -12,8 +12,8 @@
 #
 # grafana=YES
 
-if [ -f @SYSCONFBASE@/etc/rc.subr ]; then
-	$_rc_subr_loaded . @SYSCONFBASE@/etc/rc.subr
+if [ -f @SYSCONFBASE@/rc.subr ]; then
+	$_rc_subr_loaded . @SYSCONFBASE@/rc.subr
 fi
 
 name="grafana"
@@ -34,12 +34,12 @@ grafana_precmd() {
 	fi
 }
 
-if [ -f @SYSCONFBASE@/etc/rc.subr -a -d @SYSCONFBASE@/etc/rc.d -a -f @SYSCONFBASE@/etc/rc.d/DAEMON ]; then
+if [ -f @SYSCONFBASE@/rc.subr -a -d @SYSCONFBASE@/rc.d -a -f @SYSCONFBASE@/rc.d/DAEMON ]; then
 	load_rc_config $name
 	run_rc_command "$1"
 else
-	if [ -f @SYSCONFBASE@/etc/rc.conf ]; then
-		. @SYSCONFBASE@/etc/rc.conf
+	if [ -f @SYSCONFBASE@/rc.conf ]; then
+		. @SYSCONFBASE@/rc.conf
 	fi
 	case "$1" in
 	start)
