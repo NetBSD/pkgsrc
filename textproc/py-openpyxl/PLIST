@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2019/04/01 09:12:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2022/11/29 10:20:57 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -172,21 +172,18 @@ ${PYSITELIB}/openpyxl/compat/__init__.pyo
 ${PYSITELIB}/openpyxl/compat/abc.py
 ${PYSITELIB}/openpyxl/compat/abc.pyc
 ${PYSITELIB}/openpyxl/compat/abc.pyo
-${PYSITELIB}/openpyxl/compat/accumulate.py
-${PYSITELIB}/openpyxl/compat/accumulate.pyc
-${PYSITELIB}/openpyxl/compat/accumulate.pyo
 ${PYSITELIB}/openpyxl/compat/numbers.py
 ${PYSITELIB}/openpyxl/compat/numbers.pyc
 ${PYSITELIB}/openpyxl/compat/numbers.pyo
+${PYSITELIB}/openpyxl/compat/product.py
+${PYSITELIB}/openpyxl/compat/product.pyc
+${PYSITELIB}/openpyxl/compat/product.pyo
 ${PYSITELIB}/openpyxl/compat/singleton.py
 ${PYSITELIB}/openpyxl/compat/singleton.pyc
 ${PYSITELIB}/openpyxl/compat/singleton.pyo
 ${PYSITELIB}/openpyxl/compat/strings.py
 ${PYSITELIB}/openpyxl/compat/strings.pyc
 ${PYSITELIB}/openpyxl/compat/strings.pyo
-${PYSITELIB}/openpyxl/conftest.py
-${PYSITELIB}/openpyxl/conftest.pyc
-${PYSITELIB}/openpyxl/conftest.pyo
 ${PYSITELIB}/openpyxl/descriptors/__init__.py
 ${PYSITELIB}/openpyxl/descriptors/__init__.pyc
 ${PYSITELIB}/openpyxl/descriptors/__init__.pyo
