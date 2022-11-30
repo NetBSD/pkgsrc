@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5798 2022/11/30 09:30:51 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.5799 2022/11/30 10:30:48 nros Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8767,3 +8767,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/kjs to 5.98.0nb2 [wiz 2022-11-30]
 	Updated wm/evilwm to 1.4.2 [wiz 2022-11-30]
 	Updated emulators/mame to 0.250 [wiz 2022-11-30]
+	Added www/litehtml version 0.6 [nros 2022-11-30]
