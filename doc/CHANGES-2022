@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5800 2022/11/30 10:39:08 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5801 2022/11/30 10:44:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8770,3 +8770,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Added www/litehtml version 0.6 [nros 2022-11-30]
 	Updated devel/py-test-isort to 3.1.0 [adam 2022-11-30]
 	Updated mail/py-checkdmarc to 4.4.5 [adam 2022-11-30]
+	Removed devel/py-isort4 [adam 2022-11-30]
+	Removed devel/py-lama7 [adam 2022-11-30]
