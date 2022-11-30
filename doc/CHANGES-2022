@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5802 2022/11/30 13:34:21 sjmulder Exp $
+$NetBSD: CHANGES-2022,v 1.5803 2022/11/30 13:44:11 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8773,3 +8773,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed devel/py-isort4 [adam 2022-11-30]
 	Removed devel/py-lama7 [adam 2022-11-30]
 	Updated net/tut to 1.0.24 [sjmulder 2022-11-30]
+	Updated devel/ruby-rspec-support to 3.12.0 [taca 2022-11-30]
