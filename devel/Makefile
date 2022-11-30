@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3836 2022/11/30 10:43:00 adam Exp $
+# $NetBSD: Makefile,v 1.3837 2022/11/30 14:26:57 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -3247,6 +3247,7 @@ SUBDIR+=	ruby-tomlrb
 SUBDIR+=	ruby-tty-box
 SUBDIR+=	ruby-tty-color
 SUBDIR+=	ruby-tty-cursor
+SUBDIR+=	ruby-tty-logger
 SUBDIR+=	ruby-tty-prompt
 SUBDIR+=	ruby-tty-reader
 SUBDIR+=	ruby-tty-screen
