@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2022/11/30 14:26:19 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/CHANGELOG.md
+${GEM_LIBDIR}/LICENSE.txt
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/lib/tty-logger.rb
+${GEM_LIBDIR}/lib/tty/logger.rb
+${GEM_LIBDIR}/lib/tty/logger/config.rb
+${GEM_LIBDIR}/lib/tty/logger/data_filter.rb
+${GEM_LIBDIR}/lib/tty/logger/event.rb
+${GEM_LIBDIR}/lib/tty/logger/formatters/json.rb
+${GEM_LIBDIR}/lib/tty/logger/formatters/text.rb
+${GEM_LIBDIR}/lib/tty/logger/handlers/base.rb
+${GEM_LIBDIR}/lib/tty/logger/handlers/console.rb
+${GEM_LIBDIR}/lib/tty/logger/handlers/null.rb
+${GEM_LIBDIR}/lib/tty/logger/handlers/stream.rb
+${GEM_LIBDIR}/lib/tty/logger/levels.rb
+${GEM_LIBDIR}/lib/tty/logger/version.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
