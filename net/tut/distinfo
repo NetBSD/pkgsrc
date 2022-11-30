@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2022/11/28 15:31:13 sjmulder Exp $
+$NetBSD: distinfo,v 1.5 2022/11/30 13:34:02 sjmulder Exp $
 
 BLAKE2s (github.com__rasmus_lindroth_go-mastodon_@v_v0.0.14.mod) = 66bd90510b2d2cc1e122b1669f139374e4f9f3fe64aee2e66805e9d6536f08d5
 SHA512 (github.com__rasmus_lindroth_go-mastodon_@v_v0.0.14.mod) = c982f4f6a2d12eb952bf3b54ab0d9ea68cfaf6a0b1e173c7b1a7ff798924a8e022ff65f1ecd068dfcd16d51ecc1003775bba87981d845f2c445778d898d10262
@@ -114,12 +114,12 @@ Size (github.com_pelletier_go-toml_v2_@v_v2.0.6.zip) = 921034 bytes
 BLAKE2s (github.com_pmezard_go-difflib_@v_v1.0.0.mod) = 365dee34dcd09f0fbcccb2fff0be74a00fe71a80b9104b1ad3a3c199a48f5a28
 SHA512 (github.com_pmezard_go-difflib_@v_v1.0.0.mod) = c3d5c48cdb8ba6af7071a07cfede06e0ab67e3726d9de592a952fad40167dcbdd9621dc2c4df1bd3c28eb99d70b1b6d8d812441237c35bf492e5b7f07bd33902
 Size (github.com_pmezard_go-difflib_@v_v1.0.0.mod) = 37 bytes
-BLAKE2s (github.com_rivo_tview_@v_v0.0.0-20221117065207-09f052e6ca98.mod) = d34932329d32056a955184242bcd2cbf60e0fb76a20a6bd3c193b136c12ad74d
-SHA512 (github.com_rivo_tview_@v_v0.0.0-20221117065207-09f052e6ca98.mod) = b80f30c739c1367fb8fd6d00469ad6ecdc524198152602fd7fc09034ad6d35e0b9241661c0c682445274caf1ee470b60fe1b00a208e42e47aa9d27c5c4b24af9
-Size (github.com_rivo_tview_@v_v0.0.0-20221117065207-09f052e6ca98.mod) = 460 bytes
-BLAKE2s (github.com_rivo_tview_@v_v0.0.0-20221117065207-09f052e6ca98.zip) = 81416396df428878bcc1898801392439f6f18792917920ed20d7d6b6ba5d4f25
-SHA512 (github.com_rivo_tview_@v_v0.0.0-20221117065207-09f052e6ca98.zip) = 5f4aca55710743db08c1625dccea1602f3ae041a9dba2a19414987d97b303bbad31d68ff9e2c8ead923879eb74241d82c714a3346a3be77c86fc91f26cf03da8
-Size (github.com_rivo_tview_@v_v0.0.0-20221117065207-09f052e6ca98.zip) = 3148914 bytes
+BLAKE2s (github.com_rivo_tview_@v_v0.0.0-20221128165837-db36428c92d9.mod) = d34932329d32056a955184242bcd2cbf60e0fb76a20a6bd3c193b136c12ad74d
+SHA512 (github.com_rivo_tview_@v_v0.0.0-20221128165837-db36428c92d9.mod) = b80f30c739c1367fb8fd6d00469ad6ecdc524198152602fd7fc09034ad6d35e0b9241661c0c682445274caf1ee470b60fe1b00a208e42e47aa9d27c5c4b24af9
+Size (github.com_rivo_tview_@v_v0.0.0-20221128165837-db36428c92d9.mod) = 460 bytes
+BLAKE2s (github.com_rivo_tview_@v_v0.0.0-20221128165837-db36428c92d9.zip) = 8b9fa0495ab576ab22831dbf45953c03fcbcdc0427299cbe75e7411d0cabf866
+SHA512 (github.com_rivo_tview_@v_v0.0.0-20221128165837-db36428c92d9.zip) = 176a942c34d128fe483d43b75223c70da351b2cfd8b0677bcc1b22e1fa628f25213008077f02b2654559051b2fe14001ee804a4cc35d52de0ec4276028876b7c
+Size (github.com_rivo_tview_@v_v0.0.0-20221128165837-db36428c92d9.zip) = 1930389 bytes
 BLAKE2s (github.com_rivo_uniseg_@v_v0.2.0.mod) = 9cf2a838a41e79c2133f00b4192de1d8204ef6dc7be601908ad9b2fb0c84c8df
 SHA512 (github.com_rivo_uniseg_@v_v0.2.0.mod) = d6089badd618722b8d3584965f1a10290097f259024a444744f625fe5b439fef62c7e14f060fb8593197d003ecd6c29f0cb85700de0bdfbf2511ca66729db3bc
 Size (github.com_rivo_uniseg_@v_v0.2.0.mod) = 39 bytes
@@ -225,6 +225,6 @@ Size (gopkg.in_yaml.v3_@v_v3.0.0-20200313102051-9f266ea9e77c.mod) = 95 bytes
 BLAKE2s (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 17da54ba1894b4653d4c1ab1ae6e9fe03928a96c69cdc8db6b6ea9e34d673991
 SHA512 (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 307ca9123efc577ca04828996ee9d8edbb51794ccb4b8d9f169ba689e7276aa5f6ae106a04b22b7fab853ffacfebcbf74468b64eaefd57445864c1fbc77fad9d
 Size (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 95 bytes
-BLAKE2s (tut-1.0.23.tar.gz) = be2499414afc2d305a3aaed2c0e2cee7ec1b882d20623e72e1543060b3411cdd
-SHA512 (tut-1.0.23.tar.gz) = d6aa13e4de477a98e5bfa9eeb933179f5e45d1c0d6feb33deb7909983daf9b376c8f17c29ce2e0ffb3fd03c8ab1aa11d3bfaaf879beada08faba1378c1b1d891
-Size (tut-1.0.23.tar.gz) = 201810 bytes
+BLAKE2s (tut-1.0.24.tar.gz) = 15e87bac2bc10f040d3762009d809f250a45cd0ed0840b9090c3e972ae8de732
+SHA512 (tut-1.0.24.tar.gz) = 26d58161179689dbc665098b7d23b9faf4a0b9aafcc0ab77ae59a3df86083632a35027bf4d65f270229357dd7dd024010388338d28c2db660c8027486236d186
+Size (tut-1.0.24.tar.gz) = 202006 bytes

@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.3 2022/11/28 15:31:13 sjmulder Exp $
+# $NetBSD: go-modules.mk,v 1.4 2022/11/30 13:34:02 sjmulder Exp $
 
 GO_MODULE_FILES+=	github.com/atotto/clipboard/@v/v0.1.4.mod
 GO_MODULE_FILES+=	github.com/atotto/clipboard/@v/v0.1.4.zip
@@ -38,8 +38,8 @@ GO_MODULE_FILES+=	github.com/pelletier/go-toml/v2/@v/v2.0.6.zip
 GO_MODULE_FILES+=	github.com/pmezard/go-difflib/@v/v1.0.0.mod
 GO_MODULE_FILES+=	github.com/!rasmus!lindroth/go-mastodon/@v/v0.0.14.mod
 GO_MODULE_FILES+=	github.com/!rasmus!lindroth/go-mastodon/@v/v0.0.14.zip
-GO_MODULE_FILES+=	github.com/rivo/tview/@v/v0.0.0-20221117065207-09f052e6ca98.mod
-GO_MODULE_FILES+=	github.com/rivo/tview/@v/v0.0.0-20221117065207-09f052e6ca98.zip
+GO_MODULE_FILES+=	github.com/rivo/tview/@v/v0.0.0-20221128165837-db36428c92d9.mod
+GO_MODULE_FILES+=	github.com/rivo/tview/@v/v0.0.0-20221128165837-db36428c92d9.zip
 GO_MODULE_FILES+=	github.com/rivo/uniseg/@v/v0.2.0.mod
 GO_MODULE_FILES+=	github.com/rivo/uniseg/@v/v0.4.3.mod
 GO_MODULE_FILES+=	github.com/rivo/uniseg/@v/v0.4.3.zip
