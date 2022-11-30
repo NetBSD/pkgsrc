@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2022/09/18 12:28:23 taca Exp $
+$NetBSD: distinfo,v 1.9 2022/11/30 14:35:20 taca Exp $
 
-BLAKE2s (image_size-3.1.0.gem) = ae632bf44aefe99fb8492a40064eeba7ab5b900bb8514f092a9ff89811a066d2
-SHA512 (image_size-3.1.0.gem) = 49794ed752fde598ebf2da11cc7dfb06de2aee8dce6c1db5115a9d5085eaf32ceb023cbfa1ef9299daadd6c0c6ddc5042d4ea6cd249ea8f7f929016f3a36ee36
-Size (image_size-3.1.0.gem) = 138752 bytes
+BLAKE2s (image_size-3.2.0.gem) = 7c2452f732a63a4900d8e48ef49287d852bbdfd24055c39fc5ce0bb01891d527
+SHA512 (image_size-3.2.0.gem) = 82452fae74a0c2ee1a3820b029b344710d0da523d75965f3c749eb8b05471f2eb5e810bdffb2705cdd3154ad71cdea585b3901ac45e11fdceaaadb531805418c
+Size (image_size-3.2.0.gem) = 139776 bytes
