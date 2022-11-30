@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5801 2022/11/30 10:44:33 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5802 2022/11/30 13:34:21 sjmulder Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8772,3 +8772,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated mail/py-checkdmarc to 4.4.5 [adam 2022-11-30]
 	Removed devel/py-isort4 [adam 2022-11-30]
 	Removed devel/py-lama7 [adam 2022-11-30]
+	Updated net/tut to 1.0.24 [sjmulder 2022-11-30]
