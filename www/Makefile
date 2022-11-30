@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1650 2022/11/28 14:14:06 nros Exp $
+# $NetBSD: Makefile,v 1.1651 2022/11/30 10:24:35 nros Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -211,6 +211,7 @@ SUBDIR+=	liferea
 SUBDIR+=	lighttpd
 SUBDIR+=	links
 SUBDIR+=	links-gui
+SUBDIR+=	litehtml
 SUBDIR+=	litmus
 SUBDIR+=	llgal
 SUBDIR+=	loggerhead
