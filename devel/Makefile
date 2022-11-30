@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3835 2022/11/29 12:42:52 taca Exp $
+# $NetBSD: Makefile,v 1.3836 2022/11/30 10:43:00 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2543,7 +2543,6 @@ SUBDIR+=	py-ipython_genutils
 SUBDIR+=	py-iso-639
 SUBDIR+=	py-iso3166
 SUBDIR+=	py-isort
-SUBDIR+=	py-isort4
 SUBDIR+=	py-itanium_demangler
 SUBDIR+=	py-jaraco.classes
 SUBDIR+=	py-jaraco.collections
@@ -2565,7 +2564,6 @@ SUBDIR+=	py-kivy-garden
 SUBDIR+=	py-kjbuckets
 SUBDIR+=	py-lama
 SUBDIR+=	py-lama-quotes
-SUBDIR+=	py-lama7
 SUBDIR+=	py-lazr.config
 SUBDIR+=	py-lazr.delegates
 SUBDIR+=	py-lazy-object-proxy
