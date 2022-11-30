@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.2 2021/04/11 12:32:03 taca Exp $
+$NetBSD: patch-configure,v 1.2.12.1 2022/11/30 17:37:36 bsiegert Exp $
 
 * Adding Interix support.
 * Ignore doxygen.
@@ -6,26 +6,26 @@ $NetBSD: patch-configure,v 1.2 2021/04/11 12:32:03 taca Exp $
 * Handle SSP in pkgsrc.
 * Put -std= in CFLAGS not CPPFLAGS.
 
---- configure.orig	2021-04-05 12:39:40.000000000 +0000
+--- configure.orig	2022-11-24 12:42:10.000000000 +0000
 +++ configure
-@@ -6469,7 +6469,7 @@ else
-     if test x"$target_alias" = x; then :
+@@ -7709,7 +7709,7 @@ else $as_nop
+ then :
  
  	case "$target_os" in #(
 -  darwin*) :
 +  nodarwin*) :
  
- 	    { $as_echo "$as_me:${as_lineno-$LINENO}: checking for real target cpu" >&5
- $as_echo_n "checking for real target cpu... " >&6; }
-@@ -8839,6 +8839,7 @@ fi
+ 	    { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for real target cpu" >&5
+ printf %s "checking for real target cpu... " >&6; }
+@@ -10064,6 +10064,7 @@ fi
  	stack_protector=no
       ;; #(
    *) :
 +	stack_protector=no
       ;;
  esac
-     if test -z "${stack_protector+set}"; then :
-@@ -10703,6 +10704,10 @@ esac
+     if test -z "${stack_protector+set}"
+@@ -12017,6 +12018,10 @@ esac
  
  			ac_cv_func___builtin_setjmp=no
  		 ;; #(
@@ -36,16 +36,18 @@ $NetBSD: patch-configure,v 1.2 2021/04/11 12:32:03 taca Exp $
    *) :
       ;;
  esac
-@@ -22277,6 +22282,8 @@ else
- # ifdef _MSC_VER
- #  include <malloc.h>
- #  define alloca _alloca
-+# elif defined(__NetBSD__) || defined(__FreeBSD__) || defined(__DragonFly__) || defined(__OpenBSD__)
+@@ -23748,7 +23753,9 @@ else
+ #include <stdlib.h>
+ #include <stddef.h>
+ #ifndef alloca
+-# ifdef __GNUC__
++# if defined(__NetBSD__) || defined(__FreeBSD__) || defined(__DragonFly__) || defined(__OpenBSD__)
 +#   include <stdlib.h>
- # else
- #  ifdef HAVE_ALLOCA_H
- #   include <alloca.h>
-@@ -27482,7 +27489,9 @@ fi
++# elif defined __GNUC__
+ #  define alloca __builtin_alloca
+ # elif defined _MSC_VER
+ #  include <malloc.h>
+@@ -28604,7 +28611,9 @@ fi
    interix*) :
      	: ${LDSHARED='$(CC) -shared'}
  			XLDFLAGS="$XLDFLAGS -Wl,-E"
@@ -55,16 +57,25 @@ $NetBSD: patch-configure,v 1.2 2021/04/11 12:32:03 taca Exp $
  			rb_cv_dlopen=yes ;; #(
    freebsd*|dragonfly*) :
  
-@@ -28743,7 +28752,7 @@ fi
+@@ -28775,7 +28784,7 @@ fi
+       { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking whether $flag is accepted for bundle" >&5
+ printf %s "checking whether $flag is accepted for bundle... " >&6; }
+       : > conftest.c
+-      if ${LDSHARED/'$(CC)'/$CC} -o conftest.bundle $flag conftest.c >/dev/null 2>conftest.err &&
++      if $(echo ${LDSHARED} | sed -e "s/'$(CC)'/$CC/g") -o conftest.bundle $flag conftest.c >/dev/null 2>conftest.err &&
+           test ! -s conftest.err
+ then :
+ 
+@@ -29929,7 +29938,7 @@ fi
  	 ;; #(
    freebsd*|dragonfly*) :
  
 -	LIBRUBY_SO='lib$(RUBY_SO_NAME).$(SOEXT).$(MAJOR)$(MINOR)'
 +	LIBRUBY_SO='lib$(RUBY_SO_NAME).$(SOEXT).$(MAJOR)$(MINOR)$(TEENY)'
  	LIBRUBY_SONAME='$(LIBRUBY_SO)'
- 	if test "$rb_cv_binary_elf" != "yes" ; then :
- 
-@@ -28822,9 +28831,10 @@ esac
+ 	if test "$rb_cv_binary_elf" != "yes"
+ then :
+@@ -30010,9 +30019,10 @@ esac
  	 ;; #(
    darwin*) :
  
@@ -74,10 +85,10 @@ $NetBSD: patch-configure,v 1.2 2021/04/11 12:32:03 taca Exp $
 -	LIBRUBY_ALIASES='lib$(RUBY_INSTALL_NAME).$(SOEXT)'
 +	LIBRUBY_SONAME='lib$(RUBY_BASE_NAME).$(RUBY_API_VERSION).$(SOEXT)'
 +	LIBRUBY_ALIASES='$(LIBRUBY_SONAME) lib$(RUBY_INSTALL_NAME).$(SOEXT)'
- 	if test "$load_relative" = yes; then :
+ 	if test "$load_relative" = yes
+ then :
  
- 	    libprefix="@executable_path/../${libdir_basename}"
-@@ -28845,7 +28855,12 @@ fi
+@@ -30035,7 +30045,12 @@ fi
  	 ;; #(
    interix*) :
  
@@ -91,7 +102,7 @@ $NetBSD: patch-configure,v 1.2 2021/04/11 12:32:03 taca Exp $
  	 ;; #(
    mingw*|cygwin*|mswin*) :
  
-@@ -29027,7 +29042,7 @@ if test "$enable_rpath" = yes; then :
+@@ -30228,7 +30243,7 @@ then :
  esac
      rpathflag=`IFS="$PATH_SEPARATOR"
          echo x "$rpathflag" |
@@ -100,19 +111,21 @@ $NetBSD: patch-configure,v 1.2 2021/04/11 12:32:03 taca Exp $
      `
      LIBRUBY_RPATHFLAGS="$LIBRUBY_RPATHFLAGS${rpathflag}"
      LIBRUBYARG_SHARED="$LIBRUBY_RPATHFLAGS $LIBRUBYARG_SHARED"
-@@ -31751,19 +31766,7 @@ which seems to be undefined.  Please mak
+@@ -33031,21 +33046,7 @@ which seems to be undefined.  Please mak
      "Makefile":F)
      tmpmk=confmk$$.tmp
      {
--	if test ${VCS+set}; then :
+-	if test ${VCS+set}
+-then :
 -
 -	    :
 -
--elif git_dir=`$GIT --work-tree="$srcdir" --git-dir="$srcdir/.git" rev-parse --git-dir 2>/dev/null`; then :
+-elif git_dir=`$GIT --work-tree="$srcdir" --git-dir="$srcdir/.git" rev-parse --git-dir 2>/dev/null`
+-then :
 -
 -	    VCS='$(GIT)'
 -
--else
+-else $as_nop
 -
  	    VCS='echo cannot'
 -
