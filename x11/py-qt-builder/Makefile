@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2022/11/30 09:31:49 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/11/30 09:34:36 wiz Exp $
 
 DISTNAME=	PyQt-builder-${PKGVERSION_NOREV}
-PKGNAME=	${PYPKGPREFIX}-qt-builder-1.14.0
+PKGNAME=	${PYPKGPREFIX}-qt-builder-1.12.2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyQt-builder/}
 
@@ -10,7 +10,7 @@ HOMEPAGE=	https://www.riverbankcomputing.com/software/pyqt-builder/
 COMMENT=	Tool to create Python bindings for C++ libraries using Qt
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
-DEPENDS+=	${PYPKGPREFIX}-sip6>=6.7:../../wip/py-sip6
+DEPENDS+=	${PYPKGPREFIX}-sip5>=5<7:../../x11/py-sip5
 
 DEPENDS+=	${PYPKGPREFIX}-packaging>=0:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
