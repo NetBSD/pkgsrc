@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5806 2022/11/30 13:48:28 taca Exp $
+$NetBSD: CHANGES-2022,v 1.5807 2022/11/30 13:51:16 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8777,3 +8777,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/ruby-rspec-core to 3.12.0 [taca 2022-11-30]
 	Updated devel/ruby-rspec-expectations to 3.12.0 [taca 2022-11-30]
 	Updated devel/ruby-rspec-mocks to 3.12.0 [taca 2022-11-30]
+	Updated devel/ruby-rspec to 3.12.0 [taca 2022-11-30]
