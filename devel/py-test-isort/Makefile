@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2022/01/04 20:53:41 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/11/30 10:31:07 adam Exp $
 
-DISTNAME=	pytest-isort-0.1.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-PKGREVISION=	1
+DISTNAME=	pytest_isort-3.1.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-isort/}
 
@@ -11,12 +10,12 @@ HOMEPAGE=	https://github.com/moccu/pytest-isort
 COMMENT=	Pytest plugin to perform isort checks (import ordering)
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-test-cache>=1.0:../../devel/py-test-cache
-
-PYTHON_VERSIONED_DEPENDENCIES=	isort test
+DEPENDS+=	${PYPKGPREFIX}-isort>=4.0:../../devel/py-isort
+DEPENDS+=	${PYPKGPREFIX}-test>=5.0:../../devel/py-test
 
 USE_LANGUAGES=		# none
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
