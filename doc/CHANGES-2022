@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5818 2022/11/30 17:04:21 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5819 2022/11/30 19:57:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8792,3 +8792,15 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/py-pip-audit to 2.4.7 [adam 2022-11-30]
 	Updated www/py-soupsieve to 2.3.2.1 [adam 2022-11-30]
 	Updated www/py-beautifulsoup4 to 4.11.1 [adam 2022-11-30]
+	Updated lang/llvm to 15.0.6 [adam 2022-11-30]
+	Updated devel/lld to 15.0.6 [adam 2022-11-30]
+	Updated devel/lldb to 15.0.6 [adam 2022-11-30]
+	Updated devel/polly to 15.0.6 [adam 2022-11-30]
+	Updated lang/clang-tools-extra to 15.0.6 [adam 2022-11-30]
+	Updated lang/compiler-rt to 15.0.6 [adam 2022-11-30]
+	Updated lang/libcxx to 15.0.6 [adam 2022-11-30]
+	Updated lang/libcxxabi to 15.0.6 [adam 2022-11-30]
+	Updated lang/libunwind to 15.0.6 [adam 2022-11-30]
+	Updated lang/wasi-compiler-rt to 15.0.6 [adam 2022-11-30]
+	Updated lang/wasi-libcxx to 15.0.6 [adam 2022-11-30]
+	Updated parallel/openmp to 15.0.6 [adam 2022-11-30]
