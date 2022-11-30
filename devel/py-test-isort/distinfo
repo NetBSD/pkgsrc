@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:19:08 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/11/30 10:31:07 adam Exp $
 
-BLAKE2s (pytest-isort-0.1.0.tar.gz) = 83939dd6c92193ae46d72ca04d857c3e770c62be875df548c033a25c8e337c71
-SHA512 (pytest-isort-0.1.0.tar.gz) = 86c964b6a998a32c9c474dde0a9400c45da8b26f3e8dd6f4092baa4bf1978a7f67a384bd910ec824f85a8ab49b4ea30967e1e7f908a31619ee88391d3505440b
-Size (pytest-isort-0.1.0.tar.gz) = 5502 bytes
+BLAKE2s (pytest_isort-3.1.0.tar.gz) = 9e8bc18d564e1d8a344f982411c83a7a1aa7f30f75cce71a0a5970e1da736f32
+SHA512 (pytest_isort-3.1.0.tar.gz) = 274f4bdf29edda8131e5473f3a51a152613fa262745523b7dd07de3ff2d6cad967381d8fd76214591eb4d73a69aee26a596b1c6009bdf85b10cdf27d375ad340
+Size (pytest_isort-3.1.0.tar.gz) = 6287 bytes
