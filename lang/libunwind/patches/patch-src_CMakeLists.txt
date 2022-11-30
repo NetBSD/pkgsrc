@@ -1,4 +1,4 @@
-$NetBSD: patch-src_CMakeLists.txt,v 1.1 2022/11/14 18:45:20 adam Exp $
+$NetBSD: patch-src_CMakeLists.txt,v 1.2 2022/11/30 19:55:00 adam Exp $
 
 Fix build on Darwin.
 
@@ -9,7 +9,7 @@ Fix build on Darwin.
  # CMake doesn't work correctly with assembly on AIX. Workaround by compiling
  # as C files as well.
 -if((APPLE AND CMAKE_VERSION VERSION_LESS 3.19) OR
-+if((APPLE AND CMAKE_VERSION VERSION_LESS 3.25) OR
++if((APPLE AND CMAKE_VERSION VERSION_LESS 3.26) OR
     (MINGW AND CMAKE_VERSION VERSION_LESS 3.17) OR
     (${CMAKE_SYSTEM_NAME} MATCHES "AIX"))
    set_source_files_properties(${LIBUNWIND_ASM_SOURCES} PROPERTIES LANGUAGE C)
