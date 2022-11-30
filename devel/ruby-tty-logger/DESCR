@@ -1,0 +1,17 @@
+TTY::Logger
+
+> A readable, structured and beautiful logging for the terminal
+
+TTY::Logger provides independent logging component for TTY toolkit.
+
+## Features
+
+* Intuitive console output for an increased readability
+* Ability to stream data to any IO object
+* Supports structured data logging
+* Filters sensitive data
+* Allows to define custom log types
+* Formats and truncates messages to avoid clogging logging output
+* Customizable styling of labels and symbols for console output
+* Includes metadata information: time, location, scope
+* Handles multiple logging outputs
