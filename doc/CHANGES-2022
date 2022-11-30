@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5813 2022/11/30 14:35:42 taca Exp $
+$NetBSD: CHANGES-2022,v 1.5814 2022/11/30 14:43:19 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8784,3 +8784,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/ruby-zeitwerk to 2.6.6 [taca 2022-11-30]
 	Updated graphics/ruby-RMagick to 5.1.0 [taca 2022-11-30]
 	Updated graphics/ruby-image_size to 3.2.0 [taca 2022-11-30]
+	Updated net/ruby-recog to 3.0.3 [taca 2022-11-30]
