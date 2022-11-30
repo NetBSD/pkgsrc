@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5814 2022/11/30 14:43:19 taca Exp $
+$NetBSD: CHANGES-2022,v 1.5815 2022/11/30 15:13:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8785,3 +8785,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/ruby-RMagick to 5.1.0 [taca 2022-11-30]
 	Updated graphics/ruby-image_size to 3.2.0 [taca 2022-11-30]
 	Updated net/ruby-recog to 3.0.3 [taca 2022-11-30]
+	Updated devel/py-test-env to 0.8.1 [adam 2022-11-30]
+	Updated devel/py-test-xprocess to 0.21.0 [adam 2022-11-30]
