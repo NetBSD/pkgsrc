@@ -1,7 +1,0 @@
-$NetBSD: patch-src_core_CMakeLists.txt,v 1.5 2022/11/28 14:25:31 gdt Exp $
-
-Use Q_WS_MAC to conditionalize frameworks
-This sort-of matches Q_OS_MACX conditionals in main.cpp and qgisapp.cpp
-but more importantly avoids using APPLE which we overwrite in the
-pkgsrc Makefile to disable the MAC application bundle
-
