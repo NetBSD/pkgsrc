@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2020/04/27 06:58:35 taca Exp $
+@comment $NetBSD: PLIST,v 1.22 2022/11/30 13:55:10 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.yardopts
@@ -24,7 +24,6 @@ ${GEM_LIBDIR}/lib/generators/rspec/helper/templates/helper_spec.rb
 ${GEM_LIBDIR}/lib/generators/rspec/install/install_generator.rb
 ${GEM_LIBDIR}/lib/generators/rspec/install/templates/spec/rails_helper.rb
 ${GEM_LIBDIR}/lib/generators/rspec/integration/integration_generator.rb
-${GEM_LIBDIR}/lib/generators/rspec/integration/templates/request_spec.rb
 ${GEM_LIBDIR}/lib/generators/rspec/job/job_generator.rb
 ${GEM_LIBDIR}/lib/generators/rspec/job/templates/job_spec.rb.erb
 ${GEM_LIBDIR}/lib/generators/rspec/mailbox/mailbox_generator.rb
@@ -37,6 +36,7 @@ ${GEM_LIBDIR}/lib/generators/rspec/model/model_generator.rb
 ${GEM_LIBDIR}/lib/generators/rspec/model/templates/fixtures.yml
 ${GEM_LIBDIR}/lib/generators/rspec/model/templates/model_spec.rb
 ${GEM_LIBDIR}/lib/generators/rspec/request/request_generator.rb
+${GEM_LIBDIR}/lib/generators/rspec/request/templates/request_spec.rb
 ${GEM_LIBDIR}/lib/generators/rspec/scaffold/scaffold_generator.rb
 ${GEM_LIBDIR}/lib/generators/rspec/scaffold/templates/api_controller_spec.rb
 ${GEM_LIBDIR}/lib/generators/rspec/scaffold/templates/api_request_spec.rb
