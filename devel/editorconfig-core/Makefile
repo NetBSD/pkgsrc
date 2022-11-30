@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2021/03/20 18:52:45 adam Exp $
+# $NetBSD: Makefile,v 1.5 2022/11/30 23:20:25 nros Exp $
 
 DISTNAME=	editorconfig-core-c-0.12.4
 PKGNAME=	${DISTNAME:S/c-//}
@@ -13,6 +13,8 @@ COMMENT=	Editorconfig C library
 LICENSE=	2-clause-bsd
 
 USE_CMAKE=	yes
+
+PKGCONFIG_OVERRIDE=	src/lib/editorconfig.pc.in
 
 .include "options.mk"
 
