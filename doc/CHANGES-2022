@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5820 2022/11/30 20:04:29 pin Exp $
+$NetBSD: CHANGES-2022,v 1.5821 2022/11/30 21:00:19 nros Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8805,3 +8805,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/wasi-libcxx to 15.0.6 [adam 2022-11-30]
 	Updated parallel/openmp to 15.0.6 [adam 2022-11-30]
 	Added devel/diffsitter version 0.7.2 [pin 2022-11-30]
+	Added devel/qt6-qttools version 6.4.1 [nros 2022-11-30]
