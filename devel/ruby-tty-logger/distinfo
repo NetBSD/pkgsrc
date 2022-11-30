@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/11/30 14:26:19 taca Exp $
+
+BLAKE2s (tty-logger-0.6.0.gem) = ab66bfea4e8779521200d258aa26f1815f97a9148560403996c79b66e6827bbd
+SHA512 (tty-logger-0.6.0.gem) = 83727cff71b83f13b5ee484fbcd70ffa3eefdc130c7e052888ced423eed31c89d9335c30b37be46d2390b52d018b74ca1848347625ac4e025fd7781bea0211c2
+Size (tty-logger-0.6.0.gem) = 20992 bytes
