@@ -1,26 +1,14 @@
-$NetBSD: patch-CMakeLists.txt,v 1.2 2022/10/10 12:47:51 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.3 2022/11/30 21:28:36 adam Exp $
 
-Fix build on systems that have const in second argument to iconv.
 Darwin does not require libuuid.
 
---- CMakeLists.txt.orig	2022-05-03 17:39:25.000000000 +0000
+--- CMakeLists.txt.orig	2022-11-04 11:22:55.000000000 +0000
 +++ CMakeLists.txt
-@@ -326,9 +326,20 @@ target_link_libraries(libgerbera PUBLIC 
- 
- find_package(Iconv REQUIRED)
- target_link_libraries(libgerbera PUBLIC Iconv::Iconv)
-+include(CheckPrototypeDefinition)
-+set(CMAKE_REQUIRED_LIBRARIES Iconv::Iconv)
-+check_prototype_definition(iconv
-+  "size_t iconv(iconv_t cd, const char ** src, size_t * srcl, char ** dst, size_t * dstl)"
-+  0 "iconv.h" ICONV_CONST)
-+if(ICONV_CONST)
-+    target_compile_definitions(libgerbera PRIVATE ICONV_CONST)
-+endif()
-+unset(CMAKE_REQUIRED_LIBRARIES)
+@@ -337,7 +337,9 @@ endif()
+ unset(CMAKE_REQUIRED_LIBRARIES)
  
  find_package(UUID REQUIRED)
-+if (NOT APPLE)
++if(NOT APPLE)
  target_link_libraries(libgerbera PUBLIC UUID::UUID)
 +endif()
  

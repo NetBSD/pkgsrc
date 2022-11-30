@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2022/11/23 16:20:43 adam Exp $
+# $NetBSD: Makefile,v 1.10 2022/11/30 21:28:36 adam Exp $
 
-DISTNAME=	gerbera-1.11.0
-PKGREVISION=	5
+DISTNAME=	gerbera-1.12.0
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gerbera/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -82,11 +81,10 @@ post-install:
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../net/libupnp/buildlink3.mk"
 .include "../../sysutils/file/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../textproc/fmtlib/buildlink3.mk"
 .include "../../textproc/pugixml/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
-
-.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
