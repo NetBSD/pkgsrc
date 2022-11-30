@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2020/01/08 21:08:26 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2022/11/30 17:00:38 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -31,18 +31,27 @@ ${PYSITELIB}/bs4/element.pyo
 ${PYSITELIB}/bs4/formatter.py
 ${PYSITELIB}/bs4/formatter.pyc
 ${PYSITELIB}/bs4/formatter.pyo
-${PYSITELIB}/bs4/testing.py
-${PYSITELIB}/bs4/testing.pyc
-${PYSITELIB}/bs4/testing.pyo
 ${PYSITELIB}/bs4/tests/__init__.py
 ${PYSITELIB}/bs4/tests/__init__.pyc
 ${PYSITELIB}/bs4/tests/__init__.pyo
+${PYSITELIB}/bs4/tests/test_builder.py
+${PYSITELIB}/bs4/tests/test_builder.pyc
+${PYSITELIB}/bs4/tests/test_builder.pyo
 ${PYSITELIB}/bs4/tests/test_builder_registry.py
 ${PYSITELIB}/bs4/tests/test_builder_registry.pyc
 ${PYSITELIB}/bs4/tests/test_builder_registry.pyo
+${PYSITELIB}/bs4/tests/test_dammit.py
+${PYSITELIB}/bs4/tests/test_dammit.pyc
+${PYSITELIB}/bs4/tests/test_dammit.pyo
 ${PYSITELIB}/bs4/tests/test_docs.py
 ${PYSITELIB}/bs4/tests/test_docs.pyc
 ${PYSITELIB}/bs4/tests/test_docs.pyo
+${PYSITELIB}/bs4/tests/test_element.py
+${PYSITELIB}/bs4/tests/test_element.pyc
+${PYSITELIB}/bs4/tests/test_element.pyo
+${PYSITELIB}/bs4/tests/test_formatter.py
+${PYSITELIB}/bs4/tests/test_formatter.pyc
+${PYSITELIB}/bs4/tests/test_formatter.pyo
 ${PYSITELIB}/bs4/tests/test_html5lib.py
 ${PYSITELIB}/bs4/tests/test_html5lib.pyc
 ${PYSITELIB}/bs4/tests/test_html5lib.pyo
@@ -52,9 +61,18 @@ ${PYSITELIB}/bs4/tests/test_htmlparser.pyo
 ${PYSITELIB}/bs4/tests/test_lxml.py
 ${PYSITELIB}/bs4/tests/test_lxml.pyc
 ${PYSITELIB}/bs4/tests/test_lxml.pyo
+${PYSITELIB}/bs4/tests/test_navigablestring.py
+${PYSITELIB}/bs4/tests/test_navigablestring.pyc
+${PYSITELIB}/bs4/tests/test_navigablestring.pyo
+${PYSITELIB}/bs4/tests/test_pageelement.py
+${PYSITELIB}/bs4/tests/test_pageelement.pyc
+${PYSITELIB}/bs4/tests/test_pageelement.pyo
 ${PYSITELIB}/bs4/tests/test_soup.py
 ${PYSITELIB}/bs4/tests/test_soup.pyc
 ${PYSITELIB}/bs4/tests/test_soup.pyo
+${PYSITELIB}/bs4/tests/test_tag.py
+${PYSITELIB}/bs4/tests/test_tag.pyc
+${PYSITELIB}/bs4/tests/test_tag.pyo
 ${PYSITELIB}/bs4/tests/test_tree.py
 ${PYSITELIB}/bs4/tests/test_tree.pyc
 ${PYSITELIB}/bs4/tests/test_tree.pyo
