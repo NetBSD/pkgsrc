@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5810 2022/11/30 14:27:13 taca Exp $
+$NetBSD: CHANGES-2022,v 1.5811 2022/11/30 14:32:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8781,3 +8781,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/ruby-rspec-rails to 6.0.1 [taca 2022-11-30]
 	Updated devel/ruby-tins to 1.32.1 [taca 2022-11-30]
 	Added devel/ruby-tty-logger version 0.6.0 [taca 2022-11-30]
+	Updated devel/ruby-zeitwerk to 2.6.6 [taca 2022-11-30]
