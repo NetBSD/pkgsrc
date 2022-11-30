@@ -1,0 +1,19 @@
+# $NetBSD: Makefile,v 1.1 2022/11/30 20:57:35 nros Exp $
+
+DISTNAME=	qttools-everywhere-src-${QTVERSION}
+PKGNAME=	qt6-qttools-${QTVERSION}
+COMMENT=	Qt6 development tools
+CATEGORIES=	devel
+LICENSE=	gnu-lgpl-v3 OR gnu-gpl-v2 OR gnu-gpl-v3
+
+.include "../../x11/qt6-qtbase/Makefile.common"
+
+PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6Designer.pc
+PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6Help.pc
+PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6UiTools.pc
+
+.include "../../lang/clang/buildlink3.mk"
+.include "../../lang/qt6-qtdeclarative/buildlink3.mk"
+.include "../../www/litehtml/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
