@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2022/11/24 11:11:38 nros Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2022/11/30 20:57:36 nros Exp $
 
 BUILDLINK_TREE+=	qt6-qtbase
 
@@ -24,11 +24,12 @@ PTHREAD_OPTS+=	require
 pkgbase := qt6-qtbase
 .include "../../mk/pkg-build-options.mk"
 
+# Some Qt6 packages install extra files
+# if the dbus option is enabled in qtbase.
+PLIST_VARS+=	qt6dbus
 .if ${PKG_BUILD_OPTIONS.qt6-qtbase:Mdbus}
 .include "../../sysutils/dbus/buildlink3.mk"
-.  if !empty(PLIST_VARS:Mdbus)
-PLIST.dbus=	yes
-.  endif
+PLIST.qt6dbus=	yes
 .endif
 
 .include "../../converters/libiconv/buildlink3.mk"
