@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2022/09/13 14:02:48 taca Exp $
+# $NetBSD: Makefile,v 1.33 2022/11/30 13:46:35 taca Exp $
 
-DISTNAME=	rspec-expectations-3.11.1
+DISTNAME=	rspec-expectations-3.12.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -8,7 +8,7 @@ HOMEPAGE=	https://relishapp.com/rspec
 COMMENT=	Behaviour Driven Development framework for Ruby, expectations
 LICENSE=	mit
 
-DEPENDS+=	${RUBY_PKGPREFIX}-rspec-support>=3.11.0<3.12:../../devel/ruby-rspec-support
+DEPENDS+=	${RUBY_PKGPREFIX}-rspec-support>=3.12.0<3.13:../../devel/ruby-rspec-support
 DEPENDS+=	${RUBY_PKGPREFIX}-diff-lcs<2:../../textproc/ruby-diff-lcs
 
 .include "../../lang/ruby/gem.mk"
