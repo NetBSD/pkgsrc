@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2022/11/23 16:19:05 adam Exp $
+# $NetBSD: Makefile,v 1.41 2022/11/30 07:52:13 wiz Exp $
 
 DISTNAME=	kjs-${KF5VER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 
 HOMEPAGE=	https://community.kde.org/Frameworks
@@ -15,5 +15,6 @@ BUILD_DEPENDS+=	kdoctools>=${KF5VER}:../../devel/kdoctools
 
 USE_TOOLS+=	perl pkg-config
 
+.include "../../devel/pcre/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
