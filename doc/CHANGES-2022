@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5795 2022/11/29 22:06:56 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.5796 2022/11/30 07:52:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8764,3 +8764,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-codespell to 2.2.2 [adam 2022-11-29]
 	Updated devel/py-flexmock to 0.11.3 [adam 2022-11-29]
 	Updated www/grafana to 9.2.5nb1 [wiz 2022-11-29]
+	Updated www/kjs to 5.98.0nb2 [wiz 2022-11-30]
