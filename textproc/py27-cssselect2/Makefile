@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/08/24 08:41:09 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2022/11/30 10:19:25 adam Exp $
 
 DISTNAME=	cssselect2-0.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,15 +11,13 @@ HOMEPAGE=	https://github.com/Kozea/cssselect2
 COMMENT=	CSS selectors for Python ElementTree
 LICENSE=	modified-bsd
 
-PYTHON_VERSIONS_ACCEPTED=	27
-
 DEPENDS+=	${PYPKGPREFIX}-tinycss2-[0-9]*:../../textproc/py27-tinycss2
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py27-test-cov
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-flake8-[0-9]*:../../devel/py-test-flake8
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-isort-[0-9]*:../../devel/py-test-isort
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_ACCEPTED=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
