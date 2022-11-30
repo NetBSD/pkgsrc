@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2022/10/09 07:59:16 taca Exp $
+@comment $NetBSD: PLIST,v 1.36 2022/11/30 14:33:33 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/RMagick2.${RUBY_DLEXT}
 ${GEM_EXTSDIR}/gem.build_complete
@@ -28,6 +28,7 @@ ${GEM_LIBDIR}/before_install_osx.sh
 ${GEM_LIBDIR}/ext/RMagick/extconf.rb
 ${GEM_LIBDIR}/ext/RMagick/rmagick.c
 ${GEM_LIBDIR}/ext/RMagick/rmagick.h
+${GEM_LIBDIR}/ext/RMagick/rmagick_gvl.h
 ${GEM_LIBDIR}/ext/RMagick/rmdraw.c
 ${GEM_LIBDIR}/ext/RMagick/rmenum.c
 ${GEM_LIBDIR}/ext/RMagick/rmfill.c
