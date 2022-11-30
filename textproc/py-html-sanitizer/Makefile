@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2022/11/09 13:14:17 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2022/11/30 16:43:32 adam Exp $
 
-DISTNAME=	html-sanitizer-1.6.4
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+DISTNAME=	html_sanitizer-1.9.3
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	textproc converters python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/html-sanitizer/}
 
@@ -12,9 +11,11 @@ COMMENT=	White-list based HTML sanitizer
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4-[0-9]*:../../www/py-beautifulsoup4
-DEPENDS+=	${PYPKGPREFIX}-lxml>=3.6.1:../../textproc/py-lxml
+DEPENDS+=	${PYPKGPREFIX}-lxml>=4.6.5:../../textproc/py-lxml
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
