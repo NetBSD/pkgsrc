@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.2 2022/05/04 15:49:51 jperkin Exp $
+$NetBSD: patch-configure,v 1.2.4.1 2022/11/30 17:19:03 bsiegert Exp $
 
 * Avoid bash specific variable substitution.
 * Adding Interix support.
@@ -9,9 +9,9 @@ $NetBSD: patch-configure,v 1.2 2022/05/04 15:49:51 jperkin Exp $
 * Fix argument for pthread_self() on NetBSD.
 * Explictly stop display with color.
 
---- configure.orig	2022-04-12 11:11:17.000000000 +0000
+--- configure.orig	2022-11-24 10:20:33.000000000 +0000
 +++ configure
-@@ -3316,12 +3316,12 @@ case "$target_cpu-$target_os" in #(
+@@ -3942,12 +3942,12 @@ case "$target_cpu-$target_os" in #(
          target_cpu=arm64
          case "$target_vendor" in #(
    unknown) :
@@ -27,24 +27,24 @@ $NetBSD: patch-configure,v 1.2 2022/05/04 15:49:51 jperkin Exp $
       ;; #(
    *) :
       ;;
-@@ -8441,7 +8441,7 @@ else
-     if test x"$target_alias" = x; then :
+@@ -9361,7 +9361,7 @@ else $as_nop
+ then :
  
  	case "$target_os" in #(
 -  darwin*) :
 +  nodarwin*) :
  
- 	    { $as_echo "$as_me:${as_lineno-$LINENO}: checking for real target cpu" >&5
- $as_echo_n "checking for real target cpu... " >&6; }
-@@ -10262,6 +10262,7 @@ fi
+ 	    { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for real target cpu" >&5
+ printf %s "checking for real target cpu... " >&6; }
+@@ -11355,6 +11355,7 @@ fi
  	stack_protector=no
       ;; #(
    *) :
 +	stack_protector=no
       ;;
  esac
-     if test -z "${stack_protector+set}"; then :
-@@ -11981,18 +11982,6 @@ fi
+     if test -z "${stack_protector+set}"
+@@ -13198,18 +13199,6 @@ then :
       CPPFLAGS="$CPPFLAGS ${rb_opt}" ;;
  esac
  	done
@@ -63,7 +63,7 @@ $NetBSD: patch-configure,v 1.2 2022/05/04 15:49:51 jperkin Exp $
  
  fi
  
-@@ -12226,6 +12215,10 @@ esac
+@@ -13437,6 +13426,10 @@ esac
  
  			ac_cv_func___builtin_setjmp=no
  		 ;; #(
@@ -74,48 +74,48 @@ $NetBSD: patch-configure,v 1.2 2022/05/04 15:49:51 jperkin Exp $
    *) :
       ;;
  esac
-@@ -24059,6 +24052,8 @@ else
- # ifdef _MSC_VER
- #  include <malloc.h>
- #  define alloca _alloca
-+# elif defined(__NetBSD__) || defined(__FreeBSD__) || defined(__DragonFly__) || defined(__OpenBSD__)
+@@ -25518,7 +25511,9 @@ else
+ #include <stdlib.h>
+ #include <stddef.h>
+ #ifndef alloca
+-# ifdef __GNUC__
++# if defined(__NetBSD__) || defined(__FreeBSD__) || defined(__DragonFly__) || defined(__OpenBSD__)
 +#   include <stdlib.h>
- # else
- #  ifdef HAVE_ALLOCA_H
- #   include <alloca.h>
-@@ -29499,7 +29494,9 @@ fi
++# elif defined __GNUC__
+ #  define alloca __builtin_alloca
+ # elif defined _MSC_VER
+ #  include <malloc.h>
+@@ -30542,6 +30537,8 @@ fi
    interix*) :
      	: ${LDSHARED='$(CC) -shared'}
  			XLDFLAGS="$XLDFLAGS -Wl,-E"
 +			DLDFLAGS="$DLDFLAGS "'-Wl,-h,$(.TARGET) -Wl,--image-base,$$(($$RANDOM %4096/2*262144+1342177280))'
- 			LIBPATHFLAG=" -L%1\$-s"
 +			RPATHFLAG=' -Wl,-R%1$-s'
  			rb_cv_dlopen=yes ;; #(
    freebsd*|dragonfly*) :
  
-@@ -30700,7 +30697,7 @@ fi
+@@ -30713,7 +30710,7 @@ fi
+             { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking whether $flag is accepted for bundle" >&5
+ printf %s "checking whether $flag is accepted for bundle... " >&6; }
+             : > conftest.c
+-            if ${LDSHARED/'$(CC)'/$CC} -o conftest.bundle $flag conftest.c >/dev/null 2>conftest.err &&
++            if $(echo ${LDSHARED} | sed -e "s/'$(CC)'/$CC/g") -o conftest.bundle $flag conftest.c >/dev/null 2>conftest.err &&
+                 test ! -s conftest.err
+ then :
+ 
+@@ -31748,8 +31745,10 @@ fi
  	 ;; #(
    freebsd*|dragonfly*) :
  
--	LIBRUBY_SO='lib$(RUBY_SO_NAME).$(SOEXT).$(MAJOR)$(MINOR)'
-+	LIBRUBY_SO='lib$(RUBY_SO_NAME).$(SOEXT).$(MAJOR)$(MINOR)$(TEENY)'
- 	LIBRUBY_SONAME='$(LIBRUBY_SO)'
- 	if test "$rb_cv_binary_elf" != "yes" ; then :
- 
-@@ -30795,9 +30792,10 @@ esac
- 	 ;; #(
-   darwin*) :
- 
 +	RUBY_SO_NAME="${RUBY_SO_NAME}"'.$(RUBY_PROGRAM_VERSION)'
- 	LIBRUBY_SO='lib$(RUBY_SO_NAME).$(SOEXT)'
+ 	LIBRUBY_SO='lib$(RUBY_SO_NAME).$(SOEXT).$(MAJOR)$(MINOR)'
 -	LIBRUBY_SONAME='$(LIBRUBY_SO)'
--	LIBRUBY_ALIASES='lib$(RUBY_INSTALL_NAME).$(SOEXT)'
 +	LIBRUBY_SONAME='lib$(RUBY_BASE_NAME).$(RUBY_API_VERSION).$(SOEXT)'
 +	LIBRUBY_ALIASES='$(LIBRUBY_SONAME) lib$(RUBY_INSTALL_NAME).$(SOEXT)'
- 	if test "$load_relative" = yes; then :
+ 	if test "$rb_cv_binary_elf" != "yes"
+ then :
  
- 	    libprefix="@executable_path/../${libdir_basename}"
-@@ -30818,7 +30816,12 @@ fi
+@@ -31872,7 +31871,12 @@ fi
  	 ;; #(
    interix*) :
  
@@ -129,7 +129,7 @@ $NetBSD: patch-configure,v 1.2 2022/05/04 15:49:51 jperkin Exp $
  	 ;; #(
    cygwin*|msys*|mingw*|mswin*) :
  
-@@ -31000,7 +31003,7 @@ if test "$enable_rpath" = yes; then :
+@@ -32065,7 +32069,7 @@ then :
  esac
      rpathflag=`IFS="$PATH_SEPARATOR"
          echo x "$rpathflag" |
@@ -138,28 +138,30 @@ $NetBSD: patch-configure,v 1.2 2022/05/04 15:49:51 jperkin Exp $
      `
      LIBRUBY_RPATHFLAGS="$LIBRUBY_RPATHFLAGS${rpathflag}"
      LIBRUBYARG_SHARED="$LIBRUBY_RPATHFLAGS $LIBRUBYARG_SHARED"
-@@ -32550,7 +32553,7 @@ guard=INCLUDE_RUBY_CONFIG_H
-   if test "x$CONFIGURE_TTY" = xyes; then :
-   color=--color
- else
--  color=
+@@ -33706,7 +33710,7 @@ guard=INCLUDE_RUBY_CONFIG_H
+ (
+   if test "x$CONFIGURE_TTY" = xyes
+ then :
+-  color=--color
 +  color=--color=never
+ else $as_nop
+   color=
  fi
-   exec ${SHELL} ${tooldir}/ifchange $color "${config_h}" -
- ) >&6 || as_fn_error $? "failed to create ${config_h}" "$LINENO" 5
-@@ -33773,19 +33776,7 @@ which seems to be undefined.  Please mak
+@@ -34930,21 +34934,7 @@ which seems to be undefined.  Please mak
      "Makefile":F)
      tmpmk=confmk$$.tmp
      {
--	if test ${VCS+set}; then :
+-	if test ${VCS+set}
+-then :
 -
 -	    :
 -
--elif git_dir=`$GIT --work-tree="$srcdir" --git-dir="$srcdir/.git" rev-parse --git-dir 2>/dev/null`; then :
+-elif git_dir=`$GIT --work-tree="$srcdir" --git-dir="$srcdir/.git" rev-parse --git-dir 2>/dev/null`
+-then :
 -
 -	    VCS='$(GIT)'
 -
--else
+-else $as_nop
 -
  	    VCS='echo cannot'
 -
