@@ -1,0 +1,30 @@
+# $NetBSD: Makefile.common,v 1.1 2022/12/01 12:47:23 jperkin Exp $
+#
+# used by security/qca2-qt5-gnupg/Makefile
+# used by security/qca2-qt5-ossl/Makefile
+
+DISTNAME=	qca-2.3.5
+CATEGORIES=	security
+MASTER_SITES=	${MASTER_SITE_KDE:=qca/${PKGVERSION_NOREV}/}
+EXTRACT_SUFX=	.tar.xz
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://userbase.kde.org/QCA
+LICENSE=	gnu-lgpl-v2.1
+
+PATCHDIR=	${.CURDIR}/../../security/qca2-qt5/patches
+DISTINFO_FILE=	${.CURDIR}/../../security/qca2-qt5/distinfo
+
+USE_TOOLS+=	gmake
+USE_CMAKE=	yes
+USE_LANGUAGES=	c c++
+
+# install under qt5 prefix to not clash with qca 1.x
+CMAKE_ARGS+=	-DQCA_INSTALL_IN_QT_PREFIX=ON
+CMAKE_ARGS+=	-DOSX_FRAMEWORK=OFF
+CMAKE_ARGS+=	-DBUILD_TESTS=OFF
+
+SUBST_CLASSES+=		certs
+SUBST_STAGE.certs=	pre-configure
+SUBST_FILES.certs=	CMakeLists.txt
+SUBST_VARS.certs=	PREFIX

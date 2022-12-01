@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.20 2022/11/23 16:21:02 adam Exp $
+# $NetBSD: Makefile,v 1.21 2022/12/01 12:47:23 jperkin Exp $
 
 PKGNAME=	qca2-qt5-gnupg-${DISTNAME:C/.*-//}
-PKGREVISION=	11
 
 COMMENT=	Cross-platform crypto API for QT5 - GnuPG plugin
 
-.include "../../security/qca2/Makefile.common"
+.include "../../security/qca2-qt5/Makefile.common"
 
 DEPENDS+=	gnupg2-[0-9]*:../../security/gnupg2
 
