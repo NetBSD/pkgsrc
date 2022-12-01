@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5832 2022/12/01 21:26:51 nros Exp $
+$NetBSD: CHANGES-2022,v 1.5833 2022/12/01 22:14:46 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8821,3 +8821,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/mozilla-rootcerts-openssl to 2.9 [wiz 2022-12-01]
 	Updated misc/wthrr to 0.6.1 [pin 2022-12-01]
 	Added devel/qt6-qt5compat version 6.4.1 [nros 2022-12-01]
+	Updated net/dbip-asn-lite to 2022.12 [fcambus 2022-12-01]
