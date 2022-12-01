@@ -1,6 +1,6 @@
-$NetBSD: patch-ai,v 1.3 2012/04/12 14:01:17 hans Exp $
+$NetBSD: patch-ai,v 1.4 2022/12/01 21:14:09 jperkin Exp $
 
---- Imake.tmpl.orig	2009-10-16 21:45:42.000000000 +0000
+--- Imake.tmpl.orig	2021-08-02 01:00:38
 +++ Imake.tmpl
 @@ -898,24 +898,18 @@ TCLIBDIR = TclLibDir
  #ifndef ManPath
@@ -93,14 +93,14 @@ $NetBSD: patch-ai,v 1.3 2012/04/12 14:01:17 hans Exp $
  #ifndef ExpandManNames
  #if SystemV
  #define ExpandManNames NO
-@@ -2049,6 +2021,10 @@ MODLDCOMBINEFLAGS = ModuleLdCombineFlags
+@@ -2048,6 +2020,10 @@ MODLDCOMBINEFLAGS = ModuleLdCombineFlags
+      INSTMANFLAGS = InstManFlags	/* install flags for man pages */
       INSTDATFLAGS = InstDatFlags	/* install flags for data files */
      INSTKMEMFLAGS = InstKmemFlags	/* install flags for /dev/kmem progs */
- 
++
 +#ifdef RealProjectRoot
 +REALPROJECTROOT = RealProjectRoot
 +#endif
-+
+ 
  #ifdef ProjectRoot
        PROJECTROOT = ProjectRoot
- #endif
