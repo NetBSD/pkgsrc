@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3839 2022/11/30 20:57:35 nros Exp $
+# $NetBSD: Makefile,v 1.3840 2022/12/01 12:47:40 prlw1 Exp $
 #
 
 COMMENT=	Development utilities
@@ -877,7 +877,6 @@ SUBDIR+=	libgsf
 SUBDIR+=	libgtextutils
 SUBDIR+=	libgweather
 SUBDIR+=	libhandy
-SUBDIR+=	libhandy1
 SUBDIR+=	libhfs
 SUBDIR+=	libhid
 SUBDIR+=	libiberty
