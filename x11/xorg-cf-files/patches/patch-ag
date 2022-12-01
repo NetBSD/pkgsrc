@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.7 2017/01/06 21:12:39 tez Exp $
+$NetBSD: patch-ag,v 1.8 2022/12/01 21:14:09 jperkin Exp $
 
 Add __ppc64__ and __arm__
 Recognize __sun as well as sun
@@ -6,9 +6,9 @@ Add __ia64__
 Also recognize __sparc__ apparently now needed for gcc49 on solaris sparc
 to avoid -M /usr/lib/ld/map.noexdata which in does not work on SPARC
 
---- Imake.cf.orig	2015-12-22 01:28:02.000000000 +0000
+--- Imake.cf.orig	2021-08-02 01:00:38
 +++ Imake.cf
-@@ -25,9 +25,10 @@ XCOMM $XFree86: xc/config/cf/Imake.cf,v
+@@ -25,14 +25,19 @@ XCOMM $XFree86: xc/config/cf/Imake.cf,v 3.88 2003/12/1
  # define MacroIncludeFile <darwin.cf>
  # define MacroFile darwin.cf
  # define DarwinArchitecture
@@ -20,7 +20,16 @@ to avoid -M /usr/lib/ld/map.noexdata which in does not work on SPARC
  # endif
  # ifdef __i386__
  #  define i386DarwinArchitecture
-@@ -255,6 +256,10 @@ XCOMM $XFree86: xc/config/cf/Imake.cf,v
+ #  undef __i386__
+ # endif
++# ifdef __aarch64__
++#  define aarch64DarwinArchitecture
++#  undef __aarch64__
++# endif
+ # ifdef __x86_64__
+ #  define x86_64DarwinArchitecture
+ #  undef __x86_64__
+@@ -255,6 +260,10 @@ XCOMM $XFree86: xc/config/cf/Imake.cf,v 3.88 2003/12/1
  #  define AMD64Architecture
  #  undef __x86_64__
  # endif
@@ -31,7 +40,7 @@ to avoid -M /usr/lib/ld/map.noexdata which in does not work on SPARC
  #endif /* NetBSD */
  
  /* Systems based on kernel of NetBSD */
-@@ -352,7 +357,7 @@ XCOMM $XFree86: xc/config/cf/Imake.cf,v
+@@ -352,7 +361,7 @@ XCOMM $XFree86: xc/config/cf/Imake.cf,v 3.88 2003/12/1
  # endif
  #endif /* AMOEBA */
  
@@ -40,14 +49,14 @@ to avoid -M /usr/lib/ld/map.noexdata which in does not work on SPARC
  # define MacroIncludeFile <sun.cf>
  # define MacroFile sun.cf
  # ifdef SVR4
-@@ -363,6 +368,10 @@ XCOMM $XFree86: xc/config/cf/Imake.cf,v
- #  undef sparc
- #  define SparcArchitecture
+@@ -361,6 +370,10 @@ XCOMM $XFree86: xc/config/cf/Imake.cf,v 3.88 2003/12/1
  # endif
-+# ifdef __sparc__
-+#  undef __sparc__
+ # ifdef sparc
+ #  undef sparc
 +#  define SparcArchitecture
 +# endif
++# ifdef __sparc__
++#  undef __sparc__
+ #  define SparcArchitecture
+ # endif
  # ifdef __sparcv9
- #  undef __sparcv9
- #  define Sparc64Architecture
