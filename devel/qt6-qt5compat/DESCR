@@ -1,0 +1,2 @@
+Qt6 module that includes Qt5 core API:s that have been removed in Qt6,
+Qt5 applications can be ported to Qt6 more easily using this module.
