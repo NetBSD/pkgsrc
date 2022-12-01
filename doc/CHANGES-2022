@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5830 2022/12/01 13:28:04 prlw1 Exp $
+$NetBSD: CHANGES-2022,v 1.5831 2022/12/01 19:27:24 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8819,3 +8819,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/qca2-qt5-ossl to 2.3.5 [jperkin 2022-12-01]
 	Updated security/mozilla-rootcerts to 1.0.20220913 [wiz 2022-12-01]
 	Updated security/mozilla-rootcerts-openssl to 2.9 [wiz 2022-12-01]
+	Updated misc/wthrr to 0.6.1 [pin 2022-12-01]
