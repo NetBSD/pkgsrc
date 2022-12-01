@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5824 2022/12/01 10:09:35 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5825 2022/12/01 10:34:11 leot Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8810,3 +8810,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-traitlets to 5.6.0 [adam 2022-11-30]
 	Updated net/sniffnet to 1.0.1 [pin 2022-12-01]
 	Updated lang/clang to 15.0.6 [adam 2022-12-01]
+	Updated devel/conftest to 0.36.0 [leot 2022-12-01]
