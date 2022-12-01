@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2015/12/27 11:31:54 wiz Exp $
+$NetBSD: patch-aa,v 1.5 2022/12/01 21:14:09 jperkin Exp $
 
---- NetBSD.cf.orig	2009-10-16 21:45:42.000000000 +0000
+--- NetBSD.cf.orig	2021-08-02 01:00:38
 +++ NetBSD.cf
-@@ -126,7 +126,7 @@
+@@ -126,7 +126,7 @@ XCOMM operating system:  OSName (OSMajorVersion./**/OS
  # if ((OSMajorVersion == 2 && OSMinorVersion == 99 && OSTeenyVersion < 11) || \
        (OSMajorVersion == 2 && OSMinorVersion < 99) || \
        (OSMajorVersion < 2))
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.4 2015/12/27 11:31:54 wiz Exp $
  # endif
  # define SystemMTDefines	-D_REENTRANT
  # define MTSafeAPIDefines	-DXUSE_MTSAFE_API -DXNO_MTSAFE_PWDAPI
-@@ -150,7 +150,7 @@
+@@ -150,7 +150,7 @@ XCOMM operating system:  OSName (OSMajorVersion./**/OS
  #define MkdirHierCmd		mkdir -p
  
  #undef CcCmd
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.4 2015/12/27 11:31:54 wiz Exp $
  #ifndef DefaultCCOptions
  #if defined(UseInstalled)
  #define DefaultCCOptions 	/**/
-@@ -166,7 +166,7 @@
+@@ -166,7 +166,7 @@ XCOMM operating system:  OSName (OSMajorVersion./**/OS
  #endif
  #endif
  
@@ -29,7 +29,7 @@ $NetBSD: patch-aa,v 1.4 2015/12/27 11:31:54 wiz Exp $
  #define StandardCppOptions	-traditional
  #define StandardCppDefines	/**/
  #define PreProcessCmd   	CcCmd -E
-@@ -199,6 +199,8 @@
+@@ -199,6 +199,8 @@ XCOMM operating system:  OSName (OSMajorVersion./**/OS
  #  ifndef DoLoadableServer
  #  define DoLoadableServer	YES
  #  endif
@@ -38,14 +38,14 @@ $NetBSD: patch-aa,v 1.4 2015/12/27 11:31:54 wiz Exp $
  #else
  #  ifndef DoLoadableServer
  #  define DoLoadableServer	NO
-@@ -344,6 +346,10 @@
+@@ -342,6 +344,10 @@ XCOMM operating system:  OSName (OSMajorVersion./**/OS
+  */
+ #ifndef HasPerl
  #define HasPerl			NO
- #endif
- 
-+#if defined(AMD64Architecture)
-+# define HasMTRRBuiltin                YES
 +#endif
 +
++#if defined(AMD64Architecture)
++# define HasMTRRBuiltin                YES
+ #endif
+ 
  /*
-  * NetBSD doesn't have gperf in default system
-  * you may override this in host.def if you installed perl from the packages
