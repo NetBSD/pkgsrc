@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/10/09 15:32:55 taca Exp $
+# $NetBSD: Makefile,v 1.5 2022/12/01 12:19:09 jperkin Exp $
 
 DISTNAME=	redmine-${RM_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/redmine/redmine${RM_VER}/}
@@ -87,10 +87,10 @@ FILES_SUBST+=	WWWGRP=${APACHE_GROUP} WWWOWN=${APACHE_USER} \
 		RM_DIR=${RM_DIR}
 
 do-install:
-	cd ${WRKSRC} && ${FIND} . -type d -exec ${INSTALL_DATA_DIR} \
-		${DESTDIR}${PREFIX}/${RM_DIR}/{} \;
-	cd ${WRKSRC} && ${FIND} . -type f ! -name "*.orig" -exec \
-		${INSTALL_DATA} {} ${DESTDIR}${PREFIX}/${RM_DIR}/{} \;
+	cd ${WRKSRC} && ${FIND} . -type d | ${XARGS} -I {} ${INSTALL_DATA_DIR} \
+		${DESTDIR}${PREFIX}/${RM_DIR}/{}
+	cd ${WRKSRC} && ${FIND} . -type f ! -name "*.orig" | ${XARGS} -I {} \
+		${INSTALL_DATA} {} ${DESTDIR}${PREFIX}/${RM_DIR}/{}
 	${INSTALL_SCRIPT} ${FILESDIR}/redmine50_migrate_plugins.sh \
 		${DESTDIR}${PREFIX}/bin/redmine50_migrate_plugins${RUBY_SUFFIX}.sh
 	${INSTALL_SCRIPT} ${FILESDIR}/redmine50_generate_secret_token.sh \
@@ -101,7 +101,7 @@ do-install:
 		${DESTDIR}${PREFIX}/bin/redmine50_load_default_data${RUBY_SUFFIX}.sh
 
 post-install: unicorn-post-install
-	${FIND} ${DESTDIR}/ -name ".*" \( -type f -or -type d \) | xargs rm -rf
+	${FIND} ${DESTDIR}${PREFIX} -name '.*' -exec ${RM} -rf {} +
 	${MV} ${DESTDIR}${PREFIX}/${RM_DIR}/config/configuration.yml.example \
 		${DESTDIR}/${EGDIR}
 	${MV} ${DESTDIR}${PREFIX}/${RM_DIR}/config/database.yml.example \
