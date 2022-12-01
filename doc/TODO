@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22381 2022/12/01 12:48:23 jperkin Exp $
+$NetBSD: TODO,v 1.22382 2022/12/01 12:55:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -373,7 +373,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ImageMagick6-6.9.12.8
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
-	o MesaLib-22.2.4
+	o MesaLib-22.3.0
 	o OdfConverter-4.0
 	o PACK-0.0.4
 	o Pantomime-1.2.2
