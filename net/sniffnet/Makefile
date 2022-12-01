@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2022/11/27 16:14:24 pin Exp $
+# $NetBSD: Makefile,v 1.2 2022/12/01 08:00:00 pin Exp $
 
-DISTNAME=	sniffnet-1.0.0
+DISTNAME=	sniffnet-1.0.1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=GyulyVGC/}
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+#GITHUB_TAG=	v${PKGVERSION_NOREV}
+GITHUB_TAG=	69aefda2c57764e2b4077bf07e5fefdf6c5c71a7
 
 MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/GyulyVGC/sniffnet/
