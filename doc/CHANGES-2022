@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5828 2022/12/01 12:55:48 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.5829 2022/12/01 12:55:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8817,3 +8817,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/qca2-qt5-gnupg to 2.3.5 [jperkin 2022-12-01]
 	Updated security/qca2-qt5-ossl to 2.3.5 [jperkin 2022-12-01]
 	Updated security/mozilla-rootcerts to 1.0.20220913 [wiz 2022-12-01]
+	Updated security/mozilla-rootcerts-openssl to 2.9 [wiz 2022-12-01]
