@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.1 2022/11/27 16:14:24 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.2 2022/12/01 08:00:00 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	ab_glyph-0.2.18
 CARGO_CRATE_DEPENDS+=	ab_glyph_rasterizer-0.1.7
@@ -215,7 +215,7 @@ CARGO_CRATE_DEPENDS+=	scopeguard-1.1.0
 CARGO_CRATE_DEPENDS+=	scratch-1.0.2
 CARGO_CRATE_DEPENDS+=	semver-0.11.0
 CARGO_CRATE_DEPENDS+=	semver-parser-0.10.2
-CARGO_CRATE_DEPENDS+=	serde-1.0.147
+CARGO_CRATE_DEPENDS+=	serde-1.0.148
 CARGO_CRATE_DEPENDS+=	sid-0.6.1
 CARGO_CRATE_DEPENDS+=	slab-0.4.7
 CARGO_CRATE_DEPENDS+=	slotmap-1.0.6
@@ -228,7 +228,7 @@ CARGO_CRATE_DEPENDS+=	static_assertions-1.1.0
 CARGO_CRATE_DEPENDS+=	str-buf-1.0.6
 CARGO_CRATE_DEPENDS+=	strsim-0.10.0
 CARGO_CRATE_DEPENDS+=	svg_fmt-0.4.1
-CARGO_CRATE_DEPENDS+=	syn-1.0.103
+CARGO_CRATE_DEPENDS+=	syn-1.0.104
 CARGO_CRATE_DEPENDS+=	termcolor-1.1.3
 CARGO_CRATE_DEPENDS+=	thiserror-1.0.37
 CARGO_CRATE_DEPENDS+=	thiserror-impl-1.0.37
