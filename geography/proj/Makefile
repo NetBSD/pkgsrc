@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2022/11/27 13:55:49 gdt Exp $
+# $NetBSD: Makefile,v 1.32 2022/12/01 11:28:10 jperkin Exp $
 
 # An update to 8 or 9 is on hold because I have not yet assessed how
 # much trouble it will cause.  -gdt
@@ -35,6 +35,8 @@ GNU_CONFIGURE=		yes
 .if ${OPSYS} == "NetBSD"
 CFLAGS+=		-DHAVE_C99_MATH=0
 .endif
+
+CXXFLAGS.SunOS+=	-fpermissive
 
 TEST_TARGET=		check
 
