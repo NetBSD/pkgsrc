@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5826 2022/12/01 11:30:06 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5827 2022/12/01 12:48:22 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8813,3 +8813,6 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/conftest to 0.36.0 [leot 2022-12-01]
 	Updated sysutils/py-ansible-compat to 2.2.6 [adam 2022-12-01]
 	Updated sysutils/ansible-lint to 6.9.0 [adam 2022-12-01]
+	Updated security/qca2-qt5 to 2.3.5 [jperkin 2022-12-01]
+	Updated security/qca2-qt5-gnupg to 2.3.5 [jperkin 2022-12-01]
+	Updated security/qca2-qt5-ossl to 2.3.5 [jperkin 2022-12-01]
