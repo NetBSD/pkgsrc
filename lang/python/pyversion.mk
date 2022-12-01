@@ -1,6 +1,9 @@
-# $NetBSD: pyversion.mk,v 1.144 2022/11/06 13:27:57 gdt Exp $
+# $NetBSD: pyversion.mk,v 1.145 2022/12/01 15:16:28 gdt Exp $
 
-# This file determines which Python version is used as a dependency for
+# This file should be included by packages as a way to depend on
+# python when none of the other methods are appropriate, e.g. a
+# package that produces a binary that embeds python.
+# It determines which Python version is used as a dependency for
 # a package.
 #
 # === User-settable variables ===
