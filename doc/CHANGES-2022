@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5834 2022/12/01 22:19:55 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.5835 2022/12/01 22:20:58 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8823,3 +8823,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/qt6-qt5compat version 6.4.1 [nros 2022-12-01]
 	Updated net/dbip-asn-lite to 2022.12 [fcambus 2022-12-01]
 	Updated net/dbip-city-lite to 2022.12 [fcambus 2022-12-01]
+	Updated net/dbip-country-lite to 2022.12 [fcambus 2022-12-01]
