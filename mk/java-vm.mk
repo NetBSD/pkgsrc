@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.131 2022/12/02 10:53:40 jperkin Exp $
+# $NetBSD: java-vm.mk,v 1.132 2022/12/02 10:57:50 jperkin Exp $
 #
 # This Makefile fragment provides a Java VM, either at build-time or at
 # run-time, depending on the package's needs.
@@ -120,9 +120,12 @@ _PKG_JVM_DEFAULT?=	openjdk11
 	!empty(MACHINE_PLATFORM:MNetBSD-*-earmv[67]hf) || \
 	!empty(MACHINE_PLATFORM:MNetBSD-*-aarch64)
 _PKG_JVM_DEFAULT?=	openjdk17
-.  elif !empty(MACHINE_PLATFORM:MLinux-*-i[3456]86) || \
-        !empty(MACHINE_PLATFORM:MLinux-*-x86_64) || \
-        !empty(MACHINE_PLATFORM:MDarwin-1[2-9]*-x86_64)
+.  elif ${MACHINE_PLATFORM:MLinux-*-aarch64} || \
+        ${MACHINE_PLATFORM:MLinux-*-x86_64} || \
+        ${MACHINE_PLATFORM:MDarwin-*-aarch64} || \
+        ${MACHINE_PLATFORM:MDarwin-*-x86_64}
+_PKG_JVM_DEFAULT?=	oracle-jdk17
+.  elif ${MACHINE_PLATFORM:MLinux-*-i[3456]86}
 _PKG_JVM_DEFAULT?=	oracle-jdk8
 .  elif !empty(MACHINE_PLATFORM:MSunOS-5.11-i386)
 _PKG_JVM_DEFAULT?=	openjdk8
