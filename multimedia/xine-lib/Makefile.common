@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.94 2022/10/09 07:45:00 wiz Exp $
+# $NetBSD: Makefile.common,v 1.95 2022/12/02 15:06:22 jperkin Exp $
 #
 # used by audio/xine-alsa/Makefile
 # used by audio/xine-pulse/Makefile
@@ -45,10 +45,7 @@ PKGSRC_MAKE_ENV+=	"mkdir_p"="mkdir -p"
 
 pre-configure:
 	${TOUCH} ${WRKSRC}/lib/dummy.c
-	cd ${WRKSRC} && aclocal -I m4
-	cd ${WRKSRC} && automake -Wnone
-	cd ${WRKSRC} && autoheader
-	cd ${WRKSRC} && autoconf
+	cd ${WRKSRC} && autoreconf -fiv
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
