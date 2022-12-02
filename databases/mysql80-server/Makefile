@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2022/11/23 16:19:36 adam Exp $
+# $NetBSD: Makefile,v 1.11 2022/12/02 14:50:45 nros Exp $
 
 PKGNAME=	${DISTNAME:S/-/-server-/}
 PKGREVISION=	1
@@ -12,6 +12,8 @@ CMAKE_ARGS+=		-DINSTALL_INFODIR=${PKGINFODIR}
 CMAKE_ARGS+=		-DWITH_PROTOBUF="system"
 
 PLIST_VARS+=		auth_socket
+
+GCC_REQD+=		8 # needs <charconv> include
 
 .if ${OPSYS} == "Linux"
 PLIST.auth_socket=	yes
