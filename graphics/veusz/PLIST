@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2022/01/10 07:37:36 wiz Exp $
+@comment $NetBSD: PLIST,v 1.21 2022/12/02 15:42:22 wiz Exp $
 bin/veusz
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -13,9 +13,6 @@ ${PYSITELIB}/veusz/VERSION
 ${PYSITELIB}/veusz/__init__.py
 ${PYSITELIB}/veusz/__init__.pyc
 ${PYSITELIB}/veusz/__init__.pyo
-${PYSITELIB}/veusz/compat.py
-${PYSITELIB}/veusz/compat.pyc
-${PYSITELIB}/veusz/compat.pyo
 ${PYSITELIB}/veusz/dataimport/__init__.py
 ${PYSITELIB}/veusz/dataimport/__init__.pyc
 ${PYSITELIB}/veusz/dataimport/__init__.pyo
@@ -166,9 +163,6 @@ ${PYSITELIB}/veusz/dialogs/preferences.pyo
 ${PYSITELIB}/veusz/dialogs/reloaddata.py
 ${PYSITELIB}/veusz/dialogs/reloaddata.pyc
 ${PYSITELIB}/veusz/dialogs/reloaddata.pyo
-${PYSITELIB}/veusz/dialogs/safetyimport.py
-${PYSITELIB}/veusz/dialogs/safetyimport.pyc
-${PYSITELIB}/veusz/dialogs/safetyimport.pyo
 ${PYSITELIB}/veusz/dialogs/stylesheet.py
 ${PYSITELIB}/veusz/dialogs/stylesheet.pyc
 ${PYSITELIB}/veusz/dialogs/stylesheet.pyo
@@ -237,6 +231,8 @@ ${PYSITELIB}/veusz/examples/3d_function.vsz
 ${PYSITELIB}/veusz/examples/3d_points.vsz
 ${PYSITELIB}/veusz/examples/3d_surface.vsz
 ${PYSITELIB}/veusz/examples/3d_volume.vsz
+${PYSITELIB}/veusz/examples/FDR_example.vsz
+${PYSITELIB}/veusz/examples/FDR_sample_data.csv
 ${PYSITELIB}/veusz/examples/axis_function.vsz
 ${PYSITELIB}/veusz/examples/axis_function_linked.csv
 ${PYSITELIB}/veusz/examples/axis_function_linked.vsz
@@ -266,6 +262,7 @@ ${PYSITELIB}/veusz/examples/fixed_aspect.vsz
 ${PYSITELIB}/veusz/examples/functions.vsz
 ${PYSITELIB}/veusz/examples/hatching.vsz
 ${PYSITELIB}/veusz/examples/histo.vsz
+${PYSITELIB}/veusz/examples/histo_widget.vsz
 ${PYSITELIB}/veusz/examples/histogramming.vsz
 ${PYSITELIB}/veusz/examples/inside.vsz
 ${PYSITELIB}/veusz/examples/isolatedaxes.vsz
@@ -315,6 +312,7 @@ ${PYSITELIB}/veusz/icons/button_function3d.svg
 ${PYSITELIB}/veusz/icons/button_graph.svg
 ${PYSITELIB}/veusz/icons/button_graph3d.svg
 ${PYSITELIB}/veusz/icons/button_grid.svg
+${PYSITELIB}/veusz/icons/button_histo.svg
 ${PYSITELIB}/veusz/icons/button_image.svg
 ${PYSITELIB}/veusz/icons/button_imagefile.svg
 ${PYSITELIB}/veusz/icons/button_key.svg
@@ -329,6 +327,7 @@ ${PYSITELIB}/veusz/icons/button_polygon.svg
 ${PYSITELIB}/veusz/icons/button_rect.svg
 ${PYSITELIB}/veusz/icons/button_scene3d.svg
 ${PYSITELIB}/veusz/icons/button_surface3d.svg
+${PYSITELIB}/veusz/icons/button_svgfile.svg
 ${PYSITELIB}/veusz/icons/button_ternary.svg
 ${PYSITELIB}/veusz/icons/button_vectorfield.svg
 ${PYSITELIB}/veusz/icons/button_volume3d.svg
@@ -340,6 +339,10 @@ ${PYSITELIB}/veusz/icons/error_barbox.svg
 ${PYSITELIB}/veusz/icons/error_barcurve.svg
 ${PYSITELIB}/veusz/icons/error_bardiamond.svg
 ${PYSITELIB}/veusz/icons/error_barends.svg
+${PYSITELIB}/veusz/icons/error_barendshi.svg
+${PYSITELIB}/veusz/icons/error_barendslo.svg
+${PYSITELIB}/veusz/icons/error_barhi.svg
+${PYSITELIB}/veusz/icons/error_barlo.svg
 ${PYSITELIB}/veusz/icons/error_box.svg
 ${PYSITELIB}/veusz/icons/error_boxfill.svg
 ${PYSITELIB}/veusz/icons/error_curve.svg
@@ -350,8 +353,12 @@ ${PYSITELIB}/veusz/icons/error_fillhorz.svg
 ${PYSITELIB}/veusz/icons/error_fillvert.svg
 ${PYSITELIB}/veusz/icons/error_linehorz.svg
 ${PYSITELIB}/veusz/icons/error_linehorzbar.svg
+${PYSITELIB}/veusz/icons/error_linehorzhi.svg
+${PYSITELIB}/veusz/icons/error_linehorzlo.svg
 ${PYSITELIB}/veusz/icons/error_linevert.svg
 ${PYSITELIB}/veusz/icons/error_linevertbar.svg
+${PYSITELIB}/veusz/icons/error_lineverthi.svg
+${PYSITELIB}/veusz/icons/error_linevertlo.svg
 ${PYSITELIB}/veusz/icons/error_none.svg
 ${PYSITELIB}/veusz/icons/kde-application-exit.svg
 ${PYSITELIB}/veusz/icons/kde-clipboard.svg
@@ -397,13 +404,13 @@ ${PYSITELIB}/veusz/icons/kde-zoom-width-veuszedit.svg
 ${PYSITELIB}/veusz/icons/link.png
 ${PYSITELIB}/veusz/icons/logo.png
 ${PYSITELIB}/veusz/icons/logo.svg
-${PYSITELIB}/veusz/icons/settings_axisgridlines.png
-${PYSITELIB}/veusz/icons/settings_axislabel.png
-${PYSITELIB}/veusz/icons/settings_axisline.png
-${PYSITELIB}/veusz/icons/settings_axismajorticks.png
-${PYSITELIB}/veusz/icons/settings_axisminorgridlines.png
-${PYSITELIB}/veusz/icons/settings_axisminorticks.png
-${PYSITELIB}/veusz/icons/settings_axisticklabels.png
+${PYSITELIB}/veusz/icons/settings_axisgridlines.svg
+${PYSITELIB}/veusz/icons/settings_axislabel.svg
+${PYSITELIB}/veusz/icons/settings_axisline.svg
+${PYSITELIB}/veusz/icons/settings_axismajorticks.svg
+${PYSITELIB}/veusz/icons/settings_axisminorgridlines.svg
+${PYSITELIB}/veusz/icons/settings_axisminorticks.svg
+${PYSITELIB}/veusz/icons/settings_axisticklabels.svg
 ${PYSITELIB}/veusz/icons/settings_bgfill.svg
 ${PYSITELIB}/veusz/icons/settings_border.svg
 ${PYSITELIB}/veusz/icons/settings_contourfill.svg
@@ -412,22 +419,28 @@ ${PYSITELIB}/veusz/icons/settings_gridline.svg
 ${PYSITELIB}/veusz/icons/settings_lighting.svg
 ${PYSITELIB}/veusz/icons/settings_main.svg
 ${PYSITELIB}/veusz/icons/settings_ploterrorline.svg
-${PYSITELIB}/veusz/icons/settings_plotfillabove.png
-${PYSITELIB}/veusz/icons/settings_plotfillbelow.png
+${PYSITELIB}/veusz/icons/settings_plotfillabove.svg
+${PYSITELIB}/veusz/icons/settings_plotfillbelow.svg
 ${PYSITELIB}/veusz/icons/settings_plotline.svg
 ${PYSITELIB}/veusz/icons/settings_plotmarkerfill.svg
 ${PYSITELIB}/veusz/icons/settings_plotmarkerline.svg
-${PYSITELIB}/veusz/icons/settings_stylesheet.png
+${PYSITELIB}/veusz/icons/settings_postline.svg
+${PYSITELIB}/veusz/icons/settings_stylesheet.svg
 ${PYSITELIB}/veusz/icons/settings_subcontourline.svg
 ${PYSITELIB}/veusz/icons/settings_whisker.svg
 ${PYSITELIB}/veusz/icons/veusz-capture-data.svg
 ${PYSITELIB}/veusz/icons/veusz-edit-custom.svg
 ${PYSITELIB}/veusz/icons/veusz-edit-cut.svg
 ${PYSITELIB}/veusz/icons/veusz-edit-prefs.svg
+${PYSITELIB}/veusz/icons/veusz-eye-grey.svg
+${PYSITELIB}/veusz/icons/veusz-eye.svg
 ${PYSITELIB}/veusz/icons/veusz-pick-data.svg
 ${PYSITELIB}/veusz/icons/veusz-shape-menu.svg
 ${PYSITELIB}/veusz/icons/veusz-view-fullscreen.svg
+${PYSITELIB}/veusz/icons/veusz-zoom-graph-out.svg
+${PYSITELIB}/veusz/icons/veusz-zoom-graph-recenter.svg
 ${PYSITELIB}/veusz/icons/veusz-zoom-graph.svg
+${PYSITELIB}/veusz/icons/veusz-zoom-reset.svg
 ${PYSITELIB}/veusz/icons/veusz.png
 ${PYSITELIB}/veusz/icons/veusz.svg
 ${PYSITELIB}/veusz/icons/veusz_128.png
@@ -459,6 +472,9 @@ ${PYSITELIB}/veusz/qtall.pyo
 ${PYSITELIB}/veusz/qtwidgets/__init__.py
 ${PYSITELIB}/veusz/qtwidgets/__init__.pyc
 ${PYSITELIB}/veusz/qtwidgets/__init__.pyo
+${PYSITELIB}/veusz/qtwidgets/clicklabel.py
+${PYSITELIB}/veusz/qtwidgets/clicklabel.pyc
+${PYSITELIB}/veusz/qtwidgets/clicklabel.pyo
 ${PYSITELIB}/veusz/qtwidgets/datasetbrowser.py
 ${PYSITELIB}/veusz/qtwidgets/datasetbrowser.pyc
 ${PYSITELIB}/veusz/qtwidgets/datasetbrowser.pyo
@@ -643,6 +659,9 @@ ${PYSITELIB}/veusz/widgets/graph3d.pyo
 ${PYSITELIB}/veusz/widgets/grid.py
 ${PYSITELIB}/veusz/widgets/grid.pyc
 ${PYSITELIB}/veusz/widgets/grid.pyo
+${PYSITELIB}/veusz/widgets/histo.py
+${PYSITELIB}/veusz/widgets/histo.pyc
+${PYSITELIB}/veusz/widgets/histo.pyo
 ${PYSITELIB}/veusz/widgets/image.py
 ${PYSITELIB}/veusz/widgets/image.pyc
 ${PYSITELIB}/veusz/widgets/image.pyo

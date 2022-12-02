@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.22 2021/10/26 10:47:22 nia Exp $
+$NetBSD: distinfo,v 1.23 2022/12/02 15:42:22 wiz Exp $
 
-BLAKE2s (veusz-3.1.tar.gz) = 473b8eebb47ffa4abd490b8b11ef0adfb53b9757d4632c005f4c93c129535bd9
-SHA512 (veusz-3.1.tar.gz) = 9b940d1cc224f4729f788abe1e29352d35e69d2f78bae7f072a783d339198a8171b0f0b0a5f5af82ef0f0693550a42409956a9cc3888aa46d110d777e81941a4
-Size (veusz-3.1.tar.gz) = 2524607 bytes
+BLAKE2s (veusz-3.5.3.tar.gz) = 1382b1c8600a0e373065107a38319a939cfb50ca81c1c573954a9dca1e3d8f52
+SHA512 (veusz-3.5.3.tar.gz) = 26c245640b83a3e6d0d036e942774b15d47dcb4dd2af41025528781f63ecb2ba5357b3eeedcb7a3432bd2b54cce7bca0587f47b6f1208d08532f3a08cab19d32
+Size (veusz-3.5.3.tar.gz) = 3319834 bytes
