@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.9 2022/08/24 06:58:13 adam Exp $
+# $NetBSD: builtin.mk,v 1.10 2022/12/02 09:17:59 adam Exp $
 
 BUILTIN_PKG:=	xz
 
@@ -25,7 +25,7 @@ MAKEVARS+=	IS_BUILTIN.xz
 ### If there is a built-in implementation, then set BUILTIN_PKG.<pkg> to
 ### a package name to represent the built-in package.
 ###
-.if !defined(BUILTIN_PKG.xz) && ${IS_BUILTIN.xz:M[yY][eE][sS]}
+.if !defined(BUILTIN_PKG.xz) && ${IS_BUILTIN.xz:tl} == yes
 BUILTIN_VERSION.xz!=							\
 	${AWK} 'BEGIN { M = "0" }					\
 		/\#define[ 	]+LZMA_VERSION_MAJOR/ { M = $$3 }	\
@@ -52,10 +52,10 @@ MAKEVARS+=	BUILTIN_PKG.xz
 USE_BUILTIN.xz=	no
 .  else
 USE_BUILTIN.xz=	${IS_BUILTIN.xz}
-.    if defined(BUILTIN_PKG.xz) && ${IS_BUILTIN.xz:M[yY][eE][sS]}
+.    if defined(BUILTIN_PKG.xz) && ${IS_BUILTIN.xz:tl} == yes
 USE_BUILTIN.xz=	yes
 .      for _dep_ in ${BUILDLINK_API_DEPENDS.xz}
-.        if ${USE_BUILTIN.xz:M[yY][eE][sS]}
+.        if ${USE_BUILTIN.xz:tl} == yes
 USE_BUILTIN.xz!=							\
 	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.xz}; then	\
 		${ECHO} yes;						\
@@ -79,7 +79,7 @@ MAKEVARS+=	USE_BUILTIN.xz
 # implementation.
 #
 .if defined(USE_XZ)
-.  if ${IS_BUILTIN.xz:M[nN][oO]}
+.  if ${IS_BUILTIN.xz:tl} == no
 USE_BUILTIN.xz=	no
 .  endif
 .endif
@@ -90,15 +90,15 @@ USE_BUILTIN.xz=	no
 ###
 
 CHECK_BUILTIN.xz?=	no
-.if ${CHECK_BUILTIN.xz:M[nN][oO]}
+.if ${CHECK_BUILTIN.xz:tl} == no
 
-.  if ${USE_BUILTIN.xz:M[yY][eE][sS]}
+.  if ${USE_BUILTIN.xz:tl} == yes
 BUILDLINK_FILES.xz+=	lib/pkgconfig/liblzma.pc
 .  endif
 
 # Fake pkg-config for builtin xz on NetBSD
 
-.  if ${USE_BUILTIN.xz:M[yY][eE][sS]}
+.  if ${USE_BUILTIN.xz:tl} == yes
 .    if !empty(USE_TOOLS:C/:.*//:Mpkg-config)
 do-configure-pre-hook: override-liblzma-pkgconfig
 
