@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.273 2022/11/27 23:08:07 wiz Exp $
+# $NetBSD: Makefile,v 1.274 2022/12/02 16:01:20 wiz Exp $
 
 DISTNAME=	calibre-5.44.0
 PKGREVISION=	1
@@ -23,12 +23,14 @@ DEPENDS+=	${PYPKGPREFIX}-feedparser>=6.0.0:../../textproc/py-feedparser
 DEPENDS+=	${PYPKGPREFIX}-html2text-[0-9]*:../../textproc/py-html2text
 DEPENDS+=	${PYPKGPREFIX}-html5-parser-[0-9]*:../../textproc/py-html5-parser
 DEPENDS+=	${PYPKGPREFIX}-jeepney>=0.6.0:../../sysutils/py-jeepney
+DEPENDS+=	${PYPKGPREFIX}-markdown-[0-9]*:../../textproc/py-markdown
 DEPENDS+=	${PYPKGPREFIX}-mechanize>=0.1.11nb1:../../www/py-mechanize
 DEPENDS+=	${PYPKGPREFIX}-msgpack-[0-9]*:../../devel/py-msgpack
 DEPENDS+=	${PYPKGPREFIX}-netifaces>=0.8:../../net/py-netifaces
 DEPENDS+=	${PYPKGPREFIX}-Pillow>=2.7.0:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-psutil>=0.6.1:../../sysutils/py-psutil
 DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
+DEPENDS+=	${PYPKGPREFIX}-qt5-[0-9]*:../../x11/py-qt5
 DEPENDS+=	${PYPKGPREFIX}-qt5-webengine-[0-9]*:../../x11/py-qt5-webengine
 DEPENDS+=	${PYPKGPREFIX}-regex-[0-9]*:../../textproc/py-regex
 DEPENDS+=	${PYPKGPREFIX}-sip5>=5.5<6:../../x11/py-sip5
@@ -44,9 +46,7 @@ BUILD_DEPENDS+=	xdg-utils>=1.0.2:../../misc/xdg-utils
 EXTRACT_USING=	bsdtar
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 # as of 5.x
-PYTHON_VERSIONS_INCOMPATIBLE+=	310 # as of 5.40.0
-PYTHON_VERSIONS_INCOMPATIBLE+=	311 # py-sip via py-qt5-webengine
-PYTHON_VERSIONED_DEPENDENCIES+=	markdown
+PYTHON_VERSIONS_INCOMPATIBLE+=	310 311 # as of 5.40.0
 
 USE_LANGUAGES=			c c++
 USE_LIBTOOL=			yes
@@ -159,6 +159,4 @@ BUILDLINK_API_DEPENDS.poppler+=	poppler>=0.20.2
 .include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtwebengine/buildlink3.mk"
-.include "../../x11/py-qt5/buildlink3.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
