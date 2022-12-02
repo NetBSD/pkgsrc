@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2022/10/19 13:16:45 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/12/02 09:34:25 adam Exp $
 bin/oid2name
 bin/vacuumlo
 include/postgresql/server/extension/cube/cubedata.h
@@ -31,6 +31,7 @@ ${PLIST.llvm}lib/postgresql/bitcode/btree_gin.index.bc
 ${PLIST.llvm}lib/postgresql/bitcode/btree_gin/btree_gin.bc
 ${PLIST.llvm}lib/postgresql/bitcode/btree_gist.index.bc
 ${PLIST.llvm}lib/postgresql/bitcode/btree_gist/btree_bit.bc
+${PLIST.llvm}lib/postgresql/bitcode/btree_gist/btree_bool.bc
 ${PLIST.llvm}lib/postgresql/bitcode/btree_gist/btree_bytea.bc
 ${PLIST.llvm}lib/postgresql/bitcode/btree_gist/btree_cash.bc
 ${PLIST.llvm}lib/postgresql/bitcode/btree_gist/btree_date.bc
