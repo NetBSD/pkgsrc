@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.188 2022/11/23 16:20:48 adam Exp $
+# $NetBSD: Makefile,v 1.189 2022/12/02 15:06:22 jperkin Exp $
 
 PKGREVISION= 11
 .include "Makefile.common"
@@ -46,7 +46,7 @@ PLIST.oss=	yes
 .  endif
 .endif
 
-CPPFLAGS.SunOS+=	-D__u32=uint32_t -DHAVE_SYSI86 -DHAVE_MMX_FALSE
+CPPFLAGS.SunOS+=	-D__u32=uint32_t -DHAVE_SYSI86
 LDFLAGS.SunOS+=		-lresolv
 
 # xv video output seems to be broken. Make sure another gets used instead.
