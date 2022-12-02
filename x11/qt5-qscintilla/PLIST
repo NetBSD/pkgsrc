@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/10/26 13:19:17 kamil Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/12/02 15:39:01 wiz Exp $
 qt5/include/Qsci/qsciabstractapis.h
 qt5/include/Qsci/qsciapis.h
 qt5/include/Qsci/qscicommand.h
@@ -54,8 +54,8 @@ qt5/include/Qsci/qscistyle.h
 qt5/include/Qsci/qscistyledtext.h
 qt5/lib/libqscintilla2_qt5.so
 qt5/lib/libqscintilla2_qt5.so.15
-qt5/lib/libqscintilla2_qt5.so.15.0
-qt5/lib/libqscintilla2_qt5.so.15.0.0
+qt5/lib/libqscintilla2_qt5.so.15.1
+qt5/lib/libqscintilla2_qt5.so.15.1.1
 qt5/mkspecs/features/qscintilla2.prf
 qt5/qsci/api/python/Python-2.4.api
 qt5/qsci/api/python/Python-2.5.api
@@ -69,6 +69,7 @@ qt5/qsci/api/python/Python-3.5.api
 qt5/qsci/api/python/Python-3.6.api
 qt5/qsci/api/python/Python-3.7.api
 qt5/qsci/api/python/Python-3.8.api
+qt5/qsci/api/python/Python-3.9.api
 qt5/translations/qscintilla_cs.qm
 qt5/translations/qscintilla_de.qm
 qt5/translations/qscintilla_es.qm
