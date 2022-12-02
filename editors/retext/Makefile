@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2022/06/30 11:18:21 nia Exp $
+# $NetBSD: Makefile,v 1.14 2022/12/02 23:13:20 wiz Exp $
 
 DISTNAME=	ReText-7.2.3
 PKGNAME=	${DISTNAME:tl}
@@ -14,6 +14,7 @@ LICENSE=	gnu-gpl-v3
 DEPENDS+=	${PYPKGPREFIX}-chardet-[0-9]*:../../converters/py-chardet
 DEPENDS+=	${PYPKGPREFIX}-enchant-[0-9]*:../../textproc/py-enchant
 DEPENDS+=	${PYPKGPREFIX}-markups-[0-9]*:../../textproc/py-markups
+DEPENDS+=	${PYPKGPREFIX}-qt5-[0-9]*:../../x11/py-qt5
 
 USE_LANGUAGES=	# none
 
@@ -23,5 +24,4 @@ USE_PKG_RESOURCES=	yes
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/python/egg.mk"
-.include "../../x11/py-qt5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
