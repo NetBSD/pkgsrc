@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5853 2022/12/02 23:39:20 wen Exp $
+$NetBSD: CHANGES-2022,v 1.5854 2022/12/02 23:44:23 wen Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8843,3 +8843,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated finance/p5-Finance-Quote to 1.53 [wiz 2022-12-02]
 	Updated mail/p5-Email-Date-Format to 1.006 [wen 2022-12-02]
 	Updated mail/p5-Email-MessageID to 1.407 [wen 2022-12-02]
+	Updated mail/p5-Email-MIME-Encodings to 1.316 [wen 2022-12-02]
