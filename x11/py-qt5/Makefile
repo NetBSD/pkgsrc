@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.77 2022/11/25 13:31:35 wiz Exp $
+# $NetBSD: Makefile,v 1.78 2022/12/02 15:31:37 wiz Exp $
 
-DISTNAME=	PyQt5-5.15.5
+DISTNAME=	PyQt5-5.15.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/PyQt5/qt5/}
-PKGREVISION=	7
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyQt5/}
 
@@ -11,46 +10,26 @@ COMMENT=	Python binding for Qt5
 HOMEPAGE=	https://www.riverbankcomputing.com/software/pyqt/intro
 LICENSE=	gnu-gpl-v3
 
-PYTHON_VERSIONS_INCOMPATIBLE+=	311 # py-sip
-
-.include "../../lang/python/pyversion.mk"
-.if ${_PYTHON_VERSION} == 27
-DEPENDS+=	${PYPKGPREFIX}-enum34-[0-9]*:../../devel/py-enum34
-.endif
-DEPENDS+=	${PYPKGPREFIX}-sip-qt5>=4.19.23:../../x11/py-sip-qt5
+TOOL_DEPENDS+=	${PYPKGPREFIX}-sip6-[0-9]*:../../x11/py-sip6
+TOOL_DEPENDS+=	${PYPKGPREFIX}-qt-builder-[0-9]*:../../x11/py-qt-builder
+DEPENDS+=	${PYPKGPREFIX}-sip-qt5>=12:../../x11/py-sip-qt5
 
 USE_LANGUAGES=		c c++
-USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config
-CONFIGURE_ARGS+=	-b ${PREFIX}/bin
-CONFIGURE_ARGS+=	-d ${PREFIX}/${PYSITELIB}
-CONFIGURE_ARGS+=	--sipdir ${PREFIX}/share/sip${PYVERSSUFFIX}/PyQt5
-CONFIGURE_ARGS+=	--qml-plugindir ${PREFIX}/qt5/plugins/PyQt5-${PYVERSSUFFIX}/
-CONFIGURE_ARGS+=	--designer-plugindir ${PREFIX}/qt5/plugins/designer${PYVERSSUFFIX}/
-CONFIGURE_ARGS+=	-q ${QTDIR}/bin/qmake
-CONFIGURE_ARGS+=	--confirm-license
-CONFIGURE_ARGS+=	--qsci-api
-CONFIGURE_ARGS+=	--qsci-api-destdir ${PREFIX}/qt5/qsci${PYVERSSUFFIX}
-CONFIGURE_ARGS+=	--sip ${BUILDLINK_PREFIX.py-sip}/bin/sip${PYVERSSUFFIX}
-CONFIGURE_ARGS+=	--verbose
 
-INSTALL_ENV+=		INSTALL_ROOT=${DESTDIR}
+PLIST_VARS+=		x11
 
-PLIST_VARS+=		webkit x11
-PY_PATCHPLIST=		yes
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 SUBST_CLASSES+=		x11lib
 SUBST_STAGE.x11lib=	pre-configure
 SUBST_MESSAGE.x11lib=	Fixing rpath for X11 and pulseaudio libraries.
-SUBST_FILES.x11lib+=	configure.py
 SUBST_FILES.x11lib+=	designer/designer.pro-in
 SUBST_FILES.x11lib+=	qmlscene/qmlscene.pro-in
 SUBST_SED.x11lib+=	-e 's,@X11LIB@,${X11BASE}/lib,'
-SUBST_VARS.x11lib=	PREFIX PYVERSSUFFIX
 
-do-configure:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
-		${PYTHONBIN} configure.py ${CONFIGURE_ARGS}
+pre-configure:
+	${LN} -sf ${QTDIR}/bin/qmake ${BUILDLINK_DIR}/bin/
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -74,24 +53,9 @@ post-install:
 	${MV} pyrcc5 pyrcc5-${PYVERSSUFFIX} && \
 	${MV} pyuic5 pyuic5-${PYVERSSUFFIX} || ${TRUE}
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.py-qt5
-PKG_SUPPORTED_OPTIONS+=	dbus
-PKG_SUGGESTED_OPTIONS+=	dbus
+.include "options.mk"
 
-.include "../../mk/bsd.options.mk"
-
-PLIST_VARS+=		dbus
-.if !empty(PKG_OPTIONS:Mdbus)
-PLIST.dbus=		yes
-.include "../../sysutils/dbus-python-common/buildlink3.mk"
-.include "../../sysutils/py-dbus/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--no-python-dbus
-.endif
-
-.include "../../lang/python/extension.mk"
-BUILDLINK_API_DEPENDS.py-sip+=	${PYPKGPREFIX}-sip>=4.19.23
-.include "../../x11/py-sip/buildlink3.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtcharts/buildlink3.mk"
 .include "../../x11/qt5-qtdeclarative/buildlink3.mk"
@@ -104,12 +68,10 @@ BUILDLINK_API_DEPENDS.py-sip+=	${PYPKGPREFIX}-sip>=4.19.23
 .if ${OPSYS} == "Darwin"
 .  include "../../x11/qt5-qtmacextras/buildlink3.mk"
 .else
-# currently qt5-qtwebkit does not build on Darwin
-PLIST.webkit=	yes
-.  include "../../x11/qt5-qtwebkit/buildlink3.mk"
 .  include "../../x11/qt5-qtx11extras/buildlink3.mk"
 .endif
 .include "../../x11/qt5-qtwebchannel/buildlink3.mk"
+.include "../../x11/qt5-qtwebkit/buildlink3.mk"
 .include "../../x11/qt5-qtwebsockets/buildlink3.mk"
 .include "../../x11/qt5-qtxmlpatterns/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
