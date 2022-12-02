@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.89 2022/11/25 13:31:34 wiz Exp $
+# $NetBSD: Makefile,v 1.90 2022/12/02 15:41:30 wiz Exp $
 
 DISTNAME=		tortoisehg-6.2.3
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel python
 MASTER_SITES=		https://www.mercurial-scm.org/release/tortoisehg/targz/
 
@@ -15,6 +15,8 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx>=5.3.0:../../textproc/py-sphinx
 DEPENDS+=	${PYPKGPREFIX}-iniparse>=0.4:../../textproc/py-iniparse
 DEPENDS+=	${PYPKGPREFIX}-mercurial>=5.0.0:../../devel/py-mercurial
 DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
+DEPENDS+=	${PYPKGPREFIX}-qt5-qscintilla-[0-9]*:../../x11/py-qt5-qscintilla
+DEPENDS+=	${PYPKGPREFIX}-sip-qt5-[0-9]*:../../x11/py-sip-qt5
 
 USE_TOOLS+=		pax
 
@@ -33,7 +35,6 @@ INSTALLATION_DIRS+=	share/doc/tortoisehg
 PYTHON_SELF_CONFLICT=	yes
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-PYTHON_VERSIONS_INCOMPATIBLE+=	311 # py-sip via py-qt5-qscintilla
 
 pre-build:
 	${RUN} cd ${WRKSRC}/doc && ${MAKE_PROGRAM} SPHINXBUILD=sphinx-build-${PYVERSSUFFIX} html
@@ -50,5 +51,4 @@ post-install:
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/py-qt5-qscintilla/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
