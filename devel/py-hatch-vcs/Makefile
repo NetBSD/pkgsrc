@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/06/13 19:27:45 adam Exp $
+# $NetBSD: Makefile,v 1.2 2022/12/02 18:41:52 adam Exp $
 
 DISTNAME=	hatch_vcs-0.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -10,7 +10,8 @@ HOMEPAGE=	https://github.com/ofek/hatch-vcs
 COMMENT=	Hatch plugin for versioning with your preferred VCS
 LICENSE=	mit
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-hatchling>=0.21.0:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=0.21.0:../../devel/py-hatchling
+DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=6.4.0:../../devel/py-setuptools_scm
 
 USE_LANGUAGES=	# none
 
