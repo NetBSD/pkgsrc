@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2022/11/23 16:20:03 adam Exp $
+# $NetBSD: Makefile,v 1.78 2022/12/02 23:12:27 wiz Exp $
 
 DISTNAME=	kajongg-${KAPPSVER}
 PKGREVISION=	1
@@ -12,6 +12,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2
 
 BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
+DEPENDS+=	${PYPKGPREFIX}-qt5-[0-9]*:../../x11/py-qt5
 
 USE_TOOLS+=	msgmerge
 
@@ -29,6 +30,5 @@ PLIST_SUBST+=	PYPKGVER=${PYPKGPREFIX:S/py//}
 .include "../../lang/python/application.mk"
 .include "../../lang/python/tool.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/py-qt5/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
