@@ -1,8 +1,6 @@
-$NetBSD: patch-src-post-planar-noise.c,v 1.6 2020/04/02 15:52:46 nia Exp $
+$NetBSD: patch-src-post-planar-noise.c,v 1.7 2022/12/02 15:06:22 jperkin Exp $
 
 https://bugs.xine-project.org/show_bug.cgi?id=524
-
-Disable MMX sections on SunOS.
 
 --- src/post/planar/noise.c.orig	2019-12-13 20:47:50.000000000 +0000
 +++ src/post/planar/noise.c
@@ -32,21 +30,3 @@ Disable MMX sections on SunOS.
      "Mix random noise with a (semi)regular pattern" )
  END_PARAM_DESCR( param_descr )
  
-@@ -372,7 +377,7 @@ static int noise_draw(vo_frame_t *frame,
-               frame->width * 2, frame->height, &this->params[0]);
-     }
- 
--#ifdef ARCH_X86
-+#if defined(ARCH_X86) && !defined(__sun)
-     if (xine_mm_accel() & MM_ACCEL_X86_MMX)
-         __asm__ __volatile__ ("emms\n\t");
-     if (xine_mm_accel() & MM_ACCEL_X86_MMXEXT)
-@@ -447,7 +452,7 @@ static post_plugin_t *noise_open_plugin(
- 
-     this->params[0].lineNoise = lineNoise_C;
-     this->params[0].lineNoiseAvg = lineNoiseAvg_C;
--#ifdef ARCH_X86
-+#if defined(ARCH_X86) && !defined(__sun)
-     if (xine_mm_accel() & MM_ACCEL_X86_MMX) {
-         this->params[0].lineNoise = lineNoise_MMX;
-         this->params[0].lineNoiseAvg = lineNoiseAvg_MMX;
