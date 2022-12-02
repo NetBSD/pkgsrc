@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2021/04/05 16:20:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2022/12/02 18:43:18 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -91,6 +91,7 @@ ${PYSITELIB}/django_extensions/jobs/weekly/__init__.pyo
 ${PYSITELIB}/django_extensions/jobs/yearly/__init__.py
 ${PYSITELIB}/django_extensions/jobs/yearly/__init__.pyc
 ${PYSITELIB}/django_extensions/jobs/yearly/__init__.pyo
+${PYSITELIB}/django_extensions/locale/ar/LC_MESSAGES/django.po
 ${PYSITELIB}/django_extensions/locale/da/LC_MESSAGES/django.mo
 ${PYSITELIB}/django_extensions/locale/da/LC_MESSAGES/django.po
 ${PYSITELIB}/django_extensions/locale/de/LC_MESSAGES/django.mo
@@ -196,6 +197,9 @@ ${PYSITELIB}/django_extensions/management/commands/list_signals.pyo
 ${PYSITELIB}/django_extensions/management/commands/mail_debug.py
 ${PYSITELIB}/django_extensions/management/commands/mail_debug.pyc
 ${PYSITELIB}/django_extensions/management/commands/mail_debug.pyo
+${PYSITELIB}/django_extensions/management/commands/managestate.py
+${PYSITELIB}/django_extensions/management/commands/managestate.pyc
+${PYSITELIB}/django_extensions/management/commands/managestate.pyo
 ${PYSITELIB}/django_extensions/management/commands/merge_model_instances.py
 ${PYSITELIB}/django_extensions/management/commands/merge_model_instances.pyc
 ${PYSITELIB}/django_extensions/management/commands/merge_model_instances.pyo
@@ -211,6 +215,9 @@ ${PYSITELIB}/django_extensions/management/commands/print_settings.pyo
 ${PYSITELIB}/django_extensions/management/commands/print_user_for_session.py
 ${PYSITELIB}/django_extensions/management/commands/print_user_for_session.pyc
 ${PYSITELIB}/django_extensions/management/commands/print_user_for_session.pyo
+${PYSITELIB}/django_extensions/management/commands/raise_test_exception.py
+${PYSITELIB}/django_extensions/management/commands/raise_test_exception.pyc
+${PYSITELIB}/django_extensions/management/commands/raise_test_exception.pyo
 ${PYSITELIB}/django_extensions/management/commands/reset_db.py
 ${PYSITELIB}/django_extensions/management/commands/reset_db.pyc
 ${PYSITELIB}/django_extensions/management/commands/reset_db.pyo
