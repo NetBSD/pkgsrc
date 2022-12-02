@@ -1,42 +1,30 @@
-# $NetBSD: Makefile,v 1.9 2022/11/25 13:31:35 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2022/12/02 15:36:04 wiz Exp $
 
-VERSION=	1.02.02
-DISTNAME=	pyqt-qwt-${VERSION}
-PKGNAME=	${PYPKGPREFIX}-qwt-qt5-${DISTNAME:S/pyqt-qwt-//}
-PKGREVISION=	1
+DISTNAME=	pyqt-qwt-1.02.02
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pyqt-qwt/qwt-qt5/}
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=GauiStori/}
 GITHUB_PROJECT=	PyQt-Qwt
-GITHUB_TAG=	v${VERSION}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/GauiStori/PyQt-Qwt
 COMMENT=	Python PyQt wrapper for Qwt6
 LICENSE=	gnu-lgpl-v2.1 # with exception (Qwt License)
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-sip6-[0-9]*:../../x11/py-sip6
+TOOL_DEPENDS+=	${PYPKGPREFIX}-qt-builder-[0-9]*:../../x11/py-qt-builder
+DEPENDS+=	${PYPKGPREFIX}-qt5-[0-9]*:../../x11/py-qt5
+# TODO: check if this is correct or should this be a full DEPENDS
 BUILD_DEPENDS+=	qt5-qtbase-[0-9]*:../../x11/qt5-qtbase
 
-CONFIGURE_ENV+=	QT_SELECT=qt5
-MAKE_ENV+=	PATH=${PATH:Q}:${PREFIX}/qt5/bin
-INSTALL_ENV+=	INSTALL_ROOT=${DESTDIR}
-ALL_ENV+=	LFLAGS=${COMPILER_RPATH_FLAG}${PREFIX}/${BUILDLINK_LIBDIRS.qwt6-qt5}
+WHEEL_NAME=	PyQt_Qwt-${PKGVERSION_NOREV}
+
 USE_LANGUAGES=	c++
 
-PY_PATCHPLIST=	yes
-
-PYTHON_VERSIONS_INCOMPATIBLE+=	311 # py-sip
-
-do-configure:
-	set -e; cd ${WRKSRC};						\
-	  ${PKGSRC_SETENV} ${CONFIGURE_ENV}				\
-	  ${PYTHONBIN} configure.py					\
-	  --qwt-incdir=${PREFIX}/${BUILDLINK_INCDIRS.qwt6-qt5}		\
-	  --qwt-libdir=${PREFIX}/${BUILDLINK_LIBDIRS.qwt6-qt5}		\
-	  --qwt-lib=qwt							\
-	  --sip=${PREFIX}/bin/sip${PYVERSSUFFIX}			\
-	  --qmake=${PREFIX}/qt5/bin/qmake				\
-	  --pyqt-sipdir=${PREFIX}/share/sip${PYVERSSUFFIX}/PyQt5	\
-	  --no-qwt-api --verbose
+pre-configure:
+	${LN} -sf ${QTDIR}/bin/qmake ${BUILDLINK_DIR}/bin/
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -48,8 +36,6 @@ post-install:
 	  ${DESTDIR}${PREFIX}/${PYSITELIB}/PyQt5/Qwt.so
 .endif
 
-.include "../../lang/python/extension.mk"
-.include "../../x11/py-qt5/buildlink3.mk"
-.include "../../x11/py-sip/buildlink3.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../x11/qwt6-qt5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
