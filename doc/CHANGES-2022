@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5841 2022/12/02 15:22:27 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.5842 2022/12/02 15:24:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8831,3 +8831,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/felix to 2.1.1 [pin 2022-12-02]
 	Updated editors/tp-note to 1.19.6 [pin 2022-12-02]
 	Added x11/py-sip6 version 6.7.5 [wiz 2022-12-02]
+	Updated x11/py-sip-qt5 to 12.11.0 [wiz 2022-12-02]
