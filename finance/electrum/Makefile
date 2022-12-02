@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2022/08/25 07:46:46 tnn Exp $
+# $NetBSD: Makefile,v 1.14 2022/12/02 23:11:55 wiz Exp $
 
 VERSION=	4.1.5
 DISTNAME=	Electrum-${VERSION}
@@ -30,6 +30,7 @@ DEPENDS+=	${PYPKGPREFIX}-aiohttp>=3.3.0:../../www/py-aiohttp
 DEPENDS+=	${PYPKGPREFIX}-aiohttp-socks>=0.3:../../www/py-aiohttp-socks
 DEPENDS+=	${PYPKGPREFIX}-certifi-[0-9]*:../../security/py-certifi
 DEPENDS+=	${PYPKGPREFIX}-bitstring-[0-9]*:../../devel/py-bitstring
+DEPENDS+=	${PYPKGPREFIX}-qt5-[0-9]*:../../x11/py-qt5
 DEPENDS+=	${PYPKGPREFIX}-attrs>=19.2.0:../../devel/py-attrs
 DEPENDS+=	libsecp256k1>=0.1:../../security/libsecp256k1
 
@@ -42,5 +43,4 @@ post-install:
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/py-qt5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
