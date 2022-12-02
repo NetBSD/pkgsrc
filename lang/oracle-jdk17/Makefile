@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/12/02 10:48:38 jperkin Exp $
+# $NetBSD: Makefile,v 1.2 2022/12/02 11:17:10 wiz Exp $
 
 PKGNAME=	oracle-jdk17-17.0.5
 CATEGORIES=	lang java
@@ -11,13 +11,19 @@ LICENSE=	oracle-no-fee
 
 USE_TOOLS+=	pax
 
+EMUL_PLATFORMS=		linux-x86_64
+EMUL_MODULES.linux=	alsa locale x11
+
 .include "../../mk/bsd.prefs.mk"
 
 .if ${MACHINE_PLATFORM:MLinux-*-aarch64} || make(distinfo) || make(makesum) || make(mdi)
 DISTFILES+=	jdk-${PKGVERSION_NOREV}_linux-aarch64_bin.tar.gz
 .endif
-.if ${MACHINE_PLATFORM:MLinux-*-x86_64} || make(distinfo) || make(makesum) || make(mdi)
+.if ${MACHINE_PLATFORM:MLinux-*-x86_64} || ${MACHINE_PLATFORM:MNetBSD-*-x86_64} || make(distinfo) || make(makesum) || make(mdi)
 DISTFILES+=	jdk-${PKGVERSION_NOREV}_linux-x64_bin.tar.gz
+.  if ${MACHINE_PLATFORM:MNetBSD-*-x86_64}
+PLIST_SRC+=	PLIST.Linux-x86_64
+.  endif
 .endif
 .if ${MACHINE_PLATFORM:MDarwin-*-aarch64} || make(distinfo) || make(makesum) || make(mdi)
 DISTFILES+=	jdk-${PKGVERSION_NOREV}_macos-aarch64_bin.tar.gz
