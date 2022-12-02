@@ -1,8 +1,10 @@
-$NetBSD: patch-ag,v 1.30 2018/11/13 11:10:41 markd Exp $
+$NetBSD: patch-ag,v 1.31 2022/12/02 15:06:22 jperkin Exp $
 
---- configure.ac.orig	2018-01-11 12:49:46.000000000 +0000
+Ensure lib contains symbols.
+
+--- configure.ac.orig	2022-03-06 16:31:23.000000000 +0000
 +++ configure.ac
-@@ -468,7 +468,8 @@ AC_COMPILE_IFELSE([AC_LANG_PROGRAM([[]],
+@@ -473,7 +473,8 @@ AC_COMPILE_IFELSE([AC_LANG_PROGRAM([[]],
  CC_ATTRIBUTE_ALIGNED
  
  CC_ATTRIBUTE_VISIBILITY([protected],
@@ -12,3 +14,11 @@ $NetBSD: patch-ag,v 1.30 2018/11/13 11:10:41 markd Exp $
                          [CC_ATTRIBUTE_VISIBILITY([default], [visibility_export="default"])])
  CC_ATTRIBUTE_VISIBILITY([internal])
  
+@@ -1187,6 +1188,7 @@ AC_CHECK_FUNCS([strncasecmp _strnicmp],
+ 
+ AC_FUNC_FSEEKO
+ 
++AC_LIBOBJ(dummy)
+ AC_REPLACE_FUNCS([asprintf basename gettimeofday setenv strcasestr strlcat strlcpy strndup strpbrk strsep strtok_r swab timegm unsetenv memmem])
+ 
+ AC_LIBSOURCE([hstrerror.c])
