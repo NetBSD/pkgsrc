@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5844 2022/12/02 15:32:15 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.5845 2022/12/02 15:34:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8834,3 +8834,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/py-sip-qt5 to 12.11.0 [wiz 2022-12-02]
 	Updated x11/py-qt-builder to 1.14.0 [wiz 2022-12-02]
 	Updated x11/py-qt5 to 5.15.7 [wiz 2022-12-02]
+	Updated x11/py-qt5-webengine to 5.15.6 [wiz 2022-12-02]
