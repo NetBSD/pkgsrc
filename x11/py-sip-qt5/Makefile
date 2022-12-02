@@ -1,13 +1,16 @@
-# $NetBSD: Makefile,v 1.2 2020/04/12 06:19:56 adam Exp $
+# $NetBSD: Makefile,v 1.3 2022/12/02 15:24:30 wiz Exp $
 
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/sip/sip-qt5/}
-COMMENT=	SIP bindings for C and C++ libraries (PyQt5 version)
+DISTNAME=	PyQt5_sip-12.11.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/PyQt5_sip/sip-qt5/}
+CATEGORIES=	x11 python
+MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyQt5_sip/}
 
-.include "../../x11/py-sip/Makefile.common"
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://pypi.org/project/PyQt5_sip/
+COMMENT=	Qt5 support for sip
+LICENSE=	sip-license OR gnu-gpl-v2 OR gnu-gpl-v3
 
-do-configure:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
-		${PYTHONBIN} configure.py ${CONFIGURE_ARGS} --sip-module PyQt5.sip --no-tools
+USE_LANGUAGES=	c c++
 
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
