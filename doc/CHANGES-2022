@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5840 2022/12/02 11:22:51 pin Exp $
+$NetBSD: CHANGES-2022,v 1.5841 2022/12/02 15:22:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8830,3 +8830,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added lang/oracle-jdk17 version 17.0.5 [jperkin 2022-12-02]
 	Updated sysutils/felix to 2.1.1 [pin 2022-12-02]
 	Updated editors/tp-note to 1.19.6 [pin 2022-12-02]
+	Added x11/py-sip6 version 6.7.5 [wiz 2022-12-02]
