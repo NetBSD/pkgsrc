@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5838 2022/12/02 10:48:52 jperkin Exp $
+$NetBSD: CHANGES-2022,v 1.5839 2022/12/02 11:21:06 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8828,3 +8828,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/cmake to 3.25.1 [adam 2022-12-02]
 	Updated chat/gomuks to 0.3.0 [pin 2022-12-02]
 	Added lang/oracle-jdk17 version 17.0.5 [jperkin 2022-12-02]
+	Updated sysutils/felix to 2.1.1 [pin 2022-12-02]
