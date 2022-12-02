@@ -1,9 +1,9 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: redis.sh,v 1.4 2020/08/20 23:37:30 wiz Exp $
+# $NetBSD: redis.sh,v 1.5 2022/12/02 05:51:26 triaxx Exp $
 #
 # PROVIDE: redis
-# REQUIRE: DAEMON network
+# REQUIRE: DAEMON NETWORKING
 # KEYWORD: shutdown
 
 if [ -f /etc/rc.subr ]; then
