@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/12/02 11:17:10 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/12/02 11:22:24 wiz Exp $
 
 PKGNAME=	oracle-jdk17-17.0.5
 CATEGORIES=	lang java
@@ -7,7 +7,7 @@ MASTER_SITES=	https://download.oracle.com/java/17/archive/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.oracle.com/java/
 COMMENT=	Oracle Java Platform, Standard Edition Development Kit
-LICENSE=	oracle-no-fee
+LICENSE=	oracle-no-fee-license
 
 USE_TOOLS+=	pax
 
