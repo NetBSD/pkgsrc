@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5835 2022/12/01 22:20:58 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.5836 2022/12/02 09:20:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8824,3 +8824,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/dbip-asn-lite to 2022.12 [fcambus 2022-12-01]
 	Updated net/dbip-city-lite to 2022.12 [fcambus 2022-12-01]
 	Updated net/dbip-country-lite to 2022.12 [fcambus 2022-12-01]
+	Updated archivers/xz to 5.2.9 [adam 2022-12-02]
+	Updated devel/cmake to 3.25.1 [adam 2022-12-02]
