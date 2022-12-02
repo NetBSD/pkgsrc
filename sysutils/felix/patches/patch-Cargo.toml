@@ -1,8 +1,9 @@
-$NetBSD: patch-Cargo.toml,v 1.4 2022/11/21 09:21:11 pin Exp $
+$NetBSD: patch-Cargo.toml,v 1.5 2022/12/02 11:20:40 pin Exp $
 
 Don't pull from git, patch vendor crate instead.
+Don't exclude NetBSD.
 
---- Cargo.toml.orig	2022-11-18 21:54:29.000000000 +0000
+--- Cargo.toml.orig	2022-12-01 20:53:59.000000000 +0000
 +++ Cargo.toml
 @@ -24,7 +24,7 @@ log = "0.4.16"
  simplelog = "0.12.0"
@@ -13,3 +14,12 @@ Don't pull from git, patch vendor crate instead.
  serde_yaml = "0.9.14"
  zip = "0.6.3"
  tar = "0.4.38"
+@@ -32,7 +32,7 @@ flate2 = "1.0.24"
+ lzma-rs = "0.2.0"
+ zstd = "0.11.2"
+ 
+-[target.'cfg(target_os = "linux")'.dependencies]
++[target.'cfg(any(target_os = "linux", target_os = "netbsd"))'.dependencies]
+ nix = {version = "0.25.0", features = ["process"]}
+ 
+ [dependencies.serde]
