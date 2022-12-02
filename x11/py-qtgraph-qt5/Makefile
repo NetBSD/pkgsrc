@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/12/02 15:51:52 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2022/12/02 15:52:48 wiz Exp $
 
 DISTNAME=	pyqtgraph-0.12.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pyqtgraph/qtgraph-qt5/}
@@ -15,6 +15,7 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-numpy>=1.17:../../math/py-numpy
 # Optional deps
+DEPENDS+=	${PYPKGPREFIX}-qt5-[0-9]*:../../x11/py-qt5
 DEPENDS+=	${PYPKGPREFIX}-scipy-[0-9]*:../../math/py-scipy
 DEPENDS+=	${PYPKGPREFIX}-OpenGL-[0-9]*:../../graphics/py-OpenGL
 
@@ -23,5 +24,4 @@ USE_LANGUAGES=	# none
 PYTHON_VERSIONS_INCOMPATIBLE=	27 37 # py-scipy
 
 .include "../../lang/python/egg.mk"
-.include "../../x11/py-qt5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
