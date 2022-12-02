@@ -1,0 +1,7 @@
+SIP is a collection of tools that makes it very easy to create Python bindings
+for C and C++ libraries.  It was originally developed in 1998 to create PyQt,
+the Python bindings for the Qt toolkit, but can be used to create bindings for
+any C or C++ library.  For example it is also used to generate wxPython, the
+Python bindings for wxWidgets.
+
+This package contains major version 6 of sip.
