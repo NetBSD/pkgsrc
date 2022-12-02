@@ -1,0 +1,21 @@
+# $NetBSD: Makefile,v 1.1 2022/12/02 15:22:04 wiz Exp $
+
+DISTNAME=	sip-${PKGVERSION_NOREV}
+PKGNAME=	${PYPKGPREFIX}-sip6-6.7.5
+CATEGORIES=	x11
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/sip/}
+
+MAINTAINER=	rhialto@NetBSD.org
+HOMEPAGE=	https://pypi.org/project/sip/
+COMMENT=	Tool to create Python bindings for C++ libraries
+LICENSE=	sip-license OR gnu-gpl-v2 OR gnu-gpl-v3
+
+DEPENDS+=	${PYPKGPREFIX}-packaging>=0:../../devel/py-packaging
+DEPENDS+=	${PYPKGPREFIX}-ply>=0:../../devel/py-ply
+DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
+DEPENDS+=	${PYPKGPREFIX}-toml>=0:../../textproc/py-toml
+
+USE_LANGUAGES=	c c++
+
+.include "../../lang/python/egg.mk"
+.include "../../mk/bsd.pkg.mk"

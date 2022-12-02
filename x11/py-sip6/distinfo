@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/12/02 15:22:04 wiz Exp $
+
+BLAKE2s (sip-6.7.5.tar.gz) = f2b8bd12bb1a421255519bfc549c3dbc077091400946f6a56adbe5714a2631dc
+SHA512 (sip-6.7.5.tar.gz) = 2dc38a6c0489e374a016b7db1f9443bb5d2fb29dc1fa7647ed2dd5bb4aa8758586e2b85569f9fb3b992e15eded0f7a783ec1a53b3d18bee3f8be53d43b79b7b9
+Size (sip-6.7.5.tar.gz) = 1160691 bytes
