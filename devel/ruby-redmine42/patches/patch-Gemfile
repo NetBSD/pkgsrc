@@ -1,8 +1,8 @@
-$NetBSD: patch-Gemfile,v 1.7 2022/10/09 15:31:46 taca Exp $
+$NetBSD: patch-Gemfile,v 1.8 2022/12/03 06:40:09 taca Exp $
 
 Relax dependency.
 
---- Gemfile.orig	2022-10-02 20:10:08.000000000 +0000
+--- Gemfile.orig	2022-12-01 15:40:06.000000000 +0000
 +++ Gemfile
 @@ -3,17 +3,17 @@ source 'https://rubygems.org'
  ruby '>= 2.4.0', '< 2.8.0'
@@ -44,7 +44,7 @@ Relax dependency.
        when /sqlite3/
          gem "sqlite3", "~> 1.4.0", :platforms => [:mri, :mingw, :x64_mingw]
        when /sqlserver/
-@@ -87,26 +87,6 @@ else
+@@ -87,27 +87,6 @@ else
    warn("Please configure your config/database.yml first")
  end
  
@@ -54,13 +54,14 @@ Relax dependency.
 -
 -group :test do
 -  gem "rails-dom-testing"
--  gem 'mocha', '>= 1.4.0'
+-  gem 'mocha', (Gem.ruby_version < Gem::Version.new('2.7.0') ? ['>= 1.4.0', '< 2.0.0'] : '>= 1.4.0')
 -  gem 'simplecov', '~> 0.18.5', :require => false
 -  gem "ffi", platforms: [:mingw, :x64_mingw, :mswin]
 -  # For running system tests
--  gem 'puma'
+-  # TODO: Remove version specification once Capybara supports Puma 6
+-  gem 'puma', '< 6.0.0'
 -  gem 'capybara', '~> 3.31.0'
--  gem "selenium-webdriver"
+-  gem "selenium-webdriver", "~> 3.142.7"
 -  gem 'webdrivers', '~> 4.4', require: false
 -  # RuboCop
 -  gem 'rubocop', '~> 1.12.0'
