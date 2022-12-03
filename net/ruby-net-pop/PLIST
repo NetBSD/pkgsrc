@@ -1,13 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1 2022/09/02 14:50:30 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/12/03 12:36:52 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.github/dependabot.yml
 ${GEM_LIBDIR}/.github/workflows/test.yml
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/bin/console
-${GEM_LIBDIR}/bin/setup
 ${GEM_LIBDIR}/lib/net/pop.rb
 ${GEM_LIBDIR}/net-pop.gemspec
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
