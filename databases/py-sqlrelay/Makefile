@@ -1,31 +1,21 @@
-# $NetBSD: Makefile,v 1.35 2022/10/26 10:31:19 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2022/12/03 15:53:40 adam Exp $
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	6
 COMMENT=	Python extension for SQL Relay
 
 .include "../../databases/sqlrelay/Makefile.common"
 
 LICENSE=	modified-bsd
 
-# TODO: switch to PYTHON_VERSIONS_INCOMPATIBLE
-#PYTHON_VERSIONS_ACCEPTED=	37 27 # 37 fails as of 1.0.0
-
-.include "../../lang/python/pyversion.mk"
-
 CONFIGURE_ARGS+=	--disable-perl
-
-#.if ${_PYTHON_VERSION} == 27
-#CONFIGURE_ARGS+=	--disable-python3
-#.else
-#CONFIGURE_ARGS+=	--disable-python
-#.endif
 CONFIGURE_ARGS+=	--with-python-prefix=${PREFIX}
 CONFIGURE_ENV+=		PYVERSSUFFIX=${PYVERSSUFFIX}
 
 BUILD_DIRS=		src/api/python
 
 PY_PATCHPLIST=		yes
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../databases/sqlrelay/buildlink3.mk"
 .include "../../lang/python/extension.mk"
