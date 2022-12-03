@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2022/11/23 13:15:03 adam Exp $
+# $NetBSD: Makefile,v 1.7 2022/12/03 21:34:38 adam Exp $
 
 DISTNAME=	node-v14.21.1
+PKGREVISION=	1
 EXTRACT_SUFX=	.tar.xz
 
 USE_LANGUAGES=	c gnu++14
@@ -13,10 +14,13 @@ MAKE_ENV+=	LD_LIBRARY_PATH=${PREFIX}/lib
 CONFIGURE_ARGS+=	--shared-brotli
 CONFIGURE_ARGS+=	--shared-nghttp2
 CONFIGURE_ARGS+=	--with-intl=system-icu
-CONFIGURE_ARGS+=	--without-corepack
+CONFIGURE_ARGS+=	--without-dtrace
 
 PYTHON_VERSIONS_ACCEPTED=	27
 
+REPLACE_NODEJS+=		deps/corepack/dist/*.js
+.include "../../lang/nodejs/application.mk"
+CHECK_INTERPRETER_SKIP+=	lib/node_modules/corepack/shims/*.ps1
 CHECK_PORTABILITY_SKIP+=	tools/macos-installer/pkgbuild/npm/scripts/preinstall
 
 .if ${MACHINE_ARCH} == "i386"
