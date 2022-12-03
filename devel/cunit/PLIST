@@ -1,15 +1,17 @@
-@comment $NetBSD: PLIST,v 1.4 2018/01/01 22:29:23 rillig Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/12/03 08:46:39 adam Exp $
 include/CUnit/Automated.h
 include/CUnit/Basic.h
 ${PLIST.curses}include/CUnit/CUCurses.h
 include/CUnit/CUError.h
 include/CUnit/CUnit.h
+include/CUnit/CUnit_intl.h
 include/CUnit/Console.h
 include/CUnit/MyMem.h
 include/CUnit/TestDB.h
 include/CUnit/TestRun.h
 include/CUnit/Util.h
 lib/libcunit.la
+lib/pkgconfig/cunit.pc
 man/man3/CUnit.3
 share/CUnit/CUnit-List.dtd
 share/CUnit/CUnit-List.xsl
@@ -25,6 +27,7 @@ share/doc/CUnit/headers/Basic.h
 share/doc/CUnit/headers/CUCurses.h
 share/doc/CUnit/headers/CUError.h
 share/doc/CUnit/headers/CUnit.h
+share/doc/CUnit/headers/CUnit_intl.h
 share/doc/CUnit/headers/Console.h
 share/doc/CUnit/headers/MyMem.h
 share/doc/CUnit/headers/TestDB.h
