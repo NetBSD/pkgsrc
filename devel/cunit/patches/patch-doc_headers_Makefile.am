@@ -1,0 +1,14 @@
+$NetBSD: patch-doc_headers_Makefile.am,v 1.1 2022/12/03 08:46:39 adam Exp $
+
+lace documentation in the correct place.
+
+--- doc/headers/Makefile.am.orig	2022-12-02 22:10:17.000000000 +0000
++++ doc/headers/Makefile.am
+@@ -1,6 +1,6 @@
+ ## Process this file with automake to produce Makefile.in
+ 
+-dochdrdir = $(prefix)/doc/@PACKAGE@/headers
++dochdrdir = $(prefix)/share/doc/@PACKAGE@/headers
+ 
+ INCLUDE_FILES = \
+ 	Automated.h \
