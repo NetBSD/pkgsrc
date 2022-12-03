@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2021/02/16 13:10:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.22 2022/12/03 15:50:50 adam Exp $
 bin/rudiments-config
 include/rudiments/aes128.h
 include/rudiments/avltree.h
@@ -219,6 +219,8 @@ include/rudiments/private/sax.h
 include/rudiments/private/saxincludes.h
 include/rudiments/private/semaphoreset.h
 include/rudiments/private/semaphoresetincludes.h
+include/rudiments/private/sensitivevalue.h
+include/rudiments/private/sensitivevalueincludes.h
 include/rudiments/private/server.h
 include/rudiments/private/serverincludes.h
 include/rudiments/private/serviceentry.h
@@ -274,9 +276,14 @@ include/rudiments/private/urlhttprequestincludes.h
 include/rudiments/private/urlincludes.h
 include/rudiments/private/userentry.h
 include/rudiments/private/userentryincludes.h
+include/rudiments/private/wcharacterincludes.h
+include/rudiments/private/wcharstring.h
+include/rudiments/private/wcharstringincludes.h
 include/rudiments/private/websocket.h
 include/rudiments/private/websocketincludes.h
 include/rudiments/private/winsock.h
+include/rudiments/private/wstringbufferincludes.h
+include/rudiments/private/wstringbufferinlines.h
 include/rudiments/private/xmldom.h
 include/rudiments/private/xmldomincludes.h
 include/rudiments/private/xmlsax.h
@@ -292,6 +299,7 @@ include/rudiments/resultcodes.h
 include/rudiments/sax.h
 include/rudiments/security.h
 include/rudiments/semaphoreset.h
+include/rudiments/sensitivevalue.h
 include/rudiments/server.h
 include/rudiments/serviceentry.h
 include/rudiments/sha1.h
@@ -316,12 +324,17 @@ include/rudiments/unixsocketutil.h
 include/rudiments/url.h
 include/rudiments/urlhttprequest.h
 include/rudiments/userentry.h
+include/rudiments/wcharacter.h
+include/rudiments/wcharstring.h
 include/rudiments/websocket.h
+include/rudiments/wstringbuffer.h
 include/rudiments/xmldom.h
 include/rudiments/xmlsax.h
 lib/librudiments.la
 lib/pkgconfig/rudiments.pc
 man/man1/rudiments-config.1
+share/doc/rudiments/classes/html/aes128_8h_source.html
+share/doc/rudiments/classes/html/aes128includes_8h_source.html
 share/doc/rudiments/classes/html/annotated.html
 share/doc/rudiments/classes/html/apachehttpserverapi_8h_source.html
 share/doc/rudiments/classes/html/apachehttpserverapiincludes_8h_source.html
@@ -346,6 +359,8 @@ share/doc/rudiments/classes/html/charstring_8h_source.html
 share/doc/rudiments/classes/html/charstringincludes_8h_source.html
 share/doc/rudiments/classes/html/chat_8h_source.html
 share/doc/rudiments/classes/html/chatincludes_8h_source.html
+share/doc/rudiments/classes/html/classaes128-members.html
+share/doc/rudiments/classes/html/classaes128.html
 share/doc/rudiments/classes/html/classapachehttpserverapi-members.html
 share/doc/rudiments/classes/html/classapachehttpserverapi.html
 share/doc/rudiments/classes/html/classavltree-members.html
@@ -384,6 +399,12 @@ share/doc/rudiments/classes/html/classcompilerpreprocessor-members.html
 share/doc/rudiments/classes/html/classcompilerpreprocessor.html
 share/doc/rudiments/classes/html/classcompilerprocessor-members.html
 share/doc/rudiments/classes/html/classcompilerprocessor.html
+share/doc/rudiments/classes/html/classcronschedule-members.html
+share/doc/rudiments/classes/html/classcronschedule.html
+share/doc/rudiments/classes/html/classcronscheduledaypart-members.html
+share/doc/rudiments/classes/html/classcronscheduledaypart.html
+share/doc/rudiments/classes/html/classcronscheduleperiod-members.html
+share/doc/rudiments/classes/html/classcronscheduleperiod.html
 share/doc/rudiments/classes/html/classcrypt-members.html
 share/doc/rudiments/classes/html/classcrypt.html
 share/doc/rudiments/classes/html/classcsvdom-members.html
@@ -412,6 +433,8 @@ share/doc/rudiments/classes/html/classdynamicarray-members.html
 share/doc/rudiments/classes/html/classdynamicarray.html
 share/doc/rudiments/classes/html/classdynamiclib-members.html
 share/doc/rudiments/classes/html/classdynamiclib.html
+share/doc/rudiments/classes/html/classencryption-members.html
+share/doc/rudiments/classes/html/classencryption.html
 share/doc/rudiments/classes/html/classenvironment-members.html
 share/doc/rudiments/classes/html/classenvironment.html
 share/doc/rudiments/classes/html/classerror-members.html
@@ -526,6 +549,8 @@ share/doc/rudiments/classes/html/classsecuritycontext-members.html
 share/doc/rudiments/classes/html/classsecuritycontext.html
 share/doc/rudiments/classes/html/classsemaphoreset-members.html
 share/doc/rudiments/classes/html/classsemaphoreset.html
+share/doc/rudiments/classes/html/classsensitivevalue-members.html
+share/doc/rudiments/classes/html/classsensitivevalue.html
 share/doc/rudiments/classes/html/classserialport-members.html
 share/doc/rudiments/classes/html/classserialport.html
 share/doc/rudiments/classes/html/classserialportprofile-members.html
@@ -592,10 +617,16 @@ share/doc/rudiments/classes/html/classurlhttprequest-members.html
 share/doc/rudiments/classes/html/classurlhttprequest.html
 share/doc/rudiments/classes/html/classuserentry-members.html
 share/doc/rudiments/classes/html/classuserentry.html
+share/doc/rudiments/classes/html/classwcharacter-members.html
+share/doc/rudiments/classes/html/classwcharacter.html
+share/doc/rudiments/classes/html/classwcharstring-members.html
+share/doc/rudiments/classes/html/classwcharstring.html
 share/doc/rudiments/classes/html/classwebsocket-members.html
 share/doc/rudiments/classes/html/classwebsocket.html
 share/doc/rudiments/classes/html/classwinsock-members.html
 share/doc/rudiments/classes/html/classwinsock.html
+share/doc/rudiments/classes/html/classwstringbuffer-members.html
+share/doc/rudiments/classes/html/classwstringbuffer.html
 share/doc/rudiments/classes/html/classxmldom-members.html
 share/doc/rudiments/classes/html/classxmldom.html
 share/doc/rudiments/classes/html/classxmlsax-members.html
@@ -618,6 +649,8 @@ share/doc/rudiments/classes/html/config__vs2015_8h_source.html
 share/doc/rudiments/classes/html/config__vs2017_8h_source.html
 share/doc/rudiments/classes/html/config__vs5_8h_source.html
 share/doc/rudiments/classes/html/config__vs6_8h_source.html
+share/doc/rudiments/classes/html/cronschedule_8h_source.html
+share/doc/rudiments/classes/html/cronscheduleincludes_8h_source.html
 share/doc/rudiments/classes/html/crypt_8h_source.html
 share/doc/rudiments/classes/html/cryptincludes_8h_source.html
 share/doc/rudiments/classes/html/csvdom_8h_source.html
@@ -649,13 +682,14 @@ share/doc/rudiments/classes/html/domincludes_8h_source.html
 share/doc/rudiments/classes/html/domnode_8h_source.html
 share/doc/rudiments/classes/html/domnodeincludes_8h_source.html
 share/doc/rudiments/classes/html/doxygen.css
-share/doc/rudiments/classes/html/doxygen.png
 share/doc/rudiments/classes/html/dynamicarray_8h_source.html
 share/doc/rudiments/classes/html/dynamicarrayincludes_8h_source.html
 share/doc/rudiments/classes/html/dynamicarrayinlines_8h_source.html
 share/doc/rudiments/classes/html/dynamiclib_8h_source.html
 share/doc/rudiments/classes/html/dynamiclibincludes_8h_source.html
 share/doc/rudiments/classes/html/dynsections.js
+share/doc/rudiments/classes/html/encryption_8h_source.html
+share/doc/rudiments/classes/html/encryptionincludes_8h_source.html
 share/doc/rudiments/classes/html/environment_8h_source.html
 share/doc/rudiments/classes/html/environmentincludes_8h_source.html
 share/doc/rudiments/classes/html/error_8h_source.html
@@ -811,6 +845,7 @@ share/doc/rudiments/classes/html/parameterstring_8h_source.html
 share/doc/rudiments/classes/html/parameterstringincludes_8h_source.html
 share/doc/rudiments/classes/html/permissions_8h_source.html
 share/doc/rudiments/classes/html/permissionsincludes_8h_source.html
+share/doc/rudiments/classes/html/private_2aes128_8h_source.html
 share/doc/rudiments/classes/html/private_2apachehttpserverapi_8h_source.html
 share/doc/rudiments/classes/html/private_2avltree_8h_source.html
 share/doc/rudiments/classes/html/private_2bytebuffer_8h_source.html
@@ -821,6 +856,7 @@ share/doc/rudiments/classes/html/private_2client_8h_source.html
 share/doc/rudiments/classes/html/private_2codetree_8h_source.html
 share/doc/rudiments/classes/html/private_2commandline_8h_source.html
 share/doc/rudiments/classes/html/private_2compiler_8h_source.html
+share/doc/rudiments/classes/html/private_2cronschedule_8h_source.html
 share/doc/rudiments/classes/html/private_2csvdom_8h_source.html
 share/doc/rudiments/classes/html/private_2csvsax_8h_source.html
 share/doc/rudiments/classes/html/private_2cursordomnode_8h_source.html
@@ -834,6 +870,7 @@ share/doc/rudiments/classes/html/private_2domevents_8h_source.html
 share/doc/rudiments/classes/html/private_2domnode_8h_source.html
 share/doc/rudiments/classes/html/private_2dynamicarray_8h_source.html
 share/doc/rudiments/classes/html/private_2dynamiclib_8h_source.html
+share/doc/rudiments/classes/html/private_2encryption_8h_source.html
 share/doc/rudiments/classes/html/private_2environment_8h_source.html
 share/doc/rudiments/classes/html/private_2file_8h_source.html
 share/doc/rudiments/classes/html/private_2filedescriptor_8h_source.html
@@ -875,6 +912,7 @@ share/doc/rudiments/classes/html/private_2randomnumber_8h_source.html
 share/doc/rudiments/classes/html/private_2regularexpression_8h_source.html
 share/doc/rudiments/classes/html/private_2sax_8h_source.html
 share/doc/rudiments/classes/html/private_2semaphoreset_8h_source.html
+share/doc/rudiments/classes/html/private_2sensitivevalue_8h_source.html
 share/doc/rudiments/classes/html/private_2serialport_8h_source.html
 share/doc/rudiments/classes/html/private_2serialportprofile_8h_source.html
 share/doc/rudiments/classes/html/private_2server_8h_source.html
@@ -899,6 +937,7 @@ share/doc/rudiments/classes/html/private_2unixsocketutil_8h_source.html
 share/doc/rudiments/classes/html/private_2url_8h_source.html
 share/doc/rudiments/classes/html/private_2urlhttprequest_8h_source.html
 share/doc/rudiments/classes/html/private_2userentry_8h_source.html
+share/doc/rudiments/classes/html/private_2wcharstring_8h_source.html
 share/doc/rudiments/classes/html/private_2websocket_8h_source.html
 share/doc/rudiments/classes/html/private_2xmldom_8h_source.html
 share/doc/rudiments/classes/html/private_2xmlsax_8h_source.html
@@ -922,6 +961,8 @@ share/doc/rudiments/classes/html/saxincludes_8h_source.html
 share/doc/rudiments/classes/html/security_8h_source.html
 share/doc/rudiments/classes/html/semaphoreset_8h_source.html
 share/doc/rudiments/classes/html/semaphoresetincludes_8h_source.html
+share/doc/rudiments/classes/html/sensitivevalue_8h_source.html
+share/doc/rudiments/classes/html/sensitivevalueincludes_8h_source.html
 share/doc/rudiments/classes/html/serialport_8h_source.html
 share/doc/rudiments/classes/html/serialportincludes_8h_source.html
 share/doc/rudiments/classes/html/serialportprofile_8h_source.html
@@ -1001,9 +1042,16 @@ share/doc/rudiments/classes/html/urlhttprequestincludes_8h_source.html
 share/doc/rudiments/classes/html/urlincludes_8h_source.html
 share/doc/rudiments/classes/html/userentry_8h_source.html
 share/doc/rudiments/classes/html/userentryincludes_8h_source.html
+share/doc/rudiments/classes/html/wcharacter_8h_source.html
+share/doc/rudiments/classes/html/wcharacterincludes_8h_source.html
+share/doc/rudiments/classes/html/wcharstring_8h_source.html
+share/doc/rudiments/classes/html/wcharstringincludes_8h_source.html
 share/doc/rudiments/classes/html/websocket_8h_source.html
 share/doc/rudiments/classes/html/websocketincludes_8h_source.html
 share/doc/rudiments/classes/html/winsock_8h_source.html
+share/doc/rudiments/classes/html/wstringbuffer_8h_source.html
+share/doc/rudiments/classes/html/wstringbufferincludes_8h_source.html
+share/doc/rudiments/classes/html/wstringbufferinlines_8h_source.html
 share/doc/rudiments/classes/html/xmldom_8h_source.html
 share/doc/rudiments/classes/html/xmldomincludes_8h_source.html
 share/doc/rudiments/classes/html/xmlsax_8h_source.html
