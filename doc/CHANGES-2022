@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5883 2022/12/03 21:41:29 kim Exp $
+$NetBSD: CHANGES-2022,v 1.5884 2022/12/03 23:25:55 js Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8879,3 +8879,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated multimedia/libass to 0.17.0 [adam 2022-12-03]
 	Updated lang/nodejs14 to 14.21.1nb1 [adam 2022-12-03]
 	Updated shells/tcsh to 6.24.04 [kim 2022-12-03]
+	Updated devel/fossil to 2.20 [js 2022-12-03]
