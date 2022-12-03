@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2022/11/30 20:03:02 pin Exp $
+# $NetBSD: Makefile,v 1.2 2022/12/03 17:15:11 pin Exp $
 
 DISTNAME=	diffsitter-0.7.2
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=afnanenayet/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -20,6 +21,7 @@ PYTHON_FOR_BUILD_ONLY=		tool
 INSTALLATION_DIRS=	bin
 
 CARGO_NO_DEFAULT_FEATURES=	YES
+CARGO_FEATURES+=		dynamic-grammar-libs
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/diffsitter \
@@ -27,5 +29,4 @@ do-install:
 
 .include "../../lang/rust/cargo.mk"
 .include "../../lang/python/tool.mk"
-.include "../../textproc/tree-sitter/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
