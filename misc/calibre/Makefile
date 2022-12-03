@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.274 2022/12/02 16:01:20 wiz Exp $
+# $NetBSD: Makefile,v 1.275 2022/12/03 12:29:27 gdt Exp $
 
 DISTNAME=	calibre-5.44.0
 PKGREVISION=	1
 CATEGORIES=	misc
-MASTER_SITES=	http://download.calibre-ebook.com/${PKGVERSION_NOREV}/
+MASTER_SITES=	https://download.calibre-ebook.com/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
