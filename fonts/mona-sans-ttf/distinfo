@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/12/03 14:52:40 wiz Exp $
+
+BLAKE2s (Mona.Sans.1.0.zip) = ee95143e1a123eba84516b005ff0233e904e373dd44f723479dc02829ac049a4
+SHA512 (Mona.Sans.1.0.zip) = aaad8eaccca81f837509324b3313460d76f4236d9374d0b7c64d1655247d58a7699564e1b0b744aae41a3b9dd8a722fad4a5e4ef8674670c2a21bca3b78e946e
+Size (Mona.Sans.1.0.zip) = 4594166 bytes
