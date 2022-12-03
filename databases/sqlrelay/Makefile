@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.76 2022/10/26 10:31:01 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2022/12/03 15:53:40 adam Exp $
 
 COMMENT=	Database connection pooling middleware and API
-PKGREVISION=	6
 
 .include "../../databases/sqlrelay/Makefile.common"
 
@@ -25,6 +24,8 @@ CONFIGURE_ARGS+=	--disable-ruby
 CONFIGURE_ARGS+=	--disable-sqlite
 CONFIGURE_ARGS+=	--disable-sap
 CONFIGURE_ARGS+=	--disable-tcl
+
+MAKE_JOBS_SAFE=		no
 
 INSTALL_MAKE_FLAGS+=	EXAMPLEDIR=${DESTDIR}${EGDIR}
 
