@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2021/10/17 10:11:20 nia Exp $
+# $NetBSD: Makefile,v 1.30 2022/12/03 10:41:15 nros Exp $
 
-DISTNAME=	bftpd-6.0
+DISTNAME=	bftpd-6.1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bftpd/}
 
