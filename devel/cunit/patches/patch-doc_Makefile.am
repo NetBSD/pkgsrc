@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/01/10 21:03:58 agc Exp $
+$NetBSD: patch-doc_Makefile.am,v 1.1 2022/12/03 08:46:39 adam Exp $
 
-Place documentation in the correct place
+Place documentation in the correct place.
 
 --- doc/Makefile.am	2009/01/10 17:32:20	1.1
 +++ doc/Makefile.am	2009/01/10 17:32:29
