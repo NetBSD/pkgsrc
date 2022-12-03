@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.275 2022/12/03 12:29:27 gdt Exp $
+# $NetBSD: Makefile,v 1.276 2022/12/03 13:25:49 gdt Exp $
 
+# Needs update to 6.9.0
 DISTNAME=	calibre-5.44.0
 PKGREVISION=	1
 CATEGORIES=	misc
@@ -33,14 +34,14 @@ DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-qt5-[0-9]*:../../x11/py-qt5
 DEPENDS+=	${PYPKGPREFIX}-qt5-webengine-[0-9]*:../../x11/py-qt5-webengine
 DEPENDS+=	${PYPKGPREFIX}-regex-[0-9]*:../../textproc/py-regex
-DEPENDS+=	${PYPKGPREFIX}-sip5>=5.5<6:../../x11/py-sip5
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-soupsieve-[0-9]*:../../www/py-soupsieve
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-zeroconf-[0-9]*:../../net/py-zeroconf
 
 # for installation
-BUILD_DEPENDS+=	${PYPKGPREFIX}-qt-builder>=1:../../x11/py-qt-builder
+TOOL_DEPENDS+=	${PYPKGPREFIX}-qt-builder>=1:../../x11/py-qt-builder
+TOOL_DEPENDS+=	${PYPKGPREFIX}-sip5>=5.5<6:../../x11/py-sip5
 BUILD_DEPENDS+=	xdg-utils>=1.0.2:../../misc/xdg-utils
 
 EXTRACT_USING=	bsdtar
