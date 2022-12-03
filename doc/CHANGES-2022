@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5865 2022/12/03 08:47:46 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5866 2022/12/03 10:38:55 leot Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8845,7 +8845,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated mail/p5-Email-MessageID to 1.407 [wen 2022-12-02]
 	Updated mail/p5-Email-MIME-Encodings to 1.316 [wen 2022-12-02]
 	Updated mail/p5-Email-Sender to 2.600 [wen 2022-12-03]
-	Updated mail/p5-MIME-Charse to 1.013.1 [wen 2022-12-03]
+	Updated mail/p5-MIME-Charset to 1.013.1 [wen 2022-12-03]
 	Updated mail/p5-MIME-tools to 5.510 [wen 2022-12-03]
 	Updated mail/p5-Parse-MIME to 1.006 [wen 2022-12-03]
 	Updated mail/p5-Sendmail-PMilter to 1.23 [wen 2022-12-03]
