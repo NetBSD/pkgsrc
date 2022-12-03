@@ -1,4 +1,4 @@
-<!-- $NetBSD: introduction.xml,v 1.46 2020/08/14 07:40:51 schmonz Exp $ -->
+<!-- $NetBSD: introduction.xml,v 1.47 2022/12/03 01:58:18 gutteridge Exp $ -->
 
 <chapter id="introduction">
   <title>What is pkgsrc?</title>
@@ -224,7 +224,7 @@ minutes!</para>
       <row>
 	<entry><ulink url="https://www.bitrig.org/">Bitrig</ulink></entry>
 	<entry align="center">Jun 2014</entry>
-	<entry><ulink url="https://cdn.NetBSD.org/pub/pkgsrc/current/pkgsrc/bootstrap/README.Bitrig">README.Bitrig</ulink></entry>
+	<entry align="center">Removed from pkgsrc Sep 2022</entry>
       </row>
     </tbody>
   </tgroup>
@@ -391,6 +391,6 @@ minutes!</para>
       <quote>normal</quote> user privileges are sufficient. We use a
       &rprompt; for root's shell prompt, a &cprompt; for users'
       shell prompt, assuming they use the C-shell or tcsh and a &uprompt; for
-      bourne shell and derivatives.</para>
+      Bourne shell and derivatives.</para>
   </sect1>
 </chapter>
