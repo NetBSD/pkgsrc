@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/12/03 14:56:33 wiz Exp $
+
+BLAKE2s (Hubot.Sans.1.0.zip) = f9716c048469a12a64b1c59a971398934ab8de0bfa3e145f245064f05de8044e
+SHA512 (Hubot.Sans.1.0.zip) = 9fe6bad08b60f67a6d44ab0faaa9af004586841ef293e42a4503bec5217da7bc73e8904cd0a1c52c926ecdee55670bf2c1066e2357a7fb9796eb97f64da6f569
+Size (Hubot.Sans.1.0.zip) = 7215860 bytes
