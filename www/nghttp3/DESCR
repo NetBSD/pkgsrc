@@ -1,0 +1,5 @@
+This library implements RFC 9114 HTTP/3. It does not support server push.
+
+The following extensions have been implemented:
+* Extensible Prioritization Scheme for HTTP
+* Bootstrapping WebSockets with HTTP/3
