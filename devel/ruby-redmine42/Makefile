@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2022/10/10 03:24:52 taca Exp $
+# $NetBSD: Makefile,v 1.17 2022/12/03 06:40:09 taca Exp $
 
 DISTNAME=	redmine-${RM_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/redmine/redmine${RM_VER}/}
@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v2 # and so on.
 
 USE_TOOLS+=	pax
 
-RM_VERSION=	4.2.8
+RM_VERSION=	4.2.9
 
 NO_BUILD=	yes
 
