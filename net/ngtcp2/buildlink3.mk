@@ -1,0 +1,13 @@
+# $NetBSD: buildlink3.mk,v 1.1 2022/12/03 16:02:29 adam Exp $
+
+BUILDLINK_TREE+=	ngtcp2
+
+.if !defined(NGTCP2_BUILDLINK3_MK)
+NGTCP2_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.ngtcp2+=	ngtcp2>=0.11.0
+BUILDLINK_PKGSRCDIR.ngtcp2?=	../../net/ngtcp2
+
+.endif	# NGTCP2_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-ngtcp2
