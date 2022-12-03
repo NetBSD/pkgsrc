@@ -1,0 +1,3 @@
+train-rest - Train transport
+
+Provides a transport to communicate easily with RESTful APIs.

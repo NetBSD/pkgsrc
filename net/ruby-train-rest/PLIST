@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2022/12/03 13:42:01 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/lib/train-rest.rb
+${GEM_LIBDIR}/lib/train-rest/auth_handler.rb
+${GEM_LIBDIR}/lib/train-rest/auth_handler/anonymous.rb
+${GEM_LIBDIR}/lib/train-rest/auth_handler/authtype-apikey.rb
+${GEM_LIBDIR}/lib/train-rest/auth_handler/awsv4.rb
+${GEM_LIBDIR}/lib/train-rest/auth_handler/basic.rb
+${GEM_LIBDIR}/lib/train-rest/auth_handler/bearer.rb
+${GEM_LIBDIR}/lib/train-rest/auth_handler/header.rb
+${GEM_LIBDIR}/lib/train-rest/auth_handler/hmac-signature.rb
+${GEM_LIBDIR}/lib/train-rest/auth_handler/redfish.rb
+${GEM_LIBDIR}/lib/train-rest/connection.rb
+${GEM_LIBDIR}/lib/train-rest/errors.rb
+${GEM_LIBDIR}/lib/train-rest/transport.rb
+${GEM_LIBDIR}/lib/train-rest/version.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
