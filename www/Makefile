@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1651 2022/11/30 10:24:35 nros Exp $
+# $NetBSD: Makefile,v 1.1652 2022/12/03 16:01:02 adam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -243,6 +243,7 @@ SUBDIR+=	netscape
 SUBDIR+=	netsurf
 SUBDIR+=	nghttp2
 SUBDIR+=	nghttp2-tools
+SUBDIR+=	nghttp3
 SUBDIR+=	nginx
 SUBDIR+=	nginx-devel
 SUBDIR+=	nostromo
