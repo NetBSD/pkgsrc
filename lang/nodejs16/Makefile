@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2022/11/23 12:46:29 adam Exp $
+# $NetBSD: Makefile,v 1.9 2022/12/03 20:54:10 adam Exp $
 
 DISTNAME=	node-v16.18.1
+PKGREVISION=	1
 EXTRACT_SUFX=	.tar.xz
 
 USE_LANGUAGES=	c gnu++14
@@ -15,6 +16,7 @@ MAKE_ENV+=	LD_LIBRARY_PATH=${PREFIX}/lib
 CONFIGURE_ARGS+=	--shared-brotli
 CONFIGURE_ARGS+=	--shared-nghttp2
 CONFIGURE_ARGS+=	--with-intl=system-icu
+CONFIGURE_ARGS+=	--without-dtrace
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 311
 
@@ -47,9 +49,11 @@ minusx:
 
 .include "../../lang/nodejs/Makefile.common"
 .include "../../archivers/brotli/buildlink3.mk"
+.include "../../net/ngtcp2/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 # Requires nghttp2_option_set_max_settings
 BUILDLINK_API_DEPENDS.nghttp2+=	nghttp2>=1.41.0
 .include "../../www/nghttp2/buildlink3.mk"
+.include "../../www/nghttp3/buildlink3.mk"
 .include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
