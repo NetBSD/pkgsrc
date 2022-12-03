@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.46 2022/02/06 14:45:05 reinoud Exp $
+$NetBSD: distinfo,v 1.47 2022/12/03 15:34:30 reinoud Exp $
 
-BLAKE2s (UDFclient.0.8.12.tgz) = 68d6dbf8fada16fae29241f94a16771c69a2eb1d6c7e551ed4ba081107c3420b
-SHA512 (UDFclient.0.8.12.tgz) = f650ec3ffa245d8e098a2c718a12ce8004c8c7913295c7c1e3ac7a8e6ac55f9351c3f411761c664b24b30cdfeee1cd5b4eefc100101b4f3f1e81f03f6a04023a
-Size (UDFclient.0.8.12.tgz) = 256400 bytes
+BLAKE2s (UDFclient.0.8.20.tgz) = d253925747aca6f8549c1c2326074c8993a70298cc7c9c3b438e3934d8d0506c
+SHA512 (UDFclient.0.8.20.tgz) = f48b1f0f1248d581a8431e0ad425a1b17ad90eb49c263514fd1a05ea8c05619b7cbddf06d0d1ed05f11ec65b49c6d7b1b2ebb07591b9246dff4f6a501ae4e5a9
+Size (UDFclient.0.8.20.tgz) = 257392 bytes
