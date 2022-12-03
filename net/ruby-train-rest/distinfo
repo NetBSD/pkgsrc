@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/12/03 13:42:01 taca Exp $
+
+BLAKE2s (train-rest-0.5.0.gem) = d3cfb6dedd212d892737ad24c8087dcdf2a669e8706f075d0054859c9f574e16
+SHA512 (train-rest-0.5.0.gem) = 33229a352874017d7b3bc1a292fb77ed1b03b37c6d8ecba88ccf92e5d27c2524df0da70c8c73f32f38d54284537ea5e57d53df354eb8819bbc03df9b5c58243b
+Size (train-rest-0.5.0.gem) = 13824 bytes
