@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5870 2022/12/03 13:43:05 taca Exp $
+$NetBSD: CHANGES-2022,v 1.5871 2022/12/03 14:53:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8860,3 +8860,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/ruby-net-smtp to 0.3.3 [taca 2022-12-03]
 	Updated net/ruby-ruby_smb to 3.2.1 [taca 2022-12-03]
 	Added net/ruby-train-rest version 0.5.0 [taca 2022-12-03]
+	Added fonts/mona-sans-ttf version 1.0 [wiz 2022-12-03]
