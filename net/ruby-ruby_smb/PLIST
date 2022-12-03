@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2022/09/04 13:00:16 taca Exp $
+@comment $NetBSD: PLIST,v 1.13 2022/12/03 13:36:21 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.github/workflows/verify.yml
 ${GEM_LIBDIR}/.gitignore
@@ -247,6 +247,7 @@ ${GEM_LIBDIR}/lib/ruby_smb/nbss/session_header.rb
 ${GEM_LIBDIR}/lib/ruby_smb/nbss/session_request.rb
 ${GEM_LIBDIR}/lib/ruby_smb/ntlm.rb
 ${GEM_LIBDIR}/lib/ruby_smb/ntlm/client.rb
+${GEM_LIBDIR}/lib/ruby_smb/ntlm/custom/ntlm.rb
 ${GEM_LIBDIR}/lib/ruby_smb/peer_info.rb
 ${GEM_LIBDIR}/lib/ruby_smb/server.rb
 ${GEM_LIBDIR}/lib/ruby_smb/server/cli.rb
@@ -427,6 +428,7 @@ ${GEM_LIBDIR}/lib/ruby_smb/smb2/pipe.rb
 ${GEM_LIBDIR}/lib/ruby_smb/smb2/smb2_header.rb
 ${GEM_LIBDIR}/lib/ruby_smb/smb2/tree.rb
 ${GEM_LIBDIR}/lib/ruby_smb/smb_error.rb
+${GEM_LIBDIR}/lib/ruby_smb/utils.rb
 ${GEM_LIBDIR}/lib/ruby_smb/version.rb
 ${GEM_LIBDIR}/ruby_smb.gemspec
 ${GEM_LIBDIR}/spec/lib/ruby_smb/client_spec.rb
