@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2022/12/03 06:23:59 mef Exp $
+# $NetBSD: Makefile,v 1.40 2022/12/03 10:45:41 wiz Exp $
 
 DISTNAME=	liborcus-0.17.2
 PKGNAME=	${DISTNAME:S/liborcus/orcus/}
@@ -28,5 +28,4 @@ PTHREAD_AUTO_VARS=	yes
 .include "../../devel/mdds/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../math/libixion/buildlink3.mk"
-.include "../../textproc/fmtlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
