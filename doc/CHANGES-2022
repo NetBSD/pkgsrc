@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5864 2022/12/03 06:42:11 taca Exp $
+$NetBSD: CHANGES-2022,v 1.5865 2022/12/03 08:47:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8854,3 +8854,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/ruby-power_assert to 2.0.2 [taca 2022-12-03]
 	Updated devel/ruby-redmine42 to 4.2.9 [taca 2022-12-03]
 	Updated devel/ruby-redmine50 to 5.0.4 [taca 2022-12-03]
+	Updated devel/cunit to 2.1.3 [adam 2022-12-03]
+	Updated audio/libmysofa to 1.3.1 [adam 2022-12-03]
