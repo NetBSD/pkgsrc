@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/12/03 01:49:07 gdt Exp $
+
+BLAKE2s (PyQt5_sip-12.11.0.tar.gz) = 40c4a7ec28a7b6442253e75c89227d782a8f6db0ffcbfbf1de7de845d5c02910
+SHA512 (PyQt5_sip-12.11.0.tar.gz) = 1542747ef1912c05b0054ffec16294046e20dd4eb757bb664fb92d7b6ed924521469e88d27e515146f725d153e3ebe3a3bf72805de6451fb52ff86ed5b9128d7
+Size (PyQt5_sip-12.11.0.tar.gz) = 122792 bytes
