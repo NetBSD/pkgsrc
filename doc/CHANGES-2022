@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5881 2022/12/03 20:54:40 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5882 2022/12/03 21:35:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8876,3 +8876,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/oculante to 0.6.23 [pin 2022-12-03]
 	Updated lang/nodejs18 to 18.12.1nb1 [adam 2022-12-03]
 	Updated lang/nodejs16 to 16.18.1nb1 [adam 2022-12-03]
+	Updated multimedia/libass to 0.17.0 [adam 2022-12-03]
+	Updated lang/nodejs14 to 14.21.1nb1 [adam 2022-12-03]
