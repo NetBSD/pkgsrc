@@ -1,10 +1,10 @@
-$NetBSD: patch-tools_v8_gypfiles_v8.gyp,v 1.3 2022/05/05 07:08:06 adam Exp $
+$NetBSD: patch-tools_v8_gypfiles_v8.gyp,v 1.4 2022/12/03 17:07:13 adam Exp $
 
-Add -larm on netbsd arm platforms.
+Add -larm on NetBSD ARM platforms.
 
---- tools/v8_gypfiles/v8.gyp.orig	2022-05-03 08:18:12.000000000 +0000
+--- tools/v8_gypfiles/v8.gyp.orig	2022-11-04 14:54:27.000000000 +0000
 +++ tools/v8_gypfiles/v8.gyp
-@@ -977,6 +977,12 @@
+@@ -975,6 +975,12 @@
          }],
          # Platforms that don't have Compare-And-Swap (CAS) support need to link atomic library
          # to implement atomic memory access
@@ -14,6 +14,6 @@ Add -larm on netbsd arm platforms.
 +            'libraries': ['-larm', ],
 +          },
 +        }],
-         ['v8_current_cpu in ["mips", "mipsel", "mips64", "mips64el", "ppc", "arm", "riscv64", "loong64"]', {
+         ['v8_current_cpu in ["mips64", "mips64el", "ppc", "arm", "riscv64", "loong64"]', {
            'link_settings': {
              'libraries': ['-latomic', ],
