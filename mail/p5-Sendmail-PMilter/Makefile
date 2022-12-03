@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.27 2022/06/28 11:34:32 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2022/12/03 01:41:45 wen Exp $
 #
 
-DISTNAME=	Sendmail-PMilter-1.00
+DISTNAME=	Sendmail-PMilter-1.23
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	10
 CATEGORIES=	mail perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/A/AV/AVAR/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/G/GW/GWHAYWOOD/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/release/Sendmail-PMilter
