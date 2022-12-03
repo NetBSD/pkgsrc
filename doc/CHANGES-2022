@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5876 2022/12/03 17:14:07 pin Exp $
+$NetBSD: CHANGES-2022,v 1.5877 2022/12/03 17:15:31 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8870,3 +8870,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed lang/nodejs12 [adam 2022-12-03]
 	Updated lang/nodejs to 19.2.0 [adam 2022-12-03]
 	Updated biology/balance-tui to 0.1.1 [pin 2022-12-03]
+	Updated devel/diffsitter to 0.7.2nb1 [pin 2022-12-03]
