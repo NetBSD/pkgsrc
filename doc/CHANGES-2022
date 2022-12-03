@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5868 2022/12/03 12:56:39 taca Exp $
+$NetBSD: CHANGES-2022,v 1.5869 2022/12/03 13:36:45 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8858,3 +8858,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated audio/libmysofa to 1.3.1 [adam 2022-12-03]
 	Updated net/ruby-net-pop to 0.1.2 [taca 2022-12-03]
 	Updated net/ruby-net-smtp to 0.3.3 [taca 2022-12-03]
+	Updated net/ruby-ruby_smb to 3.2.1 [taca 2022-12-03]
