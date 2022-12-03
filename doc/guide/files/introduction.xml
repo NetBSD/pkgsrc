@@ -1,4 +1,4 @@
-<!-- $NetBSD: introduction.xml,v 1.47 2022/12/03 01:58:18 gutteridge Exp $ -->
+<!-- $NetBSD: introduction.xml,v 1.48 2022/12/03 02:17:44 gutteridge Exp $ -->
 
 <chapter id="introduction">
   <title>What is pkgsrc?</title>
@@ -163,7 +163,6 @@ minutes!</para>
         <entry align="center">Dec 2002</entry>
 	<entry>
 	<ulink url="https://cdn.NetBSD.org/pub/pkgsrc/current/pkgsrc/bootstrap/README.IRIX">README.IRIX</ulink>
-	<ulink url="https://cdn.NetBSD.org/pub/pkgsrc/current/pkgsrc/bootstrap/README.IRIX5.3">README.IRIX5.3</ulink>
 	</entry>
       </row>
       <row>
@@ -224,7 +223,7 @@ minutes!</para>
       <row>
 	<entry><ulink url="https://www.bitrig.org/">Bitrig</ulink></entry>
 	<entry align="center">Jun 2014</entry>
-	<entry align="center">Removed from pkgsrc Sep 2022</entry>
+	<entry>Removed from pkgsrc Sep 2022</entry>
       </row>
     </tbody>
   </tgroup>
