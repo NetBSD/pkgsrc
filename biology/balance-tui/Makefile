@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2022/11/28 09:53:09 pin Exp $
+# $NetBSD: Makefile,v 1.2 2022/12/03 17:13:45 pin Exp $
 
-DISTNAME=	balance-tui-0.1.0
+DISTNAME=	balance-tui-0.1.1
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=BeaconBrigade/}
-GITHUB_TAG=	5523e04d07c3ba14f02e1ee6c4d58117d3c06269
+GITHUB_TAG=	5bf59733fd350ac67d8ef988d1dcfe2d0796d51b
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/BeaconBrigade/balance-tui/
