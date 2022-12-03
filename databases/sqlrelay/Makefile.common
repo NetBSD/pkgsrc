@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.23 2021/02/17 18:29:09 adam Exp $
+# $NetBSD: Makefile.common,v 1.24 2022/12/03 15:53:40 adam Exp $
 # used by databases/p5-sqlrelay/Makefile
 # used by databases/php-sqlrelay/Makefile
 # used by databases/py-sqlrelay/Makefile
@@ -11,7 +11,7 @@
 # used by databases/sqlrelay-sqlite/Makefile
 # used by databases/sqlrelay/Makefile
 
-DISTNAME=	sqlrelay-1.8.0
+DISTNAME=	sqlrelay-1.9.3
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sqlrelay/}
 
@@ -19,18 +19,15 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sqlrelay.sourceforge.net/
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
 
-PKG_DESTDIR_SUPPORT=	user-destdir
+USE_LANGUAGES=	c c++11
+USE_LIBTOOL=	yes
+USE_TOOLS+=	gmake
+GNU_CONFIGURE=	yes
+BUILD_DEFS+=	VARBASE
 
-USE_LANGUAGES=		c c++11
-USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake
-GNU_CONFIGURE=		yes
-BUILD_DEFS+=		VARBASE
-MAKE_JOBS_SAFE=		no
-
-DESCR_SRC=		${.CURDIR}/../../databases/sqlrelay/DESCR
-DISTINFO_FILE=		${.CURDIR}/../../databases/sqlrelay/distinfo
-PATCHDIR=		${.CURDIR}/../../databases/sqlrelay/patches
+DESCR_SRC=	${.CURDIR}/../../databases/sqlrelay/DESCR
+DISTINFO_FILE=	${.CURDIR}/../../databases/sqlrelay/distinfo
+PATCHDIR=	${.CURDIR}/../../databases/sqlrelay/patches
 
 CONFIGURE_ARGS+=	--disable-werror
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}

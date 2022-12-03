@@ -1,13 +1,13 @@
-$NetBSD: patch-configure,v 1.9 2021/03/01 14:39:01 taca Exp $
+$NetBSD: patch-configure,v 1.10 2022/12/03 15:53:40 adam Exp $
 
 Cripple iODBC check, we're using UnixODBC and it was getting in the way.
 Fix Perl lookup.
 Fix Python lookup.
 Fix Ruby support.
 
---- configure.orig	2020-08-26 04:30:07.000000000 +0000
+--- configure.orig	2022-08-09 14:57:21.000000000 +0000
 +++ configure
-@@ -28135,7 +28135,7 @@ fi
+@@ -28286,7 +28286,7 @@ fi
  
  
  
@@ -16,7 +16,7 @@ Fix Ruby support.
  NAME=iodbc
  HEADER=sql.h
  LIBNAME=iodbc
-@@ -33961,7 +33961,7 @@ fi
+@@ -34112,7 +34112,7 @@ fi
  
  			if ( test -z "$PERL" )
  			then
@@ -25,239 +25,67 @@ Fix Ruby support.
  				do
  					if ( test -d "$i" )
  					then
-@@ -34149,10 +34149,10 @@ then
+@@ -34300,52 +34300,10 @@ then
  
  		pyext=""
  
--		for pyversion in "3.9" "3.8" "3.7" "3.6" "3.5" "3.4" "3.3" "3.2" "3.1" "3.0" "2.9" "2.8" "2.7" "2.6" "2.5" "2.4" "2.3" "2.2" "2.1"
+-		for pyversion in \
+-				"3.20" \
+-				"3.19" \
+-				"3.18" \
+-				"3.17" \
+-				"3.16" \
+-				"3.15" \
+-				"3.14" \
+-				"3.13" \
+-				"3.12" \
+-				"3.11" \
+-				"3.10" \
+-				"3.9" \
+-				"3.8" \
+-				"3.7" \
+-				"3.6" \
+-				"3.5" \
+-				"3.4" \
+-				"3.3" \
+-				"3.2" \
+-				"3.1" \
+-				"3.0" \
+-				"2.9" \
+-				"2.8" \
+-				"2.7" \
+-				"2.6" \
+-				"2.5" \
+-				"2.4" \
+-				"2.3" \
+-				"2.2" \
+-				"2.1"
 +		for pyversion in "${PYVERSSUFFIX}"
  		do
  
--			for pyprefix in "$PYTHONPATH" "/usr" "/usr/local" "/usr/pkg" "/usr/local/python$pyversion" "/opt/sfw" "/usr/sfw" "/opt/csw" "/sw" "/System/Library/Frameworks/Python.framework/Versions/Current" "/boot/common"
+-			for pyprefix in \
+-				"$PYTHONPATH" \
+-				"/usr" \
+-				"/usr/local" \
+-				"/usr/pkg" \
+-				"/usr/local/python$pyversion" \
+-				"/opt/sfw" \
+-				"/usr/sfw" \
+-				"/opt/csw" \
+-				"/sw" \
+-				"/usr/freeware" \
+-				"/System/Library/Frameworks/Python.framework/Versions/Current" \
+-				"/boot/common"
 +			for pyprefix in "${PREFIX}"
  			do
  
  				if ( test -n "$pyprefix" )
-@@ -34328,219 +34328,9 @@ echo "***** Ruby *******************"
+@@ -34570,7 +34528,7 @@ echo "******************************"
+ echo
+ echo "***** Ruby *******************"
  
- if ( test "$ENABLE_RUBY" = "yes" )
+-if ( test "$ENABLE_RUBY" = "yes" )
++if ( false )
  then
--
--	HAVE_RUBY=""
--	RUBY=""
--	RUBYLIB=""
--
--	if ( test "$cross_compiling" = "yes" )
--	then
--
--				echo "cross compiling..."
--
--	else
--
--		found="no"
--
--		for major in "" "1" "2"
--		do
--
--			for minor in "" "9" "8" "7" "6" "5" "4" "3" "2" "1" "0"
--			do
--
--				for patchlevel in "" "0" "1" "2" "3" "4" "5" "6" "7" "8" "9"
--				do
--
--					for separator in "" "."
--					do
--
--			ruby="ruby$major$separator$minor"
--			if ( test -n "$patchlevel" )
--			then
--				ruby="ruby$major$separator$minor$separator$patchlevel"
--			fi
--
--			HAVE_RUBY=""
--			RUBY=""
--			RUBYLIB=""
--
--			if ( test -n "$RUBYPATH" )
--			then
--
--if ( test -r ""$RUBYPATH/bin/$ruby"" )
--then
--	eval "RUBY=\"$RUBYPATH/bin/$ruby\""
--fi
--
--			else
--				# Extract the first word of ""$ruby"", so it can be a program name with args.
--set dummy "$ruby"; ac_word=$2
--{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
--$as_echo_n "checking for $ac_word... " >&6; }
--if ${ac_cv_prog_RUBY+:} false; then :
--  $as_echo_n "(cached) " >&6
--else
--  if test -n "$RUBY"; then
--  ac_cv_prog_RUBY="$RUBY" # Let the user override the test.
--else
--as_save_IFS=$IFS; IFS=$PATH_SEPARATOR
--for as_dir in $PATH
--do
--  IFS=$as_save_IFS
--  test -z "$as_dir" && as_dir=.
--    for ac_exec_ext in '' $ac_executable_extensions; do
--  if as_fn_executable_p "$as_dir/$ac_word$ac_exec_ext"; then
--    ac_cv_prog_RUBY=""$ruby""
--    $as_echo "$as_me:${as_lineno-$LINENO}: found $as_dir/$ac_word$ac_exec_ext" >&5
--    break 2
--  fi
--done
--  done
--IFS=$as_save_IFS
--
--fi
--fi
--RUBY=$ac_cv_prog_RUBY
--if test -n "$RUBY"; then
--  { $as_echo "$as_me:${as_lineno-$LINENO}: result: $RUBY" >&5
--$as_echo "$RUBY" >&6; }
--else
--  { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
--$as_echo "no" >&6; }
--fi
--
--
--				if ( test -z "$RUBY" )
--				then
--					for i in "/usr/local/ruby/bin" "/usr/bin" "/usr/local/bin" "/usr/pkg/bin" "/opt/sfw/bin" "/usr/sfw/bin" "/opt/csw/bin" "/sw/bin" "/boot/common/bin" "/resources/index/bin"
--					do
--
--if ( test -r ""$i/$ruby"" )
--then
--	eval "RUBY=\"$i/$ruby\""
--fi
--
--						if ( test -n "$RUBY" )
--						then
--							found="yes"
--							break
--						fi
--					done
--				fi
--			fi
--
--			if ( test -n "$RUBY" )
--			then
--				HAVE_RUBY="yes"
--								if ( test -n "$CYGWIN" -o -n "$DARWIN" )
--				then
--					RUBYLIB="-lruby"
--				fi
--				found="yes"
--				break
--			fi
--						if ( test -z "$major" -o -z "$minor" -o -z "$patchlevel" )
--						then
--							break
--						fi
--
--					done
--					if ( test "$found" = "yes" )
--					then
--						break
--					fi
--					if ( test -z "$minor" )
--					then
--						break
--					fi
--				done
--				if ( test "$found" = "yes" )
--				then
--						break
--				fi
--				if ( test -z "$major" )
--				then
--					break
--				fi
--			done
--			if ( test "$found" = "yes" )
--			then
--				break
--			fi
--		done
--
--		if ( test -n "$HAVE_RUBY" )
--		then
--			{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for ruby.h" >&5
--$as_echo_n "checking for ruby.h... " >&6; }
--			rm -f conftest.rb
--			cat > conftest.rb << END
--require "mkmf"
--drive = File::PATH_SEPARATOR == ";" ? /\A\w:/ : /\A/
--print "\n"
--print "arch = "
--print CONFIG["arch"]
--print "\n"
--print "ruby_version = "
--begin
--print Config::CONFIG["ruby_version"]
--rescue
--print CONFIG["ruby_version"]
--end
--print "\n"
--print "prefix = "
--print CONFIG["prefix"].sub(drive, "")
--print "\n"
--print "exec_prefix = "
--print CONFIG["exec_prefix"].sub(drive, "")
--print "\n"
--print "libdir = "
--print \$libdir.sub(drive, "")
--print "\n"
--print "rubylibdir = "
--print \$rubylibdir.sub(drive, "")
--print "\n"
--print "topdir = "
--print \$topdir
--print "\n"
--print "hdrdir = "
--print \$hdrdir
--print "\n\n"
--print "all:\n"
--print "	echo \$(hdrdir)\n"
--END
--
--			HAVE_RUBY_H=""
--			for dir in `eval $RUBY conftest.rb 2>/dev/null | sed -e "s|-x.* | |g" -e "s|-belf||g" -e "s|-mtune=.* | |g" | $MAKE -s -f - | grep -v Entering | grep -v Leaving`
--			do
--				if ( test -r "$dir/ruby.h" )
--				then
--					HAVE_RUBY_H="yes"
--				fi
--			done
--			rm -f conftest.rb
--
--						if ( test -z "$HAVE_RUBY_H" )
--			then
--				{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
--$as_echo "no" >&6; }
--				HAVE_RUBY=""
--			else
--				{ $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
--$as_echo "yes" >&6; }
--			fi
--		fi
--	fi
--
--	if ( test -z "$HAVE_RUBY" )
--	then
--		{ $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: The Ruby API will not be built." >&5
--$as_echo "$as_me: WARNING: The Ruby API will not be built." >&2;}
--	fi
--
--
--
--
-+	HAVE_RUBY=yes
-+	RUBY="${RUBY}"
-+	RUBYLIB="-l$(${RUBY} -e 'require "mkmf"; puts RbConfig::CONFIG["RUBY_SO_NAME"]')"
- fi
  
- echo "******************************"
+ 	HAVE_RUBY=""
