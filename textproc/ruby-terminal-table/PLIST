@@ -1,16 +1,23 @@
-@comment $NetBSD: PLIST,v 1.2 2021/01/18 14:52:59 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/12/04 16:32:33 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.github/workflows/ci.yml
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/Gemfile
-${GEM_LIBDIR}/Gemfile.lock
 ${GEM_LIBDIR}/History.rdoc
 ${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/Manifest
-${GEM_LIBDIR}/README.rdoc
+${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/Todo.rdoc
+${GEM_LIBDIR}/examples/data.csv
 ${GEM_LIBDIR}/examples/examples.rb
+${GEM_LIBDIR}/examples/examples_unicode.rb
+${GEM_LIBDIR}/examples/issue100.rb
+${GEM_LIBDIR}/examples/issue111.rb
+${GEM_LIBDIR}/examples/issue118.rb
+${GEM_LIBDIR}/examples/issue95.rb
+${GEM_LIBDIR}/examples/show_csv_table.rb
+${GEM_LIBDIR}/examples/strong_separator.rb
 ${GEM_LIBDIR}/lib/terminal-table.rb
 ${GEM_LIBDIR}/lib/terminal-table/cell.rb
 ${GEM_LIBDIR}/lib/terminal-table/import.rb
@@ -19,6 +26,7 @@ ${GEM_LIBDIR}/lib/terminal-table/separator.rb
 ${GEM_LIBDIR}/lib/terminal-table/style.rb
 ${GEM_LIBDIR}/lib/terminal-table/table.rb
 ${GEM_LIBDIR}/lib/terminal-table/table_helper.rb
+${GEM_LIBDIR}/lib/terminal-table/util.rb
 ${GEM_LIBDIR}/lib/terminal-table/version.rb
 ${GEM_LIBDIR}/terminal-table.gemspec
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
