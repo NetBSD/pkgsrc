@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5892 2022/12/04 15:29:37 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.5893 2022/12/04 15:30:05 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8891,3 +8891,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/ruby-chef to 18.0.185 [taca 2022-12-04]
 	Updated sysutils/ruby-facter to 4.2.13 [taca 2022-12-04]
 	Updated x11/transset to 1.0.3 [wiz 2022-12-04]
+	Updated time/ruby-tzinfo-data to 1.2022.7 [taca 2022-12-04]
