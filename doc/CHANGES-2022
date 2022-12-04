@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5950 2022/12/04 20:10:07 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.5951 2022/12/04 22:05:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8954,3 +8954,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/py-yarl to 1.8.2 [adam 2022-12-04]
 	Added cross/i586-pc-msdosdjgpp-binutils version 2.39 [js 2022-12-04]
 	Added filesystems/kubo version 0.17.0 [wiz 2022-12-04]
+	Updated x11/xf86-video-r128 to 6.12.1 [wiz 2022-12-04]
