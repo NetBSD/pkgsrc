@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5924 2022/12/04 16:18:05 taca Exp $
+$NetBSD: CHANGES-2022,v 1.5925 2022/12/04 16:20:46 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8923,3 +8923,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/ruby-capybara to 3.38.0 [taca 2022-12-04]
 	Updated www/ruby-ethon to 0.16.0 [taca 2022-12-04]
 	Updated www/ruby-html-proofer to 5.0.2 [taca 2022-12-04]
+	Updated www/ruby-jekyll to 4.3.1 [taca 2022-12-04]
