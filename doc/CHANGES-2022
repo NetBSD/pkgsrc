@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5926 2022/12/04 16:22:20 taca Exp $
+$NetBSD: CHANGES-2022,v 1.5927 2022/12/04 16:24:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8925,3 +8925,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/ruby-html-proofer to 5.0.2 [taca 2022-12-04]
 	Updated www/ruby-jekyll to 4.3.1 [taca 2022-12-04]
 	Updated www/ruby-jekyll-feed to 0.17.0 [taca 2022-12-04]
+	Updated www/ruby-jquery-rails to 4.5.1 [taca 2022-12-04]
