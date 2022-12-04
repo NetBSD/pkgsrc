@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5903 2022/12/04 15:39:49 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.5904 2022/12/04 15:40:17 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8902,3 +8902,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/xprop to 1.2.6 [wiz 2022-12-04]
 	Updated www/ruby-aws-partitions to 1.670.0 [taca 2022-12-04]
 	Updated x11/xrandr to 1.5.2 [wiz 2022-12-04]
+	Updated www/ruby-aws-sdk-core to 3.168.3 [taca 2022-12-04]
