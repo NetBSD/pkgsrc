@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5898 2022/12/04 15:34:24 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.5899 2022/12/04 15:35:14 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8862,6 +8862,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Added net/ruby-train-rest version 0.5.0 [taca 2022-12-03]
 	Added fonts/mona-sans-ttf version 1.0 [wiz 2022-12-03]
 	Added fonts/hubot-sans-ttf version 1.0 [wiz 2022-12-03]
+	Updated misc/udfclient to 0.8.20 [reinoud 2022-12-03]
 	Updated devel/rudiments to 1.4.2 [adam 2022-12-03]
 	Updated databases/sqlrelay to 1.9.3 [adam 2022-12-03]
 	Added www/nghttp3 version 0.7.1 [adam 2022-12-03]
