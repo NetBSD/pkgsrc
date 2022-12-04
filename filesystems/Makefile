@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2022/09/24 06:37:45 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2022/12/04 20:09:54 wiz Exp $
 #
 
 COMMENT=	File systems, and file system related packages
@@ -35,6 +35,7 @@ SUBDIR+=	fuse-unionfs
 SUBDIR+=	fuse-wdfs
 SUBDIR+=	fuse-wikipediafs
 SUBDIR+=	glusterfs
+SUBDIR+=	kubo
 SUBDIR+=	libntfs
 SUBDIR+=	ltfs
 SUBDIR+=	ltfs-ltotape
