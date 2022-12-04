@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5938 2022/12/04 17:00:14 taca Exp $
+$NetBSD: CHANGES-2022,v 1.5939 2022/12/04 17:02:16 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8937,3 +8937,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/puppet to 7.20.0 [taca 2022-12-04]
 	Updated devel/ruby-async to 2.3.0 [taca 2022-12-04]
 	Updated devel/ruby-io-event to 1.1.3 [taca 2022-12-04]
+	Updated www/ruby-pygments.rb to 2.3.1 [taca 2022-12-04]
