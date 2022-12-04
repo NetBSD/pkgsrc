@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 11:34:59 nia Exp $
+$NetBSD: distinfo,v 1.11 2022/12/04 15:46:39 wiz Exp $
 
-BLAKE2s (xvinfo-1.1.4.tar.bz2) = a5b730bdc3cdc5b7c7d67909feea2064775459a46a844512e1e6d8396f164447
-SHA512 (xvinfo-1.1.4.tar.bz2) = 85e1f936c5c826f0fdde3670bd77d5cde8641c6e8e7849e42142e91b5aa01d7e0e60d2b064eb6fef4f5666321813ca2dc9f9656756ccbe6dcda37b119ee8a63e
-Size (xvinfo-1.1.4.tar.bz2) = 126503 bytes
+BLAKE2s (xvinfo-1.1.5.tar.xz) = 9fd9b9be7daaddcd35c99592fe2694bc2fac45f03dcc168e4affb2be4f9545c3
+SHA512 (xvinfo-1.1.5.tar.xz) = 18467161b248c68f6bde15e1c1b4b8cf812daf46777602558aee5fb7cb4d2649218de88fa93842fea4f316d954440f03a37d71fa4fda92eda3c7d80970e19cbb
+Size (xvinfo-1.1.5.tar.xz) = 120700 bytes
