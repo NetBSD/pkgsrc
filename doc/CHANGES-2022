@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5936 2022/12/04 16:54:34 taca Exp $
+$NetBSD: CHANGES-2022,v 1.5937 2022/12/04 16:57:49 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8935,3 +8935,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/ruby-specinfra to 2.83.4 [taca 2022-12-04]
 	Updated devel/ruby-parser to 3.19.2 [taca 2022-12-04]
 	Updated sysutils/puppet to 7.20.0 [taca 2022-12-04]
+	Updated devel/ruby-async to 2.3.0 [taca 2022-12-04]
