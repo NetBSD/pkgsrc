@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:14:40 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/12/04 19:04:21 he Exp $
 
 BLAKE2s (gdb-7.11.tar.gz) = 249d7d148c5aa36e9040ddbafb515f4c4959d604d2e87be0f6fefcd68011617d
 SHA512 (gdb-7.11.tar.gz) = 6854774bba73ecf02c4d8bb4e194b8fd8fd3c6c661cbead0b3b816b9d9f736df1b85f331a669808700b0ad0f945b58483fffb77d49f5b690e828a00f65c04893
@@ -6,7 +6,8 @@ Size (gdb-7.11.tar.gz) = 35215975 bytes
 SHA1 (patch-Makefile.in) = 48f65798f96fdda2a35eb8b18a7cc2993023bcc7
 SHA1 (patch-ao) = fe55dc7245f438fccb7965ceb220be951f85a535
 SHA1 (patch-gdb_amd64bsd-nat.c) = ce3a52c090bb83b91e87d0fff301ddb2eb2d3dfb
-SHA1 (patch-gdb_bsd-kvm.c) = 837614b107181f79fd5c018ebd76a9010e5ab602
+SHA1 (patch-gdb_bsd-kvm.c) = 0bf346f12a0cb91cbcbd7e849ce0ec982be62a71
+SHA1 (patch-gdb_common_common-defs.h) = 5be634e1657da574908cfef60717bd1fea7a2e31
 SHA1 (patch-gdb_ppcnbsd-nat.c) = 94c9f552fd00e3641e7a0fa8372de538b4571d0b
 SHA1 (patch-opcodes_i386-dis_c) = 57b2b2ce85567faf112ec9f435b9aed0ffc943fb
 SHA1 (patch-sim_ppc_emul_netbsd.c) = 34fcb884c3c82e8eae6cd6f8c87ce42e9354c347
