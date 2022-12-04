@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5946 2022/12/04 17:43:50 pin Exp $
+$NetBSD: CHANGES-2022,v 1.5947 2022/12/04 18:00:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8946,3 +8946,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated editors/tp-note to 1.19.7 [pin 2022-12-04]
 	Updated textproc/git-delta to 0.15.1 [pin 2022-12-04]
 	Updated graphics/kvantum to 1.0.7 [pin 2022-12-04]
+	Updated net/grpc to 1.51.1 [adam 2022-12-04]
+	Updated net/py-grpcio to 1.51.1 [adam 2022-12-04]
+	Updated net/py-grpcio-testing to 1.51.1 [adam 2022-12-04]
+	Updated net/py-grpcio-tools to 1.51.1 [adam 2022-12-04]
