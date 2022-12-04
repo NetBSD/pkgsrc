@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2020/08/14 04:49:21 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.17 2022/12/04 16:20:26 taca Exp $
 bin/jekyll${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.rubocop.yml
@@ -24,6 +24,7 @@ ${GEM_LIBDIR}/lib/jekyll/commands/new_theme.rb
 ${GEM_LIBDIR}/lib/jekyll/commands/serve.rb
 ${GEM_LIBDIR}/lib/jekyll/commands/serve/live_reload_reactor.rb
 ${GEM_LIBDIR}/lib/jekyll/commands/serve/livereload_assets/livereload.js
+${GEM_LIBDIR}/lib/jekyll/commands/serve/mime_types_charset.json
 ${GEM_LIBDIR}/lib/jekyll/commands/serve/servlet.rb
 ${GEM_LIBDIR}/lib/jekyll/commands/serve/websockets.rb
 ${GEM_LIBDIR}/lib/jekyll/configuration.rb
@@ -42,6 +43,7 @@ ${GEM_LIBDIR}/lib/jekyll/drops/excerpt_drop.rb
 ${GEM_LIBDIR}/lib/jekyll/drops/jekyll_drop.rb
 ${GEM_LIBDIR}/lib/jekyll/drops/site_drop.rb
 ${GEM_LIBDIR}/lib/jekyll/drops/static_file_drop.rb
+${GEM_LIBDIR}/lib/jekyll/drops/theme_drop.rb
 ${GEM_LIBDIR}/lib/jekyll/drops/unified_payload_drop.rb
 ${GEM_LIBDIR}/lib/jekyll/drops/url_drop.rb
 ${GEM_LIBDIR}/lib/jekyll/entry_filter.rb
