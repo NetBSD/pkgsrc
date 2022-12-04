@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.48 2022/12/04 16:09:47 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2022/12/04 16:12:46 wiz Exp $
 #
 # Please also update the dependency pattern in mozilla-rootcerts-openssl
 # and bump its version when updating this package.
 
 DISTNAME=	mozilla-rootcerts-1.0.${CERTDATA_DATE}
 CATEGORIES=	security
-MASTER_SITES=	-https://hg.mozilla.org/mozilla-central/raw-file/8a140b71769579902156914a69ba4849c5598db3/security/nss/lib/ckfw/builtins/certdata.txt
+MASTER_SITES=	-https://hg.mozilla.org/mozilla-central/raw-file/fc546cbeb1cc7a486bc5147bcff3a879374cf213/security/nss/lib/ckfw/builtins/certdata.txt
 EXTRACT_SUFX=	# empty
 DISTFILES=	${CERTDATA}
 
@@ -30,7 +30,7 @@ DATADIR=	${PREFIX}/share/${PKGBASE}
 CHECK_BUILTIN.openssl=	yes
 .include "../../security/openssl/builtin.mk"
 CHECK_BUILTIN.openssl=	no
-.if !empty(USE_BUILTIN.openssl:M[yY][eE][sS])
+.if ${USE_BUILTIN.openssl:U:tl} == yes
 SSLDIR=		/etc/openssl
 .else
 SSLDIR=		${PKG_SYSCONFDIR}/openssl
