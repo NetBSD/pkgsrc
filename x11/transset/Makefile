@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2020/01/18 23:35:57 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2022/12/04 15:29:25 wiz Exp $
 
-DISTNAME=	transset-1.0.2
+DISTNAME=	transset-1.0.3
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://xorg.freedesktop.org/
