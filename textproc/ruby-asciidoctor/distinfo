@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2022/04/03 16:01:34 rhialto Exp $
+$NetBSD: distinfo,v 1.10 2022/12/04 15:52:24 taca Exp $
 
-BLAKE2s (asciidoctor-2.0.17.gem) = d1e842e3ab621461e6d198ec1d14b7b967be946fabe13bb35787634af17d2f29
-SHA512 (asciidoctor-2.0.17.gem) = 41ebc833c7b8bded5704034c7fcf7d2f26643a24de24eda57db1a0ac94976e775bf0f093f46faaa99c5007c61af325aa5b02e5321159a88daac3397800adbd03
-Size (asciidoctor-2.0.17.gem) = 279040 bytes
+BLAKE2s (asciidoctor-2.0.18.gem) = d2fe657ffac31a47e441f676533fdde70c86fe91171a5653a7be25e220396890
+SHA512 (asciidoctor-2.0.18.gem) = 522c0a587a95c7a5c5618f88832c11a547448d12b883ee9a7d9f6e8509b44e2c5c027cf23335790cbc5cd74dc297010141ac535c0ba45622e49eac8d70fe6127
+Size (asciidoctor-2.0.18.gem) = 280064 bytes
