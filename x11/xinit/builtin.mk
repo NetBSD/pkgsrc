@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.1 2021/12/03 13:03:01 nia Exp $
+# $NetBSD: builtin.mk,v 1.2 2022/12/04 15:35:27 wiz Exp $
 
 BUILTIN_PKG:=	xinit
 
@@ -25,7 +25,7 @@ MAKEVARS+=		IS_BUILTIN.xinit
 ### a package name to represent the built-in package.
 ###
 .if !defined(BUILTIN_PKG.xinit) && \
-    !empty(IS_BUILTIN.xinit:M[yY][eE][sS]) && \
+    ${IS_BUILTIN.xinit:tl} == yes && \
     empty(XINIT:M__nonexistent__)
 
 # we're more worried about existence, rather than actual version
@@ -45,10 +45,10 @@ USE_BUILTIN.xinit=	no
 .  else
 USE_BUILTIN.xinit=	${IS_BUILTIN.xinit}
 .    if defined(BUILTIN_PKG.xinit) && \
-        !empty(IS_BUILTIN.xinit:M[yY][eE][sS])
+        ${IS_BUILTIN.xinit:tl} == yes
 USE_BUILTIN.xinit=	yes
 .      for _dep_ in ${BUILDLINK_API_DEPENDS.xinit}
-.        if !empty(USE_BUILTIN.xinit:M[yY][eE][sS])
+.        if ${USE_BUILTIN.xinit:tl} == yes
 USE_BUILTIN.xinit!=							\
 	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.xinit:Q}; then \
 		${ECHO} yes;						\
@@ -62,7 +62,7 @@ USE_BUILTIN.xinit!=							\
 .endif
 
 # Now set up the appropriate prefix for xinit
-.if !empty(USE_BUILTIN.xinit:M[yY][eE][sS])
+.if ${USE_BUILTIN.xinit:tl} == yes
 XINITBASE=		${X11BASE}
 .else
 XINITBASE=		${PREFIX}

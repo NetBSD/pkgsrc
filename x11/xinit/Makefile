@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.31 2022/11/09 13:14:29 joerg Exp $
+# $NetBSD: Makefile,v 1.32 2022/12/04 15:35:27 wiz Exp $
 
-DISTNAME=		xinit-1.4.1
+DISTNAME=		xinit-1.4.2
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=app/}
-EXTRACT_SUFX=		.tar.bz2
+EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/
