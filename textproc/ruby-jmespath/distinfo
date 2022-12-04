@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2022/08/29 13:23:44 taca Exp $
+$NetBSD: distinfo,v 1.5 2022/12/04 15:59:56 taca Exp $
 
-BLAKE2s (jmespath-1.6.1.gem) = c5ffa99e898e85c1e60f0f3c77aad99efa7a0b64f20b64a6d90bae44139681c9
-SHA512 (jmespath-1.6.1.gem) = e06f6f4d47abbe552cff4055fff3841380ee8779b61c5f68b184e1acbcc588a97ad7d83225671a9f547d1077041592553f5f44649d6ceb76d369a0fc462439f3
-Size (jmespath-1.6.1.gem) = 20992 bytes
+BLAKE2s (jmespath-1.6.2.gem) = 8ded3593d02c31fa7de3a87ce4c8ee43cd8ac33dc004d0cf52c3fa362fc5389c
+SHA512 (jmespath-1.6.2.gem) = cd95094b00d7b9650d8811e9b7eefe15fcf0286c7a9bd1a7a40eae31a45ec1fb2b86b29901e03200a27743997694eee79fa463de2762044ca76d51f1fa3bd56e
+Size (jmespath-1.6.2.gem) = 20992 bytes
