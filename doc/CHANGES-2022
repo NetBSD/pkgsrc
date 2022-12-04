@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5933 2022/12/04 16:42:34 taca Exp $
+$NetBSD: CHANGES-2022,v 1.5934 2022/12/04 16:44:26 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8932,3 +8932,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/ruby-net-scp to 4.0.0 [taca 2022-12-04]
 	Updated security/ruby-net-ssh to 7.0.1 [taca 2022-12-04]
 	Updated security/ruby-rotp to 6.2.1 [taca 2022-12-04]
+	Updated sysutils/ruby-specinfra to 2.83.4 [taca 2022-12-04]
