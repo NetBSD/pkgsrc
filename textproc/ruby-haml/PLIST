@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2022/10/09 08:35:52 taca Exp $
+@comment $NetBSD: PLIST,v 1.20 2022/12/04 15:56:11 taca Exp $
 bin/haml${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
@@ -76,4 +76,5 @@ ${GEM_LIBDIR}/lib/haml/template.rb
 ${GEM_LIBDIR}/lib/haml/temple_line_counter.rb
 ${GEM_LIBDIR}/lib/haml/util.rb
 ${GEM_LIBDIR}/lib/haml/version.rb
+${GEM_LIBDIR}/lib/haml/whitespace.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
