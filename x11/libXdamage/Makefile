@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2022/11/09 13:14:21 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2022/12/04 23:16:35 wiz Exp $
 
-DISTNAME=		libXdamage-1.1.5
+DISTNAME=		libXdamage-1.1.6
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
-EXTRACT_SUFX=		.tar.bz2
+EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/
