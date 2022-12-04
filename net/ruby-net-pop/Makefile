@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/12/03 12:54:23 taca Exp $
+# $NetBSD: Makefile,v 1.6 2022/12/04 01:35:10 taca Exp $
 
 DISTNAME=	net-pop-0.1.2
 CATEGORIES=	net mail
@@ -14,6 +14,9 @@ DEPENDS+=	${RUBY_PKGPREFIX}-digest>=0:../../security/ruby-digest
 # This package is mainly for redmine50 on Ruby 2.7.
 
 USE_LANGUAGES=	# none
+
+# Ruby 3.1 has the same version of ruby-digest.
+RUBY_VERSIONS_ACCEPTED=	27 30
 
 .include "../../lang/ruby/rubyversion.mk"
 
