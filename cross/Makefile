@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.107 2022/12/04 22:37:27 js Exp $
+# $NetBSD: Makefile,v 1.108 2022/12/04 22:39:43 js Exp $
 #
 
 COMMENT=	Cross-platform development utilities
@@ -37,6 +37,7 @@ SUBDIR+=	gcc-mips-current
 SUBDIR+=	h8300-elf-binutils
 SUBDIR+=	h8300-elf-gcc
 SUBDIR+=	i586-pc-msdosdjgpp-binutils
+SUBDIR+=	i586-pc-msdosdjgpp-gcc
 SUBDIR+=	i586-pc-msdosdjgpp-sdk
 SUBDIR+=	icdprog
 SUBDIR+=	lwtools
