@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5909 2022/12/04 15:46:53 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.5910 2022/12/04 15:47:29 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8908,3 +8908,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/xset to 1.2.5 [wiz 2022-12-04]
 	Updated x11/xstdcmap to 1.0.5 [wiz 2022-12-04]
 	Updated x11/xvinfo to 1.1.5 [wiz 2022-12-04]
+	Updated www/ruby-aws-sdk-s3 to 1.117.2 [taca 2022-12-04]
