@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2022/08/30 15:33:18 taca Exp $
+$NetBSD: distinfo,v 1.11 2022/12/04 16:05:33 taca Exp $
 
-BLAKE2s (review-5.5.0.gem) = 124b94e7ef2b6314c962082d0f585cfc946be3ff56cbc5859245d35e1fc87f73
-SHA512 (review-5.5.0.gem) = d6d496b8f871b56b52deff0a46fd89cb4da9fe40a16c2f58cad9ddfec2afa7459b6a16d52ddf2db70a6870ddc3fac1b1734a9fac8462fd5b51db8da72af43af1
-Size (review-5.5.0.gem) = 7616512 bytes
+BLAKE2s (review-5.6.0.gem) = c3c58c1436a2bd27a35ba5c1b63190a237f06664305403f1533f3f9c38c41d1e
+SHA512 (review-5.6.0.gem) = c6d99874760fe36254a4f58a2b7a7a044b0ff3b64094658bc2b4d38b999aa4370d1e73d8a92d4c3a4aabaa184dc2f3c9f213f47005c76b2eacf598708c602284
+Size (review-5.6.0.gem) = 7620608 bytes
