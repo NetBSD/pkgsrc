@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5888 2022/12/04 15:13:20 taca Exp $
+$NetBSD: CHANGES-2022,v 1.5889 2022/12/04 15:18:51 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8885,3 +8885,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated print/ruby-pdf-reader to 2.11.0 [taca 2022-12-04]
 	Updated net/ruby-train-core to 3.10.7 [taca 2022-12-04]
 	Updated misc/ruby-ohai to 18.0.26 [taca 2022-12-04]
+	Updated sysutils/ruby-inspec-core to 5.18.14 [taca 2022-12-04]
