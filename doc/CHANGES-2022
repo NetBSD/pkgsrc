@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5920 2022/12/04 16:10:25 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.5921 2022/12/04 16:10:38 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8919,3 +8919,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/ruby-temple to 0.9.1 [taca 2022-12-04]
 	Updated security/mozilla-rootcerts to 1.0.20221204 [wiz 2022-12-04]
 	Updated security/mozilla-rootcerts-openssl to 2.10 [wiz 2022-12-04]
+	Updated textproc/ruby-treetop to 1.6.12 [taca 2022-12-04]
