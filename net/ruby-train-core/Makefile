@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2022/10/10 03:36:50 taca Exp $
+# $NetBSD: Makefile,v 1.18 2022/12/04 15:09:10 taca Exp $
 
-DISTNAME=	train-core-3.10.1
+DISTNAME=	train-core-3.10.7
 CATEGORIES=	net
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -11,8 +11,8 @@ LICENSE=	apache-2.0
 DEPENDS+=	${RUBY_PKGPREFIX}-addressable>=2.5<3:../../net/ruby-addressable
 DEPENDS+=	${RUBY_PKGPREFIX}-ffi>=1.13.1:../../devel/ruby-ffi
 DEPENDS+=	${RUBY_PKGPREFIX}-mixlib-shellout>=2.0:../../devel/ruby-mixlib-shellout
-DEPENDS+=	${RUBY_PKGPREFIX}-net-scp>=1.2<4.0:../../security/ruby-net-scp
-#DEPENDS+=	${RUBY_PKGPREFIX}-net-ssh>=2.9<7.0:../../security/ruby-net-ssh
+DEPENDS+=	${RUBY_PKGPREFIX}-net-scp>=1.2<5.0:../../security/ruby-net-scp
+#DEPENDS+=	${RUBY_PKGPREFIX}-net-ssh>=2.9<8.0:../../security/ruby-net-ssh
 
 USE_LANGUAGES=	# none
 
