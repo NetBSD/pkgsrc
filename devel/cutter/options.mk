@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.5 2019/11/03 10:39:09 rillig Exp $
+# $NetBSD: options.mk,v 1.6 2022/12/04 23:06:49 wiz Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cutter
-PKG_SUPPORTED_OPTIONS=	goffice gstreamer gtk2 libsoup pdf
+PKG_SUPPORTED_OPTIONS=	gstreamer gtk2 libsoup pdf
 PKG_SUGGESTED_OPTIONS=	#
 
 .include "../../mk/bsd.options.mk"
@@ -20,14 +20,14 @@ PLIST.pdf=		yes
 ###
 ### goffice support
 ###
-.if !empty(PKG_OPTIONS:Mgoffice)
-.include "../../misc/goffice0.8/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-goffice
-PLIST.gtk=		yes
-PLIST.pdf=		yes
-.else
-CONFIGURE_ARGS+=	--disable-goffice
-.endif
+#.if !empty(PKG_OPTIONS:Mgoffice)
+#.include "../../misc/goffice0.8/buildlink3.mk"
+#CONFIGURE_ARGS+=	--enable-goffice
+#PLIST.gtk=		yes
+#PLIST.pdf=		yes
+#.else
+#CONFIGURE_ARGS+=	--disable-goffice
+#.endif
 
 ###
 ### gstreamer support
