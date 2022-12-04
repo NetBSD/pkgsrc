@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:34:49 nia Exp $
+$NetBSD: distinfo,v 1.9 2022/12/04 15:34:12 wiz Exp $
 
-BLAKE2s (xgamma-1.0.6.tar.bz2) = 36ff78abd36e5e27b475361db7d2776a4538866422ca969e45b8410f999e89ed
-SHA512 (xgamma-1.0.6.tar.bz2) = 2d41798e15ac8c6f6731a2da29589207d936eaee1223ce6f3ca948e67d63c5c8b955d11c7db092dcd8c66a6209bd15c1de3dc1446dad4b4277134f010c6fc47a
-Size (xgamma-1.0.6.tar.bz2) = 123105 bytes
+BLAKE2s (xgamma-1.0.7.tar.xz) = 6cfd609259f9ea3a3f576bd5d9a762de84bb0a016dcfd27968c70b838203590d
+SHA512 (xgamma-1.0.7.tar.xz) = 9eeee9b537dcae9e4d153774eb632a6a5e8dd32bebadc9bbd897a773e5b56f76848f32a1699b8c921d3094760c42b5083365d853b89ab31fd85c7a0d46feeceb
+Size (xgamma-1.0.7.tar.xz) = 119992 bytes
