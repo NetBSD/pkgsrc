@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.12 2022/09/04 16:33:48 taca Exp $
+@comment $NetBSD: PLIST,v 1.13 2022/12/04 14:56:35 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/chef-universal-mingw32.gemspec
+${GEM_LIBDIR}/chef-universal-mingw-ucrt.gemspec
 ${GEM_LIBDIR}/chef.gemspec
 ${GEM_LIBDIR}/lib/chef.rb
 ${GEM_LIBDIR}/lib/chef/action_collection.rb
@@ -189,6 +189,7 @@ ${GEM_LIBDIR}/lib/chef/dsl/recipe.rb
 ${GEM_LIBDIR}/lib/chef/dsl/registry_helper.rb
 ${GEM_LIBDIR}/lib/chef/dsl/render_helpers.rb
 ${GEM_LIBDIR}/lib/chef/dsl/resources.rb
+${GEM_LIBDIR}/lib/chef/dsl/rest_resource.rb
 ${GEM_LIBDIR}/lib/chef/dsl/secret.rb
 ${GEM_LIBDIR}/lib/chef/dsl/toml.rb
 ${GEM_LIBDIR}/lib/chef/dsl/universal.rb
@@ -421,6 +422,7 @@ ${GEM_LIBDIR}/lib/chef/provider/package/yum/version.rb
 ${GEM_LIBDIR}/lib/chef/provider/package/yum/yum_cache.rb
 ${GEM_LIBDIR}/lib/chef/provider/package/yum/yum_helper.py
 ${GEM_LIBDIR}/lib/chef/provider/package/zypper.rb
+${GEM_LIBDIR}/lib/chef/provider/package/zypper/version.rb
 ${GEM_LIBDIR}/lib/chef/provider/powershell_script.rb
 ${GEM_LIBDIR}/lib/chef/provider/registry_key.rb
 ${GEM_LIBDIR}/lib/chef/provider/remote_directory.rb
@@ -481,6 +483,7 @@ ${GEM_LIBDIR}/lib/chef/recipe.rb
 ${GEM_LIBDIR}/lib/chef/request_id.rb
 ${GEM_LIBDIR}/lib/chef/reserved_names.rb
 ${GEM_LIBDIR}/lib/chef/resource.rb
+${GEM_LIBDIR}/lib/chef/resource/_rest_resource.rb
 ${GEM_LIBDIR}/lib/chef/resource/action_class.rb
 ${GEM_LIBDIR}/lib/chef/resource/alternatives.rb
 ${GEM_LIBDIR}/lib/chef/resource/apt_package.rb
@@ -606,6 +609,16 @@ ${GEM_LIBDIR}/lib/chef/resource/scm/_scm.rb
 ${GEM_LIBDIR}/lib/chef/resource/scm/git.rb
 ${GEM_LIBDIR}/lib/chef/resource/scm/subversion.rb
 ${GEM_LIBDIR}/lib/chef/resource/script.rb
+${GEM_LIBDIR}/lib/chef/resource/selinux/common_helpers.rb
+${GEM_LIBDIR}/lib/chef/resource/selinux/selinux_debian.erb
+${GEM_LIBDIR}/lib/chef/resource/selinux/selinux_default.erb
+${GEM_LIBDIR}/lib/chef/resource/selinux_boolean.rb
+${GEM_LIBDIR}/lib/chef/resource/selinux_fcontext.rb
+${GEM_LIBDIR}/lib/chef/resource/selinux_install.rb
+${GEM_LIBDIR}/lib/chef/resource/selinux_module.rb
+${GEM_LIBDIR}/lib/chef/resource/selinux_permissive.rb
+${GEM_LIBDIR}/lib/chef/resource/selinux_port.rb
+${GEM_LIBDIR}/lib/chef/resource/selinux_state.rb
 ${GEM_LIBDIR}/lib/chef/resource/service.rb
 ${GEM_LIBDIR}/lib/chef/resource/smartos_package.rb
 ${GEM_LIBDIR}/lib/chef/resource/snap_package.rb
@@ -1241,6 +1254,7 @@ ${GEM_LIBDIR}/spec/functional/resource/macos_userdefaults_spec.rb
 ${GEM_LIBDIR}/spec/functional/resource/mount_spec.rb
 ${GEM_LIBDIR}/spec/functional/resource/msu_package_spec.rb
 ${GEM_LIBDIR}/spec/functional/resource/ohai_spec.rb
+${GEM_LIBDIR}/spec/functional/resource/plist_spec.rb
 ${GEM_LIBDIR}/spec/functional/resource/powershell_package_source_spec.rb
 ${GEM_LIBDIR}/spec/functional/resource/powershell_script_spec.rb
 ${GEM_LIBDIR}/spec/functional/resource/reboot_spec.rb
@@ -1250,6 +1264,7 @@ ${GEM_LIBDIR}/spec/functional/resource/remote_file_spec.rb
 ${GEM_LIBDIR}/spec/functional/resource/rpm_spec.rb
 ${GEM_LIBDIR}/spec/functional/resource/template_spec.rb
 ${GEM_LIBDIR}/spec/functional/resource/timezone_spec.rb
+${GEM_LIBDIR}/spec/functional/resource/user/linux_user_spec.rb
 ${GEM_LIBDIR}/spec/functional/resource/user/mac_user_spec.rb
 ${GEM_LIBDIR}/spec/functional/resource/user/windows_spec.rb
 ${GEM_LIBDIR}/spec/functional/resource/windows_certificate_spec.rb
@@ -1737,6 +1752,7 @@ ${GEM_LIBDIR}/spec/unit/resource/registry_key_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/remote_directory_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/remote_file_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/resource_notification_spec.rb
+${GEM_LIBDIR}/spec/unit/resource/rest_resource_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/rhsm_errata_level_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/rhsm_errata_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/rhsm_register_spec.rb
@@ -1750,6 +1766,13 @@ ${GEM_LIBDIR}/spec/unit/resource/scm/git_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/scm/scm.rb
 ${GEM_LIBDIR}/spec/unit/resource/scm/subversion_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/script_spec.rb
+${GEM_LIBDIR}/spec/unit/resource/selinux_boolean_spec.rb
+${GEM_LIBDIR}/spec/unit/resource/selinux_fcontext_spec.rb
+${GEM_LIBDIR}/spec/unit/resource/selinux_install_spec.rb
+${GEM_LIBDIR}/spec/unit/resource/selinux_module_spec.rb
+${GEM_LIBDIR}/spec/unit/resource/selinux_permissive_spec.rb
+${GEM_LIBDIR}/spec/unit/resource/selinux_port_spec.rb
+${GEM_LIBDIR}/spec/unit/resource/selinux_state_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/service_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/smartos_package_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/snap_package_spec.rb
@@ -1761,6 +1784,7 @@ ${GEM_LIBDIR}/spec/unit/resource/sysctl_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/systemd_unit_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/template_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/timezone_spec.rb
+${GEM_LIBDIR}/spec/unit/resource/user/linux_user_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/user/windows_user_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/user_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/user_ulimit_spec.rb
