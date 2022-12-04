@@ -1,0 +1,1 @@
+bin/jmespath.rb @PREFIX@/bin/jmespath.rb@RUBY_SUFFIX@
