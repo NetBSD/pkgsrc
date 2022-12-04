@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3841 2022/12/01 21:26:00 nros Exp $
+# $NetBSD: Makefile,v 1.3842 2022/12/04 22:12:07 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1038,7 +1038,6 @@ SUBDIR+=	lxqt-build-tools
 SUBDIR+=	m17n-lib
 SUBDIR+=	m4
 SUBDIR+=	mad-flute
-SUBDIR+=	magit
 SUBDIR+=	makedepend
 SUBDIR+=	makedepf90
 SUBDIR+=	maketool
