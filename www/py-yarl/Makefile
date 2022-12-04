@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2022/08/05 07:14:05 adam Exp $
+# $NetBSD: Makefile,v 1.30 2022/12/04 18:08:15 adam Exp $
 
-DISTNAME=	yarl-1.8.1
+DISTNAME=	yarl-1.8.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=y/yarl/}
@@ -16,11 +16,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test>=7.1.2:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=2.3.1:../../devel/py-test-cov
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-.include "../../lang/python/pyversion.mk"
-.if ${_PYTHON_VERSION} < 38
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.7.4:../../devel/py-typing-extensions
-.endif
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
