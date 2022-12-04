@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2022/02/14 14:15:28 taca Exp $
+@comment $NetBSD: PLIST,v 1.15 2022/12/04 14:20:33 taca Exp $
 bin/pdf_callbacks${RUBY_SUFFIX}
 bin/pdf_object${RUBY_SUFFIX}
 bin/pdf_text${RUBY_SUFFIX}
@@ -70,6 +70,7 @@ ${GEM_LIBDIR}/lib/pdf/reader/glyphlist-zapfdingbats.txt
 ${GEM_LIBDIR}/lib/pdf/reader/glyphlist.txt
 ${GEM_LIBDIR}/lib/pdf/reader/key_builder_v5.rb
 ${GEM_LIBDIR}/lib/pdf/reader/lzw.rb
+${GEM_LIBDIR}/lib/pdf/reader/no_text_filter.rb
 ${GEM_LIBDIR}/lib/pdf/reader/null_security_handler.rb
 ${GEM_LIBDIR}/lib/pdf/reader/object_cache.rb
 ${GEM_LIBDIR}/lib/pdf/reader/object_hash.rb
