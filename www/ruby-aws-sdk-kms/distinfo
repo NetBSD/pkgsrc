@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2022/09/04 15:39:55 taca Exp $
+$NetBSD: distinfo,v 1.3 2022/12/04 15:42:43 taca Exp $
 
-BLAKE2s (aws-sdk-kms-1.58.0.gem) = b7eef136a8897a5dd953a14f3c4ea4021c50a42f51c2b11f7696264d4e162866
-SHA512 (aws-sdk-kms-1.58.0.gem) = cc91caf4709b28d0012e081b74e87d4d66fa76ebf24d45c55c056bb3671fddb8eb957385af622866a6e331b4b29101bc6a5739e1f1489099d39f37ce2ed9b46b
-Size (aws-sdk-kms-1.58.0.gem) = 114176 bytes
+BLAKE2s (aws-sdk-kms-1.60.0.gem) = 074754cf5d33b6d44ede4038370f7e56f7ba802f793fb903cc76ba2eb102ef92
+SHA512 (aws-sdk-kms-1.60.0.gem) = d3d5cda52e1e3b8ce16446d4208153147d9b9c3ca7daf887fcad8506ed8d283ac1a2310d1aeb0bbbbab6e3e3a54c79b58bf8631f6303ee73508caf421274ed73
+Size (aws-sdk-kms-1.60.0.gem) = 135168 bytes
