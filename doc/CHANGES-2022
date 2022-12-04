@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5955 2022/12/04 22:40:01 js Exp $
+$NetBSD: CHANGES-2022,v 1.5956 2022/12/04 23:07:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8959,3 +8959,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/libXcomposite to 0.4.6 [wiz 2022-12-04]
 	Added cross/i586-pc-msdosdjgpp-sdk version 2.05 [js 2022-12-04]
 	Added cross/i586-pc-msdosdjgpp-gcc version 11.2.0 [js 2022-12-04]
+	Removed misc/goffice0.8 successor misc/goffice0.10 [wiz 2022-12-04]

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.575 2022/11/24 15:27:02 pin Exp $
+# $NetBSD: Makefile,v 1.576 2022/12/04 23:07:42 wiz Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -90,7 +90,6 @@ SUBDIR+=	gkrellm-weather
 SUBDIR+=	gkrellsun
 SUBDIR+=	gnuls
 SUBDIR+=	goffice0.10
-SUBDIR+=	goffice0.8
 SUBDIR+=	gone
 SUBDIR+=	gperiodic
 SUBDIR+=	granulate
