@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2022/12/01 12:55:36 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2022/12/04 16:09:47 wiz Exp $
 #
 # Please also update the dependency pattern in mozilla-rootcerts-openssl
 # and bump its version when updating this package.
@@ -17,7 +17,7 @@ LICENSE=	mpl-2.0
 USE_TOOLS=	awk:run echo:run expr:run ln:run ls:run openssl:run rm:run mkdir:run
 
 # This must be kept in sync with security/mozilla-rootcerts-openssl
-CERTDATA_DATE=	20220913
+CERTDATA_DATE=	20221204
 CERTDATA=	certdata-${CERTDATA_DATE}.txt
 
 WRKSRC=		${WRKDIR}
