@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5945 2022/12/04 17:42:44 pin Exp $
+$NetBSD: CHANGES-2022,v 1.5946 2022/12/04 17:43:50 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8945,3 +8945,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-protobuf to 4.21.10 [adam 2022-12-04]
 	Updated editors/tp-note to 1.19.7 [pin 2022-12-04]
 	Updated textproc/git-delta to 0.15.1 [pin 2022-12-04]
+	Updated graphics/kvantum to 1.0.7 [pin 2022-12-04]
