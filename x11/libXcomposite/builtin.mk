@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.2 2019/11/03 09:14:10 rillig Exp $
+# $NetBSD: builtin.mk,v 1.3 2022/12/04 22:16:39 wiz Exp $
 
 BUILTIN_PKG:=	libXcomposite
 
@@ -31,10 +31,10 @@ USE_BUILTIN.libXcomposite=	no
 .  else
 USE_BUILTIN.libXcomposite=	${IS_BUILTIN.libXcomposite}
 .    if defined(BUILTIN_PKG.libXcomposite) && \
-        !empty(IS_BUILTIN.libXcomposite:M[yY][eE][sS])
+        ${IS_BUILTIN.libXcomposite:tl} == yes
 USE_BUILTIN.libXcomposite=	yes
 .      for _dep_ in ${BUILDLINK_API_DEPENDS.libXcomposite}
-.        if !empty(USE_BUILTIN.libXcomposite:M[yY][eE][sS])
+.        if ${USE_BUILTIN.libXcomposite:tl} == yes
 USE_BUILTIN.libXcomposite!=						\
 	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.libXcomposite:Q}; then \
 		${ECHO} yes;						\
