@@ -1,10 +1,13 @@
-@comment $NetBSD: PLIST,v 1.9 2022/09/01 14:17:27 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2022/12/04 16:29:26 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGES
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/NOTICE
 ${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/bin/linux/selenium-manager
+${GEM_LIBDIR}/bin/macos/selenium-manager
+${GEM_LIBDIR}/bin/windows/selenium-manager.exe
 ${GEM_LIBDIR}/lib/selenium-webdriver.rb
 ${GEM_LIBDIR}/lib/selenium/server.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver.rb
@@ -24,6 +27,7 @@ ${GEM_LIBDIR}/lib/selenium/webdriver/chrome/service.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/action_builder.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/alert.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/common/child_process.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/downloads_files.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/full_page_screenshot.rb
@@ -85,6 +89,7 @@ ${GEM_LIBDIR}/lib/selenium/webdriver/common/port_prober.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/profile_helper.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/proxy.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/search_context.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/common/selenium_manager.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/service.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/service_manager.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/shadow_root.rb
@@ -145,7 +150,6 @@ ${GEM_LIBDIR}/lib/selenium/webdriver/safari/service.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/support.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/support/abstract_event_listener.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/support/block_event_listener.rb
-${GEM_LIBDIR}/lib/selenium/webdriver/support/cdp/domain.rb.erb
 ${GEM_LIBDIR}/lib/selenium/webdriver/support/cdp_client_generator.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/support/color.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/support/escaper.rb
@@ -153,6 +157,7 @@ ${GEM_LIBDIR}/lib/selenium/webdriver/support/event_firing_bridge.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/support/guards.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/support/guards/guard.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/support/guards/guard_condition.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/support/nightly_version_generator.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/support/relative_locator.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/support/select.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/version.rb
