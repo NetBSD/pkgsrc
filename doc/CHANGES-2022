@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5928 2022/12/04 16:27:16 taca Exp $
+$NetBSD: CHANGES-2022,v 1.5929 2022/12/04 16:29:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8927,3 +8927,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/ruby-jekyll-feed to 0.17.0 [taca 2022-12-04]
 	Updated www/ruby-jquery-rails to 4.5.1 [taca 2022-12-04]
 	Updated www/ruby-puma to 6.0.0 [taca 2022-12-04]
+	Updated www/ruby-selenium-webdriver to 4.7.1 [taca 2022-12-04]
