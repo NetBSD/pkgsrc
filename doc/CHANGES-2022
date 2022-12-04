@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5914 2022/12/04 15:59:00 taca Exp $
+$NetBSD: CHANGES-2022,v 1.5915 2022/12/04 16:00:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8913,3 +8913,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/ruby-asciidoctor to 2.0.18 [taca 2022-12-04]
 	Updated textproc/ruby-haml to 6.0.12 [taca 2022-12-04]
 	Updated textproc/ruby-html-pipeline to 2.14.3 [taca 2022-12-04]
+	Updated textproc/ruby-jmespath to 1.6.2 [taca 2022-12-04]
