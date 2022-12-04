@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5931 2022/12/04 16:35:39 taca Exp $
+$NetBSD: CHANGES-2022,v 1.5932 2022/12/04 16:40:51 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8930,3 +8930,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/ruby-selenium-webdriver to 4.7.1 [taca 2022-12-04]
 	Updated textproc/ruby-terminal-table to 3.0.2 [taca 2022-12-04]
 	Updated security/ruby-net-scp to 4.0.0 [taca 2022-12-04]
+	Updated security/ruby-net-ssh to 7.0.1 [taca 2022-12-04]
