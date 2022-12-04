@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:23:28 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/12/04 16:32:33 taca Exp $
 
-BLAKE2s (terminal-table-2.0.0.gem) = 19b978ac7ad2bfb969909a97c5b5ad7a735510460a69377257b33108a3b98b9f
-SHA512 (terminal-table-2.0.0.gem) = 7394f830ac5e2b24d0d9553031a1a53e7b76b903a43239eb70531af9cbb54d1c81d526fa9ed805a6ed937e343b7dc65fe36d036467471c33f2b4955da220fd03
-Size (terminal-table-2.0.0.gem) = 14336 bytes
+BLAKE2s (terminal-table-3.0.2.gem) = 85b6b0a1b567065e729ae77989219b46cbcd506ce4ea0d107bd94d954eed3392
+SHA512 (terminal-table-3.0.2.gem) = 9d625a5903c7511f59f2e083ed2db72d337405019c41461b97590411a5028a061ce4a42eeb75c19b0e6deb2ef81f18ad80bb74d4ebdb9eca9ff6004631ddd994
+Size (terminal-table-3.0.2.gem) = 22016 bytes
