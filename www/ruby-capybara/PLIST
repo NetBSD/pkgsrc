@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2022/08/31 14:20:43 taca Exp $
+@comment $NetBSD: PLIST,v 1.20 2022/12/04 16:12:39 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/History.md
@@ -279,6 +279,7 @@ ${GEM_LIBDIR}/lib/capybara/version.rb
 ${GEM_LIBDIR}/lib/capybara/window.rb
 ${GEM_LIBDIR}/spec/basic_node_spec.rb
 ${GEM_LIBDIR}/spec/capybara_spec.rb
+${GEM_LIBDIR}/spec/counter_spec.rb
 ${GEM_LIBDIR}/spec/css_builder_spec.rb
 ${GEM_LIBDIR}/spec/css_splitter_spec.rb
 ${GEM_LIBDIR}/spec/dsl_spec.rb
