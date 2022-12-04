@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.28 2019/01/07 15:49:21 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2022/12/04 15:30:18 wiz Exp $
 
-DISTNAME=	xcursorgen-1.0.7
+DISTNAME=	xcursorgen-1.0.8
 CATEGORIES=	x11 graphics
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://cgit.freedesktop.org/xorg/app/xcursorgen/
