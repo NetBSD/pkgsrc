@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.3 2019/11/03 09:14:10 rillig Exp $
+# $NetBSD: builtin.mk,v 1.4 2022/12/04 15:47:40 wiz Exp $
 
 BUILTIN_PKG:=	libICE
 
@@ -31,10 +31,10 @@ USE_BUILTIN.libICE=	no
 .  else
 USE_BUILTIN.libICE=	${IS_BUILTIN.libICE}
 .    if defined(BUILTIN_PKG.libICE) && \
-        !empty(IS_BUILTIN.libICE:M[yY][eE][sS])
+        ${IS_BUILTIN.libICE:tl} == yes
 USE_BUILTIN.libICE=	yes
 .      for _dep_ in ${BUILDLINK_API_DEPENDS.libICE}
-.        if !empty(USE_BUILTIN.libICE:M[yY][eE][sS])
+.        if ${USE_BUILTIN.libICE:tl} == yes
 USE_BUILTIN.libICE!=							\
 	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.libICE:Q}; then \
 		${ECHO} yes;						\
