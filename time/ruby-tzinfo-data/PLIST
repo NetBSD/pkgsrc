@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2022/08/18 13:58:50 taca Exp $
+@comment $NetBSD: PLIST,v 1.13 2022/12/04 15:29:46 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/CONTRIBUTING.md
@@ -100,6 +100,7 @@ ${GEM_LIBDIR}/lib/tzinfo/data/definitions/America/Cayenne.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/America/Cayman.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/America/Chicago.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/America/Chihuahua.rb
+${GEM_LIBDIR}/lib/tzinfo/data/definitions/America/Ciudad_Juarez.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/America/Coral_Harbour.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/America/Cordoba.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/America/Costa_Rica.rb
