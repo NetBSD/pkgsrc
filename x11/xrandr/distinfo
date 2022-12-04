@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2021/10/26 11:34:55 nia Exp $
+$NetBSD: distinfo,v 1.19 2022/12/04 15:39:27 wiz Exp $
 
-BLAKE2s (xrandr-1.5.1.tar.xz) = 808e2474f7d247c4b4cfdf6e7955fcf6bb330ff395d662094d8a8335dafec97a
-SHA512 (xrandr-1.5.1.tar.xz) = 3d0d37e974b9dffb996276ee7fd676327fd0956e5f5f572dd142a651a35d3cdfa2f6dd415cf27bf87f306981957aba4cc014c12baebefcabaa5d66b78a114922
-Size (xrandr-1.5.1.tar.xz) = 171200 bytes
+BLAKE2s (xrandr-1.5.2.tar.xz) = bdb220d32ef4137bcc8b62b3eb743f48e8924c9f613de597e8ea75195e3bcb1e
+SHA512 (xrandr-1.5.2.tar.xz) = b536e8f1e04094894aa52ae496725c58691b043860b3327c41d737b07b642a939733321b62f698032b11ba857208a6177600a3ca3295ff1be6ade4341cdc2747
+Size (xrandr-1.5.2.tar.xz) = 174012 bytes
