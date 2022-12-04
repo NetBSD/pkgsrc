@@ -1,16 +1,13 @@
-# $NetBSD: Makefile,v 1.20 2020/08/17 20:20:39 leot Exp $
+# $NetBSD: Makefile,v 1.21 2022/12/04 15:33:25 wiz Exp $
 
-DISTNAME=	xfd-1.1.3
-PKGREVISION=	1
+DISTNAME=	xfd-1.1.4
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://xorg.freedesktop.org/
 COMMENT=	Display all the characters in an X font
-
-BROKEN_GETTEXT_DETECTION=	yes
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config xgettext
