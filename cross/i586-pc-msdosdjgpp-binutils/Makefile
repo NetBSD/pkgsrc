@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/12/04 20:07:48 js Exp $
+# $NetBSD: Makefile,v 1.2 2022/12/04 21:13:31 js Exp $
 
 DISTNAME=	binutils-2.39
 PKGNAME=	cross-i586-pc-msdosdjgpp-${DISTNAME}
@@ -17,7 +17,7 @@ USE_TOOLS+=		gmake makeinfo perl
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_STRICT=	no # several sub-configures know --enable-nls
 
-DJGPP_PREFIX=		${PREFIX}/i586-pc-msdosdjgpp
+DJGPP_PREFIX=		${PREFIX}/cross-djgpp
 
 OBJDIR=			../build
 CONFIGURE_DIRS=		${OBJDIR}
