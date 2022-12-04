@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2022/06/28 11:31:16 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2022/12/04 20:07:12 js Exp $
 
 DISTNAME=	sdk-source-20191111
 PKGNAME=	ppc-morphos-gcc-9-9.2.0
@@ -18,7 +18,7 @@ DEPENDS+=		ppc-morphos-sdk-[0-9]*:../../cross/ppc-morphos-sdk
 WRKSRC=			${WRKDIR}/sdk-source/gcc9/gcc-${PKGVERSION_NOREV}
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		xzcat gtar patch autoconf gsed gmake perl makeinfo
+USE_TOOLS+=		xzcat gtar patch autoconf269 gsed gmake perl makeinfo
 
 OBJDIR=			../build
 CONFIGURE_DIRS=		${OBJDIR}
