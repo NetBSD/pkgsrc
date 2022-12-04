@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2021/09/19 17:56:43 taca Exp $
+@comment $NetBSD: PLIST,v 1.16 2022/12/04 16:26:47 taca Exp $
 bin/puma${RUBY_SUFFIX}
 bin/pumactl${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -29,6 +29,8 @@ ${GEM_LIBDIR}/docs/restart.md
 ${GEM_LIBDIR}/docs/signals.md
 ${GEM_LIBDIR}/docs/stats.md
 ${GEM_LIBDIR}/docs/systemd.md
+${GEM_LIBDIR}/docs/testing_benchmarks_local_files.md
+${GEM_LIBDIR}/docs/testing_test_rackup_ci_files.md
 ${GEM_LIBDIR}/ext/puma_http11/PumaHttp11Service.java
 ${GEM_LIBDIR}/ext/puma_http11/ext_help.h
 ${GEM_LIBDIR}/ext/puma_http11/extconf.rb
@@ -63,13 +65,14 @@ ${GEM_LIBDIR}/lib/puma/io_buffer.rb
 ${GEM_LIBDIR}/lib/puma/jruby_restart.rb
 ${GEM_LIBDIR}/lib/puma/json_serialization.rb
 ${GEM_LIBDIR}/lib/puma/launcher.rb
+${GEM_LIBDIR}/lib/puma/launcher/bundle_pruner.rb
+${GEM_LIBDIR}/lib/puma/log_writer.rb
 ${GEM_LIBDIR}/lib/puma/minissl.rb
 ${GEM_LIBDIR}/lib/puma/minissl/context_builder.rb
 ${GEM_LIBDIR}/lib/puma/null_io.rb
 ${GEM_LIBDIR}/lib/puma/plugin.rb
 ${GEM_LIBDIR}/lib/puma/plugin/tmp_restart.rb
 ${GEM_LIBDIR}/lib/puma/puma_http11.${RUBY_DLEXT}
-${GEM_LIBDIR}/lib/puma/queue_close.rb
 ${GEM_LIBDIR}/lib/puma/rack/builder.rb
 ${GEM_LIBDIR}/lib/puma/rack/urlmap.rb
 ${GEM_LIBDIR}/lib/puma/rack_default.rb
