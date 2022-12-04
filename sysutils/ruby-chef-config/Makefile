@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2022/12/04 14:56:35 taca Exp $
+# $NetBSD: Makefile,v 1.20 2022/12/04 15:20:03 taca Exp $
 
-DISTNAME=	chef-config-18.0.172
+DISTNAME=	chef-config-18.0.185
 CATEGORIES=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -8,7 +8,7 @@ HOMEPAGE=	https://github.com/chef/chef
 COMMENT=	Chef's default configuration and config loading
 LICENSE=	apache-2.0
 
-DEPENDS+=	${RUBY_PKGPREFIX}-chef-utils>=18.0.172<18.1:../../sysutils/ruby-chef-utils
+DEPENDS+=	${RUBY_PKGPREFIX}-chef-utils>=18.0.185<18.1:../../sysutils/ruby-chef-utils
 DEPENDS+=	${RUBY_PKGPREFIX}-mixlib-shellout>=2.0:../../devel/ruby-mixlib-shellout
 DEPENDS+=	${RUBY_PKGPREFIX}-mixlib-config>=2.2.12:../../devel/ruby-mixlib-config
 DEPENDS+=	${RUBY_PKGPREFIX}-fuzzyurl>=0:../../textproc/ruby-fuzzyurl
