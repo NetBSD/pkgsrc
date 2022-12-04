@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2021/05/09 14:04:36 taca Exp $
+# $NetBSD: Makefile,v 1.2 2022/12/04 16:42:14 taca Exp $
 
-DISTNAME=	rotp-6.2.0
+DISTNAME=	rotp-6.2.1
 CATEGORIES=	security
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
