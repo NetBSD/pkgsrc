@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2022/11/09 13:14:20 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2022/12/04 22:16:39 wiz Exp $
 
-DISTNAME=		libXcomposite-0.4.5
+DISTNAME=		libXcomposite-0.4.6
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
-EXTRACT_SUFX=		.tar.bz2
+EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/
