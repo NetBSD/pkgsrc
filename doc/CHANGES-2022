@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5952 2022/12/04 22:12:07 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.5953 2022/12/04 22:16:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8956,3 +8956,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added filesystems/kubo version 0.17.0 [wiz 2022-12-04]
 	Updated x11/xf86-video-r128 to 6.12.1 [wiz 2022-12-04]
 	Removed devel/magit [wiz 2022-12-04]
+	Updated x11/libXcomposite to 0.4.6 [wiz 2022-12-04]
