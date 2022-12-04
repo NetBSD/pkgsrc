@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.39 2021/12/14 14:32:57 taca Exp $
+@comment $NetBSD: PLIST,v 1.40 2022/12/04 15:27:02 taca Exp $
 bin/facter${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
@@ -152,12 +152,16 @@ ${GEM_LIBDIR}/lib/facter/facts/freebsd/dmi/manufacturer.rb
 ${GEM_LIBDIR}/lib/facter/facts/freebsd/dmi/product/name.rb
 ${GEM_LIBDIR}/lib/facter/facts/freebsd/dmi/product/serial_number.rb
 ${GEM_LIBDIR}/lib/facter/facts/freebsd/dmi/product/uuid.rb
+${GEM_LIBDIR}/lib/facter/facts/freebsd/ec2_metadata.rb
+${GEM_LIBDIR}/lib/facter/facts/freebsd/ec2_userdata.rb
 ${GEM_LIBDIR}/lib/facter/facts/freebsd/facterversion.rb
 ${GEM_LIBDIR}/lib/facter/facts/freebsd/identity/gid.rb
 ${GEM_LIBDIR}/lib/facter/facts/freebsd/identity/group.rb
 ${GEM_LIBDIR}/lib/facter/facts/freebsd/identity/privileged.rb
 ${GEM_LIBDIR}/lib/facter/facts/freebsd/identity/uid.rb
 ${GEM_LIBDIR}/lib/facter/facts/freebsd/identity/user.rb
+${GEM_LIBDIR}/lib/facter/facts/freebsd/ipaddress6_interfaces.rb
+${GEM_LIBDIR}/lib/facter/facts/freebsd/ipaddress_interfaces.rb
 ${GEM_LIBDIR}/lib/facter/facts/freebsd/is_virtual.rb
 ${GEM_LIBDIR}/lib/facter/facts/freebsd/kernel.rb
 ${GEM_LIBDIR}/lib/facter/facts/freebsd/kernelrelease.rb
@@ -459,6 +463,7 @@ ${GEM_LIBDIR}/lib/facter/facts/macosx/system_uptime/uptime.rb
 ${GEM_LIBDIR}/lib/facter/facts/macosx/timezone.rb
 ${GEM_LIBDIR}/lib/facter/facts/macosx/virtual.rb
 ${GEM_LIBDIR}/lib/facter/facts/mageia/os/release.rb
+${GEM_LIBDIR}/lib/facter/facts/mariner/os/release.rb
 ${GEM_LIBDIR}/lib/facter/facts/meego/os/release.rb
 ${GEM_LIBDIR}/lib/facter/facts/oel/os/release.rb
 ${GEM_LIBDIR}/lib/facter/facts/ol/os/release.rb
