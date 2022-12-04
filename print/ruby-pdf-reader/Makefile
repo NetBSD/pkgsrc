@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2022/08/28 05:06:07 taca Exp $
+# $NetBSD: Makefile,v 1.29 2022/12/04 14:20:33 taca Exp $
 
-DISTNAME=	pdf-reader-2.10.0
+DISTNAME=	pdf-reader-2.11.0
 CATEGORIES=	print
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
