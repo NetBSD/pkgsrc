@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1 2021/05/09 14:04:36 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/12/04 16:42:14 taca Exp $
 bin/rotp${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.devcontainer/Dockerfile
+${GEM_LIBDIR}/.devcontainer/devcontainer.json
 ${GEM_LIBDIR}/.dockerignore
+${GEM_LIBDIR}/.github/workflows/test.yaml
 ${GEM_LIBDIR}/.gitignore
-${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/Dockerfile-2.3
-${GEM_LIBDIR}/Dockerfile-2.5
-${GEM_LIBDIR}/Dockerfile-2.6
 ${GEM_LIBDIR}/Dockerfile-2.7
 ${GEM_LIBDIR}/Dockerfile-3.0-rc
 ${GEM_LIBDIR}/Gemfile
@@ -15,24 +15,6 @@ ${GEM_LIBDIR}/Guardfile
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/bin/rotp
-${GEM_LIBDIR}/doc/ROTP/HOTP.html
-${GEM_LIBDIR}/doc/ROTP/OTP.html
-${GEM_LIBDIR}/doc/ROTP/TOTP.html
-${GEM_LIBDIR}/doc/Rotp.html
-${GEM_LIBDIR}/doc/_index.html
-${GEM_LIBDIR}/doc/class_list.html
-${GEM_LIBDIR}/doc/css/common.css
-${GEM_LIBDIR}/doc/css/full_list.css
-${GEM_LIBDIR}/doc/css/style.css
-${GEM_LIBDIR}/doc/file.README.html
-${GEM_LIBDIR}/doc/file_list.html
-${GEM_LIBDIR}/doc/frames.html
-${GEM_LIBDIR}/doc/index.html
-${GEM_LIBDIR}/doc/js/app.js
-${GEM_LIBDIR}/doc/js/full_list.js
-${GEM_LIBDIR}/doc/js/jquery.js
-${GEM_LIBDIR}/doc/method_list.html
-${GEM_LIBDIR}/doc/top-level-namespace.html
 ${GEM_LIBDIR}/docker-compose.yml
 ${GEM_LIBDIR}/lib/rotp.rb
 ${GEM_LIBDIR}/lib/rotp/arguments.rb
