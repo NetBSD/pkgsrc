@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2022/10/31 14:54:38 triaxx Exp $
+# $NetBSD: Makefile,v 1.43 2022/12/04 11:28:51 he Exp $
 
 DISTNAME=	llvm-13.0.1.src
 PKGNAME=	${DISTNAME:S/llvm/libLLVM/:S/.src//}
@@ -111,15 +111,22 @@ PLIST.notdylib=	yes
 PLIST_SUBST+=	SOEXT=${SOEXT}
 PLIST_SUBST+=	LLVM_LIBNAME=${LLVM_LIBNAME}
 
-# needs std::atomic with 64-bit CAS
-.if ${MACHINE_ARCH} == "i386"
-CXXFLAGS+=	-march=i586
-.endif
-
 .if !empty(MACHINE_ARCH:Mpowerpc*)
 # Needed to avoid "relocation truncated to fit: R_PPC_REL24"
 CFLAGS+=	-mlongcall
 CXXFLAGS+=	-mlongcall
+.  if ${OPSYS} == "NetBSD"
+.    if ${OPSYS_VERSION} >= 099917
+# The -mno-pltseq option is not available in gcc7, but is needed for
+# the above-mentioned relocation truncation issue in newer GCC
+CFLAGS+=        -mno-pltseq
+CXXFLAGS+=      -mno-pltseq
+.    endif # (just drop for older NetBSD)
+.  else # Not NetBSD
+# Let's just insist on newer gcc -- untested.
+CFLAGS+=        -mno-pltseq
+CXXFLAGS+=      -mno-pltseq
+.  endif
 .endif
 
 .include "options.mk"
@@ -147,6 +154,7 @@ post-install:
 		${DESTDIR}${PREFIX}/lib/libLLVM/libLLVM-${PKGVERSION_NOREV}.${SOEXT}
 .endif
 
+.include "../../mk/atomic64.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"
