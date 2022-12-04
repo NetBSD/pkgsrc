@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5911 2022/12/04 15:47:52 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.5912 2022/12/04 15:52:43 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8910,3 +8910,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/xvinfo to 1.1.5 [wiz 2022-12-04]
 	Updated www/ruby-aws-sdk-s3 to 1.117.2 [taca 2022-12-04]
 	Updated x11/libICE to 1.1.0 [wiz 2022-12-04]
+	Updated textproc/ruby-asciidoctor to 2.0.18 [taca 2022-12-04]
