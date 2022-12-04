@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5917 2022/12/04 16:05:53 taca Exp $
+$NetBSD: CHANGES-2022,v 1.5918 2022/12/04 16:07:49 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8916,3 +8916,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/ruby-jmespath to 1.6.2 [taca 2022-12-04]
 	Updated textproc/ruby-libxml to 3.2.4 [taca 2022-12-04]
 	Updated textproc/ruby-review to 5.6.0 [taca 2022-12-04]
+	Updated textproc/ruby-temple to 0.9.1 [taca 2022-12-04]
