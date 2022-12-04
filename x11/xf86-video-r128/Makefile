@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.27 2022/11/09 13:14:27 joerg Exp $
+# $NetBSD: Makefile,v 1.28 2022/12/04 22:04:58 wiz Exp $
 
-DISTNAME=	xf86-video-r128-6.12.0
+DISTNAME=	xf86-video-r128-6.12.1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://xorg.freedesktop.org/
