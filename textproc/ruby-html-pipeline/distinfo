@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/08/29 13:20:07 taca Exp $
+$NetBSD: distinfo,v 1.2 2022/12/04 15:58:33 taca Exp $
 
-BLAKE2s (html-pipeline-2.14.2.gem) = 22a74152de5fadacc4fc8bcf5282a920ec98950a3202aa04d2543ac7a8013cb5
-SHA512 (html-pipeline-2.14.2.gem) = ab45b45ed40adbc6f635e30e00f5387840420f5feb8299cfab386159d52b9bc36216e016779dd9e1da0a226994b7f1f936c671bf7b397703ebbc48446bae4385
-Size (html-pipeline-2.14.2.gem) = 30720 bytes
+BLAKE2s (html-pipeline-2.14.3.gem) = 7617bb6c0f7e66eb574e8973afc9ed01959790b73cbad157b20c2001caf975b9
+SHA512 (html-pipeline-2.14.3.gem) = 5d58c06365102e8e2893c3d813edecf4f0d2e70d425c4f87b62e5b1949aa707a3310fa4dd5e1a654a40c9395195c4af555d603d9dda3ce8e8528ab33851ef0c9
+Size (html-pipeline-2.14.3.gem) = 36864 bytes
