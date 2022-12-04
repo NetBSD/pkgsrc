@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/08/30 15:05:53 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/12/04 15:37:41 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/LICENSE.txt
@@ -9,5 +9,6 @@ ${GEM_LIBDIR}/lib/aws-partitions/partition.rb
 ${GEM_LIBDIR}/lib/aws-partitions/partition_list.rb
 ${GEM_LIBDIR}/lib/aws-partitions/region.rb
 ${GEM_LIBDIR}/lib/aws-partitions/service.rb
+${GEM_LIBDIR}/partitions-metadata.json
 ${GEM_LIBDIR}/partitions.json
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
