@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5894 2022/12/04 15:30:30 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.5895 2022/12/04 15:32:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8893,3 +8893,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/transset to 1.0.3 [wiz 2022-12-04]
 	Updated time/ruby-tzinfo-data to 1.2022.7 [taca 2022-12-04]
 	Updated x11/xcursorgen to 1.0.8 [wiz 2022-12-04]
+	Updated x11/xdm to 1.1.14 [wiz 2022-12-04]
