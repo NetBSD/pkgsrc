@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2022/09/04 16:33:48 taca Exp $
+$NetBSD: distinfo,v 1.19 2022/12/04 14:56:35 taca Exp $
 
-BLAKE2s (chef-config-17.10.0.gem) = 08a466132239c97e5928994f6ed9d298749c26ff0de627838bab07e97711f1a9
-SHA512 (chef-config-17.10.0.gem) = affe6fd39379ad6478efb2a1bcaf984da771b42dc353a79f2ed2114ef70c4f02220dc639600109bb46a5a655d2c910eebbb3f5d6dc05a277e3bcd49d83a0826e
-Size (chef-config-17.10.0.gem) = 52224 bytes
+BLAKE2s (chef-config-18.0.172.gem) = 99e53cd487177b1d6105a3a7beb9382dee8fc6934328e48be4b0ecce37e57fb5
+SHA512 (chef-config-18.0.172.gem) = d9fda68556a3d196e9167663fb00e21953e7a41752500adad080469c99a73f88a70909b8982ce888b625067d0c8dcbaf862e3e56e0e882fda401e1642df1eca3
+Size (chef-config-18.0.172.gem) = 52736 bytes
