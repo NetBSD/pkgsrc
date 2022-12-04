@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5954 2022/12/04 22:38:38 js Exp $
+$NetBSD: CHANGES-2022,v 1.5955 2022/12/04 22:40:01 js Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8958,3 +8958,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed devel/magit [wiz 2022-12-04]
 	Updated x11/libXcomposite to 0.4.6 [wiz 2022-12-04]
 	Added cross/i586-pc-msdosdjgpp-sdk version 2.05 [js 2022-12-04]
+	Added cross/i586-pc-msdosdjgpp-gcc version 11.2.0 [js 2022-12-04]
