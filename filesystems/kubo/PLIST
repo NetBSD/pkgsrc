@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2022/12/04 20:09:12 wiz Exp $
+bin/ipfs
