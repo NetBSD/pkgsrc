@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5886 2022/12/04 14:20:55 taca Exp $
+$NetBSD: CHANGES-2022,v 1.5887 2022/12/04 15:09:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8883,3 +8883,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/firefox102-l10n to 102.5.0 [nia 2022-12-04]
 	Updated www/firefox102 to 102.5.0 [nia 2022-12-04]
 	Updated print/ruby-pdf-reader to 2.11.0 [taca 2022-12-04]
+	Updated net/ruby-train-core to 3.10.7 [taca 2022-12-04]
