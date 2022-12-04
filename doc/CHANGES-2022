@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5884 2022/12/03 23:25:55 js Exp $
+$NetBSD: CHANGES-2022,v 1.5885 2022/12/04 09:50:36 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8880,3 +8880,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/nodejs14 to 14.21.1nb1 [adam 2022-12-03]
 	Updated shells/tcsh to 6.24.04 [kim 2022-12-03]
 	Updated devel/fossil to 2.20 [js 2022-12-03]
+	Updated www/firefox102-l10n to 102.5.0 [nia 2022-12-04]
+	Updated www/firefox102 to 102.5.0 [nia 2022-12-04]
