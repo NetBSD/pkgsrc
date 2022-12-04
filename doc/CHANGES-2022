@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5923 2022/12/04 16:15:24 taca Exp $
+$NetBSD: CHANGES-2022,v 1.5924 2022/12/04 16:18:05 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8922,3 +8922,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/ruby-treetop to 1.6.12 [taca 2022-12-04]
 	Updated www/ruby-capybara to 3.38.0 [taca 2022-12-04]
 	Updated www/ruby-ethon to 0.16.0 [taca 2022-12-04]
+	Updated www/ruby-html-proofer to 5.0.2 [taca 2022-12-04]
