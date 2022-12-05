@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5967 2022/12/05 14:34:50 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.5968 2022/12/05 15:39:21 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8972,3 +8972,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/phetch to 1.2.0 [pin 2022-12-05]
 	Updated sysutils/xplr to 0.20.1 [pin 2022-12-05]
 	Updated audio/schismtracker to 20221201 [fcambus 2022-12-05]
+	Updated devel/MoarVM to 2022.12 [makoto 2022-12-05]
