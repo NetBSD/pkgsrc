@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2022/11/09 13:14:23 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2022/12/05 08:54:21 wiz Exp $
 
-DISTNAME=		libXxf86dga-1.1.5
+DISTNAME=		libXxf86dga-1.1.6
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
-EXTRACT_SUFX=		.tar.bz2
+EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/
@@ -16,8 +16,6 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		LIB_MAN_SUFFIX=3
 
 PKGCONFIG_OVERRIDE+=	xxf86dga.pc.in
-
-CONFIGURE_ARGS.NetBSD+=	--disable-malloc0returnsnull
 
 .include "../../meta-pkgs/modular-xorg/hacks.mk"
 
