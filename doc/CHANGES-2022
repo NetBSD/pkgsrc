@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5957 2022/12/04 23:16:45 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.5958 2022/12/05 08:36:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8961,3 +8961,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Added cross/i586-pc-msdosdjgpp-gcc version 11.2.0 [js 2022-12-04]
 	Removed misc/goffice0.8 successor misc/goffice0.10 [wiz 2022-12-04]
 	Updated x11/libXdamage to 1.1.6 [wiz 2022-12-04]
+	Updated devel/ccache to 4.7.4 [adam 2022-12-05]
+	Updated converters/py-chardet to 5.1.0 [adam 2022-12-05]
