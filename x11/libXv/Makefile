@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2022/11/09 13:14:22 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2022/12/05 08:53:14 wiz Exp $
 
-DISTNAME=		libXv-1.0.11
-PKGREVISION=		1
+DISTNAME=		libXv-1.0.12
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
-EXTRACT_SUFX=		.tar.bz2
+EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/
@@ -14,8 +13,6 @@ USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE+=	xv.pc.in
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
-
-CONFIGURE_ARGS.NetBSD+=	--disable-malloc0returnsnull
 
 X11_LIB_NAME?=		libXv
 .include "../../meta-pkgs/modular-xorg/avoid-duplicate.mk"
