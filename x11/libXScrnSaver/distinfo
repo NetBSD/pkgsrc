@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:34:05 nia Exp $
+$NetBSD: distinfo,v 1.9 2022/12/05 08:52:03 wiz Exp $
 
-BLAKE2s (libXScrnSaver-1.2.3.tar.bz2) = d7d90a9d6a188823caeca3caa3faa573d56776ffef7bacc60bd9ceedd217dc0c
-SHA512 (libXScrnSaver-1.2.3.tar.bz2) = 7ea628324a11b25ee82c7b11c6bf98f37de219354de51c1e29467b5de422669ba1ab121f3b9dc674093c8f3960e93c5d5428122f5539092f79bc8451c768354a
-Size (libXScrnSaver-1.2.3.tar.bz2) = 291465 bytes
+BLAKE2s (libXScrnSaver-1.2.4.tar.xz) = 4a9fb586357011e9de4123faad68e88240d0fd51705adbcfa1a71e30bc2bf467
+SHA512 (libXScrnSaver-1.2.4.tar.xz) = e4395af85f8496618afb23ffdaca1a75f5e3d213478d8dc73249cbc9840d7b993ba7513dbf6015cb38b48fe3f2223496365158a148dd5e1ac7475c5ee569e28c
+Size (libXScrnSaver-1.2.4.tar.xz) = 264384 bytes
