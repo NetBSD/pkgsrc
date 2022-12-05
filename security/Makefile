@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.882 2022/11/29 05:59:16 adam Exp $
+# $NetBSD: Makefile,v 1.883 2022/12/05 21:57:57 nikita Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -99,6 +99,7 @@ SUBDIR+=	flawfinder
 SUBDIR+=	fprint-demo
 SUBDIR+=	fsh
 SUBDIR+=	gcr
+SUBDIR+=	git-crypt
 SUBDIR+=	gnome-keyring
 SUBDIR+=	gnu-crypto
 SUBDIR+=	gnu-pw-mgr
