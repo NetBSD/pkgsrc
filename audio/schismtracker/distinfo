@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2022/10/22 21:13:28 fcambus Exp $
+$NetBSD: distinfo,v 1.12 2022/12/05 14:34:37 fcambus Exp $
 
-BLAKE2s (schismtracker-20221020-20221020.tar.gz) = ab1c323a9bb9ce5faa0d0a2ed8bb7a0e285809b44c4fec7a051c7e5d67c7c15a
-SHA512 (schismtracker-20221020-20221020.tar.gz) = 1653800b0967926c8edab96636fcad547d94f20b6bc06f27780c75d48d7944983ba36013c62bfc9c0f6fcf33e3e8f9fb4c70fff19fd2a56c672ecfc1ba2f2cd7
-Size (schismtracker-20221020-20221020.tar.gz) = 1276386 bytes
-SHA1 (patch-configure.ac) = b450d9e3825d8bb261d51b754a58a89d0e41f5fa
+BLAKE2s (schismtracker-20221201-20221201.tar.gz) = 58ce216ffc7d04e20d5d4b9cfa2a46b80dc9b808c998d1d77bd489e4f79b9e59
+SHA512 (schismtracker-20221201-20221201.tar.gz) = 7e8e32875b165e644eb2ce43b40ed436c69e3ec34334e5226215da7722a9738e0a8ed557904baea377294067fae984e3e881757cc0b0e4f21620c71261568ff1
+Size (schismtracker-20221201-20221201.tar.gz) = 1276464 bytes
+SHA1 (patch-configure.ac) = 088c7b27cd3f0d77449391df9fa7b6c0807ed034
