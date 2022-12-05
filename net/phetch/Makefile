@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2022/02/25 09:13:58 pin Exp $
+# $NetBSD: Makefile,v 1.13 2022/12/05 11:23:54 pin Exp $
 
-DISTNAME=	phetch-1.1.0
+DISTNAME=	phetch-1.2.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=xvxx/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/xvxx/phetch/
 COMMENT=	Quick lil gopher client for your terminal
 LICENSE=	mit
