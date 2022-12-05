@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2022/06/28 11:31:38 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2022/12/05 15:39:08 mef Exp $
 
-DISTNAME=	MoarVM-2022.06
-PKGREVISION=	1
+DISTNAME=	MoarVM-2022.12
 CATEGORIES=	devel perl6
 MASTER_SITES=	http://www.moarvm.org/releases/
 
