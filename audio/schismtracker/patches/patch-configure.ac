@@ -1,8 +1,8 @@
-$NetBSD: patch-configure.ac,v 1.4 2022/10/22 21:13:28 fcambus Exp $
+$NetBSD: patch-configure.ac,v 1.5 2022/12/05 14:34:37 fcambus Exp $
 
 Shell portability.
 
---- configure.ac.orig	2022-10-20 15:51:29.000000000 +0000
+--- configure.ac.orig	2022-12-01 16:04:39.000000000 +0000
 +++ configure.ac
 @@ -63,7 +63,7 @@ AC_C_BIGENDIAN
  dnl Check for SDL libs
@@ -12,4 +12,4 @@ Shell portability.
 +if test "x$SDL_CONFIG" = "x"; then
          AC_MSG_ERROR([*** sdl2-config not found.])
  fi
- if $SDL_CONFIG --version | grep -qE "^2\.0\.[0-9]+|[5-9]"; then
+ AS_VERSION_COMPARE([$($SDL_CONFIG --version)], [2.0.5], [AC_MSG_ERROR([*** SDL version >= 2.0.5 not found.])])
