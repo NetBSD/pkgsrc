@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5968 2022/12/05 15:39:21 mef Exp $
+$NetBSD: CHANGES-2022,v 1.5969 2022/12/05 15:44:32 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8973,3 +8973,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/xplr to 0.20.1 [pin 2022-12-05]
 	Updated audio/schismtracker to 20221201 [fcambus 2022-12-05]
 	Updated devel/MoarVM to 2022.12 [makoto 2022-12-05]
+	Updated lang/nqp to 2022.12 [makoto 2022-12-05]
