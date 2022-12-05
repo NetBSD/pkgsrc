@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5960 2022/12/05 08:52:14 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.5961 2022/12/05 08:53:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8965,3 +8965,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated converters/py-chardet to 5.1.0 [adam 2022-12-05]
 	Updated x11/libXres to 1.2.2 [wiz 2022-12-05]
 	Updated x11/libXScrnSaver to 1.2.4 [wiz 2022-12-05]
+	Updated x11/libXv to 1.0.12 [wiz 2022-12-05]
