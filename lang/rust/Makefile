@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.274 2022/11/16 08:36:34 wiz Exp $
+# $NetBSD: Makefile,v 1.275 2022/12/05 21:44:58 jperkin Exp $
 
 DISTNAME=	rustc-1.64.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -63,6 +63,9 @@ CONFIGURE_ARGS+=	--enable-vendor
 
 # cargo defaults to using the number of available CPUs
 MAKE_ENV+=		CARGO_BUILD_JOBS=${_MAKE_JOBS_N}
+
+# Ensure we use a bundled lzma rather than relying on finding one.
+MAKE_ENV+=		LZMA_API_STATIC=1
 
 # MacOS X 10.7 is the oldest supported version. See
 # ${WRKSRC}/src/bootstrap/lib.rs
