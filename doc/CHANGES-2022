@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5963 2022/12/05 11:21:38 pin Exp $
+$NetBSD: CHANGES-2022,v 1.5964 2022/12/05 11:23:00 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8968,3 +8968,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/libXv to 1.0.12 [wiz 2022-12-05]
 	Updated x11/libXxf86dga to 1.1.6 [wiz 2022-12-05]
 	Updated textproc/csvlens to 0.1.10 [pin 2022-12-05]
+	Updated sysutils/hexyl to 0.11.0 [pin 2022-12-05]
