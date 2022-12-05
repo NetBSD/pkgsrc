@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2022/03/13 06:09:21 mef Exp $
+@comment $NetBSD: PLIST,v 1.15 2022/12/05 15:39:08 mef Exp $
 bin/moar
 include/mimalloc/mimalloc-atomic.h
 include/mimalloc/mimalloc-internal.h
@@ -75,7 +75,6 @@ include/moar/core/continuation.h
 include/moar/core/dll.h
 include/moar/core/exceptions.h
 include/moar/core/ext.h
-include/moar/core/fixedsizealloc.h
 include/moar/core/fixkey_hash_table.h
 include/moar/core/fixkey_hash_table_funcs.h
 include/moar/core/frame.h
