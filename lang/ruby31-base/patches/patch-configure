@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.3 2022/11/26 13:02:49 taca Exp $
+$NetBSD: patch-configure,v 1.4 2022/12/05 11:47:03 jperkin Exp $
 
 * Avoid bash specific variable substitution.
 * Adding Interix support.
@@ -115,7 +115,20 @@ $NetBSD: patch-configure,v 1.3 2022/11/26 13:02:49 taca Exp $
  	if test "$rb_cv_binary_elf" != "yes"
  then :
  
-@@ -31872,7 +31871,12 @@ fi
+@@ -31847,9 +31846,10 @@ esac
+ 	 ;; #(
+   darwin*) :
+ 
++	RUBY_SO_NAME="${RUBY_SO_NAME}"'.$(RUBY_PROGRAM_VERSION)'
+ 	LIBRUBY_SO='lib$(RUBY_SO_NAME).$(SOEXT)'
+-	LIBRUBY_SONAME='$(LIBRUBY_SO)'
+-	LIBRUBY_ALIASES='lib$(RUBY_INSTALL_NAME).$(SOEXT)'
++	LIBRUBY_SONAME='lib$(RUBY_BASE_NAME).$(RUBY_API_VERSION).$(SOEXT)'
++	LIBRUBY_ALIASES='$(LIBRUBY_SONAME) lib$(RUBY_INSTALL_NAME).$(SOEXT)'
+ 	if test "$load_relative" = yes
+ then :
+ 
+@@ -31872,7 +31872,12 @@ fi
  	 ;; #(
    interix*) :
  
@@ -129,7 +142,7 @@ $NetBSD: patch-configure,v 1.3 2022/11/26 13:02:49 taca Exp $
  	 ;; #(
    cygwin*|msys*|mingw*|mswin*) :
  
-@@ -32065,7 +32069,7 @@ then :
+@@ -32065,7 +32070,7 @@ then :
  esac
      rpathflag=`IFS="$PATH_SEPARATOR"
          echo x "$rpathflag" |
@@ -138,7 +151,7 @@ $NetBSD: patch-configure,v 1.3 2022/11/26 13:02:49 taca Exp $
      `
      LIBRUBY_RPATHFLAGS="$LIBRUBY_RPATHFLAGS${rpathflag}"
      LIBRUBYARG_SHARED="$LIBRUBY_RPATHFLAGS $LIBRUBYARG_SHARED"
-@@ -33706,7 +33710,7 @@ guard=INCLUDE_RUBY_CONFIG_H
+@@ -33706,7 +33711,7 @@ guard=INCLUDE_RUBY_CONFIG_H
  (
    if test "x$CONFIGURE_TTY" = xyes
  then :
@@ -147,7 +160,7 @@ $NetBSD: patch-configure,v 1.3 2022/11/26 13:02:49 taca Exp $
  else $as_nop
    color=
  fi
-@@ -34930,21 +34934,7 @@ which seems to be undefined.  Please mak
+@@ -34930,21 +34935,7 @@ which seems to be undefined.  Please mak
      "Makefile":F)
      tmpmk=confmk$$.tmp
      {
