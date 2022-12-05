@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2022/11/09 13:14:20 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2022/12/05 08:52:03 wiz Exp $
 
-DISTNAME=		libXScrnSaver-1.2.3
+DISTNAME=		libXScrnSaver-1.2.4
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
-EXTRACT_SUFX=		.tar.bz2
+EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/
@@ -14,8 +14,6 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
 
 PKGCONFIG_OVERRIDE+=	xscrnsaver.pc.in
-
-CONFIGURE_ARGS.NetBSD+=	--disable-malloc0returnsnull
 
 X11_LIB_NAME?=		libXScrnSaver
 .include "../../meta-pkgs/modular-xorg/avoid-duplicate.mk"
