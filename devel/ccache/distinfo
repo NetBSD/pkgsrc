@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.51 2021/10/26 10:14:23 nia Exp $
+$NetBSD: distinfo,v 1.52 2022/12/05 08:29:44 adam Exp $
 
-BLAKE2s (ccache-3.7.12.tar.gz) = 81ee3b98600c80c0531f7a46d2542cb7f0446b08a6db445ef250c7cf4274927a
-SHA512 (ccache-3.7.12.tar.gz) = 1de2dcb6568486d82b589e35f46e7f24306821545617cb9e991c1122b257d2872c1f342fd941f98777ebfd5b0b0babc45a33d824925759478f1f67370db3dd3c
-Size (ccache-3.7.12.tar.gz) = 506948 bytes
+BLAKE2s (ccache-4.7.4.tar.gz) = cf2457632a920d400371fc775d62abfc02b2cb0ffc110d412f36c8cbfd8f2ce4
+SHA512 (ccache-4.7.4.tar.gz) = 58faceb3d3b566d53000ac81bf27a52502ff3cb163f29506eccb7831bfcfdde3601102fe8b57530b8900e1d5e050374364c4df3c88ff825f0132e94b90441de9
+Size (ccache-4.7.4.tar.gz) = 743012 bytes

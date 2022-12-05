@@ -1,23 +1,22 @@
-# $NetBSD: Makefile,v 1.63 2022/06/28 11:31:40 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2022/12/05 08:29:44 adam Exp $
 
-DISTNAME=	ccache-3.7.12
-PKGREVISION=	2
+DISTNAME=	ccache-4.7.4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ccache/}
-# do not use xz distfile here, xz needs gettext-lib which leads to circular
-# dependencies on some platforms.
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
+# Do not use xz distfile here; xz needs gettext-lib which leads to circular
+# dependencies on some platforms.
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ccache.dev/
 COMMENT=	Cache for C/C++ compilers
 LICENSE=	gnu-gpl-v3 AND modified-bsd AND public-domain AND zlib
 
-USE_TOOLS+=		bash:test gmake perl:test
-GNU_CONFIGURE=		yes
-TEST_TARGET=		test
+USE_CMAKE=	yes
+USE_LANGUAGES=	c c++11
+USE_TOOLS+=	perl:test pkg-config
+TEST_TARGET=	test
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
-
-.include "../../devel/zlib/buildlink3.mk"
+.include "../../archivers/zstd/buildlink3.mk"
+.include "../../databases/hiredis/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
