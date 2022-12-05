@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2022/09/18 16:26:18 pin Exp $
+# $NetBSD: Makefile,v 1.6 2022/12/05 11:20:37 pin Exp $
 
-DISTNAME=	csvlens-0.1.9
+DISTNAME=	csvlens-0.1.10
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=YS-L/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/YS-L/csvlens/
 COMMENT=	Command line csv viewer
 LICENSE=	mit
