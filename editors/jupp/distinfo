@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/12/06 11:10:24 vins Exp $
+
+BLAKE2s (joe-3.1jupp41.tgz) = 56cb21bf376b17eb4ffe9854bb37f253d39bcb50955aea003258848923cfea6e
+SHA512 (joe-3.1jupp41.tgz) = 9a07946984b64fff4ad8174f9fa437073543cd6af357caf9674571ed787709b3cc2b16fd571d7b8b50b8bb9c7e7bf49dff010d162b76324818be130ab37e06cf
+Size (joe-3.1jupp41.tgz) = 505002 bytes
