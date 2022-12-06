@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.972 2022/12/06 15:02:21 vins Exp $
+# $NetBSD: Makefile,v 1.973 2022/12/06 21:05:22 vins Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -627,6 +627,7 @@ SUBDIR+=	xkbutils
 SUBDIR+=	xkeyboard-config
 SUBDIR+=	xkeycaps
 SUBDIR+=	xkill
+SUBDIR+=	xlax
 SUBDIR+=	xless
 SUBDIR+=	xload
 SUBDIR+=	xlockmore
