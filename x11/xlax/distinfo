@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2022/12/06 21:04:13 vins Exp $
+
+BLAKE2s (xlax2.4.tar.gz) = 90e7169a24fd5c1805ff27576b876cfbc4991be4e95e2bc58644a9d0fcffdb68
+SHA512 (xlax2.4.tar.gz) = 294aad75a5ca8dc396c6e07044f66b36e7a99d6cb10a3d89f39660223e0b5063d302b34dd804b272df9d951a7f2bcf1cf1c8a3746d97ae1fb836c9bbcc9e2dd9
+Size (xlax2.4.tar.gz) = 15804 bytes
+SHA1 (patch-vroot.h) = 86fd4d6637bf37503c21e1891e19bf0b8a579e5e
+SHA1 (patch-xlax.c) = d09739837c4307579a898a2da7d5031992a0d4ff
+SHA1 (patch-xlax.h) = e6e146997a48a2ed6f15b56657e6a911fedee9c9
