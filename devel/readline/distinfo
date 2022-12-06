@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.36 2022/10/03 12:45:34 wiz Exp $
+$NetBSD: distinfo,v 1.37 2022/12/06 05:34:06 sekiya Exp $
 
 BLAKE2s (readline-8.2.tar.gz) = 680d2c3d7ce2de64a7e3a72adc5021e564f29af270d48781b0669b3e075f55e8
 SHA512 (readline-8.2.tar.gz) = 0a451d459146bfdeecc9cdd94bda6a6416d3e93abd80885a40b334312f16eb890f8618a27ca26868cebbddf1224983e631b1cbc002c1a4d1cd0d65fba9fea49a
@@ -6,4 +6,5 @@ Size (readline-8.2.tar.gz) = 3043952 bytes
 SHA1 (patch-ae) = ea0d02a1975696ff51c4b1dd34d62a97d990a6b9
 SHA1 (patch-ag) = 3114e6959dfff3e2aae74c3df3ba4b0f692b79bb
 SHA1 (patch-ah) = d812ea068415939beb42c72dd9bed8d210db57d1
+SHA1 (patch-ai) = 92600d64a9184e7b3b0ee31c3e7fccb115e3343d
 SHA1 (patch-examples_Makefile.in) = 12bdbc3a0d1a116bed96c66ef4d25273b071fd3c
