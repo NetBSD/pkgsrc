@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST.common,v 1.1 2022/12/06 12:34:12 vins Exp $
+bin/xosview2
+man/man1/xosview2.1
+share/X11/app-defaults/XOsview2
+share/doc/xosview2/README

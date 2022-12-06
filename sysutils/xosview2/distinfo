@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/12/06 12:34:12 vins Exp $
+
+BLAKE2s (xosview2-2.3.1.tar.gz) = 7ed70fd1859b9ae7dadc72436333ac910f5ff57b6f39598fc2c87ab21648013e
+SHA512 (xosview2-2.3.1.tar.gz) = c90fc4f79d1f776eba90620376d318302135fc18e79a49e1aa57607276b57d46c66eb647ad92b3ac314b74d64247887e81e1541f81dd276e1e5ef2206e241060
+Size (xosview2-2.3.1.tar.gz) = 391341 bytes
