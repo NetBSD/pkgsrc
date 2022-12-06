@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.576 2022/12/04 23:07:42 wiz Exp $
+# $NetBSD: Makefile,v 1.577 2022/12/06 14:31:24 vins Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -249,6 +249,7 @@ SUBDIR+=	php-orangehrm
 SUBDIR+=	pick
 SUBDIR+=	pinfo
 SUBDIR+=	pixd
+SUBDIR+=	plan9port
 SUBDIR+=	ppower
 SUBDIR+=	preftools
 SUBDIR+=	pty-redir
