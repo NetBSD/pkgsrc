@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5978 2022/12/06 12:17:18 vins Exp $
+$NetBSD: CHANGES-2022,v 1.5979 2022/12/06 12:36:22 vins Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8985,3 +8985,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/gdb to 10.1nb5 [he 2022-12-06]
 	Added editors/jupp version 3.1.41 [vins 2022-12-06]
 	Added editors/ee version 1.5.2 [vins 2022-12-06]
+	Added sysutils/xosview2 version 2.3.1 [vins 2022-12-06]
