@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/11/05 16:10:40 pin Exp $
+# $NetBSD: Makefile,v 1.7 2022/12/06 14:41:38 vins Exp $
 
 DISTNAME=	ksh93-1.0.4
 CATEGORIES=	shells
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=ksh93/}
 GITHUB_PROJECT=	ksh
 GITHUB_TAG=	v${PKGVERSION:S/beta/-beta/}
 
-MAINTAINER=	vms@retrobsd.ddns.net
+MAINTAINER=	vins@NetBSD.org
 HOMEPAGE=	https://github.com/ksh93/ksh/
 COMMENT=	Actively developed fork of AT&T KornShell 93u+
 LICENSE=	epl-v1.0

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/07/04 20:09:05 pin Exp $
+# $NetBSD: Makefile,v 1.2 2022/12/06 14:41:39 vins Exp $
 
 DISTNAME=	emwm-src
 PKGVER=		1.0a
@@ -8,7 +8,7 @@ DIST_SUBDIR=	${PKGNAME_NOREV}
 MASTER_SITES=	https://fastestcode.org/dl/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	vms@retrobsd.ddns.net
+MAINTAINER=	vins@NetBSD.org
 HOMEPAGE=	https://fastestcode.org/emwm.html
 COMMENT=	Enhanced Motif Window Manager
 LICENSE=	gnu-lgpl-v2.1

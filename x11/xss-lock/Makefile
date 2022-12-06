@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/11/06 08:23:11 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/12/06 14:41:40 vins Exp $
 
 DISTNAME=	1e158fb20108
 PKGNAME=	xss-lock-0.3.0
@@ -7,7 +7,7 @@ MASTER_SITES=	https://bitbucket.org/raymonad/xss-lock/get/
 DIST_SUBDIR=	${PKGNAME_NOREV}
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	vms@retrobsd.ddns.net
+MAINTAINER=	vins@NetBSD.org
 HOMEPAGE=	https://bitbucket.org/raymonad/xss-lock
 COMMENT=	Use external locker as X screen saver
 LICENSE=	mit
