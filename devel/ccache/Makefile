@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2022/12/05 08:29:44 adam Exp $
+# $NetBSD: Makefile,v 1.65 2022/12/06 16:14:50 adam Exp $
 
 DISTNAME=	ccache-4.7.4
 CATEGORIES=	devel
@@ -13,9 +13,11 @@ COMMENT=	Cache for C/C++ compilers
 LICENSE=	gnu-gpl-v3 AND modified-bsd AND public-domain AND zlib
 
 USE_CMAKE=	yes
-USE_LANGUAGES=	c c++11
+USE_LANGUAGES=	c99 c++17
 USE_TOOLS+=	perl:test pkg-config
 TEST_TARGET=	test
+
+GCC_REQD=	8 # std::filesystem
 
 .include "../../archivers/zstd/buildlink3.mk"
 .include "../../databases/hiredis/buildlink3.mk"
