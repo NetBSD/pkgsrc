@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5983 2022/12/06 14:31:55 vins Exp $
+$NetBSD: CHANGES-2022,v 1.5984 2022/12/06 15:03:40 vins Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8990,3 +8990,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added graphics/ximaging version 1.6 [vins 2022-12-06]
 	Updated lang/rakudo to 2022.12 [mef 2022-12-06]
 	Added misc/plan9port version 20220912 [vins 2022-12-06]
+	Added x11/xcursor-core-hr version 20220127 [vins 2022-12-06]
