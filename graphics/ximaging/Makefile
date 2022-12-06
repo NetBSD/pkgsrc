@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/12/06 13:04:59 vins Exp $
+# $NetBSD: Makefile,v 1.2 2022/12/06 19:36:55 vins Exp $
 
 DISTNAME=	ximaging-src-1.6
 PKGNAME=	${DISTNAME:S,-src,,}
@@ -6,7 +6,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	https://fastestcode.org/dl/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	vins@retrobsd.ddns.net
+MAINTAINER=	vins@NetBSD.org
 HOMEPAGE=	https://fastestcode.org/emwm.html
 COMMENT=	Image browser and viewer for Unix - X/Motif
 LICENSE=	mit
