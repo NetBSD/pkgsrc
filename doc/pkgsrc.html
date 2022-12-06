@@ -6280,8 +6280,6 @@ BUILDLINK_API_DEPENDS.foo+=   foo&gt;=1.1.0
       <code class="filename">buildlink3.mk</code> is taken
       from <code class="filename">pkgsrc/graphics/tiff</code>:</p>
 <pre class="programlisting">
-# $NetBSD: buildlink3.mk,v 1.16 2009/03/20 19:24:45 joerg Exp $
-
 BUILDLINK_TREE+=        tiff
 
 .if !defined(TIFF_BUILDLINK3_MK)
@@ -8236,6 +8234,9 @@ MASTER_SITES=   ${MASTER_SITE_GITHUB:=username/}
 GITHUB_TAG=     v${PKGVERSION_NOREV}
 EXTRACT_SUFX=   .zip
 </pre>
+<p>Here, DISTNAME combined with use of GITHUB_TAG leads the
+    file fetching infrastructure to save the resulting file locally as
+    <code class="literal">example-1.0.zip</code>.</p>
 </div>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
