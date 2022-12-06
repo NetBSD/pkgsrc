@@ -1,9 +1,10 @@
-$NetBSD: patch-po_Makefile.in.in,v 1.1 2022/11/27 19:57:39 gutteridge Exp $
+$NetBSD: patch-po_Makefile.in.in,v 1.2 2022/12/06 00:45:33 gutteridge Exp $
 
 Remove directories after purging translation files. (During the build
 phase, translation files are generated, installed, and then deleted.
 This needs to be better sorted out upstream.)
 
+--- po/Makefile.in.in.orig	2021-08-04 08:39:48.000000000 +0000
 +++ po/Makefile.in.in
 @@ -367,6 +367,7 @@ uninstall-data-yes:
  	  for lc in LC_MESSAGES $(EXTRA_LOCALE_CATEGORIES); do \
