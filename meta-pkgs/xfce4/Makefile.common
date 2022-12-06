@@ -1,9 +1,10 @@
-# $NetBSD: Makefile.common,v 1.73 2021/12/26 18:27:55 gutteridge Exp $
+# $NetBSD: Makefile.common,v 1.74 2022/12/06 01:02:52 gutteridge Exp $
 #
 # used by archivers/xfce4-thunar-archive/Makefile
 # used by devel/xfce4-conf/Makefile
 # used by devel/xfce4-dev-tools/Makefile
 # used by editors/xfce4-mousepad/Makefile
+# used by graphics/xfce4-icon-theme/Makefile
 # used by mail/xfce4-mailwatch-plugin/Makefile
 # used by meta-pkgs/xfce4-extras/Makefile
 # used by misc/xfce4-calculator-plugin/Makefile
