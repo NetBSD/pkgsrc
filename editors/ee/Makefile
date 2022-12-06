@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/12/06 11:38:00 vins Exp $
+# $NetBSD: Makefile,v 1.4 2022/12/06 12:22:07 vins Exp $
 
 DISTNAME=	ee-1.5.2.src
 PKGNAME=	${DISTNAME:S,.src,,}
@@ -7,7 +7,7 @@ MASTER_SITES=	https://mirrors.ustc.edu.cn/gentoo/distfiles/
 DIST_SUBDIR=	${PKGNAME_NOREV}
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	vms@retrobsd.ddns.net
+MAINTAINER=	vins@NetBSD.org
 HOMEPAGE=	https://www.ucl.ac.uk/~ccaabaa/is/unix/ee.htm
 COMMENT=	EasyEdit, a classic curses text editor
 LICENSE=	2-clause-bsd
