@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2022/12/06 13:04:59 vins Exp $
+bin/ximaging
+lib/X11/app-defaults/XImaging
+man/man1/ximaging.1

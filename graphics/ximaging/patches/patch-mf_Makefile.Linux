@@ -1,0 +1,37 @@
+$NetBSD: patch-mf_Makefile.Linux,v 1.1 2022/12/06 13:04:59 vins Exp $
+
+Portability fixes for bmake.
+
+--- mf/Makefile.Linux.orig	2022-07-31 15:43:05.000000000 +0000
++++ mf/Makefile.Linux
+@@ -15,24 +15,22 @@ CFLAGS = -O2 -Wall $(INCDIRS)
+ LDFLAGS = -pthread
+ 
+ # OpenMP loop optimizations
+-ifdef ENABLE_OMP
++.ifdef ENABLE_OMP
+ CFLAGS += -fopenmp -DENABLE_OMP
+ LDFLAGS += -fopenmp
+-endif
++.endif
+ 
+ # Common Desktop Environment support
+-ifdef ENABLE_CDE
++.ifdef ENABLE_CDE
+ CFLAGS += -DENABLE_CDE
+ IPC_OBJS = tooltalk.o
+ CDE_LIBS = -lDtHelp -lDtSvc -ltt
+ INCDIRS += -I/usr/dt/include
+ LIBDIRS += -L/usr/dt/lib
+-else
++.else
+ IPC_OBJS = xipc.o
+-endif
++.endif
+ 
+-include common.mf
++.include "common.mf"
+ 
+ install: common_install
+-
+--include .depend
