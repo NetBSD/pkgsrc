@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.34 2018/01/07 13:04:10 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.35 2022/12/06 06:29:51 sekiya Exp $
 
 BUILDLINK_TREE+=	readline
 
@@ -11,6 +11,8 @@ BUILDLINK_PKGSRCDIR.readline?=		../../devel/readline
 
 BUILDLINK_FILES.readline+=	include/history.h
 BUILDLINK_FILES.readline+=	include/readline.h
+BUILDLINK_FILES.readline+=	lib/pkgconfig/history.pc
+BUILDLINK_FILES.readline+=	lib/pkgconfig/readline.pc
 
 BUILDLINK_FNAME_TRANSFORM.readline+=	-e 's|include/history\.h|include/readline/history.h|g'
 BUILDLINK_FNAME_TRANSFORM.readline+=	-e 's|include/readline\.h|include/readline/readline.h|g'
