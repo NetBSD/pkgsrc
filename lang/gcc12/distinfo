@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.2 2022/08/22 12:16:15 wiz Exp $
+$NetBSD: distinfo,v 1.3 2022/12/06 14:23:02 jperkin Exp $
 
+BLAKE2s (gcc-12.2.0-arm.diff) = a39143ad6349cf5153954c2c1398cb3e33b586215a17836af017c3894d57dc30
+SHA512 (gcc-12.2.0-arm.diff) = 3061a8a990f2f7b31f1daf30ea0ddabcfe68f0f01b2d8dcf7cbb4ab1cd559d86fd38a453613128e35d0e78a14199ff3848b3ca007349ebe2ff420beb12468638
+Size (gcc-12.2.0-arm.diff) = 616315 bytes
 BLAKE2s (gcc-12.2.0.tar.xz) = aca782fc46f75c32dc223ba8715cb46001658574431235822ce4e68361c58305
 SHA512 (gcc-12.2.0.tar.xz) = e9e857bd81bf7a370307d6848c81b2f5403db8c7b5207f54bce3f3faac3bde63445684092c2bc1a2427cddb6f7746496d9fbbef05fbbd77f2810b2998f1f9173
 Size (gcc-12.2.0.tar.xz) = 84645292 bytes
