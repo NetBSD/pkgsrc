@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5984 2022/12/06 15:03:40 vins Exp $
+$NetBSD: CHANGES-2022,v 1.5985 2022/12/06 16:28:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8991,3 +8991,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/rakudo to 2022.12 [mef 2022-12-06]
 	Added misc/plan9port version 20220912 [vins 2022-12-06]
 	Added x11/xcursor-core-hr version 20220127 [vins 2022-12-06]
+	Updated databases/prometheus to 2.40.5 [adam 2022-12-06]
