@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2022/07/04 08:31:43 pin Exp $
+# $NetBSD: Makefile,v 1.2 2022/12/06 14:41:38 vins Exp $
 
 DISTNAME=	etsh-5.4.0
 CATEGORIES=	shells
 MASTER_SITES=	https://etsh.nl/src/etsh_5.4.0/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	vms@retrobsd.ddns.net
+MAINTAINER=	vins@NetBSD.org
 HOMEPAGE=	https://etsh.nl/
 COMMENT=	Enhanced port of Thompson shell from V6 UNIX
 LICENSE=	original-bsd AND modified-bsd AND 2-clause-bsd

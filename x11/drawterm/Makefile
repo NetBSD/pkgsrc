@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/11/05 16:12:49 pin Exp $
+# $NetBSD: Makefile,v 1.4 2022/12/06 14:41:39 vins Exp $
 
 DISTNAME=	snap
 PKGVER=		20221013
@@ -7,7 +7,7 @@ CATEGORIES=	x11 plan9
 DIST_SUBDIR=	${PKGNAME_NOREV}
 MASTER_SITES=	https://git.9front.org/git/plan9front/drawterm/65e8a26e1dac4a0f589f615126ad87a92c9c11ab/
 
-MAINTAINER=	vms@retrobsd.ddns.net
+MAINTAINER=	vins@NetBSD.org
 HOMEPAGE=	https://drawterm.9front.org/
 COMMENT=	Utility to connect to Plan9 CPU servers
 LICENSE=	mit

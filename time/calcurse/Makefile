@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2022/07/12 09:04:01 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/12/06 14:41:39 vins Exp $
 
 DISTNAME=	calcurse-4.8.0
 PKGREVISION=	1
 CATEGORIES=	time
 MASTER_SITES=	http://calcurse.org/files/
 
-MAINTAINER=	vms@retrobsd.ddns.net
+MAINTAINER=	vins@NetBSD.org
 HOMEPAGE=	https://calcurse.org/
 COMMENT=	Text based calendar and scheduling application
 LICENSE=	2-clause-bsd
