@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5974 2022/12/06 09:46:59 he Exp $
+$NetBSD: CHANGES-2022,v 1.5975 2022/12/06 11:15:06 vins Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8983,3 +8983,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-pylint to 2.15.8 [adam 2022-12-06]
 	Updated www/unit-python to 1.28.0nb1 [wiz 2022-12-06]
 	Updated devel/gdb to 10.1nb5 [he 2022-12-06]
+	Added editors/jupp version 3.1.41 [vins 2022-12-06]
+	Added editors/jupp version 3.1.41 [vins 2022-12-06]
