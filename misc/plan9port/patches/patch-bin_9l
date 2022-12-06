@@ -1,0 +1,47 @@
+$NetBSD: patch-bin_9l,v 1.1 2022/12/06 14:29:25 vins Exp $
+
+Let pkgsrc define its own compiler.
+
+--- bin/9l.orig	2022-09-12 14:35:36.000000000 +0000
++++ bin/9l
+@@ -14,26 +14,26 @@ extralibs="-lm"
+ tag="${SYSNAME:-`uname`}"
+ case "$tag" in
+ *DragonFly*|*BSD*)
+-	ld="${CC9:-gcc} $CC9FLAGS"
++	ld="${CC9:-@CC@} $CC9FLAGS"
+ 	userpath=true
+ 	extralibs="$extralibs -lutil"
+ 	;;
+ *OSF1*)
+-	ld="${CC9:-cc} $CC9FLAGS"
++	ld="${CC9:-@CC@} $CC9FLAGS"
+ 	userpath=true
+ 	extralibs="$extralibs -lutil"
+ 	nmflags="-B"
+ 	;;
+ *Linux*)
+-	ld="${CC9:-gcc} $CC9FLAGS"
++	ld="${CC9:-@CC@} $CC9FLAGS"
+ 	userpath=true
+ 	extralibs="$extralibs -lutil -lresolv -lpthread"
+ 	;;
+ *Darwin*)
+-	ld="${CC9:-gcc} -m64 $CC9FLAGS"
++	ld="${CC9:-@CC@} -m64 $CC9FLAGS"
+ 	;;
+ *SunOS*)
+-	ld="${CC9:-cc} -g $CC9FLAGS"
++	ld="${CC9:-@CC@} -g $CC9FLAGS"
+ 	extralibs="$extralibs -lrt -lpthread -lsocket -lnsl"
+ 	# Record paths to shared libraries to avoid needing LD_LIBRARY_PATH
+ 	for i in "$libsl $@"
+@@ -60,7 +60,7 @@ case "$tag" in
+ 	esac
+ 	;;
+ *AIX*)
+-	ld="${CC9:-xlc_r} $CC9FLAGS"
++	ld="${CC9:-@CC@} $CC9FLAGS"
+ 	nmflags="-A -B"
+ 	;;
+ *)
