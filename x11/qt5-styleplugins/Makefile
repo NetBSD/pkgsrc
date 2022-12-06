@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/11/23 16:21:28 adam Exp $
+# $NetBSD: Makefile,v 1.4 2022/12/06 14:41:39 vins Exp $
 
 DISTNAME=	qt5-styleplugins-5.0.0.20170112
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=qt/}
 GITHUB_PROJECT=	qtstyleplugins
 GITHUB_TAG=	335dbece103e2cbf6c7cf819ab6672c2956b17b3
 
-MAINTAINER=	vms@retrobsd.ddns.net
+MAINTAINER=	vins@NetBSD.org
 HOMEPAGE=	https://github.com/qt/qtstyleplugins
 COMMENT=	Qt 5 extra widget styles
 LICENSE=	gnu-lgpl-v2.1
