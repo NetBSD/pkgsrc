@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2018/04/14 20:21:51 wiz Exp $
+@comment $NetBSD: PLIST,v 1.17 2022/12/06 20:40:08 wiz Exp $
 bin/vdirsyncer
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -51,15 +51,15 @@ ${PYSITELIB}/vdirsyncer/storage/base.pyo
 ${PYSITELIB}/vdirsyncer/storage/dav.py
 ${PYSITELIB}/vdirsyncer/storage/dav.pyc
 ${PYSITELIB}/vdirsyncer/storage/dav.pyo
-${PYSITELIB}/vdirsyncer/storage/etesync.py
-${PYSITELIB}/vdirsyncer/storage/etesync.pyc
-${PYSITELIB}/vdirsyncer/storage/etesync.pyo
 ${PYSITELIB}/vdirsyncer/storage/filesystem.py
 ${PYSITELIB}/vdirsyncer/storage/filesystem.pyc
 ${PYSITELIB}/vdirsyncer/storage/filesystem.pyo
 ${PYSITELIB}/vdirsyncer/storage/google.py
 ${PYSITELIB}/vdirsyncer/storage/google.pyc
 ${PYSITELIB}/vdirsyncer/storage/google.pyo
+${PYSITELIB}/vdirsyncer/storage/google_helpers.py
+${PYSITELIB}/vdirsyncer/storage/google_helpers.pyc
+${PYSITELIB}/vdirsyncer/storage/google_helpers.pyo
 ${PYSITELIB}/vdirsyncer/storage/http.py
 ${PYSITELIB}/vdirsyncer/storage/http.pyc
 ${PYSITELIB}/vdirsyncer/storage/http.pyo
