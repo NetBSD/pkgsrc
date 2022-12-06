@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2022/12/06 20:34:05 wiz Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/pytest_httpserver/__init__.py
+${PYSITELIB}/pytest_httpserver/__init__.pyc
+${PYSITELIB}/pytest_httpserver/__init__.pyo
+${PYSITELIB}/pytest_httpserver/blocking_httpserver.py
+${PYSITELIB}/pytest_httpserver/blocking_httpserver.pyc
+${PYSITELIB}/pytest_httpserver/blocking_httpserver.pyo
+${PYSITELIB}/pytest_httpserver/httpserver.py
+${PYSITELIB}/pytest_httpserver/httpserver.pyc
+${PYSITELIB}/pytest_httpserver/httpserver.pyo
+${PYSITELIB}/pytest_httpserver/py.typed
+${PYSITELIB}/pytest_httpserver/pytest_plugin.py
+${PYSITELIB}/pytest_httpserver/pytest_plugin.pyc
+${PYSITELIB}/pytest_httpserver/pytest_plugin.pyo
