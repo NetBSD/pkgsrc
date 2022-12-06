@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.24 2022/09/26 17:41:53 wiz Exp $
+$NetBSD: distinfo,v 1.25 2022/12/06 19:32:56 wiz Exp $
 
-BLAKE2s (libbluray-1.3.3.tar.bz2) = 5b3b0a29a5c7ba6807e960bfc4701dc0062978d16a4fa16859d2440b098b3019
-SHA512 (libbluray-1.3.3.tar.bz2) = fc36b4eea43f430f5f774129bd5cf075ed0128433779ad0146d59cc87e9625f4b6c31098fed1f5754b84fd08d9c8044d8d43d78c5b9c07937878cf15f517ba6f
-Size (libbluray-1.3.3.tar.bz2) = 761335 bytes
+BLAKE2s (libbluray-1.3.4.tar.bz2) = 56639c9dcf77df7b5b09235db3b528cc0cbfcee31a44deb3e9b4b4ed6dfb5ff3
+SHA512 (libbluray-1.3.4.tar.bz2) = 94dbf3b68d1c23fe4648c153cc2f0c251886fac0a6b6bbe3a77caabaa5322682f712afe4a7b6b16ca3f06744fbc0e1ca872209a32898dcf0ae182055d335aec1
+Size (libbluray-1.3.4.tar.bz2) = 756323 bytes
