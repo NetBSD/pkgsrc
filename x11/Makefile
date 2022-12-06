@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.971 2022/12/02 15:22:16 wiz Exp $
+# $NetBSD: Makefile,v 1.972 2022/12/06 15:02:21 vins Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -503,6 +503,7 @@ SUBDIR+=	xconsole
 SUBDIR+=	xcruise
 SUBDIR+=	xcursor
 SUBDIR+=	xcursor-capitaine
+SUBDIR+=	xcursor-core-hr
 SUBDIR+=	xcursor-themes
 SUBDIR+=	xcursor-vanilla-dmz
 SUBDIR+=	xcursorgen
