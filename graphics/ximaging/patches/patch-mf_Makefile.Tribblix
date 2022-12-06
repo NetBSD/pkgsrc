@@ -1,0 +1,22 @@
+$NetBSD: patch-mf_Makefile.Tribblix,v 1.1 2022/12/06 13:04:59 vins Exp $
+
+Portability fix for bmake.
+Do not assume Motif to be packaged without Xft.
+
+--- mf/Makefile.Tribblix.orig	2022-07-31 15:43:05.000000000 +0000
++++ mf/Makefile.Tribblix
+@@ -14,12 +14,6 @@ CFLAGS = -O2 -Wall $(INCDIRS)
+ LDFLAGS = -pthread
+ IPC_OBJS = xipc.o
+ 
+-include common.mf
++.include "common.mf"
+ 
+-install:
+-	install -m 775 -f $(PREFIX)/bin ximaging
+-	install -m 664 -f $(MANDIR)/man1 ximaging.1
+-	# While Tribblix packages Motif with no Xft
+-	sed '/renderTable/d' XImaging.ad > XImaging
+-	install -m 664 -f $(APPLRESDIR) XImaging
+-	rm XImaging
++install: common_install

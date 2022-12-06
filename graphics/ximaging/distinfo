@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2022/12/06 13:04:59 vins Exp $
+
+BLAKE2s (ximaging-src-1.6.tar.xz) = 8733d6719dc05ccacf28b84da77e2fdf17a539a7d1f3b917a35dd22ccffa923c
+SHA512 (ximaging-src-1.6.tar.xz) = a9625bc5262641ec38e5d0248154caf78c724e6050820af1efa2cade15fea871e852338dcf0274d8407200ced74dd9800599773e932724c87ca2f06e78c03277
+Size (ximaging-src-1.6.tar.xz) = 99064 bytes
+SHA1 (patch-mf_Makefile.Linux) = 0b7fcd2f55f111258f099f5667611d2253e51169
+SHA1 (patch-mf_Makefile.Tribblix) = 23abe40fea1f0131bd972d40c36d41047ad02398
