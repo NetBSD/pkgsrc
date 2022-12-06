@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.78 2022/06/28 11:31:43 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2022/12/06 09:45:51 he Exp $
 
 DISTNAME=	gdb-10.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=gdb/}
 
