@@ -5247,8 +5247,6 @@ following command will generate a good starting point for buildlink3.mk files:
 The following real-life example buildlink3.mk is taken from pkgsrc/graphics/
 tiff:
 
-# $NetBSD: buildlink3.mk,v 1.16 2009/03/20 19:24:45 joerg Exp $
-
 BUILDLINK_TREE+=        tiff
 
 .if !defined(TIFF_BUILDLINK3_MK)
@@ -6841,6 +6839,9 @@ MASTER_SITES=   ${MASTER_SITE_GITHUB:=username/}
 #GITHUB_PROJECT= example    # can be omitted if same as DISTNAME
 GITHUB_TAG=     v${PKGVERSION_NOREV}
 EXTRACT_SUFX=   .zip
+
+Here, DISTNAME combined with use of GITHUB_TAG leads the file fetching
+infrastructure to save the resulting file locally as example-1.0.zip.
 
 21.2.3.2. Fetch based on a specific commit before the first release
 
