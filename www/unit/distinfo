@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2022/09/14 05:31:41 osa Exp $
+$NetBSD: distinfo,v 1.11 2022/12/06 08:54:23 wiz Exp $
 
 BLAKE2s (unit-1.28.0.tar.gz) = fe95e41bc6876ae30070ef0a1cba33181df6813bc69d3a246c71c25ff6193d2a
 SHA512 (unit-1.28.0.tar.gz) = 7d2033be3d8e9d15db21b5431348be73a10fbc19bcab7e83d3c5a770e11e23a53967afe051ec53e236896ac9e021d9146501bc32b87254f9b25778b4bc5d1cbe
@@ -10,3 +10,4 @@ SHA1 (patch-src_nxt__kqueue__engine.c) = c341425f4b21d4cff6e003958f88a04b53dc4ee
 SHA1 (patch-src_nxt__php__sapi.c) = 2d5e557ff2066bec78f5bfbca6a64688f60da01b
 SHA1 (patch-src_nxt__unix.h) = c0db5bc4d9c45a3ead48627567284d8b3041b0a0
 SHA1 (patch-src_nxt__websocket__header.h) = 1b50405b187cc8a662372a1c20ab7737278135ae
+SHA1 (patch-src_python_nxt__python.c) = 18b638d2e2f155e7f2839309552d34772f0f5162
