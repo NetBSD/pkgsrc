@@ -1,10 +1,11 @@
-# $NetBSD: Makefile.common,v 1.140 2022/10/13 10:56:03 wiz Exp $
+# $NetBSD: Makefile.common,v 1.141 2022/12/06 14:05:09 nros Exp $
 #
 # used by print/poppler/Makefile
 # used by print/poppler-cpp/Makefile
 # used by print/poppler-glib/Makefile
 # used by print/poppler-includes/Makefile
 # used by print/poppler-qt5/Makefile
+# used by print/poppler-qt6/Makefile
 # used by print/poppler-utils/Makefile
 
 POPPLER_VERS=	22.10.0
