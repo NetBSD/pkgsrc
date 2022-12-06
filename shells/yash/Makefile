@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2022/11/05 16:41:14 pin Exp $
+# $NetBSD: Makefile,v 1.2 2022/12/06 14:41:39 vins Exp $
 
 DISTNAME=	yash-2.53
 CATEGORIES=	shells
 MASTER_SITES=	https://free.nchc.org.tw/osdn/yash/77664/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	vms@retrobsd.ddns.net
+MAINTAINER=	vins@NetBSD.org
 HOMEPAGE=	https://yash.osdn.jp/index.html.en
 COMMENT=	POSIX-compliant command line shell
 LICENSE=	gnu-gpl-v2
