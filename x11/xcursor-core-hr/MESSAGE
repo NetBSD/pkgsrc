@@ -1,0 +1,7 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2022/12/06 15:00:38 vins Exp $
+
+When using this theme, it is advisable to set the Xcursor.size resource to
+either 24 or 32.
+
+===========================================================================
