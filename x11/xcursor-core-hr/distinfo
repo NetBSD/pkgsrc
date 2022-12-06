@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/12/06 15:00:38 vins Exp $
+
+BLAKE2s (xcursor-core-hr-20220127/xc-core-hr.tar.xz) = 66ce73529440b9f44ae3b034b1b263345b20962d4124e3d356264d9af6bef1ad
+SHA512 (xcursor-core-hr-20220127/xc-core-hr.tar.xz) = 1f026aedb95ae98baf046b73b5ade5bc6463470641d8b1fd04a143f1d3ba1ad5dfd87b17cf2d29370a18ee936d6bbc4dcfc8e7fc5a858e2a2ee16caf5b90533c
+Size (xcursor-core-hr-20220127/xc-core-hr.tar.xz) = 11360 bytes
