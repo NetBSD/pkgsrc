@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5991 2022/12/06 20:34:37 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.5992 2022/12/06 20:40:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8998,3 +8998,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/py-aiostream version 0.4.5 [wiz 2022-12-06]
 	Updated www/py-aiohttp to 3.8.3nb1 [wiz 2022-12-06]
 	Added devel/py-test-httpserver version 1.0.6 [wiz 2022-12-06]
+	Updated time/py-vdirsyncer to 0.19.0 [wiz 2022-12-06]
