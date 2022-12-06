@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.273 2022/09/17 15:58:48 pin Exp $
+# $NetBSD: Makefile,v 1.274 2022/12/06 12:53:28 vins Exp $
 #
 
 COMMENT=	Communication programs
@@ -147,6 +147,7 @@ SUBDIR+=	tirc
 SUBDIR+=	tkabber
 SUBDIR+=	tkirc
 SUBDIR+=	tkirc2
+SUBDIR+=	toot
 SUBDIR+=	tootstream
 SUBDIR+=	toxcore
 SUBDIR+=	unrealircd
