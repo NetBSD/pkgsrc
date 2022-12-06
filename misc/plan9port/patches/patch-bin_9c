@@ -1,0 +1,84 @@
+$NetBSD: patch-bin_9c,v 1.1 2022/12/06 14:29:25 vins Exp $
+
+Let pkgsrc define its own compiler.
+
+--- bin/9c.orig	2022-09-12 14:35:36.000000000 +0000
++++ bin/9c
+@@ -3,7 +3,7 @@
+ test -f $PLAN9/config && . $PLAN9/config
+ usegcc()
+ {
+-	cc=${CC9:-gcc}
++	cc=${CC9:-@CC@}
+ 	cflags=" \
+ 		-O2 \
+ 		-c \
+@@ -60,7 +60,7 @@ quiet()
+ 
+ useclang()
+ {
+-	cc=${CC9:-clang}
++	cc=${CC9:-@CC@}
+ 	cflags=" \
+ 		-O2 \
+ 		-c \
+@@ -87,7 +87,7 @@ useclang()
+ 
+ usexlc()
+ {
+-	cc=${CC9:-xlc_r}
++	cc=${CC9:-@CC@}
+ 	cflags=" \
+ 		-c \
+ 		-O2 \
+@@ -103,15 +103,34 @@ usexlc()
+ 	cflags="$cflags $CC9FLAGS"
+ }
+ 
+-tag="${SYSNAME:-`uname`}-${CC9:-cc}"
++usesunpro()
++{
++    cc=${CC9:-@CC@} 
++	cflags=" \
++		-mt \
++		-g \
++		-c \
++		-xO3 \
++		-xCC \
++		-fast \
++		-errfmt \
++		-erroff=%none \
++	"
++}
++
++
++
++tag="${SYSNAME:-`uname`}-${CC9:-@CC@}"
+ case "$tag" in
+ *DragonFly*gcc*|*BSD*gcc*)	usegcc ;;
+ *DragonFly*clang|*BSD*clang*)	useclang ;;
++*NetBSD*cc*|DragonFly*cc*)	usegcc ;;
++*OpenBSD*cc*|FreeBSD*cc*)	useclang ;;
+ *Darwin*)
+ 		useclang
+ 		cflags="$cflags -g3 -m64"
+ 		;;
+-*HP-UX*)	cc=${CC9:-cc}; cflags="-g -O -c -Ae" ;;
++*HP-UX*)	cc=${CC9:-@CC@}; cflags="-g -O -c -Ae" ;;
+ *Linux*)	usegcc
+ 		case "${CC9:-gcc}" in
+ 		tcc)
+@@ -120,9 +139,10 @@ case "$tag" in
+ 			;;
+ 		esac
+ 		;;
+-*OSF1*)		cc=${CC9:-cc}; cflags="-g -O -c" ;;
+-*SunOS*-cc)	cc=cc;
+-		cflags="-mt -g -O -c -xCC -D__sun__"
++*OSF1*)		cc=${CC9:-@CC@}; cflags="-g -O -c" ;;
++*SunOS*-cc)
++		usesunpro
++		cflags="$cflags -D__sun__"
+ 		u=`uname`
+ 		v=`uname -r`
+ 		s=`echo $u$v | tr '. ' '__'`
