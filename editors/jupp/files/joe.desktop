@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+Version=1.1
+Name=jupp, programmer’s editor — JOE flavour
+GenericName=Text Editor
+Comment=Edit text files, programs, …
+Icon=joe.png
+TryExec=joe
+Exec=joe %F
+Terminal=true
+MimeType=application/javascript;application/json;application/x-csh;application/x-latex;application/x-sh;application/x-shellscript;application/x-sql;application/x-tcl;application/xml;application/xslt+xml;text/english;text/plain;text/x-c;text/x-c++;text/x-c++hdr;text/x-c++src;text/x-chdr;text/x-csrc;text/x-java;text/x-makefile;text/x-moc;text/x-pascal;text/x-tcl;text/x-tex;text/*;
+Categories=Development;Utility;TextEditor;ConsoleOnly;
+Keywords=jupp;joe;jmacs;jpico;jstar;rjoe;editor;visual;texteditor;

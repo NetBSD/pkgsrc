@@ -1,0 +1,15 @@
+This is the portable version of JOE.s Own Editord, using autoconf/automake.
+This version has been enhanced by several functions intended for programmers
+or other professional users, and has a lot of bugs fixed.
+It is based upon an older version of joe because these behave better overall.
+
+Basic differences between joe and jupp are:
+
+* obviously, another flavour, jupp, similar to jstar
+* utf-8 support on non-locale-aware OSses
+* bug and security fixes
+* tab completion fixes
+* code cleanup
+* compiles with -Wall -Werror (on MirBSD)
+* improved options menu
+* visibled spaces
