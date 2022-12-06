@@ -3,4 +3,6 @@ suite for Windows, Macintosh and Linux, that gives you six feature-rich
 applications for all your document production and data processing
 needs: Writer, Calc, Impress, Draw, Math and Base.
 
-This package tracks libreoffice-6.x branch of official Linux binary.
+This package contains the last release of official Linux binaries of the
+libreoffice-6.2 branch. It was left at 6.2 because this is the last
+version for which a 32-bit x86 release was provided.
