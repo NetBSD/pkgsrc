@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.230 2022/11/03 14:35:11 schmonz Exp $
+# $NetBSD: Makefile,v 1.231 2022/12/06 11:14:00 vins Exp $
 #
 
 COMMENT=	Text and binary editors
@@ -72,6 +72,7 @@ SUBDIR+=	jde
 SUBDIR+=	jed
 SUBDIR+=	joe
 SUBDIR+=	jove
+SUBDIR+=	jupp
 SUBDIR+=	kakoune
 SUBDIR+=	kate
 SUBDIR+=	kibi
