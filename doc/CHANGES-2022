@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5970 2022/12/05 21:59:01 nikita Exp $
+$NetBSD: CHANGES-2022,v 1.5971 2022/12/06 08:14:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8975,3 +8975,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/MoarVM to 2022.12 [makoto 2022-12-05]
 	Updated lang/nqp to 2022.12 [makoto 2022-12-05]
 	Added security/git-crypt version 0.7.0 [nikita 2022-12-05]
+	Updated devel/py-virtualenv to 20.17.1 [adam 2022-12-06]
+	Updated sysutils/py-xattr to 0.10.1 [adam 2022-12-06]
+	Updated textproc/py-ujson to 5.6.0 [adam 2022-12-06]
+	Updated devel/py-types-ujson to 5.6.0.0 [adam 2022-12-06]
