@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5980 2022/12/06 12:53:59 vins Exp $
+$NetBSD: CHANGES-2022,v 1.5981 2022/12/06 13:13:39 vins Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8987,3 +8987,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added editors/ee version 1.5.2 [vins 2022-12-06]
 	Added sysutils/xosview2 version 2.3.1 [vins 2022-12-06]
 	Added chat/toot version 0.30.1 [vins 2022-12-06]
+	Added graphics/ximaging version 1.6 [vins 2022-12-06]
