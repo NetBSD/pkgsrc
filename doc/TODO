@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22390 2022/12/05 08:36:03 adam Exp $
+$NetBSD: TODO,v 1.22391 2022/12/06 08:21:34 adam Exp $
 
 Suggested new packages
 ======================
@@ -796,7 +796,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o h8300-elf-gcc-7.1.0
 	o hamster-applet-2.32.1
 	o hanzim-3.5
-	o haproxy-2.7
 	o harminv-1.4.1
 	o hashcash-1.23
 	o haskell-mode-13.20
