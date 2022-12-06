@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5972 2022/12/06 08:21:34 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5973 2022/12/06 08:54:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8981,3 +8981,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-types-ujson to 5.6.0.0 [adam 2022-12-06]
 	Updated net/haproxy to 2.7.0 [adam 2022-12-06]
 	Updated devel/py-pylint to 2.15.8 [adam 2022-12-06]
+	Updated www/unit-python to 1.28.0nb1 [wiz 2022-12-06]
