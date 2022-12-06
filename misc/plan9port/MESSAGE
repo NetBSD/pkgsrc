@@ -1,0 +1,18 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2022/12/06 14:29:25 vins Exp $
+
+To use plan9port, set the PLAN9 and PATH environmental variables as below:
+
+ export PLAN9=${PREFIX}/plan9
+ export PATH=${PATH}:${PLAN9}/bin
+
+Or source plan9.sh within your shell startup script.
+
+  . ${PKG_SYSCONFDIR}/profile.d/plan9.sh
+
+To execute plan9 specific apps, run them as arguments to the '9' script,
+i.e. '9 date'.
+
+Run '9 man 1 intro | less' to begin
+
+===========================================================================

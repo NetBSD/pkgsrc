@@ -1,0 +1,12 @@
+$NetBSD: patch-src_cmd_rio_mkfile,v 1.1 2022/12/06 14:29:25 vins Exp $
+
+Properly honors LDFLAGS.
+
+--- src/cmd/rio/mkfile.orig	2020-06-22 15:22:27.000000000 +0000
++++ src/cmd/rio/mkfile
+@@ -39,4 +39,4 @@ xevents.$O printevent.$O: printevent.h
+ error.$O: showevent/ShowEvent.c
+ 
+ $O.xshove: xshove.$O
+-	$LD -o $O.xshove xshove.$O -lX11
++	$LD -o $O.xshove xshove.$O $LDFLAGS

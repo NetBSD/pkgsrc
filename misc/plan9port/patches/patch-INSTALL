@@ -1,0 +1,34 @@
+$NetBSD: patch-INSTALL,v 1.1 2022/12/06 14:29:25 vins Exp $
+
+Do not filter/redirect stdout/stderr to files making possible
+debugging harder.
+
+Properly honor $CC.
+
+--- INSTALL.orig	2022-09-12 14:35:36.000000000 +0000
++++ INSTALL
+@@ -113,7 +113,7 @@ fi
+ if [ `uname` != Darwin ]; then
+ 	# Determine whether fontsrv X11 files are available.
+ 	rm -f a.out
+-	cc -o a.out -c -Iinclude -I/usr/include -I/usr/local/include -I/usr/include/freetype2 -I/usr/local/include/freetype2 \
++	@CC@ -o a.out -c -Iinclude -I/usr/include -I/usr/local/include -I/usr/include/freetype2 -I/usr/local/include/freetype2 \
+ 	    -I/usr/X11R7/include -I/usr/X11R7/include/freetype2 \
+ 	    -I/usr/X11R6/include -I/usr/X11R6/include/freetype2 src/cmd/fontsrv/x11.c >/dev/null 2>&1
+ 	if [ -f a.out ]; then
+@@ -139,7 +139,7 @@ echo "* Compiler version:"
+ cd src
+ if $dobuild; then
+ 	echo "* Building mk..."
+-	../dist/buildmk 2>&1 | sed 's/^[+] //'
++	../dist/buildmk 2>&1
+ 
+ 	if [ ! -x ../bin/mk ]; then
+ 		echo "* Error: mk failed to build."
+@@ -206,5 +206,5 @@ if $doinstall; then
+ 	echo "	PLAN9=$PLAN9 export PLAN9"
+ 	echo '	PATH=$PATH:$PLAN9/bin export PATH'
+ fi
+-) 2>&1 | tee install.log | $awk -f $PLAN9/dist/isum.awk -v 'copy='install.sum
++)
+ 
