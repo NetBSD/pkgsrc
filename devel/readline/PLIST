@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2014/03/12 10:04:50 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2022/12/06 05:34:06 sekiya Exp $
 include/readline/chardefs.h
 include/readline/history.h
 include/readline/keymaps.h
@@ -12,6 +12,8 @@ info/readline.info
 info/rluserman.info
 lib/libhistory.la
 lib/libreadline.la
+lib/pkgconfig/history.pc
+lib/pkgconfig/readline.pc
 man/man3/history.3
 man/man3/readline.3
 share/doc/readline/CHANGES

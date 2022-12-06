@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.72 2022/10/03 12:45:34 wiz Exp $
+# $NetBSD: Makefile,v 1.73 2022/12/06 05:34:06 sekiya Exp $
 
 READLINE_VERSION=	8.2
+PKGREVISION=	1
 
 DISTNAME=	readline-${READLINE_VERSION}
 CATEGORIES=	devel
@@ -22,7 +23,7 @@ CONFIGURE_ENV.NetBSD+=	bash_cv_wcwidth_broken=no
 .endif
 
 BUILD_TARGET=		everything-libtool
-INSTALL_TARGET=		install-libtool
+INSTALL_TARGET=		install-libtool install-pc
 
 .include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
