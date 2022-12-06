@@ -1,0 +1,13 @@
+toot is a command line and TUI client for interacting with instances
+on the distributed social network known as 'the Fediverse' using the
+Mastodon.social API.
+
+Supported features:
+* Regular and two-factor authentication
+* Posting, replying, deleting, favouriting, reblogging & pinning statuses
+* Media uploads, spoiler text, sensitive content
+* Searching by account or hash tag
+* Following, muting and blocking accounts
+* Simple switching between multiple Mastodon accounts
+
+
