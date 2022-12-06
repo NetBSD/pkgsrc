@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/11/21 18:20:44 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2022/12/06 14:41:38 vins Exp $
 
 DISTNAME=	outils-0.12
 PKGNAME=	${DISTNAME:S,outils,signify,}
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=leahneukirchen/}
 GITHUB_PROJECT=	outils
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	vms@retrobsd.ddns.net
+MAINTAINER=	vins@NetBSD.org
 HOMEPAGE=	https://flak.tedunangst.com/post/signify
 COMMENT=	Cryptographically sign and verify files, from OpenBSD
 LICENSE=	original-bsd AND modified-bsd AND isc AND public-domain

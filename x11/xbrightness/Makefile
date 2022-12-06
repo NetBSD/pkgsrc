@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2022/07/03 21:07:48 pin Exp $
+# $NetBSD: Makefile,v 1.2 2022/12/06 14:41:39 vins Exp $
 
 DISTNAME=	xbrightness-0.3
 CATEGORIES=	x11
 MASTER_SITES=	http://disjunkt.com/xbrightness/
 
-MAINTAINER=	vms@retrobsd.ddns.net
+MAINTAINER=	vins@NetBSD.org
 HOMEPAGE=	http://disjunkt.com/xbrightness/
 COMMENT=	Brightness and gamma correction through the X server
 LICENSE=	mit
