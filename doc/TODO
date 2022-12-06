@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22394 2022/12/06 19:38:02 wiz Exp $
+$NetBSD: TODO,v 1.22395 2022/12/06 20:40:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1292,7 +1292,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-test-django-4.5.2
 	o py-tokyocabinet-0.6
 	o py-uliweb-0.6
-	o py-vdirsyncer-0.19.0
 	o py-wxWidgets-4.0.0
 	o py-yubiauth-0.3.10
 	o py-yubikey-manager-4.0.2
