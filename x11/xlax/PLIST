@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2022/12/06 21:04:13 vins Exp $
+bin/mkxlax
+bin/xlax
+lib/X11/app-defaults/Xlax
+man/man1/mkxlax.1
+man/man1/xlax.1
