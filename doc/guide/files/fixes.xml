@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.182 2022/08/08 01:54:32 gutteridge Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.183 2022/12/06 01:37:11 gutteridge Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -1062,6 +1062,10 @@ MASTER_SITES=   ${MASTER_SITE_GITHUB:=username/}
 GITHUB_TAG=     v${PKGVERSION_NOREV}
 EXTRACT_SUFX=   .zip
 </programlisting>
+
+    <para>Here, DISTNAME combined with use of GITHUB_TAG leads the
+    file fetching infrastructure to save the resulting file locally as
+    <literal>example-1.0.zip</literal>.</para>
 
     </sect3>
 
