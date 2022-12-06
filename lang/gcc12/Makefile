@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/08/22 12:16:15 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/12/06 14:23:02 jperkin Exp $
 
 GCC_PKGNAME=		gcc12
 .include		"version.mk"
@@ -46,6 +46,7 @@ UNLIMIT_RESOURCES+=	datasize
 UNLIMIT_RESOURCES+=	stacksize
 
 CHECK_PORTABILITY_SKIP+=	contrib/*
+CHECK_PORTABILITY_SKIP+=	gcc/configure.orig_dist
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -76,6 +77,14 @@ SUBST_SED.fixinc=	-e "s,\./fixinc.sh,-c true,"
 .endif
 
 .include "options.mk"
+
+.if ${MACHINE_PLATFORM:MDarwin-*-aarch64}
+BUILDLINK_TRANSFORM+=	rm:-nodefaultrpaths
+CONFIGURE_ARGS+=	--disable-darwin-at-rpath
+PATCHFILES=		gcc-12.2.0-arm.diff
+PATCH_SITES=		https://raw.githubusercontent.com/Homebrew/formula-patches/1d184289/gcc/
+PATCH_DIST_STRIP=	-p1
+.endif
 
 ## For graphite support.
 .if !empty(PKG_OPTIONS:Mgcc-graphite)
