@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3844 2022/12/06 20:34:20 wiz Exp $
+# $NetBSD: Makefile,v 1.3845 2022/12/06 20:39:38 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -208,6 +208,7 @@ SUBDIR+=	catch2
 SUBDIR+=	cbindgen
 SUBDIR+=	cbrowser
 SUBDIR+=	ccache
+SUBDIR+=	ccache3
 SUBDIR+=	cdecl
 SUBDIR+=	cdk
 SUBDIR+=	cervisia
