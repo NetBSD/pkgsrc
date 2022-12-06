@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/10/08 10:06:51 bsiegert Exp $
+# $NetBSD: Makefile,v 1.2 2022/12/06 14:41:39 vins Exp $
 
 DISTNAME=	xidle-20220718
 CATEGORIES=	x11
@@ -6,7 +6,7 @@ MASTER_SITES=	https://sehnsucht.multics.org/pub/pkgsrc/distfiles/
 DIST_SUBDIR=	${PKGNAME_NOREV}
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	vms@retrobsd.ddns.net
+MAINTAINER=	vins@NetBSD.org
 HOMEPAGE=	https://man.openbsd.org/xidle.1
 COMMENT=	Run a program on X inactivity
 LICENSE=	isc

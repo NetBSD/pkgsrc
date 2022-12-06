@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/11/05 18:18:13 pin Exp $
+# $NetBSD: Makefile,v 1.2 2022/12/06 14:41:40 vins Exp $
 
 DISTNAME=	xtrlock-2.15
 CATEGORIES=	x11
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/x/xtrlock/}
 EXTRACT_SUFX=	.tar.xz
 DISTFILES=	xtrlock_2.15.tar.xz
 
-MAINTAINER=	vms@retrobsd.ddns.net
+MAINTAINER=	vins@NetBSD.org
 COMMENT=	Simple X11 screen lock tool
 LICENSE=	gnu-gpl-v3
 
