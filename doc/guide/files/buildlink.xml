@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $NetBSD: buildlink.xml,v 1.45 2021/11/09 17:53:33 gutteridge Exp $ -->
+<!-- $NetBSD: buildlink.xml,v 1.46 2022/12/06 00:36:13 gutteridge Exp $ -->
 
 <chapter id="buildlink">
   <title>Buildlink methodology</title>
@@ -203,8 +203,6 @@ BUILDLINK_API_DEPENDS.foo+=   foo>=1.1.0
       from <filename>pkgsrc/graphics/tiff</filename>:</para>
 
 <programlisting>
-# &#36;NetBSD: buildlink3.mk,v 1.16 2009/03/20 19:24:45 joerg Exp &#36;
-
 BUILDLINK_TREE+=        tiff
 
 .if !defined(TIFF_BUILDLINK3_MK)
