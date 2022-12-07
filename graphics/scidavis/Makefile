@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2022/06/30 11:18:28 nia Exp $
+# $NetBSD: Makefile,v 1.44 2022/12/07 17:49:38 wiz Exp $
 
 DISTNAME=	scidavis-0.2.4
 PKGREVISION=	32
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://scidavis.sourceforge.net/
 COMMENT=	Data analysis and visualization package
+
+BROKEN=		"Does not build with gsl 2.7.1"
 
 USE_LANGUAGES=		c c++
 INSTALL_MAKE_FLAGS+=	INSTALL_ROOT=${DESTDIR}
