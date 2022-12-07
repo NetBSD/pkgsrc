@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.95 2022/12/02 15:06:22 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.96 2022/12/07 14:59:41 wiz Exp $
 #
 # used by audio/xine-alsa/Makefile
 # used by audio/xine-pulse/Makefile
@@ -14,6 +14,8 @@ EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://www.xine-project.org/
+
+TOOL_DEPENDS+=		gettext-tools-[0-9]*:../../devel/gettext-tools
 
 MAKE_JOBS_SAFE=		no
 
