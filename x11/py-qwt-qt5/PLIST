@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.3 2022/12/02 15:36:05 wiz Exp $
-${PYSITELIB}/PyQt5/Qwt.cpython-310.so
+@comment $NetBSD: PLIST,v 1.4 2022/12/07 14:58:52 wiz Exp $
+${PYSITELIB}/PyQt5/Qwt.cpython-${PYVER}.so
 ${PYSITELIB}/PyQt5/bindings/Qwt/Qwt.toml
 ${PYSITELIB}/PyQt5/bindings/Qwt/Qwt_Qt5.sip
 ${PYSITELIB}/PyQt5/bindings/Qwt/conversions.sip
