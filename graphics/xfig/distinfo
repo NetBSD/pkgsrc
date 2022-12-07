@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.35 2021/10/26 10:47:24 nia Exp $
+$NetBSD: distinfo,v 1.36 2022/12/07 15:30:56 fcambus Exp $
 
-BLAKE2s (xfig-3.2.8a.tar.xz) = 8b2366eaf58a595d95188651b972facff53bef0ed5acc09a91daeccbbcc7369f
-SHA512 (xfig-3.2.8a.tar.xz) = fe20378d7c6de980aa0df4728470cd31a50adff748ebf707e2419fb057a8c3692fc3798bb5bc67fcec87d13c5ed66be93adb66a15b6ccf6fa1381ee45156f35b
-Size (xfig-3.2.8a.tar.xz) = 5380896 bytes
+BLAKE2s (xfig-3.2.8b.tar.xz) = a6c2beece328a88d63545dfd5e99a75ab368b88972454ec800f82f8a5ab44ba5
+SHA512 (xfig-3.2.8b.tar.xz) = 5cc5e61977f97956baca77bf4bce09d0f47ea6fafb10055d0523f7cccd72d7af80e706daa62ae16df3fc54338b4f6cd4a6b71dc460311e65be749ec84fa662b3
+Size (xfig-3.2.8b.tar.xz) = 5382524 bytes
