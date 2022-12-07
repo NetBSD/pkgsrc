@@ -1,12 +1,12 @@
-$NetBSD: patch-aa,v 1.5 2014/02/27 20:22:41 spz Exp $
+$NetBSD: patch-aa,v 1.6 2022/12/07 08:15:59 jperkin Exp $
 
 add extra options for cases where PREFIX is not in a standard location
 
 add INSTALLEXADIR for some pkgsrc magic
 
-$NetBSD: patch-aa,v 1.5 2014/02/27 20:22:41 spz Exp $
+$NetBSD: patch-aa,v 1.6 2022/12/07 08:15:59 jperkin Exp $
 
---- configure.server.orig	2014-01-26 12:39:20.000000000 +0000
+--- configure.server.orig	2019-04-22 18:20:02.000000000 +0000
 +++ configure.server
 @@ -17,6 +17,8 @@ do
    To configure Xymon, the following options are available:
@@ -48,7 +48,7 @@ $NetBSD: patch-aa,v 1.5 2014/02/27 20:22:41 spz Exp $
  	  "--fping")
  	  	USERFPING="$1"; shift
  		;;
-@@ -400,14 +412,16 @@ then
+@@ -404,14 +416,16 @@ then
  fi
  echo ""; echo ""
  
@@ -67,7 +67,16 @@ $NetBSD: patch-aa,v 1.5 2014/02/27 20:22:41 spz Exp $
  echo "# Server data dir for hist/ etc."  >>Makefile
  echo "XYMONVAR = $XYMONVAR"              >>Makefile
  echo "# CGI scripts go in CGIDIR"        >>Makefile
-@@ -527,6 +541,7 @@ echo "LIBRTDEF = $LIBRTDEF"             
+@@ -453,7 +467,7 @@ then
+ 	echo "CARESINCDIR = -I$CARESINC" >>Makefile
+     fi
+     if test "$CARESLIB" != ""; then
+-	echo "CARESLIBS = -L$LIB -lcares" >>Makefile
++	echo "CARESLIBS = -L$CARESLIB -lcares" >>Makefile
+ 	echo "RPATHVAL += ${LIB}"        >>Makefile
+     else
+ 	echo "CARESLIBS = -lcares"       >>Makefile
+@@ -531,6 +545,7 @@ echo "LIBRTDEF = $LIBRTDEF"
  echo ""                                  >>Makefile
  echo "# Net-SNMP settings"               >>Makefile
  echo "DOSNMP = $DOSNMP"                  >>Makefile
@@ -75,7 +84,7 @@ $NetBSD: patch-aa,v 1.5 2014/02/27 20:22:41 spz Exp $
  echo ""                                  >>Makefile
  
  echo "# Large File Support settings"     >>Makefile
-@@ -557,6 +572,9 @@ fi
+@@ -561,6 +576,9 @@ fi
  if test "$INSTALLETCDIR" != ""; then
  	echo "INSTALLETCDIR = $INSTALLETCDIR"   >>Makefile
  fi
