@@ -1,10 +1,10 @@
-$NetBSD: patch-helix-loader_src_grammar.rs,v 1.2 2022/11/11 20:23:39 nikita Exp $
+$NetBSD: patch-helix-loader_src_grammar.rs,v 1.3 2022/12/07 17:08:38 jperkin Exp $
 
 Taken from FreeBSD ports, original patch by ashish@.
 
---- helix-loader/src/grammar.rs.orig	2022-09-01 17:07:46 UTC
+--- helix-loader/src/grammar.rs.orig	2022-12-07 02:54:50
 +++ helix-loader/src/grammar.rs
-@@ -89,60 +89,6 @@ pub fn fetch_grammars() -> Result<()> {
+@@ -88,60 +88,6 @@ pub fn fetch_grammars() -> Result<()> {
      let mut grammars = get_grammar_configs()?;
      grammars.retain(|grammar| !matches!(grammar.source, GrammarSource::Local { .. }));
  
@@ -58,7 +58,7 @@ Taken from FreeBSD ports, original patch by ashish@.
 -        let len = errors.len();
 -        println!("{} grammars failed to fetch", len);
 -        for (i, error) in errors.into_iter().enumerate() {
--            println!("\tFailure {}/{}: {}", i, len, error);
+-            println!("\tFailure {}/{}: {}", i + 1, len, error);
 -        }
 -    }
 -
