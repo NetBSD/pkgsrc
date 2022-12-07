@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/12/02 15:24:30 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/12/07 14:54:34 wiz Exp $
 
 DISTNAME=	PyQt5_sip-12.11.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/PyQt5_sip/sip-qt5/}
@@ -11,6 +11,8 @@ COMMENT=	Qt5 support for sip
 LICENSE=	sip-license OR gnu-gpl-v2 OR gnu-gpl-v3
 
 USE_LANGUAGES=	c c++
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
