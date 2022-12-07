@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5996 2022/12/07 09:35:30 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5997 2022/12/07 09:43:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9006,3 +9006,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/jpegoptim to 1.5.0 [adam 2022-12-07]
 	Updated net/dnsmasq to 2.88 [adam 2022-12-07]
 	Updated graphics/graphviz to 7.0.4 [adam 2022-12-07]
+	Updated devel/py-prompt_toolkit to 3.0.36 [adam 2022-12-07]
+	Updated devel/py-hatch-vcs to 0.2.1 [adam 2022-12-07]
