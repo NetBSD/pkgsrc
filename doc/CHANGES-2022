@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6002 2022/12/07 15:19:44 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.6003 2022/12/07 15:30:22 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9019,3 +9019,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated ham/chirp to 20221207nb1 [gdt 2022-12-07]
 	Removed mail/wl successor mail/wl-snapshot [wiz 2022-12-07]
 	Removed editors/easyedit successor editors/ee [vins 2022-12-07]
+	Updated print/fig2dev to 3.2.8b [fcambus 2022-12-07]
