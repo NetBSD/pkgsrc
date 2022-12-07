@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.53 2022/11/23 16:20:24 adam Exp $
+# $NetBSD: Makefile,v 1.54 2022/12/07 14:02:20 gdt Exp $
 
-DISTNAME=	chirp-daily-20221118
+DISTNAME=	chirp-daily-20221207
 PKGNAME=	${DISTNAME:S/-daily//}
 PKGREVISION=	1
 CATEGORIES=	ham

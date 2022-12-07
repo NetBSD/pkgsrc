@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2022/11/18 13:20:42 gdt Exp $
+@comment $NetBSD: PLIST,v 1.18 2022/12/07 14:02:20 gdt Exp $
 bin/chirpw
 bin/rpttool
 ${PYSITELIB}/${EGG_INFODIR}
@@ -71,12 +71,12 @@ ${PYSITELIB}/chirp/drivers/baofeng_uv3r.pyo
 ${PYSITELIB}/chirp/drivers/baofeng_wp970i.py
 ${PYSITELIB}/chirp/drivers/baofeng_wp970i.pyc
 ${PYSITELIB}/chirp/drivers/baofeng_wp970i.pyo
-${PYSITELIB}/chirp/drivers/bf-t1.py
-${PYSITELIB}/chirp/drivers/bf-t1.pyc
-${PYSITELIB}/chirp/drivers/bf-t1.pyo
-${PYSITELIB}/chirp/drivers/bf-t8.py
-${PYSITELIB}/chirp/drivers/bf-t8.pyc
-${PYSITELIB}/chirp/drivers/bf-t8.pyo
+${PYSITELIB}/chirp/drivers/bf_t1.py
+${PYSITELIB}/chirp/drivers/bf_t1.pyc
+${PYSITELIB}/chirp/drivers/bf_t1.pyo
+${PYSITELIB}/chirp/drivers/bf_t8.py
+${PYSITELIB}/chirp/drivers/bf_t8.pyc
+${PYSITELIB}/chirp/drivers/bf_t8.pyo
 ${PYSITELIB}/chirp/drivers/bj9900.py
 ${PYSITELIB}/chirp/drivers/bj9900.pyc
 ${PYSITELIB}/chirp/drivers/bj9900.pyo
@@ -257,6 +257,9 @@ ${PYSITELIB}/chirp/drivers/id31.pyo
 ${PYSITELIB}/chirp/drivers/id51.py
 ${PYSITELIB}/chirp/drivers/id51.pyc
 ${PYSITELIB}/chirp/drivers/id51.pyo
+${PYSITELIB}/chirp/drivers/id5100.py
+${PYSITELIB}/chirp/drivers/id5100.pyc
+${PYSITELIB}/chirp/drivers/id5100.pyo
 ${PYSITELIB}/chirp/drivers/id51plus.py
 ${PYSITELIB}/chirp/drivers/id51plus.pyc
 ${PYSITELIB}/chirp/drivers/id51plus.pyo
@@ -269,9 +272,9 @@ ${PYSITELIB}/chirp/drivers/id880.pyo
 ${PYSITELIB}/chirp/drivers/idrp.py
 ${PYSITELIB}/chirp/drivers/idrp.pyc
 ${PYSITELIB}/chirp/drivers/idrp.pyo
-${PYSITELIB}/chirp/drivers/iradio_uv-5118.py
-${PYSITELIB}/chirp/drivers/iradio_uv-5118.pyc
-${PYSITELIB}/chirp/drivers/iradio_uv-5118.pyo
+${PYSITELIB}/chirp/drivers/iradio_uv_5118.py
+${PYSITELIB}/chirp/drivers/iradio_uv_5118.pyc
+${PYSITELIB}/chirp/drivers/iradio_uv_5118.pyo
 ${PYSITELIB}/chirp/drivers/kenwood_hmk.py
 ${PYSITELIB}/chirp/drivers/kenwood_hmk.pyc
 ${PYSITELIB}/chirp/drivers/kenwood_hmk.pyo
@@ -404,6 +407,9 @@ ${PYSITELIB}/chirp/drivers/th_uvf8d.pyo
 ${PYSITELIB}/chirp/drivers/thd72.py
 ${PYSITELIB}/chirp/drivers/thd72.pyc
 ${PYSITELIB}/chirp/drivers/thd72.pyo
+${PYSITELIB}/chirp/drivers/thd74.py
+${PYSITELIB}/chirp/drivers/thd74.pyc
+${PYSITELIB}/chirp/drivers/thd74.pyo
 ${PYSITELIB}/chirp/drivers/thuv1f.py
 ${PYSITELIB}/chirp/drivers/thuv1f.pyc
 ${PYSITELIB}/chirp/drivers/thuv1f.pyo
@@ -615,3 +621,4 @@ share/chirp/stock_configs/US MURS Channels.csv
 share/chirp/stock_configs/US Marine VHF Channels.csv
 share/doc/chirp/COPYING
 share/pixmaps/chirp.png
+
