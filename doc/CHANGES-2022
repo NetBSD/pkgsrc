@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5997 2022/12/07 09:43:57 adam Exp $
+$NetBSD: CHANGES-2022,v 1.5998 2022/12/07 11:56:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9008,3 +9008,11 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/graphviz to 7.0.4 [adam 2022-12-07]
 	Updated devel/py-prompt_toolkit to 3.0.36 [adam 2022-12-07]
 	Updated devel/py-hatch-vcs to 0.2.1 [adam 2022-12-07]
+	Updated lang/python38 to 3.8.16 [adam 2022-12-07]
+	Updated lang/python39 to 3.9.16 [adam 2022-12-07]
+	Updated lang/python310 to 3.10.9 [adam 2022-12-07]
+	Updated lang/python311 to 3.11.1 [adam 2022-12-07]
+	Updated lang/py38-html-docs to 3.8.16 [adam 2022-12-07]
+	Updated lang/py39-html-docs to 3.9.16 [adam 2022-12-07]
+	Updated lang/py310-html-docs to 3.10.9 [adam 2022-12-07]
+	Updated lang/py311-html-docs to 3.11.1 [adam 2022-12-07]
