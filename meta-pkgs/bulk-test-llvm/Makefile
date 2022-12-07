@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2022/06/30 11:18:37 nia Exp $
+# $NetBSD: Makefile,v 1.5 2022/12/07 15:37:02 wiz Exp $
 
-DISTNAME=	bulk-test-llvm-20211120
-PKGREVISION=	1
+DISTNAME=	bulk-test-llvm-20211207
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -44,6 +43,7 @@ BUILD_DEPENDS+=		rust-[0-9]*:../../lang/rust
 BUILD_DEPENDS+=		seamonkey-[0-9]*:../../www/seamonkey
 BUILD_DEPENDS+=		spirv-llvm-translator-[0-9]*:../../parallel/spirv-llvm-translator
 BUILD_DEPENDS+=		thunderbird-[0-9]*:../../mail/thunderbird
+BUILD_DEPENDS+=		woboq_codebrowser-[0-9]*:../../devel/woboq_codebrowser
 BUILD_DEPENDS+=		zig-[0-9]*:../../lang/zig
 
 .include "../../mk/bsd.pkg.mk"
