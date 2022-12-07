@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.588 2022/10/11 13:44:25 wiz Exp $
+# $NetBSD: Makefile,v 1.589 2022/12/07 15:08:35 wiz Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -408,7 +408,6 @@ SUBDIR+=	trojita
 SUBDIR+=	turba
 SUBDIR+=	up-imappproxy
 SUBDIR+=	vm
-SUBDIR+=	wl
 SUBDIR+=	wl-snapshot
 SUBDIR+=	wmbiff
 SUBDIR+=	wmmail
