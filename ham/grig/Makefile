@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2021/12/08 16:05:11 adam Exp $
-#
+# $NetBSD: Makefile,v 1.58 2022/12/07 15:18:42 wiz Exp $
 
 DISTNAME=	grig-0.8.1
 PKGREVISION=	12
@@ -10,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://groundstation.sourceforge.net/
 COMMENT=	Graphical user interface to the Hamlib libraries
 LICENSE=	gnu-gpl-v2
+
+BROKEN=		"Does not support hamlib 4.5"
 
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake intltool msgfmt pkg-config
