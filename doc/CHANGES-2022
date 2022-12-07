@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5994 2022/12/06 21:06:51 vins Exp $
+$NetBSD: CHANGES-2022,v 1.5995 2022/12/07 08:05:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9002,3 +9002,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/ccache3 version 3.7.12nb2 [adam 2022-12-06]
 	Updated devel/pcre2 to 10.41 [adam 2022-12-06]
 	Added x11/xlax version 2.4 [vins 2022-12-06]
+	Updated graphics/png to 1.6.39 [adam 2022-12-07]
+	Updated graphics/jpegoptim to 1.5.0 [adam 2022-12-07]
