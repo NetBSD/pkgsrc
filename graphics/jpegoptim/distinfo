@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.17 2021/10/26 10:46:21 nia Exp $
+$NetBSD: distinfo,v 1.18 2022/12/07 08:04:41 adam Exp $
 
-BLAKE2s (jpegoptim-1.4.6.tar.gz) = 49a1c2954442e7fb3eea605fb3150c58025e73548013b8513e1076d891510267
-SHA512 (jpegoptim-1.4.6.tar.gz) = 1ebd4986cbfeae19c1e01521862c15de25e078ccb6483c29f0d89b9c8e308c93d8dca7a200a57dd5da793e481ca5dc9c4f0d84b252f5b9408b4e719c35d7e90f
-Size (jpegoptim-1.4.6.tar.gz) = 99004 bytes
+BLAKE2s (jpegoptim-1.5.0.tar.gz) = 529833d8bfb51b0f481706ef719f282b8cbeecb775c861902d8dadbc241fea2e
+SHA512 (jpegoptim-1.5.0.tar.gz) = 79f839cd1c014dc471fdf8f56d42d9c2ec9e0758007a3388f43aba278e239dcebb7c859b16fc39ef41b1ce80540e3bb2b7dcafc695534ad13553ae3785c3e5fd
+Size (jpegoptim-1.5.0.tar.gz) = 110902 bytes
+SHA1 (patch-configure) = e403f3243608687a9ac98ea59a5fb4a2c4363f53

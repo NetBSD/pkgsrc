@@ -1,0 +1,24 @@
+$NetBSD: patch-configure,v 1.1 2022/12/07 08:04:42 adam Exp $
+
+Portablility fixes.
+
+--- configure.orig	2022-12-07 07:55:53.000000000 +0000
++++ configure
+@@ -3397,7 +3397,7 @@ arith_code=0
+ # Check whether --with-arith was given.
+ if test "${with_arith+set}" = set; then :
+   withval=$with_arith;
+-	if test $withval == yes; then
++	if test $withval = yes; then
+ 	   arith_code=1
+ 	fi
+ 
+@@ -4167,7 +4167,7 @@ fi
+ 
+ fi
+ 
+-if test $arith_code == 1 -a $jpegoptim_cv_arith_code_support = yes; then
++if test $arith_code = 1 -a $jpegoptim_cv_arith_code_support = yes; then
+   arith_code_status="Enabled"
+   $as_echo "#define HAVE_ARITH_CODE 1" >>confdefs.h
+ 
