@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.69 2022/11/23 16:20:56 adam Exp $
+# $NetBSD: Makefile,v 1.70 2022/12/07 08:15:59 jperkin Exp $
 #
 
 DISTNAME=		xymon-4.3.30
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xymon/}
 
@@ -90,6 +90,8 @@ MESSAGE_SUBST+=		EXAMPLEDIR=${EXAMPLEDIR}
 MESSAGE_SUBST+=		SECCGIDIR=${SECCGIDIR}
 
 CONFIGURE_ARGS+=	"--server"
+CONFIGURE_ARGS+=	"--caresinclude" "${BUILDLINK_PREFIX.libcares}/include"
+CONFIGURE_ARGS+=	"--careslib" "${BUILDLINK_PREFIX.libcares}/lib"
 CONFIGURE_ARGS+=	"--rrdinclude" "${BUILDLINK_PREFIX.rrdtool}/include"
 CONFIGURE_ARGS+=	"--rrdlib" "${BUILDLINK_PREFIX.rrdtool}/lib"
 CONFIGURE_ARGS+=	"--pngconfig" "${BUILDLINK_PREFIX.png}/bin/libpng-config"
@@ -218,6 +220,7 @@ post-install:
 .include "../../databases/rrdtool/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
+.include "../../net/libcares/buildlink3.mk"
 .include "../../mk/apache.mk"
 
 .include "../../mk/bsd.pkg.mk"
