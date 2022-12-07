@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6000 2022/12/07 15:08:35 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.6001 2022/12/07 15:15:27 vins Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9018,3 +9018,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/py311-html-docs to 3.11.1 [adam 2022-12-07]
 	Updated ham/chirp to 20221207nb1 [gdt 2022-12-07]
 	Removed mail/wl successor mail/wl-snapshot [wiz 2022-12-07]
+	Removed editors/ee1.4.6nb2 successor editors/ee1.5.2 [vins 2022-12-07]
