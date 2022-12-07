@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2022/06/28 11:34:33 wiz Exp $
+# $NetBSD: Makefile,v 1.71 2022/12/07 15:12:40 wiz Exp $
 
 DISTNAME=	prayer-1.3.5
 PKGREVISION=	8
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	http://www-uxsup.csx.cam.ac.uk/~dpc22/prayer/
 COMMENT=	Small, fast, web mail interface
 LICENSE=	gnu-gpl-v2
+
+BROKEN=		"Does not support tidy 5.8."
 
 BDB_ACCEPTED=		db4 db5
 USE_TOOLS+=		gmake perl
