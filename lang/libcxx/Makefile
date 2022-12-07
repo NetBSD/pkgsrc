@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2022/11/14 18:44:06 adam Exp $
+# $NetBSD: Makefile,v 1.17 2022/12/07 10:40:34 jperkin Exp $
 
 .include "../../lang/llvm/version.mk"
 
@@ -37,6 +37,8 @@ CMAKE_ARGS+=	-DLIBCXX_INCLUDE_BENCHMARKS=OFF
 
 # avoid conflict with stddef.h
 CXXFLAGS.NetBSD+=	-D__DEFINED_max_align_t=1
+
+CXXFLAGS.SunOS+=	-D_LIBCPP_NO_ABI_TAG=1
 
 .include "../../mk/compiler.mk"
 
