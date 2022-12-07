@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2022/10/12 08:02:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2022/12/07 11:53:57 adam Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -1420,8 +1420,8 @@ lib/python${PY_VER_SUFFIX}/ensurepip/__main__.pyo
 lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/__init__.py
 lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/__init__.pyc
 lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/__init__.pyo
-lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/pip-22.2.2-py3-none-any.whl
-lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/setuptools-63.2.0-py3-none-any.whl
+lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/pip-22.3.1-py3-none-any.whl
+lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/setuptools-65.5.0-py3-none-any.whl
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.py
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.pyc
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.pyo
@@ -3503,9 +3503,6 @@ lib/python${PY_VER_SUFFIX}/test/test_calendar.pyo
 lib/python${PY_VER_SUFFIX}/test/test_call.py
 lib/python${PY_VER_SUFFIX}/test/test_call.pyc
 lib/python${PY_VER_SUFFIX}/test/test_call.pyo
-lib/python${PY_VER_SUFFIX}/test/test_capi.py
-lib/python${PY_VER_SUFFIX}/test/test_capi.pyc
-lib/python${PY_VER_SUFFIX}/test/test_capi.pyo
 lib/python${PY_VER_SUFFIX}/test/test_cgi.py
 lib/python${PY_VER_SUFFIX}/test/test_cgi.pyc
 lib/python${PY_VER_SUFFIX}/test/test_cgi.pyo
@@ -3962,9 +3959,6 @@ lib/python${PY_VER_SUFFIX}/test/test_genericpath.pyo
 lib/python${PY_VER_SUFFIX}/test/test_genexps.py
 lib/python${PY_VER_SUFFIX}/test/test_genexps.pyc
 lib/python${PY_VER_SUFFIX}/test/test_genexps.pyo
-lib/python${PY_VER_SUFFIX}/test/test_getargs2.py
-lib/python${PY_VER_SUFFIX}/test/test_getargs2.pyc
-lib/python${PY_VER_SUFFIX}/test/test_getargs2.pyo
 lib/python${PY_VER_SUFFIX}/test/test_getopt.py
 lib/python${PY_VER_SUFFIX}/test/test_getopt.pyc
 lib/python${PY_VER_SUFFIX}/test/test_getopt.pyo
@@ -4865,9 +4859,6 @@ lib/python${PY_VER_SUFFIX}/test/test_strtod.pyo
 lib/python${PY_VER_SUFFIX}/test/test_struct.py
 lib/python${PY_VER_SUFFIX}/test/test_struct.pyc
 lib/python${PY_VER_SUFFIX}/test/test_struct.pyo
-lib/python${PY_VER_SUFFIX}/test/test_structmembers.py
-lib/python${PY_VER_SUFFIX}/test/test_structmembers.pyc
-lib/python${PY_VER_SUFFIX}/test/test_structmembers.pyo
 lib/python${PY_VER_SUFFIX}/test/test_structseq.py
 lib/python${PY_VER_SUFFIX}/test/test_structseq.pyc
 lib/python${PY_VER_SUFFIX}/test/test_structseq.pyo
