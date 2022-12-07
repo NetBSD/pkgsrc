@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.232 2022/12/06 11:38:00 vins Exp $
+# $NetBSD: Makefile,v 1.233 2022/12/07 15:08:12 vins Exp $
 #
 
 COMMENT=	Text and binary editors
@@ -25,7 +25,6 @@ SUBDIR+=	deforaos-editor
 SUBDIR+=	dhex
 SUBDIR+=	dit
 SUBDIR+=	dte
-SUBDIR+=	easyedit
 SUBDIR+=	ed
 SUBDIR+=	edt
 SUBDIR+=	elvis
