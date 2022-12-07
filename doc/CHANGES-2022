@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.5999 2022/12/07 14:02:32 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.6000 2022/12/07 15:08:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9017,3 +9017,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/py310-html-docs to 3.10.9 [adam 2022-12-07]
 	Updated lang/py311-html-docs to 3.11.1 [adam 2022-12-07]
 	Updated ham/chirp to 20221207nb1 [gdt 2022-12-07]
+	Removed mail/wl successor mail/wl-snapshot [wiz 2022-12-07]
