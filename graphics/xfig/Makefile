@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.81 2021/07/21 05:35:03 fcambus Exp $
+# $NetBSD: Makefile,v 1.82 2022/12/07 15:30:56 fcambus Exp $
 
-DISTNAME=	xfig-3.2.8a
+DISTNAME=	xfig-3.2.8b
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mcj/}
 EXTRACT_SUFX=	.tar.xz
