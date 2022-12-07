@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/12/02 15:22:04 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2022/12/07 14:56:33 wiz Exp $
 
 DISTNAME=	sip-${PKGVERSION_NOREV}
 PKGNAME=	${PYPKGPREFIX}-sip6-6.7.5
@@ -16,6 +16,8 @@ DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-toml>=0:../../textproc/py-toml
 
 USE_LANGUAGES=	c c++
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
