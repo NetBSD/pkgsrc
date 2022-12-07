@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2022/12/02 15:53:28 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2022/12/07 14:58:52 wiz Exp $
 
 DISTNAME=	pyqt-qwt-1.02.02
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pyqt-qwt/qwt-qt5/}
@@ -22,6 +22,7 @@ BUILD_DEPENDS+=	qt5-qtbase-[0-9]*:../../x11/qt5-qtbase
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 WHEEL_NAME=	PyQt_Qwt-${PKGVERSION_NOREV}
+PLIST_SUBST+=	PYVER=${PYVERSSUFFIX:S/.//g}
 
 USE_LANGUAGES=	c++
 
