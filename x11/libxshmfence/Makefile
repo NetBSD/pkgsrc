@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2022/10/18 17:47:18 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2022/12/08 23:35:48 wiz Exp $
 
-DISTNAME=	libxshmfence-1.3.1
+DISTNAME=	libxshmfence-1.3.2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=	.tar.xz
