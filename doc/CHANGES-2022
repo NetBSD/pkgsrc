@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6024 2022/12/08 23:35:09 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.6025 2022/12/08 23:35:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9060,3 +9060,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/libXau to 1.0.11 [wiz 2022-12-08]
 	Updated fonts/libfontenc to 1.1.7 [wiz 2022-12-08]
 	Updated x11/libxkbfile to 1.1.2 [wiz 2022-12-08]
+	Updated x11/libxshmfence to 1.3.2 [wiz 2022-12-08]
