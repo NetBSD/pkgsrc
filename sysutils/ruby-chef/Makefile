@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2022/12/04 15:20:03 taca Exp $
+# $NetBSD: Makefile,v 1.33 2022/12/08 13:08:06 taca Exp $
 
 DISTNAME=	chef-18.0.185
 CATEGORIES=	sysutils
@@ -43,6 +43,8 @@ DEPENDS+=	${RUBY_PKGPREFIX}-uuidtools>=2.1.5:../../devel/ruby-uuidtools
 DEPENDS+=	${RUBY_PKGPREFIX}-vault>=0.16<1:../../security/ruby-vault
 
 USE_LANGUAGES=	# none
+
+RUBY_VERSIONS_ACCEPTED=	30 31
 
 RUBYGEM_OPTIONS+=	--format-executable
 
