@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6011 2022/12/08 10:09:01 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.6012 2022/12/08 10:29:01 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9029,3 +9029,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/py-redis to 4.4.0 [adam 2022-12-08]
 	Updated x11/xkbcomp to 1.4.6 [wiz 2022-12-08]
 	Updated devel/mob to 4.1.1 [schmonz 2022-12-08]
+	Updated lang/go118 to 1.18.9 [bsiegert 2022-12-08]
