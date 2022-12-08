@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/01/10 01:46:41 ryoon Exp $
+# $NetBSD: Makefile,v 1.7 2022/12/08 21:27:21 he Exp $
 
 DISTNAME=	icinga2-2.12.3
 PKGREVISION=	4
@@ -165,6 +165,7 @@ CHECK_FILES_SKIP+=	${PREFIX}/share/examples/icinga2/features-enabled/notificatio
 
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/icinga2
 
+.include "../../mk/atomic64.mk"
 .include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
