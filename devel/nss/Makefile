@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.239 2022/11/23 16:19:51 adam Exp $
+# $NetBSD: Makefile,v 1.240 2022/12/08 23:39:31 wiz Exp $
 #
 # release notes
 # https://firefox-source-docs.mozilla.org/security/nss/releases/index.html
 
 DISTNAME=		nss-${NSS_RELEASE:S/.0$//}
-NSS_RELEASE=		3.85.0
-PKGREVISION=		1
+NSS_RELEASE=		3.86.0
 CATEGORIES=		devel security
 MASTER_SITES=		${MASTER_SITE_MOZILLA_ALL:=security/nss/releases/NSS_${NSS_DIST_DIR_VERSION:S/_0$//}_RTM/src/}
 
@@ -32,7 +31,7 @@ BUILD_DIRS=		nss
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+.if ${USE_CROSS_COMPILE:U:tl} == yes
 
 # nss doesn't really depend on nspr as a tool, but the
 # EXTRA_SHARED_LIBS we set there get passed through to the build of a
