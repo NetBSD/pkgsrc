@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2022/11/23 16:21:18 adam Exp $
+# $NetBSD: Makefile,v 1.29 2022/12/08 11:01:01 jperkin Exp $
 #
 
 DISTNAME=		bk_edit-0.6.23
@@ -20,6 +20,8 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX}
 
 MAKE_ENV+=		PKG_CFLAGS=${CFLAGS:Q}
 MAKE_ENV+=		PKG_LDFLAGS=${LDFLAGS:Q}
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-export-dynamic
 
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
