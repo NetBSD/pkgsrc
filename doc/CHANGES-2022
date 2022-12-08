@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6013 2022/12/08 10:37:44 bsiegert Exp $
+$NetBSD: CHANGES-2022,v 1.6014 2022/12/08 10:40:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9031,3 +9031,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/mob to 4.1.1 [schmonz 2022-12-08]
 	Updated lang/go118 to 1.18.9 [bsiegert 2022-12-08]
 	Updated lang/go119 to 1.19.4 [bsiegert 2022-12-08]
+	Updated devel/pcre2 to 10.41nb1 [adam 2022-12-08]
+	Updated devel/blosc to 1.21.2 [adam 2022-12-08]
