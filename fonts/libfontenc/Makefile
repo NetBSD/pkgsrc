@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2022/11/09 13:14:13 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2022/12/08 23:34:10 wiz Exp $
 
-DISTNAME=		libfontenc-1.1.6
+DISTNAME=		libfontenc-1.1.7
 CATEGORIES=		fonts x11
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.xz
