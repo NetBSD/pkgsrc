@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6015 2022/12/08 10:55:42 pin Exp $
+$NetBSD: CHANGES-2022,v 1.6016 2022/12/08 12:28:49 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9034,3 +9034,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/pcre2 to 10.41nb1 [adam 2022-12-08]
 	Updated devel/blosc to 1.21.2 [adam 2022-12-08]
 	Updated sysutils/hexyl to 0.12.0 [pin 2022-12-08]
+	Updated devel/apache-maven to 3.8.6 [schmonz 2022-12-08]
