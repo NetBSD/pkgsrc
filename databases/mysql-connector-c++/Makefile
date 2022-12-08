@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2021/06/29 06:43:30 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2022/12/08 19:42:17 he Exp $
 
 DISTNAME=	mysql-connector-c++-8.0.25-src
 PKGNAME=	${DISTNAME:S/-src//}
@@ -17,6 +17,7 @@ post-install:
 	${RM} ${DESTDIR}${PREFIX}/INFO_BIN
 	${RM} ${DESTDIR}${PREFIX}/INFO_SRC
 
+.include "../../mk/atomic64.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../mk/mysql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
