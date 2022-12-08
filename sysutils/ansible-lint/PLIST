@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2022/12/01 11:29:45 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2022/12/08 14:12:34 adam Exp $
 bin/ansible-lint
 ${PYSITELIB}/${WHEEL_INFODIR}/COPYING
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
@@ -188,6 +188,7 @@ ${PYSITELIB}/ansiblelint/rules/yaml_rule.py
 ${PYSITELIB}/ansiblelint/rules/yaml_rule.pyc
 ${PYSITELIB}/ansiblelint/runner.py
 ${PYSITELIB}/ansiblelint/runner.pyc
+${PYSITELIB}/ansiblelint/schemas/README.md
 ${PYSITELIB}/ansiblelint/schemas/__init__.py
 ${PYSITELIB}/ansiblelint/schemas/__init__.pyc
 ${PYSITELIB}/ansiblelint/schemas/__main__.py
@@ -195,6 +196,8 @@ ${PYSITELIB}/ansiblelint/schemas/__main__.pyc
 ${PYSITELIB}/ansiblelint/schemas/__store__.json
 ${PYSITELIB}/ansiblelint/schemas/ansible-lint-config.json
 ${PYSITELIB}/ansiblelint/schemas/ansible-navigator-config.json
+${PYSITELIB}/ansiblelint/schemas/ansible-navigator.json
+${PYSITELIB}/ansiblelint/schemas/ansible.json
 ${PYSITELIB}/ansiblelint/schemas/arg_specs.json
 ${PYSITELIB}/ansiblelint/schemas/execution-environment.json
 ${PYSITELIB}/ansiblelint/schemas/galaxy.json
@@ -203,6 +206,7 @@ ${PYSITELIB}/ansiblelint/schemas/main.py
 ${PYSITELIB}/ansiblelint/schemas/main.pyc
 ${PYSITELIB}/ansiblelint/schemas/meta-runtime.json
 ${PYSITELIB}/ansiblelint/schemas/meta.json
+${PYSITELIB}/ansiblelint/schemas/molecule.json
 ${PYSITELIB}/ansiblelint/schemas/playbook.json
 ${PYSITELIB}/ansiblelint/schemas/requirements.json
 ${PYSITELIB}/ansiblelint/schemas/tasks.json
