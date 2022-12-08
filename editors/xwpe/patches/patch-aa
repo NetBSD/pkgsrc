@@ -1,8 +1,11 @@
-$NetBSD: patch-aa,v 1.2 2010/02/03 21:35:42 joerg Exp $
+$NetBSD: patch-aa,v 1.3 2022/12/08 08:51:56 vins Exp $
 
---- Makefile.in.orig	2002-06-05 02:53:50.000000000 +0000
+* DESTDIR support.
+* Properly honor runtime library path for X11 libs.
+
+--- Makefile.in.orig	2005-07-07 01:53:09.000000000 +0000
 +++ Makefile.in
-@@ -9,13 +9,12 @@ srcdir=		@srcdir@
+@@ -9,7 +9,7 @@ srcdir=		@srcdir@
  #Destination Directory
  prefix=@prefix@
  exec_prefix=@exec_prefix@
@@ -11,28 +14,25 @@ $NetBSD: patch-aa,v 1.2 2010/02/03 21:35:42 joerg Exp $
  LIBDIR=@libdir@
  XWPELIBDIR=	$(LIBDIR)/xwpe
  MANDIR=@mandir@
- 
--LIBS=@LIBS@
--XLIBS=@X_LIBS@ @X_PRE_LIBS@ @X_EXTRA_LIBS@
-+LIBS=${LDFLAGS}
- DEFS=@DEFS@ -DLIBRARY_DIR=\"$(XWPELIBDIR)\" -DSELECTION
- INSTALL=	cp
- LN_S=	@LN_S@
-@@ -91,11 +90,11 @@ HFILES=		attrb.h edit.h keys.h \
+@@ -91,14 +91,14 @@ HFILES=		attrb.h edit.h keys.h \
  
  xwpe:	$(OFILES) $(X_OFILES) $(T_OFILES)
  	$(CC) $(CFLAGS) $(DEFS) $(OFILES) $(X_OFILES) $(T_OFILES) \
 -	  $(LIBS) $(XLIBS) -o xwpe
-+	  $(LIBS) -lncurses -lX11 -o xwpe
++	  $(LDFLAGS) $(LIBS) $(XLIBS) -o xwpe
  #	$(CC) -Wl,-E $(CFLAGS) $(DEFS) $(OFILES) $(LIBS) -o xwpe
  
  libxwpe-x11.so:	$(X_OFILES)
 -	$(CC) -shared $(X_OFILES) $(XLIBS) -o libxwpe-x11.so
-+	$(CC) -shared $(X_OFILES) -lX11 -o libxwpe-x11.so
++	$(CC) -shared $(X_OFILES) $(LDFLAGS) $(XLIBS) -o libxwpe-x11.so
  
  libxwpe-term.so:	$(T_OFILES)
- 	$(CC) -shared $(T_OFILES) -o libxwpe-term.so
-@@ -115,36 +114,27 @@ distclean:
+-	$(CC) -shared $(T_OFILES) -o libxwpe-term.so
++	$(CC) -shared $(T_OFILES) $(LDFLAGS) -o libxwpe-term.so
+ 
+ #$(X_OFILES) $(T_OFILES):	$(HFILES)
+ #	$(CC) -fPIC $(CFLAGS) $(DEFS) -c $(subst .o,.c,$@)
+@@ -115,36 +115,27 @@ distclean:
  # Bug Note: Currently xwpe and xwe are installed even if X windows versions
  # are not compiled.  (They will function as wpe and we respectively.)
  install_fst:	xwpe
