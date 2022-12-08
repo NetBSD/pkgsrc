@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6009 2022/12/08 09:01:47 adam Exp $
+$NetBSD: CHANGES-2022,v 1.6010 2022/12/08 09:54:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9027,3 +9027,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated editors/xwpe to 1.5.30a [vins 2022-12-08]
 	Updated security/py-certifi to 2022.12.7 [adam 2022-12-08]
 	Updated databases/py-redis to 4.4.0 [adam 2022-12-08]
+	Updated x11/xkbcomp to 1.4.6 [wiz 2022-12-08]
