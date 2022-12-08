@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6019 2022/12/08 15:31:04 tsutsui Exp $
+$NetBSD: CHANGES-2022,v 1.6020 2022/12/08 18:22:34 scole Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9055,3 +9055,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/ruby-gtk3 to 4.0.3 [tsutsui 2022-12-08]
 	Updated x11/ruby-gtksourceview3 to 4.0.3 [tsutsui 2022-12-08]
 	Updated textproc/ruby-nokogiri to 1.13.10 [tsutsui 2022-12-08]
+	Updated textproc/split-thai to 2.23 [scole 2022-12-08]
