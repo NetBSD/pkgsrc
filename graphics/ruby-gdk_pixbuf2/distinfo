@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2022/01/17 15:17:15 tsutsui Exp $
+$NetBSD: distinfo,v 1.10 2022/12/08 15:22:02 tsutsui Exp $
 
-BLAKE2s (gdk_pixbuf2-3.5.1.gem) = e609e91c4a5cda5c6adcf17a523dca8cd663916829eb6e1a075d9ae9fa506bd2
-SHA512 (gdk_pixbuf2-3.5.1.gem) = 7eae8db515c94e48410356f3d51b83dccf12f30fb050ba98215f06425e5a4a8537523a163ea33332130bdacc2ba85ccd85f43fde03353003b1e3943bbb01c5ab
-Size (gdk_pixbuf2-3.5.1.gem) = 34816 bytes
+BLAKE2s (gdk_pixbuf2-4.0.3.gem) = 76e778d1d60c1e1d293f290347baeb8fe87bc039b86f28139106027ffd4586d4
+SHA512 (gdk_pixbuf2-4.0.3.gem) = 182243ab30119c7508ab4c4736a45978bb7abc8dcd68c5cd8f6dc6a8c2542a49988e1cebece620c0161015c3218da24a55043a28112029c3f504026f921bb079
+Size (gdk_pixbuf2-4.0.3.gem) = 34816 bytes

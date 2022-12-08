@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2022/11/18 10:15:04 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.10 2022/12/08 15:22:02 tsutsui Exp $
 #
 # used by devel/ruby-atk/Makefile
 # used by devel/ruby-gio2/Makefile
@@ -18,7 +18,7 @@
 # used by x11/ruby-gtk3/Makefile
 # used by x11/ruby-gtksourceview3/Makefile
 
-HOMEPAGE=		https://ruby-gnome2.osdn.jp/
+HOMEPAGE=		https://ruby-gnome.github.io/
 LICENSE=		gnu-lgpl-v2.1
 
-VERSION=		3.5.1
+VERSION=		4.0.3
