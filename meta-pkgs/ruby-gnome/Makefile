@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2022/11/18 10:15:04 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2022/12/08 15:22:02 tsutsui Exp $
 #
 
 PKGNAME=	${RUBY_PKGPREFIX}-gnome-${VERSION}
-PKGREVISION=	1
 COMMENT=	Set of Ruby language bindings for GNOME
 CATEGORIES=	meta-pkgs gnome
 

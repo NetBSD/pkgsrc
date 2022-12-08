@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2022/08/11 05:08:47 gutteridge Exp $
+# $NetBSD: Makefile,v 1.33 2022/12/08 15:22:01 tsutsui Exp $
 #
 
 DISTNAME=		clutter-gtk-${VERSION}
 COMMENT=		Ruby binding of Clutter-GTK
-PKGREVISION=		1
 CATEGORIES=		graphics
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -17,6 +16,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-gtk3>=${VERSION}:../../x11/ruby-gtk3
 DEPENDS+=	clutter-gtk>=1.0:../../graphics/clutter-gtk
 
 .include "../../graphics/clutter-gtk/buildlink3.mk"
+.include "../../x11/ruby-gtk3/buildlink3.mk"
 .include "../../meta-pkgs/ruby-gnome/Makefile.common"
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"

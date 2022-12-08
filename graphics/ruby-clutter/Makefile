@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2022/01/17 15:17:15 tsutsui Exp $
+# $NetBSD: Makefile,v 1.12 2022/12/08 15:22:01 tsutsui Exp $
 #
 
 DISTNAME=		clutter-${VERSION}
@@ -15,6 +15,8 @@ DEPENDS+=	${RUBY_PKGPREFIX}-pango>=${VERSION}:../../devel/ruby-pango
 DEPENDS+=	${RUBY_PKGPREFIX}-cairo-gobject>=${VERSION}:../../graphics/ruby-cairo-gobject
 DEPENDS+=	clutter>=1.0:../../graphics/clutter
 
+.include "../../devel/ruby-gobject-introspection/buildlink3.mk"
+.include "../../devel/ruby-pango/buildlink3.mk"
 .include "../../graphics/clutter/buildlink3.mk"
 .include "../../meta-pkgs/ruby-gnome/Makefile.common"
 .include "../../lang/ruby/gem.mk"

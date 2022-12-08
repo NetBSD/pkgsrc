@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/08/29 16:49:13 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/12/08 15:22:02 tsutsui Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/gtk3.${RUBY_DLEXT}
@@ -7,6 +7,7 @@ ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/ext/gtk3/depend
 ${GEM_LIBDIR}/ext/gtk3/extconf.rb
+${GEM_LIBDIR}/ext/gtk3/rb-gtk3-accel-map.c
 ${GEM_LIBDIR}/ext/gtk3/rb-gtk3-cell-layout.c
 ${GEM_LIBDIR}/ext/gtk3/rb-gtk3-container.c
 ${GEM_LIBDIR}/ext/gtk3/rb-gtk3-private.h
@@ -469,6 +470,7 @@ ${GEM_LIBDIR}/test/test-gdk-screen.rb
 ${GEM_LIBDIR}/test/test-gtk-about-dialog.rb
 ${GEM_LIBDIR}/test/test-gtk-accel-group.rb
 ${GEM_LIBDIR}/test/test-gtk-accel-key.rb
+${GEM_LIBDIR}/test/test-gtk-accel-map.rb
 ${GEM_LIBDIR}/test/test-gtk-accessible.rb
 ${GEM_LIBDIR}/test/test-gtk-action-bar.rb
 ${GEM_LIBDIR}/test/test-gtk-action-group.rb
