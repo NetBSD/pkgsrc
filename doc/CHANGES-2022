@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6008 2022/12/08 08:53:40 vins Exp $
+$NetBSD: CHANGES-2022,v 1.6009 2022/12/08 09:01:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9025,3 +9025,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/gotosocial to 0.6.0 [nikita 2022-12-07]
 	Updated graphics/oxipng to 7.0.0 [pin 2022-12-07]
 	Updated editors/xwpe to 1.5.30a [vins 2022-12-08]
+	Updated security/py-certifi to 2022.12.7 [adam 2022-12-08]
+	Updated databases/py-redis to 4.4.0 [adam 2022-12-08]
