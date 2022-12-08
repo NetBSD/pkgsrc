@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2022/11/02 19:39:55 bsiegert Exp $
+# $NetBSD: Makefile,v 1.7 2022/12/08 16:14:23 bsiegert Exp $
 
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 DISTNAME=	impl-1.1.0
 PKGNAME=	go-${DISTNAME}
-PKGREVISION=	5
+PKGREVISION=	6
 GITHUB_PROJECT=	impl
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=josharian/}
