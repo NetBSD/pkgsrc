@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2022/09/17 10:13:56 bsiegert Exp $
+# $NetBSD: Makefile,v 1.6 2022/12/08 10:28:44 bsiegert Exp $
 
 .include "../../lang/go/version.mk"
 .include "../../lang/go/bootstrap.mk"
 
 GOVERSSUFFIX=	118
 
-DISTNAME=	go${GO${GOVERSSUFFIX}_VERSION:S/.rc/rc/}.src
+DISTNAME=	go${GO${GOVERSSUFFIX}_VERSION}.src
 PKGNAME=	go${GOVERSSUFFIX}-${GO${GOVERSSUFFIX}_VERSION}
 CATEGORIES=	lang
 MASTER_SITES=	https://storage.googleapis.com/golang/

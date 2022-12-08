@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2022/10/05 09:51:52 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.9 2022/12/08 10:28:44 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go118/AUTHORS
@@ -772,6 +772,7 @@ go118/pkg/${GO_PLATFORM}/internal/poll.a
 go118/pkg/${GO_PLATFORM}/internal/profile.a
 go118/pkg/${GO_PLATFORM}/internal/race.a
 go118/pkg/${GO_PLATFORM}/internal/reflectlite.a
+go118/pkg/${GO_PLATFORM}/internal/safefilepath.a
 go118/pkg/${GO_PLATFORM}/internal/singleflight.a
 go118/pkg/${GO_PLATFORM}/internal/syscall/execenv.a
 go118/pkg/${GO_PLATFORM}/internal/syscall/unix.a
@@ -1504,6 +1505,7 @@ go118/src/cmd/compile/internal/test/issue50182_test.go
 go118/src/cmd/compile/internal/test/lang_test.go
 go118/src/cmd/compile/internal/test/logic_test.go
 go118/src/cmd/compile/internal/test/mulconst_test.go
+go118/src/cmd/compile/internal/test/race.go
 go118/src/cmd/compile/internal/test/reproduciblebuilds_test.go
 go118/src/cmd/compile/internal/test/shift_test.go
 go118/src/cmd/compile/internal/test/ssa_test.go
@@ -6075,6 +6077,10 @@ go118/src/internal/reflectlite/swapper.go
 go118/src/internal/reflectlite/tostring_test.go
 go118/src/internal/reflectlite/type.go
 go118/src/internal/reflectlite/value.go
+go118/src/internal/safefilepath/path.go
+go118/src/internal/safefilepath/path_other.go
+go118/src/internal/safefilepath/path_test.go
+go118/src/internal/safefilepath/path_windows.go
 go118/src/internal/singleflight/singleflight.go
 go118/src/internal/singleflight/singleflight_test.go
 go118/src/internal/syscall/execenv/execenv_default.go
@@ -10825,6 +10831,7 @@ go118/test/fixedbugs/issue55122.go
 go118/test/fixedbugs/issue55122b.go
 go118/test/fixedbugs/issue5515.go
 go118/test/fixedbugs/issue5581.go
+go118/test/fixedbugs/issue55889.go
 go118/test/fixedbugs/issue5607.go
 go118/test/fixedbugs/issue5609.go
 go118/test/fixedbugs/issue5614.dir/rethinkgo.go
