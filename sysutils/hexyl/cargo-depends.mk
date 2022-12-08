@@ -1,9 +1,9 @@
-# $NetBSD: cargo-depends.mk,v 1.3 2022/12/05 11:22:39 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.4 2022/12/08 10:55:17 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-0.7.20
-CARGO_CRATE_DEPENDS+=	anstyle-0.2.5
 CARGO_CRATE_DEPENDS+=	anyhow-1.0.66
 CARGO_CRATE_DEPENDS+=	assert_cmd-2.0.7
+CARGO_CRATE_DEPENDS+=	atty-0.2.14
 CARGO_CRATE_DEPENDS+=	autocfg-1.1.0
 CARGO_CRATE_DEPENDS+=	bitflags-1.3.2
 CARGO_CRATE_DEPENDS+=	bstr-1.0.1
@@ -20,9 +20,11 @@ CARGO_CRATE_DEPENDS+=	either-1.8.0
 CARGO_CRATE_DEPENDS+=	errno-0.2.8
 CARGO_CRATE_DEPENDS+=	errno-dragonfly-0.1.2
 CARGO_CRATE_DEPENDS+=	float-cmp-0.9.0
+CARGO_CRATE_DEPENDS+=	hermit-abi-0.1.19
 CARGO_CRATE_DEPENDS+=	hermit-abi-0.2.6
 CARGO_CRATE_DEPENDS+=	io-lifetimes-1.0.3
 CARGO_CRATE_DEPENDS+=	is-terminal-0.4.1
+CARGO_CRATE_DEPENDS+=	is_ci-1.1.1
 CARGO_CRATE_DEPENDS+=	itertools-0.10.5
 CARGO_CRATE_DEPENDS+=	libc-0.2.138
 CARGO_CRATE_DEPENDS+=	linux-raw-sys-0.1.3
@@ -32,6 +34,7 @@ CARGO_CRATE_DEPENDS+=	num-traits-0.2.15
 CARGO_CRATE_DEPENDS+=	once_cell-1.16.0
 CARGO_CRATE_DEPENDS+=	os_str_bytes-6.4.1
 CARGO_CRATE_DEPENDS+=	output_vt100-0.1.3
+CARGO_CRATE_DEPENDS+=	owo-colors-3.5.0
 CARGO_CRATE_DEPENDS+=	predicates-2.1.4
 CARGO_CRATE_DEPENDS+=	predicates-core-1.0.5
 CARGO_CRATE_DEPENDS+=	predicates-tree-1.0.7
@@ -41,9 +44,10 @@ CARGO_CRATE_DEPENDS+=	quote-1.0.21
 CARGO_CRATE_DEPENDS+=	regex-1.7.0
 CARGO_CRATE_DEPENDS+=	regex-automata-0.1.10
 CARGO_CRATE_DEPENDS+=	regex-syntax-0.6.28
-CARGO_CRATE_DEPENDS+=	rustix-0.36.4
+CARGO_CRATE_DEPENDS+=	rustix-0.36.5
 CARGO_CRATE_DEPENDS+=	serde-1.0.149
 CARGO_CRATE_DEPENDS+=	strsim-0.10.0
+CARGO_CRATE_DEPENDS+=	supports-color-1.3.1
 CARGO_CRATE_DEPENDS+=	syn-1.0.105
 CARGO_CRATE_DEPENDS+=	termcolor-1.1.3
 CARGO_CRATE_DEPENDS+=	terminal_size-0.2.3
