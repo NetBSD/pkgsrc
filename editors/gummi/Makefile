@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2022/11/23 16:19:56 adam Exp $
+# $NetBSD: Makefile,v 1.89 2022/12/08 11:15:17 jperkin Exp $
 
 DISTNAME=		gummi-0.6.6
 PKGREVISION=		50
@@ -20,6 +20,8 @@ BUILD_DEPENDS+=		gettext-m4-[0-9]*:../../devel/gettext-m4
 
 GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	yes
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-export-dynamic
 
 AUTO_MKDIRS=		yes
 
