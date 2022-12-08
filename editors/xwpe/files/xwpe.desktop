@@ -1,0 +1,18 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Xwpe
+GenericName=Borland-like Text Editor
+Comment=Xwpe Integrated Development Environment
+Exec=xwpe
+Keywords=text;editor;ide;borland;
+Keywords[fr]=texte;éditeur;borland;
+Categories=Utility;TextEditor;IDE;Development;
+MimeType=text/plain;text/english;text/x-c;text/x-c++; text/x-c++hdr;text/x-c++src;text/x-chdr;text/x-csrc;text/x-java;text/x-pascal;text/x-fortran;
+Icon=xwpe
+TryExec=xwpe
+Exec=xwpe %F
+Terminal=false
+Type=Application
+Encoding=UTF-8
+Categories=Application;IDE;Development;
