@@ -1,7 +1,10 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:21:44 nia Exp $
+$NetBSD: distinfo,v 1.9 2022/12/08 08:51:55 vins Exp $
 
-BLAKE2s (xwpe-1.5.29a.tar.gz) = 3adaa88af34e5ccd2cd4e4008eaec1da6fa35939adb50a8e72fccce9d3e73de6
-SHA512 (xwpe-1.5.29a.tar.gz) = 4f8bdac60733702c3e34689a06f5876340e0b06d576dfaa0e3d1b977d88d85d55ae534757f7c76156148f1774e4b9b7c6caee105dd4c5b3559ed43a3ea60aae4
-Size (xwpe-1.5.29a.tar.gz) = 307545 bytes
-SHA1 (patch-aa) = 1e2f1d13dc1f67f339b7c448b787f24e8d1926d9
-SHA1 (patch-ab) = 23ec6cd425292e2fb58ef2c2dd0d6a62deb8214e
+BLAKE2s (xwpe-1.5.30a.tar.gz) = 5e33b6cb1880b38dbf551138e807b18a952d282a41411704ada6fabdb34680d4
+SHA512 (xwpe-1.5.30a.tar.gz) = c5b182f798caeeaa7ba62bd3692690030623d317795d907e4fac3f524f53aa299af5d735d9b03185eaa07526f0146c4fa8d09efbbab6790f5e329fd52359b797
+Size (xwpe-1.5.30a.tar.gz) = 325043 bytes
+SHA1 (patch-aa) = cf7bc074e1dc8cda086dfe29ebfdca1c0f261c1d
+SHA1 (patch-ab) = d2618c3656b8826019272537d251a66c867cba5d
+SHA1 (patch-edit.h) = af55c26886af6447747f31b47f3af5f1a8726595
+SHA1 (patch-we__main.c) = 5112e6ce7ab4c11afd230f4709fcf1c6ed702fc0
+SHA1 (patch-we__xterm.c) = 5b63e0df612ffdff64838d1faf5b558d9179b3dc

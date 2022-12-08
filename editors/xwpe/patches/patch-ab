@@ -1,13 +1,17 @@
-$NetBSD: patch-ab,v 1.1 2006/01/04 21:43:44 joerg Exp $
+$NetBSD: patch-ab,v 1.2 2022/12/08 08:51:56 vins Exp $
 
---- we_debug.c.orig	2006-01-04 21:40:11.000000000 +0000
+Depend on [n]curses to provide prototypes for tparm and tgoto.
+
+--- we_debug.c.orig	2005-07-07 01:53:09.000000000 +0000
 +++ we_debug.c
-@@ -52,8 +52,6 @@ extern BUFFER *e_p_w_buffer;
+@@ -62,10 +62,6 @@ extern BUFFER *e_p_w_buffer;
  extern char *att_no;
  extern char *e_tmp_dir;
  
+-#ifdef NOTPARM
 -char *tparm();
 -char *tgoto();
+-#endif
  #ifdef DEFTPUTS
  int tputs();
  #endif
