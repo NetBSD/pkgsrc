@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/06/30 11:18:09 nia Exp $
+# $NetBSD: Makefile,v 1.4 2022/12/08 19:02:32 he Exp $
 
 PKGNAME=		${DISTNAME:S/-gpl//}
 PKGREVISION=		2
@@ -100,5 +100,6 @@ post-install:
 	${SED} ${CNFSUBST} ${FILESDIR}/mysql-cluster.ini \
 		> ${DESTDIR}${PREFIX}/share/mysql/mysql-cluster.ini
 
+.include "../../mk/atomic64.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
