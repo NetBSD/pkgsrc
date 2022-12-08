@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2020/01/18 23:30:10 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2022/12/08 10:33:03 jperkin Exp $
 #
 
 DISTNAME=		gplcver-2.12a.src
@@ -15,6 +15,8 @@ COMMENT=		Verilog simulator
 BUILD_DIRS=		src
 MAKE_FILE=		makefile.freebsd
 BUILDLINK_LIBS.dl=	${BUILDLINK_LDADD.dl}
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-export-dynamic
 
 INSTALLATION_DIRS=	bin lib/gplcver/pli_incs
 
