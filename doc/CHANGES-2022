@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6021 2022/12/08 19:17:13 khorben Exp $
+$NetBSD: CHANGES-2022,v 1.6022 2022/12/08 23:33:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9057,3 +9057,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/ruby-nokogiri to 1.13.10 [tsutsui 2022-12-08]
 	Updated textproc/split-thai to 2.23 [scole 2022-12-08]
 	Added textproc/libfyaml version 0.7.12 [khorben 2022-12-08]
+	Updated x11/libXau to 1.0.11 [wiz 2022-12-08]
