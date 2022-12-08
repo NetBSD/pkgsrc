@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2022/10/25 08:02:56 prlw1 Exp $
+# $NetBSD: Makefile,v 1.20 2022/12/08 10:27:03 jperkin Exp $
 
 DISTNAME=	libhandy-1.8.0
 CATEGORIES=	devel gnome
@@ -10,7 +10,7 @@ HOMEPAGE=	https://gnome.pages.gitlab.gnome.org/libhandy/
 COMMENT=	Building blocks for modern adaptive GNOME apps
 LICENSE=	gnu-lgpl-v2.1
 
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	msgfmt pkg-config
 
 PYTHON_FOR_BUILD_ONLY=	tool
 
