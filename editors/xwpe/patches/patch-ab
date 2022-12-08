@@ -1,10 +1,25 @@
-$NetBSD: patch-ab,v 1.2 2022/12/08 08:51:56 vins Exp $
+$NetBSD: patch-ab,v 1.3 2022/12/08 10:31:08 vins Exp $
 
-Depend on [n]curses to provide prototypes for tparm and tgoto.
+* Depend on [n]curses to provide prototypes for tparm and tgoto.
+* Fix implicit declaration warnings.
 
 --- we_debug.c.orig	2005-07-07 01:53:09.000000000 +0000
 +++ we_debug.c
-@@ -62,10 +62,6 @@ extern BUFFER *e_p_w_buffer;
+@@ -7,6 +7,13 @@
+ #include "messages.h"
+ #include "edit.h"
+ 
++#ifndef __WE_PROG_H
++#define __WE_PROG_H
++
++int print_to_end_of_buffer(BUFFER *b, char *str, int wrap_limit);
++
++#endif
++
+ #ifndef NO_XWINDOWS
+ #include "WeXterm.h"
+ #endif
+@@ -62,10 +69,6 @@ extern BUFFER *e_p_w_buffer;
  extern char *att_no;
  extern char *e_tmp_dir;
  
