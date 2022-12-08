@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2022/12/06 21:33:03 vins Exp $
+# $NetBSD: Makefile,v 1.7 2022/12/08 16:14:14 bsiegert Exp $
 
 DISTNAME=	tut-1.0.24
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=RasmusLindroth/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
