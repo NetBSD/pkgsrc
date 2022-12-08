@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2021/10/08 15:08:21 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2022/12/08 12:28:41 schmonz Exp $
 bin/mvn
 lib/java/maven/boot/plexus-classworlds-2.6.0.jar
 lib/java/maven/commons-cli-1.4.jar
@@ -6,10 +6,10 @@ lib/java/maven/commons-io-2.6.jar
 lib/java/maven/commons-lang3-3.8.1.jar
 lib/java/maven/guava-25.1-android.jar
 lib/java/maven/guice-4.2.2-no_aop.jar
-lib/java/maven/jansi-2.3.4.jar
+lib/java/maven/jansi-2.4.0.jar
 lib/java/maven/javax.annotation-api-1.2.jar
 lib/java/maven/javax.inject-1.jar
-lib/java/maven/jcl-over-slf4j-1.7.32.jar
+lib/java/maven/jcl-over-slf4j-1.7.36.jar
 lib/java/maven/maven-artifact-${PKGVERSION}.jar
 lib/java/maven/maven-builder-support-${PKGVERSION}.jar
 lib/java/maven/maven-compat-${PKGVERSION}.jar
@@ -36,11 +36,11 @@ lib/java/maven/plexus-cipher-2.0.jar
 lib/java/maven/plexus-component-annotations-2.1.0.jar
 lib/java/maven/plexus-interpolation-1.26.jar
 lib/java/maven/plexus-sec-dispatcher-2.0.jar
-lib/java/maven/plexus-utils-3.3.0.jar
-lib/java/maven/slf4j-api-1.7.32.jar
-lib/java/maven/wagon-file-3.4.3.jar
-lib/java/maven/wagon-http-3.4.3-shaded.jar
-lib/java/maven/wagon-provider-api-3.4.3.jar
+lib/java/maven/plexus-utils-3.3.1.jar
+lib/java/maven/slf4j-api-1.7.36.jar
+lib/java/maven/wagon-file-3.5.1.jar
+lib/java/maven/wagon-http-3.5.1-shaded.jar
+lib/java/maven/wagon-provider-api-3.5.1.jar
 share/doc/java/maven/LICENSE
 share/doc/java/maven/NOTICE
 share/doc/java/maven/README.txt

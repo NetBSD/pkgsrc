@@ -1,10 +1,10 @@
-$NetBSD: patch-bin_mvn,v 1.9 2021/10/08 15:08:21 wiz Exp $
+$NetBSD: patch-bin_mvn,v 1.10 2022/12/08 12:28:41 schmonz Exp $
 
 Reconcile JAVA_HOME evaluated at run time on Darwin vs. hardcoded
 via PKG_JAVA_HOME elsewhere.
 Follow pkgsrc path convention.
 
---- bin/mvn.orig	2021-09-27 18:25:22.000000000 +0000
+--- bin/mvn.orig	2022-06-06 16:16:38.000000000 +0000
 +++ bin/mvn
 @@ -46,9 +46,11 @@ fi
  # OS specific support. $var _must_ be set to either true or false.
@@ -28,7 +28,7 @@ Follow pkgsrc path convention.
 +fi
 +
  if [ -z "$JAVA_HOME" ] ; then
--  JAVACMD=`which java`
+-  JAVACMD="`\\unset -f command; \\command -v java`"
 -else
 -  JAVACMD="$JAVA_HOME/bin/java"
 +  JAVA_HOME="@PKG_JAVA_HOME@"
