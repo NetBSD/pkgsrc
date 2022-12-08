@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2022/11/23 16:19:17 adam Exp $
+# $NetBSD: Makefile,v 1.58 2022/12/08 10:38:12 jperkin Exp $
 #
 
 DISTNAME=	glurp-0.12.3
@@ -13,6 +13,8 @@ LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	intltool pkg-config
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-export-dynamic
 
 LIBS.SunOS+=	-lsocket -lnsl
 
