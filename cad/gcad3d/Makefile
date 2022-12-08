@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/10/07 18:02:52 nros Exp $
+# $NetBSD: Makefile,v 1.3 2022/12/08 10:52:58 jperkin Exp $
 #
 
 #
@@ -42,6 +42,9 @@ CWRAPPERS_PREPEND.cc=	${CFLAGS} ${CPPFLAGS} ${LDFLAGS}
 
 BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
 DL_AUTO_VARS=		yes
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--unresolved-symbols=ignore-all
+BUILDLINK_TRANSFORM.SunOS+=	rm:-export-dynamic
 
 ALL_ENV+=		DIR_DEV=${WRKSRC}/
 ALL_ENV+=		DIR_BIN=${WRKSRC}/
