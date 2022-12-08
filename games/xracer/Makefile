@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2022/08/11 05:08:37 gutteridge Exp $
+# $NetBSD: Makefile,v 1.73 2022/12/08 10:36:02 jperkin Exp $
 #
 
 DISTNAME=		xracer-0.96.9
@@ -28,6 +28,8 @@ REPLACE_PERL+=		tools/blender2track/xracer-blender2track.pl \
 			tools/mktrackscenery/xracer-mktrackscenery.pl \
 			tools/mkcraft/xracer-mkcraft.pl \
 			tools/mkmeshnotex/xracer-mkmeshnotex.pl
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-export-dynamic
 
 post-configure: do-makemaker-configure
 
