@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2022/04/10 08:53:24 nia Exp $
+# $NetBSD: Makefile,v 1.10 2022/12/09 22:01:57 wiz Exp $
 
-DISTNAME=	xf86-video-voodoo-1.2.5
-PKGREVISION=	2
+DISTNAME=	xf86-video-voodoo-1.2.6
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://xorg.freedesktop.org/
