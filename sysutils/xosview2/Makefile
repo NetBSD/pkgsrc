@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2022/12/06 12:34:12 vins Exp $
+# $NetBSD: Makefile,v 1.2 2022/12/09 09:48:28 vins Exp $
 
-DISTNAME=	xosview2-2.3.1
+DISTNAME=	xosview2-2.3.3
 CATEGORIES=	sysutils x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xosview/}
 
@@ -11,7 +11,7 @@ LICENSE=	gnu-gpl-v2 AND original-bsd
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	awk
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++17
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
