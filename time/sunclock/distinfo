@@ -1,7 +1,15 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 11:24:37 nia Exp $
+$NetBSD: distinfo,v 1.10 2022/12/09 14:13:00 vins Exp $
 
-BLAKE2s (sunclock-1.5.tar.gz) = fe72f50fa8b436b1ee484fc337a4a0fba8fd4dc1c5e61de5936a991c4acbf7c2
-SHA512 (sunclock-1.5.tar.gz) = a88ebb080915ed9da542ce0657999eba344ba66ae7521a9ae918a1d5a49044c190e7f2ce75a353e7fcdd8c5f9c50dc2a6da80f205d89f20428e29d048f3c3f64
-Size (sunclock-1.5.tar.gz) = 29360 bytes
-SHA1 (patch-aa) = 775b77c0bd2ebbdcaa114b8be95af553521a7ec7
-SHA1 (patch-ab) = e3432958d8e302643bb751717d3a8462bd0a841b
+BLAKE2s (sunclock-3.57.tar.bz2) = fa7713e5b1bd87851c64919e59deb07601c93aed1820fb4b6fea87903d664f56
+SHA512 (sunclock-3.57.tar.bz2) = cfb99ecf29d9230335af59d0e6056d51c9922a50e8749708f237676cd81f346de66b66801079b6032880b88ba8242432dc8cb65c51c866577e0be51be30cb13a
+Size (sunclock-3.57.tar.bz2) = 1325138 bytes
+SHA1 (patch-Imakefile) = f1cc0a5d4c8462b1667b50247881baca44ca0b72
+SHA1 (patch-aa) = ce0aa1b588e18a2238e36689ede63d1d30bb5a4b
+SHA1 (patch-ab) = a299fd897511acf4238d14c5432d7ea467c9756f
+SHA1 (patch-editkit_Imakefile) = 697c48887a706a0211b2a0fdfd6fd042d99085f8
+SHA1 (patch-editkit_edit.c) = ed6bde0c2740547593c4813c7030abc7a4afbada
+SHA1 (patch-readpng.c) = 7c0d3a17be546bb158bc525aae9158c4472e0cfd
+SHA1 (patch-readvmf.c) = ce94c97ece858f963fcbc7f08a3551425667a38b
+SHA1 (patch-sunclock.h) = 2e45807196e1b5a48602f80bc842d87b435c0574
+SHA1 (patch-version.h) = 0c743fc66a578f847704203ffb0b78f050cf30d3
+SHA1 (patch-widgets.c) = e7c1f0a5f5cf83209ce989f258b651d31279c51e
