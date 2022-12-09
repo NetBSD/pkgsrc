@@ -1,3 +1,20 @@
-@comment $NetBSD: PLIST,v 1.2 2003/03/03 03:23:25 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/12/09 14:13:00 vins Exp $
+bin/emx
 bin/sunclock
-${IMAKE_MAN_DIR}/sunclock.${IMAKE_MANNEWSUFFIX}
+man/man1/sunclock.1
+share/sunclock/Sunclockrc
+share/sunclock/earthmaps/vmf/countries.vmf.gz
+share/sunclock/earthmaps/vmf/landwater.vmf.gz
+share/sunclock/earthmaps/vmf/timezones.vmf.gz
+share/sunclock/editkit/MANUAL.emacs
+share/sunclock/editkit/README
+share/sunclock/editkit/emxrc
+share/sunclock/i18n/Sunclock.de
+share/sunclock/i18n/Sunclock.en
+share/sunclock/i18n/Sunclock.es
+share/sunclock/i18n/Sunclock.fr
+share/sunclock/i18n/Sunclock.it
+share/sunclock/i18n/Sunclock.nl
+share/sunclock/i18n/Sunclock.no
+share/sunclock/i18n/Sunclock.pl
+share/sunclock/i18n/Sunclock.sv

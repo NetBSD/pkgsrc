@@ -1,0 +1,15 @@
+$NetBSD: patch-editkit_Imakefile,v 1.1 2022/12/09 14:13:00 vins Exp $
+
+Do not redefine CFLAGS.
+
+--- editkit/Imakefile.orig	2006-10-14 14:37:25.000000000 +0000
++++ editkit/Imakefile
+@@ -33,7 +33,7 @@ XCOMM
+ XCOMM Compile options:
+ XCOMM
+ 
+-CFLAGS = -O2 -fomit-frame-pointer -pipe -Wall -DTHREED -DGREEK -DJUSTIFY -DSHAREDIR="\"$(SHAREDIR)\"" -DDOCDIR="\"$(DOCDIR)\""
++EXTRA_DEFINES = -DTHREED -DGREEK -DJUSTIFY -DSHAREDIR="\"$(SHAREDIR)\"" -DDOCDIR="\"$(DOCDIR)\""
+ 
+ LOCAL_LIBRARIES=-lX11
+ DEPLIBS=		# I don't know what I'm doing, and I hate imake!

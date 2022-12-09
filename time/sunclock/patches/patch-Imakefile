@@ -1,0 +1,68 @@
+$NetBSD: patch-Imakefile,v 1.1 2022/12/09 14:13:00 vins Exp $
+
+DESTDIR support.
+LDFLAGS support.
+
+--- Imakefile.orig	2008-08-07 14:27:43.000000000 +0000
++++ Imakefile
+@@ -11,14 +11,14 @@ XCOMM Name of share subdirectory of DEST
+ SHAREDIR=/share/sunclock
+ 
+ XCOMM Name of library subdirectory of DESTDIR:
+-EMXBINDIR=/share/sunclock/bin
++EMXBINDIR=${BINDIR}
+ 
+ XCOMM Name of library subdirectory of DESTDIR:
+ LIBDIR=/lib/sunclock
+ 
+ XCOMM Name of DOCDIR's subdirectories of DESTDIR:
+-DOCDIR=/X11R6/lib/X11/doc 
+-DOCHTMLDIR=/X11R6/lib/X11/doc/html
++DOCDIR=${SHAREDIR}/doc 
++DOCHTMLDIR=${SHAREDIR}/doc/html
+ 
+ XCOMM
+ XCOMM Compile options:
+@@ -29,40 +29,14 @@ XCOMM   define for system V or Solaris
+ XCOMM Pick -O or -g
+ XCOMM
+ 
+-#ifdef HPArchitectureAndHPUX
+-XPMLIBDIR=-L/opt/xpm/lib/X11
+-XPMINC=-I/opt/xpm/include
+-JLIBDIR=-L/opt/jpeg-6/lib
+-ZLIBDIR=
+-JINC=-I/opt/jpeg-6/include
+-
+-CCOPTIONS = -Ae $(XPMINC) $(JINC) -DZLIB -DSHAREDIR=\"$(DESTDIR)$(SHAREDIR)\"
+-#else
+-# SunOS
+-
+-#XPMLIBDIR=-L/usr/X11R6/lib
+-#XPMINC=-I/usr/X11R6/include/X11
+-#JLIBDIR=-L/usr/lib
+-#ZLIBDIR=-L/usr/lib
+-#JINC=-I/usr/include
+-#CCOPTIONS=-O -DZLIB -DNEW_CTIME -DSHAREDIR=\"$(DESTDIR)$(SHAREDIR)\"
+-
+-# Solaris, Linux
+-#XPMLIBDIR=-L/usr/X11R6/lib
+-#XPMINC=-I/usr/X11R6/include/X11
+-#JLIBDIR=-L/usr/lib
+-#ZLIBDIR=-L/usr/lib
+-#JINC=-I/usr/include
+-
+-CCOPTIONS=-O -DZLIB -DSHAREDIR=\"$(DESTDIR)$(SHAREDIR)\" -DEMXBINDIR=\"$(DESTDIR)$(EMXBINDIR)\"
+-#endif
++CCOPTIONS=$(LDFLAGS) -DZLIB -DSHAREDIR=\"$(SHAREDIR)\" -DEMXBINDIR=\"$(EMXBINDIR)\"
+ 
+ SRCS=sunclock.c astro.c widgets.c tildepath.c dirlist.c \
+      readvmf.c readxpm.c readgif.c readjpeg.c readpng.c
+ OBJS=sunclock.o astro.o widgets.o tildepath.o dirlist.o \
+      readvmf.o readxpm.o readgif.o readjpeg.o readpng.o
+ LOCAL_LIBRARIES=-lX11 $(XPMLIBDIR) -lXpm $(ZLIBDIR) -lz \
+-     $(JLIBDIR) -ljpeg -lpng -lm
++     $(JLIBDIR) -ljpeg -lpng16 -lm
+ DEPLIBS=		# I don't know what I'm doing, and I hate imake!
+ 
+ ComplexProgramTarget(sunclock)
