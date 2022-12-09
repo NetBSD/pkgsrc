@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6036 2022/12/09 11:11:55 adam Exp $
+$NetBSD: CHANGES-2022,v 1.6037 2022/12/09 11:23:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9075,3 +9075,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-test-asyncio to 0.20.3 [adam 2022-12-09]
 	Updated net/py-comm to 0.1.2 [adam 2022-12-09]
 	Updated databases/py-multidict to 6.0.3 [adam 2022-12-09]
+	Updated security/py-authlib to 1.2.0 [adam 2022-12-09]
+	Updated textproc/py-dicttoxml to 1.7.15 [adam 2022-12-09]
