@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6032 2022/12/09 08:53:21 pin Exp $
+$NetBSD: CHANGES-2022,v 1.6033 2022/12/09 09:37:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9068,3 +9068,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/xf86-video-ast to 1.1.6 [wiz 2022-12-09]
 	Updated graphics/oculante to 0.6.25 [pin 2022-12-09]
 	Updated sysutils/fd-find to 8.6.0 [pin 2022-12-09]
+	Updated net/wireshark to 4.0.2 [adam 2022-12-09]
+	Updated devel/py-traitlets to 5.7.0 [adam 2022-12-09]
