@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2022/12/09 12:34:13 tsutsui Exp $
+# $NetBSD: Makefile,v 1.12 2022/12/09 12:45:08 tsutsui Exp $
 
-DISTNAME=	public_suffix-5.0.1
+DISTNAME=	public_suffix-5.0.0
 CATEGORIES=	net
 
 MAINTAINER=	tsutsui@NetBSD.org
