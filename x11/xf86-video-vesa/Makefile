@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.30 2022/11/09 13:14:28 joerg Exp $
+# $NetBSD: Makefile,v 1.31 2022/12/09 22:01:01 wiz Exp $
 
-DISTNAME=	xf86-video-vesa-2.5.0
+DISTNAME=	xf86-video-vesa-2.6.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://xorg.freedesktop.org/
