@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.33 2022/11/23 10:41:41 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.34 2022/12/09 13:46:35 adam Exp $
 
 BUILDLINK_TREE+=	glib2
 
@@ -11,6 +11,9 @@ BUILDLINK_PKGSRCDIR.glib2?=	../../devel/glib2
 BUILDLINK_INCDIRS.glib2+=	include/glib-2.0
 BUILDLINK_INCDIRS.glib2+=	include/gio-unix-2.0
 BUILDLINK_INCDIRS.glib2+=	lib/glib-2.0/include
+
+BUILDLINK_FILES.glib2+=		bin/glib-compile-resources
+BUILDLINK_FILES.glib2+=		bin/glib-compile-schemas
 
 TOOL_DEPENDS+=	glib2-tools-[0-9]*:../../devel/glib2-tools
 
