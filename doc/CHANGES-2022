@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6034 2022/12/09 09:48:42 vins Exp $
+$NetBSD: CHANGES-2022,v 1.6035 2022/12/09 10:47:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9071,3 +9071,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/wireshark to 4.0.2 [adam 2022-12-09]
 	Updated devel/py-traitlets to 5.7.0 [adam 2022-12-09]
 	Updated sysutils/xosview2 to 2.3.3 [vins 2022-12-09]
+	Updated devel/py-protobuf to 4.21.11 [adam 2022-12-09]
+	Updated devel/py-test-asyncio to 0.20.3 [adam 2022-12-09]
