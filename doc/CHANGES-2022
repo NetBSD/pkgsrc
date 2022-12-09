@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6038 2022/12/09 12:36:24 tsutsui Exp $
+$NetBSD: CHANGES-2022,v 1.6039 2022/12/09 13:47:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9094,3 +9094,6 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated print/ruby-poppler to 4.0.4 [tsutsui 2022-12-09]
 	Updated x11/ruby-gtk3 to 4.0.4 [tsutsui 2022-12-09]
 	Updated x11/ruby-gtksourceview3 to 4.0.4 [tsutsui 2022-12-09]
+	Updated devel/glib2 to 2.74.3 [adam 2022-12-09]
+	Updated devel/glib2-tools to 2.74.3 [adam 2022-12-09]
+	Updated devel/gdbus-codegen to 2.74.3 [adam 2022-12-09]
