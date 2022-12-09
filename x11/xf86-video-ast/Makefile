@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.26 2022/11/09 13:14:26 joerg Exp $
+# $NetBSD: Makefile,v 1.27 2022/12/09 08:49:16 wiz Exp $
 
-DISTNAME=	xf86-video-ast-1.1.5
-PKGREVISION=	1
+DISTNAME=	xf86-video-ast-1.1.6
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://xorg.freedesktop.org/
