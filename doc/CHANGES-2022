@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6028 2022/12/09 08:45:14 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.6029 2022/12/09 08:47:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9064,3 +9064,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/libICE to 1.1.1 [wiz 2022-12-08]
 	Updated devel/nss to 3.86 [wiz 2022-12-08]
 	Updated x11/xf86-input-elographics to 1.4.3 [wiz 2022-12-09]
+	Updated x11/xf86-input-joystick to 1.6.4 [wiz 2022-12-09]
