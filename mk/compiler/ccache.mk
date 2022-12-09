@@ -1,4 +1,4 @@
-# $NetBSD: ccache.mk,v 1.39 2019/09/02 02:23:02 rillig Exp $
+# $NetBSD: ccache.mk,v 1.40 2022/12/09 12:18:56 gdt Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -53,6 +53,14 @@
 #
 # Keywords: ccache
 #
+
+# \todo We now have two versions of ccache, one with fairly light
+# dependencies and one with heavier dependencies (C++17, cmake, ruby).
+# Obviously some people are going to prefer one and some the other,
+# and thus the right approach is to have a CCACHE_TYPE variable that
+# can mean devel/ccache3 or devel/ccache, and to use that to control
+# both the circular dependency list and the package that is depended
+# on.  For now (meaning the 2022Q4 branch), just set to ccache3.
 
 .if !defined(COMPILER_CCACHE_MK)
 COMPILER_CCACHE_MK=	defined
@@ -130,7 +138,7 @@ PREPEND_PATH+=	${_CCACHE_DIR}/bin
 
 # Add the dependency on ccache.
 .  if ${CCACHE_BASE} == ${LOCALBASE}
-TOOL_DEPENDS+=	ccache-[0-9]*:../../devel/ccache
+TOOL_DEPENDS+=	ccache-[0-9]*:../../devel/ccache3
 .  endif
 
 # Override the compiler-specific hash with the version string for the
