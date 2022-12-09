@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2022/11/28 19:59:04 adam Exp $
+# $NetBSD: Makefile,v 1.2 2022/12/09 11:09:12 adam Exp $
 
-DISTNAME=	comm-0.1.1
+DISTNAME=	comm-0.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/comm/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/ipython/comm
 COMMENT=	Jupyter Python Comm implementation
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.11:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.10:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-traitlets>=5.4:../../devel/py-traitlets
 
 USE_LANGUAGES=	# none
