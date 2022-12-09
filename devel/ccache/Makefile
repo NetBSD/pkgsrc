@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2022/12/09 11:56:47 gdt Exp $
+# $NetBSD: Makefile,v 1.67 2022/12/09 16:14:12 wiz Exp $
 
 DISTNAME=	ccache-4.7.4
 PKGREVISION=	1
@@ -15,13 +15,19 @@ LICENSE=	gnu-gpl-v3 AND modified-bsd AND public-domain AND zlib
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c99 c++17
-USE_TOOLS+=	perl:test pkg-config
+USE_TOOLS+=	perl:build pkg-config
 TEST_TARGET=	test
 
 GCC_REQD=	8 # std::filesystem
 
 .include "../../lang/ruby/rubyversion.mk"
 TOOL_DEPENDS+=	${RUBY_PKGPREFIX}-asciidoctor>=2.0.0:../../textproc/ruby-asciidoctor
+
+SUBST_CLASSES+=		rubyver
+SUBST_SED.rubyver+=	-e "s/asciidoctor/asciidoctor${RUBY_SUFFIX}/"
+SUBST_FILES.rubyver+=	doc/CMakeLists.txt
+SUBST_STAGE.rubyver=	pre-configure
+SUBST_MESSAGE.rubyver=	Fixing asciidoctor executable name.
 
 .include "../../archivers/zstd/buildlink3.mk"
 .include "../../databases/hiredis/buildlink3.mk"
