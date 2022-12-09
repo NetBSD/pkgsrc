@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22397 2022/12/08 23:33:36 wiz Exp $
+$NetBSD: TODO,v 1.22398 2022/12/09 14:13:22 vins Exp $
 
 Suggested new packages
 ======================
@@ -1418,7 +1418,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o strace-4.23
 	o stratagus-2.2.5.5
 	o streamtuner-2.2.0
-	o sunclock-3.57 [https://github.com/mdoege/Sunclock]
 	o sup-0.4
 	o superlu-5.2.2
 	o supertux-0.6.3
