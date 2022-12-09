@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:34:44 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/12/09 21:48:31 wiz Exp $
 
-BLAKE2s (xf86-video-sunffb-1.2.2.tar.bz2) = 5071dec2e53537fda9c794a428617971b4cc7f635a3d8a97778536556be8c49d
-SHA512 (xf86-video-sunffb-1.2.2.tar.bz2) = a812cfdb43527e97993d1ce8b62324a5ee442c0bbf695d45582f10d7d428606ac9a546c80cd401e41e2f198c94fa84762ec4e545b53b8d1cb074bfb13ab45ff0
-Size (xf86-video-sunffb-1.2.2.tar.bz2) = 334827 bytes
+BLAKE2s (xf86-video-sunffb-1.2.3.tar.xz) = 011f027a9c509a28fe498a89a8bc0112b76d7b2efa8e406a3555fdf1d0416596
+SHA512 (xf86-video-sunffb-1.2.3.tar.xz) = 114f46c284278aa4683cd057015f66634992dc9e104ccb3a0f4f070c10cb7b2e1c656657e9aebaa8dbb9ab3391b2928ec673757ecaae00be8da0a62ee4a86166
+Size (xf86-video-sunffb-1.2.3.tar.xz) = 300448 bytes
