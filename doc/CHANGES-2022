@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6044 2022/12/09 21:59:25 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.6045 2022/12/09 21:59:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9102,3 +9102,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/xf86-video-suncg6 to 1.1.3 [wiz 2022-12-09]
 	Updated x11/xf86-video-sunffb to 1.2.3 [wiz 2022-12-09]
 	Updated x11/xf86-video-sunleo to 1.2.3 [wiz 2022-12-09]
+	Updated x11/xf86-video-suntcx to 1.1.3 [wiz 2022-12-09]
