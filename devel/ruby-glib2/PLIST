@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/12/08 15:22:01 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/12/09 12:34:11 tsutsui Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/glib-enum-types.h
@@ -81,6 +81,7 @@ ${GEM_LIBDIR}/ext/glib2/rbgobj_typeinterface.c
 ${GEM_LIBDIR}/ext/glib2/rbgobj_typemodule.c
 ${GEM_LIBDIR}/ext/glib2/rbgobj_typeplugin.c
 ${GEM_LIBDIR}/ext/glib2/rbgobj_value.c
+${GEM_LIBDIR}/ext/glib2/rbgobj_valuearray.c
 ${GEM_LIBDIR}/ext/glib2/rbgobj_valuetypes.c
 ${GEM_LIBDIR}/ext/glib2/rbgobject.c
 ${GEM_LIBDIR}/ext/glib2/rbgobject.h
@@ -104,14 +105,15 @@ ${GEM_LIBDIR}/lib/glib2/deprecated.rb
 ${GEM_LIBDIR}/lib/glib2/regex.rb
 ${GEM_LIBDIR}/lib/glib2/variant.rb
 ${GEM_LIBDIR}/lib/glib2/version.rb
+${GEM_LIBDIR}/lib/gnome/rake/external-package.rb
+${GEM_LIBDIR}/lib/gnome/rake/native-binary-build-task.rb
+${GEM_LIBDIR}/lib/gnome/rake/package-task.rb
+${GEM_LIBDIR}/lib/gnome/rake/package.rb
+${GEM_LIBDIR}/lib/gnome/rake/source-download-task.rb
+${GEM_LIBDIR}/lib/gnome/rake/windows-binary-build-task.rb
+${GEM_LIBDIR}/lib/gnome/rake/windows-binary-download-task.rb
 ${GEM_LIBDIR}/lib/gnome2-raketask.rb
-${GEM_LIBDIR}/lib/gnome2/rake/external-package.rb
-${GEM_LIBDIR}/lib/gnome2/rake/native-binary-build-task.rb
 ${GEM_LIBDIR}/lib/gnome2/rake/package-task.rb
-${GEM_LIBDIR}/lib/gnome2/rake/package.rb
-${GEM_LIBDIR}/lib/gnome2/rake/source-download-task.rb
-${GEM_LIBDIR}/lib/gnome2/rake/windows-binary-build-task.rb
-${GEM_LIBDIR}/lib/gnome2/rake/windows-binary-download-task.rb
 ${GEM_LIBDIR}/lib/mkmf-gnome.rb
 ${GEM_LIBDIR}/lib/mkmf-gnome2.rb
 ${GEM_LIBDIR}/lib/rbgcompat.h
@@ -148,6 +150,7 @@ ${GEM_LIBDIR}/test/test-iochannel.rb
 ${GEM_LIBDIR}/test/test-key-file.rb
 ${GEM_LIBDIR}/test/test-match-info.rb
 ${GEM_LIBDIR}/test/test-mkenums.rb
+${GEM_LIBDIR}/test/test-pointer.rb
 ${GEM_LIBDIR}/test/test-poll-fd.rb
 ${GEM_LIBDIR}/test/test-regex.rb
 ${GEM_LIBDIR}/test/test-signal.rb

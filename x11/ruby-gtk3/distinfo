@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2022/12/08 15:22:02 tsutsui Exp $
+$NetBSD: distinfo,v 1.11 2022/12/09 12:34:13 tsutsui Exp $
 
-BLAKE2s (gtk3-4.0.3.gem) = 62dfd7ae23c63ce11445eaac7a171cacaa70cff591682c3e58a2569608ed82e7
-SHA512 (gtk3-4.0.3.gem) = 928846f8b4dc813cb9dc346705f9536e15b4e73df1e3202e7b5c915f5d61b2afd08d109b6064b7c3d567b2367e7e01a3aed4fe34c2e1fc86cb41f175d68efd29
-Size (gtk3-4.0.3.gem) = 866816 bytes
+BLAKE2s (gtk3-4.0.4.gem) = 7e7b220ee1e923fbc517c97ff80c81af999d6c8027a298f9b2978be906f12d74
+SHA512 (gtk3-4.0.4.gem) = b3fa80e432edcbc35ce1204d4acbdb49b6b013a20007c59911f42a90b5d7d50f11ad59acf705d07a1eed87ab205e2fc14993b1dab16eae5cf00edd5b8a51717d
+Size (gtk3-4.0.4.gem) = 866816 bytes
