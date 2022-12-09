@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6035 2022/12/09 10:47:22 adam Exp $
+$NetBSD: CHANGES-2022,v 1.6036 2022/12/09 11:11:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9073,3 +9073,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/xosview2 to 2.3.3 [vins 2022-12-09]
 	Updated devel/py-protobuf to 4.21.11 [adam 2022-12-09]
 	Updated devel/py-test-asyncio to 0.20.3 [adam 2022-12-09]
+	Updated net/py-comm to 0.1.2 [adam 2022-12-09]
+	Updated databases/py-multidict to 6.0.3 [adam 2022-12-09]
