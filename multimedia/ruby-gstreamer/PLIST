@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/01/17 15:17:16 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/12/09 12:34:13 tsutsui Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/gstreamer.${RUBY_DLEXT}
@@ -46,6 +46,7 @@ ${GEM_LIBDIR}/test/test-bus.rb
 ${GEM_LIBDIR}/test/test-caps.rb
 ${GEM_LIBDIR}/test/test-child-proxy.rb
 ${GEM_LIBDIR}/test/test-element-factory.rb
+${GEM_LIBDIR}/test/test-map-info.rb
 ${GEM_LIBDIR}/test/test-tag-list.rb
 ${GEM_LIBDIR}/test/test-version.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec

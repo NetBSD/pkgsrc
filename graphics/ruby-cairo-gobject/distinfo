@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2022/12/08 15:22:01 tsutsui Exp $
+$NetBSD: distinfo,v 1.11 2022/12/09 12:34:12 tsutsui Exp $
 
-BLAKE2s (cairo-gobject-4.0.3.gem) = 9cb22aa8769598c0fb97e62400125ea2e11f57a3a31292ba24c755a4defe9973
-SHA512 (cairo-gobject-4.0.3.gem) = f3494f806001e8628a754f791e03159b89b2138ab709f2b886226c3c3744e5d7dc5bb588bc00ef280de2fbdfe386fee4dd837cb8d93bdb9fa23b22e9a0c0430d
-Size (cairo-gobject-4.0.3.gem) = 19456 bytes
+BLAKE2s (cairo-gobject-4.0.4.gem) = 1bc924feded139329a1debd0804ac5df0b279e210f540c05b11cabcac476caa5
+SHA512 (cairo-gobject-4.0.4.gem) = 8731bb135d5c92f52a622fc6ef15bb2c0251a599b40e01b426aabf30bc94ee1282447c5881f43817ca46a99978e77ee1f8680c395e889267b8203af74855d8cd
+Size (cairo-gobject-4.0.4.gem) = 19968 bytes
