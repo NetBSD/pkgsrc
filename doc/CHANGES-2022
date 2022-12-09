@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6040 2022/12/09 14:13:22 vins Exp $
+$NetBSD: CHANGES-2022,v 1.6041 2022/12/09 21:46:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9098,3 +9098,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/glib2-tools to 2.74.3 [adam 2022-12-09]
 	Updated devel/gdbus-codegen to 2.74.3 [adam 2022-12-09]
 	Updated time/sunclock to 3.57 [vins 2022-12-09]
+	Updated x11/xf86-video-suncg3 to 1.1.3 [wiz 2022-12-09]
