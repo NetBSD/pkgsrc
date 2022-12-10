@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.662 2022/11/28 13:44:14 nros Exp $
+# $NetBSD: Makefile,v 1.663 2022/12/10 12:51:33 wiz Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -65,6 +65,7 @@ SUBDIR+=	csound6
 SUBDIR+=	csound6-manual
 SUBDIR+=	cutmp3
 SUBDIR+=	cutoggvorbis
+SUBDIR+=	d11amp
 SUBDIR+=	dap
 SUBDIR+=	darkice
 SUBDIR+=	davis
