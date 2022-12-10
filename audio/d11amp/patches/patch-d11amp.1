@@ -1,0 +1,20 @@
+$NetBSD: patch-d11amp.1,v 1.1 2022/12/10 12:50:58 wiz Exp $
+
+Fix typos.
+
+--- d11amp.1.orig	2022-11-27 18:03:47.000000000 +0000
++++ d11amp.1
+@@ -30,11 +30,11 @@ is a frontend to MPG123, trying to resem
+ .Nm
+ .Op --audiooutput.portaudio.device=NUMBER
+ .br
+-The audio output is being handled through the portaudio library. This allows to select any audio output present in the device on which
++The audio output is being handled through the portaudio library. This allows one to select any audio output present in the device on which
+ .Nm
+ has been started. The outputs are identified through a number, and a list of available outputs can be seen by using a question mark instead of the number.
+ .br
+-The default audio output device can be adressed by using -1.
++The default audio output device can be addressed by using -1.
+ .Pp
+ .Nm
+ .Op --bsd
