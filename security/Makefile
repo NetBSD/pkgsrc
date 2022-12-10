@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.883 2022/12/05 21:57:57 nikita Exp $
+# $NetBSD: Makefile,v 1.884 2022/12/10 08:18:20 wiz Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -241,6 +241,7 @@ SUBDIR+=	nettle
 SUBDIR+=	nfsbug
 SUBDIR+=	nikto
 SUBDIR+=	oath-toolkit
+SUBDIR+=	oauth2c
 SUBDIR+=	ocaml-cryptokit
 SUBDIR+=	ocaml-safepass
 SUBDIR+=	ocaml-ssl
