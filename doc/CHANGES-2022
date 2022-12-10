@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6054 2022/12/10 17:21:49 leot Exp $
+$NetBSD: CHANGES-2022,v 1.6055 2022/12/10 19:59:56 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9112,3 +9112,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated geography/py-proj to 3.2.1 [gdt 2022-12-10]
 	Updated net/kubectl to 1.22.17 [leot 2022-12-10]
 	Updated devel/opa to 0.47.2 [leot 2022-12-10]
+	Updated lang/go-bin to 1.19.4 [tnn 2022-12-10]
