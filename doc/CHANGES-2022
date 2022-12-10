@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6053 2022/12/10 14:13:29 leot Exp $
+$NetBSD: CHANGES-2022,v 1.6054 2022/12/10 17:21:49 leot Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9111,3 +9111,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added audio/d11amp version 0.59 [wiz 2022-12-10]
 	Updated geography/py-proj to 3.2.1 [gdt 2022-12-10]
 	Updated net/kubectl to 1.22.17 [leot 2022-12-10]
+	Updated devel/opa to 0.47.2 [leot 2022-12-10]
