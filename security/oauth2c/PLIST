@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2022/12/10 08:17:59 wiz Exp $
+bin/oauth2c
