@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2022/12/04 22:39:43 js Exp $
+# $NetBSD: Makefile,v 1.2 2022/12/10 10:44:59 js Exp $
 
 DISTNAME=		gcc-11.2.0
 PKGNAME=		cross-i586-pc-msdosdjgpp-${DISTNAME}
+PKGREVISION=		1
 CATEGORIES=		cross
 MASTER_SITES=		${MASTER_SITE_GNU:=gcc/gcc-${PKGVERSION_NOREV}/}
 EXTRACT_SUFX=		.tar.xz
@@ -33,15 +34,11 @@ CHECK_PORTABILITY_SKIP+=contrib/* gcc/config/nvptx/gen-opt.sh
 GNU_CONFIGURE_PREFIX=	${DJGPP_PREFIX}
 
 CONFIGURE_ARGS+=	--target=i586-pc-msdosdjgpp
-CONFIGURE_ARGS+=	--enable-languages=c,objc
+CONFIGURE_ARGS+=	--enable-languages=c,c++,objc,obj-c++
 CONFIGURE_ARGS+=	--disable-nls
 # GCC is broken and tries link tests after already setting gcc_no_link=yes if it
 # doesn't know the OS. Override them to no to avoid the forbidden link tests.
-CONFIGURE_ARGS+=	target_configargs="gcc_cv_have_tls=no"
-
-# C++ currently doesn't work because it needs porting of libstdc++ to DJGPP.
-# But once it does, the following is needed:
-#CONFIGURE_ARGS+=	target_configargs="ac_cv_func_shl_load=no ac_cv_lib_dld_shl_load=no ac_cv_func_dlopen=no ac_cv_lib_dl_dlopen=no ac_cv_lib_svld_dlopen=no ac_cv_lib_dld_dld_link=no"
+CONFIGURE_ARGS+=	target_configargs="gcc_cv_have_tls=no ac_cv_func_shl_load=no ac_cv_lib_dld_shl_load=no ac_cv_func_dlopen=no ac_cv_lib_dl_dlopen=no ac_cv_lib_svld_dlopen=no ac_cv_lib_dld_dld_link=no"
 
 INFO_FILES=		yes
 
