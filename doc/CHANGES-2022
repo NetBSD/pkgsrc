@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6049 2022/12/10 08:18:35 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.6050 2022/12/10 10:57:17 js Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9107,3 +9107,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/xf86-video-voodoo to 1.2.6 [wiz 2022-12-09]
 	Updated x11/xf86-video-suncg14 to 1.1.3 [wiz 2022-12-10]
 	Added security/oauth2c version 1.1.0 [wiz 2022-12-10]
+	Updated chat/element-web to 1.11.16 [js 2022-12-10]
