@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6051 2022/12/10 12:51:43 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.6052 2022/12/10 13:19:53 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9109,3 +9109,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added security/oauth2c version 1.1.0 [wiz 2022-12-10]
 	Updated chat/element-web to 1.11.16 [js 2022-12-10]
 	Added audio/d11amp version 0.59 [wiz 2022-12-10]
+	Updated geography/py-proj to 3.2.1 [gdt 2022-12-10]
