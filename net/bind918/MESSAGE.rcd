@@ -1,0 +1,19 @@
+===========================================================================
+$NetBSD: MESSAGE.rcd,v 1.1 2022/12/11 01:57:55 sekiya Exp $
+
+Please consider running BIND under the pseudo user account "${BIND_USER}"
+in a chroot environment for security reasons.
+
+To achieve this, set the variable "named_chrootdir" in /etc/rc.conf to
+the directory with the chroot environment e.g. "${BIND_DIR}".
+
+Note: named(8) requires writable directories under "/etc/namedb" which
+specified by "directory" in "options" statement:
+
+	cache
+	keys
+	nta
+
+Make sure to these directories exists with writable by "${BIND_USER}" user.
+
+===========================================================================
