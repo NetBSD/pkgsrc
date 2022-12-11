@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2022/05/24 15:03:32 taca Exp $
+# $NetBSD: Makefile,v 1.34 2022/12/11 11:04:29 wiz Exp $
 
 PKGREVISION= 1
 .include "../../multimedia/ming/Makefile.common"
@@ -18,6 +18,7 @@ PHP_VERSIONS_ACCEPTED=	56 74
 CONFLICTS=	php-ming-[0-9]*
 
 CONFIGURE_ARGS+=	--with-${MODNAME}=${BUILDLINK_PREFIX.ming}
+CONFIGURE_ARGS+=	MING_DIR=${PREFIX}
 PHPSETUPSUBDIR=		php_ext
 MODULESDIR=		${WRKSRC}/${PHPSETUPSUBDIR}/modules
 CONFIGURE_DIRS=		${PHPSETUPSUBDIR}
