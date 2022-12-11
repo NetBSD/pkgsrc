@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6070 2022/12/11 20:28:19 rhialto Exp $
+$NetBSD: CHANGES-2022,v 1.6071 2022/12/11 21:12:34 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9126,3 +9126,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/binutils to 2.39nb1 [fcambus 2022-12-11]
 	Updated lang/rust-bin to 1.64.0 [he 2022-12-11]
 	Updated emulators/open-simh to 4.0.0.20221202 [rhialto 2022-12-11]
+	Updated devel/libxtend to 0.1.7 [bacon 2022-12-11]
