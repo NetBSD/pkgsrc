@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6072 2022/12/11 21:14:48 bacon Exp $
+$NetBSD: CHANGES-2022,v 1.6073 2022/12/11 21:16:56 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9128,3 +9128,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated emulators/open-simh to 4.0.0.20221202 [rhialto 2022-12-11]
 	Updated devel/libxtend to 0.1.7 [bacon 2022-12-11]
 	Updated biology/biolibc to 0.2.4 [bacon 2022-12-11]
+	Updated biology/peak-classifier to 0.1.4.5 [bacon 2022-12-11]
