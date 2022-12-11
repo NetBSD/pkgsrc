@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2022/11/06 22:49:37 bacon Exp $
+# $NetBSD: Makefile,v 1.2 2022/12/11 21:25:47 bacon Exp $
 
-DISTNAME=	fastq-trim-0.1.1.16
+DISTNAME=	fastq-trim-0.1.2
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
-GITHUB_TAG=	58a016f250a9b785bfed574ce471ec7e23cdaa4a
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/outpaddling/Fastq-trim

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/11/06 22:49:37 bacon Exp $
+$NetBSD: distinfo,v 1.2 2022/12/11 21:25:47 bacon Exp $
 
-BLAKE2s (fastq-trim-0.1.1.16-58a016f250a9b785bfed574ce471ec7e23cdaa4a.tar.gz) = a2383eed63d5bb75dbb8c1ca2f6a5f08f737cb6243772e87d0477938cc3440f7
-SHA512 (fastq-trim-0.1.1.16-58a016f250a9b785bfed574ce471ec7e23cdaa4a.tar.gz) = 26d0bf350bac6b3bbfb98d35e6587a1b58a9f353f376f676d97a9c6ff36e41ea05a906eeee2089834f05e26121b7014fd93ef5ba732eb8f8d977edfacaa01225
-Size (fastq-trim-0.1.1.16-58a016f250a9b785bfed574ce471ec7e23cdaa4a.tar.gz) = 29819 bytes
+BLAKE2s (fastq-trim-0.1.2.tar.gz) = d86b5a4a59c9b3e82b4a303c272e9818a9b54532e64d7e42e4c89dea34591fc4
+SHA512 (fastq-trim-0.1.2.tar.gz) = e27852410cc0af06e30d06e1266be6639ff2f63cd35c61801817b37241a6feb41ef5efc5e8668333a19d575a7c018a85113b3e6ec618e2fcbdb2572c05be6148
+Size (fastq-trim-0.1.2.tar.gz) = 29796 bytes
