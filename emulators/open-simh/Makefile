@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2022/10/09 18:50:44 rhialto Exp $
+# $NetBSD: Makefile,v 1.6 2022/12/11 20:28:09 rhialto Exp $
 
 DISTNAME=	open-simh-4.0.0
-PKGNAME=	open-simh-4.0.0.20221008
+PKGNAME=	open-simh-4.0.0.20221202
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=open-simh/}
 GITHUB_PROJECT=	simh
-GITHUB_TAG=	3a7ec4788f919757e85b74552d2d193149ff4442
+GITHUB_TAG=	ce791138b5b5365105415a9a1cf4091d6e50a43d
 
 MAINTAINER=	rhialto@NetBSD.org
 HOMEPAGE=	http://simh.trailing-edge.com/
@@ -26,9 +26,6 @@ PREFER.libpcap=		native
 # Link error with the native version: _zlibVersion
 PREFER.zlib=		pkgsrc
 .endif
-
-BUILDLINK_TRANSFORM+=	rm:-flto
-BUILDLINK_TRANSFORM+=	rm:-fwhole-program
 
 .if (${MACHINE_ARCH} == "arm")
 BUILDLINK_TRANSFORM+=	rm:-O2
@@ -65,7 +62,8 @@ MAKE_ENV+=		INCLUDES=${INCLUDES:Q}
 MAKE_ENV+=		LIBRARIES=${LIBRARIES:Q}
 MAKE_ENV+=		GCC=${CC:Q}
 MAKE_ENV+=		OS_LDFLAGS=${LDFLAGS:Q}
-MAKE_ENV+=		FONTPATH=${PREFIX}/share/fonts/X11/TTF
+MAKE_ENV+=		FONTPATH=${PREFIX:Q}/share/fonts/X11/TTF
+MAKE_ENV+=		WARNINGS=ALLOWED
 
 BUILD_MAKE_FLAGS=	TESTS=0
 
