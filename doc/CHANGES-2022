@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6062 2022/12/11 13:51:21 ryoon Exp $
+$NetBSD: CHANGES-2022,v 1.6063 2022/12/11 14:13:24 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9118,3 +9118,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/broot to 1.17.0 [pin 2022-12-11]
 	Updated www/firefox to 107.0.1 [ryoon 2022-12-11]
 	Updated www/firefox-l10n to 107.0.1 [ryoon 2022-12-11]
+	Added lang/php82 version 8.2.0 [taca 2022-12-11]
