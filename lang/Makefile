@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.666 2022/12/03 17:02:40 adam Exp $
+# $NetBSD: Makefile,v 1.667 2022/12/11 14:13:09 taca Exp $
 #
 
 COMMENT=	Programming languages
@@ -211,6 +211,7 @@ SUBDIR+=	php56
 SUBDIR+=	php74
 SUBDIR+=	php80
 SUBDIR+=	php81
+SUBDIR+=	php82
 SUBDIR+=	picoc
 SUBDIR+=	pict
 SUBDIR+=	polyml
