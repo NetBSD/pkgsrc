@@ -1,0 +1,16 @@
+PHP is a widely-used open source general-purpose scripting language
+that is especially suited for web development and can be embedded
+into HTML.  It is modular, and object-oriented.  Much of its syntax
+is borrowed from C, Java and Perl with a couple of unique PHP-specific
+features thrown in.  The language is designed to allow web developers
+to write dynamically generated pages quickly.
+
+PHP 8.2 comes with numerous improvements and new features such as
+
+* Readonly classes
+* Disjunctive Normal Form (DNF) Types
+* New stand-alone types: null, false, and true
+* New "Random" extension
+* Constants in traits
+* Deprecate dynamic properties
+* And much much more...
