@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2021/11/27 07:27:04 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/12/11 14:16:16 taca Exp $
 include/php/ext/mbstring/libmbfl/filters/cp932_table.h
 include/php/ext/mbstring/libmbfl/filters/emoji2uni.h
 include/php/ext/mbstring/libmbfl/filters/html_entities.h
@@ -55,7 +55,7 @@ include/php/ext/mbstring/libmbfl/filters/mbfilter_sjis_2004.h
 include/php/ext/mbstring/libmbfl/filters/mbfilter_sjis_mac.h
 include/php/ext/mbstring/libmbfl/filters/mbfilter_sjis_mobile.h
 ${PLIST.sbf}include/php/ext/mbstring/libmbfl/filters/mbfilter_sjis_open.h
-include/php/ext/mbstring/libmbfl/filters/mbfilter_tl_jisx0201_jisx0208.h
+${PLIST.jisxf}include/php/ext/mbstring/libmbfl/filters/mbfilter_tl_jisx0201_jisx0208.h
 include/php/ext/mbstring/libmbfl/filters/mbfilter_ucs2.h
 include/php/ext/mbstring/libmbfl/filters/mbfilter_ucs4.h
 include/php/ext/mbstring/libmbfl/filters/mbfilter_uhc.h
