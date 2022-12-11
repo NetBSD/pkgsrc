@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6063 2022/12/11 14:13:24 taca Exp $
+$NetBSD: CHANGES-2022,v 1.6064 2022/12/11 14:19:46 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9119,3 +9119,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/firefox to 107.0.1 [ryoon 2022-12-11]
 	Updated www/firefox-l10n to 107.0.1 [ryoon 2022-12-11]
 	Added lang/php82 version 8.2.0 [taca 2022-12-11]
+	Added meta-pkgs/php82-extensions version 8.2.0 [taca 2022-12-11]
