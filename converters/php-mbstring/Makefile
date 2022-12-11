@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2021/12/29 06:11:50 taca Exp $
+# $NetBSD: Makefile,v 1.10 2022/12/11 14:16:16 taca Exp $
 
 MODNAME=		mbstring
 CATEGORIES+=		converters
@@ -12,7 +12,7 @@ INSTALLATION_DIRS+=	${PREFIX}/include/php/ext/mbstring/libmbfl/mbfl
 INSTALLATION_DIRS+=	${PREFIX}/include/php/ext/mbstring/libmbfl/nls
 
 PLIST_SRC+=		${.CURDIR}/PLIST
-PLIST_VARS+=		php7 php81 sbf
+PLIST_VARS+=		jisxf php7 php81 sbf
 
 CONFIGURE_ARGS+=	--enable-${MODNAME}=shared,${BUILDLINK_DIR}
 
@@ -26,10 +26,13 @@ post-install:
 
 .if ${PKG_PHP_VERSION} <=80
 PLIST.sbf=	yes
+.  if ${PKG_PHP_VERSION} <80
+PLIST.php7=	yes
+.  endif
 .else
 PLIST.php81=	yes
 .endif
-.if ${PKG_PHP_MAJOR_VERS} < 8
-PLIST.php7=	yes
+.if ${PKG_PHP_VERSION} < 82
+PLIST.jisxf=	yes
 .endif
 .include "../../mk/bsd.pkg.mk"
