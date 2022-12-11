@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6059 2022/12/11 12:39:36 pin Exp $
+$NetBSD: CHANGES-2022,v 1.6060 2022/12/11 12:40:52 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9115,3 +9115,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added net/bind918 version 9.18.9 [sekiya 2022-12-11]
 	Updated databases/postgresql-wal2json to 2.5 [wiz 2022-12-11]
 	Updated graphics/oculante to 0.6.26 [pin 2022-12-11]
+	Updated sysutils/broot to 1.17.0 [pin 2022-12-11]
