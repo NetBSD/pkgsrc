@@ -1,4 +1,4 @@
-$NetBSD: patch-gdb_ppc-nbsd-tdep.c,v 1.1 2022/12/06 09:45:51 he Exp $
+$NetBSD: patch-gdb_ppc-nbsd-tdep.c,v 1.2 2022/12/11 03:51:55 mef Exp $
 
 Incorporate changes from r1.7 to r1.9 of in-tree gdb:
 
@@ -18,7 +18,7 @@ fix powerpc (by including ppc-nbsd-tdep.h)
 
 
 --- work/gdb-10.1/gdb/ppc-nbsd-tdep.c.orig	2020-10-24 04:23:02.000000000 +0000
-+++ work/gdb-10.1/gdb/ppc-nbsd-tdep.c
++++ gdb/ppc-nbsd-tdep.c
 @@ -29,6 +29,7 @@
  
  #include "ppc-tdep.h"
