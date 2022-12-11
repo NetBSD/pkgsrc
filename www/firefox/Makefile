@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.541 2022/11/23 16:21:19 adam Exp $
+# $NetBSD: Makefile,v 1.542 2022/12/11 13:49:09 ryoon Exp $
 
 FIREFOX_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
-MOZ_BRANCH=		105.0
-MOZ_BRANCH_MINOR=	.3
+MOZ_BRANCH=		107.0
+MOZ_BRANCH_MINOR=	.1
 
 DISTNAME=	firefox-${FIREFOX_VER}.source
 PKGNAME=	${DISTNAME:S/.source//:S/b/beta/:S/esr//}
-PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES+=	${MASTER_SITE_MOZILLA:=firefox/releases/${FIREFOX_VER}/source/}
 EXTRACT_SUFX=	.tar.xz
@@ -59,6 +58,8 @@ CONFIGURE_ARGS+=	--enable-application=browser
 # for lang/gcc6
 CFLAGS+=	-D_GLIBCXX_INCLUDE_NEXT_C_HEADERS
 CFLAGS.SunOS+=	-D_POSIX_PTHREAD_SEMANTICS
+# Do not use uselocale() in third_party/pipewire.
+CFLAGS.NetBSD+=	-D__LOCALE_C_ONLY
 
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/${PKGBASE}
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib
@@ -105,8 +106,9 @@ MOZILLA_BRANDING=	unofficial
 .endif
 
 pre-configure:
-	cd ${WRKSRC} && autoconf
-	cd ${WRKSRC}/js/src && autoconf
+# As of 106.0, .in template files are not patched.
+#	cd ${WRKSRC} && autoconf
+#	cd ${WRKSRC}/js/src && autoconf
 	cd ${WRKSRC} && mkdir ${OBJDIR}
 	cd ${WRKSRC}/${OBJDIR} && touch old-configure.vars
 #	Do not fetch Rust Cargo file via network during build
