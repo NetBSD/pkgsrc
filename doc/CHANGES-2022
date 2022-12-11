@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6055 2022/12/10 19:59:56 tnn Exp $
+$NetBSD: CHANGES-2022,v 1.6056 2022/12/11 01:56:03 sekiya Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9113,3 +9113,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/kubectl to 1.22.17 [leot 2022-12-10]
 	Updated devel/opa to 0.47.2 [leot 2022-12-10]
 	Updated lang/go-bin to 1.19.4 [tnn 2022-12-10]
+	Added net/bind918 version 9.18.9 [sekiya 2022-12-11]
