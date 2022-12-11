@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6066 2022/12/11 15:32:33 taca Exp $
+$NetBSD: CHANGES-2022,v 1.6067 2022/12/11 15:33:31 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9122,3 +9122,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added meta-pkgs/php82-extensions version 8.2.0 [taca 2022-12-11]
 	Updated www/ruby-aws-partitions to 1.674.0 [taca 2022-12-11]
 	Updated www/ruby-aws-sdk-core to 3.168.4 [taca 2022-12-11]
+	Updated www/ruby-aws-sdk-kms to 1.61.0 [taca 2022-12-11]
