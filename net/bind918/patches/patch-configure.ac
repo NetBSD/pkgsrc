@@ -1,0 +1,42 @@
+$NetBSD: patch-configure.ac,v 1.1 2022/12/11 01:57:55 sekiya Exp $
+
+Add support for blocklist(blacklist).
+
+--- configure.ac.orig	2022-11-08 07:17:42.020258069 +0900
++++ configure.ac	2022-12-10 11:45:02.065611825 +0900
+@@ -540,6 +540,16 @@
+ AC_CHECK_FUNCS([pthread_setname_np pthread_set_name_np])
+ AC_CHECK_HEADERS([pthread_np.h], [], [], [#include <pthread.h>])
+ 
++# libblocklist(libblacklist)
++AC_MSG_CHECKING(for libblocklist)
++AC_CHECK_HEADER([blocklist.h],
++  [AC_DEFINE([HAVE_BLOCKLIST_H], [1], [blocklist support])
++   AC_CHECK_LIB(blocklist, blocklist)],
++  [AC_MSG_CHECKING(for libblacklist)
++   AC_CHECK_HEADER([blacklist.h],
++   [AC_DEFINE([HAVE_BLACKLIST_H], [1], [blacklist support])
++    AC_CHECK_LIB(blacklist, blacklist)])])
++
+ # libuv
+ AC_MSG_CHECKING([for libuv])
+ PKG_CHECK_MODULES([LIBUV], [libuv >= 1.0.0], [],
+@@ -1212,6 +1222,18 @@
+       [AC_DEFINE([DNS_RDATASET_FIXED], [1],
+ 		 [Define to enable "rrset-order fixed" syntax.])])
+ 
++# blocklist
++AC_ARG_WITH([blocklist],
++	    [AS_HELP_STRING([--with-blocklist],
++		[enable blocklist support [yes|no|detect] (default is detect)])],
++		[], [with_blocklist="$with_blocklist"])
++
++# blacklist
++AC_ARG_WITH([blacklist],
++	    [AS_HELP_STRING([--with-blacklist],
++		[enable blacklist support [yes|no|detect] (default is detect)])],
++		[], [with_blacklist="$with_blacklist"])
++
+ #
+ # Activate dnstap?
+ #
