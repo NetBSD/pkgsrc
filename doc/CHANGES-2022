@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6058 2022/12/11 09:27:54 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.6059 2022/12/11 12:39:36 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9114,3 +9114,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/go-bin to 1.19.4 [tnn 2022-12-10]
 	Added net/bind918 version 9.18.9 [sekiya 2022-12-11]
 	Updated databases/postgresql-wal2json to 2.5 [wiz 2022-12-11]
+	Updated graphics/oculante to 0.6.26 [pin 2022-12-11]
