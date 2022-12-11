@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2022/12/02 15:31:37 wiz Exp $
+@comment $NetBSD: PLIST,v 1.22 2022/12/11 18:20:42 rhialto Exp $
 bin/pylupdate5-${PYVERSSUFFIX}
 bin/pyrcc5-${PYVERSSUFFIX}
 bin/pyuic5-${PYVERSSUFFIX}
@@ -176,22 +176,22 @@ ${PYSITELIB}/PyQt5/bindings/QtCore/qversionnumber.sip
 ${PYSITELIB}/PyQt5/bindings/QtCore/qwaitcondition.sip
 ${PYSITELIB}/PyQt5/bindings/QtCore/qwineventnotifier.sip
 ${PYSITELIB}/PyQt5/bindings/QtCore/qxmlstream.sip
-${PYSITELIB}/PyQt5/bindings/QtDBus/QtDBus.toml
-${PYSITELIB}/PyQt5/bindings/QtDBus/QtDBusmod.sip
-${PYSITELIB}/PyQt5/bindings/QtDBus/qdbusabstractadaptor.sip
-${PYSITELIB}/PyQt5/bindings/QtDBus/qdbusabstractinterface.sip
-${PYSITELIB}/PyQt5/bindings/QtDBus/qdbusargument.sip
-${PYSITELIB}/PyQt5/bindings/QtDBus/qdbusconnection.sip
-${PYSITELIB}/PyQt5/bindings/QtDBus/qdbusconnectioninterface.sip
-${PYSITELIB}/PyQt5/bindings/QtDBus/qdbuserror.sip
-${PYSITELIB}/PyQt5/bindings/QtDBus/qdbusextratypes.sip
-${PYSITELIB}/PyQt5/bindings/QtDBus/qdbusinterface.sip
-${PYSITELIB}/PyQt5/bindings/QtDBus/qdbusmessage.sip
-${PYSITELIB}/PyQt5/bindings/QtDBus/qdbuspendingcall.sip
-${PYSITELIB}/PyQt5/bindings/QtDBus/qdbusservicewatcher.sip
-${PYSITELIB}/PyQt5/bindings/QtDBus/qdbusunixfiledescriptor.sip
-${PYSITELIB}/PyQt5/bindings/QtDBus/qpydbuspendingreply.sip
-${PYSITELIB}/PyQt5/bindings/QtDBus/qpydbusreply.sip
+${PLIST.dbus}${PYSITELIB}/PyQt5/bindings/QtDBus/QtDBus.toml
+${PLIST.dbus}${PYSITELIB}/PyQt5/bindings/QtDBus/QtDBusmod.sip
+${PLIST.dbus}${PYSITELIB}/PyQt5/bindings/QtDBus/qdbusabstractadaptor.sip
+${PLIST.dbus}${PYSITELIB}/PyQt5/bindings/QtDBus/qdbusabstractinterface.sip
+${PLIST.dbus}${PYSITELIB}/PyQt5/bindings/QtDBus/qdbusargument.sip
+${PLIST.dbus}${PYSITELIB}/PyQt5/bindings/QtDBus/qdbusconnection.sip
+${PLIST.dbus}${PYSITELIB}/PyQt5/bindings/QtDBus/qdbusconnectioninterface.sip
+${PLIST.dbus}${PYSITELIB}/PyQt5/bindings/QtDBus/qdbuserror.sip
+${PLIST.dbus}${PYSITELIB}/PyQt5/bindings/QtDBus/qdbusextratypes.sip
+${PLIST.dbus}${PYSITELIB}/PyQt5/bindings/QtDBus/qdbusinterface.sip
+${PLIST.dbus}${PYSITELIB}/PyQt5/bindings/QtDBus/qdbusmessage.sip
+${PLIST.dbus}${PYSITELIB}/PyQt5/bindings/QtDBus/qdbuspendingcall.sip
+${PLIST.dbus}${PYSITELIB}/PyQt5/bindings/QtDBus/qdbusservicewatcher.sip
+${PLIST.dbus}${PYSITELIB}/PyQt5/bindings/QtDBus/qdbusunixfiledescriptor.sip
+${PLIST.dbus}${PYSITELIB}/PyQt5/bindings/QtDBus/qpydbuspendingreply.sip
+${PLIST.dbus}${PYSITELIB}/PyQt5/bindings/QtDBus/qpydbusreply.sip
 ${PYSITELIB}/PyQt5/bindings/QtDesigner/QtDesigner.toml
 ${PYSITELIB}/PyQt5/bindings/QtDesigner/QtDesignermod.sip
 ${PYSITELIB}/PyQt5/bindings/QtDesigner/abstractactioneditor.sip
