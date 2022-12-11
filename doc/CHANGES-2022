@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6075 2022/12/11 21:25:56 bacon Exp $
+$NetBSD: CHANGES-2022,v 1.6076 2022/12/11 23:11:43 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9131,3 +9131,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated biology/peak-classifier to 0.1.4.5 [bacon 2022-12-11]
 	Updated biology/vcf-split to 0.1.5.4 [bacon 2022-12-11]
 	Updated biology/fastq-trim to 0.1.2 [bacon 2022-12-11]
+	Updated lang/go119 to 1.19.4nb1 [nikita 2022-12-11]
