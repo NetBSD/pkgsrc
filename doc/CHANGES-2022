@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6060 2022/12/11 12:40:52 pin Exp $
+$NetBSD: CHANGES-2022,v 1.6061 2022/12/11 13:50:10 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9116,3 +9116,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/postgresql-wal2json to 2.5 [wiz 2022-12-11]
 	Updated graphics/oculante to 0.6.26 [pin 2022-12-11]
 	Updated sysutils/broot to 1.17.0 [pin 2022-12-11]
+	Updated www/firefox to 107.0.1 [ryoon 2022-12-11]
