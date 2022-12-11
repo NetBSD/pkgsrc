@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/12/06 21:04:13 vins Exp $
+# $NetBSD: Makefile,v 1.2 2022/12/11 10:51:05 vins Exp $
 
 DISTNAME=	xlax2.4
 PKGNAME=	xlax-2.4
@@ -11,6 +11,7 @@ COMMENT=	Multi-window input software
 LICENSE=	mit
 
 USE_IMAKE=	yes
+USE_TOOLS+=	perl:run
 
 MAKE_FLAGS+=	CCOPTIONS=${CFLAGS:Q}
 MAKE_FLAGS+=	LOCAL_LDFLAGS=${LDFLAGS:Q}
