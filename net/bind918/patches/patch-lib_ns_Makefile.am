@@ -1,0 +1,16 @@
+$NetBSD: patch-lib_ns_Makefile.am,v 1.1 2022/12/11 01:57:55 sekiya Exp $
+
+* Based on NetBSD, add support for blocklist(blacklist).
+
+--- lib/ns/Makefile.am.orig	2022-12-10 10:56:03.328767068 +0900
++++ lib/ns/Makefile.am	2022-12-10 10:56:31.205029577 +0900
+@@ -36,7 +36,8 @@
+ 	sortlist.c		\
+ 	stats.c			\
+ 	update.c		\
+-	xfrout.c
++	xfrout.c		\
++	pfilter.c
+ 
+ libns_la_CPPFLAGS =				\
+ 	$(AM_CPPFLAGS)				\
