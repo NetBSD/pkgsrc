@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2022/06/28 11:31:32 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2022/12/11 09:24:41 wiz Exp $
 
 DISTNAME=	pljava-1.5.0
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
@@ -15,6 +15,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/tada/pljava/
 COMMENT=	Java Stored Procedures, Triggers, and Functions for PostgreSQL
 LICENSE=	modified-bsd
+
+BROKEN=		"Does not support any of the postgresql versions in pkgsrc."
 
 DEPENDS+=	apache-maven-[0-9]*:../../devel/apache-maven
 DEPENDS+=	postgresql${PGSQL_VERSION}-server>=0:../../databases/postgresql${PGSQL_VERSION}-server
@@ -57,7 +59,7 @@ MAVEN_FLAGS+=	-Dmaven.repo.local=${WRKDIR}/deps
 MAVEN_FLAGS+=	-Dnar.cores=${MAKE_JOBS:U1}
 MAVEN_FLAGS+=	-Dpgsql.runpath=${PGSQL_PREFIX}/lib
 MAVEN_FLAGS+=	-Dpgsql.runpathpfx=${COMPILER_RPATH_FLAG}
-.if ${OPSYS} == "SunOS" && !empty(CC_VERSION:Mgcc*)
+.if ${OPSYS} == "SunOS" && ${CC_VERSION:Mgcc*}
 MAVEN_FLAGS+=	-Dnar.aolProperties=pljava-so/aol.solaris-gcc.properties
 .elif ${OPSYS} == "NetBSD"
 MAVEN_FLAGS+=	-Dnar.aolProperties=pljava-so/aol.netbsd.properties
