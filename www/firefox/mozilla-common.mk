@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.242 2022/12/04 10:34:07 wiz Exp $
+# $NetBSD: mozilla-common.mk,v 1.243 2022/12/11 13:49:09 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -18,7 +18,7 @@ ALL_ENV+=			PYTHON3=${PYTHONBIN}
 
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
-USE_TOOLS+=		pkg-config perl gmake autoconf213 gm4 unzip zip
+USE_TOOLS+=		pkg-config perl gmake gm4 unzip zip # autoconf213
 UNLIMIT_RESOURCES+=	datasize virtualsize
 
 USE_LANGUAGES+=		c c++
