@@ -1,25 +1,12 @@
-$NetBSD: patch-makefile,v 1.1 2022/06/06 14:20:07 rhialto Exp $
+$NetBSD: patch-makefile,v 1.2 2022/12/11 20:28:09 rhialto Exp $
 
-Exclude -flto for gcc 4.1.3 (used in NetBSD/vax 6)
-Exclude -flto for clang on NetBSD
-Exclude -flto for gcc 4.4.7 (Used in DragonFly 2.13 - 3.1)
-NO_LTO=1 is in effect for gcc and clang, except Darwin.
 Fix png16 detection.
 Let INCLUDES and LIBRARIES be the sole source for INCPATH and LIBPATH,
 to avoid seeing non-pkgsrc libraries (except MacOS platform).
 
---- makefile.orig	2022-04-01 19:37:11.000000000 +0000
+--- makefile.orig	2022-12-05 17:16:52.000000000 +0000
 +++ makefile
-@@ -307,7 +307,7 @@ ifeq (${WIN32},)  #*nix Environments (&&
-       $(shell git log -1 --pretty="SIM_GIT_COMMIT_ID %H$(GIT_EXTRA_FILES)%nSIM_GIT_COMMIT_TIME $(isodate)" >.git-commit-id)
-     endif
-   endif
--  LTO_EXCLUDE_VERSIONS = 
-+  LTO_EXCLUDE_VERSIONS = 4.1.3 4.4.7 4.8.3 4.8.4 4.8.5 5.3.0 5.4.0
-   PCAPLIB = pcap
-   ifeq (agcc,$(findstring agcc,${GCC})) # Android target build?
-     OS_CCDEFS += -D_GNU_SOURCE -DSIM_ASYNCH_IO 
-@@ -348,16 +348,16 @@ ifeq (${WIN32},)  #*nix Environments (&&
+@@ -366,16 +366,16 @@ ifeq (${WIN32},)  #*nix Environments (&&
      ifeq (Darwin,$(OSTYPE))
        OSNAME = OSX
        LIBEXT = dylib
@@ -43,7 +30,7 @@ to avoid seeing non-pkgsrc libraries (except MacOS platform).
        endif
        ifeq (HomeBrew,$(or $(shell if ${TEST} -d /usr/local/Cellar; then echo HomeBrew; fi),$(shell if ${TEST} -d /opt/homebrew/Cellar; then echo HomeBrew; fi)))
          ifeq (local,$(shell if $(TEST) -d /usr/local/Cellar; then echo local; fi))
-@@ -365,8 +365,8 @@ ifeq (${WIN32},)  #*nix Environments (&&
+@@ -383,8 +383,8 @@ ifeq (${WIN32},)  #*nix Environments (&&
          else
            HBPATH = /opt/homebrew
          endif
@@ -54,7 +41,7 @@ to avoid seeing non-pkgsrc libraries (except MacOS platform).
        endif
      else
        ifeq (Linux,$(OSTYPE))
-@@ -376,15 +376,15 @@ ifeq (${WIN32},)  #*nix Environments (&&
+@@ -394,15 +394,15 @@ ifeq (${WIN32},)  #*nix Environments (&&
          ifneq (lib,$(findstring lib,$(UNSUPPORTED_BUILD)))
            ifeq (Android,$(shell uname -o))
              ifneq (,$(shell if ${TEST} -d ${PREFIX}/lib; then echo prefixlib; fi))
@@ -74,7 +61,7 @@ to avoid seeing non-pkgsrc libraries (except MacOS platform).
            endif
          endif
          LIBSOEXT = so
-@@ -393,7 +393,7 @@ ifeq (${WIN32},)  #*nix Environments (&&
+@@ -411,7 +411,7 @@ ifeq (${WIN32},)  #*nix Environments (&&
          ifeq (SunOS,$(OSTYPE))
            OSNAME = Solaris
            ifneq (lib,$(findstring lib,$(UNSUPPORTED_BUILD)))
@@ -83,7 +70,7 @@ to avoid seeing non-pkgsrc libraries (except MacOS platform).
            endif
            LIBEXT = so
            OS_LDFLAGS += -lsocket -lnsl
-@@ -402,27 +402,27 @@ ifeq (${WIN32},)  #*nix Environments (&&
+@@ -420,27 +420,27 @@ ifeq (${WIN32},)  #*nix Environments (&&
              OS_CCDEFS += -I/opt/sfw/include
            endif
            ifeq (libsfw,$(shell if ${TEST} -d /opt/sfw/lib; then echo libsfw; fi))
@@ -119,7 +106,7 @@ to avoid seeing non-pkgsrc libraries (except MacOS platform).
                endif
              else
                ifneq (,$(findstring Haiku,$(OSTYPE)))
-@@ -433,9 +433,9 @@ ifeq (${WIN32},)  #*nix Environments (&&
+@@ -451,9 +451,9 @@ ifeq (${WIN32},)  #*nix Environments (&&
                  ifeq ($(HAIKU_ARCH),x86_gcc2)
                    $(error Unsupported arch x86_gcc2. Run setarch x86 and retry)
                  endif
@@ -132,7 +119,7 @@ to avoid seeing non-pkgsrc libraries (except MacOS platform).
                  OS_LDFLAGS += -lnetwork
                else
                  ifeq (,$(findstring NetBSD,$(OSTYPE)))
-@@ -443,7 +443,7 @@ ifeq (${WIN32},)  #*nix Environments (&&
+@@ -461,7 +461,7 @@ ifeq (${WIN32},)  #*nix Environments (&&
                      LDSEARCH :=$(shell LANG=C; ldconfig -r | grep 'search directories' | awk '{print $$3}' | sed 's/:/ /g')
                    endif
                    ifneq (,$(LDSEARCH))
@@ -141,7 +128,7 @@ to avoid seeing non-pkgsrc libraries (except MacOS platform).
                    else
                      ifeq (,$(strip $(LPATH)))
                        $(info *** Warning ***)
-@@ -455,22 +455,22 @@ ifeq (${WIN32},)  #*nix Environments (&&
+@@ -473,22 +473,22 @@ ifeq (${WIN32},)  #*nix Environments (&&
                        $(info *** Warning *** variable.)
                        $(info *** Warning ***)
                      else
@@ -172,7 +159,7 @@ to avoid seeing non-pkgsrc libraries (except MacOS platform).
              endif
              ifneq (,$(findstring NetBSD,$(OSTYPE))$(findstring FreeBSD,$(OSTYPE))$(findstring AIX,$(OSTYPE)))
                LIBEXT = so
-@@ -497,12 +497,12 @@ ifeq (${WIN32},)  #*nix Environments (&&
+@@ -515,12 +515,12 @@ ifeq (${WIN32},)  #*nix Environments (&&
      endif
      ifeq (,$(filter /lib/,$(LIBPATH)))
        ifeq (existlib,$(shell if $(TEST) -d /lib/; then echo existlib; fi))
@@ -187,7 +174,7 @@ to avoid seeing non-pkgsrc libraries (except MacOS platform).
        endif
      endif
      export CPATH = $(subst $() $(),:,$(INCPATH))
-@@ -611,9 +611,9 @@ ifeq (${WIN32},)  #*nix Environments (&&
+@@ -633,9 +633,9 @@ ifeq (${WIN32},)  #*nix Environments (&&
      OS_CCDEFS += -DHAVE_UTIME
    endif
    ifneq (,$(call find_include,png))
@@ -199,7 +186,7 @@ to avoid seeing non-pkgsrc libraries (except MacOS platform).
        $(info using libpng: $(call find_lib,png) $(call find_include,png))
        ifneq (,$(call find_include,zlib))
          ifneq (,$(call find_lib,z))
-@@ -803,7 +803,7 @@ ifeq (${WIN32},)  #*nix Environments (&&
+@@ -884,7 +884,7 @@ ifeq (${WIN32},)  #*nix Environments (&&
            NETWORK_FEATURES = - dynamic networking support using libpcap components from www.tcpdump.org and locally installed libpcap.${LIBEXT}
            $(info using libpcap: $(call find_include,pcap))
          else
@@ -208,26 +195,22 @@ to avoid seeing non-pkgsrc libraries (except MacOS platform).
            LIBEXT = a
            ifneq (,$(call find_lib,$(PCAPLIB)))
              $(info using libpcap: $(call find_lib,$(PCAPLIB)) $(call find_include,pcap))
-@@ -1198,11 +1198,11 @@ ifneq (,$(UNSUPPORTED_BUILD))
- endif
+@@ -1280,15 +1280,15 @@ endif
+ OPTIMIZE ?= -O2
  ifneq ($(DEBUG),)
    CFLAGS_G = -g -ggdb -g3
 -  CFLAGS_O = -O0
 +  CFLAGS_O += -O0
    BUILD_FEATURES = - debugging support
+   LTO =
  else
    ifneq (,$(findstring clang,$(COMPILER_NAME))$(findstring LLVM,$(COMPILER_NAME)))
--    CFLAGS_O = -O2 -fno-strict-overflow
-+    CFLAGS_O += -O2 -fno-strict-overflow
-     GCC_OPTIMIZERS_CMD = ${GCC} --help
-     NO_LTO = 1
+-    CFLAGS_O = $(OPTIMIZE) -fno-strict-overflow
++    CFLAGS_O += $(OPTIMIZE) -fno-strict-overflow
+     GCC_OPTIMIZERS_CMD = ${GCC} --help 2>&1
    else
-@@ -1210,7 +1210,7 @@ else
-     ifeq (Darwin,$(OSTYPE))
-       CFLAGS_O += -O4 -flto -fwhole-program
-     else
--      CFLAGS_O := -O2
-+      CFLAGS_O += -O2
-     endif
+-    CFLAGS_O := $(OPTIMIZE)
++    CFLAGS_O += $(OPTIMIZE)
    endif
    LDFLAGS_O = 
+   GCC_MAJOR_VERSION = $(firstword $(subst  ., ,$(GCC_VERSION)))
