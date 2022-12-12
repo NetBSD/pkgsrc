@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2022/07/08 13:24:51 gdt Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/12/12 13:46:15 adam Exp $
 bin/espefuse.py
 bin/espsecure.py
 bin/esptool.py
@@ -70,6 +70,21 @@ ${PYSITELIB}/espefuse/efuse/esp32c3/mem_definition.pyo
 ${PYSITELIB}/espefuse/efuse/esp32c3/operations.py
 ${PYSITELIB}/espefuse/efuse/esp32c3/operations.pyc
 ${PYSITELIB}/espefuse/efuse/esp32c3/operations.pyo
+${PYSITELIB}/espefuse/efuse/esp32c6/__init__.py
+${PYSITELIB}/espefuse/efuse/esp32c6/__init__.pyc
+${PYSITELIB}/espefuse/efuse/esp32c6/__init__.pyo
+${PYSITELIB}/espefuse/efuse/esp32c6/emulate_efuse_controller.py
+${PYSITELIB}/espefuse/efuse/esp32c6/emulate_efuse_controller.pyc
+${PYSITELIB}/espefuse/efuse/esp32c6/emulate_efuse_controller.pyo
+${PYSITELIB}/espefuse/efuse/esp32c6/fields.py
+${PYSITELIB}/espefuse/efuse/esp32c6/fields.pyc
+${PYSITELIB}/espefuse/efuse/esp32c6/fields.pyo
+${PYSITELIB}/espefuse/efuse/esp32c6/mem_definition.py
+${PYSITELIB}/espefuse/efuse/esp32c6/mem_definition.pyc
+${PYSITELIB}/espefuse/efuse/esp32c6/mem_definition.pyo
+${PYSITELIB}/espefuse/efuse/esp32c6/operations.py
+${PYSITELIB}/espefuse/efuse/esp32c6/operations.pyc
+${PYSITELIB}/espefuse/efuse/esp32c6/operations.pyo
 ${PYSITELIB}/espefuse/efuse/esp32h2beta1/__init__.py
 ${PYSITELIB}/espefuse/efuse/esp32h2beta1/__init__.pyc
 ${PYSITELIB}/espefuse/efuse/esp32h2beta1/__init__.pyo
@@ -157,9 +172,6 @@ ${PYSITELIB}/esptool/cmds.pyo
 ${PYSITELIB}/esptool/loader.py
 ${PYSITELIB}/esptool/loader.pyc
 ${PYSITELIB}/esptool/loader.pyo
-${PYSITELIB}/esptool/stub_flasher.py
-${PYSITELIB}/esptool/stub_flasher.pyc
-${PYSITELIB}/esptool/stub_flasher.pyo
 ${PYSITELIB}/esptool/targets/__init__.py
 ${PYSITELIB}/esptool/targets/__init__.pyc
 ${PYSITELIB}/esptool/targets/__init__.pyo
@@ -172,6 +184,9 @@ ${PYSITELIB}/esptool/targets/esp32c2.pyo
 ${PYSITELIB}/esptool/targets/esp32c3.py
 ${PYSITELIB}/esptool/targets/esp32c3.pyc
 ${PYSITELIB}/esptool/targets/esp32c3.pyo
+${PYSITELIB}/esptool/targets/esp32c6.py
+${PYSITELIB}/esptool/targets/esp32c6.pyc
+${PYSITELIB}/esptool/targets/esp32c6.pyo
 ${PYSITELIB}/esptool/targets/esp32c6beta.py
 ${PYSITELIB}/esptool/targets/esp32c6beta.pyc
 ${PYSITELIB}/esptool/targets/esp32c6beta.pyo
@@ -193,6 +208,17 @@ ${PYSITELIB}/esptool/targets/esp32s3beta2.pyo
 ${PYSITELIB}/esptool/targets/esp8266.py
 ${PYSITELIB}/esptool/targets/esp8266.pyc
 ${PYSITELIB}/esptool/targets/esp8266.pyo
+${PYSITELIB}/esptool/targets/stub_flasher/stub_flasher_32.json
+${PYSITELIB}/esptool/targets/stub_flasher/stub_flasher_32c2.json
+${PYSITELIB}/esptool/targets/stub_flasher/stub_flasher_32c3.json
+${PYSITELIB}/esptool/targets/stub_flasher/stub_flasher_32c6.json
+${PYSITELIB}/esptool/targets/stub_flasher/stub_flasher_32c6beta.json
+${PYSITELIB}/esptool/targets/stub_flasher/stub_flasher_32h2beta1.json
+${PYSITELIB}/esptool/targets/stub_flasher/stub_flasher_32h2beta2.json
+${PYSITELIB}/esptool/targets/stub_flasher/stub_flasher_32s2.json
+${PYSITELIB}/esptool/targets/stub_flasher/stub_flasher_32s3.json
+${PYSITELIB}/esptool/targets/stub_flasher/stub_flasher_32s3beta2.json
+${PYSITELIB}/esptool/targets/stub_flasher/stub_flasher_8266.json
 ${PYSITELIB}/esptool/util.py
 ${PYSITELIB}/esptool/util.pyc
 ${PYSITELIB}/esptool/util.pyo
