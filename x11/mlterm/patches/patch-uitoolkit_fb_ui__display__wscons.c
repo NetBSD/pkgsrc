@@ -1,4 +1,4 @@
-$NetBSD: patch-uitoolkit_fb_ui__display__wscons.c,v 1.6 2022/07/09 09:40:20 rin Exp $
+$NetBSD: patch-uitoolkit_fb_ui__display__wscons.c,v 1.7 2022/12/12 17:42:04 tsutsui Exp $
 
 Add support for 8- and 4-bpp planar fb found on NetBSD/amiga.
 
@@ -14,8 +14,8 @@ Logic to detect planar fb is not very elegant...
 
 This has been merged to upstream, and will be in the next release.
 
---- uitoolkit/fb/ui_display_wscons.c.orig	2022-01-17 00:20:31.000000000 +0900
-+++ uitoolkit/fb/ui_display_wscons.c	2022-07-07 05:22:09.475716704 +0900
+--- uitoolkit/fb/ui_display_wscons.c.orig	2022-01-16 15:20:31.000000000 +0000
++++ uitoolkit/fb/ui_display_wscons.c
 @@ -380,8 +380,17 @@ static int open_display(u_int depth /* u
    _display.height = _disp.height = vinfo.height;
    _disp.depth = vinfo.depth;
@@ -36,15 +36,6 @@ This has been merged to upstream, and will be in the next release.
      /* always 8 or less bpp */
  
      if (_disp.depth > 8) {
-@@ -394,7 +403,7 @@ static int open_display(u_int depth /* u
-     _display.shift_0 = 7;
-     _display.mask = 1;
-   } else
--#endif
-+#endif
-       if (_disp.depth < 8) {
- #ifdef ENABLE_2_4_PPB
-     _display.pixels_per_byte = 8 / _disp.depth;
 @@ -444,6 +453,19 @@ static int open_display(u_int depth /* u
      }
    } else
