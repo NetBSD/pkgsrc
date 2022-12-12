@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6081 2022/12/12 09:43:22 adam Exp $
+$NetBSD: CHANGES-2022,v 1.6082 2022/12/12 09:49:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9140,3 +9140,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-jupyter_client to 7.4.8 [adam 2022-12-12]
 	Updated devel/py-filelock to 3.8.2 [adam 2022-12-12]
 	Updated finance/py-eth-utils to 2.1.0 [adam 2022-12-12]
+	Updated math/py-gmpy2 to 2.1.4 [adam 2022-12-12]
+	Updated security/py-google-auth to 2.15.0 [adam 2022-12-12]
