@@ -1,0 +1,5 @@
+The rna-seq meta-package provides the core tools needed for performing
+a typical RNA-Seq differential gene expression analysis, including
+adapter trimming, quality control, alignment, and identification of
+differentially expressed genes.  Researchers may want additional tools
+for data manipulation, gene ontology, etc.
