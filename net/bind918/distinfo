@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2022/12/11 21:17:53 sekiya Exp $
+$NetBSD: distinfo,v 1.3 2022/12/12 22:07:04 sekiya Exp $
 
 BLAKE2s (bind-9.18.9.tar.xz) = 8c3f2dcb57205959f78c02fd32a12d0897050897af9136b58972fde41468ec55
 SHA512 (bind-9.18.9.tar.xz) = 7d9bca47e29e8634416ab52819d78ce4ec6196c0dcbd9fe95a24687337f71c69b6472cf20bf49ea0ae1751a861944f354f9122acfb01780f51278ad4a3fdd817
@@ -8,7 +8,7 @@ SHA1 (patch-bin_named_os.c) = 5ecb0883076575d8ac5fcad68f9daad6c9be0d0b
 SHA1 (patch-bin_named_server.c) = 6e59d3f637ebb829eec2f76ba7c350fb5cf9be6d
 SHA1 (patch-bin_tests_system_keyfromlabel_tests.sh) = 63a1516b573adabe6ff2719532fd58bcf3ecd65b
 SHA1 (patch-config.h.in) = 6072793048cdf590863046355eeffa1d93524c36
-SHA1 (patch-configure.ac) = 7eecb2c390168566b2320791cd185530c7896c21
+SHA1 (patch-configure.ac) = a6f10aec356691ca1075262a3e87c809cd3a558a
 SHA1 (patch-lib_dns_byaddr.c) = 647ddaaaf040233e18d1a87d83bc2bd63d2a20e3
 SHA1 (patch-lib_dns_gssapi__link.c) = 72296598b0bdd2a57d0f38ecf1775e2898a041c6
 SHA1 (patch-lib_dns_include_dns_zone.h) = e6dfcd43430538ac2a39b217fcae0d81e4c4d163
