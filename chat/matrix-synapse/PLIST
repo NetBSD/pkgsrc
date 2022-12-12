@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.38 2022/11/26 00:49:02 gdt Exp $
+@comment $NetBSD: PLIST,v 1.39 2022/12/12 14:35:14 gdt Exp $
 bin/export_signing_key
 bin/generate_config
 bin/generate_log_config
@@ -404,10 +404,10 @@ ${PYSITELIB}/synapse/metrics/__init__.py
 ${PYSITELIB}/synapse/metrics/__init__.pyc
 ${PYSITELIB}/synapse/metrics/_gc.py
 ${PYSITELIB}/synapse/metrics/_gc.pyc
-${PYSITELIB}/synapse/metrics/_legacy_exposition.py
-${PYSITELIB}/synapse/metrics/_legacy_exposition.pyc
 ${PYSITELIB}/synapse/metrics/_reactor_metrics.py
 ${PYSITELIB}/synapse/metrics/_reactor_metrics.pyc
+${PYSITELIB}/synapse/metrics/_twisted_exposition.py
+${PYSITELIB}/synapse/metrics/_twisted_exposition.pyc
 ${PYSITELIB}/synapse/metrics/_types.py
 ${PYSITELIB}/synapse/metrics/_types.pyc
 ${PYSITELIB}/synapse/metrics/background_process_metrics.py
@@ -477,12 +477,6 @@ ${PYSITELIB}/synapse/replication/http/state.py
 ${PYSITELIB}/synapse/replication/http/state.pyc
 ${PYSITELIB}/synapse/replication/http/streams.py
 ${PYSITELIB}/synapse/replication/http/streams.pyc
-${PYSITELIB}/synapse/replication/slave/__init__.py
-${PYSITELIB}/synapse/replication/slave/__init__.pyc
-${PYSITELIB}/synapse/replication/slave/storage/__init__.py
-${PYSITELIB}/synapse/replication/slave/storage/__init__.pyc
-${PYSITELIB}/synapse/replication/slave/storage/_slaved_id_tracker.py
-${PYSITELIB}/synapse/replication/slave/storage/_slaved_id_tracker.pyc
 ${PYSITELIB}/synapse/replication/tcp/__init__.py
 ${PYSITELIB}/synapse/replication/tcp/__init__.pyc
 ${PYSITELIB}/synapse/replication/tcp/client.py
@@ -1279,6 +1273,8 @@ ${PYSITELIB}/synapse/storage/schema/main/delta/73/10_update_sqlite_fts4_tokenize
 ${PYSITELIB}/synapse/storage/schema/main/delta/73/10_update_sqlite_fts4_tokenizer.pyc
 ${PYSITELIB}/synapse/storage/schema/main/delta/73/10login_tokens.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/73/11event_search_room_id_n_distinct.sql.postgres
+${PYSITELIB}/synapse/storage/schema/main/delta/73/12refactor_device_list_outbound_pokes.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/73/13add_device_lists_index.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/application_services.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/event_edges.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/event_signatures.sql
