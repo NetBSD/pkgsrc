@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/12/12 20:56:49 wiz Exp $
+
+BLAKE2s (parlatype-3.1.tar.gz) = 872f8a73b32b9ba982fee718efe262a16d5ef23691ad0350e4faafcae4177e9a
+SHA512 (parlatype-3.1.tar.gz) = f63c69a3dd24e549e73f0880a9d1abbac3138b65564fbce0cbf86f463f9f5aa9a0f2c68db7a65ef2f141055580af4e41c3a3211297bc768010b0a6c2fb1f65eb
+Size (parlatype-3.1.tar.gz) = 1152526 bytes
