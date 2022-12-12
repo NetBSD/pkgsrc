@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6084 2022/12/12 10:09:50 adam Exp $
+$NetBSD: CHANGES-2022,v 1.6085 2022/12/12 13:43:08 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9160,3 +9160,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/py-certbot-nginx to 2.1.0 [adam 2022-12-12]
 	Updated textproc/py-black to 22.12.0 [adam 2022-12-12]
 	Updated devel/py-test-xdist to 3.1.0 [adam 2022-12-12]
+	Updated devel/py-approval-utilities to 7.4.0 [schmonz 2022-12-12]
