@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6098 2022/12/12 22:04:11 adam Exp $
+$NetBSD: CHANGES-2022,v 1.6099 2022/12/12 22:22:27 sekiya Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9192,3 +9192,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/oculante to 0.6.28 [pin 2022-12-12]
 	Added audio/parlatype version 3.1 [wiz 2022-12-12]
 	Updated devel/git to 2.38.2 [adam 2022-12-12]
+	Updated net/bind918 to 9.18.9nb1 [sekiya 2022-12-13]
