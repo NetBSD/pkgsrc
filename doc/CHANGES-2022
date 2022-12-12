@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6079 2022/12/12 07:57:18 adam Exp $
+$NetBSD: CHANGES-2022,v 1.6080 2022/12/12 08:37:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9136,3 +9136,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/xfce4-settings to 4.16.5 [gutteridge 2022-12-12]
 	Updated devel/py-limits to 2.7.2 [adam 2022-12-12]
 	Updated cad/py-gds to 1.6.12 [adam 2022-12-12]
+	Updated textproc/py-m2r to 0.3.1 [adam 2022-12-12]
+	Updated devel/py-jupyter_client to 7.4.8 [adam 2022-12-12]
