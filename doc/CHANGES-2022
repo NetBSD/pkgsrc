@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6095 2022/12/12 19:50:11 rhialto Exp $
+$NetBSD: CHANGES-2022,v 1.6096 2022/12/12 20:11:41 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9189,3 +9189,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added biology/rna-seq version 1.0 [bacon 2022-12-12]
 	Updated devel/makedepend to 1.0.8 [wiz 2022-12-12]
 	Updated emulators/simh3 to 3.12.3 [rhialto 2022-12-12]
+	Updated graphics/oculante to 0.6.28 [pin 2022-12-12]
