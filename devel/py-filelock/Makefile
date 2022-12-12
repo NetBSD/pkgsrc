@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2022/10/05 07:58:15 adam Exp $
+# $NetBSD: Makefile,v 1.12 2022/12/12 09:38:00 adam Exp $
 
-DISTNAME=	filelock-3.8.0
+DISTNAME=	filelock-3.8.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/filelock/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/tox-dev/py-filelock
 COMMENT=	Platform independent file lock
 LICENSE=	unlicense
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>0:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>0:../../devel/py-setuptools_scm
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=4:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout>=1.4.2:../../devel/py-test-timeout
