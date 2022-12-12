@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6085 2022/12/12 13:43:08 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.6086 2022/12/12 13:43:22 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9161,3 +9161,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/py-black to 22.12.0 [adam 2022-12-12]
 	Updated devel/py-test-xdist to 3.1.0 [adam 2022-12-12]
 	Updated devel/py-approval-utilities to 7.4.0 [schmonz 2022-12-12]
+	Updated devel/py-approvaltests to 7.4.0 [schmonz 2022-12-12]
