@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6077 2022/12/11 23:18:35 nikita Exp $
+$NetBSD: CHANGES-2022,v 1.6078 2022/12/12 01:49:07 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9133,3 +9133,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated biology/fastq-trim to 0.1.2 [bacon 2022-12-11]
 	Updated lang/go119 to 1.19.4nb1 [nikita 2022-12-11]
 	Updated www/gotosocial to 0.6.0nb2 [nikita 2022-12-11]
+	Updated x11/xfce4-settings to 4.16.5 [gutteridge 2022-12-12]
