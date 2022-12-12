@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6097 2022/12/12 20:57:50 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.6098 2022/12/12 22:04:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9191,3 +9191,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated emulators/simh3 to 3.12.3 [rhialto 2022-12-12]
 	Updated graphics/oculante to 0.6.28 [pin 2022-12-12]
 	Added audio/parlatype version 3.1 [wiz 2022-12-12]
+	Updated devel/git to 2.38.2 [adam 2022-12-12]
