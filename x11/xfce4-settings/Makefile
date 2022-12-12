@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.72 2022/11/23 16:21:29 adam Exp $
+# $NetBSD: Makefile,v 1.73 2022/12/12 01:48:51 gutteridge Exp $
 
-PKGREVISION= 2
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-VERSION=	4.16.3
+VERSION=	4.16.5
 DISTNAME=	xfce4-settings-${VERSION}
 CATEGORIES=	x11
 MASTER_SITES=	https://archive.xfce.org/src/xfce/xfce4-settings/${VERSION:R}/
