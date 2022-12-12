@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/05/07 17:52:26 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/12/12 14:05:07 nros Exp $
 
 DISTNAME=	libtree-3.1.0
 CATEGORIES=	sysutils
@@ -15,7 +15,4 @@ USE_TOOLS+=	gmake
 
 MAKE_FLAGS=	SHAREDIR=${PREFIX}
 
-.include "../../devel/cxxopts/buildlink3.mk"
-.include "../../devel/elfio/buildlink3.mk"
-.include "../../devel/termcolor/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
