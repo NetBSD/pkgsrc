@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2022/09/14 10:31:36 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/12/12 13:44:59 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -24,6 +24,7 @@ ${PYSITELIB}/pathspec/patterns/__init__.pyo
 ${PYSITELIB}/pathspec/patterns/gitwildmatch.py
 ${PYSITELIB}/pathspec/patterns/gitwildmatch.pyc
 ${PYSITELIB}/pathspec/patterns/gitwildmatch.pyo
+${PYSITELIB}/pathspec/py.typed
 ${PYSITELIB}/pathspec/util.py
 ${PYSITELIB}/pathspec/util.pyc
 ${PYSITELIB}/pathspec/util.pyo
