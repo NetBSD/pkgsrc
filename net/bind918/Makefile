@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2022/12/11 01:57:55 sekiya Exp $
+# $NetBSD: Makefile,v 1.2 2022/12/12 22:07:04 sekiya Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
-#PKGNAME=	bind-9.18
 PKGNAME=	${DISTNAME:S/-P/pl/}
-#PKGREVISION=	1
+PKGREVISION=	1
 CATEGORIES=	net
-MASTER_SITES=	ftp://ftp.isc.org/isc/bind9/${BIND_VERSION}/
+MASTER_SITES=	https://downloads.isc.org/isc/bind9/${BIND_VERSION}/${DISTNAME}${EXTRACT_SUFX}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	sekiya@NetBSD.org
@@ -38,6 +37,13 @@ CONFIGURE_ARGS+=		--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=		--with-openssl=${SSLBASE:Q}
 CONFIGURE_ARGS.DragonFly+=	--disable-kqueue
 CONFIGURE_ARGS.SunOS+=		--disable-epoll
+
+# Remove WRKDIR reference by modifying pkg-config related path.
+SUBST_CLASSES+=		pkgconf
+SUBST_STAGE.pkgconf=	pre-configure
+SUBST_FILES.pkgconf=	configure.ac
+SUBST_MESSAGE.pkgconf=	Fixing pkg-config path.
+SUBST_VARS.pkgconf+=	BUILDLINK_DIR PREFIX TOOLS_DIR
 
 BUILDLINK_TRANSFORM.SunOS+=	rm:-zrelax=transtls
 
