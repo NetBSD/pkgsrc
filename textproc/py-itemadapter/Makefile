@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2022/01/04 20:54:56 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/12/12 14:17:11 adam Exp $
 
-DISTNAME=	itemadapter-0.2.0
+DISTNAME=	itemadapter-0.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/itemadapter/}
 
