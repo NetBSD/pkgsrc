@@ -1,0 +1,18 @@
+# $NetBSD: Makefile,v 1.1 2022/12/12 18:28:42 bacon Exp $
+
+DISTNAME=	fasda-0.1.2
+CATEGORIES=	biology
+MASTER_SITES=	${MASTER_SITE_GITHUB:=auerlab/}
+
+MAINTAINER=	bacon@NetBSD.org
+HOMEPAGE=	https://github.com/auerlab/fasda
+COMMENT=	Fast and simple differential analysis
+LICENSE=	2-clause-bsd
+
+LDFLAGS.SunOS+=	-lresolv
+
+pre-build:
+	cd ${WRKSRC} && make depend PREFIX=${PREFIX}
+
+.include "../../biology/biolibc/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
