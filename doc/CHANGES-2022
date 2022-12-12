@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6092 2022/12/12 18:28:51 bacon Exp $
+$NetBSD: CHANGES-2022,v 1.6093 2022/12/12 18:39:44 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9186,3 +9186,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated chat/matrix-synapse to 1.73.0 [gdt 2022-12-12]
 	Updated shells/tcsh to 6.24.06 [kim 2022-12-12]
 	Added biology/fasda version 0.1.2 [bacon 2022-12-12]
+	Added biology/rna-seq version 1.0 [bacon 2022-12-12]
