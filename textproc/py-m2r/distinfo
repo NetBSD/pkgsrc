@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/10/26 11:23:07 nia Exp $
+$NetBSD: distinfo,v 1.15 2022/12/12 08:19:43 adam Exp $
 
-BLAKE2s (m2r-0.2.1.tar.gz) = 3c3d0879a4edbe1d0c69215cc01f364ff60e8c01519e84c5eadff90be0451590
-SHA512 (m2r-0.2.1.tar.gz) = 4e68e8d5a2d4645d2f7c68c0412b24e1f69845af344a96b8a7120106117e9f08ebeba1ddf0351e33dc6eeb475f89836caf1eefe6168ad003750bfa9081534bbe
-Size (m2r-0.2.1.tar.gz) = 16058 bytes
+BLAKE2s (m2r-0.3.1.tar.gz) = 9cf4964daa2f29cea0a673ba1086fa29f9e5ba441e73f9f4e0dd19b251c53fa3
+SHA512 (m2r-0.3.1.tar.gz) = 9414d33c8a8f5246a21e92ebc9370f0f3de9c9636eb63b42f0367edef6e7eba24adcc31f2813ef5bbd601d4638bedc0c2ca7c5d18836fc883874dec688959b1d
+Size (m2r-0.3.1.tar.gz) = 16622 bytes
