@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6090 2022/12/12 14:35:24 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.6091 2022/12/12 16:49:56 kim Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9184,3 +9184,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/py-itemadapter to 0.7.0 [adam 2022-12-12]
 	Updated textproc/py-itemloaders to 1.0.6 [adam 2022-12-12]
 	Updated chat/matrix-synapse to 1.73.0 [gdt 2022-12-12]
+	Updated shells/tcsh to 6.24.06 [kim 2022-12-12]
