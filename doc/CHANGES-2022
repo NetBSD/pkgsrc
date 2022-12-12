@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6089 2022/12/12 14:19:13 adam Exp $
+$NetBSD: CHANGES-2022,v 1.6090 2022/12/12 14:35:24 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9183,3 +9183,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/ruby-gtksourceview3 to 4.0.5 [tsutsui 2022-12-12]
 	Updated textproc/py-itemadapter to 0.7.0 [adam 2022-12-12]
 	Updated textproc/py-itemloaders to 1.0.6 [adam 2022-12-12]
+	Updated chat/matrix-synapse to 1.73.0 [gdt 2022-12-12]
