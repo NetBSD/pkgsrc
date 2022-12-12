@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2022/02/17 10:48:30 wiz Exp $
+$NetBSD: distinfo,v 1.16 2022/12/12 07:57:03 adam Exp $
 
-BLAKE2s (gdspy-1.6.11.zip) = d9edaeea96be5124f20725bc046a98bf73aede37bc103e5a6cd7a8ff08ea68a7
-SHA512 (gdspy-1.6.11.zip) = 16bbc0afda433fb96f31d0efb3d2a0e417cf6c13cc35a91977d6f1545cb19dd5d6c17ae4724360b2433e084740218a2aa27eefafab42c32b7b76e1d6d1f5ce33
-Size (gdspy-1.6.11.zip) = 157413 bytes
+BLAKE2s (gdspy-1.6.12.zip) = 5a9805f4e5dcf3889413d32b2c4f839859721e1d156c18d8466a9feeea2eff86
+SHA512 (gdspy-1.6.12.zip) = c9422249f5ef8d98a60a4efa5a68079f74c7cac172c1f56d5b034d869f8c35ab82240dbc842ebccba435cef92531d40e437615273132b18e270cc9b3f8844f00
+Size (gdspy-1.6.12.zip) = 157718 bytes
