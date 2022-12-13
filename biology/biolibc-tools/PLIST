@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2022/06/11 19:44:45 bacon Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/12/13 00:53:43 bacon Exp $
 bin/blt
 libexec/biolibc-tools/chrom-lens
+libexec/biolibc-tools/deromanize
 libexec/biolibc-tools/ensemblid2gene
 libexec/biolibc-tools/extract-seq
 libexec/biolibc-tools/fasta2seq
@@ -14,6 +15,7 @@ libexec/biolibc-tools/uniq-seqs.awk
 libexec/biolibc-tools/vcf-downsample
 libexec/biolibc-tools/vcf-search
 man/man1/blt-chrom-lens.1
+man/man1/blt-deromanize.1
 man/man1/blt-ensemblid2gene.1
 man/man1/blt-extract-seq.1
 man/man1/blt-fasta2seq.1
