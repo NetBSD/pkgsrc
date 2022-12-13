@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2022/09/27 20:58:22 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2022/12/13 12:54:07 jperkin Exp $
 
 DISTNAME=	spek-0.8.2
 PKGREVISION=	23
@@ -11,10 +11,11 @@ HOMEPAGE=	http://spek.cc/
 COMMENT=	Acoustic Spectrum Analyzer
 LICENSE=	gnu-gpl-v3
 
-GNU_CONFIGURE=	yes
-USE_LANGUAGES=	c c++
-USE_TOOLS+=	gmake intltool xgettext msgmerge msgfmt pkg-config
-MAKE_FLAGS+=	DATADIRNAME=${PKGLOCALEDIR}
+GNU_CONFIGURE=		yes
+USE_LANGUAGES=		c c++
+USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		gmake intltool xgettext msgmerge msgfmt pkg-config
+MAKE_FLAGS+=		DATADIRNAME=${PKGLOCALEDIR}
 
 GNU_CONFIGURE_WX_VERSION=	no
 
