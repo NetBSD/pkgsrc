@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/10/26 10:31:11 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/12/13 13:13:47 jperkin Exp $
 DISTNAME=	gkrellmpc-0.1_beta10
 PKGREVISION=	2
 CATEGORIES=	audio
@@ -11,7 +11,8 @@ HOMEPAGE=	https://github.com/simark/gkrellm-gkrellmpc
 COMMENT=	GKrellM plugin to control musicpd
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=	pkg-config gmake
+USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		pkg-config gmake
 
 .include "options.mk"
 
