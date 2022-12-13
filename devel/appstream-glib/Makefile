@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2022/10/26 10:31:21 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2022/12/13 12:47:03 jperkin Exp $
 
 DISTNAME=	appstream-glib-0.8.0
 PKGREVISION=	2
@@ -18,6 +18,7 @@ USE_TOOLS+=		pkg-config msgfmt xgettext
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 
+MESON_ARGS+=		-Dlocaledir=${PKGLOCALEDIR}/locale
 MESON_ARGS+=		-Drpm=false
 
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
