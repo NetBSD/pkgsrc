@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2022/11/23 16:19:34 adam Exp $
+# $NetBSD: Makefile,v 1.74 2022/12/13 13:19:33 jperkin Exp $
 
 DISTNAME=		gourmet-0.8.5.14
 PKGREVISION=		52
@@ -11,6 +11,12 @@ COMMENT=		Recipe database
 
 USE_PKGLOCALEDIR=		yes
 PYTHON_VERSIONS_ACCEPTED=	27 # py-metakit, py-imaging, py-gtk2
+
+SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	pre-configure
+SUBST_FILES.paths=	setup.py
+SUBST_SED.paths=	-e '/i18n_base.=/s/share/${PKGLOCALEDIR}/'
+SUBST_NOOP_OK.paths=	yes
 
 REPLACE_PYTHON+=	build_rpms.py
 REPLACE_PYTHON+=	setup.py
