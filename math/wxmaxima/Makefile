@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2022/11/23 16:20:36 adam Exp $
+# $NetBSD: Makefile,v 1.24 2022/12/13 13:05:49 jperkin Exp $
 
 DISTNAME=	wxmaxima-17.10.1
 PKGREVISION=	16
@@ -14,8 +14,17 @@ LICENSE=	gnu-gpl-v2
 DEPENDS+=	maxima>=5.15.0:../../math/maxima
 DEPENDS+=	gnuplot>=4.2.3:../../graphics/gnuplot
 
-USE_CMAKE=	yes
-USE_LANGUAGES=	c c++
+USE_CMAKE=		yes
+USE_LANGUAGES=		c c++
+USE_PKGLOCALEDIR=	yes
+
+SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	pre-configure
+SUBST_FILES.paths=	data/CMakeLists.txt
+SUBST_FILES.paths+=	locales/CMakeLists.txt
+SUBST_SED.paths=	-e 's,share/locale,${PKGLOCALEDIR}/locale,g'
+SUBST_SED.paths+=	-e 's,share/man,${PKGMANDIR},g'
+SUBST_NOOP_OK.paths=	yes
 
 .include "../../x11/wxGTK30/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
