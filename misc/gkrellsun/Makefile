@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/10/26 10:31:42 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/12/13 13:12:10 jperkin Exp $
 DISTNAME=	gkrellsun-1.0.0
 PKGREVISION=	2
 CATEGORIES=	misc
@@ -9,7 +9,8 @@ HOMEPAGE=	http://gkrellsun.sourceforge.net/
 COMMENT=	GKrellM plugin to display sun rise and sun set times
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=	pkg-config gmake
+USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		pkg-config gmake
 
 .include "options.mk"
 
