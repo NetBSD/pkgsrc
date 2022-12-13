@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2022/12/13 13:31:11 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.5 2022/12/13 13:34:48 jperkin Exp $
 # used by graphics/freeimage/Makefile
 # used by graphics/freeimageplus/Makefile
 
@@ -23,6 +23,16 @@ PATCHDIR=	${.CURDIR}/../../graphics/freeimage/patches
 DISTINFO_FILE=	${.CURDIR}/../../graphics/freeimage/distinfo
 
 INSTALLATION_DIRS+=	include lib share/doc/${PKGBASE}
+
+# Systems that use unzip from pkgsrc end up with DOS line endings, so
+# we need to ensure files can be patched.
+SUBST_CLASSES+=		cr
+SUBST_STAGE.cr=		post-extract
+SUBST_FILES.cr+=	Source/FreeImage/PluginBMP.cpp
+SUBST_FILES.cr+=	Source/FreeImage/PluginDDS.cpp
+SUBST_FILES.cr+=	Source/FreeImage/PluginTIFF.cpp
+SUBST_FILTER_CMD.cr=	${TR} -d '\r'
+SUBST_NOOP_OK.cr=	yes
 
 pre-configure:
 	# G3 and JPEGTransform can't be built,
