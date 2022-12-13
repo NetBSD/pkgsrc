@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2022/02/26 23:11:43 bacon Exp $
+$NetBSD: distinfo,v 1.9 2022/12/13 10:28:01 adam Exp $
 
-BLAKE2s (samtools-1.15.tar.gz) = b37f18ce7134f921f1e8b5ebb087ad88b387934080742f26708bbecf9ddb5df7
-SHA512 (samtools-1.15.tar.gz) = fad213b6d7eb8885b67642ad7235fb35a923238c13fac7fde501f0d8093fa90d49539e895691bc61a94f6d25e8cdfc4e2c4e94ff0ea91ceee248d5140f561cd6
-Size (samtools-1.15.tar.gz) = 4970205 bytes
+BLAKE2s (samtools-1.16.1.tar.bz2) = 45ca326da1c2aa560fde2d582b58150b71f05d72ff996c9ae97427ef22b018a0
+SHA512 (samtools-1.16.1.tar.bz2) = f9d6b8652234c782a1b369f028073ad4a66c44e9620ae60f0ecb35e0874f04ca633713078b692fdc1a1cc4f884ebdbf3ecae6881f11fb3b4fd3d27c5b8da67ba
+Size (samtools-1.16.1.tar.bz2) = 8217689 bytes
 SHA1 (patch-Makefile) = 3fc1f1d67167c8ca8eff1ed17f7a084ec3d4579d

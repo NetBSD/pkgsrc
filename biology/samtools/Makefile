@@ -1,17 +1,20 @@
-# $NetBSD: Makefile,v 1.16 2022/06/30 11:18:04 nia Exp $
+# $NetBSD: Makefile,v 1.17 2022/12/13 10:28:01 adam Exp $
 
-DISTNAME=	samtools-1.15
-PKGREVISION=	2
+DISTNAME=	samtools-1.16.1
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=samtools/}
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://www.htslib.org/
 COMMENT=	Tools for manipulating sequence alignment maps
 LICENSE=	mit
 
-USE_TOOLS+=	autoconf automake autoreconf bash gmake perl
-GNU_CONFIGURE=	yes
+USE_TOOLS+=		autoconf automake autoreconf bash gmake perl
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-htslib=system
+TEST_TARGET=		test
 
 SUBST_CLASSES+=		version
 SUBST_STAGE.version=	pre-configure
@@ -28,9 +31,6 @@ REPLACE_PERL+=		misc/*.pl
 REPLACE_PERL+=		test/*.pl
 REPLACE_PERL+=		misc/plot-bamstats misc/plot-ampliconstats
 REPLACE_LUA+=		misc/*.lua
-
-CONFIGURE_ARGS+=	--with-htslib=system
-TEST_TARGET=		test
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -if
