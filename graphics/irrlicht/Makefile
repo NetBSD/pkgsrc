@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/05/09 12:28:37 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2022/12/13 14:20:32 jperkin Exp $
 
 DISTNAME=	irrlicht-1.8.4
 CATEGORIES=	graphics
@@ -9,6 +9,15 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://irrlicht.sourceforge.net/
 COMMENT=	Open source high performance real-time 3D engine
 LICENSE=	zlib
+
+# Work around NetBSD unzip for patched files.
+SUBST_CLASSES+=		cr
+SUBST_STAGE.cr=		post-extract
+SUBST_FILES.cr+=	source/Irrlicht/COSOperator.cpp
+SUBST_FILES.cr+=	source/Irrlicht/Makefile
+SUBST_FILES.cr+=	source/Irrlicht/os.cpp
+SUBST_FILTER_CMD.cr=	${TR} -d '\r'
+SUBST_NOOP_OK.cr=	yes
 
 USE_TOOLS+=	pkg-config gmake
 USE_LANGUAGES=	c c++
