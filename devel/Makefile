@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3845 2022/12/06 20:39:38 adam Exp $
+# $NetBSD: Makefile,v 1.3846 2022/12/13 23:45:18 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2264,6 +2264,7 @@ SUBDIR+=	picopb
 SUBDIR+=	picotrace
 SUBDIR+=	picp
 SUBDIR+=	picprg
+SUBDIR+=	pijul
 SUBDIR+=	pilrc
 SUBDIR+=	pipestatus
 SUBDIR+=	pkg-config
