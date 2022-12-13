@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/11/28 19:20:21 jperkin Exp $
+# $NetBSD: Makefile,v 1.7 2022/12/13 12:42:23 jperkin Exp $
 
 DISTNAME=	fcitx5-5.0.5
 PKGREVISION=	3
@@ -39,6 +39,8 @@ BUILD_DEPENDS+=	extra-cmake-modules-[0-9]*:../../devel/extra-cmake-modules
 
 CMAKE_ARGS+=		-DENABLE_WAYLAND=off # cairo-egl is required.
 CMAKE_ARGS+=		-DUSE_SYSTEMD=off
+CMAKE_ARGS+=		-DLibIntl_INCLUDE_DIR=${BUILDLINK_PREFIX.gettext}/include
+CMAKE_ARGS+=		-DLIBUUID_INCLUDE_DIR=${BUILDLINK_PREFIX.libuuid}/include
 
 CXXFLAGS.NetBSD+=	-DLIBKVM_FOUND
 
@@ -63,6 +65,7 @@ pre-configure:
 	${LN} -s ${DISTDIR}/en_dict-20121020.tar.gz \
 		${WRKSRC}/src/modules/spell/dict
 
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/gettext-tools/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libevent/buildlink3.mk"
