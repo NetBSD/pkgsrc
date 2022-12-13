@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.76 2022/11/23 16:19:57 adam Exp $
+# $NetBSD: Makefile,v 1.77 2022/12/13 19:47:35 markd Exp $
 
-DISTNAME=	texstudio-2.12.22
-PKGREVISION=	29
+DISTNAME=	texstudio-4.4.0
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=texstudio-org/}
 
@@ -35,6 +34,7 @@ do-configure:
 .include "../../x11/qt5-qtscript/buildlink3.mk"
 .include "../../x11/qt5-qtsvg/buildlink3.mk"
 .include "../../x11/qt5-qttools/buildlink3.mk"
+.include "../../print/poppler-cpp/buildlink3.mk"
 .include "../../print/poppler-qt5/buildlink3.mk"
 .include "../../print/poppler-includes/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

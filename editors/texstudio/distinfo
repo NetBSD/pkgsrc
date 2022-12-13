@@ -1,9 +1,6 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 10:21:42 nia Exp $
+$NetBSD: distinfo,v 1.12 2022/12/13 19:47:35 markd Exp $
 
-BLAKE2s (texstudio-2.12.22.tar.gz) = f0a386d2f9e2e132f179462d1e5f1b5425a89c7fe926117d078a1e1be0c51886
-SHA512 (texstudio-2.12.22.tar.gz) = c589285d1fba00812583a3d58602a99e044eb4bcf6a84b939d00ad7fe4ba8f15788031361fc9b4cb8df19f8098911c437d1de5459c1736fa40888b88d13b10d1
-Size (texstudio-2.12.22.tar.gz) = 35965795 bytes
-SHA1 (patch-manhattanstyle.cpp) = 390e4026a44656e7fb2a675f958b8a6f315cffdc
+BLAKE2s (texstudio-4.4.0.tar.gz) = a920fd04036f0cf4c553f54219ac977daaa7a429171cecff39d0eb666f91088b
+SHA512 (texstudio-4.4.0.tar.gz) = 02b328c79fca6d9d2c3fd0039081d25279d803051f4459d83750e5b2bad23227871ed367d641e06a5bafd2f08699d1410a9ffcad5ff4d2de48b53f0b0f60d977
+Size (texstudio-4.4.0.tar.gz) = 111069980 bytes
 SHA1 (patch-minisplitter.cpp) = 93b1910a12308294a5ae4870da0b208cb4580ee7
-SHA1 (patch-mostQtHeaders.h) = debd3e35005a9fe014e65671db98904a0c76b8a5
-SHA1 (patch-pdfviewer_PDFDocument.cpp) = 3b897c52dcfd507682f52ef4b1a61a26f4ec00a3
