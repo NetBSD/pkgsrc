@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6101 2022/12/13 00:53:53 bacon Exp $
+$NetBSD: CHANGES-2022,v 1.6102 2022/12/13 07:22:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9195,3 +9195,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/bind918 to 9.18.9nb1 [sekiya 2022-12-13]
 	Updated x11/xhost to 1.0.9 [wiz 2022-12-13]
 	Updated biology/biolibc-tools to 0.1.4 [bacon 2022-12-13]
+	Updated databases/redis to 7.0.6 [adam 2022-12-13]
+	Updated devel/py-traitlets to 5.7.1 [adam 2022-12-13]
+	Updated security/py-google-auth-oauthlib to 0.8.0 [adam 2022-12-13]
+	Updated devel/pcre2 to 10.42 [adam 2022-12-13]
