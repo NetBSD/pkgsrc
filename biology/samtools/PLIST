@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2022/02/26 23:11:43 bacon Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/12/13 10:28:01 adam Exp $
 bin/ace2sam
 bin/blast2sam.pl
 bin/bowtie2sam.pl
@@ -49,6 +49,7 @@ man/man1/samtools-merge.1
 man/man1/samtools-mpileup.1
 man/man1/samtools-phase.1
 man/man1/samtools-quickcheck.1
+man/man1/samtools-reference.1
 man/man1/samtools-reheader.1
 man/man1/samtools-rmdup.1
 man/man1/samtools-samples.1
