@@ -1,4 +1,4 @@
-# $NetBSD: gem.mk,v 1.48 2022/05/17 00:42:33 gutteridge Exp $
+# $NetBSD: gem.mk,v 1.49 2022/12/13 14:27:11 taca Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -10,7 +10,7 @@
 #		Possible values: Yes No
 #		Default: No
 #
-# Package-settable variables:
+# === Package-settable variables ===
 #
 # OVERRIDE_GEMSPEC
 #	Fix version of depending gem or modify files in gemspec.
@@ -110,7 +110,7 @@
 #	Optional parameter to pass to gem on install stage.
 #
 #
-# Variables defined in this file:
+# === Variables defined in this file ===
 #
 # GEM_DOCDIR
 #	The relative path from PREFIX to the directory in the local gem
