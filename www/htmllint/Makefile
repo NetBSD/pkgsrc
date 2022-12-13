@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2022/06/28 11:37:05 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2022/12/13 14:17:07 jperkin Exp $
 
 DISTNAME=	htmllint
 PKGNAME=	htmllint-20111128
@@ -17,6 +17,13 @@ DEPENDS+=	p5-libwww>=5.8:../../www/p5-libwww
 
 WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	${PKGNAME_NOREV}
+
+# Work around NetBSD unzip vs others for patched files.
+SUBST_CLASSES+=		cr
+SUBST_STAGE.cr=		post-extract
+SUBST_FILES.cr=		*.html htmllint*
+SUBST_FILTER_CMD.cr=	${TR} -d '\r'
+SUBST_NOOP_OK.cr=	yes
 
 REPLACE_PERL=	htmllint.cgi htmllint parsedtd.pl tagslist.cgi
 USE_TOOLS+=	perl:run
