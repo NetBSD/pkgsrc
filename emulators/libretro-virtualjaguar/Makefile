@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/05/31 16:06:19 nia Exp $
+# $NetBSD: Makefile,v 1.5 2022/12/13 10:48:27 jperkin Exp $
 
 DISTNAME=	libretro-virtualjaguar-20200521
 CATEGORIES=	emulators
@@ -11,6 +11,10 @@ COMMENT=	Libretro core based on the Virtual Jaguar emulator
 LICENSE=	gnu-gpl-v3
 
 LIBRETRO_CORE=	virtualjaguar
+
+# We can't remove the arg as it is space-separated ("-z .."), so instead
+# rewrite it to something that is already used.
+BUILDLINK_TRANSFORM.SunOS+=	opt:gnu-version-script-compat:defs
 
 .include "../../emulators/retroarch/core.mk"
 .include "../../mk/bsd.pkg.mk"
