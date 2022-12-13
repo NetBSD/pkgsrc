@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2022/09/11 12:51:31 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2022/12/13 13:41:10 jperkin Exp $
 
 DISTNAME=	fMSX54
 PKGNAME=	fmsx-5.4
@@ -18,6 +18,15 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 WRKSRC=	${WRKDIR}
 
 USE_TOOLS+=	gmake
+
+# Work around NetBSD unzip vs others for patched files.
+SUBST_CLASSES+=		cr
+SUBST_STAGE.cr=		post-extract
+SUBST_FILES.cr+=	fMSX/Unix/Makefile
+SUBST_FILES.cr+=	EMULib/Unix/SndUnix.c
+SUBST_FILES.cr+=	EMULib/Rules.Unix EMULib/Rules.gcc
+SUBST_FILTER_CMD.cr=	${TR} -d '\r'
+SUBST_NOOP_OK.cr=	yes
 
 BUILD_DIRS=	fMSX/Unix
 
