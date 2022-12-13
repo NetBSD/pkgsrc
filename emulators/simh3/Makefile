@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/12/12 19:50:01 rhialto Exp $
+# $NetBSD: Makefile,v 1.5 2022/12/13 14:01:27 jperkin Exp $
 
 DISTNAME=	simhv312-3
 PKGNAME=	simh3-3.12.3
@@ -18,6 +18,13 @@ BUILDLINK_API_DEPENDS.libpcap+=	libpcap>=0.9
 
 BUILDLINK_TRANSFORM+=	rm:-flto
 BUILDLINK_TRANSFORM+=	rm:-fwhole-program
+
+# Work around NetBSD unzip vs others for patched files.
+SUBST_CLASSES+=		cr
+SUBST_STAGE.cr=		post-extract
+SUBST_FILES.cr=		makefile
+SUBST_FILTER_CMD.cr=	${TR} -d '\r'
+SUBST_NOOP_OK.cr=	yes
 
 INSTALLATION_DIRS=	bin share/simh3 share/doc/simh3
 
