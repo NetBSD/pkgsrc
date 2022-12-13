@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.23 2022/12/08 10:30:48 adam Exp $
+$NetBSD: distinfo,v 1.24 2022/12/13 07:21:49 adam Exp $
 
-BLAKE2s (pcre2-10.41.tar.gz) = 09470e7332ed4501041b2012e7cc20eff0fb15dd76267e4792f89eb2f1d2905f
-SHA512 (pcre2-10.41.tar.gz) = 94f962901c2929eafb9d540f3b8cd64feba95017bc29bd369b29231c50df1ade07b3c0509d031e4fc5c9e46cd64499dde6568f5325de805877f7391fa4621227
-Size (pcre2-10.41.tar.gz) = 2393262 bytes
-SHA1 (patch-src_pcre2posix.h) = c5f45c6ba75fe03ceb4f5c25caa36364317ce88b
+BLAKE2s (pcre2-10.42.tar.gz) = ef78b75ed64b069b5536ca23feb73b576555762d3b8c4e3365a09ff1f98b43de
+SHA512 (pcre2-10.42.tar.gz) = a3db6c5c620775838819be616652e73ce00f5ef5c1f49f559ff3efb51a119d02f01254c5901c1f7d0c47c0ddfcf4313e38d6ca32c35381b8f87f36896d10e6f7
+Size (pcre2-10.42.tar.gz) = 2397194 bytes
