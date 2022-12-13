@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.156 2022/11/23 16:20:57 adam Exp $
+# $NetBSD: Makefile,v 1.157 2022/12/13 12:51:49 jperkin Exp $
 
 DISTNAME=	evince-43.0
 PKGREVISION=	1
@@ -26,6 +26,7 @@ TOOLS_PLATFORM.msgfmt=
 MESON_ARGS+=	-Dcomics=disabled
 MESON_ARGS+=	-Dgspell=disabled
 MESON_ARGS+=	-Dintrospection=true
+MESON_ARGS+=	-Dlocaledir=${PKGLOCALEDIR}/locale
 MESON_ARGS+=	-Dnautilus=false
 MESON_ARGS+=	-Dthumbnail_cache=disabled
 
