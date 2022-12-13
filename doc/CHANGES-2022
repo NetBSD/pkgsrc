@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6102 2022/12/13 07:22:19 adam Exp $
+$NetBSD: CHANGES-2022,v 1.6103 2022/12/13 10:28:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9199,3 +9199,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-traitlets to 5.7.1 [adam 2022-12-13]
 	Updated security/py-google-auth-oauthlib to 0.8.0 [adam 2022-12-13]
 	Updated devel/pcre2 to 10.42 [adam 2022-12-13]
+	Updated biology/htslib to 1.16 [adam 2022-12-13]
+	Updated biology/samtools to 1.16.1 [adam 2022-12-13]
