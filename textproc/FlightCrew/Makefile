@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2022/01/10 01:46:44 ryoon Exp $
+# $NetBSD: Makefile,v 1.64 2022/12/13 13:49:40 jperkin Exp $
 
 DISTNAME=	FlightCrew-0.7.2-Code
 PKGNAME=	${DISTNAME:S/-Code//}
@@ -16,6 +16,17 @@ WRKSRC=		${WRKDIR}
 
 USE_LANGUAGES=	c c++11
 USE_CMAKE=	yes
+
+# Work around NetBSD unzip vs others for patched files.
+SUBST_CLASSES+=		cr
+SUBST_STAGE.cr=		post-extract
+SUBST_FILES.cr+=	CMakeLists.txt src/FlightCrew/CMakeLists.txt
+SUBST_FILES.cr+=	src/FlightCrew/Validators/Opf/ReachabilityAnalysis.cpp
+SUBST_FILES.cr+=	src/FlightCrew/tests/CMakeLists.txt
+SUBST_FILES.cr+=	src/XercesExtensions/LocationAwareDOMParser.cpp
+SUBST_FILES.cr+=	src/utf8-cpp/utf8/core.h
+SUBST_FILTER_CMD.cr=	${TR} -d '\r'
+SUBST_NOOP_OK.cr=	yes
 
 BUILDLINK_TRANSFORM+=	l:BoostParts:boost_date_time:boost_filesystem:boost_regex:boost_system:boost_thread:boost_program_options
 BUILDLINK_TRANSFORM+=	l:Xerces:xerces-c
