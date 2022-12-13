@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2022/09/11 12:51:30 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2022/12/13 14:13:31 jperkin Exp $
 
 DISTNAME=	qt-creator-opensource-src-5.0.3
 PKGNAME=	${DISTNAME:S/qt-/qt/:S/-opensource-src//}
@@ -16,6 +16,15 @@ LICENSE=	gnu-lgpl-v3
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 USE_TOOLS+=	bash perl
+
+# Work around NetBSD unzip for patched files.
+SUBST_CLASSES+=		cr
+SUBST_STAGE.cr=		post-extract
+SUBST_FILES.cr+=	share/share.pro
+SUBST_FILES.cr+=	src/libs/3rdparty/sqlite/sqlite3.c
+SUBST_FILES.cr+=	src/plugins/clangformat/clangformatutils.cpp
+SUBST_FILTER_CMD.cr=	${TR} -d '\r'
+SUBST_NOOP_OK.cr=	yes
 
 REPLACE_BASH+=	src/app/winicons/createicons.sh
 REPLACE_BASH+=	src/libs/qmljs/parser/gen-parser.sh
