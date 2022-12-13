@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2022/11/17 14:55:39 schmonz Exp $
+# $NetBSD: Makefile,v 1.27 2022/12/13 11:57:05 schmonz Exp $
 #
 
 DISTNAME=		Text-Markdown-Discount-0.16
@@ -18,8 +18,13 @@ SUBST_FILES.paths=	Makefile.PL
 SUBST_VARS.paths=	PREFIX
 SUBST_STAGE.paths=	pre-configure
 
-post-extract:
-	cd ${WRKSRC} && rm -rf discount
+# Avoid extracting the vendored discount library. We don't use it at all
+# (instead buildlinking textproc/discount), and it sometimes contains
+# macOS xattrs that break extraction as root on other systems.
+EXTRACT_OPTS=		-X ${WRKDIR}/excludefile
+pre-extract:
+	${_EXTRACT_TAR} -ztf ${DISTDIR}/${DISTFILES} \
+		| sort | grep /discount-2 > ${WRKDIR}/excludefile
 
 .include "../../textproc/discount/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
