@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6103 2022/12/13 10:28:21 adam Exp $
+$NetBSD: CHANGES-2022,v 1.6104 2022/12/13 12:44:44 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9201,3 +9201,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/pcre2 to 10.42 [adam 2022-12-13]
 	Updated biology/htslib to 1.16 [adam 2022-12-13]
 	Updated biology/samtools to 1.16.1 [adam 2022-12-13]
+	Updated emulators/free42 to 3.0.16 [gdt 2022-12-13]
