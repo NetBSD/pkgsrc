@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2022/12/10 19:58:56 tnn Exp $
+# $NetBSD: Makefile,v 1.16 2022/12/13 21:12:10 schmonz Exp $
 
 PKGNAME=	go-bin-1.19.4
 CATEGORIES=	lang
@@ -21,7 +21,7 @@ MKPIE_SUPPORTED=	no
 REPLACE_PERL+=			src/*/*.pl src/*/*/*.pl
 REPLACE_PERL+=			src/net/http/cgi/testdata/test.cgi
 REPLACE_BASH+=			*/*.bash */*/*.bash */*/*/*.bash */*/*/*/*/*/*.bash
-REPLACE_BASH+=			*/*/*.sh */*/*/*.sh
+REPLACE_BASH+=			*/*/*.sh */*/*/*.sh */*/*/*/*.sh
 REPLACE_BASH+=			misc/arm/a misc/wasm/go_js_wasm_exec
 CHECK_INTERPRETER_SKIP+=	*/*.rc
 CHECK_PORTABILITY_SKIP+=	misc/ios/clangwrap.sh
