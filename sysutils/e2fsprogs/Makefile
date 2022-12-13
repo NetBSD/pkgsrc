@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2022/06/07 08:17:37 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2022/12/13 10:55:03 jperkin Exp $
 
 DISTNAME=	e2fsprogs-1.46.4
 PKGREVISION=	2
@@ -59,6 +59,9 @@ PLIST.fsck=		yes
 .else
 CONFIGURE_ARGS+=	--disable-fsck
 .endif
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-rpath-link,../../lib
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-rpath-link,../lib
 
 EGDIR=			${PREFIX}/share/examples/ext2fs
 CONF_FILES+=		${EGDIR}/mke2fs.conf ${PKG_SYSCONFDIR}/mke2fs.conf
