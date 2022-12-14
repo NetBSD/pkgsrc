@@ -1,0 +1,15 @@
+$NetBSD: patch-lib_tools_c__src_Makefile.in,v 1.1 2022/12/14 23:40:56 wiz Exp $
+
+Fix unportable test(1) operator.
+
+--- lib/tools/c_src/Makefile.in.orig	2019-04-17 14:14:50.000000000 +0000
++++ lib/tools/c_src/Makefile.in
+@@ -222,7 +222,7 @@ SED_DEPEND=sed '$(SED_REPL_OBJ_DIR);$(SE
+ DEPEND_MK=depend.mk
+ 
+ dep depend:
+-	[ $(v_p) == 0 ] && echo " GEN	"$(DEPEND_MK)
++	[ $(v_p) = 0 ] && echo " GEN	"$(DEPEND_MK)
+ 	$(V_colon)@echo "Generating dependency file $(DEPEND_MK)..."
+ 	@echo "# Generated dependency rules." > $(DEPEND_MK);
+ 	@echo "# Do *not* edit this file; instead, run 'make depend'." \
