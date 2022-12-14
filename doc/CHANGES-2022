@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6108 2022/12/14 00:23:30 bacon Exp $
+$NetBSD: CHANGES-2022,v 1.6109 2022/12/14 14:33:39 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9206,3 +9206,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated editors/texstudio to 4.4.0 [markd 2022-12-13]
 	Added devel/pijul version 1.0.0.beta2 [nikita 2022-12-13]
 	Updated biology/biolibc-tools to 0.1.4.1 [bacon 2022-12-14]
+	Updated graphics/pngcheck to 3.0.3 [fcambus 2022-12-14]
