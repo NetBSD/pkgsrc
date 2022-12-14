@@ -1,0 +1,55 @@
+$NetBSD: patch-configure,v 1.1 2022/12/14 15:38:59 wiz Exp $
+
+Fix unportable test(1) operator.
+https://github.com/pantoniou/libfyaml/pull/62
+
+--- configure.orig	2022-01-19 10:32:36.000000000 +0000
++++ configure
+@@ -18525,7 +18525,7 @@ fi
+ 
+ 
+ HAVE_COMPATIBLE_CHECK=0
+-if test "x$HAVE_CHECK" == "x1" ; then
++if test "x$HAVE_CHECK" = "x1" ; then
+ 	save_LIBS="$LIBS"
+ 	save_CFLAGS="$CFLAGS"
+ 	LIBS="$LIBS $CHECK_LIBS"
+@@ -18744,7 +18744,7 @@ $as_echo "N/A" >&6; }
+ 
+ 	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking whether sphinx installation works" >&5
+ $as_echo_n "checking whether sphinx installation works... " >&6; }
+-	if test "x$HAVE_SPHINX" == "x1" ; then
++	if test "x$HAVE_SPHINX" = "x1" ; then
+ 		{ $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+ $as_echo "yes" >&6; }
+ 	else
+@@ -18829,25 +18829,25 @@ fi
+ 
+ 
+ 
+-if test "x$TESTSUITEURL" == "x" ; then
++if test "x$TESTSUITEURL" = "x" ; then
+ 	TESTSUITEURL="https://github.com/yaml/yaml-test-suite"
+ fi
+ 
+ 
+ 
+-if test "x$TESTSUITECHECKOUT" == "x" ; then
++if test "x$TESTSUITECHECKOUT" = "x" ; then
+ 	TESTSUITECHECKOUT="6e6c296ae9c9d2d5c4134b4b64d01b29ac19ff6f"
+ fi
+ 
+ 
+ 
+-if test "x$JSONTESTSUITEURL" == "x" ; then
++if test "x$JSONTESTSUITEURL" = "x" ; then
+ 	JSONTESTSUITEURL="https://github.com/nst/JSONTestSuite"
+ fi
+ 
+ 
+ 
+-if test "x$JSONTESTSUITECHECKOUT" == "x" ; then
++if test "x$JSONTESTSUITECHECKOUT" = "x" ; then
+ 	JSONTESTSUITECHECKOUT="d64aefb55228d9584d3e5b2433f720ea8fd00c82"
+ fi
+ 
