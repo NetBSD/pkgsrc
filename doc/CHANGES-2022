@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6112 2022/12/14 18:01:51 nikita Exp $
+$NetBSD: CHANGES-2022,v 1.6113 2022/12/14 19:11:12 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9210,3 +9210,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added games/sais version 1.6.3 [wiz 2022-12-14]
 	Updated shells/bash to 5.2.15 [kre 2022-12-14]
 	Updated lang/gleam to 0.25.1 [nikita 2022-12-14]
+	Added shells/es-shell version 0.9.2 [nikita 2022-12-14]
