@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2022/12/12 22:07:04 sekiya Exp $
+# $NetBSD: Makefile,v 1.3 2022/12/14 21:44:03 sekiya Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 PKGNAME=	${DISTNAME:S/-P/pl/}
 PKGREVISION=	1
 CATEGORIES=	net
-MASTER_SITES=	https://downloads.isc.org/isc/bind9/${BIND_VERSION}/${DISTNAME}${EXTRACT_SUFX}
+MASTER_SITES=	https://downloads.isc.org/isc/bind9/${BIND_VERSION}/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	sekiya@NetBSD.org
