@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2022/12/14 14:51:58 wiz Exp $
+$NetBSD: distinfo,v 1.2 2022/12/14 14:55:02 wiz Exp $
 
 BLAKE2s (sais-1.6.3.tar.gz) = 512900da760cb09a26d3c4786f5f5671874e4b956d7f5195cc4b52657e82365b
 SHA512 (sais-1.6.3.tar.gz) = 99ca8de25caf9d2dd62afd4a67a4d811feccc5dab0c0767a864f3eb70bb495c8b580bbd683f5d7261337750eddb8556de75a893386032e01049b86168b8072e8
 Size (sais-1.6.3.tar.gz) = 13511138 bytes
-SHA1 (patch-src_is__fileio.h) = 14c21154da05b2bf95c0a90504611c738e6ae3fb
+SHA1 (patch-src_is__fileio.h) = 76437da1d5c0f9e2c7e3556c03b5323fa4b03942
