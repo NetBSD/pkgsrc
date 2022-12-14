@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/12/14 14:51:58 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2022/12/14 14:57:15 wiz Exp $
 
 DISTNAME=	sais-1.6.3
 CATEGORIES=	games
@@ -8,7 +8,7 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/kuroneko/sais/
 COMMENT=	Strange Adventures in Infinite Space
-LICENSE=	gnu-gpl-v3
+LICENSE=	gnu-gpl-v3 AND cc-by-nc-v4.0-license
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
