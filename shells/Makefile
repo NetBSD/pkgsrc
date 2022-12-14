@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2022/11/05 16:41:32 pin Exp $
+# $NetBSD: Makefile,v 1.70 2022/12/14 19:10:45 nikita Exp $
 #
 
 COMMENT=	Shells
@@ -14,6 +14,7 @@ SUBDIR+=	dash
 SUBDIR+=	eltclsh
 SUBDIR+=	elvish
 SUBDIR+=	es
+SUBDIR+=	es-shell
 SUBDIR+=	esh
 SUBDIR+=	etsh
 SUBDIR+=	fish

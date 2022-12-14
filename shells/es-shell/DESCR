@@ -1,0 +1,5 @@
+Es is an extensible shell. The language was derived from the Plan 9
+shell, rc, and was influenced by functional programming languages, such as
+Scheme, and the Tcl embeddable programming language. This implementation is
+derived from Byron Rakitzis's public domain implementation of rc, and was
+written by Paul Haahr and Byron Rakitzis.
