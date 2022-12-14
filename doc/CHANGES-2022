@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6107 2022/12/13 22:10:41 nikita Exp $
+$NetBSD: CHANGES-2022,v 1.6108 2022/12/14 00:23:30 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9205,3 +9205,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/nginx-devel to 1.23.3 [osa 2022-12-13]
 	Updated editors/texstudio to 4.4.0 [markd 2022-12-13]
 	Added devel/pijul version 1.0.0.beta2 [nikita 2022-12-13]
+	Updated biology/biolibc-tools to 0.1.4.1 [bacon 2022-12-14]
