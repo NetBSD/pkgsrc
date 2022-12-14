@@ -1,6 +1,7 @@
-$NetBSD: patch-src_is__fileio.h,v 1.1 2022/12/14 14:51:58 wiz Exp $
+$NetBSD: patch-src_is__fileio.h,v 1.2 2022/12/14 14:55:02 wiz Exp $
 
 Add missing header file.
+https://github.com/kuroneko/sais/pull/8
 
 --- src/is_fileio.h.orig	2020-10-14 04:48:50.000000000 +0000
 +++ src/is_fileio.h
