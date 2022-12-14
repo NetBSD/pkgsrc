@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6109 2022/12/14 14:33:39 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.6110 2022/12/14 14:52:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9207,3 +9207,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/pijul version 1.0.0.beta2 [nikita 2022-12-13]
 	Updated biology/biolibc-tools to 0.1.4.1 [bacon 2022-12-14]
 	Updated graphics/pngcheck to 3.0.3 [fcambus 2022-12-14]
+	Added games/sais version 1.6.3 [wiz 2022-12-14]
