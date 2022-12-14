@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6113 2022/12/14 19:11:12 nikita Exp $
+$NetBSD: CHANGES-2022,v 1.6114 2022/12/14 20:49:02 reinoud Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -8881,6 +8881,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/nodejs14 to 14.21.1nb1 [adam 2022-12-03]
 	Updated shells/tcsh to 6.24.04 [kim 2022-12-03]
 	Updated devel/fossil to 2.20 [js 2022-12-03]
+	Updated misc/udfclient to 0.8.20 [reinoud 2022-12-03]
 	Updated www/firefox102-l10n to 102.5.0 [nia 2022-12-04]
 	Updated www/firefox102 to 102.5.0 [nia 2022-12-04]
 	Updated print/ruby-pdf-reader to 2.11.0 [taca 2022-12-04]
