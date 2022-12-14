@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.515 2022/06/07 10:18:00 pin Exp $
+# $NetBSD: Makefile,v 1.516 2022/12/14 14:52:05 wiz Exp $
 #
 
 COMMENT=	Games
@@ -358,6 +358,7 @@ SUBDIR+=	robotfindskitten
 SUBDIR+=	rocksndiamonds
 SUBDIR+=	rocksndiamonds-levels
 SUBDIR+=	ruby-squib
+SUBDIR+=	sais
 SUBDIR+=	sarien
 SUBDIR+=	sauerbraten
 SUBDIR+=	scid
