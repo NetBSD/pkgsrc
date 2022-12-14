@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6111 2022/12/14 16:49:50 kre Exp $
+$NetBSD: CHANGES-2022,v 1.6112 2022/12/14 18:01:51 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9209,3 +9209,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/pngcheck to 3.0.3 [fcambus 2022-12-14]
 	Added games/sais version 1.6.3 [wiz 2022-12-14]
 	Updated shells/bash to 5.2.15 [kre 2022-12-14]
+	Updated lang/gleam to 0.25.1 [nikita 2022-12-14]
