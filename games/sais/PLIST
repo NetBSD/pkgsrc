@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2022/12/14 14:51:58 wiz Exp $
+bin/strange
+libexec/sais/LICENSES.txt
+libexec/sais/README1st.txt
+libexec/sais/manual.txt
+libexec/sais/mods.txt
+libexec/sais/mods/eelfarm/gamedata/cards.ini
+libexec/sais/mods/eelfarm/gamedata/items.ini
+libexec/sais/mods/eelfarm/graphics/combtbg2.pcx
+libexec/sais/mods/flakgun/gamedata/cards.ini
+libexec/sais/mods/flakgun/gamedata/items.ini
+libexec/sais/mods/flakgun/gamedata/ships.ini
+libexec/sais/mods/flakgun/gamedata/systems.ini
+libexec/sais/mods/flakgun/gamedata/weapons.ini
+libexec/sais/mods/flakgun/graphics/weapons/frame019.tga
+libexec/sais/saisdata.zip
+libexec/sais/strange
