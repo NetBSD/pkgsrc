@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2022/11/29 19:16:04 jperkin Exp $
+# $NetBSD: Makefile,v 1.83 2022/12/14 23:46:59 wiz Exp $
 
 DISTNAME=		apache-couchdb-3.2.2
 PKGNAME=		${DISTNAME:S/apache-//}
@@ -68,7 +68,6 @@ CHECK_PORTABILITY_SKIP+=	build-aux/print-committerlist.sh
 CONFIGURE_ARGS+=	--rebar\ ${PREFIX}/bin/rebar
 CONFIGURE_ARGS+=	--user\ ${COUCH_USER}
 CONFIGURE_ARGS+=	--skip-deps
-CONFIGURE_ARGS+=	--with-curl
 
 BUILDLINK_TRANSFORM+=	rm:-Werror
 
