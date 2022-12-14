@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.1 2022/12/08 19:16:20 khorben Exp $
+$NetBSD: distinfo,v 1.2 2022/12/14 15:38:59 wiz Exp $
 
-BLAKE2s (libfyaml-0.7.12.tar.gz) = d3a2986816a70ee0f0155233b7aea9b83de297a57af9932145ebca7bc64576bf
-SHA512 (libfyaml-0.7.12.tar.gz) = 9153563353b167be5a396b71f9a2c7b9b59afde492c7515043b2d94348093bcb65cde823a83d41812b7d20a5a9ed2ed06ca4f30a8c65f842add1a75a28ca113d
-Size (libfyaml-0.7.12.tar.gz) = 354250 bytes
-SHA1 (patch-configure.ac) = 6050829ddfe6d04833190d910c226cef54e4dd91
+BLAKE2s (libfyaml-0.7.12/libfyaml-0.7.12.tar.gz) = c43756b236e54d048fdbace52e60927875566b188d3247e5dac5977a13dcab2b
+SHA512 (libfyaml-0.7.12/libfyaml-0.7.12.tar.gz) = 568beadf007d002babd760abbf8153ef8c4191dface276d8614b30ffc0c9606eb7cffc2f63047042f843da5ded7ef4b302b36a36ed19a6f38e2c6e22f310aa29
+Size (libfyaml-0.7.12/libfyaml-0.7.12.tar.gz) = 757218 bytes
+SHA1 (patch-configure) = 75356f186f967f0048707153e5a051d18d8f0efa
 SHA1 (patch-include_libfyaml.h) = e50484d638d0fd0ab850d154249b9996cb3f5101
 SHA1 (patch-src_internal_libfyaml-parser.c) = 44567a6ee961bd304b4c3ea677d02d5516374281
 SHA1 (patch-src_lib_fy-atom.c) = 3a5390ea153bb8642cd8c6ebcae06a3d72e87be7
