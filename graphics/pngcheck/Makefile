@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2012/10/06 14:11:14 asau Exp $
+# $NetBSD: Makefile,v 1.5 2022/12/14 14:33:24 fcambus Exp $
 
-DISTNAME=	pngcheck-2.3.0
+DISTNAME=	pngcheck-3.0.3
 CATEGORIES=	graphics
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=png-mng/}
+MASTER_SITES=	http://www.libpng.org/pub/png/src/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.libpng.org/pub/png/apps/pngcheck.html
