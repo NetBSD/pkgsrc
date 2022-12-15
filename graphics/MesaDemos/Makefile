@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2022/08/11 05:08:38 gutteridge Exp $
+# $NetBSD: Makefile,v 1.51 2022/12/15 10:36:37 jperkin Exp $
 
 DISTNAME=	mesa-demos-8.4.0
 PKGNAME=	${DISTNAME:S/mesa-demos/MesaDemos/}
@@ -63,6 +63,7 @@ post-install:
 .  endfor
 .endif
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../graphics/freeglut/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
