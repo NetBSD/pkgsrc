@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2022/12/15 22:13:50 nikita Exp $
+include/libvterm03/vterm.h
+include/libvterm03/vterm_keycodes.h
+lib/libvterm03/libvterm.la
+lib/pkgconfig/vterm03.pc
+@pkgdir lib/libvterm03/pkgconfig
