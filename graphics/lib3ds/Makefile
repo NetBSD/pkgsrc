@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2022/08/11 05:08:44 gutteridge Exp $
+# $NetBSD: Makefile,v 1.25 2022/12/15 10:37:02 jperkin Exp $
 
 DISTNAME=	lib3ds-1.2.0
 PKGREVISION=	10
@@ -17,6 +17,7 @@ pre-configure:
 	cd ${WRKSRC} && libtoolize --force
 	cd ${WRKSRC} && autoreconf -i --force
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/freeglut/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
