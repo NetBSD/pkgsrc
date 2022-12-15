@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2022/03/02 21:31:07 nia Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/12/15 12:25:31 nia Exp $
 bin/crawl
 share/stone-soup/dat/clua/autofight.lua
 share/stone-soup/dat/clua/automagic.lua
@@ -127,6 +127,7 @@ share/stone-soup/dat/des/serial/bayou.des
 share/stone-soup/dat/des/serial/column_ruins.des
 share/stone-soup/dat/des/serial/corridors.des
 share/stone-soup/dat/des/serial/curves.des
+share/stone-soup/dat/des/serial/demonic.des
 share/stone-soup/dat/des/serial/forest.des
 share/stone-soup/dat/des/serial/glass.des
 share/stone-soup/dat/des/serial/gnoll_camp.des
