@@ -734,6 +734,7 @@ qpopper-servermode	Enable server mode.
 qt			Enable support for QT.
 qt4			Enable support for QT4.
 qt5			Enable support for QT5.
+qt6			Enable support for QT6.
 quartz			Enable Quartz support on Mac OS X.
 quickml-analog		Enable quickml log analizer.
 quickml-limit		Enable quickml creators and members limitation.
