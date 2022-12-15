@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2022/08/11 05:08:45 gutteridge Exp $
+# $NetBSD: Makefile,v 1.13 2022/12/15 10:37:13 jperkin Exp $
 
 DISTNAME=	OpenCSG-1.3.2
 PKGNAME=	${DISTNAME:tl}
@@ -26,6 +26,7 @@ do-install:
 	${LIBTOOL} --mode=install ${INSTALL_LIB} \
 		${WRKSRC}/src/libopencsg.la ${DESTDIR}${PREFIX}/lib
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../graphics/freeglut/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
