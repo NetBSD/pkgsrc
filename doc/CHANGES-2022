@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6121 2022/12/15 12:26:01 nia Exp $
+$NetBSD: CHANGES-2022,v 1.6122 2022/12/15 13:09:43 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9223,3 +9223,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated emulators/mgba to 0.10.0 [nia 2022-12-15]
 	Updated games/stone-soup-sdl to 0.29.1 [nia 2022-12-15]
 	Updated games/stone-soup to 0.29.1 [nia 2022-12-15]
+	Updated misc/goffice0.10 to 0.10.53 [jperkin 2022-12-15]
