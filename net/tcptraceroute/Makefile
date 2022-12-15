@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2020/01/07 10:37:04 kim Exp $
+# $NetBSD: Makefile,v 1.21 2022/12/15 12:15:01 jperkin Exp $
 #
 
 DISTNAME=		tcptraceroute-1.4
@@ -18,14 +18,6 @@ DOCDIR=			${PREFIX}/share/doc/tcptraceroute
 
 SPECIAL_PERMS+=		sbin/tcptraceroute ${SETUID_ROOT_PERMS}
 
-.include "../../mk/bsd.prefs.mk"
-
-SUBST_CLASSES+=		conf
-SUBST_STAGE.conf=	pre-build
-SUBST_FILES.conf=	Makefile
-SUBST_SED.conf=		-e "s|libnet-config|libnet10-config|g"
-SUBST_MESSAGE.conf=	Fixing configuration script.
-
 INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin ${DOCDIR}
 
 do-install:
@@ -35,5 +27,4 @@ do-install:
 
 .include "../../devel/libnet10/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"

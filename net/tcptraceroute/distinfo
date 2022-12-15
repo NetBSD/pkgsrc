@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 11:07:01 nia Exp $
+$NetBSD: distinfo,v 1.10 2022/12/15 12:15:01 jperkin Exp $
 
 BLAKE2s (tcptraceroute-1.4.tar.gz) = 3f60b21786293a78a4f701e358eca44165921a1fce0cb00c5bff1674fd979faa
 SHA512 (tcptraceroute-1.4.tar.gz) = 6aea6a8bba08a0f0024769155bb7e0d8a3a4741e4e4375f66fde3bec644bff782027b3bd8a657120f259dfff9da0ad8ab83598a15823467efeb31a64cbd43287
 Size (tcptraceroute-1.4.tar.gz) = 31918 bytes
-SHA1 (patch-aa) = 26899ae5898dcdbaa8b12a178ff6c2b362a675c9
+SHA1 (patch-aa) = 0734b9964415871b50414ba037831b2d703db33a
 SHA1 (patch-ab) = 306c6cbae3e08b7db45883eb655646b80278bb92
