@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2022/06/28 11:33:59 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2022/12/15 10:36:49 jperkin Exp $
 #
 
 DISTNAME=		openrm-devel-1.5.2
@@ -45,6 +45,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}/images
 	${INSTALL_DATA} ${WRKSRC}/doc/HTML/images/* ${DESTDIR}${DOCDIR}/images
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
