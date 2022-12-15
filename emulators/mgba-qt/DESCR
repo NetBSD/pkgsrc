@@ -4,4 +4,5 @@ emulators, as well as adding features that other emulators lack.
 
 It also supports Game Boy and Game Boy Color games.
 
-This package contains the command line version.
+This package contains the Qt graphical user interface and the
+command line version.
