@@ -1,0 +1,6 @@
+GNU mailutils is a powerful protocol-independent mail framework. It
+provides a set of libraries for writing flexible mail-handling
+software, as well as a number of utilities for both local and remote
+mail handling. Among the utilities provided are pop3 and imap4
+servers, sieve mail filtering utility, mailx-compatible mail client
+and others.
