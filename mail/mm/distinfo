@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2022/12/15 12:50:51 vins Exp $
+
+BLAKE2s (mm-0.96.0.14.tar.xz) = daf134b5d63c1b05e5701ba8c5f3bcdd3cd9fcaea17d08f9de06ade3aa136aa0
+SHA512 (mm-0.96.0.14.tar.xz) = c683d5cf8067314679bc107f39c5fabe40c926cdfa82fca232f6b24f55892087ef293c60eb884491d3e13374c04010213fa28d9f05c44f34605d15f065001c1d
+Size (mm-0.96.0.14.tar.xz) = 725328 bytes
+SHA1 (patch-Makefile) = a7bb46db85380521de4ec8401c70a03b4f6d3116

@@ -1,0 +1,23 @@
+# System-wide initialization file for Columbia MM, version 0.96.0(14)
+# note that all lines beginning with "#" are comments
+
+# default mail format
+set default-mail-type mbox
+
+# default mail file
+set mail-file ~/mbox
+
+# possible paths for the mm authors
+define mm-authors bug-mm@columbia.edu
+
+# bug-mm is a local consultant who handles most mm problems
+# (No local bug address)
+define bug-mm mm-authors
+
+# path of default editor
+set editor /usr/bin/vi
+# is editor GNU Emacs
+set gnuemacs-mmail no
+
+# path for spell program
+set speller /usr/pkg/bin/hunspell

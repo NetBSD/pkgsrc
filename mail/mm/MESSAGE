@@ -1,0 +1,12 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2022/12/15 12:50:51 vins Exp $
+
+To configure mm, run ${PREFIX}/bin/mm-sysprof to enter the interactive
+setup.
+Then move the generated 'mm.conf' file to ${PREFIX}/pkg/lib/mm.
+Sample configuration files are available at ${PREFIX}/share/examples/mm.
+
+For the Emacs `mmail' mode, load the lisp library file provided as: 
+${PREFIX}/lib/mm/mmail.el. 
+
+===========================================================================
