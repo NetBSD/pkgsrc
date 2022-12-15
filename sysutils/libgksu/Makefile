@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2022/11/21 18:20:45 jperkin Exp $
+# $NetBSD: Makefile,v 1.52 2022/12/15 11:30:51 jperkin Exp $
 
 DISTNAME=	libgksu-2.0.12
 PKGREVISION=	17
@@ -20,6 +20,7 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake intltool pkg-config msgfmt
 
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-O1
+BUILDLINK_TRANSFORM.SunOS+=	rm:-lutil
 
 GCONF_SCHEMAS+=		gksu.schemas
 PKGCONFIG_OVERRIDE+=	libgksu/libgksu2.pc.in
