@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6122 2022/12/15 13:09:43 jperkin Exp $
+$NetBSD: CHANGES-2022,v 1.6123 2022/12/15 13:17:25 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9224,3 +9224,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated games/stone-soup-sdl to 0.29.1 [nia 2022-12-15]
 	Updated games/stone-soup to 0.29.1 [nia 2022-12-15]
 	Updated misc/goffice0.10 to 0.10.53 [jperkin 2022-12-15]
+	Updated math/gnumeric112 to 1.12.53 [jperkin 2022-12-15]
