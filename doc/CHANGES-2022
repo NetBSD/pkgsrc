@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6130 2022/12/15 23:05:48 adam Exp $
+$NetBSD: CHANGES-2022,v 1.6131 2022/12/15 23:22:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9235,3 +9235,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/opa to 0.47.3 [leot 2022-12-15]
 	Updated archivers/xz to 5.4.0 [adam 2022-12-15]
 	Updated net/py-aioresponses to 0.7.4 [adam 2022-12-15]
+	Updated textproc/py-nltk to 3.8 [adam 2022-12-15]
+	Updated textproc/py-lxml to 4.9.2 [adam 2022-12-15]
