@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2022/08/30 15:41:11 bsiegert Exp $
+# $NetBSD: Makefile,v 1.3 2022/12/15 22:28:47 nikita Exp $
 
-DISTNAME=	neovim-0.7.2
+DISTNAME=	neovim-0.8.1
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=neovim/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -48,7 +48,7 @@ post-extract:
 .endif
 .include "../../devel/libtermkey/buildlink3.mk"
 .include "../../devel/libuv/buildlink3.mk"
-.include "../../devel/libvterm01/buildlink3.mk"
+.include "../../devel/libvterm03/buildlink3.mk"
 .include "../../devel/lua-luv/buildlink3.mk"
 .include "../../devel/msgpack/buildlink3.mk"
 .include "../../devel/unibilium/buildlink3.mk"
