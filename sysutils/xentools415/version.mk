@@ -1,8 +1,8 @@
-# $NetBSD: version.mk,v 1.2 2022/07/05 15:56:33 bouyer Exp $
+# $NetBSD: version.mk,v 1.3 2022/12/15 13:24:44 bouyer Exp $
 #
 # Version number is used by xentools415 and xenstoretools
 
-VERSION=	4.15.3
+VERSION=	4.15.4
 
 DIST_SUBDIR=		xen415
 DISTNAME=		xen-${VERSION}

@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2022/10/08 11:05:57 bouyer Exp $
+# $NetBSD: Makefile,v 1.22 2022/12/15 13:24:44 bouyer Exp $
 #
 # VERSION is set in version.mk as it is shared with other packages
 .include        "version.mk"
 PKGNAME=		xentools415-${VERSION}
-PKGREVISION=		1
 
 CATEGORIES=		sysutils
 
