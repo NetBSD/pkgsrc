@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/12/30 00:43:35 nia Exp $
+# $NetBSD: Makefile,v 1.2 2022/12/15 12:14:34 jperkin Exp $
 
 DISTNAME=	xtacy114
 PKGNAME=	xtacy-1.14
@@ -20,4 +20,5 @@ USE_IMAKE=	yes
 LDFLAGS.NetBSD+=	-lcrypt
 
 .include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
