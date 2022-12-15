@@ -1,0 +1,76 @@
+$NetBSD: patch-Makefile,v 1.1 2022/12/15 12:50:51 vins Exp $
+
+Let pkgsrc handle package updates.
+
+--- Makefile.orig	2014-02-27 23:00:00.000000000 +0000
++++ Makefile
+@@ -295,26 +295,13 @@ all:	mm movemail sys-prof mm-trans
+ 
+ $(BIN)/mm: mm
+ 	@echo installing MM EXECUTABLE
+-	-@ls -alg $(BIN)/mm $(BIN)/mm.old
+-	@cp mm $(BIN)/mm.new
+-	@chmod 755 $(BIN)/mm.new
+-	@if [ -f $(BIN)/mm ]; then \
+-		mv $(BIN)/mm $(BIN)/mm.old; \
+-	 fi
+-	@mv $(BIN)/mm.new $(BIN)/mm
+-	-@ls -alg $(BIN)/mm $(BIN)/mm.old
++	@cp mm $(BIN)/mm
++	@chmod 755 $(BIN)/mm
+ 
+ $(BIN)/mm-trans: mm-trans
+ 	@echo installing MM-TRANS \(transform\)
+-	-@ls -alg $(BIN)/mm-trans $(BIN)/mm-trans.old
+-	@cp mm-trans $(BIN)/mm-trans.new
+-	@if [ -f $(BIN)/mm-trans ]; then \
+-		mv $(BIN)/mm-trans $(BIN)/mm-trans.old; \
+-	 fi
+-	@mv $(BIN)/mm-trans.new $(BIN)/mm-trans
++	@cp mm-trans $(BIN)/mm-trans
+ 	@chmod 755 $(BIN)/mm-trans
+-	-@ls -alg $(BIN)/mm-trans $(BIN)/mm-trans.old
+-
+ 
+ argsort: argsort.c
+ 	$(CC) $(CFLAGS) $(LDFLAGS) -o argsort argsort.c $(LIBS)
+@@ -357,7 +344,7 @@ HELP:
+ help:
+ 	@echo checking help files
+ 
+-install: main-install HELP $(LOCLIB)/mm.conf
++install: main-install HELP
+ 
+ $(LOCLIB):
+ 	-if [ ! -d $(LOCLIB) ] ; then mkdir $(LOCLIB) ; fi
+@@ -375,27 +362,12 @@ $(LOCLIB)/mm.conf: mm.conf
+ 
+ $(LOCLIB)/mmail.el: mmail.el
+ 	@echo installing MMAIL.EL
+-	-@ls -alg $(LOCLIB)/mmail.el $(LOCLIB)/mmail.el.old
+-	@cp mmail.el $(LOCLIB)/mmail.el.new
+-	@chmod 664 $(LOCLIB)/mmail.el.new
+-	@if [ -f $(LOCLIB)/mmail.el ]; then \
+-		 mv $(LOCLIB)/mmail.el $(LOCLIB)/mmail.el.old; \
+-	 fi
+-	 @mv $(LOCLIB)/mmail.el.new $(LOCLIB)/mmail.el
+-	-@ls -alg $(LOCLIB)/mmail.el $(LOCLIB)/mmail.el.old
++	@cp mmail.el $(LOCLIB)/mmail.el
++	@chmod 664 $(LOCLIB)/mmail.el
+ 
+ $(LOCLIB)/movemail: movemail
+ 	@echo installing MOVEMAIL
+-	-@ls -alg $(LOCLIB)/movemail $(LOCLIB)/movemail.old
+-	@cp movemail $(LOCLIB)/movemail.new
+-	@if [ -f $(LOCLIB)/movemail ]; then \
+-		mv $(LOCLIB)/movemail $(LOCLIB)/movemail.old; \
+-	 fi
+-	@mv $(LOCLIB)/movemail.new $(LOCLIB)/movemail
+-	@chgrp daemon $(LOCLIB)/movemail
+-	@chmod 2751 $(LOCLIB)/movemail
+-	-@ls -alg $(LOCLIB)/movemail $(LOCLIB)/movemail.old
+-
++	@cp movemail $(LOCLIB)/movemail
+ 
+ $(LOCLIB)/help: help
+ 	@echo installing HELP

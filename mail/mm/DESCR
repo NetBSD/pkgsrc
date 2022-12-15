@@ -1,0 +1,8 @@
+Columbia MM (Mail Manager) is an interactive, text-mode mail client for
+UNIX, based on the TOPS-20 MM program. It is written in C using the CCMD
+(TOPS-20 COMND Jsys in C) package developed at Columbia University.
+
+MM has a lot of  features that appeal to people who deal mainly with
+text and who like to keep their hands on the keyboard and work fast. It
+is noted for its powerful message selection and management features and
+its user-friendly (truly) DEC-20 style command language.
