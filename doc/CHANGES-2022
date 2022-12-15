@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6119 2022/12/15 10:30:36 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.6120 2022/12/15 11:33:03 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9218,3 +9218,6 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/syslog-ng to 3.38.1 [wiz 2022-12-15]
 	Updated x11/modular-xorg-server to 21.1.5 [wiz 2022-12-15]
 	Updated x11/modular-xorg-xephyr to 21.1.5 [wiz 2022-12-15]
+	Updated emulators/libretro-mgba to 0.10.0 [nia 2022-12-15]
+	Added emulators/mgba-qt version 0.10.0 [nia 2022-12-15]
+	Updated emulators/mgba to 0.10.0 [nia 2022-12-15]
