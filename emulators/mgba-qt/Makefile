@@ -1,0 +1,37 @@
+# $NetBSD: Makefile,v 1.1 2022/12/15 11:31:44 nia Exp $
+
+.include "${.CURDIR}/../../emulators/mgba/Makefile.common"
+
+PKGNAME=	${DISTNAME:S/mgba-/mgba-qt-/g}
+COMMENT=	Emulator for running Game Boy Advance games (GUI version)
+
+CONFLICTS+=	mgba-[0-9]*
+
+CMAKE_ARGS+=	-DBUILD_QT=ON
+
+# performance problems...
+CMAKE_ARGS+=	-DBUILD_GL=OFF
+CMAKE_ARGS+=	-DUSE_EPOXY=OFF
+
+# C++14
+GCC_REQD+=	5
+
+# We probably don't actually want Qt5Multimedia.
+# It's an option as an audio output, but SDL supports many more pkgsrc
+# platforms natively, without going via PulseAudio.
+CMAKE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_Qt5Multimedia=TRUE
+
+TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
+
+.include "options.mk"
+.include "../../archivers/libzip/buildlink3.mk"
+.include "../../databases/sqlite3/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../devel/SDL2/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../lang/lua/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/buildlink3.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
