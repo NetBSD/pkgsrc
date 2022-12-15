@@ -1,4 +1,4 @@
-# $NetBSD: cargo.mk,v 1.30 2022/05/24 09:51:51 nia Exp $
+# $NetBSD: cargo.mk,v 1.31 2022/12/15 21:47:46 jperkin Exp $
 #
 # Common logic that can be used by packages that depend on cargo crates
 # from crates.io. This lets existing pkgsrc infrastructure fetch and verify
@@ -35,6 +35,9 @@ DISTFILES+=			${crate}.crate
 SITES.${crate}.crate+=		-${MASTER_SITE_CRATESIO}${crate:C/-[0-9]+\.[0-9.]+.*$//}/${crate:C/^.*-([0-9]+\.[0-9.]+.*)$/\1/}/download
 EXTRACT_DIR.${crate}.crate?=	${CARGO_VENDOR_DIR}
 .endfor
+
+# pkgsrc handles stripping and we might need to generate CTF data.
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--strip-all
 
 .include "../../mk/bsd.prefs.mk"
 # Triggers NetBSD ld.so bug (PR toolchain/54192)
