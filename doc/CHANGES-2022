@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6114 2022/12/14 20:49:02 reinoud Exp $
+$NetBSD: CHANGES-2022,v 1.6115 2022/12/15 08:26:42 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9212,3 +9212,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated shells/bash to 5.2.15 [kre 2022-12-14]
 	Updated lang/gleam to 0.25.1 [nikita 2022-12-14]
 	Added shells/es-shell version 0.9.2 [nikita 2022-12-14]
+	Updated www/luakit to 2.3.3 [nia 2022-12-15]
