@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2022/05/21 10:38:25 nia Exp $
+@comment $NetBSD: PLIST,v 1.11 2022/12/15 09:18:20 wiz Exp $
 bin/aria_chk
 bin/aria_dump_log
 bin/aria_ftdump
@@ -193,6 +193,7 @@ include/mysql/server/private/sql_crypt.h
 include/mysql/server/private/sql_cte.h
 include/mysql/server/private/sql_cursor.h
 include/mysql/server/private/sql_db.h
+include/mysql/server/private/sql_debug.h
 include/mysql/server/private/sql_delete.h
 include/mysql/server/private/sql_derived.h
 include/mysql/server/private/sql_digest.h
@@ -281,6 +282,7 @@ include/mysql/server/private/wsrep_high_priority_service.h
 include/mysql/server/private/wsrep_mutex.h
 include/mysql/server/private/wsrep_mysqld.h
 include/mysql/server/private/wsrep_mysqld_c.h
+include/mysql/server/private/wsrep_on.h
 include/mysql/server/private/wsrep_priv.h
 include/mysql/server/private/wsrep_schema.h
 include/mysql/server/private/wsrep_server_service.h
@@ -311,6 +313,7 @@ lib/mysql/plugin/auth_test_plugin.so
 lib/mysql/plugin/daemon_example.ini
 lib/mysql/plugin/debug_key_management.so
 lib/mysql/plugin/dialog_examples.so
+lib/mysql/plugin/disks.so
 lib/mysql/plugin/example_key_management.so
 lib/mysql/plugin/file_key_management.so
 lib/mysql/plugin/func_test.so
