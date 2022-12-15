@@ -1,8 +1,10 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/07/21 22:26:53 kim Exp $
+$NetBSD: patch-aa,v 1.2 2022/12/15 12:15:01 jperkin Exp $
 
---- Makefile.orig	Sun May 19 21:11:38 2002
-+++ Makefile	Mon Jul 21 16:54:09 2003
-@@ -4,7 +4,7 @@
+Find correct libraries.
+
+--- Makefile.orig	2002-05-20 01:11:38.000000000 +0000
++++ Makefile
+@@ -4,13 +4,13 @@
  # Copyright (c) 2001, 2002 Michael C. Toren <mct@toren.net>
  
  CC = gcc
@@ -11,3 +13,10 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/07/21 22:26:53 kim Exp $
  DESTDIR=/usr/local/bin
  
  tcptraceroute: tcptraceroute.c
+ 	$(CC) $(CFLAGS) `libnet-config --defines` \
+ 		-o tcptraceroute tcptraceroute.c \
+-		`libnet-config --libs` -lpcap
++		`libnet10-config --libs` `pcap-config --libs`
+ 
+ static:
+ 	$(MAKE) tcptraceroute CFLAGS="$(CFLAGS) -static"
