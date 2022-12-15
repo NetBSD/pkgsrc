@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2021/12/08 16:06:38 adam Exp $
+# $NetBSD: Makefile,v 1.4 2022/12/15 10:09:43 wiz Exp $
 
 SYSLOG_MOD=		redis
 COMMENT=		Syslog-ng Redis module
-PKGREVISION=		1
 
 .include "../../sysutils/syslog-ng/module.mk"
 
