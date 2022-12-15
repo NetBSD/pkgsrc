@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:43:57 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/12/15 18:45:07 he Exp $
 
 BLAKE2s (fallingtime-1.0.2.tar.gz) = 9424053f5b42acc276afc313f08f986ec5556c5f18da01b7c719229f5d992b13
 SHA512 (fallingtime-1.0.2.tar.gz) = ada433b2a43558eea10b9e63564fc467640df96d5c3b6007610b9a4987e6f3cc6d5b0ef155da513d4f651be2a8e3cd9cdc59d6cbbeec5a58d66f408de1cd4929
@@ -6,4 +6,3 @@ Size (fallingtime-1.0.2.tar.gz) = 1879166 bytes
 SHA1 (patch-CMakeLists.txt) = 27d7c488cdd24162f49f3391c75e7b8afb8ba521
 SHA1 (patch-cfgpath.h) = 95f82b5c981136a43b68764b33ded926e4dd807a
 SHA1 (patch-chipmunk_include_chipmunk_chipmunk.h) = 076caf52ccd588c59f0448050350af7209f6360e
-SHA1 (patch-pkg_default.gcw0.desktop) = c3cc6d289369cbfb49ea3adf2f068c49717a71af
