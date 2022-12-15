@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2017/08/16 21:22:11 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2022/12/15 12:13:59 jperkin Exp $
 #
 
 DISTNAME=	libmtag-0.3.2
@@ -19,4 +19,5 @@ USE_LIBTOOL=	yes
 PKGCONFIG_OVERRIDE+=	libmtag.pc.in
 
 .include "../../audio/taglib/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
