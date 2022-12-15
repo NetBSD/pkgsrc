@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/12/12 20:56:49 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2022/12/15 10:34:05 jperkin Exp $
 
 DISTNAME=	parlatype-3.1
 CATEGORIES=	audio
@@ -12,6 +12,11 @@ LICENSE=	gnu-gpl-v3 AND cc-by-sa-v4.0
 
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		itstool msgfmt pkg-config
+
+MESON_ARGS+=	-Dlocaledir=${PKGLOCALEDIR}/locale
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,${WRKSRC}/libparlatype/src/libparlatype.map
 
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
 PKGCONFIG_OVERRIDE+=		output/meson-private/parlatype.pc
