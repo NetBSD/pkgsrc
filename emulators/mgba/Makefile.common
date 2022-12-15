@@ -1,0 +1,26 @@
+# $NetBSD: Makefile.common,v 1.1 2022/12/15 11:31:44 nia Exp $
+
+# used by emulators/libretro-mgba/Makefile
+# used by emulators/mgba/Makefile
+# used by emulators/mgba-qt/Makefile
+
+DISTNAME=	mgba-0.10.0
+CATEGORIES=	emulators
+MASTER_SITES=	${MASTER_SITE_GITHUB:=mgba-emu/}
+
+MAINTAINER=	nia@NetBSD.org
+HOMEPAGE?=	https://mgba.io/
+LICENSE=	mpl-2.0
+
+USE_TOOLS+=	pkg-config
+USE_CMAKE=	yes
+USE_LANGUAGES=	c c++
+
+CMAKE_ARGS+=	-DUSE_DISCORD_RPC=OFF
+CMAKE_ARGS+=	-DUSE_MINIZIP=OFF
+CMAKE_ARGS+=	-DSKIP_GIT=ON
+
+DISTINFO_FILE=	${.CURDIR}/../../emulators/mgba/distinfo
+PATCHDIR=	${.CURDIR}/../../emulators/mgba/patches
+
+.include "../../devel/libelf/buildlink3.mk"
