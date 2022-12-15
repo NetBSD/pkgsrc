@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:21:39 nia Exp $
+$NetBSD: distinfo,v 1.11 2022/12/15 12:14:17 jperkin Exp $
 
 BLAKE2s (sam.msg.gz) = b56e3f9fcf66f569e2cf6bd3fa03609dddc459fcec6964298e3fcf4072dd2957
 SHA512 (sam.msg.gz) = 279e9854a2177330fcb80a5ad2751b01629b35d33c759e9f2d707450753c4b5c6c3ec07cbbe4e01f1b9c43e167570e88de4f9f403f9c0fe58f360db99f40e666
@@ -13,6 +13,6 @@ SHA1 (patch-aj) = 1f6270f7893fce0d1b213fcaa4b91c6c3e82c833
 SHA1 (patch-ak) = 80f9399d23fb615da4d98488e93a58a101e57e4c
 SHA1 (patch-include_libg.h) = eaa8b3831d44b5d96d2b1154d201576878ee8d81
 SHA1 (patch-sam_B.rc) = e6d774d230656bb6ae9800e35fe20c2760e8380e
-SHA1 (patch-sam_Makefile) = 378874943b4719cb434de56d4f5aa665c66121d1
+SHA1 (patch-sam_Makefile) = 31c5a78be30dc5557211f19d30ec85212b61b7fc
 SHA1 (patch-sam_io.c) = e7ca3a59b5a493db55397655aa1db5c3ac65c508
 SHA1 (patch-samterm_Makefile) = 6772ee78eb2e5512c2002b86a851a6e71bdbdaef
