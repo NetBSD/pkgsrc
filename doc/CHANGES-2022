@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6126 2022/12/15 13:59:45 vins Exp $
+$NetBSD: CHANGES-2022,v 1.6127 2022/12/15 22:14:22 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9230,3 +9230,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated math/gnumeric112 to 1.12.53 [jperkin 2022-12-15]
 	Added mail/mm version 0.96.0.14 [vins 2022-12-15]
 	Added mail/mailutils version 3.15 [vins 2022-12-15]
+	Added devel/libvterm03 version 0.3 [nikita 2022-12-15]
