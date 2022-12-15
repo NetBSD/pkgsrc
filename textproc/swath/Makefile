@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2020/08/28 19:35:46 scole Exp $
+# $NetBSD: Makefile,v 1.11 2022/12/15 10:38:32 jperkin Exp $
 #
 
 DISTNAME=	swath-0.6.1
@@ -23,5 +23,6 @@ pre-configure:
 post-configure:
 	cd ${WRKSRC} && ${TOUCH} lib/libcompat.la
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/libdatrie/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
