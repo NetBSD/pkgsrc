@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/09/06 10:40:36 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/12/15 11:31:43 jperkin Exp $
 
 DISTNAME=	xrootconsole-0.6
 PKGREVISION=	2
@@ -11,6 +11,8 @@ COMMENT=	Windowless XConsole
 LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=		gmake
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-lutil
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
