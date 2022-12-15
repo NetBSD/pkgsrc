@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.21 2021/09/17 09:39:54 wiz Exp $
+# $NetBSD: Makefile.common,v 1.22 2022/12/15 10:09:43 wiz Exp $
 # used by sysutils/syslog-ng/Makefile
 # used by sysutils/syslog-ng/module.mk
 
-DISTNAME=	syslog-ng-3.34.1
+DISTNAME=	syslog-ng-3.38.1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=syslog-ng/}
 
@@ -46,11 +46,6 @@ CONFIGURE_ARGS+=	--with-pidfile-dir=${VARBASE}/run
 CONFIGURE_ARGS.SunOS+=	--enable-dynamic-linking
 CONFIGURE_ARGS.SunOS+=	ac_cv_func_inotify_init=no
 
-SUBST_CLASSES+=		unamepath
-SUBST_STAGE.unamepath=	post-configure
-SUBST_FILES.unamepath=	contrib/syslog2ng
-SUBST_SED.unamepath=	-e s,/bin/uname,${UNAME},
-
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 REPLACE_AWK+=		contrib/syslog2ng
@@ -71,4 +66,5 @@ post-extract:
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../textproc/json-c/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
