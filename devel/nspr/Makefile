@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.121 2022/09/12 13:12:44 wiz Exp $
+# $NetBSD: Makefile,v 1.122 2022/12/15 23:01:17 adam Exp $
 
 DISTNAME=	nspr-${NSPR_RELEASE:S/.0$//}
 NSPR_RELEASE=	4.35.0
@@ -27,11 +27,11 @@ REPLACE_PERL+=		nspr/pr/src/misc/compile-et.pl
 
 CONFIGURE_ARGS+=	--disable-debug
 CONFIGURE_ARGS+=	--with-pthreads
-CONFIGURE_ENV+=		LIBRUNPATH=${PREFIX:Q}/lib/nspr
+CONFIGURE_ENV+=		LIBRUNPATH=${PREFIX}/lib/nspr
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+.if ${USE_CROSS_COMPILE:U:tl} == yes
 MAKE_FLAGS+=		HOST_CC=${NATIVE_CC:Q}
 MAKE_FLAGS+=		HOST_CXX=${NATIVE_CXX:Q}
 .endif
