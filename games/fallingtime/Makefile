@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2022/09/11 12:51:39 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2022/12/15 18:45:07 he Exp $
 
 DISTNAME=	fallingtime-1.0.2
 PKGREVISION=	7
@@ -15,7 +15,10 @@ EXTRACT_USING=	bsdtar
 WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c99 c++
+USE_LANGUAGES=	gnu99 c++
+
+# Also needed for alloca(), c99 creeps in and overrides otherwise...
+BUILDLINK_TRANSFORM+=	opt:-std=c99:-std=gnu99
 
 CMAKE_ARGS+=	-DINSTALL_PREFIX=${PREFIX}/libexec
 CMAKE_ARGS+=	-DINSTALL_DATA_PREFIX=${PREFIX}/share/fallingtime
