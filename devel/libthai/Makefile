@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2020/03/24 17:09:26 nia Exp $
+# $NetBSD: Makefile,v 1.21 2022/12/15 10:34:30 jperkin Exp $
 
 DISTNAME=	libthai-0.1.28
 CATEGORIES=	devel
@@ -17,5 +17,6 @@ CONFIGURE_ARGS+=	--disable-doxygen-doc
 PKGCONFIG_OVERRIDE+=	libthai.pc.in
 TEST_TARGET=		check
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/libdatrie/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
