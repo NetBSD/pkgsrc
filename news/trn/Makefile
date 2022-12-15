@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2022/06/28 11:35:23 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2022/12/15 11:30:36 jperkin Exp $
 
 DISTNAME=		trn-4.0-test77
 PKGNAME=		trn-4.77
@@ -49,6 +49,7 @@ CONFIGURE_ARGS+=	-d -e -D bin=${PREFIX:Q}/bin \
 			-D installbin=${DESTDIR:Q}${PREFIX:Q}'/bin' \
 			-D installmansrc=${DESTDIR:Q}${PREFIX:Q}/${PKGMANDIR:Q}/man1 \
 			-D installprivlib=${DESTDIR:Q}${PREFIX:Q}'/share/trn' \
+			-D ldflags=${LDFLAGS:Q} \
 			-D libpth=${PREFIX:Q}'/lib /usr/lib' \
 			-D mansrc=${PREFIX:Q}/${PKGMANDIR:Q}'/man1' \
 			-D mansrcexp=${PREFIX:Q}/${PKGMANDIR:Q}'/man1' \
