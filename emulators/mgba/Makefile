@@ -1,28 +1,18 @@
-# $NetBSD: Makefile,v 1.38 2022/11/23 16:19:58 adam Exp $
+# $NetBSD: Makefile,v 1.39 2022/12/15 11:31:44 nia Exp $
 
-DISTNAME=	mgba-0.9.3
-PKGREVISION=	7
-CATEGORIES=	emulators
-MASTER_SITES=	${MASTER_SITE_GITHUB:=mgba-emu/}
+.include "Makefile.common"
 
-MAINTAINER=	nia@NetBSD.org
-HOMEPAGE=	https://mgba.io/
-COMMENT=	Emulator for running Game Boy Advance games
-LICENSE=	mpl-2.0
+COMMENT=	Emulator for running Game Boy Advance games (CLI version)
 
-USE_TOOLS+=	pkg-config
-USE_CMAKE=	yes
-USE_LANGUAGES=	c c++
+CONFLICTS+=	mgba-qt-[0-9]*
 
-# C++14
-GCC_REQD+=	5
+CMAKE_ARGS+=	-DBUILD_QT=OFF
 
-CMAKE_ARGS+=	-DUSE_DISCORD_RPC=OFF
-CMAKE_ARGS+=	-DSKIP_GIT=ON
+# XXX: unsure if any of this is useful with the SDL driver
+CMAKE_ARGS+=	-DUSE_FFMPEG=OFF
 
 .include "options.mk"
 .include "../../archivers/libzip/buildlink3.mk"
-.include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/libelf/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"

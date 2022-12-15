@@ -1,26 +1,16 @@
-# $NetBSD: Makefile,v 1.15 2021/12/19 11:37:10 nia Exp $
+# $NetBSD: Makefile,v 1.16 2022/12/15 11:31:44 nia Exp $
 
-DISTNAME=	mgba-0.9.3
+.include "${.CURDIR}/../../emulators/mgba/Makefile.common"
+
 PKGNAME=	libretro-${DISTNAME}
-CATEGORIES=	emulators
-MASTER_SITES=	${MASTER_SITE_GITHUB:=mgba-emu/}
-GITHUB_PROJECT=	mgba
 
-MAINTAINER=	nia@NetBSD.org
 HOMEPAGE=	https://docs.libretro.com/library/mgba/
 COMMENT=	Libretro core based on the mGBA emulator
-LICENSE=	mpl-2.0
-
-USE_CMAKE=	yes
-USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c c++
 
 OPSYSVARS+=	SOEXT
 SOEXT.Darwin=	dylib
 SOEXT.*=	so
 PLIST_SUBST+=	SOEXT=${SOEXT}
-
-WRKSRC=		${WRKDIR}/mgba-${PKGVERSION_NOREV}
 
 CMAKE_ARGS+=	-DUSE_DEBUGGERS=OFF
 CMAKE_ARGS+=	-DUSE_GDB_STUB=OFF
