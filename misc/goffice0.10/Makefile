@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2022/11/23 16:18:52 adam Exp $
+# $NetBSD: Makefile,v 1.51 2022/12/15 13:09:32 jperkin Exp $
 
-DISTNAME=		goffice-0.10.48
+DISTNAME=		goffice-0.10.53
 PKGNAME=		${DISTNAME:S/goffice/goffice0.10/}
-PKGREVISION=		5
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/goffice/0.10/}
 EXTRACT_SUFX=		.tar.xz
@@ -14,9 +13,10 @@ LICENSE=		gnu-gpl-v2
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
-PKGCONFIG_OVERRIDE+=	${WRKSRC}/libgoffice.pc.in
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		bison gmake intltool msgfmt pkg-config
+
+PKGCONFIG_OVERRIDE+=	libgoffice.pc.in
 
 TEST_TARGET=		check
 
@@ -35,7 +35,6 @@ BUILDLINK_API_DEPENDS.gdk-pibxbuf2+=	gdk-pixbuf2>=2.22.0
 BUILDLINK_API_DEPENDS.librsvg+=	librsvg>=2.22.0
 .include "../../graphics/librsvg/buildlink3.mk"
 .include "../../graphics/lasem/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libxml2+=	libxml2>=2.4.12
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.8.7
