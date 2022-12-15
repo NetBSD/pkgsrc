@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6120 2022/12/15 11:33:03 nia Exp $
+$NetBSD: CHANGES-2022,v 1.6121 2022/12/15 12:26:01 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9221,3 +9221,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated emulators/libretro-mgba to 0.10.0 [nia 2022-12-15]
 	Added emulators/mgba-qt version 0.10.0 [nia 2022-12-15]
 	Updated emulators/mgba to 0.10.0 [nia 2022-12-15]
+	Updated games/stone-soup-sdl to 0.29.1 [nia 2022-12-15]
+	Updated games/stone-soup to 0.29.1 [nia 2022-12-15]
