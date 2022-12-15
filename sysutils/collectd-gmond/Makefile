@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/10/24 22:39:46 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2022/12/15 10:38:08 jperkin Exp $
 
 COLLECTD_PACKAGE=	gmond
 
@@ -9,4 +9,5 @@ COLLECTD_LIB.ganglia=	${BUILDLINK_PREFIX.ganglia-monitor-core}
 
 .include "../../sysutils/collectd/Makefile.common"
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
