@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2021/09/16 09:22:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.19 2022/12/15 10:09:43 wiz Exp $
 bin/dqtool
 bin/loggen
 bin/pdbtool
@@ -51,8 +51,11 @@ include/syslog-ng/compat/socket.h
 include/syslog-ng/compat/string.h
 include/syslog-ng/compat/time.h
 include/syslog-ng/compat/un.h
+include/syslog-ng/control/control-command-thread.h
 include/syslog-ng/control/control-commands.h
+include/syslog-ng/control/control-connection.h
 include/syslog-ng/control/control-main.h
+include/syslog-ng/control/control-server-unix.h
 include/syslog-ng/control/control-server.h
 include/syslog-ng/control/control.h
 include/syslog-ng/crypto.h
@@ -80,6 +83,7 @@ include/syslog-ng/filter/filter-pri.h
 include/syslog-ng/filter/filter-re.h
 include/syslog-ng/filter/filter-tags.h
 include/syslog-ng/find-crlf.h
+include/syslog-ng/generic-number.h
 include/syslog-ng/gprocess.h
 include/syslog-ng/gsockaddr.h
 include/syslog-ng/gsocket.h
@@ -104,6 +108,7 @@ include/syslog-ng/logmsg/serialization.h
 include/syslog-ng/logmsg/tags-serialize.h
 include/syslog-ng/logmsg/tags.h
 include/syslog-ng/logmsg/timestamp-serialize.h
+include/syslog-ng/logmsg/type-hinting.h
 include/syslog-ng/logpipe.h
 include/syslog-ng/logproto/logproto-buffered-server.h
 include/syslog-ng/logproto/logproto-builtins.h
@@ -131,6 +136,7 @@ include/syslog-ng/logwriter.h
 include/syslog-ng/mainloop-call.h
 include/syslog-ng/mainloop-control.h
 include/syslog-ng/mainloop-io-worker.h
+include/syslog-ng/mainloop-threaded-worker.h
 include/syslog-ng/mainloop-worker.h
 include/syslog-ng/mainloop.h
 include/syslog-ng/memtrace.h
@@ -161,12 +167,15 @@ include/syslog-ng/resolved-configurable-paths.h
 include/syslog-ng/rewrite/rewrite-expr-parser.h
 include/syslog-ng/rewrite/rewrite-expr.h
 include/syslog-ng/rewrite/rewrite-groupset.h
+include/syslog-ng/rewrite/rewrite-rename.h
 include/syslog-ng/rewrite/rewrite-set-facility.h
+include/syslog-ng/rewrite/rewrite-set-matches.h
 include/syslog-ng/rewrite/rewrite-set-pri.h
 include/syslog-ng/rewrite/rewrite-set-severity.h
 include/syslog-ng/rewrite/rewrite-set-tag.h
 include/syslog-ng/rewrite/rewrite-set.h
 include/syslog-ng/rewrite/rewrite-subst.h
+include/syslog-ng/rewrite/rewrite-unset-matches.h
 include/syslog-ng/rewrite/rewrite-unset.h
 include/syslog-ng/ringbuffer.h
 include/syslog-ng/run-id.h
@@ -240,7 +249,6 @@ include/syslog-ng/transport/transport-pipe.h
 include/syslog-ng/transport/transport-socket.h
 include/syslog-ng/transport/transport-tls.h
 include/syslog-ng/transport/transport-udp-socket.h
-include/syslog-ng/type-hinting.h
 include/syslog-ng/userdb.h
 include/syslog-ng/utf8utils.h
 include/syslog-ng/uuid.h
@@ -282,6 +290,7 @@ lib/syslog-ng/libkvformat.la
 lib/syslog-ng/liblinux-kmsg-format.la
 lib/syslog-ng/libmap-value-pairs.la
 lib/syslog-ng/libpseudofile.la
+lib/syslog-ng/librate-limit-filter.la
 lib/syslog-ng/libregexp-parser.la
 ${PLIST.systemd}lib/syslog-ng/libsdjournal.la
 lib/syslog-ng/libsecure-logging.la
@@ -336,11 +345,13 @@ share/syslog-ng/include/scl/iptables/iptables.conf
 share/syslog-ng/include/scl/junos/plugin.conf
 share/syslog-ng/include/scl/kafka/kafka-java.conf
 share/syslog-ng/include/scl/kafka/kafka.conf
+share/syslog-ng/include/scl/kubernetes/kubernetes.conf
 share/syslog-ng/include/scl/linux-audit/linux-audit.conf
 share/syslog-ng/include/scl/loadbalancer/gen-loadbalancer.sh
 share/syslog-ng/include/scl/loadbalancer/plugin.conf
 share/syslog-ng/include/scl/loggly/loggly.conf
 share/syslog-ng/include/scl/logmatic/logmatic.conf
+share/syslog-ng/include/scl/mariadb/audit.conf
 share/syslog-ng/include/scl/mbox/mbox.conf
 share/syslog-ng/include/scl/netskope/plugin.conf
 share/syslog-ng/include/scl/nodejs/plugin.conf
