@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2022/11/23 16:19:37 adam Exp $
+# $NetBSD: Makefile,v 1.18 2022/12/15 00:02:24 wiz Exp $
 
 MODNAME=	mongodb
 PECL_VERSION=	1.9.1
@@ -10,7 +10,8 @@ COMMENT=	MongoDB database driver
 PKGREVISION=	3
 LICENSE=	apache-2.0
 
-PHP_VERSIONS_INCOMPATIBLE=	56
+# newer versions support 8.1+
+PHP_VERSIONS_INCOMPATIBLE=	56 81 82
 
 USE_TOOLS+=		pkg-config gmake
 CONFIGURE_ARGS+=	--with-libbson
