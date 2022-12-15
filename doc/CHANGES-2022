@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6129 2022/12/15 22:47:58 leot Exp $
+$NetBSD: CHANGES-2022,v 1.6130 2022/12/15 23:05:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9233,3 +9233,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/libvterm03 version 0.3 [nikita 2022-12-15]
 	Updated editors/neovim to 0.8.1 [nikita 2022-12-15]
 	Updated devel/opa to 0.47.3 [leot 2022-12-15]
+	Updated archivers/xz to 5.4.0 [adam 2022-12-15]
+	Updated net/py-aioresponses to 0.7.4 [adam 2022-12-15]
