@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/11/29 17:09:45 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/12/15 23:15:24 adam Exp $
 bin/nltk-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -188,6 +188,9 @@ ${PYSITELIB}/nltk/corpus/reader/aligned.pyo
 ${PYSITELIB}/nltk/corpus/reader/api.py
 ${PYSITELIB}/nltk/corpus/reader/api.pyc
 ${PYSITELIB}/nltk/corpus/reader/api.pyo
+${PYSITELIB}/nltk/corpus/reader/bcp47.py
+${PYSITELIB}/nltk/corpus/reader/bcp47.pyc
+${PYSITELIB}/nltk/corpus/reader/bcp47.pyo
 ${PYSITELIB}/nltk/corpus/reader/bnc.py
 ${PYSITELIB}/nltk/corpus/reader/bnc.pyc
 ${PYSITELIB}/nltk/corpus/reader/bnc.pyo
@@ -239,6 +242,9 @@ ${PYSITELIB}/nltk/corpus/reader/knbc.pyo
 ${PYSITELIB}/nltk/corpus/reader/lin.py
 ${PYSITELIB}/nltk/corpus/reader/lin.pyc
 ${PYSITELIB}/nltk/corpus/reader/lin.pyo
+${PYSITELIB}/nltk/corpus/reader/markdown.py
+${PYSITELIB}/nltk/corpus/reader/markdown.pyc
+${PYSITELIB}/nltk/corpus/reader/markdown.pyo
 ${PYSITELIB}/nltk/corpus/reader/mte.py
 ${PYSITELIB}/nltk/corpus/reader/mte.pyc
 ${PYSITELIB}/nltk/corpus/reader/mte.pyo
@@ -401,6 +407,9 @@ ${PYSITELIB}/nltk/internals.pyo
 ${PYSITELIB}/nltk/jsontags.py
 ${PYSITELIB}/nltk/jsontags.pyc
 ${PYSITELIB}/nltk/jsontags.pyo
+${PYSITELIB}/nltk/langnames.py
+${PYSITELIB}/nltk/langnames.pyc
+${PYSITELIB}/nltk/langnames.pyo
 ${PYSITELIB}/nltk/lazyimport.py
 ${PYSITELIB}/nltk/lazyimport.pyc
 ${PYSITELIB}/nltk/lazyimport.pyo
@@ -729,9 +738,6 @@ ${PYSITELIB}/nltk/test/crubadan.doctest
 ${PYSITELIB}/nltk/test/data.doctest
 ${PYSITELIB}/nltk/test/dependency.doctest
 ${PYSITELIB}/nltk/test/discourse.doctest
-${PYSITELIB}/nltk/test/discourse_fixt.py
-${PYSITELIB}/nltk/test/discourse_fixt.pyc
-${PYSITELIB}/nltk/test/discourse_fixt.pyo
 ${PYSITELIB}/nltk/test/drt.doctest
 ${PYSITELIB}/nltk/test/featgram.doctest
 ${PYSITELIB}/nltk/test/featstruct.doctest
@@ -750,9 +756,6 @@ ${PYSITELIB}/nltk/test/grammar.doctest
 ${PYSITELIB}/nltk/test/grammartestsuites.doctest
 ${PYSITELIB}/nltk/test/index.doctest
 ${PYSITELIB}/nltk/test/inference.doctest
-${PYSITELIB}/nltk/test/inference_fixt.py
-${PYSITELIB}/nltk/test/inference_fixt.pyc
-${PYSITELIB}/nltk/test/inference_fixt.pyo
 ${PYSITELIB}/nltk/test/internals.doctest
 ${PYSITELIB}/nltk/test/japanese.doctest
 ${PYSITELIB}/nltk/test/lm.doctest
@@ -761,9 +764,6 @@ ${PYSITELIB}/nltk/test/meteor.doctest
 ${PYSITELIB}/nltk/test/metrics.doctest
 ${PYSITELIB}/nltk/test/misc.doctest
 ${PYSITELIB}/nltk/test/nonmonotonic.doctest
-${PYSITELIB}/nltk/test/nonmonotonic_fixt.py
-${PYSITELIB}/nltk/test/nonmonotonic_fixt.pyc
-${PYSITELIB}/nltk/test/nonmonotonic_fixt.pyo
 ${PYSITELIB}/nltk/test/paice.doctest
 ${PYSITELIB}/nltk/test/parse.doctest
 ${PYSITELIB}/nltk/test/portuguese_en.doctest
@@ -780,6 +780,9 @@ ${PYSITELIB}/nltk/test/resolution.doctest
 ${PYSITELIB}/nltk/test/semantics.doctest
 ${PYSITELIB}/nltk/test/sentiment.doctest
 ${PYSITELIB}/nltk/test/sentiwordnet.doctest
+${PYSITELIB}/nltk/test/setup_fixt.py
+${PYSITELIB}/nltk/test/setup_fixt.pyc
+${PYSITELIB}/nltk/test/setup_fixt.pyo
 ${PYSITELIB}/nltk/test/simple.doctest
 ${PYSITELIB}/nltk/test/stem.doctest
 ${PYSITELIB}/nltk/test/tag.doctest
