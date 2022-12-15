@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.28 2022/11/23 16:20:10 adam Exp $
+# $NetBSD: Makefile,v 1.29 2022/12/15 12:25:31 nia Exp $
 
-PKGREVISION= 5
 .include "../../games/stone-soup/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/_/-/:S/-soup/-soup-sdl/:S/-nodeps//1}
@@ -21,13 +20,19 @@ MAKE_FLAGS+=	PROPORTIONAL_FONT=${PREFIX}/share/fonts/X11/TTF/DejaVuSans.ttf
 MAKE_FLAGS+=	MONOSPACED_FONT=${PREFIX}/share/fonts/X11/TTF/DejaVuSansMono.ttf
 
 INSTALLATION_DIRS+=	share/applications
+INSTALLATION_DIRS+=	share/icons/hicolor/32x32/apps
 INSTALLATION_DIRS+=	share/icons/hicolor/48x48/apps
+INSTALLATION_DIRS+=	share/icons/hicolor/512x512/apps
 
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/crawl.desktop \
 	    ${DESTDIR}${PREFIX}/share/applications
-	${INSTALL_DATA} ${WRKSRC}/source/debian/crawl.png \
-	    ${DESTDIR}${PREFIX}/share/icons/hicolor/48x48/apps
+	${INSTALL_DATA} ${WRKSRC}/source/dat/tiles/stone_soup_icon-32x32.png \
+	    ${DESTDIR}${PREFIX}/share/icons/hicolor/32x32/apps/crawl.png
+	${INSTALL_DATA} ${WRKSRC}/source/dat/tiles/stone_soup_icon-48x48.png \
+	    ${DESTDIR}${PREFIX}/share/icons/hicolor/48x48/apps/crawl.png
+	${INSTALL_DATA} ${WRKSRC}/source/dat/tiles/stone_soup_icon-512x512.png \
+	    ${DESTDIR}${PREFIX}/share/icons/hicolor/512x512/apps/crawl.png
 
 .include "../../audio/SDL2_mixer/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"

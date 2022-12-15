@@ -1,14 +1,11 @@
-# $NetBSD: Makefile.common,v 1.10 2022/03/02 21:31:07 nia Exp $
+# $NetBSD: Makefile.common,v 1.11 2022/12/15 12:25:31 nia Exp $
 # used by games/stone-soup/Makefile
 # used by games/stone-soup-sdl/Makefile
 
-DISTNAME=	stone_soup-0.28.0-nodeps
-PKGNAME=	${DISTNAME:S/_/-/:S/-nodeps//1}
+DISTNAME=	stone-soup-0.29.1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=crawl/}
 GITHUB_PROJECT=	crawl
-GITHUB_RELEASE=	${PKGVERSION_NOREV}
-EXTRACT_SUFX=	.tar.xz
 
 HOMEPAGE=	https://crawl.develz.org/
 LICENSE=	gnu-gpl-v2
@@ -16,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 DISTINFO_FILE=	${.CURDIR}/../../games/stone-soup/distinfo
 PATCHDIR=	${.CURDIR}/../../games/stone-soup/patches
 
-WRKSRC=		${WRKDIR}/stone_soup-${PKGVERSION_NOREV}
+WRKSRC=		${WRKDIR}/crawl-${PKGVERSION_NOREV}/crawl-ref
 BUILD_DIRS=	source
 USE_TOOLS+=	pkg-config gmake perl
 USE_LANGUAGES=	c c++
@@ -55,6 +52,9 @@ CHECK_PORTABILITY_SKIP+=	source/contrib/sdl2/build-scripts/androidbuildlibs.sh
 CHECK_PORTABILITY_SKIP+=	source/contrib/sdl2/build-scripts/iosbuild.sh
 CHECK_PORTABILITY_SKIP+=	source/contrib/sdl2-image/external/tiff-4.0.3/configure
 CHECK_PORTABILITY_SKIP+=	*/Xcode/*.sh
+
+pre-build:
+	${ECHO} ${PKGVERSION_NOREV} > ${WRKSRC}/source/util/release_ver
 
 .include "../../databases/sqlite3/buildlink3.mk"
 # FIXME: Compatibility issue with NetBSD curses
