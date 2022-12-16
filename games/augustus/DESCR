@@ -1,0 +1,20 @@
+Augustus is a fork of the Julius project that intends to incorporate
+customizable gameplay changes and enhancements to Caesar 3.
+
+Caesar III is a city-building game released in 1998.  Players assume the
+role of a provincial governor to build thriving cities across the Roman
+Empire, in which they must ensure their citizens have their needs met, and
+deal with various disasters, angry gods and hostile enemies.
+
+Because of gameplay changes and additions, save files from Augustus are NOT
+compatible with Caesar 3 or Julius. Augustus is able to load Caesar 3 save
+files, but not the other way around. If you want vanilla experience with
+visual and UI improvements, or want to use save files in base Caesar 3,
+check Julius.
+
+Augustus, like Julius, requires the original assets (graphics, sounds, etc)
+from Caesar 3 to run, such as the version from Steam, GOG.com, or the
+original CD-ROM.
+
+Augustus optionally supports the high-quality MP3 files once provided on the
+Sierra website.
