@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6135 2022/12/16 10:23:21 adam Exp $
+$NetBSD: CHANGES-2022,v 1.6136 2022/12/16 11:24:40 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9242,3 +9242,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added games/julius version 1.7.0 [nia 2022-12-16]
 	Updated devel/protobuf to 3.21.12 [adam 2022-12-16]
 	Updated devel/py-protobuf to 4.21.12 [adam 2022-12-16]
+	Updated cad/klayout to 0.27.13 [mef 2022-12-16]
