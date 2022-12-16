@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.997 2022/12/06 13:13:06 vins Exp $
+# $NetBSD: Makefile,v 1.998 2022/12/16 19:21:59 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -523,6 +523,7 @@ SUBDIR+=	py-objgraph
 SUBDIR+=	py-openexr
 SUBDIR+=	py-piddle
 SUBDIR+=	py-piexif
+SUBDIR+=	py-pilkit
 SUBDIR+=	py-pycha
 SUBDIR+=	py-pygal
 SUBDIR+=	py-pygraphviz
