@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/12/16 10:12:22 nia Exp $
+
+BLAKE2s (julius-1.7.0.tar.gz) = 14aa3bc5e15970da67f1e1bbc31407b2b98a14bbb478b051e26a9b3bb199d750
+SHA512 (julius-1.7.0.tar.gz) = a53ff848fe3ef659be96913357b9e435125ab30b41db2fa7e43d80d0dd2dce0be150403e0a1d7b79b03d48f785f612abf06695e0795cb26431d58e5ddf8ac313
+Size (julius-1.7.0.tar.gz) = 6448466 bytes
