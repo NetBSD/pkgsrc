@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1652 2022/12/03 16:01:02 adam Exp $
+# $NetBSD: Makefile,v 1.1653 2022/12/16 19:34:57 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -829,6 +829,7 @@ SUBDIR+=	py-sanic-routing
 SUBDIR+=	py-scgi
 SUBDIR+=	py-scrapy
 SUBDIR+=	py-selenium
+SUBDIR+=	py-sigal
 SUBDIR+=	py-simpletal
 SUBDIR+=	py-soupsieve
 SUBDIR+=	py-sparqlwrapper
