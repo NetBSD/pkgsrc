@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2022/06/28 11:34:55 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2022/12/16 21:08:09 adam Exp $
 
 DISTNAME=	gst-omx-1.2.0
 PKGNAME=	${DISTNAME:S/omx/plugins1-omx/}
@@ -39,8 +39,6 @@ SUBST_MESSAGE.config=	Fixing plugin config shared library paths.
 SUBST_FILES.config=	config/rpi/gstomx.conf
 SUBST_SED.config=	-e 's,/opt/vc,${PREFIX},g'
 .include "../../misc/raspberrypi-userland/buildlink3.mk"
-
-BUILDLINK_API_DEPENDS.gstreamer1+=	gstreamer1>=1.2.0
 .include "../../multimedia/gstreamer1/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
