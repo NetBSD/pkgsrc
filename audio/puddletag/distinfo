@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2022/12/16 17:49:09 wiz Exp $
+
+BLAKE2s (puddletag-2.0.1.tar.gz) = 1175e9a0f9868e2c37d1227cb70bdbf0810b778db4693980447f5fa852aa8b4c
+SHA512 (puddletag-2.0.1.tar.gz) = d84ba360a6cd8c3ddb6628e30276df58d059d9e8cbb2d1255320ca273436c69f05584059c2e768a15871d3f56dc08d7ac96fef9a9c7c077811bb9fdfde444610
+Size (puddletag-2.0.1.tar.gz) = 1227152 bytes
+SHA1 (patch-puddlestuff_audio__filter.py) = ddd6508a902a5105471819d5feb9ce04e300db2c
