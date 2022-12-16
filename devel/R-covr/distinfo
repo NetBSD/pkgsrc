@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:14:03 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/12/16 14:35:18 mef Exp $
 
-BLAKE2s (R/covr_3.5.1.tar.gz) = 099af7d4869c1341adefc1f758b73878209b3ecdaf8ad7cdcface371f8b863ef
-SHA512 (R/covr_3.5.1.tar.gz) = 5e1bb562258dda6cfdf0ee36c1cb6436e4a61a1b75e9d3b1813fcd7c9f6d94be2167fac83c0de009c6dbd749a280cdfe28e5e000a8ad6e0252b07980ac55d05d
-Size (R/covr_3.5.1.tar.gz) = 146686 bytes
+BLAKE2s (R/covr_3.6.1.tar.gz) = d7fad1bdbea9c4175a98be462f7453b2f9e43dbaad605c767c7c3ce440e4cbf4
+SHA512 (R/covr_3.6.1.tar.gz) = 9ee68e8e7af74fb74a00fec9f1030514530fdbe4122bea45265a7654fc4b41687d67e9e792b224d6a852eec8bb122a382e224435c9583e7c8f0fabcdfd39d352
+Size (R/covr_3.6.1.tar.gz) = 161871 bytes
