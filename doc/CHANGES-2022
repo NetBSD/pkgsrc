@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6140 2022/12/16 19:22:15 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.6141 2022/12/16 19:35:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9247,3 +9247,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added audio/puddletag version 2.0.1 [wiz 2022-12-16]
 	Updated textproc/split-thai to 2.24 [scole 2022-12-16]
 	Added graphics/py-pilkit version 2.0 [wiz 2022-12-16]
+	Added www/py-sigal version 2.3 [wiz 2022-12-16]
