@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.190 2022/11/23 16:19:23 adam Exp $
+# $NetBSD: Makefile,v 1.191 2022/12/16 00:25:25 wiz Exp $
 
 DISTNAME=	rhythmbox-3.4.4
 PKGREVISION=	12
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/rhythmbox/3.4/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	youri@NetBSD.org
-HOMEPAGE=	https://www.gnome.org/projects/rhythmbox/
+HOMEPAGE=	https://wiki.gnome.org/Apps/Rhythmbox
 COMMENT=	Music management application for GNOME
 LICENSE=	gnu-gpl-v2
 
