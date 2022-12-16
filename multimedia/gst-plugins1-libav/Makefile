@@ -1,19 +1,18 @@
-# $NetBSD: Makefile,v 1.62 2022/07/25 01:01:53 tnn Exp $
+# $NetBSD: Makefile,v 1.63 2022/12/16 21:08:09 adam Exp $
 
-DISTNAME=	gst-libav-1.20.3
+.include "../../multimedia/gstreamer1/version.mk"
+
+DISTNAME=	gst-libav-${GST_VERSION}
 PKGNAME=	${DISTNAME:S/gst/gst-plugins1/}
-PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	https://gstreamer.freedesktop.org/src/gst-libav/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://gstreamer.freedesktop.org/src/gst-libav/
 COMMENT=	GStreamer libav/ffmpeg plugin
-LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES=		c c++
-USE_TOOLS+=		pkg-config perl
+USE_LANGUAGES=	c c++
+USE_TOOLS+=	pkg-config perl
 
 .include "../../devel/meson/build.mk"
 .include "../../lang/python/tool.mk"

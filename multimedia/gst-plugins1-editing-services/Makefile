@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.20 2022/11/23 16:20:45 adam Exp $
+# $NetBSD: Makefile,v 1.21 2022/12/16 21:08:08 adam Exp $
 
-DISTNAME=	gst-editing-services-1.20.3
+.include "../../multimedia/gstreamer1/version.mk"
+
+DISTNAME=	gst-editing-services-${GST_VERSION}
 PKGNAME=	${DISTNAME:S/gst-/gst-plugins1-/1}
-PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	https://gstreamer.freedesktop.org/src/gst-editing-services/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://gstreamer.freedesktop.org/modules/gst-editing-services.html
 COMMENT=	Open source multimedia framework - editing services plugin
 LICENSE=	gnu-lgpl-v2.1
