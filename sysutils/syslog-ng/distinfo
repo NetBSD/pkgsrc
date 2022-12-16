@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.22 2022/12/15 10:09:43 wiz Exp $
+$NetBSD: distinfo,v 1.23 2022/12/16 11:56:20 wiz Exp $
 
 BLAKE2s (syslog-ng-3.38.1.tar.gz) = bfd89e26655c086a503f954116cbd2a07b437f22a1cf77e51d5be145e71e2374
 SHA512 (syslog-ng-3.38.1.tar.gz) = 3a3ef5c72d8c211ed2914791380061dcd48ea1ea95f636a1a8649dc5dee731a11e9ae000a37cbeeba624f4053b623b697e6c7f945a81153106c2365f4f09a847
 Size (syslog-ng-3.38.1.tar.gz) = 5405048 bytes
-SHA1 (patch-ac) = 1f70075860999e854629faa7f293ef51243b398d
-SHA1 (patch-configure) = d4ae0c21ac4287b765bc4411db9873be8bdb0853
-SHA1 (patch-lib_signal-handler.c) = 440a9d0df0da613817c943b8244e98e50c92bbb2
