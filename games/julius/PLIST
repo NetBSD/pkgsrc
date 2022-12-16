@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2022/12/16 10:12:22 nia Exp $
+bin/julius
+share/applications/com.github.bvschaik.julius.desktop
+share/icons/hicolor/256x256/apps/com.github.bvschaik.julius.png
+share/icons/hicolor/32x32/apps/com.github.bvschaik.julius.png
+share/icons/hicolor/48x48/apps/com.github.bvschaik.julius.png
+share/icons/hicolor/512x512/apps/com.github.bvschaik.julius.png
+share/metainfo/com.github.bvschaik.julius.metainfo.xml

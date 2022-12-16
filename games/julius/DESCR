@@ -1,0 +1,16 @@
+Julius is a fully working open-source version of Caesar 3, with the same
+logic as the original, but with some UI enhancements, that can be played on
+multiple platforms.
+
+Caesar III is a city-building game released in 1998.  Players assume the
+role of a provincial governor to build thriving cities across the Roman
+Empire, in which they must ensure their citizens have their needs met, and
+deal with various disasters, angry gods and hostile enemies.
+
+Julius will not run without the original Caesar 3 files. You can buy a
+digital copy from GOG or Steam, or you can use an original CD-ROM version.
+
+The goal of the project is to have exactly the same game logic as Caesar 3,
+with the same look and feel. This means that the saved games are 100%
+compatible with Caesar 3, and any gameplay bugs present in the original
+Caesar 3 game will also be present in Julius.
