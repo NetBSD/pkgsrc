@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6144 2022/12/16 22:50:28 gutteridge Exp $
+$NetBSD: CHANGES-2022,v 1.6145 2022/12/16 22:54:41 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9251,3 +9251,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated multimedia/gstreamer1 to 1.20.4 [adam 2022-12-16]
 	Updated graphics/ristretto to 0.12.4 [gutteridge 2022-12-16]
 	Updated sysutils/xfce4-taskmanager to 1.5.5 [gutteridge 2022-12-16]
+	Updated x11/xfce4-notifyd to 0.6.5 [gutteridge 2022-12-16]
