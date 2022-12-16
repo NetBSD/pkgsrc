@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6137 2022/12/16 14:35:35 mef Exp $
+$NetBSD: CHANGES-2022,v 1.6138 2022/12/16 17:49:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9244,3 +9244,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-protobuf to 4.21.12 [adam 2022-12-16]
 	Updated cad/klayout to 0.27.13 [mef 2022-12-16]
 	Updated devel/R-covr to 3.6.1 [mef 2022-12-16]
+	Added audio/puddletag version 2.0.1 [wiz 2022-12-16]
