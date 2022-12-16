@@ -1,0 +1,11 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2022/12/16 10:10:48 nia Exp $
+
+After starting Augustus it will ask you for a path to the game folder.
+
+You can extract the game folder from the offline .exe installer sold
+by GOG.com using the "innoextract" tool from pkgsrc.
+
+Once it is extracted, type the path to the "app" directory.
+
+===========================================================================

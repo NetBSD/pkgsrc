@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/12/16 10:10:48 nia Exp $
+
+BLAKE2s (augustus-3.2.0.tar.gz) = 40ad030fdf7c3a0c6b0c5b22ea82c5f47936a0afb3ce91d59b22cfc536fc1138
+SHA512 (augustus-3.2.0.tar.gz) = d2276916fdcc6605adfcab7767784f9c345e4cc04804cb79c59ebb0800683fe85fde5dcf3e581297cdc2bbf90e4da9cd0836e272f1b5d7020bdecad8753d93e7
+Size (augustus-3.2.0.tar.gz) = 92034090 bytes
