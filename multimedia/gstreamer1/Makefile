@@ -1,19 +1,18 @@
-# $NetBSD: Makefile,v 1.61 2022/07/18 15:40:56 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2022/12/16 21:08:07 adam Exp $
 
-DISTNAME=	gstreamer-1.20.3
+.include "version.mk"
+
+DISTNAME=	gstreamer-${GST_VERSION}
 PKGNAME=	${DISTNAME:S/gstreamer/gstreamer1/}
 CATEGORIES=	multimedia
 MASTER_SITES=	https://gstreamer.freedesktop.org/src/gstreamer/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://gstreamer.freedesktop.org/
 COMMENT=	Open source multimedia framework
-LICENSE=	gnu-lgpl-v2
 
-USE_TOOLS+=		bison flex perl pkg-config xgettext
-TEST_TARGET=		check
-FLEX_REQD=		2.5.31
+USE_TOOLS+=	bison flex perl pkg-config xgettext
+TEST_TARGET=	check
+FLEX_REQD=	2.5.31
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 

@@ -1,16 +1,33 @@
-# $NetBSD: Makefile.common,v 1.43 2022/10/03 11:27:40 nia Exp $
+# $NetBSD: Makefile.common,v 1.44 2022/12/16 21:08:08 adam Exp $
+# used by audio/gst-plugins1-dts/Makefile
+# used by audio/gst-plugins1-faac/Makefile
+# used by audio/gst-plugins1-faad/Makefile
+# used by audio/gst-plugins1-fluidsynth/Makefile
+# used by audio/gst-plugins1-gme/Makefile
+# used by audio/gst-plugins1-ladspa/Makefile
+# used by audio/gst-plugins1-lv2/Makefile
+# used by audio/gst-plugins1-modplug/Makefile
+# used by audio/gst-plugins1-musepack/Makefile
+# used by audio/gst-plugins1-sndfile/Makefile
+# used by audio/gst-plugins1-soundtouch/Makefile
+# used by graphics/gst-plugins1-webp/Makefile
+# used by multimedia/gst-plugins1-aom/Makefile
+# used by multimedia/gst-plugins1-egl-gl/Makefile
+# used by multimedia/gst-plugins1-egl-opengl/Makefile
+# used by multimedia/gst-plugins1-libde265/Makefile
+# used by multimedia/gst-plugins1-openh264/Makefile
+# used by multimedia/gst-plugins1-resindvd/Makefile
+# used by multimedia/gst-plugins1-x265/Makefile
+# used by net/gst-plugins1-rtmp/Makefile
 
-DISTNAME=	gst-plugins-bad-1.20.3
+.include "../../multimedia/gstreamer1/version.mk"
+
+DISTNAME=	gst-plugins-bad-${GST_VERSION}
 MASTER_SITES=	https://gstreamer.freedesktop.org/src/gst-plugins-bad/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://gstreamer.freedesktop.org/
-LICENSE=	gnu-gpl-v2
-
 # "error: 'for' loop initial declarations are only allowed in C99 mode"
 USE_LANGUAGES=	c99 c++
-
 USE_TOOLS+=	pkg-config
 
 DISTINFO_FILE=	${.CURDIR}/../../multimedia/gst-plugins1-bad/distinfo

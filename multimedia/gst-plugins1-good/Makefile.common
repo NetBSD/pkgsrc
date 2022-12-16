@@ -1,12 +1,30 @@
-# $NetBSD: Makefile.common,v 1.42 2022/07/18 15:40:56 wiz Exp $
+# $NetBSD: Makefile.common,v 1.43 2022/12/16 21:08:08 adam Exp $
+# used by audio/gst-plugins1-flac/Makefile
+# used by audio/gst-plugins1-jack/Makefile
+# used by audio/gst-plugins1-lame/Makefile
+# used by audio/gst-plugins1-mpg123/Makefile
+# used by audio/gst-plugins1-oss/Makefile
+# used by audio/gst-plugins1-osxaudio/Makefile
+# used by audio/gst-plugins1-pulse/Makefile
+# used by audio/gst-plugins1-speex/Makefile
+# used by audio/gst-plugins1-twolame/Makefile
+# used by audio/gst-plugins1-wavpack/Makefile
+# used by graphics/gst-plugins1-aalib/Makefile
+# used by graphics/gst-plugins1-cairo/Makefile
+# used by graphics/gst-plugins1-gdk_pixbuf/Makefile
+# used by graphics/gst-plugins1-jpeg/Makefile
+# used by graphics/gst-plugins1-png/Makefile
+# used by multimedia/gst-plugins1-gtk/Makefile
+# used by multimedia/gst-plugins1-osxvideo/Makefile
+# used by multimedia/gst-plugins1-v4l2/Makefile
+# used by net/gst-plugins1-soup/Makefile
+# used by x11/gst-plugins1-ximagesrc/Makefile
 
-DISTNAME=	gst-plugins-good-1.20.3
+.include "../../multimedia/gstreamer1/version.mk"
+
+DISTNAME=	gst-plugins-good-${GST_VERSION}
 MASTER_SITES=	https://gstreamer.freedesktop.org/src/gst-plugins-good/
 EXTRACT_SUFX=	.tar.xz
-
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://gstreamer.freedesktop.org/
-LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c c++
 

@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.24 2022/07/18 15:43:08 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2022/12/16 21:08:08 adam Exp $
 
-DISTNAME=	gst-python-1.20.3
+.include "../../multimedia/gstreamer1/version.mk"
+
+DISTNAME=	gst-python-${GST_VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/gst-python/gstreamer1/}
 CATEGORIES=	multimedia
 MASTER_SITES=	https://gstreamer.freedesktop.org/src/gst-python/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://gstreamer.freedesktop.org/
 COMMENT=	Python bindings for gstreamer1
 LICENSE=	gnu-lgpl-v2.1
 
