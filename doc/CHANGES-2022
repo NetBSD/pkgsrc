@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6138 2022/12/16 17:49:31 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.6139 2022/12/16 18:29:48 scole Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9245,3 +9245,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated cad/klayout to 0.27.13 [mef 2022-12-16]
 	Updated devel/R-covr to 3.6.1 [mef 2022-12-16]
 	Added audio/puddletag version 2.0.1 [wiz 2022-12-16]
+	Updated textproc/split-thai to 2.24 [scole 2022-12-16]
