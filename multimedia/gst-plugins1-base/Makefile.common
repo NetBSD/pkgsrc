@@ -1,12 +1,19 @@
-# $NetBSD: Makefile.common,v 1.44 2022/07/18 15:40:56 wiz Exp $
+# $NetBSD: Makefile.common,v 1.45 2022/12/16 21:08:08 adam Exp $
+# used by audio/gst-plugins1-alsa/Makefile
+# used by audio/gst-plugins1-cdparanoia/Makefile
+# used by audio/gst-plugins1-libvisual/Makefile
+# used by audio/gst-plugins1-opus/Makefile
+# used by audio/gst-plugins1-vorbis/Makefile
+# used by devel/gst-plugins1-pango/Makefile
+# used by multimedia/gst-plugins1-ogg/Makefile
+# used by multimedia/gst-plugins1-theora/Makefile
+# used by x11/gst-plugins1-x11/Makefile
 
-DISTNAME=	gst-plugins-base-1.20.3
+.include "../../multimedia/gstreamer1/version.mk"
+
+DISTNAME=	gst-plugins-base-${GST_VERSION}
 MASTER_SITES=	https://gstreamer.freedesktop.org/src/gst-plugins-base/
 EXTRACT_SUFX=	.tar.xz
-
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://gstreamer.freedesktop.org/
-LICENSE=	gnu-gpl-v2
 
 # "error: 'for' loop initial declarations are only allowed in C99 mode"
 USE_LANGUAGES=	c99 c++
