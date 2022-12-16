@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.4 2020/09/20 03:09:14 mef Exp $
+# $NetBSD: Makefile,v 1.5 2022/12/16 14:35:18 mef Exp $
 
 R_PKGNAME=	covr
-R_PKGVER=	3.5.1
+R_PKGVER=	3.6.1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Test Coverage for Packages
-LICENSE=	gnu-gpl-v3
+LICENSE=	mit
 
 #Packages suggested but not available:
 #  'rmarkdown', 'htmltools', 'DT', 'rstudioapi', 'xml2', 'memoise',
