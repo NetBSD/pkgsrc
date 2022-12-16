@@ -1,0 +1,5 @@
+PILKit is a collection of utilities for working with PIL (the Python
+Imaging Library).
+
+One of its main features is a set of processors which expose a
+simple interface for performing manipulations on PIL images.
