@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.8 2022/07/18 15:51:25 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2022/12/16 21:08:09 adam Exp $
 
-DISTNAME=	gstreamer-vaapi-1.20.3
+.include "../../multimedia/gstreamer1/version.mk"
+
+DISTNAME=	gstreamer-vaapi-${GST_VERSION}
 PKGNAME=	${DISTNAME:S/^gstreamer/gst-plugins1/1}
 CATEGORIES=	multimedia
 MASTER_SITES=	https://gstreamer.freedesktop.org/src/gstreamer-vaapi/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://gstreamer.freedesktop.org/modules/gstreamer-vaapi.html
 COMMENT=	Open source multimedia framework - VA-API plugin
 LICENSE=	gnu-lgpl-v2.1
