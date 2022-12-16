@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.664 2022/12/12 20:57:35 wiz Exp $
+# $NetBSD: Makefile,v 1.665 2022/12/16 17:49:21 wiz Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -398,6 +398,7 @@ SUBDIR+=	pocketsphinx
 SUBDIR+=	portaudio
 SUBDIR+=	pragha
 SUBDIR+=	pt2-clone
+SUBDIR+=	puddletag
 SUBDIR+=	pulseaudio
 SUBDIR+=	py-acoustid
 SUBDIR+=	py-ao
