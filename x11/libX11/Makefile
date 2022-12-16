@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.68 2022/11/10 21:29:16 wiz Exp $
+# $NetBSD: Makefile,v 1.69 2022/12/16 01:10:01 wiz Exp $
 
-DISTNAME=		libX11-1.8.2
+DISTNAME=		libX11-1.8.3
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.xz
@@ -32,7 +32,7 @@ CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${PREFIX}/bin/tradcpp -Uunix"
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+.if ${USE_CROSS_COMPILE:U:tl} == yes
 CONFIGURE_ENV+=		CC_FOR_BUILD=${NATIVE_CC:Q}
 
 # XXX This needs to match the version of xcb-proto we get for the
