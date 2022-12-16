@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6133 2022/12/16 10:11:06 nia Exp $
+$NetBSD: CHANGES-2022,v 1.6134 2022/12/16 10:12:39 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9239,3 +9239,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/py-lxml to 4.9.2 [adam 2022-12-15]
 	Updated x11/libX11 to 1.8.3 [wiz 2022-12-16]
 	Added games/augustus version 3.2.0 [nia 2022-12-16]
+	Added games/julius version 1.7.0 [nia 2022-12-16]
