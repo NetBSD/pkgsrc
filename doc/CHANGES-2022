@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6142 2022/12/16 21:08:59 adam Exp $
+$NetBSD: CHANGES-2022,v 1.6143 2022/12/16 22:45:01 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9249,3 +9249,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added graphics/py-pilkit version 2.0 [wiz 2022-12-16]
 	Added www/py-sigal version 2.3 [wiz 2022-12-16]
 	Updated multimedia/gstreamer1 to 1.20.4 [adam 2022-12-16]
+	Updated graphics/ristretto to 0.12.4 [gutteridge 2022-12-16]
