@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6174 2022/12/17 23:40:05 mef Exp $
+$NetBSD: CHANGES-2022,v 1.6175 2022/12/17 23:48:38 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9286,3 +9286,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated editors/nano to 7.1 [schwarz 2022-12-17]
 	Updated devel/R-R.methodsS3 to 1.8.2 [mef 2022-12-17]
 	Updated devel/R-R.oo to 1.25.0 [mef 2022-12-17]
+	Updated devel/R-R.utils to 2.12.2 [mef 2022-12-17]
