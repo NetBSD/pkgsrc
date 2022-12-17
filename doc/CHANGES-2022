@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6164 2022/12/17 15:12:18 mef Exp $
+$NetBSD: CHANGES-2022,v 1.6165 2022/12/17 15:17:43 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9276,3 +9276,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added fonts/R-textshaping version 0.3.6 [mef 2022-12-17]
 	Added graphics/R-ragg version 1.2.4 [mef 2022-12-17]
 	Added www/R-pkgdown version 2.0.7 [mef 2022-12-17]
+	Added www/R-urlchecker version 1.0.1 [mef 2022-12-17]
