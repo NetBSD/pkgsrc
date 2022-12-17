@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.147 2022/08/16 14:21:48 wiz Exp $
+# $NetBSD: Makefile,v 1.148 2022/12/17 14:29:33 gdt Exp $
 
-VERSION=	3.4.6
+VERSION=	4.0.0
 DISTNAME=	Mail-SpamAssassin-${VERSION}
 PKGNAME=	spamassassin-${VERSION}
-PKGREVISION=	3
 CATEGORIES=	mail perl5
 MASTER_SITES=	${MASTER_SITE_APACHE:=spamassassin/source/}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
@@ -23,7 +22,7 @@ SMF_METHODS=	spamassassin
 
 # The RULESARCHIVE path is taken from the link on the Download page
 # reachable from $HOMEPAGE.
-RULESARCHIVE=		Mail-SpamAssassin-rules-3.4.6.r1888502.tgz
+RULESARCHIVE=		Mail-SpamAssassin-rules-4.0.0.r1905950.tgz
 RULESARCHIVEASC=	${RULESARCHIVE}.asc
 #RULESARCHIVESHA=	${RULESARCHIVE}.sha1
 FILES_SUBST+=		RULESARCHIVE=${RULESDIR}/${RULESARCHIVE}
@@ -38,6 +37,7 @@ DEPENDS+=	p5-HTML-Parser>=3.43:../../www/p5-HTML-Parser
 #DEPENDS+=	{perl>=5.9.3,p5-IO-Compress-[0-9]*}:../../devel/p5-IO-Compress # Compress::Zlib>=0
 #DEPENDS+=	{perl>=5.9.3,p5-IO-Zlib>=1.04}:../../devel/p5-IO-Zlib
 DEPENDS+=	p5-Mail-DKIM>=0.40:../../mail/p5-Mail-DKIM
+#DEPENDS+=	p5-Mail-DMARC-PurePerl-[0-9]*:../../mail/p5-Mail-DMARC-PurePerl
 DEPENDS+=	p5-Mail-SPF-[0-9]*:../../mail/p5-Mail-SPF
 #DEPENDS+=	{p5-MIME-Base64>=2.11,perl>=5.8.0}:../../converters/p5-MIME-Base64
 DEPENDS+=	p5-NetAddr-IP>=4.007:../../net/p5-NetAddr-IP
@@ -103,7 +103,7 @@ DOCDIR=			${PREFIX}/${DOC_SUBDIR}
 RULE_SUBDIR=		share/spamassassin
 RULESDIR=		${PREFIX}/${RULE_SUBDIR}
 
-PRE_FILES=		init.pre v310.pre v312.pre v320.pre v330.pre v340.pre
+PRE_FILES=		init.pre v310.pre v312.pre v320.pre v330.pre v340.pre v400.pre
 .for p in ${PRE_FILES}
 CONF_FILES+=		${EGDIR}/${p}  ${PKG_SYSCONFDIR}/${p}
 .endfor
@@ -141,7 +141,7 @@ SUBST_VARS.sa2+=	VARBASE
 SUBST_CLASSES+=		sa3
 SUBST_MESSAGE.sa3=	Setting correct paths for pkgsrc (part 2)
 SUBST_STAGE.sa3=	pre-configure
-SUBST_FILES.sa3=	INSTALL UPGRADE USAGE ldap/README
+SUBST_FILES.sa3=	INSTALL USAGE ldap/README
 SUBST_FILES.sa3+=	spamc/README.qmail spamc/spamc.pod
 SUBST_FILES.sa3+=	lib/Mail/SpamAssassin/Conf.pm
 SUBST_FILES.sa3+=	lib/Mail/SpamAssassin/Plugin/Test.pm
