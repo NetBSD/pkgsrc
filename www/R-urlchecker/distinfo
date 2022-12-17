@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/12/17 15:15:53 mef Exp $
+
+BLAKE2s (R/urlchecker_1.0.1.tar.gz) = 8597f6364e496b0b69f72fa3e2b3d6e07d4853887f8a19d4759897f116c3a1bd
+SHA512 (R/urlchecker_1.0.1.tar.gz) = f41235c4da266cf7a4db314c09ad77f590e3df79ab08e00b5a6d8173e392a33dce9fa35298952439a41069b77736ad4da7152c670f869e144f080d32df22ced3
+Size (R/urlchecker_1.0.1.tar.gz) = 13340 bytes
