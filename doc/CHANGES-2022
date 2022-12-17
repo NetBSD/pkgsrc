@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6173 2022/12/17 23:35:13 mef Exp $
+$NetBSD: CHANGES-2022,v 1.6174 2022/12/17 23:40:05 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9285,3 +9285,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated pkgtools/rc.d-boot to 20221202 [triaxx 2022-12-17]
 	Updated editors/nano to 7.1 [schwarz 2022-12-17]
 	Updated devel/R-R.methodsS3 to 1.8.2 [mef 2022-12-17]
+	Updated devel/R-R.oo to 1.25.0 [mef 2022-12-17]
