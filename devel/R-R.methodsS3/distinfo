@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:14:00 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/12/17 23:34:59 mef Exp $
 
-BLAKE2s (R/R.methodsS3_1.8.1.tar.gz) = d221b7523308ccb0c8a8ddecc773633a815bda968d41065b282fe7ff59d861e5
-SHA512 (R/R.methodsS3_1.8.1.tar.gz) = 2e66717db4eadf597535036e3b5b1003b9d52eff2aafe06bb459d66bc406ed3de51e754e93ed652abc071e63d3d821ce576ac9c1fd0ce8b1c4ae30f4c9dd50b7
-Size (R/R.methodsS3_1.8.1.tar.gz) = 23717 bytes
+BLAKE2s (R/R.methodsS3_1.8.2.tar.gz) = d843a20c7067f2bc265e57eb49b810bc74c8f072ec6493b02a5f2afd0ff951a9
+SHA512 (R/R.methodsS3_1.8.2.tar.gz) = 4282f70afc4902575db614467d4606832e29889a427d783efb684b778bf9b515507527fa5a368ce7b1f6515aedc48047cabb24e6c22324f56ad02d006a8d055a
+Size (R/R.methodsS3_1.8.2.tar.gz) = 24131 bytes
