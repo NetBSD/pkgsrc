@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2022/05/02 14:32:10 mef Exp $
+# $NetBSD: Makefile,v 1.13 2022/12/17 01:27:54 mef Exp $
 
 R_PKGNAME=	cli
-R_PKGVER=	3.3.0
+R_PKGVER=	3.4.1
 CATEGORIES=	devel
 
 MAINTAINER=	minskim@NetBSD.org
@@ -25,6 +25,7 @@ TEST_DEPENDS+=	R-glue>=1.6.0:../../devel/R-glue
 TEST_DEPENDS+=	R-htmlwidgets-[0-9]*:../../www/R-htmlwidgets
 TEST_DEPENDS+=	R-shiny-[0-9]*:../../www/R-shiny
 TEST_DEPENDS+=	R-whoami-[0-9]*:../../devel/R-whoami
+TEST_DEPENDS+=	R-rlang-[0-9]*:../../devel/R-rlang
 
 USE_LANGUAGES=	c
 
