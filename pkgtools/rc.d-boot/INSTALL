@@ -1,14 +1,22 @@
-# $NetBSD: INSTALL,v 1.6 2018/12/28 20:24:02 schmonz Exp $
+# $NetBSD: INSTALL,v 1.7 2022/12/17 21:36:11 triaxx Exp $
 
 RCDBOOT_STYLE=@RCDBOOT_STYLE@
 RCD_SCRIPTS_DIR=@RCD_SCRIPTS_DIR@
+UNPRIVILEGED=@UNPRIVILEGED@
+EGDIR=@EGDIR@
 
 case "${STAGE}" in
 
 POST-INSTALL)
 	case "${RCDBOOT_STYLE}" in
 	darwin-launchd)
-		launchctl load -w /Library/LaunchDaemons/org.pkgsrc.rc.d-boot.plist
+		if [ "x${UNPRIVILEGED}" = "xyes" ] ; then
+			${CP} ${EGDIR}/org.pkgsrc.rc.d-boot.plist \
+			      $HOME/Library/LaunchAgents/org.pkgsrc.rc.d-boot.plist
+			launchctl load -w $HOME/Library/LaunchAgents/org.pkgsrc.rc.d-boot.plist
+		else
+			launchctl load -w /Library/LaunchDaemons/org.pkgsrc.rc.d-boot.plist
+		fi
 		;;
 	freebsd-native)
 		;;
