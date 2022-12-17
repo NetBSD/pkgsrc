@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.386 2022/12/17 14:05:46 mef Exp $
+# $NetBSD: Makefile,v 1.387 2022/12/17 14:37:44 mef Exp $
 #
 
 COMMENT=	Fonts
@@ -16,6 +16,7 @@ SUBDIR+=	JetBrainsMono-ttf
 SUBDIR+=	Merriweather-ttf
 SUBDIR+=	Office-Code-Pro
 SUBDIR+=	R-systemfonts
+SUBDIR+=	R-textshaping
 SUBDIR+=	SDL2_ttf
 SUBDIR+=	TextFonts-ttf
 SUBDIR+=	UFAS-otf
