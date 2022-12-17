@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6151 2022/12/17 04:41:16 osa Exp $
+$NetBSD: CHANGES-2022,v 1.6152 2022/12/17 06:22:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9263,3 +9263,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/unit-php to 1.29.0 [osa 2022-12-17]
 	Updated www/unit-python to 1.29.0 [osa 2022-12-17]
 	Updated www/unit-ruby to 1.29.0 [osa 2022-12-17]
+	Updated databases/redis to 7.0.7 [adam 2022-12-17]
+	Updated www/py-curl to 7.45.2 [adam 2022-12-17]
