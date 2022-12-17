@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/07/21 14:40:30 taca Exp $
+# $NetBSD: Makefile,v 1.3 2022/12/17 14:25:20 he Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 PKGNAME=	${GITHUB_PROJECT}-1.4.0
@@ -18,4 +18,5 @@ USE_LANGUAGES=	c99 c++
 
 .include "options.mk"
 
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
