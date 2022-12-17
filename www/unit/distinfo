@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.12 2022/12/17 04:37:42 osa Exp $
+$NetBSD: distinfo,v 1.13 2022/12/17 17:51:45 gutteridge Exp $
 
 BLAKE2s (unit-1.29.0.tar.gz) = 0b3a2354915cbab1b317e46d7886c5f48af0965b2e10bad35572bea01d19b452
 SHA512 (unit-1.29.0.tar.gz) = 6b0a6718be5c3312f5e17fc39ae35ca849049c97d29c63a7effda7f994274af29eed88970389bb3010a2103c431e69920c951de5004853004d1aa604d868bd9f
 Size (unit-1.29.0.tar.gz) = 903909 bytes
-SHA1 (patch-auto_events) = 9fca8c3079f6072eb27f48b026957b1ba83883a2
+SHA1 (patch-auto_events) = 0556b5d3db6b88d23d686d9da1f3274187079973
 SHA1 (patch-auto_os_conf) = 6d1cd7aef662a60d4288014eb6fadbe8c1268e55
 SHA1 (patch-auto_shmem) = cb37c368c19205c2cc1750f4a847af23be8bfa25
 SHA1 (patch-src_nxt__kqueue__engine.c) = c341425f4b21d4cff6e003958f88a04b53dc4ee1
