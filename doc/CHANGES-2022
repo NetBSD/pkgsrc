@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6168 2022/12/17 15:30:12 mef Exp $
+$NetBSD: CHANGES-2022,v 1.6169 2022/12/17 15:34:54 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9280,3 +9280,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/R-usethis to 2.1.6 [mef 2022-12-17]
 	Updated devel/R-memoise to 2.0.1 [mef 2022-12-17]
 	Updated devel/R-pkgload to 1.3.2 [mef 2022-12-17]
+	Updated devel/R-devtools to 2.4.5 [mef 2022-12-17]
