@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6156 2022/12/17 07:25:07 pin Exp $
+$NetBSD: CHANGES-2022,v 1.6157 2022/12/17 07:26:22 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9269,3 +9269,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated time/rusti-cal to 1.0.1 [pin 2022-12-17]
 	Updated graphics/oculante to 0.6.32 [pin 2022-12-17]
 	Updated sysutils/broot to 1.17.1 [pin 2022-12-17]
+	Updated sysutils/dua-cli to 2.19.0 [pin 2022-12-17]
