@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6149 2022/12/17 03:14:33 gutteridge Exp $
+$NetBSD: CHANGES-2022,v 1.6150 2022/12/17 03:28:29 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9256,3 +9256,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/R-cli to 3.4.1 [mef 2022-12-17]
 	Updated devel/py-importlib-resources to 5.10.1 [gutteridge 2022-12-17]
 	Updated textproc/py-cmudict to 1.0.12 [gutteridge 2022-12-17]
+	Updated devel/R-testthat to 3.1.5 [mef 2022-12-17]
