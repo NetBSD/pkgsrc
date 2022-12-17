@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6150 2022/12/17 03:28:29 mef Exp $
+$NetBSD: CHANGES-2022,v 1.6151 2022/12/17 04:41:16 osa Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9257,3 +9257,9 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-importlib-resources to 5.10.1 [gutteridge 2022-12-17]
 	Updated textproc/py-cmudict to 1.0.12 [gutteridge 2022-12-17]
 	Updated devel/R-testthat to 3.1.5 [mef 2022-12-17]
+	Updated devel/libunit to 1.29.0 [osa 2022-12-17]
+	Updated www/unit to 1.29.0 [osa 2022-12-17]
+	Updated www/unit-perl to 1.29.0 [osa 2022-12-17]
+	Updated www/unit-php to 1.29.0 [osa 2022-12-17]
+	Updated www/unit-python to 1.29.0 [osa 2022-12-17]
+	Updated www/unit-ruby to 1.29.0 [osa 2022-12-17]
