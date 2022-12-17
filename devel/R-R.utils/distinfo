@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/11/27 22:39:02 mef Exp $
+$NetBSD: distinfo,v 1.5 2022/12/17 23:48:27 mef Exp $
 
-BLAKE2s (R/R.utils_2.11.0.tar.gz) = 97468a14823dabcb8d6c828945a6d984942a90f69736a0b9d5ad7822d25bf75e
-SHA512 (R/R.utils_2.11.0.tar.gz) = a5024a2203a47c19bc63e2feb7d833c4412d911e6a288817638d33e07372cd9f99f89fc769aefe508c6f4188cb5ca925e4673812cb50077c0ff264f314b3249b
-Size (R/R.utils_2.11.0.tar.gz) = 362860 bytes
+BLAKE2s (R/R.utils_2.12.2.tar.gz) = 3b4e7c6c1247d21d1558bc04109fd60c390f3113ac44352bcaf2f82cfd421d2a
+SHA512 (R/R.utils_2.12.2.tar.gz) = 39ff53c16bc1169a7a42e954c4054252da629f11088bc2a5f62fa7c8954056263886230aa526edeb80fd9c2e8db7e175313ac632802132d7bf15cd4bc5822e46
+Size (R/R.utils_2.12.2.tar.gz) = 365876 bytes
