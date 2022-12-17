@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.275 2022/12/05 21:44:58 jperkin Exp $
+# $NetBSD: Makefile,v 1.276 2022/12/17 21:29:44 jperkin Exp $
 
 DISTNAME=	rustc-1.64.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -64,7 +64,9 @@ CONFIGURE_ARGS+=	--enable-vendor
 # cargo defaults to using the number of available CPUs
 MAKE_ENV+=		CARGO_BUILD_JOBS=${_MAKE_JOBS_N}
 
-# Ensure we use a bundled lzma rather than relying on finding one.
+# Ensure we use a bundled lzma rather than relying on finding one, and avoid
+# xz being buildlinked if it's pulled in via dependencies.
+BUILDLINK_FILES_CMD.xz=	${TRUE}
 MAKE_ENV+=		LZMA_API_STATIC=1
 
 # MacOS X 10.7 is the oldest supported version. See
