@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6152 2022/12/17 06:22:22 adam Exp $
+$NetBSD: CHANGES-2022,v 1.6153 2022/12/17 07:21:07 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9265,3 +9265,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/unit-ruby to 1.29.0 [osa 2022-12-17]
 	Updated databases/redis to 7.0.7 [adam 2022-12-17]
 	Updated www/py-curl to 7.45.2 [adam 2022-12-17]
+	Updated editors/tp-note to 1.19.8 [pin 2022-12-17]
