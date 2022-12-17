@@ -1,6 +1,6 @@
 #!/bin/sh
 
-. /etc/rc.subr
+. @PKG_SYSCONFDIR@/rc.subr
 
 run_all_rcd_scripts() {
 	action="$1"; shift

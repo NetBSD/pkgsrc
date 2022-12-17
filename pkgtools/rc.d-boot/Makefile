@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2020/01/16 16:54:36 schmonz Exp $
+# $NetBSD: Makefile,v 1.13 2022/12/17 21:36:11 triaxx Exp $
 #
 
-PKGNAME=		rc.d-boot-20200116
+PKGNAME=		rc.d-boot-20221202
 CATEGORIES=		pkgtools
 
 MAINTAINER=		schmonz@NetBSD.org
@@ -30,10 +30,12 @@ SUBST_FILES.paths=	rc.d-boot
 SUBST_FILES.paths+=	org.pkgsrc.rc.d-boot.plist \
 			pkgsrc-rc.d-boot \
 			pkgsrc-rc.d-boot.service
-SUBST_VARS.paths=	GREP PKGNAME PREFIX RCD_SCRIPTS_DIR RCORDER VARBASE
+SUBST_VARS.paths=	GREP PKG_SYSCONFDIR PKGNAME PREFIX RCD_SCRIPTS_DIR RCORDER VARBASE
 
 FILES_SUBST+=		RCDBOOT_STYLE=${RCDBOOT_STYLE:Q}
 FILES_SUBST+=		RCD_SCRIPTS_DIR=${RCD_SCRIPTS_DIR:Q}
+FILES_SUBST+=		UNPRIVILEGED=${UNPRIVILEGED:Q}
+FILES_SUBST+=		EGDIR=${PREFIX:Q}/${EGDIR:Q}
 
 EGDIR=			share/examples/${PKGBASE}
 
@@ -41,8 +43,10 @@ SLASH_TO_MOLLIFY_PKGLINT=	/
 
 .if ${OPSYS} == "Darwin" && exists(/Library/LaunchDaemons)
 RCDBOOT_STYLE=		darwin-launchd
+.  if ${UNPRIVILEGED:U:tl} == "no"
 CONF_FILES+=		${PREFIX}/${EGDIR}/org.pkgsrc.rc.d-boot.plist \
 			${SLASH_TO_MOLLIFY_PKGLINT}Library/LaunchDaemons/org.pkgsrc.rc.d-boot.plist
+.  endif
 .elif ${OPSYS} == "FreeBSD" && exists(/etc/rc.d)
 RCDBOOT_STYLE=		freebsd-native
 .elif ${OPSYS} == "Linux" && exists(/run/systemd/system) && exists(/bin/systemctl)
