@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6158 2022/12/17 07:27:58 pin Exp $
+$NetBSD: CHANGES-2022,v 1.6159 2022/12/17 14:05:46 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9271,3 +9271,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/broot to 1.17.1 [pin 2022-12-17]
 	Updated sysutils/dua-cli to 2.19.0 [pin 2022-12-17]
 	Updated sysutils/felix to 2.2.1 [pin 2022-12-17]
+	Updated fonts/R-systemfonts to 1.0.4 [mef 2022-12-17]
