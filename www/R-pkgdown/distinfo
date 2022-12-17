@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/12/17 15:09:50 mef Exp $
+
+BLAKE2s (R/pkgdown_2.0.7.tar.gz) = 94a41615d8e524df00bc44b91e285c2147835ab706040cccef1b7fb9a98bd3d8
+SHA512 (R/pkgdown_2.0.7.tar.gz) = 10ff5efcf6432ba042d53a4e7f34616795c68cbc559498f085a8ceaa1614abf28c0c4075b4e7d60497c81f27d8c77101286535e570a64491dd7a3be023b4fc38
+Size (R/pkgdown_2.0.7.tar.gz) = 871465 bytes
