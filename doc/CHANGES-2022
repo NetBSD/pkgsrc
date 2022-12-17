@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6153 2022/12/17 07:21:07 pin Exp $
+$NetBSD: CHANGES-2022,v 1.6154 2022/12/17 07:22:24 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9266,3 +9266,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/redis to 7.0.7 [adam 2022-12-17]
 	Updated www/py-curl to 7.45.2 [adam 2022-12-17]
 	Updated editors/tp-note to 1.19.8 [pin 2022-12-17]
+	Updated time/rusti-cal to 1.0.1 [pin 2022-12-17]
