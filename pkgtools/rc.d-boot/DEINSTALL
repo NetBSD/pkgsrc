@@ -1,13 +1,18 @@
-# $NetBSD: DEINSTALL,v 1.4 2018/12/28 20:24:02 schmonz Exp $
+# $NetBSD: DEINSTALL,v 1.5 2022/12/17 21:36:11 triaxx Exp $
 
 RCDBOOT_STYLE=@RCDBOOT_STYLE@
 RCD_SCRIPTS_DIR=@RCD_SCRIPTS_DIR@
+UNPRIVILEGED=@UNPRIVILEGED@
+EGDIR=@EGDIR@
 
 case "${STAGE}" in
 
 DEINSTALL)
 	case "${RCDBOOT_STYLE}" in
 	darwin-launchd)
+		if [ "x${UNPRIVILEGED}" = "xyes" ] ; then
+			${RM} -f $HOME/Library/LaunchAgents/org.pkgsrc.rc.d-boot.plist
+		fi
 		;;
 	freebsd-native)
 		;;
