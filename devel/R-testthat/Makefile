@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2022/05/02 14:47:49 mef Exp $
+# $NetBSD: Makefile,v 1.16 2022/12/17 03:28:15 mef Exp $
 
 R_PKGNAME=	testthat
-R_PKGVER=	3.1.4
+R_PKGVER=	3.1.5
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -33,6 +33,7 @@ TEST_DEPENDS+=	R-callr>=3.5.1:../../devel/R-callr
 TEST_DEPENDS+=	tex-inconsolata-[0-9]*:../../fonts/tex-inconsolata
 TEST_DEPENDS+=	R-brio-[0-9]*:../../devel/R-brio
 TEST_DEPENDS+=	R-desc-[0-9]*:../../devel/R-desc
+TEST_DEPENDS+=	R-shiny-[0-9]*:../../www/R-shiny
 
 USE_LANGUAGES=	c c++
 
