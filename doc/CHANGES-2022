@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6161 2022/12/17 14:29:45 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.6162 2022/12/17 14:37:44 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9273,3 +9273,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/felix to 2.2.1 [pin 2022-12-17]
 	Added fonts/R-systemfonts version 1.0.4 [mef 2022-12-17]
 	Updated mail/spamassassin to 4.0.0 [gdt 2022-12-17]
+	Added fonts/R-textshaping version 0.3.6 [mef 2022-12-17]
