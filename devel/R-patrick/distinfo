@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/12/18 02:33:53 mef Exp $
+
+BLAKE2s (R/patrick_0.2.0.tar.gz) = 14365d78706053ec2e28f0e27e016bd3fef1f85662a537db52fe5c416984472e
+SHA512 (R/patrick_0.2.0.tar.gz) = dab3faa2a6f68a74e30819100b32b405784784a1d65363bd0ec6a3a57185af11127c0340847d8086524762e063c7bcb6fc0b5a41ffda279c5b585d209fc9e843
+Size (R/patrick_0.2.0.tar.gz) = 7609 bytes
