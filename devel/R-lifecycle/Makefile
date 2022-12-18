@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2022/04/22 22:55:50 mef Exp $
+# $NetBSD: Makefile,v 1.4 2022/12/18 02:23:46 mef Exp $
 
 R_PKGNAME=	lifecycle
-R_PKGVER=	1.0.1
+R_PKGVER=	1.0.3
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -19,6 +19,7 @@ TEST_DEPENDS+=	R-knitr-[0-9]*:../../print/R-knitr
 TEST_DEPENDS+=	R-rmarkdown-[0-9]*:../../textproc/R-rmarkdown
 TEST_DEPENDS+=	R-testthat-[0-9]*:../../devel/R-testthat
 TEST_DEPENDS+=	R-tibble-[0-9]*:../../math/R-tibble
+TEST_DEPENDS+=	R-tidyverse-[0-9]*:../../devel/R-tidyverse
 TEST_DEPENDS+=	R-vctrs-[0-9]*:../../math/R-vctrs
 
 USE_LANGUAGES=	# none
