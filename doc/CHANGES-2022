@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6244 2022/12/18 13:46:03 taca Exp $
+$NetBSD: CHANGES-2022,v 1.6245 2022/12/18 13:50:09 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9364,3 +9364,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated math/R-vctrs to 0.5.1 [mef 2022-12-18]
 	Updated math/R-plyr to 1.8.8 [mef 2022-12-18]
 	Updated devel/php-xdebug to 3.2.0 [taca 2022-12-18]
+	Updated databases/ruby-hiera to 3.11.0 [taca 2022-12-18]
