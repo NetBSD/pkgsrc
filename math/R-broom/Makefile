@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2022/05/05 01:58:35 mef Exp $
+# $NetBSD: Makefile,v 1.3 2022/12/18 10:26:18 mef Exp $
 
 R_PKGNAME=	broom
-R_PKGVER=	0.8.0
+R_PKGVER=	1.0.2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Convert Statistical Objects into Tidy Tibbles
