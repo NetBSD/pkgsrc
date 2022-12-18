@@ -1,0 +1,14 @@
+The ff package provides data structures that are stored on disk but
+behave (almost) as if they were in RAM by transparently mapping only a
+section (pagesize) in main memory - the effective virtual memory
+consumption per ff object.
+
+ff supports R's standard atomic data types 'double', 'logical', 'raw'
+and 'integer' and non-standard atomic types boolean (1 bit),
+quad (2 bit unsigned), nibble (4 bit unsigned), byte (1 byte signed
+with NAs), ubyte (1 byte unsigned), short (2 byte signed with NAs),
+ushort (2 byte unsigned), single (4 byte float with NAs).
+
+For example 'quad' allows efficient storage of genomic data as
+an 'A','T','G','C' factor. The unsigned types support 'circular'
+arithmetic.
