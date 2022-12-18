@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6210 2022/12/18 06:22:45 mef Exp $
+$NetBSD: CHANGES-2022,v 1.6211 2022/12/18 06:46:55 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9324,3 +9324,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added textproc/R-rbibutils version 2.2.11 [mef 2022-12-18]
 	Added textproc/R-Rdpack version 2.4 [mef 2022-12-18]
 	Updated math/R-DAAG to 1.25.4 [mef 2022-12-18]
+	Updated math/R-DBI to 1.1.3 [mef 2022-12-18]
