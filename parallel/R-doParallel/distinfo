@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/12/18 12:46:19 mef Exp $
+
+BLAKE2s (R/doParallel_1.0.17.tar.gz) = 4f700e64fd6c4003ac01d7276eaea84a92a8e0dc06ab0311506b68fe2439da97
+SHA512 (R/doParallel_1.0.17.tar.gz) = b268c3dbd6773e5209328a95862f06971122d16bfffc8787f62d681f6ef1f0c1dac945a3fcc729dd836ecb537a0ceaedee3199f62c80e9843178006491cb5faa
+Size (R/doParallel_1.0.17.tar.gz) = 164254 bytes
