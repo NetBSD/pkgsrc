@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.3 2021/09/18 14:09:49 mef Exp $
+# $NetBSD: Makefile,v 1.4 2022/12/18 13:59:09 mef Exp $
 
 R_PKGNAME=	units
-R_PKGVER=	0.7-2
+R_PKGVER=	0.8-1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Measurement Units for R Vectors
 LICENSE=	gnu-gpl-v2
 
 # Packages suggested but not available:
-#  'udunits2', 'NISTunits', 'measurements', 'ggforce'
+#   'NISTunits', 'measurements', 'vdiffr'
+TEST_DEPENDS+=	R-ggplot2-[0-9]*:../../graphics/R-ggplot2
 
 USE_LANGUAGES+=	c c++
 
