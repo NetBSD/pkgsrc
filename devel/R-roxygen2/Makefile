@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2022/04/30 14:39:03 mef Exp $
+# $NetBSD: Makefile,v 1.5 2022/12/18 04:51:33 mef Exp $
 
 R_PKGNAME=	roxygen2
-R_PKGVER=	7.1.2
+R_PKGVER=	7.2.3
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -19,10 +19,11 @@ DEPENDS+=	R-stringr>=1.0.0:../../textproc/R-stringr
 DEPENDS+=	R-xml2>=1.2.2:../../textproc/R-xml2
 DEPENDS+=	R-knitr-[0-9]*:../../print/R-knitr
 
-#  Packages suggested but not available: 'R.methodsS3', 'R.oo'
+TEST_DEPENDS+=	R-R.methodsS3-[0-9]*:../../devel/R-R.methodsS3
+TEST_DEPENDS+=	R-R.oo-[0-9]*:../../devel/R-R.oo
+TEST_DEPENDS+=	R-devtools-[0-9]*:../../devel/R-devtools
 TEST_DEPENDS+=	R-testthat-[0-9]*:../../devel/R-testthat
 TEST_DEPENDS+=	R-rmarkdown-[0-9]*:../../textproc/R-rmarkdown
-TEST_DEPENDS+=	R-devtools-[0-9]*:../../devel/R-devtools
 
 USE_LANGUAGES=	c c++
 
