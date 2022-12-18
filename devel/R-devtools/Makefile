@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2022/12/18 08:26:21 jperkin Exp $
+# $NetBSD: Makefile,v 1.17 2022/12/18 09:30:46 mef Exp $
 
 R_PKGNAME=	devtools
 R_PKGVER=	2.4.5
@@ -30,7 +30,7 @@ DEPENDS+=	R-jsonlite>=1.7.1:../../textproc/R-jsonlite
 DEPENDS+=	R-DT>=0.15:../../textproc/R-DT
 DEPENDS+=	R-httr>=1.4.2:../../www/R-httr
 DEPENDS+=	R-rversions>=2.0.2:../../devel/R-rversions
-#DEPENDS+=	R-profvis-[0-9]*:../../benchmarks/R-profvis
+DEPENDS+=	R-profvis-[0-9]*:../../benchmarks/R-profvis
 DEPENDS+=	R-pkgdown-[0-9]*:../../www/R-pkgdown
 DEPENDS+=	R-miniUI-[0-9]*:../../www/R-miniUI
 DEPENDS+=	R-urlchecker-[0-9]*:../../www/R-urlchecker
