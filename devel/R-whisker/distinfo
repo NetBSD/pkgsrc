@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:14:10 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/12/18 05:04:36 mef Exp $
 
-BLAKE2s (R/whisker_0.4.tar.gz) = 451b7685319393a0f41804fdadae7f9ed087530d9fcffd67381d3d73ede1f494
-SHA512 (R/whisker_0.4.tar.gz) = 257dfcf9f8df6a59004e21fdad3a0e0958b4070e7d293e573ef8b4a237d1e3cab049384ddb266d9a5ef385564c3aef265d82e275c9bb8c8baa608ed88ab95584
-Size (R/whisker_0.4.tar.gz) = 28574 bytes
+BLAKE2s (R/whisker_0.4.1.tar.gz) = 2ecfb5841159bd12af17ce475d872679013a82d9414aebfd0f0093913400f24a
+SHA512 (R/whisker_0.4.1.tar.gz) = 44ebd2293dca0a17d7eb3a8e340db025d31e61860be0c77d3c3397405bf4c8f216a9670279672a336ab3967b9bf7b120afd07f55c828f47414331b7b8fd36404
+Size (R/whisker_0.4.1.tar.gz) = 28586 bytes
