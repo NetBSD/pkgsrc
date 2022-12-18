@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2021/09/19 02:26:35 mef Exp $
+# $NetBSD: Makefile,v 1.3 2022/12/18 06:53:21 mef Exp $
 
 R_PKGNAME=	DEoptimR
-R_PKGVER=	1.0-9
+R_PKGVER=	1.0-11
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Differential evolution optimization in pure R
