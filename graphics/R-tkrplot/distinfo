@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/12/18 09:44:00 mef Exp $
+
+BLAKE2s (R/tkrplot_0.0-27.tar.gz) = 4f059fdc1d542987d1755f0d6bafa1807c6a4950ce60599c27acb98a3629632f
+SHA512 (R/tkrplot_0.0-27.tar.gz) = e5ac31cd8e0882ffc5c3107d16c1574db91c1f70af3845e2922fc6c5fcc26f1749fae2dc835981450d8f48d9100f47a69ceb430f5e53383427642ba2800d2990
+Size (R/tkrplot_0.0-27.tar.gz) = 33104 bytes
