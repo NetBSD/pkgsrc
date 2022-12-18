@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2022/05/23 11:48:04 mef Exp $
+# $NetBSD: Makefile,v 1.18 2022/12/18 12:57:14 mef Exp $
 
 R_PKGNAME=	zoo
-R_PKGVER=	1.8-10
+R_PKGVER=	1.8-11
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	S3 infrastructure for regular and irregular time series
