@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/07/01 15:57:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/12/18 10:12:42 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -8,3 +8,6 @@ ${PYSITELIB}/cftime/__init__.py
 ${PYSITELIB}/cftime/__init__.pyc
 ${PYSITELIB}/cftime/__init__.pyo
 ${PYSITELIB}/cftime/_cftime.so
+${PYSITELIB}/cftime/_strptime.py
+${PYSITELIB}/cftime/_strptime.pyc
+${PYSITELIB}/cftime/_strptime.pyo
