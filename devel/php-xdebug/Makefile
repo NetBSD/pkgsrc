@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.43 2022/12/14 11:46:41 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2022/12/18 13:45:40 taca Exp $
 
 MODNAME=		xdebug
-PECL_VERSION=		3.1.6
+PECL_VERSION=		3.2.0
 CATEGORIES=		devel
 EXTRACT_SUFX=		.tgz
 
@@ -12,7 +12,7 @@ LICENSE=		php
 
 PHP_ZEND_EXTENSION=	yes
 
-PHP_VERSIONS_INCOMPATIBLE=	56 82
+PHP_VERSIONS_ACCEPTED=	80 81 82
 
 .include "../../lang/php/ext.mk"
 .include "../../mk/bsd.pkg.mk"
