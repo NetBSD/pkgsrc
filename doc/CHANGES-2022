@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6262 2022/12/18 14:46:16 taca Exp $
+$NetBSD: CHANGES-2022,v 1.6263 2022/12/18 14:48:02 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9383,3 +9383,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/ruby-rotp to 6.2.2 [taca 2022-12-18]
 	Updated textproc/ruby-haml to 6.1.1 [taca 2022-12-18]
 	Updated www/ruby-aws-partitions to 1.679.0 [taca 2022-12-18]
+	Updated www/ruby-html-proofer to 5.0.3 [taca 2022-12-18]
