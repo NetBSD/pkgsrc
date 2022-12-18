@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2019/08/08 19:53:45 brook Exp $
+# $NetBSD: Makefile,v 1.6 2022/12/18 07:46:27 mef Exp $
 
 R_PKGNAME=	RColorBrewer
-R_PKGVER=	1.1-2
-CATEGORIES=	math
+R_PKGVER=	1.1-3
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	ColorBrewer palettes
