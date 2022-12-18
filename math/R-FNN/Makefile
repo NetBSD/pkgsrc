@@ -1,12 +1,15 @@
-# $NetBSD: Makefile,v 1.5 2019/08/08 19:53:44 brook Exp $
+# $NetBSD: Makefile,v 1.6 2022/12/18 06:58:45 mef Exp $
 
 R_PKGNAME=	FNN
-R_PKGVER=	1.1.3
+R_PKGVER=	1.1.3.1
 CATEGORIES=	math
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Fast nearest neighbor search algorithms and applications
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
+
+# Packages suggested but not available: 'chemometrics'
+TEST_DEPENDS+=	R-mvtnorm-[0-9]*:../../math/R-mvtnorm
 
 USE_LANGUAGES+=	c c++
 
