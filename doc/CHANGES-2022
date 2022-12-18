@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6194 2022/12/18 03:09:37 mef Exp $
+$NetBSD: CHANGES-2022,v 1.6195 2022/12/18 03:17:56 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9307,3 +9307,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/R-lintr to 3.0.2 [mef 2022-12-18]
 	Updated devel/R-lpSolve to 5.6.17 [mef 2022-12-18]
 	Updated devel/R-pak to 0.3.1 [mef 2022-12-18]
+	Updated devel/R-pkgbuild to 1.4.0 [mef 2022-12-18]
