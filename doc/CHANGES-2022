@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6220 2022/12/18 09:28:31 mef Exp $
+$NetBSD: CHANGES-2022,v 1.6221 2022/12/18 09:36:33 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9335,3 +9335,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated math/R-RcppEigen to 0.3.3.9.3 [mef 2022-12-18]
 	Added benchmarks/R-profvis version 0.3.7 [mef 2022-12-18]
 	Added www/R-downlit version 0.4.0 [mef 2022-12-18]
+	Updated math/R-akima to 0.6.3.4 [mef 2022-12-18]
