@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.14 2022/12/08 14:12:34 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2022/12/18 13:52:58 adam Exp $
 bin/ansible-lint
 ${PYSITELIB}/${WHEEL_INFODIR}/COPYING
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.mit.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
@@ -50,6 +49,9 @@ ${PYSITELIB}/ansiblelint/logger.pyc
 ${PYSITELIB}/ansiblelint/py.typed
 ${PYSITELIB}/ansiblelint/rules/__init__.py
 ${PYSITELIB}/ansiblelint/rules/__init__.pyc
+${PYSITELIB}/ansiblelint/rules/args.md
+${PYSITELIB}/ansiblelint/rules/args.py
+${PYSITELIB}/ansiblelint/rules/args.pyc
 ${PYSITELIB}/ansiblelint/rules/avoid_implicit.md
 ${PYSITELIB}/ansiblelint/rules/avoid_implicit.py
 ${PYSITELIB}/ansiblelint/rules/avoid_implicit.pyc
@@ -114,6 +116,9 @@ ${PYSITELIB}/ansiblelint/rules/meta_no_info.pyc
 ${PYSITELIB}/ansiblelint/rules/meta_no_tags.md
 ${PYSITELIB}/ansiblelint/rules/meta_no_tags.py
 ${PYSITELIB}/ansiblelint/rules/meta_no_tags.pyc
+${PYSITELIB}/ansiblelint/rules/meta_unsupported_ansible.md
+${PYSITELIB}/ansiblelint/rules/meta_unsupported_ansible.py
+${PYSITELIB}/ansiblelint/rules/meta_unsupported_ansible.pyc
 ${PYSITELIB}/ansiblelint/rules/meta_video_links.md
 ${PYSITELIB}/ansiblelint/rules/meta_video_links.py
 ${PYSITELIB}/ansiblelint/rules/meta_video_links.pyc
@@ -199,6 +204,7 @@ ${PYSITELIB}/ansiblelint/schemas/ansible-navigator-config.json
 ${PYSITELIB}/ansiblelint/schemas/ansible-navigator.json
 ${PYSITELIB}/ansiblelint/schemas/ansible.json
 ${PYSITELIB}/ansiblelint/schemas/arg_specs.json
+${PYSITELIB}/ansiblelint/schemas/changelog.json
 ${PYSITELIB}/ansiblelint/schemas/execution-environment.json
 ${PYSITELIB}/ansiblelint/schemas/galaxy.json
 ${PYSITELIB}/ansiblelint/schemas/inventory.json
