@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2019/08/08 19:53:44 brook Exp $
+# $NetBSD: Makefile,v 1.5 2022/12/18 07:06:41 mef Exp $
 
 R_PKGNAME=	ISLR
-R_PKGVER=	1.2
-CATEGORIES=	math
+R_PKGVER=	1.4
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Data for the "ISLR" book
