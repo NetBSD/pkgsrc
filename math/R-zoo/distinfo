@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2022/05/23 11:48:04 mef Exp $
+$NetBSD: distinfo,v 1.19 2022/12/18 12:57:14 mef Exp $
 
-BLAKE2s (R/zoo_1.8-10.tar.gz) = d786f89c2f033b4c08bd2a735d191254d781ebdee28c8e4a761d624ff03f0ba1
-SHA512 (R/zoo_1.8-10.tar.gz) = 473a1e8ebade7717ba4b90513c9791268323c5f762c217ff3fcf3915d74198142f7b4cc6a2651450428c323a2b37f8b38698e87cdd7ff0b0def8084bb31ba4da
-Size (R/zoo_1.8-10.tar.gz) = 808943 bytes
+BLAKE2s (R/zoo_1.8-11.tar.gz) = a9c076c032f0c4931c6d73bb18b132d1b8de9ec83fa3fc8ea658906ca433cdb2
+SHA512 (R/zoo_1.8-11.tar.gz) = e73d2c1ba46bd99cee3b2d74f7c07ccef5e638d4f48ab63d9292fc311ce9de24d303e2bf5ac0aac7720d89c6ccf26ec1d28c1df0f1088cf40ad927fe9aac8cfd
+Size (R/zoo_1.8-11.tar.gz) = 781934 bytes
