@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1024 2022/12/18 00:45:08 mef Exp $
+# $NetBSD: Makefile,v 1.1025 2022/12/18 14:32:14 vins Exp $
 #
 
 COMMENT=	System utilities
@@ -72,6 +72,7 @@ SUBDIR+=	boxbackup-server
 SUBDIR+=	brasero
 SUBDIR+=	broot
 SUBDIR+=	bsdec2-image-upload
+SUBDIR+=	bsdfetch
 SUBDIR+=	bsdinstall
 SUBDIR+=	bsign
 SUBDIR+=	btpin-qt
