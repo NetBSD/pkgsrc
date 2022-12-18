@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6260 2022/12/18 14:41:07 taca Exp $
+$NetBSD: CHANGES-2022,v 1.6261 2022/12/18 14:43:32 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9381,3 +9381,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/ruby-facter to 4.2.14 [taca 2022-12-18]
 	Updated security/ruby-rex-text to 0.2.47 [taca 2022-12-18]
 	Updated security/ruby-rotp to 6.2.2 [taca 2022-12-18]
+	Updated textproc/ruby-haml to 6.1.1 [taca 2022-12-18]
