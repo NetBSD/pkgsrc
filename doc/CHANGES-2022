@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6243 2022/12/18 13:43:48 mef Exp $
+$NetBSD: CHANGES-2022,v 1.6244 2022/12/18 13:46:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9363,3 +9363,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated math/R-xts to 0.12.2 [mef 2022-12-18]
 	Updated math/R-vctrs to 0.5.1 [mef 2022-12-18]
 	Updated math/R-plyr to 1.8.8 [mef 2022-12-18]
+	Updated devel/php-xdebug to 3.2.0 [taca 2022-12-18]
