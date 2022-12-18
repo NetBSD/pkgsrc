@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2022/11/26 21:11:11 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/12/18 10:06:39 adam Exp $
 
-DISTNAME=	subprocess-tee-0.4.0
+DISTNAME=	subprocess-tee-0.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/subprocess-tee/}
