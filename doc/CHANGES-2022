@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6266 2022/12/18 14:54:46 taca Exp $
+$NetBSD: CHANGES-2022,v 1.6267 2022/12/18 14:55:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9387,3 +9387,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/ruby-loofah to 2.19.1 [taca 2022-12-18]
 	Updated chat/toot to 0.32.1 [vins 2022-12-18]
 	Updated misc/ruby-lolcat to 100.0.1nb1 [taca 2022-12-18]
+	Updated textproc/ruby-asciidoctor to 2.0.18nb1 [taca 2022-12-18]
