@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2022/05/21 23:09:12 mef Exp $
+# $NetBSD: Makefile,v 1.12 2022/12/18 10:19:13 mef Exp $
 
 R_PKGNAME=	car
-R_PKGVER=	3.0-13
+R_PKGVER=	3.1-1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Companion to 'Applied Regression'
@@ -15,7 +15,7 @@ DEPENDS+=	R-pbkrtest>=0.4.4:../../math/R-pbkrtest
 DEPENDS+=	R-quantreg>=5.42.1:../../math/R-quantreg
 
 # Packages suggested but not available:
-#   'alr4', 'coxme', 'leaps', 'lmtest'
+#   'alr4', 'coxme', 'leaps'
 TEST_DEPENDS+=	R-lmtest-[0-9]*:../../math/R-lmtest
 TEST_DEPENDS+=	R-effects-[0-9]*:../../graphics/R-effects
 TEST_DEPENDS+=	R-knitr-[0-9]*:../../print/R-knitr
