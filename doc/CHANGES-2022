@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6191 2022/12/18 02:36:01 mef Exp $
+$NetBSD: CHANGES-2022,v 1.6192 2022/12/18 02:47:25 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9304,3 +9304,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/R-iterators to 1.0.14 [mef 2022-12-18]
 	Updated devel/R-lifecycle to 1.0.3 [mef 2022-12-18]
 	Added devel/R-patrick version 0.2.0 [mef 2022-12-18]
+	Updated devel/R-lintr to 3.0.2 [mef 2022-12-18]
