@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3847 2022/12/16 13:12:00 jperkin Exp $
+# $NetBSD: Makefile,v 1.3848 2022/12/18 02:13:22 mef Exp $
 #
 
 COMMENT=	Development utilities
@@ -44,6 +44,7 @@ SUBDIR+=	R-disposables
 SUBDIR+=	R-evaluate
 SUBDIR+=	R-fansi
 SUBDIR+=	R-fastmap
+SUBDIR+=	R-foreach
 SUBDIR+=	R-filelock
 SUBDIR+=	R-fs
 SUBDIR+=	R-gert
