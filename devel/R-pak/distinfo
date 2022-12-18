@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2022/04/29 11:57:28 mef Exp $
+$NetBSD: distinfo,v 1.5 2022/12/18 03:09:24 mef Exp $
 
-BLAKE2s (R/pak_0.3.0.tar.gz) = b80d2c457f7b4bdae7fb1c44480cec8536732dad82bf8c4c06a9bcf5be7e37ee
-SHA512 (R/pak_0.3.0.tar.gz) = 22c7b050c5559406dbfda21db82ba3c0d15d81378b3ec2e4997591ac4987d20810fafc4bc941756411150f8baac1ada21b7d34d7e25d6579dcda9916aa61c155
-Size (R/pak_0.3.0.tar.gz) = 88564 bytes
+BLAKE2s (R/pak_0.3.1.tar.gz) = 0d9a08e98f1823cda89a5075596024f61f8d2eb7ee982f05c0a4a0b2e692b78f
+SHA512 (R/pak_0.3.1.tar.gz) = aa312cef189b80f0d999811b5361273cdb7d3a6264732d3f146834ca11a25f222b7c8a5766f38cb181be85d8e6975e27d65f1d14c5a2f7913dc787593f725c8a
+Size (R/pak_0.3.1.tar.gz) = 120022 bytes
