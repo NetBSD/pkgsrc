@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:14:05 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/12/18 02:47:04 mef Exp $
 
-BLAKE2s (R/lintr_2.0.1.tar.gz) = 36fa5d8004eaa4fef4ad66e621e1c3a3d88fd8c9115479a9de8d474a12ffa0f5
-SHA512 (R/lintr_2.0.1.tar.gz) = 2b2189fd36924e70471b27822701eb0f1ebc62cbb4b7120f879f8be779d9a7cdbca307a533f1496799082f84ae72d2a8e638d943041e8255ba1775b6caeb8509
-Size (R/lintr_2.0.1.tar.gz) = 219142 bytes
+BLAKE2s (R/lintr_3.0.2.tar.gz) = 696a8f84bd0ab2e99b61d29b4c5f785ba0591f6db4422f936103861994c9268a
+SHA512 (R/lintr_3.0.2.tar.gz) = 2c588b75928e1335bf928e26cacb2caacfd5b6a6f483fafffad19b462b1712e5816c4f96a850c0c64faa75f44f4dee02b94a9b7bb78f79f1717b186b2d6a5f48
+Size (R/lintr_3.0.2.tar.gz) = 2203183 bytes
