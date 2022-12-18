@@ -1,4 +1,4 @@
-# $NetBSD: ccache.mk,v 1.40 2022/12/09 12:18:56 gdt Exp $
+# $NetBSD: ccache.mk,v 1.41 2022/12/18 01:23:16 gdt Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -80,6 +80,7 @@ _USE_CCACHE=	yes
 # and thus cannot inversely depend on ccache.
 _CCACHE_CIRCULAR_DEPENDENCY_PACKAGES=	\
 	archivers/gzip			\
+	devel/ccache3			\
 	devel/ccache			\
 	devel/distcc			\
 	devel/libtool-base		\
