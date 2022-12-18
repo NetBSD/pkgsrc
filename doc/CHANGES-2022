@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6182 2022/12/18 01:25:02 mef Exp $
+$NetBSD: CHANGES-2022,v 1.6183 2022/12/18 01:29:31 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9295,3 +9295,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/R-callr to 3.7.3 [mef 2022-12-18]
 	Updated devel/R-crayon to 1.5.2 [mef 2022-12-18]
 	Updated devel/R-desc to 1.4.2 [mef 2022-12-18]
+	Updated devel/R-evaluate to 0.19 [mef 2022-12-18]
