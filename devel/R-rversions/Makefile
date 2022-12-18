@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2021/08/21 05:47:19 mef Exp $
+# $NetBSD: Makefile,v 1.4 2022/12/18 04:56:30 mef Exp $
 
 R_PKGNAME=	rversions
-R_PKGVER=	2.1.1
+R_PKGVER=	2.1.2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -10,6 +10,8 @@ LICENSE=	mit	# + file LICENSE
 
 DEPENDS+=	R-xml2-[0-9]*:../../textproc/R-xml2
 DEPENDS+=	R-curl-[0-9]*:../../www/R-curl
+
+TEST_DEPENDS+=	R-mockery-[0-9]*:../../devel/R-mockery
 
 USE_LANGUAGES=	# none
 
