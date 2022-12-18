@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/12/18 06:13:31 mef Exp $
+
+BLAKE2s (R/Rdpack_2.4.tar.gz) = 5dc5e2a95e0d828ed6aaa44d31c07790f3f745c484787f0d55944c2cbc30d46a
+SHA512 (R/Rdpack_2.4.tar.gz) = d58e2bae5e366d7bac7f98873ef5c8a2767c725d5f1b792ca7e8a2e82458a45d79fc4606b49d16de4555eff85224c01f6ebfd4e2fb42c0d518a734a9c5e2b8c5
+Size (R/Rdpack_2.4.tar.gz) = 707773 bytes
