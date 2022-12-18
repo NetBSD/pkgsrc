@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6226 2022/12/18 10:31:39 mef Exp $
+$NetBSD: CHANGES-2022,v 1.6227 2022/12/18 10:38:54 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9344,3 +9344,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated math/R-car to 3.1.1 [mef 2022-12-18]
 	Updated math/R-broom to 1.0.2 [mef 2022-12-18]
 	Updated math/R-chron to 2.3.58 [mef 2022-12-18]
+	Updated math/R-circular to 0.4.95 [mef 2022-12-18]
