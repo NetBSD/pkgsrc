@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6205 2022/12/18 05:18:25 mef Exp $
+$NetBSD: CHANGES-2022,v 1.6206 2022/12/18 05:22:18 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9318,3 +9318,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/R-whisker to 0.4.1 [mef 2022-12-18]
 	Updated devel/R-xfun to 0.35 [mef 2022-12-18]
 	Updated devel/R-BH to 1.78.0.0 [mef 2022-12-18]
+	Updated devel/R-IRdisplay to 1.1 [mef 2022-12-18]
