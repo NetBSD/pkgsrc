@@ -1,0 +1,2 @@
+bsdfetch is a simple tool to display information about a running *BSD
+system. Written in C, bsdfetch doesn't require any external dependency.
