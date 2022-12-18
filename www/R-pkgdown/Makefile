@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/12/18 08:26:21 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2022/12/18 09:30:46 mef Exp $
 
 R_PKGNAME=	pkgdown
 R_PKGVER=	2.0.7
@@ -27,7 +27,7 @@ DEPENDS+=	R-yaml>=2.2.1:../../textproc/R-yaml
 DEPENDS+=	R-bslib>=0.3.1:../../www/R-bslib
 DEPENDS+=	R-httr>=1.4.2:../../www/R-httr
 DEPENDS+=	R-ragg-[0-9]*:../../graphics/R-ragg
-#DEPENDS+=	R-downlit-[0-9]*:../../www/R-downlit
+DEPENDS+=	R-downlit-[0-9]*:../../www/R-downlit
 
 USE_LANGUAGES=	# none
 
