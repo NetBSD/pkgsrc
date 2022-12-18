@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6236 2022/12/18 11:46:24 mef Exp $
+$NetBSD: CHANGES-2022,v 1.6237 2022/12/18 11:54:35 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9352,7 +9352,6 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated math/R-classInt to 0.4.8 [mef 2022-12-18]
 	Updated math/R-date to 1.2.40 [mef 2022-12-18]
 	Updated math/R-e1071 to 1.7.12 [mef 2022-12-18]
-	Updated math/R-emdbook to 1.3.12 [mef 2022-12-18]
 	Updated math/R-emdbook to 1.3.12 [mef 2022-12-18]
 	Updated math/R-sp to 1.5.1 [mef 2022-12-18]
 	Updated math/R-energy to 1.7.10 [mef 2022-12-18]
