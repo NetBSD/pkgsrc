@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.999 2022/12/17 15:03:06 mef Exp $
+# $NetBSD: Makefile,v 1.1000 2022/12/18 09:47:04 mef Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -41,6 +41,7 @@ SUBDIR+=	R-ragg
 SUBDIR+=	R-rgl
 SUBDIR+=	R-scales
 SUBDIR+=	R-thematic
+SUBDIR+=	R-tkrplot
 SUBDIR+=	R-viridis
 SUBDIR+=	R-viridisLite
 SUBDIR+=	SDL2_gfx
