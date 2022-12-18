@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:55:21 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/12/18 06:53:21 mef Exp $
 
-BLAKE2s (R/DEoptimR_1.0-9.tar.gz) = f6edf169d90dd6ff857734eb1364bccd70a828aaf4d63c3ad25dfa69730aec07
-SHA512 (R/DEoptimR_1.0-9.tar.gz) = 98fc7ee410db24d78bc55f0a0231b0711e40084837e40e09a2062682c4be714e65702d92e203c488c16f9c5b59f73b8272622500aa4d20031f51087d9e4a78d4
-Size (R/DEoptimR_1.0-9.tar.gz) = 36148 bytes
+BLAKE2s (R/DEoptimR_1.0-11.tar.gz) = 242f6f3fed493fa8ba75ec2ab7242ef2da083682af3f6df952b142d3e4cf58f3
+SHA512 (R/DEoptimR_1.0-11.tar.gz) = 0d483ec8c746e7ccc0d2796add8e6ad38579fa7df31b45dcb5d4811b66af4b87719dea202a274852fb49c480e99e1d02d78058052fc79d380e6873f7384be62e
+Size (R/DEoptimR_1.0-11.tar.gz) = 36979 bytes
