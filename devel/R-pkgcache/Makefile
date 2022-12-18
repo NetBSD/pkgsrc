@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2022/04/30 01:01:41 mef Exp $
+# $NetBSD: Makefile,v 1.7 2022/12/18 03:25:06 mef Exp $
 
 R_PKGNAME=	pkgcache
-R_PKGVER=	2.0.1
+R_PKGVER=	2.0.3
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -31,10 +31,11 @@ TEST_DEPENDS+=	R-mockery-[0-9]*:../../devel/R-mockery
 TEST_DEPENDS+=	R-pingr-[0-9]*:../../net/R-pingr
 TEST_DEPENDS+=	R-sessioninfo-[0-9]*:../../devel/R-sessioninfo
 TEST_DEPENDS+=	R-spelling-[0-9]*:../../textproc/R-spelling
-TEST_DEPENDS+=	R-webfakes-[0-9]*:../../www/R-webfakes
+TEST_DEPENDS+=	R-webfakes>=1.1.5:../../www/R-webfakes
+TEST_DEPENDS+=	R-zip-[0-9]*:../../archivers/R-zip
 
 
-USE_LANGUAGES=	c	
+USE_LANGUAGES=	c
 
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
