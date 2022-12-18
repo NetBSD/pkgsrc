@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6227 2022/12/18 10:38:54 mef Exp $
+$NetBSD: CHANGES-2022,v 1.6228 2022/12/18 11:06:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9345,3 +9345,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated math/R-broom to 1.0.2 [mef 2022-12-18]
 	Updated math/R-chron to 2.3.58 [mef 2022-12-18]
 	Updated math/R-circular to 0.4.95 [mef 2022-12-18]
+	Updated sysutils/py-subprocess-tee to 0.4.1 [adam 2022-12-18]
+	Updated time/py-cftime to 1.6.2 [adam 2022-12-18]
+	Updated devel/py-cbor2 to 5.4.6 [adam 2022-12-18]
+	Updated devel/py-isort to 5.11.3 [adam 2022-12-18]
