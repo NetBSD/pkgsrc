@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6228 2022/12/18 11:06:28 adam Exp $
+$NetBSD: CHANGES-2022,v 1.6229 2022/12/18 11:07:41 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9349,3 +9349,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated time/py-cftime to 1.6.2 [adam 2022-12-18]
 	Updated devel/py-cbor2 to 5.4.6 [adam 2022-12-18]
 	Updated devel/py-isort to 5.11.3 [adam 2022-12-18]
+	Updated math/R-classInt to 0.4.8 [mef 2022-12-18]
