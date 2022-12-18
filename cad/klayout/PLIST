@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2021/08/15 03:29:29 mef Exp $
+@comment $NetBSD: PLIST,v 1.9 2022/12/18 22:29:02 mef Exp $
 bin/klayout
 bin/strm2cif
 bin/strm2dxf
@@ -159,6 +159,10 @@ lib/klayout/libklayout_db.${RUBY_DLEXT}
 lib/klayout/libklayout_db.so.0
 lib/klayout/libklayout_db.so.${PKGVERSION_MAJOR_MINOR}
 lib/klayout/libklayout_db.so.${PKGVERSION}
+lib/klayout/libklayout_doc.so
+lib/klayout/libklayout_doc.so.0
+lib/klayout/libklayout_doc.so.${PKGVERSION}
+lib/klayout/libklayout_doc.so.${PKGVERSION_MAJOR_MINOR}
 lib/klayout/libklayout_drc.${RUBY_DLEXT}
 lib/klayout/libklayout_drc.so.0
 lib/klayout/libklayout_drc.so.${PKGVERSION_MAJOR_MINOR}
@@ -171,6 +175,10 @@ lib/klayout/libklayout_gsi.${RUBY_DLEXT}
 lib/klayout/libklayout_gsi.so.0
 lib/klayout/libklayout_gsi.so.${PKGVERSION_MAJOR_MINOR}
 lib/klayout/libklayout_gsi.so.${PKGVERSION}
+lib/klayout/libklayout_icons.so
+lib/klayout/libklayout_icons.so.0
+lib/klayout/libklayout_icons.so.${PKGVERSION}
+lib/klayout/libklayout_icons.so.${PKGVERSION_MAJOR_MINOR}
 lib/klayout/libklayout_img.${RUBY_DLEXT}
 lib/klayout/libklayout_img.so.0
 lib/klayout/libklayout_img.so.${PKGVERSION_MAJOR_MINOR}
@@ -183,6 +191,14 @@ lib/klayout/libklayout_laybasic.${RUBY_DLEXT}
 lib/klayout/libklayout_laybasic.so.0
 lib/klayout/libklayout_laybasic.so.${PKGVERSION_MAJOR_MINOR}
 lib/klayout/libklayout_laybasic.so.${PKGVERSION}
+lib/klayout/libklayout_layui.so
+lib/klayout/libklayout_layui.so.0
+lib/klayout/libklayout_layui.so.${PKGVERSION}
+lib/klayout/libklayout_layui.so.${PKGVERSION_MAJOR_MINOR}
+lib/klayout/libklayout_layview.so
+lib/klayout/libklayout_layview.so.0
+lib/klayout/libklayout_layview.so.${PKGVERSION}
+lib/klayout/libklayout_layview.so.${PKGVERSION_MAJOR_MINOR}
 lib/klayout/libklayout_lib.${RUBY_DLEXT}
 lib/klayout/libklayout_lib.so.0
 lib/klayout/libklayout_lib.so.${PKGVERSION_MAJOR_MINOR}
@@ -231,7 +247,8 @@ lib/klayout/pymod/klayout/__init__.py
 lib/klayout/pymod/klayout/db/__init__.py
 lib/klayout/pymod/klayout/db/pcell_declaration_helper.py
 lib/klayout/pymod/klayout/dbcore.${RUBY_DLEXT}
-lib/klayout/pymod/klayout/lay.${RUBY_DLEXT}
+lib/klayout/pymod/klayout/lay/__init__.py
+lib/klayout/pymod/klayout/laycore.so
 lib/klayout/pymod/klayout/lib/__init__.py
 lib/klayout/pymod/klayout/libcore.${RUBY_DLEXT}
 lib/klayout/pymod/klayout/rdb/__init__.py
