@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/11/11 14:06:24 taca Exp $
+# $NetBSD: Makefile,v 1.2 2022/12/18 14:53:07 taca Exp $
 
 DISTNAME=	manpages-0.6.1
 CATEGORIES=	misc
@@ -9,6 +9,8 @@ COMMENT=	Adds support for man pages to rubygems
 LICENSE=	mit
 
 USE_LANGUAGES=	# none
+
+RUBYGEM_MANPAGES=	no
 
 SUBST_CLASSES+=		path
 SUBST_MESSAGE.path=	Fixing man path.
