@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:14:00 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/12/18 05:22:08 mef Exp $
 
-BLAKE2s (R/IRdisplay_1.0.tar.gz) = 4b059bcebbd5f4afa2edf50f76f8dcead01393d8f2aa8ce20c017e5c9c0acb14
-SHA512 (R/IRdisplay_1.0.tar.gz) = de473f342a4a2092aaa87c62019cd00378962b4c4b57008914b44f111aa868a0a332a484a77d6d09ac3aed13ddae6a859fa35feded32ed5e009e37fdd9b4a4c5
-Size (R/IRdisplay_1.0.tar.gz) = 7729 bytes
+BLAKE2s (R/IRdisplay_1.1.tar.gz) = 09e11bd9f6815e80a5e0bd89c60d65e8c90feb0194fe9130fef00e4ef54e32c3
+SHA512 (R/IRdisplay_1.1.tar.gz) = 370976665d3defb403eb3cdeb2ee89c4e915900a6790c680b6d3f43e4ffe57c3a42876886a8e2de3af6135314236c01323920cdb7429c3fe2546bc3e3ec544e6
+Size (R/IRdisplay_1.1.tar.gz) = 8286 bytes
