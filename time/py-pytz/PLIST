@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2022/08/23 09:40:45 adam Exp $
+@comment $NetBSD: PLIST,v 1.28 2022/12/18 10:00:48 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -117,6 +117,7 @@ ${PYSITELIB}/pytz/zoneinfo/America/Cayenne
 ${PYSITELIB}/pytz/zoneinfo/America/Cayman
 ${PYSITELIB}/pytz/zoneinfo/America/Chicago
 ${PYSITELIB}/pytz/zoneinfo/America/Chihuahua
+${PYSITELIB}/pytz/zoneinfo/America/Ciudad_Juarez
 ${PYSITELIB}/pytz/zoneinfo/America/Coral_Harbour
 ${PYSITELIB}/pytz/zoneinfo/America/Cordoba
 ${PYSITELIB}/pytz/zoneinfo/America/Costa_Rica
