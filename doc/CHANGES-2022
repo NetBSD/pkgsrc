@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6185 2022/12/18 01:53:16 mef Exp $
+$NetBSD: CHANGES-2022,v 1.6186 2022/12/18 02:00:28 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9298,3 +9298,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/R-evaluate to 0.19 [mef 2022-12-18]
 	Added security/R-jose version 1.2.0 [mef 2022-12-18]
 	Updated devel/R-gert to 1.9.2 [mef 2022-12-18]
+	Updated security/R-openssl to 2.0.5 [mef 2022-12-18]
