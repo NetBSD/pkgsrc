@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6251 2022/12/18 14:14:29 taca Exp $
+$NetBSD: CHANGES-2022,v 1.6252 2022/12/18 14:17:28 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9372,3 +9372,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/ruby-io-event to 1.1.4 [taca 2022-12-18]
 	Updated math/R-urca to 1.3.3 [mef 2022-12-18]
 	Updated devel/ruby-rspec-expectations to 3.12.1 [taca 2022-12-18]
+	Updated math/R-tidyr to 1.2.1 [mef 2022-12-18]
