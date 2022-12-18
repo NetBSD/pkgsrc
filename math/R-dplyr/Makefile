@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2022/05/22 12:24:04 mef Exp $
+# $NetBSD: Makefile,v 1.7 2022/12/18 05:38:37 mef Exp $
 
 R_PKGNAME=	dplyr
-R_PKGVER=	1.0.9
+R_PKGVER=	1.0.10
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Grammar of data manipulation
@@ -22,11 +22,9 @@ DEPENDS+=	R-tibble>=2.1.3:../../math/R-tibble
 DEPENDS+=	R-vctrs>=0.4.1:../../math/R-vctrs
 
 # Packages suggested but not available:
-#   'bench', 'Lahman', 'lobstr', 'nycflights13', 'RMySQL'
+#   'Lahman', 'lobstr', 'nycflights13', 'RMySQL'
 
-
-
-#TEST_DEPENDS+=	R-bench-[0-9]*:
+TEST_DEPENDS+=	R-bench-[0-9]*:../../benchmarks/R-bench
 TEST_DEPENDS+=	R-broom-[0-9]*:../../math/R-broom
 TEST_DEPENDS+=	R-callr-[0-9]*:../../devel/R-callr
 TEST_DEPENDS+=	R-covr-[0-9]*:../../devel/R-covr
