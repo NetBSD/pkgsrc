@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6242 2022/12/18 13:36:53 mef Exp $
+$NetBSD: CHANGES-2022,v 1.6243 2022/12/18 13:43:48 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9362,3 +9362,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated math/R-zoo to 1.8.11 [mef 2022-12-18]
 	Updated math/R-xts to 0.12.2 [mef 2022-12-18]
 	Updated math/R-vctrs to 0.5.1 [mef 2022-12-18]
+	Updated math/R-plyr to 1.8.8 [mef 2022-12-18]
