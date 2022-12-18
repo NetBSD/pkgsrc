@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2022/02/12 13:14:07 taca Exp $
+$NetBSD: distinfo,v 1.13 2022/12/18 14:21:23 taca Exp $
 
-BLAKE2s (rbtree-0.4.5.gem) = 5e0d8fbbebfb563e66923f04f10588073a2f0380c1360c92cf31fa31f679fbdb
-SHA512 (rbtree-0.4.5.gem) = e1a1692fb91e85299d86083b02d71aa6ecb293ada2e3f17d2000344d064575148d3ab68b3f5bc4da420b8bf79bcfe353afeb52cc3b450eea662bb69d9ebeaf2d
-Size (rbtree-0.4.5.gem) = 30208 bytes
+BLAKE2s (rbtree-0.4.6.gem) = b4a37720d74070b5dfdca338448b1424f834f0c96b7b72ef43b3eab37b32d503
+SHA512 (rbtree-0.4.6.gem) = 7c9f5ac83ee78191efe3fb7fd6ef0afaa7506245191dbe92f3eb9e5f19b9fcd8157f19901d49d5ff9b4661a498a67d79e39ca86c79d8df99fcf11603b54a0158
+Size (rbtree-0.4.6.gem) = 30720 bytes
