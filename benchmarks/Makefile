@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2022/05/30 15:06:00 mef Exp $
+# $NetBSD: Makefile,v 1.61 2022/12/18 09:28:31 mef Exp $
 #
 
 COMMENT=	Benchmarking tools
@@ -6,6 +6,7 @@ COMMENT=	Benchmarking tools
 SUBDIR+=	R-bench
 SUBDIR+=	R-microbenchmark
 SUBDIR+=	R-profmem
+SUBDIR+=	R-profvis
 SUBDIR+=	R-rbenchmark
 SUBDIR+=	benchfft
 SUBDIR+=	blogbench
