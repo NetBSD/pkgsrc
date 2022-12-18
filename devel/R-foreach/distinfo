@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/12/18 02:10:59 mef Exp $
+
+BLAKE2s (R/foreach_1.5.2.tar.gz) = ce589f90b01917068eef509293c8ade6a73ad2459b38b955a89248b3e4786666
+SHA512 (R/foreach_1.5.2.tar.gz) = 27d7a54c0441d28dd8317435d3fbb37b13e0e5d6f9876839a88f7a67fd8f1f815b6ab102f8a91e5671d95856e3c8501bf4d3743d5dec04771d3791e907906690
+Size (R/foreach_1.5.2.tar.gz) = 89758 bytes
