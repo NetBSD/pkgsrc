@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.21 2022/07/07 10:27:14 adam Exp $
+# $NetBSD: Makefile,v 1.22 2022/12/18 13:48:36 adam Exp $
 
-DISTNAME=	eyeD3-0.9.6
+DISTNAME=	eyeD3-0.9.7
 CATEGORIES=	audio python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/eyed3/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://eyed3.readthedocs.io/en/latest/
+HOMEPAGE=	https://eyed3.readthedocs.io/
 COMMENT=	Python audio data toolkit (ID3 and MP3)
 LICENSE=	gnu-gpl-v3
 
