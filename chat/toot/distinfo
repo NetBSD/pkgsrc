@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2022/12/08 22:48:23 vins Exp $
+$NetBSD: distinfo,v 1.3 2022/12/18 14:50:55 vins Exp $
 
-BLAKE2s (toot-0.31.0.tar.gz) = d149ce638c7c5f1d07428e297ae25c2f4af800a92f44e75715836358b1ab00e1
-SHA512 (toot-0.31.0.tar.gz) = 7480ab53a3b9cee6a67545720c58e19e806357034f02a27d5921c439bf85ead6508ab8c51d1e699f2e54d8632d4ca43914c7eb22527d66c99276765e54de3ae9
-Size (toot-0.31.0.tar.gz) = 57897 bytes
+BLAKE2s (toot-0.32.1.tar.gz) = f490ba26c10423ca72361b5dde3e8670d12e40e41909509021bbd79d5101479a
+SHA512 (toot-0.32.1.tar.gz) = d17c3b3c09acea1897a3ee43c69413b8eef187bab5b59307b09a4dad322b0208003f0ceaeedfcf9daa279664e2fd32ef0060aca0cdf4a93e6c3f9f284cdf56b9
+Size (toot-0.32.1.tar.gz) = 60594 bytes
