@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/12/06 14:41:39 vins Exp $
+# $NetBSD: Makefile,v 1.5 2022/12/18 17:43:28 vins Exp $
 
 DISTNAME=	snap
 PKGVER=		20221013
@@ -14,8 +14,11 @@ LICENSE=	mit
 
 USE_LANGUAGES=	c c99
 
-MAKEFLAGS+=	X11=${X11BASE} CFLAGS=${CFLAGS:Q}
-MAKEFLAGS+=	LDFLAGS=${LDFLAGS:Q}
+MAKE_FLAGS+=	CC=${CC:Q}
+MAKE_FLAGS+=	X11=${X11BASE}
+MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
+MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
+MAKE_FLAGS+=	RANLIB=${RANLIB:Q}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -31,25 +34,30 @@ LDFLAGS+=	-lpthread
 .endif
 
 .if ${OPSYS:M*BSD}
-MAKEFLAGS+=		CONF=${LOWER_OPSYS}
-.  if ${OPSYS} == OpenBSD
-MAKEFLAGS+=		CC?=cc
-.  elif ${OPSYS} == FreeBSD
-MAKEFLAGS+=		CC?=clang
+MAKE_FLAGS+=	CONF=${LOWER_OPSYS}
+.  if ${OPSYS} == "OpenBSD"
+LD_ADD=		"-lX11 -lXt -ggdb -lsndio"
+.  elif ${OPSYS} == "NetBSD"
+LD_ADD=		"-lX11 -lXt -ggdb -lossaudio"
+.  else
+LD_ADD=		"-lX11 -lXt -ggdb"
 .  endif
-.endif
 
-.if ${OPSYS} == "Linux"
+.elif ${OPSYS} == "Linux"
 .include "../../audio/alsa-lib/buildlink3.mk"
-MAKEFLAGS+=	CONF=unix AUDIO=alsa
-LD_ADD=	"-L${X11}/lib64 -L${X11}/lib -lX11 -ggdb -lm -lasound"
+MAKE_FLAGS+=	CONF=unix
+MAKE_FLAGS+=	AUDIO=alsa
+LD_ADD=		"-lX11 -lXt -ggdb -lm -lasound"
 
 .elif ${OPSYS} == "Darwin"
-MAKEFLAGS+=	CONF=osx-x11 CC?=clang PTHREAD=''
-LD_ADD=		"-L${X11}/lib -lX11 -ggdb"
+MAKE_FLAGS+=	CONF=osx-x11
+MAKE_FLAGS+=	PTHREAD=''
+LD_ADD=		"-lX11 -lXt -ggdb"
 
 .elif ${OPSYS} == "IRIX" && !empty(PKGSRC_COMPILER:Mmipspro*)
-MAKEFLAGS+=	CONF=irix CFLAGS+=-DIRIX
+MAKE_FLAGS+=	CONF=irix
+MAKE_FLAGS+=	CFLAGS+=-DIRIX
+LD_ADD=		"-lX11 -lXt -g -lpthread"
 .endif
 
 .if ${OPSYS} == "SunOS"
@@ -58,24 +66,23 @@ SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths+=	Make.unix
 SUBST_SED.paths=	-e 's,i.86/386,i86pc/amd64,'
 
-LD_ADD=		"-L${X11}/lib/64 -L${X11}/lib -lX11 \
-			-lrt -lpthread -lsocket -lnsl"
+LD_ADD=		"-lX11 -lXt -lrt -lpthread -lsocket -lnsl"
 
 .  if ${OPSYS_VERSION} <= 051000
-MAKEFLAGS+=	AUDIO=sun
+MAKE_FLAGS+=	AUDIO=sun
 .  else
-MAKEFLAGS+=	AUDIO=unix
+MAKE_FLAGS+=	AUDIO=unix
 .  endif
 
 .  if !empty(PKGSRC_COMPILER:Msunpro)
-MAKEFLAGS+=	CONF=sun
+MAKE_FLAGS+=	CONF=sun
 .  else
-MAKEFLAGS+=	CONF=unix
+MAKE_FLAGS+=	CONF=unix
 .  endif
 .endif
 
 .if defined(LD_ADD)
-MAKEFLAGS+=	LDADD=${LD_ADD}
+MAKE_FLAGS+=	LDADD=${LD_ADD}
 .endif
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
@@ -84,10 +91,11 @@ WRKSRC=	${WRKDIR}/drawterm
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/drawterm ${DESTDIR}${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/drawterm.1 								\
+	${INSTALL_MAN} ${WRKSRC}/drawterm.1 					\
 	${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
