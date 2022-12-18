@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/12/06 14:41:39 vins Exp $
+# $NetBSD: Makefile,v 1.3 2022/12/18 15:42:56 vins Exp $
 
 DISTNAME=	emwm-utils-src
 PKGVER=		1.0
@@ -49,10 +49,11 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/src/toolboxrc \
 	${DESTDIR}${PREFIX}/share/examples/${DISTNAME:S,-src,,}
 
-.include "../../mk/motif.buildlink3.mk"
+.include "../../x11/libXScrnSaver/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
+.include "../../mk/motif.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
