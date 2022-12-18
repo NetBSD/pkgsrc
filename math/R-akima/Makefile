@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2021/09/11 10:19:37 mef Exp $
+# $NetBSD: Makefile,v 1.18 2022/12/18 09:36:19 mef Exp $
 
 R_PKGNAME=	akima
-R_PKGVER=	0.6-2.2
+R_PKGVER=	0.6-3.4
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Interpolation of irregularly and regularly spaced data
