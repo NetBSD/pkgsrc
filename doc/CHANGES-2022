@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6196 2022/12/18 03:25:18 mef Exp $
+$NetBSD: CHANGES-2022,v 1.6197 2022/12/18 03:46:50 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9309,3 +9309,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/R-pak to 0.3.1 [mef 2022-12-18]
 	Updated devel/R-pkgbuild to 1.4.0 [mef 2022-12-18]
 	Updated devel/R-pkgcache to 2.0.3 [mef 2022-12-18]
+	Updated devel/R-purrr to 0.3.5 [mef 2022-12-18]
