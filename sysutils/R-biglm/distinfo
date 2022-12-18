@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/12/18 00:32:56 mef Exp $
+
+BLAKE2s (R/biglm_0.9-2.1.tar.gz) = 48b6d46389ff2bcfd2a0065b586b3fd80ccf4b36741a348584fac6cb0a30636e
+SHA512 (R/biglm_0.9-2.1.tar.gz) = 09ee9c5c7745796711bd0459c7964186c9ff9cd804b2d10b0a9bd48a84285a601a090f0cccb1440496ad94810692e67f0ef61fa0e5363809d0d46f39fc1c89a3
+Size (R/biglm_0.9-2.1.tar.gz) = 12513 bytes
