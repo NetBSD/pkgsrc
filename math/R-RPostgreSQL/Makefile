@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2022/04/25 12:26:46 mef Exp $
+# $NetBSD: Makefile,v 1.11 2022/12/18 07:57:49 mef Exp $
 
 R_PKGNAME=	RPostgreSQL
-R_PKGVER=	0.7-3
+R_PKGVER=	0.7-4
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	R interface to the PostgreSQL database system
