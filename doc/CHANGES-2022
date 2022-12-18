@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6200 2022/12/18 04:51:44 mef Exp $
+$NetBSD: CHANGES-2022,v 1.6201 2022/12/18 04:56:42 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9313,3 +9313,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/R-renv to 0.16.0 [mef 2022-12-18]
 	Updated textproc/R-rmarkdown to 2.19 [mef 2022-12-18]
 	Updated devel/R-roxygen2 to 7.2.3 [mef 2022-12-18]
+	Updated devel/R-rversions to 2.1.2 [mef 2022-12-18]
