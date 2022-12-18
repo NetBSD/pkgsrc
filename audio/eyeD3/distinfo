@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2022/07/07 10:27:14 adam Exp $
+$NetBSD: distinfo,v 1.9 2022/12/18 13:48:36 adam Exp $
 
-BLAKE2s (eyeD3-0.9.6.tar.gz) = 1049cfc418a02eedd8206d37736bb026e12b2f2c52ea118b701c0a2b99a048c2
-SHA512 (eyeD3-0.9.6.tar.gz) = 574962702628c64351d6dce3dcd7796731c185515f854727110edbc2001f8d36ed3acf96591d117d08ba9f41a0566eafa1194c110ac33560d24fc16bcda183c4
-Size (eyeD3-0.9.6.tar.gz) = 221831 bytes
+BLAKE2s (eyeD3-0.9.7.tar.gz) = 26d8a970d0b770bc8da92f4c62009afa9c5f0c774c91cec8c53717c7ed79a498
+SHA512 (eyeD3-0.9.7.tar.gz) = 1ed3d8bcc1aa0dd2e93915be6e55ab50b7398c12c3b3fab9b3cf47ca18a7c654dedd0f881f6e5576571e03efeecfabb0fe9d7b4be1c984f79f82a3b0014f09d0
+Size (eyeD3-0.9.7.tar.gz) = 245122 bytes
