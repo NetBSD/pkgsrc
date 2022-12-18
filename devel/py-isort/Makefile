@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2022/01/05 15:41:04 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2022/12/18 10:24:46 adam Exp $
 
-DISTNAME=	isort-5.10.1
+DISTNAME=	isort-5.11.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/isort/}
 
@@ -12,7 +11,10 @@ COMMENT=	Python utility/library to sort imports
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-colorama>=0.4.3:../../comms/py-colorama
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=6.10.1:../../devel/py-hypothesis
+TEST_DEPENDS+=	${PYPKGPREFIX}-lama>=7.7:../../devel/py-lama
+TEST_DEPENDS+=	${PYPKGPREFIX}-test>=6.0:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-toml>=0.10.2:../../textproc/py-toml
 
 USE_LANGUAGES=	# none
 
@@ -27,7 +29,7 @@ post-install:
 .endfor
 
 do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests/unit/test_isort.py
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests/unit
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
