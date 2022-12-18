@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2022/12/04 15:56:11 taca Exp $
+@comment $NetBSD: PLIST,v 1.21 2022/12/18 14:43:12 taca Exp $
 bin/haml${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
@@ -42,7 +42,8 @@ ${GEM_LIBDIR}/lib/haml/compiler/tag_compiler.rb
 ${GEM_LIBDIR}/lib/haml/dynamic_merger.rb
 ${GEM_LIBDIR}/lib/haml/engine.rb
 ${GEM_LIBDIR}/lib/haml/error.rb
-${GEM_LIBDIR}/lib/haml/escapable.rb
+${GEM_LIBDIR}/lib/haml/escape.rb
+${GEM_LIBDIR}/lib/haml/escape_any.rb
 ${GEM_LIBDIR}/lib/haml/filters.rb
 ${GEM_LIBDIR}/lib/haml/filters/base.rb
 ${GEM_LIBDIR}/lib/haml/filters/cdata.rb
@@ -60,7 +61,7 @@ ${GEM_LIBDIR}/lib/haml/filters/sass.rb
 ${GEM_LIBDIR}/lib/haml/filters/scss.rb
 ${GEM_LIBDIR}/lib/haml/filters/text_base.rb
 ${GEM_LIBDIR}/lib/haml/filters/tilt_base.rb
-${GEM_LIBDIR}/lib/haml/force_escapable.rb
+${GEM_LIBDIR}/lib/haml/force_escape.rb
 ${GEM_LIBDIR}/lib/haml/haml.${RUBY_DLEXT}
 ${GEM_LIBDIR}/lib/haml/helpers.rb
 ${GEM_LIBDIR}/lib/haml/html.rb
