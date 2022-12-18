@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6213 2022/12/18 06:58:56 mef Exp $
+$NetBSD: CHANGES-2022,v 1.6214 2022/12/18 07:06:51 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9327,3 +9327,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated math/R-DBI to 1.1.3 [mef 2022-12-18]
 	Updated math/R-DEoptimR to 1.0.11 [mef 2022-12-18]
 	Updated math/R-FNN to 1.1.3.1 [mef 2022-12-18]
+	Updated math/R-ISLR to 1.4 [mef 2022-12-18]
