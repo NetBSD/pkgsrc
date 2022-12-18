@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1336 2022/12/08 19:16:43 khorben Exp $
+# $NetBSD: Makefile,v 1.1337 2022/12/18 06:16:04 mef Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -12,6 +12,7 @@ SUBDIR+=	LDoc
 SUBDIR+=	Markdown
 SUBDIR+=	PEGTL
 SUBDIR+=	R-DT
+SUBDIR+=	R-Rdpack
 SUBDIR+=	R-brew
 SUBDIR+=	R-cellranger
 SUBDIR+=	R-clisymbols
@@ -30,6 +31,7 @@ SUBDIR+=	R-hunspell
 SUBDIR+=	R-jsonlite
 SUBDIR+=	R-markdown
 SUBDIR+=	R-openxlsx
+SUBDIR+=	R-rbibutils
 SUBDIR+=	R-readr
 SUBDIR+=	R-readstata13
 SUBDIR+=	R-readxl
