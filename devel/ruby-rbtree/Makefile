@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2022/02/12 13:14:07 taca Exp $
+# $NetBSD: Makefile,v 1.18 2022/12/18 14:21:23 taca Exp $
 
-DISTNAME=	rbtree-0.4.5
+DISTNAME=	rbtree-0.4.6
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
