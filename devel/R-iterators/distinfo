@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:14:05 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/12/18 02:17:25 mef Exp $
 
-BLAKE2s (R/iterators_1.0.13.tar.gz) = e672fccaeb9fe9893ee6c2fbf11cca49ff7ee6be04f4fa245d3ee4fab1009888
-SHA512 (R/iterators_1.0.13.tar.gz) = 1564b94ec7cd7302aea53c060370342858d959bb092420994dfc7651e4a89d57b43eeeef174e5295872570dee20deee0b317a0084c747a5ceb4630f7e80fb298
-Size (R/iterators_1.0.13.tar.gz) = 288559 bytes
+BLAKE2s (R/iterators_1.0.14.tar.gz) = ea47d3e9a1482e13e1199b9159d2c5d28859ff298b3897c46df0dabd39a6f403
+SHA512 (R/iterators_1.0.14.tar.gz) = b63be3c43ba57cce4d65a9c73ea26c8b8444b60a2d5a2d69408b33396fd290c305de3be69cb50e4aabed733ad7f37d4676691477afc29f1431c6909df29965d2
+Size (R/iterators_1.0.14.tar.gz) = 300266 bytes
