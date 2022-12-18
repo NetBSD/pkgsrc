@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6222 2022/12/18 09:47:05 mef Exp $
+$NetBSD: CHANGES-2022,v 1.6223 2022/12/18 10:04:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9337,3 +9337,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Added www/R-downlit version 0.4.0 [mef 2022-12-18]
 	Updated math/R-akima to 0.6.3.4 [mef 2022-12-18]
 	Added graphics/R-tkrplot version 0.0.27 [mef 2022-12-18]
+	Updated devel/blosc to 1.21.3 [adam 2022-12-18]
+	Updated archivers/unrar to 6.2.3 [adam 2022-12-18]
+	Updated time/py-pytz to 2022.7 [adam 2022-12-18]
+	Updated devel/py-pylint to 2.15.9 [adam 2022-12-18]
