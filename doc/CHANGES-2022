@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6240 2022/12/18 12:57:30 mef Exp $
+$NetBSD: CHANGES-2022,v 1.6241 2022/12/18 13:06:49 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9360,3 +9360,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added parallel/R-doParallel version 1.0.17 [mef 2022-12-18]
 	Added benchmarks/R-mlbench version 2.1.3 [mef 2022-12-18]
 	Updated math/R-zoo to 1.8.11 [mef 2022-12-18]
+	Updated math/R-xts to 0.12.2 [mef 2022-12-18]
