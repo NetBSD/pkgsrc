@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/07/07 10:27:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/12/18 13:48:36 adam Exp $
 bin/eyeD3
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -49,18 +49,12 @@ ${PYSITELIB}/eyed3/plugins/DisplayPattern.ebnf
 ${PYSITELIB}/eyed3/plugins/__init__.py
 ${PYSITELIB}/eyed3/plugins/__init__.pyc
 ${PYSITELIB}/eyed3/plugins/__init__.pyo
-${PYSITELIB}/eyed3/plugins/_display_parser.py
-${PYSITELIB}/eyed3/plugins/_display_parser.pyc
-${PYSITELIB}/eyed3/plugins/_display_parser.pyo
 ${PYSITELIB}/eyed3/plugins/art.py
 ${PYSITELIB}/eyed3/plugins/art.pyc
 ${PYSITELIB}/eyed3/plugins/art.pyo
 ${PYSITELIB}/eyed3/plugins/classic.py
 ${PYSITELIB}/eyed3/plugins/classic.pyc
 ${PYSITELIB}/eyed3/plugins/classic.pyo
-${PYSITELIB}/eyed3/plugins/display.py
-${PYSITELIB}/eyed3/plugins/display.pyc
-${PYSITELIB}/eyed3/plugins/display.pyo
 ${PYSITELIB}/eyed3/plugins/extract.py
 ${PYSITELIB}/eyed3/plugins/extract.pyc
 ${PYSITELIB}/eyed3/plugins/extract.pyo
