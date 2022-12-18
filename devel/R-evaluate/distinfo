@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2022/04/16 06:04:38 mef Exp $
+$NetBSD: distinfo,v 1.11 2022/12/18 01:29:20 mef Exp $
 
-BLAKE2s (R/evaluate_0.15.tar.gz) = 27ea27a14dea3053e8b65ec81065e6f235b23132bc982b22aa9a69a21659daf4
-SHA512 (R/evaluate_0.15.tar.gz) = b33fe9e43c4efaf7d8bbe69936f3c77feaf14fe30695ce166e32624dddb101133fca8af05a757d049638eda70c11707bc40a56f7c8ae385d707f1281bdf582ee
-Size (R/evaluate_0.15.tar.gz) = 25617 bytes
+BLAKE2s (R/evaluate_0.19.tar.gz) = 4eae6c6c184548a72b306cfc000d3c05b1922edaba9eac4093c320907edab8f5
+SHA512 (R/evaluate_0.19.tar.gz) = d399cc755fce73f85872333f0efdbb97d854887640bff708e56d41e932d4bc941b37ab1025aadfd60ff803a1097671405f138738e88d324ebdb1cc9fbdd3afd1
+Size (R/evaluate_0.19.tar.gz) = 26394 bytes
