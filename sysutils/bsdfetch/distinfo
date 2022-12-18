@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/12/18 14:30:56 vins Exp $
+
+BLAKE2s (bsdfetch-1.0.2-e2c091320656a34aedc39f50dca9a629a39b00da.tar.gz) = 6693201b4ccb172cb4dcb4bbe357ec3697d8b1c437f67fee5f32dd3fd0967b51
+SHA512 (bsdfetch-1.0.2-e2c091320656a34aedc39f50dca9a629a39b00da.tar.gz) = 536ba6550d5bb4433b008c84efdf0bc5bd1c3e870834866ef25d4d5a85f64ab70165ff304d9efb84d918e3eb2828b44ebc5406140d7d41b3ed0165b8edf783cc
+Size (bsdfetch-1.0.2-e2c091320656a34aedc39f50dca9a629a39b00da.tar.gz) = 6556 bytes
