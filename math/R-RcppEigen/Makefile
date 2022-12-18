@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2021/01/03 10:04:58 mef Exp $
+# $NetBSD: Makefile,v 1.8 2022/12/18 09:23:47 mef Exp $
 
 R_PKGNAME=	RcppEigen
-R_PKGVER=	0.3.3.9.1
+R_PKGVER=	0.3.3.9.3
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Rcpp integration for the Eigen templated linear algebra library
