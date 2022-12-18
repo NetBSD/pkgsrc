@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6270 2022/12/18 16:26:07 adam Exp $
+$NetBSD: CHANGES-2022,v 1.6271 2022/12/18 22:29:14 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9394,3 +9394,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/py-twine to 4.0.2 [adam 2022-12-18]
 	Updated devel/py-hypothesis to 6.61.0 [adam 2022-12-18]
 	Updated devel/py-hypothesmith to 0.2.3 [adam 2022-12-18]
+	Updated cad/klayout to 0.28 [mef 2022-12-18]
