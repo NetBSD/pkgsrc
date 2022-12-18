@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2021/09/05 01:50:39 mef Exp $
+# $NetBSD: Makefile,v 1.6 2022/12/18 04:44:47 mef Exp $
 
 R_PKGNAME=	rmarkdown
-R_PKGVER=	2.10
+R_PKGVER=	2.19
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -19,13 +19,17 @@ DEPENDS+=	R-stringr>=1.2.0:../../textproc/R-stringr
 DEPENDS+=	R-yaml>=2.1.19:../../textproc/R-yaml
 DEPENDS+=	R-tinytex-[0-9]*:../../print/R-tinytex
 DEPENDS+=	R-withr>=2.4.2:../../devel/R-withr
+DEPENDS+=	R-jquerylib-[0-9]*:../../www/R-jquerylib
+DEPENDS+=	R-bslib>=0.2.5.1:../../www/R-bslib
 
-# Packages suggested but not available: 'tufte', 'dygraphs', 'rsconnect'
-#
+# Packages suggested but not available:
+#  'dygraphs', 'rsconnect', 'katex', 'tufte'
+
 TEST_DEPENDS+=	R-base64enc-[0-9]*:../../converters/R-base64enc
 TEST_DEPENDS+=	R-fs-[0-9]*:../../devel/R-fs
 TEST_DEPENDS+=	R-shiny-[0-9]*:../../www/R-shiny
 TEST_DEPENDS+=	R-testthat-[0-9]*:../../devel/R-testthat
+TEST_DEPENDS+=	R-downlit-[0-9]*:../../www/R-downlit
 
 USE_LANGUAGES=	# none
 
