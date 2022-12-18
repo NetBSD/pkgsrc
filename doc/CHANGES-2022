@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6247 2022/12/18 13:53:55 adam Exp $
+$NetBSD: CHANGES-2022,v 1.6248 2022/12/18 13:59:27 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9368,3 +9368,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/hoe to 4.0.1 [taca 2022-12-18]
 	Updated audio/eyeD3 to 0.9.7 [adam 2022-12-18]
 	Updated sysutils/ansible-lint to 6.10.0 [adam 2022-12-18]
+	Updated math/R-units to 0.8.1 [mef 2022-12-18]
