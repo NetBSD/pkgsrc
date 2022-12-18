@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6269 2022/12/18 15:03:21 taca Exp $
+$NetBSD: CHANGES-2022,v 1.6270 2022/12/18 16:26:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9390,3 +9390,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/ruby-asciidoctor to 2.0.18nb1 [taca 2022-12-18]
 	Updated sysutils/puppet to 7.21.0 [taca 2022-12-18]
 	Updated mail/ruby-roadie to 5.1.0 [taca 2022-12-18]
+	Updated sysutils/py-ansible-compat to 2.2.7 [adam 2022-12-18]
+	Updated net/py-twine to 4.0.2 [adam 2022-12-18]
+	Updated devel/py-hypothesis to 6.61.0 [adam 2022-12-18]
+	Updated devel/py-hypothesmith to 0.2.3 [adam 2022-12-18]
