@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2022/05/21 23:09:12 mef Exp $
+$NetBSD: distinfo,v 1.13 2022/12/18 10:19:13 mef Exp $
 
-BLAKE2s (R/car_3.0-13.tar.gz) = 064cd405d50a7d5d6c674078d7b1bd9f467816d92f9e1c9dd8d01c5843a97022
-SHA512 (R/car_3.0-13.tar.gz) = adc75a2449f7367fe21e9d67c9642b59678f465d1d59f847dcce4fddcf9c99bf7327743cdfb49feaaea554d07af9e21f89a099ee03ea30eb39ed2ca6c5459504
-Size (R/car_3.0-13.tar.gz) = 494341 bytes
+BLAKE2s (R/car_3.1-1.tar.gz) = e5199709f7e93b2c6d5b2b17d99adf137886af29ea1c72efb22f6451f1723ef9
+SHA512 (R/car_3.1-1.tar.gz) = e18af87491d97a3ab325a816b88bca727d98e0e1bbf8fc850925d1f5e271609685cd7820e354599803bc0f7b5705636a4315b0e524b54e10a28096023a6729c5
+Size (R/car_3.1-1.tar.gz) = 578902 bytes
