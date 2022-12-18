@@ -1,0 +1,6 @@
+Read and write 'Bibtex' files. Convert between bibliography formats,
+including 'Bibtex', 'Biblatex', 'PubMed', 'Endnote', and 'Bibentry'.
+Includes a port of the 'bibutils' utilities by Chris Putnam
+<https://sourceforge.net/projects/bibutils/>. Supports all
+bibliography formats and character encodings implemented in
+'bibutils'.

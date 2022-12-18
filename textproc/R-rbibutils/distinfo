@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/12/18 06:09:59 mef Exp $
+
+BLAKE2s (R/rbibutils_2.2.11.tar.gz) = 5beb483e2ecdc1be70fa3f4f1bf69d13c5a11bef0b6930dc90440156cec2795e
+SHA512 (R/rbibutils_2.2.11.tar.gz) = c800842fd835b7d27529c28d22a168d8c997cec9c78fc71969614b4df2e9da99a72c6f084d396d6b5d2524884d1a994c4dc6b9574fee8b4bda96e93facf36d4e
+Size (R/rbibutils_2.2.11.tar.gz) = 883035 bytes
