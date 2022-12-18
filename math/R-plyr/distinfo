@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2022/05/28 23:22:15 wen Exp $
+$NetBSD: distinfo,v 1.11 2022/12/18 13:43:36 mef Exp $
 
-BLAKE2s (R/plyr_1.8.7.tar.gz) = de1eb2f727f0afb01309321cdc0cbd482bdd2492575beb0f362658db19363e84
-SHA512 (R/plyr_1.8.7.tar.gz) = 6a14cf957a9ae5a14f5b10e5541901808d1701661e3c9733f79e6f3422c55f3fb32dbacf64bc0f26ec8ca69b9b8064530587e5bb26cf5687e2dd50086be31d33
-Size (R/plyr_1.8.7.tar.gz) = 401481 bytes
+BLAKE2s (R/plyr_1.8.8.tar.gz) = 3ac1477eff693af2a63cbfd1e6edc8590d99991f722b6013993b333c2ceaec8f
+SHA512 (R/plyr_1.8.8.tar.gz) = 7b5cd39fa435b81aff5b81e911bf1466136d46f5a182acce6c656b392ccaeb1e96efa2a84853c9a393e8767ee99262352b56deb44a6c24492c794a788e240fd4
+Size (R/plyr_1.8.8.tar.gz) = 401438 bytes
