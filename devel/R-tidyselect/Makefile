@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2022/04/30 09:41:57 mef Exp $
+# $NetBSD: Makefile,v 1.5 2022/12/18 05:01:02 mef Exp $
 
 R_PKGNAME=	tidyselect
-R_PKGVER=	1.1.2
+R_PKGVER=	1.2.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
