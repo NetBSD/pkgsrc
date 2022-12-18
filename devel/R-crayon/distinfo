@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2022/04/02 02:57:05 wen Exp $
+$NetBSD: distinfo,v 1.5 2022/12/18 01:21:58 mef Exp $
 
-BLAKE2s (R/crayon_1.5.1.tar.gz) = cda2d7a31a93f3b76393f9e97d146dd1962a9edbe827615bb3d866b9d400d530
-SHA512 (R/crayon_1.5.1.tar.gz) = b0a200e27572a9690aa7038b57ef93494cb1ec10cb285b4cd76bc2cd19e0af87ee31a179daa617e107c55dde77a602238ec3445d3e918d413b6674d02fc03096
-Size (R/crayon_1.5.1.tar.gz) = 40178 bytes
+BLAKE2s (R/crayon_1.5.2.tar.gz) = 7c09c7304fd1d5d0dc230f98fba1c8aee283b38116c050b70e1d1415e5ad2819
+SHA512 (R/crayon_1.5.2.tar.gz) = 7b493bce6228fe31f70e6c4d80ff822e0419f7b17861847cd19d51b3e33505d423e657efada5b8c4fe2d8ad6642ea2a242008584c42765b46137753cd6115e55
+Size (R/crayon_1.5.2.tar.gz) = 40567 bytes
