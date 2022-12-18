@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2021/11/09 10:17:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/12/18 10:24:46 adam Exp $
 bin/isort-${PYVERSSUFFIX}
 bin/isort-identify-imports-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -121,9 +121,9 @@ ${PYSITELIB}/isort/stdlibs/py3.pyo
 ${PYSITELIB}/isort/stdlibs/py310.py
 ${PYSITELIB}/isort/stdlibs/py310.pyc
 ${PYSITELIB}/isort/stdlibs/py310.pyo
-${PYSITELIB}/isort/stdlibs/py35.py
-${PYSITELIB}/isort/stdlibs/py35.pyc
-${PYSITELIB}/isort/stdlibs/py35.pyo
+${PYSITELIB}/isort/stdlibs/py311.py
+${PYSITELIB}/isort/stdlibs/py311.pyc
+${PYSITELIB}/isort/stdlibs/py311.pyo
 ${PYSITELIB}/isort/stdlibs/py36.py
 ${PYSITELIB}/isort/stdlibs/py36.pyc
 ${PYSITELIB}/isort/stdlibs/py36.pyo
