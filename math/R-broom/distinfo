@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2022/05/05 01:58:35 mef Exp $
+$NetBSD: distinfo,v 1.5 2022/12/18 10:26:18 mef Exp $
 
-BLAKE2s (R/broom_0.8.0.tar.gz) = 86dca640cd540d430c4659e7eb60b30c14b0fc0a73821e6e07ddc32738f828ab
-SHA512 (R/broom_0.8.0.tar.gz) = b9b0b7db1f151614f20fe42e7bfc34e1fc1aab1498e3280c67a530ba7972645694fb1638448827b14e70a56b9b743e51d7a3a7216c1f49067037ad837ce6e4fe
-Size (R/broom_0.8.0.tar.gz) = 640392 bytes
+BLAKE2s (R/broom_1.0.2.tar.gz) = a1e3f7450ed6dfa05083d58c7ee333e74f33029b05313d06c02fb81a4907bc7b
+SHA512 (R/broom_1.0.2.tar.gz) = f7df906b54dbdf2980a5d523c28e75ef364fb60a2ca97932b5448971e7a72de07f32a7050bde7dc8b88d8893e24e744a8b4989fc4bde4319d1152ae11cfe991a
+Size (R/broom_1.0.2.tar.gz) = 641801 bytes
