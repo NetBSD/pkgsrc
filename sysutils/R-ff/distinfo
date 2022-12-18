@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/12/18 00:42:28 mef Exp $
+
+BLAKE2s (R/ff_4.0.7.tar.gz) = 4da003bda690a300f429943141f268dc2d9a2abcbf177836fb107ffbbb669737
+SHA512 (R/ff_4.0.7.tar.gz) = 79b4683e6bb0c81322d8359196e9b4ac34cd41718449ea1b608d072690323592b2a166f0b50eefe825bb3579c020ccb0f7b368754ae25b31d64998cc3f819cb4
+Size (R/ff_4.0.7.tar.gz) = 330258 bytes
