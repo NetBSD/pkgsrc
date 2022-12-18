@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.57 2022/12/04 16:54:10 taca Exp $
+# $NetBSD: Makefile,v 1.58 2022/12/18 15:00:31 taca Exp $
 
-DISTNAME=		puppet-7.20.0
+DISTNAME=		puppet-7.21.0
 CATEGORIES=		sysutils
-#MASTER_SITES=		http://puppetlabs.com/downloads/puppet/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.puppetlabs.com/
+HOMEPAGE=		https://puppet.com/
 COMMENT=		Configuration management framework written in Ruby
 LICENSE=		apache-2.0
 
@@ -89,6 +88,7 @@ INSTALLATION_DIRS+=	${EGDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
+RUBYGEM_MANPAGES?=	yes
 #PUPPET_GROUP?=		puppet
 #PUPPET_USER?=		puppet
 
