@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6223 2022/12/18 10:04:01 adam Exp $
+$NetBSD: CHANGES-2022,v 1.6224 2022/12/18 10:19:32 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9341,3 +9341,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated archivers/unrar to 6.2.3 [adam 2022-12-18]
 	Updated time/py-pytz to 2022.7 [adam 2022-12-18]
 	Updated devel/py-pylint to 2.15.9 [adam 2022-12-18]
+	Updated math/R-car to 3.1.1 [mef 2022-12-18]
