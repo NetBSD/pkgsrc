@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.884 2022/12/10 08:18:20 wiz Exp $
+# $NetBSD: Makefile,v 1.885 2022/12/18 01:46:45 mef Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -18,6 +18,7 @@ SUBDIR+=	R-credentials
 SUBDIR+=	R-digest
 SUBDIR+=	R-getPass
 SUBDIR+=	R-gitcreds
+SUBDIR+=	R-jose
 SUBDIR+=	R-openssl
 SUBDIR+=	R-oskeyring
 SUBDIR+=	R-sodium
