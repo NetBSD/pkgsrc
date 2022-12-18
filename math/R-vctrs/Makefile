@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2022/05/05 02:09:10 mef Exp $
+# $NetBSD: Makefile,v 1.6 2022/12/18 13:36:41 mef Exp $
 
 R_PKGNAME=	vctrs
-R_PKGVER=	0.4.1
+R_PKGVER=	0.5.1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Vector helpers
@@ -12,6 +12,7 @@ DEPENDS+=	R-cli-[0-9]*:../../devel/R-cli
 DEPENDS+=	R-digest>=0.6.25:../../security/R-digest
 DEPENDS+=	R-ellipsis>=0.2.0:../../math/R-ellipsis
 DEPENDS+=	R-glue>=1.4.1:../../devel/R-glue
+DEPENDS+=	R-lifecycle-[0-9]*:../../devel/R-lifecycle
 DEPENDS+=	R-rlang>=0.4.10:../../devel/R-rlang
 DEPENDS+=	R-zeallot>=0.1.0:../../math/R-zeallot
 
@@ -22,7 +23,7 @@ TEST_DEPENDS+=	R-dplyr-[0-9]*:../../math/R-dplyr
 TEST_DEPENDS+=	R-generics-[0-9]*:../../math/R-generics
 TEST_DEPENDS+=	R-knitr-[0-9]*:../../print/R-knitr
 TEST_DEPENDS+=	R-markdown-[0-9]*:../../textproc/R-markdown
-#EST_DEPENDS+=	R-pkgdown-[0-9]*:../../devel/R-pkgdown
+TEST_DEPENDS+=	R-pkgdown-[0-9]*:../../www/R-pkgdown
 TEST_DEPENDS+=	R-rmarkdown-[0-9]*:../../textproc/R-rmarkdown
 TEST_DEPENDS+=	R-testthat-[0-9]*:../../devel/R-testthat
 TEST_DEPENDS+=	R-xml2-[0-9]*:../../textproc/R-xml2
