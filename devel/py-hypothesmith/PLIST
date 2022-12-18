@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2022/02/23 11:40:06 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/12/18 16:24:54 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -12,7 +12,7 @@ ${PYSITELIB}/hypothesmith/cst.py
 ${PYSITELIB}/hypothesmith/cst.pyc
 ${PYSITELIB}/hypothesmith/cst.pyo
 ${PYSITELIB}/hypothesmith/py.typed
-${PYSITELIB}/hypothesmith/python3.lark
+${PYSITELIB}/hypothesmith/python.lark
 ${PYSITELIB}/hypothesmith/syntactic.py
 ${PYSITELIB}/hypothesmith/syntactic.pyc
 ${PYSITELIB}/hypothesmith/syntactic.pyo
