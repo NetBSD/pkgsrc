@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6218 2022/12/18 07:58:03 mef Exp $
+$NetBSD: CHANGES-2022,v 1.6219 2022/12/18 09:24:01 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9332,3 +9332,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated math/R-RColorBrewer to 1.1.3 [mef 2022-12-18]
 	Updated math/R-RNetCDF to 2.6.1 [mef 2022-12-18]
 	Updated math/R-RPostgreSQL to 0.7.4 [mef 2022-12-18]
+	Updated math/R-RcppEigen to 0.3.3.9.3 [mef 2022-12-18]
