@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6274 2022/12/19 07:47:54 sekiya Exp $
+$NetBSD: CHANGES-2022,v 1.6275 2022/12/19 07:48:41 sekiya Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9397,4 +9397,3 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated cad/klayout to 0.28 [mef 2022-12-18]
 	Updated devel/meld to 3.22.0nb2 [wiz 2022-12-19]
 	Added net/kea version 2.2.0 [sekiya 2022-12-19]
-	Added net/kea version 2.2.0 [wileyc 2022-12-19]
