@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2022/12/19 13:01:45 vins Exp $
+# $NetBSD: Makefile,v 1.11 2022/12/19 13:57:34 vins Exp $
 
 DISTNAME=	coma-1.1
 PKGREVISION=	2
@@ -17,6 +17,16 @@ REPLACE.sh.old=		.*/bin/zsh
 REPLACE.sh.new=		${SH:Q}
 REPLACE_FILES.sh+=	scripts/coma-cmd
 REPLACE_FILES.sh+=	scripts/coma-remote
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+SUBST_CLASSES+=		ints
+SUBST_MESSAGE.ints=	SunOS stdint(3) doesn't provide `u_int*' typedefs
+SUBST_STAGE.ints=	pre-configure
+SUBST_FILES.ints+=	client.c coma.h frame.c wm.c
+SUBST_SED.ints=		-e 's|u_int|uint|g'
+.endif
 
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libX11}/lib
 LDFLAGS+=	-L${BUILDLINK_PREFIX.libX11}/lib -lX11 -lXft
