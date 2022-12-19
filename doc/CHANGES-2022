@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6297 2022/12/19 21:06:40 vins Exp $
+$NetBSD: CHANGES-2022,v 1.6298 2022/12/19 23:18:47 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9421,3 +9421,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/syft version 0.63.0 [wiz 2022-12-19]
 	Removed shells/osh successor shells/etsh [vins 2022-12-19]
 	Added x11/xmem version 1.29 [vins 2022-12-19]
+	Updated security/cfs to 1.5.0b [gdt 2022-12-19]
