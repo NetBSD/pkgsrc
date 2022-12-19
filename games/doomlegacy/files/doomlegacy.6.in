@@ -1,10 +1,10 @@
 .\"=============================================================================
 .\" Header
 .\"
-.\" Copyright (c) 2019-2020 by Michael Baeuerle.
+.\" Copyright (c) 2019-2022 by Michael Baeuerle.
 .\" License: GNU Free Documentation License (GFDL)
 .\"
-.TH $NAME 6 2020-05-14 Unix "$NAME $VERSION manual"
+.TH $NAME 6 2022-12-19 Unix "$NAME $VERSION manual"
 .\"
 .\"
 .\"=============================================================================
@@ -82,19 +82,12 @@ Set the configfile to use.
 .br
 Default: config.cfg
 .TP
-.BI -blockmap
-Ignore BLOCKMAP lump in WAD file and create a new blockmap internally.
-.PP
-.RS 25
-Try this option if you encounter problems with collision detection
-(e.g. able to walk through a fence or unable to activate a switch).
-.PP
-[Only available with pkgsrc blockmap patch]
-.RE
-.TP 25
 .BI -deh " file [file ...]
 Load one or more DEH (DeHackEd) files or BEX files, which can change monster
 abilities and game text.
+.TP
+.BI -dehthing " name
+Supported DEH translations: legacy, boom, prboom, ee.
 .TP
 .BI -file " file [file ...]
 Set PWAD (Patch WAD) files to use.
