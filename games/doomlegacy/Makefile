@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2022/11/21 18:20:41 jperkin Exp $
+# $NetBSD: Makefile,v 1.15 2022/12/19 11:53:59 micha Exp $
 
-VERS=			1.48.10
+VERS=			1.48.12
 PKGNAME=		doomlegacy-${VERS}
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=doomlegacy/}
-DISTNAME=		${PKGNAME_NOREV:S/-/_/}_source_1617
+DISTNAME=		${PKGNAME_NOREV:S/-/_/}_source
 DISTFILES=		${DEFAULT_DISTFILES} doomlegacy_${VERS}_common.zip
 EXTRACT_SUFX=		.tar.bz2
 
@@ -44,18 +44,16 @@ LDFLAGS.SunOS+=		-lresolv -lsocket -lnsl
 CFLAGS+=		-D__BIG_ENDIAN__
 .endif
 
-# Required by extended node patch for ZDoom compressed node format
+# Required for compressed ZDoom extended node format ("ZNOD" signature)
 CFLAGS+=		-DHAVE_ZLIB
 LDFLAGS+=		-lz
 
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--warn-common
 
-# No longer matches automatically since SVN revision was appended to distfile
-WRKSRC=			${WRKDIR}/${PKGNAME_NOREV:S/-/_/}_source
-
 # DOOMWADDIR is intentionally shared with other Doom packages
 DOOMWADDIR=		share/doom
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man6 share/doc/doomlegacy ${DOOMWADDIR}
+
 # Honor environment
 SUBST_CLASSES+=		makeopt
 SUBST_STAGE.makeopt=	do-configure
@@ -73,6 +71,13 @@ SUBST_MESSAGE.doomdef=	Preparing doomdef.h file ...
 SUBST_FILES.doomdef=	src/doomdef.h
 SUBST_SED.doomdef=	-e 's,LEGACYWADDIR  "/usr/local/share/games/doomlegacy",LEGACYWADDIR  "${PREFIX}/${DOOMWADDIR}",g'
 SUBST_SED.doomdef+=	-e 's,DEFWADS01  "~/games/doomlegacy/wads",DEFWADS01  "${PREFIX}/${DOOMWADDIR}",'
+
+# Disable SVN usage for build
+SUBST_CLASSES+=		svn
+SUBST_STAGE.svn=	do-configure
+SUBST_MESSAGE.svn=	Disable SVN usage ...
+SUBST_FILES.svn=	Makefile src/Makefile
+SUBST_SED.svn=		-e 's,SVN_ENABLE=1,,g'
 
 # Process INSTALL.pkgsrc
 SUBST_CLASSES+=		install
@@ -103,9 +108,9 @@ do-install:
 		${DESTDIR}${PREFIX}/bin/doomlegacy.bin
 	${INSTALL_SCRIPT} ${WRKDIR}/doomlegacy				\
 		${DESTDIR}${PREFIX}/bin/doomlegacy
-	${INSTALL_DATA} ${WRKDIR}/doomlegacy_${VERS}/dogs.wad		\
+	${INSTALL_DATA} ${WRKDIR}/doomlegacy_${VERS}_common/dogs.wad	\
 		${DESTDIR}${PREFIX}/${DOOMWADDIR}/dogs.wad
-	${INSTALL_DATA} ${WRKDIR}/doomlegacy_${VERS}/legacy.wad		\
+	${INSTALL_DATA} ${WRKDIR}/doomlegacy_${VERS}_common/legacy.wad	\
 		${DESTDIR}${PREFIX}/${DOOMWADDIR}/legacy.wad
 	cd ${WRKSRC} &&							\
 		${INSTALL_DATA} docs/legacy.css docs/whatsnew.html	\
