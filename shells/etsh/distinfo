@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2022/12/19 09:54:07 vins Exp $
+$NetBSD: distinfo,v 1.3 2022/12/19 11:13:55 vins Exp $
 
 BLAKE2s (etsh-5.4.0.tar.xz) = 7aeb84e45ec79f2850c93fcd87078959a887f26d6e94f36716106e73db384f70
 SHA512 (etsh-5.4.0.tar.xz) = 7360da1e9bc6a7ed8c38e95eb1e2159bd2803ffa1a032235380d5901a1a6e0399d418b532917e8578bdab53fb43f99d35affc7753da0ec5612bbb8d47715970a
 Size (etsh-5.4.0.tar.xz) = 92388 bytes
+SHA1 (patch-etsh.c) = fcce7aafb58450108acc9805a0efa58fb2a452e0
 SHA1 (patch-mkconfig) = 63321044510964c52aee4f2c1afb2fab4d2d7499
