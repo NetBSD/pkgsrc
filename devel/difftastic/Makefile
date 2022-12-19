@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2022/10/15 07:08:23 pin Exp $
+# $NetBSD: Makefile,v 1.12 2022/12/19 11:17:17 pin Exp $
 
-DISTNAME=	difftastic-0.37.0
+DISTNAME=	difftastic-0.39.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Wilfred/}
 
