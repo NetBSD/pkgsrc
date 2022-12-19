@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2022/05/24 10:02:21 nikita Exp $
+# $NetBSD: Makefile,v 1.6 2022/12/19 09:32:36 pin Exp $
 
-DISTNAME=	ufetch-v0.2
+DISTNAME=	ufetch-v0.3
 PKGNAME=	${DISTNAME:S/-v/-/}
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITLAB:=jschx/}
@@ -10,7 +10,7 @@ GITLAB_RELEASE=	v${PKGVERSION_NOREV}
 MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://gitlab.com/jschx/ufetch/
 COMMENT=	Tiny system info for Unix-like Operating Systems
-LICENSE=	isc
+LICENSE=	mit
 
 USE_LANGUAGES=	# none
 NO_BUILD=	yes
