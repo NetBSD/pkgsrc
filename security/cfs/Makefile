@@ -1,13 +1,19 @@
-# $NetBSD: Makefile,v 1.38 2022/12/19 14:54:10 gdt Exp $
+# $NetBSD: Makefile,v 1.39 2022/12/19 15:14:34 gdt Exp $
 
 DISTNAME=		cfs-1.4.1
+#DISTNAME=		cfs-1.5.0.beta
 PKGREVISION=		7
 CATEGORIES=		security
 MASTER_SITES=		https://www.mattblaze.org/software/cfs-1.4.1.tar.gz
+#MASTER_SITES=		https://www.bayofrum.net/dist/cfs/
+
+# Thanks to crees@FreeBSD.org for a continuation fork.
+#  https://www.freshports.org/security/cfs/
+#  https://www.bayofrum.net/cgi-bin/fossil/cfs/index
 
 MAINTAINER=		gdt@NetBSD.org
-# newer version on https://www.bayofrum.net/cgi-bin/fossil/cfs/index
 HOMEPAGE=		https://www.mattblaze.org/software/
+#HOMEPAGE+=		https://www.bayofrum.net/cgi-bin/fossil/cfs/index
 COMMENT=		Encrypting file system, using NFS as its interface
 
 BUILD_TARGET=		cfs
