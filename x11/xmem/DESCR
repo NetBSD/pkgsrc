@@ -1,0 +1,2 @@
+XMem is a tiny graphical utility using the Xaw toolkit, which monitors
+and displays swap and memory (free, active, buffer, cached) usage.
