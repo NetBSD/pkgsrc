@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3851 2022/12/19 17:43:51 vins Exp $
+# $NetBSD: Makefile,v 1.3852 2022/12/19 19:04:31 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -3318,6 +3318,7 @@ SUBDIR+=	svn-bisect
 SUBDIR+=	swig
 SUBDIR+=	swig2
 SUBDIR+=	swig3
+SUBDIR+=	syft
 SUBDIR+=	syncdir
 SUBDIR+=	sysexits
 SUBDIR+=	tailor
