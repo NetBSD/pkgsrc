@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.973 2022/12/06 21:05:22 vins Exp $
+# $NetBSD: Makefile,v 1.974 2022/12/19 21:01:40 vins Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -642,6 +642,7 @@ SUBDIR+=	xlupe
 SUBDIR+=	xmag
 SUBDIR+=	xman
 SUBDIR+=	xmascot
+SUBDIR+=	xmem
 SUBDIR+=	xmessage
 SUBDIR+=	xmh
 SUBDIR+=	xmindpath
