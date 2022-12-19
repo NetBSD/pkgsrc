@@ -1,0 +1,11 @@
+This library provides message digest functions found on BSD systems
+either on their libc (NetBSD, OpenBSD) or libmd (FreeBSD, DragonflyBSD,
+macOS, Solaris) libraries and lacking on others like GNU systems.
+
+The intention here is to have a library with extremely permissive
+licenses, that can be used by any project; that has a very small scope
+and as such can be part of the base system on most distributions; and
+that has a compatible API with the implementations on other systems and
+those that other projects are embedding, so that they can switch to use
+the system library instead of duplicating the same code all over the
+place.
