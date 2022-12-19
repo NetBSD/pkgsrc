@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6288 2022/12/19 13:32:27 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.6289 2022/12/19 13:42:44 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9412,3 +9412,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/difftastic to 0.39.0 [pin 2022-12-19]
 	Updated games/doomlegacy to 1.48.12 [micha 2022-12-19]
 	Added security/osv-scanner version 1.0.1 [wiz 2022-12-19]
+	Updated shells/mksh to 59bnb3 [jperkin 2022-12-19]
