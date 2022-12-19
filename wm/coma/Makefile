@@ -1,31 +1,39 @@
-# $NetBSD: Makefile,v 1.9 2022/05/11 07:50:07 fcambus Exp $
+# $NetBSD: Makefile,v 1.10 2022/12/19 13:01:45 vins Exp $
 
 DISTNAME=	coma-1.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	wm
 MASTER_SITES=	https://coma.one/releases/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	vins@NetBSD.org
 HOMEPAGE=	https://coma.one/wm/
 COMMENT=	Keyboard driven tiling window manager
 LICENSE=	isc
 
-# Use sh instead of hardcoded zsh
-SUBST_CLASSES+=		shell
-SUBST_STAGE.shell=	pre-configure
-SUBST_MESSAGE.shell=	Use sh instead of hardcoded zsh
-SUBST_FILES.shell=	scripts/*
-SUBST_SED.shell+=	-e 's,zsh,sh,'
-
 USE_LANGUAGES=	c99
-USE_TOOLS+=	pkg-config
 
-MAKE_FLAGS+=	MAN_DIR="${PREFIX}/${PKGMANDIR}"
+REPLACE_INTERPRETER+=	sh
+REPLACE.sh.old=		.*/bin/zsh
+REPLACE.sh.new=		${SH:Q}
+REPLACE_FILES.sh+=	scripts/coma-cmd
+REPLACE_FILES.sh+=	scripts/coma-remote
+
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libX11}/lib
+LDFLAGS+=	-L${BUILDLINK_PREFIX.libX11}/lib -lX11 -lXft
+
+MAKE_FLAGS+=	CC=${CC:Q}
+MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
+MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
+MAKE_FLAGS+=	PREFIX=${DESTDIR}${PREFIX}
+MAKE_FLAGS+=	MAN_DIR=${DESTDIR}${PREFIX}/${PKGMANDIR}
+
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "Linux"
 .  include "../../devel/libbsd/buildlink3.mk"
 .endif
+.include "../../graphics/freetype2/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
