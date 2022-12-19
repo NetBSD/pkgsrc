@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3850 2022/12/19 15:13:01 vins Exp $
+# $NetBSD: Makefile,v 1.3851 2022/12/19 17:43:51 vins Exp $
 #
 
 COMMENT=	Development utilities
@@ -456,6 +456,7 @@ SUBDIR+=	googletest
 SUBDIR+=	gopls
 SUBDIR+=	goredo
 SUBDIR+=	got
+SUBDIR+=	got-portable
 SUBDIR+=	gotags
 SUBDIR+=	gotests
 SUBDIR+=	gperf
