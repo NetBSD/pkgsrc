@@ -1,0 +1,54 @@
+# $NetBSD: Makefile,v 1.1 2022/12/19 17:42:06 vins Exp $
+
+DISTNAME=	got-portable-0.79
+CATEGORIES=	devel
+MASTER_SITES=	${MASTER_SITE_GITHUB:=ThomasAdam/}
+GITHUB_TAG=	ba229487d6a55dee6ba3c2cc596cf0e589491ce9
+
+MAINTAINER=	vins@NetBSD.org
+HOMEPAGE=	https://gameoftrees.org/portable.html
+COMMENT=	Game of Trees version control system manipulating Git repo
+LICENSE=	isc
+
+CONFLICTS+=		got-[0-9]*
+
+ONLY_FOR_PLATFORM+=	NetBSD-*-*
+ONLY_FOR_PLATFORM+=	Darwin-*-*
+ONLY_FOR_PLATFORM+=	Linux-*-*
+ONLY_FOR_PLATFORM+=	FreeBSD-*-*
+ONLY_FOR_PLATFORM+=	DragonFly-*-*
+
+USE_TOOLS+=	yacc pkg-config autoconf
+USE_TOOLS+=	automake autoreconf
+GNU_CONFIGURE=	yes
+
+INSTALLATION_DIRS=	bin libexec
+INSTALLATION_DIRS+=	${PKGMANDIR}/man1 ${PKGMANDIR}/man5
+
+.include "../../mk/bsd.prefs.mk"
+
+pre-configure:
+	${RUN}set -e; cd ${WRKSRC} && autoreconf -fiv
+
+.if ${OPSYS} == "Linux"
+# compatibility macros and functions for Linux.
+.  include "../../devel/libbsd/buildlink3.mk"
+.endif
+
+.if ${OPSYS} == "Darwin"
+CONFIGURE_ENV+=	HB_PREFIX=${PREFIX}
+# define uuid library to use
+.  include "../../devel/ossp-uuid/buildlink3.mk"
+.else
+.  include "../../devel/libuuid/buildlink3.mk"
+.endif
+
+# need libcrypto.so.1.1
+BUILDLINK_API_DEPENDS.openssl+=   openssl>=1.1.1d
+.include "../../security/openssl/buildlink3.mk"
+
+# required for set_panel_userptr(3) and waddwstr(3).
+.include "../../devel/ncursesw/buildlink3.mk"
+
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"

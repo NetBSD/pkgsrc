@@ -1,0 +1,13 @@
+Game of Trees (Got) is a version control system which prioritizes ease
+of use and simplicity over flexibility.
+
+This is the portable version of got(1), using autotools to provide the
+library checks required for GoT's dependencies.
+
+The following operating systems are supported:
+
+    FreeBSD
+    NetBSD
+    DragonFlyBSD
+    MacOS
+    Linux
