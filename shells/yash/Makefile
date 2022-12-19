@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/12/06 14:41:39 vins Exp $
+# $NetBSD: Makefile,v 1.3 2022/12/19 10:16:45 vins Exp $
 
 DISTNAME=	yash-2.53
 CATEGORIES=	shells
@@ -10,14 +10,12 @@ HOMEPAGE=	https://yash.osdn.jp/index.html.en
 COMMENT=	POSIX-compliant command line shell
 LICENSE=	gnu-gpl-v2
 
+USE_TOOLS+=	msgfmt msgmerge
+USE_TOOLS+=	intltool xgettext
+
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
-CONFIGURE_ARGS+=	--enable-history
-CONFIGURE_ARGS+=	--enable-lineedit
-
-USE_TOOLS+=		msgfmt msgmerge
-USE_TOOLS+=		intltool xgettext
 
 PKG_SHELL=	bin/yash
 
