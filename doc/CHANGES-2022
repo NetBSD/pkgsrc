@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6286 2022/12/19 11:17:37 pin Exp $
+$NetBSD: CHANGES-2022,v 1.6287 2022/12/19 11:55:21 micha Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9410,3 +9410,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-approval-utilities to 8.0.0 [schmonz 2022-12-19]
 	Updated devel/py-approvaltests to 8.0.0 [schmonz 2022-12-19]
 	Updated devel/difftastic to 0.39.0 [pin 2022-12-19]
+	Updated games/doomlegacy to 1.48.12 [micha 2022-12-19]
