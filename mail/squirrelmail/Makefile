@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.144 2022/09/16 05:49:08 taca Exp $
+# $NetBSD: Makefile,v 1.145 2022/12/19 14:35:35 taca Exp $
 
-DISTNAME=	squirrelmail-webmail-1.4.23pre14977
+DISTNAME=	squirrelmail-webmail-1.4.23pre14979
 PKGNAME=	${DISTNAME:S/-webmail//}
 CATEGORIES=	mail www
 MASTER_SITES=	${MASTER_SITE_LOCAL}
