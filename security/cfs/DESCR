@@ -12,3 +12,6 @@ file system for its underlying storage without modification,
 including remote file servers such as NFS.  System management
 functions, such as file backup, work in a normal manner and without
 knowledge of the key.
+
+This is a continuation fork which does not currently intend to make
+substantial changes, but is buildable on modern systems.

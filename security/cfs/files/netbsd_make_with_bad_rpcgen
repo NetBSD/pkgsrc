@@ -1,0 +1,33 @@
+#!/bin/sh
+# This file is missing from the upstream distfile.
+# this will make CFS for NetBSD (and other) systems with the
+# wrong version of rpcgen
+make CC="cc -traditional \
+        -Dnfsproc_null_2_svc=nfsproc_null_2     \
+        -Dnfsproc_getattr_2_svc=nfsproc_getattr_2       \
+        -Dnfsproc_setattr_2_svc=nfsproc_setattr_2       \
+        -Dnfsproc_root_2_svc=nfsproc_root_2     \
+        -Dnfsproc_lookup_2_svc=nfsproc_lookup_2 \
+        -Dnfsproc_readlink_2_svc=nfsproc_readlink_2     \
+        -Dnfsproc_read_2_svc=nfsproc_read_2     \
+        -Dnfsproc_writecache_2_svc=nfsproc_writecache_2 \
+        -Dnfsproc_write_2_svc=nfsproc_write_2   \
+        -Dnfsproc_create_2_svc=nfsproc_create_2 \
+        -Dnfsproc_remove_2_svc=nfsproc_remove_2 \
+        -Dnfsproc_rename_2_svc=nfsproc_rename_2 \
+        -Dnfsproc_link_2_svc=nfsproc_link_2     \
+        -Dnfsproc_symlink_2_svc=nfsproc_symlink_2       \
+        -Dnfsproc_mkdir_2_svc=nfsproc_mkdir_2   \
+        -Dnfsproc_rmdir_2_svc=nfsproc_rmdir_2   \
+        -Dnfsproc_readdir_2_svc=nfsproc_readdir_2       \
+        -Dnfsproc_statfs_2_svc=nfsproc_statfs_2 \
+        -Dadmproc_null_2_svc=admproc_null_2     \
+        -Dadmproc_attach_2_svc=admproc_attach_2 \
+        -Dadmproc_detach_2_svc=admproc_detach_2 \
+        -Dadmproc_null_1_svc=admproc_null_1     \
+        -Dadmproc_attach_1_svc=admproc_attach_1 \
+        -Dadmproc_detach_1_svc=admproc_detach_1 \
+        -Dadmproc_ls_1_svc=admproc_ls_1 \
+                " $*
+
+

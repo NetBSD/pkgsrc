@@ -1,35 +1,54 @@
-$NetBSD: patch-aa,v 1.6 2008/06/20 01:09:33 joerg Exp $
+$NetBSD: patch-aa,v 1.7 2022/12/19 23:18:37 gdt Exp $
 
---- Makefile.orig	2001-05-04 04:29:21.000000000 +1000
+--- Makefile.orig	2022-12-19 22:46:57.638664951 +0000
 +++ Makefile
-@@ -74,18 +74,19 @@
- #CC=cc
- #COPT=-O -DNOT_ANSI_C -DPROTOTYPES=0
- # for gcc, use
--CC=gcc
--COPT=-O2 -DPROTOTYPES=1
-+#CC=gcc
-+#COPT=-O2 -DPROTOTYPES=1
-+CFLAGS+=${CFS_CFLAGS}
+@@ -48,12 +48,13 @@
  
- #1B: paths:
+ 
+ CC?=cc
+-CFLAGS?=-O2
++# Use CFLAGS form the environment.
+ 
+ #paths:
  #some peple like /usr/local/sbin instead of /usr/local/etc
 -BINDIR=/usr/local/bin
 -ETCDIR=/usr/local/etc
++SBINDIR=${PREFIX}/sbin
 +BINDIR=${PREFIX}/bin
-+ETCDIR=${PREFIX}/sbin
++ETCDIR=${PREFIX}/etc
  PRINTCMD=enscript -Gr2
  # you only need RSAREF for ESM
  # these paths WILL have to be changed...
--RSALIB=/usr/mab/rsaref/install/rsaref.a
--RINCLUDES=/usr/mab/rsaref/source
-+#RSALIB=/usr/mab/rsaref/install/rsaref.a
-+#RINCLUDES=/usr/mab/rsaref/source
+@@ -188,6 +189,13 @@ RINCLUDES=/usr/mab/rsaref/source
+ #COMPAT=-lcompat
+ #RPCOPTS=-b
  
- # if you're a paranoid fascist, you might want to configure
- # default timeouts on the attach command.  If you do,
-@@ -229,7 +230,7 @@ RINCLUDES=/usr/mab/rsaref/source
- # (3/3) CONFIGURE: one last thing
++#* Use these for NetBSD 9
++# For mounting, use
++#      mount -o intr,udp,-2 127.0.0.1:/null /crypt
++#CFLAGS=$(COPT) -DBSD44 -DANYPORT -DCFS_PORT=2049 -DSHORTLINKS -I$(RINCLUDES)
++#COMPAT=-lcompat
++#RPCOPTS=-b
++
+ ## Solaris 2.3 / SUNOS 5.x
+ #CFLAGS=$(COPT) -DSOLARIS2X -DPORTMAP -I$(RINCLUDES) -DPTMX
+ #LIBS=-lsocket -lnsl
+@@ -198,17 +206,17 @@ RINCLUDES=/usr/mab/rsaref/source
+ #CFLAGS=$(COPT) -posix -D_BSD -DANYPORT -I$(RINCLUDES)
+ 
+ ## use these for FreeBSD
+-CFLAGS+=-DBSD44 -DANYPORT -DSHORTLINKS
+-LIBS=-lrpcsvc
+-COMPAT=-lcompat
+-RPCOPTS=
++#CFLAGS+=-DBSD44 -DANYPORT -DSHORTLINKS
++#LIBS=-lrpcsvc
++#COMPAT=-lcompat
++#RPCOPTS=
+ 
+ 
+ #==========================================================================
+ # CONFIGURE: one last thing
  #==========================================================================
  # finally, comment out the next line:
 -CC=you_forgot_to_edit_the_makefile
@@ -37,34 +56,18 @@ $NetBSD: patch-aa,v 1.6 2008/06/20 01:09:33 joerg Exp $
  
  # now you're done with local configuration.
  
-@@ -322,6 +323,7 @@ nfsproto_svr.c: nfsproto.x
- 
- nfsproto.h: nfsproto.x
- 	rpcgen $(RPCOPTS) -h -o nfsproto.h nfsproto.x
-+	./unansi ${OPSYS} nfsproto.h
- 
- admproto_xdr.c: admproto.x
- 	rpcgen $(RPCOPTS) -c -o admproto_xdr.c admproto.x 
-@@ -331,6 +333,7 @@ admproto_svr.c: admproto.x
- 
- admproto.h: admproto.x
- 	rpcgen $(RPCOPTS) -h -o admproto.h admproto.x
-+	./unansi ${OPSYS} admproto.h
- 
- admproto_clnt.c: admproto.x
- 	rpcgen $(RPCOPTS) -l -o admproto_clnt.c admproto.x 
-@@ -359,10 +362,11 @@ printout: $(SRCS) cfs.h mcg.h safer.h ad
+@@ -344,10 +352,11 @@ printout: $(SRCS) cfs.h mcg.h safer.h ad
  	$(PRINTCMD) $(SRCS) cfs.h mcg.h safer.h admproto.h nfsproto.h
  
  install_cfs: cfsd cattach cdetach cmkdir
 -	install -m 0755 -c -o root cfsd $(ETCDIR)
 -	install -m 0755 -c -o root cattach cdetach cmkdir cpasswd cfssh \
-+	${BSD_INSTALL_PROGRAM} cfsd ${DESTDIR}$(ETCDIR)
+-                cname ccat cmkkey $(BINDIR)
+-#	install -m 0755 i o $(BINDIR)
++	${BSD_INSTALL_PROGRAM} cfsd ${DESTDIR}$(SBINDIR)
 +	${BSD_INSTALL_SCRIPT} cmkkey cfssh ${DESTDIR}$(BINDIR)
 +	${BSD_INSTALL_SCRIPT} cattach cdetach cmkdir cpasswd \
--                cname ccat cmkkey $(BINDIR)
 +                cname ccat ${DESTDIR}$(BINDIR)
--#	install -m 0755 i o $(BINDIR)
 +#	${BSD_INSTALL_PROGRAM} i o ${DESTDIR}$(BINDIR)
  	@echo "Kill any running cfsd prior to restarting."
  	@echo "See the README file for more information."
