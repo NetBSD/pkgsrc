@@ -1,0 +1,15 @@
+$NetBSD: patch-src_Makefile.am,v 1.1 2022/12/19 16:05:43 vins Exp $
+
+Prevent the libbsd shared library from being overwitten.
+
+--- src/Makefile.am.orig	2022-01-29 14:23:40.000000000 +0000
++++ src/Makefile.am
+@@ -156,7 +156,7 @@ if NEED_TRANSPARENT_LIBMD
+ # The "GNU ld script" magic is required so that GNU ldconfig does not complain
+ # about an unknown format file.
+ 	soname=`readlink $(DESTDIR)$(libdir)/libbsd.so`; \
+-	$(RM) $(DESTDIR)$(libdir)/libbsd.so; \
++	rm -f $(DESTDIR)$(libdir)/libbsd.so; \
+ 	(echo '/* GNU ld script'; \
+ 	 echo ' * The MD5 functions are provided by the libmd library. */'; \
+ 	 cat format.ld; \
