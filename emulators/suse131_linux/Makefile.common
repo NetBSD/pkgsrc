@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.26 2022/10/01 15:09:02 wiz Exp $
+# $NetBSD: Makefile.common,v 1.27 2022/12/19 18:14:57 tron Exp $
 #
 # used by emulators/suse131_alsa/Makefile
 # used by emulators/suse131_aspell/Makefile
@@ -62,11 +62,13 @@ EMUL_REQD=		suse>=${SUSE_VERSION}
 EMUL_PLATFORMS+=	linux-x86_64
 ONLY_FOR_PLATFORM+=	NetBSD-5.99*-i386
 ONLY_FOR_PLATFORM+=	NetBSD-[6-9]*-i386
+ONLY_FOR_PLATFORM+=	NetBSD-[1-9][0-9].*-i386
 ONLY_FOR_PLATFORM+=	FreeBSD-*-i386
 .endif
 EMUL_PLATFORMS+=	linux-i386
 ONLY_FOR_PLATFORM+=	NetBSD-6.99*-x86_64
 ONLY_FOR_PLATFORM+=	NetBSD-[7-9]*-x86_64
+ONLY_FOR_PLATFORM+=	NetBSD-[1-9][0-9].*-x86_64
 ONLY_FOR_PLATFORM+=	FreeBSD-1[0-9]*-x86_64
 
 CHECK_PIE_SUPPORTED=	no
