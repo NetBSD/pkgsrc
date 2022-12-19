@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6285 2022/12/19 10:39:07 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.6286 2022/12/19 11:17:37 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9409,3 +9409,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/texttest to 4.2.2 [schmonz 2022-12-19]
 	Updated devel/py-approval-utilities to 8.0.0 [schmonz 2022-12-19]
 	Updated devel/py-approvaltests to 8.0.0 [schmonz 2022-12-19]
+	Updated devel/difftastic to 0.39.0 [pin 2022-12-19]
