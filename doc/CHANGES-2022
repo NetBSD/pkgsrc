@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6275 2022/12/19 07:48:41 sekiya Exp $
+$NetBSD: CHANGES-2022,v 1.6276 2022/12/19 08:22:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9397,3 +9397,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated cad/klayout to 0.28 [mef 2022-12-18]
 	Updated devel/meld to 3.22.0nb2 [wiz 2022-12-19]
 	Added net/kea version 2.2.0 [sekiya 2022-12-19]
+	Updated devel/py-bitarray to 2.6.1 [adam 2022-12-19]
+	Updated textproc/py-jsonschema to 4.17.3 [adam 2022-12-19]
