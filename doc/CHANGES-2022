@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6271 2022/12/18 22:29:14 mef Exp $
+$NetBSD: CHANGES-2022,v 1.6272 2022/12/19 07:09:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9395,3 +9395,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-hypothesis to 6.61.0 [adam 2022-12-18]
 	Updated devel/py-hypothesmith to 0.2.3 [adam 2022-12-18]
 	Updated cad/klayout to 0.28 [mef 2022-12-18]
+	Updated devel/meld to 3.22.0nb2 [wiz 2022-12-19]
