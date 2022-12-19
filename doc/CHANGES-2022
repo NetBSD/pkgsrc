@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6279 2022/12/19 09:35:50 pin Exp $
+$NetBSD: CHANGES-2022,v 1.6280 2022/12/19 09:37:13 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9402,3 +9402,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/ufetch to 0.3 [pin 2022-12-19]
 	Updated sysutils/felix to 2.2.2 [pin 2022-12-19]
 	Updated graphics/oculante to 0.6.33 [pin 2022-12-19]
+	Updated editors/tp-note to 1.19.9 [pin 2022-12-19]
