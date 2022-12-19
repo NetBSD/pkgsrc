@@ -1,20 +1,25 @@
-# $NetBSD: Makefile,v 1.39 2022/12/19 15:14:34 gdt Exp $
+# $NetBSD: Makefile,v 1.40 2022/12/19 23:18:36 gdt Exp $
 
-DISTNAME=		cfs-1.4.1
-#DISTNAME=		cfs-1.5.0.beta
-PKGREVISION=		7
+VERSION=		1.5.0
+VERSION_SUFFIX_DIST=	.beta
+VERSION_SUFFIX_PKG=	b
+DISTNAME=		cfs-${VERSION}${VERSION_SUFFIX_DIST}
+PKGNAME=		cfs-${VERSION}${VERSION_SUFFIX_PKG}
 CATEGORIES=		security
-MASTER_SITES=		https://www.mattblaze.org/software/cfs-1.4.1.tar.gz
-#MASTER_SITES=		https://www.bayofrum.net/dist/cfs/
-
-# Thanks to crees@FreeBSD.org for a continuation fork.
-#  https://www.freshports.org/security/cfs/
-#  https://www.bayofrum.net/cgi-bin/fossil/cfs/index
+MASTER_SITES=		https://www.bayofrum.net/dist/cfs/
+#OLD_MASTER_SITES=	https://www.mattblaze.org/software/cfs-1.4.1.tar.gz
 
 MAINTAINER=		gdt@NetBSD.org
 HOMEPAGE=		https://www.mattblaze.org/software/
 #HOMEPAGE+=		https://www.bayofrum.net/cgi-bin/fossil/cfs/index
 COMMENT=		Encrypting file system, using NFS as its interface
+# The LICENSE is clearly free, and like mit, with minor differences in
+# keeping the license in derived works.  \todo resolve
+#LICENSE=		mit-very-close
+
+# Thanks to crees@FreeBSD.org for a continuation fork.
+#  https://www.freshports.org/security/cfs/
+#  https://www.bayofrum.net/cgi-bin/fossil/cfs/index
 
 BUILD_TARGET=		cfs
 INSTALL_TARGET=		install_cfs
@@ -35,9 +40,13 @@ CFS_SUBST+=		cpasswd->cfs_passwd	CPASSWD->CFS_PASSWD
 
 MAKE_ENV+=		OPSYS=${OPSYS:Q}
 
+# \todo evaluate
+
 # Required settings necessary to build CFS on various platforms.  This is
 # copied from ${WRKSRC}/Makefile and from browsing the various README files.
 #
+# By default, we assume that the makefile is ok and we can just call it.
+CFS_BUILD_SCRIPT=	do_make
 .if ${OPSYS} == "NetBSD"
 CFLAGS+=		-DPROTOTYPES=1
 CFLAGS+=		-DBSD44 -DANYPORT -DCFS_PORT=2049 -DSHORTLINKS
@@ -50,7 +59,6 @@ MAKE_ENV+=		RPCOPTS="-b"
 #
 CFS_SUBST+=		getpassword->getpass
 CFLAGS+=		-DHAVE_GETPASS
-CFS_BUILD_SCRIPT=	${WRKSRC}/netbsd_make_with_bad_rpcgen
 .elif ${OPSYS} == "SunOS"
 .  if ${CC_VERSION} == gcc
 CFLAGS+=		-traditional
@@ -61,7 +69,6 @@ MAKE_ENV+=		MAKE=${MAKE_PROGRAM:Q}
 MAKE_ENV+=		LIBS="-lsocket -lnsl"
 MAKE_ENV+=		COMPAT=
 MAKE_ENV+=		RPCOPTS=
-CFS_BUILD_SCRIPT=	${WRKSRC}/make_with_bad_rpcgen
 .elif ${OPSYS} == "Linux"
 .  if ${CC_VERSION} == gcc
 CFLAGS+=		-traditional
@@ -72,32 +79,40 @@ MAKE_ENV+=		MAKE=${MAKE_PROGRAM:Q}
 MAKE_ENV+=		LIBS=
 MAKE_ENV+=		COMPAT=
 MAKE_ENV+=		RPCOPTS="-k -b"
-CFS_BUILD_SCRIPT=	${WRKSRC}/make_with_bad_rpcgen
 .endif
 
+# Turn the list of transformations into a sed expression.
 CFS_SUBST_SED=		${CFS_SUBST:S/->/!/:S/$/!g/:S/^/ -e s!/}
 
 DOCDIR=			${PREFIX}/share/doc/cfs
 
 RCD_SCRIPTS=		cfsd
 
+# We install *.1 manually, because the cfs_install target doesn't
+# install man pages.  However, we aren't building esm, because no one
+# has made it work and it probably isn't that useful in a post-ssh
+# world, so just remove the man page to avoid it being installed later.
 post-extract:
 	@${RM} -f ${WRKSRC}/esm.1
 
-post-patch:
+# Rename cfoo to cfs_foo, literally everywhere.  Use pre-configure so
+# that one can "make patch" and then mkpatches without the patches
+# ending up carrying this change.
+pre-configure:
 	@cd ${WRKSRC}; for file in *; do				\
 		${MV} -f $${file} $${file}.presubst;			\
 		dest=`${ECHO} $${file} | ${SED} ${CFS_SUBST_SED}`;	\
 		${SED} ${CFS_SUBST_SED} $${file}.presubst > $${dest};	\
 		${RM} -f $${file}.presubst;				\
 	done
-	@${CHMOD} +x ${CFS_BUILD_SCRIPT}
+	# We use SH, do it doesn't need to be x
+	#@${CHMOD} +x ${CFS_BUILD_SCRIPT}
 
+
+# Copy our make non-wrapper script for use later.
 pre-build:
-	@${SED}	-e "s|@AWK@|${AWK}|g"					\
-		-e "s|@MV@|${MV}|g"					\
-		${FILESDIR}/unansi.sh > ${WRKSRC}/unansi
-	@${CHMOD} +x ${WRKSRC}/unansi
+	${CP} ${FILESDIR}/do_make ${WRKSRC}
+
 
 do-build:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV}				\
