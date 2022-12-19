@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.42 2022/12/17 07:27:38 pin Exp $
+$NetBSD: distinfo,v 1.43 2022/12/19 09:34:15 pin Exp $
 
 BLAKE2s (adler-1.0.2.crate) = f263779d752af886455fc0f42c997893fb1a09edcf1bd2980605251c2e3602aa
 SHA512 (adler-1.0.2.crate) = 7ab190d31890fc05b0b55d8e2c6527a505e06793d5496be0b3831e0513412f9ba97f8148f6f68ed0770fa9cd980a5092d885e058becf1d5506b7c74b82674aa1
@@ -108,9 +108,9 @@ Size (dirs-4.0.0.crate) = 12503 bytes
 BLAKE2s (dirs-sys-0.3.7.crate) = baa17cbec722cdc7e6369057c06ac108e433fa039f1f41c76612a5ece7f163c8
 SHA512 (dirs-sys-0.3.7.crate) = e630964e4c452950a475c10a490b49b2979dd7dfda48172b905cc789153ae4a0ba2d7d91f690705cbfff23737c4b4a339eb0c49e922efd7d68a92fe6368a929f
 Size (dirs-sys-0.3.7.crate) = 10597 bytes
-BLAKE2s (felix-2.2.1.tar.gz) = 650ce074de9ed71d8c2c0fe0636fa6133acfc6e8a156981f7cb4dee9c885ea53
-SHA512 (felix-2.2.1.tar.gz) = 6aef37a4e5c119446fb5da25ea8635475cf6df9658ca65fd9e6188af323a3b6ececd08838707d95db6ccb71407ada6b8c8be8689271a12db2401339c61ced6da
-Size (felix-2.2.1.tar.gz) = 10147997 bytes
+BLAKE2s (felix-2.2.2.tar.gz) = a9ff39da6dbe2ac1c6980f8410cfb1722d0ae19c32d422ecbd43fc80a45cfb84
+SHA512 (felix-2.2.2.tar.gz) = 30f3e6bf3cf3e9937dbd2561a9fcd5b3a443b628f327ec220936207904ca73cb7e15794eec54fb773137d844bbaa53fdc7682f9eb6cfb45b66f91d52a27bc81b
+Size (felix-2.2.2.tar.gz) = 10148824 bytes
 BLAKE2s (filetime-0.2.19.crate) = d1d086918a1ddd41ceb851e3bb093586aef7b641529e37a7f40ae3a6dd68d787
 SHA512 (filetime-0.2.19.crate) = 9a30f078ceab0f24ff63cb6b80e76f357fd15aab9ec206186ddda950370b9ed738a6817b942cfc01baf518f9eb749e3b9c749718b4581ba74f65424bc226c34d
 Size (filetime-0.2.19.crate) = 15028 bytes
@@ -423,5 +423,5 @@ Size (zstd-safe-5.0.2+zstd.1.5.2.crate) = 17273 bytes
 BLAKE2s (zstd-sys-2.0.4+zstd.1.5.2.crate) = fade50ebfe975a129ccbd6cde8708ed8f7bad475c00e6780bd328bfe7433fa53
 SHA512 (zstd-sys-2.0.4+zstd.1.5.2.crate) = 9e4aaf26883aeb96bcc51ad9fdc6500daabd650d4e82baf3599ddc85e8e97a4d7206d6c7560d21c1c719d6a65f7d47251d47d809905cb1083a4698160bec3d45
 Size (zstd-sys-2.0.4+zstd.1.5.2.crate) = 713677 bytes
-SHA1 (patch-Cargo.toml) = b834ee467cad85c5eff4168759d5968da23e0823
+SHA1 (patch-Cargo.toml) = 2214acc248f5b0afbc09534bbdde2846183a038d
 SHA1 (patch-vendor_syntect-5.0.0_src_util.rs) = c151782a3cd4330aa2f68562b3420231d1574359
