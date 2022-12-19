@@ -1,0 +1,26 @@
+$NetBSD: patch-Cargo.toml,v 1.1 2022/12/19 11:17:17 pin Exp $
+
+Don't patch tree_magic_mini crate.
+Required changes have been merged upstream.
+
+--- Cargo.toml.orig	2022-12-19 07:55:22.000000000 +0000
++++ Cargo.toml
+@@ -51,7 +51,7 @@ const_format = "0.2.22"
+ owo-colors = "3.3.0"
+ wu-diff = "0.1.2"
+ rayon = "1.5.2"
+-tree_magic_mini = "3.0.2"
++tree_magic_mini = "3.0.3"
+ bumpalo = "3.9.1"
+ unicode-width = "0.1.9"
+ term_size = "0.3.2"
+@@ -70,9 +70,3 @@ lto = "thin"
+ [[bin]]
+ name = "difft"
+ path = "src/main.rs"
+-
+-[features]
+-
+-[patch.crates-io]
+-# https://github.com/mbrubeck/tree_magic/pull/13 hasn't been merged yet.
+-tree_magic_mini = { git = 'https://github.com/Wilfred/tree_magic', branch = 'fix-panic-for-empty-strings' }
