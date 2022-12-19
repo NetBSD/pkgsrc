@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2022/12/10 19:58:56 tnn Exp $
+$NetBSD: distinfo,v 1.8 2022/12/19 19:23:41 jperkin Exp $
 
 BLAKE2s (go1.19.4.darwin-amd64.tar.gz) = dd6a9099eea9645a707d21bb872b888d144420323cbeee035c79a05f1a7e7933
 SHA512 (go1.19.4.darwin-amd64.tar.gz) = c71152aaf4734dd438e15fb1318e5d227a88d531f3ca762be89d8111d2387381c77dca347a13790b276ff818c39a0dbff74b24d88dd415727a623229eab9b414
@@ -6,6 +6,9 @@ Size (go1.19.4.darwin-amd64.tar.gz) = 152193108 bytes
 BLAKE2s (go1.19.4.darwin-arm64.tar.gz) = fc82c89bad617871c60bd5f56df38447a1184ae4bb597a7eb6ba67c57ad692d9
 SHA512 (go1.19.4.darwin-arm64.tar.gz) = 0ba7e04067b146e3a82461335b2f18e3500860112ecb30f5b6b0c79e7d4700581c1bb2d379411499c43f515373cc16d0f7e19ea2e8727f339b1550b2b4765b31
 Size (go1.19.4.darwin-arm64.tar.gz) = 146436948 bytes
+BLAKE2s (go1.19.4.illumos-amd64.tar.gz) = 03a23d3f51c8d350d27fca63e102eb0543e9f722ceaf970c2addc44cffc3255e
+SHA512 (go1.19.4.illumos-amd64.tar.gz) = ad374aa60de31db8a7478b64a6c8d573e2ec0740301abf35ba8be67906a9592cfc08a0d0e87fcc46ecdcd0b16294f443682aa4634557466e4287620792d16b51
+Size (go1.19.4.illumos-amd64.tar.gz) = 156656196 bytes
 BLAKE2s (go1.19.4.linux-386.tar.gz) = 053f4910541aa3213c6e4f1f56a53f55c1ad42653c68f4b184a19b778b5d377d
 SHA512 (go1.19.4.linux-386.tar.gz) = 49f054e1b94b2526ff0e1b587cb9dfc6fe2eab61c5ec4568d9a9f08c0f9cd729f1e743b1b1ea52f4dbe12cdd12b028992eb4be99f5f1280bf5482eaae493f2ab
 Size (go1.19.4.linux-386.tar.gz) = 120083402 bytes
