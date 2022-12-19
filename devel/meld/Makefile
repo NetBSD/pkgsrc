@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.123 2022/11/23 16:19:51 adam Exp $
+# $NetBSD: Makefile,v 1.124 2022/12/19 07:09:00 wiz Exp $
 
 DISTNAME=		meld-3.22.0
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/meld/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=		.tar.xz
@@ -29,11 +29,6 @@ SUBST_SED.python3=	-e "s,python.find_installation('python3',python.find_installa
 SUBST_SED.python3+=	-e "s,'python3','python-${PYVERSSUFFIX}',"
 SUBST_STAGE.python3=	pre-configure
 SUBST_MESSAGE.python3=	Fix python binary name.
-
-# compile step in meson_post_install.py does not support DESTDIR
-# https://gitlab.gnome.org/GNOME/meld/-/issues/709
-post-install:
-	${PYTHONBIN} -m compileall compile_dir ${DESTDIR}${PREFIX}/${PYSITELIB}
 
 .include "../../devel/py-gobject3-common/buildlink3.mk"
 .include "../../graphics/adwaita-icon-theme/buildlink3.mk"
