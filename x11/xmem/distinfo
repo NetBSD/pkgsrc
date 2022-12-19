@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2022/12/19 21:00:16 vins Exp $
+
+BLAKE2s (xmem_1_29.tar.gz) = 7097275ecaba3444bb6cf118c9bd782d692129a084426d16942d51e1a00221f2
+SHA512 (xmem_1_29.tar.gz) = 4d5b14d59c7da86715831a985a922ca820239608a9e510bbf5fa79e1cc1b72e5f48f2fa991409c6ba8318d5d320d8d8c12a7e37993b0132070c003464fb48e2b
+Size (xmem_1_29.tar.gz) = 1004011 bytes
+SHA1 (patch-get__mem.c) = f644c4cd7d781ccad9284de79a6840c2ff30103e
+SHA1 (patch-xmem.1) = abdb4a4c55ea8d5f24568a8e6cabb980d83bca11

@@ -1,0 +1,15 @@
+$NetBSD: patch-xmem.1,v 1.1 2022/12/19 21:00:16 vins Exp $
+
+Do not hard-code paths.
+
+--- xmem.1.orig	2022-02-05 06:40:03.000000000 +0000
++++ xmem.1
+@@ -105,7 +105,7 @@ to get the default host and display numb
+ to get the name of a resource file that overrides the global resources
+ stored in the RESOURCE_MANAGER property.
+ .SH FILES
+-/etc/X11/app-defaults/XMem - specifies required resources
++@PREFIX@/lib/X11/app-defaults/XMem - specifies required resources
+ .SH SEE ALSO
+ X(1), xrdb(1), mem(4), Athena StripChart Widget.
+ .SH BUGS 
