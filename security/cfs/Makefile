@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2022/11/09 15:04:05 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2022/12/19 14:54:10 gdt Exp $
 
 DISTNAME=		cfs-1.4.1
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		security
 MASTER_SITES=		https://www.mattblaze.org/software/cfs-1.4.1.tar.gz
 
@@ -107,5 +107,6 @@ post-install:
 		${INSTALL_MAN} $${file} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/$${file};	\
 	done
 	${INSTALL_DATA} ${WRKSRC}/notes.ms ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} files/README.NetBSD.txt ${DESTDIR}${DOCDIR}
 
 .include "../../mk/bsd.pkg.mk"
