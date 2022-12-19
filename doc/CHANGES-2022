@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6284 2022/12/19 10:38:52 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.6285 2022/12/19 10:39:07 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9408,3 +9408,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/gindent to 2.2.12 [wiz 2022-12-19]
 	Updated devel/texttest to 4.2.2 [schmonz 2022-12-19]
 	Updated devel/py-approval-utilities to 8.0.0 [schmonz 2022-12-19]
+	Updated devel/py-approvaltests to 8.0.0 [schmonz 2022-12-19]
