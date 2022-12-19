@@ -1,13 +1,15 @@
-@comment $NetBSD: PLIST,v 1.1 2020/12/09 11:21:46 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/12/19 16:05:43 vins Exp $
 include/bsd/bitstring.h
 include/bsd/bsd.h
 include/bsd/err.h
 include/bsd/getopt.h
+include/bsd/grp.h
 include/bsd/inttypes.h
 include/bsd/libutil.h
 include/bsd/md5.h
 include/bsd/netinet/ip_icmp.h
 include/bsd/nlist.h
+include/bsd/pwd.h
 include/bsd/readpassphrase.h
 include/bsd/stdio.h
 include/bsd/stdlib.h
@@ -30,6 +32,8 @@ lib/libbsd.la
 lib/pkgconfig/libbsd-ctor.pc
 lib/pkgconfig/libbsd-overlay.pc
 lib/pkgconfig/libbsd.pc
+man/man3/LIST_CLASS_ENTRY.3bsd
+man/man3/LIST_CLASS_HEAD.3bsd
 man/man3/LIST_EMPTY.3bsd
 man/man3/LIST_ENTRY.3bsd
 man/man3/LIST_FIRST.3bsd
@@ -70,6 +74,8 @@ man/man3/RB_PROTOTYPE_STATIC.3bsd
 man/man3/RB_REMOVE.3bsd
 man/man3/RB_RIGHT.3bsd
 man/man3/RB_ROOT.3bsd
+man/man3/SLIST_CLASS_ENTRY.3bsd
+man/man3/SLIST_CLASS_HEAD.3bsd
 man/man3/SLIST_EMPTY.3bsd
 man/man3/SLIST_ENTRY.3bsd
 man/man3/SLIST_FIRST.3bsd
@@ -86,6 +92,7 @@ man/man3/SLIST_NEXT.3bsd
 man/man3/SLIST_REMOVE.3bsd
 man/man3/SLIST_REMOVE_AFTER.3bsd
 man/man3/SLIST_REMOVE_HEAD.3bsd
+man/man3/SLIST_REMOVE_PREVPTR.3bsd
 man/man3/SLIST_SWAP.3bsd
 man/man3/SPLAY_EMPTY.3bsd
 man/man3/SPLAY_ENTRY.3bsd
@@ -104,6 +111,8 @@ man/man3/SPLAY_PROTOTYPE.3bsd
 man/man3/SPLAY_REMOVE.3bsd
 man/man3/SPLAY_RIGHT.3bsd
 man/man3/SPLAY_ROOT.3bsd
+man/man3/STAILQ_CLASS_ENTRY.3bsd
+man/man3/STAILQ_CLASS_HEAD.3bsd
 man/man3/STAILQ_CONCAT.3bsd
 man/man3/STAILQ_EMPTY.3bsd
 man/man3/STAILQ_ENTRY.3bsd
@@ -124,6 +133,8 @@ man/man3/STAILQ_REMOVE.3bsd
 man/man3/STAILQ_REMOVE_AFTER.3bsd
 man/man3/STAILQ_REMOVE_HEAD.3bsd
 man/man3/STAILQ_SWAP.3bsd
+man/man3/TAILQ_CLASS_ENTRY.3bsd
+man/man3/TAILQ_CLASS_HEAD.3bsd
 man/man3/TAILQ_CONCAT.3bsd
 man/man3/TAILQ_EMPTY.3bsd
 man/man3/TAILQ_ENTRY.3bsd
@@ -184,11 +195,14 @@ man/man3/flopen.3bsd
 man/man3/fmtcheck.3bsd
 man/man3/fparseln.3bsd
 man/man3/fpurge.3bsd
+man/man3/freezero.3bsd
 man/man3/funopen.3bsd
 man/man3/getbsize.3bsd
 man/man3/getmode.3bsd
 man/man3/getpeereid.3bsd
 man/man3/getprogname.3bsd
+man/man3/gid_from_group.3bsd
+man/man3/group_from_gid.3bsd
 man/man3/heapsort.3bsd
 man/man3/humanize_number.3bsd
 man/man3/le16dec.3bsd
@@ -205,11 +219,13 @@ man/man3/pidfile_close.3bsd
 man/man3/pidfile_open.3bsd
 man/man3/pidfile_remove.3bsd
 man/man3/pidfile_write.3bsd
+man/man3/pwcache.3bsd
 man/man3/queue.3bsd
 man/man3/radixsort.3bsd
 man/man3/readpassphrase.3bsd
 man/man3/reallocarray.3bsd
 man/man3/reallocf.3bsd
+man/man3/recallocarray.3bsd
 man/man3/setmode.3bsd
 man/man3/setproctitle.3bsd
 man/man3/setproctitle_init.3bsd
@@ -238,6 +254,7 @@ man/man3/timerclear.3bsd
 man/man3/timercmp.3bsd
 man/man3/timerisset.3bsd
 man/man3/timersub.3bsd
+man/man3/timespec.3bsd
 man/man3/timespecadd.3bsd
 man/man3/timespecclear.3bsd
 man/man3/timespeccmp.3bsd
@@ -245,7 +262,9 @@ man/man3/timespecisset.3bsd
 man/man3/timespecsub.3bsd
 man/man3/timeval.3bsd
 man/man3/tree.3bsd
+man/man3/uid_from_user.3bsd
 man/man3/unvis.3bsd
+man/man3/user_from_uid.3bsd
 man/man3/vis.3bsd
 man/man3/wcslcat.3bsd
 man/man3/wcslcpy.3bsd
