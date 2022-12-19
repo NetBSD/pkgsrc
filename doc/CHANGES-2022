@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6291 2022/12/19 14:35:57 taca Exp $
+$NetBSD: CHANGES-2022,v 1.6292 2022/12/19 15:13:37 vins Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9415,3 +9415,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated shells/mksh to 59bnb3 [jperkin 2022-12-19]
 	Updated wm/coma to 1.1nb2 [vins 2022-12-19]
 	Updated mail/squirrelmail to 1.4.23pre14979 [taca 2022-12-19]
+	Added devel/libmd version 1.0.4 [vins 2022-12-19]
