@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# This file exists just so that we can "sh do_make" instead of calling
+# make, to fit into an awkward build flow that sometimes needs a
+# wrapper script.
+
+make $*
+

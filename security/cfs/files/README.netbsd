@@ -1,0 +1,49 @@
+This file is from upstream but missing in the distribution tarball.
+It is very old and likely not longer accurate.
+
+
+----------------------------------------
+There are a number of little details you have to pay attention to
+when building CFS on NetBSD 1.5 or later.
+
+First, read and follow the generic instructions.  Note in particular
+the Makefile lines that need to be changed.
+
+Second, check for a bug in your distribution of NetBSD.  In
+/usr/include/netdb.h and /usr/include/sys/socket.h, there are
+#define's for socklen_t.  They should read
+
+	#define socklen_t       __socklen_t
+
+but some versions say
+
+	#define socklen_t       socklen_t
+
+The compiler doesn't like that version...
+
+Third, the rpcgen on NetBSD 1.5 is a variant not covered by the
+generic instructions with CFS.  Use the shell script
+
+	./netbsd_make_with_bad_rpcgen cfs
+
+to build CFS with the proper options.
+
+To run CFS, set
+
+	rpcbind=YES
+
+in /etc/rc.conf.  Make sure that nfs_server is set to NO (the default).
+Because NFS apparently must live on port 2049 on NetBSD, it is not
+possible to run an NFS server on the same machine.
+
+To mount /crypt, use
+
+	mountd && \
+	cfsd && \
+	mount -o intr,-2 127.0.0.1:/null /crypt
+
+The -2 specifies version 2 of NFS.  It isn't completely clear
+why you have to say 127.0.0.1 instead of localhost, but it seems
+to be related to v6 support.
+
+I have made no attempt to compile esm.

@@ -1,8 +1,17 @@
-$NetBSD: patch-af,v 1.2 2012/10/26 20:24:19 joerg Exp $
+$NetBSD: patch-af,v 1.3 2022/12/19 23:18:37 gdt Exp $
 
---- cfs.h.orig	2012-10-26 13:15:56.000000000 +0000
+--- cfs.h.orig	2013-05-15 16:50:30.000000000 +0000
 +++ cfs.h
-@@ -183,6 +183,11 @@ extern instance *instances[];
+@@ -22,6 +22,8 @@
+ 
+ #include <dirent.h>
+ #include <inttypes.h>
++#include <stdlib.h> /* ? */
++#include <string.h> /* ? */
+ #include <unistd.h>
+ 
+ /* include files specific to cipher modules go here */
+@@ -222,6 +224,11 @@ extern instance *instances[];
  extern nfstime roottime;
  extern cfs_fileid rootnode;
  
@@ -14,11 +23,3 @@ $NetBSD: patch-af,v 1.2 2012/10/26 20:24:19 joerg Exp $
  #ifdef hpux
  #define seteuid(x) setresuid(-1,x,-1)
  #define setegid(x) setresgid(-1,x,-1)
-@@ -224,4 +229,6 @@ extern cfs_fileid rootnode;
- #define d_fileno d_ino
- */
- #endif
--#include<stdlib.h>
-+#include <stdlib.h>
-+#include <string.h>
-+#include <unistd.h>
