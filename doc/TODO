@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22413 2022/12/19 16:06:04 vins Exp $
+$NetBSD: TODO,v 1.22414 2022/12/19 19:04:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -587,6 +587,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o doclifter-2.19
 	o drawpile-2.1.20
 	o drivel-3.0.5
+	o drupal-10.0
 	o dtc-1.6.0
 	o dte-1.10
 	o dunst-1.6.1 [adds Linux- and wayland-specific code]
@@ -1271,6 +1272,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-musicbrainz-0.7.4
 	o py-musicbrainz-ngs-0.7.1
 	o py-newt-0.52.21
+	o py-numpy-1.24
 	o py-omniORBpy-3.7
 	o py-pdf-parser-0.7.4
 	o py-postgresql-5.1.2
@@ -1482,7 +1484,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o top-3.8beta1
 	o topgit-0.8
 	o tor-browser-11.0.9 [wip]
-	o tor-browser-12.0
+	o tor-browser-12.0.1
 	o torrentzip-2.1.0
 	o toxcore-0.2.12
 	o trafficserver-9.0.1
