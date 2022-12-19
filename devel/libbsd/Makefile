@@ -1,18 +1,34 @@
-# $NetBSD: Makefile,v 1.2 2022/08/15 22:56:37 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2022/12/19 16:05:43 vins Exp $
 
-DISTNAME=	libbsd-0.10.0
+DISTNAME=	libbsd-0.11.7
 CATEGORIES=	devel
-MASTER_SITES=	http://libbsd.freedesktop.org/releases/
+MASTER_SITES=	https://libbsd.freedesktop.org/releases/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	matthias@rampke.de
+MAINTAINER=	vins@NetBSD.org
 HOMEPAGE=	https://libbsd.freedesktop.org/
 COMMENT=	Compatibility library for BSD functions under other systems
-LICENSE=	original-bsd
+LICENSE=	original-bsd AND modified-bsd AND 2-clause-bsd
+LICENSE+=	AND isc AND mit AND beer-ware
 
-NOT_FOR_PLATFORM=	NetBSD-*-* FreeBSD-*-* OpenBSD-*-*
+NOT_FOR_PLATFORM=	NetBSD-*-* FreeBSD-*-*
+NOT_FOR_PLATFORM+=	OpenBSD-*-* DragonFly-*
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
+USE_TOOLS+=	pkg-config autoconf automake autoreconf
 
+CFLAGS+=	-ffat-lto-objects
+
+pre-configure:
+	set -e; cd ${WRKSRC} && autoreconf -fiv
+
+do-test:
+	${RUN} cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${MAKE} check
+
+PKGCONFIG_OVERRIDE+=	src/libbsd-ctor.pc.in
+PKGCONFIG_OVERRIDE+=	src/libbsd-overlay.pc.in
+PKGCONFIG_OVERRIDE+=	src/libbsd.pc.in
+
+.include "../../devel/libmd/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
