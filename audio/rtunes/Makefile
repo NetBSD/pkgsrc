@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2021/03/30 12:01:04 nia Exp $
+# $NetBSD: Makefile,v 1.15 2022/12/19 16:45:42 vins Exp $
 
 DISTNAME=	rtunes-0.8
 CATEGORIES=	audio
@@ -22,8 +22,7 @@ INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 INSTALLATION_DIRS+=	${PKGMANDIR}/man5
 
 .include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} != "NetBSD" && ${OPSYS} != "OpenBSD"
-LDFLAGS+=	-lbsd
+.if ${OPSYS} == "Linux"
 .  include "../../devel/libbsd/buildlink3.mk"
 .endif
 .include "../../security/openssl/buildlink3.mk"
