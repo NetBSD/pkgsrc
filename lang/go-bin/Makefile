@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2022/12/13 21:12:10 schmonz Exp $
+# $NetBSD: Makefile,v 1.17 2022/12/19 19:23:41 jperkin Exp $
 
 PKGNAME=	go-bin-1.19.4
 CATEGORIES=	lang
@@ -15,8 +15,7 @@ USE_LANGUAGES=	# none
 USE_TOOLS+=	pax perl:run bash:run
 WRKSRC=		${WRKDIR}/go
 
-# Binary distributions are not built as PIE.
-MKPIE_SUPPORTED=	no
+.include "../../lang/go/go-vars.mk"
 
 REPLACE_PERL+=			src/*/*.pl src/*/*/*.pl
 REPLACE_PERL+=			src/net/http/cgi/testdata/test.cgi
@@ -32,42 +31,42 @@ CHECK_RELRO_SUPPORTED=		no
 
 ONLY_FOR_PLATFORM+=		Darwin-*-x86_64
 DIST.darwin-amd64=		go${PKGVERSION_NOREV}.darwin-amd64.tar.gz
-.if !empty(MACHINE_PLATFORM:MDarwin-*-x86_64) || make(distinfo)
+.if !empty(MACHINE_PLATFORM:MDarwin-*-x86_64) || make(distinfo) || make(mdi)
 DISTFILES+=			${DIST.darwin-amd64}
 EXTRACT_ONLY+=			${DIST.darwin-amd64}
 .endif
 
 ONLY_FOR_PLATFORM+=		Darwin-*-aarch64
 DIST.darwin-arm64=		go${PKGVERSION_NOREV}.darwin-arm64.tar.gz
-.if !empty(MACHINE_PLATFORM:MDarwin-*-aarch64) || make(distinfo)
+.if !empty(MACHINE_PLATFORM:MDarwin-*-aarch64) || make(distinfo) || make(mdi)
 DISTFILES+=			${DIST.darwin-arm64}
 EXTRACT_ONLY+=			${DIST.darwin-arm64}
 .endif
 
 ONLY_FOR_PLATFORM+=		Linux-*-i386
 DIST.linux-386=			go${PKGVERSION_NOREV}.linux-386.tar.gz
-.if !empty(MACHINE_PLATFORM:MLinux-*-i386) || make(distinfo)
+.if !empty(MACHINE_PLATFORM:MLinux-*-i386) || make(distinfo) || make(mdi)
 DISTFILES+=			${DIST.linux-386}
 EXTRACT_ONLY+=			${DIST.linux-386}
 .endif
 
 ONLY_FOR_PLATFORM+=		Linux-*-x86_64
 DIST.linux-amd64=		go${PKGVERSION_NOREV}.linux-amd64.tar.gz
-.if !empty(MACHINE_PLATFORM:MLinux-*-x86_64) || make(distinfo)
+.if !empty(MACHINE_PLATFORM:MLinux-*-x86_64) || make(distinfo) || make(mdi)
 DISTFILES+=			${DIST.linux-amd64}
 EXTRACT_ONLY+=			${DIST.linux-amd64}
 .endif
 
 ONLY_FOR_PLATFORM+=		Linux-*-*arm*
 DIST.linux-armv6l=		go${PKGVERSION_NOREV}.linux-armv6l.tar.gz
-.if !empty(MACHINE_PLATFORM:MLinux-*-*arm*) || make(distinfo)
+.if !empty(MACHINE_PLATFORM:MLinux-*-*arm*) || make(distinfo) || make(mdi)
 DISTFILES+=			${DIST.linux-armv6l}
 EXTRACT_ONLY+=			${DIST.linux-armv6l}
 .endif
 
 ONLY_FOR_PLATFORM+=		Linux-*-aarch64
 DIST.linux-arm64=		go${PKGVERSION_NOREV}.linux-arm64.tar.gz
-.if !empty(MACHINE_PLATFORM:MLinux-*-aarch64) || make(distinfo)
+.if !empty(MACHINE_PLATFORM:MLinux-*-aarch64) || make(distinfo) || make(mdi)
 DISTFILES+=			${DIST.linux-arm64}
 EXTRACT_ONLY+=			${DIST.linux-arm64}
 .endif
@@ -75,12 +74,20 @@ EXTRACT_ONLY+=			${DIST.linux-arm64}
 ONLY_FOR_PLATFORM+=		NetBSD-*-aarch64
 DIST.netbsd-arm64=		go1.19.4.netbsd-arm64.tar.gz
 SITES.${DIST.netbsd-arm64}=	https://cdn.NetBSD.org/pub/pkgsrc/misc/tnn/golang-aarch64/
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-aarch64) || make(distinfo)
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-aarch64) || make(distinfo) || make(mdi)
 .  if !make(distinfo)
 PKGNAME=			go-bin-1.19.4
 .  endif
 DISTFILES+=			${DIST.netbsd-arm64}
 EXTRACT_ONLY+=			${DIST.netbsd-arm64}
+.endif
+
+ONLY_FOR_PLATFORM+=		SunOS-*-x86_64
+DIST.illumos-amd64=		go1.19.4.illumos-amd64.tar.gz
+SITES.${DIST.illumos-amd64}=	https://us-central.manta.mnx.io/pkgsrc/public/pkg-bootstraps/
+.if !empty(MACHINE_PLATFORM:MSunOS-*-x86_64) || make(distinfo) || make(mdi)
+DISTFILES+=			${DIST.illumos-amd64}
+EXTRACT_ONLY+=			${DIST.illumos-amd64}
 .endif
 
 INSTALLATION_DIRS+=	go-bin
