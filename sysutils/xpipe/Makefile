@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/09/18 22:38:44 jschauma Exp $
+# $NetBSD: Makefile,v 1.2 2022/12/19 16:39:37 vins Exp $
 
 DISTNAME=	xpipe-2.2
 CATEGORIES=	sysutils
@@ -10,11 +10,6 @@ COMMENT=	split input and feed it into the given utility
 LICENSE=	2-clause-bsd
 
 .include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "Linux
-LDFLAGS+=       -lbsd
-CFLAGS+=	-I${PREFIX}/bsd
-.endif
 
 MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
 MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
