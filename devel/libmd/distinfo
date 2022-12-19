@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/12/19 15:08:04 vins Exp $
+
+BLAKE2s (libmd-1.0.4.tar.xz) = 70e05620ff925f2462ce52d9c721a8424ce8481f6146ba97585c16feedbaa7c1
+SHA512 (libmd-1.0.4.tar.xz) = 731553ecc5e0e1eb228cced8fccd531fe31fb5c7627ca30013d287e1aeb8222959cf7498fbb7414bbabb967b25d4e8b0edd54fc47f6ccf55fc91087db0725ce3
+Size (libmd-1.0.4.tar.xz) = 264472 bytes
