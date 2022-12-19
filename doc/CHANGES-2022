@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6272 2022/12/19 07:09:09 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.6273 2022/12/19 07:47:18 sekiya Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9396,3 +9396,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-hypothesmith to 0.2.3 [adam 2022-12-18]
 	Updated cad/klayout to 0.28 [mef 2022-12-18]
 	Updated devel/meld to 3.22.0nb2 [wiz 2022-12-19]
+	Added net/kea version 2.2.0 [sekiya 2022-12-19]
