@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.44 2022/06/28 11:35:52 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2022/12/19 13:42:34 jperkin Exp $
 
 DISTNAME=		mksh-R59b
 PKGNAME=		${DISTNAME:S/-R/-/}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		shells
 MASTER_SITES=		# maintained locally
 DISTFILES=		# empty
@@ -18,6 +18,8 @@ NO_CHECKSUM=		yes
 WRKSRC=			${WRKDIR}/mksh
 
 LIBS.Interix+=		-lcrypt
+
+MAKE_ENV+=		USE_PRINTF_BUILTIN=1
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/examples/mksh
 
