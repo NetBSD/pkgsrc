@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6282 2022/12/19 10:21:37 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.6283 2022/12/19 10:26:45 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9406,3 +9406,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated finance/bitcoin to 24.0.1 [adam 2022-12-19]
 	Updated devel/git to 2.39.0 [adam 2022-12-19]
 	Updated devel/gindent to 2.2.12 [wiz 2022-12-19]
+	Updated devel/texttest to 4.2.2 [schmonz 2022-12-19]
