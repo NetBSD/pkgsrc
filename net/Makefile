@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1493 2022/12/11 01:52:51 sekiya Exp $
+# $NetBSD: Makefile,v 1.1494 2022/12/19 07:45:41 sekiya Exp $
 #
 
 COMMENT=	Networking tools
@@ -293,6 +293,7 @@ SUBDIR+=	kdenetwork-filesharing
 SUBDIR+=	kdenetwork-strigi-analyzers
 SUBDIR+=	kdnssd
 SUBDIR+=	kdsoap
+SUBDIR+=	kea
 SUBDIR+=	kget
 SUBDIR+=	kismet
 SUBDIR+=	kmldonkey
