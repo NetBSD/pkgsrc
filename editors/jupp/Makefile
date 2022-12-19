@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/12/06 11:10:24 vins Exp $
+# $NetBSD: Makefile,v 1.2 2022/12/19 09:02:46 vins Exp $
 #
 
 DISTNAME=	joe-3.1jupp41
@@ -33,5 +33,6 @@ post-install:
 		${DESTDIR}${PREFIX}/share/applications/
 .endfor
 
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

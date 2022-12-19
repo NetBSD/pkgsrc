@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2022/12/08 08:51:55 vins Exp $
+# $NetBSD: Makefile,v 1.18 2022/12/19 09:02:46 vins Exp $
 #
 
 DISTNAME=	xwpe-1.5.30a
@@ -29,6 +29,7 @@ post-install:
 	${INSTALL_DATA} ${FILESDIR}/xwpe.xpm		\
 	   ${DESTDIR}${PREFIX}/share/pixmaps
 
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/libICE/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
