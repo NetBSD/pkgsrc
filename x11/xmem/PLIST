@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2022/12/19 21:00:16 vins Exp $
+bin/xmem
+lib/X11/app-defaults/XMem
+man/man1/xmem.1
+share/xmem/copyright
+share/xmem/xmem.bit
