@@ -1,0 +1,16 @@
+$NetBSD: patch-mkconfig,v 1.1 2022/12/19 09:54:07 vins Exp $
+
+Do not force compiler path on SunOS.
+
+--- mkconfig.orig	2018-12-16 16:40:44.000000000 +0000
++++ mkconfig
+@@ -220,8 +220,7 @@ SunOS)
+ 	( echo '#define	CONFIG_SUNOS' ; echo ) >>$CONFIG_H
+ 	echo '#define	_XOPEN_SOURCE	700'   >>$CONFIG_H
+ 	echo '#define	_XOPEN_SOURCE	700'   >>$BSDSTYLE_H
+-	CC=/usr/bin/gcc
+-	( echo CC=$CC ; echo INSTALL=/usr/bin/ginstall ) >>mkconfig.tmp
++	( echo CC=${CC} ; echo INSTALL=${INSTALL} ) >>mkconfig.tmp
+ 	;;
+ *)
+ 	#
