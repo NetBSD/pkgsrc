@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2002/09/24 12:30:33 wiz Exp $
+$NetBSD: README.NetBSD.txt,v 1.1 2022/12/19 14:54:10 gdt Exp $
 
 The following mail from Steve Bellovin, which can also be viewed at
 
