@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6296 2022/12/19 21:02:03 vins Exp $
+$NetBSD: CHANGES-2022,v 1.6297 2022/12/19 21:06:40 vins Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9418,9 +9418,6 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/libmd version 1.0.4 [vins 2022-12-19]
 	Updated devel/libbsd to 0.11.7 [vins 2022-12-19]
 	Added devel/got-portable version 0.79 [vins 2022-12-19]
-<<<<<<< CHANGES-2022
-	Removed shells/osh successor shells/etsh [vins 2022-12-19]
-=======
 	Added devel/syft version 0.63.0 [wiz 2022-12-19]
->>>>>>> 1.6295
+	Removed shells/osh successor shells/etsh [vins 2022-12-19]
 	Added x11/xmem version 1.29 [vins 2022-12-19]
