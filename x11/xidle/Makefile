@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/12/07 09:15:36 vins Exp $
+# $NetBSD: Makefile,v 1.4 2022/12/19 16:37:21 vins Exp $
 
 DISTNAME=	xidle-20220718
 CATEGORIES=	x11
@@ -35,8 +35,7 @@ CFLAGS+=	-D_OPENBSD_SOURCE
 .endif
 
 .if ${OPSYS} == "Linux"		# strtonum()
-LDFLAGS+=   -lbsd
-.include "../../devel/libbsd/buildlink3.mk"
+.  include "../../devel/libbsd/buildlink3.mk"
 .endif
 
 .include "../../x11/libXdmcp/buildlink3.mk"
