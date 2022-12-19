@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3849 2022/12/18 02:36:01 mef Exp $
+# $NetBSD: Makefile,v 1.3850 2022/12/19 15:13:01 vins Exp $
 #
 
 COMMENT=	Development utilities
@@ -898,6 +898,7 @@ SUBDIR+=	liblnk
 SUBDIR+=	libltdl
 SUBDIR+=	libmaa
 SUBDIR+=	libmatchbox
+SUBDIR+=	libmd
 SUBDIR+=	libmemcache
 SUBDIR+=	libmemcached
 SUBDIR+=	libmemmgr
