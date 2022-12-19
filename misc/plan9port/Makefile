@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/12/06 14:29:25 vins Exp $
+# $NetBSD: Makefile,v 1.2 2022/12/19 09:02:46 vins Exp $
 
 DISTNAME=	plan9port-20220912
 CATEGORIES=	misc plan9
@@ -163,6 +163,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/dist/glendacircle.png	\
 	  ${DESTDIR}${PREFIX}/share/pixmaps/acme.png
 
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
