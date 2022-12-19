@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/12/19 16:05:43 vins Exp $
+# $NetBSD: Makefile,v 1.4 2022/12/19 17:15:34 vins Exp $
 
 DISTNAME=	libbsd-0.11.7
 CATEGORIES=	devel
@@ -13,6 +13,7 @@ LICENSE+=	AND isc AND mit AND beer-ware
 
 NOT_FOR_PLATFORM=	NetBSD-*-* FreeBSD-*-*
 NOT_FOR_PLATFORM+=	OpenBSD-*-* DragonFly-*
+BROKEN_ON_PLATFORM=	Darwin-*-* SunOS-*-*
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
