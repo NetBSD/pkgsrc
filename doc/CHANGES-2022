@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6277 2022/12/19 09:32:56 pin Exp $
+$NetBSD: CHANGES-2022,v 1.6278 2022/12/19 09:34:39 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9400,3 +9400,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-bitarray to 2.6.1 [adam 2022-12-19]
 	Updated textproc/py-jsonschema to 4.17.3 [adam 2022-12-19]
 	Updated sysutils/ufetch to 0.3 [pin 2022-12-19]
+	Updated sysutils/felix to 2.2.2 [pin 2022-12-19]
