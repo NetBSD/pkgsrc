@@ -1,18 +1,24 @@
-===========================================================================
-$NetBSD: README.NetBSD.txt,v 1.1 2022/12/19 14:54:10 gdt Exp $
+$NetBSD: README.NetBSD.txt,v 1.2 2022/12/19 23:18:37 gdt Exp $
 
-The following mail from Steve Bellovin, which can also be viewed at
+The following fstab entry works with NetBSD 9:
+
+127.0.0.1:/null /crypt  nfs     rw,noauto,-u,-2,-i,-s,-r=1024,-w=1024   0 0
+
+Note that it is necessary to specify UDP, because recent NetBSD
+defaults to TCP.
+
+
+Beware that the message below may no longer be accurate, as it was
+written some time ago.  See also the following mail from Steve
+Bellovin, which can also be viewed at
 
 	http://mail-index.netbsd.org/current-users/2002/07/15/0006.html
-
-is relevant to users of this package:
 
 Delivered-To: current-users@netbsd.org
 From: "Steven M. Bellovin" <smb@research.att.com>
 To: current-users@netbsd.org
 Subject: Re: CFS with NetBSD 1.6
 Date: Mon, 15 Jul 2002 14:00:59 +0900
-Precedence: list
 
 In message <20020630000510.2a034cf4.520079546242-0001@t-online.de>, Michael Cor
 e writes:
@@ -37,6 +43,3 @@ figure out why.
 
                 --Steve Bellovin, http://www.research.att.com/~smb (me)
                 http://www.wilyhacker.com ("Firewalls" book)
-
-
-===========================================================================

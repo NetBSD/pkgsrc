@@ -1,8 +1,12 @@
-$NetBSD: patch-ag,v 1.3 2005/09/08 22:37:54 abs Exp $
+$NetBSD: patch-cfs__attach.c,v 1.1 2022/12/19 23:18:37 gdt Exp $
 
---- cattach.c.orig	2004-07-25 21:55:56.000000000 +1000
+For NetBSD, use statvfs.
+
+\todo Send upstream.
+
+--- cattach.c.orig	2022-12-19 22:34:48.224422733 +0000
 +++ cattach.c
-@@ -81,8 +81,12 @@ main(argc,argv)
+@@ -83,8 +83,12 @@ main(int argc, char *argv[])
  	struct fs_data sfb;
  #define f_blocks  fd_req.btot
  #else
