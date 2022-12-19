@@ -1,0 +1,2 @@
+A CLI tool and Go library for generating a Software Bill of Materials
+(SBOM) from container images and file systems.
