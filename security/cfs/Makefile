@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2022/12/19 23:18:36 gdt Exp $
+# $NetBSD: Makefile,v 1.41 2022/12/20 00:32:35 gdt Exp $
 
 VERSION=		1.5.0
 VERSION_SUFFIX_DIST=	.beta
@@ -61,9 +61,9 @@ CFS_SUBST+=		getpassword->getpass
 CFLAGS+=		-DHAVE_GETPASS
 .elif ${OPSYS} == "SunOS"
 .  if ${CC_VERSION} == gcc
+# Probably this is now wrong
 CFLAGS+=		-traditional
 .  endif
-CFLAGS+=		-DPROTOTYPES=1
 CFLAGS+=		-DSOLARIS2X -DPORTMAP -DPTMX
 MAKE_ENV+=		MAKE=${MAKE_PROGRAM:Q}
 MAKE_ENV+=		LIBS="-lsocket -lnsl"
