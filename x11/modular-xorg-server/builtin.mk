@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.3 2021/12/20 07:29:09 nia Exp $
+# $NetBSD: builtin.mk,v 1.4 2022/12/20 18:56:06 wiz Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -15,9 +15,9 @@ PKGCONFIG_BASE.modular-xorg-server=	${X11BASE}
 ###
 
 CHECK_BUILTIN.modular-xorg-server?=		no
-.if !empty(CHECK_BUILTIN.modular-xorg-server:M[nN][oO])
+.if ${CHECK_BUILTIN.modular-xorg-server:tl} == no
 
-.  if !empty(USE_BUILTIN.modular-xorg-server:M[yY][eE][sS])
+.  if ${USE_BUILTIN.modular-xorg-server:tl} == yes
 BUILDLINK_PREFIX.modular-xorg-server=	${X11BASE}
 BUILDLINK_FILES.modular-xorg-server+=	lib/pkgconfig/xorg-server.pc
 .  endif
