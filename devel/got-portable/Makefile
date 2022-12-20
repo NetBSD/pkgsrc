@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2022/12/19 17:42:06 vins Exp $
+# $NetBSD: Makefile,v 1.2 2022/12/20 08:58:20 vins Exp $
 
 DISTNAME=	got-portable-0.79
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GITHUB:=ThomasAdam/}
-GITHUB_TAG=	ba229487d6a55dee6ba3c2cc596cf0e589491ce9
+MASTER_SITES=	https://gameoftrees.org/releases/portable/
 
 MAINTAINER=	vins@NetBSD.org
 HOMEPAGE=	https://gameoftrees.org/portable.html
@@ -18,17 +17,13 @@ ONLY_FOR_PLATFORM+=	Linux-*-*
 ONLY_FOR_PLATFORM+=	FreeBSD-*-*
 ONLY_FOR_PLATFORM+=	DragonFly-*-*
 
-USE_TOOLS+=	yacc pkg-config autoconf
-USE_TOOLS+=	automake autoreconf
+USE_TOOLS+=	yacc pkg-config
 GNU_CONFIGURE=	yes
 
 INSTALLATION_DIRS=	bin libexec
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 
 .include "../../mk/bsd.prefs.mk"
-
-pre-configure:
-	${RUN}set -e; cd ${WRKSRC} && autoreconf -fiv
 
 .if ${OPSYS} == "Linux"
 # compatibility macros and functions for Linux.
@@ -50,5 +45,6 @@ BUILDLINK_API_DEPENDS.openssl+=   openssl>=1.1.1d
 # required for set_panel_userptr(3) and waddwstr(3).
 .include "../../devel/ncursesw/buildlink3.mk"
 
+.include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
