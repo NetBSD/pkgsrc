@@ -1,4 +1,4 @@
-# $NetBSD: gem.mk,v 1.50 2022/12/18 14:52:08 taca Exp $
+# $NetBSD: gem.mk,v 1.51 2022/12/20 02:53:10 taca Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -9,6 +9,12 @@
 #	Execute gem with verbose option.
 #		Possible values: Yes No
 #		Default: No
+#
+# RUBYGEM_USE_MANPAGES
+#	Enable man pages support to ruby gem.
+#
+#	Possible values: Yes No
+#	Default: Yes
 #
 # === Package-settable variables ===
 #
@@ -110,7 +116,7 @@
 #	Optional parameter to pass to gem on install stage.
 #
 # RUBYGEM_MANPAGES
-#	Add man pages support to ruby gem.  This is user-settable.
+#	Add man pages support to ruby gem.
 #
 #	Possible values: Yes No
 #	Default: No
@@ -164,17 +170,22 @@ DISTFILES?=	${DISTNAME}${EXTRACT_SUFX}
 #
 # Handling of ruby-manpages plugin.
 #
+RUBYGEM_USE_MANPAGES?=	yes
 RUBYGEM_MANPAGES?=	no
 PLIST_VARS+=		rubygem_man
 
-.if ${RUBYGEM_MANPAGES:tl} == "no"
-RUBY_MANPAGES_INSTALLED!= ${PKG_INFO} -e ${RUBY_PKGPREFIX}-manpages || ${TRUE}
-.  if ${RUBY_MANPAGES_INSTALLED}
-PKG_SKIP_REASON+=	"Please uninstall ${RUBY_PKGPREFIX}-manpages or set RUBYGEM_MANPAGES to yes."
-.  endif
-.else
+.if ${RUBYGEM_USE_MANPAGES:tl} == "yes"
+.  if ${RUBYGEM_MANPAGES:tl} == "yes"
 BUILD_DEPENDS+=	${RUBY_PKGPREFIX}-manpages>=0.6.1:../../misc/ruby-manpages
 PLIST.rubygem_man=	yes
+.  endif
+.else
+.  if ${RUBYGEM_MANPAGES:tl} == "yes"
+RUBY_MANPAGES_INSTALLED!= ${PKG_INFO} -e ${RUBY_PKGPREFIX}-manpages || ${TRUE}
+.    if ${RUBY_MANPAGES_INSTALLED}
+PKG_SKIP_REASON+=	"Please uninstall ${RUBY_PKGPREFIX}-manpages or set RUBYGEM_USE_MANPAGES to yes."
+.    endif
+.  endif
 .endif
 
 # If any of the DISTFILES are gems, then skip the normal do-extract actions
