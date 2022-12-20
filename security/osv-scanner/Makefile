@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/12/19 13:32:03 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2022/12/20 09:09:45 wiz Exp $
 
 DISTNAME=	osv-scanner-1.0.1
 CATEGORIES=	security
@@ -12,6 +12,6 @@ LICENSE=	apache-2.0
 
 USE_LANGUAGES=	# none
 
-.include "modules.mk"
+.include "go-modules.mk"
 .include "../../lang/go/go-module.mk"
 .include "../../mk/bsd.pkg.mk"
