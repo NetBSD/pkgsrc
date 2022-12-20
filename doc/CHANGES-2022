@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6299 2022/12/19 23:33:01 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.6300 2022/12/20 00:01:02 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9423,3 +9423,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added x11/xmem version 1.29 [vins 2022-12-19]
 	Updated security/cfs to 1.5.0b [gdt 2022-12-19]
 	Updated geography/qgis to 3.28.2 [gdt 2022-12-19]
+	mk/bsd.pkg.mk: started freeze for pkgsrc-2022Q4 branch [gdt 2022-12-20]
