@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6303 2022/12/20 18:56:16 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.6304 2022/12/20 20:56:20 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9427,3 +9427,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/xdriinfo to 1.0.7 [wiz 2022-12-20]
 	Updated devel/conftest to 0.37.0 [leot 2022-12-20]
 	Updated x11/modular-xorg-server to 21.1.6 [wiz 2022-12-20]
+	Updated sysutils/memtester to 4.6.0 [schmonz 2022-12-20]
