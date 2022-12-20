@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6302 2022/12/20 18:07:10 leot Exp $
+$NetBSD: CHANGES-2022,v 1.6303 2022/12/20 18:56:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9426,3 +9426,4 @@ Changes to the packages collection and infrastructure in 2022:
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2022Q4 branch [gdt 2022-12-20]
 	Updated x11/xdriinfo to 1.0.7 [wiz 2022-12-20]
 	Updated devel/conftest to 0.37.0 [leot 2022-12-20]
+	Updated x11/modular-xorg-server to 21.1.6 [wiz 2022-12-20]
