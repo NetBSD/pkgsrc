@@ -1,0 +1,7 @@
+===========================================================================
+$NetBSD: MESSAGE.NetBSD,v 1.1 2022/12/20 10:49:04 vins Exp $
+
+xmem requires procfs to be mounted on /proc with linux extensions.
+See mount_procfs(8).
+
+===========================================================================
