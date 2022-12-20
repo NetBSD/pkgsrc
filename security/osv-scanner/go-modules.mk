@@ -1,4 +1,4 @@
-# $NetBSD: modules.mk,v 1.1 2022/12/19 13:32:03 wiz Exp $
+# $NetBSD: go-modules.mk,v 1.1 2022/12/20 09:09:45 wiz Exp $
 
 GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v1.2.1.mod
 GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v1.2.1.zip
