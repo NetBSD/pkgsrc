@@ -1,4 +1,4 @@
-# $NetBSD: modules.mk,v 1.1 2022/12/19 19:03:09 wiz Exp $
+# $NetBSD: go-modules.mk,v 1.1 2022/12/20 09:09:18 wiz Exp $
 
 GO_MODULE_FILES+=	4d63.com/gochecknoglobals/@v/v0.1.0.mod
 GO_MODULE_FILES+=	bazil.org/fuse/@v/v0.0.0-20160811212531-371fbbdaa898.mod

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/12/19 19:03:09 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2022/12/20 09:09:18 wiz Exp $
 
 DISTNAME=	syft-0.63.0
 CATEGORIES=	devel
@@ -18,6 +18,6 @@ post-install:
 	${RM} ${DESTDIR}${PREFIX}/bin/generate
 	${RM} ${DESTDIR}${PREFIX}/bin/json
 
-.include "modules.mk"
+.include "go-modules.mk"
 .include "../../lang/go/go-module.mk"
 .include "../../mk/bsd.pkg.mk"
