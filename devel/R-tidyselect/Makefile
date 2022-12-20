@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/12/18 05:01:02 mef Exp $
+# $NetBSD: Makefile,v 1.6 2022/12/20 21:58:50 mef Exp $
 
 R_PKGNAME=	tidyselect
 R_PKGVER=	1.2.0
@@ -8,11 +8,12 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Select from a set of strings
 LICENSE=	mit
 
+DEPENDS+=	R-ellipsis>=0.3.0:../../math/R-ellipsis
 DEPENDS+=	R-glue>=1.3.0:../../devel/R-glue
 DEPENDS+=	R-purrr>=0.3.2:../../devel/R-purrr
 DEPENDS+=	R-rlang>=0.4.6:../../devel/R-rlang
-DEPENDS+=	R-ellipsis>=0.3.0:../../math/R-ellipsis
 DEPENDS+=	R-vctrs>=0.2.2:../../math/R-vctrs
+DEPENDS+=	R-withr-[0-9]*:../../devel/R-withr
 
 TEST_DEPENDS+=	R-covr-[0-9]*:../../devel/R-covr
 TEST_DEPENDS+=	R-dplyr-[0-9]*:../../math/R-dplyr
