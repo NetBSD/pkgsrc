@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6301 2022/12/20 14:39:33 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.6302 2022/12/20 18:07:10 leot Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9425,3 +9425,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated geography/qgis to 3.28.2 [gdt 2022-12-19]
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2022Q4 branch [gdt 2022-12-20]
 	Updated x11/xdriinfo to 1.0.7 [wiz 2022-12-20]
+	Updated devel/conftest to 0.37.0 [leot 2022-12-20]
