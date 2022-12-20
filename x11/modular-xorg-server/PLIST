@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2022/07/15 20:39:49 wiz Exp $
+@comment $NetBSD: PLIST,v 1.32 2022/12/20 18:56:06 wiz Exp $
 bin/X
 bin/Xnest
 bin/Xorg
@@ -167,7 +167,6 @@ lib/pkgconfig/xorg-server.pc
 ${PLIST.dri}lib/xorg/modules/drivers/modesetting_drv.la
 ${PLIST.dri}lib/xorg/modules/extensions/libglx.la
 lib/xorg/modules/input/inputtest_drv.la
-lib/xorg/modules/input/inputtest_drv.so
 lib/xorg/modules/libexa.la
 lib/xorg/modules/libfbdevhw.la
 ${PLIST.dri}lib/xorg/modules/libglamoregl.la
