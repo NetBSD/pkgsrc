@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6305 2022/12/21 07:52:16 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.6306 2022/12/21 12:04:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9429,3 +9429,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/modular-xorg-server to 21.1.6 [wiz 2022-12-20]
 	Updated sysutils/memtester to 4.6.0 [schmonz 2022-12-20]
 	Updated www/curl to 7.87.0 [wiz 2022-12-21]
+	Removed lang/nhc98 [wiz 2022-12-21]
