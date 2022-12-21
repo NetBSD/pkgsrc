@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.668 2022/12/21 12:04:12 wiz Exp $
+# $NetBSD: Makefile,v 1.669 2022/12/21 14:09:17 wiz Exp $
 #
 
 COMMENT=	Programming languages
@@ -93,7 +93,6 @@ SUBDIR+=	ghc90
 SUBDIR+=	ghc92
 SUBDIR+=	gjs
 SUBDIR+=	gleam
-SUBDIR+=	gnat_util
 SUBDIR+=	gnucobol
 SUBDIR+=	go
 SUBDIR+=	go-bin
