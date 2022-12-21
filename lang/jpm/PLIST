@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/11/04 13:52:23 nia Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/12/21 13:13:36 wiz Exp $
 bin/jpm
 lib/janet/.manifests/jpm.jdn
 lib/janet/jpm/cc.janet
@@ -10,6 +10,7 @@ lib/janet/jpm/dagbuild.janet
 lib/janet/jpm/declare.janet
 lib/janet/jpm/default-config.janet
 lib/janet/jpm/init.janet
+lib/janet/jpm/make-config.janet
 lib/janet/jpm/pm.janet
 lib/janet/jpm/rules.janet
 lib/janet/jpm/shutil.janet
