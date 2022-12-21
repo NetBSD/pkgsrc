@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2021/12/08 16:05:35 adam Exp $
-#
+# $NetBSD: Makefile,v 1.14 2022/12/21 15:43:30 wiz Exp $
 
 DISTNAME=		open-axiom-1.4.1
 PKGNAME=		${DISTNAME:S/open-/open/}
@@ -21,6 +20,10 @@ BUILD_DEPENDS+=		noweb-[0-9]*:../../devel/noweb
 
 CONFIGURE_ENV=		HOST_AWK=${TOOLS_PLATFORM.awk:Q}
 BUILD_MAKE_FLAGS+=	TOOLS_PLATFORM.install=${TOOLS_PLATFORM.install:Q}
+
+# XXX: these files are not PIE
+CHECK_PIE_SKIP+=	lib/open-axiom/*/${PKGVERSION_NOREV}/bin/AXIOMsys
+CHECK_PIE_SKIP+=	lib/open-axiom/*/${PKGVERSION_NOREV}/bin/bootsys
 
 .include "options.mk"
 
