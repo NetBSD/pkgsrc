@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2022/11/30 11:48:41 pin Exp $
+# $NetBSD: Makefile,v 1.26 2022/12/21 22:17:08 pin Exp $
 
-# Please don't update to 0.72.0.
-# I have this ready to import but, it requires Rust-1.65 to build.
+# Don't update, newer versions require Rust >= 1.65 to build.
+# If you have at least Rust-1.65, you can find 0.73.0 in wip.
 DISTNAME=	nushell-0.71.0
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nushell/}
