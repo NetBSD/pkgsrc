@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2019/08/22 09:57:08 nia Exp $
+# $NetBSD: Makefile,v 1.4 2022/12/21 17:26:55 vins Exp $
 
 DISTNAME=	glw-8.0.0
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	https://mesa.freedesktop.org/archive/glw/
 EXTRACT_SUFX=	.tar.bz2
