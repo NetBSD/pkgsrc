@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6310 2022/12/21 14:20:02 pin Exp $
+$NetBSD: CHANGES-2022,v 1.6311 2022/12/21 14:21:18 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9434,3 +9434,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed multimedia/libva-driver-vdpau [wiz 2022-12-21]
 	Removed lang/gnat_util [wiz 2022-12-21]
 	Updated devel/difftastic to 0.39.0nb1 [pin 2022-12-21]
+	Updated graphics/oculante to 0.6.34 [pin 2022-12-21]
