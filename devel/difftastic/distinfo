@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2022/12/19 11:17:17 pin Exp $
+$NetBSD: distinfo,v 1.13 2022/12/21 14:19:42 pin Exp $
 
 BLAKE2s (aho-corasick-0.7.18.crate) = 8925e88e2df4b5ca3b31783f527e1bb31dbe27846f409f631148fa239f3b2935
 SHA512 (aho-corasick-0.7.18.crate) = 7a23b16231a90d23ee60ad4c81bc225410599a4560d33d3a203138fc540c39cf1000100fed3aed40dcc371c3635656a3792545dca5dd1aefbde00d8774eebd00
@@ -264,4 +264,5 @@ Size (windows_x86_64_msvc-0.36.1.crate) = 661999 bytes
 BLAKE2s (wu-diff-0.1.2.crate) = 6e1850ebdcf02e87b768685a99067acb0f7cf78b1bf0d5af66ed09813998176d
 SHA512 (wu-diff-0.1.2.crate) = 6d93c8854dba66f48f736db3f9e997d11d07a0fef3e13219716e553c0f5936f1d00468b88d9164329cfd195271aa242ec7dfd58560074f1a41e8558719ba5af0
 Size (wu-diff-0.1.2.crate) = 33439 bytes
-SHA1 (patch-Cargo.toml) = 6bfb3de0a43516060bf61e0c121237d85c3faa69
+SHA1 (patch-Cargo.toml) = cf269ba416aae2aa152b97e312b63ba6cedbb781
+SHA1 (patch-vendor_tree__magic__mini-3.0.3_src_fdo__magic_builtin_init.rs) = b57ed890c013a90cabfc6c0dc2ef919a1753e953
