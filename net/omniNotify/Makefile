@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/03/20 11:58:09 nia Exp $
+# $NetBSD: Makefile,v 1.7 2022/12/21 15:04:50 wiz Exp $
 #
 
 DISTNAME=	omniNotify-2.1
@@ -20,6 +20,10 @@ GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 MAKE_FILE=	GNUmakefile
+
+post-extract:
+	# avoid rebuilding file
+	${TOUCH} ${WRKSRC}/mkattlib/AttNotificationDynSK.cc
 
 .include "../../net/omniORB/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
