@@ -1,7 +1,7 @@
-$NetBSD: patch-Cargo.toml,v 1.1 2022/12/19 11:17:17 pin Exp $
+$NetBSD: patch-Cargo.toml,v 1.2 2022/12/21 14:19:42 pin Exp $
 
-Don't patch tree_magic_mini crate.
-Required changes have been merged upstream.
+Don't pull from a specific pull-request.
+Patch tree_magic_mini crate within pkgsrc.
 
 --- Cargo.toml.orig	2022-12-19 07:55:22.000000000 +0000
 +++ Cargo.toml
