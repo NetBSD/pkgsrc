@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6309 2022/12/21 14:09:17 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.6310 2022/12/21 14:20:02 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9433,3 +9433,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/jpm to 1.1.0 [wiz 2022-12-21]
 	Removed multimedia/libva-driver-vdpau [wiz 2022-12-21]
 	Removed lang/gnat_util [wiz 2022-12-21]
+	Updated devel/difftastic to 0.39.0nb1 [pin 2022-12-21]
