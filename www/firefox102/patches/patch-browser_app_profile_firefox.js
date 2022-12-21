@@ -1,11 +1,24 @@
-$NetBSD: patch-browser_app_profile_firefox.js,v 1.1 2022/07/21 23:56:39 nia Exp $
+$NetBSD: patch-browser_app_profile_firefox.js,v 1.2 2022/12/21 10:10:37 nia Exp $
 
 This patch modifies default Firefox settings - see the comments above
 each one.
 
---- browser/app/profile/firefox.js.orig	2022-04-28 23:01:46.000000000 +0000
+--- browser/app/profile/firefox.js.orig	2022-11-07 21:06:43.000000000 +0000
 +++ browser/app/profile/firefox.js
-@@ -2205,6 +2205,20 @@ pref("fission.frontend.simulate-messages
+@@ -2049,7 +2049,11 @@ pref("reader.pocket.ctaVersion", "");
+ 
+ pref("view_source.tab", true);
+ 
+-pref("dom.serviceWorkers.enabled", true);
++// On NetBSD, many web applications (e.g. Telegram, Mastodon, Twitter)
++// will freeze until the service worker is restarted in about:serviceworkers.
++// This is a workaround that makes most of these sites function.
++// The root cause of this should be investigated.
++pref("dom.serviceWorkers.enabled", false);
+ 
+ // Enable Push API.
+ pref("dom.push.enabled", true);
+@@ -2225,6 +2229,20 @@ pref("fission.frontend.simulate-messages
  pref("toolkit.coverage.enabled", false);
  pref("toolkit.coverage.endpoint.base", "https://coverage.mozilla.org");
  
