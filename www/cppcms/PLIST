@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/07/16 10:12:48 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/12/21 15:21:28 wiz Exp $
 bin/cppcms_config_find_param
 bin/cppcms_make_key
 bin/cppcms_run
@@ -19,6 +19,7 @@ include/booster/aio/stream_socket.h
 include/booster/aio/types.h
 include/booster/assert.h
 include/booster/atomic_counter.h
+include/booster/auto_ptr_inc.h
 include/booster/backtrace.h
 include/booster/bad_weak_ptr.h
 include/booster/build_config.h
@@ -52,6 +53,7 @@ include/booster/locale/encoding_utf.h
 include/booster/locale/format.h
 include/booster/locale/formatting.h
 include/booster/locale/generator.h
+include/booster/locale/generic_codecvt.h
 include/booster/locale/gnu_gettext.h
 include/booster/locale/hold_ptr.h
 include/booster/locale/info.h
@@ -59,6 +61,7 @@ include/booster/locale/localization_backend.h
 include/booster/locale/message.h
 include/booster/locale/time_zone.h
 include/booster/locale/utf.h
+include/booster/locale/utf8_codecvt.h
 include/booster/locale/util.h
 include/booster/log.h
 include/booster/noncopyable.h
@@ -83,6 +86,7 @@ include/booster/system_error.h
 include/booster/thread.h
 include/booster/traits/enable_if.h
 include/booster/traits/is_base_of.h
+include/booster/traits/type_traits.h
 include/booster/weak_ptr.h
 include/cppcms/application.h
 include/cppcms/applications_pool.h
@@ -93,6 +97,7 @@ include/cppcms/base_content.h
 include/cppcms/base_view.h
 include/cppcms/cache_interface.h
 include/cppcms/cache_pool.h
+include/cppcms/capi/session.h
 include/cppcms/config.h
 include/cppcms/copy_filter.h
 include/cppcms/cppcms_error.h
@@ -103,6 +108,7 @@ include/cppcms/encoding.h
 include/cppcms/filters.h
 include/cppcms/form.h
 include/cppcms/forwarder.h
+include/cppcms/http_content_filter.h
 include/cppcms/http_content_type.h
 include/cppcms/http_context.h
 include/cppcms/http_cookie.h
@@ -114,6 +120,7 @@ include/cppcms/locale_fwd.h
 include/cppcms/localization.h
 include/cppcms/mem_bind.h
 include/cppcms/mount_point.h
+include/cppcms/plugin.h
 include/cppcms/rpc_json.h
 include/cppcms/serialization.h
 include/cppcms/serialization_classes.h
@@ -138,7 +145,7 @@ include/cppcms/xss.h
 lib/libbooster.a
 lib/libbooster.so
 lib/libbooster.so.0
-lib/libbooster.so.0.0.2
+lib/libbooster.so.0.2.0
 lib/libcppcms.a
 lib/libcppcms.so
 lib/libcppcms.so.1
