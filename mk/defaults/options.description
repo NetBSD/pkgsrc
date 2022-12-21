@@ -4,6 +4,7 @@ acl			Enable POSIX ACL support.
 adobe-cidfonts		Select Adobe-fonts.
 adplug			Enable Adlib emulator support.
 ads			Enable Windows Active Directory support.
+aften			Enable A/52-based audio encoder support using Aften.
 afterstep		Enable afterstep support.
 agg			Enable agg support.
 alsa			Enable ALSA support.
@@ -28,6 +29,7 @@ anope-dbencryption	Enable database encryption.
 anthy			Use Anthy as Japanese conversion program.
 anthy-2ch-dict		Include the 2ch dictionary.
 anthy-okinawa-dict	Include the okinawa dictionary.
+aom			Enable AV1 support using libaom.
 ap-php			Use PHP via Apache module.
 apache			Enable support for Apache web server.
 apache-managed-domain-handling	Enable managing domains and ACME support in Apache web server.
@@ -98,6 +100,7 @@ chromaprint		Enable chromaprint (audio fingerprinting) support.
 cjk			Enable Chinese/Japanese/Korean support.
 clamav			Enable ClamAV support.
 claws-mail-jpilot	Add jpilot support.
+cli			Enable Command Line Interface support.
 clisp			Common/C Lisp.
 clutter			Use Clutter for graphics support.
 cmdliner		Enable cmdliner support.
@@ -127,6 +130,7 @@ dante                   Enable Dante support.
 dar-int32		Use 32-bit integers for file lengths in Dar.
 dar-int64		Use 64-bit integers for file lengths in Dar.
 darwin			Build and/or run on Darwin and Mac OS X.
+dca			Enable DTS Coherent Acoustics support using libdca.
 db2			Enable db2 support.
 db4			Enable db4 support.
 dbh			Enable DBH support.
