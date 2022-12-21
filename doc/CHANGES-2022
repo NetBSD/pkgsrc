@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6315 2022/12/21 17:08:59 triaxx Exp $
+$NetBSD: CHANGES-2022,v 1.6316 2022/12/21 17:28:16 vins Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9439,3 +9439,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/minitube to 3.9.3 [wiz 2022-12-21]
 	Updated www/cppcms to 1.2.1 [wiz 2022-12-21]
 	Updated audio/musicpd to 0.23.11nb1 [triaxx 2022-12-21]
+	Updated graphics/glw to 8.0.0nb1 [vins 2022-12-21]
