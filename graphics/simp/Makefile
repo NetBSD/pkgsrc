@@ -1,5 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2022/10/09 19:20:27 pin Exp $
+# $NetBSD: Makefile,v 1.4 2022/12/21 22:18:39 pin Exp $
 
+# Don't update, newer versions require Rust >= 1.65 to build.
+# I have 3.3.1 locally, please ask if have Rust > 1.65.
 DISTNAME=	simp-3.2.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Kl4rry/}
