@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2022/11/23 16:21:18 adam Exp $
+# $NetBSD: Makefile,v 1.35 2022/12/21 15:21:28 wiz Exp $
 
-DISTNAME=	cppcms-1.0.4
-PKGREVISION=	29
+DISTNAME=	cppcms-1.2.1
 CATEGORIES=	www devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cppcms/}
 EXTRACT_SUFX=	.tar.bz2
@@ -9,10 +8,12 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://cppcms.com/
 COMMENT=	High performance C++ web development framework
-LICENSE=	gnu-lgpl-v3
+LICENSE=	mit
 
 USE_LANGUAGES=	c gnu++11
 USE_CMAKE=	yes
+
+PYTHON_VERSIONS_ACCEPTED=	27
 
 CMAKE_ARGS+=	-DPYTHON=${PYTHONBIN} -DDISABLE_GCRYPT=yes
 
