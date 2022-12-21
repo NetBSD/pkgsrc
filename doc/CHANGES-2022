@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6306 2022/12/21 12:04:12 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.6307 2022/12/21 13:13:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9430,3 +9430,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/memtester to 4.6.0 [schmonz 2022-12-20]
 	Updated www/curl to 7.87.0 [wiz 2022-12-21]
 	Removed lang/nhc98 [wiz 2022-12-21]
+	Updated lang/jpm to 1.1.0 [wiz 2022-12-21]
