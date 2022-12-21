@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2022/09/23 12:22:39 nia Exp $
+$NetBSD: patch-aa,v 1.4 2022/12/21 13:19:30 wiz Exp $
 
 --- makefile.orig	2000-06-17 15:30:36.000000000 +0000
 +++ makefile
-@@ -1,22 +1,26 @@
+@@ -1,22 +1,29 @@
  # MAKEFILE FOR LIBOE AND OE2MBX
  # Read README for info
  
@@ -27,6 +27,9 @@ $NetBSD: patch-aa,v 1.3 2022/09/23 12:22:39 nia Exp $
 +
 +src/oe2mbx.o : src/oe2mbx.c
 +	$(CC) $(CFLAGS) -c src/oe2mbx.c -o src/oe2mbx.o
++
++src/liboe.o : src/liboe.c
++	$(CC) $(CFLAGS) -c src/liboe.c -o src/liboe.o	
 +
  lib/liboe.o : src/liboe.c
 -	gcc -c src/liboe.c -o lib/liboe.o	
