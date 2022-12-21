@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6316 2022/12/21 17:28:16 vins Exp $
+$NetBSD: CHANGES-2022,v 1.6317 2022/12/21 19:25:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9440,3 +9440,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/cppcms to 1.2.1 [wiz 2022-12-21]
 	Updated audio/musicpd to 0.23.11nb1 [triaxx 2022-12-21]
 	Updated graphics/glw to 8.0.0nb1 [vins 2022-12-21]
+	Updated fonts/tex-tex-gyre to 2.501nb2 [wiz 2022-12-21]
