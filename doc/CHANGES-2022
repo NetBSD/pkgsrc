@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6313 2022/12/21 14:58:24 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.6314 2022/12/21 15:21:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9437,3 +9437,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/oculante to 0.6.34 [pin 2022-12-21]
 	Removed misc/ini_file_manager [wiz 2022-12-21]
 	Updated net/minitube to 3.9.3 [wiz 2022-12-21]
+	Updated www/cppcms to 1.2.1 [wiz 2022-12-21]
