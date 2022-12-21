@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2022/09/25 12:24:54 schmonz Exp $
+# $NetBSD: Makefile.common,v 1.18 2022/12/21 15:29:10 wiz Exp $
 # used by textproc/csharp-xapian/Makefile
 # used by textproc/lua-xapian/Makefile
 # used by textproc/p5-Xapian/Makefile
@@ -9,6 +9,7 @@
 # used by textproc/xapian/Makefile
 # used by textproc/xapian-omega/Makefile
 
+# NOTE: when updating this, please update the hash in csharp-xapian's PLIST too!
 VERSION=		1.4.21
 CATEGORIES=		textproc
 MASTER_SITES=		http://oligarchy.co.uk/xapian/${VERSION}/
