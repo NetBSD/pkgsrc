@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6321 2022/12/22 06:27:20 vins Exp $
+$NetBSD: CHANGES-2022,v 1.6322 2022/12/22 09:34:59 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9445,3 +9445,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/hoe to 4.0.1nb1 [taca 2022-12-22]
 	Updated net/ruby-stompserver to 1.0.0nb3 [taca 2022-12-22]
 	Updated graphics/glw to 8.0.0nb2 [vins 2022-12-22]
+	Updated editors/tp-note to 1.19.11 [pin 2022-12-22]
