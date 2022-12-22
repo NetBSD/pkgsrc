@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6318 2022/12/21 20:49:30 kim Exp $
+$NetBSD: CHANGES-2022,v 1.6319 2022/12/22 01:48:13 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9442,3 +9442,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/glw to 8.0.0nb1 [vins 2022-12-21]
 	Updated fonts/tex-tex-gyre to 2.501nb2 [wiz 2022-12-21]
 	Updated shells/tcsh to 6.24.07 [kim 2022-12-21]
+	Updated devel/hoe to 4.0.1nb1 [taca 2022-12-22]
