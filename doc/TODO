@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22421 2022/12/21 19:25:06 wiz Exp $
+$NetBSD: TODO,v 1.22422 2022/12/22 13:28:07 wiz Exp $
 
 Suggested new packages
 ======================
@@ -420,6 +420,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o alevt-1.6.2
 	o alsa-lib-1.2.8
 	o alsa-plugins-1.1.0
+	o amanda-3.5.2
 	o amass-3.12.2
 	o amavis-perl-0.3.12 [called just amavis]
 	o ampache-4.2.5

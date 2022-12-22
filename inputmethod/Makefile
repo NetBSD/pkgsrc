@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.120 2021/03/06 05:09:17 ryoon Exp $
+# $NetBSD: Makefile,v 1.121 2022/12/22 13:28:07 wiz Exp $
 #
 
 COMMENT=	Input method tools and libraries
@@ -163,7 +163,6 @@ SUBDIR+=	tomoe
 SUBDIR+=	tomoe-gtk
 SUBDIR+=	uim
 SUBDIR+=	uim-chewing
-SUBDIR+=	uim-elisp
 SUBDIR+=	uim-mozc
 SUBDIR+=	uim-tomoe-gtk
 SUBDIR+=	unicon-im
