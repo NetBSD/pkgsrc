@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2022/12/09 09:48:28 vins Exp $
+$NetBSD: distinfo,v 1.3 2022/12/22 15:13:15 vins Exp $
 
 BLAKE2s (xosview2-2.3.3.tar.gz) = 22fdc2112c21a56e443126a85fd2f37e57aad2ef8aafac8117d70435f9e40599
 SHA512 (xosview2-2.3.3.tar.gz) = ea3afa310816a970c975387eb8644f5ed4a160ef990d01f8abc518d11997b3189cefcdb448cfbb0bb6f31fab6b8ed7e2205bde2a5a8fbe386bb3aa444b11e5bc
 Size (xosview2-2.3.3.tar.gz) = 402330 bytes
+SHA1 (patch-bsd_intrstats.h) = d1e332351f479bc7398c30e2dd1a9a3ff5542d89
