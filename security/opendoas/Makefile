@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/07/04 08:25:58 pin Exp $
+# $NetBSD: Makefile,v 1.6 2022/12/22 09:24:38 vins Exp $
 
 DISTNAME=	opendoas-6.8.2
 CATEGORIES=	security
@@ -32,8 +32,12 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/${EGDIR}
-.if ${OPSYS} == "Linux" && !exists(/usr/include/security/pam_appl.h)
+
+.if ${OPSYS} == "Linux"
+.include "options.mk"
+.  if !exists(/usr/include/security/pam_appl.h)
 CONFIGURE_ARGS+=	--without-pam
+.  endif
 .endif
 
 USE_TOOLS=	gmake yacc
