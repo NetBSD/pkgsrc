@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6323 2022/12/22 13:28:07 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.6324 2022/12/22 13:40:20 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9447,3 +9447,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/glw to 8.0.0nb2 [vins 2022-12-22]
 	Updated editors/tp-note to 1.19.11 [pin 2022-12-22]
 	Removed inputmethod/uim-elisp [wiz 2022-12-22]
+	Updated sysutils/etckeeper to 1.18.18 [schmonz 2022-12-22]
