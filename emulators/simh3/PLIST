@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2022/12/12 19:50:01 rhialto Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/12/22 16:26:09 rhialto Exp $
 bin/simh3-altair
 bin/simh3-eclipse
 bin/simh3-gri
@@ -36,7 +36,6 @@ share/doc/simh3/readme_s3.txt
 share/doc/simh3/sds_diag.txt
 share/doc/simh3/sigma_bugs.txt
 share/doc/simh3/sigma_disks.txt
-share/doc/simh3/sigma_dp_diff.txt
 share/doc/simh3/system3.txt
 share/doc/simh3/vax780_bug_history.txt
 share/simh3/ka655x.bin

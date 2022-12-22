@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2022/12/13 14:01:27 jperkin Exp $
+# $NetBSD: Makefile,v 1.6 2022/12/22 16:26:09 rhialto Exp $
 
 DISTNAME=	simhv312-3
 PKGNAME=	simh3-3.12.3
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	http://simh.trailing-edge.com/sources/
+DIST_SUBDIR=	${PKGNAME_NOREV}nb1
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
