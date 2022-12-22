@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.26 2022/12/22 13:17:20 schmonz Exp $
+# $NetBSD: Makefile,v 1.27 2022/12/22 13:40:09 schmonz Exp $
 #
 
-DISTNAME=		etckeeper_1.18.16.orig
+DISTNAME=		etckeeper_1.18.18.orig
 PKGNAME=		${DISTNAME:S/_/-/:S/.orig$//}
-PKGREVISION=		2
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_DEBIAN:=pool/main/e/etckeeper/}
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
+MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		https://etckeeper.branchable.com/
 COMMENT=		Store /etc in git, mercurial, bzr or darcs
 LICENSE=		gnu-gpl-v2
@@ -24,9 +23,9 @@ BUILD_DEFS+=		VARBASE
 .include "cf-files.mk"
 
 PKG_SYSCONFSUBDIR=	etckeeper
-OWN_DIRS+=		${VARBASE}/cache/etckeeper
-OWN_DIRS+=		${PKG_SYSCONFDIR}
-OWN_DIRS+=		${CF_FILES:H:O:u:S@^@${PKG_SYSCONFDIR}/@}
+MAKE_DIRS+=		${VARBASE}/cache/etckeeper
+MAKE_DIRS+=		${PKG_SYSCONFDIR}
+MAKE_DIRS+=		${CF_FILES:H:O:u:S@^@${PKG_SYSCONFDIR}/@}
 
 EGDIR=			${PREFIX}/share/examples/etckeeper
 
@@ -65,7 +64,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/README.md \
 			${DESTDIR}${PREFIX}/share/doc/etckeeper/README.md
 	${INSTALL_DATA} ${WRKSRC}/bash_completion \
-			${DESTDIR}${PREFIX}/share/bash-completion.d/etckeeper
+			${DESTDIR}${PREFIX}/share/bash-completion/completions/etckeeper
 	${INSTALL_DATA} ${WRKSRC}/zsh_completion \
 			${DESTDIR}${PREFIX}/share/zsh/site-functions/_etckeeper
 
