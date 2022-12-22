@@ -1,4 +1,4 @@
-# $NetBSD: atomic64.mk,v 1.7 2022/11/15 17:14:48 he Exp $
+# $NetBSD: atomic64.mk,v 1.8 2022/12/22 10:52:52 he Exp $
 #
 # This Makefile fragment is included by packages that require 64-bit atomic
 # operations, and will attempt to set the appropriate architecture-specific
@@ -21,7 +21,8 @@ CFLAGS+=	-march=i586
     ${MACHINE_ARCH} == "mipseb" || \
     ${MACHINE_ARCH} == "powerpc" || \
     ${MACHINE_ARCH} == "sparc" || \
-    ${MACHINE_ARCH} == "vax"
+    ${MACHINE_ARCH} == "vax" || \
+    !empty(MACHINE_ARCH:Mearm*)
 .  include "../../devel/libatomic/buildlink3.mk"
 .endif
 
