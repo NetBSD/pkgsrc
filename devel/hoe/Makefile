@@ -1,12 +1,16 @@
-# $NetBSD: Makefile,v 1.61 2022/12/18 13:53:02 taca Exp $
+# $NetBSD: Makefile,v 1.62 2022/12/22 01:47:47 taca Exp $
 
 DISTNAME=	hoe-4.0.1
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://www.zenspider.com/projects/hoe.html
 COMMENT=	Rake extension to provide full project automation
 LICENSE=	mit
+
+# hoe implictly assumes minitest 5.16 and later is available.
+DEPENDS+=	${RUBY_PKGPREFIX}-minitest>=5.16:../../devel/ruby-minitest
 
 USE_LANGUAGES=	# empty
 
