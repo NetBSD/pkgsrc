@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.7 2022/01/04 15:22:53 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.8 2022/12/22 13:40:09 schmonz Exp $
 bin/etckeeper
 man/man8/etckeeper.8
-share/bash-completion.d/etckeeper
+share/bash-completion/completions/etckeeper
 share/doc/etckeeper/README.md
 share/examples/etckeeper/commit.d/10vcs-test
 share/examples/etckeeper/commit.d/20store-metadata
