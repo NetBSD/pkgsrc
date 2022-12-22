@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.18 2022/12/19 09:36:44 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.19 2022/12/22 09:34:32 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.19.0
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
@@ -225,7 +225,7 @@ CARGO_CRATE_DEPENDS+=	time-macros-0.2.6
 CARGO_CRATE_DEPENDS+=	tinyvec-1.6.0
 CARGO_CRATE_DEPENDS+=	tinyvec_macros-0.1.0
 CARGO_CRATE_DEPENDS+=	toml-0.5.10
-CARGO_CRATE_DEPENDS+=	tpnote-lib-0.15.1
+CARGO_CRATE_DEPENDS+=	tpnote-lib-0.15.3
 CARGO_CRATE_DEPENDS+=	typenum-1.16.0
 CARGO_CRATE_DEPENDS+=	ucd-trie-0.1.5
 CARGO_CRATE_DEPENDS+=	uncased-0.9.7
