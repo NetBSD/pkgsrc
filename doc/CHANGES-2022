@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6324 2022/12/22 13:40:20 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.6325 2022/12/22 15:22:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9448,3 +9448,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated editors/tp-note to 1.19.11 [pin 2022-12-22]
 	Removed inputmethod/uim-elisp [wiz 2022-12-22]
 	Updated sysutils/etckeeper to 1.18.18 [schmonz 2022-12-22]
+	Updated cad/fastcap to 2.0.19920918nb4 [wiz 2022-12-22]
