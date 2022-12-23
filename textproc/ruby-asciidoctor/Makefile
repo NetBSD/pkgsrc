@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2022/12/18 14:55:22 taca Exp $
+# $NetBSD: Makefile,v 1.10 2022/12/23 13:33:20 taca Exp $
 
 DISTNAME=	asciidoctor-2.0.18
 PKGREVISION=	1
@@ -12,10 +12,7 @@ LICENSE=	mit
 USE_LANGUAGES=	# none
 
 RUBYGEM_OPTIONS+=	--format-executable
-
-.include "../../mk/bsd.prefs.mk"
-
-RUBYGEM_MANPAGES?=	yes
+RUBYGEM_MANPAGES=	yes
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
