@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.17 2022/12/15 11:31:44 nia Exp $
+$NetBSD: distinfo,v 1.18 2022/12/23 12:20:47 nia Exp $
 
 BLAKE2s (mgba-0.10.0.tar.gz) = f04dd3389ee4e9df3fa577b3c071d3a47262fb6727fbc7340e9bf100b58a424f
 SHA512 (mgba-0.10.0.tar.gz) = 05939f94bc00906d999b955091e8e8059cc13a5b822048f6e002062c2e74069337d947d2cde2f8c1be96e3353a361743d752811c214fa9da31ed6a4893b4d7e8
 Size (mgba-0.10.0.tar.gz) = 14302653 bytes
 SHA1 (patch-src_platform_qt_CMakeLists.txt) = 052c533d8df271eb623efec1ec6639da4bea1983
 SHA1 (patch-src_platform_qt_ConfigController.cpp) = 45b5a0aac879905a1471c172c5f23bef9ab33723
+SHA1 (patch-src_script_socket.c) = eca5406afe566ef01f84d35c9db01f3307646644
