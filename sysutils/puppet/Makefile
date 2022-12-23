@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2022/12/18 15:00:31 taca Exp $
+# $NetBSD: Makefile,v 1.59 2022/12/23 13:32:44 taca Exp $
 
 DISTNAME=		puppet-7.21.0
 CATEGORIES=		sysutils
@@ -20,6 +20,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-deep_merge>=1.0<2:../../devel/ruby-deep_merge
 DEPENDS+=	${RUBY_PKGPREFIX}-scanf>=1.0.0<2:../../devel/ruby-scanf
 
 RUBYGEM_OPTIONS+=	--format-executable
+RUBYGEM_MANPAGES=	yes
 USE_LANGUAGES=		# none
 
 PKG_SYSCONFSUBDIR=	puppet
@@ -88,7 +89,6 @@ INSTALLATION_DIRS+=	${EGDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
-RUBYGEM_MANPAGES?=	yes
 #PUPPET_GROUP?=		puppet
 #PUPPET_USER?=		puppet
 
