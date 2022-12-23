@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6334 2022/12/23 13:36:08 taca Exp $
+$NetBSD: CHANGES-2022,v 1.6335 2022/12/23 13:39:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9458,3 +9458,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated inputmethod/ibus-table-chinese to 1.8.12 [wiz 2022-12-23]
 	Updated textproc/ruby-bluecloth to 2.2.0nb2 [taca 2022-12-23]
 	Updated textproc/ruby-kramdown to 2.4.0nb1 [taca 2022-12-23]
+	Updated textproc/ruby-rdiscount to 2.2.7 [taca 2022-12-23]
