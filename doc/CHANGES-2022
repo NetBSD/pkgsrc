@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6336 2022/12/23 13:39:57 taca Exp $
+$NetBSD: CHANGES-2022,v 1.6337 2022/12/23 13:48:02 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9460,3 +9460,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/ruby-kramdown to 2.4.0nb1 [taca 2022-12-23]
 	Updated textproc/ruby-rdiscount to 2.2.7 [taca 2022-12-23]
 	Updated www/ruby-unicorn to 6.1.0nb1 [taca 2022-12-23]
+	Updated www/geeklog to 2.2.2 [taca 2022-12-23]
