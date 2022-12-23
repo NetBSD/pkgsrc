@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2022/09/22 09:39:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/12/23 13:33:43 wiz Exp $
 share/doc/ibus-table-chinese/AUTHORS
 share/doc/ibus-table-chinese/COPYING
 share/doc/ibus-table-chinese/ChangeLog
@@ -6,24 +6,31 @@ share/doc/ibus-table-chinese/README
 share/ibus-table/icons/array30-big.png
 share/ibus-table/icons/array30.png
 share/ibus-table/icons/cangjie-big.png
+share/ibus-table/icons/cangjie-big.svg
 share/ibus-table/icons/cangjie3.svg
 share/ibus-table/icons/cangjie5.svg
 share/ibus-table/icons/cantonese.png
+share/ibus-table/icons/cantonese.svg
 share/ibus-table/icons/cantonhk.png
 share/ibus-table/icons/cantonyale.png
+share/ibus-table/icons/cantonyale.svg
 share/ibus-table/icons/easy-big.png
 share/ibus-table/icons/erbi-qs.svg
 share/ibus-table/icons/erbi.png
 share/ibus-table/icons/jyutping.png
 share/ibus-table/icons/quick-classic.png
+share/ibus-table/icons/quick-classic.svg
 share/ibus-table/icons/quick3.png
 share/ibus-table/icons/quick5.png
 share/ibus-table/icons/scj6.svg
 share/ibus-table/icons/stroke5.png
+share/ibus-table/icons/stroke5.svg
 share/ibus-table/icons/wu.png
+share/ibus-table/icons/wu.svg
 share/ibus-table/icons/wubi-haifeng86.svg
 share/ibus-table/icons/wubi-jidian86.svg
 share/ibus-table/icons/yong.png
+share/ibus-table/icons/yong.svg
 share/ibus-table/tables/array30-big.db
 share/ibus-table/tables/array30.db
 share/ibus-table/tables/cangjie-big.db
