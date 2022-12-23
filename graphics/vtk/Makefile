@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2022/11/27 13:55:50 gdt Exp $
+# $NetBSD: Makefile,v 1.29 2022/12/23 13:38:34 wiz Exp $
 
 DISTNAME=	VTK-9.0.3
 PKGNAME=	${DISTNAME:tl}
@@ -38,6 +38,8 @@ CMAKE_ARGS+=	-DVTK_MODULE_ENABLE_VTK_RenderingContextOpenGL2=YES
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/build/lib
 
 PLIST_VARS+=	cocoa opengl
+
+CHECK_PORTABILITY_SKIP+=	Examples/Build/vtkMy/Utilities/Doxygen/doc_makeall.sh.in
 
 .include "../../mk/bsd.prefs.mk"
 
