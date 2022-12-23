@@ -1,9 +1,9 @@
-$NetBSD: patch-gfx_skia_skia_src_core_SkVM.cpp,v 1.2 2022/07/20 21:41:39 nia Exp $
+$NetBSD: patch-gfx_skia_skia_src_core_SkVM.cpp,v 1.3 2022/12/23 12:35:05 nia Exp $
 
 Work with PaX MPROTECT on NetBSD by stating that we will later make this memory
 block executable.
 
---- gfx/skia/skia/src/core/SkVM.cpp.orig	2022-07-05 12:21:05.000000000 +0000
+--- gfx/skia/skia/src/core/SkVM.cpp.orig	2022-11-28 16:47:38.000000000 +0000
 +++ gfx/skia/skia/src/core/SkVM.cpp
 @@ -2076,7 +2076,11 @@ namespace skvm {
          // Allocate space that we can remap as executable.
