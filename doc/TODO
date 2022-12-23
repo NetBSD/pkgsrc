@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22422 2022/12/22 13:28:07 wiz Exp $
+$NetBSD: TODO,v 1.22423 2022/12/23 10:05:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1136,7 +1136,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o p5-Math-Matrix-0.94
 	o p5-Module-Path-0.33
 	o p5-MooseX-Types-DateTime-0.16
-	o p5-Net-Curl-0.48
+	o p5-Net-Curl-0.52
 	o p5-Net-INET6Glue-0.604
 	o p5-Net-Jabber-2.1.7
 	o p5-Parse-PMFile-0.43
