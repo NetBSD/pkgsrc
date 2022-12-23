@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: gerbera.sh,v 1.1 2022/02/08 06:26:49 khorben Exp $
+# $NetBSD: gerbera.sh,v 1.2 2022/12/23 21:44:20 gutteridge Exp $
 #
 
 # PROVIDE: gerbera
@@ -11,11 +11,10 @@ $_rc_subr_loaded . @SYSCONFBASE@/rc.subr
 name="gerbera"
 rcvar=$name
 load_rc_config_var gerbera_username gerbera_username
-load_rc_config_var gerbera_groupname gerbera_groupname
 command="@PREFIX@/bin/gerbera"
 logfile="@VARBASE@/log/${name}.log"
 pidfile="@PKG_HOME@/${name}.pid"
-command_args="-u ${gerbera_username:-@GERBERA_USER@} -g ${gerbera_groupname:-@GERBERA_USER@} -m @PKG_HOME@ -P ${pidfile} -l ${logfile} -c @PKG_SYSCONFDIR@/config.xml"
+command_args="-u ${gerbera_username:-@GERBERA_USER@} -m @PKG_HOME@ -P ${pidfile} -l ${logfile} -c @PKG_SYSCONFDIR@/config.xml"
 
 if [ -f @SYSCONFBASE@/rc.subr ]; then
 	load_rc_config $name
