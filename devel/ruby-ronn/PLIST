@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2021/03/28 10:05:55 nia Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/12/23 13:30:41 taca Exp $
 bin/ronn${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/AUTHORS
@@ -68,5 +68,5 @@ ${GEM_LIBDIR}/test/titleless_document.ronn
 ${GEM_LIBDIR}/test/underline_spacing_test.roff
 ${GEM_LIBDIR}/test/underline_spacing_test.ronn
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
-man/man1/ronn${RUBY_SUFFIX}.1
-man/man7/ronn-format${RUBY_SUFFIX}.7
+${PLIST.rubygem_man}man/man1/ronn.1
+${PLIST.rubygem_man}man/man7/ronn-format.7
