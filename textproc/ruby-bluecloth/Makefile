@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2021/06/02 15:51:21 taca Exp $
+# $NetBSD: Makefile,v 1.13 2022/12/23 13:34:52 taca Exp $
 
 DISTNAME=	bluecloth-2.2.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -12,6 +12,7 @@ LICENSE=	original-bsd
 USE_GCC_RUNTIME=	yes
 
 RUBYGEM_OPTIONS+=	--format-executable
+RUBYGEM_MANPAGES=	yes
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
