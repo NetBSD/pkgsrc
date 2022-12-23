@@ -1,6 +1,7 @@
-$NetBSD: patch-core_http__req.c,v 1.1 2022/12/23 12:40:04 wiz Exp $
+$NetBSD: patch-core_http__req.c,v 1.2 2022/12/23 12:42:09 wiz Exp $
 
 core/http_req.c:55:2: error: 'CURLOPT_PROTOCOLS' is deprecated: since 7.85.0. Use CURLOPT_PROTOCOLS_STR
+https://github.com/rmind/rvault/pull/64
 
 --- core/http_req.c.orig	2020-04-22 16:11:18.000000000 +0000
 +++ core/http_req.c
