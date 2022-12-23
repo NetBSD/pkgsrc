@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2022/09/22 09:39:25 adam Exp $
+# $NetBSD: Makefile,v 1.17 2022/12/23 13:33:43 wiz Exp $
 
-DISTNAME=	ibus-table-chinese-1.8.3
+DISTNAME=	ibus-table-chinese-1.8.12
 CATEGORIES=	inputmethod chinese
-MASTER_SITES=	${MASTER_SITE_GITHUB:=definite/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=mike-fabian/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -13,19 +13,7 @@ LICENSE=	gnu-gpl-v3
 USE_CMAKE=	yes
 USE_LANGUAGES=	# none
 USE_TOOLS+=	pkg-config
-
-BUILD_DEPENDS+=	cmake-fedora>=2.0:../../devel/cmake-fedora
-
-# iconv: unexpected end of file; the last character is incomplete.
-MAKE_JOBS_SAFE=	no
-
-.include "../../mk/bsd.prefs.mk"
-
-# Illegal byte sequence in array30_ExtB.txt
-.if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 050000
-BUILD_DEPENDS+=		libiconv-[0-9]*:../../converters/libiconv
-CMAKE_ARGS+=		-DICONV_CMD:PATH=${LOCALBASE}/bin/iconv
-.endif
+CMAKE_ARGS+=	-DDATA_DIR=${PREFIX}/share
 
 .include "../../inputmethod/ibus-table/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
