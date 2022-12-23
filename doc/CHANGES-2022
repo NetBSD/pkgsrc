@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6330 2022/12/23 13:28:22 taca Exp $
+$NetBSD: CHANGES-2022,v 1.6331 2022/12/23 13:31:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9454,3 +9454,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/syft to 0.63.0nb1 [wiz 2022-12-23]
 	Updated fonts/noto-fonts to 20221206 [nikita 2022-12-23]
 	Updated devel/ruby-mustache to 1.1.1nb1 [taca 2022-12-23]
+	Updated devel/ruby-ronn to 0.7.3nb3 [taca 2022-12-23]
