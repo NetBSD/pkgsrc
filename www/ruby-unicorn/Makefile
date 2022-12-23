@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2022/08/31 16:01:30 taca Exp $
+# $NetBSD: Makefile,v 1.21 2022/12/23 13:39:38 taca Exp $
 
 DISTNAME=	unicorn-6.1.0
+PKGREVISION=	1
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -13,6 +14,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-raindrops>=0.7<1:../../www/ruby-raindrops
 
 USE_GCC_RUNTIME=	yes
 RUBYGEM_OPTIONS+=	--format-executable
+RUBYGEM_MANPAGES=	yes
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
