@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2020/09/14 15:05:28 taca Exp $
+# $NetBSD: Makefile,v 1.4 2022/12/23 13:38:46 taca Exp $
 
-DISTNAME=		rdiscount-2.2.0.2
+DISTNAME=		rdiscount-2.2.7
 PKGNAME=		${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=		textproc
 
@@ -10,11 +10,9 @@ COMMENT=		Converts documents in Markdown syntax to HTML
 LICENSE=		modified-bsd
 
 RUBYGEM_OPTIONS+=	--format-executable
+RUBYGEM_MANPAGES=	yes
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
-
-post-install:
-	${LN} -sf ${PREFIX}/${GEM_LIBDIR}/man/rdiscount.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/${RUBY_PKGPREFIX}-rdiscount.1
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
