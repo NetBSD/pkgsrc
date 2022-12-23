@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.27 2021/10/26 11:29:28 nia Exp $
+$NetBSD: distinfo,v 1.28 2022/12/23 13:47:42 taca Exp $
 
-BLAKE2s (geeklog-2.1.1.tar.gz) = 5b4bc9361a88a6a0bd835ef091482b82a4f2bbf0600d5338f6bacdd5e83a4251
-SHA512 (geeklog-2.1.1.tar.gz) = 57ad03901706c3cdfeed941284d02441007956ce2d21afe916e49ccadffee532959ce3846a9ef41d4d93d8880b68cb1c42d74f1ec0e126c8fe43e2989f0d6ee8
-Size (geeklog-2.1.1.tar.gz) = 11801336 bytes
-SHA1 (patch-aa) = 61cc381e4c3def555806ed4589446f466f6f8368
-SHA1 (patch-ak) = 387f14ace88c0390a2647453a08491500b099c78
+BLAKE2s (geeklog-2.2.2.tar.gz) = 515caaa8ac1de1ff496d4058ef3d10aa07b4fbdca7f64cda6216de2f65d902c4
+SHA512 (geeklog-2.2.2.tar.gz) = 8d6729c108229af6e2c618f2b96c16fe66d8b95866848b816ff3308781839e54096203474ab1b327be7edf29995e536dcac0340aa6871fcc40dc8065c36ddef9
+Size (geeklog-2.2.2.tar.gz) = 16978448 bytes
+SHA1 (patch-cron-emailgeeklogdailydigest) = 344485a1785be9d6ff76a0c1dda296cbebc357db
+SHA1 (patch-cron-emailgeeklogdatabasebackup) = bda0d97c743f9ae0ac083067d29d34584883aeb9
+SHA1 (patch-public__html_admin_install_configinfo.php) = 538ebe11858dbd1845e8b1d8fac49c0093fd40be

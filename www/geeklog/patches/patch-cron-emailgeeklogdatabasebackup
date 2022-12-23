@@ -1,0 +1,12 @@
+$NetBSD: patch-cron-emailgeeklogdatabasebackup,v 1.1 2022/12/23 13:47:42 taca Exp $
+
+* Output Content-Type header explicitly.
+
+--- cron-emailgeeklogdatabasebackup.orig	2022-09-27 15:13:12.000000000 +0000
++++ cron-emailgeeklogdatabasebackup
+@@ -1,4 +1,4 @@
+-#!/usr/local/bin/php -q 
++#!@PREFIX@/bin/php -q
+ <?php
+ // This code snippet is responsible for emailing a backup of the Geeklog 
+ // database to a specified email address. Configuration options can be 
