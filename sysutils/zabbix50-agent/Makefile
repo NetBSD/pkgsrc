@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2022/11/23 16:21:10 adam Exp $
+# $NetBSD: Makefile,v 1.12 2022/12/23 11:03:13 wiz Exp $
 
 PKGREVISION= 4
 .include "../../sysutils/zabbix50-server/Makefile.common"
@@ -17,6 +17,9 @@ CONFIGURE_ARGS+=	--datarootdir=${PREFIX}/share/${PKGBASE}
 CONFIGURE_ARGS+=	--with-libcurl
 CONFIGURE_ARGS+=	--with-libpcre=${BUILDLINK_PREFIX.pcre}
 CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
+
+# workaround for https://github.com/curl/curl/issues/10148
+CPPFLAGS+=	-DCURL_DISABLE_TYPECHECK
 
 EGDIR=		share/examples/${PKGBASE}
 CONF_FILES+=	${EGDIR}/zabbix_agentd.conf ${PKG_SYSCONFDIR}/zabbix_agentd.conf
