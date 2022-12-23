@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2022/08/29 13:26:46 taca Exp $
+@comment $NetBSD: PLIST,v 1.22 2022/12/23 13:35:52 taca Exp $
 bin/kramdown${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/AUTHORS
@@ -563,3 +563,4 @@ ${GEM_LIBDIR}/test/testcases/span/text_substitutions/typography_subst.latex
 ${GEM_LIBDIR}/test/testcases/span/text_substitutions/typography_subst.options
 ${GEM_LIBDIR}/test/testcases/span/text_substitutions/typography_subst.text
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
+${PLIST.rubygem_man}man/man1/kramdown.1
