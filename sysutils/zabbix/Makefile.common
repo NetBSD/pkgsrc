@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2020/09/17 13:52:15 otis Exp $
+# $NetBSD: Makefile.common,v 1.18 2022/12/23 12:34:05 wiz Exp $
 # used by sysutils/zabbix/Makefile
 # used by sysutils/zabbix-frontend/Makefile
 
@@ -12,3 +12,6 @@ LICENSE=	gnu-gpl-v2
 
 DISTINFO_FILE=	${.CURDIR}/../../sysutils/zabbix/distinfo
 PATCHDIR=	${.CURDIR}/../../sysutils/zabbix/patches
+
+# workaround for https://github.com/curl/curl/issues/10148
+CPPFLAGS+=	-DCURL_DISABLE_TYPECHECK
