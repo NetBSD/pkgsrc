@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2021/11/13 20:41:10 otis Exp $
+# $NetBSD: Makefile.common,v 1.5 2022/12/23 12:34:05 wiz Exp $
 # used by sysutils/zabbix50-agent/Makefile
 # used by sysutils/zabbix50-proxy/Makefile
 # used by sysutils/zabbix50-server/Makefile
@@ -26,3 +26,6 @@ FILES_SUBST+=			ZABBIX_USER=${ZABBIX_USER}
 FILES_SUBST+=			ZABBIX_GROUP=${ZABBIX_GROUP}
 
 OWN_DIRS_PERMS+=		${ZABBIX_HOMEDIR} ${ZABBIX_USER} ${ZABBIX_GROUP} 0755
+
+# workaround for https://github.com/curl/curl/issues/10148
+CPPFLAGS+=	-DCURL_DISABLE_TYPECHECK
