@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/05/08 22:03:14 thor Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/12/23 14:54:31 wiz Exp $
 bin/pcl_add_gaussian_noise
 bin/pcl_boundary_estimation
 bin/pcl_cluster_extraction
@@ -1034,10 +1034,10 @@ ${PLIST.vtk}include/pcl-${PCL_BASE_VERSION}/pcl/outofcore/octree_base.h
 ${PLIST.vtk}include/pcl-${PCL_BASE_VERSION}/pcl/outofcore/octree_base_node.h
 ${PLIST.vtk}include/pcl-${PCL_BASE_VERSION}/pcl/outofcore/octree_disk_container.h
 ${PLIST.vtk}include/pcl-${PCL_BASE_VERSION}/pcl/outofcore/octree_ram_container.h
+${PLIST.vtk}include/pcl-${PCL_BASE_VERSION}/pcl/outofcore/outofcore.h
 ${PLIST.vtk}include/pcl-${PCL_BASE_VERSION}/pcl/outofcore/outofcore_base_data.h
 ${PLIST.vtk}include/pcl-${PCL_BASE_VERSION}/pcl/outofcore/outofcore_breadth_first_iterator.h
 ${PLIST.vtk}include/pcl-${PCL_BASE_VERSION}/pcl/outofcore/outofcore_depth_first_iterator.h
-${PLIST.vtk}include/pcl-${PCL_BASE_VERSION}/pcl/outofcore/outofcore.h
 ${PLIST.vtk}include/pcl-${PCL_BASE_VERSION}/pcl/outofcore/outofcore_impl.h
 ${PLIST.vtk}include/pcl-${PCL_BASE_VERSION}/pcl/outofcore/outofcore_iterator_base.h
 ${PLIST.vtk}include/pcl-${PCL_BASE_VERSION}/pcl/outofcore/outofcore_node_data.h
