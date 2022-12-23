@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/12/18 14:54:28 taca Exp $
+# $NetBSD: Makefile,v 1.3 2022/12/23 13:32:02 taca Exp $
 
 DISTNAME=	lolcat-100.0.1
 PKGREVISION=	1
@@ -16,10 +16,7 @@ USE_LANGUAGES=	# none
 
 OVERRIDE_GEMSPEC+=	manpages:
 RUBYGEM_OPTIONS+=	--format-executable
-
-.include "../../mk/bsd.prefs.mk"
-
-RUBYGEM_MANPAGES?=	yes
+RUBYGEM_MANPAGES=	yes
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
