@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2022/08/29 13:26:46 taca Exp $
+# $NetBSD: Makefile,v 1.30 2022/12/23 13:35:52 taca Exp $
 
 DISTNAME=	kramdown-2.4.0
+PKGREVISION=	1
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -9,6 +10,7 @@ COMMENT=	Pure-Ruby Markdown-superset parser and converter
 LICENSE=	mit
 
 RUBYGEM_OPTIONS+=	--format-executable
+RUBYGEM_MANPAGES=	yes
 
 USE_LANGUAGES=	# none
 
