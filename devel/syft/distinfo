@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2022/12/19 19:03:09 wiz Exp $
+$NetBSD: distinfo,v 1.2 2022/12/23 10:03:39 wiz Exp $
 
 BLAKE2s (4d63.com_gochecknoglobals_@v_v0.1.0.mod) = 44ce95e05c9f2bda0bad21d1c5df80fe04aa5a58d27d291a71c539fa5417c4b0
 SHA512 (4d63.com_gochecknoglobals_@v_v0.1.0.mod) = fed1482cc4df3b59a2d9a2cb927c867779fdaa8428e4323ea1c063df61c66274e2d9a05230b7d827ba7c36d15fcbf575d617f2bae9109332acce4c5f82573655
@@ -9237,4 +9237,5 @@ Size (syft-0.63.0.tar.gz) = 5409030 bytes
 SHA1 (patch-internal_ui_ephemeral__terminal__ui.go) = 0d5ea0ae00429b8e45832f297e244b142be50764
 SHA1 (patch-internal_ui_etui__event__handlers.go) = a823a9738edc7481197b7360ecc5410183baefe1
 SHA1 (patch-internal_ui_select.go) = a856804e943dfd93611d4c7d23a020aa4e8f7f69
+SHA1 (patch-syft_pkg_cataloger_python_parse__requirements.go) = 4b9dd7156fe7d405ef670ec18acdf4378b588b11
 SHA1 (patch-syft_source_file__details.go) = 4c484112c9ab86e72b9d886f2bc28b1077e4effc
