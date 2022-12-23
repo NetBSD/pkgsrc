@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/08/21 11:56:15 nils Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/12/23 13:38:46 taca Exp $
 bin/rdiscount${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
@@ -23,13 +23,17 @@ ${GEM_LIBDIR}/ext/emmatch.c
 ${GEM_LIBDIR}/ext/extconf.rb
 ${GEM_LIBDIR}/ext/flags.c
 ${GEM_LIBDIR}/ext/generate.c
+${GEM_LIBDIR}/ext/gethopt.c
+${GEM_LIBDIR}/ext/gethopt.h
 ${GEM_LIBDIR}/ext/github_flavoured.c
+${GEM_LIBDIR}/ext/h1title.c
 ${GEM_LIBDIR}/ext/html5.c
 ${GEM_LIBDIR}/ext/markdown.c
 ${GEM_LIBDIR}/ext/markdown.h
 ${GEM_LIBDIR}/ext/mkdio.c
 ${GEM_LIBDIR}/ext/mkdio.h
 ${GEM_LIBDIR}/ext/mktags.c
+${GEM_LIBDIR}/ext/notspecial.c
 ${GEM_LIBDIR}/ext/pgm_options.c
 ${GEM_LIBDIR}/ext/pgm_options.h
 ${GEM_LIBDIR}/ext/rdiscount.c
@@ -53,5 +57,5 @@ ${GEM_LIBDIR}/test/benchmark.txt
 ${GEM_LIBDIR}/test/markdown_test.rb
 ${GEM_LIBDIR}/test/rdiscount_test.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
-man/man1/${RUBY_PKGPREFIX}-rdiscount.1
-@pkgdir lib/ruby/gems/2.2.0/build_info
+${PLIST.rubygem_man}man/man1/rdiscount.1
+${PLIST.rubygem_man}man/man7/markdown.7
