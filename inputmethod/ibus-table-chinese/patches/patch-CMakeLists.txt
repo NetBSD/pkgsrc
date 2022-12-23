@@ -1,0 +1,22 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2022/12/23 13:33:43 wiz Exp $
+
+Allow setting installation paths from pkgsrc.
+
+--- CMakeLists.txt.orig	2022-12-13 16:36:17.000000000 +0000
++++ CMakeLists.txt
+@@ -1,7 +1,6 @@
+ cmake_minimum_required(VERSION 3.0.0)
+ 
+ # Default CMAKE_INSTALL_PREFIX should be set before PROJECT()
+-SET(CMAKE_INSTALL_PREFIX "/usr" CACHE PATH "Install dir prefix")
+ 
+ ####################################################################
+ # Project specific information
+@@ -26,7 +25,6 @@ ELSE(CMAKE_SYSTEM_PROCESSOR MATCHES "64"
+     SET(LIB_DIR "${CMAKE_INSTALL_PREFIX}/lib" CACHE PATH "Library dir")
+ ENDIF(CMAKE_SYSTEM_PROCESSOR MATCHES "64")
+ SET(LIBEXEC_DIR "${LIB_DIR}" CACHE PATH "LIBEXEC dir")
+-SET(DATA_DIR "/usr/share")
+ 
+ ####################################################################
+ # Building
