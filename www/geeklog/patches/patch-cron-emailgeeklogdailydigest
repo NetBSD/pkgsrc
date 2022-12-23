@@ -1,0 +1,12 @@
+$NetBSD: patch-cron-emailgeeklogdailydigest,v 1.1 2022/12/23 13:47:42 taca Exp $
+
+* Output Content-Type header explicitly.
+
+--- cron-emailgeeklogdailydigest.orig	2022-09-27 15:13:12.000000000 +0000
++++ cron-emailgeeklogdailydigest
+@@ -1,4 +1,4 @@
+-#!/usr/local/bin/php -q 
++#!@PREFIX@/bin/php -q
+ <?php
+ // This code snippet is for the Daily Digest and is responsible for 
+ // emailing Geeklog Articles to users for the topics they select 
