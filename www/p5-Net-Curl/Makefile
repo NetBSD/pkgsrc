@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2022/10/26 10:32:05 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2022/12/23 09:46:54 wiz Exp $
 
 DISTNAME=	Net-Curl-0.45
 PKGNAME=	p5-${DISTNAME}
@@ -12,6 +12,9 @@ COMMENT=	Perl binding interface for curl
 LICENSE=	mit
 
 TEST_DEPENDS+=	p5-Test-CPAN-Meta-[0-9]*:../../devel/p5-Test-CPAN-Meta
+
+# https://github.com/sparky/perl-Net-Curl/issues/71
+BROKEN=		"Does not support curl 7.87.0 yet."
 
 CFLAGS+=			-Wall -Werror -Wreturn-type
 
