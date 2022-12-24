@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.16 2021/10/26 10:14:13 nia Exp $
+$NetBSD: distinfo,v 1.17 2022/12/24 23:32:48 wiz Exp $
 
 BLAKE2s (aegis-4.24.2.tar.gz) = bcc88aca828460072afc43a859eb011878516880f3e5eb4ed1c77c9ae9c044ab
 SHA512 (aegis-4.24.2.tar.gz) = 07aeb6961a8a6965090bab61d08d67ddc8e5d310b77fd1babd62e7c272cd2d7a189ffc433da617ab2a3eaf9c030aa601dd83e68e97f294faec4a5c8801b36cdb
@@ -7,4 +7,5 @@ SHA1 (patch-aa) = 90ca2d4c6e42588b52133a8772cb658608fe43b2
 SHA1 (patch-ab) = c946cdfd7807041502f8052b0e9ec2d24f752175
 SHA1 (patch-ad) = 3385dc23da50afc6827664c8d481ba89ba3fd435
 SHA1 (patch-common_ac_string_memmem.cc) = ef0461be5b90efaf8b39b2116f839c25aa865663
+SHA1 (patch-common_mem.h) = b45ba1c741e559325e35b92f538d5062032890fd
 SHA1 (patch-common_stack.cc) = 83451680c73027fe69b85e0fd3333642d340a750
