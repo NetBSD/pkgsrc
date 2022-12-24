@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6340 2022/12/24 15:48:22 nia Exp $
+$NetBSD: CHANGES-2022,v 1.6341 2022/12/24 23:53:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9465,3 +9465,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed lang/cint [wiz 2022-12-24]
 	Updated www/firefox102-l10n to 102.6.0 [nia 2022-12-24]
 	Updated www/firefox102 to 102.6.0 [nia 2022-12-24]
+	Removed cross/nios2-gcc [wiz 2022-12-24]
+	Removed cross/nios2-binutils [wiz 2022-12-24]
