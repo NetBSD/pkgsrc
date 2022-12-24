@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6338 2022/12/23 14:54:42 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.6339 2022/12/24 13:48:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9462,3 +9462,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/ruby-unicorn to 6.1.0nb1 [taca 2022-12-23]
 	Updated www/geeklog to 2.2.2 [taca 2022-12-23]
 	Updated graphics/pcl to 1.11.1nb12 [wiz 2022-12-23]
+	Removed lang/cint [wiz 2022-12-24]
