@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.669 2022/12/21 14:09:17 wiz Exp $
+# $NetBSD: Makefile,v 1.670 2022/12/24 13:48:10 wiz Exp $
 #
 
 COMMENT=	Programming languages
@@ -28,7 +28,6 @@ SUBDIR+=	chibi-scheme
 SUBDIR+=	chicken
 SUBDIR+=	chicken5
 SUBDIR+=	cim
-SUBDIR+=	cint
 SUBDIR+=	clang
 SUBDIR+=	clang-tools-extra
 SUBDIR+=	classpath
