@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6339 2022/12/24 13:48:10 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.6340 2022/12/24 15:48:22 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9463,3 +9463,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/geeklog to 2.2.2 [taca 2022-12-23]
 	Updated graphics/pcl to 1.11.1nb12 [wiz 2022-12-23]
 	Removed lang/cint [wiz 2022-12-24]
+	Updated www/firefox102-l10n to 102.6.0 [nia 2022-12-24]
+	Updated www/firefox102 to 102.6.0 [nia 2022-12-24]
