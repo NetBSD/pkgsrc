@@ -1,6 +1,0 @@
-Cint is a C/C++ interpreter. About 95% of ANSI C and 90% of C++ features are
-covered. (Data abstraction,  class inheritance, virtual function, function and
-operator overloading, default parameter, template,  etc...) Cint has source
-code debugger which has sufficient capability to debug complicated C++ program.
-
-This is officially the last release - CERN switched to cling (LLVM-based).
