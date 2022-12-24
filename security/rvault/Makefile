@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2022/10/26 10:31:57 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2022/12/24 00:10:26 wiz Exp $
 
 DISTNAME=	rvault-0.3
 PKGREVISION=	7
@@ -20,6 +20,8 @@ MAKE_ENV+=	LIBSCRYPT_KDF=1
 MAKE_ENV+=	DESTDIR=${DESTDIR}
 MAKE_ENV+=	BINDIR=${PREFIX}/bin
 MAKE_ENV+=	MANDIR=${PREFIX}/${PKGMANDIR}
+
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 .include "../../security/scrypt/buildlink3.mk"
 .include "../../mk/fuse.buildlink3.mk"
