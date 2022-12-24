@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.108 2022/12/04 22:39:43 js Exp $
+# $NetBSD: Makefile,v 1.109 2022/12/24 23:57:32 wiz Exp $
 #
 
 COMMENT=	Cross-platform development utilities
@@ -63,8 +63,6 @@ SUBDIR+=	mingw-w64-x86_64-headers
 SUBDIR+=	mingw-w64-x86_64-winpthreads
 SUBDIR+=	mipsel-none-elf-binutils
 SUBDIR+=	mipsel-none-elf-gcc
-SUBDIR+=	nios2-binutils
-SUBDIR+=	nios2-gcc
 SUBDIR+=	objconv
 SUBDIR+=	or1k-none-elf-binutils
 SUBDIR+=	or1k-none-elf-gcc
@@ -75,7 +73,6 @@ SUBDIR+=	powerpc-none-elf-gcc
 SUBDIR+=	ppc-morphos-binutils
 SUBDIR+=	ppc-morphos-gcc-10
 SUBDIR+=	ppc-morphos-gcc-11
-SUBDIR+=	ppc-morphos-gcc-9
 SUBDIR+=	ppc-morphos-sdk
 SUBDIR+=	stlink
 SUBDIR+=	uisp
