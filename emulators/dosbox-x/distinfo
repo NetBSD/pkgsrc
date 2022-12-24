@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.26 2022/11/06 21:31:57 triaxx Exp $
+$NetBSD: distinfo,v 1.27 2022/12/24 15:23:41 wiz Exp $
 
 BLAKE2s (dosbox-x-0.84.3.tar.gz) = 2d77836763becdcd507adede587b39b9051d8f26fa6d37c485f04245f5d9fd7d
 SHA512 (dosbox-x-0.84.3.tar.gz) = 82bebe82dd84962dca0182d9236cb8549d9f873f7fe562a863481535fa5d956e283b5f4f1d29cd0adbf8763c844ad0f181e3308d5e7c99ed80f44e3f47998c9f
@@ -8,4 +8,4 @@ SHA1 (patch-include_dosbox.h) = 501ec03a46a1100afe5cccc00b73af4a344858a9
 SHA1 (patch-include_iconvpp.hpp) = dcf1428d202ad0b71b898741908f00445b55fd54
 SHA1 (patch-src_dos_dos__programs.cpp) = 984c9fc621536046044e76f096969f7d90902627
 SHA1 (patch-src_libs_physfs_physfs__platform__unix.c) = 5cde2acf3691478f1d91945b3942c968af2eadc6
-SHA1 (patch-src_output_output__surface.cpp) = b1f6fc85edf8f0d3afc54de0f95d8640ddce149b
+SHA1 (patch-src_output_output__surface.cpp) = 93590fa2e76071b3e6c2e5fd5d4f4e9f50b6b481
