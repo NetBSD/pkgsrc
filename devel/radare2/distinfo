@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.15 2022/09/21 13:49:39 ast Exp $
+$NetBSD: distinfo,v 1.16 2022/12/24 12:44:15 wiz Exp $
 
 BLAKE2s (radare2-5.7.8.tar.gz) = 3e07c2d806d5c094046f52924d60cd410c8e367eb82f2990d4bb2e0b13d92821
 SHA512 (radare2-5.7.8.tar.gz) = 7c819a052f5e4b3da72b945915fca92a747c52dc2e2fa8483a8c2d8e71479ce374efbbe2bc02b1b4af26db6a891b6e44cdbb9e062de2f13b22a258cceab561f6
 Size (radare2-5.7.8.tar.gz) = 10324020 bytes
+SHA1 (patch-libr_io_p_shm.mk) = 77e33c5532f6c072a12b9c3c882667521188e002
 SHA1 (patch-shlr-sdb-src-Makefile) = a285400cdb72ace9cc6bebbea6d2c970f25886ca
 SHA1 (patch-sys_ios-sdk.sh) = 3f50b49e75dea1ac02f6d2ce8c556c77276e51d6
