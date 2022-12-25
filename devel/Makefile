@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3854 2022/12/25 08:53:30 wiz Exp $
+# $NetBSD: Makefile,v 1.3855 2022/12/25 11:18:58 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -460,7 +460,6 @@ SUBDIR+=	gotags
 SUBDIR+=	gotests
 SUBDIR+=	gperf
 SUBDIR+=	gperftools
-SUBDIR+=	gprbuild-aux
 SUBDIR+=	gputils
 SUBDIR+=	gradle
 SUBDIR+=	grantlee
