@@ -1,0 +1,41 @@
+$NetBSD: patch-scripts_nm-list,v 1.1 2022/12/25 17:55:14 wiz Exp $
+
+Use sha1(1) where available.
+
+--- scripts/nm-list.orig	2022-02-25 16:06:18.000000000 +0000
++++ scripts/nm-list
+@@ -48,11 +48,17 @@ fi
+ 
+ # See whether their native sha1sum executable will work, if present at all
+ SHA1SUM=sha1sum
++FIELD=1
+ empty=`$SHA1SUM /dev/null 2>/dev/null | cut -f1 -d' '`
++empty2=`sha1 /dev/null | cut -f4 -d' '`
+ case "$empty" in
+ da39a3ee5e6b4b0d3255bfef95601890afd80709) ;;
+ *) SHA1SUM=$TOP/src/bin/sha1sum ;;
+ esac
++case "$empty2" in
++da39a3ee5e6b4b0d3255bfef95601890afd80709) FIELD=4; SHA1SUM=sha1;;
++*);;
++esac
+ 
+ if
+ 	date=`date --utc \
+@@ -62,14 +68,14 @@ then
+ else
+ 	date=`date -jr ${SOURCE_DATE_EPOCH:-$(date +%s)}`
+ fi
+-sha1=`$SHA1SUM $file 2>/dev/null | cut -f1 -d' '`
++sha1=`$SHA1SUM $file 2>/dev/null | cut -f$FIELD -d' '`
+ case "$sha1" in
+ '')	echo "Failed to compute SHA1 of $file" >&2; exit 1;;
+ esac
+ 
+ cp $file $TMP
+ if strip $TMP 2>/dev/null; then
+-	stripped_sha1=`$SHA1SUM $TMP 2>/dev/null | cut -f1 -d' '`
++	stripped_sha1=`$SHA1SUM $TMP 2>/dev/null | cut -f$FIELD -d' '`
+ fi
+ rm -f $TMP
+ 
