@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1656 2022/12/18 09:28:31 mef Exp $
+# $NetBSD: Makefile,v 1.1657 2022/12/25 11:18:58 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -67,8 +67,6 @@ SUBDIR+=	apisprout
 SUBDIR+=	arcticfox
 SUBDIR+=	asp2php
 SUBDIR+=	august
-SUBDIR+=	aws
-SUBDIR+=	aws-demos
 SUBDIR+=	awstats
 SUBDIR+=	badwolf
 SUBDIR+=	bannerfilter
