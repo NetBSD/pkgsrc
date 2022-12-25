@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6345 2022/12/25 09:00:36 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.6346 2022/12/25 11:18:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9474,3 +9474,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed games/crafty-book-small [wiz 2022-12-25]
 	Removed games/crafty-book-medium [wiz 2022-12-25]
 	Removed games/crafty-doc [wiz 2022-12-25]
+	Removed textproc/xmlada [wiz 2022-12-25]
+	Removed devel/gprbuild-aux [wiz 2022-12-25]
+	Removed www/aws-demos [wiz 2022-12-25]
+	Removed www/aws [wiz 2022-12-25]
