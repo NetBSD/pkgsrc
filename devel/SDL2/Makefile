@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2022/12/04 18:07:47 adam Exp $
+# $NetBSD: Makefile,v 1.73 2022/12/25 16:25:06 nia Exp $
 
 DISTNAME=	SDL2-2.26.1
 CATEGORIES=	devel
@@ -34,6 +34,14 @@ CONFIGURE_ARGS+=	--disable-esd
 CONFIGURE_ARGS.NetBSD+=	--disable-oss
 
 LDFLAGS.FreeBSD+=	-lusb
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${MACHINE_ARCH} == "i386"
+CONFIGURE_ARGS+=	--disable-sse
+CONFIGURE_ARGS+=	--disable-ssemath
+CONFIGURE_ARGS+=	--disable-sse2
+.endif
 
 PKGCONFIG_OVERRIDE+=	sdl2.pc.in
 
