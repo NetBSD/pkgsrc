@@ -1,6 +1,7 @@
-$NetBSD: patch-src_lib_pow2.h,v 1.2 2022/12/25 17:55:14 wiz Exp $
+$NetBSD: patch-src_lib_pow2.h,v 1.3 2022/12/25 18:03:42 wiz Exp $
 
 Don't define popcount() if it exists in system.
+https://github.com/gtk-gnutella/gtk-gnutella/pull/34
 
 --- src/lib/pow2.h.orig	2022-02-25 16:06:22.000000000 +0000
 +++ src/lib/pow2.h
