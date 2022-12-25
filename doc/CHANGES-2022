@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6344 2022/12/25 08:53:30 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.6345 2022/12/25 09:00:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9470,3 +9470,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed cross/ppc-morphos-gcc-9 [wiz 2022-12-24]
 	Updated databases/myodbc to 8.0.31 [wiz 2022-12-25]
 	Removed devel/florist [wiz 2022-12-25]
+	Removed games/crafty [wiz 2022-12-25]
+	Removed games/crafty-book-small [wiz 2022-12-25]
+	Removed games/crafty-book-medium [wiz 2022-12-25]
+	Removed games/crafty-doc [wiz 2022-12-25]

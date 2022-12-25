@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.518 2022/12/16 10:12:22 nia Exp $
+# $NetBSD: Makefile,v 1.519 2022/12/25 09:00:36 wiz Exp $
 #
 
 COMMENT=	Games
@@ -78,10 +78,6 @@ SUBDIR+=	cosmosmash
 SUBDIR+=	crack-attack
 SUBDIR+=	crack-attack-sounds
 SUBDIR+=	craft
-SUBDIR+=	crafty
-SUBDIR+=	crafty-book-medium
-SUBDIR+=	crafty-book-small
-SUBDIR+=	crafty-doc
 SUBDIR+=	crimsonfields
 SUBDIR+=	criticalmass
 SUBDIR+=	crossfire-client
