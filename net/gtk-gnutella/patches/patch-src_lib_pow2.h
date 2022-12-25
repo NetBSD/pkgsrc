@@ -1,10 +1,10 @@
-$NetBSD: patch-src_lib_pow2.h,v 1.1 2017/02/26 12:58:28 adam Exp $
+$NetBSD: patch-src_lib_pow2.h,v 1.2 2022/12/25 17:55:14 wiz Exp $
 
 Don't define popcount() if it exists in system.
 
---- src/lib/pow2.h.orig	2017-02-26 12:17:53.469638084 +0000
+--- src/lib/pow2.h.orig	2022-02-25 16:06:22.000000000 +0000
 +++ src/lib/pow2.h
-@@ -66,6 +66,7 @@ is_pow2(uint32 value)
+@@ -67,6 +67,7 @@ is_pow2(uint32 value)
   *
   * @return number of 1 bits in a 32-bit integer.
   */
@@ -12,8 +12,8 @@ Don't define popcount() if it exists in system.
  static inline ALWAYS_INLINE G_CONST int
  popcount(uint32 x)
  #ifdef HAS_BUILTIN_POPCOUNT
-@@ -84,6 +85,7 @@ popcount(uint32 x)
- 	return ((x + (x >> 4) & 0xf0f0f0f) * 0x1010101) >> 24;
+@@ -85,6 +86,7 @@ popcount(uint32 x)
+ 	return (((x + (x >> 4)) & 0xf0f0f0f) * 0x1010101) >> 24;
  }
  #endif	/* HAS_BUILTIN_POPCOUNT */
 +#endif	/* HAS_POPCOUNT */
