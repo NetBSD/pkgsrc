@@ -1,0 +1,14 @@
+$NetBSD: patch-dltest_CMakeLists.txt,v 1.1 2022/12/25 08:22:26 wiz Exp $
+
+Do not install test binary.
+
+--- dltest/CMakeLists.txt.orig	2022-09-01 11:59:03.000000000 +0000
++++ dltest/CMakeLists.txt
+@@ -31,7 +31,6 @@
+ ADD_EXECUTABLE(dltest dltest.c)
+ set_target_properties(dltest PROPERTIES FOLDER Tests)
+ 
+-INSTALL(TARGETS dltest DESTINATION test COMPONENT tests)
+ 
+ IF(NOT WIN32)
+ 
