@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST.SunOS,v 1.1 2022/12/25 18:39:51 wiz Exp $
+lib/freerdp/guacai.la
+lib/freerdp/guacdr.la
+lib/freerdp/guacsnd.la
+lib/freerdp/guacsvc.la
+lib/libguac-client-rdp.la
