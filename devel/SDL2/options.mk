@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.19 2022/08/22 10:51:11 wiz Exp $
+# $NetBSD: options.mk,v 1.20 2022/12/25 17:49:16 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.SDL2
-PKG_OPTIONS_REQUIRED_GROUPS=	gl
+PKG_OPTIONS_OPTIONAL_GROUPS=	gl
 PKG_SUPPORTED_OPTIONS=		alsa dbus nas jack pulseaudio wayland x11
 PKG_SUGGESTED_OPTIONS.Linux=	alsa
 PKG_OPTIONS_GROUP.gl=		opengl
