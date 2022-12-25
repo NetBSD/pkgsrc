@@ -1,6 +1,7 @@
-$NetBSD: patch-src_lib_prop.c,v 1.1 2022/12/25 17:55:14 wiz Exp $
+$NetBSD: patch-src_lib_prop.c,v 1.2 2022/12/25 18:08:51 wiz Exp $
 
 Fix build on NetBSD with SSP.
+https://github.com/gtk-gnutella/gtk-gnutella/pull/35
 
 --- src/lib/prop.c.orig	2022-02-25 16:06:22.000000000 +0000
 +++ src/lib/prop.c
