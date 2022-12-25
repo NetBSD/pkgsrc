@@ -1,6 +1,7 @@
-$NetBSD: patch-config__h.SH,v 1.1 2017/02/26 12:58:28 adam Exp $
+$NetBSD: patch-config__h.SH,v 1.2 2022/12/25 18:03:42 wiz Exp $
 
 Define HAS_POPCOUNT.
+https://github.com/gtk-gnutella/gtk-gnutella/pull/34
 
 --- config_h.SH.orig	2017-02-26 12:33:26.000000000 +0000
 +++ config_h.SH
