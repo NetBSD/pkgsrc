@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6343 2022/12/25 08:22:38 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.6344 2022/12/25 08:53:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9469,3 +9469,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed cross/nios2-binutils [wiz 2022-12-24]
 	Removed cross/ppc-morphos-gcc-9 [wiz 2022-12-24]
 	Updated databases/myodbc to 8.0.31 [wiz 2022-12-25]
+	Removed devel/florist [wiz 2022-12-25]
