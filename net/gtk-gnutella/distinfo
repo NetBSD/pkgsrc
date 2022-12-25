@@ -1,9 +1,31 @@
-$NetBSD: distinfo,v 1.35 2022/09/18 20:04:30 he Exp $
+$NetBSD: distinfo,v 1.36 2022/12/25 17:55:14 wiz Exp $
 
-BLAKE2s (gtk-gnutella-1.1.11.tar.bz2) = c8df89d48086fdcdab21c7e2f8a87fe27c51ca10f6dbbd612bc14cdf02a3acb3
-SHA512 (gtk-gnutella-1.1.11.tar.bz2) = 87d2d66b555180c0db7c360106377133b9e1f8ad8d28fc0f9a38498f3b4502a817650f9683cf92919b7d3a1b3602f7136143d2f1c920e10727576c703e233d07
-Size (gtk-gnutella-1.1.11.tar.bz2) = 19966423 bytes
+BLAKE2s (gtk-gnutella-1.2.2.tar.xz) = 53058fd39e1b9e85f5f0c576fe20ce30d195e7482a54ef867ae221afa8268839
+SHA512 (gtk-gnutella-1.2.2.tar.xz) = 5d8692f4075c2188f22f68011148dd25e6a05453374b1baf1f66599a129b6f3c9e887330e38d270c4a83b8e40cfd4315845ec0d0e1f8cc82f7dcdf4a0217c78b
+Size (gtk-gnutella-1.2.2.tar.xz) = 21313212 bytes
 SHA1 (patch-Configure) = 926736a79a7bc469810f4887b5d0cecfedbac201
 SHA1 (patch-config__h.SH) = 2ed9d100cc044e10f2633a614cfc4100edc4cc02
+SHA1 (patch-scripts_nm-list) = 817c11388563e76b26406e0621e97c95c896fec9
+SHA1 (patch-src_core_bogons.c) = 053e80660df4acc43c17fb2c4c9a5056f54e80f9
+SHA1 (patch-src_core_dmesh.c) = bcf16b86c356a0948fbe4e69cc84a29d480a0734
+SHA1 (patch-src_core_downloads.c) = 64157159910733e52cde1fa6225ffaa3168b2e12
+SHA1 (patch-src_core_fileinfo.c) = f86c0f4b290db4212008fc0006e77882dd51f1c8
+SHA1 (patch-src_core_g2_gwc.c) = 34c3a39adfb81c90cb1578f3a7d911c19b4276c2
+SHA1 (patch-src_core_geo__ip.c) = 116d14dccd967b54302c30f3d2969bd68b099abd
+SHA1 (patch-src_core_hcache.c) = 1fbd40ee5f3d56106892e7072f53dda5e2488344
+SHA1 (patch-src_core_hostiles.c) = abdf92f86239db4d94ea4e20f97bd968764a5257
+SHA1 (patch-src_core_huge.c) = fc0914e9300b5062548fd72ceb446a9ad949087a
+SHA1 (patch-src_core_ignore.c) = 6500dce34759388194bf786f57d3ad1185d27f55
+SHA1 (patch-src_core_ipp__cache.c) = 41a11369587d0653ff39dbe5ffd4c38743dd6043
+SHA1 (patch-src_core_parq.c) = efb84612b2427bdebfca10044e3e8d9b00bac370
+SHA1 (patch-src_core_spam.c) = ae5aec41432d997c4c4b270229c382477b0bd40a
+SHA1 (patch-src_core_spam__sha1.c) = 13ba40e9189a037b8b699f10084f63d64906ea7f
+SHA1 (patch-src_core_upload__stats.c) = 7d9a60b57b3fe450ababab8a7633878232eac0e2
+SHA1 (patch-src_core_whitelist.c) = 99457d24986a8541182bc0de23b2e5ff5593fb89
+SHA1 (patch-src_dht_routing.c) = f33827c96da71ca9d405ab91eb0cb8a702c2aa53
+SHA1 (patch-src_lib_getgateway.c) = def0b5da6557b73e90d03f0b3ef2dce6bc70c7c3
 SHA1 (patch-src_lib_memusage.c) = db65ae1b7d43326f8b8eacdc95705deba0a94b5d
-SHA1 (patch-src_lib_pow2.h) = f8a36d58f84ef782535e363df6144bbfc766013e
+SHA1 (patch-src_lib_pow2.h) = 7a4553eb6278a707302485800d65d39d2e35fbf0
+SHA1 (patch-src_lib_prop.c) = ad709a46d00d7609ab7ec321b3935d13add1c379
+SHA1 (patch-src_lib_symbols.c) = cbc7bc84498d7ba6ce247dfad82a43126d163be9
+SHA1 (patch-src_sdbm_tmp.c) = 8ab56bba8825adcddbdfc8578a0f27b01b3f0cca

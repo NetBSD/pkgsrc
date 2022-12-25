@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2017/02/26 12:58:28 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2022/12/25 17:55:14 wiz Exp $
 bin/gtk-gnutella
 lib/gtk-gnutella/gtk-gnutella.nm
 share/appdata/gtk-gnutella.appdata.xml
@@ -9,10 +9,13 @@ share/gtk-gnutella/en/FAQ
 share/gtk-gnutella/en/glossary
 share/gtk-gnutella/favicon.png
 share/gtk-gnutella/fr/FAQ
+share/gtk-gnutella/fr/glossary
 share/gtk-gnutella/geo-ip.txt
 share/gtk-gnutella/geo-ipv6.txt
 share/gtk-gnutella/gwcache.boot
 share/gtk-gnutella/hostiles.txt
+share/gtk-gnutella/it/FAQ
+share/gtk-gnutella/it/glossary
 share/gtk-gnutella/ja/FAQ
 share/gtk-gnutella/pixmaps/arrow_down.xpm
 share/gtk-gnutella/pixmaps/arrow_up.xpm
@@ -70,6 +73,7 @@ share/gtk-gnutella/robots.txt
 share/gtk-gnutella/spam.txt
 share/gtk-gnutella/spam_sha1.txt
 share/gtk-gnutella/tr/FAQ
+share/gtk-gnutella/tr/glossary
 share/locale/de/LC_MESSAGES/gtk-gnutella.mo
 share/locale/el/LC_MESSAGES/gtk-gnutella.mo
 share/locale/es/LC_MESSAGES/gtk-gnutella.mo
