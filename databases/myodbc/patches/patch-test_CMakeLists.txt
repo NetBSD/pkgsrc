@@ -1,8 +1,11 @@
-$NetBSD: patch-test_CMakeLists.txt,v 1.2 2014/07/02 03:41:51 jnemeth Exp $
+$NetBSD: patch-test_CMakeLists.txt,v 1.3 2022/12/25 08:22:26 wiz Exp $
 
---- test/CMakeLists.txt.orig	2014-03-26 21:20:55.000000000 +0000
+Install in better prefix.
+Add library for backtrace_symbols_fd() to one executable on NetBSD.
+
+--- test/CMakeLists.txt.orig	2022-09-01 11:59:03.000000000 +0000
 +++ test/CMakeLists.txt
-@@ -55,7 +55,7 @@ FOREACH(T my_basics my_blob my_bulk my_c
+@@ -71,7 +71,7 @@ FOREACH(FN my_basics.c my_blob.c my_bulk
            COMPILE_FLAGS "${MYSQLODBCCONN_COMPILE_FLAGS_ENV} ${MYSQL_CXXFLAGS}")
    ENDIF(MYSQL_CXX_LINKAGE)
  
@@ -11,7 +14,26 @@ $NetBSD: patch-test_CMakeLists.txt,v 1.2 2014/07/02 03:41:51 jnemeth Exp $
    SET_TARGET_PROPERTIES(${T} PROPERTIES 
        LINK_FLAGS "${MYSQLODBCCONN_LINK_FLAGS_ENV} ${MYSQL_LINK_FLAGS}")
  
-@@ -102,7 +102,7 @@ IF(NOT ${CMAKE_SYSTEM_NAME} MATCHES "Dar
+@@ -92,7 +92,7 @@ FOREACH(FN my_basics.c my_blob.c my_bulk
+       TARGET_LINK_LIBRARIES(${T} ${ODBCLIB} ${ODBCINSTLIB} myodbc-util)
+     ENDIF(MYSQL8)
+   ELSE(WIN32)
+-    TARGET_LINK_LIBRARIES(${T} ${ODBC_LINK_FLAGS} ${ODBCINSTLIB} myodbc-util)
++    TARGET_LINK_LIBRARIES(${T} PRIVATE ${ODBC_LINK_FLAGS} ${ODBCINSTLIB} myodbc-util)
+   ENDIF(WIN32)
+   ADD_TEST(${T} ${T})
+ 
+@@ -106,6 +106,9 @@ endif()
+ 
+ ENDFOREACH(FN)
+ 
++if (CMAKE_SYSTEM_NAME MATCHES "NetBSD")
++  TARGET_LINK_LIBRARIES(my_param2 PRIVATE execinfo)
++endif()
+ # Adding testsuites for testing driver without DM. May be useful to test behaviors that normally are initiated by DM only
+ # Separate testsuites for ansi and unicode driver are created - we can't use same test for both since there is no DM to convert
+ # data and to map calls. Excluding OS X so far, since direct linking there is problematic
+@@ -135,7 +138,7 @@ IF(NOT ${CMAKE_SYSTEM_NAME} MATCHES "Dar
                COMPILE_FLAGS "${MYSQLODBCCONN_COMPILE_FLAGS_ENV} ${MYSQL_CXXFLAGS}")
        ENDIF(MYSQL_CXX_LINKAGE)
  
@@ -20,10 +42,30 @@ $NetBSD: patch-test_CMakeLists.txt,v 1.2 2014/07/02 03:41:51 jnemeth Exp $
        SET_TARGET_PROPERTIES(${T} PROPERTIES 
            LINK_FLAGS "${MYSQLODBCCONN_LINK_FLAGS_ENV} ${MYSQL_LINK_FLAGS}")
  
-@@ -130,5 +130,5 @@ INSTALL(FILES
+@@ -149,7 +152,7 @@ IF(NOT ${CMAKE_SYSTEM_NAME} MATCHES "Dar
+       ENDIF(WIN32)
+ 
+       # Not quite clear atm whether ${ODBCINSTLIB} is needed
+-      TARGET_LINK_LIBRARIES(${T} myodbc8${CONNECTOR_DRIVER_TYPE_SHORT})
++      TARGET_LINK_LIBRARIES(${T} PRIVATE myodbc8${CONNECTOR_DRIVER_TYPE_SHORT})
+       ADD_TEST(${T} ${T})
+     ENDIF (NOT ${CONNECTOR_DRIVER_TYPE_SHORT} STREQUAL "w")
+ 
+@@ -159,7 +162,7 @@ ENDIF(NOT ${CMAKE_SYSTEM_NAME} MATCHES "
+ 
+ ENDIF(NOT skip_no_dm)
+ 
+-TARGET_LINK_LIBRARIES(my_basics ${CMAKE_THREAD_LIBS_INIT})
++TARGET_LINK_LIBRARIES(my_basics PRIVATE ${CMAKE_THREAD_LIBS_INIT})
+ 
+ 
+ #
+@@ -216,7 +219,7 @@ INSTALL(FILES
  	${CMAKE_CURRENT_BINARY_DIR}/CTestTestfile.cmake
  	${CMAKE_CURRENT_BINARY_DIR}/odbc.ini
  	${CMAKE_CURRENT_BINARY_DIR}/odbcinst.ini
 -        DESTINATION test COMPONENT tests)
 +        DESTINATION share/mysql-connector-odbc/test COMPONENT tests)
  
+ INSTALL(DIRECTORY
+        ${PROJECT_BINARY_DIR}/test/Debug/
