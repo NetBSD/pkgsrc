@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6346 2022/12/25 11:18:58 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.6347 2022/12/25 17:55:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9478,3 +9478,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed devel/gprbuild-aux [wiz 2022-12-25]
 	Removed www/aws-demos [wiz 2022-12-25]
 	Removed www/aws [wiz 2022-12-25]
+	Updated net/gtk-gnutella to 1.2.2 [wiz 2022-12-25]
