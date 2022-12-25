@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/03/20 16:08:48 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/12/25 18:39:51 wiz Exp $
 bin/guaclog
 include/guacamole/audio-fntypes.h
 include/guacamole/audio-types.h
@@ -37,11 +37,6 @@ include/guacamole/user-constants.h
 include/guacamole/user-fntypes.h
 include/guacamole/user-types.h
 include/guacamole/user.h
-lib/freerdp/guacai.la
-lib/freerdp/guacdr.la
-lib/freerdp/guacsnd.la
-lib/freerdp/guacsvc.la
-lib/libguac-client-rdp.la
 lib/libguac-client-ssh.la
 lib/libguac-client-telnet.la
 lib/libguac-client-vnc.la
