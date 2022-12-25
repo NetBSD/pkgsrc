@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.12 2021/01/11 05:49:29 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.13 2022/12/25 08:22:26 wiz Exp $
 bin/myodbc-installer
-lib/libmyodbc5a.so
-lib/libmyodbc5w.so
+lib/libmyodbc8a.so
+lib/libmyodbc8w.so
 share/doc/mysql-connector-odbc/ChangeLog
+share/doc/mysql-connector-odbc/INFO_BIN
+share/doc/mysql-connector-odbc/INFO_SRC
 share/doc/mysql-connector-odbc/LICENSE.txt
 share/doc/mysql-connector-odbc/README.txt
 share/mysql-connector-odbc/test/CTestTestfile.cmake
@@ -13,6 +15,7 @@ share/mysql-connector-odbc/test/my_bug13766
 share/mysql-connector-odbc/test/my_bulk
 share/mysql-connector-odbc/test/my_catalog1
 share/mysql-connector-odbc/test/my_catalog2
+share/mysql-connector-odbc/test/my_catalog3
 share/mysql-connector-odbc/test/my_crash
 share/mysql-connector-odbc/test/my_curext
 share/mysql-connector-odbc/test/my_cursor
@@ -23,7 +26,9 @@ share/mysql-connector-odbc/test/my_dyn_cursor
 share/mysql-connector-odbc/test/my_error
 share/mysql-connector-odbc/test/my_info
 share/mysql-connector-odbc/test/my_keys
+share/mysql-connector-odbc/test/my_options
 share/mysql-connector-odbc/test/my_param
+share/mysql-connector-odbc/test/my_param2
 share/mysql-connector-odbc/test/my_pooling
 share/mysql-connector-odbc/test/my_prepare
 share/mysql-connector-odbc/test/my_relative
