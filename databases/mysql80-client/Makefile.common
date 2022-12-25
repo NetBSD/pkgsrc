@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2022/11/21 18:20:41 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.6 2022/12/25 00:27:26 wiz Exp $
 #
 # used by databases/mysql80-client/Makefile
 # used by databases/mysql80-server/Makefile
@@ -81,6 +81,8 @@ CMAKE_ARGS+=		-DDEFAULT_CHARSET=${MYSQL_CHARSET}
 CMAKE_ARGS+=		-DDEFAULT_COLLATION=${MYSQL_COLLATION}
 CMAKE_ARGS+=		-DWITH_EXTRA_CHARSETS=${MYSQL_EXTRA_CHARSET}
 CMAKE_ARGS+=		-DWITH_UNIT_TESTS=OFF
+
+CHECK_PORTABILITY_SKIP+=	packaging/deb-in/mysql-packagesource-server.config.in
 
 # we need atomic builtins
 .if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "i386"
