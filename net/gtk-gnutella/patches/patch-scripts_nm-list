@@ -1,6 +1,7 @@
-$NetBSD: patch-scripts_nm-list,v 1.1 2022/12/25 17:55:14 wiz Exp $
+$NetBSD: patch-scripts_nm-list,v 1.2 2022/12/25 18:03:42 wiz Exp $
 
 Use sha1(1) where available.
+https://github.com/gtk-gnutella/gtk-gnutella/pull/34
 
 --- scripts/nm-list.orig	2022-02-25 16:06:18.000000000 +0000
 +++ scripts/nm-list
