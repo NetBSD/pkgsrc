@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1337 2022/12/18 06:16:04 mef Exp $
+# $NetBSD: Makefile,v 1.1338 2022/12/25 11:18:58 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1380,7 +1380,6 @@ SUBDIR+=	xindy
 SUBDIR+=	xml-coreutils
 SUBDIR+=	xml2
 SUBDIR+=	xml2doc
-SUBDIR+=	xmlada
 SUBDIR+=	xmlcatmgr
 SUBDIR+=	xmlindent
 SUBDIR+=	xmlrpc-c
