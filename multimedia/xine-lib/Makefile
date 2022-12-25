@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.190 2022/12/21 19:45:01 vins Exp $
+# $NetBSD: Makefile,v 1.191 2022/12/25 17:32:52 nia Exp $
 
 PKGREVISION= 11
 .include "Makefile.common"
@@ -7,10 +7,6 @@ COMMENT=		Multimedia player library
 LICENSE=		gnu-lgpl-v2
 
 CONFLICTS+=		xine-xcb-[0-9]*
-
-PTHREAD_OPTS+=		require
-PTHREAD_AUTO_VARS=	yes
-BUILDLINK_TRANSFORM+=	rm:-lpthread
 
 CONFIGURE_ARGS+=	--disable-v4l
 CONFIGURE_ARGS+=	--disable-v4l2
