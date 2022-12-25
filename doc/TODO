@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22427 2022/12/25 09:00:36 wiz Exp $
+$NetBSD: TODO,v 1.22428 2022/12/25 17:51:13 wiz Exp $
 
 Suggested new packages
 ======================
@@ -584,6 +584,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o dmalloc-5.6.5
 	o dnsbl-milter-6.78
 	o doclifter-2.19
+	o dovecot2-pigeonhole-0.5.20
 	o drawpile-2.1.20
 	o drivel-3.0.5
 	o drupal-10.0
@@ -777,6 +778,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gss-1.0.3
 	o gst-plugins1-omx-1.10.0
 	o gst-rtsp-server-1.20.3 [needs libcgroup]
+	o gstreamer1-1.20.5
 	o gthumb-3.4.0
 	o gtk-gnutella-1.2.0
 	o gtklevel9-5.1
@@ -810,10 +812,58 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o horde-5.2.9
 	o howm-1.4.7
 	o hplip-3.22.2
+	o hs-HTTP-4000.4.1
+	o hs-HsYAML-0.2.1.1
 	o hs-aeson-2.1.1.0
-	o hs-bifunctors-5.5.13
+	o hs-ansi-terminal-0.11.4
+	o hs-basement-0.0.15
+	o hs-bifunctors-5.5.14
+	o hs-cereal-0.5.8.3
+	o hs-citeproc-0.8.0.2
+	o hs-commonmark-0.2.2
+	o hs-commonmark-extensions-0.2.3.3
+	o hs-conduit-1.3.4.3
+	o hs-conduit-extra-1.3.6
+	o hs-digest-0.0.1.4
+	o hs-doclayout-0.4
+	o hs-doctemplates-0.11
+	o hs-haddock-library-1.11.0
 	o hs-hie-bios-0.10.0
+	o hs-hslua-2.2.1
+	o hs-hslua-classes-2.2.0
+	o hs-hslua-core-2.2.1
+	o hs-hslua-marshalling-2.2.1
+	o hs-hslua-module-path-1.0.3
+	o hs-hslua-module-system-1.0.2
+	o hs-hslua-module-text-1.0.2
+	o hs-hslua-module-version-1.0.3
+	o hs-hslua-objectorientation-2.2.1
+	o hs-hslua-packaging-2.2.1
+	o hs-http-client-0.7.13.1
+	o hs-http-client-tls-0.3.6.1
+	o hs-lpeg-1.0.3
+	o hs-lua-2.2.1
+	o hs-mime-types-0.1.1.0
+	o hs-pandoc-lua-marshal-0.1.7
+	o hs-resourcet-1.3.0
+	o hs-skylighting-0.13.2
+	o hs-skylighting-core-0.13.2
+	o hs-split-0.2.3.5
+	o hs-streaming-commons-0.2.2.5
+	o hs-syb-0.7.2.2
+	o hs-texmath-0.12.5.4
+	o hs-text-conversions-0.3.1.1
 	o hs-th-abstraction-0.4.5.0
+	o hs-th-compat-0.1.4
+	o hs-th-lift-instances-0.1.20
+	o hs-tls-1.6.0
+	o hs-unicode-collation-0.1.3.3
+	o hs-unicode-data-0.4.0.1
+	o hs-unicode-transforms-0.4.0.1
+	o hs-x509-1.7.7
+	o hs-yaml-0.11.8.0
+	o hs-zip-archive-0.4.2.2
+	o hs-zlib-0.6.3.0
 	o html2wml-0.4.11
 	o http_load-20140814
 	o hyperscan-5.4.0
@@ -986,6 +1036,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o mate-system-monitor-1.24.2
 	o materia-gtk-theme-20210322
 	o matterircd-0.24.0
+	o mbedtls-2.28.2
 	o mbedtls1-1.3.22
 	o mbuf-20141227
 	o mbuffer-20210328
@@ -1045,6 +1096,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o nant-0.92
 	o nap-1.5.3
 	o nas-auscope-1.9.4
+	o ncdu-1.18
 	o ncview-2.1.8
 	o nedit-5.7
 	o netbt-hcidump-5.58
@@ -1052,6 +1104,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o newmail-1.0.2
 	o nickle-2.90
 	o nios2-binutils-2.36.1
+	o nodejs-19.3.0
 	o npm-8.19.1
 	o ns-3.14.1
 	o ns-plugger-common-5.1.3
@@ -1437,6 +1490,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o swi-prolog-jpl-8.3.22
 	o swi-prolog-lite-8.3.22
 	o swi-prolog-packages-8.3.22
+	o syft-0.64.0
 	o sympa-6.2.70
 	o sysinfo-4.2.2
 	o system-tools-backends-2.10.1
@@ -1543,7 +1597,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o wbm-virtual-server-6.16
 	o wcalc-2.4
 	o wcslib-7.6
-	o webkit-gtk-2.38.2
+	o webkit-gtk-2.38.3
 	o webmin-2.0
 	o websvn-2.6.0
 	o wgetpaste-2.30
