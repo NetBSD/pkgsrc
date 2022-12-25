@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.133 2022/12/02 11:19:28 wiz Exp $
+# $NetBSD: java-vm.mk,v 1.134 2022/12/25 19:18:05 abs Exp $
 #
 # This Makefile fragment provides a Java VM, either at build-time or at
 # run-time, depending on the package's needs.
@@ -145,46 +145,50 @@ _ONLY_FOR_PLATFORMS.kaffe= \
 	*-*-alpha *-*-arm *-*-arm32 *-*-i386 *-*-m68k \
 	*-*-mipsel* *-*-sparc *-*-powerpc
 _ONLY_FOR_PLATFORMS.sun-jdk7= \
-	Darwin-9.*-i386 Darwin-9.*-x86_64 \
-	Darwin-[1-9][0-9].*-i386 Darwin-[1-9][0-9].*-x86_64 \
+	Darwin-9.*-i386			Darwin-[1-9][0-9].*-i386	\
+        Darwin-9.*-x86_64		Darwin-[1-9][0-9].*-x86_64 	\
 	FreeBSD-6.*-i386 \
 	Linux-*-i[3-6]86 \
 	Linux-*-x86_64 \
-	NetBSD-[6-9]*-i386 NetBSD-[6-9]*-x86_64 \
+	NetBSD-[6-9].*-x86_64		NetBSD-1[0-9].*-x86_64		\
+	NetBSD-[6-9].*-i386		NetBSD-1[0-9].*-i386		\
 	SunOS-5.11-i386 \
 	SunOS-5.11-x86_64
 _ONLY_FOR_PLATFORMS.oracle-jdk8= \
-	Darwin-9.*-i386 Darwin-9.*-x86_64 \
-	Darwin-[1-9][0-9].*-i386 Darwin-[1-9][0-9].*-x86_64 \
+	Darwin-9.*-i386			Darwin-[1-9][0-9].*-i386	\
+        Darwin-9.*-x86_64		Darwin-[1-9][0-9].*-x86_64 	\
 	FreeBSD-6.*-i386 \
 	Linux-*-i[3-6]86 \
 	Linux-*-x86_64 \
-	NetBSD-[6-9]*-i386 NetBSD-[6-9]*-x86_64 \
+	NetBSD-[6-9].*-x86_64		NetBSD-1[0-9].*-x86_64		\
+	NetBSD-[6-9].*-i386		NetBSD-1[0-9].*-i386		\
 	SunOS-5.11-x86_64
 _ONLY_FOR_PLATFORMS.adoptopenjdk11-bin= \
 	Linux-*-x86_64 \
-	NetBSD-[6-9]*-x86_64
+	NetBSD-[6-9].*-x86_64		NetBSD-1[0-9].*-x86_64
 _ONLY_FOR_PLATFORMS.openjdk-bin= \
 	Linux-*-x86_64 \
-	NetBSD-[6-9]*-x86_64
+	NetBSD-[6-9].*-x86_64		NetBSD-1[0-9].*-x86_64
 _ONLY_FOR_PLATFORMS.openjdk8= \
 	DragonFly-*-* \
 	Linux-*-x86_64			Linux-*-i[3-6]86		\
-	NetBSD-[7-9].*-x86_64		NetBSD-[7-9].*-i386		\
-	NetBSD-[7-9].*-sparc64		\
-	NetBSD-[8-9].*-aarch64		NetBSD-[8-9].*-earmv[67]hf	\
+	NetBSD-[7-9].*-x86_64		NetBSD-1[0-9].*-x86_64		\
+	NetBSD-[7-9].*-i386		NetBSD-1[0-9].*-i386		\
+	NetBSD-[7-9].*-sparc64		NetBSD-1[0-9].*-sparc64		\
+	NetBSD-[8-9].*-aarch64		NetBSD-1[0-9].*-aarch64		\
+        NetBSD-[8-9].*-earmv[67]hf	NetBSD-1[0-9].*-earmv[67]hf	\
 	SunOS-*-x86_64			SunOS-*-i386			\
 	FreeBSD-10.*-x86_64
 _ONLY_FOR_PLATFORMS.openjdk11= \
-	NetBSD-[8-9].*-x86_64		NetBSD-[8-9].*-i386		\
-	NetBSD-1[0-9].*-x86_64		NetBSD-1[0-9].*i386		\
-	NetBSD-9.99.*-aarch64		NetBSD-9.99.*-earmv[67]hf	\
-	NetBSD-1[0-9].*-aarch64		NetBSD-1[0-9].*-earmv[67]hf
+	NetBSD-[8-9].*-x86_64		NetBSD-1[0-9].*-x86_64		\
+        NetBSD-[8-9].*-i386		NetBSD-1[0-9].*i386		\
+	NetBSD-9.99.*-aarch64		NetBSD-1[0-9].*-aarch64		\
+        NetBSD-9.99.*-earmv[67]hf	NetBSD-1[0-9].*-earmv[67]hf
 _ONLY_FOR_PLATFORMS.openjdk17= \
-	NetBSD-9.*-x86_64		NetBSD-9.*-i386			\
-	NetBSD-1[0-9].*-x86_64		NetBSD-1[0-9].*-i386		\
-	NetBSD-9.99.*-aarch64		NetBSD-9.99.*-earmv[67]hf	\
-	NetBSD-1[0-9].*-aarch64		NetBSD-1[0-9].*-earmv[67]hf
+	NetBSD-9.*-x86_64		NetBSD-1[0-9].*-x86_64		\
+        NetBSD-9.*-i386			NetBSD-1[0-9].*-i386		\
+	NetBSD-9.99.*-aarch64		NetBSD-1[0-9].*-aarch64		\
+        NetBSD-9.99.*-earmv[67]hf	NetBSD-1[0-9].*-earmv[67]hf
 _ONLY_FOR_PLATFORMS.oracle-jdk17= \
 	NetBSD-9.*-x86_64		NetBSD-1[0-9].*-x86_64		\
 	Darwin-*-aarch64		Darwin-*-x86_64			\
