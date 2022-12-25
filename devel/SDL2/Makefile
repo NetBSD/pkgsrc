@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2022/12/25 16:25:06 nia Exp $
+# $NetBSD: Makefile,v 1.74 2022/12/25 16:31:07 nia Exp $
 
 DISTNAME=	SDL2-2.26.1
 CATEGORIES=	devel
@@ -37,6 +37,8 @@ LDFLAGS.FreeBSD+=	-lusb
 
 .include "../../mk/bsd.prefs.mk"
 
+# Runtime detection is lacking and illegal instruction faults happen
+# on e.g. QEMU with -cpu pentium.
 .if ${MACHINE_ARCH} == "i386"
 CONFIGURE_ARGS+=	--disable-sse
 CONFIGURE_ARGS+=	--disable-ssemath
