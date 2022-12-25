@@ -1,13 +1,16 @@
-$NetBSD: patch-rfb_rfbproto.h,v 1.1 2018/07/18 17:55:54 bouyer Exp $
+$NetBSD: patch-rfb_rfbproto.h,v 1.2 2022/12/25 18:29:50 wiz Exp $
+
 Fix endianess detection on NetBSD
 
---- rfb/rfbproto.h.orig	2018-07-18 19:35:56.445752955 +0200
-+++ rfb/rfbproto.h	2018-07-18 19:36:17.076925368 +0200
-@@ -82,8 +82,11 @@
+--- rfb/rfbproto.h.orig	2020-06-13 18:49:53.000000000 +0000
++++ rfb/rfbproto.h
+@@ -78,8 +78,13 @@ typedef int8_t rfbBool;
  #endif
  
  #if LIBVNCSERVER_HAVE_ENDIAN_H
++#ifndef _XOPEN_SOURCE
 +#define _XOPEN_SOURCE
++#endif
  # include <endian.h>
 -# if __BYTE_ORDER == __BIG_ENDIAN
 +# if defined(__BYTE_ORDER) && __BYTE_ORDER == __BIG_ENDIAN
