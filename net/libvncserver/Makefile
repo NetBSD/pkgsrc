@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2022/10/26 10:31:06 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.39 2022/12/25 18:29:50 wiz Exp $
 
 DISTNAME=		libvncserver-LibVNCServer-0.9.13
 PKGNAME=		libVNCServer-0.9.13
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GITHUB:=LibVNC/}
 GITHUB_PROJECT=		libvncserver
@@ -43,7 +42,6 @@ LDFLAGS.SunOS+=		-lsocket
 .include "../../archivers/lzo/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../security/gnutls/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
