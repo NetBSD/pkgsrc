@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/12/23 10:03:39 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/12/25 18:11:03 wiz Exp $
 
 DISTNAME=	syft-0.63.0
 PKGREVISION=	1
@@ -11,13 +11,8 @@ HOMEPAGE=	https://github.com/anchore/syft/
 COMMENT=	Generate Software Bill of Materials from container images and file systems
 LICENSE=	apache-2.0
 
-USE_LANGUAGES=	c
-
-# build tools
-# https://github.com/anchore/syft/issues/1413
-post-install:
-	${RM} ${DESTDIR}${PREFIX}/bin/generate
-	${RM} ${DESTDIR}${PREFIX}/bin/json
+USE_LANGUAGES=		c
+GO_BUILD_PATTERN=	./cmd/syft
 
 .include "go-modules.mk"
 .include "../../lang/go/go-module.mk"
