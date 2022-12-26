@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6353 2022/12/26 22:09:20 pin Exp $
+$NetBSD: CHANGES-2022,v 1.6354 2022/12/26 22:10:44 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9485,3 +9485,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated audio/termusic to 0.7.7 [pin 2022-12-26]
 	Updated audio/spotify-player to 0.10.0 [pin 2022-12-26]
 	Updated graphics/oxipng to 8.0.0 [pin 2022-12-26]
+	Updated wm/leftwm to 0.4.1 [pin 2022-12-26]
