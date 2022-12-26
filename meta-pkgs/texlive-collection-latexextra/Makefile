@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.73 2022/10/03 19:28:40 markd Exp $
+# $NetBSD: Makefile,v 1.74 2022/12/26 22:13:51 wiz Exp $
 
 DISTNAME=	collection-latexextra
-PKGNAME=	texlive-${DISTNAME}-2022pre6
+PKGNAME=	texlive-${DISTNAME}-2022pre7
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	64204
@@ -394,7 +394,7 @@ DEPENDS+=	tex-easy-todo-[0-9]*:../../print/tex-easy-todo
 # depend ebezier
 # depend ecclesiastic
 # depend econlipsum
-# depend ecv
+DEPENDS+=	tex-ecv-[0-9]*:../../print/tex-ecv
 # depend ed
 # depend edichokey
 # depend edmargin
