@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.3 2019/11/03 09:14:10 rillig Exp $
+# $NetBSD: builtin.mk,v 1.4 2022/12/26 22:11:05 wiz Exp $
 
 BUILTIN_PKG:=	libSM
 
@@ -31,10 +31,10 @@ USE_BUILTIN.libSM=	no
 .  else
 USE_BUILTIN.libSM=	${IS_BUILTIN.libSM}
 .    if defined(BUILTIN_PKG.libSM) && \
-        !empty(IS_BUILTIN.libSM:M[yY][eE][sS])
+        ${IS_BUILTIN.libSM:tl} == yes
 USE_BUILTIN.libSM=	yes
 .      for _dep_ in ${BUILDLINK_API_DEPENDS.libSM}
-.        if !empty(USE_BUILTIN.libSM:M[yY][eE][sS])
+.        if ${USE_BUILTIN.libSM:tl} == yes
 USE_BUILTIN.libSM!=							\
 	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.libSM:Q}; then \
 		${ECHO} yes;						\
