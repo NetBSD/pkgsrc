@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.894 2022/12/06 14:05:09 nros Exp $
+# $NetBSD: Makefile,v 1.895 2022/12/26 22:12:46 wiz Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -647,6 +647,8 @@ SUBDIR+=	tex-easy-todo
 SUBDIR+=	tex-easy-todo-doc
 SUBDIR+=	tex-ebproof
 SUBDIR+=	tex-ebproof-doc
+SUBDIR+=	tex-ecv
+SUBDIR+=	tex-ecv-doc
 SUBDIR+=	tex-edmac
 SUBDIR+=	tex-edmac-doc
 SUBDIR+=	tex-eijkhout
