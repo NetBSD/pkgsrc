@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2022/12/26 22:12:35 wiz Exp $
+share/texmf-dist/doc/latex/ecv/COPYING
+share/texmf-dist/doc/latex/ecv/README
+share/texmf-dist/doc/latex/ecv/docstrip.cfg
+share/texmf-dist/doc/latex/ecv/ecv.pdf
+share/texmf-dist/doc/latex/ecv/template/CV-template_de.pdf
+share/texmf-dist/doc/latex/ecv/template/CV-template_de.tex
+share/texmf-dist/doc/latex/ecv/template/CV-template_en.pdf
+share/texmf-dist/doc/latex/ecv/template/CV-template_en.tex
+share/texmf-dist/doc/latex/ecv/template/Makefile
+share/texmf-dist/doc/latex/ecv/template/portrait.eps
