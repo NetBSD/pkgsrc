@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2022/12/26 22:12:20 wiz Exp $
+share/texmf-dist/tex/latex/ecv/ecv.cls
+share/texmf-dist/tex/latex/ecv/ecvEnglish.ldf
+share/texmf-dist/tex/latex/ecv/ecvGerman.ldf
+share/texmf-dist/tex/latex/ecv/ecvNLS.sty
