@@ -1,11 +1,14 @@
-# $NetBSD: Makefile,v 1.84 2022/07/01 16:18:44 adam Exp $
+# $NetBSD: Makefile,v 1.85 2022/12/26 17:59:30 nia Exp $
 
 DISTNAME=	oiio-2.2.20.0
 PKGNAME=	${DISTNAME:S/oiio/openimageio/}
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenImageIO/}
 GITHUB_PROJECT=	oiio
 GITHUB_TAG=	v${PKGVERSION_NOREV}
+
+GITHUB_SUBMODULES+=	fmtlib fmt 7.1.3 ext/fmt
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://sites.google.com/site/openimageio/
@@ -20,7 +23,8 @@ USE_LANGUAGES=		c c++
 TEST_TARGET=		test
 
 CMAKE_ARGS+=		-DSTOP_ON_WARNING=OFF # Disable -Werror
-CMAKE_ARGS+=		-DBUILD_MISSING_FMT=OFF
+# XXX: cannot use fmtlib from pkgsrc, too new
+CMAKE_ARGS+=		-DBUILD_FMT_FORCE=ON
 CMAKE_ARGS+=		-DBUILD_MISSING_ROBINMAP=OFF
 CMAKE_ARGS+=		-DUSE_EXTERNAL_PUGIXML=ON
 CMAKE_ARGS+=		-DUSE_PYTHON:BOOL=OFF
@@ -68,7 +72,8 @@ pre-configure:
 .include "../../graphics/openjpeg/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../parallel/threadingbuildingblocks/buildlink3.mk"
-.include "../../textproc/fmtlib/buildlink3.mk"
+# XXX: requiring specific version currently
+#.include "../../textproc/fmtlib/buildlink3.mk"
 .include "../../textproc/pugixml/buildlink3.mk"
 .include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
