@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6350 2022/12/26 22:05:28 pin Exp $
+$NetBSD: CHANGES-2022,v 1.6351 2022/12/26 22:06:41 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9482,3 +9482,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/php-nextcloud to 25.0.2 [ryoon 2022-12-25]
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2022Q4 branch [wiz 2022-12-26]
 	Updated editors/tp-note to 1.19.12 [pin 2022-12-26]
+	Updated audio/termusic to 0.7.7 [pin 2022-12-26]
