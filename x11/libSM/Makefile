@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2022/11/09 13:14:20 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2022/12/26 22:11:05 wiz Exp $
 
-DISTNAME=		libSM-1.2.3
+DISTNAME=		libSM-1.2.4
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
-EXTRACT_SUFX=		.tar.bz2
+EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/
@@ -22,6 +22,7 @@ CONFIGURE_ARGS+=	--without-libuuid
 X11_LIB_NAME?=		libSM
 .include "../../meta-pkgs/modular-xorg/avoid-duplicate.mk"
 .include "../../meta-pkgs/modular-xorg/hacks.mk"
+BUILDLINK_API_DEPENDS.libICE+=	libICE>=1.1.0
 .include "../../x11/libICE/buildlink3.mk"
 .include "../../x11/xorgproto/buildlink3.mk"
 .include "../../x11/xtrans/buildlink3.mk"
