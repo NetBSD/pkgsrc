@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.20 2022/11/21 09:19:41 pin Exp $
+$NetBSD: distinfo,v 1.21 2022/12/26 22:14:24 pin Exp $
 
 BLAKE2s (adler-1.0.2.crate) = f263779d752af886455fc0f42c997893fb1a09edcf1bd2980605251c2e3602aa
 SHA512 (adler-1.0.2.crate) = 7ab190d31890fc05b0b55d8e2c6527a505e06793d5496be0b3831e0513412f9ba97f8148f6f68ed0770fa9cd980a5092d885e058becf1d5506b7c74b82674aa1
@@ -150,9 +150,9 @@ Size (generic-array-0.14.6.crate) = 15889 bytes
 BLAKE2s (getrandom-0.2.8.crate) = 3384f83c641aae81e11d7974210ee38cc05eb376d6cbf156b219236ab21f9159
 SHA512 (getrandom-0.2.8.crate) = cd7aea29f79a33a0de2a52a0a82f2b57ea8f27908ccfe00a5f42248766df88b225023603ec56d6fc634ef9c1eb67ad0135c90d4c695f6f659db0767e7fda44c5
 Size (getrandom-0.2.8.crate) = 30553 bytes
-BLAKE2s (git-cliff-0.10.0.tar.gz) = 1fe4b8f1730539ac1c76102eccbc91d1c680dddf528b2e0fb0121e3e5a78875d
-SHA512 (git-cliff-0.10.0.tar.gz) = fb89a441d3cf34fb74138db7d961557217d527846fcfd454ec6acaf4a3c88c00b6a9c246e59728b40d2f48f5d8baa5102fdc3b0db76cf696a1956189acc0152e
-Size (git-cliff-0.10.0.tar.gz) = 73420 bytes
+BLAKE2s (git-cliff-1.0.0.tar.gz) = cadea517e4b339a8b63f1362e2299fde83b339bbf706c70092e3c253d78ac918
+SHA512 (git-cliff-1.0.0.tar.gz) = 50a5d27a61b0ece6fe46e9841893f3f8500143fa702a211ab9578fc68b5e28b1e1000888f4f02719bd8a5744325322bbcd720f9888198161ba61c41754031703
+Size (git-cliff-1.0.0.tar.gz) = 73952 bytes
 BLAKE2s (git-conventional-0.12.0.crate) = 6c126e3e90c35d703f875e442521de09cb806e3b18809a78520bda151c4b8914
 SHA512 (git-conventional-0.12.0.crate) = b4dce642ac05964765343e0378b4978229af074cb9d54972c698c8b6ea1b01d7e7a36f628a8d5cf5aa79f1c0912b5dc6f2456ca8fc370dcd56fc01f751b80ee1
 Size (git-conventional-0.12.0.crate) = 14839 bytes
