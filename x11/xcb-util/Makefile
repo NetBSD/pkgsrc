@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2021/12/21 10:11:25 nia Exp $
+# $NetBSD: Makefile,v 1.16 2022/12/26 22:10:43 wiz Exp $
 
-DISTNAME=	xcb-util-0.4.0
+DISTNAME=	xcb-util-0.4.1
 CATEGORIES=	x11
 MASTER_SITES=	https://xcb.freedesktop.org/dist/
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://xcb.freedesktop.org/
