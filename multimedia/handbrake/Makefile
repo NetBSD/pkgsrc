@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.87 2022/11/23 16:20:45 adam Exp $
+# $NetBSD: Makefile,v 1.88 2022/12/26 00:16:08 nia Exp $
 
 DISTNAME=	HandBrake-1.5.1-source
 PKGNAME=	${DISTNAME:tl:S/-source//}
@@ -96,9 +96,6 @@ post-build:
 .include "../../multimedia/x265/buildlink3.mk"
 .include "../../textproc/jansson/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-# Note that libjpeg-turbo is required by the Handbrake library libhb: when gtk3 is
-# enabled (as per default) it is built and linked statically in the build phase as
-# not to conflict with the "default" jpeg required by gtk3
-#JPEG_DEFAULT=	jpeg
+JPEG_ACCEPTED=	libjpeg-turbo
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
