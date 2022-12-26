@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/12/26 22:12:20 wiz Exp $
+
+BLAKE2s (ecv.r24928.tar.xz) = b6e4dd7fbf6310564fc10c845c3a08ecde3772e8ac5c10cabaf3bc8e48b1557f
+SHA512 (ecv.r24928.tar.xz) = 0ff0a352516aa90a19eb1a0a9bdc651601edc63f03c5cce9face4bd45b359734d954e2b7859a0244015e3933eaa2d3803d5579ab9260dde51a0ec89db8034910
+Size (ecv.r24928.tar.xz) = 3792 bytes
