@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6360 2022/12/26 22:13:22 pin Exp $
+$NetBSD: CHANGES-2022,v 1.6361 2022/12/26 22:14:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9492,3 +9492,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added print/tex-ecv version 0.3 [wiz 2022-12-26]
 	Added print/tex-ecv-doc version 0.3 [wiz 2022-12-26]
 	Updated devel/diffsitter to 0.7.3 [pin 2022-12-26]
+	Updated meta-pkgs/texlive-collection-latexextra to 2022pre7 [wiz 2022-12-26]
