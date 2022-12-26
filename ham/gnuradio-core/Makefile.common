@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.43 2022/10/16 13:58:50 mef Exp $
+# $NetBSD: Makefile.common,v 1.44 2022/12/26 16:50:29 nia Exp $
 # This Makefile fragment is included in the package Makefiles for
 # GNU Radio distributed packages (they all share common configure and build
 # settings).
@@ -41,6 +41,13 @@ USE_LANGUAGES=	c c++
 USE_TOOLS=	gmake perl pkg-config
 
 GCC_REQD+=	8
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 099915
+USE_PKGSRC_GCC=		yes
+USE_PKGSRC_GCC_RUNTIME=	yes
+.endif
 
 DEPENDS+=	${PYPKGPREFIX}-jsonschema-[0-9]*:../../textproc/py-jsonschema
 DEPENDS+=	${PYPKGPREFIX}-scipy-[0-9]*:../../math/py-scipy
