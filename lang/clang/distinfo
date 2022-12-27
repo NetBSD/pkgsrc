@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.78 2022/12/01 08:10:52 wiz Exp $
+$NetBSD: distinfo,v 1.79 2022/12/27 10:49:42 he Exp $
 
 BLAKE2s (clang-15.0.6.src.tar.xz) = 22c571afff6b323ad71fb2e050ff02646a3fa6c093e0b5ca64ef2b6ebf45edd2
 SHA512 (clang-15.0.6.src.tar.xz) = 898e9793b27a17689150b8df99fce87037d7353e35b6f03449c64f131a8afb3780e45bf640af8c173362ddbf60bcf09f864a4316b523123899cdd19073ed5e48
@@ -10,6 +10,7 @@ SHA1 (patch-lib_Basic_Targets_OSTargets.h) = 02533d1de2c92a431d9c5d4567f348deff0
 SHA1 (patch-lib_Driver_ToolChain.cpp) = 33a8e346a72893140fde42245e4b108f3a9b9e3e
 SHA1 (patch-lib_Driver_ToolChains_Solaris.cpp) = ad22a65fb75c266e4f56e3004844f084f92a988f
 SHA1 (patch-lib_Driver_ToolChains_Solaris.h) = 22d1ddef34b8df3cc29c4632108d45904797aff3
+SHA1 (patch-lib_Interpreter_IncrementalParser.cpp) = c5ace959ce566478316447b1621e9bfd9a537cc5
 SHA1 (patch-lib_Lex_InitHeaderSearch.cpp) = 6f8e3d21efbaf3b90bf6c9859ca703d50fa35a46
 SHA1 (patch-tools_clang-shlib_CMakeLists.txt) = 2dce9cfc1e114a79fab457211eea1ee93c2198f4
 SHA1 (patch-tools_libclang_CMakeLists.txt) = 7e5655fc753ef20c8b08d1de438b26dcd3434525
