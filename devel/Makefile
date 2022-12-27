@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3857 2022/12/27 16:14:29 schmonz Exp $
+# $NetBSD: Makefile,v 1.3858 2022/12/27 16:17:21 schmonz Exp $
 #
 
 COMMENT=	Development utilities
@@ -3315,6 +3315,7 @@ SUBDIR+=	subversion
 SUBDIR+=	subversion-base
 SUBDIR+=	sunifdef
 SUBDIR+=	svn-bisect
+SUBDIR+=	swagger-codegen
 SUBDIR+=	swig
 SUBDIR+=	swig2
 SUBDIR+=	swig3
