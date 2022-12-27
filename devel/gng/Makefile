@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2022/12/27 16:59:26 abs Exp $
+# $NetBSD: Makefile,v 1.3 2022/12/27 18:28:34 abs Exp $
 
 DISTNAME=		gng-1.0.3
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=gdubw/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}
@@ -40,4 +41,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/gradle/wrapper/gradle-wrapper.jar \
 		${DESTDIR}${PREFIX}/share/${PKGBASE}/gradle/wrapper
 
+.include "../../lang/python/pyversion.mk"
 .include "../../mk/bsd.pkg.mk"
