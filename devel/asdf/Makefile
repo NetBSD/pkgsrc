@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/12/27 16:11:00 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2022/12/27 20:04:30 abs Exp $
 
 DISTNAME=		asdf-0.11.0
 CATEGORIES=		devel
@@ -30,7 +30,7 @@ SUBST_FILES.lib=	bin/asdf lib/commands/*
 SUBST_SED.lib=		-e 's|\$$(dirname "\$$(dirname "\$$0")")/lib|${PREFIX}/share/${PKGBASE}/lib|g'
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/asdf \
+	${INSTALL_SCRIPT} ${WRKSRC}/bin/asdf \
 		${DESTDIR}${PREFIX}/bin/
 	${INSTALL_DATA} ${WRKSRC}/help.txt \
 		${DESTDIR}${PREFIX}/share/${PKGBASE}/
