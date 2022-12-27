@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6363 2022/12/27 13:59:25 he Exp $
+$NetBSD: CHANGES-2022,v 1.6364 2022/12/27 15:57:12 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9495,3 +9495,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated meta-pkgs/texlive-collection-latexextra to 2022pre7 [wiz 2022-12-26]
 	Updated devel/git-cliff to 1.0.0 [pin 2022-12-26]
 	Updated lang/clang to 15.0.6nb1 [he 2022-12-27]
+	Updated print/lilypond to 2.24.0 [schmonz 2022-12-27]
