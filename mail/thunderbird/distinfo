@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.252 2022/09/07 09:37:15 pho Exp $
+$NetBSD: distinfo,v 1.253 2022/12/27 20:08:45 abs Exp $
 
 BLAKE2s (thunderbird-78.12.0.source.tar.xz) = a16874486907a6f374d61c016d43258ed1765669bdef665610b46e796f28faf9
 SHA512 (thunderbird-78.12.0.source.tar.xz) = 8a9275f6a454b16215e9440d8b68926e56221dbb416f77ea0cd0a42853bdd26f35514e792564879c387271bd43d8ee966577f133f8ae7781f43e8bec9ab78696
@@ -32,7 +32,14 @@ SHA1 (patch-media_libvorbis_lib_vorbis__info.c) = 64c4e763835d1ab81e8854cae8a293
 SHA1 (patch-media_webrtc_trunk_webrtc_modules_video__capture_linux_device__info__linux.cc) = 2c07cd2361752c307b2a50599a000e41d054aff6
 SHA1 (patch-nsprpub_pr_src_pthreads_ptsynch.c) = 20b208c5ab4bfea5d49d79c19fc610867da0c4c7
 SHA1 (patch-old-configure.in) = 27d42da882af2325dd3a8d8f6c062e59ffdb4d78
+SHA1 (patch-python_mozbuild_mozbuild_backend_configenvironment.py) = 51d875da8aeb09e475bc92d06b5b9abf59511154
+SHA1 (patch-python_mozbuild_mozbuild_makeutil.py) = f86940dc191b5705d6cdc2bb8f1a3b17807bfacb
+SHA1 (patch-python_mozbuild_mozbuild_util.py) = 2ac10992b870174380dac94deb58ef980a63262f
 SHA1 (patch-security_nss_lib_freebl_mpi_mpi.c) = 0cbf185955c77c9438ced0c294fbc8e4824797bf
+SHA1 (patch-testing_mozbase_manifestparser_manifestparser_filters.py) = 242859960c93a82b9e04bd0296e395d0233343e0
+SHA1 (patch-third__party_python_gyp_pylib_gyp_common.py) = 1576d52520efc9e12d0b4a6b8eaa2ffb3e4b2c06
+SHA1 (patch-third__party_python_pyyaml_lib3_yaml_constructor.py) = 3a8fb5e383fe571e3c2201b1420b18245cec3097
+SHA1 (patch-third__party_python_voluptuous_voluptuous_schema__builder.py) = 6cd4b1f02830279e4727d4fb8b2d69bfb8759296
 SHA1 (patch-third__party_rust_authenticator_.cargo-checksum.json) = 4a181138f3080b0e2203be1f8277f4ab2a584250
 SHA1 (patch-third__party_rust_authenticator_src_lib.rs) = 7ae115c6fa9617d3c211207739e74d2eaee194e4
 SHA1 (patch-third__party_rust_authenticator_src_netbsd_device.rs) = bcf69cdbcb471fa37b348176b5e368eccc7e50a9
