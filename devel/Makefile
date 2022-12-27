@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3855 2022/12/25 11:18:58 wiz Exp $
+# $NetBSD: Makefile,v 1.3856 2022/12/27 16:11:28 schmonz Exp $
 #
 
 COMMENT=	Development utilities
@@ -145,6 +145,7 @@ SUBDIR+=	arena
 SUBDIR+=	argp
 SUBDIR+=	argtable
 SUBDIR+=	as31
+SUBDIR+=	asdf
 SUBDIR+=	asio
 SUBDIR+=	aslc86k
 SUBDIR+=	asm2html
