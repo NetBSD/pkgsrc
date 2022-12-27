@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.java,v 1.12 2018/07/03 11:01:21 fhajny Exp $
+@comment $NetBSD: PLIST.java,v 1.13 2022/12/27 16:47:52 schmonz Exp $
 lib/erlang/lib/jinterface-${VERSION.jinterface}/ebin/jinterface.app
 lib/erlang/lib/jinterface-${VERSION.jinterface}/ebin/jinterface.appup
 lib/erlang/lib/jinterface-${VERSION.jinterface}/java_src/com/ericsson/otp/erlang/AbstractConnection.java
@@ -40,6 +40,7 @@ lib/erlang/lib/jinterface-${VERSION.jinterface}/java_src/com/ericsson/otp/erlang
 lib/erlang/lib/jinterface-${VERSION.jinterface}/java_src/com/ericsson/otp/erlang/OtpException.java
 lib/erlang/lib/jinterface-${VERSION.jinterface}/java_src/com/ericsson/otp/erlang/OtpExternal.java
 lib/erlang/lib/jinterface-${VERSION.jinterface}/java_src/com/ericsson/otp/erlang/OtpInputStream.java
+lib/erlang/lib/jinterface-${VERSION.jinterface}/java_src/com/ericsson/otp/erlang/OtpGenericTransportFactory.java
 lib/erlang/lib/jinterface-${VERSION.jinterface}/java_src/com/ericsson/otp/erlang/OtpLocalNode.java
 lib/erlang/lib/jinterface-${VERSION.jinterface}/java_src/com/ericsson/otp/erlang/OtpMD5.java
 lib/erlang/lib/jinterface-${VERSION.jinterface}/java_src/com/ericsson/otp/erlang/OtpMbox.java

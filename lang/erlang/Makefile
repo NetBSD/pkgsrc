@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.110 2022/10/15 18:04:10 triaxx Exp $
+# $NetBSD: Makefile,v 1.111 2022/12/27 16:47:52 schmonz Exp $
 
 DISTNAME=	erlang-${DIST_VERSION_MAJOR}.${DIST_VERSION_MINOR}${!empty(DIST_VERSION_PATCH):?.:}${DIST_VERSION_PATCH}
 PKGNAME=	${DISTNAME:S/OTP-/erlang-/}
@@ -29,7 +29,7 @@ MKPIE_SUPPORTED=	no
 MAKE_FLAGS+=	ARCH=arm
 .endif
 
-.if !empty(USE_CROSS_COMPILE:M[Yy][Ee][Ss])
+.if ${USE_CROSS_COMPILE:U:tl} == yes
 USE_GNU_CONFIGURE_HOST=	yes
 .else
 USE_GNU_CONFIGURE_HOST=	no
