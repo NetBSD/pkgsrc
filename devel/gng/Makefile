@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/12/27 16:14:03 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2022/12/27 16:59:26 abs Exp $
 
 DISTNAME=		gng-1.0.3
 CATEGORIES=		devel
@@ -24,7 +24,7 @@ SUBST_VARS.paths=	PREFIX
 INSTALLATION_DIRS=	bin share/${PKGBASE}/gradle/wrapper
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/gng \
+	${INSTALL_SCRIPT} ${WRKSRC}/bin/gng \
 		${DESTDIR}${PREFIX}/bin/gng
 	${LN} -fs gng ${DESTDIR}${PREFIX}/bin/gw
 	${INSTALL_DATA} ${WRKSRC}/lib/common.sh \
@@ -33,7 +33,7 @@ do-install:
 		${DESTDIR}${PREFIX}/share/${PKGBASE}/gradle
 	${INSTALL_DATA} ${WRKSRC}/gradle/gng.cfg \
 		${DESTDIR}${PREFIX}/share/${PKGBASE}/gradle
-	${INSTALL_PROGRAM} ${WRKSRC}/gradle/gradlew \
+	${INSTALL_SCRIPT} ${WRKSRC}/gradle/gradlew \
 		${DESTDIR}${PREFIX}/share/${PKGBASE}/gradle
 	${INSTALL_DATA} ${WRKSRC}/gradle/gradlew.bat \
 		${DESTDIR}${PREFIX}/share/${PKGBASE}/gradle
