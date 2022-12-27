@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6373 2022/12/27 20:11:51 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.6374 2022/12/27 20:37:30 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9505,3 +9505,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/elixir to 1.14.2 [schmonz 2022-12-27]
 	Updated print/brlaser to 6.2 [schmonz 2022-12-27]
 	Updated net/rabbitmq to 3.11.5 [schmonz 2022-12-27]
+	Updated converters/bdf2psf to 1.212 [fcambus 2022-12-27]
