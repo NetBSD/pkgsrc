@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2022/12/11 20:21:08 he Exp $
+# $NetBSD: Makefile,v 1.47 2022/12/27 21:26:59 minskim Exp $
 
 DISTNAME=	rust-1.64.0
 PKGNAME=	${DISTNAME:S/rust/rust-bin/1}
@@ -14,6 +14,7 @@ LICENSE=	mit OR apache-2.0
 CONFLICTS+=	rust-[0-9]*
 
 # Rust upstream provided binaries
+ONLY_FOR_PLATFORM+=	Darwin-*-aarch64
 ONLY_FOR_PLATFORM+=	Darwin-*-x86_64
 ONLY_FOR_PLATFORM+=	FreeBSD-*-x86_64
 ONLY_FOR_PLATFORM+=	NetBSD-*-x86_64
@@ -60,6 +61,10 @@ DISTFILES:=	# empty
 
 # Rust upstream provided binaries
 
+.if !empty(MACHINE_PLATFORM:MDarwin-*-aarch64) || make(distinfo) || make(makesum) || make(mdi)
+RUST_ARCH:=	aarch64-apple-darwin
+DISTFILES:=	${DISTFILES} ${DISTNAME}-${RUST_ARCH}.tar.gz
+.endif
 .if !empty(MACHINE_PLATFORM:MDarwin-*-x86_64) || make(distinfo) || make(makesum) || make(mdi)
 RUST_ARCH:=	x86_64-apple-darwin
 DISTFILES:=	${DISTFILES} ${DISTNAME}-${RUST_ARCH}.tar.gz
