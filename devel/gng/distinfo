@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2022/12/27 16:14:03 schmonz Exp $
+
+BLAKE2s (gng-1.0.3.tar.gz) = fc1c172998c0da64f8817c88dba8f696c05da8a464abb5add6d47eae0e9c617b
+SHA512 (gng-1.0.3.tar.gz) = a40be62d8deae070a5c5d342c4d510a78712657414d4dec4016becd7fb23436e6b344faf3917f7c1aa478c06a87ebbdd6541afea2fe8c035f8044f6d15af4855
+Size (gng-1.0.3.tar.gz) = 71089 bytes
+SHA1 (patch-bin_gng) = b9d5118c826931e1e3f7ecbb798c8cc0593e2939

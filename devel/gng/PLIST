@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2022/12/27 16:14:03 schmonz Exp $
+bin/gng
+bin/gw
+share/gng/common.sh
+share/gng/gradle/README.md
+share/gng/gradle/gng.cfg
+share/gng/gradle/gradlew
+share/gng/gradle/gradlew.bat
+share/gng/gradle/wrapper/gradle-wrapper.jar
