@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.71 2022/11/17 14:30:17 adam Exp $
+# $NetBSD: Makefile,v 1.72 2022/12/27 16:58:09 schmonz Exp $
 
-DISTNAME=	rabbitmq-server-3.11.3
-PKGNAME=	${DISTNAME:S/-server//}
-CATEGORIES=	net
-MASTER_SITES=	${MASTER_SITE_GITHUB:=rabbitmq/}
-EXTRACT_SUFX=	.tar.xz
-GITHUB_PROJECT=	rabbitmq-server
-GITHUB_RELEASE=	v${PKGVERSION_NOREV}
+DISTNAME=		rabbitmq-server-3.11.3
+PKGNAME=		${DISTNAME:S/-server//}
+CATEGORIES=		net
+MASTER_SITES=		${MASTER_SITE_GITHUB:=rabbitmq/}
+EXTRACT_SUFX=		.tar.xz
+GITHUB_PROJECT=		rabbitmq-server
+GITHUB_RELEASE=		v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.rabbitmq.com/
-COMMENT=	Implementation of AMQP that provides robust messaging for applications
-LICENSE=	mpl-1.1
+MAINTAINER=		pkgsrc-users@NetBSD.org
+HOMEPAGE=		https://www.rabbitmq.com/
+COMMENT=		Implementation of AMQP that provides robust messaging for applications
+LICENSE=		mpl-1.1
 
 USE_TOOLS+=		bash:run gmake unzip zip
 
