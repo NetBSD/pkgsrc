@@ -1,0 +1,45 @@
+$NetBSD: patch-bin_gng,v 1.1 2022/12/27 16:14:03 schmonz Exp $
+
+Use pkgsrc paths.
+
+--- bin/gng.orig	2021-03-29 06:32:44.000000000 +0000
++++ bin/gng
+@@ -1,24 +1,15 @@
+ #!/usr/bin/env bash
++
++PREFIX=@PREFIX@
++
+ readonly SAVED_OPTS="$(
+   shopt -po
+   shopt -p
+ )"
+-SOURCE="${BASH_SOURCE[0]}"
+-while [ -h "$SOURCE" ]; do # resolve $SOURCE until the file is no longer a symlink
+-  TARGET="$(readlink "$SOURCE")"
+-  if [[ $TARGET == /* ]]; then
+-    SOURCE="$TARGET"
+-  else
+-    SELF_DIR="$(dirname "$SOURCE")"
+-    SOURCE="$SELF_DIR/$TARGET" # if $SOURCE was a relative symlink, we need to resolve it relative to the path where the symlink file was located
+-  fi
+-done
+-SELF_DIR="$(cd -P "$(dirname "$SOURCE")" >/dev/null 2>&1 && pwd)"
+-readonly SELF_DIR
+ 
+ # shellcheck disable=SC1090
+-source "${SELF_DIR}/../lib/common.sh" || {
+-  echo "Failed to load common.sh in ${SELF_DIR}"
++source "${PREFIX}/share/gng/common.sh" || {
++  echo "Failed to load ${PREFIX}/share/gng/common.sh"
+   exit 1
+ }
+ # DEFAULTS may be overridden by calling environment.
+@@ -78,7 +69,7 @@ function __install_gw() {
+     info "Installing Gradle Wrapper in ${dir}. (version=${version}, distributionType=${type}, mirrorUrl=${mirrorUrl:-<Not Specified>})"
+ 
+     #Copy the embedded Gradle Wrapper
+-    local srcDir="${SELF_DIR}/.."
++    local srcDir="${PREFIX}/share/gng"
+     cp -f "${srcDir}/gradle/gng.cfg" "${dir}/gradle/"
+     cp -f "${srcDir}/gradle/gradlew" "${dir}/"
+     cp -f "${srcDir}/gradle/gradlew.bat" "${dir}/"

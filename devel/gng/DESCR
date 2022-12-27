@@ -1,0 +1,6 @@
+GNG is a script that automatically search your gradlew when you are
+inside your Gradle project and execute it. It also contains an official
+Gradle wrapper. You can create gradle projects from scratch without
+installing Gradle.
+
+This is originally inspired by gdub and gradlew-bootstrap.
