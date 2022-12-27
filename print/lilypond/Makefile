@@ -1,35 +1,35 @@
-# $NetBSD: Makefile,v 1.142 2022/12/27 15:57:01 schmonz Exp $
+# $NetBSD: Makefile,v 1.143 2022/12/27 16:57:21 schmonz Exp $
 
-DISTNAME=	lilypond-2.24.0
-CATEGORIES=	print
-MASTER_SITES=	https://lilypond.org/download/sources/v2.24/
+DISTNAME=		lilypond-2.24.0
+CATEGORIES=		print
+MASTER_SITES=		https://lilypond.org/download/sources/v2.24/
 
-MAINTAINER=	schmonz@NetBSD.org
-HOMEPAGE=	http://lilypond.org/
-COMMENT=	GNU Music Typesetter
-LICENSE=	gnu-gpl-v3 AND gnu-fdl-v1.3 AND ofl-v1.1
+MAINTAINER=		schmonz@NetBSD.org
+HOMEPAGE=		http://lilypond.org/
+COMMENT=		GNU Music Typesetter
+LICENSE=		gnu-gpl-v3 AND gnu-fdl-v1.3 AND ofl-v1.1
 
-BUILD_DEPENDS+=	tex-fontinst-[0-9]*:../../fonts/tex-fontinst
-BUILD_DEPENDS+=	tex-metafont-[0-9]*:../../fonts/tex-metafont
-BUILD_DEPENDS+=	tex-metapost-[0-9]*:../../graphics/tex-metapost
-BUILD_DEPENDS+=	urw-fonts-[0-9]*:../../fonts/urw-fonts
-BUILD_DEPENDS+=	intlfonts-[0-9]*:../../fonts/intlfonts
-BUILD_DEPENDS+=	font-cronyx-cyrillic-[0-9]*:../../fonts/font-cronyx-cyrillic
-BUILD_DEPENDS+=	kochi-ttf-[0-9]*:../../fonts/kochi-ttf
-BUILD_DEPENDS+=	fontforge>=20120731:../../fonts/fontforge
-BUILD_DEPENDS+=	t1utils>=1.33:../../fonts/t1utils
-BUILD_DEPENDS+=	dblatex-[0-9]*:../../textproc/dblatex
-BUILD_DEPENDS+=	rsync-[0-9]*:../../net/rsync
-BUILD_DEPENDS+=	netpbm-[0-9]*:../../graphics/netpbm
-BUILD_DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
+BUILD_DEPENDS+=		tex-fontinst-[0-9]*:../../fonts/tex-fontinst
+BUILD_DEPENDS+=		tex-metafont-[0-9]*:../../fonts/tex-metafont
+BUILD_DEPENDS+=		tex-metapost-[0-9]*:../../graphics/tex-metapost
+BUILD_DEPENDS+=		urw-fonts-[0-9]*:../../fonts/urw-fonts
+BUILD_DEPENDS+=		intlfonts-[0-9]*:../../fonts/intlfonts
+BUILD_DEPENDS+=		font-cronyx-cyrillic-[0-9]*:../../fonts/font-cronyx-cyrillic
+BUILD_DEPENDS+=		kochi-ttf-[0-9]*:../../fonts/kochi-ttf
+BUILD_DEPENDS+=		fontforge>=20120731:../../fonts/fontforge
+BUILD_DEPENDS+=		t1utils>=1.33:../../fonts/t1utils
+BUILD_DEPENDS+=		dblatex-[0-9]*:../../textproc/dblatex
+BUILD_DEPENDS+=		rsync-[0-9]*:../../net/rsync
+BUILD_DEPENDS+=		netpbm-[0-9]*:../../graphics/netpbm
+BUILD_DEPENDS+=		ImageMagick-[0-9]*:../../graphics/ImageMagick
 
-DEPENDS+=	tex-cyrillic-[0-9]*:../../print/tex-cyrillic
-DEPENDS+=	tex-lh-[0-9]*:../../fonts/tex-lh
-DEPENDS+=	tex-psnfss-[0-9]*:../../fonts/tex-psnfss
-DEPENDS+=	tex-epsf-[0-9]*:../../print/tex-epsf
-DEPENDS+=	tex-graphics-[0-9]*:../../print/tex-graphics
-DEPENDS+=	tex-tex-gyre-[0-9]*:../../fonts/tex-tex-gyre
-DEPENDS+=	potrace>=1.8:../../graphics/potrace
+DEPENDS+=		tex-cyrillic-[0-9]*:../../print/tex-cyrillic
+DEPENDS+=		tex-lh-[0-9]*:../../fonts/tex-lh
+DEPENDS+=		tex-psnfss-[0-9]*:../../fonts/tex-psnfss
+DEPENDS+=		tex-epsf-[0-9]*:../../print/tex-epsf
+DEPENDS+=		tex-graphics-[0-9]*:../../print/tex-graphics
+DEPENDS+=		tex-tex-gyre-[0-9]*:../../fonts/tex-tex-gyre
+DEPENDS+=		potrace>=1.8:../../graphics/potrace
 
 GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES
