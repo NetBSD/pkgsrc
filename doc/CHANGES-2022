@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6366 2022/12/27 16:14:47 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.6367 2022/12/27 16:17:38 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9498,3 +9498,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated print/lilypond to 2.24.0 [schmonz 2022-12-27]
 	Added devel/asdf version 0.11.0 [schmonz 2022-12-27]
 	Added devel/gng version 1.0.3 [schmonz 2022-12-27]
+	Added devel/swagger-codegen version 3.0.36 [schmonz 2022-12-27]
