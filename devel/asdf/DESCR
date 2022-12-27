@@ -1,0 +1,15 @@
+asdf is a CLI tool that can manage multiple language runtime versions on
+a per-project basis. It is like `gvm`, `nvm`, `rbenv` & `pyenv` (and
+more) all in one! Simply install your language's plugin!
+
+Why use asdf?
+
+- single CLI for multiple languages
+- consistent commands to manage all your languages
+- single global config keeping defaults in one place
+- single `.tool-versions` config file per project
+- support for existing config files `.node-version`, `.nvmrc`,
+  `.ruby-version` for easy migration
+- automatically switches runtime versions as you traverse your directories
+- simple plugin system to add support for your language of choice
+- shell completion available for common shells (Bash, Zsh, Fish, Elvish)
