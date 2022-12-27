@@ -1,6 +1,6 @@
-$NetBSD: patch-bin_gng,v 1.1 2022/12/27 16:14:03 schmonz Exp $
+$NetBSD: patch-bin_gng,v 1.2 2022/12/27 18:28:34 abs Exp $
 
-Use pkgsrc paths.
+Use pkgsrc paths, and update for python 3.x
 
 --- bin/gng.orig	2021-03-29 06:32:44.000000000 +0000
 +++ bin/gng
@@ -43,3 +43,12 @@ Use pkgsrc paths.
      cp -f "${srcDir}/gradle/gng.cfg" "${dir}/gradle/"
      cp -f "${srcDir}/gradle/gradlew" "${dir}/"
      cp -f "${srcDir}/gradle/gradlew.bat" "${dir}/"
+@@ -182,7 +173,7 @@ function bootstrap() {
+   if [[ "${_arg_version}" == "latest" ]]; then
+     info "Fetching the latest Gradle version from services.gradle.org"
+     _arg_version=$(curl -m 60 -sSL "https://services.gradle.org/versions/current" |
+-      python -c "import json,sys;obj=json.load(sys.stdin);print obj['version'];") || die "Failed to fetch the version info!"
++      python -c "import json,sys;obj=json.load(sys.stdin);print(obj['version']);") || die "Failed to fetch the version info!"
+     info "The latest Gradle version is ${_arg_version}"
+   fi
+   __install_gw "${_arg_version}" "${_arg_distribution_type}" "${_arg_mirror:-}" "${_arg_destination_dir}"
