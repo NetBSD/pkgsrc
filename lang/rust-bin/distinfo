@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.22 2022/12/11 20:21:08 he Exp $
+$NetBSD: distinfo,v 1.23 2022/12/27 21:26:59 minskim Exp $
 
+BLAKE2s (rust-bin-1.64.0/rust-1.64.0-aarch64-apple-darwin.tar.gz) = 22c3a7016f235e2d29825f371976cd8d3e235ac0d97b58aeee780e3818e81f1f
+SHA512 (rust-bin-1.64.0/rust-1.64.0-aarch64-apple-darwin.tar.gz) = c21797d1cf21c409cea46d3dc9d33591c468b77d915f019c9cf2f031b3dc78af4d3b22d0edb6f5032ca6083f52b7ab969878b735ea9aaafe7c0336fe847814c3
+Size (rust-bin-1.64.0/rust-1.64.0-aarch64-apple-darwin.tar.gz) = 232722441 bytes
 BLAKE2s (rust-bin-1.64.0/rust-1.64.0-aarch64-unknown-linux-gnu.tar.gz) = 1c32110fdf2be923932093803b4b33e5ad9e575bf7c6fe3b11368f9484f3559d
 SHA512 (rust-bin-1.64.0/rust-1.64.0-aarch64-unknown-linux-gnu.tar.gz) = 61284a6f5fb5b6b8fba8a17fbe72b27c03dcc04f1a252725b001bf2fa38b5df7ca12bc3aabaf2eb631c3eb9de8c9c563e96b034e2532385178192dcf39377fb4
 Size (rust-bin-1.64.0/rust-1.64.0-aarch64-unknown-linux-gnu.tar.gz) = 421442906 bytes
