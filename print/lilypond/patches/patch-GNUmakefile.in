@@ -1,12 +1,12 @@
-$NetBSD: patch-ab,v 1.5 2014/01/05 22:29:47 wiz Exp $
+$NetBSD: patch-GNUmakefile.in,v 1.1 2022/12/27 15:57:01 schmonz Exp $
 
 Do not install emacs lisp files.
 
---- GNUmakefile.in.orig	2013-01-12 14:15:07.000000000 +0000
+--- GNUmakefile.in.orig	2022-12-13 19:20:39.000000000 +0000
 +++ GNUmakefile.in
 @@ -7,7 +7,7 @@ SUBDIRS = python scripts \
  	mf ly \
- 	tex ps scm \
+ 	ps scm \
  	po \
 -	elisp vim \
 +	vim \
