@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6370 2022/12/27 16:51:21 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.6371 2022/12/27 16:55:22 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9502,3 +9502,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/erlang to 25.2 [schmonz 2022-12-27]
 	Updated lang/erlang-doc to 25.2 [schmonz 2022-12-27]
 	Updated lang/erlang-man to 25.2 [schmonz 2022-12-27]
+	Updated lang/elixir to 1.14.2 [schmonz 2022-12-27]
