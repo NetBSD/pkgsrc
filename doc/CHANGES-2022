@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6362 2022/12/26 22:14:45 pin Exp $
+$NetBSD: CHANGES-2022,v 1.6363 2022/12/27 13:59:25 he Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9494,3 +9494,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/diffsitter to 0.7.3 [pin 2022-12-26]
 	Updated meta-pkgs/texlive-collection-latexextra to 2022pre7 [wiz 2022-12-26]
 	Updated devel/git-cliff to 1.0.0 [pin 2022-12-26]
+	Updated lang/clang to 15.0.6nb1 [he 2022-12-27]
