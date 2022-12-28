@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2022/12/08 16:14:17 bsiegert Exp $
+# $NetBSD: Makefile,v 1.3 2022/12/28 18:56:17 nikita Exp $
 
-PKGNAME=	gopass-1.14.9
-PKGREVISION=	1
+PKGNAME=	gopass-1.15.2
 DISTNAME=	gopass-${GITHUB_TAG}
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gopasspw/}
