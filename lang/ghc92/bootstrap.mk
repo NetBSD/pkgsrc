@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.2 2022/07/07 16:26:37 jperkin Exp $
+# $NetBSD: bootstrap.mk,v 1.3 2022/12/28 10:28:17 wiz Exp $
 # -----------------------------------------------------------------------------
 # Select a bindist of bootstrapping compiler on a per-platform basis.
 #
@@ -271,7 +271,7 @@ post-bootstrap:
 	@${ECHO} "Your bootstrap kit has the following run-time dependencies:"
 .for pkg in ${BOOT_GHC_DEPS}
 	@${PRINTF} "  * %-8s" "${pkg}:"
-.  if !empty(USE_BUILTIN.${pkg}:M[nN][oO])
+.  if ${USE_BUILTIN.${pkg}:tl} == no
 	@${ECHO_N} " pkgsrc ${BUILDLINK_PKGNAME.${pkg}}"
 .  else
 	@${ECHO_N} " native"
