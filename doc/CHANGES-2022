@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6377 2022/12/28 09:40:24 adam Exp $
+$NetBSD: CHANGES-2022,v 1.6378 2022/12/28 10:10:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9510,3 +9510,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/radare2 to 5.8.0 [khorben 2022-12-28]
 	Updated security/libksba to 1.6.3 [adam 2022-12-28]
 	Updated security/gnupg2 to 2.2.41 [adam 2022-12-28]
+	Updated www/libpsl to 0.21.2 [adam 2022-12-28]
+	Updated devel/py-pybind11 to 2.10.2 [adam 2022-12-28]
