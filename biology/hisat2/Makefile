@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2022/06/30 11:18:04 nia Exp $
+# $NetBSD: Makefile,v 1.10 2022/12/28 15:27:16 bacon Exp $
 
 DISTNAME=	hisat2-2.2.1
 PKGREVISION=	2
@@ -6,7 +6,7 @@ CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=DaehwanKimLab/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	bacon@NetBSD.org
+OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://ccb.jhu.edu/software/hisat2/index.shtml
 COMMENT=	Alignment program for mapping next-generation sequencing reads
 LICENSE=	gnu-gpl-v3

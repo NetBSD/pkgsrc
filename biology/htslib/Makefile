@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2022/12/13 10:27:03 adam Exp $
+# $NetBSD: Makefile,v 1.30 2022/12/28 15:27:16 bacon Exp $
 
 DISTNAME=	htslib-1.16
 CATEGORIES=	biology
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=samtools/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	bacon@NetBSD.org
+OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://www.htslib.org/
 COMMENT=	C library for high-throughput sequencing data formats
 LICENSE=	mit
