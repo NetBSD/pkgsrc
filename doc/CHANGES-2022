@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6387 2022/12/28 20:25:01 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.6388 2022/12/28 22:26:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9520,3 +9520,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/py-neovim version 0.4.3 [nikita 2022-12-28]
 	Added textproc/nlohmann-json version 3.11.2 [nikita 2022-12-28]
 	Updated pkgtools/rc.d-boot to 20221225 [schmonz 2022-12-28]
+	Updated databases/sqlite3 to 3.40.1 [adam 2022-12-28]
+	Updated databases/sqlite3-docs to 3.40.1 [adam 2022-12-28]
+	Updated databases/sqlite3-tcl to 3.40.1 [adam 2022-12-28]
+	Updated devel/lemon to 1.0.3.40.1 [adam 2022-12-28]
