@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/12/28 19:28:16 nikita Exp $
+
+BLAKE2s (pynvim-0.4.3.tar.gz) = 0c0aa7bbcdfd6f99b354fe3241a7e433545738cd718a2f60caea7f4bbbf0e053
+SHA512 (pynvim-0.4.3.tar.gz) = 4adb22bafef5b302eb5220d590e2a3c46daa14eba8c3e9de3b391ffd3fe4739b4b11d3ce85b154bbb47042e9ce57d604fea8bd96004fe95436394a5009e71679
+Size (pynvim-0.4.3.tar.gz) = 56239 bytes
