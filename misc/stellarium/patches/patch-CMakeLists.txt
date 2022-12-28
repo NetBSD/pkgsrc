@@ -1,11 +1,11 @@
-$NetBSD: patch-CMakeLists.txt,v 1.7 2022/10/03 09:07:03 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.8 2022/12/28 19:12:30 adam Exp $
 
 Do not use ccache.
 Do not use application bundle on Darwin.
 
---- CMakeLists.txt.orig	2022-10-01 09:08:24.000000000 +0000
+--- CMakeLists.txt.orig	2022-12-25 14:37:17.000000000 +0000
 +++ CMakeLists.txt
-@@ -204,14 +204,6 @@ IF(OPENGL_DEBUG_LOGGING)
+@@ -208,14 +208,6 @@ IF(OPENGL_DEBUG_LOGGING)
       ADD_DEFINITIONS(-DQ_ENABLE_OPENGL_FUNCTIONS_DEBUG)
  ENDIF()
  
@@ -20,7 +20,7 @@ Do not use application bundle on Darwin.
  
  # Add gprof build options if necessary.  Note gmon.out will be created in working directory when Stellarium is executed
  IF(${CMAKE_BUILD_TYPE} MATCHES "GProf")
-@@ -259,7 +251,7 @@ IF(${CMAKE_BUILD_TYPE} MATCHES "Fuzzer")
+@@ -263,7 +255,7 @@ IF(${CMAKE_BUILD_TYPE} MATCHES "Fuzzer")
       ENDIF()
  ENDIF()
  
@@ -29,7 +29,7 @@ Do not use application bundle on Darwin.
       SET(APPLE 1)
       SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -stdlib=libc++")
       # share data location:
-@@ -364,7 +356,7 @@ IF("${CMAKE_CXX_COMPILER_ID}" MATCHES "C
+@@ -368,7 +360,7 @@ IF("${CMAKE_CXX_COMPILER_ID}" MATCHES "C
       IF(${CMAKE_CXX_COMPILER_VERSION} VERSION_GREATER 3.3)
            SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-unused-const-variable -Wno-unused-result")
       ENDIF()
@@ -38,7 +38,7 @@ Do not use application bundle on Darwin.
            SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fno-common -Wall -Wextra -Wno-unused-parameter")
            SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fno-common -Wall -Wextra -Wno-unknown-warning-option")
       ENDIF()
-@@ -802,7 +794,7 @@ endif()
+@@ -838,7 +830,7 @@ ENDIF()
  
  ########### Set some global variables ###########
  IF(UNIX AND NOT WIN32)
@@ -47,12 +47,12 @@ Do not use application bundle on Darwin.
            SET(CMAKE_INSTALL_PREFIX "${PROJECT_BINARY_DIR}/Stellarium.app/Contents")
       ELSE()
            ADD_DEFINITIONS(-DINSTALL_DATADIR="${CMAKE_INSTALL_PREFIX}/${SDATALOC}")          
-@@ -946,7 +938,7 @@ IF(GENERATE_PACKAGE_TARGET)
+@@ -983,7 +975,7 @@ IF(GENERATE_PACKAGE_TARGET)
  ENDIF()
  
  ########### macOS Bundling ###############
 -IF(APPLE)
 +IF(FALSE)
-      GET_FILENAME_COMPONENT(_qt_bin_dir "${QMAKE_LOCATION}" DIRECTORY)
-      FIND_PROGRAM(MACDEPLOYQT_COMMAND macdeployqt HINTS "${_qt_bin_dir}")
-      IF(MACDEPLOYQT_COMMAND)
+      MESSAGE(STATUS "macOS deployment target: ${CMAKE_OSX_DEPLOYMENT_TARGET} (${CMAKE_OSX_ARCHITECTURES})")
+      SET(PACKAGE_OSX_TARGET ${CMAKE_OSX_DEPLOYMENT_TARGET})
+      ADD_DEFINITIONS(-DPACKAGE_OSX_TARGET)
