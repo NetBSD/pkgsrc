@@ -1,0 +1,3 @@
+Python client for neovim
+
+This library provides Python support in neovim through it's msgpack-rpc API
