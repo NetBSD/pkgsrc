@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6376 2022/12/28 04:37:08 khorben Exp $
+$NetBSD: CHANGES-2022,v 1.6377 2022/12/28 09:40:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9508,3 +9508,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated converters/bdf2psf to 1.212 [fcambus 2022-12-27]
 	Updated sysutils/py-diffoscope to 229 [khorben 2022-12-28]
 	Updated devel/radare2 to 5.8.0 [khorben 2022-12-28]
+	Updated security/libksba to 1.6.3 [adam 2022-12-28]
+	Updated security/gnupg2 to 2.2.41 [adam 2022-12-28]
