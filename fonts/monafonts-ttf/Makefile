@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/03/20 11:57:39 nia Exp $
-# $FreeBSD: ports/japanese/monafonts-ttf/Makefile,v 1.1 2003/10/14 13:35:38 nobutaka Exp $
+# $NetBSD: Makefile,v 1.7 2022/12/28 13:57:22 wiz Exp $
 
 DISTNAME=		monafont-ttf-2.90
 PKGNAME=		${DISTNAME:S/font/fonts/}

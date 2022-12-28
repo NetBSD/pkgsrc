@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2017/09/04 18:00:59 wiz Exp $
-# FreeBSD Id: ports/net/ssmping/Makefile,v 1.1 2006/08/25 19:02:31 miwi Exp
+# $NetBSD: Makefile,v 1.6 2022/12/28 13:57:22 wiz Exp $
 
 DISTNAME=	ssmping-0.9
 CATEGORIES=	net
