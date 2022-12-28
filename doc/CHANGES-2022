@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6378 2022/12/28 10:10:31 adam Exp $
+$NetBSD: CHANGES-2022,v 1.6379 2022/12/28 12:18:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9512,3 +9512,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/gnupg2 to 2.2.41 [adam 2022-12-28]
 	Updated www/libpsl to 0.21.2 [adam 2022-12-28]
 	Updated devel/py-pybind11 to 2.10.2 [adam 2022-12-28]
+	Updated editors/mined to 2022.27 [wiz 2022-12-28]
