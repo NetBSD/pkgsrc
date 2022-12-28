@@ -1,7 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/09/09 23:01:35 tnn Exp $
-
-# Original port from FreeBSD ports and DragonFly dports
-# Created by: Koop Mast <kwm@FreeBSD.org>
+# $NetBSD: Makefile,v 1.2 2022/12/28 13:57:22 wiz Exp $
 
 DISTNAME=	libdevq-0.0.2
 CATEGORIES=	devel
