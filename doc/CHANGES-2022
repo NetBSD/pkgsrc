@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6382 2022/12/28 19:16:42 adam Exp $
+$NetBSD: CHANGES-2022,v 1.6383 2022/12/28 19:30:53 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9517,3 +9517,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/gopass to 1.15.2 [nikita 2022-12-28]
 	Updated misc/stellarium to 1.2 [adam 2022-12-28]
 	Updated databases/py-dbf to 0.99.3 [adam 2022-12-28]
+	Added devel/py-neovim version 0.4.3 [nikita 2022-12-28]
+	Updated devel/py-neovim to 0.4.3 [nikita 2022-12-28]
