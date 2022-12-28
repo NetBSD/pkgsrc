@@ -1,0 +1,15 @@
+$NetBSD: patch-makemined,v 1.1 2022/12/28 12:18:45 wiz Exp $
+
+Always use BSD makefile for pkgsrc.
+
+--- makemined.orig	2015-04-15 09:04:47.000000000 +0000
++++ makemined
+@@ -90,7 +90,7 @@ esac
+ # select makefile suitable for operating system;
+ # to add a system-specific make option and have it ignored for configure:
+ # add this behind $makevars: ${ignore-OPTION=value}
+-case `uname` in
++case BSD in
+ Linux*)	if [ -n "$ANDROID_ROOT" ]
+ 	then	# Android: no `make`
+ 		sh mkmined $1 $makevars
