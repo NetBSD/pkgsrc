@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.123 2022/10/26 10:31:31 wiz Exp $
+# $NetBSD: Makefile,v 1.124 2022/12/28 09:25:30 nia Exp $
 
 DISTNAME=	feh-3.9.1
 PKGREVISION=	1
@@ -19,6 +19,7 @@ CFLAGS+=	-DHAVE_STRING_H=1
 
 # for alphasort(3)
 CFLAGS.NetBSD+=		-D_NETBSD_SOURCE
+CFLAGS.SunOS+=		-D__EXTENSIONS__
 
 # for undefined reference error from strverscmp(3)
 .include "../../mk/bsd.prefs.mk"
