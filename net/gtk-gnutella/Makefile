@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.119 2022/12/25 17:55:14 wiz Exp $
+# $NetBSD: Makefile,v 1.120 2022/12/28 22:57:51 wiz Exp $
 
 DISTNAME=	gtk-gnutella-1.2.2
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtk-gnutella/}
 EXTRACT_SUFX=	.tar.xz
@@ -15,6 +16,10 @@ USE_TOOLS+=		gmake msgfmt pkg-config
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./build.sh
 CONFIGURE_ARGS+=	--configure-only
+# causes segfaults because the malloc() is used by other libraries as well
+# before it is set up completely, see discussion in
+# https://github.com/gtk-gnutella/gtk-gnutella/pull/37
+CONFIGURE_ARGS+=	--disable-malloc
 CONFIGURE_ARGS+=	--prefix=${DESTDIR}/${PREFIX}
 CONFIGURE_ARGS+=	--localedir="${PREFIX}/${PKGLOCALEDIR}/locale"
 CONFIGURE_ARGS+=	--cc=${CC:Q}
