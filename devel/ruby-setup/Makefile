@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/03/17 14:08:41 taca Exp $
-# $FreeBSD: ports/devel/ruby-setup.rb/Makefile,v 1.20 2006/06/08 20:25:19 sem Exp $
+# $NetBSD: Makefile,v 1.6 2022/12/28 13:57:22 wiz Exp $
 
 DISTNAME=	setup-3.4.1
 PKGREVISION=	1
