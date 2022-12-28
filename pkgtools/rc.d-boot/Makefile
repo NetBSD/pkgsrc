@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2022/12/17 21:36:11 triaxx Exp $
+# $NetBSD: Makefile,v 1.14 2022/12/28 20:24:50 schmonz Exp $
 #
 
-PKGNAME=		rc.d-boot-20221202
+PKGNAME=		rc.d-boot-20221225
 CATEGORIES=		pkgtools
 
 MAINTAINER=		schmonz@NetBSD.org
@@ -30,7 +30,7 @@ SUBST_FILES.paths=	rc.d-boot
 SUBST_FILES.paths+=	org.pkgsrc.rc.d-boot.plist \
 			pkgsrc-rc.d-boot \
 			pkgsrc-rc.d-boot.service
-SUBST_VARS.paths=	GREP PKG_SYSCONFDIR PKGNAME PREFIX RCD_SCRIPTS_DIR RCORDER VARBASE
+SUBST_VARS.paths=	GREP SYSCONFBASE PKGNAME PREFIX RCD_SCRIPTS_DIR RCORDER VARBASE
 
 FILES_SUBST+=		RCDBOOT_STYLE=${RCDBOOT_STYLE:Q}
 FILES_SUBST+=		RCD_SCRIPTS_DIR=${RCD_SCRIPTS_DIR:Q}
