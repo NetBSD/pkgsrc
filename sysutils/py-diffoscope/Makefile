@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2022/11/09 22:10:20 khorben Exp $
+# $NetBSD: Makefile,v 1.17 2022/12/28 03:58:58 khorben Exp $
 
-DISTNAME=	diffoscope-226
+DISTNAME=	diffoscope-229
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/diffoscope/}
