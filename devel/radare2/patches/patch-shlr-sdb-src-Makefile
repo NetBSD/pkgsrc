@@ -1,33 +1,33 @@
-$NetBSD: patch-shlr-sdb-src-Makefile,v 1.1 2022/09/21 13:49:39 ast Exp $
+$NetBSD: patch-shlr-sdb-src-Makefile,v 1.2 2022/12/28 04:36:55 khorben Exp $
 
 * CC is not defined in MAKEFLAGS here, but _CC is so we use that
 
---- shlr/sdb/src/Makefile.orig	2022-09-13 18:08:16.000000000 +0200
-+++ shlr/sdb/src/Makefile	2022-09-21 12:16:05.786393040 +0200
-@@ -65,7 +65,7 @@
+--- shlr/sdb/src/Makefile.orig	2022-12-22 23:40:31.000000000 +0000
++++ shlr/sdb/src/Makefile
+@@ -67,7 +67,7 @@ bin $(BIN): bin_deps
  ifneq ($(SILENT),)
  	@echo BIN ${BIN}
  endif
--	$(CC) ${LDFLAGS} -o ${BIN} main.o ${OBJ}
-+	$(_CC) ${LDFLAGS} -o ${BIN} main.o ${OBJ}
+-	$(CC) ${LDFLAGS} -o ${BIN} entry.o ${OBJ}
++	$(_CC) ${LDFLAGS} -o ${BIN} entry.o ${OBJ}
  
  mrproper clean:
- 	rm -rf ${OBJ} ${SOBJ} main.o libsdb.a a.out ${BIN} sdb.dSYM
-@@ -76,7 +76,7 @@
+ 	rm -rf ${OBJ} ${SOBJ} entry.o libsdb.a a.out ${BIN} sdb.dSYM
+@@ -78,7 +78,7 @@ mrproper clean:
  ifneq ($(SILENT),)
  	@echo LD $<
  endif
--	$(CC) $(LDFLAGS) -c $(CFLAGS) -o $@ $<
-+	$(_CC) $(LDFLAGS) -c $(CFLAGS) -o $@ $<
+-	$(CC) $(LDFLAGS) -c $(CFLAGS) $(SDB_CFLAGS) -o $@ $<
++	$(_CC) $(LDFLAGS) -c $(CFLAGS) $(SDB_CFLAGS) -o $@ $<
  
  S=$
  
-@@ -84,7 +84,7 @@
+@@ -86,7 +86,7 @@ S=$
  ifneq ($(SILENT),)
  	@echo CC $<
  endif
--	$(CC) -c ${CPPFLAGS} ${CFLAGS} ${CFLAGS_SHARED} -o $@ $<
-+	$(_CC) -c ${CPPFLAGS} ${CFLAGS} ${CFLAGS_SHARED} -o $@ $<
+-	$(CC) -c ${CPPFLAGS} ${CFLAGS} $(SDB_CFLAGS) ${CFLAGS_SHARED} -o $@ $<
++	$(_CC) -c ${CPPFLAGS} ${CFLAGS} $(SDB_CFLAGS) ${CFLAGS_SHARED} -o $@ $<
  
  %.o.o: %.c
  ifneq ($(SILENT),)
