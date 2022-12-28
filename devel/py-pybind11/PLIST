@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2022/11/02 08:47:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/12/28 10:10:14 adam Exp $
 bin/pybind11-config
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -33,6 +33,8 @@ ${PYSITELIB}/pybind11/include/pybind11/detail/internals.h
 ${PYSITELIB}/pybind11/include/pybind11/detail/type_caster_base.h
 ${PYSITELIB}/pybind11/include/pybind11/detail/typeid.h
 ${PYSITELIB}/pybind11/include/pybind11/eigen.h
+${PYSITELIB}/pybind11/include/pybind11/eigen/matrix.h
+${PYSITELIB}/pybind11/include/pybind11/eigen/tensor.h
 ${PYSITELIB}/pybind11/include/pybind11/embed.h
 ${PYSITELIB}/pybind11/include/pybind11/eval.h
 ${PYSITELIB}/pybind11/include/pybind11/functional.h
