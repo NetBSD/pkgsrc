@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6381 2022/12/28 18:56:28 nikita Exp $
+$NetBSD: CHANGES-2022,v 1.6382 2022/12/28 19:16:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9515,3 +9515,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated editors/mined to 2022.27 [wiz 2022-12-28]
 	Updated net/powerdns to 4.6.4 [otis 2022-12-28]
 	Updated security/gopass to 1.15.2 [nikita 2022-12-28]
+	Updated misc/stellarium to 1.2 [adam 2022-12-28]
+	Updated databases/py-dbf to 0.99.3 [adam 2022-12-28]
