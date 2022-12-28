@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1338 2022/12/25 11:18:58 wiz Exp $
+# $NetBSD: Makefile,v 1.1339 2022/12/28 20:18:21 nikita Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -540,6 +540,7 @@ SUBDIR+=	mythes
 SUBDIR+=	namazu
 SUBDIR+=	nbsed
 SUBDIR+=	ndtpd
+SUBDIR+=	nlohmann-json
 SUBDIR+=	nltk_data-abc
 SUBDIR+=	nltk_data-alpino
 SUBDIR+=	nltk_data-averaged_perceptron_tagger
