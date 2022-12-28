@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.16 2022/12/24 12:44:15 wiz Exp $
+$NetBSD: distinfo,v 1.17 2022/12/28 04:36:55 khorben Exp $
 
-BLAKE2s (radare2-5.7.8.tar.gz) = 3e07c2d806d5c094046f52924d60cd410c8e367eb82f2990d4bb2e0b13d92821
-SHA512 (radare2-5.7.8.tar.gz) = 7c819a052f5e4b3da72b945915fca92a747c52dc2e2fa8483a8c2d8e71479ce374efbbe2bc02b1b4af26db6a891b6e44cdbb9e062de2f13b22a258cceab561f6
-Size (radare2-5.7.8.tar.gz) = 10324020 bytes
+BLAKE2s (radare2-5.8.0.tar.gz) = d16762a681544c372644824436334232e58ab9cbbf20e429397a9f118c155353
+SHA512 (radare2-5.8.0.tar.gz) = a780e595e8fd5c821cd8eea5ee61e2a0476ed4f9e72490eae244d4a110a34000a0cdb73463beac7ff18177d269cf7ae00a3a146e6d6aeb61b48bc543b622c7a2
+Size (radare2-5.8.0.tar.gz) = 10994255 bytes
 SHA1 (patch-libr_io_p_shm.mk) = 77e33c5532f6c072a12b9c3c882667521188e002
-SHA1 (patch-shlr-sdb-src-Makefile) = a285400cdb72ace9cc6bebbea6d2c970f25886ca
+SHA1 (patch-shlr-sdb-src-Makefile) = 414260d6010873f04ca8e614438fd674af0543d2
+SHA1 (patch-shlr_qjs_src_cutils.h) = f36e586889dd18ee4354c1a1bcbad52c95951eda
 SHA1 (patch-sys_ios-sdk.sh) = 3f50b49e75dea1ac02f6d2ce8c556c77276e51d6
