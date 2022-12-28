@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.41 2022/05/08 12:06:01 triaxx Exp $
+$NetBSD: distinfo,v 1.42 2022/12/28 10:13:29 nia Exp $
 
 BLAKE2s (openttd-12.2-source.tar.xz) = 340eb17b3123514fc845011abff5ab4e1432c17e5c29c0f3be2f99360eabfeaf
 SHA512 (openttd-12.2-source.tar.xz) = 577792faee1d5e0c19fbfe31501dab3359f8e1327caa87e6378bb3e616ab6b2c64d02044c6ac99f7c40397df7bc6847a6b432852a5318a2db574203ddebfaef6
 Size (openttd-12.2-source.tar.xz) = 7377496 bytes
 SHA1 (patch-cmake_InstallAndPackage.cmake) = 18b02c11bf59639124c2a852d5a19dda3ae0ff81
+SHA1 (patch-src_core_alloc__func.hpp) = 9c5a855316e3262c51c1b4c836de760d53abb759
