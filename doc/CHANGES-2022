@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6385 2022/12/28 20:20:14 nikita Exp $
+$NetBSD: CHANGES-2022,v 1.6386 2022/12/28 20:20:56 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9518,5 +9518,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated misc/stellarium to 1.2 [adam 2022-12-28]
 	Updated databases/py-dbf to 0.99.3 [adam 2022-12-28]
 	Added devel/py-neovim version 0.4.3 [nikita 2022-12-28]
-	Added textproc/nlohmann-json version 3.11.2 [nikita 2022-12-28]
 	Added textproc/nlohmann-json version 3.11.2 [nikita 2022-12-28]
