@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2022/12/11 21:25:47 bacon Exp $
+# $NetBSD: Makefile,v 1.3 2022/12/28 15:27:16 bacon Exp $
 
 DISTNAME=	fastq-trim-0.1.2
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
 
-MAINTAINER=	bacon@NetBSD.org
+OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://github.com/outpaddling/Fastq-trim
 COMMENT=	Lightening fast sequence read trimmer
 LICENSE=	2-clause-bsd
