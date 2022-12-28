@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2022/12/28 12:18:45 wiz Exp $
+$NetBSD: distinfo,v 1.14 2022/12/28 15:20:02 wiz Exp $
 
 BLAKE2s (BIG5.TXT) = 08325303fee2aeb477ffdfd5b9d5ffdf3df0fcf5ec5fec5ee2db3450491d4535
 SHA512 (BIG5.TXT) = 4a3fe7932028ef1397e15ec655481dfa3b326510796433c7a5b5c966eb1aead34b9831164b73df6e26f36dd6c6022a1f7899a66f65dfce263950b4c31bae4769
@@ -13,3 +13,4 @@ BLAKE2s (mined-2022.27.tar.gz) = 8a25ca0e4797d2a8ad82aaf8c3baf3aa88dc99153182d58
 SHA512 (mined-2022.27.tar.gz) = 87c9b73215ef5ab00ff85f552365dd0321044055d78692d46e0e83085cfb0ef1f5aff11607636a0e017106f0ed03ddf577b30946533f2a540da00f51134cea59
 Size (mined-2022.27.tar.gz) = 7252534 bytes
 SHA1 (patch-makemined) = edd3f9d03acd29a5c32aa8aee23d006c49dd7e9a
+SHA1 (patch-src_mkinclud.mak) = 7764ff9e8cdffa2f474d3b52cd66b01642021c95

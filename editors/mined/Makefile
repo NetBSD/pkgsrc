@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2022/12/28 12:20:20 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2022/12/28 15:20:02 wiz Exp $
 
 DISTNAME=		mined-2022.27
+PKGREVISION=		1
 CATEGORIES=		editors
 MASTER_SITES=		http://towo.net/mined/
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} UCD.zip Unihan.zip BIG5.TXT
@@ -17,17 +18,13 @@ LICENSE=	gnu-gpl-v3
 MAKE_FILE=	makefile
 USE_TOOLS+=	gmake
 MAKE_FLAGS+=	OPT=${CFLAGS:Q}
-MAKE_FLAGS+=	root=${DESTDIR}
 MAKE_FLAGS+=	prefix=${PREFIX}
+MAKE_FLAGS+=	mandir=${PREFIX}/${PKGMANDIR}
 
 post-extract:
 .for f in UCD.zip Unihan.zip BIG5.TXT
 	${CP} ${_DISTDIR}/${f} ${WRKSRC}/src
 .endfor
-
-post-install:
-	${MV} ${DESTDIR}${DESTDIR}/usr/share ${DESTDIR}${PREFIX}/share
-	${MV} ${DESTDIR}${PREFIX}/share/man ${DESTDIR}${PREFIX}/${PKGMANDIR}
 
 .include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
