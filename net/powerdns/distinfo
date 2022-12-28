@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.47 2022/09/29 13:49:50 jperkin Exp $
+$NetBSD: distinfo,v 1.48 2022/12/28 18:24:53 otis Exp $
 
-BLAKE2s (pdns-4.6.3.tar.bz2) = 3eaac487fc3f1ea86da62427b62498a38c96eb4be26fbd913fc22fab6b816dcb
-SHA512 (pdns-4.6.3.tar.bz2) = ea44a0c929e36bf9002d8db7bf1e06ec372a08b31b60c74bbc3ea5600073fb745151f33798a0a4bd151ce17ad7efb07be30f7ddcf620d5bdaab6de4f37f4296f
-Size (pdns-4.6.3.tar.bz2) = 1302651 bytes
+BLAKE2s (pdns-4.6.4.tar.bz2) = 4c29e8ea41013fb06790da5c9c4ac8460b2e27acbd713508bbd80832e9f1bf80
+SHA512 (pdns-4.6.4.tar.bz2) = b05c880e1dad7cf83cb17d74c331206487bea14d7f56bc21a70d65ad2704ce71258ff055f3008fb5af2c8cfc4fbd7d09333c47c046ca306d3fdb307f203230b5
+Size (pdns-4.6.4.tar.bz2) = 1318629 bytes
 SHA1 (patch-configure) = 2635c2e5c22c419850703e3f5e5ed73ed116c339
 SHA1 (patch-ext_json11_json11.cpp) = 3f8f4518ebd807a064e83572385ea5456fc7e81f
 SHA1 (patch-pdns_dnsscope.cc) = b289b750686b25041c3e291fb0d3d562beb36eaf
