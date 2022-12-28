@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22432 2022/12/27 15:57:12 schmonz Exp $
+$NetBSD: TODO,v 1.22433 2022/12/28 10:51:38 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1063,7 +1063,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o mit-scheme-bin-9.2
 	o mitmproxy-9
 	o modular-xorg-xwayland-22.1.7
-	o mold-1.7
+	o mold-1.8
 	o monit-5.28.0
 	o mono-nat-1.1.0
 	o monocypher-3.1.2
