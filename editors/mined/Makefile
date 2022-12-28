@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2022/12/28 12:18:45 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2022/12/28 12:20:20 wiz Exp $
 
 DISTNAME=		mined-2022.27
 CATEGORIES=		editors
@@ -10,8 +10,8 @@ SITES.BIG5.TXT=		http://www.unicode.org/Public/MAPPINGS/OBSOLETE/EASTASIA/OTHER/
 EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://towo.net/mined/
-COMMENT=	Html-aware editor
+HOMEPAGE=	https://mined.github.io/
+COMMENT=	Unicode text editor
 LICENSE=	gnu-gpl-v3
 
 MAKE_FILE=	makefile
