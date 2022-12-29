@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6389 2022/12/28 22:58:04 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.6390 2022/12/29 00:49:06 sekiya Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9525,3 +9525,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/sqlite3-tcl to 3.40.1 [adam 2022-12-28]
 	Updated devel/lemon to 1.0.3.40.1 [adam 2022-12-28]
 	Updated net/gtk-gnutella to 1.2.2nb1 [wiz 2022-12-28]
+	Updated net/rsync to 3.2.7nb1 [sekiya 2022-12-29]
