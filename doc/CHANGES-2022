@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6396 2022/12/29 11:01:33 adam Exp $
+$NetBSD: CHANGES-2022,v 1.6397 2022/12/29 12:38:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9535,3 +9535,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/py-boto3 to 1.26.39 [adam 2022-12-29]
 	Updated net/py-awscli to 1.27.39 [adam 2022-12-29]
 	Updated devel/py-pyrsistent to 0.19.3 [adam 2022-12-29]
+	Updated sysutils/py-supervisor to 4.2.5 [adam 2022-12-29]
+	Updated devel/py-importlib-resources to 5.10.2 [adam 2022-12-29]
