@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/12/31 13:28:23 adam Exp $
+$NetBSD: distinfo,v 1.13 2022/12/29 12:35:41 adam Exp $
 
-BLAKE2s (supervisor-4.2.4.tar.gz) = c8a19aa91e3a71955cf8e011c2602465bf6aab6c3a8dde40775df100d906ef52
-SHA512 (supervisor-4.2.4.tar.gz) = 38c55aeadb8664337b667aad891a3a2134ae4af88e90d636054e6be9aebc8a3ef87d79d15fcafd2b9966af562deeedc96ac3730bde9439dde30208f0a874f2d7
-Size (supervisor-4.2.4.tar.gz) = 465151 bytes
+BLAKE2s (supervisor-4.2.5.tar.gz) = 6cf1b0af6affab2adbb1c45e64b9368e77facf65e8db461926629a560b7a33f3
+SHA512 (supervisor-4.2.5.tar.gz) = ea80c8c91356646deccf20735e065fd9b341f3be6d56838d333989297a912b0a59142338925b2eb08690e038f0617814e03447673701a19093aa483432ce6d41
+Size (supervisor-4.2.5.tar.gz) = 466073 bytes
