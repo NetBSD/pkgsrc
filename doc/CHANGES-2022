@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6394 2022/12/29 08:05:08 pin Exp $
+$NetBSD: CHANGES-2022,v 1.6395 2022/12/29 08:09:03 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9530,3 +9530,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/difftastic to 0.40.0 [pin 2022-12-29]
 	Updated audio/ncspot to 0.12.0 [pin 2022-12-29]
 	Updated editors/tp-note to 1.19.13 [pin 2022-12-29]
+	Added devel/superdiff version 2.0.3 [pin 2022-12-29]
