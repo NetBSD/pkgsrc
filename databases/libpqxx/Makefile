@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2021/01/07 16:29:30 prlw1 Exp $
+# $NetBSD: Makefile,v 1.39 2022/12/29 22:24:48 prlw1 Exp $
 
-DISTNAME=		libpqxx-7.3.0
+DISTNAME=		libpqxx-7.7.4
 CATEGORIES=		databases
 MASTER_SITES=		${MASTER_SITE_GITHUB:=jtv/}
 GITHUB_PROJECT=		libpqxx

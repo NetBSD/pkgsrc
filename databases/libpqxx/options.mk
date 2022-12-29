@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2021/01/07 16:29:30 prlw1 Exp $
+# $NetBSD: options.mk,v 1.3 2022/12/29 22:24:48 prlw1 Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libpqxx
 PKG_SUPPORTED_OPTIONS=	doc
@@ -14,15 +14,15 @@ TOOL_DEPENDS+=		doxygen-[0-9]*:../../devel/doxygen
 TOOL_DEPENDS+=		graphviz-[0-9]*:../../graphics/graphviz
 
 PQXXDOCSRC=		${WRKSRC}/doc/html
-PQXXDOC=		${PREFIX}/share/doc/${PKGBASE}
-INSTALLATION_DIRS+=	${PQXXDOC}/Reference
+PQXXDOC=		${PREFIX}/share/doc/libpqxx
+INSTALLATION_DIRS+=	share/doc/libpqxx
 INSTALLATION_DIRS+=	share/examples/libpqxx
 
 post-install:
-	${INSTALL_DATA} ${PQXXDOCSRC}/Reference/*.html \
-		${DESTDIR}${PQXXDOC}/Reference
-	${INSTALL_DATA} ${PQXXDOCSRC}/Reference/doxygen.* \
-		${DESTDIR}${PQXXDOC}/Reference
+	${INSTALL_DATA} ${PQXXDOCSRC}/*.html \
+		${DESTDIR}${PQXXDOC}
+	${INSTALL_DATA} ${PQXXDOCSRC}/doxygen.* \
+		${DESTDIR}${PQXXDOC}
 	${INSTALL_DATA} ${WRKSRC}/test/*.cxx \
 		${DESTDIR}${PREFIX}/share/examples/libpqxx
 .else
