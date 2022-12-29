@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6399 2022/12/29 16:22:02 taca Exp $
+$NetBSD: CHANGES-2022,v 1.6400 2022/12/29 22:25:11 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9540,3 +9540,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/py-httpcore to 0.16.3 [adam 2022-12-29]
 	Updated textproc/py-prettytable to 3.5.0 [adam 2022-12-29]
 	Updated misc/ruby-manpages to 0.6.1nb1 [taca 2022-12-29]
+	Updated databases/libpqxx to 7.7.4 [prlw1 2022-12-29]
