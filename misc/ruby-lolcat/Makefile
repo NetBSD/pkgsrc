@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2022/12/23 13:32:02 taca Exp $
+# $NetBSD: Makefile,v 1.4 2022/12/29 16:23:52 taca Exp $
 
 DISTNAME=	lolcat-100.0.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	misc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
