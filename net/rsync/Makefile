@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.124 2022/10/24 10:28:22 adam Exp $
+# $NetBSD: Makefile,v 1.125 2022/12/29 00:47:40 sekiya Exp $
 
 DISTNAME=	rsync-3.2.7
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://rsync.samba.org/ftp/rsync/
 MASTER_SITES+=	http://rsync.samba.org/ftp/rsync/old-versions/
@@ -33,7 +34,6 @@ SUBST_SED.paths+=	-e 's|/usr/bin/rsync|${PREFIX}/bin/rsync|g'
 .include "options.mk"
 
 .include "../../archivers/lz4/buildlink3.mk"
-.include "../../archivers/zstd/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../devel/xxhash/buildlink3.mk"
