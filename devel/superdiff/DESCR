@@ -1,0 +1,22 @@
+Are you working to eliminate similar/duplicate code from your files?
+
+Do you have a suspicion that chunks of code are copy-pasted, but are slightly
+different s.t. normal diff methods don't work?
+
+Are you tired of visually going through and inspecting your code for repeating
+chunks?
+
+If so, this might be the tool for you!
+
+Features
+- Finds duplicate code slices
+- Finds similar-enough code slices
+- JSON reporting for jq integeration
+- Fast enough (00:03:39 for a 17k LOC with block size 10 and Levenshtein
+  threshold 10)
+- Can check for duplicate code across multiple files
+- Vim integration!
+
+Limitations
+- Not instantaneous for large files
+- Single-threaded
