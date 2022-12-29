@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2022/12/18 14:53:07 taca Exp $
+# $NetBSD: Makefile,v 1.3 2022/12/29 16:21:35 taca Exp $
 
 DISTNAME=	manpages-0.6.1
+PKGREVISION=	1
 CATEGORIES=	misc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -9,8 +10,6 @@ COMMENT=	Adds support for man pages to rubygems
 LICENSE=	mit
 
 USE_LANGUAGES=	# none
-
-RUBYGEM_MANPAGES=	no
 
 SUBST_CLASSES+=		path
 SUBST_MESSAGE.path=	Fixing man path.
