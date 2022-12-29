@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2022/10/26 10:33:28 adam Exp $
+@comment $NetBSD: PLIST,v 1.33 2022/12/29 10:59:51 adam Exp $
 bin/aws
 bin/aws.cmd
 bin/aws_bash_completer
@@ -450,6 +450,9 @@ ${PYSITELIB}/awscli/customizations/iot.pyo
 ${PYSITELIB}/awscli/customizations/iot_data.py
 ${PYSITELIB}/awscli/customizations/iot_data.pyc
 ${PYSITELIB}/awscli/customizations/iot_data.pyo
+${PYSITELIB}/awscli/customizations/kinesis.py
+${PYSITELIB}/awscli/customizations/kinesis.pyc
+${PYSITELIB}/awscli/customizations/kinesis.pyo
 ${PYSITELIB}/awscli/customizations/kms.py
 ${PYSITELIB}/awscli/customizations/kms.pyc
 ${PYSITELIB}/awscli/customizations/kms.pyo
@@ -2340,6 +2343,7 @@ ${PYSITELIB}/awscli/examples/ec2/modify-instance-capacity-reservation-attributes
 ${PYSITELIB}/awscli/examples/ec2/modify-instance-credit-specification.rst
 ${PYSITELIB}/awscli/examples/ec2/modify-instance-event-start-time.rst
 ${PYSITELIB}/awscli/examples/ec2/modify-instance-event-window.rst
+${PYSITELIB}/awscli/examples/ec2/modify-instance-maintenance-options.rst
 ${PYSITELIB}/awscli/examples/ec2/modify-instance-metadata-options.rst
 ${PYSITELIB}/awscli/examples/ec2/modify-instance-placement.rst
 ${PYSITELIB}/awscli/examples/ec2/modify-ipam-pool.rst
@@ -2521,6 +2525,7 @@ ${PYSITELIB}/awscli/examples/ecs/describe-services.rst
 ${PYSITELIB}/awscli/examples/ecs/describe-task-definition.rst
 ${PYSITELIB}/awscli/examples/ecs/describe-task-sets.rst
 ${PYSITELIB}/awscli/examples/ecs/describe-tasks.rst
+${PYSITELIB}/awscli/examples/ecs/execute-command.rst
 ${PYSITELIB}/awscli/examples/ecs/list-account-settings.rst
 ${PYSITELIB}/awscli/examples/ecs/list-attributes.rst
 ${PYSITELIB}/awscli/examples/ecs/list-clusters.rst
@@ -3594,6 +3599,20 @@ ${PYSITELIB}/awscli/examples/iotanalytics/update-channel.rst
 ${PYSITELIB}/awscli/examples/iotanalytics/update-dataset.rst
 ${PYSITELIB}/awscli/examples/iotanalytics/update-datastore.rst
 ${PYSITELIB}/awscli/examples/iotanalytics/update-pipeline.rst
+${PYSITELIB}/awscli/examples/iotdeviceadvisor/create-suite-definition.rst
+${PYSITELIB}/awscli/examples/iotdeviceadvisor/delete-suite-definition.rst
+${PYSITELIB}/awscli/examples/iotdeviceadvisor/get-endpoint.rst
+${PYSITELIB}/awscli/examples/iotdeviceadvisor/get-suite-definition.rst
+${PYSITELIB}/awscli/examples/iotdeviceadvisor/get-suite-run-report.rst
+${PYSITELIB}/awscli/examples/iotdeviceadvisor/get-suite-run.rst
+${PYSITELIB}/awscli/examples/iotdeviceadvisor/list-suite-definitions.rst
+${PYSITELIB}/awscli/examples/iotdeviceadvisor/list-suite-runs.rst
+${PYSITELIB}/awscli/examples/iotdeviceadvisor/list-tags-for-resource.rst
+${PYSITELIB}/awscli/examples/iotdeviceadvisor/start-suite-run.rst
+${PYSITELIB}/awscli/examples/iotdeviceadvisor/stop-suite-run.rst
+${PYSITELIB}/awscli/examples/iotdeviceadvisor/tag-resource.rst
+${PYSITELIB}/awscli/examples/iotdeviceadvisor/untag-resource.rst
+${PYSITELIB}/awscli/examples/iotdeviceadvisor/update-suite-definition.rst
 ${PYSITELIB}/awscli/examples/iotevents-data/batch-put-message.rst
 ${PYSITELIB}/awscli/examples/iotevents-data/batch-update-detector.rst
 ${PYSITELIB}/awscli/examples/iotevents-data/create-detector-model.rst
@@ -3809,16 +3828,21 @@ ${PYSITELIB}/awscli/examples/ivs/tag-resource.rst
 ${PYSITELIB}/awscli/examples/ivs/untag-resource.rst
 ${PYSITELIB}/awscli/examples/ivs/update-channel.rst
 ${PYSITELIB}/awscli/examples/ivschat/create-chat-token.rst
+${PYSITELIB}/awscli/examples/ivschat/create-logging-configuration.rst
 ${PYSITELIB}/awscli/examples/ivschat/create-room.rst
+${PYSITELIB}/awscli/examples/ivschat/delete-logging-configuration.rst
 ${PYSITELIB}/awscli/examples/ivschat/delete-message.rst
 ${PYSITELIB}/awscli/examples/ivschat/delete-room.rst
 ${PYSITELIB}/awscli/examples/ivschat/disconnect-user.rst
+${PYSITELIB}/awscli/examples/ivschat/get-logging-configuration.rst
 ${PYSITELIB}/awscli/examples/ivschat/get-room.rst
+${PYSITELIB}/awscli/examples/ivschat/list-logging-configurations.rst
 ${PYSITELIB}/awscli/examples/ivschat/list-rooms.rst
 ${PYSITELIB}/awscli/examples/ivschat/list-tags-for-resource.rst
 ${PYSITELIB}/awscli/examples/ivschat/send-event.rst
 ${PYSITELIB}/awscli/examples/ivschat/tag-resource.rst
 ${PYSITELIB}/awscli/examples/ivschat/untag-resource.rst
+${PYSITELIB}/awscli/examples/ivschat/update-logging-configuration.rst
 ${PYSITELIB}/awscli/examples/ivschat/update-room.rst
 ${PYSITELIB}/awscli/examples/kafka/create-cluster.rst
 ${PYSITELIB}/awscli/examples/kafka/create-configuration.rst
@@ -4980,11 +5004,13 @@ ${PYSITELIB}/awscli/examples/s3control/describe-job.rst
 ${PYSITELIB}/awscli/examples/s3control/get-access-point-policy-status.rst
 ${PYSITELIB}/awscli/examples/s3control/get-access-point-policy.rst
 ${PYSITELIB}/awscli/examples/s3control/get-access-point.rst
+${PYSITELIB}/awscli/examples/s3control/get-multi-region-access-point-routes.rst
 ${PYSITELIB}/awscli/examples/s3control/get-public-access-block.rst
 ${PYSITELIB}/awscli/examples/s3control/list-access-points.rst
 ${PYSITELIB}/awscli/examples/s3control/list-jobs.rst
 ${PYSITELIB}/awscli/examples/s3control/put-access-point-policy.rst
 ${PYSITELIB}/awscli/examples/s3control/put-public-access-block.rst
+${PYSITELIB}/awscli/examples/s3control/submit-multi-region-access-point-routes.rst
 ${PYSITELIB}/awscli/examples/s3control/update-job-priority.rst
 ${PYSITELIB}/awscli/examples/s3control/update-job-status.rst
 ${PYSITELIB}/awscli/examples/secretsmanager/cancel-rotate-secret.rst
@@ -5192,6 +5218,7 @@ ${PYSITELIB}/awscli/examples/sns/list-tags-for-resource.rst
 ${PYSITELIB}/awscli/examples/sns/list-topics.rst
 ${PYSITELIB}/awscli/examples/sns/opt-in-phone-number.rst
 ${PYSITELIB}/awscli/examples/sns/publish.rst
+${PYSITELIB}/awscli/examples/sns/put-data-protection-policy.rst
 ${PYSITELIB}/awscli/examples/sns/remove-permission.rst
 ${PYSITELIB}/awscli/examples/sns/set-endpoint-attributes.rst
 ${PYSITELIB}/awscli/examples/sns/set-platform-application-attributes.rst
