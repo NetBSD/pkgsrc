@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6392 2022/12/29 08:02:35 pin Exp $
+$NetBSD: CHANGES-2022,v 1.6393 2022/12/29 08:03:43 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9528,3 +9528,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/rsync to 3.2.7nb1 [sekiya 2022-12-29]
 	Updated chat/prosody to 0.12.2 [khorben 2022-12-29]
 	Updated devel/difftastic to 0.40.0 [pin 2022-12-29]
+	Updated audio/ncspot to 0.12.0 [pin 2022-12-29]
