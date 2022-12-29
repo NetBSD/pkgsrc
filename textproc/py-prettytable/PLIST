@@ -1,15 +1,15 @@
-@comment $NetBSD: PLIST,v 1.6 2022/02/14 08:53:14 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.7 2022/12/29 12:49:08 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING
 ${PYSITELIB}/prettytable/__init__.py
 ${PYSITELIB}/prettytable/__init__.pyc
-${PYSITELIB}/prettytable/__init__.pyo
 ${PYSITELIB}/prettytable/colortable.py
 ${PYSITELIB}/prettytable/colortable.pyc
-${PYSITELIB}/prettytable/colortable.pyo
 ${PYSITELIB}/prettytable/prettytable.py
 ${PYSITELIB}/prettytable/prettytable.pyc
-${PYSITELIB}/prettytable/prettytable.pyo
+${PYSITELIB}/prettytable/py.typed
