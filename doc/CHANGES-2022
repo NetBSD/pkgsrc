@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6395 2022/12/29 08:09:03 pin Exp $
+$NetBSD: CHANGES-2022,v 1.6396 2022/12/29 11:01:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9531,3 +9531,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated audio/ncspot to 0.12.0 [pin 2022-12-29]
 	Updated editors/tp-note to 1.19.13 [pin 2022-12-29]
 	Added devel/superdiff version 2.0.3 [pin 2022-12-29]
+	Updated net/py-botocore to 1.29.39 [adam 2022-12-29]
+	Updated net/py-boto3 to 1.26.39 [adam 2022-12-29]
+	Updated net/py-awscli to 1.27.39 [adam 2022-12-29]
+	Updated devel/py-pyrsistent to 0.19.3 [adam 2022-12-29]
