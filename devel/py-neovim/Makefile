@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/12/28 22:51:26 nikita Exp $
+# $NetBSD: Makefile,v 1.3 2022/12/29 23:08:34 gutteridge Exp $
 
 DISTNAME=	pynvim-0.4.3
 PKGREVISION=	1
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/neovim/pynvim
 COMMENT=	Python client to Neovim
 LICENSE=	apache-2.0
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-greenlet
 
 DEPENDS+=	${PYPKGPREFIX}-msgpack>=0.5.0:../../devel/py-msgpack
 DEPENDS+=	${PYPKGPREFIX}-greenlet>=2.0.1:../../devel/py-greenlet
