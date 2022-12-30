@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6402 2022/12/30 03:27:25 sjmulder Exp $
+$NetBSD: CHANGES-2022,v 1.6403 2022/12/30 05:04:17 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9543,3 +9543,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/libpqxx to 7.7.4 [prlw1 2022-12-29]
 	Updated net/tcpreplay to 4.4.2 [gutteridge 2022-12-29]
 	Updated net/tut to 1.0.31 [sjmulder 2022-12-30]
+	Updated cad/klayout to 0.28.2 [mef 2022-12-30]
