@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2022/12/30 18:17:48 vins Exp $
+
+BLAKE2s (xmakemol-5.16h.tar.xz) = 104be5a568d52cceacf8aa0f4c7619d7aa2f0039b4b45ad1ece34aa2c4e895e2
+SHA512 (xmakemol-5.16h.tar.xz) = 63ce47a96aaa61872bd27cb60befe175f72b0a3560ce48056d21fce91e0d268436c73b4ddc9bd9fa539cbabe4934167da92122847e226657178e82a7d0e01280
+Size (xmakemol-5.16h.tar.xz) = 216832 bytes
+SHA1 (patch-Makefile.in) = 57d571687495e824866a9040e43da3ad95ca1904
+SHA1 (patch-xmakemol.1) = ef991119d9e5534d6032b7e94f3ea7d7c1cacbe3
