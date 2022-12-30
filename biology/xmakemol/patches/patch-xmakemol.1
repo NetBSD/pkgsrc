@@ -1,0 +1,15 @@
+$NetBSD: patch-xmakemol.1,v 1.1 2022/12/30 18:17:48 vins Exp $
+
+Fix hardcoded path.
+
+--- xmakemol.1.orig	2005-03-07 10:49:49.000000000 +0000
++++ xmakemol.1
+@@ -47,7 +47,7 @@ Print version information.
+ 
+ .SH FILES
+ .LP 
+-\fI/usr/share/xmakemol/elements\fP
++\fI@PREFIX@/share/xmakemol/elements\fP
+ List of element properties.
+ 
+ .SH ENVIRONMENT VARIABLES
