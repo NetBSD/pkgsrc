@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2021/11/30 14:34:51 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.12 2022/12/30 17:32:36 bsiegert Exp $
 bin/xfce4-accessibility-settings
 bin/xfce4-appearance-settings
 bin/xfce4-display-settings
@@ -142,6 +142,7 @@ share/locale/ie/LC_MESSAGES/xfce4-settings.mo
 share/locale/is/LC_MESSAGES/xfce4-settings.mo
 share/locale/it/LC_MESSAGES/xfce4-settings.mo
 share/locale/ja/LC_MESSAGES/xfce4-settings.mo
+share/locale/ka/LC_MESSAGES/xfce4-settings.mo
 share/locale/kab/LC_MESSAGES/xfce4-settings.mo
 share/locale/kk/LC_MESSAGES/xfce4-settings.mo
 share/locale/ko/LC_MESSAGES/xfce4-settings.mo
@@ -174,6 +175,7 @@ share/locale/ur_PK/LC_MESSAGES/xfce4-settings.mo
 share/locale/zh_CN/LC_MESSAGES/xfce4-settings.mo
 share/locale/zh_HK/LC_MESSAGES/xfce4-settings.mo
 share/locale/zh_TW/LC_MESSAGES/xfce4-settings.mo
+share/xfce4/helpers/alacritty.desktop
 share/xfce4/helpers/aterm.desktop
 share/xfce4/helpers/balsa.desktop
 share/xfce4/helpers/brave.desktop
@@ -195,6 +197,7 @@ share/xfce4/helpers/icecat.desktop
 share/xfce4/helpers/icedove.desktop
 share/xfce4/helpers/iceweasel.desktop
 share/xfce4/helpers/jumanji.desktop
+share/xfce4/helpers/kitty.desktop
 share/xfce4/helpers/kmail.desktop
 share/xfce4/helpers/konqueror.desktop
 share/xfce4/helpers/links.desktop
