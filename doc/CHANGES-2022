@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6401 2022/12/29 23:29:12 gutteridge Exp $
+$NetBSD: CHANGES-2022,v 1.6402 2022/12/30 03:27:25 sjmulder Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9542,3 +9542,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated misc/ruby-manpages to 0.6.1nb1 [taca 2022-12-29]
 	Updated databases/libpqxx to 7.7.4 [prlw1 2022-12-29]
 	Updated net/tcpreplay to 4.4.2 [gutteridge 2022-12-29]
+	Updated net/tut to 1.0.31 [sjmulder 2022-12-30]
