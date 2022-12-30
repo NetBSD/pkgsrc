@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2022/11/23 16:21:05 adam Exp $
+# $NetBSD: Makefile,v 1.10 2022/12/30 13:30:30 gdt Exp $
 
 DISTNAME=	gnome-characters-3.34.0
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	sysutils gnome
 EXTRACT_SUFX=	.tar.xz
 
@@ -22,5 +22,6 @@ PYTHON_FOR_BUILD_ONLY=	tool
 .include "../../lang/gjs/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/libunistring/buildlink3.mk"
+.include "../../x11/gnome-desktop3/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
