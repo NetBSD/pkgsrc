@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.28 2022/04/25 02:45:44 markd Exp $
+$NetBSD: distinfo,v 1.29 2022/12/30 20:19:10 adam Exp $
 
 BLAKE2s (qtwebkit-5.212.0-alpha4.tar.xz) = 20858db08c7d297037d3ced34e441d4b657325c406b475e4e76dd367dc9c500c
 SHA512 (qtwebkit-5.212.0-alpha4.tar.xz) = 33f11270bd030599beff9c1983a6c5ff2d61f407cc8a6825f7f405d46f9184c720fc7f60c7359f08f828db96a2170092875066a0d5c0a21ff09bc48a2603fbf6
@@ -12,6 +12,7 @@ SHA1 (patch-Source_JavaScriptCore_dfg_DFGNode.h) = a3eba122c7226a80dacf1b762747f
 SHA1 (patch-Source_JavaScriptCore_generate-bytecode-files) = b58ca94781fcf7b9f6a3eba715af2784e7a0acc0
 SHA1 (patch-Source_JavaScriptCore_heap_MachineStackMarker.cpp) = 2b7dba0d0e87ed96c4d7de6ddb5833209cfe51b5
 SHA1 (patch-Source_JavaScriptCore_jit_ThunkGenerators.cpp) = f0ca56e4b4060c0a8d756289d7c25d1ead6b07be
+SHA1 (patch-Source_JavaScriptCore_jsc.cpp) = 796ce0232f1a833757b2e7ca5c910fac75f783ad
 SHA1 (patch-Source_JavaScriptCore_tools_CodeProfiling.cpp) = 94c139413eecb875bba98c7749bba24cfcc16632
 SHA1 (patch-Source_Qt5WebKitConfig.cmake.in) = 3a1346216b20853b73abf9b1756617d1e761cb94
 SHA1 (patch-Source_ThirdParty_gtest_include_gtest_internal_gtest-port.h) = 1e4b8cffbd7ec0a6130a0ec2112023bed5c0b78e
@@ -31,5 +32,8 @@ SHA1 (patch-Source_WebCore_platform_text_icu_UTextProvider.h) = fb0885eb9db3001d
 SHA1 (patch-Source_WebCore_platform_text_icu_UTextProviderLatin1.cpp) = 29b414e1ae18a0786f31d80143f665d6d68bcbe3
 SHA1 (patch-Source_WebCore_platform_text_icu_UTextProviderUTF16.cpp) = b175e1973a2019d746fda174dfc5708a3ca57d9b
 SHA1 (patch-Source_WebKit2_Platform_unix_SharedMemoryUnix.cpp) = d18013d0e07d7ad7e9d84cb6ef2d418d9bba4c7e
+SHA1 (patch-Source_WebKit_qt_declarative_CMakeLists.txt) = bda5cb2751027aab161ae54f46b8f9103532fb13
+SHA1 (patch-Source_WebKit_qt_declarative_experimental_CMakeLists.txt) = b95ac623f36018e3f2cc55a2988e97ef3f713159
 SHA1 (patch-Source_cmake_OptionsCommon.cmake) = 8fb8d11c4aab36e913a560ac48acce930f074635
 SHA1 (patch-Source_cmake_OptionsQt.cmake) = 35cc2b9904897cd2f1d540b473ce2905d95a0143
+SHA1 (patch-Source_cmake_WebKitMacros.cmake) = 5498b5cccf392f5d3bc370b00a72b2aa5389492d

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.100 2022/11/28 19:16:13 jperkin Exp $
+# $NetBSD: Makefile,v 1.101 2022/12/30 20:19:10 adam Exp $
 
 QTWKVERSION=	5.212.0-alpha4
 DISTNAME=	qtwebkit-${QTWKVERSION}
@@ -35,9 +35,10 @@ CMAKE_ARGS+=		-DSHARED_CORE:BOOL=ON
 CMAKE_ARGS+=		-DUSE_SYSTEM_MALLOC:BOOL=ON
 CMAKE_ARGS+=		-DUSE_LD_GOLD:BOOL=OFF
 CMAKE_ARGS+=		-DENABLE_API_TESTS=OFF
-
+CMAKE_ARGS+=		-DMACOS_BUILD_FRAMEWORKS=OFF
+CMAKE_ARGS+=		-DMACOS_USE_SYSTEM_ICU=OFF
+CMAKE_ARGS+=		-DMACOS_FORCE_SYSTEM_XML_LIBRARIES=OFF
 CMAKE_ARGS+=		-DKDE_INSTALL_LIBEXECDIR=${CMAKE_INSTALL_PREFIX}/libexec
-#CMAKE_ARGS+=		-DLIBEXEC_INSTALL_DIR=${CMAKE_INSTALL_PREFIX}/libexec
 
 UNLIMIT_RESOURCES+=	cputime
 
@@ -53,15 +54,11 @@ CFLAGS.NetBSD+=		-D_NETBSD_SOURCE
 # https://gitlab.gnome.org/GNOME/glib/-/merge_requests/1963
 CXXFLAGS+=		-DGLIB_VERSION_MIN_REQUIRED=GLIB_VERSION_2_66
 
-## for GL_GLEXT_LEGACY with GL/gl.h error, GL_ARB_shader_objects is not defined.
-#BUILDLINK_TRANSFORM+=	rm:-Wundef
-
 # avoid creating a .qt directory in the users home directory
 SCRIPTS_ENV+=		HOME=${WRKDIR}
 
 REPLACE_PERL+=		Source/WebKit2/Scripts/generate-forwarding-headers.pl
 
-#MAKE_ENV+=		QTDIR=${QTDIR}
 INSTALL_ENV+=		INSTALL_ROOT=${DESTDIR}
 INSTALLATION_DIRS+=	lib/pkgconfig
 
@@ -75,7 +72,7 @@ BUILDLINK_TRANSFORM+=	rpath:${WRKSRC}/lib:${QTDIR}/lib
 
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--gc-sections
 
-.if ${OPSYS} == "NetBSD" && !empty(MACHINE_ARCH:M*arm*)
+.if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH:M*arm*}
 LDFLAGS+=	-Wl,--no-keep-memory
 .endif
 
@@ -85,9 +82,9 @@ LDFLAGS+=	-lsocket -lnsl
 .endif
 
 # JavaScriptCore requires at least MIPS32.
-.if !empty(MACHINE_ARCH:Mmips64*)
+.if ${MACHINE_ARCH:Mmips64*}
 CFLAGS+=	-march=mips64
-.elif !empty(MACHINE_ARCH:Mmips*)
+.elif ${MACHINE_ARCH:Mmips*}
 CFLAGS+=	-march=mips32
 .endif
 
@@ -96,6 +93,10 @@ post-install:
 	cd ${DESTDIR}${PREFIX}/lib/pkgconfig && \
 	ln -f -s ${QTDIR}/lib/pkgconfig/${i} ${i}
 .endfor
+
+# Not supported on Win and Mac.
+# See comment in Source/WebKit2/PlatformQt.cmake
+PLIST_VARS+=	npapi
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .if ${OPSYS} == "Darwin" || ${OPSYS} == "Linux" || ${OPSYS} == "NetBSD"
@@ -110,9 +111,11 @@ post-install:
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-bad/buildlink3.mk"
 .include "../../x11/libXcomposite/buildlink3.mk"
+PLIST.npapi=	yes
 .endif
 .include "../../x11/qt5-qtdeclarative/buildlink3.mk"
 .include "../../x11/qt5-qtlocation/buildlink3.mk"
+.include "../../x11/qt5-qtmultimedia/buildlink3.mk"
 .include "../../x11/qt5-qtsensors/buildlink3.mk"
 .include "../../x11/qt5-qtwebchannel/buildlink3.mk"
 PYTHON_FOR_BUILD_ONLY=	tool
