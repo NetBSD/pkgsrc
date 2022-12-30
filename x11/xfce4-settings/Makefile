@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.73 2022/12/12 01:48:51 gutteridge Exp $
+# $NetBSD: Makefile,v 1.74 2022/12/30 17:32:36 bsiegert Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-VERSION=	4.16.5
-DISTNAME=	xfce4-settings-${VERSION}
+DISTNAME=	xfce4-settings-4.18.0
 CATEGORIES=	x11
-MASTER_SITES=	https://archive.xfce.org/src/xfce/xfce4-settings/${VERSION:R}/
+MASTER_SITES=	https://archive.xfce.org/src/xfce/xfce4-settings/${PKGVERSION_NOREV:R}/
 
 HOMEPAGE=	https://docs.xfce.org/xfce/xfce4-settings/start
 COMMENT=	Xfce settings manager
@@ -49,7 +48,6 @@ MAKE_DIRS+=	${PKG_SYSCONFDIR}/menus \
 .include "../../x11/libxfce4ui/buildlink3.mk"
 .include "../../devel/xfce4-conf/buildlink3.mk"
 .include "../../x11/libxklavier/buildlink3.mk"
-BUILDLINK_API_DEPENDS.xfce4-exo+=	xfce4-exo>=4.16.2
 .include "../../x11/xfce4-exo/buildlink3.mk"
 .include "../../x11/xfce4-garcon/buildlink3.mk"
 .include "../../graphics/adwaita-icon-theme/buildlink3.mk"
