@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.74 2022/12/06 01:02:52 gutteridge Exp $
+# $NetBSD: Makefile.common,v 1.75 2022/12/30 17:36:10 bsiegert Exp $
 #
 # used by archivers/xfce4-thunar-archive/Makefile
 # used by devel/xfce4-conf/Makefile
@@ -61,7 +61,7 @@ MAINTAINER=		youri@NetBSD.org
 HOMEPAGE=		https://www.xfce.org/
 LICENSE=		gnu-gpl-v2
 
-XFCE4_VERSION=		4.16.0
+XFCE4_VERSION=		4.18.0
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
@@ -72,7 +72,7 @@ XFCE4_EGBASE=		${PREFIX}/share/examples/xfce4
 
 CONFIGURE_ARGS.Darwin+=	--disable-visibility
 
-BUILDLINK_API_DEPENDS.glib2+=   glib2>=2.50.0
+BUILDLINK_API_DEPENDS.glib2+=   glib2>=2.66.0
 .include "../../devel/glib2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gtk3+=    gtk3+>=3.22.0
+BUILDLINK_API_DEPENDS.gtk3+=    gtk3+>=3.24.0
 .include "../../x11/gtk3/buildlink3.mk"
