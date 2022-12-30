@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2022/12/12 18:40:02 bacon Exp $
+# $NetBSD: Makefile,v 1.85 2022/12/30 18:19:02 vins Exp $
 #
 
 COMMENT=	Software for the biological sciences
@@ -80,6 +80,7 @@ SUBDIR+=	trimmomatic
 SUBDIR+=	vcf-split
 SUBDIR+=	vcf2hap
 SUBDIR+=	vsearch
+SUBDIR+=	xmakemol
 SUBDIR+=	xylem
 
 .include "../mk/misc/category.mk"
