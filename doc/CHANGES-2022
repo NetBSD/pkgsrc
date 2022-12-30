@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6407 2022/12/30 17:34:32 bsiegert Exp $
+$NetBSD: CHANGES-2022,v 1.6408 2022/12/30 17:36:26 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9558,3 +9558,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/xfce4-garcon to 4.18.0 [bsiegert 2022-12-30]
 	Updated x11/xfce4-panel to 4.18.0 [bsiegert 2022-12-30]
 	Updated x11/xfce4-settings to 4.18.0 [bsiegert 2022-12-30]
+	Updated meta-pkgs/xfce4 to 4.18.0 [bsiegert 2022-12-30]
