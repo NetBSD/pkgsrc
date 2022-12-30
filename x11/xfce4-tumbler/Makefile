@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.111 2022/11/23 16:21:30 adam Exp $
+# $NetBSD: Makefile,v 1.112 2022/12/30 17:16:56 bsiegert Exp $
 
-PKGREVISION= 2
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-VERSION=	4.16.1
+VERSION=	4.18.0
 DISTNAME=	tumbler-${VERSION}
 PKGNAME=	xfce4-tumbler-${VERSION}
 CATEGORIES=	x11
 MASTER_SITES=	https://archive.xfce.org/src/xfce/tumbler/${VERSION:R}/
 
-HOMEPAGE=	https://docs.xfce.org/xfce/thunar/4.16/tumbler
+HOMEPAGE=	https://docs.xfce.org/xfce/thunar/4.18/tumbler
 COMMENT=	D-Bus thumbnailing service
 
 GNU_CONFIGURE=	yes
@@ -39,5 +38,6 @@ CONF_FILES=	${EGDIR}/tumbler.rc \
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
+.include "../../x11/libxfce4util/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
