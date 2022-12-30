@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2021/11/30 14:19:06 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.9 2022/12/30 17:32:35 bsiegert Exp $
 include/garcon-1/garcon/garcon-config.h
 include/garcon-1/garcon/garcon-environment.h
 include/garcon-1/garcon/garcon-marshal.h
@@ -32,28 +32,31 @@ share/desktop-directories/xfce-network.directory
 share/desktop-directories/xfce-office.directory
 share/desktop-directories/xfce-other.directory
 share/desktop-directories/xfce-personal.directory
+share/desktop-directories/xfce-science.directory
 share/desktop-directories/xfce-screensavers.directory
 share/desktop-directories/xfce-settings.directory
 share/desktop-directories/xfce-system.directory
 share/examples/xfce4/menus/xfce-applications.menu
+share/gtk-doc/html/garcon/GarconGtkMenu.html
 share/gtk-doc/html/garcon/GarconMenu.html
 share/gtk-doc/html/garcon/GarconMenuDirectory.html
 share/gtk-doc/html/garcon/GarconMenuElement.html
 share/gtk-doc/html/garcon/GarconMenuItem.html
+share/gtk-doc/html/garcon/GarconMenuItemAction.html
 share/gtk-doc/html/garcon/GarconMenuItemCache.html
 share/gtk-doc/html/garcon/GarconMenuMerger.html
 share/gtk-doc/html/garcon/GarconMenuParser.html
 share/gtk-doc/html/garcon/GarconMenuSeparator.html
 share/gtk-doc/html/garcon/GarconMenuTreeProvider.html
+share/gtk-doc/html/garcon/annotation-glossary.html
+share/gtk-doc/html/garcon/api-index-0-3.html
+share/gtk-doc/html/garcon/api-index-deprecated.html
 share/gtk-doc/html/garcon/api-index-full.html
 share/gtk-doc/html/garcon/garcon-Desktop-Environment-Configuration.html
-share/gtk-doc/html/garcon/garcon-GarconGtkMenu.html
-share/gtk-doc/html/garcon/garcon-GarconMenuItemAction.html
 share/gtk-doc/html/garcon/garcon-Version-Information.html
-share/gtk-doc/html/garcon/garcon-garcon-gtk.html
+share/gtk-doc/html/garcon/garcon-garcon-marshal.html
 share/gtk-doc/html/garcon/garcon-garcon-menu-item-pool.html
 share/gtk-doc/html/garcon/garcon-garcon-menu-node.html
-share/gtk-doc/html/garcon/garcon-garcon.html
 share/gtk-doc/html/garcon/garcon-gtk-menu.html
 share/gtk-doc/html/garcon/garcon-menus.html
 share/gtk-doc/html/garcon/garcon-miscellaneous.html
