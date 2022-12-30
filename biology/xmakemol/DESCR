@@ -1,0 +1,15 @@
+XMakemol is a mouse-based program, written using the LessTif widget set,
+for viewing and manipulating atomic and other chemical systems. It reads XYZ
+input and renders atoms, bonds and hydrogen bonds.
+
+Features include:
+
+ - Animating multiple frame files
+ - Interactive measurement of bond lengths, bond angles and torsion angles
+ - Control over atom/bond sizes
+ - Exporting to Xpm, Encapsulated PostScript and XYZ formats
+ - Toggling the visibility of groups of atoms
+ - Editing the positions of subsets of atoms
+
+This version incorporates the latest patches from Debian, which provide
+additional tuning of H-bond detection.
