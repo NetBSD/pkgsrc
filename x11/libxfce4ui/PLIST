@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.9 2021/11/30 14:10:36 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.10 2022/12/30 17:16:56 bsiegert Exp $
 bin/xfce4-about
 include/xfce4/libxfce4kbd-private-3/libxfce4kbd-private/xfce-shortcut-dialog.h
+include/xfce4/libxfce4kbd-private-3/libxfce4kbd-private/xfce-shortcuts-editor-dialog.h
+include/xfce4/libxfce4kbd-private-3/libxfce4kbd-private/xfce-shortcuts-editor.h
 include/xfce4/libxfce4kbd-private-3/libxfce4kbd-private/xfce-shortcuts-grabber.h
 include/xfce4/libxfce4kbd-private-3/libxfce4kbd-private/xfce-shortcuts-provider.h
 include/xfce4/libxfce4kbd-private-3/libxfce4kbd-private/xfce-shortcuts-xfwm4.h
@@ -29,6 +31,8 @@ share/gtk-doc/html/libxfce4ui/api-index-4-10.html
 share/gtk-doc/html/libxfce4ui/api-index-4-12.html
 share/gtk-doc/html/libxfce4ui/api-index-4-14.html
 share/gtk-doc/html/libxfce4ui/api-index-4-16.html
+share/gtk-doc/html/libxfce4ui/api-index-4-18.html
+share/gtk-doc/html/libxfce4ui/api-index-deprecated.html
 share/gtk-doc/html/libxfce4ui/api-index-full.html
 share/gtk-doc/html/libxfce4ui/home.png
 share/gtk-doc/html/libxfce4ui/index.html
@@ -61,6 +65,7 @@ share/icons/hicolor/scalable/apps/xfce4-logo.svg
 share/locale/am/LC_MESSAGES/libxfce4ui.mo
 share/locale/ar/LC_MESSAGES/libxfce4ui.mo
 share/locale/ast/LC_MESSAGES/libxfce4ui.mo
+share/locale/az/LC_MESSAGES/libxfce4ui.mo
 share/locale/be/LC_MESSAGES/libxfce4ui.mo
 share/locale/bg/LC_MESSAGES/libxfce4ui.mo
 share/locale/bn/LC_MESSAGES/libxfce4ui.mo
