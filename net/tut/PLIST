@@ -1,5 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2022/12/06 21:33:03 vins Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/12/30 03:26:29 sjmulder Exp $
 bin/tut
+man/man1/tut.1
+man/man5/tut.5
+man/man7/tut.7
 share/doc/tut/README.md
 share/examples/tut/config.example.ini
 share/examples/tut/help.tmpl
