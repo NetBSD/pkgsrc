@@ -1,13 +1,13 @@
-$NetBSD: patch-tumblerd_Makefile.in,v 1.2 2016/07/09 11:39:08 rillig Exp $
+$NetBSD: patch-tumblerd_Makefile.in,v 1.3 2022/12/30 17:16:56 bsiegert Exp $
 
 Adjust config path
 
---- tumblerd/Makefile.in.orig	2013-01-12 11:14:34.000000000 +0000
+--- tumblerd/Makefile.in.orig	2022-12-15 08:52:46.000000000 +0000
 +++ tumblerd/Makefile.in
-@@ -471,7 +471,7 @@ service_in_files = \
- 	org.xfce.Tumbler.Thumbnailer1.service.in
+@@ -537,7 +537,7 @@ dbus_xml_in_files = \
+ 	tumbler-service-dbus.xml.in
  
- service_DATA = $(service_in_files:.service.in=.service)
+ dbus_xml_files = $(dbus_xml_in_files:.xml.in=.xml)
 -confdir = $(sysconfdir)/xdg/tumbler
 +confdir = $(datadir)/examples/xfce4
  conf_DATA = \

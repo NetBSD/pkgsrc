@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2021/11/30 14:08:14 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.9 2022/12/30 17:16:56 bsiegert Exp $
 bin/xfconf-query
 include/xfce4/xfconf-0/xfconf/xfconf-binding.h
 include/xfce4/xfconf-0/xfconf/xfconf-channel.h
@@ -11,6 +11,7 @@ lib/pkgconfig/libxfconf-0.pc
 lib/xfce4/xfconf/xfconfd
 share/bash-completion/completions/xfconf-query
 share/dbus-1/services/org.xfce.Xfconf.service
+share/gtk-doc/html/xfconf/annotation-glossary.html
 share/gtk-doc/html/xfconf/ch01.html
 share/gtk-doc/html/xfconf/ch02.html
 share/gtk-doc/html/xfconf/ch03.html
@@ -50,6 +51,7 @@ share/locale/fi/LC_MESSAGES/xfconf.mo
 share/locale/fr/LC_MESSAGES/xfconf.mo
 share/locale/gl/LC_MESSAGES/xfconf.mo
 share/locale/he/LC_MESSAGES/xfconf.mo
+share/locale/hi/LC_MESSAGES/xfconf.mo
 share/locale/hr/LC_MESSAGES/xfconf.mo
 share/locale/hu/LC_MESSAGES/xfconf.mo
 share/locale/hy_AM/LC_MESSAGES/xfconf.mo
@@ -58,6 +60,7 @@ share/locale/id/LC_MESSAGES/xfconf.mo
 share/locale/is/LC_MESSAGES/xfconf.mo
 share/locale/it/LC_MESSAGES/xfconf.mo
 share/locale/ja/LC_MESSAGES/xfconf.mo
+share/locale/kab/LC_MESSAGES/xfconf.mo
 share/locale/kk/LC_MESSAGES/xfconf.mo
 share/locale/ko/LC_MESSAGES/xfconf.mo
 share/locale/lt/LC_MESSAGES/xfconf.mo
