@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2021/11/30 14:25:34 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.10 2022/12/30 17:16:56 bsiegert Exp $
 include/tumbler-1/tumbler/tumbler-abstract-thumbnailer.h
 include/tumbler-1/tumbler/tumbler-cache-plugin.h
 include/tumbler-1/tumbler/tumbler-cache.h
@@ -6,7 +6,6 @@ include/tumbler-1/tumbler/tumbler-config.h
 include/tumbler-1/tumbler/tumbler-enum-types.h
 include/tumbler-1/tumbler/tumbler-error.h
 include/tumbler-1/tumbler/tumbler-file-info.h
-include/tumbler-1/tumbler/tumbler-glib-extensions.h
 include/tumbler-1/tumbler/tumbler-marshal.h
 include/tumbler-1/tumbler/tumbler-provider-factory.h
 include/tumbler-1/tumbler/tumbler-provider-plugin.h
@@ -18,16 +17,17 @@ include/tumbler-1/tumbler/tumbler-util.h
 include/tumbler-1/tumbler/tumbler.h
 lib/libtumbler-1.la
 lib/pkgconfig/tumbler-1.pc
+lib/systemd/user/tumblerd.service
 lib/tumbler-1/plugins/cache/tumbler-cache-plugin.so
 lib/tumbler-1/plugins/cache/tumbler-xdg-cache.la
 lib/tumbler-1/plugins/tumbler-cover-thumbnailer.la
 lib/tumbler-1/plugins/tumbler-desktop-thumbnailer.la
-${PLIST.ffmpegthumbnailer}lib/tumbler-1/plugins/tumbler-ffmpeg-thumbnailer.la
+lib/tumbler-1/plugins/tumbler-ffmpeg-thumbnailer.la
 lib/tumbler-1/plugins/tumbler-font-thumbnailer.la
-${PLIST.jpeg}lib/tumbler-1/plugins/tumbler-jpeg-thumbnailer.la
-${PLIST.odf}lib/tumbler-1/plugins/tumbler-odf-thumbnailer.la
+lib/tumbler-1/plugins/tumbler-jpeg-thumbnailer.la
+lib/tumbler-1/plugins/tumbler-odf-thumbnailer.la
 lib/tumbler-1/plugins/tumbler-pixbuf-thumbnailer.la
-${PLIST.pdf}lib/tumbler-1/plugins/tumbler-poppler-thumbnailer.la
+lib/tumbler-1/plugins/tumbler-poppler-thumbnailer.la
 lib/tumbler-1/tumblerd
 share/dbus-1/services/org.xfce.Tumbler.Cache1.service
 share/dbus-1/services/org.xfce.Tumbler.Manager1.service
@@ -35,10 +35,13 @@ share/dbus-1/services/org.xfce.Tumbler.Thumbnailer1.service
 share/examples/xfce4/tumbler.rc
 share/gtk-doc/html/tumbler/TumblerAbstractThumbnailer.html
 share/gtk-doc/html/tumbler/TumblerCache.html
+share/gtk-doc/html/tumbler/TumblerCachePlugin.html
 share/gtk-doc/html/tumbler/TumblerFileInfo.html
 share/gtk-doc/html/tumbler/TumblerProviderFactory.html
 share/gtk-doc/html/tumbler/TumblerProviderPlugin.html
 share/gtk-doc/html/tumbler/TumblerThumbnail.html
+share/gtk-doc/html/tumbler/TumblerThumbnailFlavor.html
+share/gtk-doc/html/tumbler/TumblerThumbnailer.html
 share/gtk-doc/html/tumbler/TumblerThumbnailerProvider.html
 share/gtk-doc/html/tumbler/api-index-full.html
 share/gtk-doc/html/tumbler/extension-api.html
@@ -57,6 +60,8 @@ share/gtk-doc/html/tumbler/thumbnails.html
 share/gtk-doc/html/tumbler/tumbler-Error-Domain-and-Types.html
 share/gtk-doc/html/tumbler/tumbler-Various-Enumeration-Types.html
 share/gtk-doc/html/tumbler/tumbler-Version-Information-and-Compatibility-Checks.html
+share/gtk-doc/html/tumbler/tumbler-tumbler-marshal.html
+share/gtk-doc/html/tumbler/tumbler-tumbler-util.html
 share/gtk-doc/html/tumbler/tumbler.devhelp2
 share/gtk-doc/html/tumbler/up-insensitive.png
 share/gtk-doc/html/tumbler/up.png
@@ -89,6 +94,7 @@ share/locale/id/LC_MESSAGES/tumbler.mo
 share/locale/is/LC_MESSAGES/tumbler.mo
 share/locale/it/LC_MESSAGES/tumbler.mo
 share/locale/ja/LC_MESSAGES/tumbler.mo
+share/locale/kab/LC_MESSAGES/tumbler.mo
 share/locale/kk/LC_MESSAGES/tumbler.mo
 share/locale/ko/LC_MESSAGES/tumbler.mo
 share/locale/lt/LC_MESSAGES/tumbler.mo
