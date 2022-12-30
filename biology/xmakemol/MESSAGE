@@ -1,0 +1,8 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2022/12/30 18:17:48 vins Exp $
+
+To use xmakemol, set the XM_ELEMENTS environmental variable as below:
+
+	export XM_ELEMENTS=${PREFIX}/share/xmakemol/elements
+
+===========================================================================
