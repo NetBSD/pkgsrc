@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6405 2022/12/30 08:54:36 pin Exp $
+$NetBSD: CHANGES-2022,v 1.6406 2022/12/30 17:19:33 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9546,3 +9546,8 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated cad/klayout to 0.28.2 [mef 2022-12-30]
 	Updated cad/py-gdstk to 0.9.35 [mef 2022-12-30]
 	Updated shells/starship to 1.12.0 [pin 2022-12-30]
+	Updated devel/xfce4-conf to 4.18.0 [bsiegert 2022-12-30]
+	Updated x11/libxfce4ui to 4.18.0 [bsiegert 2022-12-30]
+	Updated x11/libxfce4util to 4.18.0 [bsiegert 2022-12-30]
+	Updated x11/xfce4-exo to 4.18.0 [bsiegert 2022-12-30]
+	Updated x11/xfce4-tumbler to 4.18.0 [bsiegert 2022-12-30]
