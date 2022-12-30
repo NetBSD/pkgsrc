@@ -1,0 +1,13 @@
+$NetBSD: patch-Makefile,v 1.1 2022/12/30 20:41:24 minskim Exp $
+
+--- Makefile.orig	2019-06-24 22:59:38.000000000 +0000
++++ Makefile
+@@ -147,7 +147,7 @@ ifeq ($(USE_SYSTEM_LUA),no)
+ 	@:
+ else
+ 	mkdir -p "$(DESTDIR)$(LUA_CMOD_INSTALLDIR)"
+-	install -Dm755 $< "$(DESTDIR)$(LUA_CMOD_INSTALLDIR)/$<"
++	install -m755 $< "$(DESTDIR)$(LUA_CMOD_INSTALLDIR)/$<"
+ endif
+ 
+ .PHONY: all clean depsclean install test gdb valgrind ci-test release
