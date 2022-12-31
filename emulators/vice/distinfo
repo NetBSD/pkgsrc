@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.53 2022/01/27 18:23:39 rhialto Exp $
+$NetBSD: distinfo,v 1.54 2022/12/31 18:30:00 rhialto Exp $
 
-BLAKE2s (vice-3.6.1.tar.gz) = f635f6bd63abc033b1b2d21a603b717bb422fe31a3d5599112e33876fede77ba
-SHA512 (vice-3.6.1.tar.gz) = 9aeb1c84dc71976d12a9907d60c637ec4cc938aad103340b70a13906bbf2bebab579edc78221c7fba47f0750be3f9ded947200b42fcfc8a9169fb4bb9f288cb7
-Size (vice-3.6.1.tar.gz) = 11454300 bytes
-SHA1 (patch-configure) = 29dc9191d3caca6c6f5c5aef7ae714b73beaa0b0
-SHA1 (patch-src_arch_gtk3_data_unix_Makefile.in) = e22566e8566bf750f8c1618fe00f582acc18cfda
-SHA1 (patch-src_arch_gtk3_uicommands.c) = c1f9cba6e647abf300d89f1f49b05755327a1aa5
+BLAKE2s (vice-3.7.1.tar.gz) = 68829aa834902e6914cb09ec95732e14251dfa468f14dc79e67923ed2791060c
+SHA512 (vice-3.7.1.tar.gz) = 80f81dd4d163cc5030eee2908b274bce4f3f21a3adb6d01559f4695d58b27ebc7b7570d8896718dfe74b2f2e4983ed3f9c4919b6e81934063d344b543b081f30
+Size (vice-3.7.1.tar.gz) = 13444946 bytes
+SHA1 (patch-configure) = afa9b0022985c5828dea1496e84117c4866e8d3a
+SHA1 (patch-src_arch_gtk3_actions-help.c) = 136fa108e999dbb98362a2e80a5389710f60290e
+SHA1 (patch-src_arch_gtk3_data_unix_Makefile.in) = 40ec2748090222fe95b54ea2266e48fc07363bd3

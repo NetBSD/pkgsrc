@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.170 2022/09/27 20:58:23 wiz Exp $
+# $NetBSD: Makefile,v 1.171 2022/12/31 18:30:00 rhialto Exp $
 
-DISTNAME=	vice-3.6.1
-PKGREVISION=	7
+DISTNAME=	vice-3.7.1
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=vice-emu/}
 
@@ -22,9 +21,9 @@ USE_TOOLS+=		bash gmake pkg-config perl flex yacc
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-ethernet
 CONFIGURE_ARGS+=	--enable-lame
+CONFIGURE_ARGS+=	--with-fastsid
 CONFIGURE_ARGS+=	--with-flac
 CONFIGURE_ARGS+=	--with-gif
-CONFIGURE_ARGS+=	--with-jpeg
 CONFIGURE_ARGS+=	--with-mpg123
 CONFIGURE_ARGS+=	--with-png
 CONFIGURE_ARGS+=	--with-vorbis
@@ -59,7 +58,8 @@ post-install:
 	${RM} -f ${DESTDIR}${PREFIX}/share/applications/mimeinfo.cache
 	cd ${DESTDIR}${PREFIX} && ${MV} etc/xdg/menus/applications-merged/vice-org-vice-org.menu share/vice/ || :
 	cd ${DESTDIR}${PREFIX} && ${RMDIR} -r etc || :
-	cd ${WRKSRC}/doc/html && ${CP} -r fonts vice_*.html *.css COPYING \
+	cd ${WRKSRC}/doc/html && ${CP} -r fonts images vice_*.html *.css \
+		COPYING \
 		${DESTDIR}${PREFIX}/share/doc/vice/html/
 
 .include "options.mk"
@@ -71,6 +71,5 @@ post-install:
 .include "../../graphics/giflib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
-.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
