@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/12/31 22:22:10 adam Exp $
+# $NetBSD: Makefile,v 1.4 2022/12/31 22:51:43 adam Exp $
 
 DISTNAME=	sip-${PKGVERSION_NOREV}
 PKGNAME=	${PYPKGPREFIX}-sip6-6.7.5
@@ -16,6 +16,8 @@ DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-toml>=0:../../textproc/py-toml
 
 USE_LANGUAGES=	c c++
+
+PYTHON_SELF_CONFLICT=	yes
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
