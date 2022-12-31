@@ -1,4 +1,4 @@
-# $NetBSD: clang.mk,v 1.37 2022/07/07 17:19:55 jperkin Exp $
+# $NetBSD: clang.mk,v 1.38 2022/12/31 08:35:37 wiz Exp $
 #
 # This is the compiler definition for the clang compiler.
 #
@@ -41,7 +41,7 @@ PKG_CPP:=		${CPPPATH}
 
 .if exists(${CCPATH})
 CC_VERSION_STRING!=	${CCPATH} -v 2>&1
-CC_VERSION!=		${CCPATH} --version 2>&1 | ${SED} -n "s/^.* version /clang-/p" 
+CC_VERSION!=		${CCPATH} --version 2>&1 | ${SED} -n "s/^.* version /clang-/p"
 .else
 CC_VERSION_STRING?=	${CC_VERSION}
 CC_VERSION?=		clang
@@ -61,6 +61,12 @@ _CTF_CFLAGS=		-gdwarf-2
 _RELRO_LDFLAGS=		-Wl,-zrelro -Wl,-znow
 .else
 _RELRO_LDFLAGS=		-Wl,-zrelro
+.endif
+# XXX Workaround for https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1014301
+# Set manually the maxpagesize to 4096 which is ok for now since NetBSD only
+# supports relro by default on x86 and aarch64
+.if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} > 109901
+_RELRO_LDFLAGS+=	-Wl,-z,max-page-size=4096
 .endif
 
 # The user can choose the level of stack smashing protection.
