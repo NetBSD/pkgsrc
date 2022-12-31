@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6413 2022/12/31 06:02:44 sekiya Exp $
+$NetBSD: CHANGES-2022,v 1.6414 2022/12/31 10:15:30 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9562,3 +9562,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/oculante to 0.6.35 [pin 2022-12-30]
 	Removed devel/py-neovim [gutteridge 2022-12-31]
 	Updated devel/gobject-introspection to 1.74.0nb1 [sekiya 2022-12-31]
+	Updated mail/R-mime to 0.12 [mef 2022-12-31]
