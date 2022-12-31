@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6411 2022/12/31 01:02:26 rillig Exp $
+$NetBSD: CHANGES-2022,v 1.6412 2022/12/31 01:46:08 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9560,3 +9560,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated meta-pkgs/xfce4 to 4.18.0 [bsiegert 2022-12-30]
 	Added biology/xmakemol version 5.16h [vins 2022-12-30]
 	Updated graphics/oculante to 0.6.35 [pin 2022-12-30]
+	Removed devel/py-neovim [gutteridge 2022-12-31]
