@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6435 2022/12/31 21:22:13 adam Exp $
+$NetBSD: CHANGES-2022,v 1.6436 2022/12/31 21:57:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9587,3 +9587,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/gdbus-codegen to 2.74.4 [adam 2022-12-31]
 	Updated graphics/graphviz to 7.0.5 [adam 2022-12-31]
 	Updated devel/doxygen to 1.9.6 [adam 2022-12-31]
+	Updated net/py-smbc to 1.0.24 [adam 2022-12-31]
+	Updated time/py-ciso8601 to 2.3.0 [adam 2022-12-31]
