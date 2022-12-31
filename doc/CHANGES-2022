@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6427 2022/12/31 13:58:03 leot Exp $
+$NetBSD: CHANGES-2022,v 1.6428 2022/12/31 16:21:00 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9576,3 +9576,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/R-xfun to 0.36 [mef 2022-12-31]
 	Updated sysutils/monit to 5.32.0 [leot 2022-12-31]
 	Updated sysutils/rcm to 1.3.6 [leot 2022-12-31]
+	Updated misc/ruby-manpages to 0.6.1nb2 [taca 2022-12-31]
