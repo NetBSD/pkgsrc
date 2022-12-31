@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.93 2022/11/17 01:54:41 gutteridge Exp $
+# $NetBSD: Makefile,v 1.94 2022/12/31 11:21:04 gutteridge Exp $
 
 META_PACKAGE=	yes
 
-PKGREVISION=	4
+PKGREVISION=	5
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	xfce4-extras-${XFCE4_VERSION}
@@ -21,7 +21,6 @@ DEPENDS+=	xfce4-wavelan-plugin>=0.6.3:../../net/xfce4-wavelan-plugin
 DEPENDS+=	xfce4-battery-plugin>=1.1.3:../../sysutils/xfce4-battery-plugin
 DEPENDS+=	xfce4-calculator-plugin>=0.7.0:../../misc/xfce4-calculator-plugin
 DEPENDS+=	xfce4-clipman-plugin>=1.6.2:../../x11/xfce4-clipman-plugin
-DEPENDS+=	xfce4-datetime-plugin>=0.8.2:../../time/xfce4-datetime-plugin
 DEPENDS+=	xfce4-dict>=0.8.2:../../textproc/xfce4-dict
 DEPENDS+=	xfce4-eyes-plugin>=4.6.0:../../x11/xfce4-eyes-plugin
 DEPENDS+=	xfce4-fsguard-plugin>=1.1.2:../../sysutils/xfce4-fsguard-plugin
