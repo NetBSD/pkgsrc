@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2022/05/11 14:26:59 mef Exp $
+$NetBSD: distinfo,v 1.5 2022/12/31 10:42:52 mef Exp $
 
-BLAKE2s (R/oskeyring_0.1.3.tar.gz) = 0b3714a09e28e1a755f7482d58a6688eff89e9d130c715d1fa683ea6965b9b0d
-SHA512 (R/oskeyring_0.1.3.tar.gz) = 0a3518f09ba264e4979c007e97cc8c8f7f8313558386d4925ca1da4d5017490b2bf0151bc6ddb720c4c02488e75f03134b8e9f0371aafdaeabd936a00fce1399
-Size (R/oskeyring_0.1.3.tar.gz) = 29389 bytes
+BLAKE2s (R/oskeyring_0.1.5.tar.gz) = b21a93838f7bd27452af690103d8817d77fba27bce366a759b2e18b57138d2f5
+SHA512 (R/oskeyring_0.1.5.tar.gz) = bee0f3daacf313b93daf61f620b09bf692823c4789ebc32932a9e3f24e5db4262b6049396f13d75ed4d79651aaf899e82e54ca63fdf96b23c65635ef2f6dc181
+Size (R/oskeyring_0.1.5.tar.gz) = 30141 bytes
