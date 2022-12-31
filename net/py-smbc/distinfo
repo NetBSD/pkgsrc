@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 11:06:43 nia Exp $
+$NetBSD: distinfo,v 1.10 2022/12/31 21:54:50 adam Exp $
 
-BLAKE2s (pysmbc-1.0.23.tar.gz) = 31c72eb30ac41fc9edb150cc56737521bfb7c8a1b9b960c1bac1045ccacda7c0
-SHA512 (pysmbc-1.0.23.tar.gz) = cfc990440d219ec0b56e158f3fec47e90f7a618cc6f26ab4ae35679fc0803fb8e171e6b1856586f7a33593bb6f58640283118fc34089412a3af1b6a10fa1f5a6
-Size (pysmbc-1.0.23.tar.gz) = 26219 bytes
+BLAKE2s (pysmbc-1.0.24.tar.gz) = f878dfc51335602057053bafc762316ed2627ea1e3a978eed1807b5f02082ed7
+SHA512 (pysmbc-1.0.24.tar.gz) = 3537f59e4b676f1d33a061f917a24748b4a846b1eddd8fb88d1fc248f5c3548b020a7f10815f0e5f4f709879d76cd891ed95c75c43b9b57b80ff401d046e9f38
+Size (pysmbc-1.0.24.tar.gz) = 33111 bytes
