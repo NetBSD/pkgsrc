@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.164 2022/11/23 16:19:47 adam Exp $
+# $NetBSD: Makefile,v 1.165 2022/12/31 21:21:55 adam Exp $
 
-DISTNAME=	doxygen-1.9.5.src
+DISTNAME=	doxygen-1.9.6.src
 PKGNAME=	${DISTNAME:S/.src//}
-PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://doxygen.nl/files/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.doxygen.org/
+HOMEPAGE=	https://www.doxygen.nl/
 COMMENT=	Documentation system for C++, Java, IDL and C
 LICENSE=	gnu-gpl-v2
 
