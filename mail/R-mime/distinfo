@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:53:54 nia Exp $
+$NetBSD: distinfo,v 1.9 2022/12/31 10:15:20 mef Exp $
 
-BLAKE2s (R/mime_0.11.tar.gz) = 62e16977f171f401dd74f4a0ae0d997db159272b6e3a5c84538440e68f57162f
-SHA512 (R/mime_0.11.tar.gz) = 9161649fe437aa2687924c2a2f9246d4564edf2e2d09e0b1142da88c02cd2584c21d0f905349f2034fd553815961a4fc3750572f3c3178f7cee81c2bf5991933
-Size (R/mime_0.11.tar.gz) = 12523 bytes
+BLAKE2s (R/mime_0.12.tar.gz) = bf0f5c19371a5d61dfaf9ed6f1001aec96dc8ce71f88d056b5ceab33fccc68d9
+SHA512 (R/mime_0.12.tar.gz) = 07de5e9f72ff66148a7f93b5cba77a0d2243eda9889e129f4e121f9143f36ed6fadfbc94e74ea916b74d66a923fb135c745643679737237c66336201f0b48b4e
+Size (R/mime_0.12.tar.gz) = 12562 bytes
