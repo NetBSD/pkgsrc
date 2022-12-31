@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6433 2022/12/31 19:10:03 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.6434 2022/12/31 20:32:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9582,3 +9582,6 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/wabt to 1.0.32 [fcambus 2022-12-31]
 	Updated misc/dialog to 1.3.20221229 [fcambus 2022-12-31]
 	Updated textproc/miller to 5.10.4 [fcambus 2022-12-31]
+	Updated devel/glib2 to 2.74.4 [adam 2022-12-31]
+	Updated devel/glib2-tools to 2.74.4 [adam 2022-12-31]
+	Updated devel/gdbus-codegen to 2.74.4 [adam 2022-12-31]
