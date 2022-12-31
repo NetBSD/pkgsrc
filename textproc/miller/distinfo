@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.24 2021/10/26 11:22:22 nia Exp $
+$NetBSD: distinfo,v 1.25 2022/12/31 19:09:50 fcambus Exp $
 
-BLAKE2s (miller-5.10.2.tar.gz) = 33e5db991287472bcdd27e9c235560c6e0ad0bab5caafafaa29c8514a27b531e
-SHA512 (miller-5.10.2.tar.gz) = be40611b055d94f3b0ef75b35dfd242dd4942dce3292bb01b48a6a12f9e4c09fc43bb9d0650902c7aa13328d9a2bbcea4da2964af58d07f39ae63b34712a45f5
-Size (miller-5.10.2.tar.gz) = 6192382 bytes
+BLAKE2s (miller-5.10.4.tar.gz) = 2414f5adb88b079f73296ee4ec74402f1cd6c5fcb7932f3b17ac8efba2aca932
+SHA512 (miller-5.10.4.tar.gz) = 331db19036a320680700875b5d396af3cdc308be618a58fdad71c2255518411014db805451970ed7ede1481512a3020eeb8f914125214df79e6007ca90ff5fc0
+Size (miller-5.10.4.tar.gz) = 6280883 bytes
