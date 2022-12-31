@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.75 2022/12/30 17:36:10 bsiegert Exp $
+# $NetBSD: Makefile.common,v 1.76 2022/12/31 12:16:44 gutteridge Exp $
 #
 # used by archivers/xfce4-thunar-archive/Makefile
 # used by devel/xfce4-conf/Makefile
@@ -30,7 +30,6 @@
 # used by sysutils/xfce4-verve-plugin/Makefile
 # used by sysutils/xfce4-xkb-plugin/Makefile
 # used by textproc/xfce4-dict/Makefile
-# used by time/xfce4-datetime-plugin/Makefile
 # used by time/xfce4-timer-plugin/Makefile
 # used by wm/xfce4-wm-themes/Makefile
 # used by wm/xfce4-wm/Makefile
