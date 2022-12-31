@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2022/05/11 14:26:59 mef Exp $
+# $NetBSD: Makefile,v 1.3 2022/12/31 10:42:52 mef Exp $
 
 R_PKGNAME=	oskeyring
-R_PKGVER=	0.1.3
+R_PKGVER=	0.1.5
 CATEGORIES=	security
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
