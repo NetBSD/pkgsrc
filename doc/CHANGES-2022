@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6414 2022/12/31 10:15:30 mef Exp $
+$NetBSD: CHANGES-2022,v 1.6415 2022/12/31 10:22:26 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9563,3 +9563,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed devel/py-neovim [gutteridge 2022-12-31]
 	Updated devel/gobject-introspection to 1.74.0nb1 [sekiya 2022-12-31]
 	Updated mail/R-mime to 0.12 [mef 2022-12-31]
+	Updated security/R-digest to 0.6.31 [mef 2022-12-31]
