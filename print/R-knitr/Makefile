@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2022/04/23 14:31:10 mef Exp $
+# $NetBSD: Makefile,v 1.15 2022/12/31 11:53:51 mef Exp $
 
 R_PKGNAME=	knitr
-R_PKGVER=	1.38
+R_PKGVER=	1.41
 CATEGORIES=	print
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -18,22 +18,23 @@ DEPENDS+=	R-stringr>=0.6:../../textproc/R-stringr
 DEPENDS+=	R-yaml>=2.1.19:../../textproc/R-yaml
 
 TEST_DEPENDS+=	R-highr-[0-9]*:../../textproc/R-highr
+TEST_DEPENDS+=	R-httr-[0-9]*:../../www/R-httr
+TEST_DEPENDS+=	R-jpeg-[0-9]*:../../graphics/R-jpeg
 TEST_DEPENDS+=	R-markdown-[0-9]*:../../textproc/R-markdown
-TEST_DEPENDS+=	R-testit-[0-9]*:../../devel/R-testit
-TEST_DEPENDS+=	R-markdown-[0-9]*:../../textproc/R-rmarkdown
+TEST_DEPENDS+=	R-png-[0-9]*:../../graphics/R-png
 TEST_DEPENDS+=	R-rgl-[0-9]*:../../graphics/R-rgl
+TEST_DEPENDS+=	R-ragg-[0-9]*:../../graphics/R-ragg
+TEST_DEPENDS+=	R-rmarkdown-[0-9]*:../../textproc/R-rmarkdown
+#EST_DEPENDS+=	R-showtext-[0-9]*:../../graphics/R-showtext
+TEST_DEPENDS+=	R-testit-[0-9]*:../../devel/R-testit
 TEST_DEPENDS+=	R-tibble-[0-9]*:../../math/R-tibble
 TEST_DEPENDS+=	R-xml2-[0-9]*:../../textproc/R-xml2
 TEST_DEPENDS+=	R-webshot-[0-9]*:../../www/R-webshot
 TEST_DEPENDS+=	R-DBI-[0-9]*:../../math/R-DBI
-TEST_DEPENDS+=	R-png-[0-9]*:../../graphics/R-png
-TEST_DEPENDS+=	R-jpeg-[0-9]*:../../graphics/R-jpeg
-TEST_DEPENDS+=	R-httr-[0-9]*:../../www/R-httr
-#EST_DEPENDS+=	R-ragg-[0-9]*:../../graphics/R-ragg
 
 # Packages suggested but not available:
 #  'tikzDevice', 'reticulate', 'JuliaCall', 'magick', 'gifski',
-#  'showtext', 'ragg', 'styler', 'targets'
+#  'showtext', 'styler', 'targets'
 
 USE_LANGUAGES=	# none
 
