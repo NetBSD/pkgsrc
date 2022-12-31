@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.28 2022/05/13 11:41:57 wiz Exp $
+$NetBSD: patch-aa,v 1.29 2022/12/31 22:21:04 msaitoh Exp $
 
 Adapt the Makefile to make it compliant with pkgsrc.
 
---- Makefile.orig	2022-04-18 16:47:28.000000000 +0000
-+++ Makefile
+--- Makefile.orig	2022-11-20 20:58:03.000000000 +0900
++++ Makefile	2022-12-31 20:13:26.593864823 +0900
 @@ -1,8 +1,7 @@
  # Makefile for The PCI Utilities
  # (c) 1998--2022 Martin Mares <mj@ucw.cz>
@@ -12,8 +12,8 @@ Adapt the Makefile to make it compliant with pkgsrc.
 -CFLAGS=$(OPT) -Wall -W -Wno-parentheses -Wstrict-prototypes -Wmissing-prototypes
 +CFLAGS=-Wall -W -Wno-parentheses -Wstrict-prototypes -Wmissing-prototypes
  
- VERSION=3.8.0
- DATE=2022-04-18
+ VERSION=3.9.0
+ DATE=2022-11-20
 @@ -13,7 +12,7 @@ RELEASE=
  CROSS_COMPILE=
  
@@ -24,7 +24,7 @@ Adapt the Makefile to make it compliant with pkgsrc.
  # Support for resolving ID's by DNS (yes/no, default: detect)
  DNS=
 @@ -32,25 +31,25 @@ HWDB=
- ABI_VERSION=.3
+ ABI_VERSION=3
  
  # Installation directories
 -PREFIX=/usr/local
@@ -59,16 +59,20 @@ Adapt the Makefile to make it compliant with pkgsrc.
 +#endif
  AR=$(CROSS_COMPILE)ar
  RANLIB=$(CROSS_COMPILE)ranlib
- 
-@@ -130,14 +129,21 @@ distclean: clean
+ DLLTOOL=$(CROSS_COMPILE)dlltool
+@@ -147,18 +146,21 @@ distclean: clean
  
  install: all
  # -c is ignored on Linux, but required on FreeBSD
--	$(DIRINSTALL) -m 755 $(DESTDIR)$(BINDIR) $(DESTDIR)$(SBINDIR) $(DESTDIR)$(IDSDIR) $(DESTDIR)$(MANDIR)/man8 $(DESTDIR)$(MANDIR)/man7 $(DESTDIR)/$(MANDIR)/man5
+-	$(DIRINSTALL) -m 755 $(DESTDIR)$(BINDIR) $(DESTDIR)$(SBINDIR) $(DESTDIR)$(IDSDIR) $(DESTDIR)$(MANDIR)/man8 $(DESTDIR)$(MANDIR)/man7 $(DESTDIR)$(MANDIR)/man5
 -	$(INSTALL) -c -m 755 $(STRIP) lspci$(EXEEXT) $(DESTDIR)$(LSPCIDIR)
 -	$(INSTALL) -c -m 755 $(STRIP) setpci$(EXEEXT) $(DESTDIR)$(SBINDIR)
 -	$(INSTALL) -c -m 755 update-pciids $(DESTDIR)$(SBINDIR)
+-ifneq ($(IDSDIR),)
 -	$(INSTALL) -c -m 644 $(PCI_IDS) $(DESTDIR)$(IDSDIR)
+-else
+-	$(INSTALL) -c -m 644 $(PCI_IDS) $(DESTDIR)$(SBINDIR)
+-endif
 -	$(INSTALL) -c -m 644 lspci.8 setpci.8 update-pciids.8 $(DESTDIR)$(MANDIR)/man8
 -	$(INSTALL) -c -m 644 pcilib.7 $(DESTDIR)$(MANDIR)/man7
 -	$(INSTALL) -c -m 644 pci.ids.5 $(DESTDIR)$(MANDIR)/man5
@@ -89,13 +93,19 @@ Adapt the Makefile to make it compliant with pkgsrc.
 +	$(BSD_INSTALL_MAN) pci.ids.5 $(DESTDIR)$(MANDIR)/man5
  ifeq ($(SHARED),yes)
  ifeq ($(LIBEXT),dylib)
- 	ln -sf $(PCILIB) $(DESTDIR)$(LIBDIR)/$(LIBNAME)$(ABI_VERSION).$(LIBEXT)
-@@ -151,13 +157,14 @@ install: install-pcilib
+ 	ln -sf $(PCILIB) $(DESTDIR)$(LIBDIR)/$(LIBNAME).$(ABI_VERSION).$(LIBEXT)
+@@ -172,19 +174,14 @@ install: install-pcilib
  endif
  
  install-pcilib: lib/$(PCILIB)
 -	$(DIRINSTALL) -m 755 $(DESTDIR)$(LIBDIR)
+-ifeq ($(SHARED)_$(LIBEXT),yes_dll)
+-# DLL library must have executable flag on disk and be placed in same directory as where are EXE files
+-	$(DIRINSTALL) -m 755 $(DESTDIR)$(SBINDIR)
+-	$(INSTALL) -c -m 755 lib/$(PCILIB) $(DESTDIR)$(SBINDIR)
+-else
 -	$(INSTALL) -c -m 644 lib/$(PCILIB) $(DESTDIR)$(LIBDIR)
+-endif
 +	$(BSD_INSTALL_LIB_DIR) $(DESTDIR)$(LIBDIR)
 +	$(BSD_INSTALL_LIB) lib/$(PCILIB) $(DESTDIR)$(LIBDIR)
  
@@ -107,6 +117,6 @@ Adapt the Makefile to make it compliant with pkgsrc.
 +	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(PKGCFDIR)
 +	$(BSD_INSTALL_DATA) $(PCIINC_INS) $(DESTDIR)$(INCDIR)/pci
 +	$(BSD_INSTALL_DATA) lib/$(PCILIBPC) $(DESTDIR)$(PKGCFDIR)
- ifeq ($(SHARED),yes)
- ifeq ($(LIBEXT),dylib)
- 	ln -sf $(PCILIB) $(DESTDIR)$(LIBDIR)/$(LIBNAME)$(ABI_VERSION).$(LIBEXT)
+ ifneq ($(PCIIMPLIB),$(PCILIB))
+ 	$(INSTALL) -c -m 644 lib/$(PCIIMPLIB) $(DESTDIR)$(LIBDIR)
+ endif
