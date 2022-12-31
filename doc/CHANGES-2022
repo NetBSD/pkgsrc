@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6424 2022/12/31 12:41:15 mef Exp $
+$NetBSD: CHANGES-2022,v 1.6425 2022/12/31 12:44:25 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9573,3 +9573,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/p5-libapreq2 to 2.17 [wiz 2022-12-31]
 	Updated print/R-tinytex to 0.43 [mef 2022-12-31]
 	Updated devel/R-testthat to 3.1.6 [mef 2022-12-31]
+	Updated devel/R-xfun to 0.36 [mef 2022-12-31]
