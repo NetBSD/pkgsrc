@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6428 2022/12/31 16:21:00 taca Exp $
+$NetBSD: CHANGES-2022,v 1.6429 2022/12/31 18:30:11 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9577,3 +9577,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/monit to 5.32.0 [leot 2022-12-31]
 	Updated sysutils/rcm to 1.3.6 [leot 2022-12-31]
 	Updated misc/ruby-manpages to 0.6.1nb2 [taca 2022-12-31]
+	Updated emulators/vice to 3.7.1 [rhialto 2022-12-31]
