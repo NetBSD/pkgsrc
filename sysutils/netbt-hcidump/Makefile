@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2015/03/19 19:16:31 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2022/12/31 21:49:13 plunky Exp $
 
 DISTNAME=		bluez-5.27
 PKGNAME=		netbt-hcidump-${BLUEZ_VERSION}
@@ -16,7 +16,7 @@ BLUEZ_VERSION=		${DISTNAME:S/bluez-//}
 
 EXTRACT_USING=		bsdtar
 
-ONLY_FOR_PLATFORM=	NetBSD-[4-9].*-*
+ONLY_FOR_PLATFORM=	NetBSD-[4-9].*-* NetBSD-[1-9][0-9].*-*
 CONFLICTS+=		hcidump-[0-9]* bluez-hcidump-[0-9]*
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
