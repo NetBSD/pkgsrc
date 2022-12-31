@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2022/12/29 16:23:52 taca Exp $
+# $NetBSD: Makefile,v 1.23 2022/12/31 16:21:52 taca Exp $
 
 DISTNAME=	unicorn-6.1.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

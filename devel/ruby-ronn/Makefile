@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2022/12/29 16:23:51 taca Exp $
+# $NetBSD: Makefile,v 1.7 2022/12/31 16:21:51 taca Exp $
 
 DISTNAME=		ronn-0.7.3
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		devel textproc
 
 MAINTAINER=		nils@NetBSD.org
