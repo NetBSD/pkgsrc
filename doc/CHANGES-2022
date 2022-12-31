@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6436 2022/12/31 21:57:01 adam Exp $
+$NetBSD: CHANGES-2022,v 1.6437 2022/12/31 22:02:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9589,3 +9589,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/doxygen to 1.9.6 [adam 2022-12-31]
 	Updated net/py-smbc to 1.0.24 [adam 2022-12-31]
 	Updated time/py-ciso8601 to 2.3.0 [adam 2022-12-31]
+	Updated textproc/utf8-cpp to 3.2.3 [adam 2022-12-31]
+	Updated textproc/ugrep to 3.9.3 [adam 2022-12-31]
