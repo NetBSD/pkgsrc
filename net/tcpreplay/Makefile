@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2022/12/29 23:29:04 gutteridge Exp $
+# $NetBSD: Makefile,v 1.30 2022/12/31 11:46:39 gutteridge Exp $
 
 DISTNAME=	tcpreplay-4.4.2
 CATEGORIES=	net
@@ -18,6 +18,9 @@ USE_LIBTOOL=	yes
 
 CONFIGURE_ARGS+=	--enable-dynamic-link
 CONFIGURE_ARGS+=	--with-libpcap=${BUILDLINK_PREFIX.libpcap}
+
+do-test:
+	cd ${WRKSRC}/test && ${SETENV} ${MAKE_ENV} ${MAKE} test
 
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
