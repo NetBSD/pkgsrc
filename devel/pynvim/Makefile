@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2022/10/25 20:26:02 nikita Exp $
+# $NetBSD: Makefile,v 1.2 2022/12/31 01:32:45 gutteridge Exp $
 
 DISTNAME=	pynvim-0.4.3
-CATEGORIES=	devel
+CATEGORIES=	devel editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=neovim/}
 GITHUB_PROJECT=	pynvim
 GITHUB_TAG=	${PKGVERSION_NOREV}
@@ -13,9 +13,9 @@ LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-msgpack>=0.5.2:../../devel/py-msgpack
 DEPENDS+=	${PYPKGPREFIX}-greenlet>=1.1.3:../../devel/py-greenlet
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
-# it does support python 2.7 and 3.4 or later
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-greenlet
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
