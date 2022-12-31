@@ -1,8 +1,8 @@
-$NetBSD: patch-CMakeLists.txt,v 1.2 2022/11/07 10:19:27 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.3 2022/12/31 22:00:17 adam Exp $
 
 Do not install includes in a sub-directory.
 
---- CMakeLists.txt.orig	2022-11-06 21:14:17.000000000 +0000
+--- CMakeLists.txt.orig	2022-12-28 17:47:32.000000000 +0000
 +++ CMakeLists.txt
 @@ -14,7 +14,7 @@ option(UTF8_SAMPLES "Enable building sam
  add_library(utf8cpp INTERFACE)
@@ -13,12 +13,12 @@ Do not install includes in a sub-directory.
  )
  add_library(utf8::cpp ALIAS utf8cpp)
  
-@@ -26,7 +26,7 @@ if(UTF8_INSTALL)
-         set(DEF_INSTALL_CMAKE_DIR ${CMAKE_INSTALL_LIBDIR}/cmake/utf8cpp)
-     endif()
+@@ -39,7 +39,7 @@ if(UTF8_INSTALL)
+         INSTALL_DESTINATION ${DEF_INSTALL_CMAKE_DIR}
+     )
  
 -    install(DIRECTORY source/ DESTINATION include/utf8cpp)
 +    install(DIRECTORY source/ DESTINATION include)
-     install(TARGETS utf8cpp EXPORT utf8cppConfig)
-     install(EXPORT utf8cppConfig DESTINATION ${DEF_INSTALL_CMAKE_DIR})
-     export(EXPORT utf8cppConfig)
+     install(TARGETS utf8cpp EXPORT utf8cppTargets)
+     install(EXPORT utf8cppTargets DESTINATION ${DEF_INSTALL_CMAKE_DIR})
+     install(
