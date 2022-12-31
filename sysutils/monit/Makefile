@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2021/05/14 11:28:31 nia Exp $
+# $NetBSD: Makefile,v 1.22 2022/12/31 12:49:05 leot Exp $
 
-DISTNAME=		monit-5.26.0
-PKGREVISION=		1
+DISTNAME=		monit-5.32.0
 CATEGORIES=		sysutils
 MASTER_SITES=		https://mmonit.com/monit/dist/
 
@@ -45,7 +44,7 @@ DOCDIR=			${PREFIX}/${DOC_SUBDIR}
 EG_SUBDIR=		share/examples/monit
 EGDIR=			${PREFIX}/${EG_SUBDIR}
 
-M_DOCFILES=		CHANGES COPYING README
+M_DOCFILES=		CHANGES COPYING
 
 SUBST_CLASSES+=		monit
 SUBST_STAGE.monit=	pre-configure
