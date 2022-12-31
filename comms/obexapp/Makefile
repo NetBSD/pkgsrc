@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2022/05/05 08:33:57 nia Exp $
+# $NetBSD: Makefile,v 1.37 2022/12/31 21:49:33 plunky Exp $
 #
 
 DISTNAME=	obexapp-1.4.15
@@ -11,7 +11,7 @@ HOMEPAGE=	https://people.freebsd.org/~emax/obexapp/
 COMMENT=	Obex application to transfer objects to mobile equipment
 LICENSE=	modified-bsd
 
-ONLY_FOR_PLATFORM=	FreeBSD-*-* NetBSD-[4-9].*-*
+ONLY_FOR_PLATFORM=	FreeBSD-*-* NetBSD-[4-9].*-* NetBSD-[1-9][0-9].*-*
 
 BUILD_DEFS+=		VARBASE
 
