@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6425 2022/12/31 12:44:25 mef Exp $
+$NetBSD: CHANGES-2022,v 1.6426 2022/12/31 12:49:17 leot Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9574,3 +9574,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated print/R-tinytex to 0.43 [mef 2022-12-31]
 	Updated devel/R-testthat to 3.1.6 [mef 2022-12-31]
 	Updated devel/R-xfun to 0.36 [mef 2022-12-31]
+	Updated sysutils/monit to 5.32.0 [leot 2022-12-31]
