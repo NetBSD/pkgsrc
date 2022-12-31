@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2021/04/21 15:37:12 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2022/12/31 22:03:37 dholland Exp $
 
 DISTNAME=		new_brain
 PKGNAME=		knightcap-brain-19980616
+PKGREVISION=		1
 CATEGORIES=		games
 #MASTER_SITES=		ftp://ftp.samba.org/pub/KnightCap/
 EXTRACT_SUFX=		.dat
@@ -32,11 +33,10 @@ NO_CONFIGURE=		yes
 # translate the posted one to a portable format (e.g. compressed JSON
 # or something, or just plain text) and provide a loader for that
 # format upstream.
-
 .include "../../mk/bsd.prefs.mk"
-ONLY_FOR_PLATFORM=	${LITTLEENDIANPLATFORMS}
-NOT_FOR_PLATFORM=	NetBSD-[6-9].*-* NetBSD-1[1-9].*-*
-NOT_FOR_PLATFORM+=	Linux-*-alpha
+BROKEN_EXCEPT_ON_PLATFORM=	${LITTLEENDIANPLATFORMS}
+BROKEN_ON_PLATFORM=		NetBSD-[6-9].*-* NetBSD-[1-9][0-9].*-*
+BROKEN_ON_PLATFORM+=		Linux-*-alpha
 
 EGDIR=			${PREFIX}/share/examples/knightcap
 INSTALLATION_DIRS=	bin
