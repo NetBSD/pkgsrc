@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6437 2022/12/31 22:02:14 adam Exp $
+$NetBSD: CHANGES-2022,v 1.6438 2022/12/31 22:05:04 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9591,3 +9591,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated time/py-ciso8601 to 2.3.0 [adam 2022-12-31]
 	Updated textproc/utf8-cpp to 3.2.3 [adam 2022-12-31]
 	Updated textproc/ugrep to 3.9.3 [adam 2022-12-31]
+	Updated games/knightcap-brain to 19980616nb1 [dholland 2022-12-31]
