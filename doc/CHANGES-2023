@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6 2023/01/01 04:41:19 mef Exp $
+$NetBSD: CHANGES-2023,v 1.7 2023/01/01 04:45:50 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8,3 +8,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/R-pkgcache to 2.0.4 [mef 2023-01-01]
 	Updated devel/R-repr to 1.1.4 [mef 2023-01-01]
 	Updated databases/R-dbplyr to 2.2.1 [mef 2023-01-01]
+	Updated archivers/R-zip to 2.2.2 [mef 2023-01-01]
