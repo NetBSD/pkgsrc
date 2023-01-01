@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.15 2023/01/01 15:44:20 adam Exp $
+$NetBSD: CHANGES-2023,v 1.16 2023/01/01 19:13:13 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -19,3 +19,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/cppzmq to 4.9.0 [adam 2023-01-01]
 	Updated mail/dovecot2 to 2.3.20 [adam 2023-01-01]
 	Updated mail/dovecot2-pigeonhole to 0.5.20 [adam 2023-01-01]
+	Updated sysutils/xfce4-cpugraph-plugin to 1.2.7 [gutteridge 2023-01-01]
