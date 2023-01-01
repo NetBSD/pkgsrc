@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/01/01 14:12:05 rhialto Exp $
+
+BLAKE2s (breezy-qbrz-0.4.1.0.1651.tar.gz) = 9cd8b9e449e6848e121c091b9893128e13f8d68554e665455d0be6898382de69
+SHA512 (breezy-qbrz-0.4.1.0.1651.tar.gz) = 0de023ceb9245c853fd05b3d3bee149fcf2b095d0671cd211f5c327d9db266881a1485f7e95d68a1630544f61fe6df5da219ea3b9905ec9be71f108bb7210b97
+Size (breezy-qbrz-0.4.1.0.1651.tar.gz) = 964914 bytes
