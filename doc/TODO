@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22439 2023/01/01 19:28:25 gutteridge Exp $
+$NetBSD: TODO,v 1.22440 2023/01/01 19:53:39 gutteridge Exp $
 
 Suggested new packages
 ======================
@@ -1622,7 +1622,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o xf86-video-dummy-0.4.0
 	o xf86-video-nouveau-1.0.17
 	o xfce4-screenshooter-1.10.1 [requires libsoup >= 3.0]
-	o xfce4-systemload-plugin-1.3.2 [requires unstable Xfce libraries]
 	o xfe-1.42 [pkg/52968]
 	o xforms-1.2.4
 	o xfpt-0.11
