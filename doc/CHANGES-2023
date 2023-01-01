@@ -1,0 +1,5 @@
+$NetBSD: CHANGES-2023,v 1.1 2023/01/01 00:47:52 mef Exp $
+
+Changes to the packages collection and infrastructure in 2023:
+
+	Updated devel/R-cli to 3.5.0 [mef 2023-01-01]
