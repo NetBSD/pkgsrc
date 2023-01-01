@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.49 2022/08/11 05:08:14 gutteridge Exp $
+# $NetBSD: Makefile,v 1.50 2023/01/01 20:28:08 gutteridge Exp $
 
-PKGREVISION= 2
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-VERSION=	4.16.0
+VERSION=	4.18.0
 DISTNAME=	xfce4-dev-tools-${VERSION}
 CATEGORIES=	devel
 MASTER_SITES=	https://archive.xfce.org/src/xfce/xfce4-dev-tools/${VERSION:R}/
