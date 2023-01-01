@@ -1,12 +1,14 @@
-# $NetBSD: Makefile,v 1.5 2021/08/30 01:14:59 mef Exp $
+# $NetBSD: Makefile,v 1.6 2023/01/01 03:53:20 mef Exp $
 
 R_PKGNAME=	zip
-R_PKGVER=	2.2.0
+R_PKGVER=	2.2.2
 CATEGORIES=	archivers
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Cross-platform 'zip' compression
 LICENSE=	cc0-1.0-universal
+
+TEST_DEPENDS+=	tex-texlive.infra-[0-9]*:../../print/tex-texlive.infra
 
 USE_LANGUAGES=	c
 
