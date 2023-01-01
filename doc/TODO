@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22440 2023/01/01 19:53:39 gutteridge Exp $
+$NetBSD: TODO,v 1.22441 2023/01/01 21:22:11 adam Exp $
 
 Suggested new packages
 ======================
@@ -1046,7 +1046,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o memached-1.5.6
 	o memtestplus-6.0
 	o merkaator-0.18.3
-	o meson-1.0
 	o mesure-0.7.2
 	o metacity-3.14.2
 	o metis-5.1.0
