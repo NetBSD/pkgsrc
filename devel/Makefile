@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3861 2022/12/31 01:41:32 gutteridge Exp $
+# $NetBSD: Makefile,v 1.3862 2023/01/01 14:12:05 rhialto Exp $
 #
 
 COMMENT=	Development utilities
@@ -193,6 +193,7 @@ SUBDIR+=	boost-libs
 SUBDIR+=	boost-mpi
 SUBDIR+=	bpython
 SUBDIR+=	breezy
+SUBDIR+=	breezy-qbrz
 SUBDIR+=	buddy
 SUBDIR+=	bugzilla
 SUBDIR+=	bugzilla3
