@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1494 2022/12/19 07:45:41 sekiya Exp $
+# $NetBSD: Makefile,v 1.1495 2023/01/01 23:57:50 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -347,6 +347,7 @@ SUBDIR+=	libradius
 SUBDIR+=	librsync
 SUBDIR+=	libslirp
 SUBDIR+=	libsoup
+SUBDIR+=	libsoup3
 SUBDIR+=	libsscript
 SUBDIR+=	libtelnet
 SUBDIR+=	libtorrent
