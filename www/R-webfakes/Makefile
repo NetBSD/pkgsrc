@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2022/04/29 15:00:26 mef Exp $
+# $NetBSD: Makefile,v 1.2 2023/01/01 01:01:15 mef Exp $
 
 R_PKGNAME=	webfakes
-R_PKGVER=	1.1.3
+R_PKGVER=	1.1.6
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
