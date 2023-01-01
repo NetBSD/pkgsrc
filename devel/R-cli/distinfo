@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2022/12/17 01:27:54 mef Exp $
+$NetBSD: distinfo,v 1.12 2023/01/01 00:44:35 mef Exp $
 
-BLAKE2s (R/cli_3.4.1.tar.gz) = 2f9ec7ef7b968c11fe9924e42587d5b2f59a7ce20ff37d1791b718f16d36cc68
-SHA512 (R/cli_3.4.1.tar.gz) = b8fd9da9ef551a4626c40be2873d832aa2c109cc93103e7529e4d91f611e70395546b07502ea7620c7e93171441a43c74a64a53d945e675bf72258efd7af47b6
-Size (R/cli_3.4.1.tar.gz) = 540044 bytes
+BLAKE2s (R/cli_3.5.0.tar.gz) = b395c3b4d796f1dc5ac79b3606e375a0fa95b1a3b2232b60d3de0d9dabbba201
+SHA512 (R/cli_3.5.0.tar.gz) = cc46fa5012248e71e661868821e7eebf2dbee10b8537b00e28d1a77a2ecd0268a3c86a9c20e34ba48246d6f3b871612ebc0b80b203326b0dfb735fb3e4e55627
+Size (R/cli_3.5.0.tar.gz) = 560308 bytes
