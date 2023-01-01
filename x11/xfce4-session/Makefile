@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.99 2022/11/23 16:21:29 adam Exp $
+# $NetBSD: Makefile,v 1.100 2023/01/01 19:19:26 gutteridge Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-DISTNAME=		xfce4-session-4.16.0
-PKGREVISION=		6
+DISTNAME=		xfce4-session-4.18.0
 CATEGORIES=		x11
-MASTER_SITES+=		https://archive.xfce.org/src/xfce/xfce4-session/4.16/
+MASTER_SITES+=		https://archive.xfce.org/src/xfce/xfce4-session/${PKGVERSION_NOREV:R}/
 
 HOMEPAGE=		https://docs.xfce.org/xfce/xfce4-session/start
 COMMENT=		Xfce session manager
