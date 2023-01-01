@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2021/06/09 15:20:49 mef Exp $
+# $NetBSD: Makefile,v 1.7 2023/01/01 05:44:58 mef Exp $
 
 R_PKGNAME=	RSQLite
-R_PKGVER=	2.2.7
+R_PKGVER=	2.2.20
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -14,8 +14,23 @@ DEPENDS+=	R-memoise>=1.1.0:../../devel/R-memoise
 DEPENDS+=	R-pkgconfig>=2.0.2:../../devel/R-pkgconfig
 DEPENDS+=	R-DBI>=1.1.0:../../math/R-DBI
 
-# Packages suggested but not available: 'DBItest', 'hms', 'rvest'
-# TEST_DEPENDS+=
+# Package suggested but not available: 'DBItest'
+TEST_DEPENDS+=	R-bit64-[0-9]*:../../devel/R-bit64
+TEST_DEPENDS+=	R-blob-[0-9]*:../../devel/R-blob
+TEST_DEPENDS+=	R-DBI-[0-9]*:../../math/R-DBI
+#EST_DEPENDS+=	R-DBItest-[0-9]*:
+TEST_DEPENDS+=	R-gert-[0-9]*:../../devel/R-gert
+TEST_DEPENDS+=	R-gh-[0-9]*:../../www/R-gh
+TEST_DEPENDS+=	R-hms-[0-9]*:../../time/R-hms
+TEST_DEPENDS+=	R-knitr-[0-9]*:../../print/R-knitr
+TEST_DEPENDS+=	R-memoise-[0-9]*:../../devel/R-memoise
+TEST_DEPENDS+=	R-pkgconfig-[0-9]*:../../devel/R-pkgconfig
+TEST_DEPENDS+=	R-plogr-[0-9]*:../../devel/R-plogr
+TEST_DEPENDS+=	R-Rcpp-[0-9]*:../../devel/R-Rcpp
+TEST_DEPENDS+=	R-rmarkdown-[0-9]*:../../textproc/R-rmarkdown
+TEST_DEPENDS+=	R-rvest-[0-9]*:../../www/R-rvest
+TEST_DEPENDS+=	R-testthat-[0-9]*:../../devel/R-testthat
+TEST_DEPENDS+=	R-xml2-[0-9]*:../../textproc/R-xml2
 
 USE_LANGUAGES+=	c c++
 
