@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5 2023/01/01 01:30:00 mef Exp $
+$NetBSD: CHANGES-2023,v 1.6 2023/01/01 04:41:19 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7,3 +7,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/R-webfakes to 1.1.6 [mef 2023-01-01]
 	Updated devel/R-pkgcache to 2.0.4 [mef 2023-01-01]
 	Updated devel/R-repr to 1.1.4 [mef 2023-01-01]
+	Updated databases/R-dbplyr to 2.2.1 [mef 2023-01-01]
