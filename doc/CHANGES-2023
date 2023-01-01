@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.28 2023/01/01 22:52:47 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.29 2023/01/01 23:58:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -34,3 +34,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated time/py-dateparser to 1.1.5 [adam 2023-01-01]
 	Added devel/ruby-neovim version 0.9.0 [nikita 2023-01-01]
 	Updated editors/xournalpp to 1.1.3 [wiz 2023-01-01]
+	Added net/libsoup3 version 3.2.2 [wiz 2023-01-01]
