@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2021/12/17 10:07:56 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2023/01/01 04:41:11 mef Exp $
 
 R_PKGNAME=	dbplyr
-R_PKGVER=	2.1.1
+R_PKGVER=	2.2.1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Database backend for dplyr
@@ -22,7 +22,18 @@ DEPENDS+=	R-tibble-[0-9]*:../../math/R-tibble
 DEPENDS+=	R-tidyselect-[0-9]*:../../devel/R-tidyselect
 DEPENDS+=	R-vctrs-[0-9]*:../../math/R-vctrs
 DEPENDS+=	R-withr-[0-9]*:../../devel/R-withr
+
+# Packages suggested but not available for checking:
+#   'Lahman', 'nycflights13', 'odbc', 'RMariaDB', 'RPostgres',
+#   'RPostgreSQL'
+TEST_DEPENDS+=	R-bit64-[0-9]*:../../devel/R-bit64
+TEST_DEPENDS+=	R-covr-[0-9]*:../../devel/R-covr
 TEST_DEPENDS+=	R-knitr-[0-9]*:../../print/R-knitr
+TEST_DEPENDS+=	R-rmarkdown-[0-9]*:../../textproc/R-rmarkdown
+TEST_DEPENDS+=	R-RSQLite-[0-9]*:../../databases/R-RSQLite
+TEST_DEPENDS+=	R-testthat-[0-9]*:../../devel/R-testthat
+TEST_DEPENDS+=	R-tidyr-[0-9]*:../../math/R-tidyr
+TEST_DEPENDS+=	tex-texlive.infra-[0-9]*:../../print/tex-texlive.infra
 
 USE_LANGUAGES=	c c++
 
