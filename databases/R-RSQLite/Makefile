@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2023/01/01 05:44:58 mef Exp $
+# $NetBSD: Makefile,v 1.8 2023/01/01 06:00:20 mef Exp $
 
 R_PKGNAME=	RSQLite
 R_PKGVER=	2.2.20
@@ -25,8 +25,6 @@ TEST_DEPENDS+=	R-hms-[0-9]*:../../time/R-hms
 TEST_DEPENDS+=	R-knitr-[0-9]*:../../print/R-knitr
 TEST_DEPENDS+=	R-memoise-[0-9]*:../../devel/R-memoise
 TEST_DEPENDS+=	R-pkgconfig-[0-9]*:../../devel/R-pkgconfig
-TEST_DEPENDS+=	R-plogr-[0-9]*:../../devel/R-plogr
-TEST_DEPENDS+=	R-Rcpp-[0-9]*:../../devel/R-Rcpp
 TEST_DEPENDS+=	R-rmarkdown-[0-9]*:../../textproc/R-rmarkdown
 TEST_DEPENDS+=	R-rvest-[0-9]*:../../www/R-rvest
 TEST_DEPENDS+=	R-testthat-[0-9]*:../../devel/R-testthat
