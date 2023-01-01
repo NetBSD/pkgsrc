@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.64 2022/08/11 05:09:18 gutteridge Exp $
+# $NetBSD: Makefile,v 1.65 2023/01/01 19:53:23 gutteridge Exp $
 
-PKGREVISION= 1
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-VERSION=	1.3.1
+VERSION=	1.3.2
 DISTNAME=	xfce4-systemload-plugin-${VERSION}
 CATEGORIES=	sysutils
 MASTER_SITES=	https://archive.xfce.org/src/panel-plugins/xfce4-systemload-plugin/${VERSION:R}/
@@ -11,7 +10,13 @@ MASTER_SITES=	https://archive.xfce.org/src/panel-plugins/xfce4-systemload-plugin
 HOMEPAGE=	https://goodies.xfce.org/projects/panel-plugins/xfce4-systemload-plugin
 COMMENT=	Xfce system load plugin
 
+USE_LANGUAGES=	c c++
+
 MAKE_ENV.DragonFly+=	OS_LIBS=-lkinfo
 
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+BUILDLINK_API_DEPENDS.xfce4-panel+=	xfce4-panel>=4.16.0
 .include "../../x11/xfce4-panel/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libxfce4util+=	libxfce4util>=4.18.0
+.include "../../x11/libxfce4util/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
