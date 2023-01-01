@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2021/09/20 00:44:28 mef Exp $
+# $NetBSD: Makefile,v 1.10 2023/01/01 05:24:32 mef Exp $
 
 R_PKGNAME=	tibble
 R_PKGVER=	3.1.4
@@ -16,12 +16,10 @@ DEPENDS+=	R-pillar>=1.4.0:../../misc/R-pillar
 DEPENDS+=	R-lifecycle-[0-9]*:../../devel/R-lifecycle
 DEPENDS+=	R-magrittr-[0-9]*:../../devel/R-magrittr
 
-
-# VignetteBuilder package required for checking but not installed: 'knitr'
 # Packages suggested but not available:
-#   'bench', 'DiagrammeR', 'formattable', 'lubridate', 'mockr',
-#   'nycflights13'
+#   'DiagrammeR', 'formattable', 'nycflights13'
 
+TEST_DEPENDS+=	R-bench-[0-9]*:../../benchmarks/R-bench
 TEST_DEPENDS+=	R-bit64-[0-9]*:../../devel/R-bit64
 TEST_DEPENDS+=	R-blob-[0-9]*:../../devel/R-blob
 TEST_DEPENDS+=	R-covr-[0-9]*:../../devel/R-covr
@@ -30,6 +28,8 @@ TEST_DEPENDS+=	R-ggplot2-[0-9]*:../../graphics/R-ggplot2
 TEST_DEPENDS+=	R-hms-[0-9]*:../../time/R-hms
 TEST_DEPENDS+=	R-htmltools-[0-9]*:../../textproc/R-htmltools
 TEST_DEPENDS+=	R-knitr-[0-9]*:../../print/R-knitr
+TEST_DEPENDS+=	R-lubridate-[0-9]*:../../time/R-lubridate
+TEST_DEPENDS+=	R-mockr-[0-9]*:../../devel/R-mockr
 TEST_DEPENDS+=	R-purrr-[0-9]*:../../devel/R-purrr
 TEST_DEPENDS+=	R-rmarkdown-[0-9]*:../../textproc/R-rmarkdown
 TEST_DEPENDS+=	R-testthat-[0-9]*:../../devel/R-testthat
