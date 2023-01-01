@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.94 2022/12/31 11:21:04 gutteridge Exp $
+# $NetBSD: Makefile,v 1.95 2023/01/01 20:35:20 gutteridge Exp $
 
 META_PACKAGE=	yes
 
-PKGREVISION=	5
+PKGREVISION=	6
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	xfce4-extras-${XFCE4_VERSION}
@@ -15,13 +15,13 @@ DEPENDS+=	xfce4-taskmanager>=1.5.4:../../sysutils/xfce4-taskmanager
 
 # Panel Plugins
 DEPENDS+=	xfce4-diskperf-plugin>=2.7.0:../../sysutils/xfce4-diskperf-plugin
-DEPENDS+=	xfce4-systemload-plugin>=1.3.1:../../sysutils/xfce4-systemload-plugin
-DEPENDS+=	xfce4-cpugraph-plugin>=1.2.6:../../sysutils/xfce4-cpugraph-plugin
+DEPENDS+=	xfce4-systemload-plugin>=1.3.2:../../sysutils/xfce4-systemload-plugin
+DEPENDS+=	xfce4-cpugraph-plugin>=1.2.7:../../sysutils/xfce4-cpugraph-plugin
 DEPENDS+=	xfce4-wavelan-plugin>=0.6.3:../../net/xfce4-wavelan-plugin
 DEPENDS+=	xfce4-battery-plugin>=1.1.3:../../sysutils/xfce4-battery-plugin
 DEPENDS+=	xfce4-calculator-plugin>=0.7.0:../../misc/xfce4-calculator-plugin
 DEPENDS+=	xfce4-clipman-plugin>=1.6.2:../../x11/xfce4-clipman-plugin
-DEPENDS+=	xfce4-dict>=0.8.2:../../textproc/xfce4-dict
+DEPENDS+=	xfce4-dict>=0.8.4:../../textproc/xfce4-dict
 DEPENDS+=	xfce4-eyes-plugin>=4.6.0:../../x11/xfce4-eyes-plugin
 DEPENDS+=	xfce4-fsguard-plugin>=1.1.2:../../sysutils/xfce4-fsguard-plugin
 DEPENDS+=	xfce4-genmon-plugin>=4.1.1:../../sysutils/xfce4-genmon-plugin
