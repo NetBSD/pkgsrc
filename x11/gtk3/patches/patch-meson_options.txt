@@ -1,0 +1,15 @@
+$NetBSD: patch-meson_options.txt,v 1.1 2023/01/01 21:21:35 adam Exp $
+
+Make gtk3-atk-bridge an option to avoid unwanted dbus dependency.
+
+--- meson_options.txt.orig	2023-01-01 19:12:35.000000000 +0000
++++ meson_options.txt
+@@ -9,6 +9,8 @@ option('win32_backend', type: 'boolean',
+   description : 'Enable the Windows gdk backend (only when building on Windows)')
+ option('quartz_backend', type: 'boolean', value: true,
+   description : 'Enable the macOS gdk backend (only when building on macOS)')
++option('atk_bridge', type: 'boolean', value: true,
++  description : 'Enable Atk bridge')
+ 
+ # Optional dependencies
+ option('xinerama', type: 'combo', choices : ['yes', 'no', 'auto'], value : 'auto',
