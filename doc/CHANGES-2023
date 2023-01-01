@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.8 2023/01/01 05:33:33 mef Exp $
+$NetBSD: CHANGES-2023,v 1.9 2023/01/01 05:38:24 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10,3 +10,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated databases/R-dbplyr to 2.2.1 [mef 2023-01-01]
 	Updated archivers/R-zip to 2.2.2 [mef 2023-01-01]
 	Updated misc/R-pillar to 1.8.1 [mef 2023-01-01]
+	Updated math/R-tibble to 3.1.8 [mef 2023-01-01]
