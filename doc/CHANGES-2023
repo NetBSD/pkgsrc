@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.14 2023/01/01 14:12:33 rhialto Exp $
+$NetBSD: CHANGES-2023,v 1.15 2023/01/01 15:44:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -16,3 +16,6 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/dbip-city-lite to 2023.01 [fcambus 2023-01-01]
 	Updated net/dbip-country-lite to 2023.01 [fcambus 2023-01-01]
 	Added devel/breezy-qbrz version 0.4.1.0.1651 [rhialto 2023-01-01]
+	Updated net/cppzmq to 4.9.0 [adam 2023-01-01]
+	Updated mail/dovecot2 to 2.3.20 [adam 2023-01-01]
+	Updated mail/dovecot2-pigeonhole to 0.5.20 [adam 2023-01-01]
