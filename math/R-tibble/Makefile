@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2023/01/01 05:24:32 mef Exp $
+# $NetBSD: Makefile,v 1.11 2023/01/01 05:38:16 mef Exp $
 
 R_PKGNAME=	tibble
-R_PKGVER=	3.1.4
+R_PKGVER=	3.1.8
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Simple data frames
@@ -12,7 +12,7 @@ DEPENDS+=	R-crayon>=1.3.4:../../devel/R-crayon
 DEPENDS+=	R-fansi>=0.4.0:../../devel/R-fansi
 DEPENDS+=	R-pkgconfig>=2.0.2:../../devel/R-pkgconfig
 DEPENDS+=	R-rlang>=0.3.0:../../devel/R-rlang
-DEPENDS+=	R-pillar>=1.4.0:../../misc/R-pillar
+DEPENDS+=	R-pillar>=1.7.0:../../misc/R-pillar
 DEPENDS+=	R-lifecycle-[0-9]*:../../devel/R-lifecycle
 DEPENDS+=	R-magrittr-[0-9]*:../../devel/R-magrittr
 
