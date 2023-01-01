@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2022/12/18 03:25:06 mef Exp $
+# $NetBSD: Makefile,v 1.8 2023/01/01 01:23:31 mef Exp $
 
 R_PKGNAME=	pkgcache
-R_PKGVER=	2.0.3
+R_PKGVER=	2.0.4
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -23,7 +23,7 @@ DEPENDS+=	R-curl>=3.2:../../www/R-curl
 DEPENDS+=	R-filelock-[0-9]*:../../devel/R-filelock
 DEPENDS+=	R-jsonlite-[0-9]*:../../textproc/R-jsonlite
 
-# Packages suggested but not available: 'debugme', 'webfakes'
+# Packages suggested but not available: 'debugme'
 TEST_DEPENDS+=	R-covr-[0-9]*:../../devel/R-covr
 #TEST_DEPENDS+=	R-debugme-[0-9]*:
 TEST_DEPENDS+=	R-fs-[0-9]*:../../devel/R-fs
