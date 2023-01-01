@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.21 2023/01/01 20:28:19 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.22 2023/01/01 20:36:07 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -25,3 +25,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/xfce4-settings to 4.18.1 [gutteridge 2023-01-01]
 	Updated sysutils/xfce4-thunar to 4.18.1 [gutteridge 2023-01-01]
 	Updated devel/xfce4-dev-tools to 4.18.0 [gutteridge 2023-01-01]
+	Updated meta-pkgs/xfce4-extras to 4.18.0nb6 [gutteridge 2023-01-01]
