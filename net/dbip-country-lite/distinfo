@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.36 2022/12/01 22:20:46 fcambus Exp $
+$NetBSD: distinfo,v 1.37 2023/01/01 10:15:29 fcambus Exp $
 
-BLAKE2s (dbip-country-lite-2022-12.mmdb.gz) = 73e73be965290b047a269606ae288ab0c1a8f3452aa6bf6448fb279f5e844639
-SHA512 (dbip-country-lite-2022-12.mmdb.gz) = d234b910c13d631f7193abb996bc947893c07cee308ae1aef96b25b51ae5284555db441bf2d9ae107a7842202596154c5fd8976395bcf49cdfe8b2f4198b5c4e
-Size (dbip-country-lite-2022-12.mmdb.gz) = 3429720 bytes
+BLAKE2s (dbip-country-lite-2023-01.mmdb.gz) = 398bebffbbf1e881930a7012d0e795e6fcb6f4eb0344ab981c3a2b6804f28e78
+SHA512 (dbip-country-lite-2023-01.mmdb.gz) = f0f087846585e86c3b5444a147e40e62c6766536d404e7da720af9dc9e04e0c29433b86348c4b409f4c7923f9e376d9881b64577086348d68e8a0b555d4238b1
+Size (dbip-country-lite-2023-01.mmdb.gz) = 3413769 bytes
