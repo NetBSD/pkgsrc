@@ -17,3 +17,5 @@ Features:
   * Client support for Digest, NTLM, and Basic authentication
   * HTTP server
   * Server support for Digest and Basic authentication
+
+This package contains the old stable version 2 of the library.
