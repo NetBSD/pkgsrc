@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.44 2023/01/02 16:04:49 gdt Exp $
+$NetBSD: CHANGES-2023,v 1.45 2023/01/02 20:20:12 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -57,3 +57,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-pydantic to 1.10.4 [adam 2023-01-02]
 	Updated devel/superdiff to 2.1.1 [pin 2023-01-02]
 	Updated ham/hamlib to 4.5.3 [gdt 2023-01-02]
+	Updated x11/xfce4-screenshooter to 1.10.2 [gutteridge 2023-01-02]
