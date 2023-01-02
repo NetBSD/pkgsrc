@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2022/12/30 22:31:30 pin Exp $
+# $NetBSD: Makefile,v 1.30 2023/01/02 09:18:26 pin Exp $
 
-DISTNAME=	oculante-0.6.35
+DISTNAME=	oculante-0.6.36
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=woelper/}
 
@@ -22,6 +22,7 @@ MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libX11}/lib
 RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.libX11}/lib
+RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.gtk3}/lib
 
 # This is needed as pkgsrc defaults to graphics/jpeg.
 # If you have graphics/libjpeg-turbo as a local default, it's most probably
@@ -38,4 +39,11 @@ do-install:
 .include "../../security/openssl/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../graphics/cairo/buildlink3.mk"
+.include "../../graphics/cairo-gobject/buildlink3.mk"
+.include "../../devel/pango/buildlink3.mk"
+.include "../../devel/atk/buildlink3.mk"
+.include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
