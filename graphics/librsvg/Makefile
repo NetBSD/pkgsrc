@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.144 2022/11/23 16:18:48 adam Exp $
+# $NetBSD: Makefile,v 1.145 2023/01/02 13:02:42 adam Exp $
 
-DISTNAME=	librsvg-2.54.4
-PKGREVISION=	1
+DISTNAME=	librsvg-2.54.5
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/librsvg/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -11,16 +10,15 @@ HOMEPAGE=	https://wiki.gnome.org/LibRsvg
 COMMENT=	SVG library for GNOME
 LICENSE=	gnu-lgpl-v2.1
 
-MAKE_FLAGS+=	CARGO_MAKE_JOBS=-j${_MAKE_JOBS_N}
-
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config gmake aclocal autoconf automake
 USE_LANGUAGES+=		c c++
 GNU_CONFIGURE=		yes
-#CONFIGURE_ARGS+=	--enable-Bsymbolic=auto
 CONFIGURE_ARGS+=	--disable-Bsymbolic
 
-PYTHON_FOR_BUILD_ONLY=	tool
+PYTHON_FOR_BUILD_ONLY=		tool
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
 # Requires rst2man to generate rsvg-convert.1
 TOOL_DEPENDS+=		${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
 # Requires gi-docgen to generate HTML format API documentation

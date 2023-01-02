@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.67 2022/11/23 16:18:48 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.68 2023/01/02 13:02:42 adam Exp $
 
 BUILDLINK_TREE+=	librsvg
 
@@ -10,9 +10,8 @@ LIBRSVG_BUILDLINK3_MK:=
 .include "../../graphics/librsvg/available.mk"
 
 .if ${LIBRSVG_TYPE} == "rust"
-BUILDLINK_ABI_DEPENDS.librsvg?=	librsvg>=2.54.4nb1
 BUILDLINK_PKGSRCDIR.librsvg?=	../../graphics/librsvg
-BUILDLINK_ABI_DEPENDS.librsvg?=	librsvg>=2.52.8nb1
+BUILDLINK_ABI_DEPENDS.librsvg+=	librsvg>=2.54.4nb1
 BUILDLINK_API_DEPENDS.librsvg+=	librsvg>=2.41
 .elif ${LIBRSVG_TYPE} == "c"
 BUILDLINK_PKGSRCDIR.librsvg?=	../../graphics/librsvg-c
@@ -21,7 +20,7 @@ BUILDLINK_API_DEPENDS.librsvg+=	librsvg>=2.12.6nb1<2.41
 
 .include "../../textproc/libcroco/buildlink3.mk"
 .else
-PKG_FAIL_REASON+=		"[graphics/librsvg/buildlink3.mk] Invalid value ${LIBRSVG_TYPE} for LIBRSVG_TYPE."
+PKG_FAIL_REASON+=	"[graphics/librsvg/buildlink3.mk] Invalid value ${LIBRSVG_TYPE} for LIBRSVG_TYPE."
 .endif
 
 .include "../../devel/pango/buildlink3.mk"
