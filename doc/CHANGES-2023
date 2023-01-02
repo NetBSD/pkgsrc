@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.34 2023/01/02 11:32:46 mef Exp $
+$NetBSD: CHANGES-2023,v 1.35 2023/01/02 12:20:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -44,3 +44,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/haproxy to 2.7.1 [adam 2023-01-02]
 	Updated graphics/oculante to 0.6.36 [pin 2023-01-02]
 	Updated geography/R-countrycode to 1.4.0 [mef 2023-01-02]
+	Updated devel/py-zconfig to 3.6.1 [adam 2023-01-02]
+	Removed devel/epydoc [adam 2023-01-02]
