@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.45 2023/01/02 20:20:12 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.46 2023/01/02 22:18:32 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -58,3 +58,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/superdiff to 2.1.1 [pin 2023-01-02]
 	Updated ham/hamlib to 4.5.3 [gdt 2023-01-02]
 	Updated x11/xfce4-screenshooter to 1.10.2 [gutteridge 2023-01-02]
+	Updated devel/wayland-protocols to 1.26nb2 [ryoon 2023-01-02]
