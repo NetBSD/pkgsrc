@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.95 2023/01/01 20:35:20 gutteridge Exp $
+# $NetBSD: Makefile,v 1.96 2023/01/02 22:32:43 gutteridge Exp $
 
 META_PACKAGE=	yes
 
-PKGREVISION=	6
+PKGREVISION=	7
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	xfce4-extras-${XFCE4_VERSION}
@@ -33,7 +33,7 @@ DEPENDS+=	xfce4-netload-plugin>=1.4.0:../../sysutils/xfce4-netload-plugin
 DEPENDS+=	xfce4-notes-plugin>=1.9.0:../../x11/xfce4-notes-plugin
 DEPENDS+=	xfce4-notifyd>=0.6.4:../../x11/xfce4-notifyd
 DEPENDS+=	xfce4-places-plugin>=1.8.3:../../x11/xfce4-places-plugin
-DEPENDS+=	xfce4-screenshooter>=1.10.0:../../x11/xfce4-screenshooter
+DEPENDS+=	xfce4-screenshooter>=1.10.2:../../x11/xfce4-screenshooter
 DEPENDS+=	xfce4-smartbookmark-plugin>=0.5.2:../../misc/xfce4-smartbookmark-plugin
 DEPENDS+=	xfce4-time-out-plugin>=1.0.3:../../misc/xfce4-time-out-plugin
 DEPENDS+=	xfce4-timer-plugin>=1.7.0:../../time/xfce4-timer-plugin
