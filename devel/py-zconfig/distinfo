@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 10:19:17 nia Exp $
+$NetBSD: distinfo,v 1.12 2023/01/02 12:05:42 adam Exp $
 
-BLAKE2s (ZConfig-3.6.0.tar.gz) = 44ca68d852146c9975422be638fd67f322cb023ac0c1f00aec36570d7504c54a
-SHA512 (ZConfig-3.6.0.tar.gz) = a5cca99f324007a14f4738be1c9f7424538d8a13f7171fbfa979ce9273b29679eb18b0e905afc96d38abcf042af222e3e86acad6912b9eb8b71b6c8122c47031
-Size (ZConfig-3.6.0.tar.gz) = 134559 bytes
+BLAKE2s (ZConfig-3.6.1.tar.gz) = 757a68def4d4ede858df95faede0c72f2c513bdd6711ae646a09210290e35b78
+SHA512 (ZConfig-3.6.1.tar.gz) = e8cf5805028208f2d33152efe244feb59a1ffbd8ce6135ab4febf8fc300bdf8ee81846a94070655490e130e74a92a6b6b86e7fe3ce06673cff2d854b25ba87ec
+Size (ZConfig-3.6.1.tar.gz) = 147047 bytes
