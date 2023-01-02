@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2022/01/05 15:41:09 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2023/01/02 12:05:42 adam Exp $
 
-DISTNAME=	ZConfig-3.6.0
+DISTNAME=	ZConfig-3.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=Z/ZConfig/}
 
@@ -20,10 +19,15 @@ USE_LANGUAGES=	# none
 
 USE_PKG_RESOURCES=	yes
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} zconfig zconfig-${PYVERSSUFFIX} && \
 	${MV} zconfig_schema2html zconfig_schema2html-${PYVERSSUFFIX} || ${TRUE}
+
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} zope-testrunner --test-path=src
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
