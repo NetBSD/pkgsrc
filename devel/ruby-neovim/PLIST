@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/01/01 22:11:42 nikita Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/01/02 04:46:34 taca Exp $
 bin/neovim-ruby-host${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.github/workflows/docs.yml
@@ -96,5 +96,3 @@ ${GEM_LIBDIR}/spec/neovim/window_spec.rb
 ${GEM_LIBDIR}/spec/neovim_spec.rb
 ${GEM_LIBDIR}/spec/support.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
-@pkgdir lib/ruby/gems/3.1.0/plugins
-@pkgdir lib/ruby/gems/3.1.0/extensions
