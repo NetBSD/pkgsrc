@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2023/01/02 22:43:52 vins Exp $
+
+BLAKE2s (mgdiff-1.0/mgdiff.tar.gz) = 7c90e00f9646d41e5e822055340fa41440acaa5ec0352606ccec1e14b43188de
+SHA512 (mgdiff-1.0/mgdiff.tar.gz) = bf5ab4b2a9d42ff2edb73a6dda68a4d17d88f61c63f5ec8366cc49d372a56f3c6812d473a95d86bcb61680d1f91ce4ab7ad87a26748b45e2edd27b73044492a5
+Size (mgdiff-1.0/mgdiff.tar.gz) = 41187 bytes
+SHA1 (patch-Imakefile) = 6a29ed061ea0b54396269707acd7f53a9a5c32ce
+SHA1 (patch-mgdiff.c) = fe9ac9874a1b4a50b97eddfc766c4b8aae258897
+SHA1 (patch-rundiff.c) = 4ead16932bbf480d8da283b335a93418108926f2
