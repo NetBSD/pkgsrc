@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.43 2023/01/02 13:43:52 pin Exp $
+$NetBSD: CHANGES-2023,v 1.44 2023/01/02 16:04:49 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -56,3 +56,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-pybtex-docutils to 1.0.2 [adam 2023-01-02]
 	Updated devel/py-pydantic to 1.10.4 [adam 2023-01-02]
 	Updated devel/superdiff to 2.1.1 [pin 2023-01-02]
+	Updated ham/hamlib to 4.5.3 [gdt 2023-01-02]
