@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.264 2022/11/23 16:18:51 adam Exp $
+# $NetBSD: Makefile,v 1.265 2023/01/02 00:11:15 wiz Exp $
 
 DISTNAME=	evolution-3.34.1
-PKGREVISION=	18
+PKGREVISION=	19
 CATEGORIES=	mail gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/evolution/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
