@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2022/12/18 14:30:56 vins Exp $
+# $NetBSD: Makefile,v 1.2 2023/01/02 22:54:45 vins Exp $
 
-DISTNAME=	bsdfetch-1.0.2
+DISTNAME=	bsdfetch-1.0.4
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jhx0/}
-GITHUB_TAG=	e2c091320656a34aedc39f50dca9a629a39b00da
+GITHUB_TAG=	b1e9d2ae681de9abd60751d00e83e2f548eb98a3
 
 MAINTAINER=	vins@NetBSD.org
 HOMEPAGE=	https://github.com/jhx0/bsdfetch/
