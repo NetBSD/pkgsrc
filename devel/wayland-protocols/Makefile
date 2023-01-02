@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2022/08/11 05:08:14 gutteridge Exp $
+# $NetBSD: Makefile,v 1.9 2023/01/02 22:17:58 ryoon Exp $
 
 DISTNAME=	wayland-protocols-1.26
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	https://wayland.freedesktop.org/releases/
 EXTRACT_SUFX=	.tar.xz
