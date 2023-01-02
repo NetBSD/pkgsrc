@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2022/05/24 18:51:56 jaapb Exp $
+# $NetBSD: Makefile,v 1.7 2023/01/02 13:12:12 adam Exp $
 
-DISTNAME=	pybtex-docutils-1.0.1
+DISTNAME=	pybtex-docutils-1.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pybtex-docutils/}
