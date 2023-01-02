@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.31 2023/01/02 08:47:11 adam Exp $
+$NetBSD: CHANGES-2023,v 1.32 2023/01/02 09:06:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -40,3 +40,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-bitarray to 2.6.2 [adam 2023-01-02]
 	Updated textproc/py-xlsxwriter to 3.0.5 [adam 2023-01-02]
 	Updated graphics/py-Pillow to 9.4.0 [adam 2023-01-02]
+	Updated converters/help2man to 1.49.3 [adam 2023-01-02]
+	Updated net/haproxy to 2.7.1 [adam 2023-01-02]
