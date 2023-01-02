@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.29 2023/01/01 23:58:00 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.30 2023/01/02 00:00:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -35,3 +35,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/ruby-neovim version 0.9.0 [nikita 2023-01-01]
 	Updated editors/xournalpp to 1.1.3 [wiz 2023-01-01]
 	Added net/libsoup3 version 3.2.2 [wiz 2023-01-01]
+	Updated net/libsoup to 2.74.3 [wiz 2023-01-01]
