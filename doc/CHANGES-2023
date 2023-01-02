@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.49 2023/01/02 22:55:13 vins Exp $
+$NetBSD: CHANGES-2023,v 1.50 2023/01/02 23:06:47 vins Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -62,3 +62,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated meta-pkgs/xfce4-extras to 4.18.0nb7 [gutteridge 2023-01-02]
 	Added devel/mgdiff version 1.0 [vins 2023-01-02]
 	Updated sysutils/bsdfetch to 1.0.4 [vins 2023-01-02]
+	Updated chat/toot to 0.33.0 [vins 2023-01-02]
