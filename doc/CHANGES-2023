@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.47 2023/01/02 22:33:11 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.48 2023/01/02 22:46:29 vins Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -60,3 +60,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/xfce4-screenshooter to 1.10.2 [gutteridge 2023-01-02]
 	Updated devel/wayland-protocols to 1.26nb2 [ryoon 2023-01-02]
 	Updated meta-pkgs/xfce4-extras to 4.18.0nb7 [gutteridge 2023-01-02]
+	Added devel/mgdiff version 1.0 [vins 2023-01-02]
