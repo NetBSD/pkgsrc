@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2022/04/11 16:26:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.20 2023/01/02 09:05:43 adam Exp $
 bin/help2man
 info/help2man-de.info
 info/help2man-es.info
@@ -23,6 +23,7 @@ man/hr/man1/help2man.1
 man/hu/man1/help2man.1
 man/it/man1/help2man.1
 man/ja/man1/help2man.1
+man/ko/man1/help2man.1
 man/man1/help2man.1
 man/nb/man1/help2man.1
 man/pl/man1/help2man.1
@@ -46,6 +47,7 @@ share/locale/hr/LC_MESSAGES/help2man.mo
 share/locale/hu/LC_MESSAGES/help2man.mo
 share/locale/it/LC_MESSAGES/help2man.mo
 share/locale/ja/LC_MESSAGES/help2man.mo
+share/locale/ko/LC_MESSAGES/help2man.mo
 share/locale/nb/LC_MESSAGES/help2man.mo
 share/locale/pl/LC_MESSAGES/help2man.mo
 share/locale/pt_BR/LC_MESSAGES/help2man.mo
