@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.55 2022/11/23 16:18:56 adam Exp $
+# $NetBSD: Makefile,v 1.56 2023/01/02 00:11:16 wiz Exp $
 
 DISTNAME=	gupnp-igd-0.2.5
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	net devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gupnp-igd/0.2/}
 EXTRACT_SUFX=	.tar.xz
