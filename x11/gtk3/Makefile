@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.177 2023/01/01 21:21:35 adam Exp $
+# $NetBSD: Makefile,v 1.178 2023/01/02 12:04:53 adam Exp $
 
 DISTNAME=	gtk+-3.24.36
 PKGNAME=	${DISTNAME:S/gtk/gtk3/}
@@ -17,8 +17,7 @@ TOOL_DEPENDS+=	gtk-doc>=1.32:../../textproc/gtk-doc
 # "error: 'for' loop initial declarations are only allowed in C99 mode"
 USE_LANGUAGES=		c99 c++
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		ggrep gmake perl pkg-config bash xgettext msgmerge
-USE_TOOLS+=		gdbus-codegen
+USE_TOOLS+=		bash gdbus-codegen ggrep msgmerge perl pkg-config xgettext
 PTHREAD_AUTO_VARS=	yes
 
 MESON_ARGS+=	-Dgtk_doc=true
