@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2022/12/29 08:07:22 pin Exp $
+# $NetBSD: Makefile,v 1.2 2023/01/02 13:43:29 pin Exp $
 
-DISTNAME=	superdiff-2.0.3
+DISTNAME=	superdiff-2.1.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cheukyin699/}
-GITHUB_TAG=	24af81652102a178e8c240474d69ce9fb765ab82
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/cheukyin699/superdiff/
