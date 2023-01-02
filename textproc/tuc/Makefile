@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2022/06/09 07:58:58 pin Exp $
+# $NetBSD: Makefile,v 1.7 2023/01/02 12:54:00 pin Exp $
 
-# tuc-0.9.0 requires rust-1.61
-DISTNAME=	tuc-0.8.0
+DISTNAME=	tuc-0.11.0
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=riquito/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -13,11 +12,13 @@ LICENSE=	gnu-gpl-v3
 
 .include "cargo-depends.mk"
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/tuc \
 		${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/doc/tuc.1 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/tuc.1
 
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
