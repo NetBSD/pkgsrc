@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.1 2022/05/03 19:34:55 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.2 2023/01/02 12:52:47 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
 CARGO_CRATE_DEPENDS+=	aho-corasick-0.7.18
@@ -76,7 +76,7 @@ CARGO_CRATE_DEPENDS+=	hyper-tls-0.5.0
 CARGO_CRATE_DEPENDS+=	idna-0.2.3
 CARGO_CRATE_DEPENDS+=	indexmap-1.7.0
 CARGO_CRATE_DEPENDS+=	indicatif-0.16.2
-CARGO_CRATE_DEPENDS+=	indoc-1.0.3
+CARGO_CRATE_DEPENDS+=	indoc-1.0.7
 CARGO_CRATE_DEPENDS+=	ipnet-2.3.1
 CARGO_CRATE_DEPENDS+=	itertools-0.10.1
 CARGO_CRATE_DEPENDS+=	itoa-0.4.8
@@ -144,6 +144,7 @@ CARGO_CRATE_DEPENDS+=	regex-syntax-0.6.25
 CARGO_CRATE_DEPENDS+=	remove_dir_all-0.5.3
 CARGO_CRATE_DEPENDS+=	reqwest-0.11.10
 CARGO_CRATE_DEPENDS+=	ring-0.16.20
+CARGO_CRATE_DEPENDS+=	roff-0.2.1
 CARGO_CRATE_DEPENDS+=	rpassword-5.0.1
 CARGO_CRATE_DEPENDS+=	rustc_version-0.2.3
 CARGO_CRATE_DEPENDS+=	rustls-0.20.4
@@ -204,7 +205,6 @@ CARGO_CRATE_DEPENDS+=	unicode-bidi-0.3.6
 CARGO_CRATE_DEPENDS+=	unicode-normalization-0.1.19
 CARGO_CRATE_DEPENDS+=	unicode-width-0.1.9
 CARGO_CRATE_DEPENDS+=	unicode-xid-0.2.2
-CARGO_CRATE_DEPENDS+=	unindent-0.1.7
 CARGO_CRATE_DEPENDS+=	untrusted-0.7.1
 CARGO_CRATE_DEPENDS+=	url-2.2.2
 CARGO_CRATE_DEPENDS+=	vcpkg-0.2.15
