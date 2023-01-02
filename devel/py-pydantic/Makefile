@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2022/10/25 09:15:04 adam Exp $
+# $NetBSD: Makefile,v 1.5 2023/01/02 13:15:56 adam Exp $
 
-DISTNAME=	pydantic-1.10.2
+DISTNAME=	pydantic-1.10.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pydantic/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/samuelcolvin/pydantic
 COMMENT=	Data validation and settings management using python type hints
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.1.0:../../devel/py-typing-extensions
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.2.0:../../devel/py-typing-extensions
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
