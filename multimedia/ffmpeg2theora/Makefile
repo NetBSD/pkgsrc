@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2022/09/27 20:58:25 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2023/01/02 23:53:33 tron Exp $
 
 DISTNAME=	ffmpeg2theora-0.30
 PKGREVISION=	10
@@ -15,9 +15,7 @@ USE_TOOLS+=		pkg-config
 
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 
-# for rintf(3)
-LDFLAGS.Linux+=	-lm
-LDFLAGS.SunOS+=	-lm
+LDFLAGS=	-lm
 
 SCONS_ARGS=	-C ${WRKSRC} destdir=${DESTDIR:Q} prefix=${PREFIX:Q}
 SCONS_ARGS+=	APPEND_CCFLAGS=${CFLAGS:Q}
