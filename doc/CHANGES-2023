@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.39 2023/01/02 12:53:05 pin Exp $
+$NetBSD: CHANGES-2023,v 1.40 2023/01/02 12:54:21 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -50,3 +50,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/prose to 0.4.0 [pin 2023-01-02]
 	Updated textproc/zet to 0.2.5 [pin 2023-01-02]
 	Updated www/xh to 0.17.0 [pin 2023-01-02]
+	Updated textproc/tuc to 0.11.0 [pin 2023-01-02]
