@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.85 2023/01/03 15:17:13 taca Exp $
+$NetBSD: CHANGES-2023,v 1.86 2023/01/03 15:19:35 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -98,3 +98,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/ruby-erubi to 1.12.0 [taca 2023-01-03]
 	Updated www/ruby-css-parser to 1.13.0 [taca 2023-01-03]
 	Updated www/ruby-puma to 6.0.2 [taca 2023-01-03]
+	Updated www/ruby-rails-html-sanitizer to 1.4.4 [taca 2023-01-03]
