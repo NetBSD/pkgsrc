@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.1 2022/12/20 09:09:18 wiz Exp $
+# $NetBSD: go-modules.mk,v 1.2 2023/01/03 14:42:53 wiz Exp $
 
 GO_MODULE_FILES+=	4d63.com/gochecknoglobals/@v/v0.1.0.mod
 GO_MODULE_FILES+=	bazil.org/fuse/@v/v0.0.0-20160811212531-371fbbdaa898.mod
@@ -150,8 +150,8 @@ GO_MODULE_FILES+=	github.com/!azure/go-autorest/tracing/@v/v0.6.0.zip
 GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v0.3.1.mod
 GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v0.4.1.mod
 GO_MODULE_FILES+=	github.com/!burnt!sushi/xgb/@v/v0.0.0-20160522181843-27f122750802.mod
-GO_MODULE_FILES+=	github.com/!cyclone!d!x/cyclonedx-go/@v/v0.7.0.mod
-GO_MODULE_FILES+=	github.com/!cyclone!d!x/cyclonedx-go/@v/v0.7.0.zip
+GO_MODULE_FILES+=	github.com/!cyclone!d!x/cyclonedx-go/@v/v0.7.1-0.20221222100750-41a1ac565cce.mod
+GO_MODULE_FILES+=	github.com/!cyclone!d!x/cyclonedx-go/@v/v0.7.1-0.20221222100750-41a1ac565cce.zip
 GO_MODULE_FILES+=	github.com/!data!dog/zstd/@v/v1.4.5.mod
 GO_MODULE_FILES+=	github.com/!data!dog/zstd/@v/v1.4.5.zip
 GO_MODULE_FILES+=	github.com/!djarvur/go-err113/@v/v0.0.0-20210108212216-aea10b59be24.mod
@@ -1816,7 +1816,8 @@ GO_MODULE_FILES+=	github.com/stretchr/objx/@v/v0.1.0.mod
 GO_MODULE_FILES+=	github.com/stretchr/objx/@v/v0.1.1.mod
 GO_MODULE_FILES+=	github.com/stretchr/objx/@v/v0.2.0.mod
 GO_MODULE_FILES+=	github.com/stretchr/objx/@v/v0.4.0.mod
-GO_MODULE_FILES+=	github.com/stretchr/objx/@v/v0.4.0.zip
+GO_MODULE_FILES+=	github.com/stretchr/objx/@v/v0.5.0.mod
+GO_MODULE_FILES+=	github.com/stretchr/objx/@v/v0.5.0.zip
 GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v0.0.0-20170130113145-4d4bfba8f1d1.mod
 GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v0.0.0-20180303142811-b89eecf5ca5d.mod
 GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.1.4.mod
@@ -1830,7 +1831,8 @@ GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.7.0.mod
 GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.7.1.mod
 GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.7.2.mod
 GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.8.0.mod
-GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.8.0.zip
+GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.8.1.mod
+GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.8.1.zip
 GO_MODULE_FILES+=	github.com/subosito/gotenv/@v/v1.2.0.mod
 GO_MODULE_FILES+=	github.com/subosito/gotenv/@v/v1.4.1.mod
 GO_MODULE_FILES+=	github.com/subosito/gotenv/@v/v1.4.1.zip
