@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2020/03/23 16:49:31 taca Exp $
+# $NetBSD: Makefile,v 1.17 2023/01/03 13:59:38 taca Exp $
 
-DISTNAME=	launchy-2.5.0
+DISTNAME=	launchy-2.5.2
 CATEGORIES=	misc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -8,7 +8,7 @@ HOMEPAGE=	https://github.com/copiousfreetime/launchy
 COMMENT=	Ruby class for launching applications
 LICENSE=	isc
 
-DEPENDS+=	${RUBY_PKGPREFIX}-addressable>=2.3<3:../../net/ruby-addressable
+DEPENDS+=	${RUBY_PKGPREFIX}-addressable>=2.8<3:../../net/ruby-addressable
 
 USE_LANGUAGES=	# none
 
