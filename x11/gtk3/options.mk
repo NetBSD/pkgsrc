@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.25 2023/01/01 21:21:35 adam Exp $
+# $NetBSD: options.mk,v 1.26 2023/01/03 03:04:10 tnn Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gtk3
 PKG_SUPPORTED_OPTIONS+=	gtk3-atk-bridge cups
@@ -54,8 +54,9 @@ PLIST.x11=	yes
 .  if !empty(PKG_OPTIONS:Mgtk3-atk-bridge)
 BUILDLINK_API_DEPENDS.at-spi2-atk+=	at-spi2-atk>=2.6.1
 .    include "../../devel/at-spi2-atk/buildlink3.mk"
+MESON_ARGS+=	-Datk_bridge=true
 .  else
-CONFIGURE_ARGS+=	--without-atk-bridge
+MESON_ARGS+=	-Datk_bridge=false
 .  endif
 
 BUILDLINK_API_DEPENDS.Xft2+=	Xft2>=2.1.2nb2
