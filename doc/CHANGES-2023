@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.77 2023/01/03 14:12:13 pin Exp $
+$NetBSD: CHANGES-2023,v 1.78 2023/01/03 14:13:42 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -90,3 +90,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated misc/ruby-sprockets to 4.2.0 [taca 2023-01-03]
 	Updated x11/xterm to 377 [pin 2023-01-03]
 	Updated graphics/oculante to 0.6.37 [pin 2023-01-03]
+	Updated editors/leafpad to 0.8.19 [pin 2023-01-03]
