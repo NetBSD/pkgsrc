@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.74 2023/01/03 14:03:11 otis Exp $
+$NetBSD: CHANGES-2023,v 1.75 2023/01/03 14:04:11 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -87,3 +87,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated misc/ruby-launchy to 2.5.2 [taca 2023-01-03]
 	Updated sysutils/zabbix50-server to 5.0.30 [otis 2023-01-03]
 	Updated sysutils/zabbix50-agent to 5.0.30 [otis 2023-01-03]
+	Updated misc/ruby-sprockets to 4.2.0 [taca 2023-01-03]
