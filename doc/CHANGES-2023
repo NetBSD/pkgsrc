@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.67 2023/01/03 13:29:58 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.68 2023/01/03 13:31:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -80,3 +80,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/filezilla to 3.62.2 [wiz 2023-01-03]
 	Updated audio/rhythmbox to 3.4.6 [wiz 2023-01-03]
 	Updated sysutils/ncdu to 1.18 [wiz 2023-01-03]
+	Updated www/uhttpmock to 0.5.3 [wiz 2023-01-03]
