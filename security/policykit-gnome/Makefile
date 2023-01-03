@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.59 2022/06/28 11:35:50 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2023/01/03 17:38:10 wiz Exp $
 #
 
 POLICYKIT_GNOME_VER=	0.9.2
 DISTNAME=		PolicyKit-gnome-${POLICYKIT_GNOME_VER}
 PKGNAME=		policykit-gnome-${POLICYKIT_GNOME_VER}
-PKGREVISION=		48
+PKGREVISION=		49
 CATEGORIES=		security
 MASTER_SITES=		http://hal.freedesktop.org/releases/
 EXTRACT_SUFX=		.tar.bz2

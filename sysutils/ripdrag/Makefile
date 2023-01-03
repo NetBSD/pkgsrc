@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2022/11/05 15:52:33 pin Exp $
+# $NetBSD: Makefile,v 1.3 2023/01/03 17:38:15 wiz Exp $
 
 DISTNAME=	ripdrag-0.2.1
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nik012003/}
 GITHUB_TAG=	398857cf87a325ebfaa0faf613a597e6b1f0cfbd

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2022/08/11 05:09:04 gutteridge Exp $
+# $NetBSD: Makefile,v 1.32 2023/01/03 17:36:29 wiz Exp $
 
 DISTNAME=	Player-0.2.0
 PKGNAME=	deforaos-player-0.2.0
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	multimedia
 MASTER_SITES=	https://ftp.defora.org/pub/DeforaOS/Apps/Desktop/src/Player/
 

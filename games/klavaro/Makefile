@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2022/11/21 18:20:42 jperkin Exp $
+# $NetBSD: Makefile,v 1.42 2023/01/03 17:37:10 wiz Exp $
 
 DISTNAME=	klavaro-3.13
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	games
 MASTER_SITES=	http://downloads.sourceforge.net/project/klavaro/
 EXTRACT_SUFX=	.tar.bz2

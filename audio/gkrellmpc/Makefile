@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2022/12/13 13:13:47 jperkin Exp $
+# $NetBSD: Makefile,v 1.5 2023/01/03 17:36:43 wiz Exp $
 DISTNAME=	gkrellmpc-0.1_beta10
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=simark/}
 GITHUB_PROJECT=	gkrellm-gkrellmpc

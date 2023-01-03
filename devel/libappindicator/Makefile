@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2022/11/23 16:19:50 adam Exp $
+# $NetBSD: Makefile,v 1.31 2023/01/03 17:36:18 wiz Exp $
 
 DISTNAME=	libappindicator-12.10.0
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	devel
 MASTER_SITES=	https://launchpad.net/libappindicator/12.10/12.10.0/+download/
 

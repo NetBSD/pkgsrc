@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2022/12/15 10:34:05 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2023/01/03 17:36:47 wiz Exp $
 
 DISTNAME=	parlatype-3.1
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gkarsay/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
