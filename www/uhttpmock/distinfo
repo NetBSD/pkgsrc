@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:31:11 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/01/03 13:31:28 wiz Exp $
 
-BLAKE2s (uhttpmock-0.4.0.tar.xz) = 6c800a2b76c97380fcfa86d25b84781491e4fdb2f7cf4b929a4737d9ad85ad0d
-SHA512 (uhttpmock-0.4.0.tar.xz) = 0f98db886aa02a911fc94c957a371651f9be5784602ea0492d04798dcf12c4a519a292ede9d37b25a965832e5d96ca9da7ce0ca8127af74d3986c4ef74e1f527
-Size (uhttpmock-0.4.0.tar.xz) = 295392 bytes
+BLAKE2s (uhttpmock-0.5.3.tar.xz) = 5d24106e06ea95c894c55c9af7c1b68de6e4303c0eb9c597d1cfa9000398aae8
+SHA512 (uhttpmock-0.5.3.tar.xz) = 9fccdb58ce04c1615d47bafac275c632f161a8148f0af82447286d0017d6b3946145b8a289f9abb55842bf4610ca3e5f2484bf322fb7a33dce42b3ebed45b2ee
+Size (uhttpmock-0.5.3.tar.xz) = 318708 bytes
