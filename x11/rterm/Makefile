@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2022/03/29 10:37:07 pin Exp $
+# $NetBSD: Makefile,v 1.8 2023/01/03 15:34:37 pin Exp $
 
-DISTNAME=	rterm-0.0.6
+DISTNAME=	rterm-0.0.7
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mechpen/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
