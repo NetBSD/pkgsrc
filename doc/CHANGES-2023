@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.68 2023/01/03 13:31:37 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.69 2023/01/03 13:37:35 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -81,3 +81,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated audio/rhythmbox to 3.4.6 [wiz 2023-01-03]
 	Updated sysutils/ncdu to 1.18 [wiz 2023-01-03]
 	Updated www/uhttpmock to 0.5.3 [wiz 2023-01-03]
+	Updated devel/ruby-simplecov to 0.22.0 [taca 2023-01-03]
