@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.51 2023/01/02 23:53:06 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.52 2023/01/03 05:48:27 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -64,3 +64,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/bsdfetch to 1.0.4 [vins 2023-01-02]
 	Updated chat/toot to 0.33.0 [vins 2023-01-02]
 	mk: add CPE support in mk/misc/cpe.mk [wiz 2023-01-02]
+	Updated audio/ruby-taglib to 1.1.3 [taca 2023-01-03]
