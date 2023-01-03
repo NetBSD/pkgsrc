@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2023/01/03 10:29:35 khorben Exp $
+
+BLAKE2s (jitsi-videobridge/jitsi-meet_8138.tar.gz) = 23e125bae071dd96b8ef66429139e1a1cbefcdff7220f8a3aa0368c72f203640
+SHA512 (jitsi-videobridge/jitsi-meet_8138.tar.gz) = 75b617fa44701a40a8ec609f03130e939e9d9127b56b16412f51b5adf00597db3bac562bb8751261e9ce31a7c8b15283ab45bf0ece7337d26c65dd7be133f2a8
+Size (jitsi-videobridge/jitsi-meet_8138.tar.gz) = 62336666 bytes
+BLAKE2s (jitsi-videobridge/jitsi-videobridge-java-deps-2.0.8138.tar.gz) = b45b3aa0caff93aa80311b5210dbfae17e7f570550aee619d0158f4047326b33
+SHA512 (jitsi-videobridge/jitsi-videobridge-java-deps-2.0.8138.tar.gz) = ad1d31295171056815fcf67be1700716d558275fe6f0f7da187bcdb239a0cbf6f9b1ba2ca554f55e076ee9903c5c9ce540938a9cddc2e9cfcec214bd2ddefeb6
+Size (jitsi-videobridge/jitsi-videobridge-java-deps-2.0.8138.tar.gz) = 263397624 bytes
+SHA1 (patch-jvb_resources_jvb.sh) = 35a514a615d07f96357934ab901ca027f76bbcb8
