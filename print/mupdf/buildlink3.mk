@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.45 2022/10/26 10:31:07 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.46 2023/01/03 15:48:38 wiz Exp $
 
 BUILDLINK_TREE+=	mupdf
 
@@ -12,11 +12,11 @@ BUILDLINK_PKGSRCDIR.mupdf?=	../../print/mupdf
 pkgbase := mupdf
 .include "../../mk/pkg-build-options.mk"
 
-.if !empty(PKG_BUILD_OPTIONS.mupdf:Mcurl)
+.if ${PKG_BUILD_OPTIONS.mupdf:Mcurl}
 .include "../../www/curl/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS.mupdf:Mopengl)
+.if ${PKG_BUILD_OPTIONS.mupdf:Mopengl}
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/freeglut/buildlink3.mk"
 .endif
