@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.93 2022/11/23 16:19:31 adam Exp $
+# $NetBSD: Makefile,v 1.94 2023/01/03 16:53:17 ryoon Exp $
 #
 # NOTE: when updating this package, there are two places that sound
 #       tarballs need to be checked; look in ${WRKSRC}/sounds/Makefile
 #       to find out the current sound file versions
 
-DISTNAME=	asterisk-16.24.0
-PKGREVISION=	5
+DISTNAME=	asterisk-16.29.1
 CATEGORIES=	comms net audio
 MASTER_SITES=	http://downloads.asterisk.org/pub/telephony/asterisk/
 MASTER_SITES+=	http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/
@@ -29,7 +28,7 @@ CONFLICTS+=	asterisk-sounds-extra-[0-9]*
 
 .include "../../mk/bsd.prefs.mk"
 
-USE_TOOLS+=		bison gmake perl:run pkg-config tar bash:run
+USE_TOOLS+=		bash bison gmake perl:run pkg-config tar
 USE_LANGUAGES=		c c++
 REPLACE_BASH+=		contrib/scripts/astversion
 REPLACE_BASH+=		contrib/scripts/ast_coredumper
@@ -43,6 +42,7 @@ REPLACE_PYTHON+=	contrib/scripts/*.py
 CHECK_INTERPRETER_SKIP+=	libdata/asterisk/scripts/refcounter.py
 
 GNU_CONFIGURE=		yes
+CONFIG_SHELL=		${TOOLS_PATH.bash}
 CONFIGURE_ARGS+=	--datarootdir=${PREFIX}/libdata
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--without-gtk2
@@ -159,7 +159,7 @@ CONFIGURE_ARGS+=	--without-unbound
 DISTFILES+=	asterisk-extra-sounds-en-gsm-1.5.2.tar.gz
 
 # pjproject
-PJPROJ_VERSION=	2.10
+PJPROJ_VERSION=	2.12.1
 SITES.pjproject-${PJPROJ_VERSION}.tar.bz2= \
 	-https://raw.githubusercontent.com/asterisk/third-party/master/pjproject/${PJPROJ_VERSION}/pjproject-${PJPROJ_VERSION}.tar.bz2
 SITES.pjproject-${PJPROJ_VERSION}.md5= \
@@ -253,6 +253,7 @@ CONF_FILES_PERMS+=	${ASTEXAMPLEDIR}/${f:Q} ${PKG_SYSCONFDIR}/${f:Q} ${ASTERISK_U
 	dsp.conf dundi.conf enum.conf extconfig.conf extensions.ael	\
 	extensions.lua	extensions_minivm.conf				\
 	features.conf festival.conf followme.conf func_odbc.conf	\
+	geolocation.conf						\
 	hep.conf http.conf iax.conf iaxprov.conf indications.conf	\
 	logger.conf manager.conf meetme.conf mgcp.conf minivm.conf	\
 	misdn.conf modules.conf	motif.conf musiconhold.conf muted.conf	\
