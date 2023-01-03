@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2023/01/03 10:25:06 khorben Exp $
+
+Make sure the focus@auth.<domain> user roster includes the proxy component.
+To do so, run the following command:
+
+$ prosodyctl mod_roster_command subscribe focus.<domain> \
+  <jicofo_user>@auth.<domain>
+
+===========================================================================
