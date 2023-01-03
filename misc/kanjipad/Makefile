@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.66 2022/06/28 11:34:47 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2023/01/03 17:37:53 wiz Exp $
 
 DISTNAME=		kanjipad-2.0.0
-PKGREVISION=		47
+PKGREVISION=		48
 CATEGORIES=		misc
 MASTER_SITES=		https://fishsoup.net/software/kanjipad/
 

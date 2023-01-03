@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.106 2023/01/02 00:11:18 wiz Exp $
+# $NetBSD: Makefile,v 1.107 2023/01/03 17:36:15 wiz Exp $
 
 DISTNAME=		gmpc-11.8.16
-PKGREVISION=		39
+PKGREVISION=		40
 CATEGORIES=		audio
 MASTER_SITES=		http://download.sarine.nl/Programs/gmpc/11.8/
 MASTER_SITES+=		${MASTER_SITE_SOURCEFORGE:=musicpd/}
