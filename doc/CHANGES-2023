@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.92 2023/01/03 16:39:00 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.93 2023/01/03 16:54:26 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -105,3 +105,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated print/mupdf to 1.21.1 [wiz 2023-01-03]
 	Updated devel/gettext to 0.21.1 [wiz 2023-01-03]
 	Updated graphics/tiff to 4.5.0 [wiz 2023-01-03]
+	Updated comms/asterisk16 to 16.29.1 [ryoon 2023-01-03]
