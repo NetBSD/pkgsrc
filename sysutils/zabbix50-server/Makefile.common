@@ -1,17 +1,19 @@
-# $NetBSD: Makefile.common,v 1.5 2022/12/23 12:34:05 wiz Exp $
+# $NetBSD: Makefile.common,v 1.6 2023/01/03 13:59:15 otis Exp $
 # used by sysutils/zabbix50-agent/Makefile
 # used by sysutils/zabbix50-proxy/Makefile
 # used by sysutils/zabbix50-server/Makefile
 # used by sysutils/zabbix50-frontend/Makefile
 # used by sysutils/zabbix50-java/Makefile
 
-DISTNAME=	zabbix-5.0.17
+DISTNAME=	zabbix-5.0.30
 CATEGORIES=	sysutils
 MASTER_SITES=	https://cdn.zabbix.com/zabbix/sources/stable/${PKGVERSION_NOREV:R}/
 
 MAINTAINER?=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.zabbix.com/
 LICENSE=	gnu-gpl-v2
+
+.include "../../mk/bsd.prefs.mk"
 
 # Zabbix user, common to all components
 ZABBIX_GROUP?=			zabbix

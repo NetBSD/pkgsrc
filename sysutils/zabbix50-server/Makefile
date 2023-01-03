@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2022/11/23 16:21:10 adam Exp $
+# $NetBSD: Makefile,v 1.16 2023/01/03 13:59:15 otis Exp $
 # used by sysutils/zabbix50-proxy/Makefile
 # used by sysutils/zabbix50-agent/Makefile
 #
-PKGREVISION= 4
 .include "Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-server-${ZABBIX_DB_TYPE}-/}
@@ -64,11 +63,11 @@ REPLACE_BASH+=			misc/snmptrap/snmptrap.sh \
 .include "../../mk/bsd.prefs.mk"
 
 pre-configure:
-	set -e; cd ${WRKSRC}; \
-	   aclocal -I m4 ; automake -ai --foreign; autoconf -I m4
+	cd ${WRKSRC} && \
+	   aclocal -I m4 && automake -ai --foreign && autoconf -I m4
 
 post-install:
-	cd ${WRKSRC}/database/${ZABBIX_DB_TYPE}; \
+	cd ${WRKSRC}/database/${ZABBIX_DB_TYPE} && \
 		${PAX} -rw . ${DESTDIR}${PREFIX}/share/${PKGBASE}/
 .for MISCDIR in ${MISCDIRS}
 	cd ${WRKSRC}/misc/${MISCDIR}; \
