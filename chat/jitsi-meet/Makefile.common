@@ -1,0 +1,19 @@
+# $NetBSD: Makefile.common,v 1.1 2023/01/03 10:25:05 khorben Exp $
+# used by chat/jitsi-meet-prosody/Makefile
+
+GITHUB_PROJECT?=	jitsi-meet
+GITHUB_TAG?=		stable/jitsi-meet_8138
+DISTNAME?=		jitsi-meet_8138
+CATEGORIES=		chat
+MASTER_SITES=		${MASTER_SITE_GITHUB:=jitsi/}
+DIST_SUBDIR=		${GITHUB_PROJECT}
+JITSI_MEET_VERSION=	2.0.8138
+
+MAINTAINER=		khorben@defora.org
+HOMEPAGE?=		https://github.com/jitsi/jitsi-meet/
+COMMENT?=		Secure, Simple and Scalable Video Conferences
+LICENSE=		apache-2.0
+
+WRKSRC?=		${WRKDIR}/${GITHUB_PROJECT}-stable-${DISTNAME}
+
+DISTINFO_FILE?=		${.CURDIR}/../../chat/jitsi-meet/distinfo
