@@ -1,11 +1,11 @@
-$NetBSD: patch-Po4aBuilder.pm,v 1.7 2022/11/15 08:54:13 adam Exp $
+$NetBSD: patch-Po4aBuilder.pm,v 1.8 2023/01/03 19:08:01 adam Exp $
 
 (1) ryoon: remove gzip at initial import
 (2) mef: Add PerlIO::F_UTF8 () macro
 (3) mef: to avoid --previous option is said unknown to msgmerge
     (but sounds strange)
 
---- Po4aBuilder.pm.orig	2022-09-04 14:32:26.000000000 +0000
+--- Po4aBuilder.pm.orig	2023-01-01 00:30:43.000000000 +0000
 +++ Po4aBuilder.pm
 @@ -9,6 +9,8 @@ use File::stat;
  
@@ -29,7 +29,7 @@ $NetBSD: patch-Po4aBuilder.pm,v 1.7 2022/11/15 08:54:13 adam Exp $
          }
          $parser->parse_from_file ($file, $out);
  
--        system("gzip -9 -f $out") and die;
+-        system("gzip -9 -n -f $out") and die;
 -        unlink "$file" || die;
      }
  
@@ -38,7 +38,7 @@ $NetBSD: patch-Po4aBuilder.pm,v 1.7 2022/11/15 08:54:13 adam Exp $
              print "Convert $outdir/$outfile.$section (online docbook.xsl file). ";
              system("xsltproc -o $outdir/$outfile.$section --nonet http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl $file") and die;
              }
--                system ("gzip -9 -f $outdir/$outfile.$section") and die;
+-                system ("gzip -9 -n -f $outdir/$outfile.$section") and die;
              }
 -            unlink "$file" || die;
          }
