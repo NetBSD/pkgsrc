@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2022/03/04 12:22:31 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.28 2023/01/03 16:53:17 ryoon Exp $
 include/asterisk.h
 include/asterisk/_private.h
 include/asterisk/abstract_jb.h
@@ -143,6 +143,7 @@ include/asterisk/presencestate.h
 include/asterisk/privacy.h
 include/asterisk/pval.h
 include/asterisk/res_fax.h
+include/asterisk/res_geolocation.h
 include/asterisk/res_hep.h
 include/asterisk/res_mwi_external.h
 include/asterisk/res_odbc.h
@@ -370,6 +371,7 @@ lib/asterisk/modules/func_dialgroup.so
 lib/asterisk/modules/func_dialplan.so
 lib/asterisk/modules/func_enum.so
 lib/asterisk/modules/func_env.so
+lib/asterisk/modules/func_evalexten.so
 lib/asterisk/modules/func_extstate.so
 lib/asterisk/modules/func_frame_drop.so
 lib/asterisk/modules/func_frame_trace.so
@@ -2600,6 +2602,7 @@ share/examples/asterisk/features.conf
 share/examples/asterisk/festival.conf
 share/examples/asterisk/followme.conf
 share/examples/asterisk/func_odbc.conf
+share/examples/asterisk/geolocation.conf
 share/examples/asterisk/hep.conf
 share/examples/asterisk/http.conf
 share/examples/asterisk/iax.conf

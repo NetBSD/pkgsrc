@@ -1,40 +1,50 @@
-$NetBSD: patch-configure,v 1.4 2022/03/04 12:22:31 ryoon Exp $
+$NetBSD: patch-configure,v 1.5 2023/01/03 16:53:17 ryoon Exp $
 
---- configure.orig	2020-07-16 16:00:28.000000000 +0000
+--- configure.orig	2022-12-31 23:05:06.861637654 +0000
 +++ configure
-@@ -8960,7 +8960,7 @@ $as_echo_n "checking for clang -fblocks.
+@@ -10102,7 +10102,7 @@ printf %s "checking for clang -fblocks..
  				AST_CLANG_BLOCKS="-Wno-unknown-warning-option -fblocks"
- 				{ $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
- $as_echo "yes" >&6; }
+ 				{ printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+ printf "%s\n" "yes" >&6; }
 -			elif test "`echo 'int main(){return ^{return 42;}();}' | ${CC} -o /dev/null -fblocks -x c -lBlocksRuntime - 2>&1`" = ""; then
 +			elif test "`echo 'int main(){return ^{return 42;}();}' | ${CC} ${LDFLAGS} -o /dev/null -fblocks -x c -lBlocksRuntime - 2>&1`" = ""; then
  				AST_CLANG_BLOCKS_LIBS="-lBlocksRuntime"
  				AST_CLANG_BLOCKS="-fblocks"
- 				{ $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
-@@ -14723,7 +14723,7 @@ fi
- done
+ 				{ printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+@@ -16525,7 +16525,7 @@ then :
+ fi
  
  
--ac_fn_c_check_header_mongrel "$LINENO" "sys/poll.h" "ac_cv_header_sys_poll_h" "$ac_includes_default"
-+ac_fn_c_check_header_mongrel "$LINENO" "poll.h" "ac_cv_header_sys_poll_h" "$ac_includes_default"
- if test "x$ac_cv_header_sys_poll_h" = xyes; then :
+-ac_fn_c_check_header_compile "$LINENO" "sys/poll.h" "ac_cv_header_sys_poll_h" "$ac_includes_default"
++ac_fn_c_check_header_compile "$LINENO" "poll.h" "ac_cv_header_sys_poll_h" "$ac_includes_default"
+ if test "x$ac_cv_header_sys_poll_h" = xyes
+ then :
  
- else
-@@ -16738,7 +16738,7 @@ fi
- done
+@@ -18962,6 +18962,18 @@ then :
+   printf "%s\n" "#define HAVE_MALLOC_TRIM 1" >>confdefs.h
+ 
+ fi
++ac_fn_c_check_func "$LINENO" "strftime_l" "ac_cv_func_strftime_l"
++if test "x$ac_cv_func_strftime_l" = xyes
++then :
++  printf "%s\n" "#define HAVE_STRFTIME_L 1" >>confdefs.h
++
++fi
++ac_fn_c_check_func "$LINENO" "strptime_l" "ac_cv_func_strptime_l"
++if test "x$ac_cv_func_strptime_l" = xyes
++then :
++  printf "%s\n" "#define HAVE_STRPTIME_L 1" >>confdefs.h
++
++fi
  
  
--for ac_func in asprintf atexit closefrom dup2 eaccess endpwent euidaccess ffsll ftruncate getcwd gethostbyname gethostname getloadavg gettimeofday glob ioperm inet_ntoa isascii memchr memmove memset mkdir mkdtemp munmap newlocale pipe2 ppoll putenv re_comp regcomp select setenv socket strcasecmp strcasestr strchr strcspn strdup strerror strlcat strlcpy strncasecmp strndup strnlen strrchr strsep strspn strstr strtod strtol strtold strtoq unsetenv uselocale utime vasprintf getpeereid sysctl swapctl malloc_trim
-+for ac_func in asprintf atexit closefrom dup2 eaccess endpwent euidaccess ffsll ftruncate getcwd gethostbyname gethostname getloadavg gettimeofday glob ioperm inet_ntoa isascii memchr memmove memset mkdir mkdtemp munmap newlocale pipe2 ppoll putenv re_comp regcomp select setenv socket strcasecmp strcasestr strchr strcspn strdup strerror strlcat strlcpy strncasecmp strndup strnlen strrchr strsep strspn strstr strtod strtol strtold strtoq unsetenv uselocale utime vasprintf getpeereid sysctl swapctl malloc_trim strftime_l strptime_l
- do :
-   as_ac_var=`$as_echo "ac_cv_func_$ac_func" | $as_tr_sh`
- ac_fn_c_check_func "$LINENO" "$ac_func" "$as_ac_var"
-@@ -16973,7 +16973,7 @@ rm -f core conftest.err conftest.$ac_obj
+ { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for htonll" >&5
+@@ -19431,7 +19443,7 @@ rm -f core conftest.err conftest.$ac_obj
  LDFLAGS=${old_LDFLAGS}
  rm -f conftest.dynamics
  
--ac_fn_c_check_header_mongrel "$LINENO" "sys/poll.h" "ac_cv_header_sys_poll_h" "$ac_includes_default"
-+ac_fn_c_check_header_mongrel "$LINENO" "poll.h" "ac_cv_header_sys_poll_h" "$ac_includes_default"
- if test "x$ac_cv_header_sys_poll_h" = xyes; then :
+-ac_fn_c_check_header_compile "$LINENO" "sys/poll.h" "ac_cv_header_sys_poll_h" "$ac_includes_default"
++ac_fn_c_check_header_compile "$LINENO" "poll.h" "ac_cv_header_sys_poll_h" "$ac_includes_default"
+ if test "x$ac_cv_header_sys_poll_h" = xyes
+ then :
    HAS_POLL=1
- 
