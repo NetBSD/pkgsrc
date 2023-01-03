@@ -1,10 +1,10 @@
-$NetBSD: patch-ext_extconf.rb,v 1.1 2016/01/08 12:53:11 fhajny Exp $
+$NetBSD: patch-ext_extconf.rb,v 1.2 2023/01/03 13:56:31 taca Exp $
 
 Link pkgsrc libzookeeper instead of the embedded build.
 
---- ext/extconf.rb.orig	2016-01-08 12:43:23.823917320 +0000
+--- ext/extconf.rb.orig	2023-01-02 08:23:51.434066414 +0000
 +++ ext/extconf.rb
-@@ -2,96 +2,10 @@ require 'mkmf'
+@@ -2,30 +2,6 @@ require 'mkmf'
  require 'rbconfig'
  require 'fileutils'
  
@@ -32,17 +32,13 @@ Link pkgsrc libzookeeper instead of the embedded build.
 -  $CFLAGS << ' -DZKRB_RUBY_187'
 -end
 -
--ZK_DEBUG = (ENV['DEBUG'] or ARGV.any? { |arg| arg == '--debug' })
+ ZK_DEBUG = (ENV['DEBUG'] or ARGV.any? { |arg| arg == '--debug' })
  ZK_DEV = ENV['ZK_DEV']
--DEBUG_CFLAGS = " -O0 -ggdb3 -DHAVE_DEBUG -fstack-protector-all"
--
--if ZK_DEBUG
--  $stderr.puts "*** Setting debug flags. ***"
--  $EXTRA_CONF = "#{$EXTRA_CONF} --enable-debug"
--  $CFLAGS.gsub!(/ -O[^0] /, ' ')
--  $CFLAGS << DEBUG_CFLAGS
--end
--
+ DEBUG_CFLAGS = " -O0 -ggdb3 -DHAVE_DEBUG -fstack-protector-all"
+@@ -37,63 +13,9 @@ if ZK_DEBUG
+   $CFLAGS << DEBUG_CFLAGS
+ end
+ 
 -$includes = " -I#{HERE}/include"
 -$libraries = " -L#{HERE}/lib -L#{RbConfig::CONFIG['libdir']}"
 -$CFLAGS = "#{$includes} #{$libraries} #{$CFLAGS}"
@@ -90,8 +86,10 @@ Link pkgsrc libzookeeper instead of the embedded build.
 -# Absolutely prevent the linker from picking up any other zookeeper_mt
 -Dir.chdir("#{HERE}/lib") do
 -  %w[st mt].each do |stmt|
--    %w[a la].each do |ext|
--      system("cp -f libzookeeper_#{stmt}.#{ext} libzookeeper_#{stmt}_gem.#{ext}")
+-    %w[a la dylib].each do |ext|
+-      origin_lib_name = "libzookeeper_#{stmt}.#{ext}"
+-      dest_lib_name = "libzookeeper_#{stmt}_gem.#{ext}"
+-      system("cp -f #{origin_lib_name} #{dest_lib_name}") if File.exists?(origin_lib_name)
 -    end
 -  end
 -end
