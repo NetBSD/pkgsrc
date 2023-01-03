@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.61 2023/01/03 12:28:33 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.62 2023/01/03 12:45:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -74,3 +74,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added chat/jitsi-videobridge version 2.0.8138 [khorben 2023-01-03]
 	Updated cross/avr-libc to 2.1.0nb3 [wiz 2023-01-03]
 	Updated finance/gnucash to 4.13 [wiz 2023-01-03]
+	Updated net/php-baikal to 0.9.3 [wiz 2023-01-03]
