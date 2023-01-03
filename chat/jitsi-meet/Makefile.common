@@ -1,5 +1,7 @@
-# $NetBSD: Makefile.common,v 1.1 2023/01/03 10:25:05 khorben Exp $
+# $NetBSD: Makefile.common,v 1.2 2023/01/03 10:31:17 khorben Exp $
+# used by chat/jicofo/Makefile
 # used by chat/jitsi-meet-prosody/Makefile
+# used by chat/jitsi-videobridge/Makefile
 
 GITHUB_PROJECT?=	jitsi-meet
 GITHUB_TAG?=		stable/jitsi-meet_8138
