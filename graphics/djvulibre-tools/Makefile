@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2022/07/14 23:46:20 dholland Exp $
+# $NetBSD: Makefile,v 1.19 2023/01/03 17:37:18 wiz Exp $
 
 .include "../../graphics/djvulibre-lib/Makefile.common"
 PKGNAME=		${DISTNAME:S/-/-tools-/}
-PKGREVISION=		1
+PKGREVISION=		2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 

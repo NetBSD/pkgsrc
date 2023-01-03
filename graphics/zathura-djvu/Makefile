@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2022/08/11 05:08:48 gutteridge Exp $
+# $NetBSD: Makefile,v 1.23 2023/01/03 17:37:34 wiz Exp $
 #
 
 DISTNAME=	zathura-djvu-0.2.9
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	graphics
 MASTER_SITES=	https://pwmt.org/projects/zathura-djvu/download/
 EXTRACT_SUFX=	.tar.xz

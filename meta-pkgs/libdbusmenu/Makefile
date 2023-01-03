@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2022/11/23 16:18:52 adam Exp $
+# $NetBSD: Makefile,v 1.21 2023/01/03 17:36:29 wiz Exp $
 #
 
 META_PACKAGE=	yes
 
-PKGREVISION= 19
+PKGREVISION= 20
 .include "Makefile.common"
 
 DEPENDS+=	libdbusmenu-glib>=${PKGVERSION_NOREV}:../../devel/libdbusmenu-glib
