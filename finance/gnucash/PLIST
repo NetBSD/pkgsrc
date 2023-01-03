@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.85 2022/09/26 18:37:33 wiz Exp $
+@comment $NetBSD: PLIST,v 1.86 2023/01/03 12:28:23 wiz Exp $
 bin/gnc-fq-check
 bin/gnc-fq-dump
 bin/gnc-fq-helper
@@ -196,6 +196,7 @@ include/gnucash/qof-string-cache.h
 include/gnucash/qof.h
 include/gnucash/qofbackend.h
 include/gnucash/qofbook.h
+include/gnucash/qofbook.hpp
 include/gnucash/qofbookslots.h
 include/gnucash/qofchoice.h
 include/gnucash/qofclass.h
@@ -1359,6 +1360,7 @@ share/locale/ks/LC_MESSAGES/gnucash.mo
 share/locale/lt/LC_MESSAGES/gnucash.mo
 share/locale/lv/LC_MESSAGES/gnucash.mo
 share/locale/mai/LC_MESSAGES/gnucash.mo
+share/locale/mk/LC_MESSAGES/gnucash.mo
 share/locale/mni/LC_MESSAGES/gnucash.mo
 share/locale/mni@bengali/LC_MESSAGES/gnucash.mo
 share/locale/mr/LC_MESSAGES/gnucash.mo
