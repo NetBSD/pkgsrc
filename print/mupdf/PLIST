@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2022/07/23 15:09:43 leot Exp $
+@comment $NetBSD: PLIST,v 1.24 2023/01/03 15:48:38 wiz Exp $
 bin/mupdf
 ${PLIST.curl}bin/mupdf-curl
 ${PLIST.opengl}bin/mupdf-gl
@@ -39,6 +39,8 @@ include/mupdf/fitz/pool.h
 include/mupdf/fitz/separation.h
 include/mupdf/fitz/shade.h
 include/mupdf/fitz/store.h
+include/mupdf/fitz/story-writer.h
+include/mupdf/fitz/story.h
 include/mupdf/fitz/stream.h
 include/mupdf/fitz/string-util.h
 include/mupdf/fitz/structured-text.h
@@ -90,12 +92,14 @@ share/doc/mupdf/coding-progressive.html
 share/doc/mupdf/coding-style.html
 share/doc/mupdf/ecosystem.css
 share/doc/mupdf/ecosystem.html
+share/doc/mupdf/examples/SnarkFront.svg
 share/doc/mupdf/examples/bbox-device.js
 share/doc/mupdf/examples/create-thumbnail.js
 share/doc/mupdf/examples/draw-device.js
 share/doc/mupdf/examples/draw-document.js
 share/doc/mupdf/examples/example.c
 share/doc/mupdf/examples/fix-s22pdf.js
+share/doc/mupdf/examples/huntingofthesnark.png
 share/doc/mupdf/examples/jpx-to-pdf.js
 share/doc/mupdf/examples/multi-threaded.c
 share/doc/mupdf/examples/pdf-create-lowlevel.js
@@ -105,6 +109,8 @@ share/doc/mupdf/examples/pdf-extract-rich-media.js
 share/doc/mupdf/examples/pdf-merge.js
 share/doc/mupdf/examples/pdf-portfolio.js
 share/doc/mupdf/examples/pdf-trace.js
+share/doc/mupdf/examples/storytest.c
+share/doc/mupdf/examples/storytest.js
 share/doc/mupdf/examples/trace-device.js
 share/doc/mupdf/index.html
 share/doc/mupdf/library.html
