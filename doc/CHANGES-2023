@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.96 2023/01/03 20:44:28 ryoon Exp $
+$NetBSD: CHANGES-2023,v 1.97 2023/01/03 21:22:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -110,3 +110,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/po4a to 0.69 [adam 2023-01-03]
 	Updated multimedia/mkvtoolnix to 73.0.0 [adam 2023-01-03]
 	Updated devel/wayland-protocols to 1.31nb1 [ryoon 2023-01-03]
+	Updated lang/nodejs to 19.3.0 [adam 2023-01-03]
+	Updated devel/py-ipython to 8.8.0 [adam 2023-01-03]
