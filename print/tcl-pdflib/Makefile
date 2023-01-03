@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2020/08/31 18:11:04 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2023/01/03 12:14:43 wiz Exp $
 
 .include "../../print/pdflib/Makefile.common"
 
@@ -19,6 +19,7 @@ BUILD_DIRS=		bind/tcl
 
 pre-build:
 	${TOUCH} ${WRKSRC}/pdflib/libpdf.la
+	${TOUCH} ${WRKSRC}/pdflib/libpdf_.la
 
 .include "../../print/pdflib/buildlink3.mk"
 .include "../../lang/tcl/buildlink3.mk"
