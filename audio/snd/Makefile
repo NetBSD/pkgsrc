@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.114 2022/09/11 12:51:22 wiz Exp $
+# $NetBSD: Makefile,v 1.115 2023/01/03 17:36:47 wiz Exp $
 
 DISTNAME=		snd-20.4
-PKGREVISION=		12
+PKGREVISION=		13
 CATEGORIES=		audio
 MASTER_SITES=		https://ccrma.stanford.edu/software/snd/
 
