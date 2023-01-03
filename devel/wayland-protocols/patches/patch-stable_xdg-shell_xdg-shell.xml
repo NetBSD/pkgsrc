@@ -1,0 +1,13 @@
+$NetBSD: patch-stable_xdg-shell_xdg-shell.xml,v 1.1 2023/01/03 20:43:35 ryoon Exp $
+
+--- stable/xdg-shell/xdg-shell.xml.orig	2022-11-29 13:37:41.000000000 +0000
++++ stable/xdg-shell/xdg-shell.xml
+@@ -111,7 +111,7 @@
+ 	Compositors can use this to determine if the client is still
+ 	alive. It's unspecified what will happen if the client doesn't
+ 	respond to the ping request, or in what timeframe. Clients should
+-	try to respond in a reasonable amount of time. The “unresponsive”
++	try to respond in a reasonable amount of time. The "unresponsive"
+ 	error is provided for compositors that wish to disconnect unresponsive
+ 	clients.
+ 
