@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.154 2022/06/05 14:02:44 gdt Exp $
+# $NetBSD: Makefile,v 1.155 2023/01/03 16:38:50 wiz Exp $
 
-VERSION_BASE=	4.4.0
+VERSION_BASE=	4.5.0
 # Accomodate testing unreleased versions.
 #VERSION_RC=	rc1
 DISTNAME=	tiff-${VERSION_BASE}${VERSION_RC}
