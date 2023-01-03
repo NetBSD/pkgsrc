@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.43 2021/10/26 09:59:27 nia Exp $
+$NetBSD: distinfo,v 1.44 2023/01/03 13:23:00 wiz Exp $
 
-BLAKE2s (rhythmbox-3.4.4.tar.xz) = 255026be3e662a0d05cab4196283c88cab5fdd63ba9eb1d4accd858cfea504ce
-SHA512 (rhythmbox-3.4.4.tar.xz) = 1fcd41dd66ffe34852f8cedb80ade57d101118295d6fd6f0a8687000ab6500991d2e11482daedb30a7abaf63e54e33ee3c4eaab73b075ec5e5907182f9a8c865
-Size (rhythmbox-3.4.4.tar.xz) = 3890320 bytes
+BLAKE2s (rhythmbox-3.4.6.tar.xz) = 99d82f126a590c069d992ddbe1278b605a2f7da7b74d133931f51ff62456bcce
+SHA512 (rhythmbox-3.4.6.tar.xz) = d48818a6f299b3da8ae78bf13e41d702244d83a473586008b53f9c4cc504495ac2570c520c65efaf9e75408363b0256121d12680940c673d2977c7d177ef1fb3
+Size (rhythmbox-3.4.6.tar.xz) = 3535224 bytes
