@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.276 2023/01/03 10:28:22 khorben Exp $
+# $NetBSD: Makefile,v 1.277 2023/01/03 10:30:24 khorben Exp $
 #
 
 COMMENT=	Communication programs
@@ -55,6 +55,7 @@ SUBDIR+=	irssi-xmpp
 SUBDIR+=	jabberd2
 SUBDIR+=	jicofo
 SUBDIR+=	jitsi-meet-prosody
+SUBDIR+=	jitsi-videobridge
 SUBDIR+=	kgb-bot
 SUBDIR+=	konversation
 SUBDIR+=	ktp-accounts-kcm
