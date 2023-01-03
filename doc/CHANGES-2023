@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.56 2023/01/03 09:44:50 taca Exp $
+$NetBSD: CHANGES-2023,v 1.57 2023/01/03 10:25:51 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -69,3 +69,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/ruby-minitest to 5.17.0 [taca 2023-01-03]
 	Updated devel/ruby-rgl to 0.5.10 [taca 2023-01-03]
 	Updated devel/ruby-async to 2.3.1 [taca 2023-01-03]
+	Added chat/jitsi-meet-prosody version 2.0.8138 [khorben 2023-01-03]
