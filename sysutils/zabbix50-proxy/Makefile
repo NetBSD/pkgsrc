@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2022/11/23 16:21:10 adam Exp $
+# $NetBSD: Makefile,v 1.14 2023/01/03 13:59:15 otis Exp $
 
-PKGREVISION= 4
 .include "../../sysutils/zabbix50-server/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-proxy-${ZABBIX_DB_TYPE}-/}
 COMMENT=	Enterprise-class Monitoring Solution for Everyone
+
+PATCHDIR=	${.CURDIR}/../../sysutils/zabbix50-server/patches
 
 CONFLICTS+=	zabbix-[0-9]*
 CONFLICTS+=	zabbix-proxy-[0-9]*
@@ -53,11 +54,11 @@ CFLAGS.SunOS+=			-DDUK_USE_BYTEORDER=1
 .include "../../mk/bsd.prefs.mk"
 
 pre-configure:
-	set -e; cd ${WRKSRC}; \
-	   aclocal -I m4 ; automake -ai --foreign; autoconf -I m4
+	cd ${WRKSRC} && \
+	   aclocal -I m4 && automake -ai --foreign && autoconf -I m4
 
 post-install:
-	cd ${WRKSRC}/database/${ZABBIX_DB_TYPE}; \
+	cd ${WRKSRC}/database/${ZABBIX_DB_TYPE} && \
 		${PAX} -rw . ${DESTDIR}${PREFIX}/share/${PKGBASE}/
 	${RM} ${DESTDIR}${PREFIX}/share/${PKGBASE}/Makefile*
 	${RM} ${DESTDIR}${PREFIX}/share/${PKGBASE}/data.sql

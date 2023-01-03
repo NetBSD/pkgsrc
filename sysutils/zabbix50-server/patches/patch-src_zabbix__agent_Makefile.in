@@ -1,4 +1,4 @@
-$NetBSD: patch-src_zabbix__agent_Makefile.in,v 1.1 2020/11/03 22:46:23 otis Exp $
+$NetBSD: patch-src_zabbix__agent_Makefile.in,v 1.1 2023/01/03 13:59:15 otis Exp $
 
 Install config file to component's example directory.
 

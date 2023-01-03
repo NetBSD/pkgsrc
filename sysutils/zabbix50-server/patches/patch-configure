@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.1 2020/11/03 22:46:23 otis Exp $
+$NetBSD: patch-configure,v 1.1 2023/01/03 13:59:15 otis Exp $
 
 Fix bash-ism.
 
