@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2022/10/29 15:26:55 tnn Exp $
+$NetBSD: distinfo,v 1.17 2023/01/03 13:23:21 tnn Exp $
 
-BLAKE2s (timescaledb-2.8.1.tar.gz) = ec1b466fa24b1886321107e5d48fb6c22154f39f52c756c7c0d7a1e1f5a27222
-SHA512 (timescaledb-2.8.1.tar.gz) = 69dfea5874d5c1ca8fef1382b8fc49d709a09908009fe38fe4ae44bebdae701615e3cbeb2f3ecd2044babd1a7c6ff255f96fa31f94f84293cfba942542775c54
-Size (timescaledb-2.8.1.tar.gz) = 6789998 bytes
+BLAKE2s (timescaledb-2.9.1.tar.gz) = acc36eed37e08fc250bcc5113d719e5eb9e3458f3d532fffc154ca8ee308f78a
+SHA512 (timescaledb-2.9.1.tar.gz) = 2f8c374517ede11cd65c7e281b2318604734508d7e4d12d447d13c7df6e77fa15a1c5580b64a28d57b94cebb95cf220c1a9d69fb1c3e0f044aab142232ebf61a
+Size (timescaledb-2.9.1.tar.gz) = 7338112 bytes
