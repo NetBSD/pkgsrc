@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.73 2023/01/01 23:59:52 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2023/01/03 00:09:39 tnn Exp $
 
 DISTNAME=	libsoup-2.74.3
+PKGREVISION=	1
 CATEGORIES=	net gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libsoup/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -22,6 +23,8 @@ MAKE_ENV+=			LD_LIBRARY_PATH=${WRKSRC}/output/${PKGBASE}
 
 # disable vala detection
 MESON_ARGS+=		-Dvapi=disabled
+# disable sysprof, broken on at least macOS
+MESON_ARGS+=		-Dsysprof=disabled
 
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
