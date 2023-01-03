@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2022/08/29 13:06:43 taca Exp $
+$NetBSD: distinfo,v 1.8 2023/01/03 15:09:58 taca Exp $
 
-BLAKE2s (erubi-1.11.0.gem) = 523ae801cbd4b84d3806639b76710cb97abc7e0bae79c0f304beb3de9605b15f
-SHA512 (erubi-1.11.0.gem) = 8fbc64fbd7b99e0676ba2c9601e8ee894f378bd234e4753d1302991abbbb4b8de0b75b86a1c0df1940dc9377937fcb88c2852ac5035de697c087b86433333008
-Size (erubi-1.11.0.gem) = 12288 bytes
+BLAKE2s (erubi-1.12.0.gem) = cdf07dbd0710aacf8915e536ba519324ba81e9319784e310cb22d110296348cd
+SHA512 (erubi-1.12.0.gem) = e4d2a68e864dc1c06f65fdd4e9e44d7c3873f2f69487322ddfb29b1a983229881f1f3d2429f99432b9a7707989a5bc172d0c90f341fa9a9f9cf3331fccfda8b3
+Size (erubi-1.12.0.gem) = 12288 bytes
