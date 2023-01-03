@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.49 2022/08/11 05:08:51 gutteridge Exp $
+# $NetBSD: Makefile,v 1.50 2023/01/03 17:37:38 wiz Exp $
 #
 
 DISTNAME=	ibus-handwrite-3.0.0
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	inputmethod
 MASTER_SITES=	https://github.com/microcai/ibus-handwrite/releases/download/${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.bz2

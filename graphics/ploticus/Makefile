@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.60 2022/07/14 23:46:23 dholland Exp $
+# $NetBSD: Makefile,v 1.61 2023/01/03 17:37:29 wiz Exp $
 
 DISTNAME=	ploticus242_src
 PKGNAME=	ploticus-2.42
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ploticus/}
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.70 2022/08/09 12:08:30 jperkin Exp $
+# $NetBSD: Makefile,v 1.71 2023/01/03 17:37:01 wiz Exp $
 
 DISTNAME=	ted-2.23.src
 PKGNAME=	${DISTNAME:S/.src//}
+PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	https://ftp.nluug.nl/pub/editors/ted/
 

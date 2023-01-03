@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.37 2021/12/08 16:04:07 adam Exp $
+# $NetBSD: Makefile,v 1.38 2023/01/03 17:36:57 wiz Exp $
 #
 
 DISTNAME=	scintilla339
 PKGNAME=	scintilla-3.3.9
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=scintilla/}
 EXTRACT_SUFX=	.tgz

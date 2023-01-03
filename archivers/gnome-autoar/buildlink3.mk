@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2022/08/11 05:08:00 gutteridge Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2023/01/03 17:36:14 wiz Exp $
 
 BUILDLINK_TREE+=	gnome-autoar
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gnome-autoar
 GNOME_AUTOAR_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gnome-autoar+=	gnome-autoar>=0.2.4
-BUILDLINK_ABI_DEPENDS.gnome-autoar?=	gnome-autoar>=0.4.1nb4
+BUILDLINK_ABI_DEPENDS.gnome-autoar?=	gnome-autoar>=0.4.1nb5
 BUILDLINK_PKGSRCDIR.gnome-autoar?=	../../archivers/gnome-autoar
 
 .include "../../archivers/libarchive/buildlink3.mk"

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2013/02/16 11:22:21 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2023/01/03 17:37:28 wiz Exp $
 
 DISTNAME=	panomatic-0.9.4-src
 PKGNAME=	panomatic-0.9.4
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	graphics
 MASTER_SITES=	http://aorlinsk2.free.fr/panomatic/bin/
 EXTRACT_SUFX=	.tar.bz2

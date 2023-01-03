@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.55 2022/11/21 18:20:40 jperkin Exp $
+# $NetBSD: Makefile,v 1.56 2023/01/03 17:36:15 wiz Exp $
 
 DISTNAME=	libcanberra-0.30
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	audio
 MASTER_SITES=	http://0pointer.de/lennart/projects/libcanberra/
 EXTRACT_SUFX=	.tar.xz

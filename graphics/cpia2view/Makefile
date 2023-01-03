@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2020/06/05 12:49:07 jperkin Exp $
+# $NetBSD: Makefile,v 1.32 2023/01/03 17:37:17 wiz Exp $
 
 DISTNAME=	cpia2_driver-1.0
 PKGNAME=	cpia2view-0.03
-PKGREVISION=	18
+PKGREVISION=	19
 CATEGORIES=	graphics x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cpia2/}
 EXTRACT_SUFX=	.tgz
