@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2020/07/29 07:00:16 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2023/01/03 16:32:42 wiz Exp $
 share/aclocal/codeset.m4
 share/aclocal/exported.m4
 share/aclocal/extern-inline.m4
@@ -6,7 +6,6 @@ share/aclocal/fcntl-o.m4
 share/aclocal/flexmember.m4
 share/aclocal/gettext.m4
 share/aclocal/glibc2.m4
-share/aclocal/glibc21.m4
 share/aclocal/host-cpu-c-abi.m4
 share/aclocal/hostname.m4
 share/aclocal/iconv.m4
@@ -25,7 +24,6 @@ share/aclocal/nls.m4
 share/aclocal/po.m4
 share/aclocal/printf-posix.m4
 share/aclocal/progtest.m4
-share/aclocal/setlocale.m4
 share/aclocal/siginfo.m4
 share/aclocal/size_max.m4
 share/aclocal/stdint_h.m4

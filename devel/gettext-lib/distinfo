@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.38 2021/10/26 10:14:41 nia Exp $
+$NetBSD: distinfo,v 1.39 2023/01/03 16:32:42 wiz Exp $
 
-BLAKE2s (gettext-0.21.tar.gz) = 736449f6afbf780e461463efc2a5349c8100bc4d8f09493402faa6b7c6e27196
-SHA512 (gettext-0.21.tar.gz) = bbe590c5dd3580c75bf30ff768da99a88eb8d466ec1ac9eea20be4cab4357ecf72448e6b81b47425e39d50fa6320ba426632914d7898dfebb4f159abc39c31d1
-Size (gettext-0.21.tar.gz) = 24181849 bytes
+BLAKE2s (gettext-0.21.1.tar.gz) = ac628eb0776bbfd93f71fd6f6b59efb1738f05b956d77281b513c828dbf2450d
+SHA512 (gettext-0.21.1.tar.gz) = ccd43a43fab3c90ed99b3e27628c9aeb7186398153b137a4997f8c7ddfd9729b0ba9d15348567e5206af50ac027673d2b8a3415bb3fc65f87ad778f85dc03a05
+Size (gettext-0.21.1.tar.gz) = 25248473 bytes
