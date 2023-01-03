@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22455 2023/01/03 15:48:47 wiz Exp $
+$NetBSD: TODO,v 1.22456 2023/01/03 16:33:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -687,8 +687,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o geneweb-7.0.0
 	o genius-1.0.26
 	o gens-2.15.5
-	o gettext-0.21.1
-	o gettext-lib-0.21.1
 	o gfract-0.33
 	o ghc-9.4.1
 	o gimp-docs-de-2.10.0
