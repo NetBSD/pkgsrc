@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2016/01/12 14:19:14 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/01/03 13:56:30 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/zookeeper_c.${RUBY_DLEXT}
@@ -6,9 +6,9 @@ ${GEM_LIBDIR}/.ctags_paths
 ${GEM_LIBDIR}/.dotfiles/ruby-gemset
 ${GEM_LIBDIR}/.dotfiles/ruby-version
 ${GEM_LIBDIR}/.dotfiles/rvmrc
+${GEM_LIBDIR}/.github/workflows/build.yml
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.gitmodules
-${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/Guardfile
@@ -28,6 +28,9 @@ ${GEM_LIBDIR}/ext/event_lib.h
 ${GEM_LIBDIR}/ext/extconf.rb
 ${GEM_LIBDIR}/ext/generate_gvl_code.rb
 ${GEM_LIBDIR}/ext/patches/zkc-3.3.5-network.patch
+${GEM_LIBDIR}/ext/patches/zkc-3.4.5-buffer-overflow.patch
+${GEM_LIBDIR}/ext/patches/zkc-3.4.5-config.patch
+${GEM_LIBDIR}/ext/patches/zkc-3.4.5-fetch-and-add.patch
 ${GEM_LIBDIR}/ext/patches/zkc-3.4.5-logging.patch
 ${GEM_LIBDIR}/ext/patches/zkc-3.4.5-out-of-order-ping.patch
 ${GEM_LIBDIR}/ext/patches/zkc-3.4.5-yosemite-htonl-fix.patch

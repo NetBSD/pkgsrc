@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2017/07/30 22:32:18 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/01/03 13:56:30 taca Exp $
 #
-DISTNAME=	zookeeper-1.4.11
-PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
-CATEGORIES=	ruby devel
+DISTNAME=	zookeeper-1.5.3
+CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/zk-ruby/zookeeper
