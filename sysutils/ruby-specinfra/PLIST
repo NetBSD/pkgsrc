@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2022/08/29 12:37:51 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2023/01/03 15:05:37 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE.txt
@@ -55,6 +55,11 @@ ${GEM_LIBDIR}/lib/specinfra/command/amazon/base.rb
 ${GEM_LIBDIR}/lib/specinfra/command/amazon/v2.rb
 ${GEM_LIBDIR}/lib/specinfra/command/amazon/v2/port.rb
 ${GEM_LIBDIR}/lib/specinfra/command/amazon/v2/service.rb
+${GEM_LIBDIR}/lib/specinfra/command/amazon/v2022.rb
+${GEM_LIBDIR}/lib/specinfra/command/amazon/v2022/package.rb
+${GEM_LIBDIR}/lib/specinfra/command/amazon/v2022/port.rb
+${GEM_LIBDIR}/lib/specinfra/command/amazon/v2022/service.rb
+${GEM_LIBDIR}/lib/specinfra/command/amazon/v2022/yumrepo.rb
 ${GEM_LIBDIR}/lib/specinfra/command/arch.rb
 ${GEM_LIBDIR}/lib/specinfra/command/arch/base.rb
 ${GEM_LIBDIR}/lib/specinfra/command/arch/base/package.rb
@@ -398,6 +403,10 @@ ${GEM_LIBDIR}/spec/command/amazon/package_spec.rb
 ${GEM_LIBDIR}/spec/command/amazon/service_spec.rb
 ${GEM_LIBDIR}/spec/command/amazon2/port_spec.rb
 ${GEM_LIBDIR}/spec/command/amazon2/service_spec.rb
+${GEM_LIBDIR}/spec/command/amazon2022/package_spec.rb
+${GEM_LIBDIR}/spec/command/amazon2022/port_spec.rb
+${GEM_LIBDIR}/spec/command/amazon2022/service_spec.rb
+${GEM_LIBDIR}/spec/command/amazon2022/yumrepo_spec.rb
 ${GEM_LIBDIR}/spec/command/base/file_spec.rb
 ${GEM_LIBDIR}/spec/command/base/group_spec.rb
 ${GEM_LIBDIR}/spec/command/base/host_spec.rb
