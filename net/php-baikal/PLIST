@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2022/03/14 13:40:28 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2023/01/03 12:45:24 wiz Exp $
 share/baikal/Core/Distrib.php
 share/baikal/Core/Frameworks/Baikal/Controller/Main.php
 share/baikal/Core/Frameworks/Baikal/Controller/Navigation/Topbar/Anonymous.php
@@ -602,17 +602,12 @@ share/baikal/vendor/sabre/http/tests/phpunit.xml
 share/baikal/vendor/sabre/http/tests/www/bar.php
 share/baikal/vendor/sabre/http/tests/www/foo
 share/baikal/vendor/sabre/http/tests/www/large.php
-share/baikal/vendor/sabre/uri/.gitattributes
-share/baikal/vendor/sabre/uri/.github/workflows/ci.yml
-share/baikal/vendor/sabre/uri/.gitignore
-share/baikal/vendor/sabre/uri/.php_cs.dist
+share/baikal/vendor/sabre/uri/.php-cs-fixer.dist.php
 share/baikal/vendor/sabre/uri/LICENSE
 share/baikal/vendor/sabre/uri/composer.json
 share/baikal/vendor/sabre/uri/lib/InvalidUriException.php
 share/baikal/vendor/sabre/uri/lib/Version.php
 share/baikal/vendor/sabre/uri/lib/functions.php
-share/baikal/vendor/sabre/uri/phpstan.neon
-share/baikal/vendor/sabre/vobject/.github/workflows/ci.yml
 share/baikal/vendor/sabre/vobject/LICENSE
 share/baikal/vendor/sabre/vobject/README.md
 share/baikal/vendor/sabre/vobject/bin/bench.php
