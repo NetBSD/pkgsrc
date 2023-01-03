@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.59 2023/01/03 10:30:36 khorben Exp $
+$NetBSD: CHANGES-2023,v 1.60 2023/01/03 12:04:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -72,3 +72,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added chat/jitsi-meet-prosody version 2.0.8138 [khorben 2023-01-03]
 	Added chat/jicofo version 2.0.8138 [khorben 2023-01-03]
 	Added chat/jitsi-videobridge version 2.0.8138 [khorben 2023-01-03]
+	Updated cross/avr-libc to 2.1.0nb3 [wiz 2023-01-03]
