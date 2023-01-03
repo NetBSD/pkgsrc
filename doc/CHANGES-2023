@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.73 2023/01/03 14:00:07 otis Exp $
+$NetBSD: CHANGES-2023,v 1.74 2023/01/03 14:03:11 otis Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -86,3 +86,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/ruby-zookeeper to 1.5.3 [taca 2023-01-03]
 	Updated misc/ruby-launchy to 2.5.2 [taca 2023-01-03]
 	Updated sysutils/zabbix50-server to 5.0.30 [otis 2023-01-03]
+	Updated sysutils/zabbix50-agent to 5.0.30 [otis 2023-01-03]
