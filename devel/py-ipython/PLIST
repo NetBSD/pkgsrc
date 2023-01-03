@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2022/11/28 17:58:59 adam Exp $
-bin/ipython${PYVERSSUFFIX}
+@comment $NetBSD: PLIST,v 1.20 2023/01/03 21:22:01 adam Exp $
 bin/ipython-${PYVERSSUFFIX}
 bin/ipython3-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -87,6 +86,9 @@ ${PYSITELIB}/IPython/core/formatters.pyo
 ${PYSITELIB}/IPython/core/getipython.py
 ${PYSITELIB}/IPython/core/getipython.pyc
 ${PYSITELIB}/IPython/core/getipython.pyo
+${PYSITELIB}/IPython/core/guarded_eval.py
+${PYSITELIB}/IPython/core/guarded_eval.pyc
+${PYSITELIB}/IPython/core/guarded_eval.pyo
 ${PYSITELIB}/IPython/core/history.py
 ${PYSITELIB}/IPython/core/history.pyc
 ${PYSITELIB}/IPython/core/history.pyo
@@ -273,6 +275,9 @@ ${PYSITELIB}/IPython/core/tests/test_extension.pyo
 ${PYSITELIB}/IPython/core/tests/test_formatters.py
 ${PYSITELIB}/IPython/core/tests/test_formatters.pyc
 ${PYSITELIB}/IPython/core/tests/test_formatters.pyo
+${PYSITELIB}/IPython/core/tests/test_guarded_eval.py
+${PYSITELIB}/IPython/core/tests/test_guarded_eval.pyc
+${PYSITELIB}/IPython/core/tests/test_guarded_eval.pyo
 ${PYSITELIB}/IPython/core/tests/test_handlers.py
 ${PYSITELIB}/IPython/core/tests/test_handlers.pyc
 ${PYSITELIB}/IPython/core/tests/test_handlers.pyo
@@ -454,9 +459,13 @@ ${PYSITELIB}/IPython/lib/tests/test_lexers.pyo
 ${PYSITELIB}/IPython/lib/tests/test_pretty.py
 ${PYSITELIB}/IPython/lib/tests/test_pretty.pyc
 ${PYSITELIB}/IPython/lib/tests/test_pretty.pyo
+${PYSITELIB}/IPython/lib/tests/test_pygments.py
+${PYSITELIB}/IPython/lib/tests/test_pygments.pyc
+${PYSITELIB}/IPython/lib/tests/test_pygments.pyo
 ${PYSITELIB}/IPython/paths.py
 ${PYSITELIB}/IPython/paths.pyc
 ${PYSITELIB}/IPython/paths.pyo
+${PYSITELIB}/IPython/py.typed
 ${PYSITELIB}/IPython/sphinxext/__init__.py
 ${PYSITELIB}/IPython/sphinxext/__init__.pyc
 ${PYSITELIB}/IPython/sphinxext/__init__.pyo
