@@ -1,4 +1,4 @@
-$NetBSD: patch-GNUmakefile,v 1.3 2020/11/04 08:36:53 triaxx Exp $
+$NetBSD: patch-GNUmakefile,v 1.4 2023/01/03 17:41:16 wiz Exp $
 
 * Replace absolute paths by DESTDIR
 * Replace install by pkgsrc's INSTALL_*
@@ -6,15 +6,13 @@ $NetBSD: patch-GNUmakefile,v 1.3 2020/11/04 08:36:53 triaxx Exp $
 
 --- GNUmakefile.orig	2015-08-07 11:33:41.000000000 +0000
 +++ GNUmakefile
-@@ -78,21 +78,25 @@ endif
- 
+@@ -79,20 +79,24 @@ endif
  install: all
  	$(SILENT)echo Installing libraries...
--	$(SILENT)install -d $(LIB_DIR)
+ 	$(SILENT)install -d $(LIB_DIR)
 -	$(SILENT)install -m 444 $(STRIP) $(LIBOBJC).so.$(VERSION) $(LIB_DIR)
 -	$(SILENT)install -m 444 $(STRIP) $(LIBOBJCXX).so.$(VERSION) $(LIB_DIR)
 -	$(SILENT)install -m 444 $(STRIP) $(LIBOBJC).a $(LIB_DIR)
-+	$(SILENT)install -d $(LIB_DIR)
 +	$(SILENT)install -m 444 $(STRIP) $(LIBOBJC).so.$(VERSION) $(DESTDIR)/$(LIB_DIR)
 +ifneq ($(findstring freebsd, $(shell $(CC) -dumpmachine)), freebsd)
 +	$(SILENT)install -m 444 $(STRIP) $(LIBOBJCXX).so.$(VERSION) $(DESTDIR)/$(LIB_DIR)
