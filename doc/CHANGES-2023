@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.69 2023/01/03 13:37:35 taca Exp $
+$NetBSD: CHANGES-2023,v 1.70 2023/01/03 13:45:04 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -82,3 +82,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/ncdu to 1.18 [wiz 2023-01-03]
 	Updated www/uhttpmock to 0.5.3 [wiz 2023-01-03]
 	Updated devel/ruby-simplecov to 0.22.0 [taca 2023-01-03]
+	Updated databases/postgresql-timescaledb to 2.9.1 [tnn 2023-01-03]
