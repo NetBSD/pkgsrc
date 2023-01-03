@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2022/07/25 11:12:28 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2023/01/03 13:59:15 otis Exp $
 
 .include "../../sysutils/zabbix50-server/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-java-/}
 COMMENT=	Enterprise-class Monitoring Solution for Everyone
+
+PATCHDIR=	${.CURDIR}/../../sysutils/zabbix50-server/patches
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-java
@@ -13,7 +15,7 @@ CONFIGURE_ENV+=	JAVAC=${PKG_JAVA_HOME}/bin/javac
 CONFIGURE_ENV+=	JAR=${PKG_JAVA_HOME}/bin/jar
 
 USE_JAVA=	run
-PKG_JVMS_ACCEPTED=	openjdk8
+PKG_JVMS_ACCEPTED=	openjdk8 openjdk11
 
 SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		pre-configure
