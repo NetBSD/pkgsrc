@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.82 2022/09/11 12:51:37 wiz Exp $
+# $NetBSD: Makefile,v 1.83 2023/01/03 17:37:07 wiz Exp $
 
 DISTNAME=	asc-2.6.1.0
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=asc-hq/}
 EXTRACT_SUFX=	.tar.bz2

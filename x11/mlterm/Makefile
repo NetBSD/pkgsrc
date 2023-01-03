@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.178 2022/12/12 17:51:22 tsutsui Exp $
+# $NetBSD: Makefile,v 1.179 2023/01/03 17:38:32 wiz Exp $
 
 DISTNAME=	mlterm-3.9.2
 DIST_SUBDIR=	${PKGNAME_NOREV}	# for re-tagged 3.9.2
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=arakiken/}
 GITHUB_PROJECT=	${PKGBASE}

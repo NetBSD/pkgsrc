@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2022/12/13 12:44:35 gdt Exp $
+# $NetBSD: Makefile,v 1.28 2023/01/03 17:37:03 wiz Exp $
 
 DISTNAME=	free42-nologo-3.0.16
 PKGNAME=	${DISTNAME:S/-nologo//}
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	https://thomasokken.com/free42/upstream/
 EXTRACT_SUFX=	.tgz

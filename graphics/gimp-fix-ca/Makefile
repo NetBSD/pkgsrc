@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.64 2022/11/23 16:20:15 adam Exp $
+# $NetBSD: Makefile,v 1.65 2023/01/03 17:37:20 wiz Exp $
 
 DISTNAME=		gimp-fix-ca-3.0.2
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		graphics
 MASTER_SITES=		-http://kcd.sourceforge.net/fix-ca.c
 EXTRACT_SUFX=		.c

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2021/12/08 16:02:09 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2023/01/03 17:36:23 wiz Exp $
 
 BUILDLINK_TREE+=	gdk-pixbuf2
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gdk-pixbuf2
 GDK_PIXBUF2_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gdk-pixbuf2+=	gdk-pixbuf2>=2.22.0
-BUILDLINK_ABI_DEPENDS.gdk-pixbuf2+=	gdk-pixbuf2>=2.42.6
+BUILDLINK_ABI_DEPENDS.gdk-pixbuf2+=	gdk-pixbuf2>=2.42.10nb1
 BUILDLINK_PKGSRCDIR.gdk-pixbuf2?=	../../graphics/gdk-pixbuf2
 
 .include "../../databases/shared-mime-info/buildlink3.mk"

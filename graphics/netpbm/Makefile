@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.238 2022/11/23 16:20:21 adam Exp $
+# $NetBSD: Makefile,v 1.239 2023/01/03 17:36:26 wiz Exp $
 
 DISTNAME=	netpbm-10.86.34
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	#
 # manually created from svn checkout of

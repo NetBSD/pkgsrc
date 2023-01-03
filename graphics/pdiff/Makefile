@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2020/03/20 11:57:51 nia Exp $
+# $NetBSD: Makefile,v 1.20 2023/01/03 17:37:28 wiz Exp $
 #
 
 DISTNAME=		PerceptualDiff-1.0.1
 PKGNAME=		pdiff-1.0.1
-PKGREVISION=		7
+PKGREVISION=		8
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pdiff/}
 

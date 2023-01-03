@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.33 2022/08/11 05:08:55 gutteridge Exp $
+# $NetBSD: Makefile,v 1.34 2023/01/03 17:37:44 wiz Exp $
 
 GITHUB_PROJECT=	ucblogo-code
 GITHUB_RELEASE=	version_${PKGVERSION_NOREV}
 DISTNAME=	ucblogo-6.2.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jrincayc/}
 

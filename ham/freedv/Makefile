@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2022/09/11 12:51:53 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2023/01/03 17:37:34 wiz Exp $
 
 DISTNAME=	freedv-1.4.2
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	ham
 MASTER_SITES=	${MASTER_SITE_GITHUB:=drowe67/}
 GITHUB_PROJECT=	freedv-gui

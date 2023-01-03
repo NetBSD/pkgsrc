@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2022/11/23 16:18:50 adam Exp $
+# $NetBSD: Makefile,v 1.16 2023/01/03 17:37:43 wiz Exp $
 
 DISTNAME=	gjs-1.68.4
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gjs/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz

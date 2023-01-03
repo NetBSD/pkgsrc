@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.71 2020/01/18 23:36:08 rillig Exp $
+# $NetBSD: Makefile,v 1.72 2023/01/03 17:36:40 wiz Exp $
 #
 
 DISTNAME=	xforms-1.0
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	x11
 MASTER_SITES=	http://download.savannah.nongnu.org/releases/xforms/
 
