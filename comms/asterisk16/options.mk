@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.18 2020/12/31 11:07:01 nia Exp $
+# $NetBSD: options.mk,v 1.19 2023/01/03 16:53:17 ryoon Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.asterisk
 PKG_SUPPORTED_OPTIONS=		x11 unixodbc webvmail ldap spandsp
@@ -57,22 +57,37 @@ PLIST.jabber=		yes
 CONFIGURE_ARGS+=	--without-iksemel
 .endif
 
-MAKE_FLAGS+=	GLOBAL_MAKEOPTS=${WRKSRC}/pkgsrc.makeopts
 post-configure:
+	cd ${WRKSRC} && \
+	env ${MAKE_ENV} && \
+	    ${MAKE_PROGRAM} menuselect.makeopts
 .if !empty(PKG_OPTIONS:Mx11)
-	${ECHO} "MENUSELECT_PBX=-pbx_gtkconsole" >> ${WRKSRC}/pkgsrc.makeopts
+	# I have no idea about x11 option's fate.
+	#${ECHO} "MENUSELECT_PBX=-pbx_gtkconsole" >> ${WRKSRC}/pkgsrc.makeopts
 .endif
 .if !empty(PKG_OPTIONS:Munixodbc)
-	${ECHO} "MENUSELECT_OPTS_app_voicemail=ODBC_STORAGE" >> ${WRKSRC}/pkgsrc.makeopts
+	cd ${WRKSRC} && \
+	./menuselect/menuselect --enable ODBC_STORAGE menuselect.makeopts
 .endif
 .if defined(PLIST.mgcp)
-	${ECHO} "MENUSELECT_RES=-res_pktccops" >> ${WRKSRC}/pkgsrc.makeopts
-	${ECHO} "MENUSELECT_CHANNELS=-chan_mgcp" >> ${WRKSRC}/pkgsrc.makeopts
+	cd ${WRKSRC} && \
+	./menuselect/menuselect --enable res_pktccops menuselect.makeopts
+	cd ${WRKSRC} && \
+	./menuselect/menuselect --enable chan_mgcp menuselect.makeopts
+.else
+	cd ${WRKSRC} && \
+	./menuselect/menuselect --disable res_pktccops menuselect.makeopts
+	cd ${WRKSRC} && \
+	./menuselect/menuselect --disable chan_mgcp menuselect.makeopts
 .endif
-	${ECHO} "MENUSELECT_AGIS=agi-test.agi eagi-test eagi-sphinx-test jukebox.agi" >> ${WRKSRC}/pkgsrc.makeopts
-	${ECHO} "MENUSELECT_CFLAGS=-BUILD_NATIVE" >> ${WRKSRC}/pkgsrc.makeopts
-	# this is a hack to work around a bug in menuselect
-	cd ${WRKSRC} && make ${MAKE_FLAGS} menuselect.makeopts
+	cd ${WRKSRC} && \
+	./menuselect/menuselect --enable agi-test.agi menuselect.makeopts
+	cd ${WRKSRC} && \
+	./menuselect/menuselect --enable eagi-test menuselect.makeopts
+	cd ${WRKSRC} && \
+	./menuselect/menuselect --enable eagi-sphinx-test menuselect.makeopts
+	cd ${WRKSRC} && \
+	./menuselect/menuselect --enable jukebox.agi menuselect.makeopts
 
 .if !empty(PKG_OPTIONS:Mwebvmail)
 DEPENDS+=		p5-DBI-[0-9]*:../../databases/p5-DBI
