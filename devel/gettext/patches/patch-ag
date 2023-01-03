@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.11 2020/04/20 08:37:14 wiz Exp $
+$NetBSD: patch-ag,v 1.12 2023/01/03 16:32:42 wiz Exp $
 
---- gettext-tools/gnulib-lib/Makefile.in.orig	2020-04-14 04:46:29.000000000 +0000
+--- gettext-tools/gnulib-lib/Makefile.in.orig	2022-10-09 21:32:08.000000000 +0000
 +++ gettext-tools/gnulib-lib/Makefile.in
-@@ -3483,13 +3483,13 @@ info: info-am
+@@ -4264,13 +4264,13 @@ info: info-am
  
  info-am:
  
@@ -18,9 +18,9 @@ $NetBSD: patch-ag,v 1.11 2020/04/20 08:37:14 wiz Exp $
  
  install-html: install-html-am
  
-@@ -3767,14 +3767,6 @@ getopt-cdefs.h: getopt-cdefs.in.h $(top_
- 	} > $@-t && \
- 	mv -f $@-t $@
+@@ -4552,14 +4552,6 @@ fcntl.h: fcntl.in.h $(top_builddir)/conf
+ @GL_GENERATE_GETOPT_CDEFS_H_FALSE@getopt-cdefs.h: $(top_builddir)/config.status
+ @GL_GENERATE_GETOPT_CDEFS_H_FALSE@	rm -f $@
  
 -# No need to install libgettextlib.a, except on AIX.
 -install-exec-local: install-libLTLIBRARIES install-exec-clean
