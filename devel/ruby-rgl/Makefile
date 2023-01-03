@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2022/09/03 14:42:56 taca Exp $
+# $NetBSD: Makefile,v 1.16 2023/01/03 05:56:21 taca Exp $
 
-DISTNAME=	rgl-0.5.9
+DISTNAME=	rgl-0.5.10
 CATEGORIES=	devel
 
 MAINTAINER=	minskim@NetBSD.org
@@ -14,8 +14,6 @@ DEPENDS+=	${RUBY_PKGPREFIX}-lazy_priority_queue>0.1.0<0.2:../../devel/ruby-lazy_
 #DEPENDS+=	${RUBY_PKGPREFIX}-rexml>=3.2<4:../../textproc/ruby-rexml
 
 USE_LANGUAGES=	# none
-
-#RUBY_VERSIONS_ACCEPTED=	27 30 31
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
