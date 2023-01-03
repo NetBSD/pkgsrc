@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.94 2023/01/03 17:02:04 ryoon Exp $
+$NetBSD: CHANGES-2023,v 1.95 2023/01/03 19:10:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -107,3 +107,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/tiff to 4.5.0 [wiz 2023-01-03]
 	Updated comms/asterisk16 to 16.29.1 [ryoon 2023-01-03]
 	Updated multimedia/libva to 2.16.0 [ryoon 2023-01-03]
+	Updated textproc/po4a to 0.69 [adam 2023-01-03]
+	Updated multimedia/mkvtoolnix to 73.0.0 [adam 2023-01-03]
