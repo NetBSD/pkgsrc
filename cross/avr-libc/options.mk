@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.9 2022/10/04 09:30:59 wiz Exp $
+# $NetBSD: options.mk,v 1.10 2023/01/03 12:04:43 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.avr-libc
 PKG_SUPPORTED_OPTIONS+=		doc
-PKG_SUGGESTED_OPTIONS+=		doc
+PKG_SUGGESTED_OPTIONS+=		# doc
 PLIST_VARS+=			doc
 
 .include "../../mk/bsd.options.mk"
