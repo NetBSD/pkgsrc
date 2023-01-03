@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.48 2022/11/29 13:20:23 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.49 2023/01/03 15:27:23 wiz Exp $
 bin/cifsdd
 bin/dbwrap_tool
 bin/dumpmscat
@@ -476,6 +476,7 @@ ${PYSITELIB}/samba/tests/krb5/alias_tests.py
 ${PYSITELIB}/samba/tests/krb5/as_canonicalization_tests.py
 ${PYSITELIB}/samba/tests/krb5/as_req_tests.py
 ${PYSITELIB}/samba/tests/krb5/compatability_tests.py
+${PYSITELIB}/samba/tests/krb5/etype_tests.py
 ${PYSITELIB}/samba/tests/krb5/fast_tests.py
 ${PYSITELIB}/samba/tests/krb5/kcrypto.py
 ${PYSITELIB}/samba/tests/krb5/kdc_base_test.py
@@ -1078,6 +1079,3 @@ ${PLIST.ads}share/samba/setup/secrets_init.ldif
 ${PLIST.ads}share/samba/setup/share.ldif
 ${PLIST.ads}share/samba/setup/spn_update_list
 ${PLIST.ads}share/samba/setup/ypServ30.ldif
-@pkgdir var/db/samba4/private
-@pkgdir var/log
-@pkgdir var/run
