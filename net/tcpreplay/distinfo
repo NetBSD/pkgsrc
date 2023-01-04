@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.18 2022/06/16 00:29:30 gutteridge Exp $
+$NetBSD: distinfo,v 1.18.6.1 2023/01/04 10:28:08 bsiegert Exp $
 
-BLAKE2s (tcpreplay-4.4.1.tar.xz) = e0181ff25d6af1504f4f2adf12a973d60eb4a16310abfa5df80faeb891f67dec
-SHA512 (tcpreplay-4.4.1.tar.xz) = 25a4a94b7c0c416b8ef57aba5640803dcd6e271fe8789f3f6e281529e336e326b35738d7673fd44ac4ded0faf577dc4c6255b926bd67b8ba5104a8bad81a98f1
-Size (tcpreplay-4.4.1.tar.xz) = 751036 bytes
-SHA1 (patch-configure) = b0fd4b920672bf399d4ec8213cbb3f084a2edf94
+BLAKE2s (tcpreplay-4.4.2.tar.xz) = 853679688be05aed27c68d676c6c89e580c0394a8e1d030d4d81c167814e7afc
+SHA512 (tcpreplay-4.4.2.tar.xz) = 78e5482c0cd70a55aa80167c602b33811fa01203860fab4b2d504da71a95e218356ea0cc85254e12be7cb13b611487a150f13df94f9da274661f71e921bd6045
+Size (tcpreplay-4.4.2.tar.xz) = 750592 bytes
