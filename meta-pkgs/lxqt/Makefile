@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2022/11/12 05:48:35 gutteridge Exp $
+# $NetBSD: Makefile,v 1.16 2023/01/04 09:24:47 pin Exp $
 
 PKGNAME=	lxqt-1.2.0
 CATEGORIES=	meta-pkgs
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://lxqt.org/
+HOMEPAGE=	https://lxqt-project.org/
 COMMENT=	Meta-package for the LXQt desktop environment
 
 META_PACKAGE=	yes
