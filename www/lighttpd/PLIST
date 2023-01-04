@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2022/01/19 21:41:48 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.26 2023/01/04 09:37:37 wiz Exp $
 lib/lighttpd/mod_access.la
 lib/lighttpd/mod_accesslog.la
 lib/lighttpd/mod_ajp13.la
@@ -11,7 +11,6 @@ ${PLIST.ldap}lib/lighttpd/mod_authn_ldap.la
 lib/lighttpd/mod_cgi.la
 lib/lighttpd/mod_deflate.la
 lib/lighttpd/mod_dirlisting.la
-lib/lighttpd/mod_evasive.la
 lib/lighttpd/mod_evhost.la
 lib/lighttpd/mod_expire.la
 lib/lighttpd/mod_extforward.la
@@ -28,16 +27,13 @@ lib/lighttpd/mod_redirect.la
 lib/lighttpd/mod_rewrite.la
 lib/lighttpd/mod_rrdtool.la
 lib/lighttpd/mod_scgi.la
-lib/lighttpd/mod_secdownload.la
 lib/lighttpd/mod_setenv.la
 lib/lighttpd/mod_simple_vhost.la
 lib/lighttpd/mod_sockproxy.la
 lib/lighttpd/mod_ssi.la
 lib/lighttpd/mod_staticfile.la
 lib/lighttpd/mod_status.la
-lib/lighttpd/mod_uploadprogress.la
 lib/lighttpd/mod_userdir.la
-lib/lighttpd/mod_usertrack.la
 lib/lighttpd/mod_vhostdb.la
 ${PLIST.libdbi}lib/lighttpd/mod_vhostdb_dbi.la
 ${PLIST.ldap}lib/lighttpd/mod_vhostdb_ldap.la
