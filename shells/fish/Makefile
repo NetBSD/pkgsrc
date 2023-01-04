@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2022/08/22 19:15:17 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2023/01/04 07:42:05 wiz Exp $
 
 DISTNAME=		fish-3.5.1
 CATEGORIES=		shells
@@ -29,6 +29,7 @@ CPPFLAGS+=		-DHAVE_BACKTRACE_SYMBOLS
 CXXFLAGS.NetBSD+=	-fpermissive
 LDFLAGS+=		-lexecinfo
 .endif
+LDFLAGS.NetBSD+=	-lterminfo
 
 # Upstream intentionally omits open.1 on Darwin, but adds realpath.1
 PLIST_VARS+=	open realpath
