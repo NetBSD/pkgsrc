@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2022/12/27 16:55:12 schmonz Exp $
+# $NetBSD: Makefile,v 1.30 2023/01/04 00:22:01 gdt Exp $
 
 DISTNAME=	elixir-1.14.2
 CATEGORIES=	lang
@@ -29,5 +29,12 @@ REPLACE_FILES.elixir=	bin/mix
 
 CHECK_INTERPRETER_SKIP+=	bin/mix
 CHECK_INTERPRETER_SKIP+=	lib/elixir/bin/mix
+
+# Debug locale problems.
+pre-build:
+	@echo ENV:
+	@env | egrep "^(LANG|LC_)" || true
+	@echo LOCALE:
+	@locale
 
 .include "../../mk/bsd.pkg.mk"
