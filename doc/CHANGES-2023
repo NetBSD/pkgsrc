@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.111 2023/01/04 17:27:26 prlw1 Exp $
+$NetBSD: CHANGES-2023,v 1.112 2023/01/04 18:33:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -135,3 +135,11 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/ruby-padrino to 0.15.2 [taca 2023-01-04]
 	Added devel/ccls version 0.20220729 [nikita 2023-01-04]
 	Updated security/acmesh to 3.0.5 [prlw1 2023-01-04]
+	Updated math/blas to 3.11.0 [wiz 2023-01-04]
+	Updated math/cblas to 3.11.0 [wiz 2023-01-04]
+	Updated math/lapacke to 3.11.0 [wiz 2023-01-04]
+	Updated math/lapack to 3.11.0 [wiz 2023-01-04]
+	Updated math/blas64 to 3.11.0 [wiz 2023-01-04]
+	Updated math/cblas64 to 3.11.0 [wiz 2023-01-04]
+	Updated math/lapacke64 to 3.11.0 [wiz 2023-01-04]
+	Updated math/lapack64 to 3.11.0 [wiz 2023-01-04]
