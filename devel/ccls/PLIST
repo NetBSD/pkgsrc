@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2023/01/04 17:25:07 nikita Exp $
+bin/ccls

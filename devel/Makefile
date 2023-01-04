@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3865 2023/01/02 22:45:41 vins Exp $
+# $NetBSD: Makefile,v 1.3866 2023/01/04 17:25:07 nikita Exp $
 #
 
 COMMENT=	Development utilities
@@ -232,6 +232,7 @@ SUBDIR+=	clisp-syscalls
 SUBDIR+=	clisp-wildcard
 SUBDIR+=	clisp-zlib
 SUBDIR+=	cloc
+SUBDIR+=	ccls
 SUBDIR+=	cmake
 SUBDIR+=	cmake-fedora
 SUBDIR+=	cmake-gui
