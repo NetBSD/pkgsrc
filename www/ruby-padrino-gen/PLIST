@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2021/06/02 15:09:53 taca Exp $
+@comment $NetBSD: PLIST,v 1.11 2023/01/04 15:33:36 taca Exp $
 bin/padrino-gen${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
@@ -101,6 +101,7 @@ ${GEM_LIBDIR}/lib/padrino-gen/padrino-tasks/sequel.rb
 ${GEM_LIBDIR}/lib/padrino-gen/padrino-tasks/sql-helpers.rb
 ${GEM_LIBDIR}/padrino-gen.gemspec
 ${GEM_LIBDIR}/test/fixtures/admin_template.rb
+${GEM_LIBDIR}/test/fixtures/database_template.rb
 ${GEM_LIBDIR}/test/fixtures/example_template.rb
 ${GEM_LIBDIR}/test/fixtures/git_template.rb
 ${GEM_LIBDIR}/test/fixtures/plugin_template.rb
