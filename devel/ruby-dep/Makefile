@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/01/16 14:29:29 taca Exp $
+# $NetBSD: Makefile,v 1.7 2023/01/04 10:50:17 taca Exp $
 
 DISTNAME=	ruby_dep-${VERS}
 PKGNAME=	${RUBY_PKGPREFIX}-dep-${VERS}
@@ -11,7 +11,7 @@ LICENSE=	mit
 
 VERS=		1.5.0
 
-RUBY_VERSIONS_INCOMPATIBLE=	30 31
+RUBY_VERSIONS_ACCEPTED=	27
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
