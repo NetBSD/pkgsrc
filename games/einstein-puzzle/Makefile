@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.3 2018/07/18 00:06:16 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2023/01/04 09:34:44 wiz Exp $
 
-DISTNAME=	einstein-puzzle-2.1.1
-PKGREVISION=	1
+DISTNAME=	einstein-puzzle-2.2
 CATEGORIES=	games
-MASTER_SITES=	${MASTER_SITE_GITHUB:=lksj/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=jordan-evens/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/lksj/einstein-puzzle/
+HOMEPAGE=	https://github.com/jordan-evens/einstein-puzzle/
 COMMENT=	Computer implementation of a puzzle invented by Albert Einstein
 LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES=	c++03
+USE_LANGUAGES=	c++11
+USE_TOOLS+=	gmake
 
 MAKE_FLAGS+=		PREFIX=${PREFIX}
 
