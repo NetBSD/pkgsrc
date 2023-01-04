@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.31 2022/10/13 12:11:12 adam Exp $
+$NetBSD: distinfo,v 1.32 2023/01/04 10:32:00 adam Exp $
 
-BLAKE2s (setuptools_scm-7.0.5.tar.gz) = f92f8c5f6c64c559504c821ab9739be2e077f1a4c4200073f97ae56d9bb8d1b0
-SHA512 (setuptools_scm-7.0.5.tar.gz) = 5b3420f0aaa0dd1655afb0fdcedc3738b75dbb9d8205e0ad67555c251d330a0d3620a7297cfdcfabbc7386a8acf43fe73fa7f3b17e2d156495fd8b2ab7d1c985
-Size (setuptools_scm-7.0.5.tar.gz) = 70716 bytes
+BLAKE2s (setuptools_scm-7.1.0.tar.gz) = e84926f7be7b59dc8c3706af80e648b89fb202705be99faf036dfe3ceca29ee8
+SHA512 (setuptools_scm-7.1.0.tar.gz) = bd7260672c213db6b8c5842dbb6ac69e69ce040777865c935033971f65d905bd8e6b54e174190a924e452c302e69d4c1de231cbc8f603176ba013a739840dad3
+Size (setuptools_scm-7.1.0.tar.gz) = 71904 bytes
