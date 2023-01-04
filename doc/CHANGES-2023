@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.107 2023/01/04 15:30:11 taca Exp $
+$NetBSD: CHANGES-2023,v 1.108 2023/01/04 15:35:30 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -127,3 +127,10 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/ruby-rack-protection to 3.0.5 [taca 2023-01-04]
 	Updated www/ruby-sinatra to 3.0.5 [taca 2023-01-04]
 	Updated www/ruby-sinatra-contrib to 3.0.5 [taca 2023-01-04]
+	Updated www/ruby-padrino-support to 0.15.2 [taca 2023-01-04]
+	Updated www/ruby-padrino-helpers to 0.15.2 [taca 2023-01-04]
+	Updated www/ruby-padrino-core to 0.15.2 [taca 2023-01-04]
+	Updated www/ruby-padrino-admin to 0.15.2 [taca 2023-01-04]
+	Updated www/ruby-padrino-cache to 0.15.2 [taca 2023-01-04]
+	Updated www/ruby-padrino-mailer to 0.15.2 [taca 2023-01-04]
+	Updated www/ruby-padrino to 0.15.2 [taca 2023-01-04]
