@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2022/11/23 16:19:03 adam Exp $
+# $NetBSD: Makefile,v 1.35 2023/01/04 13:21:03 wiz Exp $
 
 DISTNAME=	libplist-2.2.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libimobiledevice/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -21,7 +21,6 @@ USE_LANGUAGES=	c c++
 PKGCONFIG_OVERRIDE+=		libplist++.pc.in
 PKGCONFIG_OVERRIDE+=		libplist.pc.in
 PY_PATCHPLIST=			yes
-PYTHON_VERSIONS_ACCEPTED=	27
 
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../devel/py-cython/tool.mk"
