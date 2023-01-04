@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2016/01/28 13:38:53 jperkin Exp $
+# $NetBSD: Makefile,v 1.7 2023/01/04 18:35:56 vins Exp $
 
 DISTNAME=	bsdinstall-20160108
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	# empty
 DISTFILES=	# empty
