@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.101 2023/01/04 09:37:44 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.102 2023/01/04 10:42:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -116,3 +116,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/broot to 1.19.0 [pin 2023-01-04]
 	Updated games/einstein-puzzle to 2.2 [wiz 2023-01-04]
 	Updated www/lighttpd to 1.4.68 [wiz 2023-01-04]
+	Updated devel/py-setuptools_scm to 7.1.0 [adam 2023-01-04]
+	Updated devel/colordiff to 1.0.21 [adam 2023-01-04]
+	Updated www/py-httpx to 0.23.3 [adam 2023-01-04]
+	Updated converters/py-simplejson to 3.18.1 [adam 2023-01-04]
