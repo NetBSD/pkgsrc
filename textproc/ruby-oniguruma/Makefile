@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2022/01/16 14:29:29 taca Exp $
+# $NetBSD: Makefile,v 1.13 2023/01/04 10:50:17 taca Exp $
 
 DISTNAME=	oniguruma-1.1.0
 PKGREVISION=	3
@@ -9,7 +9,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Fast regular expression library
 LICENSE=	modified-bsd
 
-RUBY_VERSIONS_INCOMPATIBLE=	30 31
+RUBY_VERSIONS_ACCEPTED=	27
 
 USE_GCC_RUNTIME=	yes
 
