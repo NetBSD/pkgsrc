@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.55 2022/10/30 08:27:00 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2023/01/04 07:45:59 wiz Exp $
 
-DISTNAME=		gnucash-docs-4.12
+DISTNAME=		gnucash-docs-4.13
 CATEGORIES=		finance
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gnucash/}
 
@@ -13,7 +13,5 @@ DEPENDS+=		yelp-[0-9]*:../../misc/yelp3
 
 USE_CMAKE=		yes
 USE_TOOLS+=		bash
-# cd: can't cd to .../work/gnucash-docs-4.12/share/help/C/gnucash-guide
-MAKE_JOBS_SAFE=		no
 
 .include "../../mk/bsd.pkg.mk"
