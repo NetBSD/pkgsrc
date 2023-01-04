@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2022/06/16 00:29:30 gutteridge Exp $
+# $NetBSD: Makefile,v 1.28.6.1 2023/01/04 10:28:08 bsiegert Exp $
 
-DISTNAME=	tcpreplay-4.4.1
+DISTNAME=	tcpreplay-4.4.2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=appneta/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
