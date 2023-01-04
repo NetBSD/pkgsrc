@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.109 2023/01/04 16:01:20 pin Exp $
+$NetBSD: CHANGES-2023,v 1.110 2023/01/04 17:25:27 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -133,3 +133,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/ruby-padrino-cache to 0.15.2 [taca 2023-01-04]
 	Updated www/ruby-padrino-mailer to 0.15.2 [taca 2023-01-04]
 	Updated www/ruby-padrino to 0.15.2 [taca 2023-01-04]
+	Added devel/ccls version 0.20220729 [nikita 2023-01-04]
