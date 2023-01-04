@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2020/09/14 15:48:10 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2023/01/04 15:27:59 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
@@ -13,7 +13,6 @@ ${GEM_LIBDIR}/lib/sinatra/contrib/setup.rb
 ${GEM_LIBDIR}/lib/sinatra/contrib/version.rb
 ${GEM_LIBDIR}/lib/sinatra/cookies.rb
 ${GEM_LIBDIR}/lib/sinatra/custom_logger.rb
-${GEM_LIBDIR}/lib/sinatra/decompile.rb
 ${GEM_LIBDIR}/lib/sinatra/engine_tracking.rb
 ${GEM_LIBDIR}/lib/sinatra/extension.rb
 ${GEM_LIBDIR}/lib/sinatra/json.rb
