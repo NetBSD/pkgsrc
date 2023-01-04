@@ -1,8 +1,14 @@
-$NetBSD: distinfo,v 1.17 2022/12/28 04:36:55 khorben Exp $
+$NetBSD: distinfo,v 1.18 2023/01/04 01:48:48 khorben Exp $
 
 BLAKE2s (radare2-5.8.0.tar.gz) = d16762a681544c372644824436334232e58ab9cbbf20e429397a9f118c155353
 SHA512 (radare2-5.8.0.tar.gz) = a780e595e8fd5c821cd8eea5ee61e2a0476ed4f9e72490eae244d4a110a34000a0cdb73463beac7ff18177d269cf7ae00a3a146e6d6aeb61b48bc543b622c7a2
 Size (radare2-5.8.0.tar.gz) = 10994255 bytes
+BLAKE2s (vector35-arch-arm64-9ab2b0bedde459dc86e079718333de4a63bbbacb.tar.gz) = 58edf03ee326eb83dc48431178f1487d2e43872081b804cf83770bf0eea3cb0f
+SHA512 (vector35-arch-arm64-9ab2b0bedde459dc86e079718333de4a63bbbacb.tar.gz) = 478f06c3fe09232152bbb63e500a440ca8546cc11fe59f9d489a25d327469b1869fe80b4e2e2cfad8a2b96261857cf74b6708628ac30ec8dabc5da05d04c1cfd
+Size (vector35-arch-arm64-9ab2b0bedde459dc86e079718333de4a63bbbacb.tar.gz) = 1050960 bytes
+BLAKE2s (vector35-arch-armv7-dde39f69ffea19fc37e681874b12cb4707bc4f30.tar.gz) = 208598bcc2151f331d4d8238e333c6e5899dfb0047719d30e068d0fc47a6a074
+SHA512 (vector35-arch-armv7-dde39f69ffea19fc37e681874b12cb4707bc4f30.tar.gz) = e9eb6cee02bbbb265914b1f9118c7a143ed76a201c085af5516855475bf7f3ad5f9c82d1548e85a0339fbc33e029ef0e4be9d8cef68d212ae16ce1a7f18453ff
+Size (vector35-arch-armv7-dde39f69ffea19fc37e681874b12cb4707bc4f30.tar.gz) = 255288 bytes
 SHA1 (patch-libr_io_p_shm.mk) = 77e33c5532f6c072a12b9c3c882667521188e002
 SHA1 (patch-shlr-sdb-src-Makefile) = 414260d6010873f04ca8e614438fd674af0543d2
 SHA1 (patch-shlr_qjs_src_cutils.h) = f36e586889dd18ee4354c1a1bcbad52c95951eda
