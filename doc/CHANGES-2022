@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6439 2022/12/31 22:24:31 msaitoh Exp $
+$NetBSD: CHANGES-2022,v 1.6440 2023/01/04 15:59:29 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -9527,7 +9527,6 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/rsync to 3.2.7nb1 [sekiya 2022-12-29]
 	Updated chat/prosody to 0.12.2 [khorben 2022-12-29]
 	Updated devel/difftastic to 0.40.0 [pin 2022-12-29]
-	Updated audio/ncspot to 0.12.0 [pin 2022-12-29]
 	Updated editors/tp-note to 1.19.13 [pin 2022-12-29]
 	Added devel/superdiff version 2.0.3 [pin 2022-12-29]
 	Updated net/py-botocore to 1.29.39 [adam 2022-12-29]
