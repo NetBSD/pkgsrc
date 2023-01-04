@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2022/09/01 13:46:30 taca Exp $
+# $NetBSD: Makefile,v 1.7 2023/01/04 15:25:59 taca Exp $
 
-DISTNAME=	mustermann-2.0.2
+DISTNAME=	mustermann-3.0.0
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
