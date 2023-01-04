@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.100 2023/01/04 09:34:53 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.101 2023/01/04 09:37:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -115,3 +115,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated finance/gnucash-docs to 4.13 [wiz 2023-01-04]
 	Updated sysutils/broot to 1.19.0 [pin 2023-01-04]
 	Updated games/einstein-puzzle to 2.2 [wiz 2023-01-04]
+	Updated www/lighttpd to 1.4.68 [wiz 2023-01-04]
