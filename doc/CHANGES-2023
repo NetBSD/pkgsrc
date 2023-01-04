@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.103 2023/01/04 13:21:15 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.104 2023/01/04 15:20:49 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -121,3 +121,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-httpx to 0.23.3 [adam 2023-01-04]
 	Updated converters/py-simplejson to 3.18.1 [adam 2023-01-04]
 	Updated textproc/libplist to 2.2.0nb2 [wiz 2023-01-04]
+	Added www/ruby-rack2 version 2.2.4 [taca 2023-01-04]
