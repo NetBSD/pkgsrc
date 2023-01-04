@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.67 2022/12/09 16:14:12 wiz Exp $
+# $NetBSD: Makefile,v 1.67.2.1 2023/01/04 12:26:08 bsiegert Exp $
 
 DISTNAME=	ccache-4.7.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ccache/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
@@ -31,4 +31,5 @@ SUBST_MESSAGE.rubyver=	Fixing asciidoctor executable name.
 
 .include "../../archivers/zstd/buildlink3.mk"
 .include "../../databases/hiredis/buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
