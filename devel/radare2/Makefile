@@ -1,15 +1,26 @@
-# $NetBSD: Makefile,v 1.38 2022/12/28 04:36:55 khorben Exp $
+# $NetBSD: Makefile,v 1.39 2023/01/04 01:48:48 khorben Exp $
 
 DISTNAME=	radare2-5.8.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=radareorg/}
+DISTFILES=	${DEFAULT_DISTFILES}
+DISTFILES+=	vector35-arch-arm64-9ab2b0bedde459dc86e079718333de4a63bbbacb.tar.gz
+DISTFILES+=	vector35-arch-armv7-dde39f69ffea19fc37e681874b12cb4707bc4f30.tar.gz
+SITES.vector35-arch-arm64-9ab2b0bedde459dc86e079718333de4a63bbbacb.tar.gz= \
+		-${MASTER_SITES:=vector35-arch-arm64/archive/9ab2b0bedde459dc86e079718333de4a63bbbacb.tar.gz}
+SITES.vector35-arch-armv7-dde39f69ffea19fc37e681874b12cb4707bc4f30.tar.gz= \
+		-${MASTER_SITES:=vector35-arch-armv7/archive/dde39f69ffea19fc37e681874b12cb4707bc4f30.tar.gz}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.radare.org/
 COMMENT=	Reverse engineering framework
 LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v3
 
-TOOL_DEPENDS+=	git-base-[0-9]*:../../devel/git-base
+post-extract:
+	${MV} ${WRKDIR}/vector35-arch-arm64-9ab2b0bedde459dc86e079718333de4a63bbbacb \
+		${WRKSRC}/libr/arch/p/arm/v35arm64/arch-arm64
+	${MV} ${WRKDIR}/vector35-arch-armv7-dde39f69ffea19fc37e681874b12cb4707bc4f30 \
+		${WRKSRC}/libr/arch/p/arm/v35arm64/arch-armv7
 
 HAS_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
