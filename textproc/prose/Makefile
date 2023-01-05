@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2023/01/02 12:50:20 pin Exp $
+# $NetBSD: Makefile,v 1.5 2023/01/05 16:01:24 pin Exp $
 
-DISTNAME=	prose-0.4.0
+DISTNAME=	prose-0.3.1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jgdavey/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
