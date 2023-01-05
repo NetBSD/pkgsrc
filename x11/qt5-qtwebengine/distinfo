@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.10 2022/10/30 13:38:31 adam Exp $
+$NetBSD: distinfo,v 1.11 2023/01/05 16:01:18 adam Exp $
 
-BLAKE2s (qtwebengine-everywhere-opensource-src-5.15.7.tar.xz) = c735f6e1de279418a2817ec2651502e28092a39139e06a8d3a9bc2f481b43f4f
-SHA512 (qtwebengine-everywhere-opensource-src-5.15.7.tar.xz) = 26174a9986411ea0cb2d6a919f5163db2cf0ff4ad1bf66f4498ef0eda1f9d8eea112d145f8273c666338a963d66cfbf1e06d2c2752254ef1669f3f76cd68d696
-Size (qtwebengine-everywhere-opensource-src-5.15.7.tar.xz) = 316353404 bytes
+BLAKE2s (qtwebengine-everywhere-opensource-src-5.15.8.tar.xz) = 0f18be1de6ebd22011529f5c98a076c1c4edf7a9138b89600812c6d2c2636fce
+SHA512 (qtwebengine-everywhere-opensource-src-5.15.8.tar.xz) = 2c4df48de31cb93a77ba9a5119bc57749ba0509f25348d16f97111c446f122d336e5a03f580c9371a487992f3c98190c622bb7ae314b26fbdfdf27a535504dd9
+Size (qtwebengine-everywhere-opensource-src-5.15.8.tar.xz) = 316379144 bytes
 SHA1 (patch-mkspecs_features_functions.prf) = e9c7a9c348cc7b9d09232f4b03f0a8282e9bfeb5
 SHA1 (patch-src_3rdparty_chromium_BUILD.gn) = 97fbda3bd2dc44d4ae97b650240e61516cd108f4
 SHA1 (patch-src_3rdparty_chromium_base_BUILD.gn) = 839b97c34e0aaf1309c89af6c9f8e65ebf77a7e5
