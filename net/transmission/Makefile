@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2022/10/26 10:31:52 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2023/01/05 15:55:38 nia Exp $
 
 CONFLICTS+=	Transmission-[0-9]*
 
@@ -8,6 +8,30 @@ pre-configure:
 CONFIGURE_ARGS+=	--disable-mac
 CONFIGURE_ARGS+=	--without-gtk
 
-PKGREVISION= 4
+PKGREVISION=	5
+
+RCD_SCRIPTS=		transmission
+
+BUILD_DEFS+=		VARBASE
+
+.include "../../mk/bsd.prefs.mk"
+
+TRANSMISSION_USER?=	transmission
+TRANSMISSION_GROUP?=	transmission
+
+FILES_SUBST+=		TRANSMISSION_USER=${TRANSMISSION_USER}
+FILES_SUBST+=		TRANSMISSION_GROUP=${TRANSMISSION_GROUP}
+
+PKG_USERS_VARS+=	TRANSMISSION_USER
+PKG_GROUPS_VARS+=	TRANSMISSION_GROUP
+
+PKG_GROUPS=		${TRANSMISSION_GROUP}
+PKG_USERS=		${TRANSMISSION_USER}:${TRANSMISSION_GROUP}
+
+OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR}/transmission \
+			${TRANSMISSION_USER} ${TRANSMISSION_GROUP} 0755
+OWN_DIRS_PERMS+=	${VARBASE}/log/transmission \
+			${TRANSMISSION_USER} ${TRANSMISSION_GROUP} 0755
+
 .include "../../net/transmission/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
