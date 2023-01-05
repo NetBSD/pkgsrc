@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.121 2023/01/05 16:07:33 pin Exp $
+$NetBSD: CHANGES-2023,v 1.122 2023/01/05 16:22:09 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -152,3 +152,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/automake to 1.16.5nb3 [wiz 2023-01-05]
 	Updated www/ruby-rack2 to 2.2.5 [taca 2023-01-05]
 	Updated x11/qt5 to 5.15.8 [adam 2023-01-05]
+	Updated textproc/prose to 0.3.2 [pin 2023-01-05]
