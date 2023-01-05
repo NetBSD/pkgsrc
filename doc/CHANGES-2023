@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.118 2023/01/05 14:42:21 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.119 2023/01/05 15:31:52 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -151,3 +151,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-lazy-object-proxy to 1.9.0 [adam 2023-01-05]
 	Updated comms/hylafax to 6.0.7nb2 [wiz 2023-01-05]
 	Updated devel/automake to 1.16.5nb3 [wiz 2023-01-05]
+	Updated www/ruby-rack2 to 2.2.5 [taca 2023-01-05]
