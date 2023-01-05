@@ -1,4 +1,4 @@
-<!-- $NetBSD: configuring.xml,v 1.58 2023/01/05 01:35:06 gutteridge Exp $ -->
+<!-- $NetBSD: configuring.xml,v 1.59 2023/01/05 01:42:15 gutteridge Exp $ -->
 
 <chapter id="configuring">
   <title>Configuring pkgsrc</title>
@@ -375,6 +375,10 @@ LDFLAGS+=        -your -linkerflags
             </listitem>
         </itemizedlist></para>
         </listitem>
+        <listitem><para><varname>CHECK_FILES_STRICT</varname>: 
+        Also check <varname>VARBASE</varname> and <varname>PKG_SYSCONFDIR
+        </varname> values in PLIST entries.
+        </para></listitem>
         <listitem><para><varname>PKG_DEBUG_LEVEL</varname>: The level
         of debugging output which is displayed whilst making and
         installing the package.  The default value for this is 0,
