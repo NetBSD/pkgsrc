@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1658 2023/01/04 15:20:29 taca Exp $
+# $NetBSD: Makefile,v 1.1659 2023/01/05 08:29:02 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -977,13 +977,13 @@ SUBDIR+=	ruby-patron
 SUBDIR+=	ruby-puma
 SUBDIR+=	ruby-pygments.rb
 SUBDIR+=	ruby-rack
-SUBDIR+=	ruby-rack2
 SUBDIR+=	ruby-rack-cache
 SUBDIR+=	ruby-rack-contrib
 SUBDIR+=	ruby-rack-protection
 SUBDIR+=	ruby-rack-rewrite
 SUBDIR+=	ruby-rack-test
 SUBDIR+=	ruby-rack16
+SUBDIR+=	ruby-rack2
 SUBDIR+=	ruby-rails-html-sanitizer
 SUBDIR+=	ruby-rails52
 SUBDIR+=	ruby-rails60
