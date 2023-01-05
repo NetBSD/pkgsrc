@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2022/11/20 23:24:57 adam Exp $
+$NetBSD: distinfo,v 1.14 2023/01/05 10:35:25 adam Exp $
 
-BLAKE2s (lazy-object-proxy-1.8.0.tar.gz) = abbafd3f255ed30a111db97c4d3444556847070527d5401aa24709ca3c4133ed
-SHA512 (lazy-object-proxy-1.8.0.tar.gz) = a682e7d1ef405939f5f75f598618d6c7de482decf8027abcf4c7c2b684b3442ca3b1a666d1913e9c7f63c086753e0d79b8c1b03c0cafe8cbea3d7c70893be57f
-Size (lazy-object-proxy-1.8.0.tar.gz) = 41884 bytes
+BLAKE2s (lazy-object-proxy-1.9.0.tar.gz) = 21097fe2ee59b2477c47527d9770be6d92a8cf9e27e37ca0d4c8848a5ae2f7c9
+SHA512 (lazy-object-proxy-1.9.0.tar.gz) = 2168254a71cf52ef406e5edf4653b9c8ae05392d4ad3c2e5e8e9f8db56152d968a77d14226acdf7d962f66d460c40add335615442f6f176d697c071f9cb137f5
+Size (lazy-object-proxy-1.9.0.tar.gz) = 42830 bytes
