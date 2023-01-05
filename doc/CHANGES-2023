@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.114 2023/01/04 22:27:19 nikita Exp $
+$NetBSD: CHANGES-2023,v 1.115 2023/01/05 10:22:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -145,3 +145,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/lapack64 to 3.11.0 [wiz 2023-01-04]
 	Updated sysutils/bsdinstall to 20160108nb1 [vins 2023-01-04]
 	Updated devel/lua-rocks to 3.9.2 [nikita 2023-01-04]
+	Updated devel/py-googleapis-common-protos to 1.57.1 [adam 2023-01-05]
+	Updated devel/py-google-api-core to 2.11.0 [adam 2023-01-05]
