@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.117 2023/01/05 14:30:21 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.118 2023/01/05 14:42:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -150,3 +150,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-google-api-python-client to 2.71.0 [adam 2023-01-05]
 	Updated devel/py-lazy-object-proxy to 1.9.0 [adam 2023-01-05]
 	Updated comms/hylafax to 6.0.7nb2 [wiz 2023-01-05]
+	Updated devel/automake to 1.16.5nb3 [wiz 2023-01-05]
