@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3866 2023/01/04 17:25:07 nikita Exp $
+# $NetBSD: Makefile,v 1.3867 2023/01/05 08:28:41 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -213,6 +213,7 @@ SUBDIR+=	cbindgen
 SUBDIR+=	cbrowser
 SUBDIR+=	ccache
 SUBDIR+=	ccache3
+SUBDIR+=	ccls
 SUBDIR+=	cdecl
 SUBDIR+=	cdk
 SUBDIR+=	cervisia
@@ -232,7 +233,6 @@ SUBDIR+=	clisp-syscalls
 SUBDIR+=	clisp-wildcard
 SUBDIR+=	clisp-zlib
 SUBDIR+=	cloc
-SUBDIR+=	ccls
 SUBDIR+=	cmake
 SUBDIR+=	cmake-fedora
 SUBDIR+=	cmake-gui
