@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.115 2023/01/05 10:22:02 adam Exp $
+$NetBSD: CHANGES-2023,v 1.116 2023/01/05 10:35:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -147,3 +147,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/lua-rocks to 3.9.2 [nikita 2023-01-04]
 	Updated devel/py-googleapis-common-protos to 1.57.1 [adam 2023-01-05]
 	Updated devel/py-google-api-core to 2.11.0 [adam 2023-01-05]
+	Updated www/py-google-api-python-client to 2.71.0 [adam 2023-01-05]
+	Updated devel/py-lazy-object-proxy to 1.9.0 [adam 2023-01-05]
