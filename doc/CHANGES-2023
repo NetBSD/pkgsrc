@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.120 2023/01/05 16:01:46 adam Exp $
+$NetBSD: CHANGES-2023,v 1.121 2023/01/05 16:07:33 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -47,7 +47,6 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-zconfig to 3.6.1 [adam 2023-01-02]
 	Removed devel/epydoc [adam 2023-01-02]
 	Updated sysutils/parallel-disk-usage to 0.8.3 [pin 2023-01-02]
-	Updated textproc/prose to 0.4.0 [pin 2023-01-02]
 	Updated textproc/zet to 0.2.5 [pin 2023-01-02]
 	Updated www/xh to 0.17.0 [pin 2023-01-02]
 	Updated textproc/tuc to 0.11.0 [pin 2023-01-02]
