@@ -1,7 +1,7 @@
-# $NetBSD: database.mk,v 1.3 2019/08/16 10:54:51 wiz Exp $
+# $NetBSD: database.mk,v 1.4 2023/01/05 23:11:00 gutteridge Exp $
 #
 # This Makefile fragment is intended to be included by packages that install
-# dconf database.  It takes care of update the corresponding databases
+# a dconf database.  It takes care of updating the corresponding databases
 # at (de)installation time.
 #
 
