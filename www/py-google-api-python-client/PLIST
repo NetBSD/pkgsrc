@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2022/11/28 10:13:29 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2023/01/05 10:24:43 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -54,6 +54,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/adsensehost.v4.1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/alertcenter.v1beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/analytics.v3.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/analyticsadmin.v1alpha.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/analyticsadmin.v1beta.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/analyticsdata.v1alpha.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/analyticsdata.v1beta.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/analyticshub.v1.json
@@ -173,6 +174,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/customsearch.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/datacatalog.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/datacatalog.v1beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/dataflow.v1b3.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/dataform.v1beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/datafusion.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/datafusion.v1beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/datalabeling.v1beta1.json
@@ -200,6 +202,8 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/dialogflow.v3.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/dialogflow.v3beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/digitalassetlinks.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/discovery.v1.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/discoveryengine.v1alpha.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/discoveryengine.v1beta.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/displayvideo.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/displayvideo.v2.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/dlp.v2.json
@@ -283,6 +287,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/identitytoolkit.v3.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/ids.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/index.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/indexing.v3.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/integrations.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/integrations.v1alpha.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/jobs.v2.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/jobs.v3.json
@@ -304,6 +309,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/managedidentities.v1beta1
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/manufacturers.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/memcache.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/memcache.v1beta2.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/metastore.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/metastore.v1alpha.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/metastore.v1beta.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/ml.v1.json
@@ -460,6 +466,8 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/workflowexecutions.v1.jso
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/workflowexecutions.v1beta.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/workflows.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/workflows.v1beta.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/workloadmanager.v1.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/workstations.v1beta.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/youtube.v3.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/youtubeAnalytics.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/youtubeAnalytics.v2.json
