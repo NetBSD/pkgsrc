@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2022/11/12 05:03:33 gutteridge Exp $
+$NetBSD: distinfo,v 1.10 2023/01/06 00:34:31 gutteridge Exp $
 
-BLAKE2s (libfm-qt-1.2.0.tar.xz) = c0fcf161727efe14f2ceb0317396dfe1fa5e37c940e92d46b55072e8f856d87a
-SHA512 (libfm-qt-1.2.0.tar.xz) = 941943b9d1275e2306689e19375d5d5589a638446319c275ebdf211d25cdb90116b9359daa36b53dc5688ba09219d66dc79e312752ce56559e485ecdbfd895c0
-Size (libfm-qt-1.2.0.tar.xz) = 385056 bytes
+BLAKE2s (libfm-qt-1.2.1.tar.xz) = a0b8a6b2779728c049095088bb80be90e6542633e33426fe15bbf9ddcb3f04a7
+SHA512 (libfm-qt-1.2.1.tar.xz) = 2adf82f9b03215013ee793af28019f6a822baaa261c7fe0ac4efe7d2dfdcdb9d232b8380e5a9e4f609c99b8d20326ab065999185f2765fe8c1cdc8513c9978a4
+Size (libfm-qt-1.2.1.tar.xz) = 387008 bytes
