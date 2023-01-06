@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.10 2023/01/06 08:50:42 vins Exp $
+# $NetBSD: options.mk,v 1.11 2023/01/06 10:02:16 vins Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.notmuch
 PKG_SUPPORTED_OPTIONS=	notmuch-emacs doc
@@ -26,6 +26,7 @@ PLIST_VARS+=		doc
 .if !empty(PKG_OPTIONS:Mdoc)
 PLIST.doc=		yes
 USE_TOOLS+=		perl
+BUILD_DEPENDS+=		doxygen-[0-9]*:../../devel/doxygen
 BUILD_DEPENDS+=		${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 .else
 CONFIGURE_ARGS+=	--without-docs
