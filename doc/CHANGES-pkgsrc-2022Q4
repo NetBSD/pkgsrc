@@ -1,7 +1,19 @@
-$NetBSD: CHANGES-pkgsrc-2022Q4,v 1.1.2.2 2022/12/29 09:06:14 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2022Q4,v 1.1.2.3 2023/01/06 19:48:59 bsiegert Exp $
 
 Changes to packages and infrastructure on the 2022Q4 branch:
 
 Pullup ticket #6709 - requested by he
 lang/clang: NetBSD build fix
+
+Pullup ticket #6711 - requested by gdt
+misc/raspberrypi-userland: build fix
+
+Pullup ticket #6712 - requested by gutteridge
+net/tcpreplay: security fix
+
+Pullup ticket #6713 - requested by gutteridge
+devel/ccache: i386 build fix
+
+Pullup ticket #6714 - requested by gdt
+sysutils/xentools415: NetBSD 10 build fix
 
