@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.248 2022/12/31 08:35:37 wiz Exp $
+# $NetBSD: gcc.mk,v 1.249 2023/01/06 23:11:31 wiz Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -443,12 +443,6 @@ CWRAPPERS_APPEND.cc+=	${_FORTIFY_CFLAGS}
 _RELRO_LDFLAGS=		-Wl,-zrelro -Wl,-znow
 .else
 _RELRO_LDFLAGS=		-Wl,-zrelro
-.endif
-# XXX Workaround for https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1014301
-# Set manually the maxpagesize to 4096 which is ok for now since NetBSD only
-# supports relro by default on x86 and aarch64
-.if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} > 109901
-_RELRO_LDFLAGS+=	-Wl,-z,max-page-size=4096
 .endif
 
 .if !empty(_RELRO_LDFLAGS) && !empty(MACHINE_PLATFORM:MNetBSD-*-*mips*)
