@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.29 2023/01/03 14:11:47 pin Exp $
+$NetBSD: distinfo,v 1.30 2023/01/06 15:14:19 pin Exp $
 
 BLAKE2s (ab_glyph-0.2.18.crate) = 93003bfda96e5138722ae33c65790e44a872b2bf08b7ebfa20d3682f9c0e1abf
 SHA512 (ab_glyph-0.2.18.crate) = 6efbf3a94c47dcaeba0601c6e056f67fcdfd04927510f2d2d4a214c1392a605856f247031f624b4d41718d5dcfe8127353256f597633fffdd9f3576275b480d8
@@ -147,9 +147,9 @@ Size (combine-4.6.6.crate) = 132428 bytes
 BLAKE2s (concat-string-1.0.1.crate) = 60ad1ad225e272f68120d4d94e03fa8f7cd0fbbd786ea13909e292dade4dae67
 SHA512 (concat-string-1.0.1.crate) = 5b5e206cd1930895229e34937d8fdfd340e29731d1eda7251790ca1bd4c20ccf2f933c5b0b9c9686d1dd3e21022420a1d822a912b223fe7390ceab728e3b4870
 Size (concat-string-1.0.1.crate) = 7438 bytes
-BLAKE2s (console-0.15.3.crate) = 00c8969071ae584b257503b0f40a61ddcbdebaca2b17ef0dc9fdcf331906cb92
-SHA512 (console-0.15.3.crate) = fa836bdbaeefc6ecd54659ee56ed66d4a3ea2e57af41c430903f97b0ca91c8634d9684faa1483a0c5b808b17b8732eefa6907b3f6d82e2dceead5a88e941889b
-Size (console-0.15.3.crate) = 34188 bytes
+BLAKE2s (console-0.15.4.crate) = 89640adc87819ea162ed84487fede65beb43113580160c22fa869f60e9e4463e
+SHA512 (console-0.15.4.crate) = fc719a26f93fa28793379e77eb90a9144892b07ee7fa5c495d842c892f5a161607da83376d447950dc1b2be6b023b38f2f1d416b112c09ab2c84847e53055650
+Size (console-0.15.4.crate) = 34237 bytes
 BLAKE2s (console_error_panic_hook-0.1.7.crate) = 9b63b62dfc7dda93c501477c7c08398275c1f7a8286bf58b5b45906d95630922
 SHA512 (console_error_panic_hook-0.1.7.crate) = 49f4fb2175c0068981678f291422ace3737dab7033b1a49d78fd821512c92fdd023c3fe28c7daed88c8f338c30a9c7f82f18bb4583c3fe7839ad8dcd0addd6b9
 Size (console_error_panic_hook-0.1.7.crate) = 507196 bytes
@@ -597,9 +597,9 @@ Size (lyon_geom-1.0.4.crate) = 52457 bytes
 BLAKE2s (lyon_path-1.0.3.crate) = 6b865bdbb12b588f54545676f31d74026de551ce47328bacd8fdabe2acbd8c2c
 SHA512 (lyon_path-1.0.3.crate) = 68d675d458c0dfda9d6121ef7dbe8d400decad886bbe4d12776029ddbe58e6171492a5c99e2718b76e20b40879848a88f590f899fea42936a1ab3a21a3ff9fdb
 Size (lyon_path-1.0.3.crate) = 35300 bytes
-BLAKE2s (lyon_tessellation-1.0.7.crate) = f6b9560ee9c6bf5775240eb2585a8dbe0e49bf808c0ed7e8be459a3d60cc3eb1
-SHA512 (lyon_tessellation-1.0.7.crate) = 7d79b121bf1a2f5f2c5f586ed1208b83eb926286ed6cd31e63bc1e8d412cca8dc92cf0337b369a53e6dc7a47e393c434cc78c075b9907b25d65e7840fb0f391a
-Size (lyon_tessellation-1.0.7.crate) = 182372 bytes
+BLAKE2s (lyon_tessellation-1.0.8.crate) = c979d49e63ac289a4601d61d6bb8eefbffdcdb916aa717a9d552dfb4a92661b2
+SHA512 (lyon_tessellation-1.0.8.crate) = 1944efc4a7da40c0b74a14c2f81c6b251215591f75bf73a5692aa831000a26ad5fae67f4d1cfe4a349f0659520f0957a5118cc7f54a632787e2e55c406fe9b7d
+Size (lyon_tessellation-1.0.8.crate) = 182373 bytes
 BLAKE2s (malloc_buf-0.0.6.crate) = fa2e78c89cf38b987feb7cc9114dedf22a0d8ea5611e9a44f8dd55b4b79adc7c
 SHA512 (malloc_buf-0.0.6.crate) = 463b3d7666cdd7de618abf0cc4e488060c84d6d93c56d4e922169511a0b03de380ea988cd998f5a162b244088902198763351ac16dea3762f0fa0840fc29d6ed
 Size (malloc_buf-0.0.6.crate) = 1239 bytes
@@ -783,9 +783,9 @@ Size (objc_exception-0.1.2.crate) = 2251 bytes
 BLAKE2s (objc_id-0.1.1.crate) = 1bc76100eb8a059b580ecd9b12111a7055936856bbb9059e7d8f28a3bfb362ef
 SHA512 (objc_id-0.1.1.crate) = ec36fae6f5cefda00f3e44618b3c9fe6ec8f528f70d1a95def6421704bfa128a6e5b4a32e9dd686bf6ff60c4f87fe8094aa5e1c8070bcde58b17fdc06f49f9f5
 Size (objc_id-0.1.1.crate) = 3258 bytes
-BLAKE2s (oculante-0.6.37.tar.gz) = bb1c623e8c2df889d72f949e019775458b05ff4d44b6e15fe69482db49612c91
-SHA512 (oculante-0.6.37.tar.gz) = c480b2bfe19d0bdd50ec55f59d439ce25db75d169ec58121aa9a3018ffae7503d12f217aa328933d51f90cb1964b94606326844a7faae6ead148b2ffeba94add
-Size (oculante-0.6.37.tar.gz) = 10433261 bytes
+BLAKE2s (oculante-0.6.38.tar.gz) = 5eef2fe746d665e661880b64ed64210af28a3532763102acbf3d7a44a6290f99
+SHA512 (oculante-0.6.38.tar.gz) = 73850e97b30a3fd7a5a00dd89176f2ea2342cd056d7de06b320d212308a60e364b2d2dde4bc8b4960190a1aeb9a9ed37983474db20c947733890ba183a6bf155
+Size (oculante-0.6.38.tar.gz) = 10435110 bytes
 BLAKE2s (once_cell-1.17.0.crate) = f0cc4bdb32165b57720e83c2cedf519303aff7e73d6b4103843824948510e63d
 SHA512 (once_cell-1.17.0.crate) = 291d87380c0ea17fb3ffc9fdff8620d2ff55601c06ef65b2f0c54254fecd5b488645c6e94c6026b82071893f4d420491ff712399a782e14efa1e323e5c299c46
 Size (once_cell-1.17.0.crate) = 32736 bytes
