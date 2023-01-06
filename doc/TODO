@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22461 2023/01/06 01:41:02 gutteridge Exp $
+$NetBSD: TODO,v 1.22462 2023/01/06 03:14:42 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -326,6 +326,15 @@ Suggested new packages
 	Bootstrap post-collapse technology
 	http://collapseos.org/
 	Toolchain to build AVR, running on old chips, cross-built from POSIX.
+
+	Frescobaldi
+	https://www.frescobaldi.org
+	LilyPond sheet music text editor
+
+	EndBASIC
+	https://www.endbasic.dev
+	BASIC environment with a REPL, a web interface, a graphical
+	console, and RPi support written in Rust
 
 	Missing xorg packages
 	app: constype, intel-gpu-tools
