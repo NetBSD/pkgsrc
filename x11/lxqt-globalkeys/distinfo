@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.10 2022/11/12 05:10:24 gutteridge Exp $
+$NetBSD: distinfo,v 1.11 2023/01/06 02:35:47 gutteridge Exp $
 
 BLAKE2s (lxqt-globalkeys-1.2.0.tar.xz) = 5a8b8e15213f1dcdbf822e47b36d7a8e6291d903c6b7ab19df507369edb01938
 SHA512 (lxqt-globalkeys-1.2.0.tar.xz) = c1270ae03fcb2fd8b8e548898c36d57ead6b5bea62f246a1587f4093a937141c6c7339f838d1f4ff0b9bd9b9c8079ba8cf0229b575d323e6d78e8b7ccc2eb624
 Size (lxqt-globalkeys-1.2.0.tar.xz) = 73504 bytes
 SHA1 (patch-autostart_CMakeLists.txt) = e5c4b76a3b116ee9b4781783a6ada3838f8e570c
+SHA1 (patch-daemon_core.cpp) = f765304ce23efd0ea2b69f6366453b3410adfc04
