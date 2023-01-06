@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2023/01/04 01:19:58 gdt Exp $
+# $NetBSD: Makefile,v 1.32 2023/01/06 01:14:01 gdt Exp $
 
 DISTNAME=	elixir-1.14.2
 CATEGORIES=	lang
@@ -17,6 +17,9 @@ UNLIMIT_RESOURCES=	datasize virtualsize
 USE_TOOLS+=	gmake:run
 BUILD_TARGET=	compile
 TEST_TARGET=	test
+
+# https://github.com/elixir-lang/elixir/issues/12320
+MAKE_JOBS_SAFE=	no
 
 MAKE_FLAGS+=	MAN_PREFIX=${PREFIX}/${PKGMANDIR}
 
