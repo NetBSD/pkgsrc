@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2022/10/15 18:13:42 triaxx Exp $
+# $NetBSD: Makefile,v 1.28.2.1 2023/01/06 20:09:57 bsiegert Exp $
 
 DISTNAME=	elixir-1.14.0
 CATEGORIES=	lang
@@ -18,7 +18,8 @@ USE_TOOLS+=	gmake:run
 BUILD_TARGET=	compile
 TEST_TARGET=	test
 
-ALL_ENV+=	LC_ALL="en_US.UTF-8"
+# https://github.com/elixir-lang/elixir/issues/12320
+MAKE_JOBS_SAFE=	no
 
 MAKE_FLAGS+=	MAN_PREFIX=${PREFIX}/${PKGMANDIR}
 
@@ -31,3 +32,9 @@ CHECK_INTERPRETER_SKIP+=	bin/mix
 CHECK_INTERPRETER_SKIP+=	lib/elixir/bin/mix
 
 .include "../../mk/bsd.pkg.mk"
+
+# erlang chooses latin1 or utf8 encoding for file names depending on
+# the character encoding, and elixir requires utf8.  Force erl to
+# choose utf8.  We'd like to set LC_CTYPE, but we need to override the
+# LC_ALL set by bsd.pkg.mk.
+ALL_ENV+=	LC_ALL="en_US.UTF-8"
