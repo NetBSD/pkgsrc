@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2023/01/04 09:24:47 pin Exp $
+# $NetBSD: Makefile,v 1.17 2023/01/06 00:41:50 gutteridge Exp $
 
-PKGNAME=	lxqt-1.2.0
+PKGNAME=	lxqt-1.2.1
 CATEGORIES=	meta-pkgs
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -16,11 +16,11 @@ TOOL_DEPENDS+=	lxqt-build-tools>=0.12.0:../../devel/lxqt-build-tools
 DEPENDS+=	libqtxdg>=3.10.0:../../x11/libqtxdg
 DEPENDS+=	qtxdg-tools>=3.10.0:../../x11/qtxdg-tools
 DEPENDS+=	liblxqt>=1.2.0:../../x11/liblxqt
-DEPENDS+=	libfm-qt>=1.2.0:../../x11/libfm-qt
+DEPENDS+=	libfm-qt>=1.2.1:../../x11/libfm-qt
 DEPENDS+=	lxqt-themes>=1.2.0:../../graphics/lxqt-themes
 DEPENDS+=	pavucontrol-qt>=1.2.0:../../audio/pavucontrol-qt
 DEPENDS+=	qtermwidget>=1.2.0:../../x11/qtermwidget
-DEPENDS+=	lximage-qt>=1.2.0:../../graphics/lximage-qt
+DEPENDS+=	lximage-qt>=1.2.0nb2:../../graphics/lximage-qt
 DEPENDS+=	lxqt-about>=1.2.0:../../x11/lxqt-about
 DEPENDS+=	lxqt-policykit>=1.2.0:../../security/lxqt-policykit
 DEPENDS+=	lxqt-admin>=1.2.0:../../x11/lxqt-admin
@@ -29,15 +29,15 @@ DEPENDS+=	lxqt-globalkeys>=1.2.0:../../x11/lxqt-globalkeys
 DEPENDS+=	lxqt-openssh-askpass>=1.2.0:../../security/lxqt-openssh-askpass
 DEPENDS+=	lxqt-notificationd>=1.2.0:../../x11/lxqt-notificationd
 DEPENDS+=	lxqt-powermanagement>=1.2.0:../../sysutils/lxqt-powermanagement
-DEPENDS+=	lxqt-qtplugin>=1.2.0:../../x11/lxqt-qtplugin
+DEPENDS+=	lxqt-qtplugin>=1.2.0nb2:../../x11/lxqt-qtplugin
 DEPENDS+=	lxqt-session>=1.2.0:../../x11/lxqt-session
 DEPENDS+=	lxqt-sudo>=1.2.0:../../security/lxqt-sudo
-DEPENDS+=	pcmanfm-qt>=1.2.0:../../sysutils/pcmanfm-qt
+DEPENDS+=	pcmanfm-qt>=1.2.1:../../sysutils/pcmanfm-qt
 DEPENDS+=	qterminal>=1.2.0:../../x11/qterminal
-DEPENDS+=	lxqt-panel>=1.2.0:../../x11/lxqt-panel
+DEPENDS+=	lxqt-panel>=1.2.1:../../x11/lxqt-panel
 DEPENDS+=	lxqt-runner>=1.2.0:../../x11/lxqt-runner
 DEPENDS+=	screengrab>=2.5.0:../../graphics/screengrab
-DEPENDS+=	lxqt-archiver>=0.7.0:../../archivers/lxqt-archiver
+DEPENDS+=	lxqt-archiver>=0.7.0nb2:../../archivers/lxqt-archiver
 # The Breeze icon set is the default that LXQt expects, and a compatible icon
 # theme must be present for the DE to be fully usable.
 DEPENDS+=	breeze-icons-[0-9]*:../../graphics/breeze-icons
