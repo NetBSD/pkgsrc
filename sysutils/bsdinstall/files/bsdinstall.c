@@ -1,4 +1,4 @@
-/*	$NetBSD: bsdinstall.c,v 1.3 2015/11/18 12:12:49 jperkin Exp $	*/
+/*	$NetBSD: bsdinstall.c,v 1.4 2023/01/06 14:21:16 jperkin Exp $	*/
 /*	NetBSD: xinstall.c,v 1.114 2009/11/12 10:10:49 tron Exp	*/
 
 /*
@@ -73,9 +73,9 @@ __RCSID("NetBSD: xinstall.c,v 1.114 2009/11/12 10:10:49 tron Exp");
 #include <fcntl.h>
 #include <libgen.h>
 #include <stdio.h>
-#include <string.h>
-#include <unistd.h>
 #if defined(HAVE_NBCOMPAT_H)
+#include <nbcompat/string.h>
+#include <nbcompat/unistd.h>
 #include <nbcompat/grp.h>
 #include <nbcompat/paths.h>
 #include <nbcompat/pwd.h>
@@ -83,6 +83,8 @@ __RCSID("NetBSD: xinstall.c,v 1.114 2009/11/12 10:10:49 tron Exp");
 #include <nbcompat/util.h>
 #include <nbcompat/vis.h>
 #else
+#include <string.h>
+#include <unistd.h>
 #include <grp.h>
 #include <paths.h>
 #include <pwd.h>
@@ -109,6 +111,10 @@ __RCSID("NetBSD: xinstall.c,v 1.114 2009/11/12 10:10:49 tron Exp");
 
 #define STRIP_ARGS_MAX 32
 #define BACKUP_SUFFIX ".old"
+
+#ifndef MAXBSIZE
+#define MAXBSIZE (64 * 1024)
+#endif
 
 extern void *setmode(const char *p);
 
