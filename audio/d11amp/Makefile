@@ -1,20 +1,19 @@
-# $NetBSD: Makefile,v 1.2 2023/01/03 17:36:42 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/01/06 23:52:50 wiz Exp $
 
-DISTNAME=	d11amp_0.59
-PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	1
-CATEGORIES=	audio
-MASTER_SITES=	https://www.dettus.net/d11amp/
-EXTRACT_SUFX=	.tar.bz2
+DISTNAME=		d11amp_0.61
+PKGNAME=		${DISTNAME:S/_/-/}
+CATEGORIES=		audio
+MASTER_SITES=		https://www.dettus.net/d11amp/
+EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=	dettus@dettus.net
-HOMEPAGE=	https://www.dettus.net/d11amp/
-COMMENT=	Simple MP3 player
-LICENSE=	2-clause-bsd
+MAINTAINER=		dettus@dettus.net
+HOMEPAGE=		https://www.dettus.net/d11amp/
+COMMENT=		Oldskool MP3 player
+LICENSE=		2-clause-bsd
 
 INSTALLATION_DIRS=	bin  ${PKGMANDIR}/man1
 
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=		pkg-config
 
 
 do-install:
@@ -24,7 +23,7 @@ do-install:
 ## The idea of this test is to check if the output is the expected one.
 ## for this, the sha256sum is being compared.
 do-test:
-	cd ${WRKSRC} && ${MAKE} SHA256_CMD=sha256 TMP_DIR=/tmp/d11amp check
+	 cd ${WRKSRC} && ${MAKE} SHA256_CMD=sha256 TMP_DIR=/tmp/d11amp check
 
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 .include "../../x11/gtk4/buildlink3.mk"
