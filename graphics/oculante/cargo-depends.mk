@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.18 2023/01/03 14:11:47 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.19 2023/01/06 15:14:19 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	ab_glyph-0.2.18
 CARGO_CRATE_DEPENDS+=	ab_glyph_rasterizer-0.1.7
@@ -49,7 +49,7 @@ CARGO_CRATE_DEPENDS+=	color_quant-1.1.0
 CARGO_CRATE_DEPENDS+=	colored-1.9.3
 CARGO_CRATE_DEPENDS+=	combine-4.6.6
 CARGO_CRATE_DEPENDS+=	concat-string-1.0.1
-CARGO_CRATE_DEPENDS+=	console-0.15.3
+CARGO_CRATE_DEPENDS+=	console-0.15.4
 CARGO_CRATE_DEPENDS+=	console_error_panic_hook-0.1.7
 CARGO_CRATE_DEPENDS+=	console_log-0.2.0
 CARGO_CRATE_DEPENDS+=	core-foundation-0.9.3
@@ -199,7 +199,7 @@ CARGO_CRATE_DEPENDS+=	lyon-1.0.1
 CARGO_CRATE_DEPENDS+=	lyon_algorithms-1.0.2
 CARGO_CRATE_DEPENDS+=	lyon_geom-1.0.4
 CARGO_CRATE_DEPENDS+=	lyon_path-1.0.3
-CARGO_CRATE_DEPENDS+=	lyon_tessellation-1.0.7
+CARGO_CRATE_DEPENDS+=	lyon_tessellation-1.0.8
 CARGO_CRATE_DEPENDS+=	malloc_buf-0.0.6
 CARGO_CRATE_DEPENDS+=	matrixmultiply-0.3.2
 CARGO_CRATE_DEPENDS+=	memchr-2.5.0
