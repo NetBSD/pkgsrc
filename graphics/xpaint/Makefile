@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2023/01/03 17:37:33 wiz Exp $
+# $NetBSD: Makefile,v 1.82 2023/01/06 10:58:07 vins Exp $
 
 DISTNAME=	xpaint-2.7.8.1
 PKGREVISION=	12
@@ -44,4 +44,10 @@ pre-configure:
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/libXaw3d/buildlink3.mk"
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "Linux"
+# undefined reference to symbol 'dlclose@@GLIBC_2.2.5'
+.  include "../../mk/dlopen.buildlink3.mk"
+LDFLAGS+=   ${BUILDLINK_LDADD.dl:Q}
+.endif
 .include "../../mk/bsd.pkg.mk"
