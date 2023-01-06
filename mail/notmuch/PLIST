@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2023/01/06 08:50:42 vins Exp $
+@comment $NetBSD: PLIST,v 1.27 2023/01/06 09:46:07 vins Exp $
 bin/notmuch
 ${PLIST.emacs}bin/notmuch-emacs-mua
 include/notmuch.h
@@ -46,6 +46,7 @@ ${PLIST.doc}man/man1/notmuch-setup.1
 ${PLIST.doc}man/man1/notmuch-show.1
 ${PLIST.doc}man/man1/notmuch-tag.1
 ${PLIST.doc}man/man1/notmuch.1
+${PLIST.doc}man/man3/notmuch.3.gz
 ${PLIST.doc}man/man5/notmuch-hooks.5
 ${PLIST.doc}man/man7/notmuch-properties.7
 ${PLIST.doc}man/man7/notmuch-search-terms.7
