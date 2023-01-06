@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2023/01/03 17:37:27 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2023/01/06 15:14:19 pin Exp $
 
-DISTNAME=	oculante-0.6.37
-PKGREVISION=	1
+DISTNAME=	oculante-0.6.38
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=woelper/}
 
@@ -31,6 +30,7 @@ RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.gtk3}/lib
 # Though, you might need to add RUSTFLAGS so that the compiler finds the
 # graphics/libjpeg-turbo location.
 CARGO_NO_DEFAULT_FEATURES=	YES
+CARGO_FEATURES+=		file_open
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/oculante \
