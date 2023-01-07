@@ -1,8 +1,8 @@
-$NetBSD: patch-src_printtext.cpp,v 1.1 2022/09/18 12:21:18 nia Exp $
+$NetBSD: patch-src_printtext.cpp,v 1.2 2023/01/07 09:37:37 fcambus Exp $
 
 Support iconv prototype on NetBSD 9 and earlier.
 
---- src/printtext.cpp.orig	2022-07-28 13:19:25.000000000 +0000
+--- src/printtext.cpp.orig	2023-01-07 02:57:47.000000000 +0000
 +++ src/printtext.cpp
 @@ -39,6 +39,15 @@
  #include <iconv.h>
@@ -20,7 +20,7 @@ Support iconv prototype on NetBSD 9 and earlier.
  #include "assertAPI.h"
  #include "atomicops.h"
  #ifdef UNIT_TESTING
-@@ -1473,8 +1482,13 @@ get_buffer(const char *orig)
+@@ -1364,8 +1373,13 @@ get_buffer(const char *orig)
  		out[outbytes] = '\0';
  		out_p = addrof(out[0]);
  		errno = 0;
