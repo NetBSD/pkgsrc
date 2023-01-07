@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.67 2022/08/22 22:27:12 tnn Exp $
+# $NetBSD: Makefile,v 1.67.2.1 2023/01/07 16:07:58 gdt Exp $
 
-PKGREVISION= 2
+PKGREVISION= 3
 .include "Makefile.common"
 
 PKGNAME=		ups-${DISTNAME}
