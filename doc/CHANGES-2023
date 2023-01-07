@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.146 2023/01/07 23:37:24 ryoon Exp $
+$NetBSD: CHANGES-2023,v 1.147 2023/01/07 23:38:17 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -178,3 +178,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated comms/asterisk16 to 16.29.1nb2 [ryoon 2023-01-07]
 	Updated audio/jack to 1.9.21 [triaxx 2023-01-07]
 	Updated www/firefox to 108.0.2 [ryoon 2023-01-07]
+	Updated www/firefox-l10n to 108.0.2 [ryoon 2023-01-07]
