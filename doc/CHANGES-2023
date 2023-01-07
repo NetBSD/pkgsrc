@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.141 2023/01/07 15:21:46 taca Exp $
+$NetBSD: CHANGES-2023,v 1.142 2023/01/07 15:27:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -173,3 +173,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-isort to 5.11.4 [adam 2023-01-07]
 	Updated devel/gopls to 0.11.0 [bsiegert 2023-01-07]
 	Added www/ruby-faraday-multipart version 1.0.4 [taca 2023-01-07]
+	Added www/ruby-faraday-retry version 1.0.3 [taca 2023-01-07]
