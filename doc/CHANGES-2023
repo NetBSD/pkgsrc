@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.134 2023/01/07 07:41:16 taca Exp $
+$NetBSD: CHANGES-2023,v 1.135 2023/01/07 07:42:45 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -165,3 +165,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed www/ruby-rack16 [taca 2023-01-07]
 	Updated sysutils/py-diffoscope to 231 [khorben 2023-01-07]
 	Updated lang/php81 to 8.1.14 [taca 2023-01-07]
+	Updated lang/php82 to 8.2.1 [taca 2023-01-07]
