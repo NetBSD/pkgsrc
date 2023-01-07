@@ -1,4 +1,4 @@
-$NetBSD: patch-common_wscript,v 1.5 2021/10/21 13:45:12 jperkin Exp $
+$NetBSD: patch-common_wscript,v 1.6 2023/01/07 19:04:34 wiz Exp $
 
 Add NetBSD support.
 
@@ -130,13 +130,14 @@ Add NetBSD support.
  
          if bld.env['IS_MACOSX']:
              netlib.source += ['../posix/JackNetUnixSocket.cpp','../posix/JackPosixThread.cpp', '../posix/JackPosixMutex.cpp', '../macosx/JackMachThread.mm', '../macosx/JackMachTime.c']
-@@ -422,10 +468,19 @@ def build(bld):
+@@ -422,10 +468,20 @@ def build(bld):
           process = create_jack_process_obj(bld, 'audioadapter', audio_adapter_sources, serverlib)
           process.use += ['ALSA', 'SAMPLERATE']
  
 +    if bld.env['BUILD_ADAPTER'] and bld.env['IS_NETBSD']:
 +         audio_adapter_sources += ['../netbsd/sun/JackSunAdapter.cpp']
 +         process = create_jack_process_obj(bld, 'audioadapter', audio_adapter_sources, serverlib)
++         process.env.append_value('LINKFLAGS', '-lsamplerate')
 +         process.use += 'SAMPLERATE'
 +
      if bld.env['BUILD_ADAPTER'] and bld.env['IS_SUN']:
