@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22464 2023/01/07 09:18:57 wiz Exp $
+$NetBSD: TODO,v 1.22465 2023/01/07 21:20:38 triaxx Exp $
 
 Suggested new packages
 ======================
@@ -902,7 +902,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ja-vflib-lib-3.6.10
 	o ja-vflib-utils-2.25.6
 	o ja-vfxdvik-22.40y1
-	o jack-1.9.21
 	o java-db3-3.87
 	o java-jna-5.11.0
 	o jcabc2ps-20181112
