@@ -1,4 +1,4 @@
-$NetBSD: patch-toolkit_components_terminator_nsTerminator.cpp,v 1.7 2022/07/04 14:34:08 ryoon Exp $
+$NetBSD: patch-toolkit_components_terminator_nsTerminator.cpp,v 1.8 2023/01/07 23:36:39 ryoon Exp $
 
 * Fix segfault on exit under NetBSD
 
@@ -19,8 +19,8 @@ $NetBSD: patch-toolkit_components_terminator_nsTerminator.cpp,v 1.7 2022/07/04 1
  #else
 -    usleep(HEARTBEAT_INTERVAL_MS * 1000 /* usec */);
 +    struct timespec tickd;
-+    tickd.tv_sec = HEARTBEAT_INTERVAL_MS;
-+    tickd.tv_nsec = 0;
++    tickd.tv_sec = 0;
++    tickd.tv_nsec = HEARTBEAT_INTERVAL_MS * 1000 * 1000;
 +    nanosleep(&tickd, NULL);
  #endif
  

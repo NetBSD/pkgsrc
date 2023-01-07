@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.486 2022/12/23 12:35:05 nia Exp $
+$NetBSD: distinfo,v 1.487 2023/01/07 23:36:39 ryoon Exp $
 
-BLAKE2s (firefox-107.0.1.source.tar.xz) = b2c7102eacf1f3aa7b3919f2af5511e3a5da245a81a8d26437dc39951d4336d3
-SHA512 (firefox-107.0.1.source.tar.xz) = e57e4bfcecbcc6dbe73f23577a14a2998c8c3f3d602f85ea06f99e0974e78481b9f7bdb019cb4e9733e59f56be1407edd64a2adb7b284bb4a87b46b1e2295dea
-Size (firefox-107.0.1.source.tar.xz) = 508678860 bytes
+BLAKE2s (firefox-108.0.2.source.tar.xz) = 1c8222cfd83d37aae10efb6d5957cb404d30476cd7f34bcf17a2b53a798ebf56
+SHA512 (firefox-108.0.2.source.tar.xz) = f856ef034fa4a526e19968aed092c9ee99e124d2d271ec1c1bbd091d9a03e23293d69c7a9ae17c43258cde7e73c294534b471e36441e576377854f607c9bfa3a
+Size (firefox-108.0.2.source.tar.xz) = 509638740 bytes
 BLAKE2s (nodejs-output-95.0.tgz) = c44b37d3605524a49157002f01c29f568f04194b0e635bc312de7ffdeb9a74c9
 SHA512 (nodejs-output-95.0.tgz) = 2faf326f4e100b66f8597c365cc2eb5d0eee26aae92a7e2446891f2178041aa71ba16eae37000acacd43a657025ec11c18db73b112f5c49cc21cdb882da6d798
 Size (nodejs-output-95.0.tgz) = 200627 bytes
-SHA1 (patch-browser_app_profile_firefox.js) = ee173b41332c1292d863aa6c8e9ee9553cb18c89
+SHA1 (patch-browser_app_profile_firefox.js) = 18041d7fe211d61578863cfc53349278925f8e56
 SHA1 (patch-build_moz.configure_rust.configure) = 25ddfacd29cebbc6db005dbe61a2a7446d480678
 SHA1 (patch-config_gcc-stl-wrapper.template.h) = 9d1f15ff487efa9202114d19ed5668b4e7aa032a
 SHA1 (patch-config_makefiles_rust.mk) = 188178b184d79737247ed3770cc8f4370cd7f6c0
@@ -38,7 +38,7 @@ SHA1 (patch-third__party_libwebrtc_modules_video__capture_linux_device__info__v4
 SHA1 (patch-third__party_libwebrtc_modules_video__capture_linux_video__capture__v4l2.cc) = 28b9bb8b078b479d9cc0f8ccdc4d04e5a281c1b9
 SHA1 (patch-third__party_libwebrtc_system__wrappers_source_cpu__features__linux.cc) = b90e22b50879f7adcc1da3a993f52c0701b720f8
 SHA1 (patch-third__party_wasm2c_wasm2c_wasm-rt-os-unix.c) = e63607bcad6c25b11f58b0523ed5dfacddf9c36e
-SHA1 (patch-toolkit_components_terminator_nsTerminator.cpp) = bd7b2a0f2407c3ab95515b2f143c41c3ca6fb0c4
+SHA1 (patch-toolkit_components_terminator_nsTerminator.cpp) = e905e38ef1b88d764c695c019f15609350c1c43b
 SHA1 (patch-toolkit_modules_subprocess_subprocess__shared__unix.js) = 2303b753066298305ccae80d72765dbc4da5e0dc
 SHA1 (patch-toolkit_moz.configure) = 8de54693dc47b0993f220cc5a04af98925de1fb5
 SHA1 (patch-toolkit_mozapps_installer_packager.mk) = 706635b76a7b525794aba95e95544f09e18bb662

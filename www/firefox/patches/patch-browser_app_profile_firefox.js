@@ -1,11 +1,11 @@
-$NetBSD: patch-browser_app_profile_firefox.js,v 1.17 2022/12/23 12:35:05 nia Exp $
+$NetBSD: patch-browser_app_profile_firefox.js,v 1.18 2023/01/07 23:36:39 ryoon Exp $
 
 This patch modifies default Firefox settings - see the comments above
 each one.
 
---- browser/app/profile/firefox.js.orig	2022-11-28 16:47:25.000000000 +0000
+--- browser/app/profile/firefox.js.orig	2022-12-15 22:31:34.000000000 +0000
 +++ browser/app/profile/firefox.js
-@@ -2087,7 +2087,11 @@ pref("reader.pocket.ctaVersion", "");
+@@ -2099,7 +2099,11 @@ pref("reader.pocket.ctaVersion", "");
  
  pref("view_source.tab", true);
  
@@ -18,7 +18,7 @@ each one.
  
  // Enable Push API.
  pref("dom.push.enabled", true);
-@@ -2250,6 +2254,20 @@ pref("app.normandy.onsync_skew_sec", 600
+@@ -2279,6 +2283,27 @@ pref("app.normandy.onsync_skew_sec", 600
  pref("toolkit.coverage.enabled", false);
  pref("toolkit.coverage.endpoint.base", "https://coverage.mozilla.org");
  
@@ -35,6 +35,13 @@ each one.
 +// improve performance even with acceleration disabled at the kernel
 +// level.
 +pref("gfx.webrender.all", true);
++
++// Disable Web MIDI support
++// NetBSD gets immediate SIGSEGV when Web MIDI is enabled.
++pref("midi.testing", true);
++pref("dom.webmidi.enabled", true);
++pref("midi.prompt.testing", true);
++pref("media.navigator.permission.disabled", true);
 +
  // Discovery prefs
  pref("browser.discovery.enabled", true);

@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.543 2023/01/03 17:38:23 wiz Exp $
+# $NetBSD: Makefile,v 1.544 2023/01/07 23:36:39 ryoon Exp $
 
 FIREFOX_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
-MOZ_BRANCH=		107.0
-MOZ_BRANCH_MINOR=	.1
+MOZ_BRANCH=		108.0
+MOZ_BRANCH_MINOR=	.2
 
 DISTNAME=	firefox-${FIREFOX_VER}.source
 PKGNAME=	${DISTNAME:S/.source//:S/b/beta/:S/esr//}
-PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES+=	${MASTER_SITE_MOZILLA:=firefox/releases/${FIREFOX_VER}/source/}
+MASTER_SITES+=	${MASTER_SITE_MOZILLA_ALL:=firefox/releases/${FIREFOX_VER}/source/}
 EXTRACT_SUFX=	.tar.xz
 
 NODEJSKIT=		nodejs-output-95.0.tgz
@@ -104,6 +104,15 @@ MOZILLA_BRANDING=	official
 .else
 MOZILLA_NAME=		Browser
 MOZILLA_BRANDING=	unofficial
+.endif
+
+.if ${MACHINE_ARCH} == "i386"
+SUBST_CLASSES+=		bindgen
+SUBST_STAGE.bindgen=	pre-configure
+SUBST_MESSAGE.bindgen=	Adjust funcation names for i386 architecture
+SUBST_FILES.bindgen+=	toolkit/components/uniffi-js/UniFFIGeneratedScaffolding.cpp
+SUBST_FILES.bindgen+=	toolkit/components/uniffi-bindgen-gecko-js/components/generated/RustTabs.jsm
+SUBST_SED.bindgen=	-e 's,tabs_4d51_,tabs_1c79_,g'
 .endif
 
 pre-configure:

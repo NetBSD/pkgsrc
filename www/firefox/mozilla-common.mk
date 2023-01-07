@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.245 2022/12/11 21:06:32 tsutsui Exp $
+# $NetBSD: mozilla-common.mk,v 1.246 2023/01/07 23:36:39 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -15,6 +15,8 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYTHON_VERSIONS_INCOMPATIBLE+=	311
 PYTHON_FOR_BUILD_ONLY=		tool
 ALL_ENV+=			PYTHON3=${PYTHONBIN}
+
+REPLACE_PYTHON=		build/cargo-linker
 
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
@@ -35,6 +37,7 @@ USE_TOOLS+=		diff
 CONFIGURE_ENV+=		NODEJS="${FILESDIR}/node-wrapper.sh"
 .endif
 
+BUILD_DEPENDS+=		${PYPKGPREFIX}-curses-[0-9]*:../../devel/py-curses
 TOOL_DEPENDS+=		${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 TOOL_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
@@ -82,7 +85,6 @@ CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}browser/components/loop/run-all-loop-test
 CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}browser/extensions/loop/run-all-loop-tests.sh
 CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}third_party/libwebrtc/tools_webrtc/iwyu/apply-iwyu
 
-CONFIGURE_ARGS+=	--enable-default-toolkit=cairo-gtk3
 CONFIGURE_ARGS+=	--enable-release
 # Disable Rust SIMD option to fix build with lang/rust-1.33.0
 # This should be enabled later again.
@@ -108,8 +110,6 @@ CONFIGURE_ARGS+=	--with-system-webp
 CONFIGURE_ARGS+=	--disable-icf
 CONFIGURE_ARGS+=	--disable-updater
 
-CONFIGURE_ARGS+=	--enable-new-pass-manager
-
 .include "../../mk/compiler.mk"
 
 .if empty(PKGSRC_COMPILER:Mclang)
@@ -133,12 +133,6 @@ CONFIGURE_ENV+=		WASM_CXX=${PREFIX}/bin/clang++
 .else
 CONFIGURE_ARGS+=	--without-wasm-sandboxed-libraries
 .endif
-
-SUBST_CLASSES+=			fix-paths
-SUBST_STAGE.fix-paths=		pre-configure
-SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
-SUBST_FILES.fix-paths+=		${MOZILLA_DIR}xpcom/io/nsAppFileLocationProvider.cpp
-SUBST_SED.fix-paths+=		-e 's,/usr/lib/mozilla/plugins,${PREFIX}/lib/netscape/plugins,g'
 
 .include "../../sysutils/pciutils/libname.mk"
 SUBST_CLASSES+=				fix-libpci-soname
@@ -236,6 +230,9 @@ BUILDLINK_API_DEPENDS.pixman+= pixman>=0.25.2
 .include "../../x11/gtk3/buildlink3.mk"
 PLIST_VARS+=		wayland
 .if ${PKG_BUILD_OPTIONS.gtk3:Mwayland}
+CONFIGURE_ARGS+=	--enable-default-toolkit=cairo-gtk3-x11-wayland
 PLIST.wayland=		yes
+.else
+CONFIGURE_ARGS+=	--enable-default-toolkit=cairo-gtk3
 .endif
-.include "../../lang/python/pyversion.mk"
+.include "../../lang/python/application.mk"
