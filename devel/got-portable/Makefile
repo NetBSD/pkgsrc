@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/12/20 08:58:20 vins Exp $
+# $NetBSD: Makefile,v 1.3 2023/01/07 00:50:33 vins Exp $
 
 DISTNAME=	got-portable-0.79
 CATEGORIES=	devel
@@ -26,12 +26,13 @@ INSTALLATION_DIRS+=	${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "Linux"
+USE_TOOLS+=	bison
 # compatibility macros and functions for Linux.
 .  include "../../devel/libbsd/buildlink3.mk"
 .endif
 
 .if ${OPSYS} == "Darwin"
-CONFIGURE_ENV+=	HB_PREFIX=${PREFIX}
+USE_TOOLS+=	bison
 # define uuid library to use
 .  include "../../devel/ossp-uuid/buildlink3.mk"
 .else
