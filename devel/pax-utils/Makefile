@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2022/07/31 17:10:15 fcambus Exp $
+# $NetBSD: Makefile,v 1.6 2023/01/07 09:43:29 fcambus Exp $
 
-DISTNAME=	pax-utils-1.3.5
+DISTNAME=	pax-utils-1.3.6
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gentoo/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
