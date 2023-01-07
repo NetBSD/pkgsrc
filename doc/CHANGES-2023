@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.135 2023/01/07 07:42:45 taca Exp $
+$NetBSD: CHANGES-2023,v 1.136 2023/01/07 07:44:08 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -166,3 +166,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/py-diffoscope to 231 [khorben 2023-01-07]
 	Updated lang/php81 to 8.1.14 [taca 2023-01-07]
 	Updated lang/php82 to 8.2.1 [taca 2023-01-07]
+	Updated lang/php80 to 8.0.27 [taca 2023-01-07]
