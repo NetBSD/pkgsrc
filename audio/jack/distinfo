@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.33 2022/12/16 07:36:41 wiz Exp $
+$NetBSD: distinfo,v 1.34 2023/01/07 19:04:34 wiz Exp $
 
 BLAKE2s (jack2-1.9.19.tar.gz) = aa43a3ae606c00e7c8e047e89250e068717f44fa0443b8531a6d83ca2a9dff71
 SHA512 (jack2-1.9.19.tar.gz) = d8d5fe17e2984959546af3c53f044aa4648860e19ff8ffd54452e87fa6cdfd111f825c57e3df17cb8ed95de8392b6f354b12ded41e3e021a37f07b99a89ba18d
 Size (jack2-1.9.19.tar.gz) = 988780 bytes
 SHA1 (patch-common_JackAudioAdapterFactory.cpp) = 8292a8c88c673136f52a007133278f9b4403839c
 SHA1 (patch-common_memops.c) = 468476c6067595524f492d37f3b761af48e78585
-SHA1 (patch-common_wscript) = 01d21e983f408d0a423f9c5cb9f12c22017ca783
+SHA1 (patch-common_wscript) = 0f52fd48cd45c08c18650b7a0770ef76ac193362
 SHA1 (patch-example-clients_wscript) = 9db0899e797acbc416bfd9e6aba50c70bd5ff0ab
 SHA1 (patch-man_wscript) = bc5ce9481d4c911350f260c069a0ce4be732f526
 SHA1 (patch-netbsd_JackAtomic__os.h) = cd9cc4bf9913b3dedfbb8a2ea34077277e17f85d
