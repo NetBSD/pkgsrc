@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.144 2023/01/07 19:31:51 ryoon Exp $
+$NetBSD: CHANGES-2023,v 1.145 2023/01/07 21:20:38 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -176,3 +176,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added www/ruby-faraday-retry version 1.0.3 [taca 2023-01-07]
 	Updated www/ruby-faraday to 1.10.2 [taca 2023-01-07]
 	Updated comms/asterisk16 to 16.29.1nb2 [ryoon 2023-01-07]
+	Updated audio/jack to 1.9.21 [triaxx 2023-01-07]
