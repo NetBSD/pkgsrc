@@ -1,9 +1,10 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: upslog.sh,v 1.6 2004/02/15 13:14:25 lukem Exp $
+# $NetBSD: upslog.sh,v 1.7 2023/01/07 16:16:10 gdt Exp $
 #
 # PROVIDE: upslog
-# REQUIRE: upsd
+# REQUIRE: upsd DAEMON
+# BEFORE: LOGIN
 #
 # You will need to set some variables in /etc/rc.conf to start upslog
 # properly, e.g.
@@ -14,8 +15,7 @@
 # Please refer to upslog(8) for more information about the arguments to pass
 # to upslog.
 
-if [ -f /etc/rc.subr ]
-then
+if [ -f /etc/rc.subr ]; then
 	. /etc/rc.subr
 fi
 
@@ -24,8 +24,7 @@ rcvar="${name}"
 command="@PREFIX@/bin/${name}"
 pidfile="@NUT_STATEDIR@/${name}.pid"
 
-if [ -f /etc/rc.subr ]
-then
+if [ -f /etc/rc.subr ]; then
 	load_rc_config $name
 	run_rc_command "$1"
 else
