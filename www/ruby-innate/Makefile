@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.14 2022/05/28 09:55:26 taca Exp $
+# $NetBSD: Makefile,v 1.15 2023/01/07 05:13:06 taca Exp $
 
-DISTNAME=	innate-2015.10.28
-PKGREVISION=	1
-CATEGORIES=	devel
+DISTNAME=	innate-2023.01.06
+CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/Ramaze/innate
 COMMENT=	Powerful web-framework wrapper for Rack
 LICENSE=	mit
 
-DEPENDS+=	${RUBY_PKGPREFIX}-rack16>=1.6.4<1.7:../../www/ruby-rack16
+DEPENDS+=	${RUBY_PKGPREFIX}-rack>=3.0<4:../../www/ruby-rack
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
