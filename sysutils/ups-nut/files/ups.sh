@@ -1,14 +1,11 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: ups.sh,v 1.10.158.1 2023/01/07 16:07:59 gdt Exp $
+# $NetBSD: ups.sh,v 1.10.158.2 2023/01/07 16:09:38 gdt Exp $
 #
 # KEYWORD: nostart
 
-# NB: This file is not intended to be run automaticlally at boot.  It
-# is a convenience script for humans to start or stop all 4 nut-ups
-# daemons as a group.
-
-if [ -f /etc/rc.subr ]; then
+if [ -f /etc/rc.subr ]
+then
 	. /etc/rc.subr
 fi
 
@@ -18,6 +15,9 @@ rcd_dir=`@DIRNAME@ $0`
 #
 forward_commands()
 {
+	# Backward compat with NetBSD <1.6:
+	[ -z "$rc_arg" ] && rc_arg=$_arg
+
 	for file in $COMMAND_LIST; do
 		$rcd_dir/$file $rc_arg
 	done
@@ -25,6 +25,9 @@ forward_commands()
 
 reverse_commands()
 {
+	# Backward compat with NetBSD <1.6:
+	[ -z "$rc_arg" ] && rc_arg=$_arg
+
 	REVCOMMAND_LIST=
 	for file in $COMMAND_LIST; do
 		REVCOMMAND_LIST="$file $REVCOMMAND_LIST"
@@ -42,10 +45,11 @@ stop_cmd="reverse_commands"
 status_cmd="forward_commands"
 extra_commands="status"
 
-if [ -f /etc/rc.subr ]; then
+if [ -f /etc/rc.subr ]
+then
         run_rc_command "$1"
 else
         @ECHO@ -n " ${name}"
-	rc_arg="$1"
+	_arg="$1"
 	${start_cmd}
 fi
