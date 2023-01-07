@@ -1,21 +1,21 @@
-$NetBSD: patch-wscript,v 1.4 2021/10/21 13:45:12 jperkin Exp $
+$NetBSD: patch-wscript,v 1.5 2023/01/07 21:20:19 triaxx Exp $
 
 - Add NetBSD support.
 - Ensure man pages are installed on all Unixes.
 
---- wscript.orig	2021-07-15 06:18:26.000000000 +0000
+--- wscript.orig	2022-04-15 19:14:06.000000000 +0000
 +++ wscript
-@@ -192,6 +192,7 @@ def detect_platform(conf):
-         # ('KEY, 'Human readable name', ['strings', 'to', 'check', 'for'])
+@@ -234,6 +234,7 @@ def detect_platform(conf):
          ('IS_LINUX',   'Linux',   ['gnu0', 'gnukfreebsd', 'linux', 'posix']),
+         ('IS_FREEBSD', 'FreeBSD', ['freebsd']),
          ('IS_MACOSX',  'MacOS X', ['darwin']),
 +        ('IS_NETBSD',  'NetBSD',  ['netbsd']),
          ('IS_SUN',     'SunOS',   ['sunos']),
          ('IS_WINDOWS', 'Windows', ['cygwin', 'msys', 'win32'])
      ]
-@@ -231,6 +232,11 @@ def configure(conf):
-     conf.env.append_unique('CXXFLAGS', ['-Wall', '-Wno-invalid-offsetof'])
-     conf.env.append_unique('CXXFLAGS', '-std=gnu++11')
+@@ -276,6 +277,11 @@ def configure(conf):
+         conf.check(lib='execinfo', uselib='EXECINFO', define_name='EXECINFO')
+         conf.check_cfg(package='libsysinfo', args='--cflags --libs')
  
 +    # Needed to work around "error: ::vfscanf has not been declared" failures
 +    # prior to NetBSD 9.99.x.
@@ -25,7 +25,7 @@ $NetBSD: patch-wscript,v 1.4 2021/10/21 13:45:12 jperkin Exp $
      if not conf.env['IS_MACOSX']:
          conf.env.append_unique('LDFLAGS', '-Wl,--no-undefined')
      else:
-@@ -531,6 +537,9 @@ def obj_add_includes(bld, obj):
+@@ -568,6 +574,9 @@ def obj_add_includes(bld, obj):
      if bld.env['IS_SUN']:
          obj.includes += ['posix', 'solaris']
  
@@ -35,7 +35,7 @@ $NetBSD: patch-wscript,v 1.4 2021/10/21 13:45:12 jperkin Exp $
      if bld.env['IS_WINDOWS']:
          obj.includes += ['windows']
  
-@@ -582,6 +591,10 @@ def create_driver_obj(bld, **kw):
+@@ -624,6 +633,10 @@ def create_driver_obj(bld, **kw):
      else:
          driver.env['cxxshlib_PATTERN'] = 'jack_%s.so'
  
@@ -46,7 +46,7 @@ $NetBSD: patch-wscript,v 1.4 2021/10/21 13:45:12 jperkin Exp $
      obj_add_includes(bld, driver)
  
      return driver
-@@ -678,6 +691,11 @@ def build_drivers(bld):
+@@ -726,6 +739,11 @@ def build_drivers(bld):
          'windows/portaudio/JackPortAudioDriver.cpp',
      ]
  
@@ -58,28 +58,27 @@ $NetBSD: patch-wscript,v 1.4 2021/10/21 13:45:12 jperkin Exp $
      winmme_src = [
          'windows/winmme/JackWinMMEDriver.cpp',
          'windows/winmme/JackWinMMEInputPort.cpp',
-@@ -779,6 +797,12 @@ def build_drivers(bld):
-             target = 'oss',
-             source = oss_src)
+@@ -834,6 +852,11 @@ def build_drivers(bld):
+             target='oss',
+             source=oss_src)
  
 +    if bld.env['IS_NETBSD']:
 +        create_driver_obj(
 +            bld,
 +            target = 'sun',
 +            source = sun_src)
-+
+ 
  def build(bld):
      if not bld.variant and bld.env['BUILD_WITH_32_64']:
-         Options.commands.append(bld.cmd + '_' + lib32)
-@@ -821,9 +845,10 @@ def build(bld):
-     bld.recurse('tools')
+@@ -858,9 +881,10 @@ def build(bld):
+         bld.recurse('tools')
  
-     if bld.env['IS_LINUX']:
+     if bld.env['IS_LINUX'] or bld.env['IS_FREEBSD']:
 -        bld.recurse('man')
          bld.recurse('systemd')
-     if not bld.env['IS_WINDOWS']:
+     if not bld.env['IS_WINDOWS'] and bld.env['BUILD_JACK_EXAMPLE_TOOLS']:
 +        bld.recurse('man')
-+    if not bld.env['IS_WINDOWS']:
++    if not bld.env['IS_WINDOWS'] and bld.env['BUILD_JACK_EXAMPLE_TOOLS']:
          bld.recurse('tests')
      if bld.env['BUILD_JACKDBUS']:
          bld.recurse('dbus')

@@ -1,28 +1,28 @@
-$NetBSD: patch-common_wscript,v 1.6 2023/01/07 19:04:34 wiz Exp $
+$NetBSD: patch-common_wscript,v 1.7 2023/01/07 21:20:19 triaxx Exp $
 
 Add NetBSD support.
 
---- common/wscript.orig	2021-07-15 06:18:26.000000000 +0000
+--- common/wscript.orig	2022-04-15 19:14:06.000000000 +0000
 +++ common/wscript
-@@ -28,6 +28,8 @@ def create_jack_process_obj(bld, target,
+@@ -31,6 +31,8 @@ def create_jack_process_obj(bld, target,
          env_includes = ['../macosx', '../posix', '../macosx/coreaudio']
      if bld.env['IS_LINUX']:
          env_includes = ['../linux', '../posix', '../linux/alsa']
 +    if bld.env['IS_NETBSD']:
 +        env_includes = ['../netbsd', '../posix', '../netbsd/sun']
+     if bld.env['IS_FREEBSD']:
+         env_includes = ['../freebsd', '../posix', '../solaris/oss']
      if bld.env['IS_SUN']:
-         env_includes = ['../solaris', '../posix', '../solaris/oss']
-     if bld.env['IS_WINDOWS']:
-@@ -36,7 +38,7 @@ def create_jack_process_obj(bld, target,
-     process.name     = target
-     process.target   = target
-     process.source   = sources
--    if bld.env['IS_LINUX'] or bld.env['IS_MACOSX']:
-+    if bld.env['IS_LINUX'] or bld.env['IS_NETBSD'] or bld.env['IS_MACOSX']:
+@@ -41,7 +43,7 @@ def create_jack_process_obj(bld, target,
+     process.name = target
+     process.target = target
+     process.source = sources
+-    if bld.env['IS_LINUX'] or bld.env['IS_MACOSX'] or bld.env['IS_FREEBSD']:
++    if bld.env['IS_LINUX'] or bld.env['IS_NETBSD'] or bld.env['IS_MACOSX'] or bld.env['IS_FREEBSD']:
          process.env.append_value('CPPFLAGS', '-fvisibility=hidden')
      process.install_path = '${ADDON_DIR}/'
      process.use = [uselib.name]
-@@ -92,6 +94,21 @@ def build(bld):
+@@ -98,6 +100,21 @@ def build(bld):
          uselib.append('RT')
          uselib.append('DL')
  
@@ -41,10 +41,10 @@ Add NetBSD support.
 +        includes = ['../netbsd', '../posix'] + includes
 +        uselib.append('RT')
 +
-     if bld.env['IS_SUN']:
+     if bld.env['IS_FREEBSD']:
          common_libsources += [
              'JackDebugClient.cpp',
-@@ -176,6 +193,12 @@ def build(bld):
+@@ -197,6 +214,12 @@ def build(bld):
              '../posix/JackPosixServerLaunch.cpp',
              ]
  
@@ -54,18 +54,20 @@ Add NetBSD support.
 +            '../posix/JackPosixServerLaunch.cpp',
 +            ]
 +
-     if bld.env['IS_SUN']:
+     if bld.env['IS_FREEBSD']:
          clientlib.source += [
              '../posix/JackSocketClientChannel.cpp',
-@@ -205,12 +228,16 @@ def build(bld):
+@@ -232,6 +255,9 @@ def build(bld):
      if bld.env['IS_LINUX']:
          clientlib.env.append_value('CPPFLAGS', '-fvisibility=hidden')
  
 +    if bld.env['IS_NETBSD']:
 +        clientlib.env.append_value('CPPFLAGS', '-fvisibility=hidden')
 +
-     if bld.env['IS_MACOSX']:
+     if bld.env['IS_FREEBSD']:
          clientlib.env.append_value('CPPFLAGS', '-fvisibility=hidden')
+ 
+@@ -240,7 +266,8 @@ def build(bld):
          clientlib.env.append_value('LINKFLAGS', '-single_module')
  
      if bld.env['IS_SUN']:
@@ -75,7 +77,7 @@ Add NetBSD support.
  
      if bld.variant:
          # if there is variant defined, we expect it to be the 32bit client lib one
-@@ -281,6 +308,14 @@ def build(bld):
+@@ -311,6 +338,14 @@ def build(bld):
              '../posix/JackNetUnixSocket.cpp',
              ]
  
@@ -87,10 +89,10 @@ Add NetBSD support.
 +            '../posix/JackNetUnixSocket.cpp',
 +            ]
 +
-     if bld.env['IS_SUN']:
+     if bld.env['IS_FREEBSD']:
          serverlib.source += [
              '../posix/JackSocketServerChannel.cpp',
-@@ -313,15 +348,21 @@ def build(bld):
+@@ -351,15 +386,21 @@ def build(bld):
      elif not bld.env['IS_WINDOWS']:
          serverlib.vnum = bld.env['JACK_API_VERSION']
  
@@ -112,27 +114,35 @@ Add NetBSD support.
 +        serverlib.env.append_value('LINKFLAGS', '-lsocket')
  
      if bld.env['BUILD_NETLIB']:
-         netlib = bld(features = ['c', 'cxx', 'cxxshlib', 'cshlib'])
-@@ -360,10 +401,15 @@ def build(bld):
-             netlib.source += ['../posix/JackNetUnixSocket.cpp','../posix/JackPosixThread.cpp', '../posix/JackPosixMutex.cpp', '../linux/JackLinuxTime.c']
+         netlib = bld(features=['c', 'cxx', 'cxxshlib', 'cshlib'])
+@@ -403,6 +444,15 @@ def build(bld):
+             ]
              netlib.env.append_value('CPPFLAGS', '-fvisibility=hidden')
  
 +        if bld.env['IS_NETBSD']:
-+            netlib.source += ['../posix/JackNetUnixSocket.cpp','../posix/JackPosixThread.cpp', '../posix/JackPosixMutex.cpp', '../netbsd/JackNetBSDTime.c']
++            netlib.source += [
++                '../posix/JackNetUnixSocket.cpp',
++                '../posix/JackPosixThread.cpp',
++                '../posix/JackPosixMutex.cpp',
++                '../netbsd/JackNetBSDTime.c'
++            ]
 +            netlib.env.append_value('CPPFLAGS', '-fvisibility=hidden')
 +
-         if bld.env['IS_SUN']:
-             netlib.source += ['../posix/JackNetUnixSocket.cpp','../posix/JackPosixThread.cpp', '../posix/JackPosixMutex.cpp', '../solaris/JackSolarisTime.c']
+         if bld.env['IS_FREEBSD']:
+             netlib.source += [
+                 '../posix/JackNetUnixSocket.cpp',
+@@ -420,6 +470,8 @@ def build(bld):
+                 '../solaris/JackSolarisTime.c',
+             ]
              netlib.env.append_value('CPPFLAGS', '-fvisibility=hidden')
--
 +            netlib.env.append_value('LINKFLAGS', '-lnsl')
 +            netlib.env.append_value('LINKFLAGS', '-lsocket')
  
          if bld.env['IS_MACOSX']:
-             netlib.source += ['../posix/JackNetUnixSocket.cpp','../posix/JackPosixThread.cpp', '../posix/JackPosixMutex.cpp', '../macosx/JackMachThread.mm', '../macosx/JackMachTime.c']
-@@ -422,10 +468,20 @@ def build(bld):
-          process = create_jack_process_obj(bld, 'audioadapter', audio_adapter_sources, serverlib)
-          process.use += ['ALSA', 'SAMPLERATE']
+             netlib.source += [
+@@ -490,11 +542,23 @@ def build(bld):
+         process = create_jack_process_obj(bld, 'audioadapter', audio_adapter_sources, serverlib)
+         process.use += ['ALSA', 'SAMPLERATE']
  
 +    if bld.env['BUILD_ADAPTER'] and bld.env['IS_NETBSD']:
 +         audio_adapter_sources += ['../netbsd/sun/JackSunAdapter.cpp']
@@ -140,14 +150,17 @@ Add NetBSD support.
 +         process.env.append_value('LINKFLAGS', '-lsamplerate')
 +         process.use += 'SAMPLERATE'
 +
-     if bld.env['BUILD_ADAPTER'] and bld.env['IS_SUN']:
-          audio_adapter_sources += ['../solaris/oss/JackOSSAdapter.cpp', 'memops.c']
-          process = create_jack_process_obj(bld, 'audioadapter', audio_adapter_sources, serverlib)
-          process.use += 'SAMPLERATE'
+     if bld.env['BUILD_ADAPTER'] and (bld.env['IS_SUN'] or bld.env['IS_FREEBSD']):
+         audio_adapter_sources += ['../solaris/oss/JackOSSAdapter.cpp', 'memops.c']
+         process = create_jack_process_obj(bld, 'audioadapter', audio_adapter_sources, serverlib)
+         process.use += 'SAMPLERATE'
+ 
++    if bld.env['BUILD_ADAPTER'] and bld.env['IS_SUN']:
 +         process.env.append_value('LINKFLAGS', '-lsamplerate')
 +         # This is clearly bogus and should be coming from the main flags but it is
 +         # far too painful to try and trace why it is not, so a hack it is for now.
 +         process.env.append_value('CFLAGS', '-fPIC')
- 
++
      if bld.env['BUILD_ADAPTER'] and bld.env['IS_WINDOWS']:
-          audio_adapter_sources += ['../windows/portaudio/JackPortAudioAdapter.cpp', '../windows/portaudio/JackPortAudioDevices.cpp']
+         audio_adapter_sources += [
+             '../windows/portaudio/JackPortAudioAdapter.cpp',

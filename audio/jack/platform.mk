@@ -1,4 +1,4 @@
-# $NetBSD: platform.mk,v 1.4 2023/01/07 19:04:34 wiz Exp $
+# $NetBSD: platform.mk,v 1.5 2023/01/07 21:20:19 triaxx Exp $
 
 .if !defined(PLATFORM_SUPPORTS_JACK)
 .  include "../../mk/bsd.fast.prefs.mk"
@@ -10,8 +10,8 @@ JACK_PLATFORMS+=	Linux-*-*
 PLATFORM_SUPPORTS_JACK=	yes
 .  endif
 
-.  for _jack_platform in ${JACK_PLATFORMS}
-.    if !empty(MACHINE_PLATFORM:M${_jack_platform})
+.  for jack_platform in ${JACK_PLATFORMS}
+.    if !empty(MACHINE_PLATFORM:M${jack_platform})
 PLATFORM_SUPPORTS_JACK=	yes
 .    endif
 .  endfor
