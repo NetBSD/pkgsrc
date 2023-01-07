@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2021/08/30 15:34:09 taca Exp $
+@comment $NetBSD: PLIST,v 1.12 2023/01/07 15:31:57 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/LICENSE.md
@@ -14,10 +14,10 @@ ${GEM_LIBDIR}/lib/faraday/adapter_registry.rb
 ${GEM_LIBDIR}/lib/faraday/autoload.rb
 ${GEM_LIBDIR}/lib/faraday/connection.rb
 ${GEM_LIBDIR}/lib/faraday/dependency_loader.rb
+${GEM_LIBDIR}/lib/faraday/deprecate.rb
 ${GEM_LIBDIR}/lib/faraday/encoders/flat_params_encoder.rb
 ${GEM_LIBDIR}/lib/faraday/encoders/nested_params_encoder.rb
 ${GEM_LIBDIR}/lib/faraday/error.rb
-${GEM_LIBDIR}/lib/faraday/file_part.rb
 ${GEM_LIBDIR}/lib/faraday/logging/formatter.rb
 ${GEM_LIBDIR}/lib/faraday/methods.rb
 ${GEM_LIBDIR}/lib/faraday/middleware.rb
@@ -28,18 +28,17 @@ ${GEM_LIBDIR}/lib/faraday/options/env.rb
 ${GEM_LIBDIR}/lib/faraday/options/proxy_options.rb
 ${GEM_LIBDIR}/lib/faraday/options/request_options.rb
 ${GEM_LIBDIR}/lib/faraday/options/ssl_options.rb
-${GEM_LIBDIR}/lib/faraday/param_part.rb
 ${GEM_LIBDIR}/lib/faraday/parameters.rb
 ${GEM_LIBDIR}/lib/faraday/rack_builder.rb
 ${GEM_LIBDIR}/lib/faraday/request.rb
 ${GEM_LIBDIR}/lib/faraday/request/authorization.rb
 ${GEM_LIBDIR}/lib/faraday/request/basic_authentication.rb
 ${GEM_LIBDIR}/lib/faraday/request/instrumentation.rb
-${GEM_LIBDIR}/lib/faraday/request/multipart.rb
-${GEM_LIBDIR}/lib/faraday/request/retry.rb
+${GEM_LIBDIR}/lib/faraday/request/json.rb
 ${GEM_LIBDIR}/lib/faraday/request/token_authentication.rb
 ${GEM_LIBDIR}/lib/faraday/request/url_encoded.rb
 ${GEM_LIBDIR}/lib/faraday/response.rb
+${GEM_LIBDIR}/lib/faraday/response/json.rb
 ${GEM_LIBDIR}/lib/faraday/response/logger.rb
 ${GEM_LIBDIR}/lib/faraday/response/raise_error.rb
 ${GEM_LIBDIR}/lib/faraday/utils.rb
@@ -60,6 +59,7 @@ ${GEM_LIBDIR}/spec/faraday/adapter_registry_spec.rb
 ${GEM_LIBDIR}/spec/faraday/adapter_spec.rb
 ${GEM_LIBDIR}/spec/faraday/composite_read_io_spec.rb
 ${GEM_LIBDIR}/spec/faraday/connection_spec.rb
+${GEM_LIBDIR}/spec/faraday/deprecate_spec.rb
 ${GEM_LIBDIR}/spec/faraday/error_spec.rb
 ${GEM_LIBDIR}/spec/faraday/middleware_spec.rb
 ${GEM_LIBDIR}/spec/faraday/options/env_spec.rb
@@ -71,10 +71,10 @@ ${GEM_LIBDIR}/spec/faraday/params_encoders/nested_spec.rb
 ${GEM_LIBDIR}/spec/faraday/rack_builder_spec.rb
 ${GEM_LIBDIR}/spec/faraday/request/authorization_spec.rb
 ${GEM_LIBDIR}/spec/faraday/request/instrumentation_spec.rb
-${GEM_LIBDIR}/spec/faraday/request/multipart_spec.rb
-${GEM_LIBDIR}/spec/faraday/request/retry_spec.rb
+${GEM_LIBDIR}/spec/faraday/request/json_spec.rb
 ${GEM_LIBDIR}/spec/faraday/request/url_encoded_spec.rb
 ${GEM_LIBDIR}/spec/faraday/request_spec.rb
+${GEM_LIBDIR}/spec/faraday/response/json_spec.rb
 ${GEM_LIBDIR}/spec/faraday/response/logger_spec.rb
 ${GEM_LIBDIR}/spec/faraday/response/middleware_spec.rb
 ${GEM_LIBDIR}/spec/faraday/response/raise_error_spec.rb
