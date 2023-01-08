@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 10:16:17 nia Exp $
+$NetBSD: distinfo,v 1.12 2023/01/08 04:13:45 wen Exp $
 
-BLAKE2s (Config-INI-0.027.tar.gz) = 8a61056b88e02a0172459284c4992497a103fc76116c98e7b2019efcabddeeb1
-SHA512 (Config-INI-0.027.tar.gz) = c0a7d363550cac186b639555e63ac27d613cb2e63d57786aabe63dd65bcb0e2043c3bf80f820bfd975d7111d14567af466e82ed35f9cc2294bfe78ef2a519516
-Size (Config-INI-0.027.tar.gz) = 26638 bytes
+BLAKE2s (Config-INI-0.028.tar.gz) = 3313fddd233a82d6a34414cf62ce699822b60245602c7722c2bade32bb2f6bf8
+SHA512 (Config-INI-0.028.tar.gz) = 9fa4692fd935f38c44f59156c50abcaa68dc6f291aca58bbf0a6b2fdf7345124e64ecc3c216126803248c50e85391f5cfee9cb14fc8fba24a2ebe0e9d8220f40
+Size (Config-INI-0.028.tar.gz) = 26678 bytes
