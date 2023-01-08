@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.10 2022/02/01 11:58:35 wiz Exp $
+# $NetBSD: options.mk,v 1.11 2023/01/08 01:26:11 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.libcarddav
 PKG_SUPPORTED_OPTIONS=		doc
-PKG_SUGGESTED_OPTIONS=		doc
+PKG_SUGGESTED_OPTIONS=		# empty
 PKG_OPTIONS_LEGACY_OPTS+=	doxygen:doc
 
 .include "../../mk/bsd.options.mk"
