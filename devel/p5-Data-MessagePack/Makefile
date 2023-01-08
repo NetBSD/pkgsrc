@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2022/06/28 11:32:10 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2023/01/08 10:03:41 wen Exp $
 #
 
-DISTNAME=	Data-MessagePack-1.01
+DISTNAME=	Data-MessagePack-1.02
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Data/}
 
