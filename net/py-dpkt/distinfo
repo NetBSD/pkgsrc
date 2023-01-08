@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:06:35 nia Exp $
+$NetBSD: distinfo,v 1.9 2023/01/08 11:19:52 adam Exp $
 
-BLAKE2s (dpkt-1.9.7.2.tar.gz) = 92d0b944dd26c7095a2e349bef4d9fd49c0d8946d7c46696e34ad3ce18aa582e
-SHA512 (dpkt-1.9.7.2.tar.gz) = 0a5b5db440c92f585697ce471463e1c8ca9424be64aa1696abb692e883d254a8f4e69f1ee3c2b741240887348cb4055457c3a46de6a32229d488433e49a4b97e
-Size (dpkt-1.9.7.2.tar.gz) = 165606 bytes
+BLAKE2s (dpkt-1.9.8.tar.gz) = 07a18eaf68440cace8b24a6d6eb83efe086781ad154079300468d18359e02f7d
+SHA512 (dpkt-1.9.8.tar.gz) = c72d96ab31225424f0911898cf80a48a0a4bff039761e4e89253b5f2cc89cc4ef2f7899359a0d978dd3e25ded22b35e98ccfb9b0deef0461be4e52619e091b02
+Size (dpkt-1.9.8.tar.gz) = 180073 bytes
