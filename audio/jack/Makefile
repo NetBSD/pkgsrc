@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.54 2023/01/07 21:20:19 triaxx Exp $
+# $NetBSD: Makefile,v 1.55 2023/01/08 06:19:55 triaxx Exp $
 
 DISTNAME=	jack2-1.9.21
 PKGNAME=	${DISTNAME:S/jack2/jack/1}
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jackaudio/}
 GITHUB_PROJECT=	jack2
@@ -17,6 +18,7 @@ USE_TOOLS+=	pkg-config bash
 
 WAF_ARGS+=	--systemd=no
 WAF_ARGS+=	--readline=no
+WAF_ARGS+=	--example-tools=yes
 
 .include "../../mk/bsd.prefs.mk"
 
