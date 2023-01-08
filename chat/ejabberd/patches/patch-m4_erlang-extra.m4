@@ -1,6 +1,8 @@
-$NetBSD: patch-m4_erlang-extra.m4,v 1.1 2022/10/15 18:20:40 triaxx Exp $
+$NetBSD: patch-m4_erlang-extra.m4,v 1.2 2023/01/08 16:19:05 gdt Exp $
 
 Fix portability of configure script.
+
+https://github.com/processone/ejabberd/pull/3970
 
 --- m4/erlang-extra.m4.orig	2022-05-06 13:12:22.000000000 +0000
 +++ m4/erlang-extra.m4
