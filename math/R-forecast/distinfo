@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:55:26 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/01/08 03:34:41 wen Exp $
 
-BLAKE2s (R/forecast_8.7.tar.gz) = 2b3927a2a11980465a8fcbef43e54327171b5989cc0166028358dee911137a19
-SHA512 (R/forecast_8.7.tar.gz) = 096f813bc77c843c5cbeba9bfa36d6f91c6781ef7ec88acc5fc9f243cde4978083de0f6662e1458191709efa8b0f77798f36ea2deab5ccd18c47af0478861352
-Size (R/forecast_8.7.tar.gz) = 909190 bytes
+BLAKE2s (R/forecast_8.20.tar.gz) = e7f08048af8835ee762a78b91ef2556bc1a4e80dbcecaed3b820c176798be7c5
+SHA512 (R/forecast_8.20.tar.gz) = e8561513686f48086a5db3c775ae86bb4b6fc0f041c20fce0a41a386fc6085e0d8395d82c9f7b8b198d53562d2a245f88078337cbaee9481b58669707637f66a
+Size (R/forecast_8.20.tar.gz) = 591668 bytes
