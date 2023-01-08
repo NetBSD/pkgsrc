@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.158 2023/01/08 00:46:20 wen Exp $
+$NetBSD: CHANGES-2023,v 1.159 2023/01/08 00:54:39 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -190,3 +190,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/p5-Variable-Magic to 0.63 [wen 2023-01-08]
 	Updated filesystems/p5-Path-Tiny to 0.144 [wen 2023-01-08]
 	Updated devel/p5-Clone to 0.46 [wen 2023-01-08]
+	Updated lang/python27 to 2.7.18nb10 [gutteridge 2023-01-08]
