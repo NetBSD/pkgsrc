@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:17:49 nia Exp $
+$NetBSD: distinfo,v 1.11 2023/01/08 00:28:58 wen Exp $
 
-BLAKE2s (Throwable-1.000.tar.gz) = 0e9fa9c63d05fc0a58bf18c743965c2a5bbd34e2df14b54666ef7ebfb49ebb41
-SHA512 (Throwable-1.000.tar.gz) = d81d2e3eff78ad396e6e61ad09ecf3c1eaaf33ae24c8b74c8336b568dceb1b62aa03f9e8417df2edc55b0c6806599c7e88ccc43f2b45c11262fd8139706a9bc3
-Size (Throwable-1.000.tar.gz) = 21875 bytes
+BLAKE2s (Throwable-1.001.tar.gz) = b6225d66fbec53be895f66ef2ebebe55a7c1503bdfe2976c6a52c440b5caf408
+SHA512 (Throwable-1.001.tar.gz) = b0b8d906c1cf7d4f5ea985b91bb2eca191056cd41b12c37560504c825bf57fe4a0cf4423ad53da04a9cd43edeba52321d407f03e556033156071b0c3ef97001a
+Size (Throwable-1.001.tar.gz) = 21992 bytes
