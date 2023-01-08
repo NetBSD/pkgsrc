@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:55:27 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/01/08 03:27:50 wen Exp $
 
-BLAKE2s (R/generics_0.1.0.tar.gz) = 6ce553b4a4b94b9014bb5bfeedcef8a32dda0659e305e566c80a96ceff933e04
-SHA512 (R/generics_0.1.0.tar.gz) = fc96efafe114a66eee57aba48b7ab763204c1bb43570eeda742bca9e7486b47a0bf01bad87f2bf225a5c67f0abaf60c758afe7dada049b692ee864077334616b
-Size (R/generics_0.1.0.tar.gz) = 117834 bytes
+BLAKE2s (R/generics_0.1.3.tar.gz) = 9464a1c87bb1f2d4cb64c19838925f14ece46b29fb2670394264c0ce3f1e8f48
+SHA512 (R/generics_0.1.3.tar.gz) = 7825e22659ecd41d51f60cf33fd52cdf35c818ffa55197e11091e4e19dddf6303dc0d577a6af49c4ca14ad2deedcbe3c00846454e3129d3d24480bd0a9ed4896
+Size (R/generics_0.1.3.tar.gz) = 172201 bytes
