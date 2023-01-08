@@ -1,11 +1,10 @@
-$NetBSD: patch-base_logging.c,v 1.4 2017/05/24 07:42:39 manu Exp $
+$NetBSD: patch-base_logging.c,v 1.5 2023/01/08 23:33:59 sekiya Exp $
 
-64bit time_t workaround
+64-bit time_t workaround
 
---- base/logging.c.orig	2017-05-09 19:03:31.000000000 +0200
-+++ base/logging.c	2017-05-21 21:06:50.000000000 +0200
-@@ -532,9 +532,9 @@
- 		return ERROR;
+--- base/logging.c.orig	2022-11-17 05:52:51.000000000 +0900
++++ base/logging.c	2023-01-09 06:59:17.162183952 +0900
+@@ -533,7 +533,7 @@
  
  	/* write the timestamp */
  	gettimeofday(&current_time, NULL);
@@ -14,4 +13,3 @@ $NetBSD: patch-base_logging.c,v 1.4 2017/05/24 07:42:39 manu Exp $
  
  	/* write the data */
  	va_start(ap, fmt);
- 	vfprintf(debug_file_fp, fmt, ap);

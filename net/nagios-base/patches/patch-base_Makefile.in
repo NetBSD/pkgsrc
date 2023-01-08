@@ -1,28 +1,26 @@
-$NetBSD: patch-base_Makefile.in,v 1.2 2015/04/03 17:06:08 rodent Exp $
+$NetBSD: patch-base_Makefile.in,v 1.3 2023/01/08 23:33:59 sekiya Exp $
 
 Adjustments to build procedure.
 
---- base/Makefile.in.orig	2014-08-12 15:00:01.000000000 +0000
-+++ base/Makefile.in
-@@ -36,7 +36,7 @@ exec_prefix=@exec_prefix@
- LOGDIR=@localstatedir@
- CFGDIR=@sysconfdir@
- BINDIR=@bindir@
--CGIDIR=@sbindir@
-+CGIDIR=@libexecdir@
- HTMLDIR=@datarootdir@
- INSTALL=@INSTALL@
- INSTALL_OPTS=@INSTALL_OPTS@
-@@ -180,9 +180,9 @@ install-unstripped:
- 	$(MAKE) install-basic
+--- base/Makefile.in.orig	2022-11-17 05:52:51.000000000 +0900
++++ base/Makefile.in	2023-01-09 06:58:52.616772187 +0900
+@@ -173,13 +173,13 @@
+ 	rm -f wpres-phash.h
  
- install-basic:
+ install:
 -	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(BINDIR)
--	$(INSTALL) -m 774 $(INSTALL_OPTS) @nagios_name@ $(DESTDIR)$(BINDIR)
--	$(INSTALL) -m 774 $(INSTALL_OPTS) @nagiostats_name@ $(DESTDIR)$(BINDIR)
+-	$(INSTALL) -s -m 774 $(INSTALL_OPTS) @nagios_name@ $(DESTDIR)$(BINDIR)
+-	$(INSTALL) -s -m 774 $(INSTALL_OPTS) @nagiostats_name@ $(DESTDIR)$(BINDIR)
 +	${BSD_INSTALL_PROGRAM_DIR} $(DESTDIR)$(BINDIR)
 +	${BSD_INSTALL_PROGRAM} @nagios_name@ $(DESTDIR)$(BINDIR)
 +	${BSD_INSTALL_PROGRAM} @nagiostats_name@ $(DESTDIR)$(BINDIR)
  
- strip-post-install:
- 	$(STRIP) $(DESTDIR)$(BINDIR)/@nagios_name@
+ install-unstripped:
+-	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(BINDIR)
+-	$(INSTALL) -m 774 $(INSTALL_OPTS) nagios $(DESTDIR)$(BINDIR)
+-	$(INSTALL) -m 774 $(INSTALL_OPTS) nagiostats $(DESTDIR)$(BINDIR)
++	${BSD_INSTALL_PROGRAM_DIR} $(DESTDIR)$(BINDIR)
++	${BSD_INSTALL_PROGRAM} nagios $(DESTDIR)$(BINDIR)
++	${BSD_INSTALL_PROGRAM} nagiostats $(DESTDIR)$(BINDIR)
+ 
+ .PHONY: libnagios
