@@ -1,4 +1,4 @@
-# $NetBSD: phpversion.mk,v 1.383 2022/12/11 14:07:24 taca Exp $
+# $NetBSD: phpversion.mk,v 1.383.2.1 2023/01/08 16:15:56 bsiegert Exp $
 #
 # This file selects a PHP version, based on the user's preferences and
 # the installed packages. It does not add a dependency on the PHP
@@ -90,7 +90,7 @@ PHPVERSION_MK=	defined
 PHP56_VERSION=	5.6.40
 PHP74_VERSION=	7.4.33
 PHP80_VERSION=	8.0.26
-PHP81_VERSION=	8.1.13
+PHP81_VERSION=	8.1.14
 PHP82_VERSION=	8.2.0
 
 # Define API version or initial release of major version.
