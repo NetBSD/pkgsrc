@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.169 2023/01/08 06:20:12 triaxx Exp $
+$NetBSD: CHANGES-2023,v 1.170 2023/01/08 07:22:35 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -201,3 +201,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/p5-Config-INI to 0.028 [wen 2023-01-08]
 	Updated devel/p5-Data-Alias to 1.28 [wen 2023-01-08]
 	Updated audio/jack to 1.9.21nb1 [triaxx 2023-01-08]
+	Updated emulators/PC6001VX to 3.9.1 [tsutsui 2023-01-08]
