@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.173 2023/01/08 10:05:00 wen Exp $
+$NetBSD: CHANGES-2023,v 1.174 2023/01/08 11:22:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -205,3 +205,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated emulators/PC6001VX to 4.1.1 [tsutsui 2023-01-08]
 	Updated devel/p5-Data-GUID to 0.051 [wen 2023-01-08]
 	Updated devel/p5-Data-MessagePack to 1.02 [wen 2023-01-08]
+	Updated net/py-dpkt to 1.9.8 [adam 2023-01-08]
+	Updated devel/py-traitlets to 5.8.0 [adam 2023-01-08]
