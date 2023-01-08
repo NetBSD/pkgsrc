@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.67 2022/10/15 18:20:40 triaxx Exp $
+$NetBSD: distinfo,v 1.68 2023/01/08 16:19:05 gdt Exp $
 
 BLAKE2s (ejabberd-22.05.tar.gz) = 657dcfe4ee9f78fbba344588c255c8d3be8ee155e55c702b125fd0626673b908
 SHA512 (ejabberd-22.05.tar.gz) = 33f98a9c45ff8257d240e7b90181e399ecab84e361f5619dc8d57252642e81d4958467cfa89b90681f3cf0d1d56a3079eb98d4e80cc6af5ca11938bb2a69f865
 Size (ejabberd-22.05.tar.gz) = 2527957 bytes
 SHA1 (patch-aa) = c48f1b242777a4610cdbecb32791ce614e0ef80d
 SHA1 (patch-ae) = de7536dbafab8d14430faa5fcbd767c238a151e5
-SHA1 (patch-m4_erlang-extra.m4) = efa18366b54a9269bec79a44dda175792d8e2f00
+SHA1 (patch-m4_erlang-extra.m4) = 3b89c1a8212e8a45ae319b30606a41429762e2fe
 SHA1 (patch-tools_ejabberdctl.bc) = 167f542c95f8e25ba601076ad717a85bfd456dc7
