@@ -1,11 +1,10 @@
-$NetBSD: patch-cgi_trends.c,v 1.5 2017/05/24 07:42:39 manu Exp $
+$NetBSD: patch-cgi_trends.c,v 1.6 2023/01/08 23:33:59 sekiya Exp $
 
-64bit time_t workaround
+64-bit time_t workaround
 
---- cgi/trends.c.orig	2017-05-09 19:03:31.000000000 +0200
-+++ cgi/trends.c	2017-05-22 09:15:29.000000000 +0200
-@@ -447,26 +447,26 @@
- 			printf("<TABLE BORDER=1 CELLPADDING=0 CELLSPACING=0 CLASS='linkBox'>\n");
+--- cgi/trends.c.orig	2022-11-17 05:52:51.000000000 +0900
++++ cgi/trends.c	2023-01-09 07:06:43.682160687 +0900
+@@ -448,9 +448,9 @@
  			printf("<TR><TD CLASS='linkBox'>\n");
  
  			if(display_type == DISPLAY_HOST_TRENDS) {
@@ -17,7 +16,7 @@ $NetBSD: patch-cgi_trends.c,v 1.5 2017/05/24 07:42:39 manu Exp $
  #endif
  				printf("<a href='%s?host=%s'>View Status Detail For This Host</a><BR>\n", STATUS_CGI, url_encode(host_name));
  				printf("<a href='%s?host=%s'>View Alert History For This Host</a><BR>\n", HISTORY_CGI, url_encode(host_name));
- 				printf("<a href='%s?host=%s'>View Notifications For This Host</a><BR>\n", NOTIFICATIONS_CGI, url_encode(host_name));
+@@ -458,14 +458,14 @@
  				}
  			else {
  #ifdef LEGACY_GRAPHICAL_CGIS
@@ -36,4 +35,3 @@ $NetBSD: patch-cgi_trends.c,v 1.5 2017/05/24 07:42:39 manu Exp $
  				printf("<A HREF='%s?host=%s&", HISTORY_CGI, url_encode(host_name));
  				printf("service=%s'>View Alert History For This Service</A><BR>\n", url_encode(svc_description));
  				printf("<A HREF='%s?host=%s&", NOTIFICATIONS_CGI, url_encode(host_name));
- 				printf("service=%s'>View Notifications For This Service</A><BR>\n", url_encode(svc_description));

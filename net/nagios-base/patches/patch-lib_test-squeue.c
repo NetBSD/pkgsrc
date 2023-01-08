@@ -1,9 +1,9 @@
-$NetBSD: patch-lib_test-squeue.c,v 1.2 2016/02/09 10:12:53 bouyer Exp $
+$NetBSD: patch-lib_test-squeue.c,v 1.3 2023/01/08 23:33:59 sekiya Exp $
 
-64bit time_t workaround
+64-bit time_t workaround
 
---- lib/test-squeue.c.orig	2016-02-07 21:16:30.000000000 +0100
-+++ lib/test-squeue.c	2016-02-07 21:17:02.000000000 +0100
+--- lib/test-squeue.c.orig	2022-11-17 05:52:51.000000000 +0900
++++ lib/test-squeue.c	2023-01-09 07:15:59.004620782 +0900
 @@ -50,7 +50,7 @@
  
  	walks++;

@@ -1,9 +1,9 @@
-$NetBSD: patch-common_downtime.c,v 1.2 2016/02/09 10:12:53 bouyer Exp $
+$NetBSD: patch-common_downtime.c,v 1.3 2023/01/08 23:33:59 sekiya Exp $
 
-64bit time_t workaround
+64-bit time_t workaround
 
---- common/downtime.c.orig	2016-02-07 22:06:39.000000000 +0100
-+++ common/downtime.c	2016-02-07 22:07:03.000000000 +0100
+--- common/downtime.c.orig	2022-11-17 05:52:51.000000000 +0900
++++ common/downtime.c	2023-01-09 07:07:40.075545398 +0900
 @@ -240,7 +240,7 @@
  	/* don't add old or invalid downtimes */
  	if(start_time >= end_time || end_time <= time(NULL)) {

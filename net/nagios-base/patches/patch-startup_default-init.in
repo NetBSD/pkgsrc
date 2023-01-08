@@ -1,0 +1,15 @@
+$NetBSD: patch-startup_default-init.in,v 1.1 2023/01/08 23:33:59 sekiya Exp $
+
+Fix portability failure.
+
+--- startup/default-init.in.orig	2022-11-16 20:52:51.000000000 +0000
++++ startup/default-init.in
+@@ -61,7 +61,7 @@ fi
+ USE_RAMDISK=${USE_RAMDISK:-0}
+ if test "$USE_RAMDISK" -ne 0 && test "$RAMDISK_SIZE"X != "X"; then
+ 	ramdisk=`mount |grep "${RAMDISK_DIR} type tmpfs"`
+-	if [ "$ramdisk"X == "X" ]; then
++	if [ "$ramdisk"X = "X" ]; then
+ 		if [ ! -d ${RAMDISK_DIR} ]; then
+ 			mkdir -p -m 0755 ${RAMDISK_DIR}
+ 			if [ -d ${RAMDISK_DIR} ]; then

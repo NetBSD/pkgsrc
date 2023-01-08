@@ -1,11 +1,11 @@
-$NetBSD: patch-lib_runcmd.c,v 1.1 2015/04/03 17:06:08 rodent Exp $
+$NetBSD: patch-lib_runcmd.c,v 1.2 2023/01/08 23:33:59 sekiya Exp $
 
 Include config.h generated during configure.
 setenv(3) was tested there. No need to check for it here.
 Can't assign a value to a constant. Ensure we don't do that.
 
---- lib/runcmd.c.orig	2014-08-12 15:00:01.000000000 +0000
-+++ lib/runcmd.c
+--- lib/runcmd.c.orig	2022-11-17 05:52:51.000000000 +0900
++++ lib/runcmd.c	2023-01-09 07:15:54.323753241 +0900
 @@ -15,6 +15,7 @@
  #define NAGIOSPLUG_API_C 1
  
@@ -26,7 +26,7 @@ Can't assign a value to a constant. Ensure we don't do that.
  /*
   * This variable must be global, since there's no way the caller
   * can forcibly slay a dead or ungainly running program otherwise.
-@@ -304,13 +300,13 @@ int runcmd_cmd2strv(const char *str, int
+@@ -304,13 +300,13 @@
   * through this API and thus achieve async-safeness throughout the API. */
  void runcmd_init(void)
  {

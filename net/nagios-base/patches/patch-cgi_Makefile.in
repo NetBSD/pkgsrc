@@ -1,22 +1,13 @@
-$NetBSD: patch-cgi_Makefile.in,v 1.2 2015/04/03 17:06:08 rodent Exp $
+$NetBSD: patch-cgi_Makefile.in,v 1.3 2023/01/08 23:33:59 sekiya Exp $
 
 Adjustments to build procedure.
 
---- cgi/Makefile.in.orig	2014-08-12 15:00:01.000000000 +0000
-+++ cgi/Makefile.in
-@@ -15,7 +15,7 @@ exec_prefix=@exec_prefix@
- LOGDIR=@localstatedir@
- CFGDIR=@sysconfdir@
- BINDIR=@bindir@
--CGIDIR=@sbindir@
-+CGIDIR=@libexecdir@/cgi-bin
- HTMLDIR=@datarootdir@
- INSTALL=@INSTALL@
- INSTALL_OPTS=@INSTALL_OPTS@
-@@ -201,9 +201,9 @@ install-unstripped:
+--- cgi/Makefile.in.orig	2022-11-17 05:52:51.000000000 +0900
++++ cgi/Makefile.in	2023-01-09 08:03:12.827656534 +0900
+@@ -197,15 +197,15 @@
  	$(MAKE) install-basic
  
- install-basic:
+ install-unstripped:
 -	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(CGIDIR)
 +	[ -d $(DESTDIR)$(CGIDIR) ] || ${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(CGIDIR)
  	for file in *.cgi; do \
@@ -24,4 +15,12 @@ Adjustments to build procedure.
 +		$(BSD_INSTALL_SCRIPT) $$file $(DESTDIR)$(CGIDIR); \
  	done
  
- strip-post-install:
+ install-basic:
+-	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(CGIDIR)
++	[ -d $(DESTDIR)$(CGIDIR) ] || ${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(CGIDIR)
+ 	for file in *.cgi; do \
+-		$(INSTALL) -s -m 775 $(INSTALL_OPTS) $$file $(DESTDIR)$(CGIDIR); \
++		$(BSD_INSTALL_SCRIPT) $$file $(DESTDIR)$(CGIDIR); \
+ 	done
+ 
+ .PHONY: libnagios
