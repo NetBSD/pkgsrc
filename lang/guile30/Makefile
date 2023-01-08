@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2022/10/26 10:31:04 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2023/01/08 21:21:03 gdt Exp $
 
 DISTNAME=	guile-3.0.8
 PKGNAME=	${DISTNAME:S/guile/guile30/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.gnu.org/gnu/guile/
 
@@ -22,6 +22,8 @@ CONFIGURE_ARGS+=	SHELL=${CONFIG_SHELL}
 LDFLAGS.SunOS+=		-lsocket -lnsl
 MAKE_ENV+=		PAXCTL=echo
 MAKE_ENV.NetBSD+=	PAXCTL=/usr/sbin/paxctl
+
+CONFIGURE_ARGS+=	--disable-lto
 
 .if !empty(GUILE_SUBDIR)
 # Installation prefix is non-default.
