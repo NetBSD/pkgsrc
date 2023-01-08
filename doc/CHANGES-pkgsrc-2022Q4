@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2022Q4,v 1.1.2.3 2023/01/06 19:48:59 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2022Q4,v 1.1.2.4 2023/01/08 19:19:18 bsiegert Exp $
 
 Changes to packages and infrastructure on the 2022Q4 branch:
 
@@ -16,4 +16,20 @@ devel/ccache: i386 build fix
 
 Pullup ticket #6714 - requested by gdt
 sysutils/xentools415: NetBSD 10 build fix
+
+Pullup ticket #6715 - requested by gdt
+lang/elixir: build fix
+
+Pullup ticket #6716 - requested by taca
+devel/ruby-manpages: build fix
++ dependent updates
+
+Pullup ticket #6717 - requested by taca
+lang/php81: security fix
+
+Pullup ticket #6718 - requested by taca
+lang/php82: security fix
+
+Pullup ticket #6719 - requested by taca
+lang/php80: security fix
 
