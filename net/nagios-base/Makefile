@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.86 2023/01/03 17:38:02 wiz Exp $
+# $NetBSD: Makefile,v 1.87 2023/01/08 23:33:58 sekiya Exp $
 #
 
-DISTNAME=		nagios-4.3.2
+DISTNAME=		nagios-4.4.9
 PKGNAME=		${DISTNAME:S/-/-base-/}
-PKGREVISION=		13
+#PKGREVISION=		1
 CATEGORIES=		net sysutils
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=nagios/}
@@ -25,18 +25,19 @@ USE_GCC_RUNTIME=	yes
 
 CONFIGURE_ARGS+=	--with-gd-lib=${PREFIX}/lib
 CONFIGURE_ARGS+=	--with-gd-inc=${PREFIX}/include
-CONFIGURE_ARGS+=	--enable-embedded-perl
-CONFIGURE_ARGS+=	--with-perlcache
 
 CONFIGURE_ARGS+=	--with-nagios-user=${NAGIOS_USER}
 CONFIGURE_ARGS+=	--with-nagios-group=${NAGIOS_GROUP}
 CONFIGURE_ARGS+=	--with-command-user=${NAGIOS_USER}
 CONFIGURE_ARGS+=	--with-command-group=${NAGIOSCMD_GROUP}
-CONFIGURE_ARGS+=	--with-init-dir=${PREFIX}/share/examples/rc.d
+CONFIGURE_ARGS+=	--with-initdir=${PREFIX}/share/examples/rc.d
 CONFIGURE_ARGS+=	--with-lockfile=/var/run/nagios/nagios.lock
+CONFIGURE_ARGS+=	--with-httpd-conf=${PREFIX}/etc/httpd/conf.d
 
 USE_TOOLS+=		mail:run perl unzip
+.if !empty(TOOLS_PLATFORM.mail)
 CONFIGURE_ARGS+=	--with-mail=${TOOLS_PLATFORM.mail:Q}
+.endif
 
 RCD_SCRIPTS+=		nagios
 SMF_NAME=		nagios

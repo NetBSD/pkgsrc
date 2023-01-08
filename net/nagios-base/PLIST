@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2017/05/24 07:42:39 manu Exp $
+@comment $NetBSD: PLIST,v 1.20 2023/01/08 23:33:58 sekiya Exp $
 bin/nagios
 bin/nagiostats
 libexec/nagios/cgi-bin/archivejson.cgi
@@ -34,10 +34,10 @@ share/examples/nagios/objects/windows.cfg-sample
 share/examples/nagios/resource.cfg-sample
 share/nagios/angularjs/angular-1.3.9/angular.min.js
 share/nagios/angularjs/angular-1.3.9/angular.min.js.map
-share/nagios/angularjs/ui-bootstrap-tpls-0.12.0.min.js
-share/nagios/angularjs/ui-utils-0.2.1/ui-utils.js
-share/nagios/bootstrap-3.3.0/css/bootstrap-theme.min.css
-share/nagios/bootstrap-3.3.0/css/bootstrap.min.css
+share/nagios/angularjs/ui-bootstrap-tpls-0.14.3.min.js
+share/nagios/angularjs/ui-utils-0.2.3/ui-utils.js
+share/nagios/bootstrap-3.3.7/css/bootstrap-theme.min.css
+share/nagios/bootstrap-3.3.7/css/bootstrap.min.css
 share/nagios/config.inc.php
 share/nagios/contexthelp/A1.html
 share/nagios/contexthelp/A2.html
@@ -378,7 +378,7 @@ share/nagios/js/histogram-events.js
 share/nagios/js/histogram-form.js
 share/nagios/js/histogram-graph.js
 share/nagios/js/histogram.js
-share/nagios/js/jquery-1.7.1.min.js
+share/nagios/js/jquery-1.12.4.min.js
 share/nagios/js/jsonquery.js
 share/nagios/js/map-directive.js
 share/nagios/js/map-form.js

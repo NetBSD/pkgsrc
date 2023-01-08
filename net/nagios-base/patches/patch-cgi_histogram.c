@@ -1,9 +1,9 @@
-$NetBSD: patch-cgi_histogram.c,v 1.4 2016/02/09 10:12:53 bouyer Exp $
+$NetBSD: patch-cgi_histogram.c,v 1.5 2023/01/08 23:33:59 sekiya Exp $
 
-64bit time_t workaround
+64-bit time_t workaround
 
---- cgi/histogram.c.orig	2016-02-07 22:21:30.000000000 +0100
-+++ cgi/histogram.c	2016-02-07 22:22:24.000000000 +0100
+--- cgi/histogram.c.orig	2022-11-17 05:52:51.000000000 +0900
++++ cgi/histogram.c	2023-01-09 07:06:38.575800883 +0900
 @@ -338,9 +338,9 @@
  
  			if(display_type == DISPLAY_HOST_HISTOGRAM) {

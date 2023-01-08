@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2020/06/01 05:54:16 rillig Exp $
+# $NetBSD: Makefile.common,v 1.14 2023/01/08 23:33:58 sekiya Exp $
 #
 # used by net/nagios-base/Makefile
 # used by net/nagios-nsca/Makefile
@@ -17,6 +17,7 @@ PKG_SYSCONFSUBDIR=	nagios
 
 PERL5_REQD=		5.6
 
+CONFIGURE_ARGS+=	--with-cgibindir=${PREFIX}/libexec/nagios/cgi-bin
 CONFIGURE_ARGS+=	--libexecdir=${PREFIX}/libexec/nagios
 .if ${PKGPATH} != "net/nagios-nsca"
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/nagios
