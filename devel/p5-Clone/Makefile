@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2022/06/28 11:32:05 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2023/01/08 00:45:21 wen Exp $
 
-DISTNAME=	Clone-0.45
+DISTNAME=	Clone-0.46
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Clone/}
 
