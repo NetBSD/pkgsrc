@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2022/08/31 05:50:12 mef Exp $
+@comment $NetBSD: PLIST,v 1.8 2023/01/08 11:22:01 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -14,6 +14,8 @@ ${PYSITELIB}/traitlets/config/__init__.py
 ${PYSITELIB}/traitlets/config/__init__.pyc
 ${PYSITELIB}/traitlets/config/application.py
 ${PYSITELIB}/traitlets/config/application.pyc
+${PYSITELIB}/traitlets/config/argcomplete_config.py
+${PYSITELIB}/traitlets/config/argcomplete_config.pyc
 ${PYSITELIB}/traitlets/config/configurable.py
 ${PYSITELIB}/traitlets/config/configurable.pyc
 ${PYSITELIB}/traitlets/config/loader.py
@@ -26,6 +28,8 @@ ${PYSITELIB}/traitlets/config/tests/__init__.py
 ${PYSITELIB}/traitlets/config/tests/__init__.pyc
 ${PYSITELIB}/traitlets/config/tests/test_application.py
 ${PYSITELIB}/traitlets/config/tests/test_application.pyc
+${PYSITELIB}/traitlets/config/tests/test_argcomplete.py
+${PYSITELIB}/traitlets/config/tests/test_argcomplete.pyc
 ${PYSITELIB}/traitlets/config/tests/test_configurable.py
 ${PYSITELIB}/traitlets/config/tests/test_configurable.pyc
 ${PYSITELIB}/traitlets/config/tests/test_loader.py
