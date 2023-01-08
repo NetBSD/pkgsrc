@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.59 2022/12/23 13:32:44 taca Exp $
+# $NetBSD: Makefile,v 1.59.2.1 2023/01/08 15:57:24 bsiegert Exp $
 
 DISTNAME=		puppet-7.21.0
+PKGREVISION=		2
 CATEGORIES=		sysutils
 
 MAINTAINER=		pkgsrc-users@NetBSD.org

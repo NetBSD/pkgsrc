@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.2 2022/12/18 14:53:07 taca Exp $
+# $NetBSD: Makefile,v 1.2.2.1 2023/01/08 15:57:24 bsiegert Exp $
 
 DISTNAME=	manpages-0.6.1
+PKGREVISION=	2
 CATEGORIES=	misc
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	https://github.com/bitboxer/manpages
 COMMENT=	Adds support for man pages to rubygems
 LICENSE=	mit
 
 USE_LANGUAGES=	# none
-
-RUBYGEM_MANPAGES=	no
 
 SUBST_CLASSES+=		path
 SUBST_MESSAGE.path=	Fixing man path.

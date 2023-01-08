@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2022/12/18 14:54:28 taca Exp $
+@comment $NetBSD: PLIST,v 1.2.2.1 2023/01/08 15:57:24 bsiegert Exp $
 bin/lolcat${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
@@ -16,4 +16,4 @@ ${GEM_LIBDIR}/lib/lolcat/version.rb
 ${GEM_LIBDIR}/lolcat.gemspec
 ${GEM_LIBDIR}/man/lolcat.6
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
-${PLIST.rubygem_man}man/man6/lolcat.6
+${PLIST.rubygem_man}man/man6/lolcat${RUBY_VER}.6
