@@ -43,8 +43,10 @@ SUBST_CLASSES.Darwin+=	panic
 SUBST_STAGE.panic=	pre-configure
 SUBST_MESSAGE.panic=	Renaming the panic function
 SUBST_FILES.panic=	*/*.c
+SUBST_FILES.panic+=	*/*/*.c
+SUBST_FILES.panic+=	*/*/*/*.c
 SUBST_FILES.panic+=	pith/util.h
-SUBST_SED.panic+=	-e 's,panic(,Panic(,g'
+SUBST_SED.panic+=	-e 's,panic *(,Panic(,g'
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/alpine/alpine ${DESTDIR}${PREFIX}/bin/alpine
