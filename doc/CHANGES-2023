@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.148 2023/01/08 00:02:30 wen Exp $
+$NetBSD: CHANGES-2023,v 1.149 2023/01/08 00:06:05 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -180,3 +180,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/firefox to 108.0.2 [ryoon 2023-01-07]
 	Updated www/firefox-l10n to 108.0.2 [ryoon 2023-01-07]
 	Updated www/p5-HTML-Parser to 3.80 [wen 2023-01-08]
+	Updated www/p5-HTML-Restrict to 3.0.1 [wen 2023-01-08]
