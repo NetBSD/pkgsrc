@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.170 2023/01/08 07:22:35 tsutsui Exp $
+$NetBSD: CHANGES-2023,v 1.171 2023/01/08 08:30:53 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -202,3 +202,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/p5-Data-Alias to 1.28 [wen 2023-01-08]
 	Updated audio/jack to 1.9.21nb1 [triaxx 2023-01-08]
 	Updated emulators/PC6001VX to 3.9.1 [tsutsui 2023-01-08]
+	Updated emulators/PC6001VX to 4.1.1 [tsutsui 2023-01-08]
