@@ -1,9 +1,10 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: upsdriver.sh,v 1.10 2023/01/07 16:16:10 gdt Exp $
+# $NetBSD: upsdriver.sh,v 1.11 2023/01/08 01:14:23 gdt Exp $
 #
 # PROVIDE: upsdriver
 # REQUIRE: NETWORK syslogd mountcritremote
+# KEYWORD: shutdown
 #
 # The standard approach is to leave "upsdriver_type" unset, so that
 # upsdrvctl is used to start and stop the driver(s).  (Note that a

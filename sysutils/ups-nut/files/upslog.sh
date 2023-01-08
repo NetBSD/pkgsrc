@@ -1,10 +1,11 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: upslog.sh,v 1.7 2023/01/07 16:16:10 gdt Exp $
+# $NetBSD: upslog.sh,v 1.8 2023/01/08 01:14:23 gdt Exp $
 #
 # PROVIDE: upslog
 # REQUIRE: upsd DAEMON
 # BEFORE: LOGIN
+# KEYWORD: shutdown
 #
 # You will need to set some variables in /etc/rc.conf to start upslog
 # properly, e.g.

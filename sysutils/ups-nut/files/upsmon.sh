@@ -1,8 +1,9 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: upsmon.sh,v 1.8 2023/01/07 16:16:10 gdt Exp $
+# $NetBSD: upsmon.sh,v 1.9 2023/01/08 01:14:23 gdt Exp $
 #
 # PROVIDE: upsmon
+# REQUIRE: upsd
 # BEFORE: SERVERS
 # KEYWORD: shutdown
 

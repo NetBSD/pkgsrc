@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.68 2023/01/07 16:16:10 gdt Exp $
+# $NetBSD: Makefile,v 1.69 2023/01/08 01:14:23 gdt Exp $
 
-PKGREVISION= 3
+PKGREVISION= 4
 .include "Makefile.common"
 
 PKGNAME=		ups-${DISTNAME}
@@ -53,7 +53,7 @@ CONF_FILES_PERMS+=	${NUT_EGDIR}/upsd.users.sample			\
 CONF_FILES_PERMS+=	${NUT_EGDIR}/upsmon.conf.sample			\
 			${NUT_CONFDIR}/upsmon.conf			\
 			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0600
-RCD_SCRIPTS=		ups upsd upsdriver upslog upsmon
+RCD_SCRIPTS=		ups upskillpower upsdriver upsd upsmon upslog
 
 OWN_DIRS=		${NUT_CONFDIR}
 OWN_DIRS_PERMS=		${NUT_STATEDIR} ${NUT_USER} ${NUT_GROUP} 0770
