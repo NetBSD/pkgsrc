@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.151 2023/01/08 00:13:13 wen Exp $
+$NetBSD: CHANGES-2023,v 1.152 2023/01/08 00:23:26 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -183,3 +183,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/p5-HTML-Restrict to 3.0.1 [wen 2023-01-08]
 	Updated www/p5-HTTP-Message to 6.44 [wen 2023-01-08]
 	Updated devel/p5-Test-Deep to 1.204 [wen 2023-01-08]
+	Updated devel/p5-Perl-Critic to 1.148 [wen 2023-01-08]
