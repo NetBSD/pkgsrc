@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2022/06/28 11:32:49 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2023/01/08 00:26:17 wen Exp $
 
-DISTNAME=	Moo-2.005004
+DISTNAME=	Moo-2.005005
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/H/HA/HAARG/}
 
@@ -18,8 +17,6 @@ DEPENDS+=	p5-Role-Tiny>=2.002003:../../devel/p5-Role-Tiny
 DEPENDS+=	p5-strictures>=2.000000:../../devel/p5-strictures
 DEPENDS+=	p5-Import-Into>=1.002000:../../devel/p5-Import-Into
 DEPENDS+=	p5-Sub-Quote>=2.003001:../../devel/p5-Sub-Quote
-
-TEST_DEPENDS+=	p5-Test-Fatal>=0.003:../../devel/p5-Test-Fatal
 
 PERL5_PACKLIST=	auto/Moo/.packlist
 
