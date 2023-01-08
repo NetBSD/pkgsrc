@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.174 2023/01/08 11:22:22 adam Exp $
+$NetBSD: CHANGES-2023,v 1.175 2023/01/08 19:35:18 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -207,3 +207,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/p5-Data-MessagePack to 1.02 [wen 2023-01-08]
 	Updated net/py-dpkt to 1.9.8 [adam 2023-01-08]
 	Updated devel/py-traitlets to 5.8.0 [adam 2023-01-08]
+	Updated net/nsd to 4.6.1 [ryoon 2023-01-08]
