@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2019/08/08 19:53:41 brook Exp $
+# $NetBSD: Makefile,v 1.5 2023/01/08 03:39:59 wen Exp $
 
 R_PKGNAME=	tseries
-R_PKGVER=	0.10-47
+R_PKGVER=	0.10-52
 CATEGORIES=	finance
 
 MAINTAINER=	minskim@NetBSD.org
