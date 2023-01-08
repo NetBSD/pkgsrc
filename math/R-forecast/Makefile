@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2019/08/08 19:53:49 brook Exp $
+# $NetBSD: Makefile,v 1.5 2023/01/08 03:34:41 wen Exp $
 
 R_PKGNAME=	forecast
-R_PKGVER=	8.7
+R_PKGVER=	8.20
 CATEGORIES=	math
 
 MAINTAINER=	minskim@NetBSD.org
@@ -17,6 +17,7 @@ DEPENDS+=	R-lmtest>=0.9.37:../../math/R-lmtest
 DEPENDS+=	R-urca>=1.3.0:../../math/R-urca
 DEPENDS+=	R-zoo>=1.8.6:../../math/R-zoo
 DEPENDS+=	R-timeDate>=3043.102:../../time/R-timeDate
+DEPENDS+=	R-generics>=0.1.2:../../math/R-generics
 
 USE_LANGUAGES=	c c++ fortran
 
