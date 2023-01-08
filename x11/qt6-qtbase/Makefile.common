@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.25 2022/12/01 21:26:00 nros Exp $
+# $NetBSD: Makefile.common,v 1.26 2023/01/08 08:13:31 tsutsui Exp $
 # used by audio/qt6-qtspeech/Makefile
 # used by databases/qt6-odbc/Makefile
 # used by databases/qt6-psql/Makefile
@@ -34,6 +34,11 @@ USE_TOOLS+=		cmake gmake perl:build pkg-config
 
 # https://doc.qt.io/qt-6/supported-platforms.html
 GCC_REQD+=		9
+
+# required for -msse2
+.if ${MACHINE_ARCH} == "i386"
+CFLAGS+=		-mstackrealign
+.endif
 
 # Avoid failures to due 'register' usage in X11 headers.
 CXXFLAGS+=		-Wno-register
