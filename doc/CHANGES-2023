@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.176 2023/01/08 20:14:08 leot Exp $
+$NetBSD: CHANGES-2023,v 1.177 2023/01/08 20:41:03 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -208,3 +208,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/py-dpkt to 1.9.8 [adam 2023-01-08]
 	Updated devel/py-traitlets to 5.8.0 [adam 2023-01-08]
 	Updated net/nsd to 4.6.1 [ryoon 2023-01-08]
+	Updated net/knot to 3.2.4 [ryoon 2023-01-08]
