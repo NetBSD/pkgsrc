@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.154 2023/01/08 00:29:45 wen Exp $
+$NetBSD: CHANGES-2023,v 1.155 2023/01/08 00:33:04 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -186,3 +186,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/p5-Perl-Critic to 1.148 [wen 2023-01-08]
 	Updated devel/p5-Moo to 2.005005 [wen 2023-01-08]
 	Updated devel/p5-Throwable to 1.001 [wen 2023-01-08]
+	Updated devel/p5-Type-Tiny-XS to 0.025 [wen 2023-01-08]
