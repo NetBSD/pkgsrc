@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2022/12/23 13:39:38 taca Exp $
+@comment $NetBSD: PLIST,v 1.16.2.1 2023/01/08 15:57:25 bsiegert Exp $
 bin/unicorn${RUBY_SUFFIX}
 bin/unicorn_rails${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -170,5 +170,5 @@ ${GEM_LIBDIR}/unicorn.gemspec
 ${GEM_LIBDIR}/unicorn_1
 ${GEM_LIBDIR}/unicorn_rails_1
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
-${PLIST.rubygem_man}man/man1/unicorn.1
-${PLIST.rubygem_man}man/man1/unicorn_rails.1
+${PLIST.rubygem_man}man/man1/unicorn${RUBY_VER}.1
+${PLIST.rubygem_man}man/man1/unicorn_rails${RUBY_VER}.1

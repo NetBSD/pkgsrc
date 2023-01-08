@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.1 2022/11/11 14:06:24 taca Exp $
+$NetBSD: distinfo,v 1.1.2.1 2023/01/08 15:57:24 bsiegert Exp $
 
 BLAKE2s (manpages-0.6.1.gem) = f9be6aa72e19fee514ce924206691ff49323ec1c68d1c91160244dc090eaa28b
 SHA512 (manpages-0.6.1.gem) = 70839c45db9d0eeef94587853db1514842b7a7e9fed7a967c7a1e9fcfe1ae204de93e04a8bdb24c4dfe6641cef5a27d29136bc4ae6e233040d1d2aa71b077378
 Size (manpages-0.6.1.gem) = 14848 bytes
-SHA1 (patch-lib_rubygems__plugin.rb) = cc70539c9eee2c77b7c7bcb0c245eb21c4476801
+SHA1 (patch-lib_manpages_install.rb) = cb490bc69237aa8d2bbcae1f314c644f2bf09d0e
+SHA1 (patch-lib_manpages_man__files.rb) = 55757e60d132a876bcbad0fe94256522867cdafd
+SHA1 (patch-lib_rubygems__plugin.rb) = fe8e5bf91c42caf9a19f4f4658f6fa16a6e99f7c
 SHA1 (patch-lib_rubygems_commands_manpages__command.rb) = a4ab65190a9ef1bab7805d2eb76f39dd97743937

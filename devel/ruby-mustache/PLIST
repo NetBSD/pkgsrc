@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2022/12/23 13:28:04 taca Exp $
+@comment $NetBSD: PLIST,v 1.2.2.1 2023/01/08 15:57:23 bsiegert Exp $
 bin/mustache${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
@@ -73,6 +73,6 @@ ${GEM_LIBDIR}/test/partial_test.rb
 ${GEM_LIBDIR}/test/spec_test.rb
 ${GEM_LIBDIR}/test/template_test.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
-${PLIST.rubygem_man}man/man1/mustache.1
-${PLIST.rubygem_man}man/man5/mustache.5
+${PLIST.rubygem_man}man/man1/mustache${RUBY_VER}.1
+${PLIST.rubygem_man}man/man5/mustache${RUBY_VER}.5
 @pkgdir lib/ruby/gems/2.0.0/build_info
