@@ -1,0 +1,24 @@
+$NetBSD: patch-configure,v 1.3 2023/01/08 20:40:20 ryoon Exp $
+
+* Improve POSIX shell portability.
+
+--- configure.orig	2022-11-20 07:16:12.000000000 +0000
++++ configure
+@@ -14729,7 +14729,7 @@ fi
+ 
+ 
+ 
+-if test "$enable_xdp" == "yes"; then :
++if test "$enable_xdp" = "yes"; then :
+ 
+ 
+ pkg_failed=no
+@@ -14802,7 +14802,7 @@ else
+ $as_echo "yes" >&6; }
+ 	enable_xdp=libxdp
+ fi
+-   if test "$enable_xdp" == "libxdp"; then :
++   if test "$enable_xdp" = "libxdp"; then :
+ 
+ 
+ $as_echo "#define USE_LIBXDP 1" >>confdefs.h
