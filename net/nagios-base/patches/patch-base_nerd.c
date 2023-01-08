@@ -1,10 +1,10 @@
-$NetBSD: patch-base_nerd.c,v 1.2 2016/02/09 10:12:53 bouyer Exp $
+$NetBSD: patch-base_nerd.c,v 1.3 2023/01/08 23:33:59 sekiya Exp $
 
-64bit time_t workaround
+64-bit time_t workaround
 
---- base/nerd.c.orig	2016-02-07 21:13:59.000000000 +0100
-+++ base/nerd.c	2016-02-07 21:14:15.000000000 +0100
-@@ -337,7 +337,7 @@
+--- base/nerd.c.orig	2022-11-17 05:52:51.000000000 +0900
++++ base/nerd.c	2023-01-09 06:59:24.364895991 +0900
+@@ -359,7 +359,7 @@
  	} else
  		return 0;
  
