@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.175 2023/01/08 19:35:18 ryoon Exp $
+$NetBSD: CHANGES-2023,v 1.176 2023/01/08 20:14:08 leot Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -197,7 +197,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/R-forecast to 8.20 [wen 2023-01-08]
 	Updated finance/R-tseries to 0.10.52 [wen 2023-01-08]
 	Updated devel/p5-Config-General to 2.65 [wen 2023-01-08]
-	Updated devel/p5-Config-INI-Reader-Ordere to 0.022 [wen 2023-01-08]
+	Updated devel/p5-Config-INI-Reader-Ordered to 0.022 [wen 2023-01-08]
 	Updated devel/p5-Config-INI to 0.028 [wen 2023-01-08]
 	Updated devel/p5-Data-Alias to 1.28 [wen 2023-01-08]
 	Updated audio/jack to 1.9.21nb1 [triaxx 2023-01-08]
