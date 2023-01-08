@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2022/12/23 13:34:52 taca Exp $
+@comment $NetBSD: PLIST,v 1.11.2.1 2023/01/08 15:57:24 bsiegert Exp $
 bin/bluecloth${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/bluecloth_ext.${RUBY_DLEXT}
@@ -111,4 +111,4 @@ ${GEM_LIBDIR}/spec/lib/helpers.rb
 ${GEM_LIBDIR}/spec/lib/matchers.rb
 ${GEM_LIBDIR}/spec/markdowntest_spec.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
-${PLIST.rubygem_man}man/man1/bluecloth.1
+${PLIST.rubygem_man}man/man1/bluecloth${RUBY_VER}.1

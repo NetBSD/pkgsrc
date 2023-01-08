@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2022/12/23 13:38:46 taca Exp $
+@comment $NetBSD: PLIST,v 1.2.2.1 2023/01/08 15:57:25 bsiegert Exp $
 bin/rdiscount${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
@@ -57,5 +57,5 @@ ${GEM_LIBDIR}/test/benchmark.txt
 ${GEM_LIBDIR}/test/markdown_test.rb
 ${GEM_LIBDIR}/test/rdiscount_test.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
-${PLIST.rubygem_man}man/man1/rdiscount.1
-${PLIST.rubygem_man}man/man7/markdown.7
+${PLIST.rubygem_man}man/man1/rdiscount${RUBY_VER}.1
+${PLIST.rubygem_man}man/man7/markdown${RUBY_VER}.7

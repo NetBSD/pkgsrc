@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2022/12/18 14:55:22 taca Exp $
+@comment $NetBSD: PLIST,v 1.5.2.1 2023/01/08 15:57:24 bsiegert Exp $
 bin/asciidoctor${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yardopts
@@ -100,4 +100,4 @@ ${GEM_LIBDIR}/lib/asciidoctor/writer.rb
 ${GEM_LIBDIR}/man/asciidoctor.1
 ${GEM_LIBDIR}/man/asciidoctor.adoc
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
-${PLIST.rubygem_man}man/man1/asciidoctor.1
+${PLIST.rubygem_man}man/man1/asciidoctor${RUBY_VER}.1
