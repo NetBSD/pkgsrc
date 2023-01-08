@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.120 2022/08/03 17:14:10 ryoon Exp $
+# $NetBSD: Makefile,v 1.121 2023/01/08 19:34:29 ryoon Exp $
 
-DISTNAME=	nsd-4.6.0
+DISTNAME=	nsd-4.6.1
 CATEGORIES=	net
 MASTER_SITES=	http://www.nlnetlabs.nl/downloads/nsd/
 
