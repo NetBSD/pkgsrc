@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22468 2023/01/08 03:41:13 wen Exp $
+$NetBSD: TODO,v 1.22469 2023/01/08 10:14:45 wiz Exp $
 
 Suggested new packages
 ======================
@@ -646,6 +646,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o felt-3.07 [wip]
 	o fet-6.0.1
 	o filerunner-14.06.18.10
+	o fish-3.6.0
 	o flashplayer-0.4.13
 	o flatbuffers-1.12.0
 	o flow-tools-0.411
@@ -864,6 +865,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o html2wml-0.4.11
 	o http_load-20140814
 	o hyperscan-5.4.0
+	o i3-4.22
 	o i3lock-2.13
 	o ibus-hangul-1.5.4
 	o icdprog-0.5
@@ -995,6 +997,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libtrace-4.0.16
 	o libvirt-2.3
 	o libxdg-basedir-1.2.3
+	o libxkbcommon-1.5.0
 	o libxml2-2.10.3 [several CVEs addressed]
 	o libzookeeper-3.7.0
 	o lincvs-2.1.4 [now called CrossVC]
@@ -1032,6 +1035,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o mate-system-monitor-1.24.2
 	o materia-gtk-theme-20210322
 	o matterircd-0.24.0
+	o mbedtls-3.2.1
 	o mbedtls1-1.3.22
 	o mbuf-20141227
 	o mbuffer-20210328
@@ -1064,6 +1068,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o mopher-0.6.0
 	o moserial-2.30.0
 	o mpcomplex-1.2.1
+	o mpfr-4.2.0
 	o mserv-devel-0.41
 	o mtail-1.2.0
 	o mujs-1.3.2
@@ -1087,6 +1092,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o nant-0.92
 	o nap-1.5.3
 	o nas-auscope-1.9.4
+	o ncdu-2.2.1
+	o ncurses-6.4
 	o ncview-2.1.8
 	o nedit-5.7
 	o netbt-hcidump-5.58
@@ -1094,6 +1101,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o newmail-1.0.2
 	o nickle-2.90
 	o nios2-binutils-2.36.1
+	o nodejs-19.4.0
 	o npm-8.19.1
 	o ns-3.14.1
 	o ns-plugger-common-5.1.3
@@ -1271,7 +1279,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o polkit-121
 	o polyml-5.9
 	o poppass-4.0.14
-	o poppler-22.12.0
+	o poppler-23.01.0
 	o posh-0.14.1
 	o postal-0.72
 	o postgres_exporter-0.9.0
@@ -1316,6 +1324,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-input-pad-1.4.2
 	o py-keybinder-0.3.2
 	o py-llvmlite-0.39.0
+	o py-mercurial-6.3.2
 	o py-musicbrainz-0.7.4
 	o py-musicbrainz-ngs-0.7.1
 	o py-newt-0.52.21
@@ -1477,6 +1486,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o swi-prolog-jpl-8.3.22
 	o swi-prolog-lite-8.3.22
 	o swi-prolog-packages-8.3.22
+	o syft-0.65.0
 	o sympa-6.2.70
 	o sysinfo-4.2.2
 	o system-tools-backends-2.10.1
@@ -1574,6 +1584,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
 	o vnstat-2.6
 	o wMosaic-3.8.22
+	o waf-2.0.25
 	o wandio-4.2.3
 	o wap-utils-1.4.1
 	o wbm-cyrus-imapd-1.6.8
