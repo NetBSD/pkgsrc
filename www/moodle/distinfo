@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.69 2022/09/30 10:54:56 wen Exp $
+$NetBSD: distinfo,v 1.70 2023/01/08 01:45:43 wen Exp $
 
-BLAKE2s (moodle-4.0.4.tgz) = b43c97afb1c1d5037bfee0f1a70ab072737a93edfcef29fba28785d63ab8dc44
-SHA512 (moodle-4.0.4.tgz) = 4284c05946dd07e43dbc7c584d7b3a69f62cfebf3cf6b2d049c6dea72ce184aaa0b4e6efb49817c8967ac8ff9dbce0ab2cf5fb2e96033d4368ed617ee258ffd8
-Size (moodle-4.0.4.tgz) = 61899291 bytes
+BLAKE2s (moodle-4.1.tgz) = e511e39b087ca608935b78c443213c9574f275ee135db0eaa03f92933989503f
+SHA512 (moodle-4.1.tgz) = 33a734df951880a774e81cb21983d282d98c7641b1c3a0db6013c30d407445992420754583b4d3ee8f619c774496d8fb19f1c12cfe898ca8cf060dfb234e3192
+Size (moodle-4.1.tgz) = 64706705 bytes

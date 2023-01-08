@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.96 2022/09/30 10:54:56 wen Exp $
+# $NetBSD: Makefile,v 1.97 2023/01/08 01:45:43 wen Exp $
 
-DISTNAME=	moodle-4.0.4
+DISTNAME=	moodle-4.1
 CATEGORIES=	www
-MASTER_SITES=	https://sourceforge.net/projects/moodle/files/Moodle/stable400/
+MASTER_SITES=	https://sourceforge.net/projects/moodle/files/Moodle/stable401/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	wen@NetBSD.org
