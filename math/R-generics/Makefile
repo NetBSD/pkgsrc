@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2021/06/05 15:14:01 mef Exp $
+# $NetBSD: Makefile,v 1.3 2023/01/08 03:27:50 wen Exp $
 
 R_PKGNAME=	generics
-R_PKGVER=	0.1.0
+R_PKGVER=	0.1.3
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Common S3 Generics not Provided by Base R Methods Related to Model Fitting
