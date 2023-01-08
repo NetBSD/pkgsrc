@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.80 2022/08/03 17:14:10 ryoon Exp $
+$NetBSD: distinfo,v 1.81 2023/01/08 19:34:29 ryoon Exp $
 
-BLAKE2s (nsd-4.6.0.tar.gz) = 6fbe465e9f173b721e8b9cffbf6eb926479eb48fed6150673a2a12a7aef3e47b
-SHA512 (nsd-4.6.0.tar.gz) = e9f035e42f47ac115cb2c1d0ebdef8b13b1feebca91d4f840d36904efb5ab44a817584b28c9d0d3e236fde1581e8283bcdd554a5463d4b5788329f9245414cbb
-Size (nsd-4.6.0.tar.gz) = 1273532 bytes
+BLAKE2s (nsd-4.6.1.tar.gz) = 1846a9cdd691063fe83470d666e70e4ca323ec9b145696b3d0cb300347e3d565
+SHA512 (nsd-4.6.1.tar.gz) = cab557a20cf8564cbf6e38405ca28b00baa6e14105527c3b16f49f57fed5e39cdb2bcd62999bad4aff2c69e0967bdba66a1eaa7b73a0d4d99d97535cc5860bfe
+Size (nsd-4.6.1.tar.gz) = 1281583 bytes
 SHA1 (patch-aa) = d9a423d5faa8da9a213b21fd2712225ac9645091
