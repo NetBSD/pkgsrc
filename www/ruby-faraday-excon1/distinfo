@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/01/09 07:25:08 taca Exp $
+
+BLAKE2s (faraday-excon-1.1.0.gem) = 6a04493f9108c3a26427b8113dda1da82b1d73a085f379b3d1c881c0777571fd
+SHA512 (faraday-excon-1.1.0.gem) = 323a0f10b4022401a38d6381850a76ce2de4517581eea008fe410a80cde867c8bb7f959d3fd9118d8b8e1b0639a1748869df463fa61ca3f74697e681625d852a
+Size (faraday-excon-1.1.0.gem) = 7168 bytes
