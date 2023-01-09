@@ -1,12 +1,14 @@
-# $NetBSD: Makefile,v 1.1 2021/08/30 15:21:44 taca Exp $
+# $NetBSD: Makefile,v 1.2 2023/01/09 12:47:03 taca Exp $
 
-DISTNAME=	faraday-httpclient-1.0.1
+DISTNAME=	faraday-httpclient-2.0.1
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/lostisland/faraday-httpclient
 COMMENT=	Faraday adapter for HTTPClient
 LICENSE=	mit
+
+DEPENDS+=	${RUBY_PKGPREFIX}-httpclient>=2.2:../../www/ruby-httpclient
 
 USE_LANGUAGES=	# none
 
