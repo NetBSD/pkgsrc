@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2020/11/11 16:50:17 jperkin Exp $
+# $NetBSD: Makefile,v 1.8 2023/01/09 15:43:33 vins Exp $
 
-DISTNAME=	inetutils-1.9.4
-PKGREVISION=	3
+DISTNAME=	inetutils-2.4
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GNU:=inetutils/}
 EXTRACT_SUFX=	.tar.xz
