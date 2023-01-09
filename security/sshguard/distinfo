@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:18:03 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/01/09 01:36:10 sekiya Exp $
 
-BLAKE2s (sshguard-1.5.tar.bz2) = 0deafa240b4ae53a5b1a7613e399264bfe2c0de9d89f175044d5720342103687
-SHA512 (sshguard-1.5.tar.bz2) = 6d17abccd94af9e7fb04a54477ff5686caa64dc36e2f2cbc4a8cd7bc293923daf2fee87fa7f2e247eba1b310abe68549e652ab3224c2d19822d2e8a0306e49e6
-Size (sshguard-1.5.tar.bz2) = 303767 bytes
-SHA1 (patch-man_sshguard.8) = f907d23f5fe3db16dd44128c821f2fe6f94fcb03
+BLAKE2s (sshguard-2.4.2.tar.gz) = de1d10f8d9f44d9844f171d4063aecc21067747709918e1e31b0da183380728d
+SHA512 (sshguard-2.4.2.tar.gz) = f2fe35180af8698d4b2053e9ffbf17df9f033b0c2fcc045caa085467d14174e17aa266d2ef3ce9536037e54f7d3ea42de9e32e7faee65612894294793082862a
+Size (sshguard-2.4.2.tar.gz) = 835431 bytes
+SHA1 (patch-configure) = d2cd0be8143c205089045825b82e496eb35dc511
