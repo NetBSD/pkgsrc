@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2023/01/03 14:42:53 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2023/01/09 14:12:40 wiz Exp $
 
-DISTNAME=	syft-0.64.0
+DISTNAME=	syft-0.65.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=anchore/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
