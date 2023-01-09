@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2020/01/18 21:50:19 jperkin Exp $
+# $NetBSD: Makefile,v 1.21 2023/01/09 00:14:06 sekiya Exp $
 #
 
 PKGNAME=	nagios-plugin-ldap-${PLUGINSVERSION}
@@ -17,7 +17,7 @@ BINARY_TARGET=	check_ldap
 
 CONFIGURE_ARGS+=	--with-ldap=yes
 
-.include "../../net/nagios-plugins/Makefile.plugin"
+.include "../../net/nagios-plugins/plugin.mk"
 .include "../../databases/openldap-client/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
