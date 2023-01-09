@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2022/06/28 11:35:27 wiz Exp $
+# $NetBSD: Makefile,v 1.90 2023/01/09 23:29:24 sekiya Exp $
 
 DISTNAME=		a2ps-4.14
 PKGREVISION=		15
@@ -8,6 +8,7 @@ MASTER_SITES=		${MASTER_SITE_GNU:=a2ps/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://www.gnu.org/software/a2ps/
 COMMENT=		Formats an ascii file for printing on a postscript printer
+LICENSE=		gnu-gpl-v3
 
 DEPENDS+=		psutils>=1.17:../../print/psutils
 
@@ -18,6 +19,8 @@ USE_LIBTOOL=		yes
 .include "../../mk/bsd.prefs.mk"
 
 CFLAGS.Darwin+=		-flat_namespace
+
+BUILD_DEFS+=		PAPERSIZE
 
 USE_TOOLS+=		file:run gmake lex mktemp:run perl:run
 CONFIGURE_ENV+=		file_prog=${FILE_CMD:Q}

@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.19 2021/10/26 11:12:02 nia Exp $
+$NetBSD: distinfo,v 1.20 2023/01/09 23:29:24 sekiya Exp $
 
 BLAKE2s (a2ps-4.14.tar.gz) = 6d039130746ecbf324c4122747aad3282f7f46f3fe6ed6ef2f76fe8e746a4449
 SHA512 (a2ps-4.14.tar.gz) = fd6ac8ab47d789114c283e8ca508f7f56feabd1a189f4ac772cad9e6be7e3791e210892cfffd04ad1d39efe4b15386b2e61bf4cd56b70ed581c0554f36bfe06f
 Size (a2ps-4.14.tar.gz) = 2552507 bytes
 SHA1 (patch-CVE-2001-1593_1) = d0ce811248c33c5df6952f84176c2901ca4bd176
-SHA1 (patch-CVE-2001-1593_2) = f3a40104b0c510480ce5107a8acf2924d4ef5974
+SHA1 (patch-CVE-2001-1593_2) = 65c0aad5c75ae6694f1586e3bfa8d73ec8abeed1
 SHA1 (patch-CVE-2014-0466_1) = fa77ad336e307678e0c649e049b57d1fbc8c492f
 SHA1 (patch-CVE-2014-0466_2) = 1abc6d26bdf03d859cec53afc3f5c363942d9385
 SHA1 (patch-CVE-2015-8107) = 404b291b0c22b67aa4310f86e5aadea5160d1ea7
-SHA1 (patch-aa) = 6317b6abca697388538fc705037da55379a4e1e1
-SHA1 (patch-ab) = 7b1f1e3ed2af47e7d9864ec2dbcd7d105f93632a
+SHA1 (patch-aa) = 53d1fab4aea32cc3c21d1ec80f10b932efc7c2ab
+SHA1 (patch-ab) = 59cae5c8aba69585a47f425a2460295413f3707e
 SHA1 (patch-ac) = 8e09c4c3b320b58bf12c4266d4d22977b5f9b826
-SHA1 (patch-lib_path-concat.c) = b345a7b16559315223dcbb182e92feccca7e6e2f
+SHA1 (patch-lib_path-concat.c) = f4342570191d9333923950a4fe808d827acc775e
