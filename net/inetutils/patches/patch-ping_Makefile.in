@@ -1,0 +1,18 @@
+$NetBSD: patch-ping_Makefile.in,v 1.1 2023/01/09 15:43:33 vins Exp $
+
+Let pkgsrc set SUID_PERMS
+
+--- ping/Makefile.in.orig	2022-10-25 21:16:11.000000000 +0000
++++ ping/Makefile.in
+@@ -1991,10 +1991,9 @@ uninstall-am: uninstall-binPROGRAMS
+ 
+ install-ping-hook:
+ 	-@for x in $(bin_PROGRAMS); do \
+-	$(INSTALL_PROGRAM) $(SUIDMODE) $(AM_INSTALL_PROGRAM_FLAGS) $$x $(DESTDIR)$(bindir)/`echo $$x|sed '$(transform)'` ; OUTCOME=$$?; \
++	$(INSTALL_PROGRAM) $(AM_INSTALL_PROGRAM_FLAGS) $$x $(DESTDIR)$(bindir)/`echo $$x|sed '$(transform)'` ; OUTCOME=$$?; \
+ 	if test $$OUTCOME -ne 0; then \
+ 	  echo "WARNING: Failed to install $$x (exit code $$OUTCOME)"; \
+-	  echo "NOTE: This program often needs to be owned by root."; \
+ 	fi \
+ 	done
+ 
