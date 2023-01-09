@@ -1,0 +1,5 @@
+Faraday::NetHttpPersistent
+
+This gem is a Faraday adapter for the Net::HTTP::Persistent gem.
+
+This is version 1.x package.
