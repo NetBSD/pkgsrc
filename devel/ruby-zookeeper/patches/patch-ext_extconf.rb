@@ -1,8 +1,8 @@
-$NetBSD: patch-ext_extconf.rb,v 1.2 2023/01/03 13:56:31 taca Exp $
+$NetBSD: patch-ext_extconf.rb,v 1.3 2023/01/09 05:42:32 taca Exp $
 
 Link pkgsrc libzookeeper instead of the embedded build.
 
---- ext/extconf.rb.orig	2023-01-02 08:23:51.434066414 +0000
+--- ext/extconf.rb.orig	2023-01-07 05:32:43.179101483 +0000
 +++ ext/extconf.rb
 @@ -2,30 +2,6 @@ require 'mkmf'
  require 'rbconfig'
@@ -60,7 +60,7 @@ Link pkgsrc libzookeeper instead of the embedded build.
 -  else
 -    puts "Building zkc."
 -
--    unless File.exists?('c')
+-    unless File.exist?('c')
 -      safe_sh "tar xzf #{BUNDLE} 2>&1"
 -      PATCHES.each do |patch|
 -        safe_sh "patch -p0 < #{patch} 2>&1"
@@ -89,7 +89,7 @@ Link pkgsrc libzookeeper instead of the embedded build.
 -    %w[a la dylib].each do |ext|
 -      origin_lib_name = "libzookeeper_#{stmt}.#{ext}"
 -      dest_lib_name = "libzookeeper_#{stmt}_gem.#{ext}"
--      system("cp -f #{origin_lib_name} #{dest_lib_name}") if File.exists?(origin_lib_name)
+-      system("cp -f #{origin_lib_name} #{dest_lib_name}") if File.exist?(origin_lib_name)
 -    end
 -  end
 -end
