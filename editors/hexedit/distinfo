@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.17 2021/10/26 10:21:30 nia Exp $
+$NetBSD: distinfo,v 1.18 2023/01/09 21:08:06 fcambus Exp $
 
-BLAKE2s (hexedit-1.5.tar.gz) = 7278d952152b61cbbb1e41574b8ecf4f9d52e67f5e862e612783aa9a92d89bee
-SHA512 (hexedit-1.5.tar.gz) = 9d8e5c8c0cda0af17ffeaf528e3dacd7fc2878dfc0755cb055dae5c56f05c961353c1d1723b05897314b49a44a6eb96de5d3a599c6b29967425507eea7cc7ca5
-Size (hexedit-1.5.tar.gz) = 30544 bytes
+BLAKE2s (hexedit-1.6.tar.gz) = f6091ac224f2c77085f042b7978a8ca2781f71092181bad216f415646aeee544
+SHA512 (hexedit-1.6.tar.gz) = 9783406f253a67fe048ec12306df1a601b7ba92cd7a0399ad2f103aed5a3164cd21ad7c1d547a4c55192cfb7da2b2517152015a4c3db402a9217548b435f602d
+Size (hexedit-1.6.tar.gz) = 31085 bytes
 SHA1 (patch-ae) = 49627dd5704fb9cd7b6ac08d01d3324ff2d2babd
