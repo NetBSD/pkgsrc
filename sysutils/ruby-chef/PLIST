@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2022/12/04 14:56:35 taca Exp $
+@comment $NetBSD: PLIST,v 1.14 2023/01/09 13:03:17 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
@@ -880,6 +880,7 @@ ${GEM_LIBDIR}/spec/data/checksum_cache/chef-file--tmp-chef-rendered-template2010
 ${GEM_LIBDIR}/spec/data/checksum_cache/chef-file--tmp-chef-rendered-template20100929-10863-ufy6g3-0
 ${GEM_LIBDIR}/spec/data/checksum_cache/chef-file--tmp-chef-rendered-template20100929-10863-x2d6j9-0
 ${GEM_LIBDIR}/spec/data/checksum_cache/chef-file--tmp-chef-rendered-template20100929-10863-xi0l6h-0
+${GEM_LIBDIR}/spec/data/chef_guid
 ${GEM_LIBDIR}/spec/data/client.d_00/00-foo.rb
 ${GEM_LIBDIR}/spec/data/client.d_00/01-bar.rb
 ${GEM_LIBDIR}/spec/data/client.d_00/02-strings.rb
@@ -1012,6 +1013,7 @@ ${GEM_LIBDIR}/spec/data/mixin/invalid_data.rb
 ${GEM_LIBDIR}/spec/data/mixin/real_data.rb
 ${GEM_LIBDIR}/spec/data/nested.json
 ${GEM_LIBDIR}/spec/data/nodes/default.rb
+${GEM_LIBDIR}/spec/data/nodes/mcwfhpowell.json
 ${GEM_LIBDIR}/spec/data/nodes/test.example.com.rb
 ${GEM_LIBDIR}/spec/data/nodes/test.rb
 ${GEM_LIBDIR}/spec/data/null_config.rb
@@ -1175,6 +1177,13 @@ ${GEM_LIBDIR}/spec/functional/assets/inittest
 ${GEM_LIBDIR}/spec/functional/assets/mytest-1.0-1.noarch.rpm
 ${GEM_LIBDIR}/spec/functional/assets/mytest-2.0-1.noarch.rpm
 ${GEM_LIBDIR}/spec/functional/assets/testchefsubsys
+${GEM_LIBDIR}/spec/functional/assets/yumrepo-empty/repodata/01a3b489a465bcac22a43492163df43451dc6ce47d27f66de289756b91635523-filelists.sqlite.bz2
+${GEM_LIBDIR}/spec/functional/assets/yumrepo-empty/repodata/401dc19bda88c82c403423fb835844d64345f7e95f5b9835888189c03834cc93-filelists.xml.gz
+${GEM_LIBDIR}/spec/functional/assets/yumrepo-empty/repodata/5dc1e6e73c84803f059bb3065e684e56adfc289a7e398946574d79dac6643945-primary.sqlite.bz2
+${GEM_LIBDIR}/spec/functional/assets/yumrepo-empty/repodata/6bf9672d0862e8ef8b8ff05a2fd0208a922b1f5978e6589d87944c88259cb670-other.xml.gz
+${GEM_LIBDIR}/spec/functional/assets/yumrepo-empty/repodata/7c36572015e075add2b38b900837bcdbb8a504130ddff49b2351a7fc0affa3d4-other.sqlite.bz2
+${GEM_LIBDIR}/spec/functional/assets/yumrepo-empty/repodata/dabe2ce5481d23de1f4f52bdcfee0f9af98316c9e0de2ce8123adeefa0dd08b9-primary.xml.gz
+${GEM_LIBDIR}/spec/functional/assets/yumrepo-empty/repodata/repomd.xml
 ${GEM_LIBDIR}/spec/functional/assets/yumrepo/chef_rpm-1.10-1.aarch64.rpm
 ${GEM_LIBDIR}/spec/functional/assets/yumrepo/chef_rpm-1.10-1.i686.rpm
 ${GEM_LIBDIR}/spec/functional/assets/yumrepo/chef_rpm-1.10-1.ppc64.rpm
@@ -1295,6 +1304,7 @@ ${GEM_LIBDIR}/spec/functional/win32/version_info_spec.rb
 ${GEM_LIBDIR}/spec/functional/win32/versions_spec.rb
 ${GEM_LIBDIR}/spec/integration/client/client_spec.rb
 ${GEM_LIBDIR}/spec/integration/client/exit_code_spec.rb
+${GEM_LIBDIR}/spec/integration/client/fips_spec.rb
 ${GEM_LIBDIR}/spec/integration/client/ipv6_spec.rb
 ${GEM_LIBDIR}/spec/integration/compliance/compliance_spec.rb
 ${GEM_LIBDIR}/spec/integration/ohai/ohai_spec.rb
