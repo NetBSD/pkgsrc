@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.229 2023/01/09 12:43:21 vins Exp $
+$NetBSD: CHANGES-2023,v 1.230 2023/01/09 12:44:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -260,3 +260,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/bsdfetch to 1.1.0 [vins 2023-01-09]
 	Updated databases/py-redis to 4.4.1 [adam 2023-01-09]
 	Updated x11/autocutsel to 0.10.1 [vins 2023-01-09]
+	Updated www/ruby-faraday-excon to 2.1.0 [taca 2023-01-09]
