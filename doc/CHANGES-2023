@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.203 2023/01/09 07:37:35 taca Exp $
+$NetBSD: CHANGES-2023,v 1.204 2023/01/09 07:40:00 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -234,3 +234,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added www/ruby-faraday-net_http1 version 1.0.1 [taca 2023-01-09]
 	Added www/ruby-faraday-net_http_persistent1 version 1.2.0 [taca 2023-01-09]
 	Added www/ruby-faraday-patron1 version 1.0.0 [taca 2023-01-09]
+	Added www/ruby-faraday-rack1 version 1.0.0 [taca 2023-01-09]
