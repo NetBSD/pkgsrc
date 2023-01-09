@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2019/11/02 22:38:04 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2023/01/09 06:42:16 taca Exp $
 
 DISTNAME=	oily_png-1.2.1
 CATEGORIES=	graphics
 
 MAINTAINER=	taca@NetBSD.org
-HOMEPAGE=	https://github.com/wvanbergen/chunky_png/wiki
+HOMEPAGE=	https://github.com/wvanbergen/oily_png
 COMMENT=	Native mixin to speed up ChunkyPNG
 LICENSE=	mit
 
