@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.7 2020/09/03 08:58:42 prlw1 Exp $
+# $NetBSD: builtin.mk,v 1.8 2023/01/09 13:25:11 wiz Exp $
 
 BUILTIN_PKG:=	mpfr
 
@@ -29,7 +29,7 @@ MAKEVARS+=		IS_BUILTIN.mpfr
 ### a package name to represent the built-in package.
 ###
 .if !defined(BUILTIN_PKG.mpfr) && \
-    !empty(IS_BUILTIN.mpfr:M[yY][eE][sS]) && \
+    ${IS_BUILTIN.mpfr:tl} == yes && \
     empty(H_MPFR:M__nonexistent__)
 BUILTIN_VERSION.mpfr!=	${BUILTIN_VERSION_SCRIPT.mpfr} ${H_MPFR}
 BUILTIN_PKG.mpfr=	mpfr-${BUILTIN_VERSION.mpfr}
@@ -45,10 +45,10 @@ MAKEVARS+=		BUILTIN_PKG.mpfr
 USE_BUILTIN.mpfr=	no
 .  else
 USE_BUILTIN.mpfr=	${IS_BUILTIN.mpfr}
-.    if defined(BUILTIN_PKG.mpfr) && !empty(IS_BUILTIN.mpfr:M[yY][eE][sS])
+.    if defined(BUILTIN_PKG.mpfr) && ${IS_BUILTIN.mpfr:tl} == yes
 USE_BUILTIN.mpfr=	yes
 .      for _dep_ in ${BUILDLINK_API_DEPENDS.mpfr}
-.        if !empty(USE_BUILTIN.mpfr:M[yY][eE][sS])
+.        if ${USE_BUILTIN.mpfr:tl} == yes
 USE_BUILTIN.mpfr!=	\
 	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.mpfr:Q}; then	\
 		${ECHO} yes;						\
@@ -63,8 +63,8 @@ USE_BUILTIN.mpfr!=	\
 MAKEVARS+=		USE_BUILTIN.mpfr
 
 CHECK_BUILTIN.mpfr?=	no
-.if !empty(CHECK_BUILTIN.mpfr:M[Nn][Oo])
-.  if !empty(USE_BUILTIN.mpfr:M[Yy][Ee][Ss])
+.if ${CHECK_BUILTIN.mpfr:tl} == no
+.  if ${USE_BUILTIN.mpfr:tl} == yes
 MPFR_INCLUDE=		${H_MPFR:H}
 BUILDLINK_INCDIRS.mpfr=	${MPFR_INCLUDE}
 BUILDLINK_LIBDIRS.mpfr=	lib${LIBABISUFFIX}
