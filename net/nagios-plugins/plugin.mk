@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.plugin,v 1.5 2019/11/03 11:45:43 rillig Exp $
+# $NetBSD: plugin.mk,v 1.1 2023/01/09 00:14:06 sekiya Exp $
 #
 
 INSTALLATION_DIRS+=	libexec/nagios
