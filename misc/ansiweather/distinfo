@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/10/26 10:58:56 nia Exp $
+$NetBSD: distinfo,v 1.15 2023/01/09 10:17:13 fcambus Exp $
 
-BLAKE2s (ansiweather-1.18.0.tar.gz) = 1e42eb4f834a0bb7d8eec26af5d84e731c0ef15b769435743ed0275d6479ac50
-SHA512 (ansiweather-1.18.0.tar.gz) = 020240728e762e5055bb01b3ed945ed46aba20a550571c6f80177c6980278bd4c45d199bb468bbc3cc1fbcfc95088c8c4314b88793586d1077cd25eb2297508f
-Size (ansiweather-1.18.0.tar.gz) = 18444 bytes
+BLAKE2s (ansiweather-1.19.0.tar.gz) = 776b6234a0f88ad7d6c17678338b48af0c67dd4ca4982022c756cf80f0df24d2
+SHA512 (ansiweather-1.19.0.tar.gz) = 1dc521c904041a698fbb1a3a78f5a0b7d5bdc731258ab9cc384ee1a9f750c60723b0038288d7d98875672d167614f7bb8ca69ff1f7d38a28d52916afd5bda0a2
+Size (ansiweather-1.19.0.tar.gz) = 14232 bytes
