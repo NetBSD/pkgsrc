@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.30 2022/05/28 08:27:27 wiz Exp $
+$NetBSD: distinfo,v 1.31 2023/01/09 13:20:33 wiz Exp $
 
-BLAKE2s (libxkbcommon-1.4.1.tar.xz) = 6bda1eb4e262ca1e2a6bcb7d37f80c015a99f0335614a3319ac40cac5fb9949a
-SHA512 (libxkbcommon-1.4.1.tar.xz) = 757b340aeab6d187917807a88015b5113475ab2172aaaa8e530b40ea60619b3fbdfa668fd62707d66ed8fb763e68fee19394fcbd519af7c01d8975c59fdf0d89
-Size (libxkbcommon-1.4.1.tar.xz) = 471824 bytes
+BLAKE2s (libxkbcommon-1.5.0.tar.xz) = 8aebec0d715a93b8ae1563cdf5facc98da23142befbaf26a4d9b1ce34fc49cc1
+SHA512 (libxkbcommon-1.5.0.tar.xz) = bbba6665f052c04c7450413cc5e2badd6bfd41326b0e4c60e3ec01d730cae695fd34ce2662b8a91ece7a76b974a0ea330f7462dd5d2db148b0d0da26264ced9c
+Size (libxkbcommon-1.5.0.tar.xz) = 472700 bytes
