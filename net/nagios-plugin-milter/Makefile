@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2020/01/26 17:31:52 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2023/01/09 00:42:46 sekiya Exp $
 #
 
+DISTNAME=	check_milter-0.2
 PKGNAME=	nagios-plugin-milter-${DISTNAME:C/.*-//}
 PKGREVISION=	1
-DISTNAME=	check_milter-0.2
 CATEGORIES=	net
 MASTER_SITES=	http://ftp.espci.fr/pub/nagios-local/
 EXTRACT_SUFX=	.tgz
@@ -24,9 +24,9 @@ PKG_GROUPS=		${NAGIOS_GROUP}
 #
 SMMSP_USER?=			smmsp
 BUILD_DEFS+=			SMMSP_USER
-PKG_GROUPS_VARS=		SMMSP_USER
+PKG_GROUPS_VARS+=		SMMSP_USER
 PKG_USERS_VARS=			SMMSP_USER
-PKG_GROUPS=			${SMMSP_USER}
+PKG_GROUPS+=			${SMMSP_USER}
 PKG_USERS=			${SMMSP_USER}:${SMMSP_USER}
 PKG_GECOS.${SMMSP_USER}=	Sendmail Message Submission Program
 
