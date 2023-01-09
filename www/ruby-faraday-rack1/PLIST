@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2023/01/09 07:38:58 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/LICENSE.md
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/lib/faraday/adapter/rack.rb
+${GEM_LIBDIR}/lib/faraday/rack.rb
+${GEM_LIBDIR}/lib/faraday/rack/version.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
