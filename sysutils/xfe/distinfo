@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.17 2021/10/26 11:20:27 nia Exp $
+$NetBSD: distinfo,v 1.18 2023/01/09 19:45:51 vins Exp $
 
-BLAKE2s (xfe-1.43.2.tar.gz) = 3cf7d380b58bb30c5f6bf8f7b0063840a8fa746ea203829b9c050753c3f811e3
-SHA512 (xfe-1.43.2.tar.gz) = ad7b450d0828747f801219c23824b0751fc2a7f0eea791369c4adb3090ffe1279056fa8804ef97b25a2f810e00d37357efc962dc9d4087c3d7cc5f8ffb37d51d
-Size (xfe-1.43.2.tar.gz) = 2834576 bytes
-SHA1 (patch-intl_Makefile.in) = 521eeb9b72c4a48af6cc17819c8def558364a501
+BLAKE2s (xfe-1.45.tar.xz) = 6a9b0c4bc2b12b63adc60f1c0de545c5bb00b14d94fe0a870a79707656681e69
+SHA512 (xfe-1.45.tar.xz) = 3d511fec3070b39c08b83c19178890dea6f7a306dee0c51a98b6ed8eafc5148973da6d803beb2053be131d389dd74eef829459fe39e212f53b983b19d5d1cb4f
+Size (xfe-1.45.tar.xz) = 1375220 bytes
