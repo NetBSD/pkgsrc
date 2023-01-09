@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.237 2023/01/09 13:10:06 taca Exp $
+$NetBSD: CHANGES-2023,v 1.238 2023/01/09 13:20:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -270,3 +270,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/ruby-chef-config to 18.1.0 [taca 2023-01-09]
 	Updated sysutils/ruby-chef to 18.1.0 [taca 2023-01-09]
 	Added sysutils/ruby-repofetch version 0.4.2 [taca 2023-01-09]
+	Updated x11/libxkbcommon to 1.5.0 [wiz 2023-01-09]
