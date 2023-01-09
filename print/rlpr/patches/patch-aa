@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1 2010/02/19 18:36:35 joerg Exp $
+$NetBSD: patch-aa,v 1.2 2023/01/09 23:18:55 sekiya Exp $
+
+Add ${DESTDIR} support.
 
 --- po/Makefile.in.in.orig	2010-02-19 18:34:39.000000000 +0000
 +++ po/Makefile.in.in
