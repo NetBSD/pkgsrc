@@ -1,0 +1,14 @@
+Nerd Fonts patches developer targeted fonts with a high number of
+glyphs (icons). Specifically to add a high number of extra glyphs
+from popular 'iconic fonts' such as Font Awesome, Devicons,
+Octicons, and others.
+
+Code New Roman is derived from Code New Roman, a monospaced font.
+Code New Roman is based on Mac OS Western New Roman, MONACO,
+Windows Consolas/Lusida Consolas, ABeeZee and Bitstream Vera Sans Mono.
+This font display allowed a design with proportions closer to normal text
+than traditional monospaced fonts like Courier. This allows for more
+comfortably reading of extended text on screen. OpenType features include
+hanging or lining numerals; slashed, dotted and normal zeros; and alternative
+shapes for a number of lowercase letters. The look of text can be tuned to
+personal taste by varying the number of bars and waves.
