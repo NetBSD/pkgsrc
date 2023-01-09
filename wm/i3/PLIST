@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2021/09/12 07:22:47 nia Exp $
+@comment $NetBSD: PLIST,v 1.7 2023/01/09 13:26:42 wiz Exp $
 bin/i3
 bin/i3-config-wizard
 bin/i3-dmenu-desktop
@@ -31,6 +31,7 @@ share/applications/i3.desktop
 share/doc/i3/LICENSE
 share/doc/i3/bigpicture.png
 share/doc/i3/debugging.html
+share/doc/i3/gaps1920.png
 share/doc/i3/hacking-howto.html
 share/doc/i3/i3-sync-working.png
 share/doc/i3/i3-sync.png
