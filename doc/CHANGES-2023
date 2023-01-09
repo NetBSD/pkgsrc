@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.244 2023/01/09 15:50:34 fcambus Exp $
+$NetBSD: CHANGES-2023,v 1.245 2023/01/09 16:00:12 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -277,3 +277,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/ocaml-findlib to 1.9.6 [wiz 2023-01-09]
 	Updated net/inetutils to 2.4 [vins 2023-01-09]
 	Updated textproc/jo to 1.9 [fcambus 2023-01-09]
+	Updated devel/byacc to 20221229 [fcambus 2023-01-09]
