@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2022/12/03 06:41:42 taca Exp $
+# $NetBSD: Makefile,v 1.7 2023/01/09 08:04:08 taca Exp $
 
 DISTNAME=	redmine-${RM_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/redmine/redmine${RM_VER}/}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://www.redmine.org/releases/
 
@@ -28,7 +29,6 @@ DEPENDS+=	${RUBY_PKGPREFIX}-actionpack${RUBY_RAILS}-xml_parser>=2.0:../../textpr
 DEPENDS+=	${RUBY_PKGPREFIX}-roadie-rails${RUBY_RAILS}>=3.0.0<3.1:../../mail/ruby-roadie-rails
 DEPENDS+=	${RUBY_PKGPREFIX}-marcel>=1.0.0:../../devel/ruby-marcel
 DEPENDS+=	${RUBY_PKGPREFIX}-mail>=2.7.1<2.8:../../mail/ruby-mail
-DEPENDS+=	${RUBY_PKGPREFIX}-csv>=3.2.0<3.3:../../textproc/ruby-csv
 DEPENDS+=	${RUBY_PKGPREFIX}-nokogiri>=1.13.4<1.14:../../textproc/ruby-nokogiri
 DEPENDS+=	${RUBY_PKGPREFIX}-i18n>=1.10.0<1.11:../../devel/ruby-i18n
 DEPENDS+=	${RUBY_PKGPREFIX}-rbpdf>=1.20.0<1.21:../../print/ruby-rbpdf
@@ -49,7 +49,9 @@ DEPENDS+=	${RUBY_PKGPREFIX}-sanitize>=6.0<7:../../textproc/ruby-sanitize
 
 .if ${RUBY_VER} == 27
 DEPENDS+=	${RUBY_PKGPREFIX}-net-pop>=0.1.1<0.2:../../net/ruby-net-pop
-.elif ${RUBY_VER} != 31
+.endif
+.if ${RUBY_VER} < 31
+DEPENDS+=	${RUBY_PKGPREFIX}-csv>=3.2.0<3.3:../../textproc/ruby-csv
 DEPENDS+=	${RUBY_PKGPREFIX}-net-imap>=0.2.2<0.3:../../net/ruby-net-imap
 DEPENDS+=	${RUBY_PKGPREFIX}-net-smtp>=0.3.0<0.4:../../net/ruby-net-smtp
 .endif
