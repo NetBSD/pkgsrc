@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.35 2023/01/08 23:33:58 sekiya Exp $
+$NetBSD: distinfo,v 1.36 2023/01/09 04:29:12 sekiya Exp $
 
 BLAKE2s (nagios-4.4.9.tar.gz) = 738b4b0f1aea7558d8197a11d0b6d03c7491bb5cdc9d9e52f6d0cb0a00bd534e
 SHA512 (nagios-4.4.9.tar.gz) = 59279cd35f329394481e4b3d3f5c3e2418125adeef98f0a8551c2ccf62720459e54c18f8a914be72fb5c2300ab7a69e115f262bfe3aedcf7226380621b32cd8c
@@ -10,7 +10,7 @@ SHA1 (patch-Makefile.in) = 12f06a27510f8a082d0c3780e3f5fe0f9cd74c1c
 SHA1 (patch-base_Makefile.in) = 77d69a521983a0dedb7cfdc84ef6b92b9a14c3b4
 SHA1 (patch-base_checks.c) = cbc58f44597d5971ee5a8d061b38d8a81bf8cc7e
 SHA1 (patch-base_events.c) = c67a781cee688a527fb2d5cc39e6481b8cf6caf2
-SHA1 (patch-base_logging.c) = 0427dfc6f38c7c04f30d8ce99c35ef6f66fbd6b5
+SHA1 (patch-base_logging.c) = 9cafe98c56c80e47b15ed8593fabc614eea8bcc9
 SHA1 (patch-base_nerd.c) = c000dfbda459083a551955250588ec36fb1e6715
 SHA1 (patch-cgi_Makefile.in) = 3b79d2b8f9c52aee6b6fd76409607cac83893d7d
 SHA1 (patch-cgi_avail.c) = 1689eb09fb3213c61a9490a33ddac2d09e32e8ce
