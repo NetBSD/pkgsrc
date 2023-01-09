@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/01/09 08:06:44 taca Exp $
+
+BLAKE2s (octokit-4.25.1.gem) = fe9fc3cef0b2b88159e27f4418eafd7af5e38fbdc39c34ada8d9a2017f05aeb9
+SHA512 (octokit-4.25.1.gem) = 4b85a9015d086c571afbe58effcd1b3eabb811fb3f79f8a83398a960273f18b4a8f65bde5eb42ce19a23adee022946252ee13541163753fe6b56f88f5689a3aa
+Size (octokit-4.25.1.gem) = 86016 bytes
