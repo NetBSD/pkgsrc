@@ -1,4 +1,4 @@
-$NetBSD: patch-gtk_build-intel-lib.sh,v 1.3 2022/07/20 05:03:06 dbj Exp $
+$NetBSD: patch-gtk_build-intel-lib.sh,v 1.4 2023/01/09 18:01:27 he Exp $
 
 Avoid pkgsrc libtool on Darwin.
 
@@ -35,3 +35,12 @@ On NetBSD, build intel lib as if it was FreeBSD
  # When building for architectures other than x86 or x86_64, I remove the
  # section titled "Determine host architecture" in
  # IntelRDFPMathLib20U1/LIBRARY/makefile.iml_head, and replace it with a simple
+@@ -56,7 +76,7 @@ patch -p0 <../intel-lib-linux.patch
+ # Of course, proceed with caution. Your mileage may vary.
+ 
+ case `uname -m` in
+-  armv7|armv7l|i386|ppc)
++  armv7|armv7l|i386|ppc|macppc)
+     patch -p0 <../intel-lib-unknown-32bit.patch
+     ;;
+   aarch64|arm64|i86pc)
