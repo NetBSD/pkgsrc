@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2022/08/24 15:56:23 taca Exp $
+@comment $NetBSD: PLIST,v 1.13 2023/01/09 08:22:20 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/CONTRIBUTING.md
@@ -10,11 +10,12 @@ ${GEM_LIBDIR}/lib/octokit.rb
 ${GEM_LIBDIR}/lib/octokit/arguments.rb
 ${GEM_LIBDIR}/lib/octokit/authentication.rb
 ${GEM_LIBDIR}/lib/octokit/client.rb
+${GEM_LIBDIR}/lib/octokit/client/actions_artifacts.rb
 ${GEM_LIBDIR}/lib/octokit/client/actions_secrets.rb
+${GEM_LIBDIR}/lib/octokit/client/actions_workflow_jobs.rb
 ${GEM_LIBDIR}/lib/octokit/client/actions_workflow_runs.rb
 ${GEM_LIBDIR}/lib/octokit/client/actions_workflows.rb
 ${GEM_LIBDIR}/lib/octokit/client/apps.rb
-${GEM_LIBDIR}/lib/octokit/client/authorizations.rb
 ${GEM_LIBDIR}/lib/octokit/client/checks.rb
 ${GEM_LIBDIR}/lib/octokit/client/commit_branches.rb
 ${GEM_LIBDIR}/lib/octokit/client/commit_comments.rb
@@ -59,6 +60,7 @@ ${GEM_LIBDIR}/lib/octokit/client/service_status.rb
 ${GEM_LIBDIR}/lib/octokit/client/source_import.rb
 ${GEM_LIBDIR}/lib/octokit/client/stats.rb
 ${GEM_LIBDIR}/lib/octokit/client/statuses.rb
+${GEM_LIBDIR}/lib/octokit/client/tokens.rb
 ${GEM_LIBDIR}/lib/octokit/client/traffic.rb
 ${GEM_LIBDIR}/lib/octokit/client/users.rb
 ${GEM_LIBDIR}/lib/octokit/configurable.rb
@@ -76,7 +78,6 @@ ${GEM_LIBDIR}/lib/octokit/error.rb
 ${GEM_LIBDIR}/lib/octokit/gist.rb
 ${GEM_LIBDIR}/lib/octokit/middleware/follow_redirects.rb
 ${GEM_LIBDIR}/lib/octokit/organization.rb
-${GEM_LIBDIR}/lib/octokit/preview.rb
 ${GEM_LIBDIR}/lib/octokit/rate_limit.rb
 ${GEM_LIBDIR}/lib/octokit/repo_arguments.rb
 ${GEM_LIBDIR}/lib/octokit/repository.rb
