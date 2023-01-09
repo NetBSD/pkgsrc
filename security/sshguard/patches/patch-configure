@@ -1,0 +1,33 @@
+$NetBSD: patch-configure,v 1.1 2023/01/09 01:36:10 sekiya Exp $
+
+Fix portability.
+
+--- configure.orig	2021-03-16 02:38:07.000000000 +0000
++++ configure
+@@ -4947,7 +4947,7 @@ fi
+ 
+ done
+ 
+-if test "$capsicum_found" == "candidate"; then :
++if test "$capsicum_found" = "candidate"; then :
+   for ac_func in cap_enter cap_rights_limit
+ do :
+ 
+@@ -5031,7 +5031,7 @@ fi
+ done
+ 
+ fi
+-if test "$capsicum_found" == "yes"; then :
++if test "$capsicum_found" = "yes"; then :
+ 
+ $as_echo "#define CAPSICUM 1" >>confdefs.h
+ 
+@@ -5088,7 +5088,7 @@ else
+   BUILD_MAN_FALSE=
+ fi
+ 
+-if test "$RST2MAN_PROG" == "no"; then :
++if test "$RST2MAN_PROG" = "no"; then :
+   { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: rst2man not found; using pre-built man pages" >&5
+ $as_echo "$as_me: WARNING: rst2man not found; using pre-built man pages" >&2;}
+ fi

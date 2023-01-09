@@ -1,3 +1,17 @@
-@comment $NetBSD: PLIST,v 1.1 2014/07/26 19:57:44 tron Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/01/09 01:36:10 sekiya Exp $
+libexec/sshg-blocker
+libexec/sshg-fw-firewalld
+libexec/sshg-fw-hosts
+libexec/sshg-fw-ipfilter
+libexec/sshg-fw-ipfw
+libexec/sshg-fw-ipset
+libexec/sshg-fw-iptables
+libexec/sshg-fw-nft-sets
+libexec/sshg-fw-null
+libexec/sshg-fw-pf
+libexec/sshg-logtail
+libexec/sshg-parser
+man/man7/sshguard-setup.7
 man/man8/sshguard.8
 sbin/sshguard
+share/examples/rc.d/sshguard
