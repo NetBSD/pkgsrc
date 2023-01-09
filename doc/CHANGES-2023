@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.215 2023/01/09 08:27:13 vins Exp $
+$NetBSD: CHANGES-2023,v 1.216 2023/01/09 08:30:56 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -246,3 +246,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/ruby-jekyll-gist to 1.5.0nb1 [taca 2023-01-09]
 	Updated devel/ruby-octokit to 6.0.1 [taca 2023-01-09]
 	Updated net/openrsync to 0.20220508 [vins 2023-01-09]
+	Updated www/ruby-sawyer to 0.9.2nb1 [taca 2023-01-09]
