@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2023/01/08 00:08:29 wen Exp $
+# $NetBSD: Makefile,v 1.36 2023/01/09 09:16:45 wiz Exp $
 
 DISTNAME=	HTTP-Message-6.44
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=HTTP/}
 
@@ -12,6 +13,7 @@ LICENSE=	${PERL5_LICENSE}
 
 CONFLICTS+=	p5-libwww<6.00
 
+DEPENDS+=	p5-Clone>=0.46:../../devel/p5-Clone
 DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
 DEPENDS+=	p5-HTML-Parser>=3.33:../../www/p5-HTML-Parser
 DEPENDS+=	p5-HTTP-Date>=6:../../www/p5-HTTP-Date
@@ -19,6 +21,7 @@ DEPENDS+=	p5-Encode-Locale>=1.02:../../textproc/p5-Encode-Locale
 DEPENDS+=	p5-LWP-MediaTypes>=6.01:../../www/p5-LWP-MediaTypes
 DEPENDS+=	p5-IO-HTML-[0-9]*:../../devel/p5-IO-HTML
 DEPENDS+=	p5-Try-Tiny-[0-9]*:../../devel/p5-Try-Tiny
+TEST_DEPENDS+=	p5-Test-Needs-[0-9]*:../../devel/p5-Test-Needs
 
 PERL5_PACKLIST=		auto/HTTP/Message/.packlist
 
