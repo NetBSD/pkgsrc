@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.210 2023/01/09 08:00:16 taca Exp $
+$NetBSD: CHANGES-2023,v 1.211 2023/01/09 08:04:31 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -241,3 +241,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/ruby-faraday_middleware to 1.2.0 [taca 2023-01-09]
 	Updated net/ruby-slack-api to 1.6.1nb1 [taca 2023-01-09]
 	Updated sysutils/ruby-inspec-core to 5.18.14nb1 [taca 2023-01-09]
+	Updated devel/ruby-redmine50 to 5.0.4nb1 [taca 2023-01-09]
