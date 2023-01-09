@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2021/06/23 20:33:15 nia Exp $
+# $NetBSD: Makefile,v 1.7 2023/01/09 00:42:46 sekiya Exp $
 #
 
+DISTNAME=	check_mysql_slave-0.2
 PKGNAME=	nagios-plugin-mysqlslave-${DISTNAME:C/.*-//}
 PKGREVISION=	2
-DISTNAME=	check_mysql_slave-0.2
 CATEGORIES=	net
 MASTER_SITES=	http://ftp.espci.fr/pub/nagios-local/
 EXTRACT_SUFX=	.tgz
