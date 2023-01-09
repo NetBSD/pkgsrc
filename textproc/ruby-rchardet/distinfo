@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/01/09 05:24:49 taca Exp $
+
+BLAKE2s (rchardet-1.8.0.gem) = 365aae812207b25be2b2b1e2dbfd995d41816452348907b4f71e31815846b1ea
+SHA512 (rchardet-1.8.0.gem) = 26ae8c2919263a6ce6200d9b6e787871c261d1bf364ba989fffd10add77e94a03a8cc6ac23b200e4d4295f3772a619d5fc0c96c33b98cbc2494a29112e85afdd
+Size (rchardet-1.8.0.gem) = 153600 bytes
