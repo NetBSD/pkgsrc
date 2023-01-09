@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.26 2022/12/04 16:02:17 taca Exp $
+$NetBSD: distinfo,v 1.27 2023/01/09 06:03:24 taca Exp $
 
-BLAKE2s (libxml-ruby-3.2.4.gem) = c20a865b545ab0a7d9d6cfa56e3ac503a1a0c0ec60b44871eb59303d2346d483
-SHA512 (libxml-ruby-3.2.4.gem) = 0799249baa6d575f4fa9e000111a08a8f923221852f2169cf82586f377cdf0a8e13d772bde00296de30426a3a5eef568a23f91852d56f316dc9aa3cbabf8f911
-Size (libxml-ruby-3.2.4.gem) = 376832 bytes
+BLAKE2s (libxml-ruby-4.0.0.gem) = 4ec4ecd09504b0ccff5d9eee8e6ac125c505796edfdf7251f953903f80837044
+SHA512 (libxml-ruby-4.0.0.gem) = 3263a3b2d82ff476e4a38713aca0bf7f3af430de256e293c2b206871aeccbccb47861464a3710db9d18fe33a36f5ea566fe0916e3a9d67dfdb42f43de33415d6
+Size (libxml-ruby-4.0.0.gem) = 364544 bytes

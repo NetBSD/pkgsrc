@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.23 2022/12/04 16:02:17 taca Exp $
+@comment $NetBSD: PLIST,v 1.24 2023/01/09 06:03:24 taca Exp $
 ${GEM_HOME}/build_info/${GEM_NAME}.info
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/libxml_ruby.${RUBY_DLEXT}
 ${GEM_LIBDIR}/HISTORY
 ${GEM_LIBDIR}/LICENSE
-${GEM_LIBDIR}/MANIFEST
 ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/ext/libxml/extconf.h
@@ -83,8 +82,6 @@ ${GEM_LIBDIR}/ext/libxml/ruby_xml_xpath_expression.c
 ${GEM_LIBDIR}/ext/libxml/ruby_xml_xpath_expression.h
 ${GEM_LIBDIR}/ext/libxml/ruby_xml_xpath_object.c
 ${GEM_LIBDIR}/ext/libxml/ruby_xml_xpath_object.h
-${GEM_LIBDIR}/ext/libxml/ruby_xml_xpointer.c
-${GEM_LIBDIR}/ext/libxml/ruby_xml_xpointer.h
 ${GEM_LIBDIR}/ext/vc/libxml_ruby.sln
 ${GEM_LIBDIR}/lib/libxml-ruby.rb
 ${GEM_LIBDIR}/lib/libxml.rb
@@ -116,7 +113,6 @@ ${GEM_LIBDIR}/script/benchmark/parsecount
 ${GEM_LIBDIR}/script/benchmark/sock_entries.xml
 ${GEM_LIBDIR}/script/benchmark/throughput
 ${GEM_LIBDIR}/script/test
-${GEM_LIBDIR}/setup.rb
 ${GEM_LIBDIR}/test/c14n/given/doc.dtd
 ${GEM_LIBDIR}/test/c14n/given/example-1.xml
 ${GEM_LIBDIR}/test/c14n/given/example-2.xml
@@ -200,7 +196,6 @@ ${GEM_LIBDIR}/test/test_reader.rb
 ${GEM_LIBDIR}/test/test_relaxng.rb
 ${GEM_LIBDIR}/test/test_sax_parser.rb
 ${GEM_LIBDIR}/test/test_schema.rb
-${GEM_LIBDIR}/test/test_suite.rb
 ${GEM_LIBDIR}/test/test_traversal.rb
 ${GEM_LIBDIR}/test/test_writer.rb
 ${GEM_LIBDIR}/test/test_xinclude.rb
@@ -208,5 +203,4 @@ ${GEM_LIBDIR}/test/test_xml.rb
 ${GEM_LIBDIR}/test/test_xpath.rb
 ${GEM_LIBDIR}/test/test_xpath_context.rb
 ${GEM_LIBDIR}/test/test_xpath_expression.rb
-${GEM_LIBDIR}/test/test_xpointer.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
