@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2023/01/09 21:12:28 nikita Exp $
+share/fonts/X11/TTF/Arimo Bold Italic Nerd Font Complete Mono Windows Compatible.ttf
+share/fonts/X11/TTF/Arimo Bold Italic Nerd Font Complete Mono.ttf
+share/fonts/X11/TTF/Arimo Bold Italic Nerd Font Complete Windows Compatible.ttf
+share/fonts/X11/TTF/Arimo Bold Italic Nerd Font Complete.ttf
+share/fonts/X11/TTF/Arimo Bold Nerd Font Complete Mono Windows Compatible.ttf
+share/fonts/X11/TTF/Arimo Bold Nerd Font Complete Mono.ttf
+share/fonts/X11/TTF/Arimo Bold Nerd Font Complete Windows Compatible.ttf
+share/fonts/X11/TTF/Arimo Bold Nerd Font Complete.ttf
+share/fonts/X11/TTF/Arimo Italic Nerd Font Complete Mono Windows Compatible.ttf
+share/fonts/X11/TTF/Arimo Italic Nerd Font Complete Mono.ttf
+share/fonts/X11/TTF/Arimo Italic Nerd Font Complete Windows Compatible.ttf
+share/fonts/X11/TTF/Arimo Italic Nerd Font Complete.ttf
+share/fonts/X11/TTF/Arimo Regular Nerd Font Complete Mono Windows Compatible.ttf
+share/fonts/X11/TTF/Arimo Regular Nerd Font Complete Mono.ttf
+share/fonts/X11/TTF/Arimo Regular Nerd Font Complete Windows Compatible.ttf
+share/fonts/X11/TTF/Arimo Regular Nerd Font Complete.ttf
+@pkgdir share/fonts/X11/OTF
