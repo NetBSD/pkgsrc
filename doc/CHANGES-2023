@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.225 2023/01/09 10:52:44 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.226 2023/01/09 10:55:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -256,3 +256,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/czds to 1.2.11 [fcambus 2023-01-09]
 	Updated misc/ansiweather to 1.19.0 [fcambus 2023-01-09]
 	Updated devel/py-mercurial to 6.3.2 [wiz 2023-01-09]
+	Updated devel/py-hg-evolve to 10.5.3 [wiz 2023-01-09]
