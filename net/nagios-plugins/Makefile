@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.55 2022/06/28 11:35:03 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2023/01/09 00:28:41 sekiya Exp $
 #
 
-PKGREVISION=	8
+#PKGREVISION=	1
 CATEGORIES=	net sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -42,10 +42,11 @@ SPECIAL_PERMS+=	${PREFIX}/libexec/nagios/check_ide_smart \
 
 # required to enable large file support on Solaris
 .if ${OPSYS} == "SunOS"
-CPPFLAGS_LFS!=	getconf LFS_CFLAGS
-MAKE_ENV+=	CPPFLAGS_LFS=${CPPFLAGS_LFS:Q}
+CPPFLAGS_LFS_CMD=	getconf LFS_CFLAGS
+CPPFLAGS_LFS=		${CPPFLAGS_LFS_CMD:sh}
+MAKE_ENV+=		CPPFLAGS_LFS=${CPPFLAGS_LFS:Q}
 .endif
-LIBS.SunOS+=	-lm
+LIBS.SunOS+=		-lm
 
 #DEPENDS+=	nagios-base-*:../../net/nagios-base
 

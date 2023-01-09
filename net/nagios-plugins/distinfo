@@ -1,18 +1,18 @@
-$NetBSD: distinfo,v 1.27 2022/04/02 10:35:35 nia Exp $
+$NetBSD: distinfo,v 1.28 2023/01/09 00:28:41 sekiya Exp $
 
-BLAKE2s (nagios-plugins-2.2.1.tar.gz) = 976274874f96d7614ac6359b7feb9692874e947677d88a6d2daa6e569bb61ce5
-SHA512 (nagios-plugins-2.2.1.tar.gz) = 6ffe313a56a305b382f62abc0f0958d7078f9050e1340f30721d6e6f71944b57b1650e90e6835c35dd7c9f3f4b4cee9f235b8382b0811db30b3729daaafc9bc3
-Size (nagios-plugins-2.2.1.tar.gz) = 2728818 bytes
-SHA1 (patch-ad) = cad52f9d8c5a6b53a1b512238df1590c0fa2177d
-SHA1 (patch-af) = 12ea1194eee95ea15ecc6d7daedd10eb9541ee6e
-SHA1 (patch-ah) = 99b5eb4896262f5aa1de60e9f42c395a59794a6b
-SHA1 (patch-an) = a6adf179db754f98b2da118a8c1101edda026fbc
-SHA1 (patch-configure) = 8a805fd88735b7b1c9cb96a974a1e6216ff23d2e
-SHA1 (patch-gl_gettext.h) = 37d14b4472f678bd84c13183e0fb263cd17f6ac5
-SHA1 (patch-plugins-root_Makefile.in) = 46e8968df375ca35d453e36c277d4052f125897b
-SHA1 (patch-plugins-scripts_check__breeze.pl) = 57ffda78989fd0d0c0fa26c74b7f53bd083dab4f
-SHA1 (patch-plugins-scripts_check__wave.pl) = 535b008877cad780afa2ed3429ffb84e7da3ec28
-SHA1 (patch-plugins__check_swap.c) = b822de3488ecace977a739ebcfc56229763cd945
-SHA1 (patch-plugins_check__ide__smart.c) = 34ea76bf79da83fa84b6f0ff7f425462d0aac69e
-SHA1 (patch-plugins_check__radius.c) = 3f86bac4f7aa52931bad46d9ee4a421c2ee744f3
-SHA1 (patch-plugins_check_nagios.c) = a58d12f461a4501a8066101e091307456faf32cf
+BLAKE2s (nagios-plugins-2.3.3.tar.gz) = 4eee57a0cae28eab4a115d1f518506a7c33ab0ab66e505088a7af2a65308bb22
+SHA512 (nagios-plugins-2.3.3.tar.gz) = 2128601b1098eb82f4e7d720b96a5f92d6ad75dc181a94b25c38172767de8b72f9fece3eddb74933b1cd520928ae9416a7dc665e2f059bfe362dd74041d28cd7
+Size (nagios-plugins-2.3.3.tar.gz) = 2782610 bytes
+SHA1 (patch-configure) = b37e7b7cd1fd1582a36a0906a5a1e532fd231d50
+SHA1 (patch-gl_gettext.h) = c6e4917c30a1c4cceb46d1236fe9d2ff24359586
+SHA1 (patch-lib_Makefile.in) = a91faf1b6ee112152ee85b0233466d799dfe30da
+SHA1 (patch-plugins-root_Makefile.in) = 11a249107265a26b453bba9e3ea951595d3a01fc
+SHA1 (patch-plugins-scripts_Makefile.in) = 442a0be4d4a7b5370a9a25bc5c52f0bd467bdb8c
+SHA1 (patch-plugins-scripts_check_breeze.pl) = 80c7f889a0cf3c1f5da4f5b6564f993c25e421b6
+SHA1 (patch-plugins-scripts_check_ntp.pl) = 8101604b3227fc9977d992c1e73885b8e3dab86a
+SHA1 (patch-plugins-scripts_check_wave.pl) = af42b740b64906fb4c882827165054a84bbddb76
+SHA1 (patch-plugins_Makefile.in) = 3509f2972feabe4806e4529c320eb5a119b5df77
+SHA1 (patch-plugins_check_ide_smart.c) = 6601814ad4ac91f11dbeb18613254df55e14edbd
+SHA1 (patch-plugins_check_nagios.c) = 922d4494c77c1764ee30f004e96ce8734ab6954f
+SHA1 (patch-plugins_check_radius.c) = 909c78e18a969c0d0c8431151c0b6069afaaf2ae
+SHA1 (patch-plugins_check_swap.c) = ecef90186c97256051ae1e238f95d9861c87e31b
