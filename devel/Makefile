@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3867 2023/01/05 08:28:41 wiz Exp $
+# $NetBSD: Makefile,v 1.3868 2023/01/09 05:23:11 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -3094,6 +3094,7 @@ SUBDIR+=	ruby-deprecated
 SUBDIR+=	ruby-dhaka
 SUBDIR+=	ruby-diva
 SUBDIR+=	ruby-docile
+SUBDIR+=	ruby-dotenv
 SUBDIR+=	ruby-eet
 SUBDIR+=	ruby-equatable
 SUBDIR+=	ruby-eventmachine
