@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.266 2023/01/09 21:46:23 fcambus Exp $
+$NetBSD: CHANGES-2023,v 1.267 2023/01/09 21:53:09 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -299,3 +299,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added fonts/nerd-fonts-BitstreamVeraSansMono version 2.2.2 [nikita 2023-01-09]
 	Added fonts/nerd-fonts-CascadiaCode version 2.2.2 [nikita 2023-01-09]
 	Updated textproc/libuninameslist to 20221022 [fcambus 2023-01-09]
+	Added fonts/nerd-fonts-CodeNewRoman version 2.2.2 [nikita 2023-01-09]
