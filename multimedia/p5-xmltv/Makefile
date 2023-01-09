@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.45 2022/06/28 11:34:56 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2023/01/09 09:19:27 wiz Exp $
 
 DISTNAME=	xmltv-0.5.69
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	multimedia perl5
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xmltv/}
 EXTRACT_SUFX=	.tar.bz2
@@ -54,6 +54,7 @@ DEPENDS+=	p5-Unicode-UTF8simple-[0-9]*:../../converters/p5-Unicode-UTF8simple
 # needed by is grabbers
 DEPENDS+=	p5-XML-LibXSLT-[0-9]*:../../textproc/p5-XML-LibXSLT
 DEPENDS+=	p5-XML-DOM-[0-9]*:../../textproc/p5-XML-DOM
+DEPENDS+=	p5-XML-TreePP-[0-9]*:../../textproc/p5-XML-TreePP
 # Tk::TableMatrix missing for tv_check (report exceptions & changes in schedule)
 
 PERL5_PACKLIST=	auto/XMLTV/.packlist
