@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2020/08/18 20:14:33 riastradh Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/01/09 06:39:38 khorben Exp $
 bin/pysmt-install
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/pysmt/__init__.py
 ${PYSITELIB}/pysmt/__init__.pyc
@@ -123,6 +122,9 @@ ${PYSITELIB}/pysmt/smtlib/script.pyo
 ${PYSITELIB}/pysmt/smtlib/solver.py
 ${PYSITELIB}/pysmt/smtlib/solver.pyc
 ${PYSITELIB}/pysmt/smtlib/solver.pyo
+${PYSITELIB}/pysmt/smtlib/utils.py
+${PYSITELIB}/pysmt/smtlib/utils.pyc
+${PYSITELIB}/pysmt/smtlib/utils.pyo
 ${PYSITELIB}/pysmt/solvers/__init__.py
 ${PYSITELIB}/pysmt/solvers/__init__.pyc
 ${PYSITELIB}/pysmt/solvers/__init__.pyo
@@ -195,6 +197,9 @@ ${PYSITELIB}/pysmt/test/smtlib/test_generic_wrapper.pyo
 ${PYSITELIB}/pysmt/test/smtlib/test_griggio.py
 ${PYSITELIB}/pysmt/test/smtlib/test_griggio.pyc
 ${PYSITELIB}/pysmt/test/smtlib/test_griggio.pyo
+${PYSITELIB}/pysmt/test/smtlib/test_model_validation.py
+${PYSITELIB}/pysmt/test/smtlib/test_model_validation.pyc
+${PYSITELIB}/pysmt/test/smtlib/test_model_validation.pyo
 ${PYSITELIB}/pysmt/test/smtlib/test_parser_examples.py
 ${PYSITELIB}/pysmt/test/smtlib/test_parser_examples.pyc
 ${PYSITELIB}/pysmt/test/smtlib/test_parser_examples.pyo
@@ -222,6 +227,9 @@ ${PYSITELIB}/pysmt/test/smtlib/test_parser_qf_nia.pyo
 ${PYSITELIB}/pysmt/test/smtlib/test_parser_qf_nra.py
 ${PYSITELIB}/pysmt/test/smtlib/test_parser_qf_nra.pyc
 ${PYSITELIB}/pysmt/test/smtlib/test_parser_qf_nra.pyo
+${PYSITELIB}/pysmt/test/smtlib/test_parser_qf_uf.py
+${PYSITELIB}/pysmt/test/smtlib/test_parser_qf_uf.pyc
+${PYSITELIB}/pysmt/test/smtlib/test_parser_qf_uf.pyo
 ${PYSITELIB}/pysmt/test/smtlib/test_parser_qf_ufbv.py
 ${PYSITELIB}/pysmt/test/smtlib/test_parser_qf_ufbv.pyc
 ${PYSITELIB}/pysmt/test/smtlib/test_parser_qf_ufbv.pyo
@@ -297,6 +305,9 @@ ${PYSITELIB}/pysmt/test/test_models.pyo
 ${PYSITELIB}/pysmt/test/test_native_qe.py
 ${PYSITELIB}/pysmt/test/test_native_qe.pyc
 ${PYSITELIB}/pysmt/test/test_native_qe.pyo
+${PYSITELIB}/pysmt/test/test_nia.py
+${PYSITELIB}/pysmt/test/test_nia.pyc
+${PYSITELIB}/pysmt/test/test_nia.pyo
 ${PYSITELIB}/pysmt/test/test_nlira.py
 ${PYSITELIB}/pysmt/test/test_nlira.pyc
 ${PYSITELIB}/pysmt/test/test_nlira.pyo
