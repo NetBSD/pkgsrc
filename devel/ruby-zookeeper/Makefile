@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2023/01/03 13:56:30 taca Exp $
+# $NetBSD: Makefile,v 1.4 2023/01/09 05:42:32 taca Exp $
 #
-DISTNAME=	zookeeper-1.5.3
+DISTNAME=	zookeeper-1.5.5
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
