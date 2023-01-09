@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.227 2023/01/09 11:16:15 vins Exp $
+$NetBSD: CHANGES-2023,v 1.228 2023/01/09 11:28:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -258,3 +258,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-mercurial to 6.3.2 [wiz 2023-01-09]
 	Updated devel/py-hg-evolve to 10.5.3 [wiz 2023-01-09]
 	Updated sysutils/bsdfetch to 1.1.0 [vins 2023-01-09]
+	Updated databases/py-redis to 4.4.1 [adam 2023-01-09]
