@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/01/09 21:07:42 nikita Exp $
+
+BLAKE2s (nerd-fonts/2.2.2/AnonymousPro.zip) = 67dfab87bc8cb302e9105985c0258b5b8c83e6e21b99ac099bc2ec4d6f430191
+SHA512 (nerd-fonts/2.2.2/AnonymousPro.zip) = 18dddc8270a48e1f933f142002f40b6b949553dc651ab7eb75f78d83ba1d190bcb56c62e9a886f36fff138bfca1e68a53d0045fe3fdc48f02e89f637ed62b89a
+Size (nerd-fonts/2.2.2/AnonymousPro.zip) = 2401676 bytes

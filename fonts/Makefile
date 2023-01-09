@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.388 2023/01/09 21:04:17 nikita Exp $
+# $NetBSD: Makefile,v 1.389 2023/01/09 21:07:42 nikita Exp $
 #
 
 COMMENT=	Fonts
@@ -197,6 +197,7 @@ SUBDIR+=	ms-ttf
 SUBDIR+=	nanum-ttf
 SUBDIR+=	nerd-fonts-3270
 SUBDIR+=	nerd-fonts-Agave
+SUBDIR+=	nerd-fonts-AnonymousPro
 SUBDIR+=	neumeister-otf
 SUBDIR+=	noto-cjk-fonts
 SUBDIR+=	noto-emoji-ttf
