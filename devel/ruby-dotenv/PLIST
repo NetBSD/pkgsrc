@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.3 2023/01/09 05:18:49 taca Exp $
+bin/dotenv${RUBY_SUFFIX}
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/bin/dotenv
+${GEM_LIBDIR}/lib/dotenv.rb
+${GEM_LIBDIR}/lib/dotenv/cli.rb
+${GEM_LIBDIR}/lib/dotenv/environment.rb
+${GEM_LIBDIR}/lib/dotenv/load.rb
+${GEM_LIBDIR}/lib/dotenv/missing_keys.rb
+${GEM_LIBDIR}/lib/dotenv/parser.rb
+${GEM_LIBDIR}/lib/dotenv/substitutions/command.rb
+${GEM_LIBDIR}/lib/dotenv/substitutions/variable.rb
+${GEM_LIBDIR}/lib/dotenv/tasks.rb
+${GEM_LIBDIR}/lib/dotenv/template.rb
+${GEM_LIBDIR}/lib/dotenv/version.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
