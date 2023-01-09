@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.242 2023/01/09 14:24:49 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.243 2023/01/09 15:44:12 vins Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -275,3 +275,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated wm/i3 to 4.22 [wiz 2023-01-09]
 	Updated devel/syft to 0.65.0 [wiz 2023-01-09]
 	Updated devel/ocaml-findlib to 1.9.6 [wiz 2023-01-09]
+	Updated net/inetutils to 2.4 [vins 2023-01-09]
