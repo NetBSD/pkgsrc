@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.249 2023/01/09 18:16:45 fcambus Exp $
+$NetBSD: CHANGES-2023,v 1.250 2023/01/09 18:44:31 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -282,3 +282,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated shells/oksh to 7.2 [fcambus 2023-01-09]
 	Added devel/stylua version 0.15.3 [nikita 2023-01-09]
 	Updated emulators/stella to 6.7nb2 [fcambus 2023-01-09]
+	Updated devel/cloc to 1.96 [fcambus 2023-01-09]
