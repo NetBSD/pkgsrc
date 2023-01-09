@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2020/01/18 23:35:47 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2023/01/09 12:42:45 vins Exp $
 #
 
-DISTNAME=		autocutsel-0.10.0
+DISTNAME=		autocutsel-0.10.1
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_GITHUB:=sigmike/}
 GITHUB_PROJECT=		autocutsel
