@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2023/01/03 13:56:30 taca Exp $
+$NetBSD: distinfo,v 1.5 2023/01/09 05:42:32 taca Exp $
 
-BLAKE2s (zookeeper-1.5.3.gem) = c7f56a31463197a3c033064d8de629fd7ea47427356732e5ca0ea0897e05f879
-SHA512 (zookeeper-1.5.3.gem) = dedfa3fa5908677a7a40b69841fd14add2f55d886d381933036e89adeb21b1525ecd4dd786dd0ff38e3993ce2075102d6c8aa43b495cf0c5f87d203b072edd77
-Size (zookeeper-1.5.3.gem) = 970752 bytes
-SHA1 (patch-ext_extconf.rb) = be5849c2faeff6e2c85c3771d0810d96ce7d6c62
+BLAKE2s (zookeeper-1.5.5.gem) = b37cf8aab55261f518c839ba86ea390718165a6b3b0cee264240af68299f4cf5
+SHA512 (zookeeper-1.5.5.gem) = 4448d9d35e7aea418e0027622aad5c4423803da7da0e4d6199b7e4cb41afe08cc3684d0a60abad730c66644c3afcc35ccd1617b7d55ffe4b2b8a9db5ec70b14d
+Size (zookeeper-1.5.5.gem) = 971264 bytes
+SHA1 (patch-ext_extconf.rb) = d3c9fa7af8464dbfe51295f73ed4abd66aa2d620
