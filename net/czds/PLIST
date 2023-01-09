@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2022/06/06 08:46:12 fcambus Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/01/09 10:05:21 fcambus Exp $
 bin/czds-dl
-bin/czds-report
 bin/czds-request
 bin/czds-status
 share/doc/czds/README.md
