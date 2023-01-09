@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.253 2023/01/09 19:47:20 fcambus Exp $
+$NetBSD: CHANGES-2023,v 1.254 2023/01/09 20:08:38 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -286,3 +286,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/dunst to 1.9.0 [vins 2023-01-09]
 	Updated sysutils/xfe to 1.45 [vins 2023-01-09]
 	Updated games/dopewars to 1.6.2 [fcambus 2023-01-09]
+	Updated graphics/jpeginfo to 1.6.2 [fcambus 2023-01-09]
