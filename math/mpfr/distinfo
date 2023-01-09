@@ -1,9 +1,5 @@
-$NetBSD: distinfo,v 1.33 2022/11/27 03:17:13 mef Exp $
+$NetBSD: distinfo,v 1.34 2023/01/09 13:25:11 wiz Exp $
 
-BLAKE2s (mpfr-4.1.1.tar.bz2) = 2a859b41cc4482c530b020cfc9fe434db6fe8c6297c8bb104b7ed2c47de71b06
-SHA512 (mpfr-4.1.1.tar.bz2) = f0efefbfc4dec367cdab6299272062508ec80d53daa779fe05954cd626983277039a10d9d072ae686584f6ce75014ef2136e3f095128fa21fc994f7c6f33d674
-Size (mpfr-4.1.1.tar.bz2) = 1658183 bytes
-SHA1 (patch-VERSION) = 06d1fa35bbdeee9e860cfaa66e7e358014e5a05d
-SHA1 (patch-src_mpfr.h) = b8604763eaa2918053b9edceee509f9c7324fb82
-SHA1 (patch-src_version.c) = 8ff9100b82156c6ab23dab3d83c83f52e2eae11e
-SHA1 (patch-tests_tstckintc.c) = c106eaac3c4c69ff02202fecd726c528f8dae772
+BLAKE2s (mpfr-4.2.0.tar.bz2) = caeeb2c1c9de21db358bc6f02bb789b935d10ed6b73ab73569e1e3f6666378c5
+SHA512 (mpfr-4.2.0.tar.bz2) = cb2a9314b94e34a4ea49ce2619802e9420c982e55258a4bc423f802740632646a3d420e7fcf373b19618385b8b2b412abfa127e8f473053863424cac233893c0
+Size (mpfr-4.2.0.tar.bz2) = 1695616 bytes
