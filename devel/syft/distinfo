@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2023/01/03 14:42:53 wiz Exp $
+$NetBSD: distinfo,v 1.4 2023/01/09 14:12:40 wiz Exp $
 
 BLAKE2s (4d63.com_gochecknoglobals_@v_v0.1.0.mod) = 44ce95e05c9f2bda0bad21d1c5df80fe04aa5a58d27d291a71c539fa5417c4b0
 SHA512 (4d63.com_gochecknoglobals_@v_v0.1.0.mod) = fed1482cc4df3b59a2d9a2cb927c867779fdaa8428e4323ea1c063df61c66274e2d9a05230b7d827ba7c36d15fcbf575d617f2bae9109332acce4c5f82573655
@@ -9237,6 +9237,6 @@ Size (sigs.k8s.io_yaml_@v_v1.3.0.zip) = 21567 bytes
 BLAKE2s (sourcegraph.com_sourcegraph_appdash_@v_v0.0.0-20190731080439-ebfcffb1b5c0.mod) = 540120cf9a874588188b78b9cb2cb50598bfffd4f144e5fb2315313375937a3c
 SHA512 (sourcegraph.com_sourcegraph_appdash_@v_v0.0.0-20190731080439-ebfcffb1b5c0.mod) = 7d863e4af4e480a247bc767d1de96ff8050b12a13a182a9a8fa68c983c2f0b1a16b509d40de3cca552082535f876458034e1510f0f0feef383f16e1f84f81282
 Size (sourcegraph.com_sourcegraph_appdash_@v_v0.0.0-20190731080439-ebfcffb1b5c0.mod) = 43 bytes
-BLAKE2s (syft-0.64.0.tar.gz) = 9e9db74108aa2f97a86488573e59b8ed85dd442bee57eaf45c1f51e71ab9850a
-SHA512 (syft-0.64.0.tar.gz) = d223c54467dadcae98828499da008e1119de585a8b54f20fe0fc90a85bbbf4dbaebdf4a38016c97108a16699151d1fb204f6eba3a3c3339aceb000983f6de95b
-Size (syft-0.64.0.tar.gz) = 5422803 bytes
+BLAKE2s (syft-0.65.0.tar.gz) = 0b4174a5e5a9d3288107797725ead992bc69aadd6d87eb42deb3eeb8adbfae74
+SHA512 (syft-0.65.0.tar.gz) = 72e0c15214ff5690834e8e0fb14e2f41454cb199ba2e6f2f04ead8eb0f0c039d0570c5724dc68ed152c80b42586ed14a7368bde33b4c76b82f3a64518a3664f5
+Size (syft-0.65.0.tar.gz) = 5421901 bytes
