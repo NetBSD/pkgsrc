@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/02/15 19:13:04 fcambus Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/01/09 17:13:43 fcambus Exp $
 include/mimalloc-new-delete.h
 include/mimalloc-override.h
 include/mimalloc.h
@@ -10,3 +10,4 @@ lib/libmimalloc.a
 lib/libmimalloc.so
 lib/libmimalloc.so.2
 lib/libmimalloc.so.2.0
+lib/pkgconfig/mimalloc.pc
