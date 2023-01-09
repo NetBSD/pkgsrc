@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.54 2023/01/03 17:38:18 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2023/01/09 19:45:51 vins Exp $
 
-DISTNAME=	xfe-1.43.2
-PKGREVISION=	2
+DISTNAME=	xfe-1.45
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xfe/}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://roland65.free.fr/xfe/
