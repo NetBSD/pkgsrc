@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.6 2008/11/10 18:00:34 wiz Exp $
+$NetBSD: patch-ab,v 1.7 2023/01/09 23:29:25 sekiya Exp $
+
+Use $(datadir)
 
 --- etc/Makefile.in.orig	2007-12-29 03:28:07.000000000 +0000
 +++ etc/Makefile.in
