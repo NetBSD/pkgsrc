@@ -1,0 +1,7 @@
+excon
+
+Usable, fast, simple Ruby HTTP 1.1
+
+Excon was designed to be simple, fast and performant.  It works great as a
+general HTTP(s) client and is particularly well suited to usage in API
+clients.
