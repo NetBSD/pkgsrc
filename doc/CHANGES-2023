@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.186 2023/01/09 05:34:00 taca Exp $
+$NetBSD: CHANGES-2023,v 1.187 2023/01/09 05:35:37 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -217,3 +217,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added textproc/ruby-rchardet version 1.8.0 [taca 2023-01-09]
 	Added devel/ruby-git version 1.13.0 [taca 2023-01-09]
 	Updated devel/ruby-rspec-expectations to 3.12.2 [taca 2023-01-09]
+	Updated devel/ruby-rspec-mocks to 3.12.2 [taca 2023-01-09]
