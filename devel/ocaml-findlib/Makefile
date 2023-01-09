@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.53 2022/05/24 18:51:49 jaapb Exp $
+# $NetBSD: Makefile,v 1.54 2023/01/09 14:24:40 wiz Exp $
 
-DISTNAME=		findlib-1.9.3
+DISTNAME=		findlib-1.9.6
 PKGNAME=		ocaml-${DISTNAME}
-PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		http://download.camlcity.org/download/
 
@@ -15,13 +14,6 @@ OCAML_FINDLIB_DIRS+=	bigarray bytes compiler-libs dynlink findlib \
 			ocamldoc stdlib str threads unix
 
 .include "../../lang/ocaml/ocaml.mk"
-
-# spacetime profiling is only available for native code on 64bit platforms
-PLIST_VARS+=		64bit
-.if !empty(LP64PLATFORMS:@.PLAT.@${MACHINE_PLATFORM:M${.PLAT.}}@) || \
-    (defined(ABI) && ${ABI} == "64")
-PLIST.64bit=		yes
-.endif
 
 # Undeclared dependencies between different components
 MAKE_JOBS_SAFE=		no
@@ -42,7 +34,6 @@ BUILD_TARGET+=	opt
 
 EGDIR=			${PREFIX}/share/examples/ocaml-findlib
 INSTALL_MAKE_FLAGS+=	OCAMLFIND_CONF=${EGDIR}/ocamlfind.conf
-INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}
 INSTALLATION_DIRS=	lib/ocaml libexec bin ${OCAML_SITELIBDIR}
 
 CONF_FILES=		${EGDIR}/ocamlfind.conf ${PKG_SYSCONFDIR}/ocamlfind.conf
@@ -54,6 +45,7 @@ SUBST_STAGE.pathes=	post-install
 SUBST_FILES.pathes=	${DESTDIR}${PREFIX}/lib/ocaml/site-lib/findlib/Makefile.config
 SUBST_SED.pathes=	-e 's,^\(OCAML_CORE_BIN=\).*,\1'${PREFIX:Q}/bin','
 
+# needs to be installed first
 do-test:
 	${RUN} cd ${WRKSRC}; ${SH} itest
 
