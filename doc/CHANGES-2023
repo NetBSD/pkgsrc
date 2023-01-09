@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.187 2023/01/09 05:35:37 taca Exp $
+$NetBSD: CHANGES-2023,v 1.188 2023/01/09 05:42:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -218,3 +218,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/ruby-git version 1.13.0 [taca 2023-01-09]
 	Updated devel/ruby-rspec-expectations to 3.12.2 [taca 2023-01-09]
 	Updated devel/ruby-rspec-mocks to 3.12.2 [taca 2023-01-09]
+	Updated devel/ruby-zookeeper to 1.5.5 [taca 2023-01-09]
