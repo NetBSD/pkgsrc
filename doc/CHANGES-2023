@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.224 2023/01/09 10:17:23 fcambus Exp $
+$NetBSD: CHANGES-2023,v 1.225 2023/01/09 10:52:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -255,3 +255,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated audio/libopenmpt to 0.6.7 [fcambus 2023-01-09]
 	Updated net/czds to 1.2.11 [fcambus 2023-01-09]
 	Updated misc/ansiweather to 1.19.0 [fcambus 2023-01-09]
+	Updated devel/py-mercurial to 6.3.2 [wiz 2023-01-09]
