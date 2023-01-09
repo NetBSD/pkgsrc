@@ -1,0 +1,4 @@
+repofetch
+
+A plugin-based tool to fetch stats, with a GitHub stat fetcher included
+by default.
