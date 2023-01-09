@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.235 2023/01/09 12:57:54 taca Exp $
+$NetBSD: CHANGES-2023,v 1.236 2023/01/09 13:05:58 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -266,3 +266,6 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/ruby-faraday-patron to 2.0.1 [taca 2023-01-09]
 	Updated www/ruby-faraday-rack to 2.0.0 [taca 2023-01-09]
 	Updated www/ruby-faraday-retry to 2.0.0 [taca 2023-01-09]
+	Updated sysutils/ruby-chef-utils to 18.1.0 [taca 2023-01-09]
+	Updated sysutils/ruby-chef-config to 18.1.0 [taca 2023-01-09]
+	Updated sysutils/ruby-chef to 18.1.0 [taca 2023-01-09]
