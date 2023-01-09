@@ -1,0 +1,42 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2023/01/09 15:43:33 vins Exp $
+
+Let pkgsrc set SUID_PERMS
+
+--- src/Makefile.in.orig	2022-10-25 21:16:11.000000000 +0000
++++ src/Makefile.in
+@@ -2226,31 +2226,27 @@ uninstall-am: uninstall-binPROGRAMS unin
+ install-exec-hook: $(traceroute_INSTALL_HOOK) $(rsh_INSTALL_HOOK) $(rlogin_INSTALL_HOOK) $(rcp_INSTALL_HOOK)
+ 
+ install-traceroute-hook:
+-	-@$(INSTALL_PROGRAM) $(SUIDMODE) $(AM_INSTALL_PROGRAM_FLAGS) traceroute $(DESTDIR)$(bindir)/`echo traceroute|sed '$(transform)'` ; OUTCOME=$$?; \
++	-@$(INSTALL_PROGRAM) $(AM_INSTALL_PROGRAM_FLAGS) traceroute $(DESTDIR)$(bindir)/`echo traceroute|sed '$(transform)'` ; OUTCOME=$$?; \
+ 	if test $$OUTCOME -ne 0; then \
+ 	  echo "WARNING: Failed to install traceroute (exit code $$OUTCOME)"; \
+-	  echo "NOTE: This program often needs to be owned by root."; \
+ 	fi
+ 
+ install-rsh-hook:
+-	-@$(INSTALL_PROGRAM) $(SUIDMODE) $(AM_INSTALL_PROGRAM_FLAGS) rsh $(DESTDIR)$(bindir)/`echo rsh|sed '$(transform)'` ; OUTCOME=$$?; \
++	-@$(INSTALL_PROGRAM) $(AM_INSTALL_PROGRAM_FLAGS) rsh $(DESTDIR)$(bindir)/`echo rsh|sed '$(transform)'` ; OUTCOME=$$?; \
+ 	if test $$OUTCOME -ne 0; then \
+ 	  echo "WARNING: Failed to install rsh (exit code $$OUTCOME)"; \
+-	  echo "NOTE: This program often needs to be owned by root."; \
+ 	fi
+ 
+ install-rlogin-hook:
+-	-@$(INSTALL_PROGRAM) $(SUIDMODE) $(AM_INSTALL_PROGRAM_FLAGS) rlogin $(DESTDIR)$(bindir)/`echo rlogin|sed '$(transform)'` ; OUTCOME=$$?; \
++	-@$(INSTALL_PROGRAM) $(AM_INSTALL_PROGRAM_FLAGS) rlogin $(DESTDIR)$(bindir)/`echo rlogin|sed '$(transform)'` ; OUTCOME=$$?; \
+ 	if test $$OUTCOME -ne 0; then \
+ 	  echo "WARNING: Failed to install rlogin (exit code $$OUTCOME)"; \
+-	  echo "NOTE: This program often needs to be owned by root."; \
+ 	fi
+ 
+ install-rcp-hook:
+-	-@$(INSTALL_PROGRAM) $(SUIDMODE) $(AM_INSTALL_PROGRAM_FLAGS) rcp $(DESTDIR)$(bindir)/`echo rcp|sed '$(transform)'` ; OUTCOME=$$?; \
++	-@$(INSTALL_PROGRAM) $(AM_INSTALL_PROGRAM_FLAGS) rcp $(DESTDIR)$(bindir)/`echo rcp|sed '$(transform)'` ; OUTCOME=$$?; \
+ 	if test $$OUTCOME -ne 0; then \
+ 	  echo "WARNING: Failed to install rcp (exit code $$OUTCOME)"; \
+-	  echo "NOTE: This program often needs to be owned by root."; \
+ 	fi
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.

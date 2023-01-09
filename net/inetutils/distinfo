@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:05:47 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/01/09 15:43:33 vins Exp $
 
-BLAKE2s (inetutils-1.9.4.tar.xz) = a783520e49b0b2ed619710b0b5de37c19d3b5ba960934d01008b039de1f4959f
-SHA512 (inetutils-1.9.4.tar.xz) = 020d1cab6659da63b26445b29820ad6769b8cf992496bece3dcbfba73804e29cc5c496d59f36046d432f9cc7fadefa3170f6d8faa855e59435aff4ecef724e66
-Size (inetutils-1.9.4.tar.xz) = 1364408 bytes
-SHA1 (patch-telnet_telnet.c) = a3fe07b5d00bae8d9a9f69d0c2996d88e84c8cd9
-SHA1 (patch-telnet_utilities.c) = ddd301b000d73eff9da8ded700ee374aa0798c12
+BLAKE2s (inetutils-2.4.tar.xz) = fc055367451f5c2747d37babad23d3c445d7180f65ec57568cc628920ac9f584
+SHA512 (inetutils-2.4.tar.xz) = e7e6a5d7e2e02f07a2a6cfc09694e3c0a4e4a8ef8a435eed41902eba13caeed329ae6d6ba94b0de8f789e307f04656d12c48c1c0217b69d162bc5efb0ff6adee
+Size (inetutils-2.4.tar.xz) = 1558308 bytes
+SHA1 (patch-ping_Makefile.in) = b27c71e45b94baa954859f83c890f4f819a4651d
+SHA1 (patch-src_Makefile.in) = 752148dbd9657291a7b20a667a002c535169e7ba
