@@ -1,0 +1,1 @@
+bin/repofetch @PREFIX@/bin/repofetch@RUBY_VER@
