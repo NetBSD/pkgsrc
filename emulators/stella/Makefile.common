@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.13 2022/05/15 18:36:18 nia Exp $
+# $NetBSD: Makefile.common,v 1.14 2023/01/09 18:16:33 fcambus Exp $
 # used by emulators/stella/Makefile
 # used by emulators/libretro-stella/Makefile
 
-DISTNAME=	stella-6.6-src
+DISTNAME=	stella-6.7-src
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=stella-emu/}
 GITHUB_PROJECT=	stella

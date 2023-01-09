@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.37 2022/05/15 18:36:18 nia Exp $
+$NetBSD: distinfo,v 1.38 2023/01/09 18:16:33 fcambus Exp $
 
-BLAKE2s (stella-6.6-src.tar.xz) = a481c6fcc7f2eaec49f392f8ece7f5ae1578e034f7ac5e26e566ad94a36865b4
-SHA512 (stella-6.6-src.tar.xz) = 89aea0cec9c2f22f276c1c4b36b76deb1ef9fb913c959f93f8cbcac300acdb23d2e3e66981d3263ea1ccfd72aaab1aa47218136b82b5e12aa8fbf352959743ab
-Size (stella-6.6-src.tar.xz) = 10035924 bytes
+BLAKE2s (stella-6.7-src.tar.xz) = d06390c01c68cca9288271d193646d8a5eaa0a9e3a1238569eee521981d6066c
+SHA512 (stella-6.7-src.tar.xz) = c20a2e9d98e1330f151e5f7d0e7cf15b2279b0d5f1175269f4084bf4964337b998118800615ae62eabf9d0f8abe0bb9cd02bddd1ee827121a49131888b4946ff
+Size (stella-6.7-src.tar.xz) = 10280224 bytes
 SHA1 (patch-configure) = 7cf96666dbccb2b38dec6e80ad4887a79bf5d074
