@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.183 2023/01/09 05:26:04 taca Exp $
+$NetBSD: CHANGES-2023,v 1.184 2023/01/09 05:27:13 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -214,3 +214,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/sshguard to 2.4.2 [sekiya 2023-01-09]
 	Updated emulators/PC6001VX to 4.1.2 [tsutsui 2023-01-09]
 	Added devel/ruby-dotenv version 2.8.1 [taca 2023-01-09]
+	Added textproc/ruby-rchardet version 1.8.0 [taca 2023-01-09]
