@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/01/09 21:17:51 nikita Exp $
+
+BLAKE2s (nerd-fonts/2.2.2/AurulentSansMono.zip) = 21e1e93312e8ee729ada0221f12b2d93772c2c16782d69662305d7f072b3ceec
+SHA512 (nerd-fonts/2.2.2/AurulentSansMono.zip) = 0ffc0b6aaafc2dffe6f2ee99fb973c84e41b82c802547c2d1fe9c24c14da6f7310bc6b4638203744337940746752c445b625ea6680085dfe885042dc087ce465
+Size (nerd-fonts/2.2.2/AurulentSansMono.zip) = 5393870 bytes
