@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2023/01/07 15:31:57 taca Exp $
+@comment $NetBSD: PLIST,v 1.13 2023/01/09 08:45:48 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/LICENSE.md
@@ -9,12 +9,8 @@ ${GEM_LIBDIR}/examples/client_test.rb
 ${GEM_LIBDIR}/lib/faraday.rb
 ${GEM_LIBDIR}/lib/faraday/adapter.rb
 ${GEM_LIBDIR}/lib/faraday/adapter/test.rb
-${GEM_LIBDIR}/lib/faraday/adapter/typhoeus.rb
 ${GEM_LIBDIR}/lib/faraday/adapter_registry.rb
-${GEM_LIBDIR}/lib/faraday/autoload.rb
 ${GEM_LIBDIR}/lib/faraday/connection.rb
-${GEM_LIBDIR}/lib/faraday/dependency_loader.rb
-${GEM_LIBDIR}/lib/faraday/deprecate.rb
 ${GEM_LIBDIR}/lib/faraday/encoders/flat_params_encoder.rb
 ${GEM_LIBDIR}/lib/faraday/encoders/nested_params_encoder.rb
 ${GEM_LIBDIR}/lib/faraday/error.rb
@@ -32,10 +28,8 @@ ${GEM_LIBDIR}/lib/faraday/parameters.rb
 ${GEM_LIBDIR}/lib/faraday/rack_builder.rb
 ${GEM_LIBDIR}/lib/faraday/request.rb
 ${GEM_LIBDIR}/lib/faraday/request/authorization.rb
-${GEM_LIBDIR}/lib/faraday/request/basic_authentication.rb
 ${GEM_LIBDIR}/lib/faraday/request/instrumentation.rb
 ${GEM_LIBDIR}/lib/faraday/request/json.rb
-${GEM_LIBDIR}/lib/faraday/request/token_authentication.rb
 ${GEM_LIBDIR}/lib/faraday/request/url_encoded.rb
 ${GEM_LIBDIR}/lib/faraday/response.rb
 ${GEM_LIBDIR}/lib/faraday/response/json.rb
@@ -46,21 +40,12 @@ ${GEM_LIBDIR}/lib/faraday/utils/headers.rb
 ${GEM_LIBDIR}/lib/faraday/utils/params_hash.rb
 ${GEM_LIBDIR}/lib/faraday/version.rb
 ${GEM_LIBDIR}/spec/external_adapters/faraday_specs_setup.rb
-${GEM_LIBDIR}/spec/faraday/adapter/em_http_spec.rb
-${GEM_LIBDIR}/spec/faraday/adapter/em_synchrony_spec.rb
-${GEM_LIBDIR}/spec/faraday/adapter/excon_spec.rb
-${GEM_LIBDIR}/spec/faraday/adapter/httpclient_spec.rb
-${GEM_LIBDIR}/spec/faraday/adapter/net_http_spec.rb
-${GEM_LIBDIR}/spec/faraday/adapter/patron_spec.rb
-${GEM_LIBDIR}/spec/faraday/adapter/rack_spec.rb
 ${GEM_LIBDIR}/spec/faraday/adapter/test_spec.rb
-${GEM_LIBDIR}/spec/faraday/adapter/typhoeus_spec.rb
 ${GEM_LIBDIR}/spec/faraday/adapter_registry_spec.rb
 ${GEM_LIBDIR}/spec/faraday/adapter_spec.rb
-${GEM_LIBDIR}/spec/faraday/composite_read_io_spec.rb
 ${GEM_LIBDIR}/spec/faraday/connection_spec.rb
-${GEM_LIBDIR}/spec/faraday/deprecate_spec.rb
 ${GEM_LIBDIR}/spec/faraday/error_spec.rb
+${GEM_LIBDIR}/spec/faraday/middleware_registry_spec.rb
 ${GEM_LIBDIR}/spec/faraday/middleware_spec.rb
 ${GEM_LIBDIR}/spec/faraday/options/env_spec.rb
 ${GEM_LIBDIR}/spec/faraday/options/options_spec.rb
@@ -76,7 +61,6 @@ ${GEM_LIBDIR}/spec/faraday/request/url_encoded_spec.rb
 ${GEM_LIBDIR}/spec/faraday/request_spec.rb
 ${GEM_LIBDIR}/spec/faraday/response/json_spec.rb
 ${GEM_LIBDIR}/spec/faraday/response/logger_spec.rb
-${GEM_LIBDIR}/spec/faraday/response/middleware_spec.rb
 ${GEM_LIBDIR}/spec/faraday/response/raise_error_spec.rb
 ${GEM_LIBDIR}/spec/faraday/response_spec.rb
 ${GEM_LIBDIR}/spec/faraday/utils/headers_spec.rb
@@ -90,5 +74,4 @@ ${GEM_LIBDIR}/spec/support/shared_examples/adapter.rb
 ${GEM_LIBDIR}/spec/support/shared_examples/params_encoder.rb
 ${GEM_LIBDIR}/spec/support/shared_examples/request_method.rb
 ${GEM_LIBDIR}/spec/support/streaming_response_checker.rb
-${GEM_LIBDIR}/spec/support/webmock_rack_app.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
