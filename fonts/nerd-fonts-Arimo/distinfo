@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/01/09 21:12:28 nikita Exp $
+
+BLAKE2s (nerd-fonts/2.2.2/Arimo.zip) = 12b45b5bf5de69c0a6eb5c15328773bb5fe254bc000da129ba9ed6ddc56bce41
+SHA512 (nerd-fonts/2.2.2/Arimo.zip) = 97c9e72e2765a7cf0b745d92de778d704750ebdc46b34fb48fe42b273fbe7a9af4811e368018ccd366861974100724617ec6c7df862f227aa2f6e0a80db956aa
+Size (nerd-fonts/2.2.2/Arimo.zip) = 12502542 bytes
