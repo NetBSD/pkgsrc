@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1670 2023/01/09 07:44:38 taca Exp $
+# $NetBSD: Makefile,v 1.1671 2023/01/09 08:49:06 taca Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -921,6 +921,7 @@ SUBDIR+=	ruby-em-http-request
 SUBDIR+=	ruby-em-websocket
 SUBDIR+=	ruby-erubis
 SUBDIR+=	ruby-ethon
+SUBDIR+=	ruby-excon
 SUBDIR+=	ruby-faraday
 SUBDIR+=	ruby-faraday1
 SUBDIR+=	ruby-faraday-em_http
