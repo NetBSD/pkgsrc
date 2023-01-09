@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22480 2023/01/09 15:44:12 vins Exp $
+$NetBSD: TODO,v 1.22481 2023/01/09 18:45:14 vins Exp $
 
 Suggested new packages
 ======================
@@ -593,7 +593,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o drupal-10.0
 	o dtc-1.6.0
 	o dte-1.10
-	o dunst-1.6.1 [adds Linux- and wayland-specific code]
 	o dwdiff-2.1.4
 	o eagle-8.1.0
 	o easymenu-0.7.2p1
