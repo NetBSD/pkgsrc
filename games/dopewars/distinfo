@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.18 2021/10/26 10:43:54 nia Exp $
+$NetBSD: distinfo,v 1.19 2023/01/09 19:47:06 fcambus Exp $
 
-BLAKE2s (dopewars-1.6.1.tar.gz) = 7c2930dda2626046f2b5106cd8131d1742fa73e28d6ac5e019f1c0105acff763
-SHA512 (dopewars-1.6.1.tar.gz) = c4b33879be499a732e42a7a8829ff56a1807c5943eae4d39bc14ef16e06cf22b6c5792e7cefa8ad76846498be8bbf3f9c00f8f6664f14b5ce4d45604e42e8175
-Size (dopewars-1.6.1.tar.gz) = 1459612 bytes
+BLAKE2s (dopewars-1.6.2.tar.gz) = f1beef6d8e7cef11a7ef8d219154215c46d573f3559a0aa439e79f19f18b2078
+SHA512 (dopewars-1.6.2.tar.gz) = e6ffb0fd6dc4ab6465dcececab9c8387b2696615d84c40ab83d7b0a3b2570503fe98df4c90714ea820180e5b418500fd00812ba74a23cc5dde6a7e4e1af49476
+Size (dopewars-1.6.2.tar.gz) = 1475105 bytes
 SHA1 (patch-Makefile.in) = e0ccd415a7154a08f0bddcf10949439fe4719c9e
 SHA1 (patch-ad) = 471c30b8b8e75d687e7891037f2427cb8ee51c14
 SHA1 (patch-src_curses__client_curses__client.c) = 95c871ec0faebe0de65e81504e9d71021c3478ec
