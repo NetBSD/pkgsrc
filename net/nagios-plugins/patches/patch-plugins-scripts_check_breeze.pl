@@ -1,10 +1,10 @@
-$NetBSD: patch-plugins-scripts_check__breeze.pl,v 1.1 2017/07/04 19:45:18 jperkin Exp $
+$NetBSD: patch-plugins-scripts_check_breeze.pl,v 1.1 2023/01/09 00:28:41 sekiya Exp $
 
 Fix path to snmpget.
 
---- plugins-scripts/check_breeze.pl.orig	2017-01-16 17:24:03.000000000 +0000
-+++ plugins-scripts/check_breeze.pl
-@@ -49,7 +49,7 @@ my $critical = $1 if ($opt_c =~ /([0-9]{
+--- plugins-scripts/check_breeze.pl.orig	2017-01-17 02:24:03.000000000 +0900
++++ plugins-scripts/check_breeze.pl	2023-01-09 08:51:25.244526777 +0900
+@@ -49,7 +49,7 @@
  ($opt_C) || ($opt_C = "public") ;
  
  my $sig=0;
