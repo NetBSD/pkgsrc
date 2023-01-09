@@ -1,11 +1,11 @@
-$NetBSD: patch-configure,v 1.7 2021/03/18 08:30:43 jaapb Exp $
+$NetBSD: patch-configure,v 1.8 2023/01/09 14:24:40 wiz Exp $
 
 Do not install META files for libraries that were split off
 
---- configure.orig	2021-03-16 11:43:00.000000000 +0000
+--- configure.orig	2023-01-09 14:18:01.493625801 +0000
 +++ configure
-@@ -511,10 +511,10 @@ fi
- 
+@@ -555,10 +555,10 @@ fi
+ check_library dynlink '' dynlink/dynlink.cmi dynlink.cmi
  check_library bigarray 'possible since 4.08'
  check_library compiler-libs '' 'compiler-libs'
 -check_library dbm 'normal since 4.00'
