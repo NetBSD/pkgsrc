@@ -1,5 +1,5 @@
-bin/rabbirc @PREFIX@/bin/rabbirc/@RUBY_SUFFIX@
-bin/rabbit @PREFIX@/bin/rabbit/@RUBY_SUFFIX@
-bin/rabbit-command @PREFIX@/bin/rabbit-command/@RUBY_SUFFIX@
-bin/rabbit-slide @PREFIX@/bin/rabbit-slide/@RUBY_SUFFIX@
-bin/rabbit-theme @PREFIX@/bin/rabbit-theme/@RUBY_SUFFIX@
+bin/rabbirc @PREFIX@/bin/rabbirc@RUBY_SUFFIX@
+bin/rabbit @PREFIX@/bin/rabbit@RUBY_SUFFIX@
+bin/rabbit-command @PREFIX@/bin/rabbit-command@RUBY_SUFFIX@
+bin/rabbit-slide @PREFIX@/bin/rabbit-slide@RUBY_SUFFIX@
+bin/rabbit-theme @PREFIX@/bin/rabbit-theme@RUBY_SUFFIX@
