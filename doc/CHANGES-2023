@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.213 2023/01/09 08:11:30 taca Exp $
+$NetBSD: CHANGES-2023,v 1.214 2023/01/09 08:22:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -244,3 +244,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/ruby-redmine50 to 5.0.4nb1 [taca 2023-01-09]
 	Added devel/ruby-octokit4 version 4.25.1 [taca 2023-01-09]
 	Updated www/ruby-jekyll-gist to 1.5.0nb1 [taca 2023-01-09]
+	Updated devel/ruby-octokit to 6.0.1 [taca 2023-01-09]
