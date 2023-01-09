@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22474 2023/01/09 12:43:21 vins Exp $
+$NetBSD: TODO,v 1.22475 2023/01/09 13:20:42 wiz Exp $
 
 Suggested new packages
 ======================
@@ -996,7 +996,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libtrace-4.0.16
 	o libvirt-2.3
 	o libxdg-basedir-1.2.3
-	o libxkbcommon-1.5.0
 	o libxml2-2.10.3 [several CVEs addressed]
 	o libzookeeper-3.7.0
 	o lincvs-2.1.4 [now called CrossVC]
