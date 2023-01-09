@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.258 2023/01/09 21:08:23 fcambus Exp $
+$NetBSD: CHANGES-2023,v 1.259 2023/01/09 21:08:26 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -291,3 +291,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added fonts/nerd-fonts-3270 version 2.2.2 [nikita 2023-01-09]
 	Added fonts/nerd-fonts-Agave version 2.2.2 [nikita 2023-01-09]
 	Updated editors/hexedit to 1.6 [fcambus 2023-01-09]
+	Added fonts/nerd-fonts-AnonymousPro version 2.2.2 [nikita 2023-01-09]
