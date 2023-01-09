@@ -1,5 +1,6 @@
-# $NetBSD: Makefile.common,v 1.1 2023/01/09 21:00:32 nikita Exp $
+# $NetBSD: Makefile.common,v 1.2 2023/01/09 21:04:17 nikita Exp $
 # used by fonts/nerd-fonts-3270/Makefile
+# used by fonts/nerd-fonts-Agave/Makefile
 
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ryanoasis/}
