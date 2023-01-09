@@ -1,27 +1,31 @@
-$NetBSD: patch-Makefile,v 1.5 2020/08/11 18:40:45 joerg Exp $
+$NetBSD: patch-Makefile,v 1.6 2023/01/09 18:44:17 vins Exp $
 
 Use BSD_INSTALL.
 
---- Makefile.orig	2020-07-23 10:27:50.000000000 +0000
+--- Makefile.orig	2022-06-27 12:43:39.000000000 +0000
 +++ Makefile
-@@ -165,19 +165,19 @@ clean-coverage-run:
- install: install-dunst install-dunstctl install-doc install-service install-dunstify
+@@ -184,22 +184,22 @@ clean-wayland-protocols:
+ install: install-dunst install-dunstctl install-dunstrc install-service install-dunstify
  
  install-dunst: dunst doc
 -	install -Dm755 dunst ${DESTDIR}${BINDIR}/dunst
 -	install -Dm644 docs/dunst.1 ${DESTDIR}${MANPREFIX}/man1/dunst.1
+-	install -Dm644 docs/dunst.5 ${DESTDIR}${MANPREFIX}/man5/dunst.5
 -	install -Dm644 docs/dunstctl.1 ${DESTDIR}${MANPREFIX}/man1/dunstctl.1
 +	${BSD_INSTALL_PROGRAM} dunst ${DESTDIR}${BINDIR}/dunst
 +	${BSD_INSTALL_DATA} docs/dunst.1 ${DESTDIR}${MANPREFIX}/man1/dunst.1
++	${BSD_INSTALL_DATA} docs/dunst.5 ${DESTDIR}${MANPREFIX}/man5/dunst.5
 +	${BSD_INSTALL_DATA} docs/dunstctl.1 ${DESTDIR}${MANPREFIX}/man1/dunstctl.1
  
  install-dunstctl: dunstctl
 -	install -Dm755 dunstctl ${DESTDIR}${BINDIR}/dunstctl
 +	${BSD_INSTALL_SCRIPT} dunstctl ${DESTDIR}${BINDIR}/dunstctl
  
- install-doc:
--	install -Dm644 dunstrc ${DESTDIR}${DATADIR}/dunst/dunstrc
-+	${BSD_INSTALL_DATA} dunstrc ${DESTDIR}${DATADIR}/dunst/dunstrc
+ ifeq (1,${SYSCONF_FORCE_NEW})
+ install-dunstrc:
+-	install -Dm644 dunstrc ${DESTDIR}${SYSCONFFILE}
++	${BSD_INSTALL_DATA} dunstrc ${DESTDIR}${SYSCONFFILE}
+ endif
  
  install-service: install-service-dbus
  install-service-dbus: service-dbus
@@ -30,12 +34,12 @@ Use BSD_INSTALL.
  ifneq (0,${SYSTEMD})
  install-service: install-service-systemd
  install-service-systemd: service-systemd
-@@ -185,7 +185,7 @@ install-service-systemd: service-systemd
+@@ -207,7 +207,7 @@ install-service-systemd: service-systemd
  endif
  
  install-dunstify: dunstify
 -	install -Dm755 dunstify ${DESTDIR}${BINDIR}/dunstify
 +	${BSD_INSTALL_PROGRAM} dunstify ${DESTDIR}${BINDIR}/dunstify
  
- uninstall: uninstall-service uninstall-dunstctl
- 	rm -f ${DESTDIR}${BINDIR}/dunst
+ uninstall: uninstall-keepconf
+ uninstall-purge: uninstall-keepconf uninstall-dunstrc
