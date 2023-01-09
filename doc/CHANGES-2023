@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.263 2023/01/09 21:25:09 nikita Exp $
+$NetBSD: CHANGES-2023,v 1.264 2023/01/09 21:30:08 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -296,3 +296,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated converters/bdf2psf to 1.215 [fcambus 2023-01-09]
 	Added fonts/nerd-fonts-AurulentSansMono version 2.2.2 [nikita 2023-01-09]
 	Added fonts/nerd-fonts-BigBlueTerminal version 2.2.2 [nikita 2023-01-09]
+	Added fonts/nerd-fonts-BitstreamVeraSansMono version 2.2.2 [nikita 2023-01-09]
