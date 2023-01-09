@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2020/01/18 21:50:19 jperkin Exp $
+# $NetBSD: Makefile,v 1.23 2023/01/09 00:14:06 sekiya Exp $
 #
 
 PKGNAME=	nagios-plugin-pgsql-${PLUGINSVERSION}
@@ -18,7 +18,7 @@ CONFIGURE_ARGS+=	--with-pgsql=${BUILDLINK_PREFIX.pgsql-lib}
 
 BINARY_TARGET=	check_pgsql
 
-.include "../../net/nagios-plugins/Makefile.plugin"
+.include "../../net/nagios-plugins/plugin.mk"
 .include "../../mk/pgsql.buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
