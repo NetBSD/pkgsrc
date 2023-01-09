@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2022/06/28 11:35:03 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2023/01/09 00:14:06 sekiya Exp $
 #
 
 PKGNAME=	nagios-plugin-snmp-${PLUGINSVERSION}
@@ -20,7 +20,7 @@ BINARY_TARGET=	check_snmp check_hpjd
 SCRIPT_TARGET=	check_ifoperstatus check_ifstatus
 SCRIPT_TARGET+=	check_breeze check_wave
 
-.include "../../net/nagios-plugins/Makefile.plugin"
+.include "../../net/nagios-plugins/plugin.mk"
 .include "../../net/net-snmp/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
