@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2022/11/03 10:57:38 jmcneill Exp $
+# $NetBSD: Makefile,v 1.36 2023/01/09 05:42:32 khorben Exp $
 #
 
 .include "../../sysutils/u-boot/u-boot-version.mk"
@@ -77,7 +77,7 @@ DEPENDS+=	u-boot-rockpro64-[0-9]*:../../sysutils/u-boot-rockpro64
 DEPENDS+=	u-boot-rpi3-32-[0-9]*:../../sysutils/u-boot-rpi3-32
 DEPENDS+=	u-boot-sopine-baseboard-[0-9]*:../../sysutils/u-boot-sopine-baseboard
 DEPENDS+=	u-boot-tinker-[0-9]*:../../sysutils/u-boot-tinker
-DEPENDS+=	u-boot-zync-zturn-[0-9]*:../../sysutils/u-boot-zynq-zturn
+DEPENDS+=	u-boot-zynq-zturn-[0-9]*:../../sysutils/u-boot-zynq-zturn
 DEPENDS+=	u-boot-zynq-zybo-[0-9]*:../../sysutils/u-boot-zynq-zybo
 DEPENDS+=	u-boot-zynq-zybo-z7-[0-9]*:../../sysutils/u-boot-zynq-zybo-z7
 
