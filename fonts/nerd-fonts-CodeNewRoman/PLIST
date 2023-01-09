@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2023/01/09 21:51:58 nikita Exp $
+share/fonts/X11/OTF/Code New Roman Bold Nerd Font Complete Mono Windows Compatible.otf
+share/fonts/X11/OTF/Code New Roman Bold Nerd Font Complete Mono.otf
+share/fonts/X11/OTF/Code New Roman Bold Nerd Font Complete Windows Compatible.otf
+share/fonts/X11/OTF/Code New Roman Bold Nerd Font Complete.otf
+share/fonts/X11/OTF/Code New Roman Italic Nerd Font Complete Mono Windows Compatible.otf
+share/fonts/X11/OTF/Code New Roman Italic Nerd Font Complete Mono.otf
+share/fonts/X11/OTF/Code New Roman Italic Nerd Font Complete Windows Compatible.otf
+share/fonts/X11/OTF/Code New Roman Italic Nerd Font Complete.otf
+share/fonts/X11/OTF/Code New Roman Nerd Font Complete Mono Windows Compatible.otf
+share/fonts/X11/OTF/Code New Roman Nerd Font Complete Mono.otf
+share/fonts/X11/OTF/Code New Roman Nerd Font Complete Windows Compatible.otf
+share/fonts/X11/OTF/Code New Roman Nerd Font Complete.otf
+@pkgdir share/fonts/X11/TTF
