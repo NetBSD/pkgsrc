@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2022/11/14 14:34:48 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2023/01/09 06:52:52 khorben Exp $
 
-PKGREVISION=	3
+PKGREVISION=	4
 
 USE_LANGUAGES=	c99 c++
 USE_CMAKE=	yes
 AUTO_MKDIRS=	yes
-
-BROKEN+=	"Attempts to download files during install, PR pkg/56374"
 
 DEPENDS+=	${PYPKGPREFIX}-angr-[0-9]*:../../devel/py-angr
 DEPENDS+=	${PYPKGPREFIX}-cachetools-[0-9]*:../../devel/py-cachetools
@@ -25,7 +23,7 @@ DEPENDS+=	${PYPKGPREFIX}-dpkt-[0-9]*:../../net/py-dpkt
 DEPENDS+=	${PYPKGPREFIX}-mulpyplexer-[0-9]*:../../devel/py-mulpyplexer
 DEPENDS+=	${PYPKGPREFIX}-progressbar2-[0-9]*:../../devel/py-progressbar2
 DEPENDS+=	${PYPKGPREFIX}-rpyc-[0-9]*:../../net/py-rpyc
-DEPENDS+=	${PYPKGPREFIX}-smt-[0-9]*:../../math/py-smt
+DEPENDS+=	${PYPKGPREFIX}-smt>=0.9.5:../../math/py-smt
 DEPENDS+=	${PYPKGPREFIX}-toolz>=0.9.1:../../devel/py-toolz
 DEPENDS+=	${PYPKGPREFIX}-z3solver-[0-9]*:../../math/py-z3solver
 
