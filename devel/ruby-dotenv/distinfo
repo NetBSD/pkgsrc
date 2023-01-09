@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.5 2023/01/09 05:18:49 taca Exp $
+
+BLAKE2s (dotenv-2.8.1.gem) = 18068f4a834729a55b899362b1da68476aa41cfeb07791f2782a64e9e650e44d
+SHA512 (dotenv-2.8.1.gem) = 4f512d515ea17ab50b4c71bd15e6bc4e01c8ec1d98c2c0589aab992340626d2c7f1a7da25095d03ba0714b27d3845a306618e018c96099a043ba9b9ee2a27fc6
+Size (dotenv-2.8.1.gem) = 12800 bytes
