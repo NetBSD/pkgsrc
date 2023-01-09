@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.188 2023/01/09 05:42:55 taca Exp $
+$NetBSD: CHANGES-2023,v 1.189 2023/01/09 05:46:18 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -219,3 +219,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/ruby-rspec-expectations to 3.12.2 [taca 2023-01-09]
 	Updated devel/ruby-rspec-mocks to 3.12.2 [taca 2023-01-09]
 	Updated devel/ruby-zookeeper to 1.5.5 [taca 2023-01-09]
+	Updated security/ruby-metasploit-concern to 5.0.0 [taca 2023-01-09]
