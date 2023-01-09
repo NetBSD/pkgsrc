@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2023/01/09 21:07:42 nikita Exp $
+share/fonts/X11/TTF/Anonymice Nerd Font Complete Mono Windows Compatible.ttf
+share/fonts/X11/TTF/Anonymice Nerd Font Complete Mono.ttf
+share/fonts/X11/TTF/Anonymice Nerd Font Complete Windows Compatible.ttf
+share/fonts/X11/TTF/Anonymice Nerd Font Complete.ttf
+@pkgdir share/fonts/X11/OTF
