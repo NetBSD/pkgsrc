@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.245 2023/01/09 16:00:12 fcambus Exp $
+$NetBSD: CHANGES-2023,v 1.246 2023/01/09 17:13:54 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -278,3 +278,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/inetutils to 2.4 [vins 2023-01-09]
 	Updated textproc/jo to 1.9 [fcambus 2023-01-09]
 	Updated devel/byacc to 20221229 [fcambus 2023-01-09]
+	Updated devel/mimalloc to 2.0.9 [fcambus 2023-01-09]
