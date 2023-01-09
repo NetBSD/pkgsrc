@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2022/12/15 22:28:47 nikita Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/01/09 22:31:46 nikita Exp $
 bin/nvim
 man/man1/nvim.1
 share/applications/nvim.desktop
@@ -265,6 +265,7 @@ share/nvim/runtime/doc/intro.txt
 share/nvim/runtime/doc/job_control.txt
 share/nvim/runtime/doc/lsp-extension.txt
 share/nvim/runtime/doc/lsp.txt
+share/nvim/runtime/doc/lua-guide.txt
 share/nvim/runtime/doc/lua.txt
 share/nvim/runtime/doc/luaref.txt
 share/nvim/runtime/doc/luvref.txt
@@ -978,6 +979,7 @@ share/nvim/runtime/print/prolog.ps
 share/nvim/runtime/queries/c/highlights.scm
 share/nvim/runtime/queries/c/injections.scm
 share/nvim/runtime/queries/help/highlights.scm
+share/nvim/runtime/queries/help/injections.scm
 share/nvim/runtime/queries/lua/highlights.scm
 share/nvim/runtime/queries/lua/injections.scm
 share/nvim/runtime/queries/vim/highlights.scm
