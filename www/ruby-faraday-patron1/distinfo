@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/01/09 07:35:55 taca Exp $
+
+BLAKE2s (faraday-patron-1.0.0.gem) = 836cc3d6efc144e5848690d040a3d8865a3e70c9623a5929564def9fc4ada35c
+SHA512 (faraday-patron-1.0.0.gem) = a9443abeb285e33ae34e68471fd3d36bec299b66dc2e7765df7ca4a10741c49a553e36ee65ff66bb1abd4914b6cf6bb1e089e74fbb3a9c1c41dd51c335fc5240
+Size (faraday-patron-1.0.0.gem) = 7680 bytes
