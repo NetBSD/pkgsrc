@@ -1,10 +1,10 @@
-$NetBSD: patch-plugins_check__ide__smart.c,v 1.1 2022/04/02 10:35:35 nia Exp $
+$NetBSD: patch-plugins_check_ide_smart.c,v 1.3 2023/01/09 00:28:41 sekiya Exp $
 
 __u8 and __u16 are not defined in videoio.h in NetBSD 9.99.x.
 
---- plugins/check_ide_smart.c.orig	2017-01-16 17:24:03.000000000 +0000
-+++ plugins/check_ide_smart.c
-@@ -56,11 +56,14 @@ void print_usage (void);
+--- plugins/check_ide_smart.c.orig	2019-12-05 06:53:08.000000000 +0900
++++ plugins/check_ide_smart.c	2023-01-09 08:53:27.415335124 +0900
+@@ -56,11 +56,14 @@
  #include <sys/device.h>
  #include <sys/param.h>
  #include <sys/sysctl.h>

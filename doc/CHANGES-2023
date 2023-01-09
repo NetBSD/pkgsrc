@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.178 2023/01/08 23:35:11 sekiya Exp $
+$NetBSD: CHANGES-2023,v 1.179 2023/01/09 00:28:41 sekiya Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -210,3 +210,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/nsd to 4.6.1 [ryoon 2023-01-08]
 	Updated net/knot to 3.2.4 [ryoon 2023-01-08]
 	Updated net/nagios-base to 4.4.9 [sekiya 2023-01-09]
+	Updated net/nagios-plugins to 2.3.3 [sekiya 2023-01-09]
