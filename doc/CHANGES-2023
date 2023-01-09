@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.180 2023/01/09 01:38:06 sekiya Exp $
+$NetBSD: CHANGES-2023,v 1.181 2023/01/09 04:51:05 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -212,3 +212,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/nagios-base to 4.4.9 [sekiya 2023-01-09]
 	Updated net/nagios-plugins to 2.3.3 [sekiya 2023-01-09]
 	Updated security/sshguard to 2.4.2 [sekiya 2023-01-09]
+	Updated emulators/PC6001VX to 4.1.2 [tsutsui 2023-01-09]
