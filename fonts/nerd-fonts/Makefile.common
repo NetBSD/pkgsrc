@@ -1,0 +1,17 @@
+# $NetBSD: Makefile.common,v 1.1 2023/01/09 21:00:32 nikita Exp $
+# used by fonts/nerd-fonts-3270/Makefile
+
+CATEGORIES=	fonts
+MASTER_SITES=	${MASTER_SITE_GITHUB:=ryanoasis/}
+GITHUB_PROJECT=	nerd-fonts
+GITHUB_RELEASE=	v2.2.2
+DIST_SUBDIR=	${GITHUB_PROJECT}/${GITHUB_RELEASE:S/v//}
+EXTRACT_SUFX=	.zip
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://github.com/ryanoasis/nerd-fonts/
+LICENSE=	mit
+
+NO_BUILD=	yes
+NO_CONFIGURE=	yes
+WRKSRC=		${WRKDIR}

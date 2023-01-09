@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2023/01/09 21:00:32 nikita Exp $
+share/fonts/X11/OTF/3270 Narrow Nerd Font Complete Mono Windows Compatible.otf
+share/fonts/X11/OTF/3270 Narrow Nerd Font Complete Mono.otf
+share/fonts/X11/OTF/3270 Narrow Nerd Font Complete Windows Compatible.otf
+share/fonts/X11/OTF/3270 Narrow Nerd Font Complete.otf
+share/fonts/X11/OTF/3270 Semi-Narrow Nerd Font Complete Mono Windows Compatible.otf
+share/fonts/X11/OTF/3270 Semi-Narrow Nerd Font Complete Mono.otf
+share/fonts/X11/OTF/3270 Semi-Narrow Nerd Font Complete Windows Compatible.otf
+share/fonts/X11/OTF/3270 Semi-Narrow Nerd Font Complete.otf
+share/fonts/X11/OTF/3270-Medium Nerd Font Complete Mono Windows Compatible.otf
+share/fonts/X11/OTF/3270-Medium Nerd Font Complete Mono.otf
+share/fonts/X11/OTF/3270-Medium Nerd Font Complete Windows Compatible.otf
+share/fonts/X11/OTF/3270-Medium Nerd Font Complete.otf
+share/fonts/X11/TTF/3270 Narrow Nerd Font Complete Mono Windows Compatible.ttf
+share/fonts/X11/TTF/3270 Narrow Nerd Font Complete Mono.ttf
+share/fonts/X11/TTF/3270 Narrow Nerd Font Complete Windows Compatible.ttf
+share/fonts/X11/TTF/3270 Narrow Nerd Font Complete.ttf
+share/fonts/X11/TTF/3270 Semi-Narrow Nerd Font Complete Mono Windows Compatible.ttf
+share/fonts/X11/TTF/3270 Semi-Narrow Nerd Font Complete Mono.ttf
+share/fonts/X11/TTF/3270 Semi-Narrow Nerd Font Complete Windows Compatible.ttf
+share/fonts/X11/TTF/3270 Semi-Narrow Nerd Font Complete.ttf
+share/fonts/X11/TTF/3270-Medium Nerd Font Complete Mono Windows Compatible.ttf
+share/fonts/X11/TTF/3270-Medium Nerd Font Complete Mono.ttf
+share/fonts/X11/TTF/3270-Medium Nerd Font Complete Windows Compatible.ttf
+share/fonts/X11/TTF/3270-Medium Nerd Font Complete.ttf
