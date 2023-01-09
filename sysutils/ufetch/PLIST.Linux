@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.Linux,v 1.3 2019/12/31 11:16:49 ng0 Exp $
+@comment $NetBSD: PLIST.Linux,v 1.4 2023/01/09 09:29:03 vins Exp $
 bin/ufetch-alpine
 bin/ufetch-antergos
 bin/ufetch-arch
@@ -9,12 +9,14 @@ bin/ufetch-aux
 bin/ufetch-centos
 bin/ufetch-crux
 bin/ufetch-debian
+bin/ufetch-devuan
 bin/ufetch-elementary
 bin/ufetch-fedora
 bin/ufetch-gentoo
 bin/ufetch-gnewsense
-bin/ufetch-guixsd
+bin/ufetch-guix
 bin/ufetch-hyperbola
+bin/ufetch-instantos
 bin/ufetch-linuxlite
 bin/ufetch-mageia
 bin/ufetch-manjaro
@@ -24,7 +26,7 @@ bin/ufetch-nixos
 bin/ufetch-parabola
 bin/ufetch-popos
 bin/ufetch-pureos
-bin/ufetch-raspbian
+bin/ufetch-raspberrypios
 bin/ufetch-slackware
 bin/ufetch-suse
 bin/ufetch-ubuntu
