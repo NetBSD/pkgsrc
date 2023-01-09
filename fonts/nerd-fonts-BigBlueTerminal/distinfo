@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/01/09 21:24:46 nikita Exp $
+
+BLAKE2s (nerd-fonts/2.2.2/BigBlueTerminal.zip) = cc55234de37ac74a34a26394f98c0f74b64045d96946490f6407eb34922a7cbd
+SHA512 (nerd-fonts/2.2.2/BigBlueTerminal.zip) = 91d1471452c9e4d2ec2f264fd18dce5e4c119e3912b0231464860195ee07093444a39e48cdefc025997d356926a1f9aad03836cdb224f48571b906be8b37a808
+Size (nerd-fonts/2.2.2/BigBlueTerminal.zip) = 4354030 bytes
