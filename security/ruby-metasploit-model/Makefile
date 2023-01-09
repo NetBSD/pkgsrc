@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2022/08/28 05:19:19 taca Exp $
+# $NetBSD: Makefile,v 1.8 2023/01/09 05:48:47 taca Exp $
 
-DISTNAME=	metasploit-model-4.0.6
+DISTNAME=	metasploit-model-5.0.0
 CATEGORIES=	security
 
 MAINTAINER=	minskim@NetBSD.org
@@ -11,7 +11,7 @@ LICENSE=	modified-bsd
 DEPENDS+=	${RUBY_ACTIVEMODEL_DEPENDS}
 DEPENDS+=	${RUBY_RAILTIES_DEPENDS}
 
-RUBY_RAILS_ACCEPTED=	60 61
+RUBY_RAILS_ACCEPTED=	70
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
