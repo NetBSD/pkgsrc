@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.268 2023/01/09 21:58:42 nikita Exp $
+$NetBSD: CHANGES-2023,v 1.269 2023/01/09 22:31:57 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -301,3 +301,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/libuninameslist to 20221022 [fcambus 2023-01-09]
 	Added fonts/nerd-fonts-CodeNewRoman version 2.2.2 [nikita 2023-01-09]
 	Added fonts/nerd-fonts-Cousine version 2.2.2 [nikita 2023-01-09]
+	Updated editors/neovim to 0.8.2 [nikita 2023-01-09]
