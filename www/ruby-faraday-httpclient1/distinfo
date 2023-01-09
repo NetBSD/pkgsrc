@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/01/09 07:28:37 taca Exp $
+
+BLAKE2s (faraday-httpclient-1.0.1.gem) = 9cd077003d35e01f64c6059825c6dcc57006626dca1cc95755055af6be5e5ea0
+SHA512 (faraday-httpclient-1.0.1.gem) = ec1a15e4cc1d7c4627a6a3f97061a4ee2d45377d360b7ba49531ee1470d730f94edca025877dd9ed518329236630aad7951897450e6138b9538a04f13566055e
+Size (faraday-httpclient-1.0.1.gem) = 7680 bytes
