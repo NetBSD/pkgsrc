@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.240 2023/01/09 13:26:50 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.241 2023/01/09 14:12:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -273,3 +273,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/libxkbcommon to 1.5.0 [wiz 2023-01-09]
 	Updated math/mpfr to 4.2.0 [wiz 2023-01-09]
 	Updated wm/i3 to 4.22 [wiz 2023-01-09]
+	Updated devel/syft to 0.65.0 [wiz 2023-01-09]
