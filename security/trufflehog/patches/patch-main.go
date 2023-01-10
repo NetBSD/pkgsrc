@@ -1,13 +1,13 @@
-$NetBSD: patch-main.go,v 1.2 2022/09/02 19:28:16 leot Exp $
+$NetBSD: patch-main.go,v 1.3 2023/01/10 21:35:36 leot Exp $
 
 Disable update functionality.
 
 This avoid to patch overseer in order to add support for more operating
 system and all the logic is not desiderable for a package system too.
 
---- main.go.orig	2022-09-02 19:00:02.000000000 +0000
+--- main.go.orig	2023-01-06 05:44:37.000000000 +0000
 +++ main.go
-@@ -9,12 +9,10 @@ import (
+@@ -8,12 +8,10 @@ import (
  	"runtime"
  	"strconv"
  	"strings"
@@ -20,7 +20,7 @@ system and all the logic is not desiderable for a package system too.
  	"github.com/sirupsen/logrus"
  	"gopkg.in/alecthomas/kingpin.v2"
  
-@@ -25,7 +23,6 @@ import (
+@@ -26,7 +24,6 @@ import (
  	"github.com/trufflesecurity/trufflehog/v3/pkg/output"
  	"github.com/trufflesecurity/trufflehog/v3/pkg/sources"
  	"github.com/trufflesecurity/trufflehog/v3/pkg/sources/git"
@@ -28,7 +28,7 @@ system and all the logic is not desiderable for a package system too.
  	"github.com/trufflesecurity/trufflehog/v3/pkg/version"
  )
  
-@@ -118,28 +115,10 @@ func init() {
+@@ -130,28 +127,10 @@ func init() {
  }
  
  func main() {
@@ -57,5 +57,5 @@ system and all the logic is not desiderable for a package system too.
 -func run(state overseer.State) {
 +func run() {
  	if *debug {
- 		fmt.Println("trufflehog " + version.BuildVersion)
+ 		logrus.Debugf("trufflehog %s", version.BuildVersion)
  	}
