@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.277 2023/01/10 20:36:43 otis Exp $
+$NetBSD: CHANGES-2023,v 1.278 2023/01/10 20:55:24 leot Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -310,3 +310,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/dq to 20230101 [schmonz 2023-01-10]
 	Added devel/py-pykka version 3.1.1 [wiz 2023-01-10]
 	Updated net/vsftpd to 3.0.5 [otis 2023-01-10]
+	Updated devel/conftest to 0.38.0 [leot 2023-01-10]
