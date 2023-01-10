@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.269 2023/01/09 22:31:57 nikita Exp $
+$NetBSD: CHANGES-2023,v 1.270 2023/01/10 00:17:18 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -302,3 +302,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added fonts/nerd-fonts-CodeNewRoman version 2.2.2 [nikita 2023-01-09]
 	Added fonts/nerd-fonts-Cousine version 2.2.2 [nikita 2023-01-09]
 	Updated editors/neovim to 0.8.2 [nikita 2023-01-09]
+	Updated x11/libxfce4ui to 4.18.1 [gutteridge 2023-01-10]
