@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile,v 1.1 2023/01/10 21:51:30 nikita Exp $
+
+Let pkgsrc add the shebang to the fennel launcher script
+
+--- Makefile.orig	2022-05-05 21:57:31.282820992 -0700
++++ Makefile	2022-05-05 21:57:36.826751085 -0700
+@@ -41,7 +41,7 @@
+ 
+ # All-in-one pure-lua script:
+ fennel: src/launcher.fnl $(SRC)
+-	echo "#!/usr/bin/env $(LUA)" > $@
++	echo "#!$(LUA_INTERPRETER)" > $@
+ 	$(LAUNCHER) --no-metadata --require-as-include --compile $< >> $@
+ 	chmod 755 $@
+ 
