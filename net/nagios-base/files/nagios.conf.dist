@@ -1,4 +1,4 @@
-# $NetBSD: nagios.conf.dist,v 1.2 2006/03/28 06:13:30 wiz Exp $
+# $NetBSD: nagios.conf.dist,v 1.3 2023/01/10 23:42:16 sekiya Exp $
 #
 # nagios configuration file fragment for Apache
 
@@ -12,6 +12,7 @@
     order allow,deny
     allow from all
     Options ExecCGI
+    Require all granted
 </Directory>
 
 
@@ -19,4 +20,5 @@
     AllowOverride AuthConfig
     order allow,deny
     allow from all
+    Require all granted
 </Directory>
