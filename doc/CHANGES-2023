@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.279 2023/01/10 21:35:44 leot Exp $
+$NetBSD: CHANGES-2023,v 1.280 2023/01/10 21:51:52 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -312,3 +312,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/vsftpd to 3.0.5 [otis 2023-01-10]
 	Updated devel/conftest to 0.38.0 [leot 2023-01-10]
 	Updated security/trufflehog to 3.24.0 [leot 2023-01-10]
+	Added lang/fennel version 1.2.1 [nikita 2023-01-10]
