@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.272 2023/01/10 13:34:29 pin Exp $
+$NetBSD: CHANGES-2023,v 1.273 2023/01/10 13:55:15 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -305,3 +305,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/libxfce4ui to 4.18.1 [gutteridge 2023-01-10]
 	Updated devel/opa to 0.48.0 [leot 2023-01-10]
 	Updated devel/git-cliff to 1.1.1 [pin 2023-01-10]
+	Updated devel/mold to 1.9.0 [fcambus 2023-01-10]
