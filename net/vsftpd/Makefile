@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.51 2020/02/09 20:58:37 rillig Exp $
+# $NetBSD: Makefile,v 1.52 2023/01/10 20:36:33 otis Exp $
 
-DISTNAME=	vsftpd-3.0.3
-PKGREVISION=	3
+DISTNAME=	vsftpd-3.0.5
 CATEGORIES=	net
 MASTER_SITES=	https://security.appspot.com/downloads/
 
