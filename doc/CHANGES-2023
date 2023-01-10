@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.274 2023/01/10 17:04:05 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.275 2023/01/10 17:09:13 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -307,3 +307,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/git-cliff to 1.1.1 [pin 2023-01-10]
 	Updated devel/mold to 1.9.0 [fcambus 2023-01-10]
 	Updated security/tlswrapper to 20230101 [schmonz 2023-01-10]
+	Updated net/dq to 20230101 [schmonz 2023-01-10]
