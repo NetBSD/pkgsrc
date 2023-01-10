@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.49 2023/01/03 15:27:23 wiz Exp $
+@comment $NetBSD: PLIST,v 1.50 2023/01/10 02:12:40 tnn Exp $
 bin/cifsdd
 bin/dbwrap_tool
 bin/dumpmscat
@@ -696,7 +696,7 @@ lib/samba/private/libRPC-SERVER-LOOP-samba4.so
 lib/samba/private/libRPC-WORKER-samba4.so
 lib/samba/private/libaddns-samba4.so
 lib/samba/private/libads-samba4.so
-${PLIST.ads}lib/samba/private/libasn1-samba4.so
+lib/samba/private/libasn1-samba4.so
 lib/samba/private/libasn1util-samba4.so
 lib/samba/private/libauth-samba4.so
 lib/samba/private/libauth-unix-token-samba4.so
@@ -713,7 +713,7 @@ lib/samba/private/libclidns-samba4.so
 lib/samba/private/libcluster-samba4.so
 lib/samba/private/libcmdline-contexts-samba4.so
 lib/samba/private/libcmdline-samba4.so
-${PLIST.ads}lib/samba/private/libcom-err-samba4.so
+lib/samba/private/libcom-err-samba4.so
 lib/samba/private/libcommon-auth-samba4.so
 ${PLIST.ads}lib/samba/private/libdb-glue-samba4.so
 lib/samba/private/libdbwrap-samba4.so
@@ -732,19 +732,19 @@ lib/samba/private/libgensec-samba4.so
 lib/samba/private/libgpext-samba4.so
 lib/samba/private/libgpo-samba4.so
 lib/samba/private/libgse-samba4.so
-${PLIST.ads}lib/samba/private/libgss-preauth-samba4.so
-${PLIST.ads}lib/samba/private/libgssapi-samba4.so
-${PLIST.ads}lib/samba/private/libhcrypto-samba4.so
-${PLIST.ads}lib/samba/private/libhdb-samba4.so
-${PLIST.ads}lib/samba/private/libheimbase-samba4.so
-${PLIST.ads}lib/samba/private/libheimntlm-samba4.so
+lib/samba/private/libgss-preauth-samba4.so
+lib/samba/private/libgssapi-samba4.so
+lib/samba/private/libhcrypto-samba4.so
+lib/samba/private/libhdb-samba4.so
+lib/samba/private/libheimbase-samba4.so
+lib/samba/private/libheimntlm-samba4.so
 lib/samba/private/libhttp-samba4.so
-${PLIST.ads}lib/samba/private/libhx509-samba4.so
+lib/samba/private/libhx509-samba4.so
 lib/samba/private/libidmap-samba4.so
 lib/samba/private/libinterfaces-samba4.so
 lib/samba/private/libiov-buf-samba4.so
-${PLIST.ads}lib/samba/private/libkdc-samba4.so
-${PLIST.ads}lib/samba/private/libkrb5-samba4.so
+lib/samba/private/libkdc-samba4.so
+lib/samba/private/libkrb5-samba4.so
 lib/samba/private/libkrb5samba-samba4.so
 lib/samba/private/libldbsamba-samba4.so
 lib/samba/private/liblibcli-lsa3-samba4.so
@@ -768,7 +768,7 @@ lib/samba/private/libprinting-migrate-samba4.so
 ${PLIST.ads}lib/samba/private/libprocess-model-samba4.so
 lib/samba/private/libregistry-samba4.so
 lib/samba/private/libreplace-samba4.so
-${PLIST.ads}lib/samba/private/libroken-samba4.so
+lib/samba/private/libroken-samba4.so
 lib/samba/private/libsamba-cluster-support-samba4.so
 lib/samba/private/libsamba-debug-samba4.so
 lib/samba/private/libsamba-modules-samba4.so
@@ -801,7 +801,7 @@ lib/samba/private/libtrusts-util-samba4.so
 lib/samba/private/libutil-reg-samba4.so
 lib/samba/private/libutil-setid-samba4.so
 lib/samba/private/libutil-tdb-samba4.so
-${PLIST.ads}lib/samba/private/libwind-samba4.so
+lib/samba/private/libwind-samba4.so
 lib/samba/private/libxattr-tdb-samba4.so
 ${PLIST.ads}lib/samba/process_model/prefork.${SOEXT}
 ${PLIST.ads}lib/samba/process_model/standard.${SOEXT}
