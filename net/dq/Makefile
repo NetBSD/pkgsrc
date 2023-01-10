@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.3 2022/09/20 00:17:25 schmonz Exp $
+# $NetBSD: Makefile,v 1.4 2023/01/10 17:09:08 schmonz Exp $
 
 DISTNAME=		${GITHUB_PROJECT}
 PKGNAME=		${GITHUB_PROJECT}-${GITHUB_TAG}
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GITHUB:=janmojzis/}
 GITHUB_PROJECT=		dq
-GITHUB_TAG=		20220822
+GITHUB_TAG=		20230101
 
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		https://github.com/janmojzis/dq/
 COMMENT=		Recursive DNS/DNSCurve server
-LICENSE=		public-domain
+LICENSE=		cc0-1.0-universal
 
 DEPENDS+=		daemontools-[0-9]*:../../sysutils/daemontools
 
