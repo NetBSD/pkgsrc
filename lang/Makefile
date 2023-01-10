@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.670 2022/12/24 13:48:10 wiz Exp $
+# $NetBSD: Makefile,v 1.671 2023/01/10 21:51:29 nikita Exp $
 #
 
 COMMENT=	Programming languages
@@ -55,6 +55,7 @@ SUBDIR+=	erlang-man
 SUBDIR+=	erlang21
 SUBDIR+=	execline
 SUBDIR+=	f2c
+SUBDIR+=	fennel
 SUBDIR+=	ficl
 SUBDIR+=	focal
 SUBDIR+=	fort77
