@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22483 2023/01/09 22:03:56 nikita Exp $
+$NetBSD: TODO,v 1.22484 2023/01/10 13:55:15 fcambus Exp $
 
 Suggested new packages
 ======================
@@ -1057,7 +1057,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o mit-scheme-bin-9.2
 	o mitmproxy-9
 	o modular-xorg-xwayland-22.1.7
-	o mold-1.9
 	o mono-nat-1.1.0
 	o monocypher-3.1.2
 	o mopher-0.6.0
