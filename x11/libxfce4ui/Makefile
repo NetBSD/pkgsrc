@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2023/01/03 17:38:29 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2023/01/10 00:15:56 gutteridge Exp $
 
-PKGREVISION= 1
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-DISTNAME=	libxfce4ui-4.18.0
+DISTNAME=	libxfce4ui-4.18.1
 CATEGORIES=	x11
 MASTER_SITES+=	https://archive.xfce.org/src/xfce/libxfce4ui/${PKGVERSION_NOREV:R}/
 
