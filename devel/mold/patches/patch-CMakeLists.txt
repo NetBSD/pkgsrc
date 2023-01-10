@@ -1,0 +1,18 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2023/01/10 13:55:03 fcambus Exp $
+
+Disable precompiled headers.
+
+cc1plus: warning: cmake_pch.hxx.gch: had text segment at different address
+
+--- CMakeLists.txt.orig	2023-01-09 21:59:36.996076626 +0000
++++ CMakeLists.txt
+@@ -378,9 +378,6 @@ if(${CMAKE_VERSION} VERSION_GREATER_EQUA
+     target_precompile_headers(mold PRIVATE
+       "$<$<COMPILE_LANGUAGE:CXX>:${CMAKE_SOURCE_DIR}/elf/mold.h>"
+       "$<$<COMPILE_LANGUAGE:CXX>:${CMAKE_SOURCE_DIR}/macho/mold.h>")
+-  else()
+-    target_precompile_headers(mold PRIVATE
+-      "$<$<COMPILE_LANGUAGE:CXX>:${CMAKE_SOURCE_DIR}/elf/mold.h>")
+   endif()
+ 
+   # ccache needs this flag along with `sloppiness = pch_defines,time_macros`
