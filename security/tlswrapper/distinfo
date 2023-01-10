@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2022/09/11 19:33:05 schmonz Exp $
+$NetBSD: distinfo,v 1.7 2023/01/10 17:03:59 schmonz Exp $
 
-BLAKE2s (tlswrapper-20220901.tar.gz) = bdd737eb0ec0cb31550eea387a72e4317b3ce345170022d6c51536cb7be06aee
-SHA512 (tlswrapper-20220901.tar.gz) = d4ed61270c4ce5d5660bc7ac2892f9c1610b88ff7a8aff27834159e858ef10a6ea2f568c53d80a0dcbc43a0d98bd9212b66a0a003caf3ccc5e31d9504530b74d
-Size (tlswrapper-20220901.tar.gz) = 249120 bytes
-SHA1 (patch-Makefile) = 06d4b97ac026693def83bbab09249737a152ac97
+BLAKE2s (tlswrapper-20230101.tar.gz) = 8526c77eacaa699c4a2928f18554fd571a99e6d80fd8ef9aa50f51c048972a30
+SHA512 (tlswrapper-20230101.tar.gz) = ff867ba7d5c4d3dc08bd9d27aeb79cd57d33570843aeca86cc3e415a22f175d7a270899d1a71e293d099aa9a1489ac1b65cd95f625f6a5cf3e1d245dada11245
+Size (tlswrapper-20230101.tar.gz) = 249311 bytes
