@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2022/11/13 18:55:31 fcambus Exp $
+# $NetBSD: Makefile,v 1.27 2023/01/10 13:55:03 fcambus Exp $
 
-DISTNAME=	mold-1.6.0
+DISTNAME=	mold-1.9.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rui314/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -32,6 +32,7 @@ GCC_REQD+=	10
 DL_AUTO_VARS=		yes
 PTHREAD_AUTO_VARS=	yes
 
+.include "../../archivers/zstd/buildlink3.mk"
 .include "../../devel/mimalloc/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../parallel/threadingbuildingblocks/buildlink3.mk"
