@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.49 2023/01/03 17:38:02 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2023/01/10 22:07:33 hauke Exp $
 
-DISTNAME=	netatalk-2.2.6
+DISTNAME=	netatalk-2.2.7
 PKGNAME=	${DISTNAME:C/-/22-/}
-PKGREVISION=	33
 CATEGORIES=	net print
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=netatalk/}
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_GITHUB:=Netatalk/}Netatalk/releases/download/netatalk-2-2-7/
 #PATCHFILES=	patch-adv1tov2.c
 PATCH_SITES=	http://svn.macosforge.org/repository/macports/trunk/dports/net/netatalk/files/ \
 		http://mirror.lug.udel.edu/pub/macports/trunk/dports/net/netatalk/files/
@@ -59,14 +57,12 @@ SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	etc/psf/etc2ps.sh
 SUBST_SED.paths=	-e 's,^\(DVIPS="*\)/usr\(/bin\),\1${PREFIX}\2,'
 
-PLIST_VARS+=		rcd
 .if ${OPSYS} == "NetBSD"
 CONFIGURE_ARGS+=	--enable-netbsd
 RCD_SCRIPTS=		afpd atalkd papd timelord cnid_metad
 .  for f in ${RCD_SCRIPTS}
 RCD_SCRIPT_SRC.${f}=	${WRKSRC}/distrib/initscripts/${f}
 .  endfor
-PLIST.rcd=		yes
 .endif
 
 PLIST_VARS+=		ea
