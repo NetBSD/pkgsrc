@@ -1,45 +1,14 @@
-$NetBSD: patch-etc_uams_uams__dhx__passwd.c,v 1.2 2021/04/02 09:54:26 hauke Exp $
+$NetBSD: patch-etc_uams_uams__dhx__passwd.c,v 1.3 2023/01/10 22:07:33 hauke Exp $
 
-Adapt for new OpenSSL API.
+Don't include headers that are not shipped
 
---- etc/uams/uams_dhx_passwd.c.orig	2014-03-16 11:17:48.000000000 +0000
+--- etc/uams/uams_dhx_passwd.c.orig	2022-07-12 04:08:24.000000000 +0000
 +++ etc/uams/uams_dhx_passwd.c
-@@ -81,6 +81,7 @@ static int pwd_login(void *obj, char *us
-     struct spwd *sp;
- #endif /* SHADOWPW */
-     BIGNUM *bn, *gbn, *pbn;
-+    const BIGNUM *pub_key;
-     u_int16_t sessid;
-     size_t i;
-     DH *dh;
-@@ -144,10 +145,18 @@ static int pwd_login(void *obj, char *us
-       return AFPERR_PARAM;
-     }
- 
-+    if (!DH_set0_pqg(dh, pbn, NULL, gbn)) {
-+      BN_free(pbn);
-+      BN_free(gbn);
-+      goto passwd_fail;
-+    }
-+
-     /* generate key and make sure we have enough space */
--    dh->p = pbn;
--    dh->g = gbn;
--    if (!DH_generate_key(dh) || (BN_num_bytes(dh->pub_key) > KEYSIZE)) {
-+    if (!DH_generate_key(dh)) {
-+      goto passwd_fail;
-+    }
-+    DH_get0_key(dh, &pub_key, NULL);
-+    if (BN_num_bytes(pub_key) > KEYSIZE) {
-       goto passwd_fail;
-     }
- 
-@@ -164,7 +173,7 @@ static int pwd_login(void *obj, char *us
-     *rbuflen += sizeof(sessid);
-     
-     /* send our public key */
--    BN_bn2bin(dh->pub_key, (unsigned char *)rbuf); 
-+    BN_bn2bin(pub_key, (unsigned char *)rbuf); 
-     rbuf += KEYSIZE;
-     *rbuflen += KEYSIZE;
- 
+@@ -37,7 +37,6 @@
+ #include <openssl/bn.h>
+ #include <openssl/dh.h>
+ #include <openssl/cast.h>
+-#include "openssl_compat.h"
+ #else /* OPENSSL_DHX */
+ #include <bn.h>
+ #include <dh.h>
