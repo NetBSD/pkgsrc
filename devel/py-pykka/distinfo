@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/01/10 20:03:35 wiz Exp $
+
+BLAKE2s (pykka-3.1.1.tar.gz) = 3f0aa5aa19e0ca9a5f1100c848bf24b26d889597eb5fcf0298f7861d88cf99ab
+SHA512 (pykka-3.1.1.tar.gz) = 7ca7885664598ba31dd7180f2a365d2fbb225a6dac26d09911b6bf0cafc55ea87d7e6212c4fff297bf4ca8d5b14134c656ea929e0869978bcd661309e2442908
+Size (pykka-3.1.1.tar.gz) = 45601 bytes
