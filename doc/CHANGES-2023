@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.275 2023/01/10 17:09:13 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.276 2023/01/10 20:03:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -308,3 +308,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/mold to 1.9.0 [fcambus 2023-01-10]
 	Updated security/tlswrapper to 20230101 [schmonz 2023-01-10]
 	Updated net/dq to 20230101 [schmonz 2023-01-10]
+	Added devel/py-pykka version 3.1.1 [wiz 2023-01-10]
