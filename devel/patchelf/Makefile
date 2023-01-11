@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2022/11/07 22:38:02 fcambus Exp $
+# $NetBSD: Makefile,v 1.13 2023/01/11 09:16:11 fcambus Exp $
 
-DISTNAME=	patchelf-0.17.0
+DISTNAME=	patchelf-0.17.2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=NixOS/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
