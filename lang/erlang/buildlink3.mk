@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2023/01/11 22:07:46 nikita Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2023/01/11 23:18:25 nikita Exp $
 
 BUILDLINK_TREE+=	erlang
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	erlang
 ERLANG_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.erlang+=	erlang>=10.1
-BUILDLINK_ABI_DEPENDS.erlang+=	erlang>=25.2nb2
+BUILDLINK_ABI_DEPENDS.erlang+=	erlang>=25.2nb1
 BUILDLINK_PKGSRCDIR.erlang?=	../../lang/erlang
 
 pkgbase := erlang
