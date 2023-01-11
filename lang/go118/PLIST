@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2022/12/08 10:28:44 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.10 2023/01/11 15:21:43 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go118/AUTHORS
@@ -3037,6 +3037,7 @@ go118/src/cmd/go/testdata/script/test_write_profiles_on_timeout.txt
 go118/src/cmd/go/testdata/script/test_xtestonly_works.txt
 go118/src/cmd/go/testdata/script/testing_issue40908.txt
 go118/src/cmd/go/testdata/script/toolexec.txt
+go118/src/cmd/go/testdata/script/trampoline_reuse_test.txt
 go118/src/cmd/go/testdata/script/vendor_complex.txt
 go118/src/cmd/go/testdata/script/vendor_gopath_issue11409.txt
 go118/src/cmd/go/testdata/script/vendor_import.txt
@@ -3052,7 +3053,6 @@ go118/src/cmd/go/testdata/script/version_build_settings.txt
 go118/src/cmd/go/testdata/script/version_buildvcs_bzr.txt
 go118/src/cmd/go/testdata/script/version_buildvcs_fossil.txt
 go118/src/cmd/go/testdata/script/version_buildvcs_git.txt
-go118/src/cmd/go/testdata/script/version_buildvcs_git_gpg.txt
 go118/src/cmd/go/testdata/script/version_buildvcs_hg.txt
 go118/src/cmd/go/testdata/script/version_buildvcs_nested.txt
 go118/src/cmd/go/testdata/script/version_goexperiment.txt
@@ -6045,6 +6045,7 @@ go118/src/internal/poll/sendfile_linux.go
 go118/src/internal/poll/sendfile_solaris.go
 go118/src/internal/poll/sendfile_windows.go
 go118/src/internal/poll/sock_cloexec.go
+go118/src/internal/poll/sock_cloexec_accept.go
 go118/src/internal/poll/sockopt.go
 go118/src/internal/poll/sockopt_linux.go
 go118/src/internal/poll/sockopt_unix.go
@@ -8247,6 +8248,8 @@ go118/src/syscall/syscall_illumos.go
 go118/src/syscall/syscall_js.go
 go118/src/syscall/syscall_linux.go
 go118/src/syscall/syscall_linux_386.go
+go118/src/syscall/syscall_linux_accept.go
+go118/src/syscall/syscall_linux_accept4.go
 go118/src/syscall/syscall_linux_amd64.go
 go118/src/syscall/syscall_linux_arm.go
 go118/src/syscall/syscall_linux_arm64.go
@@ -10840,6 +10843,7 @@ go118/test/fixedbugs/issue5614.dir/y.go
 go118/test/fixedbugs/issue5614.go
 go118/test/fixedbugs/issue5698.go
 go118/test/fixedbugs/issue5704.go
+go118/test/fixedbugs/issue57184.go
 go118/test/fixedbugs/issue5753.go
 go118/test/fixedbugs/issue5755.dir/a.go
 go118/test/fixedbugs/issue5755.dir/main.go
