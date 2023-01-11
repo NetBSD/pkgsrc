@@ -1,10 +1,10 @@
-$NetBSD: patch-pgx_pgx-pg-sys_src_submodules_mod.rs,v 1.5 2022/09/04 11:55:41 tnn Exp $
+$NetBSD: patch-pgx_pgx-pg-sys_src_submodules_mod.rs,v 1.6 2023/01/11 03:33:46 tnn Exp $
 
 NetBSD, SunOS support
 
---- ../pgx/pgx-pg-sys/src/submodules/mod.rs.orig	2022-07-26 13:03:15.000000000 +0000
-+++ ../pgx/pgx-pg-sys/src/submodules/mod.rs
-@@ -27,10 +27,19 @@ extern "C" {
+--- ../vendor/pgx-pg-sys-0.6.1/src/submodules/mod.rs.orig	2006-07-24 01:21:28.000000000 +0000
++++ ../vendor/pgx-pg-sys-0.6.1/src/submodules/mod.rs
+@@ -45,10 +45,19 @@ extern "C" {
      ) -> std::os::raw::c_int;
  }
  
