@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.51 2023/01/03 17:38:02 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2023/01/11 12:25:04 hauke Exp $
 
-DISTNAME=	netatalk-3.1.13
+DISTNAME=	netatalk-3.1.14
 PKGNAME=	${DISTNAME:C/-/3-/}
-PKGREVISION=	4
 CATEGORIES=	net
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=netatalk/}
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_GITHUB:=Netatalk/}Netatalk/releases/download/netatalk-3-1-14/
 
 MAINTAINER=	hauke@NetBSD.org
 HOMEPAGE=	http://netatalk.sourceforge.net/

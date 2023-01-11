@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2021/05/14 12:54:18 nia Exp $
+# $NetBSD: options.mk,v 1.5 2023/01/11 12:25:04 hauke Exp $
 #
 PKG_OPTIONS_VAR=	PKG_OPTIONS.netatalk
 PKG_SUPPORTED_OPTIONS=	cups debug dnssd kerberos ldap pam
@@ -12,7 +12,6 @@ CONFIGURE_ARGS+=	--enable-cups
 CONFIGURE_ARGS+=	--disable-cups
 .endif
 
-PLIST_VARS+=		debug
 .if !empty(PKG_OPTIONS:Mdebug)
 # Debugging
 CONFIGURE_ARGS+=	--enable-debug1
@@ -22,7 +21,6 @@ CFLAGS+=		-g3
 INSTALL_UNSTRIPPED=	yes
 .endif
 
-PLIST_VARS+=		dnssd
 .if !empty(PKG_OPTIONS:Mdnssd)
 .include "../../net/mDNSResponder/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-zeroconf
