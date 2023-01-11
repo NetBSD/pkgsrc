@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.285 2023/01/11 10:17:52 adam Exp $
+$NetBSD: CHANGES-2023,v 1.286 2023/01/11 10:23:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -319,3 +319,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/nagios-base to 4.4.9nb1 [sekiya 2023-01-09]
 	Updated security/py-cryptography to 39.0.0 [adam 2023-01-11]
 	Updated security/py-cryptography_vectors to 39.0.0 [adam 2023-01-11]
+	Updated textproc/ugrep to 3.9.4 [adam 2023-01-11]
+	Updated net/yt-dlp to 2023.1.6 [adam 2023-01-11]
