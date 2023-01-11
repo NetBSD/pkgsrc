@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2022/12/03 20:54:10 adam Exp $
+# $NetBSD: Makefile,v 1.10 2023/01/11 18:19:49 adam Exp $
 
-DISTNAME=	node-v16.18.1
-PKGREVISION=	1
+DISTNAME=	node-v16.19.0
 EXTRACT_SUFX=	.tar.xz
 
 USE_LANGUAGES=	c gnu++14
@@ -18,7 +17,7 @@ CONFIGURE_ARGS+=	--shared-nghttp2
 CONFIGURE_ARGS+=	--with-intl=system-icu
 CONFIGURE_ARGS+=	--without-dtrace
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 311
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 CHECK_PORTABILITY_SKIP+=	deps/v8/tools/cppgc/export_to_github.sh
 CHECK_PORTABILITY_SKIP+=	deps/v8/tools/cppgc/test_cmake.sh
