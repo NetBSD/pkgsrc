@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2022/01/04 20:54:53 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2023/01/11 11:48:35 adam Exp $
 
-DISTNAME=	cssselect-1.1.0
+DISTNAME=	cssselect-1.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cssselect/}
 
@@ -12,6 +11,11 @@ COMMENT=	Parses CSS3 Selectors and translates them to XPath 1.0
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} -m unittest discover -v
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
