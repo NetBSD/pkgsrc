@@ -1,15 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1 2019/10/21 20:36:07 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/${EGG_NAME}-nspkg.pth
+@comment $NetBSD: PLIST,v 1.2 2023/01/11 10:39:32 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
 ${PYSITELIB}/sphinxcontrib/applehelp/__init__.py
 ${PYSITELIB}/sphinxcontrib/applehelp/__init__.pyc
-${PYSITELIB}/sphinxcontrib/applehelp/__init__.pyo
 ${PYSITELIB}/sphinxcontrib/applehelp/locales/.tx/config
 ${PYSITELIB}/sphinxcontrib/applehelp/locales/ar/LC_MESSAGES/sphinxcontrib.applehelp.mo
 ${PYSITELIB}/sphinxcontrib/applehelp/locales/ar/LC_MESSAGES/sphinxcontrib.applehelp.po
@@ -113,6 +111,3 @@ ${PYSITELIB}/sphinxcontrib/applehelp/locales/zh_CN/LC_MESSAGES/sphinxcontrib.app
 ${PYSITELIB}/sphinxcontrib/applehelp/locales/zh_TW/LC_MESSAGES/sphinxcontrib.applehelp.mo
 ${PYSITELIB}/sphinxcontrib/applehelp/locales/zh_TW/LC_MESSAGES/sphinxcontrib.applehelp.po
 ${PYSITELIB}/sphinxcontrib/applehelp/templates/_access.html_t
-${PYSITELIB}/sphinxcontrib/applehelp/version.py
-${PYSITELIB}/sphinxcontrib/applehelp/version.pyc
-${PYSITELIB}/sphinxcontrib/applehelp/version.pyo
