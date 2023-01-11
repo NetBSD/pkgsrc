@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:23:01 nia Exp $
+$NetBSD: distinfo,v 1.9 2023/01/11 11:48:35 adam Exp $
 
-BLAKE2s (cssselect-1.1.0.tar.gz) = bdda14f0b2d8a61b6b5a8508d8fb0133a06a01f52fc05782be65c53c9c51a823
-SHA512 (cssselect-1.1.0.tar.gz) = 98ce8233ef7486bb240ec55f0d07aff684c08376b301a2e8cbc0579515f204b56b1ed2cc7106bd7afac59a7286165ec87d73cf0db74e5741fed7b2ddfa04b544
-Size (cssselect-1.1.0.tar.gz) = 22718 bytes
+BLAKE2s (cssselect-1.2.0.tar.gz) = 518e4efda534418cf73aa4b5cfad06645d050e961ede0e0362dff2f0d5bce6c3
+SHA512 (cssselect-1.2.0.tar.gz) = 389a571cb8d0a8bfac7968a033df949d99c1252c3bd194d7270e7b43f22dd40014864b6423dc645d9fd8014ca3735daab68fe36cb2beedb012728818da4ba1e5
+Size (cssselect-1.2.0.tar.gz) = 41423 bytes
