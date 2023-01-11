@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/02/13 17:58:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/01/11 11:48:35 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -9,6 +9,7 @@ ${PYSITELIB}/cssselect/__init__.pyo
 ${PYSITELIB}/cssselect/parser.py
 ${PYSITELIB}/cssselect/parser.pyc
 ${PYSITELIB}/cssselect/parser.pyo
+${PYSITELIB}/cssselect/py.typed
 ${PYSITELIB}/cssselect/xpath.py
 ${PYSITELIB}/cssselect/xpath.pyc
 ${PYSITELIB}/cssselect/xpath.pyo
