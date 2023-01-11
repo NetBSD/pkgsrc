@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.295 2023/01/11 17:48:15 nikita Exp $
+$NetBSD: CHANGES-2023,v 1.296 2023/01/11 18:20:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -335,3 +335,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/nodejs to 19.4.0 [adam 2023-01-11]
 	Updated lang/nodejs18 to 18.13.0 [adam 2023-01-11]
 	Added devel/py-gitlint version 0.18.0 [nikita 2023-01-11]
+	Updated lang/nodejs16 to 16.19.0 [adam 2023-01-11]
+	Updated lang/nodejs14 to 14.21.2 [adam 2023-01-11]
