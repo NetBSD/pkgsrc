@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.58 2022/12/08 16:14:16 bsiegert Exp $
+# $NetBSD: Makefile,v 1.59 2023/01/11 17:28:36 bsiegert Exp $
 
 DISTNAME=	sift-0.9.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=svent/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
