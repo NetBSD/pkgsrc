@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.297 2023/01/11 19:00:51 adam Exp $
+$NetBSD: CHANGES-2023,v 1.298 2023/01/11 21:58:54 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -339,3 +339,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/nodejs14 to 14.21.2 [adam 2023-01-11]
 	Updated audio/libsndfile to 1.2.0 [adam 2023-01-11]
 	Updated devel/py-pybind11 to 2.10.3 [adam 2023-01-11]
+	Updated lang/erlang to 25.2nb1 [nikita 2023-01-11]
