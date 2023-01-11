@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.28 2023/01/09 00:28:41 sekiya Exp $
+$NetBSD: distinfo,v 1.29 2023/01/11 09:27:27 sekiya Exp $
 
 BLAKE2s (nagios-plugins-2.3.3.tar.gz) = 4eee57a0cae28eab4a115d1f518506a7c33ab0ab66e505088a7af2a65308bb22
 SHA512 (nagios-plugins-2.3.3.tar.gz) = 2128601b1098eb82f4e7d720b96a5f92d6ad75dc181a94b25c38172767de8b72f9fece3eddb74933b1cd520928ae9416a7dc665e2f059bfe362dd74041d28cd7
@@ -14,5 +14,5 @@ SHA1 (patch-plugins-scripts_check_wave.pl) = af42b740b64906fb4c882827165054a84bb
 SHA1 (patch-plugins_Makefile.in) = 3509f2972feabe4806e4529c320eb5a119b5df77
 SHA1 (patch-plugins_check_ide_smart.c) = 6601814ad4ac91f11dbeb18613254df55e14edbd
 SHA1 (patch-plugins_check_nagios.c) = 922d4494c77c1764ee30f004e96ce8734ab6954f
-SHA1 (patch-plugins_check_radius.c) = 909c78e18a969c0d0c8431151c0b6069afaaf2ae
+SHA1 (patch-plugins_check_radius.c) = 02bd463b9e02512d5de1b54132ef0c0a0d217783
 SHA1 (patch-plugins_check_swap.c) = ecef90186c97256051ae1e238f95d9861c87e31b
