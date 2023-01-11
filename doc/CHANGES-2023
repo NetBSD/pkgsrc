@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.296 2023/01/11 18:20:48 adam Exp $
+$NetBSD: CHANGES-2023,v 1.297 2023/01/11 19:00:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -337,3 +337,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/py-gitlint version 0.18.0 [nikita 2023-01-11]
 	Updated lang/nodejs16 to 16.19.0 [adam 2023-01-11]
 	Updated lang/nodejs14 to 14.21.2 [adam 2023-01-11]
+	Updated audio/libsndfile to 1.2.0 [adam 2023-01-11]
+	Updated devel/py-pybind11 to 2.10.3 [adam 2023-01-11]
