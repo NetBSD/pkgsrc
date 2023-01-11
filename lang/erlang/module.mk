@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.4 2022/10/15 18:04:10 triaxx Exp $
+# $NetBSD: module.mk,v 1.5 2023/01/11 21:58:42 nikita Exp $
 #
 # Simple Erlang module package framework
 #
@@ -14,6 +14,7 @@ BUILD_DEPENDS+=	rebar-[0-9]*:../../devel/rebar
 
 USE_TOOLS+=	gmake pax
 
+.include "../../mk/bsd.prefs.mk"
 REBAR?=		${PREFIX}/bin/rebar
 MAKE_FLAGS+=	REBAR=${REBAR}
 
