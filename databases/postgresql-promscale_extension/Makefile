@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2022/11/23 16:19:37 adam Exp $
+# $NetBSD: Makefile,v 1.20 2023/01/11 03:33:46 tnn Exp $
 
-DISTNAME=	promscale_extension-0.7.0
+DISTNAME=	promscale_extension-0.8.0
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=timescale/}
 GITHUB_PROJECT=	promscale_extension
@@ -15,15 +14,9 @@ LICENSE=	apache-2.0
 
 DEPENDS+=	postgresql${PGSQL_VERSION}-server>=0:../../databases/postgresql${PGSQL_VERSION}-server
 
-# Depends on an unpublished crate. Can't use cargo.mk to fetch it.
-PGX_REV=	96ece243
-DISTFILES=	${DEFAULT_DISTFILES}
-DISTFILES+=	pgx-${PGX_REV}.tar.gz
-SITES.pgx-${PGX_REV}.tar.gz+= -${MASTER_SITE_GITHUB:=timescale/}pgx/archive/${PGX_REV}.tar.gz
-
 .include	"cargo-depends.mk"
 
-PGSQL_VERSIONS_ACCEPTED=	14 13 12
+PGSQL_VERSIONS_ACCEPTED=	15 14 13 12
 
 USE_TOOLS+=	gmake bash pax pkg-config
 BUILD_TARGET=	package
@@ -33,15 +26,12 @@ RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
 SUBST_CLASSES+=			include_dir
 SUBST_STAGE.include_dir=	pre-configure
 SUBST_MESSAGE.include_dir=	fixing include paths for bindgen
-SUBST_FILES.include_dir+=	../pgx/pgx-pg-sys/build.rs
+SUBST_FILES.include_dir+=	../vendor/pgx-pg-sys-*/build.rs
 SUBST_VARS.include_dir+=	BUILDLINK_DIR
-
-post-extract:
-	mv ${WRKDIR}/pgx-* ${WRKDIR}/pgx
 
 pre-build:
 	ln -sf ${PREFIX}/bin/cargo ${TOOLS_DIR}/bin/cargo
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} cargo install --offline --path ../pgx/cargo-pgx cargo-pgx
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} cargo install --offline --path ../vendor/cargo-pgx-* cargo-pgx
 # cargo pgx init (initdb) refuses to run as root
 #	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} cargo pgx init --pg${PGSQL_VERSION}=${PREFIX}/bin/pg_config
 	mkdir -p ${FAKEHOMEDIR}/.pgx
