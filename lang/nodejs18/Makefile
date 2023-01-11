@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2022/12/03 20:53:31 adam Exp $
+# $NetBSD: Makefile,v 1.3 2023/01/11 17:33:48 adam Exp $
 
-DISTNAME=	node-v18.12.1
-PKGREVISION=	1
+DISTNAME=	node-v18.13.0
 EXTRACT_SUFX=	.tar.xz
 
 USE_LANGUAGES=	c gnu++17
@@ -20,8 +19,9 @@ CONFIGURE_ARGS+=	--shared-ngtcp2
 CONFIGURE_ARGS+=	--with-intl=system-icu
 CONFIGURE_ARGS+=	--without-dtrace
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 311
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
+CHECK_PORTABILITY_SKIP+=	deps/uv/autogen.sh
 CHECK_PORTABILITY_SKIP+=	deps/v8/tools/cppgc/export_to_github.sh
 CHECK_PORTABILITY_SKIP+=	deps/v8/tools/cppgc/test_cmake.sh
 CHECK_PORTABILITY_SKIP+=	tools/macos-installer/pkgbuild/npm/scripts/preinstall
