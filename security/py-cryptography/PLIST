@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2022/09/07 08:04:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.29 2023/01/11 10:17:19 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -80,9 +80,6 @@ ${PYSITELIB}/cryptography/hazmat/backends/openssl/x25519.pyo
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/x448.py
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/x448.pyc
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/x448.pyo
-${PYSITELIB}/cryptography/hazmat/backends/openssl/x509.py
-${PYSITELIB}/cryptography/hazmat/backends/openssl/x509.pyc
-${PYSITELIB}/cryptography/hazmat/backends/openssl/x509.pyo
 ${PYSITELIB}/cryptography/hazmat/bindings/__init__.py
 ${PYSITELIB}/cryptography/hazmat/bindings/__init__.pyc
 ${PYSITELIB}/cryptography/hazmat/bindings/__init__.pyo
@@ -92,6 +89,7 @@ ${PYSITELIB}/cryptography/hazmat/bindings/_rust.abi3.so
 ${PYSITELIB}/cryptography/hazmat/bindings/_rust/__init__.pyi
 ${PYSITELIB}/cryptography/hazmat/bindings/_rust/asn1.pyi
 ${PYSITELIB}/cryptography/hazmat/bindings/_rust/ocsp.pyi
+${PYSITELIB}/cryptography/hazmat/bindings/_rust/pkcs7.pyi
 ${PYSITELIB}/cryptography/hazmat/bindings/_rust/x509.pyi
 ${PYSITELIB}/cryptography/hazmat/bindings/openssl/__init__.py
 ${PYSITELIB}/cryptography/hazmat/bindings/openssl/__init__.pyc

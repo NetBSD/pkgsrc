@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2022/09/08 05:08:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.20 2023/01/11 10:17:19 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -2196,6 +2196,7 @@ ${PYSITELIB}/cryptography_vectors/x509/bigoid.pem
 ${PYSITELIB}/cryptography_vectors/x509/cryptography-scts-tbs-precert.der
 ${PYSITELIB}/cryptography_vectors/x509/cryptography-scts.pem
 ${PYSITELIB}/cryptography_vectors/x509/cryptography.io.chain.pem
+${PYSITELIB}/cryptography_vectors/x509/cryptography.io.chain_with_garbage.pem
 ${PYSITELIB}/cryptography_vectors/x509/cryptography.io.old_header.pem
 ${PYSITELIB}/cryptography_vectors/x509/cryptography.io.pem
 ${PYSITELIB}/cryptography_vectors/x509/cryptography.io.precert.pem
