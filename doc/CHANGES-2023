@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.283 2023/01/11 09:16:23 fcambus Exp $
+$NetBSD: CHANGES-2023,v 1.284 2023/01/11 09:43:20 sekiya Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -316,3 +316,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/netatalk22 to 2.2.7 [hauke 2023-01-10]
 	Updated databases/postgresql-promscale_extension to 0.8.0 [tnn 2023-01-11]
 	Updated devel/patchelf to 0.17.2 [fcambus 2023-01-11]
+	Updated net/nagios-base to 4.4.9nb1 [sekiya 2023-01-09]
