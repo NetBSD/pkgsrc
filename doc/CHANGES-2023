@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.289 2023/01/11 11:48:51 adam Exp $
+$NetBSD: CHANGES-2023,v 1.290 2023/01/11 12:05:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -327,3 +327,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-yamllint to 1.29.0 [adam 2023-01-11]
 	Updated www/py-parsel to 1.7.0 [adam 2023-01-11]
 	Updated textproc/py-cssselect to 1.2.0 [adam 2023-01-11]
+	Updated security/py-asyncssh to 2.13.0 [adam 2023-01-11]
+	Updated textproc/py-ujson to 5.7.0 [adam 2023-01-11]
