@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2022/10/29 15:31:06 tnn Exp $
+$NetBSD: distinfo,v 1.16 2023/01/11 03:50:06 tnn Exp $
 
 BLAKE2s (bazil.org_fuse_@v_v0.0.0-20160811212531-371fbbdaa898.mod) = ff8095283662ae2d2a1968bf429516c54586b1a6c4dc744657162e6781aa8ece
 SHA512 (bazil.org_fuse_@v_v0.0.0-20160811212531-371fbbdaa898.mod) = 7b3ef87f98485bb9ec325680f57d43a9bd76e90bdcfb1e798458f28f7d3addf91dbb6a07b654749468860981413ad2267df2d5f3535c85579e9f79d9328d355c
@@ -5070,3 +5070,4 @@ Size (sigs.k8s.io_yaml_@v_v1.1.0.mod) = 24 bytes
 BLAKE2s (sigs.k8s.io_yaml_@v_v1.2.0.mod) = 2d4421e9265c2b91b81b67e23f4cf18dc86a3abaca85e4ffa3429df0b885baa8
 SHA512 (sigs.k8s.io_yaml_@v_v1.2.0.mod) = 712a936d07bfe4c2e67a4f199346d7e96db35486a0f051365c4636ddbc6505cf540995bc67e6a03b1b58e1e4816ece573418f23bf9ce93fcdc141a05f922f527
 Size (sigs.k8s.io_yaml_@v_v1.2.0.mod) = 106 bytes
+SHA1 (patch-pkg_version_version.go) = 369077deecb1504c81fb29d1d7e20e41dc545c47
