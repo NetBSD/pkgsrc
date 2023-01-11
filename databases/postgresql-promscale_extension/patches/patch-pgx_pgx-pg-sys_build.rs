@@ -1,10 +1,10 @@
-$NetBSD: patch-pgx_pgx-pg-sys_build.rs,v 1.1 2022/07/18 22:14:25 tnn Exp $
+$NetBSD: patch-pgx_pgx-pg-sys_build.rs,v 1.2 2023/01/11 03:33:46 tnn Exp $
 
 Fix include directories for bindgen.
 
---- ../pgx/pgx-pg-sys/build.rs.orig	2022-02-14 07:10:25.000000000 +0000
-+++ ../pgx/pgx-pg-sys/build.rs
-@@ -468,10 +468,10 @@ struct StructDescriptor<'a> {
+--- ../vendor/pgx-pg-sys-0.6.1/build.rs.orig	2006-07-24 01:21:28.000000000 +0000
++++ ../vendor/pgx-pg-sys-0.6.1/build.rs
+@@ -562,10 +562,10 @@ struct StructDescriptor<'a> {
  fn run_bindgen(pg_config: &PgConfig, include_h: &PathBuf) -> eyre::Result<syn::File> {
      let major_version = pg_config.major_version()?;
      eprintln!("Generating bindings for pg{}", major_version);
@@ -14,6 +14,6 @@ Fix include directories for bindgen.
 -        .clang_arg(&format!("-I{}", includedir_server.display()))
 +        .clang_arg("-I@BUILDLINK_DIR@/include/postgresql/server")
 +        .clang_arg("-I@BUILDLINK_DIR@/include")
-         .parse_callbacks(Box::new(IgnoredMacros::default()))
-         .blocklist_function("varsize_any") // pgx converts the VARSIZE_ANY macro, so we don't want to also have this function, which is in heaptuple.c
-         .blocklist_function("query_tree_walker")
+         .clang_args(&extra_bindgen_clang_args(pg_config)?)
+         .parse_callbacks(Box::new(PgxOverrides::default()))
+         .blocklist_type("(Nullable)?Datum") // manually wrapping datum types for correctness
