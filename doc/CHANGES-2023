@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.281 2023/01/10 22:07:49 hauke Exp $
+$NetBSD: CHANGES-2023,v 1.282 2023/01/11 03:34:16 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -314,3 +314,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/trufflehog to 3.24.0 [leot 2023-01-10]
 	Added lang/fennel version 1.2.1 [nikita 2023-01-10]
 	Updated net/netatalk22 to 2.2.7 [hauke 2023-01-10]
+	Updated databases/postgresql-promscale_extension to 0.8.0 [tnn 2023-01-11]
