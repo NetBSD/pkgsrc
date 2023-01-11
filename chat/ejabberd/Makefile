@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.97 2022/10/15 18:20:40 triaxx Exp $
+# $NetBSD: Makefile,v 1.98 2023/01/11 22:07:46 nikita Exp $
 
 DISTNAME=	ejabberd-22.05
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	https://www.process-one.net/downloads/downloads-action.php?file=/${PKGVERSION_NOREV}/
 
