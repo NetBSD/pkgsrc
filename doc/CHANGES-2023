@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.291 2023/01/11 12:25:17 hauke Exp $
+$NetBSD: CHANGES-2023,v 1.292 2023/01/11 15:22:24 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -330,3 +330,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/py-asyncssh to 2.13.0 [adam 2023-01-11]
 	Updated textproc/py-ujson to 5.7.0 [adam 2023-01-11]
 	Updated net/netatalk3 to 3.1.14 [hauke 2023-01-11]
+	Updated lang/go118 to 1.18.10 [bsiegert 2023-01-11]
