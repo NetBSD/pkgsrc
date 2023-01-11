@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.288 2023/01/11 10:54:59 adam Exp $
+$NetBSD: CHANGES-2023,v 1.289 2023/01/11 11:48:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -325,3 +325,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-traitlets to 5.8.1 [adam 2023-01-11]
 	Updated textproc/py-xlsxwriter to 3.0.6 [adam 2023-01-11]
 	Updated textproc/py-yamllint to 1.29.0 [adam 2023-01-11]
+	Updated www/py-parsel to 1.7.0 [adam 2023-01-11]
+	Updated textproc/py-cssselect to 1.2.0 [adam 2023-01-11]
