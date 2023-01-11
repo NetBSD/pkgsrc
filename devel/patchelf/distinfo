@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2022/11/07 22:38:02 fcambus Exp $
+$NetBSD: distinfo,v 1.14 2023/01/11 09:16:11 fcambus Exp $
 
-BLAKE2s (patchelf-0.17.0.tar.bz2) = 82c87d3116d02015974ac9e08e37bddc60ecfcb35bd8b52c7ae3d80ce774c48f
-SHA512 (patchelf-0.17.0.tar.bz2) = 19314905e7808cb2ae448b4c7b265fd4ce4680bf3415435ccbd22a1feb55ce235f29599e9bd70f8f9b0c7c9a8200d51426e55bfb9fd6608f6277d1942eb7e3bd
-Size (patchelf-0.17.0.tar.bz2) = 203243 bytes
+BLAKE2s (patchelf-0.17.2.tar.bz2) = cfa112b8246bf391e114910fdd88383e6ecbaa2cd6583ae95d9a9b6b83577a6f
+SHA512 (patchelf-0.17.2.tar.bz2) = 8277adf95513f88fb190536a38bdfdf438a4cc7685d8a130bdffbe064441f0f25095b6c83bbb190133e1a138963776d15b46c247dd2f1a073a1bfe1d1dbdd503
+Size (patchelf-0.17.2.tar.bz2) = 203060 bytes
