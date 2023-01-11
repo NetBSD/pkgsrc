@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/01/11 17:47:48 nikita Exp $
+
+BLAKE2s (gitlint-0.18.0.tar.gz) = 70f26abb97f72500c10355d3b53ec8676ea53704f9b6271273f953615a57a2fa
+SHA512 (gitlint-0.18.0.tar.gz) = 9f63769535d260bf9c0ac9686d9b155b881bd3a643767207f67d29d1d1e0161cc7357622fa7ca1daf5b23576e57e9439eb8b176022fd2e9bcc57df0e09af390b
+Size (gitlint-0.18.0.tar.gz) = 741426 bytes
