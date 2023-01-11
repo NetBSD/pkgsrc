@@ -1,0 +1,2 @@
+Gitlint is a git commit message linter written in python.
+It checks your commit messages for style.

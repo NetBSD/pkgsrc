@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3872 2023/01/10 20:03:47 wiz Exp $
+# $NetBSD: Makefile,v 1.3873 2023/01/11 17:47:48 nikita Exp $
 #
 
 COMMENT=	Development utilities
@@ -2506,6 +2506,7 @@ SUBDIR+=	py-gidgethub
 SUBDIR+=	py-gitdb
 SUBDIR+=	py-gitinspector
 SUBDIR+=	py-gitinspector-devel
+SUBDIR+=	py-gitlint
 SUBDIR+=	py-gitpython
 SUBDIR+=	py-gobject
 SUBDIR+=	py-gobject-shared

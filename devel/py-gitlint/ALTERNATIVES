@@ -1,0 +1,1 @@
+bin/gitlint @PREFIX@/bin/gitlint-@PYVERSSUFFIX@
