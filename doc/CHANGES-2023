@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.286 2023/01/11 10:23:13 adam Exp $
+$NetBSD: CHANGES-2023,v 1.287 2023/01/11 10:41:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -321,3 +321,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/py-cryptography_vectors to 39.0.0 [adam 2023-01-11]
 	Updated textproc/ugrep to 3.9.4 [adam 2023-01-11]
 	Updated net/yt-dlp to 2023.1.6 [adam 2023-01-11]
+	Updated textproc/py-sphinxcontrib-applehelp to 1.0.3 [adam 2023-01-11]
+	Updated devel/py-traitlets to 5.8.1 [adam 2023-01-11]
