@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2022/12/18 13:52:58 adam Exp $
+$NetBSD: distinfo,v 1.20 2023/01/12 11:58:13 adam Exp $
 
-BLAKE2s (ansible-lint-6.10.0.tar.gz) = 0d25108015153afa3933456b87ab876d4ab79bd7fd51d1b7335f3b25c4caa5c5
-SHA512 (ansible-lint-6.10.0.tar.gz) = 77114229627935ad3231d0d1ba177d269dc5ba76ee92c45335ebfe29d0ba8085537d659ddb1fa89d027c20f0fc9631e58f37760de17aa6579ac94b1cc6bb8b9b
-Size (ansible-lint-6.10.0.tar.gz) = 421971 bytes
+BLAKE2s (ansible-lint-6.10.2.tar.gz) = 148355fe72b71a17ff0498c0da466f90a28beca07acd2bbc595e09bddd24e8aa
+SHA512 (ansible-lint-6.10.2.tar.gz) = db1d795cfefb0b95321cdcb91b84821b552c3e32ddae33eb1084b3e3ff69cbe682742a245bd13ec9cb7da0e3bc9fd37c3fc971b163756de75d94c0404ebfd68d
+Size (ansible-lint-6.10.2.tar.gz) = 425234 bytes
