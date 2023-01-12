@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.30 2023/01/12 08:52:49 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2023/01/12 19:32:54 adam Exp $
 
 .include "../../lang/llvm/version.mk"
 
 DISTNAME=	libunwind-${LLVM_VERSION}.src
 PKGNAME=	${DISTNAME:S/.src//}
-PKGREVISION=	1
 CATEGORIES=	lang devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

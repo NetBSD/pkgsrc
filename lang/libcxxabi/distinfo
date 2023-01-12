@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.20 2022/11/30 19:55:00 adam Exp $
+$NetBSD: distinfo,v 1.21 2023/01/12 19:32:54 adam Exp $
 
-BLAKE2s (cmake-15.0.6.src.tar.xz) = 6d91c537ea78e56d2621d703d6d20d9b4f52281b80520e5003bb8ea402ad8236
-SHA512 (cmake-15.0.6.src.tar.xz) = a078b9b426515414dae41c8732d7cd955e8ddc9638b4ba9c7dd0925db68e5ea760096f08fd7e1cb9d55b6d73da75f9b4318a2fac36d7aa64f47536ac383b3edc
-Size (cmake-15.0.6.src.tar.xz) = 6972 bytes
-BLAKE2s (libcxx-15.0.6.src.tar.xz) = fe383970738283b4cee5a84776b7d7658246d91854bac6346dfd8d0fb0237c1c
-SHA512 (libcxx-15.0.6.src.tar.xz) = 9ad8bc3d547e3f5e7fe123a9a1e39be523dff71c10feaed773c6a2698fbba54fb8c89760409e3b982007787c63ce7ae410fc1fe05aa7b3cb284589f85cb3bbc8
-Size (libcxx-15.0.6.src.tar.xz) = 3343472 bytes
-BLAKE2s (libcxxabi-15.0.6.src.tar.xz) = 3f7ea6d3a47ae4a66c13971c3b3e5e334cec0c6793943e8a9f39bfe5d8e498cf
-SHA512 (libcxxabi-15.0.6.src.tar.xz) = 8dfce2fdfe75d88ce8e695d86ee06d01fa8c35a12a32a59c4ac0b6b1a30571a4e97af4b9c9b655fe8502e850563eeb2edaf648b0ee7c872551e8207bfb79f499
-Size (libcxxabi-15.0.6.src.tar.xz) = 568780 bytes
+BLAKE2s (cmake-15.0.7.src.tar.xz) = 2c299f2c58800bcb0c5930562d24baed0e94806df8b8d5295c0866ffeaaf233f
+SHA512 (cmake-15.0.7.src.tar.xz) = 85097a6eaee0df004567905f7e5ce8ca02e3b46c6fc66fa552fe99734642e6ee61685de4e5e6e8b505963334d7b91d98ecd9c5870e6bdd3f0018ee5b963ffa96
+Size (cmake-15.0.7.src.tar.xz) = 6972 bytes
+BLAKE2s (libcxx-15.0.7.src.tar.xz) = 952e9a57fd17139b2e298fdaa6ff893458b52d576495c47b734becc3d9d809fe
+SHA512 (libcxx-15.0.7.src.tar.xz) = 2c47cb93867e137a9bc8dd273335bb153e2353eb308635c2264be962fa421ddc10eb3ec8b5800204fc1f8ee51abbe0c526665300cb7e94e9f8b7e9891b5c5b64
+Size (libcxx-15.0.7.src.tar.xz) = 3337404 bytes
+BLAKE2s (libcxxabi-15.0.7.src.tar.xz) = 6757adcf553b335f75547484fa69799afd75b6933ce5d4dffafe97c14557ddbd
+SHA512 (libcxxabi-15.0.7.src.tar.xz) = 415417b1e5addfa6047f9a4e49b1ccd6ae7fa8c6138e61f3d1e57321c8723aaf133cf2673a6f8756f6ecbc1ca7d2b962406969d47b12b3d9e5a1f63f1353a2e5
+Size (libcxxabi-15.0.7.src.tar.xz) = 568764 bytes
 SHA1 (patch-src_CMakeLists.txt) = da127de7603ed0ea5530c4a8cd2ffcee61d2ff90
 SHA1 (patch-src_demangle_Utility.h) = 7a4850869f9f4ce858d2cceeb999934c28292a95
