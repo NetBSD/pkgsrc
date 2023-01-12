@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.5 2022/09/28 10:05:35 markd Exp $
+# $NetBSD: build.mk,v 1.6 2023/01/12 19:32:37 markd Exp $
 #
 # This Makefile fragment supports building using the CMake build tool.
 #
@@ -64,6 +64,8 @@ CONFIGURE_DIRS?=	.
 BUILD_DIRS?=		${CONFIGURE_DIRS}
 TEST_DIRS?=		${CONFIGURE_DIRS}
 INSTALL_DIRS?=		${CONFIGURE_DIRS}
+
+_CMAKE_CONFIGURE_SETTINGS=	yes
 
 .PHONY: cmake-configure cmake-build cmake-test cmake-install
 
