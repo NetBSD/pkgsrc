@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2022/12/21 19:24:51 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2023/01/12 10:50:50 markd Exp $
 
 DISTNAME=	tex-gyre
 PKGNAME=	tex-${DISTNAME}-2.501
-PKGREVISION=	2
+PKGREVISION=	3
 TEXLIVE_REV=	48058
 
 MAINTAINER=	minskim@NetBSD.org
@@ -24,5 +24,4 @@ TEX_MAP_FILES+=	qzc.map
 
 TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
-.include "../../mk/fonts.mk"
 .include "../../mk/bsd.pkg.mk"
