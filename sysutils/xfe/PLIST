@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2023/01/09 19:45:51 vins Exp $
+@comment $NetBSD: PLIST,v 1.13 2023/01/12 10:20:34 wiz Exp $
 bin/xfe
 bin/xfi
 bin/xfp
@@ -43,7 +43,6 @@ share/pixmaps/xfp.png
 share/pixmaps/xfp.xpm
 share/pixmaps/xfw.png
 share/pixmaps/xfw.xpm
-share/polkit-1/actions/org.xfe.root.policy
 share/xfe/icons/default-theme/a_16x16.png
 share/xfe/icons/default-theme/a_32x32.png
 share/xfe/icons/default-theme/ace_16x16.png
