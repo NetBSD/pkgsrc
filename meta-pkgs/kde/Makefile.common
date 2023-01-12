@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2021/02/18 00:20:11 gutteridge Exp $
+# $NetBSD: Makefile.common,v 1.5 2023/01/12 19:40:47 markd Exp $
 #
 # used by meta-pkgs/kde/applications.mk
 # used by meta-pkgs/kde/kf5.mk
@@ -8,10 +8,9 @@ MAINTAINER?=	markd@NetBSD.org
 
 BUILD_DEPENDS+= extra-cmake-modules>=5.19.0:../../devel/extra-cmake-modules
 
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
-CMAKE_ARG_PATH=	..
-CONFIGURE_DIRS=	_KDE_build
+CMAKE_BUILD_DIR=	_KDE_build
+.include "../../devel/cmake/build.mk"
 
 CMAKE_ARGS+=	-DKDE_INSTALL_USE_QT_SYS_PATHS=ON
 CMAKE_ARGS+=	-DKDE_INSTALL_LIBEXECDIR=libexec
@@ -19,11 +18,6 @@ CMAKE_ARGS+=	-DKDE_INSTALL_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
 
 CMAKE_ARGS+=	-DKDE_INSTALL_XDG_EX_DIR=${PREFIX}/share/examples/kde-xdg
 CMAKE_ARGS+=	-DKDE_INSTALL_AUTOSTARTEXDIR=${PREFIX}/share/examples/kde-xdg/autostart
-
-pre-configure: mk-kde-dir
-
-mk-kde-dir:
-	${MKDIR} ${WRKSRC}/_KDE_build
 
 .include "../../mk/bsd.fast.prefs.mk"
 .if ${OPSYS} == "NetBSD"
