@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.303 2023/01/12 10:23:23 adam Exp $
+$NetBSD: CHANGES-2023,v 1.304 2023/01/12 11:29:40 micha Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -347,3 +347,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/xfe to 1.45nb1 [wiz 2023-01-12]
 	Updated archivers/xz to 5.4.1 [adam 2023-01-12]
 	Updated databases/py-redis to 4.4.2 [adam 2023-01-12]
+	Updated graphics/graphviz to 7.0.6 [micha 2023-01-12]
