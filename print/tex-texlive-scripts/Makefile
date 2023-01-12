@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2022/06/28 11:35:32 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2023/01/12 10:46:59 markd Exp $
 
 DISTNAME=	texlive-scripts
 PKGNAME=	tex-${DISTNAME}-2022
-PKGREVISION=	1
+PKGREVISION=	2
 TEXLIVE_REV=	63029
 
 MAINTAINER=	minskim@NetBSD.org
@@ -23,9 +23,19 @@ REPLACE_TEXLUA=	bin/rungs
 
 PKG_SYSCONFSUBDIR=	texmf
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${X11_TYPE} == "native"
+_FONTCONFDIR=	/etc/fonts/conf.d
+.else
+_FONTCONFDIR=	${PKG_SYSCONFBASE}/fontconfig/conf.d
+.endif
+
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/web2c
 CONF_FILES+=	${PREFIX}/share/texmf-dist/web2c/updmap.cfg \
 		${PKG_SYSCONFDIR}/web2c/updmap.cfg
+CONF_FILES+=	${PREFIX}/share/fontconfig/conf.avail/09-texlive-fonts.conf \
+		${_FONTCONFDIR}/09-texlive-fonts.conf
 
 TEX_TEXMF_DIRS+=	${PKG_SYSCONFDIR} ${PREFIX}/share/texmf-dist
 
@@ -62,9 +72,15 @@ post-extract:
 	${MV} ${WRKSRC}/texmf-dist/scripts/texlive/${script} \
 		${WRKSRC}/bin/${script:S/.pl//}
 .endfor
+	${SED} ${FILES_SUBST_SED} ${FILESDIR}/09-texlive-fonts.conf \
+		 >${WRKDIR}/09-texlive-fonts.conf
+
+INSTALLATION_DIRS+=	share/fontconfig/conf.avail/
 
 post-install:
 	${LN} -sf fmtutil ${DESTDIR}${PREFIX}/bin/mktexfmt
 	${LN} -sf mktexlsr ${DESTDIR}${PREFIX}/bin/texhash
+	${INSTALL_DATA} ${WRKDIR}/09-texlive-fonts.conf \
+		${DESTDIR}${PREFIX}/share/fontconfig/conf.avail/09-texlive-fonts.conf
 
 .include "../../mk/bsd.pkg.mk"
