@@ -1,20 +1,29 @@
-$NetBSD: patch-src_CMakeLists.txt,v 1.4 2023/01/12 09:01:52 wiz Exp $
+$NetBSD: patch-src_CMakeLists.txt,v 1.5 2023/01/12 22:47:25 wiz Exp $
 
 Fix building assembler files.
-https://gitlab.kitware.com/cmake/cmake/-/issues/24308
+https://github.com/llvm/llvm-project/issues/59978
 
---- src/CMakeLists.txt.orig	2022-11-29 10:05:58.000000000 +0000
+--- src/CMakeLists.txt.orig	2023-01-12 07:12:30.000000000 +0000
 +++ src/CMakeLists.txt
-@@ -34,11 +34,7 @@ set(LIBUNWIND_ASM_SOURCES
- # See add_asm_sources() in compiler-rt for explanation of this workaround.
- # CMake doesn't work correctly with assembly on AIX. Workaround by compiling
- # as C files as well.
+@@ -1,4 +1,5 @@
+ # Get sources
++enable_language(ASM)
+ 
+ set(LIBUNWIND_CXX_SOURCES
+     libunwind.cpp
+@@ -31,15 +32,6 @@ set(LIBUNWIND_ASM_SOURCES
+     UnwindRegistersSave.S
+     )
+ 
+-# See add_asm_sources() in compiler-rt for explanation of this workaround.
+-# CMake doesn't work correctly with assembly on AIX. Workaround by compiling
+-# as C files as well.
 -if((APPLE AND CMAKE_VERSION VERSION_LESS 3.19) OR
 -   (MINGW AND CMAKE_VERSION VERSION_LESS 3.17) OR
 -   (${CMAKE_SYSTEM_NAME} MATCHES "AIX"))
 -  set_source_files_properties(${LIBUNWIND_ASM_SOURCES} PROPERTIES LANGUAGE C)
 -endif()
-+set_source_files_properties(${LIBUNWIND_ASM_SOURCES} PROPERTIES LANGUAGE C)
- 
+-
  set(LIBUNWIND_HEADERS
      AddressSpace.hpp
+     assembly.h
