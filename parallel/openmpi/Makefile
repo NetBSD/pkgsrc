@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2022/08/25 22:09:14 thor Exp $
+# $NetBSD: Makefile,v 1.52 2023/01/12 11:34:10 markd Exp $
 
 DISTNAME=	openmpi-4.1.4
 CATEGORIES=	parallel
@@ -17,6 +17,7 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		perl:run bash:run
 GNU_CONFIGURE=		yes
 CONFIG_SHELL=		bash
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--enable-contrib-no-build=vt # in separate package
 CONFIGURE_ARGS+=	--with-libltdl=${BUILDLINK_PREFIX.libltdl}
 # See below about external hwloc.
