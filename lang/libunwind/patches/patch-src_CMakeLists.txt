@@ -1,15 +1,19 @@
-$NetBSD: patch-src_CMakeLists.txt,v 1.2 2022/11/30 19:55:00 adam Exp $
+$NetBSD: patch-src_CMakeLists.txt,v 1.3 2023/01/12 08:52:49 wiz Exp $
 
-Fix build on Darwin.
+Fix building assembler files.
 
---- src/CMakeLists.txt.orig	2022-11-09 10:05:30.000000000 +0000
+--- src/CMakeLists.txt.orig	2022-11-29 10:05:58.000000000 +0000
 +++ src/CMakeLists.txt
-@@ -34,7 +34,7 @@ set(LIBUNWIND_ASM_SOURCES
+@@ -34,11 +34,7 @@ set(LIBUNWIND_ASM_SOURCES
  # See add_asm_sources() in compiler-rt for explanation of this workaround.
  # CMake doesn't work correctly with assembly on AIX. Workaround by compiling
  # as C files as well.
 -if((APPLE AND CMAKE_VERSION VERSION_LESS 3.19) OR
-+if((APPLE AND CMAKE_VERSION VERSION_LESS 3.26) OR
-    (MINGW AND CMAKE_VERSION VERSION_LESS 3.17) OR
-    (${CMAKE_SYSTEM_NAME} MATCHES "AIX"))
-   set_source_files_properties(${LIBUNWIND_ASM_SOURCES} PROPERTIES LANGUAGE C)
+-   (MINGW AND CMAKE_VERSION VERSION_LESS 3.17) OR
+-   (${CMAKE_SYSTEM_NAME} MATCHES "AIX"))
+-  set_source_files_properties(${LIBUNWIND_ASM_SOURCES} PROPERTIES LANGUAGE C)
+-endif()
++set_source_files_properties(${LIBUNWIND_ASM_SOURCES} PROPERTIES LANGUAGE C)
+ 
+ set(LIBUNWIND_HEADERS
+     AddressSpace.hpp
