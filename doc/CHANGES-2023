@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.309 2023/01/12 15:58:40 pin Exp $
+$NetBSD: CHANGES-2023,v 1.310 2023/01/12 19:05:27 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -354,3 +354,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/git-branchless version 0.6.0 [pin 2023-01-12]
 	Added graphics/gifski version 1.8.1 [pin 2023-01-12]
 	Updated x11/xterm to 378 [pin 2023-01-12]
+	Updated net/bind918 to 9.18.9nb2 [jperkin 2023-01-12]
