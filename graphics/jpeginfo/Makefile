@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2023/01/09 20:08:28 fcambus Exp $
+# $NetBSD: Makefile,v 1.13 2023/01/12 13:29:47 mef Exp $
 
 DISTNAME=	jpeginfo-1.6.2
 CATEGORIES=	graphics
@@ -11,6 +11,8 @@ LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=		autoconf
 GNU_CONFIGURE=		yes
+# experimental change
+MAKE_JOBS_SAFE=		no
 
 pre-configure:
 	cd ${WRKSRC} && autoconf
