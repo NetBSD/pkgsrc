@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.20 2022/11/30 19:54:59 adam Exp $
+$NetBSD: distinfo,v 1.21 2023/01/12 19:32:53 adam Exp $
 
-BLAKE2s (cmake-15.0.6.src.tar.xz) = 6d91c537ea78e56d2621d703d6d20d9b4f52281b80520e5003bb8ea402ad8236
-SHA512 (cmake-15.0.6.src.tar.xz) = a078b9b426515414dae41c8732d7cd955e8ddc9638b4ba9c7dd0925db68e5ea760096f08fd7e1cb9d55b6d73da75f9b4318a2fac36d7aa64f47536ac383b3edc
-Size (cmake-15.0.6.src.tar.xz) = 6972 bytes
-BLAKE2s (compiler-rt-15.0.6.src.tar.xz) = 24c598bc3a9db32feffc8d6fae927130c61cb81c1fac32af858d53bab62ba417
-SHA512 (compiler-rt-15.0.6.src.tar.xz) = e14b3f9c3876af7e8b10da6515f930b23b2944a2360a4ba55d0a8b9a5c9fd8dd536cf0c177d08740ef035b900c03913f083db8bb6a8a84027d5df71c6361bf4d
-Size (compiler-rt-15.0.6.src.tar.xz) = 2351240 bytes
+BLAKE2s (cmake-15.0.7.src.tar.xz) = 2c299f2c58800bcb0c5930562d24baed0e94806df8b8d5295c0866ffeaaf233f
+SHA512 (cmake-15.0.7.src.tar.xz) = 85097a6eaee0df004567905f7e5ce8ca02e3b46c6fc66fa552fe99734642e6ee61685de4e5e6e8b505963334d7b91d98ecd9c5870e6bdd3f0018ee5b963ffa96
+Size (cmake-15.0.7.src.tar.xz) = 6972 bytes
+BLAKE2s (compiler-rt-15.0.7.src.tar.xz) = 261c1eced0a8f45373484a106cced407205e3fa9845304edc98f7f3c93c843c5
+SHA512 (compiler-rt-15.0.7.src.tar.xz) = 893aff1a7a3d382449b69ddfda10fbf0311f146266749e99683c3907fb5b9b34b63454625b066d4881a1d06b520bb066ea33f9be1ca6407d31044ef8e26e70f0
+Size (compiler-rt-15.0.7.src.tar.xz) = 2350132 bytes
 SHA1 (patch-cmake_config-ix.cmake) = 40ee86393c0f9e26eeaa493c5312d2cabf4c2a58
 SHA1 (patch-lib_asan_CMakeLists.txt) = f91335b88c8c28a25d7dfada85769f799660f82a
 SHA1 (patch-lib_sanitizer__common_sanitizer__linux__libcdep.cpp) = 32befa87b3487518ce6423ab197c3a587e53bb2f
