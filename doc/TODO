@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22486 2023/01/11 17:35:08 adam Exp $
+$NetBSD: TODO,v 1.22487 2023/01/12 10:20:44 wiz Exp $
 
 Suggested new packages
 ======================
@@ -514,6 +514,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o calc-2.11.10.1
 	o calcoo-2.1.0
 	o calibre-6.8 [requires qt6/py-qt6/py-qt6-webengine]
+	o calibre-6.11.0
 	o calligra-3.0.1 [in wip; koffice successor]
 	o camlp4-4.12
 	o canu-2.1.1
