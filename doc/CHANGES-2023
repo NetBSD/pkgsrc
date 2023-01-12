@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.299 2023/01/12 00:18:48 tnn Exp $
+$NetBSD: CHANGES-2023,v 1.300 2023/01/12 08:10:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -341,3 +341,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-pybind11 to 2.10.3 [adam 2023-01-11]
 	Updated lang/erlang to 25.2nb1 [nikita 2023-01-11]
 	Updated databases/promscale to 0.17.0 [tnn 2023-01-12]
+	Updated graphics/hugin to 2022.0.0 [adam 2023-01-12]
+	Updated www/py-urllib3 to 1.26.14 [adam 2023-01-12]
