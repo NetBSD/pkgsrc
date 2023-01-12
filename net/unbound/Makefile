@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.95 2022/10/13 12:09:00 he Exp $
+# $NetBSD: Makefile,v 1.96 2023/01/12 12:09:18 adam Exp $
 
-DISTNAME=	unbound-1.17.0
+DISTNAME=	unbound-1.17.1
 CATEGORIES=	net
 MASTER_SITES=	https://nlnetlabs.nl/downloads/unbound/
 
@@ -37,7 +37,7 @@ CHECK_BUILTIN.openssl=	no
 .include "../../security/openssl/buildlink3.mk"
 
 PLIST_VARS+=		sha2 gost
-.if defined(USE_BUILTIN.openssl) && !empty(USE_BUILTIN.openssl:M[yY][eE][sS])
+.if defined(USE_BUILTIN.openssl) && ${USE_BUILTIN.openssl:tl} == yes
 PLIST_VARS.gost!=	\
 	if ${PKG_ADMIN} pmatch 'openssl>=1.0.0' ${BUILTIN_PKG.openssl}; then \
 		${ECHO} "yes";                                          \
