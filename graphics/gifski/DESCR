@@ -1,0 +1,10 @@
+Highest-quality GIF encoder based on pngquant.
+
+gifski converts video frames to GIF animations using pngquant's fancy features
+for efficient cross-frame palettes and temporal dithering.
+It produces animated GIFs that use thousands of colors per frame.
+
+It's a CLI tool, but it can also be compiled as a C library for seamless use in
+other apps.
+gifski is a command-line tool. There is no GUI for Windows or Linux (there is
+one for macOS).
