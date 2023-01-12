@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1000 2022/12/18 09:47:04 mef Exp $
+# $NetBSD: Makefile,v 1.1001 2023/01/12 12:56:39 pin Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -171,6 +171,7 @@ SUBDIR+=	gif320
 SUBDIR+=	giflib
 SUBDIR+=	giflib-util
 SUBDIR+=	gifsicle
+SUBDIR+=	gifski
 SUBDIR+=	giftrans
 SUBDIR+=	gimmage
 SUBDIR+=	gimp
