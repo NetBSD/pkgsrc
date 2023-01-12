@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.298 2023/01/11 21:58:54 nikita Exp $
+$NetBSD: CHANGES-2023,v 1.299 2023/01/12 00:18:48 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -340,3 +340,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated audio/libsndfile to 1.2.0 [adam 2023-01-11]
 	Updated devel/py-pybind11 to 2.10.3 [adam 2023-01-11]
 	Updated lang/erlang to 25.2nb1 [nikita 2023-01-11]
+	Updated databases/promscale to 0.17.0 [tnn 2023-01-12]
