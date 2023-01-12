@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.145 2022/12/01 15:16:28 gdt Exp $
+# $NetBSD: pyversion.mk,v 1.146 2023/01/12 10:56:12 markd Exp $
 
 # This file should be included by packages as a way to depend on
 # python when none of the other methods are appropriate, e.g. a
@@ -77,9 +77,15 @@ PYTHON_PYVERSION_MK=	defined
 .if defined(PKGNAME_REQD) && !empty(PKGNAME_REQD:Mpy[0-9][0-9]-*) || \
     defined(PKGNAME_REQD) && !empty(PKGNAME_REQD:M*-py[0-9][0-9]-*)
 PYTHON_VERSION_REQD?=	${PKGNAME_REQD:C/(^.*-|^)py([0-9][0-9])-.*/\2/}
+.elif defined(PKGNAME_REQD) && !empty(PKGNAME_REQD:Mpy[0-9][0-9][0-9]-*) || \
+    defined(PKGNAME_REQD) && !empty(PKGNAME_REQD:M*-py[0-9][0-9][0-9]-*)
+PYTHON_VERSION_REQD?=	${PKGNAME_REQD:C/(^.*-|^)py([0-9][0-9][0-9])-.*/\2/}
 .elif defined(PKGNAME_OLD) && !empty(PKGNAME_OLD:Mpy[0-9][0-9]-*) || \
       defined(PKGNAME_OLD) && !empty(PKGNAME_OLD:M*-py[0-9][0-9]-*)
 PYTHON_VERSION_REQD?=	${PKGNAME_OLD:C/(^.*-|^)py([0-9][0-9])-.*/\2/}
+.elif defined(PKGNAME_OLD) && !empty(PKGNAME_OLD:Mpy[0-9][0-9][0-9]-*) || \
+      defined(PKGNAME_OLD) && !empty(PKGNAME_OLD:M*-py[0-9][0-9][0-9]-*)
+PYTHON_VERSION_REQD?=	${PKGNAME_OLD:C/(^.*-|^)py([0-9][0-9][0-9])-.*/\2/}
 .endif
 
 .include "../../mk/bsd.prefs.mk"
