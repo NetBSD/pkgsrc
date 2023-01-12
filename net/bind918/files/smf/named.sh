@@ -147,7 +147,7 @@ if [ -z "$SMF_FMRI" ]; then
     SMF_FMRI="svc:/@SMF_PREFIX@/@SMF_NAME@:${instance}"
 fi
 server="@PREFIX@/sbin/named"
-checkconf="@PREFIX@/sbin/named-checkconf"
+checkconf="@PREFIX@/bin/named-checkconf"
 I=`/usr/bin/basename $0`
 
 case "$method" in
