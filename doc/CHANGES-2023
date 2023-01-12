@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.310 2023/01/12 19:05:27 jperkin Exp $
+$NetBSD: CHANGES-2023,v 1.311 2023/01/12 19:36:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -355,3 +355,17 @@ Changes to the packages collection and infrastructure in 2023:
 	Added graphics/gifski version 1.8.1 [pin 2023-01-12]
 	Updated x11/xterm to 378 [pin 2023-01-12]
 	Updated net/bind918 to 9.18.9nb2 [jperkin 2023-01-12]
+	Updated lang/llvm to 15.0.7 [adam 2023-01-12]
+	Updated devel/lld to 15.0.7 [adam 2023-01-12]
+	Updated devel/lldb to 15.0.7 [adam 2023-01-12]
+	Updated devel/polly to 15.0.7 [adam 2023-01-12]
+	Updated lang/clang to 15.0.7 [adam 2023-01-12]
+	Updated lang/clang-tools-extra to 15.0.7 [adam 2023-01-12]
+	Updated lang/compiler-rt to 15.0.7 [adam 2023-01-12]
+	Updated lang/libcxx to 15.0.7 [adam 2023-01-12]
+	Updated lang/libcxxabi to 15.0.7 [adam 2023-01-12]
+	Updated lang/libunwind to 15.0.7 [adam 2023-01-12]
+	Updated lang/wasi-compiler-rt to 15.0.7 [adam 2023-01-12]
+	Updated lang/wasi-libcxx to 15.0.7 [adam 2023-01-12]
+	Updated parallel/openmp to 15.0.7 [adam 2023-01-12]
+	Updated sysutils/ansible to 7.1.0 [adam 2023-01-12]
