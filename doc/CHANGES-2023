@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.306 2023/01/12 12:09:34 adam Exp $
+$NetBSD: CHANGES-2023,v 1.307 2023/01/12 12:53:03 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -351,3 +351,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated games/woof to 10.5.1 [micha 2023-01-12]
 	Updated sysutils/ansible-lint to 6.10.2 [adam 2023-01-12]
 	Updated net/unbound to 1.17.1 [adam 2023-01-12]
+	Added devel/git-branchless version 0.6.0 [pin 2023-01-12]
