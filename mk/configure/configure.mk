@@ -1,4 +1,4 @@
-# $NetBSD: configure.mk,v 1.31 2020/02/23 20:24:46 rillig Exp $
+# $NetBSD: configure.mk,v 1.32 2023/01/12 19:37:35 markd Exp $
 #
 # = Package-settable variables =
 #
@@ -84,6 +84,9 @@ _BUILD_DEFS+=		CONFIGURE_ENV CONFIGURE_ARGS CMAKE_ARGS
 .endif
 .if defined(USE_CMAKE)
 .  include "cmake.mk"
+.endif
+.if defined(_CMAKE_CONFIGURE_SETTINGS)
+.  include "../../devel/cmake/configure-settings.mk"
 .endif
 
 ######################################################################
