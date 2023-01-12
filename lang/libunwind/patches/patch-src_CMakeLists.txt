@@ -1,6 +1,7 @@
-$NetBSD: patch-src_CMakeLists.txt,v 1.3 2023/01/12 08:52:49 wiz Exp $
+$NetBSD: patch-src_CMakeLists.txt,v 1.4 2023/01/12 09:01:52 wiz Exp $
 
 Fix building assembler files.
+https://gitlab.kitware.com/cmake/cmake/-/issues/24308
 
 --- src/CMakeLists.txt.orig	2022-11-29 10:05:58.000000000 +0000
 +++ src/CMakeLists.txt
