@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:19:21 nia Exp $
+$NetBSD: distinfo,v 1.9 2023/01/13 11:50:37 jperkin Exp $
 
 BLAKE2s (bareos-20.0.2.tar.gz) = ea4d3094c2a07fbf84eb5182d203257787f4111756e8400b8a0e7f9e39aaf8ae
 SHA512 (bareos-20.0.2.tar.gz) = f3a0f481a2c9b3a422f4db3e094587c97fe10e2ea5e7a8ba44e9971b0a11746ae4ad598ea469d5c8ec0dfb962e4104c00931397905aebbf3e22af49834043994
 Size (bareos-20.0.2.tar.gz) = 13333946 bytes
 SHA1 (patch-core_CMakeLists.txt) = e59c94620769db0b26d6255830753bdc3b42ad77
 SHA1 (patch-core_cmake_BareosCheckIncludes.cmake) = bb3703ee083b3aa6ea8d5819c0064324037c560a
-SHA1 (patch-core_cmake_BareosFindAllLibraries.cmake) = 35ddd7c2f95f56aa5f65c5f6f2d39700c350e492
+SHA1 (patch-core_cmake_BareosFindAllLibraries.cmake) = 9b05eddc9db34ef2473e1c9746f6e48cd5afde8e
 SHA1 (patch-core_cmake_BareosFindPrograms.cmake) = 89172bc64ba28ca901c3fb5f150f814c0e063875
 SHA1 (patch-core_cmake_BareosInstallConfigFiles.cmake) = a0110766eee99c19bda4de506a86b29a74032e8d
 SHA1 (patch-core_cmake_BareosSetVariableDefaults.cmake) = 1dcdfb5a1a3b6494bb101b4b810646d58bfeb662

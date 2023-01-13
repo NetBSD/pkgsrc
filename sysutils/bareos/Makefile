@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2022/11/23 16:21:03 adam Exp $
+# $NetBSD: Makefile,v 1.15 2023/01/13 11:50:37 jperkin Exp $
 
 CONFLICTS=		bareos-clientonly-[0-9]* bacula-clientonly-[0-9]* bacula-[0-9]*
 
@@ -15,12 +15,12 @@ BUILD_DEFS+=		VARBASE
 BAREOS_SD_USER?=		bareossd
 PKG_GECOS.${BAREOS_SD_USER}=	Bareos Storage User
 PKG_HOME.${BAREOS_SD_USER}=	${BAREOS_WORKINGDIR}
-PKG_SHELL.${BAREOS_SD_USER}=	/bin/sh
+PKG_SHELL.${BAREOS_SD_USER}=	${SH}
 
 BAREOS_DIR_USER?=		bareosdir
 PKG_GECOS.${BAREOS_DIR_USER}=	Bareos Director User
 PKG_HOME.${BAREOS_DIR_USER}=	${BAREOS_WORKINGDIR}
-PKG_SHELL.${BAREOS_DIR_USER}=	/bin/sh
+PKG_SHELL.${BAREOS_DIR_USER}=	${SH}
 
 PKG_USERS=		${BAREOS_DIR_USER}:${BAREOS_GROUP} ${BAREOS_SD_USER}:${BAREOS_GROUP}
 
