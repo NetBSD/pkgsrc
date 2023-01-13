@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.324 2023/01/13 20:38:15 bsiegert Exp $
+$NetBSD: CHANGES-2023,v 1.325 2023/01/13 22:18:18 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -385,3 +385,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/p5-MooseX-OneArgNew to 0.007 [wen 2023-01-13]
 	Added databases/galera version 26.4.13 [wiz 2023-01-13]
 	Updated sysutils/lf to 28 [bsiegert 2023-01-13]
+	Updated devel/asdf to 0.11.1 [schmonz 2023-01-13]
