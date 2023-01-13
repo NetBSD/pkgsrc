@@ -1,0 +1,2 @@
+This is Galera replication - Codership's implementation of the write set
+replication (wsrep) interface.
