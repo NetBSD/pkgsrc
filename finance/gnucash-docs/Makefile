@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2023/01/04 07:45:59 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2023/01/13 08:24:28 wiz Exp $
 
 DISTNAME=		gnucash-docs-4.13
 CATEGORIES=		finance
@@ -13,5 +13,8 @@ DEPENDS+=		yelp-[0-9]*:../../misc/yelp3
 
 USE_CMAKE=		yes
 USE_TOOLS+=		bash
+
+# CMake Error: failed to create symbolic link '.../work/gnucash-docs-4.13/share/doc/HTML/de': File exists
+MAKE_JOBS_SAFE=		no
 
 .include "../../mk/bsd.pkg.mk"
