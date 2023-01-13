@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2023/01/09 20:08:28 fcambus Exp $
+$NetBSD: distinfo,v 1.10 2023/01/13 10:48:36 fcambus Exp $
 
 BLAKE2s (jpeginfo-1.6.2.tar.gz) = 93df0f6120937a1dc9780e44750e32b3e23e50bf310881d709a6ef39ce543909
 SHA512 (jpeginfo-1.6.2.tar.gz) = a077f2273fc96604796e3a922fea6b3761ae97fec22bd9dd26b766bed28334d54105d783e793e41e8dbfd1a27d5a6a0636f146ffa89528f7613f4cbe9358d9ac
 Size (jpeginfo-1.6.2.tar.gz) = 93323 bytes
-SHA1 (patch-aa) = c7926744637b3810bba5a9e817ac4959cdab21af
+SHA1 (patch-aa) = 6c3ad29fc0dfffa55a3155f32abc58cd343bdfa5
