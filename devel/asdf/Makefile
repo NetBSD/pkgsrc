@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2022/12/27 20:04:30 abs Exp $
+# $NetBSD: Makefile,v 1.3 2023/01/13 22:18:11 schmonz Exp $
 
-DISTNAME=		asdf-0.11.0
+DISTNAME=		asdf-0.11.1
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=asdf-vm/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}
@@ -22,7 +22,7 @@ AUTO_MKDIRS=		yes
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	do-configure
 SUBST_FILES.prefix=	lib/utils.bash lib/commands/reshim.bash
-SUBST_VARS.prefix=	PREFIX
+SUBST_VARS.prefix=	PREFIX BASH
 
 SUBST_CLASSES+=		lib
 SUBST_STAGE.lib=	do-configure
