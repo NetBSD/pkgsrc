@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.317 2023/01/13 12:50:53 wen Exp $
+$NetBSD: CHANGES-2023,v 1.318 2023/01/13 13:18:30 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -377,3 +377,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed devel/libFoundation [wiz 2023-01-13]
 	Removed devel/gnustep-objc-lf2 [wiz 2023-01-13]
 	Updated www/p5-CGI to 4.55 [wen 2023-01-13]
+	Updated www/p5-Dancer to 1.3520 [wen 2023-01-13]
