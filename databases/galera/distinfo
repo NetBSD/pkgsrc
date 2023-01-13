@@ -1,0 +1,21 @@
+$NetBSD: distinfo,v 1.1 2023/01/13 16:08:03 wiz Exp $
+
+BLAKE2s (694d6ca47f5eec7873be99b7d6babccf633d1231.tar.gz) = 75e68accfc8848a2d43987a2dd8f4598e2ce0a73a224e3cc71c0475d72571956
+SHA512 (694d6ca47f5eec7873be99b7d6babccf633d1231.tar.gz) = 4bf11c9ea43263cddebfebe115ea4118a1d5573f30f160a7fc7db9ae7faa4d1f11c5f0988ce4d4878d49431635b9e1b0c9ec3bfe0f8cda7c3b6d1d6c7265a391
+Size (694d6ca47f5eec7873be99b7d6babccf633d1231.tar.gz) = 91929 bytes
+BLAKE2s (galera-26.4.13.tar.gz) = 54717494b2abda58deffeb91a73aff1948ec5d9a155438208c6d58cdcf61446c
+SHA512 (galera-26.4.13.tar.gz) = 34bd8eecf45efe8237256672eb164060ef4f8b9548b0da4392d6c45507f215d85272bf9fe883ec365ae8541051edc4c1a8b9f2d4bd9158100264bd824cc6cc61
+Size (galera-26.4.13.tar.gz) = 3587759 bytes
+SHA1 (patch-asio_asio_detail_impl_kqueue__reactor.ipp) = 9b34f0c1307b9b1566284e1d196be97f0c2e887f
+SHA1 (patch-cmake_crc32c.cmake) = 777bc7bd309963390dd2619728988bbcf4903992
+SHA1 (patch-galerautils_SConscript) = 9658410ee04446b9c8ad5e310a209e3a15c3aa32
+SHA1 (patch-galerautils_src_gu__arch.h) = 51eb5a415af0ae52ec0012a100d62992da6d7539
+SHA1 (patch-galerautils_src_gu__asio__socket__util.hpp) = 894fe5ce32d9ecf802da2da618f71cdbf2dc06dd
+SHA1 (patch-galerautils_src_gu__crc32c__arm64.c) = 31e1671b9d91e74f23620b0370088f5c8da0e11f
+SHA1 (patch-galerautils_src_gu__errno.h) = 5b366c5f78a3262be80ebda5520ccb4b3cf7e22f
+SHA1 (patch-galerautils_src_gu__fdesc.cpp) = 4d41100c18914a39ec2140239a1f5144536deb43
+SHA1 (patch-galerautils_src_gu__limits.c) = 4d226505ab0796f51e6645c8545878614c4ae804
+SHA1 (patch-galerautils_src_gu__resolver.cpp) = 3462c2dc6db76d782d972bbec365c2ce80417638
+SHA1 (patch-galerautils_src_gu__system.h) = 9ce3fccebf2621e449fb24b73632f8aae4d1f937
+SHA1 (patch-galerautils_src_gu__thread.cpp) = 4e9108ca1b553d13f47fe197e5d202cea21fc122
+SHA1 (patch-gcs_src_gcs__spread.cpp) = a808b7eaa8395fa664cae394b5ff67ba0c756587
