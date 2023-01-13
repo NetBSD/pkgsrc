@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2021/08/11 10:24:05 kardel Exp $
+# $NetBSD: Makefile.common,v 1.6 2023/01/13 11:50:37 jperkin Exp $
 # used by sysutils/bareos-clientonly/Makefile
 
 GITHUB_PROJECT=	bareos
@@ -14,9 +14,6 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=bareos/}
 MAINTAINER=	kardel@NetBSD.org
 HOMEPAGE=	http://www.bareos.org/
 LICENSE=	gnu-agpl-v3
-
-# pkgsrc version currently only tested/configured for NetBSD build
-ONLY_FOR_PLATFORM=	NetBSD-*-*
 
 USE_LANGUAGES+=	c c++
 USE_CMAKE=	yes
