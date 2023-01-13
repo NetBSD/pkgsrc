@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.320 2023/01/13 13:47:44 wen Exp $
+$NetBSD: CHANGES-2023,v 1.321 2023/01/13 13:51:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -380,3 +380,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/p5-Dancer to 1.3520 [wen 2023-01-13]
 	Updated security/p5-Mozilla-CA to 20221114 [wen 2023-01-13]
 	Updated devel/p5-MooseX-Types-JSON to 1.01 [wen 2023-01-13]
+	Updated sysutils/ansible-core to 2.14.1nb1 [adam 2023-01-13]
+	Updated devel/py-future to 0.18.3 [adam 2023-01-13]
