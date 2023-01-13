@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.311 2023/01/12 19:36:15 adam Exp $
+$NetBSD: CHANGES-2023,v 1.312 2023/01/13 05:33:13 sekiya Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -369,3 +369,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/wasi-libcxx to 15.0.7 [adam 2023-01-12]
 	Updated parallel/openmp to 15.0.7 [adam 2023-01-12]
 	Updated sysutils/ansible to 7.1.0 [adam 2023-01-12]
+	Updated net/bind918 to 9.18.9nb3 [sekiya 2023-01-13]
