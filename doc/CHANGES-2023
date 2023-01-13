@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.313 2023/01/13 09:03:24 adam Exp $
+$NetBSD: CHANGES-2023,v 1.314 2023/01/13 10:59:37 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -372,3 +372,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/bind918 to 9.18.9nb3 [sekiya 2023-01-13]
 	Updated textproc/py-alabaster to 0.7.13 [adam 2023-01-13]
 	Updated devel/py-requests to 2.28.2 [adam 2023-01-13]
+	Updated devel/p5-Config-General to 2.65nb1 [wen 2023-01-13]
