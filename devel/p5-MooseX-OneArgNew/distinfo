@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:17:06 nia Exp $
+$NetBSD: distinfo,v 1.7 2023/01/13 13:53:42 wen Exp $
 
-BLAKE2s (MooseX-OneArgNew-0.005.tar.gz) = 335a3aa2204655c8fb7c052624150b4c66b3e60c6b55d7a256e72343d3de7fc9
-SHA512 (MooseX-OneArgNew-0.005.tar.gz) = 0d846346be4eb2deb8a212220991dc727a3ca1fab4109292117dadc8f64fef20ddc93877d198d56974686fbd5d3f4ebf10abd429f08c7fbf1de42975138259ba
-Size (MooseX-OneArgNew-0.005.tar.gz) = 16071 bytes
+BLAKE2s (MooseX-OneArgNew-0.007.tar.gz) = ef753044863f1d00dc365a030ea211d2fbcba38ee85d91f45c2e198621d15233
+SHA512 (MooseX-OneArgNew-0.007.tar.gz) = 4a637fe674e80527ea13b461a9a35eabbb4054bad6acbbdfe7e1cdbaeb0f861edcf0939e3971fa2d865a84ad8087f2f6795658679b547abf4669bc07fb582d91
+Size (MooseX-OneArgNew-0.007.tar.gz) = 17094 bytes
