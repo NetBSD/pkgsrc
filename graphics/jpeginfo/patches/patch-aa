@@ -1,8 +1,10 @@
-$NetBSD: patch-aa,v 1.3 2016/04/01 13:05:37 jperkin Exp $
+$NetBSD: patch-aa,v 1.4 2023/01/13 10:48:36 fcambus Exp $
 
-Use PKGMANDIR.
+- Use PKGMANDIR.
+- Append -o flag explicitely, this fixes the build with older versions
+  of make, such as the one used in NetBSD 9.
 
---- Makefile.in.orig	2002-12-07 22:13:21.000000000 +0000
+--- Makefile.in.orig	2023-01-08 06:33:16.000000000 +0000
 +++ Makefile.in
 @@ -26,8 +26,9 @@ libdir = $(prefix)/lib
  infodir = $(prefix)/share/info
@@ -15,3 +17,13 @@ Use PKGMANDIR.
  
  
  CC        = @CC@ 
+@@ -54,6 +55,9 @@ DISTNAME  = $(PKGNAME)-$(Version)
+ 
+ OBJS = $(PKGNAME).o misc.o @GNUGETOPT@ md5.o sha256/hash.o sha256/blocks.o
+ 
++.c.o:
++	$(CC) $(CFLAGS) -o $@ -c $<
++
+ $(PKGNAME):	$(OBJS) 
+ 	$(CC) $(CFLAGS) -o $(PKGNAME) $(OBJS) $(LDFLAGS) $(LIBS) 
+ 
