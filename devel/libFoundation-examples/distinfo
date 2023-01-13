@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:15:13 nia Exp $
-
-BLAKE2s (libFoundation-1.1.7-r168.tar.gz) = 921a0547bb29ff099b15a8b905704e48950b8e021246448d7bc202f0af04b18d
-SHA512 (libFoundation-1.1.7-r168.tar.gz) = 2dbb2214353579830091ea8b0a4d3b17c9bf336e65dbb6d33db659408d8fcfe4a7ca7ec59a7ddf5265c7200dde5791b8dcb27df31b29df62564d1bb551ab1c66
-Size (libFoundation-1.1.7-r168.tar.gz) = 563456 bytes
-SHA1 (patch-aa) = 3af8ec986350df9ce435ddda634034a4cba382f0

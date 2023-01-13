@@ -1,7 +1,0 @@
-  This package contains example programs, such as 'Defaults' for
-libFoundation.
-
-  LibFoundation is a library mostly conform to the OpenStep Foundation API
-specification, that is, it includes Objective-C classes and methods
-handling memory management, collections, basic file-input/output, handling
-of URLs, etc.
