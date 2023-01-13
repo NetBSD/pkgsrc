@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.322 2023/01/13 13:55:41 wen Exp $
+$NetBSD: CHANGES-2023,v 1.323 2023/01/13 16:08:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -383,3 +383,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/ansible-core to 2.14.1nb1 [adam 2023-01-13]
 	Updated devel/py-future to 0.18.3 [adam 2023-01-13]
 	Updated devel/p5-MooseX-OneArgNew to 0.007 [wen 2023-01-13]
+	Added databases/galera version 26.4.13 [wiz 2023-01-13]
