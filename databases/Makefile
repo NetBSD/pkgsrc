@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.670 2022/11/24 11:41:34 nros Exp $
+# $NetBSD: Makefile,v 1.671 2023/01/13 16:08:19 wiz Exp $
 
 COMMENT=	Databases
 
@@ -34,6 +34,7 @@ SUBDIR+=	erlang-p1_mysql
 SUBDIR+=	erlang-p1_pgsql
 SUBDIR+=	erlang-sqlite3
 SUBDIR+=	freetds
+SUBDIR+=	galera
 SUBDIR+=	gdbm
 SUBDIR+=	gdbm_compat
 SUBDIR+=	gdbm_primitive
