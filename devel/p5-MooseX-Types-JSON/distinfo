@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:17:08 nia Exp $
+$NetBSD: distinfo,v 1.7 2023/01/13 13:45:59 wen Exp $
 
-BLAKE2s (MooseX-Types-JSON-1.00.tar.gz) = 6ce7c605f17396e42c50d71cca237c90c31cea84a74ab45b28c17e054e59a648
-SHA512 (MooseX-Types-JSON-1.00.tar.gz) = 1dfaa8907c04ca765fc03c2049cbf076b2e29f1df34b569d91b3cc3931acde8cc7563cb186d3ea4b278ee40f1c4706f6b03139fb370d6a9d79eb7e6de21aa23f
-Size (MooseX-Types-JSON-1.00.tar.gz) = 9742 bytes
+BLAKE2s (MooseX-Types-JSON-1.01.tar.gz) = 6d330ab2a37e778d134ae9f929d8e3acb1d16a9709544572fdcdc037347ad529
+SHA512 (MooseX-Types-JSON-1.01.tar.gz) = 0c1042cca56637d14dd853e77c96a24630b72c6af42820f24a9a9e086ce043eea1d3b370254a0a991b4d52fa2f96740e11b664b0784e1b794d7bd4e720b34953
+Size (MooseX-Types-JSON-1.01.tar.gz) = 15797 bytes
