@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2023/01/13 16:08:03 wiz Exp $
+bin/garbd
+lib/libgalera_smm.so
