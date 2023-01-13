@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2022Q4,v 1.1.2.4 2023/01/08 19:19:18 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2022Q4,v 1.1.2.5 2023/01/13 19:54:57 bsiegert Exp $
 
 Changes to packages and infrastructure on the 2022Q4 branch:
 
@@ -32,4 +32,7 @@ lang/php82: security fix
 
 Pullup ticket #6719 - requested by taca
 lang/php80: security fix
+
+Pullup ticket #6720 - requested by gutteridge
+lang/python27: security fix
 
