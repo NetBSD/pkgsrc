@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.100 2022/10/18 12:01:52 adam Exp $
+$NetBSD: distinfo,v 1.101 2023/01/13 23:14:31 gutteridge Exp $
 
 BLAKE2s (net-snmp-5.9.3.tar.gz) = c5f3e30c73294c0f8b7db2a776a0a28e6f63ed1d55f32acb4328fbbb277cbe4a
 SHA512 (net-snmp-5.9.3.tar.gz) = a476df4967029a2eb03d27b0e250170785d0a8c143d49b900ee958c3cbdfaccd415b70af40f6fbed9cb8819d522c35a6073a431091d908ccc7c018fa0aaa2abc
@@ -17,6 +17,7 @@ SHA1 (patch-agent_mibgroup_mibII_icmp.c) = 50ac67db8a9ffc16d983b4192e74db25ef439
 SHA1 (patch-agent_mibgroup_mibII_interfaces.c) = 44a4ce6302457094ba2b200e4c47ff6c2a425746
 SHA1 (patch-agent_mibgroup_mibII_ip.c) = 04c2a487bad8705c9725ef4a62016051d3898970
 SHA1 (patch-agent_mibgroup_mibII_ipAddr.c) = cd3345a4b30fe2280d0555ee38feb5f957a55b1e
+SHA1 (patch-agent_mibgroup_mibII_ipv6.c) = f1e99ab8b5d5f31660112b85d863cc9ff90e0fdb
 SHA1 (patch-agent_mibgroup_mibII_tcp.c) = 92563fd6be6f27be5b348cdc8bc02061374026b0
 SHA1 (patch-agent_mibgroup_mibII_tcpTable.c) = acea4fdb55622df9ed0a45051412de278695c9da
 SHA1 (patch-agent_mibgroup_mibII_udp.c) = d110e996d0538d17251d39a5eed46df6944ba0fa
