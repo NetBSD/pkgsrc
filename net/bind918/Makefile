@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2023/01/12 19:01:46 jperkin Exp $
+# $NetBSD: Makefile,v 1.5 2023/01/13 05:31:52 sekiya Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 PKGNAME=	${DISTNAME:S/-P/pl/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	https://downloads.isc.org/isc/bind9/${BIND_VERSION}/
 EXTRACT_SUFX=	.tar.xz
@@ -87,7 +87,6 @@ post-install:
 .endfor
 
 .include "../../mk/atomic64.mk"
-.include "../../lang/python310/buildlink3.mk"
 .include "../../www/nghttp2/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/libuv/buildlink3.mk"
