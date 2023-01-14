@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.8 2020/11/04 08:36:52 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.9 2023/01/14 01:30:53 manu Exp $
+include/Block.h
+include/Block_private.h
 include/objc/Availability.h
 include/objc/Object.h
 include/objc/Protocol.h
@@ -12,14 +14,15 @@ include/objc/message.h
 include/objc/objc-api.h
 include/objc/objc-arc.h
 include/objc/objc-auto.h
+include/objc/objc-class.h
+include/objc/objc-runtime.h
+include/objc/objc-visibility.h
 include/objc/objc.h
 include/objc/runtime-deprecated.h
 include/objc/runtime.h
 include/objc/slot.h
-include/objc/toydispatch.h
 lib/libobjc.so
-lib/libobjc.so.4
 lib/libobjc.so.4.6
 ${PLIST.objcxx}lib/libobjcxx.so
-${PLIST.objcxx}lib/libobjcxx.so.4
 ${PLIST.objcxx}lib/libobjcxx.so.4.6
+lib/pkgconfig/libobjc.pc
