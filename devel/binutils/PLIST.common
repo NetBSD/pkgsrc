@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.39 2022/08/06 09:49:32 fcambus Exp $
+@comment $NetBSD: PLIST.common,v 1.40 2023/01/14 20:11:04 fcambus Exp $
 ${MACHINE_GNU_PLATFORM}/bin/ar
 ${PLIST.gas}${MACHINE_GNU_PLATFORM}/bin/as
 ${PLIST.gld}${MACHINE_GNU_PLATFORM}/bin/ld
@@ -72,6 +72,8 @@ ${PLIST.ctf}include/ctf.h
 include/diagnostics.h
 include/dis-asm.h
 include/plugin-api.h
+include/sframe-api.h
+include/sframe.h
 include/symcat.h
 ${PLIST.gas}info/as.info
 info/bfd.info
@@ -79,11 +81,14 @@ info/binutils.info
 ${PLIST.ctf}info/ctf-spec.info
 ${PLIST.gprof}info/gprof.info
 ${PLIST.gld}info/ld.info
+info/sframe-spec.info
 ${PLIST.gld}lib/bfd-plugins/libdep.so
 lib/libbfd.la
 ${PLIST.ctf}lib/libctf-nobfd.la
 ${PLIST.ctf}lib/libctf.la
 lib/libopcodes.la
+lib/libsframe.a
+lib/libsframe.la
 man/man1/gaddr2line.1
 man/man1/gar.1
 ${PLIST.gas}man/man1/gas.1
@@ -171,6 +176,7 @@ ${PLIST.gld}share/locale/pt_BR/LC_MESSAGES/ld.mo
 share/locale/pt_BR/LC_MESSAGES/opcodes.mo
 share/locale/ro/LC_MESSAGES/bfd.mo
 share/locale/ro/LC_MESSAGES/binutils.mo
+${PLIST.gold}share/locale/ro/LC_MESSAGES/gold.mo
 ${PLIST.gprof}share/locale/ro/LC_MESSAGES/gprof.mo
 share/locale/ro/LC_MESSAGES/opcodes.mo
 share/locale/ru/LC_MESSAGES/bfd.mo
