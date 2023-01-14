@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2022/12/21 13:13:36 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/01/14 07:41:00 charlotte Exp $
 
 DISTNAME=	jpm-1.1.0
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=janet-lang/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	charlotte@NetBSD.org
 HOMEPAGE=	https://github.com/janet-lang/jpm
 COMMENT=	Janet Project Manager
 LICENSE=	mit
