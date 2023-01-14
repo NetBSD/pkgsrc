@@ -1,0 +1,17 @@
+$NetBSD: patch-configure,v 1.1 2023/01/14 01:40:04 manu Exp $
+
+Shell equality test is = and not ==
+
+--- configure.orig	2023-01-08 09:41:32.000000000 +0100
++++ configure	2023-01-11 16:11:12.522082237 +0100
+@@ -13699,9 +13699,9 @@
+ # Curl is preinstalled on MSYS2 and bundles the curl-config script. The MSYS2 curl library
+ # and a different (MSVC) curl library might interfere and produce an incorrect configuration.
+ #
+ # Skip the curl-config check on Windows.
+-if eval $CURL_CONFIG --version 2>/dev/null >/dev/null && test "$SKIP_CURL_CONFIG" == "0"; then
++if eval $CURL_CONFIG --version 2>/dev/null >/dev/null && test "$SKIP_CURL_CONFIG" = "0"; then
+   curl_ver=`$CURL_CONFIG --version | sed -e "s/libcurl //g"`
+   curl_maj=`echo $curl_ver | sed -e "s/^\(.*\)\.\(.*\)\.\(.*\)$/\1/"`
+   curl_min=`echo $curl_ver | sed -e "s/^\(.*\)\.\(.*\)\.\(.*\)$/\2/"`
+   if test $curl_maj -lt 7 -o \( $curl_maj -eq 7 -a $curl_min -lt 66 \); then

@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.327 2023/01/14 01:30:53 manu Exp $
+$NetBSD: CHANGES-2023,v 1.328 2023/01/14 01:40:03 manu Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -388,3 +388,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/asdf to 0.11.1 [schmonz 2023-01-13]
 	Updated chat/element-web to 1.11.17 [js 2023-01-13]
 	Updated devel/gnustep-objc to 2.1.0 [manu 2023-01-14]
+	Updated devel/gnustep-base to 1.29.0 [manu 2023-01-14]
