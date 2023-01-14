@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2022/02/25 12:19:15 jperkin Exp $
+$NetBSD: distinfo,v 1.7 2023/01/14 07:44:11 wiz Exp $
 
 BLAKE2s (ghc-8.10.4-boot-x86_64-unknown-netbsd.tar.xz) = 03efbb455a52d0dbc246b1c8b30f82121f5354a1ca0eb1b08b6225b90286a18f
 SHA512 (ghc-8.10.4-boot-x86_64-unknown-netbsd.tar.xz) = 730347bb5eaac4efac8ec487fafd2da6fe2932db45f59e324c83698eb0b0e8a6a4b4fd513de17fb9c152ccee328660cfe1638cad631ce5e35b2dbfddda0d8850
@@ -36,6 +36,7 @@ SHA1 (patch-libraries_base_System_CPUTime_Posix_Times.hsc) = 2bfb779d534d1207328
 SHA1 (patch-libraries_base_System_Environment.hs) = 7d79a91f295915b4408d5f41d5405739d7189215
 SHA1 (patch-libraries_base_configure) = 4e02082cdfde8d927d12f3d2f3d98ace6d4ee116
 SHA1 (patch-libraries_process_cbits_posix_fork__exec.c) = 9c942faf829a64a20237c788e8c8265179db55c7
+SHA1 (patch-libraries_terminfo_configure) = c1955d2ea059cf07fa0fd66d5a1f2f6772e224bb
 SHA1 (patch-libraries_time_lib_Data_Time_Clock_Internal_CTimespec.hsc) = 588270767f8a9cbde0648fc99807891fef65d721
 SHA1 (patch-libraries_time_lib_Data_Time_Clock_Internal_CTimeval.hs) = 68914d012a98cc4a4a245efeabcb9143dba0246a
 SHA1 (patch-libraries_unix_System_Posix_Env.hsc) = e94936c139ca15d45cac4a7feb74a601567913ab
