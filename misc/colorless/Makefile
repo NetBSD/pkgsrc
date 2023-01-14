@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2023/01/14 10:43:18 kim Exp $
+# $NetBSD: Makefile,v 1.2 2023/01/14 12:23:27 kim Exp $
 #
 
-DISTNAME=		colorless-107
+DISTNAME=		colorless-108
 CATEGORIES=		misc
 MASTER_SITES=		http://software.kimmo.suominen.com/
 
