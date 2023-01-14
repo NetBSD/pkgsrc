@@ -1,0 +1,2 @@
+Colorless is a wrapper that enables colorised output of commands and
+pipes the output to less(1).
