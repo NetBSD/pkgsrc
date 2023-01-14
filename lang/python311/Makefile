@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/11/02 11:36:23 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2023/01/14 17:22:25 wiz Exp $
 
 .include "dist.mk"
 
@@ -132,7 +132,6 @@ REPLACE_FILES.python+=	Lib/cProfile.py
 REPLACE_FILES.python+=	Lib/cgi.py
 REPLACE_FILES.python+=	Lib/encodings/rot_13.py
 REPLACE_FILES.python+=	Lib/idlelib/pyshell.py
-REPLACE_FILES.python+=	Lib/keyword.py
 REPLACE_FILES.python+=	Lib/lib2to3/pgen2/token.py
 REPLACE_FILES.python+=	Lib/lib2to3/tests/data/different_encoding.py
 REPLACE_FILES.python+=	Lib/lib2to3/tests/data/false_encoding.py
@@ -169,8 +168,6 @@ REPLACE_FILES.python+=	Lib/turtledemo/tree.py
 REPLACE_FILES.python+=	Lib/turtledemo/yinyang.py
 REPLACE_FILES.python+=	Lib/uu.py
 REPLACE_FILES.python+=	Lib/webbrowser.py
-
-REPLACE_SH+=		Misc/python-config.sh.in
 
 # XXX: It might be needed to add manually more paths like ${PREFIX}/qt5/lib
 # Test: python -c 'from ctypes.util import find_library; print(find_library("ffi"));'
