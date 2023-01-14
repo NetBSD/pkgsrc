@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.16 2022/12/22 13:40:09 schmonz Exp $
+$NetBSD: distinfo,v 1.17 2023/01/14 19:57:05 schmonz Exp $
 
-BLAKE2s (etckeeper_1.18.18.orig.tar.gz) = b157ebb36cfc0474002243b9eb7fbf40fe2ac9b0080d3a2182dac657d327acb1
-SHA512 (etckeeper_1.18.18.orig.tar.gz) = 57b2f7297c0b71e3d39a7838dd3e6599bb3f1275d86200be9d7986f46f0392aa0ba130cb38ba7a5757fcb5d6fa33b4d32233237dba15e8ce9fb8c52565cf251b
-Size (etckeeper_1.18.18.orig.tar.gz) = 101845 bytes
+BLAKE2s (etckeeper_1.18.20.tar.gz) = 273c7d825adb54808904999e992b302560cbd673f2e89598d5f95d3e2000a517
+SHA512 (etckeeper_1.18.20.tar.gz) = 076f5d94d3a3dfd94f7f48775179b56561d195afd7f6bd5e95468e9cc80ce975598ce87c3536d9ae64e2b2aca8c178e0af623bff412a08d0d7990e1fa99ee70d
+Size (etckeeper_1.18.20.tar.gz) = 110774 bytes
 SHA1 (patch-bash__completion) = 95936127f98a76b4b7b66ddc170ba6c1e1e4c0d9
 SHA1 (patch-commit.d_50vcs-commit) = 488487b4cc0d237c28118f592cda33c526b3b2d6
 SHA1 (patch-daily) = d74eec9d1eca6d872a55aa1ecabf03d9a700f41d
 SHA1 (patch-etckeeper) = 816cff7f09a7add7fba72a06807dfe1d11d2b8f8
 SHA1 (patch-etckeeper.8) = 7e72a7889e0478463eb2b304d2cadb44cd97aa52
-SHA1 (patch-etckeeper.conf) = f726f2f1bb51184268ee7211f6dd055584877573
+SHA1 (patch-etckeeper.conf) = dc29166cb32556f52646e5ded71991155f0b4673
 SHA1 (patch-init.d_40vcs-init) = 695ed382a955cf95f257a2cf9851133adee8be69
 SHA1 (patch-list-installed.d_50list-installed) = c11c40e6853beab31790b84053f75b1e32bbe0c7
 SHA1 (patch-post-install.d_50vcs-commit) = 12e0a94e6ca86578146b8173f03886069aff90c5
