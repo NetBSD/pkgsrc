@@ -1,10 +1,10 @@
-$NetBSD: patch-ld_Makefile.in,v 1.4 2022/02/10 14:03:07 fcambus Exp $
+$NetBSD: patch-ld_Makefile.in,v 1.5 2023/01/14 20:11:04 fcambus Exp $
 
 NetBSD/aarch64 support patches for ld from src.
 
---- ld/Makefile.in.orig	2022-02-09 11:49:03.000000000 +0000
+--- ld/Makefile.in.orig	2023-01-14 00:00:00.000000000 +0000
 +++ ld/Makefile.in
-@@ -664,6 +664,8 @@ ALL_EMULATION_SOURCES = \
+@@ -674,6 +674,8 @@ ALL_EMULATION_SOURCES = \
  	earmelf_linux_fdpiceabi.c \
  	earmelf_nacl.c \
  	earmelf_nbsd.c \
@@ -13,7 +13,7 @@ NetBSD/aarch64 support patches for ld from src.
  	earmelf_phoenix.c \
  	earmelf_vxworks.c \
  	earmelfb.c \
-@@ -674,6 +676,8 @@ ALL_EMULATION_SOURCES = \
+@@ -684,6 +686,8 @@ ALL_EMULATION_SOURCES = \
  	earmelfb_linux_fdpiceabi.c \
  	earmelfb_nacl.c \
  	earmelfb_nbsd.c \
@@ -22,12 +22,12 @@ NetBSD/aarch64 support patches for ld from src.
  	earmnto.c \
  	earmpe.c \
  	eavr1.c \
-@@ -881,6 +885,8 @@ ALL_64_EMULATION_SOURCES = \
+@@ -888,6 +892,8 @@ ALL_64_EMULATION_SOURCES = \
  	eaarch64linux32.c \
  	eaarch64linux32b.c \
  	eaarch64linuxb.c \
 +	eaarch64nbsd.c \
 +	eaarch64nbsdb.c \
+ 	eaarch64pe.c \
  	eelf32_x86_64.c \
  	eelf32b4300.c \
- 	eelf32bmip.c \
