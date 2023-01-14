@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/01/14 10:43:18 kim Exp $
+
+BLAKE2s (colorless-107.tar.gz) = 448def63ccd8be75408d50dc5a8279a4a2704f2f27f389d7f4b2405b02dc35f1
+SHA512 (colorless-107.tar.gz) = e3ad76c6a39b2869483e8e017d623bb26f9e55daf25106db537d44d53915d06bd58f4070a3ea6dbbda9a762379e3a839ca8ac4168cc0f9892b8eee8a9688f0b8
+Size (colorless-107.tar.gz) = 4440 bytes

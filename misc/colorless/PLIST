@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2023/01/14 10:43:18 kim Exp $
+bin/colorless
+man/man1/colorless.1
+share/colorless/colorless.conf
+share/doc/colorless/LICENSE
+share/doc/colorless/README.md
