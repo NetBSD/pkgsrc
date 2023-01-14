@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2022/10/13 01:17:14 charlotte Exp $
+# $NetBSD: Makefile,v 1.30 2023/01/14 07:31:21 charlotte Exp $
 
 DISTNAME=	nim-1.6.8
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	lang
 MASTER_SITES=	http://nim-lang.org/download/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	charlotte@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://nim-lang.org/
 COMMENT=	The Nim programming language
 LICENSE=	mit
