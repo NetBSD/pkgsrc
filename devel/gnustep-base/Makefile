@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2023/01/14 01:40:03 manu Exp $
+# $NetBSD: Makefile,v 1.103 2023/01/14 21:47:03 wiz Exp $
 
 DISTNAME=	gnustep-base-1.29.0
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gnustep/}
@@ -24,6 +24,9 @@ CONFIGURE_ARGS+=	--enable-stricticonv
 CONFIGURE_ENV+=		INSTALL_PROGRAM=${INSTALL_SCRIPT:Q}
 MAKE_FILE=		GNUmakefile
 
+# needs _Unwind_Resume_or_Rethrow from libunwind
+LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib -L${PREFIX}/lib -lunwind
+
 # ld: -r and -pie may not be used together
 MKPIE_SUPPORTED=	no
 
@@ -48,7 +51,7 @@ PTHREAD_LIBS+=		-lpth
 SUBST_CLASSES+=		pthread
 SUBST_STAGE.pthread=	pre-configure
 SUBST_FILES.pthread=	configure
-SUBST_SED.pthread=	-e 's,@PTHREAD_LIBS@,${PTHREAD_LIBS},'
+SUBST_VARS.pthread=	PTHREAD_LIBS
 SUBST_MESSAGE.pthread=	Fix @PTHREAD_LIBS@ left out in file configure
 
 CONFIGURE_ARGS+=	--with-library-flags=${GNUSTEP_LDFLAGS:Q}
@@ -61,6 +64,7 @@ INSTALLATION_DIRS+=	share/GNUstep/Frameworks
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../devel/gnustep-make/buildlink3.mk"
 .include "../../devel/gnustep-objc/buildlink3.mk"
+.include "../../lang/libunwind/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
