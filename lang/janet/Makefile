@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.20 2022/11/19 02:40:00 charlotte Exp $
+# $NetBSD: Makefile,v 1.21 2023/01/14 07:40:25 charlotte Exp $
 
 DISTNAME=	janet-1.25.1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=janet-lang/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	charlotte@NetBSD.org
 HOMEPAGE=	https://janet-lang.org/
 COMMENT=	Functional and imperative programming language
 LICENSE=	mit
