@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.331 2023/01/14 13:33:53 taca Exp $
+$NetBSD: CHANGES-2023,v 1.332 2023/01/14 19:57:13 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -392,3 +392,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added misc/colorless version 107 [kim 2023-01-14]
 	Updated misc/colorless to 108 [kim 2023-01-14]
 	Updated databases/ruby-sqlite3 to 1.6.0 [taca 2023-01-14]
+	Updated sysutils/etckeeper to 1.18.20 [schmonz 2023-01-14]
