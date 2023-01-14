@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.329 2023/01/14 10:43:17 kim Exp $
+$NetBSD: CHANGES-2023,v 1.330 2023/01/14 12:23:38 kim Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -390,3 +390,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/gnustep-objc to 2.1.0 [manu 2023-01-14]
 	Updated devel/gnustep-base to 1.29.0 [manu 2023-01-14]
 	Added misc/colorless version 107 [kim 2023-01-14]
+	Updated misc/colorless to 108 [kim 2023-01-14]
