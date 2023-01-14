@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2020/11/04 08:36:52 triaxx Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2023/01/14 01:30:53 manu Exp $
 
 BUILDLINK_TREE+=	gnustep-objc
 
@@ -12,7 +12,6 @@ BUILDLINK_PKGSRCDIR.gnustep-objc?=	../../devel/gnustep-objc
 BUILDLINK_CFLAGS.gnustep-objc+=		-I${BUILDLINK_PREFIX.gnustep-objc}/include/objc
 BUILDLINK_LDFLAGS.gnustep-objc+=	-lobjc -lpthread
 
-.include "../../devel/gnustep-make/buildlink3.mk"
 .endif # GNUSTEP_OBJC_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-gnustep-objc
