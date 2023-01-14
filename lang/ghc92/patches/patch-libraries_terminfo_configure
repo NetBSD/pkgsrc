@@ -1,0 +1,49 @@
+$NetBSD: patch-libraries_terminfo_configure,v 1.1 2023/01/14 07:44:11 wiz Exp $
+
+Look for setupterm in libterminfo.
+
+--- libraries/terminfo/configure.orig	2021-10-28 20:43:04.000000000 +0000
++++ libraries/terminfo/configure
+@@ -2639,13 +2639,13 @@ $as_echo "$ac_cv_lib_tinfow_setupterm" >
+ if test "x$ac_cv_lib_tinfow_setupterm" = xyes; then :
+   HaveLibCurses=YES; LibCurses=tinfow
+ else
+-  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for setupterm in -ltinfo" >&5
+-$as_echo_n "checking for setupterm in -ltinfo... " >&6; }
+-if ${ac_cv_lib_tinfo_setupterm+:} false; then :
++  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for setupterm in -lterminfo" >&5
++$as_echo_n "checking for setupterm in -lterminfo... " >&6; }
++if ${ac_cv_lib_terminfo_setupterm+:} false; then :
+   $as_echo_n "(cached) " >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-ltinfo  $LIBS"
++LIBS="-lterminfo  $LIBS"
+ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ 
+@@ -2665,18 +2665,18 @@ return setupterm ();
+ }
+ _ACEOF
+ if ac_fn_c_try_link "$LINENO"; then :
+-  ac_cv_lib_tinfo_setupterm=yes
++  ac_cv_lib_terminfo_setupterm=yes
+ else
+-  ac_cv_lib_tinfo_setupterm=no
++  ac_cv_lib_terminfo_setupterm=no
+ fi
+ rm -f core conftest.err conftest.$ac_objext \
+     conftest$ac_exeext conftest.$ac_ext
+ LIBS=$ac_check_lib_save_LIBS
+ fi
+-{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_tinfo_setupterm" >&5
+-$as_echo "$ac_cv_lib_tinfo_setupterm" >&6; }
+-if test "x$ac_cv_lib_tinfo_setupterm" = xyes; then :
+-  HaveLibCurses=YES; LibCurses=tinfo
++{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_terminfo_setupterm" >&5
++$as_echo "$ac_cv_lib_terminfo_setupterm" >&6; }
++if test "x$ac_cv_lib_terminfo_setupterm" = xyes; then :
++  HaveLibCurses=YES; LibCurses=terminfo
+ else
+   { $as_echo "$as_me:${as_lineno-$LINENO}: checking for setupterm in -lncursesw" >&5
+ $as_echo_n "checking for setupterm in -lncursesw... " >&6; }
