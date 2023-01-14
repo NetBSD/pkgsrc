@@ -1,9 +1,8 @@
-$NetBSD: patch-configure,v 1.1 2022/10/31 09:50:40 adam Exp $
+$NetBSD: patch-configure,v 1.2 2023/01/14 17:24:07 wiz Exp $
 
 Fix linking on Darwin; don't use -stack_size.
 Changes for consistency across pkgsrc platforms.
 Simplify _sysconfigdata to include only platform name.
-detect netcan/can.h on NetBSD
 Disable barrier to cross-compilation.
 
 --- configure.orig	2022-10-24 17:35:39.000000000 +0000
@@ -26,24 +25,6 @@ Disable barrier to cross-compilation.
  
  
  
-@@ -9564,6 +9564,17 @@ if test "x$ac_cv_type___uint128_t" = xye
- $as_echo "#define HAVE_GCC_UINT128_T 1" >>confdefs.h
- 
- fi
-+ac_fn_c_check_header_compile "$LINENO" "netcan/can.h" "ac_cv_header_netcan_can_h" "
-+#ifdef HAVE_SYS_SOCKET_H
-+#include <sys/socket.h>
-+#endif
-+
-+"
-+if test "x$ac_cv_header_netcan_can_h" = xyes
-+then :
-+  printf "%s\n" "#define HAVE_NETCAN_CAN_H 1" >>confdefs.h
-+
-+fi
- 
- 
- # Sizes and alignments of various common basic types
 @@ -19684,10 +19695,10 @@ _ACEOF
  if ac_fn_c_try_compile "$LINENO"; then :
  
