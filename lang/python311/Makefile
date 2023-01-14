@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2023/01/14 17:22:25 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2023/01/14 17:25:53 wiz Exp $
 
 .include "dist.mk"
 
@@ -36,7 +36,7 @@ PTHREAD_OPTS+=	require
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+.if ${USE_CROSS_COMPILE:U:tl} == yes
 TOOL_DEPENDS+=		${PKGNAME}:../../${PKGPATH}
 # XXX copied from ../../lang/python/pyversion.mk to avoid including it
 # XXX should use NATIVE_PREFIX but we don't have that
