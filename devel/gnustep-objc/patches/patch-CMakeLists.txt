@@ -1,0 +1,17 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2023/01/14 01:30:53 manu Exp $
+
+Remove useless ${CMAKE_CXX_FLAGS} that break the build
+
+--- CMakeLists.txt.orig	2023-01-12 14:46:28.472484641 +0000
++++ CMakeLists.txt	2023-01-12 14:46:55.625639141 +0000
+@@ -316,9 +316,9 @@
+ 				set(ENABLE_OBJCXX false)
+ 			endif()
+ 		endif ()
+ 		add_custom_command(OUTPUT eh_trampoline.s
+-			COMMAND ${CMAKE_CXX_COMPILER} ${CMAKE_CXX_FLAGS} -fPIC -S "${CMAKE_SOURCE_DIR}/eh_trampoline.cc" -o - -fexceptions -fno-inline | sed "s/__gxx_personality_v0/test_eh_personality/g" > "${CMAKE_BINARY_DIR}/eh_trampoline.s"
++			COMMAND ${CMAKE_CXX_COMPILER} -fPIC -S "${CMAKE_SOURCE_DIR}/eh_trampoline.cc" -o - -fexceptions -fno-inline | sed "s/__gxx_personality_v0/test_eh_personality/g" > "${CMAKE_BINARY_DIR}/eh_trampoline.s"
+ 			MAIN_DEPENDENCY eh_trampoline.cc)
+ 		list(APPEND libobjc_ASM_SRCS eh_trampoline.s)
+ 		list(APPEND libobjc_CXX_SRCS objcxx_eh.cc)
+ 	endif ()
