@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/01/09 13:09:35 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/01/15 15:48:01 taca Exp $
 bin/repofetch${RUBY_VER}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
@@ -15,6 +15,8 @@ ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/exe/repofetch
 ${GEM_LIBDIR}/lib/repofetch.rb
 ${GEM_LIBDIR}/lib/repofetch/DEFAULT_CONFIG
+${GEM_LIBDIR}/lib/repofetch/bitbucketcloud.rb
+${GEM_LIBDIR}/lib/repofetch/bitbucketcloud/ASCII
 ${GEM_LIBDIR}/lib/repofetch/cli.rb
 ${GEM_LIBDIR}/lib/repofetch/config.rb
 ${GEM_LIBDIR}/lib/repofetch/env.rb
