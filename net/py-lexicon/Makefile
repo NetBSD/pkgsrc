@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2022/10/28 10:37:00 adam Exp $
+# $NetBSD: Makefile,v 1.82 2023/01/15 21:15:24 adam Exp $
 
 DISTNAME=	dns_lexicon-3.11.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/dns_//}
@@ -11,6 +11,7 @@ COMMENT=	Manipulate DNS records on various DNS providers
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4>=4:../../www/py-beautifulsoup4
+DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=4:../../devel/py-importlib-metadata
 DEPENDS+=	${PYPKGPREFIX}-requests>=2:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-tldextract>=2:../../net/py-tldextract
 DEPENDS+=	${PYPKGPREFIX}-yaml>=5:../../textproc/py-yaml
