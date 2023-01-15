@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.352 2023/01/15 15:58:40 taca Exp $
+$NetBSD: CHANGES-2023,v 1.353 2023/01/15 18:33:21 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -413,3 +413,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/ruby-css-parser to 1.14.0 [taca 2023-01-15]
 	Updated news/pan to 0.154 [rhialto 2023-01-15]
 	Updated www/ruby-excon to 0.97.1 [taca 2023-01-15]
+	Added devel/shfmt version 3.6.0 [nikita 2023-01-15]
