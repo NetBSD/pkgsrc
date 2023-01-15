@@ -1,10 +1,10 @@
-$NetBSD: patch-Gemfile,v 1.8 2022/12/03 06:40:09 taca Exp $
+$NetBSD: patch-Gemfile,v 1.9 2023/01/15 15:09:32 taca Exp $
 
 Relax dependency.
 
 --- Gemfile.orig	2022-12-01 15:40:06.000000000 +0000
 +++ Gemfile
-@@ -3,17 +3,17 @@ source 'https://rubygems.org'
+@@ -3,25 +3,25 @@ source 'https://rubygems.org'
  ruby '>= 2.4.0', '< 2.8.0'
  gem 'bundler', '>= 1.12.0'
  
@@ -26,15 +26,25 @@ Relax dependency.
  gem 'nokogiri', (if Gem.ruby_version < Gem::Version.new('2.5.0')
                     '~> 1.10.10'
                   elsif Gem.ruby_version < Gem::Version.new('2.6.0')
-@@ -21,7 +21,7 @@ gem 'nokogiri', (if Gem.ruby_version < G
+                    '~> 1.12.5'
                   else
-                    '~> 1.13.6'
+-                   '~> 1.13.6'
++                   '~> 1.13'
                   end)
 -gem 'i18n', '~> 1.8.2'
 +gem 'i18n', '~> 1.8'
  gem "rbpdf", "~> 1.20.0"
  gem 'addressable'
  gem 'rubyzip', '~> 2.3.0'
+@@ -47,7 +47,7 @@ end
+ 
+ # Optional gem for exporting the gantt to a PNG file
+ group :minimagick do
+-  gem 'mini_magick', '~> 4.11.0'
++  gem 'mini_magick', '>= 4.11.0'
+ end
+ 
+ # Optional Markdown support, not for JRuby
 @@ -70,7 +70,7 @@ if File.exist?(database_file)
        when 'mysql2'
          gem "mysql2", "~> 0.5.0", :platforms => [:mri, :mingw, :x64_mingw]
