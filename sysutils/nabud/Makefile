@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/01/15 21:41:34 thorpej Exp $
+# $NetBSD: Makefile,v 1.2 2023/01/15 21:56:07 thorpej Exp $
 #
 
 NABUD_VERS=	0.9
@@ -24,6 +24,15 @@ NABUD_GROUP?=	nabu
 PKG_USERS=		${NABUD_USER}:${NABUD_GROUP}
 PKG_GROUPS=		${NABUD_GROUP}
 PKG_GECOS.${NABUD_USER}=NABU user
+
+# Limit this to modern BSD flavors and Linux for now.
+ONLY_FOR_PLATFORM+=	NetBSD-*-*
+ONLY_FOR_PLATFORM+=	FreeBSD-*-*
+ONLY_FOR_PLATFORM+=	DragonFly-*-*
+ONLY_FOR_PLATFORM+=	Darwin-*-*
+ONLY_FOR_PLATFORM+=	MirBSD-*-*
+ONLY_FOR_PLATFORM+=	OpenBSD-*-*
+ONLY_FOR_PLATFORM+=	Linux-*-*
 
 .include "../../mk/bsd.prefs.mk"
 
