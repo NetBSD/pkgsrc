@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.351 2023/01/15 15:58:24 rhialto Exp $
+$NetBSD: CHANGES-2023,v 1.352 2023/01/15 15:58:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -412,3 +412,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/ruby-aws-sdk-secretsmanager to 1.71.0 [taca 2023-01-15]
 	Updated www/ruby-css-parser to 1.14.0 [taca 2023-01-15]
 	Updated news/pan to 0.154 [rhialto 2023-01-15]
+	Updated www/ruby-excon to 0.97.1 [taca 2023-01-15]
