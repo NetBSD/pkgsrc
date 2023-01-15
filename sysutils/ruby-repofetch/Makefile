@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2023/01/09 13:09:35 taca Exp $
+# $NetBSD: Makefile,v 1.2 2023/01/15 15:48:01 taca Exp $
 
-DISTNAME=	repofetch-0.4.2
+DISTNAME=	repofetch-0.4.4
 CATEGORIES=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
