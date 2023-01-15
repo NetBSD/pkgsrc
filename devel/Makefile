@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3876 2023/01/13 12:41:23 wiz Exp $
+# $NetBSD: Makefile,v 1.3877 2023/01/15 18:32:50 nikita Exp $
 #
 
 COMMENT=	Development utilities
@@ -3294,6 +3294,7 @@ SUBDIR+=	semantic
 SUBDIR+=	semi
 SUBDIR+=	sfsexp
 SUBDIR+=	sgb
+SUBDIR+=	shfmt
 SUBDIR+=	shtk
 SUBDIR+=	shunit2
 SUBDIR+=	silc-toolkit

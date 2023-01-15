@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2023/01/15 18:32:50 nikita Exp $
+bin/shfmt
