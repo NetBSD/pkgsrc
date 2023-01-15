@@ -1,0 +1,16 @@
+===========================================================================
+$NetBSD: MESSAGE.common,v 1.1 2023/01/15 21:41:34 thorpej Exp $
+
+If you are running nabud as a minimally-privileged "nabu" user (which is
+strongly recommended), then make sure to adjust the permissions on the
+serial port devices that are connected to your NABU PC and add the "nabu"
+user to a group that can open that serial port.
+
+An example configuration file is provided at:
+
+	${PREFIX}/share/nabud/examples/nabud.conf
+
+Copy it to ${PREFIX}/etc/nabud.conf and modify to fit your local
+NABU PC connection.
+
+===========================================================================
