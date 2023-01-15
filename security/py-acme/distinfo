@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.47 2022/12/12 10:02:30 adam Exp $
+$NetBSD: distinfo,v 1.48 2023/01/15 21:11:06 adam Exp $
 
-BLAKE2s (acme-2.1.0.tar.gz) = 0eced0308d75ee5258717ca1e2e7d26579b1e07f92c39ee0ec3c2b503ba71978
-SHA512 (acme-2.1.0.tar.gz) = ef36addc83ab85bdd030e6eaed6492b994c326f3c04e866e54faab4f701ad84b8978513c98d8ae1be9ee7457ed02f9f75b5e59dc9ae842bdcf17615f35102b96
-Size (acme-2.1.0.tar.gz) = 87062 bytes
+BLAKE2s (acme-2.2.0.tar.gz) = b54bbf18a46f93fc8b19564fbbc23f5ae761727e7cce93923893a656a5db8f2a
+SHA512 (acme-2.2.0.tar.gz) = d3dafa0aeae1412b30434c592246abc641a19dd243b0e76bb74157e33be58826a7e4786701e7af54fb8e23a64d1180864af18732e2263d3c76a513c034855987
+Size (acme-2.2.0.tar.gz) = 87074 bytes
