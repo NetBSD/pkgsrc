@@ -1,4 +1,4 @@
-$NetBSD: patch-Gemfile,v 1.4 2022/12/03 06:41:42 taca Exp $
+$NetBSD: patch-Gemfile,v 1.5 2023/01/15 15:10:43 taca Exp $
 
 * Relax dependency.
 * Do not load gem for developemt and test.
@@ -17,6 +17,24 @@ $NetBSD: patch-Gemfile,v 1.4 2022/12/03 06:41:42 taca Exp $
  gem 'request_store', '~> 1.5.0'
  gem 'mini_mime', '~> 1.1.0'
  gem "actionpack-xml_parser"
+@@ -13,7 +13,7 @@ gem 'roadie-rails', (Gem.ruby_version < 
+ gem 'marcel'
+ gem "mail", "~> 2.7.1"
+ gem 'csv', '~> 3.2.0'
+-gem 'nokogiri', (Gem.ruby_version < Gem::Version.new('2.6.0') ? '~> 1.12.5' : '~> 1.13.4')
++gem 'nokogiri', (Gem.ruby_version < Gem::Version.new('2.6.0') ? '~> 1.12.5' : '~> 1.13')
+ gem "rexml", require: false if Gem.ruby_version >= Gem::Version.new('3.0')
+ gem 'i18n', '~> 1.10.0'
+ gem "rbpdf", "~> 1.20.0"
+@@ -39,7 +39,7 @@ end
+ 
+ # Optional gem for exporting the gantt to a PNG file
+ group :minimagick do
+-  gem 'mini_magick', '~> 4.11.0'
++  gem 'mini_magick', '>= 4.11.0'
+ end
+ 
+ # Optional Markdown support, not for JRuby
 @@ -48,7 +48,7 @@ gem 'redcarpet', '~> 3.5.1', groups: [:m
  
  # Optional CommonMark support, not for JRuby
