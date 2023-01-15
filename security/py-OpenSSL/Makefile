@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2023/01/15 19:40:14 abs Exp $
+# $NetBSD: Makefile,v 1.64 2023/01/15 21:00:39 adam Exp $
 
 DISTNAME=	pyOpenSSL-23.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -18,8 +18,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 # https://github.com/pyca/pyopenssl/issues/656
 PYSETUPTESTTARGET=	pytest
 
-# test status as of 22.0.0
-# 4 failed, 521 passed, 1 skipped, 6 warnings
+# test status as of 23.0.0
+# 2 failed, 535 passed, 1 skipped, 6 warnings
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
