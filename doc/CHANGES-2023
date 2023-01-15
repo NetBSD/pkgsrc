@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.353 2023/01/15 18:33:21 nikita Exp $
+$NetBSD: CHANGES-2023,v 1.354 2023/01/15 20:13:55 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -414,3 +414,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated news/pan to 0.154 [rhialto 2023-01-15]
 	Updated www/ruby-excon to 0.97.1 [taca 2023-01-15]
 	Added devel/shfmt version 3.6.0 [nikita 2023-01-15]
+	Updated devel/mob to 4.1.2 [schmonz 2023-01-15]
