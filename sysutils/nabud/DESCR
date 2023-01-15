@@ -1,0 +1,3 @@
+nabud is a server for the NABU Personal Computer that supports the
+real hardware using serial connections and emulators (such as MAME)
+over TCP/IP.
