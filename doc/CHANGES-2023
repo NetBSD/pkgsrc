@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.333 2023/01/14 20:11:15 fcambus Exp $
+$NetBSD: CHANGES-2023,v 1.334 2023/01/15 10:13:05 kim Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -394,3 +394,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated databases/ruby-sqlite3 to 1.6.0 [taca 2023-01-14]
 	Updated sysutils/etckeeper to 1.18.20 [schmonz 2023-01-14]
 	Updated devel/binutils to 2.40 [fcambus 2023-01-14]
+	Updated misc/colorless to 109 [kim 2023-01-15]
