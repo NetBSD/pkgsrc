@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2023/01/14 12:23:27 kim Exp $
+# $NetBSD: Makefile,v 1.3 2023/01/15 10:12:55 kim Exp $
 #
 
-DISTNAME=		colorless-108
+DISTNAME=		colorless-109
 CATEGORIES=		misc
 MASTER_SITES=		http://software.kimmo.suominen.com/
 
@@ -10,7 +10,9 @@ COMMENT=		Enable colorised command output and pipe it to less
 LICENSE=		2-clause-bsd
 
 NO_CONFIGURE=		yes
-MAKE_FLAGS+=		PREFIX=${PREFIX} MANDIR=${PKGMANDIR}/man1
+MAKE_FLAGS+=		PREFIX=${PREFIX}
+MAKE_FLAGS+=		MANDIR=${PKGMANDIR}/man1
+MAKE_FLAGS+=		SHELL=${TOOLS_PLATFORM.sh}
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/colorless
 
