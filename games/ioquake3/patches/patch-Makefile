@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile,v 1.1 2021/05/21 15:01:52 nia Exp $
+$NetBSD: patch-Makefile,v 1.2 2023/01/15 05:36:38 mrg Exp $
 
 - Add support for NetBSD-style uname.
 - Build client on NetBSD.
@@ -6,8 +6,10 @@ $NetBSD: patch-Makefile,v 1.1 2021/05/21 15:01:52 nia Exp $
 
 https://github.com/ioquake/ioq3/pull/466
 
---- Makefile.orig	2019-12-07 13:16:15.000000000 +0000
-+++ Makefile
+- Add -lrt on NetBSD that binutils 2.39 wants.
+
+--- Makefile.orig	2019-12-07 05:16:15.000000000 -0800
++++ Makefile	2023-01-14 18:34:38.285233929 -0800
 @@ -6,8 +6,8 @@
  COMPILE_PLATFORM=$(shell uname | sed -e 's/_.*//' | tr '[:upper:]' '[:lower:]' | sed -e 's/\//_/g')
  COMPILE_ARCH=$(shell uname -m | sed -e 's/i.86/x86/' | sed -e 's/^arm.*/arm/')
@@ -19,7 +21,7 @@ https://github.com/ioquake/ioq3/pull/466
    COMPILE_ARCH=$(shell uname -p | sed -e 's/i.86/x86/')
  endif
  
-@@ -65,6 +65,10 @@ ifeq ($(PLATFORM),mingw64)
+@@ -65,6 +65,10 @@
    MINGW=1
  endif
  
@@ -30,7 +32,7 @@ https://github.com/ioquake/ioq3/pull/466
  ifeq ($(COMPILE_ARCH),i86pc)
    COMPILE_ARCH=x86
  endif
-@@ -338,7 +342,7 @@ MKDIR=mkdir -p
+@@ -338,7 +342,7 @@
  EXTRA_FILES=
  CLIENT_EXTRA_FILES=
  
@@ -39,7 +41,7 @@ https://github.com/ioquake/ioq3/pull/466
    TOOLS_CFLAGS += -DARCH_STRING=\"$(COMPILE_ARCH)\"
  endif
  
-@@ -712,7 +716,7 @@ ifeq ($(PLATFORM),freebsd)
+@@ -712,7 +716,7 @@
    # flags
    BASE_CFLAGS = \
      -Wall -fno-strict-aliasing -Wimplicit -Wstrict-prototypes \
@@ -48,7 +50,7 @@ https://github.com/ioquake/ioq3/pull/466
    CLIENT_CFLAGS += $(SDL_CFLAGS)
    HAVE_VM_COMPILED = true
  
-@@ -766,7 +770,7 @@ else # ifeq freebsd
+@@ -766,7 +770,7 @@
  ifeq ($(PLATFORM),openbsd)
  
    BASE_CFLAGS = -Wall -fno-strict-aliasing -Wimplicit -Wstrict-prototypes \
@@ -57,14 +59,17 @@ https://github.com/ioquake/ioq3/pull/466
    CLIENT_CFLAGS += $(SDL_CFLAGS)
  
    OPTIMIZEVM = -O3
-@@ -848,13 +852,32 @@ ifeq ($(PLATFORM),netbsd)
+@@ -846,15 +850,34 @@
+   SHLIBEXT=so
+   SHLIBCFLAGS=-fPIC
    SHLIBLDFLAGS=-shared $(LDFLAGS)
-   THREAD_LIBS=-lpthread
- 
--  BASE_CFLAGS = -Wall -fno-strict-aliasing -Wimplicit -Wstrict-prototypes
+-  THREAD_LIBS=-lpthread
++  THREAD_LIBS=-lpthread -lrt
++
 +  BASE_CFLAGS = -Wall -fno-strict-aliasing -Wimplicit -Wstrict-prototypes \
 +    -pipe -DUSE_ICON -DARCH_STRING=\\\"$(ARCH)\\\"
-+
+ 
+-  BASE_CFLAGS = -Wall -fno-strict-aliasing -Wimplicit -Wstrict-prototypes
 +  CLIENT_LIBS += $(SDL_LIBS)
 +  RENDERER_LIBS = $(SDL_LIBS)
 +
