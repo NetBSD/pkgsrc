@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.347 2023/01/15 15:51:49 taca Exp $
+$NetBSD: CHANGES-2023,v 1.348 2023/01/15 15:53:47 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -408,3 +408,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/ruby-listen to 3.8.0 [taca 2023-01-15]
 	Updated sysutils/ruby-repofetch to 0.4.4 [taca 2023-01-15]
 	Updated textproc/ruby-unicode-display_width to 2.4.2 [taca 2023-01-15]
+	Updated www/ruby-aws-partitions to 1.693.0 [taca 2023-01-15]
