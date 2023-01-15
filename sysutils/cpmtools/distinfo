@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 11:19:27 nia Exp $
+$NetBSD: distinfo,v 1.8 2023/01/15 15:41:46 thorpej Exp $
 
-BLAKE2s (cpmtools-2.13.tar.gz) = e937e5f83ad03bae6ade7eabd216842b877ec1a93b9c85d97aac986369d8c588
-SHA512 (cpmtools-2.13.tar.gz) = c110736259099d8c473484e82adb986c25d58fd7736204a331a061f06034f80b82523a10190f072ed05cd7bb5758b15ebbabcc0c702e74e0802bb3c08b5d9e6f
-Size (cpmtools-2.13.tar.gz) = 170008 bytes
-SHA1 (patch-aa) = c15fa42a3cfbb2477fba4467fee77ba33f966c89
-SHA1 (patch-ab) = aaf72082a55ed08627d44912f461e4a0f9510294
-SHA1 (patch-ac) = c9e2423320f6e3ece5b9a3caf9f8416faf9d8a3c
-SHA1 (patch-ad) = 40d980ed06806e1784994e2bf783f0c159fcd2d4
+BLAKE2s (cpmtools-2.23.tar.gz) = 831befdbf98cc7037b462374c9e9b2758c7d0b529606a9d8ea24f0eded240e01
+SHA512 (cpmtools-2.23.tar.gz) = 14ead54e78ae1d99bad67f665d9c962ea3e928d4147dda41a8620d0f65cca76323768b0006d58b2f1710fbe15d1f8d102c5624b97fd5d441537770d997ea953e
+Size (cpmtools-2.23.tar.gz) = 177636 bytes
+SHA1 (patch-cpmcp.c) = 4a250548df328a187814488616d45292c1c2ef59
+SHA1 (patch-cpmfs.c) = ee90077d46db59e8070097db0fc1cb71ea194de7
+SHA1 (patch-term_curses.c) = 6e8d760f2de731804093f963134a441a9c195afc
