@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2022/06/28 11:34:16 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2023/01/15 17:31:01 bsiegert Exp $
 
 DISTNAME=	alpine-2.25
 PKGREVISION=	2
@@ -43,8 +43,10 @@ SUBST_CLASSES.Darwin+=	panic
 SUBST_STAGE.panic=	pre-configure
 SUBST_MESSAGE.panic=	Renaming the panic function
 SUBST_FILES.panic=	*/*.c
+SUBST_FILES.panic+=	*/*/*.c
+SUBST_FILES.panic+=	*/*/*/*.c
 SUBST_FILES.panic+=	pith/util.h
-SUBST_SED.panic+=	-e 's,panic(,Panic(,g'
+SUBST_SED.panic+=	-e 's,panic *(,Panic(,g'
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/alpine/alpine ${DESTDIR}${PREFIX}/bin/alpine
