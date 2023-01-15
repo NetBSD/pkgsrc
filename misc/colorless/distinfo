@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2023/01/14 12:23:27 kim Exp $
+$NetBSD: distinfo,v 1.3 2023/01/15 10:12:55 kim Exp $
 
-BLAKE2s (colorless-108.tar.gz) = 5f69a4ca40c45b8bce7576cd6d56553139b8fa77407a4bf834dc8a2217d086b6
-SHA512 (colorless-108.tar.gz) = 3ce29a6d498919cf11b94ebd93647143c47e14eaa85512a7375ba40c74a0db66fa9d92ecb94dde7b1fbbebdccbcbda0f437498d7c105b00ad649c3034b651dd7
-Size (colorless-108.tar.gz) = 4500 bytes
+BLAKE2s (colorless-109.tar.gz) = 198561fc7b31447c7ecb88b233394757fa6112ae670a87049f183efab6d20b16
+SHA512 (colorless-109.tar.gz) = f72d938c0fe7ee9d6748e285e13cf9414ae7ddaaf19c5dafb8f291b342397b6b263a7cb32420e3b28bc8f875291464598810b086712801615270dd9dde24302e
+Size (colorless-109.tar.gz) = 4575 bytes
