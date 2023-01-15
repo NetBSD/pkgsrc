@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22490 2023/01/15 00:34:19 gutteridge Exp $
+$NetBSD: TODO,v 1.22491 2023/01/15 09:07:11 wiz Exp $
 
 Suggested new packages
 ======================
@@ -443,6 +443,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ap2-auth-ldap-3.11
 	o ap2-jk-1.2.48
 	o ap2-transform-0.6.0
+	o apache-ant-1.10.13
 	o apache-ant19-1.9.15
 	o apache-cassandra-3.11.10
 	o apache-cassandra2-2.2.19
@@ -767,6 +768,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gpick-0.3
 	o gprolog-1.5.0 [adds arm64 support]
 	o gps-17.0
+	o gpsd-3.25
 	o gradle-7.0
 	o grafx2-2.8.3137
 	o gramps5-5.1.4
@@ -992,6 +994,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libthai-0.2.2
 	o libtrace-4.0.16
 	o libvirt-2.3
+	o libwildmidi-0.4.5
 	o libxdg-basedir-1.2.3
 	o libxml2-2.10.3 [several CVEs addressed]
 	o libzookeeper-3.7.0
@@ -1475,6 +1478,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o swi-prolog-jpl-8.3.22
 	o swi-prolog-lite-8.3.22
 	o swi-prolog-packages-8.3.22
+	o syft-0.66.1
 	o sympa-6.2.70
 	o sysinfo-4.2.2
 	o system-tools-backends-2.10.1
