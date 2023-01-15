@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.349 2023/01/15 15:54:54 taca Exp $
+$NetBSD: CHANGES-2023,v 1.350 2023/01/15 15:56:39 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -410,3 +410,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/ruby-unicode-display_width to 2.4.2 [taca 2023-01-15]
 	Updated www/ruby-aws-partitions to 1.693.0 [taca 2023-01-15]
 	Updated www/ruby-aws-sdk-secretsmanager to 1.71.0 [taca 2023-01-15]
+	Updated www/ruby-css-parser to 1.14.0 [taca 2023-01-15]
