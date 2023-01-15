@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.2 2012/10/11 18:46:11 shattered Exp $
+$NetBSD: patch-cpmfs.c,v 1.1 2023/01/15 15:41:47 thorpej Exp $
+
+Some systems require <sys/types.h> before <sys/stat.h>.
 
 --- cpmfs.c.orig	2012-10-07 10:46:25.000000000 +0000
 +++ cpmfs.c

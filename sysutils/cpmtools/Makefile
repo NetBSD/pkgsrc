@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2017/01/03 22:46:53 roy Exp $
+# $NetBSD: Makefile,v 1.9 2023/01/15 15:41:46 thorpej Exp $
 #
 
-DISTNAME=		cpmtools-2.13
-PKGREVISION=		2
+DISTNAME=		cpmtools-2.23
 CATEGORIES=		sysutils
-MASTER_SITES=		http://www.moria.de/~michael/cpmtools/
+MASTER_SITES=		http://www.moria.de/~michael/cpmtools/files/
 
 MAINTAINER=		dgriffi@cs.csubak.edu
 HOMEPAGE=		http://www.moria.de/~michael/cpmtools/
