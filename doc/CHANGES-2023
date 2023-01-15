@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.344 2023/01/15 15:42:47 thorpej Exp $
+$NetBSD: CHANGES-2023,v 1.345 2023/01/15 15:45:05 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -405,3 +405,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/ruby-mini-magick to 4.12.0 [taca 2023-01-15]
 	Updated misc/ruby-pry to 0.14.2 [taca 2023-01-15]
 	Updated sysutils/cpmtools to 2.23 [thorpej 2023-01-15]
+	Updated sysutils/ruby-listen to 3.8.0 [taca 2023-01-15]
