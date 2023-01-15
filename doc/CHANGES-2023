@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.354 2023/01/15 20:13:55 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.355 2023/01/15 21:11:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -415,3 +415,19 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/ruby-excon to 0.97.1 [taca 2023-01-15]
 	Added devel/shfmt version 3.6.0 [nikita 2023-01-15]
 	Updated devel/mob to 4.1.2 [schmonz 2023-01-15]
+	Updated security/py-acme to 2.2.0 [adam 2023-01-15]
+	Updated security/py-certbot to 2.2.0 [adam 2023-01-15]
+	Updated security/py-certbot-apache to 2.2.0 [adam 2023-01-15]
+	Updated security/py-certbot-dns-digitalocean to 2.2.0 [adam 2023-01-15]
+	Updated security/py-certbot-dns-dnsimple to 2.2.0 [adam 2023-01-15]
+	Updated security/py-certbot-dns-dnsmadeeasy to 2.2.0 [adam 2023-01-15]
+	Updated security/py-certbot-dns-gehirn to 2.2.0 [adam 2023-01-15]
+	Updated security/py-certbot-dns-google to 2.2.0 [adam 2023-01-15]
+	Updated security/py-certbot-dns-linode to 2.2.0 [adam 2023-01-15]
+	Updated security/py-certbot-dns-luadns to 2.2.0 [adam 2023-01-15]
+	Updated security/py-certbot-dns-nsone to 2.2.0 [adam 2023-01-15]
+	Updated security/py-certbot-dns-ovh to 2.2.0 [adam 2023-01-15]
+	Updated security/py-certbot-dns-rfc2136 to 2.2.0 [adam 2023-01-15]
+	Updated security/py-certbot-dns-route53 to 2.2.0 [adam 2023-01-15]
+	Updated security/py-certbot-dns-sakuracloud to 2.2.0 [adam 2023-01-15]
+	Updated security/py-certbot-nginx to 2.2.0 [adam 2023-01-15]
