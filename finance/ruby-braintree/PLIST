@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2022/08/26 15:36:33 taca Exp $
+@comment $NetBSD: PLIST,v 1.12 2023/01/15 15:36:05 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/braintree.gemspec
@@ -101,6 +101,9 @@ ${GEM_LIBDIR}/lib/braintree/revoked_payment_method_metadata.rb
 ${GEM_LIBDIR}/lib/braintree/risk_data.rb
 ${GEM_LIBDIR}/lib/braintree/risk_data/liability_shift.rb
 ${GEM_LIBDIR}/lib/braintree/samsung_pay_card.rb
+${GEM_LIBDIR}/lib/braintree/sepa_direct_debit_account.rb
+${GEM_LIBDIR}/lib/braintree/sepa_direct_debit_account_gateway.rb
+${GEM_LIBDIR}/lib/braintree/sepa_direct_debit_account_nonce_details.rb
 ${GEM_LIBDIR}/lib/braintree/settlement_batch_summary.rb
 ${GEM_LIBDIR}/lib/braintree/settlement_batch_summary_gateway.rb
 ${GEM_LIBDIR}/lib/braintree/sha256_digest.rb
@@ -132,6 +135,7 @@ ${GEM_LIBDIR}/lib/braintree/transaction/local_payment_details.rb
 ${GEM_LIBDIR}/lib/braintree/transaction/paypal_details.rb
 ${GEM_LIBDIR}/lib/braintree/transaction/paypal_here_details.rb
 ${GEM_LIBDIR}/lib/braintree/transaction/samsung_pay_card_details.rb
+${GEM_LIBDIR}/lib/braintree/transaction/sepa_direct_debit_account_details.rb
 ${GEM_LIBDIR}/lib/braintree/transaction/status_details.rb
 ${GEM_LIBDIR}/lib/braintree/transaction/subscription_details.rb
 ${GEM_LIBDIR}/lib/braintree/transaction/us_bank_account_details.rb
@@ -200,6 +204,7 @@ ${GEM_LIBDIR}/spec/integration/braintree/payment_method_us_bank_account_spec.rb
 ${GEM_LIBDIR}/spec/integration/braintree/paypal_account_spec.rb
 ${GEM_LIBDIR}/spec/integration/braintree/plan_spec.rb
 ${GEM_LIBDIR}/spec/integration/braintree/samsung_pay_card_spec.rb
+${GEM_LIBDIR}/spec/integration/braintree/sepa_direct_debit_account_spec.rb
 ${GEM_LIBDIR}/spec/integration/braintree/settlement_batch_summary_spec.rb
 ${GEM_LIBDIR}/spec/integration/braintree/subscription_spec.rb
 ${GEM_LIBDIR}/spec/integration/braintree/test/transaction_amounts_spec.rb
@@ -258,6 +263,8 @@ ${GEM_LIBDIR}/spec/unit/braintree/paypal_account_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/resource_collection_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/risk_data/liability_shift.rb
 ${GEM_LIBDIR}/spec/unit/braintree/risk_data_spec.rb
+${GEM_LIBDIR}/spec/unit/braintree/sepa_debit_account_nonce_details_spec.rb
+${GEM_LIBDIR}/spec/unit/braintree/sepa_debit_account_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/sha256_digest_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/signature_service_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/subscription_search_spec.rb
@@ -269,6 +276,7 @@ ${GEM_LIBDIR}/spec/unit/braintree/transaction/customer_details_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/transaction/deposit_details_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/transaction/installment_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/transaction/paypal_details_spec.rb
+${GEM_LIBDIR}/spec/unit/braintree/transaction/sepa_direct_debit_account_details_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/transaction_search_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/transaction_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/unknown_payment_method_spec.rb
