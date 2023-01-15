@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.334 2023/01/15 10:13:05 kim Exp $
+$NetBSD: CHANGES-2023,v 1.335 2023/01/15 15:09:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -395,3 +395,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/etckeeper to 1.18.20 [schmonz 2023-01-14]
 	Updated devel/binutils to 2.40 [fcambus 2023-01-14]
 	Updated misc/colorless to 109 [kim 2023-01-15]
+	Updated devel/ruby-redmine42 to 4.2.9nb1 [taca 2023-01-15]
