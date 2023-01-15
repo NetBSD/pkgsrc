@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.337 2023/01/15 15:26:27 taca Exp $
+$NetBSD: CHANGES-2023,v 1.338 2023/01/15 15:28:19 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -398,3 +398,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/ruby-redmine42 to 4.2.9nb1 [taca 2023-01-15]
 	Updated devel/ruby-redmine50 to 5.0.4nb2 [taca 2023-01-15]
 	Updated devel/ruby-gettext_i18n_rails to 1.10.0 [taca 2023-01-15]
+	Updated devel/ruby-git to 1.13.1 [taca 2023-01-15]
