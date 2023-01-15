@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/01/09 13:09:35 taca Exp $
+$NetBSD: distinfo,v 1.2 2023/01/15 15:48:01 taca Exp $
 
-BLAKE2s (repofetch-0.4.2.gem) = b6b6ca3be4111aa25c056330fde0c277e087633c694c3a088244f47bfeceae56
-SHA512 (repofetch-0.4.2.gem) = aa2435c8b7aff4375e750d7cc944e6f36c6dc43cf611f5653769726e1b277bdc9fbfb03a0b3055f30d565f4401fabe5b0cf6d1515b23b30ce6b4641fc1e133a3
-Size (repofetch-0.4.2.gem) = 18944 bytes
+BLAKE2s (repofetch-0.4.4.gem) = 053ded6a9eb8d09f6f81b451d35a183528f634ab2a810e322167dd2a231fd2a6
+SHA512 (repofetch-0.4.4.gem) = e55f5a814eab18fef9c38e8726b91b7cc5c4e1ad6365382c0b797fa85ece3821bd41c7f7135e4fa70ce9c94435e41b87c9239b54ea29b12a0553a5a60454016c
+Size (repofetch-0.4.4.gem) = 19456 bytes
