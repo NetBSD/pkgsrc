@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.335 2023/01/15 15:09:57 taca Exp $
+$NetBSD: CHANGES-2023,v 1.336 2023/01/15 15:11:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -396,3 +396,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/binutils to 2.40 [fcambus 2023-01-14]
 	Updated misc/colorless to 109 [kim 2023-01-15]
 	Updated devel/ruby-redmine42 to 4.2.9nb1 [taca 2023-01-15]
+	Updated devel/ruby-redmine50 to 5.0.4nb2 [taca 2023-01-15]
