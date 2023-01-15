@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.340 2023/01/15 15:34:45 taca Exp $
+$NetBSD: CHANGES-2023,v 1.341 2023/01/15 15:36:29 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -401,3 +401,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/ruby-git to 1.13.1 [taca 2023-01-15]
 	Updated devel/ruby-io-event to 1.1.6 [taca 2023-01-15]
 	Updated devel/ruby-pycall to 1.4.2 [taca 2023-01-15]
+	Updated finance/ruby-braintree to 4.10.0 [taca 2023-01-15]
