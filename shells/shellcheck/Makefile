@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2022/08/20 08:08:24 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2023/01/16 16:43:24 nikita Exp $
 
-DISTNAME=	ShellCheck-0.8.0
+DISTNAME=	ShellCheck-0.9.0
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	3
 CATEGORIES=	shells devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -11,8 +10,9 @@ COMMENT=	Shell script analysis tool
 LICENSE=	gnu-gpl-v3
 
 .include "../../converters/hs-aeson/buildlink3.mk"
-.include "../../textproc/hs-Diff/buildlink3.mk"
+.include "../../devel/hs-fgl/buildlink3.mk"
 .include "../../devel/hs-QuickCheck/buildlink3.mk"
+.include "../../textproc/hs-Diff/buildlink3.mk"
 .include "../../textproc/hs-regex-tdfa/buildlink3.mk"
 .include "../../mk/haskell.mk"
 .include "../../mk/bsd.pkg.mk"
