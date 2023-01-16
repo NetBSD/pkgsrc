@@ -1,17 +1,17 @@
-$NetBSD: patch-Cargo.toml,v 1.2 2022/12/21 14:19:42 pin Exp $
+$NetBSD: patch-Cargo.toml,v 1.3 2023/01/16 10:53:34 pin Exp $
 
 Don't pull from a specific pull-request.
 Patch tree_magic_mini crate within pkgsrc.
 
---- Cargo.toml.orig	2022-12-19 07:55:22.000000000 +0000
+--- Cargo.toml.orig	2023-01-16 04:04:12.000000000 +0000
 +++ Cargo.toml
 @@ -51,7 +51,7 @@ const_format = "0.2.22"
  owo-colors = "3.3.0"
  wu-diff = "0.1.2"
- rayon = "1.5.2"
+ rayon = "1.6.1"
 -tree_magic_mini = "3.0.2"
 +tree_magic_mini = "3.0.3"
- bumpalo = "3.9.1"
+ bumpalo = "3.11.1"
  unicode-width = "0.1.9"
  term_size = "0.3.2"
 @@ -70,9 +70,3 @@ lto = "thin"
