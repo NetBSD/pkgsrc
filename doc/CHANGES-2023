@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.381 2023/01/16 21:49:27 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.382 2023/01/16 21:49:40 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -467,3 +467,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated misc/s6-portable-utils to 2.2.5.1 [schmonz 2023-01-16]
 	Updated net/s6-dns to 2.3.5.5 [schmonz 2023-01-16]
 	Updated net/s6-networking to 2.5.1.2 [schmonz 2023-01-16]
+	Updated mail/smtpd-starttls-proxy to 0.0.1.2 [schmonz 2023-01-16]
