@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:51:35 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/01/16 04:10:47 dholland Exp $
 
 BLAKE2s (RETRO12-2019.7.tar.gz) = eee68e109152e82516bab1cca3b04fdbc965670ab9a619eef4c8a1d803cc5d0d
 SHA512 (RETRO12-2019.7.tar.gz) = cd4c99d8ac87113baf6ee554f07fc1901954486e0587779e722ce47d2893e46f0c34341648c6f122d47a54eda427478c119124ea0115578a19bc13edf8ef5af3
 Size (RETRO12-2019.7.tar.gz) = 797577 bytes
-SHA1 (patch-Makefile) = 565181f0e46fad9f4ae5b3205aa586f616f92735
+SHA1 (patch-Makefile) = feecc65ae241f1b96ebd298857e5f7fb84e72ad6
