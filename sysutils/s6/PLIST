@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2021/12/22 16:03:27 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/01/16 21:48:20 schmonz Exp $
 bin/s6-accessrules-cdb-from-fs
 bin/s6-accessrules-fs-from-cdb
 bin/s6-applyuidgid
@@ -21,6 +21,12 @@ bin/s6-ftrig-listen1
 bin/s6-ftrig-notify
 bin/s6-ftrig-wait
 bin/s6-ftrigrd
+bin/s6-instance-control
+bin/s6-instance-create
+bin/s6-instance-delete
+bin/s6-instance-list
+bin/s6-instance-maker
+bin/s6-instance-status
 bin/s6-ioconnect
 bin/s6-ipcclient
 bin/s6-ipcserver
@@ -59,6 +65,7 @@ bin/s6-usertree-maker
 bin/s6lockd
 bin/ucspilogd
 include/s6/accessrules.h
+include/s6/auto.h
 include/s6/compat.h
 include/s6/config.h
 include/s6/fdholder.h
@@ -66,8 +73,10 @@ include/s6/ftrigr.h
 include/s6/ftrigw.h
 include/s6/lock.h
 include/s6/s6.h
+include/s6/servicedir.h
 include/s6/supervise.h
 lib/s6/libs6.a
+lib/s6/libs6auto.a
 libexec/s6lockd-helper
 man/man7/s6-accessrules.7
 man/man7/s6-fdholder-error-codes.7
@@ -75,13 +84,18 @@ man/man7/s6-fdholder.7
 man/man7/s6-fifodir.7
 man/man7/s6-ftrigr.7
 man/man7/s6-ftrigw.7
+man/man7/s6-instanced-service.7
 man/man7/s6-libftrig.7
 man/man7/s6-libs6.7
 man/man7/s6-local-service.7
 man/man7/s6-notifywhenup.7
+man/man7/s6-overview.7
 man/man7/s6-s6lock.7
 man/man7/s6-scan-directory.7
 man/man7/s6-service-directory.7
+man/man7/s6-socket-activation.7
+man/man7/s6-svscan-as-process-1.7
+man/man7/s6-svscan-not-as-process-1.7
 man/man8/s6-accessrules-cdb-from-fs.8
 man/man8/s6-accessrules-fs-from-cdb.8
 man/man8/s6-applyuidgid.8
@@ -104,6 +118,12 @@ man/man8/s6-ftrig-listen1.8
 man/man8/s6-ftrig-notify.8
 man/man8/s6-ftrig-wait.8
 man/man8/s6-ftrigrd.8
+man/man8/s6-instance-control.8
+man/man8/s6-instance-create.8
+man/man8/s6-instance-delete.8
+man/man8/s6-instance-list.8
+man/man8/s6-instance-maker.8
+man/man8/s6-instance-status.8
 man/man8/s6-ioconnect.8
 man/man8/s6-ipcclient.8
 man/man8/s6-ipcserver-access.8
