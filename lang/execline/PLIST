@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2021/09/29 09:53:57 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/01/16 21:48:05 schmonz Exp $
 bin/background
 bin/backtick
 bin/case
@@ -8,6 +8,7 @@ bin/dollarat
 bin/elgetopt
 bin/elgetpositionals
 bin/elglob
+bin/eltest
 bin/emptyenv
 bin/envfile
 bin/exec
@@ -61,6 +62,7 @@ man/man1/dollarat.1
 man/man1/elgetopt.1
 man/man1/elgetpositionals.1
 man/man1/elglob.1
+man/man1/eltest.1
 man/man1/emptyenv.1
 man/man1/envfile.1
 man/man1/exec.1
