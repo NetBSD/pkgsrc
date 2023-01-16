@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.44 2022/11/22 19:17:10 adam Exp $
+$NetBSD: distinfo,v 1.45 2023/01/16 10:44:05 adam Exp $
 
-BLAKE2s (braintree-4.17.1.tar.gz) = 52c89c329d46b97c9d4d3d9d0c456ba84d5686b2adfd08d52db8057fb2364882
-SHA512 (braintree-4.17.1.tar.gz) = 0f65325993e6b47fda4bb05225838e3335724d1c3c1defbd5e053b76fc4761b8462220cd19a6336a6f4225114c0f29e0a1cac80cb8e4ba7c0e987f0d9d7d4c1d
-Size (braintree-4.17.1.tar.gz) = 81343 bytes
+BLAKE2s (braintree-4.18.0.tar.gz) = 94789426b317ccec0ba238ca026533403975803ec5afe08c1385bcd379196077
+SHA512 (braintree-4.18.0.tar.gz) = c2173d5fdb1686382eb6ebc47a8543bbeaea20e98261ec79685349e039612e156b8ec40c7a2c12365c5954e78a45f0be413f66e81f31743fc0a08ba80da9aa00
+Size (braintree-4.18.0.tar.gz) = 82705 bytes
