@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 09:59:10 nia Exp $
+$NetBSD: distinfo,v 1.12 2023/01/16 08:35:31 wiz Exp $
 
-BLAKE2s (wildmidi-0.4.4.tar.gz) = 759aef12ef6449031fc9231841f5a0c797c13228ba031843fb7a81614dd67e87
-SHA512 (wildmidi-0.4.4.tar.gz) = 5b74ee83f1d7ce3b45d2f996aaa30ec6e7d7808eab294a3eaf6fcef77443523df1f54bb0fb1b3105edd0d72d75885fda1a2e97c68defb5bbd687bda5077d3454
-Size (wildmidi-0.4.4.tar.gz) = 197597 bytes
+BLAKE2s (wildmidi-0.4.5.tar.gz) = 2ed9e7ecf341ee51c01095e20c9e367562a34c24fca25ad13f96daf0aac284b1
+SHA512 (wildmidi-0.4.5.tar.gz) = 0229914ecc60091b649b790a82ad5e755a2b9dfab7443fb3e3c19f4ae64b82817cafe74d78c27f05c68c3c8fb30092c96da732d27ff82fbd7dd7d577facc23d6
+Size (wildmidi-0.4.5.tar.gz) = 197793 bytes
 SHA1 (patch-CMakeLists.txt) = 62675c407b01fd49d81089f75f4da43fadd2fcf2
