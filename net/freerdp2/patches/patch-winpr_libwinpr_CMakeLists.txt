@@ -1,11 +1,11 @@
-$NetBSD: patch-winpr_libwinpr_CMakeLists.txt,v 1.1 2022/08/29 10:36:51 nia Exp $
+$NetBSD: patch-winpr_libwinpr_CMakeLists.txt,v 1.2 2023/01/16 19:20:15 markd Exp $
 
 Uses epoll/eventfd, so depend on epoll-shim.
 
---- winpr/libwinpr/CMakeLists.txt.orig	2021-03-15 12:29:35.000000000 +0000
+--- winpr/libwinpr/CMakeLists.txt.orig	2022-11-16 14:06:20.000000000 +0000
 +++ winpr/libwinpr/CMakeLists.txt
-@@ -87,6 +87,10 @@ if (TIMER_CREATE AND TIMER_DELETE AND TI
- 	winpr_library_add_private(rt)
+@@ -89,6 +89,10 @@ if (NOT IOS)
+ 	endif()
  endif()
  
 +if (BSD)
