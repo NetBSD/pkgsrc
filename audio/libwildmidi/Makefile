@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2021/04/06 07:53:56 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2023/01/16 08:35:31 wiz Exp $
 
-DISTNAME=	wildmidi-0.4.4
+DISTNAME=	wildmidi-0.4.5
 PKGNAME=	lib${DISTNAME}
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Mindwerks/}
