@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/03/11 15:40:36 pho Exp $
+# $NetBSD: Makefile,v 1.5 2023/01/16 05:14:26 dholland Exp $
 
 DISTNAME=	hengband-2.2.1r
 PKGREVISION=	1
@@ -23,6 +23,8 @@ EXTRACT_DIR.${HENGBAND_TILE16}=	${WRKSRC}/lib/xtra/graf
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-setgid=${HENGBAND_GROUP}
 CONFIGURE_ARGS+=	--with-libpath=${HENGBAND_LIBDIR}/
+
+LDFLAGS.SunOS+=		-lsocket -lnsl
 
 HENGBAND_LIBDIR=	${PREFIX}/libdata/${PKGBASE}
 HENGBAND_VARDIR=	${VARBASE}/games/${PKGBASE}
