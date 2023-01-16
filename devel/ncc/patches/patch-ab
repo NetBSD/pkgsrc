@@ -1,6 +1,9 @@
-$NetBSD: patch-ab,v 1.1.1.1 2008/10/20 07:52:26 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2023/01/16 05:30:48 dholland Exp $
 
---- Makefile.orig	2006-09-26 16:23:53.000000000 +0000
+Configure for pkgsrc.
+Honor pkgsrc LDFLAGS.
+
+--- Makefile.orig	2008-10-11 14:34:37.000000000 +0000
 +++ Makefile
 @@ -1,8 +1,8 @@
  
@@ -13,3 +16,12 @@ $NetBSD: patch-ab,v 1.1.1.1 2008/10/20 07:52:26 wiz Exp $
  BINDIR = ${DESTDIR}/bin
  MANDIR = ${DESTDIR}/share/man
  INCLUDEDIR = ${DESTDIR}/include
+@@ -38,7 +38,7 @@ nccnav/nccnav: nccnav/nccnav.C
+ 	@cd nccnav && make
+ 
+ objdir/ncc: objdir/dbstree.o objdir/inttree.o objdir/lex.o objdir/space.o objdir/cexpand.o objdir/cdb.o objdir/parser.o objdir/ccexpr.o objdir/preproc.o objdir/usage.o main.C
+-	$(CC) $(LCFLAGS) main.C objdir/*.o -o objdir/ncc 
++	$(CC) $(LCFLAGS) $(LDFLAGS) main.C objdir/*.o -o objdir/ncc 
+ 
+ objdir/cexpand.o: cexpand.C
+ 	$(CC) $(CFLAGS) cexpand.C
