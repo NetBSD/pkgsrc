@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 10:51:40 nia Exp $
+$NetBSD: distinfo,v 1.12 2023/01/16 03:58:09 dholland Exp $
 
 BLAKE2s (ksi-3.9.0.tar.gz) = 9589888184e01a85a17d476454ec75e54198288e9292ba071b38cbb94644f060
 SHA512 (ksi-3.9.0.tar.gz) = 6395e339af02600136a3b102748875b3f137c5574211b892c76b7164efa87c231e4649c6613d80da1344ed2839d03bd1ce6849bcfd7695999795813c5ee76b7e
 Size (ksi-3.9.0.tar.gz) = 489597 bytes
 SHA1 (patch-aa) = f5d3d1f81845eaf0b6506308ccb569a3379ad639
+SHA1 (patch-si_ksi__sign.c) = 6a0e672a2106b4194b3b8a622c53450dbefc06a6
