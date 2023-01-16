@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2022/11/09 16:58:35 nikita Exp $
+$NetBSD: distinfo,v 1.2 2023/01/16 04:15:37 dholland Exp $
 
 BLAKE2s (kona-0.0.0.2021.12.25.tar.gz) = 465456a9cf4925c4ec7e77dbc68c69a65f893b5448f822a2b2d2fb11292f1b22
 SHA512 (kona-0.0.0.2021.12.25.tar.gz) = 2709ec84555b8f29c16347fdf9514f3684c48dc0e83a15c30718dd17c6b999144fa13f0e11020c48967dce7450850c59beeb980abea4a8eade02830d106078d2
 Size (kona-0.0.0.2021.12.25.tar.gz) = 327906 bytes
-SHA1 (patch-Makefile) = c78fcae6b931d0382f119b438b2a6cb76fba3df9
+SHA1 (patch-Makefile) = 2a7b51cecc1f92e359bfa607a14230d1d6f379b4
