@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.10 2020/06/30 15:38:44 nia Exp $
+# $NetBSD: options.mk,v 1.11 2023/01/16 03:03:57 dholland Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.celestia
 PKG_SUPPORTED_OPTIONS=		lua
@@ -18,7 +18,7 @@ CONFIGURE_ARGS+=	--without-lua
 
 .if !empty(PKG_OPTIONS:Mglut)
 CONFIGURE_ARGS+=	--with-glut
-.  include "../../graphics/glut/buildlink3.mk"
+.  include "../../graphics/freeglut/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mgtk)
