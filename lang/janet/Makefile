@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2023/01/14 07:40:25 charlotte Exp $
+# $NetBSD: Makefile,v 1.22 2023/01/16 04:00:01 dholland Exp $
 
 DISTNAME=	janet-1.25.1
 CATEGORIES=	lang
@@ -20,6 +20,8 @@ MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	JANET_MANPATH=${PREFIX}/${PKGMANDIR}/man1
 MAKE_FLAGS+=	JANET_PKG_CONFIG_PATH=${PREFIX}/lib/pkgconfig
 MAKE_FLAGS+=	JANET_BUILD='"\"pkgsrc\""'
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 REPLACE_INTERPRETER+=	janet
 REPLACE.janet.old=	.*
