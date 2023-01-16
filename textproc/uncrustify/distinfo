@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 11:23:37 nia Exp $
+$NetBSD: distinfo,v 1.11 2023/01/16 01:15:44 dholland Exp $
 
 BLAKE2s (uncrustify-0.72.0.tar.gz) = e6017f3d413d273b4773832fadf26e7b756b1495fd1b1c8f8bf0f217cfa0058a
 SHA512 (uncrustify-0.72.0.tar.gz) = bfcbdf0d8198e1dd91f1c8283441a56669610a84d55a17cdd504571da09b26fef026fd3f753acd9950e498f574e6771a206c72b76ffdea97747b7a4fdb481862
 Size (uncrustify-0.72.0.tar.gz) = 1530850 bytes
-SHA1 (patch-CMakeLists.txt) = 4715199cfdfceb60828d9996f91bf6a45cb46cd4
+SHA1 (patch-src_log__rules.cpp) = f6d26fb3bed20829c187e1e04db9f2ee35968515
