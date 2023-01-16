@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.360 2023/01/16 08:38:33 adam Exp $
+$NetBSD: CHANGES-2023,v 1.361 2023/01/16 09:27:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -441,3 +441,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated audio/libwildmidi to 0.4.5 [wiz 2023-01-16]
 	Updated textproc/ugrep to 3.9.5 [adam 2023-01-16]
 	Updated time/py-pytz to 2022.7.1 [adam 2023-01-16]
+	Updated devel/py-xdis to 6.0.5 [adam 2023-01-16]
+	Updated lang/py-uncompyle6 to 3.9.0 [adam 2023-01-16]
