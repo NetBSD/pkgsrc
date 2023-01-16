@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2022/05/22 19:05:00 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2023/01/16 09:26:23 adam Exp $
 bin/pydisasm-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -67,6 +67,9 @@ ${PYSITELIB}/xdis/load.pyo
 ${PYSITELIB}/xdis/magics.py
 ${PYSITELIB}/xdis/magics.pyc
 ${PYSITELIB}/xdis/magics.pyo
+${PYSITELIB}/xdis/marsh-try.py
+${PYSITELIB}/xdis/marsh-try.pyc
+${PYSITELIB}/xdis/marsh-try.pyo
 ${PYSITELIB}/xdis/marsh.py
 ${PYSITELIB}/xdis/marsh.pyc
 ${PYSITELIB}/xdis/marsh.pyo
