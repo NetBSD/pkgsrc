@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.373 2023/01/16 20:49:01 adam Exp $
+$NetBSD: CHANGES-2023,v 1.374 2023/01/16 20:58:04 vins Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -458,3 +458,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated audio/solfege to 3.23.4 [schmonz 2023-01-16]
 	Updated multimedia/gerbera to 1.12.1 [adam 2023-01-16]
 	Updated audio/fluidsynth to 2.3.1 [adam 2023-01-16]
+	Updated x11/dunst to 1.9.0nb1 [vins 2023-01-16]
