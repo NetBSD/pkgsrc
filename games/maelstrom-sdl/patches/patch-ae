@@ -1,4 +1,6 @@
-$NetBSD: patch-ae,v 1.1.1.1 2002/07/11 13:21:28 wiz Exp $
+$NetBSD: patch-ae,v 1.2 2023/01/16 05:12:19 dholland Exp $
+
+Detect more OSes.
 
 --- load.h.orig	Sat Jul 21 22:46:17 2001
 +++ load.h
@@ -7,7 +9,7 @@ $NetBSD: patch-ae,v 1.1.1.1 2002/07/11 13:21:28 wiz Exp $
  }
  #endif
 -#if defined(unix) || defined(__MACH__) || defined(__BEOS__)
-+#if defined(unix) || defined(__MACH__) || defined(__BEOS__) || defined(__NetBSD__)
++#if defined(unix) || defined(__unix__) || defined(__MACH__) || defined(__BEOS__) || defined(__SVR4__) || defined(__NetBSD__) || defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__DragonFly__)
  #include <unistd.h>
  #endif
  #endif /* WIN32 */
@@ -16,7 +18,7 @@ $NetBSD: patch-ae,v 1.1.1.1 2002/07/11 13:21:28 wiz Exp $
  
  /* Pathing stuff for the different operating systems */
 -#if defined(unix) || defined(__MACH__)
-+#if defined(unix) || defined(__MACH__) || defined(__NetBSD__)
++#if defined(unix) || defined(__unix__) || defined(__MACH__) || defined(__SVR4__) || defined(__NetBSD__) || defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__DragonFly__)
  #define DIR_SEP	"/"
  #define CUR_DIR	"."
  #elif defined(WIN32)
