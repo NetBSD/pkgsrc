@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1026 2023/01/09 13:18:01 taca Exp $
+# $NetBSD: Makefile,v 1.1027 2023/01/16 09:14:38 pin Exp $
 #
 
 COMMENT=	System utilities
@@ -461,6 +461,7 @@ SUBDIR+=	mtx
 SUBDIR+=	munin-common
 SUBDIR+=	munin-master
 SUBDIR+=	munin-node
+SUBDIR+=	nabud
 SUBDIR+=	nautilus
 SUBDIR+=	navi
 SUBDIR+=	nbase
@@ -600,7 +601,6 @@ SUBDIR+=	rdiff-backup
 SUBDIR+=	refi
 SUBDIR+=	rename
 SUBDIR+=	renameutils
-SUBDIR+=	repofetch
 SUBDIR+=	restic
 SUBDIR+=	rfstool
 SUBDIR+=	riemann-client
