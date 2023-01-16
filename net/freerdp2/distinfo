@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.12 2022/08/29 10:36:51 nia Exp $
+$NetBSD: distinfo,v 1.13 2023/01/16 19:20:15 markd Exp $
 
-BLAKE2s (freerdp-2.3.2.tar.gz) = b17b6a3127b36e4c8837f7542cf91e26c7828d55975dc7aab420f532e4e1fe93
-SHA512 (freerdp-2.3.2.tar.gz) = b8502d34c73113a42bf2dc240431967829064d68f507cc42ff06432a784213eee4a2c001b174f1b970545aec75b3caf21ba5f4ee1ca8c07c7ef834131413204b
-Size (freerdp-2.3.2.tar.gz) = 7284490 bytes
+BLAKE2s (freerdp-2.9.0.tar.gz) = fa218be851e0ad2cfb345b239171eae5c4b1f3bba47589f09d6540bbdbb0997c
+SHA512 (freerdp-2.9.0.tar.gz) = de593640d4418c9395455b84c463e4cac8e51e9fd186ed5bce28132170ebc3c7338651582e0cc00272b530ea6e7c2664e802d748b3f6eba5fbe534dcf59d406a
+Size (freerdp-2.9.0.tar.gz) = 7319428 bytes
 SHA1 (patch-CMakeLists.txt) = 4d20f409c501374a7366a37861eebe6fa06fd66f
 SHA1 (patch-channels_rdpdr_client_rdpdr__main.c) = 4358d4cd4b9293a27f3edafb94e7759e133ecd5f
 SHA1 (patch-client_Wayland_wlf__input.c) = c79c7359ce538021e09ffbec9e61a9acc63d24af
 SHA1 (patch-client_Wayland_wlfreerdp.c) = c20ac99842d3ae0fda2a1b43807e65efd5121487
 SHA1 (patch-cmake_InstallFreeRDPMan.cmake) = 08cd5f6bdc0e1513b7f73ea71d3c77e45e3b3bc6
-SHA1 (patch-winpr_libwinpr_CMakeLists.txt) = b52f0202b4595cc58080baadc698ebd6b2cf1f2d
+SHA1 (patch-winpr_libwinpr_CMakeLists.txt) = 96891e869ef8bc665a1ba0b6de2f65944cd76d5d
 SHA1 (patch-winpr_libwinpr_sysinfo_sysinfo.c) = b0fc583b02c3f416eb9d0f7cb140c4c69b3bdaef
