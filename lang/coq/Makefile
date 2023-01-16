@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.149 2023/01/03 17:37:43 wiz Exp $
+# $NetBSD: Makefile,v 1.150 2023/01/16 04:31:53 dholland Exp $
 
 DISTNAME=	coq-8.15.2
 PKGREVISION=	4
@@ -52,7 +52,8 @@ PLIST_SUBST+=		COQIDE_TYPE=${COQIDE_TYPE}
       !empty(MACHINE_PLATFORM:MDragonFly-*-*) || \
       !empty(MACHINE_PLATFORM:MFreeBSD-*-*) || \
       !empty(MACHINE_PLATFORM:MDarwin-*-*) || \
-      !empty(MACHINE_PLATFORM:MNetBSD-*-*)
+      !empty(MACHINE_PLATFORM:MNetBSD-*-*) || \
+      !empty(MACHINE_PLATFORM:MSunOS-*-*)
 PLIST.natdynlink=	yes
 .  endif
 .endif
