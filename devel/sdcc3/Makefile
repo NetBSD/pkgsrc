@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2022/06/30 11:18:18 nia Exp $
+# $NetBSD: Makefile,v 1.48 2023/01/16 05:22:04 dholland Exp $
 
 DISTNAME=	sdcc-src-3.9.0
 PKGNAME=	${DISTNAME:S/-src//}
@@ -59,5 +59,6 @@ post-install:
 .include "../../devel/boehm-gc/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
