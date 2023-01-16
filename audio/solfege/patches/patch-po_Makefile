@@ -1,12 +1,12 @@
-$NetBSD: patch-po_Makefile,v 1.1 2019/07/11 04:51:14 schmonz Exp $
+$NetBSD: patch-po_Makefile,v 1.2 2023/01/16 19:45:27 schmonz Exp $
 
 Respect PKGLOCALEDIR.
 
---- po/Makefile.orig	2013-10-05 20:57:48.000000000 +0000
+--- po/Makefile.orig	2016-06-24 20:18:29.000000000 +0000
 +++ po/Makefile
-@@ -42,8 +42,8 @@ run-from-srcdir: $(MOFILES)
+@@ -41,8 +41,8 @@ run-from-srcdir: $(MOFILES)
+ 
  install-po:
- 	echo $(POLANGUAGES)
  	for lang in $(POLANGUAGES); do \
 -	  mkdir -p $(DESTDIR)/$(datadir)/locale/$$lang/LC_MESSAGES; \
 -	  $(INSTALL_DATA) po/$$lang.mo $(DESTDIR)/$(datadir)/locale/$$lang/LC_MESSAGES/$(PACKAGE).mo; \
