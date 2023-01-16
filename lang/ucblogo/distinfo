@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.16 2021/10/26 10:51:58 nia Exp $
+$NetBSD: distinfo,v 1.17 2023/01/16 03:20:56 dholland Exp $
 
 BLAKE2s (ucblogo-6.2.1.tar.gz) = 31fbc91978ba7e6f838b3c84d56059edf0ab725df02778c2588d022fb0f2370c
 SHA512 (ucblogo-6.2.1.tar.gz) = f6c42f5f97984717a39498f1fd050ba84371aee57fb234dc3b9101eab33f9013f3aaa7a8bcc9c4efef3603e4a11b2990b322837c0f0ce633e5070ba7b4b903fb
 Size (ucblogo-6.2.1.tar.gz) = 1652645 bytes
+SHA1 (patch-Makefile.am) = a621c946dc937d624ed7831df7c220ae8446f8ff
+SHA1 (patch-Makefile.in) = 036ba3133972592b247d0fcf231fa105f92d5b0f
