@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.19 2019/11/03 11:45:40 rillig Exp $
+# $NetBSD: builtin.mk,v 1.20 2023/01/16 08:17:30 adam Exp $
 
 BUILTIN_PKG:=	libpcap
 
@@ -27,7 +27,7 @@ MAKEVARS+=		IS_BUILTIN.libpcap
 ### a package name to represent the built-in package.
 ###
 .if !defined(BUILTIN_PKG.libpcap) && \
-    !empty(IS_BUILTIN.libpcap:M[yY][eE][sS]) && \
+    ${IS_BUILTIN.libpcap:tl} == yes && \
     empty(H_LIBPCAP:M__nonexistent__)
 _BLTN_PCAP_111!=	\
 	${GREP} -c PCAP_NETMASK_UNKNOWN ${H_LIBPCAP} || ${TRUE}
@@ -91,12 +91,12 @@ USE_BUILTIN.libpcap=	no
 .  else
 USE_BUILTIN.libpcap=	${IS_BUILTIN.libpcap}
 .    if defined(BUILTIN_PKG.libpcap) && \
-        !empty(IS_BUILTIN.libpcap:M[yY][eE][sS])
+        ${IS_BUILTIN.libpcap:tl} == yes
 USE_BUILTIN.libpcap=	yes
 .      for _dep_ in ${BUILDLINK_API_DEPENDS.libpcap}
-.        if !empty(USE_BUILTIN.libpcap:M[yY][eE][sS])
+.        if ${USE_BUILTIN.libpcap:tl} == yes
 USE_BUILTIN.libpcap!=							\
-	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.libpcap:Q}; then \
+	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.libpcap}; then \
 		${ECHO} yes;						\
 	else								\
 		${ECHO} no;						\
