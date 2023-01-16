@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.30 2023/01/16 03:03:57 dholland Exp $
+$NetBSD: distinfo,v 1.31 2023/01/16 03:07:39 dholland Exp $
 
 BLAKE2s (celestia-1.6.1.tar.gz) = d25b3f41db4de388fe36f42f3d4e96c1b630822da5c1e64fe69bdea45225027f
 SHA512 (celestia-1.6.1.tar.gz) = 5b1221e97ee03f7def317e5e29c5100ebe714a4a3aeb8b9818dc9445e4282b6f87026ab35c7b3d5eb02fa6dbb33693977999d14d9648fc4e6d1947abe32a413f
@@ -17,7 +17,7 @@ SHA1 (patch-aq) = fdc7b7f0ff04672f93af144f41e09751b4de0c1a
 SHA1 (patch-src_celengine_astro.cpp) = 0331128a2a01259958afd5e806a51d5b0e75769a
 SHA1 (patch-src_celengine_body.h) = 0ba0733aba554fe02340b09754e98bfdd0ed865b
 SHA1 (patch-src_celengine_cmdparser.cpp) = b1c54d0b5c6af92606cdf9f23b73c1a8662a1acb
-SHA1 (patch-src_celengine_command.cpp) = 5f1466541f4153651425f597f45f852c93af8b7f
+SHA1 (patch-src_celengine_command.cpp) = 49e13c39ee8f87ed8446e9fe5cbb20c30b9acca5
 SHA1 (patch-src_celengine_frametree.h) = 899bd5f958864ed26addc2a87ef61d97806cf37c
 SHA1 (patch-src_celengine_stardb.cpp) = 43d1998fcdd0116db43267b334533ec5fa3dfc72
 SHA1 (patch-src_celengine_texture.cpp) = eb60e81aab7097a3cb2481b052a3a9fe98bfb8e6
