@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.359 2023/01/16 08:35:40 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.360 2023/01/16 08:38:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -439,3 +439,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/libpcap to 1.10.3 [adam 2023-01-16]
 	Updated net/tcpdump to 4.99.3 [adam 2023-01-16]
 	Updated audio/libwildmidi to 0.4.5 [wiz 2023-01-16]
+	Updated textproc/ugrep to 3.9.5 [adam 2023-01-16]
+	Updated time/py-pytz to 2022.7.1 [adam 2023-01-16]
