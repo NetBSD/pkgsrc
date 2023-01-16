@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 10:44:13 nia Exp $
+$NetBSD: distinfo,v 1.13 2023/01/16 05:12:18 dholland Exp $
 
 BLAKE2s (Maelstrom-3.0.6.tar.gz) = 5006dcdfb1ccc60f07defdd1935a2bcc8abe19ebcab72e9cf3da48df5aafb25e
 SHA512 (Maelstrom-3.0.6.tar.gz) = a0c8271c34c07046a702ef507f751aaa74cebcdafaec5354c9eb6083d89e74011439ffe4f3a4fcedecfe2d45ff91374f0f81d9d7e691df0ba98ba20f465e9d54
@@ -7,7 +7,7 @@ SHA1 (patch-aa) = bf4b22c11e89517b2c71ef962924a29b88f99deb
 SHA1 (patch-ab) = a1579e308284aee80ccc9c0f69c2c105761191cd
 SHA1 (patch-ac) = 3c2b09dab9a40b2499fd8d1ddb744084b049c4a8
 SHA1 (patch-ad) = 2d72ac28eb44cd00f8007be305bedb9f5d41e448
-SHA1 (patch-ae) = a256a45e5ac3c4d82cb3333a49e31ecf0ed318b2
+SHA1 (patch-ae) = f0c56e5e15d60a1ec0511d6f8d20056ac8bb4aee
 SHA1 (patch-af) = 056868885c2725367d6361085ca12d74c71a3c9b
 SHA1 (patch-ag) = 156e58f35a730381e7f01232ab5a7f2359408f4c
 SHA1 (patch-ah) = 9232b9ad502934c59c8a8e57b2bf8d1a02c501b1
