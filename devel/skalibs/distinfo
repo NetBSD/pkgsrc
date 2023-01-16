@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.16 2022/05/09 14:51:23 schmonz Exp $
+$NetBSD: distinfo,v 1.17 2023/01/16 21:47:48 schmonz Exp $
 
-BLAKE2s (skalibs-2.11.2.0.tar.gz) = 33462546ca39d521432a00d1d258901652f5a27346b05365b514d1c373270cf1
-SHA512 (skalibs-2.11.2.0.tar.gz) = 174e92be03cfb8ee41d9dc78bfd183a435d01481ad9835b74b38e000012cf6fbadd30f97c27203dbc942102641349626f92000510636dc73f413a5aebd7f7942
-Size (skalibs-2.11.2.0.tar.gz) = 219085 bytes
+BLAKE2s (skalibs-2.13.0.0.tar.gz) = ee2d3408c63e52b6c1d2a3fb069b94c2890d30604ec6d3d423c19e65dc96a0dc
+SHA512 (skalibs-2.13.0.0.tar.gz) = 33309cb32a15186052a451e9c1eb9f5888f03005141285d121ff41f669ed37191462415dc425d6bf35a1bb448a2e1772d07a91b43513f527acddb0d60cff8b3a
+Size (skalibs-2.13.0.0.tar.gz) = 227804 bytes
 SHA1 (patch-Makefile) = 8fbce6b37c8bac3878d4da9b5138462259a44f6c
 SHA1 (patch-configure) = 1a89adcec51a89a4fc587b24d23c371e04b6978f

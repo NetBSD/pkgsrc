@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2021/09/29 09:51:58 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.9 2023/01/16 21:47:48 schmonz Exp $
 include/skalibs/alarm.h
 include/skalibs/alloc.h
 include/skalibs/allreadwrite.h
@@ -8,6 +8,7 @@ include/skalibs/avltree.h
 include/skalibs/avltreen.h
 include/skalibs/bigkv.h
 include/skalibs/bitarray.h
+include/skalibs/blake2s.h
 include/skalibs/bsdsnowflake.h
 include/skalibs/bufalloc.h
 include/skalibs/buffer.h
