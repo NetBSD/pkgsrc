@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/05/24 12:54:27 nikita Exp $
+# $NetBSD: Makefile,v 1.4 2023/01/16 03:52:32 dholland Exp $
 
 DISTNAME=	owl-v0.2
 PKGNAME=	${DISTNAME:S/owl-v/owl-lisp-/}
@@ -12,6 +12,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://haltp.org/n/owl
 COMMENT=	Purely functional dialect of Scheme
 LICENSE=	mit
+
+LDFLAGS.SunOS+=		-lsocket -lnsl
 
 INSTALL_MAKE_FLAGS=	DESTDIR=${DESTDIR}
 INSTALL_MAKE_FLAGS+=	PREFIX=${PREFIX}
