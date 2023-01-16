@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.357 2023/01/16 06:34:23 dholland Exp $
+$NetBSD: CHANGES-2023,v 1.358 2023/01/16 08:28:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -436,3 +436,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/uncrustify to 0.72.0nb1 [dholland 2023-01-16]
 	Updated shells/es to 0.9a1nb5 [dholland 2023-01-16]
 	Updated lang/algol68g to 3.1.2 [dholland 2023-01-16]
+	Updated net/libpcap to 1.10.3 [adam 2023-01-16]
+	Updated net/tcpdump to 4.99.3 [adam 2023-01-16]
