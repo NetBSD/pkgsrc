@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.365 2023/01/16 14:31:15 adam Exp $
+$NetBSD: CHANGES-2023,v 1.366 2023/01/16 14:43:41 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -449,3 +449,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/bsdfetch to 1.1.1 [vins 2023-01-16]
 	Updated devel/py-test to 7.2.1 [adam 2023-01-16]
 	Updated graphics/py-matplotlib to 3.6.3 [adam 2023-01-16]
+	Updated sysutils/ruby-chef to 18.1.0nb1 [taca 2023-01-16]
