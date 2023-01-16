@@ -1,0 +1,18 @@
+$NetBSD: patch-run-solfege.py.in,v 1.1 2023/01/16 19:45:27 schmonz Exp $
+
+Respect PKG_SYSCONFDIR.
+
+--- run-solfege.py.in.orig	2016-06-24 20:18:29.000000000 +0000
++++ run-solfege.py.in
+@@ -41,10 +41,7 @@ from solfege import filesystem
+ # solfege.py is not necessary here because this file is only used on
+ # linux.
+ 
+-if prefix == "/usr":
+-    sysconf = "/etc/solfege"
+-else:
+-    sysconf = os.path.join(prefix, "etc", "solfege")
++sysconf = "@PKG_SYSCONFDIR@"
+ 
+ from solfege import presetup
+ presetup.presetup(os.path.join(prefix, "share", "solfege", "default.config"),

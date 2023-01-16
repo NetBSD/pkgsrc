@@ -1,10 +1,13 @@
-$NetBSD: distinfo,v 1.14 2021/10/26 09:59:29 nia Exp $
+$NetBSD: distinfo,v 1.15 2023/01/16 19:45:27 schmonz Exp $
 
-BLAKE2s (solfege-3.22.2.tar.xz) = 644bd4b8ce740156b37e1eb9943e506671859f91e531e37de0b67f7d02fafea6
-SHA512 (solfege-3.22.2.tar.xz) = 475d2eea54d0c6b2cb11a5271a02ca64e79c45fb6155d87a01b16e826669a07cca0b4c2543cbbb1ce8d36412ccfd64e8052de1efad3db19f34d7e0a984d7459a
-Size (solfege-3.22.2.tar.xz) = 4107232 bytes
+BLAKE2s (solfege-3.23.4.tar.gz) = 68cbbccfa9d01c1fd848ade293be5e4c9ff2aab3fb32f6d68a44370c6d5825eb
+SHA512 (solfege-3.23.4.tar.gz) = e489dec514b4f387ebac7627d83d1a7766718d10a26c3ec6257d3f4b27a082501df16a27c8a16023b34a06cd4832fabaa1c73bcded52c502fc68ab57b303eeea
+Size (solfege-3.23.4.tar.gz) = 5148412 bytes
 SHA1 (patch-Makefile.in) = 24cf0755877f53bef9687019e6b493d115709347
 SHA1 (patch-default.config) = b8cb381b348b4e2c2201e7ab9666006b40cbd4ce
-SHA1 (patch-po_Makefile) = 5c7ceec962593afc80f23aa8059c32642a456be3
+SHA1 (patch-po_Makefile) = c7e405b9a694eee4030a0433eb29589be56d9310
+SHA1 (patch-run-solfege.py.in) = c1481f2db335a8d0207ee8fd3db0e50dae5021c4
+SHA1 (patch-solfege_mainwin.py) = 7badf51679af92e75e7ef2613fed4839f8f9387a
+SHA1 (patch-solfege_mpd_lexer.py) = 18f3bf1295a03ff37b7ec27cf39fa4d830f47542
 SHA1 (patch-topdocs_AUTHORS.texi) = f4c29b218a60c5dbf3d90c4bf01f7f547b6c97eb
 SHA1 (patch-topdocs_README.texi) = f2048b20e00bc47e4401d5bdb68a46f340788193
