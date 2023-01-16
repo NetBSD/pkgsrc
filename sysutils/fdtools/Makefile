@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2021/09/29 09:53:16 schmonz Exp $
+# $NetBSD: Makefile,v 1.16 2023/01/16 21:49:55 schmonz Exp $
 
 DISTNAME=		fdtools-2021.04.30
 PKGREVISION=		1
@@ -15,9 +15,7 @@ WRKSRC=			${WRKDIR}/misc/${PKGNAME_NOREV}
 DJB_SLASHPACKAGE=	YES
 
 CPPFLAGS+=		-I ${PREFIX:Q}/include \
-			-Dtain_t=tain \
-			-Dpathexec=mexec -Dpathexec0=mexec0 \
-			-Dpathexec_run=exec_ae -Dpathexec_env=env_mexec
+			-Dtain_t=tain
 LDFLAGS+=		-L ${PREFIX:Q}/lib/skalibs
 LDFLAGS.SunOS+=		-lsocket
 
