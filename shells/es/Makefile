@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2012/09/11 23:25:08 asau Exp $
+# $NetBSD: Makefile,v 1.25 2023/01/16 01:44:21 dholland Exp $
 
 DISTNAME=	es-0.9-alpha1
 PKGNAME=	es-0.9a1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	shells
 MASTER_SITES=	ftp://ftp.sys.toronto.edu/pub/es/
 
