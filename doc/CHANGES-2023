@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.376 2023/01/16 21:47:54 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.377 2023/01/16 21:48:10 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -462,3 +462,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-wcwidth to 0.2.6 [adam 2023-01-16]
 	Updated devel/py-hatch-vcs to 0.3.0 [adam 2023-01-16]
 	Updated devel/skalibs to 2.13.0.0 [schmonz 2023-01-16]
+	Updated lang/execline to 2.9.1.0 [schmonz 2023-01-16]
