@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2022/12/07 09:43:40 adam Exp $
+$NetBSD: distinfo,v 1.3 2023/01/16 21:17:10 adam Exp $
 
-BLAKE2s (hatch_vcs-0.2.1.tar.gz) = 956c24eaefba6445d6517c26f09963193c05f747724b07110b2c0411324f1203
-SHA512 (hatch_vcs-0.2.1.tar.gz) = 405470f07a8182690c9913fb0bde0d927362e82aa6122e7b2511d4d8ffc2833b32282b1734bf602d394d8a282cc78b209030691be85c2798cac126f3e1f2e147
-Size (hatch_vcs-0.2.1.tar.gz) = 9120 bytes
+BLAKE2s (hatch_vcs-0.3.0.tar.gz) = ffd0aaffb79eddd20ed3f7f9be71a91f44b7b4f2f5ab4d9c1c9316ddb4d0c8c5
+SHA512 (hatch_vcs-0.3.0.tar.gz) = 06a80e90b45b1316b42845808d04d00d00356f42d32f02d934db0aa9df05efa2f692413709e0dd5465f447829f2f5410110fbbeb826bafdea1f1014e3096e056
+Size (hatch_vcs-0.3.0.tar.gz) = 10172 bytes
