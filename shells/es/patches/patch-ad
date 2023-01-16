@@ -1,6 +1,12 @@
-$NetBSD: patch-ad,v 1.6 2005/11/10 22:18:33 joerg Exp $
+$NetBSD: patch-ad,v 1.7 2023/01/16 01:44:21 dholland Exp $
 
---- stdenv.h.orig	1995-05-30 07:13:53.000000000 -0400
+- Use standard headers.
+- Handle setpgrp on Interix.
+- Don't bust portability to avoid union wait, it's no longer an issue.
+- Don't redeclare standard functions from stdlib.h, especiall since
+  the qsort prototype is wrong.
+
+--- stdenv.h.orig	1995-05-30 11:13:53.000000000 +0000
 +++ stdenv.h
 @@ -44,9 +44,7 @@
  #include <signal.h>
@@ -21,15 +27,41 @@ $NetBSD: patch-ad,v 1.6 2005/11/10 22:18:33 joerg Exp $
  #include "unistd.h"
  #define setpgrp(a, b)	setpgid(a, b)
  #endif
-@@ -283,6 +281,7 @@ extern int getgroups(int, int *);
+@@ -268,14 +266,24 @@ extern int getgroups(int, int *);
+  *	others an integer.  we just renamed the first letter to s and
+  *	let things be.  on some systems these could just be defined in
+  *	terms of the W* forms.
++ *
++ * Update: union wait is long dead, and the conventional exit status
++ * encoding seen here is not universal.
+  */
+ 
++#if 0
+ #define	SIFSIGNALED(status)	(((status) & 0xff) != 0)
+ #define	STERMSIG(status)	((status) & 0x7f)
+ #define	SCOREDUMP(status)	((status) & 0x80)
+ #define	SIFEXITED(status)	(!SIFSIGNALED(status))
+ #define	SEXITSTATUS(status)	(((status) >> 8) & 0xff)
+-
++#else
++#define	SIFSIGNALED(status)	WIFSIGNALED(status)
++#define	STERMSIG(status)	WTERMSIG(status)
++#define	SCOREDUMP(status)	WCOREDUMP(status)
++#define	SIFEXITED(status)	(!SIFSIGNALED(status))
++#define	SEXITSTATUS(status)	WEXITSTATUS(status)
++#endif
+ 
+ /*
+  * the c library -- these should be in prototypes in standard headers
+@@ -283,6 +291,7 @@ extern int getgroups(int, int *);
  
  /* stdlib */
  
-+#if !defined(__FreeBSD__) && !defined(__NetBSD__) && !defined(__OpenBSD__) && !defined(__INTERIX) && !defined(__APPLE__) && !defined(__DragonFly__)
++#if 0
  extern noreturn exit(int);
  extern noreturn abort(void);
  extern long strtol(const char *num, char **end, int base);
-@@ -290,6 +289,7 @@ extern void *qsort(
+@@ -290,6 +299,7 @@ extern void *qsort(
  	void *base, size_t nmemb, size_t size,
  	int (*compar)(const void *, const void *)
  );
