@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.356 2023/01/15 21:43:20 thorpej Exp $
+$NetBSD: CHANGES-2023,v 1.357 2023/01/16 06:34:23 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -432,3 +432,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/py-certbot-dns-sakuracloud to 2.2.0 [adam 2023-01-15]
 	Updated security/py-certbot-nginx to 2.2.0 [adam 2023-01-15]
 	Added sysutils/nabud version 0.9 [thorpej 2023-01-15]
+	Updated wm/amiwm to 0.21pl2nb1 [dholland 2023-01-16]
+	Updated textproc/uncrustify to 0.72.0nb1 [dholland 2023-01-16]
+	Updated shells/es to 0.9a1nb5 [dholland 2023-01-16]
+	Updated lang/algol68g to 3.1.2 [dholland 2023-01-16]
