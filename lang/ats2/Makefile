@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/05/14 22:25:38 dholland Exp $
+# $NetBSD: Makefile,v 1.4 2023/01/16 04:38:04 dholland Exp $
 
 DISTNAME=	ATS2-Postiats-0.4.2
 PKGNAME=	${DISTNAME:S/ATS2-Postiats/ats2/}
@@ -14,8 +14,8 @@ LICENSE=	gnu-gpl-v3
 
 WRKSRC=		${WRKDIR}/ATS2-Postiats-int-${PKGVERSION_NOREV}
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	gmake
-# build is not job safe
+USE_TOOLS+=	find gmake
+# build is not job safe (... please be more specific?)
 MAKE_JOBS_SAFE=	no
 
 .include "options.mk"
