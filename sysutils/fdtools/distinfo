@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:19:35 nia Exp $
+$NetBSD: distinfo,v 1.9 2023/01/16 21:49:55 schmonz Exp $
 
 BLAKE2s (fdtools-2021.04.30.tar.bz2) = 57d882f9d5a8aef7d7e185690577640632b7c8725ce27432a55d5458de0f4918
 SHA512 (fdtools-2021.04.30.tar.bz2) = a023af80b565a72b78bca0cf40dab0de7a6c34dfbe7a9067976d24437fd0113eb253f52212d184b76c507579114cce2adab3637e561efd7872c54cb0e8935262
 Size (fdtools-2021.04.30.tar.bz2) = 42358 bytes
 SHA1 (patch-conf-compile_defaults_host__compile.sh) = d30f146419e30cd717c299b8196918db3095f3e8
 SHA1 (patch-conf-compile_defaults_host__link.sh) = 77e80f0ed9adc0ead6f9afea9b76dbb630ff2ce0
+SHA1 (patch-src_.mkmed-data_src_prjlibs-c_diewarn.h) = 4009baa155da3b0e4038d7868a06b36426e7bd76
 SHA1 (patch-src_.mkmed-data_src_prjlibs-c_standards.h) = f5b1b2b8d7999653994a629037169bc4d3592824
 SHA1 (patch-src_sigsched.c) = ed4cf2111ab65fb80f5cbcfd6aa0c49db12a845a
