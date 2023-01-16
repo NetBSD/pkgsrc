@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2022/03/02 01:41:34 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/01/16 05:00:57 dholland Exp $
 bin/a68g
 include/algol68g/a68g-common.h
 include/algol68g/a68g-compiler.h
 include/algol68g/a68g-config.h
+include/algol68g/a68g-config.win32.h
 include/algol68g/a68g-defines.h
 include/algol68g/a68g-diagnostics.h
 include/algol68g/a68g-double.h
@@ -37,6 +38,6 @@ include/algol68g/a68g.h
 man/man1/a68g.1
 share/doc/algol68g/AUTHORS
 share/doc/algol68g/COPYING
-share/doc/algol68g/LICENSE
+share/doc/algol68g/ChangeLog
 share/doc/algol68g/NEWS
 share/doc/algol68g/README
