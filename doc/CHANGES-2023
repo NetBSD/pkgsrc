@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.370 2023/01/16 18:38:10 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.371 2023/01/16 19:21:59 markd Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -454,3 +454,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated shells/shellcheck to 0.9.0 [nikita 2023-01-16]
 	Updated devel/py-approval-utilities to 8.1.0 [schmonz 2023-01-16]
 	Updated devel/py-approvaltests to 8.1.0 [schmonz 2023-01-16]
+	Updated net/freerdp2 to 2.9.0 [markd 2023-01-16]
