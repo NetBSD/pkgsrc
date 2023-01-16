@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22491 2023/01/15 09:07:11 wiz Exp $
+$NetBSD: TODO,v 1.22492 2023/01/16 08:35:40 wiz Exp $
 
 Suggested new packages
 ======================
@@ -994,7 +994,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libthai-0.2.2
 	o libtrace-4.0.16
 	o libvirt-2.3
-	o libwildmidi-0.4.5
 	o libxdg-basedir-1.2.3
 	o libxml2-2.10.3 [several CVEs addressed]
 	o libzookeeper-3.7.0
