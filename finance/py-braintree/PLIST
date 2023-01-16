@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2022/07/29 10:42:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.21 2023/01/16 10:44:05 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -374,6 +374,12 @@ ${PYSITELIB}/braintree/samsung_pay_card.pyo
 ${PYSITELIB}/braintree/search.py
 ${PYSITELIB}/braintree/search.pyc
 ${PYSITELIB}/braintree/search.pyo
+${PYSITELIB}/braintree/sepa_direct_debit_account.py
+${PYSITELIB}/braintree/sepa_direct_debit_account.pyc
+${PYSITELIB}/braintree/sepa_direct_debit_account.pyo
+${PYSITELIB}/braintree/sepa_direct_debit_account_gateway.py
+${PYSITELIB}/braintree/sepa_direct_debit_account_gateway.pyc
+${PYSITELIB}/braintree/sepa_direct_debit_account_gateway.pyo
 ${PYSITELIB}/braintree/settlement_batch_summary.py
 ${PYSITELIB}/braintree/settlement_batch_summary.pyc
 ${PYSITELIB}/braintree/settlement_batch_summary.pyo
