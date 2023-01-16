@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.368 2023/01/16 16:43:34 nikita Exp $
+$NetBSD: CHANGES-2023,v 1.369 2023/01/16 18:37:31 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -452,3 +452,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/ruby-chef to 18.1.0nb1 [taca 2023-01-16]
 	Updated security/age to 1.1.1 [nikita 2023-01-16]
 	Updated shells/shellcheck to 0.9.0 [nikita 2023-01-16]
+	Updated devel/py-approval-utilities to 8.1.0 [schmonz 2023-01-16]
