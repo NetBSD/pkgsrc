@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.372 2023/01/16 19:45:34 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.373 2023/01/16 20:49:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -456,3 +456,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-approvaltests to 8.1.0 [schmonz 2023-01-16]
 	Updated net/freerdp2 to 2.9.0 [markd 2023-01-16]
 	Updated audio/solfege to 3.23.4 [schmonz 2023-01-16]
+	Updated multimedia/gerbera to 1.12.1 [adam 2023-01-16]
+	Updated audio/fluidsynth to 2.3.1 [adam 2023-01-16]
