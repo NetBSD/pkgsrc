@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2023/01/03 17:38:00 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2023/01/16 19:20:15 markd Exp $
 
-DISTNAME=	freerdp-2.3.2
+DISTNAME=	freerdp-2.9.0
 PKGNAME=	${DISTNAME:S/freerdp-/freerdp2-/1}
-PKGREVISION=	10
 CATEGORIES=	net
 MASTER_SITES=	https://pub.freerdp.com/releases/
 
@@ -23,7 +22,7 @@ CMAKE_ARGS+=	-DWITH_CHANNELS=ON
 CMAKE_ARGS+=	-DWITH_JPEG=ON
 CMAKE_ARGS+=	-DWITH_GSTREAMER_1_0=OFF
 
-CMAKE_ARGS+=	-DAVCODEC_LIBRARY=${PREFIX}/lib/ffmpeg4/libavcodec.so
+CMAKE_ARGS+=	-DAVCODEC_LIBRARY=${PREFIX}/lib/ffmpeg5/libavcodec.so
 
 CFLAGS.SunOS+=	-Du_int8_t=uint8_t -Du_int16_t=uint16_t -Du_int32_t=uint32_t -Du_int64_t=uint64_t
 
@@ -52,7 +51,7 @@ post-install:
 .include "options.mk"
 .include "../../devel/libusb1/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../multimedia/ffmpeg4/buildlink3.mk"
+.include "../../multimedia/ffmpeg5/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .if defined(OPSYS_HAS_KQUEUE)
