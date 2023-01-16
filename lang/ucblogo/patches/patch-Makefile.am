@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile.am,v 1.1 2023/01/16 03:20:56 dholland Exp $
+
+mv -v is not standard and fails on Solaris.
+
+--- Makefile.am~	2020-08-12 02:19:42.000000000 +0000
++++ Makefile.am
+@@ -127,7 +127,7 @@ regenerate-help-index: makehelp usermanu
+ 	@echo "Regenerates entire contents of helpfiles/, including index, from usermanual."
+ 	./makehelp
+ 	@echo "Grave accent as filename is impossible with automake so work around it."
+-	mv -v helpfiles/'`' helpfiles/RENAME-GRAVE-ACCENT
++	mv helpfiles/'`' helpfiles/RENAME-GRAVE-ACCENT
+ 	LC_ALL=C sort helptemp | pr -5 -t -l999 -w80 >> helpfiles/HELPCONTENTS
+ 	-rm helptemp
+ 
