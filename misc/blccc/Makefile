@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2023/01/03 17:37:51 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2023/01/16 03:09:52 dholland Exp $
 #
 
 DISTNAME=		blccc-1.99
@@ -20,6 +20,7 @@ EGDIR=			${PREFIX}/share/examples/blccc
 INSTALLATION_DIRS=	${EGDIR}/movies ${EGDIR}/on-demand
 
 CPPFLAGS.SunOS+=	-Du_int16_t=uint16_t -Du_int32_t=uint32_t
+LDFLAGS.SunOS+=		-lsocket -lnsl
 
 .include "../../devel/blib/buildlink3.mk"
 
