@@ -1,9 +1,19 @@
-$NetBSD: patch-Makefile,v 1.6 2023/01/09 18:44:17 vins Exp $
+$NetBSD: patch-Makefile,v 1.7 2023/01/16 20:53:46 vins Exp $
 
 Use BSD_INSTALL.
+Fix find(1) usage on non-GNU systems.
 
 --- Makefile.orig	2022-06-27 12:43:39.000000000 +0000
 +++ Makefile
+@@ -35,7 +35,7 @@ LDFLAGS := ${DEFAULT_LDFLAGS} ${LDFLAGS}
+ 
+ ifeq (0,${WAYLAND})
+ # without wayland support
+-SRC := $(sort $(shell ${FIND} src/ -not \( -path src/wayland -prune \) -name '*.c'))
++SRC := $(sort $(shell ${FIND} src/ ! \( -path src/wayland -prune \) -name '*.c'))
+ else
+ # with Wayland support
+ SRC := $(sort $(shell ${FIND} src/ -name '*.c'))
 @@ -184,22 +184,22 @@ clean-wayland-protocols:
  install: install-dunst install-dunstctl install-dunstrc install-service install-dunstify
  
