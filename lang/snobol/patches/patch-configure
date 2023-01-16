@@ -1,0 +1,16 @@
+$NetBSD: patch-configure,v 1.1 2023/01/16 03:46:29 dholland Exp $
+
+Don't attempt to use /etc/install. It apparently exists on Solaris
+(even today) and does horrible things.
+
+--- configure~	2010-02-27 21:09:03.000000000 +0000
++++ configure
+@@ -1632,7 +1632,7 @@ for DIR in /usr/bin /usr/ucb /usr/local/
+ 		continue
+ 	    fi
+ 	    case $IPATH in
+-	    /usr/sbin/install|/bin/install|/usr/etc/install|\
++	    /usr/sbin/install|/bin/install|/usr/etc/install|/etc/install|\
+ 		/sbin/install) continue;;
+ 	    esac
+ 	    if [ -x $IPATH ]; then

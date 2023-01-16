@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.18 2021/10/26 10:51:56 nia Exp $
+$NetBSD: distinfo,v 1.19 2023/01/16 03:46:28 dholland Exp $
 
 BLAKE2s (snobol4-1.3bis/snobol4-1.3.tar.gz) = 4165d49fab481c8667037e70c97c9e6008feb80cc9f790fd9c6a4a939a0958dc
 SHA512 (snobol4-1.3bis/snobol4-1.3.tar.gz) = 2ed768434c816dd728f8013b8f713a26b43e21c5fa9dec6e8ad5f178ed9f4fd4154f738d0add58a26f239dcfb33c81440a140f6e1af4729c5f6518eb497e46c2
@@ -8,3 +8,4 @@ SHA512 (snobol4-1.3bis/vanilla.tar.gz) = 2bf7ab6388b31c9b2df6249470bf3ad6ff94cd9
 Size (snobol4-1.3bis/vanilla.tar.gz) = 188502 bytes
 SHA1 (patch-aa) = 02b759eb25bd46678d96eb281247ae326822d8f4
 SHA1 (patch-ab) = 7d3b10c2784e2732a3f9226a4263ff3cfe312282
+SHA1 (patch-configure) = 9ec8465e634c9e637345dac3c3612b50098d9e53
