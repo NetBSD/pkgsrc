@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.374 2023/01/16 20:58:04 vins Exp $
+$NetBSD: CHANGES-2023,v 1.375 2023/01/16 21:17:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -459,3 +459,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated multimedia/gerbera to 1.12.1 [adam 2023-01-16]
 	Updated audio/fluidsynth to 2.3.1 [adam 2023-01-16]
 	Updated x11/dunst to 1.9.0nb1 [vins 2023-01-16]
+	Updated devel/py-wcwidth to 0.2.6 [adam 2023-01-16]
+	Updated devel/py-hatch-vcs to 0.3.0 [adam 2023-01-16]
