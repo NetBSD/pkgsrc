@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2023/01/11 15:03:34 taca Exp $
+# $NetBSD: Makefile,v 1.36 2023/01/16 14:43:15 taca Exp $
 
 DISTNAME=	chef-18.1.0
+PKGREVISION=	1
 CATEGORIES=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -30,7 +31,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-mixlib-cli>=2.1.1<3:../../devel/ruby-mixlib-cli
 #DEPENDS+=	${RUBY_PKGPREFIX}-mixlib-log>=2.0.3<4:../../devel/ruby-mixlib-log
 #DEPENDS+=	${RUBY_PKGPREFIX}-mixlib-shellout>=3.1.1<4:../../devel/ruby-mixlib-shellout
 # ruby-net-ftp
-DEPENDS+=	${RUBY_PKGPREFIX}-net-sftp>=2.1.2<4:../../security/ruby-net-sftp
+DEPENDS+=	${RUBY_PKGPREFIX}-net-sftp>=2.1.2:../../security/ruby-net-sftp
 DEPENDS+=	${RUBY_PKGPREFIX}-ohai>=18.0<19:../../misc/ruby-ohai
 DEPENDS+=	${RUBY_PKGPREFIX}-plist>=3.2<4:../../textproc/ruby-plist
 DEPENDS+=	${RUBY_PKGPREFIX}-proxifier>=1.0<2:../../net/ruby-proxifier
@@ -44,8 +45,9 @@ DEPENDS+=	${RUBY_PKGPREFIX}-vault>=0.16<1:../../security/ruby-vault
 
 USE_LANGUAGES=	# none
 
-RUBY_VERSIONS_ACCEPTED=	31
+RUBY_VERSIONS_ACCEPTED=	31 32
 
+OVERRIDE_GEMSPEC+=	et-sftp>=2.1.2
 RUBYGEM_OPTIONS+=	--format-executable
 
 .include "../../lang/ruby/gem.mk"
