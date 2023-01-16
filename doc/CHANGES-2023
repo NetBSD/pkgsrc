@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.367 2023/01/16 16:07:58 nikita Exp $
+$NetBSD: CHANGES-2023,v 1.368 2023/01/16 16:43:34 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -451,3 +451,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/py-matplotlib to 3.6.3 [adam 2023-01-16]
 	Updated sysutils/ruby-chef to 18.1.0nb1 [taca 2023-01-16]
 	Updated security/age to 1.1.1 [nikita 2023-01-16]
+	Updated shells/shellcheck to 0.9.0 [nikita 2023-01-16]
