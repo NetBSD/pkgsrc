@@ -1,6 +1,9 @@
-$NetBSD: patch-ab,v 1.2 2007/03/17 08:45:05 obache Exp $
+$NetBSD: patch-ab,v 1.3 2023/01/16 03:25:25 dholland Exp $
 
---- GNUmakefile.orig	2007-03-17 08:18:09.000000000 +0000
+- detect dragonfly
+- honor pkgsrc LDFLAGS
+
+--- GNUmakefile.orig	2023-01-16 03:22:08.227374037 +0000
 +++ GNUmakefile
 @@ -22,7 +22,7 @@
  BUILDING_FOR_MACOSX := $(shell uname | grep -qvi darwin; echo $$?)
@@ -11,3 +14,12 @@ $NetBSD: patch-ab,v 1.2 2007/03/17 08:45:05 obache Exp $
  BUILDING_FOR_IRIX   := $(shell uname | grep -qvi irix;   echo $$?)
  
  
+@@ -53,7 +53,7 @@ endif
+ 
+ CFLAGS = -std=gnu99 -Wall -I$(shell pwd) $(EXTRA_CFLAGS)
+ CFLAGS += -Wshadow
+-LDFLAGS = -L$(shell pwd) $(EXTRA_LDFLAGS)
++LDFLAGS += -L$(shell pwd) $(EXTRA_LDFLAGS)
+ 
+ EXTRA_CFLAGS := $(shell sh syscheck.sh extra_cflags)
+ EXTRA_LDFLAGS := $(shell sh syscheck.sh extra_ldflags)
