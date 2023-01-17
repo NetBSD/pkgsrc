@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.384 2023/01/17 01:33:27 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.385 2023/01/17 09:08:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -470,3 +470,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated mail/smtpd-starttls-proxy to 0.0.1.2 [schmonz 2023-01-16]
 	Updated security/libretls to 3.7.0 [schmonz 2023-01-16]
 	Updated net/scapy to 2.5.0 [gutteridge 2023-01-17]
+	Updated devel/py-filelock to 3.9.0 [adam 2023-01-17]
+	Updated net/py-python-socks to 2.1.1 [adam 2023-01-17]
