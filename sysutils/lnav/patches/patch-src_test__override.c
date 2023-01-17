@@ -1,6 +1,6 @@
-$NetBSD: patch-src_test__override.c,v 1.1 2015/09/05 22:12:04 wiz Exp $
+$NetBSD: patch-src_test__override.c,v 1.2 2023/01/17 10:09:13 wiz Exp $
 
-Match NetBSD version of gettimeofday().
+Match NetBSD prototype for gettimeofday().
 
 --- src/test_override.c.orig	2015-04-04 10:42:12.000000000 +0000
 +++ src/test_override.c

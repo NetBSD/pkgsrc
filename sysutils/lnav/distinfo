@@ -1,12 +1,7 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:19:48 nia Exp $
+$NetBSD: distinfo,v 1.6 2023/01/17 10:09:13 wiz Exp $
 
-BLAKE2s (lnav-0.7.3.tar.bz2) = b51ac5413e71ad683bcddc0de3be03c7e865e82084afacd4844c200dc450f551
-SHA512 (lnav-0.7.3.tar.bz2) = d5e6e9dad29cde300952f84eec793c31d4ba30b94e7a49f776a93948096cc941ea53440a782aff80edc647c01b6971faec8cbb609f49ea162914c09da1716894
-Size (lnav-0.7.3.tar.bz2) = 399142 bytes
-SHA1 (patch-src_data__parser.hh) = 0f976ff3df94af045d6d2be53cef964060f507ce
-SHA1 (patch-src_grep__proc.cc) = f8d23f8c2abf8d99ae27d71dedd9d76ff4ad4a87
-SHA1 (patch-src_log__format.hh) = 14b081db5e839da23dedac624a571a9cc5dffef8
-SHA1 (patch-src_pretty__printer.hh) = fa28e901539fdddfb69875d39efe6f1c74b83b0d
-SHA1 (patch-src_sql__util.cc) = dba6791ce6651c19a8623d49b654a41b570fc5ea
-SHA1 (patch-src_string-extension-functions.cc) = cf6bc9d2f8dd3a79c77b9ae31cf15098b5569124
-SHA1 (patch-src_test__override.c) = 67c3fa4785a75eae1bfc8a9ed725276b37eca4ec
+BLAKE2s (lnav-0.11.1.tar.bz2) = c58a9823d4a50704cad901eb5be99c13c97a605a22db87eb0ebdea7ca283ae6a
+SHA512 (lnav-0.11.1.tar.bz2) = b0db44b02f8b98e9b383e258c1ab228f9c704b5e345583b2ce2d2f68b0519926779d798dc2e61a17af112a371a437c6766b2644fbb92b5f77938f9015ea31fe8
+Size (lnav-0.11.1.tar.bz2) = 2268080 bytes
+SHA1 (patch-src_test__override.c) = b83fa9d1a73766b2f9857dc7458e7f05937fa6ed
+SHA1 (patch-src_third-party_rapidyaml_ryml__all.hpp) = a18fe48f0e0023785c57c281b47a8265dff08279
