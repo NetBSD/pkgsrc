@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2022/03/17 14:24:31 adam Exp $
+# $NetBSD: Makefile,v 1.7 2023/01/17 09:08:18 adam Exp $
 
-DISTNAME=	python-socks-2.0.3
+DISTNAME=	python-socks-2.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-socks/}
