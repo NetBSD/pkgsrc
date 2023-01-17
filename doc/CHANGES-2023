@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.389 2023/01/17 10:26:07 adam Exp $
+$NetBSD: CHANGES-2023,v 1.390 2023/01/17 11:54:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -478,3 +478,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/lnav to 0.11.1 [wiz 2023-01-17]
 	Updated multimedia/py-m3u8 to 3.4.0 [adam 2023-01-17]
 	Updated databases/py-apsw to 3.40.1.0 [adam 2023-01-17]
+	Updated databases/redis to 7.0.8 [adam 2023-01-17]
+	Updated net/py-ldapdomaindump to 0.9.4 [adam 2023-01-17]
