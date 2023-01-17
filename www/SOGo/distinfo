@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.25 2021/10/26 11:29:16 nia Exp $
+$NetBSD: distinfo,v 1.26 2023/01/17 14:26:54 manu Exp $
 
 BLAKE2s (SOGo-2.3.23.tar.gz) = aecd571ec3401d41ccc392b51733e0e6697218c8f144c64858323f94ec5016a6
 SHA512 (SOGo-2.3.23.tar.gz) = abd2d0133b3e7db91e0e9426c76d65d32d9e47ab6a37dbc96213dabbd24d45f7bfc6835570c22355649d7651df9a36a6614d874b16dbd796bff4eabee0a48eb6
 Size (SOGo-2.3.23.tar.gz) = 12521303 bytes
 SHA1 (patch-SoObjects_SOGo_NSData+Crypto.m) = 2b121f06f409f9d8ddfb717e5b3d13547c7d18a0
+SHA1 (patch-SoObjects_SOGo_NSString+Utilities.m) = 56822bf44f52deed518716eba082433fe9467683
 SHA1 (patch-general.make) = d1517f3fc9133c7edb4293612b87674504d3ac5f
