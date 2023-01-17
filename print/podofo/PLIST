@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2017/02/11 22:27:00 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/01/17 14:01:57 spz Exp $
 bin/podofobox
 bin/podofocolor
 bin/podofocountpages
@@ -10,6 +10,7 @@ bin/podofoimgextract
 bin/podofoimpose
 bin/podofoincrementalupdates
 bin/podofomerge
+bin/podofonooc
 bin/podofopages
 bin/podofopdfinfo
 bin/podofosign
@@ -49,6 +50,7 @@ include/podofo/base/PdfObject.h
 include/podofo/base/PdfObjectStreamParserObject.h
 include/podofo/base/PdfOutputDevice.h
 include/podofo/base/PdfOutputStream.h
+include/podofo/base/PdfOwnedDataType.h
 include/podofo/base/PdfParser.h
 include/podofo/base/PdfParserObject.h
 include/podofo/base/PdfRect.h
@@ -126,7 +128,7 @@ include/podofo/podofo.h
 lib/libpodofo.a
 lib/libpodofo.so
 lib/libpodofo.so.${PKGVERSION}
-lib/pkgconfig/libpodofo-0.pc
+lib/pkgconfig/libpodofo.pc
 man/man1/podofobox.1
 man/man1/podofocolor.1
 man/man1/podofocountpages.1
