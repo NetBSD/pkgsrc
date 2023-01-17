@@ -1,0 +1,17 @@
+$NetBSD: patch-Xvnc_config_cf_Imake.tmpl,v 1.1 2023/01/17 05:35:14 mrg Exp $
+
+Avoid using ar's "l" option on any NetBSD.  Newer binutils changed
+the previous "ignored" definition.
+
+
+--- Xvnc/config/cf/Imake.tmpl.orig	2009-03-04 22:38:33.000000000 -0800
++++ Xvnc/config/cf/Imake.tmpl	2023-01-16 21:31:12.899713098 -0800
+@@ -595,7 +595,7 @@ TCLIBDIR = TclLibDir
+ #define ArCmdBase ar
+ #endif
+ #ifndef ArCmd
+-#if HasLargeTmp || SystemV4
++#if HasLargeTmp || SystemV4 || defined(NetBSDArchitecture)
+ #define ArCmd ArCmdBase cq
+ #else
+ #define ArCmd ArCmdBase clq
