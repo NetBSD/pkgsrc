@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22495 2023/01/17 10:09:23 wiz Exp $
+$NetBSD: TODO,v 1.22496 2023/01/17 12:31:17 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1570,7 +1570,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
 	o vnstat-2.6
 	o wMosaic-3.8.22
-	o waf-2.0.25
 	o wandio-4.2.3
 	o wap-utils-1.4.1
 	o wbm-cyrus-imapd-1.6.8
