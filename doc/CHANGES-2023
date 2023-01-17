@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.393 2023/01/17 15:41:01 spz Exp $
+$NetBSD: CHANGES-2023,v 1.394 2023/01/17 18:22:42 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -483,3 +483,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/waf to 2.0.25 [wiz 2023-01-17]
 	Added x11/libXaw3dXft version 1.6.2hnb1 [vins 2023-01-17]
 	Updated print/podofo to 0.9.8 [spz 2023-01-17]
+	Updated lang/gleam to 0.25.3 [nikita 2023-01-17]
