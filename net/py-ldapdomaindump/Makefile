@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2022/08/23 21:49:56 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2023/01/17 11:54:39 adam Exp $
 
-DISTNAME=	ldapdomaindump-0.9.3
+DISTNAME=	ldapdomaindump-0.9.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/ldapdomaindump/}
 
@@ -12,7 +11,7 @@ COMMENT=	Collection of Python classes for working with network protocols
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-future-[0-9]*:../../devel/py-future
-DEPENDS+=	${PYPKGPREFIX}-ldap3>=2.6:../../databases/py-ldap3
+DEPENDS+=	${PYPKGPREFIX}-ldap3>=2.7:../../databases/py-ldap3
 
 USE_LANGUAGES=	# none
 
