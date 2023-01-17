@@ -1,0 +1,7 @@
+libXaw3dXft is an extended version of libXaw3d, developed as part of xpaint
+with support for UTF-8 input and UTF-8 encoding of text, and rendering text
+with the FreeType library and TrueType fonts.
+
+It should be mostly compatible with the original Xaw3d library, except for font
+management: everything using the old X11 core font routines should be replaced
+by their FreeType equivalents.

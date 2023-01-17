@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/01/17 13:52:54 vins Exp $
+
+BLAKE2s (libXaw3dXft-1.6.2h.tar.bz2) = c6fca450531a5361982dfbe622d62726fe1340b41adbbf3a5a9cadbcfe30440e
+SHA512 (libXaw3dXft-1.6.2h.tar.bz2) = bc9b6de80379bdc82c7f5cd46ac78a422282b018eed979ef5548d0382f43e53619a6ebaf40c6b9ae264d597536022dc1daf023c1d1a04e948d4b4658bc6479ca
+Size (libXaw3dXft-1.6.2h.tar.bz2) = 593436 bytes
