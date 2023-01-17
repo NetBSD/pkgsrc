@@ -1,6 +1,7 @@
-$NetBSD: patch-src_test__override.c,v 1.2 2023/01/17 10:09:13 wiz Exp $
+$NetBSD: patch-src_test__override.c,v 1.3 2023/01/17 10:18:33 wiz Exp $
 
 Match NetBSD prototype for gettimeofday().
+https://github.com/tstack/lnav/pull/1106
 
 --- src/test_override.c.orig	2015-04-04 10:42:12.000000000 +0000
 +++ src/test_override.c
