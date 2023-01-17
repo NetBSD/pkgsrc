@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2022/12/12 09:38:00 adam Exp $
+# $NetBSD: Makefile,v 1.13 2023/01/17 09:06:07 adam Exp $
 
-DISTNAME=	filelock-3.8.2
+DISTNAME=	filelock-3.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/filelock/}
@@ -10,10 +10,11 @@ HOMEPAGE=	https://github.com/tox-dev/py-filelock
 COMMENT=	Platform independent file lock
 LICENSE=	unlicense
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>0:../../devel/py-setuptools_scm
-TEST_DEPENDS+=	${PYPKGPREFIX}-test>=4:../../devel/py-test
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout>=1.4.2:../../devel/py-test-timeout
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.11.1:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs>=0.3:../../devel/py-hatch-vcs
+TEST_DEPENDS+=	${PYPKGPREFIX}-test>=7.2:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=4:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout>=2.1:../../devel/py-test-timeout
 
 USE_LANGUAGES=	# none
 
@@ -22,5 +23,5 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
