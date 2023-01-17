@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2023/01/17 10:09:13 wiz Exp $
+$NetBSD: distinfo,v 1.7 2023/01/17 10:18:33 wiz Exp $
 
 BLAKE2s (lnav-0.11.1.tar.bz2) = c58a9823d4a50704cad901eb5be99c13c97a605a22db87eb0ebdea7ca283ae6a
 SHA512 (lnav-0.11.1.tar.bz2) = b0db44b02f8b98e9b383e258c1ab228f9c704b5e345583b2ce2d2f68b0519926779d798dc2e61a17af112a371a437c6766b2644fbb92b5f77938f9015ea31fe8
 Size (lnav-0.11.1.tar.bz2) = 2268080 bytes
-SHA1 (patch-src_test__override.c) = b83fa9d1a73766b2f9857dc7458e7f05937fa6ed
-SHA1 (patch-src_third-party_rapidyaml_ryml__all.hpp) = a18fe48f0e0023785c57c281b47a8265dff08279
+SHA1 (patch-src_test__override.c) = ea392929f3874ff6ef0eea0002139acb14ad9166
+SHA1 (patch-src_third-party_rapidyaml_ryml__all.hpp) = 9d9a5dee02d7da42841d3fec7021c6de8f352e4a

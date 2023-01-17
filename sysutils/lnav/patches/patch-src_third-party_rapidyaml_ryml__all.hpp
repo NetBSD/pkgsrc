@@ -1,6 +1,7 @@
-$NetBSD: patch-src_third-party_rapidyaml_ryml__all.hpp,v 1.1 2023/01/17 10:09:13 wiz Exp $
+$NetBSD: patch-src_third-party_rapidyaml_ryml__all.hpp,v 1.2 2023/01/17 10:18:33 wiz Exp $
 
 Add NetBSD support.
+https://github.com/tstack/lnav/pull/1106
 
 --- src/third-party/rapidyaml/ryml_all.hpp.orig	2022-10-06 17:08:45.000000000 +0000
 +++ src/third-party/rapidyaml/ryml_all.hpp
