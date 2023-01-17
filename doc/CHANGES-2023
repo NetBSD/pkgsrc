@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.395 2023/01/17 18:42:52 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.396 2023/01/17 19:30:49 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -485,3 +485,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated print/podofo to 0.9.8 [spz 2023-01-17]
 	Updated lang/gleam to 0.25.3 [nikita 2023-01-17]
 	Updated x11/libXpm to 3.5.15 [wiz 2023-01-17]
+	Updated devel/goredo to 1.29.0 [schmonz 2023-01-17]
