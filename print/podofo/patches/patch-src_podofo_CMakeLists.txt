@@ -1,9 +1,9 @@
-$NetBSD: patch-src_CMakeLists.txt,v 1.1 2020/04/11 10:54:00 adam Exp $
+$NetBSD: patch-src_podofo_CMakeLists.txt,v 1.1 2023/01/17 14:01:57 spz Exp $
 
 Inherit CMake requirement from the main CMakeLists.txt.
 
---- src/CMakeLists.txt.orig	2018-03-11 11:42:20.000000000 +0000
-+++ src/CMakeLists.txt
+--- src/podofo/CMakeLists.txt.orig	2018-03-11 11:42:20.000000000 +0000
++++ src/podofo/CMakeLists.txt
 @@ -1,4 +1,3 @@
 -CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
  
