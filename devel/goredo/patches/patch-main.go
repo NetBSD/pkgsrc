@@ -1,10 +1,10 @@
-$NetBSD: patch-main.go,v 1.2 2022/01/27 21:41:54 schmonz Exp $
+$NetBSD: patch-main.go,v 1.3 2023/01/17 19:30:41 schmonz Exp $
 
 Avoid CONFLICTS with other redo implementations.
 
---- main.go.orig	2022-01-26 14:03:01.000000000 +0000
+--- main.go.orig	2023-01-17 09:05:55.000000000 +0000
 +++ main.go
-@@ -41,21 +41,20 @@ import (
+@@ -40,22 +40,21 @@ import (
  )
  
  const (
@@ -23,6 +23,7 @@ Avoid CONFLICTS with other redo implementations.
 -	CmdNameRedoTargets  = "redo-targets"
 -	CmdNameRedoWhichdo  = "redo-whichdo"
 -	CmdNameRedoDepFix   = "redo-depfix"
+-	CmdNameRedoInode    = "redo-inode"
 +	CmdNameRedo         = "goredo"
 +	CmdNameRedoAffects  = "goredo-affects"
 +	CmdNameRedoAlways   = "goredo-always"
@@ -37,10 +38,11 @@ Avoid CONFLICTS with other redo implementations.
 +	CmdNameRedoTargets  = "goredo-targets"
 +	CmdNameRedoWhichdo  = "goredo-whichdo"
 +	CmdNameRedoDepFix   = "goredo-depfix"
++	CmdNameRedoInode    = "goredo-inode"
  )
  
  var (
-@@ -106,10 +105,9 @@ func main() {
+@@ -107,10 +106,9 @@ func main() {
  		fmt.Println("goredo", Version, "built with", runtime.Version())
  		return
  	}
@@ -52,7 +54,7 @@ Avoid CONFLICTS with other redo implementations.
  			CmdNameRedoAffects,
  			CmdNameRedoAlways,
  			CmdNameRedoCleanup,
-@@ -124,8 +122,8 @@ func main() {
+@@ -125,8 +123,8 @@ func main() {
  			CmdNameRedoTargets,
  			CmdNameRedoWhichdo,
  		} {
