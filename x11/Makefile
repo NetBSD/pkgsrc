@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.974 2022/12/19 21:01:40 vins Exp $
+# $NetBSD: Makefile,v 1.975 2023/01/17 13:54:22 vins Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -209,6 +209,7 @@ SUBDIR+=	libXScrnSaver
 SUBDIR+=	libXau
 SUBDIR+=	libXaw
 SUBDIR+=	libXaw3d
+SUBDIR+=	libXaw3dXft
 SUBDIR+=	libXcomposite
 SUBDIR+=	libXcursor
 SUBDIR+=	libXdamage
