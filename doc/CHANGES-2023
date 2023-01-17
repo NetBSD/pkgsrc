@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.390 2023/01/17 11:54:57 adam Exp $
+$NetBSD: CHANGES-2023,v 1.391 2023/01/17 12:31:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -480,3 +480,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated databases/py-apsw to 3.40.1.0 [adam 2023-01-17]
 	Updated databases/redis to 7.0.8 [adam 2023-01-17]
 	Updated net/py-ldapdomaindump to 0.9.4 [adam 2023-01-17]
+	Updated devel/waf to 2.0.25 [wiz 2023-01-17]
