@@ -1,19 +1,19 @@
-$NetBSD: patch-ab,v 1.5 2021/04/27 21:53:11 gutteridge Exp $
+$NetBSD: patch-ab,v 1.6 2023/01/17 01:33:17 gutteridge Exp $
 
 Add DragonFly support.
 
---- scapy/arch/unix.py.orig	2021-04-18 18:36:15.000000000 +0000
+--- scapy/arch/unix.py.orig	2022-12-24 14:06:26.000000000 +0000
 +++ scapy/arch/unix.py
-@@ -13,7 +13,7 @@ import socket
+@@ -15,7 +15,7 @@ from fcntl import ioctl
  import scapy.config
  import scapy.utils
  from scapy.config import conf
 -from scapy.consts import FREEBSD, NETBSD, OPENBSD, SOLARIS
 +from scapy.consts import FREEBSD, NETBSD, OPENBSD, SOLARIS, DRAGONFLY
  from scapy.error import log_runtime, warning
+ from scapy.interfaces import network_name, NetworkInterface
  from scapy.pton_ntop import inet_pton
- from scapy.utils6 import in6_getscope, construct_source_candidate_set
-@@ -57,7 +57,7 @@ def read_routes():
+@@ -98,7 +98,7 @@ def read_routes():
      """
      if SOLARIS:
          f = os.popen("netstat -rvn -f inet")
@@ -22,7 +22,7 @@ Add DragonFly support.
          f = os.popen("netstat -rnW -f inet")  # -W to show long interface names
      else:
          f = os.popen("netstat -rn -f inet")
-@@ -291,7 +291,7 @@ def read_routes6():
+@@ -332,7 +332,7 @@ def read_routes6():
              destination, next_hop, flags = splitted_line[:3]
              dev = splitted_line[index]
          else:

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.40 2022/06/30 11:18:43 nia Exp $
+# $NetBSD: Makefile,v 1.41 2023/01/17 01:33:17 gutteridge Exp $
 
-DISTNAME=	scapy-2.4.5
-PKGREVISION=	4
+DISTNAME=	scapy-2.5.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=secdev/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
