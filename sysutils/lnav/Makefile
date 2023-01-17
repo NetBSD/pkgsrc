@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2022/11/23 16:21:08 adam Exp $
+# $NetBSD: Makefile,v 1.23 2023/01/17 10:09:13 wiz Exp $
 
-DISTNAME=	lnav-0.7.3
-PKGREVISION=	20
-CATEGORIES=	textproc
+DISTNAME=	lnav-0.11.1
+CATEGORIES=	sysutils textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tstack/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.bz2
@@ -14,12 +13,14 @@ LICENSE=	2-clause-bsd
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
+USE_TOOLS+=	bash:build gmake
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
-.include "../../devel/pcre/buildlink3.mk"
+.include "../../devel/pcre2/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../devel/ncursesw/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
