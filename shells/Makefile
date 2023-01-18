@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2022/12/19 19:01:47 vins Exp $
+# $NetBSD: Makefile,v 1.72 2023/01/18 17:55:15 schmonz Exp $
 #
 
 COMMENT=	Shells
@@ -35,6 +35,7 @@ SUBDIR+=	rc
 SUBDIR+=	rssh
 SUBDIR+=	scponly
 SUBDIR+=	scsh
+SUBDIR+=	sheldon
 SUBDIR+=	shellcheck
 SUBDIR+=	standalone-tcsh
 SUBDIR+=	starship
