@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.405 2023/01/18 10:57:02 pin Exp $
+$NetBSD: CHANGES-2023,v 1.406 2023/01/18 11:34:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -496,3 +496,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Added audio/gospt version 0.0.28 [pin 2023-01-18]
 	Added textproc/tree-sitter-python version 0.20.0 [wiz 2023-01-18]
 	Updated devel/diffsitter to 0.7.3nb1 [pin 2023-01-18]
+	Updated sysutils/ansible-lint to 6.11.0 [adam 2023-01-18]
+	Updated textproc/py-tablib to 3.3.0 [adam 2023-01-18]
