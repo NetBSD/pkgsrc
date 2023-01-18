@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.38 2022/12/29 10:55:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.39 2023/01/18 09:07:04 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -212,6 +212,10 @@ ${PYSITELIB}/botocore/data/chime/2018-05-01/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/chime/2018-05-01/examples-1.json
 ${PYSITELIB}/botocore/data/chime/2018-05-01/paginators-1.json
 ${PYSITELIB}/botocore/data/chime/2018-05-01/service-2.json
+${PYSITELIB}/botocore/data/cleanrooms/2022-02-17/endpoint-rule-set-1.json
+${PYSITELIB}/botocore/data/cleanrooms/2022-02-17/paginators-1.json
+${PYSITELIB}/botocore/data/cleanrooms/2022-02-17/service-2.json
+${PYSITELIB}/botocore/data/cleanrooms/2022-02-17/waiters-2.json
 ${PYSITELIB}/botocore/data/cloud9/2017-09-23/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/cloud9/2017-09-23/examples-1.json
 ${PYSITELIB}/botocore/data/cloud9/2017-09-23/paginators-1.json
@@ -855,6 +859,9 @@ ${PYSITELIB}/botocore/data/kafkaconnect/2021-09-14/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/kafkaconnect/2021-09-14/examples-1.json
 ${PYSITELIB}/botocore/data/kafkaconnect/2021-09-14/paginators-1.json
 ${PYSITELIB}/botocore/data/kafkaconnect/2021-09-14/service-2.json
+${PYSITELIB}/botocore/data/kendra-ranking/2022-10-19/endpoint-rule-set-1.json
+${PYSITELIB}/botocore/data/kendra-ranking/2022-10-19/paginators-1.json
+${PYSITELIB}/botocore/data/kendra-ranking/2022-10-19/service-2.json
 ${PYSITELIB}/botocore/data/kendra/2019-02-03/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/kendra/2019-02-03/examples-1.json
 ${PYSITELIB}/botocore/data/kendra/2019-02-03/paginators-1.json
