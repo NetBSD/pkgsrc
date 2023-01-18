@@ -1,21 +1,18 @@
-# $NetBSD: Makefile,v 1.52 2023/01/03 17:37:52 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2023/01/18 23:12:27 wiz Exp $
 
-DISTNAME=	gaupol-0.28.2
-PKGREVISION=	24
+DISTNAME=	gaupol-1.11
 CATEGORIES=	misc
-#MASTER_SITES=	http://download.gna.org/gaupol/0.28/
-EXTRACT_SUFX=	.tar.xz
+MASTER_SITES=	${MASTER_SITE_GITHUB:=otsaloma/}
 
 MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	https://otsaloma.io/gaupol/
 COMMENT=	Subtitle editor
 LICENSE=	gnu-gpl-v3
 
-DEPENDS+=	iso-codes-[0-9]*:../../textproc/iso-codes
+DEPENDS+=	iso-codes>=3.67:../../textproc/iso-codes
 DEPENDS+=	${PYPKGPREFIX}-chardet-[0-9]*:../../converters/py-chardet
-DEPENDS+=	${PYPKGPREFIX}-enchant>=1.4:../../textproc/py-enchant
-DEPENDS+=	${PYPKGPREFIX}-gobject3>=3.6.0:../../devel/py-gobject3
-DEPENDS+=	gstreamer1>=1.0:../../multimedia/gstreamer1
+DEPENDS+=	${PYPKGPREFIX}-gobject3>=3.12.0:../../devel/py-gobject3
+DEPENDS+=	gstreamer1>=1.6:../../multimedia/gstreamer1
 DEPENDS+=	gst-plugins1-bad-[0-9]*:../../multimedia/gst-plugins1-bad
 DEPENDS+=	gst-plugins1-pango-[0-9]*:../../devel/gst-plugins1-pango
 DEPENDS+=	gst-plugins1-base-[0-9]*:../../multimedia/gst-plugins1-base
@@ -28,7 +25,7 @@ DEPENDS+=	paratype-ttf-[0-9]*:../../fonts/paratype-ttf
 # but that's not necessary with gst* installed
 
 USE_LANGUAGES=			# none
-USE_TOOLS+=			intltool msgfmt
+USE_TOOLS+=			msgfmt
 
 PYSETUPARGS=			--mandir=${PREFIX}/${PKGMANDIR}
 PYTHON_VERSIONS_INCOMPATIBLE=	27
@@ -36,6 +33,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 .include "../../lang/python/egg.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../textproc/gtkspell3/buildlink3.mk"
+.include "../../textproc/gspell/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.12.0
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
