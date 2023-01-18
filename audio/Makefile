@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.665 2022/12/16 17:49:21 wiz Exp $
+# $NetBSD: Makefile,v 1.666 2023/01/18 09:10:40 pin Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -146,6 +146,7 @@ SUBDIR+=	gmpc-magnatune
 SUBDIR+=	gmpc-tagedit
 SUBDIR+=	gnome-audio
 SUBDIR+=	goom
+SUBDIR+=	gospt
 SUBDIR+=	gqmpeg-devel
 SUBDIR+=	gqmpeg-skins
 SUBDIR+=	gramofile
