@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2023/01/18 10:18:35 wiz Exp $
+lib/libtree-sitter-python.so
