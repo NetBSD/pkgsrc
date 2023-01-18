@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.425 2023/01/18 22:02:12 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.426 2023/01/18 23:12:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -517,3 +517,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added textproc/tree-sitter-dockerfile version 0.1.2 [wiz 2023-01-18]
 	Added shells/sheldon version 0.7.1 [schmonz 2023-01-18]
 	Updated shells/fish to 3.6.0 [wiz 2023-01-18]
+	Updated misc/gaupol to 1.11 [wiz 2023-01-18]
