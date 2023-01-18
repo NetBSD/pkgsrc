@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.403 2023/01/18 09:11:07 pin Exp $
+$NetBSD: CHANGES-2023,v 1.404 2023/01/18 10:19:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -494,3 +494,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/py-botocore to 1.29.51 [adam 2023-01-18]
 	Updated net/py-boto3 to 1.26.51 [adam 2023-01-18]
 	Added audio/gospt version 0.0.28 [pin 2023-01-18]
+	Added textproc/tree-sitter-python version 0.20.0 [wiz 2023-01-18]
