@@ -1,4 +1,4 @@
-$NetBSD: patch-fvwm_fvwm-reproducible.c,v 1.1 2019/09/21 13:56:15 ng0 Exp $
+$NetBSD: patch-fvwm_fvwm.c,v 1.1 2023/01/18 07:43:16 vins Exp $
 
 Remove compile time __DATE__ and __TIME__ variables from the source.
 
