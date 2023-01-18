@@ -1,19 +1,13 @@
-# $NetBSD: options.mk,v 1.10 2020/05/23 12:50:33 rillig Exp $
+# $NetBSD: options.mk,v 1.11 2023/01/18 07:43:16 vins Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.fvwm
-PKG_SUPPORTED_OPTIONS=		gtk xrender xcursor xft2 fribidi debug svg
+PKG_SUPPORTED_OPTIONS=		xrender xcursor xft2 fribidi debug svg
 PKG_SUPPORTED_OPTIONS+=		doc
 PKG_SUGGESTED_OPTIONS+=		svg xft2 xrender xcursor doc
-PKG_OPTIONS_LEGACY_VARS+=	FVWM2_USE_GTK:gtk
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		gtk doc
-
-.if !empty(PKG_OPTIONS:Mgtk)
-.  include "../../x11/gtk/buildlink3.mk"
-PLIST.gtk=		yes
-.endif
+PLIST_VARS+=		doc
 
 .if !empty(PKG_OPTIONS:Mxcursor)
 CONFIGURE_ARGS+=	--enable-xcursor

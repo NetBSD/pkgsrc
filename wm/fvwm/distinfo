@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.10 2022/10/20 00:39:50 gutteridge Exp $
+$NetBSD: distinfo,v 1.11 2023/01/18 07:43:16 vins Exp $
 
-BLAKE2s (fvwm-2.6.9.tar.gz) = 59e97f514d9192e4d8c6de287ab63a78ba6f742dfbce87597f26f6f5cf642915
-SHA512 (fvwm-2.6.9.tar.gz) = a9c2214ad19edd17da81446a6d4250284cc50b59b53c233212f2a9354c01143dbb870521392752f272f00af50bee2dd8f0b6bf6176b0d4b3075694d2a61a623e
-Size (fvwm-2.6.9.tar.gz) = 3942859 bytes
-SHA1 (patch-ab) = d9e960ed7be624a36af5a8a3ad4422f4ed4ce64e
+BLAKE2s (fvwm-2.7.0.tar.gz) = 193c01c6e3e111d04aa95ff51ee05552e709489dec8f65758ba4d93d290e767c
+SHA512 (fvwm-2.7.0.tar.gz) = fc9076c3f07f36b0b2c7c4d2bdf7bb1a711000e39316e327173548bc99dc2b8a29b591e3644e1492f87603b576cd4a3f58ecbdd84a4384d294417b3c56c81808
+Size (fvwm-2.7.0.tar.gz) = 3933529 bytes
+SHA1 (patch-configure) = cf3ddf755d3b6d509cf722ed21ac8fd6c0ed7408
 SHA1 (patch-fvwm_events.c) = effd8fd31a3c1f28a3e71dbcb9569621d996cc31
-SHA1 (patch-fvwm_fvwm-reproducible.c) = 96515959482750a25bfe59e9a370d0ef0295bc89
+SHA1 (patch-fvwm_fvwm.c) = 96515959482750a25bfe59e9a370d0ef0295bc89
 SHA1 (patch-libs_FEvent.c) = 358243d198251c6ea0bf546e31a94cb089355e45
 SHA1 (patch-libs_FEvent.h) = 0dae96a21839945ac9627269608aa1bbafaa8d65

@@ -1,34 +1,36 @@
-$NetBSD: patch-ab,v 1.5 2019/09/21 13:56:15 ng0 Exp $
+$NetBSD: patch-configure,v 1.3 2023/01/18 07:43:16 vins Exp $
 
-(1) 
+(1)
 Convert install path from fvwm to fvwm2
-This can not be done with 
+This can not be done with
 CONFIGURE_ARGS+=        --datarootdir=${PREFIX:Q}/share/fvwm2
 this will install fvwm2/fvwm.
 
 (2)
-Avoid following problem on NetBSD/amd64 6.99.16 with clang
+Avoid following problem on NetBSD/amd64 with clang
 +-----------------
 | conftest.c:38:3: error: non-void function 'main' should return a value [-Wreturn-type]
 |   return;
 |   ^
 +-----------------
 
---- configure~       2019-09-01 18:13:40.757285726 +0000
-+++ configure   2019-09-01 18:18:08.056139617 +0000
-@@ -578,7 +578,7 @@
+--- configure.orig	2022-10-20 19:05:33.000000000 +0000
++++ configure
+@@ -609,7 +609,7 @@ MFLAGS=
  MAKEFLAGS=
  
  # Identity of this package.
 -PACKAGE_NAME='fvwm'
 +PACKAGE_NAME='fvwm2'
  PACKAGE_TARNAME='fvwm'
- PACKAGE_VERSION='2.6.9'
- PACKAGE_STRING='fvwm 2.6.9'
-@@ -3320,5 +3320,5 @@
+ PACKAGE_VERSION='2.7.0'
+ PACKAGE_STRING='fvwm 2.7.0'
+@@ -3698,7 +3698,7 @@ fi
  
  
  # Define the identity of the package.
 - PACKAGE='fvwm'
 + PACKAGE='fvwm2'
-  VERSION='2.6.9'
+  VERSION='2.7.0'
+ 
+ 
