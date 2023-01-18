@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.409 2023/01/18 13:29:21 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.410 2023/01/18 13:35:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -501,3 +501,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/gifski to 1.9.0 [pin 2023-01-18]
 	Added textproc/tree-sitter-rust version 0.20.3 [pin 2023-01-18]
 	Added textproc/tree-sitter-c version 0.20.2 [wiz 2023-01-18]
+	Added textproc/tree-sitter-cpp version 0.20.0 [wiz 2023-01-18]
