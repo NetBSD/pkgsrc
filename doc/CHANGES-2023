@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.406 2023/01/18 11:34:03 adam Exp $
+$NetBSD: CHANGES-2023,v 1.407 2023/01/18 11:44:32 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -498,3 +498,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/diffsitter to 0.7.3nb1 [pin 2023-01-18]
 	Updated sysutils/ansible-lint to 6.11.0 [adam 2023-01-18]
 	Updated textproc/py-tablib to 3.3.0 [adam 2023-01-18]
+	Updated graphics/gifski to 1.9.0 [pin 2023-01-18]
