@@ -1,8 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2020/04/25 19:40:55 nikita Exp $
-@pkgdir share/doc/fvwm2/commands
-@pkgdir share/doc/fvwm2/fvwm
-@pkgdir share/doc/fvwm2/images/svg_rendering
-@pkgdir share/doc/fvwm2/modules/images/FvwmTabs
+@comment $NetBSD: PLIST,v 1.7 2023/01/18 07:43:16 vins Exp $
 bin/FvwmCommand
 bin/fvwm
 bin/fvwm-bug
@@ -16,33 +12,30 @@ bin/fvwm-perllib
 bin/fvwm-root
 bin/fvwm2
 bin/xpmroot
-lib/X11/fvwm2/${FVWM_VER}/FvwmAnimate
-lib/X11/fvwm2/${FVWM_VER}/FvwmAudio
-lib/X11/fvwm2/${FVWM_VER}/FvwmAuto
-lib/X11/fvwm2/${FVWM_VER}/FvwmBacker
-lib/X11/fvwm2/${FVWM_VER}/FvwmBanner
-lib/X11/fvwm2/${FVWM_VER}/FvwmButtons
-lib/X11/fvwm2/${FVWM_VER}/FvwmCascade
-lib/X11/fvwm2/${FVWM_VER}/FvwmCommand.pm
-lib/X11/fvwm2/${FVWM_VER}/FvwmCommand.sh
-lib/X11/fvwm2/${FVWM_VER}/FvwmCommandS
-lib/X11/fvwm2/${FVWM_VER}/FvwmConsole
-lib/X11/fvwm2/${FVWM_VER}/FvwmConsoleC
-lib/X11/fvwm2/${FVWM_VER}/FvwmConsoleC.pl
-lib/X11/fvwm2/${FVWM_VER}/FvwmCpp
-lib/X11/fvwm2/${FVWM_VER}/FvwmEvent
-lib/X11/fvwm2/${FVWM_VER}/FvwmForm
-${PLIST.gtk}lib/X11/fvwm2/${FVWM_VER}/FvwmGtk
-lib/X11/fvwm2/${FVWM_VER}/FvwmIconMan
-lib/X11/fvwm2/${FVWM_VER}/FvwmIdent
-lib/X11/fvwm2/${FVWM_VER}/FvwmM4
-lib/X11/fvwm2/${FVWM_VER}/FvwmPager
-lib/X11/fvwm2/${FVWM_VER}/FvwmPerl
-lib/X11/fvwm2/${FVWM_VER}/FvwmProxy
-lib/X11/fvwm2/${FVWM_VER}/FvwmRearrange
-lib/X11/fvwm2/${FVWM_VER}/FvwmScript
-lib/X11/fvwm2/${FVWM_VER}/FvwmTalk
-lib/X11/fvwm2/${FVWM_VER}/FvwmTile
+lib/X11/fvwm2/${PKGVERSION}/FvwmAnimate
+lib/X11/fvwm2/${PKGVERSION}/FvwmAudio
+lib/X11/fvwm2/${PKGVERSION}/FvwmAuto
+lib/X11/fvwm2/${PKGVERSION}/FvwmBacker
+lib/X11/fvwm2/${PKGVERSION}/FvwmBanner
+lib/X11/fvwm2/${PKGVERSION}/FvwmButtons
+lib/X11/fvwm2/${PKGVERSION}/FvwmCascade
+lib/X11/fvwm2/${PKGVERSION}/FvwmCommandS
+lib/X11/fvwm2/${PKGVERSION}/FvwmConsole
+lib/X11/fvwm2/${PKGVERSION}/FvwmConsoleC
+lib/X11/fvwm2/${PKGVERSION}/FvwmConsoleC.pl
+lib/X11/fvwm2/${PKGVERSION}/FvwmCpp
+lib/X11/fvwm2/${PKGVERSION}/FvwmEvent
+lib/X11/fvwm2/${PKGVERSION}/FvwmForm
+lib/X11/fvwm2/${PKGVERSION}/FvwmIconMan
+lib/X11/fvwm2/${PKGVERSION}/FvwmIdent
+lib/X11/fvwm2/${PKGVERSION}/FvwmM4
+lib/X11/fvwm2/${PKGVERSION}/FvwmPager
+lib/X11/fvwm2/${PKGVERSION}/FvwmPerl
+lib/X11/fvwm2/${PKGVERSION}/FvwmProxy
+lib/X11/fvwm2/${PKGVERSION}/FvwmRearrange
+lib/X11/fvwm2/${PKGVERSION}/FvwmScript
+lib/X11/fvwm2/${PKGVERSION}/FvwmTalk
+lib/X11/fvwm2/${PKGVERSION}/FvwmTile
 man/man1/FvwmAnimate.1
 man/man1/FvwmAuto.1
 man/man1/FvwmBacker.1
@@ -54,7 +47,6 @@ man/man1/FvwmConsoleC.pl.1
 man/man1/FvwmCpp.1
 man/man1/FvwmEvent.1
 man/man1/FvwmForm.1
-${PLIST.gtk}man/man1/FvwmGtk.1
 man/man1/FvwmIconMan.1
 man/man1/FvwmIdent.1
 man/man1/FvwmM4.1
@@ -132,6 +124,22 @@ share/fvwm2/default-config/images/icons/terminal.png
 share/fvwm2/default-config/images/icons/wallpaper.png
 share/fvwm2/fvwm-menu-desktop-config.fpl
 share/fvwm2/fvwm-script-ComExample.pl
+share/fvwm2/locale/ar/LC_MESSAGES/FvwmScript.mo
+share/fvwm2/locale/ar/LC_MESSAGES/fvwm.mo
+share/fvwm2/locale/da/LC_MESSAGES/FvwmScript.mo
+share/fvwm2/locale/da/LC_MESSAGES/fvwm.mo
+share/fvwm2/locale/de/LC_MESSAGES/FvwmScript.mo
+share/fvwm2/locale/de/LC_MESSAGES/fvwm.mo
+share/fvwm2/locale/es/LC_MESSAGES/FvwmScript.mo
+share/fvwm2/locale/es/LC_MESSAGES/fvwm.mo
+share/fvwm2/locale/fr/LC_MESSAGES/FvwmScript.mo
+share/fvwm2/locale/fr/LC_MESSAGES/fvwm.mo
+share/fvwm2/locale/ru/LC_MESSAGES/FvwmScript.mo
+share/fvwm2/locale/ru/LC_MESSAGES/fvwm.mo
+share/fvwm2/locale/sv_SE/LC_MESSAGES/FvwmScript.mo
+share/fvwm2/locale/sv_SE/LC_MESSAGES/fvwm.mo
+share/fvwm2/locale/zh_CN/LC_MESSAGES/FvwmScript.mo
+share/fvwm2/locale/zh_CN/LC_MESSAGES/fvwm.mo
 share/fvwm2/perllib/FVWM/Commands.pm
 share/fvwm2/perllib/FVWM/Constants.pm
 share/fvwm2/perllib/FVWM/Event.pm
@@ -149,19 +157,4 @@ share/fvwm2/perllib/FVWM/Tracker/Scheduler.pm
 share/fvwm2/perllib/FVWM/Tracker/WindowList.pm
 share/fvwm2/perllib/General/FileSystem.pm
 share/fvwm2/perllib/General/Parse.pm
-share/locale/ar/LC_MESSAGES/FvwmScript.mo
-share/locale/ar/LC_MESSAGES/fvwm.mo
-share/locale/da/LC_MESSAGES/FvwmScript.mo
-share/locale/da/LC_MESSAGES/fvwm.mo
-share/locale/de/LC_MESSAGES/FvwmScript.mo
-share/locale/de/LC_MESSAGES/fvwm.mo
-share/locale/es/LC_MESSAGES/FvwmScript.mo
-share/locale/es/LC_MESSAGES/fvwm.mo
-share/locale/fr/LC_MESSAGES/FvwmScript.mo
-share/locale/fr/LC_MESSAGES/fvwm.mo
-share/locale/ru/LC_MESSAGES/FvwmScript.mo
-share/locale/ru/LC_MESSAGES/fvwm.mo
-share/locale/sv_SE/LC_MESSAGES/FvwmScript.mo
-share/locale/sv_SE/LC_MESSAGES/fvwm.mo
-share/locale/zh_CN/LC_MESSAGES/FvwmScript.mo
-share/locale/zh_CN/LC_MESSAGES/fvwm.mo
+@pkgdir lib/X11/fvwm2/pixmaps
