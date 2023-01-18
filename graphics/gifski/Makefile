@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2023/01/12 12:55:46 pin Exp $
+# $NetBSD: Makefile,v 1.2 2023/01/18 11:44:11 pin Exp $
 
-DISTNAME=	gifski-1.8.1
+DISTNAME=	gifski-1.9.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ImageOptim/}
 
