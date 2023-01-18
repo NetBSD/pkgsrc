@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2023/01/18 16:33:14 wiz Exp $
+lib/libtree-sitter-typescript.so
