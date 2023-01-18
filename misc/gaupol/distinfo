@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2021/10/26 10:59:04 nia Exp $
+$NetBSD: distinfo,v 1.16 2023/01/18 23:12:27 wiz Exp $
 
-BLAKE2s (gaupol-0.28.2.tar.xz) = 3aa27fe89b0dbdeba58c4fc733903aac97a82038dd9635897351338d73dc6886
-SHA512 (gaupol-0.28.2.tar.xz) = e3b47e35fe7825a105870e6e691ee85f168d7f171eb2da2775b88a099069b0593a9878fe9ec8f47fa824d8aa5a18f28278c78731538a64d900401b13d38ae7d8
-Size (gaupol-0.28.2.tar.xz) = 495248 bytes
+BLAKE2s (gaupol-1.11.tar.gz) = 686c3300e9703879b059601fb883dc304a719eff22ec79952baa98df5e911e4f
+SHA512 (gaupol-1.11.tar.gz) = 8c623f6ed8d189a79a994545be3dd96ae7fec399216520bfe89587a9c0b5917e07b6d80fe1f8a7b2d016b9fb1aa544bdabe103428dc97ea78e6d8c05666d0e9c
+Size (gaupol-1.11.tar.gz) = 581799 bytes
