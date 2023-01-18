@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.24 2017/08/01 17:40:15 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2023/01/18 16:49:07 wiz Exp $
 
 DISTNAME=	firewalk-5.0
 PKGREVISION=	4
 CATEGORIES=	net security
-MASTER_SITES=	http://www.packetfactory.net/firewalk/dist/
+#MASTER_SITES=	http://www.packetfactory.net/firewalk/dist/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-#HOMEPAGE=	http://www.packetfactory.net/Projects/firewalk/
+#HOMEPAGE=	http://packetfactory.openwall.net/projects/firewalk/
 COMMENT=	Determines the filter rules on a packet forwarding device
 LICENSE=	2-clause-bsd
 
