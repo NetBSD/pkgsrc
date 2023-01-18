@@ -895,6 +895,7 @@ tin-use-inn-spool	Use the INN spool directories.
 tk			Support the Tk toolkit.
 tls			Enable TLS support.
 tokyocabinet		Enable Tokyo Cabinet support.
+tree-sitter		Enable parsing using the tree-sitter library.
 tremor			Enable Tremor fixed point audio decoding library support.
 trn-inn			Use INN as NNTP client.
 trn-nntpclnt		Use nntpclnt as NNTP client.
