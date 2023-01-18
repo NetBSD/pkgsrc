@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/01/18 16:21:23 wiz Exp $
+
+BLAKE2s (tree-sitter-go-0.19.1.tar.gz) = 67ee8fe7000c658ac326ef61f2969e3f86344e20f1b057756160b41ed6ad9c19
+SHA512 (tree-sitter-go-0.19.1.tar.gz) = 54dfe060bab199dacef4e1c5d20a1316540fcad772d0b2a097f655e64ee8dfb2f78e80cc4be7d9ca22fe4411ec492eb09334044cfd2746d21654f9c17a9e8c5c
+Size (tree-sitter-go-0.19.1.tar.gz) = 160278 bytes
