@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.418 2023/01/18 15:45:35 otis Exp $
+$NetBSD: CHANGES-2023,v 1.419 2023/01/18 16:21:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -510,3 +510,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/git-base to 2.39.1 [otis 2023-01-18]
 	Updated devel/git-contrib to 2.39.1 [otis 2023-01-18]
 	Updated devel/git-docs to 2.39.1 [otis 2023-01-18]
+	Added textproc/tree-sitter-go version 0.19.1 [wiz 2023-01-18]
