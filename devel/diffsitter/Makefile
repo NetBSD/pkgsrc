@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2022/12/26 22:13:02 pin Exp $
+# $NetBSD: Makefile,v 1.4 2023/01/18 10:56:42 pin Exp $
 
 DISTNAME=	diffsitter-0.7.3
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=afnanenayet/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -9,6 +10,8 @@ MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/afnanenayet/diffsitter/
 COMMENT=	Tree-sitter based AST difftool to get meaningful semantic diffs
 LICENSE=	mit
+
+RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${PREFIX}/lib
 
 .include "cargo-depends.mk"
 
