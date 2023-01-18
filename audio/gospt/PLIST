@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2023/01/18 09:09:43 pin Exp $
+bin/gospt
