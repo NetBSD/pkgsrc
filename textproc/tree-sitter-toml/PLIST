@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2023/01/18 13:40:47 wiz Exp $
+lib/libtree-sitter-toml.so

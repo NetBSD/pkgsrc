@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/01/18 13:40:47 wiz Exp $
+
+BLAKE2s (tree-sitter-toml-0.5.1.tar.gz) = e0671cdabe9150815b8f9928cf04564db967fee57b6a309a62642c6510c94b68
+SHA512 (tree-sitter-toml-0.5.1.tar.gz) = 14d14e04152f4e043f536e6170d4187ddc69fe2bd3feae157ba6e3eb811cd80e79ed1937573c7723a613a544e057fb37ba1876c4824f15306be3adc93f33fc67
+Size (tree-sitter-toml-0.5.1.tar.gz) = 162300 bytes
