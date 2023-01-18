@@ -1,0 +1,5 @@
+Spotify TUI and CLI tool written in go.
+
+gospt is not really a Spotify client but, more of a client controller.
+You will need a client like 'librespot' running in the backgroud and to set
+that as device in gospt.
