@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.416 2023/01/18 15:44:55 otis Exp $
+$NetBSD: CHANGES-2023,v 1.417 2023/01/18 15:45:10 otis Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -508,3 +508,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added textproc/tree-sitter-cmake version 0.1.0 [wiz 2023-01-18]
 	Updated devel/git to 2.39.1 [otis 2023-01-18]
 	Updated devel/git-base to 2.39.1 [otis 2023-01-18]
+	Updated devel/git-contrib to 2.39.1 [otis 2023-01-18]
