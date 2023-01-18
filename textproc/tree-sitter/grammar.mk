@@ -1,4 +1,4 @@
-# $NetBSD: grammar.mk,v 1.2 2023/01/18 08:21:32 wiz Exp $
+# $NetBSD: grammar.mk,v 1.3 2023/01/18 13:28:15 wiz Exp $
 #
 # Common logic to build and install tree-sitter grammars.
 #
@@ -14,10 +14,11 @@ do-build:
 	cd ${WRKSRC}/src && \
 	${CC} ${CFLAGS} -std=c99 -I. -c -fPIC parser.c
 	cd ${WRKSRC}/src && \
-	if [ -f scanner.c ]; then ${CC} ${CFLAGS} -std=c99 -I. -c -fPIC scanner.c; else \
-	${CXX} ${CXXFLAGS} -I. -c -fPIC scanner.cc; fi
+	if [ -f scanner.c ]; then ${CC} ${CFLAGS} -std=c99 -I. -c -fPIC scanner.c; fi
 	cd ${WRKSRC}/src && \
-	${CXX} -shared -o ${GRAMMAR_LIBRARY_NAME}.so scanner.o parser.o
+	if [ -f scanner.cc ]; then ${CXX} ${CXXFLAGS} -I. -c -fPIC scanner.cc; fi
+	cd ${WRKSRC}/src && \
+	${CXX} -shared -o ${GRAMMAR_LIBRARY_NAME}.so *.o
 
 INSTALLATION_DIRS+=	lib
 
