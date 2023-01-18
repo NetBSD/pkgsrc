@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.424 2023/01/18 17:55:30 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.425 2023/01/18 22:02:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -516,3 +516,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added textproc/tree-sitter-typescript version 0.20.1 [wiz 2023-01-18]
 	Added textproc/tree-sitter-dockerfile version 0.1.2 [wiz 2023-01-18]
 	Added shells/sheldon version 0.7.1 [schmonz 2023-01-18]
+	Updated shells/fish to 3.6.0 [wiz 2023-01-18]
