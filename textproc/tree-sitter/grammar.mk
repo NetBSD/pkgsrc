@@ -1,4 +1,4 @@
-# $NetBSD: grammar.mk,v 1.1 2023/01/18 08:18:16 wiz Exp $
+# $NetBSD: grammar.mk,v 1.2 2023/01/18 08:21:32 wiz Exp $
 #
 # Common logic to build and install tree-sitter grammars.
 #
@@ -6,7 +6,7 @@
 #  Name of the grammar library to build and install.
 #
 
-GRAMMAR_LIBRARY_NAME?=	lib${PKGNAME}
+GRAMMAR_LIBRARY_NAME?=	lib${PKGBASE}
 
 USE_LANGUAGES+=		c c++
 
