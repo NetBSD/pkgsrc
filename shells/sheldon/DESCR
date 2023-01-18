@@ -1,0 +1,10 @@
+Sheldon is a fast, configurable shell plugin manager. Features:
+
+- Plugins from Git repositories
+    - Branch / tag / commit support
+    - Submodule support
+    - First class support for GitHub repositories
+    - First class support for Gists
+- Arbitrary remote scripts or binary plugins
+- Local plugins
+- Inline plugins
