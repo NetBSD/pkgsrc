@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.398 2023/01/17 21:30:11 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.399 2023/01/18 00:09:03 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -488,3 +488,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/goredo to 1.29.0 [schmonz 2023-01-17]
 	Updated www/restish to 0.16.0 [leot 2023-01-17]
 	Updated textproc/tree-sitter to 0.20.7 [wiz 2023-01-17]
+	Updated net/py-awscli to 1.27.51 [schmonz 2023-01-18]
