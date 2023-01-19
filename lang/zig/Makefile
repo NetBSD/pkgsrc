@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2022/11/23 16:20:31 adam Exp $
+# $NetBSD: Makefile,v 1.21 2023/01/19 12:32:18 adam Exp $
 
-DISTNAME=	zig-0.10.0
-PKGREVISION=	1
+DISTNAME=	zig-0.10.1
 CATEGORIES=	lang
 MASTER_SITES=	https://ziglang.org/download/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
@@ -17,8 +16,6 @@ USE_LANGUAGES=	c c++14
 
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 CMAKE_ARGS+=	-DDESTDIR=${DESTDIR}
-
-REPLACE_BASH+=	lib/libcxxabi/src/demangle/cp-to-llvm.sh
 
 CHECK_PORTABILITY_SKIP+=	ci/azure/macos_script
 BUILDLINK_TRANSFORM+=		rm:-Werror
