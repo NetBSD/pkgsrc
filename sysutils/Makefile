@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1028 2023/01/19 11:01:54 wiz Exp $
+# $NetBSD: Makefile,v 1.1029 2023/01/19 13:58:40 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -714,6 +714,7 @@ SUBDIR+=	tiramisu
 SUBDIR+=	tits
 SUBDIR+=	tkcron
 SUBDIR+=	tload
+SUBDIR+=	tmux-mem-cpu-load
 SUBDIR+=	tob
 SUBDIR+=	top
 SUBDIR+=	toshutils
