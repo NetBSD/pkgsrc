@@ -1,6 +1,7 @@
-$NetBSD: patch-netbsd_cpu.cc,v 1.1 2023/01/19 13:58:16 wiz Exp $
+$NetBSD: patch-netbsd_cpu.cc,v 1.2 2023/01/19 14:00:35 wiz Exp $
 
 Adapt to signature change.
+https://github.com/thewtex/tmux-mem-cpu-load/pull/88
 
 --- netbsd/cpu.cc.orig	2022-03-03 16:23:14.000000000 +0000
 +++ netbsd/cpu.cc
