@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2023/01/04 15:23:35 taca Exp $
+# $NetBSD: Makefile,v 1.33 2023/01/19 14:18:26 taca Exp $
 
-DISTNAME=	rack-3.0.3
+DISTNAME=	rack-3.0.4.1
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
