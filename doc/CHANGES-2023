@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.456 2023/01/19 15:46:50 taca Exp $
+$NetBSD: CHANGES-2023,v 1.457 2023/01/19 19:27:04 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -584,3 +584,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added net/nagios-plugin-x509 0.1 [manu 2023-01-19]
 	Updated www/ramaze to 2023.01.06 [taca 2023-01-19]
 	Updated www/passenger to 5.3.7nb13 [taca 2023-01-19]
+	Updated lang/gleam to 0.26.0 [nikita 2023-01-19]
