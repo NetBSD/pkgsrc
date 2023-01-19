@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.454 2023/01/19 15:15:02 manu Exp $
+$NetBSD: CHANGES-2023,v 1.455 2023/01/19 15:17:52 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -582,3 +582,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/ruby-rex-socket to 0.1.45 [taca 2023-01-19]
 	Updated textproc/ruby-kramdown-rfc2629 to 1.6.20 [taca 2023-01-19]
 	Added net/nagios-plugin-x509 0.1 [manu 2023-01-19]
+	Updated www/ramaze to 2023.01.06 [taca 2023-01-19]
