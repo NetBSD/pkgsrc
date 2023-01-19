@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2022/09/10 08:18:59 taca Exp $
+$NetBSD: distinfo,v 1.21 2023/01/19 14:27:24 taca Exp $
 
-BLAKE2s (activesupport-6.0.6.gem) = 018f02d67ea17722a761526a032634d4bfaa718d71a61355472fbcd82212c3dd
-SHA512 (activesupport-6.0.6.gem) = 689b34e78b9a23f7d0607a5e2c5b9077c3c3a8cf16dff7404b24e36f93b0dfa2734b796827d1cb755fec899da409e315474d6ca7068836e4133e8f6fcb467ace
-Size (activesupport-6.0.6.gem) = 215040 bytes
+BLAKE2s (activesupport-6.0.6.1.gem) = ed70447b6929c89e1716fc7e62f65dc8b9a8a35eab0614179e6b0c4cb05fefce
+SHA512 (activesupport-6.0.6.1.gem) = 8e8916713c80d6cb9281ecdd74283f196dd56d2fab0791a0f27ffa0d6a589a0ab72d92f6544fb8bb9bf38d13fe849deec2ffc676fd6303ee42008a66f4c7a179
+Size (activesupport-6.0.6.1.gem) = 215040 bytes
