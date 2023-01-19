@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.428 2023/01/19 00:48:39 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.429 2023/01/19 00:53:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -520,3 +520,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated misc/gaupol to 1.11 [wiz 2023-01-18]
 	Updated net/scapy to 2.5.0nb1 [gutteridge 2023-01-19]
 	Updated x11/xfce4-screenshooter to 1.10.3 [gutteridge 2023-01-19]
+	Updated textproc/hunspell to 1.7.2 [wiz 2023-01-19]
