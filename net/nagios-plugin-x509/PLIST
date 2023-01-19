@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2023/01/19 15:15:02 manu Exp $
+libexec/nagios/check_x509

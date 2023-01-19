@@ -1,0 +1,3 @@
+$NetBSD: DESCR,v 1.1 2023/01/19 15:15:02 manu Exp $
+
+This Nagios plugin monitors x509 certificates for expiration or revokation
