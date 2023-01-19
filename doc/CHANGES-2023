@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.451 2023/01/19 15:04:39 taca Exp $
+$NetBSD: CHANGES-2023,v 1.452 2023/01/19 15:08:39 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -579,3 +579,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/ruby-metasploit-payloads to 2.0.107 [taca 2023-01-19]
 	Updated security/ruby-net-sftp to 4.0.0 [taca 2023-01-19]
 	Updated security/ruby-rex-core to 0.1.29 [taca 2023-01-19]
+	Updated security/ruby-rex-socket to 0.1.45 [taca 2023-01-19]
