@@ -1,10 +1,56 @@
-$NetBSD: patch-examples_loadables_getconf.c,v 1.1 2022/10/04 12:45:31 kim Exp $
+$NetBSD: patch-examples_loadables_getconf.c,v 1.2 2023/01/19 10:50:21 sborrill Exp $
 
-Handle _SC_RTSIG_MAX not being defined (NetBSD 9)
+Handle _SC_RTSIG_MAX not being defined (NetBSD 9) as well as other missing
+definitions (_SC_REALTIME_SIGNALS, _SC_TIMER_MAX, _SC_CPUTIME,
+_SC_THREAD_CPUTIME, SC_DELAYTIMER_MAX, _SC_SIGQUEUE_MAX) on earlier OS
+versions.
 
 --- examples/loadables/getconf.c.orig	2021-12-03 16:46:22.000000000 +0000
-+++ examples/loadables/getconf.c	2022-10-04 12:38:07.370372821 +0000
-@@ -846,7 +846,9 @@
++++ examples/loadables/getconf.c	2023-01-18 16:04:51.328120013 +0000
+@@ -329,7 +329,9 @@
+     { "_POSIX_PRIORITIZED_IO", _SC_PRIORITIZED_IO, SYSCONF },
+ #endif
+     { "_POSIX_PRIORITY_SCHEDULING", _SC_PRIORITY_SCHEDULING, SYSCONF },
++#ifdef _SC_REALTIME_SIGNALS
+     { "_POSIX_REALTIME_SIGNALS", _SC_REALTIME_SIGNALS, SYSCONF },
++#endif
+     { "_POSIX_SAVED_IDS", _SC_SAVED_IDS, SYSCONF },
+ #ifdef _SC_SELECT
+     { "_POSIX_SELECT", _SC_SELECT, SYSCONF },
+@@ -366,7 +368,9 @@
+     { "_POSIX_THREAD_PROCESS_SHARED", _SC_THREAD_PROCESS_SHARED, SYSCONF },
+     { "_POSIX_THREAD_SAFE_FUNCTIONS", _SC_THREAD_SAFE_FUNCTIONS, SYSCONF },
+     { "_POSIX_TIMERS", _SC_TIMERS, SYSCONF },
++#ifdef _SC_TIMER_MAX
+     { "TIMER_MAX", _SC_TIMER_MAX, SYSCONF },
++#endif
+ #ifdef _POSIX_TZNAME_MAX
+     { "_POSIX_TZNAME_MAX", _SC_TZNAME_MAX, SYSCONF },
+ #else
+@@ -743,8 +747,12 @@
+     { "_POSIX_C_LANG_SUPPORT_R", _SC_C_LANG_SUPPORT_R, SYSCONF },
+ #endif
+     { "_POSIX_CLOCK_SELECTION", _SC_CLOCK_SELECTION, SYSCONF },
++#ifdef _SC_CPUTIME
+     { "_POSIX_CPUTIME", _SC_CPUTIME, SYSCONF },
++#endif
++#ifdef _SC_THREAD_CPUTIME
+     { "_POSIX_THREAD_CPUTIME", _SC_THREAD_CPUTIME, SYSCONF },
++#endif
+ #ifdef _SC_DEVICE_SPECIFIC
+     { "_POSIX_DEVICE_SPECIFIC", _SC_DEVICE_SPECIFIC, SYSCONF },
+ #endif
+@@ -826,7 +834,9 @@
+ #ifdef _SC_AIO_PRIO_DELTA_MAX
+     { "AIO_PRIO_DELTA_MAX", _SC_AIO_PRIO_DELTA_MAX, SYSCONF },
+ #endif
++#ifdef _SC_DELAYTIMER_MAX
+     { "DELAYTIMER_MAX", _SC_DELAYTIMER_MAX, SYSCONF },
++#endif
+     { "HOST_NAME_MAX", _SC_HOST_NAME_MAX, SYSCONF },
+     { "LOGIN_NAME_MAX", _SC_LOGIN_NAME_MAX, SYSCONF },
+     { "MQ_OPEN_MAX", _SC_MQ_OPEN_MAX, SYSCONF },
+@@ -846,14 +856,18 @@
  #ifdef _SC_TRACE_LOG
      { "_POSIX_TRACE_LOG", _SC_TRACE_LOG, SYSCONF },
  #endif
@@ -14,3 +60,12 @@ Handle _SC_RTSIG_MAX not being defined (NetBSD 9)
  #ifdef _SC_SEM_NSEMS_MAX
      { "SEM_NSEMS_MAX", _SC_SEM_NSEMS_MAX, SYSCONF },
  #endif
+ #ifdef _SC_SEM_VALUE_MAX
+     { "SEM_VALUE_MAX", _SC_SEM_VALUE_MAX, SYSCONF },
+ #endif
++#ifdef _SC_SIGQUEUE_MAX
+     { "SIGQUEUE_MAX", _SC_SIGQUEUE_MAX, SYSCONF },
++#endif
+     { "FILESIZEBITS", _PC_FILESIZEBITS, PATHCONF },
+ #ifdef _PC_ALLOC_SIZE_MIN
+     { "POSIX_ALLOC_SIZE_MIN", _PC_ALLOC_SIZE_MIN, PATHCONF },
