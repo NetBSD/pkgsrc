@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.432 2023/01/19 10:55:10 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.433 2023/01/19 11:01:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -523,3 +523,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/hunspell to 1.7.2 [wiz 2023-01-19]
 	Added lang/qbe version 1.0 [charlotte 2023-01-19]
 	Removed databases/mysql-workbench [wiz 2023-01-19]
+	Removed sysutils/facette [wiz 2023-01-19]

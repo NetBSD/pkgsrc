@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:19:34 nia Exp $
-
-BLAKE2s (facette-0.4.0dev-d77e77680d52d232305d0f12af6e3e1c857903cb.tar.gz) = e39e2cfa310ea45a58d32aec916a2821714e95c2606119c6b0b1c0be9c91d53a
-SHA512 (facette-0.4.0dev-d77e77680d52d232305d0f12af6e3e1c857903cb.tar.gz) = 6739f0c2b599b4297b9dec12c0a288f4f1b0a9e6aed8774a2b8daa82cfbe5f577d3e4c5bb247a2853a1775ba6a5f7502e5b03f1e77aab85a46b6da82dff0852c
-Size (facette-0.4.0dev-d77e77680d52d232305d0f12af6e3e1c857903cb.tar.gz) = 3580148 bytes
-SHA1 (patch-Makefile) = f7aca35d5f03fe877ee88079fe6cca372b4b01a1
