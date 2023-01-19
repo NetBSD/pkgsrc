@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.434 2023/01/19 12:09:28 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.435 2023/01/19 12:09:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -525,3 +525,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed databases/mysql-workbench [wiz 2023-01-19]
 	Removed sysutils/facette [wiz 2023-01-19]
 	Updated devel/ncurses to 6.4 [wiz 2023-01-19]
+	Updated devel/ncursesw to 6.4 [wiz 2023-01-19]
