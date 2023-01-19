@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.53 2023/01/18 23:12:27 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2023/01/19 00:03:47 wiz Exp $
 
 DISTNAME=	gaupol-1.11
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=otsaloma/}
 
-MAINTAINER=	wiz@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://otsaloma.io/gaupol/
 COMMENT=	Subtitle editor
 LICENSE=	gnu-gpl-v3
