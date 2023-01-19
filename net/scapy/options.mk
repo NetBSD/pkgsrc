@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.14 2022/04/21 11:00:00 wiz Exp $
+# $NetBSD: options.mk,v 1.15 2023/01/19 00:35:26 gutteridge Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.scapy
 
@@ -28,6 +28,6 @@ PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
 ### Add in TeX support for psdump() and/or pdfdump()
 ###
 .if !empty(PKG_OPTIONS:Mscapy-pyx)
-PYTHON_VERSIONED_DEPENDENCIES=	X
+PYTHON_VERSIONED_DEPENDENCIES+=	X
 .include "../../lang/python/versioned_dependencies.mk"
 .endif
