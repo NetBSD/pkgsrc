@@ -1,0 +1,30 @@
+$NetBSD: patch-configure.ac,v 1.1 2023/01/19 00:53:42 wiz Exp $
+
+Check for symbol that is in libcurses not, not in in libterminfo.
+
+--- configure.ac.orig	2022-12-29 20:10:49.000000000 +0000
++++ configure.ac
+@@ -52,11 +52,11 @@ AC_ARG_WITH(
+ 	[with_ui=no]
+ )
+ AS_IF([test "x$with_ui" != xno], [
+-	AC_CHECK_LIB([ncursesw],[tparm],[
++	AC_CHECK_LIB([ncursesw],[ungetch],[
+ 		CURSESLIB=-lncursesw
+-	],[AC_CHECK_LIB([curses],[tparm],[
++	],[AC_CHECK_LIB([curses],[ungetch],[
+ 		CURSESLIB=-lcurses
+-	],[AC_CHECK_LIB([ncurses],[tparm],[
++	],[AC_CHECK_LIB([ncurses],[ungetch],[
+ 		CURSESLIB=-lncurses
+ 	])])])
+    if test "$CURSESLIB" != "" ; then
+@@ -82,7 +82,7 @@ READLINELIB=""
+ AS_IF([test "x$with_readline" != xno],
+ 	[AC_CHECK_LIB([tinfo],[tgetent], [
+ 		TERMLIB=-ltinfo
+-        ],[AC_CHECK_LIB([curses],[tparm],[
++        ],[AC_CHECK_LIB([curses],[ungetch],[
+ 		TERMLIB=-lncurses
+ 	],[AC_CHECK_LIB([termcap],[tgetent],[
+ 		TERMLIB=-ltermcap

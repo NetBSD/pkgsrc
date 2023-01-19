@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.2 2018/10/23 11:45:34 bsiegert Exp $
+$NetBSD: patch-ac,v 1.3 2023/01/19 00:53:42 wiz Exp $
 
---- src/hunspell/replist.cxx.orig	2017-09-03 11:38:44.000000000 +0000
+--- src/hunspell/replist.cxx.orig	2022-12-29 20:10:49.000000000 +0000
 +++ src/hunspell/replist.cxx
 @@ -76,6 +76,15 @@
  #include "replist.hxx"
@@ -16,5 +16,5 @@ $NetBSD: patch-ac,v 1.2 2018/10/23 11:45:34 bsiegert Exp $
 +#endif
 +
  RepList::RepList(int n) {
-   dat = (replentry**)malloc(sizeof(replentry*) * n);
-   if (dat == 0)
+   dat.reserve(std::min(n, 16384));
+ }
