@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.40 2022/09/09 15:17:20 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2023/01/19 00:53:42 wiz Exp $
 
-DISTNAME=	hunspell-1.7.1
+DISTNAME=	hunspell-1.7.2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hunspell/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -38,8 +38,7 @@ REPLACE_PERL=	src/tools/ispellaff2myspell
 post-patch:
 	cd ${WRKSRC} && ${TOOLS_PATH.autoreconf} -v -i --force
 
-.include "options.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../mk/curses.buildlink3.mk"
+.include "../../devel/ncursesw/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
