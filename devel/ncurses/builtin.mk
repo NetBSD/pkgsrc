@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.43 2021/11/16 15:19:59 wiz Exp $
+# $NetBSD: builtin.mk,v 1.44 2023/01/19 12:09:20 wiz Exp $
 
 BUILTIN_PKG:=	ncurses
 
@@ -27,8 +27,8 @@ BUILTIN_FIND_FILES.NCURSES_PC=		/usr/lib/pkgconfig/ncurses.pc
 IS_BUILTIN.ncurses=	no
 .  if empty(H_NCURSES:M__nonexistent__) && \
       empty(H_NCURSES:M${LOCALBASE}/*) && \
-      (!empty(BUILTIN_LIB_FOUND.ncurses:M[yY][eE][sS]) || \
-       !empty(BUILTIN_LIB_FOUND.curses:M[yY][eE][sS]))
+      (${BUILTIN_LIB_FOUND.ncurses:U:tl} == yes || \
+       ${BUILTIN_LIB_FOUND.curses:U:tl} == yes)
 IS_BUILTIN.ncurses=	yes
 .  endif
 .endif
@@ -39,7 +39,7 @@ MAKEVARS+=		IS_BUILTIN.ncurses
 ### a package name to represent the built-in package.
 ###
 .if !defined(BUILTIN_PKG.ncurses) && \
-    !empty(IS_BUILTIN.ncurses:M[yY][eE][sS]) && \
+    ${IS_BUILTIN.ncurses:tl} == yes && \
     empty(H_NCURSES:M__nonexistent__)
 BUILTIN_VERSION.ncurses!=						\
 	${AWK} '/\#define[ 	]*NCURSES_VERSION[ 	]/ {		\
@@ -62,10 +62,10 @@ USE_BUILTIN.ncurses=	no
 .  else
 USE_BUILTIN.ncurses=	${IS_BUILTIN.ncurses}
 .    if defined(BUILTIN_PKG.ncurses) && \
-        !empty(IS_BUILTIN.ncurses:M[yY][eE][sS])
+        ${IS_BUILTIN.ncurses:tl} == yes
 USE_BUILTIN.ncurses=	yes
 .      for _dep_ in ${BUILDLINK_API_DEPENDS.ncurses}
-.        if !empty(USE_BUILTIN.ncurses:M[yY][eE][sS])
+.        if ${USE_BUILTIN.ncurses:tl} == yes
 USE_BUILTIN.ncurses!=							\
 	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.ncurses:Q}; then \
 		${ECHO} yes;						\
@@ -102,14 +102,14 @@ MAKEVARS+=		USE_BUILTIN.ncurses
 
 # If USE_NCURSES is set to yes, the use of an ncurses implementation
 # is forced.
-.if defined(USE_NCURSES) && !empty(USE_NCURSES:M[yY][eE][sS])
-.  if !empty(IS_BUILTIN.ncurses:M[nN][oO])
+.if defined(USE_NCURSES) && ${USE_NCURSES:U:tl} == yes
+.  if ${IS_BUILTIN.ncurses:tl} == no
 USE_BUILTIN.ncurses=	no
 .  endif
 .endif
 # If it is set to chgat, a curses implementation with chgat(3) support
 # is considered good enough.
-.if defined(USE_NCURSES) && empty(USE_NCURSES:M[yY][eE][sS])
+.if defined(USE_NCURSES) && ${USE_NCURSES:U:tl} != yes
 .  if ${USE_NCURSES:U} == chgat && ${H_CURSES:U} == __nonexistent__
 USE_BUILTIN.ncurses=	no
 .  endif
@@ -121,7 +121,7 @@ USE_BUILTIN.ncurses=	no
 
 # if terminfo is needed and we don't have it, use pkgsrc ncurses
 .if defined(USE_TERMINFO)
-.  if !empty(BUILTIN_LIB_FOUND.terminfo:M[nN][oO])
+.  if ${BUILTIN_LIB_FOUND.terminfo:U:tl} == no
 USE_BUILTIN.ncurses=	no
 .  endif
 .endif
@@ -129,9 +129,9 @@ USE_BUILTIN.ncurses=	no
 # Define BUILTIN_LIBNAME.ncurses to be the base name of the built-in
 # ncurses library.
 #
-.if !empty(BUILTIN_LIB_FOUND.ncurses:M[yY][eE][sS])
+.if ${BUILTIN_LIB_FOUND.ncurses:U:tl} == yes
 BUILTIN_LIBNAME.ncurses=	ncurses
-.elif !empty(BUILTIN_LIB_FOUND.curses:M[yY][eE][sS])
+.elif ${BUILTIN_LIB_FOUND.curses:U:tl} == yes
 BUILTIN_LIBNAME.ncurses=	curses
 .endif
 #
@@ -140,7 +140,7 @@ BUILTIN_LIBNAME.ncurses=	curses
 # turn "-lncurses" into "-lcurses".
 #
 .if (${OPSYS} == "Interix") && \
-    !empty(BUILTIN_LIB_FOUND.curses:M[yY][eE][sS])
+    ${BUILTIN_LIB_FOUND.curses:U:tl} == yes
 BUILTIN_LIBNAME.ncurses=	curses
 .endif
 
@@ -149,9 +149,9 @@ BUILTIN_LIBNAME.ncurses=	curses
 ### solely to determine whether a built-in implementation exists.
 ###
 CHECK_BUILTIN.ncurses?=	no
-.if !empty(CHECK_BUILTIN.ncurses:M[nN][oO])
+.if ${CHECK_BUILTIN.ncurses:tl} == no
 
-.  if !empty(USE_BUILTIN.ncurses:M[yY][eE][sS])
+.  if ${USE_BUILTIN.ncurses:tl} == yes
 BUILDLINK_LIBNAME.ncurses=	${BUILTIN_LIBNAME.ncurses}
 BUILDLINK_TRANSFORM+=		l:ncurses:${BUILTIN_LIBNAME.ncurses}
 BUILDLINK_TARGETS+=		buildlink-curses-ncurses-h
