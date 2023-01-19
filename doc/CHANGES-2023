@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.426 2023/01/18 23:12:37 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.427 2023/01/19 00:37:25 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -518,3 +518,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added shells/sheldon version 0.7.1 [schmonz 2023-01-18]
 	Updated shells/fish to 3.6.0 [wiz 2023-01-18]
 	Updated misc/gaupol to 1.11 [wiz 2023-01-18]
+	Updated net/scapy to 2.5.0nb1 [gutteridge 2023-01-19]
