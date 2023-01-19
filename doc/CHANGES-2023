@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.442 2023/01/19 14:13:03 taca Exp $
+$NetBSD: CHANGES-2023,v 1.443 2023/01/19 14:18:52 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -534,3 +534,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/ruby-rspec-mocks to 3.12.3 [taca 2023-01-19]
 	Updated www/ruby-faraday to 2.7.3 [taca 2023-01-19]
 	Updated www/ruby-faraday1 to 1.10.3 [taca 2023-01-19]
+	Updated www/ruby-rack to 3.0.4.1 [taca 2023-01-19]
