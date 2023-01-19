@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2023/01/17 01:33:17 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.13 2023/01/19 00:35:26 gutteridge Exp $
 bin/scapy
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -1019,4 +1019,3 @@ ${PYSITELIB}/test/tls/example_server.py
 ${PYSITELIB}/test/tls/example_server.pyc
 ${PYSITELIB}/test/tls/example_server.pyo
 man/man1/scapy.1
-share/examples/scapy/ethertypes
