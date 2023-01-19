@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2023/01/19 12:32:18 adam Exp $
+# $NetBSD: Makefile,v 1.22 2023/01/19 19:11:26 nikita Exp $
 
 DISTNAME=	zig-0.10.1
 CATEGORIES=	lang
@@ -19,6 +19,11 @@ CMAKE_ARGS+=	-DDESTDIR=${DESTDIR}
 
 CHECK_PORTABILITY_SKIP+=	ci/azure/macos_script
 BUILDLINK_TRANSFORM+=		rm:-Werror
+
+# \todo: There is currently an issue building this as a PIE
+MKPIE_SUPPORTED=        no
+# RELRO checks fail for this package at the moment
+RELRO_SUPPORTED=        no
 
 .include "../../devel/lld/buildlink3.mk"
 .include "../../lang/clang/buildlink3.mk"
