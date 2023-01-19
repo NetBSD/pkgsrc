@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2023/01/19 12:26:12 wiz Exp $
+bin/tree-sitter
