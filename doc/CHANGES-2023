@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.436 2023/01/19 12:26:36 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.437 2023/01/19 12:53:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -527,3 +527,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/ncurses to 6.4 [wiz 2023-01-19]
 	Updated devel/ncursesw to 6.4 [wiz 2023-01-19]
 	Added textproc/tree-sitter-cli version 0.20.7 [wiz 2023-01-19]
+	Updated lang/zig to 0.10.1 [adam 2023-01-19]
+	Updated devel/SDL2 to 2.26.2 [adam 2023-01-19]
