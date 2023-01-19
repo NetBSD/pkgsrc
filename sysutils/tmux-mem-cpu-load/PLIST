@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2023/01/19 13:58:16 wiz Exp $
+bin/tmux-mem-cpu-load
