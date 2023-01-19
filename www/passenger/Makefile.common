@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2022/09/12 20:42:15 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.13 2023/01/19 15:46:29 taca Exp $
 # used by www/ap2-passenger/Makefile
 # used by www/passenger/Makefile
 
@@ -47,8 +47,10 @@ MAKE_ENV+=		LIBEV_EXTRA_ARGS=ac_cv_header_sys_inotify_h=no
 .endif
 
 pre-install:
-	${RM} -f ${WRKSRC}/src/ruby_supportlib/phusion_passenger/packaging.rb.orig \
-		 ${WRKSRC}/src/ruby_supportlib/phusion_passenger/platform_info/cxx_portability.rb.orig
+	cd ${WRKSRC}/src/ruby_supportlib/phusion_passenger && \
+	${RM} -f packaging.rb.orig \
+		 platform_info/cxx_portability.rb.orig \
+		 platform_info/operating_system.rb.orig
 
 .include "../../www/curl/buildlink3.mk"
 .include "../../lang/ruby/modules.mk"
