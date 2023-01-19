@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.437 2023/01/19 12:53:11 adam Exp $
+$NetBSD: CHANGES-2023,v 1.438 2023/01/19 13:58:42 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -529,3 +529,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added textproc/tree-sitter-cli version 0.20.7 [wiz 2023-01-19]
 	Updated lang/zig to 0.10.1 [adam 2023-01-19]
 	Updated devel/SDL2 to 2.26.2 [adam 2023-01-19]
+	Updated devel/ruby-globalid to 1.0.1 [taca 2023-01-19]
