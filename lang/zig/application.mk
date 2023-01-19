@@ -1,20 +1,20 @@
-# $NetBSD: application.mk,v 1.1 2020/06/16 11:01:42 nikita Exp $
+# $NetBSD: application.mk,v 1.2 2023/01/19 20:46:22 nikita Exp $
 #
 # Common logic to handle zig packages
 # This is only usable if they include a 'build.zig' file
 #
 .include "../../mk/bsd.fast.prefs.mk"
 
-_ZIGBUILDINSTALLARGS=	-Drelease-fast --prefix ${DESTDIR}${PREFIX}
+ZIGBUILDARGS?=		-Drelease-fast
 
 BUILD_DEPENDS+=		zig-[0-9]*:../../lang/zig
 USE_LANGUAGES=		c
 
 do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} zig build ${_ZIGBUILDINSTALLARGS}
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} zig build ${ZIGBUILDARGS} --prefix ${DESTDIR}${PREFIX}
 
 do-install:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} zig build install ${_ZIGBUILDINSTALLARGS}
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} zig build install ${ZIGBUILDARGS} --prefix ${DESTDIR}${PREFIX}
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} zig build test
