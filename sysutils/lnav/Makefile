@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2023/01/17 10:09:13 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2023/01/19 10:40:28 wiz Exp $
 
 DISTNAME=	lnav-0.11.1
 CATEGORIES=	sysutils textproc
@@ -14,6 +14,8 @@ LICENSE=	2-clause-bsd
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	bash:build gmake
+
+GCC_REQD+=	8
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
