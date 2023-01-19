@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22499 2023/01/18 23:12:37 wiz Exp $
+$NetBSD: TODO,v 1.22500 2023/01/19 07:39:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -649,6 +649,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o flatbuffers-1.12.0
 	o flow-tools-0.411
 	o fluent-bit-1.7.4
+	o fontconfig-2.14.0
 	o foomatic-filters-4.0.12
 	o foomatic4-db-20210421
 	o fop-2.6
@@ -1460,6 +1461,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o strace-4.23
 	o stratagus-2.2.5.5
 	o streamtuner-2.2.0
+	o sudo-1.9.12p2
 	o sup-0.4
 	o superlu-5.2.2
 	o supertux-0.6.3
