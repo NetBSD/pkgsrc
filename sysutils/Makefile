@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1027 2023/01/16 09:14:38 pin Exp $
+# $NetBSD: Makefile,v 1.1028 2023/01/19 11:01:54 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -216,7 +216,6 @@ SUBDIR+=	exa
 SUBDIR+=	extipl
 SUBDIR+=	f3
 SUBDIR+=	fabric
-SUBDIR+=	facette
 SUBDIR+=	fakeroot
 SUBDIR+=	fam
 SUBDIR+=	fastfs
