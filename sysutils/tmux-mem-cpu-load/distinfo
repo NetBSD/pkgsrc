@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2023/01/19 13:58:16 wiz Exp $
+$NetBSD: distinfo,v 1.2 2023/01/19 14:00:35 wiz Exp $
 
 BLAKE2s (tmux-mem-cpu-load-3.6.0.tar.gz) = 2fb43d463ce3dcc7a644b560e044dc94b31a4ef859d908f5602801e3eb32b1ea
 SHA512 (tmux-mem-cpu-load-3.6.0.tar.gz) = 491a934d49c4fe75ffbf57919cef4547666ceace03bdff9644e1847938b0d31c4270ed002b0a13580ca1bf4b5d1dff24b8ac2323c8b86a69a21313f74e209a6b
 Size (tmux-mem-cpu-load-3.6.0.tar.gz) = 22935 bytes
-SHA1 (patch-netbsd_cpu.cc) = 560ce5e1f7cdf1bc3412758675ca5207365a80cd
+SHA1 (patch-netbsd_cpu.cc) = faa73e9b082713c3f935f13cda45583db971a450
