@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2021/10/26 11:30:22 nia Exp $
+$NetBSD: distinfo,v 1.15 2023/01/19 15:46:29 taca Exp $
 
 BLAKE2s (passenger-5.3.7.tar.gz) = 4b0f78b7de007b84c781b0b23cfe33975996e1f110a1c1c48f78fef0a97a8ea6
 SHA512 (passenger-5.3.7.tar.gz) = bbef4881e0e0c698b29b10ff8a7afbc001c31d14fb80ffa27ed6867a92ad23712319733e6162be1f7720ebda421630af2f258f8167fa73c7b5ea594bc8247158
@@ -15,3 +15,4 @@ SHA1 (patch-src_cxx__supportlib_vendor-modified_boost_asio_detail_impl_kqueue__r
 SHA1 (patch-src_ruby__supportlib_phusion__passenger.rb) = b5bf22b8ef94f9c64e0f02ed97e4c104eddf7cb6
 SHA1 (patch-src_ruby__supportlib_phusion__passenger_packaging.rb) = 74134ef6c360bc65ffb4f74e7ebcc36bf7b6e9f7
 SHA1 (patch-src_ruby__supportlib_phusion__passenger_platform__info_cxx__portability.rb) = a3ad34fe1b5917c1971b49c8831d8aea9dbb090a
+SHA1 (patch-src_ruby__supportlib_phusion__passenger_platform__info_operating__system.rb) = 8a251dc99d4b551067e886b541b4c4fb8d4ab7cc
