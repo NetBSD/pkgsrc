@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.50 2021/11/16 15:19:59 wiz Exp $
+$NetBSD: distinfo,v 1.51 2023/01/19 12:09:20 wiz Exp $
 
-BLAKE2s (ncurses-6.3.tar.gz) = 01d40dd10a5592a332b38c90344e5e42e7475f53bee3bd4e50f5de90e4623e67
-SHA512 (ncurses-6.3.tar.gz) = 5373f228cba6b7869210384a607a2d7faecfcbfef6dbfcd7c513f4e84fbd8bcad53ac7db2e7e84b95582248c1039dcfc7c4db205a618f7da22a166db482f0105
-Size (ncurses-6.3.tar.gz) = 3583550 bytes
+BLAKE2s (ncurses-6.4.tar.gz) = bf6718282abda300f0a840bcf03b7fe9444b6200a8ab1ffd826d6181282e97ec
+SHA512 (ncurses-6.4.tar.gz) = 1c2efff87a82a57e57b0c60023c87bae93f6718114c8f9dc010d4c21119a2f7576d0225dab5f0a227c2cfc6fb6bdbd62728e407f35fce5bf351bb50cf9e0fd34
+Size (ncurses-6.4.tar.gz) = 3612591 bytes
 SHA1 (patch-misc_run__tic.in) = a6a8dd89da1a2fbbc5fcabfa6d41ce3a41b75722
-SHA1 (patch-misc_terminfo.src) = fde0f1fc8d0d83cc400b314f6e077b99e975c44c

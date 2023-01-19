@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.50 2022/07/25 21:47:53 wiz Exp $
+# $NetBSD: Makefile.common,v 1.51 2023/01/19 12:09:20 wiz Exp $
 #
 # used by devel/ncurses/Makefile
 # used by devel/ncursesw/Makefile
 
 DISTNAME=	ncurses-${NC_VERS}
-NC_VERS=	6.3
+NC_VERS=	6.4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=ncurses/}
 MASTER_SITES+=	ftp://dickey.his.com/ncurses/
@@ -50,7 +50,7 @@ SUBST_VARS.setenv=	SETENV
 
 CONFIGURE_ARGS.Darwin+=	--disable-mixed-case
 
-.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+.if ${USE_CROSS_COMPILE:U:tl} == yes
 TOOL_DEPENDS+=		ncurses-${NC_VERS}:../../devel/ncurses
 CONFIGURE_ENV+=		BUILD_CC=${NATIVE_CC:Q}
 CONFIGURE_ENV+=		ac_cv_path_TIC_PATH=${PREFIX}/bin/tic
