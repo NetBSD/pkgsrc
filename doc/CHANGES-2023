@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.441 2023/01/19 14:11:09 taca Exp $
+$NetBSD: CHANGES-2023,v 1.442 2023/01/19 14:13:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -533,3 +533,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added sysutils/tmux-mem-cpu-load version 3.6.0 [wiz 2023-01-19]
 	Updated devel/ruby-rspec-mocks to 3.12.3 [taca 2023-01-19]
 	Updated www/ruby-faraday to 2.7.3 [taca 2023-01-19]
+	Updated www/ruby-faraday1 to 1.10.3 [taca 2023-01-19]
