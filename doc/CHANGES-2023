@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.449 2023/01/19 14:52:01 taca Exp $
+$NetBSD: CHANGES-2023,v 1.450 2023/01/19 15:01:38 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -577,3 +577,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/ruby-rails70 to 7.0.4.1 [taca 2023-01-19]
 	Updated net/ruby-ruby_smb to 3.2.2 [taca 2023-01-19]
 	Updated security/ruby-metasploit-payloads to 2.0.107 [taca 2023-01-19]
+	Updated security/ruby-net-sftp to 4.0.0 [taca 2023-01-19]
