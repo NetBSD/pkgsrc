@@ -1,12 +1,6 @@
-@comment $NetBSD: PLIST,v 1.11 2021/05/21 21:06:19 nia Exp $
+@comment $NetBSD: PLIST,v 1.12 2023/01/19 15:17:29 taca Exp $
 bin/ramaze${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/.gems
-${GEM_LIBDIR}/.gitignore
-${GEM_LIBDIR}/.mailmap
-${GEM_LIBDIR}/.rvmrc
-${GEM_LIBDIR}/.travis.yml
-${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
@@ -27,7 +21,6 @@ ${GEM_LIBDIR}/examples/app/blog/model/comment.rb
 ${GEM_LIBDIR}/examples/app/blog/model/init.rb
 ${GEM_LIBDIR}/examples/app/blog/model/post.rb
 ${GEM_LIBDIR}/examples/app/blog/model/user.rb
-${GEM_LIBDIR}/examples/app/blog/public/.htaccess
 ${GEM_LIBDIR}/examples/app/blog/public/css/grid.css
 ${GEM_LIBDIR}/examples/app/blog/public/css/layout.css
 ${GEM_LIBDIR}/examples/app/blog/public/css/reset.css
@@ -69,8 +62,8 @@ ${GEM_LIBDIR}/examples/app/upload/start.rb
 ${GEM_LIBDIR}/examples/app/upload/view/index.xhtml
 ${GEM_LIBDIR}/examples/app/whywiki/spec/whywiki.rb
 ${GEM_LIBDIR}/examples/app/whywiki/start.rb
-${GEM_LIBDIR}/examples/app/whywiki/template/edit.xhtml
-${GEM_LIBDIR}/examples/app/whywiki/template/show.xhtml
+${GEM_LIBDIR}/examples/app/whywiki/view/edit.xhtml
+${GEM_LIBDIR}/examples/app/whywiki/view/show.xhtml
 ${GEM_LIBDIR}/examples/app/wikore/spec/wikore.rb
 ${GEM_LIBDIR}/examples/app/wikore/src/controller.rb
 ${GEM_LIBDIR}/examples/app/wikore/src/model.rb
@@ -187,9 +180,9 @@ ${GEM_LIBDIR}/lib/ramaze/app.rb
 ${GEM_LIBDIR}/lib/ramaze/bin/create.rb
 ${GEM_LIBDIR}/lib/ramaze/bin/runner.rb
 ${GEM_LIBDIR}/lib/ramaze/cache.rb
-${GEM_LIBDIR}/lib/ramaze/cache/localmemcache.rb
 ${GEM_LIBDIR}/lib/ramaze/cache/lru.rb
 ${GEM_LIBDIR}/lib/ramaze/cache/memcache.rb
+${GEM_LIBDIR}/lib/ramaze/cache/moneta.rb
 ${GEM_LIBDIR}/lib/ramaze/cache/redis.rb
 ${GEM_LIBDIR}/lib/ramaze/cache/sequel.rb
 ${GEM_LIBDIR}/lib/ramaze/controller.rb
@@ -243,7 +236,6 @@ ${GEM_LIBDIR}/lib/ramaze/snippets.rb
 ${GEM_LIBDIR}/lib/ramaze/snippets/blankslate.rb
 ${GEM_LIBDIR}/lib/ramaze/snippets/object/__dir__.rb
 ${GEM_LIBDIR}/lib/ramaze/snippets/ramaze/deprecated.rb
-${GEM_LIBDIR}/lib/ramaze/snippets/ramaze/lru_hash.rb
 ${GEM_LIBDIR}/lib/ramaze/snippets/string/camel_case.rb
 ${GEM_LIBDIR}/lib/ramaze/snippets/string/color.rb
 ${GEM_LIBDIR}/lib/ramaze/snippets/string/esc.rb
@@ -305,9 +297,9 @@ ${GEM_LIBDIR}/spec/ramaze/app/location.rb
 ${GEM_LIBDIR}/spec/ramaze/bin/app/config.ru
 ${GEM_LIBDIR}/spec/ramaze/bin/create.rb
 ${GEM_LIBDIR}/spec/ramaze/bin/runner.rb
-${GEM_LIBDIR}/spec/ramaze/cache/localmemcache.rb
 ${GEM_LIBDIR}/spec/ramaze/cache/lru.rb
 ${GEM_LIBDIR}/spec/ramaze/cache/memcache.rb
+${GEM_LIBDIR}/spec/ramaze/cache/moneta.rb
 ${GEM_LIBDIR}/spec/ramaze/cache/redis.rb
 ${GEM_LIBDIR}/spec/ramaze/cache/sequel.rb
 ${GEM_LIBDIR}/spec/ramaze/controller/actionless_templates.rb
@@ -375,7 +367,6 @@ ${GEM_LIBDIR}/spec/ramaze/public/ramaze.png
 ${GEM_LIBDIR}/spec/ramaze/public/test_download.css
 ${GEM_LIBDIR}/spec/ramaze/request.rb
 ${GEM_LIBDIR}/spec/ramaze/rewrite/file.css
-${GEM_LIBDIR}/spec/ramaze/session/localmemcache.rb
 ${GEM_LIBDIR}/spec/ramaze/session/lru.rb
 ${GEM_LIBDIR}/spec/ramaze/session/memcache.rb
 ${GEM_LIBDIR}/spec/ramaze/session/redis.rb
