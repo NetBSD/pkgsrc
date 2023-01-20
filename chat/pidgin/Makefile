@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.100 2023/01/20 14:56:51 triaxx Exp $
+# $NetBSD: Makefile,v 1.101 2023/01/20 21:37:11 triaxx Exp $
 
 COMMENT=		Multi-protocol GTK instant messaging client
 PKGREVISION=		2
@@ -36,4 +36,5 @@ INSTALL_DIRS=		pidgin doc
 .include "../../devel/libidn/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
