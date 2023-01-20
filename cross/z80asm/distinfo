@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2023/01/20 21:43:56 thorpej Exp $
+
+BLAKE2s (z80asm-1.8.tar.gz) = c20093c5cce1121728b3deb795136402429fda251a101a533f0d4434019ccdfd
+SHA512 (z80asm-1.8.tar.gz) = 0b2da513200dbdd2d4867347b24488c786e014e4ab84e92e8f0585971bb39a57e65409dc6a95edbe9c017ebb3b25b4b4be9a7bd436b6cf610b59d46a711cb66f
+Size (z80asm-1.8.tar.gz) = 57269 bytes
+SHA1 (patch-Makefile) = 3b3c85d4005ea5e8dc5ee910f854e46b1b8f7b0a
+SHA1 (patch-expressions.c) = c44284596a5278b347707dda5fe8fa85a98030cc
+SHA1 (patch-z80asm.c) = d5abe41d337a738ec41bae19c2d68262dca04339
