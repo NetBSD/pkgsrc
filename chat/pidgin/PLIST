@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2022/07/20 02:14:13 khorben Exp $
+@comment $NetBSD: PLIST,v 1.28 2023/01/20 14:09:09 triaxx Exp $
 bin/pidgin
 include/pidgin/gtkaccount.h
 include/pidgin/gtkblist-theme-loader.h
@@ -69,7 +69,6 @@ lib/pidgin/ticker.la
 lib/pidgin/timestamp.la
 lib/pidgin/timestamp_format.la
 lib/pidgin/transparency.la
-${PLIST.vv}lib/pidgin/vvconfig.la
 lib/pidgin/xmppconsole.la
 lib/pidgin/xmppdisco.la
 lib/pkgconfig/pidgin.pc
