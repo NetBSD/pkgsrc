@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.35 2023/01/17 05:28:59 mrg Exp $
+$NetBSD: distinfo,v 1.36 2023/01/20 22:46:34 mrg Exp $
 
 BLAKE2s (xorg-cf-files-1.0.7.tar.bz2) = 7c971e7951a9369904f766fb5a9e6c78fd07703131e2a042e858e53480f27fd7
 SHA512 (xorg-cf-files-1.0.7.tar.bz2) = 0dd73b9db9fc16bddc94ef23f11434be6ea2f8e0c7bc5ef3c3bfe6749e13843f88d397eed9f980bbbe9e74147172326bd3c3ccb7adedc9150302756e4b07191e
@@ -6,15 +6,15 @@ Size (xorg-cf-files-1.0.7.tar.bz2) = 345575 bytes
 SHA1 (patch-OpenBSDLib.rules) = 65b02b660839adb6e9c13287396a794a4586d927
 SHA1 (patch-X11.rules) = 2dac9bcc111f63b2dd887967ea5fab656f52f06b
 SHA1 (patch-X11.tmpl) = 3f0c5b8ad7a60cd0e1e47afcddaace936b9aaeed
-SHA1 (patch-aa) = a5edc4de740bc20f173a8deaa0d0a68f06955a08
-SHA1 (patch-ab) = f8f816409eb233ae4d8430bd9d43b9bf83c5711d
-SHA1 (patch-ac) = 1f977650d9e903a4ea72afc8541b7649cb989ab8
+SHA1 (patch-aa) = 850672428eec76facfc7862bb9a2a8e1a00ee56d
+SHA1 (patch-ab) = c30b0ac9e661aa76a65877ef7cd4c422a8f0405b
+SHA1 (patch-ac) = e084d790e7713897ba2366145b2088f933aa94e0
 SHA1 (patch-ad) = fcdddf191f676287b7f42e2b16729ed34afc6786
 SHA1 (patch-ae) = d89ea1af22b3d0fab3cc431e3353c9efe4a92264
 SHA1 (patch-af) = 42c0e0738a5ca20c2f7aa09684630093970c1dee
 SHA1 (patch-ag) = b7c07619141df8d8ae718732343fd185098bdafb
 SHA1 (patch-ah) = 9b64b2e5f419ab190d47dd8156b8f84634fd6a36
-SHA1 (patch-ai) = 62867c76ddc14d2e87a04325057a80beb9f116b8
+SHA1 (patch-ai) = ec2523615802a89c63d7015089a908133438b812
 SHA1 (patch-aj) = 3be677041b6bff008caa1375d1e6dd5c90d9f501
 SHA1 (patch-ak) = ec4e8c30782e3081a84b8c3bd8ab71961a0f13cb
 SHA1 (patch-gnuLib.rules) = 44a39881b4f4b6a10250f7ae4b4508af76cef71d

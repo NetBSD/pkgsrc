@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2022/12/01 21:14:09 jperkin Exp $
+$NetBSD: patch-aa,v 1.6 2023/01/20 22:46:34 mrg Exp $
 
---- NetBSD.cf.orig	2021-08-02 01:00:38
-+++ NetBSD.cf
-@@ -126,7 +126,7 @@ XCOMM operating system:  OSName (OSMajorVersion./**/OS
+--- NetBSD.cf.orig	2021-08-01 18:00:38.000000000 -0700
++++ NetBSD.cf	2023-01-18 14:02:16.164685843 -0800
+@@ -126,7 +126,7 @@ XCOMM operating system:  OSName (OSMajor
  # if ((OSMajorVersion == 2 && OSMinorVersion == 99 && OSTeenyVersion < 11) || \
        (OSMajorVersion == 2 && OSMinorVersion < 99) || \
        (OSMajorVersion < 2))
@@ -11,25 +11,7 @@ $NetBSD: patch-aa,v 1.5 2022/12/01 21:14:09 jperkin Exp $
  # endif
  # define SystemMTDefines	-D_REENTRANT
  # define MTSafeAPIDefines	-DXUSE_MTSAFE_API -DXNO_MTSAFE_PWDAPI
-@@ -150,7 +150,7 @@ XCOMM operating system:  OSName (OSMajorVersion./**/OS
- #define MkdirHierCmd		mkdir -p
- 
- #undef CcCmd
--#define CcCmd 			gcc
-+#define CcCmd 			@@PKGSRC_CC@@
- #ifndef DefaultCCOptions
- #if defined(UseInstalled)
- #define DefaultCCOptions 	/**/
-@@ -166,7 +166,7 @@ XCOMM operating system:  OSName (OSMajorVersion./**/OS
- #endif
- #endif
- 
--#define CppCmd			cpp
-+#define CppCmd			@@PKGSRC_CPP@@
- #define StandardCppOptions	-traditional
- #define StandardCppDefines	/**/
- #define PreProcessCmd   	CcCmd -E
-@@ -199,6 +199,8 @@ XCOMM operating system:  OSName (OSMajorVersion./**/OS
+@@ -199,6 +199,8 @@ XCOMM operating system:  OSName (OSMajor
  #  ifndef DoLoadableServer
  #  define DoLoadableServer	YES
  #  endif
@@ -38,14 +20,25 @@ $NetBSD: patch-aa,v 1.5 2022/12/01 21:14:09 jperkin Exp $
  #else
  #  ifndef DoLoadableServer
  #  define DoLoadableServer	NO
-@@ -342,6 +344,10 @@ XCOMM operating system:  OSName (OSMajorVersion./**/OS
-  */
- #ifndef HasPerl
- #define HasPerl			NO
+@@ -333,6 +335,10 @@ XCOMM operating system:  OSName (OSMajor
+ 
+ #define HasFlex			YES
+ 
++#ifndef HasGnuAr
++#define HasGnuAr		YES
 +#endif
 +
-+#if defined(AMD64Architecture)
-+# define HasMTRRBuiltin                YES
+ /* NetBSD doesn't have gperf in the base install */
+ #define DontRebuildGperfOutput	YES
+ 
+@@ -344,6 +350,10 @@ XCOMM operating system:  OSName (OSMajor
+ #define HasPerl			NO
  #endif
  
++#if defined(AMD64Architecture)
++# define HasMTRRBuiltin                YES
++#endif
++
  /*
+  * NetBSD doesn't have gperf in default system
+  * you may override this in host.def if you installed perl from the packages
