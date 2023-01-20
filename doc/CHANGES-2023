@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.466 2023/01/20 18:37:40 fcambus Exp $
+$NetBSD: CHANGES-2023,v 1.467 2023/01/20 21:44:29 thorpej Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -599,3 +599,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-cpplint to 1.6.1 [adam 2023-01-20]
 	Updated devel/swagger-codegen to 3.0.37 [schmonz 2023-01-20]
 	Updated devel/mold to 1.10.0 [fcambus 2023-01-20]
+	Added cross/z80asm version 1.8 [thorpej 2023-01-20]
