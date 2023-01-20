@@ -1,0 +1,14 @@
+z80asm is an assembler for the Z80 microprcessor.  The assembler aims to be
+portable and complete.
+
+Features:
+* All official mnemonics are recognized.
+* Most unofficial mnemonics are recognized.
+* Very complex expressions are allowed (bash style).
+* Other source files can be included.
+* Code can contain conditional parts.
+* Beside the binary output file, a label file can be output with a list
+  of all labels in the program. This label file is includable by other
+  source files, so linker-like functionality can be obtained with it.
+* There is support for listing files, with the input code and the assembled
+  result next to each other.
