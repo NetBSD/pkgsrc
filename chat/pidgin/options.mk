@@ -1,12 +1,16 @@
-# $NetBSD: options.mk,v 1.17 2019/12/21 21:08:42 nia Exp $
+# $NetBSD: options.mk,v 1.18 2023/01/20 14:09:09 triaxx Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.pidgin
-PKG_SUPPORTED_OPTIONS+=		dbus debug gtkspell x11
-PKG_SUGGESTED_OPTIONS+=		dbus gtkspell x11
+PKG_SUPPORTED_OPTIONS+=		dbus debug gtkspell
+PKG_SUGGESTED_OPTIONS+=		dbus gtkspell
+.if ${OPSYS} != "Darwin"
+PKG_SUPPORTED_OPTIONS+=		x11
+PKG_SUGGESTED_OPTIONS+=		x11
+.endif
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		dbus vv x11
+PLIST_VARS+=		dbus x11
 
 .if !empty(PKG_OPTIONS:Mdbus)
 CONFIGURE_ARGS+=	--enable-dbus
