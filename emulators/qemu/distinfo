@@ -1,16 +1,16 @@
-$NetBSD: distinfo,v 1.197 2022/10/25 18:46:08 jperkin Exp $
+$NetBSD: distinfo,v 1.198 2023/01/20 08:36:24 adam Exp $
 
 BLAKE2s (palcode-clipper-qemu-5.2.0nb8) = d388c896a80c1cc3d4785c8434d6688bbcfd54c28f7252ce550ab162a0bba321
 SHA512 (palcode-clipper-qemu-5.2.0nb8) = 33695d6001d86a19793a92d5e31775607c4dfc9ab9eea019ea6c4d543a2e11e8c07f83cca4934811a13ef829b528737ea37d9d2aaf66cba6f2746d44d2aa0b43
 Size (palcode-clipper-qemu-5.2.0nb8) = 159808 bytes
-BLAKE2s (qemu-7.1.0.tar.xz) = b441c04ebb4e1b79d8ce2c772c6f2cd65b741e1c24d1de59eb1391f84e50a2fe
-SHA512 (qemu-7.1.0.tar.xz) = c60c5ff8ec99b7552e485768908920658fdd8035ff7a6fa370fb6881957dc8b7e5f18ff1a8f49bd6aa22909ede2a7c084986d8244f12074ccd33ebe40a0c411f
-Size (qemu-7.1.0.tar.xz) = 121833004 bytes
+BLAKE2s (qemu-7.2.0.tar.xz) = 725b12f40c29fb26f4af1820864b6e70dc5484dffd8f8c731fc694edb95c4d96
+SHA512 (qemu-7.2.0.tar.xz) = f3cfa00da739ba819a218d7e6e95c77fb79a8e0f487b024ddd281602e785249b81144595e3f8c746c32a4f5c4d1a88c6aebae3c162603edfbb50ae3722d7ed13
+Size (qemu-7.2.0.tar.xz) = 122408576 bytes
 SHA1 (patch-audio_jackaudio.c) = 771c2779e565242a500adc0223ef6b1ae5b2b91f
-SHA1 (patch-backends_tpm_tpm__ioctl.h) = fbd6c877ad605f7120290efbb0ac653c69f351de
+SHA1 (patch-backends_tpm_tpm__ioctl.h) = 5e18e0c9d0581386e0100a566694b3e631618585
 SHA1 (patch-hw-mips-Kconfig) = c7199ad26ac45116ab4d38252db4234ae93bdf9a
 SHA1 (patch-hw-mips-mipssim.c) = 1f682b74b34398b3ff15f9e7f24a85f4b8bb4853
-SHA1 (patch-hw_display_omap__dss.c) = 6b13242f28e32346bc70548c216c578d98fd3420
+SHA1 (patch-hw_display_omap__dss.c) = 68f6f5e86335114de64b397959a2238de84fcde2
 SHA1 (patch-hw_mips_meson.build) = d9a07a81fe6d3c9e2bd45f41fe876cd927a40ced
 SHA1 (patch-hw_net_etraxfs__eth.c) = e5dd1661d60dbcd27b332403e0843500ba9544bc
 SHA1 (patch-hw_net_xilinx__axienet.c) = ebcd2676d64ce6f31e4a8c976d4fdf530ad5e8b7
