@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2022/11/20 19:03:47 adam Exp $
+# $NetBSD: Makefile,v 1.102 2023/01/20 13:39:21 wiz Exp $
 
 DISTNAME=	numpy-1.23.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -62,6 +62,8 @@ post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${RM} f2py || ${TRUE}
 	cd ${DESTDIR}${PREFIX}/bin && ${RM} f2py3 || ${TRUE}
 
+# as of 1.23.5
+# 8 failed, 18561 passed, 782 skipped, 1306 deselected, 41 xfailed, 2 xpassed, 59 warnings
 do-test:
 	cd ${WRKDIR} && \
 	${SETENV} ${TEST_ENV} PYTHONPATH=${DESTDIR}${PREFIX}/${PYSITELIB} ${PYTHONBIN} -c "import numpy; numpy.test()"
