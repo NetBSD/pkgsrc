@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2023/01/18 16:26:49 wiz Exp $
-lib/libtree-sitter-ruby.so
+@comment $NetBSD: PLIST,v 1.2 2023/01/20 11:14:59 wiz Exp $
+lib/libtree-sitter-ruby.la
