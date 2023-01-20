@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.124 2022/04/07 12:39:06 wiz Exp $
+# $NetBSD: Makefile,v 1.125 2023/01/20 13:10:08 wiz Exp $
 
-DISTNAME=	fontconfig-2.13.1
-PKGREVISION=	6
+DISTNAME=	fontconfig-2.14.1
 CATEGORIES=	fonts
 MASTER_SITES=	https://www.fontconfig.org/release/
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.fontconfig.org/
 COMMENT=	Library for configuring and customizing font access
-#LICENSE=	x11? AND modified-bsd # (for uuid.h)
+#LICENSE=	x11?
 
 # https://bugs.freedesktop.org/show_bug.cgi?id=101280
 TOOL_DEPENDS+=	gperf-[0-9]*:../../devel/gperf
@@ -87,15 +86,8 @@ BUILD_DEFS+=	VARBASE
 
 TEST_TARGET=	check
 
-.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+.if ${USE_CROSS_COMPILE:U:tl} == yes
 CONFIGURE_ENV+=	CC_FOR_BUILD=${NATIVE_CC:Q}
-.endif
-
-.if ${OPSYS} != "Darwin"
-CFLAGS+=	-I${WRKDIR}
-post-extract:
-	mkdir -p ${WRKDIR}/uuid
-	cp ${FILESDIR}/uuid.h ${WRKDIR}/uuid/.
 .endif
 
 pre-configure:
@@ -105,6 +97,7 @@ post-install:
 	${INSTALL_DATA} ${FILESDIR}/30-pkgsrc-aliases.conf ${DESTDIR}${TMPLDIR}
 	${INSTALL_DATA} ${FILESDIR}/70-no-bitmap-webfonts.conf ${DESTDIR}${TMPLDIR}
 
+.include "../../lang/python/tool.mk"
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
