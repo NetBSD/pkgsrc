@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.460 2023/01/20 12:39:52 adam Exp $
+$NetBSD: CHANGES-2023,v 1.461 2023/01/20 13:09:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -590,3 +590,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/haproxy to 2.7.2 [adam 2023-01-20]
 	Updated www/py-test-httpx to 0.21.3 [adam 2023-01-20]
 	Updated textproc/py-precis-i18n to 1.0.5 [adam 2023-01-20]
+	Updated devel/cmake to 3.25.2 [adam 2023-01-20]
+	Updated net/wireshark to 4.0.3 [adam 2023-01-20]
