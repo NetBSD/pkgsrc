@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2021/12/21 09:18:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.36 2023/01/20 14:03:16 adam Exp $
 bin/ab
 bin/apxs
 bin/dbmmanage
@@ -42,6 +42,7 @@ include/httpd/mod_cgi.h
 include/httpd/mod_core.h
 include/httpd/mod_dav.h
 include/httpd/mod_dbd.h
+include/httpd/mod_http2.h
 include/httpd/mod_include.h
 include/httpd/mod_log_config.h
 include/httpd/mod_proxy.h
