@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.462 2023/01/20 13:10:17 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.463 2023/01/20 13:37:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -593,3 +593,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/cmake to 3.25.2 [adam 2023-01-20]
 	Updated net/wireshark to 4.0.3 [adam 2023-01-20]
 	Updated fonts/fontconfig to 2.14.1 [wiz 2023-01-20]
+	Updated games/wesnoth to 1.16.7 [adam 2023-01-20]
+	Updated devel/py-gitpython to 3.1.30 [adam 2023-01-20]
