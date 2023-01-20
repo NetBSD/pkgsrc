@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:06:54 nia Exp $
+$NetBSD: distinfo,v 1.7 2023/01/20 16:26:56 manu Exp $
 
 BLAKE2s (wkhtmltox-0.12.4.tar.bz2) = eb5c7d59b73b60e5eca704615ba59936547ab979b45b9c2e6dccc8ec07d02cf8
 SHA512 (wkhtmltox-0.12.4.tar.bz2) = 1526c6138d6276d0f6188737a67848b8ae9c16016c119eb00bbdaf7159464f8799c53ca9a997ea40eea4c2d1cadc35a10607564949fd39a3b7b7e6745a3dbdcb
@@ -36,6 +36,6 @@ SHA1 (patch-qt_src_network_ssl_qsslsocket_openssl_symbols.cpp) = a1f73de1bb07d9e
 SHA1 (patch-qt_src_network_ssl_qsslsocket_openssl_symbols_p.h) = fb7c20333199a00cc233a4a7ccbc29894eb806c1
 SHA1 (patch-qt_src_plugins_platforms_xlib_xlib.pro) = 18516ea36e61c57d2acc3f5fa06890ab7a88fbe6
 SHA1 (patch-qt_src_xmlpatterns_api_qcoloroutput_p.h) = d196f51a8168d335a00d3663418cab27f6076ca9
-SHA1 (patch-src_image_image.pro) = 1684d98030a1f163a905f8216629f09f453771eb
-SHA1 (patch-src_lib_lib.pro) = a3b1958c2bc63b79a195325cb226de37eecc17a0
-SHA1 (patch-src_pdf_pdf.pro) = 54d60872137de6b7d6188a2ca1260bccd170c3a9
+SHA1 (patch-src_image_image.pro) = 3ab013cdb8ae93a481f7eb70a80c8e25a22ae23d
+SHA1 (patch-src_lib_lib.pro) = 0a8457b7779d6a85dad17adc7cc0575cecc818e6
+SHA1 (patch-src_pdf_pdf.pro) = 7141bb755434bf7336006370f407c875a9eb46a8
