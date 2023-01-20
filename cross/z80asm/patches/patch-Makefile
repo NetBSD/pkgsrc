@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile,v 1.1 2023/01/20 21:43:56 thorpej Exp $
+
+Use /bin/sh, rather than /bin/bash, for the shell.
+
+--- Makefile.orig	2023-01-20 20:40:24.495652148 +0000
++++ Makefile	2023-01-20 20:40:34.704993741 +0000
+@@ -18,7 +18,7 @@
+ 
+ CC = gcc
+ CFLAGS = -O0 -Wall -Wwrite-strings -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -Wredundant-decls -Wnested-externs -Winline -pedantic -ansi -Wshadow -ggdb3 -W -Ignulib
+-SHELL = /bin/bash
++SHELL = /bin/sh
+ VERSION ?= $(shell echo -n `cat VERSION | cut -d. -f1`. ; echo $$[`cat VERSION | cut -d. -f2` + 1])
+ 
+ all:z80asm

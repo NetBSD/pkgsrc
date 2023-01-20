@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2023/01/20 21:43:56 thorpej Exp $
+bin/z80asm
+man/man1/z80asm.1

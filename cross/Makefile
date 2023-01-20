@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.109 2022/12/24 23:57:32 wiz Exp $
+# $NetBSD: Makefile,v 1.110 2023/01/20 21:43:56 thorpej Exp $
 #
 
 COMMENT=	Cross-platform development utilities
@@ -84,5 +84,6 @@ SUBDIR+=	xtensa-esp32s3-elf-binutils
 SUBDIR+=	xtensa-esp32s3-elf-gcc
 SUBDIR+=	xtensa-lx106-elf-binutils
 SUBDIR+=	xtensa-lx106-elf-gcc
+SUBDIR+=	z80asm
 
 .include "../mk/misc/category.mk"
