@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.307 2023/01/03 17:37:05 wiz Exp $
+# $NetBSD: Makefile,v 1.308 2023/01/20 08:36:24 adam Exp $
 
-DISTNAME=	qemu-7.1.0
-PKGREVISION=	2
+DISTNAME=	qemu-7.2.0
 CATEGORIES=	emulators
 MASTER_SITES=	https://download.qemu.org/
 EXTRACT_SUFX=	.tar.xz
@@ -123,7 +122,7 @@ CONFIGURE_ARGS+=		--disable-bsd-user
 CONFIGURE_ARGS+=		--enable-bsd-user
 USER_EMUL=			i386 x86_64
 .  endif
-.elif !empty(OPSYS:M*BSD) || ${OPSYS} == "DragonFly"
+.elif ${OPSYS:M*BSD} || ${OPSYS} == "DragonFly"
 USER_EMUL=			i386 x86_64
 PLIST.nbd=			yes
 .elif ${OPSYS} == "Darwin"
