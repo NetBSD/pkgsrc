@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2020/10/05 09:36:34 nia Exp $
+@comment $NetBSD: PLIST,v 1.33 2023/01/20 13:10:08 wiz Exp $
 bin/fc-cache
 bin/fc-cat
 bin/fc-conflist
@@ -76,6 +76,7 @@ man/man3/FcConfigGetCacheDirs.3
 man/man3/FcConfigGetConfigDirs.3
 man/man3/FcConfigGetConfigFiles.3
 man/man3/FcConfigGetCurrent.3
+man/man3/FcConfigGetFilename.3
 man/man3/FcConfigGetFontDirs.3
 man/man3/FcConfigGetFonts.3
 man/man3/FcConfigGetRescanInterval.3
@@ -203,6 +204,7 @@ man/man3/FcRangeCreateInteger.3
 man/man3/FcRangeDestroy.3
 man/man3/FcRangeGetDouble.3
 man/man3/FcStrBasename.3
+man/man3/FcStrBuildFilename.3
 man/man3/FcStrCmp.3
 man/man3/FcStrCmpIgnoreCase.3
 man/man3/FcStrCopy.3
@@ -295,6 +297,7 @@ share/doc/fontconfig/fontconfig-devel/fcconfiggetcachedirs.html
 share/doc/fontconfig/fontconfig-devel/fcconfiggetconfigdirs.html
 share/doc/fontconfig/fontconfig-devel/fcconfiggetconfigfiles.html
 share/doc/fontconfig/fontconfig-devel/fcconfiggetcurrent.html
+share/doc/fontconfig/fontconfig-devel/fcconfiggetfilename.html
 share/doc/fontconfig/fontconfig-devel/fcconfiggetfontdirs.html
 share/doc/fontconfig/fontconfig-devel/fcconfiggetfonts.html
 share/doc/fontconfig/fontconfig-devel/fcconfiggetrescaninterval.html
@@ -422,6 +425,7 @@ share/doc/fontconfig/fontconfig-devel/fcrangecreateinteger.html
 share/doc/fontconfig/fontconfig-devel/fcrangedestroy.html
 share/doc/fontconfig/fontconfig-devel/fcrangegetdouble.html
 share/doc/fontconfig/fontconfig-devel/fcstrbasename.html
+share/doc/fontconfig/fontconfig-devel/fcstrbuildfilename.html
 share/doc/fontconfig/fontconfig-devel/fcstrcmp.html
 share/doc/fontconfig/fontconfig-devel/fcstrcmpignorecase.html
 share/doc/fontconfig/fontconfig-devel/fcstrcopy.html
@@ -467,11 +471,14 @@ share/doc/fontconfig/fontconfig-user.pdf
 share/doc/fontconfig/fontconfig-user.txt
 share/examples/fontconfig/conf.d/README
 share/examples/fontconfig/fonts.conf
+share/fontconfig/conf.avail/05-reset-dirs-sample.conf
+share/fontconfig/conf.avail/09-autohint-if-no-hinting.conf
 share/fontconfig/conf.avail/10-autohint.conf
 share/fontconfig/conf.avail/10-hinting-full.conf
 share/fontconfig/conf.avail/10-hinting-medium.conf
 share/fontconfig/conf.avail/10-hinting-none.conf
 share/fontconfig/conf.avail/10-hinting-slight.conf
+share/fontconfig/conf.avail/10-no-antialias.conf
 share/fontconfig/conf.avail/10-no-sub-pixel.conf
 share/fontconfig/conf.avail/10-scale-bitmap-fonts.conf
 share/fontconfig/conf.avail/10-sub-pixel-bgr.conf
@@ -479,6 +486,7 @@ share/fontconfig/conf.avail/10-sub-pixel-rgb.conf
 share/fontconfig/conf.avail/10-sub-pixel-vbgr.conf
 share/fontconfig/conf.avail/10-sub-pixel-vrgb.conf
 share/fontconfig/conf.avail/10-unhinted.conf
+share/fontconfig/conf.avail/10-yes-antialias.conf
 share/fontconfig/conf.avail/11-lcdfilter-default.conf
 share/fontconfig/conf.avail/11-lcdfilter-legacy.conf
 share/fontconfig/conf.avail/11-lcdfilter-light.conf
@@ -486,9 +494,11 @@ share/fontconfig/conf.avail/20-unhint-small-vera.conf
 share/fontconfig/conf.avail/25-unhint-nonlatin.conf
 share/fontconfig/conf.avail/30-metric-aliases.conf
 share/fontconfig/conf.avail/30-pkgsrc-aliases.conf
+share/fontconfig/conf.avail/35-lang-normalize.conf
 share/fontconfig/conf.avail/40-nonlatin.conf
 share/fontconfig/conf.avail/45-generic.conf
 share/fontconfig/conf.avail/45-latin.conf
+share/fontconfig/conf.avail/48-spacing.conf
 share/fontconfig/conf.avail/49-sansserif.conf
 share/fontconfig/conf.avail/50-user.conf
 share/fontconfig/conf.avail/51-local.conf
@@ -505,6 +515,8 @@ share/fontconfig/conf.avail/80-delicious.conf
 share/fontconfig/conf.avail/90-synthetic.conf
 share/gettext/its/fontconfig.its
 share/gettext/its/fontconfig.loc
+share/locale/ka/LC_MESSAGES/fontconfig-conf.mo
+share/locale/ka/LC_MESSAGES/fontconfig.mo
 share/locale/zh_CN/LC_MESSAGES/fontconfig-conf.mo
 share/locale/zh_CN/LC_MESSAGES/fontconfig.mo
 share/xml/fontconfig/fonts.dtd
