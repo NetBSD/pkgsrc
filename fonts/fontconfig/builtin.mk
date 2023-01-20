@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.13 2019/11/02 22:24:40 rillig Exp $
+# $NetBSD: builtin.mk,v 1.14 2023/01/20 13:10:08 wiz Exp $
 
 BUILTIN_PKG:=	fontconfig
 
@@ -26,7 +26,7 @@ MAKEVARS+=		IS_BUILTIN.fontconfig
 ### a package name to represent the built-in package.
 ###
 .if !defined(BUILTIN_PKG.fontconfig) && \
-    !empty(IS_BUILTIN.fontconfig:M[yY][eE][sS]) && \
+    ${IS_BUILTIN.fontconfig:tl} == yes && \
     empty(H_FONTCONFIG:M__nonexistent__)
 BUILTIN_VERSION.fontconfig!=						\
 	${AWK} '/\#define[ 	]*FC_MAJOR/ { M = $$3 }			\
@@ -49,10 +49,10 @@ USE_BUILTIN.fontconfig=	no
 .  else
 USE_BUILTIN.fontconfig=	${IS_BUILTIN.fontconfig}
 .    if defined(BUILTIN_PKG.fontconfig) && \
-        !empty(IS_BUILTIN.fontconfig:M[yY][eE][sS])
+        ${IS_BUILTIN.fontconfig:tl} == yes
 USE_BUILTIN.fontconfig=	yes
 .      for _dep_ in ${BUILDLINK_API_DEPENDS.fontconfig}
-.        if !empty(USE_BUILTIN.fontconfig:M[yY][eE][sS])
+.        if ${USE_BUILTIN.fontconfig:tl} == yes
 USE_BUILTIN.fontconfig!=						\
 	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.fontconfig:Q}; then \
 		${ECHO} yes;						\
@@ -74,9 +74,9 @@ MAKEVARS+=		USE_BUILTIN.fontconfig
 .include "../../mk/x11.builtin.mk"
 
 CHECK_BUILTIN.fontconfig?=	no
-.if !empty(CHECK_BUILTIN.fontconfig:M[nN][oO])
+.if ${CHECK_BUILTIN.fontconfig:tl} == no
 
-.  if !empty(USE_BUILTIN.fontconfig:M[nN][oO])
+.  if ${USE_BUILTIN.fontconfig:tl} == no
 BUILDLINK_API_DEPENDS.fontconfig+=	fontconfig>=2.1nb2
 BUILDLINK_API_DEPENDS.freetype2+=	freetype2>=2.1.3
 .  endif
