@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.88 2022/07/25 05:42:22 rillig Exp $ -->
+<!-- $NetBSD: build.xml,v 1.89 2023/01/20 12:21:56 wiz Exp $ -->
 
 <chapter id="build">
   <title>The build process</title>
@@ -523,13 +523,18 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
 
     <para>If the program uses <filename>cmake</filename>
     for configuration, the appropriate steps can be invoked by
-    setting <varname>USE_CMAKE</varname> to <quote>yes</quote>.
+    including <filename>../../devel/cmake/build.mk</filename>.
     You can add variables to cmake's environment by adding them to the
     <varname>CONFIGURE_ENV</varname> variable and arguments to cmake
     by adding them to the <varname>CMAKE_ARGS</varname> variable.
-    The top directory argument is given by the
-    <varname>CMAKE_ARG_PATH</varname> variable, that defaults to
-    <quote>.</quote> (relative to <varname>CONFIGURE_DIRS</varname>)</para>
+    If you want to add arguments only for particular stages, you can use the
+    <varname>CMAKE_CONFIGURE_ARGS</varname>,
+    <varname>CMAKE_BUILD_ARGS</varname>, and
+    <varname>CMAKE_INSTALL_ARGS</varname> variables.
+    You can set the <varname>CONFIGURE_DIRS</varname> variable to the
+    directories in which CMake should be run, relative to
+    <varname>WRKSRC</varname>. This defaults to to <quote>.</quote>.
+    </para>
 
     <para>If there is no configure step at all, set
     <varname>NO_CONFIGURE</varname> to <quote>yes</quote>.</para>
