@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22502 2023/01/20 08:38:43 adam Exp $
+$NetBSD: TODO,v 1.22503 2023/01/20 12:55:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -513,7 +513,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o cairomm1.16-1.16.2
 	o calc-2.11.10.1
 	o calcoo-2.1.0
-	o calibre-6.8 [requires qt6/py-qt6/py-qt6-webengine]
+	o calibre-6.8 [requires py-qt6/py-qt6-webengine]
 	o calibre-6.11.0
 	o calligra-3.0.1 [in wip; koffice successor]
 	o camlp4-4.12
@@ -1199,7 +1199,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pam-krb5-4.10
 	o pam-passwdqc-2.0.2
 	o pam-yubico-2.21
-	o pandoc-2.19.2
+	o pandoc-3.0
 	o paperkey-1.6
 	o papirus-folders-1.8.0
 	o paprefs-1.1
@@ -1348,7 +1348,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o qca2-ossl-2.3.2
 	o qconf-2.5
 	o qdirstat-1.8.1
-	o qt6-6.3.1 [in wip]
 	o qtcreator-9
 	o quazip-1.1
 	o qutebrowser-2.2.0
@@ -1368,7 +1367,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rep-gtk-0.90.8.1
 	o reposurgeon-4.26
 	o resize_image-0.7
-	o retext-8.0.0 [requires qt6/py-qt6/py-qt6-webengine]
+	o retext-8.0.0 [requires py-qt6/py-qt6-webengine]
 	o rexx-regina-3.9.0
 	o riemann-client-1.10.4.1
 	o rio500-0.8.1
@@ -1521,7 +1520,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o top-3.8beta1
 	o topgit-0.8
 	o tor-browser-11.0.9 [wip]
-	o tor-browser-12.0.1
+	o tor-browser-12.0.2
 	o torrentzip-2.1.0
 	o toxcore-0.2.12
 	o trafficserver-9.0.1
