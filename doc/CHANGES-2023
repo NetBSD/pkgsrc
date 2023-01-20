@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.463 2023/01/20 13:37:42 adam Exp $
+$NetBSD: CHANGES-2023,v 1.464 2023/01/20 14:05:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -595,3 +595,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated fonts/fontconfig to 2.14.1 [wiz 2023-01-20]
 	Updated games/wesnoth to 1.16.7 [adam 2023-01-20]
 	Updated devel/py-gitpython to 3.1.30 [adam 2023-01-20]
+	Updated www/apache24 to 2.4.55 [adam 2023-01-20]
+	Updated devel/py-cpplint to 1.6.1 [adam 2023-01-20]
