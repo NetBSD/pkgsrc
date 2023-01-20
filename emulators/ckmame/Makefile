@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2022/11/23 16:19:58 adam Exp $
+# $NetBSD: Makefile,v 1.71 2023/01/20 11:42:40 wiz Exp $
 
 DISTNAME=		ckmame-2.0
 PKGREVISION=		3
@@ -13,8 +13,7 @@ LICENSE=		modified-bsd
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config perl:test
-USE_CMAKE=		yes
-TEST_TARGET=		check
+TEST_TARGET=		test
 
 GCC_REQD+=		9 # std::filesystem
 USE_GCC_RUNTIME=	yes
@@ -26,6 +25,7 @@ USE_PKGSRC_GCC=		yes
 USE_PKGSRC_GCC_RUNTIME=	yes
 .endif
 
+.include "../../devel/cmake/build.mk"
 .include "../../archivers/libarchive/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libzip+=	libzip>=1.8
 .include "../../archivers/libzip/buildlink3.mk"
