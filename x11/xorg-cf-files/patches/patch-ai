@@ -1,7 +1,7 @@
-$NetBSD: patch-ai,v 1.5 2023/01/17 05:28:59 mrg Exp $
+$NetBSD: patch-ai,v 1.6 2023/01/20 22:46:34 mrg Exp $
 
 --- Imake.tmpl.orig	2021-08-01 18:00:38.000000000 -0700
-+++ Imake.tmpl	2023-01-16 21:19:48.832729868 -0800
++++ Imake.tmpl	2023-01-18 14:02:36.645134759 -0800
 @@ -898,24 +898,18 @@ TCLIBDIR = TclLibDir
  #ifndef ManPath
  #define ManPath ManDirectoryRoot
@@ -33,15 +33,31 @@ $NetBSD: patch-ai,v 1.5 2023/01/17 05:28:59 mrg Exp $
  #ifndef AppLoadDefs
  #define AppLoadDefs -D__apploaddir__=$(XAPPLOADDIR)
  #endif
-@@ -1078,7 +1072,7 @@ TCLIBDIR = TclLibDir
+@@ -1078,21 +1072,21 @@ TCLIBDIR = TclLibDir
  #define ArCmdBase ar
  #endif
  #ifndef ArCmd
 -#if HasLargeTmp || SystemV4 || LinuxBinUtilsMajorVersion
-+#if HasLargeTmp || SystemV4 || LinuxBinUtilsMajorVersion || defined(NetBSDArchitecture)
++#if HasLargeTmp || SystemV4 || HasGnuAr
  #define ArCmd ArCmdBase cq
  #else
  #define ArCmd ArCmdBase clq
+ #endif
+ #endif
+ #ifndef ArAddCmd
+-#if HasLargeTmp || SystemV4
++#if HasLargeTmp || SystemV4 || HasGnuAr
+ #define ArAddCmd ArCmdBase ru
+ #else
+ #define ArAddCmd ArCmdBase rul
+ #endif
+ #endif
+ #ifndef ArExtCmd
+-#if HasLargeTmp || SystemV4
++#if HasLargeTmp || SystemV4 || HasGnuAr
+ #define ArExtCmd ArCmdBase x
+ #else
+ #define ArExtCmd ArCmdBase xl
 @@ -1447,9 +1441,9 @@ TCLIBDIR = TclLibDir
  #ifndef DependCmd
  #if UseGccMakeDepend
