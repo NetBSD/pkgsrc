@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2023/01/18 16:38:22 wiz Exp $
-lib/libtree-sitter-dockerfile.so
+@comment $NetBSD: PLIST,v 1.2 2023/01/20 11:14:58 wiz Exp $
+lib/libtree-sitter-dockerfile.la

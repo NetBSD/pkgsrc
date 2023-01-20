@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2023/01/18 13:37:22 wiz Exp $
-lib/libtree-sitter-json.so
+@comment $NetBSD: PLIST,v 1.2 2023/01/20 11:14:59 wiz Exp $
+lib/libtree-sitter-json.la
