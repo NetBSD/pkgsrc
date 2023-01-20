@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.465 2023/01/20 18:11:54 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.466 2023/01/20 18:37:40 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -598,3 +598,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/apache24 to 2.4.55 [adam 2023-01-20]
 	Updated devel/py-cpplint to 1.6.1 [adam 2023-01-20]
 	Updated devel/swagger-codegen to 3.0.37 [schmonz 2023-01-20]
+	Updated devel/mold to 1.10.0 [fcambus 2023-01-20]
