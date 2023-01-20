@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2022/10/26 10:31:00 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2023/01/20 11:39:32 wiz Exp $
 
 DISTNAME=		libzip-1.9.2
 PKGREVISION=		1
@@ -13,15 +13,15 @@ HOMEPAGE=		https://www.libzip.org/
 COMMENT=		C library to manipulate zip archives
 LICENSE=		modified-bsd
 
-USE_CMAKE=		yes
 USE_TOOLS+=		perl:build
 
 TEST_TARGET=		test
 # for tests
-MAKE_ENV+=		LD_LIBRARY_PATH=${WRKSRC}/lib
+MAKE_ENV+=		LD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/lib
 
 .include "options.mk"
 
+.include "../../devel/cmake/build.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
