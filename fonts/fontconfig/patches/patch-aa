@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.18 2013/10/17 07:27:33 wiz Exp $
+$NetBSD: patch-aa,v 1.19 2023/01/20 13:10:09 wiz Exp $
 
---- Makefile.in.orig	2013-10-11 04:28:46.000000000 +0000
+--- Makefile.in.orig	2022-10-21 07:33:38.000000000 +0000
 +++ Makefile.in
-@@ -380,6 +380,7 @@ datadir = @datadir@
+@@ -428,6 +428,7 @@ datadir = @datadir@
  datarootdir = @datarootdir@
  docdir = @docdir@
  dvidir = @dvidir@
@@ -10,15 +10,15 @@ $NetBSD: patch-aa,v 1.18 2013/10/17 07:27:33 wiz Exp $
  exec_prefix = @exec_prefix@
  fc_cachedir = @fc_cachedir@
  host = @host@
-@@ -439,6 +440,7 @@ xml_DATA = fonts.dtd
- @CROSS_COMPILING_TRUE@RUN_FC_CACHE_TEST = false
+@@ -510,6 +511,7 @@ xml_DATA = fonts.dtd
+ @ENABLE_CACHE_BUILD_TRUE@RUN_FC_CACHE_TEST = test -z "$(DESTDIR)"
  FC_CONFIGDIR = $(subst $(BASECONFIGDIR)/,,$(CONFIGDIR))
  DISTCHECK_CONFIGURE_FLAGS = 
 +RUN_FC_CACHE_TEST = false
  all: config.h
  	$(MAKE) $(AM_MAKEFLAGS) all-recursive
  
-@@ -997,17 +999,13 @@ fonts.conf: fonts.conf.in Makefile
+@@ -1083,17 +1085,13 @@ fonts.conf: fonts.conf.in Makefile
  	mv $@.tmp $@
  
  install-data-local: fonts.conf

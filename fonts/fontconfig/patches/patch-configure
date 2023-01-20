@@ -1,26 +1,9 @@
-$NetBSD: patch-configure,v 1.6 2020/08/18 08:19:17 tnn Exp $
-
-Do not look for libuuid on Darwin, it is built-in.
-On other operating systems, pkgsrc fontconfig is patched to use
-bunled libuuid.
+$NetBSD: patch-configure,v 1.7 2023/01/20 13:10:09 wiz Exp $
 
 Patch "GNU" gettext support to not depend unnecessary on "GNU" gettext.
 
 --- configure.orig	2018-08-30 08:24:28.000000000 +0000
 +++ configure
-@@ -13304,8 +13304,12 @@ case "$host" in
-   *-*-mingw*)
-     os_win32=yes
-     ;;
-+  *-*-darwin*)
-+    os_darwin=yes
-+    ;;
-   *)
-     os_win32=no
-+    os_darwin=no
- esac
-  if test "$os_win32" = "yes"; then
-   OS_WIN32_TRUE=
 @@ -15236,8 +15240,7 @@ extern
  #ifdef __cplusplus
  "C"
@@ -41,33 +24,3 @@ Patch "GNU" gettext support to not depend unnecessary on "GNU" gettext.
  #else
  #define __GNU_GETTEXT_SYMBOL_EXPRESSION 0
  #endif
-@@ -15900,6 +15902,10 @@ if ac_fn_c_try_compile "$LINENO"; then :
- $as_echo "$as_me: WARNING: your GCC compiler has a defunct stdint.h for its default-mode" >&2;}
- fi
- rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
-+		#if defined(_SCO_DS)
-+		/* bogus */
-+		#include <prot.h>
-+		#endif
- fi
- CXXFLAGS="$old_CXXFLAGS"
- CPPFLAGS="$old_CPPFLAGS"
-@@ -15928,6 +15934,9 @@ if test "_$ac_cv_header_stdint_t" = "_" 
- 
- inttype_headers=`echo  | sed -e 's/,/ /g'`
- 
-+			#if defined(_SCO_DS)
-+			#include <prot.h>
-+			#endif
- ac_cv_stdint_result="(no helpful system typedefs seen)"
- 
- { $as_echo "$as_me:${as_lineno-$LINENO}: checking for stdint uintptr_t" >&5
-@@ -17196,7 +17205,7 @@ CFLAGS="$fontconfig_save_cflags"
- #
- # Check for uuid
- #
--if test "$os_win32" != "yes"; then
-+if false; then
- 	use_pkgconfig_for_uuid=yes
- 	if test -n "${UUID_LIBS}"; then
- 		save_UUID_LIBS=$UUID_LIBS
