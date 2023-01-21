@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2023/01/02 13:43:29 pin Exp $
+$NetBSD: distinfo,v 1.3 2023/01/21 11:41:07 pin Exp $
 
 BLAKE2s (atty-0.2.14.crate) = 8a58145c7b668aa6caf8d749e37857ff202211e1bfa9e441f130ff02feb68405
 SHA512 (atty-0.2.14.crate) = d7b6c4b9a0f898d91ddbc41a5ee45bbf45d1d269508c8cc87ee3e3990500e41e0ec387afb1f3bc7db55bedac396dd86c6509f4bf9e5148d809c3802edcc5e1d9
@@ -15,18 +15,12 @@ Size (clap_derive-4.0.13.crate) = 27324 bytes
 BLAKE2s (clap_lex-0.3.0.crate) = ac411bb59e5fd533a6005707abcdc90ec0c6f33f60a05c82b8880fde255c2554
 SHA512 (clap_lex-0.3.0.crate) = 5e601d540e46e527f6a2ea1959fa5aa035ad823008806f3a5adb4785f1928de4c9fe04e61680c64bcb87ed32b2e991951ec27c5cc5acdcfae51cdc61767ff100
 Size (clap_lex-0.3.0.crate) = 9671 bytes
-BLAKE2s (either-1.8.0.crate) = 1de907e00592eaab6463081f07dbb9bf7d7a11b84b8a53d55f14bd9bd0f0b055
-SHA512 (either-1.8.0.crate) = 5089b218af067b51ee39c085568a1a6f542e8f68b362207bd7126cbcd2b76783cd21cc1517a1d088ce4dad1714be03a3660f50e9498a0bb43a8676cd7ec490d2
-Size (either-1.8.0.crate) = 15992 bytes
 BLAKE2s (heck-0.4.0.crate) = 0bbfc0807fe42d68570dab10b6cdfeabd24e6c732caebcec1880c2b9efeb36b5
 SHA512 (heck-0.4.0.crate) = 33bdbf4ff9ecc4f4d74cf06590e056f4d96bf0d990d5381b9da5b65682b2495ed74e27b45419c2afa986c1f6200909d5175b137ae73ced5cc8ac869e4e1bce8f
 Size (heck-0.4.0.crate) = 11161 bytes
 BLAKE2s (hermit-abi-0.1.19.crate) = c731a42a9056a75a3ba26b5ab02c7c60c1fa2f21635d4152de66dc2eb407e097
 SHA512 (hermit-abi-0.1.19.crate) = 1c877fcd562b15d2de9c151fd6c5f3ea4bf48abcb799e6139a180ffad5d64b632f0000d5707bbd92ff23a0e5f349157b9e0f5be8b50f03680b0fa47315dbb78a
 Size (hermit-abi-0.1.19.crate) = 9979 bytes
-BLAKE2s (itertools-0.10.5.crate) = a445c07be8da5c4bdf8dd6fb0a92746438e9ee1767fc180b2da34b31daa4de8d
-SHA512 (itertools-0.10.5.crate) = d03c3cfba9841776913bbb6daad0c8945830c155f32ae4b48872e0f937c75a443f0ac9a0355f43b359ff75232f38b15f4f6d446b4be30b00b4209cf66ef770c3
-Size (itertools-0.10.5.crate) = 115354 bytes
 BLAKE2s (itoa-1.0.4.crate) = ab0312a13f0334af924aa09b538df57ac2728adc94f86f1f23a853737d00098b
 SHA512 (itoa-1.0.4.crate) = a70bb6fbdbcab27fbb5a84041bcbad8e0c8fda58d55ca7ac757f7be5cd373101be40df99e9acd6ae49e637e40de037c6bc59560f96c9adeccb2b2e0bf6531e42
 Size (itoa-1.0.4.crate) = 10601 bytes
@@ -66,9 +60,9 @@ Size (serde_json-1.0.87.crate) = 144383 bytes
 BLAKE2s (strsim-0.10.0.crate) = 4893490aaecbb97be0d8268c4ad5653b22237927bc9f08196717dc9a5160de50
 SHA512 (strsim-0.10.0.crate) = 78b318532addfcf5c1ccc1e14539e258aab9d3cd893cc45d82342549bde838c177d90f13c560671f8f32929af47d0b467db35e6876bd7697d8b3f9e055aeeac1
 Size (strsim-0.10.0.crate) = 11355 bytes
-BLAKE2s (superdiff-2.1.1.tar.gz) = e1fc7008616838bba7d016e8b1075141513df42123a455d2ada4416e0c0a5074
-SHA512 (superdiff-2.1.1.tar.gz) = f29ec14afb03ce83ddf4c533e44dcd570794a93a6cc75b7858e4765f765679ef5dff8d6b2ac49cf4c913a3dbdea4c05154f70324fba13ac89066dce1778cf1af
-Size (superdiff-2.1.1.tar.gz) = 26933 bytes
+BLAKE2s (superdiff-2.1.2-113612d4ee4bed8f7f24ab01ea5e0b529016c32a.tar.gz) = 47cca987ccd34641bac37f1e6166642d9995ed94898e33ae9efd347144a6da88
+SHA512 (superdiff-2.1.2-113612d4ee4bed8f7f24ab01ea5e0b529016c32a.tar.gz) = b4af668a04d940f2c49523cc04aeb79f2be8b21cec8ec9abbe03b5b3ee7a61b1fe7853363c198703a1587ea48e39a4620d8a7029c462a4eebb7ecc421a0eda75
+Size (superdiff-2.1.2-113612d4ee4bed8f7f24ab01ea5e0b529016c32a.tar.gz) = 27778 bytes
 BLAKE2s (syn-1.0.102.crate) = 7cb38c23b1ac82e85ba155d9ac853d41b62d8237a16efd3f1c909062d33b5e1d
 SHA512 (syn-1.0.102.crate) = c9a2b2cf216c3d821decd488ebb49743f2f43940a879856e3a15d2352843c405e6f164c11225e904d18b32a5cd2bd7fcdfa74df40ec5567faeedffe5f523989c
 Size (syn-1.0.102.crate) = 235699 bytes

@@ -1,14 +1,12 @@
-# $NetBSD: cargo-depends.mk,v 1.1 2022/12/29 08:07:22 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.2 2023/01/21 11:41:07 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	atty-0.2.14
 CARGO_CRATE_DEPENDS+=	bitflags-1.3.2
 CARGO_CRATE_DEPENDS+=	clap-4.0.15
 CARGO_CRATE_DEPENDS+=	clap_derive-4.0.13
 CARGO_CRATE_DEPENDS+=	clap_lex-0.3.0
-CARGO_CRATE_DEPENDS+=	either-1.8.0
 CARGO_CRATE_DEPENDS+=	heck-0.4.0
 CARGO_CRATE_DEPENDS+=	hermit-abi-0.1.19
-CARGO_CRATE_DEPENDS+=	itertools-0.10.5
 CARGO_CRATE_DEPENDS+=	itoa-1.0.4
 CARGO_CRATE_DEPENDS+=	libc-0.2.135
 CARGO_CRATE_DEPENDS+=	once_cell-1.15.0
