@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2023/01/21 11:20:56 pin Exp $
+$NetBSD: distinfo,v 1.3 2023/01/21 19:57:26 pin Exp $
 
 BLAKE2s (cloud.google.com_go_@v_v0.26.0.mod) = 53d181aacbf96ec4f9cdd051466576dbb6959ca71a825bc6672046c7c53a2b43
 SHA512 (cloud.google.com_go_@v_v0.26.0.mod) = 5132f3438533427c0ab0fbb7a12112a7830ea9122662ed46019ff89c71d9cf80c02edc32dd5c892da572031b5a2cce100f2602fa6a19bea6be7c02781f701273
@@ -1314,9 +1314,9 @@ Size (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 95 bytes
 BLAKE2s (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 2e80fa896e65b1ae160400012c71aeac70e22a31cac82ec4921c85a93d65774c
 SHA512 (gopkg.in_yaml.v3_@v_v3.0.1.zip) = d57b0d42c71ad6503415e42979b51b0dc7f6344072c728ab2e3d4bab88da7b7d775e7f261868909f990f6b44aed6c533966c97bbe333a0acd65fc8bac9d1d4ff
 Size (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 104623 bytes
-BLAKE2s (gospt-0.0.30.tar.gz) = 2e05c6a13e626f5e326d007820a607ee9b5874e06cb61195faceb137f2794889
-SHA512 (gospt-0.0.30.tar.gz) = 6ab6c200a526842babaa3a2cbda2afbd7510a5c8e57630c1036301f7afd5d92803d99099b65495458760d6d6194df0d1a7be4184bc6099c70254d8d432802c7a
-Size (gospt-0.0.30.tar.gz) = 1752219 bytes
+BLAKE2s (gospt-0.0.31.tar.gz) = cc2dbe465abb3b13da98f79854649c5d81c3cd66ce77f8215412dd1e72bb08a4
+SHA512 (gospt-0.0.31.tar.gz) = ae893730c42c15fe14283ff595ceab81838f6236c668871f9240ad292efbe8d8bf09f8c57109c671e4cfe8977cbc158ef16b09649e3ba00de77747483ab79715
+Size (gospt-0.0.31.tar.gz) = 1752254 bytes
 BLAKE2s (honnef.co_go_tools_@v_v0.0.0-20190102054323-c2f93a96b099.mod) = 38e66bb2bbbbabd21beff5a5718735267b1611dbdf7da56c7fb6500d6cb784f1
 SHA512 (honnef.co_go_tools_@v_v0.0.0-20190102054323-c2f93a96b099.mod) = d00ae74b24e7fb3ff351ff68b88e59636153bbcf92b36e81e91556e3e75a7ccfb08ce471f757f92fd7612378944de3d7309c73923812e2df6a26b74e999ca9ce
 Size (honnef.co_go_tools_@v_v0.0.0-20190102054323-c2f93a96b099.mod) = 26 bytes
