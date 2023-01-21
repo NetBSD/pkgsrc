@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.473 2023/01/21 11:17:11 pin Exp $
+$NetBSD: CHANGES-2023,v 1.474 2023/01/21 11:18:20 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -606,3 +606,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added lang/ghc94 version 9.4.4 [pho 2023-01-21]
 	Updated graphics/jpeginfo to 1.7.0 [fcambus 2023-01-21]
 	Updated sysutils/onefetch to 2.15.1 [pin 2023-01-21]
+	Updated sysutils/felix to 2.2.3 [pin 2023-01-21]
