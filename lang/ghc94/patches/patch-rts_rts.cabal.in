@@ -1,0 +1,50 @@
+$NetBSD: patch-rts_rts.cabal.in,v 1.1 2023/01/21 04:49:25 pho Exp $
+
+Don't assume we always build the threaded RTS. Not upstreamed yet.
+
+--- rts/rts.cabal.in.orig	2023-01-11 05:03:17.728266721 +0000
++++ rts/rts.cabal.in
+@@ -45,6 +45,8 @@ flag find-ptr
+ -- threaded. The flags "compose": if you enable debug and profiling,
+ -- you will produce vanilla, _thr, _debug, _p but also _thr_p,
+ -- _thr_debug_p and so on.
++flag threaded
++  default: False
+ flag profiling
+   default: False
+ flag debug
+@@ -84,18 +86,26 @@ library
+     -- this cabal file. We therefore declare several
+     -- flavours to be available when passing the suitable (combination of)
+     -- flag(s) when configuring the RTS from hadrian, using Cabal.
+-    extra-library-flavours: _thr
+-
++    if flag(threaded)
++      extra-library-flavours: _thr
++      if flag(dynamic)
++        extra-dynamic-library-flavours: _thr
+     if flag(profiling)
+-      extra-library-flavours: _p _thr_p
++      extra-library-flavours: _p
++      if flag(threaded)
++        extra-library-flavours: _thr_p
+       if flag(debug)
+-        extra-library-flavours: _debug_p _thr_debug_p
++        extra-library-flavours: _debug_p
++        if flag(threaded)
++          extra-library-flavours: _thr_debug_p
+     if flag(debug)
+-      extra-library-flavours: _debug _thr_debug
++      extra-library-flavours: _debug
++      if flag(threaded)
++        extra-library-flavours: _thr_debug
+       if flag(dynamic)
+-        extra-dynamic-library-flavours: _debug _thr_debug
+-    if flag(dynamic)
+-      extra-dynamic-library-flavours: _thr
++        extra-dynamic-library-flavours: _debug
++        if flag(threaded)
++          extra-dynamic-library-flavours: _thr_debug
+ 
+     if flag(thread-sanitizer)
+       cc-options: -fsanitize=thread

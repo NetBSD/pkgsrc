@@ -1,0 +1,17 @@
+$NetBSD: patch-configure.ac,v 1.1 2023/01/21 04:49:25 pho Exp $
+
+Hunk #0:
+    Disable DTrace support on solaris2.
+    XXX: But why?
+
+--- configure.ac.orig	2022-12-23 16:19:02.000000000 +0000
++++ configure.ac
+@@ -800,7 +800,7 @@ if test "x$EnableDtrace" = "xyes"; then
+   if test -n "$DtraceCmd"; then
+     if test "x$TargetOS_CPP-$TargetVendor_CPP" = "xdarwin-apple" \
+       -o "x$TargetOS_CPP-$TargetVendor_CPP" = "xfreebsd-portbld" \
+-      -o "x$TargetOS_CPP-$TargetVendor_CPP" = "xsolaris2-unknown"; then
++      ; then
+       HaveDtrace=YES
+     fi
+   fi
