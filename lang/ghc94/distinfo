@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2023/01/21 16:02:11 pho Exp $
+$NetBSD: distinfo,v 1.7 2023/01/21 16:26:23 pho Exp $
 
 BLAKE2s (ghc-9.0.1-boot-hadrian.tar.gz) = fff7259676e3d0281c7e15e684b65dc04313c9bcb4d6161962325c3fcee08c7b
 SHA512 (ghc-9.0.1-boot-hadrian.tar.gz) = 02047ca0718a240ce702aeac16c2194b6bf73119dacb59816c1e9a631667e420e44c6ef6d5b83f225af3bd31e3ec3fc8f28e9a3cb22e86f63089110429759878
@@ -63,4 +63,4 @@ SHA1 (patch-rts_linker_MMap.c) = 9015bd4db6df0fa44e5d74d79d50c608fe306e98
 SHA1 (patch-rts_linker_MMap.h) = 8228fabcdaeb1511191da9fc614ff94d3eee8fbd
 SHA1 (patch-rts_rts.cabal.in) = 605e30da81e444046d00457fc3961025c2073615
 SHA1 (patch-utils_haddock_driver_Main.hs) = 26b015d3aef9fdff66e66c8e3d9a370a2dbd7067
-SHA1 (patch-utils_haddock_haddock.cabal) = 80b1ae7304afe14f117d0b432d5dda78e5b916c5
+SHA1 (patch-utils_haddock_haddock.cabal) = c8a244f2f341b736b65b218590d1a3a8309f55ba
