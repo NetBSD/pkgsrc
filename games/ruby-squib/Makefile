@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2022/12/09 12:39:38 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2023/01/21 13:57:31 taca Exp $
 
 DISTNAME=	squib-0.18.0
 #MASTER_SITES=	${MASTER_SITE_GITHUB:=andymeneely/}
@@ -24,7 +24,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-rsvg2>=3.4:../../graphics/ruby-rsvg2
 #DEPENDS+=	${RUBY_PKGPREFIX}-gio2>=3.4:../../devel/ruby-gio2
 DEPENDS+=	${RUBY_PKGPREFIX}-highline>=2.0.3<2.1:../../devel/ruby-highline
 
-RUBY_VERSIONS_ACCEPTED=	27 30 31
+RUBY_VERSIONS_ACCEPTED=	27 30 31 32
 
 RUBYGEM_OPTIONS+=	--format-executable
 OVERRIDE_GEMSPEC+=	classy_hash>=0.2.1 mercenary>=0.4.0 pango>=3.4 rsvg2>=3.4

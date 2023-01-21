@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2023/01/03 09:44:15 taca Exp $
+# $NetBSD: Makefile,v 1.5 2023/01/21 13:57:30 taca Exp $
 
 DISTNAME=	async-2.3.1
 CATEGORIES=	devel
@@ -14,7 +14,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-console>=1.10<2:../../devel/ruby-console
 DEPENDS+=	${RUBY_PKGPREFIX}-io-event>=1.1.0<2:../../devel/ruby-io-event
 DEPENDS+=	${RUBY_PKGPREFIX}-timers>=4.1<5:../../time/ruby-timers
 
-RUBY_VERSIONS_ACCEPTED=	31
+RUBY_VERSIONS_ACCEPTED=	31 32
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"

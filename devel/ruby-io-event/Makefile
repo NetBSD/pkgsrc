@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2023/01/15 15:32:12 taca Exp $
+# $NetBSD: Makefile,v 1.6 2023/01/21 13:57:30 taca Exp $
 
 DISTNAME=	io-event-1.1.6
 CATEGORIES=	devel
@@ -8,7 +8,7 @@ HOMEPAGE=	https://github.com/socketry/io-event
 COMMENT=	Provides low level cross-platform primitives
 LICENSE=	mit
 
-RUBY_VERSIONS_ACCEPTED=	31 30
+RUBY_VERSIONS_ACCEPTED=	31 30 32
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
