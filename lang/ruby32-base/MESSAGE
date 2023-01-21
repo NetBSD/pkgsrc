@@ -1,0 +1,11 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2023/01/21 13:51:23 taca Exp $
+
+Note that this is a minimal package.
+
+The original ${RUBY_DISTNAME} distribution includes more extension
+libraries, some of which are provided as separate packages:
+
+	devel/ruby-readline:		readline module
+
+===========================================================================
