@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.72 2022/11/30 09:30:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.72.2.1 2023/01/21 14:48:34 bsiegert Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -25,7 +25,6 @@ man/man1/ldresample.1
 man/man1/ldverify.1
 man/man1/romcmp.1
 man/man6/mame.6
-share/doc/mame/CONTRIBUTING.md
 share/doc/mame/README.md
 share/mame/artwork/LICENSE
 share/mame/artwork/README.md
@@ -307,7 +306,8 @@ share/mame/hash/h21.xml
 share/mame/hash/horizon.xml
 share/mame/hash/hp85_rom.xml
 share/mame/hash/hp86_rom.xml
-share/mame/hash/hp9825b_rom.xml
+share/mame/hash/hp9825_rom.xml
+share/mame/hash/hp9831_rom.xml
 share/mame/hash/hp9835a_rom.xml
 share/mame/hash/hp9845a_rom.xml
 share/mame/hash/hp9845b_rom.xml
@@ -420,6 +420,7 @@ share/mame/hash/mikrosha_cart.xml
 share/mame/hash/mikrosha_cass.xml
 share/mame/hash/mindset_flop.xml
 share/mame/hash/misterx.xml
+share/mame/hash/mk14_quik.xml
 share/mame/hash/mm1_flop.xml
 share/mame/hash/mo5_cart.xml
 share/mame/hash/mo5_cass.xml
@@ -429,9 +430,11 @@ share/mame/hash/mo6_cass.xml
 share/mame/hash/mo6_flop.xml
 share/mame/hash/mobigo_cart.xml
 share/mame/hash/monon_color.xml
+share/mame/hash/mpf1_rom.xml
 share/mame/hash/mpu1000.xml
 share/mame/hash/mpz80.xml
 share/mame/hash/msx.hsi
+share/mame/hash/msx1_bee_card.xml
 share/mame/hash/msx1_cart.xml
 share/mame/hash/msx1_cass.xml
 share/mame/hash/msx1_flop.xml
@@ -441,6 +444,7 @@ share/mame/hash/msx2_cart.xml
 share/mame/hash/msx2_cass.xml
 share/mame/hash/msx2_flop.xml
 share/mame/hash/msx2p_flop.xml
+share/mame/hash/msx_softcard.xml
 share/mame/hash/msxr_flop.xml
 share/mame/hash/mt65_cass.xml
 share/mame/hash/mt65_rom.xml
@@ -634,6 +638,7 @@ share/mame/hash/spectrum_flop_opus.xml
 share/mame/hash/spectrum_mgt_flop.xml
 share/mame/hash/spectrum_microdrive.xml
 share/mame/hash/spectrum_wafadrive.xml
+share/mame/hash/sprachmg.xml
 share/mame/hash/squale_cart.xml
 share/mame/hash/ssem_quik.xml
 share/mame/hash/st_cart.xml
@@ -676,6 +681,7 @@ share/mame/hash/to7_qd.xml
 share/mame/hash/to8_cass.xml
 share/mame/hash/to8_qd.xml
 share/mame/hash/to_flop.xml
+share/mame/hash/triton_rom.xml
 share/mame/hash/trs80_cass.xml
 share/mame/hash/trs80_flop.xml
 share/mame/hash/trs80_quik.xml
