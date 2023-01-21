@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.471 2023/01/21 04:49:33 pho Exp $
+$NetBSD: CHANGES-2023,v 1.472 2023/01/21 11:04:05 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -604,3 +604,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/firefox-l10n to 109.0 [ryoon 2023-01-21]
 	Updated devel/mob to 4.2.0 [schmonz 2023-01-21]
 	Added lang/ghc94 version 9.4.4 [pho 2023-01-21]
+	Updated graphics/jpeginfo to 1.7.0 [fcambus 2023-01-21]
