@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2023/01/21 13:20:33 pho Exp $
+$NetBSD: distinfo,v 1.5 2023/01/21 13:28:50 pho Exp $
 
 BLAKE2s (ghc-9.0.1-boot-hadrian.tar.gz) = fff7259676e3d0281c7e15e684b65dc04313c9bcb4d6161962325c3fcee08c7b
 SHA512 (ghc-9.0.1-boot-hadrian.tar.gz) = 02047ca0718a240ce702aeac16c2194b6bf73119dacb59816c1e9a631667e420e44c6ef6d5b83f225af3bd31e3ec3fc8f28e9a3cb22e86f63089110429759878
@@ -49,7 +49,7 @@ SHA1 (patch-libraries_base_System_Environment_ExecutablePath.hsc) = 30baa7f76f20
 SHA1 (patch-libraries_base_configure) = 4e02082cdfde8d927d12f3d2f3d98ace6d4ee116
 SHA1 (patch-libraries_ghc-boot_GHC_BaseDir.hs) = 6885d0426eb4c09462b6628924a0801fe6c83a2f
 SHA1 (patch-libraries_process_cbits_posix_fork__exec.c) = 7c460239c76ee1a05ae364752f7216973597075a
-SHA1 (patch-libraries_terminfo_configure.ac) = c961bc2280c38b950888b9a34358738eae072abf
+SHA1 (patch-libraries_terminfo_configure.ac) = f9b1fbf3b7204af0ec2c2c21b1edab9592ff032d
 SHA1 (patch-libraries_text_text.cabal) = 5cfa19359cbdca7c836abae60302addd5e3e4218
 SHA1 (patch-libraries_time_lib_Data_Time_Clock_Internal_CTimespec.hsc) = 588270767f8a9cbde0648fc99807891fef65d721
 SHA1 (patch-libraries_time_lib_Data_Time_Clock_Internal_CTimeval.hs) = 68914d012a98cc4a4a245efeabcb9143dba0246a
