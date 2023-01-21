@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3877 2023/01/15 18:32:50 nikita Exp $
+# $NetBSD: Makefile,v 1.3878 2023/01/21 12:17:54 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -330,7 +330,6 @@ SUBDIR+=	easygit
 SUBDIR+=	ecb
 SUBDIR+=	eclipse
 SUBDIR+=	ecore
-SUBDIR+=	edcommon
 SUBDIR+=	editline
 SUBDIR+=	editorconfig-core
 SUBDIR+=	eet
