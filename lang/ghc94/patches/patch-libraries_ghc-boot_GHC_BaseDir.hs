@@ -1,8 +1,11 @@
-$NetBSD: patch-libraries_ghc-boot_GHC_BaseDir.hs,v 1.1 2023/01/21 04:49:25 pho Exp $
+$NetBSD: patch-libraries_ghc-boot_GHC_BaseDir.hs,v 1.2 2023/01/21 12:59:54 pho Exp $
 
 Make getBaseDir less platform-dependent by making use of base-4.17
 `executablePath` when possible, and falling back on `getExecutablePath`
-when it's not available. Not upstreamed yet.
+when it's not available.
+
+Merge request:
+https://gitlab.haskell.org/ghc/ghc/-/merge_requests/9768
 
 --- libraries/ghc-boot/GHC/BaseDir.hs.orig	2023-01-14 17:06:00.667592015 +0000
 +++ libraries/ghc-boot/GHC/BaseDir.hs
