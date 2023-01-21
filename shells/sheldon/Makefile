@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/01/18 17:54:38 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2023/01/21 09:28:20 wiz Exp $
 
 DISTNAME=		sheldon-0.7.1
 CATEGORIES=		shells
@@ -13,6 +13,7 @@ LICENSE=		apache-2.0
 .include "cargo-depends.mk"
 
 USE_LANGUAGES=		c
+USE_TOOLS+=		pkg-config
 
 AUTO_MKDIRS=		yes
 
