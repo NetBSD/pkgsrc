@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2023/01/21 04:49:25 pho Exp $
+$NetBSD: distinfo,v 1.2 2023/01/21 12:02:49 pho Exp $
 
 BLAKE2s (ghc-9.0.1-boot-hadrian.tar.gz) = fff7259676e3d0281c7e15e684b65dc04313c9bcb4d6161962325c3fcee08c7b
 SHA512 (ghc-9.0.1-boot-hadrian.tar.gz) = 02047ca0718a240ce702aeac16c2194b6bf73119dacb59816c1e9a631667e420e44c6ef6d5b83f225af3bd31e3ec3fc8f28e9a3cb22e86f63089110429759878
@@ -36,7 +36,7 @@ SHA1 (patch-configure.ac) = 985482ae70830ddbf1334c9c82a2cec78a34bb4c
 SHA1 (patch-hadrian_bindist_Makefile) = 9a2a708d200ee03a199e8626210b13174a5b3663
 SHA1 (patch-hadrian_bootstrap_bootstrap.py) = 0a0aec27437d3e8e034f6dcfc797e9f751ce85a6
 SHA1 (patch-hadrian_src_Builder.hs) = fc0d05c4a8b052dac87a8d2e7a6166f8779bd92a
-SHA1 (patch-hadrian_src_Oracles_Setting.hs) = 0790059f027fca3ee17c42d770a29c56cd0d4cde
+SHA1 (patch-hadrian_src_Oracles_Setting.hs) = 498d1f810fa2f57151909eb672b73f137f1a7b01
 SHA1 (patch-hadrian_src_Rules_BinaryDist.hs) = fb908f74b8b619bccd673fbdb40b1c53ab7a51d8
 SHA1 (patch-hadrian_src_Settings_Builders_Ghc.hs) = e2913e9f83bb36bb0b432a24518c9b6ca2990c6a
 SHA1 (patch-hadrian_src_Settings_Default.hs) = 0e0278308ca4decac3fabd89831195b2a20c6eab
