@@ -1,0 +1,23 @@
+$NetBSD: patch-libraries_terminfo_configure.ac,v 1.1 2023/01/21 04:49:25 pho Exp $
+
+Fix build on NetBSD 10. setupterm(3) is in libterminfo on this
+platform. Not upstreamed yet.
+
+--- libraries/terminfo/configure.ac.orig	2023-01-13 13:47:37.528995149 +0000
++++ libraries/terminfo/configure.ac
+@@ -17,10 +17,11 @@ AC_PROG_CC()
+ 
+ AC_CHECK_LIB(tinfow, setupterm, HaveLibCurses=YES; LibCurses=tinfow,
+   [AC_CHECK_LIB(tinfo, setupterm, HaveLibCurses=YES; LibCurses=tinfo,
+-    [AC_CHECK_LIB(ncursesw, setupterm, HaveLibCurses=YES; LibCurses=ncursesw,
+-      [AC_CHECK_LIB(ncurses, setupterm, HaveLibCurses=YES; LibCurses=ncurses,
+-        [AC_CHECK_LIB(curses, setupterm, HaveLibCurses=YES; LibCurses=curses,
+-          HaveLibCurses=NO; LibCurses=not-installed)])])])])
++    [AC_CHECK_LIB(terminfo, setupterm, HaveLibCurses=YES; LibCurses=terminfo,
++      [AC_CHECK_LIB(ncursesw, setupterm, HaveLibCurses=YES; LibCurses=ncursesw,
++        [AC_CHECK_LIB(ncurses, setupterm, HaveLibCurses=YES; LibCurses=ncurses,
++          [AC_CHECK_LIB(curses, setupterm, HaveLibCurses=YES; LibCurses=curses,
++            HaveLibCurses=NO; LibCurses=not-installed)])])])])])
+ 
+ if test "x$HaveLibCurses" = "xNO" ; then
+     AC_MSG_FAILURE([curses library not found, so this package cannot be built])

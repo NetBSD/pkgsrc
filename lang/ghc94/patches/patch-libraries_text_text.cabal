@@ -1,0 +1,19 @@
+$NetBSD: patch-libraries_text_text.cabal,v 1.1 2023/01/21 04:49:25 pho Exp $
+
+This is a temporary workaround for aarch64 codegen bug in 9.2.1. Once we
+update our bootkit for aarch64 we can remove this.
+https://gitlab.haskell.org/ghc/ghc/-/issues/20594
+
+--- libraries/text/text.cabal.orig	2022-12-23 16:19:54.000000000 +0000
++++ libraries/text/text.cabal
+@@ -127,10 +127,6 @@ library
+   if (arch(aarch64) || arch(arm)) && impl(ghc == 8.10.*)
+     build-depends: base < 0
+ 
+-  -- Subword primitives in GHC 9.2.1 are broken on ARM platforms.
+-  if (arch(aarch64) || arch(arm)) && impl(ghc == 9.2.1)
+-    build-depends: base < 0
+-
+   exposed-modules:
+     Data.Text
+     Data.Text.Array
