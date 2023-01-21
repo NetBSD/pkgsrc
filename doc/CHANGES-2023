@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.469 2023/01/21 01:15:41 ryoon Exp $
+$NetBSD: CHANGES-2023,v 1.470 2023/01/21 03:41:15 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -602,3 +602,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added cross/z80asm version 1.8 [thorpej 2023-01-20]
 	Updated www/firefox to 109.0 [ryoon 2023-01-21]
 	Updated www/firefox-l10n to 109.0 [ryoon 2023-01-21]
+	Updated devel/mob to 4.2.0 [schmonz 2023-01-21]
