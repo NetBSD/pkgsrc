@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.486 2023/01/21 14:10:36 taca Exp $
+$NetBSD: CHANGES-2023,v 1.487 2023/01/21 14:14:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -620,3 +620,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/ruby-repofetch to 0.5.0 [taca 2023-01-21]
 	Updated www/ruby-excon to 0.97.2 [taca 2023-01-21]
 	Updated www/ruby-faraday to 2.7.4 [taca 2023-01-21]
+	Updated www/ruby-rails-html-sanitizer to 1.5.0 [taca 2023-01-21]
