@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.494 2023/01/21 18:50:10 gdt Exp $
+$NetBSD: CHANGES-2023,v 1.495 2023/01/21 19:57:47 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -628,3 +628,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/ruby-aws-sdk-s3 to 1.118.0 [taca 2023-01-21]
 	Updated www/ruby-jekyll to 4.3.2 [taca 2023-01-21]
 	Updated meta-pkgs/bulk-test-boost to 20230121 [gdt 2023-01-21]
+	Updated audio/gospt to 0.0.31 [pin 2023-01-21]
