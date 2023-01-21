@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.47 2022/10/10 03:31:44 taca Exp $
+# $NetBSD: Makefile.common,v 1.48 2023/01/21 13:55:50 taca Exp $
 #
 # Ruby base distribution common definition
 #
@@ -11,6 +11,9 @@
 # used by lang/ruby30-base/Makefile
 # used by lang/ruby31/Makefile
 # used by lang/ruby31-base/Makefile
+# used by lang/ruby32/Makefile
+# used by lang/ruby32-base/Makefile
+#
 #
 # RUBY_EXTNAME
 #	RUBY_EXTNAME defines name of extension which included in
