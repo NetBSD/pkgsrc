@@ -1,6 +1,9 @@
-$NetBSD: patch-libraries_base_System_Environment_ExecutablePath.hsc,v 1.1 2023/01/21 04:49:25 pho Exp $
+$NetBSD: patch-libraries_base_System_Environment_ExecutablePath.hsc,v 1.2 2023/01/21 12:59:54 pho Exp $
 
-Support executablePath on Solaris. Not upstreamed yet.
+Support executablePath on Solaris.
+
+Merge request:
+https://gitlab.haskell.org/ghc/ghc/-/merge_requests/9768
 
 --- libraries/base/System/Environment/ExecutablePath.hsc.orig	2023-01-14 16:23:19.153537486 +0000
 +++ libraries/base/System/Environment/ExecutablePath.hsc
