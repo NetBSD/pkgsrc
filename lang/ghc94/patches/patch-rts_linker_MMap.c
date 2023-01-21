@@ -1,4 +1,4 @@
-$NetBSD: patch-rts_linker_MMap.c,v 1.1 2023/01/21 04:49:25 pho Exp $
+$NetBSD: patch-rts_linker_MMap.c,v 1.2 2023/01/21 16:02:11 pho Exp $
 
 Hunk #0-2, #6:
     NetBSD-specific way of switching pages from rw- to r-x. Even when the
@@ -8,14 +8,16 @@ Hunk #0-2, #6:
     disable PaX MPROTECT entirely then we could omit this change, but of
     course that's not the right thing to do.
 
-    pho@ is reluctant to upstream these hunks because this change alone
-    doesn't make GHCi work on NetBSD. We also need hunk #3-5 but they are
-    rather hackish and don't really seem right.
+    Merge request:
+    https://gitlab.haskell.org/ghc/ghc/-/merge_requests/9769
 
 Hunk #3-5:
     NetBSD mmap(2) doesn't work the same way as that of Linux. We
     essentially can't use the hint address to map a new page based on the
     address of the previously mapped one.
+
+    Merge request:
+    https://gitlab.haskell.org/ghc/ghc/-/merge_requests/9769
 
     Minimal test case:
     https://gist.github.com/depressed-pho/a629247b48b3e6178e35a14c62e9d44f
