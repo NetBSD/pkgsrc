@@ -1,4 +1,4 @@
-$NetBSD: patch-rts_linker_MMap.c,v 1.2 2023/01/21 16:02:11 pho Exp $
+$NetBSD: patch-rts_linker_MMap.c,v 1.3 2023/01/21 18:31:22 pho Exp $
 
 Hunk #0-2, #6:
     NetBSD-specific way of switching pages from rw- to r-x. Even when the
@@ -25,7 +25,7 @@ Hunk #3-5:
     tech-kern thread:
     https://mail-index.netbsd.org/tech-kern/2022/02/17/msg027969.html
 
---- rts/linker/MMap.c.orig	2023-01-10 12:21:10.038457244 +0000
+--- rts/linker/MMap.c.orig	2022-12-23 16:19:02.000000000 +0000
 +++ rts/linker/MMap.c
 @@ -46,6 +46,8 @@ static const char *memoryAccessDescripti
    case MEM_NO_ACCESS:    return "no-access";
@@ -87,7 +87,7 @@ Hunk #3-5:
  static void *
  mmapInRegion (
          struct MemoryRegion *region,
-@@ -358,7 +390,11 @@ mmapForLinker (size_t bytes, MemoryAcces
+@@ -358,17 +390,27 @@ mmapForLinker (size_t bytes, MemoryAcces
      IF_DEBUG(linker_verbose, debugBelch("mmapForLinker: start\n"));
      if (RtsFlags.MiscFlags.linkerAlwaysPic) {
          /* make no attempt at mapping low memory if we are assuming PIC */
@@ -99,7 +99,10 @@ Hunk #3-5:
      } else {
          region = nearImage();
      }
-@@ -368,7 +404,13 @@ mmapForLinker (size_t bytes, MemoryAcces
+ 
+     /* Use MAP_32BIT if appropriate */
+-    if (region->end <= (void *) 0xffffffff) {
++    if (region && region->end <= (void *) 0xffffffff) {
          flags |= TRY_MAP_32BIT;
      }
  
