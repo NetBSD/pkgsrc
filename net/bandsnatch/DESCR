@@ -1,0 +1,21 @@
+CLI batch downloader for your Bandcamp collection.
+
+Bandsnatch is a Rust tool for downloading all of your Bandcamp purchases all at
+once in your desired format, and being able to be run multiple times when you
+buy new releases.
+
+This project is heavily inspired by Ezwen's bandcamp-collection-downloader,
+https://framagit.org/Ezwen/bandcamp-collection-downloader, which I used myself
+before this, specifically existing to help me learn Rust, but also to add some
+improvements over it that I've wanted.
+
+This tool is still currently a work in progress, so bugs and other weirdness may
+occur. If anything weird happens or something breaks, please open an issue about
+it with information and reproduction steps if possible. Specifically testing use
+of this with large collections would be very helpful to see if there's any areas
+that I need to improve in.
+
+If you're a developer poking around in the code, please note that this is my
+first proper project written using Rust, so code quality may be subpar,
+especially in terms of memory usage. If you have any ideas to improve the
+project in general I'd love to hear them.
