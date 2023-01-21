@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2023/01/19 01:49:54 taca Exp $
+# $NetBSD: Makefile,v 1.38 2023/01/21 13:57:31 taca Exp $
 
 DISTNAME=	chef-18.1.0
 PKGREVISION=	1
@@ -45,7 +45,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-vault>=0.16<1:../../security/ruby-vault
 
 USE_LANGUAGES=	# none
 
-RUBY_VERSIONS_ACCEPTED=	31
+RUBY_VERSIONS_ACCEPTED=	31 32
 
 OVERRIDE_GEMSPEC+=	et-sftp>=2.1.2
 RUBYGEM_OPTIONS+=	--format-executable
