@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.474 2023/01/21 11:18:20 pin Exp $
+$NetBSD: CHANGES-2023,v 1.475 2023/01/21 11:19:52 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -607,3 +607,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/jpeginfo to 1.7.0 [fcambus 2023-01-21]
 	Updated sysutils/onefetch to 2.15.1 [pin 2023-01-21]
 	Updated sysutils/felix to 2.2.3 [pin 2023-01-21]
+	Updated devel/git-cliff to 1.1.2 [pin 2023-01-21]
