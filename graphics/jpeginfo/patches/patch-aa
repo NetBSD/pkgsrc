@@ -1,12 +1,12 @@
-$NetBSD: patch-aa,v 1.4 2023/01/13 10:48:36 fcambus Exp $
+$NetBSD: patch-aa,v 1.5 2023/01/21 11:03:39 fcambus Exp $
 
 - Use PKGMANDIR.
 - Append -o flag explicitely, this fixes the build with older versions
   of make, such as the one used in NetBSD 9.
 
---- Makefile.in.orig	2023-01-08 06:33:16.000000000 +0000
+--- Makefile.in.orig	2023-01-16 07:48:06.000000000 +0000
 +++ Makefile.in
-@@ -26,8 +26,9 @@ libdir = $(prefix)/lib
+@@ -25,18 +25,19 @@ libdir = $(prefix)/lib
  infodir = $(prefix)/share/info
  
  # Where to put the manual pages.
@@ -16,14 +16,27 @@ $NetBSD: patch-aa,v 1.4 2023/01/13 10:48:36 fcambus Exp $
 +INSTALL_ROOT=	$(DESTDIR)
  
  
- CC        = @CC@ 
-@@ -54,6 +55,9 @@ DISTNAME  = $(PKGNAME)-$(Version)
- 
- OBJS = $(PKGNAME).o misc.o @GNUGETOPT@ md5.o sha256/hash.o sha256/blocks.o
+ CC        = @CC@
+ XCPPFLAGS = @CPPFLAGS@
+ CFLAGS    = @CFLAGS@ $(XCPPFLAGS) $(DEFS)
+-ifeq ($(CC),gcc)
+-CFLAGS	 += -Wall -Wformat -Werror=format-security
++#ifeq ($(CC),gcc)
++#CFLAGS	 += -Wall -Wformat -Werror=format-security
+ #CFLAGS	 += -fno-omit-frame-pointer -D_FORTIFY_SOURCE=2
+ #CFLAGS	 += -fstack-protector --param=ssp-buffer-size=4 -fsanitize=address,undefined
+-endif
++#endif
+ LDFLAGS   = @LDFLAGS@
+ LIBS      = @LIBS@
+ STRIP     = strip
+@@ -57,6 +58,9 @@ DISTNAME := $(PKGNAME)-$(Version)
+ OBJS = $(PKGNAME).o jpegmarker.o misc.o @GNUGETOPT@ md5.o sha256/hash.o sha256/blocks.o \
+ 	sha512/hash.o sha512/blocks.o
  
 +.c.o:
 +	$(CC) $(CFLAGS) -o $@ -c $<
 +
- $(PKGNAME):	$(OBJS) 
- 	$(CC) $(CFLAGS) -o $(PKGNAME) $(OBJS) $(LDFLAGS) $(LIBS) 
+ $(PKGNAME):	$(OBJS)
+ 	$(CC) $(CFLAGS) -o $(PKGNAME) $(OBJS) $(LDFLAGS) $(LIBS)
  
