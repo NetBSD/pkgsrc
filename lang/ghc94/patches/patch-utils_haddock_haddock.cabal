@@ -1,6 +1,9 @@
-$NetBSD: patch-utils_haddock_haddock.cabal,v 1.1 2023/01/21 04:49:25 pho Exp $
+$NetBSD: patch-utils_haddock_haddock.cabal,v 1.2 2023/01/21 16:26:23 pho Exp $
 
-Don't assume we always build the threaded RTS. Not upstreamed yet.
+Don't assume we always build the threaded RTS.
+
+Pull request:
+https://github.com/haskell/haddock/pull/1575
 
 --- utils/haddock/haddock.cabal.orig	2023-01-11 07:37:47.265320221 +0000
 +++ utils/haddock/haddock.cabal
