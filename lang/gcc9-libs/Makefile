@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2022/07/28 17:00:34 gutteridge Exp $
+# $NetBSD: Makefile,v 1.7.4.1 2023/01/21 14:48:41 bsiegert Exp $
 
 GCC_PKGNAME=	gcc9
 .include	"../../lang/${GCC_PKGNAME}/version.mk"
@@ -9,7 +9,7 @@ PKGNAME=	${GCC_PKGNAME}-libs-${GCC9_DIST_VERSION}
 ## The PKGREVISION of this package needs to be at least 1 more than the
 ## PKGREVISION of the lang/gcc9 package so that with the dependence pattern
 ## '{gcc9,gcc9-libs}>=9.2.*' pkg_add will choose gcc9-libs over gcc9.
-PKGREVISION=	10
+PKGREVISION=	11
 
 CATEGORIES=	lang
 MASTER_SITES=	# empty
