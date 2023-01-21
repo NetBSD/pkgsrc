@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.476 2023/01/21 11:21:18 pin Exp $
+$NetBSD: CHANGES-2023,v 1.477 2023/01/21 11:24:47 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -609,3 +609,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/felix to 2.2.3 [pin 2023-01-21]
 	Updated devel/git-cliff to 1.1.2 [pin 2023-01-21]
 	Updated audio/gospt to 0.0.30 [pin 2023-01-21]
+	Added net/bandsnatch version 0.1.1 [pin 2023-01-21]
