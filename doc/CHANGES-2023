@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.484 2023/01/21 14:05:21 taca Exp $
+$NetBSD: CHANGES-2023,v 1.485 2023/01/21 14:08:28 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -618,3 +618,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added lang/ruby32 version 3.2.0 [taca 2023-01-21]
 	Updated www/ruby-html-proofer to 5.0.4 [taca 2023-01-21]
 	Updated sysutils/ruby-repofetch to 0.5.0 [taca 2023-01-21]
+	Updated www/ruby-excon to 0.97.2 [taca 2023-01-21]
