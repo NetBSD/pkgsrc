@@ -1,7 +1,10 @@
-$NetBSD: patch-libraries_terminfo_configure.ac,v 1.1 2023/01/21 04:49:25 pho Exp $
+$NetBSD: patch-libraries_terminfo_configure.ac,v 1.2 2023/01/21 13:28:50 pho Exp $
 
 Fix build on NetBSD 10. setupterm(3) is in libterminfo on this
-platform. Not upstreamed yet.
+platform.
+
+Pull request:
+https://github.com/judah/terminfo/pull/52
 
 --- libraries/terminfo/configure.ac.orig	2023-01-13 13:47:37.528995149 +0000
 +++ libraries/terminfo/configure.ac
