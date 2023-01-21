@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2022/12/18 14:47:39 taca Exp $
+# $NetBSD: Makefile,v 1.11 2023/01/21 13:59:53 taca Exp $
 
-DISTNAME=	html-proofer-5.0.3
+DISTNAME=	html-proofer-5.0.4
 CATEGORIES=	www
 
 MAINTAINER=	ryoon@NetBSD.org
@@ -18,7 +18,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-zeitwerk>=2.5<3:../../devel/ruby-zeitwerk
 
 USE_LANGUAGES=	# none
 
-RUBY_VERSIONS_ACCEPTED=	31
+RUBY_VERSIONS_ACCEPTED=	31 32
 RUBYGEM_OPTIONS+=	--format-executable
 
 .include "../../lang/ruby/gem.mk"
