@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2022/12/04 16:20:26 taca Exp $
+@comment $NetBSD: PLIST,v 1.18 2023/01/21 14:36:08 taca Exp $
 bin/jekyll${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.rubocop.yml
@@ -7,7 +7,7 @@ ${GEM_LIBDIR}/README.markdown
 ${GEM_LIBDIR}/exe/jekyll
 ${GEM_LIBDIR}/lib/blank_template/_config.yml
 ${GEM_LIBDIR}/lib/blank_template/_layouts/default.html
-${GEM_LIBDIR}/lib/blank_template/_sass/main.scss
+${GEM_LIBDIR}/lib/blank_template/_sass/base.scss
 ${GEM_LIBDIR}/lib/blank_template/assets/css/main.scss
 ${GEM_LIBDIR}/lib/blank_template/index.md
 ${GEM_LIBDIR}/lib/jekyll.rb
