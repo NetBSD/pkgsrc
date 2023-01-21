@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1496 2023/01/19 15:15:02 manu Exp $
+# $NetBSD: Makefile,v 1.1497 2023/01/21 11:24:21 pin Exp $
 #
 
 COMMENT=	Networking tools
@@ -37,6 +37,7 @@ SUBDIR+=	avahi-ui
 SUBDIR+=	awhois
 SUBDIR+=	balance
 SUBDIR+=	bandcamp-dl
+SUBDIR+=	bandsnatch
 SUBDIR+=	barnyard
 SUBDIR+=	batchftp
 SUBDIR+=	bbk_cli
