@@ -1,7 +1,9 @@
-$NetBSD: patch-hadrian_src_Oracles_Setting.hs,v 1.1 2023/01/21 04:49:25 pho Exp $
+$NetBSD: patch-hadrian_src_Oracles_Setting.hs,v 1.2 2023/01/21 12:02:49 pho Exp $
 
 Hadrian's idea of rpath usability is overly pessimistic. If it's an ELF or
-a Mach-O target we should assume it supports rpaths. Not upstreamed yet.
+a Mach-O target we should assume it supports rpaths.
+
+Merge request: https://gitlab.haskell.org/ghc/ghc/-/merge_requests/9767
 
 --- hadrian/src/Oracles/Setting.hs.orig	2023-01-15 17:18:47.276886521 +0000
 +++ hadrian/src/Oracles/Setting.hs
