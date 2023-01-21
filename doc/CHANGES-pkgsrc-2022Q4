@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2022Q4,v 1.1.2.5 2023/01/13 19:54:57 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2022Q4,v 1.1.2.6 2023/01/21 14:49:07 bsiegert Exp $
 
 Changes to packages and infrastructure on the 2022Q4 branch:
 
@@ -35,4 +35,14 @@ lang/php80: security fix
 
 Pullup ticket #6720 - requested by gutteridge
 lang/python27: security fix
+
+Pullup ticket #6722 - requested by taca
+www/ruby-rails-html-sanitizer: security fix
+
+Pullup ticket #6721 - requested by wiz
+emulators/mame: bugfixes
+
+Pullup ticket #6723 - requested by tsutsui
+x11/qt6-qtbase: i386 build fix
+lang/gcc9: dependent update
 
