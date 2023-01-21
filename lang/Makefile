@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.673 2023/01/21 04:49:46 pho Exp $
+# $NetBSD: Makefile,v 1.674 2023/01/21 13:53:55 taca Exp $
 #
 
 COMMENT=	Programming languages
@@ -278,6 +278,8 @@ SUBDIR+=	ruby27
 SUBDIR+=	ruby27-base
 SUBDIR+=	ruby30
 SUBDIR+=	ruby30-base
+SUBDIR+=	ruby32
+SUBDIR+=	ruby32-base
 SUBDIR+=	ruby31
 SUBDIR+=	ruby31-base
 SUBDIR+=	runawk
