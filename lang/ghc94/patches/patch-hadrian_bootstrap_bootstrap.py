@@ -1,7 +1,12 @@
-$NetBSD: patch-hadrian_bootstrap_bootstrap.py,v 1.1 2023/01/21 04:49:25 pho Exp $
+$NetBSD: patch-hadrian_bootstrap_bootstrap.py,v 1.2 2023/01/21 18:24:42 pho Exp $
 
 bootstrap.py assumes that GHC always has a threaded RTS but our bootkits
 don't. It is debatable at least as to whether this should be upstreamed.
+
+At least the hack to shake.cabal can be removed when [1] gets merged and
+GHC adopts it in hadrian/bootstrap/*.json.
+
+[1]: https://github.com/ndmitchell/shake/pull/836
 
 --- hadrian/bootstrap/bootstrap.py.orig	2022-12-23 16:19:02.000000000 +0000
 +++ hadrian/bootstrap/bootstrap.py
