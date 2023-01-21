@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.481 2023/01/21 12:17:54 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.482 2023/01/21 13:54:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -614,3 +614,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/superdiff to 2.1.2 [pin 2023-01-21]
 	Updated x11/gnustep-gui to 0.30.0 [wiz 2023-01-21]
 	Removed devel/edcommon [wiz 2023-01-21]
+	Added lang/ruby32-base version 3.2.0 [taca 2023-01-21]
+	Added lang/ruby32 version 3.2.0 [taca 2023-01-21]
