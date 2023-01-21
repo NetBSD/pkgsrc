@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2022/06/05 14:18:39 adam Exp $
+# $NetBSD: Makefile,v 1.13 2023/01/21 18:49:58 gdt Exp $
 
-DISTNAME=	bulk-test-boost-20220524
+DISTNAME=	bulk-test-boost-20230121
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -29,6 +29,7 @@ BUILD_DEPENDS+=		gnucash-[0-9]*:../../finance/gnucash
 BUILD_DEPENDS+=		gnuradio-core-[0-9]*:../../ham/gnuradio-core
 BUILD_DEPENDS+=		gource-[0-9]*:../../graphics/gource
 BUILD_DEPENDS+=		gpick-[0-9]*:../../graphics/gpick
+BUILD_DEPENDS+=		icinga2-[0-9]*:../../net/icinga2
 BUILD_DEPENDS+=		inkscape-[0-9]*:../../graphics/inkscape
 BUILD_DEPENDS+=		innoextract-[0-9]*:../../archivers/innoextract
 BUILD_DEPENDS+=		kicad-[0-9]*:../../cad/kicad
