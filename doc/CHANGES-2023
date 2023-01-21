@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.479 2023/01/21 11:41:25 pin Exp $
+$NetBSD: CHANGES-2023,v 1.480 2023/01/21 12:16:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -612,3 +612,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added net/bandsnatch version 0.1.1 [pin 2023-01-21]
 	Updated security/gpg-tui to 0.9.3 [pin 2023-01-21]
 	Updated devel/superdiff to 2.1.2 [pin 2023-01-21]
+	Updated x11/gnustep-gui to 0.30.0 [wiz 2023-01-21]
