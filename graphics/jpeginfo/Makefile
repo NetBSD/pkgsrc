@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2023/01/13 11:00:48 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2023/01/21 11:03:39 fcambus Exp $
 
-DISTNAME=	jpeginfo-1.6.2
+DISTNAME=	jpeginfo-1.7.0
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.kokkonen.net/tjko/src/
 
