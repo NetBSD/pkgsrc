@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2022/01/29 11:02:50 schmonz Exp $
+# $NetBSD: Makefile,v 1.18 2023/01/22 16:24:29 ryoon Exp $
 
 BOOST_PACKAGE=		jam
 BOOST_COMMENT=		(Boost.Jam utility)
@@ -29,8 +29,6 @@ do-build:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/tools/build/src/engine/b2 \
-		${DESTDIR}${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/tools/build/src/engine/bjam \
 		${DESTDIR}${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"

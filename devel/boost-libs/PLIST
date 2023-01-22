@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.43 2021/09/24 18:56:16 thor Exp $
+@comment $NetBSD: PLIST,v 1.44 2023/01/22 16:24:29 ryoon Exp $
 lib/libboost_atomic.a
 lib/libboost_atomic.so
 lib/libboost_atomic.so.${PKGVERSION}
@@ -106,6 +106,9 @@ lib/libboost_type_erasure.so.${PKGVERSION}
 lib/libboost_unit_test_framework.a
 lib/libboost_unit_test_framework.so
 lib/libboost_unit_test_framework.so.${PKGVERSION}
+lib/libboost_url.a
+lib/libboost_url.so
+lib/libboost_url.so.${PKGVERSION}
 lib/libboost_wave.a
 lib/libboost_wave.so
 lib/libboost_wave.so.${PKGVERSION}
