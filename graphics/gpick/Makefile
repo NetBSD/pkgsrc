@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2023/01/03 17:37:22 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2023/01/22 16:28:27 ryoon Exp $
 
 DISTNAME=	gpick-0.2.6
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=thezbyg/}
 GITHUB_TAG=	${DISTNAME}
