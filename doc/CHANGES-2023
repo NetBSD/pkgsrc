@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.502 2023/01/22 10:30:32 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.503 2023/01/22 10:30:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -636,3 +636,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/macchina to 6.1.8 [pin 2023-01-22]
 	Added devel/garden version 0.6.0 [pin 2023-01-22]
 	Updated textproc/libxml2 to 2.10.3 [wiz 2023-01-22]
+	Updated textproc/py-libxml2 to 2.10.3 [wiz 2023-01-22]
