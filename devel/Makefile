@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3878 2023/01/21 12:17:54 wiz Exp $
+# $NetBSD: Makefile,v 1.3879 2023/01/22 09:02:47 pin Exp $
 #
 
 COMMENT=	Development utilities
@@ -376,6 +376,7 @@ SUBDIR+=	frink
 SUBDIR+=	fromcvs
 SUBDIR+=	ftnchek
 SUBDIR+=	g-wrap
+SUBDIR+=	garden
 SUBDIR+=	gccmakedep
 SUBDIR+=	gconfmm
 SUBDIR+=	gcvs
