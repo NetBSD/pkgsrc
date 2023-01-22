@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2022/11/23 16:19:30 adam Exp $
+# $NetBSD: Makefile,v 1.29 2023/01/22 17:38:29 ryoon Exp $
 
 DISTNAME=	quassel-0.14.0
 PKGREVISION=	6
@@ -32,6 +32,7 @@ REPLACE_PERL+=	data/scripts/mpris
 .include "../../devel/libdbusmenu-qt5/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/qca2-qt5/buildlink3.mk"
+.include "../../textproc/sonnet/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtscript/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
