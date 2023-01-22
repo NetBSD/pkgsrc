@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.37 2022/09/18 11:47:54 wiz Exp $
+$NetBSD: distinfo,v 1.38 2023/01/22 13:17:19 wiz Exp $
 
-BLAKE2s (neon-0.32.4.tar.gz) = fc775e2b9d705dcc9cecc670d1d7b5812877ee983c0486a5cac9019d976a5526
-SHA512 (neon-0.32.4.tar.gz) = 82bcd1555f047d26cc5ccd67d2fef8dea4eb5a4cc45ca8030d2f3c356eee03fd78efd7ef45f516948e89f1089686731046b3fe48e73b3d84c65848ef6d86bd7a
-Size (neon-0.32.4.tar.gz) = 895482 bytes
+BLAKE2s (neon-0.32.5.tar.gz) = 4c016329424433f41b3d06f9ef1efeb965957d55e18db66ac5d1b4734786322f
+SHA512 (neon-0.32.5.tar.gz) = 97a067fcea6156e2d5cf981e8d8fc9b0a709b8175bc8061a1f254bff7b11a27fdafc5e8425665523e917133084ea3a11e11de7c1210a8d2eb3f6b1cca26ea844
+Size (neon-0.32.5.tar.gz) = 896177 bytes

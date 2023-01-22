@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2022/10/28 09:25:26 wiz Exp $
+@comment $NetBSD: PLIST,v 1.25 2023/01/22 13:17:19 wiz Exp $
 bin/neon-config
 include/neon/ne_207.h
 include/neon/ne_acl.h
@@ -180,6 +180,7 @@ share/locale/cs/LC_MESSAGES/neon.mo
 share/locale/de/LC_MESSAGES/neon.mo
 share/locale/fr/LC_MESSAGES/neon.mo
 share/locale/ja/LC_MESSAGES/neon.mo
+share/locale/ka/LC_MESSAGES/neon.mo
 share/locale/nn/LC_MESSAGES/neon.mo
 share/locale/pl/LC_MESSAGES/neon.mo
 share/locale/ru/LC_MESSAGES/neon.mo
