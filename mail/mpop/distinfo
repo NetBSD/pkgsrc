@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/10/26 10:54:09 nia Exp $
+$NetBSD: distinfo,v 1.15 2023/01/22 00:23:18 leot Exp $
 
-BLAKE2s (mpop-1.4.10.tar.xz) = 1fb04cdc9d12d7aa8718185773b98c08cd6671591ceb970471c935ad79c044a5
-SHA512 (mpop-1.4.10.tar.xz) = 214443c8caec4b41dd3e1e93d5bd302a00b6622960070e6d3dbc7c2449ab4f216efbd786f4dc9f9b653868061c072c1435d4c7471ea219097fbcf1fc42ecb999
-Size (mpop-1.4.10.tar.xz) = 331732 bytes
+BLAKE2s (mpop-1.4.17.tar.xz) = c573b148d5c7677892e938005a3cbed28d5fe1f30c1eca5ee0ed733aefcec542
+SHA512 (mpop-1.4.17.tar.xz) = 48a40430acaf99a0bfad124199f461860ee5fe93d16fdf54857fa39ae15e2b601aa5a54813647a0e0a9fe5dcb06c587bfd06df482858448f04260e5edff8c5fa
+Size (mpop-1.4.17.tar.xz) = 372124 bytes
