@@ -1,5 +1,5 @@
 #! @PYTHONBIN@
-# $NetBSD: url2pkg.py,v 1.45 2022/08/26 20:11:35 rillig Exp $
+# $NetBSD: url2pkg.py,v 1.46 2023/01/22 18:58:45 rillig Exp $
 
 # Copyright (c) 2019 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -927,7 +927,7 @@ class Adjuster:
 
     def adjust_cmake(self):
         if self.wrksrc_isfile('CMakeLists.txt'):
-            self.build_vars.append(Var('USE_CMAKE', '=', 'yes'))
+            self.includes.append('../../devel/cmake/build.mk')
 
     def adjust_gnu_make(self):
         if self.wrksrc_isfile('Makefile') \
