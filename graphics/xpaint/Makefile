@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.82 2023/01/06 10:58:07 vins Exp $
+# $NetBSD: Makefile,v 1.83 2023/01/22 17:41:52 vins Exp $
 
-DISTNAME=	xpaint-2.7.8.1
-PKGREVISION=	12
+DISTNAME=	xpaint-3.1.4
 CATEGORIES=	graphics x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sf-xpaint/}
 EXTRACT_SUFX=	.tar.bz2
@@ -9,45 +8,42 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://sf-xpaint.sourceforge.net/
 COMMENT=	Simple paint program
+LICENSE=	gnu-gpl-v3
 
-USE_IMAKE=	yes
-MAKE_ENV+=	XMKMF=${XMKMF:Q}
-MAKE_JOBS_SAFE=	NO
+MAKE_JOBS_SAFE=	no
 
-SUBST_CLASSES+=		foo
-SUBST_STAGE.foo=	pre-configure
-SUBST_FILES.foo=	Local.config configure
-SUBST_VARS.foo=		LOCALBASE
-SUBST_VARS.foo+=	PREFIX
-SUBST_SED.foo+=		-e "s|@XAWDIR@|${BUILDLINK_PREFIX.libXaw3d}|g"
-SUBST_SED.foo+=		-e "s|@XPMDIR@|${BUILDLINK_PREFIX.libXpm}|g"
+GNU_CONFIGURE=	yes
+USE_LANGUAGES=	c
+USE_LIBTOOL=	yes
+USE_TOOLS+=	autoconf automake autoreconf
+USE_TOOLS+=	bash gmake gunzip
 
-INSTALLATION_DIRS+=	bin lib/X11/app-defaults ${PKGMANDIR}/cat1
-INSTALLATION_DIRS+=	share/xpaint
-INSTALLATION_DIRS+=	share/xpaint/include
-INSTALLATION_DIRS+=	share/xpaint/c_scripts
-INSTALLATION_DIRS+=	share/xpaint/c_scripts/3d_surfaces
-INSTALLATION_DIRS+=	share/xpaint/c_scripts/filters
-INSTALLATION_DIRS+=	share/xpaint/c_scripts/images
-INSTALLATION_DIRS+=	share/xpaint/c_scripts/layers
-INSTALLATION_DIRS+=	share/xpaint/c_scripts/procedures
-INSTALLATION_DIRS+=	share/xpaint/c_scripts/3d_curves
-INSTALLATION_DIRS+=	share/xpaint/help
-INSTALLATION_DIRS+=	share/xpaint/messages
+REPLACE_BASH=	share/bin/imgmerge share/bin/xpaint_ocr
 
-pre-configure:
-	cd ${WRKSRC} && ./configure xaw3dg
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} != "Linux"
+BUILDLINK_TRANSFORM+=	rm:-ldl
+.endif
+
+SUBST_CLASSES+=		ln
+SUBST_STAGE.ln=		pre-configure
+SUBST_MESSAGE.ln=	Linking to libXaw3dXft include directory.
+SUBST_FILES.ln=		Makefile.in
+SUBST_SED.ln=		-e 's|/usr/include/X11/Xaw3dxft|${WRKDIR}/.buildlink/include/X11/Xaw3dxft|'
+
+pre-install:
+	for file in ${WRKSRC}/bitmaps/toolicons/*.xpm.gz ; do \
+		${GUNZIP_CMD} $$file ; \
+	done
 
 .include "../../mk/jpeg.buildlink3.mk"
+.include "../../fonts/fontconfig/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../graphics/netpbm/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
-.include "../../x11/libXext/buildlink3.mk"
-.include "../../x11/libXpm/buildlink3.mk"
-.include "../../x11/libXaw3d/buildlink3.mk"
-.include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "Linux"
-# undefined reference to symbol 'dlclose@@GLIBC_2.2.5'
-.  include "../../mk/dlopen.buildlink3.mk"
-LDFLAGS+=   ${BUILDLINK_LDADD.dl:Q}
-.endif
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXaw3dXft/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
