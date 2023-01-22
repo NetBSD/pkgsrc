@@ -1,4 +1,4 @@
-# $NetBSD: application.mk,v 1.3 2023/01/22 19:34:22 nikita Exp $
+# $NetBSD: application.mk,v 1.4 2023/01/22 19:50:50 nikita Exp $
 #
 # Common logic to handle zig packages
 # This is only usable if they include a 'build.zig' file
@@ -8,16 +8,16 @@
 # Debug build (default):
 # Fast compilation speed, Safety checks enabled, Slow runtime performance
 # Large binary size, No reproducible build requirement
-# ReleaseFast (-O ReleaseFast)
+# ReleaseFast (-Drelease-fast)
 # Fast runtime performance, Safety checks disabled, Slow compilation speed
 # Large binary size, Reproducible build
-# ReleaseSafe (-O ReleaseSafe)
+# ReleaseSafe (-Drelease-safe=true)
 # Medium runtime performance, Safety checks enabled, Slow compilation speed
 # Large binary size, Reproducible build
-# ReleaseSmall (-O ReleaseSmall)
+# ReleaseSmall (-Drelease-small=true)
 # Medium runtime performance, Safety checks disabled, Slow compilation speed
 # Small binary size
-ZIGBUILDMODE?=		-Drelease-fast
+ZIGBUILDMODE?=		-Drelease-fast=true
 ZIGBUILDARGS?=
 ZIGTESTARGS?=
 
