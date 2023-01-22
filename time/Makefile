@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.236 2022/12/31 11:25:50 gutteridge Exp $
+# $NetBSD: Makefile,v 1.237 2023/01/22 20:09:26 vins Exp $
 #
 
 COMMENT=	Clocks, calendars, daily planners and other time related applications
@@ -262,6 +262,7 @@ SUBDIR+=	xbeats
 SUBDIR+=	xchrono
 SUBDIR+=	xclock
 SUBDIR+=	xdaliclock
+SUBDIR+=	xdiary
 SUBDIR+=	xdkcal
 SUBDIR+=	xfce4-orage
 SUBDIR+=	xfce4-timer-plugin
