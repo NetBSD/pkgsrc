@@ -1,10 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:46:47 nia Exp $
+$NetBSD: distinfo,v 1.9 2023/01/22 23:51:23 wiz Exp $
 
-BLAKE2s (mcomix-1.2.1.tar.bz2) = f91aba8ce690a6a93267324b96c14eb51b24d8837887bf42503a240e448b3cf2
-SHA512 (mcomix-1.2.1.tar.bz2) = efa4d57edc3a48d9e711767fb3e233ef9b334ff8ba467999e572e60ed747a4ee4aa420c8aa7788b16d7eb6e0901d454d6a405fcec47a8c74098a49491e915cd0
-Size (mcomix-1.2.1.tar.bz2) = 571128 bytes
-SHA1 (patch-mcomix_archive_archive_base.py) = 1098362d435aa0325b1a6b0fe1c12148fedf176c
-SHA1 (patch-mcomix_archive_pdf_external.py) = 4b758daff2e1bd1312961870b209833277bb4cb6
-SHA1 (patch-mcomix_archive_rar_external.py) = 9a2d5f90ae4d618dd43acd29547e2d47ccb48b8b
-SHA1 (patch-mcomix_archive_sevenzip_external.py) = 2c6366e45a40f34349112e41944ae56a6255f95d
-SHA1 (patch-mcomix_run.py) = 20f29033839e2fa641e55084bb5eb4a1b7dfc9d8
+BLAKE2s (mcomix-2.1.0.tar.gz) = 3265dba891dcc950bad2c64d395faed6b6b0e0186e5add5c89210b8632f47734
+SHA512 (mcomix-2.1.0.tar.gz) = 385654c48192c20e285a053a8a90f1e792d58f7adbb0960745f31703d2ff5906f5e5bfd868ebaa08dd27314543a761a255503e5d586edd1baa064ffcea0205ca
+Size (mcomix-2.1.0.tar.gz) = 517070 bytes
