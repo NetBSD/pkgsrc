@@ -1,29 +1,24 @@
-# $NetBSD: Makefile,v 1.23 2022/01/05 20:07:10 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2023/01/22 23:51:23 wiz Exp $
 
-DISTNAME=	mcomix-1.2.1
+DISTNAME=	mcomix-2.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	7
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mcomix/}
-EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	nonakap@gmail.com
 HOMEPAGE=	http://mcomix.sourceforge.net/
-COMMENT=	GTK2 comic book viewer
+COMMENT=	GTK+ comic book viewer
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	${PYPKGPREFIX}-gtk2>=2.12.0:../../x11/py-gtk2
-DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow6
-DEPENDS+=	${PYPKGPREFIX}-subprocess32-[0-9]*:../../devel/py-subprocess32
-DEPENDS+=	${PYPKGPREFIX}-czipfile-[0-9]*:../../archivers/py-czipfile
+DEPENDS+=	${PYPKGPREFIX}-Pillow>=6.0.0:../../graphics/py-Pillow6
+DEPENDS+=	${PYPKGPREFIX}-gobject3>=3.36.0:../../devel/py-gobject3
 DEPENDS+=	${PYPKGPREFIX}-sqlite3>=0:../../databases/py-sqlite3
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_ACCEPTED= 27 # py-gtk2
-EGG_NAME=	${DISTNAME:S/01/1/}
-
 PYTHON_SELF_CONFLICT=	yes
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_PKG_RESOURCES=	yes
 
@@ -35,6 +30,7 @@ SUBST_FILES.path=	setup.py
 SUBST_SED.path=		-e s,share/man,${PKGMANDIR},g
 
 .include "../../databases/shared-mime-info/mimedb.mk"
+.include "../../graphics/py-cairo/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../lang/python/egg.mk"
