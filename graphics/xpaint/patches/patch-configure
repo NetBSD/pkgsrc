@@ -1,0 +1,17 @@
+$NetBSD: patch-configure,v 1.1 2023/01/22 17:41:52 vins Exp $
+
+The freetype2 package contains a freetype include subdirectory
+instead of freetype2, at least on NetBSD, FreeBSD, Arch Linux,
+Debian GNU/LInux.
+
+--- configure.orig	2021-01-28 20:39:25.000000000 +0000
++++ configure
+@@ -5981,7 +5981,7 @@ rm -f core conftest.err conftest.$ac_obj
+ $as_echo_n "checking location of freetype2 headers... " >&6; }
+ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+-#include <freetype2/config/ftheader.h>
++#include <freetype/config/ftheader.h>
+ int
+ main ()
+ {

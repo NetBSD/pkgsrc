@@ -1,0 +1,15 @@
+$NetBSD: patch-xpaintrw_Makefile.in,v 1.1 2023/01/22 17:41:52 vins Exp $
+
+Use libtool from wrappers.
+
+--- xpaintrw/Makefile.in.orig	2021-01-28 20:39:25.000000000 +0000
++++ xpaintrw/Makefile.in
+@@ -325,7 +325,7 @@ EXTRA_DEFINES = -DFEATURE_FRACTAL -DERRO
+ 
+ XAWLIB_DEFINES = -DXAW3D -DXAW3DG -DXAW3DXFT -DXAW_ARROW_SCROLLBARS -DXAW_INTERNATIONALIZATION -I..
+ xpaint_DEFINES = $(ARCH_DEFINES) $(EXTRA_DEFINES) $(XAWLIB_DEFINES)
+-LIBTOOL = /usr/bin/libtool
++LIBTOOL = libtool
+ AM_CFLAGS = @X_CFLAGS@ @SPECIAL_CFLAGS@ $(xpaint_DEFINES)
+ AM_YFLAGS = -d
+ CLEANFILES = 
