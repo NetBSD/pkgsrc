@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.51 2022/11/23 16:19:44 adam Exp $
+# $NetBSD: Makefile,v 1.52 2023/01/22 16:28:22 ryoon Exp $
 #
 
 DISTNAME=	soci-3.2.2
-PKGREVISION=	44
+PKGREVISION=	45
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=soci/}
 
