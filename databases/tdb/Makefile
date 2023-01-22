@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.48 2022/06/30 11:18:09 nia Exp $
+# $NetBSD: Makefile,v 1.49 2023/01/22 13:21:52 wiz Exp $
 
-DISTNAME=	tdb-1.4.7
-PKGREVISION=	1
+DISTNAME=	tdb-1.4.8
 CATEGORIES=	databases
 MASTER_SITES=	http://www.samba.org/ftp/tdb/
 
@@ -23,7 +22,7 @@ HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	--abi-check-disable
 CONFIGURE_ARGS+=	--disable-symbol-versions
-.if defined(MAKE_JOBS) && !empty(MAKE_JOBS) && !(defined(MAKE_JOBS_SAFE) && !empty(MAKE_JOBS_SAFE:M[nN][oO]))
+.if defined(MAKE_JOBS) && !empty(MAKE_JOBS) && !(defined(MAKE_JOBS_SAFE) && ${MAKE_JOBS_SAFE:U:tl} == no)
 CONFIGURE_ARGS+=	--jobs=${MAKE_JOBS}
 .else
 CONFIGURE_ARGS+=	--jobs=1
