@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.510 2023/01/22 13:26:30 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.511 2023/01/22 13:36:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -644,3 +644,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/talloc to 2.4.0 [wiz 2023-01-22]
 	Updated databases/tdb to 1.4.8 [wiz 2023-01-22]
 	Updated devel/tevent to 0.14.0 [wiz 2023-01-22]
+	Updated databases/ldb to 2.7.0 [wiz 2023-01-22]
