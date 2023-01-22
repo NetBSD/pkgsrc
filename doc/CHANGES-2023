@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.499 2023/01/22 08:57:29 pin Exp $
+$NetBSD: CHANGES-2023,v 1.500 2023/01/22 08:58:43 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -633,3 +633,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated mail/mpop to 1.4.17 [leot 2023-01-22]
 	Updated devel/hoe to 4.0.2 [taca 2023-01-22]
 	Updated textproc/hgrep to 0.3.0 [pin 2023-01-22]
+	Updated sysutils/macchina to 6.1.8 [pin 2023-01-22]
