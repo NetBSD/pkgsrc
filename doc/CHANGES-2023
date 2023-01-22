@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.508 2023/01/22 13:20:10 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.509 2023/01/22 13:22:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -642,3 +642,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated audio/musicpd to 0.23.12 [wiz 2023-01-22]
 	Updated www/neon to 0.32.5 [wiz 2023-01-22]
 	Updated devel/talloc to 2.4.0 [wiz 2023-01-22]
+	Updated databases/tdb to 1.4.8 [wiz 2023-01-22]
