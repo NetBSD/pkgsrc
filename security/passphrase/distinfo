@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2022/02/01 20:00:56 nikita Exp $
+$NetBSD: distinfo,v 1.6 2023/01/22 19:36:02 nikita Exp $
 
-BLAKE2s (passphrase/1.2.tar.gz) = 6e4ed4f5755c5fe556d017790656aae03302f2d7e1ec1ea6070e90aa1e305611
-SHA512 (passphrase/1.2.tar.gz) = ab76e0a19dbabe03e4bfab47b0f418fa1c5a5728bb250de67608769d95623a425db7563f6b96b8e6cb743042958e713c466e7b557ab954948cf01b7f14b0e4e1
-Size (passphrase/1.2.tar.gz) = 31625 bytes
+BLAKE2s (passphrase/1.5.tar.gz) = 38875fa02e5acbe24cd552a24205bee420dca763cc1c7b5269eb9a5e739bf81c
+SHA512 (passphrase/1.5.tar.gz) = 2cf0693459052746eac9aaf7aa40da23e37e69902bf443d9a4fddbd0b357f76b3ced6f6e978309a4ed713c3fb7fe9f9b2aaf5b6d1e9926b69959451b52130f98
+Size (passphrase/1.5.tar.gz) = 320082 bytes
