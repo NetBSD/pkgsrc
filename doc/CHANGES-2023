@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.512 2023/01/22 16:26:35 ryoon Exp $
+$NetBSD: CHANGES-2023,v 1.513 2023/01/22 17:34:54 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -653,3 +653,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/boost-mpi to 1.81.0 [ryoon 2023-01-22]
 	Updated devel/py-boost to 1.81.0 [ryoon 2023-01-22]
 	Updated meta-pkgs/boost to 1.81.0 [ryoon 2023-01-22]
+	Updated net/icinga2 to 2.12.9 [ryoon 2023-01-22]
