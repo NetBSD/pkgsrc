@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.295 2023/01/03 17:37:53 wiz Exp $
+# $NetBSD: Makefile,v 1.296 2023/01/22 17:56:04 ryoon Exp $
 
-VERREL=		7.4.1
+VERREL=		7.4.4
 VERRC=		2
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
-PKGREVISION=	3
 CATEGORIES=	misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/${VERREL}/
 EXTRACT_SUFX=	.tar.xz
@@ -114,7 +113,7 @@ MORE_DISTFILES= \
 	798b2ffdc8bcfe7bca2cf92b62caf685-rhino1_5R5.zip \
 	368f114c078f94214a308a74c7e991bc-crosextrafonts-20130214.tar.gz \
 	language-subtag-registry-2021-08-06.tar.bz2 \
-	postgresql-13.5.tar.bz2 \
+	postgresql-13.8.tar.bz2 \
 	graphite2-minimal-1.3.14.tgz \
 	1725634df4bb3dcb1b2c91a6175f8789-GentiumBasic_1102.zip \
 	EmojiOneColor-SVGinOT-1.3.tar.gz \

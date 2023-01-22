@@ -1,4 +1,4 @@
-$NetBSD: patch-configure.ac,v 1.21 2022/08/22 13:58:32 ryoon Exp $
+$NetBSD: patch-configure.ac,v 1.22 2023/01/22 17:56:04 ryoon Exp $
 
 * Add NetBSD/aarch64 support.
 * Disable freetype2 and fontconfig from pkgsrc explicitly.
@@ -7,9 +7,9 @@ $NetBSD: patch-configure.ac,v 1.21 2022/08/22 13:58:32 ryoon Exp $
 * Include header files from security/gpgme correctly.
 * Find devel/apache-ant.
 
---- configure.ac.orig	2022-08-10 14:14:32.000000000 +0000
+--- configure.ac.orig	2022-10-10 10:15:14.000000000 +0000
 +++ configure.ac
-@@ -5305,6 +5305,11 @@ linux-android*)
+@@ -5300,6 +5300,11 @@ linux-android*)
          RTL_ARCH=X86_64
          PLATFORMID=netbsd_x86_64
          ;;
@@ -21,7 +21,7 @@ $NetBSD: patch-configure.ac,v 1.21 2022/08/22 13:58:32 ryoon Exp $
      *)
          AC_MSG_ERROR([Unsupported host_cpu $host_cpu for host_os $host_os])
          ;;
-@@ -9663,9 +9668,9 @@ dnl When the minimal version is at least
+@@ -9657,9 +9662,9 @@ dnl When the minimal version is at least
  dnl ===================================================================
  FREETYPE_CFLAGS_internal="${ISYSTEM}${WORKDIR}/UnpackedTarball/freetype/include"
  if test "x$ac_config_site_64bit_host" = xYES; then
@@ -33,31 +33,30 @@ $NetBSD: patch-configure.ac,v 1.21 2022/08/22 13:58:32 ryoon Exp $
  fi
  libo_CHECK_SYSTEM_MODULE([freetype],[FREETYPE],[freetype2 >= 9.9.3],,system,TRUE)
  
-@@ -10890,11 +10895,12 @@ dnl HarfBuzz
+@@ -10866,11 +10871,11 @@ dnl HarfBuzz
  dnl ===================================================================
  
  GRAPHITE_CFLAGS_internal="-I${WORKDIR}/UnpackedTarball/graphite/include -DGRAPHITE2_STATIC"
 -GRAPHITE_LIBS_internal="-L${WORKDIR}/LinkTarget/StaticLibrary -lgraphite"
 +GRAPHITE_LIBS_internal="${WORKDIR}/LinkTarget/StaticLibrary/libgraphite.a"
-+
  libo_CHECK_SYSTEM_MODULE([graphite],[GRAPHITE],[graphite2 >= 0.9.3])
  
  HARFBUZZ_CFLAGS_internal="-I${WORKDIR}/UnpackedTarball/harfbuzz/src"
 -HARFBUZZ_LIBS_internal="-L${WORKDIR}/UnpackedTarball/harfbuzz/src/.libs -lharfbuzz"
 +HARFBUZZ_LIBS_internal="${WORKDIR}/UnpackedTarball/harfbuzz/src/.libs/libharfbuzz.a"
- libo_CHECK_SYSTEM_MODULE([harfbuzz],[HARFBUZZ],[harfbuzz-icu >= 0.9.42])
+ libo_CHECK_SYSTEM_MODULE([harfbuzz],[HARFBUZZ],[harfbuzz-icu >= 2.1.0])
  
  if test "$COM" = "MSC"; then # override the above
-@@ -12559,7 +12565,7 @@ elif test \( \( "$_os" = "Linux" -o "$_o
+@@ -12535,7 +12540,7 @@ elif test \( \( "$_os" = "Linux" -o "$_o
          SYSTEM_GPGMEPP=TRUE
  
          # C++ library doesn't come with fancy gpgmepp-config, check for headers the old-fashioned way
 -        AC_CHECK_HEADER(gpgme++/gpgmepp_version.h, [ GPGMEPP_CFLAGS=-I/usr/include/gpgme++ ],
 +        AC_CHECK_HEADER(gpgme++/gpgmepp_version.h, [ GPGMEPP_CFLAGS=-I@PREFIX@/include/gpgme++ ],
              [AC_MSG_ERROR([gpgmepp headers not found, install gpgmepp >= 1.14 development package])], [])
-         # progress_callback is the only func with plain C linkage
-         # checking for it also filters out older, KDE-dependent libgpgmepp versions
-@@ -13764,8 +13770,8 @@ EOF
+         AC_CHECK_HEADER(gpgme.h, [],
+             [AC_MSG_ERROR([gpgme headers not found, install gpgme development package])], [])
+@@ -13739,8 +13744,8 @@ EOF
                      if test -f /usr/share/ant-core/lib/ant.jar; then
                          ANT_LIB=/usr/share/ant-core/lib
                      else
