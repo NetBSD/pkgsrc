@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2022/11/21 20:47:46 adam Exp $
+# $NetBSD: Makefile,v 1.32 2023/01/22 13:36:24 wiz Exp $
 
-DISTNAME=	ldb-2.6.1
+DISTNAME=	ldb-2.7.0
 CATEGORIES=	databases
 MASTER_SITES=	https://www.samba.org/ftp/ldb/
 
@@ -22,7 +22,7 @@ CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	--abi-check-disable
 CONFIGURE_ARGS+=	--disable-symbol-versions
 CONFIGURE_ARGS+=	--with-libiconv=${BUILDLINK_PREFIX.iconv}
-.if defined(MAKE_JOBS) && !empty(MAKE_JOBS) && !(defined(MAKE_JOBS_SAFE) && !empty(MAKE_JOBS_SAFE:M[nN][oO]))
+.if defined(MAKE_JOBS) && !empty(MAKE_JOBS) && !(defined(MAKE_JOBS_SAFE) && ${MAKE_JOBS_SAFE:U:tl} == no)
 CONFIGURE_ARGS+=	--jobs=${MAKE_JOBS}
 .else
 CONFIGURE_ARGS+=	--jobs=1
@@ -60,11 +60,13 @@ CONFIGURE_ARGS+=	--without-ldb-lmdb
 .include "options.mk"
 
 .include "../../converters/libiconv/buildlink3.mk"
+BUILDLINK_API_DEPENDS.tdb+=	tdb>=1.4.8
 .include "../../databases/tdb/buildlink3.mk"
 .include "../../devel/cmocka/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
+BUILDLINK_API_DEPENDS.talloc+=	talloc>=2.4.0
 .include "../../devel/talloc/buildlink3.mk"
-BUILDLINK_API_DEPENDS.tevent+=	tevent>=0.13.0
+BUILDLINK_API_DEPENDS.tevent+=	tevent>=0.14.0
 .include "../../devel/tevent/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
