@@ -1,15 +1,7 @@
-$NetBSD: distinfo,v 1.141 2022/05/06 00:55:54 gutteridge Exp $
+$NetBSD: distinfo,v 1.142 2023/01/22 10:30:08 wiz Exp $
 
-BLAKE2s (libxml2-2.9.14.tar.xz) = 0d3a2a64a9f0253171fd0adfa1eb3c28997f92c306aa3668e787e0b71b4ca654
-SHA512 (libxml2-2.9.14.tar.xz) = d08e6cafb289c499fdc5b3a12181e032a34f7a249bc66758859f964d3e71e19fd69be79921e1a9d8ab1e692d15b13f5fae95eeb10c3236974d89e218f5107606
-Size (libxml2-2.9.14.tar.xz) = 3129968 bytes
-SHA1 (patch-Makefile.in) = 4e3a3c20ce388de040b865dab73b0190ed6bdf0a
-SHA1 (patch-catalog.c) = 34afe787f6012b460a85be993048e133907a1621
-SHA1 (patch-configure) = 3b4cbb36602c11fe73ba1a6e327fd4810b835380
-SHA1 (patch-doc_examples_Makefile.in) = d81b7b9285e207fc53acc6981c67768b686ff5fb
-SHA1 (patch-encoding.c) = 62b3343f0a0ea51e3fb8eb693e495520eefb6ffd
-SHA1 (patch-python_libxml.c) = a8d89922589f51db99c2b8960b32d37ddda8a7a9
-SHA1 (patch-python_libxml.py) = 869a72ae5ba2e27e6d46552878890acb22337675
-SHA1 (patch-python_libxml2.py) = 209d105b0f3aedb834091390a7c6819705108e34
-SHA1 (patch-python_setup.py) = 2e712778a35cad9a167eeec7884748cf3f2090a9
-SHA1 (patch-xmlcatalog.c) = d65b7e3be9694147e96ce4bb70a1739e2279ba81
+BLAKE2s (libxml2-2.10.3.tar.xz) = e46e6337acb5ff88e6206d1d61ee8b27d66c5f716c98e830c3504a01dc178ad6
+SHA512 (libxml2-2.10.3.tar.xz) = 33bb87ae9a45c475c3de09477e5d94840d8f687f893ef7839408bc7267e57611c4f2b863ed8ec819a4b5f1ebd6a122db9f6054c73bceed427d37f3e67f62620c
+Size (libxml2-2.10.3.tar.xz) = 2639908 bytes
+SHA1 (patch-configure) = 3d73d05780562dccd5f9621d9e9f15f2d62cfa87
+SHA1 (patch-encoding.c) = 7fe0f67db061a2f46abe1c4b6b4d8a0402f82830

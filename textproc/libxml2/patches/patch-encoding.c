@@ -1,27 +1,13 @@
-$NetBSD: patch-encoding.c,v 1.3 2020/11/05 17:45:55 adam Exp $
+$NetBSD: patch-encoding.c,v 1.4 2023/01/22 10:30:09 wiz Exp $
 
-Fix building with ICU 68.1.
 Avoid potential undefined behaviour by casting arg to toupper()
 to an appropriate value range.
-https://bugzilla.gnome.org/show_bug.cgi?id=766838
 
 Also, on NetBSD, add CP1141 encoding alias.
 
---- encoding.c.orig	2019-10-22 18:46:01.000000000 +0000
-+++ encoding.c
-@@ -48,6 +48,11 @@
- #include "buf.h"
- #include "enc.h"
- 
-+#if !defined(FALSE)
-+# define FALSE (1 == 0)
-+# define TRUE (! FALSE)
-+#endif
-+
- static xmlCharEncodingHandlerPtr xmlUTF16LEHandler = NULL;
- static xmlCharEncodingHandlerPtr xmlUTF16BEHandler = NULL;
- 
-@@ -1027,7 +1032,7 @@ xmlGetEncodingAlias(const char *alias) {
+--- encoding.c.orig	2022-10-14 12:20:48.000000000 +0000
++++ encoding.c	2023-01-21 13:21:59.140034252 +0000
+@@ -1047,7 +1047,7 @@
  	return(NULL);
  
      for (i = 0;i < 99;i++) {
@@ -30,7 +16,7 @@ Also, on NetBSD, add CP1141 encoding alias.
  	if (upper[i] == 0) break;
      }
      upper[i] = 0;
-@@ -1062,7 +1067,7 @@ xmlAddEncodingAlias(const char *name, co
+@@ -1082,7 +1082,7 @@
  	return(-1);
  
      for (i = 0;i < 99;i++) {
@@ -39,7 +25,7 @@ Also, on NetBSD, add CP1141 encoding alias.
  	if (upper[i] == 0) break;
      }
      upper[i] = 0;
-@@ -1164,7 +1169,7 @@ xmlParseCharEncoding(const char* name)
+@@ -1184,7 +1184,7 @@
  	name = alias;
  
      for (i = 0;i < 499;i++) {
@@ -48,7 +34,7 @@ Also, on NetBSD, add CP1141 encoding alias.
  	if (upper[i] == 0) break;
      }
      upper[i] = 0;
-@@ -1340,7 +1345,7 @@ xmlNewCharEncodingHandler(const char *na
+@@ -1360,7 +1360,7 @@
  	return(NULL);
      }
      for (i = 0;i < 499;i++) {
@@ -57,7 +43,7 @@ Also, on NetBSD, add CP1141 encoding alias.
  	if (upper[i] == 0) break;
      }
      upper[i] = 0;
-@@ -1442,6 +1447,9 @@ xmlInitCharEncodingHandlers(void) {
+@@ -1465,6 +1465,9 @@
      xmlRegisterCharEncodingHandlersISO8859x ();
  #endif
  #endif
@@ -67,7 +53,7 @@ Also, on NetBSD, add CP1141 encoding alias.
  
  }
  
-@@ -1669,7 +1677,7 @@ xmlFindCharEncodingHandler(const char *n
+@@ -1706,7 +1709,7 @@
       * Check first for directly registered encoding names
       */
      for (i = 0;i < 99;i++) {

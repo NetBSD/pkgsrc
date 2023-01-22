@@ -1,17 +1,10 @@
-$NetBSD: patch-configure,v 1.4 2022/03/12 07:33:22 kim Exp $
+$NetBSD: patch-configure,v 1.5 2023/01/22 10:30:09 wiz Exp $
 
-Various configure fixes:
- * Don't leak non-existent include directories to xml2-config.
-   Important for CMake on Darwin.
  * Add run-path to XML_LIBDIR
- * Fix handling of pthreads
- * Add portability to OpenBSD, MirBSD, FreeBSD, NetBSD and DragonFly
- * Fix test for SAX
-   Submitted as https://bugzilla.gnome.org/show_bug.cgi?id=766859
 
---- configure.orig	2022-02-20 12:11:10.000000000 +0000
-+++ configure	2022-03-12 06:29:48.961424860 +0000
-@@ -14898,7 +14898,7 @@
+--- configure.orig	2022-10-14 12:41:28.000000000 +0000
++++ configure
+@@ -15171,7 +15171,7 @@ printf "%s\n" "#define HAVE_GETADDRINFO 
  fi
  
  
@@ -20,73 +13,3 @@ Various configure fixes:
  XML_INCLUDEDIR='-I${includedir}/libxml2'
  
  XML_CFLAGS=""
-@@ -15371,13 +15371,13 @@
-         if test "$with_threads" = "pthread" || test "$with_threads" = "" || test "$with_threads" = "yes" ; then
-             ac_fn_c_check_header_mongrel "$LINENO" "pthread.h" "ac_cv_header_pthread_h" "$ac_includes_default"
- if test "x$ac_cv_header_pthread_h" = xyes; then :
--  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for pthread_join in -lpthread" >&5
--$as_echo_n "checking for pthread_join in -lpthread... " >&6; }
-+  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for pthread_join in ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}" >&5
-+$as_echo_n "checking for pthread_join in ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}... " >&6; }
- if ${ac_cv_lib_pthread_pthread_join+:} false; then :
-   $as_echo_n "(cached) " >&6
- else
-   ac_check_lib_save_LIBS=$LIBS
--LIBS="-lpthread  $LIBS"
-+LIBS="${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}  $LIBS"
- cat confdefs.h - <<_ACEOF >conftest.$ac_ext
- /* end confdefs.h.  */
- 
-@@ -15409,7 +15409,7 @@
- $as_echo "$ac_cv_lib_pthread_pthread_join" >&6; }
- if test "x$ac_cv_lib_pthread_pthread_join" = xyes; then :
- 
--                THREAD_LIBS="-lpthread"
-+                THREAD_LIBS="${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}"
- 
- $as_echo "#define HAVE_PTHREAD_H /**/" >>confdefs.h
- 
-@@ -15428,12 +15428,12 @@
-        *beos*) WITH_THREADS="1"
- 	   THREAD_CFLAGS="$THREAD_CFLAGS -DHAVE_BEOS_THREADS"
-        ;;
--       *linux*)
-+       *linux* | *openbsd* | *mirbsd*)
-            if test "${GCC}" = "yes" ; then
- 	       GCC_VERSION=`${CC} --version | head -1 | awk '{print $3}'`
- 	       GCC_MAJOR=`echo ${GCC_VERSION} | sed 's+\..*++'`
- 	       GCC_MEDIUM=`echo ${GCC_VERSION} | sed 's+[0-9]*\.++' | sed 's+\..*++'`
--	       if test "${THREAD_LIBS}" = "-lpthread" ; then
-+	       if test "${THREAD_LIBS}" = "${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}" ; then
- 	           if expr ${GCC_MEDIUM} \> 2 \& ${GCC_MAJOR} = 3 > /dev/null
- 		   then
- 		       THREAD_LIBS=""
-@@ -15450,6 +15450,10 @@
- 	       fi
- 	   fi
-        ;;
-+       *freebsd* | *netbsd* | *dragonfly*)
-+	   THREAD_LIBS=""
-+	   BASE_THREAD_LIBS="${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}"
-+       ;;
-     esac
-     if test "$WITH_THREADS" = "1" ; then
- 	THREAD_CFLAGS="$THREAD_CFLAGS -D_REENTRANT"
-@@ -15720,7 +15724,7 @@
-     TEST_SAX=SAXtests
- fi
- 
-- if test "${WITH_TRIO}" = "1"; then
-+ if test "${WITH_SAX1}" = "1"; then
-   WITH_SAX1_SOURCES_TRUE=
-   WITH_SAX1_SOURCES_FALSE='#'
- else
-@@ -15905,7 +15909,7 @@
- if test "$with_iconv" = "no" ; then
-     echo Disabling ICONV support
- else
--    if test "$with_iconv" != "yes" -a "$with_iconv" != "" ; then
-+    if test -e "$with_iconv/include" ; then
- 	CPPFLAGS="${CPPFLAGS} -I$with_iconv/include"
- 	# Export this since our headers include iconv.h
- 	XML_INCLUDEDIR="${XML_INCLUDEDIR} -I$with_iconv/include"
