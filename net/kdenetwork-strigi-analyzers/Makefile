@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.42 2022/11/23 16:20:51 adam Exp $
+# $NetBSD: Makefile,v 1.43 2023/01/22 16:28:35 ryoon Exp $
 
 DISTNAME=	kdenetwork-strigi-analyzers-16.04.0
-PKGREVISION=	26
+PKGREVISION=	27
 CATEGORIES=	net
 COMMENT=	Strigi analyzers for various network protocols
 MASTER_SITES=	${MASTER_SITE_KDE:=applications/16.04.0/src/}

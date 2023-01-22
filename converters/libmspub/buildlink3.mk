@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.21 2022/01/10 01:46:25 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.22 2023/01/22 16:28:13 ryoon Exp $
 
 BUILDLINK_TREE+=	libmspub
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libmspub
 LIBMSPUB_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libmspub+=	libmspub>=0.0.6
-BUILDLINK_ABI_DEPENDS.libmspub?=	libmspub>=0.1.4nb20
+BUILDLINK_ABI_DEPENDS.libmspub?=	libmspub>=0.1.4nb23
 BUILDLINK_PKGSRCDIR.libmspub?=		../../converters/libmspub
 
 .include "../../converters/libwpd/buildlink3.mk"

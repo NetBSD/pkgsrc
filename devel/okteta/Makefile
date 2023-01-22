@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2022/11/23 16:19:52 adam Exp $
+# $NetBSD: Makefile,v 1.41 2023/01/22 16:28:23 ryoon Exp $
 
 DISTNAME=	okteta-${_KDE_VERSION}
-PKGREVISION=	31
+PKGREVISION=	32
 CATEGORIES=	devel
 COMMENT=	Hex Editor
 
