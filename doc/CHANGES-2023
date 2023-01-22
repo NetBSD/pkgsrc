@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.496 2023/01/21 20:00:39 pin Exp $
+$NetBSD: CHANGES-2023,v 1.497 2023/01/22 00:23:27 leot Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -630,3 +630,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated meta-pkgs/bulk-test-boost to 20230121 [gdt 2023-01-21]
 	Updated audio/gospt to 0.0.31 [pin 2023-01-21]
 	Updated multimedia/t-rec to 0.7.6 [pin 2023-01-21]
+	Updated mail/mpop to 1.4.17 [leot 2023-01-22]
