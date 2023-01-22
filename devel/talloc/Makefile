@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.44 2022/06/30 11:18:19 nia Exp $
+# $NetBSD: Makefile,v 1.45 2023/01/22 13:20:00 wiz Exp $
 
-DISTNAME=	talloc-2.3.4
-PKGREVISION=	1
+DISTNAME=	talloc-2.4.0
 CATEGORIES=	devel
 MASTER_SITES=	https://www.samba.org/ftp/talloc/
 
@@ -23,7 +22,7 @@ HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	--abi-check-disable
 CONFIGURE_ARGS+=	--disable-symbol-versions
-.if defined(MAKE_JOBS) && !empty(MAKE_JOBS) && !(defined(MAKE_JOBS_SAFE) && !empty(MAKE_JOBS_SAFE:M[nN][oO]))
+.if defined(MAKE_JOBS) && !empty(MAKE_JOBS) && !(defined(MAKE_JOBS_SAFE) && ${MAKE_JOBS_SAFE:U:tl} == no)
 CONFIGURE_ARGS+=	--jobs=${MAKE_JOBS}
 .else
 CONFIGURE_ARGS+=	--jobs=1
