@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.44 2022/07/27 09:42:45 wiz Exp $
+# $NetBSD: options.mk,v 1.45 2023/01/22 13:12:42 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.musicpd
 
@@ -65,6 +65,7 @@ MESON_ARGS+=	-Dchromaprint=disabled
 .endif
 
 .if !empty(PKG_OPTIONS:Mcurl)
+BUILDLINK_API_DEPENDS.curl+=	curl>=7.55
 .  include "../../www/curl/buildlink3.mk"
 .else
 MESON_ARGS+=	-Dcurl=disabled
