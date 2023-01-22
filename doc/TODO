@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22512 2023/01/22 13:17:29 wiz Exp $
+$NetBSD: TODO,v 1.22513 2023/01/22 13:20:10 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1472,7 +1472,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o tacacs-4.0.4.29a
 	o tacacs-shrubbery-4.0.4.29a
 	o tads-3.0.16
-	o talloc-2.4.0
 	o taplo-lsp-0.6.0 [wiz]
 	o taplo-lsp-0.7.0
 	o taskwarrior-2.5.3
