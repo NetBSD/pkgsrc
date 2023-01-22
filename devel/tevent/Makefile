@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2022/08/09 17:55:37 adam Exp $
+# $NetBSD: Makefile,v 1.14 2023/01/22 13:26:21 wiz Exp $
 
-DISTNAME=	tevent-0.13.0
+DISTNAME=	tevent-0.14.0
 CATEGORIES=	devel
 MASTER_SITES=	http://www.samba.org/ftp/tevent/
 
@@ -21,7 +21,7 @@ HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	--abi-check-disable
 CONFIGURE_ARGS+=	--disable-symbol-versions
-.if defined(MAKE_JOBS) && !empty(MAKE_JOBS) && !(defined(MAKE_JOBS_SAFE) && !empty(MAKE_JOBS_SAFE:M[nN][oO]))
+.if defined(MAKE_JOBS) && !empty(MAKE_JOBS) && !(defined(MAKE_JOBS_SAFE) && ${MAKE_JOBS_SAFE:U:tl} == no)
 CONFIGURE_ARGS+=	--jobs=${MAKE_JOBS}
 .else
 CONFIGURE_ARGS+=	--jobs=1
@@ -40,6 +40,7 @@ SUBST_FILES.docbook+=	buildtools/wafsamba/wafsamba.py
 SUBST_STAGE.docbook=	pre-configure
 SUBST_SED.docbook+=	-e 's,http://docbook.sourceforge.net/release/xsl/current,${PREFIX}/share/xsl/docbook,g'
 
+BUILDLINK_API_DEPENDS.talloc+=	talloc>=2.4.0
 .include "../../devel/talloc/buildlink3.mk"
 .include "../../devel/cmocka/buildlink3.mk"
 .include "../../lang/python/application.mk"
