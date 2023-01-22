@@ -1,24 +1,25 @@
-# $NetBSD: Makefile,v 1.8 2022/06/30 11:18:47 nia Exp $
+# $NetBSD: Makefile,v 1.9 2023/01/22 19:36:02 nikita Exp $
 
-DISTNAME=	1.2
-PKGNAME=	passphrase-1.2
-PKGREVISION=	1
+DISTNAME=	1.5
+PKGNAME=	passphrase-1.5
 DIST_SUBDIR=	passphrase
 CATEGORIES=	security
 MASTER_SITES=	https://git.sr.ht/~alva/passphrase/archive/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	nikita@NetBSD.org
 HOMEPAGE=	https://git.sr.ht/~alva/passphrase
 COMMENT=	Zero-dependency passphrase generator
 LICENSE=	mit
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
-# \todo: There is currently an issue building this as a PIE, despite the
-# buildsystem targeting it as a PIE.
-MKPIE_SUPPORTED=	no
-# RELRO checks fail for this package at the moment
+# \todo: There is currently an issue building this as RELRO.
 RELRO_SUPPORTED=	no
+
+ZIGBUILDARGS=		-Dpie=true
+.if ${MKDEBUG:Uyes:M[yY][eE][sS]} && ${INSTALL_UNSTRIPPED:Uyes:tl} == yes
+ZIGBUILDARGS+=		-Dstrip=true
+.endif
 
 .include "../../lang/python/pyversion.mk"
 CONFLICTS+=	${PYPKGPREFIX}-pyutil-[0-9]*
