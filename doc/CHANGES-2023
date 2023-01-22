@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.518 2023/01/22 19:36:13 nikita Exp $
+$NetBSD: CHANGES-2023,v 1.519 2023/01/22 20:10:29 vins Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -659,3 +659,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/gh to 2.21.2 [bsiegert 2023-01-22]
 	Updated pkgtools/url2pkg to 22.4.0 [rillig 2023-01-22]
 	Updated security/passphrase to 1.5 [nikita 2023-01-22]
+	Added time/xdiary version 3.0.3 [vins 2023-01-22]
