@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.497 2023/01/22 00:23:27 leot Exp $
+$NetBSD: CHANGES-2023,v 1.498 2023/01/22 05:07:56 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -631,3 +631,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated audio/gospt to 0.0.31 [pin 2023-01-21]
 	Updated multimedia/t-rec to 0.7.6 [pin 2023-01-21]
 	Updated mail/mpop to 1.4.17 [leot 2023-01-22]
+	Updated devel/hoe to 4.0.2 [taca 2023-01-22]
