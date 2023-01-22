@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.35 2021/12/27 09:36:10 nia Exp $
+$NetBSD: distinfo,v 1.36 2023/01/22 17:36:31 ryoon Exp $
 
 BLAKE2s (mongodb-src-r4.2.15.tar.gz) = 917d4e65f16a7ba228bf335965c2608f73645fe24e764e8f49f19ae052f47d48
 SHA512 (mongodb-src-r4.2.15.tar.gz) = ee46a2dfb7ae23ad38da49bf126a2bc7932bded8f01d34516ad575d2aed5d6233c5ad620b2a4424a98afb9e80e26acf40c66982cdd0637c13f0f7aaae8b746a0
@@ -9,9 +9,12 @@ SHA1 (patch-site__scons_site__tools_libtool.py) = 2fb5947703f4292acc1306f92ca793
 SHA1 (patch-src_mongo_base_initializer.h) = efaec2e3b5b8a4bfb15c65c6952924cd1469bdc7
 SHA1 (patch-src_mongo_db_query_collation_collator__interface__icu.h) = f6382a3dcdbaed26fe692aa1ea43b2640168b253
 SHA1 (patch-src_mongo_db_repl_isself.cpp) = b7931feac26dcffa7eac68f5cb348feb6b993c37
+SHA1 (patch-src_mongo_db_storage_storage__repair__observer.cpp) = a45223c828f249cdb6f2e6f12b42f7ef4671379b
+SHA1 (patch-src_mongo_db_storage_wiredtiger_wiredtiger__util.cpp) = 5d76b8bc20b8142d325613b5d1781a0599903ebe
 SHA1 (patch-src_mongo_platform_random.cpp) = 0b42d1b8bf41f8a7448daca0b72bfed1ba462b99
 SHA1 (patch-src_mongo_platform_stack__locator__netbsd.cpp) = 0826e976048c79598ead6146f143ab3b4a2577fb
 SHA1 (patch-src_mongo_shell_linenoise__utf8.h) = a29cbf034716ce48a23192320caf4928282b6c1a
+SHA1 (patch-src_mongo_shell_shell__utils__extended.cpp) = d639465e37855591b5ca7b23fea798f0eaab94a4
 SHA1 (patch-src_mongo_util_intrusive__counter.h) = 4c8e0d2e834686403a557de489ad518071851911
 SHA1 (patch-src_mongo_util_processinfo__netbsd.cpp) = 9f3161c0693b3905299e0e022b9eb68d466d30c4
 SHA1 (patch-src_mongo_util_time__support.cpp) = d576d8d39b10c496e492c8f0faf7e81f09ca875c
