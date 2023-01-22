@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.44 2022/01/10 01:23:31 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.45 2023/01/22 16:24:29 ryoon Exp $
 
 BUILDLINK_TREE+=	boost-jam
 
 .if !defined(BOOST_JAM_BUILDLINK3_MK)
 BOOST_JAM_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.boost-jam+=	boost-jam-1.78.*
+BUILDLINK_API_DEPENDS.boost-jam+=	boost-jam-1.81.*
 BUILDLINK_DEPMETHOD.boost-jam?=		build
 BUILDLINK_PKGSRCDIR.boost-jam?=		../../devel/boost-jam
 .endif # BOOST_JAM_BUILDLINK3_MK
