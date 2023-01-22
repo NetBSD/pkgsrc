@@ -1,18 +1,10 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:05:47 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/01/22 17:34:20 ryoon Exp $
 
-BLAKE2s (icinga2-2.12.3.tar.gz) = d5a70fc162ab1d79c4448c3bd5d705c38c6377e04c2e628dfc11062b5fd99ec8
-SHA512 (icinga2-2.12.3.tar.gz) = 28b87e03a8ffeb7a1d19ddf9555151b826f7bf1fd33b0139c2fc8abe7c89d66d96089d5b32d0aaccc3876040514b2bfbde9970416d5ec4ea3b023b17c0fb1799
-Size (icinga2-2.12.3.tar.gz) = 7534454 bytes
-SHA1 (patch-CMakeLists.txt) = 052745f5725a90bdc1a113352f21eac590a2cb31
-SHA1 (patch-RELEASE.md) = 94f2651853010185415c653e89ec8f5c96e37fa2
-SHA1 (patch-doc_21-development.md) = 05afac552f1558a2dbf556d7c707c3d5625fba56
-SHA1 (patch-lib_base_string.cpp) = 8ee9a1fa7a34355a855df7c29614fab2ff98323e
-SHA1 (patch-lib_base_string.hpp) = 6e407f77f607a58bd726cebe6468469bc96b030f
-SHA1 (patch-lib_base_utility.cpp) = 78f269ba2bd3e29d24876c66e56e36267baed346
-SHA1 (patch-lib_perfdata_elasticsearchwriter.cpp) = b0a71a92be7c150088148cf4b3f33d9969027ca7
-SHA1 (patch-lib_perfdata_influxdbwriter.cpp) = c47de3528b648fbb53dd4d1b81a39cfe35e172f9
-SHA1 (patch-lib_remote_configfileshandler.cpp) = 34cc8f1a6b127a98efcf6ee7835367998ea202a0
-SHA1 (patch-lib_remote_httpserverconnection.cpp) = 6aa6a7a7dd8fce3f54c8a7b6496286074a4fc434
-SHA1 (patch-lib_remote_httputility.cpp) = a04578f7c9f2abdd9f9ed27bcd8cdc8a0cf3dd85
-SHA1 (patch-lib_remote_infohandler.cpp) = 2a91f1d38cad0234bbc5f8b6b2032baac71db91e
+BLAKE2s (icinga2-2.12.9.tar.gz) = e0378b27195cb54552eee24b3f9817ad81ce4c333c10d764448e55741739e9ad
+SHA512 (icinga2-2.12.9.tar.gz) = c6d7f56af63a486024b667ce5b837537ba63a2dde33acc1d8dead636e0ff775b0b339afc66581e5aafa919be2bcb08d6936c9d31fead1ef3f5e18ef587b699a2
+Size (icinga2-2.12.9.tar.gz) = 7553000 bytes
+SHA1 (patch-lib_base_string.cpp) = f5a9cc4d98af33f37d469f558003d8378b236cf2
+SHA1 (patch-lib_base_string.hpp) = 86e61577c9540463cf93613db48c238bb738b09d
+SHA1 (patch-lib_remote_httphandler.cpp) = 46a91179dca58d4ca95f75e7594e41672e331083
+SHA1 (patch-lib_remote_httpserverconnection.cpp) = 29763f892aeda95f7fe46687dea9a40674af87b7
 SHA1 (patch-third-party_cmake_FindMySQL.cmake) = a33567c30db47c4fab379f1b7c358174dd85fdd3
