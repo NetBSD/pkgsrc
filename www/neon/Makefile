@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.92 2022/10/28 00:19:25 manu Exp $
+# $NetBSD: Makefile,v 1.93 2023/01/22 13:17:19 wiz Exp $
 
-DISTNAME=	neon-0.32.4
-PKGREVISION=	1
+DISTNAME=	neon-0.32.5
 CATEGORIES=	www
 MASTER_SITES=	https://notroj.github.io/neon/
 
@@ -26,9 +25,9 @@ USE_TOOLS+=		perl
 
 # Logic borrowed from security/mozilla-rootcerts
 CHECK_BUILTIN.openssl=	yes
-.include "../../security/openssl/builtin.mk"
+.include "../../security/openssl/buildlink3.mk"
 CHECK_BUILTIN.openssl=	no
-.if !empty(USE_BUILTIN.openssl:M[yY][eE][sS])
+.if ${USE_BUILTIN.openssl:U:tl} == yes
 SSLDIR=		/etc/openssl
 .else
 SSLDIR=		${PKG_SYSCONFDIR}/openssl
@@ -39,16 +38,16 @@ SUBST_CLASSES=		paths
 SUBST_MESSAGE.paths=	Setting CA bundle path in README.pkgsrc
 SUBST_STAGE.paths=	post-build
 SUBST_FILES.paths=	README.pkgsrc
-SUBST_SED.paths=	-e 's,@SSLCERTS@,${SSLCERTS},'
+SUBST_VARS.paths=	SSLCERTS
 
 DOCDIR=		${PREFIX}/share/doc/${PKGNAME_NOREV}
 INSTALLATION_DIRS=	${DOCDIR}
 
 post-extract:
-		${CP} ${FILESDIR}/README.pkgsrc ${WRKSRC} || ${TRUE};
+	${CP} ${FILESDIR}/README.pkgsrc ${WRKSRC} || ${TRUE};
 
 post-install:
-		${INSTALL_DATA} ${WRKSRC}/README.pkgsrc ${DESTDIR}${DOCDIR};
+	${INSTALL_DATA} ${WRKSRC}/README.pkgsrc ${DESTDIR}${DOCDIR};
 
 .include "options.mk"
 
