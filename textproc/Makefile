@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1354 2023/01/19 12:26:28 wiz Exp $
+# $NetBSD: Makefile,v 1.1355 2023/01/22 12:44:20 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1355,6 +1355,7 @@ SUBDIR+=	tree-sitter-cmake
 SUBDIR+=	tree-sitter-cpp
 SUBDIR+=	tree-sitter-dockerfile
 SUBDIR+=	tree-sitter-go
+SUBDIR+=	tree-sitter-html
 SUBDIR+=	tree-sitter-java
 SUBDIR+=	tree-sitter-json
 SUBDIR+=	tree-sitter-python
