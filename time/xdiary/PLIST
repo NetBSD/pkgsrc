@@ -1,0 +1,37 @@
+@comment $NetBSD: PLIST,v 1.1 2023/01/22 20:08:17 vins Exp $
+bin/xdaclunix
+bin/xdalarm
+bin/xdcustom
+bin/xddump
+bin/xdiary
+bin/xdinitdb
+bin/xdlight
+bin/xdlocation
+bin/xdnotify
+bin/xdprformat
+bin/xdprint
+bin/xdremind
+bin/xdremote
+bin/xdremove
+bin/xdrestore
+lib/X11/app-defaults/XDiary
+lib/X11/app-defaults/XDiary.map
+lib/libTools.a
+lib/libXdiary.a
+lib/libXdndbm.a
+lib/libXtools.a
+man/man1/xdaclunix.1
+man/man1/xdalarm.1
+man/man1/xdcustom.1
+man/man1/xddump.1
+man/man1/xdiary.1
+man/man1/xdinitdb.1
+man/man1/xdlight.1
+man/man1/xdnotify.1
+man/man1/xdprformat.1
+man/man1/xdremind.1
+man/man1/xdremove.1
+man/man1/xdrestore.1
+share/doc/xdiary/README.pkgsrc
+@pkgdir include
+@pkgdir doc/xdiary
