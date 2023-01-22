@@ -1,0 +1,35 @@
+$NetBSD: distinfo,v 1.1 2023/01/22 20:08:17 vins Exp $
+
+BLAKE2s (xmdiary-3.0.3.tar.gz) = 225c678fd5e2a2d080346ca22fc5bf31393e63ea51506002098e3c8c7f0c5709
+SHA512 (xmdiary-3.0.3.tar.gz) = a699703c2a71f702dbe25a5c57a461dc14581df108b85e7a092ee52be18dbd26c80b0df91c00a96a759816863c42519c77d22857eda916c66735634fdce9fe1c
+Size (xmdiary-3.0.3.tar.gz) = 764331 bytes
+SHA1 (patch-XDiary.tmpl) = c9c6dab155fa6dd607e998134fbf1aa1d65937ef
+SHA1 (patch-dtools_xtmCalendar.c) = 1106929782e3438e0fb90a7624cf723338d1f800
+SHA1 (patch-dtools_xtmDbTools.c) = d6249849e091a11d08fecd31832a746e31ebda6a
+SHA1 (patch-dtools_xtmEditEntry.c) = 32a483d44b1e2638c042184ba70585c212fb214c
+SHA1 (patch-dtools_xtmMsgSelect.c) = 3937992e9399b4de1104c3739fd8fac8df47d6ba
+SHA1 (patch-dtools_xtmMsgSend.c) = 282cc4c842bcb5929f80b62becb724da4273699d
+SHA1 (patch-dtools_xtmPlan.c) = 9e59061c656fe71da0b85d786b2a64f06e1eec6c
+SHA1 (patch-dtools_xtmPrEntries.c) = d8c917f3690d98b26939956c6f1374663f74bda0
+SHA1 (patch-dtools_xtmReminder.c) = d44b3e924dccabf8f5053d032485a325e28fa7f5
+SHA1 (patch-dtools_xtmSchedAct.c) = f9835884e17369fffd39e3679a0a5125255e36d3
+SHA1 (patch-dtools_xtmSchedMain.c) = 782a36ee32910ec9142dee05773e28f1e0990463
+SHA1 (patch-dtools_xtmShowToDo.c) = 5ca6b0b4939e7d55758546fb937066118c672677
+SHA1 (patch-tools_SigHandler.c) = 841cd0b3f67a498cad89af288eace1e7beaa1fdb
+SHA1 (patch-tools_System.c) = 165ac4c772e593b8671221c80a09059fc4044f75
+SHA1 (patch-xdaclunix_xtmAclUnix.c) = 9abbd51d9d96b46d71ec4835beabd058f7743601
+SHA1 (patch-xdalarm_xtmAlarmProc.c) = 322a0aae64307f4aa9599d834b6e5fa34666e4c9
+SHA1 (patch-xdcustom_xtmCustom.c) = e40509f3d0471838a8daa0134de5147ed1e8e02e
+SHA1 (patch-xdiary_xtmDiary.c) = f6bc11b6898001b02190044be3742af79869f46a
+SHA1 (patch-xdlight_xtmDiaryLgt.c) = f1041d6dbdf9cd703678d0607b62de4b91c804c8
+SHA1 (patch-xdnotify_xtmNotify.c) = a2d0a3276cd6efb231b4b0106e64351aff534e50
+SHA1 (patch-xdprformat_xtmPrFormat.c) = 748b0a6ce74805e28b52d04fb74574ac219399af
+SHA1 (patch-xdremind_xtmRemMain.c) = 44609d5af8c58f5d2782a32db3a94acb8355105a
+SHA1 (patch-xdremove_xtmRemove.c) = 4e6ce3410d7b8bd30e23aa4c424cb923e99728e1
+SHA1 (patch-xdrestore_xtmRestore.c) = 37c69e18cad485addbc85a85fdf41e9991048c14
+SHA1 (patch-xtools_XmUbTimeB.c) = f236503f1be2ac1fe6a21a33dfb6be0d7675d005
+SHA1 (patch-xtools_xitColorSel.c) = 69a808ce5ebf0215e6a89cb032ebca10c4892469
+SHA1 (patch-xtools_xitError.c) = de21b543bfa68ab9b58c3ccc514d2a716ac34dc7
+SHA1 (patch-xtools_xitInfoSrch.c) = 16574582ba312ec997eb703801f42f9804948e1d
+SHA1 (patch-xtools_xitInfoToc.c) = f652adb87d993de35645731f898b64b1218e0cdf
+SHA1 (patch-xtools_xitXmStr.c) = 70af54fe34de732240ad752190ae0e03dc989c7c
