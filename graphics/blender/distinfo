@@ -1,17 +1,24 @@
-$NetBSD: distinfo,v 1.67 2022/05/23 05:21:25 dholland Exp $
+$NetBSD: distinfo,v 1.68 2023/01/22 21:24:37 ryoon Exp $
 
-BLAKE2s (blender-2.93.5.tar.xz) = 9644846b63519b9a3b3e3bf86311df2ca6eef6566fe2ce46abc26e580fb2adf5
-SHA512 (blender-2.93.5.tar.xz) = 274e94fa64af0a414815d2809870982dc1093732ddad9e91318f96ce5b72102d9afab16273724127568c0e890dad921bd8f72d7b0e74c9c501b3e86f6b7cfaa0
-Size (blender-2.93.5.tar.xz) = 43036092 bytes
-SHA1 (patch-CMakeLists.txt) = bf304a9e3e31038e869df90b1c35cba6e40360de
-SHA1 (patch-build__files_cmake_Modules_FindOpenEXR.cmake) = b663c44b2ba1c641542318936526a0523b607f30
+BLAKE2s (blender-3.4.1.tar.xz) = cb05157b455aa679f298e5e7e725a489c48c679e4669d0ff2f9765eb2811655c
+SHA512 (blender-3.4.1.tar.xz) = d6de3ec9cd1a1e4d4e4a838af0cfc113c91c3c1b66703027e0ed61bd818dafc4e4304fd041738ddea32fc76b1ad9b7737cbdcf74d56a0406a87c457375d907ab
+Size (blender-3.4.1.tar.xz) = 53666296 bytes
+SHA1 (patch-CMakeLists.txt) = 2b422ba9874e969a13a5b1659c81de899bd1a848
 SHA1 (patch-extern_Eigen3_Eigen_src_Core_IO.h) = 791224b988da0383c306e76de5e93cb1cedc960e
 SHA1 (patch-extern_Eigen3_Eigen_src_Core_arch_CUDA_Half.h) = ee35286558e5590495f1c973ae99ede32048ac38
 SHA1 (patch-extern_glog_src_config.h) = e445c911d4ebb1f7e378c3c46911b55f77ba5608
 SHA1 (patch-extern_glog_src_config__netbsd.h) = f96dd9d6afed38466e5765c604efebcd78537a54
-SHA1 (patch-intern_cycles_kernel_svm_svm__sky.h) = bc672c23ea5f7c837d6a1f34bae87b9ef093309e
 SHA1 (patch-intern_guardedalloc_intern_mallocn__intern.h) = 81fb0fd1b34d550168a4bdf63f28b4e199717921
+SHA1 (patch-intern_locale_boost__locale__wrapper.cpp) = aa18ec1b5ce583b34905bb6b1cb5bbb321fd3d15
+SHA1 (patch-intern_mikktspace_mikk__float3.hh) = 715fa20ba39d7ad41f32e580189ac4fc2e8b0274
+SHA1 (patch-source_blender_blenkernel_intern_customdata.cc) = 0cb4f03d101f1d200d95c2469c17bb987b4c7570
+SHA1 (patch-source_blender_blenkernel_intern_gpencil__geom.cc) = c6600e6da37774a2138e56353a9be18607ab71d0
+SHA1 (patch-source_blender_blenkernel_intern_mesh__validate.cc) = 0e13727fb7a47be4c92bf1aef45744ce372c56bd
+SHA1 (patch-source_blender_blenkernel_intern_multires.cc) = 9edd6713c12b203e6b856d0b2f6d24ae5113d285
+SHA1 (patch-source_blender_blenkernel_intern_object.cc) = fd8cf2ea4f27e08f2e08b53f6d27228d9d770a2f
 SHA1 (patch-source_blender_blenlib_intern_storage.c) = 5f827d6e263d80e540681c5be7cad37aeae47d86
-SHA1 (patch-source_blender_gpu_intern_gpu_matrix.cc) = 107866999d07a8bf74af722aa26f8b438c76ed39
+SHA1 (patch-source_blender_editors_interface_interface.cc) = 94be42726f75d8e130c78f2be822b61e2b25b2fb
+SHA1 (patch-source_blender_editors_mesh_meshtools.cc) = b44f662227023df31496f8d17ebd54a02528f304
+SHA1 (patch-source_blender_gpu_intern_gpu_matrix.cc) = 6692d68e6adacd2640efea3f5b666444003159d6
 SHA1 (patch-source_blender_imbuf_intern_anim_movie.c) = 1529f84515395a4764c826b90191f87131601881
-SHA1 (patch-source_blender_imbuf_intern_openexr_openexr__api.cpp) = 936590a84bc5c2a25567b89fbb8f03467e41d198
+SHA1 (patch-source_blender_windowmanager_intern_wm__event__system.cc) = cc70ccce18f4d040f7544d14e98d9f569a3b6501

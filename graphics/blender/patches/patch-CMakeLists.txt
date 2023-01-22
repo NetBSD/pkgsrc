@@ -1,15 +1,30 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2021/07/26 05:15:15 mrg Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2023/01/22 21:24:37 ryoon Exp $
 
-Switch from -std=c++17 to -std=gnu++17 as alloca(3) is used.
-
---- CMakeLists.txt.orig	2021-04-23 19:00:19.000000000 -0700
-+++ CMakeLists.txt	2021-07-24 21:33:20.005271077 -0700
-@@ -1718,7 +1718,7 @@ elseif(
-   CMAKE_C_COMPILER_ID MATCHES "Clang" OR
-   CMAKE_C_COMPILER_ID MATCHES "Intel"
- )
--  string(APPEND CMAKE_CXX_FLAGS " -std=c++17")
-+  string(APPEND CMAKE_CXX_FLAGS " -std=gnu++17")
- else()
-   message(FATAL_ERROR "Unknown compiler ${CMAKE_C_COMPILER_ID}, can't enable C++17 build")
+--- CMakeLists.txt.orig	2023-01-22 17:20:12.516051931 +0000
++++ CMakeLists.txt
+@@ -998,6 +998,7 @@ set(EXETYPE "")
+ 
+ # C/C++ flags
+ set(PLATFORM_CFLAGS)
++set(PLATFORM_CXXFLAGS)
+ 
+ # these are added to later on.
+ set(C_WARNINGS)
+@@ -1721,7 +1722,7 @@ endif()
+ 
+ if(UNIX AND NOT APPLE)
+   if(NOT WITH_CXX11_ABI)
+-    string(APPEND PLATFORM_CFLAGS " -D_GLIBCXX_USE_CXX11_ABI=0")
++    string(APPEND PLATFORM_CXXFLAGS " -D_GLIBCXX_USE_CXX11_ABI=0")
+   endif()
  endif()
+ 
+@@ -1766,7 +1767,7 @@ endif()
+ # Include warnings first, so its possible to disable them with user defined flags
+ # eg: -Wno-uninitialized
+ set(CMAKE_C_FLAGS "${C_WARNINGS} ${CMAKE_C_FLAGS} ${PLATFORM_CFLAGS}")
+-set(CMAKE_CXX_FLAGS "${CXX_WARNINGS} ${CMAKE_CXX_FLAGS} ${PLATFORM_CFLAGS}")
++set(CMAKE_CXX_FLAGS "${CXX_WARNINGS} ${CMAKE_CXX_FLAGS} ${PLATFORM_CFLAGS} ${PLATFORM_CXXFLAGS}")
+ 
+ # defined above, platform specific but shared names
+ mark_as_advanced(
