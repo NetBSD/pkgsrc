@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2022/11/23 16:19:33 adam Exp $
+# $NetBSD: Makefile,v 1.45 2023/01/22 16:28:12 ryoon Exp $
 
 DISTNAME=	libabw-0.1.3
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	converters
 MASTER_SITES=	http://dev-www.libreoffice.org/src/
 EXTRACT_SUFX=	.tar.xz

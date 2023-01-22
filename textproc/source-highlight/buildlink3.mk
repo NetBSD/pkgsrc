@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2022/01/10 01:46:45 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2023/01/22 16:28:16 ryoon Exp $
 
 BUILDLINK_TREE+=	source-highlight
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	source-highlight
 SOURCE_HIGHLIGHT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.source-highlight+=	source-highlight>=3.1.7nb2
-BUILDLINK_ABI_DEPENDS.source-highlight?=	source-highlight>=3.1.9nb4
+BUILDLINK_ABI_DEPENDS.source-highlight?=	source-highlight>=3.1.9nb5
 BUILDLINK_PKGSRCDIR.source-highlight?=		../../textproc/source-highlight
 
 .include "../../devel/boost-libs/buildlink3.mk"
