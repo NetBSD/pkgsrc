@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.503 2023/01/22 10:30:41 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.504 2023/01/22 12:44:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -637,3 +637,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/garden version 0.6.0 [pin 2023-01-22]
 	Updated textproc/libxml2 to 2.10.3 [wiz 2023-01-22]
 	Updated textproc/py-libxml2 to 2.10.3 [wiz 2023-01-22]
+	Added textproc/tree-sitter-html version 0.19.0 [wiz 2023-01-22]
