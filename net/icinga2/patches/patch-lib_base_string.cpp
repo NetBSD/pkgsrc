@@ -1,26 +1,27 @@
-$NetBSD: patch-lib_base_string.cpp,v 1.2 2021/01/17 13:22:26 wiz Exp $
+$NetBSD: patch-lib_base_string.cpp,v 1.3 2023/01/22 17:34:20 ryoon Exp $
 
-Support Boost 1.74 when setting HTTP headers
-Upstream Issue #8185, Pull Request #8575, commit eab07a7318f9e42157bc21d86585340d762759e7
+Fix build with Boost 1.81.0
+From: https://github.com/Icinga/icinga2/commit/5bcbc96e221bb3aafc370449941bfbd70939915c
 
---- lib/base/string.cpp.orig
+--- lib/base/string.cpp.orig	2022-06-29 17:15:18.000000000 +0000
 +++ lib/base/string.cpp
-@@ -127,6 +127,18 @@ String::operator const std::string&() const
- 	return m_Data;
+@@ -128,15 +128,15 @@ String::operator const std::string&() co
  }
  
-+/**
-+ * Conversion function to boost::string_view.
-+ *
-+ * This allows using String as the value for HTTP headers in boost::beast::http::basic_fields::set.
-+ *
-+ * @return A boost::string_view representing this string.
-+ */
-+String::operator boost::string_view() const
-+{
-+	return boost::string_view(m_Data);
-+}
-+
- const char *String::CStr() const
+ /**
+- * Conversion function to boost::string_view.
++ * Conversion function to boost::beast::string_view.
+  *
+  * This allows using String as the value for HTTP headers in boost::beast::http::basic_fields::set.
+  *
+- * @return A boost::string_view representing this string.
++ * @return A boost::beast::string_view representing this string.
+  */
+-String::operator boost::string_view() const
++String::operator boost::beast::string_view() const
  {
- 	return m_Data.c_str();
+-	return boost::string_view(m_Data);
++	return boost::beast::string_view(m_Data);
+ }
+ 
+ const char *String::CStr() const
