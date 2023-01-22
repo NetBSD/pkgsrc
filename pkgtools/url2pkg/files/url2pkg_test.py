@@ -1,4 +1,4 @@
-# $NetBSD: url2pkg_test.py,v 1.41 2022/07/16 08:59:38 rillig Exp $
+# $NetBSD: url2pkg_test.py,v 1.42 2023/01/22 18:58:45 rillig Exp $
 
 # URLs for manual testing:
 #
@@ -990,7 +990,9 @@ def test_Adjuster_adjust_cmake(tmp_path: Path):
 
     adjuster.adjust_cmake()
 
-    assert str_vars(adjuster.build_vars) == ['USE_CMAKE=yes']
+    assert adjuster.includes == [
+        '../../devel/cmake/build.mk'
+    ]
 
 
 def test_Adjuster_adjust_gnu_make(tmp_path: Path):
