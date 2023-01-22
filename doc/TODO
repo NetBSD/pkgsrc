@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22508 2023/01/22 10:30:32 wiz Exp $
+$NetBSD: TODO,v 1.22509 2023/01/22 10:34:51 wiz Exp $
 
 Suggested new packages
 ======================
@@ -611,6 +611,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o elscreen-1.5.3
 	o emerillon-0.1.90
 	o enlightenment-0.25
+	o entr-5.3
 	o eog-plugins-3.6.1
 	o epic4-2.10.6
 	o epiphany-extensions-3.2.0
@@ -939,6 +940,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o lbdb-49
 	o lcc-4.2
 	o ldapsdk-6.0.7
+	o ldb-2.7.0
 	o lgeneral-1.3.1
 	o libarchive-3.6.1
 	o libasr-1.0.4
@@ -1061,6 +1063,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o multitail-6.4.2
 	o munge-0.5.14
 	o muse-0.9.2
+	o musicpd-0.23.12
 	o mysql-workbench-8.0.23
 	o naev-0.8.2
 	o nagios-ncsa-2.10.0
@@ -1079,6 +1082,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o nas-auscope-1.9.4
 	o ncview-2.1.8
 	o nedit-5.7
+	o neon-0.32.5
 	o netbt-hcidump-5.58
 	o netramet-50
 	o newmail-1.0.2
@@ -1463,7 +1467,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o swi-prolog-jpl-8.3.22
 	o swi-prolog-lite-8.3.22
 	o swi-prolog-packages-8.3.22
-	o syft-0.66.1
+	o syft-0.68.0
 	o sympa-6.2.70
 	o sysinfo-4.2.2
 	o system-tools-backends-2.10.1
@@ -1471,6 +1475,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o tacacs-4.0.4.29a
 	o tacacs-shrubbery-4.0.4.29a
 	o tads-3.0.16
+	o talloc-2.4.0
 	o taplo-lsp-0.6.0 [wiz]
 	o taplo-lsp-0.7.0
 	o taskwarrior-2.5.3
@@ -1481,6 +1486,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o tcpillust-1.00b
 	o tcpslice-1.3
 	o tct-1.19
+	o tdb-1.4.8
 	o tdir-1.73
 	o tds-1.6.2
 	o teem-1.10.0
@@ -1500,6 +1506,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o terraform-provider-random-3.1.0
 	o tesseract-5.2
 	o tetrinetx-1.40c
+	o tevent-0.14.0
 	o texworks-0.6.6
 	o tfmxplay-1.1.6
 	o thunderbird-102
