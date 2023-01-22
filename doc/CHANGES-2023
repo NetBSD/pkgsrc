@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.505 2023/01/22 13:01:01 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.506 2023/01/22 13:12:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -639,3 +639,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-libxml2 to 2.10.3 [wiz 2023-01-22]
 	Added textproc/tree-sitter-html version 0.19.0 [wiz 2023-01-22]
 	Updated sysutils/entr to 5.3 [wiz 2023-01-22]
+	Updated audio/musicpd to 0.23.12 [wiz 2023-01-22]
