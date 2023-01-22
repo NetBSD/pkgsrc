@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.192 2023/01/03 17:37:15 wiz Exp $
+# $NetBSD: Makefile,v 1.193 2023/01/22 21:24:37 ryoon Exp $
 
-DISTNAME=	blender-2.93.5
-PKGREVISION=	10
+DISTNAME=	blender-3.4.1
 CATEGORIES=	graphics
 MASTER_SITES=	https://download.blender.org/source/
 EXTRACT_SUFX=	.tar.xz
@@ -16,6 +15,8 @@ USE_LANGUAGES=	c gnu++17
 
 # C++17
 GCC_REQD+=	7
+
+CXXFLAGS+=	-fpermissive # return value tyoe fo __builtin_popcount()
 
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	..
@@ -32,6 +33,14 @@ CMAKE_ARGS+=	-DWITH_FFTW3=ON
 CMAKE_ARGS+=	-DWITH_SDL=ON
 CMAKE_ARGS+=	-DWITH_SDL_DYNLOAD=OFF
 CMAKE_ARGS+=	-DWITH_CODEC_FFMPEG=ON
+CMAKE_ARGS+=	-DFFMPEG_AVCODEC_LIBRARY=${BUILDLINK_DIR}/lib/ffmpeg5/libavcodec.so
+CMAKE_ARGS+=	-DFFMPEG_AVDEVICE_LIBRARY=${BUILDLINK_DIR}/lib/ffmpeg5/libavdevice.so
+CMAKE_ARGS+=	-DFFMPEG_AVFILTER_LIBRARY=${BUILDLINK_DIR}/lib/ffmpeg5/libavfilter.so
+CMAKE_ARGS+=	-DFFMPEG_AVFORMAT_LIBRARY=${BUILDLINK_DIR}/lib/ffmpeg5/libavformat.so
+CMAKE_ARGS+=	-DFFMPEG_AVUTIL_LIBRARY=${BUILDLINK_DIR}/lib/ffmpeg5/libavutil.so
+CMAKE_ARGS+=	-DFFMPEG_SWSCALE_LIBRARY=${BUILDLINK_DIR}/lib/ffmpeg5/libswscale.so
+CMAKE_ARGS+=	-DFFMPEG_SWRESAMPLE_LIBRARY=${BUILDLINK_DIR}/lib/ffmpeg5/libswresample.so
+CMAKE_ARGS+=	-D_ffmpeg_INCLUDE_DIR=${BUILDLINK_DIR}/include/ffmpeg5
 CMAKE_ARGS+=	-DWITH_CODEC_SNDFILE=ON
 CMAKE_ARGS+=	-DWITH_SYSTEM_GLEW=ON
 CMAKE_ARGS+=	-DWITH_CYCLES_EMBREE=OFF
@@ -57,12 +66,13 @@ REPLACE_PYTHON=		release/bin/blender-thumbnailer.py		\
 
 INSTALLATION_DIRS=	bin share/blender
 
-PYTHON_VERSIONS_ACCEPTED?=	39
+PYTHON_VERSIONS_ACCEPTED?=	310 311
 
 pre-configure:
 	${MKDIR} ${WRKSRC}/build
 
 .include "options.mk"
+.include "../../archivers/zstd/buildlink3.mk"
 .include "../../audio/openal-soft/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
@@ -75,6 +85,7 @@ pre-configure:
 .include "../../graphics/glew/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../graphics/libepoxy/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"
 .include "../../graphics/opencolorio/buildlink3.mk"
 .include "../../graphics/openimageio/buildlink3.mk"
@@ -84,7 +95,7 @@ pre-configure:
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../math/fftw/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"
-.include "../../multimedia/ffmpeg4/buildlink3.mk"
+.include "../../multimedia/ffmpeg5/buildlink3.mk"
 .include "../../parallel/threadingbuildingblocks/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
