@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.21 2023/01/20 21:37:11 triaxx Exp $
+# $NetBSD: options.mk,v 1.22 2023/01/23 21:05:39 triaxx Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.pidgin
 PKG_SUPPORTED_OPTIONS+=		dbus debug gtkspell
 PKG_SUGGESTED_OPTIONS+=		dbus gtkspell
 
 .include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} != "Darwin"
+.if ${OPSYS} != "Darwin" || !exists(/System/Library/Frameworks/Quartz.framework)
 PKG_SUPPORTED_OPTIONS+=		x11
 PKG_SUGGESTED_OPTIONS+=		x11
 .endif
