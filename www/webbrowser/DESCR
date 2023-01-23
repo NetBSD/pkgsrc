@@ -1,0 +1,6 @@
+Run the "best" available web browser from among all installed browsers
+using a default list or user-provided list.  The list can be specified
+via the command-line or an environment variable.  Applications that
+launch a web browser as a child process can use "webbrowser" so that
+they don't have to be reconfigured when you decide to switch to a
+different browser.
