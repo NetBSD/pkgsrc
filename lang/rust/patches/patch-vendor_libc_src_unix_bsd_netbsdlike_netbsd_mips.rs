@@ -1,4 +1,4 @@
-# $NetBSD: patch-vendor_libc_src_unix_bsd_netbsdlike_netbsd_mips.rs,v 1.1 2022/11/15 23:11:14 he Exp $
+$NetBSD: patch-vendor_libc_src_unix_bsd_netbsdlike_netbsd_mips.rs,v 1.2 2023/01/23 18:49:04 he Exp $
 
 Add mips support.
 
