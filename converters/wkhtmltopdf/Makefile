@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2023/01/20 16:26:56 manu Exp $
+# $NetBSD: Makefile,v 1.16 2023/01/23 13:03:18 manu Exp $
 
 DISTNAME=	wkhtmltox-0.12.4
 PKGNAME=	wkhtmltopdf-0.12.4
@@ -20,7 +20,6 @@ PYTHON_VERSIONS_ACCEPTED=	27
 
 BUILDLINK_TRANSFORM+=	opt:-std=gnu++11:-std=gnu++98 
 CXXFLAGS+=	-std=gnu++98
-CXXFLAHS+=	{COMPILER_RPATH_FLAG}${X11BASE}/lib
 
 SUBST_CLASSES+=		x11
 SUBST_MESSAGE.x11=	Fixing x11 options.
