@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/01/23 21:35:51 bacon Exp $
+
+BLAKE2s (webbrowser-0.4.0.tar.gz) = 297059809379c958263b51ef176df5cb029c55723321ac82f796bf2281e5bda6
+SHA512 (webbrowser-0.4.0.tar.gz) = 2d28700d22c97d9ed4d7269dd82675867ef170981ee9e7c981d7bc0da24b24b6ab5d07abd1566acb0da72ae9aaa61500ac9dc84888b1eda77d9543565c9a8ebe
+Size (webbrowser-0.4.0.tar.gz) = 2493 bytes
