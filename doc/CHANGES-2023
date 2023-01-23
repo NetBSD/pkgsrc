@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.541 2023/01/23 21:11:52 pin Exp $
+$NetBSD: CHANGES-2023,v 1.542 2023/01/23 21:13:19 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -698,3 +698,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/gtk4 to 4.8.3 [adam 2023-01-23]
 	Updated databases/py-aiosqlite to 0.18.0 [adam 2023-01-23]
 	Updated sysutils/xplr to 0.20.2 [pin 2023-01-23]
+	Updated audio/termusic to 0.7.8 [pin 2023-01-23]
