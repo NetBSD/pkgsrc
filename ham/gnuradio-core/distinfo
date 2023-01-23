@@ -1,13 +1,12 @@
-$NetBSD: distinfo,v 1.49 2022/10/09 07:56:09 adam Exp $
+$NetBSD: distinfo,v 1.50 2023/01/23 19:26:20 adam Exp $
 
-BLAKE2s (gnuradio-3.10.4.0.tar.gz) = 72065d24922d7ab4c97e89bd99a95ad76088e7ff9d13fd395b13a7075558bd6a
-SHA512 (gnuradio-3.10.4.0.tar.gz) = a8690016513df3928cb2f63eef190c7306bc3cc452dfeafab2e47b43aa1dd3f61515df49832e99530535f94deabfb614388a27212b09e1c816782f3fdd4915eb
-Size (gnuradio-3.10.4.0.tar.gz) = 4392284 bytes
+BLAKE2s (gnuradio-3.10.5.0.tar.gz) = a7530bd7c4a3bb3ddfd548a5f057e4f19964507955e788f35f3b140e24581423
+SHA512 (gnuradio-3.10.5.0.tar.gz) = 82f3028cbcb0175f9f354b19613ee59b052881b894c6d668d04235acda2e3be0ca2713642141a917264e70039f23795c647c47364af9ffad63f108da517d77c5
+Size (gnuradio-3.10.5.0.tar.gz) = 4368231 bytes
 SHA1 (patch-cmake_Modules_GrPybind.cmake) = b585fc9bddad66f98d9e70db3d9335c937698df9
 SHA1 (patch-gnuradio-runtime_CMakeLists.txt) = 3e4ae78cd722aa54a9626ca458cfe90ab11619a5
 SHA1 (patch-gnuradio-runtime_lib_CMakeLists.txt) = 8f29121bcff204fd4533c113cd05440a7d39477d
 SHA1 (patch-gnuradio-runtime_lib_constants.cc.in) = fef80a546c713c565c3851ee7289b4fa3a49e45b
 SHA1 (patch-gnuradio-runtime_lib_thread_thread__group.cc) = 868809d5253b6465595dcade7f094844ff79f21c
-SHA1 (patch-gr-audio_lib_CMakeLists.txt) = 9adacb93a20b2be596a23985306cbfd5f93c80a8
+SHA1 (patch-gr-audio_lib_CMakeLists.txt) = d5acab47fdb007c50bb544af436102f0d38317aa
 SHA1 (patch-gr-audio_lib_alsa_alsa__impl_h) = cfa9b629e5cf21198cfd53cf27a908b5874866f4
-SHA1 (patch-gr-blocks_include_gnuradio_blocks_blockinterleaving.h) = a73a5820e613159b9032faacc6ca98a2a6dfaf48
