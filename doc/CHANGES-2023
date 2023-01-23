@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.531 2023/01/23 15:42:16 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.532 2023/01/23 16:14:50 he Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -670,3 +670,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated converters/libiconv to 1.17 [wiz 2023-01-23]
 	Added net/nagios-plugin/ipf 0.1 [manu 2023-01-23]
 	Updated lang/mujs to 1.3.2 [wiz 2023-01-23]
+	Updated net/radsecproxy to 1.9.2 [he 2023-01-23]
