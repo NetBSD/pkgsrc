@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2023/01/23 21:09:17 adam Exp $
+# $NetBSD: Makefile,v 1.11 2023/01/23 21:10:59 adam Exp $
 
 DISTNAME=	aiosqlite-0.18.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Async bridge to the standard sqlite3 module
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=2:../../devel/py-flit_core
-TEST_DEPENDS+=	${PYPKGPREFIX}-aiounittest-[0-9]*:../../devel/py-aiounittest
 
 USE_LANGUAGES=	# none
 
