@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2022/10/09 07:51:10 adam Exp $
+# $NetBSD: Makefile,v 1.38.2.1 2023/01/23 17:38:29 spz Exp $
 
-DISTNAME=	libksba-1.6.2
+DISTNAME=	libksba-1.6.3
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/libksba/
 EXTRACT_SUFX=	.tar.bz2
@@ -19,7 +19,7 @@ TEXINFO_REQD=		4.0
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+.if ${USE_CROSS_COMPILE:U:tl} == yes
 CONFIGURE_ARGS+=	CC_FOR_BUILD=${NATIVE_CC:Q}
 .endif
 
