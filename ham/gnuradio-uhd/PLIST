@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2022/05/26 15:20:10 mef Exp $
+@comment $NetBSD: PLIST,v 1.13 2023/01/23 19:26:21 adam Exp $
 bin/uhd_fft
 bin/uhd_rx_cfile
 bin/uhd_rx_nogui
@@ -13,8 +13,8 @@ lib/cmake/gnuradio/gnuradio-uhdConfig.cmake
 lib/cmake/gnuradio/gnuradio-uhdTargets-release.cmake
 lib/cmake/gnuradio/gnuradio-uhdTargets.cmake
 lib/libgnuradio-uhd.so
-lib/libgnuradio-uhd.so.${PKGVER_MICRO}
 lib/libgnuradio-uhd.so.${PKGVERSION}
+lib/libgnuradio-uhd.so.${PKGVER_MICRO}
 lib/pkgconfig/gnuradio-uhd.pc
 ${PYSITELIB}/gnuradio/uhd/__init__.py
 ${PYSITELIB}/gnuradio/uhd/__init__.pyc
@@ -30,6 +30,11 @@ ${PYSITELIB}/gnuradio/uhd/uhd_siggen_base.py
 ${PYSITELIB}/gnuradio/uhd/uhd_siggen_base.pyc
 ${PYSITELIB}/gnuradio/uhd/uhd_siggen_base.pyo
 share/doc/gnuradio-${PKGVERSION}/README.uhd
+share/gnuradio/examples/uhd/rfnoc_fir_filter.grc
+share/gnuradio/examples/uhd/rfnoc_keep1.grc
+share/gnuradio/examples/uhd/rfnoc_radio_ddc.grc
+share/gnuradio/examples/uhd/rfnoc_siggen.grc
+share/gnuradio/examples/uhd/rfnoc_window.grc
 share/gnuradio/examples/uhd/tags_demo
 share/gnuradio/examples/uhd/uhd_const_wave.grc
 share/gnuradio/examples/uhd/uhd_fft.grc
@@ -40,5 +45,8 @@ share/gnuradio/examples/uhd/uhd_two_tone_loopback.grc
 share/gnuradio/examples/uhd/uhd_wbfm_receive.grc
 share/gnuradio/grc/blocks/uhd.tree.yml
 share/gnuradio/grc/blocks/uhd_amsg_source.block.yml
+share/gnuradio/grc/blocks/uhd_rfnoc_fir_filter.block.yml
+share/gnuradio/grc/blocks/uhd_rfnoc_siggen.block.yml
+share/gnuradio/grc/blocks/uhd_rfnoc_window.block.yml
 share/gnuradio/grc/blocks/uhd_usrp_sink.block.yml
 share/gnuradio/grc/blocks/uhd_usrp_source.block.yml
