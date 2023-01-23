@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2023/01/23 21:28:08 pin Exp $
+bin/jolly
+share/examples/jolly/jolly.toml
+share/icons/hicolor/scalable/apps/jolly.svg
