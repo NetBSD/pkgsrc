@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.975 2023/01/17 13:54:22 vins Exp $
+# $NetBSD: Makefile,v 1.976 2023/01/23 21:29:09 pin Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -118,6 +118,7 @@ SUBDIR+=	i3lock
 SUBDIR+=	iceauth
 SUBDIR+=	ico
 SUBDIR+=	imwheel
+SUBDIR+=	jolly
 SUBDIR+=	kactivities
 SUBDIR+=	kactivities-stats
 SUBDIR+=	kactivities5
