@@ -1,10 +1,10 @@
-$NetBSD: patch-compiler_rustc__codegen__ssa_src_back_linker.rs,v 1.9 2022/11/15 23:11:14 he Exp $
+$NetBSD: patch-compiler_rustc__codegen__ssa_src_back_linker.rs,v 1.10 2023/01/23 18:49:04 he Exp $
 
 Do not use @rpath on Darwin.
 
---- compiler/rustc_codegen_ssa/src/back/linker.rs.orig	2021-09-06 18:42:35.000000000 +0000
+--- compiler/rustc_codegen_ssa/src/back/linker.rs.orig	2022-12-12 16:02:12.000000000 +0000
 +++ compiler/rustc_codegen_ssa/src/back/linker.rs
-@@ -326,7 +326,7 @@ impl<'a> GccLinker<'a> {
+@@ -325,7 +325,7 @@ impl<'a> GccLinker<'a> {
              // principled solution at some point to force the compiler to pass
              // the right `-Wl,-install_name` with an `@rpath` in it.
              if self.sess.opts.cg.rpath || self.sess.opts.unstable_opts.osx_rpath_install_name {

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2022/06/28 11:34:15 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2023/01/23 18:49:03 he Exp $
 
 BUILDLINK_TREE+=	rust
 
@@ -9,8 +9,7 @@ BUILDLINK_TREE+=	rust
 .if !defined(RUST_BUILDLINK3_MK)
 RUST_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.rust+=	rust>=1.20.0
-BUILDLINK_ABI_DEPENDS.rust?=	rust>=1.60.0nb1
+BUILDLINK_API_DEPENDS.rust+=	rust>=1.56.1
 BUILDLINK_PKGSRCDIR.rust?=	../../lang/rust
 BUILDLINK_PASSTHRU_DIRS+=	${PREFIX}/lib/rustlib
 .endif

@@ -8,18 +8,47 @@
 # ...or the native root, when we don't cross-compile
 root=${CROSS_ROOT:-/}
 
+incadd=""
 native=false
 if [ $root = "/" ]; then
 	native=true
 else
 	# What's the tools/bin prefix (if we're cross-building)?
 	gnuarch=${GNU_CROSS_TARGET:?}
+
+	# A special hack for netbsd-8 targets.
+	# netbsd-8 has gcc 5.5, but llvm and rust needs >= 7
+	# so we build tools from -9, and try to use that, but
+	# then the include path becomes wrong, and <stdatomic.h>
+	# is no longer picked up automatically by the compiler
+	# from the target destination directory
+	case $gnuarch in
+		sparc64*)	incadd="-I=/usr/include/gcc-5"
+				;;
+
+				# immintrin & from gcc-5 not
+				# compatible with gcc7, apparently
+		i[3456]86*)	incadd="-I=/usr/include/gcc-7"
+				;;
+
+				# mips64 does soft-float
+		mips64*)	madd="-msoft-float"
+				;;
+	esac
+	# We build both for -8 and -9 due to ABI differences,
+	# so can't just test $gnuarch...  Yes, a vile hack.
+	if [ "$root" = "/u/macppc" ]; then
+		incadd="-I=/usr/include/gcc-5"
+	fi
 fi
 
 # Who are we a wrapper for? (Typically either gcc or c++)
 who=$(basename $0 | sed -e 's/-wrap$//')
 
 args=""
+if [ ! -z "$madd" ]; then
+	args="$args $madd"
+fi
 
 # May need to add $linkadd before first -l or fist -L
 linkadd="-Wl,--sysroot=${root}/dest"
@@ -161,9 +190,10 @@ if $native; then
 else
 	cmd="${root}/tools/bin/${gnuarch}-${who} \
 		--sysroot=${root}/dest \
+		$incadd \
 		$args"
 fi
 
 # Cannot echo to stdout, messes up e.g. "gcc -print-prog-name=ld" output...
-#echo $cmd >&2
+#echo $cmd >> /tmp/gcc-wrap.log
 exec $cmd
