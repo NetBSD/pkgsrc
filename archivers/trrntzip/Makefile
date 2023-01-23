@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/06/17 23:05:04 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2023/01/23 18:32:30 wiz Exp $
 
 DISTNAME=	trrntzip-1.0
 CATEGORIES=	archivers
@@ -10,7 +10,6 @@ HOMEPAGE=	https://github.com/0-wiz-0/trrntzip/
 COMMENT=	Create zip archives in a standard format
 LICENSE=	gnu-gpl-v2 AND zlib
 
-USE_CMAKE=	yes
-
+.include "../../devel/cmake/build.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
