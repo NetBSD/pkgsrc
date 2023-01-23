@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2022Q4,v 1.1.2.6 2023/01/21 14:49:07 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2022Q4,v 1.1.2.7 2023/01/23 19:27:14 spz Exp $
 
 Changes to packages and infrastructure on the 2022Q4 branch:
 
@@ -45,4 +45,10 @@ emulators/mame: bugfixes
 Pullup ticket #6723 - requested by tsutsui
 x11/qt6-qtbase: i386 build fix
 lang/gcc9: dependent update
+
+Pullup ticket #6710 - requested by bsiegert
+security/libksba: security update
+
+Pullup ticket #6724 - requested by bsiegert
+lang/ruby31-base: build fix
 
