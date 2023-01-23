@@ -1,8 +1,7 @@
-$NetBSD: patch-configure.ac,v 1.11 2023/01/16 09:26:45 micha Exp $
+$NetBSD: patch-configure.ac,v 1.12 2023/01/23 13:44:02 micha Exp $
 
 Use the same path for all platforms in pkgsrc.
 Use lua from pkgsrc.
-Fix nonportable shell syntax (this is fixed upstream, remove for next release).
 
 --- configure.ac.orig	2023-01-06 05:16:50.000000000 +0000
 +++ configure.ac
@@ -42,15 +41,6 @@ Fix nonportable shell syntax (this is fixed upstream, remove for next release).
              fi
          fi
  
-@@ -1972,7 +1970,7 @@ AS_IF([test "x$with_qt" != "xno"], [
-   # required for linking with QT
-   CXXFLAGS="${CXXFLAGS} -fPIE -fPIC"
-   AC_CHECK_PROGS([QMAKE], [qmake6 qmake-qt5 qmake5 qmake], [false])
--  AS_IF([test "$QMAKE" == "qmake6"], [
-+  AS_IF([test "$QMAKE" = "qmake6"], [
-     # Qt6
-     AC_CHECK_FILE($(${QMAKE} -query QT_INSTALL_HEADERS)/QtCore/QtCore, [
-       QTCORE_CFLAGS="-I$(${QMAKE} -query QT_INSTALL_HEADERS) -I$(${QMAKE} -query QT_INSTALL_HEADERS)/QtCore"
 @@ -2053,43 +2051,6 @@ fi
  AM_CONDITIONAL(WITH_QUARTZ, [test "x$use_quartz" = "xYes"])
  
