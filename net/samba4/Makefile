@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.157 2023/01/19 16:32:54 hauke Exp $
+# $NetBSD: Makefile,v 1.158 2023/01/23 09:13:52 wiz Exp $
 
 DISTNAME=	samba-4.17.4
 PKGREVISION=	2
@@ -196,7 +196,6 @@ REPLACE_PERL+=		pidl/pidl
 REPLACE_PERL+=		pidl/tests/*.pl
 REPLACE_PERL+=		script/*.pl
 REPLACE_PERL+=		source3/script/*.pl
-REPLACE_PERL+=		source4/build/pasn1/pasn1.pl
 REPLACE_PERL+=		source4/script/*.pl
 REPLACE_PERL+=		source4/scripting/bin/nsupdate-gss
 REPLACE_PERL+=		third_party/nss_wrapper/nss_wrapper.pl
@@ -209,7 +208,7 @@ REPLACE_PYTHON+=	source4/scripting/bin/*
 .endif
 .include "../../archivers/libarchive/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
-BUILDLINK_API_DEPENDS.ldb+=	ldb>=2.6.1
+BUILDLINK_API_DEPENDS.ldb+=	ldb>=2.6.1<2.7
 .include "../../databases/ldb/buildlink3.mk"
 .include "../../databases/lmdb/buildlink3.mk"
 .include "../../devel/cmocka/buildlink3.mk"
