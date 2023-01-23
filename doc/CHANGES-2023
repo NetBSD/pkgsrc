@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.527 2023/01/23 13:13:31 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.528 2023/01/23 13:45:32 micha Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -666,3 +666,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated finance/ledger2beancount to 2.7 [riastradh 2023-01-23]
 	Added devel/py-SDL2 version 0.9.15 [wiz 2023-01-23]
 	Updated print/poppler to 23.01.0 [wiz 2023-01-23]
+	Updated graphics/graphviz to 7.1.0 [micha 2023-01-23]
