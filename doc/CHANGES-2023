@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.525 2023/01/23 09:13:13 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.526 2023/01/23 12:08:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -664,3 +664,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/py-mcomix to 2.1.0 [wiz 2023-01-22]
 	Updated graphics/py-wand to 0.6.11 [wiz 2023-01-23]
 	Updated finance/ledger2beancount to 2.7 [riastradh 2023-01-23]
+	Added devel/py-SDL2 version 0.9.15 [wiz 2023-01-23]
