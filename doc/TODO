@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22519 2023/01/23 09:13:13 wiz Exp $
+$NetBSD: TODO,v 1.22520 2023/01/23 13:13:31 wiz Exp $
 
 Suggested new packages
 ======================
@@ -938,7 +938,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o lbdb-49
 	o lcc-4.2
 	o ldapsdk-6.0.7
-	o ldb-2.7.0
+	o ldb-2.7.0 [wait for samba 4.18]
 	o lgeneral-1.3.1
 	o libarchive-3.6.1
 	o libasr-1.0.4
@@ -1260,7 +1260,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o polkit-121
 	o polyml-5.9
 	o poppass-4.0.14
-	o poppler-23.01.0
 	o posh-0.14.1
 	o postal-0.72
 	o postgres_exporter-0.9.0
