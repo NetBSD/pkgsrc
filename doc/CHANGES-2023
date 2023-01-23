@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.544 2023/01/23 21:16:41 pin Exp $
+$NetBSD: CHANGES-2023,v 1.545 2023/01/23 21:18:19 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -701,3 +701,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated audio/termusic to 0.7.8 [pin 2023-01-23]
 	Updated graphics/simp to 3.3.1 [pin 2023-01-23]
 	Updated graphics/oculante to 0.6.50 [pin 2023-01-23]
+	Updated audio/ncspot to 0.12.0 [pin 2023-01-23]
