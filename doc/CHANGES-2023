@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.551 2023/01/23 21:42:07 bacon Exp $
+$NetBSD: CHANGES-2023,v 1.552 2023/01/23 22:10:47 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -708,3 +708,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added www/webbrowser version 0.4.0 [bacon 2023-01-23]
 	Added biology/atac-seq version 1.1 [bacon 2023-01-23]
 	Updated biology/rna-seq to 1.1 [bacon 2023-01-23]
+	Updated devel/mold to 1.10.1 [fcambus 2023-01-23]
