@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2023/01/23 21:35:51 bacon Exp $
+bin/webbrowser
+man/man1/webbrowser.1
