@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.34 2021/05/04 13:55:14 nia Exp $
+# $NetBSD: options.mk,v 1.35 2023/01/23 20:25:27 triaxx Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.libpurple
 PKG_OPTIONS_REQUIRED_GROUPS=	ssl
@@ -9,7 +9,7 @@ PKG_SUGGESTED_OPTIONS+=		dbus farstream gstreamer gnutls
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		avahi dbus gnutls nss perl tcl vv
+PLIST_VARS+=		avahi dbus gnutls nss perl tcl
 
 .if !empty(PKG_OPTIONS:Mavahi)
 PLIST.avahi=		yes
@@ -79,7 +79,8 @@ CONFIGURE_ARGS+=	--enable-cyrus-sasl
 # voice/video support requires both farstream and gstreamer
 .if !empty(PKG_OPTIONS:Mfarstream) && !empty(PKG_OPTIONS:Mgstreamer)
 CONFIGURE_ARGS+=	--enable-vv
-PLIST.vv=		yes
+.else
+CONFIGURE_ARGS+=	--disable-vv
 .endif
 
 .if !empty(PKG_OPTIONS:Mfarstream)
