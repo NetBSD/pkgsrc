@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.550 2023/01/23 21:38:57 bacon Exp $
+$NetBSD: CHANGES-2023,v 1.551 2023/01/23 21:42:07 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -707,3 +707,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added x11/jolly version 0.1.1 [pin 2023-01-23]
 	Added www/webbrowser version 0.4.0 [bacon 2023-01-23]
 	Added biology/atac-seq version 1.1 [bacon 2023-01-23]
+	Updated biology/rna-seq to 1.1 [bacon 2023-01-23]
