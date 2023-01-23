@@ -1,4 +1,4 @@
-$NetBSD: patch-src_pdf_pdf.pro,v 1.2.22.1 2023/01/20 16:20:42 manu Exp $
+$NetBSD: patch-src_pdf_pdf.pro,v 1.2.22.2 2023/01/23 16:29:57 spz Exp $
 
 --- src/pdf/pdf.pro.orig	2017-09-10 12:26:34.883613832 +0000
 +++ src/pdf/pdf.pro
@@ -6,7 +6,7 @@ $NetBSD: patch-src_pdf_pdf.pro,v 1.2.22.1 2023/01/20 16:20:42 manu Exp $
  DEPENDPATH += . ../shared
  INCLUDEPATH += . ../shared
  
-+LIBS+= ${COMPILER_RPATH_FLAG}${X11BASE}/lib ${COMPILER_RPATH_FLAG}${PREFIX}/lib
++LIBS+= ${COMPILER_RPATH_FLAG}${X11PREFIX}/lib ${COMPILER_RPATH_FLAG}${PREFIX}/lib
 +
  unix {
      man.path=$$INSTALLBASE/share/man/man1

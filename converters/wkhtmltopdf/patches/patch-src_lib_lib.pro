@@ -1,4 +1,4 @@
-$NetBSD: patch-src_lib_lib.pro,v 1.1.44.1 2023/01/20 16:20:42 manu Exp $
+$NetBSD: patch-src_lib_lib.pro,v 1.1.44.2 2023/01/23 16:29:57 spz Exp $
 
 --- src/lib/lib.pro.orig	2017-09-10 12:16:27.317023665 +0000
 +++ src/lib/lib.pro
@@ -6,7 +6,7 @@ $NetBSD: patch-src_lib_lib.pro,v 1.1.44.1 2023/01/20 16:20:42 manu Exp $
  TEMPLATE = lib
  CONFIG += dll
  
-+LIBS+= ${COMPILER_RPATH_FLAG}${X11BASE}/lib ${COMPILER_RPATH_FLAG}${PREFIX}/lib
++LIBS+= ${COMPILER_RPATH_FLAG}${X11PREFIX}/lib ${COMPILER_RPATH_FLAG}${PREFIX}/lib
 +
  include(../../common.pri)
  include(lib.pri)
