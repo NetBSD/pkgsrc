@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.25 2020/01/13 17:35:05 rillig Exp $
+# $NetBSD: builtin.mk,v 1.26 2023/01/23 15:22:24 wiz Exp $
 #
 # Package-settable variables:
 #
@@ -30,7 +30,7 @@ BUILTIN_FIND_GREP.H_CITRUS_ICONV=	Copyright.*Citrus Project
 IS_BUILTIN.iconv=	no
 .  if empty(H_ICONV:M__nonexistent__) && \
       empty(H_ICONV:M${LOCALBASE}/*) && \
-      !empty(BUILTIN_LIB_FOUND.iconv:M[yY][eE][sS])
+      ${BUILTIN_LIB_FOUND.iconv:U:tl} == yes
 IS_BUILTIN.iconv=	yes
 .  endif
 .endif
@@ -41,7 +41,7 @@ MAKEVARS+=		IS_BUILTIN.iconv
 ### a package name to represent the built-in package.
 ###
 .if !defined(BUILTIN_PKG.iconv) && \
-    !empty(IS_BUILTIN.iconv:M[yY][eE][sS]) && \
+    ${IS_BUILTIN.iconv:tl} == yes && \
     empty(H_ICONV:M__nonexistent__)
 BUILTIN_VERSION.iconv!=							\
 	${AWK} 'BEGIN { hex="0123456789abcdef" }			\
@@ -75,10 +75,10 @@ USE_BUILTIN.iconv=	no
 .  else
 USE_BUILTIN.iconv=	${IS_BUILTIN.iconv}
 .    if defined(BUILTIN_PKG.iconv) && \
-        !empty(IS_BUILTIN.iconv:M[yY][eE][sS])
+        ${IS_BUILTIN.iconv:tl} == yes
 USE_BUILTIN.iconv=	yes
 .      for _dep_ in ${BUILDLINK_API_DEPENDS.iconv}
-.        if !empty(USE_BUILTIN.iconv:M[yY][eE][sS])
+.        if ${USE_BUILTIN.iconv:tl} == yes
 USE_BUILTIN.iconv!=							\
 	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.iconv:Q}; then	\
 		${ECHO} yes;						\
@@ -95,7 +95,7 @@ USE_BUILTIN.iconv!=							\
 # XXX
 .    if empty(H_GLIBC_ICONV:M__nonexistent__) && \
 	empty(H_GLIBC_ICONV:M${LOCALBASE}/*) && \
-	!empty(BUILTIN_LIB_FOUND.iconv:M[nN][oO])
+	${BUILTIN_LIB_FOUND.iconv:U:tl} == no
 USE_BUILTIN.iconv=	yes
 H_ICONV=		${H_GLIBC_ICONV}
 .    endif
@@ -105,7 +105,7 @@ H_ICONV=		${H_GLIBC_ICONV}
 # XXX
 .    if empty(H_CITRUS_ICONV:M__nonexistent__) && \
 	empty(H_CITRUS_ICONV:M${LOCALBASE}/*) && \
-	!empty(BUILTIN_LIB_FOUND.iconv:M[nN][oO])
+	${BUILTIN_LIB_FOUND.iconv:U:tl} == no
 USE_BUILTIN.iconv=	yes
 H_ICONV=		${H_CITRUS_ICONV}
 .    endif
@@ -127,7 +127,7 @@ MAKEVARS+=		USE_BUILTIN.iconv
 # implementation.
 #
 .if defined(USE_GNU_ICONV)
-.  if !empty(IS_BUILTIN.iconv:M[nN][oO])
+.  if ${IS_BUILTIN.iconv:tl} == no
 USE_BUILTIN.iconv=	no
 .  endif
 .endif
@@ -135,7 +135,7 @@ USE_BUILTIN.iconv=	no
 # Define BUILTIN_LIBNAME.iconv to be the base name of the built-in
 # iconv library.
 #
-.if !empty(BUILTIN_LIB_FOUND.iconv:M[yY][eE][sS])
+.if ${BUILTIN_LIB_FOUND.iconv:U:tl} == yes
 BUILTIN_LIBNAME.iconv=	iconv
 .else
 BUILTIN_LIBNAME.iconv=	# empty (part of the C library)
@@ -146,8 +146,8 @@ BUILTIN_LIBNAME.iconv=	# empty (part of the C library)
 #
 .if !defined(ICONV_TYPE)
 ICONV_TYPE?=	gnu
-.  if !empty(USE_BUILTIN.iconv:M[yY][eE][sS]) && \
-      !empty(IS_BUILTIN.iconv:M[nN][oO])
+.  if ${USE_BUILTIN.iconv:tl} == yes && \
+      ${IS_BUILTIN.iconv:tl} == no
 ICONV_TYPE=	native
 .  endif
 .endif
@@ -157,9 +157,9 @@ ICONV_TYPE=	native
 ### solely to determine whether a built-in implementation exists.
 ###
 CHECK_BUILTIN.iconv?=	no
-.if !empty(CHECK_BUILTIN.iconv:M[nN][oO])
+.if ${CHECK_BUILTIN.iconv:tl} == no
 
-.  if !empty(USE_BUILTIN.iconv:M[yY][eE][sS])
+.  if ${USE_BUILTIN.iconv:tl} == yes
 BUILDLINK_LIBNAME.iconv=	${BUILTIN_LIBNAME.iconv}
 .    if empty(BUILTIN_LIBNAME.iconv)
 BUILDLINK_TRANSFORM+=		rm:-liconv
@@ -167,7 +167,7 @@ BUILDLINK_TRANSFORM+=		rm:-liconv
 .  endif
 
 .  if defined(GNU_CONFIGURE) && ${GNU_CONFIGURE_ICONV:Uyes:M[yY][eE][sS]}
-.    if !empty(USE_BUILTIN.iconv:M[nN][oO])
+.    if ${USE_BUILTIN.iconv:tl} == no
 CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv}
 .    endif
 .  endif
