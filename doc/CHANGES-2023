@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.548 2023/01/23 21:29:37 pin Exp $
+$NetBSD: CHANGES-2023,v 1.549 2023/01/23 21:35:58 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -705,3 +705,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/prose to 0.4.0 [pin 2023-01-23]
 	Updated shells/nushell to 0.74.0 [pin 2023-01-23]
 	Added x11/jolly version 0.1.1 [pin 2023-01-23]
+	Added www/webbrowser version 0.4.0 [bacon 2023-01-23]
