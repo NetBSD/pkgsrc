@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2023/01/06 15:14:19 pin Exp $
+# $NetBSD: Makefile,v 1.34 2023/01/23 21:16:04 pin Exp $
 
-DISTNAME=	oculante-0.6.38
+DISTNAME=	oculante-0.6.50
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=woelper/}
 
@@ -13,8 +13,8 @@ BUILD_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 
 .include "cargo-depends.mk"
 
-USE_LANGUAGES+=		c c++
-USE_TOOLS+=		pkg-config
+USE_LANGUAGES+=	c c++
+USE_TOOLS+=	pkg-config perl
 
 INSTALLATION_DIRS=	bin
 
@@ -29,12 +29,15 @@ RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.gtk3}/lib
 # possible to build the package with default features on.
 # Though, you might need to add RUSTFLAGS so that the compiler finds the
 # graphics/libjpeg-turbo location.
+# Also note that the 'turbo' feature may require extra dependencies to build.
 CARGO_NO_DEFAULT_FEATURES=	YES
 CARGO_FEATURES+=		file_open
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/oculante \
 		${DESTDIR}${PREFIX}/bin
+
+DEPENDS+=       nasm-[0-9]*:../../devel/nasm
 
 .include "../../lang/rust/cargo.mk"
 .include "../../security/openssl/buildlink3.mk"
