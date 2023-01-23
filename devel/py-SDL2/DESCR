@@ -1,0 +1,6 @@
+PySDL2 is a pure Python wrapper around the SDL2, SDL2_mixer,
+SDL2_image, SDL2_ttf, and SDL2_gfx libraries.
+
+Instead of relying on C code, it uses the built-in ctypes module
+to interface with SDL2, and provides simple Python classes and
+wrappers for common SDL2 functionality.
