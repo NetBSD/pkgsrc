@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1672 2023/01/12 08:43:53 wiz Exp $
+# $NetBSD: Makefile,v 1.1673 2023/01/23 21:36:23 bacon Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -1087,6 +1087,7 @@ SUBDIR+=	wApua
 SUBDIR+=	waplet
 SUBDIR+=	wdg-validate
 SUBDIR+=	webalizer
+SUBDIR+=	webbrowser
 SUBDIR+=	webby
 SUBDIR+=	webkit-gtk
 SUBDIR+=	weblint
