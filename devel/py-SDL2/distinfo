@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/01/23 12:08:34 wiz Exp $
+
+BLAKE2s (PySDL2-0.9.15.tar.gz) = d40c235584986da57508a3ce5630b13185231fa8a1818a0368a87d38fb7b6dc4
+SHA512 (PySDL2-0.9.15.tar.gz) = dda0de0fa6a64750e2b9483f40cddf7e8ba6c6105a99d6738dfb876c1bc99d171ca632a1c4ad314b95ad9a66c5c681988c93eeca6ecfd80d1137cbdd8b4385ed
+Size (PySDL2-0.9.15.tar.gz) = 766172 bytes
