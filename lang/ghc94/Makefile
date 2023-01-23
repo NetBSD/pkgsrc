@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2023/01/21 04:49:25 pho Exp $
+# $NetBSD: Makefile,v 1.2 2023/01/23 09:20:57 pho Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
 DISTNAME=	ghc-9.4.4-src
 PKGNAME=	${DISTNAME:S/-src$//}
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	https://downloads.haskell.org/~ghc/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
