@@ -1,0 +1,5 @@
+Jolly is a small bookmarking launcher for desktop usage.
+
+It extends the concept of your browser bookmarking interface, but
+allows these bookmarks to access files on your local file system, as
+well as run commands in your shell.
