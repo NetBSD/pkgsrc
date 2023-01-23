@@ -1,4 +1,4 @@
-$NetBSD: patch-library_std_src_sys_unix_mod.rs,v 1.6 2022/11/15 23:11:14 he Exp $
+$NetBSD: patch-library_std_src_sys_unix_mod.rs,v 1.7 2023/01/23 18:49:04 he Exp $
 
 Add libexecinfo for backtrace() on NetBSD.
 
