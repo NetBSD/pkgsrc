@@ -1,4 +1,4 @@
-$NetBSD: patch-vendor_openssl-src_src_lib.rs,v 1.8 2022/11/15 23:11:14 he Exp $
+$NetBSD: patch-vendor_openssl-src_src_lib.rs,v 1.9 2023/01/23 18:49:04 he Exp $
 
 Provide defaults for the various NetBSD targets.
 
@@ -40,7 +40,7 @@ Provide defaults for the various NetBSD targets.
              "mips64el-unknown-linux-muslabi64" => "linux64-mips64",
              "mipsel-unknown-linux-gnu" => "linux-mips32",
              "mipsel-unknown-linux-musl" => "linux-mips32",
-+            "mipsel-unknown-netbsd" => "BSD-generic32",
++            "mipsel-unknown-netbsd" => "NetBSD-generic32",
              "powerpc-unknown-freebsd" => "BSD-generic32",
              "powerpc-unknown-linux-gnu" => "linux-ppc",
 +            "powerpc-unknown-netbsd" => "BSD-generic32",
