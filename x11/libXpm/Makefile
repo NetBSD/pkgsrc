@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2023/01/17 18:42:39 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2023/01/23 08:30:02 adam Exp $
 
 DISTNAME=		libXpm-3.5.15
 CATEGORIES=		x11 graphics
@@ -12,7 +12,7 @@ COMMENT=		X PixMap Library from modular Xorg X11
 CONFLICTS+=		xpm-[0-9]*
 
 USE_LIBTOOL=		yes
-USE_TOOLS+=		pkg-config xgettext
+USE_TOOLS+=		gzip pkg-config xgettext
 PKGCONFIG_OVERRIDE+=	xpm.pc.in
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		APP_MAN_SUFFIX=1
@@ -24,6 +24,8 @@ CONFIGURE_ENV+=		APP_MAN_SUFFIX=1
 #
 USE_EXPLICIT_LIBDEPS=	no
 CONFIGURE_ENV+=		ac_cv_search_gettext=no
+# Explicitly define path to gzip.
+CONFIGURE_ENV+=		XPM_PATH_GZIP=${TOOLS_GZIP_CMD}
 MAKE_ENV+=		INTLLIBS=${BUILDLINK_LDADD.gettext:Q}
 
 .include "../../mk/bsd.prefs.mk"
