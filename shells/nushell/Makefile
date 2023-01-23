@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2022/12/21 22:17:08 pin Exp $
+# $NetBSD: Makefile,v 1.27 2023/01/23 21:25:14 pin Exp $
 
-# Don't update, newer versions require Rust >= 1.65 to build.
-# If you have at least Rust-1.65, you can find 0.73.0 in wip.
-DISTNAME=	nushell-0.71.0
+DISTNAME=	nushell-0.74.0
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nushell/}
 
@@ -24,14 +22,10 @@ RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libX11}/lib
 RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.libX11}/lib
 
 # The 'trash-support' feature is default but, does not build on NetBSD.
-# Extra features 'dataframe' and 'database' do build on NetBSD.
-# Uncomment them if you wish to enable these at build time.
-# Be aware that doing so will increase the package build time.
-
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} != "Linux"
 CARGO_NO_DEFAULT_FEATURES=	YES
-CARGO_FEATURES+=		plugin which-support #dataframe database
+CARGO_FEATURES+=		plugin which-support sqlite
 .endif
 
 do-install:
