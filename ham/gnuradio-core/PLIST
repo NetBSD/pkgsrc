@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.38 2022/10/09 07:56:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.39 2023/01/23 19:26:20 adam Exp $
 bin/gnuradio-config-info
 bin/gr_filter_design
 include/gnuradio/analog/agc.h
@@ -44,7 +44,6 @@ include/gnuradio/audio/source.h
 include/gnuradio/basic_block.h
 include/gnuradio/block.h
 include/gnuradio/block_detail.h
-include/gnuradio/block_gateway.h
 include/gnuradio/block_registry.h
 include/gnuradio/blocks/abs_blk.h
 include/gnuradio/blocks/add_blk.h
@@ -203,6 +202,7 @@ include/gnuradio/buffer_type.h
 include/gnuradio/config.h
 include/gnuradio/constants.h
 include/gnuradio/custom_lock.h
+include/gnuradio/dictionary_logger_backend.h
 include/gnuradio/endianness.h
 include/gnuradio/expj.h
 include/gnuradio/fft/api.h
