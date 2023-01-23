@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.47 2022/12/27 21:26:59 minskim Exp $
+# $NetBSD: Makefile,v 1.48 2023/01/23 19:24:54 he Exp $
 
-DISTNAME=	rust-1.64.0
+DISTNAME=	rust-1.66.1
 PKGNAME=	${DISTNAME:S/rust/rust-bin/1}
 CATEGORIES=	lang
 MASTER_SITES=	https://static.rust-lang.org/dist/
@@ -30,6 +30,7 @@ ONLY_FOR_PLATFORM+=	NetBSD-*-earmv6hf
 ONLY_FOR_PLATFORM+=	NetBSD-*-i386
 ONLY_FOR_PLATFORM+=	NetBSD-*-powerpc
 ONLY_FOR_PLATFORM+=	NetBSD-*-sparc64
+ONLY_FOR_PLATFORM+=	NetBSD-*-mipsel
 
 NETBSD_REPO=	https://cdn.NetBSD.org/pub/pkgsrc/distfiles/LOCAL_PORTS/rust/
 
@@ -161,6 +162,14 @@ SITES.${DF}=	${NETBSD_REPO}
 .endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-sparc64) || make(distinfo) || make(makesum) || make(mdi)
 RUST_ARCH:=	sparc64-unknown-netbsd
+DN:=		${DISTNAME}${NBSUF}
+EXTRACT_SUFX=	.tar.xz
+DF:=		${DN}-${RUST_ARCH}${EXTRACT_SUFX}
+DISTFILES:=	${DISTFILES} ${DF}
+SITES.${DF}=	${NETBSD_REPO}
+.endif
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-mipsel) || make(distinfo) || make(makesum) || make(mdi)
+RUST_ARCH:=	mipsel-unknown-netbsd
 DN:=		${DISTNAME}${NBSUF}
 EXTRACT_SUFX=	.tar.xz
 DF:=		${DN}-${RUST_ARCH}${EXTRACT_SUFX}
