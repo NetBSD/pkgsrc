@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.538 2023/01/23 21:08:49 pin Exp $
+$NetBSD: CHANGES-2023,v 1.539 2023/01/23 21:10:12 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -694,3 +694,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated ham/gnuradio-wavelet to 3.10.5.0 [adam 2023-01-23]
 	Updated ham/gnuradio-zeromq to 3.10.5.0 [adam 2023-01-23]
 	Updated sysutils/broot to 1.19.0 [pin 2023-01-23]
+	Updated sysutils/zoxide to 0.9.0 [pin 2023-01-23]
