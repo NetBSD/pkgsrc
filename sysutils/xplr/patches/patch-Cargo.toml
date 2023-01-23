@@ -1,13 +1,13 @@
-$NetBSD: patch-Cargo.toml,v 1.21 2022/12/05 11:25:24 pin Exp $
+$NetBSD: patch-Cargo.toml,v 1.22 2023/01/23 21:11:33 pin Exp $
 
 Don't pull vendored version, use pkgsrc LuaJIT2.
 
---- Cargo.toml.orig	2022-12-04 09:33:06.000000000 +0000
+--- Cargo.toml.orig	2023-01-13 07:38:25.000000000 +0000
 +++ Cargo.toml
 @@ -64,7 +64,7 @@ features = ['serde']
  
  [dependencies.mlua]
- version = "0.8.6"
+ version = "0.8.7"
 -features = ['luajit', 'vendored', 'serialize', 'send']
 +features = ['luajit', 'serialize', 'send']
  
