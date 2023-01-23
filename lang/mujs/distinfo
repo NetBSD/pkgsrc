@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2022/10/31 01:57:44 wiz Exp $
+$NetBSD: distinfo,v 1.3 2023/01/23 15:42:08 wiz Exp $
 
-BLAKE2s (mujs-1.3.0.tar.gz) = d987502cc1dc4c78c830af4f18d9f8b0556d5a9484ea50f29c36aca0fd56bf5f
-SHA512 (mujs-1.3.0.tar.gz) = 1e9590892b1a0b139f8959a64e4255f5695c8e2dca355858155275628345ac3bb4168779dc6115bd6ac62b8615932762d3f348a1c6d0ee8d56cb43a863c4e0c3
-Size (mujs-1.3.0.tar.gz) = 127929 bytes
-SHA1 (patch-Makefile) = 89229ec3fba2ebf1623966705b13cefb2ea7e2bc
+BLAKE2s (mujs-1.3.2.tar.gz) = 296cb4f45517ce8a9ab11de9beeff868dbf2776c23e22075736954047eca7dc4
+SHA512 (mujs-1.3.2.tar.gz) = ccffb04171f7ecec2cfa6f0e59859acc911836370a648e4c6703db174631ce316413a64ebf4b32eea3d3b09221ff01861cda91f4b1b9bebf495168f26f90daf5
+Size (mujs-1.3.2.tar.gz) = 127899 bytes
+SHA1 (patch-Makefile) = d750c6a9fbafc4d47efec514f37b6a85123337b8
