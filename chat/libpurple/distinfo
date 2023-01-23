@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.56 2022/07/20 02:14:12 khorben Exp $
+$NetBSD: distinfo,v 1.57 2023/01/23 20:25:27 triaxx Exp $
 
-BLAKE2s (pidgin-2.14.10.tar.bz2) = 32b2a307ed8ee05216688b0168a225921f4c1aec5369d5cebec8d91b25fdcb25
-SHA512 (pidgin-2.14.10.tar.bz2) = 53241e9f62170fe7a8ea27ac03176d442f8aad4ed16da0033164b0949b00c3d476539b182e761950e7d6c385f22a891524c5f40a9cf8fe543b3003c37693314d
-Size (pidgin-2.14.10.tar.bz2) = 8229328 bytes
+BLAKE2s (pidgin-2.14.12.tar.bz2) = c064eeb66ea4d4dd9f9bdb9bee85f3cecc2ebd3649cfd82abefb8a27227777ec
+SHA512 (pidgin-2.14.12.tar.bz2) = ce016ab4c48448653ae22eead1ddc16f1d10f446c601f8abd2c85b4ea83a4e80092e1ce8182834d998b6587f42a92a9a91105b4db976e170ec7043bb6af3c54c
+Size (pidgin-2.14.12.tar.bz2) = 8226145 bytes
 SHA1 (patch-libpurple_plugins_perl_common_Makefile.PL.in) = 4fc1c7cc2df8f4cf179d00fe3bcf5b2ab0c5adbd
