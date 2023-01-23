@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.535 2023/01/23 18:49:41 he Exp $
+$NetBSD: CHANGES-2023,v 1.536 2023/01/23 19:25:27 he Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -673,3 +673,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/radsecproxy to 1.9.2 [he 2023-01-23]
 	Updated multimedia/gstreamer1 to 1.20.5 [wiz 2023-01-23]
 	Updated lang/rust to 1.66.1 [he 2023-01-23]
+	Updated lang/rust-bin to 1.66.1 [he 2023-01-23]
