@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/01/23 15:29:37 manu Exp $
+
+BLAKE2s (check_ipf-0.2.tgz) = d2744b8678cd423350641c99de67d3d48d0f43acd1f72395908a4a8a5b9dccf1
+SHA512 (check_ipf-0.2.tgz) = 670a2546b569d05c673d80c1d1b1dc2b70214c94ec9bb3198640dae118e6afa5286c23770bfca9b966ff296f1f09162751565c6009863c2a557ed7da1ecf5f0a
+Size (check_ipf-0.2.tgz) = 1844 bytes
