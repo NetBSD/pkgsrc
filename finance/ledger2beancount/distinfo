@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:26:02 nia Exp $
+$NetBSD: distinfo,v 1.7 2023/01/23 01:50:59 riastradh Exp $
 
-BLAKE2s (ledger2beancount-2.5.tar.gz) = 32901cdb4bb8c1d6790d10aa776081337fd7e5ccc3053225908058fcad05ea16
-SHA512 (ledger2beancount-2.5.tar.gz) = a456c5c6f0259bf633b257a7496e05d8530a73cc3ae5a5e42c8d2e0b4ae66adec090936aa1a0c5e3ef330a3569a07fa40be3295799b0477246b8f6eb5fc9697b
-Size (ledger2beancount-2.5.tar.gz) = 93260 bytes
+BLAKE2s (ledger2beancount-2.7.tar.gz) = e1854af2f423aa21a578d45815dd13bf7617d9ef6254917856e6efc0b869ea54
+SHA512 (ledger2beancount-2.7.tar.gz) = ffc3bd56a1c678304e3d7ab18062d74cb96208cb2d548803dddde93ba28b1a898d08327ca20a639f163940de2eefc21ba80be923c7ec174ec27724d228128e51
+Size (ledger2beancount-2.7.tar.gz) = 102934 bytes
