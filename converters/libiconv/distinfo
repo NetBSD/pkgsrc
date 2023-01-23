@@ -1,11 +1,5 @@
-$NetBSD: distinfo,v 1.43 2021/10/26 10:06:42 nia Exp $
+$NetBSD: distinfo,v 1.44 2023/01/23 15:22:24 wiz Exp $
 
-BLAKE2s (libiconv-1.14.tar.gz) = 687cc55731abf89c913a752d364de8e1bff4e4762fb2be0793765438f786dc4b
-SHA512 (libiconv-1.14.tar.gz) = b96774fefc4fa1d07948fcc667027701373c34ebf9c4101000428e048addd85a5bb5e05e59f80eb783a3054a3a8a3c0da909450053275bbbf3ffde511eb3f387
-Size (libiconv-1.14.tar.gz) = 4984397 bytes
-SHA1 (patch-aa) = 7fe47a14379dbeb487c677957e67fc7b043297ce
-SHA1 (patch-ab) = 1499add23e7941b21dcc982baefe0276bcaafc28
-SHA1 (patch-ad) = e94da1c4423677b74f463d4b132c7714efc65815
-SHA1 (patch-ae) = ab346a515d5ab0efd679e7783edebd95a05db782
-SHA1 (patch-af) = 513a8f995161853870a01afabccdb2a650b794a6
-SHA1 (patch-srclib_stdio.in.h) = 0d72478608096ab621864cb7966dc735a75b93bc
+BLAKE2s (libiconv-1.17.tar.gz) = 4814bedfb28a110fbc6e7ae1b602c3beab371516c097667f0b4142858bbf6d02
+SHA512 (libiconv-1.17.tar.gz) = 18a09de2d026da4f2d8b858517b0f26d853b21179cf4fa9a41070b2d140030ad9525637dc4f34fc7f27abca8acdc84c6751dfb1d426e78bf92af4040603ced86
+Size (libiconv-1.17.tar.gz) = 5413283 bytes
