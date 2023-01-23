@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2023/01/22 13:36:24 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2023/01/23 09:12:47 wiz Exp $
 
-DISTNAME=	ldb-2.7.0
+DISTNAME=	ldb-2.6.1
 CATEGORIES=	databases
 MASTER_SITES=	https://www.samba.org/ftp/ldb/
 
@@ -60,13 +60,11 @@ CONFIGURE_ARGS+=	--without-ldb-lmdb
 .include "options.mk"
 
 .include "../../converters/libiconv/buildlink3.mk"
-BUILDLINK_API_DEPENDS.tdb+=	tdb>=1.4.8
 .include "../../databases/tdb/buildlink3.mk"
 .include "../../devel/cmocka/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
-BUILDLINK_API_DEPENDS.talloc+=	talloc>=2.4.0
 .include "../../devel/talloc/buildlink3.mk"
-BUILDLINK_API_DEPENDS.tevent+=	tevent>=0.14.0
+BUILDLINK_API_DEPENDS.tevent+=	tevent>=0.13.0
 .include "../../devel/tevent/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
