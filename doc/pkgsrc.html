@@ -6323,12 +6323,14 @@ BUILDLINK_TREE+=        -tiff
 	  pkgsrc directory.</p></li>
 <li class="listitem"><p><code class="varname">BUILDLINK_DEPMETHOD.<em class="replaceable"><code>pkg</code></em></code>
 	  (not shown above) controls whether we use
-	  <code class="varname">BUILD_DEPENDS</code> or
+	  <code class="varname">BUILD_DEPENDS</code>,
+	  <code class="varname">TEST_DEPENDS</code>, or
 	  <code class="varname">DEPENDS</code> to add the dependency on
 	  <em class="replaceable"><code>pkg</code></em>.  The build dependency is
 	  selected by setting
 	  <code class="varname">BUILDLINK_DEPMETHOD.<em class="replaceable"><code>pkg</code></em></code>
-	  to <span class="quote">&#8220;<span class="quote">build</span>&#8221;</span>.  By default, the full dependency is
+	  to <span class="quote">&#8220;<span class="quote">build</span>&#8221;</span>, while setting it to <span class="quote">&#8220;<span class="quote">test</span>&#8221;</span> causes
+	  it to become a test dependency.  By default, the full dependency is
 	  used.</p></li>
 <li class="listitem"><p><code class="varname">BUILDLINK_INCDIRS.<em class="replaceable"><code>pkg</code></em></code>
 	    and

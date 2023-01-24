@@ -5035,9 +5035,10 @@ dependency on pkg is added. Several important variables are set in the section:
   * BUILDLINK_PKGSRCDIR.pkg is the location of the pkg pkgsrc directory.
 
   * BUILDLINK_DEPMETHOD.pkg (not shown above) controls whether we use
-    BUILD_DEPENDS or DEPENDS to add the dependency on pkg. The build dependency
-    is selected by setting BUILDLINK_DEPMETHOD.pkg to "build". By default, the
-    full dependency is used.
+    BUILD_DEPENDS, TEST_DEPENDS, or DEPENDS to add the dependency on pkg. The
+    build dependency is selected by setting BUILDLINK_DEPMETHOD.pkg to "build",
+    while setting it to "test" causes it to become a test dependency. By
+    default, the full dependency is used.
 
   * BUILDLINK_INCDIRS.pkg and BUILDLINK_LIBDIRS.pkg (not shown above) are lists
     of subdirectories of ${BUILDLINK_PREFIX.pkg} to add to the header and
