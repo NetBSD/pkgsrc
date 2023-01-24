@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/02/23 16:56:23 pho Exp $
+$NetBSD: distinfo,v 1.2 2023/01/24 13:04:44 pho Exp $
 
-BLAKE2s (text-manipulate-0.3.0.0.tar.gz) = 87836c411cd48931fe26d6316b9134561c72b9aef6121802e3aacaadfcd71422
-SHA512 (text-manipulate-0.3.0.0.tar.gz) = 754b35dcad14cc2c013763d6f0e633868987793e354159a56080e8f7426a8ecfe636e449f1fd976982bdeca77cf293b61e98afa69f188f1911ddafce9ae1eb57
-Size (text-manipulate-0.3.0.0.tar.gz) = 12630 bytes
+BLAKE2s (text-manipulate-0.3.1.0.tar.gz) = 21b3b4551f54d3608fd00fd6488a9c93a8c910202f00fb7ddbc4aaee22405b2c
+SHA512 (text-manipulate-0.3.1.0.tar.gz) = 870104c5990eebc78f94eb40b4cfb80d42485004d72cdc87e9f3979ecfc6b39ddcff4c67a73d8b28065e7170568004f9cddc4ac00f76b0ebc128437df4206212
+Size (text-manipulate-0.3.1.0.tar.gz) = 13107 bytes
