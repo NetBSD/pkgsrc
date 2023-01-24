@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/07/26 07:54:45 maya Exp $
+# $NetBSD: Makefile,v 1.4 2023/01/24 18:36:25 wiz Exp $
 
 DISTNAME=	woff2-1.0.2
 PKGREVISION=	1
@@ -11,7 +11,6 @@ HOMEPAGE=	https://github.com/google/woff2/
 COMMENT=	WOFF font file format library
 LICENSE=	mit
 
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
 CMAKE_ARGS+=	-DCANONICAL_PREFIXES=ON
@@ -21,5 +20,6 @@ PKGCONFIG_OVERRIDE+=		libwoff2dec.pc
 PKGCONFIG_OVERRIDE+=		libwoff2enc.pc
 PKGCONFIG_OVERRIDE_STAGE=	post-build
 
+.include "../../devel/cmake/build.mk"
 .include "../../archivers/brotli/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

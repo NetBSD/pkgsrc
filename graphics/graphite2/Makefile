@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2021/01/09 01:21:53 gdt Exp $
+# $NetBSD: Makefile,v 1.15 2023/01/24 18:36:26 wiz Exp $
 
 DISTNAME=	graphite2-1.3.14
 CATEGORIES=	graphics
@@ -11,7 +11,6 @@ COMMENT=	Cross-platform rendering for complex writing systems
 LICENSE=	gnu-lgpl-v2
 
 USE_LANGUAGES=	c c++11
-USE_CMAKE=	yes
 USE_LIBTOOL=	yes
 
 # C++11
@@ -33,4 +32,5 @@ BUILDLINK_DEPMETHOD.freetype2?=	build
 #.include "../../lang/python/tool.mk"
 #BUILD_DEPENDS+=		${PYPKGPREFIX}-fonttools-[0-9]*:../../fonts/py-fonttools/
 
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"

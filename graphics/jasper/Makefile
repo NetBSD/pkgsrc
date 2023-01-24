@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2022/08/11 05:08:43 gutteridge Exp $
+# $NetBSD: Makefile,v 1.69 2023/01/24 18:36:27 wiz Exp $
 
 DISTNAME=	jasper-2.0.33
 PKGREVISION=	2
@@ -11,7 +11,6 @@ HOMEPAGE=	https://jasper-software.github.io/jasper/
 COMMENT=	Software-based reference implementation of the JPEG-2000 codec
 LICENSE=	modified-bsd
 
-USE_CMAKE=		yes
 USE_LANGUAGES=		c99 c++
 USE_TOOLS+=		bash:test
 CMAKE_ARGS+=		-DALLOW_IN_SOURCE_BUILD=ON
@@ -22,5 +21,6 @@ REPLACE_BASH=		test/bin/*
 TEST_TARGET=		test
 
 .include "options.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

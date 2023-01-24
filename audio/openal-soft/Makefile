@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2022/09/11 12:51:20 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2023/01/24 18:36:20 wiz Exp $
 
 DISTNAME=	openal-soft-1.22.2
 PKGREVISION=	1
@@ -11,7 +11,6 @@ HOMEPAGE=	https://openal-soft.org/
 COMMENT=	Software implementation of the OpenAL 3D audio API
 LICENSE=	gnu-lgpl-v2
 
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++14
 USE_TOOLS+=	pkg-config gmake
 
@@ -58,6 +57,7 @@ SUBST_SED.oss=		-e 's,/dev/dsp,${DEVOSSAUDIO},'
 post-install:
 	${RM} ${DESTDIR}${PREFIX}/include/AL/al.h.orig
 
+.include "../../devel/cmake/build.mk"
 .include "../../audio/libmysofa/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

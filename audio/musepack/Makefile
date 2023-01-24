@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/03/29 18:30:06 gutteridge Exp $
+# $NetBSD: Makefile,v 1.6 2023/01/24 18:36:20 wiz Exp $
 
 DISTNAME=	musepack_src_r475
 PKGNAME=	musepack-0rc475
@@ -13,11 +13,10 @@ LICENSE=	modified-bsd
 
 CONFLICTS=	libmpcdec-[0-9]*
 
-USE_CMAKE=		yes
-
 post-install:
 	rm -rf ${DESTDIR}${PREFIX}/include/mpc/.svn/
 
+.include "../../devel/cmake/build.mk"
 .include "../../audio/libcuefile/buildlink3.mk"
 .include "../../audio/libreplaygain/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

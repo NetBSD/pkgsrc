@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.242 2023/01/03 17:36:34 wiz Exp $
+# $NetBSD: Makefile,v 1.243 2023/01/24 18:36:36 wiz Exp $
 
 DISTNAME=	webkitgtk-2.36.8
 PKGNAME=	${DISTNAME:S/webkitgtk/webkit-gtk/}
@@ -18,7 +18,6 @@ NOT_FOR_PLATFORM=	NetBSD-[1-6].*-*
 TOOL_DEPENDS+=	gettext-tools>=0.18:../../devel/gettext-tools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++17
 USE_TOOLS+=	automake bash bison flex gdbus-codegen gmake perl pkg-config msgfmt
 
@@ -141,6 +140,7 @@ CHECK_PORTABILITY_SKIP+=	Source/WebKit/Scripts/generate-feature-flags-plist.sh
 
 .include "options.mk"
 
+.include "../../devel/cmake/build.mk"
 BUILDLINK_API_DEPENDS.glib2+= glib2>=2.32.1
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

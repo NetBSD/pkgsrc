@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2022/11/23 16:20:47 adam Exp $
+# $NetBSD: Makefile,v 1.49 2023/01/24 18:36:31 wiz Exp $
 
 DISTNAME=	obs-studio-26.1.2
 PKGREVISION=	20
@@ -10,7 +10,6 @@ HOMEPAGE=	https://obsproject.com/
 COMMENT=	Video recording and live streaming software
 LICENSE=	gnu-gpl-v2
 
-USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c gnu++11
 
@@ -22,6 +21,7 @@ TOOL_DEPENDS+=	swig3>=3.0:../../devel/swig3
 # Python 3 only
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} != "FreeBSD"
 .  include "../../audio/alsa-lib/buildlink3.mk"

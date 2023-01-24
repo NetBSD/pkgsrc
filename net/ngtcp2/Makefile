@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/12/03 16:02:29 adam Exp $
+# $NetBSD: Makefile,v 1.2 2023/01/24 18:36:31 wiz Exp $
 
 DISTNAME=	ngtcp2-0.11.0
 CATEGORIES=	net
@@ -11,8 +11,8 @@ HOMEPAGE=	https://github.com/ngtcp2/ngtcp2
 COMMENT=	Implements RFC9000 QUIC protocol
 LICENSE=	mit
 
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"

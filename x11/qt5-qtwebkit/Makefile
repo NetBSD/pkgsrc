@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2023/01/05 23:30:09 wiz Exp $
+# $NetBSD: Makefile,v 1.104 2023/01/24 18:36:36 wiz Exp $
 
 QTWKVERSION=	5.212.0-alpha4
 DISTNAME=	qtwebkit-${QTWKVERSION}
@@ -22,9 +22,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 USE_LANGUAGES=		c c++11
 USE_TOOLS+=		perl:build pkg-config bison
-USE_CMAKE=		yes
-CMAKE_ARG_PATH=		..
-CONFIGURE_DIRS=		_build
 CMAKE_INSTALL_PREFIX=	${PREFIX}/qt5
 TEST_TARGET=		test
 
@@ -43,9 +40,6 @@ CMAKE_ARGS+=		-DKDE_INSTALL_LIBEXECDIR=${CMAKE_INSTALL_PREFIX}/libexec
 UNLIMIT_RESOURCES+=	cputime
 
 GCC_REQD+=	4.9
-
-pre-configure:
-	${MKDIR} ${WRKSRC}/_build
 
 # wcstof(3) etc. is used in C++ code.
 CFLAGS.NetBSD+=		-D_NETBSD_SOURCE
@@ -98,6 +92,7 @@ post-install:
 # See comment in Source/WebKit2/PlatformQt.cmake
 PLIST_VARS+=	npapi
 
+.include "../../devel/cmake/build.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .if ${OPSYS} == "Darwin" || ${OPSYS} == "Linux" || ${OPSYS} == "NetBSD"
 .include "../../devel/libexecinfo/buildlink3.mk"

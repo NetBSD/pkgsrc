@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2019/08/11 12:46:54 adam Exp $
+# $NetBSD: Makefile,v 1.11 2023/01/24 18:36:23 wiz Exp $
 
 DISTNAME=	libcerf-1.13
 CATEGORIES=	devel math
@@ -10,15 +10,10 @@ HOMEPAGE=	https://jugit.fz-juelich.de/mlz/libcerf
 COMMENT=	Library providing efficient and accurate complex error functions
 LICENSE=	mit
 
-USE_CMAKE=		yes
 USE_LANGUAGES=		c99
 USE_TOOLS+=		pod2man
-CMAKE_ARG_PATH=		${WRKSRC}
-CONFIGURE_DIRS=		${WRKDIR}/build
 PKGCONFIG_OVERRIDE=	libcerf.pc.in
 TEST_TARGET=		test
 
-post-extract:
-	${MKDIR} ${WRKDIR}/build
-
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
