@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22524 2023/01/23 18:50:15 he Exp $
+$NetBSD: TODO,v 1.22525 2023/01/24 12:12:23 pho Exp $
 
 Suggested new packages
 ======================
@@ -850,7 +850,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o hs-th-lift-instances-0.1.20
 	o hs-tls-1.6.0
 	o hs-unicode-collation-0.1.3.3
-	o hs-unicode-data-0.4.0.1
 	o hs-unicode-transforms-0.4.0.1
 	o hs-x509-1.7.7
 	o hs-yaml-0.11.8.0
