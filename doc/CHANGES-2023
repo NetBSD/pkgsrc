@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.582 2023/01/24 17:01:55 pho Exp $
+$NetBSD: CHANGES-2023,v 1.583 2023/01/24 17:07:20 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -743,3 +743,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/hs-libffi to 0.2.1 [pho 2023-01-24]
 	Updated devel/hs-lens-family-core to 2.1.2 [pho 2023-01-24]
 	Updated math/hs-algebraic-graphs to 0.7 [pho 2023-01-24]
+	Updated devel/hs-terminal-size to 0.3.3 [pho 2023-01-24]
