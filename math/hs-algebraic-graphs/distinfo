@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/02/16 09:35:17 pho Exp $
+$NetBSD: distinfo,v 1.2 2023/01/24 17:01:46 pho Exp $
 
-BLAKE2s (algebraic-graphs-0.6.tar.gz) = f3e6301e46eddba5f697bcd19aa91462409dd49b4916cd2e00cb78d4b4c8983f
-SHA512 (algebraic-graphs-0.6.tar.gz) = e2156bdbfc448c8be0c609cc3ad81f2b4707aeb8673d8da88f921a3259ce227122ef622459165c3029281fccad5eee65556b724dd281a6e4007e7100f5be4e60
-Size (algebraic-graphs-0.6.tar.gz) = 178153 bytes
+BLAKE2s (algebraic-graphs-0.7.tar.gz) = 668a1f9a3f70cdb04aa46e2b879b1fdd3ac358dfee8033c37848134b21d58a24
+SHA512 (algebraic-graphs-0.7.tar.gz) = ee59dbc30c005223eff23a43cc2b9625e1c595b9537278ae628cfe1d070802f8587f495dff6f47319fdbfb0debc020e3e5fad2e19576248f3d0d983b589e55a3
+Size (algebraic-graphs-0.7.tar.gz) = 180978 bytes
