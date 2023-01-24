@@ -1,7 +1,9 @@
-$NetBSD: patch-toolkit_moz.configure,v 1.14 2022/05/13 14:12:53 ryoon Exp $
+$NetBSD: patch-toolkit_moz.configure,v 1.15 2023/01/24 17:57:09 nia Exp $
 
 * Add Sun audio support and enable for NetBSD and SunOS by default.
 * Enable ALSA for NetBSD too.
+
+https://bugzilla.mozilla.org/show_bug.cgi?id=1811911
 
 --- toolkit/moz.configure.orig	2022-04-28 23:01:47.000000000 +0000
 +++ toolkit/moz.configure

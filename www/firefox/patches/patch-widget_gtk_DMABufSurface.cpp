@@ -1,6 +1,6 @@
-$NetBSD: patch-widget_gtk_DMABufSurface.cpp,v 1.2 2021/04/19 13:50:07 ryoon Exp $
+$NetBSD: patch-widget_gtk_DMABufSurface.cpp,v 1.3 2023/01/24 17:57:09 nia Exp $
 
-No eventfd on netbsd, fix build
+No eventfd on NetBSD 9 and older, fix build
 
 --- widget/gtk/DMABufSurface.cpp.orig	2021-04-08 21:20:12.000000000 +0000
 +++ widget/gtk/DMABufSurface.cpp
