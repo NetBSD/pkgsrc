@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2022/08/16 14:01:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.23 2023/01/24 12:50:34 adam Exp $
 bin/pygmentize-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -187,6 +187,9 @@ ${PYSITELIB}/pygments/lexers/archetype.pyo
 ${PYSITELIB}/pygments/lexers/arrow.py
 ${PYSITELIB}/pygments/lexers/arrow.pyc
 ${PYSITELIB}/pygments/lexers/arrow.pyo
+${PYSITELIB}/pygments/lexers/arturo.py
+${PYSITELIB}/pygments/lexers/arturo.pyc
+${PYSITELIB}/pygments/lexers/arturo.pyo
 ${PYSITELIB}/pygments/lexers/asc.py
 ${PYSITELIB}/pygments/lexers/asc.pyc
 ${PYSITELIB}/pygments/lexers/asc.pyo
@@ -316,6 +319,9 @@ ${PYSITELIB}/pygments/lexers/fantom.pyo
 ${PYSITELIB}/pygments/lexers/felix.py
 ${PYSITELIB}/pygments/lexers/felix.pyc
 ${PYSITELIB}/pygments/lexers/felix.pyo
+${PYSITELIB}/pygments/lexers/fift.py
+${PYSITELIB}/pygments/lexers/fift.pyc
+${PYSITELIB}/pygments/lexers/fift.pyo
 ${PYSITELIB}/pygments/lexers/floscript.py
 ${PYSITELIB}/pygments/lexers/floscript.pyc
 ${PYSITELIB}/pygments/lexers/floscript.pyo
@@ -331,6 +337,9 @@ ${PYSITELIB}/pygments/lexers/foxpro.pyo
 ${PYSITELIB}/pygments/lexers/freefem.py
 ${PYSITELIB}/pygments/lexers/freefem.pyc
 ${PYSITELIB}/pygments/lexers/freefem.pyo
+${PYSITELIB}/pygments/lexers/func.py
+${PYSITELIB}/pygments/lexers/func.pyc
+${PYSITELIB}/pygments/lexers/func.pyo
 ${PYSITELIB}/pygments/lexers/functional.py
 ${PYSITELIB}/pygments/lexers/functional.pyc
 ${PYSITELIB}/pygments/lexers/functional.pyo
@@ -406,6 +415,9 @@ ${PYSITELIB}/pygments/lexers/jmespath.pyo
 ${PYSITELIB}/pygments/lexers/jslt.py
 ${PYSITELIB}/pygments/lexers/jslt.pyc
 ${PYSITELIB}/pygments/lexers/jslt.pyo
+${PYSITELIB}/pygments/lexers/jsonnet.py
+${PYSITELIB}/pygments/lexers/jsonnet.pyc
+${PYSITELIB}/pygments/lexers/jsonnet.pyo
 ${PYSITELIB}/pygments/lexers/julia.py
 ${PYSITELIB}/pygments/lexers/julia.pyc
 ${PYSITELIB}/pygments/lexers/julia.pyo
@@ -439,15 +451,18 @@ ${PYSITELIB}/pygments/lexers/matlab.pyo
 ${PYSITELIB}/pygments/lexers/maxima.py
 ${PYSITELIB}/pygments/lexers/maxima.pyc
 ${PYSITELIB}/pygments/lexers/maxima.pyo
-${PYSITELIB}/pygments/lexers/mcfunction.py
-${PYSITELIB}/pygments/lexers/mcfunction.pyc
-${PYSITELIB}/pygments/lexers/mcfunction.pyo
 ${PYSITELIB}/pygments/lexers/meson.py
 ${PYSITELIB}/pygments/lexers/meson.pyc
 ${PYSITELIB}/pygments/lexers/meson.pyo
 ${PYSITELIB}/pygments/lexers/mime.py
 ${PYSITELIB}/pygments/lexers/mime.pyc
 ${PYSITELIB}/pygments/lexers/mime.pyo
+${PYSITELIB}/pygments/lexers/minecraft.py
+${PYSITELIB}/pygments/lexers/minecraft.pyc
+${PYSITELIB}/pygments/lexers/minecraft.pyo
+${PYSITELIB}/pygments/lexers/mips.py
+${PYSITELIB}/pygments/lexers/mips.pyc
+${PYSITELIB}/pygments/lexers/mips.pyo
 ${PYSITELIB}/pygments/lexers/ml.py
 ${PYSITELIB}/pygments/lexers/ml.pyc
 ${PYSITELIB}/pygments/lexers/ml.pyo
@@ -502,6 +517,9 @@ ${PYSITELIB}/pygments/lexers/pawn.pyo
 ${PYSITELIB}/pygments/lexers/perl.py
 ${PYSITELIB}/pygments/lexers/perl.pyc
 ${PYSITELIB}/pygments/lexers/perl.pyo
+${PYSITELIB}/pygments/lexers/phix.py
+${PYSITELIB}/pygments/lexers/phix.pyc
+${PYSITELIB}/pygments/lexers/phix.pyo
 ${PYSITELIB}/pygments/lexers/php.py
 ${PYSITELIB}/pygments/lexers/php.pyc
 ${PYSITELIB}/pygments/lexers/php.pyo
@@ -661,6 +679,9 @@ ${PYSITELIB}/pygments/lexers/theorem.pyo
 ${PYSITELIB}/pygments/lexers/thingsdb.py
 ${PYSITELIB}/pygments/lexers/thingsdb.pyc
 ${PYSITELIB}/pygments/lexers/thingsdb.pyo
+${PYSITELIB}/pygments/lexers/tlb.py
+${PYSITELIB}/pygments/lexers/tlb.pyc
+${PYSITELIB}/pygments/lexers/tlb.pyo
 ${PYSITELIB}/pygments/lexers/tnt.py
 ${PYSITELIB}/pygments/lexers/tnt.pyc
 ${PYSITELIB}/pygments/lexers/tnt.pyo
@@ -703,6 +724,12 @@ ${PYSITELIB}/pygments/lexers/webmisc.pyo
 ${PYSITELIB}/pygments/lexers/whiley.py
 ${PYSITELIB}/pygments/lexers/whiley.pyc
 ${PYSITELIB}/pygments/lexers/whiley.pyo
+${PYSITELIB}/pygments/lexers/wowtoc.py
+${PYSITELIB}/pygments/lexers/wowtoc.pyc
+${PYSITELIB}/pygments/lexers/wowtoc.pyo
+${PYSITELIB}/pygments/lexers/wren.py
+${PYSITELIB}/pygments/lexers/wren.pyc
+${PYSITELIB}/pygments/lexers/wren.pyo
 ${PYSITELIB}/pygments/lexers/x10.py
 ${PYSITELIB}/pygments/lexers/x10.pyc
 ${PYSITELIB}/pygments/lexers/x10.pyo
