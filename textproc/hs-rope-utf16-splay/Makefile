@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2022/02/26 03:58:30 pho Exp $
+# $NetBSD: Makefile,v 1.3 2023/01/24 17:14:46 pho Exp $
 
-# NOTE: rope-utf16-splay-0.4.0.0 requires an unreleased version of GHC (> 9.2).
-DISTNAME=	rope-utf16-splay-0.3.2.0
-PKGREVISION=	1
+DISTNAME=	rope-utf16-splay-0.4.0.0
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
