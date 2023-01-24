@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2022/02/26 03:58:31 pho Exp $
+# $NetBSD: Makefile,v 1.4 2023/01/24 12:12:11 pho Exp $
 
-DISTNAME=	unicode-data-0.3.0
-PKGREVISION=	2
+DISTNAME=	unicode-data-0.4.0.1
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
