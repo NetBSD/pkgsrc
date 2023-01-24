@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.573 2023/01/24 14:00:58 pho Exp $
+$NetBSD: CHANGES-2023,v 1.574 2023/01/24 14:33:12 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -734,3 +734,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated audio/gospt to 0.0.32 [pin 2023-01-24]
 	Updated graphics/gifski to 1.10.0 [pin 2023-01-24]
 	Added devel/hs-HUnit version 1.6.2.0 [pho 2023-01-24]
+	Updated cad/py-PyRTL to 0.10.2 [ryoon 2023-01-24]
