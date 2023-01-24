@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2023/01/24 18:36:28 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2023/01/24 23:37:27 wiz Exp $
 
 DISTNAME=	llvm-13.0.1.src
 PKGNAME=	${DISTNAME:S/llvm/libLLVM/:S/.src//}
@@ -85,7 +85,7 @@ REPLACE_PYTHON+=	utils/llvm-compilers-check
 REPLACE_PYTHON+=	utils/llvm-lit/llvm-lit.in
 
 TEST_TARGET=		check
-TEST_ENV+=		LD_LIBRARY_PATH=${WRKDIR}/build/lib
+TEST_ENV+=		LD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/lib
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -107,7 +107,7 @@ PLIST.notdylib=	yes
 PLIST_SUBST+=	SOEXT=${SOEXT}
 PLIST_SUBST+=	LLVM_LIBNAME=${LLVM_LIBNAME}
 
-.if !empty(MACHINE_ARCH:Mpowerpc*)
+.if ${MACHINE_ARCH:Mpowerpc*}
 # Needed to avoid "relocation truncated to fit: R_PPC_REL24"
 CFLAGS+=	-mlongcall
 CXXFLAGS+=	-mlongcall
@@ -115,13 +115,13 @@ CXXFLAGS+=	-mlongcall
 .    if ${OPSYS_VERSION} >= 099917
 # The -mno-pltseq option is not available in gcc7, but is needed for
 # the above-mentioned relocation truncation issue in newer GCC
-CFLAGS+=        -mno-pltseq
-CXXFLAGS+=      -mno-pltseq
+CFLAGS+=	-mno-pltseq
+CXXFLAGS+=	-mno-pltseq
 .    endif # (just drop for older NetBSD)
 .  else # Not NetBSD
 # Let's just insist on newer gcc -- untested.
-CFLAGS+=        -mno-pltseq
-CXXFLAGS+=      -mno-pltseq
+CFLAGS+=	-mno-pltseq
+CXXFLAGS+=	-mno-pltseq
 .  endif
 .endif
 
@@ -134,9 +134,10 @@ post-extract:
 	cp ../../mk/gnu-config/${f} ${WRKSRC}/cmake/${f}
 .endfor
 
+INSTALLATION_DIRS+=	lib/libLLVM
+
 post-install:
-	${INSTALL_LIB_DIR} ${DESTDIR}${PREFIX}/lib/libLLVM
-	${INSTALL_LIB} ${WRKDIR}/build/lib/${LLVM_LIBNAME}	\
+	${INSTALL_LIB} ${WRKSRC}/${CMAKE_BUILD_DIR}/lib/${LLVM_LIBNAME}	\
 		${DESTDIR}${PREFIX}/lib/libLLVM/${LLVM_LIBNAME}
 .if ${OPSYS} == "Darwin"
 	install_name_tool -id	\
