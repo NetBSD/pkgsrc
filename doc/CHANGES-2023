@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.569 2023/01/24 13:04:52 pho Exp $
+$NetBSD: CHANGES-2023,v 1.570 2023/01/24 13:21:46 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -730,3 +730,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-pygments to 2.14.0 [adam 2023-01-24]
 	Updated textproc/py-dicttoxml to 1.7.16 [adam 2023-01-24]
 	Updated textproc/hs-text-manipulate to 0.3.1.0 [pho 2023-01-24]
+	Updated time/rusti-cal to 1.1.0 [pin 2023-01-24]
