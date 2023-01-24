@@ -1,14 +1,16 @@
-# $NetBSD: Makefile,v 1.8 2022/02/26 03:58:00 pho Exp $
+# $NetBSD: Makefile,v 1.9 2023/01/24 16:52:29 pho Exp $
 
-DISTNAME=	libffi-0.1
-PKGREVISION=	6
+DISTNAME=	libffi-0.2.1
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
 COMMENT=	Haskell binding to libffi
 LICENSE=	modified-bsd
 
-USE_TOOLS+=	pkg-config
+# Our GHC is built with a system libffi. See ${WRKSRC}/README.md for
+# details.
+USE_TOOLS+=		pkg-config
+CONFIGURE_ARGS+=	-f-ghc-bundled-libffi
 
 .include "../../devel/libffi/buildlink3.mk"
 .include "../../mk/haskell.mk"
