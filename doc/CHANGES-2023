@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.557 2023/01/24 04:11:29 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.558 2023/01/24 08:32:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -714,3 +714,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/xfce4-whiskermenu-plugin to 2.7.2 [gutteridge 2023-01-24]
 	Updated x11/xfce4-notifyd to 0.7.2 [gutteridge 2023-01-24]
 	Updated devel/swagger-codegen to 3.0.38 [schmonz 2023-01-24]
+	Updated textproc/cmark to 0.30.3 [adam 2023-01-24]
+	Updated archivers/unrar to 6.2.4 [adam 2023-01-24]
