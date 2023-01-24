@@ -1,6 +1,8 @@
-$NetBSD: patch-js_src_jit_ProcessExecutableMemory.cpp,v 1.2 2021/02/23 17:02:04 ryoon Exp $
+$NetBSD: patch-js_src_jit_ProcessExecutableMemory.cpp,v 1.3 2023/01/24 17:57:09 nia Exp $
 
 PaX MPROTECT safety for NetBSD.
+
+https://bugzilla.mozilla.org/show_bug.cgi?id=1811913
 
 --- js/src/jit/ProcessExecutableMemory.cpp.orig	2021-02-11 21:17:13.000000000 +0000
 +++ js/src/jit/ProcessExecutableMemory.cpp

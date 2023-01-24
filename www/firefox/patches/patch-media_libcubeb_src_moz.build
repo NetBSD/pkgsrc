@@ -1,6 +1,8 @@
-$NetBSD: patch-media_libcubeb_src_moz.build,v 1.21 2022/05/13 14:12:53 ryoon Exp $
+$NetBSD: patch-media_libcubeb_src_moz.build,v 1.22 2023/01/24 17:57:09 nia Exp $
 
-* Add Sun audio support                                                         
+* Add Sun audio support
+
+https://bugzilla.mozilla.org/show_bug.cgi?id=1811911
 
 --- media/libcubeb/src/moz.build.orig	2022-04-28 22:02:59.000000000 +0000
 +++ media/libcubeb/src/moz.build
