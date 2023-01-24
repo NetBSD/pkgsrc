@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2022/02/11 09:25:14 pho Exp $
+$NetBSD: distinfo,v 1.5 2023/01/24 18:49:32 pho Exp $
 
-BLAKE2s (cereal-0.5.8.2.tar.gz) = 06baadced3478c4e5f40bce201b3bcbebe26c80d187b05a6c8336a1e30938f55
-SHA512 (cereal-0.5.8.2.tar.gz) = c9767b1508931b6f4f4555a813a4ef8338d728c26556f25201d977f8e4eec918aaec1561fd7996b1bb2c7375b57880d49ab9fc3a4ceeae5a629397ab4b9953a2
-Size (cereal-0.5.8.2.tar.gz) = 20144 bytes
+BLAKE2s (cereal-0.5.8.3.tar.gz) = 0f58efc7c857b25cd5c62279e1adf7dd0b62dbea4a3849adc0a2e639179ae33a
+SHA512 (cereal-0.5.8.3.tar.gz) = 2dd9e83e4659f76964c2c66eac76174d1c715cc969c2e8c818033e1d9ed5633997fcf2311c61dc4e6f10db03e65a8c80475b84cda39592849a9c1112b0c0596a
+Size (cereal-0.5.8.3.tar.gz) = 20166 bytes
