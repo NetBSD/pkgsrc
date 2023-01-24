@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2022/11/30 15:12:55 adam Exp $
+$NetBSD: distinfo,v 1.8 2023/01/24 20:10:28 adam Exp $
 
-BLAKE2s (pytest-xprocess-0.21.0.tar.gz) = 7d4e8490eb3463c71a667b61f337f8f9cb4ebff442bc1c58ba8e99610bd12818
-SHA512 (pytest-xprocess-0.21.0.tar.gz) = 72f8db45a11cffb65302379c1690ef5ad9d71a1aa40b7fd03e1231f7ad0c0413638f7d2155f5b366d2d623399512759d8ffdac8591eb24b77562f9b1f584ed74
-Size (pytest-xprocess-0.21.0.tar.gz) = 30601 bytes
+BLAKE2s (pytest-xprocess-0.22.2.tar.gz) = 18a6e821520d522ff745a1c29bd922a0b49771a489d66be200c6a6b3089c1e8a
+SHA512 (pytest-xprocess-0.22.2.tar.gz) = 2051be110dfda8063c31bb9555bff569f5d7a1332a62f8ce57fd799dfc7d8551ba1227df12f44fccc1ec62d9fcc0face104a77c9c5cc1abb583b74cd1d8a9ff7
+Size (pytest-xprocess-0.22.2.tar.gz) = 31346 bytes
