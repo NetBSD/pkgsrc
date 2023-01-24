@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2022/02/11 09:12:14 pho Exp $
+$NetBSD: distinfo,v 1.8 2023/01/24 12:51:03 pho Exp $
 
 BLAKE2s (integer-logarithms-1.0.3.1.tar.gz) = 3b7f4ffcacd889387ab2b44b3db11b349acb5a6d3206e2869fe21e86fac051c5
 SHA512 (integer-logarithms-1.0.3.1.tar.gz) = 670aff419de8d6afd1b7e1a40b68290bcf7aefad788c3b08aebfa5ca3e709f5d22543fce82fb75dc18b3ba0ef6d8a8f61735cde647a7a6c9392a60ec365534b3
 Size (integer-logarithms-1.0.3.1.tar.gz) = 9023 bytes
-SHA1 (patch-integer-logarithms.cabal) = 1a59b3b3316353dc0191c14c29cb4e87ce90ddb7
