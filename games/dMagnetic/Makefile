@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2022/04/27 08:41:03 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2023/01/24 23:49:46 wiz Exp $
 
-DISTNAME=		dMagnetic_0.34
+DISTNAME=		dMagnetic_0.35
 PKGNAME=		${DISTNAME:S/_/-/}
 CATEGORIES=		games
 MASTER_SITES=		https://www.dettus.net/dMagnetic/
@@ -21,7 +21,7 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/dMagnetic.6 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man6
 
 ## The idea of this test is to check if the output is the expected one.
-## for this, the md5sum is being compared.
+## for this, the sha256sum is being compared.
 ## dMagnetic has several output modes, each one of them is tested.
 do-test:
 	cd ${WRKSRC} && ${MAKE} SHA256_CMD=sha256 check
