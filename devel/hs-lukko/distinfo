@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:14:58 nia Exp $
+$NetBSD: distinfo,v 1.6 2023/01/24 16:27:28 pho Exp $
 
 BLAKE2s (lukko-0.1.1.3.tar.gz) = 30b5b8dcf93e2359bdb86cd0409f93c832c3c6afae0274035d96bff49f8eea8f
 SHA512 (lukko-0.1.1.3.tar.gz) = 8bed8b88a101883f642bb9d9d41512436f5c80db5ea1ad0cddb069c6d09257d21b56a60e0f70b57453e91126065fbfdeeb721064763e64de1975dcb51b1a484a
 Size (lukko-0.1.1.3.tar.gz) = 28575 bytes
-SHA1 (patch-lukko.cabal) = 180f9a85ee79038d41ad7d2b1f36dc3334cfa7a9
+SHA1 (patch-lukko.cabal) = ec4ae29a3fd25187bf8d9ae303e750700a9684de
