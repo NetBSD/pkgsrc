@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.562 2023/01/24 10:08:53 adam Exp $
+$NetBSD: CHANGES-2023,v 1.563 2023/01/24 10:10:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -722,3 +722,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/xf86-video-qxl to 0.1.6 [wiz 2023-01-24]
 	Updated devel/py-astroid to 2.13.3 [adam 2023-01-24]
 	Updated devel/py-pylint to 2.15.10 [adam 2023-01-24]
+	Updated graphics/cairo to 1.16.0nb8 [wiz 2023-01-24]
