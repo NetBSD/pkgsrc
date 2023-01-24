@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.96 2023/01/24 10:10:22 wiz Exp $
+$NetBSD: distinfo,v 1.97 2023/01/24 10:16:33 wiz Exp $
 
 BLAKE2s (cairo-1.16.0.tar.xz) = fba95926f57ad97d9c0c197c355ef646fd3cf9d17d1eb3270d343eef5d7bfa40
 SHA512 (cairo-1.16.0.tar.xz) = 9eb27c4cf01c0b8b56f2e15e651f6d4e52c99d0005875546405b64f1132aed12fbf84727273f493d84056a13105e065009d89e94a8bfaf2be2649e232b82377f
@@ -11,7 +11,7 @@ SHA1 (patch-boilerplate_cairo-boilerplate.c) = 8a2099dcc6a6a0e3cd401482a563b35b4
 SHA1 (patch-perf_cairo-analyse-trace.c) = 38e76dd4dbeb3d8e2eb8fe7219ba7bf98c724c31
 SHA1 (patch-perf_cairo-perf-report.c) = 34579b44238ead31aaf97dbb63347c883d23b5a3
 SHA1 (patch-perf_cairo-perf-trace.c) = 0f8cb89493a202b58b22e6244fe1c1bcc0a34b88
-SHA1 (patch-src_cairo-arc.c) = 4b53d2f1bcecf270b9c949f1d9a5d0d12fca3433
+SHA1 (patch-src_cairo-arc.c) = 77d1d76accf71f16de73866dd7237c9806005c72
 SHA1 (patch-src_cairo-ft-font.c) = 97288d79380473869f1049c1d8955a2f6fa3d178
 SHA1 (patch-src_cairo-image-compositor.c) = 83337d8211083d77b061c43b69da2b61080776d9
 SHA1 (patch-src_cairo-quartz-image-surface.c) = f3963afb665d70189c18de02b943313b7f7b6dcd
