@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2021/10/26 11:34:45 nia Exp $
+$NetBSD: distinfo,v 1.17 2023/01/24 09:23:42 wiz Exp $
 
-BLAKE2s (xf86-video-vmware-13.3.0.tar.bz2) = fe868e41f08701e63d36c9059ecd02d608c92febb0eef005c6afc7b233c0d9c9
-SHA512 (xf86-video-vmware-13.3.0.tar.bz2) = c318de893cae7b2b11e11c1b389ee47478b7c8d1f52c27099dbe453efec28f3e9da449217307a8c2251999eada66312f766996be1a6ead413b8b6dedc42c68ca
-Size (xf86-video-vmware-13.3.0.tar.bz2) = 473527 bytes
+BLAKE2s (xf86-video-vmware-13.4.0.tar.xz) = cc7b48491749a8961b2d90b8f893b9b310b38ed2657c8e2c7422220c4e698fcd
+SHA512 (xf86-video-vmware-13.4.0.tar.xz) = 7cacde21a490501dd9c2e9121040274c1f6ef64e6dc0ef49946b400f6297fab73a6e9548e45fe8930cee9028e65e45aaff9ba489dd69ac75a5133114726bf55d
+Size (xf86-video-vmware-13.4.0.tar.xz) = 416296 bytes
