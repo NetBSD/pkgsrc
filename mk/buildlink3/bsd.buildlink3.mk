@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.256 2022/11/24 13:59:20 jperkin Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.257 2023/01/24 14:13:14 wiz Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -255,8 +255,10 @@ _BLNK_DEPENDS+=	${_pkg_}
 #
 _BLNK_ADD_TO.DEPENDS=		# empty
 _BLNK_ADD_TO.BUILD_DEPENDS=	# empty
+_BLNK_ADD_TO.TEST_DEPENDS=	# empty
 _BLNK_ADD_TO.ABI_DEPENDS=	# empty
 _BLNK_ADD_TO.BUILD_ABI_DEPENDS=	# empty
+_BLNK_ADD_TO.TEST_ABI_DEPENDS=	# empty
 .for _pkg_ in ${_BLNK_DEPENDS}
 .  if !empty(BUILDLINK_DEPMETHOD.${_pkg_}:Mfull)
 _BLNK_DEPMETHOD.${_pkg_}=	_BLNK_ADD_TO.DEPENDS
@@ -264,6 +266,9 @@ _BLNK_ABIMETHOD.${_pkg_}=	_BLNK_ADD_TO.ABI_DEPENDS
 .  elif !empty(BUILDLINK_DEPMETHOD.${_pkg_}:Mbuild)
 _BLNK_DEPMETHOD.${_pkg_}=	_BLNK_ADD_TO.BUILD_DEPENDS
 _BLNK_ABIMETHOD.${_pkg_}=	_BLNK_ADD_TO.BUILD_ABI_DEPENDS
+.  elif !empty(BUILDLINK_DEPMETHOD.${_pkg_}:Mtest)
+_BLNK_DEPMETHOD.${_pkg_}=	_BLNK_ADD_TO.TEST_DEPENDS
+_BLNK_ABIMETHOD.${_pkg_}=	_BLNK_ADD_TO.TEST_ABI_DEPENDS
 .  endif
 .  if defined(BUILDLINK_API_DEPENDS.${_pkg_}) && \
       defined(BUILDLINK_PKGSRCDIR.${_pkg_})
@@ -282,7 +287,7 @@ ${_BLNK_ABIMETHOD.${_pkg_}}+=	${_abi_}:${BUILDLINK_PKGSRCDIR.${_pkg_}}
 .    endfor
 .  endif
 .endfor
-.for _depmethod_ in DEPENDS BUILD_DEPENDS ABI_DEPENDS BUILD_ABI_DEPENDS
+.for _depmethod_ in DEPENDS BUILD_DEPENDS TEST_DEPENDS ABI_DEPENDS BUILD_ABI_DEPENDS TEST_ABI_DEPENDS
 .  if !empty(_BLNK_ADD_TO.${_depmethod_})
 ${_depmethod_}+=	${_BLNK_ADD_TO.${_depmethod_}}
 .  endif
