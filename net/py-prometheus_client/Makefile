@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2022/11/15 15:36:51 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2023/01/24 09:00:48 adam Exp $
 
-DISTNAME=	prometheus_client-0.15.0
+DISTNAME=	prometheus_client-0.16.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/prometheus_client/}
@@ -16,9 +16,9 @@ USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-# as of 0.15.0
-# Ran 273 tests in 3.987s
-# FAILED (errors=1, skipped=7)
+# as of 0.16.0
+# Ran 276 tests
+# FAILED (errors=1, skipped=9)
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
