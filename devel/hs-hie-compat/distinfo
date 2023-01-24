@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/02/16 09:34:26 pho Exp $
+$NetBSD: distinfo,v 1.2 2023/01/24 17:26:07 pho Exp $
 
-BLAKE2s (hie-compat-0.2.1.1.tar.gz) = acca72e35c3af81c3469d79a7b4889b768bd6f2d74d928cb9ccd4670277636f2
-SHA512 (hie-compat-0.2.1.1.tar.gz) = 5b390ba362cf2610d5518dc0a4e1c36e056915e0922d3f0cd658911d96180ee36246b3f25d131ea018bd39dcf0b9a2fd9e7f27bb61ecacb470bb54d1fbcb28f8
-Size (hie-compat-0.2.1.1.tar.gz) = 66241 bytes
+BLAKE2s (hie-compat-0.3.1.0.tar.gz) = 60250a9d4b3c993937a58271751b2d0c58ad7d6dd900795c26558fde5429cfcb
+SHA512 (hie-compat-0.3.1.0.tar.gz) = 6085b36c3bdc0979c988d3b33a2426bdef55dfa1ed58ee126b26f39979d50c04c8a46d0eec826e4a40558ae4546073f2a0e3e90ac23735ec375a46009fe61040
+Size (hie-compat-0.3.1.0.tar.gz) = 42457 bytes
