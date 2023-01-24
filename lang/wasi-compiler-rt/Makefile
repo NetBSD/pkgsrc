@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2023/01/24 18:36:29 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2023/01/24 23:42:49 wiz Exp $
 
 .include "../../lang/llvm/version.mk"
 
@@ -16,12 +16,14 @@ DISTINFO_FILE=	${.CURDIR}/../../lang/compiler-rt/distinfo
 
 NOT_FOR_PLATFORM=	NetBSD-[0-7].*-*
 
+USE_CMAKE=	yes
 USE_LANGUAGES=	c99 c++11
 USE_TOOLS+=	ggrep
 
 SSP_SUPPORTED=		no
 PKGSRC_USE_STACK_CHECK=	no
 
+CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	${WRKSRC}/lib/builtins
 
 BUILDLINK_TRANSFORM+=	rm:-I/usr/include
@@ -55,6 +57,9 @@ CMAKE_INSTALL_PREFIX=	${PREFIX}/lib/clang/${PKGVERSION_NOREV}
 GENERATE_PLIST+=	find ${DESTDIR}${PREFIX} \( -type f -o -type l \) -print | \
 			sed 's,${DESTDIR}${PREFIX}/,,' | ${SORT} ;
 
+post-extract:
+	${MKDIR} ${WRKSRC}/build
+
 .include "../../mk/bsd.prefs.mk"
 
 # Run llvm-ranlib again on the archive. Fixes mystery build failure
@@ -71,7 +76,6 @@ CFLAGS=			-O2
 CXXFLAGS=		-O2
 PKGSRC_COMPILER=	clang
 CLANGBASE=		${PREFIX}
-.include "../../devel/cmake/build.mk"
 BUILDLINK_DEPMETHOD.clang=	build
 .include "../../lang/clang/buildlink3.mk"
 .include "../../lang/llvm/buildlink3.mk"
