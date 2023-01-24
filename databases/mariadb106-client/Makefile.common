@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2023/01/24 18:36:21 wiz Exp $
+# $NetBSD: Makefile.common,v 1.14 2023/01/24 23:47:49 wiz Exp $
 #
 # used by databases/mariadb106-client/Makefile
 # used by databases/mariadb106-server/Makefile
@@ -14,6 +14,7 @@ LICENSE=	gnu-gpl-v2
 DISTINFO_FILE?=	${.CURDIR}/../../databases/mariadb106-client/distinfo
 PATCHDIR?=	${.CURDIR}/../../databases/mariadb106-client/patches
 
+USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	perl:run pkg-config bison
 USE_CURSES=	wide
@@ -110,7 +111,6 @@ CHECK_PORTABILITY_SKIP+=	BUILD/compile-pentium-gcov
 PKGCONFIG_OVERRIDE+=	support-files/mariadb.pc.in
 PKGCONFIG_OVERRIDE+=	libmariadb/mariadb_config/libmariadb.pc.in
 
-.include "../../devel/cmake/build.mk"
 .include "../../archivers/zstd/buildlink3.mk"
 .include "../../devel/pcre2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
