@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/02/23 16:54:15 pho Exp $
+$NetBSD: distinfo,v 1.2 2023/01/24 16:55:05 pho Exp $
 
-BLAKE2s (lens-family-core-2.1.0.tar.gz) = a1af34e9bf5ddff1899e4e8900ce2dcec05a639c9302c4d2269c38f441fb461b
-SHA512 (lens-family-core-2.1.0.tar.gz) = a51e3593320934104e964c0e0021c2d7a6fd486ca8f2b559feb6df320d8394fbd6a51afc7b99e28a41f10aec0ad671b903ea0c91ba2f7a613c4c9023c81b7d6d
-Size (lens-family-core-2.1.0.tar.gz) = 17960 bytes
+BLAKE2s (lens-family-core-2.1.2.tar.gz) = 1b7d634750ba87084f489e54055d25041155f3e6be65627774023e8d182fb4df
+SHA512 (lens-family-core-2.1.2.tar.gz) = 1c13845211e6066768a945b787bc35b144a17b40a6b0c2fe9876635d9613ea200dc10b30b6d7a641d9cfeb1b91e2e918e8799d3514315582019c73ace46a2d21
+Size (lens-family-core-2.1.2.tar.gz) = 17987 bytes
