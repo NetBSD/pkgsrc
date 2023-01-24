@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $NetBSD: buildlink.xml,v 1.47 2023/01/24 14:15:43 wiz Exp $ -->
+<!-- $NetBSD: buildlink.xml,v 1.48 2023/01/24 14:32:37 wiz Exp $ -->
 
 <chapter id="buildlink">
   <title>Buildlink methodology</title>
@@ -249,14 +249,12 @@ BUILDLINK_TREE+=        -tiff
 	<listitem>
 	  <para><varname>BUILDLINK_DEPMETHOD.<replaceable>pkg</replaceable></varname>
 	  (not shown above) controls whether we use
-	  <varname>BUILD_DEPENDS</varname>,
-	  <varname>TEST_DEPENDS</varname>, or
+	  <varname>BUILD_DEPENDS</varname> or
 	  <varname>DEPENDS</varname> to add the dependency on
 	  <replaceable>pkg</replaceable>.  The build dependency is
 	  selected by setting
 	  <varname>BUILDLINK_DEPMETHOD.<replaceable>pkg</replaceable></varname>
-	  to <quote>build</quote>, while setting it to <quote>test</quote> causes
-	  it to become a test dependency.  By default, the full dependency is
+	  to <quote>build</quote>.  By default, the full dependency is
 	  used.</para>
 	</listitem>
 
