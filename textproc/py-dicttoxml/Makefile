@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2022/12/09 11:23:20 adam Exp $
+# $NetBSD: Makefile,v 1.8 2023/01/24 13:01:54 adam Exp $
 
-DISTNAME=	dicttoxml-1.7.15
+DISTNAME=	dicttoxml-1.7.16
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dicttoxml/}
@@ -12,9 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	# none
 
-# No real tests
-do-test:
-	${NADA}
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
