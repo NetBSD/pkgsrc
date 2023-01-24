@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2022/12/17 07:21:58 pin Exp $
+# $NetBSD: Makefile,v 1.3 2023/01/24 13:21:24 pin Exp $
 
-DISTNAME=	rusti-cal-1.0.1
+DISTNAME=	rusti-cal-1.1.0
 CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_GITHUB:=arthurhenrique/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
