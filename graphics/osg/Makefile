@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.153 2023/01/03 17:36:26 wiz Exp $
+# $NetBSD: Makefile,v 1.154 2023/01/24 18:36:27 wiz Exp $
 
 DISTNAME=	osg-3.6.5
 PKGREVISION=	29
@@ -14,7 +14,6 @@ LICENSE=	gnu-lgpl-v2.1
 
 WRKSRC=			${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}
 
-USE_CMAKE=		yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
 PKGCONFIG_OVERRIDE=	packaging/pkgconfig/openscenegraph.pc.in
@@ -50,6 +49,7 @@ PLIST_VARS+=	quartz notdarwin
 CXXFLAGS+=	-D__STDC_LIMIT_MACROS
 
 .include "options.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"

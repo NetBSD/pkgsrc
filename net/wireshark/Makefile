@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.285 2023/01/20 13:09:09 adam Exp $
+# $NetBSD: Makefile,v 1.286 2023/01/24 18:36:32 wiz Exp $
 
 DISTNAME=	wireshark-4.0.3
 CATEGORIES=	net
@@ -12,13 +12,10 @@ LICENSE=	gnu-gpl-v2
 
 CONFLICTS+=	ethereal-[0-9]*
 
-USE_CMAKE=		yes
 CMAKE_ARGS+=		-DCMAKE_BUILD_TYPE=Release
 CMAKE_ARGS+=		-DENABLE_APPLICATION_BUNDLE=OFF
 CMAKE_ARGS+=		-DVCSVERSION_OVERRIDE=${PKGVERSION_NOREV}
 CMAKE_ARGS+=		-DCMAKE_DISABLE_FIND_PACKAGE_Asciidoctor=TRUE
-CMAKE_ARG_PATH=		..
-CONFIGURE_DIRS=		build
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake perl pkg-config bison lex
@@ -45,9 +42,6 @@ REPLACE_PYTHON+=		tools/rdps.py
 
 CFLAGS.SunOS+=		-D__EXTENSIONS__ # for getc_unlocked(3)
 
-pre-configure:
-	${MKDIR} ${WRKSRC}/build
-
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
@@ -68,6 +62,7 @@ BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.1
 # [-Wint-conversion]
 BUILDLINK_TRANSFORM+=	rm:-DGDK_PIXBUF_DISABLE_DEPRECATED
 
+.include "../../devel/cmake/build.mk"
 .include "../../archivers/brotli/buildlink3.mk"
 .include "../../archivers/lz4/buildlink3.mk"
 .include "../../archivers/minizip/buildlink3.mk"

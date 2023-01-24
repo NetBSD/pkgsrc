@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.132 2023/01/03 17:37:06 wiz Exp $
+# $NetBSD: Makefile,v 1.133 2023/01/24 18:36:25 wiz Exp $
 
 DISTNAME=	fontforge-20220308
 PKGREVISION=	6
@@ -15,13 +15,10 @@ LICENSE=	modified-bsd
 
 USE_TOOLS+=	gmake msgfmt pkg-config xgettext
 USE_LANGUAGES=	c c++11
-USE_CMAKE=	yes
 
 # C++11
 GCC_REQD+=	4.8
 
-CONFIGURE_DIRS+=	build
-CMAKE_ARGS+=		..
 CMAKE_ARGS+=		-DENABLE_DOCS=NO
 
 PY_PATCHPLIST=		yes
@@ -30,9 +27,7 @@ CHECK_PORTABILITY_SKIP+=	osx/FontForge.app/Contents/MacOS/*
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-pre-configure:
-	${MKDIR} ${WRKSRC}/build
-
+.include "../../devel/cmake/build.mk"
 .include "../../lang/python/application.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../databases/shared-mime-info/mimedb.mk"

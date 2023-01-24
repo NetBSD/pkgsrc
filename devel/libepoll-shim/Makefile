@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2022/08/07 23:29:49 tnn Exp $
+# $NetBSD: Makefile,v 1.10 2023/01/24 18:36:23 wiz Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-0.0.20210418
 PKGNAME=	lib${DISTNAME}
@@ -13,7 +13,6 @@ HOMEPAGE=	https://github.com/jiixyj/epoll-shim
 COMMENT=	Small epoll implemented using kevent
 LICENSE=	mit
 
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
 CMAKE_ARGS+=	-DBUILD_TESTING=OFF
@@ -35,4 +34,5 @@ PLIST.timerfd=	YES
 
 PKGCONFIG_OVERRIDE+=	epoll-shim.pc.cmakein
 
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"

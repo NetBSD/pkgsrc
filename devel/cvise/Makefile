@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2022/11/23 16:19:47 adam Exp $
+# $NetBSD: Makefile,v 1.10 2023/01/24 18:36:21 wiz Exp $
 
 DISTNAME=	cvise-2.6.0
 PKGREVISION=	1
@@ -23,10 +23,6 @@ DEPENDS+=	unifdef-[0-9]*:../../devel/unifdef
 .endif
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
-USE_CMAKE=	yes
-CONFIGURE_DIRS=	build
-CMAKE_ARG_PATH=	..
-
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	flex
 TEST_TARGET=	test
@@ -34,9 +30,7 @@ TEST_TARGET=	test
 REPLACE_PYTHON+=	cvise.py
 REPLACE_PYTHON+=	cvise-delta.py
 
-pre-configure:
-	${MKDIR} ${WRKSRC}/build
-
+.include "../../devel/cmake/build.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/clang/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

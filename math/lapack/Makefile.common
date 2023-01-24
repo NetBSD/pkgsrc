@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2021/06/15 15:06:23 thor Exp $
+# $NetBSD: Makefile.common,v 1.16 2023/01/24 18:36:30 wiz Exp $
 # used by math/blas/Makefile
 # used by math/cblas/Makefile
 # used by math/lapacke/Makefile
@@ -29,11 +29,8 @@ PATCHDIR=	${.CURDIR}/../../math/lapack/patches
 DISTINFO_FILE=	${.CURDIR}/../../math/lapack/distinfo
 
 USE_LANGUAGES=	c fortran
-USE_CMAKE=	yes
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
-CONFIGURE_DIRS=	build
-CMAKE_ARG_PATH=	${WRKSRC}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -68,7 +65,5 @@ post-install:
 	fi
 .endif
 
+.include "../../devel/cmake/build.mk"
 .include "../../math/lapack/version.mk"
-
-post-extract:
-	${RUN} ${MKDIR} ${WRKSRC}/build

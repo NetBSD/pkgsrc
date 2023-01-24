@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2022/10/26 10:31:22 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2023/01/24 18:36:23 wiz Exp $
 
 DISTNAME=	libgit2-1.5.0
 PKGREVISION=	1
@@ -11,7 +11,6 @@ HOMEPAGE=	https://libgit2.org/
 COMMENT=	Portable, pure C implementation of the Git core methods
 LICENSE=	gnu-gpl-v2 # linking exception (linking allowed in more ways)
 
-USE_CMAKE=	yes
 USE_LANGUAGES=	c99
 USE_TOOLS+=	pkg-config
 
@@ -20,8 +19,9 @@ CMAKE_ARGS+=	-DREGEX_BACKEND="pcre2"
 PKGCONFIG_OVERRIDE+=	libgit2.pc.in
 
 do-test:
-	cd ${WRKSRC} && ctest
+	cd ${WRKSRC}/${CMAKE_BUILD_DIR} && ctest
 
+.include "../../devel/cmake/build.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/pcre2/buildlink3.mk"
 .include "../../security/libssh2/buildlink3.mk"

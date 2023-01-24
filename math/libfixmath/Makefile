@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/08/24 12:49:24 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2023/01/24 18:36:30 wiz Exp $
 
 DISTNAME=	libfixmath-0.0.0pre20220623
 CATEGORIES=	math
@@ -11,10 +11,10 @@ HOMEPAGE=	https://github.com/PetteriAimonen/libfixmath
 COMMENT=	Q16.16 format fixed point operations in C
 LICENSE=	mit
 
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++11
 
 CMAKE_ARGS+=	-DBUILD_SHARED_LIBS=ON
 INSTALL_TARGET=	install
 
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"

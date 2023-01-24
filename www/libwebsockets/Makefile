@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/07/03 10:46:54 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2023/01/24 18:36:35 wiz Exp $
 
 DISTNAME=	libwebsockets-4.3.0
 CATEGORIES=	www
@@ -10,7 +10,6 @@ HOMEPAGE=	https://libwebsockets.org/
 COMMENT=	Lightweight C library for websocket clients and servers
 LICENSE=	mit
 
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
@@ -30,6 +29,7 @@ PKGCONFIG_OVERRIDE_STAGE=	pre-install
 PKGCONFIG_OVERRIDE+=		libwebsockets.pc
 PKGCONFIG_OVERRIDE+=		libwebsockets_static.pc
 
+.include "../../devel/cmake/build.mk"
 .include "../../devel/libuv/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.123 2022/11/23 16:19:21 adam Exp $
+# $NetBSD: Makefile,v 1.124 2023/01/24 18:36:19 wiz Exp $
 
 DISTNAME=	kid3-3.5.1
 PKGREVISION=	36
@@ -13,7 +13,6 @@ LICENSE=	gnu-gpl-v2
 BUILD_DEPENDS+=		libxslt-[0-9]*:../../textproc/libxslt
 BUILD_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
-USE_CMAKE=		yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		perl:build pkg-config
 CMAKE_ARGS+=		-DQt5Core_DIR:PATH=${QTDIR}
@@ -35,6 +34,7 @@ SUBST_FILES.apple+=	src/app/qt/CMakeLists.txt
 SUBST_FILES.apple+=	src/plugins/kid3qml/CMakeLists.txt
 SUBST_SED.apple=	-e 's,APPLE,ELPPA,g'
 
+.include "../../devel/cmake/build.mk"
 .include "../../audio/chromaprint/buildlink3.mk"
 .include "../../audio/flac/buildlink3.mk"
 .include "../../audio/id3lib/buildlink3.mk"

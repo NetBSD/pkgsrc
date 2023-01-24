@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2022/11/26 13:47:13 nia Exp $
+# $NetBSD: Makefile,v 1.15 2023/01/24 18:36:24 wiz Exp $
 
 DISTNAME=	spdlog-1.11.0
 PKGREVISION=	1
@@ -11,7 +11,6 @@ HOMEPAGE=	https://github.com/gabime/spdlog
 COMMENT=	Fast C++ logging library
 LICENSE=	mit
 
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++11
 USE_TOOLS+=	pkg-config
 CMAKE_ARGS+=	-DSPDLOG_BUILD_SHARED=ON
@@ -21,15 +20,10 @@ PKGCONFIG_OVERRIDE+=	cmake/spdlog.pc.in
 
 LDFLAGS.SunOS+=		-lsocket
 
-CMAKE_ARG_PATH=	..
-CONFIGURE_DIRS=	_build
-
-pre-configure:
-	${MKDIR} ${WRKSRC}/_build
-
 post-install:
 	${FIND} ${DESTDIR} -name '*.orig' -exec rm -f '{}' ';'
 
+.include "../../devel/cmake/build.mk"
 .include "../../lang/python/tool.mk"
 .include "../../textproc/fmtlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

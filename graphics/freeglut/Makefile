@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2022/08/11 05:08:40 gutteridge Exp $
+# $NetBSD: Makefile,v 1.34 2023/01/24 18:36:26 wiz Exp $
 
 DISTNAME=	freeglut-3.2.2
 PKGREVISION=	1
@@ -10,7 +10,6 @@ HOMEPAGE=	http://freeglut.sourceforge.net/
 COMMENT=	Alternative to the OpenGL Utility Toolkit (GLUT) library
 LICENSE=	x11
 
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 
@@ -25,6 +24,7 @@ post-install:
 	    ${DESTDIR}${PREFIX}/lib/pkgconfig/freeglut.pc
 
 .include "options.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"

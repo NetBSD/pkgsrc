@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2023/01/03 17:36:45 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2023/01/24 18:36:19 wiz Exp $
 
 DISTNAME=	jack-keyboard-2.7.2
 PKGREVISION=	4
@@ -10,12 +10,12 @@ HOMEPAGE=	http://jack-keyboard.sourceforge.net/
 COMMENT=	Virtual MIDI keyboard for JACK applications
 LICENSE=	2-clause-bsd
 
-USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
 CMAKE_ARGS+=	-DLashEnable=OFF
 
+.include "../../devel/cmake/build.mk"
 .include "../../audio/jack/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/gtk2/buildlink3.mk"

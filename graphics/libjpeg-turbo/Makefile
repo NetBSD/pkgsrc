@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2022/08/14 20:57:40 adam Exp $
+# $NetBSD: Makefile,v 1.28 2023/01/24 18:36:27 wiz Exp $
 
 DISTNAME=	libjpeg-turbo-2.1.4
 CATEGORIES=	graphics
@@ -18,7 +18,6 @@ CONFLICTS=	jpeg-[0-9]*
 BUILD_DEPENDS+=	nasm-[0-9]*:../../devel/nasm
 .endif
 
-USE_CMAKE=		yes
 USE_LANGUAGES=		c c++
 PKGCONFIG_OVERRIDE=	release/libturbojpeg.pc.in release/libjpeg.pc.in
 TEST_ENV+=		LD_LIBRARY_PATH=${WRKSRC}
@@ -32,4 +31,5 @@ CMAKE_ARGS+=	-DWITH_JPEG8=ON
 
 CHECK_PORTABILITY_SKIP+=	release/makemacpkg.in
 
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2022/11/21 18:20:45 jperkin Exp $
+# $NetBSD: Makefile,v 1.36 2023/01/24 18:36:35 wiz Exp $
 
 DISTNAME=	libproxy-0.4.15
 PKGREVISION=	1
@@ -14,7 +14,6 @@ HOMEPAGE=	https://libproxy.github.io/libproxy/
 COMMENT=	Library that provides automatic proxy configuration management
 LICENSE=	gnu-lgpl-v2.1
 
-USE_CMAKE=	yes
 USE_LANGUAGES=	c99 c++03
 USE_TOOLS+=	pkg-config
 
@@ -32,6 +31,7 @@ BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--no-as-needed
 PKGCONFIG_OVERRIDE+=	bindings/csharp/libproxy-sharp-1.0.pc.cmake
 PKGCONFIG_OVERRIDE+=	libproxy/libproxy-1.0.pc.in
 
+.include "../../devel/cmake/build.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

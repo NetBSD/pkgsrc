@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2023/01/18 22:02:02 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2023/01/24 18:36:34 wiz Exp $
 
 DISTNAME=		fish-3.6.0
 CATEGORIES=		shells
@@ -13,7 +13,6 @@ COMMENT=		User friendly command line shell for UNIX-like operating systems
 LICENSE=		gnu-gpl-v2
 
 USE_LANGUAGES+=		c c++
-USE_CMAKE=		yes
 USE_TOOLS+=		msgfmt
 CMAKE_ARGS+=		-DIntl_INCLUDE_DIR=${PREFIX}/include
 CMAKE_ARGS+=		-DCMAKE_INSTALL_SYSCONFDIR=${PKG_SYSCONFDIR}
@@ -51,6 +50,7 @@ REPLACE_PYTHON=	share/tools/create_manpage_completions.py
 post-extract:
 	${MV} ${WRKSRC}/version ${WRKSRC}/version.txt
 
+.include "../../devel/cmake/build.mk"
 .include "../../devel/pcre2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/gettext-tools/buildlink3.mk"

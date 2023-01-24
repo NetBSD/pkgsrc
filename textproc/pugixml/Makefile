@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2022/11/08 12:56:38 adam Exp $
+# $NetBSD: Makefile,v 1.14 2023/01/24 18:36:35 wiz Exp $
 
 DISTNAME=	pugixml-1.13
 CATEGORIES=	textproc
@@ -11,8 +11,8 @@ COMMENT=	Light-weight C++ XML processing library
 LICENSE=	mit
 
 USE_LANGUAGES=	c c++
-USE_CMAKE=	yes
 
 CMAKE_ARGS+=	-DBUILD_SHARED_LIBS=ON
 
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"

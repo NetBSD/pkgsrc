@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2022/08/24 12:45:42 ryoon Exp $
+# $NetBSD: Makefile,v 1.8 2023/01/24 18:36:28 wiz Exp $
 
 DISTNAME=	zxing-cpp-1.4.0
 CATEGORIES=	graphics
@@ -10,7 +10,6 @@ HOMEPAGE=	https://github.com/nu-book/zxing-cpp/
 COMMENT=	1D/2D barcode reader/writer library in C++
 LICENSE=	apache-2.0
 
-USE_CMAKE=	yes
 USE_LANGUAGES=	c++11
 
 CMAKE_ARGS+=	-DBUILD_EXAMPLES=OFF
@@ -24,4 +23,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/core/src/BitArray.h \
 		${DESTDIR}${PREFIX}/include/ZXing
 
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"

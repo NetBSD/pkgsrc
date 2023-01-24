@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2021/04/12 11:20:27 nia Exp $
+# $NetBSD: Makefile,v 1.31 2023/01/24 18:36:17 wiz Exp $
 
 DISTNAME=	zziplib-0.13.72
 PKGREVISION=	1
@@ -14,7 +14,6 @@ LICENSE=	gnu-lgpl-v2 OR mpl-1.1
 BUILD_DEPENDS+=	zip-[0-9]*:../../archivers/zip
 BUILD_DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
-USE_CMAKE=	yes
 USE_TOOLS+=	bash:build
 
 CMAKE_ARGS+=	-DZZIPTEST=NO
@@ -33,6 +32,7 @@ PLIST_SUBST+=	SOEXT=so
 
 PYTHON_FOR_BUILD_ONLY=	tool
 
+.include "../../devel/cmake/build.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"

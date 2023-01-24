@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2022/12/04 11:28:51 he Exp $
+# $NetBSD: Makefile,v 1.44 2023/01/24 18:36:28 wiz Exp $
 
 DISTNAME=	llvm-13.0.1.src
 PKGNAME=	${DISTNAME:S/llvm/libLLVM/:S/.src//}
@@ -15,14 +15,10 @@ COMMENT=	Low Level Virtual Machine shared library
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=		c c++11
-USE_CMAKE=		yes
 GCC_REQD+=		5
 PYTHON_FOR_BUILD_ONLY=	yes
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-CONFIGURE_DIRS=		${WRKDIR}/build
-CMAKE_ARG_PATH=		${WRKSRC}
 
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 CMAKE_ARGS+=	-DCMAKE_C_COMPILER=${CC:Q}
@@ -134,7 +130,6 @@ CXXFLAGS+=      -mno-pltseq
 # replacing config.guess is required even for cmake.
 # It is used to detect correct LLVM_HOST_TRIPLE, e.g. for NetBSD/evbarm.
 post-extract:
-	${RUN} mkdir -p ${WRKDIR}/build
 .for f in config.guess config.sub
 	cp ../../mk/gnu-config/${f} ${WRKSRC}/cmake/${f}
 .endfor
@@ -154,6 +149,7 @@ post-install:
 		${DESTDIR}${PREFIX}/lib/libLLVM/libLLVM-${PKGVERSION_NOREV}.${SOEXT}
 .endif
 
+.include "../../devel/cmake/build.mk"
 .include "../../mk/atomic64.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/tool.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2022/09/29 19:36:06 adam Exp $
+# $NetBSD: Makefile,v 1.13 2023/01/24 18:36:21 wiz Exp $
 
 DISTNAME=	abseil-20220623.1
 CATEGORIES=	devel
@@ -11,7 +11,6 @@ HOMEPAGE=	https://github.com/abseil/abseil-cpp
 COMMENT=	C++ Common Libraries
 LICENSE=	apache-2.0
 
-USE_CMAKE=	yes
 USE_LANGUAGES=	c++11
 CMAKE_ARGS+=	-DBUILD_SHARED_LIBS=ON
 
@@ -23,5 +22,6 @@ BUILDLINK_TRANSFORM+=	rm:-lexecinfo
 .  endif
 .endif
 
+.include "../../devel/cmake/build.mk"
 .include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2022/11/23 16:20:34 adam Exp $
+# $NetBSD: Makefile,v 1.85 2023/01/24 18:36:29 wiz Exp $
 
 DISTNAME=	rspamd-3.3
 PKGREVISION=	1
@@ -15,7 +15,6 @@ DEPENDS+=	ragel-[0-9]*:../../devel/ragel
 
 GCC_REQD+=	8
 
-USE_CMAKE=	yes
 USE_TOOLS+=	perl pkg-config
 USE_LANGUAGES=	c99 c++
 BUILD_DEFS+=	VARBASE
@@ -105,6 +104,7 @@ post-extract:
 	${FIND} ${WRKSRC}/conf -type d -exec ${CHMOD} ${PKGDIRMODE} {} \;
 	${FIND} ${WRKSRC}/conf -type f -exec ${CHMOD} ${DOCMODE} {} \;
 
+.include "../../devel/cmake/build.mk"
 .include "../../databases/hiredis/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/fann/buildlink3.mk"
