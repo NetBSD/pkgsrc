@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.596 2023/01/24 20:10:46 adam Exp $
+$NetBSD: CHANGES-2023,v 1.597 2023/01/24 20:35:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -760,3 +760,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-configobj to 5.0.8 [adam 2023-01-24]
 	Updated www/py-asgiref to 3.6.0 [adam 2023-01-24]
 	Updated devel/py-test-xprocess to 0.22.2 [adam 2023-01-24]
+	Updated devel/py-cachelib to 0.10.1 [adam 2023-01-24]
+	Updated net/py-minio to 7.1.13 [adam 2023-01-24]
