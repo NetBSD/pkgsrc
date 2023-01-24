@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.1 2023/01/21 04:49:25 pho Exp $
+# $NetBSD: bootstrap.mk,v 1.2 2023/01/24 02:49:26 pho Exp $
 # -----------------------------------------------------------------------------
 # Select a bindist of bootstrapping compiler on a per-platform basis. See
 # ./files/BOOTSTRAP.md for details.
@@ -235,7 +235,7 @@ CONFIGURE_ARGS.boot=	${CONFIGURE_ARGS.common}
 CONFIGURE_ARGS.boot+=	--with-bindist-prefix="ghc-boot-" --with-system-libffi
 
 # Hadrian arguments to use while building a bootkit.
-HADRIAN_ARGS.boot=	${HADRIAN_ARGS}
+HADRIAN_ARGS.boot=	${HADRIAN_ARGS.common}
 HADRIAN_ARGS.boot+=	--flavour=bootkit+split_sections --docs=none
 
 # Determine the version of GHC being used to build the bootkit. We will
