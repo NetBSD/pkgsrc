@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/02/16 09:13:27 pho Exp $
+$NetBSD: distinfo,v 1.2 2023/01/24 18:19:17 pho Exp $
 
-BLAKE2s (ordered-containers-0.2.2.tar.gz) = 6c27025fa9f3506bde5d11ff6debea3da368a1e6caa13d4338de6e1d62cc07db
-SHA512 (ordered-containers-0.2.2.tar.gz) = 0ec64f5033bd3149126413092cb5514f11635ce7c567fefe073d93b7acef81e385dbc951b23b6ed8605ab6ca6900db6c808c1ac76965ca72b2e62973a9a1e30b
-Size (ordered-containers-0.2.2.tar.gz) = 7241 bytes
+BLAKE2s (ordered-containers-0.2.3.tar.gz) = 58fc40e07a18da6e5ca8f94ec14efeb79d9cba535ac6126a0c83bf4f36b6a7d2
+SHA512 (ordered-containers-0.2.3.tar.gz) = a5e141705f9bdbccf152238bcd6be22f3a04966bf57cdf9485f1ea5efd9cc25de80b2d2dd92f281520fddaa74906e9fbbb789e111d19b46854f1cf5297b1b7e9
+Size (ordered-containers-0.2.3.tar.gz) = 7404 bytes
