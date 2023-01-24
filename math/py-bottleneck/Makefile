@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2022/09/12 08:15:35 adam Exp $
+# $NetBSD: Makefile,v 1.12 2023/01/24 19:30:19 adam Exp $
 
-DISTNAME=	Bottleneck-1.3.5
+DISTNAME=	Bottleneck-1.3.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=B/Bottleneck/}
