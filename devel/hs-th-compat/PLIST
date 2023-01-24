@@ -1,19 +1,19 @@
-@comment $NetBSD: PLIST,v 1.1 2021/04/24 13:14:20 pho Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/01/24 18:21:23 pho Exp $
 lib/th-compat-${PKGVERSION}/${HS_VERSION}/package-description
 lib/th-compat-${PKGVERSION}/${HS_VERSION}/package-id
-lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-lib/${HS_PLATFORM}/${HS_PKGID}/Language/Haskell/TH/Syntax/Compat.dyn_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Language/Haskell/TH/Syntax/Compat.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Language/Haskell/TH/Syntax/Compat.hi
-lib/${HS_PLATFORM}/${HS_PKGID}/Language/Haskell/TH/Syntax/Compat.p_hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Language/Haskell/TH/Syntax/Compat.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
-lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-share/doc/${HS_PLATFORM}/th-compat-${PKGVERSION}/LICENSE
-share/doc/${HS_PLATFORM}/th-compat-${PKGVERSION}/html/Language-Haskell-TH-Syntax-Compat.html
-share/doc/${HS_PLATFORM}/th-compat-${PKGVERSION}/html/doc-index.html
-share/doc/${HS_PLATFORM}/th-compat-${PKGVERSION}/html/haddock-bundle.min.js
-share/doc/${HS_PLATFORM}/th-compat-${PKGVERSION}/html/index.html
-share/doc/${HS_PLATFORM}/th-compat-${PKGVERSION}/html/linuwial.css
-share/doc/${HS_PLATFORM}/th-compat-${PKGVERSION}/html/meta.json
-share/doc/${HS_PLATFORM}/th-compat-${PKGVERSION}/html/quick-jump.css
-share/doc/${HS_PLATFORM}/th-compat-${PKGVERSION}/html/synopsis.png
-share/doc/${HS_PLATFORM}/th-compat-${PKGVERSION}/html/th-compat.haddock
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+${PLIST.doc}share/doc/${HS_PLATFORM}/th-compat-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/${HS_PLATFORM}/th-compat-${PKGVERSION}/html/Language-Haskell-TH-Syntax-Compat.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/th-compat-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/th-compat-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/th-compat-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/th-compat-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/th-compat-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/th-compat-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/th-compat-${PKGVERSION}/html/synopsis.png
+${PLIST.doc}share/doc/${HS_PLATFORM}/th-compat-${PKGVERSION}/html/th-compat.haddock
