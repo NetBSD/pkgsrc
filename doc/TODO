@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22528 2023/01/24 18:21:35 pho Exp $
+$NetBSD: TODO,v 1.22529 2023/01/24 18:42:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -773,6 +773,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gss-1.0.3
 	o gst-plugins1-omx-1.10.0
 	o gst-rtsp-server-1.20.3 [needs libcgroup]
+	o gstreamer1-1.22.0
 	o gthumb-3.4.0
 	o gtklevel9-5.1
 	o gtklife-5.2
@@ -860,7 +861,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o icdprog-0.5
 	o icedtea-web-1.6.2
 	o ices-mp3-2.0.2
-	o icewm-3.1
+	o icewm-3.3.1
 	o icinga-base-2.12.3
 	o idzebra-2.2.2
 	o ike-2.0.1 [pkg/37032]
