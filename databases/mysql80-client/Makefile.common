@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2022/12/25 00:27:26 wiz Exp $
+# $NetBSD: Makefile.common,v 1.7 2023/01/24 21:42:47 he Exp $
 #
 # used by databases/mysql80-client/Makefile
 # used by databases/mysql80-server/Makefile
@@ -84,12 +84,6 @@ CMAKE_ARGS+=		-DWITH_UNIT_TESTS=OFF
 
 CHECK_PORTABILITY_SKIP+=	packaging/deb-in/mysql-packagesource-server.config.in
 
-# we need atomic builtins
-.if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "i386"
-GNU_ARCH.i386=		i586
-CFLAGS+=		-march=i586
-.endif
-
 CMAKE_ARGS.SunOS+=	-DFORCE_UNSUPPORTED_COMPILER=YES
 
 # Force HAVE_CURSES_H on Solaris since the configure script is broken
@@ -127,6 +121,7 @@ post-patch:
 	${ECHO} "#define alloca(sz) __builtin_alloca(sz)" > ${WRKSRC}/include/alloca.h
 .endif
 
+.include "../../mk/atomic64.mk"
 .include "../../archivers/lz4/buildlink3.mk"
 .include "../../archivers/zstd/buildlink3.mk"
 .include "../../devel/libevent/buildlink3.mk"
