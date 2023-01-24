@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.328 2023/01/22 16:28:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.329 2023/01/24 18:36:25 wiz Exp $
 
 DISTNAME=		gnucash-4.13
 PKGREVISION=		2
@@ -17,7 +17,6 @@ DEPENDS+=		dconf-[0-9]*:../../devel/dconf
 
 GCC_REQD+=		8
 USE_LANGUAGES=		c c++17
-USE_CMAKE=		yes
 USE_LIBTOOL=		yes
 INFO_FILES=		yes
 USE_TOOLS+=		bash perl:run pkg-config
@@ -64,6 +63,7 @@ post-install:
 
 .include "options.mk"
 
+.include "../../devel/cmake/build.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.56.1
 .include "../../devel/glib2/schemas.mk"
 .include "../../devel/glib2/buildlink3.mk"

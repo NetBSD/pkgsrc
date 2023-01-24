@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2023/01/12 19:32:54 adam Exp $
+# $NetBSD: Makefile,v 1.32 2023/01/24 18:36:28 wiz Exp $
 
 .include "../../lang/llvm/version.mk"
 
@@ -18,10 +18,6 @@ EXTRA_DIST+=	${LIBCXX}${EXTRACT_SUFX}
 SITES.${LIBCXX}${EXTRACT_SUFX}=	\
 	${MASTER_SITES:=${GITHUB_PROJECT}/releases/download/${GITHUB_RELEASE}/}
 
-CONFIGURE_DIRS=	build
-CMAKE_ARG_PATH=	${WRKSRC}
-
-USE_CMAKE=		yes
 USE_LANGUAGES=		c c++11
 USE_TOOLS+=		pax
 SSP_SUPPORTED=		no
@@ -32,12 +28,12 @@ CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 INSTALLATION_DIRS=	include
 
 post-extract:
-	${MKDIR} ${WRKSRC}/build
 	${LN} -f -s ${WRKDIR}/${LIBCXX} ${WRKDIR}/libcxx
 
 post-install:
 	cd ${WRKSRC}/include && ${PAX} -rw . ${DESTDIR}${PREFIX}/include
 
+.include "../../devel/cmake/build.mk"
 BUILDLINK_DEPMETHOD.llvm=	build
 .include "../../lang/llvm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

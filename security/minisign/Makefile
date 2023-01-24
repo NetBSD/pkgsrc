@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/06/27 15:29:17 fcambus Exp $
+# $NetBSD: Makefile,v 1.6 2023/01/24 18:36:33 wiz Exp $
 
 DISTNAME=	minisign-0.10
 CATEGORIES=	security
@@ -9,8 +9,8 @@ HOMEPAGE=	https://github.com/jedisct1/minisign/
 COMMENT=	Dead simple tool to sign files and verify signatures
 LICENSE=	isc
 
-USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 
+.include "../../devel/cmake/build.mk"
 .include "../../security/libsodium/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

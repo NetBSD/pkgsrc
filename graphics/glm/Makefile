@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2022/07/25 11:12:24 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2023/01/24 18:36:26 wiz Exp $
 
 DISTNAME=	glm-0.9.9.8
 CATEGORIES=	graphics math
@@ -25,11 +25,11 @@ do-install:
 			${DESTDIR}${PREFIX}/${GLM_DIR}
 
 # for test target
-USE_CMAKE=     yes
 USE_LANGUAGES=	c c++
 do-test:
 	${RUN}cd ${WRKSRC} && \
 		cmake -DGLM_TEST_MODE=ON CMakeLists.txt && \
 		make
 
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"

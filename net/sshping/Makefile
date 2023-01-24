@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/05/28 20:46:16 leot Exp $
+# $NetBSD: Makefile,v 1.3 2023/01/24 18:36:31 wiz Exp $
 
 DISTNAME=	sshping-0.1.4
 CATEGORIES=	net
@@ -10,10 +10,10 @@ HOMEPAGE=	https://github.com/spook/sshping/
 COMMENT=	Measure character-echo latency and bandwidth for ssh session
 LICENSE=	mit
 
-USE_CMAKE=	yes
 USE_TOOLS=	pod2man
 
 USE_LANGUAGES=	c c++
 
+.include "../../devel/cmake/build.mk"
 .include "../../security/libssh/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

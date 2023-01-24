@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.257 2023/01/22 16:28:27 ryoon Exp $
+# $NetBSD: Makefile,v 1.258 2023/01/24 18:36:27 wiz Exp $
 
 DISTNAME=	inkscape-1.2.1
 PKGREVISION=	5
@@ -29,7 +29,6 @@ GCC_REQD+=		7
 # This should be resolved in CMakeLists.txt.
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/inkscape
 
-USE_CMAKE=		yes
 USE_LANGUAGES=		c c++17
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
@@ -92,6 +91,7 @@ fix-darwin-install-name:
 		${DESTDIR}${PREFIX}/bin/inkscape
 .endif
 
+.include "../../devel/cmake/build.mk"
 BUILDLINK_API_DEPENDS.boehm-gc+=	boehm-gc>=7.4
 .include "../../converters/libcdr/buildlink3.mk"
 .include "../../converters/librevenge/buildlink3.mk"

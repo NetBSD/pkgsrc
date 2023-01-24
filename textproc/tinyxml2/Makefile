@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/11/04 21:43:48 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2023/01/24 18:36:35 wiz Exp $
 
 DISTNAME=	tinyxml2-2.2.0
 CATEGORIES=	textproc
@@ -10,9 +10,9 @@ HOMEPAGE=	http://www.grinninglizard.com/tinyxml2/
 COMMENT=	Simple, small and efficient C++ XML parser
 LICENSE=	zlib
 
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
 PKGCONFIG_OVERRIDE=	tinyxml2.pc.in
 
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
