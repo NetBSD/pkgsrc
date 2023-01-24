@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:15:03 nia Exp $
+$NetBSD: distinfo,v 1.6 2023/01/24 18:45:20 pho Exp $
 
 BLAKE2s (unliftio-core-0.2.0.1.tar.gz) = bc30a581668ae411f4b3c6f6e8098871def012a76b7a3d1bdb90ef2183818d08
 SHA512 (unliftio-core-0.2.0.1.tar.gz) = 6bb6bbab7336ea460b354e897c7fae236a53e7975af0430abcb2bb9d23374da0340381176d55f827f8a2b17809fa0205c6baf2a2542c72b9557b874c593d1b02
 Size (unliftio-core-0.2.0.1.tar.gz) = 3696 bytes
-SHA1 (patch-unliftio-core.cabal) = a22e4644e2d3975c9fd2cebb7b35680e43ced9e4
