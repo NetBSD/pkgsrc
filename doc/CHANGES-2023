@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.561 2023/01/24 09:25:13 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.562 2023/01/24 10:08:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -720,3 +720,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/py-pythran to 0.12.1 [adam 2023-01-24]
 	Updated x11/xf86-video-vmware to 13.4.0 [wiz 2023-01-24]
 	Updated x11/xf86-video-qxl to 0.1.6 [wiz 2023-01-24]
+	Updated devel/py-astroid to 2.13.3 [adam 2023-01-24]
+	Updated devel/py-pylint to 2.15.10 [adam 2023-01-24]
