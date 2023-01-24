@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.578 2023/01/24 16:39:36 pho Exp $
+$NetBSD: CHANGES-2023,v 1.579 2023/01/24 16:43:12 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -739,3 +739,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/hs-repline to 0.4.2.0 [pho 2023-01-24]
 	Updated devel/hs-microlens to 0.4.13.1 [pho 2023-01-24]
 	Updated lang/hs-lua to 2.2.1 [pho 2023-01-24]
+	Updated devel/hs-logict to 0.8.0.0 [pho 2023-01-24]
