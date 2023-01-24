@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/02/16 05:04:23 pho Exp $
+$NetBSD: distinfo,v 1.2 2023/01/24 18:34:14 pho Exp $
 
-BLAKE2s (some-1.0.3.tar.gz) = e158c8b088bcd178a5ff49d7f381858497bcbd8476bbf681cec5964be95b5053
-SHA512 (some-1.0.3.tar.gz) = 801dae8079bf658b628e220e083b70c1d8c368c1e6345dd6f4417d5e52c24de29dd7d5cb72fc13bfd0e6c7c3aaf5a44ffd539d40ef43eb36d2060aa66b13a563
-Size (some-1.0.3.tar.gz) = 8527 bytes
-SHA1 (patch-some.cabal) = 6ac8ce953b2b421e46b6c94896540d964fc5705f
+BLAKE2s (some-1.0.4.1.tar.gz) = 28f86d427e04608463b48aaba3cc1c429d072793c71d0681e4ce6fc1f6941bfa
+SHA512 (some-1.0.4.1.tar.gz) = 0a590b71194b318f8b14ec41589f3d066a913c37fd2b7772991cc58b3ad94173c50d1fd8e4a6ab5a4a50f0e4d173b574ef4de127c277053bd58bcfe6b7c2fd3f
+Size (some-1.0.4.1.tar.gz) = 9371 bytes
