@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.51 2023/01/24 04:50:24 pho Exp $
+# $NetBSD: haskell.mk,v 1.52 2023/01/24 11:57:09 pho Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages. Package
 # configuration, building, installation, registration and unregistration
@@ -31,6 +31,15 @@
 #
 #	Possible values: yes, no
 #	Default value: inherits ${HASKELL_ENABLE_SHARED_LIBRARY}
+#
+# HASKELL_ENABLE_TESTS
+#	Build test suites. This usually requires some additional
+#	dependencies, which is why tests aren't enabled by
+#	default. Enabling it also defines the target "do-test" unless the
+#	Makefile already defines one.
+#
+#	Possible values: yes, no
+#	Default value: no
 #
 # HASKELL_UNRESTRICT_DEPENDENCIES
 #	A list of Cabal packages that the package depends on, whose version
@@ -81,6 +90,7 @@ _USER_VARS.haskell= \
 	HS_UPDATE_PLIST
 _PKG_VARS.haskell= \
 	HASKELL_ENABLE_DYNAMIC_EXECUTABLE \
+	HASKELL_ENABLE_TESTS \
 	HASKELL_OPTIMIZATION_LEVEL \
 	HASKELL_PKG_NAME \
 	HASKELL_UNRESTRICT_DEPENDENCIES \
@@ -135,6 +145,7 @@ HASKELL_ENABLE_DYNAMIC_EXECUTABLE?=	${HASKELL_ENABLE_SHARED_LIBRARY}
 HASKELL_ENABLE_SHARED_LIBRARY?=		yes
 HASKELL_ENABLE_LIBRARY_PROFILING?=	yes
 HASKELL_ENABLE_HADDOCK_DOCUMENTATION?=	yes
+HASKELL_ENABLE_TESTS?=			no
 HASKELL_UNRESTRICT_DEPENDENCIES?=	# empty
 
 .include "../../lang/ghc92/buildlink3.mk"
@@ -220,6 +231,15 @@ PRINT_PLIST_AWK+=	/\/doc\// { $$0 = "$${PLIST.doc}" $$0 }
 .if ${HASKELL_ENABLE_HADDOCK_DOCUMENTATION:tl} == "yes"
 CONFIGURE_ARGS+=	--with-haddock=${BUILDLINK_PREFIX.ghc:Q}/bin/haddock
 PLIST.doc=		yes
+.endif
+
+.if ${HASKELL_ENABLE_TESTS:tl} == "yes"
+CONFIGURE_ARGS+=	--enable-tests
+.  if !target(do-test)
+do-test:
+	${RUN} ${_ULIMIT_CMD} cd ${WRKSRC} && \
+		./Setup test ${PKG_VERBOSE:D-v}
+.  endif
 .endif
 
 CONFIGURE_ARGS+=	-O${HASKELL_OPTIMIZATION_LEVEL}
@@ -440,13 +460,6 @@ do-install:
 	${RUN}${FIND} ${DESTDIR:Q}${PREFIX}/lib -type d | \
 		${TAIL} -n 1 | \
 		${XARGS} ${RMDIR} -p 2>/dev/null || ${TRUE}
-
-.if !target(do-test)
-# Define test target.
-do-test:
-	${RUN} ${_ULIMIT_CMD} cd ${WRKSRC} && \
-		./Setup test ${PKG_VERBOSE:D-v}
-.endif
 
 # Substitutions for INSTALL and DEINSTALL.
 FILES_SUBST+=	HASKELL_PKG_BIN=${_HASKELL_PKG_BIN}
