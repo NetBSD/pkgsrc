@@ -1,7 +1,9 @@
-$NetBSD: patch-gfx_skia_skia_src_core_SkVM.cpp,v 1.3 2022/12/23 12:35:05 nia Exp $
+$NetBSD: patch-gfx_skia_skia_src_core_SkVM.cpp,v 1.4 2023/01/24 17:57:09 nia Exp $
 
 Work with PaX MPROTECT on NetBSD by stating that we will later make this memory
 block executable.
+
+https://bugzilla.mozilla.org/show_bug.cgi?id=1811913
 
 --- gfx/skia/skia/src/core/SkVM.cpp.orig	2022-11-28 16:47:38.000000000 +0000
 +++ gfx/skia/skia/src/core/SkVM.cpp
