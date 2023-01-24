@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2022/02/11 01:13:44 pho Exp $
+$NetBSD: distinfo,v 1.5 2023/01/24 11:39:04 pho Exp $
 
 BLAKE2s (bsb-http-chunked-0.0.0.4.tar.gz) = 133740e61a608abffdeabf5be56eb1959db9a99f4005d9f8db2d02ae438139c6
 SHA512 (bsb-http-chunked-0.0.0.4.tar.gz) = 74c04c2fd372067c42d3631cdfc2ad7093c0c3af1145833ab307c538dbb936d2042492d4e81c520c3adde8634df29ff8558822f06f226c52d16abb4a35ab1a13
 Size (bsb-http-chunked-0.0.0.4.tar.gz) = 6630 bytes
-SHA1 (patch-bsb-http-chunked.cabal) = 18ceaeb802ce45a0beefd5e27fa01239601f35f8
