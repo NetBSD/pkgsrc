@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2023/01/24 18:36:26 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2023/01/24 23:38:37 wiz Exp $
 
 DISTNAME=	glm-0.9.9.8
 CATEGORIES=	graphics math
@@ -8,6 +8,8 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://glm.g-truc.net/
 COMMENT=	C++ mathematics library for software based on the OpenGL GLSL
 LICENSE=	mit
+
+TEST_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 
 NO_BUILD=	yes
 NO_CONFIGURE=	yes
@@ -31,5 +33,4 @@ do-test:
 		cmake -DGLM_TEST_MODE=ON CMakeLists.txt && \
 		make
 
-.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
