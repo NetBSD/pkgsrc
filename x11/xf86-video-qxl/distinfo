@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:34:42 nia Exp $
+$NetBSD: distinfo,v 1.6 2023/01/24 09:25:05 wiz Exp $
 
-BLAKE2s (xf86-video-qxl-0.1.5.tar.bz2) = 140a6ad6bd23e55c16aff93e4a8c5dd9011992d9b283a1d1744cfb1e7a7cf045
-SHA512 (xf86-video-qxl-0.1.5.tar.bz2) = 7510b2d037b3e978df6063b29e2406f3d1270695a239f29fdaec9b1dc65a30ab10cb959f15eb336f78e93aa708d41c64c5ea43803958feffc64542229605b782
-Size (xf86-video-qxl-0.1.5.tar.bz2) = 508266 bytes
+BLAKE2s (xf86-video-qxl-0.1.6.tar.xz) = 7c236a19c93ca01c980028ee7790cbb776bca37020e795ba646fe0e413636a11
+SHA512 (xf86-video-qxl-0.1.6.tar.xz) = f6a42355915d2e8f8a842dc24fe6d012d123aa6d23eedea1a4771fb08f88e0298d76741755b88304d76c66b3aae15f9fca74d062be395e499a82ee8f4507c7e0
+Size (xf86-video-qxl-0.1.6.tar.xz) = 438844 bytes
