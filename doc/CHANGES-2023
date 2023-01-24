@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.575 2023/01/24 15:03:01 pho Exp $
+$NetBSD: CHANGES-2023,v 1.576 2023/01/24 15:44:41 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -736,3 +736,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/hs-HUnit version 1.6.2.0 [pho 2023-01-24]
 	Updated cad/py-PyRTL to 0.10.2 [ryoon 2023-01-24]
 	Updated security/hs-entropy to 0.4.1.10 [pho 2023-01-24]
+	Updated devel/hs-repline to 0.4.2.0 [pho 2023-01-24]
