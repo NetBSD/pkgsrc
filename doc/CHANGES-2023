@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.587 2023/01/24 18:00:03 nia Exp $
+$NetBSD: CHANGES-2023,v 1.588 2023/01/24 18:17:08 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -749,3 +749,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/hs-hie-compat to 0.3.1.0 [pho 2023-01-24]
 	Updated www/firefox102-l10n to 102.7.0 [nia 2023-01-24]
 	Updated www/firefox102 to 102.7.0 [nia 2023-01-24]
+	Updated devel/hs-ghc-trace-events to 0.1.2.6 [pho 2023-01-24]
