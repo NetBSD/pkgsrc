@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.2046 2023/01/02 21:17:52 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.2047 2023/01/24 14:13:14 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -429,10 +429,11 @@ ${FAKEHOMEDIR}:
 .include "wrapper/bsd.wrapper.mk"
 .endif
 
-.if defined(ABI_DEPENDS) || defined(BUILD_ABI_DEPENDS)
+.if defined(ABI_DEPENDS) || defined(BUILD_ABI_DEPENDS) || defined(TEST_ABI_DEPENDS)
 .  if !empty(USE_ABI_DEPENDS:M[yY][eE][sS])
 DEPENDS+=		${ABI_DEPENDS}
 BUILD_DEPENDS+=		${BUILD_ABI_DEPENDS}
+TEST_DEPENDS+=		${TEST_ABI_DEPENDS}
 .  else
 _BUILD_DEFS+=		USE_ABI_DEPENDS
 .  endif
