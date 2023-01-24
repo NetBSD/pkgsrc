@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/02/11 11:59:11 pho Exp $
+$NetBSD: distinfo,v 1.2 2023/01/24 16:39:26 pho Exp $
 
-BLAKE2s (lua-2.1.0.tar.gz) = a0e98a04ec3f0689fa887761f0fd96e9fce37106c1014851ade99b52945bfcdd
-SHA512 (lua-2.1.0.tar.gz) = 1360e163915e14381e457727e0d04abc089fef95b6c14331b355330ec35458d5ddf899f843ce61dffe23b86ceffd0d203fd66f2edb4cc8ce11f00278842e1a94
-Size (lua-2.1.0.tar.gz) = 212562 bytes
-SHA1 (patch-lua.cabal) = 6d9139ee92b9793fc4fabd96d1b7db15f1bd6641
+BLAKE2s (lua-2.2.1.tar.gz) = c13cd7705052e534d0f47f12a481e7a51540f85af37030cbf6c55ef5e4a6b4b5
+SHA512 (lua-2.2.1.tar.gz) = d8e339ffbc66515e5b564ed5f1ffa66aff9c8d57b2726026846c1623ed51818ca4613b1a84d6197caf30ae542947017574b6f8b561588c3ef6e0e7605c4476d8
+Size (lua-2.2.1.tar.gz) = 260180 bytes
