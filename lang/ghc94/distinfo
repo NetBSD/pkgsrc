@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2023/01/24 02:49:26 pho Exp $
+$NetBSD: distinfo,v 1.11 2023/01/24 11:13:18 pho Exp $
 
 BLAKE2s (ghc-9.0.1-boot-hadrian.tar.gz) = fff7259676e3d0281c7e15e684b65dc04313c9bcb4d6161962325c3fcee08c7b
 SHA512 (ghc-9.0.1-boot-hadrian.tar.gz) = 02047ca0718a240ce702aeac16c2194b6bf73119dacb59816c1e9a631667e420e44c6ef6d5b83f225af3bd31e3ec3fc8f28e9a3cb22e86f63089110429759878
@@ -40,7 +40,7 @@ SHA1 (patch-hadrian_src_Oracles_Setting.hs) = 498d1f810fa2f57151909eb672b73f137f
 SHA1 (patch-hadrian_src_Rules_BinaryDist.hs) = fb908f74b8b619bccd673fbdb40b1c53ab7a51d8
 SHA1 (patch-hadrian_src_Settings_Builders_Ghc.hs) = e2913e9f83bb36bb0b432a24518c9b6ca2990c6a
 SHA1 (patch-hadrian_src_Settings_Default.hs) = 0e0278308ca4decac3fabd89831195b2a20c6eab
-SHA1 (patch-hadrian_src_Settings_Packages.hs) = 99cfa7ec7eaf73fee61303f2367d37e05f55b631
+SHA1 (patch-hadrian_src_Settings_Packages.hs) = 3112830dc86422ab717e12de4c6a76eda80fa909
 SHA1 (patch-libraries_Cabal_Cabal_src_Distribution_Simple_GHC.hs) = a8b2eeec9a469b43e611f79fbf5b080c1e05aa50
 SHA1 (patch-libraries_base_GHC_Event_KQueue.hsc) = 8ee5da667a241a05fde3c580d3dc9bdc05aa5f00
 SHA1 (patch-libraries_base_System_CPUTime_Posix_Times.hsc) = 2bfb779d534d12073287274ce5e90b99e457a860
