@@ -1,19 +1,19 @@
-@comment $NetBSD: PLIST,v 1.1 2022/02/23 16:55:50 pho Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/01/24 15:44:30 pho Exp $
 lib/repline-${PKGVERSION}/${HS_VERSION}/package-description
 lib/repline-${PKGVERSION}/${HS_VERSION}/package-id
-lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-lib/${HS_PLATFORM}/${HS_PKGID}/System/Console/Repline.dyn_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/System/Console/Repline.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/System/Console/Repline.hi
-lib/${HS_PLATFORM}/${HS_PKGID}/System/Console/Repline.p_hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/System/Console/Repline.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
-lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-share/doc/${HS_PLATFORM}/repline-${PKGVERSION}/LICENSE
-share/doc/${HS_PLATFORM}/repline-${PKGVERSION}/html/System-Console-Repline.html
-share/doc/${HS_PLATFORM}/repline-${PKGVERSION}/html/doc-index.html
-share/doc/${HS_PLATFORM}/repline-${PKGVERSION}/html/haddock-bundle.min.js
-share/doc/${HS_PLATFORM}/repline-${PKGVERSION}/html/index.html
-share/doc/${HS_PLATFORM}/repline-${PKGVERSION}/html/linuwial.css
-share/doc/${HS_PLATFORM}/repline-${PKGVERSION}/html/meta.json
-share/doc/${HS_PLATFORM}/repline-${PKGVERSION}/html/quick-jump.css
-share/doc/${HS_PLATFORM}/repline-${PKGVERSION}/html/repline.haddock
-share/doc/${HS_PLATFORM}/repline-${PKGVERSION}/html/synopsis.png
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+${PLIST.doc}share/doc/${HS_PLATFORM}/repline-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/${HS_PLATFORM}/repline-${PKGVERSION}/html/System-Console-Repline.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/repline-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/repline-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/repline-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/repline-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/repline-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/repline-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/repline-${PKGVERSION}/html/repline.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/repline-${PKGVERSION}/html/synopsis.png
