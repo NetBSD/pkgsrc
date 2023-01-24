@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2023/01/23 09:20:57 pho Exp $
+# $NetBSD: Makefile,v 1.3 2023/01/24 02:49:26 pho Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
@@ -20,16 +20,11 @@ UNLIMIT_RESOURCES=	cputime datasize virtualsize
 # binaries sufficient to bootstrap compilers for each platform. If you want
 # to build them yourself, follow instructions in files/BOOTSTRAP.md.
 BROKEN_EXCEPT_ON_PLATFORM+=	Darwin-*-x86_64
-#BROKEN_EXCEPT_ON_PLATFORM+=	FreeBSD-*-i386
-#BROKEN_EXCEPT_ON_PLATFORM+=	FreeBSD-*-x86_64
+BROKEN_EXCEPT_ON_PLATFORM+=	FreeBSD-*-i386
+BROKEN_EXCEPT_ON_PLATFORM+=	FreeBSD-*-x86_64
 BROKEN_EXCEPT_ON_PLATFORM+=	NetBSD-*-aarch64
 BROKEN_EXCEPT_ON_PLATFORM+=	NetBSD-*-x86_64
 BROKEN_EXCEPT_ON_PLATFORM+=	SunOS-*-x86_64
-# It's broken on FreeBSD atm. Dunno what is causing this:
-# > ld: error:
-# > _build/stage0/lib/../lib/x86_64-freebsd-ghc-9.0.1/ghc-9.4.4/libHSghc-9.4.4.a(Instances.o):
-# > SHT_SYMTAB_SHNDX has 44805 entries, but the symbol table associated has
-# > 54313
 
 # We are going to do a PIE build on our responsibility. Do not put -pie in
 # wrappers, as that would prevent us from building stage-1 compiler.
@@ -62,8 +57,13 @@ PYTHON_FOR_BUILD_ONLY=		yes
 # -----------------------------------------------------------------------------
 # Configuration
 #
-HADRIAN_ARGS=	# empty
-HADRIAN_ARGS+=	-j${_MAKE_JOBS_N}
+HADRIAN_ARGS.common=	# empty
+HADRIAN_ARGS.common+=	-j${_MAKE_JOBS_N}
+HADRIAN_ARGS=		${HADRIAN_ARGS.common}
+
+# The output from Hadrian is too terse by default. Use at least a single
+# --verbose so we can know what's really going on.
+HADRIAN_ARGS.common+=	--verbose ${PKG_VERBOSE:D--verbose}
 
 CONFIGURE_ARGS.common+= \
 	--with-curses-libraries=${BUILDLINK_PREFIX.curses}/${BUILDLINK_LIBDIRS.curses:Q} \
@@ -187,10 +187,6 @@ post-patch:
 # relative ones (i.e. $ORIGIN). The patch uses --prefix at build time.
 HADRIAN_ARGS+=	--prefix=${PREFIX:Q}
 
-# The output from Hadrian is too terse by default. Use at least a single
-# --verbose so we can know what's really going on.
-HADRIAN_ARGS+=	--verbose ${PKG_VERBOSE:D--verbose}
-
 # The version restriction on Sphinx in ${WRKSRC}/configure.ac is too
 # loose, and building docs/users_guide rarely succeeds. We don't know
 # which version is actually required for it.
@@ -206,7 +202,14 @@ HADRIAN_ARGS+=		--docs=no-sphinx-pdfs
 HADRIAN_ARGS+=		--docs=no-haddocks
 
 # Enable -fsplit-sections on platforms that support it.
+.if ${OPSYS} == "FreeBSD"
+#   -fsplit-sections appears to corrupt the symbol table of stage 1
+#   libHSghc-*.a(Instances.o) and cause a linkage failure. Either Clang or
+#   LLD is doing something wrong, probably the former.
+HADRIAN_ARGS+=		--flavour=default
+.else
 HADRIAN_ARGS+=		--flavour=default+split_sections
+.endif
 
 do-build:
 	${RUN}cd ${WRKSRC} && ${HADRIAN_CMD} ${HADRIAN_ARGS}
