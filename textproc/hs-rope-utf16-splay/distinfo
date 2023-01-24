@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/02/16 10:03:25 pho Exp $
+$NetBSD: distinfo,v 1.2 2023/01/24 17:14:46 pho Exp $
 
-BLAKE2s (rope-utf16-splay-0.3.2.0.tar.gz) = fcc58606214047f308bb06f2a68d957c1146aae57a63f41b06fb7826fd6c4aa2
-SHA512 (rope-utf16-splay-0.3.2.0.tar.gz) = fee73143082faeee604abfde5d7494b3c8f42016de3e4ae6edd2141730daca7e3ab803eff1787e43e2c5b484b419b4ccb64d753562f7a33bb19451556212049d
-Size (rope-utf16-splay-0.3.2.0.tar.gz) = 7679 bytes
+BLAKE2s (rope-utf16-splay-0.4.0.0.tar.gz) = 3f8c29bbd9fd229405eece2d48b59f36ec8ae51d8dc4877c6f8a3116408eded7
+SHA512 (rope-utf16-splay-0.4.0.0.tar.gz) = 0588c7d35923b210331c95a4b3e6a2376e55253e29addb8842f6e6b92b2aa442aed0d6952b055ce98c3e17148d1113cdef81faf93394c29bea4c0c24b3810e5b
+Size (rope-utf16-splay-0.4.0.0.tar.gz) = 8092 bytes
