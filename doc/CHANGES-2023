@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.572 2023/01/24 13:24:49 pin Exp $
+$NetBSD: CHANGES-2023,v 1.573 2023/01/24 14:00:58 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -733,3 +733,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated time/rusti-cal to 1.1.0 [pin 2023-01-24]
 	Updated audio/gospt to 0.0.32 [pin 2023-01-24]
 	Updated graphics/gifski to 1.10.0 [pin 2023-01-24]
+	Added devel/hs-HUnit version 1.6.2.0 [pho 2023-01-24]
