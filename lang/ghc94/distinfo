@@ -1,17 +1,17 @@
-$NetBSD: distinfo,v 1.9 2023/01/21 18:31:22 pho Exp $
+$NetBSD: distinfo,v 1.10 2023/01/24 02:49:26 pho Exp $
 
 BLAKE2s (ghc-9.0.1-boot-hadrian.tar.gz) = fff7259676e3d0281c7e15e684b65dc04313c9bcb4d6161962325c3fcee08c7b
 SHA512 (ghc-9.0.1-boot-hadrian.tar.gz) = 02047ca0718a240ce702aeac16c2194b6bf73119dacb59816c1e9a631667e420e44c6ef6d5b83f225af3bd31e3ec3fc8f28e9a3cb22e86f63089110429759878
 Size (ghc-9.0.1-boot-hadrian.tar.gz) = 1473040 bytes
-BLAKE2s (ghc-9.0.1-boot-i386-unknown-freebsd.tar.xz) = 1dd13bbed8d4b873ccb1bed06706f41093ab616c6a63be8e59dfdfeab0af2b72
-SHA512 (ghc-9.0.1-boot-i386-unknown-freebsd.tar.xz) = f243d2a091dbaa670ecaac913266e428164064e5c73a2d4e96b603f16af94f3c4af4358e01c04d492de8ddd8c4b6d25ebe8b62b929b6191cd87f0f1d13873fde
-Size (ghc-9.0.1-boot-i386-unknown-freebsd.tar.xz) = 48912780 bytes
+BLAKE2s (ghc-9.0.1-boot-i386-unknown-freebsd.tar.xz) = 415565e02e37e7a6496a116f3a9ebb0d87c5751d5215d4a38a78cec06318372e
+SHA512 (ghc-9.0.1-boot-i386-unknown-freebsd.tar.xz) = 4fcf2eaa25b33ca77ad4ce465258ca6f9487995219d69416933a84b3d70b7908a09004f3279b4368f81ebb4fdd14465859147ebe683ac7f538307ce5dd74241d
+Size (ghc-9.0.1-boot-i386-unknown-freebsd.tar.xz) = 48862704 bytes
 BLAKE2s (ghc-9.0.1-boot-x86_64-apple-darwin.tar.xz) = 377b623a7fd13401376e07c6fe7e19db321bc9883156894af703d72524816f5f
 SHA512 (ghc-9.0.1-boot-x86_64-apple-darwin.tar.xz) = 1c2d8e1df4d8545068c453e8437e29f1528015ce056150d98827709c026fc23f5460887467d20321b1d32e3fffefe7081c068d702881184029d1c63c0adb25e4
 Size (ghc-9.0.1-boot-x86_64-apple-darwin.tar.xz) = 57551160 bytes
-BLAKE2s (ghc-9.0.1-boot-x86_64-unknown-freebsd.tar.xz) = 4957b6df3c21773d16477ff2d9fc6c4d41e3dee574a39d4672677cbea4f1aa64
-SHA512 (ghc-9.0.1-boot-x86_64-unknown-freebsd.tar.xz) = 01b196eca0a23b64687cb795601ca02a409ea0a1b2db48f5b9ab90a95a1db05a254ac92db43726f15382f4cc9e54052685959467a2925fb67ebe5f68570c1eca
-Size (ghc-9.0.1-boot-x86_64-unknown-freebsd.tar.xz) = 49644112 bytes
+BLAKE2s (ghc-9.0.1-boot-x86_64-unknown-freebsd.tar.xz) = 8c96f43487ea89547f87eeb2e2d1d3ba0e8d34618502b9c9b8e1792944e908a5
+SHA512 (ghc-9.0.1-boot-x86_64-unknown-freebsd.tar.xz) = 1ec81c83e247855e6e67bca3529955a24d8a9213c2d2f22997bb5260e1119edd5a463e4ecd7d3d1ebf85dbd090a12f1c1ac9776ad14395742e1b20ae1e1a45a4
+Size (ghc-9.0.1-boot-x86_64-unknown-freebsd.tar.xz) = 49606768 bytes
 BLAKE2s (ghc-9.0.1-boot-x86_64-unknown-solaris2.tar.xz) = c4fdba92d75ccfedc3c1c0a8a73720113b5c5c59ec27ce4aead8172b8345f570
 SHA512 (ghc-9.0.1-boot-x86_64-unknown-solaris2.tar.xz) = 92694ef783274f42800d899af4dd558087e3c2ce13e175558a23f5187c944333a2872cee1df9b14683903a0542954a8483c7413343aacaa2b1676d10a6d27a6d
 Size (ghc-9.0.1-boot-x86_64-unknown-solaris2.tar.xz) = 59903112 bytes
@@ -59,6 +59,7 @@ SHA1 (patch-libraries_unix_System_Posix_Files_Common.hsc) = 6efef280832d376915a8
 SHA1 (patch-libraries_unix_System_Posix_Signals.hsc) = 49215dce493a6bbc440f91a3959e592f86fc779b
 SHA1 (patch-libraries_unix_include_execvpe.h) = 560c6e9b644687fad62e380f73f08359c48639a2
 SHA1 (patch-m4_fptools__set__haskell__platform__vars.m4) = 8c7a7ab965f4df8a68bedb35c32ee32c59ac2c94
+SHA1 (patch-rts_include_Rts.h) = c1265c0c156e7d3e1483c89b23aa03bc1024644c
 SHA1 (patch-rts_linker_MMap.c) = c2abd34b8d39bb8f508a54bf3db25f53e113e45b
 SHA1 (patch-rts_linker_MMap.h) = 8228fabcdaeb1511191da9fc614ff94d3eee8fbd
 SHA1 (patch-rts_rts.cabal.in) = 605e30da81e444046d00457fc3961025c2073615
