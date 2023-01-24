@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:14:59 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/01/24 18:51:48 pho Exp $
 
 BLAKE2s (old-locale-1.0.0.7.tar.gz) = 72d3a5fcc86c584adec058194cbb674dcd6781416c6c58d17151962f740e7872
 SHA512 (old-locale-1.0.0.7.tar.gz) = 34d018cb040de9adce3ddb8cffabe2a0610f6cd0ff5340ee721b7076671bd5cc3e830f58d16e73240df4b068510f7a24fd1995efc38f002b52d228abc4581d6a
 Size (old-locale-1.0.0.7.tar.gz) = 3384 bytes
-SHA1 (patch-old-locale.cabal) = 982475d5ac24471240bd276fa3a385e194edaa27
