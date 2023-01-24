@@ -1,19 +1,19 @@
-@comment $NetBSD: PLIST,v 1.1 2022/09/07 02:56:00 pho Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/01/24 16:00:22 pho Exp $
 lib/newtype-${PKGVERSION}/${HS_VERSION}/package-description
 lib/newtype-${PKGVERSION}/${HS_VERSION}/package-id
-lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-lib/${HS_PLATFORM}/${HS_PKGID}/Control/Newtype.dyn_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Control/Newtype.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Control/Newtype.hi
-lib/${HS_PLATFORM}/${HS_PKGID}/Control/Newtype.p_hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Control/Newtype.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
-lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-share/doc/${HS_PLATFORM}/newtype-${PKGVERSION}/LICENSE
-share/doc/${HS_PLATFORM}/newtype-${PKGVERSION}/html/Control-Newtype.html
-share/doc/${HS_PLATFORM}/newtype-${PKGVERSION}/html/doc-index.html
-share/doc/${HS_PLATFORM}/newtype-${PKGVERSION}/html/haddock-bundle.min.js
-share/doc/${HS_PLATFORM}/newtype-${PKGVERSION}/html/index.html
-share/doc/${HS_PLATFORM}/newtype-${PKGVERSION}/html/linuwial.css
-share/doc/${HS_PLATFORM}/newtype-${PKGVERSION}/html/meta.json
-share/doc/${HS_PLATFORM}/newtype-${PKGVERSION}/html/newtype.haddock
-share/doc/${HS_PLATFORM}/newtype-${PKGVERSION}/html/quick-jump.css
-share/doc/${HS_PLATFORM}/newtype-${PKGVERSION}/html/synopsis.png
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+${PLIST.doc}share/doc/${HS_PLATFORM}/newtype-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/${HS_PLATFORM}/newtype-${PKGVERSION}/html/Control-Newtype.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/newtype-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/newtype-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/newtype-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/newtype-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/newtype-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/newtype-${PKGVERSION}/html/newtype.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/newtype-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/newtype-${PKGVERSION}/html/synopsis.png
