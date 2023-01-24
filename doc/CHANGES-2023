@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.586 2023/01/24 17:26:15 pho Exp $
+$NetBSD: CHANGES-2023,v 1.587 2023/01/24 18:00:03 nia Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -747,3 +747,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/hs-haskell-lexer to 1.1.1 [pho 2023-01-24]
 	Updated textproc/hs-rope-utf16-splay to 0.4.0.0 [pho 2023-01-24]
 	Updated devel/hs-hie-compat to 0.3.1.0 [pho 2023-01-24]
+	Updated www/firefox102-l10n to 102.7.0 [nia 2023-01-24]
+	Updated www/firefox102 to 102.7.0 [nia 2023-01-24]
