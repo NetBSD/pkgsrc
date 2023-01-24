@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2023/01/03 17:37:02 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2023/01/24 19:19:57 pin Exp $
 
-DISTNAME=	tp-note-1.19.13
-PKGREVISION=	1
+DISTNAME=	tp-note-1.20.0
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITLAB:=getreu/}
 GITLAB_RELEASE=	v${PKGVERSION_NOREV}
@@ -15,7 +14,7 @@ BUILD_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 .include "cargo-depends.mk"
 
-WRKSRC=		${WRKDIR}/tp-note-v1.19.13-0456d4a73341df14127eee53cef8fd17cfdd9b1d
+WRKSRC=		${WRKDIR}/tp-note-v1.20.0-a3b064e15b37d114e28a70681e7b274c92e7969f
 
 USE_TOOLS+=	pkg-config
 
