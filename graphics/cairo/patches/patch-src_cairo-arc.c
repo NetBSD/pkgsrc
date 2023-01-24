@@ -1,9 +1,9 @@
-$NetBSD: patch-src_cairo-arc.c,v 1.1 2023/01/24 10:10:23 wiz Exp $
+$NetBSD: patch-src_cairo-arc.c,v 1.2 2023/01/24 10:16:33 wiz Exp $
 
 https://gitlab.freedesktop.org/cairo/cairo/-/merge_requests/155
 fixing
 https://gitlab.freedesktop.org/cairo/cairo/-/issues/353
-which is for CVE-2019-6461.
+which is for CVE-2019-6462.
 
 --- src/cairo-arc.c.orig	2018-08-17 01:10:53.000000000 +0000
 +++ src/cairo-arc.c
