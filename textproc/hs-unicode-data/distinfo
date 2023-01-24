@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/02/12 08:31:41 pho Exp $
+$NetBSD: distinfo,v 1.2 2023/01/24 12:12:11 pho Exp $
 
-BLAKE2s (unicode-data-0.3.0.tar.gz) = 6dff90cd449f64264cc68dbd6f458e0298c8e9d9c37b303e8bf4dfc7a8427cf3
-SHA512 (unicode-data-0.3.0.tar.gz) = 6e96f9b93f8a37c8e17f6b20fbe5339fdfeeb75a9d0c6311b03e0bdc9a4a6aa87db6adbe2c3d7d4e7671635df1b32c5325d37815f48ae03ab3b27190a293896b
-Size (unicode-data-0.3.0.tar.gz) = 142487 bytes
+BLAKE2s (unicode-data-0.4.0.1.tar.gz) = 60989eb54c04c16a4318a20a247859aa81679fe40ac7570fbe913942c90186d0
+SHA512 (unicode-data-0.4.0.1.tar.gz) = ddbe70ccdb628673aa9276af3a59aa02c8038b3655fcf0bbf3b4d3db4bb92629d256512bb1ede2486f77138cda0a6595bbcd8e82f1dc57385c6a7b5e0edfae48
+Size (unicode-data-0.4.0.1.tar.gz) = 187381 bytes
