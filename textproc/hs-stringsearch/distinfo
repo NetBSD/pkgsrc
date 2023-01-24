@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:22:03 nia Exp $
+$NetBSD: distinfo,v 1.7 2023/01/24 13:00:04 pho Exp $
 
 BLAKE2s (stringsearch-0.3.6.6.tar.gz) = 7d6a5b7eb9f6ab51008e1b72e5389e5b8df5c7f5b8d8c43747cfa106aab8777c
 SHA512 (stringsearch-0.3.6.6.tar.gz) = a642934981318b399a7fcfbf0134d5d02d8d072591bcfed7abc57bf6474b86d6c7bc6cf11f44ace6db579a0297877850fd9049be69b61f4f9964cd72455b14e0
 Size (stringsearch-0.3.6.6.tar.gz) = 39679 bytes
-SHA1 (patch-stringsearch.cabal) = 9b49b8655cf84e145a18a1805e90284184e1f443
