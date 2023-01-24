@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:18:19 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/01/24 19:34:58 adam Exp $
 
-BLAKE2s (configobj-5.0.6.tar.gz) = 5b7d0733fa61bfc709d75bd2076fe9d7c64b2b3be415f4b69d57d7c8fa0321a5
-SHA512 (configobj-5.0.6.tar.gz) = f253fdd0bc3fcd37f56c9ceb28f5c8c739b0861e099b07a3929645907c97b2261f0529850a95c1a42507846f72d88a0992fcd1e1d6fa8654dc713d120f769963
-Size (configobj-5.0.6.tar.gz) = 33248 bytes
+BLAKE2s (configobj-5.0.8.tar.gz) = 48bf429420fd9e365f674118e843c5f90020cae680a7aaf008b08cd3cbdbe349
+SHA512 (configobj-5.0.8.tar.gz) = 056b1be5b2c50b03af2dbbdc37d7c0b90b1ce39e0e02aa299e7e9975f0d8445fece4224da9f73ec52ca113c7fe14c91627fbb5c12dd19c78a5aebe9aac0d9b2e
+Size (configobj-5.0.8.tar.gz) = 38012 bytes
