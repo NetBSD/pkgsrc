@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.559 2023/01/24 09:18:44 adam Exp $
+$NetBSD: CHANGES-2023,v 1.560 2023/01/24 09:23:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -718,3 +718,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated archivers/unrar to 6.2.4 [adam 2023-01-24]
 	Updated net/py-prometheus_client to 0.16.0 [adam 2023-01-24]
 	Updated math/py-pythran to 0.12.1 [adam 2023-01-24]
+	Updated x11/xf86-video-vmware to 13.4.0 [wiz 2023-01-24]
