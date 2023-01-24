@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/02/16 10:00:19 pho Exp $
+$NetBSD: distinfo,v 1.2 2023/01/24 17:22:04 pho Exp $
 
 BLAKE2s (parallel-3.2.2.0.tar.gz) = 107ac84d6a18f5de87a2c6afc1920130cf3472cb20327c10bb190c345ef2687b
 SHA512 (parallel-3.2.2.0.tar.gz) = ca1fe3fc5f9478dd52b42243d1191a2327c22946eb11d2d3426b9da2d833a61f182c20af9d15f7ceda6b58a28ee03de8837b6ca5bdd34e7306894db97f37f7bc
 Size (parallel-3.2.2.0.tar.gz) = 14681 bytes
-SHA1 (patch-parallel.cabal) = c5d1f69241af65c713a7b5d6a1691c936d759781
