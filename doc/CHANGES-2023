@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.558 2023/01/24 08:32:17 adam Exp $
+$NetBSD: CHANGES-2023,v 1.559 2023/01/24 09:18:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -716,3 +716,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/swagger-codegen to 3.0.38 [schmonz 2023-01-24]
 	Updated textproc/cmark to 0.30.3 [adam 2023-01-24]
 	Updated archivers/unrar to 6.2.4 [adam 2023-01-24]
+	Updated net/py-prometheus_client to 0.16.0 [adam 2023-01-24]
+	Updated math/py-pythran to 0.12.1 [adam 2023-01-24]
