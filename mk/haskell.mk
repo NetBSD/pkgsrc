@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.50 2023/01/24 04:28:28 pho Exp $
+# $NetBSD: haskell.mk,v 1.51 2023/01/24 04:50:24 pho Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages. Package
 # configuration, building, installation, registration and unregistration
@@ -441,10 +441,12 @@ do-install:
 		${TAIL} -n 1 | \
 		${XARGS} ${RMDIR} -p 2>/dev/null || ${TRUE}
 
+.if !target(do-test)
 # Define test target.
 do-test:
 	${RUN} ${_ULIMIT_CMD} cd ${WRKSRC} && \
 		./Setup test ${PKG_VERBOSE:D-v}
+.endif
 
 # Substitutions for INSTALL and DEINSTALL.
 FILES_SUBST+=	HASKELL_PKG_BIN=${_HASKELL_PKG_BIN}
