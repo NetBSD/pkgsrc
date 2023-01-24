@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/02/23 16:55:50 pho Exp $
+$NetBSD: distinfo,v 1.2 2023/01/24 15:44:30 pho Exp $
 
-BLAKE2s (repline-0.4.0.0.tar.gz) = 87eb28f1fedf4d7aa0fb2f0272b9709891e1bbfad2ebb6990876be04b91737f0
-SHA512 (repline-0.4.0.0.tar.gz) = 1da58e7112bcb0096770fa5d0b056763a9ef8fc5e2af7d4901addf591dbd2436bdd68a3f500a4d5a8cc0e0bef4f34f2b77033ca2b4047929b9588906d91aaa22
-Size (repline-0.4.0.0.tar.gz) = 9529 bytes
+BLAKE2s (repline-0.4.2.0.tar.gz) = 287f85eb2315908bbc0201a5ad34c35aca9fc81bfdf65542953f6a5a5693dc72
+SHA512 (repline-0.4.2.0.tar.gz) = 058792cdc7b8efdd332188d2be02af8b29507bc60012dafc64c090921e88a86b00ac3683142a0862f8d890b2536f5232dc1d7103cbcce256fa21e5ca4377b74b
+Size (repline-0.4.2.0.tar.gz) = 9719 bytes
