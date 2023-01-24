@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/11/09 14:41:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/01/24 09:18:23 adam Exp $
 bin/pythran-${PYVERSSUFFIX}
 bin/pythran-config-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -639,6 +639,11 @@ ${PYSITELIB}/pythran/boost/lexical_cast/try_lexical_convert.hpp
 ${PYSITELIB}/pythran/boost/limits.hpp
 ${PYSITELIB}/pythran/boost/math/constants/calculate_constants.hpp
 ${PYSITELIB}/pythran/boost/math/constants/constants.hpp
+${PYSITELIB}/pythran/boost/math/distributions/complement.hpp
+${PYSITELIB}/pythran/boost/math/distributions/detail/common_error_handling.hpp
+${PYSITELIB}/pythran/boost/math/distributions/detail/derived_accessors.hpp
+${PYSITELIB}/pythran/boost/math/distributions/fwd.hpp
+${PYSITELIB}/pythran/boost/math/distributions/normal.hpp
 ${PYSITELIB}/pythran/boost/math/policies/error_handling.hpp
 ${PYSITELIB}/pythran/boost/math/policies/policy.hpp
 ${PYSITELIB}/pythran/boost/math/special_functions/bernoulli.hpp
@@ -2930,6 +2935,7 @@ ${PYSITELIB}/pythran/pythonic/include/numpy/eye.hpp
 ${PYSITELIB}/pythran/pythonic/include/numpy/fabs.hpp
 ${PYSITELIB}/pythran/pythonic/include/numpy/fft/c2c.hpp
 ${PYSITELIB}/pythran/pythonic/include/numpy/fft/fft.hpp
+${PYSITELIB}/pythran/pythonic/include/numpy/fft/fftn.hpp
 ${PYSITELIB}/pythran/pythonic/include/numpy/fft/hfft.hpp
 ${PYSITELIB}/pythran/pythonic/include/numpy/fft/ifft.hpp
 ${PYSITELIB}/pythran/pythonic/include/numpy/fft/ihfft.hpp
@@ -3314,6 +3320,7 @@ ${PYSITELIB}/pythran/pythonic/include/random/shuffle.hpp
 ${PYSITELIB}/pythran/pythonic/include/random/uniform.hpp
 ${PYSITELIB}/pythran/pythonic/include/scipy/special/binom.hpp
 ${PYSITELIB}/pythran/pythonic/include/scipy/special/gamma.hpp
+${PYSITELIB}/pythran/pythonic/include/scipy/special/gammaincinv.hpp
 ${PYSITELIB}/pythran/pythonic/include/scipy/special/gammaln.hpp
 ${PYSITELIB}/pythran/pythonic/include/scipy/special/hankel1.hpp
 ${PYSITELIB}/pythran/pythonic/include/scipy/special/hankel2.hpp
@@ -3325,6 +3332,8 @@ ${PYSITELIB}/pythran/pythonic/include/scipy/special/jv.hpp
 ${PYSITELIB}/pythran/pythonic/include/scipy/special/jvp.hpp
 ${PYSITELIB}/pythran/pythonic/include/scipy/special/kv.hpp
 ${PYSITELIB}/pythran/pythonic/include/scipy/special/kvp.hpp
+${PYSITELIB}/pythran/pythonic/include/scipy/special/ndtr.hpp
+${PYSITELIB}/pythran/pythonic/include/scipy/special/ndtri.hpp
 ${PYSITELIB}/pythran/pythonic/include/scipy/special/spherical_jn.hpp
 ${PYSITELIB}/pythran/pythonic/include/scipy/special/spherical_yn.hpp
 ${PYSITELIB}/pythran/pythonic/include/scipy/special/yv.hpp
@@ -3589,6 +3598,7 @@ ${PYSITELIB}/pythran/pythonic/numpy/eye.hpp
 ${PYSITELIB}/pythran/pythonic/numpy/fabs.hpp
 ${PYSITELIB}/pythran/pythonic/numpy/fft/c2c.hpp
 ${PYSITELIB}/pythran/pythonic/numpy/fft/fft.hpp
+${PYSITELIB}/pythran/pythonic/numpy/fft/fftn.hpp
 ${PYSITELIB}/pythran/pythonic/numpy/fft/hfft.hpp
 ${PYSITELIB}/pythran/pythonic/numpy/fft/ifft.hpp
 ${PYSITELIB}/pythran/pythonic/numpy/fft/ihfft.hpp
@@ -3979,6 +3989,7 @@ ${PYSITELIB}/pythran/pythonic/random/uniform.hpp
 ${PYSITELIB}/pythran/pythonic/scipy/special/binom.hpp
 ${PYSITELIB}/pythran/pythonic/scipy/special/chbevl.hpp
 ${PYSITELIB}/pythran/pythonic/scipy/special/gamma.hpp
+${PYSITELIB}/pythran/pythonic/scipy/special/gammaincinv.hpp
 ${PYSITELIB}/pythran/pythonic/scipy/special/gammaln.hpp
 ${PYSITELIB}/pythran/pythonic/scipy/special/hankel1.hpp
 ${PYSITELIB}/pythran/pythonic/scipy/special/hankel2.hpp
@@ -3990,6 +4001,8 @@ ${PYSITELIB}/pythran/pythonic/scipy/special/jv.hpp
 ${PYSITELIB}/pythran/pythonic/scipy/special/jvp.hpp
 ${PYSITELIB}/pythran/pythonic/scipy/special/kv.hpp
 ${PYSITELIB}/pythran/pythonic/scipy/special/kvp.hpp
+${PYSITELIB}/pythran/pythonic/scipy/special/ndtr.hpp
+${PYSITELIB}/pythran/pythonic/scipy/special/ndtri.hpp
 ${PYSITELIB}/pythran/pythonic/scipy/special/spherical_jn.hpp
 ${PYSITELIB}/pythran/pythonic/scipy/special/spherical_yn.hpp
 ${PYSITELIB}/pythran/pythonic/scipy/special/yv.hpp
@@ -4148,6 +4161,9 @@ ${PYSITELIB}/pythran/transformations/normalize_static_if.pyo
 ${PYSITELIB}/pythran/transformations/normalize_tuples.py
 ${PYSITELIB}/pythran/transformations/normalize_tuples.pyc
 ${PYSITELIB}/pythran/transformations/normalize_tuples.pyo
+${PYSITELIB}/pythran/transformations/normalize_typeis.py
+${PYSITELIB}/pythran/transformations/normalize_typeis.pyc
+${PYSITELIB}/pythran/transformations/normalize_typeis.pyo
 ${PYSITELIB}/pythran/transformations/remove_comprehension.py
 ${PYSITELIB}/pythran/transformations/remove_comprehension.pyc
 ${PYSITELIB}/pythran/transformations/remove_comprehension.pyo
@@ -4214,9 +4230,10 @@ ${PYSITELIB}/pythran/xsimd/arch/xsimd_avx512cd.hpp
 ${PYSITELIB}/pythran/xsimd/arch/xsimd_avx512dq.hpp
 ${PYSITELIB}/pythran/xsimd/arch/xsimd_avx512f.hpp
 ${PYSITELIB}/pythran/xsimd/arch/xsimd_constants.hpp
-${PYSITELIB}/pythran/xsimd/arch/xsimd_fma3.hpp
+${PYSITELIB}/pythran/xsimd/arch/xsimd_fma3_avx.hpp
+${PYSITELIB}/pythran/xsimd/arch/xsimd_fma3_avx2.hpp
+${PYSITELIB}/pythran/xsimd/arch/xsimd_fma3_sse.hpp
 ${PYSITELIB}/pythran/xsimd/arch/xsimd_fma4.hpp
-${PYSITELIB}/pythran/xsimd/arch/xsimd_fma5.hpp
 ${PYSITELIB}/pythran/xsimd/arch/xsimd_generic.hpp
 ${PYSITELIB}/pythran/xsimd/arch/xsimd_generic_fwd.hpp
 ${PYSITELIB}/pythran/xsimd/arch/xsimd_isa.hpp
@@ -4228,14 +4245,13 @@ ${PYSITELIB}/pythran/xsimd/arch/xsimd_sse3.hpp
 ${PYSITELIB}/pythran/xsimd/arch/xsimd_sse4_1.hpp
 ${PYSITELIB}/pythran/xsimd/arch/xsimd_sse4_2.hpp
 ${PYSITELIB}/pythran/xsimd/arch/xsimd_ssse3.hpp
+${PYSITELIB}/pythran/xsimd/arch/xsimd_sve.hpp
 ${PYSITELIB}/pythran/xsimd/config/xsimd_arch.hpp
 ${PYSITELIB}/pythran/xsimd/config/xsimd_config.hpp
 ${PYSITELIB}/pythran/xsimd/config/xsimd_cpuid.hpp
-${PYSITELIB}/pythran/xsimd/math/.xsimd_gamma.hpp.swp
 ${PYSITELIB}/pythran/xsimd/math/xsimd_rem_pio2.hpp
 ${PYSITELIB}/pythran/xsimd/memory/xsimd_aligned_allocator.hpp
 ${PYSITELIB}/pythran/xsimd/memory/xsimd_alignment.hpp
-${PYSITELIB}/pythran/xsimd/stl/algorithms.hpp
 ${PYSITELIB}/pythran/xsimd/types/xsimd_all_registers.hpp
 ${PYSITELIB}/pythran/xsimd/types/xsimd_api.hpp
 ${PYSITELIB}/pythran/xsimd/types/xsimd_avx2_register.hpp
@@ -4246,8 +4262,10 @@ ${PYSITELIB}/pythran/xsimd/types/xsimd_avx512f_register.hpp
 ${PYSITELIB}/pythran/xsimd/types/xsimd_avx_register.hpp
 ${PYSITELIB}/pythran/xsimd/types/xsimd_batch.hpp
 ${PYSITELIB}/pythran/xsimd/types/xsimd_batch_constant.hpp
-${PYSITELIB}/pythran/xsimd/types/xsimd_fma3_register.hpp
-${PYSITELIB}/pythran/xsimd/types/xsimd_fma5_register.hpp
+${PYSITELIB}/pythran/xsimd/types/xsimd_fma3_avx2_register.hpp
+${PYSITELIB}/pythran/xsimd/types/xsimd_fma3_avx_register.hpp
+${PYSITELIB}/pythran/xsimd/types/xsimd_fma3_sse_register.hpp
+${PYSITELIB}/pythran/xsimd/types/xsimd_fma4_register.hpp
 ${PYSITELIB}/pythran/xsimd/types/xsimd_generic_arch.hpp
 ${PYSITELIB}/pythran/xsimd/types/xsimd_neon64_register.hpp
 ${PYSITELIB}/pythran/xsimd/types/xsimd_neon_register.hpp
@@ -4257,6 +4275,7 @@ ${PYSITELIB}/pythran/xsimd/types/xsimd_sse3_register.hpp
 ${PYSITELIB}/pythran/xsimd/types/xsimd_sse4_1_register.hpp
 ${PYSITELIB}/pythran/xsimd/types/xsimd_sse4_2_register.hpp
 ${PYSITELIB}/pythran/xsimd/types/xsimd_ssse3_register.hpp
+${PYSITELIB}/pythran/xsimd/types/xsimd_sve_register.hpp
 ${PYSITELIB}/pythran/xsimd/types/xsimd_traits.hpp
 ${PYSITELIB}/pythran/xsimd/types/xsimd_utils.hpp
 ${PYSITELIB}/pythran/xsimd/xsimd.hpp
