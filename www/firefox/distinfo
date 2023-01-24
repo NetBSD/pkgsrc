@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.489 2023/01/24 17:57:09 nia Exp $
+$NetBSD: distinfo,v 1.490 2023/01/24 18:06:12 nia Exp $
 
 BLAKE2s (firefox-109.0.source.tar.xz) = ac0452efd5ea92e5de2682815e0634ca8b89b5995b0ac6e81f20849dd80575ef
 SHA512 (firefox-109.0.source.tar.xz) = 9e2b6e20353e414da3d2eb9dcd3d77757664a98a4438a8e84f19a1c7c203e40136b08bf96a458fac05ddc627347217d32f1f6337980c5ca918874993657a58e7
@@ -31,7 +31,7 @@ SHA1 (patch-media_libpng_pngpriv.h) = c8084332560017cd7c9b519b61d125fa28af0dbc
 SHA1 (patch-media_libtheora_lib_info.c) = f6dbf536d73859a1ff78304c2e9f6a6f74dac01f
 SHA1 (patch-modules_fdlibm_src_math__private.h) = e20b6c23011d7123cbbd64a500eb8ce8c426620e
 SHA1 (patch-mozglue_misc_Uptime.cpp) = daefe25ef1ebc8e4d3735017b9e8ac68c4710a00
-SHA1 (patch-nsprpub_pr_src_pthreads_ptsynch.c) = 13e512c7ee9fa1e14ba415d62fa853e5fbfc91c0
+SHA1 (patch-nsprpub_pr_src_pthreads_ptsynch.c) = b0d1f6a6e0eb852b0fd0238ad3f8ed3166c60a50
 SHA1 (patch-security_nss_lib_freebl_mpi_mpi.c) = a7cd867916524770609d1c307a65b315b88456f4
 SHA1 (patch-third__party_js_cfworker_build.sh) = 46cdf97b99cf01080f290ae8d9a33b5f869fc3e4
 SHA1 (patch-third__party_libwebrtc_modules_video__capture_linux_device__info__v4l2.cc) = 8848fb05c1e8b45234f74db71602a8a84c0404a4
