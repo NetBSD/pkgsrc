@@ -1,6 +1,8 @@
-$NetBSD: patch-js_src_vm_ArrayBufferObject.cpp,v 1.2 2021/06/30 15:09:56 ryoon Exp $
+$NetBSD: patch-js_src_vm_ArrayBufferObject.cpp,v 1.3 2023/01/24 17:57:09 nia Exp $
 
 PaX MPROTECT safety for NetBSD.
+
+https://bugzilla.mozilla.org/show_bug.cgi?id=1811913
 
 --- js/src/vm/ArrayBufferObject.cpp.orig	2021-05-20 21:29:34.000000000 +0000
 +++ js/src/vm/ArrayBufferObject.cpp
