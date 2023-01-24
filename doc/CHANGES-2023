@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.590 2023/01/24 18:21:35 pho Exp $
+$NetBSD: CHANGES-2023,v 1.591 2023/01/24 18:34:26 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -752,3 +752,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/hs-ghc-trace-events to 0.1.2.6 [pho 2023-01-24]
 	Updated devel/hs-ordered-containers to 0.2.3 [pho 2023-01-24]
 	Updated devel/hs-th-compat to 0.1.4 [pho 2023-01-24]
+	Updated devel/hs-some to 1.0.4.1 [pho 2023-01-24]
