@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.554 2023/01/24 01:01:45 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.555 2023/01/24 01:05:10 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -711,3 +711,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/mold to 1.10.1 [fcambus 2023-01-23]
 	Updated sysutils/xfce4-thunar to 4.18.3 [gutteridge 2023-01-24]
 	Updated x11/libxfce4util to 4.18.1 [gutteridge 2023-01-24]
+	Updated x11/xfce4-whiskermenu-plugin to 2.7.2 [gutteridge 2023-01-24]
