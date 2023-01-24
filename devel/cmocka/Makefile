@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2020/07/03 16:08:46 hauke Exp $
+# $NetBSD: Makefile,v 1.10 2023/01/24 18:36:21 wiz Exp $
 
 DISTNAME=	cmocka-1.1.5
 CATEGORIES=	devel
@@ -10,8 +10,6 @@ HOMEPAGE=	https://cmocka.org/
 COMMENT=	Unit testing framework for C supporting mock objects
 LICENSE=	apache-2.0
 
-USE_CMAKE=	yes
-
 CONFIGURE_DIRS=	${WRKDIR}/build
 CMAKE_ARG_PATH=	${WRKSRC}
 
@@ -22,4 +20,5 @@ CMAKE_ARGS+=	-DWITH_WERROR_UNINITIALIZED_FLAG=0
 post-extract:
 	${MKDIR} ${WRKDIR}/build
 
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"

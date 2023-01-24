@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2022/12/04 17:59:08 adam Exp $
+# $NetBSD: Makefile,v 1.66 2023/01/24 18:36:31 wiz Exp $
 
 DISTNAME=	grpc-1.51.1
 CATEGORIES=	net
@@ -10,7 +10,6 @@ HOMEPAGE=	https://grpc.io/
 COMMENT=	High performance, open-source universal RPC framework
 LICENSE=	apache-2.0
 
-USE_CMAKE=	yes
 USE_LANGUAGES+=	c c++11
 USE_TOOLS+=	pkg-config
 
@@ -37,6 +36,7 @@ post-extract:
 	${RMDIR} ${WRKSRC}/third_party/opencensus-proto
 	${LN} -s ${WRKDIR}/opencensus-proto-* ${WRKSRC}/third_party/opencensus-proto
 
+.include "../../devel/cmake/build.mk"
 .include "../../mk/atomic64.mk"
 .include "../../benchmarks/google-benchmark/buildlink3.mk"
 .include "../../devel/abseil/buildlink3.mk"

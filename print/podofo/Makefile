@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2023/01/17 14:01:57 spz Exp $
+# $NetBSD: Makefile,v 1.41 2023/01/24 18:36:32 wiz Exp $
 
 DISTNAME=	podofo-0.9.8
 #PKGREVISION=	0
@@ -10,7 +10,6 @@ HOMEPAGE=	http://podofo.sourceforge.net/
 COMMENT=	Library to work with the PDF file format
 LICENSE=	gnu-lgpl-v2 AND gnu-gpl-v2
 
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
@@ -26,6 +25,7 @@ CMAKE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_LUA=TRUE
 
 .include "options.mk"
 
+.include "../../devel/cmake/build.mk"
 # tests-depend on cppunit (for unit tests)
 .include "../../devel/libidn/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

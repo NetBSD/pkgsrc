@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/08/07 07:53:35 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2023/01/24 18:36:29 wiz Exp $
 
 DISTNAME=	double-conversion-3.2.1
 CATEGORIES=	math converters
@@ -10,9 +10,9 @@ HOMEPAGE=	https://github.com/google/double-conversion/
 COMMENT=	Conversion routines for IEEE doubles
 LICENSE=	modified-bsd
 
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 CMAKE_ARGS+=	-DBUILD_SHARED_LIBS:BOOL=ON
 CMAKE_ARGS+=	-DCMAKE_EXPORT_NO_PACKAGE_REGISTRY=ON
 
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"

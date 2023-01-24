@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2023/01/16 20:48:41 adam Exp $
+# $NetBSD: Makefile,v 1.70 2023/01/24 18:36:18 wiz Exp $
 
 DISTNAME=	fluidsynth-2.3.1
 CATEGORIES=	audio
@@ -10,7 +10,6 @@ HOMEPAGE=	https://www.fluidsynth.org/
 COMMENT=	Software synthesizer based on SoundFont2
 LICENSE=	gnu-lgpl-v2
 
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
@@ -42,6 +41,7 @@ SUBST_SED.oss+=		-e "s,/dev/midi,${DEVOSSMIDI},g"
 BUILDLINK_TRANSFORM+=	rm:-Werror=incompatible-pointer-types
 
 .include "options.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../devel/libgetopt/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2022/11/26 17:53:02 adam Exp $
+# $NetBSD: Makefile,v 1.19 2023/01/24 18:36:21 wiz Exp $
 
 DISTNAME=	benchmark-1.7.1
 PKGNAME=	google-${DISTNAME}
@@ -12,7 +12,6 @@ HOMEPAGE=	https://github.com/google/benchmark
 COMMENT=	Microbenchmark support library
 LICENSE=	apache-2.0
 
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 CMAKE_ARGS+=	-DBENCHMARK_ENABLE_GTEST_TESTS=OFF
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
@@ -29,6 +28,7 @@ BUILDLINK_TRANSFORM+=	rm:-Werror
 PYTHON_FOR_BUILD_ONLY=	yes
 REPLACE_PYTHON=		*.py */*.py */*/*.py
 
+.include "../../devel/cmake/build.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

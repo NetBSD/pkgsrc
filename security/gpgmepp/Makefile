@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2022/11/23 16:18:58 adam Exp $
+# $NetBSD: Makefile,v 1.27 2023/01/24 18:36:32 wiz Exp $
 
 DISTNAME=	gpgmepp-15.12.2
 PKGREVISION=	24
@@ -13,16 +13,11 @@ LICENSE=	gnu-lgpl-v2.1
 
 BUILD_DEPENDS+=	extra-cmake-modules>=5.19.0:../../devel/extra-cmake-modules
 
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
-CMAKE_ARG_PATH=	..
-CONFIGURE_DIRS=	_KDE_build
 
 CMAKE_ARGS+=	-DKDE_INSTALL_USE_QT_SYS_PATHS=ON
 
-pre-configure:
-	${MKDIR} ${WRKSRC}/_KDE_build
-
+.include "../../devel/cmake/build.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../security/gpgme/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"

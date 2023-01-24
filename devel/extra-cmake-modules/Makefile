@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2022/09/29 00:36:30 markd Exp $
+# $NetBSD: Makefile,v 1.23 2023/01/24 18:36:22 wiz Exp $
 
 DISTNAME=	extra-cmake-modules-5.98.0
 CATEGORIES=	devel kde
@@ -10,10 +10,7 @@ HOMEPAGE=	https://community.kde.org/Frameworks
 COMMENT=	Extra modules and scripts for CMake
 LICENSE=	modified-bsd
 
-USE_CMAKE=	yes
 USE_LANGUAGES=	# none
-CMAKE_ARG_PATH=	..
-CONFIGURE_DIRS=	_KDE_build
 
 CMAKE_ARGS+=	-DBUILD_TESTING=OFF
 CMAKE_ARGS+=	-DBUILD_HTML_DOCS=OFF
@@ -24,7 +21,7 @@ CHECK_INTERPRETER_SKIP+=	share/ECM/kde-modules/kde-git-commit-hooks/clang-format
 CHECK_INTERPRETER_SKIP+=	share/ECM/kde-modules/kde-git-commit-hooks/pre-commit.in
 
 pre-configure:
-	${MKDIR} ${WRKSRC}/_KDE_build
 	${FIND} ${WRKSRC} -name \*.orig -exec rm {} \;
 
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"

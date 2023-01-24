@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2023/01/22 16:28:37 ryoon Exp $
+# $NetBSD: Makefile,v 1.51 2023/01/24 18:36:32 wiz Exp $
 
 DISTNAME=	keepassxc-2.7.4-src
 PKGNAME=	${DISTNAME:S/-src//}
@@ -18,13 +18,10 @@ SUPERSEDES+=	keepassx0-[0-9]*
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
-CMAKE_ARG_PATH=	..
 CMAKE_ARGS+=	-DKEEPASSXC_BUILD_TYPE=Release
 CMAKE_ARGS+=	-DWITH_XC_DOCS=OFF
 CMAKE_ARGS+=	-DWITH_XC_BROWSER=ON
-CONFIGURE_DIRS=	build
 
 NOT_PAX_MPROTECT_SAFE+=	bin/keepassxc
 
@@ -34,9 +31,7 @@ pre-configure: qmake-bin-add
 qmake-bin-add:
 	${LN} -sf ${QTDIR}/bin/qmake ${BUILDLINK_DIR}/bin/
 
-pre-configure:
-	${MKDIR} ${WRKSRC}/build
-
+.include "../../devel/cmake/build.mk"
 .include "../../converters/qrencode/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"

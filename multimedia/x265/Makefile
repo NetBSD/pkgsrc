@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2021/06/12 08:18:14 cirnatdan Exp $
+# $NetBSD: Makefile,v 1.36 2023/01/24 18:36:31 wiz Exp $
 
 DISTNAME=	x265_3.5
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -12,7 +12,6 @@ LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/source
 
-USE_CMAKE=		yes
 USE_LANGUAGES=		c c++
 
 CMAKE_ARGS+=	-DENABLE_PIC=ON
@@ -32,4 +31,5 @@ TOOL_DEPENDS+=	nasm>=2.13.0:../../devel/nasm
 .  endif
 .endif
 
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"

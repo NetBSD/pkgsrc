@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2023/01/16 08:35:31 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2023/01/24 18:36:20 wiz Exp $
 
 DISTNAME=	wildmidi-0.4.5
 PKGNAME=	lib${DISTNAME}
@@ -14,7 +14,6 @@ LICENSE=	gnu-lgpl-v3
 
 WRKSRC=		${WRKDIR}/wildmidi-${DISTNAME}
 USE_LANGUAGES=	c99
-USE_CMAKE=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -34,4 +33,5 @@ CMAKE_ARGS+=	-DWANT_OSS=ON
 .  endif
 .endif
 
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
