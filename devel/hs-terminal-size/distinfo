@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2022/05/10 09:47:37 jperkin Exp $
+$NetBSD: distinfo,v 1.5 2023/01/24 17:07:08 pho Exp $
 
-BLAKE2s (terminal-size-0.3.2.1.tar.gz) = 598e5e1884958894c3f7d4a685a8c44da5f4d1fcf9039d9e7b87ddab17f56d0f
-SHA512 (terminal-size-0.3.2.1.tar.gz) = 1e04705dda8ade9a06f8b369f1033a93ffb94a1b959a556e11f2373b25924adbbab4be0f3e077394e1023e0054044739df13406b69153c1542f4083be82a1584
-Size (terminal-size-0.3.2.1.tar.gz) = 4175 bytes
-SHA1 (patch-src_System_Console_Terminal_Posix.hsc) = b1d279cb57c038b51023167256480cc9a5007b0f
+BLAKE2s (terminal-size-0.3.3.tar.gz) = fcccc953bbb290913e2e9dadc9604ac64829e02eeef8bcd45fedb728ccc70fb2
+SHA512 (terminal-size-0.3.3.tar.gz) = eff444205905337503e208ae2ce925713c4ebdf1a92bdd915feef2f85a8d936d74c727b01e570aed64c151797b23800220460d520a0df0830b5419ad51d7f310
+Size (terminal-size-0.3.3.tar.gz) = 4291 bytes
+SHA1 (patch-src_System_Console_Terminal_Posix.hsc) = 19dfcee3348bbd65f47f57a3fc7e2ef12f80f6fe
