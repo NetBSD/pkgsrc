@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.563 2023/01/24 10:10:32 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.564 2023/01/24 12:12:23 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -723,3 +723,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-astroid to 2.13.3 [adam 2023-01-24]
 	Updated devel/py-pylint to 2.15.10 [adam 2023-01-24]
 	Updated graphics/cairo to 1.16.0nb8 [wiz 2023-01-24]
+	Updated textproc/hs-unicode-data to 0.4.0.1 [pho 2023-01-24]
