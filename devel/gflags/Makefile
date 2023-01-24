@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/03/21 22:14:33 adam Exp $
+# $NetBSD: Makefile,v 1.4 2023/01/24 18:36:22 wiz Exp $
 
 DISTNAME=	gflags-2.2.2
 CATEGORIES=	devel
@@ -10,7 +10,6 @@ HOMEPAGE=	https://github.com/gflags/gflags
 COMMENT=	Commandline flags module for C++
 LICENSE=	modified-bsd
 
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	bash:run
 TEST_TARGET=	test
@@ -25,5 +24,6 @@ PTHREAD_OPTS+=	require
 
 PKGCONFIG_OVERRIDE=	cmake/package.pc.in
 
+.include "../../devel/cmake/build.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.165 2022/12/31 21:21:55 adam Exp $
+# $NetBSD: Makefile,v 1.166 2023/01/24 18:36:22 wiz Exp $
 
 DISTNAME=	doxygen-1.9.6.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -20,7 +20,6 @@ FLEX_REQD=		2.6.4
 # Native std::filesystem requires GCC 9. Patch for emulation is still present
 # Tested to work with GCC 7.5.0 from NetBSD 9.2
 GCC_REQD+=		5
-USE_CMAKE=		yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake gs:run perl:run bison flex
 MAKE_ENV+=		PKGSRC_CFLAGS=${CFLAGS:Q}
@@ -73,6 +72,7 @@ post-install:
 	${RM} -f ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/doxywizard.1
 .endif
 
+.include "../../devel/cmake/build.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../graphics/graphviz/buildlink3.mk"
 .include "../../lang/python/pyversion.mk"

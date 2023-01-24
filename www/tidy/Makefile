@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2022/11/04 18:41:59 adam Exp $
+# $NetBSD: Makefile,v 1.57 2023/01/24 18:36:36 wiz Exp $
 
 DISTNAME=	tidy-html5-5.8.0
 PKGNAME=	${DISTNAME:S/-html5//}
@@ -14,7 +14,6 @@ LICENSE=	mit
 # for man page
 BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 
-USE_CMAKE=		yes
 USE_LANGUAGES=		c c++
 PKGCONFIG_OVERRIDE=	tidy.pc.cmake.in
 
@@ -23,4 +22,5 @@ GCC_REQD+=	4.4
 CMAKE_ARGS+=	-DMAN_INSTALL_DIR:PATH=${PKGMANDIR}/man1
 CMAKE_ARGS+=	-DINCLUDE_INSTALL_DIR:PATH=include/tidy
 
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"

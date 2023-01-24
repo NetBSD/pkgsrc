@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2022/11/30 19:55:00 adam Exp $
+# $NetBSD: Makefile,v 1.17 2023/01/24 18:36:29 wiz Exp $
 
 .include "../../lang/llvm/version.mk"
 
@@ -33,7 +33,6 @@ BUILD_DIRS+=		build_libcxxabi
 INSTALL_DIRS+=		${BUILD_DIRS}
 
 USE_LANGUAGES=	c c++
-USE_CMAKE=	yes
 
 SSP_SUPPORTED=		no
 PKGSRC_USE_STACK_CHECK=	no
@@ -169,6 +168,7 @@ post-install:
 	${PREFIX}/bin/llvm-ranlib \
 	  ${DESTDIR}${PREFIX}/wasi/lib/wasm32-wasi/libc++abi.a
 
+.include "../../devel/cmake/build.mk"
 .include "../../lang/llvm/buildlink3.mk"
 .include "../../lang/wasi-libc/buildlink3.mk"
 .include "../../lang/wasi-compiler-rt/buildlink3.mk"

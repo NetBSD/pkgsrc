@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2022/11/30 19:54:59 adam Exp $
+# $NetBSD: Makefile,v 1.86 2023/01/24 18:36:29 wiz Exp $
 #
 # When updating this, please also update:
 # devel/include-what-you-use
@@ -35,7 +35,6 @@ COMMENT=	Low Level Virtual Machine compiler infrastructure
 LICENSE=	apache-2.0
 
 USE_LANGUAGES=		c c++14
-USE_CMAKE=		yes
 GCC_REQD+=		7
 PYTHON_FOR_BUILD_ONLY=	yes
 
@@ -43,9 +42,6 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 NOT_FOR_PLATFORM+=	*-*-alpha
 NOT_FOR_PLATFORM+=	*-*-vax
-
-CONFIGURE_DIRS=		build
-CMAKE_ARG_PATH=		${WRKSRC}
 
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 CMAKE_ARGS+=	-DCMAKE_C_COMPILER=${CC:Q}
@@ -140,11 +136,11 @@ CMAKE_ARGS+=	-DPKGSRC_LLVM_PTHREADLIB=-lpthread
 # replacing config.guess is required even for cmake.
 # It is used to detect correct LLVM_HOST_TRIPLE, e.g. for NetBSD/evbarm.
 post-extract:
-	${MKDIR} ${WRKSRC}/build
 .for f in config.guess config.sub
 	${CP} ../../mk/gnu-config/${f} ${WRKSRC}/cmake/${f}
 .endfor
 
+.include "../../devel/cmake/build.mk"
 .include "../../archivers/zstd/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/application.mk"

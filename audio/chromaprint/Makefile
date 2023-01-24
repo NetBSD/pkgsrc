@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2022/09/27 20:58:21 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2023/01/24 18:36:18 wiz Exp $
 
 DISTNAME=	chromaprint-1.5.1
 PKGREVISION=	1
@@ -12,7 +12,6 @@ COMMENT=	Audio fingerprinting
 LICENSE=	mit
 
 USE_LANGUAGES=	c c++
-USE_CMAKE=	yes
 # build and install "fpcalc"
 CMAKE_ARGS+=	-DBUILD_TOOLS=ON
 CMAKE_ARGS+=	-DFFT_LIB=fftw3
@@ -32,6 +31,7 @@ CMAKE_ARGS+=	-DFFMPEG_LIB${lib}_LIBRARIES=${BUILDLINK_PREFIX.ffmpeg4}/lib/ffmpeg
 
 PKGCONFIG_OVERRIDE=	libchromaprint.pc.cmake
 
+.include "../../devel/cmake/build.mk"
 .include "../../math/fftw/buildlink3.mk"
 # On Darwin, chromaprint uses Accelerate.framework, but fpcalc still needs FFmpeg
 # does not support ffmpeg4 yet:

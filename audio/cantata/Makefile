@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2022/11/23 16:19:17 adam Exp $
+# $NetBSD: Makefile,v 1.37 2023/01/24 18:36:18 wiz Exp $
 
 DISTNAME=	cantata-2.4.2
 PKGREVISION=	18
@@ -15,7 +15,6 @@ LICENSE=	gnu-gpl-v3
 
 TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
 
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	bash:run perl:run pkg-config
 
@@ -31,6 +30,7 @@ PLIST_VARS+=	notdarwin
 PLIST.notdarwin=	yes
 .endif
 
+.include "../../devel/cmake/build.mk"
 .include "../../audio/libebur128/buildlink3.mk"
 .include "../../audio/mpg123/buildlink3.mk"
 .include "../../audio/taglib/buildlink3.mk"

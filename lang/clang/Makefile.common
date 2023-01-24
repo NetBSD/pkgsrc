@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.52 2022/08/14 12:13:03 tnn Exp $
+# $NetBSD: Makefile.common,v 1.53 2023/01/24 18:36:28 wiz Exp $
 # used by lang/clang/Makefile
 # used by lang/clang-tools-extra/Makefile
 
@@ -12,11 +12,7 @@ HOMEPAGE=	https://clang.llvm.org/
 COMMENT=	C language family frontend for LLVM
 LICENSE=	apache-2.0
 
-CONFIGURE_DIRS=		build
-CMAKE_ARG_PATH=		${WRKSRC}
-
 USE_LANGUAGES=		c c++14
-USE_CMAKE=		yes
 GCC_REQD+=		7
 
 CMAKE_ARGS+=	-DLLVM_CONFIG=${LLVM_CONFIG_PATH:Q}
@@ -114,6 +110,7 @@ LIBCPP_CHECK=	NO
 CMAKE_ARGS+=			-DCLANG_DEFAULT_CXX_STDLIB:STRING="libstdc++"
 .endif
 
+.include "../../devel/cmake/build.mk"
 # Enable full LLVM suite on SunOS
 .if ${OPSYS} == "SunOS"
 .include "../../lang/compiler-rt/buildlink3.mk"
@@ -162,9 +159,6 @@ PKG_FAIL_REASON+=	"z3 PKG_OPTION must be enabled in lang/llvm"
 .  include "../../math/z3/buildlink3.mk"
 CMAKE_ARGS+=		-DLLVM_ENABLE_Z3_SOLVER=ON
 .endif
-
-post-extract:
-	${MKDIR} ${WRKSRC}/build
 
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

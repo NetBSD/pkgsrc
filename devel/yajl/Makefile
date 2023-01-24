@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2020/01/18 23:30:44 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2023/01/24 18:36:24 wiz Exp $
 
 DISTNAME=	yajl-2.1.0
 CATEGORIES=	devel textproc
@@ -13,7 +13,7 @@ WRKSRC=		${WRKDIR}/lloyd-yajl-66cb08c
 
 USE_LANGUAGES=		c
 USE_LIBTOOL=		yes
-USE_CMAKE=		yes
 PKGCONFIG_OVERRIDE=	src/yajl.pc.cmake
 
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2021/12/08 16:02:35 adam Exp $
+# $NetBSD: Makefile,v 1.38 2023/01/24 18:36:33 wiz Exp $
 
 DISTNAME=	polkit-qt-1-0.112.0
 PKGNAME=	${DISTNAME:S/-qt-1-/-qt-/}
@@ -16,7 +16,6 @@ BUILD_DEPENDS+=	automoc4>=0.9.87:../../devel/automoc4
 
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
-USE_CMAKE=	yes
 
 CMAKE_ARGS+=	-DUSE_QT4=ON
 
@@ -26,10 +25,10 @@ PKGCONFIG_OVERRIDE+=	polkit-qt-core-1.pc.cmake polkit-qt-gui-1.pc.cmake polkit-q
 pre-configure:
 	${LN} -sf ${QTDIR}/bin/qmake ${BUILDLINK_DIR}/bin/
 
+.include "../../devel/cmake/build.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../security/polkit/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../x11/qt4-qdbus/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"

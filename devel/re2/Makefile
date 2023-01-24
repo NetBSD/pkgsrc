@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2020/08/06 16:23:21 adam Exp $
+# $NetBSD: Makefile,v 1.9 2023/01/24 18:36:24 wiz Exp $
 
 DISTNAME=	re2-${GITHUB_TAG:S/-//g}
 CATEGORIES=	devel
@@ -10,7 +10,6 @@ HOMEPAGE=	https://github.com/google/re2
 COMMENT=	Regular expression library
 LICENSE=	modified-bsd
 
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++11
 TEST_ENV=	LD_LIBRARY_PATH=${WRKSRC}
 TEST_TARGET=	test
@@ -30,4 +29,5 @@ SUBST_SED.path+=	-e 's,@libdir@,${PREFIX}/lib,'
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/re2.pc ${DESTDIR}${PREFIX}/lib/pkgconfig
 
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"

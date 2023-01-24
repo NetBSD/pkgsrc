@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2023/01/03 17:37:02 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2023/01/24 18:36:24 wiz Exp $
 
 DISTNAME=	xournalpp-1.1.3
 PKGREVISION=	1
@@ -11,7 +11,6 @@ HOMEPAGE=	https://github.com/xournalpp/xournalpp
 COMMENT=	Take notes, sketch and annotate PDFs
 LICENSE=	gnu-gpl-v2
 
-USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_TOOLS+=	msgfmt msgmerge xgettext
 USE_LANGUAGES=	c c++
@@ -42,6 +41,7 @@ INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/* ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1 || ${TRUE}
 
+.include "../../devel/cmake/build.mk"
 .include "../../archivers/libzip/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../audio/portaudio/buildlink3.mk"
