@@ -1,16 +1,19 @@
-@comment $NetBSD: PLIST,v 1.8 2022/01/22 15:32:06 wiz Exp $
-${PYSITELIB}/_version.py
-${PYSITELIB}/_version.pyc
-${PYSITELIB}/_version.pyo
+@comment $NetBSD: PLIST,v 1.9 2023/01/24 19:34:58 adam Exp $
 ${PLIST.py2x}${PYSITELIB}/${EGG_INFODIR}
 ${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/configobj.py
-${PYSITELIB}/configobj.pyc
-${PYSITELIB}/configobj.pyo
-${PYSITELIB}/validate.py
-${PYSITELIB}/validate.pyc
-${PYSITELIB}/validate.pyo
+${PYSITELIB}/configobj/__init__.py
+${PYSITELIB}/configobj/__init__.pyc
+${PYSITELIB}/configobj/__init__.pyo
+${PYSITELIB}/configobj/_version.py
+${PYSITELIB}/configobj/_version.pyc
+${PYSITELIB}/configobj/_version.pyo
+${PYSITELIB}/configobj/validate.py
+${PYSITELIB}/configobj/validate.pyc
+${PYSITELIB}/configobj/validate.pyo
+${PYSITELIB}/validate/__init__.py
+${PYSITELIB}/validate/__init__.pyc
+${PYSITELIB}/validate/__init__.pyo
