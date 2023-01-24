@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2022/02/11 01:18:01 pho Exp $
+$NetBSD: distinfo,v 1.5 2023/01/24 12:29:23 pho Exp $
 
-BLAKE2s (unicode-show-0.1.1.0.tar.gz) = fa8d8fbfcd10af337027bb311fe5a0a0252385280df68ad7f839ba89fe0ddcbb
-SHA512 (unicode-show-0.1.1.0.tar.gz) = ac3da09f865176c8ea1a125f7082fac047fe4709ec7a822149892ecfff27ace977ba9d709a363220eee08e74e8f2a38f0b5da1a705e4965d872fee245c51449e
-Size (unicode-show-0.1.1.0.tar.gz) = 4702 bytes
+BLAKE2s (unicode-show-0.1.1.1.tar.gz) = 7bc48e4015b0bbe97cd91b44db9ec4c044912def670e21d0858fddd4bd5ed400
+SHA512 (unicode-show-0.1.1.1.tar.gz) = 6d29e3b169d3af638ac1e2398709dd1863483db826747336f8b8141888d8350d7196ed40b68d7d707bfc15264006d4dc8c2d99bd3213bfbc74668c65cfab0591
+Size (unicode-show-0.1.1.1.tar.gz) = 4576 bytes
