@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/01/24 14:00:51 pho Exp $
+
+BLAKE2s (HUnit-1.6.2.0.tar.gz) = 594eab0c04907456e7231b2316ceddb242163f764e1de9f95787fdd523e3667c
+SHA512 (HUnit-1.6.2.0.tar.gz) = b27c33545fcb4ca78dd9543eb0ab2f09e5edd989d116fe2136d876eb94745e6d384967ea4b3c6dbf0f03511091a82ecd0b299c8ab00769c57d6dddcddc27e8e5
+Size (HUnit-1.6.2.0.tar.gz) = 21179 bytes
