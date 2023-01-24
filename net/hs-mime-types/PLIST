@@ -1,19 +1,19 @@
-@comment $NetBSD: PLIST,v 1.2 2021/04/24 12:18:38 pho Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/01/24 12:41:00 pho Exp $
 lib/mime-types-${PKGVERSION}/${HS_VERSION}/package-description
 lib/mime-types-${PKGVERSION}/${HS_VERSION}/package-id
-lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-lib/${HS_PLATFORM}/${HS_PKGID}/Network/Mime.dyn_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Network/Mime.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Network/Mime.hi
-lib/${HS_PLATFORM}/${HS_PKGID}/Network/Mime.p_hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Network/Mime.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
-lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-share/doc/${HS_PLATFORM}/mime-types-${PKGVERSION}/LICENSE
-share/doc/${HS_PLATFORM}/mime-types-${PKGVERSION}/html/Network-Mime.html
-share/doc/${HS_PLATFORM}/mime-types-${PKGVERSION}/html/doc-index.html
-share/doc/${HS_PLATFORM}/mime-types-${PKGVERSION}/html/haddock-bundle.min.js
-share/doc/${HS_PLATFORM}/mime-types-${PKGVERSION}/html/index.html
-share/doc/${HS_PLATFORM}/mime-types-${PKGVERSION}/html/linuwial.css
-share/doc/${HS_PLATFORM}/mime-types-${PKGVERSION}/html/meta.json
-share/doc/${HS_PLATFORM}/mime-types-${PKGVERSION}/html/mime-types.haddock
-share/doc/${HS_PLATFORM}/mime-types-${PKGVERSION}/html/quick-jump.css
-share/doc/${HS_PLATFORM}/mime-types-${PKGVERSION}/html/synopsis.png
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+${PLIST.doc}share/doc/${HS_PLATFORM}/mime-types-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/${HS_PLATFORM}/mime-types-${PKGVERSION}/html/Network-Mime.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/mime-types-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/mime-types-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/mime-types-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/mime-types-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/mime-types-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/mime-types-${PKGVERSION}/html/mime-types.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/mime-types-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/mime-types-${PKGVERSION}/html/synopsis.png
