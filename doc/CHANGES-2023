@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.666 2023/01/25 17:40:14 pho Exp $
+$NetBSD: CHANGES-2023,v 1.667 2023/01/25 17:40:55 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -859,3 +859,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated misc/cabal-install to 3.8.1.0 [pho 2023-01-25]
 	Updated devel/swagger-codegen to 3.0.39 [schmonz 2023-01-25]
 	Updated lang/hs-hslua-classes to 2.2.0 [pho 2023-01-25]
+	Updated lang/hs-hslua-objectorientation to 2.2.1 [pho 2023-01-25]
