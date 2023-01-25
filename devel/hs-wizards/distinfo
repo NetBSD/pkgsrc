@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:15:04 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/01/25 13:48:31 pho Exp $
 
 BLAKE2s (wizards-1.0.3.tar.gz) = dc300e093a75023123a905f867ee8a5d7cd2e4929849e4db62d8b13f39c1bc0a
 SHA512 (wizards-1.0.3.tar.gz) = 74289bce609954ecd2d16729b67f4655ebfa2b5211303c2c64c1a7636e78e2b1dc3823472be8d5851fc490d9ff80559bdfbfda59cc753b60cacc4dd1b512663c
 Size (wizards-1.0.3.tar.gz) = 8243 bytes
-SHA1 (patch-wizards.cabal) = cb2e6ab55548ecc1e9f2e9f0c9c5c4ebb7cd2448
