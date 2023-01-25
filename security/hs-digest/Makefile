@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.8 2022/02/26 03:58:21 pho Exp $
+# $NetBSD: Makefile,v 1.9 2023/01/25 09:43:43 pho Exp $
 
-DISTNAME=	digest-0.0.1.3
-PKGREVISION=	2
+DISTNAME=	digest-0.0.1.5
 CATEGORIES=	security
 
 MAINTAINER=	zecrazytux@zecrazytux.net
 COMMENT=	Various cryptographic hashes for bytestrings; CRC32 and Adler32
 LICENSE=	modified-bsd
+
+USE_TOOLS+=	pkg-config
 
 .include "../../mk/haskell.mk"
 .include "../../devel/zlib/buildlink3.mk"
