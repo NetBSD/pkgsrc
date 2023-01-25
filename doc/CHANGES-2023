@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.626 2023/01/25 13:30:42 adam Exp $
+$NetBSD: CHANGES-2023,v 1.627 2023/01/25 13:32:28 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -807,3 +807,16 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/ruby-rails61 to 6.1.7.2 [taca 2023-01-25]
 	Updated devel/py-cytoolz to 0.12.1 [adam 2023-01-25]
 	Updated sysutils/py-cpuinfo to 9.0.0 [adam 2023-01-25]
+	Updated devel/ruby-activesupport70 to 7.0.4.2 [taca 2023-01-25]
+	Updated devel/ruby-activemodel70 to 7.0.4.2 [taca 2023-01-25]
+	Updated devel/ruby-activejob70 to 7.0.4.2 [taca 2023-01-25]
+	Updated www/ruby-actionview70 to 7.0.4.2 [taca 2023-01-25]
+	Updated www/ruby-actionpack70 to 7.0.4.2 [taca 2023-01-25]
+	Updated databases/ruby-activerecord70 to 7.0.4.2 [taca 2023-01-25]
+	Updated devel/ruby-activestorage70 to 7.0.4.2 [taca 2023-01-25]
+	Updated mail/ruby-actionmailer70 to 7.0.4.2 [taca 2023-01-25]
+	Updated mail/ruby-actionmailbox70 to 7.0.4.2 [taca 2023-01-25]
+	Updated www/ruby-actioncable70 to 7.0.4.2 [taca 2023-01-25]
+	Updated devel/ruby-railties70 to 7.0.4.2 [taca 2023-01-25]
+	Updated textproc/ruby-actiontext70 to 7.0.4.2 [taca 2023-01-25]
+	Updated www/ruby-rails70 to 7.0.4.2 [taca 2023-01-25]
