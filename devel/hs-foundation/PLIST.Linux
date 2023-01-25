@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.Linux,v 1.1 2021/05/05 16:18:07 pho Exp $
-lib/${HS_PLATFORM}/${HS_PKGID}/Foundation/System/Bindings/Linux.dyn_hi
+@comment $NetBSD: PLIST.Linux,v 1.2 2023/01/25 14:32:57 pho Exp $
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Foundation/System/Bindings/Linux.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Foundation/System/Bindings/Linux.hi
-lib/${HS_PLATFORM}/${HS_PKGID}/Foundation/System/Bindings/Linux.p_hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Foundation/System/Bindings/Linux.p_hi
