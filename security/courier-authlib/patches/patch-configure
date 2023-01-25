@@ -1,8 +1,8 @@
-$NetBSD: patch-configure,v 1.1 2020/04/13 19:11:07 joerg Exp $
+$NetBSD: patch-configure,v 1.2 2023/01/25 19:31:05 bsiegert Exp $
 
---- configure.orig	2019-07-24 23:58:04.000000000 +0000
+--- configure.orig	2022-12-02 13:40:39.000000000 +0000
 +++ configure
-@@ -18837,7 +18837,7 @@ done
+@@ -20021,7 +20021,7 @@ done
  test -n "$PG_CONFIG" || PG_CONFIG="pg_config"
  
  
@@ -10,22 +10,13 @@ $NetBSD: patch-configure,v 1.1 2020/04/13 19:11:07 joerg Exp $
 +test -n "$PGSQL_LIBS" || PGSQL_LIBS="-lpq"
  
  # Check whether --with-pgsql-libs was given.
- if test "${with_pgsql_libs+set}" = set; then :
-@@ -19653,7 +19653,7 @@ rm -f authdaemonrc.h authldaprc.h authmy
+ if test ${with_pgsql_libs+y}
+@@ -20822,7 +20822,7 @@ rm -f authdaemonrc.h authldaprc.h authmy
  
  result=""
  
--if test -x "$COURIERCONFIG"
-+if false && test -x "$COURIERCONFIG"
- then
- 	$COURIERCONFIG >conftest.out || exit 1
- 	sed -n '/^mail/p' <conftest.out >conftest2.out || exit 1
-@@ -19665,7 +19665,7 @@ then
- 	result=" (from courier-config)"
- fi
- 
 -if test -x "$bindir/courierauthconfig"
-+if false && test -x "$bindir/courierauthconfig"
++if false
  then
  	$bindir/courierauthconfig --configfiles >conftest.out || exit 1
  	sed -n '/^mail/p' <conftest.out >conftest2.out || exit 1
