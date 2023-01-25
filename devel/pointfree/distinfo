@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2022/02/11 13:17:21 pho Exp $
+$NetBSD: distinfo,v 1.6 2023/01/25 13:45:03 pho Exp $
 
-BLAKE2s (pointfree-1.1.1.8.tar.gz) = 6c47340e598f9e5fe7fe88d6e284ea7c67d1655129a3fe4cb918cbf8a6b6765b
-SHA512 (pointfree-1.1.1.8.tar.gz) = 476d7e57b58c4a3b46c67d11449366d7efa3ac267c5a0acb253ed535381b9dedc70c375505a0f53e3f14f7bc62d591dbf3fca0d231a5170f3374d249cfa7dc12
-Size (pointfree-1.1.1.8.tar.gz) = 20568 bytes
-SHA1 (patch-pointfree.cabal) = a3f936af1cb9e0a5a507035a7cf0fcaef44b8d48
+BLAKE2s (pointfree-1.1.1.9.tar.gz) = 41ebe51fe326e6734b0e11117312b5f2d52d631a3e6cfe3ab86dd2a618736bdd
+SHA512 (pointfree-1.1.1.9.tar.gz) = b9f7f002b26176c58531e816ff06c76fc10fcbf20dc5b30860ff9e8408167e6e51f980da77945fc5a17ad0cbf76c832f77db4e222be1625cb9a2a12bc5b63a7d
+Size (pointfree-1.1.1.9.tar.gz) = 20498 bytes
