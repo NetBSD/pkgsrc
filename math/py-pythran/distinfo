@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2023/01/24 09:18:23 adam Exp $
+$NetBSD: distinfo,v 1.7 2023/01/25 09:06:54 adam Exp $
 
 BLAKE2s (pythran-0.12.1.tar.gz) = 2e30bfd595ba4b12d43aaac62ccc329b59dc777e3a5ad484febf6235c37616dd
 SHA512 (pythran-0.12.1.tar.gz) = e0a78df2c0a9b678a51ea2446588b5287a1f838e8387dd904b011b9314e61eebe0f53b6ea92107e766eebbea73ca0bdd4095a1805eb76a63cae063f82cdfa66b
 Size (pythran-0.12.1.tar.gz) = 3995885 bytes
+SHA1 (patch-third__party_xsimd_arch_xsimd__scalar.hpp) = b7609b1575d8c5e4c8ea6c4969f8ef4ff352c20c
