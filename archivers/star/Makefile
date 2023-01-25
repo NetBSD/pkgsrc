@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.63 2022/11/02 09:08:54 micha Exp $
+# $NetBSD: Makefile,v 1.64 2023/01/25 16:18:42 micha Exp $
 
-DISTNAME=	2022-10-16
-PKGNAME=	star-1.6.2
-PKGREVISION=	1
+DISTNAME=	2023-01-12
+PKGNAME=	star-1.7.0
 CATEGORIES=	archivers
 MASTER_SITES=	https://codeberg.org/schilytools/schilytools/archive/
 DIST_SUBDIR=	schilytools
