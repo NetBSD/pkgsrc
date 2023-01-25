@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.635 2023/01/25 13:53:39 pho Exp $
+$NetBSD: CHANGES-2023,v 1.636 2023/01/25 13:59:47 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -828,3 +828,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/ruby-rugged to 1.5.1 [taca 2023-01-25]
 	Updated security/ruby-metasploit-payloads to 2.0.108 [taca 2023-01-25]
 	Updated devel/hs-th-env to 0.1.1 [pho 2023-01-25]
+	Updated devel/hs-retry to 0.9.3.0 [pho 2023-01-25]
