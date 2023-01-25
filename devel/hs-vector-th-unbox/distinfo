@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2022/08/22 10:32:15 wiz Exp $
+$NetBSD: distinfo,v 1.7 2023/01/25 18:50:48 pho Exp $
 
 BLAKE2s (vector-th-unbox-0.2.2.tar.gz) = 2adb032117f76a2545ff1cc4528105d1fe4ff3c650f8e43243e960941cb4dbed
 SHA512 (vector-th-unbox-0.2.2.tar.gz) = 55af4bcced3a39464aca6dca95a8148498a698d9402a583b916aa178d58d3895cc609525416de53c0a39566b892c7b09296fc442db7851a19d071142cce72a46
 Size (vector-th-unbox-0.2.2.tar.gz) = 4864 bytes
-SHA1 (patch-vector-th-unbox.cabal) = b1d7f034d921f89677ceb86986caa9be7bd70e7e
