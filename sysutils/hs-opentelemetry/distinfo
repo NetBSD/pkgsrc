@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/02/16 10:07:39 pho Exp $
+$NetBSD: distinfo,v 1.2 2023/01/25 14:25:20 pho Exp $
 
-BLAKE2s (opentelemetry-0.7.0.tar.gz) = 2ada2b89b4e858d6590d9f85e7afb2a8a8b850620db0122f070bfa1695260b77
-SHA512 (opentelemetry-0.7.0.tar.gz) = a85fdff1cd1da3b06e6e825504342a4ef2111de5c56429e80db9bf16a26420b32f6646913bfff38848c5b6d641dc8148a70110f3751fb063a80309ff5fd2f3e5
-Size (opentelemetry-0.7.0.tar.gz) = 6769 bytes
+BLAKE2s (opentelemetry-0.8.0.tar.gz) = e587b82f2f991d59c49a78588195645f8fae750119ae9fb89c028cb7729fb93c
+SHA512 (opentelemetry-0.8.0.tar.gz) = c81c41e65ec0d9c0d2cb232012516aea944d40bb5dd160d21c932975618822e98c1efcd210eeb377874a06a970ba46ed13ba5b60772cdefee61bfb63b0226037
+Size (opentelemetry-0.8.0.tar.gz) = 6769 bytes
