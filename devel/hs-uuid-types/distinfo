@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2022/02/11 13:42:30 pho Exp $
+$NetBSD: distinfo,v 1.6 2023/01/25 16:39:11 pho Exp $
 
 BLAKE2s (uuid-types-1.0.5.tar.gz) = 3c7b4f78c51e7e33d25d2688d7017a3f6843ae816482cb94d353c7f52150f421
 SHA512 (uuid-types-1.0.5.tar.gz) = 0e0821a426120ab63d991a6cd39ded65a89472751ada4d5fb5e4f12177d8e797ede3b6b74d6817ce260d6334adeb42de31b0073389f58a27a06ec8ea4a574ef6
 Size (uuid-types-1.0.5.tar.gz) = 11922 bytes
-SHA1 (patch-uuid-types.cabal) = d54fba053ee7c68725beeacd902347e84cfb8592
