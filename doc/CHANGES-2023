@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.620 2023/01/25 10:00:37 pho Exp $
+$NetBSD: CHANGES-2023,v 1.621 2023/01/25 10:14:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -786,3 +786,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated archivers/hs-zlib to 0.6.3.0 [pho 2023-01-25]
 	Updated archivers/hs-zip-archive to 0.4.2.2 [pho 2023-01-25]
 	Updated www/hs-cookie to 0.4.6 [pho 2023-01-25]
+	Added sysutils/py-kubernetes version 25.3.0 [adam 2023-01-25]
+	Updated devel/py-dotenv to 0.21.1 [adam 2023-01-25]
