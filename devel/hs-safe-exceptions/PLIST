@@ -1,19 +1,19 @@
-@comment $NetBSD: PLIST,v 1.1 2022/02/16 07:43:54 pho Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/01/25 01:26:27 pho Exp $
 lib/safe-exceptions-${PKGVERSION}/${HS_VERSION}/package-description
 lib/safe-exceptions-${PKGVERSION}/${HS_VERSION}/package-id
-lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-lib/${HS_PLATFORM}/${HS_PKGID}/Control/Exception/Safe.dyn_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Control/Exception/Safe.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Control/Exception/Safe.hi
-lib/${HS_PLATFORM}/${HS_PKGID}/Control/Exception/Safe.p_hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Control/Exception/Safe.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
-lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-share/doc/${HS_PLATFORM}/safe-exceptions-${PKGVERSION}/LICENSE
-share/doc/${HS_PLATFORM}/safe-exceptions-${PKGVERSION}/html/Control-Exception-Safe.html
-share/doc/${HS_PLATFORM}/safe-exceptions-${PKGVERSION}/html/doc-index.html
-share/doc/${HS_PLATFORM}/safe-exceptions-${PKGVERSION}/html/haddock-bundle.min.js
-share/doc/${HS_PLATFORM}/safe-exceptions-${PKGVERSION}/html/index.html
-share/doc/${HS_PLATFORM}/safe-exceptions-${PKGVERSION}/html/linuwial.css
-share/doc/${HS_PLATFORM}/safe-exceptions-${PKGVERSION}/html/meta.json
-share/doc/${HS_PLATFORM}/safe-exceptions-${PKGVERSION}/html/quick-jump.css
-share/doc/${HS_PLATFORM}/safe-exceptions-${PKGVERSION}/html/safe-exceptions.haddock
-share/doc/${HS_PLATFORM}/safe-exceptions-${PKGVERSION}/html/synopsis.png
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+${PLIST.doc}share/doc/${HS_PLATFORM}/safe-exceptions-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/${HS_PLATFORM}/safe-exceptions-${PKGVERSION}/html/Control-Exception-Safe.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/safe-exceptions-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/safe-exceptions-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/safe-exceptions-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/safe-exceptions-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/safe-exceptions-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/safe-exceptions-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/safe-exceptions-${PKGVERSION}/html/safe-exceptions.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/safe-exceptions-${PKGVERSION}/html/synopsis.png
