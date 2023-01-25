@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.633 2023/01/25 13:48:07 taca Exp $
+$NetBSD: CHANGES-2023,v 1.634 2023/01/25 13:52:19 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -826,3 +826,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/libgit2 to 1.5.1 [taca 2023-01-25]
 	Updated devel/pointfree to 1.1.1.9 [pho 2023-01-25]
 	Updated devel/ruby-rugged to 1.5.1 [taca 2023-01-25]
+	Updated security/ruby-metasploit-payloads to 2.0.108 [taca 2023-01-25]
