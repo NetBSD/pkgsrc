@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2022/10/24 18:18:15 adam Exp $
+# $NetBSD: Makefile,v 1.64 2023/01/25 09:08:20 wiz Exp $
 
 DISTNAME=	scipy-1.9.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -35,8 +35,6 @@ FFLAGS+=	-fPIC
 LDFLAGS.Darwin+=	-headerpad_max_install_names
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 37
-
-REPLACE_PYTHON+=	scipy/sparse/linalg/isolve/tests/test_gcrotmk.py
 
 # Prefer boost-headers from PkgSrc which are properly patched.
 post-configure:
