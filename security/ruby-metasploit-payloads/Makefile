@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2023/01/19 14:51:26 taca Exp $
+# $NetBSD: Makefile,v 1.29 2023/01/25 13:51:58 taca Exp $
 
-DISTNAME=	metasploit-payloads-2.0.107
+DISTNAME=	metasploit-payloads-2.0.108
 CATEGORIES=	security
 
 MAINTAINER=	minskim@NetBSD.org
