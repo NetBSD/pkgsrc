@@ -1,21 +1,21 @@
-@comment $NetBSD: PLIST,v 1.2 2021/04/24 15:21:03 pho Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/01/25 15:24:23 pho Exp $
 lib/doclayout-${PKGVERSION}/${HS_VERSION}/package-description
 lib/doclayout-${PKGVERSION}/${HS_VERSION}/package-id
-lib/${HS_PLATFORM}/${HS_PKGID}/Text/DocLayout.dyn_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/DocLayout.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Text/DocLayout.hi
-lib/${HS_PLATFORM}/${HS_PKGID}/Text/DocLayout.p_hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/DocLayout.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
-lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-share/doc/${HS_PLATFORM}/doclayout-${PKGVERSION}/LICENSE
-share/doc/${HS_PLATFORM}/doclayout-${PKGVERSION}/html/Text-DocLayout.html
-share/doc/${HS_PLATFORM}/doclayout-${PKGVERSION}/html/doc-index.html
-share/doc/${HS_PLATFORM}/doclayout-${PKGVERSION}/html/doclayout.haddock
-share/doc/${HS_PLATFORM}/doclayout-${PKGVERSION}/html/haddock-bundle.min.js
-share/doc/${HS_PLATFORM}/doclayout-${PKGVERSION}/html/index.html
-share/doc/${HS_PLATFORM}/doclayout-${PKGVERSION}/html/linuwial.css
-share/doc/${HS_PLATFORM}/doclayout-${PKGVERSION}/html/meta.json
-share/doc/${HS_PLATFORM}/doclayout-${PKGVERSION}/html/quick-jump.css
-share/doc/${HS_PLATFORM}/doclayout-${PKGVERSION}/html/synopsis.png
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${PLIST.doc}share/doc/${HS_PLATFORM}/doclayout-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/${HS_PLATFORM}/doclayout-${PKGVERSION}/html/Text-DocLayout.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/doclayout-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/doclayout-${PKGVERSION}/html/doclayout.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/doclayout-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/doclayout-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/doclayout-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/doclayout-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/doclayout-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/doclayout-${PKGVERSION}/html/synopsis.png
 share/${HS_PLATFORM}/doclayout-${PKGVERSION}/README.md
 share/${HS_PLATFORM}/doclayout-${PKGVERSION}/changelog.md
