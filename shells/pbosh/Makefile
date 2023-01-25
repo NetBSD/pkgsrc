@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2022/09/30 15:46:13 micha Exp $
+# $NetBSD: Makefile,v 1.23 2023/01/25 16:40:38 micha Exp $
 
-DISTNAME=	2022-09-18
-PKGNAME=	pbosh-20220918
+DISTNAME=	2023-01-12
+PKGNAME=	pbosh-20230112
 CATEGORIES=	shells
 MASTER_SITES=	https://codeberg.org/schilytools/schilytools/archive/
 DIST_SUBDIR=	schilytools
