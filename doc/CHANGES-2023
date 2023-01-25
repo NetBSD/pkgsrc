@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.598 2023/01/24 23:49:56 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.599 2023/01/25 01:22:48 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -763,3 +763,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-cachelib to 0.10.1 [adam 2023-01-24]
 	Updated net/py-minio to 7.1.13 [adam 2023-01-24]
 	Updated games/dMagnetic to 0.35 [wiz 2023-01-24]
+	Updated misc/hs-extra to 1.7.12 [pho 2023-01-25]
