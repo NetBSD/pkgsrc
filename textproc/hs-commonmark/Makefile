@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.6 2022/02/26 03:58:26 pho Exp $
+# $NetBSD: Makefile,v 1.7 2023/01/25 03:43:28 pho Exp $
 
-DISTNAME=	commonmark-0.2.1.1
-PKGREVISION=	2
+DISTNAME=	commonmark-0.2.2
 CATEGORIES=	textproc
 
 MAINTAINER=	pho@cielonegro.org
 COMMENT=	Pure Haskell commonmark parser
 LICENSE=	modified-bsd
 
-.include "../../mk/haskell.mk"
+.include "../../textproc/hs-unicode-data/buildlink3.mk"
 .include "../../textproc/hs-unicode-transforms/buildlink3.mk"
+.include "../../mk/haskell.mk"
 .include "../../mk/bsd.pkg.mk"
