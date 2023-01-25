@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.12 2020/04/13 19:11:07 joerg Exp $
+@comment $NetBSD: PLIST,v 1.13 2023/01/25 19:31:05 bsiegert Exp $
 bin/courierauthconfig
-include/courier_auth_config.h
 include/courierauth.h
 include/courierauthdebug.h
 include/courierauthsasl.h
@@ -21,9 +20,13 @@ man/man1/authtest.1
 man/man1/courierlogger.1
 man/man3/auth_enumerate.3
 man/man3/auth_generic.3
+man/man3/auth_generic_meta.3
 man/man3/auth_getoption.3
 man/man3/auth_getuserinfo.3
+man/man3/auth_getuserinfo_meta.3
 man/man3/auth_login.3
+man/man3/auth_login_meta.3
+man/man3/auth_meta.3
 man/man3/auth_mkhomedir.3
 man/man3/auth_passwd.3
 man/man3/auth_sasl.3
@@ -42,10 +45,10 @@ sbin/makeuserdb
 sbin/pw2userdb
 sbin/sysconftool
 sbin/userdb
-sbin/userdb-test-cram-md5
 sbin/userdbpw
 share/doc/courier-authlib/INSTALL.html
 share/doc/courier-authlib/README.authdebug.html
 share/doc/courier-authlib/README.html
 share/doc/courier-authlib/README_authlib.html
 share/examples/courier-authlib/authdaemonrc.dist
+share/examples/courier-authlib/samplepipe.pl
