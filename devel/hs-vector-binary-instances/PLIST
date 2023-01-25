@@ -1,19 +1,19 @@
-@comment $NetBSD: PLIST,v 1.2 2021/04/23 17:45:24 pho Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/01/25 18:52:56 pho Exp $
 lib/vector-binary-instances-${PKGVERSION}/${HS_VERSION}/package-description
 lib/vector-binary-instances-${PKGVERSION}/${HS_VERSION}/package-id
-lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-lib/${HS_PLATFORM}/${HS_PKGID}/Data/Vector/Binary.dyn_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Vector/Binary.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Vector/Binary.hi
-lib/${HS_PLATFORM}/${HS_PKGID}/Data/Vector/Binary.p_hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Vector/Binary.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
-lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-share/doc/${HS_PLATFORM}/vector-binary-instances-${PKGVERSION}/LICENSE
-share/doc/${HS_PLATFORM}/vector-binary-instances-${PKGVERSION}/html/Data-Vector-Binary.html
-share/doc/${HS_PLATFORM}/vector-binary-instances-${PKGVERSION}/html/doc-index.html
-share/doc/${HS_PLATFORM}/vector-binary-instances-${PKGVERSION}/html/haddock-bundle.min.js
-share/doc/${HS_PLATFORM}/vector-binary-instances-${PKGVERSION}/html/index.html
-share/doc/${HS_PLATFORM}/vector-binary-instances-${PKGVERSION}/html/linuwial.css
-share/doc/${HS_PLATFORM}/vector-binary-instances-${PKGVERSION}/html/meta.json
-share/doc/${HS_PLATFORM}/vector-binary-instances-${PKGVERSION}/html/quick-jump.css
-share/doc/${HS_PLATFORM}/vector-binary-instances-${PKGVERSION}/html/synopsis.png
-share/doc/${HS_PLATFORM}/vector-binary-instances-${PKGVERSION}/html/vector-binary-instances.haddock
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+${PLIST.doc}share/doc/${HS_PLATFORM}/vector-binary-instances-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/${HS_PLATFORM}/vector-binary-instances-${PKGVERSION}/html/Data-Vector-Binary.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/vector-binary-instances-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/vector-binary-instances-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/vector-binary-instances-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/vector-binary-instances-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/vector-binary-instances-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/vector-binary-instances-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/vector-binary-instances-${PKGVERSION}/html/synopsis.png
+${PLIST.doc}share/doc/${HS_PLATFORM}/vector-binary-instances-${PKGVERSION}/html/vector-binary-instances.haddock

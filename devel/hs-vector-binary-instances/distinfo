@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2022/08/22 10:30:17 wiz Exp $
+$NetBSD: distinfo,v 1.7 2023/01/25 18:52:56 pho Exp $
 
 BLAKE2s (vector-binary-instances-0.2.5.2.tar.gz) = a60379aa7a2c812cbf7bbe36d1b281e926546745169f1d4871355484014c6c73
 SHA512 (vector-binary-instances-0.2.5.2.tar.gz) = 885dff7f6508113c355bb125c3949fd722ea5c6e834beb3083e1e6cc16f84bba1b8fd44cd41990af79f095a18fd282dd1ccd94ccf586c5ca08e54b0454575d03
 Size (vector-binary-instances-0.2.5.2.tar.gz) = 4028 bytes
-SHA1 (patch-vector-binary-instances.cabal) = 5e5e2098d02da3e30f8ee08723cd2876eacd9e25
