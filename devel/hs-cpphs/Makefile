@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2022/02/26 03:57:51 pho Exp $
+# $NetBSD: Makefile,v 1.20 2023/01/25 01:12:38 pho Exp $
 
 DISTNAME=		cpphs-1.20.9.1
 #PKGNAME=		${DISTNAME} # XXX: This should be renamed to devel/cpphs.
@@ -9,8 +9,10 @@ MAINTAINER=		esg@sdf.lonestar.org
 COMMENT=		Liberalised re-implementation of cpp, the C pre-processor
 LICENSE=		gnu-lgpl-v2.1
 
-INSTALLATION_DIRS+=	${PKGMANDIR}/man1
+HASKELL_UNRESTRICT_DEPENDENCIES+=	\
+	time
 
+INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/docs/cpphs.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
