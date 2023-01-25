@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.602 2023/01/25 01:35:20 pho Exp $
+$NetBSD: CHANGES-2023,v 1.603 2023/01/25 01:53:05 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -767,3 +767,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/hs-safe-exceptions to 0.1.7.3 [pho 2023-01-25]
 	Updated devel/hs-githash to 0.1.6.3 [pho 2023-01-25]
 	Updated devel/hs-ansi-terminal to 0.11.4 [pho 2023-01-25]
+	Updated devel/hs-unix-compat to 0.6 [pho 2023-01-25]
