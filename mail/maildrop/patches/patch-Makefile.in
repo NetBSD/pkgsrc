@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile.in,v 1.2 2019/05/24 14:17:17 hauke Exp $
+$NetBSD: patch-Makefile.in,v 1.3 2023/01/25 19:34:04 bsiegert Exp $
 
 Do not install maildir related tools & doc - they presumably get
 installed by some other courier-* package if you want them. (The
@@ -6,35 +6,33 @@ FreeBSD mail/maildrop port just 'maildrop-' prefixes those binaries?)
 
 Install system binaries in {libexecdir} where applicable.
 
---- Makefile.in.orig	2018-09-13 23:21:07.000000000 +0000
+--- Makefile.in.orig	2022-12-02 14:42:36.000000000 +0000
 +++ Makefile.in
-@@ -429,17 +429,17 @@ EXTRA_DIST = README.html INSTALL.html UP
- 	maildroptips.txt COPYING.GPL manpage.css $(HTMLWWW)
- 
+@@ -443,16 +443,15 @@ EXTRA_DIST = README.html INSTALL.html UP
+ 	packaging/debian/maildrop-dev.soname.lintian-overrides \
+ 	packaging/debian/rules packaging/debian/source/format
  scriptdir = $(pkgdatadir)/scripts
 -DELIVERQUOTAHTMLSOURCE = maildirquota.html deliverquota.html
 -DELIVERQUOTAHTML = $(DELIVERQUOTAHTMLSOURCE)
 -DELIVERQUOTAMAN = maildirquota.7 deliverquota.8
 -MAILDROPHTML = lockmail.html maildiracl.html maildirkw.html \
--	maildirmake.html maildropex.html maildir.html \
-+DELIVERQUOTAHTMLSOURCE = 
-+DELIVERQUOTAHTML = 
-+DELIVERQUOTAMAN = 
-+MAILDROPHTML = lockmail.html \
-+	maildropex.html \
- 	maildropfilter.html maildropgdbm.html maildrop.html \
- 	mailbot.html makemime.html reformail.html reformime.html \
- 	$(am__append_1)
+-	maildirwatch.html maildirmake.html maildropex.html \
+-	maildir.html maildropfilter.html maildropgdbm.html \
++DELIVERQUOTAHTMLSOURCE =
++DELIVERQUOTAHTML =
++DELIVERQUOTAMAN =
++MAILDROPHTML = lockmail.html maildropex.html \
++	maildropfilter.html maildropgdbm.html \
+ 	maildrop.html mailbot.html makemime.html reformail.html \
+ 	reformime.html $(am__append_1)
 -MAILDROPMAN = lockmail.1 maildirmake.1 maildrop.1 mailbot.1 \
--	maildropex.7 maildir.5 maildropfilter.7 maildropgdbm.7 \
--	makemime.1 reformail.1 reformime.1 $(am__append_2)
+-	maildropex.7 maildirkw.1 maildirwatch.1 maildir.5 \
 +MAILDROPMAN = lockmail.1 maildrop.1 mailbot.1 \
-+	maildropex.7 maildropfilter.7 maildropgdbm.7 \
-+	makemime.1 reformail.1 reformime.1
++	maildropex.7 \
+ 	maildropfilter.7 maildropgdbm.7 makemime.1 reformail.1 \
+ 	reformime.1 $(am__append_2)
  EXTRA_LTLIBRARIES = librfc822.la librfc2045.la
- @DEVEL_TRUE@DEVEL_MAN = rfc822.3 rfc2045.3
- sysincludedir = $(includedir)
-@@ -1282,12 +1282,8 @@ uninstall-man: uninstall-man1 uninstall-
+@@ -1308,12 +1307,8 @@ uninstall-man: uninstall-man1 uninstall-
  #  Create a soft link from bindir/deliverquota to libdir/bin/deliverquota
  
  install-deliverquota:
@@ -47,11 +45,13 @@ Install system binaries in {libexecdir} where applicable.
  
  install-data-local: install-man install-deliverquota install-maildrop
  
-@@ -1315,23 +1311,24 @@ install-maildrop:
+@@ -1341,25 +1336,24 @@ install-maildrop:
  		$(INSTALL_PROGRAM) libs/maildrop/$$f $(DESTDIR)$(bindir)/$$f ; \
  	done
  	$(INSTALL_PROGRAM) libs/liblock/lockmail $(DESTDIR)$(bindir)/lockmail
 -	$(INSTALL_PROGRAM) libs/maildir/maildirmake $(DESTDIR)$(bindir)/maildirmake
+-	$(INSTALL_PROGRAM) libs/maildir/maildirkw $(DESTDIR)$(bindir)/maildirkw
+-	$(INSTALL_PROGRAM) libs/maildir/maildirwatch $(DESTDIR)$(bindir)/maildirwatch
  	$(INSTALL_PROGRAM) libs/rfc2045/reformime $(DESTDIR)$(bindir)/reformime
  	$(INSTALL_PROGRAM) libs/rfc2045/makemime $(DESTDIR)$(bindir)/makemime
  	test "@USE_DB@@USE_GDBM@" = "00" && exit 0; \
@@ -66,8 +66,8 @@ Install system binaries in {libexecdir} where applicable.
  	. libs/maildrop/uidgid ; test -z "$$uid" && exit 0; test -w /etc || exit 0; cd $(DESTDIR)$(bindir) && chown $$uid maildrop lockmail && chmod 755 maildrop lockmail
  
  uninstall-maildrop:
--	for f in maildrop mailbot maildirmake reformail lockmail makemime reformime; do \
-+	for f in maildrop mailbot reformail lockmail makemime reformime; do \
+-	for f in maildrop mailbot maildirmake reformail lockmail makemime reformime maildirkw maildirwatch; do \
++	for f in maildrop mailbot reformail lockmail makemime reformime ; do \
  		rm -f $(DESTDIR)$(bindir)/$$f ; \
  	done
  	test "@USE_DB@@USE_GDBM@" = "00" && exit 0; \
