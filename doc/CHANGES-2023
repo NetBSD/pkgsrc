@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.623 2023/01/25 12:35:04 bsiegert Exp $
+$NetBSD: CHANGES-2023,v 1.624 2023/01/25 13:28:04 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -791,3 +791,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated time/hs-unix-time to 0.4.8 [pho 2023-01-25]
 	Updated mail/fetchmail to 6.4.35 [bsiegert 2023-01-25]
 	Updated mail/fetchmailconf to 6.4.35 [bsiegert 2023-01-25]
+	Updated security/hs-hackage-security to 0.6.2.3 [pho 2023-01-25]
