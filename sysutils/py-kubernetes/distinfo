@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/01/25 09:17:36 adam Exp $
+
+BLAKE2s (kubernetes-25.3.0.tar.gz) = fdae04033f4ee1584c704e2bd647e00aac7af27f1837bcdcd3c63de8b562b9c8
+SHA512 (kubernetes-25.3.0.tar.gz) = d279a25a362447175b3b070f6b876fdd2073a090fab2980ca6a96f2cc7554ebdc5e58fec3c6303fcfcba664938f106a0373cb3ea35f0f5380dfb0ee616cd6585
+Size (kubernetes-25.3.0.tar.gz) = 703365 bytes
