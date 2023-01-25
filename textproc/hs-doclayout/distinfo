@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2022/02/11 13:30:32 pho Exp $
+$NetBSD: distinfo,v 1.6 2023/01/25 15:24:23 pho Exp $
 
-BLAKE2s (doclayout-0.3.1.1.tar.gz) = 815c476bd6ad1551b02fccd448c8272bac63e435a6ec67ad89df9690d86a98fc
-SHA512 (doclayout-0.3.1.1.tar.gz) = a3cd5eeef6133121df1a0eedab905aca6de0edcbc7ffb6633efc58e8af5d9c17ed843303c9eeb097aa63f965b36648a967d844daf4e3a103ab75ac4bf42976a5
-Size (doclayout-0.3.1.1.tar.gz) = 15047 bytes
+BLAKE2s (doclayout-0.4.tar.gz) = 183bd8631ef8c711734ac27872e6a8fcdaf0525e9a5d33418f7ce1d7c9a5b88c
+SHA512 (doclayout-0.4.tar.gz) = 78d3f64d72c2991bdc9b7ace27ed93e977d3e5fc3afa511857234f1c756fbdb77ccc74ba11af0aabfb09f31a4a906324abc1945160f435c83a07ebd3ae1a44c4
+Size (doclayout-0.4.tar.gz) = 38804 bytes
