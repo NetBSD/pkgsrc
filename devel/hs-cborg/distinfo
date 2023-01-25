@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2022/08/22 10:25:08 wiz Exp $
+$NetBSD: distinfo,v 1.3 2023/01/25 16:27:12 pho Exp $
 
-BLAKE2s (cborg-0.2.7.0.tar.gz) = a1e4414e68fe7cda9bac999aa39e1c822186c4e1b46f494f0f54e005648446bf
-SHA512 (cborg-0.2.7.0.tar.gz) = f034bb498a1e7d69dd3587b804f076afdc87d98af494da18385b8ac4271e9257e51c3ff4504bd208e1b856c19558c35f27137adced681dc846b9489892453306
-Size (cborg-0.2.7.0.tar.gz) = 90841 bytes
-SHA1 (patch-src_Codec_CBOR_Magic.hs) = bbc83ce29eb172535ec7a5385c87701b6d9281ae
+BLAKE2s (cborg-0.2.8.0.tar.gz) = 2c27306937578f993308afe155c3f998b155e5fdd0efe17ce3bb2ab02b691bbf
+SHA512 (cborg-0.2.8.0.tar.gz) = 415afe049475deac12914c06ae94225268163a5a1d59e0783b0dcce529cfb9cfd6aed2c43f67b0ae7c0eac62f222671595daca49ef2d0cb31313c16955bf592d
+Size (cborg-0.2.8.0.tar.gz) = 91143 bytes
