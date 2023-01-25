@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2022/02/11 19:47:58 pho Exp $
+$NetBSD: distinfo,v 1.8 2023/01/25 18:56:05 pho Exp $
 
 BLAKE2s (vault-0.3.1.5.tar.gz) = c75c69ddb81f75469da5a69e9dec707c65834bfc82f0ecd12a833060a6ece748
 SHA512 (vault-0.3.1.5.tar.gz) = f268d192f53594d5be39db807982073591e9bb830411813d6904e5ad1bf10d16eb5f89d9a39b764f92e6e196aeaabeac1b75cd07a70c59a42ce842835758e409
 Size (vault-0.3.1.5.tar.gz) = 5431 bytes
-SHA1 (patch-vault.cabal) = 644dc3f6b6179b1c4d436495a32ec70e5805a131
