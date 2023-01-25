@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.674 2023/01/25 19:22:18 pho Exp $
+$NetBSD: CHANGES-2023,v 1.675 2023/01/25 19:31:20 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -867,3 +867,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/hs-th-lift-instances to 0.1.20 [pho 2023-01-25]
 	Updated devel/hs-pretty-simple to 4.1.2.0 [pho 2023-01-25]
 	Updated devel/hs-microlens-mtl to 0.2.0.3 [pho 2023-01-25]
+	Updated security/courier-authlib to 0.72.0 [bsiegert 2023-01-25]
