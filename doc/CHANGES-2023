@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.616 2023/01/25 09:24:54 pho Exp $
+$NetBSD: CHANGES-2023,v 1.617 2023/01/25 09:43:52 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -782,3 +782,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/p5-GraphicsMagick to 1.3.40 [adam 2023-01-25]
 	Updated devel/hs-th-abstraction to 0.4.5.0 [pho 2023-01-25]
 	Updated devel/hs-hashable to 1.4.2.0 [pho 2023-01-25]
+	Updated security/hs-digest to 0.0.1.5 [pho 2023-01-25]
