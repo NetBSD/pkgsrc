@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.33 2022/01/12 11:41:41 micha Exp $
+$NetBSD: distinfo,v 1.34 2023/01/25 18:06:41 micha Exp $
 
-BLAKE2s (tin-2.6.1.tar.xz) = 489c1802956e8fa0e3728c1fbcf4976164e9d04745f147b3975f956a84c62df2
-SHA512 (tin-2.6.1.tar.xz) = dc9ace5e24cac1efcaac25df1747dd435573130cff4e9c846c89e8faaed8e8120d66a2021332c01f350744155bcb7be608657285560a1a2457b4635cc8fa22b3
-Size (tin-2.6.1.tar.xz) = 1570500 bytes
-SHA1 (patch-Makefile) = 7f9048d31e70d9630ba6511d834db5d0c60a7de1
-SHA1 (patch-src_Makefile.in) = aecb7ce01c60d232214c9499d761a7da33cb7fb8
+BLAKE2s (tin-2.6.2.tar.xz) = 632d2a39bc2ce3f23e0949edad87aa4681eb1ab69b68b4a55e7f7521a6341b3a
+SHA512 (tin-2.6.2.tar.xz) = 4c9e0edb3268d57fb89d9d53a90e8a5ba73da7c1da63c834224bed0f763502a7c3dd325351d3e57b1ddcb57494a84228cc38f227c49300b759fad8d112b1cac1
+Size (tin-2.6.2.tar.xz) = 1598732 bytes
+SHA1 (patch-Makefile) = c5787ae88d070844b43f56e968d2fab00a8613ad
+SHA1 (patch-src_Makefile.in) = 11785ab8fb5391d91ff34981bbb77191f228bed5
+SHA1 (patch-src_nntplib.c) = 75a14821af4a01b9f0787411edf1370c5af6da63
