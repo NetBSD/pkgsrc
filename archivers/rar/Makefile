@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.55 2014/12/16 15:47:33 mef Exp $
+# $NetBSD: Makefile,v 1.56 2023/01/25 16:59:31 vins Exp $
 #
 
-DISTNAME=	# overridden
-PKGNAME=	rar-${RAR_VER}
+DISTNAME=	rarlinux${EMUL_PLATFORM:S|linux-x86_64|-x64|:S|linux-i386|-x32|}-${PKGVER:S/.//}
+PKGNAME=	rar-${PKGVER}
+PKGVER=		6.20
 CATEGORIES=	archivers
 MASTER_SITES=	http://www.rarlabs.com/rar/
 
@@ -10,8 +11,6 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://www.rarlabs.com/
 COMMENT=	RAR file archiver (binary)
 LICENSE=	rar-license
-
-RAR_VER=	4.1.1
 
 RESTRICTED=		Only unmodified original package can be distributed
 NO_BIN_ON_CDROM=	${RESTRICTED}
@@ -23,20 +22,12 @@ NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/rar
 USE_LANGUAGES=	# none
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${EMUL_PLATFORM} == "linux-i386"
-DISTFILES=	rarlinux-${RAR_VER}.tar.gz
-.elif ${EMUL_PLATFORM} == "linux-x86_64"
-DISTFILES=	rarlinux-x64-${RAR_VER}.tar.gz
-.endif
-
 DOCSDIR=		share/doc/rar
 
 INSTALLATION_DIRS=	bin etc lib ${DOCSDIR}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/rar_static ${DESTDIR}${PREFIX}/bin/rar
+	${INSTALL_PROGRAM} ${WRKSRC}/rar ${DESTDIR}${PREFIX}/bin/rar
 
 	${INSTALL_LIB} ${WRKSRC}/default.sfx ${DESTDIR}${PREFIX}/lib
 
