@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/02/16 10:02:14 pho Exp $
+$NetBSD: distinfo,v 1.2 2023/01/25 17:35:14 pho Exp $
 
 BLAKE2s (semirings-0.6.tar.gz) = e845b2d3ec6d7578fd871f2c8c504ef1e52c87d61171bcafd5784f6adfcc1617
 SHA512 (semirings-0.6.tar.gz) = 01675527d47b5283ae6beb6feb38b4a5527a46a780b75e4b712c0b1e4b57218fa8238ba100a20947a2e2b53c4a314ad4e1a71f989bd5194fe6378dba048c870c
 Size (semirings-0.6.tar.gz) = 19640 bytes
-SHA1 (patch-semirings.cabal) = 583199f4435b67dda41b0a331cf8289cc220462a
