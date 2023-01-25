@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:21:58 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/01/25 14:03:57 pho Exp $
 
 BLAKE2s (ansi-wl-pprint-0.6.9.tar.gz) = c716c7162deb1392c306a653805c9c5407b86c582621028510a2433c3749b59b
 SHA512 (ansi-wl-pprint-0.6.9.tar.gz) = 2a66236f740f0b45b6133555e8b1315dc85ece1c16dd51e4aa7f31d2fee03d66869af5f81e6383aa840f503c2cad46f3655f53b784ebca7b3480efb53eea2a04
 Size (ansi-wl-pprint-0.6.9.tar.gz) = 16723 bytes
-SHA1 (patch-ansi-wl-pprint.cabal) = f66ed18528102a90573de8d35325b3f898d77dfd
