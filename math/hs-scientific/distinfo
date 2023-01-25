@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2022/02/11 13:37:21 pho Exp $
+$NetBSD: distinfo,v 1.11 2023/01/25 16:33:11 pho Exp $
 
 BLAKE2s (scientific-0.3.7.0.tar.gz) = ab3bdb603d7aa58c5920f9ead0d4377958b08b0bba2fcfb30fa7d958052c7755
 SHA512 (scientific-0.3.7.0.tar.gz) = dbd13060a6d1d101138715b4106382a78d115cff247859cb6f83aca3cdb6f6caf8a2c52d7ae99be64845c5e4a7959940bbf31df6265b15079c236f193b087865
 Size (scientific-0.3.7.0.tar.gz) = 24723 bytes
-SHA1 (patch-scientific.cabal) = 9bcab42aed57b909438c98a7eb9fc72132178309
