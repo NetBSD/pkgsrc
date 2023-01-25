@@ -1,11 +1,10 @@
-$NetBSD: patch-libs_maildrop_main.C,v 1.2 2020/04/16 12:49:35 manu Exp $
+$NetBSD: patch-libs_maildrop_main.C,v 1.3 2023/01/25 19:34:04 bsiegert Exp $
 
 Make this maildrop install usable by both Courier and other MTAs.
 
---- libs/maildrop/main.C.orig	2018-09-14 01:22:17.000000000 +0200
-+++ libs/maildrop/main.C	2020-04-10 03:32:11.795122838 +0200
-@@ -278,13 +278,15 @@
- 			    void *void_arg)
+--- libs/maildrop/main.C.orig	2021-05-22 09:00:07.000000000 +0000
++++ libs/maildrop/main.C
+@@ -279,11 +279,13 @@ static int callback_authlib(struct authi
  {
  	Maildrop &maildrop=*(Maildrop *)void_arg;
  
@@ -19,9 +18,7 @@ Make this maildrop install usable by both Courier and other MTAs.
  
  	if (VerboseLevel() > 1)
  	{
- 		Buffer b;
-@@ -753,9 +755,9 @@
- 
+@@ -758,7 +760,7 @@ uid_t	my_u=getuid();
  	if (!found)
  	{
  #if HAVE_COURIER
@@ -30,9 +27,7 @@ Make this maildrop install usable by both Courier and other MTAs.
  #endif
  		{
  			my_pw=getpwuid(my_u);
- 			if (!my_pw)
-@@ -813,8 +815,16 @@
- 	if (deliverymode && orig_uid == getuid())
+@@ -818,6 +820,14 @@ Buffer	value;
  	{
  	const char *p;
  
@@ -47,9 +42,7 @@ Make this maildrop install usable by both Courier and other MTAs.
  		if ((p=getenv("HOME")) && *p)
  			maildrop.init_home=p;
  
- 		if ((p=getenv("LOGNAME")) && *p)
-@@ -837,8 +847,10 @@
- 		maildrop.init_default=p;
+@@ -842,6 +852,8 @@ Buffer	value;
  
  		if ((p=getenv("MAILDIRQUOTA")) && *p)
  			maildrop.init_quota=p;
@@ -58,4 +51,3 @@ Make this maildrop install usable by both Courier and other MTAs.
  	}
  #endif
  
- 	if (deliverymode)
