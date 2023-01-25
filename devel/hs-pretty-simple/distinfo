@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:14:59 nia Exp $
+$NetBSD: distinfo,v 1.4 2023/01/25 19:19:27 pho Exp $
 
-BLAKE2s (pretty-simple-4.0.0.0.tar.gz) = bcc8bc0f690584086ec65c261f4e7717447bc937ac5a22a91501898f625a6a9e
-SHA512 (pretty-simple-4.0.0.0.tar.gz) = b30ad63fac3545e6f6b2d67b323e4d43ef29ea2a51e2ac3433e8d0ffa6776e90ac2bbe3ab790c500244c77a54a93cc5a2a6b6e87a2524f8777c74529f7681f78
-Size (pretty-simple-4.0.0.0.tar.gz) = 39887 bytes
+BLAKE2s (pretty-simple-4.1.2.0.tar.gz) = 189be29783c6d162bddb5ca932ada659d0dc245381c7bd791abdf7ae41e1b84e
+SHA512 (pretty-simple-4.1.2.0.tar.gz) = d65096db0c3258058e420a981c240b448ab71c4a59e79cf154712100be9d5ebb4c9eddf148edd2ec24b1de551576301fe48598e7ac77d2af6b63bf60bff56720
+Size (pretty-simple-4.1.2.0.tar.gz) = 40519 bytes
