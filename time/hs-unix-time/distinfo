@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:24:21 nia Exp $
+$NetBSD: distinfo,v 1.4 2023/01/25 10:15:02 pho Exp $
 
-BLAKE2s (unix-time-0.4.7.tar.gz) = 35180b8b0336c276b2c84fbd57af3f50ae8f4ad7f0c83b95681f6afdcc0ce080
-SHA512 (unix-time-0.4.7.tar.gz) = a9e5b77cb9c93b9a20687406aaeeaff5277d05b95ee9d874f3e0292eca83574b2e842785e0a88f71be3e91610db228c68b5cec885c4b3ea15fc6ec1bb861c072
-Size (unix-time-0.4.7.tar.gz) = 52235 bytes
+BLAKE2s (unix-time-0.4.8.tar.gz) = 695c1e3cc5cb59b7c713c22063c1f858cd16f91d7f21bb940cfb5828c6f22310
+SHA512 (unix-time-0.4.8.tar.gz) = 8b4ae312471b9eb4b810380ea621cd4753f592fb7d53ad6b2399b6edd5b06903284e52d47bfbd89ad089886379953b8612413e1cba0812fa41985678ff4ee394
+Size (unix-time-0.4.8.tar.gz) = 52180 bytes
 SHA1 (patch-Data_UnixTime_Sys.hsc) = 7e0921ef5a38588a0660f6477e897cefecc5dd74
