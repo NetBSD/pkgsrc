@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2022/12/08 13:18:51 taca Exp $
+# $NetBSD: Makefile,v 1.21 2023/01/25 14:29:21 taca Exp $
 
-DISTNAME=	selenium-webdriver-4.7.1
+DISTNAME=	selenium-webdriver-4.8.0
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -8,7 +8,6 @@ HOMEPAGE=	https://github.com/seleniumhq/selenium
 COMMENT=	Tool for writing automated tests of websites
 LICENSE=	apache-2.0
 
-DEPENDS+=	${RUBY_PKGPREFIX}-childprocess>=0.5:../../sysutils/ruby-childprocess
 DEPENDS+=	${RUBY_PKGPREFIX}-zip>=1.2.2:../../archivers/ruby-zip
 DEPENDS+=	${RUBY_PKGPREFIX}-websocket>=1.0<2:../../www/ruby-websocket
 
