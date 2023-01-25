@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2022/02/11 13:26:15 pho Exp $
+$NetBSD: distinfo,v 1.6 2023/01/25 15:16:01 pho Exp $
 
 BLAKE2s (async-2.2.4.tar.gz) = cf10cb25f0c6b23d1b83d24f4c1802930e5099e78ae694346a592a1d7eea68dd
 SHA512 (async-2.2.4.tar.gz) = 24f37f974dd7573138475d04c0fccb97fcbd8b3de56f7d06199b8f936fd9a29cd0ba0574212a753a81de8958b3292ecee79d0e8d0d2f51eb91874424e6219569
 Size (async-2.2.4.tar.gz) = 14148 bytes
-SHA1 (patch-async.cabal) = 46621b144c37164744bc204a7c7e3e2fc055372d
