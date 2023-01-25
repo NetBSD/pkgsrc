@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.56 2021/12/14 19:56:24 adam Exp $
+$NetBSD: distinfo,v 1.57 2023/01/25 06:40:45 adam Exp $
 
-BLAKE2s (GraphicsMagick-1.3.37.tar.xz) = f642cdf943f63a199c80e204308b1ec1f1023727f2eda27734e7f4b45a630a47
-SHA512 (GraphicsMagick-1.3.37.tar.xz) = 971e05480a65eb99ff3c0d874675bcbffc24eafec1cacd03f5ef410ae014f82329f3590393100927f753feb183be1105fe0cfc5b0f775a30b0e6dc0c6b8a77af
-Size (GraphicsMagick-1.3.37.tar.xz) = 5623688 bytes
+BLAKE2s (GraphicsMagick-1.3.40.tar.xz) = 72e78a94e255d00850d118813fed2f9a46d7a61c7300e28e75ee2895fde2c3a9
+SHA512 (GraphicsMagick-1.3.40.tar.xz) = e64902aa2a8702d03d188350bd4252a2263e431611f9a70f38cd8beede8a38cc91bb4de3603fedf15420ebbba488f609f218e9b45e356b9f8dc8e4a75f380ee5
+Size (GraphicsMagick-1.3.40.tar.xz) = 5507792 bytes
 SHA1 (patch-config_delegates.mgk.in) = c52192a35bede530d310688a576ef2181a9f073c
-SHA1 (patch-configure) = 0f5597fb4184bdf69ecbac04643ad78af57b40f2
+SHA1 (patch-configure) = 327dcb718ebaf65f2d2c97440c1cc7fdb9e03482
