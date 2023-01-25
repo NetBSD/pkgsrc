@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2022/02/11 13:03:51 pho Exp $
+$NetBSD: distinfo,v 1.6 2023/01/25 09:57:38 pho Exp $
 
 BLAKE2s (tar-0.5.1.1.tar.gz) = 48de9f5ef6affeb1cd05abc038947443e39e6671d345b920c789343bd54acc96
 SHA512 (tar-0.5.1.1.tar.gz) = 8d0a8d3ae178570e0842a2321a7fc86a6bba28c471ec27bafbc07fc4ac0e4183f8113c99ebc7126dc71759c33083791122be32563fb0d5a2b2d39cb3b36171f2
 Size (tar-0.5.1.1.tar.gz) = 39155 bytes
-SHA1 (patch-tar.cabal) = e15673875115bbb22eeb9ebc38d8b02653787010
