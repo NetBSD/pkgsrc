@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.618 2023/01/25 09:48:19 pho Exp $
+$NetBSD: CHANGES-2023,v 1.619 2023/01/25 09:54:00 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -784,3 +784,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/hs-hashable to 1.4.2.0 [pho 2023-01-25]
 	Updated security/hs-digest to 0.0.1.5 [pho 2023-01-25]
 	Updated archivers/hs-zlib to 0.6.3.0 [pho 2023-01-25]
+	Updated archivers/hs-zip-archive to 0.4.2.2 [pho 2023-01-25]
