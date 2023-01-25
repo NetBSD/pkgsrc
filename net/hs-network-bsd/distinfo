@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/02/16 09:15:18 pho Exp $
+$NetBSD: distinfo,v 1.2 2023/01/25 10:21:49 pho Exp $
 
 BLAKE2s (network-bsd-2.8.1.0.tar.gz) = af3abc625809b94d8f8d365951c30f0ecc80753aa2c2d3edd2b811cac6bb6b5b
 SHA512 (network-bsd-2.8.1.0.tar.gz) = b2f66c6705c490e1cbaab6ca88444294bc90b3711da4039046a9279060ed41228ab855b40039f56bd02eabcc0351200de3e043a108a0cdc98192d563702de7f3
 Size (network-bsd-2.8.1.0.tar.gz) = 8584 bytes
-SHA1 (patch-network-bsd.cabal) = b1da396d245e40954fa6c61bda681f1a97f1bee3
