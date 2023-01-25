@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:14:56 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/01/25 01:58:56 pho Exp $
 
-BLAKE2s (fgl-5.7.0.3.tar.gz) = ae62e802367e0cf5a777fa2cec7d4dfa79266ac92ac5e1a0ed048472ccb11a55
-SHA512 (fgl-5.7.0.3.tar.gz) = f77ee1a66fe02b0a01e70b6fcb16baaba67be5433e4310bfb0862cec66855fc0413de586ca111e2e1569898b890fe93faf7c9f079dc569ca2d32b6c087762bbd
-Size (fgl-5.7.0.3.tar.gz) = 56415 bytes
+BLAKE2s (fgl-5.8.0.0.tar.gz) = 232841f93cbf48628fffc36f8a08e8558a6b47b72793ceb512c2a7da1c228ca2
+SHA512 (fgl-5.8.0.0.tar.gz) = 6d27cfc1e54a6090cacef61e6dd318d3f8f03252d8f71300110f1e843c76efb6aa91d541cfb7254351d689101e163f237a515c3ce8a5b1c825cfcbcd9203fd9c
+Size (fgl-5.8.0.0.tar.gz) = 56445 bytes
