@@ -1,22 +1,13 @@
-# $NetBSD: Makefile,v 1.10 2023/01/25 17:14:39 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.1 2023/01/25 17:14:39 pho Exp $
 
-DISTNAME=	cabal-install-3.8.1.0
-PKGNAME=	${DISTNAME}
-CATEGORIES=	misc
+BUILDLINK_TREE+=	cabal-install
 
-MAINTAINER=	pho@cielonegro.org
-COMMENT=	Command-line interface for Cabal and Hackage
-LICENSE=	modified-bsd
+.if !defined(CABAL_INSTALL_BUILDLINK3_MK)
+CABAL_INSTALL_BUILDLINK3_MK:=
 
-HASKELL_UNRESTRICT_DEPENDENCIES+=	\
-	base	\
-	text	\
-	time
-
-INSTALLATION_DIRS+=	share/bash-completion/completions
-post-install:
-	${INSTALL_DATA} ${WRKSRC}/bash-completion/cabal \
-		${DESTDIR}${PREFIX}/share/bash-completion/completions
+BUILDLINK_API_DEPENDS.cabal-install+=	cabal-install>=3.8.1
+BUILDLINK_ABI_DEPENDS.cabal-install+=	cabal-install>=3.8.1.0
+BUILDLINK_PKGSRCDIR.cabal-install?=	../../misc/cabal-install
 
 .include "../../devel/hs-async/buildlink3.mk"
 .include "../../converters/hs-base16-bytestring/buildlink3.mk"
@@ -36,5 +27,6 @@ post-install:
 .include "../../archivers/hs-zlib/buildlink3.mk"
 .include "../../net/hs-resolv/buildlink3.mk"
 .include "../../devel/hs-lukko/buildlink3.mk"
-.include "../../mk/haskell.mk"
-.include "../../mk/bsd.pkg.mk"
+.endif	# CABAL_INSTALL_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-cabal-install
