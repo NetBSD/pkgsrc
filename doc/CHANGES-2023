@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.613 2023/01/25 05:29:30 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.614 2023/01/25 06:41:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -778,3 +778,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/hs-lpeg to 1.0.3 [pho 2023-01-25]
 	Updated lang/hs-hslua-core to 2.2.1 [pho 2023-01-25]
 	Added devel/py-looseversion version 1.0.3 [gutteridge 2023-01-25]
+	Updated graphics/GraphicsMagick to 1.3.40 [adam 2023-01-25]
+	Updated graphics/p5-GraphicsMagick to 1.3.40 [adam 2023-01-25]
