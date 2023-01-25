@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/02/24 01:23:58 pho Exp $
+$NetBSD: distinfo,v 1.2 2023/01/25 13:53:30 pho Exp $
 
-BLAKE2s (th-env-0.1.0.3.tar.gz) = 5ed32a13ad6edb2cc70327fa609ddbdf2129cd8cc84a647a5fca128aef04ba5c
-SHA512 (th-env-0.1.0.3.tar.gz) = 005c25f9db82fa8b5747cf596f91c3d96c7753ab3cdc88f64a13f4a61f0ea090e374147bf7f87d47b93ac3f568ae2844ea7a6013d5d2163601b097eb5b36d215
-Size (th-env-0.1.0.3.tar.gz) = 2549 bytes
+BLAKE2s (th-env-0.1.1.tar.gz) = 248a13e7284512490419a9dea496b410ed7522fd5954f94c46cf680989bb05ce
+SHA512 (th-env-0.1.1.tar.gz) = 5a7a8188a2c53cd00ea5d23d54678b48686f80bd2129528cd1da8e0909b3b84ca9676600807022ac7d31053c301cbbc72df5feaa5737b376e4f591b1d8d768f4
+Size (th-env-0.1.1.tar.gz) = 2724 bytes
