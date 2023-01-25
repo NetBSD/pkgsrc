@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.6 2023/01/12 19:32:37 markd Exp $
+# $NetBSD: build.mk,v 1.7 2023/01/25 16:46:37 wiz Exp $
 #
 # This Makefile fragment supports building using the CMake build tool.
 #
@@ -84,7 +84,7 @@ cmake-build:
 .for d in ${BUILD_DIRS}
 	${RUN} cd ${WRKSRC}/${d}/${CMAKE_BUILD_DIR} && \
 		${SETENV} ${MAKE_ENV} \
-		${_CMAKE_BUILD_TOOL} ${CMAKE_BUILD_ARGS}
+		${_CMAKE_BUILD_TOOL} ${CMAKE_BUILD_ARGS} ${BUILD_TARGET}
 .endfor
 
 do-test: cmake-test
