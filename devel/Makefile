@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3881 2023/01/24 14:01:08 pho Exp $
+# $NetBSD: Makefile,v 1.3882 2023/01/25 05:28:17 gutteridge Exp $
 #
 
 COMMENT=	Development utilities
@@ -2589,6 +2589,7 @@ SUBDIR+=	py-lockfile
 SUBDIR+=	py-logan
 SUBDIR+=	py-logbook
 SUBDIR+=	py-logilab-common
+SUBDIR+=	py-looseversion
 SUBDIR+=	py-lru-dict
 SUBDIR+=	py-lupa
 SUBDIR+=	py-macaroons
