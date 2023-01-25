@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2022/02/11 13:03:40 pho Exp $
+$NetBSD: distinfo,v 1.8 2023/01/25 09:48:10 pho Exp $
 
-BLAKE2s (zlib-0.6.2.3.tar.gz) = 3b4b71371c3dd469f741104870809b76bad688a370b45a4d4d43d5f0c5fa9f60
-SHA512 (zlib-0.6.2.3.tar.gz) = 535fc711af639967c032791c6a0c09680ac186c706e02a28cfabd9b2dcddc84a6ee5f6007e2ed67c1dc19dd6d561cb821d8840dba7386b63cc002418c4d5040a
-Size (zlib-0.6.2.3.tar.gz) = 149186 bytes
-SHA1 (patch-zlib.cabal) = f7795814dac916afe2fa3e0c2d25b12ce63fd43a
+BLAKE2s (zlib-0.6.3.0.tar.gz) = 4ee77f172211ba7eeb4994ba53e9dd827b5af687e396e26f55054809110cdd84
+SHA512 (zlib-0.6.3.0.tar.gz) = 95daae13c5d5458fd7c610ce4cc686dc7af477364c4dcf3d31abede84f6e4b4e70ea255f7ded586d46d9bb6298d19c93b8856eec16c6002265ed076e52bf9a21
+Size (zlib-0.6.3.0.tar.gz) = 369595 bytes
