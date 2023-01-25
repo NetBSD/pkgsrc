@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.663 2023/01/25 17:05:54 pho Exp $
+$NetBSD: CHANGES-2023,v 1.664 2023/01/25 17:14:54 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -856,3 +856,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated wm/xmonad to 0.17.1 [pho 2023-01-25]
 	Updated archivers/rar to 6.20 [vins 2023-01-25]
 	Added misc/hs-cabal-install-solver version 3.8.1.0 [pho 2023-01-25]
+	Updated misc/cabal-install to 3.8.1.0 [pho 2023-01-25]
