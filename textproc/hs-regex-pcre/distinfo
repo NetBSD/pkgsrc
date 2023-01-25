@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2022/02/11 13:04:57 pho Exp $
+$NetBSD: distinfo,v 1.6 2023/01/25 10:12:44 pho Exp $
 
 BLAKE2s (regex-pcre-0.95.0.0.tar.gz) = 61a6db3c02e7e53dc5445002c3cbaa0cc29882f890a95a5d55caa9498bf72de2
 SHA512 (regex-pcre-0.95.0.0.tar.gz) = 7c9ed0edd0c44d7118313c298c2658858117dd89eb7956566f5bb2fb75f2aaed70d201fda4102c46206b9951013bafee654ff39ed3c4bf9c5086f6c0cc217bdb
 Size (regex-pcre-0.95.0.0.tar.gz) = 9766 bytes
-SHA1 (patch-regex-pcre.cabal) = 1632a8cc4b1f8d762c7a7b72ca26783640e960f1
