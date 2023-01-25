@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.655 2023/01/25 16:27:20 pho Exp $
+$NetBSD: CHANGES-2023,v 1.656 2023/01/25 16:31:44 micha Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -849,3 +849,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/hs-commonmark-extensions to 0.2.3.3 [pho 2023-01-25]
 	Updated lang/hs-hslua-marshalling to 2.2.1 [pho 2023-01-25]
 	Updated devel/hs-cborg to 0.2.8.0 [pho 2023-01-25]
+	Updated archivers/star to 1.7.0 [micha 2023-01-25]
