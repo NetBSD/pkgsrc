@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.625 2023/01/25 13:29:13 taca Exp $
+$NetBSD: CHANGES-2023,v 1.626 2023/01/25 13:30:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -805,3 +805,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/ruby-railties61 to 6.1.7.2 [taca 2023-01-25]
 	Updated textproc/ruby-actiontext61 to 6.1.7.2 [taca 2023-01-25]
 	Updated www/ruby-rails61 to 6.1.7.2 [taca 2023-01-25]
+	Updated devel/py-cytoolz to 0.12.1 [adam 2023-01-25]
+	Updated sysutils/py-cpuinfo to 9.0.0 [adam 2023-01-25]
