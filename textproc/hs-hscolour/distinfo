@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:22:00 nia Exp $
+$NetBSD: distinfo,v 1.7 2023/01/25 01:08:03 pho Exp $
 
 BLAKE2s (hscolour-1.24.4.tar.gz) = db6fbed1aab2ccea04dc576c564feae66e302b472535be7c107e0c0245bcf3b0
 SHA512 (hscolour-1.24.4.tar.gz) = 39b631c0a8346beff1c2e02ca8e72c1b1e3f7dafcedad7dc9de274e6750501de2bc553fe72a7d3459d4f9797e916f27e28ff96f705c2c0f9d3e0eec0ac6182c7
 Size (hscolour-1.24.4.tar.gz) = 28729 bytes
-SHA1 (patch-hscolour.cabal) = bb57b5d665a39451ffbd96f3f9ac3c07308894ca
