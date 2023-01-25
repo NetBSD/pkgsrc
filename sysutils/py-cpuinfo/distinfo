@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:20:03 nia Exp $
+$NetBSD: distinfo,v 1.7 2023/01/25 13:29:23 adam Exp $
 
-BLAKE2s (py-cpuinfo-8.0.0.tar.gz) = a1cfc684dc13dacafcf684f2b3a5e8e05a0ca984474e12c5c93f86e810dedfa3
-SHA512 (py-cpuinfo-8.0.0.tar.gz) = 77351f9f2fd33b09d0ee998dd2b3eb971bbe9094bee5636356d5a5a2747ebba3c112cccfdf929f77e3b7de3c745f98ecfac8edeb0d84fede100b637b554d4fd9
-Size (py-cpuinfo-8.0.0.tar.gz) = 99791 bytes
+BLAKE2s (py-cpuinfo-9.0.0.tar.gz) = bd16eac1ca113ff6dae7e4d0db7e2316738070bf8a9739c2aae760ea2499bf7d
+SHA512 (py-cpuinfo-9.0.0.tar.gz) = c7711137d60ad52bcbef8738a70fb48ceaa69e1e1632d135d0ee95c282b02df6170c3dd88a1e14b3e9a386d3286a15ca9722fcfb596107da022161a7cf84509a
+Size (py-cpuinfo-9.0.0.tar.gz) = 104716 bytes

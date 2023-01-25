@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2022/01/05 15:41:22 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2023/01/25 13:29:23 adam Exp $
 
-DISTNAME=	py-cpuinfo-8.0.0
+DISTNAME=	py-cpuinfo-9.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py-//}
-PKGREVISION=	2
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/py-cpuinfo/}
 
