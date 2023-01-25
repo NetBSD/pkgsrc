@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2022/02/11 11:53:56 pho Exp $
+$NetBSD: distinfo,v 1.6 2023/01/25 03:52:24 pho Exp $
 
-BLAKE2s (HsYAML-0.2.1.0.tar.gz) = 91eb24f6f7e8d9fa8cebc6243aecaf310dd50197b6ee68638b2a9b03f2c71245
-SHA512 (HsYAML-0.2.1.0.tar.gz) = f8ad41a99e48183835093ad8bf6a3fbdf4b9ad9df3bea46b12efd55a9555c22bd2595c72b1ac2e73379ab47e21f6cbf9022412db8971e1c7c02a32e824f53304
-Size (HsYAML-0.2.1.0.tar.gz) = 83976 bytes
-SHA1 (patch-HsYAML.cabal) = 5acd2a3838b25fc6a5b34719e12446c1403f5b05
+BLAKE2s (HsYAML-0.2.1.1.tar.gz) = 58bde814d3edc064536cae0151a6edb26af129a2b0c26c848467770a54020edd
+SHA512 (HsYAML-0.2.1.1.tar.gz) = 30ba418f929ccec322821cac6fe4cbbd7685c97a8a3462abff2e54595eb054e8ffcc2b0ce4ef725c483c96d97eab9d35e5e25d3aa76148fbbb1fd2e0ce499f64
+Size (HsYAML-0.2.1.1.tar.gz) = 84104 bytes
