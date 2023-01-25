@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.648 2023/01/25 14:41:36 pho Exp $
+$NetBSD: CHANGES-2023,v 1.649 2023/01/25 15:10:28 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -842,3 +842,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/hs-foundation to 0.0.29 [pho 2023-01-25]
 	Updated devel/hs-resourcet to 1.3.0 [pho 2023-01-25]
 	Updated sysutils/hs-filepattern to 0.1.3 [pho 2023-01-25]
+	Updated devel/hs-ghc-lib-parser to 9.4.4.20221225 [pho 2023-01-25]
