@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.614 2023/01/25 06:41:27 adam Exp $
+$NetBSD: CHANGES-2023,v 1.615 2023/01/25 09:12:27 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -780,3 +780,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/py-looseversion version 1.0.3 [gutteridge 2023-01-25]
 	Updated graphics/GraphicsMagick to 1.3.40 [adam 2023-01-25]
 	Updated graphics/p5-GraphicsMagick to 1.3.40 [adam 2023-01-25]
+	Updated devel/hs-th-abstraction to 0.4.5.0 [pho 2023-01-25]
