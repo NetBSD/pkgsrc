@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.622 2023/01/25 10:15:11 pho Exp $
+$NetBSD: CHANGES-2023,v 1.623 2023/01/25 12:35:04 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -789,3 +789,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Added sysutils/py-kubernetes version 25.3.0 [adam 2023-01-25]
 	Updated devel/py-dotenv to 0.21.1 [adam 2023-01-25]
 	Updated time/hs-unix-time to 0.4.8 [pho 2023-01-25]
+	Updated mail/fetchmail to 6.4.35 [bsiegert 2023-01-25]
+	Updated mail/fetchmailconf to 6.4.35 [bsiegert 2023-01-25]
