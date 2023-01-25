@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.658 2023/01/25 16:41:51 micha Exp $
+$NetBSD: CHANGES-2023,v 1.659 2023/01/25 16:42:31 micha Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -851,4 +851,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/hs-cborg to 0.2.8.0 [pho 2023-01-25]
 	Updated archivers/star to 1.7.0 [micha 2023-01-25]
 	Updated shells/bosh to 20230112 [micha 2023-01-25]
-	Updated shells/posh to 20230112 [micha 2023-01-25]
+	Updated shells/pbosh to 20230112 [micha 2023-01-25]
