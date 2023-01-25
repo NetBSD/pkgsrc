@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2022/02/11 09:43:46 pho Exp $
+$NetBSD: distinfo,v 1.11 2023/01/25 01:12:38 pho Exp $
 
 BLAKE2s (cpphs-1.20.9.1.tar.gz) = 725c15d6f4f5cf1a352965c6b571dab5fde0b85360f44647fc3d9a1d497488c4
 SHA512 (cpphs-1.20.9.1.tar.gz) = bc5cd86c1e42061ae5c940612542dbea420344fb8596495d71ff2dc724bc1a3785f830e51c3ae99394488a122deabacd6433a5c919e3682c4129f3b296b7931f
 Size (cpphs-1.20.9.1.tar.gz) = 45496 bytes
-SHA1 (patch-cpphs.cabal) = f2ea981af932e6f03b2d68a53b88765eeac0a169
