@@ -1,19 +1,19 @@
-@comment $NetBSD: PLIST,v 1.2 2021/04/23 15:31:53 pho Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/01/25 18:50:48 pho Exp $
 lib/vector-th-unbox-${PKGVERSION}/${HS_VERSION}/package-description
 lib/vector-th-unbox-${PKGVERSION}/${HS_VERSION}/package-id
-lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-lib/${HS_PLATFORM}/${HS_PKGID}/Data/Vector/Unboxed/Deriving.dyn_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Vector/Unboxed/Deriving.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Vector/Unboxed/Deriving.hi
-lib/${HS_PLATFORM}/${HS_PKGID}/Data/Vector/Unboxed/Deriving.p_hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Vector/Unboxed/Deriving.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
-lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-share/doc/${HS_PLATFORM}/vector-th-unbox-${PKGVERSION}/LICENSE
-share/doc/${HS_PLATFORM}/vector-th-unbox-${PKGVERSION}/html/Data-Vector-Unboxed-Deriving.html
-share/doc/${HS_PLATFORM}/vector-th-unbox-${PKGVERSION}/html/doc-index.html
-share/doc/${HS_PLATFORM}/vector-th-unbox-${PKGVERSION}/html/haddock-bundle.min.js
-share/doc/${HS_PLATFORM}/vector-th-unbox-${PKGVERSION}/html/index.html
-share/doc/${HS_PLATFORM}/vector-th-unbox-${PKGVERSION}/html/linuwial.css
-share/doc/${HS_PLATFORM}/vector-th-unbox-${PKGVERSION}/html/meta.json
-share/doc/${HS_PLATFORM}/vector-th-unbox-${PKGVERSION}/html/quick-jump.css
-share/doc/${HS_PLATFORM}/vector-th-unbox-${PKGVERSION}/html/synopsis.png
-share/doc/${HS_PLATFORM}/vector-th-unbox-${PKGVERSION}/html/vector-th-unbox.haddock
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+${PLIST.doc}share/doc/${HS_PLATFORM}/vector-th-unbox-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/${HS_PLATFORM}/vector-th-unbox-${PKGVERSION}/html/Data-Vector-Unboxed-Deriving.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/vector-th-unbox-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/vector-th-unbox-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/vector-th-unbox-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/vector-th-unbox-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/vector-th-unbox-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/vector-th-unbox-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/vector-th-unbox-${PKGVERSION}/html/synopsis.png
+${PLIST.doc}share/doc/${HS_PLATFORM}/vector-th-unbox-${PKGVERSION}/html/vector-th-unbox.haddock
