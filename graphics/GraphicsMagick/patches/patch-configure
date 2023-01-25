@@ -1,20 +1,10 @@
-$NetBSD: patch-configure,v 1.4 2021/12/14 19:56:25 adam Exp $
+$NetBSD: patch-configure,v 1.5 2023/01/25 06:40:46 adam Exp $
 
-Portability fix.
 Do not save configure args; they reference workdir.
 
---- configure.orig	2021-12-12 21:09:14.000000000 +0000
+--- configure.orig	2022-12-26 16:56:04.000000000 +0000
 +++ configure
-@@ -29058,7 +29058,7 @@ fi
- 
- 
- # Tests for programs only used while in maintainer mode
--if test "$MAINT" == '' ; then
-+if test "$MAINT" = '' ; then
-    # Test for optional rst2html.py utility and define automake conditional HasRST2HTML if found.
-    for ac_prog in rst2html.py rst2html
- do
-@@ -30160,9 +30160,6 @@ MAGICK_API_LIBS=`echo $MAGICK_API_LIBS |
+@@ -30779,9 +30779,6 @@ MAGICK_API_LIBS=`echo $MAGICK_API_LIBS |
  
  # Save configure/build parameters for later reference
  
