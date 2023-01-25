@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2022/02/11 11:33:22 pho Exp $
+$NetBSD: distinfo,v 1.9 2023/01/25 03:45:55 pho Exp $
 
 BLAKE2s (blaze-markup-0.8.2.8.tar.gz) = 029f4efcac42a0f229acbbf9390f3fefc0afed71aba5bdbb1eaaf701f1791117
 SHA512 (blaze-markup-0.8.2.8.tar.gz) = d677b611c751c2dfd4bd12c1b1aa612b08356c90b9962b60d4972a9626ddd0337bcaf40b4595b64c1d3bf506d017f058771d00fa55979b94283095061be18944
 Size (blaze-markup-0.8.2.8.tar.gz) = 14519 bytes
-SHA1 (patch-blaze-markup.cabal) = df6fa47035abcb6241bf695265aa59490d0be769
