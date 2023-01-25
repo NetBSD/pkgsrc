@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:19:41 nia Exp $
+$NetBSD: distinfo,v 1.4 2023/01/25 14:41:27 pho Exp $
 
-BLAKE2s (filepattern-0.1.2.tar.gz) = 0782273bcaddfd2edf5013919cd7205a219c45db043fa9fea24f1be2dbef8f11
-SHA512 (filepattern-0.1.2.tar.gz) = 16866d70efdf55ee4e6b246eb7f7300c9ad4c148d8136d817f601b9c0cac95eb1ddaf57ab0b6fad539298b55128fe5c255c31fd152a713bf312488eae823da23
-Size (filepattern-0.1.2.tar.gz) = 15737 bytes
+BLAKE2s (filepattern-0.1.3.tar.gz) = caf2c4812d41071e7e118cf8fbb3bbc9e0f733da1e1f9fcf9a5385dadebb6363
+SHA512 (filepattern-0.1.3.tar.gz) = 55abde992eeae3047e14ec66629bba807cff5554969e51c052c047761851d7d8afb8722fa733d673b67ab07aa014cdea3e4f2ff396e464a4f316cc2639904a44
+Size (filepattern-0.1.3.tar.gz) = 15495 bytes
