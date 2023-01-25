@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22535 2023/01/25 03:36:06 pho Exp $
+$NetBSD: TODO,v 1.22536 2023/01/25 03:43:38 pho Exp $
 
 Suggested new packages
 ======================
@@ -810,7 +810,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o hs-aeson-2.1.1.0
 	o hs-bifunctors-5.5.14
 	o hs-citeproc-0.8.0.2
-	o hs-commonmark-0.2.2
 	o hs-commonmark-extensions-0.2.3.3
 	o hs-conduit-1.3.4.3
 	o hs-conduit-extra-1.3.6
