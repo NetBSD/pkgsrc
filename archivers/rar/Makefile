@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2023/01/25 16:59:31 vins Exp $
-#
+# $NetBSD: Makefile,v 1.57 2023/01/25 21:35:21 wiz Exp $
 
 DISTNAME=	rarlinux${EMUL_PLATFORM:S|linux-x86_64|-x64|:S|linux-i386|-x32|}-${PKGVER:S/.//}
 PKGNAME=	rar-${PKGVER}
@@ -16,7 +15,8 @@ RESTRICTED=		Only unmodified original package can be distributed
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 
-EMUL_PLATFORMS=		linux-i386 linux-x86_64
+EMUL_PLATFORMS=		linux-x86_64
+EMUL_MODULES.linux=	base
 
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/rar
