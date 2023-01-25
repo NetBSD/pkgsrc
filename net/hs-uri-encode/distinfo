@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/02/23 16:56:57 pho Exp $
+$NetBSD: distinfo,v 1.2 2023/01/25 13:41:22 pho Exp $
 
 BLAKE2s (uri-encode-1.5.0.7.tar.gz) = 230ee8bc237b1d96df1479883e58f519c57b97510e524dafc5458cc41d7c7a41
 SHA512 (uri-encode-1.5.0.7.tar.gz) = da8d816a2c9586bd09762b914a6c4da2c3688fd1d1b31aa34bfae0291db9e0f639c4c7e7bdfa2adcd4f44c39860697a8c6f4f1955cde6c4db74269bbc7308661
 Size (uri-encode-1.5.0.7.tar.gz) = 3506 bytes
-SHA1 (patch-uri-encode.cabal) = 372abf1901aaff611e07b567de052919bad7a1cb
