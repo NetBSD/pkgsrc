@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:05:46 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/01/25 04:21:42 pho Exp $
 
-BLAKE2s (network-uri-2.6.4.1.tar.gz) = c4bb18ac6d14ddb68d14d47bd3c24cd38bd90cb6243f00f344d5c878b73fa89f
-SHA512 (network-uri-2.6.4.1.tar.gz) = 8e5b01fd11197ac36de9b804d37256662f904f2b94a997a2e262439bb1706d1c460db368e935bf3971fd1581162abbc07439a0bae391e1e616264bd00fe7104e
-Size (network-uri-2.6.4.1.tar.gz) = 32373 bytes
+BLAKE2s (network-uri-2.6.4.2.tar.gz) = 49557f63a6de401369adcb5cc297cbbbcea8b094a2ea5a7f54b0b9a260a61b0f
+SHA512 (network-uri-2.6.4.2.tar.gz) = 999e94a3053a101d1dc737a26ff93f832040365e949805b1ff5327ade9ab63d20f686c9f1bb3544d6d22c7c6d0b10bfcb64b30aa226d74ed6ad8bbb28fce6c0f
+Size (network-uri-2.6.4.2.tar.gz) = 31309 bytes
