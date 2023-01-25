@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2021/06/14 15:09:55 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/01/25 13:38:40 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/Gemfile
@@ -26,7 +26,6 @@ ${GEM_LIBDIR}/lib/concurrent-ruby/concurrent/agent.rb
 ${GEM_LIBDIR}/lib/concurrent-ruby/concurrent/array.rb
 ${GEM_LIBDIR}/lib/concurrent-ruby/concurrent/async.rb
 ${GEM_LIBDIR}/lib/concurrent-ruby/concurrent/atom.rb
-${GEM_LIBDIR}/lib/concurrent-ruby/concurrent/atomic/abstract_thread_local_var.rb
 ${GEM_LIBDIR}/lib/concurrent-ruby/concurrent/atomic/atomic_boolean.rb
 ${GEM_LIBDIR}/lib/concurrent-ruby/concurrent/atomic/atomic_fixnum.rb
 ${GEM_LIBDIR}/lib/concurrent-ruby/concurrent/atomic/atomic_markable_reference.rb
@@ -34,17 +33,19 @@ ${GEM_LIBDIR}/lib/concurrent-ruby/concurrent/atomic/atomic_reference.rb
 ${GEM_LIBDIR}/lib/concurrent-ruby/concurrent/atomic/count_down_latch.rb
 ${GEM_LIBDIR}/lib/concurrent-ruby/concurrent/atomic/cyclic_barrier.rb
 ${GEM_LIBDIR}/lib/concurrent-ruby/concurrent/atomic/event.rb
+${GEM_LIBDIR}/lib/concurrent-ruby/concurrent/atomic/fiber_local_var.rb
 ${GEM_LIBDIR}/lib/concurrent-ruby/concurrent/atomic/java_count_down_latch.rb
-${GEM_LIBDIR}/lib/concurrent-ruby/concurrent/atomic/java_thread_local_var.rb
+${GEM_LIBDIR}/lib/concurrent-ruby/concurrent/atomic/locals.rb
+${GEM_LIBDIR}/lib/concurrent-ruby/concurrent/atomic/lock_local_var.rb
 ${GEM_LIBDIR}/lib/concurrent-ruby/concurrent/atomic/mutex_atomic_boolean.rb
 ${GEM_LIBDIR}/lib/concurrent-ruby/concurrent/atomic/mutex_atomic_fixnum.rb
 ${GEM_LIBDIR}/lib/concurrent-ruby/concurrent/atomic/mutex_count_down_latch.rb
 ${GEM_LIBDIR}/lib/concurrent-ruby/concurrent/atomic/mutex_semaphore.rb
 ${GEM_LIBDIR}/lib/concurrent-ruby/concurrent/atomic/read_write_lock.rb
 ${GEM_LIBDIR}/lib/concurrent-ruby/concurrent/atomic/reentrant_read_write_lock.rb
-${GEM_LIBDIR}/lib/concurrent-ruby/concurrent/atomic/ruby_thread_local_var.rb
 ${GEM_LIBDIR}/lib/concurrent-ruby/concurrent/atomic/semaphore.rb
 ${GEM_LIBDIR}/lib/concurrent-ruby/concurrent/atomic/thread_local_var.rb
+${GEM_LIBDIR}/lib/concurrent-ruby/concurrent/atomic_reference/atomic_direct_update.rb
 ${GEM_LIBDIR}/lib/concurrent-ruby/concurrent/atomic_reference/mutex_atomic.rb
 ${GEM_LIBDIR}/lib/concurrent-ruby/concurrent/atomic_reference/numeric_cas_wrapper.rb
 ${GEM_LIBDIR}/lib/concurrent-ruby/concurrent/atomics.rb
@@ -112,16 +113,13 @@ ${GEM_LIBDIR}/lib/concurrent-ruby/concurrent/synchronization/abstract_lockable_o
 ${GEM_LIBDIR}/lib/concurrent-ruby/concurrent/synchronization/abstract_object.rb
 ${GEM_LIBDIR}/lib/concurrent-ruby/concurrent/synchronization/abstract_struct.rb
 ${GEM_LIBDIR}/lib/concurrent-ruby/concurrent/synchronization/condition.rb
+${GEM_LIBDIR}/lib/concurrent-ruby/concurrent/synchronization/full_memory_barrier.rb
 ${GEM_LIBDIR}/lib/concurrent-ruby/concurrent/synchronization/jruby_lockable_object.rb
-${GEM_LIBDIR}/lib/concurrent-ruby/concurrent/synchronization/jruby_object.rb
 ${GEM_LIBDIR}/lib/concurrent-ruby/concurrent/synchronization/lock.rb
 ${GEM_LIBDIR}/lib/concurrent-ruby/concurrent/synchronization/lockable_object.rb
-${GEM_LIBDIR}/lib/concurrent-ruby/concurrent/synchronization/mri_object.rb
 ${GEM_LIBDIR}/lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb
 ${GEM_LIBDIR}/lib/concurrent-ruby/concurrent/synchronization/object.rb
-${GEM_LIBDIR}/lib/concurrent-ruby/concurrent/synchronization/rbx_lockable_object.rb
-${GEM_LIBDIR}/lib/concurrent-ruby/concurrent/synchronization/rbx_object.rb
-${GEM_LIBDIR}/lib/concurrent-ruby/concurrent/synchronization/truffleruby_object.rb
+${GEM_LIBDIR}/lib/concurrent-ruby/concurrent/synchronization/safe_initialization.rb
 ${GEM_LIBDIR}/lib/concurrent-ruby/concurrent/synchronization/volatile.rb
 ${GEM_LIBDIR}/lib/concurrent-ruby/concurrent/thread_safe/synchronized_delegator.rb
 ${GEM_LIBDIR}/lib/concurrent-ruby/concurrent/thread_safe/util.rb
