@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2022/02/11 13:15:07 pho Exp $
+$NetBSD: distinfo,v 1.6 2023/01/25 13:27:55 pho Exp $
 
-BLAKE2s (hackage-security-0.6.2.0.tar.gz) = 90bc419f68107f0f059a71706371211600dd08331b5426fc14f187abcb4fe194
-SHA512 (hackage-security-0.6.2.0.tar.gz) = 1fdd5be9f01b8914a89853bc51a575c2d2efdf3b7811fdef130485cf2e95623cabeacac11861345ddd72fa65e6f80cf23576ef8786ba4a975bbabe64a307d768
-Size (hackage-security-0.6.2.0.tar.gz) = 86320 bytes
+BLAKE2s (hackage-security-0.6.2.3.tar.gz) = ed5240258025e963f4128927c650f31da2a1dea927d069bced8a5ec7b31c38a9
+SHA512 (hackage-security-0.6.2.3.tar.gz) = d2bd80a940a2bacdbe6c6f5086ae846eb27548f0013952e0fe95dfbdea7bc4f17631f86f295d62b02a491f3903d8a5ab316bad2d8227fd240f459cbe966b1b84
+Size (hackage-security-0.6.2.3.tar.gz) = 86611 bytes
