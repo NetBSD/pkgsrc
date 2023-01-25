@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2023/01/08 21:21:03 gdt Exp $
+# $NetBSD: Makefile,v 1.7 2023/01/25 18:12:00 gdt Exp $
 
-DISTNAME=	guile-3.0.8
+VERSION=	3.0.9
+DISTNAME=	guile-${VERSION}
 PKGNAME=	${DISTNAME:S/guile/guile30/}
-PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.gnu.org/gnu/guile/
 
@@ -20,6 +20,11 @@ HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	SHELL=${CONFIG_SHELL}
 # Needed to work around broken configure check for accept4()
 LDFLAGS.SunOS+=		-lsocket -lnsl
+
+# Fails with ranlib complaints; disable for all until understood.
+CONFIGURE_ARGS+=	--disable-lto
+
+# Coordinate with Makefile patches.
 MAKE_ENV+=		PAXCTL=echo
 MAKE_ENV.NetBSD+=	PAXCTL=/usr/sbin/paxctl
 
