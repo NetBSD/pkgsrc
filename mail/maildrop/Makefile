@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.75 2022/06/28 11:34:21 wiz Exp $
+# $NetBSD: Makefile,v 1.76 2023/01/25 19:34:04 bsiegert Exp $
 
-DISTNAME=	maildrop-3.0.0
-PKGREVISION=	7
-CATEGORIES=	security
+DISTNAME=	maildrop-3.1.0
+CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
 EXTRACT_SUFX=	.tar.bz2
 
@@ -60,5 +59,6 @@ post-install:
 #	${INSTALL_DATA} ${WRKSRC}/libs/maildrop/makedat.html ${DESTDIR}${DOCDIR}
 
 .include "../../mail/courier-unicode/buildlink3.mk"
-.include "../../devel/libidn/buildlink3.mk"
+.include "../../devel/libidn2/buildlink3.mk"
+.include "../../devel/pcre2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
