@@ -1,19 +1,19 @@
-@comment $NetBSD: PLIST,v 1.1 2022/02/12 08:13:05 pho Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/01/25 04:30:49 pho Exp $
 lib/lpeg-${PKGVERSION}/${HS_VERSION}/package-description
 lib/lpeg-${PKGVERSION}/${HS_VERSION}/package-id
-lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-lib/${HS_PLATFORM}/${HS_PKGID}/Lua/LPeg.dyn_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Lua/LPeg.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Lua/LPeg.hi
-lib/${HS_PLATFORM}/${HS_PKGID}/Lua/LPeg.p_hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Lua/LPeg.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
-lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-share/doc/${HS_PLATFORM}/lpeg-${PKGVERSION}/LICENSE
-share/doc/${HS_PLATFORM}/lpeg-${PKGVERSION}/html/Lua-LPeg.html
-share/doc/${HS_PLATFORM}/lpeg-${PKGVERSION}/html/doc-index.html
-share/doc/${HS_PLATFORM}/lpeg-${PKGVERSION}/html/haddock-bundle.min.js
-share/doc/${HS_PLATFORM}/lpeg-${PKGVERSION}/html/index.html
-share/doc/${HS_PLATFORM}/lpeg-${PKGVERSION}/html/linuwial.css
-share/doc/${HS_PLATFORM}/lpeg-${PKGVERSION}/html/lpeg.haddock
-share/doc/${HS_PLATFORM}/lpeg-${PKGVERSION}/html/meta.json
-share/doc/${HS_PLATFORM}/lpeg-${PKGVERSION}/html/quick-jump.css
-share/doc/${HS_PLATFORM}/lpeg-${PKGVERSION}/html/synopsis.png
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+${PLIST.doc}share/doc/${HS_PLATFORM}/lpeg-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/${HS_PLATFORM}/lpeg-${PKGVERSION}/html/Lua-LPeg.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/lpeg-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/lpeg-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/lpeg-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/lpeg-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/lpeg-${PKGVERSION}/html/lpeg.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/lpeg-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/lpeg-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/lpeg-${PKGVERSION}/html/synopsis.png

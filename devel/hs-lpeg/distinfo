@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/02/12 08:13:05 pho Exp $
+$NetBSD: distinfo,v 1.2 2023/01/25 04:30:49 pho Exp $
 
-BLAKE2s (hs-lpeg/lpeg-1.0.2.tar.gz) = 3f89f0389205994551e190d4b38ebef5e795522eabce8fdbb62c049760bba5e0
-SHA512 (hs-lpeg/lpeg-1.0.2.tar.gz) = 7e64a8ce19819fbfe18de95c2c0d25484c5c3517d62232b8c202d89d53d2b81e28dc32d884d939c8e0b138880e37be70b434172a2ce66a9a0d4a5888d713e744
-Size (hs-lpeg/lpeg-1.0.2.tar.gz) = 40064 bytes
+BLAKE2s (hs-lpeg/lpeg-1.0.3.tar.gz) = ef64b93b2abb98df145221dfc2377d22237136fb116d349405782e897805e3a5
+SHA512 (hs-lpeg/lpeg-1.0.3.tar.gz) = 636a983054576487af8663d627ea16b57894eca18c92a5994abcdeec11acaa1b5d7bb0da1eae0a1a175c75fad44c93a78c5a5e6e7ce25ddac67f5b376559fbdc
+Size (hs-lpeg/lpeg-1.0.3.tar.gz) = 40092 bytes
