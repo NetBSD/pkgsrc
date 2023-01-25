@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.670 2023/01/25 18:44:02 pho Exp $
+$NetBSD: CHANGES-2023,v 1.671 2023/01/25 18:49:00 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -863,3 +863,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated news/tin to 2.6.2 [micha 2023-01-25]
 	Updated lang/guile30 to 3.0.9 [gdt 2023-01-25]
 	Updated textproc/hs-megaparsec to 9.3.0 [pho 2023-01-25]
+	Updated devel/hs-versions to 5.0.4 [pho 2023-01-25]
