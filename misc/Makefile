@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.579 2023/01/14 10:43:18 kim Exp $
+# $NetBSD: Makefile,v 1.580 2023/01/25 17:06:04 pho Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -112,6 +112,7 @@ SUBDIR+=	heirloom-time
 SUBDIR+=	hexd
 SUBDIR+=	heyu
 SUBDIR+=	howm
+SUBDIR+=	hs-cabal-install-solver
 SUBDIR+=	hs-extra
 SUBDIR+=	ibutton-pdkit
 SUBDIR+=	ipbt
