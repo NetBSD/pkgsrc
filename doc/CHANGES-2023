@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.611 2023/01/25 04:30:57 pho Exp $
+$NetBSD: CHANGES-2023,v 1.612 2023/01/25 04:35:41 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -776,3 +776,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/hs-network-uri to 2.6.4.2 [pho 2023-01-25]
 	Updated devel/hs-syb to 0.7.2.2 [pho 2023-01-25]
 	Updated devel/hs-lpeg to 1.0.3 [pho 2023-01-25]
+	Updated lang/hs-hslua-core to 2.2.1 [pho 2023-01-25]
