@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2022/03/30 07:48:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/01/25 18:12:00 gdt Exp $
 guile/3.0/bin/guild
 guile/3.0/bin/guile
 guile/3.0/bin/guile-config
@@ -306,6 +306,7 @@ guile/3.0/lib/guile/3.0/ccache/rnrs/arithmetic/fixnums.go
 guile/3.0/lib/guile/3.0/ccache/rnrs/arithmetic/flonums.go
 guile/3.0/lib/guile/3.0/ccache/rnrs/base.go
 guile/3.0/lib/guile/3.0/ccache/rnrs/bytevectors.go
+guile/3.0/lib/guile/3.0/ccache/rnrs/bytevectors/gnu.go
 guile/3.0/lib/guile/3.0/ccache/rnrs/conditions.go
 guile/3.0/lib/guile/3.0/ccache/rnrs/control.go
 guile/3.0/lib/guile/3.0/ccache/rnrs/enums.go
@@ -466,7 +467,7 @@ guile/3.0/lib/guile/3.0/ccache/web/server/http.go
 guile/3.0/lib/guile/3.0/ccache/web/uri.go
 guile/3.0/lib/guile/3.0/extensions/guile-readline.la
 guile/3.0/lib/libguile-3.0.la
-guile/3.0/lib/libguile-3.0.so.1.5.0-gdb.scm
+guile/3.0/lib/libguile-3.0.so.1.6.0-gdb.scm
 guile/3.0/lib/pkgconfig/guile-3.0.pc
 guile/3.0/man/man1/guile.1
 guile/3.0/share/aclocal/guile.m4
@@ -650,6 +651,7 @@ guile/3.0/share/guile/3.0/rnrs/arithmetic/fixnums.scm
 guile/3.0/share/guile/3.0/rnrs/arithmetic/flonums.scm
 guile/3.0/share/guile/3.0/rnrs/base.scm
 guile/3.0/share/guile/3.0/rnrs/bytevectors.scm
+guile/3.0/share/guile/3.0/rnrs/bytevectors/gnu.scm
 guile/3.0/share/guile/3.0/rnrs/conditions.scm
 guile/3.0/share/guile/3.0/rnrs/control.scm
 guile/3.0/share/guile/3.0/rnrs/enums.scm
