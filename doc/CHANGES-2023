@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.638 2023/01/25 14:16:45 taca Exp $
+$NetBSD: CHANGES-2023,v 1.639 2023/01/25 14:18:42 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -832,3 +832,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-fastjsonschema to 2.16.2 [adam 2023-01-25]
 	Updated math/py-pandas to 1.5.3 [adam 2023-01-25]
 	Updated sysutils/ruby-repofetch to 0.5.2 [taca 2023-01-25]
+	Updated textproc/ruby-commonmarker to 0.23.7 [taca 2023-01-25]
