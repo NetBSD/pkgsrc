@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.645 2023/01/25 14:29:43 taca Exp $
+$NetBSD: CHANGES-2023,v 1.646 2023/01/25 14:33:07 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -839,3 +839,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/hs-opentelemetry to 0.8.0 [pho 2023-01-25]
 	Updated devel/hs-ghc-check to 0.5.0.8 [pho 2023-01-25]
 	Updated www/ruby-selenium-webdriver to 4.8.0 [taca 2023-01-25]
+	Updated devel/hs-foundation to 0.0.29 [pho 2023-01-25]
