@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2022/02/26 03:58:36 pho Exp $
+# $NetBSD: Makefile,v 1.14 2023/01/25 16:48:33 pho Exp $
 
-DISTNAME=	X11-1.10.2
-PKGREVISION=	2
+DISTNAME=	X11-1.10.3
 CATEGORIES=	x11 graphics
 
 MAINTAINER=	esg@sdf.lonestar.org
@@ -9,7 +8,7 @@ COMMENT=	Haskell binding to the X11 graphics library
 LICENSE=	modified-bsd
 
 .include "../../mk/haskell.mk"
-.include "../../devel/hs-data-default/buildlink3.mk"
+.include "../../devel/hs-data-default-class/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
