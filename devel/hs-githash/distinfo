@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/02/12 07:52:15 pho Exp $
+$NetBSD: distinfo,v 1.2 2023/01/25 01:28:30 pho Exp $
 
-BLAKE2s (githash-0.1.6.2.tar.gz) = 1a75fea165c99f574b02a646bfc68f6d82d001e0b6e03a38191a9124443272d2
-SHA512 (githash-0.1.6.2.tar.gz) = 14ae039e7dbf4f3bf42a3f60f98625921215b152996f32f06f45eab9945aa1d198cf21209ca5475788050e7a5210838cf1a8746544f48bf26d85636a1a08bfcc
-Size (githash-0.1.6.2.tar.gz) = 7569 bytes
+BLAKE2s (githash-0.1.6.3.tar.gz) = 2b05c551ae6334b19ce2fd12e46c54132fac1ec9df5191fca9c0f0f6e7e66b9e
+SHA512 (githash-0.1.6.3.tar.gz) = 214d3c0d53f08047658063b82bc049685dcc62b292e9b54490b002c6aa01bb1319baad56ba952e28eeb51a3177020d147f922692fb95308bc007b4d68aee1fb2
+Size (githash-0.1.6.3.tar.gz) = 7617 bytes
