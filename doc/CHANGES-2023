@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.632 2023/01/25 13:45:53 pho Exp $
+$NetBSD: CHANGES-2023,v 1.633 2023/01/25 13:48:07 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -825,3 +825,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/ruby-regexp_parser to 2.6.2 [taca 2023-01-25]
 	Updated devel/libgit2 to 1.5.1 [taca 2023-01-25]
 	Updated devel/pointfree to 1.1.1.9 [pho 2023-01-25]
+	Updated devel/ruby-rugged to 1.5.1 [taca 2023-01-25]
