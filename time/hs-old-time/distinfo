@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:24:20 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/01/25 01:45:34 pho Exp $
 
 BLAKE2s (old-time-1.1.0.3.tar.gz) = 2f39c49ac20c4753c2d09da8c9a175030c77ae71f10defb3b7546996e67ced27
 SHA512 (old-time-1.1.0.3.tar.gz) = a701c62266f9f3c6dc60eba970b6c25a61bf82b6b8bb6b0073e0e44908598926fe7813a7ae1b1f9da98e4861a8f0565d0bd025cb97307b71c08cb9b0b2e321bb
 Size (old-time-1.1.0.3.tar.gz) = 74219 bytes
-SHA1 (patch-old-time.cabal) = da86455eb4b40bd0fda0fa4381cdcd8438ba6164
