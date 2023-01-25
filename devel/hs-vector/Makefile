@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2022/08/19 12:30:14 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2023/01/25 16:37:32 pho Exp $
 
 DISTNAME=	vector-0.13.0.0
 CATEGORIES=	devel
@@ -6,6 +6,9 @@ CATEGORIES=	devel
 MAINTAINER=	pho@cielonegro.org
 COMMENT=	Efficient Arrays for Haskell
 LICENSE=	modified-bsd
+
+HASKELL_UNRESTRICT_DEPENDENCIES+=	\
+	base
 
 .include "../../mk/haskell.mk"
 .include "../../devel/hs-primitive/buildlink3.mk"
