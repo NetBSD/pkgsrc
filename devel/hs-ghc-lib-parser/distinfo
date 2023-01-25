@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/02/16 10:20:35 pho Exp $
+$NetBSD: distinfo,v 1.2 2023/01/25 15:10:18 pho Exp $
 
-BLAKE2s (ghc-lib-parser-9.2.1.20220109.tar.gz) = dfbbbb725a8bd4753df5b8470f042658196a04e6d6830ba844d4ea7549724085
-SHA512 (ghc-lib-parser-9.2.1.20220109.tar.gz) = ac294bf3bd16741559ee9b0707c14d3876e43b8a068f7fc38c9b0e2b46b95a2e942c19c07a056eb1bfcfbf3181f9ddbfd8b63fa3d2a260734239c32ba02caf3a
-Size (ghc-lib-parser-9.2.1.20220109.tar.gz) = 1962322 bytes
+BLAKE2s (ghc-lib-parser-9.4.4.20221225.tar.gz) = 2b077a4f38f747301ff545d64a0e1fe1a1080bc54a7de2065b816810ec51b29b
+SHA512 (ghc-lib-parser-9.4.4.20221225.tar.gz) = 559a352d49a0395e6e68acd9227b43219ef52cd14bf54841de38951b9a92fac49cff7268c3a0d393db9cd38189a04219d3a765faf2d2854524963ff0b3eda958
+Size (ghc-lib-parser-9.4.4.20221225.tar.gz) = 2191105 bytes
