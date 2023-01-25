@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.652 2023/01/25 16:05:30 micha Exp $
+$NetBSD: CHANGES-2023,v 1.653 2023/01/25 16:19:12 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -846,3 +846,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/hs-HTTP to 4000.4.1 [pho 2023-01-25]
 	Updated textproc/hs-doclayout to 0.4 [pho 2023-01-25]
 	Updated devel/smake to 1.7 [micha 2023-01-25]
+	Updated textproc/hs-commonmark-extensions to 0.2.3.3 [pho 2023-01-25]
