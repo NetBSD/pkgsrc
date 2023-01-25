@@ -1,0 +1,1588 @@
+$NetBSD: patch-its9929,v 1.1 2023/01/25 16:16:56 manu Exp $
+
+Fix huge performance hit on slapo-dynlist. 
+
+From upstream ITS#9929 along with manual tweaks 
+https://bugs.openldap.org/show_bug.cgi?id=9929
+
+diff --git a/servers/slapd/overlays/dynlist.c b/servers/slapd/overlays/dynlist.c
+index 1fcbcbb35d5d8f6d053c2d03703df62ec4b612c9..3427710eea58c0e4ebebdd79757932af93c1c2d0 100644
+--- servers/slapd/overlays/dynlist.c
++++ servers/slapd/overlays/dynlist.c
+@@ -1522,6 +1522,22 @@ dynlist_add_memberOf(Operation *op, SlapReply *rs, dynlist_search_t *ds)
+ 	}
+ }
+ 
++static int
++dynlist_check_scope( Operation *op, Entry *e, dynlist_info_t *dli )
++{
++	if ( dli->dli_lud ) {
++		if ( !BER_BVISNULL( &dli->dli_uri_nbase ) &&
++			!dnIsSuffixScope( &e->e_nname,
++				&dli->dli_uri_nbase,
++				dli->dli_lud->lud_scope ))
++			return 0;
++		if ( dli->dli_uri_filter && test_filter( op, e,
++			dli->dli_uri_filter ) != LDAP_COMPARE_TRUE )
++			return 0;
++	}
++	return 1;
++}
++
+ /* process the search responses */
+ static int
+ dynlist_search2resp( Operation *op, SlapReply *rs )
+@@ -1532,13 +1548,29 @@ dynlist_search2resp( Operation *op, SlapReply *rs )
+ 
+ 	if ( rs->sr_type == REP_SEARCH && rs->sr_entry != NULL ) {
+ 		rc = SLAP_CB_CONTINUE;
+-		/* See if this is one of our dynamic entries */
+-		dyn = ldap_tavl_find( ds->ds_names, &rs->sr_entry->e_nname, dynlist_avl_cmp );
+-		if ( dyn ) {
+-			dyn->dy_seen = 1;
+-			rc = dynlist_prepare_entry( op, rs, dyn->dy_dli, dyn );
+-		} else if ( ds->ds_want )
+-			dynlist_add_memberOf( op, rs, ds );
++		/* See if this is one of our dynamic groups */
++		dyn = NULL;
++		if ( ds->ds_names ) {
++			dyn = ldap_tavl_find( ds->ds_names, &rs->sr_entry->e_nname, dynlist_avl_cmp );
++			if ( dyn ) {
++				dyn->dy_seen = 1;
++				if ( dynlist_check_scope( op, rs->sr_entry, dyn->dy_dli ))
++					rc = dynlist_prepare_entry( op, rs, dyn->dy_dli, dyn );
++			} else if ( ds->ds_want )
++				dynlist_add_memberOf( op, rs, ds );
++		}
++		/* Then check for dynamic lists */
++		if ( dyn == NULL ) {
++			dynlist_info_t	*dli;
++			Attribute *a = attr_find ( rs->sr_entry->e_attrs, slap_schema.si_ad_objectClass );
++			if ( a ) {
++				for ( dli = ds->ds_dli; dli; dli = dli->dli_next ) {
++					if ( is_entry_objectclass_or_sub( rs->sr_entry, dli->dli_oc ) &&
++						dynlist_check_scope( op, rs->sr_entry, dli ))
++						rc = dynlist_prepare_entry( op, rs, dli, NULL );
++				}
++			}
++		}
+ 		if ( ds->ds_origfilter && test_filter( op, rs->sr_entry, ds->ds_origfilter ) != LDAP_COMPARE_TRUE ) {
+ 			rs_flush_entry( op, rs, NULL );
+ 			return LDAP_SUCCESS;
+@@ -1566,15 +1598,18 @@ dynlist_search2resp( Operation *op, SlapReply *rs )
+ 				r.sr_entry == NULL )
+ 				continue;
+ 			r.sr_flags = REP_ENTRY_MUSTRELEASE;
+-			dynlist_prepare_entry( op, &r, dyn->dy_dli, dyn );
+-			if ( test_filter( op, r.sr_entry, f ) == LDAP_COMPARE_TRUE ) {
+-				r.sr_attrs = op->ors_attrs;
+-				rs->sr_err = send_search_entry( op, &r );
+-				if ( rs->sr_err != LDAP_SUCCESS )
+-					break;
+-			} else {
+-				rs_flush_entry( op, &r, NULL );
++			if ( dynlist_check_scope( op, r.sr_entry, dyn->dy_dli )) {
++				dynlist_prepare_entry( op, &r, dyn->dy_dli, dyn );
++				if ( test_filter( op, r.sr_entry, f ) == LDAP_COMPARE_TRUE ) {
++					r.sr_attrs = op->ors_attrs;
++					rs->sr_err = send_search_entry( op, &r );
++					if ( rs->sr_err != LDAP_SUCCESS )
++						break;
++					r.sr_entry = NULL;
++				}
+ 			}
++			if ( r.sr_entry )
++				rs_flush_entry( op, &r, NULL );
+ 		}
+ 		rs->sr_nentries = r.sr_nentries;
+ 	}
+@@ -1708,13 +1743,24 @@ dynlist_search( Operation *op, SlapReply *rs )
+ 	/* Find all groups in scope. For group expansion
+ 	 * we only need the groups within the search scope, but
+ 	 * for memberOf populating, we need all dyngroups.
++	 *
++	 * We ignore dynamic lists here; they're handled later.
+ 	 */
+ 	for ( dli = dlg->dlg_dli; dli; dli = dli->dli_next ) {
++		int got_dn = 1;
+ 		static_oc = NULL;
+ 		nested = 0;
+ 		tmpwant = 0;
+ 		if ( dlg->dlg_memberOf ) {
++			if ( !dli->dli_dlm )
++				continue;
++
+ 			for ( dlm = dli->dli_dlm; dlm; dlm = dlm->dlm_next ) {
++				if ( dlm->dlm_mapped_ad || !dlm->dlm_member_ad ) {
++					got_dn = 0;
++					break;
++				}
++
+ 				if ( dlm->dlm_memberOf_ad ) {
+ 					int want = 0;
+ 
+@@ -1770,72 +1816,83 @@ dynlist_search( Operation *op, SlapReply *rs )
+ 							ds->ds_dlm = dlm;
+ 						}
+ 					}
++				} else {
++					if ( ad_infilter( dlm->dlm_member_ad, op->ors_filter ) ||
++						userattrs || ad_inlist( dlm->dlm_member_ad, op->ors_attrs )) {
++						ds->ds_want = tmpwant = WANT_MEMBER;
++					}
+ 				}
+ 			}
+ 		}
+ 
+-		if ( static_oc ) {
+-			f[0].f_choice = LDAP_FILTER_OR;
+-			f[0].f_list = &f[1];
+-			f[0].f_next = NULL;
+-			f[1].f_choice = LDAP_FILTER_EQUALITY;
+-			f[1].f_next = &f[2];
+-			f[1].f_ava = &ava[0];
+-			f[1].f_av_desc = slap_schema.si_ad_objectClass;
+-			f[1].f_av_value = dli->dli_oc->soc_cname;
+-			f[2].f_choice = LDAP_FILTER_EQUALITY;
+-			f[2].f_ava = &ava[1];
+-			f[2].f_av_desc = slap_schema.si_ad_objectClass;
+-			f[2].f_av_value = static_oc->soc_cname;
+-			f[2].f_next = NULL;
+-		} else {
+-			f[0].f_choice = LDAP_FILTER_EQUALITY;
+-			f[0].f_ava = ava;
+-			f[0].f_av_desc = slap_schema.si_ad_objectClass;
+-			f[0].f_av_value = dli->dli_oc->soc_cname;
+-			f[0].f_next = NULL;
+-		}
+-
+-		if ( o.o_callback != sc ) {
+-			o.o_callback = sc;
+-			o.ors_filter = f;
+-			if ( tmpwant ) {
+-				o.o_req_dn = op->o_bd->be_suffix[0];
+-				o.o_req_ndn = op->o_bd->be_nsuffix[0];
+-				o.ors_scope = LDAP_SCOPE_SUBTREE;
++		if ( got_dn ) {
++
++			if ( static_oc ) {
++				f[0].f_choice = LDAP_FILTER_OR;
++				f[0].f_list = &f[1];
++				f[0].f_next = NULL;
++				f[1].f_choice = LDAP_FILTER_EQUALITY;
++				f[1].f_next = &f[2];
++				f[1].f_ava = &ava[0];
++				f[1].f_av_desc = slap_schema.si_ad_objectClass;
++				f[1].f_av_value = dli->dli_oc->soc_cname;
++				f[2].f_choice = LDAP_FILTER_EQUALITY;
++				f[2].f_ava = &ava[1];
++				f[2].f_av_desc = slap_schema.si_ad_objectClass;
++				f[2].f_av_value = static_oc->soc_cname;
++				f[2].f_next = NULL;
+ 			} else {
+-				o.o_req_dn = op->o_req_dn;
+-				o.o_req_ndn = op->o_req_ndn;
+-				o.ors_scope = op->ors_scope;
++				f[0].f_choice = LDAP_FILTER_EQUALITY;
++				f[0].f_ava = ava;
++				f[0].f_av_desc = slap_schema.si_ad_objectClass;
++				f[0].f_av_value = dli->dli_oc->soc_cname;
++				f[0].f_next = NULL;
+ 			}
+-			o.ors_attrsonly = 0;
+-			o.ors_attrs = an;
+-			o.o_bd = select_backend( op->o_bd->be_nsuffix, 1 );
+-			BER_BVZERO( &o.ors_filterstr );
+-			sc->sc_response = dynlist_search1resp;
+-		}
+-
+-		ds->ds_dli = dli;
+-		if ( o.ors_filterstr.bv_val )
+-			o.o_tmpfree( o.ors_filterstr.bv_val, o.o_tmpmemctx );
+-		filter2bv_x( &o, f, &o.ors_filterstr );
+-		an[0].an_desc = dli->dli_ad;
+-		an[0].an_name = dli->dli_ad->ad_cname;
+-		found = ds->ds_found;
+-		{
+-			SlapReply	r = { REP_SEARCH };
+-			(void)o.o_bd->be_search( &o, &r );
++
++			if ( o.o_callback != sc ) {
++				o.o_callback = sc;
++				o.ors_filter = f;
++				if ( tmpwant ) {
++					o.o_req_dn = op->o_bd->be_suffix[0];
++					o.o_req_ndn = op->o_bd->be_nsuffix[0];
++					o.ors_scope = LDAP_SCOPE_SUBTREE;
++				} else {
++					o.o_req_dn = op->o_req_dn;
++					o.o_req_ndn = op->o_req_ndn;
++					o.ors_scope = op->ors_scope;
++				}
++				o.ors_attrsonly = 0;
++				o.ors_attrs = an;
++				o.o_bd = select_backend( op->o_bd->be_nsuffix, 1 );
++				BER_BVZERO( &o.ors_filterstr );
++				sc->sc_response = dynlist_search1resp;
++			}
++
++			ds->ds_dli = dli;
++			if ( o.ors_filterstr.bv_val )
++				o.o_tmpfree( o.ors_filterstr.bv_val, o.o_tmpmemctx );
++			filter2bv_x( &o, f, &o.ors_filterstr );
++			an[0].an_desc = dli->dli_ad;
++			an[0].an_name = dli->dli_ad->ad_cname;
++			found = ds->ds_found;
++			{
++				SlapReply	r = { REP_SEARCH };
++				(void)o.o_bd->be_search( &o, &r );
++			}
++			if ( found != ds->ds_found && nested )
++				dynlist_nestlink( op, ds );
+ 		}
+-		if ( found != ds->ds_found && nested )
+-			dynlist_nestlink( op, ds );
+ 	}
+ 
+-	if ( ds->ds_names != NULL ) {
++	if ( dlg->dlg_dli || ds->ds_names != NULL ) {
+ 		sc->sc_response = dynlist_search2resp;
+ 		sc->sc_cleanup = dynlist_search_cleanup;
+ 		sc->sc_next = op->o_callback;
+ 		op->o_callback = sc;
+ 
++		/* dynamic lists need this */
++		ds->ds_dli = dlg->dlg_dli;
++
+ 		/* see if filter needs fixing */
+ 		if ( dlg->dlg_memberOf ) {
+ 			for ( dli = dlg->dlg_dli; dli; dli = dli->dli_next ) {
+diff --git a/doc/man/man5/slapo-dynlist.5 b/doc/man/man5/slapo-dynlist.5
+index db0031288101068a6ef9ef655b4d545f667fd3a6..eb1bb35c7f54dcf85a49d2cde300d8714a7aab30 100644
+--- doc/man/man5/slapo-dynlist.5
++++ doc/man/man5/slapo-dynlist.5
+@@ -112,7 +112,10 @@ attributes are not filled by expanded DN, but are remapped as
+ .B mapped-ad 
+ attributes.  Multiple mapping statements can be used. The
+ .B memberOf-ad
+-option is not used in this case.
++option is not used in this case. Note that in order for dynamic lists
++to be usable in a search filter, the dynamic attributes to be filtered
++in the list must be explicitly mapped. They can be mapped to themselves
++if no transformation is required.
+ 
+ .LP
+ The dynlist overlay may be used with any backend, but it is mainly 
+@@ -176,6 +179,24 @@ then add to the database an entry like
+ If no <attrs> are provided in the URI, all (non-operational) attributes are
+ collected.
+ 
++The values of the above list can not be evaluated in a search filter. To enable
++filter evaluation on the dynamic list, the configuration must be changed to
++explicitly map the dynamic attributes to be filtered. In this case
++.B mail
++is just mapped to itself.
++
++.LP
++.nf
++    include /path/to/dyngroup.schema
++    # ...
++
++    database <database>
++    # ...
++
++    overlay dynlist
++    dynlist\-attrset groupOfURLs memberURL mail:mail
++.fi
++
+ This example implements the dynamic group feature on the 
+ .B member
+ attribute:
+diff --git a/servers/slapd/overlays/dynlist.c b/servers/slapd/overlays/dynlist.c
+index 3427710eea58c0e4ebebdd79757932af93c1c2d0..a94873331282cf1abbe4e4388616e0666c335feb 100644
+--- servers/slapd/overlays/dynlist.c
++++ servers/slapd/overlays/dynlist.c
+@@ -509,7 +509,11 @@ dynlist_prepare_entry( Operation *op, SlapReply *rs, dynlist_info_t *dli, dynlis
+ 			|| ad_infilter( ad, op->ors_filter ))
+ 			break;
+ 	}
+-	if ( dli->dli_dlm && !dlm )
++
++	/* If nothing matched and this was a search, skip over to nesting check.
++	 * If this was a compare, keep on going.
++	 */
++	if ( dli->dli_dlm && !dlm && o.o_acl_priv != ACL_COMPARE )
+ 		goto checkdyn;
+ 
+ 	if ( ad_dgIdentity && ( id = attrs_find( rs->sr_entry->e_attrs, ad_dgIdentity ))) {
+@@ -814,6 +818,22 @@ dynlist_sc_compare_entry( Operation *op, SlapReply *rs )
+ 	return 0;
+ }
+ 
++static int
++dynlist_check_scope( Operation *op, Entry *e, dynlist_info_t *dli )
++{
++	if ( dli->dli_lud ) {
++		if ( !BER_BVISNULL( &dli->dli_uri_nbase ) &&
++			!dnIsSuffixScope( &e->e_nname,
++				&dli->dli_uri_nbase,
++				dli->dli_lud->lud_scope ))
++			return 0;
++		if ( dli->dli_uri_filter && test_filter( op, e,
++			dli->dli_uri_filter ) != LDAP_COMPARE_TRUE )
++			return 0;
++	}
++	return 1;
++}
++
+ static int
+ dynlist_compare( Operation *op, SlapReply *rs )
+ {
+@@ -928,7 +949,8 @@ done:;
+ 
+ 	/* check for dynlist objectClass; done if not found */
+ 	dli = (dynlist_info_t *)dlg->dlg_dli;
+-	while ( dli != NULL && !is_entry_objectclass_or_sub( e, dli->dli_oc ) ) {
++	while ( dli != NULL && !is_entry_objectclass_or_sub( e, dli->dli_oc ) &&
++		!dynlist_check_scope( op, e, dli )) {
+ 		dli = dli->dli_next;
+ 	}
+ 	if ( dli == NULL ) {
+@@ -1049,6 +1071,11 @@ dynlist_search1resp( Operation *op, SlapReply *rs )
+ 		if ( ds->ds_dlm && ds->ds_dlm->dlm_static_oc && is_entry_objectclass( rs->sr_entry, ds->ds_dlm->dlm_static_oc, 0 ))
+ 			b = attr_find( rs->sr_entry->e_attrs, ds->ds_dlm->dlm_member_ad );
+ 		a = attr_find( rs->sr_entry->e_attrs, ds->ds_dli->dli_ad );
++
++		/* enforce scope of dynamic entries */
++		if ( a && !dynlist_check_scope( op, rs->sr_entry, ds->ds_dli ))
++			a = NULL;
++
+ 		if ( a || b ) {
+ 			unsigned len;
+ 			dynlist_name_t *dyn;
+@@ -1522,21 +1549,6 @@ dynlist_add_memberOf(Operation *op, SlapReply *rs, dynlist_search_t *ds)
+ 	}
+ }
+ 
+-static int
+-dynlist_check_scope( Operation *op, Entry *e, dynlist_info_t *dli )
+-{
+-	if ( dli->dli_lud ) {
+-		if ( !BER_BVISNULL( &dli->dli_uri_nbase ) &&
+-			!dnIsSuffixScope( &e->e_nname,
+-				&dli->dli_uri_nbase,
+-				dli->dli_lud->lud_scope ))
+-			return 0;
+-		if ( dli->dli_uri_filter && test_filter( op, e,
+-			dli->dli_uri_filter ) != LDAP_COMPARE_TRUE )
+-			return 0;
+-	}
+-	return 1;
+-}
+ 
+ /* process the search responses */
+ static int
+@@ -1554,8 +1566,7 @@ dynlist_search2resp( Operation *op, SlapReply *rs )
+ 			dyn = ldap_tavl_find( ds->ds_names, &rs->sr_entry->e_nname, dynlist_avl_cmp );
+ 			if ( dyn ) {
+ 				dyn->dy_seen = 1;
+-				if ( dynlist_check_scope( op, rs->sr_entry, dyn->dy_dli ))
+-					rc = dynlist_prepare_entry( op, rs, dyn->dy_dli, dyn );
++				rc = dynlist_prepare_entry( op, rs, dyn->dy_dli, dyn );
+ 			} else if ( ds->ds_want )
+ 				dynlist_add_memberOf( op, rs, ds );
+ 		}
+@@ -1743,24 +1754,25 @@ dynlist_search( Operation *op, SlapReply *rs )
+ 	/* Find all groups in scope. For group expansion
+ 	 * we only need the groups within the search scope, but
+ 	 * for memberOf populating, we need all dyngroups.
+-	 *
+-	 * We ignore dynamic lists here; they're handled later.
+ 	 */
+ 	for ( dli = dlg->dlg_dli; dli; dli = dli->dli_next ) {
+-		int got_dn = 1;
+ 		static_oc = NULL;
+ 		nested = 0;
+ 		tmpwant = 0;
+-		if ( dlg->dlg_memberOf ) {
+-			if ( !dli->dli_dlm )
+-				continue;
+ 
++		if ( !dli->dli_dlm ) {
++			/* A dynamic list returning arbitrary attrs:
++			 * we don't know what attrs it might return,
++			 * so we can't check if any of its attrs are
++			 * in the filter. So assume none of them are.
++			 *
++			 * If filtering is desired, the filterable attrs
++			 * must be explicitly mapped (even to
++			 * themselves if nothing else).
++			 */
++			continue;
++		} else {
+ 			for ( dlm = dli->dli_dlm; dlm; dlm = dlm->dlm_next ) {
+-				if ( dlm->dlm_mapped_ad || !dlm->dlm_member_ad ) {
+-					got_dn = 0;
+-					break;
+-				}
+-
+ 				if ( dlm->dlm_memberOf_ad ) {
+ 					int want = 0;
+ 
+@@ -1817,15 +1829,15 @@ dynlist_search( Operation *op, SlapReply *rs )
+ 						}
+ 					}
+ 				} else {
+-					if ( ad_infilter( dlm->dlm_member_ad, op->ors_filter ) ||
+-						userattrs || ad_inlist( dlm->dlm_member_ad, op->ors_attrs )) {
++					AttributeDescription *ad = dlm->dlm_mapped_ad ? dlm->dlm_mapped_ad : dlm->dlm_member_ad;
++					if ( ad_infilter( ad, op->ors_filter )) {
+ 						ds->ds_want = tmpwant = WANT_MEMBER;
+ 					}
+ 				}
+ 			}
+ 		}
+ 
+-		if ( got_dn ) {
++		if ( tmpwant ) {
+ 
+ 			if ( static_oc ) {
+ 				f[0].f_choice = LDAP_FILTER_OR;
+diff --git a/tests/data/slapd-dynlist.conf b/tests/data/slapd-dynlist.conf
+index 870171fec1981a5ea87a97b0ec77cf6e14c1d8ea..b4dc1c4c3ee7eef953e87655d80e5e08da5684c2 100644
+--- tests/data/slapd-dynlist.conf
++++ tests/data/slapd-dynlist.conf
+@@ -46,7 +46,7 @@ rootpw		secret
+ 
+ # we'll reconfigure the attrset dynamically
+ overlay			dynlist
+-dynlist-attrset	groupOfURLs memberURL
++dynlist-attrset	groupOfURLs memberURL mail:mail
+ 
+ database config
+ include @TESTDIR@/configpw.conf
+diff --git a/servers/slapd/overlays/dynlist.c b/servers/slapd/overlays/dynlist.c
+index a94873331282cf1abbe4e4388616e0666c335feb..367b3baf8077e52c6956390e6047db33f8c0e554 100644
+--- servers/slapd/overlays/dynlist.c
++++ servers/slapd/overlays/dynlist.c
+@@ -99,6 +99,47 @@ ad_infilter( AttributeDescription *ad, Filter *f )
+ 	return 0;
+ }
+ 
++typedef struct dynlist_filterinst_t {
++	AttributeAssertion *df_a;
++	Entry *df_e;
++} dynlist_filterinst_t;
++
++/* Record occurrences of ad in filter. Ignore in negated filters. */
++static void
++dynlist_filter_instances( Operation *op, AttributeDescription *ad, Filter *f, int not, int *dfn, dynlist_filterinst_t **dfp )
++{
++	if ( !f )
++		return;
++
++	switch( f->f_choice & SLAPD_FILTER_MASK ) {
++	case LDAP_FILTER_EQUALITY:
++		if ( !not && f->f_av_desc == ad ) {
++			dynlist_filterinst_t *df = *dfp;
++			int n = *dfn;
++			df = op->o_tmprealloc( df, (n + 1) * sizeof(dynlist_filterinst_t), op->o_tmpmemctx );
++			df[n].df_a = f->f_ava;
++			df[n++].df_e = NULL;
++			*dfp = df;
++			*dfn = n;
++		}
++		break;
++	case SLAPD_FILTER_COMPUTED:
++	case LDAP_FILTER_PRESENT:
++	case LDAP_FILTER_GE:
++	case LDAP_FILTER_LE:
++	case LDAP_FILTER_APPROX:
++	case LDAP_FILTER_SUBSTRINGS:
++	case LDAP_FILTER_EXT:
++		break;
++	case LDAP_FILTER_NOT:	not ^= 1;
++		/* FALLTHRU */
++	case LDAP_FILTER_AND:
++	case LDAP_FILTER_OR:
++		for ( f = f->f_list; f; f = f->f_next )
++			dynlist_filter_instances( op, ad, f, not, dfn, dfp );
++	}
++}
++
+ static int
+ dynlist_make_filter( Operation *op, Entry *e, dynlist_info_t *dli, const char *url, struct berval *oldf, struct berval *newf )
+ {
+@@ -330,6 +371,7 @@ done:;
+ typedef struct dynlist_name_t {
+ 	struct berval dy_name;
+ 	dynlist_info_t *dy_dli;
++	dynlist_map_t *dy_dlm;
+ 	AttributeDescription *dy_staticmember;
+ 	int dy_seen;
+ 	int dy_numuris;
+@@ -949,8 +991,8 @@ done:;
+ 
+ 	/* check for dynlist objectClass; done if not found */
+ 	dli = (dynlist_info_t *)dlg->dlg_dli;
+-	while ( dli != NULL && !is_entry_objectclass_or_sub( e, dli->dli_oc ) &&
+-		!dynlist_check_scope( op, e, dli )) {
++	while ( dli != NULL && ( !is_entry_objectclass_or_sub( e, dli->dli_oc ) ||
++		!dynlist_check_scope( op, e, dli ))) {
+ 		dli = dli->dli_next;
+ 	}
+ 	if ( dli == NULL ) {
+@@ -1091,6 +1133,7 @@ dynlist_search1resp( Operation *op, SlapReply *rs )
+ 			dyn = ch_calloc(1, sizeof(dynlist_name_t)+rs->sr_entry->e_nname.bv_len + 1 + len);
+ 			dyn->dy_name.bv_val = ((char *)(dyn+1)) + len;
+ 			dyn->dy_dli = ds->ds_dli;
++			dyn->dy_dlm = ds->ds_dlm;
+ 			dyn->dy_name.bv_len = rs->sr_entry->e_nname.bv_len;
+ 			if ( a ) {
+ 				Filter *f;
+@@ -1450,23 +1493,12 @@ dynlist_search_cleanup( Operation *op, SlapReply *rs )
+ }
+ 
+ static int
+-dynlist_test_membership(Operation *op, dynlist_name_t *dyn, Entry *e)
++dynlist_test_dynmember(Operation *op, dynlist_name_t *dyn, Entry *e)
+ {
+ 	LDAPURLDesc *ludp;
+ 	struct berval nbase, bv;
+ 	int i, rc = LDAP_COMPARE_FALSE;
+-	if ( dyn->dy_staticmember ) {
+-		Entry *grp;
+-		if ( overlay_entry_get_ov( op, &dyn->dy_name, NULL, NULL, 0, &grp, (slap_overinst *)op->o_bd->bd_info ) == LDAP_SUCCESS && grp ) {
+-			Attribute *a = attr_find( grp->e_attrs, dyn->dy_staticmember );
+-			if ( a ) {
+-				i = value_find_ex( dyn->dy_staticmember, SLAP_MR_ATTRIBUTE_VALUE_NORMALIZED_MATCH |
+-					SLAP_MR_ASSERTED_VALUE_NORMALIZED_MATCH, a->a_nvals, &e->e_nname, op->o_tmpmemctx );
+-			}
+-			overlay_entry_release_ov( op, grp, 0, (slap_overinst *)op->o_bd->bd_info );
+-			return i == LDAP_SUCCESS ? LDAP_COMPARE_TRUE : LDAP_COMPARE_FALSE;
+-		}
+-	}
++
+ 	for (i=0; i<dyn->dy_numuris; i++) {
+ 		ludp = dyn->dy_uris[i];
+ 		nbase.bv_val = ludp->lud_dn;
+@@ -1503,6 +1535,28 @@ dynlist_test_membership(Operation *op, dynlist_name_t *dyn, Entry *e)
+ 	return rc;
+ }
+ 
++static int
++dynlist_test_membership(Operation *op, dynlist_name_t *dyn, Entry *e)
++{
++	if ( dyn->dy_staticmember ) {
++		Entry *grp;
++		if ( overlay_entry_get_ov( op, &dyn->dy_name, NULL, NULL, 0, &grp, (slap_overinst *)op->o_bd->bd_info ) == LDAP_SUCCESS && grp ) {
++			Attribute *a = attr_find( grp->e_attrs, dyn->dy_staticmember );
++			int rc;
++			if ( a ) {
++				rc = value_find_ex( dyn->dy_staticmember, SLAP_MR_ATTRIBUTE_VALUE_NORMALIZED_MATCH |
++					SLAP_MR_ASSERTED_VALUE_NORMALIZED_MATCH, a->a_nvals, &e->e_nname, op->o_tmpmemctx );
++				rc = ( rc == LDAP_SUCCESS ) ? LDAP_COMPARE_TRUE : LDAP_COMPARE_FALSE;
++			} else {
++				rc = LDAP_COMPARE_FALSE;
++			}
++			overlay_entry_release_ov( op, grp, 0, (slap_overinst *)op->o_bd->bd_info );
++			return rc;
++		}
++	}
++	return dynlist_test_dynmember( op, dyn, e );
++}
++
+ static void
+ dynlist_add_memberOf(Operation *op, SlapReply *rs, dynlist_search_t *ds)
+ {
+@@ -1549,6 +1603,22 @@ dynlist_add_memberOf(Operation *op, SlapReply *rs, dynlist_search_t *ds)
+ 	}
+ }
+ 
++/* See if a DN-valued filter attribute belongs to a dyngroup */
++static int
++dynmember( dynlist_name_t *dyn, Filter *f, int ndf, dynlist_filterinst_t *df )
++{
++	int i;
++	int ret = 1;	/* default to accepting everything */
++
++	for ( i = 0; i < ndf; i++ ) {
++		if ( df[i].df_e ) {
++			ret = dynlist_test_dynmember( NULL, dyn, df[i].df_e ) == LDAP_COMPARE_TRUE;
++			if ( ret )
++				break;
++		}
++	}
++	return ret;
++}
+ 
+ /* process the search responses */
+ static int
+@@ -1588,9 +1658,13 @@ dynlist_search2resp( Operation *op, SlapReply *rs )
+ 		}
+ 		return rc;
+ 	} else if ( rs->sr_type == REP_RESULT && rs->sr_err == LDAP_SUCCESS ) {
+-		TAvlnode *ptr;
++		slap_overinst *on = (slap_overinst *)op->o_bd->bd_info;
++		TAvlnode *ptr, *skip = NULL;
+ 		SlapReply r = *rs;
++		dynlist_map_t *dlm = NULL;
+ 		Filter *f = ds->ds_origfilter ? ds->ds_origfilter : op->ors_filter;
++		dynlist_filterinst_t *df = NULL;
++		int ndf = 0;
+ 
+ 		if ( get_pagedresults( op ) > SLAP_CONTROL_IGNORED )
+ 			return SLAP_CB_CONTINUE;
+@@ -1598,29 +1672,79 @@ dynlist_search2resp( Operation *op, SlapReply *rs )
+ 		/* Check for any unexpanded dynamic group entries that weren't picked up
+ 		 * by the original search filter.
+ 		 */
+-		for ( ptr = ldap_tavl_end( ds->ds_names, TAVL_DIR_LEFT ); ptr;
+-			ptr = ldap_tavl_next( ptr, TAVL_DIR_RIGHT )) {
++		ptr = ldap_tavl_end( ds->ds_names, TAVL_DIR_LEFT );
++		while ( ptr ) {
+ 			dyn = ptr->avl_data;
+ 			if ( dyn->dy_seen )
+-				continue;
++				goto next;
++			dyn->dy_seen = 1;
+ 			if ( !dnIsSuffixScope( &dyn->dy_name, &op->o_req_ndn, op->ors_scope ))
+-				continue;
+-			if ( overlay_entry_get_ov( op, &dyn->dy_name, NULL, NULL, 0, &r.sr_entry, (slap_overinst *)op->o_bd->bd_info ) != LDAP_SUCCESS ||
++				goto next;
++			/* can only pre-check if this is a dyngroup, otherwise just build the entry */
++			if ( dyn->dy_dli->dli_dlm && !dyn->dy_dli->dli_dlm->dlm_next &&
++				!dyn->dy_dlm->dlm_mapped_ad ) {
++				if ( !dlm ) {
++					AttributeDescription *ad;
++					int i;
++					dlm = dyn->dy_dlm;
++					ad = dlm->dlm_member_ad;
++					/* can only pre-check DN-valued attrs */
++					if ( ad->ad_type->sat_syntax == slap_schema.si_syn_distinguishedName ) {
++						/* find any instances of this ad in the filter */
++						dynlist_filter_instances( op, ad, f, 0, &ndf, &df );
++						for ( i = 0; i < ndf; i++ ) {
++							overlay_entry_get_ov( op, &df[i].df_a->aa_value, NULL, NULL, 0, &df[i].df_e, on );
++						}
++					}
++				} else if ( dlm != dyn->dy_dlm ) {	/* if a different map, do it later */
++					if ( !skip )
++						skip = ptr;
++					dyn->dy_seen = 0;	/* we'll want to process it next time thru */
++					goto next;
++				}
++				/* only pre-check for non-nested */
++				if ( !dyn->dy_sups && !dyn->dy_subs && ndf && !dynmember( dyn, f, ndf, df ))
++					goto next;
++			}
++			if ( overlay_entry_get_ov( op, &dyn->dy_name, NULL, NULL, 0, &r.sr_entry, on ) != LDAP_SUCCESS ||
+ 				r.sr_entry == NULL )
+-				continue;
++				goto next;
+ 			r.sr_flags = REP_ENTRY_MUSTRELEASE;
+-			if ( dynlist_check_scope( op, r.sr_entry, dyn->dy_dli )) {
+-				dynlist_prepare_entry( op, &r, dyn->dy_dli, dyn );
+-				if ( test_filter( op, r.sr_entry, f ) == LDAP_COMPARE_TRUE ) {
+-					r.sr_attrs = op->ors_attrs;
+-					rs->sr_err = send_search_entry( op, &r );
+-					if ( rs->sr_err != LDAP_SUCCESS )
+-						break;
+-					r.sr_entry = NULL;
+-				}
++			dynlist_prepare_entry( op, &r, dyn->dy_dli, dyn );
++			if ( test_filter( op, r.sr_entry, f ) == LDAP_COMPARE_TRUE ) {
++				r.sr_attrs = op->ors_attrs;
++				rs->sr_err = send_search_entry( op, &r );
++				if ( rs->sr_err != LDAP_SUCCESS )
++					break;
++				r.sr_entry = NULL;
+ 			}
+ 			if ( r.sr_entry )
+ 				rs_flush_entry( op, &r, NULL );
++next:
++			ptr = ldap_tavl_next( ptr, TAVL_DIR_RIGHT );
++			if ( !ptr ) {
++				int i;
++				for ( i = 0; i<ndf; i++ ) {
++					if ( df[i].df_e )
++						overlay_entry_release_ov( op, df[i].df_e, 0, on );
++				}
++				op->o_tmpfree( df, op->o_tmpmemctx );
++				ndf = 0;
++				if ( skip ) {	/* go back for dyns we skipped */
++					ptr = skip;
++					skip = NULL;
++					dlm = NULL;
++					df = NULL;
++				}
++			}
++		}
++		if ( ndf ) {
++			int i;
++			for ( i = 0; i<ndf; i++ ) {
++				if ( df[i].df_e )
++					overlay_entry_release_ov( op, df[i].df_e, 0, on );
++			}
++			op->o_tmpfree( df, op->o_tmpmemctx );
+ 		}
+ 		rs->sr_nentries = r.sr_nentries;
+ 	}
+@@ -1828,10 +1952,13 @@ dynlist_search( Operation *op, SlapReply *rs )
+ 							ds->ds_dlm = dlm;
+ 						}
+ 					}
+-				} else {
++				}
++				{
+ 					AttributeDescription *ad = dlm->dlm_mapped_ad ? dlm->dlm_mapped_ad : dlm->dlm_member_ad;
+ 					if ( ad_infilter( ad, op->ors_filter )) {
+-						ds->ds_want = tmpwant = WANT_MEMBER;
++						tmpwant |= WANT_MEMBER;
++						ds->ds_want = tmpwant;
++						ds->ds_dlm = dlm;
+ 					}
+ 				}
+ 			}
+diff --git a/tests/data/dynlist.out b/tests/data/dynlist.out
+index 926e8307e96e84590f3c39b5447aaf429740231e..6402366258439471bb2eccdfc39b5e6678e8968b 100644
+--- tests/data/dynlist.out
++++ tests/data/dynlist.out
+@@ -365,6 +365,65 @@ facsimileTelephoneNumber: +1 313 555 7762
+ telephoneNumber: +1 313 555 4177
+ memberOf: cn=dynamic list of members,ou=dynamic lists,dc=example,dc=com
+ 
++# Testing filtered member functionality...
++dn: cn=All Staff,ou=Groups,dc=example,dc=com
++member: cn=Manager,dc=example,dc=com
++member: cn=Barbara Jensen,ou=Information Technology Division,ou=People,dc=exam
++ ple,dc=com
++member: cn=Jane Doe,ou=Alumni Association,ou=People,dc=example,dc=com
++member: cn=John Doe,ou=Information Technology Division,ou=People,dc=example,dc
++ =com
++member: cn=Mark Elliot,ou=Alumni Association,ou=People,dc=example,dc=com
++member: cn=James A Jones 1,ou=Alumni Association,ou=People,dc=example,dc=com
++member: cn=James A Jones 2,ou=Information Technology Division,ou=People,dc=exa
++ mple,dc=com
++member: cn=Jennifer Smith,ou=Alumni Association,ou=People,dc=example,dc=com
++member: cn=Dorothy Stevens,ou=Alumni Association,ou=People,dc=example,dc=com
++member: cn=Ursula Hampster,ou=Alumni Association,ou=People,dc=example,dc=com
++member: cn=Bjorn Jensen,ou=Information Technology Division,ou=People,dc=exampl
++ e,dc=com
++owner: cn=Manager,dc=example,dc=com
++cn: All Staff
++description: Everyone in the sample data
++objectClass: groupofnames
++
++dn: cn=Alumni Assoc Staff,ou=Groups,dc=example,dc=com
++member: cn=Manager,dc=example,dc=com
++member: cn=Dorothy Stevens,ou=Alumni Association,ou=People,dc=example,dc=com
++member: cn=James A Jones 1,ou=Alumni Association,ou=People,dc=example,dc=com
++member: cn=Jane Doe,ou=Alumni Association,ou=People,dc=example,dc=com
++member: cn=Jennifer Smith,ou=Alumni Association,ou=People,dc=example,dc=com
++member: cn=Mark Elliot,ou=Alumni Association,ou=People,dc=example,dc=com
++member: cn=Ursula Hampster,ou=Alumni Association,ou=People,dc=example,dc=com
++owner: cn=Manager,dc=example,dc=com
++description: All Alumni Assoc Staff
++cn: Alumni Assoc Staff
++objectClass: groupofnames
++
++dn: cn=Dynamic List of Members,ou=Dynamic Lists,dc=example,dc=com
++objectClass: groupOfURLs
++objectClass: dgIdentityAux
++cn: Dynamic List of Members
++memberURL: ldap:///ou=People,dc=example,dc=com??sub?(objectClass=person)
++dgIdentity: cn=Bjorn Jensen,ou=Information Technology DivisioN,ou=People,dc=ex
++ ample,dc=com
++dgAuthz: {0}dn:cn=Barbara Jensen,ou=Information Technology DivisioN,ou=People,
++ dc=example,dc=com
++member: cn=Barbara Jensen,ou=Information Technology Division,ou=People,dc=exam
++ ple,dc=com
++member: cn=Bjorn Jensen,ou=Information Technology Division,ou=People,dc=exampl
++ e,dc=com
++member: cn=Dorothy Stevens,ou=Alumni Association,ou=People,dc=example,dc=com
++member: cn=James A Jones 1,ou=Alumni Association,ou=People,dc=example,dc=com
++member: cn=James A Jones 2,ou=Information Technology Division,ou=People,dc=exa
++ mple,dc=com
++member: cn=Jane Doe,ou=Alumni Association,ou=People,dc=example,dc=com
++member: cn=Jennifer Smith,ou=Alumni Association,ou=People,dc=example,dc=com
++member: cn=John Doe,ou=Information Technology Division,ou=People,dc=example,dc
++ =com
++member: cn=Mark Elliot,ou=Alumni Association,ou=People,dc=example,dc=com
++member: cn=Ursula Hampster,ou=Alumni Association,ou=People,dc=example,dc=com
++
+ # Testing static group memberOf functionality...
+ dn: cn=Mark Elliot,ou=Alumni Association,ou=People,dc=example,dc=com
+ objectClass: OpenLDAPperson
+diff --git a/tests/scripts/test044-dynlist b/tests/scripts/test044-dynlist
+index f3c21615f23e98a48565d4e6e0b062cc0090b946..da70343ee88c9282c721f0d828563e71f821bc3b 100755
+--- tests/scripts/test044-dynlist
++++ tests/scripts/test044-dynlist
+@@ -763,7 +763,20 @@ echo "Testing filtered memberOf functionality..."
+ echo "# Testing filtered memberOf functionality..." >> $SEARCHOUT
+ $LDAPSEARCH -S "" -b "ou=People,$BASEDN" -H $URI1 \
+ 	-D "$BABSDN" -w bjensen \
+-	'(&(memberOf=cn=Dynamic List of Members,ou=Dynamic Lists,dc=example,dc=com)(cn=Mark Elliot))' '*' 'memberOf' \
++	"(&(memberOf=cn=Dynamic List of Members,ou=Dynamic Lists,$BASEDN)(cn=Mark Elliot))" '*' 'memberOf' \
++	>> $SEARCHOUT 2>&1
++RC=$?
++if test $RC != 0 ; then
++	echo "ldapsearch failed ($RC)!"
++	test $KILLSERVERS != no && kill -HUP $KILLPIDS
++	exit $RC
++fi
++
++echo "Testing filtered member functionality..."
++echo "# Testing filtered member functionality..." >> $SEARCHOUT
++$LDAPSEARCH -S "" -b "$BASEDN" -H $URI1 \
++	-D "$BABSDN" -w bjensen \
++	"(member=cn=Jane Doe,ou=Alumni Association,ou=People,$BASEDN)" \
+ 	>> $SEARCHOUT 2>&1
+ RC=$?
+ if test $RC != 0 ; then
+diff --git a/servers/slapd/overlays/dynlist.c b/servers/slapd/overlays/dynlist.c
+index 367b3baf8077e52c6956390e6047db33f8c0e554..0743cf1d05e25356e497c028fa664d783f171c8e 100644
+--- servers/slapd/overlays/dynlist.c
++++ servers/slapd/overlays/dynlist.c
+@@ -369,6 +369,7 @@ done:;
+ }
+ 
+ typedef struct dynlist_name_t {
++	struct berval dy_nname;
+ 	struct berval dy_name;
+ 	dynlist_info_t *dy_dli;
+ 	dynlist_map_t *dy_dlm;
+@@ -432,10 +433,10 @@ dynlist_nested_memberOf( Entry *e, AttributeDescription *ad, TAvlnode *sups )
+ 			if ( attr_valfind( a, SLAP_MR_EQUALITY | SLAP_MR_VALUE_OF_ASSERTION_SYNTAX |
+ 				SLAP_MR_ASSERTED_VALUE_NORMALIZED_MATCH |
+ 				SLAP_MR_ATTRIBUTE_VALUE_NORMALIZED_MATCH,
+-				&dyn->dy_name, &slot, NULL ) == LDAP_SUCCESS )
++				&dyn->dy_nname, &slot, NULL ) == LDAP_SUCCESS )
+ 				continue;
+ 		}
+-		attr_merge_one( e, ad, &dyn->dy_name, &dyn->dy_name );
++		attr_merge_one( e, ad, &dyn->dy_name, &dyn->dy_nname );
+ 		if ( !a )
+ 			a = attr_find( e->e_attrs, ad );
+ 		if ( dyn->dy_sups )
+@@ -494,7 +495,7 @@ dynlist_nested_member( Operation *op, dynlist_member_t *dm, TAvlnode *subs )
+ 		dyn = ptr->avl_data;
+ 		if ( ldap_tavl_insert( &dm->dm_groups, dyn, dynlist_ptr_cmp, ldap_avl_dup_error ))
+ 			continue;
+-		if ( overlay_entry_get_ov( op, &dyn->dy_name, NULL, NULL, 0, &ne, on ) != LDAP_SUCCESS || ne == NULL )
++		if ( overlay_entry_get_ov( op, &dyn->dy_nname, NULL, NULL, 0, &ne, on ) != LDAP_SUCCESS || ne == NULL )
+ 			continue;
+ 		b = attr_find( ne->e_attrs, dm->dm_ad );
+ 		if ( b ) {
+@@ -1097,9 +1098,9 @@ dynlist_avl_cmp( const void *c1, const void *c2 )
+ 	int rc;
+ 	n1 = c1; n2 = c2;
+ 
+-	rc = n1->dy_name.bv_len - n2->dy_name.bv_len;
++	rc = n1->dy_nname.bv_len - n2->dy_nname.bv_len;
+ 	if ( rc ) return rc;
+-	return ber_bvcmp( &n1->dy_name, &n2->dy_name );
++	return ber_bvcmp( &n1->dy_nname, &n2->dy_nname );
+ }
+ 
+ /* build a list of dynamic entries */
+@@ -1130,11 +1131,14 @@ dynlist_search1resp( Operation *op, SlapReply *rs )
+ 			else
+ 				len = 0;
+ 
+-			dyn = ch_calloc(1, sizeof(dynlist_name_t)+rs->sr_entry->e_nname.bv_len + 1 + len);
++			dyn = ch_calloc(1, sizeof(dynlist_name_t)+rs->sr_entry->e_nname.bv_len + 1 +
++				rs->sr_entry->e_name.bv_len + 1 + len);
+ 			dyn->dy_name.bv_val = ((char *)(dyn+1)) + len;
++			dyn->dy_name.bv_len = rs->sr_entry->e_name.bv_len;
++			dyn->dy_nname.bv_val = dyn->dy_name.bv_val + dyn->dy_name.bv_len + 1;
++			dyn->dy_nname.bv_len = rs->sr_entry->e_nname.bv_len;
+ 			dyn->dy_dli = ds->ds_dli;
+ 			dyn->dy_dlm = ds->ds_dlm;
+-			dyn->dy_name.bv_len = rs->sr_entry->e_nname.bv_len;
+ 			if ( a ) {
+ 				Filter *f;
+ 				/* parse and validate the URIs */
+@@ -1172,7 +1176,8 @@ dynlist_search1resp( Operation *op, SlapReply *rs )
+ 				}
+ 			}
+ 			dyn->dy_numuris = j;
+-			memcpy(dyn->dy_name.bv_val, rs->sr_entry->e_nname.bv_val, rs->sr_entry->e_nname.bv_len );
++			memcpy(dyn->dy_name.bv_val, rs->sr_entry->e_name.bv_val, rs->sr_entry->e_name.bv_len );
++			memcpy(dyn->dy_nname.bv_val, rs->sr_entry->e_nname.bv_val, rs->sr_entry->e_nname.bv_len );
+ 			if ( b )
+ 				dyn->dy_staticmember = ds->ds_dlm->dlm_member_ad;
+ 
+@@ -1329,7 +1334,7 @@ dynlist_filter_group( Operation *op, dynlist_name_t *dyn, Filter *n, dynlist_sea
+ 	if ( ldap_tavl_insert( &ds->ds_fnodes, dyn, dynlist_ptr_cmp, ldap_avl_dup_error ))
+ 		return 0;
+ 
+-	if ( overlay_entry_get_ov( op, &dyn->dy_name, NULL, NULL, 0, &e, on ) !=
++	if ( overlay_entry_get_ov( op, &dyn->dy_nname, NULL, NULL, 0, &e, on ) !=
+ 		LDAP_SUCCESS || e == NULL ) {
+ 		return -1;
+ 	}
+@@ -1540,7 +1545,7 @@ dynlist_test_membership(Operation *op, dynlist_name_t *dyn, Entry *e)
+ {
+ 	if ( dyn->dy_staticmember ) {
+ 		Entry *grp;
+-		if ( overlay_entry_get_ov( op, &dyn->dy_name, NULL, NULL, 0, &grp, (slap_overinst *)op->o_bd->bd_info ) == LDAP_SUCCESS && grp ) {
++		if ( overlay_entry_get_ov( op, &dyn->dy_nname, NULL, NULL, 0, &grp, (slap_overinst *)op->o_bd->bd_info ) == LDAP_SUCCESS && grp ) {
+ 			Attribute *a = attr_find( grp->e_attrs, dyn->dy_staticmember );
+ 			int rc;
+ 			if ( a ) {
+@@ -1584,11 +1589,11 @@ dynlist_add_memberOf(Operation *op, SlapReply *rs, dynlist_search_t *ds)
+ 						if ( attr_valfind( a, SLAP_MR_EQUALITY | SLAP_MR_VALUE_OF_ASSERTION_SYNTAX |
+ 							SLAP_MR_ASSERTED_VALUE_NORMALIZED_MATCH |
+ 							SLAP_MR_ATTRIBUTE_VALUE_NORMALIZED_MATCH,
+-							&dyn->dy_name, &slot, NULL ) != LDAP_SUCCESS )
++							&dyn->dy_nname, &slot, NULL ) != LDAP_SUCCESS )
+ 							a = NULL;
+ 					}
+ 					if ( !a )
+-						attr_merge_one( e, dlm->dlm_memberOf_ad, &dyn->dy_name, &dyn->dy_name );
++						attr_merge_one( e, dlm->dlm_memberOf_ad, &dyn->dy_name, &dyn->dy_nname );
+ 					if ( dyn->dy_sups ) {
+ 						dynlist_nested_memberOf( e, dlm->dlm_memberOf_ad, dyn->dy_sups );
+ 					}
+@@ -1678,11 +1683,11 @@ dynlist_search2resp( Operation *op, SlapReply *rs )
+ 			if ( dyn->dy_seen )
+ 				goto next;
+ 			dyn->dy_seen = 1;
+-			if ( !dnIsSuffixScope( &dyn->dy_name, &op->o_req_ndn, op->ors_scope ))
++			if ( !dnIsSuffixScope( &dyn->dy_nname, &op->o_req_ndn, op->ors_scope ))
+ 				goto next;
+ 			/* can only pre-check if this is a dyngroup, otherwise just build the entry */
+ 			if ( dyn->dy_dli->dli_dlm && !dyn->dy_dli->dli_dlm->dlm_next &&
+-				!dyn->dy_dlm->dlm_mapped_ad ) {
++				dyn->dy_dlm && !dyn->dy_dlm->dlm_mapped_ad ) {
+ 				if ( !dlm ) {
+ 					AttributeDescription *ad;
+ 					int i;
+@@ -1706,7 +1711,7 @@ dynlist_search2resp( Operation *op, SlapReply *rs )
+ 				if ( !dyn->dy_sups && !dyn->dy_subs && ndf && !dynmember( dyn, f, ndf, df ))
+ 					goto next;
+ 			}
+-			if ( overlay_entry_get_ov( op, &dyn->dy_name, NULL, NULL, 0, &r.sr_entry, on ) != LDAP_SUCCESS ||
++			if ( overlay_entry_get_ov( op, &dyn->dy_nname, NULL, NULL, 0, &r.sr_entry, on ) != LDAP_SUCCESS ||
+ 				r.sr_entry == NULL )
+ 				goto next;
+ 			r.sr_flags = REP_ENTRY_MUSTRELEASE;
+@@ -1809,7 +1814,7 @@ dynlist_nestlink( Operation *op, dynlist_search_t *ds )
+ 		ptr = ldap_tavl_next( ptr, TAVL_DIR_RIGHT )) {
+ 		di = ptr->avl_data;
+ 		if ( ds->ds_dlm ) {
+-			if ( overlay_entry_get_ov( op, &di->dy_name, NULL, NULL, 0, &e, on ) != LDAP_SUCCESS || e == NULL )
++			if ( overlay_entry_get_ov( op, &di->dy_nname, NULL, NULL, 0, &e, on ) != LDAP_SUCCESS || e == NULL )
+ 				continue;
+ 			a = attr_find( e->e_attrs, ds->ds_dlm->dlm_member_ad );
+ 			if ( a ) {
+diff --git a/tests/data/dynlist.out b/tests/data/dynlist.out
+index 6402366258439471bb2eccdfc39b5e6678e8968b..ddfb0506d00f8d380d2e3f74a44d3a1d509c3fc2 100644
+--- tests/data/dynlist.out
++++ tests/data/dynlist.out
+@@ -344,7 +344,7 @@ mail: melliot@mail.alumni.example.com
+ pager: +1 313 555 7671
+ facsimileTelephoneNumber: +1 313 555 7762
+ telephoneNumber: +1 313 555 4177
+-memberOf: cn=dynamic list of members,ou=dynamic lists,dc=example,dc=com
++memberOf: cn=Dynamic List of Members,ou=Dynamic Lists,dc=example,dc=com
+ 
+ # Testing filtered memberOf functionality...
+ dn: cn=Mark Elliot,ou=Alumni Association,ou=People,dc=example,dc=com
+@@ -363,7 +363,7 @@ mail: melliot@mail.alumni.example.com
+ pager: +1 313 555 7671
+ facsimileTelephoneNumber: +1 313 555 7762
+ telephoneNumber: +1 313 555 4177
+-memberOf: cn=dynamic list of members,ou=dynamic lists,dc=example,dc=com
++memberOf: cn=Dynamic List of Members,ou=Dynamic Lists,dc=example,dc=com
+ 
+ # Testing filtered member functionality...
+ dn: cn=All Staff,ou=Groups,dc=example,dc=com
+@@ -441,9 +441,9 @@ mail: melliot@mail.alumni.example.com
+ pager: +1 313 555 7671
+ facsimileTelephoneNumber: +1 313 555 7762
+ telephoneNumber: +1 313 555 4177
+-memberOf: cn=all staff,ou=groups,dc=example,dc=com
+-memberOf: cn=alumni assoc staff,ou=groups,dc=example,dc=com
+-memberOf: cn=dynamic list of members,ou=dynamic lists,dc=example,dc=com
++memberOf: cn=All Staff,ou=Groups,dc=example,dc=com
++memberOf: cn=Alumni Assoc Staff,ou=Groups,dc=example,dc=com
++memberOf: cn=Dynamic List of Members,ou=Dynamic Lists,dc=example,dc=com
+ 
+ # Testing static group member compare...
+ TRUE
+@@ -500,7 +500,7 @@ cn: The Smiths
+ memberURL: ldap:///ou=People,dc=example,dc=com??sub?(sn=Smith)
+ description: Smith family
+ member: cn=Jennifer Smith,ou=Alumni Association,ou=People,dc=example,dc=com
+-memberOf: cn=meta group,ou=dynamic lists,dc=example,dc=com
++memberOf: cn=Meta Group,ou=Dynamic Lists,dc=example,dc=com
+ 
+ dn: cn=Mark Elliot,ou=Alumni Association,ou=People,dc=example,dc=com
+ objectClass: OpenLDAPperson
+@@ -518,7 +518,7 @@ mail: melliot@mail.alumni.example.com
+ pager: +1 313 555 7671
+ facsimileTelephoneNumber: +1 313 555 7762
+ telephoneNumber: +1 313 555 4177
+-memberOf: cn=dynamic list of members,ou=dynamic lists,dc=example,dc=com
++memberOf: cn=Dynamic List of Members,ou=Dynamic Lists,dc=example,dc=com
+ 
+ # Testing nested static group functionality...
+ dn: cn=Barbara Jensen,ou=Information Technology Division,ou=People,dc=example,
+@@ -541,10 +541,10 @@ homePhone: +1 313 555 2333
+ pager: +1 313 555 3233
+ facsimileTelephoneNumber: +1 313 555 2274
+ telephoneNumber: +1 313 555 9022
+-memberOf: cn=all staff,ou=groups,dc=example,dc=com
+-memberOf: cn=the jensens,ou=groups,dc=example,dc=com
+-memberOf: cn=jjs,ou=groups,dc=example,dc=com
+-memberOf: cn=dynamic list of members,ou=dynamic lists,dc=example,dc=com
++memberOf: cn=All Staff,ou=Groups,dc=example,dc=com
++memberOf: cn=The Jensens,ou=Groups,dc=example,dc=com
++memberOf: cn=JJs,ou=Groups,dc=example,dc=com
++memberOf: cn=Dynamic List of Members,ou=Dynamic Lists,dc=example,dc=com
+ 
+ dn: cn=Bjorn Jensen,ou=Information Technology Division,ou=People,dc=example,dc
+  =com
+@@ -554,7 +554,7 @@ cn: Biiff Jensen
+ sn: Jensen
+ uid: bjorn
+ seeAlso: cn=All Staff,ou=Groups,dc=example,dc=com
+-seeAlso: cn=itd staff,ou=groups,dc=example,dc=com
++seeAlso: cn=ITD Staff,ou=Groups,dc=example,dc=com
+ userPassword:: Ympvcm4=
+ homePostalAddress: 19923 Seven Mile Rd. $ South Lyon, MI 49999
+ drink: Iced Tea
+@@ -566,10 +566,10 @@ homePhone: +1 313 555 5444
+ pager: +1 313 555 4474
+ facsimileTelephoneNumber: +1 313 555 2177
+ telephoneNumber: +1 313 555 0355
+-memberOf: cn=all staff,ou=groups,dc=example,dc=com
+-memberOf: cn=the jensens,ou=groups,dc=example,dc=com
+-memberOf: cn=jjs,ou=groups,dc=example,dc=com
+-memberOf: cn=dynamic list of members,ou=dynamic lists,dc=example,dc=com
++memberOf: cn=All Staff,ou=Groups,dc=example,dc=com
++memberOf: cn=The Jensens,ou=Groups,dc=example,dc=com
++memberOf: cn=JJs,ou=Groups,dc=example,dc=com
++memberOf: cn=Dynamic List of Members,ou=Dynamic Lists,dc=example,dc=com
+ 
+ dn: cn=Ursula Hampster,ou=Alumni Association,ou=People,dc=example,dc=com
+ objectClass: OpenLDAPperson
+@@ -585,10 +585,10 @@ homePhone: +1 313 555 8421
+ pager: +1 313 555 2844
+ facsimileTelephoneNumber: +1 313 555 9700
+ telephoneNumber: +1 313 555 5331
+-memberOf: cn=all staff,ou=groups,dc=example,dc=com
+-memberOf: cn=bonus group,ou=groups,dc=example,dc=com
+-memberOf: cn=alumni assoc staff,ou=groups,dc=example,dc=com
+-memberOf: cn=dynamic list of members,ou=dynamic lists,dc=example,dc=com
++memberOf: cn=All Staff,ou=Groups,dc=example,dc=com
++memberOf: cn=Bonus Group,ou=Groups,dc=example,dc=com
++memberOf: cn=Alumni Assoc Staff,ou=Groups,dc=example,dc=com
++memberOf: cn=Dynamic List of Members,ou=Dynamic Lists,dc=example,dc=com
+ 
+ dn: cn=James A Jones 2,ou=Information Technology Division,ou=People,dc=example
+  ,dc=com
+@@ -599,7 +599,7 @@ cn: Jim Jones
+ sn: Doe
+ uid: jjones
+ seeAlso: cn=All Staff,ou=Groups,dc=example,dc=com
+-seeAlso: cn=itd staff,ou=groups,dc=example,dc=com
++seeAlso: cn=ITD Staff,ou=Groups,dc=example,dc=com
+ homePostalAddress: 933 Brooks $ Anytown, MI 48104
+ homePhone: +1 313 555 8838
+ title: Senior Manager, Information Technology Division
+@@ -609,9 +609,9 @@ postalAddress: Info Tech Division $ 535 W William $ Anytown, MI 48103
+ pager: +1 313 555 2833
+ facsimileTelephoneNumber: +1 313 555 8688
+ telephoneNumber: +1 313 555 7334
+-memberOf: cn=jjs,ou=groups,dc=example,dc=com
+-memberOf: cn=all staff,ou=groups,dc=example,dc=com
+-memberOf: cn=dynamic list of members,ou=dynamic lists,dc=example,dc=com
++memberOf: cn=JJs,ou=Groups,dc=example,dc=com
++memberOf: cn=All Staff,ou=Groups,dc=example,dc=com
++memberOf: cn=Dynamic List of Members,ou=Dynamic Lists,dc=example,dc=com
+ 
+ dn: cn=Jane Doe,ou=Alumni Association,ou=People,dc=example,dc=com
+ objectClass: OpenLDAPperson
+@@ -630,9 +630,9 @@ homePhone: +1 313 555 5445
+ pager: +1 313 555 1220
+ facsimileTelephoneNumber: +1 313 555 2311
+ telephoneNumber: +1 313 555 4774
+-memberOf: cn=all staff,ou=groups,dc=example,dc=com
+-memberOf: cn=alumni assoc staff,ou=groups,dc=example,dc=com
+-memberOf: cn=dynamic list of members,ou=dynamic lists,dc=example,dc=com
++memberOf: cn=All Staff,ou=Groups,dc=example,dc=com
++memberOf: cn=Alumni Assoc Staff,ou=Groups,dc=example,dc=com
++memberOf: cn=Dynamic List of Members,ou=Dynamic Lists,dc=example,dc=com
+ 
+ dn: cn=John Doe,ou=Information Technology Division,ou=People,dc=example,dc=com
+ objectClass: OpenLDAPperson
+@@ -642,7 +642,7 @@ sn: Doe
+ uid: johnd
+ postalAddress: ITD $ 535 W. William $ Anytown, MI 48109
+ seeAlso: cn=All Staff,ou=Groups,dc=example,dc=com
+-seeAlso: cn=itd staff,ou=groups,dc=example,dc=com
++seeAlso: cn=ITD Staff,ou=Groups,dc=example,dc=com
+ homePostalAddress: 912 East Bllvd $ Anytown, MI 48104
+ title: System Administrator, Information Technology Division
+ description: overworked!
+@@ -651,8 +651,8 @@ homePhone: +1 313 555 3774
+ pager: +1 313 555 6573
+ facsimileTelephoneNumber: +1 313 555 4544
+ telephoneNumber: +1 313 555 9394
+-memberOf: cn=all staff,ou=groups,dc=example,dc=com
+-memberOf: cn=dynamic list of members,ou=dynamic lists,dc=example,dc=com
++memberOf: cn=All Staff,ou=Groups,dc=example,dc=com
++memberOf: cn=Dynamic List of Members,ou=Dynamic Lists,dc=example,dc=com
+ 
+ dn: cn=Jennifer Smith,ou=Alumni Association,ou=People,dc=example,dc=com
+ objectClass: OpenLDAPperson
+@@ -670,12 +670,12 @@ homePhone: +1 313 555 2333
+ pager: +1 313 555 6442
+ facsimileTelephoneNumber: +1 313 555 2756
+ telephoneNumber: +1 313 555 8232
+-memberOf: cn=all staff,ou=groups,dc=example,dc=com
+-memberOf: cn=the smiths,ou=dynamic lists,dc=example,dc=com
+-memberOf: cn=meta group,ou=dynamic lists,dc=example,dc=com
+-memberOf: cn=bonus group,ou=groups,dc=example,dc=com
+-memberOf: cn=alumni assoc staff,ou=groups,dc=example,dc=com
+-memberOf: cn=dynamic list of members,ou=dynamic lists,dc=example,dc=com
++memberOf: cn=All Staff,ou=Groups,dc=example,dc=com
++memberOf: cn=The Smiths,ou=Dynamic Lists,dc=example,dc=com
++memberOf: cn=Meta Group,ou=Dynamic Lists,dc=example,dc=com
++memberOf: cn=Bonus Group,ou=Groups,dc=example,dc=com
++memberOf: cn=Alumni Assoc Staff,ou=Groups,dc=example,dc=com
++memberOf: cn=Dynamic List of Members,ou=Dynamic Lists,dc=example,dc=com
+ 
+ # Testing filtered nested memberOf functionality...
+ dn: cn=Jennifer Smith,ou=Alumni Association,ou=People,dc=example,dc=com
+@@ -694,12 +694,12 @@ homePhone: +1 313 555 2333
+ pager: +1 313 555 6442
+ facsimileTelephoneNumber: +1 313 555 2756
+ telephoneNumber: +1 313 555 8232
+-memberOf: cn=all staff,ou=groups,dc=example,dc=com
+-memberOf: cn=the smiths,ou=dynamic lists,dc=example,dc=com
+-memberOf: cn=meta group,ou=dynamic lists,dc=example,dc=com
+-memberOf: cn=bonus group,ou=groups,dc=example,dc=com
+-memberOf: cn=alumni assoc staff,ou=groups,dc=example,dc=com
+-memberOf: cn=dynamic list of members,ou=dynamic lists,dc=example,dc=com
++memberOf: cn=All Staff,ou=Groups,dc=example,dc=com
++memberOf: cn=The Smiths,ou=Dynamic Lists,dc=example,dc=com
++memberOf: cn=Meta Group,ou=Dynamic Lists,dc=example,dc=com
++memberOf: cn=Bonus Group,ou=Groups,dc=example,dc=com
++memberOf: cn=Alumni Assoc Staff,ou=Groups,dc=example,dc=com
++memberOf: cn=Dynamic List of Members,ou=Dynamic Lists,dc=example,dc=com
+ 
+ dn: cn=Meta Group,ou=Dynamic Lists,dc=example,dc=com
+ objectClass: groupOfURLs
+@@ -708,7 +708,7 @@ memberURL: ldap:///ou=Dynamic Lists,dc=example,dc=com??sub?(description=Smith%
+  20family)
+ member: cn=The Smiths,ou=Dynamic Lists,dc=example,dc=com
+ member: cn=Jennifer Smith,ou=Alumni Association,ou=People,dc=example,dc=com
+-memberOf: cn=bonus group,ou=groups,dc=example,dc=com
++memberOf: cn=Bonus Group,ou=Groups,dc=example,dc=com
+ 
+ dn: cn=The Smiths,ou=Dynamic Lists,dc=example,dc=com
+ objectClass: groupOfURLs
+@@ -716,8 +716,8 @@ cn: The Smiths
+ memberURL: ldap:///ou=People,dc=example,dc=com??sub?(sn=Smith)
+ description: Smith family
+ member: cn=Jennifer Smith,ou=Alumni Association,ou=People,dc=example,dc=com
+-memberOf: cn=meta group,ou=dynamic lists,dc=example,dc=com
+-memberOf: cn=bonus group,ou=groups,dc=example,dc=com
++memberOf: cn=Meta Group,ou=Dynamic Lists,dc=example,dc=com
++memberOf: cn=Bonus Group,ou=Groups,dc=example,dc=com
+ 
+ dn: cn=Ursula Hampster,ou=Alumni Association,ou=People,dc=example,dc=com
+ objectClass: OpenLDAPperson
+@@ -733,10 +733,10 @@ homePhone: +1 313 555 8421
+ pager: +1 313 555 2844
+ facsimileTelephoneNumber: +1 313 555 9700
+ telephoneNumber: +1 313 555 5331
+-memberOf: cn=all staff,ou=groups,dc=example,dc=com
+-memberOf: cn=bonus group,ou=groups,dc=example,dc=com
+-memberOf: cn=alumni assoc staff,ou=groups,dc=example,dc=com
+-memberOf: cn=dynamic list of members,ou=dynamic lists,dc=example,dc=com
++memberOf: cn=All Staff,ou=Groups,dc=example,dc=com
++memberOf: cn=Bonus Group,ou=Groups,dc=example,dc=com
++memberOf: cn=Alumni Assoc Staff,ou=Groups,dc=example,dc=com
++memberOf: cn=Dynamic List of Members,ou=Dynamic Lists,dc=example,dc=com
+ 
+ dn: cn=James A Jones 2,ou=Information Technology Division,ou=People,dc=example
+  ,dc=com
+@@ -763,10 +763,10 @@ homePhone: +1 313 555 2333
+ pager: +1 313 555 3233
+ facsimileTelephoneNumber: +1 313 555 2274
+ telephoneNumber: +1 313 555 9022
+-memberOf: cn=all staff,ou=groups,dc=example,dc=com
+-memberOf: cn=the jensens,ou=groups,dc=example,dc=com
+-memberOf: cn=jjs,ou=groups,dc=example,dc=com
+-memberOf: cn=dynamic list of members,ou=dynamic lists,dc=example,dc=com
++memberOf: cn=All Staff,ou=Groups,dc=example,dc=com
++memberOf: cn=The Jensens,ou=Groups,dc=example,dc=com
++memberOf: cn=JJs,ou=Groups,dc=example,dc=com
++memberOf: cn=Dynamic List of Members,ou=Dynamic Lists,dc=example,dc=com
+ 
+ dn: cn=Bjorn Jensen,ou=Information Technology Division,ou=People,dc=example,dc
+  =com
+@@ -776,7 +776,7 @@ cn: Biiff Jensen
+ sn: Jensen
+ uid: bjorn
+ seeAlso: cn=All Staff,ou=Groups,dc=example,dc=com
+-seeAlso: cn=itd staff,ou=groups,dc=example,dc=com
++seeAlso: cn=ITD Staff,ou=Groups,dc=example,dc=com
+ userPassword:: Ympvcm4=
+ homePostalAddress: 19923 Seven Mile Rd. $ South Lyon, MI 49999
+ drink: Iced Tea
+@@ -788,10 +788,10 @@ homePhone: +1 313 555 5444
+ pager: +1 313 555 4474
+ facsimileTelephoneNumber: +1 313 555 2177
+ telephoneNumber: +1 313 555 0355
+-memberOf: cn=all staff,ou=groups,dc=example,dc=com
+-memberOf: cn=the jensens,ou=groups,dc=example,dc=com
+-memberOf: cn=jjs,ou=groups,dc=example,dc=com
+-memberOf: cn=dynamic list of members,ou=dynamic lists,dc=example,dc=com
++memberOf: cn=All Staff,ou=Groups,dc=example,dc=com
++memberOf: cn=The Jensens,ou=Groups,dc=example,dc=com
++memberOf: cn=JJs,ou=Groups,dc=example,dc=com
++memberOf: cn=Dynamic List of Members,ou=Dynamic Lists,dc=example,dc=com
+ 
+ dn: cn=James A Jones 2,ou=Information Technology Division,ou=People,dc=example
+  ,dc=com
+@@ -802,7 +802,7 @@ cn: Jim Jones
+ sn: Doe
+ uid: jjones
+ seeAlso: cn=All Staff,ou=Groups,dc=example,dc=com
+-seeAlso: cn=itd staff,ou=groups,dc=example,dc=com
++seeAlso: cn=ITD Staff,ou=Groups,dc=example,dc=com
+ homePostalAddress: 933 Brooks $ Anytown, MI 48104
+ homePhone: +1 313 555 8838
+ title: Senior Manager, Information Technology Division
+@@ -812,9 +812,9 @@ postalAddress: Info Tech Division $ 535 W William $ Anytown, MI 48103
+ pager: +1 313 555 2833
+ facsimileTelephoneNumber: +1 313 555 8688
+ telephoneNumber: +1 313 555 7334
+-memberOf: cn=jjs,ou=groups,dc=example,dc=com
+-memberOf: cn=all staff,ou=groups,dc=example,dc=com
+-memberOf: cn=dynamic list of members,ou=dynamic lists,dc=example,dc=com
++memberOf: cn=JJs,ou=Groups,dc=example,dc=com
++memberOf: cn=All Staff,ou=Groups,dc=example,dc=com
++memberOf: cn=Dynamic List of Members,ou=Dynamic Lists,dc=example,dc=com
+ 
+ dn: cn=John Doe,ou=Information Technology Division,ou=People,dc=example,dc=com
+ objectClass: OpenLDAPperson
+@@ -824,7 +824,7 @@ sn: Doe
+ uid: johnd
+ postalAddress: ITD $ 535 W. William $ Anytown, MI 48109
+ seeAlso: cn=All Staff,ou=Groups,dc=example,dc=com
+-seeAlso: cn=itd staff,ou=groups,dc=example,dc=com
++seeAlso: cn=ITD Staff,ou=Groups,dc=example,dc=com
+ homePostalAddress: 912 East Bllvd $ Anytown, MI 48104
+ title: System Administrator, Information Technology Division
+ description: overworked!
+@@ -833,8 +833,8 @@ homePhone: +1 313 555 3774
+ pager: +1 313 555 6573
+ facsimileTelephoneNumber: +1 313 555 4544
+ telephoneNumber: +1 313 555 9394
+-memberOf: cn=all staff,ou=groups,dc=example,dc=com
+-memberOf: cn=dynamic list of members,ou=dynamic lists,dc=example,dc=com
++memberOf: cn=All Staff,ou=Groups,dc=example,dc=com
++memberOf: cn=Dynamic List of Members,ou=Dynamic Lists,dc=example,dc=com
+ 
+ # Testing filtered nested member functionality...
+ dn: cn=All Staff,ou=Groups,dc=example,dc=com
+@@ -910,7 +910,7 @@ memberURL: ldap:///ou=Dynamic Lists,dc=example,dc=com??sub?(description=Smith%
+  20family)
+ member: cn=The Smiths,ou=Dynamic Lists,dc=example,dc=com
+ member: cn=Jennifer Smith,ou=Alumni Association,ou=People,dc=example,dc=com
+-memberOf: cn=bonus group,ou=groups,dc=example,dc=com
++memberOf: cn=Bonus Group,ou=Groups,dc=example,dc=com
+ 
+ dn: cn=The Smiths,ou=Dynamic Lists,dc=example,dc=com
+ objectClass: groupOfURLs
+@@ -918,6 +918,6 @@ cn: The Smiths
+ memberURL: ldap:///ou=People,dc=example,dc=com??sub?(sn=Smith)
+ description: Smith family
+ member: cn=Jennifer Smith,ou=Alumni Association,ou=People,dc=example,dc=com
+-memberOf: cn=meta group,ou=dynamic lists,dc=example,dc=com
+-memberOf: cn=bonus group,ou=groups,dc=example,dc=com
++memberOf: cn=Meta Group,ou=Dynamic Lists,dc=example,dc=com
++memberOf: cn=Bonus Group,ou=Groups,dc=example,dc=com
+ 
+diff --git a/servers/slapd/overlays/dynlist.c b/servers/slapd/overlays/dynlist.c
+index 0743cf1d05e25356e497c028fa664d783f171c8e..5c971366f8f55939ea1d219a335eb2dbf43f42b6 100644
+--- servers/slapd/overlays/dynlist.c
++++ servers/slapd/overlays/dynlist.c
+@@ -832,35 +832,6 @@ checkdyn:
+ 	return SLAP_CB_CONTINUE;
+ }
+ 
+-/* dynlist_sc_compare_entry() callback set by dynlist_compare() */
+-typedef struct dynlist_cc_t {
+-	slap_callback dc_cb;
+-#	define dc_ava	dc_cb.sc_private /* attr:val to compare with */
+-	int *dc_res;
+-} dynlist_cc_t;
+-
+-static int
+-dynlist_sc_compare_entry( Operation *op, SlapReply *rs )
+-{
+-	if ( rs->sr_type == REP_SEARCH && rs->sr_entry != NULL ) {
+-		dynlist_cc_t *dc = (dynlist_cc_t *)op->o_callback;
+-		AttributeAssertion *ava = dc->dc_ava;
+-		Attribute *a = attrs_find( rs->sr_entry->e_attrs, ava->aa_desc );
+-
+-		if ( a != NULL ) {
+-			while ( LDAP_SUCCESS != attr_valfind( a,
+-					SLAP_MR_ATTRIBUTE_VALUE_NORMALIZED_MATCH |
+-						SLAP_MR_ASSERTED_VALUE_NORMALIZED_MATCH,
+-					&ava->aa_value, NULL, op->o_tmpmemctx )
+-				&& (a = attrs_find( a->a_next, ava->aa_desc )) != NULL )
+-				;
+-			*dc->dc_res = a ? LDAP_COMPARE_TRUE : LDAP_COMPARE_FALSE;
+-		}
+-	}
+-
+-	return 0;
+-}
+-
+ static int
+ dynlist_check_scope( Operation *op, Entry *e, dynlist_info_t *dli )
+ {
+diff --git a/servers/slapd/ava.c b/servers/slapd/ava.c
+index 51d9cc101b63c3083c363c62ac7ce509bc5391c9..ae9351dfb3f6acfea6a1ae25952a26ec1c53353c 100644
+--- servers/slapd/ava.c
++++ servers/slapd/ava.c
+@@ -53,6 +53,22 @@ ava_free(
+ 	if ( freeit ) op->o_tmpfree( (char *) ava, op->o_tmpmemctx );
+ }
+ 
++AttributeAssertion *
++ava_dup(
++	AttributeAssertion *ava,
++	void *memctx )
++{
++	BerMemoryFunctions *mf = &slap_sl_mfuncs;
++	AttributeAssertion *nava;
++
++	nava = mf->bmf_malloc( sizeof(AttributeAssertion), memctx );
++	*nava = *ava;
++	if ( ava->aa_desc->ad_flags & SLAP_DESC_TEMPORARY )
++		nava->aa_desc = slap_bv2tmp_ad( &ava->aa_desc->ad_cname, memctx );
++	ber_dupbv_x( &nava->aa_value, &ava->aa_value, memctx );
++	return nava;
++}
++
+ int
+ get_ava(
+ 	Operation *op,
+diff --git a/servers/slapd/backend.c b/servers/slapd/backend.c
+index cfe35aa532a40b82478c17bac49eb7cb2d15a2f0..30a32db7d32c983c071529fde0a0db8e9ccf9a22 100644
+--- servers/slapd/backend.c
++++ servers/slapd/backend.c
+@@ -1593,7 +1593,7 @@ fe_acl_group(
+ 							if ( rc2 != 0 ) {
+ 								/* give up... */
+ 								rc = (rc2 == LDAP_NO_SUCH_OBJECT) ? rc2 : LDAP_OTHER;
+-								goto loopit;
++								goto nouser;
+ 							}
+ 						}
+ 
+@@ -1602,6 +1602,7 @@ fe_acl_group(
+ 						{
+ 							rc = 0;
+ 						}
++nouser:
+ 						filter_free_x( op, filter, 1 );
+ 					}
+ loopit:
+diff --git a/servers/slapd/filter.c b/servers/slapd/filter.c
+index 1d7ee216a8b75c23de756cfebaa1f3e2a20a3f92..9d000bce07eeaa9c262aab4c6e1521a89fce53d5 100644
+--- servers/slapd/filter.c
++++ servers/slapd/filter.c
+@@ -910,12 +910,7 @@ filter_dup( Filter *f, void *memctx )
+ 	case LDAP_FILTER_GE:
+ 	case LDAP_FILTER_LE:
+ 	case LDAP_FILTER_APPROX:
+-		/* Should this be ava_dup() ? */
+-		n->f_ava = mf->bmf_calloc( 1, sizeof(AttributeAssertion), memctx );
+-		*n->f_ava = *f->f_ava;
+-		if ( f->f_av_desc->ad_flags & SLAP_DESC_TEMPORARY )
+-			n->f_av_desc = slap_bv2tmp_ad( &f->f_av_desc->ad_cname, memctx );
+-		ber_dupbv_x( &n->f_av_value, &f->f_av_value, memctx );
++		n->f_ava = ava_dup( f->f_ava, memctx );
+ 		break;
+ 	case LDAP_FILTER_SUBSTRINGS:
+ 		n->f_sub = mf->bmf_calloc( 1, sizeof(SubstringsAssertion), memctx );
+diff --git a/servers/slapd/overlays/dynlist.c b/servers/slapd/overlays/dynlist.c
+index 5c971366f8f55939ea1d219a335eb2dbf43f42b6..3b1e38b13c87cf2e0e5e626a5a5e408e8e489ec9 100644
+--- servers/slapd/overlays/dynlist.c
++++ servers/slapd/overlays/dynlist.c
+@@ -1338,47 +1338,32 @@ dynlist_filter_group( Operation *op, dynlist_name_t *dyn, Filter *n, dynlist_sea
+ static Filter *
+ dynlist_filter_dup( Operation *op, Filter *f, AttributeDescription *ad, dynlist_search_t *ds )
+ {
+-	Filter *n = NULL;
++	Filter *n;
+ 
+ 	if ( !f )
+ 		return NULL;
+ 
+-	n = op->o_tmpalloc( sizeof(Filter), op->o_tmpmemctx );
+-	n->f_next = NULL;
+ 	switch( f->f_choice & SLAPD_FILTER_MASK ) {
+-	case SLAPD_FILTER_COMPUTED:
+-		n->f_choice = f->f_choice;
+-		n->f_result = f->f_result;
+-		break;
+-
+-	case LDAP_FILTER_PRESENT:
+-		n->f_choice = f->f_choice;
+-		n->f_desc = f->f_desc;
+-		break;
+-
+ 	case LDAP_FILTER_EQUALITY:
++		n = op->o_tmpalloc( sizeof(Filter), op->o_tmpmemctx );
++		n->f_next = NULL;
+ 		if ( f->f_av_desc == ad ) {
+ 			dynlist_name_t *dyn = ldap_tavl_find( ds->ds_names, &f->f_av_value, dynlist_avl_cmp );
+ 			n->f_choice = SLAPD_FILTER_COMPUTED;
+ 			if ( dyn && !dynlist_filter_group( op, dyn, n, ds ))
+ 				break;
+ 		}
+-		/* FALLTHRU */
++		n->f_choice = LDAP_FILTER_EQUALITY;
++		n->f_ava = ava_dup( f->f_ava, op->o_tmpmemctx );
++		break;
++	case SLAPD_FILTER_COMPUTED:
++	case LDAP_FILTER_PRESENT:
+ 	case LDAP_FILTER_GE:
+ 	case LDAP_FILTER_LE:
+ 	case LDAP_FILTER_APPROX:
+-		n->f_choice = f->f_choice;
+-		n->f_ava = f->f_ava;
+-		break;
+-
+ 	case LDAP_FILTER_SUBSTRINGS:
+-		n->f_choice = f->f_choice;
+-		n->f_sub = f->f_sub;
+-		break;
+-
+ 	case LDAP_FILTER_EXT:
+-		n->f_choice = f->f_choice;
+-		n->f_mra = f->f_mra;
++		n = filter_dup( f, op->o_tmpmemctx );
+ 		break;
+ 
+ 	case LDAP_FILTER_NOT:
+@@ -1386,6 +1371,8 @@ dynlist_filter_dup( Operation *op, Filter *f, AttributeDescription *ad, dynlist_
+ 	case LDAP_FILTER_OR: {
+ 		Filter **p;
+ 
++		n = op->o_tmpalloc( sizeof(Filter), op->o_tmpmemctx );
++		n->f_next = NULL;
+ 		n->f_choice = f->f_choice;
+ 
+ 		for ( p = &n->f_list, f = f->f_list; f; f = f->f_next ) {
+@@ -1400,29 +1387,6 @@ dynlist_filter_dup( Operation *op, Filter *f, AttributeDescription *ad, dynlist_
+ 	return n;
+ }
+ 
+-static void
+-dynlist_filter_free( Operation *op, Filter *f )
+-{
+-	Filter *p, *next;
+-
+-	if ( f == NULL )
+-		return;
+-
+-	f->f_choice &= SLAPD_FILTER_MASK;
+-	switch( f->f_choice ) {
+-	case LDAP_FILTER_AND:
+-	case LDAP_FILTER_OR:
+-	case LDAP_FILTER_NOT:
+-		for ( p = f->f_list; p; p = next ) {
+-			next = p->f_next;
+-			op->o_tmpfree( p, op->o_tmpmemctx );
+-		}
+-		break;
+-	default:
+-		op->o_tmpfree( f, op->o_tmpmemctx );
+-	}
+-}
+-
+ static void
+ dynlist_search_free( void *ptr )
+ {
+@@ -1457,7 +1421,7 @@ dynlist_search_cleanup( Operation *op, SlapReply *rs )
+ 			ldap_tavl_free( ds->ds_fnodes, NULL );
+ 		if ( ds->ds_origfilter ) {
+ 			op->o_tmpfree( op->ors_filterstr.bv_val, op->o_tmpmemctx );
+-			dynlist_filter_free( op, op->ors_filter );
++			filter_free_x( op, op->ors_filter, 1 );
+ 			op->ors_filter = ds->ds_origfilter;
+ 			op->ors_filterstr = ds->ds_origfilterbv;
+ 		}
+@@ -1733,7 +1697,7 @@ dynlist_fix_filter( Operation *op, AttributeDescription *ad, dynlist_search_t *d
+ 	Filter *f;
+ 	f = dynlist_filter_dup( op, op->ors_filter, ad, ds );
+ 	if ( ds->ds_origfilter ) {
+-		dynlist_filter_free( op, op->ors_filter );
++		filter_free_x( op, op->ors_filter, 1 );
+ 		op->o_tmpfree( op->ors_filterstr.bv_val, op->o_tmpmemctx );
+ 	} else {
+ 		ds->ds_origfilter = op->ors_filter;
+@@ -1994,6 +1958,8 @@ dynlist_search( Operation *op, SlapReply *rs )
+ 				SlapReply	r = { REP_SEARCH };
+ 				(void)o.o_bd->be_search( &o, &r );
+ 			}
++			o.o_tmpfree( o.ors_filterstr.bv_val, o.o_tmpmemctx );
++			o.ors_filterstr.bv_val = NULL;
+ 			if ( found != ds->ds_found && nested )
+ 				dynlist_nestlink( op, ds );
+ 		}
+diff --git a/servers/slapd/proto-slap.h b/servers/slapd/proto-slap.h
+index 7c9a16cd67e6c21aac52cc4d7fdcc9266c618b91..642878f939fd499623bb3327e85bb4c6d8063f8f 100644
+--- servers/slapd/proto-slap.h
++++ servers/slapd/proto-slap.h
+@@ -331,6 +331,9 @@ LDAP_SLAPD_F (void) ava_free LDAP_P((
+ 	Operation *op,
+ 	AttributeAssertion *ava,
+ 	int freeit ));
++LDAP_SLAPD_F (AttributeAssertion *) ava_dup LDAP_P((
++	AttributeAssertion *ava,
++	void *memctx ));
+ 
+ /*
+  * backend.c
+diff --git a/servers/slapd/overlays/dynlist.c b/servers/slapd/overlays/dynlist.c
+index 3b1e38b13c87cf2e0e5e626a5a5e408e8e489ec9..89425c714c1363549b6b065835f6f9e2c79a3a90 100644
+--- servers/slapd/overlays/dynlist.c
++++ servers/slapd/overlays/dynlist.c
+@@ -395,6 +395,7 @@ dynlist_urlmembers( Operation *op, dynlist_name_t *dyn, slap_callback *sc )
+ 	o.ors_attrs = NULL;
+ 	memset( o.o_ctrlflag, 0, sizeof( o.o_ctrlflag ));
+ 	o.o_callback = sc;
++	o.o_do_not_cache = 1;
+ 
+ 	for (i=0; i<dyn->dy_numuris; i++) {
+ 		ludp = dyn->dy_uris[i];
+@@ -595,6 +596,7 @@ dynlist_prepare_entry( Operation *op, SlapReply *rs, dynlist_info_t *dli, dynlis
+ 	o.ors_limit = NULL;
+ 	o.ors_tlimit = SLAP_NO_LIMIT;
+ 	o.ors_slimit = SLAP_NO_LIMIT;
++	o.o_do_not_cache = 1;
+ 	memset( o.o_ctrlflag, 0, sizeof( o.o_ctrlflag ));
+ 
+ 	for ( url = a->a_nvals; !BER_BVISNULL( url ); url++ ) {
+@@ -1807,6 +1809,7 @@ dynlist_search( Operation *op, SlapReply *rs )
+ 
+ 	memset( o.o_ctrlflag, 0, sizeof( o.o_ctrlflag ));
+ 	o.o_managedsait = SLAP_CONTROL_CRITICAL;
++	o.o_do_not_cache = 1;
+ 
+ 	/* Are we using memberOf, and does it affect this request? */
+ 	if ( dlg->dlg_memberOf ) {
