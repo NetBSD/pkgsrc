@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2022/03/30 07:48:13 wiz Exp $
+$NetBSD: distinfo,v 1.3 2023/01/25 18:12:00 gdt Exp $
 
-BLAKE2s (guile-3.0.8.tar.gz) = 2e95bfa736dea559288d7e01fe9f6dcce2300da009df543f5c96c3158896282a
-SHA512 (guile-3.0.8.tar.gz) = 7b2728e849a3ee482fe9a167dd76cc4835e911cc94ca0724dd51e8a813a240c6b5d2de84de16b46469ab24305b5b153a3c812fec942e007d3310bba4d1cf947d
-Size (guile-3.0.8.tar.gz) = 10438342 bytes
+BLAKE2s (guile-3.0.9.tar.gz) = 0b58897075659445a370db20baab6c90c284bd27f897e269498977fcbf686543
+SHA512 (guile-3.0.9.tar.gz) = 6fd14f0860c7f5b7a9b53c43a60c6a7ca53072684ddc818cd10c720af2c5761ef110b29af466b89ded884fb66d66060894b14e615eaebee8844c397932d05fa2
+Size (guile-3.0.9.tar.gz) = 9734735 bytes
 SHA1 (patch-libguile_Makefile.in) = eae49ebd5b2a4a415be89503819f454b7eb6a21d
 SHA1 (patch-libguile_loader.c) = 32b012d095c343995f93d0c8160411c4b0cfbee1
 SHA1 (patch-test-suite_standalone_Makefile.in) = d1f0b24adcb7db4b1d6f91e2e55d4a9c245700e6
