@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2022/02/11 20:14:14 pho Exp $
+$NetBSD: distinfo,v 1.9 2023/01/25 19:28:44 pho Exp $
 
 BLAKE2s (mmorph-1.2.0.tar.gz) = 627a9312161239880388cdfb22d1c243be77b1d83a211cdf204e09b74d8a26fc
 SHA512 (mmorph-1.2.0.tar.gz) = 06c9e2b2d7caa65c6049225ba40a54cf9480e561a6ea521b4c83e38094beea0c2ed595244f434793c6964c6161ac3122da5a8b53fe772d527fbefb15e4cc2c14
 Size (mmorph-1.2.0.tar.gz) = 6861 bytes
-SHA1 (patch-mmorph.cabal) = b56eee46d2e6689592f410d7e4d3dc9478490b9f
