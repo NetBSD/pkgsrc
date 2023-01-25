@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/01/25 17:05:48 pho Exp $
+
+BLAKE2s (cabal-install-solver-3.8.1.0.tar.gz) = f4ef2922a06d6f55ad480ba32638418d0620a1a834dad6fa4e0dc1400e8d0a69
+SHA512 (cabal-install-solver-3.8.1.0.tar.gz) = be54abffc32a3b35bed0d69df5ff9394271f2746efc45a931df5677a7c1bd1e5e303118f695a942a196c2b57ecef0be973bce97b26b3e1696e46676d376f8edf
+Size (cabal-install-solver-3.8.1.0.tar.gz) = 85413 bytes
