@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2022/12/04 16:29:26 taca Exp $
+@comment $NetBSD: PLIST,v 1.11 2023/01/25 14:29:21 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGES
 ${GEM_LIBDIR}/Gemfile
@@ -17,6 +17,14 @@ ${GEM_LIBDIR}/lib/selenium/webdriver/atoms/getAttribute.js
 ${GEM_LIBDIR}/lib/selenium/webdriver/atoms/isDisplayed.js
 ${GEM_LIBDIR}/lib/selenium/webdriver/atoms/mutationListener.js
 ${GEM_LIBDIR}/lib/selenium/webdriver/bidi.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/bidi/browsing_context.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/bidi/browsing_context_info.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/bidi/log/base_log_entry.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/bidi/log/console_log_entry.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/bidi/log/generic_log_entry.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/bidi/log/javascript_log_entry.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/bidi/log_inspector.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/bidi/navigate_result.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/session.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/chrome.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/chrome/driver.rb
@@ -24,6 +32,12 @@ ${GEM_LIBDIR}/lib/selenium/webdriver/chrome/features.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/chrome/options.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/chrome/profile.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/chrome/service.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/chromium.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/chromium/driver.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/chromium/features.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/chromium/options.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/chromium/profile.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/chromium/service.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/action_builder.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/alert.rb
@@ -150,14 +164,12 @@ ${GEM_LIBDIR}/lib/selenium/webdriver/safari/service.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/support.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/support/abstract_event_listener.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/support/block_event_listener.rb
-${GEM_LIBDIR}/lib/selenium/webdriver/support/cdp_client_generator.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/support/color.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/support/escaper.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/support/event_firing_bridge.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/support/guards.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/support/guards/guard.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/support/guards/guard_condition.rb
-${GEM_LIBDIR}/lib/selenium/webdriver/support/nightly_version_generator.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/support/relative_locator.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/support/select.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/version.rb
