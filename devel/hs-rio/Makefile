@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2022/09/07 06:50:49 pho Exp $
+# $NetBSD: Makefile,v 1.5 2023/01/26 10:30:06 pho Exp $
 
-DISTNAME=	rio-0.1.21.0
-PKGREVISION=	3
+DISTNAME=	rio-0.1.22.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
