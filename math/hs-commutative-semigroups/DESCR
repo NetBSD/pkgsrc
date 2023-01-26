@@ -1,0 +1,4 @@
+A commutative semigroup is a semigroup where the order of arguments to
+mappend does not matter.
+
+  class Semigroup g => Commutative g
