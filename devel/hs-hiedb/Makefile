@@ -1,18 +1,21 @@
-# $NetBSD: Makefile,v 1.6 2022/11/23 16:18:37 adam Exp $
+# $NetBSD: Makefile,v 1.7 2023/01/26 17:46:41 pho Exp $
 
-DISTNAME=	hiedb-0.4.1.0
-PKGREVISION=	5
+DISTNAME=	hiedb-0.4.2.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Generates a references DB from .hie files
 LICENSE=	modified-bsd
 
-# purs is built with optparse-applicative, and can generate shell
+HASKELL_UNRESTRICT_DEPENDENCIES+=	\
+	algebraic-graphs
+
+# hiedb is built with optparse-applicative, and can generate shell
 # completion scripts automatically.
 OPTPARSE_APPLICATIVE_EXECUTABLES+=	hiedb
 .include "../../devel/hs-optparse-applicative/application.mk"
 
+# lib:hiedb
 .include "../../math/hs-algebraic-graphs/buildlink3.mk"
 .include "../../devel/hs-ansi-terminal/buildlink3.mk"
 .include "../../misc/hs-extra/buildlink3.mk"
@@ -21,6 +24,9 @@ OPTPARSE_APPLICATIVE_EXECUTABLES+=	hiedb
 .include "../../devel/hs-optparse-applicative/buildlink3.mk"
 .include "../../databases/hs-sqlite-simple/buildlink3.mk"
 .include "../../devel/hs-terminal-size/buildlink3.mk"
+
+# exe:hiedb
 .include "../../devel/hs-ghc-paths/buildlink3.mk"
+
 .include "../../mk/haskell.mk"
 .include "../../mk/bsd.pkg.mk"
