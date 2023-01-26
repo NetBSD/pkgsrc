@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.709 2023/01/26 10:52:25 pho Exp $
+$NetBSD: CHANGES-2023,v 1.710 2023/01/26 10:58:33 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -904,3 +904,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/hs-microlens-platform to 0.4.3.3 [pho 2023-01-26]
 	Added devel/hs-newtype-generics version 0.6.2 [pho 2023-01-26]
 	Added devel/hs-memotrie version 0.6.10 [pho 2023-01-26]
+	Updated devel/ormolu to 0.5.2.0 [pho 2023-01-26]
