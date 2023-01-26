@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2023/01/26 10:50:14 pho Exp $
+lib/newtype-generics-${PKGVERSION}/${HS_VERSION}/package-description
+lib/newtype-generics-${PKGVERSION}/${HS_VERSION}/package-id
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Control/Newtype/Generics.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Control/Newtype/Generics.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Control/Newtype/Generics.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+${PLIST.doc}share/doc/${HS_PLATFORM}/newtype-generics-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/${HS_PLATFORM}/newtype-generics-${PKGVERSION}/html/Control-Newtype-Generics.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/newtype-generics-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/newtype-generics-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/newtype-generics-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/newtype-generics-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/newtype-generics-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/newtype-generics-${PKGVERSION}/html/newtype-generics.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/newtype-generics-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/newtype-generics-${PKGVERSION}/html/synopsis.png
