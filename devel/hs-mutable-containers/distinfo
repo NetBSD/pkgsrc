@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/02/24 01:15:33 pho Exp $
+$NetBSD: distinfo,v 1.2 2023/01/26 17:21:05 pho Exp $
 
-BLAKE2s (mutable-containers-0.3.4.tar.gz) = 11b455bdcd09433487d1736df91947dd1ad2865618e609a9a127d158298b154b
-SHA512 (mutable-containers-0.3.4.tar.gz) = 1731380fd57c8c79a77cea781fb7630f90e11cfa977ca836695981bcecf10b7d2d5f3e89e8a6de5fd3fb32ac441b0512c7a6fd356107e6efa47b0d5fd491157c
-Size (mutable-containers-0.3.4.tar.gz) = 12286 bytes
+BLAKE2s (mutable-containers-0.3.4.1.tar.gz) = c6cabd1c77dfe36de25559c8cb5e95a11d842c7ed1db076aba3500f813fa00e6
+SHA512 (mutable-containers-0.3.4.1.tar.gz) = 24c4dfbb95bfbe6c1c0972f092a0402d21725b88dd5d0136e3397d801d18f753449757649f008e3befd509faba58b5bb5c703337adbde7a83431386f9b291255
+Size (mutable-containers-0.3.4.1.tar.gz) = 12227 bytes
