@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.726 2023/01/26 18:08:20 pho Exp $
+$NetBSD: CHANGES-2023,v 1.727 2023/01/26 19:14:48 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -921,3 +921,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/hs-hiedb to 0.4.2.0 [pho 2023-01-26]
 	Updated converters/hs-aeson to 2.1.1.0 [pho 2023-01-26]
 	Updated lang/hs-hslua to 2.2.1 [pho 2023-01-26]
+	Updated audio/gospt to 0.0.33 [pin 2023-01-26]
