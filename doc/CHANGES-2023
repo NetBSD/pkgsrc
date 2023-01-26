@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.679 2023/01/26 02:01:12 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.680 2023/01/26 02:08:26 jun Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -873,3 +873,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/kalker to 2.0.3 [pin 2023-01-25]
 	Updated textproc/libxml2 to 2.10.3nb1 [gutteridge 2023-01-26]
 	Updated textproc/py-libxml2 to 2.10.3nb1 [gutteridge 2023-01-26]
+	Updated emulators/nono to 0.5.0 [jun 2023-01-26]
