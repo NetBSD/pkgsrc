@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.711 2023/01/26 11:11:23 pho Exp $
+$NetBSD: CHANGES-2023,v 1.712 2023/01/26 11:16:59 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -906,3 +906,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/hs-memotrie version 0.6.10 [pho 2023-01-26]
 	Updated devel/ormolu to 0.5.2.0 [pho 2023-01-26]
 	Updated devel/hs-constraints-extras to 0.4.0.0 [pho 2023-01-26]
+	Updated math/hs-bifunctors to 5.5.14 [pho 2023-01-26]
