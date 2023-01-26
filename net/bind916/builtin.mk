@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.1 2020/08/09 15:20:21 taca Exp $
+# $NetBSD: builtin.mk,v 1.1.20.1 2023/01/26 20:01:44 bsiegert Exp $
 
 BUILTIN_PKG:=	bind
 
@@ -41,7 +41,7 @@ MAKEVARS+=		IS_BUILTIN.bind
 ### a package name to represent the built-in package.
 ###
 .if !defined(BUILTIN_PKG.bind) && \
-    !empty(IS_BUILTIN.bind:M[yY][eE][sS]) && \
+    ${IS_BUILTIN.bind:tl} == "yes" && \
     defined(BUILTIN_VERSION.bind)
 BUILTIN_PKG.bind=	bind-${BUILTIN_VERSION.bind}
 .endif
@@ -57,10 +57,10 @@ USE_BUILTIN.bind=	no
 .  else
 USE_BUILTIN.bind=	${IS_BUILTIN.bind}
 .    if defined(BUILTIN_PKG.bind) && \
-        !empty(IS_BUILTIN.bind:M[yY][eE][sS])
+        ${IS_BUILTIN.bind:tl} == "yes"
 USE_BUILTIN.bind=	yes
 .      for dep in ${BUILDLINK_API_DEPENDS.bind}
-.        if !empty(USE_BUILTIN.bind:M[yY][eE][sS])
+.        if ${USE_BUILTIN.bind:tl} == "yes"
 USE_BUILTIN.bind!=							\
 	if ${PKG_ADMIN} pmatch ${dep:Q} ${BUILTIN_PKG.bind:Q}; then	\
 		${ECHO} yes;						\
@@ -79,13 +79,13 @@ MAKEVARS+=		USE_BUILTIN.bind
 ### solely to determine whether a built-in implementation exists.
 ###
 CHECK_BUILTIN.bind?=	no
-.if !empty(CHECK_BUILTIN.bind:M[nN][oO])
+.if ${CHECK_BUILTIN.bind:tl} == "no"
 
-.  if !empty(USE_BUILTIN.bind:M[yY][eE][sS])
-.    if !empty(BUILTIN_LIB_FOUND.bind:M[yY][eE][sS])
+.  if ${USE_BUILTIN.bind:tl} == "yes"
+.    if ${BUILTIN_LIB_FOUND.bind:tl} == "yes"
 BUILDLINK_LDADD.bind?=	-lbind
 .    endif
-.  elif !empty(USE_BUILTIN.bind:M[nN][oO])
+.  elif ${USE_BUILTIN.bind:tl} == "no"
 BUILDLINK_LDADD.bind?=	-lbind
 .  endif
 
