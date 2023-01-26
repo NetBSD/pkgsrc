@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/02/26 03:58:26 pho Exp $
+# $NetBSD: Makefile,v 1.7 2023/01/26 10:15:21 pho Exp $
 
 DISTNAME=	cheapskate-0.1.1.2
 PKGREVISION=	4
@@ -10,6 +10,9 @@ LICENSE=	modified-bsd
 
 # Don't pull in wai and wai-extra as dependencies.
 CONFIGURE_ARGS+=	-f-dingus
+
+HASKELL_UNRESTRICT_DEPENDENCIES+=	\
+	text
 
 .include "../../textproc/hs-blaze-html/buildlink3.mk"
 .include "../../devel/hs-data-default/buildlink3.mk"
