@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.696 2023/01/26 09:16:59 pho Exp $
+$NetBSD: CHANGES-2023,v 1.697 2023/01/26 09:27:53 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -891,3 +891,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/hs-http-client to 0.7.13.1 [pho 2023-01-26]
 	Updated textproc/hs-hslua-module-text to 1.0.3 [pho 2023-01-26]
 	Updated sysutils/hs-hslua-module-path to 1.0.3 [pho 2023-01-26]
+	Updated devel/hs-hslua-module-system to 1.0.2 [pho 2023-01-26]
