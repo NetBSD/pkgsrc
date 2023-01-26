@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.721 2023/01/26 16:17:39 pho Exp $
+$NetBSD: CHANGES-2023,v 1.722 2023/01/26 17:18:39 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -916,3 +916,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/hs-either to 5.0.2 [pho 2023-01-26]
 	Updated devel/hs-dependent-sum to 0.7.2.0 [pho 2023-01-26]
 	Updated devel/hs-foldl to 1.4.14 [pho 2023-01-26]
+	Updated devel/hs-conduit-extra to 1.3.6 [pho 2023-01-26]
