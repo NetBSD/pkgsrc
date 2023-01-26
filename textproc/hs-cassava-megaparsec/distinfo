@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2022/08/29 12:53:17 wiz Exp $
+$NetBSD: distinfo,v 1.7 2023/01/26 11:38:08 pho Exp $
 
 BLAKE2s (cassava-megaparsec-2.0.4.tar.gz) = fe6287dcf0c3d0b804e32a8a9e6c74d2b5772914300407642edd31fdcd5887a1
 SHA512 (cassava-megaparsec-2.0.4.tar.gz) = 9a9241e5251d049bc8f6ef40b6fc649ac55481e4609b4f7acb2d8772dd079519cfdeaea2d4cf03f8e55b75c7bff85251bfee962e842b46fe930dde25577a272a
 Size (cassava-megaparsec-2.0.4.tar.gz) = 6328 bytes
-SHA1 (patch-cassava-megaparsec.cabal) = 4aea6da1bbc61ad5820ad3b4a0cb186862e36ef7
