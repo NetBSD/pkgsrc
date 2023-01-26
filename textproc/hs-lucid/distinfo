@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2022/02/12 05:17:21 pho Exp $
+$NetBSD: distinfo,v 1.6 2023/01/26 03:02:33 pho Exp $
 
-BLAKE2s (lucid-2.11.0.tar.gz) = af7e9f6d3f2fa799e74a8ec45796563e2e8f95071386debc52efd3e8ef386040
-SHA512 (lucid-2.11.0.tar.gz) = bdd3a1beaf787ad28858bd738b7ad6cb440e98ef8134abceb6def7a3f03a9df2a26d50b85532775d5250f9ad48a6b26b9fcc61fa7c4948c5c8639fe5dfea6e6f
-Size (lucid-2.11.0.tar.gz) = 21302 bytes
-SHA1 (patch-lucid.cabal) = 73562dc2199701f37ddb19b794d47f5e2855e423
+BLAKE2s (lucid-2.11.1.tar.gz) = cfeb3aba604e5c84c37a2548d576cc955220d3d1ee0f9bd6105c292ae4358b15
+SHA512 (lucid-2.11.1.tar.gz) = 9dd26a84b5ec00830a749f239298b3fd90f0682fc40b0287519cb7d987b80fa12322fc0be3e5d3720d84771cc488cd70eb77c7a4150e700128c9430893ff2179
+Size (lucid-2.11.1.tar.gz) = 21474 bytes
