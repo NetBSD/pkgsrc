@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:14:55 nia Exp $
+$NetBSD: distinfo,v 1.4 2023/01/26 15:51:09 pho Exp $
 
-BLAKE2s (either-5.0.1.1.tar.gz) = 2dfb6f8c133f7b4e6b1bbdcdc28fe14700a481e5e793e19ceeff1008b368e1ef
-SHA512 (either-5.0.1.1.tar.gz) = 96b23a9d5f1d2d4dd256251c488e06fa0e8642d849cf61c9de2a4089d2cbe86763062e69f83344eba2f75b30992f3e90ec195bd054f8de386c4c6b477a025c01
-Size (either-5.0.1.1.tar.gz) = 10162 bytes
+BLAKE2s (either-5.0.2.tar.gz) = 4c17724fa9770cb0c736eba9ee89bf9844524b85ea71e14521b9056bea148d87
+SHA512 (either-5.0.2.tar.gz) = fbb7e83e2a7de8520fef8bca8b3b0e991e4db8777e8b144b45787d679dd5d13462c3b4d271bc4bba2c7223e11ec5871c915259c564a3636d4f3dab6a5ccf25a8
+Size (either-5.0.2.tar.gz) = 7983 bytes
