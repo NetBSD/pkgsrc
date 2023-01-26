@@ -1,10 +1,10 @@
-$NetBSD: patch-lib_ns_update.c,v 1.2 2020/12/19 16:41:36 taca Exp $
+$NetBSD: patch-lib_ns_update.c,v 1.2.18.1 2023/01/26 20:01:44 bsiegert Exp $
 
 * Based on NetBSD, add support for blocklist(blacklist).
 
---- lib/ns/update.c.orig	2020-12-07 08:16:53.000000000 +0000
+--- lib/ns/update.c.orig	2023-01-12 22:45:02.000000000 +0000
 +++ lib/ns/update.c
-@@ -52,6 +52,10 @@
+@@ -54,6 +54,10 @@
  #include <ns/stats.h>
  #include <ns/update.h>
  
@@ -15,27 +15,27 @@ $NetBSD: patch-lib_ns_update.c,v 1.2 2020/12/19 16:41:36 taca Exp $
  /*! \file
   * \brief
   * This module implements dynamic update as in RFC2136.
-@@ -340,6 +344,9 @@ checkqueryacl(ns_client_t *client, dns_a
- 
- 	result = ns_client_checkaclsilent(client, NULL, queryacl, true);
+@@ -349,6 +353,9 @@ checkqueryacl(ns_client_t *client, dns_a
  	if (result != ISC_R_SUCCESS) {
+ 		int level = update_possible ? ISC_LOG_ERROR : ISC_LOG_INFO;
+ 
 +#if defined(HAVE_BLACKLIST_H) || defined(HAVE_BLOCKLIST_H)
 +		pfilter_notify(result, client, "queryacl");
 +#endif
  		dns_name_format(zonename, namebuf, sizeof(namebuf));
  		dns_rdataclass_format(client->view->rdclass, classbuf,
  				      sizeof(classbuf));
-@@ -352,6 +359,9 @@ checkqueryacl(ns_client_t *client, dns_a
+@@ -358,6 +365,9 @@ checkqueryacl(ns_client_t *client, dns_a
  			      "update '%s/%s' denied due to allow-query",
  			      namebuf, classbuf);
- 	} else if (updateacl == NULL && ssutable == NULL) {
+ 	} else if (!update_possible) {
 +#if defined(HAVE_BLACKLIST_H) || defined(HAVE_BLOCKLIST_H)
 +		pfilter_notify(result, client, "updateacl");
 +#endif
  		dns_name_format(zonename, namebuf, sizeof(namebuf));
  		dns_rdataclass_format(client->view->rdclass, classbuf,
  				      sizeof(classbuf));
-@@ -393,6 +403,9 @@ checkupdateacl(ns_client_t *client, dns_
+@@ -399,6 +409,9 @@ checkupdateacl(ns_client_t *client, dns_
  		msg = "disabled";
  	} else {
  		result = ns_client_checkaclsilent(client, NULL, acl, false);
