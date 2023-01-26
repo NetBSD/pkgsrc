@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.2 2022/02/26 03:57:51 pho Exp $
+# $NetBSD: Makefile,v 1.3 2023/01/26 11:11:15 pho Exp $
 
-DISTNAME=	constraints-extras-0.3.2.1
-PKGREVISION=	1
+DISTNAME=	constraints-extras-0.4.0.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Utility package for constraints
 LICENSE=	modified-bsd
 
-# It's just an example but depends on converters/hs-aeson.
+# Don't build or install an example program.
 CONFIGURE_ARGS+=	-f-build-readme
 
 .include "../../devel/hs-constraints/buildlink3.mk"
