@@ -1,0 +1,5 @@
+MemoTrie provides a basis for memoized functions over some domains, using
+tries. It's based on ideas from Ralf Hinze and code from Spencer
+Janssen. Generic support thanks to Sam Boosalis.
+
+Project wiki page: http://haskell.org/haskellwiki/MemoTrie
