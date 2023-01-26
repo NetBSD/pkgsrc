@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.686 2023/01/26 03:43:59 pho Exp $
+$NetBSD: CHANGES-2023,v 1.687 2023/01/26 03:48:23 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -880,3 +880,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added math/hs-commutative-semigroups version 0.1.0.0 [pho 2023-01-26]
 	Updated math/hs-monoid-subclasses to 1.2.1 [pho 2023-01-26]
 	Updated devel/hs-streaming-commons to 0.2.2.5 [pho 2023-01-26]
+	Updated devel/hs-unliftio to 0.2.23.0 [pho 2023-01-26]
