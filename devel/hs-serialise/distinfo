@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2022/08/23 10:50:25 wiz Exp $
+$NetBSD: distinfo,v 1.3 2023/01/26 11:43:02 pho Exp $
 
-BLAKE2s (serialise-0.2.5.0.tar.gz) = ea95fc1668f1ba637701b61c0d10af281216c3e5679f20406a27b03aae17ddba
-SHA512 (serialise-0.2.5.0.tar.gz) = 6fc510815f1c8c3355b797d0415746cb4ff8f980ba69d224be3915805423f54cb5e4df151d8abbc6b8d236e0b07c3161f75611d5bbd572f90fa7ed55e5b3b809
-Size (serialise-0.2.5.0.tar.gz) = 75048 bytes
-SHA1 (patch-serialise.cabal) = 0366cbe36801a2b4bee71cd7606d3abcb403aefe
+BLAKE2s (serialise-0.2.6.0.tar.gz) = 56f380a463e6d05a4c7bab4b4e5f5f1b5e4421bef63f283ff7065f113d855988
+SHA512 (serialise-0.2.6.0.tar.gz) = 708e6a735d6569d9959026cdf08030a270c0b703e3e2e08c5e379e63aff81bece27bc43d492a867fd073d8a7ccf4bce570acc822478899b01b960403865c3616
+Size (serialise-0.2.6.0.tar.gz) = 75077 bytes
