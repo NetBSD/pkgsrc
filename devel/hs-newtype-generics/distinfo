@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/01/26 10:50:14 pho Exp $
+
+BLAKE2s (newtype-generics-0.6.2.tar.gz) = 0b2cac4e185b31d70351db54e9bc0608abd3034583916e436df141c797a158bc
+SHA512 (newtype-generics-0.6.2.tar.gz) = 31525fe18aa97ff34d9d18f385ec427b577051b583a649d52f6df01634e93fe594fe90a13263a9b25961ab0b49b8023eab48bf80d25cb550e11f3b065a3d878b
+Size (newtype-generics-0.6.2.tar.gz) = 6854 bytes
