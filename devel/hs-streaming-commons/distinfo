@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2022/02/12 04:52:35 pho Exp $
+$NetBSD: distinfo,v 1.6 2023/01/26 03:43:50 pho Exp $
 
-BLAKE2s (streaming-commons-0.2.2.4.tar.gz) = 7d53cdd23fdd307d2d4a5c0754cef7527292079a7f98b3fe863eb9e87d535e6e
-SHA512 (streaming-commons-0.2.2.4.tar.gz) = e552bba766e5b816cbd448d1cec86c5c7593f3f13c6da42c74ebf2c9698be3a3174dd922cf70de1b4940b53e580f396a51cebff6b62db305fb0fb48a5c7658bb
-Size (streaming-commons-0.2.2.4.tar.gz) = 84330 bytes
+BLAKE2s (streaming-commons-0.2.2.5.tar.gz) = cbcf799a56dcd0cd242539c174692968d918b7e5b20ab6798d6202f625eb2d62
+SHA512 (streaming-commons-0.2.2.5.tar.gz) = e2e5f401af9c8eefe37596015f8af42225daaf7f0134add1a375b54e30e5b87212943bfa5da3e2f46953eb6942f3efe753e4565e52eb5ba45fef90743708c89d
+Size (streaming-commons-0.2.2.5.tar.gz) = 84415 bytes
