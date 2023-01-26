@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.243 2023/01/24 18:36:36 wiz Exp $
+# $NetBSD: Makefile,v 1.244 2023/01/26 12:32:03 wiz Exp $
 
 DISTNAME=	webkitgtk-2.36.8
 PKGNAME=	${DISTNAME:S/webkitgtk/webkit-gtk/}
@@ -109,6 +109,9 @@ SUBST_FILES.python+=	Source/WebInspectorUI/Scripts/copy-user-interface-resources
 SUBST_SED.python+=	-e 's,"python3","${PYTHONBIN}",'
 SUBST_STAGE.python=	pre-configure
 SUBST_MESSAGE.python=	Fixing path to python binary.
+
+# Source/JavaScriptCore/offlineasm/parser.rb:877:in `block in parseIncludes': undefined method `exists?' for File:Class (NoMethodError)
+RUBY_VERSIONS_INCOMPATIBLE=	32
 
 .include "../../lang/ruby/rubyversion.mk"
 .include "../../lang/ruby/replace.mk"
