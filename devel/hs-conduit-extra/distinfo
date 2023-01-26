@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:14:54 nia Exp $
+$NetBSD: distinfo,v 1.4 2023/01/26 17:18:30 pho Exp $
 
-BLAKE2s (conduit-extra-1.3.5.tar.gz) = cde742645791938bcdb75860445fc0fc20e9604da559d761f90450109790c86a
-SHA512 (conduit-extra-1.3.5.tar.gz) = 27cb6e1eba8c01154a1a7002521ce0190028790d1cb3f07d268722da2e2d32cc9ec8a78b897832f3e96fc40a4d6bf1755b7d068ba986178830aea0373b38cb38
-Size (conduit-extra-1.3.5.tar.gz) = 33189 bytes
+BLAKE2s (conduit-extra-1.3.6.tar.gz) = 9956250aea4f348a35d79f91829f17831a9d21fa7c330b4b59d9d001c9a39806
+SHA512 (conduit-extra-1.3.6.tar.gz) = 56f6abf0663734c0e40b3d21fed6d0942fe30acc8960105ac93ddbb15d10c9074213e0ead575cc4422824832beae026376d04a13f6a045efc2a695676cf03546
+Size (conduit-extra-1.3.6.tar.gz) = 33321 bytes
