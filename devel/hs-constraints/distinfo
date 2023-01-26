@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/02/14 14:38:56 pho Exp $
+$NetBSD: distinfo,v 1.2 2023/01/26 08:46:54 pho Exp $
 
-BLAKE2s (constraints-0.13.3.tar.gz) = 79a9c7a2afb4ce04cf4877ec95194023adb64c7e0a780c61edbf46a15d6dce60
-SHA512 (constraints-0.13.3.tar.gz) = c592d1b60c5606c6dbd883b8acc9e2b68addfc71d28a6df184fb3739791759fdf1d8f0ed243acd694d54a6d9bfac8271ddac2e72e4dbfcb9a8622c2178999472
-Size (constraints-0.13.3.tar.gz) = 21574 bytes
+BLAKE2s (constraints-0.13.4.tar.gz) = d46ec5be0af0b2fd0ea8dc03fee44df71421b94dbb8882d6b91036814973f0c2
+SHA512 (constraints-0.13.4.tar.gz) = 3e4cf62ee897cc103332ae1823552c52568fe090968ee763b83a0cc95c978c6766db02a4cbc4e2c9d6f83d04bb731a91421d5078904847d204e5cc8d8ee59d5f
+Size (constraints-0.13.4.tar.gz) = 21673 bytes
