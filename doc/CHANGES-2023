@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.728 2023/01/26 19:15:44 pin Exp $
+$NetBSD: CHANGES-2023,v 1.729 2023/01/26 19:41:02 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -923,3 +923,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/hs-hslua to 2.2.1 [pho 2023-01-26]
 	Updated audio/gospt to 0.0.33 [pin 2023-01-26]
 	Updated textproc/hck to 0.9.0 [pin 2023-01-26]
+	Updated textproc/hck to 0.9.1 [pin 2023-01-26]
