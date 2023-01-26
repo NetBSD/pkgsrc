@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:17:09 nia Exp $
+$NetBSD: distinfo,v 1.8 2023/01/26 23:56:22 wen Exp $
 
-BLAKE2s (MooseX-Types-Perl-0.101343.tar.gz) = 5441746b215d85d5b21cb6139b80f1afcf8875affc6c94344f1ba647c6bcdbff
-SHA512 (MooseX-Types-Perl-0.101343.tar.gz) = a3ad0f1b3dcde93f23254f084faadde7d3b03076f045802d7757c5580b2d0fb6cb748143a99fcd650492fc7da8938e28d8e0b7714070386638d972ab7d799e9a
-Size (MooseX-Types-Perl-0.101343.tar.gz) = 14353 bytes
+BLAKE2s (MooseX-Types-Perl-0.101344.tar.gz) = dd099f9f8e43216f34073d8f02eaaddef41735b52c0b9d463af3eb8572978106
+SHA512 (MooseX-Types-Perl-0.101344.tar.gz) = fe0e9bd54dc7aee26c99d461007d2452f8d4f943024e2ac5d17fb097c524b3fdc6fff6c98f344ef359b669a005893313a1b3cc6f076ce4eb5bca7f7de1212d2d
+Size (MooseX-Types-Perl-0.101344.tar.gz) = 17331 bytes
