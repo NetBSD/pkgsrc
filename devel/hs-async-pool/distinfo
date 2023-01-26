@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2022/02/23 16:51:44 pho Exp $
+$NetBSD: distinfo,v 1.2 2023/01/26 03:58:43 pho Exp $
 
 BLAKE2s (async-pool-0.9.1.tar.gz) = b0cde9e12cc7c5e83339d908e4ec1c8d6a1943e3b7a9d07ea6a2539eeea73ef1
 SHA512 (async-pool-0.9.1.tar.gz) = 36f955bf85ef37b8cf5c4b25638df7cd3c88afe5cc87668d7bcaf1b244b655594220f0031e56e754470014d00d6e01b7ad6d090b8e88ef2ec6bebb4c8c8909ce
 Size (async-pool-0.9.1.tar.gz) = 15109 bytes
+SHA1 (patch-Control_Concurrent_Async_Pool_Async.hs) = ac9708f460bc50dcb359ac197c06628354f141c9
