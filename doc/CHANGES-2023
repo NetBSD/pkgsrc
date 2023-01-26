@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.688 2023/01/26 04:02:08 pho Exp $
+$NetBSD: CHANGES-2023,v 1.689 2023/01/26 04:07:28 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -882,3 +882,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/hs-streaming-commons to 0.2.2.5 [pho 2023-01-26]
 	Updated devel/hs-unliftio to 0.2.23.0 [pho 2023-01-26]
 	Updated devel/hs-MonadRandom to 0.6 [pho 2023-01-26]
+	Updated devel/hs-ListLike to 4.7.8 [pho 2023-01-26]
