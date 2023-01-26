@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:14:52 nia Exp $
+$NetBSD: distinfo,v 1.4 2023/01/26 11:18:42 pho Exp $
 
 BLAKE2s (assoc-1.0.2.tar.gz) = 7a73775f4f9d29d51071ce8ce3e233ddbec2d944b7648c5c9178b393cde7efec
 SHA512 (assoc-1.0.2.tar.gz) = 20fd0056dcc2dff9504e090be5c2ef27692a795133620e60b9382cfdfbaf26d1019617acf48f0f762e22d699068bc4dbd35a714177ce3a36761c0065708b9168
 Size (assoc-1.0.2.tar.gz) = 3047 bytes
-SHA1 (patch-assoc.cabal) = 76eb9a7b7b3be8f1391c8a176b78812e0f2b6ef2
