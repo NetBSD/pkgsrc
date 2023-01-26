@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2022/08/22 10:17:39 wiz Exp $
+$NetBSD: distinfo,v 1.7 2023/01/26 03:28:56 pho Exp $
 
-BLAKE2s (hashtables-1.3.tar.gz) = fbd7cec05a1bd3df818a1e74adc3061986f22e0b84af9f2190a05b3bd2aa5279
-SHA512 (hashtables-1.3.tar.gz) = 7fb82e7c45c13d7bde8a216fb678d20bbd4c970f7860cbc2f08fb5524324f6b9584e1b5d397bdcb3fdbf53928758b608986167bb2bc2f1adae6feb3b0dd94444
-Size (hashtables-1.3.tar.gz) = 58599 bytes
-SHA1 (patch-hashtables.cabal) = c1f036d205b25321abd5cd5ad8c30968146b27dc
+BLAKE2s (hashtables-1.3.1.tar.gz) = c0483b406ea5b5e9504612e0f41a40b6d5cb18deb3eb65fc5165675772079438
+SHA512 (hashtables-1.3.1.tar.gz) = b6430e092cfa9cde3dbea34cd9e2a10869c41e40e88f79e28aa6aabfdcd359dd74fb87020f8b9e004b817a6e9a8825335fcc91c2b88f7eb93b25758c71c77833
+Size (hashtables-1.3.1.tar.gz) = 58697 bytes
