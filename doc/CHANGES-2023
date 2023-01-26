@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.718 2023/01/26 15:08:37 pho Exp $
+$NetBSD: CHANGES-2023,v 1.719 2023/01/26 15:51:18 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -913,3 +913,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/hs-lifted-async to 0.10.2.3 [pho 2023-01-26]
 	Updated net/bind916 to 9.16.37 [taca 2023-01-26]
 	Updated devel/hs-fsnotify to 0.4.1.0 [pho 2023-01-26]
+	Updated devel/hs-either to 5.0.2 [pho 2023-01-26]
