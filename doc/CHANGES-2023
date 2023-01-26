@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.706 2023/01/26 10:30:15 pho Exp $
+$NetBSD: CHANGES-2023,v 1.707 2023/01/26 10:32:52 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -901,3 +901,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/hs-parsers to 0.12.11 [pho 2023-01-26]
 	Updated devel/hs-tasty to 1.4.3 [pho 2023-01-26]
 	Updated devel/hs-rio to 0.1.22.0 [pho 2023-01-26]
+	Updated devel/hs-microlens-platform to 0.4.3.3 [pho 2023-01-26]
