@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.inotify,v 1.1 2022/02/26 12:33:45 pho Exp $
-lib/${HS_PLATFORM}/${HS_PKGID}/System/FSNotify/Linux.dyn_hi
+@comment $NetBSD: PLIST.inotify,v 1.2 2023/01/26 15:08:26 pho Exp $
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/System/FSNotify/Linux.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/System/FSNotify/Linux.hi
-lib/${HS_PLATFORM}/${HS_PKGID}/System/FSNotify/Linux.p_hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/System/FSNotify/Linux.p_hi
