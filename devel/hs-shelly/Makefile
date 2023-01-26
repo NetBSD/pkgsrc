@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/02/26 12:30:00 pho Exp $
+# $NetBSD: Makefile,v 1.2 2023/01/26 14:48:41 pho Exp $
 
 DISTNAME=	shelly-1.10.0
 CATEGORIES=	devel
@@ -6,6 +6,9 @@ CATEGORIES=	devel
 MAINTAINER=	pho@cielonegro.org
 COMMENT=	Shell-like (systems) programming in Haskell
 LICENSE=	modified-bsd
+
+HASKELL_UNRESTRICT_DEPENDENCIES+=	\
+	unix-compat
 
 .include "../../devel/hs-async/buildlink3.mk"
 .include "../../devel/hs-enclosed-exceptions/buildlink3.mk"
