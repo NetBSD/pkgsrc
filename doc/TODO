@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22554 2023/01/25 19:32:17 pho Exp $
+$NetBSD: TODO,v 1.22555 2023/01/26 03:43:59 pho Exp $
 
 Suggested new packages
 ======================
@@ -822,7 +822,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o hs-pandoc-lua-marshal-0.1.7
 	o hs-skylighting-0.13.2
 	o hs-skylighting-core-0.13.2
-	o hs-streaming-commons-0.2.2.5
 	o hs-texmath-0.12.5.4
 	o hs-text-conversions-0.3.1.1
 	o hs-tls-1.6.0
