@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2022/02/26 03:58:00 pho Exp $
+# $NetBSD: Makefile,v 1.3 2023/01/26 11:45:31 pho Exp $
 
-DISTNAME=	lifted-async-0.10.2.2
-PKGREVISION=	1
+DISTNAME=	lifted-async-0.10.2.3
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
