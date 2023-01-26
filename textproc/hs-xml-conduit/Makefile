@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2022/09/07 06:50:52 pho Exp $
+# $NetBSD: Makefile,v 1.9 2023/01/26 17:50:53 pho Exp $
 
 DISTNAME=	xml-conduit-1.9.1.1
 PKGREVISION=	7
@@ -13,6 +13,9 @@ LICENSE=	mit
 # just overwrite it.
 post-extract:
 	${CP} -f ${FILESDIR}/Setup.hs ${WRKSRC}/Setup.hs
+
+HASKELL_UNRESTRICT_DEPENDENCIES+=	\
+	resourcet
 
 .include "../../textproc/hs-attoparsec/buildlink3.mk"
 .include "../../textproc/hs-blaze-html/buildlink3.mk"
