@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2023/01/26 19:15:26 pin Exp $
+# $NetBSD: Makefile,v 1.5 2023/01/26 19:40:36 pin Exp $
 
-DISTNAME=	hck-0.9.0
+DISTNAME=	hck-0.9.1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sstadick/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
