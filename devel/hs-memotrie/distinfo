@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/01/26 10:52:19 pho Exp $
+
+BLAKE2s (MemoTrie-0.6.10.tar.gz) = a1d11a419a1262bae331a4e5f9b380e21d09bd95e99de043227dde7177abb974
+SHA512 (MemoTrie-0.6.10.tar.gz) = 73be7e356ad2aeef49abf43975d2e24ee8b883e12453f316366b52998637ac26d98feef34388c2a46f683027dc7132444b17a25a12d3e86748088fadf081b186
+Size (MemoTrie-0.6.10.tar.gz) = 8403 bytes
