@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22557 2023/01/26 09:13:25 pho Exp $
+$NetBSD: TODO,v 1.22558 2023/01/26 09:17:00 pho Exp $
 
 Suggested new packages
 ======================
@@ -813,7 +813,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o hs-doctemplates-0.11
 	o hs-hie-bios-0.10.0
 	o hs-hslua-2.2.1
-	o hs-hslua-module-path-1.0.3
 	o hs-hslua-module-system-1.0.2
 	o hs-hslua-module-version-1.0.3
 	o hs-http-client-tls-0.3.6.1
