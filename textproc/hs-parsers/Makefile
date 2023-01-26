@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2022/02/26 03:58:28 pho Exp $
+# $NetBSD: Makefile,v 1.3 2023/01/26 10:19:20 pho Exp $
 
-DISTNAME=	parsers-0.12.10
-PKGREVISION=	1
+DISTNAME=	parsers-0.12.11
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -11,7 +10,6 @@ LICENSE=	modified-bsd
 .include "../../devel/hs-base-orphans/buildlink3.mk"
 .include "../../textproc/hs-charset/buildlink3.mk"
 .include "../../math/hs-scientific/buildlink3.mk"
-.include "../../math/hs-semigroups/buildlink3.mk"
 .include "../../devel/hs-unordered-containers/buildlink3.mk"
 .include "../../textproc/hs-attoparsec/buildlink3.mk"
 .include "../../mk/haskell.mk"
