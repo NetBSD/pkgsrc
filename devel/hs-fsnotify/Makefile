@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2022/02/26 12:33:45 pho Exp $
+# $NetBSD: Makefile,v 1.7 2023/01/26 15:08:26 pho Exp $
 
-DISTNAME=	fsnotify-0.3.0.1
-PKGREVISION=	5
+DISTNAME=	fsnotify-0.4.1.0
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
@@ -15,13 +14,15 @@ BROKEN_ON_PLATFORM+=	Darwin-*-*
 PLIST_SRC+=	PLIST.common
 
 .include "../../mk/bsd.fast.prefs.mk"
-.if ${OPSYS} == "Linux" || !empty(OPSYS:M*BSD)
+.if ${OPSYS} == "Linux" || ${OPSYS:M*BSD}
 .  include "../../devel/hs-hinotify/buildlink3.mk"
 .  include "../../devel/hs-shelly/buildlink3.mk"
 PLIST_SRC+=	PLIST.inotify
 .endif
 
 .include "../../devel/hs-async/buildlink3.mk"
+.include "../../devel/hs-monad-control/buildlink3.mk"
+.include "../../devel/hs-safe-exceptions/buildlink3.mk"
 .include "../../devel/hs-unix-compat/buildlink3.mk"
 .include "../../mk/haskell.mk"
 .include "../../mk/bsd.pkg.mk"
