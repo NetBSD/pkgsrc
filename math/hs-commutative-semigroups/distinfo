@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/01/26 03:35:18 pho Exp $
+
+BLAKE2s (commutative-semigroups-0.1.0.0.tar.gz) = cc5830aa4e813fa3e235e1c1b145f6a90086896b414f54e748b7e7621898b01b
+SHA512 (commutative-semigroups-0.1.0.0.tar.gz) = cc00bdf95ccee83452ef19be311198981bfdbc7efc1b471fd504ab276842bb4501f886d937c5369c05a1d185e278c8631cd3d24d634414a5851af242d5a06587
+Size (commutative-semigroups-0.1.0.0.tar.gz) = 3916 bytes
