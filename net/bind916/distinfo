@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.42 2022/11/16 13:47:38 taca Exp $
+$NetBSD: distinfo,v 1.42.2.1 2023/01/26 20:01:44 bsiegert Exp $
 
-BLAKE2s (bind-9.16.35.tar.xz) = bd44cf0b71d352e4d2baa71e3dee7ce78a47f02ad9dcb2feb3ce6dfaa0bfcf29
-SHA512 (bind-9.16.35.tar.xz) = c979e7a9bcea1c9fb1049a2708d8643c71ad2448a195454fcb3dfacf5d874221e95473e140a6944c3fa249f516718416fb67a50e267522d6bcb2915cdb46e6ea
-Size (bind-9.16.35.tar.xz) = 5102476 bytes
+BLAKE2s (bind-9.16.37.tar.xz) = d40e5ca3b87dfdaff9d8f49e231dbc4b0db96c0acb123d66dbca83e97773cb85
+SHA512 (bind-9.16.37.tar.xz) = 2c4b01f6cc598849688b5b2710caf48db47e1e860df785783ef2b140a25507b48357a9becf7911ba0feda285c4bca87764e21128fac5cf17efa47fd5134dc59f
+Size (bind-9.16.37.tar.xz) = 5109440 bytes
 SHA1 (patch-bin_dig_dighost.c) = b1073911d80ecd519af98b6678968296ff8c0c98
 SHA1 (patch-bin_dig_include_dig_dig.h) = 10166f5bb98b208c7b10d63eb31e8253f704acc8
 SHA1 (patch-bin_named_Makefile.in) = f1367da6a226ba44d0ee13acf00b8abeb5b1b7eb
@@ -42,7 +42,7 @@ SHA1 (patch-lib_isc_include_isc_types.h) = e5fcf15ee03d1d032a67f2e6d23b2e409042a
 SHA1 (patch-lib_isc_netmgr_netmgr-int.h) = d84993edf254605f85421fbdd2fc523255c7316d
 SHA1 (patch-lib_isc_netmgr_netmgr.c) = 3df1d37061f6ceb37e309a0dc4f782fc35863146
 SHA1 (patch-lib_isc_rwlock.c) = 1d114248ddee20db7a7429afab446f8b2f0dca82
-SHA1 (patch-lib_isc_siphash.c) = 8999deb002e4fdb6b13e6f297298ef73c97042c3
+SHA1 (patch-lib_isc_siphash.c) = a6642bd91aef22afb7ec4e2e0912275371644a3f
 SHA1 (patch-lib_isc_stats.c) = 8d962fa360740770588fccf1d303d7fe22ae724b
 SHA1 (patch-lib_isc_timer.c) = aea2019bbf3d84cad77af432a2bbdf0da8f2f893
 SHA1 (patch-lib_isc_unix_include_isc_stdatomic.h) = b73b0224be47c1733f6346fce9243e97f54e1865
@@ -55,6 +55,6 @@ SHA1 (patch-lib_ns_include_ns_client.h) = 3ccd630aee77ea638fb3b954b85bad9c74b0c8
 SHA1 (patch-lib_ns_include_ns_pfilter.h) = cc86752971b4f9f7492283c4ad3ff29bc1bae237
 SHA1 (patch-lib_ns_pfilter.c) = 8f4a3b3a729360a131eb1962c42a9f9f985c7e7b
 SHA1 (patch-lib_ns_query.c) = 0c3c4a20aa4b40c144c4f986599cda67db3e2491
-SHA1 (patch-lib_ns_update.c) = 2fb3457da333143508d28420490cbc1cb69ddb19
+SHA1 (patch-lib_ns_update.c) = 2c5a9302178abe9dc9b6396b053319e39e1ef950
 SHA1 (patch-lib_ns_xfrout.c) = 79d9e4add58ffd75ea9718f5501f1517e67416e3
 SHA1 (patch-make_rules.in) = 5fb3a44ff0066c93872c25596267fbabffc6da8f
