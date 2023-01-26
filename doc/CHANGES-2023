@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.730 2023/01/26 23:44:00 wen Exp $
+$NetBSD: CHANGES-2023,v 1.731 2023/01/26 23:48:45 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -925,3 +925,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/hck to 0.9.0 [pin 2023-01-26]
 	Updated textproc/hck to 0.9.1 [pin 2023-01-26]
 	Updated devel/p5-Test-Needs to 0.002010 [wen 2023-01-26]
+	Updated devel/p5-Moose to 2.2203 [wen 2023-01-26]
