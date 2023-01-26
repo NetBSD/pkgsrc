@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/01/26 03:17:46 pho Exp $
+
+BLAKE2s (data-array-byte-0.1.0.1.tar.gz) = e28171d5c9287c4838c9a8396d3db7d31b130df9e721fafb0f0ae91f029aa019
+SHA512 (data-array-byte-0.1.0.1.tar.gz) = f06e369803fadca57c0782b45c97f914e0e28c512bb3f36be35a06686ac1c3ab45da150143a1be3b0b5633c3d4105570acc4c0482e9692a4ef35568922a303e7
+Size (data-array-byte-0.1.0.1.tar.gz) = 6784 bytes

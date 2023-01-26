@@ -1,0 +1,9 @@
+Compatibility layer for Data.Array.Byte, providing boxed wrappers for
+ByteArray# and MutableByteArray# and relevant instances for GHC <
+9.4. Include it into your Cabal file:
+
+build-depends: base
+if impl(ghc < 9.4)
+  build-depends: data-array-byte
+
+and then import Data.Array.Byte unconditionally.
