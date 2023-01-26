@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2022Q4,v 1.1.2.7 2023/01/23 19:27:14 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2022Q4,v 1.1.2.8 2023/01/26 20:02:05 bsiegert Exp $
 
 Changes to packages and infrastructure on the 2022Q4 branch:
 
@@ -51,4 +51,11 @@ security/libksba: security update
 
 Pullup ticket #6724 - requested by bsiegert
 lang/ruby31-base: build fix
+
+Pullup ticket #6725 - requested by nia
+www/firefox102: security fix
+www/firefox102-l10n: dependent update
+
+Pullup ticket #6726 - requested by taca
+net/bind916: security fix
 
