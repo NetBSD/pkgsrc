@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/02/23 16:12:47 pho Exp $
+$NetBSD: distinfo,v 1.2 2023/01/26 11:45:31 pho Exp $
 
-BLAKE2s (lifted-async-0.10.2.2.tar.gz) = e39e9edc4cacecbedaa5a14400cbc30bd505475b7e40e5a1b4b97b751aebe5c0
-SHA512 (lifted-async-0.10.2.2.tar.gz) = 25d679ecb147cc398866b100674d79dce6f70c4328d245cf68515961f93fc614246ce06f7247843372456168fe58fb011a2a9b9fc51a06944dee54ed80bfbdd5
-Size (lifted-async-0.10.2.2.tar.gz) = 10651 bytes
+BLAKE2s (lifted-async-0.10.2.3.tar.gz) = 5122fc303a3f8587701758d6e68ee7de168dbcb965eda2cae99576372ed28f40
+SHA512 (lifted-async-0.10.2.3.tar.gz) = b21ab3ccf04de748d3b0bf0ca8ae2c490fdfad4bcc5b9053a196da424923866d58bb735bc208ca600ae2d4d1d66545adc52e0826ba6bb63a7089d4946493e59a
+Size (lifted-async-0.10.2.3.tar.gz) = 10685 bytes
