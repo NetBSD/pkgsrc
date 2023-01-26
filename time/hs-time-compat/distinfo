@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2022/02/12 05:03:42 pho Exp $
+$NetBSD: distinfo,v 1.7 2023/01/26 09:38:22 pho Exp $
 
 BLAKE2s (time-compat-1.9.6.1.tar.gz) = 8a3268b3a48c7692ae50f0dc6003d144614d1816edad371b8c464baa9cd2e553
 SHA512 (time-compat-1.9.6.1.tar.gz) = ca0b19aa5e7948fd7d9fbd8ff5e1b0f93a2d8d410d515e7078b40370e7d9fc363c111d53551d57a0320efb0894bcc2210afa8fc04da9f003ded626f53b7e58ea
 Size (time-compat-1.9.6.1.tar.gz) = 59964 bytes
-SHA1 (patch-time-compat.cabal) = 056f2f13e0cb56d81652b9850d965248b04f7088
