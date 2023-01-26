@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/02/16 09:42:21 pho Exp $
+$NetBSD: distinfo,v 1.2 2023/01/26 08:53:08 pho Exp $
 
-BLAKE2s (direct-sqlite-2.3.26.tar.gz) = 51c16f3e93c50ac68c600abfdeb57f2aa9464645767a10d41260fc06d6430e8a
-SHA512 (direct-sqlite-2.3.26.tar.gz) = 1675c668263d40b398e252596e821fa7fb5934ced67074a3f840021e43970784daeb2d233f0fb5d53db1e92b41d18a48e0ed0d0fb487270638556ea2423264ef
-Size (direct-sqlite-2.3.26.tar.gz) = 2215712 bytes
-SHA1 (patch-direct-sqlite.cabal) = 898009a12c4a26f2b963dfdeffc4b8bfefe10bbe
+BLAKE2s (direct-sqlite-2.3.27.tar.gz) = a71b539fe06d44b55464e0e829536f8f5ff8edea76a65e7a770fae9500b71d3a
+SHA512 (direct-sqlite-2.3.27.tar.gz) = 946890504c768f5dc7af91e4ce8eff6790b36df3bf249b05548a4356757d24f2d94ad4b9b2a65a0db17dd14a968d4c4f020775b4c52224978c26c324f57f7616
+Size (direct-sqlite-2.3.27.tar.gz) = 2383676 bytes
