@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2022/02/11 13:28:05 pho Exp $
+$NetBSD: distinfo,v 1.9 2023/01/26 04:02:00 pho Exp $
 
-BLAKE2s (MonadRandom-0.5.3.tar.gz) = 8a1541944e3df8e023a2abfc66b071a92a6dfe85d76ae2be124231c282ecbb37
-SHA512 (MonadRandom-0.5.3.tar.gz) = dde2a7ad4b6f27f8f4c94653b2a7c04cff1ef7a3dfbf6d036a6ef977f5952e9c7f905f0ad110438bc2764dcc985f04c9a7f1bd25997fd6f81ee55b654a7d6768
-Size (MonadRandom-0.5.3.tar.gz) = 11259 bytes
-SHA1 (patch-MonadRandom.cabal) = 7005a7da6e53cbaa81db4691885e6f294f874eeb
+BLAKE2s (MonadRandom-0.6.tar.gz) = e71bf19db12f78b7a8e5b109515f404554dea72d783bfd4479fe0c09c6ffef9b
+SHA512 (MonadRandom-0.6.tar.gz) = a6e0944bc2448a376c036330dcc17eeb6076de4b44c64729b94dede87935c2ad06af5d69ee14953a7b38d06529daa0a46a4569bc3d959f7748ce7e77abcea713
+Size (MonadRandom-0.6.tar.gz) = 11402 bytes
