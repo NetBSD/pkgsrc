@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2023/01/24 18:36:32 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2023/01/26 07:45:24 wiz Exp $
 
 DISTNAME=		tigervnc-1.12.0
 PKGNAME=		${DISTNAME}.1.20.13
@@ -27,6 +27,7 @@ REPLACE_PERL+=	unix/vncserver/vncserver.in
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
+USE_CMAKE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	intltool msgfmt msgmerge patch perl:run autoconf automake autoreconf pkg-config gmake bash:run
@@ -121,7 +122,6 @@ pre-configure:
 		${CONFIG_SHELL} ${CONFIG_SHELL_FLAGS}	\
 			./configure ${XORG_CONFIGURE_ARGS}
 
-.include "../../devel/cmake/build.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
