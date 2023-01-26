@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.7 2022/02/26 03:58:14 pho Exp $
+# $NetBSD: Makefile,v 1.8 2023/01/26 18:08:11 pho Exp $
 
-DISTNAME=	hslua-2.1.0
-PKGREVISION=	2
+DISTNAME=	hslua-2.2.1
 CATEGORIES=	lang
 
 MAINTAINER=	szptvlfn@NetBSD.org
 COMMENT=	Bindings to Lua, an embeddable scripting language
 LICENSE=	mit
 
+.include "../../converters/hs-hslua-aeson/buildlink3.mk"
 .include "../../lang/hs-hslua-classes/buildlink3.mk"
 .include "../../lang/hs-hslua-core/buildlink3.mk"
 .include "../../lang/hs-hslua-marshalling/buildlink3.mk"
