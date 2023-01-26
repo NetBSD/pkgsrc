@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.125 2022/07/30 06:49:04 rillig Exp $
+# $NetBSD: Makefile,v 1.126 2023/01/26 23:47:57 wen Exp $
 
-DISTNAME=	Moose-2.2201
+DISTNAME=	Moose-2.2203
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Test/}
 
@@ -36,9 +35,9 @@ DEPENDS+=	p5-Scalar-List-Utils>=1.56:../../devel/p5-Scalar-List-Utils
 # on Moose, we cannot add it to DEPENDS
 
 BUILD_DEPENDS+=	p5-Test-Fatal>=0.05:../../devel/p5-Test-Fatal
-BUILD_DEPENDS+=	p5-Test-Requires>=0.05:../../devel/p5-Test-Requires
+BUILD_DEPENDS+=	p5-Test-Needs>=0.002010:../../devel/p5-Test-Needs
 
-CONFLICTS+=	p5-Class-MOP-[0-9]*
+#CONFLICTS+=	p5-Class-MOP-[0-9]*
 
 BUILD_DEPENDS+=	p5-DBM-Deep-[0-9]*:../../databases/p5-DBM-Deep
 BUILD_DEPENDS+=	p5-DateTime-Calendar-Mayan-[0-9]*:../../time/p5-DateTime-Calendar-Mayan
