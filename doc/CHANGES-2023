@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.690 2023/01/26 07:58:57 adam Exp $
+$NetBSD: CHANGES-2023,v 1.691 2023/01/26 08:42:53 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -885,3 +885,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/hs-ListLike to 4.7.8 [pho 2023-01-26]
 	Updated lang/nodejs to 19.5.0 [adam 2023-01-26]
 	Updated textproc/ugrep to 3.9.6 [adam 2023-01-26]
+	Updated devel/hs-ghc-lib-parser-ex to 9.4.0.0 [pho 2023-01-26]
