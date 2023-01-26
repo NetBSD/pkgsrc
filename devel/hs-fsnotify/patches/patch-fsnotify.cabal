@@ -1,16 +1,28 @@
-$NetBSD: patch-fsnotify.cabal,v 1.1 2022/02/26 12:33:45 pho Exp $
+$NetBSD: patch-fsnotify.cabal,v 1.2 2023/01/26 15:08:26 pho Exp $
 
-Use hinotify on some BSDs. Not upstreamed yet; can only be upstreamed after
+Use hinotify on some BSDs. libinotify emulates it with kqueue(2) which is
+much better than polling.
+
+Not upstreamed yet; can only be upstreamed after
 ../../devel/hs-hinotify/patches/patch-hinotify.cabal gets merged.
 
---- fsnotify.cabal.orig	2022-02-26 11:04:55.313630845 +0000
+--- fsnotify.cabal.orig	2022-10-17 01:19:16.000000000 +0000
 +++ fsnotify.cabal
-@@ -38,7 +38,7 @@ Library
-                         , System.FSNotify.Types
-   Hs-Source-Dirs:       src
-   GHC-Options:          -Wall
+@@ -46,15 +46,13 @@ library
+     , time >=1.1
+     , unix-compat >=0.2
+   default-language: Haskell2010
 -  if os(linux)
 +  if os(linux) || os(freebsd) || os(netbsd) || os(openbsd)
-     CPP-Options:        -DOS_Linux
-     Other-Modules:      System.FSNotify.Linux
-     Build-Depends:      hinotify >= 0.3.0,
+     cpp-options: -DOS_Linux
+   if os(windows)
+     cpp-options: -DOS_Win32
+   if os(darwin)
+     cpp-options: -DOS_Mac
+-  if os(freebsd) || os(netbsd) || os(openbsd)
+-    cpp-options: -DOS_BSD
+-  if os(linux)
++  if os(linux) || os(freebsd) || os(netbsd) || os(openbsd)
+     other-modules:
+         System.FSNotify.Linux
+     build-depends:

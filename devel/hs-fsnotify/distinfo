@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2022/02/26 12:33:45 pho Exp $
+$NetBSD: distinfo,v 1.5 2023/01/26 15:08:26 pho Exp $
 
-BLAKE2s (fsnotify-0.3.0.1.tar.gz) = 3a3d44c278c0deae26d2216fb2978dad5a3b0ecff915a26fad9dfe302b269827
-SHA512 (fsnotify-0.3.0.1.tar.gz) = d5c96a54c1b4788e1d50f259d11d4e2d6eb7224552b50cb359a1f4cdcc2a9b7270f9b5ccdfe9738a163b54ab7ab5a0114de9cabc56660a7324cdfc4b16179e1a
-Size (fsnotify-0.3.0.1.tar.gz) = 20638 bytes
-SHA1 (patch-fsnotify.cabal) = c7e5c32063476540253c1b660316fb9ff74eae91
+BLAKE2s (fsnotify-0.4.1.0.tar.gz) = d1fd7c6857bb4a980c4d9d550bba8585098523d490d0ec0acf213254e8216000
+SHA512 (fsnotify-0.4.1.0.tar.gz) = bf924fb9712572e1ded14c630b1fab98daadb81cc87bbd18964176e0db3b41e1024744b996bcc205c7a57f55e63fc28db0ae4fa4009623d26316d1322ddf1c03
+Size (fsnotify-0.4.1.0.tar.gz) = 22783 bytes
+SHA1 (patch-fsnotify.cabal) = d41f0e20b56a4e4a38dc944e407e219fe75f7602
