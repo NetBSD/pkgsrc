@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2022/02/11 13:36:25 pho Exp $
+$NetBSD: distinfo,v 1.5 2023/01/26 09:33:08 pho Exp $
 
 BLAKE2s (errors-2.3.0.tar.gz) = 24f8d08e30fd11e3443063084b56f643f3787e58b00c996917f76b6f03654745
 SHA512 (errors-2.3.0.tar.gz) = dddfc63505fd7023c4a669b3cc3d736cf7ecb774b53dcdfeee2d203dcdf4684f5d149a1c217134de214b64af4e154a3ef08b315615c85a1c734ceb42e80823b4
 Size (errors-2.3.0.tar.gz) = 9184 bytes
-SHA1 (patch-errors.cabal) = b681b1edfd7b938b63d439c830072a00de503dd4
