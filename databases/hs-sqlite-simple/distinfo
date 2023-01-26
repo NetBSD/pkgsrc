@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/02/16 09:43:12 pho Exp $
+$NetBSD: distinfo,v 1.2 2023/01/26 11:26:32 pho Exp $
 
-BLAKE2s (sqlite-simple-0.4.18.0.tar.gz) = 5703b82954ca28dc1aa8b00d8c940a94625a83499d870f7955329d7a2c7c9216
-SHA512 (sqlite-simple-0.4.18.0.tar.gz) = 3fb698698aff5b9f31d06f78cf587320e693c7025cef0b0233e6fec5314af2820b8835726eadbfe1c37058c0b5c16c6ee34d2f96c2be0ad142b77f1221eadc24
-Size (sqlite-simple-0.4.18.0.tar.gz) = 33969 bytes
-SHA1 (patch-sqlite-simple.cabal) = 74f48e2c64ee52cfaf565aaaa42d67c03b751d84
+BLAKE2s (sqlite-simple-0.4.18.2.tar.gz) = 7914ca86a9ed302ea3c36ab35168092c6a08282d738b28c4a7045ebdbac9c441
+SHA512 (sqlite-simple-0.4.18.2.tar.gz) = 9e17d1c775aae6a0a53e01c4ee8835197880226c2df117fdf22496022cc3dc361687cef9b7b4367213bf1bf804201fa89a4e28868cad4033ae67cc155aca8d8d
+Size (sqlite-simple-0.4.18.2.tar.gz) = 34644 bytes
