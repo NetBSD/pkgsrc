@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2022/09/07 06:50:49 pho Exp $
+# $NetBSD: Makefile,v 1.5 2023/01/26 10:58:24 pho Exp $
 
-DISTNAME=	ormolu-0.4.0.0
+DISTNAME=	ormolu-0.5.2.0
 PKGNAME=	${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -17,7 +16,10 @@ LICENSE=	modified-bsd
 .include "../../devel/hs-ansi-terminal/buildlink3.mk"
 .include "../../textproc/hs-Diff/buildlink3.mk"
 .include "../../devel/hs-dlist/buildlink3.mk"
+.include "../../devel/hs-file-embed/buildlink3.mk"
 .include "../../devel/hs-ghc-lib-parser/buildlink3.mk"
+.include "../../textproc/hs-megaparsec/buildlink3.mk"
+.include "../../devel/hs-memotrie/buildlink3.mk"
 .include "../../devel/hs-syb/buildlink3.mk"
 
 # exe:ormolu
