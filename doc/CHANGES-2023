@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.716 2023/01/26 11:45:40 pho Exp $
+$NetBSD: CHANGES-2023,v 1.717 2023/01/26 13:33:18 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -911,3 +911,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated databases/hs-sqlite-simple to 0.4.18.2 [pho 2023-01-26]
 	Updated devel/hs-serialise to 0.2.6.0 [pho 2023-01-26]
 	Updated devel/hs-lifted-async to 0.10.2.3 [pho 2023-01-26]
+	Updated net/bind916 to 9.16.37 [taca 2023-01-26]
