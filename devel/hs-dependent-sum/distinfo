@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/02/16 05:06:29 pho Exp $
+$NetBSD: distinfo,v 1.2 2023/01/26 16:03:39 pho Exp $
 
-BLAKE2s (dependent-sum-0.7.1.0.tar.gz) = 910d61cff0cb82bcbdd348138e7d4d4a92b5f73acbddca54bae122b386bf9e61
-SHA512 (dependent-sum-0.7.1.0.tar.gz) = 5143ad4399e831c25784b7ab66a0487dff1af50fe631b50844467b71e1d8ed13b74262eb04cf268498000e6583be2bbd7284375663d04621dda6eed43e9f8721
-Size (dependent-sum-0.7.1.0.tar.gz) = 4517 bytes
-SHA1 (patch-dependent-sum.cabal) = d467dbe50ab066390fbff3df027edf2ea2a63d9f
+BLAKE2s (dependent-sum-0.7.2.0.tar.gz) = 200faf3bf06820685a1549dd0d21c874f2e9efa32e99fdc52dab150d15bcd2b9
+SHA512 (dependent-sum-0.7.2.0.tar.gz) = 68feaa0aa348bf693fbc564d1c2a598a3c165f079b629ec275bce5932c683826544925ced3e61b1c9fb8fccbc59e3a281e3b96c355343397014ff58f1e19c881
+Size (dependent-sum-0.7.2.0.tar.gz) = 4565 bytes
