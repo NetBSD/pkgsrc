@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2022/08/22 10:15:40 wiz Exp $
+$NetBSD: distinfo,v 1.3 2023/01/26 16:17:31 pho Exp $
 
-BLAKE2s (foldl-1.4.12.tar.gz) = 05187a29e4e5cd8c4ea0a99fc9a0759229afe22368c132549bdec5ceb93dfcb8
-SHA512 (foldl-1.4.12.tar.gz) = 6b345b59c52039e914ea703ab88a08a8bba0a18bea91fcf4cf379ce678e5a97044f563c7b285cb656a764068756b4fae8321308e86813f86d04c462e9889e6e0
-Size (foldl-1.4.12.tar.gz) = 23210 bytes
-SHA1 (patch-foldl.cabal) = 0059620328444b2ea4d6361d8a26be9fe1b07262
+BLAKE2s (foldl-1.4.14.tar.gz) = a2d67020cba81301a7d638edd93f733c51378e3d9db467fd36968ac034035b99
+SHA512 (foldl-1.4.14.tar.gz) = 6720e92aacc3482a71f8efe9c99570716c6955e2b292f285e12eb07605cb3f3f061348aa1030e388c1ab1aad5bcda6950019f34d2a18f73df567aaeedf787b14
+Size (foldl-1.4.14.tar.gz) = 24350 bytes
