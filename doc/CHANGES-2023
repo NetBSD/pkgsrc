@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.689 2023/01/26 04:07:28 pho Exp $
+$NetBSD: CHANGES-2023,v 1.690 2023/01/26 07:58:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -883,3 +883,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/hs-unliftio to 0.2.23.0 [pho 2023-01-26]
 	Updated devel/hs-MonadRandom to 0.6 [pho 2023-01-26]
 	Updated devel/hs-ListLike to 4.7.8 [pho 2023-01-26]
+	Updated lang/nodejs to 19.5.0 [adam 2023-01-26]
+	Updated textproc/ugrep to 3.9.6 [adam 2023-01-26]
