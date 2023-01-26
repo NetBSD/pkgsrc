@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2022/08/22 10:28:48 wiz Exp $
+$NetBSD: distinfo,v 1.6 2023/01/26 04:07:15 pho Exp $
 
-BLAKE2s (ListLike-4.7.7.tar.gz) = 4bcfdddb9dd2d7a7a42de079f6b613257072b351bbbb28104f2ecd70bc31b2d2
-SHA512 (ListLike-4.7.7.tar.gz) = a09d1497e219c1703874a1be189a67874bb802a6cadec038eb8f167e04061cf23a3a666556f0f32af980062ceee6aeed4feb75d20990e55cb5f57be0262886f9
-Size (ListLike-4.7.7.tar.gz) = 32876 bytes
-SHA1 (patch-ListLike.cabal) = 1f23d8fd0764728d3a97158d56afbba609ab7993
+BLAKE2s (ListLike-4.7.8.tar.gz) = f9176f537bc5db7d5012e4b8dad7651e52d25c56dcd9592a5066b8319e5e4144
+SHA512 (ListLike-4.7.8.tar.gz) = 3a8235e35f287600e6011f99b32bbbdf20a3f0a84715e874e2bec6df91c7b3b6aacf34682a6816ea56033d4a31bc4eff2f16956ab91395b541da7275aefd04fd
+Size (ListLike-4.7.8.tar.gz) = 33011 bytes
