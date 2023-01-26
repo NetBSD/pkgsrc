@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2022/02/11 13:34:54 pho Exp $
+$NetBSD: distinfo,v 1.5 2023/01/26 09:16:51 pho Exp $
 
-BLAKE2s (hslua-module-path-1.0.1.tar.gz) = 3f082d06afdcf816621f70603c7b2aafc8524240bf9acc165788842bf962d38b
-SHA512 (hslua-module-path-1.0.1.tar.gz) = e8a07ff43df3a0a4ad7f9f511570280118440491297a8f2f11a90c7605d0d60c1a6251871ef33ffaa3c44983241a199187289955b5c93817d111a58611e483b0
-Size (hslua-module-path-1.0.1.tar.gz) = 7950 bytes
+BLAKE2s (hslua-module-path-1.0.3.tar.gz) = fc2d494d22e5da8aab50e08f46ad998546d573365293b8a410a6d46b489e01bc
+SHA512 (hslua-module-path-1.0.3.tar.gz) = 92c44f716fdbbe7ac76e2178efd627e1ffdd805c0669cca789a4d82438542ebabda0476b9384291a75d193ae74d9aa21e86da89125fa85e5d43e235171874d4b
+Size (hslua-module-path-1.0.3.tar.gz) = 7969 bytes
