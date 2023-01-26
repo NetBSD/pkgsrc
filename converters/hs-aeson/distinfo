@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2022/08/20 20:41:48 wiz Exp $
+$NetBSD: distinfo,v 1.10 2023/01/26 18:04:25 pho Exp $
 
-BLAKE2s (aeson-2.1.0.0.tar.gz) = a5de2f3d32e7ed3841cb02471ef638a43b14c7ce1e517b557cc7d38366a19c14
-SHA512 (aeson-2.1.0.0.tar.gz) = c73a1f783e838649145250ce0b1a0e7ff75fe513dfd4866182c6131c5c50a37529ad714cb94258b84b2f579a6ee81e7c29a1ce143328dd198ba690132861965d
-Size (aeson-2.1.0.0.tar.gz) = 300810 bytes
-SHA1 (patch-aeson.cabal) = 9ff953328655bb6ce1a2e72919e0dea3c3e62dab
+BLAKE2s (aeson-2.1.1.0.tar.gz) = 5c162ed2dcc917c9f4dcbd7ae810c3d98afcb4e3ab4df63fbff90dc4abe9a6bc
+SHA512 (aeson-2.1.1.0.tar.gz) = ffeb646bb12242786b1fd99b1572efc29f1d3ccfc28b31b7bb95d39cf25d83e4495e9aa162d3a6ec2ff2653ba38d98435c1368c908181865673d3d6e47d6e907
+Size (aeson-2.1.1.0.tar.gz) = 301830 bytes
