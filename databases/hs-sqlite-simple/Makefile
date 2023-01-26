@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2022/11/23 16:18:35 adam Exp $
+# $NetBSD: Makefile,v 1.7 2023/01/26 11:26:32 pho Exp $
 
-DISTNAME=	sqlite-simple-0.4.18.0
-PKGREVISION=	5
+DISTNAME=	sqlite-simple-0.4.18.2
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -12,8 +11,6 @@ LICENSE=	modified-bsd
 .include "../../devel/hs-blaze-builder/buildlink3.mk"
 .include "../../devel/hs-blaze-textual/buildlink3.mk"
 .include "../../databases/hs-direct-sqlite/buildlink3.mk"
-.include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/hs-Only/buildlink3.mk"
-.include "../../math/hs-semigroups/buildlink3.mk"
 .include "../../mk/haskell.mk"
 .include "../../mk/bsd.pkg.mk"
