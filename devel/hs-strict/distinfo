@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2022/02/12 05:20:12 pho Exp $
+$NetBSD: distinfo,v 1.5 2023/01/26 11:31:20 pho Exp $
 
 BLAKE2s (strict-0.4.0.1.tar.gz) = 7ef1ba9e72f031adf79a1cf20f17d34a65ff3e1d1aa94993b1d97b36b2a6220e
 SHA512 (strict-0.4.0.1.tar.gz) = e0c37396fa507ad4d03e46ce4a02ec5bacbd7add75ca551433671871d3e7dde0eb0c620182904d1bdeb7b80e1b311a70f36030cbeae63d8776059150fef30235
 Size (strict-0.4.0.1.tar.gz) = 12488 bytes
-SHA1 (patch-strict.cabal) = c3c7ac4f1bcd73a7bb8df3df23e44b10093b075a
