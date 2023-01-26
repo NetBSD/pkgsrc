@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.680 2023/01/26 02:08:26 jun Exp $
+$NetBSD: CHANGES-2023,v 1.681 2023/01/26 03:02:42 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -874,3 +874,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/libxml2 to 2.10.3nb1 [gutteridge 2023-01-26]
 	Updated textproc/py-libxml2 to 2.10.3nb1 [gutteridge 2023-01-26]
 	Updated emulators/nono to 0.5.0 [jun 2023-01-26]
+	Updated textproc/hs-lucid to 2.11.1 [pho 2023-01-26]
