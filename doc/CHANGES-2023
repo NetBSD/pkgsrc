@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.692 2023/01/26 08:47:04 pho Exp $
+$NetBSD: CHANGES-2023,v 1.693 2023/01/26 08:53:16 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -887,3 +887,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/ugrep to 3.9.6 [adam 2023-01-26]
 	Updated devel/hs-ghc-lib-parser-ex to 9.4.0.0 [pho 2023-01-26]
 	Updated devel/hs-constraints to 0.13.4 [pho 2023-01-26]
+	Updated databases/hs-direct-sqlite to 2.3.27 [pho 2023-01-26]
