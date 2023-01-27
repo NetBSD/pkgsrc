@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/01/27 14:49:32 pho Exp $
+
+BLAKE2s (skylighting-format-ansi-0.1.tar.gz) = 866f3d09788364d43a87d69f3c8f452ce2622ac09990bdb0cc2a334a54ee7821
+SHA512 (skylighting-format-ansi-0.1.tar.gz) = 387af200df34dbd83854ee268a5fa4c157d803b8f766a6da4491b8f19faef88e226027d3906a8c72cab764e53cac12637b1c7ba11b6bbb318aa0ae4dd4910d37
+Size (skylighting-format-ansi-0.1.tar.gz) = 5350 bytes
