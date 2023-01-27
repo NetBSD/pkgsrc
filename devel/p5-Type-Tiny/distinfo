@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2022/10/01 15:44:25 wen Exp $
+$NetBSD: distinfo,v 1.21 2023/01/27 00:06:27 wen Exp $
 
-BLAKE2s (Type-Tiny-2.000001.tar.gz) = aa280c041c94bf4439a7da0eb971041532ce33e0e5787f23a72dec1df9154531
-SHA512 (Type-Tiny-2.000001.tar.gz) = 0805b9de9728883a03078adfc0f499b66a4d715481ac0df7c6fdead2d898116730bf231e5bb7091b0a7096166a8aa8dde2040fa42357fd62904800d20453690e
-Size (Type-Tiny-2.000001.tar.gz) = 523805 bytes
+BLAKE2s (Type-Tiny-2.002001.tar.gz) = 93568bd020c1328ea82e2dbd6fccfbc7fb7b8534957f52ff781edb78daec430b
+SHA512 (Type-Tiny-2.002001.tar.gz) = a0c507e0dfbfdb0416a123fbe65a39603028e5d71dfdd2d66290309e6e4818c4d996dcfddccb898a9cc37dbbe19dafea342b246b28e2539475e30cef276e1a49
+Size (Type-Tiny-2.002001.tar.gz) = 529428 bytes
