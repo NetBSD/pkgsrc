@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.753 2023/01/27 10:00:18 micha Exp $
+$NetBSD: CHANGES-2023,v 1.754 2023/01/27 10:32:16 micha Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -948,3 +948,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/hs-shakespeare to 2.0.30 [pho 2023-01-27]
 	Updated x11/xcalc to 1.1.1nb1 [micha 2023-01-27]
 	Updated archivers/star to 1.7.0nb1 [micha 2023-01-27]
+	Added devel/sds version 2.2 [micha 2023-01-27]
