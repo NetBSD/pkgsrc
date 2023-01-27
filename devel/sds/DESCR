@@ -1,0 +1,7 @@
+SDS is a string library for C designed to augment the limited libc string
+handling functionalities by adding heap allocated strings that are:
+
+* Simpler to use.
+* Binary safe.
+* Computationally more efficient.
+* But yet... Compatible with normal C string functions.

@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2023/01/27 10:30:49 micha Exp $
+include/sds.h
+lib/libsds.la
+lib/pkgconfig/libsds-2.pc
+share/doc/sds/README.md
