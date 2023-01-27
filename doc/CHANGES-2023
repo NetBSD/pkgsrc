@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.764 2023/01/27 14:49:39 pho Exp $
+$NetBSD: CHANGES-2023,v 1.765 2023/01/27 14:49:45 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -959,3 +959,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/fourmolu to 0.10.1.0 [pho 2023-01-27]
 	Updated textproc/hs-skylighting-core to 0.13.2 [pho 2023-01-27]
 	Added textproc/hs-skylighting-format-ansi version 0.1 [pho 2023-01-27]
+	Updated textproc/libxml2 to 2.10.3nb2 [jperkin 2023-01-27]
