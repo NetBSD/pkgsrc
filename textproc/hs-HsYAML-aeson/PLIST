@@ -1,19 +1,19 @@
-@comment $NetBSD: PLIST,v 1.1 2022/02/16 10:21:09 pho Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/01/27 14:03:54 pho Exp $
 lib/HsYAML-aeson-${PKGVERSION}/${HS_VERSION}/package-description
 lib/HsYAML-aeson-${PKGVERSION}/${HS_VERSION}/package-id
-lib/${HS_PLATFORM}/${HS_PKGID}/Data/YAML/Aeson.dyn_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/YAML/Aeson.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/YAML/Aeson.hi
-lib/${HS_PLATFORM}/${HS_PKGID}/Data/YAML/Aeson.p_hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/YAML/Aeson.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
-lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-share/doc/${HS_PLATFORM}/HsYAML-aeson-${PKGVERSION}/LICENSE.GPLv2
-share/doc/${HS_PLATFORM}/HsYAML-aeson-${PKGVERSION}/html/Data-YAML-Aeson.html
-share/doc/${HS_PLATFORM}/HsYAML-aeson-${PKGVERSION}/html/HsYAML-aeson.haddock
-share/doc/${HS_PLATFORM}/HsYAML-aeson-${PKGVERSION}/html/doc-index.html
-share/doc/${HS_PLATFORM}/HsYAML-aeson-${PKGVERSION}/html/haddock-bundle.min.js
-share/doc/${HS_PLATFORM}/HsYAML-aeson-${PKGVERSION}/html/index.html
-share/doc/${HS_PLATFORM}/HsYAML-aeson-${PKGVERSION}/html/linuwial.css
-share/doc/${HS_PLATFORM}/HsYAML-aeson-${PKGVERSION}/html/meta.json
-share/doc/${HS_PLATFORM}/HsYAML-aeson-${PKGVERSION}/html/quick-jump.css
-share/doc/${HS_PLATFORM}/HsYAML-aeson-${PKGVERSION}/html/synopsis.png
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${PLIST.doc}share/doc/${HS_PLATFORM}/HsYAML-aeson-${PKGVERSION}/LICENSE.GPLv2
+${PLIST.doc}share/doc/${HS_PLATFORM}/HsYAML-aeson-${PKGVERSION}/html/Data-YAML-Aeson.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/HsYAML-aeson-${PKGVERSION}/html/HsYAML-aeson.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/HsYAML-aeson-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/HsYAML-aeson-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/HsYAML-aeson-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/HsYAML-aeson-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/HsYAML-aeson-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/HsYAML-aeson-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/HsYAML-aeson-${PKGVERSION}/html/synopsis.png
