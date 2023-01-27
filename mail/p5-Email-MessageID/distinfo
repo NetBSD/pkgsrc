@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2022/12/02 23:38:18 wen Exp $
+$NetBSD: distinfo,v 1.12 2023/01/27 00:17:14 wen Exp $
 
-BLAKE2s (Email-MessageID-1.407.tar.gz) = f7b32d44e07fb2a9e2d79720380c1e3d898b6c5755e1950d109cc89957fdfbb8
-SHA512 (Email-MessageID-1.407.tar.gz) = 3400a481fb934d5aa6a27c9dbce00b02951b0edf588c7ee567d97d78ec54531403b399a2c4b86732bcaab040f6e6703a2acd24805fffa6b8dd3cfa8dc3efca1c
-Size (Email-MessageID-1.407.tar.gz) = 17199 bytes
+BLAKE2s (Email-MessageID-1.408.tar.gz) = 99832fcf362be49210984c28d5c296fb142dad754361b34f97acbfea62276298
+SHA512 (Email-MessageID-1.408.tar.gz) = f2c5acda302a2db3766c3bc5f0ccd1c4a1adefd7c6ebc2ba5372821deff280e4680df0d3461c26acdf923fe20c12e0630b4efd4dedb9604c247f067ec7cfbcb9
+Size (Email-MessageID-1.408.tar.gz) = 17247 bytes
