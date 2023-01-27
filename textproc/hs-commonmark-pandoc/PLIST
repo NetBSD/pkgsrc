@@ -1,19 +1,19 @@
-@comment $NetBSD: PLIST,v 1.1 2021/04/25 04:07:07 pho Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/01/27 15:52:56 pho Exp $
 lib/commonmark-pandoc-${PKGVERSION}/${HS_VERSION}/package-description
 lib/commonmark-pandoc-${PKGVERSION}/${HS_VERSION}/package-id
-lib/${HS_PLATFORM}/${HS_PKGID}/Commonmark/Pandoc.dyn_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Commonmark/Pandoc.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Commonmark/Pandoc.hi
-lib/${HS_PLATFORM}/${HS_PKGID}/Commonmark/Pandoc.p_hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Commonmark/Pandoc.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
-lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-share/doc/${HS_PLATFORM}/commonmark-pandoc-${PKGVERSION}/LICENSE
-share/doc/${HS_PLATFORM}/commonmark-pandoc-${PKGVERSION}/html/Commonmark-Pandoc.html
-share/doc/${HS_PLATFORM}/commonmark-pandoc-${PKGVERSION}/html/commonmark-pandoc.haddock
-share/doc/${HS_PLATFORM}/commonmark-pandoc-${PKGVERSION}/html/doc-index.html
-share/doc/${HS_PLATFORM}/commonmark-pandoc-${PKGVERSION}/html/haddock-bundle.min.js
-share/doc/${HS_PLATFORM}/commonmark-pandoc-${PKGVERSION}/html/index.html
-share/doc/${HS_PLATFORM}/commonmark-pandoc-${PKGVERSION}/html/linuwial.css
-share/doc/${HS_PLATFORM}/commonmark-pandoc-${PKGVERSION}/html/meta.json
-share/doc/${HS_PLATFORM}/commonmark-pandoc-${PKGVERSION}/html/quick-jump.css
-share/doc/${HS_PLATFORM}/commonmark-pandoc-${PKGVERSION}/html/synopsis.png
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${PLIST.doc}share/doc/${HS_PLATFORM}/commonmark-pandoc-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/${HS_PLATFORM}/commonmark-pandoc-${PKGVERSION}/html/Commonmark-Pandoc.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/commonmark-pandoc-${PKGVERSION}/html/commonmark-pandoc.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/commonmark-pandoc-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/commonmark-pandoc-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/commonmark-pandoc-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/commonmark-pandoc-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/commonmark-pandoc-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/commonmark-pandoc-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/commonmark-pandoc-${PKGVERSION}/html/synopsis.png
