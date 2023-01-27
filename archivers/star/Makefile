@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.64 2023/01/25 16:18:42 micha Exp $
+# $NetBSD: Makefile,v 1.65 2023/01/27 09:58:36 micha Exp $
 
 DISTNAME=	2023-01-12
 PKGNAME=	star-1.7.0
+PKGREVISION=	1
 CATEGORIES=	archivers
 MASTER_SITES=	https://codeberg.org/schilytools/schilytools/archive/
 DIST_SUBDIR=	schilytools
@@ -13,6 +14,7 @@ LICENSE=	cddl-1.0
 
 .include "../../mk/bsd.prefs.mk"
 
+USE_LANGUAGES=	c99
 TOOL_DEPENDS+=	smake>=1.6nb2:../../devel/smake
 SMAKE=		MAKEFLAGS= smake
 MAKE_FLAGS+=	DESTDIR=${DESTDIR} INS_BASE=${PREFIX} DEFMANBASE=. MANDIR=${PKGMANDIR}
