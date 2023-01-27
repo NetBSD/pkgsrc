@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.745 2023/01/27 03:58:09 wen Exp $
+$NetBSD: CHANGES-2023,v 1.746 2023/01/27 04:00:49 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -940,3 +940,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/hs-warp to 3.3.23 [pho 2023-01-27]
 	Updated mail/p5-Email-MIME to 1.953 [wen 2023-01-27]
 	Updated mail/p5-Email-Simple to 2.218 [wen 2023-01-27]
+	Updated mail/p5-Mail-AuthenticationResults to 2.20230112 [wen 2023-01-27]
