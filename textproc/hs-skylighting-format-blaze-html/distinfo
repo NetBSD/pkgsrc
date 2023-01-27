@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/01/27 14:53:30 pho Exp $
+
+BLAKE2s (skylighting-format-blaze-html-0.1.1.tar.gz) = 6f51cdcae9ebde11b8bbeefe6f8406f832d8767e93493e5ba09a6c8ee87eddd9
+SHA512 (skylighting-format-blaze-html-0.1.1.tar.gz) = 489ac131d4aad545c854d6c7d1ca40d281e1393251ba8a73603e3faf8d4b6f5e3462e916d1bcfc82d4637c5c2405ad1820b4b5c1ed83fd801d277b6d66e624d7
+Size (skylighting-format-blaze-html-0.1.1.tar.gz) = 4769 bytes
