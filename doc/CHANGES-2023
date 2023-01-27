@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.750 2023/01/27 08:28:42 wen Exp $
+$NetBSD: CHANGES-2023,v 1.751 2023/01/27 08:50:28 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -945,3 +945,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated mail/p5-Sendmail-PMilter to 1.24 [wen 2023-01-27]
 	Updated mail/p5-User-Identity to 1.01 [wen 2023-01-27]
 	Updated math/p5-Math-Matrix to 0.94 [wen 2023-01-27]
+	Updated textproc/hs-shakespeare to 2.0.30 [pho 2023-01-27]
