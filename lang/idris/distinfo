@@ -1,10 +1,9 @@
-$NetBSD: distinfo,v 1.8 2022/08/29 14:07:37 wiz Exp $
+$NetBSD: distinfo,v 1.9 2023/01/27 03:06:29 pho Exp $
 
 BLAKE2s (idris-1.3.4.tar.gz) = 5ecd1bf45becb897e273e9890a3aa3293bdf591d85b17d3c67e4a7f5ab98ae95
 SHA512 (idris-1.3.4.tar.gz) = 362c0442e5a38fc67d24e4b33728bc251ee49d14be9faacbbe924da171ce462e613cf975f8c0756fc6c8254807e98adfccfc2a6966dc32813cbadb3f25521f7c
 Size (idris-1.3.4.tar.gz) = 1720240 bytes
 SHA1 (patch-Setup.hs) = 61ce92edfa6bbb8812c7888ce12fde979e85439b
-SHA1 (patch-idris.cabal) = cdf76fccf0ba8731fdebc125f97bfdb52d4bdf5c
 SHA1 (patch-rts_Makefile) = fe88269e184aa0d80e13723c9e4fe47aba68eb3e
 SHA1 (patch-rts_idris__net.c) = fcb226e8752c34661fc1a81fff11e41342c3e0f8
 SHA1 (patch-src_IRTS_System.hs) = 4451e03f4e9095fcac9e014eb7ad4b997d5e308d
