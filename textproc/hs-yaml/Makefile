@@ -1,12 +1,14 @@
-# $NetBSD: Makefile,v 1.10 2022/08/22 10:13:25 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2023/01/27 14:13:26 pho Exp $
 
-DISTNAME=	yaml-0.11.7.0
-PKGREVISION=	4
+DISTNAME=	yaml-0.11.8.0
 CATEGORIES=	textproc
 
 MAINTAINER=	szptvlfn@NetBSD.org
 COMMENT=	Support for parsing and rendering YAML document
 LICENSE=	modified-bsd
+
+HASKELL_UNRESTRICT_DEPENDENCIES+=	\
+	resourcet
 
 .include "../../converters/hs-aeson/buildlink3.mk"
 .include "../../textproc/hs-attoparsec/buildlink3.mk"
