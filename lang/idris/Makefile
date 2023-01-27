@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2022/09/07 06:50:53 pho Exp $
+# $NetBSD: Makefile,v 1.15 2023/01/27 03:06:29 pho Exp $
 
 DISTNAME=	idris-1.3.4
 PKGNAME=	${DISTNAME}
@@ -8,6 +8,19 @@ CATEGORIES=	lang
 MAINTAINER=	pho@cielonegro.org
 COMMENT=	Functional Programming Language with Dependent Types
 LICENSE=	modified-bsd
+
+# Idris 1 is no longer maintained actively. We should consider packaging
+# Idris 2, which is much harder to package due to the way how it's
+# built: https://github.com/idris-lang/Idris2
+HASKELL_UNRESTRICT_DEPENDENCIES+=	\
+	aeson	\
+	bytestring	\
+	fsnotify	\
+	libffi	\
+	network	\
+	optparse-applicative	\
+	text	\
+	vector
 
 CONFIGURE_ARGS+=	-f release
 
