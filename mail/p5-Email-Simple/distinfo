@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2021/10/26 10:54:13 nia Exp $
+$NetBSD: distinfo,v 1.20 2023/01/27 03:57:03 wen Exp $
 
-BLAKE2s (Email-Simple-2.216.tar.gz) = e5074cdd983a073f476a6d65eafb8d8cc772e6d25fb8336538fc8203a3878c00
-SHA512 (Email-Simple-2.216.tar.gz) = 2d729b6ad3cc493d27a8b3f775c046ca16dc53e7fe701fa78c87fbdeb350d3c9fe546ab0721504747f443f0f4e33d395b08b53374b32f89a842ef09a5b1dde70
-Size (Email-Simple-2.216.tar.gz) = 39695 bytes
+BLAKE2s (Email-Simple-2.218.tar.gz) = d08f2baaea300f650f2eb602791b2a05e782a8ec5487305b3c807165ec0823c5
+SHA512 (Email-Simple-2.218.tar.gz) = 402b24000fbcc16f5633062576c484d96a875cdf34a729a5897ee02b1f2195f3cff6475bc45bdd19c6a2b40f106cdcbefd097842e43b312caf0bfc9a05b583fc
+Size (Email-Simple-2.218.tar.gz) = 41777 bytes
