@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2022/12/02 23:31:07 wen Exp $
+$NetBSD: distinfo,v 1.8 2023/01/27 00:15:05 wen Exp $
 
-BLAKE2s (Email-Date-Format-1.006.tar.gz) = 37938a4e2da14a25fc11d7a43b6d5670abc09491c792c3932f7b34bcbcd0dd3c
-SHA512 (Email-Date-Format-1.006.tar.gz) = 07120fa73339808439d1616837412983057f3b7716f66dedb8e6710bb0aa852091b3325e8f9e016f6fbbc85478c538bf6395c27cfdf769d6a332f14b95d681bc
-Size (Email-Date-Format-1.006.tar.gz) = 16859 bytes
+BLAKE2s (Email-Date-Format-1.008.tar.gz) = a6a1354e70d01eea8fc3244a7141257fdba32002e92f9283ddfaa3bc8efd065a
+SHA512 (Email-Date-Format-1.008.tar.gz) = 24c97cd3b739c2f3c298b9ec168c4614bb71b13a0106f351990443cc86506e4e121f9c647bde6f08080a876f36adeb3fcef566d87ded9bddcbec6f3191f508be
+Size (Email-Date-Format-1.008.tar.gz) = 17284 bytes
