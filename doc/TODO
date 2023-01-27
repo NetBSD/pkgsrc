@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22572 2023/01/27 15:06:16 pho Exp $
+$NetBSD: TODO,v 1.22573 2023/01/27 15:23:47 pho Exp $
 
 Suggested new packages
 ======================
@@ -806,7 +806,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o howm-1.4.7
 	o hplip-3.22.2
 	o hs-citeproc-0.8.0.2
-	o hs-doctemplates-0.11
 	o hs-hie-bios-0.10.0
 	o hs-http-client-tls-0.3.6.1
 	o hs-pandoc-lua-marshal-0.1.7
