@@ -1,12 +1,14 @@
-# $NetBSD: Makefile,v 1.2 2022/02/26 03:58:17 pho Exp $
+# $NetBSD: Makefile,v 1.3 2023/01/27 02:31:23 pho Exp $
 
-DISTNAME=	invariant-0.5.5
-PKGREVISION=	1
+DISTNAME=	invariant-0.6
 CATEGORIES=	math
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Haskell98 invariant functors
 LICENSE=	2-clause-bsd
+
+HASKELL_UNRESTRICT_DEPENDENCIES+=	\
+	template-haskell
 
 .include "../../math/hs-bifunctors/buildlink3.mk"
 .include "../../math/hs-comonad/buildlink3.mk"
