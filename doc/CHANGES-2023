@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.758 2023/01/27 13:47:52 pho Exp $
+$NetBSD: CHANGES-2023,v 1.759 2023/01/27 13:50:54 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -953,3 +953,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/hs-turtle to 1.6.1 [pho 2023-01-27]
 	Updated devel/hs-monad-logger to 0.3.39 [pho 2023-01-27]
 	Updated devel/hs-list-t to 1.0.5.6 [pho 2023-01-27]
+	Updated math/hs-free to 5.1.10 [pho 2023-01-27]
