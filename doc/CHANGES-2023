@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.737 2023/01/27 00:18:07 wen Exp $
+$NetBSD: CHANGES-2023,v 1.738 2023/01/27 00:20:56 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -932,3 +932,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated mail/p5-Email-Address to 1.913 [wen 2023-01-27]
 	Updated mail/p5-Email-Date-Format to 1.008 [wen 2023-01-27]
 	Updated mail/p5-Email-MessageID to 1.408 [wen 2023-01-27]
+	Updated mail/p5-Email-MIME-ContentType to 1.028 [wen 2023-01-27]
