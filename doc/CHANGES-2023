@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.778 2023/01/27 16:34:41 adam Exp $
+$NetBSD: CHANGES-2023,v 1.779 2023/01/27 23:23:52 thorpej Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -974,3 +974,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/hs-adjunctions to 4.4.2 [pho 2023-01-27]
 	Updated games/wesnoth to 1.16.8 [adam 2023-01-27]
 	Updated archivers/unrar to 6.2.5 [adam 2023-01-27]
+	Updated cross/z80asm to 1.8nb1 [thorpej 2023-01-27]
