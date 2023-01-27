@@ -1,20 +1,20 @@
-@comment $NetBSD: PLIST,v 1.2 2021/04/23 08:50:40 pho Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/01/27 16:06:25 pho Exp $
 bin/aeson-pretty
 lib/aeson-pretty-${PKGVERSION}/${HS_VERSION}/package-description
 lib/aeson-pretty-${PKGVERSION}/${HS_VERSION}/package-id
-lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/Encode/Pretty.dyn_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/Encode/Pretty.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/Encode/Pretty.hi
-lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/Encode/Pretty.p_hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/Encode/Pretty.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
-lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-share/doc/${HS_PLATFORM}/aeson-pretty-${PKGVERSION}/LICENSE
-share/doc/${HS_PLATFORM}/aeson-pretty-${PKGVERSION}/html/Data-Aeson-Encode-Pretty.html
-share/doc/${HS_PLATFORM}/aeson-pretty-${PKGVERSION}/html/aeson-pretty.haddock
-share/doc/${HS_PLATFORM}/aeson-pretty-${PKGVERSION}/html/doc-index.html
-share/doc/${HS_PLATFORM}/aeson-pretty-${PKGVERSION}/html/haddock-bundle.min.js
-share/doc/${HS_PLATFORM}/aeson-pretty-${PKGVERSION}/html/index.html
-share/doc/${HS_PLATFORM}/aeson-pretty-${PKGVERSION}/html/linuwial.css
-share/doc/${HS_PLATFORM}/aeson-pretty-${PKGVERSION}/html/meta.json
-share/doc/${HS_PLATFORM}/aeson-pretty-${PKGVERSION}/html/quick-jump.css
-share/doc/${HS_PLATFORM}/aeson-pretty-${PKGVERSION}/html/synopsis.png
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${PLIST.doc}share/doc/${HS_PLATFORM}/aeson-pretty-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/${HS_PLATFORM}/aeson-pretty-${PKGVERSION}/html/Data-Aeson-Encode-Pretty.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/aeson-pretty-${PKGVERSION}/html/aeson-pretty.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/aeson-pretty-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/aeson-pretty-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/aeson-pretty-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/aeson-pretty-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/aeson-pretty-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/aeson-pretty-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/aeson-pretty-${PKGVERSION}/html/synopsis.png

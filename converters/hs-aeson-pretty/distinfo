@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2022/08/23 14:10:52 wiz Exp $
+$NetBSD: distinfo,v 1.6 2023/01/27 16:06:25 pho Exp $
 
 BLAKE2s (aeson-pretty-0.8.9.tar.gz) = d5e3494741f0dd904edf6bd0ceffe869c2154ec9923f51bbf5de4f6a203d3976
 SHA512 (aeson-pretty-0.8.9.tar.gz) = 00c99799cbe9e268109116f909ea0d9ef2708e578ec363ba5455b43d76d1f89bc9820dcbd3a63a1fb300460d97a71105f028f4ad9853b56ce16a097826b1d3d5
 Size (aeson-pretty-0.8.9.tar.gz) = 5802 bytes
-SHA1 (patch-aeson-pretty.cabal) = b80e1ff80ed7c29da1cc194093506cb26c91f734
