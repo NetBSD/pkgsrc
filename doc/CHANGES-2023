@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.767 2023/01/27 14:53:36 pho Exp $
+$NetBSD: CHANGES-2023,v 1.768 2023/01/27 14:57:32 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -962,3 +962,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/libxml2 to 2.10.3nb2 [jperkin 2023-01-27]
 	Updated textproc/py-libxml2 to 2.10.3nb2 [jperkin 2023-01-27]
 	Added textproc/hs-skylighting-format-blaze-html version 0.1.1 [pho 2023-01-27]
+	Added textproc/hs-skylighting-format-context version 0.1.0.1 [pho 2023-01-27]
