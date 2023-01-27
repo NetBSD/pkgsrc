@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2022/08/20 08:08:17 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2023/01/27 13:47:44 pho Exp $
 
-DISTNAME=	list-t-1.0.5.1
-PKGREVISION=	2
+DISTNAME=	list-t-1.0.5.6
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -12,7 +11,6 @@ LICENSE=	mit
 .include "../../devel/hs-logict/buildlink3.mk"
 .include "../../devel/hs-mmorph/buildlink3.mk"
 .include "../../devel/hs-monad-control/buildlink3.mk"
-.include "../../math/hs-semigroups/buildlink3.mk"
 .include "../../devel/hs-transformers-base/buildlink3.mk"
 .include "../../mk/haskell.mk"
 .include "../../mk/bsd.pkg.mk"
