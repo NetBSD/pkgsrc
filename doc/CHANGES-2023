@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.740 2023/01/27 02:02:35 pho Exp $
+$NetBSD: CHANGES-2023,v 1.741 2023/01/27 02:31:31 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -935,3 +935,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated mail/p5-Email-MIME-ContentType to 1.028 [wen 2023-01-27]
 	Updated mail/p5-Email-MIME-Encodings to 1.317 [wen 2023-01-27]
 	Updated security/hs-tls to 1.6.0 [pho 2023-01-27]
+	Updated math/hs-invariant to 0.6 [pho 2023-01-27]
