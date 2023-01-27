@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.755 2023/01/27 11:40:53 abs Exp $
+$NetBSD: CHANGES-2023,v 1.756 2023/01/27 13:39:08 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -950,3 +950,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/xcalc to 1.1.1nb1 [micha 2023-01-27]
 	Updated archivers/star to 1.7.0nb1 [micha 2023-01-27]
 	Added devel/sds version 2.2 [micha 2023-01-27]
+	Updated devel/hs-turtle to 1.6.1 [pho 2023-01-27]
