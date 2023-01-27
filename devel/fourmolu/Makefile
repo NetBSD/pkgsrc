@@ -1,13 +1,17 @@
-# $NetBSD: Makefile,v 1.5 2022/09/07 06:50:45 pho Exp $
+# $NetBSD: Makefile,v 1.6 2023/01/27 14:35:00 pho Exp $
 
-DISTNAME=	fourmolu-0.5.0.1
+DISTNAME=	fourmolu-0.10.1.0
 PKGNAME=	${DISTNAME}
-PKGREVISION=	4
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Formatter for Haskell source code
 LICENSE=	modified-bsd
+
+# Do not parse the default fixity information via TemplateHaskell. It
+# *might* produce a faster code but takes ridiculously long to compile and
+# uses more than 3 GiB of memory.
+CONFIGURE_ARGS+=	-f-fixity-th
 
 # fourmolu is built with optparse-applicative, and can generate shell
 # completion scripts automatically.
@@ -19,9 +23,12 @@ LICENSE=	modified-bsd
 .include "../../textproc/hs-Diff/buildlink3.mk"
 .include "../../devel/hs-dlist/buildlink3.mk"
 .include "../../devel/hs-ghc-lib-parser/buildlink3.mk"
-.include "../../textproc/hs-HsYAML/buildlink3.mk"
-.include "../../textproc/hs-HsYAML-aeson/buildlink3.mk"
+.include "../../textproc/hs-megaparsec/buildlink3.mk"
+.include "../../devel/hs-memotrie/buildlink3.mk"
 .include "../../devel/hs-syb/buildlink3.mk"
+.include "../../devel/hs-th-lift-instances/buildlink3.mk"
+.include "../../textproc/hs-yaml/buildlink3.mk"
+.include "../../devel/hs-file-embed/buildlink3.mk" # Needed because of -f-fixity-th
 
 # exe:fourmolu
 .include "../../devel/hs-gitrev/buildlink3.mk"
