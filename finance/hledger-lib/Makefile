@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2023/01/24 01:13:10 riastradh Exp $
+# $NetBSD: Makefile,v 1.12 2023/01/27 17:30:19 pho Exp $
 
 DISTNAME=	hledger-lib-1.28
 PKGNAME=	${DISTNAME}
@@ -11,7 +11,6 @@ LICENSE=	gnu-gpl-v3
 .include "../../converters/hs-aeson/buildlink3.mk"
 .include "../../converters/hs-aeson-pretty/buildlink3.mk"
 .include "../../devel/hs-ansi-terminal/buildlink3.mk"
-.include "../../devel/hs-base-compat-batteries/buildlink3.mk"
 .include "../../textproc/hs-blaze-markup/buildlink3.mk"
 .include "../../devel/hs-call-stack/buildlink3.mk"
 .include "../../textproc/hs-cassava/buildlink3.mk"
@@ -27,7 +26,6 @@ LICENSE=	gnu-gpl-v3
 .include "../../textproc/hs-megaparsec/buildlink3.mk"
 .include "../../devel/hs-microlens/buildlink3.mk"
 .include "../../devel/hs-microlens-th/buildlink3.mk"
-.include "../../time/hs-old-time/buildlink3.mk"
 .include "../../devel/hs-parser-combinators/buildlink3.mk"
 .include "../../devel/hs-pretty-simple/buildlink3.mk"
 .include "../../textproc/hs-regex-tdfa/buildlink3.mk"
