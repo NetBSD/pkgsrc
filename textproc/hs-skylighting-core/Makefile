@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2022/09/07 06:50:51 pho Exp $
+# $NetBSD: Makefile,v 1.11 2023/01/27 14:44:11 pho Exp $
 
-DISTNAME=	skylighting-core-0.12.2
-PKGREVISION=	5
+DISTNAME=	skylighting-core-0.13.2
 CATEGORIES=	textproc
 
 MAINTAINER=	pho@cielonegro.org
@@ -9,10 +8,8 @@ COMMENT=	Syntax highlighting library core
 LICENSE=	modified-bsd
 
 .include "../../converters/hs-aeson/buildlink3.mk"
-.include "../../devel/hs-ansi-terminal/buildlink3.mk"
 .include "../../textproc/hs-attoparsec/buildlink3.mk"
 .include "../../converters/hs-base64-bytestring/buildlink3.mk"
-.include "../../textproc/hs-blaze-html/buildlink3.mk"
 .include "../../textproc/hs-case-insensitive/buildlink3.mk"
 .include "../../devel/hs-colour/buildlink3.mk"
 .include "../../devel/hs-safe/buildlink3.mk"
