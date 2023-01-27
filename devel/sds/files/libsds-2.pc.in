@@ -1,0 +1,12 @@
+prefix=@prefix@
+exec_prefix=${prefix}
+includedir=${prefix}/include
+libdir=${prefix}/lib
+bindir=${prefix}/bin
+
+Name: SDS
+Description: Simple dynamic strings library for C
+URL: https://github.com/jcorporation/sds/
+Version: @release@
+Cflags: -I${includedir}
+Libs: -L${libdir} -lsds
