@@ -1,0 +1,79 @@
+$NetBSD: patch-app-defaults_XCalc-color,v 1.1 2023/01/27 10:04:55 micha Exp $
+
+Key color highlighting (for TI-30 mode) still incorrect.
+https://gitlab.freedesktop.org/xorg/app/xcalc/-/merge_requests/8
+
+--- app-defaults/XCalc-color.orig	2022-04-03 17:39:09.000000000 +0000
++++ app-defaults/XCalc-color
+@@ -28,21 +28,6 @@ XCalc*ti.Command.borderColor:		rgb:8/9/a
+ XCalc*ti.Command.background:		rgb:c/d/e
+ XCalc*ti.Command.foreground:		gray5
+ 
+-XCalc*ti.button20.foreground:		gray5
+-XCalc*ti.button20.background:		rgb:e/d/c
+-XCalc*ti.button20.displayList:		foreground rgb:a/9/8;segments 8,-4,-9,-4,-4,-9,-4,8;draw-arc -14,-14,-4,-4,270,90
+-XCalc*ti.button20.borderColor:		rgb:9/8/7
+-
+-XCalc*ti.button25.foreground:		gray5
+-XCalc*ti.button25.background:		rgb:e/d/c
+-XCalc*ti.button25.displayList:		foreground rgb:a/9/8;segments 8,-4,-9,-4,-4,-9,-4,8;draw-arc -14,-14,-4,-4,270,90
+-XCalc*ti.button25.borderColor:		rgb:9/8/7
+-
+-XCalc*ti.button30.foreground:		gray5
+-XCalc*ti.button30.background:		rgb:e/d/c
+-XCalc*ti.button30.displayList:		foreground rgb:a/9/8;segments 8,-4,-9,-4,-4,-9,-4,8;draw-arc -14,-14,-4,-4,270,90
+-XCalc*ti.button30.borderColor:		rgb:9/8/7
+-
+ XCalc*ti.button35.foreground:		gray5
+ XCalc*ti.button35.background:		rgb:e/d/c
+ XCalc*ti.button35.displayList:		foreground rgb:a/9/8;segments 8,-4,-9,-4,-4,-9,-4,8;draw-arc -14,-14,-4,-4,270,90
+@@ -53,8 +38,49 @@ XCalc*ti.button40.background:		rgb:e/d/c
+ XCalc*ti.button40.displayList:		foreground rgb:a/9/8;segments 8,-4,-9,-4,-4,-9,-4,8;draw-arc -14,-14,-4,-4,270,90
+ XCalc*ti.button40.borderColor:		rgb:9/8/7
+ 
++XCalc*ti.button45.foreground:		gray5
++XCalc*ti.button45.background:		rgb:e/d/c
++XCalc*ti.button45.displayList:		foreground rgb:a/9/8;segments 8,-4,-9,-4,-4,-9,-4,8;draw-arc -14,-14,-4,-4,270,90
++XCalc*ti.button45.borderColor:		rgb:9/8/7
++
++XCalc*ti.button50.foreground:		gray5
++XCalc*ti.button50.background:		rgb:e/d/c
++XCalc*ti.button50.displayList:		foreground rgb:a/9/8;segments 8,-4,-9,-4,-4,-9,-4,8;draw-arc -14,-14,-4,-4,270,90
++XCalc*ti.button50.borderColor:		rgb:9/8/7
++
++XCalc*ti.button55.foreground:		gray5
++XCalc*ti.button55.background:		rgb:e/d/c
++XCalc*ti.button55.displayList:		foreground rgb:a/9/8;segments 8,-4,-9,-4,-4,-9,-4,8;draw-arc -14,-14,-4,-4,270,90
++XCalc*ti.button55.borderColor:		rgb:9/8/7
++
+ 
+ ! "Number" keys.
++! "D"
++XCalc*ti.button27.background:		gray95
++XCalc*ti.button27.displayList:		foreground gray75;segments 8,-4,-9,-4,-4,-9,-4,8;draw-arc -14,-14,-4,-4,270,90
++XCalc*ti.button27.borderColor:		gray65
++! "E"
++XCalc*ti.button28.background:		gray95
++XCalc*ti.button28.displayList:		foreground gray75;segments 8,-4,-9,-4,-4,-9,-4,8;draw-arc -14,-14,-4,-4,270,90
++XCalc*ti.button28.borderColor:		gray65
++! "F"
++XCalc*ti.button29.background:		gray95
++XCalc*ti.button29.displayList:		foreground gray75;segments 8,-4,-9,-4,-4,-9,-4,8;draw-arc -14,-14,-4,-4,270,90
++XCalc*ti.button29.borderColor:		gray65
++
++! "A"
++XCalc*ti.button32.background:		gray95
++XCalc*ti.button32.displayList:		foreground gray75;segments 8,-4,-9,-4,-4,-9,-4,8;draw-arc -14,-14,-4,-4,270,90
++XCalc*ti.button32.borderColor:		gray65
++! "B"
++XCalc*ti.button33.background:		gray95
++XCalc*ti.button33.displayList:		foreground gray75;segments 8,-4,-9,-4,-4,-9,-4,8;draw-arc -14,-14,-4,-4,270,90
++XCalc*ti.button33.borderColor:		gray65
++! "C"
++XCalc*ti.button34.background:		gray95
++XCalc*ti.button34.displayList:		foreground gray75;segments 8,-4,-9,-4,-4,-9,-4,8;draw-arc -14,-14,-4,-4,270,90
++XCalc*ti.button34.borderColor:		gray65
++
+ ! "7"
+ XCalc*ti.button37.background:		gray95
+ XCalc*ti.button37.displayList:		foreground gray75;segments 8,-4,-9,-4,-4,-9,-4,8;draw-arc -14,-14,-4,-4,270,90
