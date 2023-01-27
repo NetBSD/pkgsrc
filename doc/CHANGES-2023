@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.733 2023/01/27 00:03:36 wen Exp $
+$NetBSD: CHANGES-2023,v 1.734 2023/01/27 00:07:21 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -928,3 +928,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/p5-Moose to 2.2203 [wen 2023-01-26]
 	Updated devel/p5-MooseX-Types-Perl to 0.101344 [wen 2023-01-26]
 	Updated devel/p5-Exporter-Tiny to 1.006000 [wen 2023-01-27]
+	Updated devel/p5-Type-Tiny to 2.002001 [wen 2023-01-27]
