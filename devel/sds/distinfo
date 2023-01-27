@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2023/01/27 10:30:49 micha Exp $
+
+BLAKE2s (sds-2.2.zip) = 199d2a4a6437bc0ba8e86cd99bce86337e90cf20cc202f0b74e81ebbf0639bd2
+SHA512 (sds-2.2.zip) = d72c7de87b7fc3030a1525b8905cd04168bc910a4109d31faf47d928be9cbb80264d6fae38c5a05c8b22926ee2b3faed641fb330b6f3021cd671274149384ce1
+Size (sds-2.2.zip) = 33055 bytes
+SHA1 (patch-Makefile) = faaf0b298c874c3b67a3d8e59228502538227cb2
