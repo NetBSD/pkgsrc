@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2023/01/20 21:43:56 thorpej Exp $
+# $NetBSD: Makefile,v 1.2 2023/01/27 23:22:31 thorpej Exp $
 
 DISTNAME=	z80asm-1.8
 CATEGORIES=	cross
 MASTER_SITES=	https://download.savannah.nongnu.org/releases/z80asm/
+
+PKGREVISION=	1
 
 MAINTAINER=	thorpej@NetBSD.org
 HOMEPAGE=	https://savannah.nongnu.org/projects/z80asm/
