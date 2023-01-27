@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/02/24 01:22:47 pho Exp $
+$NetBSD: distinfo,v 1.2 2023/01/27 13:39:00 pho Exp $
 
-BLAKE2s (turtle-1.5.24.tar.gz) = b40769a6fbac8afddacf1b1e687615b818aff71d906babbc3450088551286c45
-SHA512 (turtle-1.5.24.tar.gz) = b1a3b9a8a66eaaaadc59c8a20ce688e810bdc6cc3021295562e9db376fe9fb15979b6b981c46099850c7a6ba65a7616377e2528624e466ae6dfc5777421e59a5
-Size (turtle-1.5.24.tar.gz) = 57409 bytes
+BLAKE2s (turtle-1.6.1.tar.gz) = e0210066efbecb1f617f56d06bcf1620edf7f124a640b8c567a55d1fdbf7c494
+SHA512 (turtle-1.6.1.tar.gz) = 94575c10c084ad8173e63bcb304491b03158fada47d32976000a5dcb34ddca1141762765318d88860e94691f68a16c643020785dbb11a764aae2fb6c319fbc97
+Size (turtle-1.6.1.tar.gz) = 61920 bytes
