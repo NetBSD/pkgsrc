@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2022/02/12 06:59:05 pho Exp $
+$NetBSD: distinfo,v 1.5 2023/01/27 01:50:35 pho Exp $
 
 BLAKE2s (x509-system-1.6.7.tar.gz) = 36f3ba919e250a270311cc23f34e1cb95e34910a508c7444c6f9d598ba2d0237
 SHA512 (x509-system-1.6.7.tar.gz) = 8414d8f6d0e704419ccdd6832522480022bb15ac225b6bd9cf5f2d8fffb7f979d414bcb5c465f4d73d9eef40210ef9aa5da51aea9eed2ce245d2b44daf2c415e
 Size (x509-system-1.6.7.tar.gz) = 3438 bytes
+SHA1 (patch-System_X509_Unix.hs) = d63a6c8372b7a0652a5451710651a5c272a45a4c
