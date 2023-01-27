@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.771 2023/01/27 15:23:47 pho Exp $
+$NetBSD: CHANGES-2023,v 1.772 2023/01/27 15:51:14 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -966,3 +966,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added textproc/hs-skylighting-format-latex version 0.1 [pho 2023-01-27]
 	Updated textproc/hs-skylighting to 0.13.2 [pho 2023-01-27]
 	Updated textproc/hs-doctemplates to 0.11 [pho 2023-01-27]
+	Updated textproc/hs-pandoc-types to 1.23 [pho 2023-01-27]
