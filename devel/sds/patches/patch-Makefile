@@ -1,0 +1,58 @@
+$NetBSD: patch-Makefile,v 1.1 2023/01/27 10:30:49 micha Exp $
+
+* Add targets for object file, library, test and install.
+* Honor CPPFLAGS, CFLAGS and LDFLAGS
+* Use libtool
+
+--- Makefile.orig	2021-07-14 10:28:45.000000000 +0000
++++ Makefile
+@@ -1,8 +1,44 @@
+-all: sds-test
++# Switch make into POSIX conformant mode (must be the first non-comment line)
++.POSIX:
+ 
+-sds-test: sds.c sds.h testhelp.h
+-	$(CC) -o sds-test sds.c -Wall -std=c99 -pedantic -O2 -DSDS_TEST_MAIN
+-	@echo ">>> Type ./sds-test to run the sds.c unit tests."
++# Clear suffix list for inference rules
++.SUFFIXES:
++
++# ABI version for shared library
++MAJOR=  2
++MINOR=  2
++PATCH=  0
++
++all: libsds.la
++
++test: sds-test
++	./sds-test
++
++install: libsds.la
++	@set +u ; test "x$$PREFIX" != "x" || \
++            ! echo "Error: PREFIX not defined in environment"
++	install -d -m 755 "${DESTDIR}${PREFIX}/lib"
++	libtool --mode=install \
++            install -m 755 libsds.la "${DESTDIR}${PREFIX}/lib"
++	install -d -m 755 "${DESTDIR}${PREFIX}/include"
++	install -m 644 sds.h "${DESTDIR}${PREFIX}/include"
++	install -d -m 755 "${DESTDIR}${PREFIX}/share/doc/sds"
++	install -m 644 README.md "${DESTDIR}${PREFIX}/share/doc/sds"
+ 
+ clean:
+-	rm -f sds-test
++	rm -f sds-test sds.o sds.lo libsds.la
++	rm -rf ./.libs
++
++sds.lo: sds.c sds.h
++	libtool --tag=CC --mode=compile \
++            $(CC) $(CPPFLAGS) $(CFLAGS) -c -Wall -std=c99 -pedantic -O2 sds.c
++
++libsds.la: sds.lo
++	libtool --tag=CC --mode=link \
++            $(CC) $(LDFLAGS) -shared -o libsds.la sds.lo \
++            -version-number ${MAJOR}:${MINOR}:${PATCH} \
++            -rpath ${PREFIX}/lib
++
++sds-test: sds.c sds.h testhelp.h
++	$(CC) $(CPPFLAGS) $(CFLAGS) -Wall -std=c99 -pedantic -O2 \
++            -DSDS_TEST_MAIN -o sds-test sds.c
