@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.776 2023/01/27 16:16:24 pho Exp $
+$NetBSD: CHANGES-2023,v 1.777 2023/01/27 16:19:25 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -971,3 +971,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added lang/hs-hslua-list version 1.1.0.1 [pho 2023-01-27]
 	Updated devel/hs-pandoc-lua-marshal to 0.2.0 [pho 2023-01-27]
 	Updated www/hs-warp-tls to 3.3.4 [pho 2023-01-27]
+	Updated math/hs-adjunctions to 4.4.2 [pho 2023-01-27]
