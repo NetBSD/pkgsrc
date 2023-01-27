@@ -1,9 +1,12 @@
-$NetBSD: patch-expressions.c,v 1.1 2023/01/20 21:43:56 thorpej Exp $
+$NetBSD: patch-expressions.c,v 1.2 2023/01/27 23:22:31 thorpej Exp $
 
-Cast arguments to ctype(3) functions to (unsigned char).
+- Cast arguments to ctype(3) functions to (unsigned char).
+- Fix a bug in "?label" expressions that caused the expressions testing
+  for the existence of the label that doesn't exist (which is what the
+  expression is for) to always fail with an "non-existent label" error.
 
 --- expressions.c.orig	2009-04-11 08:33:07.000000000 +0000
-+++ expressions.c	2023-01-20 20:44:01.470323352 +0000
++++ expressions.c	2023-01-27 23:10:00.636129136 +0000
 @@ -48,7 +48,7 @@ rd_number (const char **p, const char **
  	     "(string=%s).\n", stack[sp].line, addr, base, *p);
    num[base] = '\0';
@@ -42,3 +45,11 @@ Cast arguments to ctype(3) functions to (unsigned char).
      {
      }
    s2 = c - *p;
+@@ -402,6 +402,7 @@ rd_value (const char **p, int *valid, in
+     case '@':
+       return not ^ (sign * rd_otherbasenumber (p, valid, print_errors));
+     case '?':
++      ++*p;
+       rd_label (p, &exist, NULL, level, 0);
+       return not ^ (sign * exist);
+     case '&':
