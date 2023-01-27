@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/02/26 03:57:55 pho Exp $
+# $NetBSD: Makefile,v 1.3 2023/01/27 14:01:26 pho Exp $
 
 DISTNAME=	generic-lens-2.2.1.0
 PKGREVISION=	1
@@ -7,6 +7,9 @@ CATEGORIES=	devel
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Generically derive traversals, lenses and prisms
 LICENSE=	modified-bsd
+
+HASKELL_UNRESTRICT_DEPENDENCIES+=	\
+	text
 
 .include "../../devel/hs-generic-lens-core/buildlink3.mk"
 .include "../../math/hs-profunctors/buildlink3.mk"
