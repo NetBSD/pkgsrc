@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2023/01/24 01:13:10 riastradh Exp $
+# $NetBSD: Makefile,v 1.13 2023/01/27 17:44:38 pho Exp $
 
 DISTNAME=	hledger-1.28
 PKGNAME=	${DISTNAME}
@@ -13,9 +13,14 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/shell-completion/hledger-completion.bash \
 		${DESTDIR}${PREFIX}/share/bash-completion/completions/hledger
 
+do-test:
+	${RUN}${PKGSRC_SETENV} \
+		LD_LIBRARY_PATH=${WRKSRC:Q}/dist/build \
+		DYLD_LIBRARY_PATH=${WRKSRC:Q}/dist/build \
+		${WRKSRC:Q}/dist/build/hledger/hledger test
+
 .include "../../converters/hs-aeson/buildlink3.mk"
 .include "../../devel/hs-ansi-terminal/buildlink3.mk"
-.include "../../devel/hs-base-compat-batteries/buildlink3.mk"
 .include "../../devel/hs-cmdargs/buildlink3.mk"
 .include "../../devel/hs-data-default/buildlink3.mk"
 .include "../../finance/hs-Decimal/buildlink3.mk"
@@ -27,7 +32,7 @@ post-install:
 .include "../../textproc/hs-lucid/buildlink3.mk"
 .include "../../math/hs-math-functions/buildlink3.mk"
 .include "../../textproc/hs-megaparsec/buildlink3.mk"
-.include "../../time/hs-old-time/buildlink3.mk"
+.include "../../devel/hs-microlens/buildlink3.mk"
 .include "../../textproc/hs-regex-tdfa/buildlink3.mk"
 .include "../../devel/hs-safe/buildlink3.mk"
 .include "../../textproc/hs-shakespeare/buildlink3.mk"
@@ -41,7 +46,6 @@ post-install:
 .include "../../devel/hs-utility-ht/buildlink3.mk"
 .include "../../devel/hs-wizards/buildlink3.mk"
 .include "../../mk/haskell.mk"
-.include "../../textproc/hs-Diff/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
 
 # XXX Kludge: We need to run this in a UTF-8 locale; otherwise GHC is
