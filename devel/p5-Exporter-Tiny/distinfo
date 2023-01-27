@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2022/10/01 15:24:12 wen Exp $
+$NetBSD: distinfo,v 1.13 2023/01/27 00:02:39 wen Exp $
 
-BLAKE2s (Exporter-Tiny-1.004003.tar.gz) = d02255872b4b37749eebc96b80c597260f335625dbd45214bd4476b35214cd7f
-SHA512 (Exporter-Tiny-1.004003.tar.gz) = 5a1f257abcd7bdcff7a79b35893a059e2cd354bace37003e0660be459d5cf8eec6f4196eb58c1b418e985865e044ce5b9f93eb98fd1f34e5fe73dbcb617a6c99
-Size (Exporter-Tiny-1.004003.tar.gz) = 91089 bytes
+BLAKE2s (Exporter-Tiny-1.006000.tar.gz) = fde9ed2121a0a8a26859bd4dce4b479e0d8a4d445e02f6279cb1b59d3d7b1f72
+SHA512 (Exporter-Tiny-1.006000.tar.gz) = bc43a7c4cd5bf3aacf95043bfe178770186b82fd7b935684c86bab78954c693bbc8dc35285a9670e3f7888e6a9d73731f1dcc3b21a05493509ee98ee2f8414f3
+Size (Exporter-Tiny-1.006000.tar.gz) = 91793 bytes
