@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.743 2023/01/27 02:45:28 pho Exp $
+$NetBSD: CHANGES-2023,v 1.744 2023/01/27 03:54:44 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -938,3 +938,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/hs-invariant to 0.6 [pho 2023-01-27]
 	Added net/hs-recv version 0.0.0 [pho 2023-01-27]
 	Updated www/hs-warp to 3.3.23 [pho 2023-01-27]
+	Updated mail/p5-Email-MIME to 1.953 [wen 2023-01-27]
