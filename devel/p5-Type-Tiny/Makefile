@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2022/10/01 15:44:25 wen Exp $
+# $NetBSD: Makefile,v 1.27 2023/01/27 00:06:27 wen Exp $
 
-DISTNAME=	Type-Tiny-2.000001
+DISTNAME=	Type-Tiny-2.002001
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/T/TO/TOBYINK/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://metacpan.org/release/Type-Tiny
 COMMENT=	Tiny, yet Moo(se)-compatible type constraint
 LICENSE=	gnu-gpl-v1 OR artistic
 
-DEPENDS+=	p5-Exporter-Tiny>=1.004001:../../devel/p5-Exporter-Tiny
+DEPENDS+=	p5-Exporter-Tiny>=1.006000:../../devel/p5-Exporter-Tiny
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Type/Tiny/.packlist
