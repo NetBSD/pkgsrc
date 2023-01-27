@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:55:53 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/01/27 04:12:37 wen Exp $
 
-BLAKE2s (Math-Matrix-0.91.tar.gz) = 3038cd4e36fc7a3d128f0dec0ce0b8179f872b7286247d5850b8c8254f820f3f
-SHA512 (Math-Matrix-0.91.tar.gz) = dcaf4cf1f6925ad67ff707c359dd2985577ed5cd788eb649638e63ff31f11af6145676b603cf0280cc9375745fca967b785615fa73c793065f6fe52df3d1ae03
-Size (Math-Matrix-0.91.tar.gz) = 27895 bytes
+BLAKE2s (Math-Matrix-0.94.tar.gz) = 41831477bb7aac24affcf58d0198dfb145ee73389d2ebf10c17793e83e2dc22d
+SHA512 (Math-Matrix-0.94.tar.gz) = 2810d3d44f11c29683b3a33a073522f1bfff423e6a64bf34a6f15e611053c351a5d2380f5fc4356f4b6b262d36c29bc6f4c10240719808d83a7a334c0bcc2731
+Size (Math-Matrix-0.94.tar.gz) = 112797 bytes
