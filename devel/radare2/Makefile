@@ -1,26 +1,20 @@
-# $NetBSD: Makefile,v 1.39 2023/01/04 01:48:48 khorben Exp $
+# $NetBSD: Makefile,v 1.40 2023/01/28 01:28:42 khorben Exp $
 
-DISTNAME=	radare2-5.8.0
+DISTNAME=	radare2-5.8.2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=radareorg/}
 DISTFILES=	${DEFAULT_DISTFILES}
-DISTFILES+=	vector35-arch-arm64-9ab2b0bedde459dc86e079718333de4a63bbbacb.tar.gz
-DISTFILES+=	vector35-arch-armv7-dde39f69ffea19fc37e681874b12cb4707bc4f30.tar.gz
-SITES.vector35-arch-arm64-9ab2b0bedde459dc86e079718333de4a63bbbacb.tar.gz= \
-		-${MASTER_SITES:=vector35-arch-arm64/archive/9ab2b0bedde459dc86e079718333de4a63bbbacb.tar.gz}
-SITES.vector35-arch-armv7-dde39f69ffea19fc37e681874b12cb4707bc4f30.tar.gz= \
-		-${MASTER_SITES:=vector35-arch-armv7/archive/dde39f69ffea19fc37e681874b12cb4707bc4f30.tar.gz}
+DISTFILES+=	vector35-arch-arm64-55d73c6bbb94448a5c615933179e73ac618cf876.tar.gz
+DISTFILES+=	vector35-arch-armv7-f270a6cc99644cb8e76055b6fa632b25abd26024.tar.gz
+SITES.vector35-arch-arm64-55d73c6bbb94448a5c615933179e73ac618cf876.tar.gz= \
+		-${MASTER_SITES:=vector35-arch-arm64/archive/55d73c6bbb94448a5c615933179e73ac618cf876.tar.gz}
+SITES.vector35-arch-armv7-f270a6cc99644cb8e76055b6fa632b25abd26024.tar.gz= \
+		-${MASTER_SITES:=vector35-arch-armv7/archive/f270a6cc99644cb8e76055b6fa632b25abd26024.tar.gz}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.radare.org/
 COMMENT=	Reverse engineering framework
 LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v3
-
-post-extract:
-	${MV} ${WRKDIR}/vector35-arch-arm64-9ab2b0bedde459dc86e079718333de4a63bbbacb \
-		${WRKSRC}/libr/arch/p/arm/v35arm64/arch-arm64
-	${MV} ${WRKDIR}/vector35-arch-armv7-dde39f69ffea19fc37e681874b12cb4707bc4f30 \
-		${WRKSRC}/libr/arch/p/arm/v35arm64/arch-armv7
 
 HAS_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
@@ -42,6 +36,12 @@ PLIST_SUBST+=	R2VERSION_MN=${R2VERSION_MN}
 
 PRINT_PLIST_AWK+=	{ gsub(/${R2VERSION}/, "$${R2VERSION}") }
 PRINT_PLIST_AWK+=	{ gsub(/${R2VERSION_MN}/, "$${R2VERSION_MN}") }
+
+post-extract:
+	${MV} ${WRKDIR}/vector35-arch-arm64-55d73c6bbb94448a5c615933179e73ac618cf876\
+		${WRKSRC}/libr/arch/p/arm/v35/arch-arm64
+	${MV} ${WRKDIR}/vector35-arch-armv7-f270a6cc99644cb8e76055b6fa632b25abd26024 \
+		${WRKSRC}/libr/arch/p/arm/v35/arch-armv7
 
 .include "options.mk"
 
