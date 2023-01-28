@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.591 2022/12/15 13:59:19 vins Exp $
+# $NetBSD: Makefile,v 1.592 2023/01/28 14:05:06 ryoon Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -184,6 +184,7 @@ SUBDIR+=	nmh
 SUBDIR+=	nmzmail
 SUBDIR+=	nopop3d
 SUBDIR+=	notmuch
+SUBDIR+=	notmuch-emacs
 SUBDIR+=	nullmailer
 SUBDIR+=	oe2mbx
 SUBDIR+=	offlineimap
