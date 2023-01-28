@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2022/09/11 12:51:18 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2023/01/28 18:19:59 triaxx Exp $
 
 DISTNAME=	ladspa_sdk_1.17
 PKGNAME=	${DISTNAME:S/_sdk_/-/}
 DIST_SUBDIR=	${DISTNAME}	# remove on next update
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	https://www.ladspa.org/download/
 EXTRACT_SUFX=	.tgz
@@ -37,4 +37,5 @@ do-install:
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 LDFLAGS+=	${BUILDLINK_LDADD.dl}
+.include "../../mk/terminfo.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
