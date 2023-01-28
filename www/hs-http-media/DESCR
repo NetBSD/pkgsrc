@@ -1,0 +1,7 @@
+This library is intended to be a comprehensive solution to parsing and
+selecting quality-indexed values in HTTP headers. It is capable of parsing
+both media types and language parameters from the Accept and Content header
+families, and can be extended to match against other accept headers as
+well. Selecting the appropriate header value is achieved by comparing a
+list of server options against the quality-indexed values supplied by the
+client.
