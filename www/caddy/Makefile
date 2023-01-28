@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2023/01/11 17:28:37 bsiegert Exp $
+# $NetBSD: Makefile,v 1.65 2023/01/28 12:35:30 jperkin Exp $
 
 DISTNAME=	caddy-2.6.2
 PKGREVISION=	3
@@ -16,9 +16,6 @@ EXTRACT_USING=		bsdtar
 # Work around go's lack of conditional compilation.
 pre-patch:
 	${CP} ${WRKSRC}/listen_unix.go ${WRKSRC}/listen_illumos.go
-
-post-patch:
-	${CP} ${WRKSRC}/listen_illumos.go ${WRKSRC}/listen_solaris.go
 
 .include "go-modules.mk"
 
