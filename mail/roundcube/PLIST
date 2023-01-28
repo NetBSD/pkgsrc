@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.51 2022/08/17 15:41:43 taca Exp $
+@comment $NetBSD: PLIST,v 1.52 2023/01/28 13:48:39 taca Exp $
 share/doc/roundcube/CHANGELOG.md
 share/doc/roundcube/INSTALL
 share/doc/roundcube/LICENSE
@@ -54,6 +54,7 @@ share/roundcube/SQL/mssql/2020091000.sql
 share/roundcube/SQL/mssql/2020122900.sql
 share/roundcube/SQL/mssql/2021081000.sql
 share/roundcube/SQL/mssql/2021100300.sql
+share/roundcube/SQL/mssql/2022081200.sql
 share/roundcube/SQL/mysql.initial.sql
 share/roundcube/SQL/mysql/2008030300.sql
 share/roundcube/SQL/mysql/2008040500.sql
@@ -87,6 +88,7 @@ share/roundcube/SQL/mysql/2020091000.sql
 share/roundcube/SQL/mysql/2020122900.sql
 share/roundcube/SQL/mysql/2021081000.sql
 share/roundcube/SQL/mysql/2021100300.sql
+share/roundcube/SQL/mysql/2022081200.sql
 share/roundcube/SQL/oracle.initial.sql
 share/roundcube/SQL/oracle/2015030800.sql
 share/roundcube/SQL/oracle/2015111100.sql
@@ -102,6 +104,7 @@ share/roundcube/SQL/oracle/2020091000.sql
 share/roundcube/SQL/oracle/2020122900.sql
 share/roundcube/SQL/oracle/2021081000.sql
 share/roundcube/SQL/oracle/2021100300.sql
+share/roundcube/SQL/oracle/2022081200.sql
 share/roundcube/SQL/postgres.initial.sql
 share/roundcube/SQL/postgres/2008030300.sql
 share/roundcube/SQL/postgres/2008060900.sql
@@ -134,6 +137,7 @@ share/roundcube/SQL/postgres/2020091000.sql
 share/roundcube/SQL/postgres/2020122900.sql
 share/roundcube/SQL/postgres/2021081000.sql
 share/roundcube/SQL/postgres/2021100300.sql
+share/roundcube/SQL/postgres/2022081200.sql
 share/roundcube/SQL/sqlite.initial.sql
 share/roundcube/SQL/sqlite/2008030300.sql
 share/roundcube/SQL/sqlite/2008060900.sql
@@ -167,6 +171,7 @@ share/roundcube/SQL/sqlite/2020091000.sql
 share/roundcube/SQL/sqlite/2020122900.sql
 share/roundcube/SQL/sqlite/2021081000.sql
 share/roundcube/SQL/sqlite/2021100300.sql
+share/roundcube/SQL/sqlite/2022081200.sql
 share/roundcube/bin/cleandb.sh
 share/roundcube/bin/cssshrink.sh
 share/roundcube/bin/decrypt.sh
