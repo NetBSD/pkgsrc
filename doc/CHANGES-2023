@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.797 2023/01/28 13:50:00 taca Exp $
+$NetBSD: CHANGES-2023,v 1.798 2023/01/28 13:52:27 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1003,3 +1003,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated mail/roundcube-plugin-enigma to 1.6.1 [taca 2023-01-28]
 	Updated mail/roundcube-plugin-password to 1.6.1 [taca 2023-01-28]
 	Updated mail/roundcube-plugin-zipdownload to 1.6.1 [taca 2023-01-28]
+	Updated net/samba4 to 4.17.5 [taca 2023-01-28]
