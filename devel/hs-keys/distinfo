@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/02/24 01:11:07 pho Exp $
+$NetBSD: distinfo,v 1.2 2023/01/28 02:26:25 pho Exp $
 
 BLAKE2s (keys-3.12.3.tar.gz) = b7590f0fe1c84aae92a11c146c159ac952deb95b43b22e5a4d1538af5784add3
 SHA512 (keys-3.12.3.tar.gz) = e0bab964eb38388dfb2fe7dcb4999da0263a2162f171f7ed629a2e1de33eb1cb99dc37a6fe32045f136466cebb5aed69e533417256877316c81a02abc700c28d
 Size (keys-3.12.3.tar.gz) = 14378 bytes
-SHA1 (patch-keys.cabal) = 1e244e5e1b6e8cd601ceb09e688549c0070fb107
