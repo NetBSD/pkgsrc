@@ -1,0 +1,3 @@
+Provides a parser for plain-text representations of tables. This package
+supports table headers, cells spanning multiple columns or rows, as well as
+a way to specfiy column alignments.

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/01/28 18:28:37 pho Exp $
+
+BLAKE2s (gridtables-0.1.0.0.tar.gz) = 4b87ea2dbf20da728ff73f77f6e14646e79179ed6756434bd6ad8f95c4277fa7
+SHA512 (gridtables-0.1.0.0.tar.gz) = c83a299b73df7e4bb4cbfe1c74a300f06708e7cbe516c369b77d9d83108da45f90b3cd704d8960071b5dcbf5dbd20abe3fea11c197668b515a71434e2e04943c
+Size (gridtables-0.1.0.0.tar.gz) = 12279 bytes
