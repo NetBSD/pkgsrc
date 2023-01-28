@@ -1,4 +1,4 @@
-$NetBSD: patch-ai,v 1.45 2022/07/21 15:08:39 taca Exp $
+$NetBSD: patch-ai,v 1.46 2023/01/28 09:28:30 taca Exp $
 
 1) Add shlib definitions for NetBSD 5; the build system must be
 hard-coded per OS per version.  Not yet reported upstream.
@@ -9,7 +9,7 @@ hard-coded per OS per version.  Not yet reported upstream.
 
 4) Add blocklist(3) support.
 
---- makedefs.orig	2022-01-23 20:53:41.000000000 +0000
+--- makedefs.orig	2023-01-15 23:29:39.000000000 +0000
 +++ makedefs
 @@ -339,6 +339,15 @@ case "$SYSTEM.$RELEASE" in
  		: ${SHLIB_ENV="LD_LIBRARY_PATH=`pwd`/lib"}
@@ -126,7 +126,7 @@ hard-coded per OS per version.  Not yet reported upstream.
  		for name in nsl resolv $GDBM_LIBS
  		do
  		    for lib in /usr/lib64 /lib64 /usr/lib /lib
-@@ -667,24 +602,6 @@ EOF
+@@ -667,24 +602,6 @@ Linux.[3456].*)	SYSTYPE=LINUX$RELEASE_MA
  		;;
       GNU.0*|GNU/kFreeBSD.[567]*)
  		SYSTYPE=GNU0
@@ -151,7 +151,7 @@ hard-coded per OS per version.  Not yet reported upstream.
  		for name in nsl resolv
  		do
  		    for lib in /usr/lib64 /lib64 /usr/lib /lib
-@@ -715,26 +632,14 @@ EOF
+@@ -715,26 +632,14 @@ Linux.[3456].*)	SYSTYPE=LINUX$RELEASE_MA
  HP-UX.A.09.*)	SYSTYPE=HPUX9
  		SYSLIBS=-ldbm
  		CCARGS="$CCARGS -DMISSING_USLEEP -DNO_SNPRINTF"
@@ -178,22 +178,22 @@ hard-coded per OS per version.  Not yet reported upstream.
  		;;
  ReliantUNIX-?.5.43) SYSTYPE=ReliantUnix543
  		RANLIB=echo
-@@ -776,12 +681,12 @@ ReliantUNIX-?.5.43) SYSTYPE=ReliantUnix5
+@@ -782,12 +687,12 @@ ReliantUNIX-?.5.43) SYSTYPE=ReliantUnix5
  		esac
  		: ${SHLIB_CFLAGS=-fPIC}
  		: ${SHLIB_SUFFIX=.dylib}
--		: ${SHLIB_LD='cc -shared -Wl,-flat_namespace -Wl,-undefined,dynamic_lookup -Wl,-install_name,@rpath/${LIB}'}
-+		: ${SHLIB_LD='${CC} -shared -Wl,-flat_namespace -Wl,-undefined,dynamic_lookup -Wl,-install_name,@rpath/${LIB}'}
+-		: ${SHLIB_LD="cc -shared -Wl,-flat_namespace ${NOFIXUP}-Wl,-undefined,dynamic_lookup "'-Wl,-install_name,@rpath/${LIB}'}
++		: ${SHLIB_LD='${CC} '"-shared -Wl,-flat_namespace ${NOFIXUP}-Wl,-undefined,dynamic_lookup "'-Wl,-install_name,@rpath/${LIB}'}
  		: ${SHLIB_RPATH='-Wl,-rpath,${SHLIB_DIR}'}
                  # In MacOS/X 10.11.x /bin/sh unsets DYLD_LIBRARY_PATH, so we
                  # have export it into postfix-install indirectly!
  		: ${SHLIB_ENV="DYLD_LIBRARY_PATH=`pwd`/lib SHLIB_ENV_VAR=DYLD_LIBRARY_PATH SHLIB_ENV_VAL=`pwd`/lib"}
--		: ${PLUGIN_LD='cc -shared -Wl,-flat_namespace -Wl,-undefined,dynamic_lookup'}
-+		: ${PLUGIN_LD='${CC} -shared -Wl,-flat_namespace -Wl,-undefined,dynamic_lookup'}
+-		: ${PLUGIN_LD="cc -shared -Wl,-flat_namespace ${NOFIXUP}-Wl,-undefined,dynamic_lookup"}
++		: ${PLUGIN_LD='${CC} '"-shared -Wl,-flat_namespace ${NOFIXUP}-Wl,-undefined,dynamic_lookup"}
  		;;
      dcosx.1*)	SYSTYPE=DCOSX1
  		RANLIB=echo
-@@ -805,6 +710,21 @@ ReliantUNIX-?.5.43) SYSTYPE=ReliantUnix5
+@@ -811,6 +716,21 @@ ReliantUNIX-?.5.43) SYSTYPE=ReliantUnix5
  esac
  
  #
