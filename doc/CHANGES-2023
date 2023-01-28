@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.807 2023/01/28 22:47:17 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.808 2023/01/28 22:49:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1013,3 +1013,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/beforelight to 1.0.6 [wiz 2023-01-28]
 	Updated devel/pax-utils to 1.3.7 [fcambus 2023-01-28]
 	Updated finance/gnucash to 4.13nb3 [wiz 2023-01-28]
+	Updated games/dMagnetic to 0.36 [wiz 2023-01-28]
