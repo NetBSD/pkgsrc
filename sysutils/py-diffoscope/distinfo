@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2023/01/07 07:20:29 khorben Exp $
+$NetBSD: distinfo,v 1.15 2023/01/28 00:50:28 khorben Exp $
 
-BLAKE2s (diffoscope-231.tar.gz) = 8ecc9909565ad32fe21446a029d0d55bb6d4374b93f5708a2a0194dfcfe1cf17
-SHA512 (diffoscope-231.tar.gz) = 544510de0790fc8f0c62030bc557f923bad6d5c39b7364e9944ebcf9bc5c1ecf2b9ecc91cf9142e54a23b1f004f53e96ed5b6f2f4637fa76cebd2ed7d0e4721d
-Size (diffoscope-231.tar.gz) = 3164686 bytes
+BLAKE2s (diffoscope-233.tar.gz) = 2bd508c06dce2d84e92ab664d50c17671de1addcf31b8d292f883de58df9300e
+SHA512 (diffoscope-233.tar.gz) = ae750c3aeb3e4fb40f6bd2becdb5d148af0b369cb5dea8083a0c16d2f11b7995b7ef32a42bd1c248f14782cc792daa68e3e7838789ff4bd4c2dbb532940ef480
+Size (diffoscope-233.tar.gz) = 3164944 bytes
