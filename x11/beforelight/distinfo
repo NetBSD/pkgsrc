@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:33:43 nia Exp $
+$NetBSD: distinfo,v 1.9 2023/01/28 22:16:26 wiz Exp $
 
-BLAKE2s (beforelight-1.0.5.tar.bz2) = 66d1f4de4e6bedffb164540a53684df634a42c5b1926cb89c23c289960fce503
-SHA512 (beforelight-1.0.5.tar.bz2) = f6cc794159cda89ac060a43d190fa72419dbcf503a97093b4c0f05315389085ff804c2891e00da2843709e97633973010165f9d68ceb0dcc76eed150f9c75968
-Size (beforelight-1.0.5.tar.bz2) = 119358 bytes
+BLAKE2s (beforelight-1.0.6.tar.xz) = a6ad5706fef29de4d364a18a2bb891465cb4ce5bfc239f6ea0377489cf284903
+SHA512 (beforelight-1.0.6.tar.xz) = 48a165d151676f6d213883bee98b34007403a77e025253c8649f9a0f5ea258b09381ab523a5e906030ac9fc8245fce2c6beaf9ad0f81116e302d51ad4a0fad5a
+Size (beforelight-1.0.6.tar.xz) = 117904 bytes
