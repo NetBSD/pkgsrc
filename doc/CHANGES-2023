@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.803 2023/01/28 20:04:40 pho Exp $
+$NetBSD: CHANGES-2023,v 1.804 2023/01/28 20:18:29 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1009,3 +1009,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added textproc/hs-attoparsec-iso8601 version 1.1.0.0 [pho 2023-01-28]
 	Added www/hs-http-api-data version 0.5 [pho 2023-01-28]
 	Added www/hs-http-media version 0.8.0.0 [pho 2023-01-28]
+	Added devel/hs-boring version 0.2 [pho 2023-01-28]
