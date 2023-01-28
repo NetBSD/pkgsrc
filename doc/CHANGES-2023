@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.804 2023/01/28 20:18:29 pho Exp $
+$NetBSD: CHANGES-2023,v 1.805 2023/01/28 22:16:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1010,3 +1010,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added www/hs-http-api-data version 0.5 [pho 2023-01-28]
 	Added www/hs-http-media version 0.8.0.0 [pho 2023-01-28]
 	Added devel/hs-boring version 0.2 [pho 2023-01-28]
+	Updated x11/beforelight to 1.0.6 [wiz 2023-01-28]
