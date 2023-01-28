@@ -1,22 +1,19 @@
-# $NetBSD: Makefile,v 1.8 2022/09/07 06:50:45 pho Exp $
+# $NetBSD: Makefile,v 1.9 2023/01/28 02:59:27 pho Exp $
 
-DISTNAME=	hlint-3.3.6
+DISTNAME=	hlint-3.5
 PKGNAME=	${DISTNAME}
-PKGREVISION=	5
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
 COMMENT=	Haskell source code suggestions
 LICENSE=	modified-bsd
 
-BROKEN=		"${PKGBASE} is currently incompatible with GHC 9.2.x"
-BROKEN+=	"Work is underway: https://github.com/ndmitchell/hlint/issues/1314"
-
 .include "../../converters/hs-aeson/buildlink3.mk"
 .include "../../devel/hs-ansi-terminal/buildlink3.mk"
 .include "../../devel/hs-cmdargs/buildlink3.mk"
 .include "../../devel/hs-cpphs/buildlink3.mk"
 .include "../../devel/hs-data-default/buildlink3.mk"
+.include "../../converters/hs-deriving-aeson/buildlink3.mk"
 .include "../../misc/hs-extra/buildlink3.mk"
 .include "../../devel/hs-file-embed/buildlink3.mk"
 .include "../../sysutils/hs-filepattern/buildlink3.mk"
@@ -26,6 +23,7 @@ BROKEN+=	"Work is underway: https://github.com/ndmitchell/hlint/issues/1314"
 .include "../../devel/hs-unordered-containers/buildlink3.mk"
 .include "../../devel/hs-utf8-string/buildlink3.mk"
 .include "../../devel/hs-vector/buildlink3.mk"
+.include "../../devel/hs-ghc-lib-parser/buildlink3.mk"
 .include "../../textproc/hs-hscolour/buildlink3.mk"
 .include "../../textproc/hs-yaml/buildlink3.mk"
 .include "../../mk/haskell.mk"

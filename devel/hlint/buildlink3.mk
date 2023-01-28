@@ -1,12 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.8 2022/09/07 06:50:45 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2023/01/28 02:59:27 pho Exp $
 
 BUILDLINK_TREE+=	hlint
 
 .if !defined(HLINT_BUILDLINK3_MK)
 HLINT_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.hlint+=	hlint>=3.3.6
-BUILDLINK_ABI_DEPENDS.hlint+=	hlint>=3.3.6nb5
+BUILDLINK_API_DEPENDS.hlint+=	hlint>=3.5
+BUILDLINK_ABI_DEPENDS.hlint+=	hlint>=3.5
 BUILDLINK_PKGSRCDIR.hlint?=	../../devel/hlint
 
 .include "../../converters/hs-aeson/buildlink3.mk"
@@ -14,6 +14,7 @@ BUILDLINK_PKGSRCDIR.hlint?=	../../devel/hlint
 .include "../../devel/hs-cmdargs/buildlink3.mk"
 .include "../../devel/hs-cpphs/buildlink3.mk"
 .include "../../devel/hs-data-default/buildlink3.mk"
+.include "../../converters/hs-deriving-aeson/buildlink3.mk"
 .include "../../misc/hs-extra/buildlink3.mk"
 .include "../../devel/hs-file-embed/buildlink3.mk"
 .include "../../sysutils/hs-filepattern/buildlink3.mk"
@@ -23,6 +24,7 @@ BUILDLINK_PKGSRCDIR.hlint?=	../../devel/hlint
 .include "../../devel/hs-unordered-containers/buildlink3.mk"
 .include "../../devel/hs-utf8-string/buildlink3.mk"
 .include "../../devel/hs-vector/buildlink3.mk"
+.include "../../devel/hs-ghc-lib-parser/buildlink3.mk"
 .include "../../textproc/hs-hscolour/buildlink3.mk"
 .include "../../textproc/hs-yaml/buildlink3.mk"
 .endif	# HLINT_BUILDLINK3_MK
