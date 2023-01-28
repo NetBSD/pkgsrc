@@ -1,4 +1,4 @@
-# $NetBSD: gfortran.mk,v 1.21 2022/12/06 14:29:58 jperkin Exp $
+# $NetBSD: gfortran.mk,v 1.22 2023/01/28 17:01:18 bacon Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -41,7 +41,7 @@ COMPILER_GFORTRAN_MK=	defined
 # in that case.
 POSSIBLE_GFORTRAN_VERSION?=	${CC_VERSION:S/gcc-//:C/.[0-9].[0-9]$//}
 
-.if ${MACHINE_PLATFORM:MDarwin-*-aarch64}
+.if ${MACHINE_PLATFORM:MDarwin-*-*}
 GFORTRAN_VERSION?=	12
 .endif
 
