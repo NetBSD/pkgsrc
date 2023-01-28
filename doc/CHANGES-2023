@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.780 2023/01/28 00:50:46 khorben Exp $
+$NetBSD: CHANGES-2023,v 1.781 2023/01/28 01:28:53 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -976,3 +976,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated archivers/unrar to 6.2.5 [adam 2023-01-27]
 	Updated cross/z80asm to 1.8nb1 [thorpej 2023-01-27]
 	Updated sysutils/py-diffoscope to 233 [khorben 2023-01-28]
+	Updated devel/radare2 to 5.8.2 [khorben 2023-01-28]
