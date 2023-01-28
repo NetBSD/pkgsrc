@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2022/10/26 10:31:53 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2023/01/28 13:11:45 pin Exp $
 
 DISTNAME=	neix-0.1.5
 PKGREVISION=	3
@@ -6,7 +6,7 @@ CATEGORIES=	news
 MASTER_SITES=	${MASTER_SITE_GITHUB:=qw3rtty/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/tomschwarz/neix/
 COMMENT=	RSS/Atom feed reader for your terminal
 LICENSE=	gnu-gpl-v3
