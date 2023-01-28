@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.793 2023/01/28 08:45:55 pho Exp $
+$NetBSD: CHANGES-2023,v 1.794 2023/01/28 09:30:39 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -989,3 +989,11 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/hs-http-client-tls to 0.3.6.1 [pho 2023-01-28]
 	Updated textproc/hs-texmath to 0.12.6 [pho 2023-01-28]
 	Updated textproc/hs-citeproc to 0.8.1 [pho 2023-01-28]
+	Updated mail/postfix to 3.7.4 [taca 2023-01-28]
+	Updated mail/postfix-cdb to 3.7.4 [taca 2023-01-28]
+	Updated mail/postfix-ldap to 3.7.4 [taca 2023-01-28]
+	Updated mail/postfix-lmdb to 3.7.4 [taca 2023-01-28]
+	Updated mail/postfix-mysql to 3.7.4 [taca 2023-01-28]
+	Updated mail/postfix-pcre to 3.7.4 [taca 2023-01-28]
+	Updated mail/postfix-pgsql to 3.7.4 [taca 2023-01-28]
+	Updated mail/postfix-sqlite to 3.7.4 [taca 2023-01-28]
