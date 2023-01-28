@@ -1,10 +1,13 @@
-$NetBSD: patch-pandas___libs_window_aggregations.pyx,v 1.1 2023/01/28 17:58:05 he Exp $
+$NetBSD: patch-pandas___libs_window_aggregations.pyx,v 1.2 2023/01/28 19:47:55 he Exp $
 
 On NetBSD, signbit and sqrt cannot be imported from "libc", because
 even though <math.h> is included, Python.h later includes
 <cmath> which in turn #undef's all the relevant definitions
 from <math.h>, forcing the use of the std:: variants of those
 functions.  So ... re-do how we import signbit() and sqrt().
+
+Submitted upstream:
+https://github.com/pandas-dev/pandas/pull/51049
 
 --- pandas/_libs/window/aggregations.pyx.orig   2023-01-19 03:22:10.000000000 +0000
 +++ pandas/_libs/window/aggregations.pyx
