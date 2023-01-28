@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2022/08/29 10:58:27 wiz Exp $
+$NetBSD: distinfo,v 1.3 2023/01/28 07:33:32 pho Exp $
 
-BLAKE2s (floskell-0.10.6.tar.gz) = 78d8deab7346e668ff1ab2832ee6ab02f1e5f5704e5a2a7e4403f5c3474793da
-SHA512 (floskell-0.10.6.tar.gz) = d4830d9787e75ba0893508e6b67409f9031695c1596e52d0bc518a4e30c586c00a6e720ed4a87902fef8c228f6e5928a5aceca78079123eede94db6c6d4223e6
-Size (floskell-0.10.6.tar.gz) = 67823 bytes
-SHA1 (patch-floskell.cabal) = e2df59f829011314ee2449b8f7bed3c6e5e8535b
+BLAKE2s (floskell-0.10.7.tar.gz) = 970a70a68bf04536f6a1378a0079064fce47666b1559690914d6a55f146c3d1b
+SHA512 (floskell-0.10.7.tar.gz) = fb7db723782e441c4379528205b7cafc9cd2ed5e74a0015f83cf110d1783db18ebad30fc267e67fbc694740f6dbb06f2ce985b9acebd782f5f14ed8ba67c84d3
+Size (floskell-0.10.7.tar.gz) = 67817 bytes
