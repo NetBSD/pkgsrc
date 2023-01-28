@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2022/02/26 03:58:17 pho Exp $
+# $NetBSD: Makefile,v 1.3 2023/01/28 02:21:15 pho Exp $
 
-DISTNAME=	kan-extensions-5.2.3
-PKGREVISION=	1
+DISTNAME=	kan-extensions-5.2.5
 CATEGORIES=	math
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -14,5 +13,9 @@ LICENSE=	modified-bsd
 .include "../../math/hs-distributive/buildlink3.mk"
 .include "../../math/hs-free/buildlink3.mk"
 .include "../../math/hs-invariant/buildlink3.mk"
+.include "../../math/hs-profunctors/buildlink3.mk"
+.include "../../math/hs-semigroupoids/buildlink3.mk"
+.include "../../devel/hs-tagged/buildlink3.mk"
+.include "../../devel/hs-transformers-compat/buildlink3.mk"
 .include "../../mk/haskell.mk"
 .include "../../mk/bsd.pkg.mk"
