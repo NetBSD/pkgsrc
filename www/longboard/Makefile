@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2021/10/07 15:53:24 pin Exp $
+# $NetBSD: Makefile,v 1.7 2023/01/28 13:12:54 pin Exp $
 
 DISTNAME=	longboard-0.0.7
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jbr/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/jbr/longboard/
 COMMENT=	Longboard: The easy way to surf
 LICENSE=	apache-2.0 OR mit
