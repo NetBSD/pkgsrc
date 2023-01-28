@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/02/26 03:58:00 pho Exp $
+# $NetBSD: Makefile,v 1.3 2023/01/28 02:26:25 pho Exp $
 
 DISTNAME=	keys-3.12.3
 PKGREVISION=	1
@@ -7,6 +7,9 @@ CATEGORIES=	devel
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Keyed functors and containers
 LICENSE=	modified-bsd
+
+HASKELL_UNRESTRICT_DEPENDENCIES+=	\
+	hashable
 
 .include "../../math/hs-comonad/buildlink3.mk"
 .include "../../math/hs-free/buildlink3.mk"
