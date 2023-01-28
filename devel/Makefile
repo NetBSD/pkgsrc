@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3886 2023/01/27 10:33:41 micha Exp $
+# $NetBSD: Makefile,v 1.3887 2023/01/28 04:03:47 khorben Exp $
 #
 
 COMMENT=	Development utilities
@@ -736,6 +736,7 @@ SUBDIR+=	ht
 SUBDIR+=	hugs-HUnit
 SUBDIR+=	hugs-unix
 SUBDIR+=	hyperscan
+SUBDIR+=	iaito
 SUBDIR+=	idiff
 SUBDIR+=	idutils
 SUBDIR+=	imake
