@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.42 2022/09/11 12:51:04 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.43 2023/01/28 04:47:41 khorben Exp $
 
 BUILDLINK_TREE+=	pulseaudio
 
@@ -34,6 +34,7 @@ pkgbase:= pulseaudio
 
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/pcre/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .endif # PULSEAUDIO_BUILDLINK3_MK
 
