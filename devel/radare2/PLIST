@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2022/12/28 04:36:55 khorben Exp $
+@comment $NetBSD: PLIST,v 1.12 2023/01/28 01:28:42 khorben Exp $
 bin/r2
 bin/r2agent
 bin/r2p
@@ -398,6 +398,7 @@ share/radare2/${R2VERSION}/fcnsign/cc-arm-64.sdb
 share/radare2/${R2VERSION}/fcnsign/cc-avr-8.sdb
 share/radare2/${R2VERSION}/fcnsign/cc-hexagon-32.sdb
 share/radare2/${R2VERSION}/fcnsign/cc-m68k-32.sdb
+share/radare2/${R2VERSION}/fcnsign/cc-mips-16.sdb
 share/radare2/${R2VERSION}/fcnsign/cc-mips-32.sdb
 share/radare2/${R2VERSION}/fcnsign/cc-mips-64.sdb
 share/radare2/${R2VERSION}/fcnsign/cc-ppc-32.sdb
