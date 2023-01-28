@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.787 2023/01/28 04:04:04 khorben Exp $
+$NetBSD: CHANGES-2023,v 1.788 2023/01/28 05:43:34 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -983,3 +983,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added converters/hs-deriving-aeson version 0.2.9 [pho 2023-01-28]
 	Updated devel/hlint to 3.5 [pho 2023-01-28]
 	Added devel/iaito version 5.8.0 [khorben 2023-01-28]
+	Added sysutils/hs-co-log-core version 0.3.2.0 [pho 2023-01-28]
