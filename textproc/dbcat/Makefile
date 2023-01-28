@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2022/02/12 10:25:22 pin Exp $
+# $NetBSD: Makefile,v 1.3 2023/01/28 13:08:41 pin Exp $
 
 DISTNAME=	dbcat-0.1.5
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=NishantJoshi00/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/NishantJoshi00/dbcat/
 COMMENT=	Equivalent of cat(1) for viewing sqlite database
 LICENSE=	mit
