@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.5 2022/09/07 06:50:49 pho Exp $
+# $NetBSD: Makefile,v 1.6 2023/01/28 02:40:22 pho Exp $
 
-DISTNAME=	retrie-1.2.0.1
+DISTNAME=	retrie-1.2.1.1
 PKGNAME=	${DISTNAME}
-PKGREVISION=	4
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Powerful, easy-to-use codemodding tool for Haskell
 LICENSE=	mit
+
+HASKELL_UNRESTRICT_DEPENDENCIES+=	\
+	optparse-applicative
 
 # If retrie is to be linked dynamically, it will depend on more than 80
 # shared objects and the dynamic linker will spend too much time to resolve

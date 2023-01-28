@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2022/02/16 10:11:00 pho Exp $
+$NetBSD: distinfo,v 1.2 2023/01/28 02:40:22 pho Exp $
 
-BLAKE2s (retrie-1.2.0.1.tar.gz) = 1b1e0cebe204921023e21db123b29560e5b2c0c3959e2cf5266f0cdf8def0727
-SHA512 (retrie-1.2.0.1.tar.gz) = 8d24d7465f848fe6773b2a8fe45c291cffb176b5faf509ba940a035942407cdfea4d87b05ce40abb42fcf2ac7cda1c23e64d7209078f9524358a0996a220cd9e
-Size (retrie-1.2.0.1.tar.gz) = 91250 bytes
-SHA1 (patch-retrie.cabal) = b60a5ebe822eb602beae2be6f86dd55a5830995b
+BLAKE2s (retrie-1.2.1.1.tar.gz) = 170e198cf2ea553c6102b8b94899f5bf2c07dd57c4655124edf1b779f42be333
+SHA512 (retrie-1.2.1.1.tar.gz) = 1a2d2ba52a44bc99de8c3dcec84049a8d98cf05b2d0b74ddeb958d4d1704a086d359304c085b00ef35590f7e02ad1d8d728775a3c52fc105da014ad770a8b13f
+Size (retrie-1.2.1.1.tar.gz) = 92336 bytes
+SHA1 (patch-retrie.cabal) = ff3506d55890c24aad303f615bd391d356f4fdd5
