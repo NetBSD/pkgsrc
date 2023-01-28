@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.788 2023/01/28 05:43:34 pho Exp $
+$NetBSD: CHANGES-2023,v 1.789 2023/01/28 05:46:19 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -984,3 +984,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/hlint to 3.5 [pho 2023-01-28]
 	Added devel/iaito version 5.8.0 [khorben 2023-01-28]
 	Added sysutils/hs-co-log-core version 0.3.2.0 [pho 2023-01-28]
+	Updated devel/hs-hie-bios to 0.11.0 [pho 2023-01-28]
