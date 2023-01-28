@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2023/01/28 04:03:28 khorben Exp $
+bin/iaito
+man/man1/iaito.1
+share/applications/org.radare.iaito.desktop
+share/icons/hicolor/scalable/apps/org.radare.iaito.svg
+share/metainfo/org.radare.iaito.appdata.xml
