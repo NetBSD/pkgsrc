@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.782 2023/01/28 02:21:58 pho Exp $
+$NetBSD: CHANGES-2023,v 1.783 2023/01/28 02:32:52 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -978,3 +978,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/py-diffoscope to 233 [khorben 2023-01-28]
 	Updated devel/radare2 to 5.8.2 [khorben 2023-01-28]
 	Updated math/hs-kan-extensions to 5.2.5 [pho 2023-01-28]
+	Updated devel/hs-implicit-hie to 0.1.4.0 [pho 2023-01-28]
