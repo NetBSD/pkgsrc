@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.792 2023/01/28 08:35:48 pho Exp $
+$NetBSD: CHANGES-2023,v 1.793 2023/01/28 08:45:55 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -988,3 +988,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/floskell to 0.10.7 [pho 2023-01-28]
 	Updated www/hs-http-client-tls to 0.3.6.1 [pho 2023-01-28]
 	Updated textproc/hs-texmath to 0.12.6 [pho 2023-01-28]
+	Updated textproc/hs-citeproc to 0.8.1 [pho 2023-01-28]
