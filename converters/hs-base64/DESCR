@@ -1,0 +1,2 @@
+RFC 4648-compliant Base64 with an eye towards performance and modernity
+(additional support for RFC 7049 standards).
