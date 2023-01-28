@@ -1,0 +1,2 @@
+This package defines typeclasses used for converting Haskell data types to
+and from HTTP API data.
