@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.800 2023/01/28 18:28:43 pho Exp $
+$NetBSD: CHANGES-2023,v 1.801 2023/01/28 19:56:44 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1006,3 +1006,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/samba4 to 4.17.5 [taca 2023-01-28]
 	Added converters/hs-base64 version 0.4.2.4 [pho 2023-01-28]
 	Added textproc/hs-gridtables version 0.1.0.0 [pho 2023-01-28]
+	Added textproc/hs-attoparsec-iso8601 version 1.1.0.0 [pho 2023-01-28]
