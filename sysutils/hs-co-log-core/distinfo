@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/01/28 05:43:27 pho Exp $
+
+BLAKE2s (co-log-core-0.3.2.0.tar.gz) = 6e54218d78ee346e822ced4d2500873c8a56efa4d1cbde4939935b44d337e5dc
+SHA512 (co-log-core-0.3.2.0.tar.gz) = c61d7ef1ee37af24a5c155536f02908f6f2a6ece62b282d45f874844fc305a3902442fb4e513cfae8b0ea05074176696d274832f382ca6746fd1b31c68f0485b
+Size (co-log-core-0.3.2.0.tar.gz) = 18213 bytes
