@@ -1,12 +1,15 @@
-# $NetBSD: Makefile,v 1.6 2022/09/07 06:50:46 pho Exp $
+# $NetBSD: Makefile,v 1.7 2023/01/28 05:46:06 pho Exp $
 
-DISTNAME=	hie-bios-0.8.1
-PKGREVISION=	5
+DISTNAME=	hie-bios-0.11.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Set up a GHC API session
 LICENSE=	modified-bsd
+
+HASKELL_UNRESTRICT_DEPENDENCIES+=	\
+	unix-compat	\
+	vector
 
 # hie-bios is built with optparse-applicative, and can generate shell
 # completion scripts automatically.
@@ -16,12 +19,13 @@ OPTPARSE_APPLICATIVE_EXECUTABLES+=	hie-bios
 # lib:hie-bios
 .include "../../converters/hs-aeson/buildlink3.mk"
 .include "../../converters/hs-base16-bytestring/buildlink3.mk"
+.include "../../sysutils/hs-co-log-core/buildlink3.mk"
 .include "../../devel/hs-conduit/buildlink3.mk"
 .include "../../devel/hs-conduit-extra/buildlink3.mk"
 .include "../../security/hs-cryptohash-sha1/buildlink3.mk"
 .include "../../misc/hs-extra/buildlink3.mk"
 .include "../../devel/hs-file-embed/buildlink3.mk"
-.include "../../sysutils/hs-hslogger/buildlink3.mk"
+.include "../../textproc/hs-prettyprinter/buildlink3.mk"
 .include "../../sysutils/hs-temporary/buildlink3.mk"
 .include "../../devel/hs-unix-compat/buildlink3.mk"
 .include "../../devel/hs-unordered-containers/buildlink3.mk"
