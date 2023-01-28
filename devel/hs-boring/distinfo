@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/01/28 20:18:22 pho Exp $
+
+BLAKE2s (boring-0.2.tar.gz) = cd6cb48edcafd908d91ccf5aee3b4ab44bc74700adc9551d6f440ba18774e9f8
+SHA512 (boring-0.2.tar.gz) = 8c935afafcbe276ce2e9d378a83aecd59f48ba54fc0e922f10a13032189346e6b93d272d6c407d4c047b500dc4db13201b6b2f77f843ce589cc2f735228f4368
+Size (boring-0.2.tar.gz) = 5501 bytes
