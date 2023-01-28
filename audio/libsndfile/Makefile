@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.92 2023/01/11 18:58:23 adam Exp $
+# $NetBSD: Makefile,v 1.93 2023/01/28 18:12:29 triaxx Exp $
 
 DISTNAME=	libsndfile-1.2.0
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libsndfile/}
 GITHUB_PROJECT=	libsndfile
@@ -39,4 +40,5 @@ CXXFLAGS+=		-features=extensions
 .include "../../lang/python/tool.mk"
 BUILDLINK_API_DEPENDS.libogg+=	libogg>=1.1.3
 .include "../../multimedia/libogg/buildlink3.mk"
+.include "../../mk/terminfo.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
