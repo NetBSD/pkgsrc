@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2022/05/17 18:34:48 pin Exp $
+# $NetBSD: Makefile,v 1.8 2023/01/28 12:46:30 pin Exp $
 
-DISTNAME=	sdorfehs-1.4
+DISTNAME=	sdorfehs-1.5
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jcs/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/jcs/sdorfehs/
 COMMENT=	Tiling window manager descended from ratpoison
 LICENSE=	gnu-gpl-v2
