@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2023/01/25 14:05:16 adam Exp $
+# $NetBSD: Makefile,v 1.43 2023/01/28 19:47:54 he Exp $
 
 DISTNAME=	pandas-1.5.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -26,6 +26,10 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27 37 # py-scipy
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} pandas
+
+# This would otherwise be installed, causing PLIST mismatch
+post-patch:
+	cd ${WRKSRC} && rm -f pandas/_libs/window/aggregations.pyx.orig
 
 .include "../../lang/python/egg.mk"
 BUILDLINK_API_DEPENDS.py-numpy+= ${PYPKGPREFIX}-numpy>=1.23.2
