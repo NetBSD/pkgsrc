@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2022/07/10 20:52:39 pin Exp $
+# $NetBSD: Makefile,v 1.4 2023/01/28 13:10:22 pin Exp $
 
 DISTNAME=	fsrx-1.0.2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=coloradocolby/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/coloradocolby/fsrx/
 COMMENT=	Flow state reading in the terminal
 LICENSE=	mit
