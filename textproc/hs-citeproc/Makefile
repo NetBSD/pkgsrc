@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2022/09/07 06:50:51 pho Exp $
+# $NetBSD: Makefile,v 1.12 2023/01/28 08:45:46 pho Exp $
 
-DISTNAME=	citeproc-0.6.0.1
-PKGREVISION=	5
+DISTNAME=	citeproc-0.8.1
 CATEGORIES=	textproc
 
 MAINTAINER=	pho@cielonegro.org
@@ -10,8 +9,8 @@ LICENSE=	2-clause-bsd
 
 CONFIGURE_ARGS+=	-fexecutable
 
+# lib:citeproc
 .include "../../converters/hs-aeson/buildlink3.mk"
-.include "../../converters/hs-aeson-pretty/buildlink3.mk"
 .include "../../textproc/hs-attoparsec/buildlink3.mk"
 .include "../../textproc/hs-case-insensitive/buildlink3.mk"
 .include "../../devel/hs-data-default/buildlink3.mk"
@@ -24,5 +23,9 @@ CONFIGURE_ARGS+=	-fexecutable
 .include "../../devel/hs-vector/buildlink3.mk"
 .include "../../textproc/hs-xml-conduit/buildlink3.mk"
 .include "../../textproc/hs-rfc5051/buildlink3.mk"
+
+# exe:citeproc
+.include "../../converters/hs-aeson-pretty/buildlink3.mk"
+
 .include "../../mk/haskell.mk"
 .include "../../mk/bsd.pkg.mk"
