@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.197 2023/01/28 02:55:59 pho Exp $
+# $NetBSD: Makefile,v 1.198 2023/01/28 18:23:55 pho Exp $
 #
 
 COMMENT=	Document format and character code converters
@@ -35,6 +35,7 @@ SUBDIR+=	hs-aeson
 SUBDIR+=	hs-aeson-better-errors
 SUBDIR+=	hs-aeson-pretty
 SUBDIR+=	hs-base16-bytestring
+SUBDIR+=	hs-base64
 SUBDIR+=	hs-base64-bytestring
 SUBDIR+=	hs-cborg-json
 SUBDIR+=	hs-deriving-aeson
