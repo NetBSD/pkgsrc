@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/02/16 10:09:04 pho Exp $
+$NetBSD: distinfo,v 1.2 2023/01/28 02:32:44 pho Exp $
 
-BLAKE2s (implicit-hie-0.1.2.6.tar.gz) = 6984dc68970e85cddcaf13e9abf73883bf871b31f76275017daadf3e1a326037
-SHA512 (implicit-hie-0.1.2.6.tar.gz) = 8d707a9ee8285f63d188b2ef9954ba6e35823d4d4e2630d8b34edc2c3b1f57739b30ab747539a5475d4932848f2186d126cb623ac85df8e8fad8182436e0c9b8
-Size (implicit-hie-0.1.2.6.tar.gz) = 9716 bytes
+BLAKE2s (implicit-hie-0.1.4.0.tar.gz) = 3b548ac25042ec3a4d3c6230cc45b7ed8bf3eb83c4204b277b812014fcf130a6
+SHA512 (implicit-hie-0.1.4.0.tar.gz) = 55d96274a61911b86e5154977c639ceb202aaecc0f7e12a4167bd907867cad5b585e99ca43de0673aca8b208d4172eeab5acf689568ec6299865fa38153326cf
+Size (implicit-hie-0.1.4.0.tar.gz) = 9973 bytes
