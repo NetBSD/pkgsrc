@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/01/28 02:55:43 pho Exp $
+
+BLAKE2s (deriving-aeson-0.2.9.tar.gz) = bcaad756b7553b50707b38d0c51e093e6898b80e521878e4ce08044684006c49
+SHA512 (deriving-aeson-0.2.9.tar.gz) = d5112d03e8e117001a88acfed3dde85ba7c8323fbc27169215a6656787caad20faf63563558ac6ef6b8412d2fea38530ed2dcb701e7f3d952cf8ad261b49293a
+Size (deriving-aeson-0.2.9.tar.gz) = 5859 bytes
