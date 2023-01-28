@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.109 2023/01/14 20:11:04 fcambus Exp $
+# $NetBSD: Makefile,v 1.110 2023/01/28 12:26:05 jperkin Exp $
 
 DISTNAME=	binutils-2.40
 CATEGORIES=	devel
@@ -11,6 +11,8 @@ COMMENT=	GNU binary utilities
 LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
 
 CONFLICTS=	avr-binutils<2.13.2.1nb1
+
+STRIP_DEBUG_SUPPORTED=	no
 
 USE_PKGLOCALEDIR=		yes
 REPLACE_LOCALEDIR_PATTERNS+=	Make-in
