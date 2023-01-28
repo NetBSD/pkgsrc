@@ -1,0 +1,5 @@
+Parsing of ISO 8601 dates.
+
+This package is used to parse dates in aeson. It is split into a separate
+package to be shared by other projects that want to parse dates like aeson
+does.

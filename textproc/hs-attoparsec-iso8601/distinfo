@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/01/28 19:56:37 pho Exp $
+
+BLAKE2s (attoparsec-iso8601-1.1.0.0.tar.gz) = cfbbaf5113e5f5ea92a52db80cff625cca7fe1b1bee0b3986f3dc3bdaa095ccc
+SHA512 (attoparsec-iso8601-1.1.0.0.tar.gz) = 4613c2e1b492c4ebf30d1788e8b067592e507e226bd85caacc1844d5a486c1b9c8727117e426763122836205b7341b8603ac15566facd3f0338b55e784f4dfe0
+Size (attoparsec-iso8601-1.1.0.0.tar.gz) = 5564 bytes
