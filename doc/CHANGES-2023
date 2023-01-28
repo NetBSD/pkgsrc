@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.784 2023/01/28 02:40:30 pho Exp $
+$NetBSD: CHANGES-2023,v 1.785 2023/01/28 02:55:50 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -980,3 +980,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/hs-kan-extensions to 5.2.5 [pho 2023-01-28]
 	Updated devel/hs-implicit-hie to 0.1.4.0 [pho 2023-01-28]
 	Updated devel/retrie to 1.2.1.1 [pho 2023-01-28]
+	Added converters/hs-deriving-aeson version 0.2.9 [pho 2023-01-28]
