@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2022/02/12 08:01:36 pho Exp $
+$NetBSD: distinfo,v 1.9 2023/01/28 08:35:37 pho Exp $
 
-BLAKE2s (texmath-0.12.4.tar.gz) = 989ee2b591117027f7d7b11f6d87d32725082377041b68b5285c0be695b84d00
-SHA512 (texmath-0.12.4.tar.gz) = e76f5c8c4756120c8402833826a8ecc0e0a3babf05dc928b68cc3d43e0a3df8dc7aba93b9f8b06ec86ca1453fb460879c34d0d20a346cec8e23c52555f30d00a
-Size (texmath-0.12.4.tar.gz) = 1012215 bytes
+BLAKE2s (texmath-0.12.6.tar.gz) = c163db747457b010d13f480f3ae8cd4751eb703f59aed2ab8173ff21adac6e8b
+SHA512 (texmath-0.12.6.tar.gz) = 2f6deabd94ef15520a18df5e124703f5f5f8660106b57a85d3a79c0455065cc19dcd4b364a9c33a93cd39012b118e5452973830535363b75ca3a611fcc329a45
+Size (texmath-0.12.6.tar.gz) = 1463559 bytes
