@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2022/05/17 18:34:48 pin Exp $
+$NetBSD: distinfo,v 1.7 2023/01/28 12:46:30 pin Exp $
 
-BLAKE2s (sdorfehs-1.4.tar.gz) = 484b318c8889e28272a30764fb831c3a8ef2a1d692e666f562f66f5b48c5ad7c
-SHA512 (sdorfehs-1.4.tar.gz) = 87946b83fa47d17f7c3164e0a20ecb3570ca0f31b8fbad0f1bab13a55b99806071700f001ec6f2b7555e6dd6cf65fada73711b785b9872157ff4fb8ce0e41399
-Size (sdorfehs-1.4.tar.gz) = 120588 bytes
+BLAKE2s (sdorfehs-1.5.tar.gz) = 270d21d0f5eec9401273654b1cc87dbf224f8e8b2b829bbb6552a20ce1f692af
+SHA512 (sdorfehs-1.5.tar.gz) = 2bbb354d186e06b95b1d01e04bc97585121630dd9544ea8b10299dc5f15bc94bbd5cd55cbb72d6f04a3abf930652731b2070810fe908532953af87f02ec06687
+Size (sdorfehs-1.5.tar.gz) = 122223 bytes
 SHA1 (patch-Makefile) = d8e18bb85595776540647e3477cec6c7c94c4432
