@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/01/29 05:15:58 pho Exp $
+
+BLAKE2s (wai-extra-3.1.13.0.tar.gz) = 62958065579e5bf2fd828078bb3916853a8be23be9ab6cb437f4b9c9a89327c9
+SHA512 (wai-extra-3.1.13.0.tar.gz) = ec94ad7fe318543c83dc20586bab04e9cb5cc9a3a96c4392acb1abd22f7a232a703f05051c9580836ad3758875751f02ef53bdc3c450e7d262ba8575761380b8
+Size (wai-extra-3.1.13.0.tar.gz) = 82251 bytes
