@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.194 2022/10/24 07:52:54 fcambus Exp $
+# $NetBSD: Makefile,v 1.195 2023/01/29 08:30:50 pho Exp $
 #
 
 COMMENT=	Archivers and compression tools
@@ -38,6 +38,7 @@ SUBDIR+=	gzrecover
 SUBDIR+=	ha
 SUBDIR+=	heirloom-tar
 SUBDIR+=	hpack
+SUBDIR+=	hs-hslua-module-zip
 SUBDIR+=	hs-tar
 SUBDIR+=	hs-zip-archive
 SUBDIR+=	hs-zlib
