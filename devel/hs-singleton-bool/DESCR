@@ -1,0 +1,4 @@
+Type level booleans.
+
+singletons package provides similar functionality, but it has tight
+dependency constraints.

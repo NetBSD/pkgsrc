@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2023/01/29 04:46:22 pho Exp $
+lib/singleton-bool-${PKGVERSION}/${HS_VERSION}/package-description
+lib/singleton-bool-${PKGVERSION}/${HS_VERSION}/package-id
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Singletons/Bool.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Singletons/Bool.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Singletons/Bool.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+${PLIST.doc}share/doc/${HS_PLATFORM}/singleton-bool-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/${HS_PLATFORM}/singleton-bool-${PKGVERSION}/html/Data-Singletons-Bool.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/singleton-bool-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/singleton-bool-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/singleton-bool-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/singleton-bool-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/singleton-bool-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/singleton-bool-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/singleton-bool-${PKGVERSION}/html/singleton-bool.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/singleton-bool-${PKGVERSION}/html/synopsis.png
