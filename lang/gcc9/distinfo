@@ -1,11 +1,10 @@
-$NetBSD: distinfo,v 1.10 2023/01/01 12:59:39 tsutsui Exp $
+$NetBSD: distinfo,v 1.11 2023/01/29 09:03:15 wiz Exp $
 
-BLAKE2s (gcc-9.3.0.tar.xz) = 5c639411181a47ee872fb45b59ad686402f6422c6cdcfdac995925b58c9373ad
-SHA512 (gcc-9.3.0.tar.xz) = 4b9e3639eef6e623747a22c37a904b4750c93b6da77cf3958d5047e9b5ebddb7eebe091cc16ca0a227c0ecbd2bf3b984b221130f269a97ee4cc18f9cf6c444de
-Size (gcc-9.3.0.tar.xz) = 70533868 bytes
+BLAKE2s (gcc-9.5.0.tar.xz) = 9b2a0eb5aedbaa8a5a09f96fa2bd09cdf7ab22a4c35a89799f55a90dc0ee45d8
+SHA512 (gcc-9.5.0.tar.xz) = cdd144ce4f747e051480410afc8506c90a57cb45da89071ddae377b1453bca3014422455ade9fe4563ebe51f4b6348cbc0c61905a9b8801cd597d51ad0ec62b3
+Size (gcc-9.5.0.tar.xz) = 72462752 bytes
 SHA1 (patch-gcc_Makefile.in) = d96a57a098e49a2c5ea6478dd5d22aba584fc1bc
 SHA1 (patch-gcc_config_sparc_sparc.c) = a415d1b23d6bf0c9c3c492787274929a291b78f2
-SHA1 (patch-gcc_gimplify.c) = f933a033d4a6c11fa82c8c9c6785842ba7993862
 SHA1 (patch-gcc_targhooks.c) = af240cc417e479741d5067063904f827a02295cc
 SHA1 (patch-libgfortran_io_format.c) = 9bbc5e4f6277bdec785b3690fd08259939a2aa1a
 SHA1 (patch-libgfortran_io_list__read.c) = 589cdb8dcd180b781ededc086e8775224fca5779
