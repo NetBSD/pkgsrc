@@ -398,10 +398,11 @@ func (s *Suite) Test_SubstContext_varassignOutsideBlock__append(c *check.C) {
 // For example, in the following snippet from mail/dkim-milter/options.mk
 // revision 1.9, there is a comment, but that is not a rationale and also
 // not related to the SUBST_CLASS variable at all:
-//  ### IPv6 support.
-//  .if !empty(PKG_OPTIONS:Minet6)
-//  SUBST_SED.libs+=        -e 's|@INET6@||g'
-//  .endif
+//
+//	### IPv6 support.
+//	.if !empty(PKG_OPTIONS:Minet6)
+//	SUBST_SED.libs+=        -e 's|@INET6@||g'
+//	.endif
 func (s *Suite) Test_SubstContext_varassignOutsideBlock__rationale(c *check.C) {
 	t := s.Init(c)
 

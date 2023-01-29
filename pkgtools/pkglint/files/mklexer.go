@@ -27,13 +27,16 @@ func NewMkLexer(text string, diag Autofixer) *MkLexer {
 }
 
 // MkTokens splits a text like in the following example:
-//  Text${VAR:Mmodifier}${VAR2}more text${VAR3}
+//
+//	Text${VAR:Mmodifier}${VAR2}more text${VAR3}
+//
 // into tokens like these:
-//  Text
-//  ${VAR:Mmodifier}
-//  ${VAR2}
-//  more text
-//  ${VAR3}
+//
+//	Text
+//	${VAR:Mmodifier}
+//	${VAR2}
+//	more text
+//	${VAR3}
 func (p *MkLexer) MkTokens() ([]*MkToken, string) {
 	lexer := p.lexer
 
@@ -105,11 +108,12 @@ func (p *MkLexer) VarUse() *MkVarUse {
 }
 
 // varUseBrace parses:
-//  ${VAR}
-//  ${arbitrary text:L}
-//  ${variable with invalid chars}
-//  $(PARENTHESES)
-//  ${VAR:Mpattern:C,:,colon,g:Q:Q:Q}
+//
+//	${VAR}
+//	${arbitrary text:L}
+//	${variable with invalid chars}
+//	$(PARENTHESES)
+//	${VAR:Mpattern:C,:,colon,g:Q:Q:Q}
 func (p *MkLexer) varUseBrace(usingRoundParen bool) *MkVarUse {
 	lexer := p.lexer
 

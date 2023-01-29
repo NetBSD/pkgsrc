@@ -121,7 +121,8 @@ func (mkline *MkLine) HasRationale(keywords ...string) bool {
 // '#' is passed uninterpreted to the shell.
 //
 // Example:
-//  VAR=value # comment
+//
+//	VAR=value # comment
 //
 // In the above line, the comment is " comment", including the leading space.
 func (mkline *MkLine) Comment() string { return mkline.splitResult.comment }
@@ -144,9 +145,12 @@ func (mkline *MkLine) IsVarassign() bool {
 // space between the # and the variable name.
 //
 // Example:
-//  #VAR=   value
+//
+//	#VAR=   value
+//
 // Counterexample:
-//  # VAR=  value
+//
+//	# VAR=  value
 func (mkline *MkLine) IsCommentedVarassign() bool {
 	data, ok := mkline.data.(*mkLineAssign)
 	return ok && data.commented
@@ -158,9 +162,12 @@ func (mkline *MkLine) IsCommentedVarassign() bool {
 // space between the # and the variable name.
 //
 // Example:
-//  #VAR=   value
+//
+//	#VAR=   value
+//
 // Counterexample:
-//  # VAR=  value
+//
+//	# VAR=  value
 func (mkline *MkLine) IsVarassignMaybeCommented() bool {
 	_, ok := mkline.data.(*mkLineAssign)
 	return ok
@@ -170,8 +177,9 @@ func (mkline *MkLine) IsVarassignMaybeCommented() bool {
 // target.
 //
 // Example:
-//  pre-configure:    # IsDependency
-//          ${ECHO}   # IsShellCommand
+//
+//	pre-configure:    # IsDependency
+//	        ${ECHO}   # IsShellCommand
 func (mkline *MkLine) IsShellCommand() bool {
 	_, ok := mkline.data.(mkLineShell)
 	return ok
@@ -222,21 +230,24 @@ func (mkline *MkLine) IsDependency() bool {
 // of the variable that is assigned or appended to.
 //
 // Example:
-//  VARNAME.${param}?=      value   # Varname is "VARNAME.${param}"
+//
+//	VARNAME.${param}?=      value   # Varname is "VARNAME.${param}"
 func (mkline *MkLine) Varname() string { return mkline.data.(*mkLineAssign).varname }
 
 // Varcanon applies to variable assignments and returns the canonicalized variable name for parameterized variables.
 // Examples:
-//  HOMEPAGE           => "HOMEPAGE"
-//  SUBST_SED.anything => "SUBST_SED.*"
-//  SUBST_SED.${param} => "SUBST_SED.*"
+//
+//	HOMEPAGE           => "HOMEPAGE"
+//	SUBST_SED.anything => "SUBST_SED.*"
+//	SUBST_SED.${param} => "SUBST_SED.*"
 func (mkline *MkLine) Varcanon() string { return mkline.data.(*mkLineAssign).varcanon }
 
 // Varparam applies to variable assignments and returns the parameter for parameterized variables.
 // Examples:
-//  HOMEPAGE           => ""
-//  SUBST_SED.anything => "anything"
-//  SUBST_SED.${param} => "${param}"
+//
+//	HOMEPAGE           => ""
+//	SUBST_SED.anything => "anything"
+//	SUBST_SED.${param} => "${param}"
 func (mkline *MkLine) Varparam() string { return mkline.data.(*mkLineAssign).varparam }
 
 // Op applies to variable assignments and returns the assignment operator.
@@ -254,10 +265,10 @@ func (mkline *MkLine) Value() string { return mkline.data.(*mkLineAssign).value 
 // FirstLineContainsValue returns whether the variable assignment of a
 // multiline contains a textual value in the first line.
 //
-//  VALUE_IN_FIRST_LINE= value \
-//          starts in first line
-//  NO_VALUE_IN_FIRST_LINE= \
-//          value starts in second line
+//	VALUE_IN_FIRST_LINE= value \
+//	        starts in first line
+//	NO_VALUE_IN_FIRST_LINE= \
+//	        value starts in second line
 func (mkline *MkLine) FirstLineContainsValue() bool {
 	assert(mkline.IsVarassignMaybeCommented())
 	assert(mkline.IsMultiline())
@@ -275,7 +286,8 @@ func (mkline *MkLine) ShellCommand() string { return mkline.data.(mkLineShell).c
 // Indent returns the whitespace between the dot and the directive.
 //
 // For the following example line it returns two spaces:
-//  .  include "other.mk"
+//
+//	.  include "other.mk"
 func (mkline *MkLine) Indent() string {
 	if mkline.IsDirective() {
 		return mkline.data.(*mkLineDirective).indent
@@ -362,8 +374,9 @@ func (mkline *MkLine) SetConditionalVars(varnames []string) {
 // and may thus still appear in the text. Therefore, # marks a shell comment.
 //
 // Example:
-//  input:  ${PREFIX}/bin abc
-//  output: [MkToken("${PREFIX}", MkVarUse("PREFIX")), MkToken("/bin abc")]
+//
+//	input:  ${PREFIX}/bin abc
+//	output: [MkToken("${PREFIX}", MkVarUse("PREFIX")), MkToken("/bin abc")]
 //
 // See ValueTokens, which is the tokenized version of Value.
 func (mkline *MkLine) Tokenize(text string, warn bool) []*MkToken {
@@ -393,11 +406,11 @@ func (mkline *MkLine) Tokenize(text string, warn bool) []*MkToken {
 // ValueSplit splits the given value, taking care of variable references.
 // Example:
 //
-//  ValueSplit("${VAR:Udefault}::${VAR2}two:words", ":")
-//  => "${VAR:Udefault}"
-//     ""
-//     "${VAR2}two"
-//     "words"
+//	ValueSplit("${VAR:Udefault}::${VAR2}two:words", ":")
+//	=> "${VAR:Udefault}"
+//	   ""
+//	   "${VAR2}two"
+//	   "words"
 //
 // Note that even though the first word contains a colon, it is not split
 // at that point since the colon is inside a variable use.
@@ -448,11 +461,11 @@ var notSpace = textproc.Space.Inverse()
 // ValueFields splits the given value in the same way as the :M variable
 // modifier, taking care of variable references. Example:
 //
-//  ValueFields("${VAR:Udefault value} ${VAR2}two words;;; 'word three'")
-//  => "${VAR:Udefault value}"
-//     "${VAR2}two"
-//     "words;;;"
-//     "'word three'"
+//	ValueFields("${VAR:Udefault value} ${VAR2}two words;;; 'word three'")
+//	=> "${VAR:Udefault value}"
+//	   "${VAR2}two"
+//	   "words;;;"
+//	   "'word three'"
 //
 // Note that even though the first word contains a space, it is not split
 // at that point since the space is inside a variable use. Shell tokens
@@ -1071,10 +1084,10 @@ func (vuc *VarUseContext) String() string {
 // An excepting are multiple-inclusion guards, they don't increase the
 // indentation.
 //
-//  Indentation starts with 0 spaces.
-//  Each .if or .for indents all inner directives by 2.
-//  Except for .if with multiple-inclusion guard, which indents all inner directives by 0.
-//  Each .elif, .else, .endif, .endfor uses the outer indentation instead.
+//	Indentation starts with 0 spaces.
+//	Each .if or .for indents all inner directives by 2.
+//	Except for .if with multiple-inclusion guard, which indents all inner directives by 0.
+//	Each .elif, .else, .endif, .endfor uses the outer indentation instead.
 type Indentation struct {
 	levels []indentationLevel
 }
@@ -1219,7 +1232,6 @@ func (ind *Indentation) AddCheckedFile(filename PkgsrcPath) {
 
 // HasExists returns whether the given filename has been tested in an
 // exists(filename) condition and thus may or may not exist.
-//
 func (ind *Indentation) HasExists(filename PkgsrcPath) bool {
 	for _, level := range ind.levels {
 		for _, levelFilename := range level.checkedFiles {
@@ -1327,7 +1339,8 @@ func (ind *Indentation) CheckFinish(filename CurrPath) {
 // which would confuse the devel/bmake parser.
 //
 // TODO: The allowed characters differ between the basename and the parameter
-//  of the variable. The square bracket is only allowed in the parameter part.
+//
+//	of the variable. The square bracket is only allowed in the parameter part.
 var (
 	// TODO: remove the ','
 	VarbaseBytes = textproc.NewByteSet("A-Za-z_0-9-+,")

@@ -1408,7 +1408,7 @@ func (pkg *Package) checkPossibleDowngrade() {
 
 	mkline := pkg.EffectivePkgnameLine
 
-	change := G.Pkgsrc.LastChange[pkg.Pkgpath]
+	change := G.Pkgsrc.changes.LastChange[pkg.Pkgpath]
 	if change == nil {
 		if trace.Tracing {
 			trace.Stepf("No change log for package %q", pkg.Pkgpath)
@@ -1579,8 +1579,8 @@ func (pkg *Package) checkOwnerMaintainer(filename CurrPath) {
 }
 
 func (pkg *Package) checkFreeze(filename CurrPath) {
-	freezeStart := G.Pkgsrc.LastFreezeStart
-	if freezeStart == "" || G.Pkgsrc.LastFreezeEnd != "" {
+	freezeStart := G.Pkgsrc.changes.LastFreezeStart
+	if freezeStart == "" || G.Pkgsrc.changes.LastFreezeEnd != "" {
 		return
 	}
 
@@ -1751,7 +1751,8 @@ func (pkg *Package) File(relativeFileName PackagePath) CurrPath {
 // the package directory.
 //
 // Example:
-//  NewPackage("category/package").Rel("other/package") == "../../other/package"
+//
+//	NewPackage("category/package").Rel("other/package") == "../../other/package"
 func (pkg *Package) Rel(filename CurrPath) PackagePath {
 	return NewPackagePath(G.Pkgsrc.Relpath(pkg.dir, filename))
 }

@@ -177,25 +177,25 @@ func (line *Line) String() string {
 //
 // Usage:
 //
-//  fix := line.Autofix()
+//	fix := line.Autofix()
 //
-//  fix.Errorf("Must not be ...")
-//  fix.Warnf("Should not be ...")
-//  fix.Notef("It is also possible ...")
-//  fix.Silent()
+//	fix.Errorf("Must not be ...")
+//	fix.Warnf("Should not be ...")
+//	fix.Notef("It is also possible ...")
+//	fix.Silent()
 //
-//  fix.Explain(
-//      "Explanation ...",
-//      "... end of explanation.")
+//	fix.Explain(
+//	    "Explanation ...",
+//	    "... end of explanation.")
 //
-//  fix.Replace("from", "to")
-//  fix.ReplaceAfter("prefix", "from", "to")
-//  fix.InsertAbove("new line")
-//  fix.InsertBelow("new line")
-//  fix.Delete()
-//  fix.Custom(func(showAutofix, autofix bool) {})
+//	fix.Replace("from", "to")
+//	fix.ReplaceAfter("prefix", "from", "to")
+//	fix.InsertAbove("new line")
+//	fix.InsertBelow("new line")
+//	fix.Delete()
+//	fix.Custom(func(showAutofix, autofix bool) {})
 //
-//  fix.Apply()
+//	fix.Apply()
 func (line *Line) Autofix() *Autofix {
 	if line.fix == nil {
 		line.fix = NewAutofix(line)

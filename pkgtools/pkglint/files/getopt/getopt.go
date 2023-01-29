@@ -22,11 +22,12 @@ func NewOptions() *Options {
 // AddFlagGroup adds an option that takes multiple flag values.
 //
 // Example:
-//  var extra bool
 //
-//  opts := NewOptions()
-//  warnings := opts.AddFlagGroup('W', "warnings", "warning,...", "Enable the given warnings")
-//  warnings.AddFlagVar("extra", &extra, false, "Print extra warnings")
+//	var extra bool
+//
+//	opts := NewOptions()
+//	warnings := opts.AddFlagGroup('W', "warnings", "warning,...", "Enable the given warnings")
+//	warnings.AddFlagVar("extra", &extra, false, "Print extra warnings")
 func (o *Options) AddFlagGroup(shortName rune, longName, argsName, description string) *FlagGroup {
 	grp := new(FlagGroup)
 	opt := option{shortName, longName, argsName, description, grp}
@@ -37,16 +38,18 @@ func (o *Options) AddFlagGroup(shortName rune, longName, argsName, description s
 // AddFlagVar adds a boolean flag to the options.
 //
 // Example:
-//  var verbose bool
 //
-//  opts := NewOptions()
-//  opts.AddFlagVar('v', "verbose", &verbose, false, "Enable verbose output")
+//	var verbose bool
+//
+//	opts := NewOptions()
+//	opts.AddFlagVar('v', "verbose", &verbose, false, "Enable verbose output")
 //
 // This option can be used in the following ways:
-//  -v
-//  --verbose
-//  --verbose=on    (or yes, 1, true, enabled)
-//  --verbose=off   (or no, 0, false, disabled)
+//
+//	-v
+//	--verbose
+//	--verbose=on    (or yes, 1, true, enabled)
+//	--verbose=off   (or no, 0, false, disabled)
 func (o *Options) AddFlagVar(shortName rune, longName string, pflag *bool, defval bool, description string) {
 	*pflag = defval
 	opt := option{shortName, longName, "", description, pflag}
@@ -56,15 +59,17 @@ func (o *Options) AddFlagVar(shortName rune, longName string, pflag *bool, defva
 // AddStrVar adds a string option to the options.
 //
 // Example:
-//  var outputFilename string
 //
-//  opts := NewOptions()
-//  opts.AddStrVar('o', "output", &outputFilename, "", "Write the output to the given file")
+//	var outputFilename string
+//
+//	opts := NewOptions()
+//	opts.AddStrVar('o', "output", &outputFilename, "", "Write the output to the given file")
 //
 // This option can be used in the following ways:
-//  -o output.txt
-//  --output output.txt
-//  --output=output.txt
+//
+//	-o output.txt
+//	--output output.txt
+//	--output=output.txt
 func (o *Options) AddStrVar(shortName rune, longName string, pstr *string, defval string, description string) {
 	*pstr = defval
 	opt := option{shortName, longName, "", description, pstr}
@@ -74,15 +79,17 @@ func (o *Options) AddStrVar(shortName rune, longName string, pstr *string, defva
 // AddStrList adds a string option to the options that can be used multiple times.
 //
 // Example:
-//  var includes []string
 //
-//  opts := NewOptions()
-//  opts.AddStrList('i', "include", &includes, nil, "Include the files matching the pattern")
+//	var includes []string
+//
+//	opts := NewOptions()
+//	opts.AddStrList('i', "include", &includes, nil, "Include the files matching the pattern")
 //
 // This option can be used in the following ways:
-//  -i "*.txt" -i "*.docx"
-//  --include "*.txt" --include "*.md"
-//  --include="*.txt" --include="*.md"
+//
+//	-i "*.txt" -i "*.docx"
+//	--include "*.txt" --include "*.md"
+//	--include="*.txt" --include="*.md"
 func (o *Options) AddStrList(shortName rune, longName string, plist *[]string, description string) {
 	*plist = []string{}
 	opt := option{shortName, longName, "", description, plist}

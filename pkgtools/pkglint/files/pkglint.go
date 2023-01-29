@@ -671,7 +671,7 @@ func (p *Pkglint) checkReg(filename CurrPath, basename RelPath, depth int, pkg *
 
 	case basename.HasPrefixText("CHANGES-"):
 		// This only checks the file but doesn't register the changes globally.
-		_ = p.Pkgsrc.loadDocChangesFromFile(filename, true)
+		_ = (&Changes{}).parseFile(filename, true)
 
 	case filename.Dir().HasBase("files"):
 		// Skip files directly in the files/ directory, but not those further down.

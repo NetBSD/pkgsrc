@@ -87,20 +87,23 @@ func (reg *VarTypeRegistry) DefineName(varname string, basicType *BasicType, opt
 // individually.
 //
 // A permission entry looks like this:
-//  "Makefile, Makefile.*, *.mk: default, set, append, use, use-loadtime"
+//
+//	"Makefile, Makefile.*, *.mk: default, set, append, use, use-loadtime"
+//
 // Only certain filenames are allowed in the part before the colon,
 // to prevent typos. To use arbitrary filenames, prefix them with
 // "special:".
 //
 // Each variable that uses this function directly must document:
-//  - which of the predefined permission sets is the closest
-//  - how this individual permission set differs
-//  - why the predefined permission set is not good enough
-//  - which packages need this custom permission set.
+//   - which of the predefined permission sets is the closest
+//   - how this individual permission set differs
+//   - why the predefined permission set is not good enough
+//   - which packages need this custom permission set.
 //
 // TODO: When prefixed with "infra:", the entry should only
-//  apply to files within the pkgsrc infrastructure. Without this prefix,
-//  the pattern should only apply to files outside the pkgsrc infrastructure.
+//
+//	apply to files within the pkgsrc infrastructure. Without this prefix,
+//	the pattern should only apply to files outside the pkgsrc infrastructure.
 func (reg *VarTypeRegistry) acl(varname string, basicType *BasicType, options vartypeOptions, aclEntries ...string) {
 	parsedEntries := reg.parseACLEntries(varname, aclEntries...)
 	reg.Define(varname, basicType, options, parsedEntries)
@@ -110,10 +113,10 @@ func (reg *VarTypeRegistry) acl(varname string, basicType *BasicType, options va
 // the permissions individually.
 //
 // Each variable that uses this function directly must document:
-//  - which of the predefined permission sets is the closest
-//  - how this individual permission set differs
-//  - why the predefined permission set is not good enough
-//  - which packages need this custom permission set.
+//   - which of the predefined permission sets is the closest
+//   - how this individual permission set differs
+//   - why the predefined permission set is not good enough
+//   - which packages need this custom permission set.
 func (reg *VarTypeRegistry) acllist(varname string, basicType *BasicType, options vartypeOptions, aclEntries ...string) {
 	reg.acl(varname, basicType, options|List, aclEntries...)
 }
@@ -206,7 +209,8 @@ func (reg *VarTypeRegistry) pkglistbl3rat(varname string, basicType *BasicType) 
 // when these files are included.
 //
 // TODO: These timing issues should be handled separately from the permissions.
-//  They can be made more precise.
+//
+//	They can be made more precise.
 func (reg *VarTypeRegistry) sys(varname string, basicType *BasicType, options ...vartypeOptions) {
 	reg.DefineName(varname, basicType, reg.options(SystemProvided, options), "sys")
 }

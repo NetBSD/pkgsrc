@@ -122,9 +122,10 @@ func (q ShQuoting) ToVarUseContext() VucQuoting {
 // ShToken is an operator or a keyword or some text intermingled with variables.
 //
 // Examples:
-//  ;
-//  then
-//  "The number of pkgsrc packages in ${PREFIX} is $$packages."
+//
+//	;
+//	then
+//	"The number of pkgsrc packages in ${PREFIX} is $$packages."
 //
 // See http://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_10_02
 type ShToken struct {

@@ -1301,7 +1301,7 @@ func (s *Suite) Test_VartypeCheck_LdFlag(c *check.C) {
 		"anything")
 
 	vt.Output(
-		"WARN: filename.mk:6: Please use \"${COMPILER_RPATH_FLAG}\" instead of \"-Wl,--rpath\".",
+		"WARN: filename.mk:6: Please use ${COMPILER_RPATH_FLAG} instead of \"-Wl,--rpath,\".",
 		"WARN: filename.mk:13: \"-DMACRO\" is a compiler flag "+
 			"and belongs on CFLAGS, CPPFLAGS, CXXFLAGS or FFLAGS instead of LDFLAGS.",
 		"WARN: filename.mk:14: \"-UMACRO\" is a compiler flag "+
