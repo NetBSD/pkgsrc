@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22579 2023/01/28 08:45:55 pho Exp $
+$NetBSD: TODO,v 1.22580 2023/01/29 08:30:55 wiz Exp $
 
 Suggested new packages
 ======================
@@ -379,10 +379,11 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o GNUMail-1.2.2
 	o Gorm-1.2.26
 	o HElib-2.1.0
+	o ImageMagick-7.1.0.59
 	o ImageMagick6-6.9.12.8
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
-	o MesaLib-22.3.3
+	o MesaLib-22.3.4
 	o OdfConverter-4.0
 	o PACK-0.0.4
 	o Pantomime-1.2.2
@@ -644,10 +645,12 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o felt-3.07 [wip]
 	o fet-6.0.1
 	o filerunner-14.06.18.10
+	o filezilla-3.63.1
 	o flashplayer-0.4.13
 	o flatbuffers-1.12.0
 	o flow-tools-0.411
 	o fluent-bit-1.7.4
+	o fontconfig-2.14.2
 	o foomatic-filters-4.0.12
 	o foomatic4-db-20210421
 	o fop-2.6
@@ -717,6 +720,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o global-6.6.5
 	o glom-1.14.2
 	o gloox-1.0.24
+	o glow-1.5.0
 	o glusterfs-9.1
 	o gmic-2.9.7
 	o gnet1-1.1.9
@@ -774,6 +778,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gst-plugins1-omx-1.10.0
 	o gst-rtsp-server-1.20.3 [needs libcgroup]
 	o gstreamer1-1.22.0
+	o gtexinfo-7.0.2
 	o gthumb-3.4.0
 	o gtklevel9-5.1
 	o gtklife-5.2
@@ -880,6 +885,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o krita-5.1.3
 	o kronolith-4.2.14
 	o ktorrent3-3.3.4
+	o kubo-0.18.0
 	o lastpass-cli-1.3.3
 	o latexmk-472b
 	o lbdb-49
@@ -894,6 +900,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libburn-1.5.4
 	o libcap-2.49
 	o libcarddav-14.0.13
+	o libcares-1.19.0
 	o libcec-6.0.2
 	o libdbusmenu-glib-16.04.0
 	o libdbusmenu-gtk-16.04.0
@@ -1140,7 +1147,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pam-krb5-4.10
 	o pam-passwdqc-2.0.2
 	o pam-yubico-2.21
-	o pandoc-3.0
+	o pandoc-3.0.1
 	o paperkey-1.6
 	o papirus-folders-1.8.0
 	o paprefs-1.1
@@ -1406,7 +1413,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o swi-prolog-jpl-8.3.22
 	o swi-prolog-lite-8.3.22
 	o swi-prolog-packages-8.3.22
-	o syft-0.68.0
+	o syft-0.68.1
 	o sympa-6.2.70
 	o sysinfo-4.2.2
 	o system-tools-backends-2.10.1
