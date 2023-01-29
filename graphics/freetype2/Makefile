@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.127 2022/11/12 09:10:23 nikita Exp $
+# $NetBSD: Makefile,v 1.128 2023/01/29 13:42:10 ryoon Exp $
 
 DISTNAME=	freetype-2.12.1
 PKGNAME=	${DISTNAME:S/-/2-/}
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=freetype/}
 MASTER_SITES+=	https://download.savannah.gnu.org/releases/freetype/
@@ -54,6 +55,7 @@ post-configure:
 	${MKDIR} ${WRKSRC}/.libs
 .endif
 
+.include "../../archivers/brotli/buildlink3.mk"
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
