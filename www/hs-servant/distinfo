@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/01/29 04:56:23 pho Exp $
+
+BLAKE2s (servant-0.19.1.tar.gz) = 44db357ee9b81aa5a34f7fec835795726febb9faf0ed5c183765bdd69cb53264
+SHA512 (servant-0.19.1.tar.gz) = f99ed533f6b0ef819880622509cb452ef53e45a950b0712e56393721e61784b98040336fbed01a097a1da08dbfaa4afc8a515b46dea85218a0ae3b4bf9101124
+Size (servant-0.19.1.tar.gz) = 54728 bytes
