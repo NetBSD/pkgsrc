@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1 2023/01/29 08:04:03 pho Exp $
+lib/wai-cors-${PKGVERSION}/${HS_VERSION}/package-description
+lib/wai-cors-${PKGVERSION}/${HS_VERSION}/package-id
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Network/Wai/Middleware/Cors.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Network/Wai/Middleware/Cors.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Network/Wai/Middleware/Cors.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+${PLIST.doc}share/doc/${HS_PLATFORM}/wai-cors-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/${HS_PLATFORM}/wai-cors-${PKGVERSION}/html/Network-Wai-Middleware-Cors.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/wai-cors-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/wai-cors-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/wai-cors-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/wai-cors-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/wai-cors-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/wai-cors-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/wai-cors-${PKGVERSION}/html/synopsis.png
+${PLIST.doc}share/doc/${HS_PLATFORM}/wai-cors-${PKGVERSION}/html/wai-cors.haddock
+share/${HS_PLATFORM}/wai-cors-${PKGVERSION}/CHANGELOG.md
+share/${HS_PLATFORM}/wai-cors-${PKGVERSION}/README.md
+share/${HS_PLATFORM}/wai-cors-${PKGVERSION}/examples/Scotty.hs
+share/${HS_PLATFORM}/wai-cors-${PKGVERSION}/examples/ServantWai.hs
+share/${HS_PLATFORM}/wai-cors-${PKGVERSION}/examples/Wai.hs
+share/${HS_PLATFORM}/wai-cors-${PKGVERSION}/test/index.html
+share/${HS_PLATFORM}/wai-cors-${PKGVERSION}/test/phantomjs.js

@@ -1,0 +1,2 @@
+This package provides an implemenation of Cross-Origin resource sharing
+(CORS) for Wai that aims to be compliant with http://www.w3.org/TR/cors
