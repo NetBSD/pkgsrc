@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3891 2023/01/29 04:51:17 pho Exp $
+# $NetBSD: Makefile,v 1.3892 2023/01/29 05:49:53 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -3196,7 +3196,6 @@ SUBDIR+=	ruby-pathutil
 SUBDIR+=	ruby-pkg-config
 SUBDIR+=	ruby-polyglot
 SUBDIR+=	ruby-posix-spawn
-SUBDIR+=	ruby-power_assert
 SUBDIR+=	ruby-priority-queue
 SUBDIR+=	ruby-protobuf-cucumber
 SUBDIR+=	ruby-pycall
