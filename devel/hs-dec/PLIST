@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2023/01/29 04:43:43 pho Exp $
+lib/dec-${PKGVERSION}/${HS_VERSION}/package-description
+lib/dec-${PKGVERSION}/${HS_VERSION}/package-id
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Type/Dec.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Type/Dec.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Type/Dec.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${PLIST.doc}share/doc/${HS_PLATFORM}/dec-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/${HS_PLATFORM}/dec-${PKGVERSION}/html/Data-Type-Dec.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/dec-${PKGVERSION}/html/dec.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/dec-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/dec-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/dec-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/dec-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/dec-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/dec-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/dec-${PKGVERSION}/html/synopsis.png
