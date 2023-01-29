@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.34 2023/01/23 19:26:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.35 2023/01/29 11:19:37 adam Exp $
 share/doc/gnuradio-${PKGVERSION}/html/ConstellationDisplayPlot_8h.html
 share/doc/gnuradio-${PKGVERSION}/html/ConstellationDisplayPlot_8h__dep__incl.map
 share/doc/gnuradio-${PKGVERSION}/html/ConstellationDisplayPlot_8h__dep__incl.md5
@@ -9141,9 +9141,6 @@ share/doc/gnuradio-${PKGVERSION}/html/plot__raster_8h__incl.md5
 share/doc/gnuradio-${PKGVERSION}/html/plot__raster_8h__incl.svg
 share/doc/gnuradio-${PKGVERSION}/html/plot__raster_8h_source.html
 share/doc/gnuradio-${PKGVERSION}/html/plot__waterfall_8h.html
-share/doc/gnuradio-${PKGVERSION}/html/plot__waterfall_8h__dep__incl.map
-share/doc/gnuradio-${PKGVERSION}/html/plot__waterfall_8h__dep__incl.md5
-share/doc/gnuradio-${PKGVERSION}/html/plot__waterfall_8h__dep__incl.svg
 share/doc/gnuradio-${PKGVERSION}/html/plot__waterfall_8h__incl.map
 share/doc/gnuradio-${PKGVERSION}/html/plot__waterfall_8h__incl.md5
 share/doc/gnuradio-${PKGVERSION}/html/plot__waterfall_8h__incl.svg
