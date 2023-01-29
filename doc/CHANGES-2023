@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.840 2023/01/29 15:50:18 pho Exp $
+$NetBSD: CHANGES-2023,v 1.841 2023/01/29 15:56:20 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1064,3 +1064,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated multimedia/vlc to 3.0.18 [ryoon 2023-01-29]
 	Updated cad/klayout to 0.28.3 [mef 2023-01-29]
 	Updated devel/hs-stm-hamt to 1.2.0.8 [pho 2023-01-29]
+	Updated devel/hs-pointed to 5.0.4 [pho 2023-01-29]
