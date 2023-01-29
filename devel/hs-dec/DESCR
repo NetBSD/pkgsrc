@@ -1,0 +1,7 @@
+This package provides a Dec type.
+
+  type Neg a = a -> Void
+
+  data Dec a
+      = Yes a
+      | No (Neg a)
