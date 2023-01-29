@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/01/29 04:46:22 pho Exp $
+
+BLAKE2s (singleton-bool-0.1.6.tar.gz) = 252c44ed17f3ba131ad49ce2b2933f48578de68691e9fe257f021306cf564f95
+SHA512 (singleton-bool-0.1.6.tar.gz) = 7f14909f672aa18e0c2064fb735f894a01d5a450e6fc7a6ac28fa5cc7dd1fb2ea1a5a58a0654a98d79aae49a4c537ace5d5f6eb30e68fe0e69e0992e7e510b86
+Size (singleton-bool-0.1.6.tar.gz) = 3842 bytes
