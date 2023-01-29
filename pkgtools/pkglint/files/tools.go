@@ -61,21 +61,21 @@ func (tool *Tool) String() string {
 //
 // Additionally, all allowed cases from UsableAtRunTime are allowed.
 //
-//  VAR:=   ${TOOL}           # Not allowed since bsd.prefs.mk is not
-//                            # included yet.
+//	VAR:=   ${TOOL}           # Not allowed since bsd.prefs.mk is not
+//	                          # included yet.
 //
-//  .include "../../bsd.prefs.mk"
+//	.include "../../bsd.prefs.mk"
 //
-//  VAR:=   ${TOOL}           # Allowed.
-//  VAR!=   ${TOOL}           # Allowed.
+//	VAR:=   ${TOOL}           # Allowed.
+//	VAR!=   ${TOOL}           # Allowed.
 //
-//  VAR=    ${${TOOL}:sh}     # Allowed; the :sh modifier is evaluated
-//                            # lazily, but when VAR should ever be
-//                            # evaluated at load time, this still means
-//                            # load time.
+//	VAR=    ${${TOOL}:sh}     # Allowed; the :sh modifier is evaluated
+//	                          # lazily, but when VAR should ever be
+//	                          # evaluated at load time, this still means
+//	                          # load time.
 //
-//  .if ${TOOL:T} == "tool"   # Allowed.
-//  .endif
+//	.if ${TOOL:T} == "tool"   # Allowed.
+//	.endif
 func (tool *Tool) UsableAtLoadTime(seenPrefs bool) bool {
 	return seenPrefs && tool.Validity == AfterPrefsMk
 }
@@ -84,23 +84,23 @@ func (tool *Tool) UsableAtLoadTime(seenPrefs bool) bool {
 // in all {pre,do,post}-* targets, and by its variable name in all
 // runtime contexts.
 //
-//  VAR:=   ${TOOL}           # Not allowed; TOOL might not be initialized yet.
-//  VAR!=   ${TOOL}           # Not allowed; TOOL might not be initialized yet.
+//	VAR:=   ${TOOL}           # Not allowed; TOOL might not be initialized yet.
+//	VAR!=   ${TOOL}           # Not allowed; TOOL might not be initialized yet.
 //
-//  VAR=    ${${TOOL}:sh}     # Probably ok; the :sh modifier is evaluated at
-//                            # run time. But if VAR should ever be evaluated
-//                            # at load time (see the "Not allowed" cases
-//                            # above), it doesn't work. As of January 2019,
-//                            # pkglint cannot reliably distinguish these cases.
+//	VAR=    ${${TOOL}:sh}     # Probably ok; the :sh modifier is evaluated at
+//	                          # run time. But if VAR should ever be evaluated
+//	                          # at load time (see the "Not allowed" cases
+//	                          # above), it doesn't work. As of January 2019,
+//	                          # pkglint cannot reliably distinguish these cases.
 //
-//  own-target:
-//          ${TOOL}           # Allowed.
-//          tool              # Not allowed because the PATH might not be set
-//                            # up for this target.
+//	own-target:
+//	        ${TOOL}           # Allowed.
+//	        tool              # Not allowed because the PATH might not be set
+//	                          # up for this target.
 //
-//  pre-configure:
-//          ${TOOL}           # Allowed.
-//          tool              # Allowed.
+//	pre-configure:
+//	        ${TOOL}           # Allowed.
+//	        tool              # Allowed.
 func (tool *Tool) UsableAtRunTime() bool {
 	return tool.Validity == AtRunTime || tool.Validity == AfterPrefsMk
 }

@@ -508,7 +508,8 @@ func init() {
 }
 
 // TODO: Move these values to VarTypeRegistry.Init and read them from the
-//  pkgsrc infrastructure files, as far as possible.
+//
+//	pkgsrc infrastructure files, as far as possible.
 const (
 	// See mk/emulator/emulator-vars.mk.
 	emulOpsysValues = "" +

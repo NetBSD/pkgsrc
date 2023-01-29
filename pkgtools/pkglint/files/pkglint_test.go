@@ -267,26 +267,26 @@ func (s *Suite) Test_Pkglint_Main__autofix_exitcode(c *check.C) {
 
 // Run pkglint in a realistic environment.
 //
-//  env \
-//  PKGLINT_TESTDIR="..." \
-//  PKGLINT_TESTCMDLINE="-r" \
-//  go test -covermode=count -test.coverprofile pkglint.cov
+//	env \
+//	PKGLINT_TESTDIR="..." \
+//	PKGLINT_TESTCMDLINE="-r" \
+//	go test -covermode=count -test.coverprofile pkglint.cov
 //
-//  go tool cover -html=pkglint.cov -o coverage.html
+//	go tool cover -html=pkglint.cov -o coverage.html
 //
 // To measure the branch coverage of pkglint checking a complete pkgsrc installation,
 // install https://github.com/rillig/gobco and adjust the following code:
 //
-//  env \
-//      PKGLINT_TESTDIR="C:/Users/rillig/git/pkgsrc" \
-//      PKGLINT_TESTCMDLINE="-r -Wall -Call -p -s -e" \
-//  gobco \
-//      -test=-test.covermode=count
-//      -test=-test.coverprofile="C:/Users/rillig/go/src/netbsd.org/pkglint/stats-go.txt"
-//      -test=-timeout=3600s \
-//      -test=-check.f="^Test_Pkglint_Main__realistic" \
-//      -stats="stats-gobco.json" \
-//      > out
+//	env \
+//	    PKGLINT_TESTDIR="C:/Users/rillig/git/pkgsrc" \
+//	    PKGLINT_TESTCMDLINE="-r -Wall -Call -p -s -e" \
+//	gobco \
+//	    -test=-test.covermode=count
+//	    -test=-test.coverprofile="C:/Users/rillig/go/src/netbsd.org/pkglint/stats-go.txt"
+//	    -test=-timeout=3600s \
+//	    -test=-check.f="^Test_Pkglint_Main__realistic" \
+//	    -stats="stats-gobco.json" \
+//	    > out
 //
 // Note that the path to -test.coverprofile must be absolute, since gobco
 // runs "go test" in a temporary directory.

@@ -119,6 +119,7 @@ func (ck MkLineChecker) checkTextRpath(text string) {
 		return
 	}
 
+	// See VartypeCheck.LdFlag.
 	if m, flag := match1(text, `(-Wl,--rpath,|-Wl,-rpath-link,|-Wl,-rpath,|-Wl,-R\b)`); m {
 		mkline.Warnf("Please use ${COMPILER_RPATH_FLAG} instead of %q.", flag)
 	}

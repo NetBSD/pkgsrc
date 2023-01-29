@@ -283,12 +283,13 @@ func (p *ShTokenizer) shAtomDquotBacktSquot() *ShAtom {
 // shAtomInternal reads the next shtText or shtShVarUse.
 //
 // Examples:
-//  while
-//  text$$,text
-//  $$!
-//  $$$$
-//  text
-//  ${var:=default}
+//
+//	while
+//	text$$,text
+//	$$!
+//	$$$$
+//	text
+//	${var:=default}
 func (p *ShTokenizer) shAtomInternal(q ShQuoting, dquot, squot bool) *ShAtom {
 	if shVarUse := p.shVarUse(q); shVarUse != nil {
 		p.inWord = true
