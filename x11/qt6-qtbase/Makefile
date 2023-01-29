@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2023/01/03 17:38:33 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/01/29 16:24:32 he Exp $
 
 DISTNAME=	qtbase-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qtbase-${QTVERSION}
@@ -250,4 +250,5 @@ BUILDLINK_API_DEPENDS.libxcb+=	libxcb>=1.11
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/krb5.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
