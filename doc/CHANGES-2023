@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.831 2023/01/29 10:47:44 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.832 2023/01/29 10:58:11 js Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1037,3 +1037,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added time/p5-Date-Range version 1.41 [wiz 2023-01-29]
 	Updated finance/p5-Finance-Quote to 1.53nb1 [wiz 2023-01-29]
 	Updated lang/gcc8 to 8.5.0 [wiz 2023-01-29]
+	Updated chat/element-web to 1.11.20 [js 2023-01-29]
