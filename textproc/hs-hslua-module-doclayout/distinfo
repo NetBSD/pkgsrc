@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/01/29 08:26:41 pho Exp $
+
+BLAKE2s (hslua-module-doclayout-1.0.4.tar.gz) = 87f547a676fd128ab09d0431bbac70de846905ca13c3b93dfff523b934b239ef
+SHA512 (hslua-module-doclayout-1.0.4.tar.gz) = 2a72e3bf2ccc407ac3208e256216cff4d8b6c80f1378c859c2361e5d932f5e513283a234902221f295db3cdb73cadecd164e59cc7a06d493b3227372b218d0da
+Size (hslua-module-doclayout-1.0.4.tar.gz) = 10184 bytes
