@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2023/01/13 22:31:03 js Exp $
+# $NetBSD: Makefile,v 1.19 2023/01/29 10:58:02 js Exp $
 
 DISTNAME=	element-v${PKGVERSION_NOREV}
-PKGNAME=	element-web-1.11.17
+PKGNAME=	element-web-1.11.20
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=vector-im/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
