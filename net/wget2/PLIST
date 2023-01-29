@@ -1,31 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2021/10/03 13:41:11 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/01/29 12:46:32 ryoon Exp $
 bin/wget2
 include/wget.h
 include/wgetver.h
 lib/libwget.la
-lib/libwget_alloc.la
-lib/libwget_common.la
-lib/libwget_css.la
-lib/libwget_decompress.la
-lib/libwget_dns.la
-lib/libwget_dnscache.la
-lib/libwget_encoding.la
-lib/libwget_hashfile.la
-lib/libwget_hpkp_db.la
-lib/libwget_hsts.la
-lib/libwget_http_parse.la
-lib/libwget_io.la
-lib/libwget_ip.la
-lib/libwget_iri.la
-lib/libwget_logger.la
-lib/libwget_metalink.la
-lib/libwget_netrc.la
-lib/libwget_ocsp.la
-lib/libwget_progress.la
-lib/libwget_robots.la
-lib/libwget_thread.la
-lib/libwget_tls_session.la
-lib/libwget_xml.la
 lib/pkgconfig/libwget.pc
 share/locale/ca/LC_MESSAGES/wget2.mo
 share/locale/cs/LC_MESSAGES/wget2.mo
