@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.809 2023/01/29 01:47:30 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.810 2023/01/29 04:43:49 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1015,3 +1015,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated finance/gnucash to 4.13nb3 [wiz 2023-01-28]
 	Updated games/dMagnetic to 0.36 [wiz 2023-01-28]
 	Updated devel/swagger-codegen to 3.0.40 [schmonz 2023-01-29]
+	Added devel/hs-dec version 0.0.5 [pho 2023-01-29]
