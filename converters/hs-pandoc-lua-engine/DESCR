@@ -1,0 +1,2 @@
+This package provides a pandoc scripting engine based on Lua. It allows to
+write filters, custom readers, and custom writers in Lua.
