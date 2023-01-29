@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2022/08/29 15:30:03 wiz Exp $
+$NetBSD: distinfo,v 1.7 2023/01/29 10:09:41 pho Exp $
 
-BLAKE2s (pandoc-2.17.1.1.tar.gz) = e76b81abde9b9c97776d458d47024ee3cbca3dc732feb3e5e393bb0fdfe8df1b
-SHA512 (pandoc-2.17.1.1.tar.gz) = 1402240d094d62e071349d87d0a2ffe3e82269a80c82a39cefc7c2938ac86594011459068c1dd526127d72dd8c20816896d5c38761e9691370fa11190ec51b06
-Size (pandoc-2.17.1.1.tar.gz) = 7180959 bytes
-SHA1 (patch-pandoc.cabal) = 5d310ef81d9d2d8c9c06db84ac27d352fa978c2d
+BLAKE2s (pandoc-cli-0.1.tar.gz) = abf56c51b167bfd9dade3c30595bd8ce23bb1d3c8828e01bd8289d4178679d1f
+SHA512 (pandoc-cli-0.1.tar.gz) = f6b657275704446f7d9cd9b61e4be40c6d793a5d3c72ac8c4da4987cb7c6ff46119ce305bcb7e791ca51dffb458d0e6b549ae0f60228196854b8709d811bec01
+Size (pandoc-cli-0.1.tar.gz) = 10520 bytes
