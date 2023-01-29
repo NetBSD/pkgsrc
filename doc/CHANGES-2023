@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.842 2023/01/29 16:03:02 pho Exp $
+$NetBSD: CHANGES-2023,v 1.843 2023/01/29 20:04:03 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1066,3 +1066,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/hs-stm-hamt to 1.2.0.8 [pho 2023-01-29]
 	Updated devel/hs-pointed to 5.0.4 [pho 2023-01-29]
 	Updated devel/hs-monoidal-containers to 0.6.3.0 [pho 2023-01-29]
+	Updated editors/tp-note to 1.20.1 [pin 2023-01-29]
