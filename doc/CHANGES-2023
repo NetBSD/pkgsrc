@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.822 2023/01/29 08:39:29 pho Exp $
+$NetBSD: CHANGES-2023,v 1.823 2023/01/29 09:03:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1028,3 +1028,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added textproc/hs-hslua-module-doclayout version 1.0.4 [pho 2023-01-29]
 	Added archivers/hs-hslua-module-zip version 1.0.0 [pho 2023-01-29]
 	Added lang/hs-hslua-cli version 1.2.0 [pho 2023-01-29]
+	Updated lang/gcc9 to 9.5.0 [wiz 2023-01-29]
