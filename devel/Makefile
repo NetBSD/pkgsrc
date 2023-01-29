@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3889 2023/01/29 04:44:03 pho Exp $
+# $NetBSD: Makefile,v 1.3890 2023/01/29 04:46:37 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -681,6 +681,7 @@ SUBDIR+=	hs-semver-range
 SUBDIR+=	hs-serialise
 SUBDIR+=	hs-setlocale
 SUBDIR+=	hs-shelly
+SUBDIR+=	hs-singleton-bool
 SUBDIR+=	hs-some
 SUBDIR+=	hs-sorted-list
 SUBDIR+=	hs-split
