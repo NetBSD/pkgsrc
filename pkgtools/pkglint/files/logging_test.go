@@ -597,7 +597,8 @@ func (s *Suite) Test_Logger_writeSource__fatal_with_show_autofix(c *check.C) {
 // output lines.
 //
 // TODO: Giving the diagnostics again would be useful, but the warning and
-//  error counters should not be affected, as well as the exitcode.
+//
+//	error counters should not be affected, as well as the exitcode.
 func (s *Suite) Test_Logger_writeSource__separator_autofix(c *check.C) {
 	t := s.Init(c)
 

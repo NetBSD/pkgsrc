@@ -606,7 +606,7 @@ func (o *Once) check(key uint64) bool {
 
 // The MIT License (MIT)
 //
-// Copyright (c) 2015 Frits van Bommel
+// # Copyright (c) 2015 Frits van Bommel
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal

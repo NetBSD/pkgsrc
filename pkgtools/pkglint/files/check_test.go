@@ -101,7 +101,7 @@ func (s *Suite) TearDownTest(c *check.C) {
 
 // Ensures that all test names follow a common naming scheme:
 //
-//  Test_${Type}_${Method}__${description_using_underscores}
+//	Test_${Type}_${Method}__${description_using_underscores}
 func Test__qa(t *testing.T) {
 	ck := intqa.NewQAChecker(t.Errorf)
 
@@ -259,8 +259,9 @@ func (t *Tester) SetUpTool(name, varname string, validity Validity) *Tool {
 // in the variable definitions in vardefs.go.
 //
 // Example:
-//  SetUpVarType("PKGPATH", BtPkgpath, DefinedIfInScope|NonemptyIfDefined,
-//      "Makefile, *.mk: default, set, append, use, use-loadtime")
+//
+//	SetUpVarType("PKGPATH", BtPkgpath, DefinedIfInScope|NonemptyIfDefined,
+//	    "Makefile, *.mk: default, set, append, use, use-loadtime")
 func (t *Tester) SetUpVarType(varname string, basicType *BasicType,
 	options vartypeOptions, aclEntries ...string) {
 
@@ -713,20 +714,20 @@ func (t *Tester) Remove(filename RelPath) {
 // that include each other.
 // The hierarchy is created only in memory, nothing is written to disk.
 //
-//  include, get := t.SetUpHierarchy()
+//	include, get := t.SetUpHierarchy()
 //
-//  include("including.mk",
-//      include("other.mk",
-//          "VAR= other"),
-//      include("subdir/module.mk",
-//          "VAR= module",
-//          include("subdir/version.mk",
-//              "VAR= version"),
-//          include("subdir/env.mk",
-//              "VAR= env")))
+//	include("including.mk",
+//	    include("other.mk",
+//	        "VAR= other"),
+//	    include("subdir/module.mk",
+//	        "VAR= module",
+//	        include("subdir/version.mk",
+//	            "VAR= version"),
+//	        include("subdir/env.mk",
+//	            "VAR= env")))
 //
-//  mklines := get("including.mk")
-//  module := get("subdir/module.mk")
+//	mklines := get("including.mk")
+//	module := get("subdir/module.mk")
 //
 // The filenames passed to the include function are all relative to the
 // same location, which is typically the pkgsrc root or a package directory,
@@ -735,7 +736,8 @@ func (t *Tester) Remove(filename RelPath) {
 // The generated .include lines take the relative paths into account.
 // For example, when subdir/module.mk includes subdir/version.mk,
 // the include line is just:
-//  .include "version.mk"
+//
+//	.include "version.mk"
 func (t *Tester) SetUpHierarchy() (
 	include func(filename RelPath, args ...interface{}) *MkLines,
 	get func(path RelPath) *MkLines) {
@@ -942,9 +944,10 @@ func (t *Tester) InternalErrorf(format string, args ...interface{}) {
 // Line.Fatalf or uses some other way to panic with a pkglintFatal.
 //
 // Usage:
-//  t.ExpectFatal(
-//      func() { /* do something that panics */ },
-//      "FATAL: ~/Makefile:1: Must not be empty")
+//
+//	t.ExpectFatal(
+//	    func() { /* do something that panics */ },
+//	    "FATAL: ~/Makefile:1: Must not be empty")
 func (t *Tester) ExpectFatal(action func(), expectedLines ...string) {
 	defer func() {
 		r := recover()
@@ -965,9 +968,10 @@ func (t *Tester) ExpectFatal(action func(), expectedLines ...string) {
 // It then matches the output against the given regular expression.
 //
 // Usage:
-//  t.ExpectFatalMatches(
-//      func() { /* do something that panics */ },
-//      `FATAL: ~/Makefile:1: .*\n`)
+//
+//	t.ExpectFatalMatches(
+//	    func() { /* do something that panics */ },
+//	    `FATAL: ~/Makefile:1: .*\n`)
 func (t *Tester) ExpectFatalMatches(action func(), expected regex.Pattern) {
 	defer func() {
 		r := recover()
@@ -988,9 +992,10 @@ func (t *Tester) ExpectFatalMatches(action func(), expected regex.Pattern) {
 // assert or assertf, or uses some other way to panic.
 //
 // Usage:
-//  t.ExpectPanic(
-//      func() { /* do something that panics */ },
-//      "runtime error: path not found")
+//
+//	t.ExpectPanic(
+//	    func() { /* do something that panics */ },
+//	    "runtime error: path not found")
 func (t *Tester) ExpectPanic(action func(), expectedMessage string) {
 	t.Check(action, check.Panics, expectedMessage)
 }
@@ -1005,8 +1010,9 @@ func (t *Tester) ExpectPanicMatches(action func(), expectedMessage regex.Pattern
 // ExpectAssert runs the given action and expects that this action calls assert.
 //
 // Usage:
-//  t.ExpectAssert(
-//      func() { /* do something that panics */ })
+//
+//	t.ExpectAssert(
+//	    func() { /* do something that panics */ })
 func (t *Tester) ExpectAssert(action func()) {
 	t.Check(action, check.Panics, "Pkglint internal error")
 }

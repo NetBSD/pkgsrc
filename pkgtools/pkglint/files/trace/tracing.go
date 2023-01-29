@@ -40,9 +40,10 @@ func (t *Tracer) Step2(format string, arg0, arg1 string) {
 // Call0 is used to trace a no-arguments function call.
 //
 // Usage:
-//  if trace.Tracing {
-//      defer trace.Call0()()
-//  }
+//
+//	if trace.Tracing {
+//	    defer trace.Call0()()
+//	}
 func (t *Tracer) Call0() func() {
 	return t.traceCall()
 }
@@ -50,9 +51,10 @@ func (t *Tracer) Call0() func() {
 // Call1 is used to trace a function call with a single string argument.
 //
 // Usage:
-//  if trace.Tracing {
-//      defer trace.Call1(str1)()
-//  }
+//
+//	if trace.Tracing {
+//	    defer trace.Call1(str1)()
+//	}
 func (t *Tracer) Call1(arg1 string) func() {
 	return t.traceCall(arg1)
 }
@@ -60,9 +62,10 @@ func (t *Tracer) Call1(arg1 string) func() {
 // Call2 is used to trace a function call with 2 string arguments.
 //
 // Usage:
-//  if trace.Tracing {
-//      defer trace.Call2(str1, str2)()
-//  }
+//
+//	if trace.Tracing {
+//	    defer trace.Call2(str1, str2)()
+//	}
 func (t *Tracer) Call2(arg1, arg2 string) func() {
 	return t.traceCall(arg1, arg2)
 }
@@ -71,9 +74,10 @@ func (t *Tracer) Call2(arg1, arg2 string) func() {
 // when leaving the function.
 //
 // Usage:
-//  if trace.Tracing {
-//      defer trace.Call(arg1, arg2, trace.Result(result1), trace.Result(result2))()
-// }
+//
+//	 if trace.Tracing {
+//	     defer trace.Call(arg1, arg2, trace.Result(result1), trace.Result(result2))()
+//	}
 func (t *Tracer) Call(args ...interface{}) func() {
 	return t.traceCall(args...)
 }

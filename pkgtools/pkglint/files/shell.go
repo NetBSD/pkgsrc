@@ -437,15 +437,17 @@ func (ck *ShellLineChecker) checkSetE(list *MkShList, index int) {
 // files or invalid arguments.
 //
 // Commands that can fail:
-//  echo "hello" > file
-//  sed 's,$, world,,' < input > output
-//  find . -print
-//  wc -l *
+//
+//	echo "hello" > file
+//	sed 's,$, world,,' < input > output
+//	find . -print
+//	wc -l *
 //
 // Commands that cannot fail:
-//  echo "hello"
-//  sed 's,$, world,,'
-//  wc -l
+//
+//	echo "hello"
+//	sed 's,$, world,,'
+//	wc -l
 func (ck *ShellLineChecker) canFail(cmd *MkShCommand) bool {
 	simple := cmd.Simple
 	if simple == nil {
