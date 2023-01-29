@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2022/10/15 02:45:01 rin Exp $
+# $NetBSD: Makefile,v 1.17 2023/01/29 21:17:43 ryoon Exp $
 
 DISTNAME=	eltclsh-1.9
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	shells
 MASTER_SITES=	http://softs.laas.fr/openrobots/php/download.php/
 

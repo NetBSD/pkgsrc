@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2023/01/16 20:53:46 vins Exp $
+# $NetBSD: Makefile,v 1.26 2023/01/29 21:18:08 ryoon Exp $
 
 DISTNAME=	dunst-1.9.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dunst-project/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

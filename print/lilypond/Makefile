@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.143 2022/12/27 16:57:21 schmonz Exp $
+# $NetBSD: Makefile,v 1.144 2023/01/29 21:17:36 ryoon Exp $
 
 DISTNAME=		lilypond-2.24.0
+PKGREVISION=		1
 CATEGORIES=		print
 MASTER_SITES=		https://lilypond.org/download/sources/v2.24/
 

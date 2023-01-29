@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.21 2022/06/28 11:34:56 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.22 2023/01/29 21:14:53 ryoon Exp $
 
 BUILDLINK_TREE+=	ming
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ming
 MING_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ming+=	ming>=0.4.3
-BUILDLINK_ABI_DEPENDS.ming+=	ming>=0.4.8nb5
+BUILDLINK_ABI_DEPENDS.ming+=	ming>=0.4.8nb7
 BUILDLINK_PKGSRCDIR.ming?=	../../multimedia/ming
 
 .include "../../devel/zlib/buildlink3.mk"

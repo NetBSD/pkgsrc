@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.59 2022/11/23 16:19:04 adam Exp $
+# $NetBSD: Makefile,v 1.60 2023/01/29 21:15:01 ryoon Exp $
 
 DISTNAME=	sonnet-${KF5VER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc
 
 HOMEPAGE=	https://community.kde.org/Frameworks

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2023/01/03 17:37:13 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2023/01/29 21:16:25 ryoon Exp $
 
 VERSION=	20180405
-PKGREVISION=	13
+PKGREVISION=	14
 DISTNAME=	statusbar_pi-${VERSION}
 PKGNAME=	opencpn-plugin-statusbar-${VERSION}
 CATEGORIES=	geography

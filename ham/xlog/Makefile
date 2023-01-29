@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.104 2023/01/03 17:37:37 wiz Exp $
+# $NetBSD: Makefile,v 1.105 2023/01/29 21:16:52 ryoon Exp $
 #
 
 DISTNAME=	xlog-2.0.24
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	ham
 MASTER_SITES=	https://download.savannah.gnu.org/releases/xlog/
 LICENSE=	gnu-gpl-v3

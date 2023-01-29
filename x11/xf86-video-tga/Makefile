@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2022/11/09 13:14:28 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2023/01/29 21:18:29 ryoon Exp $
 
 DISTNAME=	xf86-video-tga-1.2.2
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2

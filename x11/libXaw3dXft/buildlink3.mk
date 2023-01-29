@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2023/01/17 13:52:54 vins Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2023/01/29 21:15:11 ryoon Exp $
 
 BUILDLINK_TREE+=	libXaw3dXft
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	libXaw3dXft
 LIBXAW3DXFT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libXaw3dXft+=	libXaw3dXft>=1.6.2h
+BUILDLINK_ABI_DEPENDS.libXaw3dXft?=	libXaw3dXft>=1.6.2hnb2
 BUILDLINK_PKGSRCDIR.libXaw3dXft?=	../../x11/libXaw3dXft
 
 .include "../../x11/libX11/buildlink3.mk"

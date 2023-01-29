@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2022/06/28 11:33:53 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2023/01/29 21:16:05 ryoon Exp $
 
 DISTNAME=	Font-FreeType-0.16
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	perl5 fonts graphics
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Font/}
 

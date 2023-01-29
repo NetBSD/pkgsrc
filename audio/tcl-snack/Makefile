@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2020/08/17 20:18:11 leot Exp $
+# $NetBSD: Makefile,v 1.32 2023/01/29 21:15:32 ryoon Exp $
 
 DISTNAME=	snack2.2.10
 PKGNAME=	tcl-snack-2.2.10
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	audio
 MASTER_SITES=	http://www.speech.kth.se/snack/dist/
 

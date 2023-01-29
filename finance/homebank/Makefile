@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2023/01/03 17:37:06 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2023/01/29 21:16:04 ryoon Exp $
 
 DISTNAME=	homebank-5.5.5
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	finance
 MASTER_SITES=	http://homebank.free.fr/public/
 

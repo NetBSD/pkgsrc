@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2020/08/17 20:19:27 leot Exp $
+# $NetBSD: Makefile,v 1.17 2023/01/29 21:17:05 ryoon Exp $
 
 DISTNAME=		xfractint-20.04p14
 PKGNAME=		${DISTNAME:S/04p/4./}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		math
 MASTER_SITES=		https://fractint.org/ftp/current/linux/
 

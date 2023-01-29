@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2022/11/23 16:18:41 adam Exp $
+# $NetBSD: Makefile,v 1.20 2023/01/29 21:14:29 ryoon Exp $
 
 DISTNAME=	kwayland-${KF5VER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 
 HOMEPAGE=	https://community.kde.org/Frameworks

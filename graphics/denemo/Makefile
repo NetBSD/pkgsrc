@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.78 2023/01/03 17:37:17 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2023/01/29 21:16:29 ryoon Exp $
 
 DISTNAME=	denemo-0.9.2
-PKGREVISION=	45
+PKGREVISION=	46
 CATEGORIES=	graphics print
 MASTER_SITES=	${MASTER_SITE_GNU:=denemo/}
 

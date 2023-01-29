@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2023/01/03 17:37:34 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2023/01/29 21:16:48 ryoon Exp $
 
 DISTNAME=	zbar-0.23.90
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	graphics
 MASTER_SITES=	https://linuxtv.org/downloads/zbar/
 EXTRACT_SUFX=	.tar.bz2
