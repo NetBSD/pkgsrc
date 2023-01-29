@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/01/29 10:20:28 wiz Exp $
+
+BLAKE2s (Date-Range-1.41.tar.gz) = 8d1292fb9c3d9256c04affba938b884c6ff2611b7206cf216dd0b1bd9af405a7
+SHA512 (Date-Range-1.41.tar.gz) = 452672d6050805c0a5743d49e278925df8d2d44b3f2ffc5c69dc6520ae4cbf54847baa905a35290375bb200bf3c74a2a862c54bcd57ee9ef0f513e3ccdc07f93
+Size (Date-Range-1.41.tar.gz) = 4779 bytes
