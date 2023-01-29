@@ -1,0 +1,5 @@
+Pandoc-server provides pandoc's document conversion functions in an HTTP
+server.
+
+This is only a library that implements the server. To use it build
+converters/pandoc with option `server' and run `pandoc server'.
