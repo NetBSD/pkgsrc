@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.193 2023/01/22 21:24:37 ryoon Exp $
+# $NetBSD: Makefile,v 1.194 2023/01/29 09:20:25 wiz Exp $
 
 DISTNAME=	blender-3.4.1
 CATEGORIES=	graphics
@@ -13,8 +13,8 @@ LICENSE=	gnu-gpl-v2
 USE_CMAKE=	yes
 USE_LANGUAGES=	c gnu++17
 
-# C++17
-GCC_REQD+=	7
+# C++17; configure checks for gcc>=9.3.1
+GCC_REQD+=	9
 
 CXXFLAGS+=	-fpermissive # return value tyoe fo __builtin_popcount()
 
