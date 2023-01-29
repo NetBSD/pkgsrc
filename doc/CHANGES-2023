@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.833 2023/01/29 11:22:07 adam Exp $
+$NetBSD: CHANGES-2023,v 1.834 2023/01/29 11:56:12 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1057,3 +1057,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated ham/gnuradio-vocoder to 3.10.5.1 [adam 2023-01-29]
 	Updated ham/gnuradio-wavelet to 3.10.5.1 [adam 2023-01-29]
 	Updated ham/gnuradio-zeromq to 3.10.5.1 [adam 2023-01-29]
+	Updated converters/hs-cborg-json to 0.2.5.0 [pho 2023-01-29]
