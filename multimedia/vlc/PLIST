@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.71 2021/06/04 13:32:20 wiz Exp $
+@comment $NetBSD: PLIST,v 1.72 2023/01/29 14:07:12 ryoon Exp $
 @pkgdir share/vlc/http/dialogs
 @pkgdir share/vlc/http/images
 @pkgdir share/vlc/http/js
@@ -515,6 +515,7 @@ man/man1/vlc-wrapper.1
 man/man1/vlc.1
 share/applications/vlc.desktop
 share/doc/vlc/fortunes.txt
+share/doc/vlc/libvlc/CMakeLists.txt
 share/doc/vlc/libvlc/QtPlayer/LICENSE
 share/doc/vlc/libvlc/QtPlayer/QtVLC.pro
 share/doc/vlc/libvlc/QtPlayer/main.cpp
@@ -523,6 +524,7 @@ share/doc/vlc/libvlc/QtPlayer/player.h
 share/doc/vlc/libvlc/gtk_player.c
 share/doc/vlc/libvlc/libvlc_DVD_ripper.c
 share/doc/vlc/libvlc/vlc-thumb.c
+share/doc/vlc/libvlc/win_player.c
 share/doc/vlc/libvlc/wx_player.cpp
 share/doc/vlc/lua/README.txt
 share/doc/vlc/lua/extensions/README.txt
