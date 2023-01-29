@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/01/23 21:38:50 bacon Exp $
-#
+# $NetBSD: Makefile,v 1.2 2023/01/29 00:33:04 wiz Exp $
 
 DISTNAME=	atac-seq-1.1
 CATEGORIES=	biology meta-pkgs
@@ -22,6 +21,8 @@ DEPENDS+=	peak-classifier>=0:../../biology/peak-classifier
 DEPENDS+=	webbrowser>=0:../../www/webbrowser
 
 META_PACKAGE=	yes
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-macs2
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

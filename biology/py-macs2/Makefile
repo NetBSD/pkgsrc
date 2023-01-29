@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/01/22 23:30:11 bacon Exp $
+# $NetBSD: Makefile,v 1.2 2023/01/29 00:33:04 wiz Exp $
 
 DISTNAME=	MACS2-${PKGVERSION_NOREV}
 PKGNAME=	${PYPKGPREFIX}-macs2-2.2.7.1
@@ -13,6 +13,8 @@ COMMENT=	Algorithm for identifying transcription factor binding sites
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 CYTHONIZE=	${PREFIX}/bin/cythonize-${PYVERSSUFFIX}
 
