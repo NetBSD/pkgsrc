@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.821 2023/01/29 08:30:38 pho Exp $
+$NetBSD: CHANGES-2023,v 1.822 2023/01/29 08:39:29 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1027,3 +1027,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added www/hs-wai-cors version 0.2.7 [pho 2023-01-29]
 	Added textproc/hs-hslua-module-doclayout version 1.0.4 [pho 2023-01-29]
 	Added archivers/hs-hslua-module-zip version 1.0.0 [pho 2023-01-29]
+	Added lang/hs-hslua-cli version 1.2.0 [pho 2023-01-29]
