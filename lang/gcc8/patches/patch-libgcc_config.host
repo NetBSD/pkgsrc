@@ -1,11 +1,11 @@
-$NetBSD: patch-libgcc_config.host,v 1.3 2019/04/18 19:18:02 rillig Exp $
+$NetBSD: patch-libgcc_config.host,v 1.4 2023/01/29 10:47:33 wiz Exp $
 
 Add NetBSD support for aarch64, x86 and x86_64.
 
---- libgcc/config.host.orig	2018-04-06 13:04:17.000000000 -0700
-+++ libgcc/config.host	2018-11-09 03:33:30.166898124 -0800
-@@ -350,6 +350,12 @@
- 	tmake_file="${tmake_file} ${cpu_type}/t-aarch64"
+--- libgcc/config.host.orig	2021-05-14 08:42:10.000000000 +0000
++++ libgcc/config.host
+@@ -353,6 +353,12 @@ aarch64*-*-fuchsia*)
+ 	tmake_file="${tmake_file} ${cpu_type}/t-lse t-slibgcc-libgcc"
  	tmake_file="${tmake_file} ${cpu_type}/t-softfp t-softfp"
  	;;
 +aarch64*-*-netbsd*)
@@ -17,7 +17,7 @@ Add NetBSD support for aarch64, x86 and x86_64.
  aarch64*-*-linux*)
  	extra_parts="$extra_parts crtfastmath.o"
  	md_unwind_header=aarch64/linux-unwind.h
-@@ -632,10 +638,10 @@
+@@ -636,10 +642,10 @@ x86_64-*-freebsd*)
  	md_unwind_header=i386/freebsd-unwind.h
  	;;
  i[34567]86-*-netbsdelf*)

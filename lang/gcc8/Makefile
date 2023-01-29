@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.33 2022/06/30 11:18:32 nia Exp $
+# $NetBSD: Makefile,v 1.34 2023/01/29 10:47:33 wiz Exp $
 
 GCC_PKGNAME=		gcc8
 .include		"version.mk"
 
 DISTNAME=	gcc-${GCC8_DIST_VERSION}
 PKGNAME=	${GCC_PKGNAME}-${GCC8_DIST_VERSION}
-PKGREVISION=	7
 ## When bumping the PKGREVISION of this package the PKGREVISION of
 ## lang/gcc8-libs needs to be bumped to be at least 1 more than the
 ## PKGREVISION of this package!
@@ -206,7 +205,7 @@ GENERATE_PLIST+= \
 CHECK_BUILTIN.zlib:=	yes
 .include "../../devel/zlib/builtin.mk"
 CHECK_BUILTIN.zlib:=	no
-.if !empty(USE_BUILTIN.zlib:M[yY][eE][sS])
+.if ${USE_BUILTIN.zlib:tl} == yes
 CONFIGURE_ARGS+=	--with-system-zlib
 .include "../../devel/zlib/buildlink3.mk"
 .else
