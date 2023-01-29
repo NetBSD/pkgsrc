@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2023/01/03 17:36:53 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2023/01/29 21:15:41 ryoon Exp $
 
 PKGNAME=	bossa-20140109
 DISTNAME=	b-o-s-s-a-code-05bfcc39bc0453c3028b1161175b95a81af7a901
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	comms
 EXTRACT_SUFX=	.zip
 

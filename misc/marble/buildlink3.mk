@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.47 2022/11/23 16:18:54 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.48 2023/01/29 21:14:51 ryoon Exp $
 
 BUILDLINK_TREE+=	marble
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	marble
 MARBLE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.marble+=	marble>=19.08.3
-BUILDLINK_ABI_DEPENDS.marble?=	marble>=22.08.1nb1
+BUILDLINK_ABI_DEPENDS.marble?=	marble>=22.08.1nb2
 BUILDLINK_PKGSRCDIR.marble?=	../../misc/marble
 
 .include "../../x11/qt5-qtbase/buildlink3.mk"

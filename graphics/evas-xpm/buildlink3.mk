@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2020/08/17 20:17:28 leot Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2023/01/29 21:14:39 ryoon Exp $
 
 BUILDLINK_TREE+=	evas-xpm
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	evas-xpm
 EVAS_XPM_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.evas-xpm+=	evas-xpm>=1.7.7
-BUILDLINK_ABI_DEPENDS.evas-xpm?=	evas-xpm>=1.7.10nb1
+BUILDLINK_ABI_DEPENDS.evas-xpm?=	evas-xpm>=1.7.10nb2
 BUILDLINK_PKGSRCDIR.evas-xpm?=		../../graphics/evas-xpm
 
 .include "../../fonts/fontconfig/buildlink3.mk"

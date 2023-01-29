@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2022/05/24 18:59:33 jaapb Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2023/01/29 21:14:43 ryoon Exp $
 
 BUILDLINK_TREE+=	ocaml-cairo
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ocaml-cairo
 OCAML_CAIRO_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ocaml-cairo+=	ocaml-cairo>=0.6.1
-BUILDLINK_ABI_DEPENDS.ocaml-cairo?=	ocaml-cairo>=0.6.2nb2
+BUILDLINK_ABI_DEPENDS.ocaml-cairo?=	ocaml-cairo>=0.6.4nb3
 BUILDLINK_PKGSRCDIR.ocaml-cairo?=	../../graphics/ocaml-cairo
 
 .include "../../graphics/cairo/buildlink3.mk"

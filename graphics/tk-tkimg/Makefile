@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2023/01/03 17:37:32 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2023/01/29 21:16:47 ryoon Exp $
 #
 
 DISTNAME=	tkimg-1.3-2008-01-16
 PKGNAME=	tkimg-1.3.20080116
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.flightlab.com/~joe/downloads/
 

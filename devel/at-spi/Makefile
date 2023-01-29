@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.96 2023/01/03 17:36:17 wiz Exp $
+# $NetBSD: Makefile,v 1.97 2023/01/29 21:14:25 ryoon Exp $
 
 DISTNAME=		at-spi-1.32.0
-PKGREVISION=		36
+PKGREVISION=		37
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/at-spi/1.32/}
 EXTRACT_SUFX=		.tar.bz2

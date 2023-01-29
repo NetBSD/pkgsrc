@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2020/08/17 20:17:54 leot Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2023/01/29 21:15:11 ryoon Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -14,7 +14,7 @@ BUILDLINK_TREE+=	libXft
 LIBXFT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libXft+=	libXft>=2.1.10
-BUILDLINK_ABI_DEPENDS.libXft+=	libXft>=2.3.3nb1
+BUILDLINK_ABI_DEPENDS.libXft+=	libXft>=2.3.7nb1
 BUILDLINK_PKGSRCDIR.libXft?=	../../x11/libXft
 
 .include "../../fonts/fontconfig/buildlink3.mk"

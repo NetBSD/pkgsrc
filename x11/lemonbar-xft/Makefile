@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2022/07/04 19:56:05 pin Exp $
+# $NetBSD: Makefile,v 1.2 2023/01/29 21:18:13 ryoon Exp $
 
 DISTNAME=	lemonbar-xft-1.3
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITLAB:=protesilaos/lemonbar-xft/-/archive/0042efd2ec1477ab96eb044ebba72a10aefff21f/}
 

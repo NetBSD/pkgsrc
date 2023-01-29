@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.109 2023/01/03 17:37:25 wiz Exp $
+# $NetBSD: Makefile,v 1.110 2023/01/29 21:14:42 ryoon Exp $
 
 DISTNAME=	libkipi-${KAPPSVER}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 
 HOMEPAGE=	https://kde.org/applications/graphics/

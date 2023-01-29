@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2020/08/17 20:17:24 leot Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2023/01/29 21:14:33 ryoon Exp $
 
 BUILDLINK_TREE+=	pangox-compat
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	pangox-compat
 PANGOX_COMPAT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.pangox-compat+=	pangox-compat>=0.0.1
-BUILDLINK_ABI_DEPENDS.pangox-compat?=	pangox-compat>=0.0.2nb10
+BUILDLINK_ABI_DEPENDS.pangox-compat?=	pangox-compat>=0.0.2nb12
 BUILDLINK_PKGSRCDIR.pangox-compat?=	../../devel/pangox-compat
 
 .include "../../devel/pango/buildlink3.mk"

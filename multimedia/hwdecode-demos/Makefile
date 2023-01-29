@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2020/08/17 20:19:39 leot Exp $
+# $NetBSD: Makefile,v 1.20 2023/01/29 21:17:18 ryoon Exp $
 #
 
 DISTNAME=	hwdecode-demos-0.9.6p1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gbeauchesne/}
 GITHUB_TAG=	6b4c053b70b612f7375a3ccf6f27e62cd2bc5fea

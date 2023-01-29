@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2022/12/09 22:01:57 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2023/01/29 21:18:30 ryoon Exp $
 
 DISTNAME=	xf86-video-voodoo-1.2.6
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.xz

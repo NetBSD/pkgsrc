@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.124 2023/01/03 17:37:24 wiz Exp $
+# $NetBSD: Makefile,v 1.125 2023/01/29 21:16:36 ryoon Exp $
 
 DISTNAME=	gwenview-${KAPPSVER}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 
 HOMEPAGE=	https://kde.org/applications/graphics/org.kde.gwenview/

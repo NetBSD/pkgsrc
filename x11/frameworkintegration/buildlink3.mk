@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.41 2022/11/23 16:19:06 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.42 2023/01/29 21:15:06 ryoon Exp $
 
 BUILDLINK_TREE+=	frameworkintegration
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	frameworkintegration
 FRAMEWORKINTEGRATION_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.frameworkintegration+=	frameworkintegration>=5.21.0
-BUILDLINK_ABI_DEPENDS.frameworkintegration?=	frameworkintegration>=5.98.0nb1
+BUILDLINK_ABI_DEPENDS.frameworkintegration?=	frameworkintegration>=5.98.0nb2
 BUILDLINK_PKGSRCDIR.frameworkintegration?=	../../x11/frameworkintegration
 
 .include "../../devel/kpackage/buildlink3.mk"

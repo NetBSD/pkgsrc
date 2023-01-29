@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2022/09/30 07:21:46 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2023/01/29 21:14:51 ryoon Exp $
 
 BUILDLINK_TREE+=	ffmpeg3
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ffmpeg3
 FFMPEG3_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ffmpeg3+=	ffmpeg3>=3.0
-BUILDLINK_ABI_DEPENDS.ffmpeg3+=	ffmpeg3>=3.4.11nb1
+BUILDLINK_ABI_DEPENDS.ffmpeg3+=	ffmpeg3>=3.4.11nb8
 BUILDLINK_PKGSRCDIR.ffmpeg3?=	../../multimedia/ffmpeg3
 
 pkgbase := ffmpeg3

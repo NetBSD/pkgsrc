@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.56 2023/01/03 17:36:54 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2023/01/29 21:15:43 ryoon Exp $
 
 VERSION=		0.6.1
 DISTNAME=		boa-constructor-${VERSION}.src
 PKGNAME=		boa-constructor-${VERSION}
-PKGREVISION=		40
+PKGREVISION=		41
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=boa-constructor/}
 EXTRACT_SUFX=		.zip

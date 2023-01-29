@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2023/01/23 12:08:34 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2023/01/29 21:15:50 ryoon Exp $
 
 DISTNAME=	PySDL2-0.9.15
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Py//}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PySDL2/}
 

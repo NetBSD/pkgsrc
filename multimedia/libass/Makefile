@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2022/12/03 21:27:35 adam Exp $
+# $NetBSD: Makefile,v 1.33 2023/01/29 21:14:52 ryoon Exp $
 
 DISTNAME=	libass-0.17.0
+PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libass/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}

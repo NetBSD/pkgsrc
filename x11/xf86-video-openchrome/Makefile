@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2022/04/10 08:53:21 nia Exp $
+# $NetBSD: Makefile,v 1.25 2023/01/29 21:18:28 ryoon Exp $
 
 DISTNAME=	xf86-video-openchrome-0.6.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	http://xorg.freedesktop.org/archive/individual/driver/
 EXTRACT_SUFX=	.tar.bz2

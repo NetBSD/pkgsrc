@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.56 2022/06/28 11:35:57 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2023/01/29 21:17:48 ryoon Exp $
 #
 
 DISTNAME=	lavaps-2.7
-PKGREVISION=	18
+PKGREVISION=	19
 CATEGORIES=	sysutils x11
 MASTER_SITES=	http://www.isi.edu/~johnh/SOFTWARE/LAVAPS/
 

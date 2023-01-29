@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2020/08/17 20:20:18 leot Exp $
+# $NetBSD: Makefile,v 1.15 2023/01/29 21:18:01 ryoon Exp $
 
 DISTNAME=	vtwm-5.5.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	wm x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=vtwm/}
 

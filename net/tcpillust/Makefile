@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2021/04/25 06:05:21 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2023/01/29 21:17:31 ryoon Exp $
 
 DISTNAME=	tcpillust-1.0a
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	net
 #MASTER_SITES=	ftp://ftp.sonycsl.co.jp/CSL/nishida/
 

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2023/01/22 16:28:20 ryoon Exp $
+# $NetBSD: Makefile,v 1.35 2023/01/29 21:15:38 ryoon Exp $
 
-PKGREVISION= 30
+PKGREVISION= 31
 .include "../../meta-pkgs/kde-telepathy/Makefile.common"
 DISTNAME=	ktp-send-file-${KTP_VERSION}
 CATEGORIES=	chat kde

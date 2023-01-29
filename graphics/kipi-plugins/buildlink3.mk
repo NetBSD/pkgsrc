@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.24 2022/11/23 16:18:47 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.25 2023/01/29 21:14:40 ryoon Exp $
 
 BUILDLINK_TREE+=	kipi-plugins
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kipi-plugins
 KIPI_PLUGINS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kipi-plugins+=	kipi-plugins>=19.08.3
-BUILDLINK_ABI_DEPENDS.kipi-plugins?=	kipi-plugins>=22.08.1nb1
+BUILDLINK_ABI_DEPENDS.kipi-plugins?=	kipi-plugins>=22.08.1nb2
 BUILDLINK_PKGSRCDIR.kipi-plugins?=	../../graphics/kipi-plugins
 
 .include "../../graphics/libkipi/buildlink3.mk"

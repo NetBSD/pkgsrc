@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2022/12/09 21:59:15 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2023/01/29 21:18:29 ryoon Exp $
 
 DISTNAME=	xf86-video-sunleo-1.2.3
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.xz

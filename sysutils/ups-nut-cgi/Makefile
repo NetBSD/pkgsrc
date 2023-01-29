@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.71 2023/01/03 17:38:15 wiz Exp $
+# $NetBSD: Makefile,v 1.72 2023/01/29 21:17:51 ryoon Exp $
 
-PKGREVISION= 1
+PKGREVISION= 2
 .include "../../sysutils/ups-nut/Makefile.common"
 
 PKGNAME=		${DISTNAME:S/nut/ups-nut-cgi/}

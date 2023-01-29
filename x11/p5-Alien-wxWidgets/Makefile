@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.62 2023/01/03 17:38:32 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2023/01/29 21:18:18 ryoon Exp $
 
 DISTNAME=	Alien-wxWidgets-0.69
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	x11 perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Alien/}
 
