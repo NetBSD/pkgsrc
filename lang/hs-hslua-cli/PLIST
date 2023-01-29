@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2023/01/29 08:39:22 pho Exp $
+lib/hslua-cli-${PKGVERSION}/${HS_VERSION}/package-description
+lib/hslua-cli-${PKGVERSION}/${HS_VERSION}/package-id
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/HsLua/CLI.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/HsLua/CLI.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/HsLua/CLI.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${PLIST.doc}share/doc/${HS_PLATFORM}/hslua-cli-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/${HS_PLATFORM}/hslua-cli-${PKGVERSION}/html/CHANGELOG.md
+${PLIST.doc}share/doc/${HS_PLATFORM}/hslua-cli-${PKGVERSION}/html/HsLua-CLI.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/hslua-cli-${PKGVERSION}/html/README.md
+${PLIST.doc}share/doc/${HS_PLATFORM}/hslua-cli-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/hslua-cli-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/hslua-cli-${PKGVERSION}/html/hslua-cli.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/hslua-cli-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/hslua-cli-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/hslua-cli-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/hslua-cli-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/hslua-cli-${PKGVERSION}/html/synopsis.png
