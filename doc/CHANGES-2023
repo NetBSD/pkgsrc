@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.835 2023/01/29 12:16:15 pho Exp $
+$NetBSD: CHANGES-2023,v 1.836 2023/01/29 12:47:18 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1059,3 +1059,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated ham/gnuradio-zeromq to 3.10.5.1 [adam 2023-01-29]
 	Updated converters/hs-cborg-json to 0.2.5.0 [pho 2023-01-29]
 	Updated lang/dhall to 1.41.2 [pho 2023-01-29]
+	Updated net/wget2 to 2.0.1 [ryoon 2023-01-29]
