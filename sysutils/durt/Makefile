@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2021/11/10 09:36:42 pin Exp $
+# $NetBSD: Makefile,v 1.2 2023/01/29 20:06:21 pin Exp $
 
 DISTNAME=	durt-1.0.3
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cauebs/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/cauebs/durt/
 COMMENT=	CLI tool for calculating the size of files and directories
 LICENSE=	gnu-gpl-v3
