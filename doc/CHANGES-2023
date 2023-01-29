@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.837 2023/01/29 13:42:46 ryoon Exp $
+$NetBSD: CHANGES-2023,v 1.838 2023/01/29 14:07:46 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1061,3 +1061,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/dhall to 1.41.2 [pho 2023-01-29]
 	Updated net/wget2 to 2.0.1 [ryoon 2023-01-29]
 	Updated graphics/freetype2 to 2.12.1nb1 [ryoon 2023-01-29]
+	Updated multimedia/vlc to 3.0.18 [ryoon 2023-01-29]
