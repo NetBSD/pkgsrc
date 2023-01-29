@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2022/08/20 08:08:19 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2023/01/29 15:50:10 pho Exp $
 
-DISTNAME=	stm-hamt-1.2.0.7
-PKGREVISION=	2
+DISTNAME=	stm-hamt-1.2.0.8
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

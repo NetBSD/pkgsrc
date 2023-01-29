@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/02/16 09:54:36 pho Exp $
+$NetBSD: distinfo,v 1.2 2023/01/29 15:50:10 pho Exp $
 
-BLAKE2s (stm-hamt-1.2.0.7.tar.gz) = 2e6a480249a550d5f5199d32a0691b0178884e9f2abda4c98cab1a555f81bc6b
-SHA512 (stm-hamt-1.2.0.7.tar.gz) = e8079bd374b55f77008fc4c3560a34a2c9cb44d393d5795965fa1d0a9819be88385aa927dd04745ed252d32bc745f5c23edad15fdb090a050e743c491751f266
-Size (stm-hamt-1.2.0.7.tar.gz) = 10690 bytes
+BLAKE2s (stm-hamt-1.2.0.8.tar.gz) = c77b52b20cc644be307f1bab266416316f90bef94b139a38710a87e803a07667
+SHA512 (stm-hamt-1.2.0.8.tar.gz) = 60cf0ff104a32e869d86be905b679d63b0e2bd174e24957122d9f518dafc4e7a6660198c30935bae7d9b500f81fa7089609919c6455e358ce92f71d2119170b3
+Size (stm-hamt-1.2.0.8.tar.gz) = 10639 bytes
