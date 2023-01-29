@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2023/01/03 17:36:17 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2023/01/29 21:14:26 ryoon Exp $
 
 BUILDLINK_TREE+=	glade
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	glade
 GLADE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.glade+=	glade>=3.22.0
-BUILDLINK_ABI_DEPENDS.glade+=	glade>=3.40.0nb2
+BUILDLINK_ABI_DEPENDS.glade+=	glade>=3.40.0nb3
 BUILDLINK_PKGSRCDIR.glade?=	../../devel/glade
 
 .include "../../x11/gtk3/buildlink3.mk"

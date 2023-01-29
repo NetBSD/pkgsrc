@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2020/05/01 20:11:47 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2023/01/29 21:15:59 ryoon Exp $
 
 DISTNAME=	caprice32-4.6.0
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ColinPitrat/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

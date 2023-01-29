@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2022/11/23 16:19:15 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2023/01/29 21:15:18 ryoon Exp $
 
 BUILDLINK_TREE+=	qwt6-qt5
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	qwt6-qt5
 QWT6_QT5_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.qwt6-qt5+=	qwt6-qt5>=6.1.5
-BUILDLINK_ABI_DEPENDS.qwt6-qt5?=	qwt6-qt5>=6.1.5nb14
+BUILDLINK_ABI_DEPENDS.qwt6-qt5?=	qwt6-qt5>=6.1.5nb15
 BUILDLINK_PKGSRCDIR.qwt6-qt5?=		../../x11/qwt6-qt5
 
 QWT_DIR=			${BUILDLINK_PREFIX.qwt6-qt5}/qwt-6.1.5

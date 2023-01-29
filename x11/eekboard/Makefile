@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.73 2023/01/03 17:36:34 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2023/01/29 21:15:05 ryoon Exp $
 
 DISTNAME=	eekboard-1.0.8
-PKGREVISION=	41
+PKGREVISION=	42
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ueno/}
 GITHUB_PROJECT=	eekboard
 GITHUB_TAG=	${DISTNAME}

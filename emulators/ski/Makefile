@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.47 2023/01/03 17:37:05 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2023/01/29 21:16:02 ryoon Exp $
 #
 
 DISTNAME=	ski-1.3.2
-PKGREVISION=	28
+PKGREVISION=	29
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ski/}
 

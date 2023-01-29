@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2022/11/09 13:14:25 joerg Exp $
+# $NetBSD: Makefile,v 1.31 2023/01/29 21:18:25 ryoon Exp $
 
 DISTNAME=	xf86-input-vmmouse-13.2.0
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.xz

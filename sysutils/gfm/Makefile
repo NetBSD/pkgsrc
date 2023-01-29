@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2023/01/03 17:38:12 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2023/01/29 21:17:46 ryoon Exp $
 #
 
 DISTNAME=	gfm-1.06
-PKGREVISION=	25
+PKGREVISION=	26
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tilp/}
 EXTRACT_SUFX=	.tar.bz2

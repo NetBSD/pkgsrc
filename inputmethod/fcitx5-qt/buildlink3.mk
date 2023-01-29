@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2022/11/23 16:18:49 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2023/01/29 21:14:46 ryoon Exp $
 
 BUILDLINK_TREE+=	fcitx5-qt
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	fcitx5-qt
 FCITX5_QT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.fcitx5-qt+=	fcitx5-qt>=5.0.2
-BUILDLINK_ABI_DEPENDS.fcitx5-qt?=	fcitx5-qt>=5.0.3nb4
+BUILDLINK_ABI_DEPENDS.fcitx5-qt?=	fcitx5-qt>=5.0.3nb5
 BUILDLINK_PKGSRCDIR.fcitx5-qt?=	../../inputmethod/fcitx5-qt
 
 .include "../../inputmethod/fcitx5/buildlink3.mk"

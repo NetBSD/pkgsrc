@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2022/10/09 12:32:02 leot Exp $
+# $NetBSD: Makefile,v 1.4 2023/01/29 21:18:23 ryoon Exp $
 
 DISTNAME=	tabbed-0.7
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	https://dl.suckless.org/tools/
 

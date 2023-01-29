@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2022/12/09 21:45:49 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2023/01/29 21:18:29 ryoon Exp $
 
 DISTNAME=	xf86-video-suncg3-1.1.3
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.xz

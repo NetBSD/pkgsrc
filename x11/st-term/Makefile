@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2022/10/09 12:40:57 leot Exp $
+# $NetBSD: Makefile,v 1.16 2023/01/29 21:18:22 ryoon Exp $
 
 DISTNAME=	st-0.9
 PKGNAME=	${DISTNAME:S/-/-term-/}
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	https://dl.suckless.org/st/
 

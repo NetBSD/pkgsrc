@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2023/01/03 17:36:53 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2023/01/29 21:15:41 ryoon Exp $
 #
 
 DISTNAME=	tilp2-1.16
-PKGREVISION=	25
+PKGREVISION=	26
 CATEGORIES=	comms
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tilp/}
 EXTRACT_SUFX=	.tar.bz2

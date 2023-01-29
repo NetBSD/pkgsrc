@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2022/06/28 11:34:55 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2023/01/29 21:17:18 ryoon Exp $
 
 DISTNAME=	gstreamermm-1.10.0
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gstreamermm/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz

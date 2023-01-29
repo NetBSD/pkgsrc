@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2021/06/10 12:48:50 nia Exp $
+# $NetBSD: Makefile,v 1.27 2023/01/29 21:17:57 ryoon Exp $
 
 DISTNAME=	bbpager-0.4.7
+PKGREVISION=	1
 CATEGORIES=	wm x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bbtools/}
 

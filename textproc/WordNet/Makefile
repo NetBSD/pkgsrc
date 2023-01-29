@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2020/08/17 20:17:44 leot Exp $
+# $NetBSD: Makefile,v 1.18 2023/01/29 21:15:00 ryoon Exp $
 #
 
 DISTNAME=		WordNet-3.0
-PKGREVISION=		9
+PKGREVISION=		10
 CATEGORIES=		textproc
 MASTER_SITES=		https://wordnetcode.princeton.edu/3.0/
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2022/06/28 10:58:04 nia Exp $
+# $NetBSD: Makefile,v 1.17 2023/01/29 21:14:36 ryoon Exp $
 
 DISTNAME=	memphis-0.2.3
 PKGNAME=	libmemphis02-0.2.3
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jiuka/}
 GITHUB_PROJECT=	memphis

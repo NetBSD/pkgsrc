@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2023/01/03 17:37:07 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2023/01/29 21:16:05 ryoon Exp $
 
 DISTNAME=	gnome-font-viewer-3.27.0
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_GITHUB:=GNOME/}
 GITHUB_PROJECT=	gnome-font-viewer
