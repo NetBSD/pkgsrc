@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.86 2023/01/03 12:28:23 wiz Exp $
+@comment $NetBSD: PLIST,v 1.87 2023/01/29 00:22:29 wiz Exp $
 bin/gnc-fq-check
 bin/gnc-fq-dump
 bin/gnc-fq-helper
@@ -235,7 +235,6 @@ lib/gnucash/libgnc-register-core.so
 lib/gnucash/libgnc-register-gnome.so
 lib/gnucash/libgnc-report.so
 lib/gnucash/libgncmod-backend-xml.so
-lib/gnucash/libgncmod-python.so
 lib/guile/3.0/site-ccache/gnucash/app-utils.go
 lib/guile/3.0/site-ccache/gnucash/app-utils/business-options.go
 lib/guile/3.0/site-ccache/gnucash/app-utils/business-prefs.go
