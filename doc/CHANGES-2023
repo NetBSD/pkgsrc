@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.813 2023/01/29 04:54:50 pho Exp $
+$NetBSD: CHANGES-2023,v 1.814 2023/01/29 04:56:29 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1019,3 +1019,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/hs-singleton-bool version 0.1.6 [pho 2023-01-29]
 	Added devel/hs-sop-core version 0.5.0.2 [pho 2023-01-29]
 	Added converters/hs-string-conversions version 0.4.0.1 [pho 2023-01-29]
+	Added www/hs-servant version 0.19.1 [pho 2023-01-29]
