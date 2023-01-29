@@ -1,0 +1,13 @@
+Implementation of n-ary sums and n-ary products.
+
+The module Data.SOP is the main module of this library and contains more
+detailed documentation.
+
+The main use case of this package is to serve as the core of generics-sop.
+
+A detailed description of the ideas behind this library is provided by the
+paper:
+
+  Edsko de Vries and Andres Loeh. True Sums of Products. Workshop on
+  Generic Programming (WGP) 2014.
+  http://www.andres-loeh.de/TrueSumsOfProducts
