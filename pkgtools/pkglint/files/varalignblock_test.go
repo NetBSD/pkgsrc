@@ -1937,8 +1937,9 @@ func (s *Suite) Test_VaralignBlock__var_tab24_value_var_tab8_value(c *check.C) {
 // to be adjusted to the minimum required.
 //
 // FIXME: The definition of an outlier should be based on the actual indentation,
-//  not on the minimum indentation. Or maybe even better on the corrected indentation.
-//  In the below paragraph, the outlier is not indented enough to qualify as a visual outlier.
+//
+//	not on the minimum indentation. Or maybe even better on the corrected indentation.
+//	In the below paragraph, the outlier is not indented enough to qualify as a visual outlier.
 func (s *Suite) Test_VaralignBlock__var_tab32_value_var_tabs24_value_var_tabs24_value(c *check.C) {
 	vt := NewVaralignTester(s, c)
 	vt.Input(
@@ -1962,7 +1963,8 @@ func (s *Suite) Test_VaralignBlock__var_tab32_value_var_tabs24_value_var_tabs24_
 // initial line, this is intentional.
 //
 // TODO: Make this rule more general: if the indentation of the continuation
-//  lines is more than the initial line, it is intentional.
+//
+//	lines is more than the initial line, it is intentional.
 func (s *Suite) Test_VaralignBlock__var_tab24_value_space_cont_tabs32_value_space_cont_tabs32_value(c *check.C) {
 	vt := NewVaralignTester(s, c)
 	vt.Input(

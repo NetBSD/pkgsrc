@@ -169,10 +169,12 @@ func (p *MkParser) mkCondCompare() *MkCond {
 }
 
 // mkCondTerm parses the following:
-//  ${VAR}
-//  "${VAR}"
-//  "text${VAR}text"
-//  "text"
+//
+//	${VAR}
+//	"${VAR}"
+//	"text${VAR}text"
+//	"text"
+//
 // It does not parse unquoted string literals since these are only allowed
 // at the right-hand side of a comparison expression.
 func (p *MkParser) mkCondTerm() *MkCondTerm {

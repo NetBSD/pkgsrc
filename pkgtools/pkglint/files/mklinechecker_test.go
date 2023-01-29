@@ -186,13 +186,26 @@ func (s *Suite) Test_MkLineChecker_checkTextRpath(c *check.C) {
 		"BUILDLINK_TRANSFORM+=\t\topt:-Wl,-rpath,/usr/lib",
 		"BUILDLINK_TRANSFORM.pkgbase+=\trm:-Wl,-R/usr/lib",
 		"BUILDLINK_TRANSFORM.pkgbase+=\trm:-Wl,-rpath,/usr/lib",
-		"BUILDLINK_TRANSFORM.pkgbase+=\topt:-Wl,-rpath,/usr/lib")
+		"BUILDLINK_TRANSFORM.pkgbase+=\topt:-Wl,-rpath,/usr/lib",
+		"",
+		"LDFLAGS+=\t-Wl,-R${PREFIX}/gcc9/lib",
+		"LDFLAGS+=\t-Wl,-rpath,${PREFIX}/gcc9/lib",
+		"LDFLAGS+=\t-Wl,--rpath,${PREFIX}/gcc9/lib")
 
 	mklines.Check()
 
 	t.CheckOutputLines(
 		"WARN: filename.mk:4: Please use ${COMPILER_RPATH_FLAG} instead of \"-Wl,-rpath,\".",
-		"WARN: filename.mk:7: Please use ${COMPILER_RPATH_FLAG} instead of \"-Wl,-rpath,\".")
+		"WARN: filename.mk:7: Please use ${COMPILER_RPATH_FLAG} instead of \"-Wl,-rpath,\".",
+		// TODO: Remove duplicates.
+		"WARN: filename.mk:9: Please use ${COMPILER_RPATH_FLAG} instead of \"-Wl,-R\".",
+		"WARN: filename.mk:9: Please use ${COMPILER_RPATH_FLAG} instead of \"-Wl,-R\".",
+		// TODO: Remove duplicates.
+		"WARN: filename.mk:10: Please use ${COMPILER_RPATH_FLAG} instead of \"-Wl,-rpath,\".",
+		"WARN: filename.mk:10: Please use ${COMPILER_RPATH_FLAG} instead of \"-Wl,-rpath,\".",
+		// TODO: Remove duplicates.
+		"WARN: filename.mk:11: Please use ${COMPILER_RPATH_FLAG} instead of \"-Wl,--rpath,\".",
+		"WARN: filename.mk:11: Please use ${COMPILER_RPATH_FLAG} instead of \"-Wl,--rpath,\".")
 }
 
 func (s *Suite) Test_MkLineChecker_checkVartype__simple_type(c *check.C) {

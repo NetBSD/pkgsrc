@@ -13,7 +13,6 @@ import (
 //  1. MkToken{Text: "/usr/share/"}
 //  2. MkToken{Text: "${PKGNAME}", Varuse: NewMkVarUse("PKGNAME")}
 //  3. MkToken{Text: "/data"}
-//
 type MkToken struct {
 	Text   string    // Used for both literal text and variable uses
 	Varuse *MkVarUse // For literal text, it is nil
@@ -77,7 +76,8 @@ func (m MkVarUseModifier) MatchSubst() (ok bool, regex bool, from string, to str
 // Subst evaluates an S/from/to/ modifier.
 //
 // Example:
-//  MkVarUseModifier{"S,name,file,g"}.Subst("distname-1.0") => "distfile-1.0"
+//
+//	MkVarUseModifier{"S,name,file,g"}.Subst("distname-1.0") => "distfile-1.0"
 func (m MkVarUseModifier) Subst(str string) (bool, string) {
 	// XXX: The call to MatchSubst is usually redundant because MatchSubst
 	//  is typically called directly before calling Subst.
@@ -137,13 +137,14 @@ func (MkVarUseModifier) EvalSubst(s string, left bool, from string, right bool, 
 
 // MatchMatch tries to match the modifier to a :M or a :N pattern matching.
 // Examples:
-//  modifier    =>   ok     positive  pattern    exact
-//  --------------------------------------------------
-//  :Mpattern   =>   true   true      "pattern"  true
-//  :M*         =>   true   true      "*"        false
-//  :M${VAR}    =>   true   true      "${VAR}"   false
-//  :Npattern   =>   true   false     "pattern"  true
-//  :X          =>   false
+//
+//	modifier    =>   ok     positive  pattern    exact
+//	--------------------------------------------------
+//	:Mpattern   =>   true   true      "pattern"  true
+//	:M*         =>   true   true      "*"        false
+//	:M${VAR}    =>   true   true      "${VAR}"   false
+//	:Npattern   =>   true   false     "pattern"  true
+//	:X          =>   false
 func (m MkVarUseModifier) MatchMatch() (ok bool, positive bool, pattern string, exact bool) {
 	if m.HasPrefix("M") || m.HasPrefix("N") {
 		str := m.String()

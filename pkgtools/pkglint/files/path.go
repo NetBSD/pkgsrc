@@ -413,8 +413,8 @@ func (p PkgsrcPath) JoinNoClean(other RelPath) PkgsrcPath {
 // conflicts on other packages.
 //
 // It can have two forms:
-//  - patches (further down)
-//  - ../../category/package/* (up to the pkgsrc root, then down again)
+//   - patches (further down)
+//   - ../../category/package/* (up to the pkgsrc root, then down again)
 type PackagePath string
 
 func NewPackagePath(p RelPath) PackagePath {

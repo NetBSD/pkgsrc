@@ -115,7 +115,9 @@ func (s *Suite) Test_convertToLogicalLines__continuation(c *check.C) {
 // This test demonstrates that pkglint deviates from bmake.
 // Bmake keeps all the trailing whitespace from the line and replaces the
 // backslash plus any indentation with a single space. This results in:
-//  "\tprintf '%s\\n' 'none none  space  space  tab\t tab'"
+//
+//	"\tprintf '%s\\n' 'none none  space  space  tab\t tab'"
+//
 // This is another of the edge cases probably no-one relies on.
 func (s *Suite) Test_convertToLogicalLines__continuation_spacing(c *check.C) {
 	t := s.Init(c)

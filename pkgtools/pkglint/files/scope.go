@@ -6,11 +6,13 @@ import "sort"
 // in a certain scope, such as a package or a file.
 //
 // TODO: Decide whether the scope should consider variable assignments
-//  from the pkgsrc infrastructure. For Package.checkGnuConfigureUseLanguages
-//  it would be better to ignore them completely.
+//
+//	from the pkgsrc infrastructure. For Package.checkGnuConfigureUseLanguages
+//	it would be better to ignore them completely.
 //
 // TODO: Merge this code with Var, which defines essentially the
-//  same features.
+//
+//	same features.
 //
 // See also substScope, which already analyzes the possible variable values
 // based on the conditional code paths.
@@ -133,9 +135,9 @@ func (s *Scope) Use(varname string, mkline *MkLine, time VucTime) {
 }
 
 // Mentioned returns the first line in which the variable is either:
-//  - defined,
-//  - mentioned in a commented variable assignment,
-//  - mentioned in a documentation comment.
+//   - defined,
+//   - mentioned in a commented variable assignment,
+//   - mentioned in a documentation comment.
 func (s *Scope) Mentioned(varname string) *MkLine {
 	if v := s.vs[varname]; v != nil {
 		return v.firstDef
