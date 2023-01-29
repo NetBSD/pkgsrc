@@ -1,12 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.4 2022/09/07 06:50:49 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2023/01/29 12:16:06 pho Exp $
 
 BUILDLINK_TREE+=	dhall
 
 .if !defined(DHALL_BUILDLINK3_MK)
 DHALL_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.dhall+=	dhall>=1.40.2
-BUILDLINK_ABI_DEPENDS.dhall+=	dhall>=1.40.2nb3
+BUILDLINK_API_DEPENDS.dhall+=	dhall>=1.41.2
+BUILDLINK_ABI_DEPENDS.dhall+=	dhall>=1.41.2
 BUILDLINK_PKGSRCDIR.dhall?=	../../lang/dhall
 
 .include "../../converters/hs-aeson/buildlink3.mk"
@@ -24,6 +24,7 @@ BUILDLINK_PKGSRCDIR.dhall?=	../../lang/dhall
 .include "../../devel/hs-either/buildlink3.mk"
 .include "../../devel/hs-half/buildlink3.mk"
 .include "../../devel/hs-hashable/buildlink3.mk"
+.include "../../devel/hs-indexed-traversable/buildlink3.mk"
 .include "../../devel/hs-lens-family-core/buildlink3.mk"
 .include "../../textproc/hs-megaparsec/buildlink3.mk"
 .include "../../devel/hs-mmorph/buildlink3.mk"
@@ -39,6 +40,7 @@ BUILDLINK_PKGSRCDIR.dhall?=	../../lang/dhall
 .include "../../math/hs-scientific/buildlink3.mk"
 .include "../../devel/hs-serialise/buildlink3.mk"
 .include "../../textproc/hs-text-manipulate/buildlink3.mk"
+.include "../../textproc/hs-text-short/buildlink3.mk"
 .include "../../devel/hs-th-lift-instances/buildlink3.mk"
 .include "../../devel/hs-unordered-containers/buildlink3.mk"
 .include "../../net/hs-uri-encode/buildlink3.mk"
