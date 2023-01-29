@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2022/11/30 20:57:36 nros Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2023/01/29 16:24:32 he Exp $
 
 BUILDLINK_TREE+=	qt6-qtbase
 
@@ -65,6 +65,7 @@ PLIST.qt6dbus=	yes
 .include "../../x11/libXrender/buildlink3.mk"
 .include "../../x11/libxkbcommon/buildlink3.mk"
 .endif
+.include "../../mk/atomic64.mk"
 .endif	# QT6_QTBASE_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-qt6-qtbase
