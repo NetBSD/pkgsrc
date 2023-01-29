@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.16 2021/10/26 10:51:36 nia Exp $
+$NetBSD: distinfo,v 1.17 2023/01/29 10:47:33 wiz Exp $
 
-BLAKE2s (gcc-8.4.0.tar.xz) = 7e6d2b52d21f6107c9fb915ff9ecdf5c23d3f9f879ea262bddaa8fe626c5c3f2
-SHA512 (gcc-8.4.0.tar.xz) = 6de904f552a02de33b11ef52312bb664396efd7e1ce3bbe37bfad5ef617f133095b3767b4804bc7fe78df335cb53bc83f1ac055baed40979ce4c2c3e46b70280
-Size (gcc-8.4.0.tar.xz) = 63713440 bytes
+BLAKE2s (gcc-8.5.0.tar.xz) = 9eba966d2d55b1205107267b956f55b09c60765b74eb0560f7f86d857245b946
+SHA512 (gcc-8.5.0.tar.xz) = 92f599680e6b7fbce88bcdda810f468777d541e5fddfbb287f7977d51093de2a5178bd0e6a08dfe37090ea10a0508a43ccd00220041abbbec33f1179bfc174d8
+Size (gcc-8.5.0.tar.xz) = 63841008 bytes
 BLAKE2s (isl-0.16.1.tar.bz2) = 01c3fc657326e81414986eb7ede6f73e540b97009745ced125cdf7f4a8d80f61
 SHA512 (isl-0.16.1.tar.bz2) = c188667a84dc5bdddb4ab7c35f89c91bf15a8171f4fcaf41301cf285fb7328846d9a367c096012fec4cc69d244f0bc9e95d84c09ec097394cd4093076f2a041b
 Size (isl-0.16.1.tar.bz2) = 1626446 bytes
@@ -23,14 +23,13 @@ SHA1 (patch-gcc_config_t-netbsd) = 208a90f7127ad0a6a3573670b441af56716c1b1b
 SHA1 (patch-gcc_config_x-netbsd) = 6dc3d78e26df62054ea29f98ca51592858e671e3
 SHA1 (patch-gcc_configure) = 6a2d8eeeed2bf08c3c81291178e669dc91c913ce
 SHA1 (patch-gcc_ggc-common.c) = a5d2dba635859f5d680c3f80d7c30b42461c752b
-SHA1 (patch-gcc_gimplify.c) = 6f4fc96f0de1e0e96bc2e020aa352260d4270ba7
 SHA1 (patch-gcc_ginclude_stddef.h) = fb1f83801e0f5bcec110667dc868c47ff2d10343
 SHA1 (patch-gcc_lto_lto.c) = 7bd85ac8ade76a28c394f6fbe5d495f91824f79f
 SHA1 (patch-gcc_targhooks.c) = b28d8a9696d07bbfb00b7d8c55193ba99447ff1d
 SHA1 (patch-isl_configure) = 5523c76d95b229b3cd25461b4c2b7af24bf2534e
 SHA1 (patch-libffi_configure) = 22006b20d7f655e2455a7ad613d676703b6c1ccc
 SHA1 (patch-libffi_testsuite_libffi.call_float2.c) = 27b84a11378fb648dfaad0c70abedd77a0a1c1a8
-SHA1 (patch-libgcc_config.host) = 2394da0ec31904ef60da51359ef22041eecfc330
+SHA1 (patch-libgcc_config.host) = 819044175ec2c529087093456df1f6c3a0c71dd2
 SHA1 (patch-libgcc_crtstuff.c) = a16d465039de00c195cf0694560140a9c38f3a25
 SHA1 (patch-libgfortran_io_io.h) = d44676239a7f45e42054d24bd5224f43c20055c0
 SHA1 (patch-libsanitizer_configure.tgt) = 0a47782f01631d1c91e28a8735865c8571fbcf7d
