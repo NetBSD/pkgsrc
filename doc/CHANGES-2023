@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.829 2023/01/29 10:20:49 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.830 2023/01/29 10:22:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1035,3 +1035,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated converters/pandoc to 3.0.1 [pho 2023-01-29]
 	Updated devel/p5-Test-Pod-Coverage to 1.10nb9 [wiz 2023-01-29]
 	Added time/p5-Date-Range version 1.41 [wiz 2023-01-29]
+	Updated finance/p5-Finance-Quote to 1.53nb1 [wiz 2023-01-29]
