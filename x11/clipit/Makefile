@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2023/01/03 17:38:26 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2023/01/29 21:18:07 ryoon Exp $
 
 DISTNAME=	clipit-1.4.5
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=CristianHenzel/}
 GITHUB_PROJECT=	ClipIt

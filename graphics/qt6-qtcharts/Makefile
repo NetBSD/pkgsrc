@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2022/11/25 14:15:23 nros Exp $
+# $NetBSD: Makefile,v 1.2 2023/01/29 21:14:44 ryoon Exp $
 
 DISTNAME=	qtcharts-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qtcharts-${QTVERSION}
+PKGREVISION=	1
 COMMENT=	Qt6 module for visualising data as charts
 CATEGORIES=	graphics
 

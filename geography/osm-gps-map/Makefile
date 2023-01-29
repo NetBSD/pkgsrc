@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2023/01/03 17:37:14 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2023/01/29 21:16:26 ryoon Exp $
 
 DISTNAME=	osm-gps-map-1.2.0
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nzjrs/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}

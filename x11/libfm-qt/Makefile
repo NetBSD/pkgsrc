@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2023/01/06 00:34:31 gutteridge Exp $
+# $NetBSD: Makefile,v 1.25 2023/01/29 21:15:11 ryoon Exp $
 
 DISTNAME=	libfm-qt-1.2.1
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}

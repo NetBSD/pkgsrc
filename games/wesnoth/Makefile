@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.191 2023/01/27 16:33:07 adam Exp $
+# $NetBSD: Makefile,v 1.192 2023/01/29 21:16:23 ryoon Exp $
 
 DISTNAME=	wesnoth-1.16.8
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wesnoth/}
 EXTRACT_SUFX=	.tar.bz2

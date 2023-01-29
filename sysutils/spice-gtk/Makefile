@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2023/01/03 17:36:32 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2023/01/29 21:14:59 ryoon Exp $
 
 DISTNAME=	spice-gtk-0.41
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils
 MASTER_SITES=	https://www.spice-space.org/download/gtk/
 EXTRACT_SUFX=	.tar.xz

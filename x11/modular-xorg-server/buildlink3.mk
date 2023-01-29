@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.25 2022/07/17 02:29:41 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.26 2023/01/29 21:15:12 ryoon Exp $
 
 BUILDLINK_TREE+=	modular-xorg-server
 
@@ -8,6 +8,7 @@ MODULAR_XORG_SERVER_BUILDLINK3_MK:=
 .include "../../mk/bsd.fast.prefs.mk"
 
 BUILDLINK_API_DEPENDS.modular-xorg-server+=	modular-xorg-server>=21.1.4nb1
+BUILDLINK_ABI_DEPENDS.modular-xorg-server?=	modular-xorg-server>=21.1.6nb1
 BUILDLINK_PKGSRCDIR.modular-xorg-server?=	../../x11/modular-xorg-server
 BUILDLINK_INCDIRS.modular-xorg-server+=		include/xorg
 

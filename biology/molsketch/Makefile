@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2022/11/23 16:19:25 adam Exp $
+# $NetBSD: Makefile,v 1.10 2023/01/29 21:15:33 ryoon Exp $
 
 DISTNAME=	Molsketch-0.7.3-src
 PKGNAME=	${DISTNAME:S/-src//:tl}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=molsketch/}
 

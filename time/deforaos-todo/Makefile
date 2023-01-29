@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2023/01/03 17:38:19 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2023/01/29 21:17:55 ryoon Exp $
 
 DISTNAME=	Todo-0.3.0
 PKGNAME=	deforaos-todo-0.3.0
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	time
 MASTER_SITES=	https://ftp.defora.org/pub/DeforaOS/Apps/Desktop/src/Todo/
 

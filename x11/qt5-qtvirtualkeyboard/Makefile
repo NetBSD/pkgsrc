@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2023/01/05 16:01:18 adam Exp $
+# $NetBSD: Makefile,v 1.20 2023/01/29 21:15:17 ryoon Exp $
 
 DISTNAME=	qtvirtualkeyboard-everywhere-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtvirtualkeyboard-${QTVERSION}
+PKGREVISION=	1
 COMMENT=	Qt5 module for virtualkeyboard framework
 
 BUILD_TARGET=		sub-src

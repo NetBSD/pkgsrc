@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.56 2022/11/23 16:20:07 adam Exp $
+# $NetBSD: Makefile,v 1.57 2023/01/29 21:16:16 ryoon Exp $
 
 DISTNAME=	kshisen-${KAPPSVER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games
 
 HOMEPAGE=	https://kde.org/applications/games/kshisen/

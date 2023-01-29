@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2022/11/23 16:20:13 adam Exp $
+# $NetBSD: Makefile,v 1.35 2023/01/29 21:16:27 ryoon Exp $
 
 DISTNAME=	breeze-icons-${KF5VER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 
 HOMEPAGE=	https://community.kde.org/Frameworks

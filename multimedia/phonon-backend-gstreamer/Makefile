@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.34 2021/12/08 16:05:52 adam Exp $
+# $NetBSD: Makefile,v 1.35 2023/01/29 21:17:21 ryoon Exp $
 
 DISTNAME=	phonon-backend-gstreamer-4.9.1
 
 COMMENT=	Multimedia API for KDE and QT - GStreamer backend
-PKGREVISION=	7
+PKGREVISION=	8
 
 .include "Makefile.common"
 

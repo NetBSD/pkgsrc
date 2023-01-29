@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.51 2020/08/17 20:19:28 leot Exp $
+# $NetBSD: Makefile,v 1.52 2023/01/29 21:17:06 ryoon Exp $
 
 DISTNAME=	vicsrc-2.8
 PKGNAME=	${DISTNAME:S/src//}
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	mbone tk
 MASTER_SITES=	ftp://ftp.ee.lbl.gov/conferencing/vic/
 

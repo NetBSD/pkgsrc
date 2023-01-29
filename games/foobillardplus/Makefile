@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2020/03/20 11:57:41 nia Exp $
+# $NetBSD: Makefile,v 1.5 2023/01/29 21:16:10 ryoon Exp $
 
 DISTNAME=	foobillardplus-3.42beta
 PKGNAME=	${DISTNAME:S/beta/b/}
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=foobillardplus/}
 

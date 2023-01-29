@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2019/09/08 20:41:10 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2023/01/29 21:14:39 ryoon Exp $
 
 BUILDLINK_TREE+=	ftgl
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	ftgl
 FTGL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ftgl+=	ftgl>=2.1.3rc5
+BUILDLINK_ABI_DEPENDS.ftgl?=	ftgl>=2.1.3rc5nb1
 BUILDLINK_PKGSRCDIR.ftgl?=	../../graphics/ftgl
 
 .include "../../graphics/MesaLib/buildlink3.mk"
