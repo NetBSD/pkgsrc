@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.836 2023/01/29 12:47:18 ryoon Exp $
+$NetBSD: CHANGES-2023,v 1.837 2023/01/29 13:42:46 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1060,3 +1060,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated converters/hs-cborg-json to 0.2.5.0 [pho 2023-01-29]
 	Updated lang/dhall to 1.41.2 [pho 2023-01-29]
 	Updated net/wget2 to 2.0.1 [ryoon 2023-01-29]
+	Updated graphics/freetype2 to 2.12.1nb1 [ryoon 2023-01-29]
