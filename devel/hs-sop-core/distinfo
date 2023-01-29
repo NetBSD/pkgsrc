@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/01/29 04:51:04 pho Exp $
+
+BLAKE2s (sop-core-0.5.0.2.tar.gz) = 2269edd988147648ac3acd6f4fd0ae72efe17c7a06f7385a2e2f7a03c10b2b84
+SHA512 (sop-core-0.5.0.2.tar.gz) = bf71bc1823c567bc82c3a5a3166cbb4f4826149d66ec0871d11706512ce823b40ce6ce210cc5ba763a423a8d643b1819237e9b7f0950e901d445e05ccd78597b
+Size (sop-core-0.5.0.2.tar.gz) = 28505 bytes
