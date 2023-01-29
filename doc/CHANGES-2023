@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.827 2023/01/29 10:10:14 pho Exp $
+$NetBSD: CHANGES-2023,v 1.828 2023/01/29 10:17:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1033,3 +1033,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added converters/hs-pandoc-server version 0.1 [pho 2023-01-29]
 	Added converters/hs-pandoc-lua-engine version 0.1 [pho 2023-01-29]
 	Updated converters/pandoc to 3.0.1 [pho 2023-01-29]
+	Updated devel/p5-Test-Pod-Coverage to 1.10nb9 [wiz 2023-01-29]
