@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2020/05/14 19:19:13 joerg Exp $
+# $NetBSD: options.mk,v 1.6 2023/01/29 09:03:15 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gcc9
 PKG_SUPPORTED_OPTIONS=	nls gcc-inplace-math gcc-c++ gcc-fortran \
@@ -42,7 +42,6 @@ PKG_SUGGESTED_OPTIONS+=	gcc-multilib
 ###
 ### Don't install libgcc if it's older than the system one
 ###
-PLIST_VARS+=		libgcc
 .if !${PKG_OPTIONS:Malways-libgcc}
 
 .  for dir in ${_OPSYS_LIB_DIRS}
@@ -62,27 +61,21 @@ post-install: delete-installed-libgcc
 
 delete-installed-libgcc: .PHONY
 	${FIND} ${DESTDIR} -name 'libgcc_s.so*' -delete
-.  else
-PLIST.libgcc=		yes
 .  endif
-.else
-PLIST.libgcc=		yes
 .endif
 
 .if ${PLIST.libgcc:Uno} == "yes"
-LDFLAGS+=	-Wl,-rpath,${PREFIX}/gcc9/lib
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/gcc9/lib
 .endif
 
 ###
 ### Native Language Support
 ###
-PLIST_VARS+=		nls
 .if ${PKG_OPTIONS:Mnls}
 USE_TOOLS+=		msgfmt
 CONFIGURE_ARGS+=	--enable-nls
 CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv}
 MAKE_ENV+=		ICONVPREFIX=${BUILDLINK_PREFIX.iconv}
-PLIST.nls=		yes
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .else
@@ -114,7 +107,6 @@ LIBS.SunOS+=		-lgmp
 .  include "../../math/mpfr/buildlink3.mk"
 .endif
 
-PLIST_VARS+=		objcxx
 .if ${PKG_OPTIONS:Mgcc-objc++}
 .  if !${PKG_OPTIONS:Mgcc-c++}
 PKG_OPTIONS+=		gcc-c++
@@ -122,24 +114,19 @@ PKG_OPTIONS+=		gcc-c++
 .  if !${PKG_OPTIONS:Mgcc-objc}
 PKG_OPTIONS+=		gcc-objc
 .  endif
-PLIST.objcxx=		yes
 LANGS+=			obj-c++
 .endif
 
-PLIST_VARS+=		objc
 .if ${PKG_OPTIONS:Mgcc-objc}
 LANGS+=			objc
-PLIST.objc=		yes
 .endif
 
 .if ${PKG_OPTIONS:Mgcc-go}
 LANGS+=			go
 .endif
 
-PLIST_VARS+=		fortran
 .if ${PKG_OPTIONS:Mgcc-fortran}
 LANGS+=			fortran
-PLIST.fortran=		yes
 .endif
 
 .if ${PKG_OPTIONS:Mgcc-c++}
