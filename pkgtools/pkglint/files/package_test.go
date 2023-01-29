@@ -329,12 +329,13 @@ func (s *Suite) Test_Package__case_insensitive(c *check.C) {
 }
 
 // This package has several identifiers that all differ:
-//  - it lives in the directory "package"
-//  - the package name is "pkgname"
-//  - it downloads "distname-1.0.tar.gz"
-//    (in some places the distname is used as the package name)
-//  - in options.mk its name is "optid"
-//  - in buildlink3.mk its name is "bl3id"
+//   - it lives in the directory "package"
+//   - the package name is "pkgname"
+//   - it downloads "distname-1.0.tar.gz"
+//     (in some places the distname is used as the package name)
+//   - in options.mk its name is "optid"
+//   - in buildlink3.mk its name is "bl3id"
+//
 // All these identifiers should ideally be the same.
 // For historic reasons, the package directory and the package name
 // may differ.
@@ -3152,7 +3153,7 @@ func (s *Suite) Test_Package_checkPossibleDowngrade(c *check.C) {
 
 	t.CreateFileLines("doc/CHANGES-2018",
 		"\tUpdated category/pkgbase to 1.8 [committer 2018-01-05]")
-	G.Pkgsrc.loadDocChanges()
+	G.Pkgsrc.changes.load(&G.Pkgsrc)
 
 	t.Chdir("category/pkgbase")
 	pkg := NewPackage(".")
@@ -3164,7 +3165,7 @@ func (s *Suite) Test_Package_checkPossibleDowngrade(c *check.C) {
 	t.CheckOutputLines(
 		"WARN: Makefile:5: The package is being downgraded from 1.8 (see ../../doc/CHANGES-2018:1) to 1.0nb15.")
 
-	G.Pkgsrc.LastChange["category/pkgbase"].target = "1.0nb22"
+	G.Pkgsrc.changes.LastChange["category/pkgbase"].target = "1.0nb22"
 
 	pkg.checkPossibleDowngrade()
 
@@ -3186,7 +3187,7 @@ func (s *Suite) Test_Package_checkPossibleDowngrade__moved(c *check.C) {
 	pkg.determineEffectivePkgVars()
 	pkg.checkPossibleDowngrade()
 
-	t.CheckEquals(G.Pkgsrc.LastChange["category/pkgbase"].Action, Moved)
+	t.CheckEquals(G.Pkgsrc.changes.LastChange["category/pkgbase"].Action, Moved)
 	// No warning because the latest action is not Updated.
 	t.CheckOutputEmpty()
 }

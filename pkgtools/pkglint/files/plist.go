@@ -777,11 +777,13 @@ func NewPlistRank(basename RelPath) *PlistRank {
 }
 
 // The ranks among the files are:
-//  PLIST
-//  -> PLIST.common
-//  -> PLIST.common_end
-//  -> { PLIST.OPSYS, PLIST.ARCH }
-//  -> { PLIST.OPSYS.ARCH, PLIST.EMUL_PLATFORM }
+//
+//	PLIST
+//	-> PLIST.common
+//	-> PLIST.common_end
+//	-> { PLIST.OPSYS, PLIST.ARCH }
+//	-> { PLIST.OPSYS.ARCH, PLIST.EMUL_PLATFORM }
+//
 // Files are a later level must not mention files that are already
 // mentioned at an earlier level.
 func (r *PlistRank) MoreGeneric(other *PlistRank) bool {

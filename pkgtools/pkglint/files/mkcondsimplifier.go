@@ -214,8 +214,9 @@ func (s *MkCondSimplifier) simplifyYesNo(varuse *MkVarUse, fromEmpty bool, neg b
 }
 
 // simplifyMatch replaces:
-//  !empty(VAR:M*.c) with ${VAR:M*.c}
-//  empty(VAR:M*.c) with !${VAR:M*.c}
+//
+//	!empty(VAR:M*.c) with ${VAR:M*.c}
+//	empty(VAR:M*.c) with !${VAR:M*.c}
 //
 // * fromEmpty is true for the form empty(VAR...), and false for ${VAR...}.
 //

@@ -317,8 +317,9 @@ func (p *Pattern) compressed(relevant []bool) *Pattern {
 // CanMatch tests whether the pattern can match some string.
 // Most patterns can do that.
 // Typical counterexamples are:
-//  [^]
-//  Intersect("*.c", "*.h")
+//
+//	[^]
+//	Intersect("*.c", "*.h")
 func (p *Pattern) CanMatch() bool {
 	if len(p.states) == 0 {
 		return false

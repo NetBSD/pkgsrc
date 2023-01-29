@@ -35,24 +35,24 @@ func (cv *VartypeCheck) Explain(explanation ...string)             { cv.MkLine.E
 //
 // Usage:
 //
-//  fix := cv.Autofix()
+//	fix := cv.Autofix()
 //
-//  fix.Errorf("Must not be ...")
-//  fix.Warnf("Should not be ...")
-//  fix.Notef("It is also possible ...")
+//	fix.Errorf("Must not be ...")
+//	fix.Warnf("Should not be ...")
+//	fix.Notef("It is also possible ...")
 //
-//  fix.Explain(
-//      "Explanation ...",
-//      "... end of explanation.")
+//	fix.Explain(
+//	    "Explanation ...",
+//	    "... end of explanation.")
 //
-//  fix.Replace("from", "to")
-//  fix.ReplaceAfter("prefix", "from", "to")
-//  fix.InsertAbove("new line")
-//  fix.InsertBelow("new line")
-//  fix.Delete()
-//  fix.Custom(func(showAutofix, autofix bool) {})
+//	fix.Replace("from", "to")
+//	fix.ReplaceAfter("prefix", "from", "to")
+//	fix.InsertAbove("new line")
+//	fix.InsertBelow("new line")
+//	fix.Delete()
+//	fix.Custom(func(showAutofix, autofix bool) {})
 //
-//  fix.Apply()
+//	fix.Apply()
 func (cv *VartypeCheck) Autofix() *Autofix { return cv.MkLine.Autofix() }
 
 // WithValue returns a new VartypeCheck context by copying all
@@ -763,9 +763,10 @@ func (cv *VartypeCheck) LdFlag() {
 		return
 	}
 
+	// See MkLineChecker.checkTextRpath.
 	ldflag := cv.Value
-	if m, rpathFlag := match1(ldflag, `^(-Wl,(?:-R|-rpath|--rpath))`); m {
-		cv.Warnf("Please use \"${COMPILER_RPATH_FLAG}\" instead of %q.", rpathFlag)
+	if m, rpathFlag := match1(ldflag, `^(-Wl,--rpath,|-Wl,-rpath-link,|-Wl,-rpath,|-Wl,-R\b)`); m {
+		cv.Warnf("Please use ${COMPILER_RPATH_FLAG} instead of %q.", rpathFlag)
 		return
 	}
 
@@ -1457,9 +1458,9 @@ func (cv *VartypeCheck) ToolName() {
 // Unknown doesn't check for anything.
 //
 // Used for:
-//  - infrastructure variables that are not in vardefs.go
-//  - other variables whose type is unknown or not interesting enough to
-//    warrant the creation of a specialized type
+//   - infrastructure variables that are not in vardefs.go
+//   - other variables whose type is unknown or not interesting enough to
+//     warrant the creation of a specialized type
 func (cv *VartypeCheck) Unknown() {
 	// Do nothing.
 }

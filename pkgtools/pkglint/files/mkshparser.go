@@ -37,19 +37,22 @@ func (e *ParseError) Error() string {
 // The main work of tokenizing is done in ShellTokenizer though.
 //
 // Example:
-//  while :; do var=$$other; done
+//
+//	while :; do var=$$other; done
+//
 // =>
-//  while
-//  space " "
-//  word ":"
-//  semicolon
-//  space " "
-//  do
-//  space " "
-//  assign "var=$$other"
-//  semicolon
-//  space " "
-//  done
+//
+//	while
+//	space " "
+//	word ":"
+//	semicolon
+//	space " "
+//	do
+//	space " "
+//	assign "var=$$other"
+//	semicolon
+//	space " "
+//	done
 //
 // See splitIntoShellTokens and ShellTokenizer.
 type ShellLexer struct {
