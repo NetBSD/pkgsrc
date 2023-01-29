@@ -1,0 +1,14 @@
+$NetBSD: patch-servant-server.cabal,v 1.1 2023/01/29 05:24:22 pho Exp $
+
+Don't build the executable "greet". It's only an example of the library.
+
+--- servant-server.cabal.orig	2023-01-29 05:20:26.105924096 +0000
++++ servant-server.cabal
+@@ -101,6 +101,7 @@ library
+   ghc-options: -Wall -Wno-redundant-constraints
+ 
+ executable greet
++  buildable: False
+   main-is: greet.hs
+   hs-source-dirs: example
+   ghc-options: -Wall

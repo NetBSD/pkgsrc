@@ -1,0 +1,2 @@
+This library lets you implement an HTTP server with handlers for each
+endpoint of a servant API, handling most of the boilerplate for you.
