@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.817 2023/01/29 05:24:28 pho Exp $
+$NetBSD: CHANGES-2023,v 1.818 2023/01/29 05:51:41 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1023,3 +1023,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added www/hs-wai-extra version 3.1.13.0 [pho 2023-01-29]
 	Added www/hs-wai-app-static version 3.1.7.4 [pho 2023-01-29]
 	Added www/hs-servant-server version 0.19.2 [pho 2023-01-29]
+	Removed devel/ruby-power_assert [taca 2023-01-29]
