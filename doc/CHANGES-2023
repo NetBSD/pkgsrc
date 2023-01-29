@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.832 2023/01/29 10:58:11 js Exp $
+$NetBSD: CHANGES-2023,v 1.833 2023/01/29 11:22:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1038,3 +1038,22 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated finance/p5-Finance-Quote to 1.53nb1 [wiz 2023-01-29]
 	Updated lang/gcc8 to 8.5.0 [wiz 2023-01-29]
 	Updated chat/element-web to 1.11.20 [js 2023-01-29]
+	Updated ham/gnuradio-channels to 3.10.5.1 [adam 2023-01-29]
+	Updated ham/gnuradio-companion to 3.10.5.1 [adam 2023-01-29]
+	Updated ham/gnuradio-core to 3.10.5.1 [adam 2023-01-29]
+	Updated ham/gnuradio-ctrlport to 3.10.5.1 [adam 2023-01-29]
+	Updated ham/gnuradio-digital to 3.10.5.1 [adam 2023-01-29]
+	Updated ham/gnuradio-doxygen to 3.10.5.1 [adam 2023-01-29]
+	Updated ham/gnuradio-dtv to 3.10.5.1 [adam 2023-01-29]
+	Updated ham/gnuradio-fec to 3.10.5.1 [adam 2023-01-29]
+	Updated ham/gnuradio-network to 3.10.5.1 [adam 2023-01-29]
+	Updated ham/gnuradio-pdu to 3.10.5.1 [adam 2023-01-29]
+	Updated ham/gnuradio-qtgui to 3.10.5.1 [adam 2023-01-29]
+	Updated ham/gnuradio-soapy-sdr to 3.10.5.1 [adam 2023-01-29]
+	Updated ham/gnuradio-trellis to 3.10.5.1 [adam 2023-01-29]
+	Updated ham/gnuradio-uhd to 3.10.5.1 [adam 2023-01-29]
+	Updated ham/gnuradio-utils to 3.10.5.1 [adam 2023-01-29]
+	Updated ham/gnuradio-video-sdl to 3.10.5.1 [adam 2023-01-29]
+	Updated ham/gnuradio-vocoder to 3.10.5.1 [adam 2023-01-29]
+	Updated ham/gnuradio-wavelet to 3.10.5.1 [adam 2023-01-29]
+	Updated ham/gnuradio-zeromq to 3.10.5.1 [adam 2023-01-29]
