@@ -1,19 +1,19 @@
-@comment $NetBSD: PLIST,v 1.1 2022/02/23 16:53:02 pho Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/01/29 11:56:04 pho Exp $
 lib/cborg-json-${PKGVERSION}/${HS_VERSION}/package-description
 lib/cborg-json-${PKGVERSION}/${HS_VERSION}/package-id
-lib/${HS_PLATFORM}/${HS_PKGID}/Codec/CBOR/JSON.dyn_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Codec/CBOR/JSON.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Codec/CBOR/JSON.hi
-lib/${HS_PLATFORM}/${HS_PKGID}/Codec/CBOR/JSON.p_hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Codec/CBOR/JSON.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
-lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-share/doc/${HS_PLATFORM}/cborg-json-${PKGVERSION}/LICENSE.txt
-share/doc/${HS_PLATFORM}/cborg-json-${PKGVERSION}/html/Codec-CBOR-JSON.html
-share/doc/${HS_PLATFORM}/cborg-json-${PKGVERSION}/html/cborg-json.haddock
-share/doc/${HS_PLATFORM}/cborg-json-${PKGVERSION}/html/doc-index.html
-share/doc/${HS_PLATFORM}/cborg-json-${PKGVERSION}/html/haddock-bundle.min.js
-share/doc/${HS_PLATFORM}/cborg-json-${PKGVERSION}/html/index.html
-share/doc/${HS_PLATFORM}/cborg-json-${PKGVERSION}/html/linuwial.css
-share/doc/${HS_PLATFORM}/cborg-json-${PKGVERSION}/html/meta.json
-share/doc/${HS_PLATFORM}/cborg-json-${PKGVERSION}/html/quick-jump.css
-share/doc/${HS_PLATFORM}/cborg-json-${PKGVERSION}/html/synopsis.png
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${PLIST.doc}share/doc/${HS_PLATFORM}/cborg-json-${PKGVERSION}/LICENSE.txt
+${PLIST.doc}share/doc/${HS_PLATFORM}/cborg-json-${PKGVERSION}/html/Codec-CBOR-JSON.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/cborg-json-${PKGVERSION}/html/cborg-json.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/cborg-json-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/cborg-json-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/cborg-json-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/cborg-json-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/cborg-json-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/cborg-json-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/cborg-json-${PKGVERSION}/html/synopsis.png
