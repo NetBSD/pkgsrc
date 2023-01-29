@@ -1,0 +1,3 @@
+Provides an embeddable command-line interface for Lua. The interface is
+compatible with the standard Lua interpreter, i.e., the lua executable
+provided in a default Lua installation.
