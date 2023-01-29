@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.27 2022/11/23 16:18:55 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.28 2023/01/29 21:14:52 ryoon Exp $
 
 BUILDLINK_TREE+=	libkcddb
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libkcddb
 LIBKCDDB_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libkcddb+=	libkcddb>=19.08.3
-BUILDLINK_ABI_DEPENDS.libkcddb?=	libkcddb>=22.08.1nb2
+BUILDLINK_ABI_DEPENDS.libkcddb?=	libkcddb>=22.08.1nb3
 BUILDLINK_PKGSRCDIR.libkcddb?=	../../multimedia/libkcddb
 
 .include "../../audio/libmusicbrainz5/buildlink3.mk"

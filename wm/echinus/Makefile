@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2020/08/17 20:20:15 leot Exp $
+# $NetBSD: Makefile,v 1.13 2023/01/29 21:17:58 ryoon Exp $
 #
 
 DISTNAME=	echinus-0.4.9
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	wm
 MASTER_SITES=	http://plhk.ru/static/echinus/
 

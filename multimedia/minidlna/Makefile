@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.51 2022/11/23 16:20:46 adam Exp $
+# $NetBSD: Makefile,v 1.52 2023/01/29 21:17:19 ryoon Exp $
 
 DISTNAME=	minidlna-1.3.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=minidlna/}
 

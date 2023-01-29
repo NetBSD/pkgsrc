@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.52 2022/06/28 11:37:57 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.53 2023/01/29 21:15:14 ryoon Exp $
 
 BUILDLINK_TREE+=	qt4-libs
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	qt4-libs
 QT4_LIBS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.qt4-libs+=	qt4-libs>=4.6.1nb2
-BUILDLINK_ABI_DEPENDS.qt4-libs+=	qt4-libs>=4.8.7nb29
+BUILDLINK_ABI_DEPENDS.qt4-libs+=	qt4-libs>=4.8.7nb32
 BUILDLINK_PKGSRCDIR.qt4-libs?=		../../x11/qt4-libs
 
 BUILDLINK_INCDIRS.qt4-libs+=	qt4/include

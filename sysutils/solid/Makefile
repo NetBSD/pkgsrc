@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.55 2022/11/23 16:19:01 adam Exp $
+# $NetBSD: Makefile,v 1.56 2023/01/29 21:14:59 ryoon Exp $
 
 DISTNAME=	solid-${KF5VER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 
 HOMEPAGE=	https://community.kde.org/Frameworks

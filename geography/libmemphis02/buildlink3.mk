@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2021/12/08 16:02:06 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2023/01/29 21:14:36 ryoon Exp $
 
 BUILDLINK_TREE+=	libmemphis02
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libmemphis02
 LIBMEMPHIS02_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libmemphis02+=	libmemphis02>=0.2.3
-BUILDLINK_ABI_DEPENDS.libmemphis02?=	libmemphis02>=0.2.3nb9
+BUILDLINK_ABI_DEPENDS.libmemphis02?=	libmemphis02>=0.2.3nb11
 BUILDLINK_PKGSRCDIR.libmemphis02?=	../../geography/libmemphis02
 
 .include "../../devel/glib2/buildlink3.mk"

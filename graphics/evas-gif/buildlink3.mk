@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2020/08/17 20:17:28 leot Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2023/01/29 21:14:38 ryoon Exp $
 
 BUILDLINK_TREE+=	evas-gif
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	evas-gif
 EVAS_GIF_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.evas-gif+=	evas-gif>=1.7.7
-BUILDLINK_ABI_DEPENDS.evas-gif?=	evas-gif>=1.7.10nb2
+BUILDLINK_ABI_DEPENDS.evas-gif?=	evas-gif>=1.7.10nb3
 BUILDLINK_PKGSRCDIR.evas-gif?=		../../graphics/evas-gif
 
 .include "../../fonts/fontconfig/buildlink3.mk"

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.74 2023/01/03 17:37:38 wiz Exp $
+# $NetBSD: Makefile,v 1.75 2023/01/29 21:16:54 ryoon Exp $
 #
 
 GITHUB_PROJECT=	ibus-chewing
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
 DISTNAME=	ibus-chewing-1.5.1-Source
 PKGNAME=	${DISTNAME:S/-Source//}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	inputmethod chinese
 MASTER_SITES=	${MASTER_SITE_GITHUB:=definite/}
 

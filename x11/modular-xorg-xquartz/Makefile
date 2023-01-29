@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2022/05/14 21:32:33 schmonz Exp $
+# $NetBSD: Makefile,v 1.19 2023/01/29 21:18:17 ryoon Exp $
 
 DISTNAME=	modular-xorg-xquartz-1.20.99.1.20210408
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=XQuartz/}
 GITHUB_PROJECT=	xorg-server

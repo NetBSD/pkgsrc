@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.27 2022/11/23 16:18:59 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.28 2023/01/29 21:14:57 ryoon Exp $
 
 BUILDLINK_TREE+=	kauth
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kauth
 KAUTH_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kauth+=	kauth>=5.19.0
-BUILDLINK_ABI_DEPENDS.kauth?=	kauth>=5.98.0nb1
+BUILDLINK_ABI_DEPENDS.kauth?=	kauth>=5.98.0nb2
 BUILDLINK_PKGSRCDIR.kauth?=	../../security/kauth
 
 BUILDLINK_FILES.kauth+=		libexec/kauth/*

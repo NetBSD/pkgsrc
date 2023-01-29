@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2022/04/17 10:47:39 markd Exp $
+# $NetBSD: Makefile,v 1.34 2023/01/29 21:17:38 ryoon Exp $
 
+PKGREVISION= 1
 .include "../../print/texlive/Makefile.common"
 
 PKGNAME=	xdvik-22.87.06

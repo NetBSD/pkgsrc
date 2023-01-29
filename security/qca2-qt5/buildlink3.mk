@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2022/11/23 16:18:59 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2023/01/29 21:14:57 ryoon Exp $
 
 BUILDLINK_TREE+=	qca2-qt5
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	qca2-qt5
 QCA2_QT5_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.qca2-qt5+=	qca2-qt5>=2.1.3
-BUILDLINK_ABI_DEPENDS.qca2-qt5?=	qca2-qt5>=2.2.1nb11
+BUILDLINK_ABI_DEPENDS.qca2-qt5?=	qca2-qt5>=2.3.5nb1
 BUILDLINK_PKGSRCDIR.qca2-qt5?=		../../security/qca2-qt5
 
 .include "../../x11/qt5-qtbase/buildlink3.mk"

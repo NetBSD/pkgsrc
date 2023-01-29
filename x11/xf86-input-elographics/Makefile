@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2022/12/09 08:45:05 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2023/01/29 21:18:24 ryoon Exp $
 
 DISTNAME=	xf86-input-elographics-1.4.3
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.xz

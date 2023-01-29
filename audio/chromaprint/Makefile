@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2023/01/24 18:36:18 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2023/01/29 21:15:23 ryoon Exp $
 
 DISTNAME=	chromaprint-1.5.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=acoustid/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

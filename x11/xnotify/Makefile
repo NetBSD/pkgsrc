@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2022/08/22 19:46:47 tnn Exp $
+# $NetBSD: Makefile,v 1.8 2023/01/29 21:18:33 ryoon Exp $
 
 DISTNAME=	xnotify-0.8.1
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=phillbush/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

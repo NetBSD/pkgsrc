@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2020/01/26 17:31:12 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2023/01/29 21:16:05 ryoon Exp $
 #
 
 DISTNAME=	ttmkfdir2.20021109
 PKGNAME=	${DISTNAME:S/./-/}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	fonts x11
 MASTER_SITES=	http://people.redhat.com/yshao/
 EXTRACT_SUFX=	.tar.bz2

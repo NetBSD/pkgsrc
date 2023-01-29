@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.35 2022/07/22 17:07:10 micha Exp $
+# $NetBSD: buildlink3.mk,v 1.36 2023/01/29 21:14:47 ryoon Exp $
 
 BUILDLINK_TREE+=	vala
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	vala
 VALA_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.vala+=	vala>=0.56
-BUILDLINK_ABI_DEPENDS.vala?=	vala>=0.56.2nb1
+BUILDLINK_ABI_DEPENDS.vala?=	vala>=0.56.3nb1
 BUILDLINK_PKGSRCDIR.vala?=	../../lang/vala
 BUILDLINK_DEPMETHOD.vala?=	build
 

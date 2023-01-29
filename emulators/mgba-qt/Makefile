@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2022/12/15 11:31:44 nia Exp $
+# $NetBSD: Makefile,v 1.2 2023/01/29 21:16:01 ryoon Exp $
 
+PKGREVISION= 1
 .include "${.CURDIR}/../../emulators/mgba/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/mgba-/mgba-qt-/g}
