@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/02/24 01:11:41 pho Exp $
+$NetBSD: distinfo,v 1.2 2023/01/29 15:56:11 pho Exp $
 
-BLAKE2s (pointed-5.0.3.tar.gz) = 2daeb93a79faa60af19b01ce3a763ea00be761ddc83a5cdf76d92ae31fbe766e
-SHA512 (pointed-5.0.3.tar.gz) = e68375506d08002c5f0a76c24a40bdc7b28fea0e447f213c441bc22571846c3685a4833f19e224406f975236fd0bbaacecf6ea0ec1ec056254863f2b65aecbaa
-Size (pointed-5.0.3.tar.gz) = 5128 bytes
-SHA1 (patch-pointed.cabal) = 5dbeaa065c599268e687c12cab6b8597a65a434d
+BLAKE2s (pointed-5.0.4.tar.gz) = 4ee9d2ab471702ca762825246f189c99bdbdf5d143c739e7923628c2bbd964b9
+SHA512 (pointed-5.0.4.tar.gz) = a453933b5292a568975df974f22ff888f084f7f3dd23ff7bb7bf98d1071a3334cb525b07e756b9d6398f68d3f2379aee8c9aa1839e760e06b758e6ee18a659d3
+Size (pointed-5.0.4.tar.gz) = 5172 bytes
