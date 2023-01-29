@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.811 2023/01/29 04:46:28 pho Exp $
+$NetBSD: CHANGES-2023,v 1.812 2023/01/29 04:51:10 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1017,3 +1017,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/swagger-codegen to 3.0.40 [schmonz 2023-01-29]
 	Added devel/hs-dec version 0.0.5 [pho 2023-01-29]
 	Added devel/hs-singleton-bool version 0.1.6 [pho 2023-01-29]
+	Added devel/hs-sop-core version 0.5.0.2 [pho 2023-01-29]
