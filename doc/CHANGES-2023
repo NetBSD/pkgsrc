@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.851 2023/01/30 06:58:11 pho Exp $
+$NetBSD: CHANGES-2023,v 1.852 2023/01/30 07:01:18 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1075,3 +1075,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/darcs to 2.16.5 [pho 2023-01-30]
 	Updated lang/purescript to 0.15.7 [pho 2023-01-30]
 	Added devel/hs-hw-prim version 0.6.3.2 [pho 2023-01-30]
+	Added devel/hs-hw-fingertree version 0.1.2.1 [pho 2023-01-30]
