@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/03/06 13:00:02 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/01/30 07:55:18 adam Exp $
 bin/jbig2
 include/jbig2arith.h
 include/jbig2comparator.h
@@ -13,6 +13,6 @@ share/doc/jbig2enc-0.28/ChangeLog
 share/doc/jbig2enc-0.28/INSTALL
 share/doc/jbig2enc-0.28/NEWS
 share/doc/jbig2enc-0.28/PATENTS
-share/doc/jbig2enc-0.28/README
+share/doc/jbig2enc-0.28/README.md
 share/doc/jbig2enc-0.28/jbig2enc.html
 share/doc/jbig2enc-0.28/pdf.py
