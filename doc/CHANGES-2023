@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.873 2023/01/30 17:04:18 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.874 2023/01/30 17:10:06 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1104,3 +1104,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/rabbitmq to 3.11.7 [adam 2023-01-30]
 	Updated devel/py-dict2xml to 1.7.2 [adam 2023-01-30]
 	Updated emulators/mame to 0.251nb2 [wiz 2023-01-30]
+	Updated devel/hs-hls-floskell-plugin to 1.0.2.0 [pho 2023-01-30]
