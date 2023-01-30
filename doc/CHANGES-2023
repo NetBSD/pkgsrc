@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.845 2023/01/30 03:02:36 pho Exp $
+$NetBSD: CHANGES-2023,v 1.846 2023/01/30 03:52:44 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1069,3 +1069,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated editors/tp-note to 1.20.1 [pin 2023-01-29]
 	Updated sysutils/dust to 0.8.4 [pin 2023-01-29]
 	Updated devel/hs-lsp-types to 1.6.0.0 [pho 2023-01-30]
+	Added textproc/hs-text-rope version 0.2 [pho 2023-01-30]
