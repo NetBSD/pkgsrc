@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:23:25 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/01/30 13:58:52 taca Exp $
 
 BLAKE2s (nokogumbo-2.0.5.gem) = f5c00698aaa25c05c21b592fff6da1b1f8aacc1d153403428f7b6f307ccb0d20
 SHA512 (nokogumbo-2.0.5.gem) = 67a25b2bc0bec819feb7f0cc6bae587a8104d2973ba19d516e07b60da75ae8a34be8c3c121e26a6ddc7c07aede711469b73eba311fa2377c6a22a77ae1687fff
 Size (nokogumbo-2.0.5.gem) = 221696 bytes
+SHA1 (patch-ext_nokogumbo_nokogumbo.c) = 6c907004370e22344ad74a7caa17693061d818b6
