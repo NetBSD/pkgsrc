@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/10/17 12:26:59 taca Exp $
-bin/dbi
-bin/test_broken_dbi
+@comment $NetBSD: PLIST,v 1.2 2023/01/30 13:38:47 taca Exp $
+bin/dbi${RUBY_VER}
+bin/test_broken_dbi${RUBY_VER}
 ${GEM_HOME}/cache/dbi-${PKGVERSION}.gem
 ${GEM_LIBDIR}/ChangeLog
 ${GEM_LIBDIR}/LICENSE

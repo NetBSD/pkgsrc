@@ -1,0 +1,2 @@
+bin/dbi @PREFIX@/bin/dbi@RUBY_VER@
+bin/test_broken_dbi @PREFIX@/bin/test_broken_dbi@RUBY_VER@
