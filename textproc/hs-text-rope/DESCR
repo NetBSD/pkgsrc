@@ -1,0 +1,2 @@
+A wrapper around Text for fast line/column navigation and logarithmic
+concatenation.

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/01/30 03:52:36 pho Exp $
+
+BLAKE2s (text-rope-0.2.tar.gz) = fed403c6eecc37bacf946794cb41a4ca52d6547dcd4cc073fc7f969df6cbabca
+SHA512 (text-rope-0.2.tar.gz) = 261e79667158bc30bb2707474443d5f570815461a212811b240beb2a5bfe8dabbcc00cc3938cdf5663c2b17416ba841c6e9825f14a20f8a7402a579bd5c3a8b9
+Size (text-rope-0.2.tar.gz) = 37000 bytes
