@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/07/22 22:08:59 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2023/01/30 17:25:15 wiz Exp $
 
 DISTNAME=	mypaint-brushes-1.3.1
 PKGNAME=	${DISTNAME:S/brushes/brushes1/}
@@ -15,7 +15,7 @@ LICENSE=	cc0-1.0-universal
 GNU_CONFIGURE=	yes
 AUTOCONF_REQD=	2.62
 AUTOMAKE_REQD=	1.13
-USE_TOOLS+=	autoconf automake intltool gmake pkg-config
+USE_TOOLS+=	autoconf automake gmake pkg-config
 USE_LANGUAGES=	# none
 
 PKGCONFIG_OVERRIDE+=	pkgconfig.pc.in
