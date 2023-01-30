@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2023/01/22 00:23:18 leot Exp $
+# $NetBSD: Makefile,v 1.40 2023/01/30 17:52:20 leot Exp $
 
-DISTNAME=	mpop-1.4.17
+DISTNAME=	mpop-1.4.18
 CATEGORIES=	mail
 MASTER_SITES=	https://marlam.de/mpop/releases/
 EXTRACT_SUFX=	.tar.xz
