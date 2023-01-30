@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.162 2023/01/29 21:16:01 ryoon Exp $
+# $NetBSD: Makefile,v 1.163 2023/01/30 17:04:02 wiz Exp $
 
 DISTNAME=	mame-0.251
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mamedev/}
 GITHUB_TAG=	${DISTNAME:S/-//S/.//}
@@ -29,13 +29,6 @@ EXTRACT_USING=		bsdtar
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "NetBSD"
-# needs kvm and I didn't find the right place to add it in the build system
-MAKE_ENV+=	LDOPTS="${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.flac}/lib -L${BUILDLINK_PREFIX.flac}/lib -lkvm"
-.else
-MAKE_ENV+=	LDOPTS="${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.flac}/lib -L${BUILDLINK_PREFIX.flac}/lib"
-.endif
-
 MAKE_FLAGS+=		PRECOMPILE=0
 # TODO: set differently when debugging?
 MAKE_FLAGS+=		OPTIMIZE=2
@@ -52,25 +45,30 @@ BUILDLINK_TRANSFORM+=	rm:-m64
 BUILDLINK_TRANSFORM+=	opt:-std=c++17:-std=gnu++17
 
 # -Werror is problematic
-MAKE_ENV=	NOWERROR=1
+MAKE_ENV+=	NOWERROR=1
 # on Darwin, avoid SDL2.framework
 MAKE_ENV+=	USE_LIBSDL=1
-# use pkgsrc packages for expat, zlib, jpeg, flac, lua, sqlite3
+
+# use pkgsrc libraries
+# boost-header's asio.hpp is not compatible as of mame-0.251/boost 1.81.0
+#MAKE_ENV+=	USE_SYSTEM_LIB_ASIO=1
 MAKE_ENV+=	USE_SYSTEM_LIB_EXPAT=1
 MAKE_ENV+=	USE_SYSTEM_LIB_ZLIB=1
 MAKE_ENV+=	USE_SYSTEM_LIB_JPEG=1
 MAKE_ENV+=	USE_SYSTEM_LIB_FLAC=1
 MAKE_ENV+=	USE_SYSTEM_LIB_LUA=1
+# use audio from SDL
+#MAKE_ENV+=	USE_SYSTEM_LIB_PORTAUDIO=1
+# no portmidi package exists yet
+#MAKE_ENV+=	USE_SYSTEM_LIB_PORTMIDI=1
 MAKE_ENV+=	USE_SYSTEM_LIB_SQLITE3=1
 MAKE_ENV+=	USE_SYSTEM_LIB_UTF8PROC=1
 MAKE_ENV+=	USE_SYSTEM_LIB_GLM=1
 MAKE_ENV+=	USE_SYSTEM_LIB_RAPIDJSON=1
 MAKE_ENV+=	USE_SYSTEM_LIB_PUGIXML=1
-# no portmidi package exists yet
-#MAKE_ENV+=	USE_SYSTEM_LIB_PORTMIDI=1
 # find proper python binary
 MAKE_ENV+=	PYTHON_EXECUTABLE=${PYTHONBIN}
-# don't depend on qt4
+# don't depend on qt5
 MAKE_ENV+=	USE_QTDEBUG=0
 # avoid midi for now
 #MAKE_ENV+=	NO_USE_MIDI=1
@@ -115,7 +113,6 @@ do-install:
 
 .include "../../audio/flac/buildlink3.mk"
 .include "../../converters/utf8proc/buildlink3.mk"
-.include "../../devel/GConf/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
