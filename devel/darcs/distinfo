@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.15 2022/08/23 17:55:12 wiz Exp $
+$NetBSD: distinfo,v 1.16 2023/01/30 04:36:10 pho Exp $
 
-BLAKE2s (darcs-2.16.4.tar.gz) = 0a6959e8d42e2f374bebb0e499dee7718b34390a5f93dda6da8f9c9d19de91a6
-SHA512 (darcs-2.16.4.tar.gz) = 0f9a924d68416b660b86fd076d4f47915aba0e4a58bd92609e0f05f45913d6251109f3c477e20e0a517ca5fd35735b638690a8a0f7010a52e324c5a21a540a2a
-Size (darcs-2.16.4.tar.gz) = 1271864 bytes
+BLAKE2s (darcs-2.16.5.tar.gz) = c119005fe0f558b45e30f00a15c4dd9ab9496a430143376e64f7a6e8a75fc728
+SHA512 (darcs-2.16.5.tar.gz) = 9116043943315417ff314197f6a143435b5545f614c6e6210c3645987a68c69c31f53f823ee5269cb663ccba393f8caf1834120783f15128e43b132c731a0edb
+Size (darcs-2.16.5.tar.gz) = 1271154 bytes
 SHA1 (patch-Setup.hs) = cb147ff81869ccbab7a301d54dca64d0a7801903
-SHA1 (patch-darcs.cabal) = c67fe5d1338f1dcee7cfee25b2ed1dd0395d40c7
-SHA1 (patch-src_Darcs_UI_SelectChanges.hs) = 6da5b49849e7cc88dd4227dbde048855e1bf8837

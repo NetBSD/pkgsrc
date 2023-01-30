@@ -1,14 +1,28 @@
-# $NetBSD: Makefile,v 1.68 2022/09/07 06:50:53 pho Exp $
+# $NetBSD: Makefile,v 1.69 2023/01/30 04:36:10 pho Exp $
 
-DISTNAME=	darcs-2.16.4
+DISTNAME=	darcs-2.16.5
 PKGNAME=	${DISTNAME}
-PKGREVISION=	5
 CATEGORIES=	devel scm
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.darcs.net/
 COMMENT=	Distributed revision control system
 LICENSE=	gnu-gpl-v2
+
+HASKELL_UNRESTRICT_DEPENDENCIES+=	\
+	attoparsec	\
+	base	\
+	bytestring	\
+	constraints	\
+	cryptonite	\
+	fgl	\
+	hashable	\
+	memory	\
+	regex-tdfa	\
+	text	\
+	time	\
+	unix-compat	\
+	vector
 
 # If darcs is to be linked dynamically, it will depend on nearly 140 shared
 # objects and the dynamic linker will spend more than a second to resolve
@@ -47,6 +61,7 @@ post-install:
 .include "../../net/hs-network-uri/buildlink3.mk"
 .include "../../time/hs-old-time/buildlink3.mk"
 .include "../../textproc/hs-regex-applicative/buildlink3.mk"
+.include "../../textproc/hs-regex-base/buildlink3.mk"
 .include "../../textproc/hs-regex-compat-tdfa/buildlink3.mk"
 .include "../../archivers/hs-tar/buildlink3.mk"
 .include "../../sysutils/hs-temporary/buildlink3.mk"
