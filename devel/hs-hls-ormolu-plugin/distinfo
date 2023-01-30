@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2023/01/30 10:10:03 pho Exp $
+
+BLAKE2s (hls-ormolu-plugin-1.0.3.0.tar.gz) = e5894580b1019bdf8239392beb1f5584525c188bad994d0effc865cf4d454f28
+SHA512 (hls-ormolu-plugin-1.0.3.0.tar.gz) = 5c3390684e7040222bc09d58406acf87ec0ee83fb2fe18e71b36d4a740d2588d65e2ee89ab12d3edf5fa76176ff1aef81bb7292bb1c7a1925f0603cb18cb34ee
+Size (hls-ormolu-plugin-1.0.3.0.tar.gz) = 6557 bytes
+SHA1 (patch-hls-ormolu-plugin.cabal) = 0cbb86e58c9e01282a319ae996039f6819138069
