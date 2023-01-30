@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.52 2023/01/24 11:57:09 pho Exp $
+# $NetBSD: haskell.mk,v 1.53 2023/01/30 11:09:42 pho Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages. Package
 # configuration, building, installation, registration and unregistration
@@ -187,7 +187,7 @@ SUBST_MESSAGE.cabal?=	Relaxing version constraints on dependencies
 .  for _pkg_ in ${HASKELL_UNRESTRICT_DEPENDENCIES}
 # Leading whitespace, or commas, or colons to avoid mismatches, remove
 # version constraints up to end of line or ','.
-SUBST_SED.cabal+=	-Ee 's/((^|[,:])[[:space:]]*${_pkg_})[^[:alpha:],]+(,|$$)/\1\3/g'
+SUBST_SED.cabal+=	-Ee 's/((^|[,:])[[:space:]]*${_pkg_})[[:space:]=><^][^,]+(,|$$)/\1\3/g'
 .  endfor
 .endif
 
