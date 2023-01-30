@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.87 2023/01/29 21:17:15 ryoon Exp $
+# $NetBSD: Makefile,v 1.88 2023/01/30 17:32:02 wiz Exp $
 
 DISTNAME=		yelp-3.32.0
 PKGREVISION=		17
@@ -11,7 +11,7 @@ HOMEPAGE=		https://www.gnome.org/
 COMMENT=		Mallard capable help browser
 LICENSE=		gnu-gpl-v2 AND apache-2.0
 
-USE_TOOLS+=		gmake intltool msgfmt pkg-config itstool
+USE_TOOLS+=		gmake msgfmt pkg-config itstool
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
