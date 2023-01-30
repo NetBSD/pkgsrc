@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.1 2023/01/18 09:09:43 pin Exp $
+# $NetBSD: go-modules.mk,v 1.2 2023/01/30 08:47:27 pin Exp $
 
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.26.0.mod
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.34.0.mod
@@ -46,6 +46,7 @@ GO_MODULE_FILES+=	github.com/charmbracelet/bubbletea/@v/v0.21.0.mod
 GO_MODULE_FILES+=	github.com/charmbracelet/bubbletea/@v/v0.23.1.mod
 GO_MODULE_FILES+=	github.com/charmbracelet/bubbletea/@v/v0.23.1.zip
 GO_MODULE_FILES+=	github.com/charmbracelet/harmonica/@v/v0.2.0.mod
+GO_MODULE_FILES+=	github.com/charmbracelet/harmonica/@v/v0.2.0.zip
 GO_MODULE_FILES+=	github.com/charmbracelet/lipgloss/@v/v0.5.0.mod
 GO_MODULE_FILES+=	github.com/charmbracelet/lipgloss/@v/v0.6.0.mod
 GO_MODULE_FILES+=	github.com/charmbracelet/lipgloss/@v/v0.6.0.zip
