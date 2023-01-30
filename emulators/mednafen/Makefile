@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2022/09/11 12:51:33 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2023/01/30 17:08:43 wiz Exp $
 
 DISTNAME=	mednafen-1.29.0
 PKGREVISION=	3
@@ -22,7 +22,7 @@ CONFIGURE_ARGS+=	--disable-sdlframework
 
 WRKSRC=			${WRKDIR}/mednafen
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		intltool pkg-config
+USE_TOOLS+=		pkg-config
 USE_TOOLS+=		msgfmt msgmerge xgettext
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
