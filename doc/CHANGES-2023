@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.861 2023/01/30 09:29:20 pho Exp $
+$NetBSD: CHANGES-2023,v 1.862 2023/01/30 09:39:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1088,3 +1088,6 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/dust to 0.8.4nb1 [pin 2023-01-30]
 	Updated devel/hs-hls-qualify-imported-names-plugin to 1.0.2.0 [pho 2023-01-30]
 	Updated devel/hs-hls-pragmas-plugin to 1.0.4.0 [pho 2023-01-30]
+	Updated devel/glib2 to 2.74.5 [adam 2023-01-30]
+	Updated devel/glib2-tools to 2.74.5 [adam 2023-01-30]
+	Updated devel/gdbus-codegen to 2.74.5 [adam 2023-01-30]
