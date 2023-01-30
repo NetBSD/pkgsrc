@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.12 2019/07/08 18:37:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2023/01/30 07:57:28 adam Exp $
 bin/ambiguous_words
 bin/classifier_tester
 bin/cntraining
 bin/combine_lang_model
 bin/combine_tessdata
 bin/dawg2wordlist
-bin/language-specific.sh
 bin/lstmeval
 bin/lstmtraining
 bin/merge_unicharsets
@@ -13,30 +12,21 @@ bin/mftraining
 bin/set_unicharset_properties
 bin/shapeclustering
 bin/tesseract
-bin/tesstrain.sh
-bin/tesstrain_utils.sh
 bin/text2image
 bin/unicharset_extractor
 bin/wordlist2dawg
-include/tesseract/apitypes.h
 include/tesseract/baseapi.h
 include/tesseract/capi.h
-include/tesseract/genericvector.h
-include/tesseract/helpers.h
+include/tesseract/export.h
 include/tesseract/ltrresultiterator.h
 include/tesseract/ocrclass.h
 include/tesseract/osdetect.h
 include/tesseract/pageiterator.h
-include/tesseract/platform.h
 include/tesseract/publictypes.h
 include/tesseract/renderer.h
 include/tesseract/resultiterator.h
-include/tesseract/serialis.h
-include/tesseract/strngs.h
-include/tesseract/tess_version.h
-include/tesseract/tesscallback.h
-include/tesseract/thresholder.h
 include/tesseract/unichar.h
+include/tesseract/version.h
 lib/libtesseract.la
 lib/pkgconfig/tesseract.pc
 man/man1/ambiguous_words.1
@@ -105,9 +95,7 @@ share/tessdata/configs/wordstrbox
 share/tessdata/cos.traineddata
 share/tessdata/cym.traineddata
 share/tessdata/dan.traineddata
-share/tessdata/dan_frak.traineddata
 share/tessdata/deu.traineddata
-share/tessdata/deu_frak.traineddata
 share/tessdata/div.traineddata
 share/tessdata/dzo.traineddata
 share/tessdata/ell.traineddata
@@ -116,7 +104,6 @@ share/tessdata/eng.user-patterns
 share/tessdata/eng.user-words
 share/tessdata/enm.traineddata
 share/tessdata/epo.traineddata
-share/tessdata/equ.traineddata
 share/tessdata/est.traineddata
 share/tessdata/eus.traineddata
 share/tessdata/fao.traineddata
@@ -152,10 +139,9 @@ share/tessdata/kat_old.traineddata
 share/tessdata/kaz.traineddata
 share/tessdata/khm.traineddata
 share/tessdata/kir.traineddata
+share/tessdata/kmr.traineddata
 share/tessdata/kor.traineddata
 share/tessdata/kor_vert.traineddata
-share/tessdata/kur.traineddata
-share/tessdata/kur_ara.traineddata
 share/tessdata/lao.traineddata
 share/tessdata/lat.traineddata
 share/tessdata/lav.traineddata
@@ -186,7 +172,6 @@ share/tessdata/rus.traineddata
 share/tessdata/san.traineddata
 share/tessdata/sin.traineddata
 share/tessdata/slk.traineddata
-share/tessdata/slk_frak.traineddata
 share/tessdata/slv.traineddata
 share/tessdata/snd.traineddata
 share/tessdata/spa.traineddata
@@ -208,7 +193,6 @@ share/tessdata/tessconfigs/msdemo
 share/tessdata/tessconfigs/nobatch
 share/tessdata/tessconfigs/segdemo
 share/tessdata/tgk.traineddata
-share/tessdata/tgl.traineddata
 share/tessdata/tha.traineddata
 share/tessdata/tir.traineddata
 share/tessdata/ton.traineddata
