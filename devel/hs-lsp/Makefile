@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2022/08/20 08:08:17 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2023/01/30 03:56:55 pho Exp $
 
-DISTNAME=	lsp-1.4.0.0
-PKGREVISION=	2
+DISTNAME=	lsp-1.6.0.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -11,15 +10,16 @@ LICENSE=	mit
 .include "../../converters/hs-aeson/buildlink3.mk"
 .include "../../devel/hs-async/buildlink3.mk"
 .include "../../textproc/hs-attoparsec/buildlink3.mk"
+.include "../../sysutils/hs-co-log-core/buildlink3.mk"
 .include "../../devel/hs-data-default/buildlink3.mk"
 .include "../../devel/hs-hashable/buildlink3.mk"
-.include "../../sysutils/hs-hslogger/buildlink3.mk"
 .include "../../devel/hs-lens/buildlink3.mk"
 .include "../../devel/hs-lsp-types/buildlink3.mk"
-.include "../../net/hs-network-uri/buildlink3.mk"
+.include "../../textproc/hs-prettyprinter/buildlink3.mk"
 .include "../../devel/hs-random/buildlink3.mk"
-.include "../../math/hs-scientific/buildlink3.mk"
 .include "../../devel/hs-sorted-list/buildlink3.mk"
+.include "../../sysutils/hs-temporary/buildlink3.mk"
+.include "../../textproc/hs-text-rope/buildlink3.mk"
 .include "../../devel/hs-unliftio-core/buildlink3.mk"
 .include "../../devel/hs-unordered-containers/buildlink3.mk"
 .include "../../devel/hs-uuid/buildlink3.mk"
