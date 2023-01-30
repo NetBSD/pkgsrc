@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/09/28 11:05:39 wiz Exp $
+$NetBSD: distinfo,v 1.2 2023/01/30 12:51:52 adam Exp $
 
-BLAKE2s (proto-plus-1.22.1.tar.gz) = a11464adcea69c9ecd4bf788eed8014d8db36b2dafb8b68c272a8a0487df291c
-SHA512 (proto-plus-1.22.1.tar.gz) = 8c692b8d11a2f839c81bec21ac582a427b2746f0228f1e2e392454d716f705fed52e7175f3c5fa623d9772223b3570dca8115755490297d71de0d238d13173c0
-Size (proto-plus-1.22.1.tar.gz) = 53110 bytes
+BLAKE2s (proto-plus-1.22.2.tar.gz) = ac7d17fb349e6b633d54d288c45e8725223d8925205c5aa69263e22aa94024c6
+SHA512 (proto-plus-1.22.2.tar.gz) = 77e607f545ec2013aef6948cd0e2f3429cba6c3df6c7233ba8ccfa28dd187fbcbdd1e02478d332b1ab6719dd59adf97466cef14b4472640099d99ba890a3edfa
+Size (proto-plus-1.22.2.tar.gz) = 53205 bytes
