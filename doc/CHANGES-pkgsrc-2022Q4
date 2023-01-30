@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2022Q4,v 1.1.2.8 2023/01/26 20:02:05 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2022Q4,v 1.1.2.9 2023/01/30 13:50:34 bsiegert Exp $
 
 Changes to packages and infrastructure on the 2022Q4 branch:
 
@@ -58,4 +58,7 @@ www/firefox102-l10n: dependent update
 
 Pullup ticket #6726 - requested by taca
 net/bind916: security fix
+
+Pullup ticket #6727 - requested by otis
+devel/git: security fix
 
