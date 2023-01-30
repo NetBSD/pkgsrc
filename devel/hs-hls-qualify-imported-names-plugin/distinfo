@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/02/16 10:17:37 pho Exp $
+$NetBSD: distinfo,v 1.2 2023/01/30 09:21:11 pho Exp $
 
-BLAKE2s (hls-qualify-imported-names-plugin-1.0.1.0.tar.gz) = 3f604a35a91abc472cf731c4ffcb1ff88c27b05b6cc7810df5c63bad93c277f5
-SHA512 (hls-qualify-imported-names-plugin-1.0.1.0.tar.gz) = 9d2f52495f277574b4ffb4c47283654b1752769c8b50e69125e5a94f39fb525fe64f8d201ee30a870579b1fc5af92a0abe01c96dc023c41bee004fa060d12b55
-Size (hls-qualify-imported-names-plugin-1.0.1.0.tar.gz) = 263730 bytes
+BLAKE2s (hls-qualify-imported-names-plugin-1.0.2.0.tar.gz) = 778f2d984368f65b240a5a984cbaea0f35da31dafa03ea0ccc287f0b5f4a0607
+SHA512 (hls-qualify-imported-names-plugin-1.0.2.0.tar.gz) = 3c27662f9a3eb8f662eecba4aa36cd94ee138c3c249b6716d7f73278c4cb9fec6f5442fb5e56c448d9514817172b59d9dded3481f158077a0bc9cfb58cbf8661
+Size (hls-qualify-imported-names-plugin-1.0.2.0.tar.gz) = 263809 bytes
