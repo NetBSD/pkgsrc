@@ -1,19 +1,19 @@
-@comment $NetBSD: PLIST,v 1.1 2022/02/16 10:15:48 pho Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/01/30 10:15:16 pho Exp $
 lib/hls-module-name-plugin-${PKGVERSION}/${HS_VERSION}/package-description
 lib/hls-module-name-plugin-${PKGVERSION}/${HS_VERSION}/package-id
-lib/${HS_PLATFORM}/${HS_PKGID}/Ide/Plugin/ModuleName.dyn_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Ide/Plugin/ModuleName.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Ide/Plugin/ModuleName.hi
-lib/${HS_PLATFORM}/${HS_PKGID}/Ide/Plugin/ModuleName.p_hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Ide/Plugin/ModuleName.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
-lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-share/doc/${HS_PLATFORM}/hls-module-name-plugin-${PKGVERSION}/LICENSE
-share/doc/${HS_PLATFORM}/hls-module-name-plugin-${PKGVERSION}/html/Ide-Plugin-ModuleName.html
-share/doc/${HS_PLATFORM}/hls-module-name-plugin-${PKGVERSION}/html/doc-index.html
-share/doc/${HS_PLATFORM}/hls-module-name-plugin-${PKGVERSION}/html/haddock-bundle.min.js
-share/doc/${HS_PLATFORM}/hls-module-name-plugin-${PKGVERSION}/html/hls-module-name-plugin.haddock
-share/doc/${HS_PLATFORM}/hls-module-name-plugin-${PKGVERSION}/html/index.html
-share/doc/${HS_PLATFORM}/hls-module-name-plugin-${PKGVERSION}/html/linuwial.css
-share/doc/${HS_PLATFORM}/hls-module-name-plugin-${PKGVERSION}/html/meta.json
-share/doc/${HS_PLATFORM}/hls-module-name-plugin-${PKGVERSION}/html/quick-jump.css
-share/doc/${HS_PLATFORM}/hls-module-name-plugin-${PKGVERSION}/html/synopsis.png
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${PLIST.doc}share/doc/${HS_PLATFORM}/hls-module-name-plugin-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/${HS_PLATFORM}/hls-module-name-plugin-${PKGVERSION}/html/Ide-Plugin-ModuleName.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/hls-module-name-plugin-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/hls-module-name-plugin-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/hls-module-name-plugin-${PKGVERSION}/html/hls-module-name-plugin.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/hls-module-name-plugin-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/hls-module-name-plugin-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/hls-module-name-plugin-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/hls-module-name-plugin-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/hls-module-name-plugin-${PKGVERSION}/html/synopsis.png
