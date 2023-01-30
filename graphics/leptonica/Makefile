@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2023/01/03 17:36:25 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2023/01/30 07:53:38 adam Exp $
 
-DISTNAME=	leptonica-1.82.0
-PKGREVISION=	2
+DISTNAME=	leptonica-1.83.1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=danbloomberg/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -11,19 +10,10 @@ HOMEPAGE=	http://www.leptonica.org/
 COMMENT=	Software for image processing and image analysis applications
 LICENSE=	2-clause-bsd
 
-USE_LANGUAGES=		c c++
-USE_LIBTOOL=		yes
-USE_TOOLS+=		pkg-config
-GNU_CONFIGURE=		yes
-TEST_TARGET=		check
-
-.include "../../mk/bsd.prefs.mk"
-
-# The presence of fmemopen() assumes open_memstream() is also available,
-# which is wrong on platforms other than Linux.
-.if ${OPSYS} != "Linux"
-CONFIGURE_ENV+=		ac_cv_func_fmemopen=no
-.endif
+USE_LANGUAGES=	c c++
+USE_TOOLS+=	pkg-config
+CMAKE_ARGS+=	-DBUILD_PROG=ON
+CMAKE_ARGS+=	-DBUILD_SHARED_LIBS=ON
 
 # Silence console messages
 CPPFLAGS+=		-DNO_CONSOLE_IO=1
@@ -31,6 +21,7 @@ CPPFLAGS+=		-DNO_CONSOLE_IO=1
 # Pass a SunOS that the build relies on
 CPPFLAGS.SunOS+=	-D__SOLARIS__=1
 
+.include "../../devel/cmake/build.mk"
 .include "../../graphics/giflib/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../graphics/openjpeg/buildlink3.mk"
