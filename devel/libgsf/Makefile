@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.107 2023/01/03 17:36:19 wiz Exp $
+# $NetBSD: Makefile,v 1.108 2023/01/30 17:07:03 wiz Exp $
 
 DISTNAME=	libgsf-1.14.47
 PKGREVISION=	7
@@ -11,7 +11,7 @@ HOMEPAGE=	https://www.gnome.org/
 COMMENT=	GNOME structured file library
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
-USE_TOOLS+=		gmake intltool msgfmt pkg-config
+USE_TOOLS+=		gmake msgfmt pkg-config
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	yes
