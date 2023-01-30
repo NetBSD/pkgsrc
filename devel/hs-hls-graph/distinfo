@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/02/16 09:56:44 pho Exp $
+$NetBSD: distinfo,v 1.2 2023/01/30 04:01:17 pho Exp $
 
-BLAKE2s (hls-graph-1.6.0.0.tar.gz) = 4b744db49b87cb4a379be7eee1e6195d7ecae14e43fc0067db6291fe1113e5fa
-SHA512 (hls-graph-1.6.0.0.tar.gz) = a27369f5af3cd1d999ad59463d0178bf001f9ac0fe2be1ee7fc65cd7dc19ab8d6060a3ef8acd0a6fadcea1548de14341ad15974bfddcb4756eb5fd1b1da0fce8
-Size (hls-graph-1.6.0.0.tar.gz) = 32975 bytes
+BLAKE2s (hls-graph-1.9.0.0.tar.gz) = c782a91b40d03d4f0a8eb39c4dc9beeaa3b08a8b9b7902cc46b55bae9f1a9e7c
+SHA512 (hls-graph-1.9.0.0.tar.gz) = 9aa230de70964aa2f4f1e5cbfb0efed1a22b843ebeb290e3540343b459a3e58cc11631149133d7b3c25048c6170304758bc7fe45351c40b2da0344e3545e25f9
+Size (hls-graph-1.9.0.0.tar.gz) = 36550 bytes

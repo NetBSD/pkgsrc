@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2022/09/07 06:50:47 pho Exp $
+# $NetBSD: Makefile,v 1.5 2023/01/30 04:01:17 pho Exp $
 
-DISTNAME=	hls-graph-1.6.0.0
-PKGREVISION=	3
+DISTNAME=	hls-graph-1.9.0.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -17,8 +16,8 @@ LICENSE=	apache-2.0
 .include "../../www/hs-js-flot/buildlink3.mk"
 .include "../../www/hs-js-jquery/buildlink3.mk"
 .include "../../devel/hs-list-t/buildlink3.mk"
-.include "../../devel/hs-primitive/buildlink3.mk"
 .include "../../devel/hs-stm-containers/buildlink3.mk"
+.include "../../devel/hs-unliftio/buildlink3.mk"
 .include "../../devel/hs-unordered-containers/buildlink3.mk"
 .include "../../mk/haskell.mk"
 .include "../../mk/bsd.pkg.mk"
