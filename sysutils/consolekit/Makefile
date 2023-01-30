@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2022/06/28 11:35:55 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2023/01/30 17:45:24 wiz Exp $
 
 CONSOLEKIT_VER=	1.2.4
 DISTNAME=	ConsoleKit2-${CONSOLEKIT_VER}
@@ -41,7 +41,7 @@ CONF_FILES+=	${EGDIR}/ConsoleKit/seats.d/00-primary.seat		\
 		${PKG_SYSCONFBASE}/X11/xinit/xinitrc.d/90-consolekit
 
 GNU_CONFIGURE=	YES
-USE_TOOLS+=	gmake intltool msgfmt perl pkg-config
+USE_TOOLS+=	gmake msgfmt perl pkg-config
 USE_TOOLS+=	autoconf automake autoreconf autopoint
 USE_TOOLS+=	gdbus-codegen
 USE_LIBTOOL=	YES
