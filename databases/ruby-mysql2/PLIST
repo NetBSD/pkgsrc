@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2022/07/10 06:09:40 taca Exp $
+@comment $NetBSD: PLIST,v 1.11 2023/01/30 14:01:11 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/mysql2/mysql2.${RUBY_DLEXT}
@@ -31,6 +31,7 @@ ${GEM_LIBDIR}/lib/mysql2/statement.rb
 ${GEM_LIBDIR}/lib/mysql2/version.rb
 ${GEM_LIBDIR}/support/3A79BD29.asc
 ${GEM_LIBDIR}/support/5072E1F5.asc
+${GEM_LIBDIR}/support/C74CD1D8.asc
 ${GEM_LIBDIR}/support/libmysql.def
 ${GEM_LIBDIR}/support/mysql_enc_to_ruby.rb
 ${GEM_LIBDIR}/support/ruby_enc_to_mysql.rb
