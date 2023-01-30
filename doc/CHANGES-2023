@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.863 2023/01/30 10:10:09 pho Exp $
+$NetBSD: CHANGES-2023,v 1.864 2023/01/30 10:15:25 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1092,3 +1092,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/glib2-tools to 2.74.5 [adam 2023-01-30]
 	Updated devel/gdbus-codegen to 2.74.5 [adam 2023-01-30]
 	Added devel/hs-hls-ormolu-plugin version 1.0.3.0 [pho 2023-01-30]
+	Updated devel/hs-hls-module-name-plugin to 1.1.1.0 [pho 2023-01-30]
