@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2023/01/30 07:59:37 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/01/30 11:49:15 wiz Exp $
 
 DISTNAME=	base64-0.4.2.4
 CATEGORIES=	converters
@@ -8,6 +8,7 @@ COMMENT=	Modern RFC 4648-compliant Base64 library
 LICENSE=	modified-bsd
 
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
+	base,	\
 	text
 
 .include "../../textproc/hs-text-short/buildlink3.mk"
