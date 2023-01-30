@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.877 2023/01/30 19:38:30 nikita Exp $
+$NetBSD: CHANGES-2023,v 1.878 2023/01/30 21:01:52 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1109,3 +1109,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated multimedia/libde265 to 1.0.10 [adam 2023-01-30]
 	Updated ham/gr-osmosdr to 0.2.4 [adam 2023-01-30]
 	Added textproc/jose version 11 [nikita 2023-01-30]
+	Updated lang/zig to 0.10.1nb1 [nikita 2023-01-30]
