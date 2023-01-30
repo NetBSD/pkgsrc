@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2023/01/29 21:16:31 ryoon Exp $
+# $NetBSD: Makefile,v 1.104 2023/01/30 17:13:10 wiz Exp $
 
 DISTNAME=	geeqie-2.0.1
 PKGREVISION=	4
@@ -22,7 +22,7 @@ MESON_ARGS+=	-Ddoxygen=disabled
 
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
-USE_TOOLS=		bash:run intltool msgfmt pkg-config
+USE_TOOLS=		bash:run msgfmt pkg-config
 
 REPLACE_BASH+=		plugins/*/*
 REPLACE_BASH+=		doc/*.sh
