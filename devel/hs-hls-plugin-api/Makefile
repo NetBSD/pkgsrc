@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2022/09/07 06:50:47 pho Exp $
+# $NetBSD: Makefile,v 1.5 2023/01/30 07:03:13 pho Exp $
 
-DISTNAME=	hls-plugin-api-1.3.0.0
-PKGREVISION=	3
+DISTNAME=	hls-plugin-api-1.6.0.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -17,13 +16,14 @@ LICENSE=	apache-2.0
 .include "../../misc/hs-extra/buildlink3.mk"
 .include "../../devel/hs-hashable/buildlink3.mk"
 .include "../../devel/hs-hls-graph/buildlink3.mk"
-.include "../../sysutils/hs-hslogger/buildlink3.mk"
 .include "../../devel/hs-lens/buildlink3.mk"
 .include "../../converters/hs-lens-aeson/buildlink3.mk"
 .include "../../devel/hs-lsp/buildlink3.mk"
+.include "../../textproc/hs-megaparsec/buildlink3.mk"
 .include "../../sysutils/hs-opentelemetry/buildlink3.mk"
 .include "../../devel/hs-optparse-applicative/buildlink3.mk"
 .include "../../textproc/hs-regex-tdfa/buildlink3.mk"
 .include "../../devel/hs-unordered-containers/buildlink3.mk"
+.include "../../devel/hs-hw-fingertree/buildlink3.mk"
 .include "../../mk/haskell.mk"
 .include "../../mk/bsd.pkg.mk"
