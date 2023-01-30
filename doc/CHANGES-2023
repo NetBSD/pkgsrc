@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.844 2023/01/29 20:05:14 pin Exp $
+$NetBSD: CHANGES-2023,v 1.845 2023/01/30 03:02:36 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1068,3 +1068,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/hs-monoidal-containers to 0.6.3.0 [pho 2023-01-29]
 	Updated editors/tp-note to 1.20.1 [pin 2023-01-29]
 	Updated sysutils/dust to 0.8.4 [pin 2023-01-29]
+	Updated devel/hs-lsp-types to 1.6.0.0 [pho 2023-01-30]
