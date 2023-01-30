@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.856 2023/01/30 07:47:42 pho Exp $
+$NetBSD: CHANGES-2023,v 1.857 2023/01/30 07:59:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1080,3 +1080,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/hs-enummapset version 0.7.1.0 [pho 2023-01-30]
 	Updated devel/hs-ghcide to 1.9.0.0 [pho 2023-01-30]
 	Updated lang/spago to 0.20.9nb5 [pho 2023-01-30]
+	Updated graphics/leptonica to 1.83.1 [adam 2023-01-30]
+	Updated graphics/jbig2enc to 0.29 [adam 2023-01-30]
+	Updated graphics/tesseract to 5.3.0 [adam 2023-01-30]
+	Updated devel/memcached to 1.6.18 [adam 2023-01-30]
