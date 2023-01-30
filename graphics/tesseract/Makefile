@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.63 2023/01/29 21:16:47 ryoon Exp $
+# $NetBSD: Makefile,v 1.64 2023/01/30 07:57:28 adam Exp $
 
-DISTNAME=	tesseract-4.1.1
-PKGREVISION=	13
+DISTNAME=	tesseract-5.3.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tesseract-ocr/}
 DISTFILES=	${DEFAULT_DISTFILES}
@@ -11,9 +10,9 @@ HOMEPAGE=	https://github.com/tesseract-ocr/tesseract
 COMMENT=	Open Source OCR Engine
 LICENSE=	apache-2.0
 
-LANGVER=	4.0.0
+LANGVER=	4.1.0
 DISTFILES+=	tessdata-${LANGVER}${EXTRACT_SUFX}
-SITES.tessdata-${LANGVER}.tar.gz=	-${MASTER_SITES:Q}tessdata/archive/${LANGVER}.tar.gz
+SITES.tessdata-${LANGVER}.tar.gz=	-${MASTER_SITES:Q}tessdata_best/archive/${LANGVER}.tar.gz
 
 BUILD_DEPENDS+=		asciidoc-[0-9]*:../../textproc/asciidoc
 
@@ -22,12 +21,14 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		autoconf automake bash gmake pax pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		LIBLEPT_HEADERSDIR=${BUILDLINK_PREFIX.leptonica}/include
-
 INSTALL_TARGET=		install training-install
 REPLACE_BASH+=		src/training/*.sh
 
+#CMAKE_ARGS+=	-DUSE_SYSTEM_ICU=ON
+
 post-extract:
-	${MV} ${WRKDIR}/tessdata-${LANGVER}/* ${WRKSRC}/tessdata
+	${MV} ${WRKDIR}/tessdata_best-${LANGVER}/*.traineddata ${WRKSRC}/tessdata/
+	${MV} ${WRKDIR}/tessdata_best-${LANGVER}/script ${WRKSRC}/tessdata/
 
 # For some reason this release tarball lacks these
 pre-configure:
@@ -42,6 +43,8 @@ post-install:
 	cd ${WRKSRC}/tessdata && ${SETENV} ${INSTALL_ENV} ${MAKE_ENV} \
 		${MAKE_PROGRAM} ${MAKE_FLAGS} ${INSTALL_MAKE_FLAGS} install-langs
 
+.include "../../archivers/libarchive/buildlink3.mk"
+#.include "../../devel/cmake/build.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/leptonica/buildlink3.mk"
