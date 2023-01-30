@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3894 2023/01/30 07:01:26 pho Exp $
+# $NetBSD: Makefile,v 1.3895 2023/01/30 07:19:50 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -558,6 +558,7 @@ SUBDIR+=	hs-dlist-instances
 SUBDIR+=	hs-echo
 SUBDIR+=	hs-either
 SUBDIR+=	hs-enclosed-exceptions
+SUBDIR+=	hs-enummapset
 SUBDIR+=	hs-errors
 SUBDIR+=	hs-extensible-exceptions
 SUBDIR+=	hs-fail
