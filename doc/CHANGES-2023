@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.874 2023/01/30 17:10:06 pho Exp $
+$NetBSD: CHANGES-2023,v 1.875 2023/01/30 17:52:27 leot Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1105,3 +1105,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-dict2xml to 1.7.2 [adam 2023-01-30]
 	Updated emulators/mame to 0.251nb2 [wiz 2023-01-30]
 	Updated devel/hs-hls-floskell-plugin to 1.0.2.0 [pho 2023-01-30]
+	Updated mail/mpop to 1.4.18 [leot 2023-01-30]
