@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.847 2023/01/30 03:57:04 pho Exp $
+$NetBSD: CHANGES-2023,v 1.848 2023/01/30 04:01:25 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1071,3 +1071,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/hs-lsp-types to 1.6.0.0 [pho 2023-01-30]
 	Added textproc/hs-text-rope version 0.2 [pho 2023-01-30]
 	Updated devel/hs-lsp to 1.6.0.0 [pho 2023-01-30]
+	Updated devel/hs-hls-graph to 1.9.0.0 [pho 2023-01-30]
