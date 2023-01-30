@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1363 2023/01/30 03:53:36 pho Exp $
+# $NetBSD: Makefile,v 1.1364 2023/01/30 19:38:05 nikita Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -458,6 +458,7 @@ SUBDIR+=	jdom
 SUBDIR+=	jing
 SUBDIR+=	jless
 SUBDIR+=	jo
+SUBDIR+=	jose
 SUBDIR+=	jrep
 SUBDIR+=	json-c
 SUBDIR+=	json-glib

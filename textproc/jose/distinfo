@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2023/01/30 19:38:06 nikita Exp $
+
+BLAKE2s (jose-11.tar.gz) = c6762bd2eabd26c513b2fdd1a31739c348acfdaffbdd7e11e785dceb0b4b687a
+SHA512 (jose-11.tar.gz) = ffe09000837f79cefa549734d13c5d5d51042a42a055867241777ccbff3a127bac86a6155638fdf5ee52aad3598829e19724fd4e7de541117ed9b1c77c2ce457
+Size (jose-11.tar.gz) = 841374 bytes
+SHA1 (patch-lib_openssl_hmac.c) = 09cc79373b7881c01abf06b367e3ec96c3042c65
