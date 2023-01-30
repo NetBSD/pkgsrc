@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/01/30 06:58:05 pho Exp $
+
+BLAKE2s (hw-prim-0.6.3.2.tar.gz) = d24f4b7566694d0ca41d4e8ea504d0f057818c5a67278d8a0a3cda9e06a07987
+SHA512 (hw-prim-0.6.3.2.tar.gz) = f37af59ed15e595b3a140f8fbc256c8f3ae280565819ca140a8394b8dad1608e4105c3ed937b33e8486ec2442d1c3f824ed1b6a0b0c4a69b0fe87960792a899d
+Size (hw-prim-0.6.3.2.tar.gz) = 20295 bytes
