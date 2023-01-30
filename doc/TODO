@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22586 2023/01/30 12:00:41 wiz Exp $
+$NetBSD: TODO,v 1.22587 2023/01/30 19:02:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -517,6 +517,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o calibre-6.11.0
 	o calligra-3.0.1 [in wip; koffice successor]
 	o camlp4-4.12
+	o cantata-2.5.0
 	o canu-2.1.1
 	o carbons-purple-0.2.3
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
@@ -872,6 +873,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o keybinder-0.3.2
 	o kfilemetadata-5.81.0
 	o kgb-bot-1.55
+	o kid3-3.9.3
 	o kismet-2011.03r2 [pkg/45692]
 	o kismet-2016.07R1
 	o knot-resolver-1.1.1
