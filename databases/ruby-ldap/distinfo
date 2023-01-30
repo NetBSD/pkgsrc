@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 10:10:02 nia Exp $
+$NetBSD: distinfo,v 1.12 2023/01/30 13:53:50 taca Exp $
 
 BLAKE2s (ruby-ldap-0.9.20.gem) = c87fd4a4be50189df2defbcfe8ca837b4e14414aaa6cc7e531fe0d9f2af6d91b
 SHA512 (ruby-ldap-0.9.20.gem) = 4f4902e7eaf4fe0cd421d58c73ce4e625d61ee20ef02363d3cf5754c66237e0f378ac433b234c2b86d5f5284ae03b7ae6c46d3575c512487bc1a931d021c9517
 Size (ruby-ldap-0.9.20.gem) = 67072 bytes
+SHA1 (patch-conn.c) = 352cd212a546b8bc4b56727bd7256c2029f0123b
