@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.259 2023/01/29 21:16:36 ryoon Exp $
+# $NetBSD: Makefile,v 1.260 2023/01/30 17:21:34 wiz Exp $
 
 DISTNAME=	inkscape-1.2.1
 PKGREVISION=	6
@@ -32,7 +32,7 @@ LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/inkscape
 USE_LANGUAGES=		c c++17
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		intltool msgfmt msgmerge perl pkg-config
+USE_TOOLS+=		msgfmt msgmerge perl pkg-config
 
 REPLACE_PERL+=		man/fix-roff-punct
 REPLACE_PERL+=		share/extensions/*.p[lm]
