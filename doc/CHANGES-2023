@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.855 2023/01/30 07:28:39 pho Exp $
+$NetBSD: CHANGES-2023,v 1.856 2023/01/30 07:47:42 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1079,3 +1079,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/hs-hls-plugin-api to 1.6.0.0 [pho 2023-01-30]
 	Added devel/hs-enummapset version 0.7.1.0 [pho 2023-01-30]
 	Updated devel/hs-ghcide to 1.9.0.0 [pho 2023-01-30]
+	Updated lang/spago to 0.20.9nb5 [pho 2023-01-30]
