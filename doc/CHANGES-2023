@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.869 2023/01/30 13:39:12 taca Exp $
+$NetBSD: CHANGES-2023,v 1.870 2023/01/30 13:54:10 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1099,3 +1099,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-greenlet to 2.0.2 [adam 2023-01-30]
 	Updated devel/hs-hls-fourmolu-plugin to 1.1.1.0 [pho 2023-01-30]
 	Updated databases/ruby-dbi to 0.4.5nb3 [taca 2023-01-30]
+	Updated databases/ruby-ldap to 0.9.20nb1 [taca 2023-01-30]
