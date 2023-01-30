@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2022/11/23 16:19:44 adam Exp $
+# $NetBSD: Makefile,v 1.77 2023/01/30 13:29:00 wiz Exp $
 
 DISTNAME=	shared-mime-info-2.2
 PKGREVISION=	1
@@ -15,7 +15,7 @@ TOOL_DEPENDS+=		gettext-tools>=0.19.8:../../devel/gettext-tools
 TOOL_DEPENDS+=		xmlto>=0:../../textproc/xmlto
 
 USE_LANGUAGES+=		c99
-USE_TOOLS+=		bash:test intltool msgfmt pkg-config xgettext
+USE_TOOLS+=		bash:test msgfmt pkg-config xgettext
 
 .include "../../mk/bsd.prefs.mk"
 
