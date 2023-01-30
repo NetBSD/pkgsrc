@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.867 2023/01/30 12:53:44 adam Exp $
+$NetBSD: CHANGES-2023,v 1.868 2023/01/30 13:27:44 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1097,3 +1097,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated inputmethod/librime to 1.8.3 [wiz 2023-01-30]
 	Updated devel/py-proto-plus to 1.22.2 [adam 2023-01-30]
 	Updated devel/py-greenlet to 2.0.2 [adam 2023-01-30]
+	Updated devel/hs-hls-fourmolu-plugin to 1.1.1.0 [pho 2023-01-30]
