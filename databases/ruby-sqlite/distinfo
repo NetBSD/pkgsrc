@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:10:04 nia Exp $
+$NetBSD: distinfo,v 1.6 2023/01/30 13:40:06 taca Exp $
 
 BLAKE2s (sqlite-ruby-2.2.3.gem) = 8bbdb432da51c2c4e95101a8da4c7fcd9836562e2f9816b62e83f6b1737494d2
 SHA512 (sqlite-ruby-2.2.3.gem) = 2cf1a5d6c74b910e75b29f4ce8599c690ed492ffe457f029f58b76b9fe85a0a667322bfe743a7aa06c28ce12b001cf662282b3fc31d82c59613cef5378db99bf
 Size (sqlite-ruby-2.2.3.gem) = 41472 bytes
-SHA1 (patch-aa) = 09f1daf1a514ff3fa06994d31a0f1fab6a7a8bf3
+SHA1 (patch-aa) = 968aa3bea2c1d4bf6d4d7ad4c53e484590c73336

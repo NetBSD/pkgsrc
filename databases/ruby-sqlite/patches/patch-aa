@@ -1,6 +1,9 @@
-$NetBSD: patch-aa,v 1.1 2010/09/10 04:52:59 taca Exp $
+$NetBSD: patch-aa,v 1.2 2023/01/30 13:40:06 taca Exp $
 
---- ext/sqlite-api.c.orig	2010-08-27 23:55:51.000000000 +0000
+* Use Modern Ruby API.
+* Avoid use of rb_cData for Ruby 3.2.
+
+--- ext/sqlite-api.c.orig	2023-01-30 13:22:14.778692763 +0000
 +++ ext/sqlite-api.c
 @@ -270,7 +270,7 @@ static_api_open( VALUE module, VALUE fil
    Check_Type( file_name, T_STRING );
@@ -11,6 +14,15 @@ $NetBSD: patch-aa,v 1.1 2010/09/10 04:52:59 taca Exp $
    i_mode      = FIX2INT( mode );
  
    db = sqlite_open( s_file_name, i_mode, &errmsg );
+@@ -280,7 +280,7 @@ static_api_open( VALUE module, VALUE fil
+     /* "raise" does not return */
+   }
+ 
+-  return Data_Wrap_Struct( rb_cData, NULL, sqlite_close, db );
++  return Data_Wrap_Struct( rb_cObject, NULL, sqlite_close, db );
+ }
+ 
+ /**
 @@ -329,7 +329,7 @@ static_api_compile( VALUE module, VALUE 
    Check_Type( sql, T_STRING );
  
@@ -20,6 +32,15 @@ $NetBSD: patch-aa,v 1.1 2010/09/10 04:52:59 taca Exp $
                             &sql_tail,
                             &vm,
                             &errmsg );
+@@ -341,7 +341,7 @@ static_api_compile( VALUE module, VALUE 
+   }
+ 
+   tuple = rb_ary_new();
+-  rb_ary_push( tuple, Data_Wrap_Struct( rb_cData, NULL, static_free_vm, vm ) );
++  rb_ary_push( tuple, Data_Wrap_Struct( rb_cObject, NULL, static_free_vm, vm ) );
+   rb_ary_push( tuple, rb_str_new2( sql_tail ) );
+ 
+   return tuple;
 @@ -545,7 +545,7 @@ static VALUE
  static_api_complete( VALUE module, VALUE sql )
  {
@@ -60,3 +81,21 @@ $NetBSD: patch-aa,v 1.1 2010/09/10 04:52:59 taca Exp $
  }
  
  static void
+@@ -1241,7 +1241,7 @@ static_function_callback( sqlite_func *f
+     proc = rb_ary_entry( proc, 0 );
+ 
+   args = rb_ary_new2( argc + 1 );
+-  rb_ary_push( args, Data_Wrap_Struct( rb_cData, NULL, NULL, func ) );
++  rb_ary_push( args, Data_Wrap_Struct( rb_cObject, NULL, NULL, func ) );
+ 
+   for( index = 0; index < argc; index++ )
+   {
+@@ -1273,7 +1273,7 @@ static_aggregate_finalize_callback( sqli
+   int    exception = 0;
+ 
+   proc = rb_ary_entry( (VALUE)sqlite_user_data( func ), 1 );
+-  args = rb_ary_new3( 1, Data_Wrap_Struct( rb_cData, NULL, NULL, func ) );
++  args = rb_ary_new3( 1, Data_Wrap_Struct( rb_cObject, NULL, NULL, func ) );
+ 
+   protect_args = rb_ary_new3( 2, proc, args );
+ 
