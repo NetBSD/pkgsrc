@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2023/01/30 10:10:03 pho Exp $
+lib/hls-ormolu-plugin-${PKGVERSION}/${HS_VERSION}/package-description
+lib/hls-ormolu-plugin-${PKGVERSION}/${HS_VERSION}/package-id
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Ide/Plugin/Ormolu.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Ide/Plugin/Ormolu.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Ide/Plugin/Ormolu.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${PLIST.doc}share/doc/${HS_PLATFORM}/hls-ormolu-plugin-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/${HS_PLATFORM}/hls-ormolu-plugin-${PKGVERSION}/html/Ide-Plugin-Ormolu.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/hls-ormolu-plugin-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/hls-ormolu-plugin-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/hls-ormolu-plugin-${PKGVERSION}/html/hls-ormolu-plugin.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/hls-ormolu-plugin-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/hls-ormolu-plugin-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/hls-ormolu-plugin-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/hls-ormolu-plugin-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/hls-ormolu-plugin-${PKGVERSION}/html/synopsis.png
