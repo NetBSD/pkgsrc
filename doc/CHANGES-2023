@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.865 2023/01/30 10:29:31 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.866 2023/01/30 10:35:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1094,3 +1094,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/hs-hls-ormolu-plugin version 1.0.3.0 [pho 2023-01-30]
 	Updated devel/hs-hls-module-name-plugin to 1.1.1.0 [pho 2023-01-30]
 	Removed net/microdc2 [wiz 2023-01-30]
+	Updated inputmethod/librime to 1.8.3 [wiz 2023-01-30]
