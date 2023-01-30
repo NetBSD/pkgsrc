@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.976 2023/01/23 21:29:09 pin Exp $
+# $NetBSD: Makefile,v 1.977 2023/01/30 23:09:56 wiz Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -15,7 +15,6 @@ SUBDIR+=	arandr
 SUBDIR+=	asnap
 SUBDIR+=	aterm
 SUBDIR+=	autocutsel
-SUBDIR+=	avant-window-navigator
 SUBDIR+=	bbapm
 SUBDIR+=	beforelight
 SUBDIR+=	bitmap

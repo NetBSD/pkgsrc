@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:33:43 nia Exp $
-
-BLAKE2s (avant-window-navigator-0.4.0.tar.gz) = c9c264564a3c24698fe1d1dd386579bf2cb719c7aeb811d8798f39e6a4da4512
-SHA512 (avant-window-navigator-0.4.0.tar.gz) = 09fe318e6e93513ef58b6d33fd8daa1fa39de880ec2b43d66ecb91e2d2302937f688832e9ad82aca78fe4afe41e69d1b19e8915b0ac1d0e91a53e8055af14e2d
-Size (avant-window-navigator-0.4.0.tar.gz) = 1556708 bytes
-SHA1 (patch-applet-activation_main.c) = 364b76fb884d02e6e4f84b630116aaa7cda22e5d
-SHA1 (patch-applets_taskmanager_Makefile.in) = d0cdfc228b18bf13c65ab5dca219b6cd16a4dd87
-SHA1 (patch-data_Makefile.in) = af286e9c8dcc72559f07e818759cd4d6543205a2
