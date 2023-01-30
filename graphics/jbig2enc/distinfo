@@ -1,7 +1,11 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:46:20 nia Exp $
+$NetBSD: distinfo,v 1.4 2023/01/30 07:55:18 adam Exp $
 
-BLAKE2s (jbig2enc-0.29pre-0693dcd027f333d8499a4717b6452de08b6834ed.tar.gz) = 12dc6ea82378b66f7785445204dad8ca123596df8833d34b8e5c4890fa4a2a19
-SHA512 (jbig2enc-0.29pre-0693dcd027f333d8499a4717b6452de08b6834ed.tar.gz) = a40da34018596aed76ce1bbf2fa951df95f9159a4a3b22f545fefff85dc748ba0299b5956b3c6e984c3731ef60bacce588ffd0e5e7831ff08149cd8f20422108
-Size (jbig2enc-0.29pre-0693dcd027f333d8499a4717b6452de08b6834ed.tar.gz) = 40240 bytes
-SHA1 (patch-Makefile.am) = 5f0bd89e21c7657ac275ff65c06091af9db5e2f3
+BLAKE2s (jbig2enc-0.29.tar.gz) = 0ea2701ec813d8021ebd39459de7c3f4bec511aa504a83c6a11cb2ccdecbe408
+SHA512 (jbig2enc-0.29.tar.gz) = aa50cdaf61ef0ae473c8139d8da2a4c374450f8d0d31e2260031e8086dab9201c303c86d50cd51427135bef500718cbc3a53baabf2bf505f8908c22a3d361c51
+Size (jbig2enc-0.29.tar.gz) = 1108212 bytes
+SHA1 (patch-Makefile.am) = 506af56b0a3f7fe0629789053b015ff1af77c3eb
+SHA1 (patch-configure.ac) = 9777591b91e951b26d60e96a8590db71cadfa140
 SHA1 (patch-src_Makefile.am) = 4a757a78c15c2a979e168d3052a857632b61e21b
+SHA1 (patch-src_jbig2.cc) = 52b6f052c1055d4cf9224ffecfba12f1c97f7dbf
+SHA1 (patch-src_jbig2enc.cc) = e2750d7a2909d36fa2f89f87833aa0a543dd1620
+SHA1 (patch-src_jbig2sym.cc) = 4e2addeee78c3cc59ae584c5e3daa119abc28560

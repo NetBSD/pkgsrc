@@ -1,13 +1,13 @@
-$NetBSD: patch-Makefile.am,v 1.1 2019/03/06 13:00:03 joerg Exp $
+$NetBSD: patch-Makefile.am,v 1.2 2023/01/30 07:55:18 adam Exp $
 
 Don't install the PDF conversion script, it is of limited usefulness.
 
---- Makefile.am.orig	2016-08-09 14:25:57.812939920 +0000
+--- Makefile.am.orig	2017-01-30 17:27:36.000000000 +0000
 +++ Makefile.am
 @@ -1,5 +1,4 @@
  ACLOCAL_AMFLAGS = -I m4
  SUBDIRS = src doc
 -dist_bin_SCRIPTS = pdf.py
--dist_doc_DATA = AUTHORS ChangeLog COPYING INSTALL NEWS README 
-+dist_doc_DATA = AUTHORS ChangeLog COPYING INSTALL NEWS README pdf.py
+-dist_doc_DATA = AUTHORS ChangeLog COPYING INSTALL NEWS README.md
++dist_doc_DATA = AUTHORS ChangeLog COPYING INSTALL NEWS README.md pdf.py
  EXTRA_DIST = autogen.sh
