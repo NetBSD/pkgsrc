@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2023/01/24 23:42:49 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2023/01/30 02:52:02 gutteridge Exp $
 
 .include "../../lang/llvm/version.mk"
 
@@ -51,6 +51,7 @@ CMAKE_ARGS+=	-DCOMPILER_RT_HAS_FLOAT16:BOOL=OFF
 CMAKE_ARGS+=	-DCOMPILER_RT_HAS_ASM_LSE:BOOL=OFF
 CMAKE_ARGS+=	-DCMAKE_C_COMPILER_WORKS=1 # Do not test clang compile
 CMAKE_ARGS+=	-DCMAKE_CXX_COMPILER_WORKS=1 # Do not test clang++ compile
+CMAKE_ARGS+=	-DCOMPILER_RT_ENABLE_IOS=OFF
 
 CMAKE_INSTALL_PREFIX=	${PREFIX}/lib/clang/${PKGVERSION_NOREV}
 
