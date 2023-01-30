@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2021/06/15 10:26:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2023/01/30 07:53:38 adam Exp $
 bin/convertfilestopdf
 bin/convertfilestops
 bin/convertformat
@@ -12,6 +12,7 @@ bin/xtractprotos
 include/leptonica/allheaders.h
 include/leptonica/alltypes.h
 include/leptonica/array.h
+include/leptonica/array_internal.h
 include/leptonica/arrayaccess.h
 include/leptonica/bbuffer.h
 include/leptonica/bilateral.h
@@ -19,6 +20,7 @@ include/leptonica/bmf.h
 include/leptonica/bmfdata.h
 include/leptonica/bmp.h
 include/leptonica/ccbord.h
+include/leptonica/ccbord_internal.h
 include/leptonica/colorfill.h
 include/leptonica/dewarp.h
 include/leptonica/endianness.h
@@ -32,6 +34,7 @@ include/leptonica/leptwin.h
 include/leptonica/list.h
 include/leptonica/morph.h
 include/leptonica/pix.h
+include/leptonica/pix_internal.h
 include/leptonica/ptra.h
 include/leptonica/queue.h
 include/leptonica/rbtree.h
@@ -42,7 +45,11 @@ include/leptonica/stack.h
 include/leptonica/stringcode.h
 include/leptonica/sudoku.h
 include/leptonica/watershed.h
-lib/cmake/LeptonicaConfig-version.cmake
-lib/cmake/LeptonicaConfig.cmake
-lib/liblept.la
+lib/cmake/leptonica/LeptonicaConfig-version.cmake
+lib/cmake/leptonica/LeptonicaConfig.cmake
+lib/cmake/leptonica/LeptonicaTargets-release.cmake
+lib/cmake/leptonica/LeptonicaTargets.cmake
+lib/libleptonica.so
+lib/libleptonica.so.6
+lib/libleptonica.so.6.0.0
 lib/pkgconfig/lept.pc
