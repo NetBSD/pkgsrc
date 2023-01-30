@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2023/01/03 17:37:24 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2023/01/30 07:55:18 adam Exp $
 
-DISTNAME=	jbig2enc-0.29pre
-PKGREVISION=	2
+DISTNAME=	jbig2enc-0.29
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=agl/}
-GITHUB_TAG=	0693dcd027f333d8499a4717b6452de08b6834ed
+GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/agl/jbig2enc
