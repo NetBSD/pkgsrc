@@ -1,16 +1,14 @@
-# $NetBSD: Makefile,v 1.25 2023/01/25 11:07:40 taca Exp $
+# $NetBSD: Makefile,v 1.26 2023/01/30 13:53:50 taca Exp $
 
 DISTNAME=	ruby-ldap-0.9.20
 PKGNAME=	${DISTNAME:S/^ruby-/${RUBY_PKGPREFIX}-/}
+PKGREVISION=	1
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/alexey-chebotar/ruby-ldap
 COMMENT=	LDAP extension module for Ruby
 LICENSE=	modified-bsd
-
-# dose not support ruby32
-RUBY_VERSIONS_ACCEPTED=	27 30 31
 
 CONFIGURE_ARGS+=	--with-openldap2
 CONFIGURE_ARGS+=	--with-ldap-dir=${BUILDLINK_PREFIX.openldap-client}
