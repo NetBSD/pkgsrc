@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.860 2023/01/30 09:21:19 pho Exp $
+$NetBSD: CHANGES-2023,v 1.861 2023/01/30 09:29:20 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1087,3 +1087,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated audio/gospt to 0.0.34 [pin 2023-01-30]
 	Updated sysutils/dust to 0.8.4nb1 [pin 2023-01-30]
 	Updated devel/hs-hls-qualify-imported-names-plugin to 1.0.2.0 [pho 2023-01-30]
+	Updated devel/hs-hls-pragmas-plugin to 1.0.4.0 [pho 2023-01-30]
