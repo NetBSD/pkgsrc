@@ -1,2 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/01/17 19:31:37 pin Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/01/30 08:49:07 pin Exp $
 bin/dust
+man/man1/dust.1
+share/examples/dust/config.toml
