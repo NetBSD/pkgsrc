@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2022/09/07 06:50:53 pho Exp $
+# $NetBSD: Makefile,v 1.7 2023/01/30 07:47:32 pho Exp $
 
-DISTNAME=	spago-0.20.7
+DISTNAME=	spago-0.20.9
 PKGNAME=	${DISTNAME}
 PKGREVISION=	5
 CATEGORIES=	lang
@@ -31,6 +31,9 @@ LICENSE=	modified-bsd
 REPLACE_INTERPRETER+=	node
 REPLACE.node.old=	.*node
 REPLACE.node.new=	${PREFIX}/bin/node
+
+HASKELL_UNRESTRICT_DEPENDENCIES+=	\
+	text
 
 # If spago is to be linked dynamically, it will depend on more than 200
 # shared objects and the dynamic linker will spend several seconds to
