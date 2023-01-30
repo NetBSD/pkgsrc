@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/08/20 08:08:19 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2023/01/30 03:18:36 pho Exp $
 
 DISTNAME=	vector-instances-3.4
 PKGREVISION=	2
@@ -7,6 +7,9 @@ CATEGORIES=	devel
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Orphan Instances for 'Data.Vector'
 LICENSE=	modified-bsd
+
+HASKELL_UNRESTRICT_DEPENDENCIES+=	\
+	vector
 
 .include "../../math/hs-comonad/buildlink3.mk"
 .include "../../devel/hs-keys/buildlink3.mk"
