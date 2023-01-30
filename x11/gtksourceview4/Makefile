@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2023/01/29 21:15:08 ryoon Exp $
+# $NetBSD: Makefile,v 1.29 2023/01/30 17:53:52 wiz Exp $
 
 DISTNAME=	gtksourceview-4.8.0
 PKGNAME=	${DISTNAME:S/gtksourceview/gtksourceview4/}
@@ -12,7 +12,7 @@ HOMEPAGE=	https://wiki.gnome.org/Projects/GtkSourceView
 COMMENT=	Text widget that extends GTK3's GtkTextView widget (v4)
 LICENSE=	gnu-lgpl-v2.1
 
-USE_TOOLS+=		intltool msgfmt pkg-config itstool
+USE_TOOLS+=		msgfmt pkg-config itstool
 
 # avoid vala dependency
 MESON_ARGS+=		-Dvapi=false
