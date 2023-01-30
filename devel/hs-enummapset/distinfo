@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/01/30 07:19:33 pho Exp $
+
+BLAKE2s (enummapset-0.7.1.0.tar.gz) = 8182da996306f1203494ad9ddfbb4b740ca9e62c9ccb1848151ed36825ec8f3c
+SHA512 (enummapset-0.7.1.0.tar.gz) = 183bd3656f0279715c69686f155219659bb7f2de11e26cbdfe0d4940b82f4c363b52794e7208c59248eb162693aa84eb9344159039eeabcc4b8d4b89fc481d17
+Size (enummapset-0.7.1.0.tar.gz) = 13935 bytes
