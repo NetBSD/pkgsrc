@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/01/30 07:01:12 pho Exp $
+
+BLAKE2s (hw-fingertree-0.1.2.1.tar.gz) = 92290f6eba627a458820137646c4f0a96a6ab4629ff2e4cd8857a1c55c5248aa
+SHA512 (hw-fingertree-0.1.2.1.tar.gz) = 62bf15dcecf0ad8eaaf77a5ce1efa0aa2643b7dde8cdf1d81399b2bf5d2ab9bef653e89b0c6e5e3461a215845e6447941b0b61701c0f65a5412eaabd9d83d322
+Size (hw-fingertree-0.1.2.1.tar.gz) = 15394 bytes
