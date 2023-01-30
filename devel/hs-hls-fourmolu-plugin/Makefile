@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2022/11/23 16:18:38 adam Exp $
+# $NetBSD: Makefile,v 1.7 2023/01/30 13:27:35 pho Exp $
 
-DISTNAME=	hls-fourmolu-plugin-1.0.2.0
-PKGREVISION=	5
+DISTNAME=	hls-fourmolu-plugin-1.1.1.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -13,5 +12,6 @@ LICENSE=	apache-2.0
 .include "../../devel/hs-hls-plugin-api/buildlink3.mk"
 .include "../../devel/hs-lens/buildlink3.mk"
 .include "../../devel/hs-lsp/buildlink3.mk"
+.include "../../sysutils/hs-process-extras/buildlink3.mk"
 .include "../../mk/haskell.mk"
 .include "../../mk/bsd.pkg.mk"
