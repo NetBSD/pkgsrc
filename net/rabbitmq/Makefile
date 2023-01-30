@@ -1,18 +1,17 @@
-# $NetBSD: Makefile,v 1.74 2023/01/11 22:07:46 nikita Exp $
+# $NetBSD: Makefile,v 1.75 2023/01/30 16:11:43 adam Exp $
 
-DISTNAME=		rabbitmq-server-3.11.5
-PKGNAME=		${DISTNAME:S/-server//}
-PKGREVISION=		1
-CATEGORIES=		net
-MASTER_SITES=		${MASTER_SITE_GITHUB:=rabbitmq/}
-EXTRACT_SUFX=		.tar.xz
-GITHUB_PROJECT=		rabbitmq-server
-GITHUB_RELEASE=		v${PKGVERSION_NOREV}
+DISTNAME=	rabbitmq-server-3.11.7
+PKGNAME=	${DISTNAME:S/-server//}
+CATEGORIES=	net
+MASTER_SITES=	${MASTER_SITE_GITHUB:=rabbitmq/}
+EXTRACT_SUFX=	.tar.xz
+GITHUB_PROJECT=	rabbitmq-server
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://www.rabbitmq.com/
-COMMENT=		Implementation of AMQP that provides robust messaging for applications
-LICENSE=		mpl-1.1
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://www.rabbitmq.com/
+COMMENT=	Implementation of AMQP that provides robust messaging for applications
+LICENSE=	mpl-1.1
 
 USE_TOOLS+=		bash:run gmake unzip zip
 
@@ -117,7 +116,6 @@ post-install:
 	${INSTALL_DATA} ${FILESDIR}/rabbitmq-env.conf \
 		${DESTDIR}${PREFIX}/share/examples/rabbitmq
 
-BUILDLINK_ABI_DEPENDS.erlang+=	erlang>=25.0
 .include "../../lang/erlang/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
