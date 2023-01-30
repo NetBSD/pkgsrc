@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/02/16 10:08:27 pho Exp $
+$NetBSD: distinfo,v 1.2 2023/01/30 07:03:13 pho Exp $
 
-BLAKE2s (hls-plugin-api-1.3.0.0.tar.gz) = df5795ab60180e7346cc588f9dbfa2172fadc287ab8e3d80c305c440a0a98900
-SHA512 (hls-plugin-api-1.3.0.0.tar.gz) = e110b9a04dda6a1a27f292bc076c13f58c2e27125f8ca84ce39eae898214128ba3bfd558f8faf3c3eae772e7bce82e6c0172b9a7de312aabc1109bac850336c2
-Size (hls-plugin-api-1.3.0.0.tar.gz) = 20158 bytes
+BLAKE2s (hls-plugin-api-1.6.0.0.tar.gz) = f96f7a558ac3bf8fd6e491ce8f225d04ccdc1130d3a371cbce49086e370900d6
+SHA512 (hls-plugin-api-1.6.0.0.tar.gz) = 016b2799b42c44efb45d005526e0cfcd8e606fc8f886d681e83bf53ecae02f4e1d3664f4d8c2b7b1711038b1188994ee0c0b94402ed4660633b647247b53e22e
+Size (hls-plugin-api-1.6.0.0.tar.gz) = 27001 bytes
