@@ -1,0 +1,16 @@
+$NetBSD: patch-configure.ac,v 1.1 2023/01/30 07:55:18 adam Exp $
+
+Fix build with Leptonica >=1.83
+https://github.com/agl/jbig2enc/pull/78
+
+--- configure.ac.orig	2022-12-28 10:23:14.000000000 +0000
++++ configure.ac
+@@ -73,7 +73,7 @@ AC_CONFIG_COMMANDS([libtool-rpath-patch]
+ 	fi],
+ [libtool_patch_use_rpath=$enable_rpath])
+ 
+-AC_CHECK_LIB([lept], [findFileFormatStream], [], [
++AC_CHECK_LIB([leptonica], [findFileFormatStream], [], [
+ 			echo "Error! Leptonica not detected."
+ 			exit -1
+ 			])
