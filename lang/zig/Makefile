@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2023/01/22 22:15:30 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2023/01/30 21:01:42 nikita Exp $
 
 DISTNAME=	zig-0.10.1
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	https://ziglang.org/download/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
@@ -16,6 +17,9 @@ USE_LANGUAGES=	c c++14
 
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 CMAKE_ARGS+=	-DDESTDIR=${DESTDIR}
+# avoid full-cu-features available to build host,
+# in other words ensure that we run everywhere
+CMAKE_ARGS+=	-DZIG_TARGET_MCPU=baseline
 
 CHECK_PORTABILITY_SKIP+=	ci/azure/macos_script
 BUILDLINK_TRANSFORM+=		rm:-Werror
