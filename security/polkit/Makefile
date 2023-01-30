@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2022/11/21 18:20:44 jperkin Exp $
+# $NetBSD: Makefile,v 1.48 2023/01/30 17:44:08 wiz Exp $
 
 DISTNAME=	polkit-0.120
 PKGREVISION=	4
@@ -25,7 +25,7 @@ USE_LANGUAGES=		c c++14
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config gmake perl
-USE_TOOLS+=		intltool msgfmt msgmerge xgettext
+USE_TOOLS+=		msgfmt msgmerge xgettext
 USE_TOOLS+=		autoconf autoreconf automake
 
 # configure: error: *** A compiler with support for C++17 language features is required.
