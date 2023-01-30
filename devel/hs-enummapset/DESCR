@@ -1,0 +1,3 @@
+This package contains simple wrappers around Data.IntMap and Data.IntSet
+with Enum keys and elements respectively. Especially useful for Ints
+wrapped with newtype.
