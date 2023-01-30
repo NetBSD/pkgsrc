@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2023/01/26 19:14:28 pin Exp $
+$NetBSD: distinfo,v 1.6 2023/01/30 08:47:27 pin Exp $
 
 BLAKE2s (cloud.google.com_go_@v_v0.26.0.mod) = 53d181aacbf96ec4f9cdd051466576dbb6959ca71a825bc6672046c7c53a2b43
 SHA512 (cloud.google.com_go_@v_v0.26.0.mod) = 5132f3438533427c0ab0fbb7a12112a7830ea9122662ed46019ff89c71d9cf80c02edc32dd5c892da572031b5a2cce100f2602fa6a19bea6be7c02781f701273
@@ -138,6 +138,9 @@ Size (github.com_charmbracelet_bubbletea_@v_v0.23.1.zip) = 52891 bytes
 BLAKE2s (github.com_charmbracelet_harmonica_@v_v0.2.0.mod) = 331ac9b5a2f27725e50fd3346d9f679d9a5d679a45b3498d009c8dbffc29b3fb
 SHA512 (github.com_charmbracelet_harmonica_@v_v0.2.0.mod) = 10bca9ea330299d8f978decf2e798b0c436c7707c409febecb7b9d5b63caa570f00fe5481e13748af32b1d8bb371eb206355d982a6d9f765fb2a3c703c0ab3c6
 Size (github.com_charmbracelet_harmonica_@v_v0.2.0.mod) = 51 bytes
+BLAKE2s (github.com_charmbracelet_harmonica_@v_v0.2.0.zip) = 800984022fcfb605fad8e5647ea89eb5265ccb2a421ba2557ab67d88fb915b88
+SHA512 (github.com_charmbracelet_harmonica_@v_v0.2.0.zip) = cf86023b692bcf780c3b950b58e3f52e60c6a592a302b5d3b724eb588273d8fe45b515a9c3877f4acb4e0d70717951825da09718aa7ba93f42537bd46fc9416a
+Size (github.com_charmbracelet_harmonica_@v_v0.2.0.zip) = 10431 bytes
 BLAKE2s (github.com_charmbracelet_lipgloss_@v_v0.5.0.mod) = eecf0441fe54842a07c09f3b6e7faf9040285868fa1dc100453e371206292cec
 SHA512 (github.com_charmbracelet_lipgloss_@v_v0.5.0.mod) = ca60353349fd5e38bcedd87014b7a944d7bef3a5ef5b983967c1b5e90f6a9cf14543cb761d9dc0c8b58a7c4a363abce3135d81d7df267dc754d6a6d1e463f465
 Size (github.com_charmbracelet_lipgloss_@v_v0.5.0.mod) = 326 bytes
@@ -1314,9 +1317,9 @@ Size (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 95 bytes
 BLAKE2s (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 2e80fa896e65b1ae160400012c71aeac70e22a31cac82ec4921c85a93d65774c
 SHA512 (gopkg.in_yaml.v3_@v_v3.0.1.zip) = d57b0d42c71ad6503415e42979b51b0dc7f6344072c728ab2e3d4bab88da7b7d775e7f261868909f990f6b44aed6c533966c97bbe333a0acd65fc8bac9d1d4ff
 Size (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 104623 bytes
-BLAKE2s (gospt-0.0.33.tar.gz) = e76a589d4aea4d2aa47f7a6a7e85384a7fa57fe803ccb707e586c56ca253b868
-SHA512 (gospt-0.0.33.tar.gz) = 730f0538fbb1411336ea57435ac970d7466129773a43d4e7d26c4ff89df71467b4b2196efb5942317031f23856f5b65cdd561061675607af6a72d3fd7a147acd
-Size (gospt-0.0.33.tar.gz) = 1752441 bytes
+BLAKE2s (gospt-0.0.34.tar.gz) = 33843aca6b119f01be4c78369842b9e5fdefbf508963b9eb427604d6e799d7cf
+SHA512 (gospt-0.0.34.tar.gz) = 7a1aa52f40dee9fcbda959764bd99177732bdf8bbc8ff93f89d69a7039d3054954db77500eabef62a30312b01df759348a108a8356251fbc13c35e50f22c9089
+Size (gospt-0.0.34.tar.gz) = 1752944 bytes
 BLAKE2s (honnef.co_go_tools_@v_v0.0.0-20190102054323-c2f93a96b099.mod) = 38e66bb2bbbbabd21beff5a5718735267b1611dbdf7da56c7fb6500d6cb784f1
 SHA512 (honnef.co_go_tools_@v_v0.0.0-20190102054323-c2f93a96b099.mod) = d00ae74b24e7fb3ff351ff68b88e59636153bbcf92b36e81e91556e3e75a7ccfb08ce471f757f92fd7612378944de3d7309c73923812e2df6a26b74e999ca9ce
 Size (honnef.co_go_tools_@v_v0.0.0-20190102054323-c2f93a96b099.mod) = 26 bytes
