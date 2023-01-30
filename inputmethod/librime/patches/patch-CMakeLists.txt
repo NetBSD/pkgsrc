@@ -1,15 +1,15 @@
-$NetBSD: patch-CMakeLists.txt,v 1.4 2022/04/25 22:29:15 tnn Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.5 2023/01/30 10:35:19 wiz Exp $
 
-* Install pkg-config pc file for more platforms.
+Install pkg-config file on all platforms.
 
---- CMakeLists.txt.orig	2021-02-07 12:37:26.000000000 +0000
+--- CMakeLists.txt.orig	2023-01-30 10:30:54.591650411 +0000
 +++ CMakeLists.txt
-@@ -180,7 +180,7 @@ configure_file(
+@@ -187,7 +187,7 @@ configure_file(
  add_custom_target(uninstall
    COMMAND ${CMAKE_COMMAND} -P ${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake)
  
--if(${CMAKE_SYSTEM_NAME} MATCHES "Linux|FreeBSD|DragonFly|GNU")
-+if(${CMAKE_SYSTEM_NAME} MATCHES "Linux|FreeBSD|DragonFly|GNU|NetBSD|OpenBSD|SunOS")
+-if(${CMAKE_SYSTEM_NAME} MATCHES "Linux|FreeBSD|DragonFly|GNU" OR MINGW)
++if(${CMAKE_SYSTEM_NAME} MATCHES ".*" OR MINGW)
    set(prefix "${CMAKE_INSTALL_PREFIX}")
    set(exec_prefix "${CMAKE_INSTALL_PREFIX}")
    set(bindir "${CMAKE_INSTALL_FULL_BINDIR}")
