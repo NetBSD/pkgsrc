@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2023/01/29 21:15:08 ryoon Exp $
+# $NetBSD: Makefile,v 1.63 2023/01/30 17:50:40 wiz Exp $
 
 DISTNAME=	gtksourceview-3.24.11
 PKGNAME=	${DISTNAME:S/gtksourceview/gtksourceview3/}
@@ -14,7 +14,7 @@ LICENSE=	gnu-lgpl-v2.1
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake gsed intltool msgfmt pkg-config itstool
+USE_TOOLS+=		gmake gsed msgfmt pkg-config itstool
 USE_PKGLOCALEDIR=	yes
 #CONFIGURE_ARGS+=	--disable-deprecations
 CONFIGURE_ARGS+=	--disable-maintainer-mode
