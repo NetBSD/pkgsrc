@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.879 2023/01/30 23:09:57 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.880 2023/01/31 01:37:39 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1111,3 +1111,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added textproc/jose version 11 [nikita 2023-01-30]
 	Updated lang/zig to 0.10.1nb1 [nikita 2023-01-30]
 	Removed x11/avant-window-navigator [wiz 2023-01-30]
+	Updated devel/hs-hls-explicit-imports-plugin to 1.2.0.0 [pho 2023-01-31]
