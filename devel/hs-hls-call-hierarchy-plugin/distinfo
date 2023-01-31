@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/02/16 10:13:56 pho Exp $
+$NetBSD: distinfo,v 1.2 2023/01/31 04:19:44 pho Exp $
 
-BLAKE2s (hls-call-hierarchy-plugin-1.0.2.0.tar.gz) = cbdc87500b9ac165a5aecbaf065e778fba6402464d729ba9f1eabd7bd6f1ba24
-SHA512 (hls-call-hierarchy-plugin-1.0.2.0.tar.gz) = b43993fc7d4757a732e531c2a18971f22a15f3d77aedbb902d46acdbfecdc37cc3e0cac34f2b29e62f89f4251646349a01ae67053b7e8a286a6298020a074635
-Size (hls-call-hierarchy-plugin-1.0.2.0.tar.gz) = 13017 bytes
+BLAKE2s (hls-call-hierarchy-plugin-1.2.0.0.tar.gz) = 3ce0a8bdd73f2b0dd9f89404a33a9f8b68bd70ba52c3861bd0f9d62ca2c4cf8a
+SHA512 (hls-call-hierarchy-plugin-1.2.0.0.tar.gz) = 62ebd98bf10a22455ac805701e6a5c1147145cff213475745e87ed6ba8dc7c76b7e63f046543f4a981f7b8d4d071d7393af4a6beb0bcbd3ffdaeb772cdbf1fb1
+Size (hls-call-hierarchy-plugin-1.2.0.0.tar.gz) = 12939 bytes
