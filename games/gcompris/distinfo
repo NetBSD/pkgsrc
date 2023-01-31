@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 10:44:01 nia Exp $
-
-BLAKE2s (gcompris-17.05.tar.bz2) = 4cf7c9e980a8049836d740f623d52fcd2a43563bed246364439ce2de9ff65db7
-SHA512 (gcompris-17.05.tar.bz2) = ecfb6af13a61309ad91248775dc27ba8f5a2c54154f6af093e10168cd12da90d3de65a09455b23c0c05a7217473ca8e442827e65dbabf7c4328ecd541beb7175
-Size (gcompris-17.05.tar.bz2) = 333581443 bytes
-SHA1 (patch-configure) = 3b901cd956dcb0b18e31d2cc3c68eafc482319fe
