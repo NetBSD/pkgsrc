@@ -1,0 +1,3 @@
+apply-refact applies refactorings specified by the refact package. It is
+currently integrated into HLint to enable the automatic application of
+suggestions.
