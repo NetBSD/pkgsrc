@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2023/01/03 12:45:24 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2023/01/31 07:38:20 wiz Exp $
 
 DISTNAME=	baikal-0.9.3
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fruux/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -81,6 +82,7 @@ do-install:
 	${RM} -f ${WRKSRC}/*/*/*/*/*orig
 	cd ${WRKSRC} && pax -rw -pmp * \
 		${DESTDIR}${PREFIX}/${BAIKALDIR}
+	${RM} ${DESTDIR}${PREFIX}/share/baikal/vendor/sabre/dav/lib/CardDAV/Xml/Request/AddressBookMultiGetReport.php.orig
 
 .include "../../lang/php/json.mk"
 .include "../../mk/bsd.pkg.mk"
