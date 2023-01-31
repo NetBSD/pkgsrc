@@ -50,6 +50,7 @@ aterm-greek		Enable Greek keyboard support.
 aterm-kanji		Enable kanji support.
 aterm-xterm-scroll	Use xterm-scrollbar instead of a NeXT-like one.
 atheme-large-net	Enable support for large networks (i.e. > 2000 users).
+audio			Enable audio support.
 audiofile		Enable audio conversion using libaudiofile.
 auth-db			Use Berkley DB for the jabberd2 authorization database.
 auth-ldap		Use LDAP for jabberd2 authorization.
@@ -72,6 +73,7 @@ blacklist		Enable blacklist support.
 blender-exppython	Enable the Experimental Python support.
 blocklist		Enable blocklist support.
 bluray			Enable libbluray support.
+bluez			Enable bluetooth support via bluez for Linux.
 boehm-gc		Use Boehm's garbage collector for memory allocation.
 bozohttpd-do-htpasswd	Enable .htpasswd file processing in bozohttpd.
 brotli			Provides the BROTLI_COMPRESS output filter.
@@ -213,6 +215,7 @@ exim-lookup-sqlite	Perform lookups in SQLite database.
 exim-lookup-whoson	Lookup in whoson dynamic IP address.
 exim-old-demime		Use deprecated "demime" condition in the DATA ACL.
 expat			Use the expat library for XML parsing.
+experimental		Enable experimental features.
 ezmlm-althash		Patch to hash subscriber list case-insensitively.
 f90			Enable Fortran 90 support.
 faac			Enable AAC decoding support using faac.
@@ -925,6 +928,7 @@ valgrind		Enable Valgrind debugging and profiling support.
 vbr			Enable Vouch By Reference support.
 vdpau			Enable support for VDPAU.
 vera-ttf		Include the Vera TTF fonts.
+verbose-logging		Enable verbose logging.
 vflib			Enable support for Japanese vector font library.
 via-padlock		Enable support for the VIA PadLock Security Engine.
 vice-cpuhistory		Enable the 65xx cpu history feature.
@@ -1000,6 +1004,7 @@ xtest			Use XTEST Extension Library.
 xvid			Enable usage of XVid codecs.
 xvideo			Enable X-Video Motion Compensation library support.
 z3			Enable support for the Z3 theorem prover.
+zbar			Enable support for zbar.
 zenmap			Enable nmap GUI frontend.
 zip			Support zip archives.
 ziplinks		Compress data before transmitting it between servers.
