@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/01/31 19:59:31 nikita Exp $
+
+BLAKE2s (gnunet-fuse-0.19.1.tar.gz) = 543a912e3be9b93dc4d90393e5c65c4533dba1198d5578ddefa9e76c4bc7ac29
+SHA512 (gnunet-fuse-0.19.1.tar.gz) = 33e80f36a41cadae8af04ad5e7c0c45151432840bc35433fdfd90dd8aacf0f7f968230b7be8e98460434d7cc04bb8e0b67ee485fbafe655b7a41329d0d652b00
+Size (gnunet-fuse-0.19.1.tar.gz) = 222167 bytes
