@@ -1,0 +1,28 @@
+$NetBSD: patch-vmblockmounter_Makefile.am,v 1.1 2023/01/31 07:59:28 khorben Exp $
+
+Do not create symbolic links outside of ${PREFIX}
+
+--- vmblockmounter/Makefile.am.orig	2023-01-31 07:47:44.665808820 +0000
++++ vmblockmounter/Makefile.am
+@@ -22,21 +22,3 @@ mount_vmblock_LDADD += ../lib/stubs/libS
+ 
+ mount_vmblock_SOURCES =
+ mount_vmblock_SOURCES += vmblockmounter.c
+-
+-if FREEBSD
+-install-exec-hook:
+-	mv $(DESTDIR)$(sbindir)/mount.vmblock \
+-		$(DESTDIR)$(sbindir)/mount_vmblock
+-	-$(MKDIR_P) $(DESTDIR)/sbin
+-	-$(LN_S) $(DESTDIR)$(sbindir)/mount_vmblock \
+-		$(DESTDIR)/sbin/mount_vmblock &> /dev/null
+-uninstall-hook:
+-	rm -f $(DESTDIR)$(sbindir)/mount_vmblock
+-else
+-install-exec-hook:
+-	-$(MKDIR_P) $(DESTDIR)/sbin
+-	-$(LN_S) $(DESTDIR)$(sbindir)/mount.vmblock \
+-		$(DESTDIR)/sbin/mount.vmblock &> /dev/null
+-uninstall-hook:
+-	rm -f $(DESTDIR)/sbin/mount.vmblock
+-endif !FREEBSD
