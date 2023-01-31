@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.35 2023/01/09 04:50:42 tsutsui Exp $
+$NetBSD: distinfo,v 1.36 2023/01/31 15:09:42 tsutsui Exp $
 
-BLAKE2s (PC6001VX_4.1.2_src.tar.gz) = c7039f9e33409e168a28d8922e0148afc9b477b797c388a832f65791cd0c3152
-SHA512 (PC6001VX_4.1.2_src.tar.gz) = 56f47c30b1ad237a0a601ee41bd6f68d709cfd148bea4849fcfbca04682f15b8d18cace96b0bd96f890d45687bf0b6619500aebf15d17e091f1dc6df83aa7b5d
-Size (PC6001VX_4.1.2_src.tar.gz) = 5383286 bytes
+BLAKE2s (PC6001VX_4.1.3_src.tar.gz) = f7f6e019104eecf0cf1be0fb9e17bb73e015810607af9f6aadac97866fdac9dc
+SHA512 (PC6001VX_4.1.3_src.tar.gz) = 98b84a142069cd96403ebd9b6756cf43d66d2a67d0a4a6724af1d0fcae37ce1ef7d8c69a06fddb093b41a20f3ea11bde0786b2be6511a554c768253852b48798
+Size (PC6001VX_4.1.3_src.tar.gz) = 5404809 bytes
