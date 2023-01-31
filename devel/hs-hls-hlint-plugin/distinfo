@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2023/01/31 18:59:48 pho Exp $
+
+BLAKE2s (hls-hlint-plugin-1.1.1.0.tar.gz) = e24bfb8281bbf464acf592910a373fbc04dedaad595da6cb7caed7b9b6c58af6
+SHA512 (hls-hlint-plugin-1.1.1.0.tar.gz) = 575a584c3de1270ebabf141a9e890a4dfedbcd24a35df3cd672d6d17683e47e33a0e191cbb028dd729aec5d96389785ccea317dda59c1166f7b4e41b98771068
+Size (hls-hlint-plugin-1.1.1.0.tar.gz) = 19236 bytes
+SHA1 (patch-src_Ide_Plugin_Hlint.hs) = cb78d32580622f1b2059640ff5792fbaab4ebae2
