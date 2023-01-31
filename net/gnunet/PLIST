@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/01/31 18:53:46 nikita Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/01/31 19:53:36 nikita Exp $
 bin/gnunet-arm
 bin/gnunet-ats
 bin/gnunet-auto-share
@@ -416,6 +416,9 @@ share/aclocal/gnunet.m4
 share/applications/gnunet-uri.desktop
 share/doc/gnunet/COPYING
 share/doc/gnunet/README
+share/doc/gnunet/README.pkgsrc.txt
+share/examples/gnunet/gnunet.conf
+share/examples/gnunet/gnunet_user.conf
 share/gnunet/config.d/arm.conf
 share/gnunet/config.d/ats.conf
 share/gnunet/config.d/cadet.conf
