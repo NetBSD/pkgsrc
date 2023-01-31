@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2023/01/31 01:37:11 ryoon Exp $
+# $NetBSD: Makefile,v 1.9 2023/01/31 19:37:12 ryoon Exp $
 
 DISTNAME=	libde265-1.0.10
 PKGREVISION=	1
@@ -12,7 +12,7 @@ COMMENT=	Open h.265 video codec implementation
 LICENSE=	gnu-lgpl-v3
 
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		autoconf automake autoreconf
+USE_TOOLS+=		autoconf automake autoreconf pkg-config
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-sherlock265
