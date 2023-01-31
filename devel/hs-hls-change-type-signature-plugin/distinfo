@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/01/31 17:22:07 pho Exp $
+
+BLAKE2s (hls-change-type-signature-plugin-1.1.0.0.tar.gz) = 07b8307121f834b502677544d0465a6a45efcf25aa7b745e77f11cdbff7b5630
+SHA512 (hls-change-type-signature-plugin-1.1.0.0.tar.gz) = 80a3dbedc32d8c17d95a2543847e45c99a3e2c030b91cf18e46e76135285466e38fea4601b68d4dba088b4f22ff0b1f53b68f0e85b0354666425eaa77c78133e
+Size (hls-change-type-signature-plugin-1.1.0.0.tar.gz) = 10875 bytes
