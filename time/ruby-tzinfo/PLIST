@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2020/11/09 14:46:06 taca Exp $
+@comment $NetBSD: PLIST,v 1.30 2023/01/31 12:51:37 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/CHANGES.md
@@ -39,6 +39,7 @@ ${GEM_LIBDIR}/lib/tzinfo/format2/timezone_index_definition.rb
 ${GEM_LIBDIR}/lib/tzinfo/info_timezone.rb
 ${GEM_LIBDIR}/lib/tzinfo/linked_timezone.rb
 ${GEM_LIBDIR}/lib/tzinfo/offset_timezone_period.rb
+${GEM_LIBDIR}/lib/tzinfo/ruby_core_support.rb
 ${GEM_LIBDIR}/lib/tzinfo/string_deduper.rb
 ${GEM_LIBDIR}/lib/tzinfo/time_with_offset.rb
 ${GEM_LIBDIR}/lib/tzinfo/timestamp.rb
@@ -50,7 +51,6 @@ ${GEM_LIBDIR}/lib/tzinfo/timezone_proxy.rb
 ${GEM_LIBDIR}/lib/tzinfo/timezone_transition.rb
 ${GEM_LIBDIR}/lib/tzinfo/transition_rule.rb
 ${GEM_LIBDIR}/lib/tzinfo/transitions_timezone_period.rb
-${GEM_LIBDIR}/lib/tzinfo/untaint_ext.rb
 ${GEM_LIBDIR}/lib/tzinfo/version.rb
 ${GEM_LIBDIR}/lib/tzinfo/with_offset.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
