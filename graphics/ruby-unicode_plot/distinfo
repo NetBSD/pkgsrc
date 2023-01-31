@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/01/31 13:06:53 wiz Exp $
+
+BLAKE2s (unicode_plot-0.0.5.gem) = 410a0a90a762ca78a03fdaa092992875c96eef8e0e54b9309a7381a9af3a41c4
+SHA512 (unicode_plot-0.0.5.gem) = 6e19198c95879b31bd8337dd0d7fdc46e38e5882a50fbf03fd4630f6c70102130a509b1126fb2e965262ab011c9ea4b696cdf1089dddf115ff222a1faec21b4c
+Size (unicode_plot-0.0.5.gem) = 31744 bytes
