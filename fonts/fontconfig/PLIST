@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.33 2023/01/20 13:10:08 wiz Exp $
+@comment $NetBSD: PLIST,v 1.34 2023/01/31 15:25:04 wiz Exp $
 bin/fc-cache
 bin/fc-cat
 bin/fc-conflist
@@ -159,6 +159,7 @@ man/man3/FcMatrixScale.3
 man/man3/FcMatrixShear.3
 man/man3/FcNameConstant.3
 man/man3/FcNameGetConstant.3
+man/man3/FcNameGetConstantFor.3
 man/man3/FcNameGetObjectType.3
 man/man3/FcNameParse.3
 man/man3/FcNameRegisterConstants.3
@@ -380,6 +381,7 @@ share/doc/fontconfig/fontconfig-devel/fcmatrixscale.html
 share/doc/fontconfig/fontconfig-devel/fcmatrixshear.html
 share/doc/fontconfig/fontconfig-devel/fcnameconstant.html
 share/doc/fontconfig/fontconfig-devel/fcnamegetconstant.html
+share/doc/fontconfig/fontconfig-devel/fcnamegetconstantfor.html
 share/doc/fontconfig/fontconfig-devel/fcnamegetobjecttype.html
 share/doc/fontconfig/fontconfig-devel/fcnameparse.html
 share/doc/fontconfig/fontconfig-devel/fcnameregisterconstants.html
@@ -479,9 +481,9 @@ share/fontconfig/conf.avail/10-hinting-medium.conf
 share/fontconfig/conf.avail/10-hinting-none.conf
 share/fontconfig/conf.avail/10-hinting-slight.conf
 share/fontconfig/conf.avail/10-no-antialias.conf
-share/fontconfig/conf.avail/10-no-sub-pixel.conf
 share/fontconfig/conf.avail/10-scale-bitmap-fonts.conf
 share/fontconfig/conf.avail/10-sub-pixel-bgr.conf
+share/fontconfig/conf.avail/10-sub-pixel-none.conf
 share/fontconfig/conf.avail/10-sub-pixel-rgb.conf
 share/fontconfig/conf.avail/10-sub-pixel-vbgr.conf
 share/fontconfig/conf.avail/10-sub-pixel-vrgb.conf
