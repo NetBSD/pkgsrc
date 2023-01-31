@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.890 2023/01/31 12:52:04 taca Exp $
+$NetBSD: CHANGES-2023,v 1.891 2023/01/31 12:53:36 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1126,3 +1126,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/hs-hls-cabal-plugin version 0.1.0.0 [pho 2023-01-31]
 	Updated textproc/hgrep to 0.3.1 [pin 2023-01-31]
 	Updated time/ruby-tzinfo to 2.0.6 [taca 2023-01-31]
+	Updated time/ruby-tzinfo1 to 1.2.11 [taca 2023-01-31]
