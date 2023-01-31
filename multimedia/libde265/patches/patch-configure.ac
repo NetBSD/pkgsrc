@@ -1,0 +1,26 @@
+$NetBSD: patch-configure.ac,v 1.1 2023/01/31 01:37:11 ryoon Exp $
+
+* Fix libde265.pc.
+
+--- configure.ac.orig	2023-01-27 14:31:04.000000000 +0000
++++ configure.ac
+@@ -18,6 +18,9 @@ AC_SUBST(NUMERIC_VERSION)
+ LIBDE265_CURRENT=1
+ LIBDE265_REVISION=3
+ LIBDE265_AGE=1
++CMAKE_INSTALL_PREFIX=${prefix}
++CMAKE_INSTALL_LIBDIR=lib
++CMAKE_INSTALL_INCLUDEDIR=include
+ 
+ # ---------------------------------------------------------------------------
+ 
+@@ -26,6 +29,9 @@ AC_CANONICAL_SYSTEM
+ AC_SUBST(LIBDE265_CURRENT)
+ AC_SUBST(LIBDE265_REVISION)
+ AC_SUBST(LIBDE265_AGE)
++AC_SUBST(CMAKE_INSTALL_PREFIX)
++AC_SUBST(CMAKE_INSTALL_LIBDIR)
++AC_SUBST(CMAKE_INSTALL_INCLUDEDIR)
+ 
+ dnl Initialize libtool
+ LT_INIT
