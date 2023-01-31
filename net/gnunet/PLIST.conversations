@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST.conversations,v 1.1 2023/01/31 18:53:46 nikita Exp $
+bin/gnunet-conversation
+bin/gnunet-conversation-test
+lib/gnunet/libexec/gnunet-helper-audio-playback
+lib/gnunet/libexec/gnunet-helper-audio-record
+lib/gnunet/libexec/gnunet-service-conversation
+lib/gnunet/libgnunet_plugin_gnsrecord_conversation.la
+lib/libgnunetconversation.la
+lib/libgnunetmicrophone.la
+lib/libgnunetspeaker.la
+share/gnunet/config.d/conversation.conf

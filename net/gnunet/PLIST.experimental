@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST.experimental,v 1.1 2023/01/31 18:53:46 nikita Exp $
+bin/gnunet-abd
+bin/gnunet-auction-create
+bin/gnunet-auction-info
+bin/gnunet-auction-join
+bin/gnunet-rps
+lib/gnunet/libexec/gnunet-service-abd
+lib/gnunet/libexec/gnunet-service-auction
+lib/gnunet/libexec/gnunet-service-rps
+lib/gnunet/libgnunet_plugin_gnsrecord_abd.la
+lib/gnunet/libgnunet_plugin_namecache_flat.la
+lib/gnunet/libgnunet_plugin_peerstore_flat.la
+lib/gnunet/libgnunet_plugin_transport_udp.la
+lib/libgnunetabd.la
+lib/libgnunetrps.la
+share/gnunet/config.d/abd.conf
+share/gnunet/config.d/auction.conf
+share/gnunet/config.d/rps.conf
