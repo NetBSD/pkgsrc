@@ -1,4 +1,4 @@
-# $NetBSD: application.mk,v 1.2 2022/09/03 16:27:56 pho Exp $
+# $NetBSD: application.mk,v 1.3 2023/01/31 17:13:17 pho Exp $
 #
 # Generate shell completion scripts automatically.
 #
@@ -84,12 +84,25 @@ GENERATE_PLIST+=	\
 # executables we just built in order to generate scripts. However, unlike
 # cabal-install, the plain Cabal doesn't provide a convenient way to do
 # it. So we have to resort to something fragile.
+#
+# Shared libraries are usually stored in ${WRKSRC}/dist/build. However, if
+# the package has internal libraries, each library will have a separate
+# subdirectory. This means we need to include any subdirectories in
+# ${WRKSRC}/dist/build in LD_LIBRARY_PATH.
 OA.generate-cmds=	\
 	${OPTPARSE_APPLICATIVE_EXECUTABLES:@.exec.@	\
 		${STEP_MSG} "Generating shell completion scripts for ${.exec.}"; \
 		${OA.shell-types:@.shell.@		\
 			${INSTALL_DATA_DIR} ${DESTDIR:Q}${PREFIX:Q}/${OA.script.${.shell.}:S/@exec@/${.exec.}/:H:Q}; \
-			${PKGSRC_SETENV} LD_LIBRARY_PATH=${WRKSRC:Q}/dist/build \
+			libpath=${WRKSRC:Q}/dist/build; \
+			for ent in ${WRKSRC:Q}/dist/build/*; do \
+				if ${TEST} -d "$$ent"; then \
+					libpath="$${libpath}:$$ent"; \
+				fi; \
+			done; \
+			${PKGSRC_SETENV} \
+				LD_LIBRARY_PATH="$$libpath" \
+				DYLD_LIBRARY_PATH="$$libpath" \
 				${WRKSRC:Q}/dist/build/${.exec.:Q}/${.exec.:Q} \
 				--${.shell.:Q}-completion-script \
 				${PREFIX:Q}/bin/${.exec.:Q} \
