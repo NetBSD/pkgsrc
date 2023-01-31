@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.176 2023/01/28 04:10:14 khorben Exp $
+# $NetBSD: Makefile,v 1.177 2023/01/31 05:38:23 khorben Exp $
 
 DISTNAME=	pulseaudio-16.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	https://freedesktop.org/software/pulseaudio/releases/
 EXTRACT_SUFX=	.tar.xz
@@ -145,7 +145,6 @@ BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-version-script=${WRKSRC}/src/pulse/map-file
 .include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
-.include "../../devel/pcre/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
