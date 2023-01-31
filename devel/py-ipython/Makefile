@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.83 2023/01/03 21:22:01 adam Exp $
+# $NetBSD: Makefile,v 1.84 2023/01/31 09:22:21 adam Exp $
 
-DISTNAME=	ipython-8.8.0
+DISTNAME=	ipython-8.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/ipython/}
@@ -11,7 +11,6 @@ COMMENT=	Interactive computing environment for Python
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-backcall-[0-9]*:../../devel/py-backcall
-DEPENDS+=	${PYPKGPREFIX}-black-[0-9]*:../../textproc/py-black
 DEPENDS+=	${PYPKGPREFIX}-decorator-[0-9]*:../../devel/py-decorator
 DEPENDS+=	${PYPKGPREFIX}-jedi>=0.16:../../editors/py-jedi
 DEPENDS+=	${PYPKGPREFIX}-matplotlib-inline>0:../../graphics/py-matplotlib-inline
