@@ -1,4 +1,6 @@
-$NetBSD: patch-include_apr__general.h,v 1.1 2014/11/25 14:55:46 joerg Exp $
+$NetBSD: patch-include_apr__general.h,v 1.2 2023/01/31 18:41:49 wiz Exp $
+
+Unconditionally use the !ARM, !CRAY version of APR_OFFSET.
 
 --- include/apr_general.h.orig	2014-11-21 11:49:41.000000000 +0000
 +++ include/apr_general.h
