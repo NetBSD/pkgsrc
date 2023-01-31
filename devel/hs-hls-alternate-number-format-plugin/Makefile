@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2022/11/23 16:18:37 adam Exp $
+# $NetBSD: Makefile,v 1.7 2023/01/31 08:03:51 pho Exp $
 
-DISTNAME=	hls-alternate-number-format-plugin-1.0.1.0
-PKGREVISION=	5
+DISTNAME=	hls-alternate-number-format-plugin-1.3.0.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -9,6 +8,7 @@ COMMENT=	Provide Alternate Number Formats plugin for Haskell Language Server
 LICENSE=	apache-2.0
 
 .include "../../converters/hs-aeson/buildlink3.mk"
+.include "../../misc/hs-extra/buildlink3.mk"
 .include "../../devel/hs-ghcide/buildlink3.mk"
 .include "../../devel/hs-hie-compat/buildlink3.mk"
 .include "../../devel/hs-hls-graph/buildlink3.mk"
