@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.73 2023/01/20 13:10:08 wiz Exp $
+$NetBSD: distinfo,v 1.74 2023/01/31 15:25:04 wiz Exp $
 
-BLAKE2s (fontconfig-2.14.1.tar.xz) = cbd7fd124850f111838dd96cfeb89a703c635dfb508449e75ad7bab1ef95a55d
-SHA512 (fontconfig-2.14.1.tar.xz) = ba42e6f90ec92914895d2157c872c373adfc17be791b92253bcc40e85674a84e43c08ab2b37c3ae85b53b2e7bd2a7847abb479043f303b732c08eeac3ee733db
-Size (fontconfig-2.14.1.tar.xz) = 1447044 bytes
+BLAKE2s (fontconfig-2.14.2.tar.xz) = 840cd81d955d0f4a67dcbacca3b5498bf5d8a07c3372bc007668bef6d932b5d5
+SHA512 (fontconfig-2.14.2.tar.xz) = 23483e0ae6aa7589fd37f9949a4cf951c5bff981739dbb446881e4cea86a208c0ab31e2358666eac724af1dc6a689a42733a7ce91cd3e76d8d91eacedb318085
+Size (fontconfig-2.14.2.tar.xz) = 1440844 bytes
 SHA1 (patch-aa) = 8fec573ffd4bcc976681cae51a4ead1647e521e8
 SHA1 (patch-ac) = 47b98e6766d2a842bc69d209622dfe83d9b5d06e
 SHA1 (patch-af) = d351265c894738284215f0bb38d47cc1c8f28ec7
