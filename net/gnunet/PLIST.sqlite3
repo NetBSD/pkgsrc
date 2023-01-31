@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST.sqlite3,v 1.1 2023/01/31 18:53:46 nikita Exp $
+lib/gnunet/libexec/gnunet-daemon-latency-logger
+lib/gnunet/libexec/gnunet-daemon-testbed-underlay
+lib/gnunet/libgnunet_plugin_datacache_sqlite.la
+lib/gnunet/libgnunet_plugin_datastore_sqlite.la
+lib/gnunet/libgnunet_plugin_namecache_sqlite.la
+lib/gnunet/libgnunet_plugin_namestore_sqlite.la
+lib/gnunet/libgnunet_plugin_peerstore_sqlite.la
+lib/libgnunetsq.la
+share/gnunet/sql/datacache-0001.sql
+share/gnunet/sql/datacache-drop.sql
+share/gnunet/sql/datastore-0001.sql
+share/gnunet/sql/datastore-drop.sql
+share/gnunet/sql/namecache-0001.sql
+share/gnunet/sql/namecache-drop.sql
+share/gnunet/sql/namestore-0001.sql
+share/gnunet/sql/namestore-drop.sql

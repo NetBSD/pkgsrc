@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST.mysql,v 1.1 2023/01/31 18:53:46 nikita Exp $
+lib/gnunet/libgnunet_plugin_datastore_mysql.la
+lib/libgnunetmy.la
+lib/libgnunetmysql.la
