@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2022/11/23 16:18:38 adam Exp $
+# $NetBSD: Makefile,v 1.7 2023/01/31 08:06:48 pho Exp $
 
-DISTNAME=	hls-refine-imports-plugin-1.0.1.0
-PKGREVISION=	5
+DISTNAME=	hls-refine-imports-plugin-1.0.4.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
