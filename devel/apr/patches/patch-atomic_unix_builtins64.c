@@ -1,21 +1,21 @@
-$NetBSD: patch-atomic_unix_builtins64.c,v 1.1 2020/02/20 06:25:28 rin Exp $
+$NetBSD: patch-atomic_unix_builtins64.c,v 1.2 2023/01/31 18:41:49 wiz Exp $
 
 Work around missing 64bit atomic builtins for non-x86 ILP32 platforms.
 
---- atomic/unix/builtins64.c.orig	2020-02-19 16:06:32.153732769 +0900
-+++ atomic/unix/builtins64.c	2020-02-19 16:08:48.239198201 +0900
+--- atomic/unix/builtins64.c.orig	2022-06-27 21:55:09.000000000 +0000
++++ atomic/unix/builtins64.c
 @@ -16,7 +16,7 @@
  
  #include "apr_arch_atomic.h"
  
--#ifdef USE_ATOMICS_BUILTINS
+-#ifdef USE_ATOMICS_BUILTINS64
 +#if defined (USE_ATOMICS_BUILTINS) && !defined (NEED_ATOMICS_GENERIC64)
  
- APR_DECLARE(apr_uint64_t) apr_atomic_read64(volatile apr_uint64_t *mem)
- {
-@@ -61,4 +61,4 @@ APR_DECLARE(apr_uint64_t) apr_atomic_xch
-     return __sync_lock_test_and_set(mem, val);
+ #if defined(__arm__) || defined(__powerpc__) || defined(__powerpc64__)
+ #define WEAK_MEMORY_ORDERING 1
+@@ -106,4 +106,4 @@ APR_DECLARE(apr_uint64_t) apr_atomic_xch
+ #endif
  }
  
--#endif /* USE_ATOMICS_BUILTINS */
+-#endif /* USE_ATOMICS_BUILTINS64 */
 +#endif /* USE_ATOMICS_BUILTINS && !NEED_ATOMICS_GENERIC64 */

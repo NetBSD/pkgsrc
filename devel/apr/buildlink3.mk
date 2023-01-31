@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.36 2013/12/01 09:45:49 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.37 2023/01/31 18:41:49 wiz Exp $
 
 BUILDLINK_TREE+=	apr
 
@@ -16,6 +16,7 @@ BUILDLINK_FILES.apr+=	lib/apr.exp
 ${BUILDLINK_DIR}/bin/apr-config: buildlink-directories
 	${MKDIR} ${BUILDLINK_DIR}/bin && ${LN} -fs apr-1-config ${BUILDLINK_DIR}/bin/apr-config
 
+.PHONY: buildlink-apr-cookie
 buildlink-apr-cookie: ${BUILDLINK_DIR}/bin/apr-config
 
 .include "../../mk/bsd.fast.prefs.mk"
