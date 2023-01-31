@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.912 2023/01/31 18:59:10 pho Exp $
+$NetBSD: CHANGES-2023,v 1.913 2023/01/31 18:59:55 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1147,4 +1147,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/hs-apply-refact version 0.12.0.0 [pho 2023-01-31]
 	Updated devel/apr-util to 1.6.2 [wiz 2023-01-31]
 	Added net/gnunet version 0.19.2 [nikita 2023-01-31]
+	Added devel/hs-hls-hlint-plugin version 1.1.1.0 [pho 2023-01-31]
 	Added devel/hs-hls-hlint-plugin version 1.1.1.0 [pho 2023-01-31]
