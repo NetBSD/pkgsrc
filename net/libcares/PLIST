@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2021/11/01 09:57:53 wiz Exp $
+@comment $NetBSD: PLIST,v 1.17 2023/01/31 14:26:52 wiz Exp $
 bin/acountry
 bin/adig
 bin/ahost
@@ -14,7 +14,7 @@ lib/cmake/c-ares/c-ares-targets-noconfig.cmake
 lib/cmake/c-ares/c-ares-targets.cmake
 lib/libcares.so
 lib/libcares.so.2
-lib/libcares.so.2.5.1
+lib/libcares.so.2.6.0
 lib/libcares_static.a
 lib/pkgconfig/libcares.pc
 man/man1/acountry.1
