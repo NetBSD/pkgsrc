@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.891 2023/01/31 12:53:36 taca Exp $
+$NetBSD: CHANGES-2023,v 1.892 2023/01/31 13:06:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1127,3 +1127,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/hgrep to 0.3.1 [pin 2023-01-31]
 	Updated time/ruby-tzinfo to 2.0.6 [taca 2023-01-31]
 	Updated time/ruby-tzinfo1 to 1.2.11 [taca 2023-01-31]
+	Added math/ruby-enumerable-statistics version 2.0.7 [wiz 2023-01-31]
