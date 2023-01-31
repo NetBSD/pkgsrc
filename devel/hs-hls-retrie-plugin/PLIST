@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2023/01/31 17:38:49 pho Exp $
+lib/hls-retrie-plugin-${PKGVERSION}/${HS_VERSION}/package-description
+lib/hls-retrie-plugin-${PKGVERSION}/${HS_VERSION}/package-id
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Ide/Plugin/Retrie.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Ide/Plugin/Retrie.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Ide/Plugin/Retrie.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${PLIST.doc}share/doc/${HS_PLATFORM}/hls-retrie-plugin-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/${HS_PLATFORM}/hls-retrie-plugin-${PKGVERSION}/html/Ide-Plugin-Retrie.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/hls-retrie-plugin-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/hls-retrie-plugin-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/hls-retrie-plugin-${PKGVERSION}/html/hls-retrie-plugin.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/hls-retrie-plugin-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/hls-retrie-plugin-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/hls-retrie-plugin-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/hls-retrie-plugin-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/hls-retrie-plugin-${PKGVERSION}/html/synopsis.png
