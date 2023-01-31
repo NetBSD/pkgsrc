@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.893 2023/01/31 13:07:52 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.894 2023/01/31 13:08:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1129,3 +1129,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated time/ruby-tzinfo1 to 1.2.11 [taca 2023-01-31]
 	Added math/ruby-enumerable-statistics version 2.0.7 [wiz 2023-01-31]
 	Added graphics/ruby-unicode_plot version 0.0.5 [wiz 2023-01-31]
+	Added graphics/ruby-youplot version 0.4.5 [wiz 2023-01-31]
