@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.907 2023/01/31 18:36:05 pho Exp $
+$NetBSD: CHANGES-2023,v 1.908 2023/01/31 18:42:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1143,3 +1143,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/hs-hls-class-plugin version 1.1.1.0 [pho 2023-01-31]
 	Added devel/hs-hls-retrie-plugin version 1.0.3.0 [pho 2023-01-31]
 	Added sysutils/hs-filemanip version 0.3.6.3 [pho 2023-01-31]
+	Updated devel/apr to 1.7.1 [wiz 2023-01-31]
