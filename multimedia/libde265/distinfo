@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2023/01/30 18:00:16 adam Exp $
+$NetBSD: distinfo,v 1.8 2023/01/31 01:37:11 ryoon Exp $
 
 BLAKE2s (libde265-1.0.10.tar.gz) = 8cd81f2c1ddc2ac4c298c6c91ce650c981cee4e8886320abb19c4ec5a2bdfc45
 SHA512 (libde265-1.0.10.tar.gz) = f10def071ec6398ab0a7647b3f6e42a10ce559ea74acba4044ee2902da93bb5f15cba301b72fc48a2ee15b7e031d5ec8c78aa3d1e9eb304a7e5f33a419a5713a
 Size (libde265-1.0.10.tar.gz) = 845556 bytes
+SHA1 (patch-configure.ac) = b8b8736a988390a0bc726db17afc21243b1c1443
