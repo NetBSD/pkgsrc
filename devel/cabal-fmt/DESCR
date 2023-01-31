@@ -1,0 +1,3 @@
+Format .cabal files preserving the original field ordering, and comments.
+
+Tuned for Oleg's preference, but has some knobs still.
