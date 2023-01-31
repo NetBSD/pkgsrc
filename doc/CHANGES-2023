@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.914 2023/01/31 19:12:51 pho Exp $
+$NetBSD: CHANGES-2023,v 1.915 2023/01/31 19:16:20 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1150,3 +1150,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/hs-hls-hlint-plugin version 1.1.1.0 [pho 2023-01-31]
 	Added devel/hs-hls-hlint-plugin version 1.1.1.0 [pho 2023-01-31]
 	Added devel/hs-hls-refactor-plugin version 1.1.0.0 [pho 2023-01-31]
+	Added devel/hs-hls-splice-plugin version 1.0.3.0 [pho 2023-01-31]
