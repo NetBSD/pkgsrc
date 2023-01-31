@@ -1,0 +1,3 @@
+GNUnet-fuse allows you to mount directories published on GNUnet (via
+GNUnet FS) as read-only file-systems (on Operating Systems that
+support the FUSE API).
