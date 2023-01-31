@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.19 2020/01/18 21:48:02 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2023/01/31 18:44:01 wiz Exp $
 
 BUILDLINK_TREE+=	apr-util
 
@@ -15,6 +15,7 @@ BUILDLINK_FILES.apr-util+=	lib/aprutil.exp
 ${BUILDLINK_DIR}/bin/apu-config: buildlink-directories
 	${MKDIR} ${BUILDLINK_DIR}/bin && ${LN} -fs apu-1-config ${BUILDLINK_DIR}/bin/apu-config
 
+.PHONY: buildlink-apr-util-cookie
 buildlink-apr-util-cookie: ${BUILDLINK_DIR}/bin/apu-config
 
 .include "../../mk/bsd.fast.prefs.mk"
@@ -22,12 +23,12 @@ buildlink-apr-util-cookie: ${BUILDLINK_DIR}/bin/apu-config
 pkgbase := apr-util
 .include "../../mk/pkg-build-options.mk"
 
-.if !empty(PKG_BUILD_OPTIONS.apr-util:Mdb4)
+.if ${PKG_BUILD_OPTIONS.apr-util:Mdb4}
 BDB_ACCEPTED?=		db4 db5
 .  include "../../mk/bdb.buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS.apr-util:Mldap)
+.if ${PKG_BUILD_OPTIONS.apr-util:Mldap}
 .  include "../../databases/openldap-client/buildlink3.mk"
 .endif
 
