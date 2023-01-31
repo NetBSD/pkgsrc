@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.901 2023/01/31 16:02:48 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.902 2023/01/31 17:15:03 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1137,3 +1137,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated fonts/fontconfig to 2.14.2 [wiz 2023-01-31]
 	Updated textproc/glow to 1.5.0 [wiz 2023-01-31]
 	Updated graphics/ImageMagick to 7.1.0.59 [wiz 2023-01-31]
+	Added devel/cabal-fmt version 0.1.6 [pho 2023-01-31]
