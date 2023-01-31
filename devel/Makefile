@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3901 2023/01/31 17:32:23 pho Exp $
+# $NetBSD: Makefile,v 1.3902 2023/01/31 17:39:04 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -613,6 +613,7 @@ SUBDIR+=	hs-hls-plugin-api
 SUBDIR+=	hs-hls-pragmas-plugin
 SUBDIR+=	hs-hls-qualify-imported-names-plugin
 SUBDIR+=	hs-hls-refine-imports-plugin
+SUBDIR+=	hs-hls-retrie-plugin
 SUBDIR+=	hs-hls-selection-range-plugin
 SUBDIR+=	hs-hslua-module-system
 SUBDIR+=	hs-hslua-module-version
