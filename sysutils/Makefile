@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1031 2023/01/28 05:43:43 pho Exp $
+# $NetBSD: Makefile,v 1.1032 2023/01/31 18:36:13 pho Exp $
 #
 
 COMMENT=	System utilities
@@ -346,6 +346,7 @@ SUBDIR+=	hs-byteorder
 SUBDIR+=	hs-co-log-core
 SUBDIR+=	hs-easy-file
 SUBDIR+=	hs-fast-logger
+SUBDIR+=	hs-filemanip
 SUBDIR+=	hs-filepattern
 SUBDIR+=	hs-hostname
 SUBDIR+=	hs-hslogger
