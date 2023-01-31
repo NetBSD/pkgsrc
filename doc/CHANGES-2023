@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.888 2023/01/31 10:04:32 pho Exp $
+$NetBSD: CHANGES-2023,v 1.889 2023/01/31 12:33:30 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1124,3 +1124,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-ipython to 8.9.0 [adam 2023-01-31]
 	Updated devel/py-isort to 5.12.0 [adam 2023-01-31]
 	Added devel/hs-hls-cabal-plugin version 0.1.0.0 [pho 2023-01-31]
+	Updated textproc/hgrep to 0.3.1 [pin 2023-01-31]
