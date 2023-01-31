@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.519 2022/12/25 09:00:36 wiz Exp $
+# $NetBSD: Makefile,v 1.520 2023/01/31 08:53:13 wiz Exp $
 #
 
 COMMENT=	Games
@@ -158,7 +158,7 @@ SUBDIR+=	gamazons
 SUBDIR+=	gargoyle
 SUBDIR+=	gate88
 SUBDIR+=	gbrainy
-SUBDIR+=	gcompris
+SUBDIR+=	gcompris-qt
 SUBDIR+=	gemdropx
 SUBDIR+=	gemrb
 SUBDIR+=	ggz-client-libs
