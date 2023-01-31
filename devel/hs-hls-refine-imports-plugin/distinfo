@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/02/16 10:15:11 pho Exp $
+$NetBSD: distinfo,v 1.2 2023/01/31 08:06:48 pho Exp $
 
-BLAKE2s (hls-refine-imports-plugin-1.0.1.0.tar.gz) = 054042faa96259ab1e0ef41fb07b320adc55e3edc35bbffb5e10bd927fe78336
-SHA512 (hls-refine-imports-plugin-1.0.1.0.tar.gz) = 5223e05176ace9f07c868be33a5540fe2c7cabe6eea7630dd91ccc8778173e7183932948c438be42a71b06e5f4371ff32ddfa46fba31a97078ea70a51bbe564a
-Size (hls-refine-imports-plugin-1.0.1.0.tar.gz) = 9881 bytes
+BLAKE2s (hls-refine-imports-plugin-1.0.4.0.tar.gz) = d592e5f68e2f4ae6c66472bb78642ba02b715d850d31926035904cf70f358d46
+SHA512 (hls-refine-imports-plugin-1.0.4.0.tar.gz) = defd3778a0af61ea3306a8890b0eda581d4d0029f10a4c0f4a378f2374f26c53df2b9c5891993f70ff18927786d2914fe258d29501bc4150f08de99e6a8ab0d7
+Size (hls-refine-imports-plugin-1.0.4.0.tar.gz) = 10065 bytes
