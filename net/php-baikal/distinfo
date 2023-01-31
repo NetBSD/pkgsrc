@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.17 2023/01/03 12:45:24 wiz Exp $
+$NetBSD: distinfo,v 1.18 2023/01/31 07:38:20 wiz Exp $
 
 BLAKE2s (baikal-0.9.3.zip) = c6d6de37c7b1a01a396aed288bf01b145ed665a3496310f0741981dff4274912
 SHA512 (baikal-0.9.3.zip) = bdcd3848ba7c99f94a1f20c9fee48f24bb9e004a325f482d6b5324eff1f0aa2fddd284ff5f9ae6dd0b67455852aa82e434174358c58d76b6009945bc3395768c
 Size (baikal-0.9.3.zip) = 2978666 bytes
+SHA1 (patch-vendor_sabre_dav_lib_CardDAV_Xml_Request_AddressBookMultiGetReport.php) = 44dfa0a934ed615a1b3aa68591fbfa58417b07bd
