@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/01/31 18:53:46 nikita Exp $
+# $NetBSD: Makefile,v 1.2 2023/01/31 19:53:36 nikita Exp $
 
 DISTNAME=		gnunet-0.19.2
 CATEGORIES=		net
@@ -65,6 +65,8 @@ FILES_SUBST+=		PKG_HOME=${GNUNET_DIR}
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 CONF_FILES+=		${EGDIR}/gnunet.conf ${PKG_SYSCONFDIR}/gnunet.conf
 CONF_FILES+=		${EGDIR}/gnunet_user.conf ${PKG_SYSCONFDIR}/gnunet_user.conf
+INSTALLATION_DIRS+=	${EGDIR}
+INSTALLATION_DIRS+=	${PREFIX}/share/doc/gnunet
 
 post-extract:
 	${CP} ${FILESDIR}/gnunet.conf ${WRKSRC}/gnunet.conf
@@ -84,8 +86,8 @@ post-configure:
 	${MKDIR} ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/gnunet.conf ${DESTDIR}${EGDIR}/gnunet.conf
 	${INSTALL_DATA} ${WRKSRC}/gnunet_user.conf ${DESTDIR}${EGDIR}/gnunet_user.conf
-	${MKDIR} ${DESTDIR}/share/doc/gnunet/
-	${INSTALL_DATA} ${WRKSRC}/README.pkgsrc.txt ${DESTDIR}/share/doc/gnunet/README.pkgsrc.txt
+	${MKDIR} ${DESTDIR}${PREFIX}/share/doc/gnunet/
+	${INSTALL_DATA} ${WRKSRC}/README.pkgsrc.txt ${DESTDIR}${PREFIX}/share/doc/gnunet/README.pkgsrc.txt
 
 # All helpers have to be suid. fs helper must not be suid.
 # Some helpers and functionalities are only supported on
