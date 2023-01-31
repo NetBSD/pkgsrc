@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22587 2023/01/30 19:02:47 wiz Exp $
+$NetBSD: TODO,v 1.22588 2023/01/31 07:38:31 wiz Exp $
 
 Suggested new packages
 ======================
@@ -472,7 +472,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o authelia-4.28.0
 	o autoconvert-0.3.16
 	o autosetup-0.7.0
-	o avant-window-navigator-0.4.2
 	o avidemux-2.8
 	o avl-2.0.3 [2.x is not source and binary compatible with 1.x]
 	o avr-gdb-10.1
