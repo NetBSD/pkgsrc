@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.34 2022/01/30 16:22:19 pho Exp $
+$NetBSD: distinfo,v 1.35 2023/01/31 07:59:27 khorben Exp $
 
 BLAKE2s (open-vm-tools-11.3.5-18557794.tar.gz) = 6093fe8c71a826684fdc8eed50c3367450097b0fd94e39a0a23e45f44a97a635
 SHA512 (open-vm-tools-11.3.5-18557794.tar.gz) = fa31f5615c9c90865ba9122f7fcd0831068d48defee30a5f5c620e744b76ccd5b7cc2de20cea4e37b596f99619ffb7bb47774de04e7c4bea666c7c0b6fa1560e
 Size (open-vm-tools-11.3.5-18557794.tar.gz) = 4218935 bytes
+SHA1 (patch-Makefile.am) = 37cf1b4768c68ba7eccac6714071249ec925f071
 SHA1 (patch-ag) = a54f2a76e7b08c8c005a576d4e43ede3f0e0c9da
 SHA1 (patch-ah) = 2f59c9d650d378a84118991f75c59281a4836aaa
 SHA1 (patch-ai) = 3e8c67a33f6072319f1741bda960377fc2663b06
@@ -42,7 +43,7 @@ SHA1 (patch-lib_rpcChannel_rpcChannel.c) = 4133707d70844eb12c25c48d6bb0b26a37098
 SHA1 (patch-lib_user_utilBacktrace.c) = 741cc72d64f962fa0aa48e90b1f912f422c5dd8b
 SHA1 (patch-libguestlib_Makefile.am) = fff8e8df30c91ffb4fd2c14017633be1b3cb47ec
 SHA1 (patch-network) = 21a9196b4ce6101450bfd9ea6fcb283a9ba4f56e
-SHA1 (patch-scripts_Makefile.am) = 295d0b5ab46f9d9df28a7b23ab4a5449fa1528f7
+SHA1 (patch-scripts_Makefile.am) = 499d60ff81d78bd71ee58c90cf77b850f82455db
 SHA1 (patch-scripts_netbsd_network) = 0bb7e6f71fa811e1c789a4d0825b4bd0181fb2cf
 SHA1 (patch-services_plugins_dndcp_dnd_dndLinux.c) = d959de9443581ad53de394079fb85bee1bdda8c3
 SHA1 (patch-services_plugins_guestInfo_perfMonLinux.c) = be7912f53989d298b5965cb566085cd0a0e5cc90
@@ -52,6 +53,7 @@ SHA1 (patch-services_vmtoolsd_Makefile.am) = 558ed58e8fc6d933f0a9698c865b33f88a9
 SHA1 (patch-vgauth_common_VGAuthLog.c) = 9beacc4665fb6133059279be2594892ebb6ba5d9
 SHA1 (patch-vgauth_lib_common.c) = 0d949bc3c4a00a92f89177e4f20ef2f848f78532
 SHA1 (patch-vgauth_lib_impersonateLinux.c) = 1c925eab81525df06e4ebf906f835170b4320768
+SHA1 (patch-vmblockmounter_Makefile.am) = 21c7fe9c6f525ca200ff3e6cdb0bbcc44ae0b37c
 SHA1 (patch-vmblockmounter_vmblockmounter.c) = 4287303b188f4df7a2785fe72bbab820e33d6a07
 SHA1 (patch-vmhgfs-fuse_config.c) = 0518ca08d9b5d268960e1a820899eaefd1d18361
 SHA1 (patch-vmhgfs-fuse_fsutil.h) = 9233e5612a1f22ab4b43b04cfca5f0f7d120bc21
