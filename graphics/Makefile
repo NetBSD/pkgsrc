@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1001 2023/01/12 12:56:39 pin Exp $
+# $NetBSD: Makefile,v 1.1002 2023/01/31 13:07:26 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -585,6 +585,8 @@ SUBDIR+=	ruby-oily_png
 SUBDIR+=	ruby-opengl
 SUBDIR+=	ruby-rsvg2
 SUBDIR+=	ruby-screengif
+SUBDIR+=	ruby-unicode_plot
+SUBDIR+=	ruby-youplot
 SUBDIR+=	s10sh
 SUBDIR+=	sane-airscan
 SUBDIR+=	sane-backends
