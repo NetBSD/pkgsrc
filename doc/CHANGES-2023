@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.886 2023/01/31 08:53:49 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.887 2023/01/31 09:29:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1119,3 +1119,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/hs-hls-refine-imports-plugin to 1.0.4.0 [pho 2023-01-31]
 	Added games/gcompris-qt version 3.1 [wiz 2023-01-31]
 	Removed games/gcompris successor games/gcompris-qt [wiz 2023-01-31]
+	Updated devel/py-hatchling to 1.12.2 [adam 2023-01-31]
+	Updated devel/py-traitlets to 5.9.0 [adam 2023-01-31]
+	Updated devel/py-ipython to 8.9.0 [adam 2023-01-31]
+	Updated devel/py-isort to 5.12.0 [adam 2023-01-31]
