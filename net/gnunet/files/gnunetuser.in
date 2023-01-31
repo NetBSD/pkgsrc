@@ -1,0 +1,110 @@
+#!@RCD_SCRIPTS_SHELL@
+#
+# PROVIDE: gnunetuser
+# REQUIRE: DAEMON NETWORKING LOGIN gnunet
+# KEYWORD: shutdown
+#
+# You will need to set some variables in /etc/rc.conf to start gnunet:
+#
+# gnunetuser=YES
+# gnunetuser_user=name                  # your account name
+# gnunetuser_user_home="/home/name"     # your home location
+
+if [ -f /etc/rc.subr ]
+then
+	. /etc/rc.subr
+fi
+
+name="gnunetuser"
+rcvar=${name}
+command="@PREFIX@/bin/gnunet-arm"
+
+: ${gnunetuser_user_home:=/home/nowhere}
+: ${gnunetuser_user:=noone}
+
+if [ -f /etc/rc.subr -a -d /etc/rc.d -a -f /etc/rc.d/DAEMON ]; then
+	load_rc_config $name
+elif [ -f /etc/rc.conf ]; then
+	. /etc/rc.conf
+fi
+
+command_args="-c ${gnunetuser_user_home}/.config/gnunet.conf"
+required_files="${gnunetuser_user_home}/.config/gnunet.conf"
+pidfile="/tmp/gnunet-${gnunetuser_user}-runtime/gnunet-service-arm.sock"
+
+start_cmd="gnunet_start"
+start_precmd="gnunet_precmd"
+restart_cmd="gnunet_restart"
+stop_cmd="gnunet_stop"
+
+gnunet_env="HOME=${gnunetuser_user_home} USER=${gnunetuser_user} TMP=/tmp GNUNET_PREFIX=@PREFIX@"
+
+check_pidfile()
+{
+	pid=$(pgrep -U "$gnunetuser_user" "${command}"$)
+	echo -n "${pid}"
+}
+
+gnunet_precmd()
+{
+	if [ ! -f ${required_files} ]; then
+		warn "${required_files} does not exist."
+		warn "You have to create a gnunet user config first."
+		return 1
+	fi
+}
+
+gnunet_start()
+{
+	@ECHO@ "Starting ${name}."
+	doit="@SU@ -m ${gnunetuser_user} -c '${gnunet_env} ${command} ${command_args} -s'"
+	eval $doit
+}
+
+gnunet_restart()
+{
+	@ECHO@ "Restarting ${name}."
+	doit="@SU@ -m ${gnunetuser_user} -c '${gnunet_env} ${command} ${command_args} -r'"
+	eval $doit
+}
+
+# stopping this is broken (with one service hanging around until you KILL it).
+gnunet_stop()
+{
+	@ECHO@ "Stopping ${name}."
+	doit="@SU@ -m ${gnunetuser_user} -c '${gnunet_env} ${command} ${command_args} -e'"
+	pkill -f gnunet-rest-server
+	kill -9 $(pgrep -f gnunet-rest-server)
+	eval $doit
+}
+
+if [ -f /etc/rc.subr -a -f /etc/rc.conf -a -d /etc/rc.d -a -f /etc/rc.d/DAEMON ]; then
+	# newer NetBSD
+	load_rc_config $name
+	run_rc_command "$1"
+else
+	# old NetBSD, Solaris and illumos, Linux, etc.
+	cmd=${1:-start}
+	case ${cmd} in
+	restart)
+		( $0 stop )
+		sleep 5
+		$0 start
+		;;
+	stop)
+		echo "Stopping ${name}."
+		check_pidfile
+		! [ -n ${pid} ] && eval ${stop_cmd}
+		;;
+	start)
+		echo "Starting ${name}."
+		eval ${start_precmd}
+		eval ${start_cmd}
+		;;
+	*)
+		echo 1>&2 "Usage: $0 [start|stop|restart]"
+		exit 1
+		;;
+	esac
+	exit 0
+fi

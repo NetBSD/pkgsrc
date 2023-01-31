@@ -1,0 +1,103 @@
+#!@RCD_SCRIPTS_SHELL@
+#
+# PROVIDE: gnunet
+# REQUIRE: DAEMON NETWORKING LOGIN
+# KEYWORD: shutdown
+#
+# You will need to set some variables in /etc/rc.conf to start gnunet:
+#
+# gnunet=YES
+
+if [ -f /etc/rc.subr ]
+then
+	. /etc/rc.subr
+fi
+
+name="gnunet"
+rcvar=${name}
+command="@PREFIX@/lib/gnunet/libexec/gnunet-service-arm"
+command_args="-c @PKG_SYSCONFDIR@/gnunet.conf -d -l @VARBASE@/chroot/gnunet/cache/gnunet-%Y-%m-%d.log"
+required_files="@PKG_SYSCONFDIR@/gnunet.conf"
+pidfile="/tmp/gnunet-gnunet-runtime/gnunet-service-arm.sock"
+: ${gnunet_user:=gnunet}
+: ${gnunet_group:=gnunet}
+: ${gnunet_home:=@VARBASE@/chroot/gnunet}
+: ${gnunetdns_group:=gnunetdns}
+start_cmd="gnunet_start"
+start_precmd="gnunet_precmd"
+stop_cmd="gnunet_stop"
+
+# XXX: We need to export PATH with appended /usr/pkg/{sbin,bin} to get
+# the upnpc binary and others.
+# We can not use export here.
+check_path="@SU@ -m ${gnunet_user} -c '${PATH}'"
+case "$check_path" in
+*@PREFIX@/bin*|*@PREFIX@/sbin*)
+	;;
+*)
+	PATH=${PATH}:@PREFIX@/bin:@PREFIX@/sbin
+	;;
+esac
+
+gnunet_env="PATH=${PATH} HOME=${gnunet_home} USER=${gnunet_user} TMP=/tmp GNUNET_PREFIX=@PREFIX@ GNUNET_CACHE_HOME=${gnunet_home}/cache"
+
+check_pidfile()
+{
+	pid=$(pgrep -U "${gnunet_user}" "${command}"$)
+	echo -n "${pid}"
+}
+
+gnunet_precmd()
+{
+	if [ ! -f ${required_files} ]; then
+		warn "${required_files} does not exist."
+		return 1
+	fi
+}
+
+gnunet_start()
+{
+	@ECHO@ "Starting ${name}."
+	doit="@SU@ -m ${gnunet_user} -c '${gnunet_env} ${command} ${command_args}'"
+	eval $doit
+}
+
+gnunet_stop()
+{
+	echo "Stopping ${name}."
+	doit="@SU@ -m ${gnunet_user} -c '${gnunet_env} ${command} ${command_args} -e'"
+	eval $doit
+}
+
+
+if [ -f /etc/rc.subr -a -f /etc/rc.conf -a -d /etc/rc.d -a -f /etc/rc.d/DAEMON ]; then
+	# newer NetBSD
+	load_rc_config $name
+	run_rc_command "$1"
+else
+	# old NetBSD, Solaris and illumos, Linux, etc.
+	pidfile="${gnunet_home}/${name}.pid"
+	cmd=${1:-start}
+	case ${cmd} in
+	restart)
+		( $0 stop )
+		sleep 5
+		$0 start
+		;;
+	stop)
+		echo "Stopping ${name}."
+		check_pidfile
+		! [ -n ${pid} ] && eval ${stop_cmd}
+		;;
+	start)
+		echo "Starting ${name}."
+		eval ${start_precmd}
+		eval ${start_cmd}
+		;;
+	*)
+		echo 1>&2 "Usage: $0 [start|stop|restart]"
+		exit 1
+		;;
+	esac
+	exit 0
+fi
