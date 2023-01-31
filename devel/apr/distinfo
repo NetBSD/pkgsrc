@@ -1,11 +1,9 @@
-$NetBSD: distinfo,v 1.49 2021/11/28 12:57:05 he Exp $
+$NetBSD: distinfo,v 1.50 2023/01/31 18:41:49 wiz Exp $
 
-BLAKE2s (apr-1.7.0.tar.bz2) = f6126e30d08bc9dd7333bb9ee5814d606ae3b8f26f31ac6132bc918c22e57de0
-SHA512 (apr-1.7.0.tar.bz2) = 3dc42d5caf17aab16f5c154080f020d5aed761e22db4c5f6506917f6bfd2bf8becfb40af919042bd4ce1077d5de74aa666f5edfba7f275efba78e8893c115148
-Size (apr-1.7.0.tar.bz2) = 872238 bytes
+BLAKE2s (apr-1.7.1.tar.bz2) = f409825011ba80d53c16f08a0fa5fa40b451dd9db26e2db3edf863ff3499ef23
+SHA512 (apr-1.7.1.tar.bz2) = c23d074fc5d7e0934815b0c87e2c788f8670c3061f30b5dc1fd1d9571e7ec2a43143b52ee1fd6be5dc2d662069eaba2be918d7e8b9a55095a9e33affc68b53f9
+Size (apr-1.7.1.tar.bz2) = 890114 bytes
 SHA1 (patch-atomic_unix_builtins.c) = e90d0232013650c3d227fa3a8be952c51b7148e8
-SHA1 (patch-atomic_unix_builtins64.c) = e24316e93dae12efc1cbfc3f444e8622df5e5833
-SHA1 (patch-include_apr__general.h) = bff357eee11218a6c53769278fc3f9094b062fdf
-SHA1 (patch-include_arch_unix_apr__arch__atomic.h) = 6f226add54f5966a50985441f6903853a0728c88
-SHA1 (patch-time_unix_time.c) = d3da97cb4b6c7b6416fecb49006470db46084276
-SHA1 (patch-time_win32_time.c) = aee61377826292c238352241a304eb6905a1b2dc
+SHA1 (patch-atomic_unix_builtins64.c) = a009c6418c13919080757cba6e4b9630013f4bc7
+SHA1 (patch-include_apr__general.h) = 08959c41f37b166c2d45fcefdf65acc47c593206
+SHA1 (patch-include_arch_unix_apr__arch__atomic.h) = ffa08ccc2bd600f20da0ea33c1b006467ca3154f
