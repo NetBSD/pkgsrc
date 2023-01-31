@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2023/01/31 13:07:11 wiz Exp $
+bin/uplot${RUBY_SUFFIX}
+bin/youplot${RUBY_SUFFIX}
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/LICENSE.txt
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/exe/uplot
+${GEM_LIBDIR}/exe/youplot
+${GEM_LIBDIR}/lib/youplot.rb
+${GEM_LIBDIR}/lib/youplot/backends/processing.rb
+${GEM_LIBDIR}/lib/youplot/backends/unicode_plot.rb
+${GEM_LIBDIR}/lib/youplot/command.rb
+${GEM_LIBDIR}/lib/youplot/dsv.rb
+${GEM_LIBDIR}/lib/youplot/options.rb
+${GEM_LIBDIR}/lib/youplot/parameters.rb
+${GEM_LIBDIR}/lib/youplot/parser.rb
+${GEM_LIBDIR}/lib/youplot/version.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
