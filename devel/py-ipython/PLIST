@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2023/01/03 21:22:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.21 2023/01/31 09:22:21 adam Exp $
 bin/ipython-${PYVERSSUFFIX}
 bin/ipython3-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -538,9 +538,15 @@ ${PYSITELIB}/IPython/terminal/pt_inputhooks/wx.pyo
 ${PYSITELIB}/IPython/terminal/ptutils.py
 ${PYSITELIB}/IPython/terminal/ptutils.pyc
 ${PYSITELIB}/IPython/terminal/ptutils.pyo
-${PYSITELIB}/IPython/terminal/shortcuts.py
-${PYSITELIB}/IPython/terminal/shortcuts.pyc
-${PYSITELIB}/IPython/terminal/shortcuts.pyo
+${PYSITELIB}/IPython/terminal/shortcuts/__init__.py
+${PYSITELIB}/IPython/terminal/shortcuts/__init__.pyc
+${PYSITELIB}/IPython/terminal/shortcuts/__init__.pyo
+${PYSITELIB}/IPython/terminal/shortcuts/auto_match.py
+${PYSITELIB}/IPython/terminal/shortcuts/auto_match.pyc
+${PYSITELIB}/IPython/terminal/shortcuts/auto_match.pyo
+${PYSITELIB}/IPython/terminal/shortcuts/auto_suggest.py
+${PYSITELIB}/IPython/terminal/shortcuts/auto_suggest.pyc
+${PYSITELIB}/IPython/terminal/shortcuts/auto_suggest.pyo
 ${PYSITELIB}/IPython/terminal/tests/__init__.py
 ${PYSITELIB}/IPython/terminal/tests/__init__.pyc
 ${PYSITELIB}/IPython/terminal/tests/__init__.pyo
@@ -556,6 +562,9 @@ ${PYSITELIB}/IPython/terminal/tests/test_help.pyo
 ${PYSITELIB}/IPython/terminal/tests/test_interactivshell.py
 ${PYSITELIB}/IPython/terminal/tests/test_interactivshell.pyc
 ${PYSITELIB}/IPython/terminal/tests/test_interactivshell.pyo
+${PYSITELIB}/IPython/terminal/tests/test_shortcuts.py
+${PYSITELIB}/IPython/terminal/tests/test_shortcuts.pyc
+${PYSITELIB}/IPython/terminal/tests/test_shortcuts.pyo
 ${PYSITELIB}/IPython/testing/__init__.py
 ${PYSITELIB}/IPython/testing/__init__.pyc
 ${PYSITELIB}/IPython/testing/__init__.pyo
