@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1500 2023/01/30 10:29:31 wiz Exp $
+# $NetBSD: Makefile,v 1.1501 2023/01/31 18:53:46 nikita Exp $
 #
 
 COMMENT=	Networking tools
@@ -200,6 +200,7 @@ SUBDIR+=	gnome-nettool
 SUBDIR+=	gnome-online-accounts
 SUBDIR+=	gnome-vfs-smb
 SUBDIR+=	gnugk
+SUBDIR+=	gnunet
 SUBDIR+=	go-dnstap
 SUBDIR+=	go-net
 SUBDIR+=	go-websocket
