@@ -1,12 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.6 2022/11/23 16:18:38 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2023/01/31 04:19:44 pho Exp $
 
 BUILDLINK_TREE+=	hs-hls-call-hierarchy-plugin
 
 .if !defined(HS_HLS_CALL_HIERARCHY_PLUGIN_BUILDLINK3_MK)
 HS_HLS_CALL_HIERARCHY_PLUGIN_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.hs-hls-call-hierarchy-plugin+=	hs-hls-call-hierarchy-plugin>=1.0.2
-BUILDLINK_ABI_DEPENDS.hs-hls-call-hierarchy-plugin+=	hs-hls-call-hierarchy-plugin>=1.0.2.0nb5
+BUILDLINK_API_DEPENDS.hs-hls-call-hierarchy-plugin+=	hs-hls-call-hierarchy-plugin>=1.2.0
+BUILDLINK_ABI_DEPENDS.hs-hls-call-hierarchy-plugin+=	hs-hls-call-hierarchy-plugin>=1.2.0.0
 BUILDLINK_PKGSRCDIR.hs-hls-call-hierarchy-plugin?=	../../devel/hs-hls-call-hierarchy-plugin
 
 .include "../../converters/hs-aeson/buildlink3.mk"
