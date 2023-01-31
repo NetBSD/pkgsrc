@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.881 2023/01/31 01:39:07 ryoon Exp $
+$NetBSD: CHANGES-2023,v 1.882 2023/01/31 04:20:01 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1113,3 +1113,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed x11/avant-window-navigator [wiz 2023-01-30]
 	Updated devel/hs-hls-explicit-imports-plugin to 1.2.0.0 [pho 2023-01-31]
 	Updated multimedia/libde265 to 1.0.10nb1 [ryoon 2023-01-31]
+	Updated devel/hs-hls-call-hierarchy-plugin to 1.2.0.0 [pho 2023-01-31]
