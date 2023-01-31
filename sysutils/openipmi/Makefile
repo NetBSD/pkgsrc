@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/07/04 08:13:37 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2023/01/31 06:58:06 khorben Exp $
 
 DISTNAME=	OpenIPMI-2.0.32
 PKGNAME=	${DISTNAME:S/OpenIPMI/openipmi/}
@@ -12,7 +12,7 @@ LICENSE=	gnu-lgpl-v2
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake perl pkg-config
+USE_TOOLS+=	gmake gsed perl pkg-config
 
 PKGCONFIG_OVERRIDE+=	*.pc.in
 
