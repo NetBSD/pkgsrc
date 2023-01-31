@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2023/01/31 17:16:55 pho Exp $
+lib/hls-cabal-fmt-plugin-${PKGVERSION}/${HS_VERSION}/package-description
+lib/hls-cabal-fmt-plugin-${PKGVERSION}/${HS_VERSION}/package-id
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Ide/Plugin/CabalFmt.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Ide/Plugin/CabalFmt.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Ide/Plugin/CabalFmt.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${PLIST.doc}share/doc/${HS_PLATFORM}/hls-cabal-fmt-plugin-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/${HS_PLATFORM}/hls-cabal-fmt-plugin-${PKGVERSION}/html/Ide-Plugin-CabalFmt.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/hls-cabal-fmt-plugin-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/hls-cabal-fmt-plugin-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/hls-cabal-fmt-plugin-${PKGVERSION}/html/hls-cabal-fmt-plugin.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/hls-cabal-fmt-plugin-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/hls-cabal-fmt-plugin-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/hls-cabal-fmt-plugin-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/hls-cabal-fmt-plugin-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/hls-cabal-fmt-plugin-${PKGVERSION}/html/synopsis.png
