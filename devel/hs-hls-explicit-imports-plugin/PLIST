@@ -1,19 +1,19 @@
-@comment $NetBSD: PLIST,v 1.1 2022/02/16 10:14:35 pho Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/01/31 01:37:01 pho Exp $
 lib/hls-explicit-imports-plugin-${PKGVERSION}/${HS_VERSION}/package-description
 lib/hls-explicit-imports-plugin-${PKGVERSION}/${HS_VERSION}/package-id
-lib/${HS_PLATFORM}/${HS_PKGID}/Ide/Plugin/ExplicitImports.dyn_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Ide/Plugin/ExplicitImports.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Ide/Plugin/ExplicitImports.hi
-lib/${HS_PLATFORM}/${HS_PKGID}/Ide/Plugin/ExplicitImports.p_hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Ide/Plugin/ExplicitImports.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
-lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-share/doc/${HS_PLATFORM}/hls-explicit-imports-plugin-${PKGVERSION}/LICENSE
-share/doc/${HS_PLATFORM}/hls-explicit-imports-plugin-${PKGVERSION}/html/Ide-Plugin-ExplicitImports.html
-share/doc/${HS_PLATFORM}/hls-explicit-imports-plugin-${PKGVERSION}/html/doc-index.html
-share/doc/${HS_PLATFORM}/hls-explicit-imports-plugin-${PKGVERSION}/html/haddock-bundle.min.js
-share/doc/${HS_PLATFORM}/hls-explicit-imports-plugin-${PKGVERSION}/html/hls-explicit-imports-plugin.haddock
-share/doc/${HS_PLATFORM}/hls-explicit-imports-plugin-${PKGVERSION}/html/index.html
-share/doc/${HS_PLATFORM}/hls-explicit-imports-plugin-${PKGVERSION}/html/linuwial.css
-share/doc/${HS_PLATFORM}/hls-explicit-imports-plugin-${PKGVERSION}/html/meta.json
-share/doc/${HS_PLATFORM}/hls-explicit-imports-plugin-${PKGVERSION}/html/quick-jump.css
-share/doc/${HS_PLATFORM}/hls-explicit-imports-plugin-${PKGVERSION}/html/synopsis.png
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${PLIST.doc}share/doc/${HS_PLATFORM}/hls-explicit-imports-plugin-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/${HS_PLATFORM}/hls-explicit-imports-plugin-${PKGVERSION}/html/Ide-Plugin-ExplicitImports.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/hls-explicit-imports-plugin-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/hls-explicit-imports-plugin-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/hls-explicit-imports-plugin-${PKGVERSION}/html/hls-explicit-imports-plugin.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/hls-explicit-imports-plugin-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/hls-explicit-imports-plugin-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/hls-explicit-imports-plugin-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/hls-explicit-imports-plugin-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/hls-explicit-imports-plugin-${PKGVERSION}/html/synopsis.png
