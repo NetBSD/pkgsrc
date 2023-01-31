@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.109 2023/01/29 21:17:49 ryoon Exp $
+# $NetBSD: Makefile,v 1.110 2023/01/31 07:59:27 khorben Exp $
 
 OVTVER=		11.3.5
 DISTNAME=	open-vm-tools-${OVTVER}-18557794
 PKGNAME=	open-vm-tools-${OVTVER}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=vmware/}
 GITHUB_RELEASE=	stable-${OVTVER}
@@ -41,6 +41,7 @@ CONF_FILES_PERMS+=	${EGDIR}/poweron-vm-default ${PKG_SYSCONFDIR}/poweron-vm-defa
 CONF_FILES_PERMS+=	${EGDIR}/resume-vm-default ${PKG_SYSCONFDIR}/resume-vm-default ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 755
 CONF_FILES_PERMS+=	${EGDIR}/statechange.subr ${PKG_SYSCONFDIR}/statechange.subr ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 755
 CONF_FILES_PERMS+=	${EGDIR}/suspend-vm-default ${PKG_SYSCONFDIR}/suspend-vm-default ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 755
+CONF_FILES_PERMS+=	${EGDIR}/tools.conf ${PKG_SYSCONFDIR}/tools.conf ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 644
 RCD_SCRIPTS=		vmtools
 
 SUBST_CLASSES+=			fix-etc-path
@@ -54,6 +55,10 @@ CHECK_PORTABILITY_SKIP+=	scripts/solaris/network
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -f -i
+
+post-install:
+	mv ${DESTDIR}${PREFIX}/etc/vmware-tools/tools.conf.example \
+		${DESTDIR}${EGDIR}/tools.conf
 
 .include "options.mk"
 .include "../../archivers/libmspack/buildlink3.mk"
