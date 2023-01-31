@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3897 2023/01/31 10:04:56 pho Exp $
+# $NetBSD: Makefile,v 1.3898 2023/01/31 17:15:12 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -203,6 +203,7 @@ SUBDIR+=	bzr
 SUBDIR+=	bzr-gtk
 SUBDIR+=	bzrtools
 SUBDIR+=	c++gsl
+SUBDIR+=	cabal-fmt
 SUBDIR+=	calltree-perl
 SUBDIR+=	camlp-streams
 SUBDIR+=	capnproto
