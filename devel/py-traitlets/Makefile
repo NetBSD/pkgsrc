@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2023/01/11 10:41:09 adam Exp $
+# $NetBSD: Makefile,v 1.25 2023/01/31 09:21:24 adam Exp $
 
-DISTNAME=	traitlets-5.8.1
+DISTNAME=	traitlets-5.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/traitlets/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/ipython/traitlets
 COMMENT=	Traitlets Python config system
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=0.25:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.5:../../devel/py-hatchling
 
 USE_LANGUAGES=	# none
 
