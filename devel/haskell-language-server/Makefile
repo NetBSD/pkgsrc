@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.7 2022/11/23 16:18:37 adam Exp $
+# $NetBSD: Makefile,v 1.8 2023/02/01 02:15:49 pho Exp $
 
-DISTNAME=	haskell-language-server-1.6.1.1
+DISTNAME=	haskell-language-server-1.9.0.0
 PKGNAME=	${DISTNAME}
-PKGREVISION=	6
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	LSP server for GHC
 LICENSE=	apache-2.0
+
+HASKELL_UNRESTRICT_DEPENDENCIES+=	\
+	hls-call-hierarchy-plugin
 
 # HLS is built with optparse-applicative, and can generate shell completion
 # scripts automatically.
@@ -28,13 +30,42 @@ OPTPARSE_APPLICATIVE_EXECUTABLES+=	haskell-language-server-wrapper
 .include "../../devel/hs-hiedb/buildlink3.mk"
 .include "../../devel/hs-hls-graph/buildlink3.mk"
 .include "../../devel/hs-hls-plugin-api/buildlink3.mk"
-.include "../../sysutils/hs-hslogger/buildlink3.mk"
 .include "../../devel/hs-lsp/buildlink3.mk"
 .include "../../devel/hs-optparse-applicative/buildlink3.mk"
 .include "../../devel/hs-optparse-simple/buildlink3.mk"
+.include "../../textproc/hs-prettyprinter/buildlink3.mk"
 .include "../../devel/hs-safe-exceptions/buildlink3.mk"
 .include "../../databases/hs-sqlite-simple/buildlink3.mk"
 .include "../../devel/hs-unordered-containers/buildlink3.mk"
+.include "../../devel/hs-hls-cabal-plugin/buildlink3.mk"
+.include "../../devel/hs-hls-call-hierarchy-plugin/buildlink3.mk"
+.include "../../devel/hs-hls-cabal-fmt-plugin/buildlink3.mk"
+.include "../../devel/hs-hls-change-type-signature-plugin/buildlink3.mk"
+.include "../../devel/hs-hls-class-plugin/buildlink3.mk"
+#.include "../../devel/hs-hls-haddock-comments-plugin/buildlink3.mk" # Not buildable with GHC >= 9.2.1
+#.include "../../devel/hs-hls-eval-plugin/buildlink3.mk" # Not buildable with GHC >= 9.4.1
+.include "../../devel/hs-hls-explicit-imports-plugin/buildlink3.mk"
+.include "../../devel/hs-hls-refine-imports-plugin/buildlink3.mk"
+#.include "../../devel/hs-hls-rename-plugin/buildlink3.mk" # Not buildable with GHC >= 9.4.1
+.include "../../devel/hs-hls-retrie-plugin/buildlink3.mk"
+#.include "../../devel/hs-hls-tactics-plugin/buildlink3.mk" # Not buildable with GHC >= 9.2.1
+.include "../../devel/hs-hls-hlint-plugin/buildlink3.mk"
+#.include "../../devel/hs-hls-stan-plugin/buildlink3.mk" # Not buildable with GHC >= 9.0
+.include "../../devel/hs-hls-module-name-plugin/buildlink3.mk"
+.include "../../devel/hs-hls-pragmas-plugin/buildlink3.mk"
+.include "../../devel/hs-hls-splice-plugin/buildlink3.mk"
+.include "../../devel/hs-hls-alternate-number-format-plugin/buildlink3.mk"
+.include "../../devel/hs-hls-qualify-imported-names-plugin/buildlink3.mk"
+.include "../../devel/hs-hls-code-range-plugin/buildlink3.mk"
+.include "../../devel/hs-hls-gadt-plugin/buildlink3.mk"
+.include "../../devel/hs-hls-explicit-fixity-plugin/buildlink3.mk"
+.include "../../devel/hs-hls-explicit-record-fields-plugin/buildlink3.mk"
+#.include "../../devel/hs-hls-floskell-plugin/buildlink3.mk" # Not buildable with GHC >= 9.4.1
+.include "../../devel/hs-hls-fourmolu-plugin/buildlink3.mk"
+#.include "../../devel/hs-hls-ormolu-plugin/buildlink3.mk" # Not buidalebl with GHC >= 9.4.1
+#.include "../../devel/hs-hls-stylish-haskell-plugin/buildlink3.mk" # Not buildable with GHC >= 9.4.1
+#.include "../../devel/hs-hls-brittany-plugin/buildlink3.mk" # Not buildable with GHC >= 9.0.2
+.include "../../devel/hs-hls-refactor-plugin/buildlink3.mk"
 
 # exe:haskell-language-server
 .include "../../converters/hs-aeson/buildlink3.mk"
@@ -42,33 +73,13 @@ OPTPARSE_APPLICATIVE_EXECUTABLES+=	haskell-language-server-wrapper
 .include "../../devel/hs-lens/buildlink3.mk"
 .include "../../textproc/hs-regex-tdfa/buildlink3.mk"
 .include "../../sysutils/hs-temporary/buildlink3.mk"
-.include "../../devel/hs-hls-call-hierarchy-plugin/buildlink3.mk"
-#.include "../../devel/hs-hls-class-plugin/buildlink3.mk" # Not buildable with GHC >= 9.2.1
-CONFIGURE_ARGS+=	-f-haddockcomments # Not buildable with GHC >= 9.2.1
-#.include "../../devel/hs-hls-haddock-comments-plugin/buildlink3.mk"
-CONFIGURE_ARGS+=	-f-eval # Not buildable with GHC >= 9.2.1
-#.include "../../devel/hs-hls-eval-plugin/buildlink3.mk"
-.include "../../devel/hs-hls-explicit-imports-plugin/buildlink3.mk"
-.include "../../devel/hs-hls-refine-imports-plugin/buildlink3.mk"
-#.include "../../devel/hs-hls-rename-plugin/buildlink3.mk" # Disabled by default; presumably for a good reason
-#.include "../../devel/hs-hls-retrie-plugin/buildlink3.mk" # Not buildable with GHC >= 9.2.1
-#.include "../../devel/hs-hls-tactics-plugin/buildlink3.mk" # Not buildable with GHC >= 9.0.1
-#.include "../../devel/hs-hls-hlint-plugin/buildlink3.mk" # Not buildable with GHC >= 9.2.1
-.include "../../devel/hs-hls-module-name-plugin/buildlink3.mk"
-.include "../../devel/hs-hls-pragmas-plugin/buildlink3.mk"
-#.include "../../devel/hs-hls-splice-plugin/buildlink3.mk" # Not buildable with GHC >= 9.2.1
-.include "../../devel/hs-hls-alternate-number-format-plugin/buildlink3.mk"
-.include "../../devel/hs-hls-qualify-imported-names-plugin/buildlink3.mk"
-.include "../../devel/hs-hls-selection-range-plugin/buildlink3.mk"
-.include "../../devel/hs-hls-floskell-plugin/buildlink3.mk"
-.include "../../devel/hs-hls-fourmolu-plugin/buildlink3.mk"
-.include "../../devel/hs-hls-oumolu-plugin/buildlink3.mk"
-#.include "../../devel/hs-hls-stylish-haskell-plugin/buildlink3.mk" # Not buildable with GHC >= 9.0.1
-#.include "../../devel/hs-hls-brittany-plugin/buildlink3.mk" # Not buildable with GHC >= 9.0.1
 
 # exe:haskell-language-server-wrapper
 .include "../../devel/hs-ghc-paths/buildlink3.mk"
 .include "../../devel/hs-gitrev/buildlink3.mk"
+.include "../../sysutils/hs-hslogger/buildlink3.mk"
+.include "../../devel/hs-lsp-types/buildlink3.mk"
+.include "../../devel/hs-unliftio-core/buildlink3.mk"
 
 .include "../../mk/haskell.mk"
 .include "../../mk/bsd.pkg.mk"
