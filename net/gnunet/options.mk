@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2023/01/31 18:53:46 nikita Exp $
+# $NetBSD: options.mk,v 1.2 2023/02/01 19:03:03 nikita Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.gnunet
 
@@ -74,7 +74,6 @@ PLIST_SRC+=		PLIST.sqlite3
 CONFIGURE_ARGS+=	--without-sqlite3
 .endif
 
-# \todo: does not build at the moment
 .if ${PKG_OPTIONS:Mmysql}
 .include "../../databases/mysql80-client/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-mysql=${BUILDLINK_PREFIX.mysql-client}
