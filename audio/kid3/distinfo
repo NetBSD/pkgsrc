@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.16 2021/10/26 09:59:03 nia Exp $
+$NetBSD: distinfo,v 1.17 2023/02/01 20:08:53 wiz Exp $
 
-BLAKE2s (kid3-3.5.1.tar.gz) = 1a3db3ad3c7295be8e678b3acfc609fabaef8d3b2bfdc95dd1a3e17696acdfb9
-SHA512 (kid3-3.5.1.tar.gz) = 7f1fbd6d1d576d23f9b57baaaa35101fb2e9ea23dec5b5506e25ec5a94dc8516d25b69b4dddb4a9b4835b2502d0a07087c245380483571a68e5972f98ca8ca58
-Size (kid3-3.5.1.tar.gz) = 1414829 bytes
-SHA1 (patch-CMakeLists.txt) = f3057fe24031a73d28c0031a7d1f0241b05d94f6
+BLAKE2s (kid3-3.9.3.tar.gz) = 9b0d44b78542ac8b5ebd379f87a0762c9fbd0140679d49d3b5b34ab0e4fc5bb0
+SHA512 (kid3-3.9.3.tar.gz) = 03b9c13e8e9924796e9a993e5f92b05d5435893e3fbdeb7b7fc5ae52d3f9f98322ec6e76c7911814a409f6c6253fb5687d5d3ab5b3fa6db46142a3b6b824cd9b
+Size (kid3-3.9.3.tar.gz) = 2996599 bytes
+SHA1 (patch-src_app_qt_fixappdata.py) = 7bd903eb866670b78a894bd5c1f7de5bc1f0141a
