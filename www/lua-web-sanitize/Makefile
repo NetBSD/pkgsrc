@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2022/07/13 08:44:24 nia Exp $
+# $NetBSD: Makefile,v 1.4 2023/02/01 12:36:06 nia Exp $
 
-DISTNAME=	web_sanitize-1.3.0
+DISTNAME=	web_sanitize-1.4.0
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	www lua
 MASTER_SITES=	${MASTER_SITE_GITHUB:=leafo/}
