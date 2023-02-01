@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2022/12/28 20:18:21 nikita Exp $
+$NetBSD: distinfo,v 1.2 2023/02/01 17:34:55 jperkin Exp $
 
 BLAKE2s (nlohmann-json-3.11.2.tar.gz) = c5caa9520466579cdee11e0831375f974b1be581ce764a41fc15979cd779aaba
 SHA512 (nlohmann-json-3.11.2.tar.gz) = 70097c9bcd7a91254acbd41b8b68a6aaa371fc2dd7011f472917f69f1e2d2986155a0339dad791699d542e4a3be44dc49ae72ff73d0ee0ea4b34183296ce19a0
 Size (nlohmann-json-3.11.2.tar.gz) = 8097673 bytes
+SHA1 (patch-tests_thirdparty_doctest_doctest.h) = c0d7e0d754e61c7670db8a392ad53fd46f95ff3c
