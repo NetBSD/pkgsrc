@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.152 2023/01/29 21:17:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.153 2023/02/01 09:25:19 wiz Exp $
 
-VERSION=	3.62.2
+VERSION=	3.63.1
 DISTNAME=	FileZilla_${VERSION}_src
 PKGNAME=	filezilla-${VERSION}
-PKGREVISION=	2
 CATEGORIES=	net x11
 MASTER_SITES=	https://download.filezilla-project.org/client/
 EXTRACT_SUFX=	.tar.bz2
@@ -38,7 +37,6 @@ BUILDLINK_API_DEPENDS.gnutls+=	gnutls>=3.4.0
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 BUILDLINK_API_DEPENDS.tinyxml+=	tinyxml>=2.6.2nb1
 .include "../../textproc/pugixml/buildlink3.mk"
-BUILDLINK_API_DEPENDS.wxGTK30+=	wxGTK30>=3.0.4
-.include "../../x11/wxGTK30/buildlink3.mk"
+.include "../../x11/wxGTK32/buildlink3.mk"
 .include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
