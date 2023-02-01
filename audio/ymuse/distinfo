@@ -1,0 +1,29 @@
+$NetBSD: distinfo,v 1.1 2023/02/01 14:54:22 wiz Exp $
+
+BLAKE2s (github.com_fhs_gompd_v2_@v_v2.2.1-0.20220620205817-bbf835995263.mod) = 46c6b74154042a96d25e0d46eeb3be6833a6e35bc1d4311aab329668827a7609
+SHA512 (github.com_fhs_gompd_v2_@v_v2.2.1-0.20220620205817-bbf835995263.mod) = 2cee2ccfdaa92336ece7ef15ea2655fa109688946c6b4d564f0fe179b6631a9d2a34f6a265469ab5da832683e4adcc5e26586e632486c623047ab1447f6df615
+Size (github.com_fhs_gompd_v2_@v_v2.2.1-0.20220620205817-bbf835995263.mod) = 40 bytes
+BLAKE2s (github.com_fhs_gompd_v2_@v_v2.2.1-0.20220620205817-bbf835995263.zip) = 0245c70904e886e5d2b7b961596b2a7b76d08f76f398f5e36976b3c6c252c01a
+SHA512 (github.com_fhs_gompd_v2_@v_v2.2.1-0.20220620205817-bbf835995263.zip) = e907b3f7f41d5765f61e8289c50dc9626a29db471aae47ff7a8ab5443a8fe946e966c9f49ae38ca11461972786279739c49f45c077a1995c0da8fc5197a4690d
+Size (github.com_fhs_gompd_v2_@v_v2.2.1-0.20220620205817-bbf835995263.zip) = 31815 bytes
+BLAKE2s (github.com_gotk3_gotk3_@v_v0.6.1.mod) = 006df612e12ffdbf36ead948910f4ceac61559c3ca87f5118c87c91e965b41e1
+SHA512 (github.com_gotk3_gotk3_@v_v0.6.1.mod) = 2e251029136f540fd056077d2b41c7ed820ad3614bf50516ad9a60ba54e1808e18ccfdd91a4454428adcf1426fc2ab93636cc8f9e2a55c14ad07648dd31cc35d
+Size (github.com_gotk3_gotk3_@v_v0.6.1.mod) = 39 bytes
+BLAKE2s (github.com_gotk3_gotk3_@v_v0.6.1.zip) = 6d668634001e5cc69c55837afe21ff5460071bb0e9b609e00b349212e70a9a0d
+SHA512 (github.com_gotk3_gotk3_@v_v0.6.1.zip) = 4558b85341608e68dc710140270fc09564d0bf43f43c76c7cfe7a9848658d6dfa33ed8d08032d81efc11b32c563aa35a0a2b54f1efc180c7cb28cec731ec04b2
+Size (github.com_gotk3_gotk3_@v_v0.6.1.zip) = 401975 bytes
+BLAKE2s (github.com_op_go-logging_@v_v0.0.0-20160315200505-970db520ece7.mod) = 8c42aa39b33862cc1e54c4857b37b94655c257ca5a5098deab7036ce4fdcf8c4
+SHA512 (github.com_op_go-logging_@v_v0.0.0-20160315200505-970db520ece7.mod) = 76f6ad85ef60c0972b9193af3395e586b8da352614049125ea6b39ebddaed94fe3b6a5deccb8a4d33890f292795d2c44a3563fc420106bf24589a1d838f35649
+Size (github.com_op_go-logging_@v_v0.0.0-20160315200505-970db520ece7.mod) = 32 bytes
+BLAKE2s (github.com_op_go-logging_@v_v0.0.0-20160315200505-970db520ece7.zip) = 91bf41993070799025c9c0f8d4d60c5de4e5cdcc24a25bb4ebd37c726f3f530c
+SHA512 (github.com_op_go-logging_@v_v0.0.0-20160315200505-970db520ece7.zip) = ddf3a602fcc157fb1f469883b43474e758464aba1fee84d5ec81b222926cfc2544adcb690b041a4152fc7775b10b3a612de06ddf58c936d62b029f07727acc03
+Size (github.com_op_go-logging_@v_v0.0.0-20160315200505-970db520ece7.zip) = 46807 bytes
+BLAKE2s (github.com_pkg_errors_@v_v0.9.1.mod) = ae26654fdfcb36fe7ce35e2a348782cf1a3b5c44a514b60a870dc4972267b34a
+SHA512 (github.com_pkg_errors_@v_v0.9.1.mod) = 0c156e21d35c45a89c1a1b69ff1976b4f7511b3870bf96126121f5a5effa3723eb45bf080e840d5c8b96898c65207dba83eb3e1a23668dd8a5e20ee6be775cc0
+Size (github.com_pkg_errors_@v_v0.9.1.mod) = 29 bytes
+BLAKE2s (github.com_pkg_errors_@v_v0.9.1.zip) = 241f2aab1fe85dc4f55efccb9bc86965ba67cd374acebcdaf0cec02259e6a611
+SHA512 (github.com_pkg_errors_@v_v0.9.1.zip) = 82b0ed1ceadd44a2871b56e733a118003b1bae9e38fe95251e0aa06a0a4c9b4940c485336fa11335974e0df536dcd0491ec1b2e545ecdddc7f9ce59771f86321
+Size (github.com_pkg_errors_@v_v0.9.1.zip) = 17866 bytes
+BLAKE2s (ymuse-0.21.tar.gz) = 762a04b424b9fb5558b0c51ccfc9a743184231558633e0c891b87551b3822062
+SHA512 (ymuse-0.21.tar.gz) = 11227b20c28d3c5118e8d977e936ea822e15ec71981297f825b145969009bf5ab0a754a5806b0bfdb4913392a557a434becda6c359a2f975c055764bf1095c08
+Size (ymuse-0.21.tar.gz) = 176670 bytes
