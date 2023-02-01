@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:51:43 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/02/01 02:06:30 dholland Exp $
 
 BLAKE2s (newsqueak.tar.gz) = 14ebf60ea62a3d6a9263e7bf31c56bb6d1efa483d177f7feebb221bdffc8ad74
 SHA512 (newsqueak.tar.gz) = 7781106ba3d76be4028a9988cafe6cc8f5e2f2a72c7310326b45b15024cad0ef6787cd0ccff52aad4d6eeae9d0a598681b1b6c8efbb0dfc96b0456609e2e408c
 Size (newsqueak.tar.gz) = 265358 bytes
 SHA1 (patch-Makefile) = 1c71432e17f2e146c6b077cf23e8dc13a65356d5
 SHA1 (patch-include_lib9.h) = 0988b189b5b3e6666cdc4f04b31b5410af63aca9
-SHA1 (patch-include_u.h) = ffb1752ebbcb600850e196e630592063827e32c9
+SHA1 (patch-include_u.h) = be0321863afff11550a2d22d8489dc7e62841630
 SHA1 (patch-lib9_Makefile) = 5e48c9cdca6d560cd7c8d9b92e729f7fbb5fa999
 SHA1 (patch-lib9_doprint.c) = c94bee65440c0a697ba426549740a4df3aa3e809
 SHA1 (patch-lib9_nan.c) = 3c7067d47d9a7a1f98f41f466dd346d1593994bb

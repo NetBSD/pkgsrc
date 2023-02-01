@@ -1,4 +1,4 @@
-$NetBSD: patch-include_u.h,v 1.1 2015/04/25 19:58:32 dholland Exp $
+$NetBSD: patch-include_u.h,v 1.2 2023/02/01 02:06:30 dholland Exp $
 
 Add support for modern BSDs.
 
@@ -8,7 +8,7 @@ Add support for modern BSDs.
  typedef long long vlong;
  #endif
  
-+#if defined(__NetBSD__) || defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__DragonFly__)
++#if defined(__NetBSD__) || defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__DragonFly__) || defined(__APPLE__)
 +#define _XOPEN_SOURCE_EXTENDED
 +
 +#include <stdarg.h>
