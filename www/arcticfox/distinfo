@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.5 2022/10/12 16:09:28 nia Exp $
+$NetBSD: distinfo,v 1.6 2023/02/01 14:41:18 nia Exp $
 
-BLAKE2s (arcticfox-40.0.tar.gz) = 629e411726438081aea789721fe2d6a7183098172aab76e5f71fe8055bb3d810
-SHA512 (arcticfox-40.0.tar.gz) = 168105c899d4b793414e617ca31f52168db0b2d58e101db445c5dae9701fb396f573e5daeab2e7edf21f3378b11ae4b91665b0aa1961324163920304b519c427
-Size (arcticfox-40.0.tar.gz) = 190777592 bytes
+BLAKE2s (arcticfox-40.1.tar.gz) = 0be4eec10462f6b6c7a4abae9eef7f51d50d50c0b256d0f8d40fc376a8454b1d
+SHA512 (arcticfox-40.1.tar.gz) = 597831cce69e7e83a71f7ebdd5e212f6363fea10ee3dfad93924be1e24227f2ebfa41963a547c92535d51eb8e4c3dccbe86e10ae7498a71eb85cfcdd15187df8
+Size (arcticfox-40.1.tar.gz) = 191464592 bytes
 SHA1 (patch-configure.in) = af20757a482247b8e961761674783884cdcec849
 SHA1 (patch-ipc_chromium_src_base_message__pump__libevent.cc) = 38cf700d07d468526e16cfe63d434c4752da8cc5
 SHA1 (patch-media_libcubeb_src_cubeb.c) = b3c4bd8146e2f7146baf1c2050260f7629cdb09a
