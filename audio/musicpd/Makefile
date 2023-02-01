@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.286 2023/01/29 21:15:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.287 2023/02/01 15:03:00 wiz Exp $
 
 DISTNAME=	mpd-0.23.12
 PKGNAME=	${DISTNAME:S/mpd/musicpd/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	https://www.musicpd.org/download/mpd/${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.xz
@@ -68,6 +68,13 @@ SUBST_MESSAGE.oss=	Correcting the path to the OSS device.
 SUBST_FILES.oss+=	src/output/plugins/OssOutputPlugin.cxx
 SUBST_SED.oss+=		-e "s,/dev/sound/dsp,${DEVOSSAUDIO},g"
 .endif
+
+SUBST_CLASSES+=		timidity
+SUBST_STAGE.timidity=	pre-configure
+SUBST_MESSAGE.timidity=	Correcting the path to the timidity config file.
+SUBST_FILES.timidity+=	doc/plugins.rst
+SUBST_FILES.timidity+=	src/decoder/plugins/WildmidiDecoderPlugin.cxx
+SUBST_SED.timidity+=	-e "s,/etc/timidity,${PKG_SYSCONFDIR},g"
 
 EGDIR=		${PREFIX}/share/examples/mpd
 CONF_FILES+=	${EGDIR}/mpd.conf ${PKG_SYSCONFDIR}/mpd.conf
