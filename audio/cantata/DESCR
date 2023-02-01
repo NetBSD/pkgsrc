@@ -19,3 +19,5 @@ A graphical (Qt5) client for MPD, supporting the following features:
  * MPRISv2 DBUS interface.
  * Scrobbling.
  * Ratings support.
+
+Development of this program has stopped.
