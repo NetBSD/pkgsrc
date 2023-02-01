@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.941 2023/02/01 12:30:55 nia Exp $
+$NetBSD: CHANGES-2023,v 1.942 2023/02/01 12:32:44 nia Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1180,3 +1180,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-sphinxcontrib-htmlhelp to 2.0.1 [adam 2023-02-01]
 	Updated graphics/imv to 4.4.0 [nia 2023-02-01]
 	Updated graphics/scrot to 1.8.1 [nia 2023-02-01]
+	Updated textproc/lua-utf8 to 0.1.5 [nia 2023-02-01]
