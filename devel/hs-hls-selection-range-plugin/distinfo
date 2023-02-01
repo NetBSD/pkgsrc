@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1 2022/02/16 10:18:09 pho Exp $
-
-BLAKE2s (hls-selection-range-plugin-1.0.0.0.tar.gz) = 5117d158543e699be9fd20d0784a134b21a8b7589a4135fcb72f1b35629e8086
-SHA512 (hls-selection-range-plugin-1.0.0.0.tar.gz) = 54afd6d91ee7e08cba29ee712c7677fec33881081e2c57bce0eb6085141c24806118d15c887bb718c494a68faf1113ae892db15df1b65c271fb54e0632622afc
-Size (hls-selection-range-plugin-1.0.0.0.tar.gz) = 10290 bytes
