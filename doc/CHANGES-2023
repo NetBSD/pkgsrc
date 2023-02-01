@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.948 2023/02/01 14:54:44 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.949 2023/02/01 15:29:47 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1188,3 +1188,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/nasm to 2.16.01 [adam 2023-02-01]
 	Updated www/arcticfox to 40.1 [nia 2023-02-01]
 	Added audio/ymuse version 0.21 [wiz 2023-02-01]
+	Updated geography/qgis to 3.28.3 [gdt 2023-02-01]
