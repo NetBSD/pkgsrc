@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.940 2023/02/01 12:29:52 nia Exp $
+$NetBSD: CHANGES-2023,v 1.941 2023/02/01 12:30:55 nia Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1179,3 +1179,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/py-cryptodome to 3.17 [adam 2023-02-01]
 	Updated textproc/py-sphinxcontrib-htmlhelp to 2.0.1 [adam 2023-02-01]
 	Updated graphics/imv to 4.4.0 [nia 2023-02-01]
+	Updated graphics/scrot to 1.8.1 [nia 2023-02-01]
