@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.928 2023/02/01 07:23:40 fcambus Exp $
+$NetBSD: CHANGES-2023,v 1.929 2023/02/01 07:26:13 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1164,3 +1164,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed devel/hs-Cabal-syntax [pho 2023-02-01]
 	Updated devel/apr to 1.7.1nb1 [ryoon 2023-02-01]
 	Updated net/dbip-asn-lite to 2023.02 [fcambus 2023-02-01]
+	Updated net/dbip-city-lite to 2023.02 [fcambus 2023-02-01]
