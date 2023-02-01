@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2022/10/30 12:53:55 adam Exp $
+@comment $NetBSD: PLIST,v 1.26 2023/02/01 16:38:13 jperkin Exp $
 bin/innochecksum
 bin/lz4_decompress
 bin/my_print_defaults
@@ -27,6 +27,7 @@ bin/zlib_decompress
 include/mysql/mysqlx_ername.h
 include/mysql/mysqlx_error.h
 include/mysql/mysqlx_version.h
+info/mysql.info
 ${PLIST.embedded}lib/libmysqld.a
 lib/libmysqlservices.a
 lib/mysql/plugin/adt_null.so
@@ -2298,6 +2299,7 @@ share/mysql/test/suite/audit_null/r/general_error_abort.result
 share/mysql/test/suite/audit_null/r/general_error_abort_ps.result
 share/mysql/test/suite/audit_null/r/general_log_abort.result
 share/mysql/test/suite/audit_null/r/general_log_abort_ps.result
+share/mysql/test/suite/audit_null/r/multiqueries.result
 share/mysql/test/suite/audit_null/t/audit_plugin-master.opt
 share/mysql/test/suite/audit_null/t/audit_plugin.test
 share/mysql/test/suite/audit_null/t/audit_plugin_2-master.opt
@@ -2312,6 +2314,8 @@ share/mysql/test/suite/audit_null/t/general_log_abort-master.opt
 share/mysql/test/suite/audit_null/t/general_log_abort.test
 share/mysql/test/suite/audit_null/t/general_log_abort_ps-master.opt
 share/mysql/test/suite/audit_null/t/general_log_abort_ps.test
+share/mysql/test/suite/audit_null/t/multiqueries-master.opt
+share/mysql/test/suite/audit_null/t/multiqueries.test
 share/mysql/test/suite/auth_sec/include/have_openssl.inc
 share/mysql/test/suite/auth_sec/include/have_sha256_rsa_auth.inc
 share/mysql/test/suite/auth_sec/include/have_ssl.inc
@@ -9664,6 +9668,7 @@ share/mysql/test/suite/rpl/include/rpl_row_event_max_size_show_binlog.inc
 share/mysql/test/suite/rpl/my.cnf
 share/mysql/test/suite/rpl/r/default_row_format_01.result
 share/mysql/test/suite/rpl/r/default_row_format_02.result
+share/mysql/test/suite/rpl/r/mysqldump_bug33630199.result
 share/mysql/test/suite/rpl/r/rpl000001.a.result
 share/mysql/test/suite/rpl/r/rpl000001.b.result
 share/mysql/test/suite/rpl/r/rpl_0.result
@@ -10276,6 +10281,7 @@ share/mysql/test/suite/rpl/r/rpl_stm_until_pos_middle_gtid.result
 share/mysql/test/suite/rpl/r/rpl_stm_user_variables.result
 share/mysql/test/suite/rpl/r/rpl_stop_slave.result
 share/mysql/test/suite/rpl/r/rpl_stop_slave_threads_error.result
+share/mysql/test/suite/rpl/r/rpl_stop_slave_with_non_transactional_update.result
 share/mysql/test/suite/rpl/r/rpl_switch_stm_row_mixed.result
 share/mysql/test/suite/rpl/r/rpl_sync.result
 share/mysql/test/suite/rpl/r/rpl_sync_relay_log_info.result
@@ -10341,6 +10347,9 @@ share/mysql/test/suite/rpl/t/default_row_format_01.test
 share/mysql/test/suite/rpl/t/default_row_format_02-slave.opt
 share/mysql/test/suite/rpl/t/default_row_format_02.test
 share/mysql/test/suite/rpl/t/disabled.def
+share/mysql/test/suite/rpl/t/mysqldump_bug33630199.cnf
+share/mysql/test/suite/rpl/t/mysqldump_bug33630199.opt
+share/mysql/test/suite/rpl/t/mysqldump_bug33630199.test
 share/mysql/test/suite/rpl/t/rpl_0.test
 share/mysql/test/suite/rpl/t/rpl_000010-slave.opt
 share/mysql/test/suite/rpl/t/rpl_000010.test
@@ -11297,6 +11306,7 @@ share/mysql/test/suite/rpl/t/rpl_stm_user_variables.test
 share/mysql/test/suite/rpl/t/rpl_stop_slave.test
 share/mysql/test/suite/rpl/t/rpl_stop_slave_threads_error-slave.opt
 share/mysql/test/suite/rpl/t/rpl_stop_slave_threads_error.test
+share/mysql/test/suite/rpl/t/rpl_stop_slave_with_non_transactional_update.test
 share/mysql/test/suite/rpl/t/rpl_switch_stm_row_mixed-master.opt
 share/mysql/test/suite/rpl/t/rpl_switch_stm_row_mixed.test
 share/mysql/test/suite/rpl/t/rpl_sync-master.opt
