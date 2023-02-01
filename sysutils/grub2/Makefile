@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2023/01/29 21:17:47 ryoon Exp $
+# $NetBSD: Makefile,v 1.29 2023/02/01 04:22:08 khorben Exp $
 
 DISTNAME=		grub-2.04
 PKGNAME=		${DISTNAME:S/grub/grub2/}
@@ -39,6 +39,7 @@ USE_PKGLOCALEDIR=	yes
 .include "../../mk/bsd.prefs.mk"
 
 CFLAGS+=		-Wno-unused-value
+MAKE_FLAGS+=		BUILD_LDFLAGS=${COMPILER_RPATH_FLAG}${X11BASE}/lib
 
 #
 # Build requirements, taken from the INSTALL file in GRUB's distribution:
