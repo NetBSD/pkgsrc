@@ -1,10 +1,10 @@
-$NetBSD: patch-Cargo.toml,v 1.7 2022/12/19 09:34:15 pin Exp $
+$NetBSD: patch-Cargo.toml,v 1.8 2023/02/01 20:39:42 pin Exp $
 
 Don't pull from git, patch vendor crate instead.
 
---- Cargo.toml.orig	2022-12-18 20:56:27.000000000 +0000
+--- Cargo.toml.orig	2023-01-31 20:04:04.000000000 +0000
 +++ Cargo.toml
-@@ -24,7 +24,7 @@ log = "0.4.16"
+@@ -27,7 +27,7 @@ log = "0.4.16"
  simplelog = "0.12.0"
  content_inspector = "0.2.4"
  crossterm = "0.25.0"
