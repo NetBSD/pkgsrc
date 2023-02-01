@@ -1,19 +1,20 @@
-$NetBSD: patch-simd_arm__aarch32_jsimd.c,v 1.2 2022/08/14 20:57:40 adam Exp $
+$NetBSD: patch-simd_arm__aarch32_jsimd.c,v 1.3 2023/02/01 12:39:30 adam Exp $
 
---- simd/arm/aarch32/jsimd.c.orig	2022-08-08 21:03:55.000000000 +0000
+NetBSD support.
+
+--- simd/arm/aarch32/jsimd.c.orig	2023-01-28 00:24:41.000000000 +0000
 +++ simd/arm/aarch32/jsimd.c
-@@ -27,6 +27,10 @@
+@@ -26,6 +26,9 @@
+ #include "../../jsimd.h"
  
  #include <ctype.h>
- 
 +#if defined(__NetBSD__)
 +#include <sys/sysctl.h>
 +#endif
-+
- static unsigned int simd_support = ~0;
- static unsigned int simd_huffman = 1;
  
-@@ -107,6 +111,9 @@ init_simd(void)
+ static THREAD_LOCAL unsigned int simd_support = ~0;
+ static THREAD_LOCAL unsigned int simd_huffman = 1;
+@@ -105,6 +108,9 @@ init_simd(void)
  #endif
  #if !defined(__ARM_NEON__) && (defined(__linux__) || defined(ANDROID) || defined(__ANDROID__))
    int bufsize = 1024; /* an initial guess for the line buffer size limit */
@@ -23,7 +24,7 @@ $NetBSD: patch-simd_arm__aarch32_jsimd.c,v 1.2 2022/08/14 20:57:40 adam Exp $
  #endif
  
    if (simd_support != ~0U)
-@@ -125,6 +132,10 @@ init_simd(void)
+@@ -123,6 +129,10 @@ init_simd(void)
      if (bufsize > SOMEWHAT_SANE_PROC_CPUINFO_SIZE_LIMIT)
        break;
    }
