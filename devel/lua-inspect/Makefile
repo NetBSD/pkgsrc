@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2021/12/10 13:11:40 nia Exp $
+# $NetBSD: Makefile,v 1.3 2023/02/01 12:34:02 nia Exp $
 
-DISTNAME=	lua-inspect-3.1.2
+DISTNAME=	lua-inspect-3.1.3
 PKGNAME=	${DISTNAME:S/lua/${LUA_PKGPREFIX}/}
 CATEGORIES=	devel lua
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kikito/}
