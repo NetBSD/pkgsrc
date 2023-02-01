@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.40 2022/11/27 08:58:35 adam Exp $
+$NetBSD: distinfo,v 1.41 2023/02/01 12:16:49 adam Exp $
 
-BLAKE2s (pycryptodome-3.16.0.tar.gz) = 2da745462b07a21cfb63c2f8f273f060c2c41adb3d6201ed1f9d13d4723d6fd8
-SHA512 (pycryptodome-3.16.0.tar.gz) = 109794d18197e26f9cf3719324018ca48d6c0f504fe7421d3d467bfee66ec8dce3b95f9131e4e7ee13d83ca7dac4016aaffeed38922c8bdd72f16335b2543ab7
-Size (pycryptodome-3.16.0.tar.gz) = 4548083 bytes
+BLAKE2s (pycryptodome-3.17.tar.gz) = 3ebef7012147ab44aeb3ac8d3f56581138d45904f2a688b995916156d855158f
+SHA512 (pycryptodome-3.17.tar.gz) = 1e1ea76dd263e1776f990d7ae0126e1eb921f6643487ea199b456077b801e9c84af397b7bb63b003d56189f09718c2cb13b1e74111797bd4a22e67ddacd20b3e
+Size (pycryptodome-3.17.tar.gz) = 4633800 bytes
