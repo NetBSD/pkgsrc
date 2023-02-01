@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.933 2023/02/01 08:39:43 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.934 2023/02/01 08:56:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1170,3 +1170,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/ugrep to 3.9.7 [adam 2023-02-01]
 	Updated devel/gtexinfo to 7.0.2 [wiz 2023-02-01]
 	Updated graphics/ImageMagick to 7.1.0.60 [wiz 2023-02-01]
+	Updated filesystems/kubo to 0.18.1 [wiz 2023-02-01]
