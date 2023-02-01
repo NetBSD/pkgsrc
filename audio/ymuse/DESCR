@@ -1,0 +1,5 @@
+Ymuse is an easy, functional, and snappy GTK front-end (client)
+for Music Player Daemon written in Go. It supports both light and
+dark desktop theme.
+
+It supports library browsing and search, playlists, streams etc.
