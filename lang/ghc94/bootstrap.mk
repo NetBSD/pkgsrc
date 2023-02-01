@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.3 2023/01/24 06:20:10 pho Exp $
+# $NetBSD: bootstrap.mk,v 1.4 2023/02/01 08:47:50 pho Exp $
 # -----------------------------------------------------------------------------
 # Select a bindist of bootstrapping compiler on a per-platform basis. See
 # ./files/BOOTSTRAP.md for details.
@@ -143,7 +143,8 @@ pre-build:
 
 	@${PHASE_MSG} "Building Hadrian for GHC ${BOOT_VERSION}"
 	${RUN}cd ${WRKSRC}/hadrian/bootstrap && \
-		python bootstrap.py -s ${DISTDIR}/${DIST_SUBDIR}/${HADRIAN_BOOT_SOURCE}
+		${PKGSRC_SET_ENV} ${ALL_ENV} \
+			python bootstrap.py -s ${DISTDIR}/${DIST_SUBDIR}/${HADRIAN_BOOT_SOURCE}
 
 # This defines how to run the Hadrian command. Also used in do-build and
 # such.
