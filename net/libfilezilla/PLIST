@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.17 2023/01/03 12:51:11 wiz Exp $
+@comment $NetBSD: PLIST,v 1.18 2023/02/01 08:59:59 wiz Exp $
 include/libfilezilla/aio/aio.hpp
 include/libfilezilla/aio/reader.hpp
 include/libfilezilla/aio/writer.hpp
+include/libfilezilla/aio/xml_writer.hpp
 include/libfilezilla/apply.hpp
 include/libfilezilla/ascii_layer.hpp
 include/libfilezilla/buffer.hpp
@@ -51,6 +52,7 @@ include/libfilezilla/uri.hpp
 include/libfilezilla/util.hpp
 include/libfilezilla/version.hpp
 include/libfilezilla/visibility_helper.hpp
+include/libfilezilla/xml.hpp
 lib/libfilezilla.la
 lib/pkgconfig/libfilezilla.pc
 share/locale/an/LC_MESSAGES/libfilezilla.mo
