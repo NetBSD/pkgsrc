@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.951 2023/02/01 18:19:53 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.952 2023/02/01 20:09:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1192,3 +1192,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated databases/mysql57-client to 5.7.41 [jperkin 2023-02-01]
 	Updated databases/mysql57-server to 5.7.41 [jperkin 2023-02-01]
 	Updated audio/ymuse to 0.21nb1 [wiz 2023-02-01]
+	Updated audio/kid3 to 3.9.3 [wiz 2023-02-01]
