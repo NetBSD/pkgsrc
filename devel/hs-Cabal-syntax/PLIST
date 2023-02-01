@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2022/02/11 13:13:24 pho Exp $
-lib/Cabal-syntax-${PKGVERSION}/${HS_VERSION}/package-description
-lib/Cabal-syntax-${PKGVERSION}/${HS_VERSION}/package-id
-share/doc/${HS_PLATFORM}/Cabal-syntax-${PKGVERSION}/LICENSE
