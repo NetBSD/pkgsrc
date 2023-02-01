@@ -1,7 +1,9 @@
-$NetBSD: patch-src_quick3dparticles_qquick3dparticleemitter.cpp,v 1.1 2023/02/01 19:36:37 wiz Exp $
+$NetBSD: patch-src_quick3dparticles_qquick3dparticleemitter.cpp,v 1.2 2023/02/01 22:01:44 wiz Exp $
 
 Fix
 qquick3dparticleemitter.cpp:723:84: error: no matching function for call to 'min(float, __gnu_cxx::__enable_if<true, double>::__type)'
+
+https://bugreports.qt.io/browse/QTBUG-110870
 
 --- src/quick3dparticles/qquick3dparticleemitter.cpp.orig	2022-11-08 19:27:13.000000000 +0000
 +++ src/quick3dparticles/qquick3dparticleemitter.cpp
