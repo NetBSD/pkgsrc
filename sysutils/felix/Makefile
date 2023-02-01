@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.42 2023/01/21 11:18:01 pin Exp $
+# $NetBSD: Makefile,v 1.43 2023/02/01 20:39:41 pin Exp $
 
-DISTNAME=	felix-2.2.3
+DISTNAME=	felix-2.2.4
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kyoheiu/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pin@NetBSD.org
-HOMEPAGE=	https://github.com/kyoheiu/felix/
+HOMEPAGE=	https://kyoheiu.dev/felix/
 COMMENT=	TUI file manager with vim-like key mapping
 LICENSE=	mit
 
