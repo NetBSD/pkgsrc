@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2022/02/26 03:57:57 pho Exp $
+# $NetBSD: Makefile,v 1.14 2023/02/01 04:14:34 pho Exp $
 
 DISTNAME=	hint-0.9.0.5
 PKGREVISION=	2
@@ -7,6 +7,8 @@ CATEGORIES=	devel
 MAINTAINER=	pho@cielonegro.org
 COMMENT=	Runtime Haskell interpreter (GHC API wrapper)
 LICENSE=	modified-bsd
+
+BROKEN+=	"It is incompatible with GHC 9.4. Work is underway: https://github.com/haskell-beam/beam/issues/649"
 
 .include "../../mk/haskell.mk"
 .include "../../devel/hs-ghc-paths/buildlink3.mk"
