@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2022/06/11 13:33:22 nia Exp $
+$NetBSD: distinfo,v 1.15 2023/02/01 12:30:44 nia Exp $
 
-BLAKE2s (scrot-1.7.tar.gz) = f4d7d487ca9cde1099dc40b60f4af3ed05be6bd86eff802a42000d750b8a5e1b
-SHA512 (scrot-1.7.tar.gz) = 3ef2b547d561a85213ef0075af3034020f00168253d3b84ef94578f0b8534f9a7389c808f8fcd0c619358a14f41601fee407d08d63c397b9892ba9fc2db23f88
-Size (scrot-1.7.tar.gz) = 178463 bytes
+BLAKE2s (scrot-1.8.1.tar.gz) = 7a772deba234ffd44d9312b7efdb121e1f5e34707705ad9f75661dbe84fd7fd4
+SHA512 (scrot-1.8.1.tar.gz) = a93b3ce0fc690687b50d9b06d93b30528c26f3ee0b63d16895280d0df092fea022105a6d1aa60cf58c125a5b63eda841e089123d589354901b3ed6e063b76d86
+Size (scrot-1.8.1.tar.gz) = 178856 bytes
