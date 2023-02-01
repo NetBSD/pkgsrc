@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2023/01/29 21:16:19 ryoon Exp $
+# $NetBSD: Makefile,v 1.56 2023/02/01 11:40:23 nia Exp $
 
 DISTNAME=	openmw-openmw-0.47.0
 PKGNAME=	${DISTNAME:S/^openmw-//1}
@@ -7,6 +7,8 @@ CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITLAB:=OpenMW/}
 GITLAB_PROJECT=	openmw
 GITLAB_RELEASE=	${PKGNAME_NOREV}
+
+GITHUB_SUBMODULES+=	bulletphysics bullet3 3.17 extern/fetched/bullet
 
 MAINTAINER=	nia@NetBSD.org
 HOMEPAGE=	https://openmw.org/
