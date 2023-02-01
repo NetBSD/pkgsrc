@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:15:37 nia Exp $
+$NetBSD: distinfo,v 1.4 2023/02/01 12:37:53 nia Exp $
 
-BLAKE2s (lua-say-1.3.tar.gz) = 288446624e9096af794ac9e3ccf44cb4d3dc8dbff2bca1cedd091fb01d23de71
-SHA512 (lua-say-1.3.tar.gz) = 8d4a360bf0731c2a70c23edb9e6e81cab1e7d9b861aa35103a5c6e521633410860d76c46dc2ea62a06ac8ab3b522bc71c11143d6fe7e26e7fa24dd3f5ea1e5f6
-Size (lua-say-1.3.tar.gz) = 3667 bytes
+BLAKE2s (lua-say-1.4.1.tar.gz) = b24595ea8821dda8417e33e3866302076ad34600b2f52bc4c3ad076024446e1b
+SHA512 (lua-say-1.4.1.tar.gz) = a6c3477859615d7ae0677ac7aa0cefe8bf6f43424812062b4a06145017952b176801431c5be920cb67f52c07cc3d374e8a6714233e2252a2bb6b7ed4c3e32f90
+Size (lua-say-1.4.1.tar.gz) = 6091 bytes
