@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.946 2023/02/01 12:41:00 adam Exp $
+$NetBSD: CHANGES-2023,v 1.947 2023/02/01 14:41:30 nia Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1186,3 +1186,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/lua-say to 1.4.1 [nia 2023-02-01]
 	Updated graphics/libjpeg-turbo to 2.1.5 [adam 2023-02-01]
 	Updated devel/nasm to 2.16.01 [adam 2023-02-01]
+	Updated www/arcticfox to 40.1 [nia 2023-02-01]
