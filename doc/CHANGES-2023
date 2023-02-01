@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.919 2023/02/01 02:04:57 pho Exp $
+$NetBSD: CHANGES-2023,v 1.920 2023/02/01 02:10:06 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1155,3 +1155,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/hs-hls-code-range-plugin version 1.1.0.0 [pho 2023-02-01]
 	Added devel/hs-hls-gadt-plugin version 1.0.1.0 [pho 2023-02-01]
 	Added devel/hs-hls-explicit-fixity-plugin version 1.1.0.0 [pho 2023-02-01]
+	Added devel/hs-hls-explicit-record-fields-plugin version 1.0.0.0 [pho 2023-02-01]
