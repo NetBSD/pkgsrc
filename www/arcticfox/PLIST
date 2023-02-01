@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2022/10/12 16:09:28 nia Exp $
+@comment $NetBSD: PLIST,v 1.7 2023/02/01 14:41:18 nia Exp $
 bin/arcticfox
 lib/${PKGNAME}/application.ini
 lib/${PKGNAME}/arcticfox
@@ -10,6 +10,7 @@ lib/${PKGNAME}/browser/chrome/icons/default/default32.png
 lib/${PKGNAME}/browser/chrome/icons/default/default48.png
 lib/${PKGNAME}/browser/components/components.manifest
 lib/${PKGNAME}/browser/components/libbrowsercomps.so
+lib/${PKGNAME}/browser/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}/chrome.manifest
 lib/${PKGNAME}/browser/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}/icon.png
 lib/${PKGNAME}/browser/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}/install.rdf
 lib/${PKGNAME}/browser/icons/mozicon128.png
