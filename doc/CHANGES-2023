@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.926 2023/02/01 02:40:44 pho Exp $
+$NetBSD: CHANGES-2023,v 1.927 2023/02/01 03:30:15 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1162,3 +1162,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed devel/hs-hls-selection-range-plugin [pho 2023-02-01]
 	Removed devel/hs-hls-oumolu-plugin [pho 2023-02-01]
 	Removed devel/hs-Cabal-syntax [pho 2023-02-01]
+	Updated devel/apr to 1.7.1nb1 [ryoon 2023-02-01]
