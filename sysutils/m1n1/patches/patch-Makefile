@@ -1,0 +1,14 @@
+$NetBSD: patch-Makefile,v 1.1 2023/02/01 03:51:40 khorben Exp $
+
+Fix the build when fonts are copied before building code
+
+--- Makefile.orig	2021-08-28 16:36:27.000000000 +0000
++++ Makefile
+@@ -133,6 +133,7 @@ build/%.o: build/%.bin
+ 
+ build/%.bin: font/%.bin
+ 	@echo "  CP    $@"
++	@mkdir -p "$(dir $@)"
+ 	@cp $< $@
+ 
+ build/main.o: build/build_tag.h src/main.c
