@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.953 2023/02/01 20:38:04 pin Exp $
+$NetBSD: CHANGES-2023,v 1.954 2023/02/01 20:40:04 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1194,3 +1194,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated audio/ymuse to 0.21nb1 [wiz 2023-02-01]
 	Updated audio/kid3 to 3.9.3 [wiz 2023-02-01]
 	Updated shells/nushell to 0.75.0 [pin 2023-02-01]
+	Updated sysutils/felix to 2.2.4 [pin 2023-02-01]
