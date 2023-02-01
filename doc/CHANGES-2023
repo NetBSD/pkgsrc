@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.923 2023/02/01 02:21:42 pho Exp $
+$NetBSD: CHANGES-2023,v 1.924 2023/02/01 02:25:08 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1159,3 +1159,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/haskell-language-server to 1.9.0.0 [pho 2023-02-01]
 	Removed sysutils/hs-system-filepath [pho 2023-02-01]
 	Removed sysutils/hs-system-fileio [pho 2023-02-01]
+	Removed devel/hs-hls-selection-range-plugin [pho 2023-02-01]
