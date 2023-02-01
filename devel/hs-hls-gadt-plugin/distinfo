@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/02/01 02:00:15 pho Exp $
+
+BLAKE2s (hls-gadt-plugin-1.0.1.0.tar.gz) = b216cf15707693ec01ac05d827d50a21ebc1fe58fbc4f42b14caf4f109ddfcba
+SHA512 (hls-gadt-plugin-1.0.1.0.tar.gz) = 2822fccd32b78f3bb15c24b2c515b59300ee78a32906d2aa5bde141dc4a68919ac2192f8b3f4b57069d5f1552b7ed8286ca4233d074705c7eb7fc5a55726f1f3
+Size (hls-gadt-plugin-1.0.1.0.tar.gz) = 12145 bytes
