@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1 2022/02/24 01:21:11 pho Exp $
-
-BLAKE2s (system-filepath-0.4.14.tar.gz) = c1de6bcd597a9fe361065815be9561fe1c78c7e2eae373b417d8b1e49564b03f
-SHA512 (system-filepath-0.4.14.tar.gz) = d858b077516ecb76e27d032fd123aadbbbb154afea87fab93f148aa8a0007587c1fb04d87217cf0b51a80e9a81ab20357dcc5e345899e1c2b6513900da1e6768
-Size (system-filepath-0.4.14.tar.gz) = 16663 bytes
