@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.locale,v 1.13 2022/11/24 12:16:03 wiz Exp $
+@comment $NetBSD: PLIST.locale,v 1.14 2023/02/01 08:30:31 wiz Exp $
 share/locale/ca.us-ascii/LC_MESSAGES/texinfo_document.mo
 share/locale/ca/LC_MESSAGES/texinfo.mo
 share/locale/ca/LC_MESSAGES/texinfo_document.mo
@@ -42,6 +42,8 @@ share/locale/ro/LC_MESSAGES/texinfo.mo
 share/locale/ro/LC_MESSAGES/texinfo_document.mo
 share/locale/ru/LC_MESSAGES/texinfo.mo
 share/locale/rw/LC_MESSAGES/texinfo.mo
+share/locale/sk/LC_MESSAGES/texinfo.mo
+share/locale/sk/LC_MESSAGES/texinfo_document.mo
 share/locale/sl/LC_MESSAGES/texinfo.mo
 share/locale/sr/LC_MESSAGES/texinfo.mo
 share/locale/sr/LC_MESSAGES/texinfo_document.mo
