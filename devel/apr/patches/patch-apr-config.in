@@ -1,0 +1,16 @@
+$NetBSD: patch-apr-config.in,v 1.1 2023/02/01 03:29:47 ryoon Exp $
+
+* Do not detect pkgsrc buildlink3 environment as crosscompile.
+  Fix consumer's builds.
+
+--- apr-config.in.orig	2020-01-01 10:43:39.000000000 +0000
++++ apr-config.in
+@@ -51,7 +51,7 @@ location=@APR_CONFIG_LOCATION@
+ # absolute path, but not installed path - we're cross compiling
+ case "$0" in
+   "${bindir}/"*) ;;
+-  "/"*)         location=crosscompile;
++  "/"*)         #location=crosscompile;
+                 APR_TARGET_DIR=${0%${bindir}/apr-${APR_MAJOR_VERSION}-config} ;;
+   *)            ;;
+ esac
