@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.930 2023/02/01 07:26:45 fcambus Exp $
+$NetBSD: CHANGES-2023,v 1.931 2023/02/01 08:17:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1166,3 +1166,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/dbip-asn-lite to 2023.02 [fcambus 2023-02-01]
 	Updated net/dbip-city-lite to 2023.02 [fcambus 2023-02-01]
 	Updated net/dbip-country-lite to 2023.02 [fcambus 2023-02-01]
+	Updated net/rabbitmq to 3.11.8 [adam 2023-02-01]
+	Updated textproc/ugrep to 3.9.7 [adam 2023-02-01]
