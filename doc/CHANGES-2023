@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.937 2023/02/01 09:25:34 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.938 2023/02/01 09:35:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1175,3 +1175,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-beautifulsoup4 to 4.11.2 [adam 2023-02-01]
 	Updated devel/py-cachelib to 0.10.2 [adam 2023-02-01]
 	Updated net/filezilla to 3.63.1 [wiz 2023-02-01]
+	Updated audio/cantata to 2.5.0 [wiz 2023-02-01]
