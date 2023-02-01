@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.938 2023/02/01 09:35:32 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.939 2023/02/01 12:20:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1176,3 +1176,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-cachelib to 0.10.2 [adam 2023-02-01]
 	Updated net/filezilla to 3.63.1 [wiz 2023-02-01]
 	Updated audio/cantata to 2.5.0 [wiz 2023-02-01]
+	Updated security/py-cryptodome to 3.17 [adam 2023-02-01]
+	Updated textproc/py-sphinxcontrib-htmlhelp to 2.0.1 [adam 2023-02-01]
