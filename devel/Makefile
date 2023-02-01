@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3906 2023/01/31 19:16:36 pho Exp $
+# $NetBSD: Makefile,v 1.3907 2023/02/01 01:56:17 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -603,6 +603,7 @@ SUBDIR+=	hs-hls-cabal-plugin
 SUBDIR+=	hs-hls-call-hierarchy-plugin
 SUBDIR+=	hs-hls-change-type-signature-plugin
 SUBDIR+=	hs-hls-class-plugin
+SUBDIR+=	hs-hls-code-range-plugin
 SUBDIR+=	hs-hls-explicit-imports-plugin
 SUBDIR+=	hs-hls-floskell-plugin
 SUBDIR+=	hs-hls-fourmolu-plugin
