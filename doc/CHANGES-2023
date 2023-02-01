@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.916 2023/01/31 19:59:50 nikita Exp $
+$NetBSD: CHANGES-2023,v 1.917 2023/02/01 01:56:09 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1152,3 +1152,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/hs-hls-refactor-plugin version 1.1.0.0 [pho 2023-01-31]
 	Added devel/hs-hls-splice-plugin version 1.0.3.0 [pho 2023-01-31]
 	Added filesystems/gnunet-fuse version 0.19.1 [nikita 2023-01-31]
+	Added devel/hs-hls-code-range-plugin version 1.1.0.0 [pho 2023-02-01]
