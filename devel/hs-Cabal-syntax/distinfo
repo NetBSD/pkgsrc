@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1 2022/02/11 13:13:24 pho Exp $
-
-BLAKE2s (Cabal-syntax-3.6.0.0.tar.gz) = 6544c9f97ef687bde8b088a09c39e0a87c0ae58128d70bb6b50d8533c5a93da0
-SHA512 (Cabal-syntax-3.6.0.0.tar.gz) = 6a783529be318fbc025a2ec198e663237e83b598a3f42eb3fbb7696f3b5e92fdd691f6b5af58d06ee2af5f79087ab12e78c8a3c9ea9bbcfaf6e135eceae69d77
-Size (Cabal-syntax-3.6.0.0.tar.gz) = 1751 bytes
