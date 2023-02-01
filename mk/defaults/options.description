@@ -738,10 +738,10 @@ qemu-0			Use qemu-0.x.
 qmail-customerror	Patch to return custom messages from queue filters.
 qmail-srs		Patch to implement Sender Rewriting Scheme with libsrs2.
 qpopper-servermode	Enable server mode.
-qt			Enable support for QT.
-qt4			Enable support for QT4.
-qt5			Enable support for QT5.
-qt6			Enable support for QT6.
+qt			Enable support for Qt.
+qt4			Enable support for Qt4.
+qt5			Enable support for Qt5.
+qt6			Enable support for Qt6.
 quartz			Enable Quartz support on Mac OS X.
 quickml-analog		Enable quickml log analizer.
 quickml-limit		Enable quickml creators and members limitation.
