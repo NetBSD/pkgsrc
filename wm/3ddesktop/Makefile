@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2023/01/29 21:17:56 ryoon Exp $
+# $NetBSD: Makefile,v 1.40 2023/02/01 12:33:41 nikita Exp $
 #
 
 DISTNAME=		3ddesktop-0.2.9
@@ -7,7 +7,7 @@ CATEGORIES=		wm
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=desk3d/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://desk3d.sourceforge.net/
+HOMEPAGE=		https://desk3d.sourceforge.net/
 COMMENT=		3D Virtual Desktop Switcher
 
 GNU_CONFIGURE=		yes
