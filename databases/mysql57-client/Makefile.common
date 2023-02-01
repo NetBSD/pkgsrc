@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.39 2022/10/30 12:53:55 adam Exp $
+# $NetBSD: Makefile.common,v 1.40 2023/02/01 16:38:12 jperkin Exp $
 #
 # used by databases/mysql57-client/Makefile
 # used by databases/mysql57-server/Makefile
 
-DISTNAME=	mysql-5.7.40
+DISTNAME=	mysql-5.7.41
 CATEGORIES=	databases
 #MASTER_SITES=	${MASTER_SITE_MYSQL:=MySQL-5.7/}
 MASTER_SITES=	https://dev.mysql.com/get/Downloads/MySQL-5.7/
@@ -11,6 +11,10 @@ MASTER_SITES=	https://dev.mysql.com/get/Downloads/MySQL-5.7/
 MAINTAINER?=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.mysql.com/
 LICENSE=	gnu-gpl-v2
+
+BOOST=			boost_1_59_0
+DISTFILES=		${DISTNAME}${EXTRACT_SUFX} ${BOOST}.tar.bz2
+SITES.${BOOST}.tar.bz2=	${MASTER_SITE_SOURCEFORGE:=boost/}
 
 DISTINFO_FILE?=	${.CURDIR}/../../databases/mysql57-client/distinfo
 PATCHDIR?=	${.CURDIR}/../../databases/mysql57-client/patches
@@ -65,7 +69,7 @@ CMAKE_ARGS+=	-DMYSQL_DATADIR=${MYSQL_DATADIR}
 
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 
-CMAKE_ARGS+=	-DWITH_BOOST="system"
+CMAKE_ARGS+=	-DWITH_BOOST=${WRKDIR}/${BOOST}
 CMAKE_ARGS+=	-DWITH_EDITLINE="system"
 CMAKE_ARGS+=	-DEDITLINE_INCLUDE_DIR=${BUILDLINK_PREFIX.editline}/${BUILDLINK_INCDIRS.editline}
 CMAKE_ARGS+=	-DWITH_LIBEVENT="system"
@@ -119,14 +123,7 @@ USE_BUILTIN.editline=	no
 
 CHECK_PORTABILITY_SKIP+=	packaging/deb-in/mysql-packagesource-server.config.in
 
-# Remove internal boost. Even though external boost is detected, the build might fail.
-post-extract: remove-boost
-.PHONY: remove-boost
-remove-boost:
-	${RM} -f -r ${WRKSRC}/include/boost_1_59_0
-
 .include "../../archivers/lz4/buildlink3.mk"
-.include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/editline/buildlink3.mk"
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

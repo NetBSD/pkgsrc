@@ -1,13 +1,15 @@
-$NetBSD: distinfo,v 1.50 2022/10/30 12:53:55 adam Exp $
+$NetBSD: distinfo,v 1.51 2023/02/01 16:38:12 jperkin Exp $
 
-BLAKE2s (mysql-5.7.40.tar.gz) = bef0a0126f3ab1c9c25818b7ea43d6fe4414a764aed1e48efffba753a0253441
-SHA512 (mysql-5.7.40.tar.gz) = 5504ff4135f604000f7c3a4d3402d223021069311d905ae7d8e82c286281ebe07b5b5d384f50f2cd590501fe35b58c71782caa81512d54bab09332f727233923
-Size (mysql-5.7.40.tar.gz) = 56523688 bytes
+BLAKE2s (boost_1_59_0.tar.bz2) = 8738bf3fbcfd42ce18f2f9e2b9f49f496d3a84c038ace73b02f72889ad7da49b
+SHA512 (boost_1_59_0.tar.bz2) = 8139e1ae997a86974071c5714ad3307e3d8fd15ef702b81a953410dd4d424b932135f53a0ef4891d9b9b747a38e539e66d6a803388fe0cc98e5166be872d682a
+Size (boost_1_59_0.tar.bz2) = 70389425 bytes
+BLAKE2s (mysql-5.7.41.tar.gz) = 6cb4ea06ff270855a0b06220db2bfbdaa13035a877281c579c7aa705e586bd14
+SHA512 (mysql-5.7.41.tar.gz) = b2085cf2eee6c3ab4cce88be4eec8a3ac4ffb21556d2824eae9e459f4771034ae2aff725ee441164440d13792f3f30707ca3129d5b36ebbf197f864b06a5b1fa
+Size (mysql-5.7.41.tar.gz) = 56535698 bytes
 SHA1 (patch-CMakeLists.txt) = 1409a98380c999c6973fa3106dc35684b7c3b3cc
 SHA1 (patch-client_CMakeLists.txt) = 4af2fb3f3d05a66a9ee89f3653e2fcccadfa5f79
 SHA1 (patch-client_completion_hash.cc) = b86ec80beac624b2aa21c7587e351ff126400ecb
 SHA1 (patch-client_mysqladmin.cc) = e1650ef3695675bcc01375bacdebcb7318218b93
-SHA1 (patch-cmake_boost.cmake) = ecf03b396c57c69e0d251497e7217e47632613c2
 SHA1 (patch-cmake_build__configurations_compiler__options.cmake) = 999110815237c53a69c74c42e66c45df83cbf355
 SHA1 (patch-cmake_build__configurations_mysql__release.cmake) = 7a1fb8c686f187db8fd9d8ad203c1f764d6e55a6
 SHA1 (patch-cmake_curl.cmake) = 08ff31eb8de6b94a46ff90edb6df66a61a94fd9d
