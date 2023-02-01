@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1 2022/02/24 01:21:55 pho Exp $
-
-BLAKE2s (system-fileio-0.3.16.4.tar.gz) = f94f9cc7acc976858ddc889f48af80972ea43ce99810367842b40e1687da6ca8
-SHA512 (system-fileio-0.3.16.4.tar.gz) = 68530cd11b25aa8a05967d3f51091ea57a5be138b672bd5373918163281c55a91b60dea03bdd22bcd4ba1d6bb26e2ed14660ce55bbdaf2737d2dd2b7e608d698
-Size (system-fileio-0.3.16.4.tar.gz) = 15632 bytes
-SHA1 (patch-lib_Filesystem.hs) = 174eaf0f821c8bbdd4c5dfd63311a7737b60f119
