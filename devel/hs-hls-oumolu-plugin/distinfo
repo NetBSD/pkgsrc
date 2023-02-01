@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1 2022/02/16 10:23:36 pho Exp $
-
-BLAKE2s (hls-ormolu-plugin-1.0.2.0.tar.gz) = 374076c25d08b13d474a6ea7e2df278a36bc74264c643f122854fd4940d8a989
-SHA512 (hls-ormolu-plugin-1.0.2.0.tar.gz) = 011216c7f03ecbccf79e877a426595f3c62a120c9078b3ede03480eef23abb3c4199b1c2808ba15b5e44517759dfa958048adf37c3c3041d7453764a1c102927
-Size (hls-ormolu-plugin-1.0.2.0.tar.gz) = 6455 bytes
