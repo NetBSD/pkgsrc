@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:44:18 nia Exp $
+$NetBSD: distinfo,v 1.7 2023/02/01 11:40:23 nia Exp $
 
+BLAKE2s (bulletphysics-bullet3-3.17.tar.gz) = 6b61aa96a5de28231e644878b28dd155fc9ddbc2e967e4217832bce3064bbde2
+SHA512 (bulletphysics-bullet3-3.17.tar.gz) = a5105bf5f1dd365a64a350755c7d2c97942f74897a18dcdb3651e6732fd55cc1030a096f5808cf50575281f05e3ac09aa50a48d271a47b94cd61f5167a72b7cc
+Size (bulletphysics-bullet3-3.17.tar.gz) = 131995187 bytes
 BLAKE2s (openmw-openmw-0.47.0.tar.gz) = 328ff4ba57ccdeb4e0f579ef6299cafef69abd944e9a73922748e128d7168031
 SHA512 (openmw-openmw-0.47.0.tar.gz) = 517e650d0054cdba8d38de05ed3975b0fcf8de32fda59c8df7c34b973e5390efa0dd9ec79babdfdaa79dee7aa8a75009776f62fad91b9aa9aa28016c5032652b
 Size (openmw-openmw-0.47.0.tar.gz) = 5156857 bytes
