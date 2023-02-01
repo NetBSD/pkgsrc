@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/02/01 14:54:22 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/02/01 18:19:37 wiz Exp $
 bin/ymuse
 share/icons/hicolor/128x128/apps/com.yktoo.ymuse.png
 share/icons/hicolor/16x16/apps/com.yktoo.ymuse.png
@@ -41,3 +41,6 @@ share/icons/hicolor/scalable/mimetypes/ymuse-genres.svg
 share/icons/hicolor/scalable/mimetypes/ymuse-playlist.svg
 share/icons/hicolor/scalable/mimetypes/ymuse-playlists.svg
 share/icons/hicolor/scalable/mimetypes/ymuse-stream.svg
+share/locale/ja/LC_MESSAGES/ymuse.mo
+share/locale/nl/LC_MESSAGES/ymuse.mo
+share/locale/ru/LC_MESSAGES/ymuse.mo
