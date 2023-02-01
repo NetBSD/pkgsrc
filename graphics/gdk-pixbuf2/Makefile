@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.59 2023/01/03 17:36:23 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2023/02/01 03:15:00 khorben Exp $
 
 DISTNAME=	gdk-pixbuf-2.42.10
 PKGNAME=	${DISTNAME:S/pixbuf/pixbuf2/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gdk-pixbuf/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -55,6 +55,7 @@ _BUILDING_GTK2= yes
 
 .include "../../devel/meson/build.mk"
 .include "../../databases/shared-mime-info/buildlink3.mk"
+.include "../../devel/py-gi-docgen/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+= glib2>=2.37.2
 .include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_DEPMETHOD.gobject-introspection:= build
