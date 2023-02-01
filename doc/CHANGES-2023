@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.935 2023/02/01 09:00:08 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.936 2023/02/01 09:12:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1172,3 +1172,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/ImageMagick to 7.1.0.60 [wiz 2023-02-01]
 	Updated filesystems/kubo to 0.18.1 [wiz 2023-02-01]
 	Updated net/libfilezilla to 0.41.0 [wiz 2023-02-01]
+	Updated www/py-beautifulsoup4 to 4.11.2 [adam 2023-02-01]
+	Updated devel/py-cachelib to 0.10.2 [adam 2023-02-01]
