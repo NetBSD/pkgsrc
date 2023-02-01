@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.950 2023/02/01 16:39:18 jperkin Exp $
+$NetBSD: CHANGES-2023,v 1.951 2023/02/01 18:19:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1191,3 +1191,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated geography/qgis to 3.28.3 [gdt 2023-02-01]
 	Updated databases/mysql57-client to 5.7.41 [jperkin 2023-02-01]
 	Updated databases/mysql57-server to 5.7.41 [jperkin 2023-02-01]
+	Updated audio/ymuse to 0.21nb1 [wiz 2023-02-01]
