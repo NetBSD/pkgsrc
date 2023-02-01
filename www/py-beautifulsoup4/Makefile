@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2022/11/30 17:00:38 adam Exp $
+# $NetBSD: Makefile,v 1.26 2023/02/01 08:42:54 adam Exp $
 
-DISTNAME=	beautifulsoup4-4.11.1
+DISTNAME=	beautifulsoup4-4.11.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES+=	${MASTER_SITE_PYPI:=b/beautifulsoup4/}
