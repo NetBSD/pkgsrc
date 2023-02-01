@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/02/01 02:09:59 pho Exp $
+
+BLAKE2s (hls-explicit-record-fields-plugin-1.0.0.0.tar.gz) = d1ad392b9a2b456a7a72ef772f976cdcde0b4f6fd6206e2a8918110a601b813c
+SHA512 (hls-explicit-record-fields-plugin-1.0.0.0.tar.gz) = 859b965854e237b577679e320179468da11d3ccce289e74317bd1b7c6bcacaf67ebed02c1da6c4fe8c6e2c1621c936b881caa0f10fcd576908527904fb180b9d
+Size (hls-explicit-record-fields-plugin-1.0.0.0.tar.gz) = 7294 bytes
