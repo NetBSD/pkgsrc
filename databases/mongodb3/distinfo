@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 10:09:24 nia Exp $
+$NetBSD: distinfo,v 1.14 2023/02/02 14:40:33 tnn Exp $
 
 BLAKE2s (mongodb-src-r3.4.24.tar.gz) = 157cc185a10426e31470a7fd97922bdc13ea9d19e85e98b5fcc0075e997d1e9a
 SHA512 (mongodb-src-r3.4.24.tar.gz) = c19d5215f514ad0c1bd33f17f9d79198e07657260c0a8399c9a84bbf274ec4f6e61a94b36bb132e93a46e96ee8b4d994a1bed70b2d26f906ffe8e78343394226
@@ -26,5 +26,14 @@ SHA1 (patch-src_third__party_asio-master_asio_include_asio_detail_impl_kqueue__r
 SHA1 (patch-src_third__party_mozjs-38_platform_x86__64_netbsd_build_js-confdefs.h) = c2ad1041b5c1ff9fac9085d2a8963781f51873a8
 SHA1 (patch-src_third__party_mozjs-38_platform_x86__64_netbsd_include_js-config.h) = 7ddbb4e3bf4126a1be2195acc82ff859e8130a01
 SHA1 (patch-src_third__party_s2_base_port.h) = 892ce91b5aaa432f34e1e7c169b7fd6eea2a3e94
+SHA1 (patch-src_third__party_s2_hash.h) = 03af36af9082d6a39f27250914e6eb92d9c1fff8
+SHA1 (patch-src_third__party_s2_s2__test.cc) = da39a3ee5e6b4b0d3255bfef95601890afd80709
+SHA1 (patch-src_third__party_s2_s2loop.cc) = b3f8c10ee99897f521562ea0f9c3a239b52d1922
+SHA1 (patch-src_third__party_s2_s2polygon.cc) = 0610c9b502ffd1b2e8887a69ea513b9cf396b640
+SHA1 (patch-src_third__party_s2_s2polygonbuilder.cc) = 8c4a98dbcaa941e5bb4146a654465c50ce993770
+SHA1 (patch-src_third__party_s2_s2polygonbuilder.h) = c79bbb4abbd73b83829f921c2048b62dec36f3be
+SHA1 (patch-src_third__party_s2_s2regioncoverer.cc) = 419f5691af3eded424e504d95e88422579227579
+SHA1 (patch-src_third__party_s2_strings_split.cc) = 505a784b35469c5821694e3e10805dc263c766b9
+SHA1 (patch-src_third__party_s2_strings_split.h) = de3dcba69f9d9e7de2d4b2f7b6c122249c12a9a4
 SHA1 (patch-src_third__party_wiredtiger_SConscript) = f135c502c11a1d33da3a5e4c61db00dba85c27c4
 SHA1 (patch-src_third__party_wiredtiger_src_os__posix_os__fs.c) = 6da1014613231a0e56dd3449bd5d61014340575a
