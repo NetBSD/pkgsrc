@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2022/08/30 10:01:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.29 2023/02/02 08:32:04 adam Exp $
 bin/epylint-${PYVERSSUFFIX}
 bin/pylint-${PYVERSSUFFIX}
 bin/pylint-config-${PYVERSSUFFIX}
@@ -76,6 +76,8 @@ ${PYSITELIB}/pylint/checkers/misc.py
 ${PYSITELIB}/pylint/checkers/misc.pyc
 ${PYSITELIB}/pylint/checkers/modified_iterating_checker.py
 ${PYSITELIB}/pylint/checkers/modified_iterating_checker.pyc
+${PYSITELIB}/pylint/checkers/nested_min_max.py
+${PYSITELIB}/pylint/checkers/nested_min_max.pyc
 ${PYSITELIB}/pylint/checkers/newstyle.py
 ${PYSITELIB}/pylint/checkers/newstyle.pyc
 ${PYSITELIB}/pylint/checkers/non_ascii_names.py
@@ -184,12 +186,18 @@ ${PYSITELIB}/pylint/extensions/comparison_placement.py
 ${PYSITELIB}/pylint/extensions/comparison_placement.pyc
 ${PYSITELIB}/pylint/extensions/confusing_elif.py
 ${PYSITELIB}/pylint/extensions/confusing_elif.pyc
+${PYSITELIB}/pylint/extensions/consider_refactoring_into_while_condition.py
+${PYSITELIB}/pylint/extensions/consider_refactoring_into_while_condition.pyc
 ${PYSITELIB}/pylint/extensions/consider_ternary_expression.py
 ${PYSITELIB}/pylint/extensions/consider_ternary_expression.pyc
+${PYSITELIB}/pylint/extensions/dict_init_mutate.py
+${PYSITELIB}/pylint/extensions/dict_init_mutate.pyc
 ${PYSITELIB}/pylint/extensions/docparams.py
 ${PYSITELIB}/pylint/extensions/docparams.pyc
 ${PYSITELIB}/pylint/extensions/docstyle.py
 ${PYSITELIB}/pylint/extensions/docstyle.pyc
+${PYSITELIB}/pylint/extensions/dunder.py
+${PYSITELIB}/pylint/extensions/dunder.pyc
 ${PYSITELIB}/pylint/extensions/empty_comment.py
 ${PYSITELIB}/pylint/extensions/empty_comment.pyc
 ${PYSITELIB}/pylint/extensions/emptystring.py
@@ -198,6 +206,8 @@ ${PYSITELIB}/pylint/extensions/eq_without_hash.py
 ${PYSITELIB}/pylint/extensions/eq_without_hash.pyc
 ${PYSITELIB}/pylint/extensions/for_any_all.py
 ${PYSITELIB}/pylint/extensions/for_any_all.pyc
+${PYSITELIB}/pylint/extensions/magic_value.py
+${PYSITELIB}/pylint/extensions/magic_value.pyc
 ${PYSITELIB}/pylint/extensions/mccabe.py
 ${PYSITELIB}/pylint/extensions/mccabe.pyc
 ${PYSITELIB}/pylint/extensions/no_self_use.py
