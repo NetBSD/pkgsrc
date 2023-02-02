@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.260 2023/01/30 17:21:34 wiz Exp $
+# $NetBSD: Makefile,v 1.261 2023/02/02 15:26:55 tnn Exp $
 
-DISTNAME=	inkscape-1.2.1
-PKGREVISION=	6
+DISTNAME=	inkscape-1.2.2
 CATEGORIES=	graphics
 MASTER_SITES=	https://media.inkscape.org/dl/resources/file/
 EXTRACT_SUFX=	.tar.xz
@@ -21,7 +20,7 @@ DEPENDS+=		${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 DEPENDS+=		${PYPKGPREFIX}-serial-[0-9]*:../../comms/py-serial
 DEPENDS+=		${PYPKGPREFIX}-scour-[0-9]*:../../graphics/py-scour
 
-WRKSRC=		${WRKDIR}/inkscape-1.2.1_2022-07-14_9c6d41e410
+WRKSRC=		${WRKDIR}/inkscape-1.2.2_2022-12-01_b0a8486541
 
 # std::optional
 GCC_REQD+=		7
@@ -73,6 +72,7 @@ MANCOMPRESSED=	yes
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "Darwin"
 CMAKE_ARGS+=	-DIntl_INCLUDE_DIR=${BUILDLINK_PREFIX.gettext}/include
+BUILDLINK_TRANSFORM+=	rm:-lX11 rm:-lXext
 .endif
 
 # There exists some race condition in create_default_templates.py that
