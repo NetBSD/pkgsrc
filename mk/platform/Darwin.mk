@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.122 2022/12/23 09:27:10 triaxx Exp $
+# $NetBSD: Darwin.mk,v 1.123 2023/02/02 15:36:55 tnn Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -115,6 +115,7 @@ OSX_SDK_MAP.12.5=	12.3
 OSX_SDK_MAP.12.6=	12.3
 OSX_SDK_MAP.13.0=	13.0
 OSX_SDK_MAP.13.1=	13.1
+OSX_SDK_MAP.13.2=	13.1
 #
 # If the user has set MACOSX_DEPLOYMENT_TARGET (ideally at bootstrap time) to
 # select a specific SDK then we prefer that.
