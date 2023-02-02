@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.261 2023/02/02 15:26:55 tnn Exp $
+# $NetBSD: Makefile,v 1.262 2023/02/02 15:30:13 tnn Exp $
 
 DISTNAME=	inkscape-1.2.2
 CATEGORIES=	graphics
@@ -72,7 +72,6 @@ MANCOMPRESSED=	yes
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "Darwin"
 CMAKE_ARGS+=	-DIntl_INCLUDE_DIR=${BUILDLINK_PREFIX.gettext}/include
-BUILDLINK_TRANSFORM+=	rm:-lX11 rm:-lXext
 .endif
 
 # There exists some race condition in create_default_templates.py that
