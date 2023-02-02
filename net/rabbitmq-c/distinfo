@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 11:06:47 nia Exp $
+$NetBSD: distinfo,v 1.13 2023/02/02 13:10:05 adam Exp $
 
-BLAKE2s (rabbitmq-c-0.11.0.tar.gz) = 37182f1c9e819bea9dc033cb593788d2109dd654505253d168d21b6592c5a5b7
-SHA512 (rabbitmq-c-0.11.0.tar.gz) = 0c3dbb6e2b862e9f25e3f76df798ea272bbd81de2865950b95adf1f1e5791eb20d7c9d5a76cb7d2fda54bad5f12bdf69cbfa7e9fd1afdede6f9ec729ca2287de
-Size (rabbitmq-c-0.11.0.tar.gz) = 145638 bytes
+BLAKE2s (rabbitmq-c-0.12.0.tar.gz) = b4b5e7b4a9bd9bf78b63f61091df9c1263b1b35fa7e09a1571983531e5c38615
+SHA512 (rabbitmq-c-0.12.0.tar.gz) = 2cefe12133966cb80fd352415a6c618ed986381978cd8c92bd6bf555318ad1a61e91ce9c4c1fce882ef206758ba57356f1a22983f63b602a44e16f78627437ff
+Size (rabbitmq-c-0.12.0.tar.gz) = 127199 bytes
