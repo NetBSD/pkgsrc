@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2022/09/15 17:55:32 adam Exp $
+$NetBSD: distinfo,v 1.12 2023/02/02 13:16:02 adam Exp $
 
-BLAKE2s (bpython-0.23.tar.gz) = 0fa5d47f2bcd131c6428dc15e5a117211195c1b44fddce27c8410dfc3385e818
-SHA512 (bpython-0.23.tar.gz) = b25b68a690b838fef0c5dbb05565db4373ebb3611278b9f94db792ef25a43f59e3e9b7ac1ad0f571ae442948748b6c5e28888c6aa0f592cdf8499223cfded217
-Size (bpython-0.23.tar.gz) = 222241 bytes
+BLAKE2s (bpython-0.24.tar.gz) = 1b136f02bbd24284968f157bd4348ccf4dc4d51a4e9e308f6b8c9b75a5903c06
+SHA512 (bpython-0.24.tar.gz) = f95e853ad5aaba476cf0bcc197ae1d322af4a458637f8445372b54b75d315d3caae7a3f8b7d8c6d1bd2c4307c36b21cf320b22c367990bd0b9bfbf42a5e02267
+Size (bpython-0.24.tar.gz) = 222879 bytes
 SHA1 (patch-setup.py) = 9caba0004771928676c7d0d4f7c0594f8ba6934a
