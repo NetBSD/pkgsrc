@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.123 2023/02/02 15:36:55 tnn Exp $
+# $NetBSD: Darwin.mk,v 1.124 2023/02/02 21:24:43 jklos Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -109,6 +109,7 @@ OSX_SDK_MAP.11.2=	11.1
 OSX_SDK_MAP.11.4=	11.3
 OSX_SDK_MAP.11.5=	11.3
 OSX_SDK_MAP.11.6=	11.3
+OSX_SDK_MAP.11.7=	12.1
 OSX_SDK_MAP.12.2=	12.1
 OSX_SDK_MAP.12.4=	12.3
 OSX_SDK_MAP.12.5=	12.3
