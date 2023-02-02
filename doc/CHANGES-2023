@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.954 2023/02/01 20:40:04 pin Exp $
+$NetBSD: CHANGES-2023,v 1.955 2023/02/02 08:32:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1195,3 +1195,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated audio/kid3 to 3.9.3 [wiz 2023-02-01]
 	Updated shells/nushell to 0.75.0 [pin 2023-02-01]
 	Updated sysutils/felix to 2.2.4 [pin 2023-02-01]
+	Updated devel/py-astroid to 2.14.1 [adam 2023-02-02]
+	Updated devel/py-pylint to 2.16.0 [adam 2023-02-02]
