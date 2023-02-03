@@ -1,0 +1,7 @@
+sqlc generates type-safe code from SQL. Here's how it works:
+
+1. You write queries in SQL.
+2. You run sqlc to generate code with type-safe interfaces to those queries.
+3. You write application code that calls the generated code.
+
+sqlc generates idiomatic code like you would write yourself.
