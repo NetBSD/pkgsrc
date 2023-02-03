@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.971 2023/02/03 21:30:26 pin Exp $
+$NetBSD: CHANGES-2023,v 1.972 2023/02/03 21:32:02 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1233,3 +1233,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated ham/uhd to 4.4.0.0 [adam 2023-02-03]
 	Updated multimedia/libde265 to 1.0.11 [adam 2023-02-03]
 	Updated devel/difftastic to 0.43.0 [pin 2023-02-03]
+	Updated editors/tp-note to 1.20.1nb2 [pin 2023-02-03]
