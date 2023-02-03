@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.672 2023/01/19 10:55:10 wiz Exp $
+# $NetBSD: Makefile,v 1.673 2023/02/03 14:35:08 bsiegert Exp $
 
 COMMENT=	Databases
 
@@ -505,6 +505,7 @@ SUBDIR+=	shared-mime-info
 SUBDIR+=	slony1
 SUBDIR+=	soci
 SUBDIR+=	sql-workbench
+SUBDIR+=	sqlc
 SUBDIR+=	sqlite
 SUBDIR+=	sqlite3
 SUBDIR+=	sqlite3-docs
