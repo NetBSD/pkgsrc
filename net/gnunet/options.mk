@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2023/02/01 19:03:03 nikita Exp $
+# $NetBSD: options.mk,v 1.3 2023/02/03 13:00:37 nikita Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.gnunet
 
@@ -6,9 +6,10 @@ PKG_SUPPORTED_OPTIONS+=		doc idn mysql pgsql tests
 PKG_SUPPORTED_OPTIONS+=		experimental pulseaudio
 PKG_SUPPORTED_OPTIONS+=		opus ogg sqlite3 audio
 PKG_SUPPORTED_OPTIONS+=		gstreamer perl verbose-logging
+PKG_SUPPORTED_OPTIONS+=		latex-generate
 
 PKG_SUGGESTED_OPTIONS+=		audio gstreamer opus ogg
-PKG_SUGGESTED_OPTIONS+=		idn doc sqlite3
+PKG_SUGGESTED_OPTIONS+=		idn doc sqlite3 latex-generate
 
 # bluez is still in pkgsrc-wip, and I should test this
 # before claiming bluez from pkgsrc-wip on Linux works.
@@ -50,6 +51,16 @@ PLIST_SRC+=		PLIST.doc
 INFO_FILES=yes
 .else
 CONFIGURE_ARGS+=	--disable-documentation
+.endif
+
+# gnunet-bcd
+PLIST_VARS+=	latex
+.if ${PKG_OPTIONS:Mlatex-generate}
+DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
+DEPENDS+=	tex-pgf-[0-9]*:../../print/tex-pgf
+DEPENDS+=	tex-qrcode-[0-9]*:../../graphics/tex-qrcode
+DEPENDS+=	tex-labels-[0-9]*:../../print/tex-labels
+PLIST.latex=	yes
 .endif
 
 # idn is mandatory but idn or idn2 can be used with a preference for
@@ -167,10 +178,11 @@ CONFIGURE_ARGS+=	--without-pulse
 # and on both of them.  I have neither of them. If you do, please
 # create the appropriate PLIST files with content.
 
+PLIST_VARS+=		perl
 # Fix the perl path
 .if ${PKG_OPTIONS:Mperl}
+PLIST.perl=		yes
 USE_TOOLS+=		perl:run
-PLIST_SRC+=		PLIST.perl
 CONFIGURE_ARGS+=	--with-gnunet-logread
 REPLACE_INTERPRETER+=	envperl
 REPLACE.envperl.old=	.*@PERLEXE@
