@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2023/01/02 12:51:24 pin Exp $
+$NetBSD: distinfo,v 1.6 2023/02/03 21:34:28 pin Exp $
 
 BLAKE2s (aho-corasick-0.7.18.crate) = 8925e88e2df4b5ca3b31783f527e1bb31dbe27846f409f631148fa239f3b2935
 SHA512 (aho-corasick-0.7.18.crate) = 7a23b16231a90d23ee60ad4c81bc225410599a4560d33d3a203138fc540c39cf1000100fed3aed40dcc371c3635656a3792545dca5dd1aefbde00d8774eebd00
@@ -27,6 +27,9 @@ Size (bitflags-1.3.2.crate) = 23021 bytes
 BLAKE2s (bstr-0.2.17.crate) = a970078acf6f8b1a2a6be249cda3a6cc7225239af2aa21cbac2b60fbaab453fd
 SHA512 (bstr-0.2.17.crate) = 883eac8210d14f89517b4dd5e25d02c97cf31602ec74498b5e186112ba0f154d47de8d1c41a8f4e5503f3b53c064e2c976b60bbfd63fc28b186bc006e00f20c2
 Size (bstr-0.2.17.crate) = 330350 bytes
+BLAKE2s (bstr-1.1.0.crate) = b0fa61b053b90c810682729ea7d7ea02c914215f1a3b491b847f40acc5a9d52e
+SHA512 (bstr-1.1.0.crate) = 5c7802a9d3d2cc219d26fd82c91288195a95d16d4f9f14d7bc3e9932f1027b6a4a50729a2eef998eba25e75d95945a4bd4fba9bd18b8a5bd33306b4548f114ca
+Size (bstr-1.1.0.crate) = 340878 bytes
 BLAKE2s (byteorder-1.4.3.crate) = 980d5e4ac6d39901b2368959edd7a811f91dbd5bcf899699f3885a5c5e492491
 SHA512 (byteorder-1.4.3.crate) = 8c8000eb8ecf40351c9ce36a3a8acd7a02f81786d1b11aab85adfeffa0f2267ed74df29b2ca5d1d38128484d1d3cad2b673aa0d0441dcd0620dfd3934bb888fa
 Size (byteorder-1.4.3.crate) = 22512 bytes
@@ -144,6 +147,9 @@ Size (remove_dir_all-0.5.3.crate) = 9184 bytes
 BLAKE2s (same-file-1.0.6.crate) = 1a9b3bb2a767c4e3a7537b2fd8daaa2afc113e6bdaa27a25d2eefff59e7600d6
 SHA512 (same-file-1.0.6.crate) = 3ba35309742c8db63210d9ea78bff4ecd80471d69e6238eb96c7bf0673814f221e2d838fe6311bfc5a0e71b4a7ccba33e07859c0b9cff2171969ff08a4214a7c
 Size (same-file-1.0.6.crate) = 10183 bytes
+BLAKE2s (serde-1.0.151.crate) = d59796c8267abe8b6007b612e6e9cfc235d0beda6fbeb44618929e24f693e1fe
+SHA512 (serde-1.0.151.crate) = 1828e9c1e4ff826824d9d23af2449fc464167457a482a6c309aba43766b765578710ad6d433efdc3c471e1426c5d16ba91bb1f17be9f4a15a4ab204e9e3634eb
+Size (serde-1.0.151.crate) = 76931 bytes
 BLAKE2s (strsim-0.8.0.crate) = 4c57b0c1505fd1e6a962cf721ee33473997ba55c8638e53c92efc6c9cf7fcc91
 SHA512 (strsim-0.8.0.crate) = 1d55a8d946cd55f5f37d06aea536549ded95739fa58c0f2da285a0041154c181f663682bdcac643aa198b3e762d694a04f058db985c62ebe22b5c16327ba6d34
 Size (strsim-0.8.0.crate) = 9309 bytes
@@ -204,6 +210,6 @@ Size (winapi-util-0.1.5.crate) = 10164 bytes
 BLAKE2s (winapi-x86_64-pc-windows-gnu-0.4.0.crate) = 85ecec73b9874f5f443e29d99f93a11889e74ddf5a4bfeb929e2355a7cee32f1
 SHA512 (winapi-x86_64-pc-windows-gnu-0.4.0.crate) = 4a654af6a5d649dc87e00497245096b35a2894ae66f155cb62389902c3b93ddcc5cf7d0d8b9dd97b291d2d80bc686af2298e80abef6ac69883f4a54e79712513
 Size (winapi-x86_64-pc-windows-gnu-0.4.0.crate) = 2947998 bytes
-BLAKE2s (zet-0.2.5.tar.gz) = 5ec733c5761f4528ada0eb410081716af4aaf2243d2e39412ac31d8779117d7d
-SHA512 (zet-0.2.5.tar.gz) = 88b6d8aea7fb0a8246735e21e145a738747e417f4a2863f124d29999b96a5806f2353b70baa2715bce3773026eccd10ed40be27a9be84e8bc96f1672c1eee6e8
-Size (zet-0.2.5.tar.gz) = 24691 bytes
+BLAKE2s (zet-0.2.6.tar.gz) = aa91ba1429911ff3a6167ab44520e75929237ac980509640feeec6b463d50462
+SHA512 (zet-0.2.6.tar.gz) = c597e9be271282a6635c845dbe135541fb32797454f439e33290b7b4fa3427b67377939fe34bb16c699f4729c67d3c44d709eb460673cbbf110e47d6116f44ec
+Size (zet-0.2.6.tar.gz) = 25680 bytes
