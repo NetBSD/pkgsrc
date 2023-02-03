@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.973 2023/02/03 21:33:28 pin Exp $
+$NetBSD: CHANGES-2023,v 1.974 2023/02/03 21:34:48 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1235,3 +1235,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/difftastic to 0.43.0 [pin 2023-02-03]
 	Updated editors/tp-note to 1.20.1nb2 [pin 2023-02-03]
 	Updated sysutils/broot to 1.20.0 [pin 2023-02-03]
+	Updated textproc/zet to 0.2.6 [pin 2023-02-03]
