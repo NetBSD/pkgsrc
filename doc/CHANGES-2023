@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.963 2023/02/03 08:49:12 pho Exp $
+$NetBSD: CHANGES-2023,v 1.964 2023/02/03 11:49:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1206,3 +1206,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated editors/nano to 7.2 [schwarz 2023-02-02]
 	Added converters/hs-json version 0.10 [pho 2023-02-03]
 	Added devel/hasktags version 0.72.0 [pho 2023-02-03]
+	Updated lang/nodejs to 19.6.0 [adam 2023-02-03]
+	Updated lang/nodejs18 to 18.14.0 [adam 2023-02-03]
