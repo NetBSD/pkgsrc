@@ -481,6 +481,7 @@ lang-zh			Add Chinese language support.
 lang-zh-cn		Add Chinese Simplified language support.
 lang-zh-tw		Add Chinese Traditional language support.
 latex			Depend on latex for build-time or run-time documentation.
+latex-generate		Generate artifacts at runtime using LaTeX.
 lcms			Enable Light Color Management System support.
 ldap			Enable LDAP support.
 lensfun			Enable lensfun (camera lens distortion rectifyer) support.
