@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/02/03 08:48:18 pho Exp $
+
+BLAKE2s (json-0.10.tar.gz) = 27808cc6c268ed20df77ea0a1a58df285e767d44fdd705d407ef1ba2b5704926
+SHA512 (json-0.10.tar.gz) = 4015693c363810701114a222207083ab9610ebd1196d24f0eb8dcad35af54e9067259ca412b131eaa986b8dbfbf0ce62058ca4c31aeeff29fdf21f17e8d86e90
+Size (json-0.10.tar.gz) = 22622 bytes
