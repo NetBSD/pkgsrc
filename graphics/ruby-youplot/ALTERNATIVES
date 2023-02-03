@@ -1,0 +1,2 @@
+bin/uplot @PREFIX@/bin/uplot@RUBY_SUFFIX@
+bin/youplot @PREFIX@/bin/youplot@RUBY_SUFFIX@
