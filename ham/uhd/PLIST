@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2022/10/04 09:45:53 wiz Exp $
+@comment $NetBSD: PLIST,v 1.24 2023/02/03 21:19:55 adam Exp $
 bin/rfnoc_image_builder
 bin/uhd_adc_self_cal
 bin/uhd_cal_rx_iq_balance
@@ -187,7 +187,7 @@ lib/cmake/uhd/UHDBoost.cmake
 lib/cmake/uhd/UHDConfig.cmake
 lib/cmake/uhd/UHDConfigVersion.cmake
 lib/libuhd.so
-lib/libuhd.so.4.3.0
+lib/libuhd.so.4.4.0
 lib/pkgconfig/uhd.pc
 lib/uhd/examples/benchmark_rate
 lib/uhd/examples/gpio
@@ -251,10 +251,12 @@ lib/uhd/tests/devtest/python_api_test.py
 lib/uhd/tests/devtest/python_rx_stability_test.py
 lib/uhd/tests/devtest/recv_stability_test.py
 lib/uhd/tests/devtest/run_testsuite.py
+lib/uhd/tests/devtest/rx_multi_spc_timed_commands_test.py
 lib/uhd/tests/devtest/rx_samples_to_file_test.py
 lib/uhd/tests/devtest/test_messages_test.py
 lib/uhd/tests/devtest/test_pps_test.py
 lib/uhd/tests/devtest/tx_bursts_test.py
+lib/uhd/tests/devtest/tx_multi_spc_timed_commands_test.py
 lib/uhd/tests/devtest/tx_waveforms_test.py
 lib/uhd/tests/devtest/uhd_test_base.py
 lib/uhd/tests/devtest/usrp_probe.py
@@ -300,6 +302,7 @@ lib/uhd/tests/rfnoc_detailgraph_test
 lib/uhd/tests/rfnoc_node_test
 lib/uhd/tests/rfnoc_property_test
 lib/uhd/tests/rfnoc_propprop_test
+lib/uhd/tests/rfnoc_topograph_test
 lib/uhd/tests/rx_streamer_test
 lib/uhd/tests/scope_exit_test
 lib/uhd/tests/sensors_c_test
@@ -330,6 +333,7 @@ lib/uhd/tests/vector_iir_block_test
 lib/uhd/tests/vrt_test
 lib/uhd/tests/window_block_test
 lib/uhd/tests/x400_rfdc_control_test
+lib/uhd/tests/xport_adapter_ctrl_test
 lib/uhd/tests/zbx_cpld_test
 lib/uhd/utils/b2xx_fx3_utils
 lib/uhd/utils/convert_cal_data.py

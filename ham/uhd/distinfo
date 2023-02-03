@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.34 2022/09/30 18:12:44 adam Exp $
+$NetBSD: distinfo,v 1.35 2023/02/03 21:19:55 adam Exp $
 
-BLAKE2s (uhd-4.3.0.0.tar.gz) = 0cccbcbca277055dd513598403d5b779130eceb86a29054de144a04876fb9452
-SHA512 (uhd-4.3.0.0.tar.gz) = 8907e134747b853dd3fa457ac097287783b362a56ac9fdf6fb44157baa1ddabfe3934e110bfac81180b42ea7ec2defefc444736955091a072b1166b5d27253fc
-Size (uhd-4.3.0.0.tar.gz) = 38204958 bytes
+BLAKE2s (uhd-4.4.0.0.tar.gz) = 3657d5be4f310a8e07bf6c739c6d57f5d84a9ea337f00b855f26cd9e2d0429fb
+SHA512 (uhd-4.4.0.0.tar.gz) = 3c9b57dc776e0fadc991ffeede84c2367f7403bfae6fd30a045baf1c9cfb21889310b9a8340a35ea13eea00208bf678cccd7b82e190dfb6b9d61e42bdef3b21a
+Size (uhd-4.4.0.0.tar.gz) = 38210999 bytes
 SHA1 (patch-CMakeLists.txt) = 91784faf3eab2eb7f3340a2b05f7f89da1e0fada
 SHA1 (patch-examples_getopt_getopt.c) = f9c7297cb1dcc9438baed9dcdaf0f52b83297e01
 SHA1 (patch-examples_getopt_getopt.h) = 7f01c9385644dbf2b61dfd8bebac8016b46000c5
