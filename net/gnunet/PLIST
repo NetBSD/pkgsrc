@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/01/31 19:53:36 nikita Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/02/03 14:26:25 nikita Exp $
 bin/gnunet-arm
 bin/gnunet-ats
 bin/gnunet-auto-share
@@ -20,6 +20,9 @@ bin/gnunet-fs
 bin/gnunet-gns
 bin/gnunet-gns-proxy-setup-ca
 bin/gnunet-identity
+${PLIST.perl}bin/gnunet-logread
+${PLIST.perl}bin/gnunet-logread-ipc
+${PLIST.perl}bin/gnunet-logread-ipc-sdedit
 bin/gnunet-messenger
 bin/gnunet-namecache
 bin/gnunet-namestore
@@ -173,7 +176,7 @@ include/gnunet/gnunet_tun_lib.h
 include/gnunet/gnunet_uri_lib.h
 include/gnunet/gnunet_util_lib.h
 include/gnunet/gnunet_vpn_service.h
-lib/gnunet/libexec/gnunet-bcd
+${PLIST.latex}lib/gnunet/libexec/gnunet-bcd
 lib/gnunet/libexec/gnunet-cmds-helper
 lib/gnunet/libexec/gnunet-communicator-tcp
 lib/gnunet/libexec/gnunet-communicator-udp
