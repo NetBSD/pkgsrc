@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2023/02/01 19:03:03 nikita Exp $
+# $NetBSD: Makefile,v 1.4 2023/02/03 00:07:09 wiz Exp $
 
 DISTNAME=		gnunet-0.19.2
 PKGREVISION=		1
@@ -10,7 +10,7 @@ HOMEPAGE=		https://gnunet.org/
 COMMENT=		Framework for secure P2P networking
 LICENSE=		gnu-agpl-v3
 
-USE_TOOLS+=		msgfmt pkg-config gmake automake autoconf autoreconf
+USE_TOOLS+=		msgfmt pkg-config gmake automake autoconf autoreconf autopoint
 USE_LANGUAGES=		c
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
@@ -86,11 +86,9 @@ SUBST_SED.sysconfdir+=		-e 's,^GNUNET_DATA_HOME.*,GNUNET_DATA_HOME = ${GNUNET_DI
 SUBST_SED.sysconfdir+=		-e 's,^GNUNET_RUNTIME_DIR.*,GNUNET_RUNTIME_DIR = ${GNUNET_DIR},g'
 SUBST_SED.sysconfdir+=		-e 's,^GNUNET_HOME.*,GNUNET_HOME = ${GNUNET_DIR},g'
 
-post-configure:
-	${MKDIR} ${DESTDIR}${EGDIR}
+post-install:
 	${INSTALL_DATA} ${WRKSRC}/gnunet.conf ${DESTDIR}${EGDIR}/gnunet.conf
 	${INSTALL_DATA} ${WRKSRC}/gnunet_user.conf ${DESTDIR}${EGDIR}/gnunet_user.conf
-	${MKDIR} ${DESTDIR}${PREFIX}/share/doc/gnunet/
 	${INSTALL_DATA} ${WRKSRC}/README.pkgsrc.txt ${DESTDIR}${PREFIX}/share/doc/gnunet/README.pkgsrc.txt
 
 # All helpers have to be suid. fs helper must not be suid.
