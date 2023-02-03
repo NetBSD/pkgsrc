@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2023/01/02 12:51:24 pin Exp $
+# $NetBSD: Makefile,v 1.6 2023/02/03 21:34:28 pin Exp $
 
-DISTNAME=	zet-0.2.5
+DISTNAME=	zet-0.2.6
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=yarrow/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/yarrow/zet/

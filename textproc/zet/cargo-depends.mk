@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.3 2023/01/02 12:51:24 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.4 2023/02/03 21:34:28 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-0.7.18
 CARGO_CRATE_DEPENDS+=	ansi_term-0.12.1
@@ -9,6 +9,7 @@ CARGO_CRATE_DEPENDS+=	atty-0.2.14
 CARGO_CRATE_DEPENDS+=	autocfg-1.1.0
 CARGO_CRATE_DEPENDS+=	bitflags-1.3.2
 CARGO_CRATE_DEPENDS+=	bstr-0.2.17
+CARGO_CRATE_DEPENDS+=	bstr-1.1.0
 CARGO_CRATE_DEPENDS+=	byteorder-1.4.3
 CARGO_CRATE_DEPENDS+=	cfg-if-1.0.0
 CARGO_CRATE_DEPENDS+=	clap-2.34.0
@@ -48,6 +49,7 @@ CARGO_CRATE_DEPENDS+=	regex-automata-0.1.10
 CARGO_CRATE_DEPENDS+=	regex-syntax-0.6.27
 CARGO_CRATE_DEPENDS+=	remove_dir_all-0.5.3
 CARGO_CRATE_DEPENDS+=	same-file-1.0.6
+CARGO_CRATE_DEPENDS+=	serde-1.0.151
 CARGO_CRATE_DEPENDS+=	strsim-0.8.0
 CARGO_CRATE_DEPENDS+=	structopt-0.3.26
 CARGO_CRATE_DEPENDS+=	structopt-derive-0.4.18
