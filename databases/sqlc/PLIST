@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2023/02/03 14:28:58 bsiegert Exp $
+bin/sqlc
