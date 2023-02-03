@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.967 2023/02/03 14:42:26 taca Exp $
+$NetBSD: CHANGES-2023,v 1.968 2023/02/03 14:43:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1212,3 +1212,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-pylint to 2.16.1 [adam 2023-02-03]
 	Added databases/sqlc version 1.16.0 [bsiegert 2023-02-03]
 	Updated lang/php82 to 8.2.2 [taca 2023-02-03]
+	Updated lang/php81 to 8.1.15 [taca 2023-02-03]
