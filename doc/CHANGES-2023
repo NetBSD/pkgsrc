@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.964 2023/02/03 11:49:38 adam Exp $
+$NetBSD: CHANGES-2023,v 1.965 2023/02/03 13:10:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1208,3 +1208,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/hasktags version 0.72.0 [pho 2023-02-03]
 	Updated lang/nodejs to 19.6.0 [adam 2023-02-03]
 	Updated lang/nodejs18 to 18.14.0 [adam 2023-02-03]
+	Updated ham/gnuradio-doxygen to 3.10.5.1nb2 [adam 2023-02-03]
+	Updated devel/py-pylint to 2.16.1 [adam 2023-02-03]
