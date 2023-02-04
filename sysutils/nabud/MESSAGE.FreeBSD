@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE.FreeBSD,v 1.1 2023/02/04 23:43:53 thorpej Exp $
+
+Example rc.d and rc.conf.d files for FreeBSD are located at:
+
+	${PREFIX}/share/nabud/rc.conf.d/nabud
+	${PREFIX}/share/nabud/rc.d/nabud
+
+===========================================================================
