@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.18 2023/02/01 20:13:31 wiz Exp $
+$NetBSD: distinfo,v 1.19 2023/02/04 10:45:53 wiz Exp $
 
 BLAKE2s (kid3-3.9.3.tar.gz) = 9b0d44b78542ac8b5ebd379f87a0762c9fbd0140679d49d3b5b34ab0e4fc5bb0
 SHA512 (kid3-3.9.3.tar.gz) = 03b9c13e8e9924796e9a993e5f92b05d5435893e3fbdeb7b7fc5ae52d3f9f98322ec6e76c7911814a409f6c6253fb5687d5d3ab5b3fa6db46142a3b6b824cd9b
 Size (kid3-3.9.3.tar.gz) = 2996599 bytes
-SHA1 (patch-src_app_qt_fixappdata.py) = 4dcac2d25798697217b3b9436a8aa37af7d5cd1c
+SHA1 (patch-src_app_qt_fixappdata.py) = 914ea74f15b14ad4cfd3de460ac3f2b7b396549f
