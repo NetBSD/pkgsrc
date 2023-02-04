@@ -1,0 +1,19 @@
+Modern concurrency tools including agents, futures, promises, thread pools,
+actors, supervisors, and more.
+
+Inspired by Erlang, Clojure, Go, JavaScript, actors, and classic concurrency
+patterns.
+
+The design goals of this gem are:
+
+* Be an 'unopinionated' toolbox that provides useful utilities without
+  debating which is better or why
+* Remain free of external gem dependencies
+* Stay true to the spirit of the languages providing inspiration
+* But implement in a way that makes sense for Ruby
+* Keep the semantics as idiomatic Ruby as possible
+* Support features that make sense in Ruby
+* Exclude features that don't make sense in Ruby
+* Be small, lean, and loosely coupled
+
+This is version 1.1.10 package.
