@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.978 2023/02/04 09:44:42 taca Exp $
+$NetBSD: CHANGES-2023,v 1.979 2023/02/04 09:53:43 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1240,3 +1240,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Downgraded devel/pkgconf to 1.8.0 [wiz 2023-02-02]
 	Updated databases/ruby-sequel to 5.65.0 [taca 2023-02-04]
 	Updated devel/ruby-git to 1.13.2 [taca 2023-02-04]
+	Updated devel/ruby-globalid to 1.1.0 [taca 2023-02-04]
