@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.994 2023/02/04 13:57:28 taca Exp $
+$NetBSD: CHANGES-2023,v 1.995 2023/02/04 13:59:38 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1256,3 +1256,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/ruby-webrick to 1.8.1 [taca 2023-02-04]
 	Added www/ruby-faraday-follow_redirects version 0.3.0 [taca 2023-02-04]
 	Updated sysutils/ruby-inspec-core to 5.21.29 [taca 2023-02-04]
+	Updated sysutils/ruby-specinfra to 2.84.1 [taca 2023-02-04]
