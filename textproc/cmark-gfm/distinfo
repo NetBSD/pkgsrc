@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:21:47 nia Exp $
+$NetBSD: distinfo,v 1.4 2023/02/04 13:23:05 taca Exp $
 
-BLAKE2s (cmark-gfm/0.29.0.gfm.0.tar.gz) = c965c4b7c5d7ddb01d10995297ef0b1226f97da69ce578e706b1fda30f84ec83
-SHA512 (cmark-gfm/0.29.0.gfm.0.tar.gz) = 54e396e035a43e4d0c86fa7f1c48a6a1283c0caaabdbc56dfcecee92e89e69f6d2e016ae2d9cf4f40258a6455fba7b813c1c6e6d37e53d33a381088ccbc5673e
-Size (cmark-gfm/0.29.0.gfm.0.tar.gz) = 284071 bytes
+BLAKE2s (cmark-gfm/0.29.0.gfm.9.tar.gz) = c2d08bc16f1ef43a1a9d473d4d76ccf42908129bb537eb99baf89e16338138be
+SHA512 (cmark-gfm/0.29.0.gfm.9.tar.gz) = 532ad45c50aad85181a7121f4a36571b4a5795cfce0e528008bedb2ade0678432a317471be13813d38841235ea1312ae02c876e4fd965de4b5d54b00eb0f3a70
+Size (cmark-gfm/0.29.0.gfm.9.tar.gz) = 297003 bytes
 SHA1 (patch-CMakeLists.txt) = 902d8299234ec0bf2a7a15aaa79cdbbfc49e148f
