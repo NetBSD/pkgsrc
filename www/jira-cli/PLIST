@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/08/21 04:08:50 fox Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/02/04 15:57:37 fox Exp $
 bin/jira
 man/man7/jira-board-list.7
 man/man7/jira-board.7
@@ -16,6 +16,7 @@ man/man7/jira-issue-comment.7
 man/man7/jira-issue-create.7
 man/man7/jira-issue-delete.7
 man/man7/jira-issue-edit.7
+man/man7/jira-issue-link-remote.7
 man/man7/jira-issue-link.7
 man/man7/jira-issue-list.7
 man/man7/jira-issue-move.7
@@ -29,6 +30,7 @@ man/man7/jira-me.7
 man/man7/jira-open.7
 man/man7/jira-project-list.7
 man/man7/jira-project.7
+man/man7/jira-serverinfo.7
 man/man7/jira-sprint-add.7
 man/man7/jira-sprint-list.7
 man/man7/jira-sprint.7
