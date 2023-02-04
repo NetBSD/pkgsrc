@@ -1,18 +1,19 @@
-$NetBSD: patch-src_app_qt_fixappdata.py,v 1.2 2023/02/01 20:13:31 wiz Exp $
+$NetBSD: patch-src_app_qt_fixappdata.py,v 1.3 2023/02/04 10:45:53 wiz Exp $
 
-Fix
-UnicodeDecodeError: 'ascii' codec can't decode byte 0xd9 in position 305: ordinal not in range(128)
-
-https://bugs.kde.org/show_bug.cgi?id=465144
+https://invent.kde.org/multimedia/kid3/-/commit/cdc47207d2807f47222e904e441f95a523724ed1
 
 --- src/app/qt/fixappdata.py.orig	2023-01-12 03:56:49.000000000 +0000
 +++ src/app/qt/fixappdata.py
-@@ -5,7 +5,7 @@ import sys
+@@ -5,9 +5,9 @@ import sys
  
  
  def fix_appdata():
 -    for line in fileinput.input():
-+    for line in fileinput.input(encoding="utf-8"):
-         line = line.replace('kid3.desktop', 'kid3-qt.desktop')
-         sys.stdout.write(line)
+-        line = line.replace('kid3.desktop', 'kid3-qt.desktop')
+-        sys.stdout.write(line)
++    for line in fileinput.input(mode='rb'):
++        line = line.replace(b'kid3.desktop', b'kid3-qt.desktop')
++        sys.stdout.buffer.write(line)
  
+ if __name__ == '__main__':
+     fix_appdata()
