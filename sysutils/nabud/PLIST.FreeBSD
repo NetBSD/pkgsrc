@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST.FreeBSD,v 1.1 2023/02/04 23:43:53 thorpej Exp $
+share/nabud/rc.conf.d/nabud
+share/nabud/rc.d/nabud
