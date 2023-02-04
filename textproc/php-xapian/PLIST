@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/07/10 17:34:04 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/02/04 14:28:19 schmonz Exp $
 ${PHP_EXTENSION_DIR}/xapian.a
 ${PHP_EXTENSION_DIR}/xapian.so
 share/doc/xapian-bindings/php/examples/simpleexpand.php${PKG_PHP_MAJOR_VERS}
@@ -6,4 +6,3 @@ share/doc/xapian-bindings/php/examples/simpleindex.php${PKG_PHP_MAJOR_VERS}
 share/doc/xapian-bindings/php/examples/simplematchdecider.php${PKG_PHP_MAJOR_VERS}
 share/doc/xapian-bindings/php/examples/simplesearch.php${PKG_PHP_MAJOR_VERS}
 share/doc/xapian-bindings/php/index.html
-share/php${PHP_5_OR_EMPTY}/xapian.php
