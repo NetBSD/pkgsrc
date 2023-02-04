@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.2048 2023/01/24 14:31:46 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.2049 2023/02/04 08:38:28 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -757,6 +757,19 @@ show-license show-licence: .PHONY
 		${ECHO} "Generic $$license information not available";	\
 		${ECHO} "See the package description (pkg_info -d ${PKGNAME}) for more information."; \
 	fi
+.endif
+
+.if !target(show-license-status)
+show-license-status show-licence-status: .PHONY
+	@${ECHO} "The license of this package is ${LICENSE}."
+.if ${DEFAULT_ACCEPTABLE_LICENSES:M${LICENSE}}
+	@${ECHO}; \
+	${ECHO} "This license is in DEFAULT_ACCEPTABLE_LICENSES."
+.endif
+.if ${ACCEPTABLE_LICENSES:M${LICENSE}}
+	@${ECHO}; \
+	${ECHO} "This license is in ACCEPTABLE_LICENSES."
+.endif
 .endif
 
 # This target is defined in bsd.options.mk for packages that use
