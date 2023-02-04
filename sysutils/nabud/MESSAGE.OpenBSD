@@ -1,0 +1,8 @@
+===========================================================================
+$NetBSD: MESSAGE.OpenBSD,v 1.1 2023/02/04 23:43:53 thorpej Exp $
+
+An example rc.d file for OpenBSD is located at:
+
+	${PREFIX}/share/nabud/rc.d/nabud
+
+===========================================================================

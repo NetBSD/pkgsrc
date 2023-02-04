@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2023/01/15 21:41:34 thorpej Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/02/04 23:43:53 thorpej Exp $
 bin/nabuctl
+man/man1/nabuctl.1
+man/man8/nabud.8
 sbin/nabud
 share/nabud/examples/nabud.conf
