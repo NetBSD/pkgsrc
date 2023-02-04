@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:22:20 nia Exp $
+$NetBSD: distinfo,v 1.6 2023/02/04 13:05:15 nia Exp $
 
-BLAKE2s (lyaml-6.2.7.tar.gz) = ad5014759ce9d4544633c000ce838a47b1b8c6948b52a0c9cba567e6ae86bef3
-SHA512 (lyaml-6.2.7.tar.gz) = a2ee9eefd5fdeda5ddfd1b1cfbd2d2d09beeb13597e63a57a21687fa367c51a574f2cc2cde29faab2cd3e3ead8783f25e8eace6c0cfa13152f6ba00b8b4b4c5b
-Size (lyaml-6.2.7.tar.gz) = 49264 bytes
+BLAKE2s (lyaml-6.2.8.tar.gz) = 15e5a5c670dabdb8dc145bd794079c92660449048fe88e430c29d46e52b52f07
+SHA512 (lyaml-6.2.8.tar.gz) = d9166d89f2275a1050218425c1365d6bda42294ab2629c71da3a2007eac7e8018e13d6e69181ea204eb7f051a49533e4b67227468b161df1f3450a073e2dbeab
+Size (lyaml-6.2.8.tar.gz) = 49528 bytes
