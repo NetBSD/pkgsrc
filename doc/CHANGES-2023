@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1002 2023/02/04 15:20:14 fox Exp $
+$NetBSD: CHANGES-2023,v 1.1003 2023/02/04 15:38:53 nia Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1264,3 +1264,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/puppet to 7.22.0 [taca 2023-02-04]
 	Updated audio/fasttracker2 to 1.63 [fox 2023-02-04]
 	Updated security/wolfssl to 5.5.4 [fox 2023-02-04]
+	Updated audio/strawberry to 1.0.14 [nia 2023-02-04]
