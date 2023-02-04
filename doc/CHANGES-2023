@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1004 2023/02/04 15:50:09 fox Exp $
+$NetBSD: CHANGES-2023,v 1.1005 2023/02/04 16:11:23 fox Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1266,3 +1266,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/wolfssl to 5.5.4 [fox 2023-02-04]
 	Updated audio/strawberry to 1.0.14 [nia 2023-02-04]
 	Updated www/jira-cli to 1.3.0 [fox 2023-02-04]
+	Updated audio/din to 56 [fox 2023-02-04]
