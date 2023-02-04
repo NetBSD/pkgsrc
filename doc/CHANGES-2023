@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.992 2023/02/04 13:38:27 taca Exp $
+$NetBSD: CHANGES-2023,v 1.993 2023/02/04 13:55:02 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1254,3 +1254,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/ruby-commonmarker to 0.23.8 [taca 2023-02-04]
 	Updated textproc/ruby-sanitize to 6.0.1 [taca 2023-02-04]
 	Updated www/ruby-webrick to 1.8.1 [taca 2023-02-04]
+	Added www/ruby-faraday-follow_redirects version 0.3.0 [taca 2023-02-04]
