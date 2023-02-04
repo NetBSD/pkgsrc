@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1010 2023/02/04 20:09:09 pin Exp $
+$NetBSD: CHANGES-2023,v 1.1011 2023/02/04 20:11:58 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1273,3 +1273,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/firefox to 109.0.1 [ryoon 2023-02-04]
 	Updated www/firefox-l10n to 109.0.1 [ryoon 2023-02-04]
 	Updated audio/spotify-player to 0.11.0 [pin 2023-02-04]
+	Updated textproc/csvlens to 0.1.11 [pin 2023-02-04]
