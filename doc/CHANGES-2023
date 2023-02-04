@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.999 2023/02/04 14:38:54 taca Exp $
+$NetBSD: CHANGES-2023,v 1.1000 2023/02/04 14:41:39 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1261,3 +1261,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/xapian to 1.4.22 [schmonz 2023-02-04]
 	Updated textproc/xapian-omega to 1.4.22 [schmonz 2023-02-04]
 	Added devel/ruby-concurrent-ruby11 version 1.1.10 [taca 2023-02-04]
+	Updated sysutils/puppet to 7.22.0 [taca 2023-02-04]
