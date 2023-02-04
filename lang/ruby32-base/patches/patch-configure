@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.1 2023/01/21 13:51:23 taca Exp $
+$NetBSD: patch-configure,v 1.2 2023/02/04 12:10:26 jperkin Exp $
 
 * Avoid bash specific variable substitution.
 * Adding Interix support.
@@ -8,6 +8,7 @@ $NetBSD: patch-configure,v 1.1 2023/01/21 13:51:23 taca Exp $
 * Retain _XOPEN_SOURCE, fixes eventmachine.
 * Fix argument for pthread_self() on NetBSD.
 * Explictly stop display with color.
+* Remove bogus MJIT disabling on SunOS.
 
 --- configure.orig	2022-12-25 06:55:27.000000000 +0000
 +++ configure
@@ -126,6 +127,15 @@ $NetBSD: patch-configure,v 1.1 2023/01/21 13:51:23 taca Exp $
      `
      LIBRUBY_RPATHFLAGS="$LIBRUBY_RPATHFLAGS${rpathflag}"
      LIBRUBYARG_SHARED="$LIBRUBY_RPATHFLAGS $LIBRUBYARG_SHARED"
+@@ -32603,7 +32608,7 @@ then :
+   enableval=$enable_jit_support; MJIT_SUPPORT=$enableval
+ else $as_nop
+   case "$target_os" in #(
+-  wasi | mingw* | solaris*) :
++  wasi | mingw*) :
+     MJIT_SUPPORT=no ;; #(
+   *) :
+     MJIT_SUPPORT=yes
 @@ -33885,7 +33890,7 @@ guard=INCLUDE_RUBY_CONFIG_H
  (
    if test "x$CONFIGURE_TTY" = xyes
@@ -135,7 +145,7 @@ $NetBSD: patch-configure,v 1.1 2023/01/21 13:51:23 taca Exp $
  else $as_nop
    color=
  fi
-@@ -35124,21 +35129,7 @@ which seems to be undefined.  Please mak
+@@ -35124,21 +35131,7 @@ which seems to be undefined.  Please mak
      "Makefile":F)
      tmpmk=confmk$$.tmp
      {
