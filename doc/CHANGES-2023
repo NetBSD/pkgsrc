@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.975 2023/02/04 02:07:18 tsutsui Exp $
+$NetBSD: CHANGES-2023,v 1.976 2023/02/04 08:13:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1237,3 +1237,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/broot to 1.20.0 [pin 2023-02-03]
 	Updated textproc/zet to 0.2.6 [pin 2023-02-03]
 	Updated textproc/ruby-nokogiri to 1.14.1 [tsutsui 2023-02-04]
+	Downgraded devel/pkgconf to 1.8.0 [wiz 2023-02-02]
