@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.986 2023/02/04 13:02:31 taca Exp $
+$NetBSD: CHANGES-2023,v 1.987 2023/02/04 13:04:52 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1248,3 +1248,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/ruby-aws-partitions to 1.705.0 [taca 2023-02-04]
 	Updated www/ruby-aws-sdk-core to 3.170.0 [taca 2023-02-04]
 	Updated www/ruby-aws-sdk-s3 to 1.119.0 [taca 2023-02-04]
+	Updated www/ruby-excon to 0.99.0 [taca 2023-02-04]
