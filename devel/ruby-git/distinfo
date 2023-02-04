@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2023/01/15 15:27:58 taca Exp $
+$NetBSD: distinfo,v 1.3 2023/02/04 09:44:18 taca Exp $
 
-BLAKE2s (git-1.13.1.gem) = f07bdb9fb8d41287fe5bfc5cbdaa74842f86691a4ba7ec612b7b70b39335c41b
-SHA512 (git-1.13.1.gem) = 1d55161fae200af1d5bdc8f46b2a27fa1ac5efdaaa80137e2f97f4c7cd08382592dba9e19729c769221205f86e94edf76044b0b4b2aeb05def8924822fb1329e
-Size (git-1.13.1.gem) = 43520 bytes
+BLAKE2s (git-1.13.2.gem) = 3c22b15b34c2bc2c91fb6145eb13d32a0b1304621c638e6bcda3dc0f655fcee6
+SHA512 (git-1.13.2.gem) = a9360ef27ebb07434d7ce14099f40d5c4e0b7bee4a3970a181160e9b5dda59f3b93cc3dd990b5c3770b13c0dbc7e7bf6ca0925cd562bf4e73cd141505601b468
+Size (git-1.13.2.gem) = 44032 bytes
