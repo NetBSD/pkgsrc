@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1008 2023/02/04 17:15:13 ryoon Exp $
+$NetBSD: CHANGES-2023,v 1.1009 2023/02/04 17:16:13 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1271,3 +1271,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated games/etlegacy to 2.81.0 [nia 2023-02-04]
 	Updated sysutils/py-Glances to 3.3.1.1 [fox 2023-02-04]
 	Updated www/firefox to 109.0.1 [ryoon 2023-02-04]
+	Updated www/firefox-l10n to 109.0.1 [ryoon 2023-02-04]
