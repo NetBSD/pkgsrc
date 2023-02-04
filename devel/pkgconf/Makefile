@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2023/02/04 08:09:35 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2023/02/04 14:08:03 wiz Exp $
 
-DISTNAME=	pkgconf-1.8.0
+DISTNAME=	pkgconf-1.9.4
 CATEGORIES=	devel
 MASTER_SITES=	https://distfiles.dereferenced.org/pkgconf/
 
@@ -20,6 +20,10 @@ MAKE_FLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR}/man1
 PKGCONFIG_PATHS=	${PREFIX}/lib/pkgconfig
 PKGCONFIG_PATHS+=	${PREFIX}/share/pkgconfig
 PKGCONFIG_PATHS+=	/usr/lib/pkgconfig
+
+# for reallocarray
+# https://github.com/pkgconf/pkgconf/issues/285
+CPPFLAGS.NetBSD+=	-D_OPENBSD_SOURCE
 
 .include "../../mk/bsd.prefs.mk"
 
