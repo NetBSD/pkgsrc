@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.989 2023/02/04 13:23:35 taca Exp $
+$NetBSD: CHANGES-2023,v 1.990 2023/02/04 13:29:52 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1251,3 +1251,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/ruby-excon to 0.99.0 [taca 2023-02-04]
 	Updated textproc/lua-lyaml to 6.2.8 [nia 2023-02-04]
 	Updated textproc/cmark-gfm to 0.29.0.gfm.9 [taca 2023-02-04]
+	Updated textproc/ruby-commonmarker to 0.23.8 [taca 2023-02-04]
