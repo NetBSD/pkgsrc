@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.996 2023/02/04 14:08:14 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.997 2023/02/04 14:29:16 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1258,3 +1258,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/ruby-inspec-core to 5.21.29 [taca 2023-02-04]
 	Updated sysutils/ruby-specinfra to 2.84.1 [taca 2023-02-04]
 	Updated devel/pkgconf to 1.9.4 [wiz 2023-02-04]
+	Updated textproc/xapian to 1.4.22 [schmonz 2023-02-04]
