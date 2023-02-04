@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2023/01/19 13:58:19 taca Exp $
+# $NetBSD: Makefile,v 1.15 2023/02/04 09:53:08 taca Exp $
 
-DISTNAME=	globalid-1.0.1
+DISTNAME=	globalid-1.1.0
 CATEGORIES=	devel
 
 MAINTAINER=	minskim@NetBSD.org
@@ -10,7 +10,7 @@ LICENSE=	mit
 
 DEPENDS+=	${RUBY_ACTIVESUPPORT_DEPENDS}
 
-USE_LANGAGES=	# none
+USE_LANGUAGES=	# none
 
 RUBY_RAILS_ACCEPTED=	# empty
 
