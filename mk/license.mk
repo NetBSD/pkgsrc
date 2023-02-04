@@ -1,4 +1,4 @@
-# $NetBSD: license.mk,v 1.115 2022/07/15 00:51:13 gutteridge Exp $
+# $NetBSD: license.mk,v 1.116 2023/02/04 08:38:28 wiz Exp $
 #
 # This file handles everything about the LICENSE variable. It is
 # included automatically by bsd.pkg.mk.
@@ -9,6 +9,14 @@
 #
 # XXX: Some of this content arguably belongs in the pkgsrc guide
 # instead.
+#
+# The following targets are provided in connection with this file:
+#
+# show-license          displaythe license for the current package
+#
+# show-license-status   show license name and if it is part of
+#                       ACCEPTABLE_LICENSES and
+#                       DEFAULT_ACCEPTABLE_LICENSES
 #
 # User-settable variables:
 #
