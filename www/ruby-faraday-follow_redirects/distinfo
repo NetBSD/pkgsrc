@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/02/04 13:53:57 taca Exp $
+
+BLAKE2s (faraday-follow_redirects-0.3.0.gem) = b465d4b6aa9f47c130bb76799fda9ca4facdcb230563ec830ba89aa26d090ce0
+SHA512 (faraday-follow_redirects-0.3.0.gem) = bfce9286e2c94c23174b368f8cd6ae35a5b2cbc1802d23bff2cc74476e5b4585dc3561dc566ccf7f47b3966cc4d1dc582cf182024c3220933b17051141e952b9
+Size (faraday-follow_redirects-0.3.0.gem) = 8704 bytes
