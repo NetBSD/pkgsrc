@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/10/03 17:03:30 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/02/04 12:26:48 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.pullreview.yml
@@ -12,6 +12,8 @@ ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/lib/windows_error.rb
 ${GEM_LIBDIR}/lib/windows_error/error_code.rb
+${GEM_LIBDIR}/lib/windows_error/h_result.rb
+${GEM_LIBDIR}/lib/windows_error/h_result/facility.rb
 ${GEM_LIBDIR}/lib/windows_error/nt_status.rb
 ${GEM_LIBDIR}/lib/windows_error/version.rb
 ${GEM_LIBDIR}/lib/windows_error/win32.rb
