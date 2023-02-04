@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2022/08/28 04:06:24 taca Exp $
+$NetBSD: distinfo,v 1.6 2023/02/04 12:26:48 taca Exp $
 
-BLAKE2s (windows_error-0.1.4.gem) = f91d71d9e57a86bccdc0263d30dc58a9a9eea81bb2ae46786c738a9abceaf95a
-SHA512 (windows_error-0.1.4.gem) = 5731fe7a10264244066d0b282bd273c265519a483c3d6be848c32edb834714b151f1536ae7e16527a0f7fe410ca5f9d3f7dc9dff98a8b175a847a7fd77938a95
-Size (windows_error-0.1.4.gem) = 227328 bytes
+BLAKE2s (windows_error-0.1.5.gem) = 58c095efc8caff6a6bd9614e665d1e1ef3d0491fd42d9f7b5eb3ab04c9e5af8f
+SHA512 (windows_error-0.1.5.gem) = c79d0d7fb1968edac9868e542b4a81d62b4dd549de0e1be3a60ca41cf8b949dbab5f32cf4bfdd6697ce1c48ce8d37ccaa4d91a490d0c3f4a263ebd589cd8b027
+Size (windows_error-0.1.5.gem) = 359936 bytes
