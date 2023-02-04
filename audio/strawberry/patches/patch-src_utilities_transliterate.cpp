@@ -1,12 +1,12 @@
-$NetBSD: patch-src_core_utilities.cpp,v 1.1 2022/06/22 09:36:49 nia Exp $
+$NetBSD: patch-src_utilities_transliterate.cpp,v 1.1 2023/02/04 15:38:39 nia Exp $
 
 Support non-POSIX iconv prototype in NetBSD 9/earlier and SunOS.
 
---- src/core/utilities.cpp.orig	2022-06-22 09:33:19.522006535 +0000
-+++ src/core/utilities.cpp
-@@ -103,6 +103,15 @@
- #  include "scoped_cftyperef.h"
- #endif
+--- src/utilities/transliterate.cpp.orig	2022-12-28 21:54:04.427431913 +0000
++++ src/utilities/transliterate.cpp
+@@ -34,6 +34,15 @@
+ 
+ #include "transliterate.h"
  
 +#if defined(__NetBSD__)
 +#include <sys/param.h>
@@ -19,8 +19,8 @@ Support non-POSIX iconv prototype in NetBSD 9/earlier and SunOS.
 +
  namespace Utilities {
  
- static QString tr(const char *str) {
-@@ -807,7 +816,11 @@ QString UnicodeToAscii(const QString &un
+ QString Transliterate(const QString &accented_str) {
+@@ -76,7 +85,11 @@ QString Transliterate(const QString &acc
  
    snprintf(input, input_len, "%s", utf8.constData());
  
