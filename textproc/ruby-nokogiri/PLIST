@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.38 2022/10/30 07:43:56 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.39 2023/02/04 02:07:05 tsutsui Exp $
 bin/nokogiri${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
@@ -63,9 +63,9 @@ ${GEM_LIBDIR}/gumbo-parser/src/error.c
 ${GEM_LIBDIR}/gumbo-parser/src/error.h
 ${GEM_LIBDIR}/gumbo-parser/src/foreign_attrs.c
 ${GEM_LIBDIR}/gumbo-parser/src/foreign_attrs.gperf
-${GEM_LIBDIR}/gumbo-parser/src/gumbo.h
 ${GEM_LIBDIR}/gumbo-parser/src/insertion_mode.h
 ${GEM_LIBDIR}/gumbo-parser/src/macros.h
+${GEM_LIBDIR}/gumbo-parser/src/nokogiri_gumbo.h
 ${GEM_LIBDIR}/gumbo-parser/src/parser.c
 ${GEM_LIBDIR}/gumbo-parser/src/parser.h
 ${GEM_LIBDIR}/gumbo-parser/src/replacement.h
@@ -104,6 +104,7 @@ ${GEM_LIBDIR}/lib/nokogiri/css/tokenizer.rb
 ${GEM_LIBDIR}/lib/nokogiri/css/tokenizer.rex
 ${GEM_LIBDIR}/lib/nokogiri/css/xpath_visitor.rb
 ${GEM_LIBDIR}/lib/nokogiri/decorators/slop.rb
+${GEM_LIBDIR}/lib/nokogiri/encoding_handler.rb
 ${GEM_LIBDIR}/lib/nokogiri/extension.rb
 ${GEM_LIBDIR}/lib/nokogiri/gumbo.rb
 ${GEM_LIBDIR}/lib/nokogiri/html.rb
@@ -113,6 +114,7 @@ ${GEM_LIBDIR}/lib/nokogiri/html4/document.rb
 ${GEM_LIBDIR}/lib/nokogiri/html4/document_fragment.rb
 ${GEM_LIBDIR}/lib/nokogiri/html4/element_description.rb
 ${GEM_LIBDIR}/lib/nokogiri/html4/element_description_defaults.rb
+${GEM_LIBDIR}/lib/nokogiri/html4/encoding_reader.rb
 ${GEM_LIBDIR}/lib/nokogiri/html4/entity_lookup.rb
 ${GEM_LIBDIR}/lib/nokogiri/html4/sax/parser.rb
 ${GEM_LIBDIR}/lib/nokogiri/html4/sax/parser_context.rb
@@ -122,6 +124,7 @@ ${GEM_LIBDIR}/lib/nokogiri/html5/document.rb
 ${GEM_LIBDIR}/lib/nokogiri/html5/document_fragment.rb
 ${GEM_LIBDIR}/lib/nokogiri/html5/node.rb
 ${GEM_LIBDIR}/lib/nokogiri/jruby/dependencies.rb
+${GEM_LIBDIR}/lib/nokogiri/jruby/nokogiri_jars.rb
 ${GEM_LIBDIR}/lib/nokogiri/nokogiri.${RUBY_DLEXT}
 ${GEM_LIBDIR}/lib/nokogiri/syntax_error.rb
 ${GEM_LIBDIR}/lib/nokogiri/version.rb
@@ -170,7 +173,6 @@ ${GEM_LIBDIR}/lib/xsd/xmlparser/nokogiri.rb
 ${GEM_LIBDIR}/patches/libxml2/0001-Remove-script-macro-support.patch
 ${GEM_LIBDIR}/patches/libxml2/0002-Update-entities-to-remove-handling-of-ssi.patch
 ${GEM_LIBDIR}/patches/libxml2/0003-libxml2.la-is-in-top_builddir.patch
-${GEM_LIBDIR}/patches/libxml2/0005-avoid-isnan-isinf.patch
 ${GEM_LIBDIR}/patches/libxml2/0009-allow-wildcard-namespaces.patch
 ${GEM_LIBDIR}/patches/libxslt/0001-update-automake-files-for-arm64.patch
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
