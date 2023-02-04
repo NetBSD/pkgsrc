@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2020/01/15 06:29:58 pho Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/02/04 13:23:05 taca Exp $
 bin/cmark-gfm
 include/cmark-gfm-core-extensions.h
 include/cmark-gfm-extension_api.h
-include/cmark-gfm-extensions_export.h
 include/cmark-gfm.h
 include/cmark-gfm_export.h
 include/cmark-gfm_version.h
@@ -12,10 +11,10 @@ lib/cmake/cmark-gfm-release.cmake
 lib/cmake/cmark-gfm.cmake
 lib/libcmark-gfm-extensions.a
 lib/libcmark-gfm-extensions.so
-lib/libcmark-gfm-extensions.so.${PKGVERSION}
+lib/libcmark-gfm-extensions.so.0.29.0.gfm.6
 lib/libcmark-gfm.a
 lib/libcmark-gfm.so
-lib/libcmark-gfm.so.${PKGVERSION}
+lib/libcmark-gfm.so.0.29.0.gfm.6
 lib/pkgconfig/libcmark-gfm.pc
 man/man1/cmark-gfm.1
 man/man3/cmark-gfm.3
