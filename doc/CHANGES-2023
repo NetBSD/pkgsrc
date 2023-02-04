@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1013 2023/02/04 21:39:51 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1014 2023/02/04 23:44:40 thorpej Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1276,3 +1276,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/csvlens to 0.1.11 [pin 2023-02-04]
 	Updated www/hackernews-tui to 0.12.0 [pin 2023-02-04]
 	Updated x11/libX11 to 1.8.4 [wiz 2023-02-04]
+	Updated sysutils/nabud to 1.0 [thorpej 2023-02-04]
