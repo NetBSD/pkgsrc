@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2021/01/18 15:41:09 taca Exp $
+# $NetBSD: Makefile,v 1.19 2023/02/04 13:37:57 taca Exp $
 
-DISTNAME=	webrick-1.7.0
+DISTNAME=	webrick-1.8.1
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
