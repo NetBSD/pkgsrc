@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2022/12/04 15:18:12 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2023/02/04 13:57:06 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
@@ -40,6 +40,7 @@ ${GEM_LIBDIR}/lib/inspec/describe_base.rb
 ${GEM_LIBDIR}/lib/inspec/dist.rb
 ${GEM_LIBDIR}/lib/inspec/dsl.rb
 ${GEM_LIBDIR}/lib/inspec/dsl_shared.rb
+${GEM_LIBDIR}/lib/inspec/enhanced_outcomes.rb
 ${GEM_LIBDIR}/lib/inspec/env_printer.rb
 ${GEM_LIBDIR}/lib/inspec/errors.rb
 ${GEM_LIBDIR}/lib/inspec/exceptions.rb
@@ -217,6 +218,12 @@ ${GEM_LIBDIR}/lib/inspec/resources/passwd.rb
 ${GEM_LIBDIR}/lib/inspec/resources/php_config.rb
 ${GEM_LIBDIR}/lib/inspec/resources/pip.rb
 ${GEM_LIBDIR}/lib/inspec/resources/platform.rb
+${GEM_LIBDIR}/lib/inspec/resources/podman.rb
+${GEM_LIBDIR}/lib/inspec/resources/podman_container.rb
+${GEM_LIBDIR}/lib/inspec/resources/podman_image.rb
+${GEM_LIBDIR}/lib/inspec/resources/podman_network.rb
+${GEM_LIBDIR}/lib/inspec/resources/podman_pod.rb
+${GEM_LIBDIR}/lib/inspec/resources/podman_volume.rb
 ${GEM_LIBDIR}/lib/inspec/resources/port.rb
 ${GEM_LIBDIR}/lib/inspec/resources/postfix_conf.rb
 ${GEM_LIBDIR}/lib/inspec/resources/postgres.rb
@@ -318,6 +325,7 @@ ${GEM_LIBDIR}/lib/inspec/utils/nginx_parser.rb
 ${GEM_LIBDIR}/lib/inspec/utils/object_traversal.rb
 ${GEM_LIBDIR}/lib/inspec/utils/parser.rb
 ${GEM_LIBDIR}/lib/inspec/utils/pkey_reader.rb
+${GEM_LIBDIR}/lib/inspec/utils/podman.rb
 ${GEM_LIBDIR}/lib/inspec/utils/run_data_filters.rb
 ${GEM_LIBDIR}/lib/inspec/utils/simpleconfig.rb
 ${GEM_LIBDIR}/lib/inspec/utils/spdx.rb
@@ -327,8 +335,12 @@ ${GEM_LIBDIR}/lib/inspec/utils/telemetry/collector.rb
 ${GEM_LIBDIR}/lib/inspec/utils/telemetry/data_series.rb
 ${GEM_LIBDIR}/lib/inspec/utils/telemetry/global_methods.rb
 ${GEM_LIBDIR}/lib/inspec/utils/telemetry/run_context_probe.rb
+${GEM_LIBDIR}/lib/inspec/utils/waivers/csv_file_reader.rb
+${GEM_LIBDIR}/lib/inspec/utils/waivers/excel_file_reader.rb
+${GEM_LIBDIR}/lib/inspec/utils/waivers/json_file_reader.rb
 ${GEM_LIBDIR}/lib/inspec/utils/yaml_profile_summary.rb
 ${GEM_LIBDIR}/lib/inspec/version.rb
+${GEM_LIBDIR}/lib/inspec/waiver_file_reader.rb
 ${GEM_LIBDIR}/lib/matchers/matchers.rb
 ${GEM_LIBDIR}/lib/plugins/README.md
 ${GEM_LIBDIR}/lib/plugins/inspec-compliance/README.md
@@ -369,6 +381,10 @@ ${GEM_LIBDIR}/lib/plugins/inspec-init/templates/plugins/inspec-plugin-template/l
 ${GEM_LIBDIR}/lib/plugins/inspec-init/templates/plugins/inspec-plugin-template/lib/inspec-plugin-template/reporter.erb
 ${GEM_LIBDIR}/lib/plugins/inspec-init/templates/plugins/inspec-plugin-template/lib/inspec-plugin-template/streaming_reporter.erb
 ${GEM_LIBDIR}/lib/plugins/inspec-init/templates/plugins/inspec-plugin-template/lib/inspec-plugin-template/version.erb
+${GEM_LIBDIR}/lib/plugins/inspec-init/templates/profiles/alicloud/README.md
+${GEM_LIBDIR}/lib/plugins/inspec-init/templates/profiles/alicloud/controls/example.rb
+${GEM_LIBDIR}/lib/plugins/inspec-init/templates/profiles/alicloud/inputs.yml
+${GEM_LIBDIR}/lib/plugins/inspec-init/templates/profiles/alicloud/inspec.yml
 ${GEM_LIBDIR}/lib/plugins/inspec-init/templates/profiles/aws/README.md
 ${GEM_LIBDIR}/lib/plugins/inspec-init/templates/profiles/aws/controls/example.rb
 ${GEM_LIBDIR}/lib/plugins/inspec-init/templates/profiles/aws/inputs.yml
