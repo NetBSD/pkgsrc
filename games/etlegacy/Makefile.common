@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.7 2022/04/17 09:24:14 nia Exp $
+# $NetBSD: Makefile.common,v 1.8 2023/02/04 16:13:26 nia Exp $
 # used by games/etlegacy/Makefile
 # used by games/etlegacy-server/Makefile
 
-ETL_VERSION=	2.80.0
+ETL_VERSION=	2.81.0
 CATEGORIES=	games
 
 DIST_SUBDIR=	etlegacy-${PKGVERSION_NOREV}
@@ -34,15 +34,18 @@ USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
 # use libraries from pkgsrc
+CMAKE_ARGS+=	-DBUNDLED_CJSON=OFF
 CMAKE_ARGS+=	-DBUNDLED_CURL=OFF
 CMAKE_ARGS+=	-DBUNDLED_FREETYPE=OFF
 CMAKE_ARGS+=	-DBUNDLED_GLEW=OFF
 CMAKE_ARGS+=	-DBUNDLED_JANSSON=OFF
 CMAKE_ARGS+=	-DBUNDLED_JPEG=OFF
 CMAKE_ARGS+=	-DBUNDLED_LUA=OFF
+CMAKE_ARGS+=	-DBUNDLED_MINIZIP=OFF
 CMAKE_ARGS+=	-DBUNDLED_OGG_VORBIS=OFF
 CMAKE_ARGS+=	-DBUNDLED_OPENAL=OFF
 CMAKE_ARGS+=	-DBUNDLED_OPENSSL=OFF
+CMAKE_ARGS+=	-DBUNDLED_PNG=OFF
 CMAKE_ARGS+=	-DBUNDLED_SDL=OFF
 CMAKE_ARGS+=	-DBUNDLED_SQLITE3=OFF
 CMAKE_ARGS+=	-DBUNDLED_THEORA=OFF
@@ -91,7 +94,9 @@ post-extract:
 	${MV} ${WRKDIR}/etlegacy-libs-${LIBS_TAG}/* \
 	    ${WRKDIR}/etlegacy-${PKGVERSION_NOREV}/libs
 
+.include "../../archivers/minizip/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../textproc/cJSON/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
