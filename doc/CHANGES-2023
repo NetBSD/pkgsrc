@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.991 2023/02/04 13:33:35 taca Exp $
+$NetBSD: CHANGES-2023,v 1.992 2023/02/04 13:38:27 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1253,3 +1253,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/cmark-gfm to 0.29.0.gfm.9 [taca 2023-02-04]
 	Updated textproc/ruby-commonmarker to 0.23.8 [taca 2023-02-04]
 	Updated textproc/ruby-sanitize to 6.0.1 [taca 2023-02-04]
+	Updated www/ruby-webrick to 1.8.1 [taca 2023-02-04]
