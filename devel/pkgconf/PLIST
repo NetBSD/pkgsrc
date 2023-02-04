@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.8 2023/02/04 08:09:35 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2023/02/04 14:08:03 wiz Exp $
+bin/bomtool
 bin/pkg-config
 bin/pkgconf
 include/pkgconf/libpkgconf/bsdstubs.h
