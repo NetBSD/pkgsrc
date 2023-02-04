@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.3 2022/08/01 14:34:15 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.4 2023/02/04 20:11:25 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-0.7.18
 CARGO_CRATE_DEPENDS+=	anyhow-1.0.56
@@ -11,10 +11,12 @@ CARGO_CRATE_DEPENDS+=	cfg-if-1.0.0
 CARGO_CRATE_DEPENDS+=	clap-3.1.6
 CARGO_CRATE_DEPENDS+=	clap_derive-3.1.4
 CARGO_CRATE_DEPENDS+=	crossterm-0.23.2
+CARGO_CRATE_DEPENDS+=	crossterm-0.26.0
 CARGO_CRATE_DEPENDS+=	crossterm_winapi-0.9.0
 CARGO_CRATE_DEPENDS+=	csv-1.1.6
 CARGO_CRATE_DEPENDS+=	csv-core-0.1.10
 CARGO_CRATE_DEPENDS+=	fastrand-1.7.0
+CARGO_CRATE_DEPENDS+=	filedescriptor-0.8.2
 CARGO_CRATE_DEPENDS+=	hashbrown-0.11.2
 CARGO_CRATE_DEPENDS+=	heck-0.4.0
 CARGO_CRATE_DEPENDS+=	hermit-abi-0.1.19
@@ -51,6 +53,8 @@ CARGO_CRATE_DEPENDS+=	syn-1.0.89
 CARGO_CRATE_DEPENDS+=	tempfile-3.3.0
 CARGO_CRATE_DEPENDS+=	termcolor-1.1.3
 CARGO_CRATE_DEPENDS+=	textwrap-0.15.0
+CARGO_CRATE_DEPENDS+=	thiserror-1.0.38
+CARGO_CRATE_DEPENDS+=	thiserror-impl-1.0.38
 CARGO_CRATE_DEPENDS+=	tui-0.18.0
 CARGO_CRATE_DEPENDS+=	unicode-segmentation-1.9.0
 CARGO_CRATE_DEPENDS+=	unicode-width-0.1.9
