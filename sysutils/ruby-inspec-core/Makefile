@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2023/01/09 07:59:47 taca Exp $
+# $NetBSD: Makefile,v 1.19 2023/02/04 13:57:06 taca Exp $
 
-DISTNAME=	inspec-core-5.18.14
-PKGREVISION=	1
+DISTNAME=	inspec-core-5.21.29
 CATEGORIES=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -21,7 +20,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-hashie>=3.4:../../misc/ruby-hashie
 DEPENDS+=	${RUBY_PKGPREFIX}-mixlib-log>=3.0<4:../../devel/ruby-mixlib-log
 DEPENDS+=	${RUBY_PKGPREFIX}-sslshake>=1.2<2:../../security/ruby-sslshake
 DEPENDS+=	${RUBY_PKGPREFIX}-parallel>=1.9<2:../../misc/ruby-parallel
-DEPENDS+=	${RUBY_PKGPREFIX}-faraday_middleware>=1.0<2:../../www/ruby-faraday_middleware
+DEPENDS+=	${RUBY_PKGPREFIX}-faraday-follow_redirects>=0.3<1:../../www/ruby-faraday-follow_redirects
 DEPENDS+=	${RUBY_PKGPREFIX}-tty-table>=0.10<1:../../devel/ruby-tty-table
 DEPENDS+=	${RUBY_PKGPREFIX}-tty-prompt>=0.17<1:../../devel/ruby-tty-prompt
 DEPENDS+=	${RUBY_PKGPREFIX}-tomlrb>=1.2:../../devel/ruby-tomlrb
