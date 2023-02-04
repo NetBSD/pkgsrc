@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2022/12/05 11:20:37 pin Exp $
+$NetBSD: distinfo,v 1.7 2023/02/04 20:11:25 pin Exp $
 
 BLAKE2s (aho-corasick-0.7.18.crate) = 8925e88e2df4b5ca3b31783f527e1bb31dbe27846f409f631148fa239f3b2935
 SHA512 (aho-corasick-0.7.18.crate) = 7a23b16231a90d23ee60ad4c81bc225410599a4560d33d3a203138fc540c39cf1000100fed3aed40dcc371c3635656a3792545dca5dd1aefbde00d8774eebd00
@@ -33,6 +33,9 @@ Size (clap_derive-3.1.4.crate) = 25358 bytes
 BLAKE2s (crossterm-0.23.2.crate) = 3af83abff5e5211bf40f435ae725bf78adbbf76bd44418d334ce24c022d9c2ea
 SHA512 (crossterm-0.23.2.crate) = 3299e47dedc44988d2f0508a5d81345092f1495c1292994d237c7222b4b52fe91b98e12bfdd88b322242661eaec75857c59f13a430691d4aa867c0e3914254a3
 Size (crossterm-0.23.2.crate) = 106712 bytes
+BLAKE2s (crossterm-0.26.0.crate) = a4e7bcc6ab437702bc38379cc87d7f54c5265d6c3b97bb63c44428ac2cc22402
+SHA512 (crossterm-0.26.0.crate) = fb3e1f78f16c07e01c11ba89fd4ba004c2faef5e24d03c8eb54743b2b6faf7ffb622662303e7aac0f23be9b90514b886910b1eb9b148cd89c705ad06d9cc19dd
+Size (crossterm-0.26.0.crate) = 120697 bytes
 BLAKE2s (crossterm_winapi-0.9.0.crate) = 66dfac33e190f850bc4e3b08ffc5fc97efa584e35007e75d8ef748e901878781
 SHA512 (crossterm_winapi-0.9.0.crate) = b8c32a82cc83244e8991931e3fe0d85527ee2cc5e6b4a0839d633448dfa8a137c87684e8e079f44edf5a994355e0106bb573b36b57c7420ac5cb6fb0ce20ce8d
 Size (crossterm_winapi-0.9.0.crate) = 15561 bytes
@@ -42,12 +45,15 @@ Size (csv-1.1.6.crate) = 886999 bytes
 BLAKE2s (csv-core-0.1.10.crate) = ffdbc202de5f9cd9cfe4fc72995de3f6aa28f2d6086cc8ae8167fc9802da29e1
 SHA512 (csv-core-0.1.10.crate) = 2a269d050fbe5d9e0f5dcda2de1e84bfeb69538dde86040ad1ec7307a214eed813a1482acb5029a51f18126d384d5238355e021964e47811db971a0821bcc328
 Size (csv-core-0.1.10.crate) = 25668 bytes
-BLAKE2s (csvlens-0.1.10.tar.gz) = 0f99bc15796ebc1696d8d26120cfb65145879627cab45f09f60c6d6c8b764e31
-SHA512 (csvlens-0.1.10.tar.gz) = 686b2d434bfaf61f7b12ee1ae15509aa26223f08396eb843a553a071ed62dee4efb757ce589d939e4bf7b9090b214a6d0ca585708b8684b14b792c2aa7bb52bb
-Size (csvlens-0.1.10.tar.gz) = 284978 bytes
+BLAKE2s (csvlens-0.1.11.tar.gz) = 84cbfdcacfb57c69cc5680d7f333e983fd9af7e8b5d7c4e74ebc577fb219dd56
+SHA512 (csvlens-0.1.11.tar.gz) = 30012a75d72ec56a9ef6fa02a565e4322742d15cb6d625b92356bd4a4ca70198408741378e65fa8e062fe40ba1ec1e736370ab27c41f2ce0728981ed2a1b9c2e
+Size (csvlens-0.1.11.tar.gz) = 285093 bytes
 BLAKE2s (fastrand-1.7.0.crate) = 16894d1387a09d7f3575ec099db001d9e750e54426cd80fa084ce86174b27ecb
 SHA512 (fastrand-1.7.0.crate) = 6a1a8cd4f6f9bfff07a4ca18ef84839e4427ca9bf9b6733bb15b1b70cf2439820d6a770ae9f3e5e10166a6144449e37e6f3f6ed9acb761688207fd7c53d2c673
 Size (fastrand-1.7.0.crate) = 11265 bytes
+BLAKE2s (filedescriptor-0.8.2.crate) = 202a47fe3672d3d923bf5b9f469a449c1ea6e9d9bfc13cbe52ac7c7a7b60d983
+SHA512 (filedescriptor-0.8.2.crate) = dd808b8f26bff4d8b37826241f30c9396bb0f731a0fc3ef53ecb3bd0c0fb7adec6bfe5ff6ecebb6e02c9de6fc5f2f6c0fc361e9c6ba564708dd1c29ab2662f65
+Size (filedescriptor-0.8.2.crate) = 10830 bytes
 BLAKE2s (hashbrown-0.11.2.crate) = abc7a6572c0284c484fdb4f678d265bc7a1571c78272b16a4a924565bc14063c
 SHA512 (hashbrown-0.11.2.crate) = c21ca68fd49bbb741901f59fed04cc124b8da99e2a4dfc26e2e5e1140637872b344612a01691bd30cc771575c571be15f756c84dde225441699cd2322af2ad6c
 Size (hashbrown-0.11.2.crate) = 85713 bytes
@@ -156,6 +162,12 @@ Size (termcolor-1.1.3.crate) = 17242 bytes
 BLAKE2s (textwrap-0.15.0.crate) = 734e5db3c790dfa32c04434576cf457be02b7a9f4fedcdb343c84c37db1e7d00
 SHA512 (textwrap-0.15.0.crate) = f44271c542c22f17a4e3a459255f95e6c02d999f7d6bc8414d3973fd4ac9353aa4ef436932a45340738126905463d776902715feaa9329371f8a14f14b5a7bfd
 Size (textwrap-0.15.0.crate) = 52998 bytes
+BLAKE2s (thiserror-1.0.38.crate) = 0f15dfe5337ebc0b4bfeededbb80107802a0f6d761604a53a5b6ca69801f5664
+SHA512 (thiserror-1.0.38.crate) = 95b8ca682b579834a04058f03ed0c994ccef426d75e0fcc28ee47151d343da25e8fe31f8157744d942aa54652115f477fc6037f91c581dbc127b829cc96476ce
+Size (thiserror-1.0.38.crate) = 18947 bytes
+BLAKE2s (thiserror-impl-1.0.38.crate) = c68fe963e992d4b2c4fa5e9fad9be998e29d4373980dd0c64f932cf28b058d6c
+SHA512 (thiserror-impl-1.0.38.crate) = 628aa28404a181b384ac6a11a433829a5481d97face5bc1704349414f36e93440738122fca716fdf878719870d10e0cf8d495df6b1d40913e985c2824cbc3aba
+Size (thiserror-impl-1.0.38.crate) = 15429 bytes
 BLAKE2s (tui-0.18.0.crate) = 86152699f47fa3d09a7bc7478fbb543fc8b5e646e93e4bbc81119962de9ee8b2
 SHA512 (tui-0.18.0.crate) = 6cf86df7df5ad8bb06e60c33b5d93c46634fff66533e26bf095b1e976253eec047ee30b0e0256202cfc5b477afffa7e967701bb5c28fe46917020c4ee30bb8f5
 Size (tui-0.18.0.crate) = 139948 bytes
