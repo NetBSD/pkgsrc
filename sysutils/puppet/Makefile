@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.61 2022/12/31 16:21:51 taca Exp $
+# $NetBSD: Makefile,v 1.62 2023/02/04 14:41:12 taca Exp $
 
-DISTNAME=		puppet-7.21.0
-PKGREVISION=		2
+DISTNAME=		puppet-7.22.0
 CATEGORIES=		sysutils
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -16,7 +15,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-fast_gettext>=1.1:../../devel/ruby-fast_gettext
 DEPENDS+=	${RUBY_PKGPREFIX}-locale>=2.1<3:../../devel/ruby-locale
 DEPENDS+=	${RUBY_PKGPREFIX}-multi_json>=1.10<2:../../textproc/ruby-multi_json
 DEPENDS+=	${RUBY_PKGPREFIX}-puppet-resource_api>=1.5<2:../../sysutils/ruby-puppet-resource_api
-DEPENDS+=	${RUBY_PKGPREFIX}-concurrent-ruby>=1.0<2:../../devel/ruby-concurrent-ruby
+DEPENDS+=	${RUBY_PKGPREFIX}-concurrent-ruby11>=1.0<1.2.0:../../devel/ruby-concurrent-ruby11
 DEPENDS+=	${RUBY_PKGPREFIX}-deep_merge>=1.0<2:../../devel/ruby-deep_merge
 DEPENDS+=	${RUBY_PKGPREFIX}-scanf>=1.0.0<2:../../devel/ruby-scanf
 
