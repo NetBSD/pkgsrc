@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2022/09/11 17:44:59 fcambus Exp $
+# $NetBSD: Makefile,v 1.25 2023/02/04 09:25:50 kim Exp $
 
 DISTNAME=	tig-2.5.7
+PKGREVISION=	1
 CATEGORIES=	devel scm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jonas/}
 GITHUB_RELEASE=	${DISTNAME}
@@ -26,6 +27,9 @@ CONFIGURE_ENV+=	GIT_CONFIG=${GIT_CONFIG:Q}
 
 CONFIGURE_ARGS+=		${CONFIGURE_ARGS.${ICONV_TYPE}-iconv}
 CONFIGURE_ARGS.gnu-iconv=	--with-libiconv=${BUILDLINK_PREFIX.iconv}
+
+# FIXME:
+MAKE_FLAGS+=	XMLTO_FLAGS=--skip-validation
 
 .include "../../mk/bsd.prefs.mk"
 .if !empty(GLIBC_VERSION)
