@@ -1,4 +1,4 @@
-$NetBSD: patch-third__party_rust_libc_src_unix_bsd_netbsdlike_netbsd_mod.rs,v 1.1 2020/09/03 15:26:22 ryoon Exp $
+$NetBSD: patch-third__party_rust_libc_src_unix_bsd_netbsdlike_netbsd_mod.rs,v 1.2 2023/02/05 09:05:29 he Exp $
 
 --- third_party/rust/libc/src/unix/bsd/netbsdlike/netbsd/mod.rs.orig	2020-08-28 21:33:54.000000000 +0000
 +++ third_party/rust/libc/src/unix/bsd/netbsdlike/netbsd/mod.rs
@@ -10,10 +10,11 @@ $NetBSD: patch-third__party_rust_libc_src_unix_bsd_netbsdlike_netbsd_mod.rs,v 1.
  pub type blksize_t = i32;
  pub type fsblkcnt_t = u64;
  pub type fsfilcnt_t = u64;
-@@ -282,6 +283,30 @@ s_no_extra_traits! {
+@@ -619,6 +620,17 @@ s_no_extra_traits! {
+         pub ar_op: u16,
      }
  
-     #[repr(packed)]
++    #[repr(packed)]
 +    pub struct ipc_perm {
 +        pub cuid: ::uid_t,
 +        pub cgid: ::gid_t,
@@ -24,32 +25,20 @@ $NetBSD: patch-third__party_rust_libc_src_unix_bsd_netbsdlike_netbsd_mod.rs,v 1.
 +        pub key: ::key_t,
 +    }
 +
-+    #[repr(packed)]
-+    pub struct shmid_ds {
-+        pub shm_perm: ::ipc_perm,
-+        pub shm_segsz: ::size_t,
-+        pub shm_lpid: ::pid_t,
-+        pub shm_cpid: ::pid_t,
-+        pub shm_nattch: ::c_short,
-+        pub shm_atime: ::time_t,
-+        pub shm_dtime: ::time_t,
-+        pub shm_ctime: ::time_t,
-+        pub shm_internal: *mut ::c_void,
-+    }
-+
-+    #[repr(packed)]
      pub struct in_addr {
          pub s_addr: ::in_addr_t,
      }
-@@ -907,11 +932,18 @@ pub const SCM_CREDS: ::c_int = 0x10;
+@@ -1488,6 +1500,7 @@ pub const SCM_CREDS: ::c_int = 0x10;
  
- pub const O_DSYNC : ::c_int = 0x10000;
+ pub const O_DSYNC: ::c_int = 0x10000;
  
-+pub const MAP_ANONYMOUS : ::c_int = 0x1000;
- pub const MAP_RENAME : ::c_int = 0x20;
- pub const MAP_NORESERVE : ::c_int = 0x40;
- pub const MAP_HASSEMAPHORE : ::c_int = 0x200;
- pub const MAP_WIRED: ::c_int = 0x800;
++pub const MAP_ANONYMOUS: ::c_int =0x1000;
+ pub const MAP_RENAME: ::c_int = 0x20;
+ pub const MAP_NORESERVE: ::c_int = 0x40;
+ pub const MAP_HASSEMAPHORE: ::c_int = 0x200;
+@@ -1505,6 +1518,12 @@ pub const MAP_ALIGNMENT_64PB: ::c_int = 
+ // mremap flag
+ pub const MAP_REMAPDUP: ::c_int = 0x004;
  
 +pub const IPC_PRIVATE: ::key_t = 0;
 +pub const IPC_CREAT: ::c_int = 0x1000;
@@ -60,10 +49,10 @@ $NetBSD: patch-third__party_rust_libc_src_unix_bsd_netbsdlike_netbsd_mod.rs,v 1.
  pub const DCCP_TYPE_REQUEST: ::c_int = 0;
  pub const DCCP_TYPE_RESPONSE: ::c_int = 1;
  pub const DCCP_TYPE_DATA: ::c_int = 2;
-@@ -1583,6 +1615,13 @@ extern {
-                   pid: ::pid_t,
-                   addr: *mut ::c_void,
-                   data: ::c_int) -> ::c_int;
+@@ -2412,6 +2431,13 @@ extern "C" {
+     pub fn ptrace(request: ::c_int, pid: ::pid_t, addr: *mut ::c_void, data: ::c_int) -> ::c_int;
+     pub fn utrace(label: *const ::c_char, addr: *mut ::c_void, len: ::size_t) -> ::c_int;
+     pub fn pthread_getname_np(t: ::pthread_t, name: *mut ::c_char, len: ::size_t) -> ::c_int;
 +    pub fn shmget(key: ::key_t, size: ::size_t, shmflg: ::c_int) -> ::c_int;
 +    pub fn shmat(shmid: ::c_int, shmaddr: *const ::c_void,
 +        shmflg: ::c_int) -> *mut ::c_void;
@@ -71,6 +60,6 @@ $NetBSD: patch-third__party_rust_libc_src_unix_bsd_netbsdlike_netbsd_mod.rs,v 1.
 +    #[cfg_attr(target_os = "netbsd", link_name = "__shmctl50")]
 +    pub fn shmctl(shmid: ::c_int, cmd: ::c_int,
 +        buf: *mut ::shmid_ds) -> ::c_int;
-     pub fn pthread_setname_np(t: ::pthread_t,
-                               name: *const ::c_char,
-                               arg: *mut ::c_void) -> ::c_int;
+     pub fn pthread_setname_np(
+         t: ::pthread_t,
+         name: *const ::c_char,
