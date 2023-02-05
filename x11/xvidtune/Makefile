@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2017/09/06 09:10:36 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2023/02/05 00:00:21 wiz Exp $
 
-DISTNAME=	xvidtune-1.0.3
+DISTNAME=	xvidtune-1.0.4
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	${MASTER_SITE_XORG:=app/}
