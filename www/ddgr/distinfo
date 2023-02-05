@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2022/05/18 12:03:07 pin Exp $
+$NetBSD: distinfo,v 1.5 2023/02/05 19:22:57 pin Exp $
 
-BLAKE2s (ddgr-2.0.tar.gz) = e192e47e0401747df6eb3d515890749727defd370e68502b688ff23f3785ffb6
-SHA512 (ddgr-2.0.tar.gz) = 4b9905d7a1fe916b0512f0aa2d5dfbdcc761f3d657d8bea1e94d2372503f5f1e283d7255fae491bf8c1a99e58dbb25ccb11f8496c89823a24c2cdb32741916d6
-Size (ddgr-2.0.tar.gz) = 44463 bytes
+BLAKE2s (ddgr-2.1.tar.gz) = 4c8c93ea88dc58573a63fab056d37c61ccbe8328800f125b65127c954a4f3951
+SHA512 (ddgr-2.1.tar.gz) = 8ee2ce4bb5661d7324fe733023f4442a034cc6e247b4ed546ebb188c3218c3aff118b72d697e468d0fbad851497223dafdcd5c24a416e87ab66007ab4be5192d
+Size (ddgr-2.1.tar.gz) = 44726 bytes
