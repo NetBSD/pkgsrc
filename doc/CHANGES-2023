@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1018 2023/02/05 09:07:18 he Exp $
+$NetBSD: CHANGES-2023,v 1.1019 2023/02/05 09:39:19 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1282,3 +1282,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/apr-util to 1.6.3 [wiz 2023-02-05]
 	Added mail/thunderbird78 version 78.12.0nb11 [he 2023-02-05]
 	Updated mail/thunderbird to 102.6.1 [he 2023-02-05]
+	Updated devel/difftastic to 0.43.1 [pin 2023-02-05]
