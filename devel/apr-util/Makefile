@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.67 2023/01/31 18:44:01 wiz Exp $
+# $NetBSD: Makefile,v 1.68 2023/02/05 08:42:04 wiz Exp $
 
-DISTNAME=	apr-util-1.6.2
+DISTNAME=	apr-util-1.6.3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_APACHE:=apr/}
 EXTRACT_SUFX=	.tar.bz2
@@ -9,9 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://apr.apache.org/
 COMMENT=	Apache Portable Runtime utilities
 LICENSE=	apache-2.0
-
-# bug in 1.6.2 distfile
-WRKSRC=			${WRKDIR}/apr-util-1.6.2-rc3
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
