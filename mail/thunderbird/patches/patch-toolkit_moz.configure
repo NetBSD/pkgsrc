@@ -1,21 +1,22 @@
-$NetBSD: patch-toolkit_moz.configure,v 1.2 2020/09/03 15:26:22 ryoon Exp $
+$NetBSD: patch-toolkit_moz.configure,v 1.3 2023/02/05 09:05:29 he Exp $
 
 --- toolkit/moz.configure.orig	2020-08-28 21:33:59.000000000 +0000
 +++ toolkit/moz.configure
-@@ -804,11 +804,11 @@ set_config('MOZ_IPDL_TESTS',
+@@ -310,8 +310,6 @@ set_config("MOZ_OPENSL", imply_opensl, w
+ 
+ set_config("MOZ_OSS", imply_oss, when="--enable-audio-backends")
+ 
+-imply_option("--enable-pulseaudio", imply_pulseaudio, reason="--enable-audio-backends")
+-
+ imply_option("--enable-sndio", imply_sndio, reason="--enable-audio-backends")
+ 
+ set_config("MOZ_WASAPI", imply_wasapi, when="--enable-audio-backends")
+@@ -1099,7 +1097,7 @@ set_define("MOZ_WEBSPEECH_TEST_BACKEND",
  # ==============================================================
- option('--disable-skia', help='Disable use of Skia')
+ @depends(target, milestone)
+ def skia_pdf_default(target, milestone):
+-    return milestone.is_nightly and target.os != "WINNT"
++    return milestone.is_nightly and target.os != "WINNT" and target.endianness != 'big'
  
--@depends('--disable-skia')
--def skia(value):
--    if not value:
--        die('--disable-skia is not supported anymore')
--    else:
-+@depends('--disable-skia', target)
-+def skia(value, target):
-+    if value.origin == 'default' and target.endianness == 'big':
-+        return None
-+    if value:
-         return True
  
- set_config('MOZ_ENABLE_SKIA', skia)
+ option("--enable-skia-pdf", default=skia_pdf_default, help="{Enable|Disable} Skia PDF")

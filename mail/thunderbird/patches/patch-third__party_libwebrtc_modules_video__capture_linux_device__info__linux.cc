@@ -1,7 +1,7 @@
-$NetBSD: patch-media_webrtc_trunk_webrtc_modules_video__capture_linux_device__info__linux.cc,v 1.3 2020/09/03 15:26:22 ryoon Exp $
+$NetBSD: patch-third__party_libwebrtc_modules_video__capture_linux_device__info__linux.cc,v 1.1 2023/02/05 09:05:29 he Exp $
 
---- media/webrtc/trunk/webrtc/modules/video_capture/linux/device_info_linux.cc.orig	2020-08-28 21:33:15.000000000 +0000
-+++ media/webrtc/trunk/webrtc/modules/video_capture/linux/device_info_linux.cc
+--- third_party/libwebrtc/modules/video_capture/linux/device_info_linux.cc.orig	2020-08-28 21:33:15.000000000 +0000
++++ third_party/libwebrtc/modules/video_capture/linux/device_info_linux.cc
 @@ -385,11 +385,15 @@ bool DeviceInfoLinux::IsDeviceNameMatche
  
  bool DeviceInfoLinux::IsVideoCaptureDevice(struct v4l2_capability* cap)

@@ -1,0 +1,13 @@
+$NetBSD: patch-comm_third__party_libgcrypt_configure,v 1.1 2023/02/05 09:05:29 he Exp $
+
+--- comm/third_party/libgcrypt/configure.orig	2022-12-20 00:50:23.000000000 +0000
++++ comm/third_party/libgcrypt/configure
+@@ -17460,7 +17460,7 @@ CFLAGS="$CFLAGS -maltivec -mvsx -mcrypto
+ 
+ if test "$gcry_cv_cc_ppc_altivec" = "no" &&
+     test "$mpi_cpu_arch" = "ppc" &&
+-    test "$try_asm_modules" == "yes" ; then
++    test "$try_asm_modules" = "yes" ; then
+   { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether compiler supports PowerPC AltiVec/VSX/crypto intrinsics with extra GCC flags" >&5
+ $as_echo_n "checking whether compiler supports PowerPC AltiVec/VSX/crypto intrinsics with extra GCC flags... " >&6; }
+ if ${gcry_cv_cc_ppc_altivec_cflags+:} false; then :
