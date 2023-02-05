@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.39 2022/12/12 14:35:14 gdt Exp $
+@comment $NetBSD: PLIST,v 1.40 2023/02/05 20:53:26 js Exp $
 bin/export_signing_key
 bin/generate_config
 bin/generate_log_config
@@ -501,6 +501,8 @@ ${PYSITELIB}/synapse/replication/tcp/streams/events.py
 ${PYSITELIB}/synapse/replication/tcp/streams/events.pyc
 ${PYSITELIB}/synapse/replication/tcp/streams/federation.py
 ${PYSITELIB}/synapse/replication/tcp/streams/federation.pyc
+${PYSITELIB}/synapse/replication/tcp/streams/partial_state.py
+${PYSITELIB}/synapse/replication/tcp/streams/partial_state.pyc
 ${PYSITELIB}/synapse/res/providers.json
 ${PYSITELIB}/synapse/res/templates/_base.html
 ${PYSITELIB}/synapse/res/templates/account_previously_renewed.html
@@ -1275,6 +1277,14 @@ ${PYSITELIB}/synapse/storage/schema/main/delta/73/10login_tokens.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/73/11event_search_room_id_n_distinct.sql.postgres
 ${PYSITELIB}/synapse/storage/schema/main/delta/73/12refactor_device_list_outbound_pokes.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/73/13add_device_lists_index.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/73/20_un_partial_stated_room_stream.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/73/21_un_partial_stated_room_stream_seq.sql.postgres
+${PYSITELIB}/synapse/storage/schema/main/delta/73/22_rebuild_user_dir_stats.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/73/22_un_partial_stated_event_stream.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/73/23_fix_thread_index.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/73/23_un_partial_stated_room_stream_seq.sql.postgres
+${PYSITELIB}/synapse/storage/schema/main/delta/73/24_events_jump_to_date_index.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/73/25drop_presence.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/application_services.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/event_edges.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/event_signatures.sql
@@ -1308,8 +1318,6 @@ ${PYSITELIB}/synapse/storage/schema/state/full_schemas/54/full.sql
 ${PYSITELIB}/synapse/storage/schema/state/full_schemas/54/sequence.sql.postgres
 ${PYSITELIB}/synapse/storage/schema/state/full_schemas/72/full.sql.postgres
 ${PYSITELIB}/synapse/storage/schema/state/full_schemas/72/full.sql.sqlite
-${PYSITELIB}/synapse/storage/state.py
-${PYSITELIB}/synapse/storage/state.pyc
 ${PYSITELIB}/synapse/storage/types.py
 ${PYSITELIB}/synapse/storage/types.pyc
 ${PYSITELIB}/synapse/storage/util/__init__.py
@@ -1327,8 +1335,10 @@ ${PYSITELIB}/synapse/streams/config.pyc
 ${PYSITELIB}/synapse/streams/events.py
 ${PYSITELIB}/synapse/streams/events.pyc
 ${PYSITELIB}/synapse/synapse_rust.abi3.so
-${PYSITELIB}/synapse/types.py
-${PYSITELIB}/synapse/types.pyc
+${PYSITELIB}/synapse/types/__init__.py
+${PYSITELIB}/synapse/types/__init__.pyc
+${PYSITELIB}/synapse/types/state.py
+${PYSITELIB}/synapse/types/state.pyc
 ${PYSITELIB}/synapse/util/__init__.py
 ${PYSITELIB}/synapse/util/__init__.pyc
 ${PYSITELIB}/synapse/util/async_helpers.py
