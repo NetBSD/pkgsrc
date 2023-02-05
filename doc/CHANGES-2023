@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1021 2023/02/05 13:11:00 fox Exp $
+$NetBSD: CHANGES-2023,v 1.1022 2023/02/05 13:26:25 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1285,3 +1285,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/difftastic to 0.43.1 [pin 2023-02-05]
 	Updated textproc/hunspell to 1.7.2nb1 [ryoon 2023-02-05]
 	Updated sysutils/htop to 3.2.2 [fox 2023-02-05]
+	Added lang/go120 version 1.20 [bsiegert 2023-02-05]
