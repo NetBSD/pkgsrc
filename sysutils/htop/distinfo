@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.22 2022/06/08 07:01:16 nia Exp $
+$NetBSD: distinfo,v 1.23 2023/02/05 13:10:40 fox Exp $
 
-BLAKE2s (htop-3.2.1.tar.gz) = 39a22f2aace47c44cb8c2a8aba1d96656b9967bd5abd740cb0f62c6fdafb5117
-SHA512 (htop-3.2.1.tar.gz) = d7b76e28ee870ac572ba1d9606dec6f9475346a00e599ca15838017c97683f1fc1be40417b9c1e76128cacc8a60ff9ba88c6b237be1835d309f98329b25644fc
-Size (htop-3.2.1.tar.gz) = 397632 bytes
+BLAKE2s (htop-3.2.2.tar.gz) = 871bfddc48a14016f166da3aa962df0ad1fe0bf51a5eb792f907f1ffc6b1d08d
+SHA512 (htop-3.2.2.tar.gz) = dd82d5b2f70694e76b3740ef0f6f6d3446fe83b748c2cfe61c783985d62cb6e1d00fcb4b1fe7dc8f1d8c6bc7b29474e1e88eaa01f154198d702b100bcbc135bb
+Size (htop-3.2.2.tar.gz) = 369873 bytes
 SHA1 (patch-solaris_Platform.h) = c23c6cf20607dd69e626be716337471fffd70d86
