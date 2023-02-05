@@ -1,12 +1,13 @@
-$NetBSD: patch-toolkit_modules_subprocess_subprocess__shared__unix.js,v 1.2 2020/09/03 15:26:22 ryoon Exp $
+$NetBSD: patch-toolkit_modules_subprocess_subprocess__shared__unix.js,v 1.3 2023/02/05 09:05:29 he Exp $
 
 --- toolkit/modules/subprocess/subprocess_shared_unix.js.orig	2020-08-28 21:34:00.000000000 +0000
 +++ toolkit/modules/subprocess/subprocess_shared_unix.js
-@@ -12,7 +12,15 @@
+@@ -13,7 +13,16 @@
  
- const LIBC = OS.Constants.libc;
+ var LIBC = OS.Constants.libc;
  
 -const LIBC_CHOICES = ["libc.so", "libSystem.B.dylib", "a.out"];
++// const LIBC_CHOICES = ["libc.so", "libSystem.B.dylib", "a.out"];
 +/* libc.so isn't meant to be dlopen'ed. On Linux it's usually an ld
 + * script so one cannot dlopen it. On NetBSD (and possibly other
 + * BSDs too) dlopen'ing libc.so will succeed, but some global symbols,
