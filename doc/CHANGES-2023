@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1023 2023/02/05 19:23:17 pin Exp $
+$NetBSD: CHANGES-2023,v 1.1024 2023/02/05 19:24:19 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1287,3 +1287,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/htop to 3.2.2 [fox 2023-02-05]
 	Added lang/go120 version 1.20 [bsiegert 2023-02-05]
 	Updated www/ddgr to 2.1 [pin 2023-02-05]
+	Updated sysutils/dua-cli to 2.19.1 [pin 2023-02-05]
