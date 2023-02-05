@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.85 2023/02/01 03:29:47 ryoon Exp $
+# $NetBSD: Makefile,v 1.86 2023/02/05 08:41:05 wiz Exp $
 #
 # Take care, changelogs often include "PR 12345" strings
 # which cause GNATS indigestion.
 
-DISTNAME=	apr-1.7.1
-PKGREVISION=	1
+DISTNAME=	apr-1.7.2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_APACHE:=apr/}
 EXTRACT_SUFX=	.tar.bz2
@@ -13,9 +12,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://apr.apache.org/
 COMMENT=	Apache Portable Runtime
 LICENSE=	apache-2.0
-
-# bug in 1.7.1 tarball
-WRKSRC=		${WRKDIR}/apr-1.7.1-rc2
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
