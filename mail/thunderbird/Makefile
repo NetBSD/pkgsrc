@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.290 2023/01/29 21:17:01 ryoon Exp $
+# $NetBSD: Makefile,v 1.291 2023/02/05 09:05:28 he Exp $
 
 DISTNAME=	thunderbird-${TB_VER}.source
 PKGNAME=	thunderbird-${TB_VER}
-PKGREVISION=	12
-TB_VER=		78.12.0
+TB_VER=		102.6.1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=thunderbird/releases/${TB_VER}/source/}
 EXTRACT_SUFX=	.tar.xz
@@ -53,14 +52,14 @@ CHECK_WRKREF_SKIP+=	lib/${MOZILLA_NAME}/chrome/messenger/content/messenger/build
 CKSUM_CRATES+=	third_party/rust/libc
 
 # patch-third__party_rust_libc_src_unix_bsd_netbsdlike_netbsd_mod.rs
-CKSUMS+=	a3540eab4dbc52e006e84e288bad17e1dae3865fea49020e0ed8b5a7724a9532
-CKSUMS+=	5e58a2109f5eff0f497dfac150c161c1d517a2227b49e086da96c3d66522ac3a
+CKSUMS+=	cb1560bf8ffcc7b2726a27b433efac90e726292960626f3064bd2c6b7f861a55
+CKSUMS+=	1159c20556ff4f50b7140ef4e7f5ac63e3098d9117784794c944228fa7460efb
 
-CKSUM_CRATES+=	third_party/rust/getrandom
+#CKSUM_CRATES+=	third_party/rust/getrandom
 
 # patch-third__party_rust_getrandom_src_lib.rs
-CKSUMS+=	0e52f6bde42d7bb05c297ce1c25b9879d61b28caba98f6226a152bff538db6c2
-CKSUMS+=	394425b4ba03c21c494e64d993678f7014575b1e3d590b9ee452b5c2d83ec4ac
+#CKSUMS+=	0e52f6bde42d7bb05c297ce1c25b9879d61b28caba98f6226a152bff538db6c2
+#CKSUMS+=	394425b4ba03c21c494e64d993678f7014575b1e3d590b9ee452b5c2d83ec4ac
 
 SUBST_CLASSES+=		cksum
 SUBST_STAGE.cksum=	pre-configure

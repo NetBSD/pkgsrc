@@ -1,4 +1,4 @@
-$NetBSD: patch-ipc_glue_GeckoChildProcessHost.cpp,v 1.10 2020/09/03 15:26:22 ryoon Exp $
+$NetBSD: patch-ipc_glue_GeckoChildProcessHost.cpp,v 1.11 2023/02/05 09:05:29 he Exp $
 
 --- ipc/glue/GeckoChildProcessHost.cpp.orig	2020-08-28 21:32:41.000000000 +0000
 +++ ipc/glue/GeckoChildProcessHost.cpp
@@ -15,4 +15,4 @@ $NetBSD: patch-ipc_glue_GeckoChildProcessHost.cpp,v 1.10 2020/09/03 15:26:22 ryo
 +#endif
  
  #include "base/command_line.h"
- #include "base/string_util.h"
+ #include "base/process_util.h"
