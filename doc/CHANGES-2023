@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1015 2023/02/05 00:00:30 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1016 2023/02/05 08:41:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1278,3 +1278,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/libX11 to 1.8.4 [wiz 2023-02-04]
 	Updated sysutils/nabud to 1.0 [thorpej 2023-02-04]
 	Updated x11/xvidtune to 1.0.4 [wiz 2023-02-05]
+	Updated devel/apr to 1.7.2 [wiz 2023-02-05]

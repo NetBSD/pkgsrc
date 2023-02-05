@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22605 2023/02/04 21:39:51 wiz Exp $
+$NetBSD: TODO,v 1.22606 2023/02/05 08:41:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1054,6 +1054,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o onscripter-20200722
 	o oo2c-2.1.7
 	o opal-3.16.2
+	o openal-soft-1.23.0
 	o openblas-0.3.21
 	o opencl-3.0.12
 	o opencolorio-2.2.0
@@ -1200,6 +1201,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o polkit-121
 	o polyml-5.9
 	o poppass-4.0.14
+	o poppler-23.02.0
+	o poppler-data-0.4.12
 	o posh-0.14.1
 	o postal-0.72
 	o postgres_exporter-0.9.0
@@ -1437,6 +1440,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o terraform-provider-null-3.1.0
 	o terraform-provider-random-3.1.0
 	o tetrinetx-1.40c
+	o tevent-0.14.1
 	o texworks-0.6.6
 	o tfmxplay-1.1.6
 	o thunderbird-102
@@ -1539,6 +1543,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o xjadeo-0.8.10
 	o xjman-0.7
 	o xkbset-0.6
+	o xkeyboard-config-2.38
 	o xli-2006.11.10
 	o xmake-2.0.5
 	o xmbdfed-4.6
