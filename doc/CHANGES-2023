@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1017 2023/02/05 08:42:18 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1018 2023/02/05 09:07:18 he Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1280,3 +1280,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/xvidtune to 1.0.4 [wiz 2023-02-05]
 	Updated devel/apr to 1.7.2 [wiz 2023-02-05]
 	Updated devel/apr-util to 1.6.3 [wiz 2023-02-05]
+	Added mail/thunderbird78 version 78.12.0nb11 [he 2023-02-05]
+	Updated mail/thunderbird to 102.6.1 [he 2023-02-05]
