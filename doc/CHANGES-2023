@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1027 2023/02/06 08:08:32 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1028 2023/02/06 11:15:12 nia Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1291,3 +1291,6 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated chat/matrix-synapse to 1.76.0 [js 2023-02-05]
 	Updated misc/py-platformdirs to 2.6.2 [adam 2023-02-06]
 	Updated audio/spek to 0.8.5 [wiz 2023-02-06]
+	Updated emulators/libretro-mgba to 0.10.1 [nia 2023-02-06]
+	Updated emulators/mgba-qt to 0.10.1 [nia 2023-02-06]
+	Updated emulators/mgba to 0.10.1 [nia 2023-02-06]
