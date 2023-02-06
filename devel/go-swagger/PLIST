@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2023/02/06 20:45:20 nikita Exp $
+bin/swagger
