@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1034 2023/02/06 20:45:50 nikita Exp $
+$NetBSD: CHANGES-2023,v 1.1035 2023/02/06 22:03:51 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1301,3 +1301,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated audio/spotify-player to 0.11.1 [pin 2023-02-06]
 	Updated lang/gleam to 0.26.2 [nikita 2023-02-06]
 	Added devel/go-swagger version 0.30.4 [nikita 2023-02-06]
+	Updated www/hugo to 0.110.0 [nikita 2023-02-06]
