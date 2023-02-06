@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1032 2023/02/06 19:38:06 pin Exp $
+$NetBSD: CHANGES-2023,v 1.1033 2023/02/06 19:51:04 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1299,3 +1299,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/rabbitmq-c to 0.13.0 [adam 2023-02-06]
 	Updated security/sudo to 1.9.12p2 [taca 2023-02-06]
 	Updated audio/spotify-player to 0.11.1 [pin 2023-02-06]
+	Updated lang/gleam to 0.26.2 [nikita 2023-02-06]
