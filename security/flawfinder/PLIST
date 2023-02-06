@@ -1,3 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/07/14 13:02:23 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/02/06 11:23:50 nros Exp $
 bin/flawfinder
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/zip-safe
+${PYSITELIB}/flawfinder.py
+${PYSITELIB}/flawfinder.pyc
+${PYSITELIB}/flawfinder.pyo
 man/man1/flawfinder.1
