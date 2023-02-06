@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.18 2022/12/23 12:20:47 nia Exp $
+$NetBSD: distinfo,v 1.19 2023/02/06 11:13:18 nia Exp $
 
-BLAKE2s (mgba-0.10.0.tar.gz) = f04dd3389ee4e9df3fa577b3c071d3a47262fb6727fbc7340e9bf100b58a424f
-SHA512 (mgba-0.10.0.tar.gz) = 05939f94bc00906d999b955091e8e8059cc13a5b822048f6e002062c2e74069337d947d2cde2f8c1be96e3353a361743d752811c214fa9da31ed6a4893b4d7e8
-Size (mgba-0.10.0.tar.gz) = 14302653 bytes
+BLAKE2s (mgba-0.10.1.tar.gz) = 64f724e74806bd5bd1a2c78944183e4b1b00cf5ad4473edbf9ac7f557f8c700b
+SHA512 (mgba-0.10.1.tar.gz) = bb79d2380a4708b70daf95c9b403427f77254391b1e11d68411384f265a670907e64b842c9978c9be558ffad337b738d9d83988d52890f08aed7e7fc124f19d4
+Size (mgba-0.10.1.tar.gz) = 14308454 bytes
 SHA1 (patch-src_platform_qt_CMakeLists.txt) = 052c533d8df271eb623efec1ec6639da4bea1983
 SHA1 (patch-src_platform_qt_ConfigController.cpp) = 45b5a0aac879905a1471c172c5f23bef9ab33723
 SHA1 (patch-src_script_socket.c) = eca5406afe566ef01f84d35c9db01f3307646644
