@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1029 2023/02/06 11:24:16 nros Exp $
+$NetBSD: CHANGES-2023,v 1.1030 2023/02/06 11:56:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1295,3 +1295,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated emulators/mgba-qt to 0.10.1 [nia 2023-02-06]
 	Updated emulators/mgba to 0.10.1 [nia 2023-02-06]
 	Updated security/flawfinder to 2.0.19 [nros 2023-02-06]
+	Updated www/py-websocket-client to 1.5.1 [adam 2023-02-06]
+	Updated net/rabbitmq-c to 0.13.0 [adam 2023-02-06]
