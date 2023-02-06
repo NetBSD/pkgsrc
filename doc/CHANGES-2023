@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1028 2023/02/06 11:15:12 nia Exp $
+$NetBSD: CHANGES-2023,v 1.1029 2023/02/06 11:24:16 nros Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1294,3 +1294,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated emulators/libretro-mgba to 0.10.1 [nia 2023-02-06]
 	Updated emulators/mgba-qt to 0.10.1 [nia 2023-02-06]
 	Updated emulators/mgba to 0.10.1 [nia 2023-02-06]
+	Updated security/flawfinder to 2.0.19 [nros 2023-02-06]
