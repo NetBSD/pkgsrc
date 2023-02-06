@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2023/01/19 19:26:55 nikita Exp $
+$NetBSD: distinfo,v 1.6 2023/02/06 19:50:53 nikita Exp $
 
 BLAKE2s (gleam/adler-1.0.2.crate) = f263779d752af886455fc0f42c997893fb1a09edcf1bd2980605251c2e3602aa
 SHA512 (gleam/adler-1.0.2.crate) = 7ab190d31890fc05b0b55d8e2c6527a505e06793d5496be0b3831e0513412f9ba97f8148f6f68ed0770fa9cd980a5092d885e058becf1d5506b7c74b82674aa1
@@ -219,9 +219,9 @@ Size (gleam/generic-array-0.14.6.crate) = 15889 bytes
 BLAKE2s (gleam/getrandom-0.2.8.crate) = 3384f83c641aae81e11d7974210ee38cc05eb376d6cbf156b219236ab21f9159
 SHA512 (gleam/getrandom-0.2.8.crate) = cd7aea29f79a33a0de2a52a0a82f2b57ea8f27908ccfe00a5f42248766df88b225023603ec56d6fc634ef9c1eb67ad0135c90d4c695f6f659db0767e7fda44c5
 Size (gleam/getrandom-0.2.8.crate) = 30553 bytes
-BLAKE2s (gleam/gleam-0.26.0.tar.gz) = a12b6fee8ffe4dff8fa01a6239cc6787e986f457b0c88f07755b0110d6e8fcb3
-SHA512 (gleam/gleam-0.26.0.tar.gz) = 0992cedf24075ec021ac2de0ecb15b682181b8dc8bd5f673968d5c4cba91344439e6f09f4d6b81ff83d77ebc7e32d84c042f6a561b80526beb1244d73b0d236f
-Size (gleam/gleam-0.26.0.tar.gz) = 623035 bytes
+BLAKE2s (gleam/gleam-0.26.2.tar.gz) = 6eba0eb228233e0eccd2f69efa9ccc5e30ed04a2cc21d6057769fb7c78498ebb
+SHA512 (gleam/gleam-0.26.2.tar.gz) = f9731fd0ce5c7d3464aa5318146892c4c69541851a5b71e8ee001462f624f48d53a32401bbdea87b2a8f2a24313b15ee3ef039b6b38e84a347699742c98da078
+Size (gleam/gleam-0.26.2.tar.gz) = 626658 bytes
 BLAKE2s (gleam/globset-0.4.10.crate) = d8000af6f73464d16e587c06837aa05f3e0cef307129df7ceef9495c2e0005c1
 SHA512 (gleam/globset-0.4.10.crate) = 85a1213fd3ec55ffd87fde25f4cdbd2e8ed4056132d3c516eb117f107a744d733e1ad8fa06f296a60084a23ee968c3c0899399fd3ab9bbf72e217638a5cf165e
 Size (gleam/globset-0.4.10.crate) = 22923 bytes
@@ -549,6 +549,9 @@ Size (gleam/smallvec-1.10.0.crate) = 31564 bytes
 BLAKE2s (gleam/smawk-0.3.1.crate) = 2561797301daa14f183d2ae3de9fe4df913492d73f3f689c9f5f3a69e250f530
 SHA512 (gleam/smawk-0.3.1.crate) = d6a050e873da5c90de3ff9fd02166de3be4c03931de9cac5307e6c16a71b8db1db6e8309eaa38ad408b20e0cc98eb4133595ad7aea96f62ebdcea579a643b65f
 Size (gleam/smawk-0.3.1.crate) = 12840 bytes
+BLAKE2s (gleam/smol_str-0.1.23.crate) = c3448fd949803c6519bd98f643145be961abed93563a084a07b906e58ef554ab
+SHA512 (gleam/smol_str-0.1.23.crate) = 73bd2c20717bc1960021aced0c98654123dbd9b171aff5890374efedb20e4e1e2273f35f6a8d8b584ea6f31ac9da2734f0656a8da0830af0b6a4f45b7b8faba1
+Size (gleam/smol_str-0.1.23.crate) = 13208 bytes
 BLAKE2s (gleam/socket2-0.4.7.crate) = 09c033d3f60af733df6ba1de234d34ca678e24e68819a2e470ad9d9d3ba67989
 SHA512 (gleam/socket2-0.4.7.crate) = 44487f2de30cd327cad1af31ad36aaaa0bf10c33b5c23b024ada8d7e41d064fb2adbc9edb14aa8aa1eba679d8530c373c7187fc68d9709ae736a5c1a2cf37088
 Size (gleam/socket2-0.4.7.crate) = 44619 bytes
