@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 09:59:30 nia Exp $
+$NetBSD: distinfo,v 1.6 2023/02/06 08:08:21 wiz Exp $
 
-BLAKE2s (spek-0.8.2.tar.xz) = 9fe1d5e6f8c4c80697d7dece7b44f0a6723ac7c75a35dd3d40088a2b8f51cc64
-SHA512 (spek-0.8.2.tar.xz) = 166cc2b058a9113497ca562a15b11c44fc47f33f87d1ee3d307adeb64c68940dc4f4323a7c1381541279eb1cbdda614555d0aff18993d99d90f8650018f5be69
-Size (spek-0.8.2.tar.xz) = 171628 bytes
-SHA1 (patch-src_spek-audio.cc) = c0ce3601ecc3855d5688536faa457491fe8f5e6d
+BLAKE2s (spek-0.8.5.tar.xz) = 2d441f57554b8336dc7cdaec515e0d2a2dfa6e9c99f432994f257a4417edc1e3
+SHA512 (spek-0.8.5.tar.xz) = 25f72c9372b142183ab34c47f1d7d6e62b9316d94b31aacff5d3ca007be030f4848a385be1bbb98f285aba010804fd429a7e099e597c30861347f5b8ed50d5b1
+Size (spek-0.8.5.tar.xz) = 430464 bytes
