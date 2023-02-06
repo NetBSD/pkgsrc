@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.4 2023/01/19 19:26:55 nikita Exp $
+# $NetBSD: cargo-depends.mk,v 1.5 2023/02/06 19:50:53 nikita Exp $
 
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
 CARGO_CRATE_DEPENDS+=	ahash-0.7.6
@@ -182,6 +182,7 @@ CARGO_CRATE_DEPENDS+=	sized-chunks-0.6.5
 CARGO_CRATE_DEPENDS+=	slab-0.4.7
 CARGO_CRATE_DEPENDS+=	smallvec-1.10.0
 CARGO_CRATE_DEPENDS+=	smawk-0.3.1
+CARGO_CRATE_DEPENDS+=	smol_str-0.1.23
 CARGO_CRATE_DEPENDS+=	socket2-0.4.7
 CARGO_CRATE_DEPENDS+=	spdx-0.8.1
 CARGO_CRATE_DEPENDS+=	spin-0.5.2
