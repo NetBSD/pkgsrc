@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2020/07/11 17:02:30 nia Exp $
+# $NetBSD: Makefile,v 1.5 2023/02/07 10:30:24 nia Exp $
 
-DISTNAME=	busted-2.0.0
+DISTNAME=	busted-2.1.1
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel lua
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Olivine-Labs/}
