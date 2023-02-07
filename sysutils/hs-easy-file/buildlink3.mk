@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2022/02/26 03:58:22 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2023/02/07 01:41:05 pho Exp $
 
 BUILDLINK_TREE+=	hs-easy-file
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-easy-file
 HS_EASY_FILE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-easy-file+=	hs-easy-file>=0.2.2
-BUILDLINK_ABI_DEPENDS.hs-easy-file+=	hs-easy-file>=0.2.2nb3
+BUILDLINK_ABI_DEPENDS.hs-easy-file+=	hs-easy-file>=0.2.2nb4
 BUILDLINK_PKGSRCDIR.hs-easy-file?=	../../sysutils/hs-easy-file
 .endif	# HS_EASY_FILE_BUILDLINK3_MK
 

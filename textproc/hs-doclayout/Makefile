@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2023/01/25 15:24:23 pho Exp $
+# $NetBSD: Makefile,v 1.9 2023/02/07 01:41:10 pho Exp $
 
 DISTNAME=	doclayout-0.4
+PKGREVISION=	1
 CATEGORIES=	textproc
 
 MAINTAINER=	pho@cielonegro.org

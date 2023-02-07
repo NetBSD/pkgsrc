@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2023/01/27 16:19:17 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2023/02/07 01:40:58 pho Exp $
 
 BUILDLINK_TREE+=	hs-adjunctions
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-adjunctions
 HS_ADJUNCTIONS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-adjunctions+=	hs-adjunctions>=4.4.2
-BUILDLINK_ABI_DEPENDS.hs-adjunctions+=	hs-adjunctions>=4.4.2
+BUILDLINK_ABI_DEPENDS.hs-adjunctions+=	hs-adjunctions>=4.4.2nb1
 BUILDLINK_PKGSRCDIR.hs-adjunctions?=	../../math/hs-adjunctions
 
 .include "../../math/hs-comonad/buildlink3.mk"

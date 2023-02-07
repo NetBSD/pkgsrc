@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2023/01/30 07:21:08 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2023/02/07 01:40:39 pho Exp $
 
 BUILDLINK_TREE+=	hs-hls-plugin-api
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-hls-plugin-api
 HS_HLS_PLUGIN_API_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-hls-plugin-api+=	hs-hls-plugin-api>=1.6.0
-BUILDLINK_ABI_DEPENDS.hs-hls-plugin-api+=	hs-hls-plugin-api>=1.6.0.0
+BUILDLINK_ABI_DEPENDS.hs-hls-plugin-api+=	hs-hls-plugin-api>=1.6.0.0nb1
 BUILDLINK_PKGSRCDIR.hs-hls-plugin-api?=		../../devel/hs-hls-plugin-api
 
 .include "../../converters/hs-aeson/buildlink3.mk"

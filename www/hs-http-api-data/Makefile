@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2023/01/28 19:59:27 pho Exp $
+# $NetBSD: Makefile,v 1.2 2023/02/07 01:41:17 pho Exp $
 
 DISTNAME=	http-api-data-0.5
+PKGREVISION=	1
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

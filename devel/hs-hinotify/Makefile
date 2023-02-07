@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2022/02/26 12:27:40 pho Exp $
+# $NetBSD: Makefile,v 1.2 2023/02/07 01:40:37 pho Exp $
 
 DISTNAME=	hinotify-0.4.1
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

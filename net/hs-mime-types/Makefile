@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2023/01/24 12:41:00 pho Exp $
+# $NetBSD: Makefile,v 1.7 2023/02/07 01:41:02 pho Exp $
 
 DISTNAME=	mime-types-0.1.1.0
+PKGREVISION=	1
 CATEGORIES=	net
 
 MAINTAINER=	pho@cielonegro.org

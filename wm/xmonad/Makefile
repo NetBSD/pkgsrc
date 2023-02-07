@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2023/01/26 09:53:59 pho Exp $
+# $NetBSD: Makefile,v 1.22 2023/02/07 01:41:17 pho Exp $
 
 DISTNAME=	xmonad-0.17.1
 PKGNAME=	${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	wm
 
 MAINTAINER=	esg@sdf.lonestar.org

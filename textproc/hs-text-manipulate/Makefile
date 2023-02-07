@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2023/01/24 13:04:44 pho Exp $
+# $NetBSD: Makefile,v 1.4 2023/02/07 01:41:14 pho Exp $
 
 DISTNAME=	text-manipulate-0.3.1.0
+PKGREVISION=	1
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

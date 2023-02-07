@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2022/02/26 03:58:11 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2023/02/07 01:40:54 pho Exp $
 
 BUILDLINK_TREE+=	hs-uuid-types
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-uuid-types
 HS_UUID_TYPES_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-uuid-types+=	hs-uuid-types>=1.0.5
-BUILDLINK_ABI_DEPENDS.hs-uuid-types+=	hs-uuid-types>=1.0.5nb2
+BUILDLINK_ABI_DEPENDS.hs-uuid-types+=	hs-uuid-types>=1.0.5nb3
 BUILDLINK_PKGSRCDIR.hs-uuid-types?=	../../devel/hs-uuid-types
 
 .include "../../devel/hs-hashable/buildlink3.mk"

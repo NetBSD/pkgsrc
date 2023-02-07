@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2022/02/26 03:58:11 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2023/02/07 01:40:54 pho Exp $
 
 BUILDLINK_TREE+=	hs-uuid
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-uuid
 HS_UUID_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-uuid+=	hs-uuid>=1.3.15
-BUILDLINK_ABI_DEPENDS.hs-uuid+=	hs-uuid>=1.3.15nb1
+BUILDLINK_ABI_DEPENDS.hs-uuid+=	hs-uuid>=1.3.15nb2
 BUILDLINK_PKGSRCDIR.hs-uuid?=	../../devel/hs-uuid
 
 .include "../../security/hs-cryptohash-md5/buildlink3.mk"

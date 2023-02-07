@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2022/08/22 10:13:24 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2023/02/07 01:40:44 pho Exp $
 
 BUILDLINK_TREE+=	hs-mono-traversable-instances
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-mono-traversable-instances
 HS_MONO_TRAVERSABLE_INSTANCES_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-mono-traversable-instances+=	hs-mono-traversable-instances>=0.1.1
-BUILDLINK_ABI_DEPENDS.hs-mono-traversable-instances+=	hs-mono-traversable-instances>=0.1.1.0nb3
+BUILDLINK_ABI_DEPENDS.hs-mono-traversable-instances+=	hs-mono-traversable-instances>=0.1.1.0nb4
 BUILDLINK_PKGSRCDIR.hs-mono-traversable-instances?=	../../devel/hs-mono-traversable-instances
 
 .include "../../math/hs-comonad/buildlink3.mk"
