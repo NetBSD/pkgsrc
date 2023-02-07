@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.21 2022/11/20 15:48:07 triaxx Exp $
+# $NetBSD: go-modules.mk,v 1.22 2023/02/07 22:27:21 triaxx Exp $
 
 GO_MODULE_FILES+=	bazil.org/fuse/@v/v0.0.0-20160811212531-371fbbdaa898.mod
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.100.1.mod
@@ -423,12 +423,13 @@ GO_MODULE_FILES+=	github.com/blevesearch/snowballstem/@v/v0.9.0.zip
 GO_MODULE_FILES+=	github.com/blevesearch/vellum/@v/v1.0.5.mod
 GO_MODULE_FILES+=	github.com/blevesearch/vellum/@v/v1.0.7.mod
 GO_MODULE_FILES+=	github.com/blevesearch/vellum/@v/v1.0.7.zip
+GO_MODULE_FILES+=	github.com/blugelabs/bluge/@v/v0.1.9.mod
+GO_MODULE_FILES+=	github.com/blugelabs/bluge/@v/v0.1.9.zip
 GO_MODULE_FILES+=	github.com/blugelabs/bluge_segment_api/@v/v0.2.0.mod
 GO_MODULE_FILES+=	github.com/blugelabs/bluge_segment_api/@v/v0.2.0.zip
+GO_MODULE_FILES+=	github.com/blugelabs/ice/@v/v0.2.0.mod
 GO_MODULE_FILES+=	github.com/blugelabs/ice/@v/v1.0.0.mod
 GO_MODULE_FILES+=	github.com/blugelabs/ice/@v/v1.0.0.zip
-GO_MODULE_FILES+=	github.com/blugelabs/ice/v2/@v/v2.0.1.mod
-GO_MODULE_FILES+=	github.com/blugelabs/ice/v2/@v/v2.0.1.zip
 GO_MODULE_FILES+=	github.com/bmatcuk/doublestar/@v/v1.1.1.mod
 GO_MODULE_FILES+=	github.com/bmatcuk/doublestar/@v/v1.1.1.zip
 GO_MODULE_FILES+=	github.com/bmizerany/assert/@v/v0.0.0-20160611221934-b7ed37b82869.mod
@@ -1591,8 +1592,6 @@ GO_MODULE_FILES+=	github.com/jonboulle/clockwork/@v/v0.3.0.mod
 GO_MODULE_FILES+=	github.com/jonboulle/clockwork/@v/v0.3.0.zip
 GO_MODULE_FILES+=	github.com/josharian/intern/@v/v1.0.0.mod
 GO_MODULE_FILES+=	github.com/josharian/intern/@v/v1.0.0.zip
-GO_MODULE_FILES+=	github.com/jperkin/bluge/@v/v0.0.0-20221115155924-ffd91b43c395.mod
-GO_MODULE_FILES+=	github.com/jperkin/bluge/@v/v0.0.0-20221115155924-ffd91b43c395.zip
 GO_MODULE_FILES+=	github.com/jpillora/backoff/@v/v0.0.0-20180909062703-3050d21c67d7.mod
 GO_MODULE_FILES+=	github.com/jpillora/backoff/@v/v1.0.0.mod
 GO_MODULE_FILES+=	github.com/jpillora/backoff/@v/v1.0.0.zip
