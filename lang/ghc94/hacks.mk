@@ -1,3 +1,4 @@
+# $NetBSD: hacks.mk,v 1.2 2023/02/07 01:46:40 pho Exp $
 .if !defined(GHC_HACKS_MK)
 GHC_HACKS_MK=	defined
 
