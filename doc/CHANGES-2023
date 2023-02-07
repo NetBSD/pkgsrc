@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1040 2023/02/07 12:23:35 adam Exp $
+$NetBSD: CHANGES-2023,v 1.1041 2023/02/07 12:31:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1312,3 +1312,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-pyutil to 3.3.2 [adam 2023-02-07]
 	Updated devel/py-test-localserver to 0.7.1 [adam 2023-02-07]
 	Updated devel/py-plumbum to 1.8.1 [adam 2023-02-07]
+	Updated converters/py-simplejson to 3.18.3 [adam 2023-02-07]
+	Updated time/py-dateparser to 1.1.7 [adam 2023-02-07]
