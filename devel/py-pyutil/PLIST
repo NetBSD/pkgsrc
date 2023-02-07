@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2018/04/09 07:53:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/02/07 11:00:39 adam Exp $
 bin/lines
 bin/passphrase
 bin/randcookie
@@ -186,10 +186,6 @@ ${PYSITELIB}/pyutil/test/current/test_mathutil.pyo
 ${PYSITELIB}/pyutil/test/current/test_observer.py
 ${PYSITELIB}/pyutil/test/current/test_observer.pyc
 ${PYSITELIB}/pyutil/test/current/test_observer.pyo
-${PYSITELIB}/pyutil/test/current/test_passphrase.py
-${PYSITELIB}/pyutil/test/current/test_passphrase.pyc
-${PYSITELIB}/pyutil/test/current/test_passphrase.pyo
-${PYSITELIB}/pyutil/test/current/test_passphrase.py~
 ${PYSITELIB}/pyutil/test/current/test_time_format.py
 ${PYSITELIB}/pyutil/test/current/test_time_format.pyc
 ${PYSITELIB}/pyutil/test/current/test_time_format.pyo
