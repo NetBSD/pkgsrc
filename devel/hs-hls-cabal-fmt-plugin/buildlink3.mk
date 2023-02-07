@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2023/01/31 17:16:55 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2023/02/07 01:40:38 pho Exp $
 
 BUILDLINK_TREE+=	hs-hls-cabal-fmt-plugin
 
@@ -7,6 +7,7 @@ HS_HLS_CABAL_FMT_PLUGIN_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-hls-cabal-fmt-plugin+=	hs-hls-cabal-fmt-plugin>=0.1.0
 BUILDLINK_API_DEPENDS.hs-hls-cabal-fmt-plugin+=	hs-hls-cabal-fmt-plugin>=0.1.0.0
+BUILDLINK_ABI_DEPENDS.hs-hls-cabal-fmt-plugin?=	hs-hls-cabal-fmt-plugin>=0.1.0.0nb1
 BUILDLINK_PKGSRCDIR.hs-hls-cabal-fmt-plugin?=	../../devel/hs-hls-cabal-fmt-plugin
 
 .include "../../devel/hs-ghcide/buildlink3.mk"

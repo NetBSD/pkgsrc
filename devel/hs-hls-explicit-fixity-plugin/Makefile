@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2023/02/01 02:04:51 pho Exp $
+# $NetBSD: Makefile,v 1.2 2023/02/07 01:40:38 pho Exp $
 
 DISTNAME=	hls-explicit-fixity-plugin-1.1.0.0
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2023/01/24 18:45:20 pho Exp $
+# $NetBSD: Makefile,v 1.10 2023/02/07 01:40:53 pho Exp $
 
 DISTNAME=	unliftio-core-0.2.0.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org

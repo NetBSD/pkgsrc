@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2022/02/26 03:58:10 pho Exp $
+# $NetBSD: Makefile,v 1.16 2023/02/07 01:40:53 pho Exp $
 
 DISTNAME=	uniplate-1.6.13
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2022/02/26 03:58:06 pho Exp $
+# $NetBSD: Makefile,v 1.8 2023/02/07 01:40:48 pho Exp $
 
 DISTNAME=	safe-0.3.19
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 
 MAINTAINER=	szptvlfn@NetBSD.org

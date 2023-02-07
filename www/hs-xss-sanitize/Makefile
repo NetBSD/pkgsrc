@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2023/01/26 10:06:26 pho Exp $
+# $NetBSD: Makefile,v 1.8 2023/02/07 01:41:20 pho Exp $
 
 DISTNAME=	xss-sanitize-0.3.7.1
+PKGREVISION=	1
 CATEGORIES=	www
 
 MAINTAINER=	pho@cielonegro.org

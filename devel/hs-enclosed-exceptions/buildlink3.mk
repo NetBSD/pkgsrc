@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2022/02/26 12:28:47 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2023/02/07 01:40:33 pho Exp $
 
 BUILDLINK_TREE+=	hs-enclosed-exceptions
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-enclosed-exceptions
 HS_ENCLOSED_EXCEPTIONS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-enclosed-exceptions+=	hs-enclosed-exceptions>=1.0.3
-BUILDLINK_ABI_DEPENDS.hs-enclosed-exceptions+=	hs-enclosed-exceptions>=1.0.3
+BUILDLINK_ABI_DEPENDS.hs-enclosed-exceptions+=	hs-enclosed-exceptions>=1.0.3nb1
 BUILDLINK_PKGSRCDIR.hs-enclosed-exceptions?=	../../devel/hs-enclosed-exceptions
 
 .include "../../devel/hs-lifted-base/buildlink3.mk"

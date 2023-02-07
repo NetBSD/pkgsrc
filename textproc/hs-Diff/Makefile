@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2022/02/26 03:58:24 pho Exp $
+# $NetBSD: Makefile,v 1.8 2023/02/07 01:41:07 pho Exp $
 
 DISTNAME=	Diff-0.4.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

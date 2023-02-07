@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2023/01/27 02:02:25 pho Exp $
+# $NetBSD: Makefile,v 1.10 2023/02/07 01:41:04 pho Exp $
 
 DISTNAME=	tls-1.6.0
+PKGREVISION=	1
 CATEGORIES=	security
 
 MAINTAINER=	pho@cielonegro.org

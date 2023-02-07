@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2022/08/20 08:08:17 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2023/02/07 01:40:41 pho Exp $
 
 BUILDLINK_TREE+=	hs-ipynb
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-ipynb
 HS_IPYNB_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-ipynb+=	hs-ipynb>=0.2
-BUILDLINK_ABI_DEPENDS.hs-ipynb+=	hs-ipynb>=0.2nb3
+BUILDLINK_ABI_DEPENDS.hs-ipynb+=	hs-ipynb>=0.2nb4
 BUILDLINK_PKGSRCDIR.hs-ipynb?=		../../devel/hs-ipynb
 
 .include "../../converters/hs-aeson/buildlink3.mk"

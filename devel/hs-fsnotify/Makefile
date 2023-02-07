@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2023/01/26 15:08:26 pho Exp $
+# $NetBSD: Makefile,v 1.8 2023/02/07 01:40:35 pho Exp $
 
 DISTNAME=	fsnotify-0.4.1.0
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org

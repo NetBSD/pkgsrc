@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2022/08/28 21:38:42 mef Exp $
+# $NetBSD: Makefile,v 1.5 2023/02/07 01:40:23 pho Exp $
 
 DISTNAME=	lens-aeson-1.2.2
+PKGREVISION=	1
 CATEGORIES=	converters
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

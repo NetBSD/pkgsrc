@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2023/01/26 10:19:20 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2023/02/07 01:41:12 pho Exp $
 
 BUILDLINK_TREE+=	hs-parsers
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-parsers
 HS_PARSERS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-parsers+=	hs-parsers>=0.12.11
-BUILDLINK_ABI_DEPENDS.hs-parsers+=	hs-parsers>=0.12.11
+BUILDLINK_ABI_DEPENDS.hs-parsers+=	hs-parsers>=0.12.11nb1
 BUILDLINK_PKGSRCDIR.hs-parsers?=	../../textproc/hs-parsers
 
 .include "../../devel/hs-base-orphans/buildlink3.mk"

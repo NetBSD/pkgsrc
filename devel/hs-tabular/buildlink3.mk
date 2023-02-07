@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2022/02/26 03:58:08 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2023/02/07 01:40:51 pho Exp $
 
 BUILDLINK_TREE+=	hs-tabular
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-tabular
 HS_TABULAR_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-tabular+=	hs-tabular>=0.2.2
-BUILDLINK_ABI_DEPENDS.hs-tabular+=	hs-tabular>=0.2.2.8nb4
+BUILDLINK_ABI_DEPENDS.hs-tabular+=	hs-tabular>=0.2.2.8nb5
 BUILDLINK_PKGSRCDIR.hs-tabular?=	../../devel/hs-tabular
 
 .include "../../textproc/hs-csv/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2023/01/26 11:43:02 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2023/02/07 01:40:49 pho Exp $
 
 BUILDLINK_TREE+=	hs-serialise
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-serialise
 HS_SERIALISE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-serialise+=	hs-serialise>=0.2.6
-BUILDLINK_ABI_DEPENDS.hs-serialise+=	hs-serialise>=0.2.6.0
+BUILDLINK_ABI_DEPENDS.hs-serialise+=	hs-serialise>=0.2.6.0nb1
 BUILDLINK_PKGSRCDIR.hs-serialise?=	../../devel/hs-serialise
 
 .include "../../devel/hs-cborg/buildlink3.mk"

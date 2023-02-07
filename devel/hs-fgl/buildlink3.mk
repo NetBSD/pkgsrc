@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2023/01/25 01:58:56 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2023/02/07 01:40:33 pho Exp $
 
 BUILDLINK_TREE+=	hs-fgl
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-fgl
 HS_FGL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-fgl+=	hs-fgl>=5.8.0
-BUILDLINK_ABI_DEPENDS.hs-fgl+=	hs-fgl>=5.8.0.0
+BUILDLINK_ABI_DEPENDS.hs-fgl+=	hs-fgl>=5.8.0.0nb1
 BUILDLINK_PKGSRCDIR.hs-fgl?=	../../devel/hs-fgl
 .endif	# HS_FGL_BUILDLINK3_MK
 

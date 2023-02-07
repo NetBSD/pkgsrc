@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2022/09/07 06:50:48 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2023/02/07 01:40:48 pho Exp $
 
 BUILDLINK_TREE+=	hs-rio-orphans
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-rio-orphans
 HS_RIO_ORPHANS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-rio-orphans+=	hs-rio-orphans>=0.1.2
-BUILDLINK_ABI_DEPENDS.hs-rio-orphans+=	hs-rio-orphans>=0.1.2.0nb4
+BUILDLINK_ABI_DEPENDS.hs-rio-orphans+=	hs-rio-orphans>=0.1.2.0nb5
 BUILDLINK_PKGSRCDIR.hs-rio-orphans?=	../../devel/hs-rio-orphans
 
 .include "../../sysutils/hs-fast-logger/buildlink3.mk"

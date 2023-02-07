@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2023/01/26 17:18:30 pho Exp $
+# $NetBSD: Makefile,v 1.10 2023/02/07 01:40:30 pho Exp $
 
 DISTNAME=	conduit-extra-1.3.6
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org

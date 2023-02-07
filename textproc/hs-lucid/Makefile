@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2023/01/26 03:02:33 pho Exp $
+# $NetBSD: Makefile,v 1.10 2023/02/07 01:41:11 pho Exp $
 
 DISTNAME=	lucid-2.11.1
+PKGREVISION=	1
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

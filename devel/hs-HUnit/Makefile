@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2023/01/24 14:00:51 pho Exp $
+# $NetBSD: Makefile,v 1.2 2023/02/07 01:40:26 pho Exp $
 
 DISTNAME=	HUnit-1.6.2.0
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

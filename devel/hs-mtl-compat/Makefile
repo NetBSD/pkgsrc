@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2022/02/26 03:58:03 pho Exp $
+# $NetBSD: Makefile,v 1.3 2023/02/07 01:40:45 pho Exp $
 
 DISTNAME=	mtl-compat-0.2.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

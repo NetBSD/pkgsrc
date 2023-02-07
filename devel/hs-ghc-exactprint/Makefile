@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2023/01/27 13:59:34 pho Exp $
+# $NetBSD: Makefile,v 1.4 2023/02/07 01:40:35 pho Exp $
 
 DISTNAME=	ghc-exactprint-1.6.1.1
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

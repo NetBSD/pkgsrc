@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2023/01/24 16:43:04 pho Exp $
+# $NetBSD: Makefile,v 1.4 2023/02/07 01:40:42 pho Exp $
 
 DISTNAME=	logict-0.8.0.0
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

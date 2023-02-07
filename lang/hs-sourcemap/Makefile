@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2022/08/20 08:08:20 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2023/02/07 01:40:58 pho Exp $
 
 DISTNAME=	sourcemap-0.1.7
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	lang
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

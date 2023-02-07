@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2023/01/30 09:29:12 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2023/02/07 01:40:40 pho Exp $
 
 BUILDLINK_TREE+=	hs-hls-pragmas-plugin
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-hls-pragmas-plugin
 HS_HLS_PRAGMAS_PLUGIN_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-hls-pragmas-plugin+=	hs-hls-pragmas-plugin>=1.0.4
-BUILDLINK_ABI_DEPENDS.hs-hls-pragmas-plugin+=	hs-hls-pragmas-plugin>=1.0.4.0
+BUILDLINK_ABI_DEPENDS.hs-hls-pragmas-plugin+=	hs-hls-pragmas-plugin>=1.0.4.0nb1
 BUILDLINK_PKGSRCDIR.hs-hls-pragmas-plugin?=	../../devel/hs-hls-pragmas-plugin
 
 .include "../../misc/hs-extra/buildlink3.mk"

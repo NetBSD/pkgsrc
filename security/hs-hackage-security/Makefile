@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2023/01/25 13:27:55 pho Exp $
+# $NetBSD: Makefile,v 1.9 2023/02/07 01:41:04 pho Exp $
 
 DISTNAME=	hackage-security-0.6.2.3
+PKGREVISION=	1
 CATEGORIES=	security
 
 MAINTAINER=	pho@cielonegro.org

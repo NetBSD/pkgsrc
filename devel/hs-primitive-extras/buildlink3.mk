@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2022/08/20 08:08:18 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2023/02/07 01:40:47 pho Exp $
 
 BUILDLINK_TREE+=	hs-primitive-extras
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-primitive-extras
 HS_PRIMITIVE_EXTRAS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-primitive-extras+=	hs-primitive-extras>=0.10.1
-BUILDLINK_ABI_DEPENDS.hs-primitive-extras+=	hs-primitive-extras>=0.10.1.4nb2
+BUILDLINK_ABI_DEPENDS.hs-primitive-extras+=	hs-primitive-extras>=0.10.1.5nb1
 BUILDLINK_PKGSRCDIR.hs-primitive-extras?=	../../devel/hs-primitive-extras
 
 .include "../../devel/hs-cereal/buildlink3.mk"

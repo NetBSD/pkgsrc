@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2023/01/25 10:00:29 pho Exp $
+# $NetBSD: Makefile,v 1.7 2023/02/07 01:41:17 pho Exp $
 
 DISTNAME=	cookie-0.4.6
+PKGREVISION=	1
 CATEGORIES=	www
 
 MAINTAINER=	pho@cielonegro.org

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2023/01/26 10:52:19 pho Exp $
+# $NetBSD: Makefile,v 1.2 2023/02/07 01:40:43 pho Exp $
 
 DISTNAME=	MemoTrie-0.6.10
 PKGNAME=	hs-${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
