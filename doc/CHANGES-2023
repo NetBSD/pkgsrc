@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1046 2023/02/07 17:24:58 pin Exp $
+$NetBSD: CHANGES-2023,v 1.1047 2023/02/07 19:01:05 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1319,3 +1319,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/gnunet to 0.19.3 [nikita 2023-02-07]
 	Updated security/openssl to 1.1.1t [jperkin 2023-02-07]
 	Updated x11/jolly to 0.2.0 [pin 2023-02-07]
+	Updated converters/bdf2psf to 1.216 [fcambus 2023-02-07]
