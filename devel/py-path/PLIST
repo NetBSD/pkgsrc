@@ -1,21 +1,25 @@
-@comment $NetBSD: PLIST,v 1.1 2021/11/21 10:44:02 wiz Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.2 2023/02/07 10:51:44 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/path/__init__.py
 ${PYSITELIB}/path/__init__.pyc
-${PYSITELIB}/path/__init__.pyo
+${PYSITELIB}/path/__init__.pyi
 ${PYSITELIB}/path/classes.py
 ${PYSITELIB}/path/classes.pyc
-${PYSITELIB}/path/classes.pyo
+${PYSITELIB}/path/classes.pyi
 ${PYSITELIB}/path/masks.py
 ${PYSITELIB}/path/masks.pyc
-${PYSITELIB}/path/masks.pyo
+${PYSITELIB}/path/masks.pyi
 ${PYSITELIB}/path/matchers.py
 ${PYSITELIB}/path/matchers.pyc
-${PYSITELIB}/path/matchers.pyo
+${PYSITELIB}/path/matchers.pyi
+${PYSITELIB}/path/py.typed
 ${PYSITELIB}/path/py37compat.py
 ${PYSITELIB}/path/py37compat.pyc
-${PYSITELIB}/path/py37compat.pyo
+${PYSITELIB}/path/py37compat.pyi
