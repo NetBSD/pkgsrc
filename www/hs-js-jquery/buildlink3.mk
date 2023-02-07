@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2022/02/26 03:58:35 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2023/02/07 01:41:18 pho Exp $
 
 BUILDLINK_TREE+=	hs-js-jquery
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-js-jquery
 HS_JS_JQUERY_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-js-jquery+=	hs-js-jquery>=3.3.1
-BUILDLINK_ABI_DEPENDS.hs-js-jquery?=	hs-js-jquery>=3.3.1nb3
+BUILDLINK_ABI_DEPENDS.hs-js-jquery?=	hs-js-jquery>=3.3.1nb4
 BUILDLINK_PKGSRCDIR.hs-js-jquery?=	../../www/hs-js-jquery
 .endif	# HS_JS_JQUERY_BUILDLINK3_MK
 

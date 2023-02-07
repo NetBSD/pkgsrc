@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2023/01/27 16:01:04 pho Exp $
+# $NetBSD: Makefile,v 1.6 2023/02/07 01:40:46 pho Exp $
 
 DISTNAME=	pandoc-lua-marshal-0.2.0
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

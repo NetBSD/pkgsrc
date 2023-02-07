@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2023/01/28 02:55:43 pho Exp $
+# $NetBSD: Makefile,v 1.2 2023/02/07 01:40:23 pho Exp $
 
 DISTNAME=	deriving-aeson-0.2.9
+PKGREVISION=	1
 CATEGORIES=	converters
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

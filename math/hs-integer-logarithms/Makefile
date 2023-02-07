@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2023/01/24 12:51:03 pho Exp $
+# $NetBSD: Makefile,v 1.11 2023/02/07 01:40:59 pho Exp $
 
 DISTNAME=	integer-logarithms-1.0.3.1
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	math
 
 MAINTAINER=	pho@cielonegro.org

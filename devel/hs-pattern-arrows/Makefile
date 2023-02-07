@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2022/02/26 03:58:04 pho Exp $
+# $NetBSD: Makefile,v 1.3 2023/02/07 01:40:46 pho Exp $
 
 DISTNAME=	pattern-arrows-0.0.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

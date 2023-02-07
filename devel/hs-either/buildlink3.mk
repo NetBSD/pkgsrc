@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2023/01/26 15:51:09 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2023/02/07 01:40:33 pho Exp $
 
 BUILDLINK_TREE+=	hs-either
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-either
 HS_EITHER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-either+=	hs-either>=5.0.2
-BUILDLINK_ABI_DEPENDS.hs-either+=	hs-either>=5.0.2
+BUILDLINK_ABI_DEPENDS.hs-either+=	hs-either>=5.0.2nb1
 BUILDLINK_PKGSRCDIR.hs-either?=		../../devel/hs-either
 
 .include "../../math/hs-bifunctors/buildlink3.mk"

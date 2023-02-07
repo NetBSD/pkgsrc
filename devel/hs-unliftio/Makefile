@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2023/01/26 03:48:14 pho Exp $
+# $NetBSD: Makefile,v 1.5 2023/02/07 01:40:53 pho Exp $
 
 DISTNAME=	unliftio-0.2.23.0
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

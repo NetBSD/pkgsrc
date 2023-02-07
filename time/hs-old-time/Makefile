@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2023/01/25 01:45:34 pho Exp $
+# $NetBSD: Makefile,v 1.7 2023/02/07 01:41:16 pho Exp $
 
 DISTNAME=	old-time-1.1.0.3
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	time
 
 MAINTAINER=	pho@cielonegro.org
