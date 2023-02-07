@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2023/01/25 19:32:07 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2023/02/07 01:40:57 pho Exp $
 
 BUILDLINK_TREE+=	hs-hslua-packaging
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-hslua-packaging
 HS_HSLUA_PACKAGING_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-hslua-packaging+=	hs-hslua-packaging>=2.2.1
-BUILDLINK_ABI_DEPENDS.hs-hslua-packaging+=	hs-hslua-packaging>=2.2.1
+BUILDLINK_ABI_DEPENDS.hs-hslua-packaging+=	hs-hslua-packaging>=2.2.1nb1
 BUILDLINK_PKGSRCDIR.hs-hslua-packaging?=	../../lang/hs-hslua-packaging
 
 .include "../../lang/hs-hslua-core/buildlink3.mk"

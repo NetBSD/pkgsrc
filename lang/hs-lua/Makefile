@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2023/01/24 16:39:26 pho Exp $
+# $NetBSD: Makefile,v 1.5 2023/02/07 01:40:58 pho Exp $
 
 DISTNAME=	lua-2.2.1
+PKGREVISION=	1
 CATEGORIES=	lang
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

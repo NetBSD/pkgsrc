@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2023/01/30 09:21:11 pho Exp $
+# $NetBSD: Makefile,v 1.8 2023/02/07 01:40:40 pho Exp $
 
 DISTNAME=	hls-qualify-imported-names-plugin-1.0.2.0
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

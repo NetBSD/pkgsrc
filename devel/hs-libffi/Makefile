@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2023/01/24 16:52:29 pho Exp $
+# $NetBSD: Makefile,v 1.10 2023/02/07 01:40:42 pho Exp $
 
 DISTNAME=	libffi-0.2.1
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org

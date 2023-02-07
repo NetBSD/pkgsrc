@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2023/01/26 08:46:54 pho Exp $
+# $NetBSD: Makefile,v 1.4 2023/02/07 01:40:30 pho Exp $
 
 DISTNAME=	constraints-0.13.4
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

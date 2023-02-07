@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2023/01/31 18:35:58 pho Exp $
+# $NetBSD: Makefile,v 1.2 2023/02/07 01:41:06 pho Exp $
 
 DISTNAME=	filemanip-0.3.6.3
+PKGREVISION=	1
 CATEGORIES=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

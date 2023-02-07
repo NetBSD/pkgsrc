@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2022/02/26 03:58:21 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2023/02/07 01:41:04 pho Exp $
 
 BUILDLINK_TREE+=	hs-ed25519
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-ed25519
 HS_ED25519_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-ed25519+=	hs-ed25519>=0.0.5
-BUILDLINK_ABI_DEPENDS.hs-ed25519+=	hs-ed25519>=0.0.5.0nb4
+BUILDLINK_ABI_DEPENDS.hs-ed25519+=	hs-ed25519>=0.0.5.0nb5
 BUILDLINK_PKGSRCDIR.hs-ed25519?=	../../security/hs-ed25519
 .endif	# HS_ED25519_BUILDLINK3_MK
 

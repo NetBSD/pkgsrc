@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2022/02/26 03:58:27 pho Exp $
+# $NetBSD: Makefile,v 1.10 2023/02/07 01:41:10 pho Exp $
 
 DISTNAME=	hscolour-1.24.4
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	textproc
 
 MAINTAINER=	pho@cielonegro.org
