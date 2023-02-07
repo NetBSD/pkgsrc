@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2023/01/31 18:59:48 pho Exp $
+# $NetBSD: Makefile,v 1.2 2023/02/07 01:40:39 pho Exp $
 
 DISTNAME=	hls-hlint-plugin-1.1.1.0
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

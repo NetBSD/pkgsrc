@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2023/01/26 16:14:21 pho Exp $
+# $NetBSD: Makefile,v 1.4 2023/02/07 01:40:32 pho Exp $
 
 DISTNAME=	dependent-map-0.4.0.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

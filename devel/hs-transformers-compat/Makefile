@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2022/08/18 19:12:12 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2023/02/07 01:40:52 pho Exp $
 
 DISTNAME=	transformers-compat-0.7.2
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	szptvlfn@NetBSD.org

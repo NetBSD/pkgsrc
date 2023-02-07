@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2023/01/26 09:40:55 pho Exp $
+# $NetBSD: Makefile,v 1.21 2023/02/07 01:41:07 pho Exp $
 
 DISTNAME=	attoparsec-0.14.4
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	textproc
 
 MAINTAINER=	pho@cielonegro.org

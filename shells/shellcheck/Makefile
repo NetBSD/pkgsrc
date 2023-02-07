@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2023/01/16 16:43:24 nikita Exp $
+# $NetBSD: Makefile,v 1.11 2023/02/07 01:41:05 pho Exp $
 
 DISTNAME=	ShellCheck-0.9.0
 PKGNAME=	${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	shells devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

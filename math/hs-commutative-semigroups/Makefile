@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2023/01/26 03:35:18 pho Exp $
+# $NetBSD: Makefile,v 1.2 2023/02/07 01:40:59 pho Exp $
 
 DISTNAME=	commutative-semigroups-0.1.0.0
+PKGREVISION=	1
 CATEGORIES=	math
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

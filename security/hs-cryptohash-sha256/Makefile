@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2023/01/24 13:06:31 pho Exp $
+# $NetBSD: Makefile,v 1.11 2023/02/07 01:41:03 pho Exp $
 
 DISTNAME=	cryptohash-sha256-0.11.102.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security
 
 MAINTAINER=	pho@cielonegro.org

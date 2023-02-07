@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2023/01/25 09:57:38 pho Exp $
+# $NetBSD: Makefile,v 1.10 2023/02/07 01:40:22 pho Exp $
 
 DISTNAME=	tar-0.5.1.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	archivers
 
 MAINTAINER=	pho@cielonegro.org

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2023/01/26 03:28:56 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2023/02/07 01:40:36 pho Exp $
 
 BUILDLINK_TREE+=	hs-hashtables
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-hashtables
 HS_HASHTABLES_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-hashtables+=	hs-hashtables>=1.3.1
-BUILDLINK_ABI_DEPENDS.hs-hashtables+=	hs-hashtables>=1.3.1
+BUILDLINK_ABI_DEPENDS.hs-hashtables+=	hs-hashtables>=1.3.1nb1
 BUILDLINK_PKGSRCDIR.hs-hashtables?=	../../devel/hs-hashtables
 
 .include "../../devel/hs-hashable/buildlink3.mk"

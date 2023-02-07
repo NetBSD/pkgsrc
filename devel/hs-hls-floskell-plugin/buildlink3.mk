@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2023/01/30 17:09:49 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2023/02/07 01:40:39 pho Exp $
 
 BUILDLINK_TREE+=	hs-hls-floskell-plugin
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-hls-floskell-plugin
 HS_HLS_FLOSKELL_PLUGIN_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-hls-floskell-plugin+=	hs-hls-floskell-plugin>=1.0.2
-BUILDLINK_ABI_DEPENDS.hs-hls-floskell-plugin+=	hs-hls-floskell-plugin>=1.0.2.0
+BUILDLINK_ABI_DEPENDS.hs-hls-floskell-plugin+=	hs-hls-floskell-plugin>=1.0.2.0nb1
 BUILDLINK_PKGSRCDIR.hs-hls-floskell-plugin?=	../../devel/hs-hls-floskell-plugin
 
 .include "../../devel/floskell/buildlink3.mk"

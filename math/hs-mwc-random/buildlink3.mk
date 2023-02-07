@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2022/08/20 08:08:21 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2023/02/07 01:41:00 pho Exp $
 
 BUILDLINK_TREE+=	hs-mwc-random
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-mwc-random
 HS_MWC_RANDOM_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-mwc-random+=	hs-mwc-random>=0.15.0
-BUILDLINK_ABI_DEPENDS.hs-mwc-random+=	hs-mwc-random>=0.15.0.2nb3
+BUILDLINK_ABI_DEPENDS.hs-mwc-random+=	hs-mwc-random>=0.15.0.2nb4
 BUILDLINK_PKGSRCDIR.hs-mwc-random?=	../../math/hs-mwc-random
 
 .include "../../math/hs-math-functions/buildlink3.mk"
