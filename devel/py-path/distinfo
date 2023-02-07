@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2022/01/07 16:56:33 adam Exp $
+$NetBSD: distinfo,v 1.3 2023/02/07 10:51:44 adam Exp $
 
-BLAKE2s (path-16.3.0.tar.gz) = 94df7efd8c505ecd9ca4f7c7c190d5a8494913989a322f080a5ec2552050d487
-SHA512 (path-16.3.0.tar.gz) = 82e94735f65aee533f446e68f2b9b928e42a918772461871e9238227c13831d3ff3e639c1e9f8dcee10bed217477d31495faa3b18e9d2c8898ded607ab8cd71f
-Size (path-16.3.0.tar.gz) = 45183 bytes
+BLAKE2s (path-16.6.0.tar.gz) = 09a90f53c6517ed96dcfaf914e06c8f81ef7ca679300f4c7aaa21ba769615eee
+SHA512 (path-16.6.0.tar.gz) = f1ec159c6b755f98eef90e1aac4337fb84fd9f739beddf34205c5faf9e959863baa52d237899bd33fe8f365a2666af6999c2e9388be310a6acae16b4952df022
+Size (path-16.6.0.tar.gz) = 49670 bytes
