@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1036 2023/02/07 09:02:31 adam Exp $
+$NetBSD: CHANGES-2023,v 1.1037 2023/02/07 10:30:36 nia Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1304,3 +1304,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/hugo to 0.110.0 [nikita 2023-02-06]
 	Updated net/dnsmasq to 2.89 [adam 2023-02-07]
 	Updated devel/tevent to 0.14.1 [adam 2023-02-07]
+	Updated devel/lua-busted to 2.1.1 [nia 2023-02-07]
