@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.14 2023/01/10 22:07:33 hauke Exp $
+$NetBSD: distinfo,v 1.15 2023/02/07 23:00:40 hauke Exp $
 
 BLAKE2s (netatalk-2.2.7.tar.gz) = a828870c06fcec3aaf1ec4fd6c06411ecc0e687b73f4d29257743de0667798df
 SHA512 (netatalk-2.2.7.tar.gz) = fb6664b2ea700f1a8307eaf452954e2f0c3bb7d082f2df211f17a79d1fc7f3ca4dff0b805beb7b8d10fb23d749fd1990a6b07c029d89d09299677a41b8161220
 Size (netatalk-2.2.7.tar.gz) = 1849800 bytes
 SHA1 (patch-config_Makefile.in) = 37ed88693c64b5e34396da26f9d7105102ed479b
 SHA1 (patch-configure) = 6b9d73ac0c8ba4913834402a587b734d342c3830
+SHA1 (patch-etc_afpd_volume.c) = f4aaa91daf26f16df48cb6f39340748e4b4b6ab5
 SHA1 (patch-etc_uams_uams__dhx__passwd.c) = a4eb368ae6f1698d906fe1ba2f1600b7a0b20539

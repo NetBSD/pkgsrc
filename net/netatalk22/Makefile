@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2023/01/10 22:07:33 hauke Exp $
+# $NetBSD: Makefile,v 1.51 2023/02/07 23:00:40 hauke Exp $
 
 DISTNAME=	netatalk-2.2.7
+PKGREVISION=	1
 PKGNAME=	${DISTNAME:C/-/22-/}
 CATEGORIES=	net print
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Netatalk/}Netatalk/releases/download/netatalk-2-2-7/
