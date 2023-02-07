@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1035 2023/02/06 22:03:51 nikita Exp $
+$NetBSD: CHANGES-2023,v 1.1036 2023/02/07 09:02:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1302,3 +1302,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/gleam to 0.26.2 [nikita 2023-02-06]
 	Added devel/go-swagger version 0.30.4 [nikita 2023-02-06]
 	Updated www/hugo to 0.110.0 [nikita 2023-02-06]
+	Updated net/dnsmasq to 2.89 [adam 2023-02-07]
+	Updated devel/tevent to 0.14.1 [adam 2023-02-07]
