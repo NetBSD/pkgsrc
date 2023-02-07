@@ -1,4 +1,4 @@
-.\" $NetBSD: pbulk-build.1,v 1.2 2015/12/07 16:52:39 joerg Exp $
+.\" $NetBSD: pbulk-build.1,v 1.3 2023/02/07 14:53:58 wiz Exp $
 .\"
 .\" Copyright (c) 2007 Thomas Klausner and Joerg Sonnenberger.
 .\" All rights reserved.
@@ -24,7 +24,7 @@
 .\" ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 .\" POSSIBILITY OF SUCH DAMAGE.
 .\"
-.Dd June 11, 2007
+.Dd February 7, 2023
 .Dt PBULK-BUILD 1
 .Os
 .Sh NAME
@@ -128,5 +128,76 @@ If
 is specified twice, each begin and end message is prefixed with
 the current time.
 .Ss BUILD SCRIPT FORMAT
-XXX: to be documented
+The
+.Ar build_script
+is given information about one package which it should build.
+It should return 0 on success or any other value for an error.
+The
+.Ar build_script
+gets the information in a number of variables provided on standard input.
+The variables are provided in the format
+.Dl VARIABLE=value .
+The following variables are provided as of February 2023:
+.Bl -tag -width 20n
+.It Dv PKGNAME
+Name of the package including the version number, e.g.
+.Dq pbulk-0.54 .
+.It Dv PKG_LOCATION
+Path to the package below
+.Pa pkgsrc ,
+e.g.
+.Dq pkgtools/pbulk .
+.It Dv ALL_DEPENDS
+All dependencies of the package in one line, as determined by the
+dependency resolution step, in the following format:
+.Dl digest>=20211023:../../pkgtools/digest libtool-base>=2.4.2nb9:../../devel/libtool-base ...
+.It Dv PKG_SKIP_REASON
+A string containing the reason if the package should be skipped.
+Usually an empty string.
+.It Dv PKG_FAIL_REASON
+A string containing the reason if the package failed the dependency resolution
+or is broken for another reason.
+Usually an empty string.
+.It Dv NO_BIN_ON_FTP
+A string containing the reason why the binary package may not be uploaded to
+.Lk ftp.NetBSD.org .
+Usually an empty string.
+.It Dv RESTRICTED
+A string containing the reason why the binary package may not be distributed.
+.It Dv CATEGORIES
+Categories to which the package belongs, as specified in its Makefile.
+.It Dv MAINTAINER
+Maintainer of the package, as specified in its Makefile.
+.It Dv USE_DESTDIR
+DESTDIR method this package supports.
+Now almost exclusively
+.Dq user-destdir .
+.It Dv BOOTSTRAP_PKG
+If this package is used during pkgsrc bootstrap (as specified in its Makefile).
+Usually empty.
+.It Dv USERGROUP_PHASE
+The phase of the build process during which the user and/or group
+needed by this package need to be available.
+.It Dv SCAN_DEPENDS
+List of files (in a single line) read during the dependency scanning step.
+Can be used to identify if a package needs to be updated because on of these files
+changed compared to the previous build.
+Example:
+.Dl /usr/pkgsrc/pkgtools/pbulk/../../mk/tools/tools.NetBSD.mk /usr/share/mk/bsd.host.mk /usr/share/mk/bsd.own.mk /usr/share/mk/sys.mk Makefile options.mk
+.It Dv MULTI_VERSION
+For some languages or databases (or similar), pkgsrc contains multiple
+major versions at the same time, and supports building a single
+package against more than one of these.
+This variable contains a list of variables (in a single line) to
+determine which of these versions this particular package should be
+built against.
+Example:
+.Dl MULTI_VERSION= PYTHON_VERSION_REQD=311 LUA_VERSION_REQD=52
+means to build against Python 3.11 and Lua 5.2.
+.It Dv DEPENDS
+.Dv PKGNAME Ap s
+of the packages this package depends on (including their version number).
+Example:
+.Dl DEPENDS=digest-20220214 libtool-base-2.4.7nb1
+.El
 .\" XXX: .Sh EXIT STATUS
