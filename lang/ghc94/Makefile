@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2023/02/07 01:20:57 pho Exp $
+# $NetBSD: Makefile,v 1.5 2023/02/07 10:45:25 jperkin Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
@@ -81,6 +81,10 @@ CONFIGURE_ARGS.common+= \
 CONFIGURE_ENV+=		ac_cv_prog_fp_prog_ar=${AR:Q}
 CONFIGURE_ENV+=		ac_cv_prog_LIBTOOL=libtool
 CONFIGURE_ARGS.common+=	LD=${LD:Q}
+
+# While we use binutils ar which supports "@", this appears to be leaking
+# somewhere into assuming that SunOS ld also supports "@" which it does not.
+CONFIGURE_ENV.SunOS+=	fp_cv_prog_ar_supports_atfile=no
 
 # If there is HsColour in the PATH, GHC's build system tries to use it
 # without checking if it really works. That's not what we appreciate.
