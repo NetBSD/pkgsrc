@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/07/08 16:23:23 nia Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/02/07 10:30:24 nia Exp $
 bin/busted${LUADOTVER}
 ${LUA_LDIR}/busted/block.lua
 ${LUA_LDIR}/busted/compatibility.lua
@@ -7,20 +7,24 @@ ${LUA_LDIR}/busted/core.lua
 ${LUA_LDIR}/busted/done.lua
 ${LUA_LDIR}/busted/environment.lua
 ${LUA_LDIR}/busted/execute.lua
+${LUA_LDIR}/busted/fixtures.lua
 ${LUA_LDIR}/busted/init.lua
 ${LUA_LDIR}/busted/languages/ar.lua
 ${LUA_LDIR}/busted/languages/de.lua
 ${LUA_LDIR}/busted/languages/en.lua
 ${LUA_LDIR}/busted/languages/es.lua
 ${LUA_LDIR}/busted/languages/fr.lua
+${LUA_LDIR}/busted/languages/is.lua
 ${LUA_LDIR}/busted/languages/it.lua
 ${LUA_LDIR}/busted/languages/ja.lua
 ${LUA_LDIR}/busted/languages/nl.lua
 ${LUA_LDIR}/busted/languages/pt-BR.lua
+${LUA_LDIR}/busted/languages/ro.lua
 ${LUA_LDIR}/busted/languages/ru.lua
 ${LUA_LDIR}/busted/languages/th.lua
 ${LUA_LDIR}/busted/languages/ua.lua
 ${LUA_LDIR}/busted/languages/zh.lua
+${LUA_LDIR}/busted/luajit.lua
 ${LUA_LDIR}/busted/modules/cli.lua
 ${LUA_LDIR}/busted/modules/configuration_loader.lua
 ${LUA_LDIR}/busted/modules/files/lua.lua
