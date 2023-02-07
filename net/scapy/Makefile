@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2023/01/19 00:35:26 gutteridge Exp $
+# $NetBSD: Makefile,v 1.43 2023/02/07 22:52:29 gutteridge Exp $
 
 DISTNAME=	scapy-2.5.0
 PKGREVISION=	1
@@ -23,6 +23,7 @@ SUBST_FILES.config=	setup.py
 SUBST_SED.config+=	-e "s|share/man|${PKGMANDIR}|g"
 SUBST_MESSAGE.config=	Fixing paths.
 
+TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 TEST_DEPENDS+=	tcpreplay-[0-9]*:../../net/tcpreplay
 
 DATE_VAL=	${DATE} "+%Y%m%d-%H%M%S"
