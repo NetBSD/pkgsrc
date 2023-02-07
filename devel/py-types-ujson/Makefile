@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2022/12/06 08:13:45 adam Exp $
+# $NetBSD: Makefile,v 1.5 2023/02/07 10:57:19 adam Exp $
 
-DISTNAME=	types-ujson-5.6.0.0
+DISTNAME=	types-ujson-5.7.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/types-ujson/}
