@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/02/03 14:26:25 nikita Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/02/07 15:14:02 nikita Exp $
 bin/gnunet-arm
 bin/gnunet-ats
 bin/gnunet-auto-share
@@ -347,6 +347,7 @@ lib/pkgconfig/gnunetfs.pc
 lib/pkgconfig/gnunetgns.pc
 lib/pkgconfig/gnunethello.pc
 lib/pkgconfig/gnunetidentity.pc
+lib/pkgconfig/gnunetmessenger.pc
 lib/pkgconfig/gnunetmicrophone.pc
 lib/pkgconfig/gnunetmysql.pc
 lib/pkgconfig/gnunetnamestore.pc
