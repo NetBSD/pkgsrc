@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.22 2023/01/09 21:13:04 fcambus Exp $
+$NetBSD: distinfo,v 1.23 2023/02/07 19:00:54 fcambus Exp $
 
-BLAKE2s (console-setup_1.215.tar.xz) = 81e0aa0d8a6cb4aa5000822d2d10a2b6463c91b2b8560e397735f2d675bd392b
-SHA512 (console-setup_1.215.tar.xz) = 8a137d49316f4a33c2cb7799b51acc5da072382efd13e0170858042cb341a1d5a182dc962e296d580c918906ea356aee3e2675497e041bda3ade5fbe6c482b96
-Size (console-setup_1.215.tar.xz) = 1796436 bytes
+BLAKE2s (console-setup_1.216.tar.xz) = a819370f0f681aa65317e8f09ec1d6dc3c4f6c9f2e7bef7cb7475ed8c7b54824
+SHA512 (console-setup_1.216.tar.xz) = 115d19971f17dc9da8f127164fe92cfcd74b41ddb65aa9f131f83b2385acee02debed8b8395c75c1cfe21bf3f70459abc236b58c5ac06e4a88949f1a2dbb4129
+Size (console-setup_1.216.tar.xz) = 2637164 bytes
