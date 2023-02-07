@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1045 2023/02/07 16:34:51 jperkin Exp $
+$NetBSD: CHANGES-2023,v 1.1046 2023/02/07 17:24:58 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1318,3 +1318,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/modular-xorg-xephyr to 21.1.7 [wiz 2023-02-07]
 	Updated net/gnunet to 0.19.3 [nikita 2023-02-07]
 	Updated security/openssl to 1.1.1t [jperkin 2023-02-07]
+	Updated x11/jolly to 0.2.0 [pin 2023-02-07]
