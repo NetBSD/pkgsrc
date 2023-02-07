@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.4 2023/02/01 08:47:50 pho Exp $
+# $NetBSD: bootstrap.mk,v 1.5 2023/02/07 10:42:17 jperkin Exp $
 # -----------------------------------------------------------------------------
 # Select a bindist of bootstrapping compiler on a per-platform basis. See
 # ./files/BOOTSTRAP.md for details.
@@ -67,8 +67,9 @@ SITES.netbsd-9.0-amd64-libterminfo.tar.gz?=	${MASTER_SITE_LOCAL}
 .endif
 
 .if !empty(MACHINE_PLATFORM:MSunOS-*-x86_64) || make(distinfo) || make (makesum) || make(mdi)
-BOOT_VERSION:=		9.0.1
+BOOT_VERSION:=		9.2.1
 BOOT_ARCHIVE:=		ghc-${BOOT_VERSION}-boot-x86_64-unknown-solaris2.tar.xz
+SITES.${BOOT_ARCHIVE}=	https://us-central.manta.mnx.io/pkgsrc/public/pkg-bootstraps/
 DISTFILES:=		${DISTFILES} ${BOOT_ARCHIVE} ${HADRIAN_BOOT_SOURCE} # Available in LOCAL_PORTS
 .endif
 
