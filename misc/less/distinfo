@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.23 2022/09/15 11:02:14 leot Exp $
+$NetBSD: distinfo,v 1.24 2023/02/07 20:32:34 wiz Exp $
 
 BLAKE2s (less-608.tar.gz) = b96aedc410ad1072253e0e22da1d059a1396fda6f454f778df9b13388f88b007
 SHA512 (less-608.tar.gz) = 7945b7f88921832ebb1b45fba8cbb449ee0133342796b654a52c146dfff3d84db18724ee84e53349eeea6017a0ebe2d8eb5366210275981dde7bb7190118fa66
 Size (less-608.tar.gz) = 362346 bytes
 SHA1 (patch-Makefile.in) = 4b47caa52dfb236da1b51a74902b98d7aa3237f4
+SHA1 (patch-line.c) = 43116af39c37c14f6fa68999aee6ac4ee44d929c

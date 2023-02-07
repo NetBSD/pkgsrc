@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2022/09/15 11:02:14 leot Exp $
+# $NetBSD: Makefile,v 1.31 2023/02/07 20:32:34 wiz Exp $
 
 DISTNAME=	less-608
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	http://www.greenwoodsoftware.com/less/
 
