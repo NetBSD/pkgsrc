@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1039 2023/02/07 11:25:54 adam Exp $
+$NetBSD: CHANGES-2023,v 1.1040 2023/02/07 12:23:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1310,3 +1310,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/py-cares to 4.3.0 [adam 2023-02-07]
 	Updated devel/py-types-ujson to 5.7.0.0 [adam 2023-02-07]
 	Updated devel/py-pyutil to 3.3.2 [adam 2023-02-07]
+	Updated devel/py-test-localserver to 0.7.1 [adam 2023-02-07]
+	Updated devel/py-plumbum to 1.8.1 [adam 2023-02-07]
