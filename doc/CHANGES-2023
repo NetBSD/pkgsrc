@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1042 2023/02/07 13:53:22 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1043 2023/02/07 13:53:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1315,3 +1315,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated converters/py-simplejson to 3.18.3 [adam 2023-02-07]
 	Updated time/py-dateparser to 1.1.7 [adam 2023-02-07]
 	Updated x11/modular-xorg-server to 21.1.7 [wiz 2023-02-07]
+	Updated x11/modular-xorg-xephyr to 21.1.7 [wiz 2023-02-07]
