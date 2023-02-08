@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.62 2022/12/06 08:08:42 adam Exp $
+# $NetBSD: Makefile,v 1.63 2023/02/08 10:28:52 adam Exp $
 
-DISTNAME=	virtualenv-20.17.1
+DISTNAME=	virtualenv-20.19.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/virtualenv/}
@@ -10,7 +10,8 @@ HOMEPAGE=	https://virtualenv.pypa.io/
 COMMENT=	Virtual Python Environment builder
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs>=0.3:../../devel/py-hatch-vcs
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.12.2:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-distlib>=0.3.6:../../devel/py-distlib
 DEPENDS+=	${PYPKGPREFIX}-filelock>=3.4.1:../../devel/py-filelock
 DEPENDS+=	${PYPKGPREFIX}-platformdirs>=2.4:../../misc/py-platformdirs
@@ -27,8 +28,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout>=2.1:../../devel/py-test-timeout
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-USE_PKG_RESOURCES=	yes
-
 USE_LANGUAGES=	c # for tests
 
 REPLACE_PYTHON=	virtualenv.py
@@ -42,5 +41,5 @@ do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
