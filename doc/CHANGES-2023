@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1053 2023/02/08 08:41:53 pin Exp $
+$NetBSD: CHANGES-2023,v 1.1054 2023/02/08 10:19:00 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1326,3 +1326,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/heimdal to 7.8.0nb2 [wiz 2023-02-08]
 	Updated devel/tig to 2.5.8 [fcambus 2023-02-08]
 	Updated net/sniffnet to 1.1.0 [pin 2023-02-08]
+	Updated editors/neovim to 0.8.3 [nikita 2023-02-08]
