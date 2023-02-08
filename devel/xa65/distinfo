@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.10 2022/04/10 13:55:32 fcambus Exp $
+$NetBSD: distinfo,v 1.11 2023/02/08 21:16:30 fcambus Exp $
 
-BLAKE2s (xa-2.3.13.tar.gz) = ae17b9307e3081d80fa6c42f0de2969facfbc7d57fa317b827d83d1eafc5a67d
-SHA512 (xa-2.3.13.tar.gz) = b8a4c1856e51bbe212b98be06895987d6fb926a229511a67ea90a934da1fcc84daf29bd289c3c4c2254d2bce345333bb92747947f3286376761613b2e181e99b
-Size (xa-2.3.13.tar.gz) = 155606 bytes
-SHA1 (patch-Makefile) = 05303bf6ec7d52f4b49001a653e680a46b16f1e7
+BLAKE2s (xa-2.3.14.tar.gz) = c60aa25502075b5aad43d716df4631fa2d83e4ce30dc992b1bbaa7fc9023ccf2
+SHA512 (xa-2.3.14.tar.gz) = 71d4631cb3e698b6522ca76c4b34078ded0632533bdaaa8b8d584eb27f0958ed288a6765136ff0ad03cd861a2dccbb76c6d8db0abf277a61ae864ad23212653d
+Size (xa-2.3.14.tar.gz) = 156876 bytes
+SHA1 (patch-Makefile) = 573a62f60824429176b1da47b89803899a674bfb
 SHA1 (patch-misc_Makefile) = 488705f516aec448fb51db6ab788b788bfbd31bc
