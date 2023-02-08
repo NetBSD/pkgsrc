@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2022/03/17 07:08:34 wiz Exp $
+$NetBSD: distinfo,v 1.5 2023/02/08 21:53:03 nikita Exp $
 
-BLAKE2s (guile-syntax-highlight-0.1.tar.gz) = 3b10c17b1c69bea273c873503439ec6d49b0abfd5e81109568a72b031c6ef62a
-SHA512 (guile-syntax-highlight-0.1.tar.gz) = e3fabc9f2d1aafa407d3f725391d5dd4baf6e70ce88e57c86ec288ee713a1559c930aa635b81ba57f4ae619bae62093a290192eccfa5a6919a9e54c87757a7fa
-Size (guile-syntax-highlight-0.1.tar.gz) = 72649 bytes
-SHA1 (patch-configure) = 859c9971b4ca1ebf593d2126317bcd7f93a5355f
+BLAKE2s (guile-syntax-highlight-0.2.0.tar.gz) = 7acee2720dd9977bef573f156e961dafbd544f3b042f9f8ad5b1f3c1b76a2268
+SHA512 (guile-syntax-highlight-0.2.0.tar.gz) = c6410d7b45df7059e17b379860241e74ed4aaf7fbdff37cfff13219e8d51adfa31ad93ae6e9aac104f989d54ff1eeccacb7bf4007e2a3c4107e32fcd268c5dee
+Size (guile-syntax-highlight-0.2.0.tar.gz) = 81103 bytes
