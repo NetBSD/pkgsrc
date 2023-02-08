@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1050 2023/02/08 00:14:40 taca Exp $
+$NetBSD: CHANGES-2023,v 1.1051 2023/02/08 07:41:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1323,3 +1323,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated misc/less to 608nb1 [wiz 2023-02-07]
 	Updated www/grafana to 9.2.6 [triaxx 2023-02-07]
 	Updated net/bind918 to 9.18.11 [taca 2023-02-08]
+	Updated security/heimdal to 7.8.0nb2 [wiz 2023-02-08]
