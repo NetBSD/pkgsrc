@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2022/03/14 15:29:16 nikita Exp $
+# $NetBSD: Makefile,v 1.4 2023/02/08 21:53:03 nikita Exp $
 
-DISTNAME=	guile-syntax-highlight-0.1
-PKGREVISION=	1
+DISTNAME=	guile-syntax-highlight-0.2.0
 CATEGORIES=	textproc
 MASTER_SITES=	https://files.dthompson.us/guile-syntax-highlight/
 
