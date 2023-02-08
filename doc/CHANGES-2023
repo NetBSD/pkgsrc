@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1061 2023/02/08 16:14:42 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.1062 2023/02/08 16:15:06 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1341,3 +1341,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/gng to 1.0.4 [schmonz 2023-02-08]
 	Updated net/fehqlibs to 22 [schmonz 2023-02-08]
 	Updated net/djbdnscurve6 to 44 [schmonz 2023-02-08]
+	Updated net/ucspi-ssl to 0.999.12.4 [schmonz 2023-02-08]
