@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2022/12/27 18:28:34 abs Exp $
+# $NetBSD: Makefile,v 1.4 2023/02/08 15:51:46 schmonz Exp $
 
-DISTNAME=		gng-1.0.3
-PKGREVISION=		1
+DISTNAME=		gng-1.0.4
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=gdubw/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}
 
 MAINTAINER=		schmonz@NetBSD.org
-HOMEPAGE=		https://gng.dsun.org
+HOMEPAGE=		https://gng.dsun.org/
 COMMENT=		Run (or create) each project's own Gradle wrapper
 LICENSE=		apache-2.0
 
@@ -20,7 +19,7 @@ REPLACE_SH=		gradle/gradlew
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	do-configure
 SUBST_FILES.paths=	bin/gng
-SUBST_VARS.paths=	PREFIX
+SUBST_VARS.paths=	PREFIX PYTHONBIN
 
 INSTALLATION_DIRS=	bin share/${PKGBASE}/gradle/wrapper
 
