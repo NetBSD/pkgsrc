@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2023/01/09 22:31:46 nikita Exp $
+# $NetBSD: Makefile,v 1.5 2023/02/08 10:18:50 nikita Exp $
 
-DISTNAME=	neovim-0.8.2
+DISTNAME=	neovim-0.8.3
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=neovim/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
