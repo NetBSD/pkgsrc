@@ -1,10 +1,10 @@
-$NetBSD: patch-lib_isc_time.c,v 1.1 2022/12/11 01:57:55 sekiya Exp $
+$NetBSD: patch-lib_isc_time.c,v 1.2 2023/02/08 00:13:44 taca Exp $
 
 * More check time_t range.
 
---- lib/isc/time.c.orig	2020-05-06 09:59:35.000000000 +0000
+--- lib/isc/time.c.orig	2023-01-12 22:21:15.270402532 +0000
 +++ lib/isc/time.c
-@@ -285,7 +285,7 @@ isc_time_seconds(const isc_time_t *t) {
+@@ -318,7 +318,7 @@ isc_time_seconds(const isc_time_t *t) {
  
  isc_result_t
  isc_time_secondsastimet(const isc_time_t *t, time_t *secondsp) {
@@ -12,8 +12,8 @@ $NetBSD: patch-lib_isc_time.c,v 1.1 2022/12/11 01:57:55 sekiya Exp $
 +	time_t seconds, i;
  
  	REQUIRE(t != NULL);
- 	INSIST(t->nanoseconds < NS_PER_S);
-@@ -312,7 +312,18 @@ isc_time_secondsastimet(const isc_time_t
+ 	INSIST(t->nanoseconds < NS_PER_SEC);
+@@ -345,7 +345,18 @@ isc_time_secondsastimet(const isc_time_t
  	INSIST(sizeof(unsigned int) == sizeof(uint32_t));
  	INSIST(sizeof(time_t) >= sizeof(uint32_t));
  

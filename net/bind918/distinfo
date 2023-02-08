@@ -1,12 +1,11 @@
-$NetBSD: distinfo,v 1.3 2022/12/12 22:07:04 sekiya Exp $
+$NetBSD: distinfo,v 1.4 2023/02/08 00:13:44 taca Exp $
 
-BLAKE2s (bind-9.18.9.tar.xz) = 8c3f2dcb57205959f78c02fd32a12d0897050897af9136b58972fde41468ec55
-SHA512 (bind-9.18.9.tar.xz) = 7d9bca47e29e8634416ab52819d78ce4ec6196c0dcbd9fe95a24687337f71c69b6472cf20bf49ea0ae1751a861944f354f9122acfb01780f51278ad4a3fdd817
-Size (bind-9.18.9.tar.xz) = 5281732 bytes
+BLAKE2s (bind-9.18.11.tar.xz) = c4aae1223078ef089a3f35ae15e3ea552383d235b7a9dfe1c0423a958409891f
+SHA512 (bind-9.18.11.tar.xz) = 1f71560efca3b6886d71861c76d4a11d59c28f0ffed684f040a59dd9c14be594985a3f15e6d610a4d88a40a16a19e259977d4a254e146469323d15587b23f3ad
+Size (bind-9.18.11.tar.xz) = 5284184 bytes
 SHA1 (patch-bin_named_main.c) = 4e4a763c478f1fcecb7e65968cf6ca20dacf01f1
 SHA1 (patch-bin_named_os.c) = 5ecb0883076575d8ac5fcad68f9daad6c9be0d0b
 SHA1 (patch-bin_named_server.c) = 6e59d3f637ebb829eec2f76ba7c350fb5cf9be6d
-SHA1 (patch-bin_tests_system_keyfromlabel_tests.sh) = 63a1516b573adabe6ff2719532fd58bcf3ecd65b
 SHA1 (patch-config.h.in) = 6072793048cdf590863046355eeffa1d93524c36
 SHA1 (patch-configure.ac) = a6f10aec356691ca1075262a3e87c809cd3a558a
 SHA1 (patch-lib_dns_byaddr.c) = 647ddaaaf040233e18d1a87d83bc2bd63d2a20e3
@@ -26,13 +25,13 @@ SHA1 (patch-lib_isc_net.c) = 743de2701fa96ef25e5689f40e381628cff641d5
 SHA1 (patch-lib_isc_netmgr_netmgr-int.h) = d84993edf254605f85421fbdd2fc523255c7316d
 SHA1 (patch-lib_isc_netmgr_netmgr.c) = 3df1d37061f6ceb37e309a0dc4f782fc35863146
 SHA1 (patch-lib_isc_rwlock.c) = 1d114248ddee20db7a7429afab446f8b2f0dca82
-SHA1 (patch-lib_isc_siphash.c) = 8999deb002e4fdb6b13e6f297298ef73c97042c3
-SHA1 (patch-lib_isc_time.c) = 04719dce1ad7328909fd584104b7bc20170b3c5e
+SHA1 (patch-lib_isc_siphash.c) = 2dd80dde7bd8e869a3cf03c1699665b56eaaf866
+SHA1 (patch-lib_isc_time.c) = 22780fd25d89a0ece46ec1624b3977ca4c46281a
 SHA1 (patch-lib_isc_timer.c) = aea2019bbf3d84cad77af432a2bbdf0da8f2f893
 SHA1 (patch-lib_ns_Makefile.am) = a91e1713185c4366e96bf52ebee38e3b7e35a0c6
 SHA1 (patch-lib_ns_client.c) = 4093c82254321e6c6eaa40ea1cf738b3f9bda0bb
 SHA1 (patch-lib_ns_include_ns_pfilter.h) = cc86752971b4f9f7492283c4ad3ff29bc1bae237
 SHA1 (patch-lib_ns_pfilter.c) = b0345f9b27e2bdd4f9a992cfc23616e027de4988
 SHA1 (patch-lib_ns_query.c) = d947318dc6a261931928c4bf8b7f48efa9004a38
-SHA1 (patch-lib_ns_update.c) = 2fb3457da333143508d28420490cbc1cb69ddb19
+SHA1 (patch-lib_ns_update.c) = 941ca5601904e9b4cc5314148e955f5490a5d071
 SHA1 (patch-lib_ns_xfrout.c) = 79d9e4add58ffd75ea9718f5501f1517e67416e3
