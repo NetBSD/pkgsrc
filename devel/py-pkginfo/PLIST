@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/07/21 19:23:12 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/02/08 10:22:48 adam Exp $
 bin/pkginfo
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -9,30 +9,36 @@ ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/pkginfo/__init__.py
 ${PYSITELIB}/pkginfo/__init__.pyc
+${PYSITELIB}/pkginfo/__init__.pyi
 ${PYSITELIB}/pkginfo/__init__.pyo
-${PYSITELIB}/pkginfo/_compat.py
-${PYSITELIB}/pkginfo/_compat.pyc
-${PYSITELIB}/pkginfo/_compat.pyo
 ${PYSITELIB}/pkginfo/bdist.py
 ${PYSITELIB}/pkginfo/bdist.pyc
+${PYSITELIB}/pkginfo/bdist.pyi
 ${PYSITELIB}/pkginfo/bdist.pyo
 ${PYSITELIB}/pkginfo/commandline.py
 ${PYSITELIB}/pkginfo/commandline.pyc
+${PYSITELIB}/pkginfo/commandline.pyi
 ${PYSITELIB}/pkginfo/commandline.pyo
 ${PYSITELIB}/pkginfo/develop.py
 ${PYSITELIB}/pkginfo/develop.pyc
+${PYSITELIB}/pkginfo/develop.pyi
 ${PYSITELIB}/pkginfo/develop.pyo
 ${PYSITELIB}/pkginfo/distribution.py
 ${PYSITELIB}/pkginfo/distribution.pyc
+${PYSITELIB}/pkginfo/distribution.pyi
 ${PYSITELIB}/pkginfo/distribution.pyo
 ${PYSITELIB}/pkginfo/index.py
 ${PYSITELIB}/pkginfo/index.pyc
+${PYSITELIB}/pkginfo/index.pyi
 ${PYSITELIB}/pkginfo/index.pyo
 ${PYSITELIB}/pkginfo/installed.py
 ${PYSITELIB}/pkginfo/installed.pyc
+${PYSITELIB}/pkginfo/installed.pyi
 ${PYSITELIB}/pkginfo/installed.pyo
+${PYSITELIB}/pkginfo/py.typed
 ${PYSITELIB}/pkginfo/sdist.py
 ${PYSITELIB}/pkginfo/sdist.pyc
+${PYSITELIB}/pkginfo/sdist.pyi
 ${PYSITELIB}/pkginfo/sdist.pyo
 ${PYSITELIB}/pkginfo/tests/__init__.py
 ${PYSITELIB}/pkginfo/tests/__init__.pyc
@@ -66,7 +72,9 @@ ${PYSITELIB}/pkginfo/tests/test_wheel.pyc
 ${PYSITELIB}/pkginfo/tests/test_wheel.pyo
 ${PYSITELIB}/pkginfo/utils.py
 ${PYSITELIB}/pkginfo/utils.pyc
+${PYSITELIB}/pkginfo/utils.pyi
 ${PYSITELIB}/pkginfo/utils.pyo
 ${PYSITELIB}/pkginfo/wheel.py
 ${PYSITELIB}/pkginfo/wheel.pyc
+${PYSITELIB}/pkginfo/wheel.pyi
 ${PYSITELIB}/pkginfo/wheel.pyo
