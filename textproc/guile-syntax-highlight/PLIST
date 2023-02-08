@@ -1,13 +1,19 @@
-@comment $NetBSD: PLIST,v 1.2 2022/03/14 15:29:16 nikita Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/02/08 21:53:33 nikita Exp $
 guile/3.0/lib/guile/3.0/site-ccache/syntax-highlight.go
 guile/3.0/lib/guile/3.0/site-ccache/syntax-highlight/c.go
+guile/3.0/lib/guile/3.0/site-ccache/syntax-highlight/css.go
+guile/3.0/lib/guile/3.0/site-ccache/syntax-highlight/gitignore.go
 guile/3.0/lib/guile/3.0/site-ccache/syntax-highlight/lexers.go
+guile/3.0/lib/guile/3.0/site-ccache/syntax-highlight/lisp.go
 guile/3.0/lib/guile/3.0/site-ccache/syntax-highlight/scheme.go
 guile/3.0/lib/guile/3.0/site-ccache/syntax-highlight/utils.go
 guile/3.0/lib/guile/3.0/site-ccache/syntax-highlight/xml.go
 guile/3.0/share/guile/site/3.0/syntax-highlight.scm
 guile/3.0/share/guile/site/3.0/syntax-highlight/c.scm
+guile/3.0/share/guile/site/3.0/syntax-highlight/css.scm
+guile/3.0/share/guile/site/3.0/syntax-highlight/gitignore.scm
 guile/3.0/share/guile/site/3.0/syntax-highlight/lexers.scm
+guile/3.0/share/guile/site/3.0/syntax-highlight/lisp.scm
 guile/3.0/share/guile/site/3.0/syntax-highlight/scheme.scm
 guile/3.0/share/guile/site/3.0/syntax-highlight/utils.scm
 guile/3.0/share/guile/site/3.0/syntax-highlight/xml.scm
