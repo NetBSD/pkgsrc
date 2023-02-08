@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2022/12/27 18:28:34 abs Exp $
+$NetBSD: distinfo,v 1.3 2023/02/08 15:51:46 schmonz Exp $
 
-BLAKE2s (gng-1.0.3.tar.gz) = fc1c172998c0da64f8817c88dba8f696c05da8a464abb5add6d47eae0e9c617b
-SHA512 (gng-1.0.3.tar.gz) = a40be62d8deae070a5c5d342c4d510a78712657414d4dec4016becd7fb23436e6b344faf3917f7c1aa478c06a87ebbdd6541afea2fe8c035f8044f6d15af4855
-Size (gng-1.0.3.tar.gz) = 71089 bytes
-SHA1 (patch-bin_gng) = 00bebe6b02c8721a8a9114d291017b3c605acf20
+BLAKE2s (gng-1.0.4.tar.gz) = 097e402dd4404f3de9a1b9357c91717ccf21fbd87a2c5f2c5c6777c0ff817b37
+SHA512 (gng-1.0.4.tar.gz) = 7e8d9d3672f4cad3c814a9a7c182ead4b6bc0041d4314b15515b2be1d5733aa4c27eb798664662199e42f0f45c51d9e3c2ba9af2ccd882b1984dffa1bbd6e631
+Size (gng-1.0.4.tar.gz) = 71324 bytes
+SHA1 (patch-bin_gng) = b1bd9d2541c1680c11e89ea3930e85acbe6c365f
