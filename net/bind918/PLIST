@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2022/12/11 01:57:55 sekiya Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/02/08 00:13:44 taca Exp $
 bin/arpaname
 bin/delv
 bin/dig
@@ -253,19 +253,12 @@ include/ns/update.h
 include/ns/xfrout.h
 lib/bind/filter-a.la
 lib/bind/filter-aaaa.la
-lib/libbind9-9.18.9.so
 lib/libbind9.la
-lib/libdns-9.18.9.so
 lib/libdns.la
-lib/libirs-9.18.9.so
 lib/libirs.la
-lib/libisc-9.18.9.so
 lib/libisc.la
-lib/libisccc-9.18.9.so
 lib/libisccc.la
-lib/libisccfg-9.18.9.so
 lib/libisccfg.la
-lib/libns-9.18.9.so
 lib/libns.la
 man/man1/arpaname.1
 man/man1/delv.1
