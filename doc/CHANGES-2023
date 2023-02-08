@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1052 2023/02/08 07:43:51 fcambus Exp $
+$NetBSD: CHANGES-2023,v 1.1053 2023/02/08 08:41:53 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1325,3 +1325,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/bind918 to 9.18.11 [taca 2023-02-08]
 	Updated security/heimdal to 7.8.0nb2 [wiz 2023-02-08]
 	Updated devel/tig to 2.5.8 [fcambus 2023-02-08]
+	Updated net/sniffnet to 1.1.0 [pin 2023-02-08]
