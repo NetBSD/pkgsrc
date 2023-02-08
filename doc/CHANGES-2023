@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1058 2023/02/08 15:29:50 taca Exp $
+$NetBSD: CHANGES-2023,v 1.1059 2023/02/08 15:51:52 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1338,3 +1338,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/gh to 2.23.0 [leot 2023-02-08]
 	Updated lang/ruby32-base to 3.2.1 [taca 2023-02-08]
 	Updated lang/ruby32 to 3.2.1 [taca 2023-02-08]
+	Updated devel/gng to 1.0.4 [schmonz 2023-02-08]
