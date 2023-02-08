@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1049 2023/02/07 22:27:47 triaxx Exp $
+$NetBSD: CHANGES-2023,v 1.1050 2023/02/08 00:14:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1322,3 +1322,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated converters/bdf2psf to 1.216 [fcambus 2023-02-07]
 	Updated misc/less to 608nb1 [wiz 2023-02-07]
 	Updated www/grafana to 9.2.6 [triaxx 2023-02-07]
+	Updated net/bind918 to 9.18.11 [taca 2023-02-08]
