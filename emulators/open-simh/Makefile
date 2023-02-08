@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2023/01/29 21:16:01 ryoon Exp $
+# $NetBSD: Makefile,v 1.8 2023/02/08 20:59:50 rhialto Exp $
 
-DISTNAME=	open-simh-4.0.0
-PKGNAME=	open-simh-4.0.0.20221202
-PKGREVISION=	1
+DISTNAME=	open-simh-4.1.0
+PKGNAME=	open-simh-4.1.0.20230207
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=open-simh/}
 GITHUB_PROJECT=	simh
-GITHUB_TAG=	ce791138b5b5365105415a9a1cf4091d6e50a43d
+GITHUB_TAG=	5e01c0516b14d16fa4e780dff13077bed76aa38a
 
 MAINTAINER=	rhialto@NetBSD.org
 HOMEPAGE=	http://simh.trailing-edge.com/
@@ -27,6 +26,16 @@ PREFER.libpcap=		native
 # Link error with the native version: _zlibVersion
 PREFER.zlib=		pkgsrc
 .endif
+
+# The makefile tries to autodetect the options below from "gcc --help", but
+# due to the compiler wrapper, it may not always output the expected text.
+# So we hardcode the options here.
+CFLAGS_O+=		-finline-functions
+CFLAGS_O+=		-fgcse-after-reload
+CFLAGS_O+=		-fpredictive-commoning
+CFLAGS_O+=		-fipa-cp-clone
+CFLAGS_O+=		-fno-unsafe-loop-optimizations
+CFLAGS_O+=		-fno-strict-overflow
 
 .if (${MACHINE_ARCH} == "arm")
 BUILDLINK_TRANSFORM+=	rm:-O2
@@ -63,6 +72,7 @@ MAKE_ENV+=		INCLUDES=${INCLUDES:Q}
 MAKE_ENV+=		LIBRARIES=${LIBRARIES:Q}
 MAKE_ENV+=		GCC=${CC:Q}
 MAKE_ENV+=		OS_LDFLAGS=${LDFLAGS:Q}
+MAKE_ENV+=		CFLAGS_O=${CFLAGS_O:Q}
 MAKE_ENV+=		FONTPATH=${PREFIX:Q}/share/fonts/X11/TTF
 MAKE_ENV+=		WARNINGS=ALLOWED
 
