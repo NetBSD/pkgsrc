@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/01/21 13:51:23 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/02/08 15:28:22 taca Exp $
 bin/bundle${RUBY_SUFFIX}
 bin/bundler${RUBY_SUFFIX}
 bin/erb${RUBY_SUFFIX}
@@ -703,7 +703,6 @@ ${RUBY_LIB}/logger/log_device.rb
 ${RUBY_LIB}/logger/period.rb
 ${RUBY_LIB}/logger/severity.rb
 ${RUBY_LIB}/logger/version.rb
-${RUBY_LIB}/mjit/instruction.rb
 ${RUBY_LIB}/mkmf.rb
 ${RUBY_LIB}/monitor.rb
 ${RUBY_LIB}/mutex_m.rb
