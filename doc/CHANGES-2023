@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1068 2023/02/08 21:16:42 fcambus Exp $
+$NetBSD: CHANGES-2023,v 1.1069 2023/02/08 21:42:51 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1348,3 +1348,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/SDL2 to 2.26.3 [nia 2023-02-08]
 	Updated emulators/open-simh to 4.1.0.20230207 [rhialto 2023-02-08]
 	Updated devel/xa65 to 2.3.14 [fcambus 2023-02-08]
+	Updated textproc/guile-json to 4.7.3 [nikita 2023-02-08]
