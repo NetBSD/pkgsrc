@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1057 2023/02/08 14:09:39 leot Exp $
+$NetBSD: CHANGES-2023,v 1.1058 2023/02/08 15:29:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1336,3 +1336,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-virtualenv to 20.19.0 [adam 2023-02-08]
 	Updated devel/py-hypothesis to 6.67.1 [adam 2023-02-08]
 	Updated net/gh to 2.23.0 [leot 2023-02-08]
+	Updated lang/ruby32-base to 3.2.1 [taca 2023-02-08]
+	Updated lang/ruby32 to 3.2.1 [taca 2023-02-08]
