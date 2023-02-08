@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.21 2022/02/25 21:41:16 fcambus Exp $
+$NetBSD: distinfo,v 1.22 2023/02/08 16:22:46 fcambus Exp $
 
-BLAKE2s (Sereal-Decoder-4.023.tar.gz) = 88f5cd8ec1fd356502dcd86ea07c973104d11110730b263735b33672292ad40e
-SHA512 (Sereal-Decoder-4.023.tar.gz) = 9380853532cad110758db119efd51a4004dda1c6c6065afb0ee5e67c79a3f3baaa4767abaac6224f9bccb48214c7e73bd5c0748868301b1be0bb50534592e6ae
-Size (Sereal-Decoder-4.023.tar.gz) = 716188 bytes
+BLAKE2s (Sereal-Decoder-5.003.tar.gz) = c6aa283b2a519337d068a135e81d7401375d17f433796eb92094befba2f63587
+SHA512 (Sereal-Decoder-5.003.tar.gz) = a92cac9bdb585cac124642d052d17da163faae4350274d07e9c4dbbab0ec75f86ba24012f41653cd703df93a893d2198fd354f2130d8ce58d6f2860c9b9a4e2f
+Size (Sereal-Decoder-5.003.tar.gz) = 837414 bytes
