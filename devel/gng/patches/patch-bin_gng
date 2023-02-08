@@ -1,8 +1,8 @@
-$NetBSD: patch-bin_gng,v 1.2 2022/12/27 18:28:34 abs Exp $
+$NetBSD: patch-bin_gng,v 1.3 2023/02/08 15:51:46 schmonz Exp $
 
-Use pkgsrc paths, and update for python 3.x
+Use pkgsrc paths.
 
---- bin/gng.orig	2021-03-29 06:32:44.000000000 +0000
+--- bin/gng.orig	2021-10-13 09:10:21.000000000 +0000
 +++ bin/gng
 @@ -1,24 +1,15 @@
  #!/usr/bin/env bash
@@ -43,12 +43,22 @@ Use pkgsrc paths, and update for python 3.x
      cp -f "${srcDir}/gradle/gng.cfg" "${dir}/gradle/"
      cp -f "${srcDir}/gradle/gradlew" "${dir}/"
      cp -f "${srcDir}/gradle/gradlew.bat" "${dir}/"
-@@ -182,7 +173,7 @@ function bootstrap() {
-   if [[ "${_arg_version}" == "latest" ]]; then
-     info "Fetching the latest Gradle version from services.gradle.org"
-     _arg_version=$(curl -m 60 -sSL "https://services.gradle.org/versions/current" |
--      python -c "import json,sys;obj=json.load(sys.stdin);print obj['version'];") || die "Failed to fetch the version info!"
-+      python -c "import json,sys;obj=json.load(sys.stdin);print(obj['version']);") || die "Failed to fetch the version info!"
-     info "The latest Gradle version is ${_arg_version}"
-   fi
-   __install_gw "${_arg_version}" "${_arg_distribution_type}" "${_arg_mirror:-}" "${_arg_destination_dir}"
+@@ -141,17 +132,7 @@ bootstrap_help() {
+ }
+ 
+ function parse_gradle_version() {
+-    if command -v python &> /dev/null
+-    then
+-        python -c "import json,sys; obj=json.load(sys.stdin); print obj['version'];"
+-        return
+-    fi
+-    if command -v python3 &> /dev/null
+-    then
+-        python3 -c "import json,sys; obj=json.load(sys.stdin); print (obj['version']);"
+-        return
+-    fi
+-    die "Cannot find python/python3 interpreter !"
++    @PYTHONBIN@ -c "import json,sys; obj=json.load(sys.stdin); print (obj['version']);"
+ }
+ 
+ function bootstrap() {
