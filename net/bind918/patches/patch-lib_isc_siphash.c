@@ -1,12 +1,12 @@
-$NetBSD: patch-lib_isc_siphash.c,v 1.1 2022/12/11 01:57:55 sekiya Exp $
+$NetBSD: patch-lib_isc_siphash.c,v 1.2 2023/02/08 00:13:44 taca Exp $
 
 * Take from NetBSD base.
 
---- lib/isc/siphash.c.orig	2021-09-07 09:37:05.000000000 +0000
+--- lib/isc/siphash.c.orig	2023-01-12 22:21:15.270402532 +0000
 +++ lib/isc/siphash.c
-@@ -90,8 +90,14 @@ isc_siphash24(const uint8_t *k, const ui
- 	REQUIRE(k != NULL);
+@@ -93,8 +93,14 @@ isc_siphash24(const uint8_t *k, const ui
  	REQUIRE(out != NULL);
+ 	REQUIRE(inlen == 0 || in != NULL);
  
 -	uint64_t k0 = U8TO64_LE(k);
 -	uint64_t k1 = U8TO64_LE(k + 8);
