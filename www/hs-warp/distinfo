@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2022/02/12 07:04:55 pho Exp $
+$NetBSD: distinfo,v 1.5 2023/02/08 09:01:34 pho Exp $
 
-BLAKE2s (warp-3.3.19.tar.gz) = 1dac5e94787c0c1fe7afd17d7ee6d4c8d24501662a7f1bd11804e1a9e1c9785a
-SHA512 (warp-3.3.19.tar.gz) = ed952c9aace0de7e0a11d2c34ad401d28dc342e3dc8c5c6d7c3ced725d12abfca2944c3bd2687d216ff1b661761019ee5ea37e446f28e574d1e3a0e0b1949682
-Size (warp-3.3.19.tar.gz) = 66279 bytes
+BLAKE2s (warp-3.3.23.tar.gz) = 41da65b43c224ebed0e634bae3e2fbd1b258d0d1b1fd272ecdb34d5ae416f4f0
+SHA512 (warp-3.3.23.tar.gz) = c4e7f3efe67cda1da41ecf9d018b6c53767194d9bb6b883cb99679290f3f6fb1816067335fac30bf00b413d16b837413c8d7d26f85fbcebf0f0dd3e67a288697
+Size (warp-3.3.23.tar.gz) = 65513 bytes
