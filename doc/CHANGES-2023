@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1055 2023/02/08 10:23:49 adam Exp $
+$NetBSD: CHANGES-2023,v 1.1056 2023/02/08 10:31:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1331,3 +1331,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/py-cryptography to 39.0.1 [adam 2023-02-08]
 	Updated security/py-cryptography_vectors to 39.0.1 [adam 2023-02-08]
 	Updated devel/py-pkginfo to 1.9.6 [adam 2023-02-08]
+	Updated devel/py-bitarray to 2.7.0 [adam 2023-02-08]
+	Updated archivers/py-zipp to 3.12.1 [adam 2023-02-08]
+	Updated devel/py-virtualenv to 20.19.0 [adam 2023-02-08]
+	Updated devel/py-hypothesis to 6.67.1 [adam 2023-02-08]
