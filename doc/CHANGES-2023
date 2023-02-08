@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1054 2023/02/08 10:19:00 nikita Exp $
+$NetBSD: CHANGES-2023,v 1.1055 2023/02/08 10:23:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1327,3 +1327,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/tig to 2.5.8 [fcambus 2023-02-08]
 	Updated net/sniffnet to 1.1.0 [pin 2023-02-08]
 	Updated editors/neovim to 0.8.3 [nikita 2023-02-08]
+	Updated devel/py-setuptools to 67.2.0 [adam 2023-02-08]
+	Updated security/py-cryptography to 39.0.1 [adam 2023-02-08]
+	Updated security/py-cryptography_vectors to 39.0.1 [adam 2023-02-08]
+	Updated devel/py-pkginfo to 1.9.6 [adam 2023-02-08]
