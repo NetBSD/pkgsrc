@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1067 2023/02/08 20:59:59 rhialto Exp $
+$NetBSD: CHANGES-2023,v 1.1068 2023/02/08 21:16:42 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1347,3 +1347,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated converters/p5-Sereal to 5.003 [fcambus 2023-02-08]
 	Updated devel/SDL2 to 2.26.3 [nia 2023-02-08]
 	Updated emulators/open-simh to 4.1.0.20230207 [rhialto 2023-02-08]
+	Updated devel/xa65 to 2.3.14 [fcambus 2023-02-08]
