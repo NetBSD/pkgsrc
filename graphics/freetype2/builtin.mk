@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.19 2019/11/02 22:37:56 rillig Exp $
+# $NetBSD: builtin.mk,v 1.20 2023/02/09 19:49:45 wiz Exp $
 
 BUILTIN_PKG:=	freetype2
 
@@ -29,7 +29,7 @@ MAKEVARS+=		IS_BUILTIN.freetype2
 ### a package name to represent the built-in package.
 ###
 .if !defined(BUILTIN_PKG.freetype2) && \
-    !empty(IS_BUILTIN.freetype2:M[yY][eE][sS]) && \
+    ${IS_BUILTIN.freetype2:tl} == yes && \
     empty(H_FREETYPE2:M__nonexistent__)
 BUILTIN_VERSION.freetype2!=						\
 	${AWK} 'BEGIN { p = ".0" }					\
@@ -52,10 +52,10 @@ USE_BUILTIN.freetype2=	no
 .  else
 USE_BUILTIN.freetype2=	${IS_BUILTIN.freetype2}
 .    if defined(BUILTIN_PKG.freetype2) && \
-        !empty(IS_BUILTIN.freetype2:M[yY][eE][sS])
+        ${IS_BUILTIN.freetype2:tl} == yes
 USE_BUILTIN.freetype2=	yes
 .      for _dep_ in ${BUILDLINK_API_DEPENDS.freetype2}
-.        if !empty(USE_BUILTIN.freetype2:M[yY][eE][sS])
+.        if ${USE_BUILTIN.freetype2:tl} == yes
 USE_BUILTIN.freetype2!=							\
 	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.freetype2}; then \
 		${ECHO} yes;						\
@@ -77,9 +77,9 @@ MAKEVARS+=		USE_BUILTIN.freetype2
 .include "../../mk/x11.builtin.mk"
 
 CHECK_BUILTIN.freetype2?=	no
-.if !empty(CHECK_BUILTIN.freetype2:M[nN][oO])
+.if ${CHECK_BUILTIN.freetype2:tl} == no
 
-.  if !empty(USE_BUILTIN.freetype2:M[nN][oO])
+.  if ${USE_BUILTIN.freetype2:tl} == no
 BUILDLINK_API_DEPENDS.freetype2+=	freetype2>=2.1.3
 .  else
 .    if !empty(MACHINE_PLATFORM:MNetBSD-[67].*-*) && \
