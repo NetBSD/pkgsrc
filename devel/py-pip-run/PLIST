@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2022/07/07 11:53:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/02/09 12:51:38 adam Exp $
 bin/pip-run-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
@@ -15,21 +15,24 @@ ${PYSITELIB}/pip_run/__init__.py
 ${PYSITELIB}/pip_run/__init__.pyc
 ${PYSITELIB}/pip_run/__main__.py
 ${PYSITELIB}/pip_run/__main__.pyc
+${PYSITELIB}/pip_run/_py37compat.py
+${PYSITELIB}/pip_run/_py37compat.pyc
+${PYSITELIB}/pip_run/_py38compat.py
+${PYSITELIB}/pip_run/_py38compat.pyc
 ${PYSITELIB}/pip_run/commands.py
 ${PYSITELIB}/pip_run/commands.pyc
 ${PYSITELIB}/pip_run/deps.py
 ${PYSITELIB}/pip_run/deps.pyc
 ${PYSITELIB}/pip_run/launch.py
 ${PYSITELIB}/pip_run/launch.pyc
+${PYSITELIB}/pip_run/mode/__init__.py
+${PYSITELIB}/pip_run/mode/__init__.pyc
+${PYSITELIB}/pip_run/mode/ephemeral.py
+${PYSITELIB}/pip_run/mode/ephemeral.pyc
+${PYSITELIB}/pip_run/mode/persist.py
+${PYSITELIB}/pip_run/mode/persist.pyc
 ${PYSITELIB}/pip_run/read-deps.py
 ${PYSITELIB}/pip_run/read-deps.pyc
 ${PYSITELIB}/pip_run/scripts.py
 ${PYSITELIB}/pip_run/scripts.pyc
-${PYSITELIB}/pip_run/tests/test_deps.py
-${PYSITELIB}/pip_run/tests/test_deps.pyc
-${PYSITELIB}/pip_run/tests/test_launch.py
-${PYSITELIB}/pip_run/tests/test_launch.pyc
-${PYSITELIB}/pip_run/tests/test_scripts.py
-${PYSITELIB}/pip_run/tests/test_scripts.pyc
-${PYSITELIB}/pip_run/text.py
-${PYSITELIB}/pip_run/text.pyc
+${PYSITELIB}/pip_run/usage.txt
