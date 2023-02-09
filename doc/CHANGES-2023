@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1078 2023/02/09 10:48:54 adam Exp $
+$NetBSD: CHANGES-2023,v 1.1079 2023/02/09 12:28:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1363,3 +1363,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/python311 to 3.11.2 [adam 2023-02-09]
 	Updated lang/py310-html-docs to 3.10.10 [adam 2023-02-09]
 	Updated lang/py311-html-docs to 3.11.2 [adam 2023-02-09]
+	Updated x11/libdrm to 2.4.115 [wiz 2023-02-09]
