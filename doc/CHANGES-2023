@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1082 2023/02/09 19:20:03 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1083 2023/02/09 19:50:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1369,3 +1369,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/oracle-jdk17 to 17.0.6 [adam 2023-02-09]
 	Updated finance/py-braintree to 4.18.1 [adam 2023-02-09]
 	Updated devel/nss to 3.88 [wiz 2023-02-09]
+	Updated graphics/freetype2 to 2.13.0 [wiz 2023-02-09]
