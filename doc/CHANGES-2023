@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1076 2023/02/09 09:44:29 triaxx Exp $
+$NetBSD: CHANGES-2023,v 1.1077 2023/02/09 09:59:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1357,3 +1357,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-jaraco.context to 4.3.0 [adam 2023-02-09]
 	Updated textproc/py-jaraco.text to 3.11.1 [adam 2023-02-09]
 	Updated www/grafana to 9.3.6 [triaxx 2023-02-09]
+	Updated graphics/libjpeg-turbo to 2.1.5.1 [adam 2023-02-09]
+	Updated sysutils/ansible-core to 2.14.2 [adam 2023-02-09]
