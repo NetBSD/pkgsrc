@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1075 2023/02/09 09:28:40 adam Exp $
+$NetBSD: CHANGES-2023,v 1.1076 2023/02/09 09:44:29 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1356,3 +1356,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/broot to 1.20.1 [pin 2023-02-09]
 	Updated devel/py-jaraco.context to 4.3.0 [adam 2023-02-09]
 	Updated textproc/py-jaraco.text to 3.11.1 [adam 2023-02-09]
+	Updated www/grafana to 9.3.6 [triaxx 2023-02-09]
