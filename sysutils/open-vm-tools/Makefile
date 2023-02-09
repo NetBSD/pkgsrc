@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.110 2023/01/31 07:59:27 khorben Exp $
+# $NetBSD: Makefile,v 1.111 2023/02/09 19:30:50 markd Exp $
 
 OVTVER=		11.3.5
 DISTNAME=	open-vm-tools-${OVTVER}-18557794
@@ -57,7 +57,7 @@ pre-configure:
 	cd ${WRKSRC} && autoreconf -f -i
 
 post-install:
-	mv ${DESTDIR}${PREFIX}/etc/vmware-tools/tools.conf.example \
+	mv ${DESTDIR}${PKG_SYSCONFDIR}/tools.conf.example \
 		${DESTDIR}${EGDIR}/tools.conf
 
 .include "options.mk"
