@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/11/14 09:33:51 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/02/09 09:59:37 adam Exp $
 bin/ansible
 bin/ansible-config
 bin/ansible-connection
@@ -1706,6 +1706,9 @@ ${PYSITELIB}/ansible_test/_internal/bootstrap.pyo
 ${PYSITELIB}/ansible_test/_internal/cache.py
 ${PYSITELIB}/ansible_test/_internal/cache.pyc
 ${PYSITELIB}/ansible_test/_internal/cache.pyo
+${PYSITELIB}/ansible_test/_internal/cgroup.py
+${PYSITELIB}/ansible_test/_internal/cgroup.pyc
+${PYSITELIB}/ansible_test/_internal/cgroup.pyo
 ${PYSITELIB}/ansible_test/_internal/ci/__init__.py
 ${PYSITELIB}/ansible_test/_internal/ci/__init__.pyc
 ${PYSITELIB}/ansible_test/_internal/ci/__init__.pyo
@@ -2048,6 +2051,12 @@ ${PYSITELIB}/ansible_test/_internal/data.pyo
 ${PYSITELIB}/ansible_test/_internal/delegation.py
 ${PYSITELIB}/ansible_test/_internal/delegation.pyc
 ${PYSITELIB}/ansible_test/_internal/delegation.pyo
+${PYSITELIB}/ansible_test/_internal/dev/__init__.py
+${PYSITELIB}/ansible_test/_internal/dev/__init__.pyc
+${PYSITELIB}/ansible_test/_internal/dev/__init__.pyo
+${PYSITELIB}/ansible_test/_internal/dev/container_probe.py
+${PYSITELIB}/ansible_test/_internal/dev/container_probe.pyc
+${PYSITELIB}/ansible_test/_internal/dev/container_probe.pyo
 ${PYSITELIB}/ansible_test/_internal/diff.py
 ${PYSITELIB}/ansible_test/_internal/diff.pyc
 ${PYSITELIB}/ansible_test/_internal/diff.pyo
@@ -2339,6 +2348,10 @@ ${PYSITELIB}/ansible_test/_util/target/sanity/import/importer.pyc
 ${PYSITELIB}/ansible_test/_util/target/sanity/import/importer.pyo
 ${PYSITELIB}/ansible_test/_util/target/setup/ConfigureRemotingForAnsible.ps1
 ${PYSITELIB}/ansible_test/_util/target/setup/bootstrap.sh
+${PYSITELIB}/ansible_test/_util/target/setup/check_systemd_cgroup_v1.sh
+${PYSITELIB}/ansible_test/_util/target/setup/probe_cgroups.py
+${PYSITELIB}/ansible_test/_util/target/setup/probe_cgroups.pyc
+${PYSITELIB}/ansible_test/_util/target/setup/probe_cgroups.pyo
 ${PYSITELIB}/ansible_test/_util/target/setup/quiet_pip.py
 ${PYSITELIB}/ansible_test/_util/target/setup/quiet_pip.pyc
 ${PYSITELIB}/ansible_test/_util/target/setup/quiet_pip.pyo
