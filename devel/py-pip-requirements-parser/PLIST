@@ -1,4 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2022/07/24 11:03:21 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/02/09 07:05:03 wiz Exp $
+${PYSITELIB}/packaging_legacy_version.py
+${PYSITELIB}/packaging_legacy_version.pyc
+${PYSITELIB}/packaging_legacy_version.pyo
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
