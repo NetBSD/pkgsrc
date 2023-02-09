@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2022/11/16 22:55:44 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/02/09 09:25:22 adam Exp $
 
-DISTNAME=	jaraco.text-3.10.0
+DISTNAME=	jaraco.text-3.11.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jaraco.text/}
@@ -10,8 +10,8 @@ HOMEPAGE=	https://github.com/jaraco/jaraco.text
 COMMENT=	Module for text manipulation
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-autocommand-[0-9]*:../../misc/py-autocommand
 DEPENDS+=	${PYPKGPREFIX}-jaraco.context>=4.1:../../devel/py-jaraco.context
 DEPENDS+=	${PYPKGPREFIX}-jaraco.functools-[0-9]*:../../devel/py-jaraco.functools

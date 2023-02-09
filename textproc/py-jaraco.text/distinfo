@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/11/06 18:14:38 adam Exp $
+$NetBSD: distinfo,v 1.2 2023/02/09 09:25:22 adam Exp $
 
-BLAKE2s (jaraco.text-3.10.0.tar.gz) = 64abaca053f5264f3ce067bedf88a07a0ce8ed59d7ad54a251087977550672b4
-SHA512 (jaraco.text-3.10.0.tar.gz) = 1c83dc9247e8c55ed20d8768abcb66c3fb4cdfb9ade3744f3d3c3e705b94e376c7b44fdfe242189001d69fbf28fdb5601ff33b1874495b3c2ad9bdd781265f43
-Size (jaraco.text-3.10.0.tar.gz) = 15588 bytes
+BLAKE2s (jaraco.text-3.11.1.tar.gz) = c9ca9e59cb428969b632cfd2dbbfe8d10db9e15e4578a35cc0d4f847b62f437b
+SHA512 (jaraco.text-3.11.1.tar.gz) = b4066589e9d4c9a2a82ae2b0825d34b22b93ee179d29c3666e9b978390121520afcb8fc5ffa6457022d2e8477f4cf2b76485d9896438ee46275326577609f201
+Size (jaraco.text-3.11.1.tar.gz) = 16083 bytes
