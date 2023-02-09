@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1074 2023/02/09 08:17:38 pin Exp $
+$NetBSD: CHANGES-2023,v 1.1075 2023/02/09 09:28:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1354,3 +1354,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-pip-requirements-parser to 32.0.1 [wiz 2023-02-09]
 	Updated security/pleaser to 0.5.4 [pin 2023-02-09]
 	Updated sysutils/broot to 1.20.1 [pin 2023-02-09]
+	Updated devel/py-jaraco.context to 4.3.0 [adam 2023-02-09]
+	Updated textproc/py-jaraco.text to 3.11.1 [adam 2023-02-09]
