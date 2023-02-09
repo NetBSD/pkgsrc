@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.127 2023/02/01 20:10:04 wiz Exp $
+# $NetBSD: Makefile,v 1.128 2023/02/09 15:37:11 wiz Exp $
 
 DISTNAME=	kid3-3.9.3
 CATEGORIES=	audio kde
@@ -23,6 +23,9 @@ CMAKE_ARGS+=		-DWITH_MANDIR:STRING=${PKGMANDIR}
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/kid3
 
 BUILDLINK_TRANSFORM+=	rm:-fvisibility=hidden
+
+# std::filesystem
+GCC_REQD=	8
 
 SUBST_CLASSES+=		apple
 SUBST_MESSAGE.apple=	Avoiding Mac OS X application bundles
