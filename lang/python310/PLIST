@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2022/12/07 11:53:57 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2023/02/09 10:47:08 adam Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -2040,6 +2040,7 @@ lib/python${PY_VER_SUFFIX}/lib-dynload/_statistics.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_struct.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_testbuffer.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_testcapi.so
+lib/python${PY_VER_SUFFIX}/lib-dynload/_testclinic.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_testimportmultiple.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_testinternalcapi.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_testmultiphase.so
