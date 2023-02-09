@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2022/07/24 11:03:21 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2023/02/09 07:05:03 wiz Exp $
 
-DISTNAME=	pip-requirements-parser-31.2.0
+DISTNAME=	pip-requirements-parser-32.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pip-requirements-parser/}
