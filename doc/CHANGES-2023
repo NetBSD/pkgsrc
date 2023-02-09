@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1083 2023/02/09 19:50:35 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1084 2023/02/09 23:16:34 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1370,3 +1370,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated finance/py-braintree to 4.18.1 [adam 2023-02-09]
 	Updated devel/nss to 3.88 [wiz 2023-02-09]
 	Updated graphics/freetype2 to 2.13.0 [wiz 2023-02-09]
+	Updated x11/libxfce4ui to 4.18.2 [gutteridge 2023-02-09]
