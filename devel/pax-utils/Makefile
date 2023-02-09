@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2023/01/31 14:44:50 fcambus Exp $
+# $NetBSD: Makefile,v 1.9 2023/02/09 17:14:35 fcambus Exp $
 
 DISTNAME=	pax-utils-1.3.7
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	https://dev.gentoo.org/~sam/distfiles/app-misc/pax-utils/
 EXTRACT_SUFX=	.tar.xz
@@ -13,10 +13,9 @@ LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=		bash:run gmake gsed
 REPLACE_BASH+=		symtree.sh
-REPLACE_PYTHON+=	lddtree.py
+REPLACE_BASH+=		lddtree.sh
 
-DEPENDS+=	${PYPKGPREFIX}-pyelftools-[0-9]*:../../devel/py-pyelftools
+MESON_ARGS=	-Dlddtree_implementation=sh
 
 .include "../../devel/meson/build.mk"
-.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
