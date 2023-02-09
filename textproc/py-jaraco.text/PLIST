@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2022/11/06 18:14:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/02/09 09:25:22 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -14,6 +14,8 @@ ${PYSITELIB}/jaraco/text/layouts.py
 ${PYSITELIB}/jaraco/text/layouts.pyc
 ${PYSITELIB}/jaraco/text/show-newlines.py
 ${PYSITELIB}/jaraco/text/show-newlines.pyc
+${PYSITELIB}/jaraco/text/strip-prefix.py
+${PYSITELIB}/jaraco/text/strip-prefix.pyc
 ${PYSITELIB}/jaraco/text/to-dvorak.py
 ${PYSITELIB}/jaraco/text/to-dvorak.pyc
 ${PYSITELIB}/jaraco/text/to-qwerty.py
