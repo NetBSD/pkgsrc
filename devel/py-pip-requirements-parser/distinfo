@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/07/24 11:03:21 wiz Exp $
+$NetBSD: distinfo,v 1.2 2023/02/09 07:05:03 wiz Exp $
 
-BLAKE2s (pip-requirements-parser-31.2.0.tar.gz) = 4b11308feccefb627485c9fbc9a44700f8ed5f70f27fdcd9c7287477f9c40fc2
-SHA512 (pip-requirements-parser-31.2.0.tar.gz) = 394b5bc4349e76aa25ddf76efea38d30c45c3a01f905fceaed64b03b4376fbc83ecd50c714ec96480ed778eafa9bc80847076b94336babeab4d37dc9080bc85f
-Size (pip-requirements-parser-31.2.0.tar.gz) = 209659 bytes
+BLAKE2s (pip-requirements-parser-32.0.1.tar.gz) = 380a31ff4ce93edc96042698db8245b593298b8641c34dce7cd1578c3dad3903
+SHA512 (pip-requirements-parser-32.0.1.tar.gz) = d6019b9abb0cf91b824b07e03e827f303d827f2d6f02fdff28dfa91378db08dbb97221f48a149137804283864f08e9e0ad0b747e37fdb07acfa080962aaa582e
+Size (pip-requirements-parser-32.0.1.tar.gz) = 209359 bytes
