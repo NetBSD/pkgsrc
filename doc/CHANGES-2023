@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1077 2023/02/09 09:59:56 adam Exp $
+$NetBSD: CHANGES-2023,v 1.1078 2023/02/09 10:48:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1359,3 +1359,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/grafana to 9.3.6 [triaxx 2023-02-09]
 	Updated graphics/libjpeg-turbo to 2.1.5.1 [adam 2023-02-09]
 	Updated sysutils/ansible-core to 2.14.2 [adam 2023-02-09]
+	Updated lang/python310 to 3.10.10 [adam 2023-02-09]
+	Updated lang/python311 to 3.11.2 [adam 2023-02-09]
+	Updated lang/py310-html-docs to 3.10.10 [adam 2023-02-09]
+	Updated lang/py311-html-docs to 3.11.2 [adam 2023-02-09]
