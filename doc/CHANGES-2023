@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1071 2023/02/08 21:53:15 nikita Exp $
+$NetBSD: CHANGES-2023,v 1.1072 2023/02/09 07:05:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1351,3 +1351,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/guile-json to 4.7.3 [nikita 2023-02-08]
 	Updated devel/guile-gcrypt to 0.4.0 [nikita 2023-02-08]
 	Updated textproc/guile-syntax-highlight to 0.2.0 [nikita 2023-02-08]
+	Updated devel/py-pip-requirements-parser to 32.0.1 [wiz 2023-02-09]
