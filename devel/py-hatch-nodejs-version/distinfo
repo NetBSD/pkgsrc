@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/02/09 12:49:42 adam Exp $
+
+BLAKE2s (hatch_nodejs_version-0.3.1.tar.gz) = c778e22c20dd0984892253ce04ec1c69a3c86e186316fd9d8f6e99f5c8003dca
+SHA512 (hatch_nodejs_version-0.3.1.tar.gz) = 0dbf48474f896d3544058f8c18d415980da7bf49b63065da925b56709e62bb9749c4dac02b64395b870feb119e4f6458365cd6a84538b0bb5a7f535de77a551c
+Size (hatch_nodejs_version-0.3.1.tar.gz) = 14347 bytes
