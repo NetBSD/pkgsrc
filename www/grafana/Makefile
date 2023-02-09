@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.91 2023/02/09 04:53:29 triaxx Exp $
+# $NetBSD: Makefile,v 1.92 2023/02/09 09:44:08 triaxx Exp $
 
-# To remove on next commit
-
-DISTNAME=	grafana-9.2.6
+DISTNAME=	grafana-9.3.6
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=grafana/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
