@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2021/08/01 20:02:41 yhardy Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/02/10 11:30:12 fcambus Exp $
 bin/task
 man/man1/task.1
 man/man5/task-color.5
@@ -36,8 +36,10 @@ share/doc/task/rc/holidays.es-ES.rc
 share/doc/task/rc/holidays.es-US.rc
 share/doc/task/rc/holidays.fi-FI.rc
 share/doc/task/rc/holidays.fr-BE.rc
+share/doc/task/rc/holidays.fr-CA.rc
 share/doc/task/rc/holidays.fr-FR.rc
 share/doc/task/rc/holidays.hr-HR.rc
+share/doc/task/rc/holidays.hu-HU.rc
 share/doc/task/rc/holidays.is-IS.rc
 share/doc/task/rc/holidays.it-IT.rc
 share/doc/task/rc/holidays.nb-NO.rc
@@ -45,8 +47,11 @@ share/doc/task/rc/holidays.nl-BE.rc
 share/doc/task/rc/holidays.nl-NL.rc
 share/doc/task/rc/holidays.pl-PL.rc
 share/doc/task/rc/holidays.por-PRT.rc
+share/doc/task/rc/holidays.pt-BR.rc
 share/doc/task/rc/holidays.pt-PT.rc
 share/doc/task/rc/holidays.ru-RU.rc
+share/doc/task/rc/holidays.sk-SK.rc
+share/doc/task/rc/holidays.sv-FI.rc
 share/doc/task/rc/holidays.sv-SE.rc
 share/doc/task/rc/holidays.tr-TR.rc
 share/doc/task/rc/light-16.theme
@@ -71,5 +76,5 @@ share/doc/task/scripts/vim/ftdetect/task.vim
 share/doc/task/scripts/vim/syntax/taskdata.vim
 share/doc/task/scripts/vim/syntax/taskedit.vim
 share/doc/task/scripts/vim/syntax/taskrc.vim
-share/doc/task/scripts/zsh/_task
 share/doc/task/task-ref.pdf
+share/zsh/site-functions/_task
