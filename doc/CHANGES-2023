@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1097 2023/02/10 14:41:50 pin Exp $
+$NetBSD: CHANGES-2023,v 1.1098 2023/02/10 14:43:10 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1387,3 +1387,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated chat/jitsi-videobridge to 2.0.8252 [khorben 2023-02-10]
 	Updated mail/thunderbird-l10n to 102.6.1 [he 2023-02-10]
 	Updated graphics/kvantum to 1.0.8 [pin 2023-02-10]
+	Updated fonts/harfbuzz to 6.0.0 [ryoon 2023-02-10]
+	Updated fonts/harfbuzz-icu to 6.0.0 [ryoon 2023-02-10]
