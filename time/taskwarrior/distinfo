@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:24:38 nia Exp $
+$NetBSD: distinfo,v 1.6 2023/02/10 11:30:12 fcambus Exp $
 
-BLAKE2s (task-2.5.3.tar.gz) = 7aff9b3f4da638b7dae785d2833190f5ee9d68b9ad8ea3fe97e30aa98cd03dc6
-SHA512 (task-2.5.3.tar.gz) = e906c8f42ad4b9a7e20a82defe31b89194d72957f18dd5129ecc41a2a60a9d8b0d01abb9b44ecce79b65cd9064af4a4a4c9dd695f98152e77908f130dc3f9677
-Size (task-2.5.3.tar.gz) = 788760 bytes
+BLAKE2s (task-2.6.2.tar.gz) = 84cbf2c041be6acfc11f261eb1838ffe93de7757d99d21a8d2b0146846e2a64e
+SHA512 (task-2.6.2.tar.gz) = 3c592552c1baada09ef4e06cf2266c9897ffae42a75998b70767f2cfbabd2e1de7d1a900f16f3b8eb164ce19637dabd21e246f84732a20a646f39716895cdf98
+Size (task-2.6.2.tar.gz) = 838933 bytes
