@@ -1,0 +1,22 @@
+$NetBSD: patch-RULES_os-sunos5.def,v 1.1 2023/02/10 13:51:11 micha Exp $
+
+Upstream patch for "MANSTYLE not set" problem on SunOS.
+https://codeberg.org/schilytools/schilytools/issues/51
+
+--- RULES/os-sunos5.def.orig	2023-01-12 14:25:40.000000000 +0000
++++ RULES/os-sunos5.def
+@@ -7,7 +7,7 @@
+ #
+ ###########################################################################
+ # Copyright (c) 1997--2018 J. Schilling
+-# Copyright (c) 2022       the schilytools team
++# Copyright (c) 2022--2023 the schilytools team
+ ###########################################################################
+ # The contents of this file are subject to the terms of the
+ # Common Development and Distribution License, Version 1.0 only
+@@ -23,4 +23,4 @@
+ ###########################################################################
+ # MANSTYLE was switched to bsd in Solaris 11.4.
+ # Illumos switched in early 2022.
+-MANSTYLE	:sh=	[ -f /usr/share/man/man8/Intro.8 ] && echo bsd || echo sysv
++MANSTYLE=	$(SOLARIS_MANSTYLE)

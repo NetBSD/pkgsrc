@@ -1,0 +1,32 @@
+$NetBSD: patch-autoconf_configure.in,v 1.1 2023/02/10 13:51:11 micha Exp $
+
+Upstream patch for "MANSTYLE not set" problem on SunOS.
+https://codeberg.org/schilytools/schilytools/issues/51
+
+--- autoconf/configure.in.orig	2023-01-12 14:25:40.000000000 +0000
++++ autoconf/configure.in
+@@ -1118,6 +1118,17 @@ fi
+ fi	# <ext2fs/ext2_fs.h> was missing
+ fi	# Linux only tests
+ 
++dnl SunOS Manual Page Style Tests
++if test ".$UNAME" = ".SunOS"; then
++	AC_MSG_CHECKING([for manual page style on Solaris Systems])
++	if test -f /usr/share/man/man8/Intro.8; then
++		solaris_manstyle=bsd
++	else
++		solaris_manstyle=sysv
++	fi
++	AC_MSG_RESULT([$solaris_manstyle])
++fi
++
+ AC_SUBST(may_linux_src_include)
+ 
+ AC_SUBST(largefile_cc_opt)
+@@ -1149,5 +1160,6 @@ AC_SUBST(lib_dl)
+ AC_SUBST(lib_dir)
+ AC_SUBST(lib_cap)
+ AC_SUBST(lib_selinux)
++AC_SUBST(solaris_manstyle)
+ 
+ AC_OUTPUT(rules.cnf)
