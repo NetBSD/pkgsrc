@@ -1,4 +1,4 @@
-/* $NetBSD: pbuild.h,v 1.7 2015/11/03 19:06:47 joerg Exp $ */
+/* $NetBSD: pbuild.h,v 1.8 2023/02/10 23:14:32 joerg Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -108,7 +108,6 @@ struct build_job {
 
 	TAILQ_ENTRY(build_job) build_link;
 	SLIST_ENTRY(build_job) hash_link;
-	SLIST_ENTRY(build_job) depth_tree_link;
 };
 
 extern int		 verbosity;
