@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.33 2022/01/23 22:04:33 wiz Exp $
+$NetBSD: distinfo,v 1.34 2023/02/10 21:32:14 wiz Exp $
 
-BLAKE2s (zstd-1.5.2.tar.gz) = 2d03dcfcd9775c58f07f860b16b6a4774291d1ec962af6d6a8f653405c015ab1
-SHA512 (zstd-1.5.2.tar.gz) = e107508a41fca50845cc2494e64adaba93efb95a2fa486fc962510a8ba4b2180d93067cae9870f119e88e5e8b28a046bc2240b0b23cdd8933d1fb1a6a9668c1e
-Size (zstd-1.5.2.tar.gz) = 1950967 bytes
+BLAKE2s (zstd-1.5.4.tar.gz) = 9535118a5388e4df8735861cad6e7c719bba38033c436c4d38b3fe6d459e4cfd
+SHA512 (zstd-1.5.4.tar.gz) = b6f64850ceb6cfed831fff3c43508d2a72338862a96dd9430b1d3ebbfcee40201c8b6dcf8b6b603e252bb96f3f283c9cb07da7f24414187f5f1fea3b51e01863
+Size (zstd-1.5.4.tar.gz) = 2178759 bytes
 SHA1 (patch-Makefile) = 35159f44eb1d212395a53a27de60d3d1a5d3d014
 SHA1 (patch-lib_Makefile) = b04f9d1dcc7b336872566785e7b0db69929eb262
-SHA1 (patch-tests_Makefile) = b83de10222859d656468463071dbce70adcc22b1
+SHA1 (patch-tests_Makefile) = 0da7f18e07ca4ffa7dcce46709224b0f61caaea7
 SHA1 (patch-tests_playTests.sh) = 349f8e400f46b5914add4aee955a040045f62779
 SHA1 (patch-zlibWrapper_examples_minigzip.c) = 4ed0cb648bdd6efa61b3f66ba6eb1ea74b7767ec
