@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.291 2023/02/05 09:05:28 he Exp $
+# $NetBSD: Makefile,v 1.292 2023/02/10 10:04:54 pho Exp $
 
 DISTNAME=	thunderbird-${TB_VER}.source
 PKGNAME=	thunderbird-${TB_VER}
@@ -87,7 +87,7 @@ pre-configure:
 
 do-build:
 # XXX for some reason it doesn't work unless -j is explicitly specified
-	${_ULIMIT_CMD} cd ${WRKSRC}/${OBJDIR} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} -j${MAKE_JOBS:U1}
+	${_ULIMIT_CMD} cd ${WRKSRC}/${OBJDIR} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} -j${_MAKE_JOBS_N:U1}
 
 MOZILLA=	thunderbird
 MOZILLA_NAME=	${PKGBASE}
