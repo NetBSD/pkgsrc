@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1088 2023/02/10 10:52:39 adam Exp $
+$NetBSD: CHANGES-2023,v 1.1089 2023/02/10 11:07:28 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1376,3 +1376,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/nss to 3.88.1 [wiz 2023-02-10]
 	Updated devel/py-jupyter_core to 5.2.0 [adam 2023-02-10]
 	Updated sysutils/cdrtools to 3.02a10nb3 [adam 2023-02-10]
+	Updated devel/byacc to 20230201 [fcambus 2023-02-10]
