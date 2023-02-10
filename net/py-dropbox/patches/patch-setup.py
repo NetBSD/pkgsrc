@@ -1,10 +1,18 @@
-$NetBSD: patch-setup.py,v 1.1 2021/04/22 09:33:02 nia Exp $
+$NetBSD: patch-setup.py,v 1.2 2023/02/10 14:39:38 wiz Exp $
 
+Fix invalid pattern.
 Unpin pytest-runner
 
---- setup.py.orig	2021-03-09 20:35:57.000000000 +0000
+--- setup.py.orig	2022-06-15 23:27:44.000000000 +0000
 +++ setup.py
-@@ -33,7 +33,7 @@ install_reqs = [
+@@ -27,13 +27,13 @@ version = eval(line.split('=', 1)[1].str
+ install_reqs = [
+     'requests >= 2.16.2',
+     'six >= 1.12.0',
+-    'stone >= 2.*',
++    'stone >= 2',
+ ]
+ 
  setup_requires = [
      # Pin pytest-runner to 5.2.0, since 5.3.0 uses `find_namespaces` directive, not supported in
      # Python 2.7

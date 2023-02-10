@@ -1,0 +1,13 @@
+$NetBSD: patch-test_requirements.txt,v 1.1 2023/02/10 14:39:38 wiz Exp $
+
+Fix invalid pattern.
+
+--- test/requirements.txt.orig	2022-06-15 23:27:44.000000000 +0000
++++ test/requirements.txt
+@@ -2,4 +2,4 @@ pytest
+ mock
+ pytest-mock
+ coverage
+-stone>=2.*
+\ No newline at end of file
++stone>=2
