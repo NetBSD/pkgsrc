@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22612 2023/02/09 07:05:14 wiz Exp $
+$NetBSD: TODO,v 1.22613 2023/02/10 11:30:26 fcambus Exp $
 
 Suggested new packages
 ======================
@@ -1414,7 +1414,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o tads-3.0.16
 	o taplo-lsp-0.6.0 [wiz]
 	o taplo-lsp-0.7.0
-	o taskwarrior-2.5.3
 	o tc-hasida-table-0.8 [wip]
 	o tcl-tDOM-0.9.2
 	o tcpdpriv-0.9
