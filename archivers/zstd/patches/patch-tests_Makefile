@@ -1,15 +1,15 @@
-$NetBSD: patch-tests_Makefile,v 1.1 2021/02/27 16:40:59 wiz Exp $
+$NetBSD: patch-tests_Makefile,v 1.2 2023/02/10 21:32:14 wiz Exp $
 
 Fix running tests with shared zstd library.
 
---- tests/Makefile.orig	2020-12-19 00:39:42.000000000 +0000
+--- tests/Makefile.orig	2023-02-10 00:41:50.000000000 +0000
 +++ tests/Makefile
-@@ -327,7 +327,7 @@ test-zstd-nolegacy: zstd-nolegacy
+@@ -336,7 +336,7 @@ test-zstd-nolegacy: zstd-nolegacy
  
  test-zstd test-zstd32 test-zstd-nolegacy: datagen
  	file $(ZSTD)
 -	EXE_PREFIX="$(QEMU_SYS)" ZSTD_BIN="$(ZSTD)" DATAGEN_BIN=./datagen ./playTests.sh $(ZSTDRTTEST)
 +	LD_LIBRARY_PATH=../lib EXE_PREFIX="$(QEMU_SYS)" ZSTD_BIN="$(ZSTD)" DATAGEN_BIN=./datagen ./playTests.sh $(ZSTDRTTEST)
  
- test-fullbench: fullbench datagen
- 	$(QEMU_SYS) ./fullbench -i1
+ .PHONY: test-cli-tests
+ test-cli-tests: ZSTD = $(PRGDIR)/zstd
