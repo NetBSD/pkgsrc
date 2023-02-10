@@ -1,0 +1,17 @@
+$NetBSD: patch-autoconf_rules.cnf.in,v 1.1 2023/02/10 13:51:11 micha Exp $
+
+Upstream patch for "MANSTYLE not set" problem on SunOS.
+https://codeberg.org/schilytools/schilytools/issues/51
+
+--- autoconf/rules.cnf.in.orig	2023-01-12 14:25:40.000000000 +0000
++++ autoconf/rules.cnf.in
+@@ -28,6 +28,9 @@ HP_CC_ANSI_OPT= @hp_cc_ansi_opt@	# Used 
+ HP_CC_OPT_OPT= @hp_cc_opt_opt@	# Used on HP-UX
+ HP_CC_GPROF_OPT= @hp_cc_gprof_opt@	# Used on HP-UX
+ 
++# bsd/sysv manual page style, Solaris 11.4 switched to BSD style
++SOLARIS_MANSTYLE=@solaris_manstyle@
++
+ MAY_LINUX_SRC_INCLUDE= @may_linux_src_include@	# /usr/src/include useful
+ 
+ SCSILIB= @scsi_lib@		# IRIX libcam (outdated)
