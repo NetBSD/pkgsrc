@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.195 2023/01/29 08:30:50 pho Exp $
+# $NetBSD: Makefile,v 1.196 2023/02/10 22:10:37 fcambus Exp $
 #
 
 COMMENT=	Archivers and compression tools
@@ -7,6 +7,7 @@ SUBDIR+=	9e
 SUBDIR+=	R-zip
 SUBDIR+=	advancecomp
 SUBDIR+=	afio
+SUBDIR+=	ancient
 SUBDIR+=	arc
 SUBDIR+=	archangel
 SUBDIR+=	arj
