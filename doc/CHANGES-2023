@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1086 2023/02/10 01:22:29 khorben Exp $
+$NetBSD: CHANGES-2023,v 1.1087 2023/02/10 07:32:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1373,3 +1373,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/libxfce4ui to 4.18.2 [gutteridge 2023-02-09]
 	Updated graphics/ristretto to 0.13.0 [gutteridge 2023-02-09]
 	Updated sysutils/open-vm-tools to 12.0.0 [khorben 2023-02-10]
+	Updated devel/nss to 3.88.1 [wiz 2023-02-10]
