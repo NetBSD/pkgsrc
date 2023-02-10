@@ -1,4 +1,4 @@
-/* $NetBSD: jobs.c,v 1.17 2023/02/10 22:59:13 joerg Exp $ */
+/* $NetBSD: jobs.c,v 1.18 2023/02/10 23:14:32 joerg Exp $ */
 
 /*-
  * Copyright (c) 2007, 2009, 2011 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -149,11 +149,8 @@ pbulk_item_end(const char *line)
 	return line;
 }
 
-SLIST_HEAD(depth_tree_head, build_job);
-
 static int
-compute_tree_depth_rec(struct build_job *job, struct build_job *root,
-    struct depth_tree_head *head)
+compute_tree_depth_rec(struct build_job *job, struct build_job *root, char *seen)
 {
 	struct dependency_list *dep_iter;
 	struct build_job *job_iter;
@@ -163,14 +160,12 @@ compute_tree_depth_rec(struct build_job *job, struct build_job *root,
 		return -1;
 	}
 
-	SLIST_FOREACH(job_iter, head, depth_tree_link) {
-		if (job_iter == job)
-			return 0;
-	}
-	SLIST_INSERT_HEAD(head, job, depth_tree_link);
+	if (seen[job - jobs])
+		return 0;
+	seen[job - jobs] = 1;
 	++root->pkg_depth;
 	SLIST_FOREACH(dep_iter, &job->depending_pkgs, depends_link) {
-		if (compute_tree_depth_rec(dep_iter->dependency, root, head)) {
+		if (compute_tree_depth_rec(dep_iter->dependency, root, seen)) {
 			fprintf(stderr, "%s\n", job->pkgname);
 			return -1;
 		}
@@ -179,20 +174,19 @@ compute_tree_depth_rec(struct build_job *job, struct build_job *root,
 }
 
 static void
-compute_tree_depth(struct build_job *job)
+compute_tree_depth(struct build_job *job, char *seen)
 {
-	struct depth_tree_head head;
+	memset(seen, 0, len_jobs);
 
-	SLIST_INIT(&head);
 	job->pkg_depth = 0;
-	if (compute_tree_depth_rec(job, job, &head))
+	if (compute_tree_depth_rec(job, job, seen))
 		exit(1);
 }
 
 void
 init_jobs(const char *scan_output, const char *success_file, const char *error_file)
 {
-	char *input;
+	char *input, *seen;
 	const char *input_iter;
 	int fd;
 	size_t i;
@@ -242,8 +236,10 @@ init_jobs(const char *scan_output, const char *success_file, const char *error_f
 	hash_entries();
 	build_tree();
 
+	seen = xmalloc(len_jobs);
 	for (i = 0; i < len_jobs; ++i)
-		compute_tree_depth(&jobs[i]);
+		compute_tree_depth(&jobs[i], seen);
+	free(seen);
 
 	mark_initial();
 
