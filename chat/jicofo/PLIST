@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/01/03 10:27:40 khorben Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/02/10 12:50:13 khorben Exp $
 bin/jicofo
 share/examples/jicofo/jicofo.conf
 share/examples/jicofo/logging.properties
@@ -24,6 +24,7 @@ share/jicofo/lib/jackson-annotations-2.13.0.jar
 share/jicofo/lib/jackson-core-2.13.0.jar
 share/jicofo/lib/jackson-databind-2.13.0.jar
 share/jicofo/lib/jackson-module-jakarta-xmlbind-annotations-2.13.0.jar
+share/jicofo/lib/jackson-module-kotlin-2.14.1.jar
 share/jicofo/lib/jakarta.activation-2.0.1.jar
 share/jicofo/lib/jakarta.annotation-api-2.0.0.jar
 share/jicofo/lib/jakarta.inject-api-2.0.0.jar
@@ -59,7 +60,7 @@ share/jicofo/lib/jicofo-common-${PKGVERSION}.jar
 share/jicofo/lib/jicofo-selector-${PKGVERSION}.jar
 share/jicofo/lib/jitsi-metaconfig-1.0-9-g5e1b624.jar
 share/jicofo/lib/jitsi-utils-1.0-119-ga7b23ff.jar
-share/jicofo/lib/jitsi-xmpp-extensions-1.0-59-g76a5c13.jar
+share/jicofo/lib/jitsi-xmpp-extensions-1.0-62-g911b404.jar
 share/jicofo/lib/jna-5.9.0.jar
 share/jicofo/lib/json-simple-1.1.1.jar
 share/jicofo/lib/jsr305-3.0.2.jar
@@ -94,4 +95,3 @@ share/jicofo/lib/smack-tcp-4.4.6.jar
 share/jicofo/lib/smack-xmlparser-4.4.6.jar
 share/jicofo/lib/smack-xmlparser-stax-4.4.6.jar
 share/jicofo/lib/spotbugs-annotations-4.6.0.jar
-@pkgdir share/examples/jicofo

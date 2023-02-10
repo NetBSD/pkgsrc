@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.1 2023/01/03 10:27:40 khorben Exp $
+$NetBSD: distinfo,v 1.2 2023/02/10 12:50:13 khorben Exp $
 
-BLAKE2s (jicofo/jicofo-java-deps-2.0.8138.tar.gz) = d06323602159959cb4a87d6d36bc978edb91a02cdc0c249cf254321308d1fa11
-SHA512 (jicofo/jicofo-java-deps-2.0.8138.tar.gz) = 0ebf0fd98dd24c143d301efd154eb1eac65a337125689917eb734d70322769fba2f888aee8e442498814de7c07adbb0a1a1426bfb8ebd4f7c7566900fa826667
-Size (jicofo/jicofo-java-deps-2.0.8138.tar.gz) = 164169960 bytes
-BLAKE2s (jicofo/jitsi-meet_8138.tar.gz) = d0df1114b51a1dbaf7b3049cb17240867501f9a9eac2e133e5ed2d0a09a046d2
-SHA512 (jicofo/jitsi-meet_8138.tar.gz) = 76464feba02c5ecd86e45e02bc703a39d0a70bb2080e539fa7177ab170bd7d84f9489040e2928af79c2b141900dc545db6f1bd47b9e34774b6bde0971296432b
-Size (jicofo/jitsi-meet_8138.tar.gz) = 237910 bytes
+BLAKE2s (jicofo/jicofo-java-deps-2.0.8252.tar.gz) = 459b7412e76f04c6c8dc69570a4d7f1f6dfb466b72c566f37e928909fece9cad
+SHA512 (jicofo/jicofo-java-deps-2.0.8252.tar.gz) = 8c35edf7f8c7e99c2de371bc2ec6fe177fb1eb9e494db0574dd0e9b2680e482b2dc42cf639bb2b48644c82bf0e6f1328fe44868ee3a07edfd670d58f3a8a7644
+Size (jicofo/jicofo-java-deps-2.0.8252.tar.gz) = 168577903 bytes
+BLAKE2s (jicofo/jitsi-meet_8252.tar.gz) = a147905e891ccd5222518d521eb4010bb1a76733a568cb731fc4cd3227bb4bcc
+SHA512 (jicofo/jitsi-meet_8252.tar.gz) = 3200c5b22cbbf9372c8e139e28912b8610ac8761feb84e29b8c60bca3a2a74139f1b8180e0643fd0b9e31f799c223309e98d6b0d6cc3d2cc2241f0b5f4b80f4a
+Size (jicofo/jitsi-meet_8252.tar.gz) = 1883070 bytes
 SHA1 (patch-resources_jicofo.sh) = 986445ede72ec0333bb56a52bc3c57030eca8383
