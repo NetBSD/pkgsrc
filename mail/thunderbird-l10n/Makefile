@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.111 2021/07/15 16:27:27 ryoon Exp $
+# $NetBSD: Makefile,v 1.112 2023/02/10 14:29:38 he Exp $
 #
 
-TB_VER=		78.12.0
+TB_VER=		102.6.1
 PKGNAME=	thunderbird-l10n-${TB_VER}
 DISTNAME=	# empty
 CATEGORIES=	mail
@@ -25,7 +25,7 @@ TB_LOCALES=		ar af ast be bg br ca cak cs cy		\
                         eu fi fr fy-NL ga-IE gd gl he hr hsb	\
                         hu hy-AM id is it ja ka kab kk ko	\
                         lt nb-NO nl nn-NO pa-IN pl 		\
-                        pt-BR pt-PT rm ro ru si sk		\
+                        pt-BR pt-PT rm ro ru sk			\
                         sl sq sr sv-SE tr uk uz vi		\
                         zh-CN zh-TW
 
