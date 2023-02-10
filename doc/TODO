@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22614 2023/02/10 14:53:12 wiz Exp $
+$NetBSD: TODO,v 1.22615 2023/02/10 15:40:32 gdt Exp $
 
 Suggested new packages
 ======================
@@ -335,6 +335,10 @@ Suggested new packages
 	https://www.endbasic.dev
 	BASIC environment with a REPL, a web interface, a graphical
 	console, and RPi support written in Rust
+
+	NORM
+	https://github.com/USNavalResearchLaboratory/norm
+	NACK-Oriented Reliable Multicast
 
 	Missing xorg packages
 	app: constype, intel-gpu-tools
