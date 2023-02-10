@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/02/10 22:09:10 fcambus Exp $
+
+BLAKE2s (ancient-2.0.0.tar.gz) = 33d05e7d7f1819f8097d6347b59e58489675fed06a76d32b4e466c3fc5f9ba08
+SHA512 (ancient-2.0.0.tar.gz) = 83221b83919b981013b3b54067a58ca0a53d4a4c4e195751c063226f1e7bdb5e031e480bbd67f818582269b8cc01fae2dafa257a1634bd918b38a38488659c21
+Size (ancient-2.0.0.tar.gz) = 98727 bytes
