@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1089 2023/02/10 11:07:28 fcambus Exp $
+$NetBSD: CHANGES-2023,v 1.1090 2023/02/10 11:28:38 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1377,3 +1377,6 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-jupyter_core to 5.2.0 [adam 2023-02-10]
 	Updated sysutils/cdrtools to 3.02a10nb3 [adam 2023-02-10]
 	Updated devel/byacc to 20230201 [fcambus 2023-02-10]
+	Updated databases/postgresql-timescaledb to 2.9.3 [tnn 2023-02-10]
+	Updated databases/timescaledb-tune to 0.14.3 [tnn 2023-02-10]
+	Updated devel/git-lfs to 3.3.0 [tnn 2023-02-10]
