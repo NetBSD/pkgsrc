@@ -1,8 +1,8 @@
-$NetBSD: patch-vmblockmounter_Makefile.am,v 1.1 2023/01/31 07:59:28 khorben Exp $
+$NetBSD: patch-vmblockmounter_Makefile.am,v 1.2 2023/02/10 01:22:08 khorben Exp $
 
 Do not create symbolic links outside of ${PREFIX}
 
---- vmblockmounter/Makefile.am.orig	2023-01-31 07:47:44.665808820 +0000
+--- vmblockmounter/Makefile.am.orig	2022-02-11 15:32:23.000000000 +0000
 +++ vmblockmounter/Makefile.am
 @@ -22,21 +22,3 @@ mount_vmblock_LDADD += ../lib/stubs/libS
  
