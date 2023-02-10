@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.3 2022/09/04 12:00:12 tnn Exp $
+# $NetBSD: go-modules.mk,v 1.4 2023/02/10 11:15:32 tnn Exp $
 
 GO_MODULE_FILES+=	github.com/alexbrainman/sspi/@v/v0.0.0-20210105120005-909beea2cc74.mod
 GO_MODULE_FILES+=	github.com/alexbrainman/sspi/@v/v0.0.0-20210105120005-909beea2cc74.zip
@@ -9,8 +9,8 @@ GO_MODULE_FILES+=	github.com/davecgh/go-spew/@v/v1.1.1.mod
 GO_MODULE_FILES+=	github.com/davecgh/go-spew/@v/v1.1.1.zip
 GO_MODULE_FILES+=	github.com/dpotapov/go-spnego/@v/v0.0.0-20210315154721-298b63a54430.mod
 GO_MODULE_FILES+=	github.com/dpotapov/go-spnego/@v/v0.0.0-20210315154721-298b63a54430.zip
-GO_MODULE_FILES+=	github.com/git-lfs/gitobj/v2/@v/v2.1.0.mod
-GO_MODULE_FILES+=	github.com/git-lfs/gitobj/v2/@v/v2.1.0.zip
+GO_MODULE_FILES+=	github.com/git-lfs/gitobj/v2/@v/v2.1.1.mod
+GO_MODULE_FILES+=	github.com/git-lfs/gitobj/v2/@v/v2.1.1.zip
 GO_MODULE_FILES+=	github.com/git-lfs/go-netrc/@v/v0.0.0-20210914205454-f0c862dd687a.mod
 GO_MODULE_FILES+=	github.com/git-lfs/go-netrc/@v/v0.0.0-20210914205454-f0c862dd687a.zip
 GO_MODULE_FILES+=	github.com/git-lfs/pktline/@v/v0.0.0-20210330133718-06e9096e2825.mod
@@ -109,4 +109,5 @@ GO_MODULE_FILES+=	gopkg.in/check.v1/@v/v0.0.0-20161208181325-20d25e280405.zip
 GO_MODULE_FILES+=	gopkg.in/yaml.v2/@v/v2.2.2.mod
 GO_MODULE_FILES+=	gopkg.in/yaml.v2/@v/v2.2.2.zip
 GO_MODULE_FILES+=	gopkg.in/yaml.v3/@v/v3.0.0-20200313102051-9f266ea9e77c.mod
-GO_MODULE_FILES+=	gopkg.in/yaml.v3/@v/v3.0.0-20200313102051-9f266ea9e77c.zip
+GO_MODULE_FILES+=	gopkg.in/yaml.v3/@v/v3.0.1.mod
+GO_MODULE_FILES+=	gopkg.in/yaml.v3/@v/v3.0.1.zip
