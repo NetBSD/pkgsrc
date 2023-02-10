@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1099 2023/02/10 21:32:44 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1100 2023/02/10 22:10:58 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1390,3 +1390,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated fonts/harfbuzz to 6.0.0 [ryoon 2023-02-10]
 	Updated fonts/harfbuzz-icu to 6.0.0 [ryoon 2023-02-10]
 	Updated archivers/zstd to 1.5.4 [wiz 2023-02-10]
+	Added archivers/ancient version 2.0.0 [fcambus 2023-02-10]
