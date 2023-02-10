@@ -1,15 +1,15 @@
-# $NetBSD: Makefile.common,v 1.2 2023/01/03 10:31:17 khorben Exp $
+# $NetBSD: Makefile.common,v 1.3 2023/02/10 12:50:13 khorben Exp $
 # used by chat/jicofo/Makefile
 # used by chat/jitsi-meet-prosody/Makefile
 # used by chat/jitsi-videobridge/Makefile
 
 GITHUB_PROJECT?=	jitsi-meet
-GITHUB_TAG?=		stable/jitsi-meet_8138
-DISTNAME?=		jitsi-meet_8138
+GITHUB_TAG?=		stable/jitsi-meet_8252
+DISTNAME?=		jitsi-meet_8252
 CATEGORIES=		chat
 MASTER_SITES=		${MASTER_SITE_GITHUB:=jitsi/}
 DIST_SUBDIR=		${GITHUB_PROJECT}
-JITSI_MEET_VERSION=	2.0.8138
+JITSI_MEET_VERSION=	2.0.8252
 
 MAINTAINER=		khorben@defora.org
 HOMEPAGE?=		https://github.com/jitsi/jitsi-meet/

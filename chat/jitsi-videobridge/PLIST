@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/01/03 10:29:35 khorben Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/02/10 12:50:13 khorben Exp $
 bin/jvb
 share/examples/jitsi-videobridge/jvb.conf
 share/examples/jitsi-videobridge/logging.properties
@@ -78,11 +78,11 @@ share/jitsi-videobridge/lib/jetty-servlets-11.0.10.jar
 share/jitsi-videobridge/lib/jetty-util-11.0.10.jar
 share/jitsi-videobridge/lib/jetty-webapp-11.0.10.jar
 share/jitsi-videobridge/lib/jetty-xml-11.0.10.jar
-share/jitsi-videobridge/lib/jicoco-1.1-119-gc527d61.jar
-share/jitsi-videobridge/lib/jicoco-config-1.1-119-gc527d61.jar
-share/jitsi-videobridge/lib/jicoco-metrics-1.1-119-gc527d61.jar
+share/jitsi-videobridge/lib/jicoco-1.1-121-gbaa7d30.jar
+share/jitsi-videobridge/lib/jicoco-config-1.1-121-gbaa7d30.jar
+share/jitsi-videobridge/lib/jicoco-metrics-1.1-121-gbaa7d30.jar
 share/jitsi-videobridge/lib/jitsi-media-transform-${PKGVERSION}.jar
-share/jitsi-videobridge/lib/jitsi-metaconfig-1.0-9-g5e1b624.jar
+share/jitsi-videobridge/lib/jitsi-metaconfig-1.0-11-g8cf950e.jar
 share/jitsi-videobridge/lib/jitsi-srtp-1.1-7-gd8d1435.jar
 share/jitsi-videobridge/lib/jitsi-utils-1.0-124-ge57838f.jar
 share/jitsi-videobridge/lib/jitsi-xmpp-extensions-1.0-59-g76a5c13.jar
