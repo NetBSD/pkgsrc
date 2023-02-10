@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2023/01/03 10:25:06 khorben Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/02/10 12:50:13 khorben Exp $
 share/jitsi-meet-prosody/ext_events.lib.lua
 share/jitsi-meet-prosody/luajwtjitsi.lib.lua
 share/jitsi-meet-prosody/mod_auth_jitsi-anonymous.lua
 share/jitsi-meet-prosody/mod_auth_token.lua
 share/jitsi-meet-prosody/mod_av_moderation.lua
 share/jitsi-meet-prosody/mod_av_moderation_component.lua
-share/jitsi-meet-prosody/mod_certs_all.lua
+share/jitsi-meet-prosody/mod_certs_s2soutinjection.lua
 share/jitsi-meet-prosody/mod_client_proxy.lua
 share/jitsi-meet-prosody/mod_conference_duration.lua
 share/jitsi-meet-prosody/mod_conference_duration_component.lua
@@ -40,6 +40,9 @@ share/jitsi-meet-prosody/mod_room_metadata.lua
 share/jitsi-meet-prosody/mod_room_metadata_component.lua
 share/jitsi-meet-prosody/mod_roster_command.lua
 share/jitsi-meet-prosody/mod_roster_command.patch
+share/jitsi-meet-prosody/mod_s2s_whitelist.lua
+share/jitsi-meet-prosody/mod_s2soutinjection.lua
+share/jitsi-meet-prosody/mod_secure_interfaces.lua
 share/jitsi-meet-prosody/mod_smacks.lua
 share/jitsi-meet-prosody/mod_speakerstats.lua
 share/jitsi-meet-prosody/mod_speakerstats_component.lua
