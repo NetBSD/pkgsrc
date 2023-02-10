@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1093 2023/02/10 12:50:51 khorben Exp $
+$NetBSD: CHANGES-2023,v 1.1094 2023/02/10 12:51:02 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1383,3 +1383,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated time/taskwarrior to 2.6.2 [fcambus 2023-02-10]
 	Updated chat/swirc to 3.4.0 [fcambus 2023-02-10]
 	Updated chat/jitsi-meet-prosody to 2.0.8252 [khorben 2023-02-10]
+	Updated chat/jicofo to 2.0.8252 [khorben 2023-02-10]
