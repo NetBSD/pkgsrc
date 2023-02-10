@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1087 2023/02/10 07:32:53 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1088 2023/02/10 10:52:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1374,3 +1374,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/ristretto to 0.13.0 [gutteridge 2023-02-09]
 	Updated sysutils/open-vm-tools to 12.0.0 [khorben 2023-02-10]
 	Updated devel/nss to 3.88.1 [wiz 2023-02-10]
+	Updated devel/py-jupyter_core to 5.2.0 [adam 2023-02-10]
+	Updated sysutils/cdrtools to 3.02a10nb3 [adam 2023-02-10]
