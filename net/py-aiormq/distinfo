@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:06:33 nia Exp $
+$NetBSD: distinfo,v 1.7 2023/02/10 14:42:48 wiz Exp $
 
 BLAKE2s (aiormq-3.2.3.tar.gz) = fb1c37967b3baa111a927b6e62c915734bbb58890897394da22c66505409683c
 SHA512 (aiormq-3.2.3.tar.gz) = 46321fe2992ae44c7b7fea7e2ca5b58752d8bece2e8402b054424c1c7eb0edf6df4b9c4973c5cb7a2bebba15b192b1d157d380028835417d43ee2a586d52ca46
 Size (aiormq-3.2.3.tar.gz) = 21758 bytes
+SHA1 (patch-setup.py) = 9bf8395698edfe081c35e1303269245dd1ba5aa2
