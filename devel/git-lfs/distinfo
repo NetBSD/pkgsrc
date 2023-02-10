@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.14 2022/09/04 12:00:12 tnn Exp $
+$NetBSD: distinfo,v 1.15 2023/02/10 11:15:32 tnn Exp $
 
-BLAKE2s (git-lfs-3.2.0.tar.gz) = 3f5b88d6df357020c3d96ba91a44f8902cc0765cd880ff34afb16971e7d03c50
-SHA512 (git-lfs-3.2.0.tar.gz) = c2ba8cecd5b3519a032f446b0c3043352f37f3c67ff3c2304a38beb176f0ae8efd1deaeb8bd54a35d7dd7dcd988da67249c896dffd83fc293b165a3e6bb02d66
-Size (git-lfs-3.2.0.tar.gz) = 3270970 bytes
+BLAKE2s (git-lfs-3.3.0.tar.gz) = 62e79b1118920f2e7dfcd1cf63b2ef208e06814cfa0f592d296753d91ca276cd
+SHA512 (git-lfs-3.3.0.tar.gz) = c339a61c23950d249ac135d75c9b9c4b871f491535d6d6a0accbf06efe36798566502ab310396f44acdc1d93aa7358a719a81428042fb2eda1ab237b08e4ba41
+Size (git-lfs-3.3.0.tar.gz) = 656080 bytes
 BLAKE2s (github.com_alexbrainman_sspi_@v_v0.0.0-20210105120005-909beea2cc74.mod) = c21a1ebaba97d3b288d48b37ba7e87cb0872c5eaa04d535accae5c379fc492ff
 SHA512 (github.com_alexbrainman_sspi_@v_v0.0.0-20210105120005-909beea2cc74.mod) = aee6f208fe93284b91980e086ddb31e4550149072fbadb81a7084ad30d39bcbeda0e497aebfb231599ea22a52c67cdf4319a8b538e6594ec2bb2892c9ce77570
 Size (github.com_alexbrainman_sspi_@v_v0.0.0-20210105120005-909beea2cc74.mod) = 45 bytes
@@ -30,12 +30,12 @@ Size (github.com_dpotapov_go-spnego_@v_v0.0.0-20210315154721-298b63a54430.mod) =
 BLAKE2s (github.com_dpotapov_go-spnego_@v_v0.0.0-20210315154721-298b63a54430.zip) = f1016a9aaaa705dbc19d5bb1d8f0236a038a9ed2f80d4bada5e4605aba3c67b2
 SHA512 (github.com_dpotapov_go-spnego_@v_v0.0.0-20210315154721-298b63a54430.zip) = f0f79bcd4b71ac6cb842666979e020ec0fc4815079c7d317a2d62e4df72d7ee0b236f7d333b4dd6a21b902c8af5cec361bd9e29dfca74ffc9315f816ed71052c
 Size (github.com_dpotapov_go-spnego_@v_v0.0.0-20210315154721-298b63a54430.zip) = 8536 bytes
-BLAKE2s (github.com_git-lfs_gitobj_v2_@v_v2.1.0.mod) = e2060c6bcc7bb1f468beb423ab03a9b8f4adbbca02bb042661807ba13e8a9448
-SHA512 (github.com_git-lfs_gitobj_v2_@v_v2.1.0.mod) = 572cfd3e6f6596390937f1fa7c7e3ebbb189d7bc70e993c0bf136246bdee2bda1e21ba411d420294a96cf72a8c0ea3bf56644bf55cf582ab769a0222ef447a31
-Size (github.com_git-lfs_gitobj_v2_@v_v2.1.0.mod) = 191 bytes
-BLAKE2s (github.com_git-lfs_gitobj_v2_@v_v2.1.0.zip) = ec6ae3305938cd857697c5581bf73faca396f5cdb8b113719fc8b0eedbe3a8f8
-SHA512 (github.com_git-lfs_gitobj_v2_@v_v2.1.0.zip) = 3728603765cf8709c00b26634ff8fb3c0047738e4ad4766aeaa6ebb8de19df05beee54a3b23f7ddd93594fbda66befcaa72fc76b20c12d987412defaf8d213fb
-Size (github.com_git-lfs_gitobj_v2_@v_v2.1.0.zip) = 77760 bytes
+BLAKE2s (github.com_git-lfs_gitobj_v2_@v_v2.1.1.mod) = e2060c6bcc7bb1f468beb423ab03a9b8f4adbbca02bb042661807ba13e8a9448
+SHA512 (github.com_git-lfs_gitobj_v2_@v_v2.1.1.mod) = 572cfd3e6f6596390937f1fa7c7e3ebbb189d7bc70e993c0bf136246bdee2bda1e21ba411d420294a96cf72a8c0ea3bf56644bf55cf582ab769a0222ef447a31
+Size (github.com_git-lfs_gitobj_v2_@v_v2.1.1.mod) = 191 bytes
+BLAKE2s (github.com_git-lfs_gitobj_v2_@v_v2.1.1.zip) = f6664117179a50a0fc0b8120032b14a3f19c21265cc7784cdb8d4896dca43426
+SHA512 (github.com_git-lfs_gitobj_v2_@v_v2.1.1.zip) = 94917d57536941cd0eaa4b9ce10120247b2a44015b39233420638cc94fa0813d3ef5ce1b76ded59de22036feff2641c67cd6907ad2a6685b999bb4e0890eaeac
+Size (github.com_git-lfs_gitobj_v2_@v_v2.1.1.zip) = 78303 bytes
 BLAKE2s (github.com_git-lfs_go-netrc_@v_v0.0.0-20210914205454-f0c862dd687a.mod) = 03ab6aea3eaedff2d77b5080a6e0dfba773d62285704406eb7c198be55f206b8
 SHA512 (github.com_git-lfs_go-netrc_@v_v0.0.0-20210914205454-f0c862dd687a.mod) = 768f54e3986f35c9a5acf9aaaf9b55b3e12ada7fb6c602303542709e1dd8ce3e03c40837949f07f943f2ac9f59b7affe8cd14d1e57b1de5fbe488ab2e6f13f90
 Size (github.com_git-lfs_go-netrc_@v_v0.0.0-20210914205454-f0c862dd687a.mod) = 35 bytes
@@ -330,6 +330,9 @@ Size (gopkg.in_yaml.v2_@v_v2.2.2.zip) = 78275 bytes
 BLAKE2s (gopkg.in_yaml.v3_@v_v3.0.0-20200313102051-9f266ea9e77c.mod) = 17da54ba1894b4653d4c1ab1ae6e9fe03928a96c69cdc8db6b6ea9e34d673991
 SHA512 (gopkg.in_yaml.v3_@v_v3.0.0-20200313102051-9f266ea9e77c.mod) = 307ca9123efc577ca04828996ee9d8edbb51794ccb4b8d9f169ba689e7276aa5f6ae106a04b22b7fab853ffacfebcbf74468b64eaefd57445864c1fbc77fad9d
 Size (gopkg.in_yaml.v3_@v_v3.0.0-20200313102051-9f266ea9e77c.mod) = 95 bytes
-BLAKE2s (gopkg.in_yaml.v3_@v_v3.0.0-20200313102051-9f266ea9e77c.zip) = 179a5c92eac022e03c695f587194e22e5bdc5db9224b92d199205e48199c51c2
-SHA512 (gopkg.in_yaml.v3_@v_v3.0.0-20200313102051-9f266ea9e77c.zip) = bee7757d760f5ba1b9f7523af358652a5cb65f2b0064da097f78450871b2636efcbab0298a9871bbb3ce8012bf95a155949251d4f61464dde510097b936b47a8
-Size (gopkg.in_yaml.v3_@v_v3.0.0-20200313102051-9f266ea9e77c.zip) = 101467 bytes
+BLAKE2s (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 17da54ba1894b4653d4c1ab1ae6e9fe03928a96c69cdc8db6b6ea9e34d673991
+SHA512 (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 307ca9123efc577ca04828996ee9d8edbb51794ccb4b8d9f169ba689e7276aa5f6ae106a04b22b7fab853ffacfebcbf74468b64eaefd57445864c1fbc77fad9d
+Size (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 95 bytes
+BLAKE2s (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 2e80fa896e65b1ae160400012c71aeac70e22a31cac82ec4921c85a93d65774c
+SHA512 (gopkg.in_yaml.v3_@v_v3.0.1.zip) = d57b0d42c71ad6503415e42979b51b0dc7f6344072c728ab2e3d4bab88da7b7d775e7f261868909f990f6b44aed6c533966c97bbe333a0acd65fc8bac9d1d4ff
+Size (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 104623 bytes
