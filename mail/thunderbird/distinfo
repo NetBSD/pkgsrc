@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.254 2023/02/05 09:05:28 he Exp $
+$NetBSD: distinfo,v 1.255 2023/02/10 10:04:54 pho Exp $
 
 BLAKE2s (thunderbird-102.6.1.source.tar.xz) = a5a5e3a188e039669a404983d4ef55790a0882f8250cfc4557a3df3550260a51
 SHA512 (thunderbird-102.6.1.source.tar.xz) = 06ea2fce76c08609d638435869fddc1c4d7f4b748951ebfb2476b4dba9f1f76d3de2c11e5f62540f297a5d30bb0fc637852d8e57f4fadc2c905f299757949d83
@@ -20,7 +20,7 @@ SHA1 (patch-js_src_jsfriendapi.h) = e013337469254e2a9e598bd070528f0f654acccb
 SHA1 (patch-js_src_util_NativeStack.cpp) = 338fdf6aa34101f6a41d07b303d4a8426c483d5b
 SHA1 (patch-media_ffvpx_libavutil_arm_bswap.h) = 5a7ad4d38165d49d44862ade846cb79de026867e
 SHA1 (patch-media_libcubeb_src_cubeb__alsa.c) = 99e881e557430c1ef26060109f4b40c30d3b201c
-SHA1 (patch-media_libcubeb_src_cubeb__sun.c) = 3140751d6268faa03ded07cba8060f6a66687389
+SHA1 (patch-media_libcubeb_src_cubeb__sun.c) = 79f086c838efd57dec03ec6f289b3ac8d439c68c
 SHA1 (patch-media_libcubeb_src_moz.build) = bd3275f1acb6e439dee98b1673eeb65ec7797974
 SHA1 (patch-media_libpng_pngpriv.h) = 5c49119b0e555c9daca64799ff03f3fa8fa05ded
 SHA1 (patch-media_libtheora_lib_info.c) = 96f3d3824459186476102a4598d07cf6f6a704ef
@@ -33,4 +33,5 @@ SHA1 (patch-toolkit_components_terminator_nsTerminator.cpp) = f80a0844ca37dda91a
 SHA1 (patch-toolkit_modules_subprocess_subprocess__shared__unix.js) = d718759e59910228cc3729e359f328b47aff5eb4
 SHA1 (patch-toolkit_moz.configure) = b8907d57570bfd87708c5630e44c919710be0b9c
 SHA1 (patch-toolkit_mozapps_installer_packager.mk) = 407fe861dd9b82a88a6f5c0ed1e519a3c0e67251
+SHA1 (patch-widget_gtk_DMABufSurface.cpp) = aea8998364945f0a435ad63860ab50d56d5c0895
 SHA1 (patch-xpcom_base_nscore.h) = 6e6f2d564d8d6121c178c2567cce8ac2ebe8610b
