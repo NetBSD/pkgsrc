@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 11:30:30 nia Exp $
+$NetBSD: distinfo,v 1.8 2023/02/10 14:36:01 wiz Exp $
 
 BLAKE2s (django-celery-beat-2.2.1.tar.gz) = d3ad485645d84bb8e506809f0d6045ed603b4695f46ef67fdcf5e0dc0e5b6c96
 SHA512 (django-celery-beat-2.2.1.tar.gz) = 203e7dc0218b42125f3442ba78e5a7dd9f9c43807b5b066cf9aac381d4b34bba7bc7e3ee02765525501a53f963a8f0466c1d389dd84be0acd27412e6aa0cafe0
 Size (django-celery-beat-2.2.1.tar.gz) = 99023 bytes
+SHA1 (patch-requirements_test.txt) = bf110385cec1e866d664919d754e01136d988ca3
