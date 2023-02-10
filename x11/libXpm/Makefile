@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2023/01/23 08:30:02 adam Exp $
+# $NetBSD: Makefile,v 1.29 2023/02/10 09:07:22 tnn Exp $
 
 DISTNAME=		libXpm-3.5.15
 CATEGORIES=		x11 graphics
@@ -26,6 +26,10 @@ USE_EXPLICIT_LIBDEPS=	no
 CONFIGURE_ENV+=		ac_cv_search_gettext=no
 # Explicitly define path to gzip.
 CONFIGURE_ENV+=		XPM_PATH_GZIP=${TOOLS_GZIP_CMD}
+# compress(1) is not a tool known to pkgsrc. Just force the typical
+# path of the tool for now. Linux systems usually do not have compress(1)
+# installed by default and that bombs the configure phase.
+CONFIGURE_ENV+=		XPM_PATH_COMPRESS=/usr/bin/compress
 MAKE_ENV+=		INTLLIBS=${BUILDLINK_LDADD.gettext:Q}
 
 .include "../../mk/bsd.prefs.mk"
