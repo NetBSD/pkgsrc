@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2022/11/28 18:06:55 adam Exp $
+# $NetBSD: Makefile,v 1.23 2023/02/10 10:51:25 adam Exp $
 
-DISTNAME=	jupyter_core-5.1.0
+DISTNAME=	jupyter_core-5.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jupyter_core/}
@@ -13,6 +13,7 @@ LICENSE=	modified-bsd
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.4:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-platformdirs>=2.5:../../misc/py-platformdirs
 DEPENDS+=	${PYPKGPREFIX}-traitlets>=5.3:../../devel/py-traitlets
+TEST_DEPENDS+=	${PYPKGPREFIX}-ipykernel-[0-9]*:../../devel/py-ipykernel
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout-[0-9]*:../../devel/py-test-timeout
