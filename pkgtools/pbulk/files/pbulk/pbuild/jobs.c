@@ -1,4 +1,4 @@
-/* $NetBSD: jobs.c,v 1.16 2015/11/03 19:06:47 joerg Exp $ */
+/* $NetBSD: jobs.c,v 1.17 2023/02/10 22:59:13 joerg Exp $ */
 
 /*-
  * Copyright (c) 2007, 2009, 2011 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -153,12 +153,12 @@ SLIST_HEAD(depth_tree_head, build_job);
 
 static int
 compute_tree_depth_rec(struct build_job *job, struct build_job *root,
-    struct depth_tree_head *head, int *count)
+    struct depth_tree_head *head)
 {
 	struct dependency_list *dep_iter;
 	struct build_job *job_iter;
 
-	if (job == root && *count != 0) {
+	if (job == root && root->pkg_depth != 0) {
 		fprintf(stderr, "Cyclic dependency for package:\n%s\n", job->pkgname);
 		return -1;
 	}
@@ -168,10 +168,9 @@ compute_tree_depth_rec(struct build_job *job, struct build_job *root,
 			return 0;
 	}
 	SLIST_INSERT_HEAD(head, job, depth_tree_link);
-	*count = *count + 1;
+	++root->pkg_depth;
 	SLIST_FOREACH(dep_iter, &job->depending_pkgs, depends_link) {
-		if (compute_tree_depth_rec(dep_iter->dependency, root,
-		    head, count)) {
+		if (compute_tree_depth_rec(dep_iter->dependency, root, head)) {
 			fprintf(stderr, "%s\n", job->pkgname);
 			return -1;
 		}
@@ -186,7 +185,7 @@ compute_tree_depth(struct build_job *job)
 
 	SLIST_INIT(&head);
 	job->pkg_depth = 0;
-	if (compute_tree_depth_rec(job, job, &head, &job->pkg_depth))
+	if (compute_tree_depth_rec(job, job, &head))
 		exit(1);
 }
 
