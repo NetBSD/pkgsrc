@@ -1,6 +1,6 @@
-$NetBSD: patch-media_libcubeb_src_cubeb__sun.c,v 1.2 2023/02/05 09:05:29 he Exp $
+$NetBSD: patch-media_libcubeb_src_cubeb__sun.c,v 1.3 2023/02/10 10:04:54 pho Exp $
 
---- media/libcubeb/src/cubeb_sun.c.orig	2020-09-02 21:41:01.178547066 +0000
+--- media/libcubeb/src/cubeb_sun.c.orig	2023-02-10 01:03:24.076131575 +0000
 +++ media/libcubeb/src/cubeb_sun.c
 @@ -1,5 +1,5 @@
  /*
@@ -504,13 +504,17 @@ $NetBSD: patch-media_libcubeb_src_cubeb__sun.c,v 1.2 2023/02/05 09:05:29 he Exp 
    return CUBEB_OK;
  }
  
-@@ -743,8 +721,8 @@ static struct cubeb_ops const sun_ops = 
- //  .stream_reset_default_device = NULL,
+@@ -740,11 +718,11 @@ static struct cubeb_ops const sun_ops = 
+   .stream_destroy = sun_stream_destroy,
+   .stream_start = sun_stream_start,
+   .stream_stop = sun_stream_stop,
+-  .stream_reset_default_device = NULL,
    .stream_get_position = sun_stream_get_position,
    .stream_get_latency = sun_stream_get_latency,
 +  .stream_get_input_latency = NULL,
    .stream_set_volume = sun_stream_set_volume,
 -  .stream_set_panning = NULL,
++  .stream_set_name = NULL,
    .stream_get_current_device = sun_get_current_device,
    .stream_device_destroy = sun_stream_device_destroy,
    .stream_register_device_changed_callback = NULL,
