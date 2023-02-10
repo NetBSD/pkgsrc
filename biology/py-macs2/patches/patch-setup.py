@@ -1,10 +1,15 @@
-$NetBSD: patch-setup.py,v 1.1 2023/01/22 23:30:11 bacon Exp $
+$NetBSD: patch-setup.py,v 1.2 2023/02/10 14:19:45 wiz Exp $
 
 # Remove lexical version check and pip requirement
 
 --- setup.py.orig	2020-04-12 00:00:15.000000000 +0000
 +++ setup.py
-@@ -20,28 +20,8 @@ numpy_requires = '>=1.17'
+@@ -16,32 +16,12 @@ from setuptools import setup, Extension
+ from distutils.version import LooseVersion
+ import subprocess
+ 
+-numpy_requires = '>=1.17'
++numpy_requires = '1.17'
  install_requires = [f"numpy>={numpy_requires}",]
  
  def main():
