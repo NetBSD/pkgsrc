@@ -1,6 +1,6 @@
-$NetBSD: patch-configure.ac,v 1.6 2021/12/07 18:25:46 adam Exp $
+$NetBSD: patch-configure.ac,v 1.7 2023/02/10 01:22:08 khorben Exp $
 
---- configure.ac.orig	2021-08-31 09:02:50.000000000 +0000
+--- configure.ac.orig	2022-02-11 15:32:23.000000000 +0000
 +++ configure.ac
 @@ -129,6 +129,9 @@ case "$host_os" in
     [solaris*])
@@ -12,16 +12,25 @@ $NetBSD: patch-configure.ac,v 1.6 2021/12/07 18:25:46 adam Exp $
     [*])
        AC_MSG_WARN([This is an untested and unsupported Operating System. Proceed at your own peril.])
        ;;
-@@ -525,7 +528,7 @@ AC_VMW_CHECK_LIB([fuse],
-                  [],
-                  [],
-                  [fuse.h],
--                 [fuse_main],
-+                 [fuse_exit],
-                  [have_fuse=yes],
-                  [have_fuse=no;
-                   AC_MSG_WARN([Fuse is missing, vmblock-fuse/vmhgfs-fuse will be disabled.])])
-@@ -1140,7 +1143,7 @@ AC_PATH_PROG(
+@@ -581,7 +584,7 @@ if test "$with_fuse" = "auto" ||
+                     [],
+                     [3.10.0],
+                     [fuse3/fuse.h],
+-                    [fuse_main],
++                    [fuse_exit],
+                     [have_fuse3=yes;
+                      AC_DEFINE([HAVE_FUSE3], 1, [Define to 1 if using FUSE3.])
+                      AC_DEFINE([FUSE_USE_VERSION], 35, [FUSE API version to use.])],
+@@ -609,7 +612,7 @@ if test "$with_fuse" = "fuse" ||
+                     [],
+                     [],
+                     [fuse.h],
+-                    [fuse_main],
++                    [fuse_exit],
+                     [have_fuse=yes;
+                      AC_DEFINE([HAVE_FUSE], 1, [Define to 1 if using FUSE.])
+                      AC_DEFINE([FUSE_USE_VERSION], 29, [FUSE API version to use.])],
+@@ -1369,7 +1372,7 @@ AC_PATH_PROG(
     [RPCGEN],
     [rpcgen],
     [not_found])
@@ -30,7 +39,7 @@ $NetBSD: patch-configure.ac,v 1.6 2021/12/07 18:25:46 adam Exp $
     AC_MSG_ERROR([rpcgen not found.])
  fi
  
-@@ -1362,6 +1365,15 @@ if test "$os" = "linux"; then
+@@ -1591,6 +1594,15 @@ if test "$os" = "linux"; then
     fi
  fi
  
@@ -46,7 +55,7 @@ $NetBSD: patch-configure.ac,v 1.6 2021/12/07 18:25:46 adam Exp $
  if test "$os" = "freebsd" || test "$os" = "kfreebsd-gnu"; then
     LIBVMTOOLS_LIBADD="$LIBVMTOOLS_LIBADD -lkvm"
     MODULES_DIR="/boot/modules"
-@@ -1459,6 +1471,7 @@ fi
+@@ -1688,6 +1700,7 @@ fi
  
  AM_CONDITIONAL(LINUX, test "$os" = "linux")
  AM_CONDITIONAL(SOLARIS, test "$os" = "solaris")

@@ -1,8 +1,8 @@
-$NetBSD: patch-lib_guestApp_guestApp.c,v 1.2 2016/12/23 04:11:03 ryoon Exp $
+$NetBSD: patch-lib_guestApp_guestApp.c,v 1.3 2023/02/10 01:22:08 khorben Exp $
 
 * Fix pkgsrc powerops scripts location
 
---- lib/guestApp/guestApp.c.orig	2016-09-29 10:07:22.000000000 +0000
+--- lib/guestApp/guestApp.c.orig	2022-02-11 15:32:56.000000000 +0000
 +++ lib/guestApp/guestApp.c
 @@ -63,7 +63,7 @@
  #elif defined __APPLE__
