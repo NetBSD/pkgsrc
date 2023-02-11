@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1123 2023/02/11 14:17:46 taca Exp $
+$NetBSD: CHANGES-2023,v 1.1124 2023/02/11 21:41:59 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1433,3 +1433,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/ruby-aws-partitions to 1.710.0 [taca 2023-02-11]
 	Updated www/ruby-multipart-post to 2.3.0 [taca 2023-02-11]
 	Updated devel/ruby-approvaltests to 0.0.26 [taca 2023-02-11]
+	Updated graphics/kvantum to 1.0.9 [pin 2023-02-11]
