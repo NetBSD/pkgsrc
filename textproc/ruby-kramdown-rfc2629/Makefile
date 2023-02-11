@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2023/01/19 15:11:39 taca Exp $
+# $NetBSD: Makefile,v 1.16 2023/02/11 14:03:28 taca Exp $
 
-DISTNAME=	kramdown-rfc2629-1.6.20
+DISTNAME=	kramdown-rfc2629-1.6.22
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -14,7 +14,6 @@ RUBYGEM_OPTIONS+=	--format-executable
 
 OVERRIDE_GEMSPEC+=	kramdown>=2.4.0
 
-#DEPENDS+=	${RUBY_PKGPREFIX}-json_pure>=2.0:../../textproc/ruby-json
 DEPENDS+=	${RUBY_PKGPREFIX}-kramdown>=2.3.0:../../textproc/ruby-kramdown
 DEPENDS+=	${RUBY_PKGPREFIX}-kramdown-parser-gfm>=1.1<2:../../textproc/ruby-kramdown-parser-gfm
 DEPENDS+=	${RUBY_PKGPREFIX}-certified>=1.0<2:../../security/ruby-certified
