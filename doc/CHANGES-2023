@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1125 2023/02/11 23:09:42 wen Exp $
+$NetBSD: CHANGES-2023,v 1.1126 2023/02/11 23:17:51 thorpej Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1435,3 +1435,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/ruby-approvaltests to 0.0.26 [taca 2023-02-11]
 	Updated graphics/kvantum to 1.0.9 [pin 2023-02-11]
 	Updated devel/p5-InlineX-C2XS to 0.27 [wen 2023-02-11]
+	Updated sysutils/nabud to 1.1 [thorpej 2023-02-11]
