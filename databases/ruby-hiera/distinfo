@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2022/12/18 13:49:50 taca Exp $
+$NetBSD: distinfo,v 1.21 2023/02/11 13:40:42 taca Exp $
 
-BLAKE2s (hiera-3.11.0.gem) = 5cf57ff9869d173cec74e540a1e8eea613fa2545a97eb4d96c2a7fd3d29d522c
-SHA512 (hiera-3.11.0.gem) = 51e82f0ec9cd84685dcd2ae904ee1640e0c8c7072a494793c9798aef53cbacfd368c1591c7ceeb15ae9af0d0134bd5c352fd116c42896980b7a6456342fc1354
-Size (hiera-3.11.0.gem) = 40960 bytes
+BLAKE2s (hiera-3.12.0.gem) = 14014975f0c00c696e0ce8369b36340741df2369ccae482040f2ec8e490aafe2
+SHA512 (hiera-3.12.0.gem) = bd98c4862ce936012c9761a8ba8c5fc26a1a8a700d3be8a4ed92f701ffb69858641dafea361129d44e7c67e4d462a4c61dd44d85e761b746f6443773feebcb59
+Size (hiera-3.12.0.gem) = 40960 bytes
