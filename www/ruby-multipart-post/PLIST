@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2022/08/31 16:16:47 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/02/11 14:07:28 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/changelog.md
 ${GEM_LIBDIR}/lib/composite_io.rb
 ${GEM_LIBDIR}/lib/multipart/post.rb
 ${GEM_LIBDIR}/lib/multipart/post/composite_read_io.rb
@@ -11,4 +12,6 @@ ${GEM_LIBDIR}/lib/multipart_post.rb
 ${GEM_LIBDIR}/lib/multipartable.rb
 ${GEM_LIBDIR}/lib/net/http/post/multipart.rb
 ${GEM_LIBDIR}/lib/parts.rb
+${GEM_LIBDIR}/license.md
+${GEM_LIBDIR}/readme.md
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
