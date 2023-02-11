@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1120 2023/02/11 14:03:55 taca Exp $
+$NetBSD: CHANGES-2023,v 1.1121 2023/02/11 14:06:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1430,3 +1430,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/ruby-roo to 2.10.0 [taca 2023-02-11]
 	Updated sysutils/ruby-facter to 4.3.0 [taca 2023-02-11]
 	Updated textproc/ruby-kramdown-rfc2629 to 1.6.22 [taca 2023-02-11]
+	Updated www/ruby-aws-partitions to 1.710.0 [taca 2023-02-11]
