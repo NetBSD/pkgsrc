@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2022/08/31 16:16:47 taca Exp $
+$NetBSD: distinfo,v 1.9 2023/02/11 14:07:28 taca Exp $
 
-BLAKE2s (multipart-post-2.2.3.gem) = e3b0de51266a8e17ca08d00abf63fa0881f5abdb36a25c3f15357c1185bbb64e
-SHA512 (multipart-post-2.2.3.gem) = 170670f8d74b2ef435b7a5a924a039ea31941904097dc35fc1f53365839b6983d0ae07936cb7543ac085c2e0edc204d9d3d058dcf2597e18698edb02c1765786
-Size (multipart-post-2.2.3.gem) = 13312 bytes
+BLAKE2s (multipart-post-2.3.0.gem) = abef5147425dad56f46b0aa4575fa3766d912c8ea11f6b5c38593a6f62637a6f
+SHA512 (multipart-post-2.3.0.gem) = 305263e347e18cf09a49cdaefe426e517556a9e26a59e79fd5d569f0132640ade5a16f3c59b12e2a4521d0c96f5fd9e3830f6961058fad72d441662ab1afff13
+Size (multipart-post-2.3.0.gem) = 15872 bytes
