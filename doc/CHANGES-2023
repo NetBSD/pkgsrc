@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1106 2023/02/11 01:47:36 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.1107 2023/02/11 05:23:04 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1397,3 +1397,20 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/xfce4-session to 4.18.1 [gutteridge 2023-02-11]
 	Updated sysutils/xfce4-power-manager to 4.18.1 [gutteridge 2023-02-11]
 	Updated www/lighttpd to 1.4.69 [schmonz 2023-02-11]
+	Updated devel/ruby-atk to 4.1.1 [tsutsui 2023-02-11]
+	Updated devel/ruby-gio2 to 4.1.1 [tsutsui 2023-02-11]
+	Updated devel/ruby-glib2 to 4.1.1 [tsutsui 2023-02-11]
+	Updated devel/ruby-gobject-introspection to 4.1.1 [tsutsui 2023-02-11]
+	Updated devel/ruby-pango to 4.1.1 [tsutsui 2023-02-11]
+	Updated graphics/ruby-cairo-gobject to 4.1.1 [tsutsui 2023-02-11]
+	Updated graphics/ruby-clutter to 4.1.1 [tsutsui 2023-02-11]
+	Updated graphics/ruby-clutter-gdk to 4.1.1 [tsutsui 2023-02-11]
+	Updated graphics/ruby-clutter-gtk to 4.1.1 [tsutsui 2023-02-11]
+	Updated graphics/ruby-gdk3 to 4.1.1 [tsutsui 2023-02-11]
+	Updated graphics/ruby-gdk_pixbuf2 to 4.1.1 [tsutsui 2023-02-11]
+	Updated graphics/ruby-rsvg2 to 4.1.1 [tsutsui 2023-02-11]
+	Updated multimedia/ruby-clutter-gstreamer to 4.1.1 [tsutsui 2023-02-11]
+	Updated multimedia/ruby-gstreamer to 4.1.1 [tsutsui 2023-02-11]
+	Updated print/ruby-poppler to 4.1.1 [tsutsui 2023-02-11]
+	Updated x11/ruby-gtk3 to 4.1.1 [tsutsui 2023-02-11]
+	Updated x11/ruby-gtksourceview3 to 4.1.1 [tsutsui 2023-02-11]
