@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1116 2023/02/11 13:43:05 taca Exp $
+$NetBSD: CHANGES-2023,v 1.1117 2023/02/11 13:45:52 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1425,3 +1425,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed devel/ruby-concurrent-ruby11 [taca 2023-02-11]
 	Updated databases/ruby-hiera to 3.12.0 [taca 2023-02-11]
 	Updated devel/ruby-bindata to 2.4.15 [taca 2023-02-11]
+	Updated devel/ruby-regexp_parser to 2.7.0 [taca 2023-02-11]
