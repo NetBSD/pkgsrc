@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2022/03/27 06:31:56 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/02/11 13:18:50 taca Exp $
 
 DISTNAME=	activesupport-${RAILS_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-activesupport${RUBY_RAILS}-${RAILS_VERSION}
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
