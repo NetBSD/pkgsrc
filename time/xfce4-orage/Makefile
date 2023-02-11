@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.69 2023/01/29 21:17:56 ryoon Exp $
+# $NetBSD: Makefile,v 1.70 2023/02/11 01:26:12 gutteridge Exp $
 
-VERSION=	4.16.0
+VERSION=	4.18.0
 DISTNAME=	orage-${VERSION}
 PKGNAME=	xfce4-orage-${VERSION}
-PKGREVISION=	6
 CATEGORIES=	time
 MASTER_SITES=	https://archive.xfce.org/src/apps/orage/${VERSION:R}/
 
@@ -24,7 +23,7 @@ CONFIGURE_ENV+=	ac_cv_lib_popt_poptGetContext=no
 MAKE_DIRS+=	${PREFIX}/libexec/xfce4 ${PREFIX}/libexec/xfce4/panel-plugins
 MAKE_DIRS+=	${PREFIX}/share/xfce4 ${PREFIX}/share/xfce4/panel-plugins
 
-# solaris does it differently, so help orage out a bit
+# Solaris does it differently, so help Orage out a bit
 .if !exists(/usr/share/zoneinfo) && exists(/usr/share/lib/zoneinfo) \
 	&& exists(/usr/share/lib/zoneinfo/tab/zone_sun.tab)
 SUBST_CLASSES+=		zoneinfo
