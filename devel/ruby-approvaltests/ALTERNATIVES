@@ -1,0 +1,1 @@
+bin/approvals @PREFIX@/bin/approvals@RUBY_VER@
