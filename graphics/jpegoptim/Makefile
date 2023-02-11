@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2023/01/09 20:11:24 fcambus Exp $
+# $NetBSD: Makefile,v 1.25 2023/02/11 07:49:55 adam Exp $
 
-DISTNAME=	jpegoptim-1.5.1
+DISTNAME=	jpegoptim-1.5.2
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.kokkonen.net/tjko/src/
 
@@ -9,7 +9,8 @@ HOMEPAGE=	https://www.kokkonen.net/tjko/projects.html
 COMMENT=	JPEG optimizer
 LICENSE=	gnu-gpl-v2
 
-GNU_CONFIGURE=		yes
+USE_TOOLS+=	gmake
+GNU_CONFIGURE=	yes
 
 INSTALL_MAKE_FLAGS+=	mandir=${PREFIX}/${PKGMANDIR}
 
