@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.6 2022/08/28 03:24:04 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2023/02/11 13:50:38 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.codeclimate.yml
 ${GEM_LIBDIR}/.github/issue_template.md
 ${GEM_LIBDIR}/.github/pull_request_template.md
+${GEM_LIBDIR}/.github/workflows/pull-request.yml
 ${GEM_LIBDIR}/.github/workflows/ruby.yml
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rubocop.yml
