@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1118 2023/02/11 13:48:52 taca Exp $
+$NetBSD: CHANGES-2023,v 1.1119 2023/02/11 13:56:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1427,3 +1427,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/ruby-bindata to 2.4.15 [taca 2023-02-11]
 	Updated devel/ruby-regexp_parser to 2.7.0 [taca 2023-02-11]
 	Updated devel/ruby-zeitwerk to 2.6.7 [taca 2023-02-11]
+	Updated math/ruby-roo to 2.10.0 [taca 2023-02-11]
+	Updated sysutils/ruby-facter to 4.3.0 [taca 2023-02-11]
