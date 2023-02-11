@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.24 2022/05/15 04:39:56 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2023/02/11 10:19:18 fcambus Exp $
 
 DISTNAME=		dmalloc-5.5.2
 PKGREVISION=		1
 CATEGORIES=		devel
 #MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=dmalloc/}
-MASTER_SITES=		http://dmalloc.com/releases/
+MASTER_SITES=		https://dmalloc.com/releases/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://dmalloc.com/
+HOMEPAGE=		https://dmalloc.com/
 COMMENT=		Run-time configurable debugging malloc library
 
 MAKE_JOBS_SAFE=		no
