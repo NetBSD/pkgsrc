@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2023/02/10 14:41:28 pin Exp $
+# $NetBSD: Makefile,v 1.29 2023/02/11 21:41:30 pin Exp $
 
-DISTNAME=	Kvantum-1.0.8
+DISTNAME=	Kvantum-1.0.9
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tsujan/}
