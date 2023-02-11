@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.23 2023/01/29 21:17:52 ryoon Exp $
+# $NetBSD: Makefile,v 1.24 2023/02/11 01:36:52 gutteridge Exp $
 
-PKGREVISION= 2
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-DISTNAME=	xfce4-power-manager-4.18.0
+DISTNAME=	xfce4-power-manager-4.18.1
 CATEGORIES=	sysutils
 MASTER_SITES=	https://archive.xfce.org/src/xfce/xfce4-power-manager/${PKGVERSION_NOREV:R}/
 
 HOMEPAGE=	https://goodies.xfce.org/projects/applications/xfce4-power-manager
-COMMENT=	XFCE power manager
+COMMENT=	Xfce power manager
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
 
@@ -16,6 +15,7 @@ CONF_FILES=	share/examples/xfce4/autostart/xfce4-power-manager.desktop \
 		${PKG_SYSCONFDIR}/xdg/autostart/xfce4-power-manager.desktop
 
 .include "../../x11/libXmu/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libxfce4ui+=	libxfce4ui>=4.18.2
 .include "../../x11/libxfce4ui/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/upower/buildlink3.mk"
