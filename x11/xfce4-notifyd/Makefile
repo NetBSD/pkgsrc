@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2023/01/29 21:18:31 ryoon Exp $
+# $NetBSD: Makefile,v 1.42 2023/02/11 01:28:44 gutteridge Exp $
 
-PKGREVISION= 1
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-VERSION=	0.7.2
+VERSION=	0.7.3
 DISTNAME=	xfce4-notifyd-${VERSION}
 CATEGORIES=	x11
 MASTER_SITES=	https://archive.xfce.org/src/apps/xfce4-notifyd/${VERSION:R}/
@@ -20,8 +19,6 @@ CONF_FILES+=	${EGDIR}/${DESKTOP_FILE} \
 		${PKG_SYSCONFDIR}/xdg/autostart/${DESKTOP_FILE}
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.56.0
-.include "../../devel/glib2/buildlink3.mk"
 .include "../../x11/libxfce4ui/buildlink3.mk"
 .include "../../x11/xfce4-panel/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
