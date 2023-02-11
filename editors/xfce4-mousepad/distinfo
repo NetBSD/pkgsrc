@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2022/07/24 21:07:11 gutteridge Exp $
+$NetBSD: distinfo,v 1.19 2023/02/11 01:24:03 gutteridge Exp $
 
-BLAKE2s (mousepad-0.5.10.tar.bz2) = 96d8eb1a933efe306a8d7d3e3db826294e2b7bb0c5e7cac68c42c611a094b8dc
-SHA512 (mousepad-0.5.10.tar.bz2) = 144e72abce8e5fb66a345fb59efe48f136dd9cf9cdcd72496dcee05b08781bdbba036f4ab5af04dbccd38dc52a8e8dd67b5b7434867881a1114de692a012b076
-Size (mousepad-0.5.10.tar.bz2) = 959696 bytes
+BLAKE2s (mousepad-0.6.0.tar.bz2) = 0b9b648de7d536e40631ce88479e96a8315c29d4113c2845281c70dc4303e6e0
+SHA512 (mousepad-0.6.0.tar.bz2) = dad3488c973d767759a8b9752f83cc45d339064d34c19ee51f576af13f8db441f7234982c09e85f4032d553ee8df4f50ce8e0aa66c921a60ddb5c262a1c93702
+Size (mousepad-0.6.0.tar.bz2) = 969433 bytes
