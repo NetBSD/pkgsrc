@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2023/01/25 13:41:11 taca Exp $
+$NetBSD: distinfo,v 1.15 2023/02/11 13:45:25 taca Exp $
 
-BLAKE2s (regexp_parser-2.6.2.gem) = e04d5c0a7a04f6b58b6c6701fac510a6f9e9d818129ff50b45a0e545269430a6
-SHA512 (regexp_parser-2.6.2.gem) = 95bc0c1e5221676c8b1458ef056c697dd1ef8ceef488e1217972d72bdb08291539877f92b00a78560beb0ce6b7629b07afa6cd04a2ca528631612369cf6b919f
-Size (regexp_parser-2.6.2.gem) = 72704 bytes
+BLAKE2s (regexp_parser-2.7.0.gem) = 9a4984f4f7d8f0f49b62fab79fc7c337799cd567bd942452503d67a17bae0d88
+SHA512 (regexp_parser-2.7.0.gem) = dfa45c3d0c1f9340961c78d118d9eefcdc77246b4b44ec9bd63dd19853409ea13e7fefb996093bec7d00eceb86a57da4a30a4a8ebe6ed3c6113bf7164833503f
+Size (regexp_parser-2.7.0.gem) = 73728 bytes
