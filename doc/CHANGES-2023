@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1113 2023/02/11 13:32:24 taca Exp $
+$NetBSD: CHANGES-2023,v 1.1114 2023/02/11 13:35:20 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1422,3 +1422,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-ipython to 8.10.0 [adam 2023-02-11]
 	Updated cad/klayout to 0.28.5 [mef 2023-02-11]
 	Updated sysutils/puppet to 7.23.0 [taca 2023-02-11]
+	Removed devel/ruby-concurrent-ruby11 [taca 2023-02-11]
