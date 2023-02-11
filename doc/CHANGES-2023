@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1105 2023/02/11 01:37:12 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.1106 2023/02/11 01:47:36 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1396,3 +1396,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/xfce4-notifyd to 0.7.3 [gutteridge 2023-02-11]
 	Updated x11/xfce4-session to 4.18.1 [gutteridge 2023-02-11]
 	Updated sysutils/xfce4-power-manager to 4.18.1 [gutteridge 2023-02-11]
+	Updated www/lighttpd to 1.4.69 [schmonz 2023-02-11]
