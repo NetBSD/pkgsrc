@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.87 2023/02/05 09:05:28 he Exp $
+@comment $NetBSD: PLIST,v 1.88 2023/02/11 03:49:24 pho Exp $
 bin/thunderbird
 lib/thunderbird/actors/AboutHttpsOnlyErrorChild.jsm
 lib/thunderbird/actors/AboutHttpsOnlyErrorParent.jsm
@@ -3549,7 +3549,7 @@ lib/thunderbird/chrome/icons/default/default32.png
 lib/thunderbird/chrome/icons/default/default48.png
 lib/thunderbird/chrome/icons/default/default64.png
 ${PLIST.nobranding}lib/thunderbird/chrome/messenger/content/branding/about-background.png
-${PLIST.nobranding}lib/thunderbird/chrome/messenger/content/branding/about-logo.svg
+lib/thunderbird/chrome/messenger/content/branding/about-logo.svg
 lib/thunderbird/chrome/messenger/content/branding/about-wordmark.svg
 lib/thunderbird/chrome/messenger/content/branding/about.png
 lib/thunderbird/chrome/messenger/content/branding/aboutDialog.css
