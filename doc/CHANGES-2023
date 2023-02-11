@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1128 2023/02/11 23:24:05 wen Exp $
+$NetBSD: CHANGES-2023,v 1.1129 2023/02/11 23:38:31 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1438,3 +1438,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/nabud to 1.1 [thorpej 2023-02-11]
 	Updated devel/p5-Inline-C to 0.82 [wen 2023-02-11]
 	Updated devel/p5-IO-AIO to 4.79 [wen 2023-02-11]
+	Updated multimedia/libva to 2.17.0 [ryoon 2023-02-11]
