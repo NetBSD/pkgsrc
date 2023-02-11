@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1103 2023/02/11 01:28:58 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.1104 2023/02/11 01:30:41 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1394,3 +1394,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated editors/xfce4-mousepad to 0.6.0 [gutteridge 2023-02-11]
 	Updated time/xfce4-orage to 4.18.0 [gutteridge 2023-02-11]
 	Updated x11/xfce4-notifyd to 0.7.3 [gutteridge 2023-02-11]
+	Updated x11/xfce4-session to 4.18.1 [gutteridge 2023-02-11]
