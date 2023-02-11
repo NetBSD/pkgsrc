@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2021/06/07 19:55:27 schmonz Exp $
-bin/approvals${RUBY_SUFFIX}
+@comment $NetBSD: PLIST,v 1.2 2023/02/11 14:17:25 taca Exp $
+bin/approvals${RUBY_VER}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.travis.yml
