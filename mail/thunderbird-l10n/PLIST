@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2020/09/03 16:50:16 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.19 2023/02/11 15:35:53 he Exp $
 lib/thunderbird/distribution/extensions/langpack-af@thunderbird.mozilla.org.xpi
 lib/thunderbird/distribution/extensions/langpack-ar@thunderbird.mozilla.org.xpi
 lib/thunderbird/distribution/extensions/langpack-ast@thunderbird.mozilla.org.xpi
@@ -50,7 +50,6 @@ lib/thunderbird/distribution/extensions/langpack-pt-PT@thunderbird.mozilla.org.x
 lib/thunderbird/distribution/extensions/langpack-rm@thunderbird.mozilla.org.xpi
 lib/thunderbird/distribution/extensions/langpack-ro@thunderbird.mozilla.org.xpi
 lib/thunderbird/distribution/extensions/langpack-ru@thunderbird.mozilla.org.xpi
-lib/thunderbird/distribution/extensions/langpack-si@thunderbird.mozilla.org.xpi
 lib/thunderbird/distribution/extensions/langpack-sk@thunderbird.mozilla.org.xpi
 lib/thunderbird/distribution/extensions/langpack-sl@thunderbird.mozilla.org.xpi
 lib/thunderbird/distribution/extensions/langpack-sq@thunderbird.mozilla.org.xpi
