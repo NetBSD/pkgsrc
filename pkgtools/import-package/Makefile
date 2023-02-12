@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2020/08/16 20:57:09 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2023/02/12 11:24:46 tnn Exp $
 
-PKGNAME=	import-package-1.0
+PKGNAME=	import-package-1.1
 CATEGORIES=	pkgtools
 
 MAINTAINER=	wiz@NetBSD.org
