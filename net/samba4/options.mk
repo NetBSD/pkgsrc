@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.17 2022/03/07 21:40:37 thor Exp $
+# $NetBSD: options.mk,v 1.17.8.1 2023/02/12 19:23:21 spz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.samba4
-PKG_SUPPORTED_OPTIONS=	ads avahi fam ldap pam winbind cups # cups option is broken for me.
+PKG_SUPPORTED_OPTIONS=	ads avahi ldap pam winbind cups # cups option is broken for me.
 PKG_SUGGESTED_OPTIONS=	avahi ldap pam winbind
 
 .include "../../mk/bsd.fast.prefs.mk"
@@ -22,7 +22,7 @@ PKG_SUGGESTED_OPTIONS+=	snapper
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		ads cups fam ldap pam snapper winbind
+PLIST_VARS+=		ads cups ldap pam snapper winbind
 
 ###
 ### Access Control List support.
@@ -54,17 +54,6 @@ PLIST.cups=		yes
 INSTALLATION_DIRS+=	libexec/cups/backend
 .else
 CONFIGURE_ARGS+=	--disable-cups
-.endif
-
-###
-### File Alteration Monitor support.
-###
-.if !empty(PKG_OPTIONS:Mfam)
-.  include "../../mk/fam.buildlink3.mk"
-CONFIGURE_ARGS+=	--with-fam
-PLIST.fam=		yes
-.else
-CONFIGURE_ARGS+=	--without-fam
 .endif
 
 ###
