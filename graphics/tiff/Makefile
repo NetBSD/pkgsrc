@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.155 2023/01/03 16:38:50 wiz Exp $
+# $NetBSD: Makefile,v 1.156 2023/02/12 09:45:47 tnn Exp $
 
 VERSION_BASE=	4.5.0
 # Accomodate testing unreleased versions.
 #VERSION_RC=	rc1
 DISTNAME=	tiff-${VERSION_BASE}${VERSION_RC}
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	https://download.osgeo.org/libtiff/
 
@@ -24,6 +25,7 @@ CONFIGURE_ARGS+=	--enable-cxx
 CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/tiff
 CONFIGURE_ARGS+=	--without-x # just in case detects gl to build tiffgt
 CONFIGURE_ARGS+=	--disable-webp
+CONFIGURE_ARGS+=	--disable-zstd
 
 PKGCONFIG_OVERRIDE=	libtiff-4.pc.in
 
