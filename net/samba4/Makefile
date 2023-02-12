@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.154 2022/11/25 10:21:14 wiz Exp $
+# $NetBSD: Makefile,v 1.154.2.1 2023/02/12 19:23:21 spz Exp $
 
-DISTNAME=	samba-4.17.3
+DISTNAME=	samba-4.17.4
 CATEGORIES=	net
 MASTER_SITES=	https://download.samba.org/pub/samba/stable/
 
@@ -115,6 +115,8 @@ CFLAGS.SunOS+=		-DHAVE_SOLARIS_GETGRENT_R
 # workaround https://bugzilla.samba.org/show_bug.cgi?id=12502 for now
 CFLAGS.SunOS+=		-DMSG_NOSIGNAL=0
 LDFLAGS.SunOS+=		-lsocket -lsendfile
+
+CFLAGS.FreeBSD+=	-DENODATA=ENOATTR
 
 .include "options.mk"
 
