@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1132 2023/02/12 04:09:48 mef Exp $
+$NetBSD: CHANGES-2023,v 1.1133 2023/02/12 04:20:39 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1442,3 +1442,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/R-date to 1.2.42 [mef 2023-02-12]
 	Updated x11/xfce4-settings to 4.18.2 [gutteridge 2023-02-12]
 	Updated math/R-dplyr to 1.1.0 [mef 2023-02-12]
+	Updated math/R-energy to 1.7.11 [mef 2023-02-12]
