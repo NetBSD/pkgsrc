@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1156 2023/02/12 15:04:05 taca Exp $
+$NetBSD: CHANGES-2023,v 1.1157 2023/02/12 15:06:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1467,3 +1467,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/felix to 2.2.5 [pin 2023-02-12]
 	Updated security/gpg-tui to 0.9.4 [pin 2023-02-12]
 	Updated security/ruby-metasploit-concern to 5.0.1 [taca 2023-02-12]
+	Updated security/ruby-metasploit-model to 5.0.1 [taca 2023-02-12]
