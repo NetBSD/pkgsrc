@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $NetBSD: import-package.sh,v 1.1 2020/08/16 20:57:09 wiz Exp $
+# $NetBSD: import-package.sh,v 1.2 2023/02/12 11:24:46 tnn Exp $
 #
 # Script designed to make add packages into wip and main pkgsrc easier.
 #
@@ -96,7 +96,7 @@ else
 	SCM=CVS
 	CVSROOT="$(cat ../CVS/Root | tr A-Z a-z | sed -e 's/.*@//')"
 	if [ "${CVSROOT}" != "cvs.netbsd.org:/cvsroot" ]; then
-		echo "$0: wrong CVS root" 1>&2
+		echo "$0: wrong CVS root: ${CVSROOT}" 1>&2
 		exit 1
 	fi
 fi
