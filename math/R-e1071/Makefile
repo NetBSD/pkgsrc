@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2022/12/18 11:20:43 mef Exp $
+# $NetBSD: Makefile,v 1.14 2023/02/12 04:16:32 mef Exp $
 
 R_PKGNAME=	e1071
-R_PKGVER=	1.7-12
+R_PKGVER=	1.7-13
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Misc Functions of the Department of Statistics (e1071), TU Wien
@@ -13,6 +13,7 @@ DEPENDS+=	R-proxy-[0-9]*:../../math/R-proxy
 TEST_DEPENDS+=	R-randomForest-[0-9]*:../../math/R-randomForest
 TEST_DEPENDS+=	R-SparseM-[0-9]*:../../math/R-SparseM
 TEST_DEPENDS+=	R-xtable-[0-9]*:../../math/R-xtable
+TEST_DEPENDS+=	R-mlbench-[0-9]*:../../benchmarks/R-mlbench
 
 USE_LANGUAGES=	c c++
 
