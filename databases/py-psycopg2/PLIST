@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2019/04/05 09:14:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2023/02/12 11:03:04 js Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -12,16 +12,10 @@ ${PYSITELIB}/psycopg2/_ipaddress.pyo
 ${PYSITELIB}/psycopg2/_json.py
 ${PYSITELIB}/psycopg2/_json.pyc
 ${PYSITELIB}/psycopg2/_json.pyo
-${PYSITELIB}/psycopg2/_lru_cache.py
-${PYSITELIB}/psycopg2/_lru_cache.pyc
-${PYSITELIB}/psycopg2/_lru_cache.pyo
 ${PYSITELIB}/psycopg2/_psycopg.so
 ${PYSITELIB}/psycopg2/_range.py
 ${PYSITELIB}/psycopg2/_range.pyc
 ${PYSITELIB}/psycopg2/_range.pyo
-${PYSITELIB}/psycopg2/compat.py
-${PYSITELIB}/psycopg2/compat.pyc
-${PYSITELIB}/psycopg2/compat.pyo
 ${PYSITELIB}/psycopg2/errorcodes.py
 ${PYSITELIB}/psycopg2/errorcodes.pyc
 ${PYSITELIB}/psycopg2/errorcodes.pyo
