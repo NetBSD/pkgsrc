@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2022Q4,v 1.1.2.9 2023/01/30 13:50:34 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2022Q4,v 1.1.2.10 2023/02/12 20:00:38 spz Exp $
 
 Changes to packages and infrastructure on the 2022Q4 branch:
 
@@ -61,4 +61,13 @@ net/bind916: security fix
 
 Pullup ticket #6727 - requested by otis
 devel/git: security fix
+
+Pullup ticket #6728 - requested by taca
+net/samba4: security update
+
+Pullup ticket #6735 - requested by taca
+security/sudo: security update
+
+Pullup ticket #6736 - requested by taca
+net/bind918: security update
 
