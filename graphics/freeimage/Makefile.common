@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2022/12/13 13:34:48 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.6 2023/02/12 12:17:12 tnn Exp $
 # used by graphics/freeimage/Makefile
 # used by graphics/freeimageplus/Makefile
 
@@ -31,7 +31,7 @@ SUBST_STAGE.cr=		post-extract
 SUBST_FILES.cr+=	Source/FreeImage/PluginBMP.cpp
 SUBST_FILES.cr+=	Source/FreeImage/PluginDDS.cpp
 SUBST_FILES.cr+=	Source/FreeImage/PluginTIFF.cpp
-SUBST_FILTER_CMD.cr=	${TR} -d '\r'
+SUBST_FILTER_CMD.cr=	${SETENV} LC_ALL=C ${TR} -d '\r'
 SUBST_NOOP_OK.cr=	yes
 
 pre-configure:
