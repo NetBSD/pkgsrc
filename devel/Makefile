@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3919 2023/02/12 10:25:21 wen Exp $
+# $NetBSD: Makefile,v 1.3920 2023/02/12 10:59:08 tnn Exp $
 #
 
 COMMENT=	Development utilities
@@ -3358,6 +3358,7 @@ SUBDIR+=	swagger-codegen
 SUBDIR+=	swig
 SUBDIR+=	swig2
 SUBDIR+=	swig3
+SUBDIR+=	swig4
 SUBDIR+=	syft
 SUBDIR+=	syncdir
 SUBDIR+=	sysexits
