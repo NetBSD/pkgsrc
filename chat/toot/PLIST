@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2022/12/18 14:50:55 vins Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/02/12 15:25:28 vins Exp $
 bin/toot
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -54,6 +54,9 @@ ${PYSITELIB}/toot/tui/entities.pyo
 ${PYSITELIB}/toot/tui/overlays.py
 ${PYSITELIB}/toot/tui/overlays.pyc
 ${PYSITELIB}/toot/tui/overlays.pyo
+${PYSITELIB}/toot/tui/scroll.py
+${PYSITELIB}/toot/tui/scroll.pyc
+${PYSITELIB}/toot/tui/scroll.pyo
 ${PYSITELIB}/toot/tui/timeline.py
 ${PYSITELIB}/toot/tui/timeline.pyc
 ${PYSITELIB}/toot/tui/timeline.pyo
