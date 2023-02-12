@@ -1,0 +1,12 @@
+$NetBSD: patch-programs_fontaliases_Makefile.am,v 1.1 2023/02/12 16:34:15 vins Exp $
+
+Reset fontaliases path.
+
+--- programs/fontaliases/Makefile.am.orig	2022-10-01 17:18:27.000000000 +0000
++++ programs/fontaliases/Makefile.am
+@@ -33,4 +33,4 @@ fonts.dir: dtinfo.pcf.gz
+ 
+ install-data-hook:
+ 	$(MKDIR_P) $(DESTDIR)$(fontaliasesconfdir)
+-	$(CP) $(DESTDIR)$(fontaliasesdatadir)/$(FONTS_ALIAS) $(DESTDIR)$(fontaliasesconfdir)/fonts.alias
++	$(CP) $(DESTDIR)$(fontaliasesdatadir)/$(FONTS_ALIAS) $(DESTDIR)$(fontaliasesdatadir)/fonts.alias
