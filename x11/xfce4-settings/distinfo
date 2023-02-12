@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.25 2023/01/01 20:02:13 gutteridge Exp $
+$NetBSD: distinfo,v 1.26 2023/02/12 03:07:08 gutteridge Exp $
 
-BLAKE2s (xfce4-settings-4.18.1.tar.bz2) = 435452044083812c4b6f43b8bf297f543615d9c59d59074fa93be41df8038def
-SHA512 (xfce4-settings-4.18.1.tar.bz2) = 868d9d041c7aee621543ea54798f9758dc47719a7684d01ebb55e0193c30a0ac544df6a4961846e4b8c6d9297737be767d6f68446c4ab85870d8c0741cd07515
-Size (xfce4-settings-4.18.1.tar.bz2) = 1513041 bytes
+BLAKE2s (xfce4-settings-4.18.2.tar.bz2) = b6f4a13e0bfeabd745287ed061bf49acc936fa273f64732fbb69a1a6c2d9d94f
+SHA512 (xfce4-settings-4.18.2.tar.bz2) = 3371db3952f1863763b613952585873a0b8e1bd8507a64c056a918f3d16c3313e1266cb65dc341d3ce89ab281ee5a5d2cd183b6bb4078609b843524a125769b4
+Size (xfce4-settings-4.18.2.tar.bz2) = 1544572 bytes
 SHA1 (patch-dialogs_mime-settings_helpers_Makefile.in) = 680c241d9076db92fbb77481146a08c39a14cb0a
 SHA1 (patch-xfce4-settings-manager_Makefile.in) = c02cd0ccede9cea56c5d123eb1b5146039712f39
 SHA1 (patch-xfsettingsd_Makefile.in) = 4436cd90a4bdbdce731248735a38898afdd367d9
-SHA1 (patch-xfsettingsd_xsettings.xml) = dc4130aeabac2c5964695ae8b55a61a9989ff67d
+SHA1 (patch-xfsettingsd_xsettings.xml) = 30fb16a0039d1a539ef27fb74682ae05872de7d1
