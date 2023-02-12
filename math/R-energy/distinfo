@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2022/12/18 11:43:26 mef Exp $
+$NetBSD: distinfo,v 1.6 2023/02/12 04:20:29 mef Exp $
 
-BLAKE2s (R/energy_1.7-10.tar.gz) = 2bc36f4015267e6f75ec358c56d70a95b4bb51b0a731b504ea6dd4c6d06d9a3a
-SHA512 (R/energy_1.7-10.tar.gz) = 2fde4bb55f2770c7eb1fd7598a8424675433c1225925a200ca29edfb4d1fc879c3ef95320be967c470a18b5bf3c7f0dac42bdbcfddaceda921c4cad7096417df
-Size (R/energy_1.7-10.tar.gz) = 135225 bytes
+BLAKE2s (R/energy_1.7-11.tar.gz) = 38b172c164f10684fcac64903c17fe60f0d5ba712abe2c5beda5d1f5c5d3251d
+SHA512 (R/energy_1.7-11.tar.gz) = b967b2274578d09662c3e71a88002ff64659d83432e7732e9e9c8fd8de1cb95deb30e25b0f7c1b744482fa35cbe9986e91864ec4c23f9fd2774b2b902366491e
+Size (R/energy_1.7-11.tar.gz) = 57897 bytes
