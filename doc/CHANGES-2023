@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1145 2023/02/12 11:06:04 wen Exp $
+$NetBSD: CHANGES-2023,v 1.1146 2023/02/12 11:09:26 otis Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1455,3 +1455,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/swig4 version 4.1.1 [tnn 2023-02-12]
 	Updated databases/py-psycopg2 to 2.9.5 [js 2023-02-12]
 	Updated devel/p5-IPC-Run to 20220807.0 [wen 2023-02-12]
+	Updated sysutils/zabbix50-server to 5.0.31 [otis 2023-02-12]
