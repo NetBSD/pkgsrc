@@ -1,0 +1,45 @@
+-----------------------------------------------------------------------
+To provide support for CDE font aliases, the required font paths must
+appended to the standard X server configuration.
+  
+This can be done by creating a `99-fonts.conf' file with the following
+content: 
+
+Section "Files"
+    FontPath    "${PREFIX}/share/fonts/100dpi/"
+    FontPath    "${PREFIX}/share/fonts/75dpi/"
+    FontPath    "${PREFIX}/dt/share/cde/fontaliases"
+EndSection
+
+Place the file inside either: 
+
+  - /etc/X11/xorg.conf.d            # native X11
+  - @PREFIX@/etc/X11/xorg.conf.d    # modular X11
+
+-----------------------------------------------------------------------
+
+To use CDE applications, adjust your environment as follows:
+
+    $ export PATH=$PATH:${PREFIX}/dt/bin
+    $ export MANPATH=$MANPATH:${PREFIX}/dt/man
+
+-----------------------------------------------------------------------
+
+To start the Common Desktop Environment,
+
+    $ env LANG=C startx ${PREFIX}/dt/bin/Xsession
+
+Or use the provided `@PREFIX@/bin/startcde' script.
+
+Your user should be part of the '@REAL_ROOT_GROUP@' group to allow CDE
+to create the required directories upon startup.
+-----------------------------------------------------------------------
+
+To start the Dt Login Manager,
+
+	$ cp @PREFIX@/share/examples/rc.d/dtlogin /etc/rc.d
+	$ service dtlogin onestart
+
+To enable the dtlogin service at startup,
+
+	$ echo dtlogin=YES >> /etc/rc.conf

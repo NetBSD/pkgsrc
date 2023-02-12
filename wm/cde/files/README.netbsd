@@ -1,0 +1,20 @@
+-----------------------------------------------------------------------
+For CDE to properly work on NetBSD,
+the following information must be registered by hand.
+
+/etc/rc.conf:
+rpcbind=YES
+rpcbind_flags="-l"
+
+/etc/inetd.conf:
+dtspcd		stream	tcp nowait	root	@PREFIX@/dt/bin/dtspcd dtspcd
+cmsd/2-5	dgram	rpc/udp wait	root	@PREFIX@/dt/bin/rpc.cmsd rpc.cmsd
+ttdbserver/1	stream	rpc/tcp wait	root	@PREFIX@/dt/bin/rpc.ttdbserver	rpc.ttdbserver
+
+/etc/rpc:
+cmsd		100068	dtcalendar
+ttdbserver	100083	ttooltalk
+
+/etc/hosts
+127.0.0.1		localhost localhost.my.domain hostname 
+-----------------------------------------------------------------------
