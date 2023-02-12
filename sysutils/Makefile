@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1034 2023/02/01 02:22:28 pho Exp $
+# $NetBSD: Makefile,v 1.1035 2023/02/12 18:37:31 otis Exp $
 #
 
 COMMENT=	System utilities
@@ -931,6 +931,11 @@ SUBDIR+=	zabbix50-frontend
 SUBDIR+=	zabbix50-java
 SUBDIR+=	zabbix50-proxy
 SUBDIR+=	zabbix50-server
+SUBDIR+=	zabbix60-agent
+SUBDIR+=	zabbix60-frontend
+SUBDIR+=	zabbix60-java
+SUBDIR+=	zabbix60-proxy
+SUBDIR+=	zabbix60-server
 SUBDIR+=	zidrav
 SUBDIR+=	znapzend
 SUBDIR+=	zoxide
