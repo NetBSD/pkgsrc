@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3918 2023/02/11 13:33:53 taca Exp $
+# $NetBSD: Makefile,v 1.3919 2023/02/12 10:25:21 wen Exp $
 #
 
 COMMENT=	Development utilities
@@ -1608,6 +1608,7 @@ SUBDIR+=	p5-Format-Human-Bytes
 SUBDIR+=	p5-FreezeThaw
 SUBDIR+=	p5-Function-Parameters
 SUBDIR+=	p5-Future
+SUBDIR+=	p5-Future-IO
 SUBDIR+=	p5-Getopt-ArgvFile
 SUBDIR+=	p5-Getopt-Euclid
 SUBDIR+=	p5-Getopt-Long-Descriptive
