@@ -1,11 +1,11 @@
-$NetBSD: patch-xfsettingsd_xsettings.xml,v 1.5 2018/06/23 22:08:54 youri Exp $
+$NetBSD: patch-xfsettingsd_xsettings.xml,v 1.6 2023/02/12 03:07:08 gutteridge Exp $
 
 Use a good icon theme by default.
 
---- xfsettingsd/xsettings.xml.orig	2018-06-20 22:37:58.000000000 +0000
+--- xfsettingsd/xsettings.xml.orig	2023-02-11 08:55:53.000000000 +0000
 +++ xfsettingsd/xsettings.xml
 @@ -6,8 +6,8 @@
- <?xml version="1.0" encoding="UTF-8"?>
+ 
  <channel name="xsettings" version="1.0">
    <property name="Net" type="empty">
 -    <property name="ThemeName" type="empty"/>
