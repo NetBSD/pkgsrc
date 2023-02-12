@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2022/12/14 21:44:03 sekiya Exp $
+# $NetBSD: Makefile,v 1.3.2.1 2023/02/12 19:52:24 spz Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 PKGNAME=	${DISTNAME:S/-P/pl/}
-PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	https://downloads.isc.org/isc/bind9/${BIND_VERSION}/
 EXTRACT_SUFX=	.tar.xz
@@ -16,7 +15,7 @@ CONFLICTS+=	host-[0-9]*
 
 MAKE_JOBS_SAFE=	no
 
-BIND_VERSION=	9.18.9
+BIND_VERSION=	9.18.11
 
 BUILD_DEFS+=	BIND_DIR VARBASE
 
