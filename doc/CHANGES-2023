@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1135 2023/02/12 04:45:06 mef Exp $
+$NetBSD: CHANGES-2023,v 1.1136 2023/02/12 04:59:57 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1445,3 +1445,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/R-energy to 1.7.11 [mef 2023-02-12]
 	Updated math/R-estimability to 1.4.1 [mef 2023-02-12]
 	Updated math/R-vctrs to 0.5.2 [mef 2023-02-12]
+	Updated print/R-knitr to 1.42 [mef 2023-02-12]
