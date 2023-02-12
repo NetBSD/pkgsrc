@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1166 2023/02/12 15:25:57 vins Exp $
+$NetBSD: CHANGES-2023,v 1.1167 2023/02/12 16:36:40 vins Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1477,3 +1477,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/ruby-rex-random_identifier to 0.1.10 [taca 2023-02-12]
 	Updated security/ruby-rex-text to 0.2.49 [taca 2023-02-12]
 	Updated chat/toot to 0.34.0 [vins 2023-02-12]
+	Added wm/cde version 2.5.1 [vins 2023-02-12]
