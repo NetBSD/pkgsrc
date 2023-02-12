@@ -1,0 +1,50 @@
+$NetBSD: patch-programs_dtlogin_Makefile.am,v 1.1 2023/02/12 16:34:15 vins Exp $
+
+Avoid reference to build dir in dtlogin. 
+Fix X11 binary path.
+
+--- programs/dtlogin/Makefile.am.orig	2022-10-01 17:18:27.000000000 +0000
++++ programs/dtlogin/Makefile.am
+@@ -11,10 +11,11 @@ DTPAMSVCLIB =
+ endif
+ 
+ XDMDIR = $(CDE_LOGFILES_TOP)
++XBINDIR = @X11BASE@/bin
+ 
+ DEF_SERVER = $(XBINDIR)/X
+-DEF_USER_PATH = $(PATH):$(XBINDIR)
+-DEF_SYSTEM_PATH = $(PATH):$(XBINDIR)
++DEF_USER_PATH = /bin:/usr/bin:@PREFIX@/bin:$(XBINDIR)
++DEF_SYSTEM_PATH = /bin:/usr/bin:@PREFIX@/bin:$(XBINDIR)
+ 
+ DEF_BM_PATH = $(CDE_CONFIGURATION_TOP)/appconfig/icons/%L/%B%M.bm:$(CDE_CONFIGURATION_TOP)/appconfig/icons/%L/%B%M.pm:$(CDE_CONFIGURATION_TOP)/appconfig/icons/%L/%B:$(CDE_CONFIGURATION_TOP)/appconfig/icons/C/%B%M.bm:$(CDE_CONFIGURATION_TOP)/appconfig/icons/C/%B%M.pm:$(CDE_CONFIGURATION_TOP)/appconfig/icons/C/%B:$(CDE_INSTALLATION_TOP)/appconfig/icons/%L/%B%M.bm:$(CDE_INSTALLATION_TOP)/appconfig/icons/%L/%B%M.pm:$(CDE_INSTALLATION_TOP)/appconfig/icons/%L/%B:$(CDE_INSTALLATION_TOP)/appconfig/icons/C/%B%M.bm:$(CDE_INSTALLATION_TOP)/appconfig/icons/C/%B%M.pm:$(CDE_INSTALLATION_TOP)/appconfig/icons/C/%B
+ DEF_PM_PATH = $(CDE_CONFIGURATION_TOP)/appconfig/icons/%L/%B%M.pm:$(CDE_CONFIGURATION_TOP)/appconfig/icons/%L/%B%M.bm:$(CDE_CONFIGURATION_TOP)/appconfig/icons/%L/%B:$(CDE_CONFIGURATION_TOP)/appconfig/icons/C/%B%M.pm:$(CDE_CONFIGURATION_TOP)/appconfig/icons/C/%B%M.bm:$(CDE_CONFIGURATION_TOP)/appconfig/icons/C/%B:$(CDE_INSTALLATION_TOP)/appconfig/icons/%L/%B%M.pm:$(CDE_INSTALLATION_TOP)/appconfig/icons/%L/%B%M.bm:$(CDE_INSTALLATION_TOP)/appconfig/icons/%L/%B:$(CDE_INSTALLATION_TOP)/appconfig/icons/C/%B%M.pm:$(CDE_INSTALLATION_TOP)/appconfig/icons/C/%B%M.bm:$(CDE_INSTALLATION_TOP)/appconfig/icons/C/%B
+@@ -66,28 +67,20 @@ dtchooser_LDADD = $(DTCLIENTLIBS) $(XDMC
+ 
+ if LINUX
+ AM_CFLAGS += -DHASDES -DHASXDMAUTH
+-XBINDIR = /usr/bin
+ dtlogin_SOURCES += xdmauth.c
+ endif
+ 
+ if FREEBSD
+ AM_CFLAGS += -DHASDES -DHASXDMAUTH
+-XBINDIR = /usr/local/bin
+ dtlogin_SOURCES += xdmauth.c
+ endif
+ 
+ if OPENBSD
+-XBINDIR = /usr/X11R6/bin
+ AM_CFLAGS += -DHASDES -DHASXDMAUTH
+ dtlogin_SOURCES += xdmauth.c
+ endif
+ 
+-if NETBSD
+-XBINDIR = /usr/X11R7/bin
+-endif
+-
+ if SOLARIS
+-XBINDIR = /usr/bin/X11
+ dtlogin_LDADD += -lgen -lresolv -lbsm -lcmd
+ dtgreet_LDADD += -lgen -lresolv -lbsm -lcmd
+ dtchooser_LDADD += -lgen -lresolv -lbsm -lcmd

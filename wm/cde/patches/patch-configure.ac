@@ -1,0 +1,26 @@
+$NetBSD: patch-configure.ac,v 1.1 2023/02/12 16:34:15 vins Exp $
+
+Fix hard-coded paths.
+
+--- configure.ac.orig	2022-10-01 17:18:27.000000000 +0000
++++ configure.ac
+@@ -34,7 +34,7 @@ AC_PROG_CC([cc gcc clang])
+ AC_PROG_CXX([c++ g++ clang++])
+ 
+ LT_INIT
+-AC_PREFIX_DEFAULT(/usr/dt)
++AC_PREFIX_DEFAULT(@PREFIX@/dt)
+ 
+ 
+ PKG_PROG_PKG_CONFIG
+@@ -253,8 +253,8 @@ AC_SUBST(CP)
+ 
+ dnl these should be configurable someday...
+ CDE_INSTALLATION_TOP="$ac_default_prefix"
+-CDE_LOGFILES_TOP=/var/dt
+-CDE_CONFIGURATION_TOP=/etc/dt
++CDE_LOGFILES_TOP=@VARBASE@/dt
++CDE_CONFIGURATION_TOP=@PKG_SYSCONFDIR@/dt
+ CDE_USER_TOP=.dt
+ 
+ AC_SUBST(CDE_INSTALLATION_TOP)
