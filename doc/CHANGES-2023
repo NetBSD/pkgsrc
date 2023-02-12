@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1154 2023/02/12 14:58:13 pin Exp $
+$NetBSD: CHANGES-2023,v 1.1155 2023/02/12 14:59:25 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1465,3 +1465,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added cad/occt version 7.7.0 [tnn 2023-02-12]
 	Removed cad/oce successor cad/occt [tnn 2023-02-12]
 	Updated sysutils/felix to 2.2.5 [pin 2023-02-12]
+	Updated security/gpg-tui to 0.9.4 [pin 2023-02-12]
