@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.172 2022/09/30 19:42:05 pin Exp $
+# $NetBSD: Makefile,v 1.173 2023/02/12 16:35:29 vins Exp $
 #
 
 COMMENT=	X11 window managers, configuration tools, and themes
@@ -19,6 +19,7 @@ SUBDIR+=	bmpanel2
 SUBDIR+=	bsetroot
 SUBDIR+=	bspwm
 SUBDIR+=	ccsm
+SUBDIR+=	cde
 SUBDIR+=	chunkwm
 SUBDIR+=	coma
 SUBDIR+=	compiz
