@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2022/12/30 17:32:36 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.13 2023/02/12 03:07:08 gutteridge Exp $
 bin/xfce4-accessibility-settings
 bin/xfce4-appearance-settings
 bin/xfce4-display-settings
@@ -111,6 +111,11 @@ share/icons/hicolor/scalable/apps/org.xfce.settings.manager.svg
 share/icons/hicolor/scalable/apps/org.xfce.settings.mouse.svg
 share/icons/hicolor/scalable/apps/org.xfce.terminalemulator.svg
 share/icons/hicolor/scalable/apps/org.xfce.webbrowser.svg
+share/icons/hicolor/scalable/devices/xfce-display-extend.svg
+share/icons/hicolor/scalable/devices/xfce-display-external.svg
+share/icons/hicolor/scalable/devices/xfce-display-internal.svg
+share/icons/hicolor/scalable/devices/xfce-display-mirror.svg
+share/icons/hicolor/scalable/devices/xfce-display-profile.svg
 share/locale/am/LC_MESSAGES/xfce4-settings.mo
 share/locale/ar/LC_MESSAGES/xfce4-settings.mo
 share/locale/ast/LC_MESSAGES/xfce4-settings.mo
