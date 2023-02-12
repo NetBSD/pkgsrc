@@ -1,4 +1,4 @@
-.\" $NetBSD: pbulk-build.1,v 1.4 2023/02/07 20:46:50 wiz Exp $
+.\" $NetBSD: pbulk-build.1,v 1.5 2023/02/12 04:23:38 joerg Exp $
 .\"
 .\" Copyright (c) 2007 Thomas Klausner and Joerg Sonnenberger.
 .\" All rights reserved.
@@ -201,6 +201,14 @@ multi-package support.
 of the packages this package depends on (including their version number).
 Example:
 .Dl DEPENDS=digest-20220214 libtool-base-2.4.7nb1
+.It Dv PBULK_WEIGHT
+Numeric build priority of the package.
+If this variable is not present, a value of 100 is assumed.
+.Pp
+The effective weight of a package is the sum of the weights of the
+package itself and all packages transitively depending on it.
+If two packages are buildable at the same time, the package with
+the higher effective weight is built first.
 .El
 These items correspond to the output of
 .Dl make pbulk-index-item
