@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2021/10/26 10:16:44 nia Exp $
+$NetBSD: distinfo,v 1.17 2023/02/12 10:36:35 wen Exp $
 
-BLAKE2s (IO-Async-0.79.tar.gz) = ce73ddf32dbd62e5954f9940ea9e5939f37111c2bf269683268668b0b1272090
-SHA512 (IO-Async-0.79.tar.gz) = 33b5af45933ef402d1d73afaedb2e3d17cb41cf70d844a523a58319f29bb7c3938309c69f1c35ccdcbbb2ca87ab0af8d80bfc063ccb7e1438dbe48ff92ff14e2
-Size (IO-Async-0.79.tar.gz) = 252352 bytes
+BLAKE2s (IO-Async-0.802.tar.gz) = 4f1f22617c7644dc0794ae3aef2e19e25e29f760121905f0a7e65ebbb0691b8c
+SHA512 (IO-Async-0.802.tar.gz) = 868c02c30195484c4cb3edb4a05cf9b4798444afac1b9b57db36d105d5bea5ca856a4ef0a9954bf1f734934940fc0c647e740098bee813dd6bf62300dde8a570
+Size (IO-Async-0.802.tar.gz) = 253727 bytes
