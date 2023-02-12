@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2023/02/12 11:09:04 otis Exp $
+# $NetBSD: Makefile,v 1.16 2023/02/12 17:35:14 otis Exp $
 
 .include "../../sysutils/zabbix50-server/Makefile.common"
 
@@ -24,6 +24,7 @@ EGDIR=		share/examples/${PKGBASE}
 CONF_FILES+=	${EGDIR}/zabbix_agentd.conf ${PKG_SYSCONFDIR}/zabbix_agentd.conf
 
 RCD_SCRIPTS=	zabbix_agentd
+SMF_NAME=	zabbix-agent
 
 INSTALLATION_DIRS+=	${EGDIR} share/${PKGBASE}
 
