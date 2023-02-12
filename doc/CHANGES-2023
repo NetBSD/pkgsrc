@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1139 2023/02/12 10:27:30 wen Exp $
+$NetBSD: CHANGES-2023,v 1.1140 2023/02/12 10:37:54 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1449,3 +1449,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/R-e1071 to 1.7.13 [mef 2023-02-12]
 	Updated wm/fvwm3 to 1.0.6a [gutteridge 2023-02-12]
 	Added devel/p5-Future-IO version 0.11 [wen 2023-02-12]
+	Updated devel/p5-IO-Async to 0.802 [wen 2023-02-12]
