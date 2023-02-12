@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2022/12/18 11:43:26 mef Exp $
+# $NetBSD: Makefile,v 1.4 2023/02/12 04:20:29 mef Exp $
 
 R_PKGNAME=	energy
-R_PKGVER=	1.7-10
+R_PKGVER=	1.7-11
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	E-statistics: multivariate inference via the energy of data
