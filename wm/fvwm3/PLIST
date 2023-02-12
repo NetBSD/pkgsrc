@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2022/10/19 03:40:37 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/02/12 06:27:26 gutteridge Exp $
 bin/FvwmCommand
-bin/fvwm-config
 bin/fvwm-convert-2.6
 bin/fvwm-menu-desktop
 bin/fvwm-menu-directory
@@ -41,7 +40,6 @@ man/man1/FvwmPerl.1
 man/man1/FvwmPrompt.1
 man/man1/FvwmRearrange.1
 man/man1/FvwmScript.1
-man/man1/fvwm-config.1
 man/man1/fvwm-convert-2.6.1
 man/man1/fvwm-menu-desktop.1
 man/man1/fvwm-menu-directory.1
@@ -49,7 +47,6 @@ man/man1/fvwm-menu-xlock.1
 man/man1/fvwm-perllib.1
 man/man1/fvwm-root.1
 man/man1/fvwm3.1
-man/man1/fvwm3_manpage_source.1
 man/man1/fvwm3all.1
 man/man1/fvwm3commands.1
 man/man1/fvwm3menus.1
@@ -87,7 +84,6 @@ share/fvwm3/FvwmScript-Quit
 share/fvwm3/FvwmScript-ScreenDump
 share/fvwm3/FvwmScript-ScreenSetup
 share/fvwm3/FvwmScript-WidgetDemo
-share/fvwm3/default-config/.stalonetrayrc
 share/fvwm3/default-config/FvwmScript-ConfirmCopyConfig
 share/fvwm3/default-config/FvwmScript-ConfirmQuit
 share/fvwm3/default-config/FvwmScript-DateTime
@@ -126,6 +122,7 @@ share/fvwm3/default-config/images/icons/win/stays.png
 share/fvwm3/default-config/images/icons/win/sticky.png
 share/fvwm3/default-config/images/icons/win/title.png
 share/fvwm3/default-config/images/icons/win/top.png
+share/fvwm3/default-config/stalonetrayrc
 share/fvwm3/fvwm-menu-desktop-config.fpl
 share/fvwm3/fvwm-script-ComExample.pl
 share/fvwm3/locale/ar/LC_MESSAGES/FvwmScript.mo
