@@ -1,0 +1,5 @@
+Development platform providing services for 3D surface and solid modeling, CAD
+data exchange, and visualization. Most of OCCT functionality is available in
+the form of C++ libraries. OCCT can be best applied in development of software
+dealing with 3D modeling (CAD), manufacturing / measuring (CAM) or numerical
+simulation (CAE).
