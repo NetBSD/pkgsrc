@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1167 2023/02/12 16:36:40 vins Exp $
+$NetBSD: CHANGES-2023,v 1.1168 2023/02/12 17:49:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1391,6 +1391,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated fonts/harfbuzz-icu to 6.0.0 [ryoon 2023-02-10]
 	Updated archivers/zstd to 1.5.4 [wiz 2023-02-10]
 	Added archivers/ancient version 2.0.0 [fcambus 2023-02-10]
+	Updated pkgtools/pbulk-base to 0.55 [joerg 2023-02-10]
 	Updated editors/xfce4-mousepad to 0.6.0 [gutteridge 2023-02-11]
 	Updated time/xfce4-orage to 4.18.0 [gutteridge 2023-02-11]
 	Updated x11/xfce4-notifyd to 0.7.3 [gutteridge 2023-02-11]
@@ -1446,6 +1447,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/R-estimability to 1.4.1 [mef 2023-02-12]
 	Updated math/R-vctrs to 0.5.2 [mef 2023-02-12]
 	Updated print/R-knitr to 1.42 [mef 2023-02-12]
+	Updated pkgtools/pbulk-base to 0.56 [joerg 2023-02-12]
 	Updated math/R-e1071 to 1.7.13 [mef 2023-02-12]
 	Updated wm/fvwm3 to 1.0.6a [gutteridge 2023-02-12]
 	Added devel/p5-Future-IO version 0.11 [wen 2023-02-12]
