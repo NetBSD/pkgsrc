@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1130 2023/02/12 03:00:31 mef Exp $
+$NetBSD: CHANGES-2023,v 1.1131 2023/02/12 03:07:22 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1440,3 +1440,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/p5-IO-AIO to 4.79 [wen 2023-02-11]
 	Updated multimedia/libva to 2.17.0 [ryoon 2023-02-11]
 	Updated math/R-date to 1.2.42 [mef 2023-02-12]
+	Updated x11/xfce4-settings to 4.18.2 [gutteridge 2023-02-12]
