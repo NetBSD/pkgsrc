@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1152 2023/02/12 12:41:18 wen Exp $
+$NetBSD: CHANGES-2023,v 1.1153 2023/02/12 14:46:06 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1462,3 +1462,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/zabbix50-agent to 5.0.31 [otis 2023-02-12]
 	Updated pkgtools/import-package to 1.1 [tnn 2023-02-12]
 	Updated www/p5-Dancer to 1.3521 [wen 2023-02-12]
+	Added cad/occt version 7.7.0 [tnn 2023-02-12]
+	Removed cad/oce successor cad/occt [tnn 2023-02-12]
