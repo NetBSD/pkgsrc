@@ -1,0 +1,33 @@
+# $NetBSD: Makefile.common,v 1.1 2023/02/12 18:37:32 otis Exp $
+# used by sysutils/zabbix60-agent/Makefile
+# used by sysutils/zabbix60-proxy/Makefile
+# used by sysutils/zabbix60-server/Makefile
+# used by sysutils/zabbix60-frontend/Makefile
+# used by sysutils/zabbix60-java/Makefile
+
+DISTNAME=	zabbix-6.0.13
+CATEGORIES=	sysutils
+MASTER_SITES=	https://cdn.zabbix.com/zabbix/sources/stable/${PKGVERSION_NOREV:R}/
+
+MAINTAINER?=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://www.zabbix.com/
+LICENSE=	gnu-gpl-v2
+
+.include "../../mk/bsd.prefs.mk"
+
+# Zabbix user, common to all components
+ZABBIX_GROUP?=			zabbix
+ZABBIX_USER?=			zabbix
+ZABBIX_HOMEDIR?=		/var/zabbix
+PKG_GROUPS+=			${ZABBIX_GROUP}
+PKG_USERS+=			${ZABBIX_USER}:${ZABBIX_GROUP}
+PKG_GECOS.${ZABBIX_USER}=	Zabbix user
+PKG_HOME.${ZABBIX_USER}=	${ZABBIX_HOMEDIR}
+
+FILES_SUBST+=			ZABBIX_USER=${ZABBIX_USER}
+FILES_SUBST+=			ZABBIX_GROUP=${ZABBIX_GROUP}
+
+OWN_DIRS_PERMS+=		${ZABBIX_HOMEDIR} ${ZABBIX_USER} ${ZABBIX_GROUP} 0755
+
+# workaround for https://github.com/curl/curl/issues/10148
+CPPFLAGS+=	-DCURL_DISABLE_TYPECHECK

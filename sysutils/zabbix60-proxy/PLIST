@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2023/02/12 18:37:32 otis Exp $
+bin/zabbix_proxy_js
+man/man8/zabbix_proxy.8
+sbin/zabbix_proxy
+share/examples/${PKGBASE}/zabbix_proxy.conf
+${PLIST.sqldb}share/${PKGBASE}/double.sql
+${PLIST.sqldb}share/${PKGBASE}/history_pk_prepare.sql
+share/${PKGBASE}/schema.sql
+${PLIST.pgsql}share/${PKGBASE}/timescaledb.sql
+${PLIST.pgsql}share/${PKGBASE}/tsdb_history_pk_upgrade_no_compression/history_pk.sql
+${PLIST.pgsql}share/${PKGBASE}/tsdb_history_pk_upgrade_no_compression/history_pk_log.sql
+${PLIST.pgsql}share/${PKGBASE}/tsdb_history_pk_upgrade_no_compression/history_pk_str.sql
+${PLIST.pgsql}share/${PKGBASE}/tsdb_history_pk_upgrade_no_compression/history_pk_text.sql
+${PLIST.pgsql}share/${PKGBASE}/tsdb_history_pk_upgrade_no_compression/history_pk_uint.sql
+${PLIST.pgsql}share/${PKGBASE}/tsdb_history_pk_upgrade_with_compression/history_pk.sql
+${PLIST.pgsql}share/${PKGBASE}/tsdb_history_pk_upgrade_with_compression/history_pk_log.sql
+${PLIST.pgsql}share/${PKGBASE}/tsdb_history_pk_upgrade_with_compression/history_pk_str.sql
+${PLIST.pgsql}share/${PKGBASE}/tsdb_history_pk_upgrade_with_compression/history_pk_text.sql
+${PLIST.pgsql}share/${PKGBASE}/tsdb_history_pk_upgrade_with_compression/history_pk_uint.sql
+@pkgdir share/${PKGBASE}/externalscripts
+@pkgdir lib/modules
+@pkgdir etc/zabbix_proxy.conf.d
