@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2023/01/19 15:04:18 taca Exp $
+# $NetBSD: Makefile,v 1.10 2023/02/12 15:11:56 taca Exp $
 
-DISTNAME=	rex-core-0.1.29
+DISTNAME=	rex-core-0.1.30
 CATEGORIES=	security
 
 MAINTAINER=	minskim@NetBSD.org
