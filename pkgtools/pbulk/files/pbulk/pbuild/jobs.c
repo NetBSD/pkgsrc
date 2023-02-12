@@ -1,4 +1,4 @@
-/* $NetBSD: jobs.c,v 1.18 2023/02/10 23:14:32 joerg Exp $ */
+/* $NetBSD: jobs.c,v 1.19 2023/02/12 04:12:54 joerg Exp $ */
 
 /*-
  * Copyright (c) 2007, 2009, 2011 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -164,6 +164,7 @@ compute_tree_depth_rec(struct build_job *job, struct build_job *root, char *seen
 		return 0;
 	seen[job - jobs] = 1;
 	++root->pkg_depth;
+	root->pkg_weighted_depth += job->pkg_weight;
 	SLIST_FOREACH(dep_iter, &job->depending_pkgs, depends_link) {
 		if (compute_tree_depth_rec(dep_iter->dependency, root, seen)) {
 			fprintf(stderr, "%s\n", job->pkgname);
@@ -179,6 +180,7 @@ compute_tree_depth(struct build_job *job, char *seen)
 	memset(seen, 0, len_jobs);
 
 	job->pkg_depth = 0;
+	job->pkg_weighted_depth = 0;
 	if (compute_tree_depth_rec(job, job, seen))
 		exit(1);
 }
@@ -281,6 +283,29 @@ mark_initial_state(int fd, enum job_state state, const char *type)
 }
 
 static void
+parse_weight(struct build_job *job)
+{
+	const char *line;
+	char *eos;
+	long long value;
+
+	line = find_content(job, "PBULK_WEIGHT=");
+	if (line == NULL) {
+		job->pkg_weight = 100;
+		return;
+	}
+	errno = 0;
+	value = strtoll(line, &eos, 10);
+	if (errno || line == eos || *eos != '\n')
+		errx(1, "Invalid PBULK_WEIGHT for package %s", job->pkgname);
+	if (value < 0 && value <= LLONG_MIN / len_jobs)
+		errx(1, "PBULK_WEIGHT too small for package %s", job->pkgname);
+	if (value > 0 && value >= LLONG_MAX / len_jobs)
+		errx(1, "PBULK_WEIGHT too large for package %s", job->pkgname);
+	job->pkg_weight = value;
+}
+
+static void
 mark_initial(void)
 {
 	const char *line;
@@ -299,7 +324,7 @@ mark_initial(void)
 			process_job(&jobs[i], JOB_PREFAILED, 0);
 			continue;
 		}
-	}		
+	}
 
 	mark_initial_state(log_success, JOB_DONE, "successful");
 	mark_initial_state(log_failed, JOB_FAILED, "failing");
@@ -315,7 +340,7 @@ add_to_build_list(struct build_job *job)
 	struct build_job *iter;
 
 	TAILQ_FOREACH(iter, &buildable_jobs, build_link) {
-		if (iter->pkg_depth < job->pkg_depth) {
+		if (iter->pkg_weighted_depth < job->pkg_weighted_depth) {
 			TAILQ_INSERT_BEFORE(iter, job, build_link);
 			return;
 		}
@@ -333,6 +358,8 @@ build_tree(void)
 
 	for (i = 0; i < len_jobs; ++i) {
 		job = &jobs[i];
+
+		parse_weight(job);
 
 		if ((depends = find_content(job, "DEPENDS=")) == NULL)
 			continue;
@@ -530,8 +557,8 @@ finish_build(const char *report_file)
 		default:
 			errx(1, "internal error");
 		}
-		fprintf(report, "%s|%s||%d\n", jobs[i].pkgname, status,
-		    jobs[i].pkg_depth);
+		fprintf(report, "%s|%s||%d|%lld\n", jobs[i].pkgname, status,
+		    jobs[i].pkg_depth, jobs[i].pkg_weighted_depth);
 	}
 }
 
