@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2023/01/03 13:59:15 otis Exp $
+# $NetBSD: Makefile,v 1.15 2023/02/12 11:09:04 otis Exp $
 
 .include "../../sysutils/zabbix50-server/Makefile.common"
 
@@ -6,6 +6,7 @@ PKGNAME=	${DISTNAME:S/-/-proxy-${ZABBIX_DB_TYPE}-/}
 COMMENT=	Enterprise-class Monitoring Solution for Everyone
 
 PATCHDIR=	${.CURDIR}/../../sysutils/zabbix50-server/patches
+DISTINFO_FILE=	${.CURDIR}/../../sysutils/zabbix50-server/distinfo
 
 CONFLICTS+=	zabbix-[0-9]*
 CONFLICTS+=	zabbix-proxy-[0-9]*

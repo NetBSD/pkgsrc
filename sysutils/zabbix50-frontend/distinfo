@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.7 2023/01/03 13:59:15 otis Exp $
-
-BLAKE2s (zabbix-5.0.30.tar.gz) = f4d7efd99353063d457be0887570fe03b27acdf5e24836035c92a9f054a5ed13
-SHA512 (zabbix-5.0.30.tar.gz) = 2f744fc1ba42ea0602cc90c91342f531c55cb1f76eda47c6e928e74dc595f7bd885f69abb52c6eb1b20e65bd6c3c46c299d6cfee2c3442db137561060386a31e
-Size (zabbix-5.0.30.tar.gz) = 21505195 bytes

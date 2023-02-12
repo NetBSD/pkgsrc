@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2021/11/13 20:41:09 otis Exp $
+# $NetBSD: Makefile,v 1.5 2023/02/12 11:09:04 otis Exp $
 
 .include "../../sysutils/zabbix50-server/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-frontend-${ZABBIX_DB_TYPE}-/}
-COMMENT=	Zabbix PHP 7.2+ frontend
+COMMENT=	Zabbix PHP 7.4 frontend
+
+DISTINFO_FILE=	${.CURDIR}/../../sysutils/zabbix50-server/distinfo
 
 CONFLICTS+=	zabbix-frontend-[0-9]*
 
