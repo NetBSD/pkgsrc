@@ -1,0 +1,17 @@
+$NetBSD: distinfo,v 1.1 2023/02/12 14:42:25 tnn Exp $
+
+BLAKE2s (opencascade-7.7.0.tgz) = 3ac0f49a8d50e3c5eb86192f3d9d7bb1c52ae58e7f4816d32a9971665bbd0c0b
+SHA512 (opencascade-7.7.0.tgz) = 27ed889bbe95fa40fbb1840788ce0f2c58af67a6fec799f5705f6cad2567fcfeddbe461ba1854b65672392a604f8b41fed1f77b2cc0704f83746a58957d830c7
+Size (opencascade-7.7.0.tgz) = 48391263 bytes
+SHA1 (patch-CMakeLists.txt) = 4a1b5af6bb6c3322c9713353aaeb6b03a074a407
+SHA1 (patch-src_MeshVS_MeshVS__MeshPrsBuilder.cxx) = ba177be057941b7077a4525348d0563cb1378213
+SHA1 (patch-src_OSD_OSD__MemInfo.cxx) = 39c8361e401a7cef9e04f05ab72c96c83126c507
+SHA1 (patch-src_OSD_OSD__Path.cxx) = 14763ec177b7f571350be6ef7bc36e301d57cd1e
+SHA1 (patch-src_OSD_OSD__signal.cxx) = 5a6a6d914340368d089a7bcaadf1aacfeef9bed8
+SHA1 (patch-src_OpenGl_OpenGl__ShaderObject.cxx) = 804cbd76d7377ca003442374b5fcfad951984f37
+SHA1 (patch-src_OpenGl_OpenGl__ShaderProgram.cxx) = a6b7d8e8f15f2c72134fd99f7015e7458d6086d8
+SHA1 (patch-src_Standard_Standard__CString.cxx) = d6140961892983cd2df14b881260dc0591c55b9d
+SHA1 (patch-src_Standard_Standard__Failure.cxx) = a10c3dcb43837fbb82f16fce8232ebdf5ba9d8f1
+SHA1 (patch-src_Standard_Standard__PrimitiveTypes.hxx) = 868c062a76fd1f77b272ac734f3b0c06eea0be51
+SHA1 (patch-src_Standard_Standard__StackTrace.cxx) = 166ab4d7b79a4fc7361c01196e6aca702f6e15f2
+SHA1 (patch-src_ViewerTest_ViewerTest__CmdParser.cxx) = d92c768377484a64731940cee387d9054114adab
