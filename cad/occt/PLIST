@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/02/12 14:42:25 tnn Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/02/12 16:03:28 tnn Exp $
 bin/DRAWEXE
 bin/DRAWEXE-${PKGVERSION}
 bin/ExpToCasExe
@@ -8390,7 +8390,6 @@ include/opencascade/math_Vector.hxx
 include/opencascade/step.tab.hxx
 lib/cmake/opencascade/OpenCASCADEApplicationFrameworkTargets-release.cmake
 lib/cmake/opencascade/OpenCASCADEApplicationFrameworkTargets.cmake
-lib/cmake/opencascade/OpenCASCADECompileDefinitionsAndFlags-release.cmake
 lib/cmake/opencascade/OpenCASCADEConfig.cmake
 lib/cmake/opencascade/OpenCASCADEConfigVersion.cmake
 lib/cmake/opencascade/OpenCASCADEDataExchangeTargets-release.cmake
