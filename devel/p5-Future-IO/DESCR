@@ -1,0 +1,3 @@
+Future::IO provides a few basic methods that behave similarly to the same-named
+core perl functions relating to IO operations, but yield their results
+asynchronously via Future instances.
