@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1147 2023/02/12 11:09:39 otis Exp $
+$NetBSD: CHANGES-2023,v 1.1148 2023/02/12 11:09:58 otis Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1457,3 +1457,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/p5-IPC-Run to 20220807.0 [wen 2023-02-12]
 	Updated sysutils/zabbix50-server to 5.0.31 [otis 2023-02-12]
 	Updated sysutils/zabbix50-proxy to 5.0.31 [otis 2023-02-12]
+	Updated sysutils/zabbix50-java to 5.0.31 [otis 2023-02-12]
