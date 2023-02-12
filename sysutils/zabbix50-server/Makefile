@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2023/01/03 13:59:15 otis Exp $
+# $NetBSD: Makefile,v 1.17 2023/02/12 21:02:50 otis Exp $
 # used by sysutils/zabbix50-proxy/Makefile
 # used by sysutils/zabbix50-agent/Makefile
 #
+PKGREVISION= 1
 .include "Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-server-${ZABBIX_DB_TYPE}-/}
@@ -21,7 +22,7 @@ CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_PREFIX.iconv}
 CONFIGURE_ARGS+=	--with-ldap=${BUILDLINK_PREFIX.openldap-client}
 CONFIGURE_ARGS+=	--with-libcurl
 CONFIGURE_ARGS+=	--with-libevent=${BUILDLINK_PREFIX.libevent}
-CONFIGURE_ARGS+=	--with-libpcre=${BUILDLINK_PREFIX.pcre}
+CONFIGURE_ARGS+=	--with-libpcre2=${BUILDLINK_PREFIX.pcre2}
 CONFIGURE_ARGS+=	--with-libxml2
 CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
@@ -84,5 +85,5 @@ post-install:
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
-.include "../../devel/pcre/buildlink3.mk"
+.include "../../devel/pcre2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
