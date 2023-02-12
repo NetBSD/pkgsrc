@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2023/01/09 05:48:47 taca Exp $
+$NetBSD: distinfo,v 1.10 2023/02/12 15:06:17 taca Exp $
 
-BLAKE2s (metasploit-model-5.0.0.gem) = c7d58916cffddf8b7aff3e7bff799b3c03c30e8f5147a7dadd34eba48f4eb310
-SHA512 (metasploit-model-5.0.0.gem) = 2dd0f03fdaf74313b4159a7e8d9515f7a29efa44212a6e18b42aaa02fdfa848481195f8400ed2ade58b4ccddc787b99b3d41150c4971977a67695db5641f519c
-Size (metasploit-model-5.0.0.gem) = 81920 bytes
+BLAKE2s (metasploit-model-5.0.1.gem) = 0262e44dedbea577d298ad01f78b276e3d23e4689e23be3ac93721e1afd176ec
+SHA512 (metasploit-model-5.0.1.gem) = f5ac2dd7339485fc6067ac1364ca2b2aa865f03bfdd485299dcad7309372e75ce75327381c75bb7a473c8e67f6539569eff0b2cb870cabefff22e11a12ed53d8
+Size (metasploit-model-5.0.1.gem) = 81920 bytes
