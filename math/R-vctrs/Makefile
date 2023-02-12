@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2022/12/18 13:36:41 mef Exp $
+# $NetBSD: Makefile,v 1.7 2023/02/12 04:44:54 mef Exp $
 
 R_PKGNAME=	vctrs
-R_PKGVER=	0.5.1
+R_PKGVER=	0.5.2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Vector helpers
