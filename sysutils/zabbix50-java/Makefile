@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2023/01/03 13:59:15 otis Exp $
+# $NetBSD: Makefile,v 1.5 2023/02/12 11:09:04 otis Exp $
 
 .include "../../sysutils/zabbix50-server/Makefile.common"
 
@@ -6,6 +6,7 @@ PKGNAME=	${DISTNAME:S/-/-java-/}
 COMMENT=	Enterprise-class Monitoring Solution for Everyone
 
 PATCHDIR=	${.CURDIR}/../../sysutils/zabbix50-server/patches
+DISTINFO_FILE=	${.CURDIR}/../../sysutils/zabbix50-server/distinfo
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-java
