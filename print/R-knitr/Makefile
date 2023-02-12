@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2022/12/31 11:53:51 mef Exp $
+# $NetBSD: Makefile,v 1.16 2023/02/12 04:59:48 mef Exp $
 
 R_PKGNAME=	knitr
-R_PKGVER=	1.41
+R_PKGVER=	1.42
 CATEGORIES=	print
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
