@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.52 2022/11/09 13:14:07 joerg Exp $
+# $NetBSD: Makefile,v 1.53 2023/02/12 11:03:04 js Exp $
 
-DISTNAME=	psycopg2-2.8.6
+DISTNAME=	psycopg2-2.9.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/psycopg2/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://initd.org/psycopg/
+HOMEPAGE=	https://www.psycopg.org/
 COMMENT=	PostgreSQL database adapter for Python
 LICENSE=	gnu-lgpl-v3
 
