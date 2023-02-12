@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.2049 2023/02/04 08:38:28 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.2050 2023/02/12 20:14:02 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -762,7 +762,7 @@ show-license show-licence: .PHONY
 .if !target(show-license-status)
 show-license-status show-licence-status: .PHONY
 	@${ECHO} "The license of this package is ${LICENSE}."
-.if ${DEFAULT_ACCEPTABLE_LICENSES:M${LICENSE}}
+.if defined(DEFAULT_ACCEPTABLE_LICENSES) && ${DEFAULT_ACCEPTABLE_LICENSES:M${LICENSE}}
 	@${ECHO}; \
 	${ECHO} "This license is in DEFAULT_ACCEPTABLE_LICENSES."
 .endif
