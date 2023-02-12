@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22615 2023/02/10 15:40:32 gdt Exp $
+$NetBSD: TODO,v 1.22616 2023/02/12 09:43:10 wiz Exp $
 
 Suggested new packages
 ======================
@@ -383,10 +383,11 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o GNUMail-1.2.2
 	o Gorm-1.2.26
 	o HElib-2.1.0
+	o ImageMagick-7.1.0.61
 	o ImageMagick6-6.9.12.8
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
-	o MesaLib-22.3.4
+	o MesaLib-22.3.5
 	o OdfConverter-4.0
 	o PACK-0.0.4
 	o Pantomime-1.2.2
@@ -404,6 +405,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-pbdZMQ-0.3.5
 	o R-poweRlaw-0.70.6
 	o R-quadprog-1.5.8
+	o SDL2_ttf-2.20.2
 	o SOGo-5.8.0
 	o SOPE-5.8.0
 	o SQLiteCpp-2.5.0
@@ -510,6 +512,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o bzr-gtk-0.103.0
 	o bzrtools-2.6.0
 	o c4-1.10
+	o cabextract-1.10
 	o cacti-1.2.19
 	o cacti-spine-1.2.16
 	o cairomm1.16-1.16.2
@@ -569,6 +572,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o dap-3.10
 	o darktable-4.2
 	o dateutils-0.4.8
+	o dbus-1.14.6
 	o dcc-2.3.167
 	o dd_rescue-1.46
 	o dd_rhelp-0.3.0
@@ -741,6 +745,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gnu-crypto-2.1.0
 	o gnucap-20210107
 	o gnutime-1.9
+	o gnutls-3.8.0
 	o go-ffuf-1.3.0
 	o go-fsnotify-1.4.9
 	o go-ldap-3.3.0
@@ -791,6 +796,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o h8300-elf-gcc-7.1.0
 	o hamster-applet-2.32.1
 	o hanzim-3.5
+	o happy-1.20.1.1
 	o harminv-1.4.1
 	o hashcash-1.23
 	o haskell-mode-13.20
@@ -885,6 +891,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o lcc-4.2
 	o ldapsdk-6.0.7
 	o ldb-2.7.0 [wait for samba 4.18]
+	o ldb-2.7.1
 	o lgeneral-1.3.1
 	o libarchive-3.6.1
 	o libasr-1.0.4
@@ -1196,7 +1203,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pinfo-0.6.10
 	o pks-0.9.6
 	o plan-1.10.1
-	o plasma-5.26
+	o plasma-5.27
 	o ploticus-examples-230
 	o ply-3.11
 	o pocl-3.0
@@ -1525,6 +1532,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o wmi-11
 	o wordwarvi-1.0.4
 	o worker-4.8.0
+	o wxGTK32-3.2.2
 	o wxRemind-101
 	o x16-emulator-38
 	o x16-rom-38
