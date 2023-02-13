@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1182 2023/02/13 11:26:55 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1183 2023/02/13 11:27:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1501,3 +1501,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-astroid to 2.14.2 [adam 2023-02-13]
 	Updated net/transmission to 4.0.0 [wiz 2023-02-13]
 	Updated net/transmission-gtk to 4.0.0 [wiz 2023-02-13]
+	Updated net/transmission-qt to 4.0.0 [wiz 2023-02-13]
