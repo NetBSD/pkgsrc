@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:33:43 nia Exp $
+$NetBSD: distinfo,v 1.7 2023/02/13 17:17:12 tsutsui Exp $
 
-BLAKE2s (arandr-0.1.10.tar.gz) = 6bb726ba4784b04349477f5ae9a173127c6a399d3df1cc2afb76d5cffdff0fe1
-SHA512 (arandr-0.1.10.tar.gz) = 12c2fe5b36f8d8e688d990e352c1cfa3e8512c0b647b78a8af93f9472704e4867fac4c56c207465fb7b420c9022dc545dea8ad8a29af3037758ab4587dcd38ba
-Size (arandr-0.1.10.tar.gz) = 100203 bytes
+BLAKE2s (arandr-0.1.11.tar.gz) = bdf5d61e4fa699cb157c9b5a708676bcb05a5e6435d24565113816457690a62f
+SHA512 (arandr-0.1.11.tar.gz) = 5f3ccabbffac0ea9e05b9d8c229f4f3b05f06ef285fb05a1ce2d7f88fd1723fd680636f5b97764b0aeb3cedac16863c4ccb154d65bf6fe987a1b3cc8a0026584
+Size (arandr-0.1.11.tar.gz) = 100603 bytes
