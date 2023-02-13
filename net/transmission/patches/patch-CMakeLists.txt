@@ -1,6 +1,7 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2023/02/13 11:26:29 wiz Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2023/02/13 13:48:11 wiz Exp $
 
 Detect and use libquota.
+https://github.com/transmission/transmission/pull/4863
 
 --- CMakeLists.txt.orig	2023-02-07 23:39:47.000000000 +0000
 +++ CMakeLists.txt
