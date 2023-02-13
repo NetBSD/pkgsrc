@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:25:29 nia Exp $
+$NetBSD: distinfo,v 1.7 2023/02/13 13:51:56 manu Exp $
 
 BLAKE2s (ltfs-backends/v0.2.tar.gz) = 9c7210fb360283124bd6ae3901afa45c6b120c9dd3edd26fbfe729c7ba35e5dc
 SHA512 (ltfs-backends/v0.2.tar.gz) = 2c4966ac5902a22bd282e0b73540289e09cf919d420af70a1c5d7e34190cd80bc4dccbaf03239bf727e18420984b5a644cb3d17c8b1c68a384b27bc59efe320f
 Size (ltfs-backends/v0.2.tar.gz) = 129136 bytes
 SHA1 (patch-Makefile.am) = 6a5de78c0972d84b85c28b27534f71fbe61a3b2f
 SHA1 (patch-configure.ac) = f636cea30b1d0dda7bdf4225151c80f44693a97b
+SHA1 (patch-messages_make_message_src.sh) = 59157267fe57abd2f6e6282e151746e2c1840199
 SHA1 (patch-src_tape__drivers_linux_ltotape_ltotape.c) = 9aa69bdc423e02b084d9fd116612d15ab60ac9ab
 SHA1 (patch-src_tape__drivers_linux_ltotape_ltotape__diag.c) = 20b00a01d300c7554ed6451e2532ef96d4b629fe
 SHA1 (patch-src_tape__drivers_linux_ltotape_ltotape__platform.c) = 6e6f145a80ec620daaa0fad792707c444df3686e
