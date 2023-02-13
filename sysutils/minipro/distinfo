@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.1 2022/01/22 17:52:53 thorpej Exp $
+$NetBSD: distinfo,v 1.2 2023/02/13 23:38:48 thorpej Exp $
 
-BLAKE2s (minipro-0.5.tar.bz2) = 49494698441038357961402501a69bc77ed527642d0ca09771aaeb14433b1df2
-SHA512 (minipro-0.5.tar.bz2) = 6750c80077200badb08627909afbbac9f679dff483b5be2d24eb6083e859b1dc5ee3377eea4876ce8c9399d729910f1b02365ddbfc27fa6c59c8308b19c8fbae
-Size (minipro-0.5.tar.bz2) = 246205 bytes
-SHA1 (patch-Makefile) = 7426d43253bb899660152db5b53ab2b3152cdd95
+BLAKE2s (minipro-0.6.tar.bz2) = a46777ec54ed7ecc25ad165b7ef6961409e94efed80ae15ccce38dbe98ba09ed
+SHA512 (minipro-0.6.tar.bz2) = d3a3aa139e4ce0aadfba405fd75a05250f1b5df85d9acd21020fca42b3aca867de39f9560429c82030bb6474bc4d8e89f56cf4f72a86dce60d2e5aa36cec7761
+Size (minipro-0.6.tar.bz2) = 260518 bytes
+SHA1 (patch-Makefile) = 0090dc700106c71bb0eb1dad1e91ee9b298fb0ba
 SHA1 (patch-jedec.c) = 6ea6a4bf9cccc442e86dc9a26fcdd210f9d471de
 SHA1 (patch-main.c) = ea464de8f0d69e65468ef878747ec76cd076ec06
