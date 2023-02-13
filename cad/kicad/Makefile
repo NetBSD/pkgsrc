@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2023/02/13 08:03:23 tnn Exp $
+# $NetBSD: Makefile,v 1.73 2023/02/13 08:16:10 tnn Exp $
 #
 
 V=		7.0.0
@@ -63,5 +63,4 @@ BUILDLINK_API_DEPENDS.glm+=	glm>=0.9.9.8
 .include "../../x11/wxGTK32/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.pkg.mk"
