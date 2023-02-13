@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 11:34:43 nia Exp $
+$NetBSD: distinfo,v 1.14 2023/02/13 20:16:55 wiz Exp $
 
-BLAKE2s (xf86-video-s3virge-1.11.0.tar.bz2) = 7e24a8771735827e741c932f75dccac673aa93b216d7cfbc41fe5ef8d9dc22ab
-SHA512 (xf86-video-s3virge-1.11.0.tar.bz2) = 43ec2b4d910a5f659dd19fd623ef615f3ba7dcb282f61b95438cb279c6e0de75419b381adb70c92a084e375a04435cbb20fa0fe30ac23b2c8f4ed26d762d418e
-Size (xf86-video-s3virge-1.11.0.tar.bz2) = 380321 bytes
-SHA1 (patch-src_s3v__driver.c) = be708042982dd9630e935cce0670266f9d482c8a
+BLAKE2s (xf86-video-s3virge-1.11.1.tar.xz) = 87e91180df20931d0e579d4dfc151ac0ff27112867b9f5d5ad014ecd58408677
+SHA512 (xf86-video-s3virge-1.11.1.tar.xz) = 4cce81bd8b65cb0b0be405b4e78db8c9578f320b5ce9365f4271d52a92f3a2386b22e78790b68e875b79faa581c340ea325f6e35b9ff348095face3fadc427dd
+Size (xf86-video-s3virge-1.11.1.tar.xz) = 317360 bytes
