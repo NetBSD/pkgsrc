@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1179 2023/02/13 10:31:17 pin Exp $
+$NetBSD: CHANGES-2023,v 1.1180 2023/02/13 10:48:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1496,3 +1496,6 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated cad/kicad-symbols to 7.0.0 [tnn 2023-02-13]
 	Updated cad/kicad-templates to 7.0.0 [tnn 2023-02-13]
 	Updated graphics/oculante to 0.6.51 [pin 2023-02-13]
+	Updated www/py-aiohttp to 3.8.4 [adam 2023-02-13]
+	Updated devel/py-bitarray to 2.7.2 [adam 2023-02-13]
+	Updated devel/py-astroid to 2.14.2 [adam 2023-02-13]
