@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2022/07/20 16:28:54 tnn Exp $
+@comment $NetBSD: PLIST,v 1.7 2023/02/13 07:59:02 tnn Exp $
 share/kicad/symbols/4xxx.kicad_sym
 share/kicad/symbols/4xxx_IEEE.kicad_sym
 share/kicad/symbols/74xGxx.kicad_sym
@@ -28,6 +28,7 @@ share/kicad/symbols/CPU_NXP_IMX.kicad_sym
 share/kicad/symbols/CPU_PowerPC.kicad_sym
 share/kicad/symbols/Comparator.kicad_sym
 share/kicad/symbols/Connector.kicad_sym
+share/kicad/symbols/Connector_Audio.kicad_sym
 share/kicad/symbols/Connector_Generic.kicad_sym
 share/kicad/symbols/Connector_Generic_MountingPin.kicad_sym
 share/kicad/symbols/Connector_Generic_Shielded.kicad_sym
@@ -51,6 +52,8 @@ share/kicad/symbols/Driver_LED.kicad_sym
 share/kicad/symbols/Driver_Motor.kicad_sym
 share/kicad/symbols/Driver_Relay.kicad_sym
 share/kicad/symbols/Driver_TEC.kicad_sym
+share/kicad/symbols/FPGA_CologneChip_GateMate.kicad_sym
+share/kicad/symbols/FPGA_Efinix_Trion.kicad_sym
 share/kicad/symbols/FPGA_Lattice.kicad_sym
 share/kicad/symbols/FPGA_Microsemi.kicad_sym
 share/kicad/symbols/FPGA_Xilinx.kicad_sym
@@ -119,6 +122,7 @@ share/kicad/symbols/MCU_Parallax.kicad_sym
 share/kicad/symbols/MCU_RaspberryPi.kicad_sym
 share/kicad/symbols/MCU_Renesas_Synergy_S1.kicad_sym
 share/kicad/symbols/MCU_STC.kicad_sym
+share/kicad/symbols/MCU_ST_STM32C0.kicad_sym
 share/kicad/symbols/MCU_ST_STM32F0.kicad_sym
 share/kicad/symbols/MCU_ST_STM32F1.kicad_sym
 share/kicad/symbols/MCU_ST_STM32F2.kicad_sym
@@ -126,11 +130,16 @@ share/kicad/symbols/MCU_ST_STM32F3.kicad_sym
 share/kicad/symbols/MCU_ST_STM32F4.kicad_sym
 share/kicad/symbols/MCU_ST_STM32F7.kicad_sym
 share/kicad/symbols/MCU_ST_STM32G0.kicad_sym
+share/kicad/symbols/MCU_ST_STM32G4.kicad_sym
 share/kicad/symbols/MCU_ST_STM32H7.kicad_sym
 share/kicad/symbols/MCU_ST_STM32L0.kicad_sym
 share/kicad/symbols/MCU_ST_STM32L1.kicad_sym
-share/kicad/symbols/MCU_ST_STM32L4+.kicad_sym
 share/kicad/symbols/MCU_ST_STM32L4.kicad_sym
+share/kicad/symbols/MCU_ST_STM32L5.kicad_sym
+share/kicad/symbols/MCU_ST_STM32MP1.kicad_sym
+share/kicad/symbols/MCU_ST_STM32U5.kicad_sym
+share/kicad/symbols/MCU_ST_STM32WB.kicad_sym
+share/kicad/symbols/MCU_ST_STM32WL.kicad_sym
 share/kicad/symbols/MCU_ST_STM8.kicad_sym
 share/kicad/symbols/MCU_SiFive.kicad_sym
 share/kicad/symbols/MCU_SiliconLabs.kicad_sym
@@ -179,6 +188,7 @@ share/kicad/symbols/Sensor.kicad_sym
 share/kicad/symbols/Sensor_Audio.kicad_sym
 share/kicad/symbols/Sensor_Current.kicad_sym
 share/kicad/symbols/Sensor_Distance.kicad_sym
+share/kicad/symbols/Sensor_Energy.kicad_sym
 share/kicad/symbols/Sensor_Gas.kicad_sym
 share/kicad/symbols/Sensor_Humidity.kicad_sym
 share/kicad/symbols/Sensor_Magnetic.kicad_sym
@@ -204,5 +214,4 @@ share/kicad/symbols/Triac_Thyristor.kicad_sym
 share/kicad/symbols/Valve.kicad_sym
 share/kicad/symbols/Video.kicad_sym
 share/kicad/symbols/power.kicad_sym
-share/kicad/symbols/pspice.kicad_sym
 share/kicad/template/sym-lib-table
