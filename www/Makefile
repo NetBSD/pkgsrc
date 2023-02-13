@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1683 2023/02/13 15:23:00 he Exp $
+# $NetBSD: Makefile,v 1.1684 2023/02/13 15:30:26 he Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -544,6 +544,7 @@ SUBDIR+=	p5-Plack-Middleware-Test-StashWarnings
 SUBDIR+=	p5-Plack-Test-Agent
 SUBDIR+=	p5-Plack-Test-ExternalServer
 SUBDIR+=	p5-Pod-POM-Web
+SUBDIR+=	p5-Raisin
 SUBDIR+=	p5-Reaction
 SUBDIR+=	p5-Role-REST-Client
 SUBDIR+=	p5-Rose-HTML-Objects
