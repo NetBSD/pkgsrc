@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.102 2022/05/14 22:25:38 dholland Exp $
+# $NetBSD: Makefile,v 1.103 2023/02/13 13:32:43 taca Exp $
 
-DISTNAME=	mew-6.8
+DISTNAME=	mew-6.9
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	mail
 MASTER_SITES=	http://www.mew.org/Release/
 
@@ -36,17 +35,14 @@ MAKE_FLAGS+=		infodir=${EMACS_INFOPREFIX:Q}
 MAKE_FLAGS+=		mandir=${PREFIX:Q}/${PKGMANDIR:Q}/man1
 CONFIGURE_ARGS+=	--with-etcdir=${EMACS_ETCPREFIX}/mew
 
-SUBST_CLASSES+=		local
-SUBST_STAGE.local=	post-configure
-SUBST_FILES.local=	bin/configure info/Makefile
-SUBST_SED.local=	-e 's|/usr/local|${PREFIX}|g'
+ICONDIR=		${EMACS_ETCPREFIX}/mew
+
+SUBST_CLASSES+=		icondir
+SUBST_STAGE.icondir=	pre-configure
+SUBST_FILES.icondir=	elisp/mew-key.el
+SUBST_VARS.icondir=	ICONDIR
 
 REPLACE_RUBY=		bin/cmew bin/smew
-
-post-configure:
-	${MV} ${WRKSRC}/mew-key.el ${WRKSRC}/mew-key.el.1
-	${SED} -e 's|@ICONDIR@|${EMACS_ETCPREFIX}/mew|g' \
-		${WRKSRC}/mew-key.el.1 > ${WRKSRC}/mew-key.el
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../editors/emacs/modules.mk"
