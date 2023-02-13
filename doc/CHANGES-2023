@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1191 2023/02/13 17:17:28 tsutsui Exp $
+$NetBSD: CHANGES-2023,v 1.1192 2023/02/13 20:11:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1512,3 +1512,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added www/p5-Plack-Middleware-CrossOrigin version 0.014 [he 2023-02-13]
 	Added www/p5-Raisin version 0.94 [he 2023-02-13]
 	Updated x11/arandr to 0.1.11 [tsutsui 2023-02-13]
+	Updated devel/xorg-util-macros to 1.20.0 [wiz 2023-02-13]
