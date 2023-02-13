@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1196 2023/02/13 23:03:04 leot Exp $
+$NetBSD: CHANGES-2023,v 1.1197 2023/02/13 23:39:46 thorpej Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1517,3 +1517,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated emulators/nono to 0.5.1 [jun 2023-02-14]
 	Updated devel/opa to 0.49.0 [leot 2023-02-13]
 	Updated devel/conftest to 0.39.0 [leot 2023-02-13]
+	Updated sysutils/minipro to 0.6 [thorpej 2023-02-13]
