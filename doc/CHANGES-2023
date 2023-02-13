@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1178 2023/02/13 08:18:47 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1179 2023/02/13 10:31:17 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1495,3 +1495,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated cad/kicad-packages3d to 7.0.0 [tnn 2023-02-13]
 	Updated cad/kicad-symbols to 7.0.0 [tnn 2023-02-13]
 	Updated cad/kicad-templates to 7.0.0 [tnn 2023-02-13]
+	Updated graphics/oculante to 0.6.51 [pin 2023-02-13]
