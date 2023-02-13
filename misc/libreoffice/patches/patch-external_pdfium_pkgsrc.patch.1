@@ -1,14 +1,15 @@
-$NetBSD: patch-external_pdfium_pkgsrc.patch.1,v 1.9 2022/08/22 13:58:32 ryoon Exp $
+$NetBSD: patch-external_pdfium_pkgsrc.patch.1,v 1.10 2023/02/13 14:59:36 ryoon Exp $
 
 * Support NetBSD
 * Add pkgsrc font path
 
---- external/pdfium/pkgsrc.patch.1.orig	2022-08-19 00:52:46.342273839 +0000
+--- external/pdfium/pkgsrc.patch.1.orig	2023-02-02 19:10:27.370091145 +0000
 +++ external/pdfium/pkgsrc.patch.1
-@@ -0,0 +1,41 @@
-+--- pdfium/core/fpdfapi/page/cpdf_psengine.cpp.orig	2022-05-11 00:10:54.000000000 +0000
-++++ pdfium/core/fpdfapi/page/cpdf_psengine.cpp
-+@@ -74,7 +74,7 @@ constexpr PDF_PSOpName kPsOpNames[] = {
+@@ -0,0 +1,32 @@
++diff -ur pdfium.orig/core/fpdfapi/page/cpdf_psengine.cpp pdfium/core/fpdfapi/page/cpdf_psengine.cpp
++--- pdfium.orig/core/fpdfapi/page/cpdf_psengine.cpp	2023-02-03 04:06:26.999101009 +0900
+++++ pdfium/core/fpdfapi/page/cpdf_psengine.cpp	2023-02-03 04:07:10.917863193 +0900
++@@ -75,7 +75,7 @@
 + // Round half up is a nearest integer round with half-way numbers always rounded
 + // up. Example: -5.5 rounds to -5.
 + float RoundHalfUp(float f) {
@@ -17,19 +18,9 @@ $NetBSD: patch-external_pdfium_pkgsrc.patch.1,v 1.9 2022/08/22 13:58:32 ryoon Ex
 +     return 0;
 +   if (f > std::numeric_limits<float>::max() - 0.5f)
 +     return std::numeric_limits<float>::max();
-+--- pdfium/core/fxcrt/cfx_datetime.cpp.orig	2022-05-11 00:10:54.000000000 +0000
-++++ pdfium/core/fxcrt/cfx_datetime.cpp
-+@@ -11,7 +11,7 @@
-+ #include "third_party/base/check.h"
-+ 
-+ #if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
-+-    BUILDFLAG(IS_APPLE) || defined(OS_ASMJS)
-++    BUILDFLAG(IS_APPLE) || defined(OS_ASMJS) || defined(OS_NETBSD)
-+ #include <sys/time.h>
-+ #include <time.h>
-+ #endif
-+--- pdfium/core/fxge/linux/fx_linux_impl.cpp.orig	2022-05-11 00:10:54.000000000 +0000
-++++ pdfium/core/fxge/linux/fx_linux_impl.cpp
++diff -ur pdfium.orig/core/fxge/linux/fx_linux_impl.cpp pdfium/core/fxge/linux/fx_linux_impl.cpp
++--- pdfium.orig/core/fxge/linux/fx_linux_impl.cpp	2023-02-03 04:06:27.025945382 +0900
+++++ pdfium/core/fxge/linux/fx_linux_impl.cpp	2023-02-03 04:09:36.257147908 +0900
 +@@ -18,7 +18,7 @@
 + #include "third_party/base/check.h"
 + 
@@ -39,7 +30,7 @@ $NetBSD: patch-external_pdfium_pkgsrc.patch.1,v 1.9 2022/08/22 13:58:32 ryoon Ex
 + #error "Included on the wrong platform"
 + #endif
 + 
-+@@ -170,6 +170,7 @@ class CLinuxPlatform : public CFX_GEModu
++@@ -170,6 +170,7 @@
 +       pInfo->AddPath("/usr/share/X11/fonts/Type1");
 +       pInfo->AddPath("/usr/share/X11/fonts/TTF");
 +       pInfo->AddPath("/usr/local/share/fonts");
