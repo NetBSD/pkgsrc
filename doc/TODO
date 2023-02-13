@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22616 2023/02/12 09:43:10 wiz Exp $
+$NetBSD: TODO,v 1.22617 2023/02/13 08:18:01 wiz Exp $
 
 Suggested new packages
 ======================
@@ -797,6 +797,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o hamster-applet-2.32.1
 	o hanzim-3.5
 	o happy-1.20.1.1
+	o harfbuzz-7.0.0
 	o harminv-1.4.1
 	o hashcash-1.23
 	o haskell-mode-13.20
@@ -865,7 +866,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o kbool-2.1 [kbool_2_1, next to boolean-7.1]
 	o kcron-21.04.0
 	o kdenetwork-filesharing-20.12.3
-	o kdenlive-22.08
+	o kdenlive-22.12.2
 	o kdesdk-kioslaves-20.08.0
 	o kdesdk-thumbnailers-20.08.0
 	o kdevelop-5.6
