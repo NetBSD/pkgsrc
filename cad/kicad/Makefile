@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2023/02/13 07:59:01 tnn Exp $
+# $NetBSD: Makefile,v 1.72 2023/02/13 08:03:23 tnn Exp $
 #
 
 V=		7.0.0
@@ -15,7 +15,6 @@ COMMENT=	Schematic and PCB CAD software (stable branch)
 LICENSE=	gnu-gpl-v3
 
 BUILD_DEPENDS+=	swig4-[0-9]*:../../devel/swig4
-BUILD_DEPENDS+=	gettext-tools-[0-9]*:../../devel/gettext-tools
 DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 
 USE_PKGLOCALEDIR=	yes
