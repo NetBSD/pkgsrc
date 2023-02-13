@@ -1,0 +1,3 @@
+Raisin is a REST API microframework for Perl. It's designed to run
+on Plack, providing a simple DSL to develop RESTful APIs easily.
+It was inspired by Grape.
