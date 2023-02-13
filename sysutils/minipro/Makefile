@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2022/05/24 10:22:17 nikita Exp $
+# $NetBSD: Makefile,v 1.4 2023/02/13 23:38:48 thorpej Exp $
 
-MINIPRO_VERS=	0.5
+MINIPRO_VERS=	0.6
 
 DISTNAME=	minipro-${MINIPRO_VERS}
 CATEGORIES=	sysutils
@@ -14,10 +14,7 @@ HOMEPAGE=	https://gitlab.com/DavidGriffith/minipro/
 COMMENT=	Control the MiniPRO TL866xx series of chip programmers
 LICENSE=	gnu-gpl-v3
 
-USE_TOOLS+=	gmake pkg-config bash:run
-
-# likely could be made portable...
-REPLACE_BASH+=	miniprohex
+USE_TOOLS+=	gmake pkg-config
 
 .include "../../devel/libusb1/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
