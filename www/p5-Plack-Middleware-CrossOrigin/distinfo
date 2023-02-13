@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/02/13 15:21:55 he Exp $
+
+BLAKE2s (Plack-Middleware-CrossOrigin-0.014.tar.gz) = 9362b723c25e8c729307cba79bbd29a15223aa0633028504da66b973cf79c8ae
+SHA512 (Plack-Middleware-CrossOrigin-0.014.tar.gz) = 2d945aa894b047e92603ef2820e0f942ec6bb538aa48d9637144d0a1b7debc92c19ccf64be20d46696ed1df0bff292732c29fdc70ff75d6800def2f39a900ea3
+Size (Plack-Middleware-CrossOrigin-0.014.tar.gz) = 17765 bytes
