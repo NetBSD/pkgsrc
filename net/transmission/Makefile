@@ -1,14 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2023/01/05 15:55:38 nia Exp $
+# $NetBSD: Makefile,v 1.33 2023/02/13 11:26:29 wiz Exp $
 
 CONFLICTS+=	Transmission-[0-9]*
-
-pre-configure:
-	touch ${WRKSRC}/po/Makefile
-
-CONFIGURE_ARGS+=	--disable-mac
-CONFIGURE_ARGS+=	--without-gtk
-
-PKGREVISION=	5
 
 RCD_SCRIPTS=		transmission
 

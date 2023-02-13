@@ -1,30 +1,32 @@
-# $NetBSD: Makefile,v 1.54 2023/01/29 21:17:31 ryoon Exp $
+# $NetBSD: Makefile,v 1.55 2023/02/13 11:26:29 wiz Exp $
 
 PKGNAME=	transmission-gtk-${VERSION}
-PKGREVISION=	8
 COMMENT=	Free, lightweight BitTorrent client (GTK version)
-
-INSTALL_ENV+=		INSTALL_ROOT=${DESTDIR}${PREFIX}
-
-CONFIGURE_ARGS+=	--disable-cli
-CONFIGURE_ARGS+=	--disable-daemon
-CONFIGURE_ARGS+=	--disable-mac
-CONFIGURE_ARGS+=	--with-gtk
 
 CONFLICTS+=		Transmission-gui-[0-9]*
 
 .include "../../net/transmission/Makefile.common"
 
-post-build:
-	cd ${WRKSRC}/gtk && ${SETENV} ${MAKE_ENV} make
-	cd ${WRKSRC}/po && ${SETENV} ${MAKE_ENV} make
+CMAKE_ARGS+=	-DENABLE_DAEMON=OFF
+CMAKE_ARGS+=	-DENABLE_GTK=ON
+CMAKE_ARGS+=	-DENABLE_QT=OFF
+CMAKE_ARGS+=	-DENABLE_MAC=OFF
+CMAKE_ARGS+=	-DENABLE_WEB=OFF
+CMAKE_ARGS+=	-DENABLE_UTILS=OFF
+CMAKE_ARGS+=	-DENABLE_CLI=OFF
+CMAKE_ARGS+=	-DINSTALL_DOC=OFF
+CMAKE_ARGS+=	-DENABLE_TESTS=OFF
 
-do-install:
-	cd ${WRKSRC}/gtk && ${SETENV} ${INSTALL_ENV} make install
-	cd ${WRKSRC}/po && ${SETENV} ${INSTALL_ENV} make install
+post-install:
+	${RM} -R ${DESTDIR}${PREFIX}/share/transmission/public_html
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
-.include "../../x11/gtk3/buildlink3.mk"
+# XXX: this doesn't work - builtin 0.16.1 is accepted
+BUILDLINK_API_DEPENDS.gettext+=	gettext-lib>=0.19.7
+.include "../../devel/gettext-lib/buildlink3.mk"
+# XXX: so force new gettext-tools, giving us new gettext-lib
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
+.include "../../x11/gtkmm4/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

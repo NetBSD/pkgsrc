@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.11 2020/07/22 13:36:52 wiz Exp $
+# $NetBSD: Makefile.common,v 1.12 2023/02/13 11:26:29 wiz Exp $
 #
 # used by net/transmission/Makefile
 # used by net/transmission-gtk/Makefile
 # used by net/transmission-qt/Makefile
 
-VERSION=	3.00
+VERSION=	4.0.0
 DISTNAME=	transmission-${VERSION}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=transmission/}
@@ -14,36 +14,27 @@ GITHUB_RELEASE=	${PKGVERSION_NOREV}
 MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://www.transmissionbt.com/
 COMMENT?=	Free, lightweight BitTorrent client
+# optionally, gnu-gpl-v3 instead of gnu-gpl-v2
+LICENSE=	gnu-gpl-v2 AND mit
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config intltool msgfmt
-EXTRACT_USING=		bsdtar
-
-# optionally, gnu-gpl-v3 instead of gnu-gpl-v2
-LICENSE=		gnu-gpl-v2 AND mit
 
 PATCHDIR=		${.CURDIR}/../../net/transmission/patches
 DISTINFO_FILE=		${.CURDIR}/../../net/transmission/distinfo
 
-GNU_CONFIGURE=		yes
-LDFLAGS+=		${BUILDLINK_LDADD.getopt} ${BUILDLINK_LDADD.gettext}
-
 .include "../../mk/bsd.prefs.mk"
-.if !empty(OPSYS:M*BSD) || ${OPSYS} == "DragonFly"
-CPPFLAGS+=		-DBSD
-.endif
 .if ${OPSYS} == "Darwin"
 LDFLAGS+=		-framework CoreFoundation
 .endif
 
-ALL_ENV+=	LIBEVENT_CFLAGS=-I${BUILDLINK_PREFIX.libevent}/include
-ALL_ENV+=	LIBEVENT_LIBS="-L${BUILDLINK_PREFIX.libevent}/lib ${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libevent}/lib -levent"
 BUILDLINK_API_DEPENDS.libevent+=	libevent>=2.0.10
 .include "../../devel/libevent/buildlink3.mk"
-ALL_ENV+=	OPENSSL_CFLAGS="-I${SSLBASE}/include"
-ALL_ENV+=	OPENSSL_LIBS="-L${SSLBASE}/lib -lcrypto -lssl"
-.include "../../devel/libgetopt/buildlink3.mk"
+.include "../../devel/libdeflate/buildlink3.mk"
+.include "../../net/miniupnpc/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
+.include "../../www/libpsl/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../mk/pthread.buildlink3.mk"
