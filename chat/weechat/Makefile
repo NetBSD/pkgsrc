@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.134 2022/10/26 10:31:16 wiz Exp $
+# $NetBSD: Makefile,v 1.135 2023/02/13 13:58:56 ryoon Exp $
 
-DISTNAME=	weechat-3.5
-PKGREVISION=	2
+DISTNAME=	weechat-3.8
 CATEGORIES=	chat
 MASTER_SITES=	https://www.weechat.org/files/src/
 EXTRACT_SUFX=	.tar.xz
@@ -15,6 +14,7 @@ LICENSE=	gnu-gpl-v3
 
 TOOL_DEPENDS+=	${RUBY_PKGPREFIX}-asciidoctor-[0-9]*:../../textproc/ruby-asciidoctor
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 USE_TOOLS+=	msgfmt pkg-config
 USE_LANGUAGES=	c99
 USE_CMAKE=	yes
@@ -37,6 +37,7 @@ USE_PKGLOCALEDIR=	yes
 LDFLAGS+=		${BUILDLINK_LDADD.gettext}
 LDFLAGS.Darwin+=	-lresolv
 LDFLAGS.SunOS+=		-lresolv
+LDFLAGS.NetBSD+=	-Wl,--copy-dt-needed-entries
 
 BUILDLINK_TRANSFORM+=	rm:-Werror-implicit-function-declaration
 
