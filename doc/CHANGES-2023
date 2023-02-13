@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1183 2023/02/13 11:27:06 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1184 2023/02/13 12:39:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1502,3 +1502,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/transmission to 4.0.0 [wiz 2023-02-13]
 	Updated net/transmission-gtk to 4.0.0 [wiz 2023-02-13]
 	Updated net/transmission-qt to 4.0.0 [wiz 2023-02-13]
+	Updated multimedia/mkvtoolnix to 74.0.0 [adam 2023-02-13]
+	Updated graphics/pngquant to 2.18.0 [adam 2023-02-13]
