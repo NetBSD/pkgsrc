@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.118 2022/09/24 07:48:06 nia Exp $
+$NetBSD: distinfo,v 1.119 2023/02/13 14:15:12 ryoon Exp $
 
-BLAKE2s (mono-6.12.0.122.tar.xz) = 0f4ef4106e8974fea9ddc2b61ab1b0ebd2a8182fb9f098ec9c46655b4ac1b867
-SHA512 (mono-6.12.0.122.tar.xz) = 0fbd4147498cc81e384933147eb6aa5c559d17a794a308af7ffa43dce51e0faefde24fc75e987ed804dcb161b52756944bc3611100fc0a4adcc260ca97ddaecd
-Size (mono-6.12.0.122.tar.xz) = 292266176 bytes
+BLAKE2s (mono-6.12.0.182.tar.xz) = b3edd4f0c550a23c2cfcd0a025e3090426efc4ebd5ab2adab40732f6b377a9ca
+SHA512 (mono-6.12.0.182.tar.xz) = 5f0f02f2adf89785af8f620c16d69fc97b87c9b39133286e6f1237a397f4842ea8d26802d9f802f8798a86540dc1bc3b5201428f218c78fbcf91f0d575cde512
+Size (mono-6.12.0.182.tar.xz) = 303230932 bytes
 SHA1 (patch-acceptance-tests_Makefile.in) = b2edf3ed54d3669c5651c6d63bb8fb04fae0fec0
 SHA1 (patch-acceptance-tests_microbench-perf_sh_in) = d46118c1685e3e48a5b8594bf7f77acd2bebaf94
 SHA1 (patch-configure.ac) = b43ae23e74790660435eb13ac358dc56ad243779
