@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1187 2023/02/13 14:15:37 ryoon Exp $
+$NetBSD: CHANGES-2023,v 1.1188 2023/02/13 14:35:14 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1507,3 +1507,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated mail/mew to 6.9 [taca 2023-02-13]
 	Updated chat/weechat to 3.8 [ryoon 2023-02-13]
 	Updated lang/mono to 6.12.0.182 [ryoon 2023-02-13]
+	Updated net/remmina to 1.4.29 [ryoon 2023-02-13]
