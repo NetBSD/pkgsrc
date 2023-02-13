@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/07/20 16:28:55 tnn Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/02/13 07:59:02 tnn Exp $
 share/kicad/template/A2_ISO5457-1999_ISO7200-2004-compact_ASMEY1435-2014_EN.kicad_wks
 share/kicad/template/A2_ISO5457-1999_ISO7200-2004-compact_DE.kicad_wks
 share/kicad/template/A2_ISO5457-1999_ISO7200-2004-compact_EN.kicad_wks
@@ -129,7 +129,28 @@ share/kicad/template/TI-LaunchPad-BoosterPack-40pin/TI-LaunchPad-BoosterPack-40p
 share/kicad/template/TI-LaunchPad-BoosterPack-40pin/meta/brd.png
 share/kicad/template/TI-LaunchPad-BoosterPack-40pin/meta/icon.png
 share/kicad/template/TI-LaunchPad-BoosterPack-40pin/meta/info.html
+share/kicad/template/aisler-2-layer-complex/aisler-2-layer-complex.kicad_dru
+share/kicad/template/aisler-2-layer-complex/aisler-2-layer-complex.kicad_pcb
+share/kicad/template/aisler-2-layer-complex/aisler-2-layer-complex.kicad_pro
+share/kicad/template/aisler-2-layer-complex/aisler-2-layer-complex.kicad_sch
+share/kicad/template/aisler-2-layer-complex/meta/button.png
+share/kicad/template/aisler-2-layer-complex/meta/drc.png
+share/kicad/template/aisler-2-layer-complex/meta/icon.png
+share/kicad/template/aisler-2-layer-complex/meta/info.html
+share/kicad/template/aisler-2-layer-complex/meta/install.png
+share/kicad/template/aisler-2-layer-complex/meta/logo_medium.png
+share/kicad/template/aisler-2-layer-complex/meta/pcm.png
+share/kicad/template/aisler-2-layer-complex/meta/trace-selection.png
+share/kicad/template/aisler-2-layer-complex/meta/via-selection.png
 share/kicad/template/gost_landscape.kicad_wks
 share/kicad/template/gost_portrait.kicad_wks
 share/kicad/template/pagelayout_default.kicad_wks
 share/kicad/template/pagelayout_logo.kicad_wks
+share/kicad/template/stm32f100-discovery-shield/fp-info-cache
+share/kicad/template/stm32f100-discovery-shield/meta/board_stm32vl_discovery.png
+share/kicad/template/stm32f100-discovery-shield/meta/icon.png
+share/kicad/template/stm32f100-discovery-shield/meta/info.html
+share/kicad/template/stm32f100-discovery-shield/stm32f100-discovery-shield.kicad_pcb
+share/kicad/template/stm32f100-discovery-shield/stm32f100-discovery-shield.kicad_prl
+share/kicad/template/stm32f100-discovery-shield/stm32f100-discovery-shield.kicad_pro
+share/kicad/template/stm32f100-discovery-shield/stm32f100-discovery-shield.kicad_sch

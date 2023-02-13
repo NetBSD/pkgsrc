@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2022/07/20 16:28:54 tnn Exp $
+# $NetBSD: Makefile,v 1.13 2023/02/13 07:59:01 tnn Exp $
 #
 
-V=		6.0.6
+V=		7.0.0
 DISTNAME=	kicad-doc-${V}
 CATEGORIES=	cad
 MASTER_SITES=	https://kicad-downloads.s3.cern.ch/docs/

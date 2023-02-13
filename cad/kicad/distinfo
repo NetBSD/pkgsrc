@@ -1,30 +1,21 @@
-$NetBSD: distinfo,v 1.21 2022/07/20 16:28:54 tnn Exp $
+$NetBSD: distinfo,v 1.22 2023/02/13 07:59:01 tnn Exp $
 
-BLAKE2s (kicad-6.0.6.tar.bz2) = ace4b90c25970921db9bcf5ed722c8d5e15e9f6d518ec9280acffd4e040530dd
-SHA512 (kicad-6.0.6.tar.bz2) = 530e6e3c821a59de3855d9ed156bb55bf653ea0af2ae81d3071e24ec292fcef04ab8864f172a76a814098a8027d919a432f6f88d2e1abe1ae5b876e7abdad46e
-Size (kicad-6.0.6.tar.bz2) = 33890691 bytes
+BLAKE2s (kicad-7.0.0.tar.bz2) = c9bad62e9b643f7d6a07dcb6d2a872dcc1375e6ea33db41d2664f7a71e30a14b
+SHA512 (kicad-7.0.0.tar.bz2) = cb6f4cf6eee9a583d3a622bf8e48e5b604b047df0d742081cff1e5e387cf97cc1cd3f03fb58a17b44c47085634b95eea642bd1a6805e80807dbe0473c8d19d96
+Size (kicad-7.0.0.tar.bz2) = 42583715 bytes
 SHA1 (patch-3d-viewer_3d_cache_sg_CMakeLists.txt) = c6e55d62646e890ba02b2a56dc3481f75ffba8a0
-SHA1 (patch-CMakeLists.txt) = 3f7178bc7c1001c89d3f6cce85a9dd1368acf00e
-SHA1 (patch-CMakeModules_BuildSteps_CreateDocsetDoxyfile.cmake) = 0e931bfe471d39694e6bf942f1b9e4de30e27d05
-SHA1 (patch-CMakeModules_BuildSteps_WritePlatformMetadata__linux.cmake) = ce50f57ec9621725277a2bf15638d3af6800aebd
-SHA1 (patch-CMakeModules_BuildSteps_WriteVersionHeader.cmake) = 235e2ceffe35f3b2b00dc44302ea3c9c4db86e39
-SHA1 (patch-CMakeModules_Functions.cmake) = d42fafcb65289324206bd2221cc1188b7ff805a8
-SHA1 (patch-CMakeModules_KiCadFullVersion.cmake) = c7a475b6c5bfc9617577279e73047e50906df919
-SHA1 (patch-CMakeModules_WritePlatformMetadata__macos.cmake) = d1e17ae45bdb1749559a36196c5bc303b675970f
-SHA1 (patch-CMakeModules_config.h.cmake) = 7d2edb2cf7482724d255b8db0232dd28f6b7e517
-SHA1 (patch-Documentation_docset_CMakeLists.txt) = be0e200fa6cd7667370e0430916e5b1135f5b864
-SHA1 (patch-bitmaps__png_CMakeLists.txt) = 4703eb15ecf44a9925f5d047885513ed34e4f596
-SHA1 (patch-common_CMakeLists.txt) = 020edca68947f6b6bbf611b7e82ba555db29c259
+SHA1 (patch-cmake_config.h.cmake) = 325b9c81e90477152b778e04c4fabe41548aa51d
 SHA1 (patch-common_lib__tree__model.cpp) = 9b98a1520aac99f835547e240a1cd7367db436e3
 SHA1 (patch-cvpcb_CMakeLists.txt) = 80a3735a7a4a7c54dd577b436e2c3b3527d5e496
-SHA1 (patch-eeschema_CMakeLists.txt) = c237961ba01e6d77852e5d02bce3f4973a287d63
-SHA1 (patch-gerbview_CMakeLists.txt) = a7c0ef0d03763a82f8a71033a6142646fe10388b
+SHA1 (patch-eeschema_CMakeLists.txt) = 0e00b5aa3df075f6f237eef114c4e55f37c96ea0
+SHA1 (patch-eeschema_sim_kibis_ibis__parser.cpp) = e173ccb32679174033540395e321abaee9eb2200
+SHA1 (patch-eeschema_sim_kibis_kibis.cpp) = 18d804db727498cffef4dffc36b30dbe2c608bcb
+SHA1 (patch-gerbview_CMakeLists.txt) = 4d2011a4dfc80ce8c8b0f4524823b25787b14cf5
 SHA1 (patch-include_kiway.h) = 7208f474e895ea07ba5e5f56bab46d4d529b9e57
-SHA1 (patch-kicad_CMakeLists.txt) = 7eebcb2cbb08e840d4cdbca2565400b65f0731f3
-SHA1 (patch-pagelayout__editor_CMakeLists.txt) = ecdc3d0ac8e33faf4f0a5d090149563bb26f6bb4
-SHA1 (patch-pcb__calculator_CMakeLists.txt) = ea6852cc3e5d8d4bf6760c905e999d65d5231c83
-SHA1 (patch-pcbnew_CMakeLists.txt) = d5259ede050e3557bfcb6596322a26b6bfc01173
+SHA1 (patch-pagelayout__editor_CMakeLists.txt) = 7e93ca6e41cd85e06ee6c35abbc28c7eb85eba37
+SHA1 (patch-pcb__calculator_CMakeLists.txt) = 60a1969722542991a4b72098a14683c10c78ae25
+SHA1 (patch-pcbnew_CMakeLists.txt) = f9263d5cf465d0d3d7f590d25c254a688a48c609
+SHA1 (patch-pcbnew_import__gfx_dxf__import__plugin.cpp) = f86123e3cf688025b2bfd07bea42359be9f96dce
 SHA1 (patch-plugins_3d_idf_CMakeLists.txt) = 9061c5c5eac3311625ba93e541d557007c83eddc
 SHA1 (patch-plugins_3d_vrml_CMakeLists.txt) = ea6942a953432c5c0124c57e9afb01f8a5c5325d
-SHA1 (patch-resources_CMakeLists.txt) = 55a41028d77d1854859ed27c8086cc7552b9f988
 SHA1 (patch-thirdparty_libcontext_libcontext.h) = cde252b7ee114f88527d953aa0c3ebcdd905c4a9

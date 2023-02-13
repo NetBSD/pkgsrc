@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2022/08/15 20:55:35 adam Exp $
+# $NetBSD: Makefile,v 1.13 2023/02/13 07:59:01 tnn Exp $
 
-DISTNAME=	kicad-packages3D-6.0.6
+DISTNAME=	kicad-packages3D-7.0.0
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_GITLAB:=kicad/libraries/}

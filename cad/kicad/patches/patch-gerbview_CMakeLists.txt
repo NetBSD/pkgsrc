@@ -1,12 +1,12 @@
-$NetBSD: patch-gerbview_CMakeLists.txt,v 1.4 2022/01/02 19:10:03 tnn Exp $
+$NetBSD: patch-gerbview_CMakeLists.txt,v 1.5 2023/02/13 07:59:01 tnn Exp $
 
 Force proper LDFLAGS for MODULE, as cmake doesn't set rpath for these
 
---- gerbview/CMakeLists.txt.orig	2021-12-22 13:32:19.000000000 +0000
+--- gerbview/CMakeLists.txt.orig	2023-02-11 21:35:58.397373228 +0000
 +++ gerbview/CMakeLists.txt
-@@ -173,6 +173,9 @@ target_include_directories( gerbview_kif
-     $<TARGET_PROPERTY:nlohmann_json,INTERFACE_INCLUDE_DIRECTORIES>
-     )
+@@ -169,6 +169,9 @@ if( MAKE_LINK_MAPS )
+         LINK_FLAGS "-Wl,-cref,-Map=_gerbview.kiface.map" )
+ endif()
  
 +set_property(TARGET gerbview_kiface APPEND_STRING
 +	PROPERTY LINK_FLAGS " $ENV{LDFLAGS}")
