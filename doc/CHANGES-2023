@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1193 2023/02/13 20:17:11 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1194 2023/02/13 21:47:19 jun Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1514,3 +1514,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/arandr to 0.1.11 [tsutsui 2023-02-13]
 	Updated devel/xorg-util-macros to 1.20.0 [wiz 2023-02-13]
 	Updated x11/xf86-video-s3virge to 1.11.1 [wiz 2023-02-13]
+	Updated emulators/nono to 0.5.1 [jun 2023-02-14]
