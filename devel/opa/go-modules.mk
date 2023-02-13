@@ -1,4 +1,5 @@
-# $NetBSD: go-modules.mk,v 1.9 2023/01/10 11:07:14 leot Exp $
+===> Extracting for opa-0.49.0
+# $NetBSD: go-modules.mk,v 1.10 2023/02/13 22:57:10 leot Exp $
 
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.26.0.mod
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.34.0.mod
@@ -78,8 +79,8 @@ GO_MODULE_FILES+=	github.com/cncf/xds/go/@v/v0.0.0-20210805033703-aa0b78936158.m
 GO_MODULE_FILES+=	github.com/cncf/xds/go/@v/v0.0.0-20210922020428-25de7278fc84.mod
 GO_MODULE_FILES+=	github.com/cncf/xds/go/@v/v0.0.0-20211001041855-01bcc9b48dfe.mod
 GO_MODULE_FILES+=	github.com/cncf/xds/go/@v/v0.0.0-20211011173535-cb28da3451f1.mod
-GO_MODULE_FILES+=	github.com/containerd/containerd/@v/v1.6.15.mod
-GO_MODULE_FILES+=	github.com/containerd/containerd/@v/v1.6.15.zip
+GO_MODULE_FILES+=	github.com/containerd/containerd/@v/v1.6.16.mod
+GO_MODULE_FILES+=	github.com/containerd/containerd/@v/v1.6.16.zip
 GO_MODULE_FILES+=	github.com/coreos/etcd/@v/v3.3.10+incompatible.mod
 GO_MODULE_FILES+=	github.com/coreos/go-etcd/@v/v2.0.0+incompatible.mod
 GO_MODULE_FILES+=	github.com/coreos/go-semver/@v/v0.2.0.mod
@@ -678,8 +679,8 @@ GO_MODULE_FILES+=	google.golang.org/genproto/@v/v0.0.0-20200729003335-053ba62fc0
 GO_MODULE_FILES+=	google.golang.org/genproto/@v/v0.0.0-20200804131852-c06518451d9c.mod
 GO_MODULE_FILES+=	google.golang.org/genproto/@v/v0.0.0-20200825200019-8632dd797987.mod
 GO_MODULE_FILES+=	google.golang.org/genproto/@v/v0.0.0-20211118181313-81c1377c94b1.mod
-GO_MODULE_FILES+=	google.golang.org/genproto/@v/v0.0.0-20220502173005-c8bf987b8c21.mod
-GO_MODULE_FILES+=	google.golang.org/genproto/@v/v0.0.0-20220502173005-c8bf987b8c21.zip
+GO_MODULE_FILES+=	google.golang.org/genproto/@v/v0.0.0-20221118155620-16455021b5e6.mod
+GO_MODULE_FILES+=	google.golang.org/genproto/@v/v0.0.0-20221118155620-16455021b5e6.zip
 GO_MODULE_FILES+=	google.golang.org/grpc/@v/v1.19.0.mod
 GO_MODULE_FILES+=	google.golang.org/grpc/@v/v1.20.1.mod
 GO_MODULE_FILES+=	google.golang.org/grpc/@v/v1.21.1.mod
@@ -698,8 +699,8 @@ GO_MODULE_FILES+=	google.golang.org/grpc/@v/v1.36.0.mod
 GO_MODULE_FILES+=	google.golang.org/grpc/@v/v1.40.0.mod
 GO_MODULE_FILES+=	google.golang.org/grpc/@v/v1.42.0.mod
 GO_MODULE_FILES+=	google.golang.org/grpc/@v/v1.46.0.mod
-GO_MODULE_FILES+=	google.golang.org/grpc/@v/v1.51.0.mod
-GO_MODULE_FILES+=	google.golang.org/grpc/@v/v1.51.0.zip
+GO_MODULE_FILES+=	google.golang.org/grpc/@v/v1.52.3.mod
+GO_MODULE_FILES+=	google.golang.org/grpc/@v/v1.52.3.zip
 GO_MODULE_FILES+=	google.golang.org/protobuf/@v/v0.0.0-20200109180630-ec00e32a8dfd.mod
 GO_MODULE_FILES+=	google.golang.org/protobuf/@v/v0.0.0-20200221191635-4d8936d0db64.mod
 GO_MODULE_FILES+=	google.golang.org/protobuf/@v/v0.0.0-20200228230310-ab0ca4ff8a60.mod
