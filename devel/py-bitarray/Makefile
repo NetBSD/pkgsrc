@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2023/02/08 10:25:42 adam Exp $
+# $NetBSD: Makefile,v 1.24 2023/02/13 10:44:14 adam Exp $
 
-DISTNAME=	bitarray-2.7.0
+DISTNAME=	bitarray-2.7.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/bitarray/}
