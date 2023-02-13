@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2023/02/12 16:34:15 vins Exp $
+$NetBSD: distinfo,v 1.2 2023/02/13 13:47:33 tnn Exp $
 
 BLAKE2s (cde-2.5.1.tar.gz) = 33d94122ff02dbabc3ea246f2af18b12a3d05b48ade9137c9c6cfd685d1eb3a3
 SHA512 (cde-2.5.1.tar.gz) = cacb9a1df21eb9959886ec2f6816fe99ec585e7264f548a85b03990f0e7fbc2dc6fa440cfe5e9ad29281360c30789c1b9ef3f96e1a711bfd2157064c640e803e
@@ -6,6 +6,7 @@ Size (cde-2.5.1.tar.gz) = 57543245 bytes
 SHA1 (patch-configure.ac) = 7730332dd970729872687757701454dd285a8100
 SHA1 (patch-lib_DtMmdb_btree__berkeley_memmove.c) = 50249e82ee21c012c46bd633fd8f3b640bc6dbc9
 SHA1 (patch-lib_DtMmdb_btree__berkeley_snprintf.c) = 93270c3217129086174c22b964e62c14c57f7d47
+SHA1 (patch-lib_tt_ttinstall.sh) = 28fa72978fd31af3bb6ec95c7bebc28534a66fec
 SHA1 (patch-programs_dtcm_libDtCmP_util.h) = 15f6d2595d30bbb1b432f4e557182e90dcd9803d
 SHA1 (patch-programs_dtlogin_Makefile.am) = 775e5417f7f0c38a70f6e3f85629940351ffad6a
 SHA1 (patch-programs_dtsearchpath_dtappg_Makefile.am) = b0a13e4b1b935c055736daa48302dafc1f9333c4
