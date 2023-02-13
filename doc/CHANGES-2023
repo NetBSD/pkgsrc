@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1185 2023/02/13 13:33:21 taca Exp $
+$NetBSD: CHANGES-2023,v 1.1186 2023/02/13 13:59:42 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1505,3 +1505,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated multimedia/mkvtoolnix to 74.0.0 [adam 2023-02-13]
 	Updated graphics/pngquant to 2.18.0 [adam 2023-02-13]
 	Updated mail/mew to 6.9 [taca 2023-02-13]
+	Updated chat/weechat to 3.8 [ryoon 2023-02-13]
