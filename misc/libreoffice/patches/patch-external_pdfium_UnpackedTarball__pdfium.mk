@@ -1,15 +1,15 @@
-$NetBSD: patch-external_pdfium_UnpackedTarball__pdfium.mk,v 1.6 2021/08/22 02:41:50 ryoon Exp $
+$NetBSD: patch-external_pdfium_UnpackedTarball__pdfium.mk,v 1.7 2023/02/13 14:59:36 ryoon Exp $
 
 * Support pkgsrc and NetBSD
 
---- external/pdfium/UnpackedTarball_pdfium.mk.orig	2021-08-16 19:56:28.000000000 +0000
+--- external/pdfium/UnpackedTarball_pdfium.mk.orig	2023-01-25 14:26:33.000000000 +0000
 +++ external/pdfium/UnpackedTarball_pdfium.mk
-@@ -18,6 +18,8 @@ pdfium_patches += c++20-comparison.patch
- pdfium_patches += cg-instead-of-carbon.patch.1
- # Android NDK 19 - that is known to work well - does not have 2 defines
- pdfium_patches += AndroidNDK19.patch.1
-+# NetBSD support
-+pdfium_patches += pkgsrc.patch.1
+@@ -25,6 +25,8 @@ pdfium_patches += abseil-trivial.patch
  
- # Work around <https://gcc.gnu.org/bugzilla/show_bug.cgi?id=94141> "c++20 rewritten operator==
- # recursive call mixing friend and external operators for template class" in GCC with
+ pdfium_patches += constexpr-template.patch
+ 
++pdfium_patches += pkgsrc.patch.1
++
+ $(eval $(call gb_UnpackedTarball_UnpackedTarball,pdfium))
+ 
+ $(eval $(call gb_UnpackedTarball_set_tarball,pdfium,$(PDFIUM_TARBALL)))
