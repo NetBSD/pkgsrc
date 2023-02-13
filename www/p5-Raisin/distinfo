@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/02/13 15:28:32 he Exp $
+
+BLAKE2s (Raisin-0.94.tar.gz) = 1a7176bb19f5b588c6b2c0abcb37aa06417e1c1d1ed50d5e13377a834c281017
+SHA512 (Raisin-0.94.tar.gz) = bf0d3d33b806f391b5df6070dc285d82ae64c5101937c2e51141ad8dd4a17afa73b7eb0f10796292668fd65d5713c69a94a020ba50664a808dec61e0ab2ff9e6
+Size (Raisin-0.94.tar.gz) = 66834 bytes
