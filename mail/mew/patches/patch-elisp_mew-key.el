@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.9 2014/04/29 13:41:05 taca Exp $
+$NetBSD: patch-elisp_mew-key.el,v 1.1 2023/02/13 13:32:43 taca Exp $
 
 * Specify default icon directory for pkgsrc.
 
---- mew-key.el.orig	2014-04-29 11:43:10.000000000 +0000
-+++ mew-key.el
+--- elisp/mew-key.el.orig	2023-02-13 03:51:46.000000000 +0000
++++ elisp/mew-key.el
 @@ -626,7 +626,7 @@
  	(if (file-exists-p (expand-file-name file path))
  	    (throw 'loop (expand-file-name "etc" path)))))))
