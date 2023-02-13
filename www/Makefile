@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1682 2023/02/12 19:58:51 vins Exp $
+# $NetBSD: Makefile,v 1.1683 2023/02/13 15:23:00 he Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -529,6 +529,7 @@ SUBDIR+=	p5-Plack-Handler-AnyEvent-SCGI
 SUBDIR+=	p5-Plack-Handler-SCGI
 SUBDIR+=	p5-Plack-Middleware-Auth-Digest
 SUBDIR+=	p5-Plack-Middleware-ConsoleLogger
+SUBDIR+=	p5-Plack-Middleware-CrossOrigin
 SUBDIR+=	p5-Plack-Middleware-Debug
 SUBDIR+=	p5-Plack-Middleware-Deflater
 SUBDIR+=	p5-Plack-Middleware-File-Sass
