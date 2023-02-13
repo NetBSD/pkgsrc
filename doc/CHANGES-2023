@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1177 2023/02/13 08:00:39 tnn Exp $
+$NetBSD: CHANGES-2023,v 1.1178 2023/02/13 08:18:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1487,6 +1487,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/zabbix60-frontend to 6.0.13 [otis 2023-02-12]
 	Updated sysutils/zabbix60-java to 6.0.13 [otis 2023-02-12]
 	Added www/libreddit version 0.29.0 [vins 2023-02-12]
+	Updated pkgtools/pbulk-base to 0.57 [joerg 2023-02-12]
 	Updated devel/binaryen to 112 [fcambus 2023-02-12]
 	Updated cad/kicad to 7.0.0 [tnn 2023-02-13]
 	Updated cad/kicad-doc to 7.0.0 [tnn 2023-02-13]
