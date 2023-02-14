@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/11/22 09:46:58 adam Exp $
+$NetBSD: distinfo,v 1.14 2023/02/14 16:09:11 adam Exp $
 
-BLAKE2s (packaging-21.3.tar.gz) = 3b174e17f0f21375a7b36ae330f1daba6f5cc35fc79ff51b504c1a1091f34ed8
-SHA512 (packaging-21.3.tar.gz) = 2e3aa276a4229ac7dc0654d586799473ced9761a83aa4159660d37ae1a2a8f30e987248dd0e260e2834106b589f259a57ce9936eef0dcc3c430a99ac6b663e05
-Size (packaging-21.3.tar.gz) = 84848 bytes
+BLAKE2s (packaging-23.0.tar.gz) = 935691da82fb68d3a57fdab559a2b0e98c3922da813e1891d1c066ecab57ce15
+SHA512 (packaging-23.0.tar.gz) = d8e2af37bf2acb665337983d14de2777d5dd6bda485699b9230d6fd4c21b01525407aa823966b60ac87ac231533b90261e87b371d747b679b6b6cc274ff635d8
+Size (packaging-23.0.tar.gz) = 126241 bytes
