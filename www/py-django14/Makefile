@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2022/11/09 13:14:18 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2023/02/14 18:09:43 nikita Exp $
 
 DISTNAME=	Django-1.4.22
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www python
 MASTER_SITES=	https://www.djangoproject.com/m/releases/${PKGVERSION_NOREV:R}/
 
@@ -29,9 +29,8 @@ pre-configure:
 .if empty(PKG_OPTIONS:Moracle)
 	rm -r ${WRKSRC}/django/db/backends/oracle
 .endif
-.if empty(PKG_OPTIONS:Mpgsql)
+	# broken, py-psycopg2 is python 3.x only
 	rm -r ${WRKSRC}/django/db/backends/postgresql_psycopg2
-.endif
 .if empty(PKG_OPTIONS:Msqlite)
 	rm -r ${WRKSRC}/django/db/backends/sqlite3
 .endif
@@ -40,7 +39,6 @@ BACKEND_PATH=		${PYSITELIB}/django/db/backends
 BACKEND_PATH_PLIST=	$${PYSITELIB}/django/db/backends
 
 PRINT_PLIST_AWK+=	{ gsub("^${BACKEND_PATH}/oracle/", "$${PLIST.oracle}${BACKEND_PATH_PLIST}/oracle/") }
-PRINT_PLIST_AWK+=	{ gsub("^${BACKEND_PATH}/postgresql_psycopg2/", "$${PLIST.pgsql}${BACKEND_PATH_PLIST}/postgresql_psycopg2/") }
 PRINT_PLIST_AWK+=	{ gsub("^${BACKEND_PATH}/sqlite3/", "$${PLIST.sqlite}${BACKEND_PATH_PLIST}/sqlite3/") }
 
 .include "../../lang/python/application.mk"
