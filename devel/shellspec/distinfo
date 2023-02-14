@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2023/02/14 21:26:29 schmonz Exp $
+
+BLAKE2s (shellspec-0.28.1.tar.gz) = f06188ae7896982cb2ce3a1e8bd33539950224326c80d49a36cef679c32901e5
+SHA512 (shellspec-0.28.1.tar.gz) = a3d1f582a3c76ef240ab9bd0ce3b8433d7ced766b6fa03ed724100917271c2c0ee04909cdc7ea2f92267dc11fdd890d52a4edcc2957c16dbbd331a718e5c564f
+Size (shellspec-0.28.1.tar.gz) = 440575 bytes
+SHA1 (patch-Makefile) = 38b3123b2b3ee0ae021bd2eab4ccd6b0e5514ffd
