@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2022/10/09 13:28:26 mef Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/02/14 14:32:31 tnn Exp $
 bin/hackrf_clock
 bin/hackrf_cpldjtag
 bin/hackrf_debug
@@ -11,7 +11,7 @@ include/libhackrf/hackrf.h
 lib/libhackrf.a
 lib/libhackrf.so
 lib/libhackrf.so.0
-lib/libhackrf.so.0.7.0
+lib/libhackrf.so.0.8.0
 lib/pkgconfig/libhackrf.pc
 share/hackerRF/COPYING
 share/hackerRF/RELEASENOTES
@@ -45,10 +45,26 @@ share/hackerRF/doc/hardware/jawbreaker-gerbers/jawbreaker-Inner2.gbr
 share/hackerRF/doc/hardware/jawbreaker-gerbers/jawbreaker-Inner3.gbr
 share/hackerRF/doc/hardware/jawbreaker-gerbers/jawbreaker.drl
 share/hackerRF/doc/hardware/jawbreaker-schematic.pdf
+share/hackerRF/doc/hardware/operacake-assembly.pdf
+share/hackerRF/doc/hardware/operacake-bom.csv
+share/hackerRF/doc/hardware/operacake-gerbers/README
+share/hackerRF/doc/hardware/operacake-gerbers/operacake-B_Mask.gbr
+share/hackerRF/doc/hardware/operacake-gerbers/operacake-B_Silkscreen.gbr
+share/hackerRF/doc/hardware/operacake-gerbers/operacake-C1F.gbr
+share/hackerRF/doc/hardware/operacake-gerbers/operacake-C2.gbr
+share/hackerRF/doc/hardware/operacake-gerbers/operacake-C3.gbr
+share/hackerRF/doc/hardware/operacake-gerbers/operacake-C4B.gbr
+share/hackerRF/doc/hardware/operacake-gerbers/operacake-Edge_Cuts.gbr
+share/hackerRF/doc/hardware/operacake-gerbers/operacake-F_Mask.gbr
+share/hackerRF/doc/hardware/operacake-gerbers/operacake-F_Paste.gbr
+share/hackerRF/doc/hardware/operacake-gerbers/operacake-F_Silkscreen.gbr
+share/hackerRF/doc/hardware/operacake-gerbers/operacake.drl
+share/hackerRF/doc/hardware/operacake-schematic.pdf
 share/hackerRF/doc/html/.buildinfo
 share/hackerRF/doc/html/LPC43XX_Debugging.html
 share/hackerRF/doc/html/LPC43XX_SGPIO_Configuration.html
 share/hackerRF/doc/html/_images/HackRF-One-fd0-0009.jpeg
+share/hackerRF/doc/html/_images/block-diagram-r9.png
 share/hackerRF/doc/html/_images/block-diagram.png
 share/hackerRF/doc/html/_images/max2837-1m75bw-at-2m.png
 share/hackerRF/doc/html/_images/max2837-1m75bw-at-8m.png
@@ -85,6 +101,11 @@ share/hackerRF/doc/html/_sources/jawbreaker.rst.txt
 share/hackerRF/doc/html/_sources/libhackrf_api.rst.txt
 share/hackerRF/doc/html/_sources/list_of_hardware_revisions.rst.txt
 share/hackerRF/doc/html/_sources/opera_cake.rst.txt
+share/hackerRF/doc/html/_sources/opera_cake_board_addressing.rst.txt
+share/hackerRF/doc/html/_sources/opera_cake_faq.rst.txt
+share/hackerRF/doc/html/_sources/opera_cake_hardware.rst.txt
+share/hackerRF/doc/html/_sources/opera_cake_modes_of_operation.rst.txt
+share/hackerRF/doc/html/_sources/opera_cake_port_configuration.rst.txt
 share/hackerRF/doc/html/_sources/rf_shield_installation.rst.txt
 share/hackerRF/doc/html/_sources/software_support.rst.txt
 share/hackerRF/doc/html/_sources/tips_tricks.rst.txt
@@ -182,6 +203,11 @@ share/hackerRF/doc/html/libhackrf_api.html
 share/hackerRF/doc/html/list_of_hardware_revisions.html
 share/hackerRF/doc/html/objects.inv
 share/hackerRF/doc/html/opera_cake.html
+share/hackerRF/doc/html/opera_cake_board_addressing.html
+share/hackerRF/doc/html/opera_cake_faq.html
+share/hackerRF/doc/html/opera_cake_hardware.html
+share/hackerRF/doc/html/opera_cake_modes_of_operation.html
+share/hackerRF/doc/html/opera_cake_port_configuration.html
 share/hackerRF/doc/html/rf_shield_installation.html
 share/hackerRF/doc/html/search.html
 share/hackerRF/doc/html/searchindex.js
@@ -208,6 +234,8 @@ share/hackerRF/firmware/common/LPC43xx_M4_memory.ld
 share/hackerRF/firmware/common/README
 share/hackerRF/firmware/common/bitband.c
 share/hackerRF/firmware/common/bitband.h
+share/hackerRF/firmware/common/clkin.c
+share/hackerRF/firmware/common/clkin.h
 share/hackerRF/firmware/common/configure_file.cmake
 share/hackerRF/firmware/common/cpld_jtag.c
 share/hackerRF/firmware/common/cpld_jtag.h
@@ -217,6 +245,8 @@ share/hackerRF/firmware/common/crc.c
 share/hackerRF/firmware/common/crc.h
 share/hackerRF/firmware/common/fault_handler.c
 share/hackerRF/firmware/common/fault_handler.h
+share/hackerRF/firmware/common/firmware_info.c
+share/hackerRF/firmware/common/firmware_info.h
 share/hackerRF/firmware/common/gpdma.c
 share/hackerRF/firmware/common/gpdma.h
 share/hackerRF/firmware/common/gpio.h
@@ -237,6 +267,13 @@ share/hackerRF/firmware/common/max2837.h
 share/hackerRF/firmware/common/max2837_regs.def
 share/hackerRF/firmware/common/max2837_target.c
 share/hackerRF/firmware/common/max2837_target.h
+share/hackerRF/firmware/common/max2839.c
+share/hackerRF/firmware/common/max2839.h
+share/hackerRF/firmware/common/max2839_regs.def
+share/hackerRF/firmware/common/max2839_target.c
+share/hackerRF/firmware/common/max2839_target.h
+share/hackerRF/firmware/common/max283x.c
+share/hackerRF/firmware/common/max283x.h
 share/hackerRF/firmware/common/max2871.c
 share/hackerRF/firmware/common/max2871.h
 share/hackerRF/firmware/common/max2871_regs.c
@@ -389,6 +426,7 @@ share/hackerRF/hardware/bubblegum/bubblegum.cmp
 share/hackerRF/hardware/bubblegum/bubblegum.net
 share/hackerRF/hardware/bubblegum/bubblegum.pro
 share/hackerRF/hardware/bubblegum/bubblegum.sch
+share/hackerRF/hardware/gsg-kicad-lib/CODE_OF_CONDUCT.md
 share/hackerRF/hardware/gsg-kicad-lib/LICENSE
 share/hackerRF/hardware/gsg-kicad-lib/README.md
 share/hackerRF/hardware/gsg-kicad-lib/gsg-modules.pretty/0402-SHORT-10MIL.kicad_mod
@@ -419,6 +457,7 @@ share/hackerRF/hardware/gsg-kicad-lib/gsg-modules.pretty/BU2032SM-BT.kicad_mod
 share/hackerRF/hardware/gsg-kicad-lib/gsg-modules.pretty/CUI_PJ-102[AB]H.kicad_mod
 share/hackerRF/hardware/gsg-kicad-lib/gsg-modules.pretty/DEA202484HT.kicad_mod
 share/hackerRF/hardware/gsg-kicad-lib/gsg-modules.pretty/DIP14.kicad_mod
+share/hackerRF/hardware/gsg-kicad-lib/gsg-modules.pretty/DSN1006-2.kicad_mod
 share/hackerRF/hardware/gsg-kicad-lib/gsg-modules.pretty/F5Q.kicad_mod
 share/hackerRF/hardware/gsg-kicad-lib/gsg-modules.pretty/FIL-DEA-0603.kicad_mod
 share/hackerRF/hardware/gsg-kicad-lib/gsg-modules.pretty/GREATFET-PROTO-AREA.kicad_mod
@@ -477,6 +516,7 @@ share/hackerRF/hardware/gsg-kicad-lib/gsg-modules.pretty/MHSS1105.kicad_mod
 share/hackerRF/hardware/gsg-kicad-lib/gsg-modules.pretty/OH4.kicad_mod
 share/hackerRF/hardware/gsg-kicad-lib/gsg-modules.pretty/POGOPIN-5-IMME.kicad_mod
 share/hackerRF/hardware/gsg-kicad-lib/gsg-modules.pretty/PinHeader_2x10_P2.54mm_Vertical_flipped.kicad_mod
+share/hackerRF/hardware/gsg-kicad-lib/gsg-modules.pretty/QFN-56-1EP_8x8mm_P0.5mm_EP6.5x6.5mm_ThermalVias.kicad_mod
 share/hackerRF/hardware/gsg-kicad-lib/gsg-modules.pretty/QFN12-3.kicad_mod
 share/hackerRF/hardware/gsg-kicad-lib/gsg-modules.pretty/QFN16-3.kicad_mod
 share/hackerRF/hardware/gsg-kicad-lib/gsg-modules.pretty/QFN20-4.kicad_mod
@@ -527,6 +567,8 @@ share/hackerRF/hardware/gsg-kicad-lib/gsg-modules.pretty/USB-MICROB-FCI-10103592
 share/hackerRF/hardware/gsg-kicad-lib/gsg-modules.pretty/USB-MICROB-FCI-10103592.kicad_mod
 share/hackerRF/hardware/gsg-kicad-lib/gsg-modules.pretty/VBPW34FASR.kicad_mod
 share/hackerRF/hardware/gsg-kicad-lib/gsg-modules.pretty/VSSOP8.kicad_mod
+share/hackerRF/hardware/gsg-kicad-lib/gsg-modules.pretty/XQFN10.kicad_mod
+share/hackerRF/hardware/gsg-kicad-lib/gsg-modules.pretty/XSON6.kicad_mod
 share/hackerRF/hardware/gsg-kicad-lib/gsg-modules.pretty/XTAL-AB26TRQ.kicad_mod
 share/hackerRF/hardware/gsg-kicad-lib/gsg-modules.pretty/XTAL3.2x2.5mm-EXT.kicad_mod
 share/hackerRF/hardware/gsg-kicad-lib/gsg-modules.pretty/XTAL3.2x2.5mm.kicad_mod
@@ -534,6 +576,7 @@ share/hackerRF/hardware/gsg-kicad-lib/gsg-modules.pretty/XTAL5.0x3.2mm.kicad_mod
 share/hackerRF/hardware/gsg-kicad-lib/gsg-modules.pretty/foxglove_jtag.kicad_mod
 share/hackerRF/hardware/gsg-kicad-lib/gsg-symbols.dcm
 share/hackerRF/hardware/gsg-kicad-lib/gsg-symbols.lib
+share/hackerRF/hardware/hackrf-one/74AUP2G58GU.kicad_sym
 share/hackerRF/hardware/hackrf-one/LICENSE
 share/hackerRF/hardware/hackrf-one/PlasticCase_CAD/Case_With_HackRF.png
 share/hackerRF/hardware/hackrf-one/PlasticCase_CAD/HackRF_One_Case.png
@@ -544,15 +587,15 @@ share/hackerRF/hardware/hackrf-one/acrylic_case/HackRF_One_Case_v2.dxf
 share/hackerRF/hardware/hackrf-one/acrylic_case/HackRF_One_Case_v2.pdf
 share/hackerRF/hardware/hackrf-one/acrylic_case/HackRF_One_Case_v2.svg
 share/hackerRF/hardware/hackrf-one/acrylic_case/README.md
-share/hackerRF/hardware/hackrf-one/baseband.sch
+share/hackerRF/hardware/hackrf-one/baseband.kicad_sch
+share/hackerRF/hardware/hackrf-one/clock.kicad_sch
 share/hackerRF/hardware/hackrf-one/fp-lib-table
-share/hackerRF/hardware/hackrf-one/frontend.sch
+share/hackerRF/hardware/hackrf-one/frontend.kicad_sch
 share/hackerRF/hardware/hackrf-one/hackrf-one-cache.lib
-share/hackerRF/hardware/hackrf-one/hackrf-one.cmp
 share/hackerRF/hardware/hackrf-one/hackrf-one.kicad_pcb
-share/hackerRF/hardware/hackrf-one/hackrf-one.pro
-share/hackerRF/hardware/hackrf-one/hackrf-one.sch
-share/hackerRF/hardware/hackrf-one/mcu.sch
+share/hackerRF/hardware/hackrf-one/hackrf-one.kicad_pro
+share/hackerRF/hardware/hackrf-one/hackrf-one.kicad_sch
+share/hackerRF/hardware/hackrf-one/mcu.kicad_sch
 share/hackerRF/hardware/hackrf-one/sym-lib-table
 share/hackerRF/hardware/jawbreaker/README
 share/hackerRF/hardware/jawbreaker/SoBv1_DP17298/README
