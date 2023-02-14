@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/12/06 15:17:56 wiz Exp $
+$NetBSD: distinfo,v 1.6 2023/02/14 18:29:33 adam Exp $
 
-BLAKE2s (parse_type-0.5.6.tar.gz) = 8930602244184c391668b5f797d6034e7f33d2abdc656ea60783e759b9850a63
-SHA512 (parse_type-0.5.6.tar.gz) = 6729af4383baceea48cf0bbd73e7e3f580cfbb867965814ba354ea5de6794583782c929557f6f1c7f8bd45703a69b2f890455cfd749690f851f1853562da0c40
-Size (parse_type-0.5.6.tar.gz) = 270970 bytes
-SHA1 (patch-setup.py) = d42f50aa828c5e4416257290fcdd8828fb9bcc7b
+BLAKE2s (parse_type-0.6.0.tar.gz) = 32a0aca82e353eb5a5f53d692e23804a3be86f000abcbfca798b886dac1d4e87
+SHA512 (parse_type-0.6.0.tar.gz) = bc0c20d485996761831c37f3be08639a67c145a87367f8b05bc3f3b67bed61888cb3318d060aa4ce068f9318f4a803311fbf20436df05f79433dcc8600881955
+Size (parse_type-0.6.0.tar.gz) = 272751 bytes
