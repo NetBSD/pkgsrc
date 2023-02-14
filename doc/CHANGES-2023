@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1223 2023/02/14 17:39:43 adam Exp $
+$NetBSD: CHANGES-2023,v 1.1224 2023/02/14 17:49:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1553,3 +1553,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/wireshark to 4.0.3nb2 [wiz 2023-02-14]
 	Updated net/haproxy to 2.7.3 [adam 2023-02-14]
 	Updated devel/py-tenacity to 8.2.1 [adam 2023-02-14]
+	Added devel/py-pyproject_hooks version 1.0.0 [adam 2023-02-14]
+	Updated math/py-asteval to 0.9.29 [adam 2023-02-14]
