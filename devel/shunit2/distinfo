@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:19:55 nia Exp $
+$NetBSD: distinfo,v 1.4 2023/02/14 15:08:42 schmonz Exp $
 
-BLAKE2s (shunit2-2.1.6.tgz) = cdec7f302931676a220c2104049a7a681292ee553cf0f6516833abc3e0eefeaa
-SHA512 (shunit2-2.1.6.tgz) = c78cf349d72a9048e4932108a62b2d1873019b9b1909c3fb1bd7e873e7bb62df58c1941d916508dc60ef6ba0261a2bc6ee9e25d654eefdcce997682f2bc748d7
-Size (shunit2-2.1.6.tgz) = 61558 bytes
+BLAKE2s (shunit2-2.1.8.tar.gz) = bb8d0ab4a89d8d3cd756eaaa7c4cf7a2c5754a7b4df40d26e34bea93eac597bc
+SHA512 (shunit2-2.1.8.tar.gz) = 15aaf28996c9fb5ee5419f63b50013a194a7416dea04eb34eae2481f05e0580bd2c6977ad002b421e2785e2024978fda869cad1ef4125857c2a5ea21bf44a06e
+Size (shunit2-2.1.8.tar.gz) = 52458 bytes
