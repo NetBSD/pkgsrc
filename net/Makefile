@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1501 2023/01/31 18:53:46 nikita Exp $
+# $NetBSD: Makefile,v 1.1502 2023/02/14 09:45:39 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -973,6 +973,7 @@ SUBDIR+=	traceroute-as
 SUBDIR+=	traceroute-nanog
 SUBDIR+=	trafshow
 SUBDIR+=	transmission
+SUBDIR+=	transmission-common
 SUBDIR+=	transmission-gtk
 SUBDIR+=	transmission-qt
 SUBDIR+=	trickle

@@ -1,7 +1,10 @@
-# $NetBSD: Makefile,v 1.66 2023/02/13 11:26:29 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2023/02/14 09:45:39 wiz Exp $
 
 PKGNAME=	transmission-qt-${VERSION}
+PKGREVISION=	1
 COMMENT=	Free, lightweight BitTorrent client (QT version)
+
+DEPENDS+=	transmission-common>=${VERSION}:../../net/transmission-common
 
 CMAKE_ARGS+=	-DENABLE_DAEMON=OFF
 CMAKE_ARGS+=	-DENABLE_GTK=OFF
@@ -19,6 +22,7 @@ CONFLICTS+=		Transmission-gui-[0-9]*
 
 INSTALLATION_DIRS=	share/applications
 
+# https://github.com/transmission/transmission/issues/4864
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/transmission-qt.desktop		\
 	${DESTDIR}${PREFIX}/share/applications/transmission-qt.desktop
@@ -26,4 +30,5 @@ post-install:
 
 .include "options.mk"
 .include "../../net/transmission/Makefile.common"
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
