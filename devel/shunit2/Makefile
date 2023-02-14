@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2017/07/04 10:06:56 jperkin Exp $
+# $NetBSD: Makefile,v 1.2 2023/02/14 15:08:42 schmonz Exp $
 
-DISTNAME=	shunit2-2.1.6
+DISTNAME=	shunit2-2.1.8
 CATEGORIES=	devel
-MASTER_SITES=	https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/shunit2/
-EXTRACT_SUFX=	.tgz
+MASTER_SITES=	${MASTER_SITE_GITHUB:=kward/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/kward/shunit2
@@ -17,6 +17,6 @@ NO_BUILD=	yes
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/src/shunit2 ${DESTDIR}${PREFIX}/bin/shunit2
+	${INSTALL_SCRIPT} ${WRKSRC}/shunit2 ${DESTDIR}${PREFIX}/bin/shunit2
 
 .include "../../mk/bsd.pkg.mk"
