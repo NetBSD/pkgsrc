@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2023/01/29 21:16:55 ryoon Exp $
+# $NetBSD: Makefile,v 1.33 2023/02/14 17:35:43 he Exp $
 #
 
 DISTNAME=	kimera-2.11
@@ -11,7 +11,9 @@ HOMEPAGE=	http://kimera.osdn.jp/
 COMMENT=	Kanji Input MEthod for RAgamuffins
 LICENSE=	gnu-gpl-v3
 
-USE_LANGUAGES=	c++
+USE_LANGUAGES=	gnu++03
+
+BUILDLINK_TRANSFORM+=	rm:-std=c++98
 
 INSTALL_MAKE_FLAGS+=	INSTALL_ROOT=${DESTDIR}
 
