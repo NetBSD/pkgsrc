@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2022/11/22 13:28:32 adam Exp $
+# $NetBSD: Makefile,v 1.37 2023/02/14 19:09:59 adam Exp $
 
-DISTNAME=	mypy-0.991
+DISTNAME=	mypy-1.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mypy/}
@@ -20,7 +20,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 USE_PKG_RESOURCES=	yes
 
 .include "../../lang/python/pyversion.mk"
-.if ${_PYTHON_VERSION} < 311
+.if ${_PYTHON_VERSION} != 311
 DEPENDS+=	${PYPKGPREFIX}-tomli>=1.1.0:../../textproc/py-tomli
 .endif
 
