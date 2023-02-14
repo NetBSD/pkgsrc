@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2022/11/08 08:57:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.25 2023/02/14 19:09:59 adam Exp $
 bin/dmypy-${PYVERSSUFFIX}
 bin/mypy-${PYVERSSUFFIX}
 bin/mypyc-${PYVERSSUFFIX}
@@ -52,6 +52,9 @@ ${PYSITELIB}/mypy/checkstrformat.pyo
 ${PYSITELIB}/mypy/config_parser.py
 ${PYSITELIB}/mypy/config_parser.pyc
 ${PYSITELIB}/mypy/config_parser.pyo
+${PYSITELIB}/mypy/constant_fold.py
+${PYSITELIB}/mypy/constant_fold.pyc
+${PYSITELIB}/mypy/constant_fold.pyo
 ${PYSITELIB}/mypy/constraints.py
 ${PYSITELIB}/mypy/constraints.pyc
 ${PYSITELIB}/mypy/constraints.pyo
@@ -88,6 +91,9 @@ ${PYSITELIB}/mypy/errorcodes.pyo
 ${PYSITELIB}/mypy/errors.py
 ${PYSITELIB}/mypy/errors.pyc
 ${PYSITELIB}/mypy/errors.pyo
+${PYSITELIB}/mypy/evalexpr.py
+${PYSITELIB}/mypy/evalexpr.pyc
+${PYSITELIB}/mypy/evalexpr.pyo
 ${PYSITELIB}/mypy/expandtype.py
 ${PYSITELIB}/mypy/expandtype.pyc
 ${PYSITELIB}/mypy/expandtype.pyo
@@ -1210,6 +1216,9 @@ ${PYSITELIB}/mypyc/irbuild/main.pyo
 ${PYSITELIB}/mypyc/irbuild/mapper.py
 ${PYSITELIB}/mypyc/irbuild/mapper.pyc
 ${PYSITELIB}/mypyc/irbuild/mapper.pyo
+${PYSITELIB}/mypyc/irbuild/match.py
+${PYSITELIB}/mypyc/irbuild/match.pyc
+${PYSITELIB}/mypyc/irbuild/match.pyo
 ${PYSITELIB}/mypyc/irbuild/nonlocalcontrol.py
 ${PYSITELIB}/mypyc/irbuild/nonlocalcontrol.pyc
 ${PYSITELIB}/mypyc/irbuild/nonlocalcontrol.pyo
@@ -1330,6 +1339,7 @@ ${PYSITELIB}/mypyc/test-data/fixtures/testutil.pyo
 ${PYSITELIB}/mypyc/test-data/fixtures/typing-full.pyi
 ${PYSITELIB}/mypyc/test-data/irbuild-any.test
 ${PYSITELIB}/mypyc/test-data/irbuild-basic.test
+${PYSITELIB}/mypyc/test-data/irbuild-bool.test
 ${PYSITELIB}/mypyc/test-data/irbuild-bytes.test
 ${PYSITELIB}/mypyc/test-data/irbuild-classes.test
 ${PYSITELIB}/mypyc/test-data/irbuild-constant-fold.test
@@ -1342,6 +1352,7 @@ ${PYSITELIB}/mypyc/test-data/irbuild-i64.test
 ${PYSITELIB}/mypyc/test-data/irbuild-int.test
 ${PYSITELIB}/mypyc/test-data/irbuild-isinstance.test
 ${PYSITELIB}/mypyc/test-data/irbuild-lists.test
+${PYSITELIB}/mypyc/test-data/irbuild-match.test
 ${PYSITELIB}/mypyc/test-data/irbuild-nested.test
 ${PYSITELIB}/mypyc/test-data/irbuild-optional.test
 ${PYSITELIB}/mypyc/test-data/irbuild-set.test
@@ -1372,6 +1383,7 @@ ${PYSITELIB}/mypyc/test-data/run-imports.test
 ${PYSITELIB}/mypyc/test-data/run-integers.test
 ${PYSITELIB}/mypyc/test-data/run-lists.test
 ${PYSITELIB}/mypyc/test-data/run-loops.test
+${PYSITELIB}/mypyc/test-data/run-match.test
 ${PYSITELIB}/mypyc/test-data/run-misc.test
 ${PYSITELIB}/mypyc/test-data/run-multimodule.test
 ${PYSITELIB}/mypyc/test-data/run-mypy-sim.test
@@ -1449,12 +1461,12 @@ ${PYSITELIB}/mypyc/test/test_serialization.pyo
 ${PYSITELIB}/mypyc/test/test_struct.py
 ${PYSITELIB}/mypyc/test/test_struct.pyc
 ${PYSITELIB}/mypyc/test/test_struct.pyo
-${PYSITELIB}/mypyc/test/test_subtype.py
-${PYSITELIB}/mypyc/test/test_subtype.pyc
-${PYSITELIB}/mypyc/test/test_subtype.pyo
 ${PYSITELIB}/mypyc/test/test_tuplename.py
 ${PYSITELIB}/mypyc/test/test_tuplename.pyc
 ${PYSITELIB}/mypyc/test/test_tuplename.pyo
+${PYSITELIB}/mypyc/test/test_typeops.py
+${PYSITELIB}/mypyc/test/test_typeops.pyc
+${PYSITELIB}/mypyc/test/test_typeops.pyo
 ${PYSITELIB}/mypyc/test/testutil.py
 ${PYSITELIB}/mypyc/test/testutil.pyc
 ${PYSITELIB}/mypyc/test/testutil.pyo
