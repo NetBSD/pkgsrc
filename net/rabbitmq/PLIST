@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.56 2023/02/01 08:14:57 adam Exp $
+@comment $NetBSD: PLIST,v 1.57 2023/02/14 16:04:09 adam Exp $
 lib/erlang/autocomplete/bash_autocomplete.sh
 lib/erlang/autocomplete/zsh_autocomplete.sh
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/INSTALL
@@ -662,7 +662,7 @@ lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbit-${PKGVERSION}/includ
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbit-${PKGVERSION}/include/vhost.hrl
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbit-${PKGVERSION}/include/vhost_v2.hrl
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbit-${PKGVERSION}/priv/schema/rabbit.schema
-lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbit-3.11.8/ebin/rabbit_cuttlefish.beam
+lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbit-${PKGVERSION}/ebin/rabbit_cuttlefish.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbit_common-${PKGVERSION}/ebin/app_utils.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbit_common-${PKGVERSION}/ebin/code_version.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbit_common-${PKGVERSION}/ebin/credit_flow.beam
@@ -1019,8 +1019,9 @@ lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_management-${PKGVE
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_management-${PKGVERSION}/priv/www/js/tmpl/users.ejs
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_management-${PKGVERSION}/priv/www/js/tmpl/vhost.ejs
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_management-${PKGVERSION}/priv/www/js/tmpl/vhosts.ejs
-lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_management-3.11.8/ebin/rabbit_mgmt_login.beam
-lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_management-3.11.8/ebin/rabbit_mgmt_wm_hash_password.beam
+lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_management-${PKGVERSION}/ebin/rabbit_mgmt_features.beam
+lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_management-${PKGVERSION}/ebin/rabbit_mgmt_login.beam
+lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_management-${PKGVERSION}/ebin/rabbit_mgmt_wm_hash_password.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_management_agent-${PKGVERSION}/ebin/Elixir.RabbitMQ.CLI.Ctl.Commands.ResetStatsDbCommand.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_management_agent-${PKGVERSION}/ebin/exometer_slide.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_management_agent-${PKGVERSION}/ebin/rabbit_mgmt_agent_app.beam
