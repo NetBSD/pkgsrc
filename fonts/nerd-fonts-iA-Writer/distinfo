@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/02/14 19:01:23 nikita Exp $
+
+BLAKE2s (nerd-fonts/2.2.2/iA-Writer.zip) = 3d98e4176ee02c010875192586b8dc63ac1085ae882db55690f27fd005931951
+SHA512 (nerd-fonts/2.2.2/iA-Writer.zip) = 9aba2c3a9493d908ad43803e52b07f310ec4e0f50f8f0c1df4b89279d16a33bd8db0b715d609efca1c05c99d972828f7f54a261b82ae9a372cf5465df338ba16
+Size (nerd-fonts/2.2.2/iA-Writer.zip) = 60120460 bytes
