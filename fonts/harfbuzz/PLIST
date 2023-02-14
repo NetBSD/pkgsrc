@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.66 2023/02/10 14:41:50 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.67 2023/02/14 15:55:40 wiz Exp $
+bin/hb-info
 bin/hb-ot-shape-closure
 bin/hb-shape
 bin/hb-subset
@@ -32,6 +33,7 @@ include/harfbuzz/hb-ot-name.h
 include/harfbuzz/hb-ot-shape.h
 include/harfbuzz/hb-ot-var.h
 include/harfbuzz/hb-ot.h
+include/harfbuzz/hb-paint.h
 include/harfbuzz/hb-set.h
 include/harfbuzz/hb-shape-plan.h
 include/harfbuzz/hb-shape.h
@@ -125,10 +127,12 @@ ${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-4-4-0.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-5-0-0.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-5-3-0.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-6-0-0.html
+${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-7-0-0.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-full.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/apple-advanced-typography-api.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/buffers-language-script-and-direction.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/building.html
+${PLIST.doc}share/gtk-doc/html/harfbuzz/ch07s05.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/clusters.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/core-api.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/customizing-unicode-functions.html
@@ -142,12 +146,14 @@ ${PLIST.doc}share/gtk-doc/html/harfbuzz/graphite-shaping.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-aat-layout.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-blob.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-buffer.html
+${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-cairo.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-common.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-coretext.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-deprecated.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-directwrite.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-draw.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-face.html
+${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-features.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-font.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-ft.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-gdi.html
@@ -164,6 +170,7 @@ ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-ot-metrics.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-ot-name.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-ot-shape.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-ot-var.html
+${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-paint.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-set.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-shape-plan.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-shape.html
@@ -177,6 +184,7 @@ ${PLIST.doc}share/gtk-doc/html/harfbuzz/home.png
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/index.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/install-harfbuzz.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/integration-api.html
+${PLIST.doc}share/gtk-doc/html/harfbuzz/integration-cairo.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/integration-coretext.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/integration-freetype.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/integration-icu.html
