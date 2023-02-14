@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/07/22 21:53:59 kamil Exp $
+# $NetBSD: Makefile,v 1.4 2023/02/14 15:45:58 he Exp $
 
 DISTNAME=	honggfuzz-2.3.1
 CATEGORIES=	devel
@@ -15,4 +15,5 @@ USE_TOOLS+=	bash:run gmake
 
 .include "../../lang/libBlocksRuntime/buildlink3.mk"
 .include "../../devel/capstone/buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"

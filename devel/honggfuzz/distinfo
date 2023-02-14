@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2022/05/08 10:23:25 nia Exp $
+$NetBSD: distinfo,v 1.7 2023/02/14 15:45:58 he Exp $
 
 BLAKE2s (honggfuzz-2.3.1.tar.gz) = f1d9be563b12d563ef8ccc5b3324c61036031b90413a86874d0c0f83fb9522a4
 SHA512 (honggfuzz-2.3.1.tar.gz) = 36b3182a0075289467c385b5e03f881fd20193b938dfcec6e364f502637ffc797b6b8ddaddbc5851c4482758088e40eee1e4ca2850bff0294c04c04a036359bf
 Size (honggfuzz-2.3.1.tar.gz) = 65221820 bytes
 SHA1 (patch-Makefile) = a1464b208d260fca3cf3b9a50f07e2709024a1a0
+SHA1 (patch-netbsd_trace.c) = 7571a7cde3b52a868d77649c96e31d8d98441e31
