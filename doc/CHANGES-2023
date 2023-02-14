@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1203 2023/02/14 09:46:28 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1204 2023/02/14 09:52:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1529,3 +1529,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/transmission to 4.0.0nb1 [wiz 2023-02-14]
 	Updated net/transmission-gtk to 4.0.0nb1 [wiz 2023-02-14]
 	Updated net/transmission-qt to 4.0.0nb1 [wiz 2023-02-14]
+	Updated www/py-django3 to 3.2.18 [wiz 2023-02-14]
