@@ -72,8 +72,8 @@ bittorrent		Enable bittorrent support.
 blacklist		Enable blacklist support.
 blender-exppython	Enable the Experimental Python support.
 blocklist		Enable blocklist support.
-bluray			Enable libbluray support.
 bluez			Enable bluetooth support via bluez for Linux.
+bluray			Enable libbluray support.
 boehm-gc		Use Boehm's garbage collector for memory allocation.
 bozohttpd-do-htpasswd	Enable .htpasswd file processing in bozohttpd.
 brotli			Provides the BROTLI_COMPRESS output filter.
@@ -132,12 +132,12 @@ dante                   Enable Dante support.
 dar-int32		Use 32-bit integers for file lengths in Dar.
 dar-int64		Use 64-bit integers for file lengths in Dar.
 darwin			Build and/or run on Darwin and Mac OS X.
-dca			Enable DTS Coherent Acoustics support using libdca.
 db2			Enable db2 support.
 db4			Enable db4 support.
 dbh			Enable DBH support.
 dblatex-fig		Enable fig support in dblatex.
 dbus			Enable dbus (desktop bus) support.
+dca			Enable DTS Coherent Acoustics support using libdca.
 debug			Enable debugging facilities in the package.
 debug-info		Enable debug info in generated binaries (e.g. for crash analysis), but not full scale debugging.
 deliver-suid		Install deliver executable setuid root.
@@ -504,6 +504,7 @@ libmtp			Enable MTP via libmtp support.
 libnotify		Enable libnotify support.
 libofa			Enable Open Fingerprint Architecture library support.
 libofx			Enable OFX support.
+libotf			Enable libotf support.
 libpcap			Enable libpcap support.
 libsmi			Use libsmi for SMI MIB support.
 libsoup			Use libsoup for SOUP support.
