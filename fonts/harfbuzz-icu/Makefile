@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2023/02/10 14:41:50 ryoon Exp $
+# $NetBSD: Makefile,v 1.15 2023/02/14 12:30:22 tnn Exp $
 
 # XXX: hack to override meson installation
 INSTALL_DIRS=
@@ -39,8 +39,8 @@ harfbuzz-icu-install:
 	${LN} -f -s ${HARFBUZZ_ICU_LIBNAME} libharfbuzz-icu.dylib
 .else
 	cd ${DESTDIR}${PREFIX}/lib && \
-	${INSTALL_LIB} -l s ${HARFBUZZ_ICU_LIBNAME} libharfbuzz-icu.so.0 && \
-	${INSTALL_LIB} -l s ${HARFBUZZ_ICU_LIBNAME} libharfbuzz-icu.so
+	${LN} -f -s ${HARFBUZZ_ICU_LIBNAME} libharfbuzz-icu.so.0 && \
+	${LN} -f -s ${HARFBUZZ_ICU_LIBNAME} libharfbuzz-icu.so
 .endif
 
 do-install: harfbuzz-icu-install
