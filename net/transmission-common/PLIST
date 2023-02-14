@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2023/02/14 09:44:25 wiz Exp $
+share/transmission/public_html/images/favicon.ico
+share/transmission/public_html/images/favicon.png
+share/transmission/public_html/images/webclip-icon.png
+share/transmission/public_html/index.html
+share/transmission/public_html/transmission-app.js
+share/transmission/public_html/transmission-app.js.LICENSE.txt
