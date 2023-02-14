@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2022/10/09 13:28:26 mef Exp $
+$NetBSD: distinfo,v 1.9 2023/02/14 14:32:31 tnn Exp $
 
-BLAKE2s (hackrf-2022.09.1.tar.xz) = a4ebd7433eb5f84a21e3c824f15a96de1c2e92fcdb9421b361676c12856f3825
-SHA512 (hackrf-2022.09.1.tar.xz) = c3b8b6f18cb80e3506c09dc71f2c01c127ad6d88ed028be3b659953cf7bb1e36b9dba83b4bb04c916bd7c2b66faeae1e602c53368e1e56454d6fe831961e01ee
-Size (hackrf-2022.09.1.tar.xz) = 21534956 bytes
+BLAKE2s (hackrf-2023.01.1.tar.xz) = 7458a6eeb0116e8fcb5c2648e76d870d9e19af826782084dd73a8dd2e8423c23
+SHA512 (hackrf-2023.01.1.tar.xz) = 7c2ef9c5c050e258a0d1695240f9163955cb3ea9ab9163aad6bdbdebfdb82cde9925818ced3323342fe9c4ddb80dcedbc5a7986caaa4e0b7036e8e07bec0296e
+Size (hackrf-2023.01.1.tar.xz) = 23030956 bytes
