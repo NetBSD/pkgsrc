@@ -1,10 +1,10 @@
-$NetBSD: patch-vendor_github.com_containers_common_pkg_config_config__darwin.go,v 1.1 2022/11/06 12:39:15 tnn Exp $
+$NetBSD: patch-vendor_github.com_containers_common_pkg_config_config__darwin.go,v 1.2 2023/02/14 00:33:13 tnn Exp $
 
 Adjust paths. Needed to find gvproxy.
 
---- vendor/github.com/containers/common/pkg/config/config_darwin.go.orig	2021-12-08 18:41:11
+--- vendor/github.com/containers/common/pkg/config/config_darwin.go.orig	2023-02-08 19:03:18.000000000 +0000
 +++ vendor/github.com/containers/common/pkg/config/config_darwin.go
-@@ -17,6 +17,8 @@ var defaultHelperBinariesDir = []string{
+@@ -29,6 +29,8 @@ func ifRootlessConfigPath() (string, err
  }
  
  var defaultHelperBinariesDir = []string{
