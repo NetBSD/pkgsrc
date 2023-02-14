@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2022/10/10 10:18:55 adam Exp $
+# $NetBSD: Makefile,v 1.5 2023/02/14 17:39:21 adam Exp $
 
-DISTNAME=	tenacity-8.1.0
+DISTNAME=	tenacity-8.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tenacity/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/jd/tenacity
 COMMENT=	Retry code until it succeeds
 LICENSE=	apache-2.0
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 TEST_DEPENDS+=	${PYPKGPREFIX}-tornado>=4.5:../../www/py-tornado
 TEST_DEPENDS+=	${PYPKGPREFIX}-typeguard-[0-9]*:../../devel/py-typeguard
 
