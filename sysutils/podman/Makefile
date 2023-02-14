@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2022/11/06 12:39:14 tnn Exp $
+# $NetBSD: Makefile,v 1.6 2023/02/14 00:33:12 tnn Exp $
 
-DISTNAME=	podman-3.4.4
-PKGREVISION=	1
+DISTNAME=	podman-4.4.1
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=containers/}
@@ -21,17 +20,17 @@ DEPENDS+=	qemu-[0-9]*:../../emulators/qemu
 DEPENDS+=	gvproxy-[0-9]*:../../net/gvproxy
 
 SUBST_CLASSES+=		prefix
-SUBST_FILES.prefix+=	pkg/machine/qemu/options_darwin_arm64.go
 SUBST_FILES.prefix+=	vendor/github.com/containers/common/pkg/config/config_darwin.go
 SUBST_FILES.prefix+=	vendor/github.com/containers/common/pkg/config/config_netbsd.go
+SUBST_FILES.prefix+=	vendor/github.com/containers/storage/types/options_netbsd.go
 SUBST_STAGE.prefix=	pre-configure
 SUBST_MESSAGE.prefix=	fix PREFIX inside patch
-SUBST_VARS.prefix=	PREFIX
+SUBST_VARS.prefix=	PREFIX VARBASE
 
 CHECK_PORTABILITY_SKIP+=	vendor/github.com/containers/buildah/release.sh
 
 .if ${OPSYS} != "Linux"
-BUILD_TARGET=	podman-remote-${OPSYS:tl}
+BUILD_TARGET=	podman-remote
 
 INSTALLATION_DIRS+=	bin
 do-install:
