@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1220 2023/02/14 16:26:23 adam Exp $
+$NetBSD: CHANGES-2023,v 1.1221 2023/02/14 16:48:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1549,3 +1549,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated multimedia/libvpx to 1.13.0 [wiz 2023-02-14]
 	Updated archivers/py-lz4 to 4.3.2 [adam 2023-02-14]
 	Updated archivers/py-zipp to 3.13.0 [adam 2023-02-14]
+	Updated security/gnutls to 3.8.0 [wiz 2023-02-14]
