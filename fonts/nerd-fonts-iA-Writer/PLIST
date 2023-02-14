@@ -1,0 +1,81 @@
+@comment $NetBSD: PLIST,v 1.1 2023/02/14 19:01:23 nikita Exp $
+share/fonts/X11/OTF/iM Writing Duospace Bold Nerd Font Complete Mono Windows Compatible.otf
+share/fonts/X11/OTF/iM Writing Duospace Bold Nerd Font Complete Mono.otf
+share/fonts/X11/OTF/iM Writing Duospace Bold Nerd Font Complete Windows Compatible.otf
+share/fonts/X11/OTF/iM Writing Duospace Bold Nerd Font Complete.otf
+share/fonts/X11/OTF/iM Writing Duospace BoldItalic Nerd Font Complete Mono Windows Compatible.otf
+share/fonts/X11/OTF/iM Writing Duospace BoldItalic Nerd Font Complete Mono.otf
+share/fonts/X11/OTF/iM Writing Duospace BoldItalic Nerd Font Complete Windows Compatible.otf
+share/fonts/X11/OTF/iM Writing Duospace BoldItalic Nerd Font Complete.otf
+share/fonts/X11/OTF/iM Writing Duospace Italic Nerd Font Complete Mono Windows Compatible.otf
+share/fonts/X11/OTF/iM Writing Duospace Italic Nerd Font Complete Mono.otf
+share/fonts/X11/OTF/iM Writing Duospace Italic Nerd Font Complete Windows Compatible.otf
+share/fonts/X11/OTF/iM Writing Duospace Italic Nerd Font Complete.otf
+share/fonts/X11/OTF/iM Writing Duospace Regular Nerd Font Complete Mono Windows Compatible.otf
+share/fonts/X11/OTF/iM Writing Duospace Regular Nerd Font Complete Mono.otf
+share/fonts/X11/OTF/iM Writing Duospace Regular Nerd Font Complete Windows Compatible.otf
+share/fonts/X11/OTF/iM Writing Duospace Regular Nerd Font Complete.otf
+share/fonts/X11/TTF/iM Writing Duo S Bold Italic Nerd Font Complete Mono Windows Compatible.ttf
+share/fonts/X11/TTF/iM Writing Duo S Bold Italic Nerd Font Complete Mono.ttf
+share/fonts/X11/TTF/iM Writing Duo S Bold Italic Nerd Font Complete Windows Compatible.ttf
+share/fonts/X11/TTF/iM Writing Duo S Bold Italic Nerd Font Complete.ttf
+share/fonts/X11/TTF/iM Writing Duo S Bold Nerd Font Complete Mono Windows Compatible.ttf
+share/fonts/X11/TTF/iM Writing Duo S Bold Nerd Font Complete Mono.ttf
+share/fonts/X11/TTF/iM Writing Duo S Bold Nerd Font Complete Windows Compatible.ttf
+share/fonts/X11/TTF/iM Writing Duo S Bold Nerd Font Complete.ttf
+share/fonts/X11/TTF/iM Writing Duo S Italic Nerd Font Complete Mono Windows Compatible.ttf
+share/fonts/X11/TTF/iM Writing Duo S Italic Nerd Font Complete Mono.ttf
+share/fonts/X11/TTF/iM Writing Duo S Italic Nerd Font Complete Windows Compatible.ttf
+share/fonts/X11/TTF/iM Writing Duo S Italic Nerd Font Complete.ttf
+share/fonts/X11/TTF/iM Writing Duo S Regular Nerd Font Complete Mono Windows Compatible.ttf
+share/fonts/X11/TTF/iM Writing Duo S Regular Nerd Font Complete Mono.ttf
+share/fonts/X11/TTF/iM Writing Duo S Regular Nerd Font Complete Windows Compatible.ttf
+share/fonts/X11/TTF/iM Writing Duo S Regular Nerd Font Complete.ttf
+share/fonts/X11/TTF/iM Writing Duospace Bold Nerd Font Complete Mono Windows Compatible.ttf
+share/fonts/X11/TTF/iM Writing Duospace Bold Nerd Font Complete Mono.ttf
+share/fonts/X11/TTF/iM Writing Duospace Bold Nerd Font Complete Windows Compatible.ttf
+share/fonts/X11/TTF/iM Writing Duospace Bold Nerd Font Complete.ttf
+share/fonts/X11/TTF/iM Writing Duospace BoldItalic Nerd Font Complete Mono Windows Compatible.ttf
+share/fonts/X11/TTF/iM Writing Duospace BoldItalic Nerd Font Complete Mono.ttf
+share/fonts/X11/TTF/iM Writing Duospace BoldItalic Nerd Font Complete Windows Compatible.ttf
+share/fonts/X11/TTF/iM Writing Duospace BoldItalic Nerd Font Complete.ttf
+share/fonts/X11/TTF/iM Writing Duospace Italic Nerd Font Complete Mono Windows Compatible.ttf
+share/fonts/X11/TTF/iM Writing Duospace Italic Nerd Font Complete Mono.ttf
+share/fonts/X11/TTF/iM Writing Duospace Italic Nerd Font Complete Windows Compatible.ttf
+share/fonts/X11/TTF/iM Writing Duospace Italic Nerd Font Complete.ttf
+share/fonts/X11/TTF/iM Writing Duospace Regular Nerd Font Complete Mono Windows Compatible.ttf
+share/fonts/X11/TTF/iM Writing Duospace Regular Nerd Font Complete Mono.ttf
+share/fonts/X11/TTF/iM Writing Duospace Regular Nerd Font Complete Windows Compatible.ttf
+share/fonts/X11/TTF/iM Writing Duospace Regular Nerd Font Complete.ttf
+share/fonts/X11/TTF/iM Writing Mono S Bold Italic Nerd Font Complete Mono Windows Compatible.ttf
+share/fonts/X11/TTF/iM Writing Mono S Bold Italic Nerd Font Complete Mono.ttf
+share/fonts/X11/TTF/iM Writing Mono S Bold Italic Nerd Font Complete Windows Compatible.ttf
+share/fonts/X11/TTF/iM Writing Mono S Bold Italic Nerd Font Complete.ttf
+share/fonts/X11/TTF/iM Writing Mono S Bold Nerd Font Complete Mono Windows Compatible.ttf
+share/fonts/X11/TTF/iM Writing Mono S Bold Nerd Font Complete Mono.ttf
+share/fonts/X11/TTF/iM Writing Mono S Bold Nerd Font Complete Windows Compatible.ttf
+share/fonts/X11/TTF/iM Writing Mono S Bold Nerd Font Complete.ttf
+share/fonts/X11/TTF/iM Writing Mono S Italic Nerd Font Complete Mono Windows Compatible.ttf
+share/fonts/X11/TTF/iM Writing Mono S Italic Nerd Font Complete Mono.ttf
+share/fonts/X11/TTF/iM Writing Mono S Italic Nerd Font Complete Windows Compatible.ttf
+share/fonts/X11/TTF/iM Writing Mono S Italic Nerd Font Complete.ttf
+share/fonts/X11/TTF/iM Writing Mono S Regular Nerd Font Complete Mono Windows Compatible.ttf
+share/fonts/X11/TTF/iM Writing Mono S Regular Nerd Font Complete Mono.ttf
+share/fonts/X11/TTF/iM Writing Mono S Regular Nerd Font Complete Windows Compatible.ttf
+share/fonts/X11/TTF/iM Writing Mono S Regular Nerd Font Complete.ttf
+share/fonts/X11/TTF/iM Writing Quattro S Bold Italic Nerd Font Complete Mono Windows Compatible.ttf
+share/fonts/X11/TTF/iM Writing Quattro S Bold Italic Nerd Font Complete Mono.ttf
+share/fonts/X11/TTF/iM Writing Quattro S Bold Italic Nerd Font Complete Windows Compatible.ttf
+share/fonts/X11/TTF/iM Writing Quattro S Bold Italic Nerd Font Complete.ttf
+share/fonts/X11/TTF/iM Writing Quattro S Bold Nerd Font Complete Mono Windows Compatible.ttf
+share/fonts/X11/TTF/iM Writing Quattro S Bold Nerd Font Complete Mono.ttf
+share/fonts/X11/TTF/iM Writing Quattro S Bold Nerd Font Complete Windows Compatible.ttf
+share/fonts/X11/TTF/iM Writing Quattro S Bold Nerd Font Complete.ttf
+share/fonts/X11/TTF/iM Writing Quattro S Italic Nerd Font Complete Mono Windows Compatible.ttf
+share/fonts/X11/TTF/iM Writing Quattro S Italic Nerd Font Complete Mono.ttf
+share/fonts/X11/TTF/iM Writing Quattro S Italic Nerd Font Complete Windows Compatible.ttf
+share/fonts/X11/TTF/iM Writing Quattro S Italic Nerd Font Complete.ttf
+share/fonts/X11/TTF/iM Writing Quattro S Regular Nerd Font Complete Mono Windows Compatible.ttf
+share/fonts/X11/TTF/iM Writing Quattro S Regular Nerd Font Complete Mono.ttf
+share/fonts/X11/TTF/iM Writing Quattro S Regular Nerd Font Complete Windows Compatible.ttf
+share/fonts/X11/TTF/iM Writing Quattro S Regular Nerd Font Complete.ttf
