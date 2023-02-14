@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2023/01/29 21:15:49 ryoon Exp $
+# $NetBSD: Makefile,v 1.11 2023/02/14 16:05:57 wiz Exp $
 
 DISTNAME=	luasdl2-2.0.5.6.0
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME:S/^lua//1}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	devel lua
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Tangent128/}
 GITHUB_PROJECT=	luasdl2
