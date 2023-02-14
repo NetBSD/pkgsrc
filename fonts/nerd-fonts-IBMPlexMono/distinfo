@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/02/14 19:08:02 nikita Exp $
+
+BLAKE2s (nerd-fonts/2.2.2/IBMPlexMono.zip) = edf34c58a7e53a8547b45acb83fc826049748029dd671554feac0d94fa09bf9c
+SHA512 (nerd-fonts/2.2.2/IBMPlexMono.zip) = 1015993be5ae8fb444be240ff1293751fa9e3a6202fc8663008f432bc52dc20785457c24ada77069a2dbc91b35ebd912184abe742e4b33e1147e13b1d9190f8d
+Size (nerd-fonts/2.2.2/IBMPlexMono.zip) = 36124052 bytes
