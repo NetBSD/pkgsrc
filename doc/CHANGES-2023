@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1200 2023/02/14 07:13:05 fcambus Exp $
+$NetBSD: CHANGES-2023,v 1.1201 2023/02/14 07:59:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1522,3 +1522,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/podman to 4.4.1 [tnn 2023-02-14]
 	Updated security/putty to 0.78 [ryoon 2023-02-14]
 	Added editors/poke version 3.0 [fcambus 2023-02-14]
+	Updated x11/xf86-video-trident to 1.4.0 [wiz 2023-02-14]
