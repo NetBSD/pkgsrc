@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1222 2023/02/14 16:51:21 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1223 2023/02/14 17:39:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1551,3 +1551,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated archivers/py-zipp to 3.13.0 [adam 2023-02-14]
 	Updated security/gnutls to 3.8.0 [wiz 2023-02-14]
 	Updated net/wireshark to 4.0.3nb2 [wiz 2023-02-14]
+	Updated net/haproxy to 2.7.3 [adam 2023-02-14]
+	Updated devel/py-tenacity to 8.2.1 [adam 2023-02-14]
