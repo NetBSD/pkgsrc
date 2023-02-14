@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 11:34:44 nia Exp $
+$NetBSD: distinfo,v 1.12 2023/02/14 07:59:47 wiz Exp $
 
-BLAKE2s (xf86-video-trident-1.3.8.tar.bz2) = a64d45b1bdcb86c649ed22f6739e12bf1035e7ce09de590022cdf2ec054580c7
-SHA512 (xf86-video-trident-1.3.8.tar.bz2) = f971e9441c9ff7374d53d30f6746232903221665ae52560d5716762c2233cc6d0065b631a4fed98bf194d9827572cc42da577a2e6e06ba014e6ce42343b63f66
-Size (xf86-video-trident-1.3.8.tar.bz2) = 387742 bytes
+BLAKE2s (xf86-video-trident-1.4.0.tar.xz) = 21bc2775a19dfaf1143d0dd9b2958d5eba9768bc2e226dc5e2c00a4387966957
+SHA512 (xf86-video-trident-1.4.0.tar.xz) = 86f349ccfcf7c704e77a95882f63ac92f55819a3a00388f294777762fed04dde2197dd6124cded9e787af1982fecc43ad4d0af34307845e616a73d5a2ba750b9
+Size (xf86-video-trident-1.4.0.tar.xz) = 320016 bytes
