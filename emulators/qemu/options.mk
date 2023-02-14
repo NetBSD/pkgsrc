@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.18 2022/10/25 18:42:57 jperkin Exp $
+# $NetBSD: options.mk,v 1.19 2023/02/14 00:35:56 tnn Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qemu
 PKG_SUPPORTED_OPTIONS=	debug-info gtk3 iscsi jack sdl spice
@@ -80,8 +80,10 @@ CONFIGURE_ARGS+=	--disable-xkbcommon
 
 # NB to successfully build virtfs-proxy-helper, the upstream Linux
 # header/development libraries for libcap and libattr must be installed.
-.if !empty(PKG_OPTIONS:Mvirtfs-proxy-helper)
+.if ${OPSYS} == "Linux" && !empty(PKG_OPTIONS:Mvirtfs-proxy-helper)
 PLIST.virtfs-proxy-helper=	yes
+CONFIGURE_ARGS+=		--enable-virtfs
+.elif ${OPSYS} == "Darwin"
 CONFIGURE_ARGS+=		--enable-virtfs
 .else
 CONFIGURE_ARGS+=		--disable-virtfs
