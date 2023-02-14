@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1201 2023/02/14 07:59:56 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1202 2023/02/14 08:52:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1523,3 +1523,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/putty to 0.78 [ryoon 2023-02-14]
 	Added editors/poke version 3.0 [fcambus 2023-02-14]
 	Updated x11/xf86-video-trident to 1.4.0 [wiz 2023-02-14]
+	Updated www/py-nbformat to 5.7.3 [adam 2023-02-14]
+	Updated devel/py-pylint to 2.16.2 [adam 2023-02-14]
