@@ -1,8 +1,17 @@
-# $NetBSD: options.mk,v 1.28 2022/11/01 08:59:25 adam Exp $
+# $NetBSD: options.mk,v 1.29 2023/02/14 16:51:08 wiz Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.wireshark
-PKG_SUPPORTED_OPTIONS=	http2 lua qt5 spandsp
-PKG_SUGGESTED_OPTIONS=	http2 lua qt5
+PKG_OPTIONS_VAR=		PKG_OPTIONS.wireshark
+PKG_SUPPORTED_OPTIONS=		http2 lua spandsp
+PKG_OPTIONS_OPTIONAL_GROUPS=	gui
+PKG_OPTIONS_GROUP.gui=		qt5 qt6
+PKG_SUGGESTED_OPTIONS=		http2 lua
+
+.if ${OPSYS} == "Darwin"
+# problems building qt6 on Darwin as of 2023/01/30
+PKG_SUGGESTED_OPTIONS+=	qt5
+.else
+PKG_SUGGESTED_OPTIONS+=	qt6
+.endif
 
 .include "../../mk/bsd.options.mk"
 
@@ -22,15 +31,25 @@ PLIST.lua=		yes
 CMAKE_ARGS+=		-DENABLE_LUA=OFF
 .endif
 
-.if !empty(PKG_OPTIONS:Mqt5)
-.  include "../../x11/qt5-qtsvg/buildlink3.mk"
-.  include "../../x11/qt5-qttools/buildlink3.mk"
+.if !empty(PKG_OPTIONS:Mqt5) || !empty(PKG_OPTIONS:Mqt6)
+.  if !empty(PKG_OPTIONS:Mqt5)
+.    include "../../x11/qt5-qtsvg/buildlink3.mk"
+.    include "../../x11/qt5-qttools/buildlink3.mk"
+.    if ${OPSYS} == "Darwin"
+.      include "../../x11/qt5-qtmacextras/buildlink3.mk"
+.    else
+.      include "../../x11/qt5-qtx11extras/buildlink3.mk"
+.    endif
+.  elif !empty(PKG_OPTIONS:Mqt6)
+CMAKE_ARGS+=		-DUSE_qt6=ON
+.    include "../../graphics/qt6-qtsvg/buildlink3.mk"
+.    include "../../multimedia/qt6-qtmultimedia/buildlink3.mk"
+.    include "../../devel/qt6-qttools/buildlink3.mk"
+.    include "../../devel/qt6-qt5compat/buildlink3.mk"
+.  endif
 PLIST.qt=		yes
-.  if ${OPSYS} == "Darwin"
-.    include "../../x11/qt5-qtmacextras/buildlink3.mk"
-.  else
+.  if ${OPSYS} != "Darwin"
 PLIST.icons=		yes
-.    include "../../x11/qt5-qtx11extras/buildlink3.mk"
 POST_INSTALL_TARGETS+=	install-icons
 INSTALLATION_DIRS+=	share/applications
 INSTALLATION_DIRS+=	share/icons/hicolor/scalable/apps
