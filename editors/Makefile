@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.234 2022/12/08 08:24:49 wiz Exp $
+# $NetBSD: Makefile,v 1.235 2023/02/14 07:12:45 fcambus Exp $
 #
 
 COMMENT=	Text and binary editors
@@ -127,6 +127,7 @@ SUBDIR+=	p5-Padre-Plugin-XS
 SUBDIR+=	pico
 SUBDIR+=	pluma
 SUBDIR+=	poedit
+SUBDIR+=	poke
 SUBDIR+=	py-editor
 SUBDIR+=	py-jedi
 SUBDIR+=	qtcreator
