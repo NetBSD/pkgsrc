@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1198 2023/02/14 00:40:39 tnn Exp $
+$NetBSD: CHANGES-2023,v 1.1199 2023/02/14 03:28:36 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1520,3 +1520,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/minipro to 0.6 [thorpej 2023-02-13]
 	Updated net/gvproxy to 0.5.0 [tnn 2023-02-14]
 	Updated sysutils/podman to 4.4.1 [tnn 2023-02-14]
+	Updated security/putty to 0.78 [ryoon 2023-02-14]
