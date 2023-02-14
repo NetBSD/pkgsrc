@@ -1,12 +1,14 @@
-$NetBSD: patch-utils_utils__supported.go,v 1.1 2021/12/18 18:11:48 leot Exp $
+$NetBSD: patch-utils_utils__supported.go,v 1.2 2023/02/14 00:33:13 tnn Exp $
 
 Add NetBSD support
 
---- utils/utils_supported.go.orig	2021-09-30 18:44:31.000000000 +0000
+--- utils/utils_supported.go.orig	2023-02-08 19:03:18.000000000 +0000
 +++ utils/utils_supported.go
-@@ -1,4 +1,4 @@
--// +build linux darwin
-+// +build linux darwin netbsd
+@@ -1,5 +1,5 @@
+-//go:build linux || darwin || freebsd
+-// +build linux darwin freebsd
++//go:build linux || darwin || freebsd || netbsd
++// +build linux darwin freebsd netbsd
  
  package utils
  

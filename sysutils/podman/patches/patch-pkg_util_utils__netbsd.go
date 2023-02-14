@@ -1,4 +1,4 @@
-$NetBSD: patch-pkg_util_utils__netbsd.go,v 1.1 2021/09/04 20:28:42 maya Exp $
+$NetBSD: patch-pkg_util_utils__netbsd.go,v 1.2 2023/02/14 00:33:13 tnn Exp $
 
 Add netbsd support
 
@@ -12,5 +12,5 @@ Add netbsd support
 +)
 +
 +func GetContainerPidInformationDescriptors() ([]string, error) {
-+	return []string{}, errors.New("this function is not supported on darwin")
++	return []string{}, errors.New("this function is not supported on NetBSD")
 +}
