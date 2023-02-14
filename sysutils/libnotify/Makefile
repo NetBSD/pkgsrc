@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2023/02/14 13:01:58 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2023/02/14 14:03:53 wiz Exp $
 
 DISTNAME=	libnotify-0.8.1
 CATEGORIES=	sysutils gnome
@@ -20,12 +20,8 @@ USE_TOOLS+=		pkg-config
 
 PKGCONFIG_OVERRIDE=		output/meson-private/libnotify.pc
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
-# for testing
-#MAKE_ENV+=			LD_LIBRARY_PATH=${WRKSRC}/output/${PKGBASE}
 
 MESON_ARGS+=		-Dintrospection=enabled
-# no tests are included
-MESON_ARGS+=		-Dtests=false
 
 # Apply removals to post-wrapper transformed arguments.
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script
@@ -40,8 +36,5 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.38.0
 .include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_DEPMETHOD.gobject-introspection=	build
 .include "../../devel/gobject-introspection/buildlink3.mk"
-# gtk3 only needed by tests (which are not included)
-#BUILDLINK_DEPMETHOD.gtk3=	build
-#.include "../../x11/gtk3/buildlink3.mk"
 .include "../../devel/meson/build.mk"
 .include "../../mk/bsd.pkg.mk"
