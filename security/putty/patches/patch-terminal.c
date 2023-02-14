@@ -1,10 +1,10 @@
-$NetBSD: patch-terminal.c,v 1.5 2019/12/19 22:22:33 joerg Exp $
+$NetBSD: patch-terminal.c,v 1.6 2023/02/14 03:28:07 ryoon Exp $
 
 Make the home/end keys work on BSD servers as well as Linux ones
 
---- terminal.c.orig	2019-09-22 09:14:51.000000000 +0000
-+++ terminal.c
-@@ -6892,8 +6892,17 @@ int format_small_keypad_key(char *buf, T
+--- terminal/terminal.c.orig	2022-10-28 17:19:48.000000000 +0000
++++ terminal/terminal.c
+@@ -7508,8 +7508,17 @@ int format_small_keypad_key(char *buf, T
          } else {
              p += sprintf(p, "\x1B[%c", codes[code-1]);
          }
@@ -22,5 +22,5 @@ Make the home/end keys work on BSD servers as well as Linux ones
 +	    he = code == 1 ? "\x1BOH" : "\x1BOF";
 +	p += sprintf((char *) p, "%s", he);
      } else {
-         p += sprintf(p, "\x1B[%d~", code);
-     }
+         if (term->vt52_mode) {
+ 	    p += sprintf(p, "\x1B[%d~", code);

@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.73 2023/01/29 21:17:41 ryoon Exp $
+# $NetBSD: Makefile,v 1.74 2023/02/14 03:28:07 ryoon Exp $
 #
 
-DISTNAME=	putty-0.76
-PKGREVISION=	4
+DISTNAME=	putty-0.78
 CATEGORIES=	security
 MASTER_SITES=	http://the.earth.li/~sgtatham/putty/${PKGVERSION_NOREV}/
 
@@ -11,13 +10,10 @@ HOMEPAGE=	https://www.chiark.greenend.org.uk/~sgtatham/putty/
 COMMENT=	Free implementation of Telnet and SSH for Win32 and Unix platforms
 LICENSE=	mit
 
-USE_TOOLS+=	gmake pkg-config
-BUILD_DIRS=	unix
+USE_CMAKE=	yes
+USE_TOOLS+=	perl pkg-config
 
-MAKE_FILE=	Makefile.gtk
-MAKE_FLAGS+=	mandir=${PREFIX}/${PKGMANDIR}
-
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+#INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 .include "options.mk"
 
