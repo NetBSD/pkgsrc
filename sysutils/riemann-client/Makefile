@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2022/10/26 10:31:08 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2023/02/14 15:49:38 he Exp $
 
 GITHUB_PROJECT=	riemann-c-client
 GITHUB_TAG=	${DISTNAME}
@@ -28,4 +28,5 @@ pre-configure:
 
 .include "../../devel/protobuf-c/buildlink3.mk"
 .include "../../textproc/json-c/buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
