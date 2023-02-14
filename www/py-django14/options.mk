@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.13 2022/08/29 10:33:05 wiz Exp $
+# $NetBSD: options.mk,v 1.14 2023/02/14 18:09:43 nikita Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.django
-PKG_SUPPORTED_OPTIONS=	oracle pgsql sqlite
-PKG_SUGGESTED_OPTIONS=	pgsql
+PKG_SUPPORTED_OPTIONS=	oracle sqlite
+PKG_SUGGESTED_OPTIONS=	sqlite
 
 .include "../../mk/bsd.options.mk"
 
@@ -11,11 +11,6 @@ PLIST_VARS+=	${PKG_SUPPORTED_OPTIONS}
 .if !empty(PKG_OPTIONS:Moracle)
 DEPENDS+=	${PYPKGPREFIX}-cx_Oracle-[0-9]*:../../databases/py-cx_Oracle
 PLIST.oracle=	yes
-.endif
-
-.if !empty(PKG_OPTIONS:Mpgsql)
-DEPENDS+=	${PYPKGPREFIX}-psycopg2-[0-9]*:../../databases/py-psycopg2
-PLIST.pgsql=	yes
 .endif
 
 .if !empty(PKG_OPTIONS:Msqlite)
