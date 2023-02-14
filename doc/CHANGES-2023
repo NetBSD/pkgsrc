@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1225 2023/02/14 18:29:50 adam Exp $
+$NetBSD: CHANGES-2023,v 1.1226 2023/02/14 18:43:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1557,3 +1557,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/py-asteval to 0.9.29 [adam 2023-02-14]
 	Updated devel/py-sure to 2.0.1 [adam 2023-02-14]
 	Updated textproc/py-parse_type to 0.6.0 [adam 2023-02-14]
+	Updated devel/git to 2.39.2 [adam 2023-02-14]
