@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2022/08/29 10:33:05 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/02/14 18:09:43 nikita Exp $
 bin/django-admin.py
 ${PYSITELIB}/${EGG_INFODIR}
 ${PYSITELIB}/django/__init__.py
@@ -4867,27 +4867,6 @@ ${PLIST.oracle}${PYSITELIB}/django/db/backends/oracle/creation.pyo
 ${PLIST.oracle}${PYSITELIB}/django/db/backends/oracle/introspection.py
 ${PLIST.oracle}${PYSITELIB}/django/db/backends/oracle/introspection.pyc
 ${PLIST.oracle}${PYSITELIB}/django/db/backends/oracle/introspection.pyo
-${PLIST.pgsql}${PYSITELIB}/django/db/backends/postgresql_psycopg2/__init__.py
-${PLIST.pgsql}${PYSITELIB}/django/db/backends/postgresql_psycopg2/__init__.pyc
-${PLIST.pgsql}${PYSITELIB}/django/db/backends/postgresql_psycopg2/__init__.pyo
-${PLIST.pgsql}${PYSITELIB}/django/db/backends/postgresql_psycopg2/base.py
-${PLIST.pgsql}${PYSITELIB}/django/db/backends/postgresql_psycopg2/base.pyc
-${PLIST.pgsql}${PYSITELIB}/django/db/backends/postgresql_psycopg2/base.pyo
-${PLIST.pgsql}${PYSITELIB}/django/db/backends/postgresql_psycopg2/client.py
-${PLIST.pgsql}${PYSITELIB}/django/db/backends/postgresql_psycopg2/client.pyc
-${PLIST.pgsql}${PYSITELIB}/django/db/backends/postgresql_psycopg2/client.pyo
-${PLIST.pgsql}${PYSITELIB}/django/db/backends/postgresql_psycopg2/creation.py
-${PLIST.pgsql}${PYSITELIB}/django/db/backends/postgresql_psycopg2/creation.pyc
-${PLIST.pgsql}${PYSITELIB}/django/db/backends/postgresql_psycopg2/creation.pyo
-${PLIST.pgsql}${PYSITELIB}/django/db/backends/postgresql_psycopg2/introspection.py
-${PLIST.pgsql}${PYSITELIB}/django/db/backends/postgresql_psycopg2/introspection.pyc
-${PLIST.pgsql}${PYSITELIB}/django/db/backends/postgresql_psycopg2/introspection.pyo
-${PLIST.pgsql}${PYSITELIB}/django/db/backends/postgresql_psycopg2/operations.py
-${PLIST.pgsql}${PYSITELIB}/django/db/backends/postgresql_psycopg2/operations.pyc
-${PLIST.pgsql}${PYSITELIB}/django/db/backends/postgresql_psycopg2/operations.pyo
-${PLIST.pgsql}${PYSITELIB}/django/db/backends/postgresql_psycopg2/version.py
-${PLIST.pgsql}${PYSITELIB}/django/db/backends/postgresql_psycopg2/version.pyc
-${PLIST.pgsql}${PYSITELIB}/django/db/backends/postgresql_psycopg2/version.pyo
 ${PYSITELIB}/django/db/backends/signals.py
 ${PYSITELIB}/django/db/backends/signals.pyc
 ${PYSITELIB}/django/db/backends/signals.pyo
