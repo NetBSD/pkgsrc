@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1207 2023/02/14 14:42:46 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1208 2023/02/14 15:08:47 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1533,3 +1533,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/libnotify to 0.8.1 [wiz 2023-02-14]
 	Updated ham/hackrf to 2023.01.1 [tnn 2023-02-14]
 	Updated net/transmission-gtk to 4.0.0nb2 [wiz 2023-02-14]
+	Updated devel/shunit2 to 2.1.8 [schmonz 2023-02-14]
