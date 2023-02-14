@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2022/12/31 12:49:05 leot Exp $
+# $NetBSD: Makefile,v 1.23 2023/02/14 20:42:43 leot Exp $
 
-DISTNAME=		monit-5.32.0
+DISTNAME=		monit-5.33.0
 CATEGORIES=		sysutils
 MASTER_SITES=		https://mmonit.com/monit/dist/
 
