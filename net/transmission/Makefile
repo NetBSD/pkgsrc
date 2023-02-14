@@ -1,4 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2023/02/13 11:26:29 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2023/02/14 09:45:39 wiz Exp $
+
+PKGREVISION=	1
+
+DEPENDS+=	transmission-common>=${VERSION}:../../net/transmission-common
 
 CONFLICTS+=	Transmission-[0-9]*
 
@@ -25,5 +29,10 @@ OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR}/transmission \
 OWN_DIRS_PERMS+=	${VARBASE}/log/transmission \
 			${TRANSMISSION_USER} ${TRANSMISSION_GROUP} 0755
 
+# https://github.com/transmission/transmission/issues/4864
+post-install:
+	${RM} -R ${DESTDIR}${PREFIX}/share/transmission/public_html
+
 .include "../../net/transmission/Makefile.common"
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
