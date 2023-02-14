@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1230 2023/02/14 20:42:48 leot Exp $
+$NetBSD: CHANGES-2023,v 1.1231 2023/02/14 21:27:25 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1563,3 +1563,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/py-mypy_extensions to 1.0.0 [adam 2023-02-14]
 	Updated lang/py-mypy to 1.0.0 [adam 2023-02-14]
 	Updated sysutils/monit to 5.33.0 [leot 2023-02-14]
+	Added devel/shellspec version 0.28.1 [schmonz 2023-02-14]
