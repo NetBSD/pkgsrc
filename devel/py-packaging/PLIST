@@ -1,24 +1,29 @@
-@comment $NetBSD: PLIST,v 1.4 2021/11/09 20:35:14 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/02/14 16:09:11 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/packaging/__about__.py
-${PYSITELIB}/packaging/__about__.pyc
-${PYSITELIB}/packaging/__about__.pyo
 ${PYSITELIB}/packaging/__init__.py
 ${PYSITELIB}/packaging/__init__.pyc
 ${PYSITELIB}/packaging/__init__.pyo
+${PYSITELIB}/packaging/_elffile.py
+${PYSITELIB}/packaging/_elffile.pyc
+${PYSITELIB}/packaging/_elffile.pyo
 ${PYSITELIB}/packaging/_manylinux.py
 ${PYSITELIB}/packaging/_manylinux.pyc
 ${PYSITELIB}/packaging/_manylinux.pyo
 ${PYSITELIB}/packaging/_musllinux.py
 ${PYSITELIB}/packaging/_musllinux.pyc
 ${PYSITELIB}/packaging/_musllinux.pyo
+${PYSITELIB}/packaging/_parser.py
+${PYSITELIB}/packaging/_parser.pyc
+${PYSITELIB}/packaging/_parser.pyo
 ${PYSITELIB}/packaging/_structures.py
 ${PYSITELIB}/packaging/_structures.pyc
 ${PYSITELIB}/packaging/_structures.pyo
+${PYSITELIB}/packaging/_tokenizer.py
+${PYSITELIB}/packaging/_tokenizer.pyc
+${PYSITELIB}/packaging/_tokenizer.pyo
 ${PYSITELIB}/packaging/markers.py
 ${PYSITELIB}/packaging/markers.pyc
 ${PYSITELIB}/packaging/markers.pyo
