@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1228 2023/02/14 19:08:32 nikita Exp $
+$NetBSD: CHANGES-2023,v 1.1229 2023/02/14 19:11:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1560,3 +1560,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/git to 2.39.2 [adam 2023-02-14]
 	Added fonts/nerd-fonts-iA-Writer version 2.2.2 [nikita 2023-02-14]
 	Added fonts/nerd-fonts-IBMPlexMono version 2.2.2 [nikita 2023-02-14]
+	Updated lang/py-mypy_extensions to 1.0.0 [adam 2023-02-14]
+	Updated lang/py-mypy to 1.0.0 [adam 2023-02-14]
