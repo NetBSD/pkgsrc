@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1218 2023/02/14 16:19:18 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1219 2023/02/14 16:24:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1546,3 +1546,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated print/poppler-data to 0.4.12 [wiz 2023-02-14]
 	Updated x11/xkeyboard-config to 2.38 [wiz 2023-02-14]
 	Updated sysutils/dbus to 1.14.6 [wiz 2023-02-14]
+	Updated multimedia/libvpx to 1.13.0 [wiz 2023-02-14]
