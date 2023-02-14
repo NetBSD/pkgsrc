@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2023/02/14 17:42:54 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/pyproject_hooks/__init__.py
+${PYSITELIB}/pyproject_hooks/__init__.pyc
+${PYSITELIB}/pyproject_hooks/__init__.pyo
+${PYSITELIB}/pyproject_hooks/_compat.py
+${PYSITELIB}/pyproject_hooks/_compat.pyc
+${PYSITELIB}/pyproject_hooks/_compat.pyo
+${PYSITELIB}/pyproject_hooks/_impl.py
+${PYSITELIB}/pyproject_hooks/_impl.pyc
+${PYSITELIB}/pyproject_hooks/_impl.pyo
+${PYSITELIB}/pyproject_hooks/_in_process/__init__.py
+${PYSITELIB}/pyproject_hooks/_in_process/__init__.pyc
+${PYSITELIB}/pyproject_hooks/_in_process/__init__.pyo
+${PYSITELIB}/pyproject_hooks/_in_process/_in_process.py
+${PYSITELIB}/pyproject_hooks/_in_process/_in_process.pyc
+${PYSITELIB}/pyproject_hooks/_in_process/_in_process.pyo

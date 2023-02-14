@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/02/14 17:42:54 adam Exp $
+
+BLAKE2s (pyproject_hooks-1.0.0.tar.gz) = 1c4f2e6b2e201d34d6fc6dce51980e00981d945075003f07959999d06b8bcd14
+SHA512 (pyproject_hooks-1.0.0.tar.gz) = 53e286cfcf8b286560cfebafe44e2162360bc1b567df2ed9019376128e14fffaafa3964f77b18487f5023aa092ede628ba5115301de42e101595f41c091d90c9
+Size (pyproject_hooks-1.0.0.tar.gz) = 16901 bytes
