@@ -1,0 +1,66 @@
+@comment $NetBSD: PLIST,v 1.1 2023/02/14 19:08:02 nikita Exp $
+share/fonts/X11/TTF/Blex Mono Bold Italic Nerd Font Complete Mono Windows Compatible.ttf
+share/fonts/X11/TTF/Blex Mono Bold Italic Nerd Font Complete Mono.ttf
+share/fonts/X11/TTF/Blex Mono Bold Italic Nerd Font Complete Windows Compatible.ttf
+share/fonts/X11/TTF/Blex Mono Bold Italic Nerd Font Complete.ttf
+share/fonts/X11/TTF/Blex Mono Bold Nerd Font Complete Mono Windows Compatible.ttf
+share/fonts/X11/TTF/Blex Mono Bold Nerd Font Complete Mono.ttf
+share/fonts/X11/TTF/Blex Mono Bold Nerd Font Complete Windows Compatible.ttf
+share/fonts/X11/TTF/Blex Mono Bold Nerd Font Complete.ttf
+share/fonts/X11/TTF/Blex Mono ExtraLight Italic Nerd Font Complete Mono Windows Compatible.ttf
+share/fonts/X11/TTF/Blex Mono ExtraLight Italic Nerd Font Complete Mono.ttf
+share/fonts/X11/TTF/Blex Mono ExtraLight Italic Nerd Font Complete Windows Compatible.ttf
+share/fonts/X11/TTF/Blex Mono ExtraLight Italic Nerd Font Complete.ttf
+share/fonts/X11/TTF/Blex Mono ExtraLight Nerd Font Complete Mono Windows Compatible.ttf
+share/fonts/X11/TTF/Blex Mono ExtraLight Nerd Font Complete Mono.ttf
+share/fonts/X11/TTF/Blex Mono ExtraLight Nerd Font Complete Windows Compatible.ttf
+share/fonts/X11/TTF/Blex Mono ExtraLight Nerd Font Complete.ttf
+share/fonts/X11/TTF/Blex Mono Italic Nerd Font Complete Mono Windows Compatible.ttf
+share/fonts/X11/TTF/Blex Mono Italic Nerd Font Complete Mono.ttf
+share/fonts/X11/TTF/Blex Mono Italic Nerd Font Complete Windows Compatible.ttf
+share/fonts/X11/TTF/Blex Mono Italic Nerd Font Complete.ttf
+share/fonts/X11/TTF/Blex Mono Light Italic Nerd Font Complete Mono Windows Compatible.ttf
+share/fonts/X11/TTF/Blex Mono Light Italic Nerd Font Complete Mono.ttf
+share/fonts/X11/TTF/Blex Mono Light Italic Nerd Font Complete Windows Compatible.ttf
+share/fonts/X11/TTF/Blex Mono Light Italic Nerd Font Complete.ttf
+share/fonts/X11/TTF/Blex Mono Light Nerd Font Complete Mono Windows Compatible.ttf
+share/fonts/X11/TTF/Blex Mono Light Nerd Font Complete Mono.ttf
+share/fonts/X11/TTF/Blex Mono Light Nerd Font Complete Windows Compatible.ttf
+share/fonts/X11/TTF/Blex Mono Light Nerd Font Complete.ttf
+share/fonts/X11/TTF/Blex Mono Medium Italic Nerd Font Complete Mono Windows Compatible.ttf
+share/fonts/X11/TTF/Blex Mono Medium Italic Nerd Font Complete Mono.ttf
+share/fonts/X11/TTF/Blex Mono Medium Italic Nerd Font Complete Windows Compatible.ttf
+share/fonts/X11/TTF/Blex Mono Medium Italic Nerd Font Complete.ttf
+share/fonts/X11/TTF/Blex Mono Medium Nerd Font Complete Mono Windows Compatible.ttf
+share/fonts/X11/TTF/Blex Mono Medium Nerd Font Complete Mono.ttf
+share/fonts/X11/TTF/Blex Mono Medium Nerd Font Complete Windows Compatible.ttf
+share/fonts/X11/TTF/Blex Mono Medium Nerd Font Complete.ttf
+share/fonts/X11/TTF/Blex Mono Nerd Font Complete Mono Windows Compatible.ttf
+share/fonts/X11/TTF/Blex Mono Nerd Font Complete Mono.ttf
+share/fonts/X11/TTF/Blex Mono Nerd Font Complete Windows Compatible.ttf
+share/fonts/X11/TTF/Blex Mono Nerd Font Complete.ttf
+share/fonts/X11/TTF/Blex Mono SemiBold Italic Nerd Font Complete Mono Windows Compatible.ttf
+share/fonts/X11/TTF/Blex Mono SemiBold Italic Nerd Font Complete Mono.ttf
+share/fonts/X11/TTF/Blex Mono SemiBold Italic Nerd Font Complete Windows Compatible.ttf
+share/fonts/X11/TTF/Blex Mono SemiBold Italic Nerd Font Complete.ttf
+share/fonts/X11/TTF/Blex Mono SemiBold Nerd Font Complete Mono Windows Compatible.ttf
+share/fonts/X11/TTF/Blex Mono SemiBold Nerd Font Complete Mono.ttf
+share/fonts/X11/TTF/Blex Mono SemiBold Nerd Font Complete Windows Compatible.ttf
+share/fonts/X11/TTF/Blex Mono SemiBold Nerd Font Complete.ttf
+share/fonts/X11/TTF/Blex Mono Text Italic Nerd Font Complete Mono Windows Compatible.ttf
+share/fonts/X11/TTF/Blex Mono Text Italic Nerd Font Complete Mono.ttf
+share/fonts/X11/TTF/Blex Mono Text Italic Nerd Font Complete Windows Compatible.ttf
+share/fonts/X11/TTF/Blex Mono Text Italic Nerd Font Complete.ttf
+share/fonts/X11/TTF/Blex Mono Text Nerd Font Complete Mono Windows Compatible.ttf
+share/fonts/X11/TTF/Blex Mono Text Nerd Font Complete Mono.ttf
+share/fonts/X11/TTF/Blex Mono Text Nerd Font Complete Windows Compatible.ttf
+share/fonts/X11/TTF/Blex Mono Text Nerd Font Complete.ttf
+share/fonts/X11/TTF/Blex Mono Thin Italic Nerd Font Complete Mono Windows Compatible.ttf
+share/fonts/X11/TTF/Blex Mono Thin Italic Nerd Font Complete Mono.ttf
+share/fonts/X11/TTF/Blex Mono Thin Italic Nerd Font Complete Windows Compatible.ttf
+share/fonts/X11/TTF/Blex Mono Thin Italic Nerd Font Complete.ttf
+share/fonts/X11/TTF/Blex Mono Thin Nerd Font Complete Mono Windows Compatible.ttf
+share/fonts/X11/TTF/Blex Mono Thin Nerd Font Complete Mono.ttf
+share/fonts/X11/TTF/Blex Mono Thin Nerd Font Complete Windows Compatible.ttf
+share/fonts/X11/TTF/Blex Mono Thin Nerd Font Complete.ttf
+@pkgdir share/fonts/X11/OTF
