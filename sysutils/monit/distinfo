@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2022/12/31 12:49:05 leot Exp $
+$NetBSD: distinfo,v 1.12 2023/02/14 20:42:43 leot Exp $
 
-BLAKE2s (monit-5.32.0.tar.gz) = 85f7a379a4a7d6468e8f96471a778e05d2d2ca01921c044b9c5c962a037bab2b
-SHA512 (monit-5.32.0.tar.gz) = dcb56bee23c5fef4abe08a2b1633e58b60c8863b335d651d26e87f5306b4f98bd4887d2bf6311c2fc11c9b99eb853226d836b9d212ab65c0f150872c7297e005
-Size (monit-5.32.0.tar.gz) = 1480629 bytes
+BLAKE2s (monit-5.33.0.tar.gz) = cbea94c725af2001a688a1456094267d9a476a28dbd24e72d2dea80121c1836b
+SHA512 (monit-5.33.0.tar.gz) = f84edfc03a7386bb712c3d1e1e74801c5deea596f533bd898f342c8435e4b9f4225ec24a4daee11c4d23a5742e9f8a9c666ebaa1ba56f13842ac7214d1d70d4f
+Size (monit-5.33.0.tar.gz) = 1502487 bytes
 SHA1 (patch-aa) = bf1ef16d44d082443c34963bab1335767a4a8497
