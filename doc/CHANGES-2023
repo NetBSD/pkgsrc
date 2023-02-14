@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1210 2023/02/14 15:56:10 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1211 2023/02/14 15:57:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1536,3 +1536,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/shunit2 to 2.1.8 [schmonz 2023-02-14]
 	Updated fonts/harfbuzz to 7.0.0 [wiz 2023-02-14]
 	Updated fonts/harfbuzz-icu to 7.0.0 [wiz 2023-02-14]
+	Updated archivers/cabextract to 1.10 [wiz 2023-02-14]
