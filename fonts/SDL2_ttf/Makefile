@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2023/01/29 21:14:34 ryoon Exp $
+# $NetBSD: Makefile,v 1.23 2023/02/14 16:04:12 wiz Exp $
 
-DISTNAME=	SDL2_ttf-2.20.1
-PKGREVISION=	2
+DISTNAME=	SDL2_ttf-2.20.2
 CATEGORIES=	fonts devel
 MASTER_SITES=	https://www.libsdl.org/projects/SDL_ttf/release/
 
@@ -17,10 +16,15 @@ GNU_CONFIGURE=		yes
 
 PKGCONFIG_OVERRIDE+=	SDL2_ttf.pc.in
 
+CONFIGURE_ARGS+=	--enable-harfbuzz
+CONFIGURE_ARGS+=	--disable-harfbuzz-builtin
+CONFIGURE_ARGS+=	--disable-freetype-builtin
+
 CHECK_PORTABILITY_SKIP+=	Xcode/iOS/build-scripts/iosbuild.sh
 CHECK_PORTABILITY_SKIP+=	Xcode/tvOS/build-scripts/tvosbuild.sh
 
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../fonts/harfbuzz/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
