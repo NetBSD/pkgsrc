@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.77 2022/07/29 08:04:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.78 2023/02/14 16:45:21 wiz Exp $
 bin/certtool
 bin/gnutls-cli
 bin/gnutls-cli-debug
@@ -6,7 +6,6 @@ bin/gnutls-serv
 bin/ocsptool
 bin/p11tool
 bin/psktool
-bin/srptool
 include/gnutls/abstract.h
 include/gnutls/compat.h
 include/gnutls/crypto.h
@@ -27,7 +26,6 @@ include/gnutls/x509-ext.h
 include/gnutls/x509.h
 info/gnutls-client-server-use-case.png
 info/gnutls-crypto-layers.png
-info/gnutls-guile.info
 info/gnutls-handshake-sequence.png
 info/gnutls-handshake-state.png
 info/gnutls-internals.png
@@ -47,7 +45,6 @@ man/man1/gnutls-serv.1
 man/man1/ocsptool.1
 man/man1/p11tool.1
 man/man1/psktool.1
-man/man1/srptool.1
 man/man1/tpmtool.1
 man/man3/dane_cert_type_name.3
 man/man3/dane_cert_usage_name.3
@@ -1250,10 +1247,12 @@ share/locale/es/LC_MESSAGES/gnutls.mo
 share/locale/fi/LC_MESSAGES/gnutls.mo
 share/locale/fr/LC_MESSAGES/gnutls.mo
 share/locale/it/LC_MESSAGES/gnutls.mo
+share/locale/ka/LC_MESSAGES/gnutls.mo
 share/locale/ms/LC_MESSAGES/gnutls.mo
 share/locale/nl/LC_MESSAGES/gnutls.mo
 share/locale/pl/LC_MESSAGES/gnutls.mo
 share/locale/pt_BR/LC_MESSAGES/gnutls.mo
+share/locale/ro/LC_MESSAGES/gnutls.mo
 share/locale/sr/LC_MESSAGES/gnutls.mo
 share/locale/sv/LC_MESSAGES/gnutls.mo
 share/locale/uk/LC_MESSAGES/gnutls.mo
