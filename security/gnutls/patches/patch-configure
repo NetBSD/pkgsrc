@@ -1,14 +1,14 @@
-$NetBSD: patch-configure,v 1.7 2022/09/28 13:25:57 adam Exp $
+$NetBSD: patch-configure,v 1.8 2023/02/14 16:45:21 wiz Exp $
 
 Fix linking on Darwin.
 
---- configure.orig	2022-09-27 12:46:24.000000000 +0000
+--- configure.orig	2023-02-09 14:56:14.000000000 +0000
 +++ configure
-@@ -11379,7 +11379,6 @@ $as_echo "#define DYN_NCRYPT 1" >>confde
+@@ -11813,7 +11813,6 @@ printf "%s\n" "#define DYN_NCRYPT 1" >>c
    *darwin*)
      have_macosx=yes
      save_LDFLAGS="$LDFLAGS"
 -                LDFLAGS="$LDFLAGS -Wl,-no_weak_imports"
-     { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether the linker supports -Wl,-no_weak_imports" >&5
- $as_echo_n "checking whether the linker supports -Wl,-no_weak_imports... " >&6; }
+     { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking whether the linker supports -Wl,-no_weak_imports" >&5
+ printf %s "checking whether the linker supports -Wl,-no_weak_imports... " >&6; }
      cat confdefs.h - <<_ACEOF >conftest.$ac_ext
