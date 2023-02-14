@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.56 2023/02/14 09:45:39 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2023/02/14 14:42:34 wiz Exp $
 
 PKGNAME=	transmission-gtk-${VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	Free, lightweight BitTorrent client (GTK version)
 
 DEPENDS+=	transmission-common>=${VERSION}:../../net/transmission-common
@@ -26,7 +26,6 @@ post-install:
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../sysutils/libnotify/buildlink3.mk"
 # XXX: this doesn't work - builtin 0.16.1 is accepted
 BUILDLINK_API_DEPENDS.gettext+=	gettext-lib>=0.19.7
 .include "../../devel/gettext-lib/buildlink3.mk"
