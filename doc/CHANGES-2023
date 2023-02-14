@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1213 2023/02/14 16:05:59 adam Exp $
+$NetBSD: CHANGES-2023,v 1.1214 2023/02/14 16:09:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1540,3 +1540,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated fonts/SDL2_ttf to 2.20.2 [wiz 2023-02-14]
 	Updated net/qbittorrent to 4.5.1 [adam 2023-02-14]
 	Updated net/rabbitmq to 3.11.9 [adam 2023-02-14]
+	Updated graphics/cairomm1.16 to 1.16.2 [wiz 2023-02-14]
