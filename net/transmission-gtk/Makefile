@@ -1,7 +1,10 @@
-# $NetBSD: Makefile,v 1.55 2023/02/13 11:26:29 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2023/02/14 09:45:39 wiz Exp $
 
 PKGNAME=	transmission-gtk-${VERSION}
+PKGREVISION=	1
 COMMENT=	Free, lightweight BitTorrent client (GTK version)
+
+DEPENDS+=	transmission-common>=${VERSION}:../../net/transmission-common
 
 CONFLICTS+=		Transmission-gui-[0-9]*
 
@@ -17,6 +20,7 @@ CMAKE_ARGS+=	-DENABLE_CLI=OFF
 CMAKE_ARGS+=	-DINSTALL_DOC=OFF
 CMAKE_ARGS+=	-DENABLE_TESTS=OFF
 
+# https://github.com/transmission/transmission/issues/4864
 post-install:
 	${RM} -R ${DESTDIR}${PREFIX}/share/transmission/public_html
 
@@ -29,4 +33,5 @@ BUILDLINK_API_DEPENDS.gettext+=	gettext-lib>=0.19.7
 # XXX: so force new gettext-tools, giving us new gettext-lib
 .include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../x11/gtkmm4/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"

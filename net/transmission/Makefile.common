@@ -1,8 +1,9 @@
-# $NetBSD: Makefile.common,v 1.12 2023/02/13 11:26:29 wiz Exp $
+# $NetBSD: Makefile.common,v 1.13 2023/02/14 09:45:39 wiz Exp $
 #
-# used by net/transmission/Makefile
+# used by net/transmission-common/Makefile
 # used by net/transmission-gtk/Makefile
 # used by net/transmission-qt/Makefile
+# used by net/transmission/Makefile
 
 VERSION=	4.0.0
 DISTNAME=	transmission-${VERSION}
@@ -36,5 +37,4 @@ BUILDLINK_API_DEPENDS.libevent+=	libevent>=2.0.10
 .include "../../security/openssl/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../www/libpsl/buildlink3.mk"
-.include "../../devel/cmake/build.mk"
 .include "../../mk/pthread.buildlink3.mk"
