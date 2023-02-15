@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1242 2023/02/15 12:56:38 adam Exp $
+$NetBSD: CHANGES-2023,v 1.1243 2023/02/15 13:06:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1576,3 +1576,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/happy to 1.20.1.1 [wiz 2023-02-15]
 	Updated graphics/ImageMagick to 7.1.0.62 [wiz 2023-02-15]
 	Updated databases/openldap to 2.6.4 [adam 2023-02-15]
+	Added geography/librttopo version 1.1.0 [wiz 2023-02-15]
