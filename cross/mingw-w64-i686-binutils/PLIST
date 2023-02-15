@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/10/09 02:37:02 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/02/15 20:49:11 ryoon Exp $
 cross/i686-w64-mingw32/bin/i686-w64-mingw32-addr2line
 cross/i686-w64-mingw32/bin/i686-w64-mingw32-ar
 cross/i686-w64-mingw32/bin/i686-w64-mingw32-as
@@ -43,6 +43,7 @@ cross/i686-w64-mingw32/info/binutils.info
 cross/i686-w64-mingw32/info/ctf-spec.info
 cross/i686-w64-mingw32/info/gprof.info
 cross/i686-w64-mingw32/info/ld.info
+cross/i686-w64-mingw32/info/sframe-spec.info
 cross/i686-w64-mingw32/lib/bfd-plugins/libdep.so
 cross/i686-w64-mingw32/man/man1/i686-w64-mingw32-addr2line.1
 cross/i686-w64-mingw32/man/man1/i686-w64-mingw32-ar.1
