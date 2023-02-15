@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2022/12/03 16:01:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/02/15 18:07:46 adam Exp $
 include/nghttp3/nghttp3.h
 include/nghttp3/version.h
 lib/libnghttp3.a
 lib/libnghttp3.so
 lib/libnghttp3.so.3
-lib/libnghttp3.so.3.0.1
+lib/libnghttp3.so.3.0.2
 lib/pkgconfig/libnghttp3.pc
 share/doc/nghttp3/README.rst
