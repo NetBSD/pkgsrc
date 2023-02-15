@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1236 2023/02/15 03:27:40 charlotte Exp $
+$NetBSD: CHANGES-2023,v 1.1237 2023/02/15 07:49:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1568,3 +1568,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Added games/nanosaur version 1.4.4 [charlotte 2023-02-15]
 	Added games/nanosaur2 version 2.1.0 [charlotte 2023-02-15]
 	Added games/ironwail version 0.6.0 [charlotte 2023-02-15]
+	Updated devel/py-typing-extensions to 4.5.0 [adam 2023-02-15]
+	Updated security/py-google-auth to 2.16.0 [adam 2023-02-15]
