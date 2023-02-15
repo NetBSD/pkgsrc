@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1232 2023/02/15 00:08:32 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.1233 2023/02/15 02:22:18 charlotte Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1565,3 +1565,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/monit to 5.33.0 [leot 2023-02-14]
 	Added devel/shellspec version 0.28.1 [schmonz 2023-02-14]
 	Updated x11/xfce4-notifyd to 0.8.0 [gutteridge 2023-02-15]
+	Added games/nanosaur version 1.4.4 [charlotte 2023-02-15]
