@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2023/02/15 03:26:35 charlotte Exp $
+bin/ironwail
+libexec/ironwail
+share/ironwail/ironwail.pak
