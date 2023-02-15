@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1254 2023/02/15 20:53:49 adam Exp $
+$NetBSD: CHANGES-2023,v 1.1255 2023/02/15 21:31:00 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1613,3 +1613,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated databases/postgresql13 to 13.10 [adam 2023-02-15]
 	Updated databases/postgresql14 to 14.7 [adam 2023-02-15]
 	Updated databases/postgresql15 to 15.2 [adam 2023-02-15]
+	Updated fonts/spleen to 1.9.2 [fcambus 2023-02-15]
