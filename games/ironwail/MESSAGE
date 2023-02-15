@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2023/02/15 03:26:35 charlotte Exp $
+
+This package provides only the game engine. In order to play the game,
+please obtain a copy of Quake, and install the data files to the following
+directory:
+
+	${PREFIX}/share/ironwail
+
+===========================================================================
