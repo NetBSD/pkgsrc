@@ -1,11 +1,18 @@
-@comment $NetBSD: PLIST,v 1.1 2015/11/27 14:03:33 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/02/15 23:18:52 wiz Exp $
 include/spatialite.h
 include/spatialite/control_points.h
 include/spatialite/debug.h
+include/spatialite/gaia_network.h
+include/spatialite/gaia_topology.h
 include/spatialite/gaiaaux.h
+include/spatialite/gaiaconfig-msvc.h
+include/spatialite/gaiaconfig-msvc.h.in
+include/spatialite/gaiaconfig.h
+include/spatialite/gaiaconfig.h.in
 include/spatialite/gaiaexif.h
 include/spatialite/gaiageo.h
 include/spatialite/gaiamatrix.h
+include/spatialite/geojson.h
 include/spatialite/geopackage.h
 include/spatialite/gg_advanced.h
 include/spatialite/gg_const.h
@@ -14,11 +21,13 @@ include/spatialite/gg_dxf.h
 include/spatialite/gg_dynamic.h
 include/spatialite/gg_formats.h
 include/spatialite/gg_mbr.h
+include/spatialite/gg_sequence.h
 include/spatialite/gg_structs.h
 include/spatialite/gg_wfs.h
 include/spatialite/gg_xml.h
-include/spatialite/spatialite.h
+include/spatialite/spatialite_ext.h
 include/spatialite/sqlite.h
+include/spatialite/stored_procedures.h
 lib/libspatialite.la
 lib/mod_spatialite.la
 lib/pkgconfig/spatialite.pc
