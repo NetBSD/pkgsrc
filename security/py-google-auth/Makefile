@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2022/12/12 09:49:33 adam Exp $
+# $NetBSD: Makefile,v 1.47 2023/02/15 07:48:45 adam Exp $
 
-DISTNAME=	google-auth-2.15.0
+DISTNAME=	google-auth-2.16.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/google-auth/}
@@ -32,6 +32,6 @@ do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
 .include "../../lang/python/egg.mk"
-PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
+PYTHON_VERSIONED_DEPENDENCIES+=	cryptography OpenSSL
 .include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
