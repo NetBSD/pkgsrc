@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2022/10/09 02:37:03 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.9 2023/02/15 20:49:11 ryoon Exp $
 #
 # used by cross/mingw-w64-i686-crt/Makefile
 # used by cross/mingw-w64-x86_64-crt/Makefile
@@ -20,6 +20,8 @@ WRKSRC=			${WRKDIR}/${DISTNAME}/mingw-w64-crt
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake perl:build
+
+PKGSRC_USE_FORTIFY=	no # Avoid "undefined reference to `__strcpy_chk'"
 
 USE_GNU_CONFIGURE_HOST=	no
 

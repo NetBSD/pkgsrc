@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2022/10/09 02:37:03 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.6 2023/02/15 20:49:12 ryoon Exp $
 #
 # used by cross/mingw-w64-i686-gcc-winpthreads/Makefile
 # used by cross/mingw-w64-x86_64-gcc-winpthreads/Makefile
@@ -16,6 +16,8 @@ DISTINFO_FILE=		${.CURDIR}/../../cross/mingw-w64-x86_64-gcc/distinfo
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake perl:build
+
+PKGSRC_USE_FORTIFY=	no # Avoid "undefined reference to `__strcpy_chk'"
 
 GNU_CONFIGURE=		yes
 OBJDIR=			../build
