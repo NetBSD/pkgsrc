@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2023/01/24 18:36:36 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/02/15 18:07:46 adam Exp $
 
-DISTNAME=	nghttp3-0.7.1
+DISTNAME=	nghttp3-0.8.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ngtcp2/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
