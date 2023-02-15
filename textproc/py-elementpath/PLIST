@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2022/11/14 10:05:11 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2023/02/15 18:12:58 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -7,6 +7,12 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/elementpath/__init__.py
 ${PYSITELIB}/elementpath/__init__.pyc
 ${PYSITELIB}/elementpath/__init__.pyo
+${PYSITELIB}/elementpath/collations.py
+${PYSITELIB}/elementpath/collations.pyc
+${PYSITELIB}/elementpath/collations.pyo
+${PYSITELIB}/elementpath/compare.py
+${PYSITELIB}/elementpath/compare.pyc
+${PYSITELIB}/elementpath/compare.pyo
 ${PYSITELIB}/elementpath/datatypes/__init__.py
 ${PYSITELIB}/elementpath/datatypes/__init__.pyc
 ${PYSITELIB}/elementpath/datatypes/__init__.pyo
@@ -77,12 +83,23 @@ ${PYSITELIB}/elementpath/regex/unicode_subsets.pyo
 ${PYSITELIB}/elementpath/schema_proxy.py
 ${PYSITELIB}/elementpath/schema_proxy.pyc
 ${PYSITELIB}/elementpath/schema_proxy.pyo
+${PYSITELIB}/elementpath/sequence_types.py
+${PYSITELIB}/elementpath/sequence_types.pyc
+${PYSITELIB}/elementpath/sequence_types.pyo
+${PYSITELIB}/elementpath/serialization.py
+${PYSITELIB}/elementpath/serialization.pyc
+${PYSITELIB}/elementpath/serialization.pyo
 ${PYSITELIB}/elementpath/tdop.py
 ${PYSITELIB}/elementpath/tdop.pyc
 ${PYSITELIB}/elementpath/tdop.pyo
 ${PYSITELIB}/elementpath/tree_builders.py
 ${PYSITELIB}/elementpath/tree_builders.pyc
 ${PYSITELIB}/elementpath/tree_builders.pyo
+${PYSITELIB}/elementpath/validators/__init__.py
+${PYSITELIB}/elementpath/validators/__init__.pyc
+${PYSITELIB}/elementpath/validators/__init__.pyo
+${PYSITELIB}/elementpath/validators/analyze-string.xsd
+${PYSITELIB}/elementpath/validators/schema-for-json.xsd
 ${PYSITELIB}/elementpath/xpath1/__init__.py
 ${PYSITELIB}/elementpath/xpath1/__init__.pyc
 ${PYSITELIB}/elementpath/xpath1/__init__.pyo
@@ -155,6 +172,6 @@ ${PYSITELIB}/elementpath/xpath_nodes.pyo
 ${PYSITELIB}/elementpath/xpath_selectors.py
 ${PYSITELIB}/elementpath/xpath_selectors.pyc
 ${PYSITELIB}/elementpath/xpath_selectors.pyo
-${PYSITELIB}/elementpath/xpath_token.py
-${PYSITELIB}/elementpath/xpath_token.pyc
-${PYSITELIB}/elementpath/xpath_token.pyo
+${PYSITELIB}/elementpath/xpath_tokens.py
+${PYSITELIB}/elementpath/xpath_tokens.pyc
+${PYSITELIB}/elementpath/xpath_tokens.pyo
