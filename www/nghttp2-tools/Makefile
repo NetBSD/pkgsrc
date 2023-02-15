@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.14 2022/11/23 16:21:20 adam Exp $
+# $NetBSD: Makefile,v 1.15 2023/02/15 18:08:25 adam Exp $
 
-PKGREVISION= 1
 .include "../../www/nghttp2/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-tools-/}
@@ -25,8 +24,10 @@ INSTALL_DIRS+=		src
 .include "../../devel/libev/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../net/libcares/buildlink3.mk"
+.include "../../net/ngtcp2/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/jansson/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../www/nghttp2/buildlink3.mk"
+.include "../../www/nghttp3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
