@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.34 2023/01/18 00:08:56 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.35 2023/02/15 18:26:03 adam Exp $
 bin/aws
 bin/aws.cmd
 bin/aws_bash_completer
@@ -2076,6 +2076,7 @@ ${PYSITELIB}/awscli/examples/ec2/delete-managed-prefix-list.rst
 ${PYSITELIB}/awscli/examples/ec2/delete-nat-gateway.rst
 ${PYSITELIB}/awscli/examples/ec2/delete-network-acl-entry.rst
 ${PYSITELIB}/awscli/examples/ec2/delete-network-acl.rst
+${PYSITELIB}/awscli/examples/ec2/delete-network-insights-access-scope-analysis.rst
 ${PYSITELIB}/awscli/examples/ec2/delete-network-insights-access-scope.rst
 ${PYSITELIB}/awscli/examples/ec2/delete-network-insights-analysis.rst
 ${PYSITELIB}/awscli/examples/ec2/delete-network-insights-path.rst
@@ -2279,6 +2280,7 @@ ${PYSITELIB}/awscli/examples/ec2/enable-fast-launch.rst
 ${PYSITELIB}/awscli/examples/ec2/enable-fast-snapshot-restores.rst
 ${PYSITELIB}/awscli/examples/ec2/enable-image-deprecation.rst
 ${PYSITELIB}/awscli/examples/ec2/enable-ipam-organization-admin-account.rst
+${PYSITELIB}/awscli/examples/ec2/enable-reachability-analyzer-organization-sharing.rst
 ${PYSITELIB}/awscli/examples/ec2/enable-serial-console-access.rst
 ${PYSITELIB}/awscli/examples/ec2/enable-transit-gateway-route-table-propagation.rst
 ${PYSITELIB}/awscli/examples/ec2/enable-vgw-route-propagation.rst
@@ -2300,6 +2302,7 @@ ${PYSITELIB}/awscli/examples/ec2/get-flow-logs-integration-template.rst
 ${PYSITELIB}/awscli/examples/ec2/get-groups-for-capacity-reservation.rst
 ${PYSITELIB}/awscli/examples/ec2/get-host-reservation-purchase-preview.rst
 ${PYSITELIB}/awscli/examples/ec2/get-instance-types-from-instance-requirements.rst
+${PYSITELIB}/awscli/examples/ec2/get-instance-uefi-data.rst
 ${PYSITELIB}/awscli/examples/ec2/get-ipam-address-history.rst
 ${PYSITELIB}/awscli/examples/ec2/get-ipam-pool-allocations.rst
 ${PYSITELIB}/awscli/examples/ec2/get-ipam-pool-cidrs.rst
@@ -2319,6 +2322,8 @@ ${PYSITELIB}/awscli/examples/ec2/get-transit-gateway-multicast-domain-associatio
 ${PYSITELIB}/awscli/examples/ec2/get-transit-gateway-prefix-list-references.rst
 ${PYSITELIB}/awscli/examples/ec2/get-transit-gateway-route-table-associations.rst
 ${PYSITELIB}/awscli/examples/ec2/get-transit-gateway-route-table-propagations.rst
+${PYSITELIB}/awscli/examples/ec2/get-vpn-connection-device-sample-configuration.rst
+${PYSITELIB}/awscli/examples/ec2/get-vpn-connection-device-types.rst
 ${PYSITELIB}/awscli/examples/ec2/import-client-vpn-client-certificate-revocation-list.rst
 ${PYSITELIB}/awscli/examples/ec2/import-image.rst
 ${PYSITELIB}/awscli/examples/ec2/import-key-pair.rst
@@ -2369,6 +2374,7 @@ ${PYSITELIB}/awscli/examples/ec2/modify-volume.rst
 ${PYSITELIB}/awscli/examples/ec2/modify-vpc-attribute.rst
 ${PYSITELIB}/awscli/examples/ec2/modify-vpc-endpoint-connection-notification.rst
 ${PYSITELIB}/awscli/examples/ec2/modify-vpc-endpoint-service-configuration.rst
+${PYSITELIB}/awscli/examples/ec2/modify-vpc-endpoint-service-payer-responsibility.rst
 ${PYSITELIB}/awscli/examples/ec2/modify-vpc-endpoint-service-permissions.rst
 ${PYSITELIB}/awscli/examples/ec2/modify-vpc-endpoint.rst
 ${PYSITELIB}/awscli/examples/ec2/modify-vpc-peering-connection-options.rst
@@ -2431,6 +2437,7 @@ ${PYSITELIB}/awscli/examples/ec2/send-diagnostic-interrupt.rst
 ${PYSITELIB}/awscli/examples/ec2/start-instances.rst
 ${PYSITELIB}/awscli/examples/ec2/start-network-insights-access-scope-analysis.rst
 ${PYSITELIB}/awscli/examples/ec2/start-network-insights-analysis.rst
+${PYSITELIB}/awscli/examples/ec2/start-vpc-endpoint-service-private-dns-verification.rst
 ${PYSITELIB}/awscli/examples/ec2/stop-instances.rst
 ${PYSITELIB}/awscli/examples/ec2/terminate-client-vpn-connections.rst
 ${PYSITELIB}/awscli/examples/ec2/terminate-instances.rst
@@ -4595,6 +4602,7 @@ ${PYSITELIB}/awscli/examples/rds/copy-db-cluster-snapshot.rst
 ${PYSITELIB}/awscli/examples/rds/copy-db-parameter-group.rst
 ${PYSITELIB}/awscli/examples/rds/copy-db-snapshot.rst
 ${PYSITELIB}/awscli/examples/rds/copy-option-group.rst
+${PYSITELIB}/awscli/examples/rds/create-blue-green-deployment.rst
 ${PYSITELIB}/awscli/examples/rds/create-db-cluster-endpoint.rst
 ${PYSITELIB}/awscli/examples/rds/create-db-cluster-parameter-group.rst
 ${PYSITELIB}/awscli/examples/rds/create-db-cluster-snapshot.rst
@@ -4608,6 +4616,7 @@ ${PYSITELIB}/awscli/examples/rds/create-db-subnet-group.rst
 ${PYSITELIB}/awscli/examples/rds/create-event-subscription.rst
 ${PYSITELIB}/awscli/examples/rds/create-global-cluster.rst
 ${PYSITELIB}/awscli/examples/rds/create-option-group.rst
+${PYSITELIB}/awscli/examples/rds/delete-blue-green-deployment.rst
 ${PYSITELIB}/awscli/examples/rds/delete-db-cluster-endpoint.rst
 ${PYSITELIB}/awscli/examples/rds/delete-db-cluster-parameter-group.rst
 ${PYSITELIB}/awscli/examples/rds/delete-db-cluster-snapshot.rst
@@ -4622,6 +4631,7 @@ ${PYSITELIB}/awscli/examples/rds/delete-event-subscription.rst
 ${PYSITELIB}/awscli/examples/rds/delete-global-cluster.rst
 ${PYSITELIB}/awscli/examples/rds/delete-option-group.rst
 ${PYSITELIB}/awscli/examples/rds/describe-account-attributes.rst
+${PYSITELIB}/awscli/examples/rds/describe-blue-green-deployments.rst
 ${PYSITELIB}/awscli/examples/rds/describe-certificates.rst
 ${PYSITELIB}/awscli/examples/rds/describe-db-cluster-backtracks.rst
 ${PYSITELIB}/awscli/examples/rds/describe-db-cluster-endpoints.rst
@@ -4701,6 +4711,7 @@ ${PYSITELIB}/awscli/examples/rds/stop-activity-stream.rst
 ${PYSITELIB}/awscli/examples/rds/stop-db-cluster.rst
 ${PYSITELIB}/awscli/examples/rds/stop-db-instance-automated-backups-replication.rst
 ${PYSITELIB}/awscli/examples/rds/stop-db-instance.rst
+${PYSITELIB}/awscli/examples/rds/switchover-blue-green-deployment.rst
 ${PYSITELIB}/awscli/examples/redshift/accept-reserved-node-exchange.rst
 ${PYSITELIB}/awscli/examples/redshift/authorize-cluster-security-group-ingress.rst
 ${PYSITELIB}/awscli/examples/redshift/authorize-snapshot-access.rst
