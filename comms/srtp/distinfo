@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:06:06 nia Exp $
+$NetBSD: distinfo,v 1.8 2023/02/15 12:23:30 adam Exp $
 
-BLAKE2s (srtp-2.3.0.tar.gz) = 89da9bdf742280f8088b69ae8f8a3184ed35fe3c8a67db1f1fd3d02a9aa7fead
-SHA512 (srtp-2.3.0.tar.gz) = 34b1a01cb9a75aed175be09aadd2827224203b9801becc3fbc5214667cce79c3b87b0f59e4315583863ab5a2cc4fc81d56ab604a5e4c984518b8a8a2a7b77461
-Size (srtp-2.3.0.tar.gz) = 633819 bytes
-SHA1 (patch-CMakeLists.txt) = 26975bb773ab2729a0a7df45c44239cf5fb0fb6f
+BLAKE2s (srtp-2.5.0.tar.gz) = f5901a179289b5fef66b85e94f8005e722c193c652670b1de2adba5b3c47f07d
+SHA512 (srtp-2.5.0.tar.gz) = bd679ab65ccf22ca30fe867b9649a0b84cfa6fad6e22eb10f081141632f6dd56479a04d525b865f11fd46007303ca211065d9c170e4820d6ea7055403702340a
+Size (srtp-2.5.0.tar.gz) = 638704 bytes
+SHA1 (patch-CMakeLists.txt) = b8818d6d91e164eb2f008c6445e09312552161e3
