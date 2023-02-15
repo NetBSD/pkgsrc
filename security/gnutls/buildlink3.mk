@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.45 2022/10/26 10:31:07 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.46 2023/02/15 07:40:52 nikita Exp $
 
 BUILDLINK_TREE+=	gnutls
 
@@ -21,9 +21,6 @@ pkgbase := gnutls
 .include "../../mk/pkg-build-options.mk"
 .if ${PKG_BUILD_OPTIONS.gnutls:Mdane}
 .include "../../net/unbound/buildlink3.mk"
-.endif
-.if ${PKG_BUILD_OPTIONS.gnutls:Mguile}
-.include "../../lang/guile22/buildlink3.mk"
 .endif
 .endif # GNUTLS_BUILDLINK3_MK
 
