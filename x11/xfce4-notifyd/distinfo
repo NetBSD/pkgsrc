@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.17 2023/02/11 01:28:44 gutteridge Exp $
+$NetBSD: distinfo,v 1.18 2023/02/15 00:07:39 gutteridge Exp $
 
-BLAKE2s (xfce4-notifyd-0.7.3.tar.bz2) = 2f5f869a9bd5dd675d6db5b50e2b5c44195cb76e291d0f909d20a06bb48d7de1
-SHA512 (xfce4-notifyd-0.7.3.tar.bz2) = 525fcf5dfa8c4a2bf48b4276b19f5fd1d5010bdeacd52f6d9189aabf1d5fe2a79efa542796c62d62c6a7bfc83d7eddf3ed671fa171be96c255907b7c7f599bee
-Size (xfce4-notifyd-0.7.3.tar.bz2) = 587185 bytes
+BLAKE2s (xfce4-notifyd-0.8.0.tar.bz2) = 5570a68df27ad8aa28e4441b9408fa782fb9cba1e3c135d463e0d470a7573a60
+SHA512 (xfce4-notifyd-0.8.0.tar.bz2) = 3b53036105fc194f87a4a76d5c5c578d0435bacf0fc10b5d0eeba37230cd76c9ce56cd30c840ee1d47baedffb1f1c1f2b8c88a0d6ca36207f0596ebc6ba75271
+Size (xfce4-notifyd-0.8.0.tar.bz2) = 612641 bytes
 SHA1 (patch-Makefile.in) = fbccb3ba71f22eb275b0f9570899105d1fdb6d08
