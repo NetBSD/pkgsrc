@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2023/02/15 07:41:44 he Exp $
+# $NetBSD: Makefile,v 1.45 2023/02/15 08:04:42 he Exp $
 
 .include "../../lang/llvm/version.mk"
 
@@ -75,6 +75,9 @@ CMAKE_ARGS+=	-DLLDB_DISABLE_CURSES:BOOL=TRUE
 PKG_FAIL_REASON+=	"Only NetBSD >= 9.99.22 provides ptrace(2) PT_STOP"
 .  endif
 .endif
+
+# Not yet ported, so avoid wasting time trying...
+NOT_FOR_PLATFORM+=	NetBSD-*-powerpc
 
 post-extract:
 	${MKDIR} ${WRKSRC}/build
