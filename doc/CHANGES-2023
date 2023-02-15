@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1256 2023/02/15 23:17:42 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1257 2023/02/15 23:19:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1615,3 +1615,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated databases/postgresql15 to 15.2 [adam 2023-02-15]
 	Updated fonts/spleen to 1.9.2 [fcambus 2023-02-15]
 	Updated geography/spatialindex to 1.9.3 [wiz 2023-02-15]
+	Updated geography/libspatialite to 5.0.1 [wiz 2023-02-15]
