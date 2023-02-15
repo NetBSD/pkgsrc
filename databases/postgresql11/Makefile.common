@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.31 2022/11/13 09:34:25 adam Exp $
+# $NetBSD: Makefile.common,v 1.32 2023/02/15 20:50:56 adam Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -16,7 +16,7 @@
 # used by databases/postgresql11-pltcl/Makefile
 # used by databases/postgresql11-server/Makefile
 
-DISTNAME=	postgresql-11.18
+DISTNAME=	postgresql-11.19
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_PGSQL:=source/v${PKGVERSION_NOREV}/}
 EXTRACT_SUFX=	.tar.bz2
