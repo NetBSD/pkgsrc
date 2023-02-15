@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.522 2023/02/15 03:07:06 charlotte Exp $
+# $NetBSD: Makefile,v 1.523 2023/02/15 03:27:10 charlotte Exp $
 #
 
 COMMENT=	Games
@@ -193,6 +193,7 @@ SUBDIR+=	ioquake3
 SUBDIR+=	ioquake3-pk3
 SUBDIR+=	ioquake3-raspberrypi
 SUBDIR+=	iortcw
+SUBDIR+=	ironwail
 SUBDIR+=	ivan
 SUBDIR+=	jetpack
 SUBDIR+=	jin
