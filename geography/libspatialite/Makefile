@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.25 2023/01/03 17:36:21 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2023/02/15 23:18:52 wiz Exp $
 
-DISTNAME=	libspatialite-4.3.0a
-PKGREVISION=	19
+DISTNAME=	libspatialite-5.0.1
 CATEGORIES=	geography
 MASTER_SITES=	http://www.gaia-gis.it/gaia-sins/
 
 MAINTAINER=	pkgsrc@NetBSD.org
 HOMEPAGE=	https://www.gaia-gis.it/fossil/libspatialite/
 COMMENT=	Library intended to extend SQLite core to support Spatial SQL
-LICENSE=	gnu-gpl-v2 OR gnu-lgpl-v2.1
+LICENSE=	mpl-1.1 OR gnu-gpl-v2 OR gnu-lgpl-v2.1 # or later GPL or LGPL
 
 USE_LANGUAGES=		c
 USE_LIBTOOL=		yes
@@ -17,17 +16,11 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-examples
 PKGCONFIG_OVERRIDE=	spatialite.pc.in
 
-# https://www.gaia-gis.it/fossil/libspatialite/tktview?name=6eabdf0e6d
-CPPFLAGS+=	-DACCEPT_USE_OF_DEPRECATED_PROJ_API_H
-
-# src/shapefiles wants to create both a module and library
-# from the same sources. This confuses some temporary file handling
-# in libtool 2.4.2.
-MAKE_JOBS_SAFE=	no
-
+.include "../../archivers/minizip/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../geography/geos/buildlink3.mk"
+.include "../../geography/librttopo/buildlink3.mk"
 .include "../../geography/proj/buildlink3.mk"
 .include "../../textproc/freexl/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"

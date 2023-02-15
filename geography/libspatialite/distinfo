@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:45:11 nia Exp $
+$NetBSD: distinfo,v 1.4 2023/02/15 23:18:52 wiz Exp $
 
-BLAKE2s (libspatialite-4.3.0a.tar.gz) = 489cb006a406e58ec5e4dc94e2170992331c99a627e5f4959bf99d0bf6f3610c
-SHA512 (libspatialite-4.3.0a.tar.gz) = adfd63e8dde0f370b07e4e7bb557647d2bfb5549205b60bdcaaca69ff81298a3d885e7c1ca515ef56dd0aca152ae940df8b5dbcb65bb61ae0a9337499895c3c0
-Size (libspatialite-4.3.0a.tar.gz) = 4440660 bytes
-SHA1 (patch-configure) = 1ee6a1551f9f059bd34bee47993acd4a019d4a82
+BLAKE2s (libspatialite-5.0.1.tar.gz) = c2a78880d265821f4858b1578d78e52f40814c0d2cdbce10b50ea54aaa70afcd
+SHA512 (libspatialite-5.0.1.tar.gz) = c2552994bc30d69d1e80aa274760f048cd384f71e8350a1e48a47cb8222ba71a1554a69c6534eedde9a09dc582c39c089967bcc1c57bf158cc91a3e7b1840ddf
+Size (libspatialite-5.0.1.tar.gz) = 6372753 bytes
+SHA1 (patch-configure) = f50fa9badd235b5b1dd126eff758da91e15fbc5e
