@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1243 2023/02/15 13:06:10 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1244 2023/02/15 14:13:56 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1577,3 +1577,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/ImageMagick to 7.1.0.62 [wiz 2023-02-15]
 	Updated databases/openldap to 2.6.4 [adam 2023-02-15]
 	Added geography/librttopo version 1.1.0 [wiz 2023-02-15]
+	Updated lang/php80 to 8.0.28 [taca 2023-02-15]
