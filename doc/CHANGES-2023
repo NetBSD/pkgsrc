@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1244 2023/02/15 14:13:56 taca Exp $
+$NetBSD: CHANGES-2023,v 1.1245 2023/02/15 14:15:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1578,3 +1578,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated databases/openldap to 2.6.4 [adam 2023-02-15]
 	Added geography/librttopo version 1.1.0 [wiz 2023-02-15]
 	Updated lang/php80 to 8.0.28 [taca 2023-02-15]
+	Updated lang/php82 to 8.2.3 [taca 2023-02-15]
