@@ -1,8 +1,8 @@
-$NetBSD: patch-src_pl_plperl_plperl.h,v 1.1 2018/10/23 16:02:51 adam Exp $
+$NetBSD: patch-src_pl_plperl_plperl.h,v 1.2 2023/02/15 20:50:56 adam Exp $
 
---- src/pl/plperl/plperl.h.orig	2018-10-15 21:12:02.000000000 +0000
+--- src/pl/plperl/plperl.h.orig	2023-02-06 21:46:39.000000000 +0000
 +++ src/pl/plperl/plperl.h
-@@ -55,6 +55,10 @@
+@@ -57,6 +57,11 @@
  #define HAS_BOOL 1
  #endif
  
@@ -10,10 +10,11 @@ $NetBSD: patch-src_pl_plperl_plperl.h,v 1.1 2018/10/23 16:02:51 adam Exp $
 +#define list_head sun_list_head
 +#define list_tail sun_list_tail
 +#endif
- 
++
  /*
-  * Get the basic Perl API.  We use PERL_NO_GET_CONTEXT mode so that our code
-@@ -98,6 +102,11 @@
+  * Newer versions of the perl headers trigger a lot of warnings with our
+  * compiler flags (at least -Wdeclaration-after-statement,
+@@ -109,6 +114,11 @@
  #include "XSUB.h"
  #endif
  
