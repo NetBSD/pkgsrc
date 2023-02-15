@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2022/12/17 03:14:24 gutteridge Exp $
+$NetBSD: distinfo,v 1.3 2023/02/15 18:19:24 adam Exp $
 
-BLAKE2s (cmudict-1.0.12.tar.gz) = 88b946c4d69df53b35d72da2251d17b73f0dbc87ad4a69b06f202a9c2ed99517
-SHA512 (cmudict-1.0.12.tar.gz) = 1a7bcba85675e7496772406754469c4ead39c77f62a23a61ea87d24e89fdef1b234114352f6ff6d8a03bdfc286f086977c2454a0d1eaa25f3dc6f80d5b33a7b5
-Size (cmudict-1.0.12.tar.gz) = 936428 bytes
+BLAKE2s (cmudict-1.0.13.tar.gz) = e8c1ab8fc3c3a2b826fb9137242ed45ed68dc3869ae21afcf4739e09eeb9c8a7
+SHA512 (cmudict-1.0.13.tar.gz) = b8ebfd65dc795859716237532ce204dbc3b7b268cecbe2bf39f79acc1687bd1769b3ee4b44fab25e8f855ff83a5b9349cdeb6586668a679a39ebf6ad588ca813
+Size (cmudict-1.0.13.tar.gz) = 936509 bytes
