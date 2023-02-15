@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1237 2023/02/15 07:49:03 adam Exp $
+$NetBSD: CHANGES-2023,v 1.1238 2023/02/15 08:11:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1570,3 +1570,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added games/ironwail version 0.6.0 [charlotte 2023-02-15]
 	Updated devel/py-typing-extensions to 4.5.0 [adam 2023-02-15]
 	Updated security/py-google-auth to 2.16.0 [adam 2023-02-15]
+	Updated www/curl to 7.88.0 [wiz 2023-02-15]
