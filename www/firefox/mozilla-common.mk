@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.248 2023/01/21 01:14:07 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.249 2023/02/15 20:38:13 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -7,12 +7,6 @@
 .include "../../mk/bsd.prefs.mk"
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-# ERROR: .../firefox-105.0.3/xpcom/idl-parser/xpidl/xpidl.py:1620: Invalid regular expression for rule 't_multilinecomment'. global flags not at the start of the expression at position 26
-# ERROR: .../firefox/work/firefox-105.0.3/xpcom/idl-parser/xpidl/xpidl.py:1626: Invalid regular expression for rule 't_singlelinecomment'. global flags not at the start of the expression at position 24
-# ERROR: .../firefox/work/firefox-105.0.3/xpcom/idl-parser/xpidl/xpidl.py:1639: Invalid regular expression for rule 't_LCDATA'. global flags not at the start of the expression at position 13
-# leading to:
-# SyntaxError: Can't build lexer
-PYTHON_VERSIONS_INCOMPATIBLE+=	311
 PYTHON_FOR_BUILD_ONLY=		tool
 ALL_ENV+=			PYTHON3=${PYTHONBIN}
 
@@ -203,7 +197,7 @@ BUILDLINK_API_DEPENDS.libevent+=	libevent>=1.1
 BUILDLINK_API_DEPENDS.nspr+=	nspr>=4.34
 .include "../../devel/nspr/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
-BUILDLINK_API_DEPENDS.nss+=	nss>=3.86
+BUILDLINK_API_DEPENDS.nss+=	nss>=3.87
 .include "../../devel/nss/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 #.include "../../mk/jpeg.buildlink3.mk"
