@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2022/11/30 19:54:59 adam Exp $
+# $NetBSD: Makefile,v 1.44 2023/02/15 07:41:44 he Exp $
 
 .include "../../lang/llvm/version.mk"
 
@@ -80,7 +80,7 @@ post-extract:
 	${MKDIR} ${WRKSRC}/build
 
 #.include "../../devel/googletest/buildlink3.mk" # check-lldb-unit
-.include "../../devel/libatomic_ops/buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/clang/buildlink3.mk"
 .include "../../lang/llvm/buildlink3.mk"
