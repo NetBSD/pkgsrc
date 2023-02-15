@@ -1,0 +1,28 @@
+$NetBSD: patch-Quake_Makefile,v 1.1 2023/02/15 03:26:36 charlotte Exp $
+
+Fixup installation paths, and allow LDFLAGS to be set on command line.
+
+--- Quake/Makefile.orig	2022-05-12 13:24:15.000000000 -0700
++++ Quake/Makefile	2023-01-14 11:49:22.894772880 -0800
+@@ -50,7 +50,7 @@
+ PKG_CONFIG ?= pkg-config
+ 
+ CPUFLAGS=
+-LDFLAGS =
++LDFLAGS ?=
+ DFLAGS ?=
+ CFLAGS ?= -Wall -Wno-trigraphs
+ CFLAGS += $(CPUFLAGS)
+@@ -317,8 +317,10 @@
+ 	rm -f $(shell find . \( -name '*~' -o -name '#*#' -o -name '*.o' -o -name '*.d' -o -name '*.res' -o -name $(DEFAULT_TARGET) \) -print)
+ 
+ install:	ironwail
+-	cp ironwail /usr/local/games/quake
+-	cp ironwail.pak /usr/local/games/quake
++	install -d $(DESTDIR)$(PREFIX)/libexec
++	install -m0755 ironwail $(DESTDIR)$(PREFIX)/libexec
++	install -d $(DESTDIR)$(PREFIX)/share/ironwail
++	install -m0644 ironwail.pak $(DESTDIR)$(PREFIX)/share/ironwail
+ 
+ #---------------------------------------------------------------
+ # include dependencies (if not running 'clean' target)
