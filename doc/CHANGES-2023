@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1235 2023/02/15 03:14:05 charlotte Exp $
+$NetBSD: CHANGES-2023,v 1.1236 2023/02/15 03:27:40 charlotte Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1567,3 +1567,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/xfce4-notifyd to 0.8.0 [gutteridge 2023-02-15]
 	Added games/nanosaur version 1.4.4 [charlotte 2023-02-15]
 	Added games/nanosaur2 version 2.1.0 [charlotte 2023-02-15]
+	Added games/ironwail version 0.6.0 [charlotte 2023-02-15]
