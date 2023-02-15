@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1250 2023/02/15 18:26:32 adam Exp $
+$NetBSD: CHANGES-2023,v 1.1251 2023/02/15 20:38:49 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1591,3 +1591,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/py-botocore to 1.29.71 [adam 2023-02-15]
 	Updated net/py-boto3 to 1.26.71 [adam 2023-02-15]
 	Updated net/py-awscli to 1.27.71 [adam 2023-02-15]
+	Updated www/firefox to 110.0 [ryoon 2023-02-15]
