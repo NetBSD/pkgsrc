@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2023/02/15 13:05:48 wiz Exp $
+include/librttopo.h
+include/librttopo_geom.h
+lib/librttopo.la
+lib/pkgconfig/rttopo.pc
