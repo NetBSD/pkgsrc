@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/11/27 17:51:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/02/15 23:17:32 wiz Exp $
 include/spatialindex/LineSegment.h
 include/spatialindex/MVRTree.h
 include/spatialindex/MovingPoint.h
@@ -27,9 +27,11 @@ include/spatialindex/capi/sidx_export.h
 include/spatialindex/capi/sidx_impl.h
 include/spatialindex/tools/PointerPool.h
 include/spatialindex/tools/PoolPointer.h
-include/spatialindex/tools/SmartPointer.h
 include/spatialindex/tools/Tools.h
 include/spatialindex/tools/rand48.h
-lib/libspatialindex.la
-lib/libspatialindex_c.la
-lib/pkgconfig/libspatialindex.pc
+lib/libspatialindex.so
+lib/libspatialindex.so.6
+lib/libspatialindex.so.6.1.1
+lib/libspatialindex_c.so
+lib/libspatialindex_c.so.6
+lib/libspatialindex_c.so.6.1.1
