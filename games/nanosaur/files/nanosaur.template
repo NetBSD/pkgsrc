@@ -1,0 +1,6 @@
+#!/bin/sh
+#
+# $NetBSD: nanosaur.template,v 1.1 2023/02/15 02:21:37 charlotte Exp $
+# Launcher script for nanosaur.
+set -e
+cd @@PREFIX@@/share/nanosaur && @@PREFIX@@/libexec/Nanosaur
