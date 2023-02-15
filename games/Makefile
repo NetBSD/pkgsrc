@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.521 2023/02/15 02:21:51 charlotte Exp $
+# $NetBSD: Makefile,v 1.522 2023/02/15 03:07:06 charlotte Exp $
 #
 
 COMMENT=	Games
@@ -289,6 +289,7 @@ SUBDIR+=	mrrescue
 SUBDIR+=	naev
 SUBDIR+=	nagi
 SUBDIR+=	nanosaur
+SUBDIR+=	nanosaur2
 SUBDIR+=	nbsdgames
 SUBDIR+=	nethack
 SUBDIR+=	nethack-lib
