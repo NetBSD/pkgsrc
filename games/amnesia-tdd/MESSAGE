@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2023/02/16 03:43:05 charlotte Exp $
+
+This package provides only the game engine. In order to play the game,
+please purchase a copy of Amnesia: The Dark Descent, and install the data
+files to the following directory:
+
+	${PREFIX}/share/amnesia-tdd
+
+===========================================================================
