@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.524 2023/02/16 03:43:30 charlotte Exp $
+# $NetBSD: Makefile,v 1.525 2023/02/16 08:06:40 charlotte Exp $
 #
 
 COMMENT=	Games
@@ -286,6 +286,7 @@ SUBDIR+=	minetest
 SUBDIR+=	mirrormagic
 SUBDIR+=	monsterz
 SUBDIR+=	moon-buggy
+SUBDIR+=	moonlight-qt
 SUBDIR+=	moria
 SUBDIR+=	mrrescue
 SUBDIR+=	naev
