@@ -1,0 +1,2 @@
+Jitsi SRTP contains classes for encrypting and decrypting SRTP and SRTCP
+packets. Jitsi SRTP contains native libraries to speed up encryption/decryption.
