@@ -1,0 +1,30 @@
+$NetBSD: patch-bin_ant,v 1.1 2023/02/16 10:32:36 abs Exp $
+
+Adjust to use the pkgsrc ${PREFIX}/bin/java wrapper by default,
+but still allow overriding with either of JAVACMD or JAVA_HOME.
+The latter is particularly important for other pkgsrc packages
+which use ant to build and may require a specific jdk (java-jna)
+
+--- bin/ant.orig	2023-01-04 09:33:13.000000000 +0000
++++ bin/ant
+@@ -115,6 +115,11 @@ if $rpm_mode; then
+   fi
+ fi
+ 
++# pkgsrc: use ${PREFIX}/bin/java (wrapper)
++if [ -z "$JAVA_HOME" ] && [ -z "$JAVACMD" ] && [ -x @PREFIX@/bin/java ]; then
++  JAVACMD=@PREFIX@/bin/java
++fi
++
+ # OS specific support.  $var _must_ be set to either true or false.
+ cygwin=false;
+ darwin=false;
+@@ -172,7 +177,7 @@ if $mingw; then
+ fi
+ 
+ # set ANT_LIB location
+-ANT_LIB="${ANT_HOME}/lib"
++ANT_LIB="${ANT_HOME}/lib/java/ant"
+ 
+ if [ -z "$JAVACMD" ]; then
+   if [ -n "$JAVA_HOME" ]; then
