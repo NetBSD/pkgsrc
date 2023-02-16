@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.88 2023/02/11 03:49:24 pho Exp $
+@comment $NetBSD: PLIST,v 1.89 2023/02/16 18:17:33 he Exp $
 bin/thunderbird
 lib/thunderbird/actors/AboutHttpsOnlyErrorChild.jsm
 lib/thunderbird/actors/AboutHttpsOnlyErrorParent.jsm
@@ -61,6 +61,12 @@ lib/thunderbird/actors/ViewSourcePageParent.jsm
 lib/thunderbird/actors/WebChannelChild.jsm
 lib/thunderbird/actors/WebChannelParent.jsm
 lib/thunderbird/application.ini
+${PLIST.branding}lib/thunderbird/chrome/en-US/locale/en-US/branding/brand.dtd
+${PLIST.branding}lib/thunderbird/chrome/en-US/locale/en-US/branding/brand.properties
+${PLIST.nobranding}lib/thunderbird/chrome/en-US/locale/branding/brand.dtd
+${PLIST.nobranding}lib/thunderbird/chrome/en-US/locale/branding/brand.properties
+${PLIST.nobranding}lib/thunderbird/chrome/messenger/content/branding/about-background.png
+${PLIST.wayland}lib/thunderbird/libmozwayland.so
 lib/thunderbird/chrome.manifest
 lib/thunderbird/chrome/browser/content/built_in_addons.json
 lib/thunderbird/chrome/browser/content/extension.css
@@ -3210,10 +3216,6 @@ lib/thunderbird/chrome/devtools/skin/tooltips.css
 lib/thunderbird/chrome/devtools/skin/variables.css
 lib/thunderbird/chrome/devtools/skin/webconsole.css
 lib/thunderbird/chrome/devtools/skin/widgets.css
-${PLIST.nobranding}lib/thunderbird/chrome/en-US/locale/branding/brand.dtd
-${PLIST.nobranding}lib/thunderbird/chrome/en-US/locale/branding/brand.properties
-${PLIST.branding}lib/thunderbird/chrome/en-US/locale/en-US/branding/brand.dtd
-${PLIST.branding}lib/thunderbird/chrome/en-US/locale/en-US/branding/brand.properties
 lib/thunderbird/chrome/en-US/locale/en-US/alerts/alert.dtd
 lib/thunderbird/chrome/en-US/locale/en-US/alerts/alert.properties
 lib/thunderbird/chrome/en-US/locale/en-US/autoconfig/autoconfig.properties
@@ -3548,7 +3550,6 @@ lib/thunderbird/chrome/icons/default/default256.png
 lib/thunderbird/chrome/icons/default/default32.png
 lib/thunderbird/chrome/icons/default/default48.png
 lib/thunderbird/chrome/icons/default/default64.png
-${PLIST.nobranding}lib/thunderbird/chrome/messenger/content/branding/about-background.png
 lib/thunderbird/chrome/messenger/content/branding/about-logo.svg
 lib/thunderbird/chrome/messenger/content/branding/about-wordmark.svg
 lib/thunderbird/chrome/messenger/content/branding/about.png
@@ -3592,6 +3593,7 @@ lib/thunderbird/chrome/messenger/content/messenger/about-support/accounts.js
 lib/thunderbird/chrome/messenger/content/messenger/about-support/calendars.js
 lib/thunderbird/chrome/messenger/content/messenger/about-support/chat.js
 lib/thunderbird/chrome/messenger/content/messenger/about-support/export.js
+lib/thunderbird/chrome/messenger/content/messenger/about-support/libs.js
 lib/thunderbird/chrome/messenger/content/messenger/about3Pane.js
 lib/thunderbird/chrome/messenger/content/messenger/about3Pane.xhtml
 lib/thunderbird/chrome/messenger/content/messenger/aboutAddonsExtra.js
@@ -5608,7 +5610,6 @@ lib/thunderbird/isp/SpamPal.sfd
 lib/thunderbird/liblgpllibs.so
 lib/thunderbird/libmozgtk.so
 lib/thunderbird/libmozsqlite3.so
-${PLIST.wayland}lib/thunderbird/libmozwayland.so
 lib/thunderbird/librnp.so
 lib/thunderbird/libxul.so
 lib/thunderbird/localization/en-US/branding/brand.ftl
