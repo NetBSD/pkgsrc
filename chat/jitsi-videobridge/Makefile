@@ -1,18 +1,21 @@
-# $NetBSD: Makefile,v 1.1 2023/01/03 10:29:35 khorben Exp $
+# $NetBSD: Makefile,v 1.2 2023/02/16 10:33:08 khorben Exp $
 
 .include "../../chat/jitsi-meet/Makefile.common"
 
 GITHUB_PROJECT=	jitsi-videobridge
 PKGNAME=	${GITHUB_PROJECT}-${JITSI_MEET_VERSION}
+PKGREVISION=	1
 
 HOMEPAGE=	https://github.com/jitsi/jitsi-videobridge/
 COMMENT=	WebRTC compatible video router or SFU
 
 DISTINFO_FILE=	${.CURDIR}/../../chat/jitsi-videobridge/distinfo
 DISTFILES=	${DEFAULT_DISTFILES}
-DISTFILES+=	jitsi-videobridge-java-deps-${JITSI_MEET_VERSION}.tar.gz
-SITES.jitsi-videobridge-java-deps-${JITSI_MEET_VERSION}.tar.gz= \
+DISTFILES+=	jitsi-videobridge-java-deps-${JITSI_MEET_VERSION}nb1.tar.gz
+SITES.jitsi-videobridge-java-deps-${JITSI_MEET_VERSION}nb1.tar.gz= \
 		ftp://ftp.NetBSD.org/pub/NetBSD/misc/khorben/
+
+DEPENDS+=	jitsi-srtp-[0-9]*:../../chat/jitsi-srtp
 
 USE_TOOLS+=	bash:run pax:build unzip
 
@@ -23,9 +26,10 @@ TOOL_DEPENDS+=	apache-maven-[0-9]*:../../devel/apache-maven
 MAVEN_FLAGS+=	-Duser.home=${FAKEHOMEDIR}
 MAVEN_FLAGS+=	-Dmaven.repo.local=${WRKDIR}/deps
 MAVEN_FLAGS+=	--offline
+MAVEN_FLAGS+=	-PbuildFatJar
 MAVEN_FLAGS+=	-DskipTests
 MAVEN_FLAGS+=	-Dassembly.skipAssembly=false
-MVN=		mvn ${MAVEN_FLAGS}
+MVN=		${PKGSRC_SETENV} ${MAKE_ENV} mvn ${MAVEN_FLAGS}
 
 REPLACE_BASH=	jvb/resources/jvb.sh
 REPLACE_BASH+=	resources/collect-dump-logs.sh
@@ -76,12 +80,8 @@ do-build:
 	cd ${WRKSRC} && ${MVN} package
 
 do-install:
-	${RM} -rf ${DESTDIR}${PREFIX}/share/jitsi-videobridge-${JITSI_MEET_VERSION} \
-		${DESTDIR}${PREFIX}/share/jitsi-videobridge
-	cd ${DESTDIR}${PREFIX}/share && \
-		${UNZIP_CMD} ${WRKSRC}/jvb/target/jitsi-videobridge-${JITSI_MEET_VERSION}-archive.zip
-	${MV} ${DESTDIR}${PREFIX}/share/jitsi-videobridge-${JITSI_MEET_VERSION} \
-		${DESTDIR}${PREFIX}/share/jitsi-videobridge
+	${INSTALL_DATA} ${WRKSRC}/jvb/target/jitsi-videobridge-${JITSI_MEET_VERSION}-jar-with-dependencies.jar \
+		${DESTDIR}${PREFIX}/share/jitsi-videobridge/jitsi-videobridge.jar
 	${LN} -sf ../share/jitsi-videobridge/jvb.sh \
 		${DESTDIR}${PREFIX}/bin/jvb
 	${INSTALL_DATA} ${WRKSRC}/jvb/src/main/resources/reference.conf \
@@ -96,6 +96,10 @@ do-install:
 		${DESTDIR}${PREFIX}/share/jitsi-videobridge/collect-dump-logs.sh
 	${INSTALL_SCRIPT} ${WRKSRC}/resources/graceful_shutdown.sh \
 		${DESTDIR}${PREFIX}/share/jitsi-videobridge/graceful_shutdown.sh
+	${INSTALL_DATA} ${WRKSRC}/jvb/resources/jvb.bat \
+		${DESTDIR}${PREFIX}/share/jitsi-videobridge/jvb.bat
+	${INSTALL_SCRIPT} ${WRKSRC}/jvb/resources/jvb.sh \
+		${DESTDIR}${PREFIX}/share/jitsi-videobridge/jvb.sh
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
