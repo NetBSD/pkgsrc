@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 10:51:43 nia Exp $
+$NetBSD: distinfo,v 1.12 2023/02/16 17:59:49 he Exp $
 
 BLAKE2s (mpd-language/mpd.1.0.1.tgz) = beafa8fb9b4d0a1b35f99f72b1959a308dcb2f4c3348cbe087f640db5e20992e
 SHA512 (mpd-language/mpd.1.0.1.tgz) = bbd3d99161b6e041042c5fbef42fd14ca46e7ebec00f945ae1d0e4f752b02d03f89cddc9615367105331af496a9f0908e375fe7f7bda15eeb3287752c6e4b61b
@@ -8,7 +8,7 @@ SHA1 (patch-ab) = 2a086280fefb4acddd19cb3cbafd58f8de5b309e
 SHA1 (patch-ar) = 2cb9c743870aa91edb77f83b4ce4c36424a6bb5b
 SHA1 (patch-as) = e3ec11eace9d11349077adcf4e5bb16ac6e3e1a4
 SHA1 (patch-at) = e96ef9ceee5edc32e33b6aa80b949e7ebd188b9a
-SHA1 (patch-au) = 7d2ebdef6c007a286b0dc0ab007039d4dbca67ed
+SHA1 (patch-au) = e90c5fe0f8e8b397ed2ac412013e0968606d0e9c
 SHA1 (patch-av) = 49727b74c938e15d87447b4a7dcdc09840593351
 SHA1 (patch-aw) = b7849bfaa2bbdf218d09147ef0461e4fcbd7e7f6
 SHA1 (patch-ax) = 1ed20dc2f4f0fb086a267d60de85ef6c9f1629ee
@@ -27,3 +27,5 @@ SHA1 (patch-bj) = c5123801140fbfdcbfdabbcd39fe70d2e71355fc
 SHA1 (patch-bk) = b51a6e1ead24feee415dd875fb049b8071f7c229
 SHA1 (patch-bl) = 80f35b366bb6ccf9eaf07ae772a6406cac8b24b9
 SHA1 (patch-bm) = 3f5f3143451b8509b94188e5ce1c375f9bd2619f
+SHA1 (patch-gen.h) = dd051c5adb4eb5b72ba899266283c9dbb9d2569a
+SHA1 (patch-mpd_main.c) = ae71569e772314099d272e0d1860d4e6c3d9cb93
