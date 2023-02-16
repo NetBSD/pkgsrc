@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1271 2023/02/16 13:37:41 taca Exp $
+$NetBSD: CHANGES-2023,v 1.1272 2023/02/16 13:56:16 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1629,3 +1629,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/fq version 0.3.0 [wiz 2023-02-16]
 	Updated net/bind916 to 9.16.38 [taca 2023-02-16]
 	Updated net/bind918 to 9.18.12 [taca 2023-02-16]
+	Updated lang/go119 to 1.19.6 [bsiegert 2023-02-16]
