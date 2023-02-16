@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/02/16 19:51:21 nikita Exp $
+
+BLAKE2s (Net-OAuth2-AuthorizationServer-0.28.tar.gz) = 93022a4b3b24e237a314edd85a5eb4945ec261736d3d875366a9f040a8df79e8
+SHA512 (Net-OAuth2-AuthorizationServer-0.28.tar.gz) = 80b24aca6c20b52c0405632359160afc35155547adef7feb98b8bcf9231944a0351082c9f3f75c8d9ff7e3320f39ce1c94e01be3bccef5a972ce091108ca74fb
+Size (Net-OAuth2-AuthorizationServer-0.28.tar.gz) = 33989 bytes
