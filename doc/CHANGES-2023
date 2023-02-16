@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1261 2023/02/16 07:55:14 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1262 2023/02/16 08:08:16 charlotte Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1620,3 +1620,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-cmudict to 1.0.12 [gutteridge 2023-02-16]
 	Added games/amnesia-tdd version 0.3.2 [charlotte 2023-02-16]
 	Updated x11/wxGTK32 to 3.2.2 [wiz 2023-02-16]
+	Added games/moonlight-qt version 4.3.1 [charlotte 2023-02-16]
