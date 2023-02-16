@@ -1,0 +1,10 @@
+This module is the gateway to the various OAuth2 grant flows, as
+documented at https://tools.ietf.org/html/rfc6749. Each module
+implements a specific grant flow and is designed to "just work"
+with minimal detail and effort.
+
+Please see Net::OAuth2::AuthorizationServer::Manual for more
+information on how to use this module and the various grant types.
+You should use the manual in conjunction with the grant type module
+you are using to understand how to override the defaults if the
+"just work" mode isn't good enough for you.
