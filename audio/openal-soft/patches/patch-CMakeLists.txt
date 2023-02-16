@@ -1,22 +1,10 @@
-$NetBSD: patch-CMakeLists.txt,v 1.5 2022/05/04 17:23:35 tnn Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.6 2023/02/16 15:15:55 wiz Exp $
 
-Fix building.
+Disable libsndfile.
 
---- CMakeLists.txt.orig	2022-04-23 01:46:14.000000000 +0000
+--- CMakeLists.txt.orig	2023-02-03 14:48:18.000000000 +0000
 +++ CMakeLists.txt
-@@ -1206,9 +1206,9 @@ if(ALSOFT_EMBED_HRTF_DATA)
- 
-         add_custom_command(OUTPUT "${outfile}"
-             COMMAND ${CMAKE_COMMAND} -D "INPUT_FILE=${infile}" -D "OUTPUT_FILE=${outfile}"
--                -D "VARIABLE_NAME=${VARNAME}" -P "${CMAKE_MODULE_PATH}/bin2h.script.cmake"
-+                -D "VARIABLE_NAME=${VARNAME}" -P "${OpenAL_SOURCE_DIR}/cmake/bin2h.script.cmake"
-             WORKING_DIRECTORY "${OpenAL_SOURCE_DIR}"
--            DEPENDS "${infile}" "${CMAKE_MODULE_PATH}/bin2h.script.cmake"
-+            DEPENDS "${infile}" "${OpenAL_SOURCE_DIR}/cmake/bin2h.script.cmake"
-             VERBATIM
-         )
-         set(ALC_OBJS  ${ALC_OBJS} "${outfile}")
-@@ -1522,7 +1522,7 @@ if(ALSOFT_UTILS)
+@@ -1559,7 +1559,7 @@ if(ALSOFT_UTILS)
          set(EXTRA_INSTALLS ${EXTRA_INSTALLS} openal-info)
      endif()
  
@@ -25,7 +13,7 @@ Fix building.
          add_executable(uhjdecoder utils/uhjdecoder.cpp)
          target_compile_definitions(uhjdecoder PRIVATE ${CPP_DEFS})
          target_include_directories(uhjdecoder
-@@ -1608,7 +1608,7 @@ if(ALSOFT_EXAMPLES)
+@@ -1645,7 +1645,7 @@ if(ALSOFT_EXAMPLES)
  
      message(STATUS "Building example programs")
  
