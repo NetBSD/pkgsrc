@@ -1,6 +1,6 @@
-$NetBSD: patch-media_libcubeb_src_cubeb__sun.c,v 1.3 2023/02/10 10:04:54 pho Exp $
+$NetBSD: patch-media_libcubeb_src_cubeb__sun.c,v 1.4 2023/02/16 18:11:40 he Exp $
 
---- media/libcubeb/src/cubeb_sun.c.orig	2023-02-10 01:03:24.076131575 +0000
+--- media/libcubeb/src/cubeb_sun.c.orig	2023-02-16 16:57:29.457010148 +0000
 +++ media/libcubeb/src/cubeb_sun.c
 @@ -1,5 +1,5 @@
  /*
