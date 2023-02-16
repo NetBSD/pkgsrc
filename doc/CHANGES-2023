@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1265 2023/02/16 08:42:41 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1266 2023/02/16 09:56:44 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1624,3 +1624,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/wxGTK32 to 3.2.2.1 [wiz 2023-02-16]
 	Updated print/poppler to 23.02.0 [wiz 2023-02-16]
 	Updated multimedia/dav1d to 1.1.0 [wiz 2023-02-16]
+	Added chat/jitsi-srtp version 1.1 [khorben 2023-02-16]
