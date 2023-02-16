@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.593 2023/02/09 07:08:20 wiz Exp $
+# $NetBSD: Makefile,v 1.594 2023/02/16 07:16:28 wiz Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -405,6 +405,7 @@ SUBDIR+=	thunderbird52-l10n
 SUBDIR+=	thunderbird68
 SUBDIR+=	thunderbird68-l10n
 SUBDIR+=	thunderbird78
+SUBDIR+=	thunderbird78-l10n
 SUBDIR+=	tmda
 SUBDIR+=	tnef
 SUBDIR+=	tnef2txt
