@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.255 2023/02/10 10:04:54 pho Exp $
+$NetBSD: distinfo,v 1.256 2023/02/16 18:11:40 he Exp $
 
-BLAKE2s (thunderbird-102.6.1.source.tar.xz) = a5a5e3a188e039669a404983d4ef55790a0882f8250cfc4557a3df3550260a51
-SHA512 (thunderbird-102.6.1.source.tar.xz) = 06ea2fce76c08609d638435869fddc1c4d7f4b748951ebfb2476b4dba9f1f76d3de2c11e5f62540f297a5d30bb0fc637852d8e57f4fadc2c905f299757949d83
-Size (thunderbird-102.6.1.source.tar.xz) = 508826308 bytes
+BLAKE2s (thunderbird-102.8.0.source.tar.xz) = 5d6de22c7e4aadb9937982915322f646913f7a1deb73492b68fdf6beeb56fa70
+SHA512 (thunderbird-102.8.0.source.tar.xz) = 2431eb8799184b261609c96bed3c9368bec9035a831aa5f744fa89e48aedb130385b268dd90f03bbddfec449dc3e5fad1b5f8727fe9e11e1d1f123a81b97ddf8
+Size (thunderbird-102.8.0.source.tar.xz) = 506030440 bytes
 SHA1 (patch-browser_app_profile_firefox.js) = d53fae5544563888d030af7483f00283a712235c
 SHA1 (patch-build_moz.configure_rust.configure) = 72c5fa2e9d1022325d038832cca2e35f7213116d
 SHA1 (patch-comm_third__party_botan_configure.py) = 262f560c514d221d0df15a1906100b5e716bfdab
@@ -20,7 +20,7 @@ SHA1 (patch-js_src_jsfriendapi.h) = e013337469254e2a9e598bd070528f0f654acccb
 SHA1 (patch-js_src_util_NativeStack.cpp) = 338fdf6aa34101f6a41d07b303d4a8426c483d5b
 SHA1 (patch-media_ffvpx_libavutil_arm_bswap.h) = 5a7ad4d38165d49d44862ade846cb79de026867e
 SHA1 (patch-media_libcubeb_src_cubeb__alsa.c) = 99e881e557430c1ef26060109f4b40c30d3b201c
-SHA1 (patch-media_libcubeb_src_cubeb__sun.c) = 79f086c838efd57dec03ec6f289b3ac8d439c68c
+SHA1 (patch-media_libcubeb_src_cubeb__sun.c) = 789312b0511f2667ab7ee581f066b6ecc129ad4f
 SHA1 (patch-media_libcubeb_src_moz.build) = bd3275f1acb6e439dee98b1673eeb65ec7797974
 SHA1 (patch-media_libpng_pngpriv.h) = 5c49119b0e555c9daca64799ff03f3fa8fa05ded
 SHA1 (patch-media_libtheora_lib_info.c) = 96f3d3824459186476102a4598d07cf6f6a704ef
