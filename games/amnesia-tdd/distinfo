@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/02/16 03:43:05 charlotte Exp $
+
+BLAKE2s (amnesia-tdd-0.3.2-d3abfdd93bb650b12aa224ecc6f6aace42424189.tar.gz) = f258c29034a9fc8c41e438d91442c60faed713b9d667ebf07db4e310090b00a1
+SHA512 (amnesia-tdd-0.3.2-d3abfdd93bb650b12aa224ecc6f6aace42424189.tar.gz) = 9b41524fc5569f0316137b72a6198f807a23811a040cbcd102dd82bf67d327259669970d99e4ecd0ffebe593a3c8a0e6ce6123b60b659a26525bc949a5239759
+Size (amnesia-tdd-0.3.2-d3abfdd93bb650b12aa224ecc6f6aace42424189.tar.gz) = 6710629 bytes
