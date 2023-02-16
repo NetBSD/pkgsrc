@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2023/01/25 16:04:26 micha Exp $
+# $NetBSD: Makefile,v 1.24 2023/02/16 18:14:29 nikita Exp $
 
 DISTNAME=	2023-01-12
 PKGNAME=	smake-1.7
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://codeberg.org/schilytools/schilytools/archive/
 DIST_SUBDIR=	schilytools
@@ -13,7 +14,7 @@ LICENSE=	cddl-1.0
 
 MAKE_FLAGS+=	GMAKE_NOWARN=true
 
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake m4
 MAKE_FLAGS+=	DESTDIR=${DESTDIR} INS_BASE=${PREFIX} DEFMANBASE=. MANDIR=${PKGMANDIR}
 # Honor CPPFLAGS, CFLAGS and LDFLAGS
 MAKE_FLAGS+=	CPPOPTX=${CPPFLAGS:Q} COPTX=${CFLAGS:Q} LDOPTX=${LDFLAGS:Q}
