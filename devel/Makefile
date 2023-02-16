@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3922 2023/02/14 21:27:08 schmonz Exp $
+# $NetBSD: Makefile,v 1.3923 2023/02/16 10:56:29 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -372,6 +372,7 @@ SUBDIR+=	floskell
 SUBDIR+=	fortran-utils
 SUBDIR+=	fossil
 SUBDIR+=	fourmolu
+SUBDIR+=	fq
 SUBDIR+=	frama-c
 SUBDIR+=	frink
 SUBDIR+=	fromcvs
