@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1266 2023/02/16 09:56:44 khorben Exp $
+$NetBSD: CHANGES-2023,v 1.1267 2023/02/16 10:40:15 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1625,3 +1625,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated print/poppler to 23.02.0 [wiz 2023-02-16]
 	Updated multimedia/dav1d to 1.1.0 [wiz 2023-02-16]
 	Added chat/jitsi-srtp version 1.1 [khorben 2023-02-16]
+	Updated lang/go120 to 1.20.1 [bsiegert 2023-02-16]
