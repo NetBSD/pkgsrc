@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.20 2022/03/19 16:19:02 jakllsch Exp $
+$NetBSD: distinfo,v 1.21 2023/02/16 18:56:44 he Exp $
 
 BLAKE2s (openafs-1.8.8.1-src.tar.bz2) = cfa0eadf49551acae3e14a3b756ce618a30bece455915fde9a7a1311baa0f4c9
 SHA512 (openafs-1.8.8.1-src.tar.bz2) = fb181e0989e9bae714af26de916a96946eea20f98b47154f2de7b5e296cb4f42af5df037ef7b603073e97eafe52d7c401666f03130c1e0c9a6ae1a6c2707c384
@@ -8,7 +8,9 @@ SHA1 (patch-src_cf_sysname.m4) = 7f45f6387bf959d2026be369cbbfec1a96ff424b
 SHA1 (patch-src_comerr_Makefile.in) = 0213dcd89dc2894b9724d89cec61a0738ddd6696
 SHA1 (patch-src_config_afs__sysnames.h) = 558854bf3b89b2d9679224b548e8b743adf7a752
 SHA1 (patch-src_config_param.armv6_nbsd80.h) = eea7a8f8a141d285ba5a2bb4317950f0b860528f
+SHA1 (patch-src_config_param.nbsd100.h) = 5af5a945a68958dee515fb1eb98b002097c0fb40
 SHA1 (patch-src_config_param.nbsd80.h) = 52335bea3c5ae9becab4d9e8248ecc3c2ac24749
 SHA1 (patch-src_config_param.nbsd90.h) = 0a958172a80e694f0b59c0e5e03c0956740b1ddb
+SHA1 (patch-src_config_param.ppc_nbsd100.h) = 21802201fffc94bba23119c7781189a2ddfe680f
 SHA1 (patch-src_lwp_lwp.c) = be963332293d31137a46fb27d1dec25c7fbb120e
 SHA1 (patch-src_lwp_process.amd64.s) = c0be87a82e201855d9004859e01c90d8016efc7f
