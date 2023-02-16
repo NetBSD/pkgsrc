@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2023/02/16 08:06:21 charlotte Exp $
+bin/moonlight
+share/applications/com.moonlight_stream.Moonlight.desktop
+share/icons/hicolor/scalable/apps/moonlight.svg
+share/metainfo/com.moonlight_stream.Moonlight.appdata.xml
