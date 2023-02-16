@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22633 2023/02/15 23:19:02 wiz Exp $
+$NetBSD: TODO,v 1.22634 2023/02/16 07:55:14 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1522,7 +1522,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o wmi-11
 	o wordwarvi-1.0.4
 	o worker-4.8.0
-	o wxGTK32-3.2.2
 	o wxRemind-101
 	o x16-emulator-38
 	o x16-rom-38
