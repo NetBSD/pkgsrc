@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1259 2023/02/16 03:44:07 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.1260 2023/02/16 03:46:00 charlotte Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1618,3 +1618,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated geography/libspatialite to 5.0.1 [wiz 2023-02-15]
 	Updated devel/kdiff3 to 1.10.0 [gutteridge 2023-02-16]
 	Updated textproc/py-cmudict to 1.0.12 [gutteridge 2023-02-16]
+	Added games/amnesia-tdd version 0.3.2 [charlotte 2023-02-16]
