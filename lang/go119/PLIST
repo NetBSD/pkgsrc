@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/01/11 17:24:29 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.7 2023/02/16 13:55:55 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go119/CONTRIBUTING.md
@@ -3145,6 +3145,7 @@ go119/src/cmd/go/testdata/script/version_buildvcs_fossil.txt
 go119/src/cmd/go/testdata/script/version_buildvcs_git.txt
 go119/src/cmd/go/testdata/script/version_buildvcs_hg.txt
 go119/src/cmd/go/testdata/script/version_buildvcs_nested.txt
+go119/src/cmd/go/testdata/script/version_gc_sections.txt
 go119/src/cmd/go/testdata/script/version_goexperiment.txt
 go119/src/cmd/go/testdata/script/version_replace.txt
 go119/src/cmd/go/testdata/script/vet.txt
@@ -6773,6 +6774,7 @@ go119/src/mime/multipart/formdata.go
 go119/src/mime/multipart/formdata_test.go
 go119/src/mime/multipart/multipart.go
 go119/src/mime/multipart/multipart_test.go
+go119/src/mime/multipart/readmimeheader.go
 go119/src/mime/multipart/testdata/nested-mime
 go119/src/mime/multipart/writer.go
 go119/src/mime/multipart/writer_test.go
