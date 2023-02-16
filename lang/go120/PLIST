@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/02/05 13:25:26 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/02/16 10:39:59 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go120/CONTRIBUTING.md
@@ -1619,6 +1619,8 @@ go120/src/cmd/go/internal/robustio/robustio_other.go
 go120/src/cmd/go/internal/robustio/robustio_windows.go
 go120/src/cmd/go/internal/run/run.go
 go120/src/cmd/go/internal/script/cmds.go
+go120/src/cmd/go/internal/script/cmds_other.go
+go120/src/cmd/go/internal/script/cmds_posix.go
 go120/src/cmd/go/internal/script/conds.go
 go120/src/cmd/go/internal/script/engine.go
 go120/src/cmd/go/internal/script/errors.go
@@ -2574,6 +2576,7 @@ go120/src/cmd/go/testdata/script/version_buildvcs_git.txt
 go120/src/cmd/go/testdata/script/version_buildvcs_hg.txt
 go120/src/cmd/go/testdata/script/version_buildvcs_nested.txt
 go120/src/cmd/go/testdata/script/version_cshared.txt
+go120/src/cmd/go/testdata/script/version_gc_sections.txt
 go120/src/cmd/go/testdata/script/version_goexperiment.txt
 go120/src/cmd/go/testdata/script/version_replace.txt
 go120/src/cmd/go/testdata/script/vet.txt
@@ -6371,6 +6374,7 @@ go120/src/mime/multipart/formdata.go
 go120/src/mime/multipart/formdata_test.go
 go120/src/mime/multipart/multipart.go
 go120/src/mime/multipart/multipart_test.go
+go120/src/mime/multipart/readmimeheader.go
 go120/src/mime/multipart/testdata/nested-mime
 go120/src/mime/multipart/writer.go
 go120/src/mime/multipart/writer_test.go
@@ -10993,6 +10997,8 @@ go120/test/fixedbugs/issue57846.go
 go120/test/fixedbugs/issue5793.go
 go120/test/fixedbugs/issue5809.go
 go120/test/fixedbugs/issue5820.go
+go120/test/fixedbugs/issue58293.go
+go120/test/fixedbugs/issue58325.go
 go120/test/fixedbugs/issue5841.go
 go120/test/fixedbugs/issue5856.go
 go120/test/fixedbugs/issue5910.dir/a.go
