@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2023/02/16 08:06:21 charlotte Exp $
+
+BLAKE2s (MoonlightSrc-4.3.1.tar.gz) = 3121de7ae0f7958c1d734eb71118db28847af1582f8d4feca0d109e6f4354149
+SHA512 (MoonlightSrc-4.3.1.tar.gz) = f5f7b23929aadb87716470522a315cba40d8155be6b76297eab4107e0fef71b48f9f4c9a4cc2b58bd48579db052a8ca8ecda9b49c78c3d229863a30886cf1847
+Size (MoonlightSrc-4.3.1.tar.gz) = 71454450 bytes
+SHA1 (patch-moonlight-qt.pro) = 983da58082157b04a53a02a6849e9273d51034b0
