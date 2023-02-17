@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.113 2023/02/17 21:49:30 khorben Exp $
+# $NetBSD: Makefile,v 1.114 2023/02/17 21:58:09 khorben Exp $
 
-OVTVER=		12.0.5
-DISTNAME=	open-vm-tools-${OVTVER}-19716617
+OVTVER=		12.1.0
+DISTNAME=	open-vm-tools-${OVTVER}-20219665
 PKGNAME=	open-vm-tools-${OVTVER}
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=vmware/}
