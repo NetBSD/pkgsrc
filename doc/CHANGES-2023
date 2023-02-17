@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1275 2023/02/16 19:51:49 nikita Exp $
+$NetBSD: CHANGES-2023,v 1.1276 2023/02/17 08:29:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1633,3 +1633,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/mob to 4.3.0 [schmonz 2023-02-16]
 	Updated audio/openal-soft to 1.23.0 [wiz 2023-02-16]
 	Added www/p5-Net-OAuth2-AuthorizationServer version 0.28 [nikita 2023-02-16]
+	Updated sysutils/py-ansible-compat to 3.0.1 [adam 2023-02-17]
+	Updated sysutils/ansible-lint to 6.13.0 [adam 2023-02-17]
