@@ -1,8 +1,8 @@
-$NetBSD: patch-listen__illumos.go,v 1.1 2022/11/23 10:07:30 jperkin Exp $
+$NetBSD: patch-listen__illumos.go,v 1.2 2023/02/17 15:47:09 bsiegert Exp $
 
 SunOS platforms do not have SO_REUSEPORT.
 
---- listen_illumos.go.orig	2022-11-23 09:48:44.378654914 +0000
+--- listen_illumos.go.orig	2023-02-17 15:09:59.805523778 +0000
 +++ listen_illumos.go
 @@ -15,7 +15,7 @@
  // TODO: Go 1.19 introduced the "unix" build tag. We have to support Go 1.18 until Go 1.20 is released.
@@ -34,7 +34,7 @@ SunOS platforms do not have SO_REUSEPORT.
 -
 -// reusePort sets SO_REUSEPORT. Ineffective for unix sockets.
 -func reusePort(network, address string, conn syscall.RawConn) error {
--	if isUnixNetwork(network) {
+-	if IsUnixNetwork(network) {
  		return nil
  	}
 -	return conn.Control(func(descriptor uintptr) {
