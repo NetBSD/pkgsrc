@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1280 2023/02/17 15:47:23 bsiegert Exp $
+$NetBSD: CHANGES-2023,v 1.1281 2023/02/17 16:47:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1642,3 +1642,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/gotosocial to 0.7.0 [nikita 2023-02-17]
 	Updated net/yt-dlp to 2023.2.17 [bsiegert 2023-02-17]
 	Updated www/caddy to 2.6.4 [bsiegert 2023-02-17]
+	Updated sysutils/ansible-lint to 6.13.1 [adam 2023-02-17]
+	Updated textproc/py-markdown2 to 2.4.8 [adam 2023-02-17]
