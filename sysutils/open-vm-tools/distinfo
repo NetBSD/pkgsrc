@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.38 2023/02/17 21:58:09 khorben Exp $
+$NetBSD: distinfo,v 1.39 2023/02/17 22:07:18 khorben Exp $
 
-BLAKE2s (open-vm-tools-12.1.0-20219665.tar.gz) = baf4092fc1e56a71b662427f889b3d5109c24b38d73cc50eb0ba48c83250e1b4
-SHA512 (open-vm-tools-12.1.0-20219665.tar.gz) = 00cd71a5fc25d854d0043b2ddfb7f759e3b3138acb9f33f7452641d7520e46bfa39ff784bde6c711de6e8aec24309720532100d7a8588fb1bebaa378b9566a2a
-Size (open-vm-tools-12.1.0-20219665.tar.gz) = 4355225 bytes
+BLAKE2s (open-vm-tools-12.1.5-20735119.tar.gz) = 409c366cc3dfb610fd00bf2b5d1037919ed37203862c8a810c64144b2dc660af
+SHA512 (open-vm-tools-12.1.5-20735119.tar.gz) = d85fec73a58cb1c9b2956aff886825b9d47d00dc6d0d8a3d2ecdfac3fa982c27463b9cc2f42bf3dd18fe542b30f751850e8051e270c547e897f06a4e1c12d639
+Size (open-vm-tools-12.1.5-20735119.tar.gz) = 4357637 bytes
 SHA1 (patch-Makefile.am) = 48a4a30df301b591d0755c9f2ea6b08f937f3fc9
 SHA1 (patch-ag) = a54f2a76e7b08c8c005a576d4e43ede3f0e0c9da
 SHA1 (patch-ah) = 2f59c9d650d378a84118991f75c59281a4836aaa
