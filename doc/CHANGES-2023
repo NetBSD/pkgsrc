@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1282 2023/02/17 21:49:41 khorben Exp $
+$NetBSD: CHANGES-2023,v 1.1283 2023/02/17 21:58:19 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1645,3 +1645,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/ansible-lint to 6.13.1 [adam 2023-02-17]
 	Updated textproc/py-markdown2 to 2.4.8 [adam 2023-02-17]
 	Updated sysutils/open-vm-tools to 12.0.5 [khorben 2023-02-17]
+	Updated sysutils/open-vm-tools to 12.1.0 [khorben 2023-02-17]
