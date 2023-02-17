@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1279 2023/02/17 14:03:04 bsiegert Exp $
+$NetBSD: CHANGES-2023,v 1.1280 2023/02/17 15:47:23 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1641,3 +1641,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/nodejs14 to 14.21.3 [adam 2023-02-17]
 	Updated www/gotosocial to 0.7.0 [nikita 2023-02-17]
 	Updated net/yt-dlp to 2023.2.17 [bsiegert 2023-02-17]
+	Updated www/caddy to 2.6.4 [bsiegert 2023-02-17]
