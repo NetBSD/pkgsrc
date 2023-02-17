@@ -1,12 +1,12 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: vmtools.sh,v 1.2 2016/10/09 03:41:56 ryoon Exp $
+# $NetBSD: vmtools.sh,v 1.3 2023/02/17 21:58:09 khorben Exp $
 #
 
 # PROVIDE: vmtools
 # REQUIRE: DAEMON
 
-$_rc_subr_loaded . /etc/rc.subr
+$_rc_subr_loaded . @SYSCONFBASE@/rc.subr
 
 name="vmtools"
 rcvar="vmtools"
