@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2022/12/18 13:52:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2023/02/17 08:29:30 adam Exp $
 bin/ansible-lint
 ${PYSITELIB}/${WHEEL_INFODIR}/COPYING
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
@@ -16,11 +16,33 @@ ${PYSITELIB}/ansiblelint/__main__.pyc
 ${PYSITELIB}/ansiblelint/_internal/__init__.py
 ${PYSITELIB}/ansiblelint/_internal/__init__.pyc
 ${PYSITELIB}/ansiblelint/_internal/internal_error.md
+${PYSITELIB}/ansiblelint/_internal/load-failure.md
+${PYSITELIB}/ansiblelint/_internal/parser-error.md
 ${PYSITELIB}/ansiblelint/_internal/rules.py
 ${PYSITELIB}/ansiblelint/_internal/rules.pyc
 ${PYSITELIB}/ansiblelint/_internal/warning.md
 ${PYSITELIB}/ansiblelint/_mockings.py
 ${PYSITELIB}/ansiblelint/_mockings.pyc
+${PYSITELIB}/ansiblelint/_vendor/__init__.py
+${PYSITELIB}/ansiblelint/_vendor/__init__.pyc
+${PYSITELIB}/ansiblelint/_vendor/ansible_compat/__init__.py
+${PYSITELIB}/ansiblelint/_vendor/ansible_compat/__init__.pyc
+${PYSITELIB}/ansiblelint/_vendor/ansible_compat/config.py
+${PYSITELIB}/ansiblelint/_vendor/ansible_compat/config.pyc
+${PYSITELIB}/ansiblelint/_vendor/ansible_compat/constants.py
+${PYSITELIB}/ansiblelint/_vendor/ansible_compat/constants.pyc
+${PYSITELIB}/ansiblelint/_vendor/ansible_compat/errors.py
+${PYSITELIB}/ansiblelint/_vendor/ansible_compat/errors.pyc
+${PYSITELIB}/ansiblelint/_vendor/ansible_compat/loaders.py
+${PYSITELIB}/ansiblelint/_vendor/ansible_compat/loaders.pyc
+${PYSITELIB}/ansiblelint/_vendor/ansible_compat/ports.py
+${PYSITELIB}/ansiblelint/_vendor/ansible_compat/ports.pyc
+${PYSITELIB}/ansiblelint/_vendor/ansible_compat/prerun.py
+${PYSITELIB}/ansiblelint/_vendor/ansible_compat/prerun.pyc
+${PYSITELIB}/ansiblelint/_vendor/ansible_compat/runtime.py
+${PYSITELIB}/ansiblelint/_vendor/ansible_compat/runtime.pyc
+${PYSITELIB}/ansiblelint/_vendor/ansible_compat/schema.py
+${PYSITELIB}/ansiblelint/_vendor/ansible_compat/schema.pyc
 ${PYSITELIB}/ansiblelint/_version.py
 ${PYSITELIB}/ansiblelint/_version.pyc
 ${PYSITELIB}/ansiblelint/app.py
@@ -116,9 +138,9 @@ ${PYSITELIB}/ansiblelint/rules/meta_no_info.pyc
 ${PYSITELIB}/ansiblelint/rules/meta_no_tags.md
 ${PYSITELIB}/ansiblelint/rules/meta_no_tags.py
 ${PYSITELIB}/ansiblelint/rules/meta_no_tags.pyc
-${PYSITELIB}/ansiblelint/rules/meta_unsupported_ansible.md
-${PYSITELIB}/ansiblelint/rules/meta_unsupported_ansible.py
-${PYSITELIB}/ansiblelint/rules/meta_unsupported_ansible.pyc
+${PYSITELIB}/ansiblelint/rules/meta_runtime.md
+${PYSITELIB}/ansiblelint/rules/meta_runtime.py
+${PYSITELIB}/ansiblelint/rules/meta_runtime.pyc
 ${PYSITELIB}/ansiblelint/rules/meta_video_links.md
 ${PYSITELIB}/ansiblelint/rules/meta_video_links.py
 ${PYSITELIB}/ansiblelint/rules/meta_video_links.pyc
