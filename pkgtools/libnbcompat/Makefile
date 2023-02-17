@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2022/11/09 13:14:15 joerg Exp $
+# $NetBSD: Makefile,v 1.89 2023/02/17 21:20:12 khorben Exp $
 #
 # NOTE: If you update this package, it is *mandatory* that you update
 # 	pkgsrc/pkgtools/libnbcompat/files/README to reflect the actual
@@ -6,6 +6,7 @@
 #
 
 PKGNAME=		libnbcompat-20200524
+PKGREVISION=		1
 CATEGORIES=		pkgtools devel
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
