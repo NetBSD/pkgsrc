@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2022/12/18 16:13:55 adam Exp $
+# $NetBSD: Makefile,v 1.11 2023/02/17 07:50:44 adam Exp $
 
-DISTNAME=	ansible-compat-2.2.7
+DISTNAME=	ansible-compat-3.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/ansible-compat/}
@@ -12,12 +12,12 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=7.0.0:../../devel/py-setuptools_scm
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+DEPENDS+=	ansible-core>=2.12:../../sysutils/ansible-core
 DEPENDS+=	${PYPKGPREFIX}-jsonschema>=4.6.0:../../textproc/py-jsonschema
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
-DEPENDS+=	${PYPKGPREFIX}-subprocess-tee>=0.3.5:../../sysutils/py-subprocess-tee
+DEPENDS+=	${PYPKGPREFIX}-subprocess-tee>=0.4.1:../../sysutils/py-subprocess-tee
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 #TODO: TEST_DEPENDS pip-tools, pytest-plus
-TEST_DEPENDS+=	ansible-core-[0-9]*:../../sysutils/ansible-core
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
 TEST_DEPENDS+=	${PYPKGPREFIX}-flaky-[0-9]*:../../devel/py-flaky
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
