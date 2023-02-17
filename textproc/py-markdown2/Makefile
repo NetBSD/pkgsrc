@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2022/01/04 20:54:59 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2023/02/17 16:46:42 adam Exp $
 
-DISTNAME=	markdown2-2.3.10
+DISTNAME=	markdown2-2.4.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/markdown2/}
 
@@ -12,6 +11,8 @@ COMMENT=	Fast and complete Python implementation of Markdown
 LICENSE=	mit
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 REPLACE_PYTHON=	lib/markdown2.py
 
