@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1285 2023/02/18 01:52:56 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.1286 2023/02/18 02:00:14 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1648,3 +1648,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/open-vm-tools to 12.1.0 [khorben 2023-02-17]
 	Updated sysutils/open-vm-tools to 12.1.5 [khorben 2023-02-17]
 	Updated print/lilypond to 2.24.1 [schmonz 2023-02-18]
+	Updated devel/py-approval-utilities to 8.2.0 [schmonz 2023-02-18]
