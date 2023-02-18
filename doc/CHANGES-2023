@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1289 2023/02/18 09:26:21 mef Exp $
+$NetBSD: CHANGES-2023,v 1.1290 2023/02/18 09:29:44 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1652,3 +1652,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-approvaltests to 8.2.0 [schmonz 2023-02-18]
 	Updated lang/R-cpp11 to 0.4.3 [mef 2023-02-18]
 	Updated misc/R-Hmisc to 4.8.0 [mef 2023-02-18]
+	Updated net/R-pingr to 2.0.2 [mef 2023-02-18]
