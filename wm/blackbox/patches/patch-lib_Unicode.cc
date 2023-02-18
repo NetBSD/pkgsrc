@@ -1,4 +1,6 @@
-$NetBSD: patch-lib_Unicode.cc,v 1.1 2021/06/10 12:48:50 nia Exp $
+$NetBSD: patch-lib_Unicode.cc,v 1.2 2023/02/18 02:15:01 gutteridge Exp $
+
+Fix builds on older NetBSD releases, which have an unusual prototype for iconv.
 
 --- lib/Unicode.cc.orig	2014-08-30 08:23:20.000000000 +0000
 +++ lib/Unicode.cc
