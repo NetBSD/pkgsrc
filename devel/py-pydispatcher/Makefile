@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2022/09/04 18:59:58 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2023/02/18 20:22:02 adam Exp $
 
-DISTNAME=	PyDispatcher-2.0.6
+DISTNAME=	PyDispatcher-2.0.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyDispatcher/}
