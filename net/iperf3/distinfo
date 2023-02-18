@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2022/10/14 11:00:14 adam Exp $
+$NetBSD: distinfo,v 1.14 2023/02/18 20:19:21 adam Exp $
 
-BLAKE2s (iperf-3.12.tar.gz) = d0bedd9bbb45b726d2bb73349f4cac9b6b2902dbcd293a9aa76760886975465f
-SHA512 (iperf-3.12.tar.gz) = 51797a2e902e927102baf19cd16dc4a0f32eb27876039ed4b2b929036421c323acd0f054014afabccf2ca7eb5490ff84f6f330fa0c54ea7155e125321088a162
-Size (iperf-3.12.tar.gz) = 644807 bytes
-SHA1 (patch-configure) = 311360f41815d6da5d6c113b816fe3b118ceaf2f
+BLAKE2s (iperf-3.13.tar.gz) = 76d9566be7f9862c6df34379f601a9a74016691dd431374fca685baccb08cc15
+SHA512 (iperf-3.13.tar.gz) = 0d64d06a6343f4ab38ea540c5f1919381056472907d5c71dbc80647bbc936f5cd3e422ca792c593d8468409470d89b351a878e6ba656a4460ceb3ae65191da6a
+Size (iperf-3.13.tar.gz) = 646508 bytes
