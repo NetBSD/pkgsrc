@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2020/08/01 13:11:51 mef Exp $
+# $NetBSD: Makefile,v 1.3 2023/02/18 09:29:34 mef Exp $
 
 R_PKGNAME=	pingr
-R_PKGVER=	2.0.1
+R_PKGVER=	2.0.2
 CATEGORIES=	net
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

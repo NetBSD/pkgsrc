@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:05:21 nia Exp $
+$NetBSD: distinfo,v 1.4 2023/02/18 09:29:34 mef Exp $
 
-BLAKE2s (R/pingr_2.0.1.tar.gz) = 5c5023c7930663efceb4b2f1cf1b3ac957de020993e88fd016f6823321f14320
-SHA512 (R/pingr_2.0.1.tar.gz) = 36e4f9106d682a0d2261bd5aa27ca918f5febe04689d032aaed9f574416cd1ccd3255303b3b5e08cea0efce3140b47d7c0aa57faac95f463cdc1ee4463111adb
-Size (R/pingr_2.0.1.tar.gz) = 16845 bytes
+BLAKE2s (R/pingr_2.0.2.tar.gz) = 086e01224550647de39c49cc9f19eaab248e29d1d3337313538eea232d5015d0
+SHA512 (R/pingr_2.0.2.tar.gz) = 12cdb3d169a1e0003b60f5c032e0972610fc5f2666be2bfc8a98252f3bc75b5ec9c0c0e34c11ec659a67d82ff02b62bf1c759a340ea1aa3b53720cd0a7f5ca41
+Size (R/pingr_2.0.2.tar.gz) = 16833 bytes
