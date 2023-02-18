@@ -1,16 +1,17 @@
-# $NetBSD: Makefile,v 1.4 2022/04/30 14:33:39 mef Exp $
+# $NetBSD: Makefile,v 1.5 2023/02/18 09:21:40 mef Exp $
 
 R_PKGNAME=	cpp11
-R_PKGVER=	0.4.2
+R_PKGVER=	0.4.3
 CATEGORIES=	lang
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	C++11 Interface for R's C Interface
 LICENSE=	mit	# + file LICENSE
 
-# Packages suggested but not available: 'bench', 'decor', 'lobstr'
+# Packages suggested but not available: 'decor', 'lobstr'
 
 TEST_DEPENDS+=	R-progress-[0-9]*:../../sysutils/R-progress
+TEST_DEPENDS+=	R-bench-[0-9]*:../../benchmarks/R-bench
 TEST_DEPENDS+=	R-brio-[0-9]*:../../devel/R-brio
 TEST_DEPENDS+=	R-callr-[0-9]*:../../devel/R-callr
 TEST_DEPENDS+=	R-cli-[0-9]*:../../devel/R-cli
