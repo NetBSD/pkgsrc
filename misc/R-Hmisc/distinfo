@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2022/04/25 13:29:17 mef Exp $
+$NetBSD: distinfo,v 1.5 2023/02/18 09:26:08 mef Exp $
 
-BLAKE2s (R/Hmisc_4.7-0.tar.gz) = 5e12932f1a38f4cf50ab92d1ade6c04790317c8bd08a14600c0c90733b8e2381
-SHA512 (R/Hmisc_4.7-0.tar.gz) = cf6dd96f21536fac5b64090f2e88b426fae513fba02ef1fc2ad08286d3061a99c9a58b1280091ddc27810210135daf7ba5c64fca26d3cdb850fe951dff48b4d1
-Size (R/Hmisc_4.7-0.tar.gz) = 790794 bytes
+BLAKE2s (R/Hmisc_4.8-0.tar.gz) = fa4deeb908c41272e58ebfb5caf7f49a6fb6f0f62096049d470d16da8e287a14
+SHA512 (R/Hmisc_4.8-0.tar.gz) = 48e774a1cb4d3d31fcc33b3f598ba1490d8206581bdc0ca06301e221fa3040f9dcb4ef253f3726175c693f19f7b6009d7236923727271700b9d312d5cbd9a2b4
+Size (R/Hmisc_4.8-0.tar.gz) = 794994 bytes
