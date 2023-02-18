@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.19 2022/09/04 19:16:13 gutteridge Exp $
+$NetBSD: distinfo,v 1.20 2023/02/18 02:15:00 gutteridge Exp $
 
 BLAKE2s (blackbox-0.77.tar.lz) = aa11578da7eeb667b33f11f71b833e9a7fd44d9c827c035bf96c758c0e38c150
 SHA512 (blackbox-0.77.tar.lz) = d33c611ae019ab37b936566470f318b7a9de601da6586f2b7485882e2da2c9a22cfaa6dd4850b9a749791f33a9dbb8bcb84c88cb10a890080eb437131f19c593
@@ -9,7 +9,7 @@ SHA1 (patch-doc_nl__NL_Makefile.in) = 5f7df3158b59633fd9633656237f4fd5cdace897
 SHA1 (patch-doc_sl__SI_Makefile.in) = d116093a717a14d8e0b252f0254f7fb03e37f0a1
 SHA1 (patch-lib_Image.cc) = ab49da02853b670843f4884517f0727d4569d50a
 SHA1 (patch-lib_Menu.cc) = b16a7439fa5db1d287e5353ec5986a9c3ffd6cfb
-SHA1 (patch-lib_Unicode.cc) = 7a13e7822a9af71c97b24e167394d87a65e8be73
+SHA1 (patch-lib_Unicode.cc) = db386c362579534d970efc562e5323ba758b132c
 SHA1 (patch-src_Screen.cc) = 7a75160a66eb6317930af063514688c6e5028569
 SHA1 (patch-src_Toolbar.cc) = 29a15bfacb9d28ddb6590f58f3ad035aa5127256
 SHA1 (patch-src_main.cc) = 24f43276e20f8fb89c6cb478e5e1bf52ea3eb659
