@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2019/07/07 18:02:43 schwarz Exp $
+@comment $NetBSD: PLIST,v 1.16 2023/02/18 22:54:35 fcambus Exp $
 bin/gcmp
 bin/gdiff
 bin/gdiff3
@@ -34,6 +34,8 @@ share/locale/hu/LC_MESSAGES/diffutils.mo
 share/locale/id/LC_MESSAGES/diffutils.mo
 share/locale/it/LC_MESSAGES/diffutils.mo
 share/locale/ja/LC_MESSAGES/diffutils.mo
+share/locale/ka/LC_MESSAGES/diffutils.mo
+share/locale/ko/LC_MESSAGES/diffutils.mo
 share/locale/lv/LC_MESSAGES/diffutils.mo
 share/locale/ms/LC_MESSAGES/diffutils.mo
 share/locale/nb/LC_MESSAGES/diffutils.mo
