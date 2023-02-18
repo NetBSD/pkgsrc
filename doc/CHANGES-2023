@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1291 2023/02/18 10:54:07 mef Exp $
+$NetBSD: CHANGES-2023,v 1.1292 2023/02/18 20:22:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1654,3 +1654,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated misc/R-Hmisc to 4.8.0 [mef 2023-02-18]
 	Updated net/R-pingr to 2.0.2 [mef 2023-02-18]
 	Updated print/R-tinytex to 0.44 [mef 2023-02-18]
+	Updated net/iperf3 to 3.13 [adam 2023-02-18]
+	Updated devel/py-pydispatcher to 2.0.7 [adam 2023-02-18]
