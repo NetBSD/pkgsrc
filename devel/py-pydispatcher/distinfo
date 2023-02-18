@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2022/09/01 07:32:03 adam Exp $
+$NetBSD: distinfo,v 1.5 2023/02/18 20:22:02 adam Exp $
 
-BLAKE2s (PyDispatcher-2.0.6.tar.gz) = 0b7adf2e8d85d336fb348adbd7fe32cebea74299fd1f4ed21d4208ad27c4bb4f
-SHA512 (PyDispatcher-2.0.6.tar.gz) = 516816cec6ea7cd623b1932ed2fb932029757cdb349d905d8940439b54ce0701d628a2cecb1280001c58b7fc3d8e12cc5cd94c6b89affb54a7e749a7c2ee70ba
-Size (PyDispatcher-2.0.6.tar.gz) = 38230 bytes
+BLAKE2s (PyDispatcher-2.0.7.tar.gz) = 3a75c0810d77c197a15bc89ff8934b5e4caeed7e38070c4261994b6c1f1680c8
+SHA512 (PyDispatcher-2.0.7.tar.gz) = cef4b07e7abcbef54b3af12b49a27e40d145f76d5aa51dfcedc38d76d51c4076c605c0b55e05881dc26ac260a583f119864fa4b4e8ab21d156231b07ef418916
+Size (PyDispatcher-2.0.7.tar.gz) = 38891 bytes
