@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1287 2023/02/18 02:00:22 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.1288 2023/02/18 09:21:50 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1650,3 +1650,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated print/lilypond to 2.24.1 [schmonz 2023-02-18]
 	Updated devel/py-approval-utilities to 8.2.0 [schmonz 2023-02-18]
 	Updated devel/py-approvaltests to 8.2.0 [schmonz 2023-02-18]
+	Updated lang/R-cpp11 to 0.4.3 [mef 2023-02-18]
