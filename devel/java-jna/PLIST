@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2020/06/26 10:26:08 yyamano Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/02/19 00:22:58 abs Exp $
 lib/${JNIPFX}jnidispatch.${JNISFX}
 lib/java/jna/jna-native.jar
 lib/java/jna/jna-platform.jar
@@ -7,8 +7,6 @@ share/doc/java-jna/AL2.0
 share/doc/java-jna/CHANGES.md
 share/doc/java-jna/LGPL2.1
 share/doc/java-jna/LICENSE
-share/doc/java-jna/LICENSE.AL
-share/doc/java-jna/LICENSE.LGPL
 share/doc/java-jna/OTHERS
 share/doc/java-jna/README.md
 share/doc/java-jna/TODO
