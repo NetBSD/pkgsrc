@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/12/16 14:35:18 mef Exp $
+# $NetBSD: Makefile,v 1.6 2023/02/19 12:13:10 mef Exp $
 
 R_PKGNAME=	covr
 R_PKGVER=	3.6.1
@@ -7,10 +7,6 @@ CATEGORIES=	devel
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Test Coverage for Packages
 LICENSE=	mit
-
-#Packages suggested but not available:
-#  'rmarkdown', 'htmltools', 'DT', 'rstudioapi', 'xml2', 'memoise',
-#  'mockery'
 
 DEPENDS+=	R-crayon>=1.3.4:../../devel/R-crayon
 DEPENDS+=	R-withr>=1.0.2:../../devel/R-withr
