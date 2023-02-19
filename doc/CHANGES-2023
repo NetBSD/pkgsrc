@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1300 2023/02/19 03:42:11 tsutsui Exp $
+$NetBSD: CHANGES-2023,v 1.1301 2023/02/19 09:35:36 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1665,3 +1665,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated cad/py-gdstk to 0.9.37 [mef 2023-02-19]
 	Updated graphics/R-ragg to 1.2.5 [mef 2023-02-19]
 	Updated textproc/ruby-nokogiri to 1.14.2 [tsutsui 2023-02-19]
+	Updated chat/swirc to 3.4.1 [fcambus 2023-02-19]
