@@ -1,31 +1,15 @@
-$NetBSD: patch-native-libffi-configure.ac,v 1.1 2019/04/05 12:55:15 nonaka Exp $
+$NetBSD: patch-native-libffi-configure.ac,v 1.2 2023/02/19 00:22:58 abs Exp $
 
---- native/libffi/configure.ac.orig	2018-12-23 11:12:05.000000000 +0000
-+++ native/libffi/configure.ac	2019-02-18 11:57:09.997256046 +0000
-@@ -91,7 +91,7 @@
- 	TARGET=ARM; TARGETDIR=arm
- 	;;
- 
--  amd64-*-freebsd* | amd64-*-openbsd*)
-+  amd64-*-freebsd* | amd64-*-netbsd* | amd64-*-openbsd*)
- 	TARGET=X86_64; TARGETDIR=x86
-   	;;
- 
-@@ -129,7 +129,7 @@
- 	TARGET=PA_HPUX; TARGETDIR=pa
- 	;;
- 
--  i?86-*-freebsd* | i?86-*-openbsd*)
-+  i?86-*-freebsd* | i?86-*-netbsd* | i?86-*-openbsd*)
- 	TARGET=X86_FREEBSD; TARGETDIR=x86
- 	;;
-   i?86-win32* | i?86-*-cygwin* | i?86-*-mingw* | i?86-*-os2* | i?86-*-interix*)
-@@ -460,7 +460,7 @@
+Add support for NetBSD
+
+--- native/libffi/configure.ac.orig	2023-01-14 12:33:30.000000000 +0000
++++ native/libffi/configure.ac
+@@ -233,7 +233,7 @@ case "$target" in
                   [Cannot use PROT_EXEC on this target, so, we revert to
                     alternative means])
       ;;
--     *-apple-darwin1* | *-*-freebsd* | *-*-kfreebsd* | *-*-openbsd* | *-pc-solaris*)
-+     *-apple-darwin1* | *-*-freebsd* | *-*-kfreebsd* | *-*-netbsd* | *-*-openbsd* | *-pc-solaris*)
+-     *-apple-* | *-*-freebsd* | *-*-kfreebsd* | *-*-openbsd* | *-pc-solaris* | *-linux-android*)
++     *-apple-* | *-*-freebsd* | *-*-kfreebsd* | *-*-netbsd* | *-*-openbsd* | *-pc-solaris* | *-linux-android*)
         AC_DEFINE(FFI_MMAP_EXEC_WRIT, 1,
                   [Cannot use malloc on this target, so, we revert to
                     alternative means])

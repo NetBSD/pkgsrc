@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2022/06/06 01:12:56 gutteridge Exp $
+# $NetBSD: Makefile,v 1.11 2023/02/19 00:22:58 abs Exp $
 
-DISTNAME=	jna-5.2.0
+DISTNAME=	jna-5.13.0
 PKGNAME=	java-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	devel java
 MASTER_SITES=	${MASTER_SITE_GITHUB:=java-native-access/}
 GITHUB_PROJECT=	jna
@@ -77,7 +76,7 @@ INSTALLATION_DIRS+= \
 ANT_ARGS+=	-Ddynlink.native=true
 ANT_ARGS+=	-Dbuild-native=true
 ANT_ARGS+=	-Dcflags_extra.native=""
-ANT_ARGS+=	-DCC=${CC}
+ANT_ARGS+=	-DCC=${CC:Q}
 ANT_ARGS+=	-Dgrep=grep
 ANT_ARGS+=	-Dmake=make
 ANT_ARGS+=	-Dmake.PATH=PATH=${PATH:Q}
@@ -102,7 +101,7 @@ do-install:
 	    ${DESTDIR}${PREFIX}/lib/java/jna/jna.jar
 	${INSTALL_DATA} ${WRKSRC}/contrib/platform/dist/jna-platform.jar \
 	    ${DESTDIR}${PREFIX}/lib/java/jna/jna-platform.jar
-	for i in AL2.0 LGPL2.1 LICENSE LICENSE.AL LICENSE.LGPL \
+	for i in AL2.0 LGPL2.1 LICENSE \
 	  CHANGES.md OTHERS README.md TODO; \
 	do \
 	    ${INSTALL_DATA} ${WRKSRC}/$$i \
