@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.12 2023/01/03 13:29:49 wiz Exp $
+$NetBSD: distinfo,v 1.13 2023/02/19 19:51:29 wiz Exp $
 
-BLAKE2s (ncdu-1.18.tar.gz) = 970c3374f5776b52b50ed46bd6f95839a14ad84842260843926be952ac554b22
-SHA512 (ncdu-1.18.tar.gz) = 959ca90ad35055467346c196d7d6e5afc1e57d87c83855dfb92dd8e370bce10c1a1633064854abb3ed581e0ea7b6451474472acd9e4ad3ae91b90311b07cc7d7
-Size (ncdu-1.18.tar.gz) = 159781 bytes
-SHA1 (patch-src_main.c) = c287bc35122c47bfc3a2496165ea99387cb9011f
+BLAKE2s (ncdu-1.18.1.tar.gz) = 8a92e42f53f21851eb2ed4b42c32aac7a0debf9eaf0f931c4972822db82d1b29
+SHA512 (ncdu-1.18.1.tar.gz) = 19ceca2ab6f50c8d1e40fa6a2f2a7a6ba8c47e65447ee39217c3708cf65ad172b5425900aea8747eb533bd671fcb80e058efc7c8f170cdaadd62fc152ccd2209
+Size (ncdu-1.18.1.tar.gz) = 159731 bytes
