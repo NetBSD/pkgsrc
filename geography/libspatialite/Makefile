@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2023/02/15 23:18:52 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2023/02/19 17:31:24 wiz Exp $
 
 DISTNAME=	libspatialite-5.0.1
 CATEGORIES=	geography
@@ -18,6 +18,7 @@ PKGCONFIG_OVERRIDE=	spatialite.pc.in
 
 .include "../../archivers/minizip/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
+BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.8.5
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../geography/geos/buildlink3.mk"
 .include "../../geography/librttopo/buildlink3.mk"
