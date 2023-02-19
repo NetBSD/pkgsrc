@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22642 2023/02/19 18:10:42 wiz Exp $
+$NetBSD: TODO,v 1.22643 2023/02/19 19:51:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1018,7 +1018,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o nant-0.92
 	o nap-1.5.3
 	o nas-auscope-1.9.4
-	o ncdu-1.18.1
 	o ncview-2.1.8
 	o nedit-5.7
 	o netbt-hcidump-5.58
