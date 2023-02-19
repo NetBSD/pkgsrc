@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1303 2023/02/19 12:16:04 mef Exp $
+$NetBSD: CHANGES-2023,v 1.1304 2023/02/19 12:18:43 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1668,3 +1668,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated chat/swirc to 3.4.1 [fcambus 2023-02-19]
 	Updated security/R-sodium to 1.2.1 [mef 2023-02-19]
 	Updated databases/R-dbplyr to 2.3.0 [mef 2023-02-19]
+	Updated devel/R-cli to 3.6.0 [mef 2023-02-19]
