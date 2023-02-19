@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2020/08/07 03:38:53 brook Exp $
+# $NetBSD: Makefile,v 1.2 2023/02/19 01:53:27 mef Exp $
 
 R_PKGNAME=	png
-R_PKGVER=	0.1-7
+R_PKGVER=	0.1-8
 CATEGORIES=	graphics
 
 MAINTAINER=	mishka@NetBSD.org
