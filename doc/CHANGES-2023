@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1304 2023/02/19 12:18:43 mef Exp $
+$NetBSD: CHANGES-2023,v 1.1305 2023/02/19 12:45:30 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1669,3 +1669,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/R-sodium to 1.2.1 [mef 2023-02-19]
 	Updated databases/R-dbplyr to 2.3.0 [mef 2023-02-19]
 	Updated devel/R-cli to 3.6.0 [mef 2023-02-19]
+	Updated devel/R-pak to 0.4.0 [mef 2023-02-19]
