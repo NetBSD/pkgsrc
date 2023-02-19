@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2022/05/30 21:45:41 mef Exp $
+# $NetBSD: Makefile,v 1.2 2023/02/19 11:51:05 mef Exp $
 
 R_PKGNAME=	sodium
-R_PKGVER=	1.2.0
+R_PKGVER=	1.2.1
 CATEGORIES=	security
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

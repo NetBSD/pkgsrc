@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/05/30 21:45:41 mef Exp $
+$NetBSD: distinfo,v 1.2 2023/02/19 11:51:05 mef Exp $
 
-BLAKE2s (R/sodium_1.2.0.tar.gz) = fd00145f1329f6562255323d00630b0c8f5ca5c637e47af05057abf2baab398f
-SHA512 (R/sodium_1.2.0.tar.gz) = c55cefde71e336bc9e40a17bc84064ed218c7c70047e6ca3abc988b4cfd56813ae7a0177c590746a74824b178a9b83918eaec0bb97980f2079ad19082f3800f4
-Size (R/sodium_1.2.0.tar.gz) = 518085 bytes
+BLAKE2s (R/sodium_1.2.1.tar.gz) = be1b48808d3fd41d9c2f630f17d47825fe729ad524ba4c38f9aa9bc2bf8c71f3
+SHA512 (R/sodium_1.2.1.tar.gz) = c89bfc2ef8532fb3cca3d82a556988df7fba9c4b81461c4b4f0bd73683b7afdd5eda37ec7638db1d06386c116ea4da208e5ecba66a4b06e513e597c0f2aaa050
+Size (R/sodium_1.2.1.tar.gz) = 468055 bytes
