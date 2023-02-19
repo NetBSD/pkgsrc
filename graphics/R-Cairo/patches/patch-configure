@@ -1,20 +1,20 @@
-$NetBSD: patch-configure,v 1.1 2018/05/21 17:12:35 minskim Exp $
+$NetBSD: patch-configure,v 1.2 2023/02/19 01:51:01 mef Exp $
 
 Fix "==" tests.
 
---- configure.orig	2014-06-26 14:50:25.000000000 +0000
-+++ configure
-@@ -3461,7 +3461,7 @@ fi
+--- configure.orig	2022-07-05 13:13:31.000000000 +0900
++++ configure	2023-02-19 10:45:53.963992687 +0900
+@@ -3534,7 +3534,7 @@
  
  
  have_cairo=no
 -if test "xx$CAIRO_LIBS" == "xx"; then
 +if test "xx$CAIRO_LIBS" = "xx"; then
     if test "xx$PKGCONF" != "xx"; then
-       { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether pkg-config knows about cairo" >&5
- $as_echo_n "checking whether pkg-config knows about cairo... " >&6; }
-@@ -3581,8 +3581,8 @@ fi
- rm -f core conftest.err conftest.$ac_objext \
+       { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking whether pkg-config knows about cairo" >&5
+ printf %s "checking whether pkg-config knows about cairo... " >&6; }
+@@ -3754,8 +3754,8 @@
+ rm -f core conftest.err conftest.$ac_objext conftest.beam \
      conftest$ac_exeext conftest.$ac_ext
  
 -if test "xx${CAIRO_LIBS}" == "xx"; then
@@ -24,3 +24,21 @@ Fix "==" tests.
        CAIRO_LIBS="-lcairo -lpng -lz -framework ApplicationServices"
     else
        CAIRO_LIBs="-lcairo -lpng -lz"
+@@ -5227,7 +5227,7 @@
+ /^[\t ]*#[\t ]*(define|undef)[\t ]+$ac_word_re([\t (]|\$)/ {
+   line = \$ 0
+   split(line, arg, " ")
+-  if (arg[1] == "#") {
++  if (arg[1] = "#") {
+     defundef = arg[2]
+     mac1 = arg[3]
+   } else {
+@@ -5245,7 +5245,7 @@
+     # Replace #undef with comments.  This is necessary, for example,
+     # in the case of _POSIX_SOURCE, which is predefined and required
+     # on some systems where configure will not decide to define it.
+-    if (defundef == "undef") {
++    if (defundef = "undef") {
+       print "/*", prefix defundef, macro, "*/"
+       next
+     }
