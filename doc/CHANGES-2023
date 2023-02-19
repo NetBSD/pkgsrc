@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1295 2023/02/19 00:23:29 abs Exp $
+$NetBSD: CHANGES-2023,v 1.1296 2023/02/19 01:51:11 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1660,3 +1660,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-pydantic to 1.10.5 [adam 2023-02-18]
 	Updated devel/diffutils to 3.9 [fcambus 2023-02-18]
 	Updated devel/java-jna to 5.13.0 [abs 2023-02-19]
+	Updated graphics/R-Cairo to 1.6.0 [mef 2023-02-19]
