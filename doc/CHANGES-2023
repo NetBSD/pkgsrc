@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1294 2023/02/18 22:54:47 fcambus Exp $
+$NetBSD: CHANGES-2023,v 1.1295 2023/02/19 00:23:29 abs Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1659,3 +1659,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated audio/py-soundfile to 0.12.1 [adam 2023-02-18]
 	Updated devel/py-pydantic to 1.10.5 [adam 2023-02-18]
 	Updated devel/diffutils to 3.9 [fcambus 2023-02-18]
+	Updated devel/java-jna to 5.13.0 [abs 2023-02-19]
