@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2022/10/31 12:32:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2023/02/20 18:00:36 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -38,5 +38,7 @@ ${PYSITELIB}/xdist/scheduler/loadgroup.py
 ${PYSITELIB}/xdist/scheduler/loadgroup.pyc
 ${PYSITELIB}/xdist/scheduler/loadscope.py
 ${PYSITELIB}/xdist/scheduler/loadscope.pyc
+${PYSITELIB}/xdist/scheduler/worksteal.py
+${PYSITELIB}/xdist/scheduler/worksteal.pyc
 ${PYSITELIB}/xdist/workermanage.py
 ${PYSITELIB}/xdist/workermanage.pyc
