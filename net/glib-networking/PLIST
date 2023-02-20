@@ -1,12 +1,9 @@
-@comment $NetBSD: PLIST,v 1.17 2022/07/24 14:53:09 wiz Exp $
+@comment $NetBSD: PLIST,v 1.18 2023/02/20 09:07:35 adam Exp $
 lib/gio/modules/libgioenvironmentproxy.so
 lib/gio/modules/libgiognomeproxy.so
 ${PLIST.gnutls}lib/gio/modules/libgiognutls.so
-lib/gio/modules/libgiolibproxy.so
 ${PLIST.openssl}lib/gio/modules/libgioopenssl.so
-lib/systemd/user/glib-pacrunner.service
-libexec/glib-pacrunner
-share/dbus-1/services/org.gtk.GLib.PACRunner.service
+share/locale/ab/LC_MESSAGES/glib-networking.mo
 share/locale/an/LC_MESSAGES/glib-networking.mo
 share/locale/ar/LC_MESSAGES/glib-networking.mo
 share/locale/as/LC_MESSAGES/glib-networking.mo
@@ -40,6 +37,7 @@ share/locale/hu/LC_MESSAGES/glib-networking.mo
 share/locale/id/LC_MESSAGES/glib-networking.mo
 share/locale/it/LC_MESSAGES/glib-networking.mo
 share/locale/ja/LC_MESSAGES/glib-networking.mo
+share/locale/ka/LC_MESSAGES/glib-networking.mo
 share/locale/kk/LC_MESSAGES/glib-networking.mo
 share/locale/km/LC_MESSAGES/glib-networking.mo
 share/locale/kn/LC_MESSAGES/glib-networking.mo
