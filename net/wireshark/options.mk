@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.29 2023/02/14 16:51:08 wiz Exp $
+# $NetBSD: options.mk,v 1.30 2023/02/20 21:50:03 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.wireshark
 PKG_SUPPORTED_OPTIONS=		http2 lua spandsp
@@ -41,6 +41,7 @@ CMAKE_ARGS+=		-DENABLE_LUA=OFF
 .      include "../../x11/qt5-qtx11extras/buildlink3.mk"
 .    endif
 .  elif !empty(PKG_OPTIONS:Mqt6)
+GCC_REQD=		8 # std::filesystem
 CMAKE_ARGS+=		-DUSE_qt6=ON
 .    include "../../graphics/qt6-qtsvg/buildlink3.mk"
 .    include "../../multimedia/qt6-qtmultimedia/buildlink3.mk"
