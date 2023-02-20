@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1315 2023/02/20 17:35:54 adam Exp $
+$NetBSD: CHANGES-2023,v 1.1316 2023/02/20 18:00:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1688,3 +1688,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/clamav-doc to 0.103.8 [taca 2023-02-20]
 	Updated comms/py-rich to 13.3.1 [adam 2023-02-20]
 	Updated converters/py-fastbencode to 0.2 [adam 2023-02-20]
+	Updated textproc/py-black to 23.1.0 [adam 2023-02-20]
+	Updated devel/py-test-xdist to 3.2.0 [adam 2023-02-20]
