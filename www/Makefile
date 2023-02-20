@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1685 2023/02/16 19:51:21 nikita Exp $
+# $NetBSD: Makefile,v 1.1686 2023/02/20 10:51:29 adam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -806,6 +806,7 @@ SUBDIR+=	py-klein
 SUBDIR+=	py-landslide
 SUBDIR+=	py-livereload
 SUBDIR+=	py-lti1p3
+SUBDIR+=	py-mdurl
 SUBDIR+=	py-mechanize
 SUBDIR+=	py-meinheld
 SUBDIR+=	py-mezzanine
