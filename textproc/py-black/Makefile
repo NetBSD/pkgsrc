@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2022/12/12 10:07:36 adam Exp $
+# $NetBSD: Makefile,v 1.13 2023/02/20 17:59:00 adam Exp $
 
-DISTNAME=	black-22.12.0
+DISTNAME=	black-23.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/black/}
@@ -10,25 +10,28 @@ HOMEPAGE=	https://black.readthedocs.io/
 COMMENT=	Uncompromising Python code formatter
 LICENSE=	mit
 
-USE_LANGUAGES=	# none
-
-BUILD_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.8.0:../../devel/py-hatchling
-BUILD_DEPENDS+=	${PYPKGPREFIX}-hatch-fancy-pypi-readme-[0-9]*:../../devel/py-hatch-fancy-pypi-readme
-BUILD_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs-[0-9]*:../../devel/py-hatch-vcs
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.8.0:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-fancy-pypi-readme-[0-9]*:../../devel/py-hatch-fancy-pypi-readme
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs-[0-9]*:../../devel/py-hatch-vcs
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-click>=8.0.0:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-mypy_extensions>=0.4.3:../../lang/py-mypy_extensions
+DEPENDS+=	${PYPKGPREFIX}-packaging>=22.0:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-pathspec>=0.9.0:../../devel/py-pathspec
 DEPENDS+=	${PYPKGPREFIX}-platformdirs>=2:../../misc/py-platformdirs
-DEPENDS+=	${PYPKGPREFIX}-tomli>=1.1.0:../../textproc/py-tomli
 # only needed for blackd:
 DEPENDS+=	${PYPKGPREFIX}-aiohttp>=3.7.4:../../www/py-aiohttp
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
+USE_LANGUAGES=	# none
+
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
-.if ${_PYTHON_VERSION} < 310
+.if ${_PYTHON_VERSION} != 311
+DEPENDS+=	${PYPKGPREFIX}-tomli>=1.1.0:../../textproc/py-tomli
+.endif
+.if ${_PYTHON_VERSION} == 38 || ${_PYTHON_VERSION} == 39
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.10.0.0:../../devel/py-typing-extensions
 .endif
 
