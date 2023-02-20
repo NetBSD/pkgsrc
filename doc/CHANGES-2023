@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1314 2023/02/20 13:42:30 taca Exp $
+$NetBSD: CHANGES-2023,v 1.1315 2023/02/20 17:35:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1686,3 +1686,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/sudo to 1.9.13p1 [taca 2023-02-20]
 	Updated security/clamav to 0.103.8 [taca 2023-02-20]
 	Updated security/clamav-doc to 0.103.8 [taca 2023-02-20]
+	Updated comms/py-rich to 13.3.1 [adam 2023-02-20]
+	Updated converters/py-fastbencode to 0.2 [adam 2023-02-20]
