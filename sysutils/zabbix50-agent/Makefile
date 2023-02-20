@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2023/02/12 21:02:49 otis Exp $
+# $NetBSD: Makefile,v 1.18 2023/02/20 10:10:41 otis Exp $
 
 PKGREVISION= 1
 .include "../../sysutils/zabbix50-server/Makefile.common"
@@ -18,7 +18,7 @@ CONFIGURE_ARGS+=	--enable-agent
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--datarootdir=${PREFIX}/share/${PKGBASE}
 CONFIGURE_ARGS+=	--with-libcurl
-CONFIGURE_ARGS+=	--with-libpcre2=${BUILDLINK_PREFIX.pcre2}
+CONFIGURE_ARGS+=	--with-libpcre=${BUILDLINK_PREFIX.pcre}
 CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
 
 EGDIR=		share/examples/${PKGBASE}
@@ -50,5 +50,5 @@ PLIST_SUBST+=			PKGBASE=${PKGBASE}
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
-.include "../../devel/pcre2/buildlink3.mk"
+.include "../../devel/pcre/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
