@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1311 2023/02/20 10:52:42 adam Exp $
+$NetBSD: CHANGES-2023,v 1.1312 2023/02/20 13:32:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1679,3 +1679,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/glib-networking to 2.74.0 [adam 2023-02-20]
 	Added www/py-mdurl version 0.1.2 [adam 2023-02-20]
 	Added textproc/py-markdown-it-py version 2.1.0 [adam 2023-02-20]
+	Updated devel/ruby-activesupport52 to 5.2.8.1nb2 [taca 2023-02-20]
+	Updated devel/ruby-activesupport60 to 6.0.6.1nb2 [taca 2023-02-20]
+	Updated devel/ruby-activesupport61 to 6.1.7.2nb2 [taca 2023-02-20]
+	Updated devel/ruby-activesupport70 to 7.0.4.2nb2 [taca 2023-02-20]
