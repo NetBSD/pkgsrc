@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2023/02/20 09:22:07 adam Exp $
+# $NetBSD: Makefile,v 1.38 2023/02/20 09:55:17 ryoon Exp $
 
 DISTNAME=	libproxy-0.4.18
 CATEGORIES=	www gnome
@@ -11,7 +11,7 @@ HOMEPAGE=	https://libproxy.github.io/libproxy/
 COMMENT=	Library that provides automatic proxy configuration management
 LICENSE=	gnu-lgpl-v2.1
 
-USE_LANGUAGES=	c99 c++03
+USE_LANGUAGES=	c99 c++11
 USE_TOOLS+=	pkg-config
 
 CMAKE_ARGS+=	-DWITH_PERL:BOOL=OFF
