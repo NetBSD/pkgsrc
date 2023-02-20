@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2023/01/29 21:15:18 ryoon Exp $
+# $NetBSD: Makefile,v 1.5 2023/02/20 09:46:30 tnn Exp $
 
 DISTNAME=	qtbase-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qtbase-${QTVERSION}
@@ -207,7 +207,6 @@ PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6Xml.pc
 .include "../../archivers/zstd/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
-.include "../../devel/at-spi2-core/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pcre2/buildlink3.mk"
