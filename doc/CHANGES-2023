@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1313 2023/02/20 13:37:06 taca Exp $
+$NetBSD: CHANGES-2023,v 1.1314 2023/02/20 13:42:30 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1684,3 +1684,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/ruby-activesupport61 to 6.1.7.2nb2 [taca 2023-02-20]
 	Updated devel/ruby-activesupport70 to 7.0.4.2nb2 [taca 2023-02-20]
 	Updated security/sudo to 1.9.13p1 [taca 2023-02-20]
+	Updated security/clamav to 0.103.8 [taca 2023-02-20]
+	Updated security/clamav-doc to 0.103.8 [taca 2023-02-20]
