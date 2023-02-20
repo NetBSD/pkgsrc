@@ -1,11 +1,7 @@
-$NetBSD: distinfo,v 1.23 2021/10/26 11:29:36 nia Exp $
+$NetBSD: distinfo,v 1.24 2023/02/20 09:22:07 adam Exp $
 
-BLAKE2s (a83dae404feac517695c23ff43ce1e116e2bfbe0.patch) = 434bc70017f65291b224bb7faf35b8033b6d285e1584cde98c73ca9778d76dff
-SHA512 (a83dae404feac517695c23ff43ce1e116e2bfbe0.patch) = 908fbf49bec18764a8c2ab81ef5d5e6e1fc2423cf9a6608cc7d3a6d5ac44676e171646b0f95b39b7ade108afd62cc2ede8f7b57d6ba0d67025f30b18e5084292
-Size (a83dae404feac517695c23ff43ce1e116e2bfbe0.patch) = 1585 bytes
-BLAKE2s (libproxy-0.4.15.tar.gz) = 7c76c9314705fc9e2a763fc92e242e99eeed543af674bd5972bc246f78b31faf
-SHA512 (libproxy-0.4.15.tar.gz) = 8f68bd56e44aeb3f553f4657bef82a5d14302780508dafa32454d6f724b724c884ceed6042f8df53a081d26ea0b05598cf35eab44823257c47c5ef8afb36442b
-Size (libproxy-0.4.15.tar.gz) = 93084 bytes
+BLAKE2s (libproxy-0.4.18.tar.xz) = 75018b45a53d7c93b13f48f6d4769aee769743c357c46d2866323f0f22f19b96
+SHA512 (libproxy-0.4.18.tar.xz) = 0c6b138bc8da9abcf21e091b876527cfff0703800995363e5a46c29a2a9caa2946c45b299abed6129b314461123949dae387456a0cddcbb0b29a84b9b55f499c
+Size (libproxy-0.4.18.tar.xz) = 82020 bytes
 SHA1 (patch-libproxy_CMakeLists.txt) = fc283f97eebf0ef0cfbd81341a7db311755ab2ec
-SHA1 (patch-libproxy_get-pac-test.cpp) = 2b625dca29c031d334581a2756a2a9777e39c3f9
-SHA1 (patch-libproxy_url.cpp) = 985ad1a668327b59036e3a7c5b7bf6fa2b61b8b7
+SHA1 (patch-libproxy_cmake_pkgconfig.cmk) = 877584ca6df55bcebc3739d08dc7ae6a7ae79edf

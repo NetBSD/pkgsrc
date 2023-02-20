@@ -1,13 +1,10 @@
-# $NetBSD: Makefile,v 1.36 2023/01/24 18:36:35 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2023/02/20 09:22:07 adam Exp $
 
-DISTNAME=	libproxy-0.4.15
-PKGREVISION=	1
+DISTNAME=	libproxy-0.4.18
 CATEGORIES=	www gnome
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libproxy/}
-
-PATCH_SITES=		https://github.com/libproxy/libproxy/commit/
-PATCHFILES=		a83dae404feac517695c23ff43ce1e116e2bfbe0.patch
-PATCH_DIST_STRIP=	-p1
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://libproxy.github.io/libproxy/
@@ -30,6 +27,8 @@ BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--no-as-needed
 
 PKGCONFIG_OVERRIDE+=	bindings/csharp/libproxy-sharp-1.0.pc.cmake
 PKGCONFIG_OVERRIDE+=	libproxy/libproxy-1.0.pc.in
+
+TEST_TARGET=	test
 
 .include "../../devel/cmake/build.mk"
 .include "../../devel/zlib/buildlink3.mk"
