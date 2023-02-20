@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.23 2019/11/04 21:13:03 rillig Exp $
+# $NetBSD: options.mk,v 1.24 2023/02/20 13:36:42 taca Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.sudo
 PKG_SUPPORTED_OPTIONS=		ldap nls
@@ -15,7 +15,7 @@ PKG_SUGGESTED_OPTIONS.Darwin=	pam
 
 PLIST_VARS+=		ldap nls
 
-.if !empty(PKG_OPTIONS:Mnls)
+.if ${PKG_OPTIONS:Mnls}
 .  include "../../devel/gettext-lib/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-nls
 PLIST.nls=		yes
@@ -23,7 +23,7 @@ PLIST.nls=		yes
 CONFIGURE_ARGS+=	--disable-nls
 .endif
 
-.if !empty(PKG_OPTIONS:Mpam)
+.if ${PKG_OPTIONS:Mpam}
 .  include "../../mk/pam.buildlink3.mk"
 DL_AUTO_VARS=		yes
 CONFIGURE_ARGS+=	--with-pam
@@ -31,7 +31,7 @@ CONFIGURE_ARGS+=	--with-pam
 CONFIGURE_ARGS+=	--without-pam
 .endif
 
-.if !empty(PKG_OPTIONS:Mkerberos)
+.if ${PKG_OPTIONS:Mkerberos}
 .  include "../../mk/krb5.buildlink3.mk"
 CONFIGURE_ARGS+=	--without-kerb4
 CONFIGURE_ARGS+=	--with-kerb5
@@ -39,7 +39,7 @@ CONFIGURE_ARGS+=	--with-kerb5
 CONFIGURE_ARGS+=	--without-kerb5
 .endif
 
-.if !empty(PKG_OPTIONS:Mldap)
+.if ${PKG_OPTIONS:Mldap}
 .  include "../../databases/openldap-client/buildlink3.mk"
 .  include "../../security/cyrus-sasl/buildlink3.mk"
 DL_AUTO_VARS=		yes
@@ -48,7 +48,7 @@ CONFIGURE_ARGS+=	--with-ldap-conf-file=${PKG_SYSCONFDIR}/ldap.conf
 PLIST.ldap=		yes
 .endif
 
-.if !empty(PKG_OPTIONS:Mskey)
+.if ${PKG_OPTIONS:Mskey}
 CONFIGURE_ARGS+=	--with-skey
 .else
 CONFIGURE_ARGS+=	--without-skey
