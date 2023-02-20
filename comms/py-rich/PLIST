@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2022/10/03 12:36:43 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2023/02/20 17:33:17 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -25,6 +25,9 @@ ${PYSITELIB}/rich/_export_format.pyo
 ${PYSITELIB}/rich/_extension.py
 ${PYSITELIB}/rich/_extension.pyc
 ${PYSITELIB}/rich/_extension.pyo
+${PYSITELIB}/rich/_fileno.py
+${PYSITELIB}/rich/_fileno.pyc
+${PYSITELIB}/rich/_fileno.pyo
 ${PYSITELIB}/rich/_inspect.py
 ${PYSITELIB}/rich/_inspect.pyc
 ${PYSITELIB}/rich/_inspect.pyo
