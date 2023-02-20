@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2023/02/20 09:07:35 adam Exp $
+# $NetBSD: Makefile,v 1.65 2023/02/20 09:22:36 adam Exp $
 
 DISTNAME=	glib-networking-2.74.0
 CATEGORIES=	net gnome
@@ -21,7 +21,7 @@ REPLACE_PYTHON+=	meson_post_install.py
 
 BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.60.0
 .include "../../devel/glib2/modules.mk"
-BUILDLINK_API_DEPENDS.libproxy+=	libproxy>=0.3.1
+BUILDLINK_API_DEPENDS.libproxy+=	libproxy>=0.4.6
 .include "../../www/libproxy/buildlink3.mk"
 .include "../../security/p11-kit/buildlink3.mk"
 .include "../../sysutils/gsettings-desktop-schemas/buildlink3.mk"
