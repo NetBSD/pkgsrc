@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2023/02/20 09:58:02 tnn Exp $
+$NetBSD: distinfo,v 1.9 2023/02/20 15:35:46 tnn Exp $
 
 BLAKE2s (podman-4.4.1.tar.gz) = 6ea927ab6855095064f5d915e407d424ca54a738d4d2a378b522d4eedef7ae37
 SHA512 (podman-4.4.1.tar.gz) = 33a22b7941f4f6715baa1cd2d5b29a4e2e95264c5239877122448f71e1408d8c393bcd2cdaef9516a580eede911c84f1cfea9d7b4c9d287a2737986fdc604e2c
@@ -10,6 +10,7 @@ SHA1 (patch-pkg_machine_ignition__netbsd.go) = f5b4640d77c6152aa51c0c0e68de47fde
 SHA1 (patch-pkg_machine_qemu_machine.go) = 8b0957edb19a70333b19db27a54b02cedf968696
 SHA1 (patch-pkg_machine_qemu_options__netbsd.go) = a256dcafceb70f29b4f7a1ed013b52b5d6b0f4ba
 SHA1 (patch-pkg_machine_qemu_options__netbsd__amd64.go) = 7f5e4fe206e6e1d8f8e2cd33c8ac18b614c2dd61
+SHA1 (patch-pkg_machine_qemu_options__netbsd__arm64.go) = 0aa8256147bf0b984e27625ab21368ed4652dca7
 SHA1 (patch-pkg_util_utils__netbsd.go) = dcda52540148e5c77034322198a8ecedcd8c07e7
 SHA1 (patch-utils_utils__supported.go) = 44938037e4e0a4cd9468b2d37e480b78d404099b
 SHA1 (patch-vendor_github.com_containers_buildah_define_mount__unsupported.go) = 75d1a3dfce7806476f04d4a6d67a7858583838ee
