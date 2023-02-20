@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/02/20 10:51:29 adam Exp $
+
+BLAKE2s (mdurl-0.1.2.tar.gz) = 79f006212bfeae0b0f779e08f4b074174be101c5e06d8fa2f8479f83d2afd75b
+SHA512 (mdurl-0.1.2.tar.gz) = 9162ae2d9d4f761e03bdbba3e8720a36d87f4998f79fcf8f71a3747b0fdfd7bc4f25446f6c8002ed1bdcadebfcce0ce5efcd932fe5c9184bf1b26d3959306c23
+Size (mdurl-0.1.2.tar.gz) = 8729 bytes
