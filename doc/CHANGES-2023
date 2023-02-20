@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1309 2023/02/20 08:39:20 adam Exp $
+$NetBSD: CHANGES-2023,v 1.1310 2023/02/20 09:22:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1675,3 +1675,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/ncdu to 1.18.1 [wiz 2023-02-19]
 	Updated www/curl to 7.88.1 [adam 2023-02-20]
 	Updated archivers/unrar to 6.2.6 [adam 2023-02-20]
+	Updated www/libproxy to 0.4.18 [adam 2023-02-20]
+	Updated net/glib-networking to 2.74.0 [adam 2023-02-20]
