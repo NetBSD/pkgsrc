@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.22 2023/02/13 13:48:11 wiz Exp $
+$NetBSD: distinfo,v 1.23 2023/02/20 17:01:51 abs Exp $
 
 BLAKE2s (transmission-4.0.0.tar.xz) = 4b701562e5b72b5eb60b203c3f682135404feed2083cb04801a42818361eae39
 SHA512 (transmission-4.0.0.tar.xz) = 79945af73fe7226dddadba7cc039516f2f878e05a9cf6c6d799b636b8298e2b2fa25c4426789bd41ef4d2b00d75a3c1c115c1676b4d2a9f09a1526456dceb3f8
 Size (transmission-4.0.0.tar.xz) = 10351556 bytes
 SHA1 (patch-CMakeLists.txt) = 3be8d125e64759e190dd2acae746a9f505b52763
 SHA1 (patch-libtransmission_CMakeLists.txt) = b4f697ecd5dd22fafa38fa72d0bc47b2d940e8dc
+SHA1 (patch-libtransmission_completion.cc) = e774dd8781571728384c59a87c293dcbe05c53cf
+SHA1 (patch-libtransmission_completion.h) = 31171a30d079f313b74f05e7c058a62a6dbc80d0
