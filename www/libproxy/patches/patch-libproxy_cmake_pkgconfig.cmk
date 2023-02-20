@@ -1,0 +1,13 @@
+$NetBSD: patch-libproxy_cmake_pkgconfig.cmk,v 1.1 2023/02/20 09:22:08 adam Exp $
+
+Fix build on macOS
+https://github.com/libproxy/libproxy/pull/189
+
+--- libproxy/cmake/pkgconfig.cmk.orig	2023-02-20 09:14:22.000000000 +0000
++++ libproxy/cmake/pkgconfig.cmk
+@@ -1,4 +1,4 @@
+-if(NOT WIN32 AND NOT APPLE)
++if(NOT WIN32)
+   find_package(PkgConfig)
+ 
+   # Define our magical px_check_modules function
