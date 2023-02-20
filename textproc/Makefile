@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1364 2023/01/30 19:38:05 nikita Exp $
+# $NetBSD: Makefile,v 1.1365 2023/02/20 10:52:16 adam Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1068,6 +1068,7 @@ SUBDIR+=	py-m2r
 SUBDIR+=	py-manuel
 SUBDIR+=	py-marisa
 SUBDIR+=	py-markdown
+SUBDIR+=	py-markdown-it-py
 SUBDIR+=	py-markdown-math
 SUBDIR+=	py-markdown2
 SUBDIR+=	py-markdown3
