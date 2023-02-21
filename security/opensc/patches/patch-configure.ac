@@ -1,24 +1,16 @@
-$NetBSD: patch-configure.ac,v 1.3 2016/08/04 13:08:25 mef Exp $
+$NetBSD: patch-configure.ac,v 1.4 2023/02/21 17:23:07 adam Exp $
 
-This hunk has been in pkgsrc for a long time; it needs a comment!
+Do not fail if dlopen() library is not found.
 
---- configure.ac.orig	2016-06-04 08:22:08.000000000 +0900
-+++ configure.ac	2016-08-04 21:50:22.000000000 +0900
-@@ -384,17 +384,6 @@ if test "${WIN32}" = "no"; then
- 	AC_SEARCH_LIBS([dlopen], [dl dld], [], [
- 		AC_MSG_ERROR([unable to find the dlopen() function])
- 	])
--
--	dnl Special check for pthread support.
--	AX_PTHREAD(
--		[AC_DEFINE(
--			[HAVE_PTHREAD],
--			[1],
--			[Define if you have POSIX threads libraries and header files.]
--		)],
--		[AC_MSG_ERROR([POSIX thread support required])]
--	)
--	CC="${PTHREAD_CC}"
- fi
- 
- if test "${enable_thread_locking}" = "yes"; then
+--- configure.ac.orig	2023-02-21 13:18:52.603387598 +0000
++++ configure.ac
+@@ -475,8 +475,7 @@ if test "${WIN32}" = "no"; then
+ 			AC_CHECK_LIB(
+ 				[dld],
+ 				[dlopen],
+-				[LDL_LIBS="-ldld"],
+-				AC_MSG_ERROR([unable to find the dlopen() function])
++				[LDL_LIBS="-ldld"]
+ 			)
+ 		)
+ 	fi
