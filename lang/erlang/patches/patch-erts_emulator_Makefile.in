@@ -1,0 +1,15 @@
+$NetBSD: patch-erts_emulator_Makefile.in,v 1.1 2023/02/21 10:20:01 wiz Exp $
+
+Mark as not PaX safe (due to JIT code) on NetBSD.
+See pkgsrc Makefile for setting of PAXCTL variable.
+
+--- erts/emulator/Makefile.in.orig	2022-12-12 07:30:54.000000000 +0000
++++ erts/emulator/Makefile.in
+@@ -1254,6 +1254,7 @@ $(BINDIR)/$(FLAVOR_EXECUTABLE): $(INIT_O
+ 	$(ld_verbose) $(EMU_LD) -o $@ \
+ 	$(PROFILE_LDFLAGS) $(LDFLAGS) $(DEXPORT) $(INIT_OBJS) $(OBJS) \
+ 	$(STATIC_NIF_LIBS) $(STATIC_DRIVER_LIBS) $(LIBS)
++	$(PAXCTL) +m $@
+ 
+ endif
+ 

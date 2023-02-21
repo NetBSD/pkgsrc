@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.112 2023/01/11 21:58:42 nikita Exp $
+# $NetBSD: Makefile,v 1.113 2023/02/21 10:20:01 wiz Exp $
 
 DISTNAME=	erlang-${DIST_VERSION_MAJOR}.${DIST_VERSION_MINOR}${!empty(DIST_VERSION_PATCH):?.:}${DIST_VERSION_PATCH}
 PKGNAME=	${DISTNAME:S/OTP-/erlang-/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=erlang/}
 GITHUB_PROJECT=	otp
@@ -29,6 +29,10 @@ MKPIE_SUPPORTED=	no
 .if ${MACHINE_ARCH:M*armv6*} || ${MACHINE_ARCH:M*armv7*}
 MAKE_FLAGS+=	ARCH=arm
 .endif
+
+# Coordinate with Makefile patches.
+MAKE_ENV+=		PAXCTL=echo
+MAKE_ENV.NetBSD+=	PAXCTL=/usr/sbin/paxctl
 
 .if ${USE_CROSS_COMPILE:U:tl} == yes
 USE_GNU_CONFIGURE_HOST=	yes
