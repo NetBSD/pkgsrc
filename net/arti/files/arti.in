@@ -1,0 +1,49 @@
+#!@RCD_SCRIPTS_SHELL@
+#
+# $NetBSD: arti.in,v 1.1 2023/02/21 20:53:12 nikita Exp $
+#
+# PROVIDE: arti
+# REQUIRE: DAEMON NETWORKING
+# KEYWORD: shutdown
+#
+# You will need to set some variables in /etc/rc.conf to start arti:
+#
+# ARTI=YES
+
+if test -f /etc/rc.subr
+then
+	. /etc/rc.subr
+fi
+
+name="arti"
+rcvar=$name
+command="@PREFIX@/bin/${name}"
+command_args="proxy --config @PKG_SYSCONFDIR@/${name}.toml"
+required_files="@PKG_SYSCONFDIR@/${name}.toml"
+start_cmd="arti_start"
+stop_cmd="arti_stop"
+pidfile="@PKG_HOME@/${name}.pid"
+restart_cmd="arti_stop ; arti_start"
+extra_commands="reload"
+arti_env="PATH=${PATH} HOME=@PKG_HOME@ USER=@ARTI_USER@"
+
+arti_start ()
+{
+	@ECHO@ "Starting ${name}."
+	doit="@SU@ -m @ARTI_USER@ -c '${arti_env} ${command} ${command_args}'"
+	eval $doit
+}
+
+arti_stop()
+{
+	echo "Stopping ${name}."
+	kill `cat ${pidfile}` 2>/dev/null
+}
+
+if [ -f /etc/rc.subr -a -f /etc/rc.conf -a -d /etc/rc.d -a -f /etc/rc.d/DAEMON ]
+then
+	load_rc_config $name
+	run_rc_command "$1"
+else
+	eval ${start_cmd}
+fi

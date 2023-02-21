@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1502 2023/02/14 09:45:39 wiz Exp $
+# $NetBSD: Makefile,v 1.1503 2023/02/21 20:53:11 nikita Exp $
 #
 
 COMMENT=	Networking tools
@@ -31,6 +31,7 @@ SUBDIR+=	arpd
 SUBDIR+=	arping
 SUBDIR+=	arpwatch
 SUBDIR+=	asuka
+SUBDIR+=	arti
 SUBDIR+=	autonet
 SUBDIR+=	avahi
 SUBDIR+=	avahi-ui
