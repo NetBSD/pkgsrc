@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1327 2023/02/21 13:23:22 pin Exp $
+$NetBSD: CHANGES-2023,v 1.1328 2023/02/21 13:26:40 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1722,3 +1722,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/oculante to 0.6.52 [pin 2023-02-21]
 	Updated misc/wthrr to 0.7.0 [pin 2023-02-21]
 	Updated www/wiki-tui to 0.6.4 [pin 2023-02-21]
+	Updated sysutils/broot to 1.20.2 [pin 2023-02-21]
