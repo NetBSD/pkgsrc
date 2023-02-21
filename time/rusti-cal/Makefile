@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2023/01/24 13:21:24 pin Exp $
+# $NetBSD: Makefile,v 1.4 2023/02/21 13:30:55 pin Exp $
 
 DISTNAME=	rusti-cal-1.1.0
 CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_GITHUB:=arthurhenrique/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/arthurhenrique/rusti-cal/
 COMMENT=	Minimal calendar command line
 LICENSE=	mit
