@@ -1,4 +1,4 @@
-$NetBSD: patch-c-ext_backend__c.c,v 1.4 2022/07/02 09:13:24 adam Exp $
+$NetBSD: patch-c-ext_backend__c.c,v 1.5 2023/02/21 06:35:49 adam Exp $
 
 Do not use hardcoded version number.
 
@@ -8,7 +8,7 @@ Do not use hardcoded version number.
      PyObject *features = NULL;
      PyObject *feature = NULL;
      unsigned zstd_ver_no = ZSTD_versionNumber();
--    unsigned our_hardcoded_version = 10502;
+-    unsigned our_hardcoded_version = 10504;
 -    if (ZSTD_VERSION_NUMBER != our_hardcoded_version ||
 -        zstd_ver_no != our_hardcoded_version) {
 +    if (ZSTD_VERSION_NUMBER != zstd_ver_no) {
