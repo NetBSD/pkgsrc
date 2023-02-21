@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.886 2022/12/19 13:32:17 wiz Exp $
+# $NetBSD: Makefile,v 1.887 2023/02/21 14:05:56 jperkin Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -48,6 +48,7 @@ SUBDIR+=	caff
 SUBDIR+=	cargo-audit
 SUBDIR+=	ccid
 SUBDIR+=	cfs
+SUBDIR+=	cfssl
 SUBDIR+=	chkrootkit
 SUBDIR+=	clamav
 SUBDIR+=	clamav-doc
