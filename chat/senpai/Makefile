@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2023/02/16 15:02:02 bsiegert Exp $
+# $NetBSD: Makefile,v 1.8 2023/02/21 13:30:03 pin Exp $
 
 DISTNAME=	senpai-v0.1.0
 PKGNAME=	${DISTNAME:S,-v,-,}
@@ -6,7 +6,7 @@ PKGREVISION=	6
 CATEGORIES=	chat
 MASTER_SITES=	-https://git.sr.ht/~taiite/senpai/archive/v${PKGVERSION_NOREV}.tar.gz
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://git.sr.ht/~taiite/senpai/
 COMMENT=	Modern terminal IRC client
 LICENSE=	isc
