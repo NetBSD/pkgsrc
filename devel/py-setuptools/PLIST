@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.76 2023/02/08 10:16:43 adam Exp $
+@comment $NetBSD: PLIST,v 1.77 2023/02/21 06:19:44 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -327,6 +327,9 @@ ${PYSITELIB}/setuptools/_importlib.pyo
 ${PYSITELIB}/setuptools/_itertools.py
 ${PYSITELIB}/setuptools/_itertools.pyc
 ${PYSITELIB}/setuptools/_itertools.pyo
+${PYSITELIB}/setuptools/_normalization.py
+${PYSITELIB}/setuptools/_normalization.pyc
+${PYSITELIB}/setuptools/_normalization.pyo
 ${PYSITELIB}/setuptools/_path.py
 ${PYSITELIB}/setuptools/_path.pyc
 ${PYSITELIB}/setuptools/_path.pyo
