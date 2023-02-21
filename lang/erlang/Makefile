@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.113 2023/02/21 10:20:01 wiz Exp $
+# $NetBSD: Makefile,v 1.114 2023/02/21 10:29:16 wiz Exp $
 
 DISTNAME=	erlang-${DIST_VERSION_MAJOR}.${DIST_VERSION_MINOR}${!empty(DIST_VERSION_PATCH):?.:}${DIST_VERSION_PATCH}
 PKGNAME=	${DISTNAME:S/OTP-/erlang-/}
@@ -17,7 +17,7 @@ EXTRACT_USING=	bsdtar
 
 WRKSRC=		${WRKDIR}/otp-${GITHUB_TAG}
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	autoconf awk gmake perl:run flex
+USE_TOOLS+=	awk gmake perl:run flex
 USE_LANGUAGES+=	c c++
 
 # "This run-time was supposed be compiled with all code below 2Gb,
@@ -81,9 +81,6 @@ CHECK_RELRO_SKIP+=	lib/erlang/lib/megaco-${VERSION.megaco}/priv/lib/megaco_flex_
 CHECK_RELRO_SKIP+=	lib/erlang/lib/megaco-${VERSION.megaco}/priv/lib/megaco_flex_scanner_drv_mt.so
 
 .include "options.mk"
-
-pre-configure:
-	cd ${WRKSRC} && ./otp_build autoconf
 
 ###
 ### Ensure this gets rebuilt.
