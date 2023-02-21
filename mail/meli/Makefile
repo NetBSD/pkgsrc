@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/11/23 16:20:33 adam Exp $
+# $NetBSD: Makefile,v 1.6 2023/02/21 13:29:15 pin Exp $
 
 DISTNAME=	alpha-0.7.2
 PKGNAME=	meli-0.7.2
@@ -6,7 +6,7 @@ PKGREVISION=	3
 CATEGORIES=	mail
 MASTER_SITES=	https://git.meli.delivery/meli/meli/archive/
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://meli.delivery/
 COMMENT=	Terminal mail client
 LICENSE=	gnu-gpl-v3
