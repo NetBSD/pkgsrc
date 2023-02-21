@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2023/02/01 20:18:14 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2023/02/21 09:53:50 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.kid3
 PKG_OPTIONS_REQUIRED_GROUPS=	gui
@@ -15,6 +15,7 @@ CMAKE_ARGS+=		-DQt5Core_DIR:PATH=${QTDIR}
 .endif
 
 .if !empty(PKG_OPTIONS:Mqt6)
+GCC_REQD+=	9
 .include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../multimedia/qt6-qtmultimedia/buildlink3.mk"
 .include "../../devel/qt6-qttools/buildlink3.mk"
