@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1322 2023/02/21 09:04:19 adam Exp $
+$NetBSD: CHANGES-2023,v 1.1323 2023/02/21 10:20:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1717,3 +1717,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/py-certbot-nginx to 2.3.0 [adam 2023-02-21]
 	Updated net/librsync to 2.3.4 [adam 2023-02-21]
 	Updated devel/py-pbr to 5.11.1 [adam 2023-02-21]
+	Updated lang/erlang to 25.2nb2 [wiz 2023-02-21]
