@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2020/06/20 19:08:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2023/02/21 17:23:07 adam Exp $
 bin/cardos-tool
 bin/cryptoflex-tool
 bin/dnie-tool
@@ -8,7 +8,6 @@ bin/gids-tool
 bin/goid-tool
 bin/iasecc-tool
 bin/netkey-tool
-bin/npa-tool
 bin/openpgp-tool
 bin/opensc-asn1
 bin/opensc-explorer
@@ -37,6 +36,7 @@ man/man1/dnie-tool.1
 man/man1/egk-tool.1
 man/man1/eidenv.1
 man/man1/gids-tool.1
+man/man1/goid-tool.1
 man/man1/iasecc-tool.1
 man/man1/netkey-tool.1
 man/man1/npa-tool.1
@@ -46,6 +46,7 @@ man/man1/opensc-explorer.1
 man/man1/opensc-notify.1
 man/man1/opensc-tool.1
 man/man1/piv-tool.1
+man/man1/pkcs11-register.1
 man/man1/pkcs11-tool.1
 man/man1/pkcs15-crypt.1
 man/man1/pkcs15-init.1
@@ -75,8 +76,6 @@ share/opensc/iasecc_generic_oberthur.profile
 share/opensc/iasecc_generic_pki.profile
 share/opensc/incrypto34.profile
 share/opensc/isoApplet.profile
-share/opensc/jcop.profile
-share/opensc/miocos.profile
 share/opensc/muscle.profile
 share/opensc/myeid.profile
 share/opensc/oberthur.profile

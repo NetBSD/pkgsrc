@@ -1,10 +1,9 @@
-$NetBSD: distinfo,v 1.20 2021/10/26 11:17:22 nia Exp $
+$NetBSD: distinfo,v 1.21 2023/02/21 17:23:07 adam Exp $
 
-BLAKE2s (opensc-0.20.0.tar.gz) = 405d04236f8b8bd8f5b0c6d504b4f53cd5c089f41c521b8c17c05f072555d092
-SHA512 (opensc-0.20.0.tar.gz) = 1360ee35f579cbeecf368777bb60d6c23ec2a80a2983328ea2c193530cc9b101a807ff1e2982ad34bfcc2bae2c867feecf300b6229d15057e796bd31ecffb02d
-Size (opensc-0.20.0.tar.gz) = 1653931 bytes
-SHA1 (patch-aa) = 5ca9245c763a9f8a8aa273e7e76c75168c52d0cd
-SHA1 (patch-ab) = 5ea2a3e623df6bc2c814c37ce89fed491149f8b4
-SHA1 (patch-configure.ac) = 9031a51162d883b3e3118820d400e07ef99dbad9
-SHA1 (patch-doc_tools_Makefile.am) = 4535988c6fbe4b9f45838362f2f9604c91fecd53
+BLAKE2s (opensc-0.23.0.tar.gz) = b29b7ff1fdae39640da96344616329e0f812a024ca0d068135b483e747a6a5a6
+SHA512 (opensc-0.23.0.tar.gz) = ea85f28fc3c8f1b0b98c6edee6c3843fefa709f42caf5930b29e7fa5fbacb8fdf791eadae6325020c676208728f4d75c44bf44b7b89e7ce880a92d04e43bb9d9
+Size (opensc-0.23.0.tar.gz) = 1965145 bytes
+SHA1 (patch-configure.ac) = 37fbb6eab0eb19299ce1feefd08c18a73f688150
+SHA1 (patch-doc_tools_Makefile.am) = bc70d3371cde940f2352e1d9a9e8c3c2c49658ed
+SHA1 (patch-etc_Makefile.am) = 5ca9245c763a9f8a8aa273e7e76c75168c52d0cd
 SHA1 (patch-src_libopensc_log.c) = 00acff447b1890b05cd3bea10ece8d42e7b6cf26
