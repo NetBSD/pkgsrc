@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2021/03/01 15:13:01 pin Exp $
+# $NetBSD: Makefile,v 1.6 2023/02/21 13:25:24 pin Exp $
 
 DISTNAME=	kiro-editor-0.4.3
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rhysd/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/rhysd/kiro-editor/
 COMMENT=	Terminal UTF-8 text editor written in Rust
 LICENSE=	mit
