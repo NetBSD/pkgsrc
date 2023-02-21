@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1325 2023/02/21 13:17:13 pin Exp $
+$NetBSD: CHANGES-2023,v 1.1326 2023/02/21 13:20:00 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1720,3 +1720,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/erlang to 25.2nb2 [wiz 2023-02-21]
 	Updated audio/spotify-player to 0.12.0 [pin 2023-02-21]
 	Updated graphics/oculante to 0.6.52 [pin 2023-02-21]
+	Updated misc/wthrr to 0.7.0 [pin 2023-02-21]
