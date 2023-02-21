@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1334 2023/02/21 19:23:48 adam Exp $
+$NetBSD: CHANGES-2023,v 1.1335 2023/02/21 20:53:32 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1732,3 +1732,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated databases/py-lmdb to 1.4.0 [adam 2023-02-21]
 	Updated databases/lmdb to 0.9.30 [adam 2023-02-21]
 	Updated databases/py-redis to 4.5.1 [adam 2023-02-21]
+	Added net/arti version 1.1.1 [nikita 2023-02-21]
