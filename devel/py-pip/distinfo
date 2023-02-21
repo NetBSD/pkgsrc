@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.49 2022/11/08 11:53:49 adam Exp $
+$NetBSD: distinfo,v 1.50 2023/02/21 06:31:44 adam Exp $
 
-BLAKE2s (pip-22.3.1.tar.gz) = 48d4c3dd66f008d86398599a24a31fff8a113a4fa1f5bf7bbd790003edc82f33
-SHA512 (pip-22.3.1.tar.gz) = 5bfba1eb6bd444d1a57dd5a9f03b95fe64ec27f238774d59a3b21a206a47390a9dba9ce44da50fb935f45ed23dba08ab9a5fa94cb1e67e420bb68b72abb4ef61
-Size (pip-22.3.1.tar.gz) = 2078129 bytes
-SHA1 (patch-src_pip___internal_build__env.py) = 3dfa58c2014ca51c01715b7f2fcd3e7b56eb388a
+BLAKE2s (pip-23.0.1.tar.gz) = 3ae7da4091ad118cef81127aca38207876e8472c851503959d64ae7fbea84dbe
+SHA512 (pip-23.0.1.tar.gz) = f85523d44ccf81b340cc63964441e7ce4c9c0296518ec8fee742692c05b470b02263be810d2f4806bc9fc10d4fcfbeb75bfb3f1cc4509a54955804a4fbb21e1e
+Size (pip-23.0.1.tar.gz) = 2082217 bytes
+SHA1 (patch-src_pip___internal_build__env.py) = 96c0707a2d41641da5795352ba2db283b75ce6ed
