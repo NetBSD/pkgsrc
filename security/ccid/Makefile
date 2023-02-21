@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.40 2022/06/28 11:35:34 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.41 2023/02/21 16:32:33 adam Exp $
 
-DISTNAME=	ccid-1.5.0
-PKGREVISION=	1
+DISTNAME=	ccid-1.5.2
 CATEGORIES=	security
 MASTER_SITES=	https://ccid.apdu.fr/files/
 EXTRACT_SUFX=	.tar.bz2
@@ -14,20 +12,28 @@ LICENSE=	gnu-lgpl-v2.1
 
 .include "../../mk/bsd.prefs.mk"
 
-BUILD_DEFS=	VARBASE
+BUILD_DEFS+=	VARBASE
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config
-USE_TOOLS+=	flex perl
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=		c c++
+USE_LIBTOOL=		yes
+USE_TOOLS+=		flex perl pkg-config
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--sharedstatedir=${VARBASE}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+
+OPSYSVARS+=		SOEXT
+SOEXT.Darwin=		dylib
+SOEXT.*=		so
+PLIST_SUBST+=		SOEXT=${SOEXT}
+.if ${OPSYS} == "Darwin"
+PLIST_SUBST+=		OSNAME=MacOS
+.else
+PLIST_SUBST+=		OSNAME=${OPSYS}
+.endif
 
 # Work around a bug where the rules for parse do not include the
 # PTHREAD vars.  Not yet reported upstream.
 PTHREAD_AUTO_VARS=	yes
-
-CONFIGURE_ARGS+=	--sharedstatedir=${VARBASE:Q}
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 REPLACE_PERL=		src/convert_version.pl src/create_Info_plist.pl
 
