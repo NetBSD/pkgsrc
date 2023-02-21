@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.52 2023/02/09 08:17:11 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.53 2023/02/21 13:26:18 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
 CARGO_CRATE_DEPENDS+=	ahash-0.4.7
@@ -220,7 +220,7 @@ CARGO_CRATE_DEPENDS+=	termcolor-1.2.0
 CARGO_CRATE_DEPENDS+=	termimad-0.20.6
 CARGO_CRATE_DEPENDS+=	termimad-0.21.0
 CARGO_CRATE_DEPENDS+=	terminal-clipboard-0.3.1
-CARGO_CRATE_DEPENDS+=	terminal-light-1.1.0
+CARGO_CRATE_DEPENDS+=	terminal-light-1.1.1
 CARGO_CRATE_DEPENDS+=	termux-clipboard-0.1.0
 CARGO_CRATE_DEPENDS+=	textwrap-0.16.0
 CARGO_CRATE_DEPENDS+=	thiserror-1.0.38
