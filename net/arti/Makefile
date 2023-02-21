@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/02/21 20:53:12 nikita Exp $
+# $NetBSD: Makefile,v 1.2 2023/02/21 22:02:09 nikita Exp $
 
 PKGNAME=	arti-1.1.1
 DISTNAME=	arti-arti-v${PKGVERSION_NOREV}
@@ -7,7 +7,7 @@ CATEGORIES=	net
 MASTER_SITES=	https://gitlab.torproject.org/tpo/core/arti/-/archive/arti-v${PKGVERSION_NOREV}/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://arti.torproject.org/
+HOMEPAGE=	https://gitlab.torproject.org/tpo/core/arti/
 COMMENT=	Implementation of tor in Rust
 LICENSE=	mit
 
