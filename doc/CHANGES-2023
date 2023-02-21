@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1332 2023/02/21 16:42:22 adam Exp $
+$NetBSD: CHANGES-2023,v 1.1333 2023/02/21 17:27:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1728,3 +1728,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/gotosocial to 0.7.1 [nikita 2023-02-21]
 	Updated security/ccid to 1.5.2 [adam 2023-02-21]
 	Updated security/pcsc-tools to 1.6.2 [adam 2023-02-21]
+	Updated security/opensc to 0.23.0 [adam 2023-02-21]
+	Updated databases/py-lmdb to 1.4.0 [adam 2023-02-21]
