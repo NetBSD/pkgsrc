@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 11:05:56 nia Exp $
+$NetBSD: distinfo,v 1.10 2023/02/21 09:01:28 adam Exp $
 
-BLAKE2s (librsync-2.3.2.tar.gz) = 5e93ce13b259f1d5f0d8feb4c7088dfa5d985eb38381dc185876942fe948f119
-SHA512 (librsync-2.3.2.tar.gz) = 77d826dbaf02061b759d876a6b537238bad40379a08e4494ebfd3e380b2eb921b7b060bc570330aeac9424ef1a9d521f449d559c9ffa3be24acdef4ad530fe90
-Size (librsync-2.3.2.tar.gz) = 194461 bytes
+BLAKE2s (librsync-2.3.4.tar.gz) = 0b78cd762e5a969a2409f6a4a9348feb7d41733ce46521721b39465abe6d3bbc
+SHA512 (librsync-2.3.4.tar.gz) = ac01413b875e774db9fec3888210a4b9a5f3d32c081f1ed5f2cf9dc29cfae6ecedf6eac42062631e6dcf188853313fce4520430549768a0f68993419b07e58d9
+Size (librsync-2.3.4.tar.gz) = 201307 bytes
