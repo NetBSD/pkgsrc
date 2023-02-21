@@ -1,0 +1,19 @@
+Arti is a project to produce an embeddable, production-quality implementation
+of the Tor anonymity protocols in the Rust programming language.
+
+Arti is more flexible than the C tor implementation. Unlike the C tor, which
+was designed as SOCKS proxy originally, and whose integration features were
+later "bolted on", Arti is designed from the ground up to work as a modular,
+embeddable library that other applications can use.
+
+Current Status
+Arti can connect to the Tor network, bootstrap a view of the Tor directory,
+and make anonymized connections over the network. Now that Arti has reached
+version 1.0.0, we believe it is suitable for actual use to anonymise
+connections.
+
+There are a number of areas (especially at the lower layers) where APIs
+(especially internal APIs) are not stable, and are likely to change them.
+Right now that includes the command line interface to the arti program.
+
+And of course it's still very new so there are likely to be bugs.
