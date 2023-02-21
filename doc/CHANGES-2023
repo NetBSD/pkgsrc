@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1329 2023/02/21 13:28:10 pin Exp $
+$NetBSD: CHANGES-2023,v 1.1330 2023/02/21 14:05:20 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1724,3 +1724,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/wiki-tui to 0.6.4 [pin 2023-02-21]
 	Updated sysutils/broot to 1.20.2 [pin 2023-02-21]
 	Updated sysutils/dusage to 0.3.5 [pin 2023-02-21]
+	Added security/cfssl version 1.6.3 [jperkin 2023-02-21]
