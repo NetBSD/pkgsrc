@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/11/23 16:19:34 adam Exp $
+# $NetBSD: Makefile,v 1.7 2023/02/21 13:18:33 pin Exp $
 
 DISTNAME=	gobang-0.1.0alpha5
 PKGREVISION=	3
@@ -6,7 +6,7 @@ CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=TaKO8Ki/}
 GITHUB_TAG=	v0.1.0-alpha.5
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/TaKO8Ki/gobang/
 COMMENT=	Cross-platform TUI database management tool
 LICENSE=	mit
