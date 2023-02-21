@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2021/08/05 08:49:16 pin Exp $
+# $NetBSD: Makefile,v 1.5 2023/02/21 13:21:49 pin Exp $
 
 DISTNAME=	kibi-0.2.2
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ilai-deutel/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/ilai-deutel/kibi/
 COMMENT=	Text editor in less than 1024 lines of code, written in Rust
 LICENSE=	mit OR apache-2.0
