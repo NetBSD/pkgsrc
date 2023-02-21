@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2022/11/23 16:21:01 adam Exp $
+# $NetBSD: Makefile,v 1.38 2023/02/21 17:23:07 adam Exp $
 
-DISTNAME=	opensc-0.20.0
-PKGREVISION=	7
+DISTNAME=	opensc-0.23.0
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenSC/}
 
@@ -12,18 +11,18 @@ LICENSE=	gnu-lgpl-v2.1
 
 WRKSRC=		${WRKDIR}/OpenSC-${PKGVERSION_NOREV}
 
-BUILD_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		autoreconf autoconf automake gmake pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-autostart-items
+CONFIGURE_ARGS+=	--disable-cmocka
 CONFIGURE_ARGS+=	--disable-strict  # avoid -Werror
+CONFIGURE_ARGS+=	--enable-notify
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 # The stylesheets are not found without this.
 CONFIGURE_ARGS+=	--with-xsl-stylesheetsdir=${PREFIX}/share/xsl/docbook
-# This is perhaps an upstream bug.
-CONFIGURE_ENV+=		PCSC_CFLAGS=-I${PREFIX}/include/PCSC
 
 .include "options.mk"
 
@@ -37,13 +36,11 @@ INSTALLATION_DIRS=	${EGDIR}
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/etc/opensc.conf.example ${DESTDIR}${EGDIR}/opensc.conf
 
-# build tools for doc; should be TOOLS
-.include "../../textproc/libxslt/buildlink3.mk"
-
-# We avoid pthreads intentionally; tell dlopen not drag it in.
-DLOPEN_REQUIRE_PTHREADS=	no
-.include "../../mk/dlopen.buildlink3.mk"
-.include "../../mk/readline.buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+# build tools for doc; should be TOOLS
+.include "../../textproc/libxslt/buildlink3.mk"
+.include "../../mk/dlopen.buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
