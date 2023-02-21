@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1331 2023/02/21 15:49:50 nikita Exp $
+$NetBSD: CHANGES-2023,v 1.1332 2023/02/21 16:42:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1726,3 +1726,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/dusage to 0.3.5 [pin 2023-02-21]
 	Added security/cfssl version 1.6.3 [jperkin 2023-02-21]
 	Updated www/gotosocial to 0.7.1 [nikita 2023-02-21]
+	Updated security/ccid to 1.5.2 [adam 2023-02-21]
+	Updated security/pcsc-tools to 1.6.2 [adam 2023-02-21]
