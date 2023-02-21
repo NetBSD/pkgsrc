@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1318 2023/02/21 06:14:29 adam Exp $
+$NetBSD: CHANGES-2023,v 1.1319 2023/02/21 06:29:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1693,3 +1693,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-bitarray to 2.7.2nb1 [wiz 2023-02-20]
 	Updated devel/py-canonicaljson to 1.6.5 [adam 2023-02-21]
 	Updated devel/py-bitarray to 2.7.3 [adam 2023-02-21]
+	Updated devel/py-setuptools to 67.3.3 [adam 2023-02-21]
+	Updated devel/py-types-setuptools to 67.3.0.2 [adam 2023-02-21]
+	Updated devel/py-types-toml to 0.10.8.5 [adam 2023-02-21]
+	Updated devel/py-types-ujson to 5.7.0.1 [adam 2023-02-21]
