@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1317 2023/02/20 18:11:09 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1318 2023/02/21 06:14:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1691,3 +1691,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-black to 23.1.0 [adam 2023-02-20]
 	Updated devel/py-test-xdist to 3.2.0 [adam 2023-02-20]
 	Updated devel/py-bitarray to 2.7.2nb1 [wiz 2023-02-20]
+	Updated devel/py-canonicaljson to 1.6.5 [adam 2023-02-21]
+	Updated devel/py-bitarray to 2.7.3 [adam 2023-02-21]
