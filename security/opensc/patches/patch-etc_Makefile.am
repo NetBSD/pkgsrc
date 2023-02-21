@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.7 2018/10/13 10:54:05 mlelstv Exp $
+$NetBSD: patch-etc_Makefile.am,v 1.1 2023/02/21 17:23:07 adam Exp $
 
 Disable installation of config file, because pkgsrc installs config
 files as examples.
