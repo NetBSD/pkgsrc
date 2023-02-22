@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1345 2023/02/22 16:23:06 tsutsui Exp $
+$NetBSD: CHANGES-2023,v 1.1346 2023/02/22 16:28:51 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1744,3 +1744,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-openpyxl to 3.1.1 [adam 2023-02-22]
 	Updated textproc/unicode-character-database to 15.0.0 [tsutsui 2023-02-22]
 	Updated textproc/unicode-emoji to 15.0 [tsutsui 2023-02-22]
+	Updated security/vaultwarden to 1.27.0 [hauke 2023-02-22]
