@@ -1,0 +1,15 @@
+$NetBSD: patch-src_zabbix__proxy_Makefile.in,v 1.1 2023/02/22 21:45:17 otis Exp $
+
+Install config file to component's example directory.
+
+--- src/zabbix_proxy/Makefile.in.orig	2023-02-01 07:20:02.432793641 +0000
++++ src/zabbix_proxy/Makefile.in
+@@ -1071,7 +1071,7 @@ install-data-hook:
+ 	$(MKDIR_P) "$(DESTDIR)$(PROXY_CONFIG_FILE).d"
+ 	$(MKDIR_P) "$(DESTDIR)$(EXTERNAL_SCRIPTS_PATH)"
+ 	$(MKDIR_P) "$(DESTDIR)$(LOAD_MODULE_PATH)"
+-	test -f "$(DESTDIR)$(PROXY_CONFIG_FILE)" || cp "../../conf/zabbix_proxy.conf" "$(DESTDIR)$(PROXY_CONFIG_FILE)"
++	$(INSTALL_DATA) "../../conf/zabbix_proxy.conf" "$(DESTDIR)/${PREFIX}/share/examples/%%PKGBASE%%"
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.

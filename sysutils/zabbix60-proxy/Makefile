@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2023/02/12 21:03:07 otis Exp $
+# $NetBSD: Makefile,v 1.3 2023/02/22 21:45:17 otis Exp $
 
 PKGREVISION= 1
 .include "../../sysutils/zabbix60-server/Makefile.common"
@@ -49,6 +49,12 @@ SUBST_MESSAGE.fix-pkgbase=	Fixing PKGBASE.
 SUBST_FILES.fix-pkgbase=	src/zabbix_proxy/Makefile.*
 SUBST_SED.fix-pkgbase=		-e 's,%%PKGBASE%%,${PKGBASE},g'
 
+SUBST_CLASSES+=			fix-popcount
+SUBST_STAGE.fix-popcount=	post-patch
+SUBST_MESSAGE.fix-popcount=	Fix conflict with NetBSD's popcount.
+SUBST_FILES.fix-popcount+=	src/zabbix_server/lld/lld_host.c
+SUBST_SED.fix-popcount+=	-e 's,popcount,zbx_popcount,g'
+
 PLIST_SUBST+=			PKGBASE=${PKGBASE}
 
 CFLAGS.SunOS+=			-DDUK_USE_BYTEORDER=1
@@ -63,8 +69,6 @@ post-install:
 	${RM} ${DESTDIR}${PREFIX}/share/${PKGBASE}/images.sql
 	${MV} ${DESTDIR}${PREFIX}/bin/zabbix_js \
 	   ${DESTDIR}${PREFIX}/bin/zabbix_proxy_js
-	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/zabbix_proxy.conf \
-		${DESTDIR}${PREFIX}/${EGDIR}/zabbix_proxy.conf
 
 .include "options.mk"
 

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2023/02/12 18:37:32 otis Exp $
+$NetBSD: distinfo,v 1.2 2023/02/22 21:45:17 otis Exp $
 
 BLAKE2s (zabbix-6.0.13.tar.gz) = fd8aa1f37b18943b42709d7ead74402bb9637819eb6137ea23c0b2b7cbdca775
 SHA512 (zabbix-6.0.13.tar.gz) = 188622c0c04029eac376ebf60c96ed9d67923bc1f40eff75666a241bb534cb744aca8c51ff4b79d508dfadb9e758f80d9dc46016217bcb5a67e8ede7e645788e
@@ -9,4 +9,6 @@ SHA1 (patch-m4_libssh.m4) = 8b4ac3964caf94bb0e4939d265dcefc08a07a0df
 SHA1 (patch-src_libs_zbxsysinfo_netbsd_net.c) = bc928301fc099d907b83127e2670abf1d6c33553
 SHA1 (patch-src_zabbix__agent_Makefile.in) = efbd804ecee4b99db36db5f4fd61583b2ef96a86
 SHA1 (patch-src_zabbix__proxy_Makefile.am) = 9d2c3d5ca06e676154653b70f0931ed2ea281cf5
+SHA1 (patch-src_zabbix__proxy_Makefile.in) = 000fe95c07af423feac01a452a564bdc63f008ff
 SHA1 (patch-src_zabbix__server_Makefile.am) = d139b4fedf8f443fbe9966256e98374d5e5cdb67
+SHA1 (patch-src_zabbix__server_Makefile.in) = 16c899ed5a53924a351f8c334d4d3bae17490b62
