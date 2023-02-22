@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.114 2023/02/21 10:29:16 wiz Exp $
+# $NetBSD: Makefile,v 1.115 2023/02/22 09:20:31 wiz Exp $
 
 DISTNAME=	erlang-${DIST_VERSION_MAJOR}.${DIST_VERSION_MINOR}${!empty(DIST_VERSION_PATCH):?.:}${DIST_VERSION_PATCH}
 PKGNAME=	${DISTNAME:S/OTP-/erlang-/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=erlang/}
 GITHUB_PROJECT=	otp
@@ -30,10 +30,6 @@ MKPIE_SUPPORTED=	no
 MAKE_FLAGS+=	ARCH=arm
 .endif
 
-# Coordinate with Makefile patches.
-MAKE_ENV+=		PAXCTL=echo
-MAKE_ENV.NetBSD+=	PAXCTL=/usr/sbin/paxctl
-
 .if ${USE_CROSS_COMPILE:U:tl} == yes
 USE_GNU_CONFIGURE_HOST=	yes
 .else
@@ -45,6 +41,8 @@ CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_PREFIX.openssl}
 
 PTHREAD_OPTS+=		require native
 CONFIGURE_ARGS+=	--enable-threads
+# https://github.com/erlang/otp/issues/6909
+CONFIGURE_ARGS.NetBSD+=	--disable-jit
 
 MAKE_ENV+=		DESTDIR=${DESTDIR}
 
