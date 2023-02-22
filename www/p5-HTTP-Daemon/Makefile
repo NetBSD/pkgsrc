@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2022/06/28 11:37:27 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2023/02/22 22:13:04 wiz Exp $
 
-DISTNAME=	HTTP-Daemon-6.14
+DISTNAME=	HTTP-Daemon-6.15
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=HTTP/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/O/OA/OALDERS/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/release/HTTP-Daemon
