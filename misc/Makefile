@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.580 2023/01/25 17:06:04 pho Exp $
+# $NetBSD: Makefile,v 1.581 2023/02/22 11:21:01 wiz Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -363,6 +363,7 @@ SUBDIR+=	sunwait
 SUBDIR+=	superkaramba
 SUBDIR+=	sweeper
 SUBDIR+=	sword
+SUBDIR+=	tagainijisho
 SUBDIR+=	tds
 SUBDIR+=	team
 SUBDIR+=	teseq
