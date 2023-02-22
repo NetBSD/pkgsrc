@@ -1,0 +1,15 @@
+Tagaini Jisho is a Japanese learning assistant built around a
+vocabulary and kanji dictionary. Its goal is to make it easy to:
+
+* Lookup and find words or kanji (later referred to as "entries")
+  that you want to study,
+* Mark and organize the entries you want to study or remember, and
+* Consolidate your global knowledge by connecting related studied
+  entries together to facilitate memorization.
+
+Using Tagaini, you can add entries to your study list, tag them,
+add notes, practice them as flashcards, and easily navigate to
+related entries. A powerful search engine lets you look words and
+kanji up from fragments of information, like character components
+or number of strokes. Finally, export options allow you to print
+booklets for study or export entries to CSV for e.g. using them...
