@@ -1,10 +1,10 @@
-$NetBSD: patch-ad,v 1.2 2022/12/01 21:14:09 jperkin Exp $
+$NetBSD: patch-ad,v 1.3 2023/02/22 07:44:55 wiz Exp $
 
 Support aarch64.
 
---- darwin.cf.orig	2021-08-02 01:00:38
+--- darwin.cf.orig	2023-02-22 02:28:43.000000000 +0000
 +++ darwin.cf
-@@ -97,7 +97,7 @@ XCOMM operating system:  OSName (OSMajorVersion./**/OS
+@@ -97,7 +97,7 @@ XCOMM operating system:  OSName (OSMajor
   * Turn off to build on raw Darwin systems.
   */
  #ifndef DarwinQuartzSupport
@@ -13,7 +13,7 @@ Support aarch64.
  #endif
  
  #if DarwinQuartzSupport
-@@ -170,7 +170,7 @@ XCOMM operating system:  OSName (OSMajorVersion./**/OS
+@@ -170,7 +170,7 @@ XCOMM operating system:  OSName (OSMajor
   * so we use the 3.1-based version in this case.
   */
  #if (GccMajorVersion == 3) && (GccMinorVersion == 3)
@@ -22,7 +22,7 @@ Support aarch64.
  #else
  # define CppCmd                 /usr/bin/cpp
  #endif
-@@ -184,8 +184,8 @@ XCOMM operating system:  OSName (OSMajorVersion./**/OS
+@@ -184,8 +184,8 @@ XCOMM operating system:  OSName (OSMajor
  #endif
  
  /* we have a gcc compatible compiler, but its not called gcc */
@@ -33,7 +33,7 @@ Support aarch64.
  
  /* default flags to pass to cc */
  #ifndef DefaultCCOptions
-@@ -213,7 +213,7 @@ XCOMM operating system:  OSName (OSMajorVersion./**/OS
+@@ -213,7 +213,7 @@ XCOMM operating system:  OSName (OSMajor
  #ifdef PpcDarwinArchitecture
  # define DarwinMachineDefines   -D__powerpc__
  # if HasGcc3
@@ -42,7 +42,7 @@ Support aarch64.
  # else
  #  define OptimizedCDebugFlags  -O2
  # endif
-@@ -223,13 +223,22 @@ XCOMM operating system:  OSName (OSMajorVersion./**/OS
+@@ -223,13 +223,22 @@ XCOMM operating system:  OSName (OSMajor
  #ifdef i386DarwinArchitecture
  # define DarwinMachineDefines   -D__i386__
  # if HasGcc3
@@ -63,6 +63,6 @@ Support aarch64.
 +# endif
 +# define ByteOrder              X_LITTLE_ENDIAN
 +#endif
- 
  #ifdef x86_64DarwinArchitecture
  # define DarwinMachineDefines   -D__x86_64__
+ # if HasGcc3
