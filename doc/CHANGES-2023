@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1341 2023/02/22 11:21:11 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1342 2023/02/22 11:58:41 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1739,3 +1739,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/erlang to 25.2nb3 [wiz 2023-02-22]
 	Updated emulators/mame to 0.252 [wiz 2023-02-22]
 	Added misc/tagainijisho version 1.2.2 [wiz 2023-02-22]
+	Added sysutils/packer version 1.8.6 [jperkin 2023-02-22]
