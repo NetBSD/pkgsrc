@@ -1,7 +1,7 @@
-$NetBSD: patch-ai,v 1.6 2023/01/20 22:46:34 mrg Exp $
+$NetBSD: patch-ai,v 1.7 2023/02/22 07:44:55 wiz Exp $
 
---- Imake.tmpl.orig	2021-08-01 18:00:38.000000000 -0700
-+++ Imake.tmpl	2023-01-18 14:02:36.645134759 -0800
+--- Imake.tmpl.orig	2023-02-22 02:28:43.000000000 +0000
++++ Imake.tmpl
 @@ -898,24 +898,18 @@ TCLIBDIR = TclLibDir
  #ifndef ManPath
  #define ManPath ManDirectoryRoot
@@ -33,15 +33,7 @@ $NetBSD: patch-ai,v 1.6 2023/01/20 22:46:34 mrg Exp $
  #ifndef AppLoadDefs
  #define AppLoadDefs -D__apploaddir__=$(XAPPLOADDIR)
  #endif
-@@ -1078,21 +1072,21 @@ TCLIBDIR = TclLibDir
- #define ArCmdBase ar
- #endif
- #ifndef ArCmd
--#if HasLargeTmp || SystemV4 || LinuxBinUtilsMajorVersion
-+#if HasLargeTmp || SystemV4 || HasGnuAr
- #define ArCmd ArCmdBase cq
- #else
- #define ArCmd ArCmdBase clq
+@@ -1085,14 +1079,14 @@ TCLIBDIR = TclLibDir
  #endif
  #endif
  #ifndef ArAddCmd

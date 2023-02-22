@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.41 2023/01/20 22:46:34 mrg Exp $
+# $NetBSD: Makefile,v 1.42 2023/02/22 07:44:55 wiz Exp $
 
-DISTNAME=		xorg-cf-files-1.0.7
-PKGREVISION=		2
+DISTNAME=		xorg-cf-files-1.0.8
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=util/}
-EXTRACT_SUFX=		.tar.bz2
+EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/

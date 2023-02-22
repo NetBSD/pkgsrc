@@ -1,12 +1,12 @@
-$NetBSD: patch-af,v 1.10 2022/12/01 21:14:09 jperkin Exp $
+$NetBSD: patch-af,v 1.11 2023/02/22 07:44:55 wiz Exp $
 
 - Ensure all programs and libraries have a LOCALBASE rpath.
 - Disable Solaris64bitSubdir, at least until multi-arch is supported.
 - Use pkgsrc CC, CXX, CFLAGS and INSTALL.
 
---- sun.cf.orig	2021-08-02 01:00:39
+--- sun.cf.orig	2023-02-22 02:28:43.000000000 +0000
 +++ sun.cf
-@@ -430,9 +430,9 @@ XCOMM SunPro C++ CplusplusCompilerMajorVersion./**/Cpl
+@@ -430,9 +430,9 @@ XCOMM SunPro C++ CplusplusCompilerMajorV
  #  endif
  # endif
  # if OSMinorVersion > 10
@@ -18,19 +18,19 @@ $NetBSD: patch-af,v 1.10 2022/12/01 21:14:09 jperkin Exp $
  # endif
  #ifndef LargefileDefines
  # if (OSMajorVersion > 5) || (OSMajorVersion == 5 && OSMinorVersion >= 6)
-@@ -682,29 +682,29 @@ XCOMM SunPro C++ CplusplusCompilerMajorVersion./**/Cpl
+@@ -682,29 +682,29 @@ XCOMM SunPro C++ CplusplusCompilerMajorV
  # endif
  # if HasGcc2
  #  ifndef CcCmd
 -#   define CcCmd gcc
 +#   define CcCmd @@PKGSRC_CC@@
- #  endif
++#  endif
 +#  ifndef CppCmd
 +#   define CppCmd @@PKGSRC_CPP@@
 +#  endif
 +#  ifndef CplusplusCmd
 +#   define CplusplusCmd @@PKGSRC_CXX@@
-+#  endif
+ #  endif
  #  ifndef AsCmd
  #   define AsCmd CcCmd -c -x assembler
  #  endif
@@ -58,16 +58,16 @@ $NetBSD: patch-af,v 1.10 2022/12/01 21:14:09 jperkin Exp $
  #   endif
  #  endif
  # else
-@@ -829,7 +829,7 @@ XCOMM SunPro C++ CplusplusCompilerMajorVersion./**/Cpl
+@@ -829,7 +829,7 @@ XCOMM SunPro C++ CplusplusCompilerMajorV
  # endif
  #endif
  #ifndef Mapfile_NoExData
 -# if defined(SparcArchitecture)
 +# if defined(SparcArchitecture) || defined(Sparc64Architecture)
- /* SPARC archictecture requires PLT section in .data be executable, so
+ /* SPARC architecture requires PLT section in .data be executable, so
     we can only make .bss, not all of .data no-exec on SPARC */
  #   define Mapfile_NoExData /**/
-@@ -846,7 +846,7 @@ MAPFILES_FOR_PROGS = Mapfile_BssAlign Mapfile_NoExStac
+@@ -846,7 +846,7 @@ XCOMM SunPro C++ CplusplusCompilerMajorV
  MAPFILES_FOR_PROGS = Mapfile_BssAlign Mapfile_NoExStack
  /* ExtraLoadFlags apply to all binaries - programs & libraries */
  # ifndef ExtraLoadFlags
@@ -76,7 +76,7 @@ $NetBSD: patch-af,v 1.10 2022/12/01 21:14:09 jperkin Exp $
  # endif
  /* ExtraLoadOptions only apply to programs */
  # ifndef ExtraLoadOptions
-@@ -863,7 +863,7 @@ MAPFILES_FOR_PROGS = Mapfile_BssAlign Mapfile_NoExStac
+@@ -863,7 +863,7 @@ MAPFILES_FOR_PROGS = Mapfile_BssAlign Ma
  # endif
  #endif
  
