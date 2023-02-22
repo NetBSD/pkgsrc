@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2021/11/27 07:24:43 taca Exp $
+# $NetBSD: Makefile.common,v 1.2 2023/02/22 00:03:09 taca Exp $
 # used by lang/php81/Makefile.php
 # used by lang/php/ext.mk
 # used by meta-pkgs/php81-extensions/Makefile
@@ -7,6 +7,7 @@ PHP_VERSION_REQD=	81
 
 .include "../../lang/php/common.mk"
 
+DIST_SUBDIR=		php81-20230214
 CATEGORIES+=		www
 MAINTAINER?=		pkgsrc-users@NetBSD.org
 

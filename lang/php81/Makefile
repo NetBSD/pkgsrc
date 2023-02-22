@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2023/02/19 12:54:23 taca Exp $
+# $NetBSD: Makefile,v 1.13 2023/02/22 00:03:09 taca Exp $
 
 #
 # We can't omit PKGNAME here to handle PKG_OPTIONS.
 #
-DIST_SUBDIR=		php81-20230214
 PKGNAME=		php-${PHP_VERSION:S/RC/rc/}
 PKGREVISION=		1
 
