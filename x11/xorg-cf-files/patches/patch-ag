@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.8 2022/12/01 21:14:09 jperkin Exp $
+$NetBSD: patch-ag,v 1.9 2023/02/22 07:44:55 wiz Exp $
 
 Add __ppc64__ and __arm__
 Recognize __sun as well as sun
@@ -6,9 +6,9 @@ Add __ia64__
 Also recognize __sparc__ apparently now needed for gcc49 on solaris sparc
 to avoid -M /usr/lib/ld/map.noexdata which in does not work on SPARC
 
---- Imake.cf.orig	2021-08-02 01:00:38
+--- Imake.cf.orig	2023-02-22 02:28:43.000000000 +0000
 +++ Imake.cf
-@@ -25,14 +25,19 @@ XCOMM $XFree86: xc/config/cf/Imake.cf,v 3.88 2003/12/1
+@@ -25,14 +25,19 @@ XCOMM $XFree86: xc/config/cf/Imake.cf,v 
  # define MacroIncludeFile <darwin.cf>
  # define MacroFile darwin.cf
  # define DarwinArchitecture
@@ -29,7 +29,7 @@ to avoid -M /usr/lib/ld/map.noexdata which in does not work on SPARC
  # ifdef __x86_64__
  #  define x86_64DarwinArchitecture
  #  undef __x86_64__
-@@ -255,6 +260,10 @@ XCOMM $XFree86: xc/config/cf/Imake.cf,v 3.88 2003/12/1
+@@ -259,6 +264,10 @@ XCOMM $XFree86: xc/config/cf/Imake.cf,v 
  #  define AMD64Architecture
  #  undef __x86_64__
  # endif
@@ -40,7 +40,7 @@ to avoid -M /usr/lib/ld/map.noexdata which in does not work on SPARC
  #endif /* NetBSD */
  
  /* Systems based on kernel of NetBSD */
-@@ -352,7 +361,7 @@ XCOMM $XFree86: xc/config/cf/Imake.cf,v 3.88 2003/12/1
+@@ -356,7 +365,7 @@ XCOMM $XFree86: xc/config/cf/Imake.cf,v 
  # endif
  #endif /* AMOEBA */
  
@@ -49,14 +49,14 @@ to avoid -M /usr/lib/ld/map.noexdata which in does not work on SPARC
  # define MacroIncludeFile <sun.cf>
  # define MacroFile sun.cf
  # ifdef SVR4
-@@ -361,6 +370,10 @@ XCOMM $XFree86: xc/config/cf/Imake.cf,v 3.88 2003/12/1
- # endif
- # ifdef sparc
+@@ -367,6 +376,10 @@ XCOMM $XFree86: xc/config/cf/Imake.cf,v 
  #  undef sparc
-+#  define SparcArchitecture
-+# endif
-+# ifdef __sparc__
-+#  undef __sparc__
  #  define SparcArchitecture
  # endif
++# ifdef __sparc__
++#  undef __sparc__
++#  define SparcArchitecture
++# endif
  # ifdef __sparcv9
+ #  undef __sparcv9
+ #  define Sparc64Architecture
