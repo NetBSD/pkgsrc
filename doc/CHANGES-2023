@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1347 2023/02/22 19:19:38 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1348 2023/02/22 21:45:32 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1746,3 +1746,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/unicode-emoji to 15.0 [tsutsui 2023-02-22]
 	Updated security/vaultwarden to 1.27.0 [hauke 2023-02-22]
 	Updated fonts/font-util to 1.4.0 [wiz 2023-02-22]
+	Updated chat/swirc to 3.4.2 [fcambus 2023-02-22]
