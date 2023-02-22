@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:34:40 nia Exp $
+$NetBSD: distinfo,v 1.9 2023/02/22 07:29:21 wiz Exp $
 
-BLAKE2s (xf86-video-ark-0.7.5.tar.bz2) = f13531c542f57084baca95c9f8d9d1a154555a0a0b8e597deb763fab28ceb898
-SHA512 (xf86-video-ark-0.7.5.tar.bz2) = 67c2b4e2109bf9d84a007c9679d35e7c0a4e4ddcdb7be9fa5070ce7e2f666e018d8421ddd4890cf3abb4eb37e060a10666c62a9efbb5369eb7cd8647ee18a644
-Size (xf86-video-ark-0.7.5.tar.bz2) = 290423 bytes
-SHA1 (patch-src_ark__driver.c) = 922cbccbd93999e0d0c2ea433e78fb1927595721
+BLAKE2s (xf86-video-ark-0.7.6.tar.xz) = 2fe6f90f6398bd83ec376815c303fd79ce9ca4889d272aeae876440ced4ee174
+SHA512 (xf86-video-ark-0.7.6.tar.xz) = a52623e07eef6fa12d77b1afc55bb74b21662b850515b3a32bbf5988dcea2e787b4eddf4e020279aa4e4ddba436505ca9298548406913031e0ed5edaac835491
+Size (xf86-video-ark-0.7.6.tar.xz) = 265612 bytes
