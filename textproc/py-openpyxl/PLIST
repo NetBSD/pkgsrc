@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2022/11/29 10:20:57 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2023/02/22 12:50:46 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -22,6 +22,9 @@ ${PYSITELIB}/openpyxl/cell/cell.pyo
 ${PYSITELIB}/openpyxl/cell/read_only.py
 ${PYSITELIB}/openpyxl/cell/read_only.pyc
 ${PYSITELIB}/openpyxl/cell/read_only.pyo
+${PYSITELIB}/openpyxl/cell/rich_text.py
+${PYSITELIB}/openpyxl/cell/rich_text.pyc
+${PYSITELIB}/openpyxl/cell/rich_text.pyo
 ${PYSITELIB}/openpyxl/cell/text.py
 ${PYSITELIB}/openpyxl/cell/text.pyc
 ${PYSITELIB}/openpyxl/cell/text.pyo
@@ -280,6 +283,9 @@ ${PYSITELIB}/openpyxl/packaging/__init__.pyo
 ${PYSITELIB}/openpyxl/packaging/core.py
 ${PYSITELIB}/openpyxl/packaging/core.pyc
 ${PYSITELIB}/openpyxl/packaging/core.pyo
+${PYSITELIB}/openpyxl/packaging/custom.py
+${PYSITELIB}/openpyxl/packaging/custom.pyc
+${PYSITELIB}/openpyxl/packaging/custom.pyo
 ${PYSITELIB}/openpyxl/packaging/extended.py
 ${PYSITELIB}/openpyxl/packaging/extended.pyc
 ${PYSITELIB}/openpyxl/packaging/extended.pyo
@@ -496,6 +502,9 @@ ${PYSITELIB}/openpyxl/worksheet/errors.pyo
 ${PYSITELIB}/openpyxl/worksheet/filters.py
 ${PYSITELIB}/openpyxl/worksheet/filters.pyc
 ${PYSITELIB}/openpyxl/worksheet/filters.pyo
+${PYSITELIB}/openpyxl/worksheet/formula.py
+${PYSITELIB}/openpyxl/worksheet/formula.pyc
+${PYSITELIB}/openpyxl/worksheet/formula.pyo
 ${PYSITELIB}/openpyxl/worksheet/header_footer.py
 ${PYSITELIB}/openpyxl/worksheet/header_footer.pyc
 ${PYSITELIB}/openpyxl/worksheet/header_footer.pyo
@@ -517,6 +526,9 @@ ${PYSITELIB}/openpyxl/worksheet/pagebreak.pyo
 ${PYSITELIB}/openpyxl/worksheet/picture.py
 ${PYSITELIB}/openpyxl/worksheet/picture.pyc
 ${PYSITELIB}/openpyxl/worksheet/picture.pyo
+${PYSITELIB}/openpyxl/worksheet/print_settings.py
+${PYSITELIB}/openpyxl/worksheet/print_settings.pyc
+${PYSITELIB}/openpyxl/worksheet/print_settings.pyo
 ${PYSITELIB}/openpyxl/worksheet/properties.py
 ${PYSITELIB}/openpyxl/worksheet/properties.pyc
 ${PYSITELIB}/openpyxl/worksheet/properties.pyo
