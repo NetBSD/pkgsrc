@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1342 2023/02/22 11:58:41 jperkin Exp $
+$NetBSD: CHANGES-2023,v 1.1343 2023/02/22 12:51:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1740,3 +1740,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated emulators/mame to 0.252 [wiz 2023-02-22]
 	Added misc/tagainijisho version 1.2.2 [wiz 2023-02-22]
 	Added sysutils/packer version 1.8.6 [jperkin 2023-02-22]
+	Updated lang/py-mypy to 1.0.1 [adam 2023-02-22]
+	Updated textproc/py-openpyxl to 3.1.1 [adam 2023-02-22]
