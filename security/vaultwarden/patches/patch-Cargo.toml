@@ -1,0 +1,21 @@
+$NetBSD: patch-Cargo.toml,v 1.1 2023/02/22 16:28:37 hauke Exp $
+
+Upstream tries to pull a patched version from a git repo during build,
+which does not work in a pkgsrc build.
+
+--- Cargo.toml.orig	2022-12-18 19:37:01.000000000 +0000
++++ Cargo.toml
+@@ -152,11 +152,8 @@ semver = "1.0.14"
+ # Mainly used for the musl builds, since the default musl malloc is very slow
+ mimalloc = { version = "0.1.32", features = ["secure"], default-features = false, optional = true }
+ 
+-[patch.crates-io]
+-# Using a patched version of multer-rs (Used by Rocket) to fix attachment/send file uploads
+-# Issue: https://github.com/dani-garcia/vaultwarden/issues/2644
+-# Patch: https://github.com/BlackDex/multer-rs/commit/477d16b7fa0f361b5c2a5ba18a5b28bec6d26a8a
+-multer = { git = "https://github.com/BlackDex/multer-rs", rev = "477d16b7fa0f361b5c2a5ba18a5b28bec6d26a8a" }
++# async parser for multipart/form-data content-type
++multer = "2.0.4"
+ 
+ # Strip debuginfo from the release builds
+ # Also enable thin LTO for some optimizations

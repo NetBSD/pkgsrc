@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2022/08/17 15:44:16 hauke Exp $
+# $NetBSD: Makefile,v 1.2 2023/02/22 16:28:37 hauke Exp $
 
 DISTNAME=	vaultwarden-${PKGVER}
-PKGVER=		1.25.2
+PKGVER=		1.27.0
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dani-garcia/}
 EXTRACT_SUFX=	.tar.gz
@@ -14,7 +14,9 @@ COMMENT=	Bitwarden compatible backend server
 
 LICENSE=	gnu-gpl-v3
 
-# From make print-cargo-depends > cargo-depends.mk
+# From
+# 'make CARGO_ARGS="build --release --features `make show-var VARNAME=CARGO_FEATURES`" build &&
+#  make print-cargo-depends > cargo-depends.mk'
 .include "cargo-depends.mk"
 
 USE_TOOLS+=	perl
