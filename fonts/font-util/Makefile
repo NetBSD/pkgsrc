@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2022/11/09 13:14:13 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2023/02/22 19:19:26 wiz Exp $
 
-DISTNAME=		font-util-1.3.3
+DISTNAME=		font-util-1.4.0
 CATEGORIES=		fonts
 MASTER_SITES=		${MASTER_SITE_XORG:=font/}
 EXTRACT_SUFX=		.tar.xz
