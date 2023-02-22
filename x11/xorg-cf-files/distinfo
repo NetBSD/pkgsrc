@@ -1,21 +1,20 @@
-$NetBSD: distinfo,v 1.36 2023/01/20 22:46:34 mrg Exp $
+$NetBSD: distinfo,v 1.37 2023/02/22 07:44:55 wiz Exp $
 
-BLAKE2s (xorg-cf-files-1.0.7.tar.bz2) = 7c971e7951a9369904f766fb5a9e6c78fd07703131e2a042e858e53480f27fd7
-SHA512 (xorg-cf-files-1.0.7.tar.bz2) = 0dd73b9db9fc16bddc94ef23f11434be6ea2f8e0c7bc5ef3c3bfe6749e13843f88d397eed9f980bbbe9e74147172326bd3c3ccb7adedc9150302756e4b07191e
-Size (xorg-cf-files-1.0.7.tar.bz2) = 345575 bytes
+BLAKE2s (xorg-cf-files-1.0.8.tar.xz) = e8a410f3363e12daafc5566b665b019177c0bba86dd6f82bdf2073a150199fc8
+SHA512 (xorg-cf-files-1.0.8.tar.xz) = cc633af889cd82346c3098df9185245c21aa9db7484343f8be9719f6e0b1fc0a9b09afb13b9b864668aa51944f2da797bbe896c807f629e89fc91506e6e63fb9
+Size (xorg-cf-files-1.0.8.tar.xz) = 290280 bytes
 SHA1 (patch-OpenBSDLib.rules) = 65b02b660839adb6e9c13287396a794a4586d927
 SHA1 (patch-X11.rules) = 2dac9bcc111f63b2dd887967ea5fab656f52f06b
 SHA1 (patch-X11.tmpl) = 3f0c5b8ad7a60cd0e1e47afcddaace936b9aaeed
 SHA1 (patch-aa) = 850672428eec76facfc7862bb9a2a8e1a00ee56d
-SHA1 (patch-ab) = c30b0ac9e661aa76a65877ef7cd4c422a8f0405b
-SHA1 (patch-ac) = e084d790e7713897ba2366145b2088f933aa94e0
-SHA1 (patch-ad) = fcdddf191f676287b7f42e2b16729ed34afc6786
-SHA1 (patch-ae) = d89ea1af22b3d0fab3cc431e3353c9efe4a92264
-SHA1 (patch-af) = 42c0e0738a5ca20c2f7aa09684630093970c1dee
-SHA1 (patch-ag) = b7c07619141df8d8ae718732343fd185098bdafb
+SHA1 (patch-ac) = 2c0864d2a6bcbdeba12ffa4318df6bd80bea1f0e
+SHA1 (patch-ad) = 0a231ebd8b615bf3c8e630f0ebc394619b2c3e23
+SHA1 (patch-ae) = 4f97fba73c5ce7d4d9b402921605bcd9d9975abf
+SHA1 (patch-af) = e158cf3aca506dbc86c35c2a94cec9e47a238308
+SHA1 (patch-ag) = 6c9d9f28f93edf615822c7882bed33b05a2de9f3
 SHA1 (patch-ah) = 9b64b2e5f419ab190d47dd8156b8f84634fd6a36
-SHA1 (patch-ai) = ec2523615802a89c63d7015089a908133438b812
+SHA1 (patch-ai) = 5725df2f2321363b630171cf9316f97ade9f4b3f
 SHA1 (patch-aj) = 3be677041b6bff008caa1375d1e6dd5c90d9f501
-SHA1 (patch-ak) = ec4e8c30782e3081a84b8c3bd8ab71961a0f13cb
+SHA1 (patch-ak) = 8c683fce8a3a42715ad11d7f917263e48dbf4fba
 SHA1 (patch-gnuLib.rules) = 44a39881b4f4b6a10250f7ae4b4508af76cef71d
 SHA1 (patch-sv4Lib.rules) = f7ea2b29a8d3f4e866578fc81d0bbb6a3e598bb3

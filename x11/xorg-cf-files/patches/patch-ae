@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.5 2022/12/01 21:14:09 jperkin Exp $
+$NetBSD: patch-ae,v 1.6 2023/02/22 07:44:55 wiz Exp $
 
---- DragonFly.cf.orig	2021-08-02 01:00:38
+--- DragonFly.cf.orig	2023-02-22 02:28:43.000000000 +0000
 +++ DragonFly.cf
-@@ -96,12 +96,12 @@ XCOMM operating system:  OSName (OSMajorVersion./**/OS
+@@ -96,12 +96,12 @@ XCOMM operating system:  OSName (OSMajor
  #define HasFlex                  YES
  
  #ifndef CcCmd
@@ -18,14 +18,14 @@ $NetBSD: patch-ae,v 1.5 2022/12/01 21:14:09 jperkin Exp $
  #define PreProcessCmd            CppCmd
  #define StandardCppOptions       -traditional
  #define StandardCppDefines       /**/
-@@ -115,10 +115,6 @@ XCOMM operating system:  OSName (OSMajorVersion./**/OS
- #   define NoSystemWarn
+@@ -116,10 +116,6 @@ XCOMM operating system:  OSName (OSMajor
  # endif
  # define DefaultCCOptions -ansi NoSystemWarn -Dasm=__asm GccWarningOptions
--#endif
+ #endif
 -#ifndef ExtraLibraries
 -/* support for multi-byte locales is in libxpg4 rather than libc */
 -#define ExtraLibraries          -lxpg4
- #endif
+-#endif
  #define HasSetUserContext       YES
  #define HasGetpeereid           YES
+ #define HasMTRRSupport          YES
