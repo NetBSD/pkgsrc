@@ -1,9 +1,9 @@
-$NetBSD: patch-ac,v 1.5 2023/01/20 22:46:34 mrg Exp $
+$NetBSD: patch-ac,v 1.6 2023/02/22 07:44:55 wiz Exp $
 
---- linux.cf.orig	2021-08-01 18:00:38.000000000 -0700
-+++ linux.cf	2023-01-18 14:02:08.805022786 -0800
-@@ -90,6 +90,10 @@ XCOMM platform:  $XFree86: xc/config/cf/
- # define LinuxBinUtilsMajorVersion	DefaultLinuxBinUtilsMajorVersion
+--- linux.cf.orig	2023-02-22 02:28:43.000000000 +0000
++++ linux.cf
+@@ -94,6 +94,10 @@ XCOMM platform:  $XFree86: xc/config/cf/
+ #define HasGnuAr	YES
  #endif
  
 +#ifndef HasGnuAr
@@ -13,7 +13,7 @@ $NetBSD: patch-ac,v 1.5 2023/01/20 22:46:34 mrg Exp $
  XCOMM operating system:  OSName (OSMajorVersion./**/OSMinorVersion./**/OSTeenyVersion)
  XCOMM libc:	(LinuxCLibMajorVersion./**/LinuxCLibMinorVersion./**/LinuxCLibTeenyVersion)
  XCOMM binutils:	(LinuxBinUtilsMajorVersion)
-@@ -615,10 +619,10 @@ InstallNamedTargetNoClobber(install,file
+@@ -619,10 +623,10 @@ InstallNamedTargetNoClobber(install,file
  #  if defined (i386Architecture) && ((GccMajorVersion >3) \
     || ((GccMajorVersion == 3) &&  (GccMinorVersion >= 1)))
  #   ifndef CcCmd
@@ -26,7 +26,7 @@ $NetBSD: patch-ac,v 1.5 2023/01/20 22:46:34 mrg Exp $
  #   endif
  #  endif
  #  if defined (Ppc64Architecture)
-@@ -785,7 +789,6 @@ InstallNamedTargetNoClobber(install,file
+@@ -789,7 +793,6 @@ InstallNamedTargetNoClobber(install,file
  #define YaccCmd			bison -y
  #define LexCmd			flex -l
  #define HasFlex			YES
@@ -34,7 +34,7 @@ $NetBSD: patch-ac,v 1.5 2023/01/20 22:46:34 mrg Exp $
  #define PreProcessCmd		CcCmd -E
  #define PostIncDir		DefaultGccIncludeDir
  #define LdCombineFlags		-r
-@@ -859,7 +862,7 @@ InstallNamedTargetNoClobber(install,file
+@@ -863,7 +866,7 @@ InstallNamedTargetNoClobber(install,file
  
  #ifdef i386Architecture
  # ifndef OptimizedCDebugFlags
@@ -43,7 +43,7 @@ $NetBSD: patch-ac,v 1.5 2023/01/20 22:46:34 mrg Exp $
  # endif
  # define LinuxMachineDefines	-D__i386__
  # define ServerOSDefines	XFree86ServerOSDefines -DDDXTIME
-@@ -1066,20 +1069,12 @@ InstallNamedTargetNoClobber(install,file
+@@ -1106,20 +1109,12 @@ InstallNamedTargetNoClobber(install,file
  #endif
  
  
