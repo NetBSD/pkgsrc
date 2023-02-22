@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1343 2023/02/22 12:51:03 adam Exp $
+$NetBSD: CHANGES-2023,v 1.1344 2023/02/22 16:22:24 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1742,3 +1742,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added sysutils/packer version 1.8.6 [jperkin 2023-02-22]
 	Updated lang/py-mypy to 1.0.1 [adam 2023-02-22]
 	Updated textproc/py-openpyxl to 3.1.1 [adam 2023-02-22]
+	Updated textproc/unicode-character-database to 15.0.0 [tsutsui 2023-02-22]
