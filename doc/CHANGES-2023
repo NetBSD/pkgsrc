@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1336 2023/02/21 21:07:49 fcambus Exp $
+$NetBSD: CHANGES-2023,v 1.1337 2023/02/22 07:29:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1734,3 +1734,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated databases/py-redis to 4.5.1 [adam 2023-02-21]
 	Added net/arti version 1.1.1 [nikita 2023-02-21]
 	Updated converters/bdf2psf to 1.217 [fcambus 2023-02-21]
+	Updated x11/xf86-video-ark to 0.7.6 [wiz 2023-02-22]
