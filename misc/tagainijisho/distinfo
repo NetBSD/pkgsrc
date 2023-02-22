@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/02/22 11:18:43 wiz Exp $
+
+BLAKE2s (tagainijisho-1.2.2.tar.gz) = 2913cfd8bef22f6edad0583393b3c73c98b47887e791cd447e6277527d79c50d
+SHA512 (tagainijisho-1.2.2.tar.gz) = 08ed99282bd95123dba008af40c5c214ed6434e4179b2f1ccb2b2e83461b55dc4125d431827a9e3e9ec91c6e3ad0b0e98bc02e15e81ae7ce51e9efb47e93f316
+Size (tagainijisho-1.2.2.tar.gz) = 32366512 bytes
