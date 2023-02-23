@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 11:34:34 nia Exp $
+$NetBSD: distinfo,v 1.8 2023/02/23 17:12:29 wiz Exp $
 
-BLAKE2s (xbitmaps-1.1.2.tar.bz2) = 7cc356536613868059218550200e37051da35ddf659b3586d459fc37ee139fe1
-SHA512 (xbitmaps-1.1.2.tar.bz2) = eed5e2fce9fc6c532984e6ed1262e440591e311ca6c61a7fe7a5c877df84bfc2d7aff388fb9c894fc098785b8e5352f0bd7c918252247a040cf123874847450d
-Size (xbitmaps-1.1.2.tar.bz2) = 129435 bytes
+BLAKE2s (xbitmaps-1.1.3.tar.xz) = c510126edba8182788d1865b2fbddfeb3d5bda06b6d84e3a8b423dcfc5370ac4
+SHA512 (xbitmaps-1.1.3.tar.xz) = b9a7340385fcce2dcd0204f14a462685b14b72ff58f3ec53cd76695bef2b02af902bdac809622dcb27fd4075d5ba13587b5d059530aff502cd5288d161352814
+Size (xbitmaps-1.1.3.tar.xz) = 109772 bytes
