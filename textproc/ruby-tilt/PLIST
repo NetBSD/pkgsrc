@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2020/03/24 17:18:01 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2023/02/23 15:38:26 taca Exp $
 bin/tilt${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/COPYING
@@ -12,7 +12,6 @@ ${GEM_LIBDIR}/lib/tilt/coffee.rb
 ${GEM_LIBDIR}/lib/tilt/commonmarker.rb
 ${GEM_LIBDIR}/lib/tilt/creole.rb
 ${GEM_LIBDIR}/lib/tilt/csv.rb
-${GEM_LIBDIR}/lib/tilt/dummy.rb
 ${GEM_LIBDIR}/lib/tilt/erb.rb
 ${GEM_LIBDIR}/lib/tilt/erubi.rb
 ${GEM_LIBDIR}/lib/tilt/erubis.rb
@@ -27,6 +26,7 @@ ${GEM_LIBDIR}/lib/tilt/markaby.rb
 ${GEM_LIBDIR}/lib/tilt/maruku.rb
 ${GEM_LIBDIR}/lib/tilt/nokogiri.rb
 ${GEM_LIBDIR}/lib/tilt/pandoc.rb
+${GEM_LIBDIR}/lib/tilt/pipeline.rb
 ${GEM_LIBDIR}/lib/tilt/plain.rb
 ${GEM_LIBDIR}/lib/tilt/prawn.rb
 ${GEM_LIBDIR}/lib/tilt/radius.rb
