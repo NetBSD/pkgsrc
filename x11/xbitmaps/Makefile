@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2022/11/09 13:14:24 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2023/02/23 17:12:29 wiz Exp $
 
-DISTNAME=		xbitmaps-1.1.2
+DISTNAME=		xbitmaps-1.1.3
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=data/}
-EXTRACT_SUFX=		.tar.bz2
+EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/
