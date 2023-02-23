@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1353 2023/02/23 07:57:13 adam Exp $
+$NetBSD: CHANGES-2023,v 1.1354 2023/02/23 08:34:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1753,3 +1753,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/termscp to 0.11.0 [pin 2023-02-23]
 	Updated lang/nodejs18 to 18.14.2 [adam 2023-02-23]
 	Updated lang/nodejs to 19.7.0 [adam 2023-02-23]
+	Updated devel/py-prompt_toolkit to 3.0.37 [adam 2023-02-23]
+	Updated security/py-google-auth to 2.16.1 [adam 2023-02-23]
