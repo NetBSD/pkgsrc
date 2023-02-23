@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2023/02/23 14:55:01 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.github/workflows/main.yml
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.standard.yml
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/Gemfile.lock
+${GEM_LIBDIR}/LICENSE.txt
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/bin/console
+${GEM_LIBDIR}/bin/setup
+${GEM_LIBDIR}/lib/pairing_heap.rb
+${GEM_LIBDIR}/lib/pairing_heap/version.rb
+${GEM_LIBDIR}/pairing_heap.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
