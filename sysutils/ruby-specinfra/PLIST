@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2023/01/03 15:05:37 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2023/02/23 15:17:39 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE.txt
@@ -175,6 +175,9 @@ ${GEM_LIBDIR}/lib/specinfra/command/gentoo.rb
 ${GEM_LIBDIR}/lib/specinfra/command/gentoo/base.rb
 ${GEM_LIBDIR}/lib/specinfra/command/gentoo/base/package.rb
 ${GEM_LIBDIR}/lib/specinfra/command/gentoo/base/service.rb
+${GEM_LIBDIR}/lib/specinfra/command/guix.rb
+${GEM_LIBDIR}/lib/specinfra/command/guix/base.rb
+${GEM_LIBDIR}/lib/specinfra/command/guix/base/service.rb
 ${GEM_LIBDIR}/lib/specinfra/command/linux.rb
 ${GEM_LIBDIR}/lib/specinfra/command/linux/base.rb
 ${GEM_LIBDIR}/lib/specinfra/command/linux/base/bond.rb
@@ -353,6 +356,7 @@ ${GEM_LIBDIR}/lib/specinfra/helper/detect_os/eos.rb
 ${GEM_LIBDIR}/lib/specinfra/helper/detect_os/esxi.rb
 ${GEM_LIBDIR}/lib/specinfra/helper/detect_os/freebsd.rb
 ${GEM_LIBDIR}/lib/specinfra/helper/detect_os/gentoo.rb
+${GEM_LIBDIR}/lib/specinfra/helper/detect_os/guix.rb
 ${GEM_LIBDIR}/lib/specinfra/helper/detect_os/nixos.rb
 ${GEM_LIBDIR}/lib/specinfra/helper/detect_os/openbsd.rb
 ${GEM_LIBDIR}/lib/specinfra/helper/detect_os/photon.rb
@@ -442,6 +446,7 @@ ${GEM_LIBDIR}/spec/command/freebsd/host_spec.rb
 ${GEM_LIBDIR}/spec/command/freebsd/interface_spec.rb
 ${GEM_LIBDIR}/spec/command/freebsd/package_spec.rb
 ${GEM_LIBDIR}/spec/command/freebsd/service_spec.rb
+${GEM_LIBDIR}/spec/command/guix/service_spec.rb
 ${GEM_LIBDIR}/spec/command/linux/bond_spec.rb
 ${GEM_LIBDIR}/spec/command/linux/bridge_spec.rb
 ${GEM_LIBDIR}/spec/command/linux/file_spec.rb
@@ -485,6 +490,7 @@ ${GEM_LIBDIR}/spec/helper/detect_os/debian_spec.rb
 ${GEM_LIBDIR}/spec/helper/detect_os/eos_spec.rb
 ${GEM_LIBDIR}/spec/helper/detect_os/esxi_spec.rb
 ${GEM_LIBDIR}/spec/helper/detect_os/freebsd_spec.rb
+${GEM_LIBDIR}/spec/helper/detect_os/guix_spec.rb
 ${GEM_LIBDIR}/spec/helper/detect_os/openbsd_spec.rb
 ${GEM_LIBDIR}/spec/helper/detect_os/suse_spec.rb
 ${GEM_LIBDIR}/spec/helper/os_spec.rb
@@ -496,6 +502,7 @@ ${GEM_LIBDIR}/spec/host_inventory/base/user_spec.rb
 ${GEM_LIBDIR}/spec/host_inventory/darwin/filesystem_spec.rb
 ${GEM_LIBDIR}/spec/host_inventory/darwin/kernel_spec.rb
 ${GEM_LIBDIR}/spec/host_inventory/freebsd/filesystem_spec.rb
+${GEM_LIBDIR}/spec/host_inventory/guix/filesystem_spec.rb
 ${GEM_LIBDIR}/spec/host_inventory/linux/block_device_spec.rb
 ${GEM_LIBDIR}/spec/host_inventory/linux/cpu_spec.rb
 ${GEM_LIBDIR}/spec/host_inventory/linux/filesystem_spec.rb
