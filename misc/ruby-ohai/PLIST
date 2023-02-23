@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2021/12/12 13:11:51 taca Exp $
+@comment $NetBSD: PLIST,v 1.22 2023/02/23 15:48:17 taca Exp $
 bin/ohai${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
@@ -27,6 +27,7 @@ ${GEM_LIBDIR}/lib/ohai/mixin/ec2_metadata.rb
 ${GEM_LIBDIR}/lib/ohai/mixin/gce_metadata.rb
 ${GEM_LIBDIR}/lib/ohai/mixin/http_helper.rb
 ${GEM_LIBDIR}/lib/ohai/mixin/network_helper.rb
+${GEM_LIBDIR}/lib/ohai/mixin/oci_metadata.rb
 ${GEM_LIBDIR}/lib/ohai/mixin/os.rb
 ${GEM_LIBDIR}/lib/ohai/mixin/scaleway_metadata.rb
 ${GEM_LIBDIR}/lib/ohai/mixin/seconds_to_human.rb
@@ -110,6 +111,7 @@ ${GEM_LIBDIR}/lib/ohai/plugins/netbsd/network.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/netbsd/platform.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/network.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/nodejs.rb
+${GEM_LIBDIR}/lib/ohai/plugins/oci.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/ohai.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/ohai_time.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/openbsd/memory.rb
