@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3923 2023/02/16 10:56:29 wiz Exp $
+# $NetBSD: Makefile,v 1.3924 2023/02/23 14:55:47 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -3206,6 +3206,7 @@ SUBDIR+=	ruby-ole
 SUBDIR+=	ruby-open4
 SUBDIR+=	ruby-optimist
 SUBDIR+=	ruby-paint
+SUBDIR+=	ruby-pairing_heap
 SUBDIR+=	ruby-pango
 SUBDIR+=	ruby-parseconfig
 SUBDIR+=	ruby-parser
