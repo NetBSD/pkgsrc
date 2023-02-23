@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.30 2022/12/04 15:12:56 taca Exp $
+$NetBSD: distinfo,v 1.31 2023/02/23 15:48:17 taca Exp $
 
-BLAKE2s (ohai-18.0.26.gem) = f21b6fed7ffa1e719fbecf9a43dd491c1d8dc370def37f759ba852baaca6672e
-SHA512 (ohai-18.0.26.gem) = 55ae94121ae4569d11b28a1960e38b80f48a456da7be1c173d2e12d33e6139a160b36b4269cd3e46173db924e0420dfa28f3dd5bc203bdc638a920d24f09502f
-Size (ohai-18.0.26.gem) = 131584 bytes
+BLAKE2s (ohai-18.1.0.gem) = 5ea9546bd24572c157ac29c520e203f9c125200df9a7d96a53cbfa08f18eb5c4
+SHA512 (ohai-18.1.0.gem) = 183028dd14f52a70b59fd8fbe6fcc9c6fe018f403539f69c1918ef57ca917a1b30e0c3ab98c0abdbd7ab8857634b420fdb7c951fb9acd887721f1bd96b08f667
+Size (ohai-18.1.0.gem) = 132608 bytes
