@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:34:36 nia Exp $
+$NetBSD: distinfo,v 1.4 2023/02/23 17:10:47 wiz Exp $
 
-BLAKE2s (xcursor-themes-1.0.6.tar.bz2) = 98c4185bf4663517f7f967918427c303384d2230cee06915422f467aa831431a
-SHA512 (xcursor-themes-1.0.6.tar.bz2) = 2ad3586a5571a5ddc0001187362b54b839644916164834213af98e58698044aec4392dd6e1e42f1794fda85c8fedf259b09214a9636bd0e71a1629c710f198d3
-Size (xcursor-themes-1.0.6.tar.bz2) = 2363089 bytes
+BLAKE2s (xcursor-themes-1.0.7.tar.xz) = a3460d349232c67cfa23c64c241b80022b9b21f35e18cf40af420ac88b34e5d8
+SHA512 (xcursor-themes-1.0.7.tar.xz) = 910925dd17c576028ae0d9dfe5683888648b941806b53cd9ff74ed18ff2de537664b07ab4c647a55290aeba37f6051f322b29e8ecd54f348e32abe2ccea1c902
+Size (xcursor-themes-1.0.7.tar.xz) = 1490616 bytes
