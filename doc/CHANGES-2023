@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1375 2023/02/23 15:46:12 taca Exp $
+$NetBSD: CHANGES-2023,v 1.1376 2023/02/23 15:49:18 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1778,3 +1778,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/ruby-tilt to 2.1.0 [taca 2023-02-23]
 	Updated www/ruby-puma to 6.1.0 [taca 2023-02-23]
 	Updated www/ruby-selenium-webdriver to 4.8.1 [taca 2023-02-23]
+	Updated misc/ruby-ohai to 18.1.0 [taca 2023-02-23]
