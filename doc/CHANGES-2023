@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1384 2023/02/23 19:33:31 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1385 2023/02/23 20:20:44 vins Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1788,3 +1788,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added net/gnunet-gtk version 0.19.0 [nikita 2023-02-23]
 	Updated wm/cde to 2.5.1nb1 [vins 2023-02-23]
 	Updated textproc/yq to 3.1.1 [wiz 2023-02-23]
+	Updated www/libreddit to 0.29.3 [vins 2023-02-23]
