@@ -1,12 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2022/06/30 11:18:34 nia Exp $
+# $NetBSD: Makefile,v 1.20 2023/02/23 15:59:24 schmonz Exp $
 
-DISTNAME=		feed2exec-0.18.0
+DISTNAME=		feed2exec-0.19.0
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=		2
 CATEGORIES=		mail python
-MASTER_SITES=		${MASTER_SITE_PYPI:=f/feed2exec/}
-# remove after 0.18.0
-DIST_SUBDIR=		${DISTNAME}
+MASTER_SITES=		${MASTER_SITE_GITLAB:=anarcat/feed2exec/-/archive/${PKGVERSION_NOREV}/}
 
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		https://feed2exec.readthedocs.io/
@@ -17,7 +14,6 @@ BUILD_DEPENDS+=		${PYPKGPREFIX}-tox-[0-9]*:../../devel/py-tox
 BUILD_DEPENDS+=		${PYPKGPREFIX}-flakes-[0-9]*:../../devel/py-flakes
 BUILD_DEPENDS+=		${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 BUILD_DEPENDS+=		${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
-BUILD_DEPENDS+=		${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 DEPENDS+=		${PYPKGPREFIX}-Unidecode-[0-9]*:../../textproc/py-Unidecode
 DEPENDS+=		${PYPKGPREFIX}-attrs-[0-9]*:../../devel/py-attrs
 DEPENDS+=		${PYPKGPREFIX}-cachecontrol-[0-9]*:../../devel/py-cachecontrol
@@ -43,8 +39,19 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_PKG_RESOURCES=	yes
 
+SUBST_CLASSES+=		version
+SUBST_STAGE.version=	pre-configure
+SUBST_FILES.version=	setup.py feed2exec/__init__.py
+SUBST_SED.version=	-e 's|@VERSION@|${PKGVERSION_NOREV}|'
+
+post-extract:
+	${ECHO} "version_number = \"${PKGVERSION_NOREV}\"" > ${WRKSRC}/feed2exec/_version.py
+
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
+
+#post-install:
+#	${RM} -rf ${DESTDIR}${PREFIX}/${PYSITELIB}/feed2exec/__pycache__/
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
