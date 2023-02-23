@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1369 2023/02/23 15:18:03 taca Exp $
+$NetBSD: CHANGES-2023,v 1.1370 2023/02/23 15:20:00 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1772,3 +1772,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/ruby-sshkit to 1.21.4 [taca 2023-02-23]
 	Updated sysutils/capistrano to 3.17.2 [taca 2023-02-23]
 	Updated sysutils/ruby-specinfra to 2.85.0 [taca 2023-02-23]
+	Updated sysutils/ruby-serverspec to 2.42.2 [taca 2023-02-23]
