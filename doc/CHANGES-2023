@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1372 2023/02/23 15:36:29 taca Exp $
+$NetBSD: CHANGES-2023,v 1.1373 2023/02/23 15:38:51 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1775,3 +1775,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/ruby-serverspec to 2.42.2 [taca 2023-02-23]
 	Updated textproc/ruby-kramdown-rfc2629 to 1.6.24 [taca 2023-02-23]
 	Updated textproc/ruby-plist to 3.7.0 [taca 2023-02-23]
+	Updated textproc/ruby-tilt to 2.1.0 [taca 2023-02-23]
