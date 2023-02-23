@@ -6,9 +6,9 @@ This can be done by creating a `99-fonts.conf' file with the following
 content: 
 
 Section "Files"
-    FontPath    "${PREFIX}/share/fonts/100dpi/"
-    FontPath    "${PREFIX}/share/fonts/75dpi/"
-    FontPath    "${PREFIX}/dt/share/cde/fontaliases"
+    FontPath    "@PREFIX@/share/fonts/100dpi/"
+    FontPath    "@PREFIX@/share/fonts/75dpi/"
+    FontPath    "@PREFIX@/dt/share/cde/fontaliases"
 EndSection
 
 Place the file inside either: 
@@ -43,3 +43,12 @@ To start the Dt Login Manager,
 To enable the dtlogin service at startup,
 
 	$ echo dtlogin=YES >> /etc/rc.conf
+
+------------------------------------------------------------------------
+
+NOTE:
+
+  For better scrolling, consider adding this to your ~/.Xresources file
+
+	*saveLines:		32000
+	*scrollBar:		True 
