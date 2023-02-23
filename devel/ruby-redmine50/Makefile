@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2023/01/15 15:10:43 taca Exp $
+# $NetBSD: Makefile,v 1.9 2023/02/23 14:49:24 taca Exp $
 
 DISTNAME=	redmine-${RM_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/redmine/redmine${RM_VER}/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	https://www.redmine.org/releases/
 
@@ -21,7 +21,7 @@ RUBY_RAILS_ACCEPTED=	61
 
 OVERRIDE_GEMSPEC+=	mini-magick>=4.11.0 nokogiri>=1.13.4
 
-DEPENDS+=	${RUBY_PKGPREFIX}-bundler>=1.12.0:../../misc/ruby-bundler
+#DEPENDS+=	${RUBY_PKGPREFIX}-bundler>=1.12.0:../../misc/ruby-bundler
 DEPENDS+=	${RUBY_RAILS_DEPENDS}
 DEPENDS+=	${RUBY_PKGPREFIX}-rouge>=3.28:../../www/ruby-rouge
 DEPENDS+=	${RUBY_PKGPREFIX}-request_store>=1.5.0<1.6:../../www/ruby-request_store

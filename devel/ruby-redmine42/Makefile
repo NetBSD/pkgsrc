@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2023/01/15 15:09:32 taca Exp $
+# $NetBSD: Makefile,v 1.19 2023/02/23 14:49:24 taca Exp $
 
 DISTNAME=	redmine-${RM_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/redmine/redmine${RM_VER}/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	https://www.redmine.org/releases/
 
@@ -31,7 +31,7 @@ REPLACE_RUBY+=	public/dispatch.fcgi.example
 
 .include "../../lang/ruby/modules.mk"
 
-DEPENDS+=	${RUBY_PKGPREFIX}-bundler>=1.5.0:../../misc/ruby-bundler
+#DEPENDS+=	${RUBY_PKGPREFIX}-bundler>=1.5.0:../../misc/ruby-bundler
 DEPENDS+=	${RUBY_RAILS_DEPENDS}
 DEPENDS+=	${RUBY_PKGPREFIX}-rouge>=3.26:../../www/ruby-rouge
 DEPENDS+=	${RUBY_PKGPREFIX}-request_store>=1.5.0<1.6:../../www/ruby-request_store
