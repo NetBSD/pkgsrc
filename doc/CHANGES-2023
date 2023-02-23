@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1377 2023/02/23 15:52:50 taca Exp $
+$NetBSD: CHANGES-2023,v 1.1378 2023/02/23 15:57:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1780,3 +1780,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/ruby-selenium-webdriver to 4.8.1 [taca 2023-02-23]
 	Updated misc/ruby-ohai to 18.1.0 [taca 2023-02-23]
 	Removed misc/ruby-bundler [taca 2023-02-23]
+	Removed textproc/ruby-json [taca 2023-02-23]
+	Removed textproc/ruby-json-pure [taca 2023-02-23]
