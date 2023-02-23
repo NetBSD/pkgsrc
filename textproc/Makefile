@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1365 2023/02/20 10:52:16 adam Exp $
+# $NetBSD: Makefile,v 1.1366 2023/02/23 15:55:15 taca Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1239,8 +1239,6 @@ SUBDIR+=	ruby-htree
 SUBDIR+=	ruby-inifile
 SUBDIR+=	ruby-itex2MML
 SUBDIR+=	ruby-jmespath
-SUBDIR+=	ruby-json
-SUBDIR+=	ruby-json-pure
 SUBDIR+=	ruby-kramdown
 SUBDIR+=	ruby-kramdown-parser-gfm
 SUBDIR+=	ruby-kramdown-rfc2629
