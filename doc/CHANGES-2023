@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1378 2023/02/23 15:57:03 taca Exp $
+$NetBSD: CHANGES-2023,v 1.1379 2023/02/23 15:59:30 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1782,3 +1782,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed misc/ruby-bundler [taca 2023-02-23]
 	Removed textproc/ruby-json [taca 2023-02-23]
 	Removed textproc/ruby-json-pure [taca 2023-02-23]
+	Updated mail/feed2exec to 0.19.0 [schmonz 2023-02-23]
