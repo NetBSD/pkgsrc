@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2023/02/12 16:34:15 vins Exp $
+# $NetBSD: options.mk,v 1.2 2023/02/23 19:10:06 vins Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cde
 
@@ -44,8 +44,6 @@ CONF_FILES+=		${EGDIR}/pam.d/cde \
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/pam.d
 INSTALLATION_DIRS+=	share/examples/${PKGBASE}/pam.d
 
-SPECIAL_PERMS+=	${PREFIX}/dt/bin/dtsession ${SETUID_ROOT_PERMS}
-
 PLIST.pam=		yes
 
 pre-install:
@@ -53,4 +51,5 @@ pre-install:
 		${DESTDIR}${EGDIR}/pam.d/cde
 .else
 CONFIGURE_ENV+=		ac_cv_lib_pam_pam_start=no
+SPECIAL_PERMS+=		${PREFIX}/dt/bin/dtsession ${SETUID_ROOT_PERMS}
 .endif
