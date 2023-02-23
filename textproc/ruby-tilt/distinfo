@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2022/08/30 15:43:04 taca Exp $
+$NetBSD: distinfo,v 1.18 2023/02/23 15:38:26 taca Exp $
 
-BLAKE2s (tilt-2.0.11.gem) = 328af290413ecdfeb92b59cd2cd019ceebed072091cd92b5cee041623c71a839
-SHA512 (tilt-2.0.11.gem) = 757a292b05b3ddb2cb8de7680f09433cec85b433e03cd9f738534b99c836fb2129870003a9376c24b6a2f6acb732b51b27968cc0e197a832130d4a35b8dc8239
-Size (tilt-2.0.11.gem) = 23040 bytes
+BLAKE2s (tilt-2.1.0.gem) = 051147a9f5532603c03084aa82900fbb43e5c5679458a6dbabd292aad852cd89
+SHA512 (tilt-2.1.0.gem) = 3449c7baa5d5ffc98dd537cc6dae94e3f0f7fd0cd57ad0ea9fdd12090e4b0dcbd555d7a90fb4c774754d73d2675a0ee9c803c66a74b8e9e60f674bfcd9ccc0c9
+Size (tilt-2.1.0.gem) = 24576 bytes
