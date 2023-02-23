@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2021/01/14 14:49:30 taca Exp $
+# $NetBSD: Makefile,v 1.9 2023/02/23 15:36:05 taca Exp $
 
-DISTNAME=	plist-3.6.0
-CATEGORIES=	devel
+DISTNAME=	plist-3.7.0
+CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/bleything/plist
