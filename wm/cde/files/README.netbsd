@@ -16,5 +16,6 @@ cmsd		100068	dtcalendar
 ttdbserver	100083	ttooltalk
 
 /etc/hosts
-127.0.0.1		localhost localhost.my.domain hostname 
+::1                     <hostname>        localhost       localhost.
+127.0.0.1               <hostname>        localhost       localhost.
 -----------------------------------------------------------------------
