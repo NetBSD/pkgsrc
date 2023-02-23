@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2023/02/12 19:56:07 vins Exp $
+$NetBSD: distinfo,v 1.2 2023/02/23 20:19:53 vins Exp $
 
 BLAKE2s (adler32-1.2.0.crate) = 8bc63ca383f40390bb522c750ef33e14b5e49bc48eb0ec33a140f615c598a6df
 SHA512 (adler32-1.2.0.crate) = 8ed72612fb78e213fc92963fdae0508ef26988656c939e6c9cddccbe2658d4a956a8ae934d9658262a8b2687dc446b3f1ee7614128b440487c81e606526dfda3
@@ -216,9 +216,9 @@ Size (libflate-1.2.0.crate) = 40864 bytes
 BLAKE2s (libflate_lz77-1.1.0.crate) = 052b9f9f63232b4da9e20178ef7b7e1381fd005b4f29f4897ccc5623c2e0f4db
 SHA512 (libflate_lz77-1.1.0.crate) = ab0cba9d324d2f7bf2a741e8ef8b0ee7bfa85ab6ee63b9ccf6ff912461ca854d6b7467e527d74ee93a219d6dec5bcecc3e61eea83d4cf5b2452f9a0aa97cd95c
 Size (libflate_lz77-1.1.0.crate) = 5729 bytes
-BLAKE2s (libreddit-0.29.0.tar.gz) = bfe82dd13c72bbc9b8ef457e8416773c39e0a2d1bbef7df0f3e613bf01105deb
-SHA512 (libreddit-0.29.0.tar.gz) = 4dd4da92a478c13a703899b6b1f781e22840136dfb8012c6c3119ecf120c69af06a66e742cfa64384675b19ff8568005e26b838e7e9e722c1fc5792d7b1a119a
-Size (libreddit-0.29.0.tar.gz) = 530982 bytes
+BLAKE2s (libreddit-0.29.3.tar.gz) = 2171f6c6479c18778d11109b807c3107abfb969515e4b6e7a03317eda5f5b9ab
+SHA512 (libreddit-0.29.3.tar.gz) = 24554ff0714bd7a5f44a2e387aff4f35d80699d611563354478236acbd023eef3410ae55bbbc5147bf1c0108184dfd3591c2b7414128d650439ce5ce3726b9d0
+Size (libreddit-0.29.3.tar.gz) = 530570 bytes
 BLAKE2s (lipsum-0.8.2.crate) = 1ad576c3480c846c0bd47436691b906e42eb107d39ba0f91bd18013ad5aae551
 SHA512 (lipsum-0.8.2.crate) = 45612e0e4225334c06a972be05013eba6a4b5c0ca4426f07ada2705bfcd27c2a8df65ebdb67793c3e0f9d39e67e6315e1e9ec7c424485f08a22a7a0df5d16199
 Size (lipsum-0.8.2.crate) = 33411 bytes
