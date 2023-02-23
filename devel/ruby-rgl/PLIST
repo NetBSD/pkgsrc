@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2023/01/03 05:56:21 taca Exp $
+@comment $NetBSD: PLIST,v 1.12 2023/02/23 14:57:56 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/ChangeLog
 ${GEM_LIBDIR}/Gemfile
@@ -83,6 +83,7 @@ ${GEM_LIBDIR}/lib/rgl/adjacency.rb
 ${GEM_LIBDIR}/lib/rgl/base.rb
 ${GEM_LIBDIR}/lib/rgl/bellman_ford.rb
 ${GEM_LIBDIR}/lib/rgl/bidirectional.rb
+${GEM_LIBDIR}/lib/rgl/bidirectional_adjacency.rb
 ${GEM_LIBDIR}/lib/rgl/bipartite.rb
 ${GEM_LIBDIR}/lib/rgl/condensation.rb
 ${GEM_LIBDIR}/lib/rgl/connected_components.rb
@@ -107,6 +108,7 @@ ${GEM_LIBDIR}/lib/rgl/transitivity.rb
 ${GEM_LIBDIR}/lib/rgl/traversal.rb
 ${GEM_LIBDIR}/rakelib/dep_graph.rake
 ${GEM_LIBDIR}/test/bellman_ford_test.rb
+${GEM_LIBDIR}/test/bidirectional_graph_test.rb
 ${GEM_LIBDIR}/test/bipartite_test.rb
 ${GEM_LIBDIR}/test/components_test.rb
 ${GEM_LIBDIR}/test/cycles_test.rb
