@@ -1,5 +1,6 @@
-# $NetBSD: cargo-depends.mk,v 1.10 2023/02/21 13:19:36 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.11 2023/02/23 07:32:23 pin Exp $
 
+CARGO_CRATE_DEPENDS+=	aho-corasick-0.7.20
 CARGO_CRATE_DEPENDS+=	android_system_properties-0.1.5
 CARGO_CRATE_DEPENDS+=	anyhow-1.0.69
 CARGO_CRATE_DEPENDS+=	atty-0.2.14
@@ -86,6 +87,7 @@ CARGO_CRATE_DEPENDS+=	pkg-config-0.3.26
 CARGO_CRATE_DEPENDS+=	proc-macro-error-1.0.4
 CARGO_CRATE_DEPENDS+=	proc-macro-error-attr-1.0.4
 CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.51
+CARGO_CRATE_DEPENDS+=	pure-rust-locales-0.5.6
 CARGO_CRATE_DEPENDS+=	quote-1.0.23
 CARGO_CRATE_DEPENDS+=	redox_syscall-0.2.16
 CARGO_CRATE_DEPENDS+=	redox_users-0.4.3
