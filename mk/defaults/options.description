@@ -101,6 +101,9 @@ chasen			Use ChaSen as the Japanese Morphological Analzer.
 chromaprint		Enable chromaprint (audio fingerprinting) support.
 cjk			Enable Chinese/Japanese/Korean support.
 clamav			Enable ClamAV support.
+clamav-experimental	Build with experimental functions.
+clamav-milter		Build with milter support.
+clamav-unit-test	Build with unit test support.
 claws-mail-jpilot	Add jpilot support.
 cli			Enable Command Line Interface support.
 clisp			Common/C Lisp.
@@ -763,6 +766,7 @@ rtree			Enable R-tree support.
 ruby			Enable Ruby support.
 ruby-build-ri-db	Build and install database for Ruby's ri utility.
 ruby-unicorn		Enable unicorn support.
+ruby-yjit		Enable  in-process JIT compiler (require Rust).
 rust			Enable Rust support.
 rust-cargo-static	Build cargo semi-statically with built-in curl+openssl
 rust-internal-llvm	Use Rust internal LLVM in builds.
