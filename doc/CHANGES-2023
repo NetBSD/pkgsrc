@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1351 2023/02/23 07:34:16 pin Exp $
+$NetBSD: CHANGES-2023,v 1.1352 2023/02/23 07:36:48 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1750,3 +1750,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/p5-HTTP-Daemon to 6.15 [wiz 2023-02-22]
 	Updated misc/wthrr to 0.8.2 [pin 2023-02-23]
 	Updated shells/nushell to 0.76.0 [pin 2023-02-23]
+	Updated net/termscp to 0.11.0 [pin 2023-02-23]
