@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2022/08/28 06:05:39 taca Exp $
+$NetBSD: distinfo,v 1.9 2023/02/23 15:04:23 taca Exp $
 
-BLAKE2s (chef-vault-4.1.10.gem) = 199a91fd00cb1cad97014fb03ecbf8f09f4e9df45d856fe57b22cbdbd35cf8d1
-SHA512 (chef-vault-4.1.10.gem) = 372403bc40fb6b0627c49a0a9e8ce0095731a31f2ce9c1f772f87a7d952d6df8e1ec9c1cf28ff4990755a034772a4151c71732c93700de228a10cc543cf9aa9d
-Size (chef-vault-4.1.10.gem) = 22528 bytes
+BLAKE2s (chef-vault-4.1.11.gem) = 3eb3d1d94ce43e349caedadb86b2312ea43fc30ec52214514f252cf579fbeb6e
+SHA512 (chef-vault-4.1.11.gem) = 6009fc067314716d11deb8f7f9bdb0a95cd7a9bab39fd4b7c7501f89af8c828c7d2d8181169e05de570862e504d42e5af07d16a0c2afc24a9df141732671431f
+Size (chef-vault-4.1.11.gem) = 23040 bytes
