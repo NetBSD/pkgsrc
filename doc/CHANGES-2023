@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1358 2023/02/23 14:53:21 taca Exp $
+$NetBSD: CHANGES-2023,v 1.1359 2023/02/23 14:56:13 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1761,3 +1761,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/ruby-redmine50 to 5.0.4nb3 [taca 2023-02-23]
 	Updated devel/ruby-wisper to 2.0.1nb1 [taca 2023-02-23]
 	Updated devel/ruby-fast_gettext to 2.3.0 [taca 2023-02-23]
+	Added devel/ruby-pairing_heap version 3.0.0 [taca 2023-02-23]
