@@ -1,0 +1,41 @@
+$NetBSD: patch-configure.ac,v 1.3 2023/02/23 15:01:00 tsutsui Exp $
+
+- use proper endianness check
+ https://github.com/ibus/ibus/pull/2477
+
+--- configure.ac.orig	2023-02-21 02:57:44.000000000 +0000
++++ configure.ac
+@@ -153,31 +153,9 @@ AC_SUBST(LIBDL)
+ 
+ # Check endianness.
+ AC_MSG_CHECKING([build system endianness])
+-ENDIAN=unknown
+-AC_RUN_IFELSE(
+-    [AC_LANG_PROGRAM(
+-        [[
+-            #include <endian.h>
+-            #if __BYTE_ORDER != __LITTLE_ENDIAN
+-            #error
+-            #endif
+-        ]]
+-    )],
+-    [ENDIAN=little]
+-)
+-AC_RUN_IFELSE(
+-    [AC_LANG_PROGRAM(
+-        [[
+-            #include <endian.h>
+-            #if __BYTE_ORDER != __BIG_ENDIAN
+-            #error
+-            #endif
+-        ]]
+-    )],
+-    [ENDIAN=big]
+-)
++AC_C_BIGENDIAN([ENDIAN=big],[ENDIAN=little],[ENDIAN=unknown],[])
+ if test x"$ENDIAN" != xlittle  -a x"$ENDIAN" != xbig; then
+-    AC_MSG_ERROR([Cannot deermine endianness without endian.h])
++    AC_MSG_ERROR([Cannot determine endianness])
+ fi
+ AC_MSG_RESULT($ENDIAN)
+ AC_SUBST(ENDIAN)
