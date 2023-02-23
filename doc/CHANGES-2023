@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1365 2023/02/23 15:06:10 taca Exp $
+$NetBSD: CHANGES-2023,v 1.1366 2023/02/23 15:12:02 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1768,3 +1768,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated misc/ruby-slop to 4.10.0 [taca 2023-02-23]
 	Updated devel/swagger-codegen to 3.0.41 [schmonz 2023-02-23]
 	Updated security/ruby-chef-vault to 4.1.11 [taca 2023-02-23]
+	Updated security/ruby-metasploit-payloads to 2.0.112 [taca 2023-02-23]
