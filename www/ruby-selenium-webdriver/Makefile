@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2023/01/25 14:29:21 taca Exp $
+# $NetBSD: Makefile,v 1.22 2023/02/23 15:45:49 taca Exp $
 
-DISTNAME=	selenium-webdriver-4.8.0
+DISTNAME=	selenium-webdriver-4.8.1
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
