@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2023/01/30 21:01:42 nikita Exp $
+# $NetBSD: Makefile,v 1.25 2023/02/23 19:26:36 nikita Exp $
 
 DISTNAME=	zig-0.10.1
 PKGREVISION=	1
@@ -30,6 +30,16 @@ UNLIMIT_RESOURCES=	stacksize
 MKPIE_SUPPORTED=	no
 # RELRO checks fail for this package at the moment
 RELRO_SUPPORTED=	no
+
+# after install, because the zig binary ends up in paths like
+# ./zig-0.10.1/zig-cache/o/e6445b80597d6bc8fe865e7254800ac9/zig
+# unless we want to run find for the executable here?
+do-test:
+	mkdir ${WRKDIR}/cache
+	cd ${WRKSRC} && \
+		${DESTDIR}${PREFIX}/bin/zig build test-behavior \
+		--cache-dir ${WRKDIR}/cache --global-cache-dir ${WRKDIR}/cache \
+		--zig-lib-dir ${WRKSRC}/lib
 
 .include "../../devel/lld/buildlink3.mk"
 .include "../../lang/clang/buildlink3.mk"
