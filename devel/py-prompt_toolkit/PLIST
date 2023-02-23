@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/02/07 17:02:27 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/02/23 08:32:13 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -124,15 +124,9 @@ ${PYSITELIB}/prompt_toolkit/enums.pyo
 ${PYSITELIB}/prompt_toolkit/eventloop/__init__.py
 ${PYSITELIB}/prompt_toolkit/eventloop/__init__.pyc
 ${PYSITELIB}/prompt_toolkit/eventloop/__init__.pyo
-${PYSITELIB}/prompt_toolkit/eventloop/async_context_manager.py
-${PYSITELIB}/prompt_toolkit/eventloop/async_context_manager.pyc
-${PYSITELIB}/prompt_toolkit/eventloop/async_context_manager.pyo
 ${PYSITELIB}/prompt_toolkit/eventloop/async_generator.py
 ${PYSITELIB}/prompt_toolkit/eventloop/async_generator.pyc
 ${PYSITELIB}/prompt_toolkit/eventloop/async_generator.pyo
-${PYSITELIB}/prompt_toolkit/eventloop/dummy_contextvars.py
-${PYSITELIB}/prompt_toolkit/eventloop/dummy_contextvars.pyc
-${PYSITELIB}/prompt_toolkit/eventloop/dummy_contextvars.pyo
 ${PYSITELIB}/prompt_toolkit/eventloop/inputhook.py
 ${PYSITELIB}/prompt_toolkit/eventloop/inputhook.pyc
 ${PYSITELIB}/prompt_toolkit/eventloop/inputhook.pyo
