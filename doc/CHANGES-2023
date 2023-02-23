@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1385 2023/02/23 20:20:44 vins Exp $
+$NetBSD: CHANGES-2023,v 1.1386 2023/02/23 22:37:30 vins Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1789,3 +1789,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated wm/cde to 2.5.1nb1 [vins 2023-02-23]
 	Updated textproc/yq to 3.1.1 [wiz 2023-02-23]
 	Updated www/libreddit to 0.29.3 [vins 2023-02-23]
+	Updated net/tut to 2.0.1 [vins 2023-02-23]
