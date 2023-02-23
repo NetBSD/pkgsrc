@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1361 2023/02/23 15:01:03 taca Exp $
+$NetBSD: CHANGES-2023,v 1.1362 2023/02/23 15:01:19 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1764,3 +1764,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/ruby-pairing_heap version 3.0.0 [taca 2023-02-23]
 	Updated devel/ruby-rgl to 0.6.0 [taca 2023-02-23]
 	Updated mail/ruby-mime-types-data to 3.2023.0218.1 [taca 2023-02-23]
+	Updated inputmethod/ibus to 1.5.28 [tsutsui 2023-02-23]
