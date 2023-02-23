@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.10 2022/09/09 13:38:46 taca Exp $
+@comment $NetBSD: PLIST,v 1.11 2023/02/23 15:13:35 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.github/dependabot.yml
 ${GEM_LIBDIR}/.github/release-drafter.yml
+${GEM_LIBDIR}/.github/workflows/ci.yml
 ${GEM_LIBDIR}/.github/workflows/push.yml
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rubocop.yml
 ${GEM_LIBDIR}/.rubocop_todo.yml
-${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/BREAKING_API_WISHLIST.md
 ${GEM_LIBDIR}/CHANGELOG.md
