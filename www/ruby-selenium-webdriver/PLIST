@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2023/01/25 14:29:21 taca Exp $
+@comment $NetBSD: PLIST,v 1.12 2023/02/23 15:45:49 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGES
 ${GEM_LIBDIR}/Gemfile
@@ -21,6 +21,7 @@ ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/browsing_context.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/browsing_context_info.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/log/base_log_entry.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/log/console_log_entry.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/bidi/log/filter_by.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/log/generic_log_entry.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/log/javascript_log_entry.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/log_inspector.rb
@@ -148,8 +149,8 @@ ${GEM_LIBDIR}/lib/selenium/webdriver/ie/options.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/ie/service.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/remote.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/remote/bridge.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/remote/bridge/commands.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/remote/capabilities.rb
-${GEM_LIBDIR}/lib/selenium/webdriver/remote/commands.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/remote/driver.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/remote/http/common.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/remote/http/curb.rb
