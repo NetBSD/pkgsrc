@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.93 2023/01/29 21:16:54 ryoon Exp $
+# $NetBSD: Makefile,v 1.94 2023/02/23 15:01:00 tsutsui Exp $
 
-PKGREVISION= 2
 .include "Makefile.common"
 
 COMMENT=	Intelligent Input Bus
 
 DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 BUILD_DEPENDS+=	cldr-emoji-annotation>=37.0.13.0.0.2:../../textproc/cldr-emoji-annotation
-BUILD_DEPENDS+=	unicode-character-database>=14.0.0:../../textproc/unicode-character-database
-BUILD_DEPENDS+=	unicode-emoji>=14.0:../../textproc/unicode-emoji
+BUILD_DEPENDS+=	unicode-character-database>=15.0.0:../../textproc/unicode-character-database
+BUILD_DEPENDS+=	unicode-emoji>=15.0:../../textproc/unicode-emoji
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
@@ -34,15 +33,23 @@ CONFIGURE_ARGS+=	--with-unicode-emoji-dir=${PREFIX}/share/unicode/emoji
 CONFIGURE_ARGS+=	--with-emoji-annotation-dir=${PREFIX}/share/unicode/cldr/common/annotations
 CONFIGURE_ARGS+=	--with-ucd-dir=${PREFIX}/share/unicode/ucd
 
+.include "../../mk/bsd.prefs.mk"
+
+# Workaround X11_LOCALEDATADIR for NetBSD etc.
+#  https://github.com/ibus/ibus/pull/2478
+.if ${OPSYS} == "NetBSD" && ${X11_TYPE} == "native"
+SUBST_CLASSES+=		xlocale
+SUBST_STAGE.xlocale=	pre-configure
+SUBST_FILES.xlocale=	src/gencomposetable.c \
+			src/ibuscomposetable.c \
+			src/ibusenginesimple.c src/tests/ibus-compose.c
+SUBST_SED.xlocale=	-e 's,/share/X11/locale,/lib/X11/locale,g'
+.endif
+
 SUBST_CLASSES+=		dbus
 SUBST_STAGE.dbus=	post-configure
 SUBST_FILES.dbus=	src/ibusshare.c
 SUBST_SED.dbus=		-e 's,/var/lib/dbus/machine-id,${VARBASE}/lib/dbus/machine-id,g'
-
-# Workaround for unconditional -ldl for ubuntu
-#  https://github.com/ibus/ibus/pull/2442
-.include "../../mk/dlopen.buildlink3.mk"
-BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
 
 BUILD_DEFS+=	PKG_SYSCONFBASE VARBASE
 MANCOMPRESSED=	yes
