@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1356 2023/02/23 14:47:06 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.1357 2023/02/23 14:51:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1757,3 +1757,6 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/py-google-auth to 2.16.1 [adam 2023-02-23]
 	Updated databases/ruby-sqlite3 to 1.6.1 [taca 2023-02-23]
 	Updated devel/asdf to 0.11.2 [schmonz 2023-02-23]
+	Updated devel/ruby-redmine42 to 4.2.9nb2 [taca 2023-02-23]
+	Updated devel/ruby-redmine50 to 5.0.4nb3 [taca 2023-02-23]
+	Updated devel/ruby-wisper to 2.0.1nb1 [taca 2023-02-23]
