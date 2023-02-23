@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2023/01/13 22:18:11 schmonz Exp $
+# $NetBSD: Makefile,v 1.4 2023/02/23 14:47:01 schmonz Exp $
 
-DISTNAME=		asdf-0.11.1
+DISTNAME=		asdf-0.11.2
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=asdf-vm/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}
