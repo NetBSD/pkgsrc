@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.7 2022/08/29 13:35:24 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2023/02/23 15:32:48 taca Exp $
 bin/de-gfm${RUBY_SUFFIX}
 bin/doilit${RUBY_SUFFIX}
+bin/echars${RUBY_SUFFIX}
 bin/kdrfc${RUBY_SUFFIX}
 bin/kramdown-rfc-autolink-iref-cleanup${RUBY_SUFFIX}
 bin/kramdown-rfc-cache-i-d-bibxml${RUBY_SUFFIX}
@@ -13,6 +14,7 @@ ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/bin/de-gfm
 ${GEM_LIBDIR}/bin/doilit
+${GEM_LIBDIR}/bin/echars
 ${GEM_LIBDIR}/bin/kdrfc
 ${GEM_LIBDIR}/bin/kramdown-rfc
 ${GEM_LIBDIR}/bin/kramdown-rfc-autolink-iref-cleanup
