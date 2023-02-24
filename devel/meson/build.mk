@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.16 2022/11/24 08:56:36 adam Exp $
+# $NetBSD: build.mk,v 1.17 2023/02/24 08:19:00 adam Exp $
 
 MESON_REQD?=	0
 .for version in ${MESON_REQD}
@@ -23,8 +23,7 @@ MAKE_ENV+=	CMAKE=${TOOLS_PATH.false}
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
-
+.if ${USE_CROSS_COMPILE:U:tl} == yes
 MESON_CPU_FAMILY.amd64=		x86_64
 MESON_CPU_FAMILY.arm26?=	arm
 MESON_CPU_FAMILY.arm32?=	arm
