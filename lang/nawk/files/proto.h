@@ -1,5 +1,3 @@
-/* $NetBSD: proto.h,v 1.4 2015/12/17 21:27:53 dholland Exp $ */
-
 /****************************************************************
 Copyright (C) Lucent Technologies 1997
 All Rights Reserved
@@ -24,12 +22,6 @@ ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF
 THIS SOFTWARE.
 ****************************************************************/
 
-#if defined(__CLANG__) || defined(__GNUC__)
-#define DEAD __attribute__((__noreturn__))
-#else
-#define DEAD
-#endif
-
 extern	int	yywrap(void);
 extern	void	setfname(Cell *);
 extern	int	constnode(Node *);
@@ -46,15 +38,15 @@ extern	int	yylook(void);
 extern	int	yyback(int *, int);
 extern	int	yyinput(void);
 
-extern	fa	*makedfa(const char *, int);
-extern	fa	*mkdfa(const char *, int);
-extern	int	makeinit(fa *, int);
+extern	fa	*makedfa(const char *, bool);
+extern	fa	*mkdfa(const char *, bool);
+extern	int	makeinit(fa *, bool);
 extern	void	penter(Node *);
 extern	void	freetr(Node *);
-extern	int	hexstr(uschar **);
-extern	int	quoted(uschar **);
+extern	int	hexstr(const uschar **);
+extern	int	quoted(const uschar **);
 extern	char	*cclenter(const char *);
-extern	DEAD void overflo(const char *);
+extern	noreturn void	overflo(const char *);
 extern	void	cfoll(fa *, Node *);
 extern	int	first(Node *);
 extern	void	follow(Node *);
@@ -62,6 +54,7 @@ extern	int	member(int, const char *);
 extern	int	match(fa *, const char *);
 extern	int	pmatch(fa *, const char *);
 extern	int	nematch(fa *, const char *);
+extern	bool	fnematch(fa *, FILE *, char **, int *, int);
 extern	Node	*reparse(const char *);
 extern	Node	*regexp(void);
 extern	Node	*primary(void);
@@ -96,7 +89,7 @@ extern	Node	*pa2stat(Node *, Node *, Node *);
 extern	Node	*linkum(Node *, Node *);
 extern	void	defn(Cell *, Node *, Node *);
 extern	int	isarg(const char *);
-extern	char	*tokname(int);
+extern	const char *tokname(int);
 extern	Cell	*(*proctab[])(Node **, int);
 extern	int	ptoi(void *);
 extern	Node	*itonp(int);
@@ -118,36 +111,44 @@ extern	double	getfval(Cell *);
 extern	char	*getsval(Cell *);
 extern	char	*getpssval(Cell *);     /* for print */
 extern	char	*tostring(const char *);
+extern	char	*tostringN(const char *, size_t);
 extern	char	*qstring(const char *, int);
+extern	Cell	*catstr(Cell *, Cell *);
 
 extern	void	recinit(unsigned int);
 extern	void	initgetrec(void);
 extern	void	makefields(int, int);
 extern	void	growfldtab(int n);
-extern	int	getrec(char **, int *, int);
+extern	void	savefs(void);
+extern	int	getrec(char **, int *, bool);
 extern	void	nextfile(void);
-extern	int	readrec(char **buf, int *bufsize, FILE *inf);
+extern	int	readrec(char **buf, int *bufsize, FILE *inf, bool isnew);
 extern	char	*getargv(int);
 extern	void	setclvar(char *);
 extern	void	fldbld(void);
 extern	void	cleanfld(int, int);
 extern	void	newfld(int);
+extern	void	setlastfld(int);
 extern	int	refldbld(const char *, const char *);
 extern	void	recbld(void);
 extern	Cell	*fieldadr(int);
 extern	void	yyerror(const char *);
-extern	void	fpecatch(int);
 extern	void	bracecheck(void);
 extern	void	bcheck2(int, int, int);
-extern	void	SYNTAX(const char *, ...);
-extern	DEAD void FATAL(const char *, ...);
-extern	void	WARNING(const char *, ...);
+extern	void	SYNTAX(const char *, ...)
+    __attribute__((__format__(__printf__, 1, 2)));
+extern	noreturn void	FATAL(const char *, ...)
+    __attribute__((__format__(__printf__, 1, 2)));
+extern	void	WARNING(const char *, ...)
+    __attribute__((__format__(__printf__, 1, 2)));
 extern	void	error(void);
 extern	void	eprint(void);
 extern	void	bclass(int);
 extern	double	errcheck(double, const char *);
 extern	int	isclvar(const char *);
-extern	int	is_number(const char *);
+extern	bool	is_valid_number(const char *s, bool trailing_stuff_ok,
+				bool *no_trailing, double *result);
+#define is_number(s, val)	is_valid_number(s, false, NULL, val)
 
 extern	int	adjbuf(char **pb, int *sz, int min, int q, char **pbp, const char *what);
 extern	void	run(Node *);
@@ -192,7 +193,7 @@ extern	Cell	*bltin(Node **, int);
 extern	Cell	*printstat(Node **, int);
 extern	Cell	*nullproc(Node **, int);
 extern	FILE	*redirect(int, Node *);
-extern	FILE	*openfile(int, const char *);
+extern	FILE	*openfile(int, const char *, bool *);
 extern	const char	*filename(FILE *);
 extern	Cell	*closefile(Node **, int);
 extern	void	closeall(void);
@@ -201,3 +202,5 @@ extern	Cell	*gsub(Node **, int);
 
 extern	FILE	*popen(const char *, const char *);
 extern	int	pclose(FILE *);
+
+extern  const char	*flags2str(int flags);

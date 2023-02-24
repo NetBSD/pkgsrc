@@ -1,5 +1,3 @@
-/* $NetBSD: parse.c,v 1.1 2006/07/14 14:23:06 jlam Exp $ */
-
 /****************************************************************
 Copyright (C) Lucent Technologies 1997
 All Rights Reserved
@@ -29,13 +27,13 @@ THIS SOFTWARE.
 #include <string.h>
 #include <stdlib.h>
 #include "awk.h"
-#include "ytab.h"
+#include "awkgram.tab.h"
 
 Node *nodealloc(int n)
 {
 	Node *x;
 
-	x = (Node *) malloc(sizeof(Node) + (n-1)*sizeof(Node *));
+	x = (Node *) malloc(sizeof(*x) + (n-1) * sizeof(x));
 	if (x == NULL)
 		FATAL("out of space in nodealloc");
 	x->nnext = NULL;
@@ -252,7 +250,7 @@ void defn(Cell *v, Node *vl, Node *st)	/* turn on FCN bit in definition, */
 	for (p = vl; p; p = p->nnext)
 		n++;
 	v->fval = n;
-	dprintf( ("defining func %s (%d args)\n", v->nval, n) );
+	DPRINTF("defining func %s (%d args)\n", v->nval, n);
 }
 
 int isarg(const char *s)		/* is s in argument list for current function? */
@@ -261,7 +259,7 @@ int isarg(const char *s)		/* is s in argument list for current function? */
 	Node *p = arglist;
 	int n;
 
-	for (n = 0; p != 0; p = p->nnext, n++)
+	for (n = 0; p != NULL; p = p->nnext, n++)
 		if (strcmp(((Cell *)(p->narg[0]))->nval, s) == 0)
 			return n;
 	return -1;

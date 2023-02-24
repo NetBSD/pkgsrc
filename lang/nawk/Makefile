@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.43 2020/01/26 17:31:30 rillig Exp $
+# $NetBSD: Makefile,v 1.44 2023/02/24 20:57:50 vins Exp $
 
-DISTNAME=	nawk-20121220
-PKGREVISION=	1
+DISTNAME=	nawk-20220122
 CATEGORIES=	lang
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -9,6 +8,7 @@ DISTFILES=	# empty
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.cs.princeton.edu/~bwk/btl.mirror/
 COMMENT=	Brian Kernighan's pattern-directed scanning and processing language
+LICENSE=	mit
 
 BOOTSTRAP_PKG=	yes
 
@@ -20,7 +20,7 @@ BUILD_TARGET=	a.out
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-extract:
-	@${CP} -R ${FILESDIR} ${WRKSRC}
+	${RUN}${CP} -R ${FILESDIR} ${WRKSRC}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/a.out ${DESTDIR}${PREFIX}/bin/nawk
