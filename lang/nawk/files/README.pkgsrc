@@ -1,4 +1,4 @@
-$NetBSD: README.pkgsrc,v 1.3 2014/03/12 14:20:43 ryoon Exp $
+$NetBSD: README.pkgsrc,v 1.4 2023/02/24 20:57:50 vins Exp $
 
 The following changes were made to the standard distribution:
 
@@ -7,12 +7,5 @@ The following changes were made to the standard distribution:
 
     * The file "awk.1" was copied to "nawk.1" and modified.  See the
       comments at the head of "nawk.1" for a list of the changes.
-
-    * The *.bak files were removed.  The were only used to preserve
-      the original contents of ytab.[ch] in case they were regenerted
-      by yacc/bison.
-
-    * The *.bat files were removed.  These files are only used on
-      MS Windows.
 
     * A "NetBSD" CVS Id tag was added to each file.
