@@ -1,17 +1,40 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/05/20 12:38:59 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2023/02/24 13:56:33 rxg Exp $
 
---- mkfontalias.py.orig	Mon May 13 23:10:34 2002
+--- mkfontalias.py.orig	2023-02-24 09:21:36.213980685 +0000
 +++ mkfontalias.py
 @@ -16,7 +16,7 @@
  # --
  import sys, string, os
  
 -_font_sizes = range(6, 16) + [ 18, 24 ]
-+_font_sizes = range(6, 13) + [ 14, 16, 18, 20, 22, 24, 26, 28, 36, 48, 72 ]
++_font_sizes = list ( range(6, 13) ) + [ 14, 16, 18, 20, 22, 24, 26, 28, 36, 48, 72 ]
  _infile = 'fonts.dir'
  _outfile = 'fonts.alias'
  
-@@ -67,13 +67,8 @@
+@@ -44,7 +44,7 @@ _font_map = { 'Arial' : 'Arial',
+ try:
+     # Strip the first line
+     fonts = open ( _infile ).readlines()[1:]
+-except IOError, val:
++except IOError as val:
+     sys.stderr.write ( 'Cannot read %s (%s) - are you sure you are in the '
+                        'fonts directory?\n' % (_infile, val) )
+     sys.exit(1)
+@@ -55,62 +55,57 @@ for line in fonts:
+     try:
+         # Get rid of the first entry, but mind that other may have 
+         # spaces in them
+-        font = string.strip(string.join ( string.split ( line, ' ' )[1:], ' '))
++        font = ' '.join ( line.split ( ' ' )[1:] ).strip()
+     except IndexError:
+         sys.stderr.write ( 'Cannot parse %s line: %s\n' % (_infile, line ) )
+         sys.exit(1)
+ 
+-    entries = string.split ( font, '-' )
++    entries = font.split ( '-' )
+ 
+     if len(entries) != 15:
+         # Seems to be invalid
          sys.stderr.write ( 'Invalid font: %s\n' % (font) )
          sys.exit(1)
  
@@ -27,12 +50,53 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/05/20 12:38:59 wiz Exp $
              # Do the 'cheating' - fallback to size if not in the cheat map
              real_size = _cheat_map.get ( size, size )
  
-@@ -81,7 +76,7 @@
-                                                  str(real_size * 10) ] + 
-                                  entries[9:], '-' )
- 
+-            name = string.join ( entries[:7] + [ str(real_size), 
+-                                                 str(real_size * 10) ] + 
+-                                 entries[9:], '-' )
+-
 -            alias = string.join ( entries[:2] + [map] + entries[3:7] + 
-+            alias = string.join ( entries[:3] + entries[3:7] + 
-                                  [ str(size), str(size * 10) ] + 
-                                   _res + entries[11:], '-' )
+-                                 [ str(size), str(size * 10) ] + 
+-                                  _res + entries[11:], '-' )
++            name = '-'.join ( entries[:7] + [ str(real_size), 
++                                              str(real_size * 10) ] + 
++                              entries[9:] )
++
++            alias = '-'.join ( entries[:3] + entries[3:7] + 
++                              [ str(size), str(size * 10) ] + 
++                               _res + entries[11:] )
  
+             # Add the entry to the aliases
+             _aliases.append ( '"%s" "%s"' % (alias, name) )
+ 
+ # Boast
+-print 'Created %s aliases' % len(_aliases)
++print ( 'Created %s aliases' % len(_aliases) )
+ 
+ # Backup the existing file
+ _bak = _outfile + '.bak' 
+ if os.path.exists ( _outfile ) and not os.path.exists ( _bak ):
+     try:
+         os.rename ( _outfile, _bak )
+-    except OSError, val:
++    except OSError as val:
+         sys.stderr.write ( 'Cannot backup %s to %s: %s\n' % (_outfile, _bak, 
+                            val) )
+         sys.exit(1)
+     else:
+-        print 'Backed up existing %s to %s' % (_outfile, _bak) 
++        print ( 'Backed up existing %s to %s' % (_outfile, _bak) )
+ 
+ # Ok, write the file
+ try:
+     _out = open ( _outfile, 'w' )
+-except IOError, val:
++except IOError as val:
+     sys.stderr.write ( 'Cannot open %s for writing: %s\n' % (_outfile, val) )
+     sys.exit(1)
+ 
+-_out.write ( string.join ( _aliases, '\n' ) )
++_out.write ( '\n'.join ( _aliases ) )
+ _out.close()
+ 
+-print 'Wrote aliases to %s' % _outfile
++print ( 'Wrote aliases to %s' % _outfile )

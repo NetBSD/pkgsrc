@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:27:19 nia Exp $
+$NetBSD: distinfo,v 1.6 2023/02/24 13:56:33 rxg Exp $
 
 BLAKE2s (mkfontalias.py) = 949c0b67b3cf9c0ce5d33cced5b5b49fe2ef8b89b4de204ed260af4bb7ba3b40
 SHA512 (mkfontalias.py) = 887ef8fb9de77040da0fb8f06fedb69b2770efc28c0919c106e5432082663c5695cec02f7419264394a5ba776615f64039672f776cb9e882dfaf42219551cf34
 Size (mkfontalias.py) = 3571 bytes
-SHA1 (patch-aa) = c1ea1fd0cd708f84e63b4039c1986b93086dd0b5
+SHA1 (patch-aa) = 21bc3fc86702968580b119400a6c8f6506c6ac1c
