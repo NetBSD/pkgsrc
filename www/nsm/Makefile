@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2021/04/13 08:55:58 nia Exp $
+# $NetBSD: Makefile,v 1.10 2023/02/24 21:37:06 he Exp $
 
 DISTNAME=	nsm-2.3.10
 CATEGORIES=	www
@@ -42,4 +42,5 @@ post-install:
 BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
 .include "../../lang/lua53/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
