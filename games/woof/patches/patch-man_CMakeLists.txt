@@ -1,0 +1,15 @@
+$NetBSD: patch-man_CMakeLists.txt,v 1.3 2023/02/24 12:21:40 micha Exp $
+
+Treat macOS as Unix.
+
+--- man/CMakeLists.txt.orig	2022-12-28 15:38:06.000000000 +0000
++++ man/CMakeLists.txt
+@@ -5,7 +5,7 @@ install(SCRIPT "${CMAKE_CURRENT_BINARY_D
+ 
+ if(WIN32)
+     install(FILES CMDLINE.txt DESTINATION .)
+-elseif(UNIX AND NOT APPLE)
++elseif(UNIX)
+     install(FILES CMDLINE.txt DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/doc/${PROJECT_SHORTNAME}")
+     install(FILES "${PROJECT_SHORTNAME}.6" DESTINATION ${CMAKE_INSTALL_MANDIR}/man6)
+     install(FILES "${PROJECT_SHORTNAME}-setup.6" DESTINATION ${CMAKE_INSTALL_MANDIR}/man6)
