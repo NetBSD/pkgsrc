@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1389 2023/02/24 15:08:36 tsutsui Exp $
+$NetBSD: CHANGES-2023,v 1.1390 2023/02/24 21:00:00 vins Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1815,3 +1815,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated print/ruby-poppler to 4.1.2 [tsutsui 2023-02-24]
 	Updated x11/ruby-gtk3 to 4.1.2 [tsutsui 2023-02-24]
 	Updated x11/ruby-gtksourceview3 to 4.1.2 [tsutsui 2023-02-24]
+	Updated lang/nawk to 20220122 [vins 2023-02-24]
