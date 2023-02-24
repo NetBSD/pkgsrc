@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.120 2022/12/28 22:26:06 adam Exp $
+@comment $NetBSD: PLIST,v 1.121 2023/02/24 08:34:38 adam Exp $
 share/doc/sqlite3/34to35.html
 share/doc/sqlite3/35to36.html
 share/doc/sqlite3/about.html
@@ -59,6 +59,7 @@ share/doc/sqlite3/c3ref/c_lock_exclusive.html
 share/doc/sqlite3/c3ref/c_mutex_fast.html
 share/doc/sqlite3/c3ref/c_open_autoproxy.html
 share/doc/sqlite3/c3ref/c_prepare_normalize.html
+share/doc/sqlite3/c3ref/c_scanstat_complex.html
 share/doc/sqlite3/c3ref/c_scanstat_est.html
 share/doc/sqlite3/c3ref/c_serialize_nocopy.html
 share/doc/sqlite3/c3ref/c_shm_exclusive.html
@@ -208,6 +209,7 @@ share/doc/sqlite3/c3ref/user_data.html
 share/doc/sqlite3/c3ref/value.html
 share/doc/sqlite3/c3ref/value_blob.html
 share/doc/sqlite3/c3ref/value_dup.html
+share/doc/sqlite3/c3ref/value_encoding.html
 share/doc/sqlite3/c3ref/value_subtype.html
 share/doc/sqlite3/c3ref/vfs.html
 share/doc/sqlite3/c3ref/vfs_find.html
@@ -546,6 +548,7 @@ share/doc/sqlite3/pragma.html
 share/doc/sqlite3/pressrelease-20071212.html
 share/doc/sqlite3/printf.html
 share/doc/sqlite3/privatebranch.html
+share/doc/sqlite3/profile.html
 share/doc/sqlite3/prosupport.html
 share/doc/sqlite3/psow.html
 share/doc/sqlite3/qmplan.html
@@ -675,6 +678,7 @@ share/doc/sqlite3/releaselog/3_3_8.html
 share/doc/sqlite3/releaselog/3_3_9.html
 share/doc/sqlite3/releaselog/3_40_0.html
 share/doc/sqlite3/releaselog/3_40_1.html
+share/doc/sqlite3/releaselog/3_41_0.html
 share/doc/sqlite3/releaselog/3_4_0.html
 share/doc/sqlite3/releaselog/3_4_1.html
 share/doc/sqlite3/releaselog/3_4_2.html
@@ -935,7 +939,6 @@ share/doc/sqlite3/tempfiles.html
 share/doc/sqlite3/testing.html
 share/doc/sqlite3/th3.html
 share/doc/sqlite3/threadsafe.html
-share/doc/sqlite3/toc.db
 share/doc/sqlite3/transactional.html
 share/doc/sqlite3/uintcseq.html
 share/doc/sqlite3/undoredo.html
