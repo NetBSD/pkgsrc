@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2023/02/25 18:37:00 nikita Exp $
+share/fonts/X11/TTF/DaddyTimeMono Nerd Font Complete Mono Windows Compatible.ttf
+share/fonts/X11/TTF/DaddyTimeMono Nerd Font Complete Mono.ttf
+share/fonts/X11/TTF/DaddyTimeMono Nerd Font Complete Windows Compatible.ttf
+share/fonts/X11/TTF/DaddyTimeMono Nerd Font Complete.ttf
+@pkgdir share/fonts/X11/OTF
