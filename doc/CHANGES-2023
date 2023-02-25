@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1398 2023/02/25 17:29:01 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1399 2023/02/25 17:56:07 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1824,3 +1824,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated biology/bcftools to 1.17 [bacon 2023-02-25]
 	Updated inputmethod/uim to 1.8.9 [ryoon 2023-02-25]
 	Updated devel/libgit2 to 1.6.1 [wiz 2023-02-25]
+	Updated lang/moscow_ml to 2.10.1 [ryoon 2023-02-25]
