@@ -1,17 +1,21 @@
-# $NetBSD: Makefile,v 1.16 2022/12/28 15:27:15 bacon Exp $
+# $NetBSD: Makefile,v 1.17 2023/02/25 13:56:33 bacon Exp $
 
-DISTNAME=	bcftools-1.15
-PKGREVISION=	2
+DISTNAME=	bcftools-1.17
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=samtools/}
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
+EXTRACT_SUFX=	.tar.bz2
 
 OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://www.htslib.org/
 COMMENT=	Tools for manipulating BCF and VCF variant call files
 LICENSE=	mit
 
-USE_TOOLS+=	autoconf automake autoreconf bash gmake perl
-GNU_CONFIGURE=	yes
+USE_TOOLS+=		autoconf automake autoreconf bash gmake perl
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-htslib=system
+MAKE_ENV+=		USE_GPL=1
+TEST_TARGET=		test
 
 SUBST_CLASSES+=		version
 SUBST_STAGE.version=	pre-configure
@@ -29,10 +33,6 @@ REPLACE_PERL+=		misc/fix-broken-GATK-Double-vs-Integer
 REPLACE_PERL+=		misc/plot-vcfstats
 REPLACE_PERL+=		test/test.pl
 REPLACE_PYTHON+=	misc/*.py
-
-CONFIGURE_ARGS+=	--with-htslib=system
-MAKE_ENV+=		USE_GPL=1
-TEST_TARGET=		test
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -if

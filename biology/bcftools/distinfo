@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2022/02/26 23:14:33 bacon Exp $
+$NetBSD: distinfo,v 1.8 2023/02/25 13:56:33 bacon Exp $
 
-BLAKE2s (bcftools-1.15.tar.gz) = 50d87d4463c84dc7a450dba488d79ad43c5ab2a25c10bee92c94b1c3d11e5963
-SHA512 (bcftools-1.15.tar.gz) = fcb8dac8cf28f9c490c14d72a1c9fba027d7224e09ba37f6ab4c940e0a1eec8aef3b439137be013abb97dff492d252492cee4e88325285fc643729042b4fbd07
-Size (bcftools-1.15.tar.gz) = 3347901 bytes
+BLAKE2s (bcftools-1.17.tar.bz2) = 322846c2569abe78d079cadf82e6cb629c064e26161d5a08cdbfc7c45215a6f0
+SHA512 (bcftools-1.17.tar.bz2) = 39ae44a682e626a5261900e9412170a269e460b559d6607db697e6a12b1e512ffb3bdeb3486413e19b8adca26a8ccbb2bd4af24459decb74592c54473d2c6a68
+Size (bcftools-1.17.tar.bz2) = 7538043 bytes
 SHA1 (patch-Makefile) = 9dfe7b5dcf77deac6d248d7612440780ec8a3731
