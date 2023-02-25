@@ -1,0 +1,20 @@
+HaMLet is a faithful and complete implementation of the Standard
+ML programming language (SML'97). It aims to be
+
+  * an accurate reference implementation of the language specification,
+  * a platform for experimentation with the language semantics or
+    extensions to it,
+  * a useful tool for educational purposes.
+
+The implementation is intended to be as direct a translation of
+the language formalisation found in the Definition of Standard ML
+as possible, modulo bug fixes. It tries hard to get all details of
+the Definition right. The HaMLet source code
+
+  * implements complete Standard ML,
+  * closely follows the structure of the Definition, with lots of
+    cross references,
+  * conforms to the latest version of the Standard ML Basis Library,
+    is written entirely in Standard ML, with the ability to bootstrap,
+  * may readily be compiled with SML/NJ, MLton, Moscow ML, Poly/ML,
+    Alice ML, the ML Kit, or SML#.
