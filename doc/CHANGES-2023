@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1401 2023/02/25 18:02:23 ryoon Exp $
+$NetBSD: CHANGES-2023,v 1.1402 2023/02/25 18:07:27 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1827,3 +1827,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/moscow_ml to 2.10.1 [ryoon 2023-02-25]
 	Updated lang/smlnj to 110.99.3 [ryoon 2023-02-25]
 	Added lang/hamlet version 2.0.0 [ryoon 2023-02-25]
+	Updated lang/openjdk11 to 1.11.0.18.10 [ryoon 2023-02-25]
