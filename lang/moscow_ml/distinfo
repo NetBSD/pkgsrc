@@ -1,20 +1,7 @@
-$NetBSD: distinfo,v 1.14 2021/10/26 10:51:43 nia Exp $
+$NetBSD: distinfo,v 1.15 2023/02/25 17:55:24 ryoon Exp $
 
-BLAKE2s (mos201src.tar.gz) = b4f2b99adb269b88e23ff3dbc2521238bf81f7e9ee7f6575da0df0668887db11
-SHA512 (mos201src.tar.gz) = c08881cad23503bb57c7696ccfe16dd2f716ed423999018c3044266c9329a3175667c5294ef2eda83b5d1ef810fb7fc8e037f9d1fed3245da9dbbc895ad6e15c
-Size (mos201src.tar.gz) = 2314392 bytes
-SHA1 (patch-aa) = ecbc1a268a8d3182068e9bd16036f220b39346c8
-SHA1 (patch-ab) = f4f4d6307a145041e60322c91f1b5359c744cc93
-SHA1 (patch-ac) = 270c05d9e887b6f41619a9029c2e228b50f464eb
-SHA1 (patch-ad) = d76f87ed98eb836e926d0781824531694b287ad7
-SHA1 (patch-ae) = 0fe5481ee3abb8484340a2448572680a0f828030
-SHA1 (patch-ba) = 2e6d61ef16ed7bc064d828fd22fc5c96e12cf357
-SHA1 (patch-bb) = 7ec9c19d43a0d758ecc2655b7da131e58dbe9739
-SHA1 (patch-bc) = 99953744072bb2ad603469b411b4bd5f33a935f7
-SHA1 (patch-bd) = 3e73d03cec930463c0d3d1a2c3e874b0c8c8a459
-SHA1 (patch-be) = 4742e5391e5ac9d7c5339c69b6d47d237659feed
-SHA1 (patch-bf) = 3bafc00ea7b2fd8c7992f0dc36cb4467e6815de6
-SHA1 (patch-bg) = 6ca89fb870ef066a2929b9cd7e38257c9380cd11
-SHA1 (patch-bh) = e9a12cf9804e46379c9e97c567eef974a2f7ca62
-SHA1 (patch-config_auto-aux_hasgot) = 9324b13d8e1fed1703b89c9572d47f1ebbbac231
-SHA1 (patch-mosmlyac_main_c) = d9d6a624c33f96a25e866c64944d0f20cedea526
+BLAKE2s (mosml-ver-2.10.1.tar.gz) = b1cce201c3011a27f8f80be3a563b87ec67855f9600978059e76141cb0041f8b
+SHA512 (mosml-ver-2.10.1.tar.gz) = 1463ee8dbcd979795ceca0439c7b2d545520590e036bd0c428d9617802a4e40efba82caf0afd5e24761b857cceb63a69269bf765c91df27c3e5f84242519af60
+Size (mosml-ver-2.10.1.tar.gz) = 2558644 bytes
+SHA1 (patch-src_Makefile.inc) = db5d3b94a9df06e1d8f7308553cfff6daa4ed49c
+SHA1 (patch-src_dynlibs_intinf_Makefile) = c0ad341de2dff6a81164d30d65fbcde48318b0ed
