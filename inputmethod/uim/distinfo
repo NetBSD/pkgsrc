@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.37 2023/02/25 17:20:16 ryoon Exp $
+$NetBSD: distinfo,v 1.38 2023/02/25 17:42:43 ryoon Exp $
 
 BLAKE2s (uim-1.8.9.tar.gz) = 21175907f7ff2bbfb508e32b98d72fa63767a10591b067c809828aec25312845
 SHA512 (uim-1.8.9.tar.gz) = ef731d255259b00e41a96e325cfa001579f14b98329d1882508190b8f2a9552ba4165572a7faf865b58bf392b69de2933e6ff13174941b5313ad690fbc36e337
@@ -14,4 +14,5 @@ SHA1 (patch-sigscheme_configure.ac) = 836d034e2eb1a60619eaac70f22387a1805dda5c
 SHA1 (patch-sigscheme_doc_Makefile.am) = e21e33d7eb078819ab34f9d7fdc10d7f4401a2c4
 SHA1 (patch-sigscheme_include_sigscheme_Makefile.am) = d54b38982c199b321c6ac0d8700bfe9c29084eee
 SHA1 (patch-uim_Makefile.am) = e3a9e4dc99965c271fd6e783d42a6a136bf904b2
+SHA1 (patch-uim_skk.c) = 0d0bcf3c996ab5a4351e30cdf0f6f1fdc6faf5ad
 SHA1 (patch-uim_uim-module-manager.c) = 345b09a209fc1ccc9ba96aa50a5adac1f2ef35ee
