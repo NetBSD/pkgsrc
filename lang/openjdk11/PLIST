@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2022/05/25 06:05:34 tnn Exp $
+@comment $NetBSD: PLIST,v 1.13 2023/02/25 18:06:47 ryoon Exp $
 bin/openjdk11-jar
 bin/openjdk11-jarsigner
 bin/openjdk11-java
@@ -230,6 +230,7 @@ java/openjdk11/include/jvmti.h
 java/openjdk11/include/jvmticmlr.h
 java/openjdk11/include/netbsd/jawt_md.h
 java/openjdk11/include/netbsd/jni_md.h
+java/openjdk11/include/sizecalc.h
 java/openjdk11/jmods/java.base.jmod
 java/openjdk11/jmods/java.compiler.jmod
 java/openjdk11/jmods/java.datatransfer.jmod
