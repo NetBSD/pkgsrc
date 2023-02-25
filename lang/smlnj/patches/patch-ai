@@ -1,9 +1,10 @@
-$NetBSD: patch-ai,v 1.2 2009/09/22 14:48:47 asau Exp $
+$NetBSD: patch-ai,v 1.3 2023/02/25 17:58:39 ryoon Exp $
 
---- config/_ml-build.orig	2007-02-13 00:05:27.000000000 +0300
-+++ config/_ml-build	2009-03-18 12:37:58.000000000 +0300
-@@ -1,5 +1,7 @@
- #!@SHELL@
+--- config/_ml-build.orig	2022-07-28 04:55:45.000000000 +0000
++++ config/_ml-build
+@@ -6,6 +6,8 @@
+ # usage: ml-build [-S setup] root-group [main-function [heapfile]]
+ #
  
 +SMLNJ_HOME="${SMLNJ_HOME:-@SML_BASE@}"
 +

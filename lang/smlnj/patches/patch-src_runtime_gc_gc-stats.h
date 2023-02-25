@@ -1,11 +1,11 @@
-$NetBSD: patch-src_runtime_gc_gc-stats.h,v 1.1 2016/04/14 21:58:22 dholland Exp $
+$NetBSD: patch-src_runtime_gc_gc-stats.h,v 1.2 2023/02/25 17:58:39 ryoon Exp $
 
 Use struct timeval instead of blithely assuming that some private
 struct declaration is always bit compatible with it. (Because it
 isn't.) From PR 40954.
 
---- src/runtime/gc/gc-stats.h.orig	2009-03-03 18:23:38.000000000 -0500
-+++ src/runtime/gc/gc-stats.h	2009-03-03 18:25:04.000000000 -0500
+--- src/runtime/gc/gc-stats.h.orig	2022-07-28 04:55:45.000000000 +0000
++++ src/runtime/gc/gc-stats.h
 @@ -16,6 +16,7 @@ extern void ReportVM (ml_state_t *msp, i
  
  #define START_GC_PAUSE(HEAP)	{					\
@@ -40,5 +40,3 @@ isn't.) From PR 40954.
  	    STATS_FINISH();						\
  	}								\
      }
-
-

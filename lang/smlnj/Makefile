@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2022/09/16 19:45:07 he Exp $
+# $NetBSD: Makefile,v 1.39 2023/02/25 17:58:39 ryoon Exp $
 #
 
 DISTNAME=	boot.${BOX}-unix
@@ -12,11 +12,13 @@ DISTFILES=	MLRISC.tgz			\
 		cml.tgz				\
 		compiler.tgz			\
 		config.tgz			\
+		doc.tgz				\
 		eXene.tgz			\
 		ml-burg.tgz			\
 		ml-lex.tgz			\
 		nlffi.tgz			\
 		ml-yacc.tgz			\
+		old-basis.tgz			\
 		runtime.tgz			\
 		smlnj-lib.tgz			\
 		system.tgz			\
@@ -30,8 +32,7 @@ MAINTAINER=	richards+netbsd@CS.Princeton.EDU
 HOMEPAGE=	https://www.smlnj.org/index.html
 COMMENT=	Popular functional language from Bell Labs
 
-SML_VERSION=	110.73
-PKGREVISION=	3
+SML_VERSION=	110.99.3
 
 WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	smlnj-${SML_VERSION}
@@ -45,6 +46,11 @@ SML_LIBDIR=	${SML_BASE}/lib
 SML_BINDIR=	${SML_BASE}/bin
 SML_SCRIPTS=	_link-sml _run-sml _ml-build _ml-makedepend
 
+# -ansi does not know 'inline' keyword.
+BUILDLINK_TRANSFORM+=	rm:-ansi
+.include "../../mk/dlopen.buildlink3.mk"
+BUILDLINK_TRANSFORM+=   opt:-ldl:${BUILDLINK_LDADD.dl:Q}
+
 # while building, the work directory is the "installation"
 BUILD_ENV+=	SMLNJ_HOME="${WRKDIR}"
 
@@ -57,7 +63,7 @@ BUILD_ENV+=	PATCH=${PATCH:Q} PATCH_ARGS=${PATCH_ARGS:Q}
 # note that this includes bsd.prefs.mk
 .include "../../lang/smlnj/Makefile.common"
 
-BOXES=	x86 ppc sparc
+BOXES=	amd64 x86 ppc sparc
 
 .if make(distinfo) || make(makesum) || make(mdi)
 .  for B in ${BOXES}
