@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.own.mk.in,v 1.7 2023/02/25 01:46:42 riastradh Exp $
+#	$NetBSD: bsd.own.mk.in,v 1.8 2023/02/25 11:27:27 jperkin Exp $
 
 .if !defined(_BSD_OWN_MK_)
 _BSD_OWN_MK_=1
@@ -112,7 +112,7 @@ NOPIC?=1
 #
 # All platforms are ELF.
 #
-OBJECT_FMT=	ELF
+OBJECT_FMT?=	ELF
 
 # Location of the file that contains the major and minor numbers of the
 # version of a shared library.  If this file exists a shared library
