@@ -1,0 +1,13 @@
+$NetBSD: patch-src_runtime_objs_mk.amd64-darwin,v 1.1 2023/02/25 17:58:39 ryoon Exp $
+
+--- src/runtime/objs/mk.amd64-darwin.orig	2022-07-28 04:55:45.000000000 +0000
++++ src/runtime/objs/mk.amd64-darwin
+@@ -12,7 +12,7 @@ SHELL =		/bin/sh
+ MAKE =		make
+ AS =		/usr/bin/as -arch x86_64
+ CC =		/usr/bin/clang -m64 -std=c99
+-CFLAGS =	-g -O2 -D_DARWIN_C_SOURCE
++CFLAGS =	@CFLAGS@ -D_DARWIN_C_SOURCE
+ CPP =           /usr/bin/clang -x assembler-with-cpp -E -P -std=c99
+ AR =		/usr/bin/ar
+ RANLIB =	/usr/bin/ranlib

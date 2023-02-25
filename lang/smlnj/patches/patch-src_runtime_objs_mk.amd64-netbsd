@@ -1,0 +1,36 @@
+$NetBSD: patch-src_runtime_objs_mk.amd64-netbsd,v 1.1 2023/02/25 17:58:39 ryoon Exp $
+
+--- src/runtime/objs/mk.amd64-netbsd.orig	2023-01-29 17:15:22.872383666 +0000
++++ src/runtime/objs/mk.amd64-netbsd
+@@ -0,0 +1,31 @@
++# mk.amd64-netbsd
++#
++# makefile for "NetBSD" on the amd64 architecture
++#
++
++SHELL =		/bin/sh
++
++MAKE =		make
++AS =		as --64
++CC =		cc -std=gnu99
++CFLAGS =	@CFLAGS@ -m64
++CPP =		cc -x assembler-with-cpp -E -P
++XOBJS =
++XLIBS =		../c-libs/dl/libunix-dynload.a
++LD_LIBS =	-lm -ldl
++#CHECK_HEAP =	check-heap.o
++XDEFS =
++BASE_DEFS =
++DEFS =		$(XDEFS) $(BASE_DEFS) -DARCH_AMD64 -DSIZE_64 \
++		-DOPSYS_UNIX -DOPSYS_NETBSD -D_GNU_SOURCE -DGNU_ASSEMBLER -DDLOPEN \
++		-DINDIRECT_CFUNC
++TARGET =	AMD64
++VERSION =	v-amd64-netbsd
++RUNTIME =	run.amd64-netbsd
++RUNTIME_SO =	run.amd64-netbsd.so
++RUNTIME_A =	run.amd64-netbsd.a
++
++all:
++	($(MAKE) CHECK_HEAP=$(CHECK_HEAP) RUNTIME="$(RUNTIME)" VERSION="$(VERSION)" AS="$(AS)" CC="$(CC)" CFLAGS="$(CFLAGS)" CPP="$(CPP)" TARGET=$(TARGET) DEFS="$(DEFS)" XOBJS="$(XOBJS)" XLIBS="$(XLIBS)" LD_LIBS="$(LD_LIBS)" $(RUNTIME))
++#	($(MAKE) RUNTIME="$(RUNTIME_SO)" VERSION="$(VERSION)" AS="$(AS)" CC="$(CC)" CFLAGS="$(CFLAGS)" CPP="$(CPP)" TARGET=$(TARGET) DEFS="$(DEFS)" XOBJS="$(XOBJS)" XLIBS="$(XLIBS)" LD_LIBS="$(LD_LIBS)" LDFLAGS="-shared" $(RUNTIME_SO))
++#	($(MAKE) RUNTIME_A="$(RUNTIME_A)" VERSION="$(VERSION)" AS="$(AS)" CC="$(CC)" CFLAGS="$(CFLAGS)" CPP="$(CPP)" TARGET=$(TARGET) DEFS="$(DEFS)" XOBJS="$(XOBJS)" XLIBS="$(XLIBS)" LD_LIBS="$(LD_LIBS)" LDFLAGS="" $(RUNTIME_A))

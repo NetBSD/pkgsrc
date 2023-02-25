@@ -1,15 +1,15 @@
-$NetBSD: patch-src_runtime_objs_mk.x86-darwin,v 1.1 2016/07/03 19:29:27 dholland Exp $
+$NetBSD: patch-src_runtime_objs_mk.x86-darwin,v 1.2 2023/02/25 17:58:39 ryoon Exp $
 
 Honor pkgsrc CFLAGS.
 
---- src/runtime/objs/mk.x86-darwin~	2009-09-13 17:50:53.000000000 +0000
+--- src/runtime/objs/mk.x86-darwin.orig	2022-07-28 04:55:45.000000000 +0000
 +++ src/runtime/objs/mk.x86-darwin
-@@ -13,7 +13,7 @@ SHELL =		/bin/sh
+@@ -35,7 +35,7 @@ SHELL =		/bin/sh
  MAKE =		make
- AS =		/usr/bin/as -arch i386
- CC =		cc -m32 -ansi
--CFLAGS =	-g -O2 -D_DARWIN_C_SOURCE
-+CFLAGS =	@CFLAGS@ -D_DARWIN_C_SOURCE
- CPP =           cc -x assembler-with-cpp -E -P -ansi
+ AS =		/usr/bin/as -arch i386 $(AS_SDK)
+ CC =		cc -m32 -std=c99
+-CFLAGS =	-g -O2 -D_DARWIN_C_SOURCE $(SDK)
++CFLAGS =	@CFLAGS@ -D_DARWIN_C_SOURCE $(SDK)
+ CPP =           cc -x assembler-with-cpp -E -P -std=c99
  XOBJS =
  XLIBS =         ../c-libs/dl/libunix-dynload.a

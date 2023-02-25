@@ -1,24 +1,26 @@
-$NetBSD: patch-src_runtime_objs_mk.x86-netbsd,v 1.3 2016/07/03 19:29:27 dholland Exp $
+$NetBSD: patch-src_runtime_objs_mk.x86-netbsd,v 1.4 2023/02/25 17:58:39 ryoon Exp $
 
 Configure for pkgsrc. Build as 32-bit.
 
---- src/runtime/objs/mk.x86-netbsd.orig	2015-04-22 07:11:37.000000000 +0000
+--- src/runtime/objs/mk.x86-netbsd.orig	2022-07-28 04:55:45.000000000 +0000
 +++ src/runtime/objs/mk.x86-netbsd
-@@ -7,9 +7,10 @@ SHELL =		/bin/sh
+@@ -9,7 +9,7 @@ MAKE =		gmake
  
- MAKE =		gmake
- 
-+AS =		as --32
  ARFLAGS =	Trcv
  CC =		gcc -ansi
 -CFLAGS =	-O2
-+CFLAGS =	@CFLAGS@ -m32
++CFLAGS =	@CFLAGS@
  CPP =		gcc -x assembler-with-cpp -E -P
  #CPP =		/usr/bin/cpp -P
  
-@@ -23,4 +24,4 @@ VERSION =	v-x86-netbsd
+@@ -17,7 +17,9 @@ XOBJS =
+ XLIBS =		../c-libs/dl/libunix-dynload.a
+ LD_LIBS =	-lm
+ BASE_DEFS =
+-DEFS =          $(XDEFS) $(BASE_DEFS) -DARCH_X86 -DDSIZE_32 -DOPSYS_UNIX -DOPSYS_NETBSD -DDLOPEN -DINDIRECT_CFUNC
++DEFS =          $(XDEFS) $(BASE_DEFS) -DARCH_X86 -DSIZE_32 \
++                -DOPSYS_UNIX -DOPSYS_NETBSD -D_GNU_SOURCE -DGNU_ASSEMBLER \
++		-DDLOPEN -DINDIRECT_CFUNC
+ TARGET =	X86
+ VERSION =	v-x86-netbsd
  RUNTIME =	run.x86-netbsd
- 
- all:
--	($(MAKE) RUNTIME="$(RUNTIME)" VERSION="$(VERSION)" MAKE="$(MAKE)" CC="$(CC)" CFLAGS="$(CFLAGS)" CPP="$(CPP)" TARGET=$(TARGET) DEFS="$(DEFS)" XOBJS="$(XOBJS)" XLIBS="$(XLIBS)" LD_LIBS="$(LD_LIBS)" $(RUNTIME))
-+	($(MAKE) RUNTIME="$(RUNTIME)" VERSION="$(VERSION)" MAKE="$(MAKE)" AS="$(AS)" CC="$(CC)" CFLAGS="$(CFLAGS)" CPP="$(CPP)" TARGET=$(TARGET) DEFS="$(DEFS)" XOBJS="$(XOBJS)" XLIBS="$(XLIBS)" LD_LIBS="$(LD_LIBS)" $(RUNTIME))
