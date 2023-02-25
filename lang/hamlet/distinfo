@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2023/02/25 18:01:44 ryoon Exp $
+
+BLAKE2s (hamlet-2.0.0.tar.gz) = 35788b6a401cf248286360afb3657b60b0641fde441454452f077fa159b2779f
+SHA512 (hamlet-2.0.0.tar.gz) = 20829a45f033bae8db4e43b4f38ca995391b872be5ed2b06ce593d2f4f62f1395aa8ee4cd639396697eb4ce7f513e9aba73d0157690f416c219bd3d4eaf9dd7f
+Size (hamlet-2.0.0.tar.gz) = 646614 bytes
+SHA1 (patch-Makefile) = c6347eb076fc2a92c93b1cefecf46d72ad6d7ae8
