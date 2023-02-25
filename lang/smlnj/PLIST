@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2012/01/29 20:48:48 asau Exp $
-bin/heap2asm
-bin/heap2exec
+@comment $NetBSD: PLIST,v 1.10 2023/02/25 17:58:39 ryoon Exp $
 bin/ml-antlr
 bin/ml-build
 bin/ml-burg
@@ -12,7 +10,6 @@ bin/ml-yacc
 bin/nowhere
 bin/sml
 lib/smlnj/bin/.arch-n-opsys
-lib/smlnj/bin/.heap/heap2asm.${BOX}-${OS}
 lib/smlnj/bin/.heap/ml-antlr.${BOX}-${OS}
 lib/smlnj/bin/.heap/ml-burg.${BOX}-${OS}
 lib/smlnj/bin/.heap/ml-lex.${BOX}-${OS}
@@ -24,8 +21,6 @@ lib/smlnj/bin/.heap/sml.${BOX}-${OS}
 lib/smlnj/bin/.link-sml
 lib/smlnj/bin/.run-sml
 lib/smlnj/bin/.run/run.${BOX}-${LOWER_OPSYS}
-lib/smlnj/bin/heap2asm
-lib/smlnj/bin/heap2exec
 lib/smlnj/bin/ml-antlr
 lib/smlnj/bin/ml-build
 lib/smlnj/bin/ml-burg
@@ -36,13 +31,12 @@ lib/smlnj/bin/ml-ulex
 lib/smlnj/bin/ml-yacc
 lib/smlnj/bin/nowhere
 lib/smlnj/bin/sml
+lib/smlnj/lib/SMLNJ-BASIS/.cm/${BOX}-unix/basis-common.cm
 lib/smlnj/lib/SMLNJ-BASIS/.cm/${BOX}-unix/basis.cm
 lib/smlnj/lib/SMLNJ-LIB/Controls/.cm/${BOX}-unix/controls-lib.cm
-lib/smlnj/lib/SMLNJ-LIB/HTML/.cm/${BOX}-unix/html-lib.cm
 lib/smlnj/lib/SMLNJ-LIB/PP/.cm/${BOX}-unix/pp-lib.cm
 lib/smlnj/lib/SMLNJ-LIB/Util/.cm/${BOX}-unix/smlnj-lib.cm
 lib/smlnj/lib/SMLNJ-ML-YACC-LIB/.cm/${BOX}-unix/ml-yacc-lib.cm
-lib/smlnj/lib/SMLNJ-MLRISC/.cm/${BOX}-unix/ALPHA.cm
 lib/smlnj/lib/SMLNJ-MLRISC/.cm/${BOX}-unix/AMD64-Peephole.cm
 lib/smlnj/lib/SMLNJ-MLRISC/.cm/${BOX}-unix/AMD64.cm
 lib/smlnj/lib/SMLNJ-MLRISC/.cm/${BOX}-unix/CCall-Vararg.cm
@@ -52,7 +46,6 @@ lib/smlnj/lib/SMLNJ-MLRISC/.cm/${BOX}-unix/CCall-x86.cm
 lib/smlnj/lib/SMLNJ-MLRISC/.cm/${BOX}-unix/CCall.cm
 lib/smlnj/lib/SMLNJ-MLRISC/.cm/${BOX}-unix/Control.cm
 lib/smlnj/lib/SMLNJ-MLRISC/.cm/${BOX}-unix/Graphs.cm
-lib/smlnj/lib/SMLNJ-MLRISC/.cm/${BOX}-unix/HPPA.cm
 lib/smlnj/lib/SMLNJ-MLRISC/.cm/${BOX}-unix/IA32-Peephole.cm
 lib/smlnj/lib/SMLNJ-MLRISC/.cm/${BOX}-unix/IA32.cm
 lib/smlnj/lib/SMLNJ-MLRISC/.cm/${BOX}-unix/Lib.cm
@@ -64,6 +57,7 @@ lib/smlnj/lib/SMLNJ-MLRISC/.cm/${BOX}-unix/RA.cm
 lib/smlnj/lib/SMLNJ-MLRISC/.cm/${BOX}-unix/SPARC.cm
 lib/smlnj/lib/SMLNJ-MLRISC/.cm/${BOX}-unix/StagedAlloc.cm
 lib/smlnj/lib/SMLNJ-MLRISC/.cm/${BOX}-unix/Visual.cm
+lib/smlnj/lib/basis-2004.cm/.cm/${BOX}-unix/basis-2004.cm
 lib/smlnj/lib/burg-ext.cm/.cm/${BOX}-unix/burg-ext.cm
 ${PLIST.nlffi}lib/smlnj/lib/c/.cm/${BOX}-unix/c.cm
 ${PLIST.nlffi}lib/smlnj/lib/c/internals/.cm/${BOX}-unix/c-int.cm
@@ -80,10 +74,12 @@ lib/smlnj/lib/cml/.cm/${BOX}-unix/inet-lib.cm
 lib/smlnj/lib/cml/.cm/${BOX}-unix/smlnj-lib.cm
 lib/smlnj/lib/cml/.cm/${BOX}-unix/trace-cml.cm
 lib/smlnj/lib/cml/.cm/${BOX}-unix/unix-lib.cm
+lib/smlnj/lib/compiler/Library/const-arith/.cm/${BOX}-unix/sources.cm
 lib/smlnj/lib/dir-tool.cm/.cm/${BOX}-unix/dir-tool.cm
 lib/smlnj/lib/eXene.cm/.cm/${BOX}-unix/eXene.cm
 lib/smlnj/lib/grm-ext.cm/.cm/${BOX}-unix/grm-ext.cm
 lib/smlnj/lib/hash-cons-lib.cm/.cm/${BOX}-unix/hash-cons-lib.cm
+lib/smlnj/lib/html-lib.cm/.cm/${BOX}-unix/html-lib.cm
 lib/smlnj/lib/html4-lib.cm/.cm/${BOX}-unix/html4-lib.cm
 lib/smlnj/lib/inet-lib.cm/.cm/${BOX}-unix/inet-lib.cm
 lib/smlnj/lib/json-lib.cm/.cm/${BOX}-unix/json-lib.cm
@@ -107,8 +103,10 @@ lib/smlnj/lib/pathconfig
 lib/smlnj/lib/pgraph-util.cm/.cm/${BOX}-unix/pgraph-util.cm
 lib/smlnj/lib/pgraph.cm/.cm/${BOX}-unix/pgraph.cm
 lib/smlnj/lib/pickle-lib.cm/.cm/${BOX}-unix/pickle-lib.cm
+lib/smlnj/lib/pp-extras-lib.cm/.cm/${BOX}-unix/pp-extras-lib.cm
 lib/smlnj/lib/reactive-lib.cm/.cm/${BOX}-unix/reactive-lib.cm
 lib/smlnj/lib/regexp-lib.cm/.cm/${BOX}-unix/regexp-lib.cm
+lib/smlnj/lib/sexp-lib.cm/.cm/${BOX}-unix/sexp-lib.cm
 lib/smlnj/lib/shell-tool.cm/.cm/${BOX}-unix/shell-tool.cm
 lib/smlnj/lib/smlnj-tdp/.cm/${BOX}-unix/back-trace.cm
 lib/smlnj/lib/smlnj-tdp/.cm/${BOX}-unix/coverage.cm
@@ -118,11 +116,9 @@ lib/smlnj/lib/smlnj/.cm/${BOX}-unix/cmb.cm
 lib/smlnj/lib/smlnj/.cm/${BOX}-unix/compiler.cm
 lib/smlnj/lib/smlnj/.cm/${BOX}-unix/installer.cm
 lib/smlnj/lib/smlnj/.cm/${BOX}-unix/library-install.cm
-lib/smlnj/lib/smlnj/MLRISC/.cm/${BOX}-unix/ALPHA.cm
 lib/smlnj/lib/smlnj/MLRISC/.cm/${BOX}-unix/AMD64.cm
 lib/smlnj/lib/smlnj/MLRISC/.cm/${BOX}-unix/Control.cm
 lib/smlnj/lib/smlnj/MLRISC/.cm/${BOX}-unix/Graphs.cm
-lib/smlnj/lib/smlnj/MLRISC/.cm/${BOX}-unix/HPPA.cm
 lib/smlnj/lib/smlnj/MLRISC/.cm/${BOX}-unix/IA32.cm
 lib/smlnj/lib/smlnj/MLRISC/.cm/${BOX}-unix/Lib.cm
 lib/smlnj/lib/smlnj/MLRISC/.cm/${BOX}-unix/MLRISC.cm
@@ -133,21 +129,16 @@ lib/smlnj/lib/smlnj/MLRISC/.cm/${BOX}-unix/Visual.cm
 lib/smlnj/lib/smlnj/basis/.cm/${BOX}-unix/basis.cm
 lib/smlnj/lib/smlnj/cm/.cm/${BOX}-unix/cm.cm
 lib/smlnj/lib/smlnj/cm/.cm/${BOX}-unix/tools.cm
-lib/smlnj/lib/smlnj/cmb/.cm/${BOX}-unix/alpha32-unix.cm
 lib/smlnj/lib/smlnj/cmb/.cm/${BOX}-unix/amd64-unix.cm
 lib/smlnj/lib/smlnj/cmb/.cm/${BOX}-unix/current.cm
-lib/smlnj/lib/smlnj/cmb/.cm/${BOX}-unix/hppa-unix.cm
-lib/smlnj/lib/smlnj/cmb/.cm/${BOX}-unix/ppc-macos.cm
 lib/smlnj/lib/smlnj/cmb/.cm/${BOX}-unix/ppc-unix.cm
 lib/smlnj/lib/smlnj/cmb/.cm/${BOX}-unix/sparc-unix.cm
 lib/smlnj/lib/smlnj/cmb/.cm/${BOX}-unix/x86-unix.cm
 lib/smlnj/lib/smlnj/cmb/.cm/${BOX}-unix/x86-win32.cm
 lib/smlnj/lib/smlnj/compiler/.cm/${BOX}-unix/all.cm
-lib/smlnj/lib/smlnj/compiler/.cm/${BOX}-unix/alpha32.cm
 lib/smlnj/lib/smlnj/compiler/.cm/${BOX}-unix/amd64.cm
 lib/smlnj/lib/smlnj/compiler/.cm/${BOX}-unix/compiler.cm
 lib/smlnj/lib/smlnj/compiler/.cm/${BOX}-unix/current.cm
-lib/smlnj/lib/smlnj/compiler/.cm/${BOX}-unix/hppa.cm
 lib/smlnj/lib/smlnj/compiler/.cm/${BOX}-unix/minimal-only.cm
 lib/smlnj/lib/smlnj/compiler/.cm/${BOX}-unix/minimal.cm
 lib/smlnj/lib/smlnj/compiler/.cm/${BOX}-unix/ppc.cm
@@ -163,10 +154,8 @@ lib/smlnj/lib/smlnj/internal/.cm/${BOX}-unix/smlnj-version.cm
 lib/smlnj/lib/smlnj/internal/.cm/${BOX}-unix/srcpath-lib.cm
 lib/smlnj/lib/smlnj/ml-yacc/.cm/${BOX}-unix/ml-yacc-lib.cm
 lib/smlnj/lib/smlnj/smlnj-lib/.cm/${BOX}-unix/controls-lib.cm
-lib/smlnj/lib/smlnj/smlnj-lib/.cm/${BOX}-unix/html-lib.cm
 lib/smlnj/lib/smlnj/smlnj-lib/.cm/${BOX}-unix/pp-lib.cm
 lib/smlnj/lib/smlnj/smlnj-lib/.cm/${BOX}-unix/smlnj-lib.cm
-lib/smlnj/lib/smlnj/viscomp/.cm/${BOX}-unix/alpha32.cm
 lib/smlnj/lib/smlnj/viscomp/.cm/${BOX}-unix/amd64.cm
 lib/smlnj/lib/smlnj/viscomp/.cm/${BOX}-unix/basics.cm
 lib/smlnj/lib/smlnj/viscomp/.cm/${BOX}-unix/core.cm
@@ -174,9 +163,10 @@ lib/smlnj/lib/smlnj/viscomp/.cm/${BOX}-unix/debugprof.cm
 lib/smlnj/lib/smlnj/viscomp/.cm/${BOX}-unix/elabdata.cm
 lib/smlnj/lib/smlnj/viscomp/.cm/${BOX}-unix/elaborate.cm
 lib/smlnj/lib/smlnj/viscomp/.cm/${BOX}-unix/execute.cm
-lib/smlnj/lib/smlnj/viscomp/.cm/${BOX}-unix/hppa.cm
 lib/smlnj/lib/smlnj/viscomp/.cm/${BOX}-unix/parser.cm
 lib/smlnj/lib/smlnj/viscomp/.cm/${BOX}-unix/ppc.cm
 lib/smlnj/lib/smlnj/viscomp/.cm/${BOX}-unix/sparc.cm
 lib/smlnj/lib/smlnj/viscomp/.cm/${BOX}-unix/x86.cm
 lib/smlnj/lib/unix-lib.cm/.cm/${BOX}-unix/unix-lib.cm
+lib/smlnj/lib/uuid-lib.cm/.cm/${BOX}-unix/uuid-lib.cm
+lib/smlnj/lib/xml-lib.cm/.cm/${BOX}-unix/xml-lib.cm
