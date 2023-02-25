@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/02/25 18:37:00 nikita Exp $
+
+BLAKE2s (nerd-fonts/2.2.2/DaddyTimeMono.zip) = 4915dd99704002696f9041e167b64f2d9fd1510d90e04f9a1b15f800843667de
+SHA512 (nerd-fonts/2.2.2/DaddyTimeMono.zip) = f375cb60c0be5de8bfbcf3806d0ccc1c34f0385f8cc72983b9dc0d80f799c7845e5a2a970ea73f4e5d8002e6d488160b1e6927a19d6f3bdc80c3ec1ae6d2efe8
+Size (nerd-fonts/2.2.2/DaddyTimeMono.zip) = 2154702 bytes
