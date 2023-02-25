@@ -1,47 +1,29 @@
-# $NetBSD: Makefile,v 1.43 2022/06/28 11:34:14 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2023/02/25 17:55:24 ryoon Exp $
 
-DISTNAME=	mos201src
-PKGNAME=	moscow_ml-2.01
-PKGREVISION=	11
+DISTNAME=	mosml-ver-2.10.1
+PKGNAME=	${DISTNAME:S/mosml-ver-/moscow_ml-/}
 CATEGORIES=	lang
-MASTER_SITES=	http://www.itu.dk/people/sestoft/mosml/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=kfl/}
+GITHUB_PROJECT=	mosml
+GITHUB_TAG=	ver-${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-#HOMEPAGE=	http://www.dina.kvl.dk/~sestoft/mosml.html
+HOMEPAGE=	https://mosml.org/
 COMMENT=	Moscow ML, a version of Standard ML
 
-WRKSRC=		${WRKDIR}/mosml/src
-USE_TOOLS+=	perl pax
+WRKSRC=		${WRKDIR}/${DISTNAME}
+USE_TOOLS+=	gmake perl
 
-BUILD_TARGET=	clean world
-MAKE_JOBS_SAFE=	no
+BUILD_DIRS=	src
+BUILD_TARGET=	world
 
-INSTALLATION_DIRS+=	share/examples/moscow_ml/calc
-INSTALLATION_DIRS+=	share/examples/moscow_ml/cgi
-INSTALLATION_DIRS+=	share/examples/moscow_ml/lexyacc
-INSTALLATION_DIRS+=	share/examples/moscow_ml/lexyacc/cl
-INSTALLATION_DIRS+=	share/examples/moscow_ml/manual
-INSTALLATION_DIRS+=	share/examples/moscow_ml/mls
-INSTALLATION_DIRS+=	share/examples/moscow_ml/modules
-INSTALLATION_DIRS+=	share/examples/moscow_ml/parsercomb
-INSTALLATION_DIRS+=	share/examples/moscow_ml/paulson
-INSTALLATION_DIRS+=	share/examples/moscow_ml/pretty
-INSTALLATION_DIRS+=	share/examples/moscow_ml/small
-INSTALLATION_DIRS+=	share/examples/moscow_ml/units
-INSTALLATION_DIRS+=	share/examples/moscow_ml/weak
-INSTALLATION_DIRS+=	share/examples/moscow_ml/webserver
+MAKE_FLAGS+=	PREFIX=${PREFIX}
+
+LDFLAGS=		${COMPILER_RPATH_FLAG}${PREFIX}/lib
+BUILD_MAKE_FLAGS+=	GMPLIBDIR=${BUILDLINK_DIR}/lib
 
 .include "../../mk/dlopen.buildlink3.mk"
 BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
 
-post-extract:
-	${CHMOD} -x ${WRKDIR}/mosml/examples/modules/matrix.sml
-
-post-install:
-	cd ${WRKDIR}/mosml/examples && ${PAX} -rw . \
-		${DESTDIR}${PREFIX}/share/examples/moscow_ml
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} \
-		${DESTDIR}${PREFIX}/share/examples/moscow_ml
-	${CHMOD} -R ugo+rX ${DESTDIR}${PREFIX}/share/examples/moscow_ml
-
+.include "../../devel/gmp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

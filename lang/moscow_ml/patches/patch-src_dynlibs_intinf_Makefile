@@ -1,0 +1,21 @@
+$NetBSD: patch-src_dynlibs_intinf_Makefile,v 1.1 2023/02/25 17:55:24 ryoon Exp $
+
+--- src/dynlibs/intinf/Makefile.orig	2014-08-28 11:45:21.000000000 +0000
++++ src/dynlibs/intinf/Makefile
+@@ -15,6 +15,7 @@ include ../../Makefile.inc
+ ROOTDIR:=../..
+ CFLAGS=-Dunix -O3 $(OPTS) $(ADDDYNLIBCFLAGS) -I$(CAMLRT) -I${GMPINCDIR}
+ #CFLAGS=-Dunix -O2 $(OPTS) $(ADDDYNLIBCFLAGS) -I$(INCDIR) -I ${GMPDIR}
++LDFLAGS+=-L$(GMPLIBDIR)
+ 
+ MOSMLTOOLS=camlrunm $(TOOLDIR)
+ 
+@@ -31,7 +32,7 @@ intinf.o: intinf.c
+ 	$(CC) $(CFLAGS) -c -o intinf.o intinf.c
+ 
+ libmgmp.so: intinf.o
+-	$(DYNLD) -o libmgmp.so intinf.o -L$(GMPLIBDIR) -lgmp -lc
++	$(DYNLD) ${LDFLAGS} -o libmgmp.so intinf.o -lgmp -lc
+ 
+ test:
+ 	echo $(CURDIR)
