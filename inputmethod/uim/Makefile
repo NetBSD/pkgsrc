@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.174 2023/01/29 21:16:58 ryoon Exp $
+# $NetBSD: Makefile,v 1.175 2023/02/25 17:20:16 ryoon Exp $
 
-PKGREVISION= 7
 .include "../../inputmethod/uim/Makefile.common"
 
 COMMENT=	Multilingual input method library
@@ -73,6 +72,8 @@ post-install:
 .include "modules.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
+.include "../../mk/terminfo.buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../devel/editline/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libgcroots+=	libgcroots>=0.2.3
