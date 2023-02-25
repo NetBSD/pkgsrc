@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1392 2023/02/25 11:05:24 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1393 2023/02/25 11:27:37 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1818,3 +1818,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/nawk to 20220122 [vins 2023-02-24]
 	Updated www/nsm to 2.4.12 [nikita 2023-02-25]
 	Updated devel/libgit2 to 1.6.0 [wiz 2023-02-25]
+	Updated pkgtools/bootstrap-mk-files to 20230225 [jperkin 2023-02-25]
