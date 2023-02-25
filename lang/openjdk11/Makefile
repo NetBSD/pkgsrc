@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.48 2023/01/29 21:16:59 ryoon Exp $
+# $NetBSD: Makefile,v 1.49 2023/02/25 18:06:47 ryoon Exp $
 
 DISTNAME=	jdk11u-${GITHUB_TAG:C/\+/-/}
 PKGNAME=	openjdk11-1.${GITHUB_TAG:C/\+/./:C/jdk-([.0-9]+).*/\1/}
-PKGREVISION=	3
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=battleblow/}
 GITHUB_PROJECT=	jdk11u
-GITHUB_TAG=	jdk-11.0.16+8-1
+GITHUB_TAG=	jdk-11.0.18+10-1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://openjdk.java.net/
@@ -75,8 +74,7 @@ CONFIGURE_ARGS+=	USER=pkgsrc
 # Avoid build errors when JAVA_HOME and CLASSPATH are defined by user.
 MAKE_ENV+=	JAVA_HOME=
 MAKE_ENV+=	CLASSPATH=
-.if !empty(MACHINE_PLATFORM:MNetBSD-9.99.8[1-9]-*) || \
-    !empty(MACHINE_PLATFORM:MNetBSD-9.99.9[0-9]-*)
+.if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} > 099980
 ALL_ENV+=	SED="sed -g"
 .endif
 
