@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2023/02/25 11:05:14 wiz Exp $
+@comment $NetBSD: PLIST,v 1.16 2023/02/25 17:28:45 wiz Exp $
 bin/git2
 include/git2.h
 include/git2/annotated_commit.h
@@ -94,6 +94,6 @@ include/git2/types.h
 include/git2/version.h
 include/git2/worktree.h
 lib/libgit2.so
-lib/libgit2.so.1.5
-lib/libgit2.so.1.5.0
+lib/libgit2.so.1.6
+lib/libgit2.so.${PKGVERSION}
 lib/pkgconfig/git2.pc
