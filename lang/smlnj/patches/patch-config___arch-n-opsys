@@ -1,15 +1,23 @@
-$NetBSD: patch-config___arch-n-opsys,v 1.2 2016/04/14 22:04:47 dholland Exp $
+$NetBSD: patch-config___arch-n-opsys,v 1.3 2023/02/25 17:58:39 ryoon Exp $
 
 Learn about x86_64.
 
---- config/_arch-n-opsys~	2011-03-22 13:30:14.000000000 +0000
+--- config/_arch-n-opsys.orig	2022-07-28 04:55:45.000000000 +0000
 +++ config/_arch-n-opsys
-@@ -126,7 +126,7 @@ case `uname -s` in
+@@ -146,14 +146,15 @@ case `uname -s` in
+     ;;
+   NetBSD)
+     case `uname -r` in
++      10.*) OPSYS=netbsd ;;
+       1.*) exit 1 ;;
+       2.*) exit 1 ;;
+       *) OPSYS=netbsd ;;
      esac
      HEAP_OPSYS=bsd
      case `uname -p` in
 -      *86) ARCH=x86;;
-+      *86|x86_64) ARCH=x86;;
+       x86_64) ARCH=$(pick_arch x86 amd64) ;;
++      *86) ARCH=x86;;
        powerpc) ARCH=ppc;;
        sparc) ARCH=sparc;;
        *) exit 1;;

@@ -1,0 +1,13 @@
+$NetBSD: patch-src_runtime_objs_mk.amd64-freebsd,v 1.1 2023/02/25 17:58:39 ryoon Exp $
+
+--- src/runtime/objs/mk.amd64-freebsd.orig	2022-07-28 04:55:45.000000000 +0000
++++ src/runtime/objs/mk.amd64-freebsd
+@@ -8,7 +8,7 @@ SHELL =		/bin/sh
+ MAKE =		make
+ AS =		as --64
+ CC =		cc -std=gnu99
+-CFLAGS =	-O2 -m64
++CFLAGS =	@CFLAGS@ -m64
+ CPP =		cc -x assembler-with-cpp -E -P
+ XOBJS =
+ XLIBS =		../c-libs/dl/libunix-dynload.a

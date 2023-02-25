@@ -1,19 +1,10 @@
-$NetBSD: patch-aa,v 1.7 2016/04/14 22:04:47 dholland Exp $
+$NetBSD: patch-aa,v 1.8 2023/02/25 17:58:39 ryoon Exp $
 
 Configure for pkgsrc.
 
---- config/targets.orig	2010-02-03 19:40:28.000000000 +0300
-+++ config/targets	2010-02-07 05:56:52.000000000 +0300
-@@ -91,7 +91,7 @@
- 
- # build ML-Burg
- #
--#request ml-burg
-+request ml-burg
- 
- # pre-compile and install the remaining components of the SML/NJ library
- # (everything except smlnj-lib.cm, aka Util, itself)
-@@ -100,7 +100,7 @@
+--- config/targets.orig	2022-07-28 04:55:45.000000000 +0000
++++ config/targets
+@@ -123,7 +123,7 @@ request smlnj-lib
  
  # pre-compile and install CM "portable graph" utility library
  #
@@ -22,7 +13,7 @@ Configure for pkgsrc.
  
  # pre-compile and install "Trace-Debug-Profile" utility library
  # (provides simple back-trace- and coverage facilities)
-@@ -120,7 +120,7 @@
+@@ -143,7 +143,7 @@ request cml-lib
  # pre-compile and install eXene, which is a library for X-Windows programming.
  # EXene requires CML.
  #
@@ -31,51 +22,21 @@ Configure for pkgsrc.
  
  # pre-compile (certain) parts of MLRISC that are not already part of the SML/NJ
  # compiler itself
-@@ -130,7 +130,7 @@
- # pre-compile and install the C-Kit, which is a library for parsing and
- # type-checking C programs
- #
--#request ckit
-+request ckit
- 
- # pre-compile and install the ML-NLFFI Library, which is the core of
- # a new foreign function interface (where "foreign" functions are
-@@ -140,7 +140,7 @@
- # This preview release currently works under X86/Linux, Sparc/Solaris,
- # PPC/MacOSX, and X86/Win32.
- #
--#request ml-nlffi-lib
-+request ml-nlffi-lib
- 
- # build ML-NLFFI-Gen, a program generator tool used in conjunction with
- # the new "NLFFI" foreign function interface.  The tool generates ML
-@@ -149,13 +149,13 @@
- # This preview release currently works under X86/Linux, Sparc/Solaris,
- # PPC/MacOSX, and X86/Win32.
- #
--#request ml-nlffigen
-+request ml-nlffigen
- 
- # pre-compile and install the MLRISC Tools library.
+@@ -188,7 +188,7 @@ endif
  # This library is for parsing and pretty printing SML code.
  # It's used by various MLRISC code generator generator.
  #
 -#request mlrisc-tools
 +request mlrisc-tools
  
- # Build and install the 'nowhere' program translator.
- # This tool translates programs with conditional patterns (where clauses) 
-@@ -163,11 +163,11 @@
+ # build ML-Burg
+ #
+@@ -200,7 +200,7 @@ request ml-burg
  # (bad) documentation.
  # (Requires the mlrisc-tools library!)
  #
 -#request nowhere
 +request nowhere
  
- # Build and install 'heap2asm' - an experimental component of
- # a new facility for producing true stand-alone executables.
--#request heap2asm
-+request heap2asm
- 
- # Note: autoloading is always enabled.
- #   In order to customize what is being pre-registered for autoloading
+ # Build and install 'heap2asm', which is used by 'heap2exec'
+ # for producing self-contained (aka stand-alone) executables.

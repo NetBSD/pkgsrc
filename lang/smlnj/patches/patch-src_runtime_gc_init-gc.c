@@ -1,12 +1,12 @@
-$NetBSD: patch-src_runtime_gc_init-gc.c,v 1.1 2016/04/14 21:58:22 dholland Exp $
+$NetBSD: patch-src_runtime_gc_init-gc.c,v 1.2 2023/02/25 17:58:39 ryoon Exp $
 
 Use struct timeval instead of blithely assuming that some private
 struct declaration is always bit compatible with it. (Because it
 isn't.) From PR 40954.
 
---- src/runtime/gc/init-gc.c.orig	2009-03-03 18:15:36.000000000 -0500
-+++ src/runtime/gc/init-gc.c	2009-03-03 18:17:03.000000000 -0500
-@@ -218,12 +218,16 @@ void InitHeap (ml_state_t *msp, bool_t i
+--- src/runtime/gc/init-gc.c.orig	2022-07-28 04:55:45.000000000 +0000
++++ src/runtime/gc/init-gc.c
+@@ -283,12 +283,16 @@ void InitHeap (ml_state_t *msp, bool_t i
  #if defined(COLLECT_STATS)
      if (StatsFD > 0) {
  	stat_hdr_t	hdr;
@@ -24,4 +24,3 @@ isn't.) From PR 40954.
  	write (StatsFD, (char *)&hdr, sizeof(stat_hdr_t));
      }
  #endif
-
