@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1396 2023/02/25 13:56:40 bacon Exp $
+$NetBSD: CHANGES-2023,v 1.1397 2023/02/25 17:21:09 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1822,3 +1822,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated biology/htslib to 1.17 [bacon 2023-02-25]
 	Updated biology/samtools to 1.17 [bacon 2023-02-25]
 	Updated biology/bcftools to 1.17 [bacon 2023-02-25]
+	Updated inputmethod/uim to 1.8.9 [ryoon 2023-02-25]
