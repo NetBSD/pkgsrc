@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1391 2023/02/25 00:11:30 nikita Exp $
+$NetBSD: CHANGES-2023,v 1.1392 2023/02/25 11:05:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1817,3 +1817,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/ruby-gtksourceview3 to 4.1.2 [tsutsui 2023-02-24]
 	Updated lang/nawk to 20220122 [vins 2023-02-24]
 	Updated www/nsm to 2.4.12 [nikita 2023-02-25]
+	Updated devel/libgit2 to 1.6.0 [wiz 2023-02-25]
