@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2022/12/13 10:27:03 adam Exp $
+$NetBSD: distinfo,v 1.11 2023/02/25 13:50:38 bacon Exp $
 
-BLAKE2s (htslib-1.16.tar.bz2) = 5a4620982ac745706107fd0646de630b2410d133b4966fffa304ef62bb345beb
-SHA512 (htslib-1.16.tar.bz2) = 9fa0b1f9bba50f889d4542825c9543fb3b34c13b4cc0e18940a66fafd130749574bfa2c2663d8b39f0b4ed2b298bf130367cda1b17b2929093d64b386730cbc5
-Size (htslib-1.16.tar.bz2) = 4466776 bytes
+BLAKE2s (htslib-1.17.tar.bz2) = 01a90e639179c0f819a24f74cfe232963699c79b94c153e45f23a2bccac50373
+SHA512 (htslib-1.17.tar.bz2) = 624ab449d57713dab2d34399926c065f8cff8a45e6fbe68e0bb518c601421f587b613caeb095f8639b1d67cdb4a65d658c85f942173bcaa48da026fe15def5d3
+Size (htslib-1.17.tar.bz2) = 4619884 bytes
