@@ -1,32 +1,11 @@
-$NetBSD: distinfo,v 1.93 2022/10/08 11:20:07 nia Exp $
+$NetBSD: distinfo,v 1.94 2023/02/25 18:09:15 ryoon Exp $
 
-BLAKE2s (openjdk7/bootstrap-jdk-1.7.76-freebsd-10-amd64-20150301.tar.xz) = 8745b980e290e509c0dd09706398b89afce85fee1405b9367b6684c83d56b96a
-SHA512 (openjdk7/bootstrap-jdk-1.7.76-freebsd-10-amd64-20150301.tar.xz) = 6ed928cc68503c27edd6f3a90f94e1e762192d41997b12903e37071f4fcd34f5579fa970e59c240928eaae60729300fbfdb02a5ec1136bc757ee24f1ee554af4
-Size (openjdk7/bootstrap-jdk-1.7.76-freebsd-10-amd64-20150301.tar.xz) = 26404752 bytes
 BLAKE2s (openjdk7/bootstrap-jdk-1.7.76-netbsd-7-amd64-20150301.tar.xz) = f425ea056cb5b06be950a38d3c6cc517e18a4fa6e9e9db010f380c63be6563a5
 SHA512 (openjdk7/bootstrap-jdk-1.7.76-netbsd-7-amd64-20150301.tar.xz) = 664d1f987af6b7271a5c6553a606beae09de3e77cea44ae8dd9327f78ac07afc9d81335ee342bd564617a3e54982d2ec75a827dcfc1ab4a2c54a041dd571f4fb
 Size (openjdk7/bootstrap-jdk-1.7.76-netbsd-7-amd64-20150301.tar.xz) = 26955712 bytes
-BLAKE2s (openjdk7/bootstrap-jdk-1.7.76-netbsd-7-earmv6hf-20150306.tar.xz) = efc81291c3e2ee6810a6ace11a7e2f0688c2e9e714545240487d511b60ceb450
-SHA512 (openjdk7/bootstrap-jdk-1.7.76-netbsd-7-earmv6hf-20150306.tar.xz) = 6514db6e244214169b85d37ea0a41655822a8db11922574e287802aef684cd753237521a5bffa6be1cd1e26e23c19851a5ea89fea54dbc935485903d524dd152
-Size (openjdk7/bootstrap-jdk-1.7.76-netbsd-7-earmv6hf-20150306.tar.xz) = 23104564 bytes
-BLAKE2s (openjdk7/bootstrap-jdk-1.7.76-netbsd-7-i386-20150301.tar.xz) = cd349b7c2dca11e42f1e427a8ed6a53820ffaa9df166053ebcf98aa09aa403e0
-SHA512 (openjdk7/bootstrap-jdk-1.7.76-netbsd-7-i386-20150301.tar.xz) = 8c809f505435672f478036ddab436acdae032a2eed17698d36d74960fb17bde6f98b460c5904ac4737259e5e59d1a5447973a40085c633687d4b76ac3feda53c
-Size (openjdk7/bootstrap-jdk-1.7.76-netbsd-7-i386-20150301.tar.xz) = 27615992 bytes
-BLAKE2s (openjdk7/bootstrap-jdk-1.7.76-netbsd-7-sparc64-20150301.tar.xz) = d24626a2251851aeb817021977f86b704cc07e5f3be7848e989d7dd35e520073
-SHA512 (openjdk7/bootstrap-jdk-1.7.76-netbsd-7-sparc64-20150301.tar.xz) = 5391de2d35934b79462b603cd19c65b21712891d59afe9d6e5319ea479fe2bc528e4f423648cd6fc9bcaec97ed57b9e01d1c46d04bc4edb9ed5ae7131b7cd5d7
-Size (openjdk7/bootstrap-jdk-1.7.76-netbsd-7-sparc64-20150301.tar.xz) = 23041084 bytes
-BLAKE2s (openjdk7/bootstrap-jdk-1.8.181-netbsd-8-aarch64-20180917.tar.xz) = 36ddd58f37fc165d19ca2647b0b6ef7d32640ebee0fcd5674e0708cb806800fe
-SHA512 (openjdk7/bootstrap-jdk-1.8.181-netbsd-8-aarch64-20180917.tar.xz) = b1f302d33f8a8630c46fc20177a8a56dd521a51aec383e1111734130ea522d4da700554be9d82901930b497e9b73d1f714e3fb0232e4711aaaff9513a5c985cf
-Size (openjdk7/bootstrap-jdk-1.8.181-netbsd-8-aarch64-20180917.tar.xz) = 29542212 bytes
-BLAKE2s (openjdk7/bootstrap-jdk7u60-bin-dragonfly-3.6-amd64-20140719.tar.bz2) = 7c16bafb772ca8a98ed300b751588d7c90dafe1d994822372971167993b44543
-SHA512 (openjdk7/bootstrap-jdk7u60-bin-dragonfly-3.6-amd64-20140719.tar.bz2) = 15ee0583de67df94c980eec197e5279344eaf94d4830e2030f8c8cbc795bce1e0abdf435be4be4c5da271a41d5441e9ebf4bd4f088b17698b5a1e4cc685ebf3a
-Size (openjdk7/bootstrap-jdk7u60-bin-dragonfly-3.6-amd64-20140719.tar.bz2) = 37910104 bytes
-BLAKE2s (openjdk7/bootstrap-jdk7u60-bin-dragonfly-3.8-amd64-20140719.tar.bz2) = 98777d4ff1f864a9ff5a42870b30319abd39488be2abfdc5e7d3d59b016c5807
-SHA512 (openjdk7/bootstrap-jdk7u60-bin-dragonfly-3.8-amd64-20140719.tar.bz2) = 1403e582dacd0474e57d9aa8f1333060c50d099ef5d2c5a992ff7f63dcde2e538ff1e7fb78e45d12fd5aea6daf0704672e7f326399d415ee0d6bb53b6f925e9f
-Size (openjdk7/bootstrap-jdk7u60-bin-dragonfly-3.8-amd64-20140719.tar.bz2) = 37883700 bytes
-BLAKE2s (openjdk7/jdk8u-jdk8u342-b07.1.tar.gz) = d6fab9676f8823b787cab9a818b4dfda9899e7a38f5d5c7cfeaafd172c64f05a
-SHA512 (openjdk7/jdk8u-jdk8u342-b07.1.tar.gz) = 8e3055a680d640879035246c1a0c612dd09f59f3b58d44c035c32fb7351e32d353c7b79a6cf784b432a533f98d462355da6456c6508175f7a15bb7297d138304
-Size (openjdk7/jdk8u-jdk8u342-b07.1.tar.gz) = 88770755 bytes
+BLAKE2s (openjdk7/jdk8u-jdk8u362-b09.1.tar.gz) = 6fe7fea2c53fef32f1ed7b3c95e5e10062d9dc480e7905257d4a75045f52e20b
+SHA512 (openjdk7/jdk8u-jdk8u362-b09.1.tar.gz) = c05daef750dcb5cbddba70d13a7d8fff651453e8202983713c57422b35d9875765132d616e51638458d06d880fb8e05d87c578084ff4b46569373d647ced9a9d
+Size (openjdk7/jdk8u-jdk8u362-b09.1.tar.gz) = 88539791 bytes
 SHA1 (patch-aa) = 8810cfed600ee3bf36a408cc77e497ac7b3e6838
 SHA1 (patch-al) = f65f739805c2ef471a4de10d6da42e86c5561b8c
 SHA1 (patch-an) = fce4da00762770c1c0592bd225bf73e875252178
