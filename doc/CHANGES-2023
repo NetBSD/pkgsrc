@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1394 2023/02/25 13:50:51 bacon Exp $
+$NetBSD: CHANGES-2023,v 1.1395 2023/02/25 13:52:45 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1820,3 +1820,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/libgit2 to 1.6.0 [wiz 2023-02-25]
 	Updated pkgtools/bootstrap-mk-files to 20230225 [jperkin 2023-02-25]
 	Updated biology/htslib to 1.17 [bacon 2023-02-25]
+	Updated biology/samtools to 1.17 [bacon 2023-02-25]
