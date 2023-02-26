@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2022/09/16 19:53:44 he Exp $
+# $NetBSD: Makefile,v 1.14 2023/02/26 18:18:11 wiz Exp $
 #
 
 DISTNAME=	boot.${BOX}-unix
@@ -55,7 +55,7 @@ BUILD_ENV+=	PATCH=${PATCH:Q} PATCH_ARGS=${PATCH_ARGS:Q}
 #CFLAGS+=	-Wall
 
 # note that this includes bsd.prefs.mk
-.include "../../lang/smlnj/Makefile.common"
+.include "Makefile.common"
 
 BOXES=	x86 ppc sparc
 
