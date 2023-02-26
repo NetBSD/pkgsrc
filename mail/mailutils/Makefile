@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2022/12/15 13:58:02 vins Exp $
+# $NetBSD: Makefile,v 1.2 2023/02/26 20:51:31 vins Exp $
 
 DISTNAME=	mailutils-3.15
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.gnu.org/gnu/mailutils/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	vins@NetBSD.org
 HOMEPAGE=	https://mailutils.org/
 COMMENT=	Utilities, daemons, and filters for processing e-mail
 LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v3
