@@ -1,0 +1,39 @@
+$NetBSD: patch-imap_src_osdep_unix_ssl__unix.c,v 1.1 2023/02/26 20:39:49 vins Exp $
+
+Some popular mail services enforce SNI for TLSv1.3 clients, so send it
+retry SSL_write() on blocking socket if we're told to do so.
+
+--- imap/src/osdep/unix/ssl_unix.c.orig	2022-06-03 00:14:00.475274788 +0000
++++ imap/src/osdep/unix/ssl_unix.c
+@@ -391,6 +391,7 @@ static char *ssl_start_work (SSLSTREAM *
+ {
+   BIO *bio;
+   X509 *cert;
++  int ssl_err;
+   unsigned long sl,tl;
+   int minv, maxv;
+   long masklow, maskhigh;
+@@ -465,7 +466,13 @@ static char *ssl_start_work (SSLSTREAM *
+   SSL_set_connect_state (stream->con);
+   if (SSL_in_init (stream->con)) SSL_total_renegotiations (stream->con);
+ 				/* now negotiate SSL */
+-  if (SSL_write (stream->con,"",0) < 0)
++  do {
++    ssl_err = SSL_write (stream->con,"",0);
++  } while (ssl_err < 0 &&
++      ((SSL_get_error(stream->con, ssl_err) == SSL_ERROR_SYSCALL && errno == EINTR) ||
++       SSL_get_error(stream->con, ssl_err) == SSL_ERROR_WANT_READ ||
++        SSL_get_error(stream->con, ssl_err) == SSL_ERROR_WANT_WRITE));
++  if (ssl_err < 0)
+     return ssl_last_error ? ssl_last_error : "SSL negotiation failed";
+ 				/* need to validate host names? */
+   cert = SSL_get_peer_certificate (stream->con);
+@@ -530,7 +537,7 @@ static char *ssl_validate_cert (X509 *ce
+ 				/* make sure have a certificate */
+   if (!cert) return "No certificate from server";
+ 				/* Method 1: locate CN */
+-#ifndef OPENSSL_1_1_0
++#if !defined(OPENSSL_1_1_0) && !defined(LIBRESSL_VERSION_NUMBER)
+   if (cert->name == NIL)
+      ret = "No name in certificate";
+   else if ((s = strstr (cert->name,"/CN=")) != NIL) {
