@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1409 2023/02/26 13:35:18 taca Exp $
+$NetBSD: CHANGES-2023,v 1.1410 2023/02/26 13:36:37 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1842,3 +1842,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/ruby-padrino-mailer to 0.15.3 [taca 2023-02-26]
 	Updated www/ruby-padrino to 0.15.3 [taca 2023-02-26]
 	Updated www/ruby-aws-partitions to 1.716.0 [taca 2023-02-26]
+	Updated www/ruby-aws-sdk-s3 to 1.119.1 [taca 2023-02-26]
