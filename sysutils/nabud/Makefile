@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2023/02/11 23:15:43 thorpej Exp $
+# $NetBSD: Makefile,v 1.6 2023/02/26 18:07:40 thorpej Exp $
 #
 
-NABUD_VERS=	1.1
+NABUD_VERS=	1.2
 
 GITHUB_PROJECT=	nabud
 GITHUB_TAG=	v${NABUD_VERS}
@@ -27,10 +27,21 @@ PKG_GECOS.${NABUD_USER}=NABU user
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} != "Darwin"
+#
 # nabud uses CommonCrypto and SecureTransport on Darwin.  It relies
 # on OpenSSL everywhere else.
+#
+.if ${OPSYS} != "Darwin"
 .include "../../security/openssl/buildlink3.mk"
+.endif
+
+#
+# nabuctl uses the BSD libedit, but can also use other libraries with a
+# compatible readline() function.
+#
+.if ${OPSYS} != "NetBSD" && ${OPSYS} != "FreeBSD" && \
+    ${OPSYS} != "OpenBSD" && ${OPSYS} != "Darwin"
+.include "../../devel/readline/buildlink3.mk"
 .endif
 
 .include "../../mk/bsd.pkg.mk"
