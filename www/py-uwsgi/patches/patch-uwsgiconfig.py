@@ -1,10 +1,10 @@
-$NetBSD: patch-uwsgiconfig.py,v 1.10 2015/04/06 02:35:54 rodent Exp $
+$NetBSD: patch-uwsgiconfig.py,v 1.11 2023/02/26 00:52:49 joerg Exp $
 
 Disable inclusion of certain packages by default. Use options framework instead.
 
---- uwsgiconfig.py.orig	2015-03-17 07:34:34.000000000 +0000
+--- uwsgiconfig.py.orig	2022-10-24 10:21:58.000000000 +0000
 +++ uwsgiconfig.py
-@@ -73,6 +73,7 @@ report = {
+@@ -86,6 +86,7 @@ report = {
      'timer': False,
      'filemonitor': False,
      'pcre': False,
@@ -12,7 +12,20 @@ Disable inclusion of certain packages by default. Use options framework instead.
      'routing': False,
      'capabilities': False,
      'yaml': False,
-@@ -851,6 +852,8 @@ class uConf(object):
+@@ -830,10 +831,11 @@ class uConf(object):
+ 
+         global uwsgi_version
+ 
+-        kvm_list = ['FreeBSD', 'OpenBSD', 'NetBSD', 'DragonFly']
++        kvm_list = ['FreeBSD', 'OpenBSD', 'DragonFly']
+ 
+         if 'UWSGI_PROFILE_OVERRIDE' in os.environ:
+             for item in os.environ['UWSGI_PROFILE_OVERRIDE'].split(';'):
++                if not item: continue
+                 k,v = item.split('=', 1)
+                 self.set(k, v)
+ 
+@@ -921,6 +923,8 @@ class uConf(object):
          if locking_mode == 'auto':
              if uwsgi_os == 'Linux' or uwsgi_os == 'SunOS':
                  locking_mode = 'pthread_mutex'
@@ -21,7 +34,7 @@ Disable inclusion of certain packages by default. Use options framework instead.
              # FreeBSD umtx is still not ready for process shared locking
              # starting from FreeBSD 9 posix semaphores can be shared between processes
              elif uwsgi_os in ('FreeBSD', 'GNU/kFreeBSD'):
-@@ -1054,10 +1057,11 @@ class uConf(object):
+@@ -1124,10 +1128,11 @@ class uConf(object):
              self.libs.append('-lcap')
              report['capabilities'] = True
  
