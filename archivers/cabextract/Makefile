@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2023/02/14 15:57:06 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2023/02/26 06:40:52 wiz Exp $
 
-DISTNAME=	cabextract-1.10
+DISTNAME=	cabextract-1.11
 CATEGORIES=	archivers
 MASTER_SITES=	https://www.cabextract.org.uk/
 
