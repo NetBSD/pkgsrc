@@ -1,24 +1,40 @@
-# $NetBSD: Makefile,v 1.52 2023/01/15 17:31:01 bsiegert Exp $
+# $NetBSD: Makefile,v 1.53 2023/02/26 20:39:49 vins Exp $
 
-DISTNAME=	alpine-2.25
-PKGREVISION=	2
+DISTNAME=	alpine-2.26
 CATEGORIES=	mail
-MASTER_SITES=	http://alpine.x10host.com/alpine/release/src/
-DIST_SUBDIR=	${DISTNAME}p1	# XXX maildir.patch changed upstream
+# repo at https://repo.or.cz/alpine.git
+MASTER_SITES=	https://alpineapp.email/alpine/release/src/
+DIST_SUBDIR=	${PKGNAME_NOREV}
 EXTRACT_SUFX=	.tar.xz
 
-PATCH_SITES=		https://alpine.x10host.com/alpine/patches/alpine-${PKGVERSION_NOREV}/
+PATCH_SITES=		https://alpineapp.email/alpine/patches/alpine-${PKGVERSION_NOREV}/
+# Maildir Support
 PATCHFILES+=		maildir.patch.gz
+# Enhanced Fancy Thread Interface
+PATCHFILES+=		fancy.patch.gz
+# Justify paragraphs that contain more than one level of quoting
+PATCHFILES+=		fillpara.patch.gz
+# Send e-mail from the command line
+PATCHFILES+=		outgoing.patch.gz
+# Accents in pico
+PATCHFILES+=		WrtAcc.patch.gz
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://alpine.x10host.com/index.html
+HOMEPAGE=	https://alpineapp.email/
 COMMENT=	Program for Internet News and E-mail
 LICENSE=	apache-2.0
+
+CONFLICTS+=	pico-[0-9]*      # bin/pico
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	msgfmt msgmerge xgettext
 USE_LIBTOOL=	yes
+
+MAKE_JOBS_SAFE=	no
+BUILD_DEFS+=	VARBASE
+
+.include "../../mk/bsd.prefs.mk"
 
 CONFIGURE_ARGS+=	--with-ssl-dir=${SSLBASE}
 CONFIGURE_ARGS+=	--with-ssl-certs-dir=${SSLCERTS:Q}
@@ -27,16 +43,24 @@ CONFIGURE_ARGS+=	--with-ssl-lib-dir=${SSLBASE}/lib
 CONFIGURE_ARGS+=	--with-system-pinerc=${PKG_SYSCONFDIR}/pine.conf
 CONFIGURE_ARGS+=	--with-system-fixed-pinerc=${PKG_SYSCONFDIR}/pine.conf.fixed
 CONFIGURE_ARGS+=	--with-passfile=.pine-passfile
-# disabled, for Web Alpine Support
-CONFIGURE_ARGS+=	--without-tcl
+CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv}
+CONFIGURE_ARGS+=	--with-libintl-prefix=${BUILDLINK_PREFIX.gettext}
+.if ${OPSYS} == "Linux"
+CONFIGURE_ARGS+=	--with-system-mail-directory=${VARBASE}/spool/mail
+.else
+CONFIGURE_ARGS+=	--with-system-mail-directory=${VARBASE}/mail
+.endif
 
-# Should be handled properly with an ldap option and buildlinked.
-CONFIGURE_ARGS.SunOS+=	--without-ldap
+.include "options.mk"
 
-MAKE_JOBS_SAFE=		no
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+EGDIR=		${PREFIX}/share/examples/${PKGBASE}
+CONF_FILES+=	${EGDIR}/pine.conf \
+		${PKG_SYSCONFDIR}/pine.conf
 
-.include "../../mk/bsd.prefs.mk"
+PKG_DOCS=	LICENSE NOTICE README README.maildir VERSION
+PKG_DOCS+=	doc/brochure.txt doc/mailcap.unx doc/mime.types
+PKG_DOCS+=	doc/tech-notes/tech-notes.txt
+DOCDIR=		${PREFIX}/share/doc/${PKGBASE}
 
 # mach/mach.h defines panic, differently.
 SUBST_CLASSES.Darwin+=	panic
@@ -48,11 +72,47 @@ SUBST_FILES.panic+=	*/*/*/*.c
 SUBST_FILES.panic+=	pith/util.h
 SUBST_SED.panic+=	-e 's,panic *(,Panic(,g'
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/alpine/alpine ${DESTDIR}${PREFIX}/bin/alpine
-	${INSTALL_MAN} ${WRKSRC}/doc/man1/alpine.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/alpine.1
+SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	pre-configure
+SUBST_MESSAGE.paths=	Replacing hard-coded paths.
+SUBST_FILES.paths=	doc/man1/alpine.1 doc/tech-notes/*.txt pith/pine.hlp
+SUBST_SED.paths+=	-e "s:/usr/local/pine.conf:${PKG_SYSCONFDIR}/pine.conf:g"
+SUBST_SED.paths+=	-e "s:/usr/local/lib:${PKG_SYSCONFDIR}:g"
+SUBST_SED.paths+=	-e "s:/usr/local/bin:${PREFIX}/bin:g"
+SUBST_SED.paths+=	-e "s:/usr/local/ssl:${SSLDIR}:g"
 
-.include "../../mk/terminfo.buildlink3.mk"
-.include "../../mk/pam.buildlink3.mk"
+SUBST_CLASSES+=		var
+SUBST_STAGE.var=	pre-configure
+SUBST_FILES.var=	alpine/pine-use.c doc/man1/alpine.1
+SUBST_VARS.var=		VARBASE
+SUBST_MESSAGE.var=	Replacing VARBASE placeholders.
+
+INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
+INSTALLATION_DIRS+=	share/examples/${PKGBASE}
+INSTALLATION_DIRS+=	share/doc/${PKGBASE}
+
+do-install:
+.for bin in \
+	alpine/alpine alpine/rpdump alpine/rpload	\
+ 		pico/pico pico/pilot
+	${INSTALL_PROGRAM} ${WRKSRC}/${bin} ${DESTDIR}${PREFIX}/bin
+.endfor
+.for man in alpine rpdump rpload pico pilot
+	${INSTALL_MAN} ${WRKSRC}/doc/man1/${man}.1	\
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+.endfor
+
+post-install:
+	${RUN}${WRKSRC}/alpine/alpine -conf > ${DESTDIR}${EGDIR}/pine.conf
+	${INSTALL_DATA} ${PKG_DOCS:S|^|${WRKSRC}/|} ${DESTDIR}${DOCDIR}
+
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/gettext-tools/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../mk/terminfo.buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
+.include "../../mk/dlopen.buildlink3.mk"
+.include "../../mk/krb5.buildlink3.mk"
+.include "../../mk/pam.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

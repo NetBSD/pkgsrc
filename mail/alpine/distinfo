@@ -1,11 +1,27 @@
-$NetBSD: distinfo,v 1.29 2021/12/26 10:28:24 plunky Exp $
+$NetBSD: distinfo,v 1.30 2023/02/26 20:39:49 vins Exp $
 
-BLAKE2s (alpine-2.25p1/alpine-2.25.tar.xz) = 6c1e0b8522b479477573d8af491045d5222758238fd83ba9fcb837d5c55afc6c
-SHA512 (alpine-2.25p1/alpine-2.25.tar.xz) = 76c214cf66f4ac7af3de40357ad3a592ff2a119e327e5f6c256125b7865d46b09197435fe6ac8077ab7a498e4821925939f3f902431ca77baa786e149466a193
-Size (alpine-2.25p1/alpine-2.25.tar.xz) = 7495372 bytes
-BLAKE2s (alpine-2.25p1/maildir.patch.gz) = 9d4c5e884815ec1c24286f264a0d5430e39f44971935e72c309e27e71062d7e7
-SHA512 (alpine-2.25p1/maildir.patch.gz) = 2973302432d8b7611cc5998c19ce8d9965b2c18a0dd06693a3f409becb3173df5a63d5b87859994bf13d216200823148d00255e242e0bc33b3952cdc7025ee26
-Size (alpine-2.25p1/maildir.patch.gz) = 34788 bytes
+BLAKE2s (alpine-2.26/WrtAcc.patch.gz) = 0ac2c946dea8f432bdfc1f847f2f31b9ef70d1634244fed1ec252c5baf812747
+SHA512 (alpine-2.26/WrtAcc.patch.gz) = 494d798775a384e8e42639437b14ee09bc174520f705e8830636f2039668cbe0f441011de753cb98f5a4d89059c285ef0fc205249a3a079bb0a88c4389cbd595
+Size (alpine-2.26/WrtAcc.patch.gz) = 2180 bytes
+BLAKE2s (alpine-2.26/alpine-2.26.tar.xz) = 4bd671ac3626ad65512971856c9d59121afdd7e2d2e9b5c9fd47de3881af8eaa
+SHA512 (alpine-2.26/alpine-2.26.tar.xz) = 359b5cb30be78a341b76c0475a2d5268b643788f14c9b5b9457af6748034e1d2e70fd7ddf59e5c59ad596a36d8a10afa9c41cbd74241c780b8575d8186168fd2
+Size (alpine-2.26/alpine-2.26.tar.xz) = 7517628 bytes
+BLAKE2s (alpine-2.26/fancy.patch.gz) = 8d5bd515ef996488786de30a84082ed3e37e803d552c5de31cddfa29392b71c2
+SHA512 (alpine-2.26/fancy.patch.gz) = 0840d319dc36715c091c65feff4fd3d7010bec8302b7df6e7ddd505f7590dc684729ce9983214c297efd23eb7b076c932ef15310194bea66ff0ed8b8c5c65796
+Size (alpine-2.26/fancy.patch.gz) = 25055 bytes
+BLAKE2s (alpine-2.26/fillpara.patch.gz) = d27a4dd199e1ab72f8766e2a3319753c7508588f9f627786a87c738d4000374c
+SHA512 (alpine-2.26/fillpara.patch.gz) = 0e7963ff55bad318dd5f743348ddd9a84f5f200c96fcf94d45564b2f4491071c63f9dda77fd9ac7fe72807ac6024589de4d95bbadecc661ceb7d8096769c24bb
+Size (alpine-2.26/fillpara.patch.gz) = 32103 bytes
+BLAKE2s (alpine-2.26/maildir.patch.gz) = feb77674402d0fe83420fba1950d79b4eae78c3ab87b5ebb700127bb6b432bde
+SHA512 (alpine-2.26/maildir.patch.gz) = 13297879e8edb10d87a3b05b2a0c123991ef5213b52ce6fd980a017a498cd5a0c1bd7eae0ef91dae60df5db2a878fa0a4544337b699e19dd4ca358e98af072a6
+Size (alpine-2.26/maildir.patch.gz) = 34840 bytes
+BLAKE2s (alpine-2.26/outgoing.patch.gz) = a7b110e64fe8863b03af14d1f3dccf03a70e0228c1715b2170d3b0361ba27211
+SHA512 (alpine-2.26/outgoing.patch.gz) = c5903a9c3869c301e497bda8fcd9201724be90459710bce167758e730051d022a67292893361dd73480a43bfad8909bc4554f10c84839d8f2f3deac781d868f7
+Size (alpine-2.26/outgoing.patch.gz) = 9039 bytes
+SHA1 (patch-alpine_pine-use.c) = 4661d2ead0a12cf94c40967bfe4dbaae72978631
+SHA1 (patch-doc_man1_alpine.1) = 98f144e123b26a949a4ae7bfed5f262d07a7d035
 SHA1 (patch-imap_src_c-client_auth_gss.c) = e6da9ee9dbe0751872d1400237a030112eaa56c6
 SHA1 (patch-imap_src_osdep_unix_Makefile.gss) = ca09bc26a139c68afe8ac1f99be54bd1fc0e77f0
 SHA1 (patch-imap_src_osdep_unix_kerb_mit.c) = c77d5ee1e8aee30811c2df0562caa375ed270c0e
+SHA1 (patch-imap_src_osdep_unix_ssl__unix.c) = f073043a3c1aa5d0ad352d947111a92416661c6a
+SHA1 (patch-pico_osdep_terminal.c) = 19a5467e9ac98a42c581fbe50d774b9762762436
