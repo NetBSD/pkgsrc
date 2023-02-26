@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1407 2023/02/26 07:46:31 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1408 2023/02/26 13:32:28 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1833,3 +1833,11 @@ Changes to the packages collection and infrastructure in 2023:
 	Added fonts/nerd-fonts-DaddyTimeMono version 2.2.2 [nikita 2023-02-25]
 	Updated archivers/cabextract to 1.11 [wiz 2023-02-26]
 	Updated sysutils/fd-find to 8.7.0 [wiz 2023-02-26]
+	Updated www/ruby-padrino-support to 0.15.3 [taca 2023-02-26]
+	Updated www/ruby-padrino-helpers to 0.15.3 [taca 2023-02-26]
+	Updated www/ruby-padrino-core to 0.15.3 [taca 2023-02-26]
+	Updated www/ruby-padrino-admin to 0.15.3 [taca 2023-02-26]
+	Updated www/ruby-padrino-cache to 0.15.3 [taca 2023-02-26]
+	Updated www/ruby-padrino-gen to 0.15.3 [taca 2023-02-26]
+	Updated www/ruby-padrino-mailer to 0.15.3 [taca 2023-02-26]
+	Updated www/ruby-padrino to 0.15.3 [taca 2023-02-26]
