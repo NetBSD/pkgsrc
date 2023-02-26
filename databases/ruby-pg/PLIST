@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2022/08/11 04:00:18 taca Exp $
+@comment $NetBSD: PLIST,v 1.20 2023/02/26 14:30:35 taca Exp $
 ${GEM_HOME}/build_info/${GEM_NAME}.info
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
@@ -19,18 +19,19 @@ ${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/BSDL
 ${GEM_LIBDIR}/Contributors.rdoc
 ${GEM_LIBDIR}/Gemfile
-${GEM_LIBDIR}/History.rdoc
+${GEM_LIBDIR}/History.md
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/Manifest.txt
 ${GEM_LIBDIR}/POSTGRES
 ${GEM_LIBDIR}/README-OS_X.rdoc
 ${GEM_LIBDIR}/README-Windows.rdoc
-${GEM_LIBDIR}/README.ja.rdoc
-${GEM_LIBDIR}/README.rdoc
+${GEM_LIBDIR}/README.ja.md
+${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/Rakefile.cross
 ${GEM_LIBDIR}/certs/ged.pem
 ${GEM_LIBDIR}/certs/larskanis-2022.pem
+${GEM_LIBDIR}/certs/larskanis-2023.pem
 ${GEM_LIBDIR}/ext/errorcodes.def
 ${GEM_LIBDIR}/ext/errorcodes.rb
 ${GEM_LIBDIR}/ext/errorcodes.txt
@@ -112,4 +113,9 @@ ${GEM_LIBDIR}/sample/replication_monitor.rb
 ${GEM_LIBDIR}/sample/test_binary_values.rb
 ${GEM_LIBDIR}/sample/wal_shipper.rb
 ${GEM_LIBDIR}/sample/warehouse_partitions.rb
+${GEM_LIBDIR}/translation/.po4a-version
+${GEM_LIBDIR}/translation/po/all.pot
+${GEM_LIBDIR}/translation/po/ja.po
+${GEM_LIBDIR}/translation/po4a.cfg
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
