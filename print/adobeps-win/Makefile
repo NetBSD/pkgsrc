@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2023/02/20 08:31:55 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2023/02/26 06:43:00 wiz Exp $
 
 DISTNAME=	winsteng
 PKGNAME=	adobeps-win-1.0.6
@@ -25,12 +25,6 @@ NTFILES=	ADOBEPS5.DLL ADOBEPSU.DLL ADOBEPSU.HLP DEFPRTR2.PPD
 DRIVERDIR=	${PREFIX}/share/cups/drivers
 
 INSTALLATION_DIRS=	${DRIVERDIR}
-
-# bug in cabextract?
-pre-extract:
-	${MKDIR} ${WRKSRC}/WinNT
-	${MKDIR} ${WRKSRC}/Win2000
-	${MKDIR} ${WRKSRC}/WinXP
 
 post-extract:
 	cd ${WRKSRC}; for dir in WinNT Windows; do			\
