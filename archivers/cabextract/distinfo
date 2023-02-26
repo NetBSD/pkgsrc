@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.22 2023/02/14 15:57:06 wiz Exp $
+$NetBSD: distinfo,v 1.23 2023/02/26 06:40:52 wiz Exp $
 
-BLAKE2s (cabextract-1.10.tar.gz) = a0576d30a098922f4d4f92444094779478b427c31f5636eea3f478b16cafc60a
-SHA512 (cabextract-1.10.tar.gz) = 38c19b0f6035d591b5894a3537c74f397518fdca5f9b2f747bb027bd59ef3f8a0ad1ae3a546d44b32f949380e0f4a76c14f9b543841ea51d857bfc4c5a6af5c7
-Size (cabextract-1.10.tar.gz) = 489126 bytes
+BLAKE2s (cabextract-1.11.tar.gz) = dc5e135a9e61e4283ec260e6ba62b49dea10ec6cca8039ef71a5273a6ae42976
+SHA512 (cabextract-1.11.tar.gz) = 416bdc5a889c3986b2a5d6ecb8526a69f2d85c34f4856da43951271ff4f31013e4197c56ea5f6b05061b511b980d5a65cb34b9b859d3013c1dbcbb89d43114f9
+Size (cabextract-1.11.tar.gz) = 489656 bytes
