@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1406 2023/02/26 06:41:03 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1407 2023/02/26 07:46:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1832,3 +1832,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/openjdk17 to 1.17.0.6.10 [ryoon 2023-02-25]
 	Added fonts/nerd-fonts-DaddyTimeMono version 2.2.2 [nikita 2023-02-25]
 	Updated archivers/cabextract to 1.11 [wiz 2023-02-26]
+	Updated sysutils/fd-find to 8.7.0 [wiz 2023-02-26]
