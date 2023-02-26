@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22645 2023/02/25 00:11:30 nikita Exp $
+$NetBSD: TODO,v 1.22646 2023/02/26 06:36:57 wiz Exp $
 
 Suggested new packages
 ======================
@@ -386,7 +386,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ImageMagick6-6.9.12.8
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
-	o MesaLib-23.0
+	o MesaLib-23.0.0
 	o OdfConverter-4.0
 	o PACK-0.0.4
 	o Pantomime-1.2.2
@@ -510,6 +510,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o bzr-gtk-0.103.0
 	o bzrtools-2.6.0
 	o c4-1.10
+	o cabextract-1.11
 	o cacti-1.2.19
 	o cacti-spine-1.2.16
 	o calc-2.11.10.1
@@ -641,6 +642,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o fakeroot-1.6.5
 	o fastp-0.20.1
 	o fd-3.01j
+	o fd-find-8.7.0
 	o felt-3.07 [wip]
 	o fet-6.0.1
 	o filerunner-14.06.18.10
