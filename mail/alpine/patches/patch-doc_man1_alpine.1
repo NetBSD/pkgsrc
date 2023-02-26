@@ -1,0 +1,24 @@
+$NetBSD: patch-doc_man1_alpine.1,v 1.1 2023/02/26 20:39:49 vins Exp $
+
+Fix default user mailbox path.
+
+--- doc/man1/alpine.1.orig	2022-06-03 00:14:00.467274807 +0000
++++ doc/man1/alpine.1
+@@ -318,7 +318,7 @@ uses the following environment variables
+ .if n .ta 2.8i
+ .if t .ta 2.1i
+ 
+-/usr/spool/mail/xxxx	Default folder for incoming mail.
++@VARBASE@/mail/xxxx	Default folder for incoming mail.
+ .br
+ ~/mail	Default directory for mail folders.
+ .br
+@@ -354,7 +354,7 @@ uses the following environment variables
+ .br
+ ~/.alpine-smime/public	Directory that contains public key(s).
+ .br
+-/tmp/.\\usr\\spool\\mail\\xxxx	Per-folder mailbox lock files.
++/tmp/.\\var\\mail\\xxxx	Per-folder mailbox lock files.
+ .br
+ ~/.pine-interrupted-mail	Message which was interrupted.
+ .br
