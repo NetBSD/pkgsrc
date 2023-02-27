@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2023/02/16 15:02:00 bsiegert Exp $
+# $NetBSD: Makefile,v 1.5 2023/02/27 20:35:35 bsiegert Exp $
 
 DISTNAME=	osv-scanner-1.0.1
 PKGREVISION=	2
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/google/osv-scanner/
 COMMENT=	Vulnerability scanner written using the OSV project
 LICENSE=	apache-2.0
 
-USE_LANGUAGES=	# none
+USE_LANGUAGES=	c # go
 
 .include "go-modules.mk"
 .include "../../lang/go/go-module.mk"
