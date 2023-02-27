@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1414 2023/02/27 08:33:20 adam Exp $
+$NetBSD: CHANGES-2023,v 1.1415 2023/02/27 10:20:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1848,3 +1848,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated mail/alpine to 2.26 [vins 2023-02-26]
 	Updated www/nghttp3 to 0.9.0 [adam 2023-02-27]
 	Updated devel/py-wrapt to 1.15.0 [adam 2023-02-27]
+	Updated x11/xf86-video-amdgpu to 23.0.0 [wiz 2023-02-27]
