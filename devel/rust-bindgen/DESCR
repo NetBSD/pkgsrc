@@ -1,0 +1,4 @@
+Bindgen automatically generates Rust FFI bindings to C (and some C++)
+libraries.
+It produces Rust FFI code allowing you to call into the C or C++
+library's functions and use its types.
