@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:18:42 nia Exp $
+$NetBSD: distinfo,v 1.4 2023/02/27 13:56:17 adam Exp $
 
-BLAKE2s (mulpyplexer-0.08.tar.gz) = 78a2541ba6214cac537f45804c035cd90fb54053c9499b627533dcf6b809d572
-SHA512 (mulpyplexer-0.08.tar.gz) = 6a8e3aaeaa42a1ec90bbd34aefa6c9c259e8b3e8a01e0824fce9cf4e82ae65aedec747eb1849ef7341bab144be739ae86378fdd825d4eefa3bbf89ca96a87ab3
-Size (mulpyplexer-0.08.tar.gz) = 2100 bytes
+BLAKE2s (mulpyplexer-0.09.tar.gz) = 216fd55f8e908ca2ba377ba87be20af0e845f4d197cc3cdfe5a221ab832d75c1
+SHA512 (mulpyplexer-0.09.tar.gz) = 2621d02072c4233b4a48e2fad3ae7ad212e91015cd1fd3e82d016ca20ea8c339e1eaa4fa32f3f76ae9337ee07170029c23d0ffe86ecee18aa41dc58ed1ebdb28
+Size (mulpyplexer-0.09.tar.gz) = 2846 bytes
