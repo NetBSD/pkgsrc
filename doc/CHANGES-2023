@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1422 2023/02/27 19:43:30 nikita Exp $
+$NetBSD: CHANGES-2023,v 1.1423 2023/02/27 19:53:46 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1858,3 +1858,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added www/p5-Mojolicious-Plugin-OAuth2-Server version 0.47 [nikita 2023-02-27]
 	Added devel/py-pip2pi version 0.8.2 [nikita 2023-02-27]
 	Added devel/rust-bindgen version 0.64.0 [nikita 2023-02-27]
+	Updated www/libmicrohttpd to 0.9.76 [nikita 2023-02-27]
