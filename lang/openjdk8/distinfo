@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.94 2023/02/25 18:09:15 ryoon Exp $
+$NetBSD: distinfo,v 1.95 2023/02/27 11:09:40 jperkin Exp $
 
 BLAKE2s (openjdk7/bootstrap-jdk-1.7.76-netbsd-7-amd64-20150301.tar.xz) = f425ea056cb5b06be950a38d3c6cc517e18a4fa6e9e9db010f380c63be6563a5
 SHA512 (openjdk7/bootstrap-jdk-1.7.76-netbsd-7-amd64-20150301.tar.xz) = 664d1f987af6b7271a5c6553a606beae09de3e77cea44ae8dd9327f78ac07afc9d81335ee342bd564617a3e54982d2ec75a827dcfc1ab4a2c54a041dd571f4fb
@@ -44,7 +44,7 @@ SHA1 (patch-hotspot_src_os__cpu_bsd__aarch64_vm_bytes__bsd__aarch64.inline.hpp) 
 SHA1 (patch-hotspot_src_os__cpu_bsd__aarch64_vm_os__bsd__aarch64.cpp) = 461717b25728884add18a8c68221ccea4ef81bbe
 SHA1 (patch-hotspot_src_os__cpu_bsd__aarch64_vm_vm__version__bsd__aarch64.cpp) = d6762bb2a9fe6e158ccf23f7d04aa0cba588e78e
 SHA1 (patch-hotspot_src_os__cpu_bsd__zero_vm_atomic__bsd__zero.inline.hpp) = f46713855507654be42707b1f80a779796929069
-SHA1 (patch-hotspot_src_os__cpu_bsd__zero_vm_os__bsd__zero.cpp) = 199f460df677b2c64412fe032d7ff60e9dbd6796
+SHA1 (patch-hotspot_src_os__cpu_bsd__zero_vm_os__bsd__zero.cpp) = 76422f12baa3a2f97226932beb371d4ed4f8fb7c
 SHA1 (patch-hotspot_src_os__cpu_solaris__x86_vm_atomic__solaris__x86.inline.hpp) = 2bf9147643be4ac711d1bf94eb0e6ae4abad20c6
 SHA1 (patch-hotspot_src_os__cpu_solaris__x86_vm_orderAccess__solaris__x86.inline.hpp) = 82818bc8d8fee46403b88cf52a7c978b5ea0005c
 SHA1 (patch-hotspot_src_os__cpu_solaris__x86_vm_os__solaris__x86.cpp) = 6a6b719a52408e88b27d3f2a5a41789dc15ef39d
@@ -70,7 +70,7 @@ SHA1 (patch-jdk_make_CreateJars.gmk) = 0f49c8ec33121d7878ea4b6bd06d2e4e4af9a1d5
 SHA1 (patch-jdk_make_GenerateSources.gmk) = ec1b64805afb6edca637d87529b1d3fa59d20828
 SHA1 (patch-jdk_make_Images.gmk) = e6643dcb25ad5457efe610f6ab7fd0ccc9b5ed41
 SHA1 (patch-jdk_make_lib_Awt2dLibraries.gmk) = 1e29aaa4a4ce5bb104bdd8d8ba1b87f8ff09b8be
-SHA1 (patch-jdk_make_lib_CoreLibraries.gmk) = 21a46be1c8247d528a2e0666ca9a40520327771a
+SHA1 (patch-jdk_make_lib_CoreLibraries.gmk) = 1a04bb832cc4bf9d392f1a38d28f1c16dcfc3684
 SHA1 (patch-jdk_make_lib_NioLibraries.gmk) = 5a1044c444e534d627b46d820d27bb545e65959d
 SHA1 (patch-jdk_make_lib_ServiceabilityLibraries.gmk) = ab0ed14a661412aeb91ecde4251883817ea3cad4
 SHA1 (patch-jdk_make_lib_SoundLibraries.gmk) = b63cf0ebe204acf7264704916df875a31de84393

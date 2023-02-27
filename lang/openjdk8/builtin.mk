@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.5 2022/02/10 18:55:10 gutteridge Exp $
+# $NetBSD: builtin.mk,v 1.6 2023/02/27 11:09:40 jperkin Exp $
 
 BUILTIN_PKG:=	openjdk8
 
@@ -27,7 +27,7 @@ MAKEVARS+=		IS_BUILTIN.openjdk8
 ### a package name to represent the built-in package.
 ###
 .if !defined(BUILTIN_PKG.openjdk8) && \
-    !empty(IS_BUILTIN.openjdk8:M[yY][eE][sS])
+    ${IS_BUILTIN.openjdk8:tl} == yes
 BUILTIN_VERSION.openjdk8!=	${OJDK8} -version 2>&1 | ${SED} -Ee 's:^[^0-9]*([0-9._]+)$$:\1:' -e 's/_/./g' -e 's/([0-9]+)\.([0-9]+)\.([0-9]+)\.([0-9]+)/\1.\2.\4/'
 BUILTIN_PKG.openjdk8=		openjdk8-${BUILTIN_VERSION.openjdk8}
 .endif
@@ -43,12 +43,12 @@ USE_BUILTIN.openjdk8=	no
 .  else
 USE_BUILTIN.openjdk8=	${IS_BUILTIN.openjdk8}
 .    if defined(BUILTIN_PKG.openjdk8) && \
-	!empty(IS_BUILTIN.openjdk8:M[yY][eE][sS])
+	${IS_BUILTIN.openjdk8:tl} == yes
 USE_BUILTIN.openjdk8=	yes
 .      for _dep_ in ${BUILDLINK_API_DEPENDS.openjdk8}
-.        if !empty(USE_BUILTIN.openjdk8:M[yY][eE][sS])
+.        if ${USE_BUILTIN.openjdk8:tl} == yes
 USE_BUILTIN.openjdk8!=							\
-	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.openjdk8:Q}; then	\
+	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.openjdk8:Q}; then \
 		${ECHO} "yes";						\
 	else								\
 		${ECHO} "no";						\
@@ -65,12 +65,12 @@ MAKEVARS+=		USE_BUILTIN.openjdk8
 ### solely to determine whether a built-in implementation exists.
 ###
 CHECK_BUILTIN.openjdk8?=	no
-.if !empty(CHECK_BUILTIN.openjdk8:M[nN][oO])
+.if ${CHECK_BUILTIN.openjdk8:tl} == no
 #
 # Here we place code that depends on whether USE_BUILTIN.openjdk8 is
 # set to "yes" or "no".
 #
-.  if !empty(USE_BUILTIN.openjdk8:M[yY][eE][sS])
+.  if ${USE_BUILTIN.openjdk8:tl} == yes
 PKG_JAVA_HOME=	${OJDK8:H:H}
 .  endif
 .endif  # CHECK_BUILTIN.openjdk8
