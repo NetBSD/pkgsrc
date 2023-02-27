@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2022/03/28 20:12:27 adam Exp $
+$NetBSD: distinfo,v 1.14 2023/02/27 13:58:06 adam Exp $
 
-BLAKE2s (scp-0.14.4.tar.gz) = 9e7d5b9a2911e6befdfafa554acfddc81295c22e49e1df5937a24a4d5c928dcc
-SHA512 (scp-0.14.4.tar.gz) = af85c67ab8230a44d5a0ec213ed5ad1d4b58f9a0aff774991804a454bcf1728c33b58168ac0fbd7d0537927234db3ba277c8a2ae3b8037ffde3ffb8324fa9abb
-Size (scp-0.14.4.tar.gz) = 12649 bytes
+BLAKE2s (scp-0.14.5.tar.gz) = 935e67c729391b43994d59e41580bf10a6c54845983028edd1c8dc993062f070
+SHA512 (scp-0.14.5.tar.gz) = ba58a1cca834124ab0270a5d6d651f68f36de0f4708ca461e438b1899db5aaa3a9d38b3073dc35817a5995ca14447eb33cac897e459c18ed65b0c25b6958bd69
+Size (scp-0.14.5.tar.gz) = 12559 bytes
