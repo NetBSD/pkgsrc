@@ -1,11 +1,11 @@
-$NetBSD: patch-jdk_make_lib_CoreLibraries.gmk,v 1.5 2018/02/23 14:43:49 fhajny Exp $
+$NetBSD: patch-jdk_make_lib_CoreLibraries.gmk,v 1.6 2023/02/27 11:09:40 jperkin Exp $
 
 Ensure we can find zlib.
 Proper libiconv link (and SunOS needs it too).
 
---- jdk/make/lib/CoreLibraries.gmk.orig	2017-11-28 00:13:34.000000000 +0000
+--- jdk/make/lib/CoreLibraries.gmk.orig	2023-01-22 21:06:41.000000000 +0000
 +++ jdk/make/lib/CoreLibraries.gmk
-@@ -253,12 +253,14 @@ $(BUILD_LIBJAVA): $(BUILD_LIBFDLIBM)
+@@ -263,7 +263,7 @@ $(BUILD_LIBJAVA): $(BUILD_LIBFDLIBM)
  
  BUILD_LIBZIP_EXCLUDES :=
  ifeq ($(USE_EXTERNAL_LIBZ), true)
@@ -14,14 +14,16 @@ Proper libiconv link (and SunOS needs it too).
    LIBZIP_EXCLUDES += zlib
  else
    ZLIB_CPPFLAGS := -I$(JDK_TOPDIR)/src/share/native/java/util/zip/zlib
- endif
+@@ -544,6 +544,8 @@ endif
+ 
+ ##########################################################################################
  
 +LIBICONV := @COMPILER_RPATH_FLAG@@BUILDLINK_PREFIX.iconv@/lib -L@BUILDLINK_PREFIX.iconv@/lib -liconv
 +
- BUILD_LIBZIP_REORDER :=
- ifeq ($(OPENJDK_TARGET_OS), solaris)
-   ifneq ($(OPENJDK_TARGET_CPU), x86_64)
-@@ -550,7 +552,8 @@ $(eval $(call SetupNativeCompilation,BUI
+ ifeq ($(OPENJDK_TARGET_OS), bsd)
+   BSD_ICONV_CFLAGS:= -I$(PACKAGE_PATH)/include
+   ifneq ($(OPENJDK_TARGET_OS_VENDOR), openbsd)
+@@ -564,7 +566,8 @@ $(eval $(call SetupNativeCompilation,BUI
      MAPFILE := $(JDK_TOPDIR)/make/mapfiles/libnpt/mapfile-vers, \
      LDFLAGS := $(LDFLAGS_JDKLIB) \
          $(call SET_SHARED_LIBRARY_ORIGIN), \
