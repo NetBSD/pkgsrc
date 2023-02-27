@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2022/07/13 20:07:26 adam Exp $
+# $NetBSD: Makefile,v 1.15 2023/02/27 13:58:06 adam Exp $
 
-DISTNAME=	scp-0.14.4
+DISTNAME=	scp-0.14.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scp/}
