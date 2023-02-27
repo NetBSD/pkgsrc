@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2023/02/16 15:01:55 bsiegert Exp $
+# $NetBSD: Makefile,v 1.5 2023/02/27 20:18:40 bsiegert Exp $
 
 DISTNAME=	ipget-0.9.1
 PKGREVISION=	3
@@ -14,7 +14,7 @@ LICENSE=	mit
 # does not support go 1.19 yet (as of 0.9.1)
 GO_VERSION_DEFAULT=	118
 
-USE_LANGUAGES=	# none
+USE_LANGUAGES=	c # go
 
 .include "go-modules.mk"
 .include "../../lang/go/go-module.mk"
