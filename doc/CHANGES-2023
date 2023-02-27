@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1415 2023/02/27 10:20:18 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1416 2023/02/27 12:38:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1849,3 +1849,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/nghttp3 to 0.9.0 [adam 2023-02-27]
 	Updated devel/py-wrapt to 1.15.0 [adam 2023-02-27]
 	Updated x11/xf86-video-amdgpu to 23.0.0 [wiz 2023-02-27]
+	Updated security/gnupg2 to 2.4.0 [adam 2023-02-27]
+	Updated multimedia/libass to 0.17.1 [adam 2023-02-27]
