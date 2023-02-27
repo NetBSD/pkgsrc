@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.142 2022/12/28 09:40:04 adam Exp $
+# $NetBSD: Makefile,v 1.143 2023/02/27 12:35:35 adam Exp $
 
-DISTNAME=	gnupg-2.2.41
+DISTNAME=	gnupg-2.4.0
 PKGNAME=	${DISTNAME:S/gnupg-/gnupg2-/}
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/gnupg/
@@ -41,18 +41,18 @@ LDFLAGS.Linux+=		-lrt
 
 .include "options.mk"
 
-BUILDLINK_API_DEPENDS.sqlite3+=		sqlite3>=3.7.15
+BUILDLINK_API_DEPENDS.sqlite3+=		sqlite3>=3.27.0
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.npth+=		npth>=1.2
 .include "../../devel/npth/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libgcrypt+=	libgcrypt>=1.7
+BUILDLINK_API_DEPENDS.libgcrypt+=	libgcrypt>=1.9.1
 .include "../../security/libgcrypt/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.28
+BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.46
 .include "../../security/libgpg-error/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libassuan+=	libassuan>=2.5.1
 .include "../../security/libassuan2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libksba+=		libksba>=1.3.4
+BUILDLINK_API_DEPENDS.libksba+=		libksba>=1.6.3
 .include "../../security/libksba/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
