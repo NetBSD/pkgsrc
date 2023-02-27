@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3925 2023/02/27 18:54:51 nikita Exp $
+# $NetBSD: Makefile,v 1.3926 2023/02/27 19:43:13 nikita Exp $
 #
 
 COMMENT=	Development utilities
@@ -3314,6 +3314,7 @@ SUBDIR+=	ruby-zookeeper
 SUBDIR+=	ruby2ruby
 SUBDIR+=	rubymine-bin
 SUBDIR+=	rudiments
+SUBDIR+=	rust-bindgen
 SUBDIR+=	rvm
 SUBDIR+=	sablecc
 SUBDIR+=	samurai
