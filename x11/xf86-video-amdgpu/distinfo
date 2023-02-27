@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.19 2022/08/14 19:25:13 tnn Exp $
+$NetBSD: distinfo,v 1.20 2023/02/27 10:20:07 wiz Exp $
 
-BLAKE2s (xf86-video-amdgpu-22.0.0.tar.xz) = 3c73f774ff4bfafba6b9a2dfd7bec6c4f215d79ca402a706aa0dad2e49eec266
-SHA512 (xf86-video-amdgpu-22.0.0.tar.xz) = 95c64e3fef7729ced6e7adc5e81c60cc218f6d8b6604f7b290e86ff52c917426b5102decbf8be8a66c9181ccde6e5dff7083dca8cc0c493a39e82625b5c7cb2a
-Size (xf86-video-amdgpu-22.0.0.tar.xz) = 376956 bytes
-SHA1 (patch-configure) = 0434336e8b6fd83ebaa7b0a69f1fc5fbd2b89bf7
+BLAKE2s (xf86-video-amdgpu-23.0.0.tar.xz) = 97cf6ffb31f6202aa46ad8917ee6c652716a42d2c268da5d48c304d783afeb62
+SHA512 (xf86-video-amdgpu-23.0.0.tar.xz) = bf26f147629a34e84a0ae8435119e170b9c95edafcab1995b63bb8f55abef32f2efbf4536eb070e64b2ae1460424b1b27a4206cb9836d33ddc6dfbee404f718b
+Size (xf86-video-amdgpu-23.0.0.tar.xz) = 381268 bytes
+SHA1 (patch-configure) = 5f16e907c315db14b8416d78270bcbcb2a0ad16c

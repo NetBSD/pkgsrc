@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2023/01/29 21:18:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.26 2023/02/27 10:20:07 wiz Exp $
 
-DISTNAME=	xf86-video-amdgpu-22.0.0
-PKGREVISION=	1
+DISTNAME=	xf86-video-amdgpu-23.0.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.xz
@@ -14,8 +13,6 @@ LICENSE=	mit AND x11
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake pkg-config
-
-RELRO_SUPPORTED=	partial
 
 CONFIGURE_ENV.SunOS+=	DRIVER_MAN_SUFFIX=4
 
