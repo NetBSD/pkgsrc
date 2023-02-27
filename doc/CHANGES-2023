@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1420 2023/02/27 18:14:05 nikita Exp $
+$NetBSD: CHANGES-2023,v 1.1421 2023/02/27 18:55:13 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1856,3 +1856,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/py-scp to 0.14.5 [adam 2023-02-27]
 	Added www/p5-Mojo-JWT version 0.08 [nikita 2023-02-27]
 	Added www/p5-Mojolicious-Plugin-OAuth2-Server version 0.47 [nikita 2023-02-27]
+	Added devel/py-pip2pi version 0.8.2 [nikita 2023-02-27]
