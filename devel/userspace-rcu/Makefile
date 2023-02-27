@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2020/07/01 00:40:48 manu Exp $
+# $NetBSD: Makefile,v 1.15 2023/02/27 21:58:18 wiz Exp $
 #
 
 DISTNAME=	userspace-rcu-0.12.1
@@ -17,7 +17,7 @@ USE_TOOLS+=	gmake pkg-config
 
 # liburcu requires thread local storage support; thus,
 # only NetBSD-6 or later is supported.
-NOT_FOR_PLATFORM=	NetBSD-[0-5]*-*
+NOT_FOR_PLATFORM=	NetBSD-[0-5].*-*
 
 PKGCONFIG_OVERRIDE+=	liburcu-bp.pc.in
 PKGCONFIG_OVERRIDE+=	liburcu-cds.pc.in
