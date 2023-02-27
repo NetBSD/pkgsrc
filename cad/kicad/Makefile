@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2023/02/13 08:16:10 tnn Exp $
+# $NetBSD: Makefile,v 1.74 2023/02/27 13:59:14 gdt Exp $
 #
 
 V=		7.0.0
@@ -18,7 +18,8 @@ BUILD_DEPENDS+=	swig4-[0-9]*:../../devel/swig4
 DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 
 USE_PKGLOCALEDIR=	yes
-USE_LANGUAGES=		c c++11
+USE_LANGUAGES=		c c++17
+GCC_REQD+=		8
 USE_CMAKE=		yes
 USE_TOOLS+=		pkg-config msgfmt msgmerge xgettext
 
