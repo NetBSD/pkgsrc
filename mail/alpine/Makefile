@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.53 2023/02/26 20:39:49 vins Exp $
+# $NetBSD: Makefile,v 1.54 2023/02/27 20:08:37 vins Exp $
 
 DISTNAME=	alpine-2.26
+PKGREVISION=	1
 CATEGORIES=	mail
 # repo at https://repo.or.cz/alpine.git
 MASTER_SITES=	https://alpineapp.email/alpine/release/src/
@@ -16,8 +17,10 @@ PATCHFILES+=		fancy.patch.gz
 PATCHFILES+=		fillpara.patch.gz
 # Send e-mail from the command line
 PATCHFILES+=		outgoing.patch.gz
-# Accents in pico
+# Support accents in pico
 PATCHFILES+=		WrtAcc.patch.gz
+# Additional compose subcommands
+PATCHFILES+=		compose.patch.gz
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -49,6 +52,11 @@ CONFIGURE_ARGS+=	--with-libintl-prefix=${BUILDLINK_PREFIX.gettext}
 CONFIGURE_ARGS+=	--with-system-mail-directory=${VARBASE}/spool/mail
 .else
 CONFIGURE_ARGS+=	--with-system-mail-directory=${VARBASE}/mail
+CONFIGURE_ARGS+=	--with-debug-level=2
+CONFIGURE_ARGS+=	--without-ntlm
+CONFIGURE_ARGS+=	--without-npa
+# disabled, for Web Alpine Support
+CONFIGURE_ARGS+=	--without-tcl
 .endif
 
 .include "options.mk"
@@ -110,9 +118,6 @@ post-install:
 .include "../../devel/gettext-tools/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/terminfo.buildlink3.mk"
-.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
-.include "../../mk/krb5.buildlink3.mk"
-.include "../../mk/pam.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

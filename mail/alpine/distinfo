@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.30 2023/02/26 20:39:49 vins Exp $
+$NetBSD: distinfo,v 1.31 2023/02/27 20:08:37 vins Exp $
 
 BLAKE2s (alpine-2.26/WrtAcc.patch.gz) = 0ac2c946dea8f432bdfc1f847f2f31b9ef70d1634244fed1ec252c5baf812747
 SHA512 (alpine-2.26/WrtAcc.patch.gz) = 494d798775a384e8e42639437b14ee09bc174520f705e8830636f2039668cbe0f441011de753cb98f5a4d89059c285ef0fc205249a3a079bb0a88c4389cbd595
@@ -6,6 +6,9 @@ Size (alpine-2.26/WrtAcc.patch.gz) = 2180 bytes
 BLAKE2s (alpine-2.26/alpine-2.26.tar.xz) = 4bd671ac3626ad65512971856c9d59121afdd7e2d2e9b5c9fd47de3881af8eaa
 SHA512 (alpine-2.26/alpine-2.26.tar.xz) = 359b5cb30be78a341b76c0475a2d5268b643788f14c9b5b9457af6748034e1d2e70fd7ddf59e5c59ad596a36d8a10afa9c41cbd74241c780b8575d8186168fd2
 Size (alpine-2.26/alpine-2.26.tar.xz) = 7517628 bytes
+BLAKE2s (alpine-2.26/compose.patch.gz) = 9ec96ea48856d6ca5c39415195bbd34ac4de34e06074ff9b97e375ff180c93ab
+SHA512 (alpine-2.26/compose.patch.gz) = ca9941f51f36f97d64ca9db9a02ead11af8accf68067786a19d504d5f3b41b054938e65a9f607f134885f856767d52e4c7f33e8640f3669a9de4d07178285d3d
+Size (alpine-2.26/compose.patch.gz) = 2410 bytes
 BLAKE2s (alpine-2.26/fancy.patch.gz) = 8d5bd515ef996488786de30a84082ed3e37e803d552c5de31cddfa29392b71c2
 SHA512 (alpine-2.26/fancy.patch.gz) = 0840d319dc36715c091c65feff4fd3d7010bec8302b7df6e7ddd505f7590dc684729ce9983214c297efd23eb7b076c932ef15310194bea66ff0ed8b8c5c65796
 Size (alpine-2.26/fancy.patch.gz) = 25055 bytes
