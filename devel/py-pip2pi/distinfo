@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/02/27 18:54:51 nikita Exp $
+
+BLAKE2s (pip2pi-0.8.2.tar.gz) = 91c5a76edb120fe44184b492c01c25145bad4cbb3e3025a1e5efa34d0dae76b5
+SHA512 (pip2pi-0.8.2.tar.gz) = 9a75bec9d7e92b1c42eaefb78b02d7a1cca450ccccb7d5c9c01016419a0d0176059c03b58fa7060e9cbc083e141bc1bc8e97c15b713fa15c846cf1d45bd41468
+Size (pip2pi-0.8.2.tar.gz) = 10394 bytes
