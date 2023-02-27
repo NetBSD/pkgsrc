@@ -1,0 +1,3 @@
+bin/dir2pi @PREFIX@/bin/dir2pi-@PYVERSSUFFIX@
+bin/pip2pi @PREFIX@/bin/pip2pi-@PYVERSSUFFIX@
+bin/pip2tgz @PREFIX@/bin/pip2tgz-@PYVERSSUFFIX@
