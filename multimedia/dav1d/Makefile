@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2023/02/16 08:42:32 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2023/02/27 10:45:10 jperkin Exp $
 
 DISTNAME=	dav1d-1.1.0
 CATEGORIES=	multimedia
@@ -15,6 +15,8 @@ LICENSE=	2-clause-bsd
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 TOOL_DEPENDS+=	nasm-[0-9]*:../../devel/nasm
 .endif
+
+CPPFLAGS.SunOS+=	-D__EXTENSIONS__
 
 PKGCONFIG_OVERRIDE_STAGE=	post-build
 PKGCONFIG_OVERRIDE+=		output/meson-private/dav1d.pc
