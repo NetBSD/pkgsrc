@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2023/01/25 20:13:59 pin Exp $
+$NetBSD: distinfo,v 1.8 2023/02/27 19:49:32 he Exp $
 
 BLAKE2s (aho-corasick-0.7.20.crate) = e435fcd774a78d21bafe7b56bad76b8595dcd87a850c6ef2a41206c7ec6439c5
 SHA512 (aho-corasick-0.7.20.crate) = ad31f3d1b3fe41e593d4ca7e721bbad62936f2e6a17fd1e0997353edb6fc906d1bef2b79f0ac7c7676abe637bbabb23ff22059947be379a2441011f8178983c5
@@ -207,3 +207,4 @@ Size (windows_x86_64_msvc-0.42.1.crate) = 664606 bytes
 BLAKE2s (winres-0.1.12.crate) = 6b1d1857d9cbe3d4d3e1e414860bcfb543b4344f91b55e4a98ef26dfa3cc76fd
 SHA512 (winres-0.1.12.crate) = 9f61edafb4a262b56d130e48ac6bba94f5a432bf0a8c20243e6c8fa98c3f9e0d2ab00a77b35a2e49dd63585a272af597e236e089641b5f488760ac42d22f5a67
 Size (winres-0.1.12.crate) = 19772 bytes
+SHA1 (patch-vendor_gmp-mpfr-sys-1.5.0_gmp-6.2.1-c_config.sub) = 73e83bc7e7a244871c2072ab1a45e8010a3b6730
