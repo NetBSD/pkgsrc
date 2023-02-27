@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/02/27 18:00:42 nikita Exp $
+
+BLAKE2s (Mojo-JWT-0.08.tar.gz) = 48407b89fc3dd1b6c69a59c0ec89db3191577b8df8400613f8210cee831e2f2e
+SHA512 (Mojo-JWT-0.08.tar.gz) = e041d99ffd00397677d4bca1000a98cdbc2a769df4e6bb7e9d9064bd79667694eb4c0849dd16795f0a8a5876c8997dc0184eba4dc5b871bf845fb1a1d6f86812
+Size (Mojo-JWT-0.08.tar.gz) = 13647 bytes
