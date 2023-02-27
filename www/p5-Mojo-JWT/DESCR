@@ -1,0 +1,11 @@
+JSON Web Token is described in https://tools.ietf.org/html/rfc7519.
+Mojo::JWT implements that standard with an API that should feel
+familiar to Mojolicious users (though of course it is useful
+elsewhere). Indeed, JWT is much like Mojolicious::Sessions except
+that the result is a url-safe text string rather than a cookie.
+
+In JWT, the primary payload is called the claims, and a few claims
+are reserved, as seen in the IETF document. The header and the
+claims are signed when stringified to guard against tampering. Note
+that while signed, the data is not encrypted, so don't use it to
+send secrets over clear channels.
