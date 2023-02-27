@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2023/01/25 09:06:54 adam Exp $
+# $NetBSD: Makefile,v 1.11 2023/02/27 13:07:46 jperkin Exp $
 
 DISTNAME=	pythran-0.12.1
+PKGREVISION=	1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pythran/}
