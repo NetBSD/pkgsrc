@@ -1,6 +1,7 @@
-$NetBSD: patch-3rdparty_bx_src_thread.cpp,v 1.4 2023/02/22 11:15:21 wiz Exp $
+$NetBSD: patch-3rdparty_bx_src_thread.cpp,v 1.5 2023/02/27 11:23:23 wiz Exp $
 
 NetBSD does not provide pthread_np.h.
+https://github.com/bkaradzic/bx/issues/295
 
 --- 3rdparty/bx/src/thread.cpp.orig	2023-02-21 17:59:53.000000000 +0000
 +++ 3rdparty/bx/src/thread.cpp
