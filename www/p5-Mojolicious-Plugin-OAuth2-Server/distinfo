@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/02/27 18:13:34 nikita Exp $
+
+BLAKE2s (Mojolicious-Plugin-OAuth2-Server-0.47.tar.gz) = aaf9d7b8a4854f5c724e90ceb48a8abc5eee65305c708d439eff5791610cc555
+SHA512 (Mojolicious-Plugin-OAuth2-Server-0.47.tar.gz) = 62d4613f8928e25b929768df223290eda1933e3cc0a191ffba77e6965e69dc42a008e24f434611541b19130fafa0e6cf651429af0c44a138e547bb39b5bbfe96
+Size (Mojolicious-Plugin-OAuth2-Server-0.47.tar.gz) = 16823 bytes

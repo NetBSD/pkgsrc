@@ -1,0 +1,11 @@
+This plugin implements the various OAuth2 grant types flow as
+described at http://tools.ietf.org/html/rfc6749. It is a complete
+implementation of RFC6749, with the exception of the "Extension
+Grants" as the description of that grant type is rather hand-wavy.
+
+The bulk of the functionality is implemented in the
+Net::OAuth2::AuthorizationServer distribution, you should see that
+for more comprehensive documentation and examples of usage.
+
+The examples here use the "Authorization Code Grant" flow as that
+is considered the most secure and most complete form of OAuth2.
