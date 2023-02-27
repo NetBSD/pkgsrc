@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1417 2023/02/27 13:07:56 jperkin Exp $
+$NetBSD: CHANGES-2023,v 1.1418 2023/02/27 13:58:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1852,3 +1852,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/gnupg2 to 2.4.0 [adam 2023-02-27]
 	Updated multimedia/libass to 0.17.1 [adam 2023-02-27]
 	Updated math/py-pythran to 0.12.1nb1 [jperkin 2023-02-27]
+	Updated devel/py-mulpyplexer to 0.09 [adam 2023-02-27]
+	Updated net/py-scp to 0.14.5 [adam 2023-02-27]
