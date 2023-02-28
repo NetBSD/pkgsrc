@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1466 2023/02/28 15:34:12 hauke Exp $
+$NetBSD: CHANGES-2023,v 1.1467 2023/02/28 21:08:09 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1903,3 +1903,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/openjdk17 to 1.17.0.6.10nb1 [ryoon 2023-02-28]
 	Updated lang/openjdk11 to 1.11.0.18.10nb1 [ryoon 2023-02-28]
 	Updated net/netatalk22 to 2.2.8 [hauke 2023-02-28]
+	Added sysutils/ncdu2 version 2.2.2 [nikita 2023-02-28]
