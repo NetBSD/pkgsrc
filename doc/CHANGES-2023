@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1473 2023/02/28 22:36:25 pin Exp $
+$NetBSD: CHANGES-2023,v 1.1474 2023/02/28 22:37:44 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1910,3 +1910,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated audio/gospt to 0.0.37 [pin 2023-02-28]
 	Updated sysutils/parallel-disk-usage to 0.8.5 [pin 2023-02-28]
 	Updated net/sniffnet to 1.1.1 [pin 2023-02-28]
+	Updated shells/starship to 1.13.1 [pin 2023-02-28]
