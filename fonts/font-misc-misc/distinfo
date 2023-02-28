@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2023/02/28 07:13:41 wiz Exp $
+$NetBSD: distinfo,v 1.7 2023/02/28 07:14:43 wiz Exp $
 
 BLAKE2s (font-misc-misc-1.1.3.tar.xz) = 9458a8c771b5037ea6152fcc201d8326c29b095ba5bd9a7bf7a51a711a3c0dc7
 SHA512 (font-misc-misc-1.1.3.tar.xz) = fac4bfda0e4189d1a9999abc47bdd404f2beeec5301da190d92afc2176cd344789b7223c1b2f4748bd0efe1b9a81fa7f13f7037015d5d800480fa2236f369b48
 Size (font-misc-misc-1.1.3.tar.xz) = 1563776 bytes
-SHA1 (patch-aa) = 9e384cbaa6d9bfaeafce9b06b42093b080cec5fb
-SHA1 (patch-ac) = 6b4fc215a5ac7e8c792f7b0211f1be315a4d9e52
+SHA1 (patch-aa) = 6b2b7526cd1a5dcc54574907dd00a6d21e5cf72d
+SHA1 (patch-ac) = 11c8c8c5ae9c50884d3f8ae605cb00d1a733af8a
