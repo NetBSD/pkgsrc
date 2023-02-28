@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:27:09 nia Exp $
+$NetBSD: distinfo,v 1.7 2023/02/28 07:06:29 wiz Exp $
 
-BLAKE2s (font-dec-misc-1.0.3.tar.bz2) = ff16273f1b4b4f40b55f79ec267ab465c57e1eba98dd39f6a96dcd0a64c0e0b5
-SHA512 (font-dec-misc-1.0.3.tar.bz2) = af755d51c4c59cdbe5d3dccf37990bc787373958feb984bb037c8d8aba8a0eb410965a3600886b5123d89e85e1ea0498b84dfa384fccbbcbcaf3549b83c839c6
-Size (font-dec-misc-1.0.3.tar.bz2) = 99832 bytes
+BLAKE2s (font-dec-misc-1.0.4.tar.xz) = 7b9abfc58a237a21c5adc5df9cbada688bfa7edf50e692747f1b9e483bb66489
+SHA512 (font-dec-misc-1.0.4.tar.xz) = bf6c0e4924835346f1f7913a04fa3903a7c55d292317526dd8eaa799dfb3b52eb2157c34692d659b41a18123af8389785dcb4aa0c31fc387cb368642801c3335
+Size (font-dec-misc-1.0.4.tar.xz) = 95284 bytes
