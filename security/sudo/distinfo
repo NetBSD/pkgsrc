@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.127 2023/02/20 13:36:42 taca Exp $
+$NetBSD: distinfo,v 1.128 2023/02/28 14:46:58 taca Exp $
 
-BLAKE2s (sudo-1.9.13p1.tar.gz) = 86072cd188bf529e089ebb53d491179b6c6521b5d0fea0c3c9fc0bb965b831af
-SHA512 (sudo-1.9.13p1.tar.gz) = 4d19f06c4a592dac9a1a7feca6cc751093151af32313d9d579e2485fc6530a4340ec29cc2892b29dedf2a6aca3e91fb0bbf94bbfb6530f249c58430b83139044
-Size (sudo-1.9.13p1.tar.gz) = 5096455 bytes
+BLAKE2s (sudo-1.9.13p2.tar.gz) = 920f8df20c8f83ff2886a60d085fb9db46e19b83e331f86b0c3374f8173b40d8
+SHA512 (sudo-1.9.13p2.tar.gz) = b3015a114fd518afd644c9934f2461046f1116506723217603af1a952bdb436689761b4d009dfe32b725bad2e0ebcaf19db72febfaa63895ba004256fea12bef
+Size (sudo-1.9.13p2.tar.gz) = 5098083 bytes
 SHA1 (patch-Makefile.in) = 1a83c55d27829013e2e23073046c5c39b020fafe
 SHA1 (patch-configure) = 0f73f860ae4fd9a0031aa8b0c22a93df776e7ad6
 SHA1 (patch-examples_Makefile.in) = a20967ecd88eb5e4a8b47e6a3b80bc18be713409
