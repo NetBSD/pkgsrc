@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:27:07 nia Exp $
+$NetBSD: distinfo,v 1.8 2023/02/28 06:52:32 wiz Exp $
 
-BLAKE2s (font-adobe-utopia-75dpi-1.0.4.tar.bz2) = 7f7ad503cbe9d63c8a8efd2ec849ac929e2930386511b6fe5ef2da3cb1fcce4b
-SHA512 (font-adobe-utopia-75dpi-1.0.4.tar.bz2) = c569af760a62b00738be65546364587638e8c46e4a0765013747e9595d51bc0633908c72359e42e7ebf6240fdc6294b51512c0a096a5fe64b2bd300ccbff7b92
-Size (font-adobe-utopia-75dpi-1.0.4.tar.bz2) = 273484 bytes
+BLAKE2s (font-adobe-utopia-75dpi-1.0.5.tar.xz) = 5e007d467f27b3eee89600f97d33c40bdbd0cffb450ce7e741e670576bfd983f
+SHA512 (font-adobe-utopia-75dpi-1.0.5.tar.xz) = 9608698288fca47bf61cff911b8f081593807eed9f138ea22f05a7b6c26c481ec5144d79665cf509ba889df35ef5406e0de71710362bcf6de6b602c12158e22a
+Size (font-adobe-utopia-75dpi-1.0.5.tar.xz) = 247312 bytes
