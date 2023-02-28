@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1036 2023/02/22 11:59:19 jperkin Exp $
+# $NetBSD: Makefile,v 1.1037 2023/02/28 21:07:43 nikita Exp $
 #
 
 COMMENT=	System utilities
@@ -465,6 +465,7 @@ SUBDIR+=	nautilus
 SUBDIR+=	navi
 SUBDIR+=	nbase
 SUBDIR+=	ncdu
+SUBDIR+=	ncdu2
 SUBDIR+=	ndesk-dbus
 SUBDIR+=	ndesk-dbus-glib
 SUBDIR+=	neb-wipe

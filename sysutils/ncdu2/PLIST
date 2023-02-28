@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2023/02/28 21:07:43 nikita Exp $
+bin/ncdu
+man/man1/ncdu.1
