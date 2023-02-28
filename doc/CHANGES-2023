@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1440 2023/02/28 07:03:32 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1441 2023/02/28 07:04:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1877,3 +1877,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated fonts/font-bitstream-100dpi to 1.0.4 [wiz 2023-02-28]
 	Updated fonts/font-bitstream-75dpi to 1.0.4 [wiz 2023-02-28]
 	Updated fonts/font-bitstream-type1 to 1.0.4 [wiz 2023-02-28]
+	Updated fonts/font-cronyx-cyrillic to 1.0.4 [wiz 2023-02-28]
