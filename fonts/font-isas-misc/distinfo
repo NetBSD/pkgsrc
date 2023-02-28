@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:27:09 nia Exp $
+$NetBSD: distinfo,v 1.7 2023/02/28 07:08:42 wiz Exp $
 
-BLAKE2s (font-isas-misc-1.0.3.tar.bz2) = 4b4a5498c681e38785ea96fcef1874d39e04d34ae8092c91abc9e9c7d20c6b90
-SHA512 (font-isas-misc-1.0.3.tar.bz2) = be6fb1d2c53550a462d1ab010fa7ac913990e83a22d4580c93b8f1f087aa6caa0e46bc87debca2b13b10e5611bd2fe7f6b4240367fb24f59b37f68ffb0e2586b
-Size (font-isas-misc-1.0.3.tar.bz2) = 845282 bytes
+BLAKE2s (font-isas-misc-1.0.4.tar.xz) = 4f20499a5b70ad50d0d799332df82d0e8c6142a9ba87def03bea3ac4f32adcca
+SHA512 (font-isas-misc-1.0.4.tar.xz) = 7c8cc9083600949fff4a0373f9f22df80f6a2c97d8d56bc2c4d03b102d16ad071b984b1ecf547d2d17ede9335e5c3a418512631a18938b7728c66b4339dcedd5
+Size (font-isas-misc-1.0.4.tar.xz) = 712068 bytes
