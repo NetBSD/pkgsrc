@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:27:07 nia Exp $
+$NetBSD: distinfo,v 1.7 2023/02/28 06:49:14 wiz Exp $
 
-BLAKE2s (font-adobe-75dpi-1.0.3.tar.bz2) = 6a08bae561e32e9805ff756854f88c046d600c838f0f4ef2c45c24c09f1f66b2
-SHA512 (font-adobe-75dpi-1.0.3.tar.bz2) = c0d851df5732e81027e265370751a606c6e4f5eea546d802608988dde02de35fa28238f709f48567191090bf18814f671b1a7f9f0b528d54949b0aa9403f266d
-Size (font-adobe-75dpi-1.0.3.tar.bz2) = 889542 bytes
+BLAKE2s (font-adobe-75dpi-1.0.4.tar.xz) = 8dec05c6877dfabb681b24c667c9c03b3964bb280a31cd3f230e147d081c048f
+SHA512 (font-adobe-75dpi-1.0.4.tar.xz) = 4e63c268525f21c03525870129c8d42cbd17a03d86d9c88bebdccb5094a1093acef1d2b6d4dde221559cb19f047b86baf58fa8ad65d28d4cb6c3064ec164836a
+Size (font-adobe-75dpi-1.0.4.tar.xz) = 735140 bytes
