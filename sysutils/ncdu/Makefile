@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2023/02/19 19:51:29 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2023/02/28 21:10:28 nikita Exp $
 
 DISTNAME=	ncdu-1.18.1
 CATEGORIES=	sysutils
@@ -8,6 +8,8 @@ MAINTAINER=	slitvinov@gmail.com
 HOMEPAGE=	https://dev.yorhel.nl/ncdu
 COMMENT=	Disk usage visualization tool
 LICENSE=	modified-bsd
+
+CONFLICTS+=	ncdu-2.*
 
 GNU_CONFIGURE=	yes
 FAKE_NCURSES=	yes
