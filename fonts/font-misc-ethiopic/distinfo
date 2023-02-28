@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:27:10 nia Exp $
+$NetBSD: distinfo,v 1.7 2023/02/28 07:12:02 wiz Exp $
 
-BLAKE2s (font-misc-ethiopic-1.0.4.tar.bz2) = 23bfdbb8a6fe9e79d99d32c73455ebf45dc31dcaf48ad28b945e1f1bf36e9890
-SHA512 (font-misc-ethiopic-1.0.4.tar.bz2) = 4fed9ff3782746898c56dac199e9ca89356f4967779937049b9ff4ffad202317c023859f92d44b371dfa5485d5368ccad648e64b12cde0ed21f7d4aee5affcd5
-Size (font-misc-ethiopic-1.0.4.tar.bz2) = 270076 bytes
+BLAKE2s (font-misc-ethiopic-1.0.5.tar.xz) = 3d5251394f1d9e9aba974f1c372c29e3a017b42c0f465e90386ade8b64f4ad92
+SHA512 (font-misc-ethiopic-1.0.5.tar.xz) = 7732a828c005e3762b6383729134c5656fd575ac59288504d047fbe26e9965a80519a37b0cc4c6b89379a85a62160c5ea76017f790447a230c015aa7a9143ba0
+Size (font-misc-ethiopic-1.0.5.tar.xz) = 222624 bytes
