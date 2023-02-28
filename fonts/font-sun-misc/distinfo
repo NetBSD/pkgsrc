@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:27:11 nia Exp $
+$NetBSD: distinfo,v 1.7 2023/02/28 07:19:05 wiz Exp $
 
-BLAKE2s (font-sun-misc-1.0.3.tar.bz2) = 0889127fc1f64ce517ddd2222bea254744b41f9bd2763741d8b0b2ebcb88cdf1
-SHA512 (font-sun-misc-1.0.3.tar.bz2) = 52c4a38e49a94831999652d9830da841949c319083ea40492e83690e1e5c2d31ea1979046a420af0e51bc105b8697bb06b4a438485e82b130d7469ad4519e275
-Size (font-sun-misc-1.0.3.tar.bz2) = 116360 bytes
+BLAKE2s (font-sun-misc-1.0.4.tar.xz) = 904b0194cd3cb066a6a952187a85874d9bfedcceef16c43ed134ec7cfb645a17
+SHA512 (font-sun-misc-1.0.4.tar.xz) = 9eeb330c1190557479636119af8aeb49917f1faeaa42d3a93e35d318348ee4247405544107ce9f5a244dbe2c0001c8d34b604b961bd9d92431f84b992fe9739e
+Size (font-sun-misc-1.0.4.tar.xz) = 109832 bytes
