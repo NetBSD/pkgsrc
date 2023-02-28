@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:27:11 nia Exp $
+$NetBSD: distinfo,v 1.6 2023/02/28 07:20:30 wiz Exp $
 
-BLAKE2s (font-xfree86-type1-1.0.4.tar.bz2) = 9af58db907a4a3e624695ff53f8005002586ca197d2cf67aee7ef0eeda0bdf88
-SHA512 (font-xfree86-type1-1.0.4.tar.bz2) = 2b4afc6cbb7953f8ba4aab7862d16b7b988ea6a4df6de8d41c8340d35a1cd53d6fcc26479ff88189d1de9f42804e4f56d70e9dbd7e75820eab4ac6ae3a96840c
-Size (font-xfree86-type1-1.0.4.tar.bz2) = 126641 bytes
+BLAKE2s (font-xfree86-type1-1.0.5.tar.xz) = 524ae4da7035c5cf94f322eae9662a729f4dff8f4b2ef3712dadfc762ab28f7a
+SHA512 (font-xfree86-type1-1.0.5.tar.xz) = 0a92d911269c5c4d815dfb617bfcc57c3bd54e4cd308eba87f9ec49851369d99dea61950dbd6cdc0f85db92c0c24055da88063b083b4b0cafb3315051bb650ed
+Size (font-xfree86-type1-1.0.5.tar.xz) = 120500 bytes
