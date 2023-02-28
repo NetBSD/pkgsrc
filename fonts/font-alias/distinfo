@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:27:07 nia Exp $
+$NetBSD: distinfo,v 1.8 2023/02/28 06:53:31 wiz Exp $
 
-BLAKE2s (font-alias-1.0.4.tar.bz2) = bfff1e8de409c25e1e531facb501ca2332b73edcfcf4930faeafa51abeb61084
-SHA512 (font-alias-1.0.4.tar.bz2) = c67ac2ee344a601fcc09471580214b30c3fd6acc4800702840de44f0733e6d18b3faeec2fa3f4e2314025cc1724d7d6796ebaf620398fe350710182fd2c4b07d
-Size (font-alias-1.0.4.tar.bz2) = 119248 bytes
+BLAKE2s (font-alias-1.0.5.tar.xz) = 81f080a27a998f70b4d2fcc1fcb64c0db03635b2f629eb6a79fa79db8a887af6
+SHA512 (font-alias-1.0.5.tar.xz) = 86bffa6b9ff789eeba715c079965157806ed633d44cd3dbf5e2a4bba2b390a0f48db65edc8e3264acbc2368d78a8d7e05bc2e2e3a86ddbf6b08bfe7f5e862bcc
+Size (font-alias-1.0.5.tar.xz) = 96780 bytes
