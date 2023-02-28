@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2022/08/02 09:21:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.22 2023/02/28 06:13:57 adam Exp $
 bin/scummvm
 man/man6/scummvm.6
 share/applications/scummvm.desktop
@@ -26,6 +26,7 @@ share/scummvm/cryomni3d.dat
 share/scummvm/drascula.dat
 share/scummvm/encoding.dat
 share/scummvm/fonts.dat
+share/scummvm/freescape.dat
 share/scummvm/grim-patch.lab
 share/scummvm/gui-icons.dat
 share/scummvm/hadesch_translations.dat
@@ -42,6 +43,7 @@ share/scummvm/residualvm.zip
 share/scummvm/scummclassic.zip
 share/scummvm/scummmodern.zip
 share/scummvm/scummremastered.zip
+share/scummvm/shaders.dat
 share/scummvm/shaders/emi_actor.fragment
 share/scummvm/shaders/emi_actor.vertex
 share/scummvm/shaders/emi_actorlights.fragment
