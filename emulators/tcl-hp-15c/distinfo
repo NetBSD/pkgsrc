@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:24:14 nia Exp $
+$NetBSD: distinfo,v 1.4 2023/02/28 10:37:22 hauke Exp $
 
-BLAKE2s (HP-15C_4.0.00_Source.zip) = b7aad4ba8ab8e2b580b441e0da3e7d71945c468ab5c3315f1fb1bdcf1d4031e3
-SHA512 (HP-15C_4.0.00_Source.zip) = d81de895086ab7b9b9f855fd1c7b518dc5104db6f94ba449630ea6de11942f7535a704a2603bfe5640253beed1a5b681193d12e71cddb4aa65d85283ad3de487
-Size (HP-15C_4.0.00_Source.zip) = 944359 bytes
+BLAKE2s (HP-15C_4.5.00_Source.zip) = c9160efa61260ca3836b9b289e45436d617c4a154a4feefd1bf59a0be1aa92d3
+SHA512 (HP-15C_4.5.00_Source.zip) = 2d90b20fce1b50cd9cdfa4cb30ca66f8924ee797f017549215740b07c34f382d96d89ffd6cc170eabd407542dc1dca43924d4156580b2f821da9d9600d98ca3a
+Size (HP-15C_4.5.00_Source.zip) = 995426 bytes
