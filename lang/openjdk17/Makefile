@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2023/02/25 18:11:31 ryoon Exp $
+# $NetBSD: Makefile,v 1.11 2023/02/28 14:50:05 ryoon Exp $
 
 DISTNAME=	jdk17u-${GITHUB_TAG:C/\+/-/}
 PKGNAME=	openjdk17-1.${GITHUB_TAG:C/\+/./:C/jdk-([.0-9]+).*/\1/}
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=battleblow/}
 GITHUB_PROJECT=	jdk17u
@@ -72,8 +73,7 @@ CONFIGURE_ARGS+=	--with-num-cores=${MAKE_JOBS:U1}
 CONFIGURE_ARGS+=	--disable-precompiled-headers
 CONFIGURE_ARGS+=	--disable-ccache
 CONFIGURE_ARGS+=	--disable-javac-server
-# Do not include ${PREFIX} (/usr/pkg) for internal libraries.
-#CONFIGURE_ARGS+=	--with-extra-ldflags=${LDFLAGS:Q}
+CONFIGURE_ARGS+=	--with-extra-ldflags="${COMPILER_RPATH_FLAG}${X11BASE}/lib"
 CONFIGURE_ARGS+=	--with-extra-cflags=${CFLAGS:Q}
 CONFIGURE_ARGS+=	--with-extra-cxxflags=${CXXFLAGS:Q}
 CONFIGURE_ARGS+=	--disable-warnings-as-errors
