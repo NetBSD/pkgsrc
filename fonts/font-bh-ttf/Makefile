@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2022/11/09 13:14:11 joerg Exp $
-#
+# $NetBSD: Makefile,v 1.13 2023/02/28 06:59:59 wiz Exp $
 
-DISTNAME=		font-bh-ttf-1.0.3
-PKGREVISION=		1
+DISTNAME=		font-bh-ttf-1.0.4
 CATEGORIES=		fonts
 MASTER_SITES=		${MASTER_SITE_XORG:=font/}
-EXTRACT_SUFX=		.tar.bz2
+EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/

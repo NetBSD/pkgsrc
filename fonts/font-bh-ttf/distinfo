@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:27:08 nia Exp $
+$NetBSD: distinfo,v 1.8 2023/02/28 06:59:59 wiz Exp $
 
-BLAKE2s (font-bh-ttf-1.0.3.tar.bz2) = 5ceb807a31eff5cdd9636781a15e5340a0fc27e0b2d3771641bf6b69a2e9631f
-SHA512 (font-bh-ttf-1.0.3.tar.bz2) = 36b5b6bbc2894cd90a372e8131281a462b42d503be3e9af8565edbcd954b336690aa86a0b6fb162d865ba71b65669c5b911658c5b820effcea39d086d485be25
-Size (font-bh-ttf-1.0.3.tar.bz2) = 465351 bytes
-SHA1 (patch-aa) = 80c9cd9b188d716ae26e382a166866bd42c2a729
+BLAKE2s (font-bh-ttf-1.0.4.tar.xz) = 2980f473a1f5f1c50039902786850547382e6560aedb357799938c456b4cc35d
+SHA512 (font-bh-ttf-1.0.4.tar.xz) = d9d1cfdd3d73157d0253bebb76e91b92c5ffface42dd6aeca40f1deffe03f079a0f9a46d6fb368e5c213e413d0753766e9454ac4222baa3c9898dfcf92718fd0
+Size (font-bh-ttf-1.0.4.tar.xz) = 372012 bytes
+SHA1 (patch-aa) = 8ffda492809de1655857489fc8f3976b23e7bcca
