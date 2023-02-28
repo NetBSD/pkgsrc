@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1470 2023/02/28 22:32:16 pin Exp $
+$NetBSD: CHANGES-2023,v 1.1471 2023/02/28 22:33:39 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1907,3 +1907,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/csvlens to 0.1.12 [pin 2023-02-28]
 	Updated sysutils/dua-cli to 2.19.2 [pin 2023-02-28]
 	Updated shells/elvish to 0.19.0 [pin 2023-02-28]
+	Updated audio/gospt to 0.0.37 [pin 2023-02-28]
