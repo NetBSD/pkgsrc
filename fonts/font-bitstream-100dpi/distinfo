@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:27:08 nia Exp $
+$NetBSD: distinfo,v 1.7 2023/02/28 07:01:47 wiz Exp $
 
-BLAKE2s (font-bitstream-100dpi-1.0.3.tar.bz2) = 1b480e550d5f597cdbdd7d5b6dec36c056c22457d23d0b30a54e5540c9a20c75
-SHA512 (font-bitstream-100dpi-1.0.3.tar.bz2) = 10fd920d46d2cb1b314e8c2f05c202e9ffa74a4e5315f34790eba8bd8fcda865a6932eb712a7538624e69367647bcd6891e7015099e65463aeef772d0ba58bfd
-Size (font-bitstream-100dpi-1.0.3.tar.bz2) = 200276 bytes
+BLAKE2s (font-bitstream-100dpi-1.0.4.tar.xz) = 18bff3c579bbc2307b3db70f1db43bd1464d966534975dbdb32bf07e3f1adc1f
+SHA512 (font-bitstream-100dpi-1.0.4.tar.xz) = 1389681eee8b9e2bbfe0293b0aa1add7c6fa86149ff3cb779195ddcc548b1a519336c2d43b6988c899dc09d44ca30de9ffb5daca24fc3906694ab0fd391eb437
+Size (font-bitstream-100dpi-1.0.4.tar.xz) = 176520 bytes
