@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1475 2023/02/28 22:39:02 pin Exp $
+$NetBSD: CHANGES-2023,v 1.1476 2023/02/28 22:40:17 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1912,3 +1912,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/sniffnet to 1.1.1 [pin 2023-02-28]
 	Updated shells/starship to 1.13.1 [pin 2023-02-28]
 	Updated textproc/tuc to 1.0.0 [pin 2023-02-28]
+	Updated sysutils/xcp to 0.9.4 [pin 2023-02-28]
