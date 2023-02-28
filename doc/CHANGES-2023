@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1462 2023/02/28 11:33:50 bouyer Exp $
+$NetBSD: CHANGES-2023,v 1.1463 2023/02/28 14:47:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1899,3 +1899,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated fonts/font-xfree86-type1 to 1.0.5 [wiz 2023-02-28]
 	Updated emulators/tcl-hp-15c to 4.5.00.6308 [hauke 2023-02-28]
 	Updated mail/mimedefang to 3.3 [bouyer 2023-02-28]
+	Updated security/sudo to 1.9.13p2 [taca 2023-02-28]
