@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:27:09 nia Exp $
+$NetBSD: distinfo,v 1.7 2023/02/28 07:08:02 wiz Exp $
 
-BLAKE2s (font-ibm-type1-1.0.3.tar.bz2) = 9ac9d19060c3962ebf8694e6dd219be1ea3c6416f7dc2942ec391995f19d7278
-SHA512 (font-ibm-type1-1.0.3.tar.bz2) = cbd179522c936c4f956ff1fbdc48fc3a55990083b4f858c938c6a54c8526641b4f25eb3a6795d774630b75a0f4fbdf9c16e861e88b2cd95f04c524f95d40f90f
-Size (font-ibm-type1-1.0.3.tar.bz2) = 376985 bytes
+BLAKE2s (font-ibm-type1-1.0.4.tar.xz) = e64ef4e688f51f3c3995d722dcd6668a7fd49ef294fab16cfc76dfbe333d56ac
+SHA512 (font-ibm-type1-1.0.4.tar.xz) = 42ebc9f1b0726a9a1bf3d7c8a3b7102a448e7c6ff0c5ac1dd8a4861bf51c344ddb2e077df41b86e3e896100371a33f997d6df834b4d64b835d81a36dfddfbce3
+Size (font-ibm-type1-1.0.4.tar.xz) = 378468 bytes
