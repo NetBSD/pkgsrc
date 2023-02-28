@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.51 2023/02/07 23:00:40 hauke Exp $
+# $NetBSD: Makefile,v 1.52 2023/02/28 15:33:59 hauke Exp $
 
-DISTNAME=	netatalk-2.2.7
-PKGREVISION=	1
+DISTNAME=	netatalk-2.2.8
 PKGNAME=	${DISTNAME:C/-/22-/}
 CATEGORIES=	net print
-MASTER_SITES=	${MASTER_SITE_GITHUB:=Netatalk/}Netatalk/releases/download/netatalk-2-2-7/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=Netatalk/}Netatalk/releases/download/${DISTNAME:C/\./-/g}/
 #PATCHFILES=	patch-adv1tov2.c
 PATCH_SITES=	http://svn.macosforge.org/repository/macports/trunk/dports/net/netatalk/files/ \
 		http://mirror.lug.udel.edu/pub/macports/trunk/dports/net/netatalk/files/
@@ -49,6 +48,9 @@ CONFIGURE_ARGS+=	--with-uams-path=${PREFIX}/libexec/netatalk/uams
 CONFIGURE_ARGS+=	--with-bdb=${BDBBASE}
 CONFIGURE_ARGS+=	--with-ssl-dir=${BUILDLINK_PREFIX.openssl}
 CONFIGURE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH}
+
+# See <http://mail-index.netbsd.org/netbsd-users/2019/04/25/msg022684.html>
+#CFLAGS+=		-DOPENSSL_API_COMPAT=0x10000000L
 
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/msg
 
