@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.5 2022/05/23 09:55:27 pin Exp $
+$NetBSD: distinfo,v 1.6 2023/02/28 22:31:53 pin Exp $
 
-BLAKE2s (elvish-0.18.0.tar.gz) = 262b9d0bbb283d41f80fc87ff4754477581cb58191d36c2bab36175b6a90dbf9
-SHA512 (elvish-0.18.0.tar.gz) = fcd7babd4017dfe0ea09e87dea0d4f80d6fc818ac107cfe6329d2170033652f9c3e688962daedfd7d46adcb56f171f14ff1aade6b1cfcd0a88ebaf8bc3117ec3
-Size (elvish-0.18.0.tar.gz) = 699565 bytes
+BLAKE2s (elvish-0.19.0.tar.gz) = 7271ed0c83a7f900e276f790b1b898a06ad0c64c643bc96d14a1713e576c3d15
+SHA512 (elvish-0.19.0.tar.gz) = 75102831b82131bbadc30e2f696d2ffa52f228bb18bae32de47e73e6a378cb2f81cf9f0e668a9842c851c3d6fd0463ba8b405a67797878c690c8ddd1f29e2b94
+Size (elvish-0.19.0.tar.gz) = 828932 bytes
 BLAKE2s (github.com_creack_pty_@v_v1.1.15.mod) = 19b33a84ea62506eb4da7226657fea56d1c17f128a045f166d91db907c32c93e
 SHA512 (github.com_creack_pty_@v_v1.1.15.mod) = b825d82c81fd02f7dc8be5be8d4f0e3b9bf39a75e453857ab3f4d8d17129d2214f6b4dddd18cd613cb4d29dbd5adc59f43c1f65d218e7f3b67f0a8e33e62f5a6
 Size (github.com_creack_pty_@v_v1.1.15.mod) = 38 bytes
@@ -18,9 +18,6 @@ Size (github.com_google_go-cmp_@v_v0.5.7.zip) = 132348 bytes
 BLAKE2s (github.com_gorilla_websocket_@v_v1.4.1.mod) = dbf53703a57aa05392a4753b21d683ec3798f5a11d06fc84a30426f87315008d
 SHA512 (github.com_gorilla_websocket_@v_v1.4.1.mod) = 81ef224435efb5cbd429dd4339e8410234855f4a268302a61d34e76c388e89ea22c97ae90d71a6ef910ca00d3178e40d3587eaf484112966050fbd1f1f4843ab
 Size (github.com_gorilla_websocket_@v_v1.4.1.mod) = 45 bytes
-BLAKE2s (github.com_gorilla_websocket_@v_v1.4.1.zip) = cce0915c2c2b43ca21d667c0ead6eb7da6b8dbc87f2ef177b04e3bcfe378e824
-SHA512 (github.com_gorilla_websocket_@v_v1.4.1.zip) = 8de80f729d0538295606f5900e9f70a3f77c4b6ea7782c9bfa8520ec89c75b6a7ae08b42b6ad0dcc261f9e9a298bb58645fc97c4e5c2b51cbd6cbab62401a2ae
-Size (github.com_gorilla_websocket_@v_v1.4.1.zip) = 79215 bytes
 BLAKE2s (github.com_mattn_go-isatty_@v_v0.0.14.mod) = 927c4e44c809a70af5d278922fe3bc89f7fb0a7f8642c31c6b91d9b9c463f5b0
 SHA512 (github.com_mattn_go-isatty_@v_v0.0.14.mod) = 23b01eb4023ff5018437ff98b55ada053eba49feab2777eed36d033f426c5456b143f3defbc3131dad1251205f3ffb3553e3c10bd98de80f0a462e8450d6d56c
 Size (github.com_mattn_go-isatty_@v_v0.0.14.mod) = 104 bytes
