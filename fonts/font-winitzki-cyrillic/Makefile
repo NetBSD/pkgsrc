@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2012/10/03 18:28:22 asau Exp $
-#
+# $NetBSD: Makefile,v 1.4 2023/02/28 07:19:47 wiz Exp $
 
-DISTNAME=	font-winitzki-cyrillic-1.0.3
+DISTNAME=	font-winitzki-cyrillic-1.0.4
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_XORG:=font/}
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	ftp://ftp.freedesktop.org/pub/individual/font/
