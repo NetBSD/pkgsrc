@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2023/01/02 12:49:03 pin Exp $
+# $NetBSD: Makefile,v 1.6 2023/02/28 22:34:43 pin Exp $
 
-DISTNAME=	parallel-disk-usage-0.8.3
+DISTNAME=	parallel-disk-usage-0.8.5
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=KSXGitHub/}
 
