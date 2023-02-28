@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2023/02/28 15:33:59 hauke Exp $
+# $NetBSD: Makefile,v 1.53 2023/02/28 16:24:01 hauke Exp $
 
 DISTNAME=	netatalk-2.2.8
 PKGNAME=	${DISTNAME:C/-/22-/}
@@ -48,9 +48,6 @@ CONFIGURE_ARGS+=	--with-uams-path=${PREFIX}/libexec/netatalk/uams
 CONFIGURE_ARGS+=	--with-bdb=${BDBBASE}
 CONFIGURE_ARGS+=	--with-ssl-dir=${BUILDLINK_PREFIX.openssl}
 CONFIGURE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH}
-
-# See <http://mail-index.netbsd.org/netbsd-users/2019/04/25/msg022684.html>
-#CFLAGS+=		-DOPENSSL_API_COMPAT=0x10000000L
 
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/msg
 
