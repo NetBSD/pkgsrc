@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.70 2022/06/28 11:34:23 wiz Exp $
+# $NetBSD: Makefile,v 1.71 2023/02/28 11:33:03 bouyer Exp $
 
-DISTNAME=		mimedefang-2.78
-PKGREVISION=		8
+DISTNAME=		mimedefang-3.3
 CATEGORIES=		mail
-MASTER_SITES=		http://www.mimedefang.org/static/
+MASTER_SITES=		https://mimedefang.org/releases/
 
 MAINTAINER=		pettai@NetBSD.org
 HOMEPAGE=		https://www.mimedefang.org/
@@ -15,7 +14,6 @@ DEPENDS+=		p5-HTML-Parser>=3.26:../../www/p5-HTML-Parser
 DEPENDS+=		p5-HTML-Tagset>=3.03:../../www/p5-HTML-Tagset
 DEPENDS+=		p5-IO-stringy>=2.108:../../devel/p5-IO-stringy
 DEPENDS+=		p5-MailTools>=1.44:../../mail/p5-MailTools
-#DEPENDS+=		{perl>=5.8.6,p5-MIME-Base64>=3.03}:../../converters/p5-MIME-Base64
 DEPENDS+=		p5-MIME-tools>=5.413:../../mail/p5-MIME-tools
 DEPENDS+=		spamassassin>=2.31:../../mail/spamassassin
 
@@ -71,22 +69,11 @@ CONFIGURE_ENV+=		NAI=${PREFIX}/bin/uvscan
 PTHREAD_OPTS+=		require native
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man5 ${PKGMANDIR}/man7 ${PKGMANDIR}/man8
-do-install:
+
+post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
 	${INSTALL_DATA_DIR} ${DESTDIR}${SHAREDIR}
 	${INSTALL_DATA} ${WRKSRC}/gen-ip-validator.pl ${DESTDIR}${SHAREDIR}
-	${INSTALL_PROGRAM} ${WRKSRC}/md-mx-ctrl ${DESTDIR}${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/mimedefang-multiplexor ${DESTDIR}${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/mimedefang ${DESTDIR}${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/watch-mimedefang ${DESTDIR}${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/mimedefang.pl ${DESTDIR}${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/md-mx-ctrl.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
-	${INSTALL_DATA} ${WRKSRC}/mimedefang.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
-	${INSTALL_DATA} ${WRKSRC}/mimedefang.pl.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
-	${INSTALL_DATA} ${WRKSRC}/mimedefang-multiplexor.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
-	${INSTALL_DATA} ${WRKSRC}/watch-mimedefang.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
-	${INSTALL_DATA} ${WRKSRC}/mimedefang-filter.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
-	${INSTALL_DATA} ${WRKSRC}/mimedefang-protocol.7 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man7
 	${INSTALL_DATA} ${WRKSRC}/examples/suggested-minimum-filter-for-windows-clients ${DESTDIR}${EGDIR}/mimedefang-filter
 	${INSTALL_DATA} ${WRKSRC}/SpamAssassin/spamassassin.cf ${DESTDIR}${EGDIR}/sa-mimedefang.cf
 

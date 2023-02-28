@@ -1,0 +1,61 @@
+$NetBSD: patch-Makefile.in,v 1.1 2023/02/28 11:33:03 bouyer Exp $
+Don't force-install the config files.
+
+--- Makefile.in.orig	2023-02-27 14:54:44.712145757 +0100
++++ Makefile.in	2023-02-27 14:56:10.630669189 +0100
+@@ -229,26 +229,6 @@
+ 
+ install: all
+ 	$(INSTALL) -m 755 -d $(DESTDIR)${CONFDIR}
+-	-if test "$(IP_HEADER)" = "yes" -a ! -f "$(DESTDIR)${CONFDIR}/mimedefang-ip-key" ; then \
+-		$(PERL) ./gen-ip-validator.pl > $(DESTDIR)${CONFDIR}/mimedefang-ip-key ;\
+-		-chmod 600 $(DESTDIR)${CONFDIR}/mimedefang-ip-key > /dev/null 2>&1 ; \
+-	fi
+-
+-	if test "$(DEFANGUSER)" != "" ; then \
+-		if id "$(DEFANGUSER)" > /dev/null 2>&1 ; then \
+-			chown "$(DEFANGUSER)" $(DESTDIR)${CONFDIR}/mimedefang-ip-key > /dev/null 2>&1 || true; \
+-			test ! -d $(DESTDIR)$(SPOOLDIR) && $(INSTALL) -m 750 -o $(DEFANGUSER) -d $(DESTDIR)$(SPOOLDIR) > /dev/null 2>&1 || true; \
+-			test ! -d $(DESTDIR)$(QDIR) && $(INSTALL) -m 750 -o $(DEFANGUSER) -d $(DESTDIR)$(QDIR) > /dev/null 2>&1 || true; \
+-                fi \
+-	else \
+-		echo ""; \
+-		echo "Please create the spool directory, '$(SPOOLDIR)',"; \
+-		echo "if it does not exist.  Give it mode 700 or 750, and make"; \
+-		echo "it owned by the user and group you intend to run MIMEDefang as."; \
+-		if test "$(QDIR)" != "$(SPOOLDIR)" ; then \
+-			echo "Please do the same with the quarantine directory, '$(QDIR)'."; \
+-		fi; \
+-	fi
+ 
+ 	$(INSTALL) -m 755 -d $(DESTDIR)$(prefix)/bin
+ 	$(INSTALL) -m 755 -d $(DESTDIR)$(MANDIR)/man1
+@@ -256,14 +236,7 @@
+ 	$(INSTALL) -m 755 -d $(DESTDIR)$(MANDIR)/man5
+ 	$(INSTALL) -m 755 -d $(DESTDIR)$(MANDIR)/man7
+ 	$(INSTALL) -m 755 -d $(DESTDIR)$(MANDIR)/man8
+-	-test ! -d $(DESTDIR)$(SPOOLDIR) && mkdir -p $(DESTDIR)$(SPOOLDIR) && chmod 750 $(DESTDIR)$(SPOOLDIR) || true
+-	-test ! -d $(DESTDIR)$(QDIR) && mkdir -p $(DESTDIR)$(QDIR) && chmod 750 $(DESTDIR)$(QDIR) || true
+ 
+-	if test -f $(DESTDIR)${CONFDIR}/mimedefang-filter ; then \
+-		$(INSTALL) -m 644 examples/suggested-minimum-filter-for-windows-clients $(DESTDIR)${CONFDIR}/mimedefang-filter.example || exit 1; \
+-	else \
+-		$(INSTALL) -m 644 examples/suggested-minimum-filter-for-windows-clients $(DESTDIR)${CONFDIR}/mimedefang-filter || exit 1; \
+-	fi
+ 
+ 	$(INSTALL) -m 755 $(INSTALL_STRIP_FLAG) mimedefang-multiplexor   $(DESTDIR)$(prefix)/bin/mimedefang-multiplexor
+ 	$(INSTALL) -m 755 $(INSTALL_STRIP_FLAG) md-mx-ctrl               $(DESTDIR)$(prefix)/bin/md-mx-ctrl
+@@ -301,13 +274,6 @@
+ 	$(INSTALL) -m 644 mimedefang-filter.5      $(DESTDIR)$(MANDIR)/man5/mimedefang-filter.5
+ 	$(INSTALL) -m 644 mimedefang-protocol.7    $(DESTDIR)$(MANDIR)/man7/mimedefang-protocol.7
+ 	$(INSTALL) -m 644 mimedefang-notify.7      $(DESTDIR)$(MANDIR)/man7/mimedefang-notify.7
+-	if test "$(HAVE_SPAM_ASSASSIN)" = "yes" ; then \
+-		if test -f $(DESTDIR)${CONFDIR}/sa-mimedefang.cf ; then \
+-			$(INSTALL) -m 644 SpamAssassin/spamassassin.cf $(DESTDIR)${CONFDIR}/sa-mimedefang.cf.example || exit 1; \
+-		else \
+-			$(INSTALL) -m 644 SpamAssassin/spamassassin.cf $(DESTDIR)${CONFDIR}/sa-mimedefang.cf || exit 1; \
+-		fi \
+-	fi
+ 
+ distro: FORCE
+ 	mkdir mimedefang-$(VERSION)

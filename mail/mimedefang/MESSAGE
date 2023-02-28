@@ -1,5 +1,10 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.3 2005/09/28 14:15:49 rillig Exp $
+$NetBSD: MESSAGE,v 1.4 2023/02/28 11:33:03 bouyer Exp $
+
+Starting with version 2.81 mimedefang and mimedefang-multiplexor write their
+PID files as root. You should move your PID files out of the MIMEDefang spool
+directory and into a standard root-owned directory like /var/run.
+Use the -o option to create lock files in the spool directory.
 
 From version 2.52 mimedefang.pl doesn't detect and load Perl modules until
 the detect_and_load_perl_modules() function is called.

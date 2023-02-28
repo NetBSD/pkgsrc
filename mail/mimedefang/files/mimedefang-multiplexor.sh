@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: mimedefang-multiplexor.sh,v 1.1 2004/03/07 11:18:33 markd Exp $
+# $NetBSD: mimedefang-multiplexor.sh,v 1.2 2023/02/28 11:33:03 bouyer Exp $
 #
 # mimedefang-multiplexor handles communications between sendmail and
 # the real processor
@@ -23,12 +23,13 @@ fi
 
 name="mimedefang_multiplexor"
 rcvar="$name"
-mimedefang_multiplexor_user=${mimedefang_multiplexor_user-"@DEFANG_USER@"}
 
 defangdir="@DEFANG_SPOOLDIR@"
 command="@PREFIX@/bin/mimedefang-multiplexor"
-pidfile="${defangdir}/${name}.pid"
-command_args="-p ${pidfile}"
+pidfile="@VARBASE@/run/${name}.pid"
+lockfile="${defangdir}/${name}.lock"
+defang_user=${defang_user-"@DEFANG_USER@"}
+command_args="-p ${pidfile} -o ${lockfile} -U ${defang_user}"
 
 # default values, may be overridden on NetBSD by setting them in /etc/rc.conf
 mimedefang_multiplexor_flags=${mimedefang_multiplexor_flags-\
