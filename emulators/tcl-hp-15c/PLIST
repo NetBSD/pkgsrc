@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/08/31 09:24:25 hauke Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/02/28 10:37:22 hauke Exp $
 bin/hp-15c
 share/fonts/X11/TTF/HP-15C_Simulator_Font.ttf
 share/tcl-hp-15c/HP-15C.ico
@@ -7,13 +7,13 @@ share/tcl-hp-15c/HP-15C_Simulator_Font.ttf
 share/tcl-hp-15c/Read Me & Release Notes.html
 share/tcl-hp-15c/css/HP-15C_css.txt
 share/tcl-hp-15c/doc/FAQ.htm
-share/tcl-hp-15c/doc/convert.htm
+share/tcl-hp-15c/doc/converter.htm
 share/tcl-hp-15c/doc/dm15.htm
+share/tcl-hp-15c/doc/formats/converter.css
 share/tcl-hp-15c/doc/formats/formats.css
 share/tcl-hp-15c/doc/formats/layout.css
 share/tcl-hp-15c/doc/images/HP-15C.png
 share/tcl-hp-15c/doc/images/HP-15C_small.png
-share/tcl-hp-15c/doc/images/Quick Start.gif
 share/tcl-hp-15c/doc/images/complex_1.gif
 share/tcl-hp-15c/doc/images/display_area_small.gif
 share/tcl-hp-15c/doc/images/display_error_small.gif
@@ -25,6 +25,8 @@ share/tcl-hp-15c/doc/images/key_backspace_char_missing.png
 share/tcl-hp-15c/doc/images/key_backspace_char_ok.png
 share/tcl-hp-15c/doc/images/key_rolldown_char_missing.png
 share/tcl-hp-15c/doc/images/key_rolldown_char_ok.png
+share/tcl-hp-15c/doc/images/li.png
+share/tcl-hp-15c/doc/images/lili.png
 share/tcl-hp-15c/doc/images/mail_logo.gif
 share/tcl-hp-15c/doc/images/matrix_4x3_elements.png
 share/tcl-hp-15c/doc/images/matrix_4x3_rowcolumn.png
@@ -53,11 +55,12 @@ share/tcl-hp-15c/doc/images/storage_7regs2col.gif
 share/tcl-hp-15c/doc/images/test_menu.gif
 share/tcl-hp-15c/doc/index.htm
 share/tcl-hp-15c/doc/introduction.htm
+share/tcl-hp-15c/doc/js/MnemonicConverter.css
 share/tcl-hp-15c/doc/js/MnemonicConverter.js
 share/tcl-hp-15c/doc/keyboard.htm
-share/tcl-hp-15c/doc/keyboard_n.htm
 share/tcl-hp-15c/doc/links.htm
 share/tcl-hp-15c/doc/menus.htm
+share/tcl-hp-15c/doc/mnemonics.htm
 share/tcl-hp-15c/doc/preferences.htm
 share/tcl-hp-15c/doc/programs.htm
 share/tcl-hp-15c/doc/usage.htm
@@ -76,17 +79,22 @@ share/tcl-hp-15c/images/PrefIconHelp.gif
 share/tcl-hp-15c/images/PrefIconSimulator.gif
 share/tcl-hp-15c/images/PrefIconSystem.gif
 share/tcl-hp-15c/images/PrevIconDev.gif
+share/tcl-hp-15c/images/beveltop.gif
 share/tcl-hp-15c/images/dispframe.gif
-share/tcl-hp-15c/lib/dm15cc/dm15cc.tcl
+share/tcl-hp-15c/lib/dm15cc/DM15.tcl
 share/tcl-hp-15c/lib/dm15cc/pkgIndex.tcl
+share/tcl-hp-15c/lib/history/history.tcl
+share/tcl-hp-15c/lib/history/pkgIndex.tcl
 share/tcl-hp-15c/lib/hplcd/hplcd.tcl
 share/tcl-hp-15c/lib/hplcd/pkgIndex.tcl
 share/tcl-hp-15c/lib/html/html.tcl
+share/tcl-hp-15c/lib/html/htmlTagAttr.tcl
 share/tcl-hp-15c/lib/html/pkgIndex.tcl
 share/tcl-hp-15c/lib/math/combinatorics.tcl
 share/tcl-hp-15c/lib/math/fuzzy.tcl
 share/tcl-hp-15c/lib/math/linalg.tcl
 share/tcl-hp-15c/lib/math/math.tcl
+share/tcl-hp-15c/lib/math/misc.tcl
 share/tcl-hp-15c/lib/math/pkgIndex.tcl
 share/tcl-hp-15c/lib/math/tclIndex
 share/tcl-hp-15c/lib/matrix/matrix.tcl
@@ -98,6 +106,8 @@ share/tcl-hp-15c/lib/prdoc/pkgIndex.tcl
 share/tcl-hp-15c/lib/prdoc/prdoc.tcl
 share/tcl-hp-15c/lib/saturn/pkgIndex.tcl
 share/tcl-hp-15c/lib/saturn/s56b.tcl
+share/tcl-hp-15c/lib/textSearchReplace/pkgIndex.tcl
+share/tcl-hp-15c/lib/textSearchReplace/textSearchReplace.tcl
 share/tcl-hp-15c/logo/HP-15C-logo-22x22.png
 share/tcl-hp-15c/logo/HP-15C-logo-256x256.png
 share/tcl-hp-15c/logo/HP-15C-logo-32x32.png
