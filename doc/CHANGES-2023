@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1428 2023/02/28 06:51:30 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1429 2023/02/28 06:52:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1865,3 +1865,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated fonts/font-adobe-75dpi to 1.0.4 [wiz 2023-02-28]
 	Updated fonts/font-adobe-utopia-100dpi to 1.0.5 [wiz 2023-02-28]
 	Updated fonts/font-adobe-utopia-type1 to 1.0.5 [wiz 2023-02-28]
+	Updated fonts/font-adobe-utopia-75dpi to 1.0.5 [wiz 2023-02-28]
