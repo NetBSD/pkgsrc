@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:27:08 nia Exp $
+$NetBSD: distinfo,v 1.7 2023/02/28 06:56:37 wiz Exp $
 
-BLAKE2s (font-bh-75dpi-1.0.3.tar.bz2) = f9a7f5a12711999543f0e270578fba2a128c4389040b3cd4c38d3b5464e50b58
-SHA512 (font-bh-75dpi-1.0.3.tar.bz2) = fb19c7fe91b6cc0670b01d5b8165075866ad08796293650d6037d79211ca668decdcc1b3684774907c06073145919655690d78ccdcf2511db38b5879328a9f50
-Size (font-bh-75dpi-1.0.3.tar.bz2) = 553016 bytes
+BLAKE2s (font-bh-75dpi-1.0.4.tar.xz) = e9fcd1532b4a7d10afc7e3ecc4500de363e2e25e86aaadd827e592251dd9ccd7
+SHA512 (font-bh-75dpi-1.0.4.tar.xz) = 8ccc5accdd43b4e1b8007c94e7916c6ee947ff0d57e3b0ce92154b718ef0ac2579659719738a50ef3ab0998a8bcea5b055e6a2e4d72b9fa5755b786143303955
+Size (font-bh-75dpi-1.0.4.tar.xz) = 472540 bytes
