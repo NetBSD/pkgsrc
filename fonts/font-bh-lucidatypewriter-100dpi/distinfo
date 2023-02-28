@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:27:08 nia Exp $
+$NetBSD: distinfo,v 1.7 2023/02/28 06:57:45 wiz Exp $
 
-BLAKE2s (font-bh-lucidatypewriter-100dpi-1.0.3.tar.bz2) = feed6841bd4989e63f61b580155c8fdb07329820da8a596ef518fbb4acfcec06
-SHA512 (font-bh-lucidatypewriter-100dpi-1.0.3.tar.bz2) = 1862003c20aa7709ea07487a4326c619e2beb33b7069d644f438d64182b41a06039c69e2867921b4d12939612a4b8e1e1727fd15851aeab9a0361060183e3b0f
-Size (font-bh-lucidatypewriter-100dpi-1.0.3.tar.bz2) = 245807 bytes
+BLAKE2s (font-bh-lucidatypewriter-100dpi-1.0.4.tar.xz) = c8412d91562103f57211d52589adfa1d9caeb89b5f08e29aad0bdc2a68b69490
+SHA512 (font-bh-lucidatypewriter-100dpi-1.0.4.tar.xz) = 31a4d061430089c5523815dde7d7cf73c9cba768ab79004eb65af8a1684fdd57d0829d9f4249c8e542e733266cc5f83e38eff403423a77a06af15008ce95d2ab
+Size (font-bh-lucidatypewriter-100dpi-1.0.4.tar.xz) = 212808 bytes
