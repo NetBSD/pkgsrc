@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:27:10 nia Exp $
+$NetBSD: distinfo,v 1.7 2023/02/28 07:18:08 wiz Exp $
 
-BLAKE2s (font-sony-misc-1.0.3.tar.bz2) = 5344ac9bd3bb77f7252f8a054fb3dfb8219df0f7b0a4c44665c08d631cf1bfd9
-SHA512 (font-sony-misc-1.0.3.tar.bz2) = c397b4e5081b2946799d701b8c48fca9fd2d55b8fa1dd96d2b29c5cd9996bb7356ae12671bf3bd964e6313bdc154020ed6377534e59ce53067e955e4b37aee1d
-Size (font-sony-misc-1.0.3.tar.bz2) = 108098 bytes
+BLAKE2s (font-sony-misc-1.0.4.tar.xz) = 43a460be652462eba63271c01e407068be605ef600b5259f6535a6a78e82f873
+SHA512 (font-sony-misc-1.0.4.tar.xz) = f361fca66db2ec80b1467fb6bff57bd2cfc6722473bd7ad119026a97552eef07ff77552c01eb8f98f3299d7fd40c8c2cb3e0d0b01adca2f81c2c2f75581dc113
+Size (font-sony-misc-1.0.4.tar.xz) = 102428 bytes
