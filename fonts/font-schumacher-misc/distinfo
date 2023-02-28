@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:27:10 nia Exp $
+$NetBSD: distinfo,v 1.6 2023/02/28 07:16:34 wiz Exp $
 
-BLAKE2s (font-schumacher-misc-1.1.2.tar.bz2) = 56c0165cd1c8f2b089dad30389361891181393660fd2f2ae145a98251285aaac
-SHA512 (font-schumacher-misc-1.1.2.tar.bz2) = f37a2bfce95458b11376c89767b5adaea03dcecd7ed5b99a19a3d263f48e70b15bf679826a794c55da26b5f1635ea5fa5772ffe44c9f77a1daab0744ed92300a
-Size (font-schumacher-misc-1.1.2.tar.bz2) = 141170 bytes
+BLAKE2s (font-schumacher-misc-1.1.3.tar.xz) = 2263afaec4b94bd31f044383b47eb6eff0c6169d4c24608e175700f9a4e3a73c
+SHA512 (font-schumacher-misc-1.1.3.tar.xz) = 83b25495535176a5e348269358ac34af8223023a55e2c5c599725ee90ec9ff3ea9ff19cca46b93eeae7ef985da325f9065c83d829a4a8c72d0c3c197242a1b64
+Size (font-schumacher-misc-1.1.3.tar.xz) = 128680 bytes
