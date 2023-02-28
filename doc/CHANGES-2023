@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1458 2023/02/28 07:19:19 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1459 2023/02/28 07:19:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1895,3 +1895,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated fonts/font-screen-cyrillic to 1.0.5 [wiz 2023-02-28]
 	Updated fonts/font-sony-misc to 1.0.4 [wiz 2023-02-28]
 	Updated fonts/font-sun-misc to 1.0.4 [wiz 2023-02-28]
+	Updated fonts/font-winitzki-cyrillic to 1.0.4 [wiz 2023-02-28]
