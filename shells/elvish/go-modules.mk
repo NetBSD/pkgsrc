@@ -1,11 +1,10 @@
-# $NetBSD: go-modules.mk,v 1.3 2022/05/23 09:55:27 pin Exp $
+# $NetBSD: go-modules.mk,v 1.4 2023/02/28 22:31:53 pin Exp $
 
 GO_MODULE_FILES+=	github.com/creack/pty/@v/v1.1.15.mod
 GO_MODULE_FILES+=	github.com/creack/pty/@v/v1.1.15.zip
 GO_MODULE_FILES+=	github.com/google/go-cmp/@v/v0.5.7.mod
 GO_MODULE_FILES+=	github.com/google/go-cmp/@v/v0.5.7.zip
 GO_MODULE_FILES+=	github.com/gorilla/websocket/@v/v1.4.1.mod
-GO_MODULE_FILES+=	github.com/gorilla/websocket/@v/v1.4.1.zip
 GO_MODULE_FILES+=	github.com/mattn/go-isatty/@v/v0.0.14.mod
 GO_MODULE_FILES+=	github.com/mattn/go-isatty/@v/v0.0.14.zip
 GO_MODULE_FILES+=	github.com/sourcegraph/go-lsp/@v/v0.0.0-20200429204803-219e11d77f5d.mod
