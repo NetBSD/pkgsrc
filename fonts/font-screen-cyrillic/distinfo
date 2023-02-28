@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:27:10 nia Exp $
+$NetBSD: distinfo,v 1.6 2023/02/28 07:17:25 wiz Exp $
 
-BLAKE2s (font-screen-cyrillic-1.0.4.tar.bz2) = e70bbbeebf96608bccf29850199e6dd317f89d3909ba6a0690afd168c299506e
-SHA512 (font-screen-cyrillic-1.0.4.tar.bz2) = 58f12a4cbd18e323daad75b32a01ab3980dca0046f8dd94ff4452606ab9316b8a208dda3bc8e9346c02993bd2b8bb2b3dfe3413ccf9fc6a907fc1ea5d236fa51
-Size (font-screen-cyrillic-1.0.4.tar.bz2) = 103168 bytes
+BLAKE2s (font-screen-cyrillic-1.0.5.tar.xz) = 0470a2676b0c40fb80cf97aaa7152c6e3743b35de90eb7407240fc1d8b89e76e
+SHA512 (font-screen-cyrillic-1.0.5.tar.xz) = 9f136fc6f6a3621c4b38302af5396789b1e6558b9b4b1b991624945eb9aac8497a6cd415460abc7dbcbaad1ef8ebd23cacfb3448c6e34cc9ba0726e7973c1a99
+Size (font-screen-cyrillic-1.0.5.tar.xz) = 98788 bytes
