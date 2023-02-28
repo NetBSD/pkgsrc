@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:27:08 nia Exp $
+$NetBSD: distinfo,v 1.6 2023/02/28 06:54:22 wiz Exp $
 
-BLAKE2s (font-arabic-misc-1.0.3.tar.bz2) = 8a0c99c4a21b4103420d4c9eeef20106bd752f7561da774b0b5670ead3f30913
-SHA512 (font-arabic-misc-1.0.3.tar.bz2) = 46a416bf888afdb54f5dda6c9a7207dc069d14089ba14b262c60cb9ad427784c46e2a61b32a79f1d745e73ea657bbc36b48aa5d4bbd79f73a2d997b027ddfbc0
-Size (font-arabic-misc-1.0.3.tar.bz2) = 112136 bytes
+BLAKE2s (font-arabic-misc-1.0.4.tar.xz) = 7e04a5af5073089b1e86be7fc25fea0eaadf2c8060dca1bedc9d19140ace844a
+SHA512 (font-arabic-misc-1.0.4.tar.xz) = afd5fae32440b133c5ee0195af44ad1462d35c2f451dcf4b1c93e0ce245d009b120d39eb5f780b003ae2f572408965e6d149437e9ebbf5738cb69193aaa4d488
+Size (font-arabic-misc-1.0.4.tar.xz) = 104644 bytes
