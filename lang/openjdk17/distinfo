@@ -1,8 +1,17 @@
-$NetBSD: distinfo,v 1.9 2023/02/25 18:11:31 ryoon Exp $
+$NetBSD: distinfo,v 1.10 2023/02/28 17:50:07 tnn Exp $
 
+BLAKE2s (bootstrap-jdk-1.17.0.3.7-netbsd-9-aarch64-20220516.tar.xz) = b632092d25292e795a2d7567ec55d03f21021dbba27eab3e81a48aed5e5bdd68
+SHA512 (bootstrap-jdk-1.17.0.3.7-netbsd-9-aarch64-20220516.tar.xz) = fb86749d56be94cc1509f92d8fbdec481b0c7f6fdd5e731826098e6eaa668539052571ffd09125346c1920262b07857ea675799ab8476fcff53c03e158536c1d
+Size (bootstrap-jdk-1.17.0.3.7-netbsd-9-aarch64-20220516.tar.xz) = 105121752 bytes
 BLAKE2s (bootstrap-jdk-1.17.0.3.7-netbsd-9-amd64-20220515.tar.xz) = 5da928c9ad945b0be6eebdada9788fe0f837a52d1e50ffa3535ef4115700f20a
 SHA512 (bootstrap-jdk-1.17.0.3.7-netbsd-9-amd64-20220515.tar.xz) = 785a6f203e7e5a31f48c708e6a33aa28f00b742226248e2757564d521c580f78070145e4a5dedf3eac1801531781143550c1c127ef6f8d310b88e864d42f4279
 Size (bootstrap-jdk-1.17.0.3.7-netbsd-9-amd64-20220515.tar.xz) = 105391720 bytes
+BLAKE2s (bootstrap-jdk-1.17.0.3.7-netbsd-9-earmv6hf-20220525.tar.xz) = 1ae4c68999fa355ef677bd7b70570012e4634c2ba4ef1c239316ca2ee8eabb83
+SHA512 (bootstrap-jdk-1.17.0.3.7-netbsd-9-earmv6hf-20220525.tar.xz) = 9a71a9a3ae7765934fb8ced51e3f419236c183efed33095665e0632abd78fe9ba91181037afe6ad2f074b3b0da9a624a5bc3d534ca90dd491eadbaabcf6ff03e
+Size (bootstrap-jdk-1.17.0.3.7-netbsd-9-earmv6hf-20220525.tar.xz) = 96766088 bytes
+BLAKE2s (bootstrap-jdk-1.17.0.3.7-netbsd-9-i386-20220515.tar.xz) = a8e6a44e1470cf2e8845f6b5a6edff142d06c76e12a793b5991b1bf05cf36a98
+SHA512 (bootstrap-jdk-1.17.0.3.7-netbsd-9-i386-20220515.tar.xz) = 9fc54d9a31270cbec5e0454bbf1ddf3bb99ab5c916660e1f5e89163b384368a7f1fd5311db71b21c1638eb916899199a1080e90cc1f9615bfdbd871bb94a3216
+Size (bootstrap-jdk-1.17.0.3.7-netbsd-9-i386-20220515.tar.xz) = 103902136 bytes
 BLAKE2s (jdk17u-jdk-17.0.6-10-1.tar.gz) = c7cc7320fa695e87fd6e7c4c27b17563c458447398ded08002ab1686411a121f
 SHA512 (jdk17u-jdk-17.0.6-10-1.tar.gz) = b47a20b4139df00a376e16c6d8b39b955decdb74c128945da38a8a29a48f38e3974d6d91d1110acdfca0d67dd040ac16781b14575a2ec989d445b9f8026c3b9b
 Size (jdk17u-jdk-17.0.6-10-1.tar.gz) = 105345181 bytes
