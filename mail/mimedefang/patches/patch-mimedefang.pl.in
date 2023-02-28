@@ -1,8 +1,10 @@
-$NetBSD: patch-ac,v 1.7 2010/02/05 19:53:08 markd Exp $
+$NetBSD: patch-mimedefang.pl.in,v 1.3 2023/02/28 11:33:03 bouyer Exp $
 
---- mimedefang.pl.in.orig	2009-01-05 20:37:38.000000000 +0000
-+++ mimedefang.pl.in
-@@ -121,29 +121,29 @@ $VirusScannerRoutinesInitialized = 0;
+Dynamically check virus scanner availability
+
+--- mimedefang.pl.in.orig	2022-12-28 17:19:31.000000000 +0100
++++ mimedefang.pl.in	2023-02-27 15:46:16.986658353 +0100
+@@ -64,30 +64,30 @@
  $SALocalTestsOnly = 1;
  $DoStatusTags = 0;
  
@@ -11,6 +13,12 @@ $NetBSD: patch-ac,v 1.7 2010/02/05 19:53:08 markd Exp $
 -$Features{'Virus:KAVSCANNER'} = ('@KAVSCANNER@' ne '/bin/false' ? '@KAVSCANNER@' : 0);
 -$Features{'Virus:CLAMAV'}   = ('@CLAMSCAN@' ne '/bin/false' ? '@CLAMSCAN@' : 0);
 -$Features{'Virus:CLAMD'}    = ('@CLAMD@' ne '/bin/false' ? '@CLAMD@' : 0);
++$Features{'Virus:AVP'}      = ((('@AVP@' ne '/bin/false') and (-x '@AVP@')) ? '@AVP@' : 0);
++$Features{'Virus:AVP5'}      = ((('@AVP5@' ne '/bin/false') and (-x '@AVP5@')) ? '@AVP5@' : 0);
++$Features{'Virus:KAVSCANNER'} = ((('@KAVSCANNER@' ne '/bin/false') and (-x '@KAVSCANNER@')) ? '@KAVSCANNER@' : 0);
++$Features{'Virus:CLAMAV'}   = ((('@CLAMSCAN@' ne '/bin/false') and (-x '@CLAMSCAN@')) ? '@CLAMSCAN@' : 0);
++$Features{'Virus:CLAMD'}    = ((('@CLAMD@' ne '/bin/false') and (-x '@CLAMD@')) ? '@CLAMD@' : 0);
+ $Features{'Virus:CLAMDSCAN'} = ('/bin/false' ne '/bin/false' ? '/bin/false' : 0);
 -$Features{'Virus:FPROT'}    = ('@FPROT@' ne '/bin/false' ? '@FPROT@' : 0);
 -$Features{'Virus:FPSCAN'}    = ('@FPSCAN@' ne '/bin/false' ? '@FPSCAN@' : 0);
 -$Features{'Virus:FSAV'}     = ('@FSAV@' ne '/bin/false' ? '@FSAV@' : 0);
@@ -19,13 +27,8 @@ $NetBSD: patch-ac,v 1.7 2010/02/05 19:53:08 markd Exp $
 -$Features{'Virus:NAI'}      = ('@NAI@' ne '/bin/false' ? '@NAI@' : 0);
 -$Features{'Virus:BDC'}      = ('@BDC@' ne '/bin/false' ? '@BDC@' : 0);
 -$Features{'Virus:NVCC'}     = ('@NVCC@' ne '/bin/false' ? '@NVCC@' : 0);
-+$Features{'Virus:AVP'}      = ((('@AVP@' ne '/bin/false') and (-x '@AVP@')) ? '@AVP@' : 0);
-+$Features{'Virus:AVP5'}      = ((('@AVP5@' ne '/bin/false') and (-x '@AVP5@')) ? '@AVP5@' : 0);
-+$Features{'Virus:KAVSCANNER'} = ((('@KAVSCANNER@' ne '/bin/false') and (-x '@KAVSCANNER@')) ? '@KAVSCANNER@' : 0);
-+$Features{'Virus:CLAMAV'}   = ((('@CLAMSCAN@' ne '/bin/false') and (-x '@CLAMSCAN@')) ? '@CLAMSCAN@' : 0);
-+$Features{'Virus:CLAMD'}    = ((('@CLAMD@' ne '/bin/false') and (-x '@CLAMD@')) ? '@CLAMD@' : 0);
 +$Features{'Virus:FPROT'}    = ((('@FPROT@' ne '/bin/false') and (-x '@FPROT@')) ? '@FPROT@' : 0);
-+$Features{'Virus:FPSCAN'}   = ((('@FPSCAN@' ne '/bin/false') and (-x '@FPSCAN@')) ? '@FPSCAN@' : 0);
++$Features{'Virus:FPSCAN'}    = ((('@FPSCAN@' ne '/bin/false') and (-x '@FPSCAN@')) ? '@FPSCAN@' : 0);
 +$Features{'Virus:FSAV'}     = ((('@FSAV@' ne '/bin/false') and (-x '@FSAV@')) ? '@FSAV@' : 0);
 +$Features{'Virus:HBEDV'}    = ((('@HBEDV@' ne '/bin/false') and (-x '@HBEDV@')) ? '@HBEDV@' : 0);
 +$Features{'Virus:VEXIRA'}   = ((('@VEXIRA@' ne '/bin/false') and (-x '@VEXIRA@')) ? '@VEXIRA@' : 0);
@@ -44,7 +47,7 @@ $NetBSD: patch-ac,v 1.7 2010/02/05 19:53:08 markd Exp $
 -$Features{'Virus:NOD32'}    = ('@NOD32@' ne '/bin/false' ? '@NOD32@' : 0);
 +$Features{'Virus:SOPHIE'}   = ((('@SOPHIE@' ne '/bin/false') and (-x '@SOPHIE@')) ? '@SOPHIE@' : 0);
 +$Features{'Virus:SOPHOS'}   = ((('@SOPHOS@' ne '/bin/false') and (-x '@SOPHOS@')) ? '@SOPHOS@' : 0);
-+$Features{'Virus:SAVSCAN'}  = ((('@SAVSCAN@' ne '/bin/false') and (-x '@SAVSCAN@')) ? '@SAVSCAN@' : 0);
++$Features{'Virus:SAVSCAN'}   = ((('@SAVSCAN@' ne '/bin/false') and (-x '@SAVSCAN@')) ? '@SAVSCAN@' : 0);
 +$Features{'Virus:TREND'}    = ((('@TREND@' ne '/bin/false') and (-x '@TREND@')) ? '@TREND@' : 0);
 +$Features{'Virus:TROPHIE'}  = ((('@TROPHIE@' ne '/bin/false') and (-x '@TROPHIE@')) ? '@TROPHIE@' : 0);
 +$Features{'Virus:CSAV'}     = ((('@CSAV@' ne '/bin/false') and (-x '@CSAV@')) ? '@CSAV@' : 0);
