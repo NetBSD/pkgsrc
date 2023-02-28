@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1425 2023/02/28 06:16:43 adam Exp $
+$NetBSD: CHANGES-2023,v 1.1426 2023/02/28 06:49:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1862,3 +1862,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated fonts/font-adobe-100dpi to 1.0.4 [wiz 2023-02-27]
 	Updated games/scummvm to 2.7.0 [adam 2023-02-28]
 	Updated textproc/py-natsort to 8.3.0 [adam 2023-02-28]
+	Updated fonts/font-adobe-75dpi to 1.0.4 [wiz 2023-02-28]
