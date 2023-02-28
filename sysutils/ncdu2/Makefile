@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/02/28 21:07:43 nikita Exp $
+# $NetBSD: Makefile,v 1.2 2023/02/28 22:55:40 wiz Exp $
 
 DISTNAME=	ncdu-2.2.2
 CATEGORIES=	sysutils
@@ -10,7 +10,6 @@ HOMEPAGE=	https://dev.yorhel.nl/ncdu
 LICENSE=	mit
 
 USE_TOOLS+=	pkg-config
-CONFLICTS+=	ncdu-1.*
 
 # \todo: There is currently an issue building zig packages as RELRO.
 RELRO_SUPPORTED=	no
