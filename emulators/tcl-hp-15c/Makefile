@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2019/11/03 19:24:34 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2023/02/28 10:37:22 hauke Exp $
 
-DISTNAME=	HP-15C_4.0.00_Source
+DISTNAME=	HP-15C_4.5.00_Source
 PKGNAME=	tcl-hp-15c-${PKGVER}
-PKGVER=		4.0.00.5811
+PKGVER=		4.5.00.6308
 CATEGORIES=	emulators math
-MASTER_SITES=	-http://bit.ly/2FQ82VL
+MASTER_SITES=	-https://bit.ly/3ksi3SI
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	hauke@NetBSD.org
@@ -12,7 +12,7 @@ HOMEPAGE=	http://hp-15c.homepage.t-online.de/
 COMMENT=	Simulated HP-15C RPN calculator
 LICENSE=	gnu-gpl-v3
 
-DEPENDS+=	tk>=8.3.2:../../x11/tk
+DEPENDS+=	tk>=8.6.6:../../x11/tk
 
 NO_CONFIGURE=	YES
 NO_BUILD=	YES
