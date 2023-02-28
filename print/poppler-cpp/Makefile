@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2023/02/16 08:17:29 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2023/02/28 20:05:02 tnn Exp $
 
 .include "../../print/poppler/Makefile.common"
 
@@ -18,8 +18,9 @@ CMAKE_ARGS+=	-DENABLE_GLIB=OFF
 CMAKE_ARGS+=	-DENABLE_UTILS=OFF
 # Compile poppler cpp wrapper.
 CMAKE_ARGS+=	-DENABLE_CPP=ON
-# Don't compile poppler qt5 wrapper.
+# Don't compile poppler qt5/6 wrapper.
 CMAKE_ARGS+=	-DENABLE_QT5=OFF
+CMAKE_ARGS+=	-DENABLE_QT6=OFF
 # Don't build libcurl based HTTP support. ## might want to include
 CMAKE_ARGS+=	-DENABLE_LIBCURL=OFF
 
