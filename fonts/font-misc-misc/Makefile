@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2022/11/09 13:14:13 joerg Exp $
-#
+# $NetBSD: Makefile,v 1.9 2023/02/28 07:13:41 wiz Exp $
 
-DISTNAME=		font-misc-misc-1.1.2
-PKGREVISION=		1
+DISTNAME=		font-misc-misc-1.1.3
 CATEGORIES=		fonts
 MASTER_SITES=		${MASTER_SITE_XORG:=font/}
-EXTRACT_SUFX=		.tar.bz2
+EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/
