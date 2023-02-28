@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:27:09 nia Exp $
+$NetBSD: distinfo,v 1.8 2023/02/28 07:05:47 wiz Exp $
 
-BLAKE2s (font-daewoo-misc-1.0.3.tar.bz2) = 4955e48ca8330df35422162169241a1c21bbd31f275bdb037d47c57d11d67550
-SHA512 (font-daewoo-misc-1.0.3.tar.bz2) = 7e97bc580f66a1316e366617d34e1dbefd576b47b9373ef34833aaaf2fdefc50befc2add5f038915db0b45fbdd56b77304a8a980bb72726479d429085c406f06
-Size (font-daewoo-misc-1.0.3.tar.bz2) = 723414 bytes
+BLAKE2s (font-daewoo-misc-1.0.4.tar.xz) = 335906f19eb7dc1d422d9e04eca47b7913001a1cc7b251287183a74a87e1c463
+SHA512 (font-daewoo-misc-1.0.4.tar.xz) = be9f550e8cb84f9e24afb6b739c357cb159da8a06f8bc2c26c9fbb62320427dd7522e04d10492cec91ab559b2e5dd5067012ff3225695a8337f1cd7db9801f57
+Size (font-daewoo-misc-1.0.4.tar.xz) = 493896 bytes
