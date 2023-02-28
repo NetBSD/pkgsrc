@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:27:10 nia Exp $
+$NetBSD: distinfo,v 1.6 2023/02/28 07:12:57 wiz Exp $
 
-BLAKE2s (font-misc-meltho-1.0.3.tar.bz2) = 6a628a90aebe5bc13f2423f8d72dcdab49609fba3dea7b17893fd7c0d7837b44
-SHA512 (font-misc-meltho-1.0.3.tar.bz2) = 3f42fe3e127f74259d50754f4bb6d2560cb32d810fecf663bd09fddb34829d29b48f3cbfaf43d02dab70b559afb2f806f321076f83450ff3871604345a0cdb56
-Size (font-misc-meltho-1.0.3.tar.bz2) = 1578992 bytes
+BLAKE2s (font-misc-meltho-1.0.4.tar.xz) = 955cf0d66339e6d976bdb05dff552b3b0d3ef09270434ecf8865eaa2b18ff2a5
+SHA512 (font-misc-meltho-1.0.4.tar.xz) = 1391e24b0402f50dfa877d71305ef8c144c489b21db0fdab278668360eef7e5ebd4145d77f52b5fc7225895804f3fc7f0e67ad114d64cde073e642d7ae328a54
+Size (font-misc-meltho-1.0.4.tar.xz) = 831660 bytes
