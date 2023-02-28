@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2020/01/18 23:31:04 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.6 2023/02/28 07:20:30 wiz Exp $
 
-DISTNAME=		font-xfree86-type1-1.0.4
+DISTNAME=		font-xfree86-type1-1.0.5
 CATEGORIES=		fonts
 MASTER_SITES=		${MASTER_SITE_XORG:=font/}
-EXTRACT_SUFX=		.tar.bz2
+EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/
