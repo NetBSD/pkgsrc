@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:27:09 nia Exp $
+$NetBSD: distinfo,v 1.8 2023/02/28 07:05:00 wiz Exp $
 
-BLAKE2s (font-cursor-misc-1.0.3.tar.bz2) = f16813fd0d3dc099dc246e26603a11dd05f173573a258fc98f44e5089c793035
-SHA512 (font-cursor-misc-1.0.3.tar.bz2) = 7ecb7f1c3c11da8b81fc0ff121fa6c1026b11f6c7878ffd0e4959df036511bc579d6b0552422ce13e26a8d188e3406631d2de55cab6b29bc7fce0416a8cffc83
-Size (font-cursor-misc-1.0.3.tar.bz2) = 102041 bytes
+BLAKE2s (font-cursor-misc-1.0.4.tar.xz) = ba19865c5feae977585c040ce3165dfff324eb8cec19011bd7ebdce6705a6221
+SHA512 (font-cursor-misc-1.0.4.tar.xz) = 22bd86a81cdfb1e17f885dc3961071c08920171a6f0736ae52d95c8e576b1debc7570aa3b7e1007f474b50435fba411f0eb1847894e8b52f6e6268d91cf9f2db
+Size (font-cursor-misc-1.0.4.tar.xz) = 97384 bytes
