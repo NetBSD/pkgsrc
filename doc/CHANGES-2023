@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1477 2023/03/01 06:40:23 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1478 2023/03/01 07:58:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1914,3 +1914,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/tuc to 1.0.0 [pin 2023-02-28]
 	Updated sysutils/xcp to 0.9.4 [pin 2023-02-28]
 	Updated devel/libgit2 to 1.6.2 [wiz 2023-03-01]
+	Updated databases/redis to 7.0.9 [adam 2023-03-01]
+	Updated textproc/ugrep to 3.10.0 [adam 2023-03-01]
