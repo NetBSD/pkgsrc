@@ -1,0 +1,98 @@
+.na
+.TH RMGDIFF 1
+.SH NAME
+rmgdiff \- use almost any graphical file difference browser to recursively
+view the differences between two directories.
+.SH SYNOPSIS
+rmgdiff [\-b] [\-d] [\-g gui] [\-n] dir1 dir2
+.SH DESCRIPTION
+.LP
+.I rmgdiff
+is an awk script that works in conjunction with almost any graphical file
+difference browser.  It is known to work with 
+.IR mgdiff ,
+.IR tkdiff ,
+and
+.IR xdiff .
+.LP
+Unless I am mistaken, most of the GUI difference viewers (except for emacs)
+do not have built-in support for recursing down two directories, but
+.I diff
+does.  Based on
+.IR diff 's
+output, 
+.I rmgdiff
+decides when to invoke the graphical difference viewer.
+.LP
+In addition,
+.I rmgdiff
+also collates
+.IR diff 's
+output.  As soon as a new difference is encountered in a text file,
+.I rmgdiff
+will print to standard output the name of the file that both directories have
+in common.  It will then start the GUI and block until the user exits.
+As more text files with differences are found, the GUI will be started up
+again.
+.LP
+In the interim,
+.I rmgdiff
+will keep track of differences in binary (non-text) files.  It organizes
+the binary files as executables, shared libraries, static libraries, object
+files, and other.  Only after all the text files have been displayed will
+.I rmgdiff
+report the binary differences.
+.LP
+It also keeps track of files and directories that
+.I diff
+reports as being only in one directory or another.  
+.I rmgdiff
+organizes these entries by directory.  Thus, files in one directory
+will be reported in one block, and files that are in the other directory
+will be reported in a different block.
+.LP
+In addition to printing the name of the files that are different,
+.I rmgdiff
+defaults to printing the relevant portion of the output from the
+.I file
+command.  This has the unfortunate side-effect of slowing things down;
+however, I find this information to be invaluable.  If you're just looking
+for a fast way to collate 
+.IR diff 's
+output, try piping it into
+.I sort
+instead.
+
+.SH COMMAND LINE OPTIONS
+.TP 8
+.B \-b
+Sets the basic reporting mode.  In basic mode, rmgdiff reports only
+file names.  It does not report the file types involved.
+.TP 8
+.B \-c
+By default, files relating to
+.I CVS
+are ignored by
+.IR rmgdiff .
+If you want to include CVS files, use this option.
+.TP 8
+.B \-d
+Sets
+.I rmgdiff
+to print way too much debugging information.
+.TP 8
+\fB\-g\fP \fIgui\fP
+Tells
+.I rmgdiff
+which gui you would like to use for viewing differences.  By default,
+.I mgdiff
+is used.  You can also set $RMGDIFF_GUI in your environment, but it can
+be overridden with this option.
+.TP 8
+.B \-n
+.I rmgdiff
+will not invoke the gui.  This is useful, if you only want to view the 
+collated output.
+
+.SH AUTHOR
+Paul Serice (paul@serice.net)

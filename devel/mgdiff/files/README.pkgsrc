@@ -1,0 +1,18 @@
+
+In order to read the default X resources and Motif widget settings,
+Mgdiff requires the XAPPLRESDIR environmental variable to be set to:
+
+	@PREFIX@/lib/X11/app-defaults
+
+-----------------------------------------------------------------------
+
+This distribution comes bundled with the following scripts:
+
+* rmgdiff allows the user to recursively diff two
+  directories using any graphical diff viewer -- including mgdiff.
+
+* cvsmgdiff allows the user to compare a revision in a  
+  CVS archive with what is currently checked out or to compare two
+  revision both of which are in the archive.
+
+See the relevant man pages for more information.
