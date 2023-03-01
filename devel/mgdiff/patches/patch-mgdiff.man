@@ -1,0 +1,94 @@
+$NetBSD: patch-mgdiff.man,v 1.1 2023/03/01 23:48:00 vins Exp $
+
+Pull patches from Debian.
+
+--- mgdiff.man.orig	1994-05-19 02:01:16.000000000 +0000
++++ mgdiff.man
+@@ -1,6 +1,7 @@
+ .\" mgdiff.man,v 2.0 1994/05/19 02:01:16 dan Exp
+ .\"
+ .\" Copyright (c) 1994    Daniel Williams
++.\" Copyright (c) 2003    Erik de Castro Lopo
+ .\" 
+ .\" The X Consortium, and any party obtaining a copy of these files from
+ .\" the X Consortium, directly or indirectly, is granted, free of charge,
+@@ -82,6 +83,20 @@ track the lines being displayed in the t
+ .LP
+ At the top of the display is a Motif menu bar; those functions are
+ discussed in the MENUS section of this manual page.
++.LP
++Earlier versions of this program (pre 2003) only allowed the selection
++of the left hand side difference or the right hand side difference.  It
++also would not allow a file to be saved with unselected blocks.  The
++current version allows the user to select both sides of a difference
++by selecting blocks using the middle mouse button.  When both sides of a 
++difference are selected both blocks will be saved to the merged file and 
++marked in a similar manner to the way 
++.I CVS
++marks merges that require manual resolution of conflicting changes.  In
++addition, the current version also allows saving of a merged file with
++unselected blocks.  In this case, the merged file will contain 
++neither the left hand side nor the right hand side of the unselected
++blocks.
+ 
+ .SH COMMAND LINE OPTIONS
+ .TP 8
+@@ -170,8 +185,27 @@ specify an output file for writing the m
+ application modal dialog.  The program will allow the user to
+ overwrite an existing file but pops up a QuestionDialog to allow the
+ user to cancel the operation if desired.  If there are any unselected
+-areas of difference between the two files the user is notified via an
+-ErrorDialog and the save operation is canceled.
++areas of difference between the two files the user is asked whether
++they want to continue or cancel the operation.  If the user continues,
++the output file will contain none of the unselected blocks.
++.IP "\fBSave As Left...\fP" \n(XYP
++.LP
++Saves the merged file to the location given by the left hand side
++file location. The user will be asked if they are sure they wish the
++existing file to be overwritten. As with the "Save As", if there are 
++any unselected areas of difference between the two files the user 
++asked whether they want to continue or cancel the operation.  If the
++user continues, the output file will contain none of the data in the
++unselected blocks.
++.IP "\fBSave As Right...\fP" \n(XYP
++.LP
++Saves the merged file to the location given by the right hand side
++file location. The user will be asked if they are sure they wish the
++existing file to be overwritten. As with the "Save As", if there are 
++any unselected areas of difference between the two files the user 
++asked whether they want to continue or cancel the operation.  If the
++user continues, the output file will contain none of the data in the
++unselected blocks.
+ .IP "\fBExit\fP" \n(XYP
+ .B Ctrl+C
+ .LP
+@@ -332,6 +366,9 @@ Mgdiff  mgdiff
+ 					XmPushButtonGadget  button_3
+ 					XmSeparatorGadget  separator_0
+ 					XmPushButtonGadget  button_4
++					XmPushButtonGadget  button_5
++					XmSeparatorGadget  separator_1
++					XmPushButtonGadget  button_6
+ 				XmRowColumn  options_menu
+ 					XmToggleButtonGadget  button_0
+ 					XmToggleButtonGadget  button_1
+@@ -543,12 +580,17 @@ command assumes arguments are delimited
+ any quote processing.
+ .SH COPYRIGHT
+ Copyright (c) 1994, Daniel Williams
++.br 
++Copyright (c) 2003, Erik de Castro Lopo
+ .br
+ See
+ .B X (1)
+ for a full statement of rights and permissions.
+-.SH AUTHOR
++.SH AUTHORS
+ Daniel Williams (dan@sass.com)
++.br
++Erik de Castro Lopo (erikd AT mega-nerd DOT com) added "\fBSave as Left/Right\fP"
++and saving both and neither sides.
+ .SH ACKNOWLEDGEMENTS
+ To Andrew C. Myers for writing
+ .I gdiff.
