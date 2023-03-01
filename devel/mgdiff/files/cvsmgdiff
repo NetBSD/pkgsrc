@@ -1,0 +1,245 @@
+#!/usr/bin/env ksh
+
+#
+# This script lets you recursively diff the CVS directories you have
+# checked out.  To use, just pass in an optional revision levels and
+# an optional file directory name.  This script then will show you the
+# differences you're interested in.
+#
+#                                             -- Paul Serice
+#
+
+CVSMGDIFF_VERSION=1.1
+
+: ${MGDIFF:=@PREFIX@/bin/mgdiff}
+: ${TMP:=/tmp}
+
+function usage {
+    if [ $# -ne 1 ] ; then
+        echo "progname: Error: Invalid args for usage: \"$@\"" >&2
+        exit 1
+    fi
+    cmd=
+    cmd="$cmd echo >&2 ;"
+    cmd="$cmd echo \"Usage: $progname [-h] [-v]"
+    cmd="$cmd [-g <gui>] [[-r <rev1>] [-r <rev2>]] file\" >&$1 ;"
+    cmd="$cmd echo >&2"
+    eval "$cmd"
+    if [ $1 -eq 1 ] ; then
+        exit 0
+    fi
+    exit 1
+}
+
+function verify_exec {
+    if [ $# -ne 1 ] ; then
+        echo "$progname: Error: Invalid args for verify_exec: \"$@\"" >&2
+        exit 1
+    fi
+    if ! type "$1" >/dev/null 2>&1 ; then
+        echo "$progname: Error: Unable to find executable for \"$1\"." >&2
+        exit 1
+    fi
+}
+
+tmp_base="cvsmgdiff-$$."
+function clean_up {
+    # These signal handlers are rough.  It is, as far as I can tell,
+    # impossible to pass in the name of the currently active temporary
+    # files.  A reasonable alternative is to scan $TMP for files that
+    # match the pattern we use being careful not to allow a malicious
+    # user to trick us into deleting some other file.
+    find "$TMP" -maxdepth 1 \
+                -type f \
+                -links 1 \
+                -uid `id -u` \
+                -name "$tmp_base"'*' \
+                -print0 \
+    | xargs -r0 rm -f
+    exit 0
+}
+
+#
+# getunique() -- Finds two unique temporary file names.
+#
+getunique()
+{
+    old_umask=`umask`
+    umask 077
+    if ! tmp_file_1=$(mktemp -q "$TMP/${tmp_base}XXXXXX") ; then
+        echo "Error: Unable to allocate a necessary temporary file." >&2
+        exit 1
+    fi
+    
+    if ! tmp_file_2=$(mktemp -q "$TMP/${tmp_base}XXXXXX") ; then
+        echo "Error: Unable to allocate a necessary temporary file." >&2
+        exit 1
+    fi
+    umask $old_umask
+}
+
+#
+# Script Starts Here !!!
+#
+
+progname="cvsmgdiff.sh"
+verify_exec "basename"
+progname=`basename $0`
+
+# Signal Trap handler to clean up temporary files in "$TMP".
+if ! trap 'clean_up' HUP INT QUIT TERM ; then
+    echo "$progname: Unable to register signal handler." >&2
+    exit 1
+fi
+
+# Get cvs revision(s) to use.
+cnt=0
+while getopts "g:hr:v" OPT ; do
+    case "$OPT" in
+        g)  MGDIFF="$OPTARG"
+            ;;
+        h)  usage 1
+            ;;
+        r)  rev[$cnt]="-r$OPTARG"
+            cnt=`expr $cnt + 1`
+            ;;
+        v)  echo "$progname: ${CVSMGDIFF_VERSION}"
+            exit 0
+            ;;
+        \?) usage 2
+            ;;
+    esac
+done
+shift `expr $OPTIND - 1`
+
+verify_exec "cut"
+verify_exec "cvs"
+verify_exec "echo"
+verify_exec "expr"
+verify_exec "find"
+verify_exec "grep"
+verify_exec "$MGDIFF"
+verify_exec "mktemp"
+verify_exec "sleep"
+verify_exec "xargs"
+
+mgdiff_basename=`basename "$MGDIFF"`
+
+# Portability issues.
+if [ "$mgdiff_basename" = "mgdiff" ] ; then
+    QUIET_OPT="-quit"
+    FNAME_OPT="-file"
+elif [ "$mgdiff_basename" = "xdiff" ] ; then
+    QUIET_OPT="-D"
+    FNAME_OPT="-N"
+elif [ "$mgdiff_basename" = "xxdiff" ] ; then
+    QUIET_OPT="-D"
+    FNAME_OPT="-N"
+    TITLE_1_OPT="--title1"
+    TITLE_2_OPT="--title2"
+fi
+
+if [ $cnt -gt 2 ] ; then
+    echo
+    echo "Error: Too many revisions."
+    echo
+    exit 1
+fi
+
+if [ ! -d `pwd`"/CVS" ] && [ ! -d `pwd`"/$1/CVS" ] ; then
+    echo
+    echo "Warning: \"$1\" does not appear to be a CVS directory." 1>&2
+    echo "Trying to diff \"$1\" with CVS repository anyway."
+    echo
+    sleep 5
+fi
+
+# Run CVS recursively on the entire directory.
+cvs diff "${rev[@]}" "$@" 2>/dev/null \
+| grep '^Index:' \
+| cut -d ' ' -f 2 \
+| while read fname ; do
+
+      echo -n "Processing $fname . . . "
+
+      # tkdiff CVS access built-in.
+      if [ "$mgdiff_basename" = "tkdiff" ] ; then
+
+          "$MGDIFF" ${rev[0]+"${rev[@]}"} "$fname"
+
+      # The others require a little bit of scripting.
+      elif [ $cnt -eq 2 ] ; then
+
+          getunique
+
+          \cvs update -p "${rev[0]}" "$fname" > "$tmp_file_1" 2> /dev/null
+          \cvs update -p "${rev[1]}" "$fname" > "$tmp_file_2" 2> /dev/null
+
+          "$MGDIFF" ${QUIET_OPT+"$QUIET_OPT"} \
+                    ${TITLE_1_OPT+"$TITLE_1_OPT" "$fname (rev ${rev[0]#-r})"} \
+                    ${TITLE_2_OPT+"$TITLE_2_OPT" "$fname (rev ${rev[1]#-r})"} \
+                    "$tmp_file_1" "$tmp_file_2"
+
+          \rm -f "$tmp_file_1" > /dev/null 2>&1
+          \rm -f "$tmp_file_2" > /dev/null 2>&1
+          
+      elif [ $cnt -le 1 ] ; then
+
+         if [ $cnt -eq 1 ] ; then
+             title_rev="${rev[0]#-r}"
+         else
+             title_rev=`cvs status "$fname" \
+                        | grep 'Working revision:' \
+                        | awk '{print $3;}'`
+         fi
+              
+          # For some reason, xxdiff does not like to work with pipes
+          # despite its saying otherwise.
+          if [ "$TITLE_1_OPT" ] ; then
+
+              getunique
+
+              # The convention that "diff" uses is that the old file is on
+              # the left and the new file is on the right.  We use this to
+              # display the files for all but "mgdiff" which has a
+              # "File->Save As..." menu option that works better the other
+              # way around.
+              file_first="$tmp_file_1"
+              file_second="$fname"
+              if [ "$mgdiff_basename" = "mgdiff" ] ; then
+                  file_first="$fname"
+                  file_second="$tmp_file_1"
+              fi
+
+              cvs update -p ${rev[0]+"${rev[0]}"} "$fname" \
+                     > "$tmp_file_1" 2>/dev/null
+              
+              "$MGDIFF" ${QUIET_OPT+"$QUIET_OPT"} \
+                        ${TITLE_1_OPT+"$TITLE_1_OPT" "$fname (rev $title_rev)"}\
+                        "$file_first" "$file_second"
+              
+              \rm -f "$tmp_file_1" > /dev/null 2>&1
+              \rm -f "$tmp_file_2" > /dev/null 2>&1
+
+          else
+
+              # See comment above.
+              file_first="-"
+              file_second="$fname"
+              if [ "$mgdiff_basename" = "mgdiff" ] ; then
+                  file_first="$fname"
+                  file_second="-"
+              fi
+
+              cvs update -p ${rev[0]+"${rev[0]}"} "$fname" 2>/dev/null \
+              | "$MGDIFF" ${QUIET_OPT+"$QUIET_OPT"} \
+                          ${FNAME_OPT+"$FNAME_OPT" "$fname (rev $title_rev)"} \
+                          "$file_first" "$file_second"
+
+          fi
+          
+      fi
+
+      echo "Done."
+
+  done

@@ -1,6 +1,14 @@
-@comment $NetBSD: PLIST,v 1.1 2023/01/02 22:43:52 vins Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/03/01 23:48:00 vins Exp $
+bin/cvsmgdiff
 bin/mgdiff
+bin/rmgdiff
 lib/X11/app-defaults/Mgdiff
 lib/X11/mgdiff/mgdiff.xbm
 lib/X11/mgdiff/mgdiff.xpm
+libexec/mgdiff/rmgdiff.awk
+man/man1/cvsmgdiff.1
 man/man1/mgdiff.1
+man/man1/rmgdiff.1
+share/applications/mgdiff.desktop
+share/doc/mgdiff/README.pkgsrc
+share/pixmaps/mgdiff-48x48.xpm
