@@ -1,0 +1,58 @@
+$NetBSD: patch-Mgdiff.ad,v 1.1 2023/03/01 23:48:00 vins Exp $
+
+Pull patches from Debian.
+
+--- Mgdiff.ad.orig	1994-05-19 02:01:03.000000000 +0000
++++ Mgdiff.ad
+@@ -2,6 +2,8 @@
+ ! Mgdiff.ad,v 2.0 1994/05/19 02:01:03 dan Exp
+ !
+ 
++*XmScrollBar*width:       15
++
+ !
+ ! 				widget hierarchy:
+ !
+@@ -112,7 +114,7 @@
+ !
+ ! this should only be defined in the site-wide file
+ !
+-?.AppDefaultsVersion:			1
++?.AppDefaultsVersion:			2
+ 
+ ?.Geometry:				800x600
+ 
+@@ -169,9 +171,11 @@
+ !
+ ! the overview area
+ !
+-*sbl.width:				16
+-*sbr.width:				16
+-*dam.width:				16
++*sbl.width:				15
++*sbl.Background:			lightgreen
++*sbr.width:				15
++*sbr.Background:			lightgreen
++*dam.width:				30
+ *dam.Foreground:			black
+ *dam.Background:			cyan
+ 
+@@ -215,10 +219,14 @@
+ *file_menu*button_3.Accelerator:	Ctrl<Key>s
+ *file_menu*button_3.AcceleratorText:	Ctrl+S
+ 
+-*file_menu*button_4.XmString:		Exit
+-*file_menu*button_4.Mnemonic:		E
+-*file_menu*button_4.Accelerator:	Ctrl<Key>c
+-*file_menu*button_4.AcceleratorText:	Ctrl+C
++*file_menu*button_4.XmString:		Save As Left...
++*file_menu*button_5.XmString:		Save As Right...
++
++*file_menu*button_6.XmString:		Exit
++*file_menu*button_6.Mnemonic:		E
++*file_menu*button_6.Accelerator:	Ctrl<Key>c
++*file_menu*button_6.AcceleratorText:	Ctrl+C
++
+ !
+ !
+ *view_menu*button_0.XmString:		Previous

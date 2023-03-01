@@ -1,8 +1,19 @@
-$NetBSD: distinfo,v 1.2 2023/01/03 09:01:41 vins Exp $
+$NetBSD: distinfo,v 1.3 2023/03/01 23:48:00 vins Exp $
 
-BLAKE2s (mgdiff-1.0/mgdiff.tar.gz) = 7c90e00f9646d41e5e822055340fa41440acaa5ec0352606ccec1e14b43188de
-SHA512 (mgdiff-1.0/mgdiff.tar.gz) = bf5ab4b2a9d42ff2edb73a6dda68a4d17d88f61c63f5ec8366cc49d372a56f3c6812d473a95d86bcb61680d1f91ce4ab7ad87a26748b45e2edd27b73044492a5
-Size (mgdiff-1.0/mgdiff.tar.gz) = 41187 bytes
-SHA1 (patch-Imakefile) = 6a29ed061ea0b54396269707acd7f53a9a5c32ce
-SHA1 (patch-mgdiff.c) = eba9d8ba00e15424093eaa8f65d58c7cb55625ce
-SHA1 (patch-rundiff.c) = 4ead16932bbf480d8da283b335a93418108926f2
+BLAKE2s (mgdiff-1.0.1/mgdiff.tar.gz) = 7c90e00f9646d41e5e822055340fa41440acaa5ec0352606ccec1e14b43188de
+SHA512 (mgdiff-1.0.1/mgdiff.tar.gz) = bf5ab4b2a9d42ff2edb73a6dda68a4d17d88f61c63f5ec8366cc49d372a56f3c6812d473a95d86bcb61680d1f91ce4ab7ad87a26748b45e2edd27b73044492a5
+Size (mgdiff-1.0.1/mgdiff.tar.gz) = 41187 bytes
+SHA1 (patch-Imakefile) = 7c95728d50c4d835ceb330124eccce166c9e2845
+SHA1 (patch-Mgdiff.ad) = 3be8cae459c84f355de65e37f679649472b38a16
+SHA1 (patch-externs.h) = 8e536067c9834b8ef26a0210aaf8ece31004f310
+SHA1 (patch-files.c) = fa06ab3916e0d0a95551bea5e3320c9e577b3d7a
+SHA1 (patch-legend.c) = 8933bc2938f94bc7c0c11009074517f017d4f8ee
+SHA1 (patch-manual.c) = 2f430240696d6eec22d5dd576c4577e5b7b4578d
+SHA1 (patch-mgdiff.c) = f2e2fb5cc4722ae38e00566ebbc5e87e00457807
+SHA1 (patch-mgdiff.h) = e7958ebd5ca1ccb17c7bcc7cf860d88e81f50cb4
+SHA1 (patch-mgdiff.man) = 6d3a2fbecb7ae1e8f8a2cc4f3c7ac15f44a8e01a
+SHA1 (patch-misc.c) = b6e1dd999f7fa5d013f3b6ad605f7c8c4cb4702e
+SHA1 (patch-modal.c) = 8c9e9e5c165c01f18ffb568367fa8c279a6913fc
+SHA1 (patch-patchlevel.h) = a9f3923649af2f99fdd4cce8148cc15ad6aaa626
+SHA1 (patch-rundiff.c) = 4c6360f13f1f9871b3a86afb476bfd041a290c58
+SHA1 (patch-spawn.c) = 3c9f8be777e47f485aef54511c2603adf4d26af3

@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Mgdiff
+GenericName=Diff/Patch Frontend
+Comment=Graphical front end to Unix diff
+Exec=mgdiff
+Terminal=false
+Icon=mgdiff-48x48
+StartupNotify=false
+MimeType=text/x-patch;text/x-diff;
+Categories=Application;Development;
