@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2023/03/01 18:35:29 adam Exp $
+bin/maturin-${PYVERSSUFFIX}
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/maturin/__init__.py
+${PYSITELIB}/maturin/__init__.pyc
+${PYSITELIB}/maturin/__init__.pyo
+${PYSITELIB}/maturin/__main__.py
+${PYSITELIB}/maturin/__main__.pyc
+${PYSITELIB}/maturin/__main__.pyo
+${PYSITELIB}/maturin/import_hook.py
+${PYSITELIB}/maturin/import_hook.pyc
+${PYSITELIB}/maturin/import_hook.pyo

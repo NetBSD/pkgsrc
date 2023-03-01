@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3926 2023/02/27 19:43:13 nikita Exp $
+# $NetBSD: Makefile,v 1.3927 2023/03/01 18:35:29 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2625,6 +2625,7 @@ SUBDIR+=	py-macholib
 SUBDIR+=	py-mako
 SUBDIR+=	py-mando
 SUBDIR+=	py-manticore
+SUBDIR+=	py-maturin
 SUBDIR+=	py-mccabe
 SUBDIR+=	py-mccabe06
 SUBDIR+=	py-memcached
