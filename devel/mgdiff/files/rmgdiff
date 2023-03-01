@@ -1,0 +1,185 @@
+#!/bin/sh
+
+# Default value for the RMGDIFF_GUI environment variable.
+: ${RMGDIFF_GUI:=@PREFIX@/bin/mgdiff}
+
+#
+# You shouldn't need to edit beneath here.
+#
+
+SHOW_FILE_TYPES="TRUE"
+USE_CVS=""
+DEBUG=""
+USE_GUI="TRUE"
+RMGDIFF_VERSION=""
+LC_MESSAGES=POSIX
+export LC_MESSAGES
+
+
+Usage() {
+cat <<-EOF
+
+Usage: `basename "$0"` [-b] [-c] [-d] [-g <gui>] [-n] [-v] <dir1> <dir2>
+
+    -b: basic reporting (no file type info will be printed)
+    -c: cvs files will be included in diff
+    -d: print debugging information
+    -g: which gui to use
+    -n: no gui will pop up
+    -v: version
+
+EOF
+}
+
+verify_exec () {
+    type "$1" 1>/dev/null 2>&1
+    if [ $? -ne 0 ] ; then
+        echo "$progname: Error: Unable to find executable for \"$1\"." >&2
+        exit 1
+    fi
+}
+
+# Some machines don't have a "readlink" command.
+read_link_via_ls() {
+    if [ $# -ne 1 ] ; then
+        echo "$progname: Internal Error: Invalid args for" \
+             "readlink_via_ls: $@" >&2
+        exit 1
+    fi
+
+    \ls -l "$1" | sed -e 's|.*-> ||'
+}
+
+
+# Some machines don't have a "realpath" command.  follow_link_via_ls
+# does not pretend to be "realpath" because it will leave all sorts of
+# cruft in the path string, but it should eventuall reach a regular
+# file.
+follow_link_via_ls() {
+
+    if [ $# -ne 1 ] ; then
+        echo "$progname: Internal Error: Invalid args for" \
+             "follow_link_via_ls: $@" >&2
+        exit 1
+    fi
+
+    local_iteration_count=0
+    local_iteration_max=1024
+
+    # Prime the pump.
+    local_tmp=
+    local_rv="$1"
+
+    while [ $local_iteration_count -lt $local_iteration_max ] ; do
+
+        if [ ! -h "$local_rv" ] ; then
+            break
+        fi
+
+        local_tmp=`read_link_via_ls "$local_rv"`
+
+        # The "read_link_via_ls" above could result in an absolute
+        # path or a relative one.  The Solaris /bin/sh does not
+        # support "${PSTREE_AWK_SCRIPT#/}".  So, use grep instead.
+        echo "$local_tmp" | grep '^/' >/dev/null 2>&1
+        if [ $? -ne 0 ] ; then
+            # The path given by readlink was relative.  So, we have a
+            # little more work to do because we need to prepend the
+            # same path used to reach the original symlink.
+            local_tmp=`dirname "$local_rv"`/"$local_tmp"
+        fi
+
+        local_rv="$local_tmp"
+
+        local_iteration_count=`expr $local_iteration_count + 1`
+
+    done
+
+    if [ $local_iteration_count -ge $local_iteration_max ] ; then
+        echo "$progname: Error: Symbolic link nesting is too deep when" \
+             "following \"$1\"." >&2
+        exit 1
+    fi 
+
+    echo "$local_rv"
+
+}
+
+
+#
+# Script starts here.
+#
+
+progname="rmgdiff"
+verify_exec "basename"
+progname=`basename "$0"`
+
+verify_exec "awk"
+verify_exec "diff"
+verify_exec "dirname"
+verify_exec "expr"
+verify_exec "file"
+verify_exec "grep"
+verify_exec "ls"
+verify_exec "$RMGDIFF_GUI"
+verify_exec "sed"
+
+while getopts "bcdg:nv" OPT ; do
+    case "$OPT" in
+        b)  SHOW_FILE_TYPES=""
+            ;;
+        c)  USE_CVS="TRUE"
+            ;;
+        d)  DEBUG="TRUE"
+            ;;
+        g)  RMGDIFF_GUI="$OPTARG"
+            ;;
+        n)  USE_GUI=""
+            ;;
+        v)  RMGDIFF_VERSION="TRUE"
+            ;;
+        \?) Usage
+            exit 1
+            ;;
+    esac
+done
+shift `expr $OPTIND - 1`
+
+#
+# Find the rmgdiff awk script.  It is located in the same directory as
+# this shell script after following all the symlinks.
+#
+#lib_dir=`follow_link_via_ls "$0"`
+#RMGDIFF_AWK=`dirname "$lib_dir"`/rmgdiff.awk
+
+RMGDIFF_AWK=@PREFIX@/libexec/rmgdiff.awk
+
+# If the user just wants the version ...
+if [ -n "$RMGDIFF_VERSION" ] ; then
+    exec awk -v version="$RMGDIFF_VERSION" -f "$RMGDIFF_AWK"
+fi
+
+if [ $# -lt 2 ] || [ $# -gt 2 ] ; then
+    Usage
+    exit 1
+fi
+
+if [ ! -d "$1" ] ; then
+    echo "$progname: dir1=\"$1\" is not a directory." 1>&2
+    exit 1
+fi
+
+if [ ! -d "$2" ] ; then
+    echo "$progname: dir2=\"$2\" is not a directory." 1>&2
+    exit 1
+fi
+
+LC_MESSAGES=C exec diff -rq "$1" "$2" | awk -v debug="$DEBUG" \
+                              -v dir1="$1" \
+                              -v dir2="$2" \
+                              -v rmgdiff_gui="$RMGDIFF_GUI" \
+                              -v show_file_types="$SHOW_FILE_TYPES" \
+                              -v use_cvs="$USE_CVS" \
+                              -v use_gui="$USE_GUI" \
+                              -v version="$RMGDIFF_VERSION" \
+                              -f "$RMGDIFF_AWK"

@@ -1,10 +1,10 @@
-$NetBSD: patch-Imakefile,v 1.1 2023/01/02 22:43:53 vins Exp $
+$NetBSD: patch-Imakefile,v 1.2 2023/03/01 23:48:00 vins Exp $
 
 Do not require libucb/SUNWscpu.
 
 --- Imakefile.orig	1994-05-19 02:01:00.000000000 +0000
 +++ Imakefile
-@@ -4,11 +4,10 @@
+@@ -4,16 +4,17 @@
  
  XCOMM Imakefile,v 2.0 1994/05/19 02:01:00 dan Exp
  
@@ -14,6 +14,14 @@ Do not require libucb/SUNWscpu.
  XCOMM for Dell SVR4
  XCOMM
 -EXTRA_LIBRARIES = -lc -lucb
++EXTRA_LIBRARIES = -lXpm
++EXTRA_DEFINES = -Wall -Wstrict-prototypes -Wmissing-prototypes
  
  SRCS = mgdiff.c rundiff.c misc.c files.c spawn.c manual.c modal.c legend.c
  OBJS = mgdiff.o rundiff.o misc.o files.o spawn.o manual.o modal.o legend.o
+ 
+-LOCAL_LIBRARIES = $(XMLIB) $(XTOOLLIB) $(XMULIBONLY) $(XLIB)
++LOCAL_LIBRARIES = $(XMLIB) $(XTOOLLIB) $(XMULIBONLY) $(XLIB) $(XPLIB)
+ 
+ ComplexProgramTarget(mgdiff)
+ InstallAppDefaults(Mgdiff)
