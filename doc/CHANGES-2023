@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1478 2023/03/01 07:58:15 adam Exp $
+$NetBSD: CHANGES-2023,v 1.1479 2023/03/01 08:07:40 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1916,3 +1916,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/libgit2 to 1.6.2 [wiz 2023-03-01]
 	Updated databases/redis to 7.0.9 [adam 2023-03-01]
 	Updated textproc/ugrep to 3.10.0 [adam 2023-03-01]
+	Updated net/dbip-asn-lite to 2023.03 [fcambus 2023-03-01]
