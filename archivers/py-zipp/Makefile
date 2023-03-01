@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2023/02/14 16:26:02 adam Exp $
+# $NetBSD: Makefile,v 1.24 2023/03/01 10:37:41 adam Exp $
 
-DISTNAME=	zipp-3.13.0
+DISTNAME=	zipp-3.15.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	archivers python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zipp/}
