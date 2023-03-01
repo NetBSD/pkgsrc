@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.887 2023/02/21 14:05:56 jperkin Exp $
+# $NetBSD: Makefile,v 1.888 2023/03/01 18:20:23 adam Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -426,6 +426,7 @@ SUBDIR+=	py-asn1crypto
 SUBDIR+=	py-asyncssh
 SUBDIR+=	py-authlib
 SUBDIR+=	py-backports.ssl_match_hostname
+SUBDIR+=	py-bandit
 SUBDIR+=	py-bcrypt
 SUBDIR+=	py-certbot
 SUBDIR+=	py-certbot-apache
