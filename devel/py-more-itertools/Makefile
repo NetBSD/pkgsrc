@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2022/11/17 09:19:20 adam Exp $
+# $NetBSD: Makefile,v 1.28 2023/03/01 10:58:59 adam Exp $
 
-DISTNAME=	more-itertools-9.0.0
+DISTNAME=	more-itertools-9.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/more-itertools/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/erikrose/more-itertools
 COMMENT=	More routines for operating on iterables, beyond itertools
 LICENSE=	mit
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.2:../../devel/py-flit_core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.2:../../devel/py-flit_core
 
 USE_LANGUAGES=	# none
 
