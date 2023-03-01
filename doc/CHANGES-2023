@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1487 2023/03/01 16:57:12 tsutsui Exp $
+$NetBSD: CHANGES-2023,v 1.1488 2023/03/01 18:36:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1929,3 +1929,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-prompt_toolkit to 3.0.38 [adam 2023-03-01]
 	Updated x11/qt5ct to 1.7 [pin 2023-03-01]
 	Updated net/sayaka to 3.5.5 [tsutsui 2023-03-01]
+	Added security/py-bandit version 1.7.4 [adam 2023-03-01]
+	Added devel/py-maturin version 0.14.14 [adam 2023-03-01]
