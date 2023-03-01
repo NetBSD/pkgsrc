@@ -1,5 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2020/06/17 18:35:36 pin Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/03/01 13:36:19 pin Exp $
 bin/qt5ct
+qt5/lib/libqt5ct-common.so
+qt5/lib/libqt5ct-common.so.1
+qt5/lib/libqt5ct-common.so.${PKGVERSION}
+qt5/lib/libqt5ct-common.so.${PKGVERSION}.0
 qt5/plugins/platformthemes/libqt5ct.so
 qt5/plugins/styles/libqt5ct-style.so
 share/applications/qt5ct.desktop
