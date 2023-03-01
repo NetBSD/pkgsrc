@@ -1,0 +1,3 @@
+bin/bandit @PREFIX@/bin/bandit-@PYVERSSUFFIX@
+bin/bandit-baseline @PREFIX@/bin/bandit-baseline-@PYVERSSUFFIX@
+bin/bandit-config-generator @PREFIX@/bin/bandit-config-generator-@PYVERSSUFFIX@
