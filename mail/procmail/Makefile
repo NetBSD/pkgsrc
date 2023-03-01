@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.55 2023/03/01 13:14:24 gdt Exp $
+# $NetBSD: Makefile,v 1.56 2023/03/01 13:37:26 gdt Exp $
 
 DISTNAME=	procmail-3.22
 PKGREVISION=	5
 CATEGORIES=	mail
 #MASTER_SITES=	ftp://ftp.procmail.org/pub/procmail/
+# 3.24 is at https://github.com/BuGlessRB/procmail/archive/refs/tags/v3.24.tar.gz
 
 MAINTAINER=	kim@NetBSD.org
 HOMEPAGE=	https://github.com/BuGlessRB/procmail
