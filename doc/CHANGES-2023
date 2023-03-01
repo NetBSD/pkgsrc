@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1484 2023/03/01 10:59:16 adam Exp $
+$NetBSD: CHANGES-2023,v 1.1485 2023/03/01 11:28:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1925,3 +1925,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/py-zeroconf to 0.47.3 [adam 2023-03-01]
 	Updated math/py-simpleeval to 0.9.13 [adam 2023-03-01]
 	Updated devel/py-more-itertools to 9.1.0 [adam 2023-03-01]
+	Updated devel/py-aiofiles to 23.1.0 [adam 2023-03-01]
+	Updated devel/py-prompt_toolkit to 3.0.38 [adam 2023-03-01]
