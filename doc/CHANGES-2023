@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1476 2023/02/28 22:40:17 pin Exp $
+$NetBSD: CHANGES-2023,v 1.1477 2023/03/01 06:40:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1913,3 +1913,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated shells/starship to 1.13.1 [pin 2023-02-28]
 	Updated textproc/tuc to 1.0.0 [pin 2023-02-28]
 	Updated sysutils/xcp to 0.9.4 [pin 2023-02-28]
+	Updated devel/libgit2 to 1.6.2 [wiz 2023-03-01]
