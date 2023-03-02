@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2023/02/13 11:26:29 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2023/03/02 22:49:45 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.transmission-qt
 PKG_OPTIONS_REQUIRED_GROUPS=	gui
@@ -14,6 +14,7 @@ PKG_SUGGESTED_OPTIONS=		qt6
 .endif
 
 .if !empty(PKG_OPTIONS:Mqt6)
+GCC_REQD+=		9 # qt6 requires gcc 9
 .include "../../devel/qt6-qttools/buildlink3.mk"
 .include "../../graphics/qt6-qtsvg/buildlink3.mk"
 .include "../../x11/qt6-qtbase/buildlink3.mk"
