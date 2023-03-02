@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1508 2023/03/02 15:14:36 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1509 2023/03/02 15:23:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1955,3 +1955,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated misc/plan9port to 20230123 [vins 2023-03-02]
 	Updated sysutils/onefetch to 2.16.0 [pin 2023-03-02]
 	Updated x11/gnustep-gui to 0.30.0nb1 [wiz 2023-03-02]
+	Updated devel/Gorm to 1.2.28 [wiz 2023-03-02]
