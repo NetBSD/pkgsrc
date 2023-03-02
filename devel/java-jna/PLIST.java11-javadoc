@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.java11-javadoc,v 1.3 2023/02/19 00:22:58 abs Exp $
+@comment $NetBSD: PLIST.java11-javadoc,v 1.4 2023/03/02 01:13:38 abs Exp $
 share/doc/java-jna/doc/javadoc/allclasses-index.html
 share/doc/java-jna/doc/javadoc/allclasses.html
 share/doc/java-jna/doc/javadoc/allpackages-index.html
@@ -1336,25 +1336,11 @@ share/doc/java-jna/doc/javadoc/element-list
 share/doc/java-jna/doc/javadoc/help-doc.html
 share/doc/java-jna/doc/javadoc/index-all.html
 share/doc/java-jna/doc/javadoc/index.html
+share/doc/java-jna/doc/javadoc/jquery-ui.overrides.css
 share/doc/java-jna/doc/javadoc/jquery/external/jquery/jquery.js
-share/doc/java-jna/doc/javadoc/jquery/images/ui-bg_glass_55_fbf9ee_1x400.png
-share/doc/java-jna/doc/javadoc/jquery/images/ui-bg_glass_65_dadada_1x400.png
-share/doc/java-jna/doc/javadoc/jquery/images/ui-bg_glass_75_dadada_1x400.png
-share/doc/java-jna/doc/javadoc/jquery/images/ui-bg_glass_75_e6e6e6_1x400.png
-share/doc/java-jna/doc/javadoc/jquery/images/ui-bg_glass_95_fef1ec_1x400.png
-share/doc/java-jna/doc/javadoc/jquery/images/ui-bg_highlight-soft_75_cccccc_1x100.png
-share/doc/java-jna/doc/javadoc/jquery/images/ui-icons_222222_256x240.png
-share/doc/java-jna/doc/javadoc/jquery/images/ui-icons_2e83ff_256x240.png
-share/doc/java-jna/doc/javadoc/jquery/images/ui-icons_454545_256x240.png
-share/doc/java-jna/doc/javadoc/jquery/images/ui-icons_888888_256x240.png
-share/doc/java-jna/doc/javadoc/jquery/images/ui-icons_cd0a0a_256x240.png
-share/doc/java-jna/doc/javadoc/jquery/jquery-3.5.1.js
-share/doc/java-jna/doc/javadoc/jquery/jquery-ui.css
-share/doc/java-jna/doc/javadoc/jquery/jquery-ui.js
+share/doc/java-jna/doc/javadoc/jquery/jquery-3.6.0.min.js
 share/doc/java-jna/doc/javadoc/jquery/jquery-ui.min.css
 share/doc/java-jna/doc/javadoc/jquery/jquery-ui.min.js
-share/doc/java-jna/doc/javadoc/jquery/jquery-ui.structure.css
-share/doc/java-jna/doc/javadoc/jquery/jquery-ui.structure.min.css
 share/doc/java-jna/doc/javadoc/jquery/jszip-utils/dist/jszip-utils-ie.js
 share/doc/java-jna/doc/javadoc/jquery/jszip-utils/dist/jszip-utils-ie.min.js
 share/doc/java-jna/doc/javadoc/jquery/jszip-utils/dist/jszip-utils.js
