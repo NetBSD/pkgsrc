@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/02/23 17:30:45 nikita Exp $
+# $NetBSD: Makefile,v 1.2 2023/03/02 22:47:33 wiz Exp $
 
 DISTNAME=		gnunet-gtk-0.19.0
 CATEGORIES=		net
@@ -12,7 +12,9 @@ LICENSE=		gnu-gpl-v3
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		bash pkg-config
+
+REPLACE_BASH+=		pixmaps/icon-theme-installer
 
 # options.mk uses an option from gnunet's bl3
 # TODO: verify if this still does anything
