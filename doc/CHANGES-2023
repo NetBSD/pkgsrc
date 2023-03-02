@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1513 2023/03/02 17:11:42 vins Exp $
+$NetBSD: CHANGES-2023,v 1.1514 2023/03/02 18:54:07 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1960,3 +1960,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/xtrlock to 2.15nb1 [vins 2023-03-02]
 	Updated mail/alpine to 2.26nb2 [vins 2023-03-02]
 	Updated sysutils/xfe to 1.45nb3 [vins 2023-03-02]
+	Updated lang/gleam to 0.27.0 [nikita 2023-03-02]
