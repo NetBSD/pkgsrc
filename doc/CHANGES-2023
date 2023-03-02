@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1501 2023/03/02 09:01:54 vins Exp $
+$NetBSD: CHANGES-2023,v 1.1502 2023/03/02 09:32:31 vins Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1944,3 +1944,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Downgraded devel/libgit2 to 1.5.1nb1 [wiz 2023-03-02]
 	Updated pkgtools/pkglint to 22.4.1 [rillig 2023-03-02]
 	Updated shells/yash to 2.54 [vins 2023-03-02]
+	Updated graphics/ximaging to 1.7 [vins 2023-03-02]
