@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2023/03/02 03:44:39 charlotte Exp $
+bin/OpenJazz
+share/applications/OpenJazz.desktop
+share/icons/hicolor/48x48/apps/OpenJazz.png
+share/icons/hicolor/scalable/apps/OpenJazz.svg
+share/openjazz/openjazz.000
