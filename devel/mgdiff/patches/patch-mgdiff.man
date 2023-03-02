@@ -1,4 +1,4 @@
-$NetBSD: patch-mgdiff.man,v 1.1 2023/03/01 23:48:00 vins Exp $
+$NetBSD: patch-mgdiff.man,v 1.2 2023/03/02 08:15:32 vins Exp $
 
 Pull patches from Debian.
 
@@ -33,7 +33,18 @@ Pull patches from Debian.
  
  .SH COMMAND LINE OPTIONS
  .TP 8
-@@ -170,8 +185,27 @@ specify an output file for writing the m
+@@ -162,6 +177,10 @@ file.
+ Brings up the "Open File" FileSelectionDialog to allow the user to
+ specify a file to open and compare with the already opened left\-hand
+ file.
++.IP "\fBReload Both\fP" \n(XYP
++.B Meta+R
++.LP
++Re-runs diff on both the currently opened files.
+ .IP "\fBSave As...\fP" \n(XYP
+ .B Ctrl+S
+ .LP
+@@ -170,8 +189,27 @@ specify an output file for writing the m
  application modal dialog.  The program will allow the user to
  overwrite an existing file but pops up a QuestionDialog to allow the
  user to cancel the operation if desired.  If there are any unselected
@@ -63,17 +74,21 @@ Pull patches from Debian.
  .IP "\fBExit\fP" \n(XYP
  .B Ctrl+C
  .LP
-@@ -332,6 +366,9 @@ Mgdiff  mgdiff
+@@ -330,8 +368,12 @@ Mgdiff  mgdiff
+ 					XmPushButtonGadget  button_1
+ 					XmPushButtonGadget  button_2
  					XmPushButtonGadget  button_3
- 					XmSeparatorGadget  separator_0
+-					XmSeparatorGadget  separator_0
  					XmPushButtonGadget  button_4
++					XmSeparatorGadget  separator_0
 +					XmPushButtonGadget  button_5
-+					XmSeparatorGadget  separator_1
 +					XmPushButtonGadget  button_6
++					XmSeparatorGadget  separator_1
++					XmPushButtonGadget  button_7
  				XmRowColumn  options_menu
  					XmToggleButtonGadget  button_0
  					XmToggleButtonGadget  button_1
-@@ -543,12 +580,17 @@ command assumes arguments are delimited
+@@ -543,12 +585,17 @@ command assumes arguments are delimited 
  any quote processing.
  .SH COPYRIGHT
  Copyright (c) 1994, Daniel Williams

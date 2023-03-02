@@ -1,4 +1,4 @@
-$NetBSD: patch-Mgdiff.ad,v 1.1 2023/03/01 23:48:00 vins Exp $
+$NetBSD: patch-Mgdiff.ad,v 1.2 2023/03/02 08:15:32 vins Exp $
 
 Pull patches from Debian.
 
@@ -37,21 +37,35 @@ Pull patches from Debian.
  *dam.Foreground:			black
  *dam.Background:			cyan
  
-@@ -215,10 +219,14 @@
- *file_menu*button_3.Accelerator:	Ctrl<Key>s
- *file_menu*button_3.AcceleratorText:	Ctrl+S
+@@ -210,15 +214,23 @@
+ *file_menu*button_2.Accelerator:	Ctrl<Key>r
+ *file_menu*button_2.AcceleratorText:	Ctrl+R
  
+-*file_menu*button_3.XmString:		Save As...
+-*file_menu*button_3.Mnemonic:		S
+-*file_menu*button_3.Accelerator:	Ctrl<Key>s
+-*file_menu*button_3.AcceleratorText:	Ctrl+S
+-
 -*file_menu*button_4.XmString:		Exit
 -*file_menu*button_4.Mnemonic:		E
 -*file_menu*button_4.Accelerator:	Ctrl<Key>c
 -*file_menu*button_4.AcceleratorText:	Ctrl+C
-+*file_menu*button_4.XmString:		Save As Left...
-+*file_menu*button_5.XmString:		Save As Right...
++*file_menu*button_3.XmString:		Reload Both
++*file_menu*button_3.Accelerator:	Meta<Key>r
++*file_menu*button_3.AcceleratorText:	Meta+R
 +
-+*file_menu*button_6.XmString:		Exit
-+*file_menu*button_6.Mnemonic:		E
-+*file_menu*button_6.Accelerator:	Ctrl<Key>c
-+*file_menu*button_6.AcceleratorText:	Ctrl+C
++*file_menu*button_4.XmString:		Save As...
++*file_menu*button_4.Mnemonic:		S
++*file_menu*button_4.Accelerator:	Ctrl<Key>s
++*file_menu*button_4.AcceleratorText:	Ctrl+S
++
++*file_menu*button_5.XmString:		Save As Left...
++*file_menu*button_6.XmString:		Save As Right...
++
++*file_menu*button_7.XmString:		Exit
++*file_menu*button_7.Mnemonic:		E
++*file_menu*button_7.Accelerator:	Ctrl<Key>c
++*file_menu*button_7.AcceleratorText:	Ctrl+C
 +
  !
  !
