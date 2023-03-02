@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.51 2022/11/23 16:18:51 adam Exp $
+# $NetBSD: Makefile,v 1.52 2023/03/02 23:19:45 wiz Exp $
 
-DISTNAME=	Pantomime-1.2.0
-PKGREVISION=	23
+DISTNAME=	Pantomime-1.4.0
 CATEGORIES=	mail gnustep
-MASTER_SITES=	http://debian.uni-essen.de/misc/GNUstep/Apps/GNUMail/
+MASTER_SITES=	http://download.savannah.nongnu.org/releases/gnustep-nonfsf/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.collaboration-world.com/pantomime/
+HOMEPAGE=	https://www.nongnu.org/gnustep-nonfsf/gnumail/
 COMMENT=	Objective-C mail system class library
 LICENSE=	gnu-lgpl-v2
 
