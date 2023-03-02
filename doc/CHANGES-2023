@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1520 2023/03/02 22:04:56 fcambus Exp $
+$NetBSD: CHANGES-2023,v 1.1521 2023/03/02 23:14:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1967,3 +1967,6 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/byacc to 20230219 [fcambus 2023-03-02]
 	Updated converters/dos2unix to 7.4.4 [fcambus 2023-03-02]
 	Updated devel/elfio to 3.11 [fcambus 2023-03-02]
+	Removed audio/cdplayer [wiz 2023-03-02]
+	Removed sysutils/burn [wiz 2023-03-02]
+	Removed x11/gnustep-preferences [wiz 2023-03-02]
