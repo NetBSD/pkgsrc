@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.22 2023/01/23 21:05:39 triaxx Exp $
+# $NetBSD: options.mk,v 1.23 2023/03/02 14:56:53 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.pidgin
 PKG_SUPPORTED_OPTIONS+=		dbus debug gtkspell
@@ -21,6 +21,8 @@ PYTHON_FOR_BUILD_ONLY=	tool
 .  include "../../lang/python/tool.mk"
 .  include "../../sysutils/dbus/buildlink3.mk"
 .  include "../../sysutils/dbus-glib/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-dbus
 .endif
 
 .if !empty(PKG_OPTIONS:Mgtkspell)
