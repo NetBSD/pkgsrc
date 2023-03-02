@@ -1,0 +1,6 @@
+#!/bin/sh
+#
+# $NetBSD: ottomatic.template,v 1.1 2023/03/02 04:14:15 charlotte Exp $
+# Launcher script for Otto Matic.
+set -e
+cd @@PREFIX@@/share/ottomatic && @@PREFIX@@/libexec/OttoMatic
