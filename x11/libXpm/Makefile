@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2023/02/10 09:07:22 tnn Exp $
+# $NetBSD: Makefile,v 1.30 2023/03/02 07:52:30 tnn Exp $
 
 DISTNAME=		libXpm-3.5.15
 CATEGORIES=		x11 graphics
@@ -30,6 +30,7 @@ CONFIGURE_ENV+=		XPM_PATH_GZIP=${TOOLS_GZIP_CMD}
 # path of the tool for now. Linux systems usually do not have compress(1)
 # installed by default and that bombs the configure phase.
 CONFIGURE_ENV+=		XPM_PATH_COMPRESS=/usr/bin/compress
+CONFIGURE_ENV+=		XPM_PATH_UNCOMPRESS=/usr/bin/uncompress
 MAKE_ENV+=		INTLLIBS=${BUILDLINK_LDADD.gettext:Q}
 
 .include "../../mk/bsd.prefs.mk"
