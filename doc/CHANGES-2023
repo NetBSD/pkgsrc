@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1493 2023/03/02 04:47:43 charlotte Exp $
+$NetBSD: CHANGES-2023,v 1.1494 2023/03/02 05:51:16 charlotte Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1936,3 +1936,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added games/openjazz version 20190106 [charlotte 2023-03-01]
 	Added games/ottomatic version 4.0.1 [charlotte 2023-03-01]
 	Added games/cromagrally version 3.0.0 [charlotte 2023-03-01]
+	Updated lang/qbe to 1.1 [charlotte 2023-03-01]
