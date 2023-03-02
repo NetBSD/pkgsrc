@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2020/01/23 08:11:27 taca Exp $
+# $NetBSD: Makefile,v 1.15 2023/03/02 21:28:27 he Exp $
 
 PKGNAME=	isc-dhclient-${DHVER}
 COMMENT=	ISC Dynamic Host Configuration Protocol (DHCP) Client
@@ -20,4 +20,5 @@ post-install:
 
 .include "../../net/isc-dhcp4/Makefile.common"
 .include "../../net/isc-dhcp4/buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
