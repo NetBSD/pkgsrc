@@ -1,10 +1,10 @@
-$NetBSD: patch-mf_Makefile.Tribblix,v 1.1 2022/12/06 13:04:59 vins Exp $
+$NetBSD: patch-mf_Makefile.SunOS,v 1.1 2023/03/02 09:31:52 vins Exp $
 
 Portability fix for bmake.
 Do not assume Motif to be packaged without Xft.
 
---- mf/Makefile.Tribblix.orig	2022-07-31 15:43:05.000000000 +0000
-+++ mf/Makefile.Tribblix
+--- mf/Makefile.SunOS.orig	2022-07-31 15:43:05.000000000 +0000
++++ mf/Makefile.SunOS
 @@ -14,12 +14,6 @@ CFLAGS = -O2 -Wall $(INCDIRS)
  LDFLAGS = -pthread
  IPC_OBJS = xipc.o
