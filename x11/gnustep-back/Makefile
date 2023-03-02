@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.87 2023/01/29 21:18:10 ryoon Exp $
+# $NetBSD: Makefile,v 1.88 2023/03/02 15:03:50 wiz Exp $
 
 GITHUB_PROJECT=	libs-back
 GITHUB_TAG=	back-0_28_0
@@ -17,7 +17,8 @@ USE_LANGUAGES=		objc
 USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--exec-prefix=${PREFIX}/libexec/GNUstep
-LDFLAGS=		${COMPILER_RPATH_FLAG}${PREFIX}/lib
+LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib
+LDFLAGS.NetBSD=		-L${PREFIX}/lib -lunwind
 MAKE_FILE=		GNUmakefile
 
 # /usr/bin/ld: -r and -pie may not be used together
@@ -33,6 +34,7 @@ pre-install:
 #REFER_PKGSRC+=	freetype2
 
 .include "../../x11/gnustep-gui/buildlink3.mk"
+.include "../../lang/libunwind/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
