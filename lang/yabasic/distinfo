@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.28 2022/01/23 21:51:19 fcambus Exp $
+$NetBSD: distinfo,v 1.29 2023/03/02 20:52:43 fcambus Exp $
 
-BLAKE2s (yabasic-2.90.2.tar.gz) = 48494057bd8869d26904840005a7a0377749f0fcf2e09618083ff530066d0f2b
-SHA512 (yabasic-2.90.2.tar.gz) = e0ac29379ff73d7b91a088f848885207b2528b3b641f06ea4584c7f3f8efee7dfe37156197315d85f58e2ee3059a9065c80db656ed01b7ae91015c7f8d5f8617
-Size (yabasic-2.90.2.tar.gz) = 734805 bytes
+BLAKE2s (yabasic-2.90.3.tar.gz) = 818ed04bb5b40e3454b884700b02b5519cb413752802090da9ac2ba01bf07e66
+SHA512 (yabasic-2.90.3.tar.gz) = e59dcc20612a1f9c04af20b70445ad9b487720ca034ecb6974cfd04bfb6c0cf9e799227f5a4fc0a3e8dbbdcb1b18fba8d46605afcb7a29d253510607a5913465
+Size (yabasic-2.90.3.tar.gz) = 735041 bytes
