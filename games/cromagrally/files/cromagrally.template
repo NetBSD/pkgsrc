@@ -1,0 +1,6 @@
+#!/bin/sh
+#
+# $NetBSD: cromagrally.template,v 1.1 2023/03/02 04:45:57 charlotte Exp $
+# Launcher script for Cro-Mag Rally.
+set -e
+cd @@PREFIX@@/share/cromagrally && @@PREFIX@@/libexec/CroMagRally
