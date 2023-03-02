@@ -5,6 +5,9 @@ configuration, Alpine offers an intentionally limited set of
 functions geared toward the novice user, but it also has a large
 list of optional "power-user" and personal-preference features.
 
-This package currently only installs the alpine binary, excluding
-the pilot and pico binaries which would cause it to conflict with
-the pine package.
+This package also includes:
+* pico(1), a simple text editor with limited searching,
+  block cut and paste, and spell checking features.
+* pilot(1), a simple, console-based,
+  display-oriented file system navigator. Pilot provides basic file
+  manipulation commands.
