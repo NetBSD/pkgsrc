@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.76 2022/11/23 16:19:44 adam Exp $
+# $NetBSD: Makefile,v 1.77 2023/03/02 15:22:52 wiz Exp $
 
-DISTNAME=	gorm-1.2.20
-PKGNAME=	Gorm-1.2.20
-PKGREVISION=	18
+DISTNAME=	gorm-1.2.28
+PKGNAME=	${DISTNAME:S/gorm/Gorm/}
 CATEGORIES=	devel gnustep
 MASTER_SITES=	${MASTER_SITE_GNUSTEP:=dev-apps/}
 
@@ -16,6 +15,12 @@ USE_LANGUAGES=	objc
 NO_CONFIGURE=	yes
 MAKE_FILE=	GNUmakefile
 
+# /usr/bin/ld: ./obj/Gorm.obj/Gorm.m.o: undefined reference to symbol '_Unwind_Resume'
+# /usr/bin/ld: /usr/pkg/lib/libunwind.so.1: error adding symbols: DSO missing from command line
+LDFLAGS.NetBSD+=	-L${PREFIX}/lib -lunwind
+MAKE_ENV+=		ADDITIONAL_LDFLAGS=${LDFLAGS:Q}
+
 .include "../../x11/gnustep-back/buildlink3.mk"
+.include "../../lang/libunwind/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
