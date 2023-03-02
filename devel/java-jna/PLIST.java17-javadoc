@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST.java11-javadoc,v 1.4 2023/03/02 01:13:38 abs Exp $
+@comment $NetBSD: PLIST.java17-javadoc,v 1.1 2023/03/02 01:13:38 abs Exp $
 share/doc/java-jna/doc/javadoc/allclasses-index.html
-share/doc/java-jna/doc/javadoc/allclasses.html
 share/doc/java-jna/doc/javadoc/allpackages-index.html
 share/doc/java-jna/doc/javadoc/com/sun/jna/AltCallingConvention.html
 share/doc/java-jna/doc/javadoc/com/sun/jna/Callback.UncaughtExceptionHandler.html
@@ -1337,27 +1336,24 @@ share/doc/java-jna/doc/javadoc/help-doc.html
 share/doc/java-jna/doc/javadoc/index-all.html
 share/doc/java-jna/doc/javadoc/index.html
 share/doc/java-jna/doc/javadoc/jquery-ui.overrides.css
-share/doc/java-jna/doc/javadoc/jquery/external/jquery/jquery.js
-share/doc/java-jna/doc/javadoc/jquery/jquery-3.6.0.min.js
-share/doc/java-jna/doc/javadoc/jquery/jquery-ui.min.css
-share/doc/java-jna/doc/javadoc/jquery/jquery-ui.min.js
-share/doc/java-jna/doc/javadoc/jquery/jszip-utils/dist/jszip-utils-ie.js
-share/doc/java-jna/doc/javadoc/jquery/jszip-utils/dist/jszip-utils-ie.min.js
-share/doc/java-jna/doc/javadoc/jquery/jszip-utils/dist/jszip-utils.js
-share/doc/java-jna/doc/javadoc/jquery/jszip-utils/dist/jszip-utils.min.js
-share/doc/java-jna/doc/javadoc/jquery/jszip/dist/jszip.js
-share/doc/java-jna/doc/javadoc/jquery/jszip/dist/jszip.min.js
+share/doc/java-jna/doc/javadoc/legal/ADDITIONAL_LICENSE_INFO
+share/doc/java-jna/doc/javadoc/legal/ASSEMBLY_EXCEPTION
+share/doc/java-jna/doc/javadoc/legal/LICENSE
+share/doc/java-jna/doc/javadoc/legal/jquery.md
+share/doc/java-jna/doc/javadoc/legal/jqueryUI.md
 share/doc/java-jna/doc/javadoc/member-search-index.js
-share/doc/java-jna/doc/javadoc/member-search-index.zip
+share/doc/java-jna/doc/javadoc/module-search-index.js
 share/doc/java-jna/doc/javadoc/overview-summary.html
 share/doc/java-jna/doc/javadoc/overview-tree.html
 share/doc/java-jna/doc/javadoc/package-search-index.js
-share/doc/java-jna/doc/javadoc/package-search-index.zip
 share/doc/java-jna/doc/javadoc/resources/glass.png
 share/doc/java-jna/doc/javadoc/resources/x.png
+share/doc/java-jna/doc/javadoc/script-dir/jquery-3.6.0.min.js
+share/doc/java-jna/doc/javadoc/script-dir/jquery-ui.min.css
+share/doc/java-jna/doc/javadoc/script-dir/jquery-ui.min.js
 share/doc/java-jna/doc/javadoc/script.js
 share/doc/java-jna/doc/javadoc/search.js
 share/doc/java-jna/doc/javadoc/serialized-form.html
 share/doc/java-jna/doc/javadoc/stylesheet.css
+share/doc/java-jna/doc/javadoc/tag-search-index.js
 share/doc/java-jna/doc/javadoc/type-search-index.js
-share/doc/java-jna/doc/javadoc/type-search-index.zip
