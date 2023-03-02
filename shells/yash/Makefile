@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2022/12/19 10:57:23 vins Exp $
+# $NetBSD: Makefile,v 1.5 2023/03/02 09:01:12 vins Exp $
 
-DISTNAME=	yash-2.53
+DISTNAME=	yash-2.54
 CATEGORIES=	shells
-MASTER_SITES=	https://free.nchc.org.tw/osdn/yash/77664/
+MASTER_SITES=	https://free.nchc.org.tw/osdn/yash/78345/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	vins@NetBSD.org
