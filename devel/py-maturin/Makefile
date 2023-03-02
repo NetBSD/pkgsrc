@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/03/01 18:35:29 adam Exp $
+# $NetBSD: Makefile,v 1.2 2023/03/02 06:20:33 wiz Exp $
 
 DISTNAME=	maturin-0.14.14
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,6 +13,8 @@ LICENSE=	apache-2.0
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-rust>=1.4.0:../../devel/py-setuptools-rust
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0.36.2:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-tomli>=1.1.0:../../textproc/py-tomli
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
