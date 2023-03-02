@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.26 2023/02/10 11:07:12 fcambus Exp $
+$NetBSD: distinfo,v 1.27 2023/03/02 21:22:20 fcambus Exp $
 
-BLAKE2s (byacc-20230201.tgz) = 9635ff10c50bb28ca2b4d4fecf1165aa3be975c74986a244e169112c35526608
-SHA512 (byacc-20230201.tgz) = 8dc10fb19cd55086e7c4d5f01c533fbacd8d4ec94d45e00880ea08f26e26ca31cd4eaae7471561af5422c5bed517d4fe8bb86a0c337ea855f6f75f06671c2114
-Size (byacc-20230201.tgz) = 897063 bytes
+BLAKE2s (byacc-20230219.tgz) = 3ae1e7a6d06e8e4d103efb6143f4d9083fc9bee41491c2ebdbf0bde6a4ed73f6
+SHA512 (byacc-20230219.tgz) = 55fb9abc82afffb68a2167eb3f6211b1c2c91dda4f3b6004c01c46b2022bbec4ed8f793cfb86094eaa66decbd40d9e6f06af5b0da9d72f30ca0676aa38eb2d5e
+Size (byacc-20230219.tgz) = 898360 bytes
