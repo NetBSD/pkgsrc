@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2023/03/01 23:48:00 vins Exp $
+# $NetBSD: Makefile,v 1.3 2023/03/02 08:15:32 vins Exp $
 
 DISTNAME=	mgdiff
 PKGNAME=	${DISTNAME}-1.0.1
+PKGREVISION=	1
 CATEGORIES=	devel x11
 MASTER_SITES=	${MASTER_SITE_XCONTRIB:=applications/}
 DIST_SUBDIR=	${PKGNAME_NOREV}
