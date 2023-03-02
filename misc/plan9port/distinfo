@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.1 2022/12/06 14:29:25 vins Exp $
+$NetBSD: distinfo,v 1.2 2023/03/02 13:58:04 vins Exp $
 
-BLAKE2s (plan9port-20220912-ffbdd1aa20c8a20a8e9dcd3cec644b6dfa3c6acb.tar.gz) = bea5a32cd2108acca093437e3afe346b6d82eed652fa067a42c444157c9c84ce
-SHA512 (plan9port-20220912-ffbdd1aa20c8a20a8e9dcd3cec644b6dfa3c6acb.tar.gz) = 12889ca91d04cb623d44efb39196dca7591b4fb81f06e6b47bb07aae7aeff054191353ff44c8fd75c56505a42102c1ad7eb058e428b59c0d098c76df0ce6b7d4
-Size (plan9port-20220912-ffbdd1aa20c8a20a8e9dcd3cec644b6dfa3c6acb.tar.gz) = 23407448 bytes
+BLAKE2s (plan9port-20230123-e2a141ae0952c2d28a9f500bb9da6dc72e57be3c.tar.gz) = 99010aa1dc24bbd7a6a2f24fef9f3e2cd525261d1628fcc9405cbfa7ac2acd2f
+SHA512 (plan9port-20230123-e2a141ae0952c2d28a9f500bb9da6dc72e57be3c.tar.gz) = c2c730e478ed3d876dead7cf3ff3d6d24ac37436f18ad478fd61e943248b0e37435520ea6c57fcb398ee7424d7609af3bfb9704f5ac3ddb1a23553cebf906ccd
+Size (plan9port-20230123-e2a141ae0952c2d28a9f500bb9da6dc72e57be3c.tar.gz) = 23411241 bytes
 SHA1 (patch-INSTALL) = c57b8248b52f4f2143c6b2d67226fb3e0ccfe8a1
 SHA1 (patch-bin_9c) = f82600788e2643d9b93941a47774be1b3c79c03b
 SHA1 (patch-bin_9l) = e6daeac87657ed3e25e0f0db403d973f60d544d2
