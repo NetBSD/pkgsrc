@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2021/12/31 17:24:31 plunky Exp $
+# $NetBSD: Makefile,v 1.2 2023/03/02 22:04:45 fcambus Exp $
 #
 
-DISTNAME=	elfio-3.9
+DISTNAME=	elfio-3.11
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=elfio/}
 
