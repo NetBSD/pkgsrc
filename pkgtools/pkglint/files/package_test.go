@@ -3153,7 +3153,7 @@ func (s *Suite) Test_Package_checkPossibleDowngrade(c *check.C) {
 
 	t.CreateFileLines("doc/CHANGES-2018",
 		"\tUpdated category/pkgbase to 1.8 [committer 2018-01-05]")
-	G.Pkgsrc.changes.load(&G.Pkgsrc)
+	G.Pkgsrc.changes.load(G.Pkgsrc)
 
 	t.Chdir("category/pkgbase")
 	pkg := NewPackage(".")

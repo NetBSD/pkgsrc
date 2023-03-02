@@ -260,7 +260,7 @@ func (p MkLineParser) parseSysinclude(line *Line, splitResult mkLineSplitResult)
 func (p MkLineParser) parseDependency(line *Line, splitResult mkLineSplitResult) *MkLine {
 	// XXX: Replace this regular expression with proper parsing.
 	// There might be a ${VAR:M*.c} in these variables, which the below regular expression cannot handle.
-	m, targets, whitespace, sources := match3(line.Text, `^([^\t :]+(?:[\t ]*[^\t :]+)*)([\t ]*):[\t ]*([^#]*?)(?:[\t ]*#.*)?$`)
+	m, targets, whitespace, sources := match3(splitResult.main, `^([^\t :]+(?:[\t ]*[^\t :]+)*)([\t ]*):[\t ]*(.*)$`)
 	if !m {
 		return nil
 	}

@@ -62,7 +62,9 @@ func NewMkLines(lines *Lines, pkg *Package, extraScope *Scope) *MkLines {
 	}
 
 	tools := NewTools()
-	tools.Fallback(G.Pkgsrc.Tools)
+	if G.Pkgsrc != nil {
+		tools.Fallback(G.Pkgsrc.Tools)
+	}
 
 	return &MkLines{
 		mklines,

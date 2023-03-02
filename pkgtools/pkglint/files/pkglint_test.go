@@ -244,7 +244,7 @@ func (s *Suite) Test_Pkglint_Main__complete_package(c *check.C) {
 		"ERROR: ~/sysutils/checkperms/distinfo:6: SHA1 hash of patches/patch-checkperms.c differs "+
 			"(distinfo has asdfasdf, patch file has bcfb79696cb6bf4d2222a6d78a530e11bf1c0cea).",
 		"WARN: ~/sysutils/checkperms/patches/patch-checkperms.c:12: Premature end of patch hunk "+
-			"(expected 1 lines to be deleted and 0 lines to be added).",
+			"(expected 1 line to be deleted and 0 lines to be added).",
 		"3 errors, 2 warnings and 1 note found.",
 		t.Shquote("(Run \"pkglint -e -Wall -Call %s\" to show explanations.)", "sysutils/checkperms"),
 		t.Shquote("(Run \"pkglint -fs -Wall -Call %s\" to show what can be fixed automatically.)", "sysutils/checkperms"),
