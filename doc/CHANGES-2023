@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1491 2023/03/02 03:46:51 charlotte Exp $
+$NetBSD: CHANGES-2023,v 1.1492 2023/03/02 04:15:49 charlotte Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1934,3 +1934,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated chat/matrix-synapse to 1.77.0 [js 2023-03-01]
 	Updated devel/mgdiff to 1.0.1 [vins 2023-03-01]
 	Added games/openjazz version 20190106 [charlotte 2023-03-01]
+	Added games/ottomatic version 4.0.1 [charlotte 2023-03-01]
