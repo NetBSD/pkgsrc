@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 10:53:54 nia Exp $
+$NetBSD: distinfo,v 1.14 2023/03/02 23:19:45 wiz Exp $
 
-BLAKE2s (Pantomime-1.2.0.tar.gz) = 632b4810af1059615f3e7be26e77f6e3493a7710a4c1ca4135d59e6622794a75
-SHA512 (Pantomime-1.2.0.tar.gz) = db2f0726c90f2b53631140f730187dc6307b54f328ac46e33c1ca8c5c60ef9fefe2e205e4f6209a6cc24292b92d793435befbd12313014b95721908f16995643
-Size (Pantomime-1.2.0.tar.gz) = 466206 bytes
-SHA1 (patch-ab) = 0691970542c20876c709a07c33842948bfd536f6
+BLAKE2s (Pantomime-1.4.0.tar.gz) = 333ed253916d1d440afb2eb2ae3d72c871162f69c4bb23a6dabdd807b1b52dcc
+SHA512 (Pantomime-1.4.0.tar.gz) = 7452a79c35cd219a16467b4a43ace8becbe5985e645bdc8ddbcb3fe1d144f75dbb98563308c102951ef6573122aa4ec93b203902e4b23dcbb77b8aef864b728e
+Size (Pantomime-1.4.0.tar.gz) = 509878 bytes
