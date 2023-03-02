@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1504 2023/03/02 12:47:34 adam Exp $
+$NetBSD: CHANGES-2023,v 1.1505 2023/03/02 12:55:45 vins Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1951,3 +1951,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-flask to 2.2.3 [adam 2023-03-02]
 	Updated www/py-flask-admin to 1.6.1 [adam 2023-03-02]
 	Updated devel/py-ipython to 8.11.0 [adam 2023-03-02]
+	Updated x11/drawterm to 20230224 [vins 2023-03-02]
