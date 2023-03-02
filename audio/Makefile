@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.667 2023/02/01 14:54:34 wiz Exp $
+# $NetBSD: Makefile,v 1.668 2023/03/02 23:14:10 wiz Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -50,7 +50,6 @@ SUBDIR+=	cd-discid
 SUBDIR+=	cddb-bundle
 SUBDIR+=	cddbd
 SUBDIR+=	cdparanoia
-SUBDIR+=	cdplayer
 SUBDIR+=	celt
 SUBDIR+=	chromaprint
 SUBDIR+=	cmp3

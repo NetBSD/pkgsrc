@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:19:23 nia Exp $
-
-BLAKE2s (burn-0.4.1.tar.gz) = c8c5eef1ca270e14d0f641740dd1ac3425acafecf271480f604e42b8f66d691a
-SHA512 (burn-0.4.1.tar.gz) = ab6b8c51125679e8216c7eb2bb86675ad94df2129ed9f40f05c55601491dcdc167e36e61adace40bdb16e9f1c6d6c9b2e26a6f4651dccfa786987d361f3c4c1a
-Size (burn-0.4.1.tar.gz) = 554243 bytes
-SHA1 (patch-aa) = 7276928e9c9a590810ba6eb9294701780ce42f25
-SHA1 (patch-ab) = 465cd737ba5b24390599de3c8b6587088e6b3030
-SHA1 (patch-ac) = 8202a3aa5398c01d5665c78d710c8641562db403
