@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2023/01/11 12:25:04 hauke Exp $
+$NetBSD: distinfo,v 1.13 2023/03/02 10:39:57 jperkin Exp $
 
 BLAKE2s (netatalk-3.1.14.tar.gz) = 39e9ae725f0b3d87f5747c9f6ddabab3c61eb2b51f1ed63a1af362224aa7f8e9
 SHA512 (netatalk-3.1.14.tar.gz) = 2d52ba2df50cc4bedb5c68fa452d9acec80f69e826ff8cb3d0aa85f7031c98f463e502ef35128076c0aa52a36ce9540509ce8c21b915f6a2232ca70c451b89eb
@@ -18,4 +18,5 @@ SHA1 (patch-include_atalk_util.h) = a7a0763c5866288ad89a8b6b90c71767ee4d9d64
 SHA1 (patch-libatalk_bstring_bstrlib.c) = eaee8075f102c1150f74e9dce4d83697c3eac3fc
 SHA1 (patch-libatalk_dsi_dsi__tcp.c) = eacb939dba2749925e36ca05fa0480b3391d0f80
 SHA1 (patch-libatalk_util_getiface.c) = 1a46bd695c96e0666b6f45493eb44501c0f4e0b5
+SHA1 (patch-libatalk_util_netatalk__conf.c) = dfc0d8b5d88de367522bb1d5417083d860d2dab8
 SHA1 (patch-macros_quota-check.m4) = a6502693ae8c7218b7c4426b134e0aa590412e1f
