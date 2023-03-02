@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.34 2023/03/02 15:14:27 wiz Exp $
+$NetBSD: distinfo,v 1.35 2023/03/02 22:28:17 wiz Exp $
 
 BLAKE2s (gnustep-gui/gnustep-gui-0.30.0.tar.gz) = 1b61ff12930d76e35c24af77e4b678984b1f92164437c398556b76ffbb5c5a40
 SHA512 (gnustep-gui/gnustep-gui-0.30.0.tar.gz) = 42baca326db3ef4ffbee9d8f83c0156cbe256d345bd9b4307443c1bbadf628fa252d543feb0a958ee20d7c7f1190c4d459ee194f700fad11deb304193df8e0b3
 Size (gnustep-gui/gnustep-gui-0.30.0.tar.gz) = 3045228 bytes
-SHA1 (patch-Headers_AppKit_NSSound.h) = 89240b7be9e704cf89a7f37f242e8fe96e64117e
 SHA1 (patch-Source_GSCharacterPanel.m) = 05a2d7e252f5134e37f71dd0f27c8e15b6f38a5e
