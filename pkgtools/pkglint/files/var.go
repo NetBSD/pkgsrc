@@ -187,7 +187,7 @@ func (v *Var) Write(mkline *MkLine, conditional bool, conditionVarnames ...strin
 	v.refs.AddAll(conditionVarnames)
 
 	v.update(mkline, &v.valueInfra)
-	if !G.Pkgsrc.IsInfra(mkline.Line.Filename()) {
+	if G.Pkgsrc != nil && !G.Pkgsrc.IsInfra(mkline.Line.Filename()) {
 		v.update(mkline, &v.value)
 	}
 

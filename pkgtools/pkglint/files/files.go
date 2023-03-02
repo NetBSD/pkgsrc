@@ -59,6 +59,9 @@ func Load(filename CurrPath, options LoadOptions) *Lines {
 	return result
 }
 
+// convertToLogicalLines splits the raw text into lines.
+// If joinBackslashes is true, lines that end with an odd number of backslashes
+// are joined with the following line.
 func convertToLogicalLines(filename CurrPath, rawText string, joinBackslashLines bool) *Lines {
 	var rawLines []*RawLine
 	for _, rawLine := range strings.SplitAfter(rawText, "\n") {

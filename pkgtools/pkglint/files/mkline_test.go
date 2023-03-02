@@ -333,6 +333,20 @@ func (s *Suite) Test_MkLine_ValueFields__compared_to_splitIntoShellTokens(c *che
 	// Most probably, the shell will complain about it when it is executed.
 }
 
+func (s *Suite) Test_MkLine_ValueFields__escaped_number_sign(c *check.C) {
+	t := s.Init(c)
+	mklines := t.NewMkLines("filename.mk",
+		".SHELL: \\",
+		"\tname=sh \\",
+		"\tpath=${.SHELL} \\",
+		"\tquiet=\"\\# .echoOff\"")
+	mkline := mklines.mklines[0]
+
+	words := mkline.ValueFields(mkline.Sources())
+
+	t.CheckDeepEquals(words, []string{"name=sh", "path=${.SHELL}", "quiet=\"# .echoOff\""})
+}
+
 func (s *Suite) Test_MkLine_ValueTokens(c *check.C) {
 	t := s.Init(c)
 	b := NewMkTokenBuilder()
@@ -639,7 +653,7 @@ func (s *Suite) Test_MkLine_VariableNeedsQuoting__append_URL_to_list_of_URLs(c *
 	t.CheckOutputEmpty() // Up to version 5.3.6, pkglint warned about a missing :Q here, which was wrong.
 }
 
-func (s *Suite) Test_MkLine_VariableNeedsQuoting__append_list_to_list(c *check.C) {
+func (s *Suite) Test_MkLine_VariableNeedsQuoting__assign_list_to_list(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpVartypes()

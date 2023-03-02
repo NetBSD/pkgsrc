@@ -29,6 +29,9 @@ func (ck *MkAssignChecker) checkLeft() {
 		ck.MkLine.Warnf("Variable names starting with an underscore (%s) are reserved for internal pkgsrc use.", varname)
 	}
 
+	if G.Pkgsrc == nil {
+		goto checkVarUse
+	}
 	ck.checkLeftNotUsed()
 	ck.checkLeftOpsys()
 	ck.checkLeftDeprecated()
@@ -39,6 +42,7 @@ func (ck *MkAssignChecker) checkLeft() {
 	}
 	ck.checkLeftRationale()
 
+checkVarUse:
 	NewMkLineChecker(ck.MkLines, ck.MkLine).checkTextVarUse(
 		varname,
 		NewVartype(BtVariableName, NoVartypeOptions, NewACLEntry("*", aclpAll)),
@@ -699,7 +703,7 @@ func (ck *MkAssignChecker) mayBeDefined(varname string) bool {
 	if G.Infrastructure {
 		return true
 	}
-	if G.Pkgsrc.vartypes.Canon(varname) != nil {
+	if G.Pkgsrc == nil || G.Pkgsrc.vartypes.Canon(varname) != nil {
 		return true
 	}
 

@@ -32,7 +32,7 @@ type Pkglint struct {
 	Network,
 	Recursive bool
 
-	Pkgsrc Pkgsrc // Global data, mostly extracted from mk/*.
+	Pkgsrc *Pkgsrc // Global data, mostly extracted from mk/*.
 
 	Todo CurrPathQueue // The files or directories that still need to be checked.
 
@@ -190,22 +190,26 @@ func (p *Pkglint) setUpProfiling() func() {
 
 func (p *Pkglint) prepareMainLoop() {
 	firstDir := p.Todo.Front()
-	if firstDir.IsFile() {
+	isFile := firstDir.IsFile()
+	if isFile {
 		firstDir = firstDir.Dir()
 	}
 
 	relTopdir := p.findPkgsrcTopdir(firstDir)
 	if relTopdir.IsEmpty() {
 		// If the first argument to pkglint is not inside a pkgsrc tree,
-		// pkglint doesn't know where to load the infrastructure files from,
-		// Since virtually every single check needs these files,
-		// the only sensible thing to do is to quit immediately.
-		G.Logger.TechFatalf(firstDir, "Must be inside a pkgsrc tree.")
+		// pkglint doesn't know where to load the infrastructure files from.
+		if isFile {
+			// Allow this mode nevertheless, for checking the basic syntax
+			// and for formatting individual makefiles outside pkgsrc.
+		} else {
+			G.Logger.TechFatalf(firstDir, "Must be inside a pkgsrc tree.")
+		}
+	} else {
+		p.Pkgsrc = NewPkgsrc(firstDir.JoinNoClean(relTopdir))
+		p.Wip = p.Pkgsrc.IsWip(firstDir) // See Pkglint.checkMode.
+		p.Pkgsrc.LoadInfrastructure()
 	}
-
-	p.Pkgsrc = NewPkgsrc(firstDir.JoinNoClean(relTopdir))
-	p.Wip = p.Pkgsrc.IsWip(firstDir) // See Pkglint.checkMode.
-	p.Pkgsrc.LoadInfrastructure()
 
 	currentUser, err := user.Current()
 	assertNil(err, "user.Current")
@@ -306,6 +310,11 @@ func (p *Pkglint) checkMode(dirent CurrPath, mode os.FileMode) {
 	dir := dirent
 	if !isDir {
 		dir = dirent.Dir()
+	}
+
+	if isReg && p.Pkgsrc == nil {
+		CheckFileMk(dirent, nil)
+		return
 	}
 
 	pkgsrcRel := p.Pkgsrc.Rel(dirent)

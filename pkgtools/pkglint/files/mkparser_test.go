@@ -302,6 +302,11 @@ func (s *Suite) Test_MkParser_MkCond(c *check.C) {
 	testRest("unknown(arg)",
 		nil,
 		"unknown(arg)")
+
+	// The '!' is consumed by the parser.
+	testRest("!",
+		nil,
+		"")
 }
 
 func (s *Suite) Test_MkParser_mkCondCompare(c *check.C) {
