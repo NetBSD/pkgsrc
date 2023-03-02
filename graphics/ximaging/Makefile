@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2023/01/03 17:37:33 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2023/03/02 09:31:52 vins Exp $
 
-DISTNAME=	ximaging-src-1.6
+DISTNAME=	ximaging-src-1.7
 PKGNAME=	${DISTNAME:S,-src,,}
-PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	https://fastestcode.org/dl/
 EXTRACT_SUFX=	.tar.xz
@@ -27,11 +26,11 @@ INSTALLATION_DIRS+=	lib/X11/app-defaults
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/ximaging ${DESTDIR}${PREFIX}/bin/
-	${INSTALL_MAN} ${WRKSRC}/src/ximaging.1								\
+	${INSTALL_MAN} ${WRKSRC}/src/ximaging.1					\
 	${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/src/XImaging.ad							\
+	${INSTALL_DATA} ${WRKSRC}/src/XImaging.ad				\
 	${DESTDIR}${PREFIX}/lib/X11/app-defaults/XImaging
 
 .include "../../mk/pthread.buildlink3.mk"
