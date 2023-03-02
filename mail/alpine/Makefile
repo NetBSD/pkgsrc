@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.55 2023/03/02 16:30:09 vins Exp $
+# $NetBSD: Makefile,v 1.56 2023/03/02 16:58:08 vins Exp $
 
 DISTNAME=	alpine-2.26
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail
 # repo at https://repo.or.cz/alpine.git
 MASTER_SITES=	https://alpineapp.email/alpine/release/src/
@@ -53,12 +53,12 @@ CONFIGURE_ARGS+=	--with-libintl-prefix=${BUILDLINK_PREFIX.gettext}
 CONFIGURE_ARGS+=	--with-system-mail-directory=${VARBASE}/spool/mail
 .else
 CONFIGURE_ARGS+=	--with-system-mail-directory=${VARBASE}/mail
+.endif
 CONFIGURE_ARGS+=	--with-debug-level=2
 CONFIGURE_ARGS+=	--without-ntlm
 CONFIGURE_ARGS+=	--without-npa
 # disabled, for Web Alpine Support
 CONFIGURE_ARGS+=	--without-tcl
-.endif
 
 .include "options.mk"
 
