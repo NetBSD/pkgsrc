@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22651 2023/03/02 07:49:31 nikita Exp $
+$NetBSD: TODO,v 1.22652 2023/03/02 08:35:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -906,6 +906,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libflash-0.4.13
 	o libgfshare-2.0.0
 	o libgiigic-1.1.2
+	o libgit2-1.6.2 [wait for https://github.com/libgit2/libgit2/issues/6519 and https://github.com/rust-lang/git2-rs/issues/936]
 	o libgnomekbd-3.4.0.2
 	o libgtop-2.40 [blocking update of mate-system-monitor]
 	o libisoburn-1.5.4
