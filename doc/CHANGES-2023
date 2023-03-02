@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1495 2023/03/02 06:25:19 charlotte Exp $
+$NetBSD: CHANGES-2023,v 1.1496 2023/03/02 07:49:31 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1938,3 +1938,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added games/cromagrally version 3.0.0 [charlotte 2023-03-01]
 	Updated lang/qbe to 1.1 [charlotte 2023-03-01]
 	Updated emulators/hatari to 2.4.1 [charlotte 2023-03-02]
+	Updated net/arti to 1.1.2 [nikita 2023-03-02]
