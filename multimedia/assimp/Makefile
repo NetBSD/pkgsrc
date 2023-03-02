@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/08/10 01:00:08 charlotte Exp $
+# $NetBSD: Makefile,v 1.7 2023/03/02 16:25:49 tnn Exp $
 
 DISTNAME=	assimp-5.2.4
 CATEGORIES=	multimedia
@@ -15,6 +15,8 @@ USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
 PKGCONFIG_OVERRIDE=	assimp.pc.in
+
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
