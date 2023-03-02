@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.525 2023/02/16 08:06:40 charlotte Exp $
+# $NetBSD: Makefile,v 1.526 2023/03/02 03:45:26 charlotte Exp $
 #
 
 COMMENT=	Games
@@ -313,6 +313,7 @@ SUBDIR+=	omega
 SUBDIR+=	onscripter
 SUBDIR+=	openarena
 SUBDIR+=	openhexagon
+SUBDIR+=	openjazz
 SUBDIR+=	openjk
 SUBDIR+=	openmortal
 SUBDIR+=	openmw
