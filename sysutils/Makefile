@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1037 2023/02/28 21:07:43 nikita Exp $
+# $NetBSD: Makefile,v 1.1038 2023/03/02 23:14:10 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -78,7 +78,6 @@ SUBDIR+=	bsign
 SUBDIR+=	btpin-qt
 SUBDIR+=	bubblemon
 SUBDIR+=	bup
-SUBDIR+=	burn
 SUBDIR+=	burp
 SUBDIR+=	caja
 SUBDIR+=	caja-dropbox

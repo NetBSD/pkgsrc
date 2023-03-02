@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 09:58:50 nia Exp $
-
-BLAKE2s (cdplayer-0.5.1.tar.bz2) = 1c837ac31146940bc609e1c9979c6f279a77945ac3eeac9fe1cd2eac077fd40e
-SHA512 (cdplayer-0.5.1.tar.bz2) = 637264867a59e41ad6ec2b87cef23ec911f6c7c9ebdd7dbc44a0666e75c0ac938741676191a35a46f8049de3ac244e8d65f1abdc51ee4a2ca7d7a3869b6a0775
-Size (cdplayer-0.5.1.tar.bz2) = 164244 bytes
-SHA1 (patch-aa) = ebd48949eb75b21420e04911dfa964bf6b8e58cf
