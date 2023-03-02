@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2022/08/09 05:43:29 adam Exp $
+# $NetBSD: Makefile,v 1.27 2023/03/02 12:42:47 adam Exp $
 
-DISTNAME=	Flask-2.2.2
+DISTNAME=	Flask-2.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/Flask/}
