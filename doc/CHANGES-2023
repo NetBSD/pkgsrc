@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1519 2023/03/02 21:47:01 fcambus Exp $
+$NetBSD: CHANGES-2023,v 1.1520 2023/03/02 22:04:56 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1966,3 +1966,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/yabasic to 2.90.3 [fcambus 2023-03-02]
 	Updated devel/byacc to 20230219 [fcambus 2023-03-02]
 	Updated converters/dos2unix to 7.4.4 [fcambus 2023-03-02]
+	Updated devel/elfio to 3.11 [fcambus 2023-03-02]
