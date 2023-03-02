@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1511 2023/03/02 15:30:08 vins Exp $
+$NetBSD: CHANGES-2023,v 1.1512 2023/03/02 16:58:48 vins Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1958,3 +1958,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/Gorm to 1.2.28 [wiz 2023-03-02]
 	Removed math/clisp-pari [wiz 2023-03-02]
 	Updated x11/xtrlock to 2.15nb1 [vins 2023-03-02]
+	Updated mail/alpine to 2.26nb2 [vins 2023-03-02]
