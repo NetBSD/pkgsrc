@@ -157,9 +157,12 @@ func Test__qa(t *testing.T) {
 	ck.Configure("*", "*", "", -intqa.EMissingTest)
 
 	// The Suite type is used for testing all parts of pkglint.
-	// Therefore its test methods may be everywhere.
+	// Therefore, its test methods may be everywhere.
 	ck.Configure("*.go", "Suite", "*", -intqa.EMethodsSameFile)
 	ck.Configure("*.go", "Tester", "*", -intqa.EMethodsSameFile)
+
+	// When running gobco, it inserts the function 'GobcoCover'.
+	ck.Configure("*", "", "GobcoCover", -intqa.EMissingTest)
 
 	ck.Check()
 }
@@ -228,7 +231,7 @@ func (t *Tester) SetUpCommandLine(args ...string) {
 //
 // See SetUpTool for registering tools like echo, awk, perl.
 func (t *Tester) SetUpVartypes() {
-	G.Pkgsrc.vartypes.Init(&G.Pkgsrc)
+	G.Pkgsrc.vartypes.Init(G.Pkgsrc)
 }
 
 func (t *Tester) SetUpMasterSite(varname string, urls ...string) {
@@ -1098,12 +1101,14 @@ func (t *Tester) NewMkLinesPkg(filename CurrPath, pkg *Package, lines ...string)
 		basename.HasSuffixText(".mk") || basename == "Makefile" || basename.HasPrefixText("Makefile."),
 		"filename %q must be realistic, otherwise the variable permissions are wrong", filename)
 
-	var rawText strings.Builder
+	var sb strings.Builder
 	for _, line := range lines {
-		rawText.WriteString(line)
-		rawText.WriteString("\n")
+		sb.WriteString(line)
+		sb.WriteString("\n")
 	}
-	return NewMkLines(convertToLogicalLines(filename, rawText.String(), true), pkg, nil)
+	rawText := sb.String()
+	logicalLines := convertToLogicalLines(filename, rawText, true)
+	return NewMkLines(logicalLines, pkg, nil)
 }
 
 // Returns and consumes the output from both stdout and stderr.

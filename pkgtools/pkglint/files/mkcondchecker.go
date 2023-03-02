@@ -25,7 +25,7 @@ func (ck *MkCondChecker) Check() {
 
 	p := NewMkParser(nil, mkline.Args()) // No emitWarnings here, see the code below.
 	cond := p.MkCond()
-	if !p.EOF() {
+	if !p.EOF() || cond == nil {
 		mkline.Warnf("Invalid condition, unrecognized part: %q.", p.Rest())
 		return
 	}
@@ -165,7 +165,7 @@ var mkCondModifierPatternLiteral = textproc.NewByteSet("-+,./0-9<=>@A-Z_a-z")
 func (ck *MkCondChecker) checkCompare(left *MkCondTerm, op string, right *MkCondTerm) {
 	switch {
 	case right.Num != "":
-		ck.checkCompareVarNum(left, op, right.Num)
+		ck.checkCompareWithNum(left, op, right.Num)
 	case left.Var != nil && right.Var == nil:
 		ck.checkCompareVarStr(left.Var, op, right.Str)
 	}
@@ -209,12 +209,12 @@ func (ck *MkCondChecker) checkCompareVarStr(varuse *MkVarUse, op string, str str
 	}
 }
 
-func (ck *MkCondChecker) checkCompareVarNum(left *MkCondTerm, op string, num string) {
-	ck.checkCompareVarNumVersion(op, num)
-	ck.checkCompareVarNumPython(left, op, num)
+func (ck *MkCondChecker) checkCompareWithNum(left *MkCondTerm, op string, num string) {
+	ck.checkCompareWithNumVersion(op, num)
+	ck.checkCompareWithNumPython(left, op, num)
 }
 
-func (ck *MkCondChecker) checkCompareVarNumVersion(op string, num string) {
+func (ck *MkCondChecker) checkCompareWithNumVersion(op string, num string) {
 	if !contains(num, ".") {
 		return
 	}
@@ -236,7 +236,7 @@ func (ck *MkCondChecker) checkCompareVarNumVersion(op string, num string) {
 		"the version number 1.11 would also match, which is not intended.")
 }
 
-func (ck *MkCondChecker) checkCompareVarNumPython(left *MkCondTerm, op string, num string) {
+func (ck *MkCondChecker) checkCompareWithNumPython(left *MkCondTerm, op string, num string) {
 	if left.Var != nil && left.Var.varname == "_PYTHON_VERSION" &&
 		op != "==" && op != "!=" &&
 		matches(num, `^\d+$`) {
@@ -289,6 +289,9 @@ func (ck *MkCondChecker) checkContradictions() {
 
 	byVarname := make(map[string][]VarFact)
 	levels := ck.MkLines.indentation.levels
+	if len(levels) == 0 {
+		goto skip // For .elif outside .if
+	}
 	for _, level := range levels[:len(levels)-1] {
 		if !level.mkline.NeedsCond() {
 			continue
@@ -300,6 +303,7 @@ func (ck *MkCondChecker) checkContradictions() {
 		}
 	}
 
+skip:
 	facts := ck.collectFacts(mkline)
 	for _, curr := range facts {
 		varname := curr.Varname

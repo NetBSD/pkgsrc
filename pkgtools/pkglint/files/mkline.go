@@ -1305,6 +1305,9 @@ func (ind *Indentation) TrackAfter(mkline *MkLine) {
 
 		ind.RememberUsedVariables(cond)
 
+		if G.Pkgsrc == nil {
+			break
+		}
 		cond.Walk(&MkCondCallback{
 			Call: func(name string, arg string) {
 				if name == "exists" && !NewPath(arg).IsAbs() {
