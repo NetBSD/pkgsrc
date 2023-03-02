@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3927 2023/03/01 18:35:29 adam Exp $
+# $NetBSD: Makefile,v 1.3928 2023/03/02 06:21:07 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2676,10 +2676,10 @@ SUBDIR+=	py-pep8
 SUBDIR+=	py-pexpect
 SUBDIR+=	py-pip
 SUBDIR+=	py-pip-api
-SUBDIR+=	py-pip2pi
 SUBDIR+=	py-pip-requirements-parser
 SUBDIR+=	py-pip-run
 SUBDIR+=	py-pip20
+SUBDIR+=	py-pip2pi
 SUBDIR+=	py-pkgconfig
 SUBDIR+=	py-pkginfo
 SUBDIR+=	py-pkgutil_resolve_name
