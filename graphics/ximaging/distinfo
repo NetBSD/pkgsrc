@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1 2022/12/06 13:04:59 vins Exp $
+$NetBSD: distinfo,v 1.2 2023/03/02 09:31:52 vins Exp $
 
-BLAKE2s (ximaging-src-1.6.tar.xz) = 8733d6719dc05ccacf28b84da77e2fdf17a539a7d1f3b917a35dd22ccffa923c
-SHA512 (ximaging-src-1.6.tar.xz) = a9625bc5262641ec38e5d0248154caf78c724e6050820af1efa2cade15fea871e852338dcf0274d8407200ced74dd9800599773e932724c87ca2f06e78c03277
-Size (ximaging-src-1.6.tar.xz) = 99064 bytes
+BLAKE2s (ximaging-src-1.7.tar.xz) = 664b8d8cd5e8813fdb660956dd2fbb5b2d2b7f4eb1b848bd7454aa03a2b7e680
+SHA512 (ximaging-src-1.7.tar.xz) = ef66da647c8d6594f4213b2c4ba844e1015dd82594249949d4a4a6aa8465bd78496a59c9b7e0b88e1d4c300036fdf21f651ac17efdb7dde6e71e81c8a3a2a07c
+Size (ximaging-src-1.7.tar.xz) = 99740 bytes
 SHA1 (patch-mf_Makefile.Linux) = 0b7fcd2f55f111258f099f5667611d2253e51169
-SHA1 (patch-mf_Makefile.Tribblix) = 23abe40fea1f0131bd972d40c36d41047ad02398
+SHA1 (patch-mf_Makefile.SunOS) = ce7e3d7022035e67c4b200cec086e0da12329392
