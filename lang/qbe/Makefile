@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2023/01/19 02:20:00 charlotte Exp $
+# $NetBSD: Makefile,v 1.2 2023/03/02 05:50:05 charlotte Exp $
 
-DISTNAME=	qbe-1.0
+DISTNAME=	qbe-1.1
 CATEGORIES=	lang
-MASTER_SITES=	https://c9x.me/git/qbe.git/snapshot/
+MASTER_SITES=	https://c9x.me/compile/release/
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	charlotte@NetBSD.org
 HOMEPAGE=	https://c9x.me/compile/
