@@ -33,11 +33,15 @@ func (ck *MkVarUseChecker) Check(vuc *VarUseContext) {
 	ck.checkAssignable(vuc)
 	ck.checkQuoting(vuc)
 
+	if G.Pkgsrc == nil {
+		goto checkVarUse
+	}
 	ck.checkToolsPlatform()
 	ck.checkBuildDefs()
 	ck.checkDeprecated()
 	ck.checkPkgBuildOptions()
 
+checkVarUse:
 	NewMkLineChecker(ck.MkLines, ck.MkLine).
 		checkTextVarUse(ck.use.varname, ck.vartype, vuc.time)
 }

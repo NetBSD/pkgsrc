@@ -41,7 +41,7 @@ func (s *Suite) Test_VarTypeRegistry_compilerLanguages(c *check.C) {
 		".endif")
 	reg := NewVarTypeRegistry()
 
-	compilerLanguages := reg.compilerLanguages(&G.Pkgsrc)
+	compilerLanguages := reg.compilerLanguages(G.Pkgsrc)
 
 	enumValues := compilerLanguages.AllowedEnums()
 	t.CheckEquals(enumValues, "empty-lang expr-lang gnu++14")
@@ -101,9 +101,9 @@ func (s *Suite) Test_VarTypeRegistry_enumFrom__no_tracing(c *check.C) {
 	reg := NewVarTypeRegistry()
 	t.DisableTracing()
 
-	existingType := reg.enumFrom(&G.Pkgsrc, "mk/existing.mk", "defval", "VAR")
-	noAssignmentsType := reg.enumFrom(&G.Pkgsrc, "mk/existing.mk", "defval", "OTHER_VAR")
-	nonexistentType := reg.enumFrom(&G.Pkgsrc, "mk/nonexistent.mk", "defval", "VAR")
+	existingType := reg.enumFrom(G.Pkgsrc, "mk/existing.mk", "defval", "VAR")
+	noAssignmentsType := reg.enumFrom(G.Pkgsrc, "mk/existing.mk", "defval", "OTHER_VAR")
+	nonexistentType := reg.enumFrom(G.Pkgsrc, "mk/nonexistent.mk", "defval", "VAR")
 
 	t.CheckEquals(existingType.AllowedEnums(), "first second")
 	t.CheckEquals(noAssignmentsType.AllowedEnums(), "defval")
@@ -162,7 +162,7 @@ func (s *Suite) Test_VarTypeRegistry_enumFromDirs__no_testing(c *check.C) {
 	t.ExpectFatal(
 		func() {
 			G.Pkgsrc.vartypes.enumFromDirs(
-				&G.Pkgsrc, "category", `^pack.*`, "$0", "default")
+				G.Pkgsrc, "category", `^pack.*`, "$0", "default")
 		},
 		"FATAL: ~/category: Must contain at least 1 "+
 			"subdirectory matching \"^pack.*\".")
@@ -193,7 +193,7 @@ func (s *Suite) Test_VarTypeRegistry_enumFromFiles__no_testing(c *check.C) {
 
 	t.ExpectFatal(
 		func() {
-			G.Pkgsrc.vartypes.enumFromFiles(&G.Pkgsrc,
+			G.Pkgsrc.vartypes.enumFromFiles(G.Pkgsrc,
 				"mk/platform", `^(\w+)\.mk$`, "$1", "default")
 		},
 		"FATAL: ~/mk/platform: Must contain at least 1 "+
@@ -216,7 +216,7 @@ func (s *Suite) Test_VarTypeRegistry_Init(c *check.C) {
 	t := s.Init(c)
 
 	src := NewPkgsrc(t.File("."))
-	src.vartypes.Init(&src)
+	src.vartypes.Init(src)
 
 	t.CheckEquals(src.vartypes.Canon("BSD_MAKE_ENV").basicType.name, "ShellWord")
 	t.CheckEquals(src.vartypes.Canon("USE_BUILTIN.*").basicType.name, "YesNoIndirectly")

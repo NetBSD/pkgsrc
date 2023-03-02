@@ -47,8 +47,8 @@ type Pkgsrc struct {
 	vartypes   VarTypeRegistry
 }
 
-func NewPkgsrc(dir CurrPath) Pkgsrc {
-	return Pkgsrc{
+func NewPkgsrc(dir CurrPath) *Pkgsrc {
+	return &Pkgsrc{
 		dir,
 		make(map[string]bool),
 		NewTools(),
@@ -736,6 +736,9 @@ func (src *Pkgsrc) ListVersions(category PkgsrcPath, re regex.Pattern, repl stri
 // (possibly guessed based on the variable name),
 // or nil if the type cannot even be guessed.
 func (src *Pkgsrc) VariableType(mklines *MkLines, varname string) (vartype *Vartype) {
+	if src == nil {
+		return nil
+	}
 	if trace.Tracing {
 		defer trace.Call(varname, trace.Result(&vartype))()
 	}
