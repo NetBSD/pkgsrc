@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.24 2022/06/06 21:09:28 ryoon Exp $
+$NetBSD: distinfo,v 1.25 2023/03/02 21:46:50 fcambus Exp $
 
-BLAKE2s (dos2unix-7.4.3.tar.gz) = abb037493f1e2375e1e4b2dc50bb4e181e5be55ce7626cd6f939575b38ee4329
-SHA512 (dos2unix-7.4.3.tar.gz) = 1c6d81348de8aca451174794141d0802685487cf6847fa91f7de745d89bcf2af864fc2ec549b9af72031891d4efcb9731fe823ce05da36d1f9e9890ff2cb60fb
-Size (dos2unix-7.4.3.tar.gz) = 788278 bytes
+BLAKE2s (dos2unix-7.4.4.tar.gz) = 0a626e2d6f6d123a447d280d2ce929598ae21a6503f466847eaec2c60a6ccbd6
+SHA512 (dos2unix-7.4.4.tar.gz) = e7a6b1d90bf0a32aa53b22caa1660dcf58c5874d02a45e80f4cc811cae9bd7b0cb8144301fb6808798100a057c03210925da1d8461e380dff1059f6bee086f55
+Size (dos2unix-7.4.4.tar.gz) = 914647 bytes
 SHA1 (patch-Makefile) = fd36034eedc1bb15b01c24d5c73df1cd1175af25
