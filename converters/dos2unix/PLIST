@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2022/06/06 21:09:28 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.11 2023/03/02 21:46:50 fcambus Exp $
 bin/dos2unix
 bin/mac2unix
 bin/unix2dos
@@ -15,6 +15,10 @@ man/fr/man1/dos2unix.1
 man/fr/man1/mac2unix.1
 man/fr/man1/unix2dos.1
 man/fr/man1/unix2mac.1
+man/ko/man1/dos2unix.1
+man/ko/man1/mac2unix.1
+man/ko/man1/unix2dos.1
+man/ko/man1/unix2mac.1
 man/man1/dos2unix.1
 man/man1/mac2unix.1
 man/man1/unix2dos.1
@@ -31,6 +35,10 @@ man/pt_BR/man1/dos2unix.1
 man/pt_BR/man1/mac2unix.1
 man/pt_BR/man1/unix2dos.1
 man/pt_BR/man1/unix2mac.1
+man/ro/man1/dos2unix.1
+man/ro/man1/mac2unix.1
+man/ro/man1/unix2dos.1
+man/ro/man1/unix2mac.1
 man/sr/man1/dos2unix.1
 man/sr/man1/mac2unix.1
 man/sr/man1/unix2dos.1
@@ -62,12 +70,16 @@ share/doc/${PKGNAME}/es/dos2unix.htm
 share/doc/${PKGNAME}/es/dos2unix.txt
 share/doc/${PKGNAME}/fr/dos2unix.htm
 share/doc/${PKGNAME}/fr/dos2unix.txt
+share/doc/${PKGNAME}/ko/dos2unix.htm
+share/doc/${PKGNAME}/ko/dos2unix.txt
 share/doc/${PKGNAME}/nl/dos2unix.htm
 share/doc/${PKGNAME}/nl/dos2unix.txt
 share/doc/${PKGNAME}/pl/dos2unix.htm
 share/doc/${PKGNAME}/pl/dos2unix.txt
 share/doc/${PKGNAME}/pt_BR/dos2unix.htm
 share/doc/${PKGNAME}/pt_BR/dos2unix.txt
+share/doc/${PKGNAME}/ro/dos2unix.htm
+share/doc/${PKGNAME}/ro/dos2unix.txt
 share/doc/${PKGNAME}/sr/dos2unix.htm
 share/doc/${PKGNAME}/sr/dos2unix.txt
 share/doc/${PKGNAME}/sv/dos2unix.htm
@@ -76,6 +88,7 @@ share/doc/${PKGNAME}/uk/dos2unix.htm
 share/doc/${PKGNAME}/uk/dos2unix.txt
 share/doc/${PKGNAME}/zh_CN/dos2unix.htm
 share/doc/${PKGNAME}/zh_CN/dos2unix.txt
+share/locale/ca/LC_MESSAGES/dos2unix.mo
 share/locale/da/LC_MESSAGES/dos2unix.mo
 share/locale/de/LC_MESSAGES/dos2unix.mo
 share/locale/eo/LC_MESSAGES/dos2unix.mo
@@ -84,10 +97,13 @@ share/locale/fr/LC_MESSAGES/dos2unix.mo
 share/locale/fur/LC_MESSAGES/dos2unix.mo
 share/locale/hu/LC_MESSAGES/dos2unix.mo
 share/locale/ja/LC_MESSAGES/dos2unix.mo
+share/locale/ka/LC_MESSAGES/dos2unix.mo
+share/locale/ko/LC_MESSAGES/dos2unix.mo
 share/locale/nb/LC_MESSAGES/dos2unix.mo
 share/locale/nl/LC_MESSAGES/dos2unix.mo
 share/locale/pl/LC_MESSAGES/dos2unix.mo
 share/locale/pt_BR/LC_MESSAGES/dos2unix.mo
+share/locale/ro/LC_MESSAGES/dos2unix.mo
 share/locale/ru/LC_MESSAGES/dos2unix.mo
 share/locale/sr/LC_MESSAGES/dos2unix.mo
 share/locale/sv/LC_MESSAGES/dos2unix.mo
