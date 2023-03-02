@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1503 2023/03/02 12:07:47 adam Exp $
+$NetBSD: CHANGES-2023,v 1.1504 2023/03/02 12:47:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1947,3 +1947,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/ximaging to 1.7 [vins 2023-03-02]
 	Updated sysutils/ansible-core to 2.14.3 [adam 2023-03-02]
 	Updated sysutils/ansible to 7.3.0 [adam 2023-03-02]
+	Updated devel/py-frozendict to 2.3.5 [adam 2023-03-02]
+	Updated www/py-flask to 2.2.3 [adam 2023-03-02]
+	Updated www/py-flask-admin to 1.6.1 [adam 2023-03-02]
+	Updated devel/py-ipython to 8.11.0 [adam 2023-03-02]
