@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/12/31 17:24:31 plunky Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/03/02 22:04:45 fcambus Exp $
 include/elfio/elf_types.hpp
 include/elfio/elfio.hpp
 include/elfio/elfio_array.hpp
@@ -14,6 +14,9 @@ include/elfio/elfio_strings.hpp
 include/elfio/elfio_symbols.hpp
 include/elfio/elfio_utils.hpp
 include/elfio/elfio_version.hpp
+include/elfio/elfio_versym.hpp
+share/docs/elfio/LICENSE.txt
+share/docs/elfio/README.md
 share/elfio/cmake/elfioConfig.cmake
 share/elfio/cmake/elfioConfigVersion.cmake
 share/elfio/cmake/elfioTargets.cmake
