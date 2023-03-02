@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2012/10/22 02:59:42 rh Exp $
+@comment $NetBSD: PLIST,v 1.23 2023/03/02 15:22:52 wiz Exp $
 bin/Gorm
 include/GormCore/GormBoxEditor.h
 include/GormCore/GormClassEditor.h
@@ -7,6 +7,7 @@ include/GormCore/GormClassManager.h
 include/GormCore/GormClassPanelController.h
 include/GormCore/GormConnectionInspector.h
 include/GormCore/GormControlEditor.h
+include/GormCore/GormCore.h
 include/GormCore/GormCustomClassInspector.h
 include/GormCore/GormCustomView.h
 include/GormCore/GormDocument.h
@@ -63,6 +64,7 @@ include/GormCore/NSCell+GormAdditions.h
 include/GormCore/NSColorWell+GormExtensions.h
 include/GormCore/NSFontManager+GormExtensions.h
 include/GormCore/NSView+GormExtensions.h
+include/GormObjCHeaderParser/GormObjCHeaderParser.h
 include/GormObjCHeaderParser/NSScanner+OCHeaderParser.h
 include/GormObjCHeaderParser/OCClass.h
 include/GormObjCHeaderParser/OCHeaderParser.h
@@ -70,13 +72,13 @@ include/GormObjCHeaderParser/OCIVar.h
 include/GormObjCHeaderParser/OCIVarDecl.h
 include/GormObjCHeaderParser/OCMethod.h
 include/GormObjCHeaderParser/ParserFunctions.h
-include/GormPrefs/GormColorsPref.h
 include/GormPrefs/GormGeneralPref.h
 include/GormPrefs/GormGuidelinePref.h
 include/GormPrefs/GormHeadersPref.h
 include/GormPrefs/GormPalettesPref.h
 include/GormPrefs/GormPluginsPref.h
 include/GormPrefs/GormPrefController.h
+include/GormPrefs/GormPrefs.h
 include/GormPrefs/GormShelfPref.h
 include/InterfaceBuilder/IBApplicationAdditions.h
 include/InterfaceBuilder/IBCellAdditions.h
@@ -133,6 +135,9 @@ lib/GNUstep/Applications/Gorm.app/Resources/2Controls.palette/Resources/Controls
 lib/GNUstep/Applications/Gorm.app/Resources/2Controls.palette/Resources/ControlsPalette.gorm/data.info
 lib/GNUstep/Applications/Gorm.app/Resources/2Controls.palette/Resources/ControlsPalette.gorm/objects.gorm
 lib/GNUstep/Applications/Gorm.app/Resources/2Controls.palette/Resources/ControlsPalette.tiff
+lib/GNUstep/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormCellSizeInspector.gorm/data.classes
+lib/GNUstep/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormCellSizeInspector.gorm/data.info
+lib/GNUstep/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormCellSizeInspector.gorm/objects.gorm
 lib/GNUstep/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSBoxInspector.gorm/data.classes
 lib/GNUstep/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSBoxInspector.gorm/data.info
 lib/GNUstep/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSBoxInspector.gorm/objects.gorm
