@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1517 2023/03/02 20:52:54 fcambus Exp $
+$NetBSD: CHANGES-2023,v 1.1518 2023/03/02 21:22:32 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1964,3 +1964,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated databases/postgres_exporter to 0.11.1 [bsiegert 2023-03-02]
 	Updated databases/mysqld_exporter to 0.14.0 [bsiegert 2023-03-02]
 	Updated lang/yabasic to 2.90.3 [fcambus 2023-03-02]
+	Updated devel/byacc to 20230219 [fcambus 2023-03-02]
