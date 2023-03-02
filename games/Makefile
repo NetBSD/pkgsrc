@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.527 2023/03/02 04:14:53 charlotte Exp $
+# $NetBSD: Makefile,v 1.528 2023/03/02 04:46:39 charlotte Exp $
 #
 
 COMMENT=	Games
@@ -81,6 +81,7 @@ SUBDIR+=	crack-attack-sounds
 SUBDIR+=	craft
 SUBDIR+=	crimsonfields
 SUBDIR+=	criticalmass
+SUBDIR+=	cromagrally
 SUBDIR+=	crossfire-client
 SUBDIR+=	crossfire-server
 SUBDIR+=	d2x
