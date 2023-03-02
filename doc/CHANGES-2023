@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1498 2023/03/02 08:31:28 vins Exp $
+$NetBSD: CHANGES-2023,v 1.1499 2023/03/02 08:35:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1941,3 +1941,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/arti to 1.1.2 [nikita 2023-03-02]
 	Updated devel/mgdiff to 1.0.1nb1 [vins 2023-03-02]
 	Updated chat/toot to 0.35.0 [vins 2023-03-02]
+	Downgraded devel/libgit2 to 1.5.1nb1 [wiz 2023-03-02]
