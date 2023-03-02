@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2023/02/19 00:22:58 abs Exp $
+# $NetBSD: Makefile,v 1.12 2023/03/02 01:13:38 abs Exp $
 
 DISTNAME=	jna-5.13.0
+PKGREVISION=	1
 PKGNAME=	java-${DISTNAME}
 CATEGORIES=	devel java
 MASTER_SITES=	${MASTER_SITE_GITHUB:=java-native-access/}
@@ -37,10 +38,7 @@ ONLY_FOR_PLATFORM+=	OpenBSD-*-i386 OpenBSD-*-x86_64
 ONLY_FOR_PLATFORM+=	NetBSD-*-i386 NetBSD-*-x86_64
 
 USE_LANGUAGES=		c
-USE_JAVA2=		yes
-# XXX temporary build fix, revisit build with openjdk17 on next update.
-PKG_JVMS_ACCEPTED=	openjdk11 openjdk8 oracle-jdk8 adoptopenjdk11-bin \
-			openjdk-bin sun-jdk7
+USE_JAVA2=		1.4
 USE_TOOLS+=		autoreconf automake autoconf ggrep gmake pkg-config pax
 USE_LIBTOOL=		yes
 
@@ -62,10 +60,14 @@ DEPENDS+=	openjdk8>=1.8.202:../../lang/openjdk8
 
 # JDK 11 or later doesn't generate frames
 PLIST_SRC=	PLIST
-.if ${PKG_JVM} == "sun-jdk7" || ${PKG_JVM} == "oracle-jdk8" || ${PKG_JVM} == "openjdk8"
+.if !empty(PKG_JVM:M*[a-z]7*) || !empty(PKG_JVM:M*[a-z]8*)
 PLIST_SRC+=	PLIST.java8-javadoc
 .else
+.  if !empty(PKG_JVM:M*11*)
 PLIST_SRC+=	PLIST.java11-javadoc
+.  else
+PLIST_SRC+=	PLIST.java17-javadoc
+.  endif
 .endif
 
 BUILD_DEPENDS+=	apache-ant-[0-9]*:../../devel/apache-ant
