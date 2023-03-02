@@ -1,4 +1,4 @@
-$NetBSD: patch-mgdiff.c,v 1.3 2023/03/01 23:48:00 vins Exp $
+$NetBSD: patch-mgdiff.c,v 1.4 2023/03/02 08:15:32 vins Exp $
 
 Prevent unsafe use of tmpnam(). 
 Pull patches from Debian.
@@ -128,7 +128,7 @@ Pull patches from Debian.
  
  /* ARGSUSED1 */
  static void Visible (Widget widget, XtPointer closure, XEvent *event, Boolean *continue_to_dispatch)
-@@ -398,23 +420,37 @@ static void drawit (Widget w, XtPointer
+@@ -398,23 +420,37 @@ static void drawit (Widget w, XtPointer 
      Region region;
      Block *b;
      GC fore, back;
@@ -170,7 +170,7 @@ Pull patches from Debian.
  		fore = gcfore[4];
  		back = gcback[4];
  	    }
-@@ -423,10 +459,10 @@ static void drawit (Widget w, XtPointer
+@@ -423,10 +459,10 @@ static void drawit (Widget w, XtPointer 
  		back = gcback[ths->type];
  	    }
  	}
@@ -183,7 +183,7 @@ Pull patches from Debian.
  		fore = gcfore[4];
  		back = gcback[4];
  	    }
-@@ -520,7 +556,7 @@ static void drawit (Widget w, XtPointer
+@@ -520,7 +556,7 @@ static void drawit (Widget w, XtPointer 
  /* ARGSUSED */
  static void file_cb (Widget w, XtPointer closure, XtPointer call_data)
  {
@@ -192,13 +192,18 @@ Pull patches from Debian.
      case 0:			/* open */
  	toggle_open_sensitive (False);
  	set_cursor (toplevel);
-@@ -537,15 +573,32 @@ static void file_cb (Widget w, XtPointer
+@@ -536,16 +572,36 @@ static void file_cb (Widget w, XtPointer
+ 	set_cursor (toplevel);
  	open_right_file (toplevel, str_fnamer);
  	break;
-     case 3:			/* save as */
+-    case 3:			/* save as */
 -	if (all_selected ()) {
 -	    set_cursor (toplevel);
 -	    save_file (toplevel, di->first, str_fnamel);
++    case 3:			/* refresh */
++	reload_both();
++	break;
++    case 4:			/* save as */
 +	if (all_selected () == False) {
 +	    if (modal_question (toplevel, "Mgdiff Save", unselected_text_msg) == False)
 +		break;
@@ -207,31 +212,31 @@ Pull patches from Debian.
 -	    werror (toplevel, "Save Error", "Save", "there are unselected text blocks");
 +	save_file (toplevel, di->first, str_fnamel);
 +	break;
-+	case 4:			/* save as left */
-+	if (all_selected () == False) {
-+	    if (modal_question (toplevel, "Mgdiff Save", unselected_text_msg) == False)
-+		break;
-+	}
-+	    set_cursor (toplevel);
-+	    save_as_filename (toplevel, di->first, str_fnamel);
-+	    reset_cursor (toplevel);
-+	break;
-+	case 5:			/* save as right */
++	case 5:			/* save as left */
 +	if (all_selected () == False) {
 +	    if (modal_question (toplevel, "Mgdiff Save", unselected_text_msg) == False)
 +		break;
  	}
 +	    set_cursor (toplevel);
++	    save_as_filename (toplevel, di->first, str_fnamel);
++	    reset_cursor (toplevel);
+ 	break;
+-    case 4:			/* exit */
++	case 6:			/* save as right */
++	if (all_selected () == False) {
++	    if (modal_question (toplevel, "Mgdiff Save", unselected_text_msg) == False)
++		break;
++	}
++	    set_cursor (toplevel);
 +	    save_as_filename (toplevel, di->first, str_fnamer);
 +	    reset_cursor (toplevel);
 +
- 	break;
--    case 4:			/* exit */
-+    case 6:			/* exit */
++	break;
++    case 7:			/* exit */
  	exit_cb (w, NULL, NULL);
  	break;
      default:
-@@ -560,7 +613,7 @@ static void file_cb (Widget w, XtPointer
+@@ -560,7 +616,7 @@ static void file_cb (Widget w, XtPointer
  /* ARGSUSED */
  static void view_cb (Widget w, XtPointer closure, XtPointer call_data)
  {
@@ -240,7 +245,7 @@ Pull patches from Debian.
      case 0:			/* previous */
  	prev_diff (NULL, NULL, NULL);
  	break;
-@@ -582,7 +635,7 @@ static void view_cb (Widget w, XtPointer
+@@ -582,7 +638,7 @@ static void view_cb (Widget w, XtPointer
  /* ARGSUSED */
  static void select_cb (Widget w, XtPointer closure, XtPointer call_data)
  {
@@ -249,7 +254,7 @@ Pull patches from Debian.
      case 0:			/* left */
  	select_all (LEFT);
  	break;
-@@ -604,7 +657,7 @@ static void select_cb (Widget w, XtPoint
+@@ -604,7 +660,7 @@ static void select_cb (Widget w, XtPoint
  /* ARGSUSED */
  static void options_cb (Widget w, XtPointer closure, XtPointer call_data)
  {
@@ -258,7 +263,7 @@ Pull patches from Debian.
      case 0:			/* toggle overview area */
  	overview_flag = !overview_flag;
  	if (overview_flag) {
-@@ -660,7 +713,7 @@ static void options_cb (Widget w, XtPoin
+@@ -660,7 +716,7 @@ static void options_cb (Widget w, XtPoin
  /* ARGSUSED */
  static void helpmenu_cb (Widget w, XtPointer closure, XtPointer call_data)
  {
@@ -267,7 +272,7 @@ Pull patches from Debian.
      case 0:			/* version */
  	show_version (toplevel);
  	break;
-@@ -724,7 +777,6 @@ static void set_pixmaps (WidgetList chil
+@@ -724,7 +780,6 @@ static void set_pixmaps (WidgetList chil
  	dagcb = XtGetGC (children[1], GCForeground|GCBackground, &gc_values);
  	been_here = 1;
      }
@@ -275,7 +280,7 @@ Pull patches from Debian.
      for (i = 0; i < 3; i++) {
  	XtVaGetValues (children[i],
  		       XmNwidth, &width[i],
-@@ -755,7 +807,7 @@ static void set_pixmaps (WidgetList chil
+@@ -755,7 +810,7 @@ static void set_pixmaps (WidgetList chil
  	yfpos[LEFT] += b->arr[LEFT].fsize;
  	h = ((int) height[0] * yfpos[LEFT] / max (di->flines[LEFT], 1)) - y;
  	y3 = ((h == 0) ? y1 : (y1 + h - 1));
@@ -284,7 +289,7 @@ Pull patches from Debian.
  	XFillRectangle (XtDisplay (children[0]), p[0], gcback[back],
  			0, y, width[0], h);
  
-@@ -763,7 +815,7 @@ static void set_pixmaps (WidgetList chil
+@@ -763,7 +818,7 @@ static void set_pixmaps (WidgetList chil
  	yfpos[RIGHT] += b->arr[RIGHT].fsize;
  	h = ((int) height[2] * yfpos[RIGHT] / max (di->flines[RIGHT], 1)) - y;
  	y4 = ((h == 0) ? y2 : (y2 + h - 1));
@@ -293,7 +298,7 @@ Pull patches from Debian.
  	XFillRectangle (XtDisplay (children[2]), p[2], gcback[back],
  			0, y, width[2], h);
  
-@@ -906,6 +958,7 @@ static void add_actions (XtAppContext ap
+@@ -906,6 +961,7 @@ static void add_actions (XtAppContext ap
       */
      static char *foo3 = "\
  	<Btn1Down>: Select() \n\
@@ -301,7 +306,7 @@ Pull patches from Debian.
  	~Ctrl <Key>osfPageDown: Scroll(PageDown) \n\
  	~Ctrl <Key>osfPageUp: Scroll(PageUp) \n\
  	<Key>osfLeft: Scroll(Left) \n\
-@@ -951,8 +1004,9 @@ static void add_actions (XtAppContext ap
+@@ -951,8 +1007,9 @@ static void add_actions (XtAppContext ap
   */
  static void cleanup_at_exit (void)
  {
@@ -312,7 +317,7 @@ Pull patches from Debian.
  }
  
  /* 
-@@ -1017,8 +1071,11 @@ int main (int argc, char *argv[])
+@@ -1017,8 +1074,11 @@ int main (int argc, char *argv[])
      {"quitIfSame", "QuitIfSame", XtRBoolean, sizeof (Boolean), 0, XtRString, "false"},
      {"debug", "Debug", XtRBoolean, sizeof (Boolean), 0, XtRString, "false"},
      {"filename", "Filename", XtRString, sizeof (String), 0, XtRString, ""}};
@@ -325,7 +330,7 @@ Pull patches from Debian.
  
      toplevel = XtVaAppInitialize (&app, "Mgdiff", option_table, XtNumber (option_table),
  #if X11R5
-@@ -1027,6 +1084,10 @@ int main (int argc, char *argv[])
+@@ -1027,6 +1087,10 @@ int main (int argc, char *argv[])
  				  (unsigned int *) &argc,
  #endif
  				  argv, fallbacks, NULL);
@@ -336,7 +341,7 @@ Pull patches from Debian.
  
      XtVaGetValues (toplevel, XmNdepth, &depth, NULL);
      if (depth == 1)
-@@ -1079,7 +1140,6 @@ int main (int argc, char *argv[])
+@@ -1079,7 +1143,6 @@ int main (int argc, char *argv[])
  	};
  	werror_long (toplevel, "Wrong Application Defaults", array, sizeof (array) / sizeof (array[0]));
      }
@@ -344,7 +349,7 @@ Pull patches from Debian.
      if (debug_flag) {
  	XSetErrorHandler (x_error_handler);
  	XtAppSetErrorHandler (app, xt_error_handler);
-@@ -1087,7 +1147,10 @@ int main (int argc, char *argv[])
+@@ -1087,7 +1150,10 @@ int main (int argc, char *argv[])
      else
  	XtAppSetWarningHandler (app, xt_warning_handler);
  
@@ -356,7 +361,7 @@ Pull patches from Debian.
      (void) on_exit (cleanup_at_exit, NULL);
  #else
      (void) atexit (cleanup_at_exit);
-@@ -1109,14 +1172,17 @@ int main (int argc, char *argv[])
+@@ -1109,14 +1175,17 @@ int main (int argc, char *argv[])
  	 * two filenames on command line; process them
  	 */
      case 3:
@@ -378,7 +383,7 @@ Pull patches from Debian.
  	}
  	else if (!file_tests (toplevel, argv[1])) {
  	    no_files_flag = True;
-@@ -1131,13 +1197,12 @@ int main (int argc, char *argv[])
+@@ -1131,13 +1200,12 @@ int main (int argc, char *argv[])
  	}
  
  	if (strcmp (argv[2], "-") == 0) {
@@ -395,7 +400,7 @@ Pull patches from Debian.
  	}
  	else if (!file_tests (toplevel, argv[2])) {
  	    no_files_flag = True;
-@@ -1174,6 +1239,7 @@ int main (int argc, char *argv[])
+@@ -1174,6 +1242,7 @@ int main (int argc, char *argv[])
      }
  
      newss.b = di->first;
@@ -403,10 +408,11 @@ Pull patches from Debian.
      newss.topline = newss.sindex = newss.findex[LEFT] = newss.findex[RIGHT] = 0;
  
      mainw = XtVaCreateManagedWidget ("mainw", xmMainWindowWidgetClass,
-@@ -1205,10 +1271,13 @@ int main (int argc, char *argv[])
+@@ -1205,10 +1274,14 @@ int main (int argc, char *argv[])
  				  XmVaPUSHBUTTON, NULL, NULL, NULL, NULL,
  				  XmVaSEPARATOR,
  				  XmVaPUSHBUTTON, NULL, NULL, NULL, NULL,
++				  XmVaPUSHBUTTON, NULL, NULL, NULL, NULL,
 +				  XmVaPUSHBUTTON, NULL, NULL, NULL, NULL,
 +				  XmVaSEPARATOR,
 +				  XmVaPUSHBUTTON, NULL, NULL, NULL, NULL,
@@ -418,7 +424,7 @@ Pull patches from Debian.
      }
      XmVaCreateSimplePulldownMenu (menubar, "view_menu", 1, view_cb,
  				  XmVaPUSHBUTTON, NULL, NULL, NULL, NULL,
-@@ -1491,6 +1560,7 @@ int main (int argc, char *argv[])
+@@ -1491,6 +1564,7 @@ int main (int argc, char *argv[])
  
      XtAppMainLoop (app);
      /* NOTREACHED */
@@ -426,7 +432,7 @@ Pull patches from Debian.
  }
  
  static void redraw_partial_vert (Widget w)
-@@ -1622,9 +1692,9 @@ static void update_line_numbers (int l,
+@@ -1622,9 +1696,9 @@ static void update_line_numbers (int l, 
  {
      char buffer[16];
  
@@ -438,7 +444,7 @@ Pull patches from Debian.
      XmTextFieldSetString (linenumr, buffer);
  }
  
-@@ -1860,19 +1930,20 @@ static void next_diff (Widget w, XtPoint
+@@ -1860,19 +1934,20 @@ static void next_diff (Widget w, XtPoint
  
  	    value = (b->sline >= lines_of_context) ? (b->sline - lines_of_context) : b->sline;
  	    XtVaGetValues (sb, XmNmaximum, &maximum, XmNsliderSize, &slidersize, NULL);
@@ -464,7 +470,7 @@ Pull patches from Debian.
  	    newcbs.reason = XmCR_VALUE_CHANGED;
  	    newcbs.event = NULL;
  	    newcbs.value = value;
-@@ -1986,7 +2057,7 @@ static void show_version (Widget parent)
+@@ -1986,7 +2061,7 @@ static void show_version (Widget parent)
  					      mgdiff_width, mgdiff_height,
  					      fg, bg,
  					      DefaultDepth (dpy, DefaultScreen (dpy)));
@@ -473,7 +479,50 @@ Pull patches from Debian.
  
  	XtVaSetValues (dialog,
  		       XmNautoUnmanage, True,
-@@ -2041,12 +2112,12 @@ void process_both_files (char *file1, ch
+@@ -2020,6 +2095,42 @@ static void update_overall (void)
+     newss.findex[RIGHT] = value;
+ }
+ 
++/* Re-run diff on the current files and update the display */
++void reload_both(void)
++{
++    DiffInfo *newdi;
++
++    set_cursor (toplevel);
++
++    if (no_files_flag == True) {
++	    /* Currently there are no files,
++	       so don't do anything */
++	    return;
++    }
++
++    newdi = build_diff_info (diffcmd, diffargs, str_fnamel, str_fnamer);
++ 
++    free_diff_info (di);
++    di = newdi;
++    if (di->status == 2) {
++	no_files_flag = True;
++	toggle_openlr_sensitive (False);
++	toggle_saveas_sensitive (False, False, False);
++	free (str_fnamel);
++	free (str_snamel);
++	free (str_fnamer);
++	free (str_snamer);
++	str_snamel = strdup ("(no file)");
++	str_snamer = strdup ("(no file)");
++	str_fnamel = str_fnamer = NULL;
++    }
++    refresh ();
++    fake_adjust_label (fnamel);
++    reset_cursor (toplevel);
++
++    handle_diff_errors (di);
++}
++
+ void process_both_files (char *file1, char *name1, char *file2, char *name2)
+ {
+     DiffInfo *newdi;
+@@ -2041,12 +2152,12 @@ void process_both_files (char *file1, ch
      if (di->status != 2) {
  	no_files_flag = False;
  	toggle_openlr_sensitive (True);
@@ -488,7 +537,7 @@ Pull patches from Debian.
  	free (str_fnamel);
  	free (str_snamel);
  	free (str_fnamer);
-@@ -2082,7 +2153,7 @@ void process_left_file (char *file1, cha
+@@ -2082,7 +2193,7 @@ void process_left_file (char *file1, cha
      if (di->status == 2) {
  	no_files_flag = True;
  	toggle_openlr_sensitive (False);
@@ -497,7 +546,7 @@ Pull patches from Debian.
  	free (str_fnamel);
  	free (str_snamel);
  	free (str_fnamer);
-@@ -2117,7 +2188,7 @@ void process_right_file (char *file2, ch
+@@ -2117,7 +2228,7 @@ void process_right_file (char *file2, ch
      if (di->status == 2) {
  	no_files_flag = True;
  	toggle_openlr_sensitive (False);
@@ -506,7 +555,7 @@ Pull patches from Debian.
  	free (str_fnamel);
  	free (str_snamel);
  	free (str_fnamer);
-@@ -2133,6 +2204,7 @@ void process_right_file (char *file2, ch
+@@ -2133,6 +2244,7 @@ void process_right_file (char *file2, ch
      handle_diff_errors (di);
  }
  
@@ -514,7 +563,7 @@ Pull patches from Debian.
  static void refresh (void)
  {
      newss.b = di->first;
-@@ -2182,9 +2254,11 @@ void toggle_open_sensitive (Boolean sens
+@@ -2182,9 +2294,11 @@ void toggle_open_sensitive (Boolean sens
      toggle_openlr_sensitive (sensitive);
  }
  
@@ -522,13 +571,13 @@ Pull patches from Debian.
 +static void toggle_saveas_sensitive (Boolean saveas, Boolean save_left, Boolean save_right)
  {
 -    XtSetSensitive (XtNameToWidget (file_menu, "button_3"), sensitive);
-+    XtSetSensitive (XtNameToWidget (file_menu, "button_3"), saveas);
-+    XtSetSensitive (XtNameToWidget (file_menu, "button_4"), save_left);
-+    XtSetSensitive (XtNameToWidget (file_menu, "button_5"), save_right);
++    XtSetSensitive (XtNameToWidget (file_menu, "button_4"), saveas);
++    XtSetSensitive (XtNameToWidget (file_menu, "button_5"), save_left);
++    XtSetSensitive (XtNameToWidget (file_menu, "button_6"), save_right);
  }
  
  /* 
-@@ -2196,78 +2270,263 @@ static void exit_cb (Widget w, XtPointer
+@@ -2196,78 +2310,263 @@ static void exit_cb (Widget w, XtPointer
      exit ((di != NULL) ? di->status : 2);
  }
  
@@ -839,7 +888,7 @@ Pull patches from Debian.
  }
  
  /* 
-@@ -2307,14 +2566,14 @@ static void Scroll (Widget widget, XEven
+@@ -2307,14 +2606,14 @@ static void Scroll (Widget widget, XEven
  	else {
  	    char buffer[1024];
  	    
@@ -856,7 +905,7 @@ Pull patches from Debian.
  	XtAppWarning (XtWidgetToApplicationContext (widget), buffer);
      }
  }
-@@ -2391,7 +2650,8 @@ static Dimension get_preferred_width (Wi
+@@ -2391,7 +2690,8 @@ static Dimension get_preferred_width (Wi
  /* 
   * delete any prefix ending in '/' and return a copy
   */
@@ -866,7 +915,7 @@ Pull patches from Debian.
  {
      if (path) {
  	char *p;
-@@ -2416,3 +2676,4 @@ static char *basename (char *path)
+@@ -2416,3 +2716,4 @@ static char *basename (char *path)
      else
  	return (NULL);
  }
