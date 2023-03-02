@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.57 2023/01/29 21:17:53 ryoon Exp $
+# $NetBSD: Makefile,v 1.58 2023/03/02 17:10:57 vins Exp $
 
 DISTNAME=	xfe-1.45
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xfe/}
 EXTRACT_SUFX=	.tar.xz
@@ -26,10 +26,11 @@ SUBST_FILES.conf=	src/XFileExplorer.cpp src/xfedefs.h
 SUBST_SED.conf=		-e "s|/usr/local|${PREFIX}|"
 SUBST_MESSAGE.conf=	Fixing hardcoded path.
 
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../security/polkit/buildlink3.mk"
 .include "../../x11/fox/buildlink3.mk"
 .include "../../x11/libxcb/buildlink3.mk"
 .include "../../x11/xcb-util/buildlink3.mk"
