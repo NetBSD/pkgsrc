@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2022/12/06 14:41:40 vins Exp $
+# $NetBSD: Makefile,v 1.3 2023/03/02 15:29:41 vins Exp $
 
 DISTNAME=	xtrlock-2.15
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/x/xtrlock/}
 EXTRACT_SUFX=	.tar.xz
@@ -10,13 +11,23 @@ MAINTAINER=	vins@NetBSD.org
 COMMENT=	Simple X11 screen lock tool
 LICENSE=	gnu-gpl-v3
 
+# support 'for' loop initial declarations
+USE_LANGUAGES=	c99
 USE_IMAKE=	yes
 
 # mitigate CVE-2016-10894
-CFLAGS+=	-DMULTITOUCH
+CFLAGS+=	-std=c99 -DMULTITOUCH
 LDFLAGS+=	-lXi
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Linux"
+SUBST_CLASSES+=		defs
+SUBST_STAGE.defs=	post-configure
+SUBST_FILES.defs+=	Makefile
+SUBST_SED.defs=		-e 's|-D_BSD_SOURCE[[:space:]]*-D_SVID_SOURCE|-D_DEFAULT_SOURCE|g'
+SUBST_MESSAGE.defs=	Replacing deprecated preprocessor-defined macros.
+.endif
 
 .if exists(/etc/shadow) && !(${OPSYS:M*BSD} != "" || ${OPSYS} == "Darwin" || ${OPSYS} == "DragonFly")
 MAKE_FLAGS+=		CCOPTIONS="${CFLAGS} -DSHADOW_PWD"			#getspnam()
