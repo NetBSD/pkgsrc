@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:09:43 nia Exp $
+$NetBSD: distinfo,v 1.7 2023/03/03 10:51:10 adam Exp $
 
-BLAKE2s (pg_repack-1.4.3.tar.gz) = 8d6a4d24dc1a110b983fc38b4f4eac91d25d03393697c59a02473226a0edbe5f
-SHA512 (pg_repack-1.4.3.tar.gz) = 8fad625665446d7852d09e5c431fa2bf4e767bb5eeaf6718c824c51c558b0ff975af1f2dcce20bc714002fc755c2f6c1d23b0adc2bfa1f9167d198fc59d34cf8
-Size (pg_repack-1.4.3.tar.gz) = 93994 bytes
+BLAKE2s (pg_repack-1.4.8.tar.gz) = 73479178dcc06ee14b93f9d7dcecf1c57c1dddacc7f0f08880c68dddbeb534dd
+SHA512 (pg_repack-1.4.8.tar.gz) = 9854a979aa9056b7c49d52e22622b8faf91cdf4acdb6551044d25733848c2c07b95166a464769da23e0174a63f2b132aa58ba6d6f9b596d1fb95f29098ac3968
+Size (pg_repack-1.4.8.tar.gz) = 95801 bytes
 SHA1 (patch-bin_Makefile) = 7e82083f0df7e9a1532be323196875bd8ba44520
-SHA1 (patch-bin_pg__repack.c) = 55cfbde4e5aeac83c9d6ec75ee0954411f2ca5ad
+SHA1 (patch-bin_pg__repack.c) = e983b5e9ce21368fec6fd2c550cd1fad78e94d5b
