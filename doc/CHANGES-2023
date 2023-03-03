@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1534 2023/03/03 09:54:07 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1535 2023/03/03 10:00:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1984,3 +1984,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/zkt to 1.1.6 [fcambus 2023-03-03]
 	Updated games/wtf to 20230301 [fcambus 2023-03-03]
 	Updated fonts/pcf2bdf to 1.07 [fcambus 2023-03-03]
+	Updated devel/googletest to 1.13.0 [adam 2023-03-03]
+	Updated devel/google-glog to 0.6.0 [adam 2023-03-03]
