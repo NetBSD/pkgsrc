@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:18:06 nia Exp $
+$NetBSD: distinfo,v 1.9 2023/03/03 09:24:20 fcambus Exp $
 
-BLAKE2s (zkt-1.1.4.tar.gz) = 360dd99a00a266269cdf8da01a3dfd32bf6501f283848b53533e3f6c2b6b7e14
-SHA512 (zkt-1.1.4.tar.gz) = 349b49645557c9e03949c742bf4b37b4c3605b984c5990a3517519f31d23be3c6fb63349707a8c742f0c40c6aeb558592ce9c4e3b6656faec7947d2dfea6a178
-Size (zkt-1.1.4.tar.gz) = 382629 bytes
+BLAKE2s (zkt-1.1.6.tar.gz) = a05b2801d500a8c802cd40487cf547982b84aa9a4a46d1632c44bf443bd5e513
+SHA512 (zkt-1.1.6.tar.gz) = e9acd651bc80d808b7fb9258cb14a0952adc736a2e7e7a72f4fc1d8f45006988c43157b3c26d725f98732be01f6dd7691b3931ebe12f9fda87c8bf5e9c51db6b
+Size (zkt-1.1.6.tar.gz) = 408892 bytes
