@@ -1,7 +1,10 @@
-$NetBSD: patch-lib_sanitizer__common_sanitizer__platform__limits__netbsd.cpp,v 1.5 2023/03/03 09:47:20 wiz Exp $
+$NetBSD: patch-lib_sanitizer__common_sanitizer__platform__limits__netbsd.cpp,v 1.6 2023/03/03 09:53:14 wiz Exp $
 
 urio and smb have been removed from NetBSD.
+upstreamed?
+
 TIOCRCVFRAME and TIOCXMTFRAME as well.
+https://github.com/llvm/llvm-project/issues/61151
 
 --- lib/sanitizer_common/sanitizer_platform_limits_netbsd.cpp.orig	2023-01-12 07:12:30.000000000 +0000
 +++ lib/sanitizer_common/sanitizer_platform_limits_netbsd.cpp
