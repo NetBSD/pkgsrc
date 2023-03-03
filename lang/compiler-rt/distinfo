@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.22 2023/03/03 09:47:19 wiz Exp $
+$NetBSD: distinfo,v 1.23 2023/03/03 09:53:14 wiz Exp $
 
 BLAKE2s (cmake-15.0.7.src.tar.xz) = 2c299f2c58800bcb0c5930562d24baed0e94806df8b8d5295c0866ffeaaf233f
 SHA512 (cmake-15.0.7.src.tar.xz) = 85097a6eaee0df004567905f7e5ce8ca02e3b46c6fc66fa552fe99734642e6ee61685de4e5e6e8b505963334d7b91d98ecd9c5870e6bdd3f0018ee5b963ffa96
@@ -9,4 +9,4 @@ Size (compiler-rt-15.0.7.src.tar.xz) = 2350132 bytes
 SHA1 (patch-cmake_config-ix.cmake) = 40ee86393c0f9e26eeaa493c5312d2cabf4c2a58
 SHA1 (patch-lib_asan_CMakeLists.txt) = f91335b88c8c28a25d7dfada85769f799660f82a
 SHA1 (patch-lib_sanitizer__common_sanitizer__linux__libcdep.cpp) = 32befa87b3487518ce6423ab197c3a587e53bb2f
-SHA1 (patch-lib_sanitizer__common_sanitizer__platform__limits__netbsd.cpp) = b7071efbff73aa0d67414e76ae1dc4f7a73fdcd6
+SHA1 (patch-lib_sanitizer__common_sanitizer__platform__limits__netbsd.cpp) = 708b4def299a1cc47fca3c48f70745f8528c0fb8
