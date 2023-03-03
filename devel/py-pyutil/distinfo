@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2023/02/07 11:00:39 adam Exp $
+$NetBSD: distinfo,v 1.12 2023/03/03 07:58:54 adam Exp $
 
-BLAKE2s (pyutil-3.3.2.tar.gz) = f2b9787247a063b99cfc12128a505ff65a82084a673981c4af25cfd81e7f4140
-SHA512 (pyutil-3.3.2.tar.gz) = 34d318b5cbdf76b235346f3b3473c636fd34c918d5f4247276c422bdbdadd191a5c790ee3d569e3e7b684c6ab0305ea04cf82b72b0aa1a9b00a8639c448119ad
-Size (pyutil-3.3.2.tar.gz) = 136803 bytes
+BLAKE2s (pyutil-3.3.6.tar.gz) = e829ed51b9d1d39c973dc4824dddf5c4ccc8868f6b33e999360e88fd16b053cb
+SHA512 (pyutil-3.3.6.tar.gz) = 816b724e36db8822513de903161471eb5dd481781f456a77e9676b9d9e15925ffed99790acb90a2f564d4cc12dc10b9608ced24f804fb2fca8f1e081daddf2e4
+Size (pyutil-3.3.6.tar.gz) = 137461 bytes
