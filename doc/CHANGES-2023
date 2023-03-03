@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1532 2023/03/03 09:52:27 fcambus Exp $
+$NetBSD: CHANGES-2023,v 1.1533 2023/03/03 09:52:46 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1983,4 +1983,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-sanic to 22.12.0 [adam 2023-03-03]
 	Updated security/zkt to 1.1.6 [fcambus 2023-03-03]
 	Updated games/wtf to 20230301 [fcambus 2023-03-03]
+	Updated fonts/pcf2bdf to 1.07 [fcambus 2023-03-03]
 	Updated fonts/pcf2bdf to 1.07 [fcambus 2023-03-03]
