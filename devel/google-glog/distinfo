@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:14:47 nia Exp $
+$NetBSD: distinfo,v 1.9 2023/03/03 09:59:58 adam Exp $
 
-BLAKE2s (glog-0.4.0.tar.gz) = b2f19edce18f97725df4a6929b2c93fa16955747c661d6a6264e2121ed7f0a4c
-SHA512 (glog-0.4.0.tar.gz) = b585f1819ade2075f6b61dc5aaca5c3f9d25601dba2bd08b6c49b96ac5f79db23c6b7f2042df003f7130497dd7241fcaa8b107d1f97385cb66ce52d3c554b176
-Size (glog-0.4.0.tar.gz) = 200955 bytes
+BLAKE2s (glog-0.6.0.tar.gz) = a0acac39582645d921743be6dfc9263fb3d7aca5829e59b2815a9272f44b58b0
+SHA512 (glog-0.6.0.tar.gz) = fd2c42583d0dd72c790a8cf888f328a64447c5fb9d99b2e2a3833d70c102cb0eb9ae874632c2732424cc86216c8a076a3e24b23a793eaddb5da8a1dc52ba9226
+Size (glog-0.6.0.tar.gz) = 193267 bytes
