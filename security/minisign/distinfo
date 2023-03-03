@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:17:19 nia Exp $
+$NetBSD: distinfo,v 1.6 2023/03/03 07:44:02 fcambus Exp $
 
-BLAKE2s (minisign-0.10.tar.gz) = e79f74f99ba5c0af9d8babb818f4e4eaeebad061740d14666aa39b66b7ef1167
-SHA512 (minisign-0.10.tar.gz) = 6a38500ed896c17b100bca47443f9806debe6e44d3ce09189f5f8913a41d4913434397175d1caa770fb0cc0918078dfc71c01b82b9bf919fdfba00434f4ce100
-Size (minisign-0.10.tar.gz) = 18242 bytes
+BLAKE2s (minisign-0.11.tar.gz) = e6c662cfcd08bb1d6aec2a1546286cb85abeacc15987c7874973378c076258e9
+SHA512 (minisign-0.11.tar.gz) = a7445cb9646ae56fcba718f61f73486d5774d9cafe72ef051a3e60f94baf852b597261778bce50371ea5ee63395b0477bf1a33c7683fde32d003fab66029241f
+Size (minisign-0.11.tar.gz) = 18410 bytes
