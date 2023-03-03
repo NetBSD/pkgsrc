@@ -1,24 +1,22 @@
-# $NetBSD: Makefile,v 1.22 2023/01/24 18:36:22 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2023/03/03 09:58:34 adam Exp $
 
-DISTNAME=	googletest-1.12.1
+DISTNAME=	googletest-1.13.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
-GITHUB_TAG=	release-${PKGVERSION_NOREV}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	reed@reedmedia.net
 HOMEPAGE=	https://github.com/google/googletest
 COMMENT=	Google's C++ testing framework
 LICENSE=	modified-bsd
 
-INSTALLATION_DIRS=	bin
-
-USE_LANGUAGES=		c c++11
+USE_LANGUAGES=	c c++14
 
 # cc1plus: error: unrecognized command line option "-std=c++11"
-GCC_REQD+=		4.8
+GCC_REQD+=	7
 
-CFLAGS+=		-fPIE
-CXXFLAGS+=		-fPIE
+CFLAGS+=	-fPIE
+CXXFLAGS+=	-fPIE
 
 PKGCONFIG_OVERRIDE+=	googlemock/cmake/gmock.pc.in
 PKGCONFIG_OVERRIDE+=	googlemock/cmake/gmock_main.pc.in
