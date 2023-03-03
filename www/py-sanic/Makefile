@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2022/11/03 12:46:20 adam Exp $
+# $NetBSD: Makefile,v 1.32 2023/03/03 09:01:36 adam Exp $
 
-DISTNAME=	sanic-22.9.1
+DISTNAME=	sanic-22.12.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sanic/}
@@ -15,9 +15,9 @@ DEPENDS+=	${PYPKGPREFIX}-httptools>=0.0.10:../../www/py-httptools
 DEPENDS+=	${PYPKGPREFIX}-multidict>=5.0.0:../../databases/py-multidict
 DEPENDS+=	${PYPKGPREFIX}-sanic-routing>=22.8.0:../../www/py-sanic-routing
 DEPENDS+=	${PYPKGPREFIX}-ujson>=1.35:../../textproc/py-ujson
-DEPENDS+=	${PYPKGPREFIX}-uvloop>=0.5.3:../../devel/py-uvloop
+DEPENDS+=	${PYPKGPREFIX}-uvloop>=0.15.0:../../devel/py-uvloop
 DEPENDS+=	${PYPKGPREFIX}-websockets>=10.0:../../www/py-websockets
-#TEST_DEPENDS+=	${PYPKGPREFIX}-bandit-[0-9]*:../../wip/py-bandit
+TEST_DEPENDS+=	${PYPKGPREFIX}-bandit-[0-9]*:../../security/py-bandit
 TEST_DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4-[0-9]*:../../www/py-beautifulsoup4
 TEST_DEPENDS+=	${PYPKGPREFIX}-black-[0-9]*:../../textproc/py-black
 TEST_DEPENDS+=	${PYPKGPREFIX}-chardet>=3.0.0:../../converters/py-chardet
@@ -33,23 +33,23 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-benchmark-[0-9]*:../../devel/py-test-benchmark
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
-#TEST_DEPENDS+=	${PYPKGPREFIX}-test-sanic-[0-9]*:../../www/py-test-sanic
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-sanic-[0-9]*:../../www/py-test-sanic
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-sugar-[0-9]*:../../devel/py-test-sugar
 TEST_DEPENDS+=	${PYPKGPREFIX}-types-ujson-[0-9]*:../../devel/py-types-ujson
 TEST_DEPENDS+=	${PYPKGPREFIX}-uvicorn-[0-9]*:../../www/py-uvicorn
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
 USE_PKG_RESOURCES=	yes
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} sanic sanic-${PYVERSSUFFIX} || ${TRUE}
 
-#do-test:
-#	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
