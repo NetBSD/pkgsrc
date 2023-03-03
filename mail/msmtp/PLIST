@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2020/09/28 10:54:27 leot Exp $
+@comment $NetBSD: PLIST,v 1.16 2023/03/03 09:00:52 fcambus Exp $
 bin/msmtp
 bin/msmtpd
 info/msmtp.info
@@ -10,6 +10,7 @@ share/locale/eo/LC_MESSAGES/msmtp.mo
 share/locale/fr/LC_MESSAGES/msmtp.mo
 share/locale/pt_BR/LC_MESSAGES/msmtp.mo
 share/locale/sr/LC_MESSAGES/msmtp.mo
+share/locale/sv/LC_MESSAGES/msmtp.mo
 share/locale/ta/LC_MESSAGES/msmtp.mo
 share/locale/uk/LC_MESSAGES/msmtp.mo
 ${PLIST.scripts}share/msmtp/find_alias/find_alias_for_msmtp.sh
