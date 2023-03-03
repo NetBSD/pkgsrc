@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.72 2023/02/28 20:23:13 bouyer Exp $
+# $NetBSD: Makefile,v 1.73 2023/03/03 11:19:19 bouyer Exp $
 
 DISTNAME=		mimedefang-3.3
 CATEGORIES=		mail
 MASTER_SITES=		https://mimedefang.org/releases/
-PKGREVISION=		1
+PKGREVISION=		2
 
 MAINTAINER=		pettai@NetBSD.org
 HOMEPAGE=		https://www.mimedefang.org/
