@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2022/11/14 17:48:14 nikita Exp $
+# $NetBSD: Makefile,v 1.4 2023/03/03 10:10:38 wiz Exp $
 
-DISTNAME=	hex-2.0.0
-PKGREVISION=	1
-PKGNAME=	elixir-${DISTNAME}
+DISTNAME=	hex-2.0.5
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hexpm/}
 GITHUB_PROJECT=	hex
@@ -14,6 +12,7 @@ COMMENT=	Package manager for the Erlang VM
 LICENSE=	apache-2.0
 
 ELIXIR_APP_NAME=	hex
+ELIXIR_APP_VERSION=	2.0.6
 # does this pull in dependencies over the network?
 MIX_TARGET=		local.hex --force
 
