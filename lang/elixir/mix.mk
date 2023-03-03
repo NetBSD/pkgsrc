@@ -1,4 +1,4 @@
-# $NetBSD: mix.mk,v 1.2 2022/11/14 17:48:14 nikita Exp $
+# $NetBSD: mix.mk,v 1.3 2023/03/03 10:09:58 wiz Exp $
 #
 # Common logic that can be used by packages that use mix as a build tool.
 #
@@ -13,6 +13,7 @@ DEPENDS+=		elixir>=1.14.0:../../lang/elixir
 ELIXIR_APP_NAME?=	${PKGBASE}
 ELIXIR_LIB_ROOT?=	${DESTDIR}${PREFIX}/lib/elixir/lib
 ELIXIR_APP_ROOT?=	${ELIXIR_LIB_ROOT}/${ELIXIR_APP_NAME}
+ELIXIR_APP_VERSION?=	${PKGVERSION_NOREV}
 ELIXIR_HIDDEN?=		"^${ELIXIR_APP_NAME}$$"
 ELIXIR_LOCALE?=		en_US.UTF-8
 
@@ -56,7 +57,7 @@ do-mix-install:
 	cd ${WRKSRC}/lib && ${CP} -R * ${ELIXIR_APP_ROOT}/lib
 	${MKDIR} ${ELIXIR_APP_ROOT}/ebin
 	if test -d ${WRKSRC}/_build/.mix/archives; then \
-		${INSTALL_DATA} ${WRKSRC}/_build/.mix/archives/${ELIXIR_APP_NAME}-${PKGVERSION_NOREV}/${ELIXIR_APP_NAME}-${PKGVERSION_NOREV}/ebin/* \
+		${INSTALL_DATA} ${WRKSRC}/_build/.mix/archives/${ELIXIR_APP_NAME}-${ELIXIR_APP_VERSION}/${ELIXIR_APP_NAME}-${ELIXIR_APP_VERSION}/ebin/* \
 			${ELIXIR_APP_ROOT}/ebin; \
 	fi
 	if test -d ${WRKSRC}/_build/${MIX_BUILD_NAME}; then \
