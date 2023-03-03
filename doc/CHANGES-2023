@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1535 2023/03/03 10:00:31 adam Exp $
+$NetBSD: CHANGES-2023,v 1.1536 2023/03/03 10:10:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1986,3 +1986,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated fonts/pcf2bdf to 1.07 [fcambus 2023-03-03]
 	Updated devel/googletest to 1.13.0 [adam 2023-03-03]
 	Updated devel/google-glog to 0.6.0 [adam 2023-03-03]
+	Updated devel/hex to 2.0.5 [wiz 2023-03-03]
