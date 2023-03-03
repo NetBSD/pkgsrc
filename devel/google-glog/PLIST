@@ -1,16 +1,17 @@
-@comment $NetBSD: PLIST,v 1.2 2021/02/20 20:46:13 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/03/03 09:59:58 adam Exp $
+include/glog/export.h
 include/glog/log_severity.h
 include/glog/logging.h
+include/glog/platform.h
 include/glog/raw_logging.h
 include/glog/stl_logging.h
 include/glog/vlog_is_on.h
-lib/libglog.la
+lib/cmake/glog/glog-config-version.cmake
+lib/cmake/glog/glog-config.cmake
+lib/cmake/glog/glog-modules.cmake
+lib/cmake/glog/glog-targets-noconfig.cmake
+lib/cmake/glog/glog-targets.cmake
+lib/libglog.so
+lib/libglog.so.0.6.0
+lib/libglog.so.1
 lib/pkgconfig/libglog.pc
-share/doc/glog-${PKGVERSION}/AUTHORS
-share/doc/glog-${PKGVERSION}/COPYING
-share/doc/glog-${PKGVERSION}/ChangeLog
-share/doc/glog-${PKGVERSION}/INSTALL
-share/doc/glog-${PKGVERSION}/README.md
-share/doc/glog-${PKGVERSION}/README.windows
-share/doc/glog-${PKGVERSION}/designstyle.css
-share/doc/glog-${PKGVERSION}/glog.html
