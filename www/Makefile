@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1688 2023/02/27 18:13:34 nikita Exp $
+# $NetBSD: Makefile,v 1.1689 2023/03/03 08:04:56 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -26,7 +26,6 @@ SUBDIR+=	R-urlchecker
 SUBDIR+=	R-webfakes
 SUBDIR+=	R-webshot
 SUBDIR+=	SOGo
-SUBDIR+=	SOGo4
 SUBDIR+=	SpeedyCGI
 SUBDIR+=	adzap
 SUBDIR+=	album
