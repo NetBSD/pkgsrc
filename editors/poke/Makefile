@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2023/03/03 10:31:16 fcambus Exp $
+# $NetBSD: Makefile,v 1.4 2023/03/03 10:59:27 fcambus Exp $
 
 DISTNAME=	poke-3.0
 PKGREVISION=	1
@@ -19,11 +19,8 @@ CONFIGURE_ARGS+=	--infodir=${PREFIX}/${PKGINFODIR}
 CONFIGURE_ARGS+=	--with-gc=${BUILDLINK_PREFIX.boehm-gc}
 CONFIGURE_ARGS+=	--enable-mi
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "NetBSD"
-CONFIGURE_ARGS+=	--disable-dispatch-no-threading
-.endif
+# Jitter's no-threading dispatch does not work on NetBSD
+CONFIGURE_ARGS.NetBSD+= --disable-dispatch-no-threading
 
 .include "../../devel/boehm-gc/buildlink3.mk"
 .include "../../devel/gettext-tools/buildlink3.mk"
