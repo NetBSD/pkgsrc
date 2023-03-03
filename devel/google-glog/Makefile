@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2022/03/27 13:41:06 tnn Exp $
+# $NetBSD: Makefile,v 1.11 2023/03/03 09:59:58 adam Exp $
 
-DISTNAME=	glog-0.4.0
+DISTNAME=	glog-0.6.0
 PKGNAME=	google-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
@@ -8,27 +8,23 @@ GITHUB_PROJECT=	glog
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/google/glog/
+HOMEPAGE=	https://github.com/google/glog
 COMMENT=	Application Level Logging library for C++
 LICENSE=	modified-bsd
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	automake pkg-config
 USE_LANGUAGES=	c c++11
+USE_TOOLS+=	pkg-config
 
-PKGCONFIG_OVERRIDE+=	libglog.pc.in
+CMAKE_ARGS+=	-DWITH_UNWIND=OFF
 
 BUILDLINK_TRANSFORM.SunOS+=	rm:-pie
 
 .include "../../mk/bsd.prefs.mk"
-
 .if (${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD") && exists(/usr/include/execinfo.h)
-LIBS+=		-lexecinfo
+LDFLAGS+=	-lexecinfo
 .endif
 
-pre-configure:
-	cd ${WRKSRC} && ${SH} autogen.sh
-
+.include "../../devel/cmake/build.mk"
+.include "../../devel/gflags/buildlink3.mk"
 .include "../../devel/googletest/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
