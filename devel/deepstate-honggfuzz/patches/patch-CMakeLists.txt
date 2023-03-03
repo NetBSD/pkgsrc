@@ -1,0 +1,19 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2023/03/03 09:25:47 wiz Exp $
+
+--- CMakeLists.txt.orig	2020-08-25 17:45:32.000000000 +0000
++++ CMakeLists.txt
+@@ -67,14 +67,8 @@ endif()
+ 
+ if (DEEPSTATE_HONGGFUZZ)
+   string(FIND "${CMAKE_C_COMPILER}" "hfuzz-clang" _hfuzz_found)
+-  if(_hfuzz_found EQUAL -1)
+-    message(FATAL_ERROR "DeepState's HonggFuzz mode requires the hfuzz-clang C compiler.")
+-  endif()
+ 
+   string(FIND "${CMAKE_CXX_COMPILER}" "hfuzz-clang++" _hfuzz_found)
+-  if(_hfuzz_found EQUAL -1)
+-    message(FATAL_ERROR "DeepState's HonggFuzz mode requires the hfuzz-clang++ C++ compiler.")
+-  endif()
+ endif()
+ 
+ if (DEEPSTATE_AFL)
