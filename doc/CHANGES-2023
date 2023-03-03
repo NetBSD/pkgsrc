@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1524 2023/03/03 07:44:13 fcambus Exp $
+$NetBSD: CHANGES-2023,v 1.1525 2023/03/03 07:59:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1973,3 +1973,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/jimtcl to 0.82 [fcambus 2023-03-02]
 	Updated mail/Pantomime to 1.4.0 [wiz 2023-03-02]
 	Updated security/minisign to 0.11 [fcambus 2023-03-03]
+	Updated net/wireshark to 4.0.4 [adam 2023-03-03]
+	Updated devel/py-pyutil to 3.3.6 [adam 2023-03-03]
