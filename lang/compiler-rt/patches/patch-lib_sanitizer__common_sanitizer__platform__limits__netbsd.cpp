@@ -1,8 +1,9 @@
-$NetBSD: patch-lib_sanitizer__common_sanitizer__platform__limits__netbsd.cpp,v 1.4 2022/08/12 08:58:41 pin Exp $
+$NetBSD: patch-lib_sanitizer__common_sanitizer__platform__limits__netbsd.cpp,v 1.5 2023/03/03 09:47:20 wiz Exp $
 
 urio and smb have been removed from NetBSD.
+TIOCRCVFRAME and TIOCXMTFRAME as well.
 
---- lib/sanitizer_common/sanitizer_platform_limits_netbsd.cpp.orig	2022-06-22 16:46:24.000000000 +0000
+--- lib/sanitizer_common/sanitizer_platform_limits_netbsd.cpp.orig	2023-01-12 07:12:30.000000000 +0000
 +++ lib/sanitizer_common/sanitizer_platform_limits_netbsd.cpp
 @@ -957,12 +957,14 @@ unsigned struct_session_op_sz = sizeof(s
  unsigned struct_sgttyb_sz = sizeof(sgttyb);
@@ -56,3 +57,16 @@ urio and smb have been removed from NetBSD.
  unsigned IOCTL_AGPIOC_INFO = AGPIOC_INFO;
  unsigned IOCTL_AGPIOC_ACQUIRE = AGPIOC_ACQUIRE;
  unsigned IOCTL_AGPIOC_RELEASE = AGPIOC_RELEASE;
+@@ -2342,8 +2350,12 @@ unsigned IOCTL_TIOCDRAIN = TIOCDRAIN;
+ unsigned IOCTL_TIOCGFLAGS = TIOCGFLAGS;
+ unsigned IOCTL_TIOCSFLAGS = TIOCSFLAGS;
+ unsigned IOCTL_TIOCDCDTIMESTAMP = TIOCDCDTIMESTAMP;
++#ifdef TIOCRCVFRAME
+ unsigned IOCTL_TIOCRCVFRAME = TIOCRCVFRAME;
++#endif
++#ifdef TIOCXMTFRAME
+ unsigned IOCTL_TIOCXMTFRAME = TIOCXMTFRAME;
++#endif
+ unsigned IOCTL_TIOCPTMGET = TIOCPTMGET;
+ unsigned IOCTL_TIOCGRANTPT = TIOCGRANTPT;
+ unsigned IOCTL_TIOCPTSNAME = TIOCPTSNAME;
