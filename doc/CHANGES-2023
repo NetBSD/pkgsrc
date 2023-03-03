@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1541 2023/03/03 14:25:31 pin Exp $
+$NetBSD: CHANGES-2023,v 1.1542 2023/03/03 14:26:23 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1995,3 +1995,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-werkzeug to 2.2.3 [adam 2023-03-03]
 	Updated devel/py-exceptiongroup to 1.1.0 [adam 2023-03-03]
 	Updated devel/difftastic to 0.44.0 [pin 2023-03-03]
+	Updated devel/superdiff to 2.2.0 [pin 2023-03-03]
