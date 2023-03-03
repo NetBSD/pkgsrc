@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2020/09/01 14:06:52 taca Exp $
+# $NetBSD: Makefile,v 1.15 2023/03/03 09:24:20 fcambus Exp $
 
-DISTNAME=	zkt-1.1.4
+DISTNAME=	zkt-1.1.6
 CATEGORIES=	security
 MASTER_SITES=	http://www.hznet.de/dns/zkt/
 
