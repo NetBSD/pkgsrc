@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.48 2021/12/12 10:41:48 schmonz Exp $
+$NetBSD: distinfo,v 1.49 2023/03/03 09:00:52 fcambus Exp $
 
-BLAKE2s (msmtp-1.8.19.tar.xz) = 7b504e47d7dbdf9d8f206290d95ef9393aa933ae2c7fb9911f0681f8ecfd2819
-SHA512 (msmtp-1.8.19.tar.xz) = 0be193fc0a415824e311f88b57521898caaed49737370b6ae688c7f75e3ff5bc3dc9d87d9d08289b46a1b9650b2a48fb3cd40fb156f894b3fe805136d124f1bd
-Size (msmtp-1.8.19.tar.xz) = 383100 bytes
+BLAKE2s (msmtp-1.8.23.tar.xz) = 10607de6a7b8b74dff7f957c1f039bb4df4d1b649b2806afc7d610d2991dccf7
+SHA512 (msmtp-1.8.23.tar.xz) = 69675cb539fa5c78b83e90a460e8215e56b1d0fa7a18729eb058b8d51414d13b88fbcdb2092767e7e96c325a143230ac09e041ea74d068bf267e508418cf674a
+Size (msmtp-1.8.23.tar.xz) = 401656 bytes
