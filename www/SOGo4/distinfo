@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:29:16 nia Exp $
-
-BLAKE2s (SOGo-4.0.8.tar.gz) = a3bb189180a409b96303bf0091ea4daf485fa2866dc41df824c2ec7694d5d3ab
-SHA512 (SOGo-4.0.8.tar.gz) = bf527b2f58973d9812cc07ba83cb473ddd314613121cb95ab4574a90b30975953831b8f43b0970b544ca5b85fbcaf9bc5de51ef78e8223c74299db2fe1657afd
-Size (SOGo-4.0.8.tar.gz) = 34552490 bytes
-SHA1 (patch-SoObjects_SOGo_NSData+Crypto.m) = 2382dfc4c0a47891882f8d3377c403fe5fc0da56
