@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2021/05/30 12:36:02 nia Exp $
+# $NetBSD: Makefile.common,v 1.5 2023/03/03 09:25:27 wiz Exp $
 #
 # used by devel/deepstate/Makefile
 # used by devel/deepstate-afl/Makefile
@@ -17,8 +17,6 @@ MAINTAINER=	khorben@defora.org
 HOMEPAGE=	https://github.com/trailofbits/deepstate/
 COMMENT=	Augments C/C++ Test-Driven Development with Symbolic Execution
 LICENSE=	apache-2.0
-
-DISTINFO_FILE=	${.CURDIR}/../../devel/deepstate/distinfo
 
 .include "../../mk/bsd.fast.prefs.mk"
 
