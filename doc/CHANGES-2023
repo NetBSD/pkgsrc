@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1527 2023/03/03 08:04:56 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1528 2023/03/03 09:01:03 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1978,3 +1978,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated mail/GNUMail to 1.4.0 [wiz 2023-03-03]
 	Removed devel/SOPE4 successor devel/SOPE5 [wiz 2023-03-03]
 	Removed www/SOGo4 [wiz 2023-03-03]
+	Updated mail/msmtp to 1.8.23 [fcambus 2023-03-03]
