@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1689 2023/03/03 08:04:56 wiz Exp $
+# $NetBSD: Makefile,v 1.1690 2023/03/03 08:26:54 adam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -853,6 +853,7 @@ SUBDIR+=	py-terminado
 SUBDIR+=	py-test-django
 SUBDIR+=	py-test-httpbin
 SUBDIR+=	py-test-httpx
+SUBDIR+=	py-test-sanic
 SUBDIR+=	py-tornado
 SUBDIR+=	py-trytond-web-user
 SUBDIR+=	py-twill
