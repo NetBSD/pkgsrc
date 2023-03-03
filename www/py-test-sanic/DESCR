@@ -1,0 +1,8 @@
+A pytest plugin for Sanic. It helps you to test your code asynchronously.
+
+This plugin provides:
+- very easy testing with async coroutines
+- common and useful fixtures
+- asynchronous fixture support
+- test_client/sanic_client for Sanic application
+- test_server for Sanic application
