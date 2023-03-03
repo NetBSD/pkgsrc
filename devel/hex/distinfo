@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/11/10 12:24:08 nikita Exp $
+$NetBSD: distinfo,v 1.2 2023/03/03 10:10:38 wiz Exp $
 
-BLAKE2s (hex-2.0.0.tar.gz) = 79e3d669504a4fb1a3932f7b7316a1572a66fd1c57fa2010ab00ce73aaffd227
-SHA512 (hex-2.0.0.tar.gz) = ad4be55d23f8b25e651e9aba1c8d169ca00f0c0e25c6b5803540732c1633bbe3da7ee5a17c25c2502e70e1ebc470dc473b4083fb129581047eead70b4b477413
-Size (hex-2.0.0.tar.gz) = 450117 bytes
+BLAKE2s (hex-2.0.5.tar.gz) = 5f27d724a34d51eca4851034758efe607f1156eec111cd63b8816055ee8bba31
+SHA512 (hex-2.0.5.tar.gz) = 8014d37c5c412465290dafa2dc004180b137b220c674ac927c139fa125371203df97baefb2c3540168ef99a29a3f4c7d7f06db3ce73d7545e8f51f5ba1dfe101
+Size (hex-2.0.5.tar.gz) = 450071 bytes
