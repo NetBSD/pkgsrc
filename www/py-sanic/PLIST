@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2022/10/14 08:39:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2023/03/03 09:01:36 adam Exp $
 bin/sanic-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -66,6 +66,15 @@ ${PYSITELIB}/sanic/cli/app.pyo
 ${PYSITELIB}/sanic/cli/arguments.py
 ${PYSITELIB}/sanic/cli/arguments.pyc
 ${PYSITELIB}/sanic/cli/arguments.pyo
+${PYSITELIB}/sanic/cli/base.py
+${PYSITELIB}/sanic/cli/base.pyc
+${PYSITELIB}/sanic/cli/base.pyo
+${PYSITELIB}/sanic/cli/inspector.py
+${PYSITELIB}/sanic/cli/inspector.pyc
+${PYSITELIB}/sanic/cli/inspector.pyo
+${PYSITELIB}/sanic/cli/inspector_client.py
+${PYSITELIB}/sanic/cli/inspector_client.pyc
+${PYSITELIB}/sanic/cli/inspector_client.pyo
 ${PYSITELIB}/sanic/compat.py
 ${PYSITELIB}/sanic/compat.pyc
 ${PYSITELIB}/sanic/compat.pyo
@@ -169,9 +178,15 @@ ${PYSITELIB}/sanic/py.typed
 ${PYSITELIB}/sanic/request.py
 ${PYSITELIB}/sanic/request.pyc
 ${PYSITELIB}/sanic/request.pyo
-${PYSITELIB}/sanic/response.py
-${PYSITELIB}/sanic/response.pyc
-${PYSITELIB}/sanic/response.pyo
+${PYSITELIB}/sanic/response/__init__.py
+${PYSITELIB}/sanic/response/__init__.pyc
+${PYSITELIB}/sanic/response/__init__.pyo
+${PYSITELIB}/sanic/response/convenience.py
+${PYSITELIB}/sanic/response/convenience.pyc
+${PYSITELIB}/sanic/response/convenience.pyo
+${PYSITELIB}/sanic/response/types.py
+${PYSITELIB}/sanic/response/types.pyc
+${PYSITELIB}/sanic/response/types.pyo
 ${PYSITELIB}/sanic/router.py
 ${PYSITELIB}/sanic/router.pyc
 ${PYSITELIB}/sanic/router.pyo
@@ -265,6 +280,9 @@ ${PYSITELIB}/sanic/views.pyo
 ${PYSITELIB}/sanic/worker/__init__.py
 ${PYSITELIB}/sanic/worker/__init__.pyc
 ${PYSITELIB}/sanic/worker/__init__.pyo
+${PYSITELIB}/sanic/worker/constants.py
+${PYSITELIB}/sanic/worker/constants.pyc
+${PYSITELIB}/sanic/worker/constants.pyo
 ${PYSITELIB}/sanic/worker/inspector.py
 ${PYSITELIB}/sanic/worker/inspector.pyc
 ${PYSITELIB}/sanic/worker/inspector.pyo
