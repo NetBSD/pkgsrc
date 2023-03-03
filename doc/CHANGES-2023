@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1539 2023/03/03 10:54:15 adam Exp $
+$NetBSD: CHANGES-2023,v 1.1540 2023/03/03 11:50:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1992,3 +1992,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/uncrustify to 0.76.0 [fcambus 2023-03-03]
 	Updated databases/pg_repack to 1.4.8 [adam 2023-03-03]
 	Updated devel/py-gitpython to 3.1.31 [adam 2023-03-03]
+	Updated www/py-werkzeug to 2.2.3 [adam 2023-03-03]
+	Updated devel/py-exceptiongroup to 1.1.0 [adam 2023-03-03]
