@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2023/03/01 18:35:29 adam Exp $
+$NetBSD: distinfo,v 1.2 2023/03/03 08:57:14 adam Exp $
 
 BLAKE2s (adler-1.0.2.crate) = f263779d752af886455fc0f42c997893fb1a09edcf1bd2980605251c2e3602aa
 SHA512 (adler-1.0.2.crate) = 7ab190d31890fc05b0b55d8e2c6527a505e06793d5496be0b3831e0513412f9ba97f8148f6f68ed0770fa9cd980a5092d885e058becf1d5506b7c74b82674aa1
@@ -1029,3 +1029,4 @@ Size (zvariant-2.10.0.crate) = 64374 bytes
 BLAKE2s (zvariant_derive-2.10.0.crate) = 78b7ecca2ea4d8f443bcef95d91ce08c1674e1362075441f2af490ac9a68d982
 SHA512 (zvariant_derive-2.10.0.crate) = ba06d0761de8e20839246517d89494e5728fd654cf95eec193a4ca4cdb90090542bbfd7ed0ffbc9fc44edda38c5270139f54e63cb88d09f6c26b39199ea1deec
 Size (zvariant_derive-2.10.0.crate) = 8746 bytes
+SHA1 (patch-maturin_____init____.py) = 44f118b049d5e794d3d877b13229c0284a6238f5
