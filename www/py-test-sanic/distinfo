@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/03/03 08:26:54 adam Exp $
+
+BLAKE2s (pytest-sanic-1.9.1.tar.gz) = 6e1332a2c60defa41edd0cfbd291e8a6fd9b55c1d38f2b725636dcc82dd972b9
+SHA512 (pytest-sanic-1.9.1.tar.gz) = 0fa7fec296a49f2150909a33cfd3c9560995953ba6189b369eab31e1e1d8503743980748f588cda7910e3954b1de3cc1cb45dfb78afd69f9ac1e5d3da54cf3e2
+Size (pytest-sanic-1.9.1.tar.gz) = 15064 bytes
