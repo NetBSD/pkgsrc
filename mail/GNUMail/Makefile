@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.59 2022/11/23 16:20:31 adam Exp $
+# $NetBSD: Makefile,v 1.60 2023/03/03 08:00:22 wiz Exp $
 
-DISTNAME=	GNUMail-1.2.0
-PKGREVISION=	23
+DISTNAME=	GNUMail-1.4.0
 CATEGORIES=	mail gnustep
-MASTER_SITES=	http://debian.uni-essen.de/misc/GNUstep/Apps/GNUMail/
+MASTER_SITES=	http://download.savannah.nongnu.org/releases/gnustep-nonfsf/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.collaboration-world.com/gnumail/
+HOMEPAGE=	https://www.nongnu.org/gnustep-nonfsf/gnumail/
 COMMENT=	GNUstep clone of NeXT's Mail.app application
 LICENSE=	gnu-lgpl-v2
 
@@ -15,12 +14,18 @@ USE_LANGUAGES=	objc
 NO_CONFIGURE=	yes
 MAKE_FILE=	GNUmakefile
 
+# /usr/bin/ld: ./obj/GNUMail.obj/GNUMail_main.m.o: undefined reference to symbol 'objc_lookup_class'
+# /usr/bin/ld: /usr/pkg/lib/libobjc.so.4.6: error adding symbols: DSO missing from command line
+LDFLAGS.NetBSD+=	-lunwind
+MAKE_ENV+=		ADDITIONAL_LDFLAGS=${LDFLAGS:Q}
+
 FIX_GNUSTEP_INSTALLATION_DIR=		yes
 .for dir in Account Advanced Clock Colors Compose Face Filtering	\
 	Fonts Import MIME PGP Receiving Sending Viewing
 SUBST_FILES.gnustep_installation_dir+=	Bundles/${dir}/GNUmakefile
 .endfor
 
+.include "../../lang/libunwind/buildlink3.mk"
 .include "../../mail/Pantomime/buildlink3.mk"
 .include "../../misc/Addresses/buildlink3.mk"
 .include "../../x11/gnustep-back/buildlink3.mk"
