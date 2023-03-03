@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2022/11/28 13:04:40 nros Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/03/03 09:54:56 tnn Exp $
 lib/pkgconfig/Qt6Multimedia.pc
 lib/pkgconfig/Qt6MultimediaWidgets.pc
 lib/pkgconfig/Qt6SpatialAudio.pc
@@ -222,12 +222,12 @@ qt6/lib/cmake/Qt6Multimedia/Qt6MultimediaPlugins.cmake
 qt6/lib/cmake/Qt6Multimedia/Qt6MultimediaTargets-release.cmake
 qt6/lib/cmake/Qt6Multimedia/Qt6MultimediaTargets.cmake
 qt6/lib/cmake/Qt6Multimedia/Qt6MultimediaVersionlessTargets.cmake
-qt6/lib/cmake/Qt6Multimedia/Qt6QFFmpegMediaPluginAdditionalTargetInfo.cmake
-qt6/lib/cmake/Qt6Multimedia/Qt6QFFmpegMediaPluginConfig.cmake
-qt6/lib/cmake/Qt6Multimedia/Qt6QFFmpegMediaPluginConfigVersion.cmake
-qt6/lib/cmake/Qt6Multimedia/Qt6QFFmpegMediaPluginConfigVersionImpl.cmake
-qt6/lib/cmake/Qt6Multimedia/Qt6QFFmpegMediaPluginTargets-release.cmake
-qt6/lib/cmake/Qt6Multimedia/Qt6QFFmpegMediaPluginTargets.cmake
+${PLIST.ffmpeg}qt6/lib/cmake/Qt6Multimedia/Qt6QFFmpegMediaPluginAdditionalTargetInfo.cmake
+${PLIST.ffmpeg}qt6/lib/cmake/Qt6Multimedia/Qt6QFFmpegMediaPluginConfig.cmake
+${PLIST.ffmpeg}qt6/lib/cmake/Qt6Multimedia/Qt6QFFmpegMediaPluginConfigVersion.cmake
+${PLIST.ffmpeg}qt6/lib/cmake/Qt6Multimedia/Qt6QFFmpegMediaPluginConfigVersionImpl.cmake
+${PLIST.ffmpeg}qt6/lib/cmake/Qt6Multimedia/Qt6QFFmpegMediaPluginTargets-release.cmake
+${PLIST.ffmpeg}qt6/lib/cmake/Qt6Multimedia/Qt6QFFmpegMediaPluginTargets.cmake
 ${PLIST.gstreamer}qt6/lib/cmake/Qt6Multimedia/Qt6QGstreamerMediaPluginAdditionalTargetInfo.cmake
 ${PLIST.gstreamer}qt6/lib/cmake/Qt6Multimedia/Qt6QGstreamerMediaPluginConfig.cmake
 ${PLIST.gstreamer}qt6/lib/cmake/Qt6Multimedia/Qt6QGstreamerMediaPluginConfigVersion.cmake
@@ -320,7 +320,7 @@ qt6/modules/MultimediaQuickPrivate.json
 qt6/modules/MultimediaWidgets.json
 qt6/modules/Quick3DSpatialAudioPrivate.json
 qt6/modules/SpatialAudio.json
-qt6/plugins/multimedia/libffmpegmediaplugin.so
+${PLIST.ffmpeg}qt6/plugins/multimedia/libffmpegmediaplugin.so
 ${PLIST.gstreamer}qt6/plugins/multimedia/libgstreamermediaplugin.so
 qt6/qml/QtMultimedia/Video.qml
 qt6/qml/QtMultimedia/libquickmultimediaplugin.so
