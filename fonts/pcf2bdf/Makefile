@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2020/03/07 22:51:40 fcambus Exp $
+# $NetBSD: Makefile,v 1.17 2023/03/03 09:52:17 fcambus Exp $
 #
 
-DISTNAME=	pcf2bdf-1.06
+DISTNAME=	pcf2bdf-1.07
 CATEGORIES=	fonts graphics x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ganaware/}
 
