@@ -1,5 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2017/08/15 08:34:20 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/03/03 10:51:10 adam Exp $
 bin/pg_repack
+${PLIST.llvm}lib/postgresql/bitcode/pg_repack.index.bc
+${PLIST.llvm}lib/postgresql/bitcode/pg_repack/pgut/pgut-spi.bc
+${PLIST.llvm}lib/postgresql/bitcode/pg_repack/repack.bc
 lib/postgresql/pg_repack.so
 share/postgresql/extension/pg_repack--${PKGVERSION}.sql
 share/postgresql/extension/pg_repack.control
