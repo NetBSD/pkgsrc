@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.165 2022/11/23 16:19:03 adam Exp $
+# $NetBSD: Makefile,v 1.165.2.1 2023/03/04 12:54:51 spz Exp $
 
-PKGREVISION= 1
 .include "../../textproc/libxml2/Makefile.common"
 
+PKGREVISION=	2
 COMMENT=	XML parser library from the GNOME project
 LICENSE=	modified-bsd
 
@@ -10,6 +10,7 @@ USE_FEATURES=		glob
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/libxml2
 CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_PREFIX.iconv}
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
@@ -20,29 +21,9 @@ PKGCONFIG_OVERRIDE=	libxml-2.0.pc.in
 
 USE_LANGUAGES+=		c99
 
-.include "options.mk"
-
-# allow thread-awareness, but make sure the library is not
-# linked against libpthread
-#CONFIGURE_ARGS+=	--without-threads
-
-MAKE_ENV+=	PAX=${PAX:Q}
-
 TEST_TARGET=	check
 
-SUBST_CLASSES+=		cat
-SUBST_STAGE.cat=	pre-configure
-SUBST_FILES.cat=	catalog.c xmlcatalog.c
-SUBST_SED.cat=		-e "s,@@SGML_DEFAULT_CATALOG@@,${SGML_DEFAULT_CATALOG},g"
-SUBST_SED.cat+=		-e "s,@@XML_DEFAULT_CATALOG@@,${XML_DEFAULT_CATALOG},g"
-
-BUILDLINK_TRANSFORM.Darwin+=	rm:-Wno-array-bounds
-BUILDLINK_TRANSFORM.SunOS+=	rm:-Werror=format=2
-
-LDFLAGS.SCO_SV+=	-lm
-
-post-install:
-	${RM} -f ${DESTDIR}${PREFIX}/share/examples/libxml2/README
+.include "options.mk"
 
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
