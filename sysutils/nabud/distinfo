@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2023/02/26 18:07:40 thorpej Exp $
+$NetBSD: distinfo,v 1.5 2023/03/04 21:29:47 thorpej Exp $
 
-BLAKE2s (nabud-v1.2.tar.gz) = 08a1665d5c18f027ee6d0e07c9cdc07db9c197f9b072233c442b04ec5a4e1373
-SHA512 (nabud-v1.2.tar.gz) = ffde48bdb650bd7952394494431689af4066f460107ec0b497f00ef58e3ef489611d2517fef27e0a3b60ce0b530f48264fb7f49977ba519e93a5d9cac82f0cb1
-Size (nabud-v1.2.tar.gz) = 539537 bytes
+BLAKE2s (nabud-v1.2.1.tar.gz) = cb1049d03e74038558ac3ff0598a7027ea27eae44886a99f304aeadf7904ab04
+SHA512 (nabud-v1.2.1.tar.gz) = a0f0c658f708c2186c0886b8c67c99e6a5eb63eb0ea158d4752f5600a3161ca246ea9dc838f4027830d22d1e045f85ae8f7e2b8eb7485af523ad89e16ce86e0d
+Size (nabud-v1.2.1.tar.gz) = 541392 bytes
