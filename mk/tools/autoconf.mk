@@ -1,4 +1,4 @@
-# $NetBSD: autoconf.mk,v 1.22 2022/11/23 13:06:33 jperkin Exp $
+# $NetBSD: autoconf.mk,v 1.23 2023/03/04 23:29:24 rillig Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -90,7 +90,7 @@ _TOOLS_AC_TYPE.${_t_}?=	TOOLS_GNU_MISSING
 .endif
 
 .if !defined(TOOLS_IGNORE.autoconf) && !empty(USE_TOOLS:C/:.*//:Mautoconf)
-.  if !empty(PKGPATH:Mdevel/autoconf)
+.  if ${PKGPATH} == devel/autoconf
 MAKEFLAGS+=		TOOLS_IGNORE.autoconf=
 .  else
 AUTOCONF_REQD?=		2.50
@@ -131,7 +131,7 @@ TOOLS_PATH.ifnames=		${LOCALBASE}/bin/ifnames
 .endif
 
 .if !defined(TOOLS_IGNORE.autoconf213) && !empty(USE_TOOLS:C/:.*//:Mautoconf213)
-.  if !empty(PKGPATH:Mdevel/autoconf213)
+.  if ${PKGPATH} == devel/autoconf213
 MAKEFLAGS+=		TOOLS_IGNORE.autoconf213=
 .  else
 AUTOCONF_REQD?=		2.13
@@ -186,7 +186,7 @@ pre-configure: tools-libtool-m4-override
 
 # If the package wants to override the GNU auto* tools, then do it.
 AUTOMAKE_OVERRIDE?=	yes
-.if !empty(AUTOMAKE_OVERRIDE:M[yY][eE][sS])
+.if ${AUTOMAKE_OVERRIDE:M[yY][eE][sS]}
 .  for _t_ in ${_TOOLS_AC_NAMES}
 .    if !empty(_TOOLS_AC_TYPE.${_t_})
 ${_TOOLS_AC_TYPE.${_t_}}+=	${_t_}
