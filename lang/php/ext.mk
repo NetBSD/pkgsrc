@@ -1,4 +1,4 @@
-# $NetBSD: ext.mk,v 1.45 2018/02/07 16:14:36 jperkin Exp $
+# $NetBSD: ext.mk,v 1.46 2023/03/04 11:09:06 wiz Exp $
 #
 # PHP extension package framework, for both PECL and bundled PHP extensions.
 #
@@ -17,6 +17,7 @@ _SYS_VARS.phpext=	DISTINFO_FILE PATCHDIR
 
 .if defined(PECL_VERSION)
 HOMEPAGE?=		http://pecl.php.net/package/${MODNAME}
+DIST_SUBDIR?=		php-${MODNAME}
 .endif
 
 .include "../../lang/php/phpversion.mk"
@@ -45,7 +46,6 @@ PKGNAME?=		${PHP_PKG_PREFIX}-${MODNAME}-${PECL_VERSION}
 MASTER_SITES?=		http://pecl.php.net/get/
 PECL_DISTNAME?=		${MODNAME}-${PECL_VERSION}
 DISTNAME=		${PECL_DISTNAME}
-DIST_SUBDIR?=		php-${MODNAME}
 EXTRACT_SUFX?=		.tgz
 .endif
 
