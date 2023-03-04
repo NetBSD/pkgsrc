@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1548 2023/03/04 11:13:16 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1549 2023/03/04 15:35:06 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2002,3 +2002,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/janet to 1.26.0 [charlotte 2023-03-03]
 	Updated lang/guile30 to 3.0.9nb1 [wiz 2023-03-04]
 	Removed graphics/Cenon [wiz 2023-03-04]
+	Updated devel/difftastic to 0.45.0 [pin 2023-03-04]
