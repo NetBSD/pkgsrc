@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/03/01 10:40:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2023/03/04 10:53:48 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -7,7 +7,6 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/zeroconf/__init__.py
 ${PYSITELIB}/zeroconf/__init__.pyc
 ${PYSITELIB}/zeroconf/__init__.pyo
-${PYSITELIB}/zeroconf/_cache.c
 ${PYSITELIB}/zeroconf/_cache.pxd
 ${PYSITELIB}/zeroconf/_cache.py
 ${PYSITELIB}/zeroconf/_cache.pyc
@@ -15,7 +14,6 @@ ${PYSITELIB}/zeroconf/_cache.pyo
 ${PYSITELIB}/zeroconf/_core.py
 ${PYSITELIB}/zeroconf/_core.pyc
 ${PYSITELIB}/zeroconf/_core.pyo
-${PYSITELIB}/zeroconf/_dns.c
 ${PYSITELIB}/zeroconf/_dns.pxd
 ${PYSITELIB}/zeroconf/_dns.py
 ${PYSITELIB}/zeroconf/_dns.pyc
@@ -35,12 +33,10 @@ ${PYSITELIB}/zeroconf/_logger.pyo
 ${PYSITELIB}/zeroconf/_protocol/__init__.py
 ${PYSITELIB}/zeroconf/_protocol/__init__.pyc
 ${PYSITELIB}/zeroconf/_protocol/__init__.pyo
-${PYSITELIB}/zeroconf/_protocol/incoming.c
 ${PYSITELIB}/zeroconf/_protocol/incoming.pxd
 ${PYSITELIB}/zeroconf/_protocol/incoming.py
 ${PYSITELIB}/zeroconf/_protocol/incoming.pyc
 ${PYSITELIB}/zeroconf/_protocol/incoming.pyo
-${PYSITELIB}/zeroconf/_protocol/outgoing.c
 ${PYSITELIB}/zeroconf/_protocol/outgoing.pxd
 ${PYSITELIB}/zeroconf/_protocol/outgoing.py
 ${PYSITELIB}/zeroconf/_protocol/outgoing.pyc
