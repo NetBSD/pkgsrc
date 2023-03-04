@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2022Q4,v 1.1.2.10 2023/02/12 20:00:38 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2022Q4,v 1.1.2.11 2023/03/04 14:40:43 spz Exp $
 
 Changes to packages and infrastructure on the 2022Q4 branch:
 
@@ -70,4 +70,61 @@ security/sudo: security update
 
 Pullup ticket #6736 - requested by taca
 net/bind918: security update
+
+Pullup ticket #6729 - requested by taca
+devel/ruby-globalid: security update
+
+Pullup ticket #6732 - requested by taca
+databases/ruby-activerecord60: security update
+devel/ruby-activejob60: distinfo update
+devel/ruby-activemodel60: distinfo update
+devel/ruby-activestorage60: distinfo update
+devel/ruby-activesupport60: distinfo update
+devel/ruby-railties60: distinfo update
+mail/ruby-actionmailbox60: distinfo update
+mail/ruby-actionmailer60: distinfo update
+textproc/ruby-actiontext60: distinfo update
+www/ruby-actioncable60: distinfo update
+www/ruby-actionpack60: distinfo update
+www/ruby-actionpack60: distinfo update
+www/ruby-actionview60: distinfo update
+
+Pullup ticket #6733 - requested by taca
+databases/ruby-activerecord61: security update
+devel/ruby-activejob61: distinfo update
+devel/ruby-activemodel61: distinfo update
+devel/ruby-activestorage61: distinfo update
+devel/ruby-activesupport61: security update
+devel/ruby-railties61: distinfo update
+mail/ruby-actionmailbox61: distinfo update
+mail/ruby-actionmailer61: distinfo update
+textproc/ruby-actiontext61: sdistinfo update
+www/ruby-actioncable61: distinfo update
+www/ruby-actionpack61: security update
+www/ruby-actionview61: distinfo update
+www/ruby-rails61: distinfo update
+
+Pullup ticket #6734 - requested by taca
+databases/ruby-activerecord70: security update
+devel/ruby-activejob70: distinfo update
+devel/ruby-activemodel70: distinfo update
+devel/ruby-activestorage70: distinfo update
+devel/ruby-activesupport70: security update
+devel/ruby-railties70: distinfo update
+mail/ruby-actionmailbox70: distinfo update
+mail/ruby-actionmailer70: distinfo update
+textproc/ruby-actiontext70: distinfo update
+www/ruby-actioncable70: distinfo update
+www/ruby-actionpack70: security update
+www/ruby-actionview70: distinfo update
+www/ruby-rails70: distinfo update
+
+Pullup ticket #6737 - requested by taca
+textproc/libxml2: security update
+
+Pullup ticket #6738 - requested by taca
+www/ruby-rack: security update
+
+Pullup ticket #6739 - requested by taca
+www/apache24: security update
 
