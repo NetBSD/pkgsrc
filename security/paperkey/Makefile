@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2020/04/12 23:59:42 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2023/03/04 20:18:04 fcambus Exp $
 
-DISTNAME=	paperkey-1.3
+DISTNAME=	paperkey-1.6
 CATEGORIES=	security
-MASTER_SITES=	http://www.jabberwocky.com/software/paperkey/
+MASTER_SITES=	https://www.jabberwocky.com/software/paperkey/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.jabberwocky.com/software/paperkey/
