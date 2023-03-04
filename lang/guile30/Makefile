@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2023/01/25 18:12:00 gdt Exp $
+# $NetBSD: Makefile,v 1.8 2023/03/04 09:41:13 wiz Exp $
 
-VERSION=	3.0.9
-DISTNAME=	guile-${VERSION}
+DISTNAME=	guile-3.0.9
 PKGNAME=	${DISTNAME:S/guile/guile30/}
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.gnu.org/gnu/guile/
 
@@ -24,11 +24,9 @@ LDFLAGS.SunOS+=		-lsocket -lnsl
 # Fails with ranlib complaints; disable for all until understood.
 CONFIGURE_ARGS+=	--disable-lto
 
-# Coordinate with Makefile patches.
-MAKE_ENV+=		PAXCTL=echo
-MAKE_ENV.NetBSD+=	PAXCTL=/usr/sbin/paxctl
-
-CONFIGURE_ARGS+=	--disable-lto
+# JIT doesn't work on NetBSD due to PaX MPROTECT
+# https://debbugs.gnu.org/cgi/bugreport.cgi?bug=61957
+CONFIGURE_ARGS.NetBSD+=	--disable-jit
 
 .if !empty(GUILE_SUBDIR)
 # Installation prefix is non-default.
