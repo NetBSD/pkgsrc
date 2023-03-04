@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.296 2022/11/16 12:12:46 jperkin Exp $
+# $NetBSD: replace.mk,v 1.297 2023/03/04 23:29:24 rillig Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -204,7 +204,7 @@ _TOOLS_USE_PKGSRC.${_t_}?=	yes
 # been associated with <tool>.
 #
 .if !defined(TOOLS_IGNORE.zstd) && !empty(_USE_TOOLS:Mzstd)
-.  if !empty(PKGPATH:Marchivers/zstd)
+.  if ${PKGPATH} == archivers/zstd
 MAKEFLAGS+=			TOOLS_IGNORE.zstd=
 .  elif !empty(_TOOLS_USE_PKGSRC.zstd:M[yY][eE][sS])
 TOOLS_DEPENDS.zstd?=		zstd>=1.5.0:../../archivers/zstd
@@ -214,7 +214,7 @@ TOOLS_PATH.zstd=		${LOCALBASE}/bin/zstd
 .endif
 
 .if !defined(TOOLS_IGNORE.7za) && !empty(_USE_TOOLS:M7za)
-.  if !empty(PKGPATH:Marchivers/p7zip)
+.  if ${PKGPATH} == archivers/p7zip
 MAKEFLAGS+=			TOOLS_IGNORE.7za=
 .  elif !empty(_TOOLS_USE_PKGSRC.7za:M[yY][eE][sS])
 TOOLS_DEPENDS.7za?=		p7zip>=9.04:../../archivers/p7zip
@@ -224,7 +224,7 @@ TOOLS_PATH.7za=			${LOCALBASE}/bin/7za
 .endif
 
 .if !defined(TOOLS_IGNORE.awk) && !empty(_USE_TOOLS:Mawk)
-.  if !empty(PKGPATH:Mlang/nawk)
+.  if ${PKGPATH} == lang/nawk
 MAKEFLAGS+=			TOOLS_IGNORE.awk=
 .  elif !empty(_TOOLS_USE_PKGSRC.awk:M[yY][eE][sS])
 TOOLS_DEPENDS.awk?=		nawk>=20040207:../../lang/nawk
@@ -234,7 +234,7 @@ TOOLS_PATH.awk=			${LOCALBASE}/bin/nawk
 .endif
 
 .if !defined(TOOLS_IGNORE.bash) && !empty(_USE_TOOLS:Mbash)
-.  if !empty(PKGPATH:Mshells/bash)
+.  if ${PKGPATH} == shells/bash
 MAKEFLAGS+=			TOOLS_IGNORE.bash=
 .  elif !empty(_TOOLS_USE_PKGSRC.bash:M[yY][eE][sS])
 TOOLS_DEPENDS.bash?=		bash-[0-9]*:../../shells/bash
@@ -244,7 +244,7 @@ TOOLS_PATH.bash=		${LOCALBASE}/bin/bash
 .endif
 
 .if !defined(TOOLS_IGNORE.bison) && !empty(_USE_TOOLS:Mbison)
-.  if !empty(PKGPATH:Mdevel/bison)
+.  if ${PKGPATH} == devel/bison
 MAKEFLAGS+=			TOOLS_IGNORE.bison=
 .  elif !empty(_TOOLS_USE_PKGSRC.bison:M[yY][eE][sS])
 TOOLS_DEPENDS.bison?=		bison>=1.0:../../devel/bison
@@ -254,7 +254,7 @@ TOOLS_PATH.bison=		${LOCALBASE}/bin/bison
 .endif
 
 .if !defined(TOOLS_IGNORE.bison-yacc) && !empty(_USE_TOOLS:Mbison-yacc)
-.  if !empty(PKGPATH:Mdevel/bison)
+.  if ${PKGPATH} == devel/bison
 MAKEFLAGS+=			TOOLS_IGNORE.bison-yacc=
 .  elif !empty(_TOOLS_USE_PKGSRC.bison-yacc:M[yY][eE][sS])
 TOOLS_DEPENDS.bison-yacc?=	bison>=1.0:../../devel/bison
@@ -273,7 +273,7 @@ TOOLS_VALUE_GNU.bison-yacc=	${TOOLS_CMDLINE.bison-yacc}
 .endif
 
 .if !defined(TOOLS_IGNORE.bsdtar) && !empty(_USE_TOOLS:Mbsdtar)
-.  if !empty(PKGPATH:Marchivers/bsdtar)
+.  if ${PKGPATH} == archivers/bsdtar
 MAKEFLAGS+=			TOOLS_IGNORE.bsdtar=
 .  elif !empty(_TOOLS_USE_PKGSRC.bsdtar:M[yY][eE][sS])
 TOOLS_DEPENDS.bsdtar?=		bsdtar-[0-9]*:../../archivers/bsdtar
@@ -283,7 +283,7 @@ TOOLS_PATH.bsdtar=		${LOCALBASE}/bin/bsdtar
 .endif
 
 .if !defined(TOOLS_IGNORE.byacc) && !empty(_USE_TOOLS:Mbyacc)
-.  if !empty(PKGPATH:Mdevel/byacc)
+.  if ${PKGPATH} == devel/byacc
 MAKEFLAGS+=			TOOLS_IGNORE.byacc=
 .  elif !empty(_TOOLS_USE_PKGSRC.byacc:M[yY][eE][sS])
 TOOLS_DEPENDS.byacc?=		byacc>=20040328:../../devel/byacc
@@ -296,7 +296,7 @@ TOOLS_CMD.byacc=		${TOOLS_DIR}/bin/yacc
 _TOOLS.bzip2=	bzip2 bzcat
 .for _t_ in ${_TOOLS.bzip2}
 .  if !defined(TOOLS_IGNORE.${_t_}) && !empty(_USE_TOOLS:M${_t_})
-.    if !empty(PKGPATH:Marchivers/bzip2)
+.    if ${PKGPATH} == archivers/bzip2
 MAKEFLAGS+=			TOOLS_IGNORE.${_t_}=
 .    elif !empty(_TOOLS_USE_PKGSRC.${_t_}:M[yY][eE][sS])
 TOOLS_DEPENDS.${_t_}?=		bzip2>=0.9.0b:../../archivers/bzip2
@@ -307,7 +307,7 @@ TOOLS_PATH.${_t_}=		${LOCALBASE}/bin/${_t_}
 .endfor
 
 .if !defined(TOOLS_IGNORE.chrpath) && !empty(_USE_TOOLS:Mchrpath)
-.  if !empty(PKGPATH:Mdevel/chrpath)
+.  if ${PKGPATH} == devel/chrpath
 MAKEFLAGS+=			TOOLS_IGNORE.chrpath=
 .  elif !empty(_TOOLS_USE_PKGSRC.chrpath:M[yY][eE][sS])
 TOOLS_DEPENDS.chrpath?=		chrpath>=0.13:../../devel/chrpath
@@ -319,7 +319,7 @@ TOOLS_PATH.chrpath=		${LOCALBASE}/bin/chrpath
 _TOOLS.cmake=	cmake cpack
 .for _t_ in ${_TOOLS.cmake}
 .  if !defined(TOOLS_IGNORE.${_t_}) && !empty(_USE_TOOLS:M${_t_})
-.    if !empty(PKGPATH:Mdevel/cmake)
+.    if ${PKGPATH} == devel/cmake
 MAKEFLAGS+=			TOOLS_IGNORE.${_t_}=
 .    elif !empty(_TOOLS_USE_PKGSRC.${_t_}:M[yY][eE][sS])
 TOOLS_DEPENDS.${_t_}?=		cmake>=2.8.1nb1:../../devel/cmake
@@ -330,7 +330,7 @@ TOOLS_PATH.${_t_}=		${LOCALBASE}/bin/${_t_}
 .endfor
 
 .if !defined(TOOLS_IGNORE.csh) && !empty(_USE_TOOLS:Mcsh)
-.  if !empty(PKGPATH:Mshells/tcsh)
+.  if ${PKGPATH} == shells/tcsh
 MAKEFLAGS+=			TOOLS_IGNORE.csh=
 .  elif !empty(_TOOLS_USE_PKGSRC.csh:M[yY][eE][sS])
 TOOLS_DEPENDS.csh?=		tcsh-[0-9]*:../../shells/tcsh
@@ -340,7 +340,7 @@ TOOLS_PATH.csh=			${LOCALBASE}/bin/tcsh
 .endif
 
 .if !defined(TOOLS_IGNORE.curl) && !empty(_USE_TOOLS:Mcurl)
-.  if !empty(PKGPATH:Mwww/curl)
+.  if ${PKGPATH} == www/curl
 MAKEFLAGS+=			TOOLS_IGNORE.curl=
 .  elif !empty(_TOOLS_USE_PKGSRC.curl:M[yY][eE][sS])
 TOOLS_DEPENDS.curl?=		curl-[0-9]*:../../www/curl
@@ -349,7 +349,7 @@ TOOLS_PATH.curl=		${LOCALBASE}/bin/curl
 .endif
 
 .if !defined(TOOLS_IGNORE.fetch) && !empty(_USE_TOOLS:Mfetch)
-.  if !empty(PKGPATH:Mnet/fetch)
+.  if ${PKGPATH} == net/fetch
 MAKEFLAGS+=			TOOLS_IGNORE.fetch=
 .  elif !empty(_TOOLS_USE_PKGSRC.fetch:M[yY][eE][sS])
 TOOLS_DEPENDS.fetch?=		fetch-[0-9]*:../../net/fetch
@@ -358,7 +358,7 @@ TOOLS_PATH.fetch=		${LOCALBASE}/bin/fetch
 .endif
 
 .if !defined(TOOLS_IGNORE.file) && !empty(_USE_TOOLS:Mfile)
-.  if !empty(PKGPATH:Msysutils/file)
+.  if ${PKGPATH} == sysutils/file
 MAKEFLAGS+=			TOOLS_IGNORE.file=
 .  elif !empty(_TOOLS_USE_PKGSRC.file:M[yY][eE][sS])
 TOOLS_DEPENDS.file?=		file>=4.13:../../sysutils/file
@@ -368,7 +368,7 @@ TOOLS_PATH.file=		${LOCALBASE}/bin/file
 .endif
 
 .if !defined(TOOLS_IGNORE.find) && !empty(_USE_TOOLS:Mfind)
-.  if !empty(PKGPATH:Msysutils/findutils)
+.  if ${PKGPATH} == sysutils/findutils
 MAKEFLAGS+=			TOOLS_IGNORE.find=
 .  elif !empty(_TOOLS_USE_PKGSRC.find:M[yY][eE][sS])
 TOOLS_DEPENDS.find?=		findutils>=4.1:../../sysutils/findutils
@@ -378,7 +378,7 @@ TOOLS_PATH.find=		${LOCALBASE}/bin/gfind
 .endif
 
 .if !defined(TOOLS_IGNORE.flex) && !empty(_USE_TOOLS:Mflex)
-.  if !empty(PKGPATH:Mdevel/flex)
+.  if ${PKGPATH} == devel/flex
 MAKEFLAGS+=			TOOLS_IGNORE.flex=
 .  elif !empty(_TOOLS_USE_PKGSRC.flex:M[yY][eE][sS])
 .    include "../../devel/flex/buildlink3.mk"
@@ -394,7 +394,7 @@ TOOLS_ALIASES.flex=		lex
 .endif
 
 .if !defined(TOOLS_IGNORE.ftp) && !empty(_USE_TOOLS:Mftp)
-.  if !empty(PKGPATH:Mnet/tnftp)
+.  if ${PKGPATH} == net/tnftp
 MAKEFLAGS+=			TOOLS_IGNORE.ftp=
 .  elif !empty(_TOOLS_USE_PKGSRC.ftp:M[yY][eE][sS])
 TOOLS_DEPENDS.ftp?=		tnftp-[0-9]*:../../net/tnftp
@@ -403,7 +403,7 @@ TOOLS_PATH.ftp=			${LOCALBASE}/bin/ftp
 .endif
 
 .if !defined(TOOLS_IGNORE.gawk) && !empty(_USE_TOOLS:Mgawk)
-.  if !empty(PKGPATH:Mlang/gawk)
+.  if ${PKGPATH} == lang/gawk
 MAKEFLAGS+=			TOOLS_IGNORE.gawk=
 .  elif !empty(_TOOLS_USE_PKGSRC.gawk:M[yY][eE][sS])
 TOOLS_DEPENDS.gawk?=		gawk>=3.1.1:../../lang/gawk
@@ -422,7 +422,7 @@ TOOLS_PATH.gem=			${LOCALBASE}/bin/gem${RUBY_SUFFIX}
 .endif
 
 .if !defined(TOOLS_IGNORE.gm4) && !empty(_USE_TOOLS:Mgm4)
-.  if !empty(PKGPATH:Mdevel/m4)
+.  if ${PKGPATH} == devel/m4
 MAKEFLAGS+=			TOOLS_IGNORE.gm4=
 .  elif !empty(_TOOLS_USE_PKGSRC.gm4:M[yY][eE][sS])
 TOOLS_DEPENDS.gm4?=		m4>=1.4:../../devel/m4
@@ -433,7 +433,7 @@ TOOLS_ALIASES.gm4=		m4
 .endif
 
 .if !defined(TOOLS_IGNORE.gmake) && !empty(_USE_TOOLS:Mgmake)
-.  if !empty(PKGPATH:Mdevel/gmake)
+.  if ${PKGPATH} == devel/gmake
 MAKEFLAGS+=			TOOLS_IGNORE.gmake=
 .  elif !empty(_TOOLS_USE_PKGSRC.gmake:M[yY][eE][sS])
 TOOLS_DEPENDS.gmake?=		gmake>=${GMAKE_REQD}:../../devel/gmake
@@ -443,7 +443,7 @@ TOOLS_PATH.gmake=		${LOCALBASE}/bin/gmake
 .endif
 
 .if !defined(TOOLS_IGNORE.gsed) && !empty(_USE_TOOLS:Mgsed)
-.  if !empty(PKGPATH:Mtextproc/gsed)
+.  if ${PKGPATH} == textproc/gsed
 MAKEFLAGS+=			TOOLS_IGNORE.gsed=
 .  elif !empty(_TOOLS_USE_PKGSRC.gsed:M[yY][eE][sS])
 TOOLS_DEPENDS.gsed?=		gsed>=3.0.2:../../textproc/gsed
@@ -454,7 +454,7 @@ TOOLS_ALIASES.gsed=		sed
 .endif
 
 .if !defined(TOOLS_IGNORE.gtar) && !empty(_USE_TOOLS:Mgtar)
-.  if !empty(PKGPATH:Marchivers/gtar-base)
+.  if ${PKGPATH} == archivers/gtar-base
 MAKEFLAGS+=			TOOLS_IGNORE.gtar=
 .  elif !empty(_TOOLS_USE_PKGSRC.gtar:M[yY][eE][sS])
 TOOLS_DEPENDS.gtar?=		gtar-base>=1.13.25:../../archivers/gtar-base
@@ -464,7 +464,7 @@ TOOLS_PATH.gtar=		${LOCALBASE}/bin/gtar
 .endif
 
 .if !defined(TOOLS_IGNORE.gunzip) && !empty(_USE_TOOLS:Mgunzip)
-.  if !empty(PKGPATH:Marchivers/gzip)
+.  if ${PKGPATH} == archivers/gzip
 MAKEFLAGS+=			TOOLS_IGNORE.gunzip=
 .  elif !empty(_TOOLS_USE_PKGSRC.gunzip:M[yY][eE][sS])
 TOOLS_DEPENDS.gunzip?=		{gzip>=1.2.4b,gzip-base>=1.2.4b}:../../archivers/gzip
@@ -475,7 +475,7 @@ TOOLS_ARGS.gunzip=		-f
 .endif
 
 .if !defined(TOOLS_IGNORE.gzcat) && !empty(_USE_TOOLS:Mgzcat)
-.  if !empty(PKGPATH:Marchivers/gzip)
+.  if ${PKGPATH} == archivers/gzip
 MAKEFLAGS+=			TOOLS_IGNORE.gzcat=
 .  elif !empty(_TOOLS_USE_PKGSRC.gzcat:M[yY][eE][sS])
 TOOLS_DEPENDS.gzcat?=		{gzip>=1.2.4b,gzip-base>=1.2.4b}:../../archivers/gzip
@@ -485,7 +485,7 @@ TOOLS_PATH.gzcat=		${LOCALBASE}/bin/zcat
 .endif
 
 .if !defined(TOOLS_IGNORE.gzip) && !empty(_USE_TOOLS:Mgzip)
-.  if !empty(PKGPATH:Marchivers/gzip)
+.  if ${PKGPATH} == archivers/gzip
 MAKEFLAGS+=			TOOLS_IGNORE.gzip=
 .  elif !empty(_TOOLS_USE_PKGSRC.gzip:M[yY][eE][sS])
 TOOLS_DEPENDS.gzip?=		{gzip>=1.2.4b,gzip-base>=1.2.4b}:../../archivers/gzip
@@ -496,7 +496,7 @@ TOOLS_ARGS.gzip=		-nf ${GZIP}
 .endif
 
 .if !defined(TOOLS_IGNORE.ident) && !empty(_USE_TOOLS:Mident)
-.  if !empty(PKGPATH:Mdevel/rcs)
+.  if ${PKGPATH} == devel/rcs
 MAKEFLAGS+=			TOOLS_IGNORE.ident=
 .  elif !empty(_TOOLS_USE_PKGSRC.ident:M[yY][eE][sS])
 TOOLS_DEPENDS.ident?=		rcs-[0-9]*:../../devel/rcs
@@ -506,7 +506,7 @@ TOOLS_PATH.ident=		${LOCALBASE}/bin/ident
 .endif
 
 .if !defined(TOOLS_IGNORE.install-info) && !empty(_USE_TOOLS:Minstall-info)
-.  if !empty(PKGPATH:Mpkgtools/pkg_install-info)
+.  if ${PKGPATH} == pkgtools/pkg_install-info
 MAKEFLAGS+=			TOOLS_IGNORE.install-info=
 .  elif !empty(_TOOLS_USE_PKGSRC.install-info:M[yY][eE][sS])
 TOOLS_DEPENDS.install-info?=	pkg_install-info-[0-9]*:../../pkgtools/pkg_install-info
@@ -521,7 +521,7 @@ TOOLS_PATH.install-info=	${LOCALBASE}/bin/pkg_install-info
 TOOLS_SCRIPT.install-info=	exit 0
 
 .if !defined(TOOLS_IGNORE.ksh) && !empty(_USE_TOOLS:Mksh)
-.  if !empty(PKGPATH:Mshells/pdksh)
+.  if ${PKGPATH} == shells/pdksh
 MAKEFLAGS+=			TOOLS_IGNORE.ksh=
 .  elif !empty(_TOOLS_USE_PKGSRC.ksh:M[yY][eE][sS])
 TOOLS_DEPENDS.ksh?=		pdksh>=5.2.14:../../shells/pdksh
@@ -531,7 +531,7 @@ TOOLS_PATH.ksh=			${LOCALBASE}/bin/pdksh
 .endif
 
 .if !defined(TOOLS_IGNORE.lex) && !empty(_USE_TOOLS:Mlex)
-.  if !empty(PKGPATH:Mdevel/flex)
+.  if ${PKGPATH} == devel/flex
 MAKEFLAGS+=			TOOLS_IGNORE.lex=
 .  elif !empty(_TOOLS_USE_PKGSRC.lex:M[yY][eE][sS])
 .    include "../../devel/flex/buildlink3.mk"
@@ -546,7 +546,7 @@ TOOLS_PATH.lex=			${LOCALBASE}/bin/flex
 .endif
 
 .if !defined(TOOLS_IGNORE.lha) && !empty(_USE_TOOLS:Mlha)
-.  if !empty(PKGPATH:Marchivers/lha)
+.  if ${PKGPATH} == archivers/lha
 MAKEFLAGS+=			TOOLS_IGNORE.lha=
 .  elif !empty(_TOOLS_USE_PKGSRC.lha:M[yY][eE][sS])
 TOOLS_DEPENDS.lha?=		lha>=114.9:../../archivers/lha
@@ -556,7 +556,7 @@ TOOLS_PATH.lha=			${LOCALBASE}/bin/lha
 .endif
 
 .if !defined(TOOLS_IGNORE.lzip) && !empty(_USE_TOOLS:Mlzip)
-.  if !empty(PKGPATH:Marchivers/lzip)
+.  if ${PKGPATH} == archivers/lzip
 MAKEFLAGS+=			TOOLS_IGNORE.lzip=
 .  elif !empty(_TOOLS_USE_PKGSRC.lzip:M[yY][eE][sS])
 TOOLS_DEPENDS.lzip?=		lzip>=1.14:../../archivers/lzip
@@ -566,7 +566,7 @@ TOOLS_PATH.lzip=		${LOCALBASE}/bin/lzip
 .endif
 
 .if !defined(TOOLS_IGNORE.lzcat) && !empty(_USE_TOOLS:Mlzcat)
-.  if !empty(PKGPATH:Marchivers/xz)
+.  if ${PKGPATH} == archivers/xz
 MAKEFLAGS+=			TOOLS_IGNORE.lzcat=
 .  elif !empty(_TOOLS_USE_PKGSRC.lzcat:M[yY][eE][sS])
 TOOLS_DEPENDS.lzcat?=		xz>=4.999.9betanb1:../../archivers/xz
@@ -576,7 +576,7 @@ TOOLS_PATH.lzcat=		${LOCALBASE}/bin/lzcat
 .endif
 
 .if !defined(TOOLS_IGNORE.m4) && !empty(_USE_TOOLS:Mm4)
-.  if !empty(PKGPATH:Mdevel/m4)
+.  if ${PKGPATH} == devel/m4
 MAKEFLAGS+=			TOOLS_IGNORE.m4=
 .  elif !empty(_TOOLS_USE_PKGSRC.m4:M[yY][eE][sS])
 TOOLS_DEPENDS.m4?=		m4>=1.4:../../devel/m4
@@ -586,7 +586,7 @@ TOOLS_PATH.m4=			${LOCALBASE}/bin/gm4
 .endif
 
 .if !defined(TOOLS_IGNORE.mail) && !empty(_USE_TOOLS:Mmail)
-.  if !empty(PKGPATH:Mmail/heirloom-mailx)
+.  if ${PKGPATH} == mail/heirloom-mailx
 MAKEFLAGS+=			TOOLS_IGNORE.mail=
 .  elif !empty(_TOOLS_USE_PKGSRC.mail:M[yY][eE][sS])
 TOOLS_DEPENDS.mail?=		heirloom-mailx-[0-9]*:../../mail/heirloom-mailx
@@ -596,7 +596,7 @@ TOOLS_PATH.mail=		${LOCALBASE}/bin/mailx
 .endif
 
 .if !defined(TOOLS_IGNORE.makeinfo) && !empty(_USE_TOOLS:Mmakeinfo)
-.  if !empty(PKGPATH:Mdevel/gtexinfo)
+.  if ${PKGPATH} == devel/gtexinfo
 MAKEFLAGS+=			TOOLS_IGNORE.makeinfo=
 .  elif !empty(_TOOLS_USE_PKGSRC.makeinfo:M[yY][eE][sS])
 TOOLS_DEPENDS.makeinfo?=	gtexinfo>=${TEXINFO_REQD}:../../devel/gtexinfo
@@ -606,7 +606,7 @@ TOOLS_PATH.makeinfo=		${LOCALBASE}/bin/makeinfo
 .endif
 
 .if !defined(TOOLS_IGNORE.mktemp) && !empty(_USE_TOOLS:Mmktemp)
-.  if !empty(PKGPATH:Msysutils/mktemp)
+.  if ${PKGPATH} == sysutils/mktemp
 MAKEFLAGS+=			TOOLS_IGNORE.mktemp=
 .  elif !empty(_TOOLS_USE_PKGSRC.mktemp:M[yY][eE][sS])
 TOOLS_DEPENDS.mktemp?=		mktemp>=1.5:../../sysutils/mktemp
@@ -616,7 +616,7 @@ TOOLS_PATH.mktemp=		${LOCALBASE}/bin/mktemp
 .endif
 
 .if !defined(TOOLS_IGNORE.mtree) && !empty(_USE_TOOLS:Mmtree)
-.  if !empty(PKGPATH:Mpkgtools/mtree)
+.  if ${PKGPATH} == pkgtools/mtree
 MAKEFLAGS+=			TOOLS_IGNORE.mtree=
 .  elif !empty(_TOOLS_USE_PKGSRC.mtree:M[yY][eE][sS])
 #
@@ -636,10 +636,10 @@ TOOLS_PATH.mtree=		${LOCALBASE}/bin/mtree
 CHECK_BUILTIN.openssl:=		yes
 .  include "../../security/openssl/builtin.mk"
 CHECK_BUILTIN.openssl:=		no
-.  if !empty(USE_BUILTIN.openssl:M[nN][oO])
+.  if ${USE_BUILTIN.openssl:U:tl} == no
 _TOOLS_USE_PKGSRC.openssl=	yes
 .  endif
-.  if !empty(PKGPATH:Msecurity/openssl)
+.  if ${PKGPATH} == security/openssl
 MAKEFLAGS+=			TOOLS_IGNORE.openssl=
 .  elif !empty(_TOOLS_USE_PKGSRC.openssl:M[yY][eE][sS])
 TOOLS_DEPENDS.openssl?=		openssl>=0.9.6:../../security/openssl
@@ -649,7 +649,7 @@ TOOLS_PATH.openssl=		${LOCALBASE}/bin/openssl
 .endif
 
 .if !defined(TOOLS_IGNORE.patch) && !empty(_USE_TOOLS:Mpatch)
-.  if !empty(PKGPATH:Mdevel/nbpatch)
+.  if ${PKGPATH} == devel/nbpatch
 MAKEFLAGS+=			TOOLS_IGNORE.patch=
 .  elif !empty(_TOOLS_USE_PKGSRC.patch:M[yY][eE][sS])
 TOOLS_DEPENDS.patch?=		nbpatch-[0-9]*:../../devel/nbpatch
@@ -661,7 +661,7 @@ _PATCH_BACKUP_ARG=		-V simple -z
 .endif
 
 .if !defined(TOOLS_IGNORE.pax) && !empty(_USE_TOOLS:Mpax)
-.  if !empty(PKGPATH:Marchivers/pax)
+.  if ${PKGPATH} == archivers/pax
 MAKEFLAGS+=			TOOLS_IGNORE.pax=
 .  elif !empty(_TOOLS_USE_PKGSRC.pax:M[yY][eE][sS])
 TOOLS_DEPENDS.pax?=		pax>=20040802:../../archivers/pax
@@ -671,7 +671,7 @@ TOOLS_PATH.pax=			${LOCALBASE}/bin/${NBPAX_PROGRAM_PREFIX}pax
 .endif
 
 .if !defined(TOOLS_IGNORE.pkg-config) && !empty(_USE_TOOLS:Mpkg-config)
-.  if !empty(PKGPATH:Mdevel/pkg-config)
+.  if ${PKGPATH} == devel/pkg-config
 MAKEFLAGS+=			TOOLS_IGNORE.pkg-config=
 .  elif !empty(_TOOLS_USE_PKGSRC.pkg-config:M[yY][eE][sS])
 TOOLS_DEPENDS.pkg-config?=	pkgconf-[0-9]*:../../devel/pkgconf
@@ -689,7 +689,7 @@ TOOLS_FAIL+=			pkg-config
 .endif
 
 .if !defined(TOOLS_IGNORE.rpm2pkg) && !empty(_USE_TOOLS:Mrpm2pkg)
-.  if !empty(PKGPATH:Mpkgtools/rpm2pkg)
+.  if ${PKGPATH} == pkgtools/rpm2pkg
 MAKEFLAGS+=			TOOLS_IGNORE.rpm2pkg=
 .  elif !empty(_TOOLS_USE_PKGSRC.rpm2pkg:M[yY][eE][sS])
 TOOLS_DEPENDS.rpm2pkg?=		rpm2pkg>=3.1.4:../../pkgtools/rpm2pkg
@@ -699,7 +699,7 @@ TOOLS_PATH.rpm2pkg=		${LOCALBASE}/sbin/rpm2pkg
 .endif
 
 .if !defined(TOOLS_IGNORE.sed) && !empty(_USE_TOOLS:Msed)
-.  if !empty(PKGPATH:Mtextproc/nbsed)
+.  if ${PKGPATH} == textproc/nbsed
 MAKEFLAGS+=			TOOLS_IGNORE.sed=
 .  elif !empty(_TOOLS_USE_PKGSRC.sed:M[yY][eE][sS])
 TOOLS_DEPENDS.sed?=		nbsed>=20040821:../../textproc/nbsed
@@ -709,7 +709,7 @@ TOOLS_PATH.sed=			${LOCALBASE}/bin/nbsed
 .endif
 
 .if !defined(TOOLS_IGNORE.sh) && !empty(_USE_TOOLS:Msh)
-.  if !empty(PKGPATH:Mshells/pdksh)
+.  if ${PKGPATH} == shells/pdksh
 MAKEFLAGS+=			TOOLS_IGNORE.sh=
 .  elif !empty(_TOOLS_USE_PKGSRC.sh:M[yY][eE][sS])
 TOOLS_DEPENDS.sh?=		pdksh>=5.2.14:../../shells/pdksh
@@ -720,7 +720,7 @@ TOOLS_CMD.sh=			${TOOLS_DIR}/bin/sh
 .endif
 
 .if !defined(TOOLS_IGNORE.shlock) && !empty(_USE_TOOLS:Mshlock)
-.  if !empty(PKGPATH:Mpkgtools/shlock)
+.  if ${PKGPATH} == pkgtools/shlock
 MAKEFLAGS+=			TOOLS_IGNORE.shlock=
 .  elif !empty(_TOOLS_USE_PKGSRC.shlock:M[yY][eE][sS])
 TOOLS_DEPENDS.shlock?=		shlock>=20020114:../../pkgtools/shlock
@@ -730,7 +730,7 @@ TOOLS_PATH.shlock=		${LOCALBASE}/bin/shlock
 .endif
 
 .if !defined(TOOLS_IGNORE.tar) && !empty(_USE_TOOLS:Mtar)
-.  if !empty(PKGPATH:Marchivers/pax)
+.  if ${PKGPATH} == archivers/pax
 MAKEFLAGS+=			TOOLS_IGNORE.tar=
 .  elif !empty(_TOOLS_USE_PKGSRC.tar:M[yY][eE][sS])
 TOOLS_DEPENDS.tar?=		pax>=20040802:../../archivers/pax
@@ -740,7 +740,7 @@ TOOLS_PATH.tar=			${LOCALBASE}/bin/${NBPAX_PROGRAM_PREFIX}tar
 .endif
 
 .if !defined(TOOLS_IGNORE.tclsh) && !empty(_USE_TOOLS:Mtclsh)
-.  if !empty(PKGPATH:Mlang/tcl)
+.  if ${PKGPATH} == lang/tcl
 MAKEFLAGS+=			TOOLS_IGNORE.tclsh=
 .  elif !empty(_TOOLS_USE_PKGSRC.tclsh:M[yY][eE][sS])
 TOOLS_DEPENDS.tclsh?=		tcl>=8.4:../../lang/tcl
@@ -750,7 +750,7 @@ TOOLS_PATH.tclsh=		${LOCALBASE}/bin/tclsh
 .endif
 
 .if !defined(TOOLS_IGNORE.texi2html) && !empty(_USE_TOOLS:Mtexi2html)
-.  if !empty(PKGPATH:Mtextproc/texi2html)
+.  if ${PKGPATH} == textproc/texi2html
 MAKEFLAGS+=			TOOLS_IGNORE.texi2html=
 .  elif !empty(_TOOLS_USE_PKGSRC.texi2html:M[yY][eE][sS])
 TOOLS_DEPENDS.texi2html?=	texi2html>=1.76:../../textproc/texi2html
@@ -760,7 +760,7 @@ TOOLS_PATH.texi2html=		${LOCALBASE}/bin/texi2html
 .endif
 
 .if !defined(TOOLS_IGNORE.ttmkfdir) && !empty(_USE_TOOLS:Mttmkfdir)
-.  if !empty(PKGPATH:Mfonts/ttmkfdir2)
+.  if ${PKGPATH} == fonts/ttmkfdir2
 MAKEFLAGS+=			TOOLS_IGNORE.ttmkfdir=
 .  elif !empty(_TOOLS_USE_PKGSRC.ttmkfdir:M[yY][eE][sS])
 TOOLS_DEPENDS.ttmkfdir?=	ttmkfdir2>=20021109:../../fonts/ttmkfdir2
@@ -770,7 +770,7 @@ TOOLS_PATH.ttmkfdir=		${LOCALBASE}/bin/ttmkfdir
 .endif
 
 .if !defined(TOOLS_IGNORE.type1inst) && !empty(_USE_TOOLS:Mtype1inst)
-.  if !empty(PKGPATH:Mfonts/type1inst)
+.  if ${PKGPATH} == fonts/type1inst
 MAKEFLAGS+=			TOOLS_IGNORE.type1inst=
 .  elif !empty(_TOOLS_USE_PKGSRC.type1inst:M[yY][eE][sS])
 TOOLS_DEPENDS.type1inst?=	type1inst>=0.6.1:../../fonts/type1inst
@@ -780,7 +780,7 @@ TOOLS_PATH.type1inst=		${LOCALBASE}/bin/type1inst
 .endif
 
 .if !defined(TOOLS_IGNORE.unrar) && !empty(_USE_TOOLS:Munrar)
-.  if !empty(PKGPATH:Marchivers/unrar)
+.  if ${PKGPATH} == archivers/unrar
 MAKEFLAGS+=			TOOLS_IGNORE.unrar=
 .  elif !empty(_TOOLS_USE_PKGSRC.unrar:M[yY][eE][sS])
 TOOLS_DEPENDS.unrar?=		unrar>=3.3.4:../../archivers/unrar
@@ -790,7 +790,7 @@ TOOLS_PATH.unrar=		${LOCALBASE}/bin/unrar
 .endif
 
 .if !defined(TOOLS_IGNORE.unzip) && !empty(_USE_TOOLS:Munzip)
-.  if !empty(PKGPATH:Marchivers/unzip)
+.  if ${PKGPATH} == archivers/unzip
 MAKEFLAGS+=			TOOLS_IGNORE.unzip=
 .  elif !empty(_TOOLS_USE_PKGSRC.unzip:M[yY][eE][sS])
 TOOLS_DEPENDS.unzip?=		unzip-[0-9]*:../../archivers/unzip
@@ -800,7 +800,7 @@ TOOLS_PATH.unzip=		${LOCALBASE}/bin/unzip
 .endif
 
 .if !defined(TOOLS_IGNORE.unzoo) && !empty(_USE_TOOLS:Munzoo)
-.  if !empty(PKGPATH:Marchivers/unzoo)
+.  if ${PKGPATH} == archivers/unzoo
 MAKEFLAGS+=			TOOLS_IGNORE.unzoo=
 .  elif !empty(_TOOLS_USE_PKGSRC.unzoo:M[yY][eE][sS])
 TOOLS_DEPENDS.unzoo?=		unzoo-[0-9]*:../../archivers/unzoo
@@ -810,7 +810,7 @@ TOOLS_PATH.unzoo=		${LOCALBASE}/bin/unzoo
 .endif
 
 .if !defined(TOOLS_IGNORE.wget) && !empty(_USE_TOOLS:Mwget)
-.  if !empty(PKGPATH:Mnet/wget)
+.  if ${PKGPATH} == net/wget
 MAKEFLAGS+=			TOOLS_IGNORE.wget=
 .  elif !empty(_TOOLS_USE_PKGSRC.wget:M[yY][eE][sS])
 TOOLS_DEPENDS.wget?=		wget-[0-9]*:../../net/wget
@@ -819,7 +819,7 @@ TOOLS_PATH.wget=		${LOCALBASE}/bin/wget
 .endif
 
 .if !defined(TOOLS_IGNORE.wish) && !empty(_USE_TOOLS:Mwish)
-.  if !empty(PKGPATH:Mx11/tk)
+.  if ${PKGPATH} == x11/tk
 MAKEFLAGS+=			TOOLS_IGNORE.wish=
 .  elif !empty(_TOOLS_USE_PKGSRC.wish:M[yY][eE][sS])
 TOOLS_DEPENDS.wish?=		tk>=8.4:../../x11/tk
@@ -829,7 +829,7 @@ TOOLS_PATH.wish=		${LOCALBASE}/bin/wish
 .endif
 
 .if !defined(TOOLS_IGNORE.xargs) && !empty(_USE_TOOLS:Mxargs)
-.  if !empty(PKGPATH:Msysutils/findutils)
+.  if ${PKGPATH} == sysutils/findutils
 MAKEFLAGS+=			TOOLS_IGNORE.xargs=
 .  elif !empty(_TOOLS_USE_PKGSRC.xargs:M[yY][eE][sS])
 TOOLS_DEPENDS.xargs?=		findutils>=4.1:../../sysutils/findutils
@@ -842,7 +842,7 @@ TOOLS_ARGS.xargs=		-r	# don't run command if stdin is empty
 _TOOLS.xz=	xz xzcat
 .for _t_ in ${_TOOLS.xz}
 .  if !defined(TOOLS_IGNORE.${_t_}) && !empty(_USE_TOOLS:M${_t_})
-.    if !empty(PKGPATH:Marchivers/xz)
+.    if ${PKGPATH} == archivers/xz
 MAKEFLAGS+=			TOOLS_IGNORE.${_t_}=
 .    elif !empty(_TOOLS_USE_PKGSRC.${_t_}:M[yY][eE][sS])
 TOOLS_DEPENDS.${_t_}?=		xz>=4.999.9betanb1:../../archivers/xz
@@ -853,7 +853,7 @@ TOOLS_PATH.${_t_}=		${LOCALBASE}/bin/${_t_}
 .endfor
 
 .if !defined(TOOLS_IGNORE.yacc) && !empty(_USE_TOOLS:Myacc)
-.  if !empty(PKGPATH:Mdevel/bison)
+.  if ${PKGPATH} == devel/bison
 MAKEFLAGS+=			TOOLS_IGNORE.yacc=
 .  elif !empty(_TOOLS_USE_PKGSRC.yacc:M[yY][eE][sS])
 TOOLS_DEPENDS.yacc?=		bison>=1.0:../../devel/bison
@@ -873,7 +873,7 @@ TOOLS_VALUE_GNU.yacc=		${TOOLS_CMDLINE.yacc}
 _TOOLS.zip=	zip zipcloak zipnote zipsplit
 .for _t_ in ${_TOOLS.zip}
 .  if !defined(TOOLS_IGNORE.${_t_}) && !empty(_USE_TOOLS:M${_t_})
-.    if !empty(PKGPATH:Marchivers/zip)
+.    if ${PKGPATH} == archivers/zip
 MAKEFLAGS+=			TOOLS_IGNORE.${_t_}=
 .    elif !empty(_TOOLS_USE_PKGSRC.${_t_}:M[yY][eE][sS])
 TOOLS_DEPENDS.${_t_}?=		zip-[0-9]*:../../archivers/zip
@@ -937,10 +937,10 @@ _TOOLS.perl=			perl perldoc pod2html pod2man pod2text
 
 .for _t_ in ${_TOOLS.perl}
 .  if !defined(TOOLS_IGNORE.${_t_}) && !empty(_USE_TOOLS:M${_t_})
-.    if !empty(PKGPATH:Mlang/perl5)
+.    if ${PKGPATH} == lang/perl5
 MAKEFLAGS+=			TOOLS_IGNORE.${_t_}=
 .    elif !empty(_TOOLS_USE_PKGSRC.${_t_}:M[yY][eE][sS]) || \
-     !empty(DEPENDS:Mp5-*) || !empty(PERL5_PREFIX:M${PREFIX})
+     ${DEPENDS:Mp5-*} || !empty(PERL5_PREFIX:M${PREFIX})
 .      include "../../lang/perl5/version.mk"
 _TOOLS_USE_PKGSRC.perl=		yes
 TOOLS_DEPENDS.${_t_}?=		perl>=${PERL5_REQD}:../../lang/perl5
@@ -960,7 +960,7 @@ _TOOLS.coreutils=	basename cat chgrp chmod chown cp cut date	\
 
 .for _t_ in ${_TOOLS.coreutils}
 .  if !defined(TOOLS_IGNORE.${_t_}) && !empty(_USE_TOOLS:M${_t_})
-.    if !empty(PKGPATH:Msysutils/coreutils)
+.    if ${PKGPATH} == sysutils/coreutils
 MAKEFLAGS+=		TOOLS_IGNORE.${_t_}=
 .    elif !empty(_TOOLS_USE_PKGSRC.${_t_}:M[yY][eE][sS])
 TOOLS_DEPENDS.${_t_}?=	coreutils>=5.2.1:../../sysutils/coreutils
@@ -974,7 +974,7 @@ TOOLS_PATH.${_t_}=	${LOCALBASE}/bin/g${_t_}
 # by bmake.
 #
 .if !defined(TOOLS_IGNORE.[) && !empty(_USE_TOOLS:M\[)
-.  if !empty(PKGPATH:Msysutils/coreutils)
+.  if ${PKGPATH} == sysutils/coreutils
 MAKEFLAGS+=		TOOLS_IGNORE.[=
 .  elif !empty(_TOOLS_USE_PKGSRC.[:M[yY][eE][sS])
 TOOLS_DEPENDS.[?=	coreutils>=5.2.1:../../sysutils/coreutils
@@ -992,7 +992,7 @@ TOOLS_PATH.[=		${LOCALBASE}/bin/g[
 _TOOLS.grep=	egrep fgrep grep
 
 .if !defined(TOOLS_IGNORE.ggrep) && !empty(_USE_TOOLS:Mggrep)
-.  if !empty(PKGPATH:Mtextproc/grep)
+.  if ${PKGPATH} == textproc/grep
 MAKEFLAGS+=		TOOLS_IGNORE.ggrep=
 .  elif !empty(_TOOLS_USE_PKGSRC.ggrep:M[yY][eE][sS])
 TOOLS_DEPENDS.ggrep?=	grep>=2.5.1:../../textproc/grep
@@ -1009,7 +1009,7 @@ TOOLS_ARGS.gfgrep=	-F
 .else
 .  for _t_ in ${_TOOLS.grep}
 .    if !defined(TOOLS_IGNORE.${_t_}) && !empty(_USE_TOOLS:M${_t_})
-.      if !empty(PKGPATH:Mtextproc/grep)
+.      if ${PKGPATH} == textproc/grep
 MAKEFLAGS+=		TOOLS_IGNORE.${_t_}=
 .      elif !empty(_TOOLS_USE_PKGSRC.${_t_}:M[yY][eE][sS])
 TOOLS_DEPENDS.${_t_}?=	grep>=2.5.1:../../textproc/grep
@@ -1030,7 +1030,7 @@ _TOOLS.mandoc=	nroff
 
 .for _t_ in ${_TOOLS.mandoc}
 .  if !defined(TOOLS_IGNORE.${_t_}) && !empty(_USE_TOOLS:M${_t_})
-.    if !empty(PKGPATH:Mtextproc/mandoc)
+.    if ${PKGPATH} == textproc/mandoc
 MAKEFLAGS+=		TOOLS_IGNORE.${_t_}=
 .    elif !empty(_TOOLS_USE_PKGSRC.${_t_}:M[yY][eE][sS])
 TOOLS_DEPENDS.${_t_}?=	mandoc>=1.12.0nb3:../../textproc/mandoc
@@ -1049,7 +1049,7 @@ _TOOLS.groff=	groff soelim tbl
 
 .for _t_ in ${_TOOLS.groff}
 .  if !defined(TOOLS_IGNORE.${_t_}) && !empty(_USE_TOOLS:M${_t_})
-.    if !empty(PKGPATH:Mtextproc/groff)
+.    if ${PKGPATH} == textproc/groff
 MAKEFLAGS+=		TOOLS_IGNORE.${_t_}=
 .    else
 .      if defined(_TOOLS_USE_PKGSRC.groff) && \
@@ -1073,7 +1073,7 @@ TOOLS_PATH.${_t_}=	${LOCALBASE}/bin/${_t_}
 # ``gsoelim'' is the real tool ``soelim'' above, but the
 # legacy tools names are still possible.
 .if !defined(TOOLS_IGNORE.gsoelim) && !empty(_USE_TOOLS:Mgsoelim)
-.  if !empty(PKGPATH:Mtextproc/groff)
+.  if ${PKGPATH} == textproc/groff
 MAKEFLAGS+=		TOOLS_IGNORE.gsoelim=
 .  elif !empty(_TOOLS_USE_PKGSRC.gsoelim:M[yY][eE][sS])
 TOOLS_DEPENDS.gsoelim?=	groff>=1.19nb4:../../textproc/groff
@@ -1092,7 +1092,7 @@ _TOOLS.diffutils=	cmp diff diff3 sdiff
 
 .for _t_ in ${_TOOLS.diffutils}
 .  if !defined(TOOLS_IGNORE.${_t_}) && !empty(_USE_TOOLS:M${_t_})
-.    if !empty(PKGPATH:Mdevel/diffutils)
+.    if ${PKGPATH} == devel/diffutils
 MAKEFLAGS+=		TOOLS_IGNORE.${_t_}=
 .    elif !empty(_TOOLS_USE_PKGSRC.${_t_}:M[yY][eE][sS])
 TOOLS_DEPENDS.${_t_}?=	diffutils>=2.8.1:../../devel/diffutils
@@ -1125,7 +1125,7 @@ MAKEVARS+=			TOOLS_DEPENDS.ghostscript
 
 .for _t_ in ${_TOOLS.ghostscript}
 .  if !defined(TOOLS_IGNORE.${_t_}) && !empty(_USE_TOOLS:M${_t_})
-.    if !empty(PKGPATH:Mprint/ghostscript)
+.    if ${PKGPATH} == print/ghostscript
 MAKEFLAGS+=		TOOLS_IGNORE.${_t_}=
 .    elif !empty(_TOOLS_USE_PKGSRC.${_t_}:M[yY][eE][sS])
 TOOLS_DEPENDS.${_t_}?=	${TOOLS_DEPENDS.ghostscript}
@@ -1140,11 +1140,11 @@ TOOLS_PATH.${_t_}=	${LOCALBASE}/bin/${_t_}
 # For modular Xorg, these are individual packages.
 #
 .if !defined(TOOLS_IGNORE.iceauth) && !empty(_USE_TOOLS:Miceauth)
-.  if !empty(PKGPATH:Mx11/iceauth)
+.  if ${PKGPATH} == x11/iceauth
 MAKEFLAGS+=		TOOLS_IGNORE.iceauth=
 .  elif !empty(_TOOLS_USE_PKGSRC.iceauth:M[yY][eE][sS])
 TOOLS_CREATE+=			iceauth
-.    if !empty(X11_TYPE:Mnative)
+.    if ${X11_TYPE} == native
 TOOLS_PATH.iceauth=	${X11BASE}/bin/iceauth
 .    else
 TOOLS_DEPENDS.iceauth?=		iceauth-[0-9]*:../../x11/iceauth
@@ -1154,11 +1154,11 @@ TOOLS_PATH.iceauth=		${LOCALBASE}/bin/iceauth
 .endif
 
 .if !defined(TOOLS_IGNORE.mkfontdir) && !empty(_USE_TOOLS:Mmkfontdir)
-.  if !empty(PKGPATH:Mfonts/mkfontscale)
+.  if ${PKGPATH} == fonts/mkfontscale
 MAKEFLAGS+=		TOOLS_IGNORE.mkfontdir=
 .  elif !empty(_TOOLS_USE_PKGSRC.mkfontdir:M[yY][eE][sS])
 TOOLS_CREATE+=			mkfontdir
-.    if !empty(X11_TYPE:Mnative)
+.    if ${X11_TYPE} == native
 TOOLS_PATH.mkfontdir=	${X11BASE}/bin/mkfontdir
 .    else
 TOOLS_DEPENDS.mkfontdir?=	mkfontscale>=1.2:../../fonts/mkfontscale
@@ -1168,11 +1168,11 @@ TOOLS_PATH.mkfontdir=		${LOCALBASE}/bin/mkfontdir
 .endif
 
 .if !defined(TOOLS_IGNORE.mkfontscale) && !empty(_USE_TOOLS:Mmkfontscale)
-.  if !empty(PKGPATH:Mfonts/mkfontscale)
+.  if ${PKGPATH} == fonts/mkfontscale
 MAKEFLAGS+=		TOOLS_IGNORE.mkfontscale=
 .  elif !empty(_TOOLS_USE_PKGSRC.mkfontscale:M[yY][eE][sS])
 TOOLS_CREATE+=			mkfontscale
-.    if !empty(X11_TYPE:Mnative)
+.    if ${X11_TYPE} == native
 TOOLS_PATH.mkfontscale=	${X11BASE}/bin/mkfontscale
 .    else
 TOOLS_DEPENDS.mkfontscale?=	mkfontscale-[0-9]*:../../fonts/mkfontscale
@@ -1182,11 +1182,11 @@ TOOLS_PATH.mkfontscale=		${LOCALBASE}/bin/mkfontscale
 .endif
 
 .if !defined(TOOLS_IGNORE.bdftopcf) && !empty(_USE_TOOLS:Mbdftopcf)
-.  if !empty(PKGPATH:Mfonts/bdftopcf)
+.  if ${PKGPATH} == fonts/bdftopcf
 MAKEFLAGS+=		TOOLS_IGNORE.bdftopcf=
 .  elif !empty(_TOOLS_USE_PKGSRC.bdftopcf:M[yY][eE][sS])
 TOOLS_CREATE+=			bdftopcf
-.    if !empty(X11_TYPE:Mnative) && exists(${X11BASE}/bin/bdftopcf)
+.    if ${X11_TYPE} == native && exists(${X11BASE}/bin/bdftopcf)
 TOOLS_PATH.bdftopcf=	${X11BASE}/bin/bdftopcf
 .    else
 TOOLS_DEPENDS.bdftopcf?=	bdftopcf-[0-9]*:../../fonts/bdftopcf
@@ -1196,11 +1196,11 @@ TOOLS_PATH.bdftopcf=		${LOCALBASE}/bin/bdftopcf
 .endif
 
 .if !defined(TOOLS_IGNORE.ucs2any) && !empty(_USE_TOOLS:Mucs2any)
-.  if !empty(PKGPATH:Mfonts/font-util)
+.  if ${PKGPATH} == fonts/font-util
 MAKEFLAGS+=		TOOLS_IGNORE.ucs2any=
 .  elif !empty(_TOOLS_USE_PKGSRC.ucs2any:M[yY][eE][sS])
 TOOLS_CREATE+=			ucs2any
-.    if !empty(X11_TYPE:Mnative)
+.    if ${X11_TYPE} == native
 TOOLS_PATH.ucs2any=	${X11BASE}/bin/ucs2any
 .    else
 TOOLS_DEPENDS.ucs2any?=		font-util-[0-9]*:../../fonts/font-util
@@ -1210,11 +1210,11 @@ TOOLS_PATH.ucs2any=		${LOCALBASE}/bin/ucs2any
 .endif
 
 .if !defined(TOOLS_IGNORE.bdftruncate) && !empty(_USE_TOOLS:Mbdftruncate)
-.  if !empty(PKGPATH:Mfonts/font-util)
+.  if ${PKGPATH} == fonts/font-util
 MAKEFLAGS+=		TOOLS_IGNORE.bdftruncate=
 .  elif !empty(_TOOLS_USE_PKGSRC.bdftruncate:M[yY][eE][sS])
 TOOLS_CREATE+=			bdftruncate
-.    if !empty(X11_TYPE:Mnative)
+.    if ${X11_TYPE} == native
 TOOLS_PATH.bdftruncate=	${X11BASE}/bin/bdftruncate
 .    else
 TOOLS_DEPENDS.bdftruncate?=	font-util-[0-9]*:../../fonts/font-util
@@ -1224,11 +1224,11 @@ TOOLS_PATH.bdftruncate=		${LOCALBASE}/bin/bdftruncate
 .endif
 
 .if !defined(TOOLS_IGNORE.xauth) && !empty(_USE_TOOLS:Mxauth)
-.  if !empty(PKGPATH:Mx11/xauth)
+.  if ${PKGPATH} == x11/xauth
 MAKEFLAGS+=		TOOLS_IGNORE.xauth=
 .  elif !empty(_TOOLS_USE_PKGSRC.xauth:M[yY][eE][sS])
 TOOLS_CREATE+=			xauth
-.    if !empty(X11_TYPE:Mnative)
+.    if ${X11_TYPE} == native
 TOOLS_PATH.xauth=	${X11BASE}/bin/xauth
 .    else
 TOOLS_DEPENDS.xauth?=		xauth-[0-9]*:../../x11/xauth
@@ -1238,11 +1238,11 @@ TOOLS_PATH.xauth=		${LOCALBASE}/bin/xauth
 .endif
 
 .if !defined(TOOLS_IGNORE.xinit) && !empty(_USE_TOOLS:Mxinit)
-.  if !empty(PKGPATH:Mx11/xinit)
+.  if ${PKGPATH} == x11/xinit
 MAKEFLAGS+=		TOOLS_IGNORE.xinit=
 .  elif !empty(_TOOLS_USE_PKGSRC.xinit:M[yY][eE][sS])
 TOOLS_CREATE+=			xinit
-.    if !empty(X11_TYPE:Mnative)
+.    if ${X11_TYPE} == native
 TOOLS_PATH.xinit=	${X11BASE}/bin/xinit
 .    else
 TOOLS_DEPENDS.xinit?=		xinit-[0-9]*:../../x11/xinit
@@ -1252,11 +1252,11 @@ TOOLS_PATH.xinit=		${LOCALBASE}/bin/xinit
 .endif
 
 .if !defined(TOOLS_IGNORE.xmessage) && !empty(_USE_TOOLS:Mxmessage)
-.  if !empty(PKGPATH:Mx11/xmessage)
+.  if ${PKGPATH} == x11/xmessage
 MAKEFLAGS+=		TOOLS_IGNORE.xmessage=
 .  elif !empty(_TOOLS_USE_PKGSRC.xmessage:M[yY][eE][sS])
 TOOLS_CREATE+=			xmessage
-.    if !empty(X11_TYPE:Mnative)
+.    if ${X11_TYPE} == native
 TOOLS_PATH.xmessage=	${X11BASE}/bin/xmessage
 .    else
 TOOLS_DEPENDS.xmessage?=		xmessage-[0-9]*:../../x11/xmessage
@@ -1284,10 +1284,10 @@ TOOLS_PATH.${_t_}=	${LOCALBASE}/bin/${_t_}
 .if !defined(TOOLS_IGNORE.makedepend) && !empty(_USE_TOOLS:Mmakedepend) && \
     !empty(_TOOLS_USE_PKGSRC.makedepend:M[yY][eE][sS])
 TOOLS_CREATE+=		makedepend
-.  if defined(X11_TYPE) && !empty(X11_TYPE:Mmodular)
+.  if ${X11_TYPE:U} == modular
 TOOLS_DEPENDS.makedepend?=	makedepend-[0-9]*:../../devel/makedepend
 TOOLS_PATH.makedepend=	${LOCALBASE}/bin/makedepend
-.  else # !empty(X11_TYPE:Mnative)
+.  else
 TOOLS_PATH.makedepend=	${X11BASE}/bin/makedepend
 .  endif
 .endif
@@ -1299,7 +1299,7 @@ TOOLS_PATH.makedepend=	${X11BASE}/bin/makedepend
 ### For each tool that depends on X11 for its native version, make
 ### sure it is really installed (i.e. xbase has been installed).
 ###
-.  if defined(TOOLS_PATH.${_t_}) && !empty(X11_TYPE:Mnative)
+.  if defined(TOOLS_PATH.${_t_}) && ${X11_TYPE:U} == native
 .    if !exists(${TOOLS_PATH.${_t_}}) && !empty(TOOLS_PATH.${_t_}:M${X11BASE}*)
 _tmiss_+=	${_t_}
 .    endif

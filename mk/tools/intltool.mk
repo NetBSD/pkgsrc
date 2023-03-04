@@ -1,4 +1,4 @@
-# $NetBSD: intltool.mk,v 1.10 2022/11/23 13:06:33 jperkin Exp $
+# $NetBSD: intltool.mk,v 1.11 2023/03/04 23:29:24 rillig Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -34,7 +34,7 @@ _TOOLS.intltool=	intltoolize					\
 			intltool-prepare intltool-update
 
 .if !defined(TOOLS_IGNORE.intltool) && !empty(USE_TOOLS:C/:.*//:Mintltool)
-.  if !empty(PKGPATH:Mtextproc/intltool)
+.  if ${PKGPATH} == textproc/intltool
 MAKEFLAGS+=		TOOLS_IGNORE.intltool
 .  else
 USE_TOOLS+=		perl
