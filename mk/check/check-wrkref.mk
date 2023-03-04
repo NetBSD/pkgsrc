@@ -1,8 +1,8 @@
-# $NetBSD: check-wrkref.mk,v 1.26 2022/11/23 11:55:43 jperkin Exp $
+# $NetBSD: check-wrkref.mk,v 1.27 2023/03/04 23:03:34 rillig Exp $
 #
 # This file checks that the installed files don't contain any strings
 # that point to the directory where the package had been built, to make
-# sure that the package still works after the source code has been
+# sure that the package still works after the working directory has been
 # cleaned up.
 #
 # User-settable variables:
@@ -10,17 +10,18 @@
 # CHECK_WRKREF
 #	The list of directory names that must not appear in installed files.
 #
-#	* "tools" for the tool wrapper directory
-#	* "wrappers" for the wrappers directory
-#	* "home" for FAKEHOMEDIR
-#	* "wrksrc" for WRKSRC
-#	* "work" for WRKDIR
-#	* "wrkobjdir" for WRKOBJDIR
-#	* "pkgsrc" for PKGSRCDIR
-#	* "buildlink" for BUILDLINK_DIR and BUILDLINK_X11_DIR
-#	* "extra" for CHECK_WRKREF_EXTRA_DIRS
+#		tools		the tool wrappers
+#		wrappers	the compiler wrappers
+#		home		FAKEHOMEDIR
+#		wrksrc		WRKSRC
+#		work		WRKDIR
+#		wrkobjdir	WRKOBJDIR
+#		pkgsrc		PKGSRCDIR
+#		buildlink	BUILDLINK_DIR and BUILDLINK_X11_DIR
+#		extra		see CHECK_WRKREF_EXTRA_DIRS
 #
 #	Default value: "tools home" for PKG_DEVELOPERs, "no" otherwise.
+#
 #	The "buildlink" option works best in combination with
 #	STRIP_DEBUG=yes.
 #
