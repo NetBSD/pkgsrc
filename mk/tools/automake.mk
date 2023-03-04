@@ -1,4 +1,4 @@
-# $NetBSD: automake.mk,v 1.32 2022/11/23 13:06:33 jperkin Exp $
+# $NetBSD: automake.mk,v 1.33 2023/03/04 23:29:24 rillig Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -109,7 +109,7 @@ _TOOLS_AM_TYPE.${_t_}?=	TOOLS_GNU_MISSING
 .endif
 
 .if !defined(TOOLS_IGNORE.automake) && !empty(USE_TOOLS:C/:.*//:Mautomake)
-.  if !empty(PKGPATH:Mdevel/automake)
+.  if ${PKGPATH} == devel/automake
 MAKEFLAGS+=		TOOLS_IGNORE.automake=
 .  else
 AUTOMAKE_REQD?=		1.9
@@ -136,7 +136,7 @@ TOOLS_PATH.automake=		${LOCALBASE}/bin/automake
 .endif
 
 .if !defined(TOOLS_IGNORE.automake14) && !empty(USE_TOOLS:C/:.*//:Mautomake14)
-.  if !empty(PKGPATH:Mdevel/automake14)
+.  if ${PKGPATH} == devel/automake14
 MAKEFLAGS+=		TOOLS_IGNORE.automake14=
 .  else
 AUTOMAKE_REQD?=		1.4
@@ -183,7 +183,7 @@ USE_TOOLS+=	${_TOOLS_AM_AUTOCONF}
 
 # If the package wants to override the GNU auto* tools, then do it.
 AUTOMAKE_OVERRIDE?=	yes
-.if !empty(AUTOMAKE_OVERRIDE:M[yY][eE][sS])
+.if ${AUTOMAKE_OVERRIDE:M[yY][eE][sS]}
 .  for _t_ in ${_TOOLS_AM_NAMES}
 .    if !empty(_TOOLS_AM_TYPE.${_t_})
 ${_TOOLS_AM_TYPE.${_t_}}+=	${_t_}

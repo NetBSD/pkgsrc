@@ -1,4 +1,4 @@
-# $NetBSD: gettext.mk,v 1.22 2018/08/22 20:48:37 maya Exp $
+# $NetBSD: gettext.mk,v 1.23 2023/03/04 23:29:24 rillig Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -46,7 +46,7 @@ USE_TOOLS+=	msgfmt
 ### version of msgfmt depending on availability and version.
 ###
 .if !defined(TOOLS_IGNORE.msgfmt) && !empty(USE_TOOLS:C/:.*//:Mmsgfmt)
-.  if !empty(PKGPATH:Mdevel/gettext-tools)
+.  if ${PKGPATH} == devel/gettext-tools
 MAKEFLAGS+=		TOOLS_IGNORE.msgfmt=
 .  else
 # If we're not using the builtin gettext implementation, then we should
@@ -55,7 +55,7 @@ MAKEFLAGS+=		TOOLS_IGNORE.msgfmt=
 CHECK_BUILTIN.gettext:=	yes
 .    include "../../devel/gettext-lib/builtin.mk"
 CHECK_BUILTIN.gettext:=	no
-.    if !empty(USE_BUILTIN.gettext:M[nN][oO])
+.    if ${USE_BUILTIN.gettext:U:tl} == no
 _TOOLS_USE_PKGSRC.msgfmt=	yes
 .    endif
 
@@ -133,7 +133,7 @@ _TOOLS_USE_PKGSRC.${_t_}?=	no
 .    else
 _TOOLS_USE_PKGSRC.${_t_}?=	yes
 .    endif
-.    if !empty(PKGPATH:Mdevel/gettext-tools)
+.    if ${PKGPATH} == devel/gettext-tools
 MAKEFLAGS+=		TOOLS_IGNORE.${_t_}=
 .    elif !empty(_TOOLS_USE_PKGSRC.${_t_}:M[yY][eE][sS])
 TOOLS_DEPENDS.${_t_}?=	${_TOOLS_DEP.gettext-tools}:../../devel/gettext-tools
