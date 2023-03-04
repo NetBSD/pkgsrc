@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1550 2023/03/04 15:36:21 pin Exp $
+$NetBSD: CHANGES-2023,v 1.1551 2023/03/04 15:37:37 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2004,3 +2004,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed graphics/Cenon [wiz 2023-03-04]
 	Updated devel/difftastic to 0.45.0 [pin 2023-03-04]
 	Updated devel/lazygit to 0.37.0 [pin 2023-03-04]
+	Updated graphics/oculante to 0.6.53 [pin 2023-03-04]
