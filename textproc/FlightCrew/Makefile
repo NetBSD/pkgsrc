@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2023/01/30 11:46:03 wiz Exp $
+# $NetBSD: Makefile,v 1.68 2023/03/04 11:22:08 wiz Exp $
 
 DISTNAME=	FlightCrew-0.7.2-Code
 PKGNAME=	${DISTNAME:S/-Code//}
@@ -14,7 +14,7 @@ LICENSE=	gnu-lgpl-v3 AND cc-by-sa-v3.0
 
 WRKSRC=		${WRKDIR}
 
-USE_LANGUAGES=	c c++11
+USE_LANGUAGES=	c c++14
 USE_CMAKE=	yes
 
 # Work around NetBSD unzip vs others for patched files.
