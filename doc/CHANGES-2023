@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1545 2023/03/03 23:33:10 ryoon Exp $
+$NetBSD: CHANGES-2023,v 1.1546 2023/03/04 02:19:59 charlotte Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -1999,3 +1999,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/knot to 3.2.5 [ryoon 2023-03-03]
 	Updated sysutils/xfce4-thunar to 4.18.4 [gutteridge 2023-03-03]
 	Updated www/php-nextcloud to 25.0.4 [ryoon 2023-03-03]
+	Updated lang/janet to 1.26.0 [charlotte 2023-03-03]
