@@ -1,4 +1,4 @@
-# $NetBSD: digest.mk,v 1.4 2021/10/26 18:46:49 nia Exp $
+# $NetBSD: digest.mk,v 1.5 2023/03/04 23:29:24 rillig Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -43,7 +43,7 @@
 DIGEST_REQD?=		20211023
 
 .if !defined(TOOLS_IGNORE.digest) && !empty(USE_TOOLS:C/:.*//:Mdigest)
-.  if !empty(PKGPATH:Mpkgtools/digest)
+.  if ${PKGPATH} == pkgtools/digest
 MAKEFLAGS+=		TOOLS_IGNORE.digest=
 .  else
 .    if defined(TOOLS_PLATFORM.digest) && !empty(TOOLS_PLATFORM.digest)

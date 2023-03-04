@@ -1,4 +1,4 @@
-# $NetBSD: tools.Minix.mk,v 1.14 2022/04/04 11:23:07 riastradh Exp $
+# $NetBSD: tools.Minix.mk,v 1.15 2023/03/04 23:29:24 rillig Exp $
 #
 # System-supplied tools for the Minix operating system.
 
@@ -43,7 +43,7 @@ TOOLS_PLATFORM.gzip?=		/usr/bin/gzip -nf ${GZIP}
 TOOLS_PLATFORM.head?=		/usr/bin/head
 TOOLS_PLATFORM.hostname?=	/bin/hostname
 TOOLS_PLATFORM.id?=		/usr/bin/id
-.if empty(TOOLS_USE_CROSS_COMPILE:M[yY][eE][sS])
+.if ${TOOLS_USE_CROSS_COMPILE:tl} != yes
 TOOLS_PLATFORM.install?=	/usr/bin/install
 .else
 TOOLS_PLATFORM.install?=	${TOOLDIR}/bin/${MACHINE_GNU_PLATFORM}-install
@@ -67,7 +67,7 @@ TOOLS_PLATFORM.patch?=		/usr/bin/patch
 TOOLS_PLATFORM.pax?=		/bin/pax
 TOOLS_PLATFORM.printf?=		/usr/bin/printf
 TOOLS_PLATFORM.pwd?=		/bin/pwd
-.if empty(TOOLS_USE_CROSS_COMPILE:M[yY][eE][sS])
+.if ${TOOLS_USE_CROSS_COMPILE:tl} != yes
 TOOLS_PLATFORM.readelf?=	/usr/bin/readelf
 .else
 TOOLS_PLATFORM.readelf?=	${TOOLDIR}/bin/${MACHINE_GNU_PLATFORM}-readelf
@@ -82,7 +82,7 @@ TOOLS_PLATFORM.shlock?=		/usr/bin/shlock
 TOOLS_PLATFORM.sleep?=		/bin/sleep
 TOOLS_PLATFORM.soelim?=		/usr/bin/soelim
 TOOLS_PLATFORM.sort?=		/usr/bin/sort
-.if empty(TOOLS_USE_CROSS_COMPILE:M[yY][eE][sS])
+.if ${TOOLS_USE_CROSS_COMPILE:tl} != yes
 TOOLS_PLATFORM.strip?=		/usr/bin/strip
 .else
 TOOLS_PLATFORM.strip?=		${TOOLDIR}/bin/${MACHINE_GNU_PLATFORM}-strip
@@ -103,7 +103,7 @@ TOOLS_PLATFORM.xz?=		/usr/bin/xz
 TOOLS_PLATFORM.xzcat?=		/usr/bin/xzcat
 TOOLS_PLATFORM.yacc?=		/usr/bin/yacc
 
-.if !empty(TOOLS_USE_CROSS_COMPILE:M[yY][eE][sS])
+.if ${TOOLS_USE_CROSS_COMPILE:tl} == yes
 .  for _t_ in ar as ld nm objcopy objdump ranlib readelf strip
 TOOLS_PATH.${MACHINE_GNU_PLATFORM}-${_t_}?=	\
 	${TOOLDIR}/bin/${MACHINE_GNU_PLATFORM}-${_t_}

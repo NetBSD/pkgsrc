@@ -1,4 +1,4 @@
-# $NetBSD: tools.QNX.mk,v 1.2 2022/04/04 11:23:07 riastradh Exp $
+# $NetBSD: tools.QNX.mk,v 1.3 2023/03/04 23:29:24 rillig Exp $
 #
 # System-supplied tools for the QNX operating system.
 
@@ -55,7 +55,7 @@ TOOLS_PLATFORM.patch?=		/usr/bin/patch
 TOOLS_PLATFORM.pax?=		/bin/pax
 TOOLS_PLATFORM.printf?=		/usr/bin/printf
 TOOLS_PLATFORM.pwd?=		/bin/pwd
-.if empty(TOOLS_USE_CROSS_COMPILE:M[yY][eE][sS])
+.if ${TOOLS_USE_CROSS_COMPILE:tl} != yes
 TOOLS_PLATFORM.readelf?=	${QNX_HOST}/usr/bin/readelf
 .endif
 TOOLS_PLATFORM.rm?=		/bin/rm
@@ -65,7 +65,7 @@ TOOLS_PLATFORM.sh?=		/bin/sh
 TOOLS_PLATFORM.sleep?=		/usr/bin/sleep
 TOOLS_PLATFORM.soelim?=		${QNX_HOST}/usr/bin/soelim
 TOOLS_PLATFORM.sort?=		/usr/bin/sort
-.if empty(TOOLS_USE_CROSS_COMPILE:M[yY][eE][sS])
+.if ${TOOLS_USE_CROSS_COMPILE:tl} != yes
 TOOLS_PLATFORM.strip?=		${QNX_HOST}/usr/bin/strip
 .endif
 TOOLS_PLATFORM.tail?=		/usr/bin/tail
@@ -85,7 +85,7 @@ TOOLS_PLATFORM.yacc?=		${QNX_HOST}/usr/bin/bison -y
 
 
 
-.if !empty(TOOLS_USE_CROSS_COMPILE:M[yY][eE][sS])
+.if ${TOOLS_USE_CROSS_COMPILE:tl} == yes
 .  for _t_ in ar as ld nm objcopy objdump ranlib readelf strip
 TOOLS_PATH.${MACHINE_GNU_PLATFORM}-${_t_}?=	\
 	${QNX_HOST}/usr/bin/nto${MACHINE_GNU_PLATFORM}-${_t_}
