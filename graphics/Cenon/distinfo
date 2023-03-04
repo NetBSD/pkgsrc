@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 10:45:53 nia Exp $
-
-BLAKE2s (Cenon-3.9.6.tar.bz2) = 7cf4a8271ceb7a8421694db599086486dec5e5706afbb719562efb138daff905
-SHA512 (Cenon-3.9.6.tar.bz2) = 28becfdefe52ffabf36cedf45c9abd409d1f603bf9bf8e75c1637625b368707812c62408c8369a809359ed8977afa98d7eee1b3348de1e3ab9e485e59f853d45
-Size (Cenon-3.9.6.tar.bz2) = 2005991 bytes
-SHA1 (patch-aa) = 66a7e36332f58404f7acafc8e85bbe500e274148
