@@ -1,0 +1,6 @@
+Unicode::Blocks
+
+Each Unicode character belongs to a block.  This gem returns the all blocks
+associated with the given string.
+
+Unicode version: 15.0.0 (September 2022)
