@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1366 2023/02/23 15:55:15 taca Exp $
+# $NetBSD: Makefile,v 1.1367 2023/03/05 14:47:17 taca Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1288,6 +1288,7 @@ SUBDIR+=	ruby-tilt
 SUBDIR+=	ruby-toml
 SUBDIR+=	ruby-treetop
 SUBDIR+=	ruby-ultraviolet
+SUBDIR+=	ruby-unicode-blocks
 SUBDIR+=	ruby-unicode-display_width
 SUBDIR+=	ruby-unicode_utils
 SUBDIR+=	ruby-will-paginate
