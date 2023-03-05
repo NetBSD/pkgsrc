@@ -1,3 +1,0 @@
-bin/racc @PREFIX@/bin/racc@RUBY_SUFFIX@
-bin/racc2y @PREFIX@/bin/racc2y@RUBY_SUFFIX@
-bin/y2racc @PREFIX@/bin/y2racc@RUBY_SUFFIX@
