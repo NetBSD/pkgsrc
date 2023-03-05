@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:19:37 nia Exp $
-
-BLAKE2s (metaclass-0.0.4.gem) = 92879139adc62cd6da26f434edd61bd3bcce25da2f9de18e829bae55d5772122
-SHA512 (metaclass-0.0.4.gem) = 67326faf2384e53a2a1096f499cb6af35e5a7d5928eefeef81bae0519739aef78da6e196b62e904fb3247dd09d1bb3411e227473c155e7a8c20420408107e325
-Size (metaclass-0.0.4.gem) = 6656 bytes
