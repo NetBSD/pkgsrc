@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1559 2023/03/05 05:32:02 taca Exp $
+$NetBSD: CHANGES-2023,v 1.1560 2023/03/05 05:45:35 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2013,3 +2013,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/ruby-csv to 3.2.6 [taca 2023-03-05]
 	Removed devel/ruby-racc [taca 2023-03-05]
 	Removed devel/ruby-metaclass [taca 2023-03-05]
+	Removed devel/ruby-dep [taca 2023-03-05]
