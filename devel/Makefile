@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3930 2023/03/05 05:18:23 taca Exp $
+# $NetBSD: Makefile,v 1.3931 2023/03/05 05:30:39 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -3180,7 +3180,6 @@ SUBDIR+=	ruby-marcel
 SUBDIR+=	ruby-memcache
 SUBDIR+=	ruby-memoist
 SUBDIR+=	ruby-mercenary
-SUBDIR+=	ruby-metaclass
 SUBDIR+=	ruby-metaid
 SUBDIR+=	ruby-metasm
 SUBDIR+=	ruby-middleware
