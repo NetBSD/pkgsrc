@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.51 2023/01/29 11:19:37 adam Exp $
+$NetBSD: distinfo,v 1.52 2023/03/05 21:53:00 wiz Exp $
 
 BLAKE2s (gnuradio-3.10.5.1.tar.gz) = 1885da4ef42a9441ede29ea8689619a16b6468c30ffe59826c761ca12ff5155c
 SHA512 (gnuradio-3.10.5.1.tar.gz) = 37b8101baa7e6adbb60b55aedf2c951e75b14ef97091d967ab717eae699e014bd91c18fe7bf32117bbc5c0a3e0e44015be1c8d83177f9a3751893b49fb860df6
@@ -10,3 +10,4 @@ SHA1 (patch-gnuradio-runtime_lib_constants.cc.in) = fef80a546c713c565c3851ee7289
 SHA1 (patch-gnuradio-runtime_lib_thread_thread__group.cc) = 868809d5253b6465595dcade7f094844ff79f21c
 SHA1 (patch-gr-audio_lib_CMakeLists.txt) = d5acab47fdb007c50bb544af436102f0d38317aa
 SHA1 (patch-gr-audio_lib_alsa_alsa__impl_h) = cfa9b629e5cf21198cfd53cf27a908b5874866f4
+SHA1 (patch-gr-qtgui_examples_c++_CMakeLists.txt) = 06a5885b5e661667cf4bfe936ff45723d0801c22
