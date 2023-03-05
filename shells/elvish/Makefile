@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2023/02/28 22:31:53 pin Exp $
+# $NetBSD: Makefile,v 1.26 2023/03/05 07:37:37 pin Exp $
 
-DISTNAME=	elvish-0.19.0
+DISTNAME=	elvish-0.19.1
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GITHUB:=elves/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
