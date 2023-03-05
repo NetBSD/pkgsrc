@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/01/09 05:30:15 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/03/05 13:37:33 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.github/stale.yml
 ${GEM_LIBDIR}/.github/workflows/continuous_integration.yml
@@ -22,10 +22,13 @@ ${GEM_LIBDIR}/lib/git/base.rb
 ${GEM_LIBDIR}/lib/git/base/factory.rb
 ${GEM_LIBDIR}/lib/git/branch.rb
 ${GEM_LIBDIR}/lib/git/branches.rb
+${GEM_LIBDIR}/lib/git/command_line_result.rb
 ${GEM_LIBDIR}/lib/git/config.rb
 ${GEM_LIBDIR}/lib/git/diff.rb
 ${GEM_LIBDIR}/lib/git/encoding_utils.rb
 ${GEM_LIBDIR}/lib/git/escaped_path.rb
+${GEM_LIBDIR}/lib/git/failed_error.rb
+${GEM_LIBDIR}/lib/git/git_execute_error.rb
 ${GEM_LIBDIR}/lib/git/index.rb
 ${GEM_LIBDIR}/lib/git/lib.rb
 ${GEM_LIBDIR}/lib/git/log.rb
@@ -33,6 +36,7 @@ ${GEM_LIBDIR}/lib/git/object.rb
 ${GEM_LIBDIR}/lib/git/path.rb
 ${GEM_LIBDIR}/lib/git/remote.rb
 ${GEM_LIBDIR}/lib/git/repository.rb
+${GEM_LIBDIR}/lib/git/signaled_error.rb
 ${GEM_LIBDIR}/lib/git/stash.rb
 ${GEM_LIBDIR}/lib/git/stashes.rb
 ${GEM_LIBDIR}/lib/git/status.rb
