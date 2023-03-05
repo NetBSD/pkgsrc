@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1583 2023/03/05 14:24:35 taca Exp $
+$NetBSD: CHANGES-2023,v 1.1584 2023/03/05 14:26:20 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2041,3 +2041,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/ruby-aws-sdk-kms to 1.63.0 [taca 2023-03-05]
 	Updated www/ruby-puma to 6.1.1 [taca 2023-03-05]
 	Updated www/ruby-rack to 3.0.4.2 [taca 2023-03-05]
+	Updated www/ruby-rack2 to 2.2.6.3 [taca 2023-03-05]
