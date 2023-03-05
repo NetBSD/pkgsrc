@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2023/03/05 07:25:32 adam Exp $
+# $NetBSD: Makefile,v 1.32 2023/03/05 07:30:10 adam Exp $
 
 DISTNAME=	rich-13.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/willmcgugan/rich
 COMMENT=	Render rich text, tables, progress bars, syntax highlighting
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-markdown-it-py>=2.1.0:../../textproc/py-markdown-it-py
+DEPENDS+=	${PYPKGPREFIX}-markdown-it-py>=2.2.0:../../textproc/py-markdown-it-py
 DEPENDS+=	${PYPKGPREFIX}-pygments>=2.14.0:../../textproc/py-pygments
 
 USE_LANGUAGES=	# none
