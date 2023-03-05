@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2023/01/29 21:16:44 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.48 2023/03/05 20:33:26 wiz Exp $
 
 DISTNAME=	rad3R6P1
 PKGNAME=	radiance-3.6.1
@@ -13,6 +12,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.radiance-online.org/
 COMMENT=	Physically-based, image-generating, backward raytracer
 LICENSE=	radiance-license
+
+BROKEN=		"graphics/tiff does not provide a public uv_encode any longer"
 
 USE_TOOLS+=	pax csh:run
 
@@ -54,7 +55,7 @@ REPLACE_CSH+=	obj/office/anim.csh obj/office/anim2.csh
 
 PLIST_VARS+=	gl
 
-.if ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD" || ${OPSYS} == "Bitrig"
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD"
 PKGSRC_ARCH=	9
 .elif ${OPSYS} == "FreeBSD"
 PKGSRC_ARCH=	8
