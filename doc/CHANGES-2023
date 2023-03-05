@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1564 2023/03/05 07:35:20 pin Exp $
+$NetBSD: CHANGES-2023,v 1.1565 2023/03/05 07:36:41 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2022,3 +2022,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/py-google-auth to 2.16.2 [adam 2023-03-05]
 	Updated misc/wthrr to 0.9.0 [pin 2023-03-05]
 	Updated audio/termusic to 0.7.9 [pin 2023-03-05]
+	Updated www/libreddit to 0.29.4 [pin 2023-03-05]
