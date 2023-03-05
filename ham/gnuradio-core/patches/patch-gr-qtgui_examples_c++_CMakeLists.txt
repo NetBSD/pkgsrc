@@ -1,0 +1,14 @@
+$NetBSD: patch-gr-qtgui_examples_c++_CMakeLists.txt,v 1.1 2023/03/05 21:53:00 wiz Exp $
+
+Add missing library - fails to link due to missing symbols from libqwt otherwise.
+
+--- gr-qtgui/examples/c++/CMakeLists.txt.orig	2023-01-25 11:50:45.000000000 +0000
++++ gr-qtgui/examples/c++/CMakeLists.txt
+@@ -28,6 +28,6 @@ list(
+ qt5_wrap_cpp(qtgui_moc_sources display_qt.h)
+ 
+ add_executable(display_qt display_qt.cc ${qtgui_moc_sources})
+-target_link_libraries(display_qt ${QTGUI_LIBRARIES})
++target_link_libraries(display_qt ${QTGUI_LIBRARIES} -lqwt)
+ 
+ install(TARGETS display_qt DESTINATION ${GR_PKG_QTGUI_EXAMPLES_DIR})
