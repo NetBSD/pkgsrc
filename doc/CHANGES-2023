@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1554 2023/03/04 21:33:46 thorpej Exp $
+$NetBSD: CHANGES-2023,v 1.1555 2023/03/05 01:50:11 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2008,3 +2008,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated audio/spotify-player to 0.12.1 [pin 2023-03-04]
 	Updated security/paperkey to 1.6 [fcambus 2023-03-04]
 	Updated sysutils/nabud to 1.2.1 [thorpej 2023-03-04]
+	Updated sysutils/xfburn to 0.7.0 [gutteridge 2023-03-05]
