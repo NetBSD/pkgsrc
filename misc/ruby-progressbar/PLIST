@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2018/03/14 14:32:05 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2023/03/05 13:52:42 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/README.md
@@ -6,15 +6,12 @@ ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/lib/ruby-progressbar.rb
 ${GEM_LIBDIR}/lib/ruby-progressbar/base.rb
 ${GEM_LIBDIR}/lib/ruby-progressbar/calculators/length.rb
-${GEM_LIBDIR}/lib/ruby-progressbar/calculators/running_average.rb
-${GEM_LIBDIR}/lib/ruby-progressbar/components.rb
 ${GEM_LIBDIR}/lib/ruby-progressbar/components/bar.rb
 ${GEM_LIBDIR}/lib/ruby-progressbar/components/percentage.rb
 ${GEM_LIBDIR}/lib/ruby-progressbar/components/rate.rb
 ${GEM_LIBDIR}/lib/ruby-progressbar/components/time.rb
 ${GEM_LIBDIR}/lib/ruby-progressbar/components/title.rb
 ${GEM_LIBDIR}/lib/ruby-progressbar/errors/invalid_progress_error.rb
-${GEM_LIBDIR}/lib/ruby-progressbar/format.rb
 ${GEM_LIBDIR}/lib/ruby-progressbar/format/formatter.rb
 ${GEM_LIBDIR}/lib/ruby-progressbar/format/molecule.rb
 ${GEM_LIBDIR}/lib/ruby-progressbar/format/string.rb
@@ -23,8 +20,10 @@ ${GEM_LIBDIR}/lib/ruby-progressbar/outputs/non_tty.rb
 ${GEM_LIBDIR}/lib/ruby-progressbar/outputs/null.rb
 ${GEM_LIBDIR}/lib/ruby-progressbar/outputs/tty.rb
 ${GEM_LIBDIR}/lib/ruby-progressbar/progress.rb
+${GEM_LIBDIR}/lib/ruby-progressbar/projector.rb
+${GEM_LIBDIR}/lib/ruby-progressbar/projectors/smoothed_average.rb
 ${GEM_LIBDIR}/lib/ruby-progressbar/refinements.rb
-${GEM_LIBDIR}/lib/ruby-progressbar/refinements/enumerator.rb
+${GEM_LIBDIR}/lib/ruby-progressbar/refinements/progress_enumerator.rb
 ${GEM_LIBDIR}/lib/ruby-progressbar/throttle.rb
 ${GEM_LIBDIR}/lib/ruby-progressbar/time.rb
 ${GEM_LIBDIR}/lib/ruby-progressbar/timer.rb
