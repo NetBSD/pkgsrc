@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2021/06/28 19:33:23 mcf Exp $
+# $NetBSD: Makefile,v 1.51 2023/03/05 20:23:58 triaxx Exp $
 
 PKGNAME=	pkg_rolling-replace-0.24.13
 CATEGORIES=	pkgtools
@@ -30,7 +30,7 @@ SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-configure
 SUBST_MESSAGE.prefix=	Substituting PREFIX location.
 SUBST_FILES.prefix=	pkg_rolling-replace.8
-SUBST_VARS.prefix=	PREFIX
+SUBST_VARS.prefix=	PKG_DBDIR PREFIX
 
 SUBST_CLASSES+=		makeconf
 SUBST_STAGE.makeconf=	pre-configure
