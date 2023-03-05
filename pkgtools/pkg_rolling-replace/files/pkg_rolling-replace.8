@@ -1,4 +1,4 @@
-.\" $NetBSD: pkg_rolling-replace.8,v 1.22 2021/04/13 17:51:21 rhialto Exp $
+.\" $NetBSD: pkg_rolling-replace.8,v 1.23 2023/03/05 20:23:59 triaxx Exp $
 .Dd February 1, 2010
 .Dt PKG_ROLLING-REPLACE 8
 .Os
@@ -179,7 +179,7 @@ appears to contain a pkgsrc tree, then that is used as a last resort.
 .It Ev PKG_DBDIR
 pkgsrc database directory.
 If not set in environment then defaults to
-.Pa /var/db/pkg .
+.Pa @PKG_DBDIR@ .
 .El
 .Sh EXAMPLES
 To update all packages on the system and ensure correct shared library
@@ -217,7 +217,7 @@ pkg_rolling-replace -krsv -L /var/log/pkg_rr -X openoffice2
 To mark all packages that compiled against X11 as needing rebuild
 (used after switching to X11_TYPE=modular):
 .Bd -literal -offset indent
-cd /var/db/pkg \*[Am]\*[Am] grep "blddep x11-links" */* | cut -d/ -f1 | \\
+cd @PKG_DBDIR@ \*[Am]\*[Am] grep "blddep x11-links" */* | cut -d/ -f1 | \\
 sort -u | xargs pkg_admin set rebuild=YES
 .Ed
 .Pp
