@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3931 2023/03/05 05:30:39 taca Exp $
+# $NetBSD: Makefile,v 1.3932 2023/03/05 05:44:09 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -3122,7 +3122,6 @@ SUBDIR+=	ruby-daemon_controller
 SUBDIR+=	ruby-deep_merge
 SUBDIR+=	ruby-delayer
 SUBDIR+=	ruby-delayer-deferred
-SUBDIR+=	ruby-dep
 SUBDIR+=	ruby-deprecated
 SUBDIR+=	ruby-dhaka
 SUBDIR+=	ruby-diva
