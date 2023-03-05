@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1590 2023/03/05 15:02:07 taca Exp $
+$NetBSD: CHANGES-2023,v 1.1591 2023/03/05 18:01:45 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2048,3 +2048,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added textproc/ruby-unicode-scripts version 1.8.0 [taca 2023-03-05]
 	Updated textproc/ruby-kramdown-rfc2629 to 1.6.26 [taca 2023-03-05]
 	Removed www/termtter [taca 2023-03-05]
+	Updated net/syncthing to 1.23.1 [triaxx 2023-03-05]
