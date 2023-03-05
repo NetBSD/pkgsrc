@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1557 2023/03/05 05:16:08 taca Exp $
+$NetBSD: CHANGES-2023,v 1.1558 2023/03/05 05:19:47 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2011,3 +2011,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/xfburn to 0.7.0 [gutteridge 2023-03-05]
 	Updated x11/xfce4-notifyd to 0.8.2 [gutteridge 2023-03-05]
 	Updated textproc/ruby-csv to 3.2.6 [taca 2023-03-05]
+	Removed devel/ruby-racc [taca 2023-03-05]
