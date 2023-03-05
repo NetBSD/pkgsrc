@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1595 2023/03/05 20:19:36 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1596 2023/03/05 20:43:17 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2053,3 +2053,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/parallel-disk-usage to 0.8.6 [pin 2023-03-05]
 	Updated www/php-dotclear to 2.25.3 [triaxx 2023-03-05]
 	Updated lang/polyml to 5.9 [wiz 2023-03-05]
+	Updated audio/gospt to 0.0.41 [pin 2023-03-05]
