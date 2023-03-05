@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1575 2023/03/05 13:53:02 taca Exp $
+$NetBSD: CHANGES-2023,v 1.1576 2023/03/05 13:54:26 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2033,3 +2033,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/ruby-parser to 3.20.0 [taca 2023-03-05]
 	Updated devel/ruby-rgl to 0.6.2 [taca 2023-03-05]
 	Updated misc/ruby-progressbar to 1.13.0 [taca 2023-03-05]
+	Updated misc/ruby-slop to 4.10.1 [taca 2023-03-05]
