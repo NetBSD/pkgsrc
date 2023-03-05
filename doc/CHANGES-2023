@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1566 2023/03/05 07:37:56 pin Exp $
+$NetBSD: CHANGES-2023,v 1.1567 2023/03/05 10:15:46 js Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2024,3 +2024,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated audio/termusic to 0.7.9 [pin 2023-03-05]
 	Updated www/libreddit to 0.29.4 [pin 2023-03-05]
 	Updated shells/elvish to 0.19.1 [pin 2023-03-05]
+	Updated chat/matrix-synapse to 1.78.0 [js 2023-03-05]
