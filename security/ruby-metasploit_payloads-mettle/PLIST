@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2020/03/24 16:04:18 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/03/05 14:07:30 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/build/aarch64-apple-darwin/bin/mettle
+${GEM_LIBDIR}/build/aarch64-apple-darwin/bin/sniffer
 ${GEM_LIBDIR}/build/aarch64-iphone-darwin/bin/mettle
 ${GEM_LIBDIR}/build/aarch64-iphone-darwin/bin/mettle.dylib
 ${GEM_LIBDIR}/build/aarch64-iphone-darwin/bin/mettle.sha1.dylib
