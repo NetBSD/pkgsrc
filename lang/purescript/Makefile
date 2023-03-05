@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2023/02/07 01:40:58 pho Exp $
+# $NetBSD: Makefile,v 1.11 2023/03/05 22:10:57 wiz Exp $
 
 DISTNAME=	purescript-0.15.7
 PKGNAME=	${DISTNAME}
@@ -18,6 +18,7 @@ HASKELL_UNRESTRICT_DEPENDENCIES+=	\
 	Cabal	\
 	aeson	\
 	base	\
+	happy	\
 	language-javascript	\
 	lens	\
 	memory	\
