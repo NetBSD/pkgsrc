@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.40 2023/01/12 19:32:53 adam Exp $
+$NetBSD: distinfo,v 1.41 2023/03/05 17:26:09 he Exp $
 
 BLAKE2s (cmake-15.0.7.src.tar.xz) = 2c299f2c58800bcb0c5930562d24baed0e94806df8b8d5295c0866ffeaaf233f
 SHA512 (cmake-15.0.7.src.tar.xz) = 85097a6eaee0df004567905f7e5ce8ca02e3b46c6fc66fa552fe99734642e6ee61685de4e5e6e8b505963334d7b91d98ecd9c5870e6bdd3f0018ee5b963ffa96
@@ -11,4 +11,5 @@ SHA1 (patch-cmake_config-ix.cmake) = f5cd0c949d35020d1051f95417e7944aa71a3d54
 SHA1 (patch-cmake_modules_AddLLVM.cmake) = 4e6668e0c3e13423ce3e19304f4ad60f66d41562
 SHA1 (patch-include_llvm-c_DataTypes.h) = ff547cae5bdf90c5a1371b9eb196e7537a03b18d
 SHA1 (patch-include_llvm_Analysis_ConstantFolding.h) = 0a8db4d876b749dd492fced6fbc8c4faf3ff2450
+SHA1 (patch-lib_Support_BLAKE3-blake3__impl.h) = 29624dc764c747b247dbde19e9d186a853b59134
 SHA1 (patch-tools_llvm-shlib_CMakeLists.txt) = be0f3fd2a020f634a5f8ec972275e52dc92d36a5
