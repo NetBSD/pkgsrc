@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1690 2023/03/03 08:26:54 adam Exp $
+# $NetBSD: Makefile,v 1.1691 2023/03/05 14:58:36 taca Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -1072,7 +1072,6 @@ SUBDIR+=	swill
 SUBDIR+=	swish-e
 SUBDIR+=	syndication
 SUBDIR+=	tcl-cgi
-SUBDIR+=	termtter
 SUBDIR+=	thin
 SUBDIR+=	thttpd
 SUBDIR+=	tidy
