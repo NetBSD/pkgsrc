@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2020/04/11 05:05:40 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/03/05 01:49:58 gutteridge Exp $
 bin/xfburn
 man/man1/xfburn.1
 share/Thunar/sendto/thunar-sendto-xfburn.desktop
@@ -56,7 +56,6 @@ share/locale/cs/LC_MESSAGES/xfburn.mo
 share/locale/da/LC_MESSAGES/xfburn.mo
 share/locale/de/LC_MESSAGES/xfburn.mo
 share/locale/el/LC_MESSAGES/xfburn.mo
-share/locale/en/LC_MESSAGES/xfburn.mo
 share/locale/en_AU/LC_MESSAGES/xfburn.mo
 share/locale/en_GB/LC_MESSAGES/xfburn.mo
 share/locale/es/LC_MESSAGES/xfburn.mo
@@ -69,6 +68,7 @@ share/locale/he/LC_MESSAGES/xfburn.mo
 share/locale/hr/LC_MESSAGES/xfburn.mo
 share/locale/hu/LC_MESSAGES/xfburn.mo
 share/locale/hy_AM/LC_MESSAGES/xfburn.mo
+share/locale/hye/LC_MESSAGES/xfburn.mo
 share/locale/id/LC_MESSAGES/xfburn.mo
 share/locale/ie/LC_MESSAGES/xfburn.mo
 share/locale/is/LC_MESSAGES/xfburn.mo
