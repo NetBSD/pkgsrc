@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1560 2023/03/05 05:45:35 taca Exp $
+$NetBSD: CHANGES-2023,v 1.1561 2023/03/05 07:19:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2014,3 +2014,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed devel/ruby-racc [taca 2023-03-05]
 	Removed devel/ruby-metaclass [taca 2023-03-05]
 	Removed devel/ruby-dep [taca 2023-03-05]
+	Updated graphics/py-matplotlib to 3.7.1 [adam 2023-03-05]
+	Updated graphics/py-matplotlib-venn to 0.11.9 [adam 2023-03-05]
