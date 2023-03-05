@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1573 2023/03/05 13:46:40 taca Exp $
+$NetBSD: CHANGES-2023,v 1.1574 2023/03/05 13:50:30 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2031,3 +2031,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/ruby-minitest to 5.18.0 [taca 2023-03-05]
 	Updated devel/ruby-msgpack to 1.6.1 [taca 2023-03-05]
 	Updated devel/ruby-parser to 3.20.0 [taca 2023-03-05]
+	Updated devel/ruby-rgl to 0.6.2 [taca 2023-03-05]
