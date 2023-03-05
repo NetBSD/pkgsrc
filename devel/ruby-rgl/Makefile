@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2023/02/23 14:57:56 taca Exp $
+# $NetBSD: Makefile,v 1.18 2023/03/05 13:50:09 taca Exp $
 
-DISTNAME=	rgl-0.6.0
+DISTNAME=	rgl-0.6.2
 CATEGORIES=	devel
 
 MAINTAINER=	minskim@NetBSD.org
