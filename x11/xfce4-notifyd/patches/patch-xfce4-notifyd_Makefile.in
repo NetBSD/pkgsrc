@@ -1,10 +1,10 @@
-$NetBSD: patch-Makefile.in,v 1.1 2020/12/22 00:28:13 gutteridge Exp $
+$NetBSD: patch-xfce4-notifyd_Makefile.in,v 1.1 2023/03/05 02:10:43 gutteridge Exp $
 
 Adjust to pkgsrc norms for placing configuration files.
 
---- Makefile.in.orig	2020-08-31 22:01:43.000000000 +0000
-+++ Makefile.in
-@@ -662,7 +662,7 @@ dist_autostart = \
+--- xfce4-notifyd/Makefile.in.orig	2023-03-05 01:55:52.784872329 +0000
++++ xfce4-notifyd/Makefile.in
+@@ -510,7 +510,7 @@ dist_noinst_DATA = \
  @USE_DBUS_START_DAEMON_TRUE@systemd_userdir = $(prefix)/lib/systemd/user
  @USE_DBUS_START_DAEMON_TRUE@systemd_user_DATA = $(systemd_user_in_files:.service.in=.service)
  @USE_DBUS_START_DAEMON_TRUE@distclean_service = $(service_DATA) $(systemd_user_DATA)
@@ -12,4 +12,4 @@ Adjust to pkgsrc norms for placing configuration files.
 +@USE_DBUS_START_DAEMON_FALSE@autostartdir = $(datadir)/examples/xfce4-notifyd
  @USE_DBUS_START_DAEMON_FALSE@autostart_DATA = $(autostart_in_files:.desktop.in=.desktop)
  @USE_DBUS_START_DAEMON_FALSE@distclean_autostart = $(autostart_DATA)
- dist_man1_MANS = \
+ built_xfce4_notifyd = \
