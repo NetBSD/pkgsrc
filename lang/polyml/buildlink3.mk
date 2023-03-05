@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2021/03/05 09:19:58 jaapb Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2023/03/05 20:19:11 wiz Exp $
 
 BUILDLINK_TREE+=	polyml
 
@@ -11,4 +11,3 @@ BUILDLINK_PKGSRCDIR.polyml?=	../../lang/polyml
 .endif	# POLYML_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-polyml
-
