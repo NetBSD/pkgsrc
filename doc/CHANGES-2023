@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1594 2023/03/05 19:22:12 triaxx Exp $
+$NetBSD: CHANGES-2023,v 1.1595 2023/03/05 20:19:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2052,3 +2052,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/bombadillo to 2.4.0 [pin 2023-03-05]
 	Updated sysutils/parallel-disk-usage to 0.8.6 [pin 2023-03-05]
 	Updated www/php-dotclear to 2.25.3 [triaxx 2023-03-05]
+	Updated lang/polyml to 5.9 [wiz 2023-03-05]
