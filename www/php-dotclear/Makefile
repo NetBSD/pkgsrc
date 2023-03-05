@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2022/09/19 03:34:15 triaxx Exp $
+# $NetBSD: Makefile,v 1.8 2023/03/05 19:21:23 triaxx Exp $
 
-DISTNAME=	dotclear-2.23.1
+DISTNAME=	dotclear-2.25.3
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	https://download.dotclear.org/latest/ \
@@ -26,7 +26,7 @@ BUILD_DEFS+=	PKG_SYSCONFBASE VARBASE
 
 .include "options.mk"
 
-PHP_VERSIONS_ACCEPTED=	81 80 74
+PHP_VERSIONS_ACCEPTED=	82 81 80 74
 
 PKG_SYSCONFSUBDIR=	dotclear
 

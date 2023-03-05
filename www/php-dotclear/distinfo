@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.7 2022/09/19 03:34:15 triaxx Exp $
+$NetBSD: distinfo,v 1.8 2023/03/05 19:21:23 triaxx Exp $
 
-BLAKE2s (dotclear-2.23.1.tar.gz) = 737a6cb776bf5f6bb768e86132a3e4cfc0a2d67f06934f2c864e4b58890997ce
-SHA512 (dotclear-2.23.1.tar.gz) = 48f64f609f71e90540f58a7111c128103dea654c919f6ffc63c355f48ce5f30f9bceee911437ee913941e6dbf92ad23736a42a9dd4aec8be04d011efa353a212
-Size (dotclear-2.23.1.tar.gz) = 2875941 bytes
+BLAKE2s (dotclear-2.25.3.tar.gz) = 2d99b653626c129206a5a1ef034b1e387937b44a295324055363551fb9936cb5
+SHA512 (dotclear-2.25.3.tar.gz) = d84bafa3e1c5e80521872b6a0837ec876a281005b970bfa53ac8441e9eba4b3452205a3adccf248a72ebbcd88a009b92c217ae68b39299cc34a50708617e372f
+Size (dotclear-2.25.3.tar.gz) = 3027983 bytes
 SHA1 (patch-admin_install_index.php) = 038d7aed4ca4384fc6902b18a31db92fe3746be1
-SHA1 (patch-admin_install_wizard.php) = 5847ec3f7b3d5407a90194479a1a1d5819ab9f24
+SHA1 (patch-admin_install_wizard.php) = 1f946e2ada420c3d418cc291f40580e80e220c28
 SHA1 (patch-inc_config.php.in) = 14010e990adf5825b7611c1c76fa64cf233c41df
-SHA1 (patch-inc_core_class.dc.core.php) = 6811b81f4bad1ec46e55a894387d7dca29a8d7ad
-SHA1 (patch-inc_load__plugin__file.php) = b71954beac273933aada40ac93097fd4dad34ad7
-SHA1 (patch-inc_prepend.php) = 89e75b5e5d659c3b6365fcb2e392106f6d4e66b3
+SHA1 (patch-inc_core_class.dc.core.php) = ab8069f832b5e4de06be570fea533d62cf7d0902
+SHA1 (patch-inc_load__plugin__file.php) = 79944a8dd17bb513f6fc3e80800ad215d6ce28d1
+SHA1 (patch-inc_prepend.php) = f12223b995cb232afbd0b0a10bc5ca2ecd3587ee
