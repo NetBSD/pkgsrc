@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/05/02 18:24:58 alnsn Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/03/05 20:19:11 wiz Exp $
 bin/poly
 bin/polyc
 bin/polyimport
