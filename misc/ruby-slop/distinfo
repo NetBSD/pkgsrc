@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2023/02/23 15:02:45 taca Exp $
+$NetBSD: distinfo,v 1.15 2023/03/05 13:54:04 taca Exp $
 
-BLAKE2s (slop-4.10.0.gem) = 234785fb4440be1e92cdb3461c1f57c3a4667a09119b11880fd89d0c993fbf5f
-SHA512 (slop-4.10.0.gem) = 443868056e0a37e379c844879f026f6943320bda306dfafcdbc68b618ccc49d6daa62aa8da033c0fe9277e084f8ff957f720b2832193b664a0f9089485c02904
-Size (slop-4.10.0.gem) = 21504 bytes
+BLAKE2s (slop-4.10.1.gem) = 28dd927743f608eebf3dd9ff019db4b7965cea9a96df7bd5700efbba8d6213af
+SHA512 (slop-4.10.1.gem) = d863d10b4b2d07f24d6bcfbda2c69e6224d10b41a15664f11aee17132df64ee2043f63cadfb4d7f46de83b43a72df92bdec85b7702e9d6125fe207620ad68c99
+Size (slop-4.10.1.gem) = 22016 bytes
