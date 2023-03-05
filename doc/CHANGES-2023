@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1591 2023/03/05 18:01:45 triaxx Exp $
+$NetBSD: CHANGES-2023,v 1.1592 2023/03/05 19:01:59 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2049,3 +2049,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/ruby-kramdown-rfc2629 to 1.6.26 [taca 2023-03-05]
 	Removed www/termtter [taca 2023-03-05]
 	Updated net/syncthing to 1.23.1 [triaxx 2023-03-05]
+	Updated net/bombadillo to 2.4.0 [pin 2023-03-05]
