@@ -1,10 +1,9 @@
-$NetBSD: patch-configure.ac,v 1.23 2023/02/13 14:59:36 ryoon Exp $
+$NetBSD: patch-configure.ac,v 1.24 2023/03/05 18:22:41 tnn Exp $
 
 * Add NetBSD/aarch64 support.
 * Disable freetype2 and fontconfig from pkgsrc explicitly.
   to fix X11_TYPE=native build and internal pdfium's internal freetype build.
 * Fix some static links.
-* Include header files from security/gpgme correctly.
 * Find devel/apache-ant.
 
 --- configure.ac.orig	2023-01-25 14:26:33.000000000 +0000
@@ -47,15 +46,6 @@ $NetBSD: patch-configure.ac,v 1.23 2023/02/13 14:59:36 ryoon Exp $
  libo_CHECK_SYSTEM_MODULE([harfbuzz],[HARFBUZZ],[harfbuzz-icu >= 2.6.8])
  
  if test "$COM" = "MSC"; then # override the above
-@@ -12530,7 +12535,7 @@ elif test \( \( "$_os" = "Linux" -o "$_o
-         SYSTEM_GPGMEPP=TRUE
- 
-         # C++ library doesn't come with fancy gpgmepp-config, check for headers the old-fashioned way
--        AC_CHECK_HEADER(gpgme++/gpgmepp_version.h, [ GPGMEPP_CFLAGS=-I/usr/include/gpgme++ ],
-+        AC_CHECK_HEADER(gpgme++/gpgmepp_version.h, [ GPGMEPP_CFLAGS=-I@PREFIX@/include/gpgme++ ],
-             [AC_MSG_ERROR([gpgmepp headers not found, install gpgmepp >= 1.14 development package])], [])
-         AC_CHECK_HEADER(gpgme.h, [],
-             [AC_MSG_ERROR([gpgme headers not found, install gpgme development package])], [])
 @@ -13734,8 +13739,8 @@ EOF
                      if test -f /usr/share/ant-core/lib/ant.jar; then
                          ANT_LIB=/usr/share/ant-core/lib

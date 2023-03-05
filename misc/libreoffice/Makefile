@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.299 2023/02/13 14:59:36 ryoon Exp $
+# $NetBSD: Makefile,v 1.300 2023/03/05 18:22:41 tnn Exp $
 
 VERREL=		7.5.0
 VERRC=		3
@@ -29,17 +29,13 @@ SUBST_MESSAGE.use-bash=		Using bash for configure script
 SUBST_FILES.use-bash+=		autogen.sh
 SUBST_VARS.use-bash+=		BASH
 
-#SUBST_CLASSES+=			zxing
-#SUBST_STAGE.zxing=		pre-configure
-#SUBST_MESSAGE.zxing=		Include zxing header files
-#SUBST_FILES.zxing+=		configure.ac
+SUBST_CLASSES+=			configure-paths
+SUBST_STAGE.configure-paths=	pre-configure
+SUBST_MESSAGE.configure-paths=	Fixing paths in configure.ac
+SUBST_FILES.configure-paths+=	configure.ac
+SUBST_SED.configure-paths+=	-e 's,-I/usr/include/dragonbox-1.0.0,-I${BUILDLINK_PREFIX.dragonbox}/include/dragonbox-1.1.3,'
+SUBST_SED.configure-paths+=	-e 's,-I/usr/include/gpgme++,-I${BUILDLINK_PREFIX.gpgme}/include/gpgme++,'
 #SUBST_SED.zxing+=		-e 's,ZXING_CFLAGS=-I/usr/include/ZXing,ZXING_CFLAGS=-I${BUILDLINK_PREFIX.zxing-cpp}/include/ZXing,'
-
-SUBST_CLASSES+=			dragonbox
-SUBST_STAGE.dragonbox=		pre-configure
-SUBST_MESSAGE.dragonbox=	Include dragonbox header files
-SUBST_FILES.dragonbox+=		configure.ac
-SUBST_SED.dragonbox+=		-e 's,/usr/include/dragonbox-1.0.0,${BUILDLINK_PREFIX.dragonbox}/include/dragonbox-1.1.3,'
 
 SUBST_CLASSES+=			font-path
 SUBST_STAGE.font-path=		pre-configure
