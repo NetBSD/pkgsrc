@@ -1,11 +1,11 @@
-$NetBSD: patch-pkg_build_cmd.go,v 1.2 2022/01/01 06:34:13 triaxx Exp $
+$NetBSD: patch-pkg_build_cmd.go,v 1.3 2023/03/05 21:22:45 triaxx Exp $
 
 Use the same go binary as the one used to build.
 from: patch-build.go,v 1.1 2021/03/23 04:16:08 triaxx Exp
 
 --- pkg/build/cmd.go.orig	2021-12-06 07:21:15.000000000 +0000
 +++ pkg/build/cmd.go
-@@ -130,7 +130,7 @@ func setup(goos string) {
+@@ -141,7 +141,7 @@ func setup(goos string) {
  		args = append(args, "-buildmode=exe")
  	}
  	args = append(args, "./pkg/cmd/grafana-server")
@@ -14,7 +14,7 @@ from: patch-build.go,v 1.1 2021/03/23 04:16:08 triaxx Exp
  }
  
  func doBuild(binaryName, pkg string, opts BuildOpts) error {
-@@ -177,7 +177,7 @@ func doBuild(binaryName, pkg string, opt
+@@ -188,7 +188,7 @@ func doBuild(binaryName, pkg string, opt
  	args = append(args, "-o", binary)
  	args = append(args, pkg)
  
@@ -23,7 +23,7 @@ from: patch-build.go,v 1.1 2021/03/23 04:16:08 triaxx Exp
  
  	if opts.isDev {
  		return nil
-@@ -186,7 +186,7 @@ func doBuild(binaryName, pkg string, opt
+@@ -197,7 +197,7 @@ func doBuild(binaryName, pkg string, opt
  	if err := setBuildEnv(opts); err != nil {
  		return err
  	}
