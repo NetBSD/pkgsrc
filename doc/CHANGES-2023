@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1587 2023/03/05 14:50:26 taca Exp $
+$NetBSD: CHANGES-2023,v 1.1588 2023/03/05 14:51:58 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2045,3 +2045,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/ruby-faraday-retry to 2.1.0 [taca 2023-03-05]
 	Added textproc/ruby-unicode-blocks version 1.8.0 [taca 2023-03-05]
 	Added textproc/ruby-unicode-name version 1.11.0 [taca 2023-03-05]
+	Added textproc/ruby-unicode-scripts version 1.8.0 [taca 2023-03-05]
