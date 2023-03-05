@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1556 2023/03/05 02:11:33 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.1557 2023/03/05 05:16:08 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2010,3 +2010,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/nabud to 1.2.1 [thorpej 2023-03-04]
 	Updated sysutils/xfburn to 0.7.0 [gutteridge 2023-03-05]
 	Updated x11/xfce4-notifyd to 0.8.2 [gutteridge 2023-03-05]
+	Updated textproc/ruby-csv to 3.2.6 [taca 2023-03-05]
