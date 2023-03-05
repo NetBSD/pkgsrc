@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.4 2023/02/28 22:34:43 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.5 2023/03/05 19:02:45 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	assert-cmp-0.2.1
 CARGO_CRATE_DEPENDS+=	autocfg-1.1.0
