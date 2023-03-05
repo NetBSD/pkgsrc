@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2023/03/05 14:49:28 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/CHANGELOG.md
+${GEM_LIBDIR}/CODE_OF_CONDUCT.md
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/Gemfile.lock
+${GEM_LIBDIR}/MIT-LICENSE.txt
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/data/name.marshal.gz
+${GEM_LIBDIR}/lib/unicode/name.rb
+${GEM_LIBDIR}/lib/unicode/name/constants.rb
+${GEM_LIBDIR}/lib/unicode/name/index.rb
+${GEM_LIBDIR}/lib/unicode/name/string_ext.rb
+${GEM_LIBDIR}/spec/unicode_name_spec.rb
+${GEM_LIBDIR}/unicode-name.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec

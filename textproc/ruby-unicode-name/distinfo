@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/03/05 14:49:28 taca Exp $
+
+BLAKE2s (unicode-name-1.11.0.gem) = e603adf47c0704e233eb1b8386fd0e53810d861371a4cc0023bb557546efc2a8
+SHA512 (unicode-name-1.11.0.gem) = c5606cfdb2080e3ccdcc3f9d780301bba02595d3f4f39bcfb45769a0177281c947ef0244a72faa32ab147677d6be4c47520f5e8597f6c33bbb19ac4c4c61d0b2
+Size (unicode-name-1.11.0.gem) = 253440 bytes
