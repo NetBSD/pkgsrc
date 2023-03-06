@@ -1,4 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2022/09/15 22:13:43 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/03/06 12:29:11 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${EGG_NAME}-nspkg.pth
 ${PYSITELIB}/google/api/__init__.py
 ${PYSITELIB}/google/api/__init__.pyc
 ${PYSITELIB}/google/api/__init__.pyo
@@ -188,10 +195,18 @@ ${PYSITELIB}/google/rpc/context/attribute_context.proto
 ${PYSITELIB}/google/rpc/context/attribute_context_pb2.py
 ${PYSITELIB}/google/rpc/context/attribute_context_pb2.pyc
 ${PYSITELIB}/google/rpc/context/attribute_context_pb2.pyo
+${PYSITELIB}/google/rpc/context/audit_context.proto
+${PYSITELIB}/google/rpc/context/audit_context_pb2.py
+${PYSITELIB}/google/rpc/context/audit_context_pb2.pyc
+${PYSITELIB}/google/rpc/context/audit_context_pb2.pyo
 ${PYSITELIB}/google/rpc/error_details.proto
 ${PYSITELIB}/google/rpc/error_details_pb2.py
 ${PYSITELIB}/google/rpc/error_details_pb2.pyc
 ${PYSITELIB}/google/rpc/error_details_pb2.pyo
+${PYSITELIB}/google/rpc/http.proto
+${PYSITELIB}/google/rpc/http_pb2.py
+${PYSITELIB}/google/rpc/http_pb2.pyc
+${PYSITELIB}/google/rpc/http_pb2.pyo
 ${PYSITELIB}/google/rpc/status.proto
 ${PYSITELIB}/google/rpc/status_pb2.py
 ${PYSITELIB}/google/rpc/status_pb2.pyc
@@ -267,10 +282,3 @@ ${PYSITELIB}/google/type/timeofday.proto
 ${PYSITELIB}/google/type/timeofday_pb2.py
 ${PYSITELIB}/google/type/timeofday_pb2.pyc
 ${PYSITELIB}/google/type/timeofday_pb2.pyo
-${PYSITELIB}/${EGG_NAME}-nspkg.pth
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
