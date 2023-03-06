@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/09/11 12:51:22 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2023/03/06 19:38:17 he Exp $
 
 DISTNAME=	snapcast-0.26.0
 PKGREVISION=	3
@@ -77,4 +77,5 @@ post-install:
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../textproc/expat/buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
