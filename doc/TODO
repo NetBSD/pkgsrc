@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22663 2023/03/05 20:19:36 wiz Exp $
+$NetBSD: TODO,v 1.22664 2023/03/06 01:04:28 wiz Exp $
 
 Suggested new packages
 ======================
@@ -999,7 +999,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o monocypher-3.1.2
 	o mopher-0.6.0
 	o moserial-2.30.0
-	o mpcomplex-1.2.1
+	o mpcomplex-1.3.1
 	o mserv-devel-0.41
 	o mtail-1.2.0
 	o multitail-6.4.2
@@ -1294,7 +1294,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o quazip-1.1
 	o qutebrowser-2.2.0
 	o racket-8.7
-	o radiance-4R1
+	o radiance-5.3
 	o rails-6.1.0
 	o raine-0.64.9
 	o raptor2-2.0.16
