@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1601 2023/03/06 08:27:24 adam Exp $
+$NetBSD: CHANGES-2023,v 1.1602 2023/03/06 09:29:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2059,3 +2059,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated audio/gospt to 0.0.42 [pin 2023-03-06]
 	Updated x11/xterm to 379 [pin 2023-03-06]
 	Removed databases/postgresql10 [adam 2023-03-06]
+	Updated net/rabbitmq to 3.11.10 [adam 2023-03-06]
+	Updated www/py-bottle to 0.12.25 [adam 2023-03-06]
