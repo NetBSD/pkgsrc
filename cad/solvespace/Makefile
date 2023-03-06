@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2023/01/29 21:15:36 ryoon Exp $
+# $NetBSD: Makefile,v 1.21 2023/03/06 19:22:50 he Exp $
 #
 #
 # Both of these hashes need to be updated when the solvespace version
@@ -62,4 +62,5 @@ pre-configure:
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/json-c/buildlink3.mk"
 .include "../../x11/gtkmm3/buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
