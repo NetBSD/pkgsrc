@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.142 2023/01/29 21:18:33 ryoon Exp $
+# $NetBSD: Makefile,v 1.143 2023/03/06 07:27:09 pin Exp $
 
-DISTNAME=	xterm-378
-PKGREVISION=	1
+DISTNAME=	xterm-379
 CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.invisible-island.net/xterm/
 EXTRACT_SUFX=	.tgz
@@ -26,6 +25,8 @@ CONFIGURE_ARGS.3d=		--with-Xaw3d
 CONFIGURE_ARGS.xpm=		--with-Xaw3d
 CONFIGURE_ARGS.neXtaw=		--with-neXtaw
 CONFIGURE_ARGS+=		${${CONFIGURE_ARGS.${XAW_TYPE}}:L}
+
+LDFLAGS+=		-lfreetype
 
 INSTALLATION_DIRS=	share/applications
 
