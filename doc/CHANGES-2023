@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1599 2023/03/06 07:25:53 pin Exp $
+$NetBSD: CHANGES-2023,v 1.1600 2023/03/06 07:27:30 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2057,3 +2057,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated shells/elvish to 0.19.2 [pin 2023-03-05]
 	Updated www/grafana to 9.4.3 [triaxx 2023-03-05]
 	Updated audio/gospt to 0.0.42 [pin 2023-03-06]
+	Updated x11/xterm to 379 [pin 2023-03-06]
