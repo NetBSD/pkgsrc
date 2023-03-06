@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.77 2023/02/14 16:04:09 adam Exp $
+# $NetBSD: Makefile,v 1.78 2023/03/06 09:25:19 adam Exp $
 
-DISTNAME=	rabbitmq-server-3.11.9
+DISTNAME=	rabbitmq-server-3.11.10
 PKGNAME=	${DISTNAME:S/-server//}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rabbitmq/}
@@ -95,9 +95,9 @@ CHECK_INTERPRETER_SKIP+=	${RABBITMQ_HOME}/escript/rabbitmq-diagnostics
 CHECK_INTERPRETER_SKIP+=	${RABBITMQ_HOME}/escript/rabbitmq-plugins
 CHECK_INTERPRETER_SKIP+=	${RABBITMQ_HOME}/escript/rabbitmq-queues
 CHECK_INTERPRETER_SKIP+=	${RABBITMQ_HOME}/escript/rabbitmq-streams
-CHECK_INTERPRETER_SKIP+=	${RABBITMQ_HOME}/escript/rabbitmq-tanzu
 CHECK_INTERPRETER_SKIP+=	${RABBITMQ_HOME}/escript/rabbitmq-upgrade
 CHECK_INTERPRETER_SKIP+=	${RABBITMQ_HOME}/escript/rabbitmqctl
+CHECK_INTERPRETER_SKIP+=	${RABBITMQ_HOME}/escript/vmware-rabbitmq
 CHECK_INTERPRETER_SKIP+=	${RABBITMQ_HOME}/sbin/cuttlefish
 
 MAKE_ENV+=		MANDIR="${PREFIX}/${PKGMANDIR}"
