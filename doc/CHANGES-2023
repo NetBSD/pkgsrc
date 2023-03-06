@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1607 2023/03/06 12:33:32 pin Exp $
+$NetBSD: CHANGES-2023,v 1.1608 2023/03/06 15:13:26 abs Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2067,3 +2067,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated misc/py-tqdm to 4.65.0 [adam 2023-03-06]
 	Updated devel/py-googleapis-common-protos to 1.58.0 [adam 2023-03-06]
 	Updated x11/sakura to 3.8.6 [pin 2023-03-06]
+	Updated mail/imapsync to 2.229 [abs 2023-03-06]
