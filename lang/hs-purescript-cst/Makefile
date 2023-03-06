@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2023/02/07 01:40:58 pho Exp $
+# $NetBSD: Makefile,v 1.8 2023/03/06 07:46:49 wiz Exp $
 
 DISTNAME=	purescript-cst-0.5.0.0
 PKGREVISION=	2
@@ -15,6 +15,7 @@ HASKELL_UNRESTRICT_DEPENDENCIES+=	\
 	base	\
 	base-compat	\
 	bytestring	\
+	happy	\
 	semigroups	\
 	text	\
 	vector
