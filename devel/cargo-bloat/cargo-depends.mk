@@ -1,0 +1,13 @@
+# $NetBSD: cargo-depends.mk,v 1.1 2023/03/06 20:04:09 wiz Exp $
+
+CARGO_CRATE_DEPENDS+=	json-0.12.4
+CARGO_CRATE_DEPENDS+=	kernel32-sys-0.2.2
+CARGO_CRATE_DEPENDS+=	libc-0.2.68
+CARGO_CRATE_DEPENDS+=	memmap2-0.1.0
+CARGO_CRATE_DEPENDS+=	multimap-0.8.1
+CARGO_CRATE_DEPENDS+=	pico-args-0.3.1
+CARGO_CRATE_DEPENDS+=	regex-1.3.6
+CARGO_CRATE_DEPENDS+=	regex-syntax-0.6.17
+CARGO_CRATE_DEPENDS+=	term_size-0.3.1
+CARGO_CRATE_DEPENDS+=	winapi-0.2.8
+CARGO_CRATE_DEPENDS+=	winapi-build-0.1.1
