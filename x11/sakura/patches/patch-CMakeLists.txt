@@ -1,22 +1,22 @@
-$NetBSD: patch-CMakeLists.txt,v 1.6 2021/08/10 12:11:34 nia Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.7 2023/03/06 12:33:03 pin Exp $
 
 Use CMAKE_INSTALL_MANDIR.
 
---- CMakeLists.txt.orig	2021-07-22 17:05:41.000000000 +0000
+--- CMakeLists.txt.orig	2022-11-11 15:42:23.000000000 +0000
 +++ CMakeLists.txt
 @@ -55,7 +55,7 @@ INSTALL (TARGETS sakura RUNTIME DESTINAT
  INSTALL (FILES sakura.desktop DESTINATION share/applications)
  INSTALL (FILES terminal-tango.svg DESTINATION share/pixmaps)
- IF (POD2MAN)	
--	INSTALL (FILES ${sakura_BINARY_DIR}/sakura.1 DESTINATION share/man/man1)	
-+	INSTALL (FILES ${sakura_BINARY_DIR}/sakura.1 DESTINATION ${CMAKE_INSTALL_MANDIR}/man1)	
+ IF (POD2MAN)
+-	INSTALL (FILES ${sakura_BINARY_DIR}/sakura.1 DESTINATION share/man/man1)
++	INSTALL (FILES ${sakura_BINARY_DIR}/sakura.1 DESTINATION ${CMAKE_INSTALL_MANDIR}/man1)
  ENDIF (POD2MAN)
- INSTALL (FILES README.md DESTINATION share/doc/sakura)	
+ INSTALL (FILES README.md DESTINATION share/doc/sakura)
  
 @@ -72,5 +72,5 @@ ADD_CUSTOM_TARGET (distclean
  
- IF (POD2MAN) 
+ IF (POD2MAN)
  ADD_CUSTOM_TARGET(man ALL
 -	COMMAND ${POD2MAN} -u --section=1 --release=${VERSION} --center '' ${sakura_SOURCE_DIR}/sakura.pod sakura.1)
 +	COMMAND ${POD2MAN} --section=1 --release=${VERSION} --center '' ${sakura_SOURCE_DIR}/sakura.pod sakura.1)
- ENDIF (POD2MAN)	
+ ENDIF (POD2MAN)

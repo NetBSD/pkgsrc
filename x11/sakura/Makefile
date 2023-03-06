@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.45 2023/01/29 21:18:22 ryoon Exp $
+# $NetBSD: Makefile,v 1.46 2023/03/06 12:33:03 pin Exp $
 
-DISTNAME=	sakura-3.8.3
-PKGREVISION=	4
+DISTNAME=	sakura-3.8.6
 CATEGORIES=	x11
 MASTER_SITES=	https://launchpad.net/sakura/trunk/${PKGVERSION_NOREV}/+download/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://www.pleyades.net/david/projects/sakura
-COMMENT=	Sakura is a terminal emulator based on GTK and VTE that supports tab
+COMMENT=	Terminal emulator based on GTK and VTE that supports tab
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c c++
