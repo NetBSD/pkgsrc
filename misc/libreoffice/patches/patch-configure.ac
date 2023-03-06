@@ -1,10 +1,11 @@
-$NetBSD: patch-configure.ac,v 1.24 2023/03/05 18:22:41 tnn Exp $
+$NetBSD: patch-configure.ac,v 1.25 2023/03/06 13:00:01 tnn Exp $
 
 * Add NetBSD/aarch64 support.
 * Disable freetype2 and fontconfig from pkgsrc explicitly.
   to fix X11_TYPE=native build and internal pdfium's internal freetype build.
 * Fix some static links.
 * Find devel/apache-ant.
+* Fix broken xinerama detection.
 
 --- configure.ac.orig	2023-01-25 14:26:33.000000000 +0000
 +++ configure.ac
@@ -46,6 +47,17 @@ $NetBSD: patch-configure.ac,v 1.24 2023/03/05 18:22:41 tnn Exp $
  libo_CHECK_SYSTEM_MODULE([harfbuzz],[HARFBUZZ],[harfbuzz-icu >= 2.6.8])
  
  if test "$COM" = "MSC"; then # override the above
+@@ -13467,8 +13472,8 @@ if test "$_os" = "Linux" -o "$_os" = "Fr
+         AC_CHECK_HEADER(X11/extensions/Xinerama.h, [],
+             [AC_MSG_ERROR(Xinerama header not found.)], [])
+         XEXTLIBS=`$PKG_CONFIG --variable=libs xext`
+-        if test "x$XEXTLIB" = x; then
+-           XEXTLIBS="-L$XLIB -L$XINERAMALIB -lXext"
++        if test "x$XEXTLIBS" = x; then
++           XEXTLIBS="-L$XINERAMALIB -lXext"
+         fi
+         XINERAMA_EXTRA_LIBS="$XEXTLIBS"
+         if test "$_os" = "FreeBSD"; then
 @@ -13734,8 +13739,8 @@ EOF
                      if test -f /usr/share/ant-core/lib/ant.jar; then
                          ANT_LIB=/usr/share/ant-core/lib
