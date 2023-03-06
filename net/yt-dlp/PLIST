@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2023/02/17 14:02:52 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.18 2023/03/06 12:22:04 adam Exp $
 bin/yt-dlp
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -1365,6 +1365,9 @@ ${PYSITELIB}/yt_dlp/extractor/lecturio.pyo
 ${PYSITELIB}/yt_dlp/extractor/leeco.py
 ${PYSITELIB}/yt_dlp/extractor/leeco.pyc
 ${PYSITELIB}/yt_dlp/extractor/leeco.pyo
+${PYSITELIB}/yt_dlp/extractor/lefigaro.py
+${PYSITELIB}/yt_dlp/extractor/lefigaro.pyc
+${PYSITELIB}/yt_dlp/extractor/lefigaro.pyo
 ${PYSITELIB}/yt_dlp/extractor/lego.py
 ${PYSITELIB}/yt_dlp/extractor/lego.pyc
 ${PYSITELIB}/yt_dlp/extractor/lego.pyo
@@ -1428,6 +1431,9 @@ ${PYSITELIB}/yt_dlp/extractor/lovehomeporn.pyo
 ${PYSITELIB}/yt_dlp/extractor/lrt.py
 ${PYSITELIB}/yt_dlp/extractor/lrt.pyc
 ${PYSITELIB}/yt_dlp/extractor/lrt.pyo
+${PYSITELIB}/yt_dlp/extractor/lumni.py
+${PYSITELIB}/yt_dlp/extractor/lumni.pyc
+${PYSITELIB}/yt_dlp/extractor/lumni.pyo
 ${PYSITELIB}/yt_dlp/extractor/lynda.py
 ${PYSITELIB}/yt_dlp/extractor/lynda.pyc
 ${PYSITELIB}/yt_dlp/extractor/lynda.pyo
@@ -2547,6 +2553,9 @@ ${PYSITELIB}/yt_dlp/extractor/tele5.pyo
 ${PYSITELIB}/yt_dlp/extractor/telebruxelles.py
 ${PYSITELIB}/yt_dlp/extractor/telebruxelles.pyc
 ${PYSITELIB}/yt_dlp/extractor/telebruxelles.pyo
+${PYSITELIB}/yt_dlp/extractor/telecaribe.py
+${PYSITELIB}/yt_dlp/extractor/telecaribe.pyc
+${PYSITELIB}/yt_dlp/extractor/telecaribe.pyo
 ${PYSITELIB}/yt_dlp/extractor/telecinco.py
 ${PYSITELIB}/yt_dlp/extractor/telecinco.pyc
 ${PYSITELIB}/yt_dlp/extractor/telecinco.pyo
