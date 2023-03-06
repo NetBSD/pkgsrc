@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1609 2023/03/06 15:49:44 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1610 2023/03/06 20:04:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2069,3 +2069,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/sakura to 3.8.6 [pin 2023-03-06]
 	Updated mail/imapsync to 2.229 [abs 2023-03-06]
 	Updated devel/py-pip to 23.0.1nb1 [wiz 2023-03-06]
+	Added devel/cargo-bloat version 0.9.3 [wiz 2023-03-06]
