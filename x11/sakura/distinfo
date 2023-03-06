@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2021/10/26 11:34:27 nia Exp $
+$NetBSD: distinfo,v 1.15 2023/03/06 12:33:03 pin Exp $
 
-BLAKE2s (sakura-3.8.3.tar.bz2) = 3e204ccb34f2865f97b1fa83c96fa318242bdb569161798df01a88fe3d55fec1
-SHA512 (sakura-3.8.3.tar.bz2) = 82e77940b4b4c90948235459a0135e74c5778c3bc1df4e803571b316e6ec6298493468a0c8c2517ca6b1680fcdbba6d0e36c8bad696205e3aa3e5b4f402c2a8e
-Size (sakura-3.8.3.tar.bz2) = 57773 bytes
-SHA1 (patch-CMakeLists.txt) = 3024e37a08fe78196e3f8716571559fae01463f4
+BLAKE2s (sakura-3.8.6.tar.bz2) = 5ec8051932ddf6a86ff97482dc846ba2feb8547a0458623d4c0a8a901f262f66
+SHA512 (sakura-3.8.6.tar.bz2) = dd9318526685fd866295903f0c77a7a04a09894d8a874af21f0e99bedc25ca80c7b6d14d7db2ffac238b532ea8be4e459d3ec1ef7f23c1ebd330310bf602222e
+Size (sakura-3.8.6.tar.bz2) = 59778 bytes
+SHA1 (patch-CMakeLists.txt) = 2083126c8a3ba4fa9a5e491f209c567de89c76cf
