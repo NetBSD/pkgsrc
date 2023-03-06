@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.143 2023/03/06 07:27:09 pin Exp $
+# $NetBSD: Makefile,v 1.144 2023/03/06 08:03:04 wiz Exp $
 
 DISTNAME=	xterm-379
 CATEGORIES=	x11
@@ -25,8 +25,6 @@ CONFIGURE_ARGS.3d=		--with-Xaw3d
 CONFIGURE_ARGS.xpm=		--with-Xaw3d
 CONFIGURE_ARGS.neXtaw=		--with-neXtaw
 CONFIGURE_ARGS+=		${${CONFIGURE_ARGS.${XAW_TYPE}}:L}
-
-LDFLAGS+=		-lfreetype
 
 INSTALLATION_DIRS=	share/applications
 
