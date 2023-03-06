@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2023/03/06 20:04:09 wiz Exp $
+bin/cargo-bloat
