@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1368 2023/03/05 14:50:11 taca Exp $
+# $NetBSD: Makefile,v 1.1369 2023/03/06 12:19:50 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1291,6 +1291,7 @@ SUBDIR+=	ruby-ultraviolet
 SUBDIR+=	ruby-unicode-blocks
 SUBDIR+=	ruby-unicode-display_width
 SUBDIR+=	ruby-unicode-name
+SUBDIR+=	ruby-unicode-scripts
 SUBDIR+=	ruby-unicode_utils
 SUBDIR+=	ruby-will-paginate
 SUBDIR+=	ruby-xapian
