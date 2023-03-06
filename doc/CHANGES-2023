@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1605 2023/03/06 12:24:35 adam Exp $
+$NetBSD: CHANGES-2023,v 1.1606 2023/03/06 12:29:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2065,3 +2065,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/firefox-l10n to 110.0.1 [ryoon 2023-03-06]
 	Updated net/yt-dlp to 2023.3.4 [adam 2023-03-06]
 	Updated misc/py-tqdm to 4.65.0 [adam 2023-03-06]
+	Updated devel/py-googleapis-common-protos to 1.58.0 [adam 2023-03-06]
