@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1620 2023/03/07 20:32:48 adam Exp $
+$NetBSD: CHANGES-2023,v 1.1621 2023/03/07 21:24:46 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2083,3 +2083,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-xmlschema to 2.2.2 [adam 2023-03-07]
 	Updated www/py-wtforms-alchemy to 0.18.0 [adam 2023-03-07]
 	Updated devel/py-virtualenv to 20.20.0 [adam 2023-03-07]
+	Updated net/termscp to 0.11.1 [pin 2023-03-07]
