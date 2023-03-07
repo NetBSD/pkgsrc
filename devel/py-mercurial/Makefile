@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2023/01/09 10:52:34 wiz Exp $
+# $NetBSD: Makefile,v 1.78 2023/03/07 11:31:49 wiz Exp $
 #
 # Changelog sometimes at: https://www.mercurial-scm.org/wiki/WhatsNew
 
@@ -29,29 +29,17 @@ PYTHON_SELF_CONFLICT=		yes
 .include "version.mk"
 
 USE_TOOLS+=		bash:test
-# Known test failures as of 6.3.2
-# test-help.t
-# https://bz.mercurial-scm.org/show_bug.cgi?id=6779
-# test-http-bad-server.t
-# https://bz.mercurial-scm.org/show_bug.cgi?id=6780
-# various for python 3.11.1
-# https://bz.mercurial-scm.org/show_bug.cgi?id=6781
-# test-lfs-serve-access.t
-# https://bz.mercurial-scm.org/show_bug.cgi?id=6782
+# Known test failures as of 6.3.3
 # test-remotefilelog-gc.t
 # https://bz.mercurial-scm.org/show_bug.cgi?id=6783
+# test-push-cgi.t, test-oldcgi.t, test-newcgi.t, test-newercgi.t, test-clone-cgi.t
+# https://bz.mercurial-scm.org/show_bug.cgi?id=6784
 # test-patchbomb-tls.t:
 # https://bz.mercurial-scm.org/show_bug.cgi?id=6727
-# test-oldcgi.t and test-newcgi.t
-# https://bz.mercurial-scm.org/show_bug.cgi?id=6784
-# test-clone-cgi.t
-# https://bz.mercurial-scm.org/show_bug.cgi?id=6785
-# test-hgrc.t
-# https://bz.mercurial-scm.org/show_bug.cgi?id=6787
 # test-demandimport.py
 # https://bz.mercurial-scm.org/show_bug.cgi?id=6786
 #
-# Ran 901 tests, 82 skipped, 22 failed.
+# Ran 912 tests, 82 skipped, 8 failed.
 
 TEST_TARGET=		tests
 TEST_MAKE_FLAGS+=	PYTHON=${PYTHONBIN} TESTFLAGS=${_MAKE_JOBS:Q}
