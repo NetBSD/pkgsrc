@@ -1,6 +1,7 @@
-$NetBSD: patch-src_sort__r.h,v 1.2 2023/03/07 10:42:16 wiz Exp $
+$NetBSD: patch-src_sort__r.h,v 1.3 2023/03/07 10:45:28 wiz Exp $
 
 SunOS support
+https://github.com/dajobe/raptor/pull/57
 
 --- src/sort_r.h.orig	2017-07-01 20:53:27.000000000 +0000
 +++ src/sort_r.h
