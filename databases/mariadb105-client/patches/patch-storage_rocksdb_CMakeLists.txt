@@ -1,0 +1,15 @@
+$NetBSD: patch-storage_rocksdb_CMakeLists.txt,v 1.1 2023/03/07 10:28:02 jperkin Exp $
+
+Support SunOS.
+
+--- storage/rocksdb/CMakeLists.txt.orig	2022-11-02 12:37:22.000000000 +0000
++++ storage/rocksdb/CMakeLists.txt
+@@ -32,7 +32,7 @@ ENDIF()
+ 
+ # We've had our builders hang during the build process. This prevents MariaRocks
+ # to be built on 32 bit intel OS kernels.
+-IF(CMAKE_SYSTEM_PROCESSOR MATCHES "i[36]86")
++IF(CMAKE_SYSTEM_PROCESSOR MATCHES "i[36]86" AND NOT CMAKE_SYSTEM_NAME STREQUAL "SunOS")
+   SKIP_ROCKSDB_PLUGIN("Intel 32 bit not supported.")
+ ENDIF()
+ 

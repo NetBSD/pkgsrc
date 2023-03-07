@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2022/12/15 09:18:20 wiz Exp $
+@comment $NetBSD: PLIST,v 1.12 2023/03/07 10:28:02 jperkin Exp $
 bin/aria_chk
 bin/aria_dump_log
 bin/aria_ftdump
@@ -6,8 +6,8 @@ bin/aria_pack
 bin/aria_read_log
 bin/aria_s3_copy
 bin/innochecksum
-${PLIST.mariabackup}bin/mariabackup
-${PLIST.mariabackup}bin/mariadb-backup
+bin/mariabackup
+bin/mariadb-backup
 bin/mariadb-client-test
 ${PLIST.embedded}bin/mariadb-client-test-embedded
 bin/mariadb-dumpslow
@@ -21,7 +21,7 @@ bin/mariadb-waitpid
 bin/mariadbd-multi
 bin/mariadbd-safe
 bin/mariadbd-safe-helper
-${PLIST.mariabackup}bin/mbstream
+bin/mbstream
 bin/my_print_defaults
 bin/myisam_ftdump
 bin/myisamchk
@@ -306,14 +306,14 @@ lib/mysql/plugin/adt_null.so
 lib/mysql/plugin/auth_0x0100.so
 lib/mysql/plugin/auth_ed25519.so
 lib/mysql/plugin/auth_gssapi.so
-${PLIST.auth_pam}lib/mysql/plugin/auth_pam.so
-${PLIST.auth_pam}lib/mysql/plugin/auth_pam_tool_dir/auth_pam_tool
-${PLIST.auth_pam}lib/mysql/plugin/auth_pam_v1.so
+lib/mysql/plugin/auth_pam.so
+lib/mysql/plugin/auth_pam_tool_dir/auth_pam_tool
+lib/mysql/plugin/auth_pam_v1.so
 lib/mysql/plugin/auth_test_plugin.so
 lib/mysql/plugin/daemon_example.ini
 lib/mysql/plugin/debug_key_management.so
 lib/mysql/plugin/dialog_examples.so
-lib/mysql/plugin/disks.so
+${PLIST.disks}lib/mysql/plugin/disks.so
 lib/mysql/plugin/example_key_management.so
 lib/mysql/plugin/file_key_management.so
 lib/mysql/plugin/func_test.so
@@ -346,7 +346,7 @@ lib/mysql/plugin/test_versioning.so
 lib/mysql/plugin/type_mysql_json.so
 lib/mysql/plugin/type_test.so
 lib/mysql/plugin/wsrep_info.so
-${PLIST.auth_pam}lib/security/pam_user_map.so
+lib/security/pam_user_map.so
 sbin/mariadbd
 sbin/mysqld
 share/doc/mysql/COPYING
@@ -355,7 +355,7 @@ share/doc/mysql/INSTALL-BINARY
 share/doc/mysql/README-wsrep
 share/doc/mysql/README.md
 share/doc/mysql/THIRDPARTY
-${PLIST.auth_pam}share/examples/mariadb_auth_pam/user_map.conf
+share/examples/mariadb_auth_pam/user_map.conf
 share/mysql/bulgarian/errmsg.sys
 share/mysql/charsets/Index.xml
 share/mysql/charsets/README
