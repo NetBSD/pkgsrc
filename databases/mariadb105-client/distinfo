@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.16 2022/11/27 23:34:48 nia Exp $
+$NetBSD: distinfo,v 1.17 2023/03/07 10:28:02 jperkin Exp $
 
 BLAKE2s (mariadb-10.5.18.tar.gz) = fed6b47a5fa140311a20a0c1f87ff04713dcfd51939dc71defed248755160c41
 SHA512 (mariadb-10.5.18.tar.gz) = 1fe13db1c0b66d2bc0c4d80e2c278f6e64027aaeebebfa5a179bd8ca92ae135ae53b72ed26c9b6d35b35fd2ad2a3cb390fd5ee0715b22d4bfafe773f950d804c
@@ -8,16 +8,21 @@ SHA1 (patch-CMakeLists.txt) = 574131db46854715758c60ba5f026498f5b29564
 SHA1 (patch-client_CMakeLists.txt) = 8fdd8a182304f0b84e120ce95334ace23d02ce88
 SHA1 (patch-client_mysql.cc) = 89fe80fb66b8791131a8c6d1b209e57082804a01
 SHA1 (patch-include_my__global.h) = a3b831f91ba2efea9f78e70ab4f706da23b80403
+SHA1 (patch-include_mysql_service__encryption.h) = bfc2fcba9f33cc58b726f8645dc5400a0df27bd9
 SHA1 (patch-mysys_my__context.c) = f9c7e6b3b68b857e7781cf5f36c49e88051cfb66
 SHA1 (patch-mysys_my__gethwaddr.c) = f4fd827617697ff386099defc839fe8d082e6c3e
-SHA1 (patch-plugin_auth__socket_CMakeLists.txt) = 00cfaf5826cc97084bc77033985e6686e1ce1628
+SHA1 (patch-plugin_auth__pam_testing_pam__mariadb__mtr.c) = 5c7978b5bec79bbc09d3ebeb69dd85f3e6f8a423
+SHA1 (patch-plugin_auth__socket_CMakeLists.txt) = 11f52f5335ac56888d8a367caa03c68059eb61c9
 SHA1 (patch-plugin_auth__socket_auth__socket.c) = 850e94faff382a7e962f6d4d6ff960ddddc624c4
 SHA1 (patch-scripts_CMakeLists.txt) = 54591a4d255a8133e06ab5d52bad262acffcddda
 SHA1 (patch-scripts_mysqld__safe.sh) = 4124e4c8df1527049f5eec9f3d2d4bbe80e7c33f
 SHA1 (patch-sql_mysqld.cc) = 19d325124cde1b45376c9710cdd104dc460f4bea
+SHA1 (patch-storage_columnstore_CMakeLists.txt) = cd5ceb1802831910c6cfa5950c52f5af8eb7dcaa
 SHA1 (patch-storage_connect_tabvct.cpp) = 2e3c7cd7e4b0a86d443da47d3cc514b8b276d836
+SHA1 (patch-storage_rocksdb_CMakeLists.txt) = 2ab237df750cc18facf92c6ad997469f5e43c63f
 SHA1 (patch-storage_rocksdb_rdb__io__watchdog.cc) = 85ee5007cfda0d3070ec20b2b774738b01f8e083
 SHA1 (patch-storage_rocksdb_rdb__io__watchdog.h) = d790c092d7d35d014c5ef209635c18614c3a8301
 SHA1 (patch-storage_rocksdb_rocksdb_Makefile) = 67ea4d154f4f623fdca739f50b236c973e118a12
 SHA1 (patch-storage_rocksdb_rocksdb_build__tools_fb__compile__mongo.sh) = 3b632521c23765c39f4638dc7a80d04b9e1d58bd
+SHA1 (patch-storage_tokudb_CMakeLists.txt) = 9abea512e0d92667bfdf94fb83850de4b80b781f
 SHA1 (patch-support-files_mysql.server.sh) = a98d82cdda1dbd5ef8ebb7e457bb51661b5fd275
