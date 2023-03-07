@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.14 2021/10/26 11:23:19 nia Exp $
-
-BLAKE2s (raptor-1.4.21.tar.gz) = 8561a3c9a400923d0ff16f03bd467d96a2ab58f979f9fd57e6413cb921da425b
-SHA512 (raptor-1.4.21.tar.gz) = 5a7d327e4e9e79da9c4476ef87826f032fb7301c9ac1a72582dcd248188f10ceb014effb669f72d7445b1e1f071f758311c5ffef655ae4d8efe20eefcfb8db81
-Size (raptor-1.4.21.tar.gz) = 1651843 bytes
-SHA1 (patch-src_raptor_internal.h) = 42a9d0b656198992a16cc82d62a008fbfb10c293
