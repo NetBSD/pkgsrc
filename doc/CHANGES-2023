@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1616 2023/03/07 12:10:35 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1617 2023/03/07 14:38:49 he Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2076,3 +2076,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-hg-evolve to 11.0.0 [wiz 2023-03-07]
 	Updated devel/py-tortoisehg to 6.3.2 [wiz 2023-03-07]
 	Removed textproc/raptor successor textproc/raptor2 [wiz 2023-03-07]
+	Updated lang/quickjs to 20210327nb2 [he 2023-03-07]
