@@ -1,19 +1,19 @@
-$NetBSD: patch-src_sort__r.h,v 1.1 2022/04/12 13:20:05 tnn Exp $
+$NetBSD: patch-src_sort__r.h,v 1.2 2023/03/07 10:42:16 wiz Exp $
 
 SunOS support
 
---- src/sort_r.h.orig	2014-10-09 23:00:44.000000000 +0000
+--- src/sort_r.h.orig	2017-07-01 20:53:27.000000000 +0000
 +++ src/sort_r.h
-@@ -29,6 +29,8 @@ void sort_r(void *base, size_t nel, size
- #elif (defined _GNU_SOURCE || defined __gnu_hurd__ || defined __GNU__ || \
-        defined __linux__ || defined __MINGW32__ || defined __GLIBC__)
+@@ -30,6 +30,8 @@ void sort_r(void *base, size_t nel, size
+        defined __linux__ || defined __MINGW32__ || defined __GLIBC__ || \
+        defined __CYGWIN__)
  #  define _SORT_R_LINUX
 +#elif defined __sun
 +#  define _SORT_R_SUN
  #elif (defined _WIN32 || defined _WIN64 || defined __WINDOWS__)
  #  define _SORT_R_WINDOWS
  #else
-@@ -86,6 +88,11 @@ void sort_r(void *base, size_t nel, size
+@@ -87,6 +89,11 @@ void sort_r(void *base, size_t nel, size
                          __compar_d_fn_t __compar, void *arg)
        __attribute__((nonnull (1, 4)));
  
@@ -25,7 +25,7 @@ SunOS support
    #endif
  
    /* implementation */
-@@ -105,6 +112,10 @@ void sort_r(void *base, size_t nel, size
+@@ -106,6 +113,10 @@ void sort_r(void *base, size_t nel, size
        tmp.compar = compar;
        qsort_r(base, nel, width, &tmp, sort_r_arg_swap);
  
@@ -36,7 +36,7 @@ SunOS support
      #else /* defined _SORT_R_WINDOWS */
  
        struct sort_r_data tmp;
-@@ -120,5 +131,6 @@ void sort_r(void *base, size_t nel, size
+@@ -121,5 +132,6 @@ void sort_r(void *base, size_t nel, size
  #undef _SORT_R_WINDOWS
  #undef _SORT_R_LINUX
  #undef _SORT_R_BSD
