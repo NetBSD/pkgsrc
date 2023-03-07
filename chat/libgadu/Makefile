@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2022/11/23 16:19:28 adam Exp $
+# $NetBSD: Makefile,v 1.23 2023/03/07 07:58:00 he Exp $
 
 DISTNAME=	libgadu-1.12.2
 PKGREVISION=	19
@@ -31,4 +31,5 @@ pre-configure:
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
