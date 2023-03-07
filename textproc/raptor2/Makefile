@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.44 2022/11/23 16:19:03 adam Exp $
+# $NetBSD: Makefile,v 1.45 2023/03/07 10:42:15 wiz Exp $
 
-DISTNAME=	raptor2-2.0.15
-PKGREVISION=	26
+DISTNAME=	raptor2-2.0.16
 CATEGORIES=	textproc
 MASTER_SITES=	http://download.librdf.org/source/
 
@@ -24,5 +23,4 @@ TEST_TARGET=		check
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"

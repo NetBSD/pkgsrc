@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2022/04/12 13:20:05 tnn Exp $
+$NetBSD: distinfo,v 1.15 2023/03/07 10:42:15 wiz Exp $
 
-BLAKE2s (raptor2-2.0.15.tar.gz) = c24882035b615e21fd5ece74be5a565ee7a2dcd6f17619f18143e28727447759
-SHA512 (raptor2-2.0.15.tar.gz) = 563dd01869eb4df8524ec12e2c0a541653874dcd834bd1eb265bc2943bb616968f624121d4688579cdce11b4f00a8ab53b7099f1a0850e256bb0a2c16ba048ee
-Size (raptor2-2.0.15.tar.gz) = 1886657 bytes
-SHA1 (patch-src_sort__r.h) = 88d24885b841afe13c509870ed9f16229e8badc4
+BLAKE2s (raptor2-2.0.16.tar.gz) = 7c1b8ff3e0e4cba0bbb23e16b910227edb3913022417ae91b9344379755d44bc
+SHA512 (raptor2-2.0.16.tar.gz) = 9bd5cff36390e1e0ef15ac56e5413ecfceb4018cb531a4da8850d3623615f12a93690a78be61f9d9ae7a24e16f6446e356bc2b7f34051ddc077761d85a9b7c44
+Size (raptor2-2.0.16.tar.gz) = 1750726 bytes
+SHA1 (patch-src_sort__r.h) = c246a89706975344521f4ecf07a36624643ce08c
