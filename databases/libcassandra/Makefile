@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2023/01/22 16:28:21 ryoon Exp $
+# $NetBSD: Makefile,v 1.60 2023/03/07 13:18:47 he Exp $
 #
 
 DISTNAME=		libcassandra-20101010
@@ -36,4 +36,6 @@ CXXFLAGS+=	-Wno-unknown-warning-option -Wno-unused-parameter
 CXXFLAGS+=	-Wno-c++11-extensions -Wno-error=unused-local-typedef
 .endif
 
+# Despite --disable-64bit, this appears to be required:
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
