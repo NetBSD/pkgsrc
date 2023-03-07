@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1618 2023/03/07 18:58:20 adam Exp $
+$NetBSD: CHANGES-2023,v 1.1619 2023/03/07 20:21:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2079,3 +2079,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/quickjs to 20210327nb2 [he 2023-03-07]
 	Updated devel/valgrind to 3.20.0 [adam 2023-03-07]
 	Updated devel/py-test to 7.2.2 [adam 2023-03-07]
+	Updated audio/py-beets to 1.6.0 [adam 2023-03-07]
+	Updated textproc/py-xmlschema to 2.2.2 [adam 2023-03-07]
