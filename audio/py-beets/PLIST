@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2021/11/25 19:41:22 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.17 2023/03/07 20:19:17 adam Exp $
 bin/beet-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -106,6 +106,9 @@ ${PYSITELIB}/beetsplug/absubmit.pyo
 ${PYSITELIB}/beetsplug/acousticbrainz.py
 ${PYSITELIB}/beetsplug/acousticbrainz.pyc
 ${PYSITELIB}/beetsplug/acousticbrainz.pyo
+${PYSITELIB}/beetsplug/albumtypes.py
+${PYSITELIB}/beetsplug/albumtypes.pyc
+${PYSITELIB}/beetsplug/albumtypes.pyo
 ${PYSITELIB}/beetsplug/aura.py
 ${PYSITELIB}/beetsplug/aura.pyc
 ${PYSITELIB}/beetsplug/aura.pyo
