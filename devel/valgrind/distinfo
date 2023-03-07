@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/10/26 10:20:07 nia Exp $
+$NetBSD: distinfo,v 1.15 2023/03/07 18:53:40 adam Exp $
 
-BLAKE2s (valgrind-3.17.0.tar.bz2) = 7ed3043e09c2d715765239e8ea1bc32eb94b1a231c32afeea130d3fa9caa8c30
-SHA512 (valgrind-3.17.0.tar.bz2) = 94de78942a7059e1ab84d1c0c0b8f3efd1c2d15c70b97bc7edc8136812778adb6f8187149d53a60a8c6a7c8b40534f9be5cfed0eb3c0c314545b681f950b108f
-Size (valgrind-3.17.0.tar.bz2) = 16459075 bytes
-SHA1 (patch-configure) = f133bb1574cc41cab01312543295996040207c5b
+BLAKE2s (valgrind-3.20.0.tar.bz2) = 714b0962777e6210b24ea5da6fbdf69fee2a65fb799f701854af41414c45724b
+SHA512 (valgrind-3.20.0.tar.bz2) = d6bfb9284d0410134ee7e2a5975b13c01508dd5587b562947d8197b3c113b76fdfac88c4072948be68bbf0dbeb17b4d1acb1412ce898adaa83c30ae2c6a1c12b
+Size (valgrind-3.20.0.tar.bz2) = 16469274 bytes

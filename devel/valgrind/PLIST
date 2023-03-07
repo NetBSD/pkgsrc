@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2021/05/30 01:49:36 mcf Exp $
+@comment $NetBSD: PLIST,v 1.14 2023/03/07 18:53:40 adam Exp $
 bin/callgrind_annotate
 bin/callgrind_control
 bin/cg_annotate
@@ -76,13 +76,17 @@ include/valgrind/pub_tool_xarray.h
 include/valgrind/pub_tool_xtmemory.h
 include/valgrind/pub_tool_xtree.h
 include/valgrind/valgrind.h
+include/valgrind/vki/vki-amd64-freebsd.h
 include/valgrind/vki/vki-amd64-linux.h
 include/valgrind/vki/vki-arm-linux.h
 include/valgrind/vki/vki-arm64-linux.h
 include/valgrind/vki/vki-darwin.h
+include/valgrind/vki/vki-freebsd.h
 include/valgrind/vki/vki-linux-drm.h
 include/valgrind/vki/vki-linux-io_uring.h
 include/valgrind/vki/vki-linux.h
+include/valgrind/vki/vki-machine-types-amd64-freebsd.h
+include/valgrind/vki/vki-machine-types-x86-freebsd.h
 include/valgrind/vki/vki-mips32-linux.h
 include/valgrind/vki/vki-mips64-linux.h
 include/valgrind/vki/vki-nanomips-linux.h
@@ -104,6 +108,7 @@ include/valgrind/vki/vki-scnums-amd64-linux.h
 include/valgrind/vki/vki-scnums-arm-linux.h
 include/valgrind/vki/vki-scnums-arm64-linux.h
 include/valgrind/vki/vki-scnums-darwin.h
+include/valgrind/vki/vki-scnums-freebsd.h
 include/valgrind/vki/vki-scnums-mips32-linux.h
 include/valgrind/vki/vki-scnums-mips64-linux.h
 include/valgrind/vki/vki-scnums-nanomips-linux.h
@@ -115,6 +120,7 @@ include/valgrind/vki/vki-scnums-solaris.h
 include/valgrind/vki/vki-scnums-x86-linux.h
 include/valgrind/vki/vki-solaris-repcache.h
 include/valgrind/vki/vki-solaris.h
+include/valgrind/vki/vki-x86-freebsd.h
 include/valgrind/vki/vki-x86-linux.h
 include/valgrind/vki/vki-xen-domctl.h
 include/valgrind/vki/vki-xen-evtchn.h
@@ -287,6 +293,7 @@ share/doc/valgrind/html/dist.news.old.html
 share/doc/valgrind/html/dist.readme-android.html
 share/doc/valgrind/html/dist.readme-android_emulator.html
 share/doc/valgrind/html/dist.readme-developers.html
+share/doc/valgrind/html/dist.readme-freebsd.html
 share/doc/valgrind/html/dist.readme-mips.html
 share/doc/valgrind/html/dist.readme-missing.html
 share/doc/valgrind/html/dist.readme-packagers.html
