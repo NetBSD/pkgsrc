@@ -1,6 +1,6 @@
 #!@SMF_METHOD_SHELL@
 #
-# $NetBSD: mariadb.sh,v 1.2 2023/02/10 09:44:01 jperkin Exp $
+# $NetBSD: mariadb.sh,v 1.3 2023/03/07 11:06:28 jperkin Exp $
 #
 # Init script for mysqld.
 #
@@ -13,6 +13,12 @@ ulimit -n 10240
 
 case "$1" in
 start)
+	if [ ! -d @MARIADB_DATADIR@/mysql ]; then
+		@LOCALBASE@/bin/mysql_install_db \
+			--datadir=@MARIADB_DATADIR@ \
+			--user=@MARIADB_USER@
+	fi
+
 	@LOCALBASE@/sbin/mariadbd --user=@MARIADB_USER@ \
 		--basedir=@LOCALBASE@ \
 		--datadir=@MARIADB_DATADIR@ \
