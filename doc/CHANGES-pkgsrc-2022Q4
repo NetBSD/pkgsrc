@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2022Q4,v 1.1.2.11 2023/03/04 14:40:43 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2022Q4,v 1.1.2.12 2023/03/08 21:03:16 spz Exp $
 
 Changes to packages and infrastructure on the 2022Q4 branch:
 
@@ -127,4 +127,7 @@ www/ruby-rack: security update
 
 Pullup ticket #6739 - requested by taca
 www/apache24: security update
+
+Pullup ticket #6737 addendum - requested by gutteridge
+textproc/py-libxml2: fix build after pullup #6737
 
