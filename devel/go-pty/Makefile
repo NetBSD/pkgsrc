@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2023/02/16 15:02:08 bsiegert Exp $
+# $NetBSD: Makefile,v 1.34 2023/03/08 13:38:58 bsiegert Exp $
 
 DISTNAME=	go-pty-1.1.11
-PKGREVISION=	32
+PKGREVISION=	33
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=creack/}
 GITHUB_PROJECT=	pty
