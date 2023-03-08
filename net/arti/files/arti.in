@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: arti.in,v 1.1 2023/02/21 20:53:12 nikita Exp $
+# $NetBSD: arti.in,v 1.2 2023/03/08 22:28:07 nikita Exp $
 #
 # PROVIDE: arti
 # REQUIRE: DAEMON NETWORKING
@@ -27,6 +27,7 @@ restart_cmd="arti_stop ; arti_start"
 extra_commands="reload"
 arti_env="PATH=${PATH} HOME=@PKG_HOME@ USER=@ARTI_USER@"
 
+# FIXME: This does not detach to the background.
 arti_start ()
 {
 	@ECHO@ "Starting ${name}."
