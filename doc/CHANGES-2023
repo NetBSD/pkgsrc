@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1628 2023/03/08 12:18:30 adam Exp $
+$NetBSD: CHANGES-2023,v 1.1629 2023/03/08 13:14:34 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2114,3 +2114,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-pyquery to 2.0.0 [adam 2023-03-08]
 	Updated databases/py-peewee to 3.16.0 [adam 2023-03-08]
 	Updated textproc/py-natsort to 8.3.1 [adam 2023-03-08]
+	Updated lang/go120 to 1.20.2 [bsiegert 2023-03-08]
