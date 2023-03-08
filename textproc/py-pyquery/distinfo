@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 11:23:11 nia Exp $
+$NetBSD: distinfo,v 1.11 2023/03/08 12:10:51 adam Exp $
 
-BLAKE2s (pyquery-1.4.3.tar.gz) = d3d884bf731f5e9731141a87d75b5be39a90ecbcec95b36e0c0d085a37c21c17
-SHA512 (pyquery-1.4.3.tar.gz) = cb61326e38f78763ca15de09e3a56dad776b3d4831b54eabf295db0f9af8bf04599642c73f5db3e3172b86d7b66ba2ef626c8cba2dfb458af6ac432d15ea7cba
-Size (pyquery-1.4.3.tar.gz) = 47448 bytes
+BLAKE2s (pyquery-2.0.0.tar.gz) = 619518404178513dba43bd67e089dc477189ffa61f3cf719f9062539e0e8ce4f
+SHA512 (pyquery-2.0.0.tar.gz) = 316a479acd23e371b6e70550681527b15203e7ab62f4722375335180f13d9b48d9170abf308bb26b6180d954de4f8dfea5f90426cb820c5e888cc56f8a99ba33
+Size (pyquery-2.0.0.tar.gz) = 45210 bytes
