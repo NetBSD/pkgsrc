@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2023/02/13 23:02:54 leot Exp $
+$NetBSD: distinfo,v 1.11 2023/03/08 17:34:31 leot Exp $
 
 BLAKE2s (bazil.org_fuse_@v_v0.0.0-20160811212531-371fbbdaa898.mod) = ff8095283662ae2d2a1968bf429516c54586b1a6c4dc744657162e6781aa8ece
 SHA512 (bazil.org_fuse_@v_v0.0.0-20160811212531-371fbbdaa898.mod) = 7b3ef87f98485bb9ec325680f57d43a9bd76e90bdcfb1e798458f28f7d3addf91dbb6a07b654749468860981413ad2267df2d5f3535c85579e9f79d9328d355c
@@ -156,9 +156,9 @@ Size (cloud.google.com_go_storage_@v_v1.8.0.mod) = 622 bytes
 BLAKE2s (code.gitea.io_sdk_gitea_@v_v0.12.0.mod) = 56fdb17954a728c5fe2a428a748aea3129d7486c420c48980a7d46331fde1985
 SHA512 (code.gitea.io_sdk_gitea_@v_v0.12.0.mod) = 76cc0a38e1636d2bd04cb3eae31085ae40d2e03119592d89157a9760111d01fafd9f59d8372cf7517de957c7d91bd23b921c8b37605d9f252528d82a6d0e83ca
 Size (code.gitea.io_sdk_gitea_@v_v0.12.0.mod) = 129 bytes
-BLAKE2s (conftest-0.39.0.tar.gz) = 061e855e96dd2bd4d82dbb4bc0b4a72bf1b1c46b942a77c3fd8b5f8f9e34fbe3
-SHA512 (conftest-0.39.0.tar.gz) = 4d211f413dd83fa54698263d563c7f59966abc2407042758e5dc138869d04f30c3ece5ff6389153253a215d8f0d6fe0dbaa78fa878cba5945ba8a2bd2d5c26de
-Size (conftest-0.39.0.tar.gz) = 202050 bytes
+BLAKE2s (conftest-0.39.2.tar.gz) = 65b03a5dae22764680e45c8eb87c68aee0946b5c0d375e88be35cfb7c0e273c1
+SHA512 (conftest-0.39.2.tar.gz) = 119a29ed9433ff52436fc445caabf446b5bd9b770495128aaa7273c09e82e5245e9695ddc8b6bc3257a171eb818147a0c894c89eef3653ef6fbbf4c9ecd7d9d4
+Size (conftest-0.39.2.tar.gz) = 202087 bytes
 BLAKE2s (contrib.go.opencensus.io_exporter_aws_@v_v0.0.0-20181029163544-2befc13012d0.mod) = 29ca3c60f38a4bc66ea9751614d310c3e0efc2fd62e94dfb9792a52547215541
 SHA512 (contrib.go.opencensus.io_exporter_aws_@v_v0.0.0-20181029163544-2befc13012d0.mod) = e47a5e15b0e0b884fb8a9b27778f557cb170c974200848447a59c43953c3d0c3fc6895ad962e47cc6839a1a8efb1680fc1ae229abb9324227ccac9ed5954e2bc
 Size (contrib.go.opencensus.io_exporter_aws_@v_v0.0.0-20181029163544-2befc13012d0.mod) = 120 bytes
@@ -2931,12 +2931,12 @@ Size (github.com_onsi_gomega_@v_v1.9.0.mod) = 613 bytes
 BLAKE2s (github.com_op_go-logging_@v_v0.0.0-20160315200505-970db520ece7.mod) = 8c42aa39b33862cc1e54c4857b37b94655c257ca5a5098deab7036ce4fdcf8c4
 SHA512 (github.com_op_go-logging_@v_v0.0.0-20160315200505-970db520ece7.mod) = 76f6ad85ef60c0972b9193af3395e586b8da352614049125ea6b39ebddaed94fe3b6a5deccb8a4d33890f292795d2c44a3563fc420106bf24589a1d838f35649
 Size (github.com_op_go-logging_@v_v0.0.0-20160315200505-970db520ece7.mod) = 32 bytes
-BLAKE2s (github.com_open-policy-agent_opa_@v_v0.49.0.mod) = fb5a3e740fa63ecd9fa4bf2b3eba4e95ca100d4bed8ddd8454b233c25f322f30
-SHA512 (github.com_open-policy-agent_opa_@v_v0.49.0.mod) = 58f676373a351c60b1b85f17866f72db607a45f33488576dce1e9088521775b4f6d8fe75c0c7ae5eabdd7ab3a140fe432aff440776da4f47fda5ac51fa6fb710
-Size (github.com_open-policy-agent_opa_@v_v0.49.0.mod) = 4850 bytes
-BLAKE2s (github.com_open-policy-agent_opa_@v_v0.49.0.zip) = 797e411e7a974ea2cf9970a985185e8e6ce6589410c1e5977fecd130812b12b7
-SHA512 (github.com_open-policy-agent_opa_@v_v0.49.0.zip) = 41885ea61e4dc5e0075a45588bcd7ac8bb8aaf38c0a5db16c77333474ff84462ee436ec36c863a0840326855b3acd8fccdc67f015b1280a488ae64cd53605161
-Size (github.com_open-policy-agent_opa_@v_v0.49.0.zip) = 25363560 bytes
+BLAKE2s (github.com_open-policy-agent_opa_@v_v0.49.2.mod) = 514266817e11a6c01a26f9224d8387be8563b8684cdba06205798b4ef00fff29
+SHA512 (github.com_open-policy-agent_opa_@v_v0.49.2.mod) = 4ca8aef21703b5c3a3dbceb5fe92e4352633a05b7edd1f8271e5fed9e91f15dff192fd3821961b5426ed220b5e23dd7d7eac09f8a3dacebb0577214f9f3f355e
+Size (github.com_open-policy-agent_opa_@v_v0.49.2.mod) = 4267 bytes
+BLAKE2s (github.com_open-policy-agent_opa_@v_v0.49.2.zip) = 32e7343935fc54387a08e590cc41586b9991e68943841c1e8e7ed88454e92bbb
+SHA512 (github.com_open-policy-agent_opa_@v_v0.49.2.zip) = c725cc8e927457751aa9f5d873f211f20810ad090f63b23ea1b17d6a36714556769f61645cd1b18555ec28e44569295768d3ac411f81a0be2548ebd2440da0e9
+Size (github.com_open-policy-agent_opa_@v_v0.49.2.zip) = 25323756 bytes
 BLAKE2s (github.com_opencontainers_go-digest_@v_v0.0.0-20170106003457-a6d0ee40d420.mod) = 8ddf153cb4259b737aaa63ce2044b8864f739c8248d66771a20e92dfad9ca82a
 SHA512 (github.com_opencontainers_go-digest_@v_v0.0.0-20170106003457-a6d0ee40d420.mod) = 2fcb2cf84eb579794ba81bc9f79090999b3fded538a1649fee55d1e973425a775dcfba008a11ec1ba873bfbd3c2ce13abcd99fcbd9b0ca67fd35925896bca588
 Size (github.com_opencontainers_go-digest_@v_v0.0.0-20170106003457-a6d0ee40d420.mod) = 43 bytes

@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.10 2023/02/13 23:02:55 leot Exp $
+# $NetBSD: go-modules.mk,v 1.11 2023/03/08 17:34:31 leot Exp $
 
 GO_MODULE_FILES+=	bazil.org/fuse/@v/v0.0.0-20160811212531-371fbbdaa898.mod
 GO_MODULE_FILES+=	bazil.org/fuse/@v/v0.0.0-20180421153158-65cc252bf669.mod
@@ -976,8 +976,8 @@ GO_MODULE_FILES+=	github.com/onsi/gomega/@v/v1.7.1.mod
 GO_MODULE_FILES+=	github.com/onsi/gomega/@v/v1.8.1.mod
 GO_MODULE_FILES+=	github.com/onsi/gomega/@v/v1.9.0.mod
 GO_MODULE_FILES+=	github.com/op/go-logging/@v/v0.0.0-20160315200505-970db520ece7.mod
-GO_MODULE_FILES+=	github.com/open-policy-agent/opa/@v/v0.49.0.mod
-GO_MODULE_FILES+=	github.com/open-policy-agent/opa/@v/v0.49.0.zip
+GO_MODULE_FILES+=	github.com/open-policy-agent/opa/@v/v0.49.2.mod
+GO_MODULE_FILES+=	github.com/open-policy-agent/opa/@v/v0.49.2.zip
 GO_MODULE_FILES+=	github.com/opencontainers/go-digest/@v/v0.0.0-20170106003457-a6d0ee40d420.mod
 GO_MODULE_FILES+=	github.com/opencontainers/go-digest/@v/v0.0.0-20180430190053-c9281466c8b2.mod
 GO_MODULE_FILES+=	github.com/opencontainers/go-digest/@v/v1.0.0-rc1.0.20180430190053-c9281466c8b2.mod
