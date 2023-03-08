@@ -1,0 +1,25 @@
+$NetBSD: patch-configure.ac,v 1.1 2023/03/08 20:20:18 mrg Exp $
+
+Always define ATTR_INLINE_ALL_STRINGOPS to something, since the build wants
+it to be at least empty.
+
+--- configure.ac.orig	2021-12-12 11:49:29.000000000 -0800
++++ configure.ac	2023-03-05 20:22:04.328140029 -0800
+@@ -598,12 +598,14 @@
+ ], [
+ int n = my_strlen ("what");
+ ])], [have_attr_iaso=yes], [have_attr_iaso=no])
++stringopattr=''
+ AC_MSG_RESULT([$have_attr_iaso])
+ if test x"$have_attr_iaso" = x"yes" ; then
+-    AC_DEFINE([ATTR_INLINE_ALL_STRINGOPS],
+-        [__attribute__ ((__target__ ("inline-all-stringops")))],
+-        [Define this to a function attribute that inlines string handling code])
++    stringopattr='__attribute__ ((__target__ ("inline-all-stringops")))'
+ fi
++AC_DEFINE_UNQUOTED([ATTR_INLINE_ALL_STRINGOPS],
++    [$stringopattr],
++    [Define this to a function attribute that inlines string handling code])
+ 
+ AC_ARG_ENABLE([asan],
+    [AS_HELP_STRING([--enable-asan], [Compile with address sanitizer])])
