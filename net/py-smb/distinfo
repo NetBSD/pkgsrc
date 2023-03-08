@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2022/07/05 12:58:09 adam Exp $
+$NetBSD: distinfo,v 1.17 2023/03/08 11:09:35 adam Exp $
 
-BLAKE2s (pysmb-1.2.8.zip) = 480b0a89cd69b89a2741375a6f73b5f32530a8dda9e8a9131cdcfa1a5c91db11
-SHA512 (pysmb-1.2.8.zip) = fd46cdf727f82c99205cfae35123153952a2896110bca4b0fbc8ea8ae7cf44359be11dab04a64520c7a474f0fcf45e950ce31ccdb1e8a0eb0274a902d5efb19c
-Size (pysmb-1.2.8.zip) = 1346666 bytes
+BLAKE2s (pysmb-1.2.9.1.zip) = 51123aed1fbf78cba3a9d61e85c6eb126eaa46fdb17ecd69ca5d22426e209fb6
+SHA512 (pysmb-1.2.9.1.zip) = 07816fa7d5862f584bbfa2be827146d99c12f73898a9172b4565de86e490e3ec375f9ab5e50fc4da38d540c1b0201802eca3aff126cb448886f3b2e56394b470
+Size (pysmb-1.2.9.1.zip) = 1351590 bytes
