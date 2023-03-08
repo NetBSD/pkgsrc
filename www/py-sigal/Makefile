@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2022/12/16 19:34:44 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2023/03/08 21:05:58 wiz Exp $
 
 DISTNAME=	sigal-2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sigal/}
 
