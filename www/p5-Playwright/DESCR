@@ -1,0 +1,12 @@
+Playwright enables reliable end-to-end testing for modern web apps:
+
+- All modern rendering engines including Chromium, WebKit, and Firefox.
+
+- Test on Windows, Linux, and macOS, locally or on CI, headless
+  or headed.
+
+- Use the Playwright API in TypeScript, JavaScript, Python, .NET, Java.
+
+- Native mobile emulation of Google Chrome for Android and Mobile
+  Safari. The same rendering engine works on your Desktop and in
+  the Cloud.
