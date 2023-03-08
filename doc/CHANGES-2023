@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1632 2023/03/08 15:35:50 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.1633 2023/03/08 17:15:50 leot Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2119,3 +2119,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/py-asttokens to 2.2.1 [adam 2023-03-08]
 	Updated fonts/py-fonttools to 4.39.0 [adam 2023-03-08]
 	Added www/p5-Playwright version 1.291 [schmonz 2023-03-08]
+	Updated devel/opa to 0.49.2 [leot 2023-03-08]
