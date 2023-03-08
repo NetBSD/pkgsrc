@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2023/01/24 18:36:21 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2023/03/08 09:58:16 adam Exp $
 
-DISTNAME=	abseil-20220623.1
+DISTNAME=	abseil-20230125.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=abseil/}
 GITHUB_PROJECT=	abseil-cpp
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/abseil/abseil-cpp
 COMMENT=	C++ Common Libraries
 LICENSE=	apache-2.0
 
-USE_LANGUAGES=	c++11
+USE_LANGUAGES=	c++14
 CMAKE_ARGS+=	-DBUILD_SHARED_LIBS=ON
 
 .include "../../mk/bsd.prefs.mk"
