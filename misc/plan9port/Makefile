@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2023/03/02 13:58:04 vins Exp $
+# $NetBSD: Makefile,v 1.5 2023/03/08 22:30:52 vins Exp $
 
 DISTNAME=	plan9port-20230123
 CATEGORIES=	misc plan9
@@ -64,8 +64,8 @@ SUBST_MESSAGE.cc=	Defining preferred compiler.
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-configure
 SUBST_FILES.prefix+=	src/cmd/devdraw/mkwsysrules.sh
-SUBST_FILES.prefix+=	plan9.sh acme.sh
-SUBST_VARS.prefix=	PREFIX
+SUBST_FILES.prefix+=	INSTALL plan9.sh acme.sh
+SUBST_VARS.prefix=	PREFIX X11BASE
 SUBST_MESSAGE.prefix=	Replacing PREFIX placeholders.
 
 PLAN9_TARGET=	${PREFIX}/plan9
