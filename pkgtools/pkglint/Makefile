@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.740 2023/03/02 08:58:28 rillig Exp $
+# $NetBSD: Makefile,v 1.741 2023/03/08 13:38:53 bsiegert Exp $
 
 PKGNAME=	pkglint-22.4.1
+PKGREVISION=	1
 CATEGORIES=	pkgtools
 
 MAINTAINER=	rillig@NetBSD.org

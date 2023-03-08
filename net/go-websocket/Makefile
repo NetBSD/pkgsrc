@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.55 2023/02/16 15:01:56 bsiegert Exp $
+# $NetBSD: Makefile,v 1.56 2023/03/08 13:38:46 bsiegert Exp $
 
 DISTNAME=	websocket-1.4.2
 PKGNAME=	go-${DISTNAME}
-PKGREVISION=	21
+PKGREVISION=	22
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gorilla/}
 CATEGORIES=	net
 GITHUB_TAG=	v${PKGVERSION_NOREV}

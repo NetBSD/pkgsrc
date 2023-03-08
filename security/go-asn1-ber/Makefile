@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.42 2023/02/16 15:02:00 bsiegert Exp $
+# $NetBSD: Makefile,v 1.43 2023/03/08 13:38:49 bsiegert Exp $
 
 DISTNAME=	asn1-ber-1.3
 PKGNAME=	go-${DISTNAME}
-PKGREVISION=	41
+PKGREVISION=	42
 MASTER_SITES=	${MASTER_SITE_GITHUB:=go-asn1-ber/}
 CATEGORIES=	security
 GITHUB_PROJECT=	asn1-ber
