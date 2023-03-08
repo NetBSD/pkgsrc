@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2023/02/27 20:35:35 bsiegert Exp $
+# $NetBSD: Makefile,v 1.6 2023/03/08 13:38:50 bsiegert Exp $
 
 DISTNAME=	osv-scanner-1.0.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
