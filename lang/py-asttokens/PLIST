@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2022/08/23 10:34:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/03/08 13:47:54 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -7,6 +7,9 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/asttokens/__init__.py
 ${PYSITELIB}/asttokens/__init__.pyc
 ${PYSITELIB}/asttokens/__init__.pyo
+${PYSITELIB}/asttokens/astroid_compat.py
+${PYSITELIB}/asttokens/astroid_compat.pyc
+${PYSITELIB}/asttokens/astroid_compat.pyo
 ${PYSITELIB}/asttokens/asttokens.py
 ${PYSITELIB}/asttokens/asttokens.pyc
 ${PYSITELIB}/asttokens/asttokens.pyo
