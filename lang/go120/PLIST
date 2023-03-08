@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/02/16 10:39:59 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/03/08 08:51:16 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go120/CONTRIBUTING.md
@@ -2758,7 +2758,9 @@ go120/src/cmd/internal/buildid/testdata/a.pe.base64
 go120/src/cmd/internal/buildid/testdata/p.a.base64
 go120/src/cmd/internal/codesign/codesign.go
 go120/src/cmd/internal/cov/mreader.go
+go120/src/cmd/internal/cov/read_test.go
 go120/src/cmd/internal/cov/readcovdata.go
+go120/src/cmd/internal/cov/testdata/small.go
 go120/src/cmd/internal/dwarf/dwarf.go
 go120/src/cmd/internal/dwarf/dwarf_defs.go
 go120/src/cmd/internal/dwarf/dwarf_test.go
@@ -10999,8 +11001,12 @@ go120/test/fixedbugs/issue5809.go
 go120/test/fixedbugs/issue5820.go
 go120/test/fixedbugs/issue58293.go
 go120/test/fixedbugs/issue58325.go
+go120/test/fixedbugs/issue58341.go
 go120/test/fixedbugs/issue5841.go
 go120/test/fixedbugs/issue5856.go
+go120/test/fixedbugs/issue58563.dir/a.go
+go120/test/fixedbugs/issue58563.dir/main.go
+go120/test/fixedbugs/issue58563.go
 go120/test/fixedbugs/issue5910.dir/a.go
 go120/test/fixedbugs/issue5910.dir/main.go
 go120/test/fixedbugs/issue5910.go
@@ -11845,6 +11851,7 @@ go120/test/typeparam/issue54535.go
 go120/test/typeparam/issue54537.go
 go120/test/typeparam/issue54765.go
 go120/test/typeparam/issue55101.go
+go120/test/typeparam/issue58513.go
 go120/test/typeparam/list.go
 go120/test/typeparam/list2.go
 go120/test/typeparam/listimp.dir/a.go
