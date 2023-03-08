@@ -1,21 +1,23 @@
-$NetBSD: patch-INSTALL,v 1.1 2022/12/06 14:29:25 vins Exp $
+$NetBSD: patch-INSTALL,v 1.2 2023/03/08 22:30:52 vins Exp $
 
 Do not filter/redirect stdout/stderr to files making possible
 debugging harder.
 
 Properly honor $CC.
 
---- INSTALL.orig	2022-09-12 14:35:36.000000000 +0000
+--- INSTALL.orig	2023-01-23 20:45:55.000000000 +0000
 +++ INSTALL
-@@ -113,7 +113,7 @@ fi
+@@ -113,8 +113,8 @@ fi
  if [ `uname` != Darwin ]; then
  	# Determine whether fontsrv X11 files are available.
  	rm -f a.out
 -	cc -o a.out -c -Iinclude -I/usr/include -I/usr/local/include -I/usr/include/freetype2 -I/usr/local/include/freetype2 \
-+	@CC@ -o a.out -c -Iinclude -I/usr/include -I/usr/local/include -I/usr/include/freetype2 -I/usr/local/include/freetype2 \
- 	    -I/usr/X11R7/include -I/usr/X11R7/include/freetype2 \
+-	    -I/usr/X11R7/include -I/usr/X11R7/include/freetype2 \
++	@CC@ -o a.out -c -Iinclude -I/usr/include -I/usr/local/include -I@PREFIX@/include -I/usr/include/freetype2 -I/usr/local/include/freetype2 \
++	    -I/usr/X11R7/include -I/usr/X11R7/include/freetype2 -I@X11BASE@/include -I@PREFIX@/include/freetype2 \
  	    -I/usr/X11R6/include -I/usr/X11R6/include/freetype2 src/cmd/fontsrv/x11.c >/dev/null 2>&1
  	if [ -f a.out ]; then
+ 		echo "	fontsrv dependencies found."
 @@ -139,7 +139,7 @@ echo "* Compiler version:"
  cd src
  if $dobuild; then
