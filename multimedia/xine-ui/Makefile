@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.115 2023/01/29 21:17:23 ryoon Exp $
+# $NetBSD: Makefile,v 1.116 2023/03/08 20:20:18 mrg Exp $
 
 DISTNAME=		xine-ui-0.99.13
 PKGREVISION=		6
@@ -14,10 +14,14 @@ LICENSE=		gnu-gpl-v2
 USE_PKGLOCALEDIR=	YES
 USE_TOOLS+=		pkg-config gmake perl
 USE_TOOLS+=		msgfmt msgmerge xgettext
+USE_TOOLS+=		autoconf automake autoreconf
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--disable-lirc
 CONFIGURE_ARGS+=	--without-aalib
+
+pre-configure:
+	cd ${WRKSRC} && autoreconf -vif
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
