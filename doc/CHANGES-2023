@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1631 2023/03/08 13:53:40 adam Exp $
+$NetBSD: CHANGES-2023,v 1.1632 2023/03/08 15:35:50 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2118,3 +2118,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/go119 to 1.19.7 [bsiegert 2023-03-08]
 	Updated lang/py-asttokens to 2.2.1 [adam 2023-03-08]
 	Updated fonts/py-fonttools to 4.39.0 [adam 2023-03-08]
+	Added www/p5-Playwright version 1.291 [schmonz 2023-03-08]
