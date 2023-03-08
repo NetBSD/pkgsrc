@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1623 2023/03/08 08:53:13 adam Exp $
+$NetBSD: CHANGES-2023,v 1.1624 2023/03/08 10:01:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2087,3 +2087,8 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated audio/rubberband to 3.1.2 [wiz 2023-03-08]
 	Updated www/apache24 to 2.4.56 [adam 2023-03-08]
 	Updated lang/nodejs18 to 18.15.0 [adam 2023-03-08]
+	Updated devel/abseil to 20230125.1 [adam 2023-03-08]
+	Updated net/grpc to 1.51.3 [adam 2023-03-08]
+	Updated net/py-grpcio to 1.51.3 [adam 2023-03-08]
+	Updated net/py-grpcio-testing to 1.51.3 [adam 2023-03-08]
+	Updated net/py-grpcio-tools to 1.51.3 [adam 2023-03-08]
