@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2023/02/17 08:29:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.17 2023/03/08 12:05:59 adam Exp $
 bin/ansible-lint
 ${PYSITELIB}/${WHEEL_INFODIR}/COPYING
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
@@ -90,9 +90,6 @@ ${PYSITELIB}/ansiblelint/rules/custom/__init__.pyc
 ${PYSITELIB}/ansiblelint/rules/deprecated_bare_vars.md
 ${PYSITELIB}/ansiblelint/rules/deprecated_bare_vars.py
 ${PYSITELIB}/ansiblelint/rules/deprecated_bare_vars.pyc
-${PYSITELIB}/ansiblelint/rules/deprecated_command_syntax.md
-${PYSITELIB}/ansiblelint/rules/deprecated_command_syntax.py
-${PYSITELIB}/ansiblelint/rules/deprecated_command_syntax.pyc
 ${PYSITELIB}/ansiblelint/rules/deprecated_local_action.md
 ${PYSITELIB}/ansiblelint/rules/deprecated_local_action.py
 ${PYSITELIB}/ansiblelint/rules/deprecated_local_action.pyc
@@ -201,6 +198,9 @@ ${PYSITELIB}/ansiblelint/rules/role_name.pyc
 ${PYSITELIB}/ansiblelint/rules/run_once.md
 ${PYSITELIB}/ansiblelint/rules/run_once.py
 ${PYSITELIB}/ansiblelint/rules/run_once.pyc
+${PYSITELIB}/ansiblelint/rules/sanity.md
+${PYSITELIB}/ansiblelint/rules/sanity.py
+${PYSITELIB}/ansiblelint/rules/sanity.pyc
 ${PYSITELIB}/ansiblelint/rules/schema.md
 ${PYSITELIB}/ansiblelint/rules/schema.py
 ${PYSITELIB}/ansiblelint/rules/schema.pyc
@@ -237,6 +237,7 @@ ${PYSITELIB}/ansiblelint/schemas/meta.json
 ${PYSITELIB}/ansiblelint/schemas/molecule.json
 ${PYSITELIB}/ansiblelint/schemas/playbook.json
 ${PYSITELIB}/ansiblelint/schemas/requirements.json
+${PYSITELIB}/ansiblelint/schemas/rulebook.json
 ${PYSITELIB}/ansiblelint/schemas/tasks.json
 ${PYSITELIB}/ansiblelint/schemas/vars.json
 ${PYSITELIB}/ansiblelint/skip_utils.py
