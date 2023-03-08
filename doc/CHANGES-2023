@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1624 2023/03/08 10:01:36 adam Exp $
+$NetBSD: CHANGES-2023,v 1.1625 2023/03/08 10:12:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2092,3 +2092,19 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/py-grpcio to 1.51.3 [adam 2023-03-08]
 	Updated net/py-grpcio-testing to 1.51.3 [adam 2023-03-08]
 	Updated net/py-grpcio-tools to 1.51.3 [adam 2023-03-08]
+	Updated security/py-acme to 2.4.0 [adam 2023-03-08]
+	Updated security/py-certbot to 2.4.0 [adam 2023-03-08]
+	Updated security/py-certbot-apache to 2.4.0 [adam 2023-03-08]
+	Updated security/py-certbot-dns-digitalocean to 2.4.0 [adam 2023-03-08]
+	Updated security/py-certbot-dns-dnsimple to 2.4.0 [adam 2023-03-08]
+	Updated security/py-certbot-dns-dnsmadeeasy to 2.4.0 [adam 2023-03-08]
+	Updated security/py-certbot-dns-gehirn to 2.4.0 [adam 2023-03-08]
+	Updated security/py-certbot-dns-google to 2.4.0 [adam 2023-03-08]
+	Updated security/py-certbot-dns-linode to 2.4.0 [adam 2023-03-08]
+	Updated security/py-certbot-dns-luadns to 2.4.0 [adam 2023-03-08]
+	Updated security/py-certbot-dns-nsone to 2.4.0 [adam 2023-03-08]
+	Updated security/py-certbot-dns-ovh to 2.4.0 [adam 2023-03-08]
+	Updated security/py-certbot-dns-rfc2136 to 2.4.0 [adam 2023-03-08]
+	Updated security/py-certbot-dns-route53 to 2.4.0 [adam 2023-03-08]
+	Updated security/py-certbot-dns-sakuracloud to 2.4.0 [adam 2023-03-08]
+	Updated security/py-certbot-nginx to 2.4.0 [adam 2023-03-08]
