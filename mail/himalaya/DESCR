@@ -1,0 +1,17 @@
+Himalaya is a CLI based on the himalaya-lib that allows you to manipulate
+your emails using commands in your console.
+
+Features:
+    Folder listing
+    Envelopes listing, searching and sorting
+    Email composition based on $EDITOR
+    Email manipulation (copy/move/delete)
+    Multi-accounting
+    Account listing
+    Account synchronization for offline usage
+    IMAP, Maildir and Notmuch support
+    IMAP IDLE mode for real-time notifications
+    PGP end-to-end encryption
+    Completions for various shells
+    JSON output
+    ...

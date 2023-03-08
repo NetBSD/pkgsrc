@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.594 2023/02/16 07:16:28 wiz Exp $
+# $NetBSD: Makefile,v 1.595 2023/03/08 23:45:10 nikita Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -109,6 +109,7 @@ SUBDIR+=	grepmail
 SUBDIR+=	greylisting-spp
 SUBDIR+=	gyb
 SUBDIR+=	heirloom-mailx
+SUBDIR+=	himalaya
 SUBDIR+=	hypermail
 SUBDIR+=	ifile
 SUBDIR+=	im
