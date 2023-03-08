@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1636 2023/03/08 17:37:08 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1637 2023/03/08 17:40:04 snj Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2123,3 +2123,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added graphics/py-pillow-heif version 0.10.0 [wiz 2023-03-08]
 	Updated devel/conftest to 0.39.2 [leot 2023-03-08]
 	Updated devel/fq to 0.4.0 [wiz 2023-03-08]
+	Updated multimedia/mpv to 0.35.1nb1 [snj 2023-03-08]
