@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.50 2023/02/21 06:51:53 adam Exp $
+$NetBSD: distinfo,v 1.51 2023/03/08 10:11:48 adam Exp $
 
-BLAKE2s (certbot-nginx-2.3.0.tar.gz) = bf6b0e67c1a201ecec78f8cd73d225d0346da1d8d92ac895bc7471d492a92f88
-SHA512 (certbot-nginx-2.3.0.tar.gz) = 8eb4e8839b24c5a3179cf2e0276f10b0b51f3d6f0a4f1fbfd8d6083084507ac214bd141d6fc4be7d3c521d5bd5e0f4999c0f60ca6c515737b2d3e191908f7fd9
-Size (certbot-nginx-2.3.0.tar.gz) = 79850 bytes
+BLAKE2s (certbot-nginx-2.4.0.tar.gz) = dcf508f9b71b381994fc61fb841250bdc7eda8aa1c2f4be033a141eb96fc177f
+SHA512 (certbot-nginx-2.4.0.tar.gz) = 151d0099f40a51264f10addfb3047def4bc1fbddea5b566c8a28e2eed223d1e86067b9a4871d9393c6cc5b593e9526e61aad6999490a7bd9f4e59d35ed19158d
+Size (certbot-nginx-2.4.0.tar.gz) = 78622 bytes
 SHA1 (patch-certbot__nginx___internal_constants.py) = a997b742be045374043a508a187db21fa45dde0c
