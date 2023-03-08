@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1626 2023/03/08 11:37:29 adam Exp $
+$NetBSD: CHANGES-2023,v 1.1627 2023/03/08 12:11:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2110,3 +2110,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/py-certbot-nginx to 2.4.0 [adam 2023-03-08]
 	Updated net/py-smb to 1.2.9.1 [adam 2023-03-08]
 	Updated devel/py-dict2xml to 1.7.3 [adam 2023-03-08]
+	Updated sysutils/ansible-lint to 6.14.1 [adam 2023-03-08]
+	Updated textproc/py-pyquery to 2.0.0 [adam 2023-03-08]
