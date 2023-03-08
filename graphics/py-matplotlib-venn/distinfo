@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2022/09/14 11:46:03 adam Exp $
+$NetBSD: distinfo,v 1.6 2023/03/08 10:37:47 wiz Exp $
 
-BLAKE2s (matplotlib-venn-0.11.7.tar.gz) = 697b5627e06254cc00b7ecafa756e11907e6def1dbfd62105058ad2d7d39ed8c
-SHA512 (matplotlib-venn-0.11.7.tar.gz) = f08d1d481755ab1879a2ea47f9aa4d203ae546d75c8c24309e697fd30456eefa5b933b996696bb47f87299008a324861d4532045833296960e0c10bb9b037231
-Size (matplotlib-venn-0.11.7.tar.gz) = 29714 bytes
+BLAKE2s (matplotlib-venn-0.11.9.tar.gz) = 864e717dfbd336cc56c3258ba58e368df702a45928b442792f9dff6f3c023998
+SHA512 (matplotlib-venn-0.11.9.tar.gz) = 929918fe41ffc1b917f2dd1595ad06483b5cda88993cf432d9ad00369a9adcb47815f9a544e8028c1d5e27879e3e557057aa0ce1ffbdea9ea7086df232571b74
+Size (matplotlib-venn-0.11.9.tar.gz) = 30572 bytes
