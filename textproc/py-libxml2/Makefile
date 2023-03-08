@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.82 2022/11/23 16:21:13 adam Exp $
+# $NetBSD: Makefile,v 1.82.2.1 2023/03/08 21:02:02 spz Exp $
 
-PKGREVISION= 1
 .include "../../textproc/libxml2/Makefile.common"
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	2
 
 COMMENT=	Python wrapper for libxml2
 LICENSE=	modified-bsd
@@ -11,7 +11,8 @@ LICENSE=	modified-bsd
 USE_GCC_RUNTIME=	yes
 
 PYSETUPSUBDIR=	python
-NO_CONFIGURE=	YES
+GNU_CONFIGURE=	YES
+USE_TOOLS+=	pkg-config
 
 SUBST_CLASSES+=		setup
 SUBST_MESSAGE.setup=	Fixing hardcoded paths.
