@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.2 2023/03/02 13:58:04 vins Exp $
+$NetBSD: distinfo,v 1.3 2023/03/08 22:30:52 vins Exp $
 
 BLAKE2s (plan9port-20230123-e2a141ae0952c2d28a9f500bb9da6dc72e57be3c.tar.gz) = 99010aa1dc24bbd7a6a2f24fef9f3e2cd525261d1628fcc9405cbfa7ac2acd2f
 SHA512 (plan9port-20230123-e2a141ae0952c2d28a9f500bb9da6dc72e57be3c.tar.gz) = c2c730e478ed3d876dead7cf3ff3d6d24ac37436f18ad478fd61e943248b0e37435520ea6c57fcb398ee7424d7609af3bfb9704f5ac3ddb1a23553cebf906ccd
 Size (plan9port-20230123-e2a141ae0952c2d28a9f500bb9da6dc72e57be3c.tar.gz) = 23411241 bytes
-SHA1 (patch-INSTALL) = c57b8248b52f4f2143c6b2d67226fb3e0ccfe8a1
+SHA1 (patch-INSTALL) = a20664c816a3c242bb6ca3484bccb84350843122
 SHA1 (patch-bin_9c) = f82600788e2643d9b93941a47774be1b3c79c03b
 SHA1 (patch-bin_9l) = e6daeac87657ed3e25e0f0db403d973f60d544d2
 SHA1 (patch-src_cmd_devdraw_mkwsysrules.sh) = b81252ff054868622e07e743e436ddaad540b9e0
