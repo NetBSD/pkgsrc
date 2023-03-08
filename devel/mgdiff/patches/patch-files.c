@@ -1,4 +1,4 @@
-$NetBSD: patch-files.c,v 1.1 2023/03/01 23:48:00 vins Exp $
+$NetBSD: patch-files.c,v 1.2 2023/03/08 21:46:44 vins Exp $
 
 Pull patches from Debian.
 
@@ -17,7 +17,15 @@ Pull patches from Debian.
   * 
   * The X Consortium, and any party obtaining a copy of these files from
   * the X Consortium, directly or indirectly, is granted, free of charge,
-@@ -83,16 +84,18 @@ static void popup_cb (Widget w, XtPointe
+@@ -36,6 +37,7 @@ static char rcsid[] = "files.c,v 2.0 199
+ #include <unistd.h>
+ #include <errno.h>
+ #include <sys/stat.h>
++#include <sys/types.h>
+ #include <ctype.h>
+ #include <assert.h>
+ 
+@@ -83,16 +85,18 @@ static void popup_cb (Widget w, XtPointe
   */
  static int is_ascii_text (char *filename)
  {
@@ -39,7 +47,7 @@ Pull patches from Debian.
      return (1);
  }
  
-@@ -143,12 +146,13 @@ void werror (Widget parent, char *title,
+@@ -143,12 +147,13 @@ void werror (Widget parent, char *title,
      XmString xms;
      Arg args[2];
  
@@ -55,7 +63,7 @@ Pull patches from Debian.
      XtVaSetValues (XtParent (dialog), XtNtitle, title, NULL);
  
      XtUnmanageChild (XmMessageBoxGetChild (dialog, XmDIALOG_CANCEL_BUTTON));
-@@ -174,8 +178,10 @@ void werror_long (Widget parent, char *t
+@@ -174,8 +179,10 @@ void werror_long (Widget parent, char *t
  	    xms1 = xms4;
  	else {
  	    xms2 = XmStringConcat (xms1, xms4);
@@ -68,7 +76,7 @@ Pull patches from Debian.
  	    xms1 = xms2;
  	}
  
-@@ -183,16 +189,19 @@ void werror_long (Widget parent, char *t
+@@ -183,16 +190,19 @@ void werror_long (Widget parent, char *t
  	    XmString xms3;
  
  	    xms3 = XmStringConcat (xms1, sep);
@@ -91,7 +99,7 @@ Pull patches from Debian.
      XtVaSetValues (XtParent (dialog), XtNtitle, title, NULL);
      XtUnmanageChild (XmMessageBoxGetChild (dialog, XmDIALOG_CANCEL_BUTTON));
      XtUnmanageChild (XmMessageBoxGetChild (dialog, XmDIALOG_HELP_BUTTON));
-@@ -318,7 +327,7 @@ void open_both_files (Widget parent, cha
+@@ -318,7 +328,7 @@ void open_both_files (Widget parent, cha
      Arg args[2];
      int i;
      char *dir;
@@ -100,7 +108,7 @@ Pull patches from Debian.
  
      shell = XtVaCreatePopupShell ("openfiles", xmDialogShellWidgetClass, parent,
  				  XmNallowShellResize, True,
-@@ -349,7 +358,8 @@ void open_both_files (Widget parent, cha
+@@ -349,7 +359,8 @@ void open_both_files (Widget parent, cha
      fsb1 = XmCreateFileSelectionBox (frame1a, "files1", args, i);
      if (dir) {
  	XtFree (dir);
@@ -110,7 +118,7 @@ Pull patches from Debian.
      }
  
      i = 0;
-@@ -360,7 +370,8 @@ void open_both_files (Widget parent, cha
+@@ -360,7 +371,8 @@ void open_both_files (Widget parent, cha
      fsb2 = XmCreateFileSelectionBox (frame2a, "files2", args, i);
      if (dir) {
  	XtFree (dir);
@@ -120,7 +128,7 @@ Pull patches from Debian.
      }
  
      XtAddCallback (fsb1, XmNokCallback, filel_both_cb, shell);
-@@ -424,7 +435,7 @@ void open_left_file (Widget parent, char
+@@ -424,7 +436,7 @@ void open_left_file (Widget parent, char
      Arg args[2];
      int i;
      char *dir;
@@ -129,7 +137,7 @@ Pull patches from Debian.
  
      i = 0;
      XtSetArg (args[i], XmNdeleteResponse, XmDO_NOTHING); i++;
-@@ -435,7 +446,8 @@ void open_left_file (Widget parent, char
+@@ -435,7 +447,8 @@ void open_left_file (Widget parent, char
      dialog = XmCreateFileSelectionDialog (parent, "openfile", args, i);
      if (dir) {
  	XtFree (dir);
@@ -139,7 +147,7 @@ Pull patches from Debian.
      }
      XtAddCallback (XtParent (dialog), XmNpopupCallback, popup_cb, parent);
      XtAddCallback (dialog, XmNokCallback, file_left_cb, dialog);
-@@ -477,7 +489,7 @@ void open_right_file (Widget parent, cha
+@@ -477,7 +490,7 @@ void open_right_file (Widget parent, cha
      Arg args[2];
      int i;
      char *dir;
@@ -148,7 +156,7 @@ Pull patches from Debian.
  
      i = 0;
      XtSetArg (args[i], XmNdeleteResponse, XmDO_NOTHING); i++;
-@@ -488,7 +500,8 @@ void open_right_file (Widget parent, cha
+@@ -488,7 +501,8 @@ void open_right_file (Widget parent, cha
      dialog = XmCreateFileSelectionDialog (parent, "openfile", args, XtNumber (args));
      if (dir) {
  	XtFree (dir);
@@ -158,7 +166,7 @@ Pull patches from Debian.
      }
  
      XtAddCallback (XtParent (dialog), XmNpopupCallback, popup_cb, parent);
-@@ -533,7 +546,7 @@ static void file_save_cb (Widget w, XtPo
+@@ -533,7 +547,7 @@ static void file_save_cb (Widget w, XtPo
      if (access (filename, W_OK) == 0) {	/* file exists and can be written */
  	char buffer[1024];
  
@@ -167,7 +175,7 @@ Pull patches from Debian.
  	if (modal_question (w, "Mgdiff Save Question", buffer)) {
  	    set_cursor (shell);
  	    if ((status = really_save_file (filename, (Block *) closure)) != 0) {
-@@ -569,7 +582,7 @@ void save_file (Widget parent, Block *b,
+@@ -569,7 +583,7 @@ void save_file (Widget parent, Block *b,
      Arg args[3];
      int i;
      char *dir;
@@ -176,7 +184,7 @@ Pull patches from Debian.
  
      i = 0;
      XtSetArg (args[i], XmNdialogStyle, XmDIALOG_PRIMARY_APPLICATION_MODAL); i++;
-@@ -582,7 +595,8 @@ void save_file (Widget parent, Block *b,
+@@ -582,7 +596,8 @@ void save_file (Widget parent, Block *b,
      dialog = XmCreateFileSelectionDialog (parent, "savefile", args, i);
      if (dir) {
  	XtFree (dir);
@@ -186,7 +194,7 @@ Pull patches from Debian.
      }
  
      XtAddCallback (XtParent (dialog), XmNpopupCallback, popup_cb, parent);
-@@ -618,18 +632,32 @@ static int really_save_file (char *filen
+@@ -618,18 +633,32 @@ static int really_save_file (char *filen
  		return (status);
  	}
  	else if ((b->arr[LEFT].type == DIFF) && (b->arr[RIGHT].type == DIFF)) {
@@ -222,7 +230,7 @@ Pull patches from Debian.
  	    if (b->selected == RIGHT)
  		if ((status = write_chunk (file, &b->arr[RIGHT])) != 0)
  		    return (status);
-@@ -669,3 +697,45 @@ static int write_chunk (FILE *file, Chun
+@@ -669,3 +698,45 @@ static int write_chunk (FILE *file, Chun
  
      return (0);
  }
