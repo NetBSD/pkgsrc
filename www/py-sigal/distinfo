@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.1 2022/12/16 19:34:44 wiz Exp $
+$NetBSD: distinfo,v 1.2 2023/03/08 21:05:58 wiz Exp $
 
 BLAKE2s (sigal-2.3.tar.gz) = a8b9a0f0f937e287b1283a2a9fe7551e268c1438235db8a27e9ca3fa9c002856
 SHA512 (sigal-2.3.tar.gz) = e7eafc3c624497f19fdc9eb96fce67789db027b3c34c28eadcc162dd176a2462e101f16ffd54e08ee85baf1a9d264c5657e6cd264c40e155def4eee539242597
 Size (sigal-2.3.tar.gz) = 4652875 bytes
+SHA1 (patch-sigal_gallery.py) = a59c0e1cb954b9045be3436c4686f073d099b1e0
+SHA1 (patch-sigal_image.py) = ab9da9578da4c3a7d364f05978803fd538fdc886
