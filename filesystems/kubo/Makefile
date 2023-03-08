@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2023/02/16 15:02:04 bsiegert Exp $
+# $NetBSD: Makefile,v 1.6 2023/03/08 13:38:53 bsiegert Exp $
 
 DISTNAME=	kubo-0.18.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	filesystems net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ipfs/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

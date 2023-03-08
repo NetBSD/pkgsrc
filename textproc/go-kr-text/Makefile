@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2023/02/16 15:01:58 bsiegert Exp $
+# $NetBSD: Makefile,v 1.33 2023/03/08 13:38:48 bsiegert Exp $
 
 DISTNAME=		go-kr-text-0.2.0
-PKGREVISION=		31
+PKGREVISION=		32
 CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_GITHUB:=kr/}
 GITHUB_PROJECT=		text
