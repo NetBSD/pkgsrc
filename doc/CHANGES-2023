@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1639 2023/03/08 20:31:22 nikita Exp $
+$NetBSD: CHANGES-2023,v 1.1640 2023/03/08 21:06:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2126,3 +2126,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated multimedia/mpv to 0.35.1nb1 [snj 2023-03-08]
 	Updated x11/xf86-video-nouveau to 1.0.17 [snj 2023-03-08]
 	Updated security/gopass to 1.15.4 [nikita 2023-03-08]
+	Updated www/py-sigal to 2.3nb1 [wiz 2023-03-08]
