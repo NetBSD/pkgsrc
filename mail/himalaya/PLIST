@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2023/03/08 23:45:10 nikita Exp $
+bin/himalaya
+man/man1/himalaya-accounts.1
+man/man1/himalaya-attachments.1
+man/man1/himalaya-completion.1
+man/man1/himalaya-copy.1
+man/man1/himalaya-delete.1
+man/man1/himalaya-flags.1
+man/man1/himalaya-folders.1
+man/man1/himalaya-forward.1
+man/man1/himalaya-list.1
+man/man1/himalaya-man.1
+man/man1/himalaya-move.1
+man/man1/himalaya-notify.1
+man/man1/himalaya-read.1
+man/man1/himalaya-reply.1
+man/man1/himalaya-save.1
+man/man1/himalaya-search.1
+man/man1/himalaya-send.1
+man/man1/himalaya-sort.1
+man/man1/himalaya-template.1
+man/man1/himalaya-watch.1
+man/man1/himalaya-write.1
+man/man1/himalaya.1
+share/bash-completion/completions/himalaya.bash
+share/examples/himalaya/completion/himalaya.zsh
+share/fish/completions/himalaya.fish
