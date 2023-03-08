@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1630 2023/03/08 13:15:12 bsiegert Exp $
+$NetBSD: CHANGES-2023,v 1.1631 2023/03/08 13:53:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2116,3 +2116,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-natsort to 8.3.1 [adam 2023-03-08]
 	Updated lang/go120 to 1.20.2 [bsiegert 2023-03-08]
 	Updated lang/go119 to 1.19.7 [bsiegert 2023-03-08]
+	Updated lang/py-asttokens to 2.2.1 [adam 2023-03-08]
+	Updated fonts/py-fonttools to 4.39.0 [adam 2023-03-08]
