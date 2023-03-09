@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1652 2023/03/09 09:50:38 adam Exp $
+$NetBSD: CHANGES-2023,v 1.1653 2023/03/09 10:22:47 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2141,3 +2141,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/py-mypy to 1.1.1 [adam 2023-03-09]
 	Updated devel/py-astroid to 2.15.0 [adam 2023-03-09]
 	Updated devel/py-pylint to 2.17.0 [adam 2023-03-09]
+	Added chat/iamb version 0.0.6 [pin 2023-03-09]
