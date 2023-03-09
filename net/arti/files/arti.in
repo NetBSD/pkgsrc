@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: arti.in,v 1.2 2023/03/08 22:28:07 nikita Exp $
+# $NetBSD: arti.in,v 1.3 2023/03/09 18:19:40 nikita Exp $
 #
 # PROVIDE: arti
 # REQUIRE: DAEMON NETWORKING
@@ -16,35 +16,34 @@ then
 fi
 
 name="arti"
-rcvar=$name
-command="@PREFIX@/bin/${name}"
-command_args="proxy --config @PKG_SYSCONFDIR@/${name}.toml"
+rcvar=${name}
+command="@PREFIX@/sbin/daemonize"
+procname="@PREFIX@/bin/${name}"
+proc_args="proxy --config @PKG_SYSCONFDIR@/${name}.toml"
 required_files="@PKG_SYSCONFDIR@/${name}.toml"
-start_cmd="arti_start"
-stop_cmd="arti_stop"
 pidfile="@PKG_HOME@/${name}.pid"
-restart_cmd="arti_stop ; arti_start"
-extra_commands="reload"
-arti_env="PATH=${PATH} HOME=@PKG_HOME@ USER=@ARTI_USER@"
+start_precmd="arti_precmd"
+command_args="${command_args} -p ${pidfile}"
+command_args="${command_args} -o @PKG_HOME@/log/stdout.log"
+command_args="${command_args} -e @PKG_HOME@/log/stderr.log"
+command_args="${command_args} -u @ARTI_USER@"
+command_args="${command_args} -E HOME=@PKG_HOME@"
+command_args="${command_args} ${procname} ${proc_args}"
 
-# FIXME: This does not detach to the background.
-arti_start ()
+arti_precmd()
 {
-	@ECHO@ "Starting ${name}."
-	doit="@SU@ -m @ARTI_USER@ -c '${arti_env} ${command} ${command_args}'"
-	eval $doit
+	if [ ! -d @PKG_HOME@/log ]; then
+		@MKDIR@ @PKG_HOME@/log
+		@CHMOD@ 0750 @PKG_HOME@/log
+		@CHOWN@ @ARTI_USER@:@ARTI_GROUP@ @PKG_HOME@/log
+	fi
+	if [ -f @PKG_HOME@/log/stdout.log ]; then
+		@CHOWN@ @ARTI_USER@:@ARTI_GROUP@ @PKG_HOME@/log/stdout.log
+	fi
+	if [ -f @PKG_HOME@/log/stderr.log ]; then
+		@CHOWN@ @ARTI_USER@:@ARTI_GROUP@ @PKG_HOME@/log/stderr.log
+	fi
 }
 
-arti_stop()
-{
-	echo "Stopping ${name}."
-	kill `cat ${pidfile}` 2>/dev/null
-}
-
-if [ -f /etc/rc.subr -a -f /etc/rc.conf -a -d /etc/rc.d -a -f /etc/rc.d/DAEMON ]
-then
-	load_rc_config $name
-	run_rc_command "$1"
-else
-	eval ${start_cmd}
-fi
+load_rc_config $name
+run_rc_command "$1"
