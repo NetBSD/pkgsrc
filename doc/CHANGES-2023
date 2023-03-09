@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1654 2023/03/09 10:31:36 adam Exp $
+$NetBSD: CHANGES-2023,v 1.1655 2023/03/09 13:34:21 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2144,3 +2144,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added chat/iamb version 0.0.6 [pin 2023-03-09]
 	Updated devel/py-hatchling to 1.13.0 [adam 2023-03-09]
 	Updated textproc/py-breathe to 4.35.0 [adam 2023-03-09]
+	Updated audio/libopenmpt to 0.6.9 [fcambus 2023-03-09]
