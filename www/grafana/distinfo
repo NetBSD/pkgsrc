@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.38 2023/03/05 21:22:45 triaxx Exp $
+$NetBSD: distinfo,v 1.39 2023/03/09 18:02:00 triaxx Exp $
 
 BLAKE2s (bazil.org_fuse_@v_v0.0.0-20160811212531-371fbbdaa898.mod) = ff8095283662ae2d2a1968bf429516c54586b1a6c4dc744657162e6781aa8ece
 SHA512 (bazil.org_fuse_@v_v0.0.0-20160811212531-371fbbdaa898.mod) = 7b3ef87f98485bb9ec325680f57d43a9bd76e90bdcfb1e798458f28f7d3addf91dbb6a07b654749468860981413ad2267df2d5f3535c85579e9f79d9328d355c
@@ -10878,3 +10878,4 @@ Size (xorm.io_core_@v_v0.7.3.zip) = 31222 bytes
 SHA1 (patch-go.mod) = 8742e9db79e440d8d1dcc1bf8b8a23874511b496
 SHA1 (patch-go.sum) = 97ecf1a2319a9311fb9517e3908f9b6980703fd8
 SHA1 (patch-pkg_build_cmd.go) = a9002d34fef4ee7e1bb2953b0a3d825a0c64fa1d
+SHA1 (patch-pkg_cmd_grafana-server_commands_cli.go) = 0dce3a76ad509aade343c6f5bae9b3590198f2c3
