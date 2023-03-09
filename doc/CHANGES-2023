@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1642 2023/03/09 00:49:37 gdt Exp $
+$NetBSD: CHANGES-2023,v 1.1643 2023/03/09 00:52:49 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2129,3 +2129,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-sigal to 2.3nb1 [wiz 2023-03-08]
 	Added mail/himalaya version 0.7.1 [nikita 2023-03-08]
 	Updated geography/gama to 2.24 [gdt 2023-03-09]
+	Updated geography/gpsd to 3.25 [gdt 2023-03-09]
