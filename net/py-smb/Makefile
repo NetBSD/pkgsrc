@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2023/03/08 11:10:57 adam Exp $
+# $NetBSD: Makefile,v 1.20 2023/03/09 05:26:07 adam Exp $
 
 DISTNAME=	pysmb-1.2.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -15,6 +15,8 @@ DEPENDS+=	${PYPKGPREFIX}-asn1-[0-9]*:../../security/py-asn1
 DEPENDS+=	${PYPKGPREFIX}-tqdm-[0-9]*:../../misc/py-tqdm
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-tqdm
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
