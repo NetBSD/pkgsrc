@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.95 2023/03/08 13:38:51 bsiegert Exp $
+# $NetBSD: Makefile,v 1.96 2023/03/09 18:02:00 triaxx Exp $
 
 DISTNAME=	grafana-9.4.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=grafana/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -35,7 +35,7 @@ LOGDIR=		${VARBASE}/log/grafana
 SUBST_CLASSES+=		fix-cfg
 SUBST_STAGE.fix-cfg=	pre-configure
 SUBST_MESSAGE.fix-cfg=	Adding pkgsrc paths in sample config
-SUBST_FILES.fix-cfg=	conf/sample.ini
+SUBST_FILES.fix-cfg=	conf/sample.ini pkg/cmd/grafana-server/commands/cli.go
 SUBST_SED.fix-cfg=	-e 's,^;\(data = \).*,\1${DATADIR},g'
 SUBST_SED.fix-cfg+=	-e 's,^;\(logs = \).*,\1${LOGDIR},g'
 SUBST_SED.fix-cfg+=	-e 's,^;\(plugins = \).*,\1${PLUGINDIR},g'
