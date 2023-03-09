@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2022/07/03 13:31:08 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2023/03/09 05:32:11 adam Exp $
 
-DISTNAME=	msgpack-1.0.4
+DISTNAME=	msgpack-1.0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/msgpack/}
