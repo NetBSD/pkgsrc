@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.278 2023/02/16 09:56:22 khorben Exp $
+# $NetBSD: Makefile,v 1.279 2023/03/09 10:22:16 pin Exp $
 #
 
 COMMENT=	Communication programs
@@ -41,6 +41,7 @@ SUBDIR+=	goofey
 SUBDIR+=	hexchat
 SUBDIR+=	i2cb
 SUBDIR+=	i2cbd
+SUBDIR+=	iamb
 SUBDIR+=	icb
 SUBDIR+=	icbirc
 SUBDIR+=	ii
