@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.6 2022/07/06 15:27:45 adam Exp $
+# $NetBSD: Makefile,v 1.7 2023/03/09 10:31:10 adam Exp $
 
-DISTNAME=	breathe-4.34.0
+DISTNAME=	breathe-4.35.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/breathe/}
 
 MAINTAINER=	gdt@NetBSD.org
-HOMEPAGE=	https://github.com/michaeljones/breathe
+HOMEPAGE=	https://github.com/breathe-doc/breathe
 COMMENT=	Sphinx plugin providing integrated Doxygen output
 LICENSE=	modified-bsd
 
