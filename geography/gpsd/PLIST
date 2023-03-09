@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2022/04/28 11:43:14 gdt Exp $
+@comment $NetBSD: PLIST,v 1.20 2023/03/09 00:52:42 gdt Exp $
 bin/cgps
 bin/gegps
 bin/gps2udp
@@ -25,11 +25,11 @@ bin/zerk
 include/gps.h
 include/libgpsmm.h
 lib/libgps${PLIST_SO}${PLIST_DYLIB}
-lib/libgps${PLIST_SO}.29${PLIST_DYLIB}
-lib/libgps${PLIST_SO}.29.0.1${PLIST_DYLIB}
+lib/libgps${PLIST_SO}.30${PLIST_DYLIB}
+lib/libgps${PLIST_SO}.30.0.0${PLIST_DYLIB}
 lib/libgpsdpacket${PLIST_SO}${PLIST_DYLIB}
-lib/libgpsdpacket${PLIST_SO}.29${PLIST_DYLIB}
-lib/libgpsdpacket${PLIST_SO}.29.0.1${PLIST_DYLIB}
+lib/libgpsdpacket${PLIST_SO}.30${PLIST_DYLIB}
+lib/libgpsdpacket${PLIST_SO}.30.0.0${PLIST_DYLIB}
 lib/pkgconfig/libgps.pc
 ${PYSITELIB}/gps-${PKGVERSION}.egg-info
 ${PYSITELIB}/gps/__init__.py
@@ -83,4 +83,6 @@ share/doc/gpsd/README.adoc
 share/doc/gpsd/SUPPORT.adoc
 share/doc/gpsd/build.adoc
 share/doc/gpsd/example1.c.txt
+share/doc/gpsd/example2.py.txt
 share/gpsd/icons/gpsd-logo.png
+share/snmp/mibs/gpsd/GPSD-MIB
