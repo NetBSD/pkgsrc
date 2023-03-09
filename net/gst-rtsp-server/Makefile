@@ -1,24 +1,33 @@
-# $NetBSD: Makefile,v 1.9 2021/12/08 16:05:59 adam Exp $
+# $NetBSD: Makefile,v 1.10 2023/03/09 08:25:42 prlw1 Exp $
 
-DISTNAME=	gst-rtsp-server-1.12.3
-PKGREVISION=	3
+.include "../../multimedia/gstreamer1/version.mk"
+
+DISTNAME=	gst-rtsp-server-${GST_VERSION}
 CATEGORIES=	net multimedia
 MASTER_SITES=	https://gstreamer.freedesktop.org/src/gst-rtsp-server/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://gstreamer.freedesktop.org/modules/gst-rtsp-server.html
 COMMENT=	GStreamer RTSP server
 LICENSE=	gnu-lgpl-v2
 
-USE_LIBTOOL=		yes
-GNU_CONFIGURE=		yes
-USE_TOOLS+=		pkg-config gmake
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_FOR_BUILD_ONLY=		tool
+
+USE_TOOLS+=		pkg-config
 PKGCONFIG_OVERRIDE=	gstreamer-rtsp-server.pc.in
 
-BUILDLINK_API_DEPENDS.gstreamer1+=	gstreamer1>=1.10.0
+MESON_ARGS+=		-Dtests=disabled
+
+.include "../../lang/python/pyversion.mk"
+
+SUBST_CLASSES+=		pytoolpath
+SUBST_STAGE.pytoolpath=	pre-configure
+SUBST_FILES.pytoolpath=	scripts/extract-release-date-from-doap-file.py
+SUBST_SED.pytoolpath=	-e '1s|.*python3\{0,1\}[^ ]*|\#!${PYTHONBIN}|'
+
 .include "../../multimedia/gstreamer1/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
-BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.40.0
-.include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/gobject-introspection/buildlink3.mk"
+.include "../../devel/meson/build.mk"
 .include "../../mk/bsd.pkg.mk"
