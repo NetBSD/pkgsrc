@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.43 2022/12/16 21:08:08 adam Exp $
+# $NetBSD: Makefile.common,v 1.44 2023/03/09 08:25:41 prlw1 Exp $
 # used by audio/gst-plugins1-flac/Makefile
 # used by audio/gst-plugins1-jack/Makefile
 # used by audio/gst-plugins1-lame/Makefile
@@ -17,6 +17,7 @@
 # used by multimedia/gst-plugins1-gtk/Makefile
 # used by multimedia/gst-plugins1-osxvideo/Makefile
 # used by multimedia/gst-plugins1-v4l2/Makefile
+# used by net/gst-plugins1-adaptivedemux2/Makefile
 # used by net/gst-plugins1-soup/Makefile
 # used by x11/gst-plugins1-ximagesrc/Makefile
 
@@ -90,6 +91,7 @@ GST_PLUGINS_SET+=	wavenc
 GST_PLUGINS_SET+=	wavparse
 GST_PLUGINS_SET+=	y4m
 GST_PLUGINS_SET+=	aalib
+GST_PLUGINS_SET+=	adaptivedemux2
 GST_PLUGINS_SET+=	bz2
 GST_PLUGINS_SET+=	cairo
 GST_PLUGINS_SET+=	directsound
@@ -125,6 +127,7 @@ GST_PLUGINS_SET+=	ximagesrc
 GST_PLUGINS_SET+=	ximagesrc-xshm
 GST_PLUGINS_SET+=	ximagesrc-xfixes
 GST_PLUGINS_SET+=	ximagesrc-xdamage
+GST_PLUGINS_SET+=	xingmux
 GST_PLUGINS_SET+=	v4l2
 GST_PLUGINS_SET+=	v4l2-libv4l2
 GST_PLUGINS_SET+=	v4l2-gudev
