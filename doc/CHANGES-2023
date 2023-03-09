@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1644 2023/03/09 00:57:22 gdt Exp $
+$NetBSD: CHANGES-2023,v 1.1645 2023/03/09 00:59:02 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2131,3 +2131,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated geography/gama to 2.24 [gdt 2023-03-09]
 	Updated geography/gpsd to 3.25 [gdt 2023-03-09]
 	Updated geography/gpsd to 3.25 [gdt 2023-03-09]
+	Updated ham/hamlib to 4.5.4 [gdt 2023-03-09]
