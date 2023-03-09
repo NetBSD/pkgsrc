@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1658 2023/03/09 18:20:46 nikita Exp $
+$NetBSD: CHANGES-2023,v 1.1659 2023/03/09 21:11:12 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2139,6 +2139,16 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-pathspec to 0.11.0 [adam 2023-03-09]
 	Updated devel/py-maturin to 0.14.15 [adam 2023-03-09]
 	Updated lang/py-mypy to 1.1.1 [adam 2023-03-09]
+	Updated multimedia/gstreamer1 to 1.22.1 [prlw1 2023-04-18]
+	Updated multimedia/gst-plugins1-base to 1.22.1 [prlw1 2023-04-18]
+	Updated multimedia/gst-plugins1-good to 1.22.1 [prlw1 2023-04-18]
+	Updated multimedia/gst-plugins1-bad to 1.22.1 [prlw1 2023-04-18]
+	Updated multimedia/gst-plugins1-ugly to 1.22.1 [prlw1 2023-04-18]
+	Updated multimedia/gst-plugins1-libav to 1.22.1 [prlw1 2023-04-18]
+	Updated multimedia/gst-plugins1-vaapi to 1.22.1 [prlw1 2023-04-18]
+	Updated multimedia/gst-plugins1-editing-services to 1.22.1 [prlw1 2023-04-18]
+	Updated net/gst-rtsp-server to 1.22.1 [prlw1 2023-04-18]
+	Added net/gst-plugins1-adaptivedemux2 version 1.22.1 [prlw1 2023-04-18]
 	Updated devel/py-astroid to 2.15.0 [adam 2023-03-09]
 	Updated devel/py-pylint to 2.17.0 [adam 2023-03-09]
 	Added chat/iamb version 0.0.6 [pin 2023-03-09]
