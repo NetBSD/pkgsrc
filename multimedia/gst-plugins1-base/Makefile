@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2022/07/18 15:40:56 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2023/03/09 08:25:41 prlw1 Exp $
 
 PKGNAME=	${DISTNAME:S/plugins/plugins1/}
 CATEGORIES=	multimedia gnome
@@ -25,9 +25,8 @@ GST_PLUGINS+=	rawparse
 GST_PLUGINS+=	subparse
 GST_PLUGINS+=	tcp
 GST_PLUGINS+=	typefind
-GST_PLUGINS+=	videoconvert
+GST_PLUGINS+=	videoconvertscale
 GST_PLUGINS+=	videorate
-GST_PLUGINS+=	videoscale
 GST_PLUGINS+=	videotestsrc
 GST_PLUGINS+=	volume
 

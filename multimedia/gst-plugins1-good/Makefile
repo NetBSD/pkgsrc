@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2023/01/29 21:17:17 ryoon Exp $
+# $NetBSD: Makefile,v 1.17 2023/03/09 08:25:41 prlw1 Exp $
 
 PKGNAME=	${DISTNAME:S/plugins/plugins1/}
-PKGREVISION=	1
 CATEGORIES=	multimedia gnome
 
 COMMENT=	Open source multimedia framework - good plugins
@@ -51,6 +50,7 @@ GST_PLUGINS+=	videofilter
 GST_PLUGINS+=	videomixer
 GST_PLUGINS+=	wavenc
 GST_PLUGINS+=	wavparse
+GST_PLUGINS+=	xingmux
 GST_PLUGINS+=	y4m
 
 GST_PLUGINS+=	nls
