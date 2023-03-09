@@ -1,6 +1,6 @@
-# $NetBSD: version.mk,v 1.2 2023/01/23 16:57:08 wiz Exp $
+# $NetBSD: version.mk,v 1.3 2023/03/09 08:25:41 prlw1 Exp $
 
-GST_VERSION=	1.20.5
+GST_VERSION=	1.22.1
 
 MAINTAINER?=	pkgsrc-users@NetBSD.org
 HOMEPAGE?=	https://gstreamer.freedesktop.org/

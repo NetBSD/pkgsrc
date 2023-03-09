@@ -1,0 +1,29 @@
+$NetBSD: patch-ext_webrtc_meson.build,v 1.1 2023/03/09 08:25:40 prlw1 Exp $
+
+Fix
+
+ext/webrtc/meson.build:15:0: ERROR: Unknown variable "libgstwebrtcnice_dep".                                                                   
+broken by
+
+https://gitlab.freedesktop.org/gstreamer/gstreamer/-/merge_requests/2797
+
+--- ext/webrtc/meson.build.orig	2023-01-23 19:29:34.000000000 +0000
++++ ext/webrtc/meson.build
+@@ -1,3 +1,7 @@
++if get_option('webrtc').disabled()
++  subdir_done()
++endif
++
+ webrtc_sources = [
+   'gstwebrtc.c',
+   'gstwebrtcstats.c',
+@@ -14,9 +18,6 @@ webrtc_sources = [
+ 
+ webrtc_option = get_option('webrtc').require(
+   libgstwebrtcnice_dep.found(), error_message: 'webrtc plugin requires libgstwebrtcnice.')
+-if webrtc_option.disabled()
+-  subdir_done()
+-endif
+ 
+ gstwebrtc_plugin = library('gstwebrtc',
+   webrtc_sources,

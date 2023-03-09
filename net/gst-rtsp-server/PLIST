@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/02/11 23:28:04 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/03/09 08:25:42 prlw1 Exp $
 include/gstreamer-1.0/gst/rtsp-server/rtsp-address-pool.h
 include/gstreamer-1.0/gst/rtsp-server/rtsp-auth.h
 include/gstreamer-1.0/gst/rtsp-server/rtsp-client.h
@@ -7,9 +7,15 @@ include/gstreamer-1.0/gst/rtsp-server/rtsp-media-factory-uri.h
 include/gstreamer-1.0/gst/rtsp-server/rtsp-media-factory.h
 include/gstreamer-1.0/gst/rtsp-server/rtsp-media.h
 include/gstreamer-1.0/gst/rtsp-server/rtsp-mount-points.h
+include/gstreamer-1.0/gst/rtsp-server/rtsp-onvif-client.h
+include/gstreamer-1.0/gst/rtsp-server/rtsp-onvif-media-factory.h
+include/gstreamer-1.0/gst/rtsp-server/rtsp-onvif-media.h
+include/gstreamer-1.0/gst/rtsp-server/rtsp-onvif-server.h
 include/gstreamer-1.0/gst/rtsp-server/rtsp-params.h
 include/gstreamer-1.0/gst/rtsp-server/rtsp-permissions.h
 include/gstreamer-1.0/gst/rtsp-server/rtsp-sdp.h
+include/gstreamer-1.0/gst/rtsp-server/rtsp-server-object.h
+include/gstreamer-1.0/gst/rtsp-server/rtsp-server-prelude.h
 include/gstreamer-1.0/gst/rtsp-server/rtsp-server.h
 include/gstreamer-1.0/gst/rtsp-server/rtsp-session-media.h
 include/gstreamer-1.0/gst/rtsp-server/rtsp-session-pool.h
@@ -18,6 +24,10 @@ include/gstreamer-1.0/gst/rtsp-server/rtsp-stream-transport.h
 include/gstreamer-1.0/gst/rtsp-server/rtsp-stream.h
 include/gstreamer-1.0/gst/rtsp-server/rtsp-thread-pool.h
 include/gstreamer-1.0/gst/rtsp-server/rtsp-token.h
-lib/gstreamer-1.0/libgstrtspclientsink.la
-lib/libgstrtspserver-1.0.la
+lib/girepository-1.0/GstRtspServer-1.0.typelib
+lib/gstreamer-1.0/libgstrtspclientsink.so
+lib/libgstrtspserver-1.0.so
+lib/libgstrtspserver-1.0.so.0
+lib/libgstrtspserver-1.0.so.0.2201.0
 lib/pkgconfig/gstreamer-rtsp-server-1.0.pc
+share/gir-1.0/GstRtspServer-1.0.gir

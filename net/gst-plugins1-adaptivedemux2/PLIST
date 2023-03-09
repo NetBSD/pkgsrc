@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2023/03/09 08:25:42 prlw1 Exp $
+lib/gstreamer-1.0/libgstadaptivedemux2.so
