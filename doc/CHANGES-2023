@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1646 2023/03/09 00:59:31 gdt Exp $
+$NetBSD: CHANGES-2023,v 1.1647 2023/03/09 05:34:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2131,3 +2131,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated geography/gama to 2.24 [gdt 2023-03-09]
 	Updated geography/gpsd to 3.25 [gdt 2023-03-09]
 	Updated ham/hamlib to 4.5.4 [gdt 2023-03-09]
+	Updated devel/py-msgpack to 1.0.5 [adam 2023-03-09]
+	Updated devel/py-pydantic to 1.10.6 [adam 2023-03-09]
