@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.45 2022/12/16 21:08:08 adam Exp $
+# $NetBSD: Makefile.common,v 1.46 2023/03/09 08:25:41 prlw1 Exp $
 # used by audio/gst-plugins1-alsa/Makefile
 # used by audio/gst-plugins1-cdparanoia/Makefile
 # used by audio/gst-plugins1-libvisual/Makefile
@@ -55,9 +55,8 @@ GST_PLUGINS_SET+=	rawparse
 GST_PLUGINS_SET+=	subparse
 GST_PLUGINS_SET+=	tcp
 GST_PLUGINS_SET+=	typefind
-GST_PLUGINS_SET+=	videoconvert
+GST_PLUGINS_SET+=	videoconvertscale
 GST_PLUGINS_SET+=	videorate
-GST_PLUGINS_SET+=	videoscale
 GST_PLUGINS_SET+=	videotestsrc
 GST_PLUGINS_SET+=	volume
 GST_PLUGINS_SET+=	alsa
