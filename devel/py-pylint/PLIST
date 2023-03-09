@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2023/02/02 08:32:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.30 2023/03/09 09:50:19 adam Exp $
 bin/epylint-${PYVERSSUFFIX}
 bin/pylint-${PYVERSSUFFIX}
 bin/pylint-config-${PYVERSSUFFIX}
@@ -24,6 +24,8 @@ ${PYSITELIB}/pylint/checkers/__init__.py
 ${PYSITELIB}/pylint/checkers/__init__.pyc
 ${PYSITELIB}/pylint/checkers/async.py
 ${PYSITELIB}/pylint/checkers/async.pyc
+${PYSITELIB}/pylint/checkers/bad_chained_comparison.py
+${PYSITELIB}/pylint/checkers/bad_chained_comparison.pyc
 ${PYSITELIB}/pylint/checkers/base/__init__.py
 ${PYSITELIB}/pylint/checkers/base/__init__.pyc
 ${PYSITELIB}/pylint/checkers/base/basic_checker.py
