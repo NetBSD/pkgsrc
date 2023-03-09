@@ -1,0 +1,6 @@
+MessagePack (de)serializer for Python.
+
+MessagePack is a binary-based efficient data interchange format that is
+focused on high performance. It is like JSON, but very fast and small.
+
+This is the old 1.0.4 release for use by py-borgbackup.
