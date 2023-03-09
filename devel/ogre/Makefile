@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2023/01/29 21:15:49 ryoon Exp $
+# $NetBSD: Makefile,v 1.49 2023/03/09 11:17:34 he Exp $
 
 DISTNAME=	ogre-1.12.11
 PKGREVISION=	1
@@ -14,6 +14,7 @@ LICENSE=	gnu-lgpl-v2.1
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
+USE_LANGUAGES+=	gnu++11	# uses alloca()
 
 GCC_REQD+=	4.7 # C++11
 
