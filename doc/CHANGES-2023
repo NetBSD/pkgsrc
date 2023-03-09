@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1647 2023/03/09 05:34:06 adam Exp $
+$NetBSD: CHANGES-2023,v 1.1648 2023/03/09 06:51:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2133,3 +2133,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated ham/hamlib to 4.5.4 [gdt 2023-03-09]
 	Updated devel/py-msgpack to 1.0.5 [adam 2023-03-09]
 	Updated devel/py-pydantic to 1.10.6 [adam 2023-03-09]
+	Added devel/py-msgpack104 version 1.0.4 [wiz 2023-03-09]
