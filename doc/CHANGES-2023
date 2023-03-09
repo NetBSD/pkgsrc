@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1649 2023/03/09 06:56:24 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1650 2023/03/09 07:42:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2135,3 +2135,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-pydantic to 1.10.6 [adam 2023-03-09]
 	Added devel/py-msgpack104 version 1.0.4 [wiz 2023-03-09]
 	Moved graphics/py-pillow-heif to graphics/py-pillow_heif [wiz 2023-03-08]
+	Updated devel/memcached to 1.6.19 [adam 2023-03-09]
+	Updated devel/py-pathspec to 0.11.0 [adam 2023-03-09]
