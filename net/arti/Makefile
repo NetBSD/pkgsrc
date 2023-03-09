@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2023/03/02 07:49:22 nikita Exp $
+# $NetBSD: Makefile,v 1.4 2023/03/09 18:19:40 nikita Exp $
 
 PKGNAME=	arti-1.1.2
 DISTNAME=	arti-arti-v${PKGVERSION_NOREV}
+PKGVERSION=	1
 CATEGORIES=	net
 # TODO: modify gitlab fetch to allow hosted gitlab instances
 MASTER_SITES=	https://gitlab.torproject.org/tpo/core/arti/-/archive/arti-v${PKGVERSION_NOREV}/
@@ -45,6 +46,10 @@ AUTO_MKDIRS=		yes
 MAKE_ENV+=		OPENSSL_DIR=${BUILDLINK_PREFIX.openssl}
 
 INSTALLATION_DIRS=	${EGDIR}
+
+.if ${INIT_SYSTEM} == "rc.d"
+DEPENDS+=		daemonize-[0-9]*:../../sysutils/daemonize
+.endif
 
 # TODO: as well as this...
 do-install:
