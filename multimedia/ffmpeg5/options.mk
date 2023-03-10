@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2022/09/26 17:41:07 adam Exp $
+# $NetBSD: options.mk,v 1.6 2023/03/10 21:40:28 ryoon Exp $
 
 # Global and legacy options
 
@@ -6,12 +6,13 @@ PKG_OPTIONS_VAR=		PKG_OPTIONS.ffmpeg5
 PKG_OPTIONS_OPTIONAL_GROUPS=	ssl
 PKG_OPTIONS_GROUP.ssl=		gnutls mbedtls openssl
 
-PKG_SUPPORTED_OPTIONS=	ass av1 bluray doc fdk-aac fontconfig freetype jack \
-			lame libvpx libwebp opencore-amr opus pulseaudio rpi rtmp \
+PKG_SUPPORTED_OPTIONS=	ass aom bluray doc fdk-aac fontconfig freetype jack \
+			lame libvpx libwebp opencore-amr opus pulseaudio rav1e rpi rtmp \
 			speex tesseract theora vorbis x11 x264 x265 xvid
-PKG_SUGGESTED_OPTIONS=	ass av1 bluray freetype fontconfig gnutls lame \
+PKG_SUGGESTED_OPTIONS=	ass aom bluray freetype fontconfig gnutls lame \
 			libvpx libwebp opus speex theora vorbis x11 x264 x265 xvid
 
+PKG_OPTIONS_LEGACY_OPTS=	av1:aom
 
 PLIST_VARS+=		doc
 
@@ -55,15 +56,27 @@ CONFIGURE_ARGS+=	--enable-libass
 CONFIGURE_ARGS+=	--disable-libass
 .endif
 
-# av1 option
-.if !empty(PKG_OPTIONS:Mav1)
+# av1 option with libaom
+.if !empty(PKG_OPTIONS:Maom)
 CONFIGURE_ARGS+=	--enable-libaom
 BUILDLINK_API_DEPENDS.libaom+=	libaom>=1.0.0nb1
-CONFIGURE_ARGS+=	--enable-libdav1d
 .include "../../multimedia/libaom/buildlink3.mk"
-.include "../../multimedia/dav1d/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-libaom
+.endif
+
+# av1 option with rav1e
+.if !empty(PKG_OPTIONS:Mrav1e)
+CONFIGURE_ARGS+=	--enable-librav1e
+.include "../../multimedia/rav1e/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-librav1e
+.endif
+
+.if !empty(PKG_OPTIONS:Maom) || !empty(PKG_OPTIONS:Mrav1e)
+CONFIGURE_ARGS+=	--enable-libdav1d
+.include "../../multimedia/dav1d/buildlink3.mk"
+.else
 CONFIGURE_ARGS+=	--disable-libdav1d
 .endif
 
