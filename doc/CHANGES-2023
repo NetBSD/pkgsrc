@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1660 2023/03/09 21:13:01 prlw1 Exp $
+$NetBSD: CHANGES-2023,v 1.1661 2023/03/10 10:54:52 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2156,3 +2156,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-breathe to 4.35.0 [adam 2023-03-09]
 	Updated audio/libopenmpt to 0.6.9 [fcambus 2023-03-09]
 	Updated www/grafana to 9.4.3nb2 [triaxx 2023-03-09]
+	Updated www/grafana to 9.4.3nb3 [triaxx 2023-03-10]
