@@ -1,0 +1,7 @@
+Pygame is a set of Python modules designed for writing games. It is written on
+top of the excellent SDL library. This allows you to create fully featured
+games and multimedia programs in the python language. Pygame is highly
+portable and runs on nearly every platform and operating system.
+
+This package is sololy for games/py-renpy. devel/py-game now runs on
+SDL2 and should be used for all applications except games/py-renpy.
