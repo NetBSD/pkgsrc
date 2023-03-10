@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2018/07/30 19:45:00 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/03/10 22:05:57 ryoon Exp $
 cross-pdp11-aout/bin/pdp11-aout-addr2line
 cross-pdp11-aout/bin/pdp11-aout-ar
 cross-pdp11-aout/bin/pdp11-aout-as
 cross-pdp11-aout/bin/pdp11-aout-c++filt
 cross-pdp11-aout/bin/pdp11-aout-elfedit
-cross-pdp11-aout/bin/pdp11-aout-gprof
 cross-pdp11-aout/bin/pdp11-aout-ld
 cross-pdp11-aout/bin/pdp11-aout-ld.bfd
 cross-pdp11-aout/bin/pdp11-aout-nm
@@ -18,15 +17,15 @@ cross-pdp11-aout/bin/pdp11-aout-strip
 cross-pdp11-aout/info/as.info
 cross-pdp11-aout/info/bfd.info
 cross-pdp11-aout/info/binutils.info
-cross-pdp11-aout/info/gprof.info
+cross-pdp11-aout/info/ctf-spec.info
 cross-pdp11-aout/info/ld.info
+cross-pdp11-aout/lib/bfd-plugins/libdep.so
 cross-pdp11-aout/man/man1/pdp11-aout-addr2line.1
 cross-pdp11-aout/man/man1/pdp11-aout-ar.1
 cross-pdp11-aout/man/man1/pdp11-aout-as.1
 cross-pdp11-aout/man/man1/pdp11-aout-c++filt.1
 cross-pdp11-aout/man/man1/pdp11-aout-dlltool.1
 cross-pdp11-aout/man/man1/pdp11-aout-elfedit.1
-cross-pdp11-aout/man/man1/pdp11-aout-gprof.1
 cross-pdp11-aout/man/man1/pdp11-aout-ld.1
 cross-pdp11-aout/man/man1/pdp11-aout-nm.1
 cross-pdp11-aout/man/man1/pdp11-aout-objcopy.1
