@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/02/12 18:37:31 otis Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/03/10 11:01:17 otis Exp $
 share/examples/${PKGBASE}/httpd-zabbix.conf
 share/examples/${PKGBASE}/php-fpm-zabbix.conf
 share/zabbix/actionconf.php
@@ -1330,6 +1330,8 @@ share/zabbix/locale/fr/LC_MESSAGES/frontend.mo
 share/zabbix/locale/fr/LC_MESSAGES/frontend.po
 share/zabbix/locale/he/LC_MESSAGES/frontend.mo
 share/zabbix/locale/he/LC_MESSAGES/frontend.po
+share/zabbix/locale/hr/LC_MESSAGES/frontend.mo
+share/zabbix/locale/hr/LC_MESSAGES/frontend.po
 share/zabbix/locale/hu/LC_MESSAGES/frontend.mo
 share/zabbix/locale/hu/LC_MESSAGES/frontend.po
 share/zabbix/locale/id/LC_MESSAGES/frontend.mo
