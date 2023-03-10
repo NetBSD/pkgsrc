@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1661 2023/03/10 10:54:52 triaxx Exp $
+$NetBSD: CHANGES-2023,v 1.1662 2023/03/10 11:18:06 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2157,3 +2157,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated audio/libopenmpt to 0.6.9 [fcambus 2023-03-09]
 	Updated www/grafana to 9.4.3nb2 [triaxx 2023-03-09]
 	Updated www/grafana to 9.4.3nb3 [triaxx 2023-03-10]
+	Updated audio/gospt to 0.0.45 [pin 2023-03-10]
