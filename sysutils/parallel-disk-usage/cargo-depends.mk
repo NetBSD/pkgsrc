@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.5 2023/03/05 19:02:45 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.6 2023/03/10 11:40:32 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	assert-cmp-0.2.1
 CARGO_CRATE_DEPENDS+=	autocfg-1.1.0
@@ -6,10 +6,10 @@ CARGO_CRATE_DEPENDS+=	bitflags-1.3.2
 CARGO_CRATE_DEPENDS+=	build-fs-tree-0.4.1
 CARGO_CRATE_DEPENDS+=	cc-1.0.79
 CARGO_CRATE_DEPENDS+=	cfg-if-1.0.0
-CARGO_CRATE_DEPENDS+=	clap-4.1.6
+CARGO_CRATE_DEPENDS+=	clap-4.1.8
 CARGO_CRATE_DEPENDS+=	clap-utilities-0.2.0
 CARGO_CRATE_DEPENDS+=	clap_complete-4.1.3
-CARGO_CRATE_DEPENDS+=	clap_derive-4.1.0
+CARGO_CRATE_DEPENDS+=	clap_derive-4.1.8
 CARGO_CRATE_DEPENDS+=	clap_lex-0.3.2
 CARGO_CRATE_DEPENDS+=	command-extra-1.0.0
 CARGO_CRATE_DEPENDS+=	convert_case-0.4.0
@@ -60,8 +60,8 @@ CARGO_CRATE_DEPENDS+=	quote-1.0.23
 CARGO_CRATE_DEPENDS+=	rand-0.8.5
 CARGO_CRATE_DEPENDS+=	rand_chacha-0.3.1
 CARGO_CRATE_DEPENDS+=	rand_core-0.6.4
-CARGO_CRATE_DEPENDS+=	rayon-1.6.1
-CARGO_CRATE_DEPENDS+=	rayon-core-1.10.2
+CARGO_CRATE_DEPENDS+=	rayon-1.7.0
+CARGO_CRATE_DEPENDS+=	rayon-core-1.11.0
 CARGO_CRATE_DEPENDS+=	rounded-div-0.1.2
 CARGO_CRATE_DEPENDS+=	rustc_version-0.4.0
 CARGO_CRATE_DEPENDS+=	rustix-0.36.8
@@ -70,7 +70,7 @@ CARGO_CRATE_DEPENDS+=	scopeguard-1.1.0
 CARGO_CRATE_DEPENDS+=	semver-1.0.16
 CARGO_CRATE_DEPENDS+=	serde-1.0.152
 CARGO_CRATE_DEPENDS+=	serde_derive-1.0.152
-CARGO_CRATE_DEPENDS+=	serde_json-1.0.93
+CARGO_CRATE_DEPENDS+=	serde_json-1.0.94
 CARGO_CRATE_DEPENDS+=	serde_yaml-0.9.17
 CARGO_CRATE_DEPENDS+=	smart-default-0.6.0
 CARGO_CRATE_DEPENDS+=	strsim-0.10.0
