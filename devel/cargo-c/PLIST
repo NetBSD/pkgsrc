@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2023/03/10 21:27:09 ryoon Exp $
+bin/cargo-capi
+bin/cargo-cbuild
+bin/cargo-cinstall
+bin/cargo-ctest
