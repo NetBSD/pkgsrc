@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.81 2022/06/28 11:33:49 wiz Exp $
+# $NetBSD: Makefile,v 1.82 2023/03/10 19:59:21 hauke Exp $
 
 DISTNAME=	xemacs-packages
-PKGNAME=	xemacs-packages-1.18
-PKGREVISION=	10
+PKGNAME=	xemacs-packages-1.19
 
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_XEMACS:=${XEMACSPKG_PATH}/}
@@ -11,54 +10,55 @@ DISTFILES=	\
 		Sun-1.19-pkg.tar.gz \
 		ada-1.16-pkg.tar.gz \
 		apel-1.36-pkg.tar.gz \
-		auctex-1.56-pkg.tar.gz \
-		bbdb-1.34-pkg.tar.gz \
+		auctex-1.58-pkg.tar.gz \
+		bbdb-1.35-pkg.tar.gz \
 		build-1.18-pkg.tar.gz \
 		c-support-1.24-pkg.tar.gz \
 		calc-1.28-pkg.tar.gz \
-		calendar-1.41-pkg.tar.gz \
+		calendar-1.42-pkg.tar.gz \
 		cc-mode-1.99-pkg.tar.gz \
 		cedet-common-1.03-pkg.tar.gz \
 		clearcase-1.12-pkg.tar.gz \
 		cogre-1.04-pkg.tar.gz \
 		cookie-1.17-pkg.tar.gz \
 		crisp-1.17-pkg.tar.gz \
-		debug-1.20-pkg.tar.gz \
+		debug-1.21-pkg.tar.gz \
 		dictionary-1.18-pkg.tar.gz \
 		dired-1.22-pkg.tar.gz \
 		docbookide-0.10-pkg.tar.gz \
 		easypg-1.05-pkg.tar.gz \
-		ecb-1.25-pkg.tar.gz \
+		ecb-1.26-pkg.tar.gz \
 		ecrypto-0.23-pkg.tar.gz \
-		ede-1.06-pkg.tar.gz \
+		ede-1.07-pkg.tar.gz \
 		edebug-1.24-pkg.tar.gz \
 		edict-1.19-pkg.tar.gz \
 		ediff-1.84-pkg.tar.gz \
-		edit-utils-2.57-pkg.tar.gz \
+		edit-utils-2.59-pkg.tar.gz \
 		edt-1.16-pkg.tar.gz \
 		efs-1.37-pkg.tar.gz \
 		egg-its-1.29-pkg.tar.gz \
-		eieio-1.09-pkg.tar.gz \
+		eieio-1.10-pkg.tar.gz \
 		elib-1.15-pkg.tar.gz \
 		emerge-1.13-pkg.tar.gz \
 		erc-0.26-pkg.tar.gz \
 		escreen-1.03-pkg.tar.gz \
-		eshell-1.20-pkg.tar.gz \
+		eshell-1.21-pkg.tar.gz \
 		ess-1.18-pkg.tar.gz \
 		eterm-1.20-pkg.tar.gz \
-		eudc-1.43-pkg.tar.gz \
+		eudc-1.44-pkg.tar.gz \
 		footnote-1.18-pkg.tar.gz \
 		forms-1.17-pkg.tar.gz \
 		fortran-modes-1.07-pkg.tar.gz \
 		frame-icon-1.13-pkg.tar.gz \
 		fsf-compat-1.24-pkg.tar.gz \
 		games-1.23-pkg.tar.gz \
-		general-docs-1.10-pkg.tar.gz \
+		general-docs-1.11-pkg.tar.gz \
 		gnats-1.19-pkg.tar.gz \
-		gnus-2.03-pkg.tar.gz \
+		gnus-2.05-pkg.tar.gz \
+		gnus-2.06-pkg.tar.gz \
 		guided-tour-0.54-pkg.tar.gz \
 		haskell-mode-1.14-pkg.tar.gz \
-		hm--html-menus-1.26-pkg.tar.gz \
+		hm--html-menus-1.27-pkg.tar.gz \
 		hyperbole-1.22-pkg.tar.gz \
 		ibuffer-1.12-pkg.tar.gz \
 		idlwave-1.34-pkg.tar.gz \
@@ -68,15 +68,16 @@ DISTFILES=	\
 		jde-1.54-pkg.tar.gz \
 		latin-euro-standards-1.11-pkg.tar.gz \
 		latin-unity-1.23-pkg.tar.gz \
+		leim-1.39-pkg.tar.gz \
 		locale-1.30-pkg.tar.gz \
 		lookup-1.17-pkg.tar.gz \
-		mail-lib-1.83-pkg.tar.gz \
+		mail-lib-1.85-pkg.tar.gz \
 		mailcrypt-2.16-pkg.tar.gz \
 		mew-1.22-pkg.tar.gz \
 		mh-e-1.35-pkg.tar.gz \
 		mine-1.18-pkg.tar.gz \
 		misc-games-1.25-pkg.tar.gz \
-		mmm-mode-1.08-pkg.tar.gz \
+		mmm-mode-1.09-pkg.tar.gz \
 		mule-base-1.60-pkg.tar.gz \
 		mule-ucs-1.21-pkg.tar.gz \
 		net-utils-1.61-pkg.tar.gz \
@@ -88,9 +89,9 @@ DISTFILES=	\
 		pcomplete-1.08-pkg.tar.gz \
 		perl-modes-1.16-pkg.tar.gz \
 		pgg-1.10-pkg.tar.gz \
-		prog-modes-2.32-pkg.tar.gz \
+		prog-modes-2.34-pkg.tar.gz \
 		ps-print-1.14-pkg.tar.gz \
-		psgml-1.49-pkg.tar.gz \
+		psgml-1.50-pkg.tar.gz \
 		psgml-dtds-1.05-pkg.tar.gz \
 		python-modes-1.16-pkg.tar.gz \
 		re-builder-1.07-pkg.tar.gz \
@@ -113,36 +114,37 @@ DISTFILES=	\
 		strokes-1.12-pkg.tar.gz \
 		supercite-1.23-pkg.tar.gz \
 		texinfo-1.32-pkg.tar.gz \
-		text-modes-2.05-pkg.tar.gz \
+		text-modes-2.06-pkg.tar.gz \
 		textools-1.17-pkg.tar.gz \
-		time-1.16-pkg.tar.gz \
+		time-1.18-pkg.tar.gz \
 		tm-1.42-pkg.tar.gz \
 		tooltalk-1.17-pkg.tar.gz \
 		tpu-1.16-pkg.tar.gz \
 		tramp-1.57-pkg.tar.gz \
+		tramp-1.58-pkg.tar.gz \
 		vc-1.50-pkg.tar.gz \
 		vc-cc-1.24-pkg.tar.gz \
 		vhdl-1.24-pkg.tar.gz \
 		view-process-1.15-pkg.tar.gz \
 		viper-1.69-pkg.tar.gz \
 		vm-8.11-pkg.tar.gz \
-		w3-1.41-pkg.tar.gz \
+		w3-1.42-pkg.tar.gz \
 		x-symbol-1.16-pkg.tar.gz \
-		xemacs-base-2.45-pkg.tar.gz \
+		xemacs-base-2.47-pkg.tar.gz \
 		xemacs-devel-1.84-pkg.tar.gz \
 		xetla-1.04-pkg.tar.gz \
 		xlib-1.16-pkg.tar.gz \
 		xslide-1.11-pkg.tar.gz \
 		xslt-process-1.14-pkg.tar.gz \
-		xwem-1.25-pkg.tar.gz \
+		xwem-1.27-pkg.tar.gz \
 		zenirc-1.18-pkg.tar.gz
 ### DISTFILES
 
 # leim/hebrew.el causes build problems, we use stable package instead
 #		leim-1.38-pkg.tar.gz \
-
-DISTFILES+=	leim-1.31-pkg.tar.gz
-SITES.leim-1.31-pkg.tar.gz= ${MASTER_SITE_XEMACS:=packages/}
+#
+#DISTFILES+=	leim-1.31-pkg.tar.gz
+#SITES.leim-1.31-pkg.tar.gz= ${MASTER_SITE_XEMACS:=packages/}
 
 MAINTAINER=	hauke@NetBSD.org
 HOMEPAGE=	https://www.xemacs.org/
@@ -159,7 +161,7 @@ EXTRACT_USING=	gtar
 
 NO_BUILD=	yes
 
-USE_TOOLS+=	printf pax find gawk gzip gtar
+USE_TOOLS+=	printf pax find diff gawk gzip gtar
 USE_TOOLS+=	perl:run
 
 XEPKGDIR=	lib/xemacs/xemacs-packages
@@ -199,17 +201,19 @@ PLIST_SUBST+=	ELSUFX=.gz
 PLIST_SUBST+=	ELSUFX=
 .endif
 
-# XXX For package maintainance
+# Package maintainance
 #
-# Usage: run `make PKG_DEVELOPER=1 xemacs-update-package'.  Makefile.work is
-# generated.  If any package is updated, bump this package version, and commit.
+# `make PKG_DEVELOPER=1 xemacs-update-package' will generate a
+# Makefile.work based on Makefile.  If any packages have been updated,
+# bump this package version, and commit.
+
 .include "../../mk/bsd.prefs.mk"
 .if defined(PKG_DEVELOPER) && ${OPSYS} == "NetBSD"
 ED=		/bin/ed
 FTP=		${TOOLS_PATH.ftp:Q}
 
 # One of mk/fetch/sites.mk:MASTER_SITE_XEMACS
-XEMACSPKG_SITE=	ftp://ftp.isr.tecnico.ulisboa.pt/pub/xemacs
+XEMACSPKG_SITE=	ftp://ftp.xemacs.org/pub/xemacs
 
 # Make a list of packages from a directory list output
 .PHONY: xemacs-make-package-list
@@ -229,7 +233,9 @@ xemacs-merge-package-list:
 	{ \
 		${PRINTF} '/^DISTFILES\n+1\nka\n/^### DISTFILES\n-2\nkb\n'; \
 		${PRINTF} "'a,'b"'s/$$/ \\\\/\nw\nq\n'; \
-	} | ${ED} - ${PKGDIR}/Makefile.work
+	} | ${ED} - ${PKGDIR}/Makefile.work >/dev/null
+	${DIFF} -u Makefile Makefile.work | \
+		awk '/\+/ { print $$2 }' > packages.changelist
 
 .PHONY: xemacs-update-package
 xemacs-update-package: xemacs-fetch-package-list xemacs-merge-package-list
