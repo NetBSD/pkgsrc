@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1673 2023/03/10 20:58:26 ryoon Exp $
+$NetBSD: CHANGES-2023,v 1.1674 2023/03/10 21:07:36 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2170,3 +2170,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated chat/swirc to 3.4.3 [fcambus 2023-03-10]
 	Updated editors/xemacs-packages to 1.19 [hauke 2023-03-10]
 	Updated misc/libreoffice to 7.5.1.2 [ryoon 2023-03-10]
+	Added devel/py-game_sdl2 version 2.1.0 [ryoon 2023-03-10]
