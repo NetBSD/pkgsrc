@@ -751,6 +751,7 @@ quartz			Enable Quartz support on Mac OS X.
 quickml-analog		Enable quickml log analizer.
 quickml-limit		Enable quickml creators and members limitation.
 rar			Support RAR archive files.
+rav1e			Enable AV1 encoding support using rav1e.
 rc5			Support the hashing algorithm RC5.
 readline		Enable use of GNU readline library.
 redis			Support the Redis database.
