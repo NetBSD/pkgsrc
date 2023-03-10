@@ -1,0 +1,16 @@
+$NetBSD: patch-Cargo.toml,v 1.1 2023/03/10 21:36:29 ryoon Exp $
+
+* Do not use libgit2. It causes build failure as of git2 crate besed on
+  libgit2-1.5.
+
+--- Cargo.toml.orig	2023-01-10 15:08:00.000000000 +0000
++++ Cargo.toml
+@@ -38,7 +38,7 @@ binaries = [
+     "av-metrics",
+     "nom",
+ ]
+-default = ["binaries", "asm", "threading", "signal_support", "git_version"]
++default = ["binaries", "asm", "threading", "signal_support"]
+ git_version = ["built/git2"]
+ asm = ["nasm-rs", "cc"]
+ threading = ["rayon/threads"]
