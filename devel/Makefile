@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3934 2023/03/09 06:51:34 wiz Exp $
+# $NetBSD: Makefile,v 1.3935 2023/03/10 21:08:59 ryoon Exp $
 #
 
 COMMENT=	Development utilities
@@ -2524,6 +2524,7 @@ SUBDIR+=	py-future
 SUBDIR+=	py-futures
 SUBDIR+=	py-fuzzywuzzy
 SUBDIR+=	py-game
+SUBDIR+=	py-game_sdl2
 SUBDIR+=	py-gast
 SUBDIR+=	py-gcovr
 SUBDIR+=	py-generate
