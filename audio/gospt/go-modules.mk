@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.3 2023/02/28 22:33:17 pin Exp $
+# $NetBSD: go-modules.mk,v 1.4 2023/03/10 11:17:27 pin Exp $
 
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.26.0.mod
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.34.0.mod
