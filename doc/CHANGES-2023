@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1669 2023/03/10 15:37:22 otis Exp $
+$NetBSD: CHANGES-2023,v 1.1670 2023/03/10 17:01:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2165,3 +2165,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/zabbix60-agent to 6.0.14 [otis 2023-03-10]
 	Updated sysutils/zabbix60-frontend to 6.0.14 [otis 2023-03-10]
 	Updated sysutils/zabbix60-java to 6.0.14nb1 [otis 2023-03-10]
+	Updated misc/py-platformdirs to 3.1.1 [adam 2023-03-10]
+	Updated security/py-keyring to 23.13.1 [adam 2023-03-10]
