@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2023/03/10 21:36:29 ryoon Exp $
+include/rav1e/rav1e.h
+lib/librav1e.a
+lib/librav1e.so
+lib/librav1e.so.0
+lib/librav1e.so.${PKGVERSION}
+lib/pkgconfig/rav1e.pc
