@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1662 2023/03/10 11:18:06 pin Exp $
+$NetBSD: CHANGES-2023,v 1.1663 2023/03/10 11:19:13 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2158,3 +2158,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/grafana to 9.4.3nb2 [triaxx 2023-03-09]
 	Updated www/grafana to 9.4.3nb3 [triaxx 2023-03-10]
 	Updated audio/gospt to 0.0.45 [pin 2023-03-10]
+	Updated audio/ncspot to 0.13.0 [pin 2023-03-10]
