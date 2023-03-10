@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2020/04/07 09:22:36 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2023/03/10 21:56:18 ryoon Exp $
 
-DISTNAME=	bvi-1.4.1.src
-PKGNAME=	bvi-1.4.1
+DISTNAME=	bvi-1.4.2.src
+PKGNAME=	${DISTNAME:S/.src//}
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bvi/}
 
