@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1678 2023/03/10 21:57:02 ryoon Exp $
+$NetBSD: CHANGES-2023,v 1.1679 2023/03/10 22:08:14 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2175,3 +2175,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/cargo-c version 0.9.15 [ryoon 2023-03-10]
 	Added multimedia/rav1e version 0.6.3 [ryoon 2023-03-10]
 	Updated editors/bvi to 1.4.2 [ryoon 2023-03-10]
+	Updated cross/pdp11-aout-binutils to 2.39 [ryoon 2023-03-10]
