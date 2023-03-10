@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1671 2023/03/10 18:20:11 fcambus Exp $
+$NetBSD: CHANGES-2023,v 1.1672 2023/03/10 19:59:36 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2168,3 +2168,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated misc/py-platformdirs to 3.1.1 [adam 2023-03-10]
 	Updated security/py-keyring to 23.13.1 [adam 2023-03-10]
 	Updated chat/swirc to 3.4.3 [fcambus 2023-03-10]
+	Updated editors/xemacs-packages to 1.19 [hauke 2023-03-10]
