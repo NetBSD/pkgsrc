@@ -1,18 +1,18 @@
-# $NetBSD: Makefile,v 1.1 2023/02/15 02:21:37 charlotte Exp $
+# $NetBSD: Makefile,v 1.2 2023/03/10 01:52:39 charlotte Exp $
 
 DISTNAME=	nanosaur-1.4.4
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jorio/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
-DISTFILES+=	${DEFAULT_DISTFILES} ${POMME}
-
-POMME=		fd1cd2cf81a2d39a4e47e76485860a87f0bf33f6.tar.gz
-SITES.${POMME}=	${MASTER_SITE_GITHUB:=jorio/}Pomme/archive/
 
 MAINTAINER=	charlotte@NetBSD.org
 HOMEPAGE=	https://www.pangeasoft.net/nano/index.html
 COMMENT=	Source port of Nanosaur from Pangea Software
 LICENSE=	cc-by-nc-sa-v4.0-license
+
+GITHUB_SUBMODULES=	\
+	jorio Pomme fd1cd2cf81a2d39a4e47e76485860a87f0bf33f6 extern/Pomme
 
 WRKSRC=		${WRKDIR}/Nanosaur-${PKGVERSION_NOREV}
 
@@ -23,10 +23,6 @@ USE_TOOLS+=	pax pkg-config
 INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	libexec
 INSTALLATION_DIRS+=	share/nanosaur/Data
-
-post-extract:
-	${RM} -rf ${WRKSRC}/extern/Pomme
-	${LN} -sf ${WRKDIR}/Pomme-${POMME:S/.tar.gz//} ${WRKSRC}/extern/Pomme
 
 pre-configure:
 	${SED} -e 's,@@PREFIX@@,${PREFIX},g' \
