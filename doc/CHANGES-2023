@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1665 2023/03/10 15:36:30 otis Exp $
+$NetBSD: CHANGES-2023,v 1.1666 2023/03/10 15:36:41 otis Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2161,3 +2161,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated audio/ncspot to 0.13.0 [pin 2023-03-10]
 	Updated sysutils/parallel-disk-usage to 0.9.0 [pin 2023-03-10]
 	Updated sysutils/zabbix60-server to 6.0.14 [otis 2023-03-10]
+	Updated sysutils/zabbix60-proxy to 6.0.14 [otis 2023-03-10]
