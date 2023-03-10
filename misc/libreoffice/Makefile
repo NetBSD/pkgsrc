@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.300 2023/03/05 18:22:41 tnn Exp $
+# $NetBSD: Makefile,v 1.301 2023/03/10 20:57:38 ryoon Exp $
 
-VERREL=		7.5.0
-VERRC=		3
+VERREL=		7.5.1
+VERRC=		2
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
 CATEGORIES=	misc
@@ -33,7 +33,7 @@ SUBST_CLASSES+=			configure-paths
 SUBST_STAGE.configure-paths=	pre-configure
 SUBST_MESSAGE.configure-paths=	Fixing paths in configure.ac
 SUBST_FILES.configure-paths+=	configure.ac
-SUBST_SED.configure-paths+=	-e 's,-I/usr/include/dragonbox-1.0.0,-I${BUILDLINK_PREFIX.dragonbox}/include/dragonbox-1.1.3,'
+SUBST_SED.configure-paths+=	-e 's,-I/usr/include/dragonbox-1.1.3,-I${BUILDLINK_PREFIX.dragonbox}/include/dragonbox-1.1.3,'
 SUBST_SED.configure-paths+=	-e 's,-I/usr/include/gpgme++,-I${BUILDLINK_PREFIX.gpgme}/include/gpgme++,'
 #SUBST_SED.zxing+=		-e 's,ZXING_CFLAGS=-I/usr/include/ZXing,ZXING_CFLAGS=-I${BUILDLINK_PREFIX.zxing-cpp}/include/ZXing,'
 
