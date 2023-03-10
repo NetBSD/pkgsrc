@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.33 2023/03/05 21:22:45 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.34 2023/03/10 10:54:30 triaxx Exp $
+bin/grafana
 bin/grafana-cli
 bin/grafana-server
 share/grafana/conf/defaults.ini
