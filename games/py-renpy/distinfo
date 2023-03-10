@@ -1,9 +1,14 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:44:21 nia Exp $
+$NetBSD: distinfo,v 1.7 2023/03/10 21:14:39 ryoon Exp $
 
-BLAKE2s (renpy-6.18.3-source.tar.bz2) = ec282e3742561ccf224cc84afe79802b704b171124e15dfa88bc7811ddbd3537
-SHA512 (renpy-6.18.3-source.tar.bz2) = 7ea99adaf1fbea7a499790fb5b37349fc797f383fb633956a43955c80885b259e26570469c430f4c4c103e62444f60082690489ee6400809f5e9024693261e55
-Size (renpy-6.18.3-source.tar.bz2) = 23244450 bytes
-SHA1 (patch-module_core.c) = 333d6e8704098d7f423869e77b1adbcdd4d79c1f
-SHA1 (patch-module_ffdecode.c) = 9a43f5a3ca74cccdba68706540070c3d514d28cd
-SHA1 (patch-module_setup.py) = cb5a6ae303b3323c389cf9e3a2085adc11fdde4f
-SHA1 (patch-module_subpixel.c) = 3dee17b2bb1a8880f57b7cb48f633bfc7d1f3204
+BLAKE2s (renpy-8.0.3-source.tar.bz2) = 925dd1d89feb5b8e786b911e89f3cbb8e76e7262345b62804808f71585075df8
+SHA512 (renpy-8.0.3-source.tar.bz2) = 4cd0a12b48f4dab7b3dc81366d2e5a1913ead34f58f51b83d720cafdaac06366bbb2bcda4bc6361880571527193479ea3ff4f5d8d577c89722c271269cea12e3
+Size (renpy-8.0.3-source.tar.bz2) = 66167869 bytes
+SHA1 (patch-launcher_game_translations.rpy) = 4ac93764ddfed2eccc64a10f127cace2117d0208
+SHA1 (patch-module_renpybidicore.c) = 631452e7d88f95998bf0d1eb2bb2a2735a714282
+SHA1 (patch-module_setup.py) = 3b2cb5caadb0667ef597cda9793257f9c63b0c5e
+SHA1 (patch-module_setuplib.py) = d3615a7d66c006073bea486ba0c0bdcadfba855b
+SHA1 (patch-renpy_____init____.py) = c84c03dda5a4ecc86a1a45b614a3405d88f84057
+SHA1 (patch-renpy_common_00build.rpy) = 1f86540edef8fd7d7cd3b8788eb6532de20e5621
+SHA1 (patch-renpy_python.py) = ab22f4507958c95ed27d892cfc08934775c1764e
+SHA1 (patch-renpy_script.py) = cb4831416eda2bab14f832c6347c98515bbd488d
+SHA1 (patch-renpy_sl2_slast.py) = 70e5fe2a3e495e7fa8ba9e935ab69881f34b7514
