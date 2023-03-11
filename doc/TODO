@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22674 2023/03/10 23:32:40 prlw1 Exp $
+$NetBSD: TODO,v 1.22675 2023/03/11 08:39:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1236,6 +1236,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-django-tagging-0.5.0
 	o py-ephem3-3.7.6.0
 	o py-fecon235-6.18.1203
+	o py-fido2-1.1.0
 	o py-filebytes-0.10.2
 	o py-gammu-3.1
 	o py-gcovr-4.2
@@ -1574,6 +1575,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o yed-3.17.1
 	o yelp-tools-3.38.0
 	o yices2-2.6.2
+	o ykman-5.0.1
 	o yodl-2.14.3
 	o yorick-2.1.05
 	o yudit-3.0.7
