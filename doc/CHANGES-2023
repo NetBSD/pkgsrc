@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1684 2023/03/11 05:25:40 pin Exp $
+$NetBSD: CHANGES-2023,v 1.1685 2023/03/11 08:55:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2181,3 +2181,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/p5-Test-File to 1.993 [wen 2023-03-11]
 	Updated devel/p5-Test-Fatal to 0.017 [wen 2023-03-11]
 	Updated audio/gospt to 0.0.46 [pin 2023-03-11]
+	Added security/py-otp version 2.8.0 [wiz 2023-03-11]
