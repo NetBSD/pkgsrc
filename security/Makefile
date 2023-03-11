@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.888 2023/03/01 18:20:23 adam Exp $
+# $NetBSD: Makefile,v 1.889 2023/03/11 08:55:24 wiz Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -482,6 +482,7 @@ SUBDIR+=	py-oauth2client
 SUBDIR+=	py-oauthlib
 SUBDIR+=	py-olm
 SUBDIR+=	py-openid
+SUBDIR+=	py-otp
 SUBDIR+=	py-paramiko
 SUBDIR+=	py-passlib
 SUBDIR+=	py-pbkdf2
