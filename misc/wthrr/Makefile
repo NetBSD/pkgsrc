@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2023/03/05 07:33:47 pin Exp $
+# $NetBSD: Makefile,v 1.16 2023/03/11 22:07:11 pin Exp $
 
-DISTNAME=	wthrr-the-weathercrab-0.9.0
-PKGNAME=	wthrr-0.9.0
+DISTNAME=	wthrr-0.10.0
 CATEGORIES=	misc
-MASTER_SITES=	${MASTER_SITE_GITHUB:=tobealive/}
-GITHUB_PROJECT=	wthrr-the-weathercrab
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+MASTER_SITES=	https://static.crates.io/crates/wthrr/
+EXTRACT_SUFX=	.crate
 
 MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/tobealive/wthrr-the-weathercrab/
