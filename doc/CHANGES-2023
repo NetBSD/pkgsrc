@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1691 2023/03/11 15:46:54 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.1692 2023/03/11 15:47:43 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2188,3 +2188,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/R-classInt to 0.4.9 [mef 2023-03-11]
 	Updated devel/mob to 4.3.1 [schmonz 2023-03-11]
 	Updated devel/skalibs to 2.13.1.0 [schmonz 2023-03-11]
+	Updated lang/execline to 2.9.2.1 [schmonz 2023-03-11]
