@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2022/11/27 20:05:52 nia Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/03/11 16:39:33 nia Exp $
 bin/mariadb
 bin/mariadb-access
 bin/mariadb-admin
@@ -75,6 +75,7 @@ include/mysql/server/little_endian.h
 include/mysql/server/m_ctype.h
 include/mysql/server/m_string.h
 include/mysql/server/ma_dyncol.h
+include/mysql/server/mariadb_capi_rename.h
 include/mysql/server/my_alloc.h
 include/mysql/server/my_attribute.h
 include/mysql/server/my_byteorder.h
@@ -143,7 +144,6 @@ include/mysql/server/mysql/service_thd_rnd.h
 include/mysql/server/mysql/service_thd_specifics.h
 include/mysql/server/mysql/service_thd_timezone.h
 include/mysql/server/mysql/service_thd_wait.h
-include/mysql/server/mysql/service_wsrep.h
 include/mysql/server/mysql/services.h
 include/mysql/server/mysql_com.h
 include/mysql/server/mysql_com_server.h
@@ -167,7 +167,6 @@ include/mysql/server/private/heap.h
 include/mysql/server/private/ilist.h
 include/mysql/server/private/lf.h
 include/mysql/server/private/maria.h
-include/mysql/server/private/mariadb_capi_rename.h
 include/mysql/server/private/my_alarm.h
 include/mysql/server/private/my_atomic.h
 include/mysql/server/private/my_atomic_wrapper.h
