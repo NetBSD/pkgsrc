@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2022/04/30 05:19:03 mef Exp $
+# $NetBSD: Makefile,v 1.2 2023/03/11 11:29:06 mef Exp $
 
 R_PKGNAME=	mockr
-R_PKGVER=	0.2.0
+R_PKGVER=	0.2.1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
