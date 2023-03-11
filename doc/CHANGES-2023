@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1686 2023/03/11 10:05:38 mef Exp $
+$NetBSD: CHANGES-2023,v 1.1687 2023/03/11 11:16:24 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2183,3 +2183,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated audio/gospt to 0.0.46 [pin 2023-03-11]
 	Added security/py-otp version 2.8.0 [wiz 2023-03-11]
 	Updated math/R-nimble to 0.13.1 [mef 2023-03-11]
+	Updated math/R-igraph to 1.4.1 [mef 2023-03-11]
