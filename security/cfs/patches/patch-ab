@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.4 2022/12/19 23:18:37 gdt Exp $
+$NetBSD: patch-ab,v 1.5 2023/03/11 01:54:01 gdt Exp $
+
+Part of not using internal getpassword.
 
 --- getpass.c.orig	2013-05-15 16:50:30.000000000 +0000
 +++ getpass.c
