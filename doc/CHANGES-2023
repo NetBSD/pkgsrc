@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1689 2023/03/11 13:51:45 mef Exp $
+$NetBSD: CHANGES-2023,v 1.1690 2023/03/11 15:06:16 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2186,3 +2186,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/R-igraph to 1.4.1 [mef 2023-03-11]
 	Updated devel/R-mockr to 0.2.1 [mef 2023-03-11]
 	Updated math/R-classInt to 0.4.9 [mef 2023-03-11]
+	Updated devel/mob to 4.3.1 [schmonz 2023-03-11]
