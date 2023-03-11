@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2023/01/16 21:49:20 schmonz Exp $
+# $NetBSD: Makefile,v 1.14 2023/03/11 15:48:31 schmonz Exp $
 
-DISTNAME=	s6-networking-2.5.1.2
+DISTNAME=	s6-networking-2.5.1.3
 CATEGORIES=	net
 MASTER_SITES=	${HOMEPAGE}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${MANPAGES_DIST}
@@ -11,7 +11,7 @@ COMMENT=	Suite of small networking utilities
 LICENSE=	isc
 
 # man-pages version is usually not exactly in-sync with PKGVERSION_NOREV
-MANPAGES_VERSION=	2.5.1.2.1
+MANPAGES_VERSION=	2.5.1.3.1
 MANPAGES_DIST=		s6-networking-man-pages-${MANPAGES_VERSION}.tar.gz
 SITES.${MANPAGES_DIST}=	-${MASTER_SITE_GITHUB:=flexibeast/s6-networking-man-pages/archive/}v${MANPAGES_VERSION}.tar.gz
 
