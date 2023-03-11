@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1696 2023/03/11 16:40:06 nia Exp $
+$NetBSD: CHANGES-2023,v 1.1697 2023/03/11 18:16:23 leot Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2194,3 +2194,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated misc/s6-portable-utils to 2.3.0.1 [schmonz 2023-03-11]
 	Updated databases/mariadb106-server to 10.6.12 [nia 2023-03-11]
 	Updated databases/mariadb106-client to 10.6.12 [nia 2023-03-11]
+	Updated mail/nmh to 1.8 [leot 2023-03-11]
