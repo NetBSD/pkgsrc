@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2022/12/18 11:07:29 mef Exp $
+# $NetBSD: Makefile,v 1.16 2023/03/11 13:51:34 mef Exp $
 
 R_PKGNAME=	classInt
-R_PKGVER=	0.4-8
+R_PKGVER=	0.4-9
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Choose univariate class intervals
