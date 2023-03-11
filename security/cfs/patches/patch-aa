@@ -1,4 +1,14 @@
-$NetBSD: patch-aa,v 1.7 2022/12/19 23:18:37 gdt Exp $
+$NetBSD: patch-aa,v 1.8 2023/03/11 01:54:01 gdt Exp $
+
+Add stanza for modern NetBSD.  \todo Send upstream.
+
+Adjust Makefile for pkgsrc norms:
+
+  - Use PREFIX
+  - Comment out FreeBSD
+  - Uncomment the "fail if not configured" line
+  - Change installation to use INSTALL_PROGRAM
+    \todo Evaluate PROGRAM vs SCRIPT; this is carried from before.
 
 --- Makefile.orig	2022-12-19 22:46:57.638664951 +0000
 +++ Makefile
