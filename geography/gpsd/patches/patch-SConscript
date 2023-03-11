@@ -1,4 +1,4 @@
-$NetBSD: patch-SConscript,v 1.8 2023/03/09 00:52:42 gdt Exp $
+$NetBSD: patch-SConscript,v 1.9 2023/03/11 22:26:47 wiz Exp $
 
 Catch up with ruby default version changes.
 \todo Fix upstream.
@@ -6,9 +6,18 @@ Catch up with ruby default version changes.
 gpspipe requires libgpsd for serial.c cfmakeraw() compat.
 \todo Fix upstream?
 
---- SConscript.orig	2022-04-27 21:31:21.000000000 +0000
+--- SConscript.orig	2023-01-10 22:38:26.000000000 +0000
 +++ SConscript
-@@ -2018,7 +2020,7 @@ gpsmon = env.Program('gpsmon/gpsmon', gp
+@@ -1410,6 +1410,8 @@ if not cleaning and not helping:
+     # do we have asciidoctor, perhaps versioned?
+     adoc_prog = env.WhereIs('asciidoctor')
+     if (not adoc_prog):
++        adoc_prog = env.WhereIs('asciidoctor32')
++    if (not adoc_prog):
+         adoc_prog = env.WhereIs('asciidoctor31')
+     if (not adoc_prog):
+         adoc_prog = env.WhereIs('asciidoctor30')
+@@ -2054,7 +2056,7 @@ gpsmon = env.Program('gpsmon/gpsmon', gp
                       LIBS=[libgpsd_static, libgps_static],
                       parse_flags=gpsdflags + gpsflags + ncurseslibs)
  gpspipe = env.Program('clients/gpspipe', ['clients/gpspipe.c'],
