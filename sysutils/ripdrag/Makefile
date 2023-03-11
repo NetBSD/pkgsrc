@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2023/01/29 21:17:50 ryoon Exp $
+# $NetBSD: Makefile,v 1.5 2023/03/11 18:45:25 pin Exp $
 
-DISTNAME=	ripdrag-0.2.1
-PKGREVISION=	2
+DISTNAME=	ripdrag-0.3.0
 CATEGORIES=	sysutils
-MASTER_SITES=	${MASTER_SITE_GITHUB:=nik012003/}
-GITHUB_TAG=	398857cf87a325ebfaa0faf613a597e6b1f0cfbd
+MASTER_SITES=	https://static.crates.io/crates/ripdrag/
+EXTRACT_SUFX=	.crate
+
 
 MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/nik012003/ripdrag/
