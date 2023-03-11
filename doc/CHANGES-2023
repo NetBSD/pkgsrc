@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1687 2023/03/11 11:16:24 mef Exp $
+$NetBSD: CHANGES-2023,v 1.1688 2023/03/11 11:29:18 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2184,3 +2184,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added security/py-otp version 2.8.0 [wiz 2023-03-11]
 	Updated math/R-nimble to 0.13.1 [mef 2023-03-11]
 	Updated math/R-igraph to 1.4.1 [mef 2023-03-11]
+	Updated devel/R-mockr to 0.2.1 [mef 2023-03-11]
