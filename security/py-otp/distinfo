@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/03/11 08:55:13 wiz Exp $
+
+BLAKE2s (pyotp-2.8.0.tar.gz) = fe6d9d51dbda44979c1cb2a78b4f7ad460117683175bab29402699acbe8f29dd
+SHA512 (pyotp-2.8.0.tar.gz) = f4e6c857833c7c994a64586bb495b48935752d0fa9d90edbdcce899ebce10fc0ac13ab03c439ea81f1c0fcfc4adafbf2c42ee8c4fa4afdd662c30d5be164c9b2
+Size (pyotp-2.8.0.tar.gz) = 16873 bytes
