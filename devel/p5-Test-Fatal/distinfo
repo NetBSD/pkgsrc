@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 10:17:40 nia Exp $
+$NetBSD: distinfo,v 1.10 2023/03/11 03:31:27 wen Exp $
 
-BLAKE2s (Test-Fatal-0.016.tar.gz) = 4c104fb67983bb75fa96fb363dad1cf65b94bf29766ab2e6b17cb1b8e3c1b68f
-SHA512 (Test-Fatal-0.016.tar.gz) = 395d56cfc62fa5888458ec124710b5333f4c7396653e2755a69b08c738ca3d7503e8e413a10c8a55042fba15e90fa5331bb0bf9c59d3677c2ae5e710435120b5
-Size (Test-Fatal-0.016.tar.gz) = 21246 bytes
+BLAKE2s (Test-Fatal-0.017.tar.gz) = 36174f8f38f89994717437c7a05cc097853ae247e2279a5ad2ac9d1a4a70ff0a
+SHA512 (Test-Fatal-0.017.tar.gz) = e88bb9749bd1cbc4ed169e13bcd5a1ac7411873d8ae00d8b7ecf1dfc39ed9a02f0286d885876913c69b5c90033144d5fda6a5517ef64175d13e284d3c971a6e7
+Size (Test-Fatal-0.017.tar.gz) = 21750 bytes
