@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1683 2023/03/11 03:32:20 wen Exp $
+$NetBSD: CHANGES-2023,v 1.1684 2023/03/11 05:25:40 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2180,3 +2180,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/gnuplot to 5.4.6 [ryoon 2023-03-10]
 	Updated devel/p5-Test-File to 1.993 [wen 2023-03-11]
 	Updated devel/p5-Test-Fatal to 0.017 [wen 2023-03-11]
+	Updated audio/gospt to 0.0.46 [pin 2023-03-11]
