@@ -1,13 +1,13 @@
-$NetBSD: patch-ca,v 1.10 2018/03/09 09:05:37 leot Exp $
+$NetBSD: patch-ca,v 1.11 2023/03/11 18:16:17 leot Exp $
 
 - Introduce $egdir and install all configuration files in it, in order to
   properly use CONF_FILES to manage configuration files for pkgsrc.
 - Adjust TEST_ENVIRONMENT in order to use $egdir instead of $nmhetcdir
   and adjust $nmhetcdirinst to fix the `mhparam etcdir' test.
 
---- Makefile.in.orig	2018-01-21 23:04:05.000000000 +0000
+--- Makefile.in.orig	2023-01-01 16:30:07.000000000 +0000
 +++ Makefile.in
-@@ -865,6 +865,7 @@ smtpserver = @smtpserver@
+@@ -988,6 +988,7 @@ smtpserver = @smtpserver@
  srcdir = @srcdir@
  supported_locks = @supported_locks@
  sysconfdir = @sysconfdir@
@@ -15,7 +15,7 @@ $NetBSD: patch-ca,v 1.10 2018/03/09 09:05:37 leot Exp $
  target_alias = @target_alias@
  top_build_prefix = @top_build_prefix@
  top_builddir = @top_builddir@
-@@ -882,8 +883,8 @@ TESTS_ENVIRONMENT = MH_OBJ_DIR="@abs_bui
+@@ -1003,8 +1004,8 @@ TESTS_ENVIRONMENT = MH_OBJ_DIR="@abs_bui
  		    CURL_USER_AGENT='@CURL_USER_AGENT@' \
  		    MH_TEST_DIR=`cd "@abs_builddir@" && pwd -P`/test/testdir \
  		    nmhlibexecdir="$(nmhlibexecdir)" bindir="$(bindir)" \
@@ -26,7 +26,7 @@ $NetBSD: patch-ca,v 1.10 2018/03/09 09:05:37 leot Exp $
  		    supported_locks="$(supported_locks)" \
  		    default_locking="${default_locking}" \
  		    MULTIBYTE_ENABLED=$(MULTIBYTE_ENABLED) \
-@@ -2504,10 +2505,10 @@ uninstall-dist_docs_contribSCRIPTS:
+@@ -2756,10 +2757,10 @@ uninstall-dist_docs_contribSCRIPTS:
  	dir='$(DESTDIR)$(docs_contribdir)'; $(am__uninstall_files_from_dir)
  install-dist_nmhetcSCRIPTS: $(dist_nmhetc_SCRIPTS)
  	@$(NORMAL_INSTALL)
@@ -40,7 +40,7 @@ $NetBSD: patch-ca,v 1.10 2018/03/09 09:05:37 leot Exp $
  	fi; \
  	for p in $$list; do \
  	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
-@@ -2526,8 +2527,8 @@ install-dist_nmhetcSCRIPTS: $(dist_nmhet
+@@ -2778,8 +2779,8 @@ install-dist_nmhetcSCRIPTS: $(dist_nmhet
  	while read type dir files; do \
  	     if test "$$dir" = .; then dir=; else dir=/$$dir; fi; \
  	     test -z "$$files" || { \
@@ -51,7 +51,7 @@ $NetBSD: patch-ca,v 1.10 2018/03/09 09:05:37 leot Exp $
  	     } \
  	; done
  
-@@ -4659,18 +4660,18 @@ uninstall-dist_docs_contribDATA:
+@@ -4871,18 +4872,18 @@ uninstall-dist_docs_contribDATA:
  	dir='$(DESTDIR)$(docs_contribdir)'; $(am__uninstall_files_from_dir)
  install-dist_nmhetcDATA: $(dist_nmhetc_DATA)
  	@$(NORMAL_INSTALL)
@@ -75,7 +75,7 @@ $NetBSD: patch-ca,v 1.10 2018/03/09 09:05:37 leot Exp $
  	done
  
  uninstall-dist_nmhetcDATA:
-@@ -4680,18 +4681,18 @@ uninstall-dist_nmhetcDATA:
+@@ -4892,18 +4893,18 @@ uninstall-dist_nmhetcDATA:
  	dir='$(DESTDIR)$(nmhetcdir)'; $(am__uninstall_files_from_dir)
  install-nmhetcDATA: $(nmhetc_DATA)
  	@$(NORMAL_INSTALL)
@@ -99,8 +99,8 @@ $NetBSD: patch-ca,v 1.10 2018/03/09 09:05:37 leot Exp $
  	done
  
  uninstall-nmhetcDATA:
-@@ -5022,7 +5023,7 @@ check: check-am
- all-am: Makefile $(LIBRARIES) $(PROGRAMS) $(SCRIPTS) $(MANS) $(DATA) \
+@@ -5242,7 +5243,7 @@ check: check-am
+ all-am: Makefile $(PROGRAMS) $(LIBRARIES) $(SCRIPTS) $(MANS) $(DATA) \
  		$(HEADERS) config.h
  installdirs:
 -	for dir in "$(DESTDIR)$(bindir)" "$(DESTDIR)$(nmhlibexecdir)" "$(DESTDIR)$(bindir)" "$(DESTDIR)$(docs_contribdir)" "$(DESTDIR)$(nmhetcdir)" "$(DESTDIR)$(nmhlibexecdir)" "$(DESTDIR)$(man1dir)" "$(DESTDIR)$(man5dir)" "$(DESTDIR)$(man7dir)" "$(DESTDIR)$(man8dir)" "$(DESTDIR)$(docdir)" "$(DESTDIR)$(docs_contribdir)" "$(DESTDIR)$(nmhetcdir)" "$(DESTDIR)$(nmhetcdir)"; do \
