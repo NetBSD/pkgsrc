@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/01/16 21:48:05 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/03/11 15:47:34 schmonz Exp $
 bin/background
 bin/backtick
 bin/case
@@ -70,6 +70,7 @@ man/man1/execline-cd.1
 man/man1/execline-shell.1
 man/man1/execline-startup.1
 man/man1/execline-umask.1
+man/man1/execline.1
 man/man1/execlineb.1
 man/man1/exit.1
 man/man1/export.1
