@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.Darwin,v 1.1 2023/03/11 12:50:12 tnn Exp $
+include/gstreamer-1.0/gst/gstmacos.h
