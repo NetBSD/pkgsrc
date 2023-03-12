@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1716 2023/03/12 14:36:48 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1717 2023/03/12 16:07:06 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2217,3 +2217,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/ykman to 5.0.1 [wiz 2023-03-12]
 	Updated security/pam-yubico to 2.27 [wiz 2023-03-12]
 	Updated graphics/digikam to 7.9.0 [wiz 2023-03-12]
+	Updated net/bandsnatch to 0.2.0 [pin 2023-03-12]
