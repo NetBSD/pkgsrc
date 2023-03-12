@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2021/09/11 12:25:58 mef Exp $
+# $NetBSD: Makefile,v 1.2 2023/03/12 05:58:25 mef Exp $
 
 R_PKGNAME=	rgl
-R_PKGVER=	0.107.14
+R_PKGVER=	1.0.1
 CATEGORIES=	graphics
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -21,6 +21,7 @@ DEPENDS+=	R-shiny>=1.3.2:../../www/R-shiny
 # Packages suggested but not available:
 #   'orientlib', 'misc3d', 'magick', 'plotrix', 'tripack', 'interp',
 #   'alphashape3d', 'js', 'webshot2', 'downlit', 'pkgdown', 'extrafont'
+#   'V8', 'chromote'
 
 TEST_DEPENDS+=	R-deldir-[0-9]*:../../geography/R-deldir
 TEST_DEPENDS+=	R-akima-[0-9]*:../../math/R-akima
