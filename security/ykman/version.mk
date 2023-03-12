@@ -1,6 +1,6 @@
-#	$NetBSD: version.mk,v 1.1 2020/08/17 07:02:25 riastradh Exp $
+#	$NetBSD: version.mk,v 1.2 2023/03/12 14:05:22 wiz Exp $
 
 # used by security/py-yubikey-manager/Makefile
 # used by security/ykman/Makefile
 
-VERSION=	3.1.1
+VERSION=	5.0.1
