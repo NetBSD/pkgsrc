@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1718 2023/03/12 17:26:47 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1719 2023/03/12 17:57:56 js Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2219,3 +2219,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/digikam to 7.9.0 [wiz 2023-03-12]
 	Updated net/bandsnatch to 0.2.0 [pin 2023-03-12]
 	Updated editors/Sigil to 1.9.20nb5 [wiz 2023-03-12]
+	Updated filesystems/glusterfs to 10.3 [js 2023-03-12]
