@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1702 2023/03/12 05:40:59 mef Exp $
+$NetBSD: CHANGES-2023,v 1.1703 2023/03/12 05:51:58 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2200,3 +2200,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-looseversion to 1.1.2 [gutteridge 2023-03-12]
 	Updated math/R-compositions to 2.0.5 [mef 2023-03-12]
 	Updated textproc/R-htmltools to 0.5.4 [mef 2023-03-12]
+	Updated www/R-htmlwidgets to 1.6.1 [mef 2023-03-12]
