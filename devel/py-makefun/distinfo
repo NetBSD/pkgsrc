@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/03/12 13:39:00 wiz Exp $
+
+BLAKE2s (makefun-1.15.1.tar.gz) = ad21c716b6cff9551e65e300402eda08c8fc48ab89aa3ce0ae98b5e50f49cc3d
+SHA512 (makefun-1.15.1.tar.gz) = d5a43283eba61576546dbce7791825607a813658a4ef68ed6d173f8438e08f6a84027a7ce75a748e245f8dd532ca6a9eb1afa0ce795517e77b08f03c29fea034
+Size (makefun-1.15.1.tar.gz) = 74521 bytes
