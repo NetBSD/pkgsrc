@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.7 2021/06/06 15:44:34 mef Exp $
+# $NetBSD: Makefile,v 1.8 2023/03/12 09:52:10 mef Exp $
 
 R_PKGNAME=	markdown
-R_PKGVER=	1.1
+R_PKGVER=	1.5
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Render Markdown with the C Library 'Sundown'
 LICENSE=	gnu-gpl-v2
 
+DEPENDS+=	R-commonmark-[0-9]*:../../textproc/R-commonmark
 DEPENDS+=	R-mime>=0.3:../../mail/R-mime
 DEPENDS+=	R-xfun-[0-9]*:../../devel/R-xfun
 
