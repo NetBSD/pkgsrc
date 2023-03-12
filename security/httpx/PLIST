@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2023/03/12 20:10:14 leot Exp $
+bin/httpx
