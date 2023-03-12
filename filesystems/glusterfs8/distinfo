@@ -1,0 +1,14 @@
+$NetBSD: distinfo,v 1.1 2023/03/12 11:55:59 js Exp $
+
+BLAKE2s (glusterfs-8.2.tar.gz) = 8e3161a768b5875b190f44cc3698de3ea9703c2550306c019dc6776c4ab12cd7
+SHA512 (glusterfs-8.2.tar.gz) = e11ffd544cdfd55e4309bcf10d9f6d3cb13b3c0beeaf578e024c9b40df19f5bc5dc6965bca1166e96e05e42041093c48772b160952c235f7456f0898594d01d2
+Size (glusterfs-8.2.tar.gz) = 7761620 bytes
+SHA1 (patch-config.h.in) = 1560806ebd786139b404544461dcda0ec1d60b37
+SHA1 (patch-configure) = 07d7a61d7c24ab8b0e4bb00ab6ae2452e41d903f
+SHA1 (patch-configure.ac) = fcb7da30005e9a08e7a0f4ac2f5e55511580aa18
+SHA1 (patch-rpc_rpc_lib_rpcsvc.c) = 287e5da091a2610ee010a44a5b51a90a402cff01
+SHA1 (patch-tools_gfind__missing__files_gfind__missing__files.sh) = 67d374d8dc3213bd3d159e7cb8479c14e8ba162d
+SHA1 (patch-xlators_mgmt_glusterd_src_glusterd-utils.c) = 3e8e6fa5e4baff94532f58a6509f7b5817ce02bf
+SHA1 (patch-xlators_mount_fuse_src_fuse-bridge.c) = 4706bc7264b7e4ec7f01cc143f3edce96213401e
+SHA1 (patch-xlators_performance_write-behind_src_write-behind.c) = cf3eea86ab4255a7714b25a35a98495eff0f772e
+SHA1 (patch-xlators_storage_posix_src_posix-entry-ops.c) = 2c1acf30097ca4ce7b6ec6e1212f989c86201553
