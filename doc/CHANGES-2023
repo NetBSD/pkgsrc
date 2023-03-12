@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1719 2023/03/12 17:57:56 js Exp $
+$NetBSD: CHANGES-2023,v 1.1720 2023/03/12 18:33:20 abs Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2220,3 +2220,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/bandsnatch to 0.2.0 [pin 2023-03-12]
 	Updated editors/Sigil to 1.9.20nb5 [wiz 2023-03-12]
 	Updated filesystems/glusterfs to 10.3 [js 2023-03-12]
+	Added multimedia/atomicparsley version 20221229 [abs 2023-03-12]
