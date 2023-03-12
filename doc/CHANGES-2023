@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1704 2023/03/12 05:58:36 mef Exp $
+$NetBSD: CHANGES-2023,v 1.1705 2023/03/12 07:21:05 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2202,3 +2202,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/R-htmltools to 0.5.4 [mef 2023-03-12]
 	Updated www/R-htmlwidgets to 1.6.1 [mef 2023-03-12]
 	Updated graphics/R-rgl to 1.0.1 [mef 2023-03-12]
+	Updated www/R-httpuv to 1.6.9 [mef 2023-03-12]
