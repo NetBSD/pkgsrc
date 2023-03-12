@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/03/08 15:35:04 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2023/03/12 15:16:01 wiz Exp $
 
 DISTNAME=	Playwright-1.291
 PKGNAME=	p5-${DISTNAME}
@@ -23,6 +23,8 @@ DEPENDS+=	p5-Test-TCP>=0:../../net/p5-Test-TCP
 
 PERL5_PACKLIST=	auto/Playwright/.packlist
 USE_LANGUAGES=	# none
+
+CHECK_INTERPRETER_SKIP+=	lib/perl5/vendor_perl/bin/playwright_server
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
