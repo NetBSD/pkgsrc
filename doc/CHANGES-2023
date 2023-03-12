@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1709 2023/03/12 12:51:58 js Exp $
+$NetBSD: CHANGES-2023,v 1.1710 2023/03/12 13:39:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2210,3 +2210,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated databases/sqlite3-tcl to 3.41.1 [adam 2023-03-12]
 	Updated devel/lemon to 1.0.3.41.1 [adam 2023-03-12]
 	Updated devel/fossil to 2.21 [js 2023-03-12]
+	Added devel/py-makefun version 1.15.1 [wiz 2023-03-12]
