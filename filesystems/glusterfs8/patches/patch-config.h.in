@@ -1,0 +1,19 @@
+$NetBSD: patch-config.h.in,v 1.1 2023/03/12 11:55:59 js Exp $
+
+Make FUSE notification optional at configure time
+From upstream https://review.gluster.org/24731
+
+--- config.h.in.orig	2020-07-22 02:24:03.169608070 +0200
++++ config.h.in	2020-07-22 02:24:28.887999809 +0200
+@@ -47,8 +47,11 @@
+ 
+ /* define if fdatasync exists */
+ #undef HAVE_FDATASYNC
+ 
++/* Use FUSE notifications */
++#undef HAVE_FUSE_NOTIFICATIONS
++
+ /* Define to 1 if you have the <inttypes.h> header file. */
+ #undef HAVE_INTTYPES_H
+ 
+ /* have sys/ioctl.h */
