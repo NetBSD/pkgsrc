@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.40 2020/07/07 01:01:27 manu Exp $
+@comment $NetBSD: PLIST,v 1.41 2023/03/12 17:57:44 js Exp $
 ${PYSITELIB}/gluster/__init__.py
 ${PYSITELIB}/gluster/__init__.pyc
 ${PYSITELIB}/gluster/__init__.pyo
@@ -38,6 +38,7 @@ include/glusterfs/client_t.h
 include/glusterfs/cluster-syncop.h
 include/glusterfs/common-utils.h
 include/glusterfs/compat-errno.h
+include/glusterfs/compat-io_uring.h
 include/glusterfs/compat-uuid.h
 include/glusterfs/compat.h
 include/glusterfs/daemon.h
@@ -51,6 +52,9 @@ include/glusterfs/fd.h
 include/glusterfs/gd-common-utils.h
 include/glusterfs/gf-dirent.h
 include/glusterfs/gf-event.h
+include/glusterfs/gf-io-common.h
+include/glusterfs/gf-io-legacy.h
+include/glusterfs/gf-io.h
 include/glusterfs/gfchangelog/changelog.h
 include/glusterfs/gidcache.h
 include/glusterfs/glfs-message-id.h
@@ -289,12 +293,12 @@ libexec/glusterfs/python/syncdaemon/libgfchangelog.pyo
 libexec/glusterfs/python/syncdaemon/logutils.py
 libexec/glusterfs/python/syncdaemon/logutils.pyc
 libexec/glusterfs/python/syncdaemon/logutils.pyo
-libexec/glusterfs/python/syncdaemon/master.py
-libexec/glusterfs/python/syncdaemon/master.pyc
-libexec/glusterfs/python/syncdaemon/master.pyo
 libexec/glusterfs/python/syncdaemon/monitor.py
 libexec/glusterfs/python/syncdaemon/monitor.pyc
 libexec/glusterfs/python/syncdaemon/monitor.pyo
+libexec/glusterfs/python/syncdaemon/primary.py
+libexec/glusterfs/python/syncdaemon/primary.pyc
+libexec/glusterfs/python/syncdaemon/primary.pyo
 libexec/glusterfs/python/syncdaemon/py2py3.py
 libexec/glusterfs/python/syncdaemon/py2py3.pyc
 libexec/glusterfs/python/syncdaemon/py2py3.pyo
@@ -318,7 +322,7 @@ libexec/glusterfs/scripts/get-gfid.sh
 libexec/glusterfs/scripts/gsync-sync-gfid
 libexec/glusterfs/scripts/gsync-upgrade.sh
 libexec/glusterfs/scripts/schedule_georep.py
-libexec/glusterfs/scripts/slave-upgrade.sh
+libexec/glusterfs/scripts/secondary-upgrade.sh
 libexec/glusterfs/set_geo_rep_pem_keys.sh
 man/man8/gluster-setgfid2path.8
 man/man8/gluster.8
