@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.160 2023/01/29 21:15:53 ryoon Exp $
+# $NetBSD: Makefile,v 1.161 2023/03/12 17:26:25 wiz Exp $
 
 DISTNAME=	Sigil-1.9.20
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Sigil-Ebook/}
 GITHUB_PROJECT=	Sigil
@@ -12,21 +12,19 @@ HOMEPAGE=	https://sigil-ebook.com/
 COMMENT=	Multi-platform WYSIWYG ebook editor (for the ePub format)
 LICENSE=	gnu-gpl-v3
 
-DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
+DEPENDS+=	${PYPKGPREFIX}-dulwich-[0-9]*:../../devel/py-dulwich
+DEPENDS+=	${PYPKGPREFIX}-css-parser-[0-9]*:../../textproc/py-css-parser
 DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
-DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
 Qt5_DIR=	${BUILDLINK_PREFIX.qt5-qtbase}/qt5
 ALL_ENV+=	Qt5_DIR=${Qt5_DIR}
 
-BUILDLINK_TRANSFORM+=	opt:-O2:-O0
-#MAKE_ENV+=		CXX_FLAGS="-g"
-
 USE_LANGUAGES=	c c++0x
-USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 
-#CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Debug
+CMAKE_ARGS+=	-DUSE_SYSTEM_LIBS=ON
+CMAKE_ARGS+=	-DPYTHON_LIBRARY=${PREFIX}/lib/libpython${PYVERSSUFFIX}.so
+CMAKE_ARGS+=	-DPYTHON_INCLUDE_DIR=${PREFIX}/include/python${PYVERSSUFFIX}
 
 BUILDLINK_TRANSFORM+=	l:BoostParts:boost_date_time:boost_filesystem:boost_regex:boost_system:boost_thread:boost_program_options
 BUILDLINK_TRANSFORM+=	l:Xerces:xerces-c
@@ -40,11 +38,11 @@ REPLACE_PYTHON+=		src/Resource_Files/*/*/*/*.py
 REPLACE_PYTHON+=		src/Resource_Files/*/*/*.py
 REPLACE_PYTHON+=		src/Resource_Files/*/*.py
 
-.include "../../textproc/xerces-c/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
+.include "../../archivers/minizip/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../devel/boost-libs/buildlink3.mk"
-.include "../../devel/pcre/buildlink3.mk"
-.include "../../lang/python/application.mk"
+.include "../../devel/pcre2/buildlink3.mk"
+.include "../../lang/python/pyversion.mk"
 .include "../../textproc/hunspell/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtsvg/buildlink3.mk"
