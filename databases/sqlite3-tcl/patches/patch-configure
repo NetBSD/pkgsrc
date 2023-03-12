@@ -1,0 +1,17 @@
+$NetBSD: patch-configure,v 1.3 2023/03/12 10:34:33 adam Exp $
+
+Fix version.
+
+--- configure.orig	2023-03-12 10:29:25.000000000 +0000
++++ configure
+@@ -608,8 +608,8 @@ MAKEFLAGS=
+ # Identity of this package.
+ PACKAGE_NAME='sqlite'
+ PACKAGE_TARNAME='sqlite'
+-PACKAGE_VERSION='3.41.0'
+-PACKAGE_STRING='sqlite 3.41.0'
++PACKAGE_VERSION='3.41.1'
++PACKAGE_STRING='sqlite 3.41.1'
+ PACKAGE_BUGREPORT=''
+ PACKAGE_URL=''
+ 
