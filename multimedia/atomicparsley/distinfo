@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2023/03/12 17:29:03 abs Exp $
+
+BLAKE2s (atomicparsley/20221229.172126.d813aa6.tar.gz) = 7047dd36e1efb6877e39b9e015bd95bfd4a8576f58edb588e728195d29b21fd4
+SHA512 (atomicparsley/20221229.172126.d813aa6.tar.gz) = eb6de26f71a977cf4512f0d4249c3e0ae9225b5aef42a4bbdaaa54b022985f277095b7019c741a26078d26fba07e8dea7bf117017d0ef43d630751873e6b4899
+Size (atomicparsley/20221229.172126.d813aa6.tar.gz) = 230461 bytes
+SHA1 (patch-src_CDtoc.cpp) = 6cff5fab2b3a5ccf27ca2e7ae5e6b38d8d3bdac4

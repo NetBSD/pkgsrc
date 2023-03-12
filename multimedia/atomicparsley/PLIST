@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2023/03/12 17:29:03 abs Exp $
+bin/AtomicParsley
+share/doc/atomicparsley/COPYING
+share/doc/atomicparsley/CREDITS
+share/doc/atomicparsley/Changes.txt
+share/doc/atomicparsley/README.md
