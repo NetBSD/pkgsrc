@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2022/12/18 11:46:11 mef Exp $
+$NetBSD: distinfo,v 1.6 2023/03/12 05:11:37 mef Exp $
 
-BLAKE2s (R/compositions_2.0-4.tar.gz) = 655e6d6c12957d129682377e0ab09a933e2f5022dfb41d05492a2c20fec28c25
-SHA512 (R/compositions_2.0-4.tar.gz) = 5ccba3ce12461ff3d7fdda8e2956ed2eaed6a029911a31c11c375c40c1b2696b3601d62a07b07f7695b408181b286be251e5530d2934249d1586024c1ea92944
-Size (R/compositions_2.0-4.tar.gz) = 1175066 bytes
+BLAKE2s (R/compositions_2.0-5.tar.gz) = 7220c703cec15a1e898bf6b1082f2f27ce1d755c98d5a893616fa5536e1f96be
+SHA512 (R/compositions_2.0-5.tar.gz) = 8917e9b2b68643cbf42789e8aa8ba18dea7aeae2ebbaa9f66acb2eca223cfd1f16cd0fb99cc596e490e619bd3969edf3034162981eb0aa4d07f529ee3c0128b6
+Size (R/compositions_2.0-5.tar.gz) = 1175883 bytes
