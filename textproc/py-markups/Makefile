@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2022/01/04 20:54:59 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2023/03/12 03:00:57 gutteridge Exp $
 
+# (4.0.0 drops support for Python < 3.9.)
 DISTNAME=	Markups-3.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 PKGREVISION=	1
