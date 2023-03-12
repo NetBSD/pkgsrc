@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22680 2023/03/12 14:36:48 wiz Exp $
+$NetBSD: TODO,v 1.22681 2023/03/12 17:26:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1050,6 +1050,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ocaml-safepass-3.1
 	o ocaml-zip-110
 	o ocrad-0.25
+	o octave-8.1
 	o odbc-postgresql-9.06.0500
 	o ogre-2.3
 	o olvwm-4.5
