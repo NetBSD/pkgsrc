@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2023/03/10 17:00:55 adam Exp $
+# $NetBSD: Makefile,v 1.31 2023/03/12 13:58:25 wiz Exp $
 
 DISTNAME=	keyring-23.13.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=k/keyring/}
 
@@ -10,6 +11,9 @@ HOMEPAGE=	https://github.com/jaraco/keyring
 COMMENT=	Store and access your passwords safely
 LICENSE=	python-software-foundation
 
+DEPENDS+=	${PYPKGPREFIX}-jaraco.classes>=0:../../devel/py-jaraco.classes
+DEPENDS+=	${PYPKGPREFIX}-jeepney>=0.4.2:../../sysutils/py-jeepney
+DEPENDS+=	${PYPKGPREFIX}-secretstorage>=3.2:../../security/py-secretstorage
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4.1:../../devel/py-setuptools_scm
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=6:../../devel/py-test
@@ -20,13 +24,22 @@ USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
+.include "../../lang/python/pyversion.mk"
+
+.if ${PYPKGPREFIX} == "py37" || ${PYPKGPREFIX} == "py38" || ${PYPKGPREFIX} == "py39" || ${PYPKGPREFIX} == "py310" || ${PYPKGPREFIX} == "py311"
+DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=4.11.4:../../devel/py-importlib-metadata
+.endif
+.if ${PYPKGPREFIX} == "py37" || ${PYPKGPREFIX} == "py38"
+DEPENDS+=	${PYPKGPREFIX}-importlib-resources>=0:../../devel/py-importlib-resources
+.endif
+
 REPLACE_PYTHON+=	keyring/cli.py
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} keyring keyring-${PYVERSSUFFIX} || ${TRUE}
 
-# requires: pytest-black
+# 2 failed, 11 passed, 83 skipped
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
