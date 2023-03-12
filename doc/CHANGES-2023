@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1708 2023/03/12 10:35:22 adam Exp $
+$NetBSD: CHANGES-2023,v 1.1709 2023/03/12 12:51:58 js Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2209,3 +2209,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated databases/sqlite3-docs to 3.41.1 [adam 2023-03-12]
 	Updated databases/sqlite3-tcl to 3.41.1 [adam 2023-03-12]
 	Updated devel/lemon to 1.0.3.41.1 [adam 2023-03-12]
+	Updated devel/fossil to 2.21 [js 2023-03-12]
