@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22677 2023/03/12 14:01:13 wiz Exp $
+$NetBSD: TODO,v 1.22678 2023/03/12 14:05:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1577,7 +1577,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o yed-3.17.1
 	o yelp-tools-3.38.0
 	o yices2-2.6.2
-	o ykman-5.0.1
 	o yodl-2.14.3
 	o yorick-2.1.05
 	o yudit-3.0.7
