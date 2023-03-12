@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:17:51 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/03/12 14:05:21 wiz Exp $
 
-BLAKE2s (yubikey-manager-3.1.1.tar.gz) = ef48d1a33385981a821c3ad049cd727601e213a090df8adeb948a51ee6ddcda7
-SHA512 (yubikey-manager-3.1.1.tar.gz) = 4c1516c9fb72bae5f046f32220403504b3b34bce503abc50597c13cc0f29eb7673b8520d580f7bdd31120adfd4cfef8a91f3bb42bdafc517836952d7f5bb6ad9
-Size (yubikey-manager-3.1.1.tar.gz) = 119251 bytes
-SHA1 (patch-ykman_descriptor.py) = aaf79848fb17f3426b7d12d9b3fb40007d8774ee
-SHA1 (patch-ykman_driver__ccid.py) = ff238fe8fd67dd0bbe14f6afbebffd19c0de270b
+BLAKE2s (yubikey_manager-5.0.1.tar.gz) = d2cedf5fdf5564d5fade5bc0852f60a268bb6a6011257df993b4933c1968114f
+SHA512 (yubikey_manager-5.0.1.tar.gz) = 2e798f8475e52c9091f5cd6ebbd5937eb3f14c49e9c2c9c7eda09c095ac3a1c80065e14f8e9c827c1eee8914ce3c3e21dbb2820a6ac8cefed1306d409cc6a0fc
+Size (yubikey_manager-5.0.1.tar.gz) = 158829 bytes
