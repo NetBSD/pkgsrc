@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1711 2023/03/12 13:55:45 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1712 2023/03/12 14:01:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2212,3 +2212,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/fossil to 2.21 [js 2023-03-12]
 	Added devel/py-makefun version 1.15.1 [wiz 2023-03-12]
 	Added security/py-secretstorage version 3.3.1 [wiz 2023-03-12]
+	Updated security/py-fido2 to 1.1.0 [wiz 2023-03-12]
