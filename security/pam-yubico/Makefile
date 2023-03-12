@@ -1,20 +1,25 @@
-# $NetBSD: Makefile,v 1.34 2022/10/26 10:31:57 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2023/03/12 14:15:50 wiz Exp $
 
-DISTNAME=	pam_yubico-2.17
+DISTNAME=	pam_yubico-2.27
 PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	22
 CATEGORIES=	security
-MASTER_SITES=	http://opensource.yubico.com/yubico-pam/releases/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=Yubico/}
+GITHUB_PROJECT=	yubico-pam
+GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	pettai@NetBSD.org
 HOMEPAGE=	http://opensource.yubico.com/yubico-pam/
 COMMENT=	Pluggable Authentication Module for Yubikey validation
-
 LICENSE=	modified-bsd
 
+TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
+
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		pkg-config autoconf automake autoreconf
 USE_LIBTOOL=		yes
+
+pre-configure:
+	cd ${WRKSRC} && autoreconf -fiv
 
 .include "../../security/libyubikey/buildlink3.mk"
 .include "../../security/ykclient/buildlink3.mk"
