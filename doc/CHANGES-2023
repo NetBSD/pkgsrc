@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1700 2023/03/12 02:59:02 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.1701 2023/03/12 05:12:01 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2198,3 +2198,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/ripdrag to 0.3.0 [pin 2023-03-11]
 	Updated misc/wthrr to 0.10.0 [pin 2023-03-11]
 	Updated devel/py-looseversion to 1.1.2 [gutteridge 2023-03-12]
+	Updated math/R-compositions to 2.0.5 [mef 2023-03-12]
