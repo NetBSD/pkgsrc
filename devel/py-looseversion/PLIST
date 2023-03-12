@@ -1,10 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1 2023/01/25 05:26:18 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/03/12 02:58:53 gutteridge Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
-${PYSITELIB}/looseversion.py
-${PYSITELIB}/looseversion.pyc
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/looseversion/__init__.py
+${PYSITELIB}/looseversion/__init__.pyc
+${PYSITELIB}/looseversion/__init__.pyi
+${PYSITELIB}/looseversion/py.typed
