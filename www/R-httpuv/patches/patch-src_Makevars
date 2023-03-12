@@ -1,20 +1,19 @@
-$NetBSD: patch-src_Makevars,v 1.4 2021/06/05 08:55:12 mef Exp $
+$NetBSD: patch-src_Makevars,v 1.5 2023/03/12 07:20:54 mef Exp $
 
 date: 2019-12-18 21:44:39 +0900;  author: joerg;  state: Exp;  commitid: UcBUFje0SklPFbPB;
 Use external libuv.
 
---- src/Makevars.orig	2020-06-06 01:40:07.000000000 +0900
-+++ src/Makevars	2021-06-05 17:47:54.804407283 +0900
-@@ -5,7 +5,7 @@ CXX_STD=CXX11
- 
+--- src/Makevars.orig	2023-02-09 04:27:58.000000000 +0900
++++ src/Makevars	2023-03-12 16:12:54.495701401 +0900
+@@ -1,6 +1,6 @@
  UNAME := $(shell uname)
  
 -PKG_LIBS = ./libuv/.libs/libuv.a ./http-parser/http_parser.o ./sha1/sha1.o ./base64/base64.o -pthread
-+PKG_LIBS = -luv ./http-parser/http_parser.o ./sha1/sha1.o ./base64/base64.o -pthread
++PKG_LIBS =                  -luv ./http-parser/http_parser.o ./sha1/sha1.o ./base64/base64.o -pthread
  
  ifeq ($(UNAME), Darwin)
  PKG_LIBS += -framework CoreServices
-@@ -23,7 +23,7 @@ endif
+@@ -18,7 +18,7 @@ endif
  
  PKG_CFLAGS = $(C_VISIBILITY) -DSTRICT_R_HEADERS
  PKG_CXXFLAGS = $(CXX_VISIBILITY) -DSTRICT_R_HEADERS
@@ -23,7 +22,7 @@ Use external libuv.
  
  # To avoid spurious warnings from `R CMD check --as-cran`, about compiler
  # warning flags like -Werror.
-@@ -43,7 +43,7 @@ CONFIGURE_FLAGS="--quiet"
+@@ -38,7 +38,7 @@ CONFIGURE_FLAGS="--quiet"
  # PKG_CPPFLAGS += -D_GLIBCXX_ASSERTIONS
  
  
