@@ -1,6 +1,7 @@
-$NetBSD: patch-core_dplugins_generic_tools_mediaserver_upnpsdk_Neptune_Source_Core_NptConfig.h,v 1.1 2023/03/12 14:36:29 wiz Exp $
+$NetBSD: patch-core_dplugins_generic_tools_mediaserver_upnpsdk_Neptune_Source_Core_NptConfig.h,v 1.2 2023/03/12 14:43:20 wiz Exp $
 
 Add NetBSD support.
+https://bugs.kde.org/show_bug.cgi?id=467245
 
 --- core/dplugins/generic/tools/mediaserver/upnpsdk/Neptune/Source/Core/NptConfig.h.orig	2022-12-03 13:19:38.000000000 +0000
 +++ core/dplugins/generic/tools/mediaserver/upnpsdk/Neptune/Source/Core/NptConfig.h
