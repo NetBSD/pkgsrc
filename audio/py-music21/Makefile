@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2022/11/14 22:06:02 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2023/03/12 02:49:45 gutteridge Exp $
 
 VERSION=	8.1.0
 DISTNAME=	music21-noCorpus-${VERSION}
@@ -13,7 +13,7 @@ HOMEPAGE=	https://github.com/cuthbertLab/music21
 COMMENT=	Python toolkit for computer-aided musical analysis
 LICENSE=	modified-bsd
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-chardet-[0-9]*:../../converters/py-chardet
 DEPENDS+=	${PYPKGPREFIX}-joblib-[0-9]*:../../devel/py-joblib
 DEPENDS+=	${PYPKGPREFIX}-more-itertools-[0-9]*:../../devel/py-more-itertools
