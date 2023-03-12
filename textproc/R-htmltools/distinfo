@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:21:31 nia Exp $
+$NetBSD: distinfo,v 1.6 2023/03/12 05:40:48 mef Exp $
 
-BLAKE2s (R/htmltools_0.5.2.tar.gz) = 241d60222b30c8e657c13e12d3804c0fd79b3f7595c1b404686e5bcfe9d3af0a
-SHA512 (R/htmltools_0.5.2.tar.gz) = 10d605439621d4ae46a6b10580ddcbdbb4dc52c9b50f3d8a7c0a1ca8f86087ad4949efdaf7e445fd752ad4d58e2601e1fc7f262f9f0a8760ea883aac3cb7698c
-Size (R/htmltools_0.5.2.tar.gz) = 124510 bytes
+BLAKE2s (R/htmltools_0.5.4.tar.gz) = 0cbda8a01afe8ead7cbfc369d61b1c1fccc0cce673c75bd5c171c1e8637c6ee4
+SHA512 (R/htmltools_0.5.4.tar.gz) = a3ea84deacd1dc3f7813f89268e1f540d51d97e61271437f2e6587f28ffdab8936421473fd5b17639237f70f5f491638d20148c5866cca72e887f89b9b2e92a7
+Size (R/htmltools_0.5.4.tar.gz) = 131047 bytes
