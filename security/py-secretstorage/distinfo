@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/03/12 13:55:17 wiz Exp $
+
+BLAKE2s (secretstorage-3.3.1.tar.gz) = 57b21f294d6445af8ff0b53ba99cca3cc0bf498142a074c97e7015c9c06ea9da
+SHA512 (secretstorage-3.3.1.tar.gz) = 77a82f3b218d707a3f7e7deb336e5ab7b7ab67694dcd51b4d731a490de22814e1c6b7c7b448d2b05d93e91dfa59c5429a165ac349da99c39d15d5285219614aa
+Size (secretstorage-3.3.1.tar.gz) = 17909 bytes
