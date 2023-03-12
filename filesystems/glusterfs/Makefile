@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2023/03/12 17:57:44 js Exp $
+# $NetBSD: Makefile,v 1.112 2023/03/12 20:00:27 wiz Exp $
 
 DISTNAME=	glusterfs-10.3
 CATEGORIES=	filesystems
@@ -9,10 +9,9 @@ HOMEPAGE=	https://www.gluster.org/
 COMMENT=	Cluster filesystem
 LICENSE=	gnu-gpl-v3
 
-DEPENDS+=	bash>=4:../../shells/bash
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	flex bison pkg-config bash autoconf autoreconf automake
+USE_TOOLS+=	flex bison pkg-config bash:run autoconf autoreconf automake
 
 CONFIGURE_ARGS+=	--disable-fusermount
 CONFIGURE_ARGS+=	--disable-fuse-notifications
