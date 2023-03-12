@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1 2023/03/12 13:39:00 wiz Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/makefun/__init__.py
+${PYSITELIB}/makefun/__init__.pyc
+${PYSITELIB}/makefun/__init__.pyo
+${PYSITELIB}/makefun/_main_legacy_py.py
+${PYSITELIB}/makefun/_main_legacy_py.pyc
+${PYSITELIB}/makefun/_main_legacy_py.pyo
+${PYSITELIB}/makefun/_main_py35_and_higher.py
+${PYSITELIB}/makefun/_main_py35_and_higher.pyc
+${PYSITELIB}/makefun/_main_py35_and_higher.pyo
+${PYSITELIB}/makefun/_main_py36_and_higher.py
+${PYSITELIB}/makefun/_main_py36_and_higher.pyc
+${PYSITELIB}/makefun/_main_py36_and_higher.pyo
+${PYSITELIB}/makefun/_version.py
+${PYSITELIB}/makefun/_version.pyc
+${PYSITELIB}/makefun/_version.pyo
+${PYSITELIB}/makefun/main.py
+${PYSITELIB}/makefun/main.pyc
+${PYSITELIB}/makefun/main.pyo
+${PYSITELIB}/makefun/py.typed
