@@ -1,12 +1,25 @@
-$NetBSD: patch-pyproject.toml,v 1.4 2022/10/28 19:19:36 gdt Exp $
+$NetBSD: patch-pyproject.toml,v 1.5 2023/03/12 11:40:10 js Exp $
 
 Patch out cryptography check: It doesn't need a version this high and it was
 added by upstream as an ugly hack to force a patched OpenSSL, in case it is
 linked statically.
 
---- pyproject.toml.orig	2022-09-27 11:34:31.000000000 +0000
+Patch out frozendict: It works perfectly fine with 2.3.5, just not on their CI.
+
+--- pyproject.toml.orig	2023-02-28 16:57:09.000000000 +0000
 +++ pyproject.toml
-@@ -162,7 +162,7 @@ bleach = ">=1.4.3"
+@@ -154,9 +154,7 @@ python = "^3.7.1"
+ # we use the TYPE_CHECKER.redefine method added in jsonschema 3.0.0
+ jsonschema = ">=3.0.0"
+ # frozendict 2.1.2 is broken on Debian 10: https://github.com/Marco-Sulla/python-frozendict/issues/41
+-# We cannot test our wheels against the 2.3.5 release in CI. Putting in an upper bound for this
+-# because frozendict has been more trouble than it's worth; we would like to move to immutabledict.
+-frozendict = ">=1,!=2.1.2,<2.3.5"
++frozendict = ">=1,!=2.1.2"
+ # We require 2.1.0 or higher for type hints. Previous guard was >= 1.1.0
+ unpaddedbase64 = ">=2.1.0"
+ # We require 1.5.0 to work around an issue when running against the C implementation of
+@@ -199,7 +197,7 @@ bleach = ">=1.4.3"
  typing-extensions = ">=3.10.0.1"
  # We enforce that we have a `cryptography` version that bundles an `openssl`
  # with the latest security patches.
