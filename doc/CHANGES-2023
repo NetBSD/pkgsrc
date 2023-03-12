@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1699 2023/03/11 22:07:37 pin Exp $
+$NetBSD: CHANGES-2023,v 1.1700 2023/03/12 02:59:02 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2197,3 +2197,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated mail/nmh to 1.8 [leot 2023-03-11]
 	Updated sysutils/ripdrag to 0.3.0 [pin 2023-03-11]
 	Updated misc/wthrr to 0.10.0 [pin 2023-03-11]
+	Updated devel/py-looseversion to 1.1.2 [gutteridge 2023-03-12]
