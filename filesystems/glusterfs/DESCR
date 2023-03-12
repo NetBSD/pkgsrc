@@ -2,10 +2,10 @@ GlusterFS is a flexible, powerful, POSIX-compliant cluster filesystem
 that can scale to several petabytes.
 
 GlusterFS works over either TCP/IP or high-performance Infiniband
-RDMA interconnect.
+RDMA interconnect.  It requires a 64-bit CPU.
 
 GlusterFS provides striping and on-the-fly synchronous replication
 of files. GlusterFS has a fully distributed design, with no single
 point of failure.
 
-Please visit http://www.gluster.org/glusterfs.php for more info.
+Please visit http://www.gluster.org/ for more info.
