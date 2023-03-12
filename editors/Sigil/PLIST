@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.20 2022/09/09 15:49:32 wiz Exp $
+@comment $NetBSD: PLIST,v 1.21 2023/03/12 17:26:25 wiz Exp $
 bin/sigil
-lib/sigil/libhunspell.so
 lib/sigil/libsigilgumbo.so
 lib/sigil/sigil
 share/applications/sigil.desktop
