@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1740 2023/03/13 15:00:42 fox Exp $
+$NetBSD: CHANGES-2023,v 1.1741 2023/03/13 18:15:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2242,3 +2242,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added textproc/sentencepiece version 0.1.97 [wiz 2023-03-13]
 	Added textproc/py-sentencepiece version 0.1.97 [wiz 2023-03-13]
 	Updated audio/fasttracker2 to 1.65 [fox 2023-03-13]
+	Updated devel/nss to 3.89 [wiz 2023-03-13]
