@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1742 2023/03/13 19:35:26 pin Exp $
+$NetBSD: CHANGES-2023,v 1.1743 2023/03/13 21:11:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2244,3 +2244,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated audio/fasttracker2 to 1.65 [fox 2023-03-13]
 	Updated devel/nss to 3.89 [wiz 2023-03-13]
 	Updated net/bandsnatch to 0.2.1 [pin 2023-03-13]
+	Updated math/py-numpy to 1.24.2 [wiz 2023-03-13]
