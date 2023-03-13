@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1721 2023/03/12 20:11:20 leot Exp $
+$NetBSD: CHANGES-2023,v 1.1722 2023/03/13 07:26:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2222,3 +2222,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated filesystems/glusterfs to 10.3 [js 2023-03-12]
 	Added multimedia/atomicparsley version 20221229 [abs 2023-03-12]
 	Added security/httpx version 1.2.8 [leot 2023-03-12]
+	Updated www/p5-Net-Curl to 0.52 [wiz 2023-03-13]
