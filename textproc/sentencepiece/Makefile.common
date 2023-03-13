@@ -1,0 +1,16 @@
+# $NetBSD: Makefile.common,v 1.1 2023/03/13 14:17:12 wiz Exp $
+#
+# used by textproc/sentencepiece/Makefile
+# used by textproc/py-sentencepiece/Makefile
+
+DISTNAME=	sentencepiece-0.1.97
+CATEGORIES=	textproc
+MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://github.com/google/sentencepiece/
+COMMENT=	Unsupervised text tokenizer for Neural Network-based text generation
+LICENSE=	apache-2.0
+
+USE_LANGUAGES=	c c++17
