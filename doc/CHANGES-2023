@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1736 2023/03/13 13:55:48 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.1737 2023/03/13 13:56:14 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2238,3 +2238,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/libv4l to 1.24.1 [wiz 2023-03-13]
 	Updated devel/texttest to 4.2.3 [schmonz 2023-03-13]
 	Updated devel/py-approval-utilities to 8.2.1 [schmonz 2023-03-13]
+	Updated devel/py-approvaltests to 8.2.1 [schmonz 2023-03-13]
