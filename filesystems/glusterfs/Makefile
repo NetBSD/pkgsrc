@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.112 2023/03/12 20:00:27 wiz Exp $
+# $NetBSD: Makefile,v 1.113 2023/03/13 22:45:36 gutteridge Exp $
 
 DISTNAME=	glusterfs-10.3
 CATEGORIES=	filesystems
@@ -22,7 +22,7 @@ CONFIGURE_ARGS+=	--without-libtirpc
 
 # Upstream glusterfs effectively dropped support for 32bit platforms
 # somewhere between 8.2 (works on e.g. NetBSD/i386) and 10.3 as various
-# internal bits went from 32 to 64 bits and atomic updates where done
+# internal bits went from 32 to 64 bits and atomic updates were done
 # on those - can't do that for 64bit values on a 32bit arch.
 # https://github.com/gluster/glusterfs/issues/702 proposed an explicit
 # drop of 32bit and eventually it just happened. See
