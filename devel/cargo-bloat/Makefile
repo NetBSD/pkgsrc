@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2023/03/06 20:04:09 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2023/03/13 07:31:25 wiz Exp $
 
-DISTNAME=	cargo-bloat-0.9.3
+DISTNAME=	cargo-bloat-0.11.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=RazrFalcon/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
