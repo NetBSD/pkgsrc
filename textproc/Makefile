@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1371 2023/03/13 09:26:12 wiz Exp $
+# $NetBSD: Makefile,v 1.1372 2023/03/13 14:18:41 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1124,6 +1124,7 @@ SUBDIR+=	py-rebulk
 SUBDIR+=	py-regex
 SUBDIR+=	py-relatorio
 SUBDIR+=	py-rst2pdf
+SUBDIR+=	py-sentencepiece
 SUBDIR+=	py-sgmllib3k
 SUBDIR+=	py-smartypants
 SUBDIR+=	py-snowballstemmer
@@ -1309,6 +1310,7 @@ SUBDIR+=	scew
 SUBDIR+=	scrollkeeper-dtd
 SUBDIR+=	sd
 SUBDIR+=	sdop
+SUBDIR+=	sentencepiece
 SUBDIR+=	serd
 SUBDIR+=	sgrep
 SUBDIR+=	shared-desktop-ontologies
