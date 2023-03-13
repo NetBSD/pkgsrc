@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1727 2023/03/13 10:18:57 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1728 2023/03/13 10:19:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2229,3 +2229,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added textproc/tree-sitter-heex version 0.6.0 [wiz 2023-03-13]
 	Added textproc/tree-sitter-elixir version 0.0.20221016 [wiz 2023-03-13]
 	Updated textproc/catdoc to 0.95 [wiz 2023-03-13]
+	Updated textproc/catdoc-tk to 0.95 [wiz 2023-03-13]
