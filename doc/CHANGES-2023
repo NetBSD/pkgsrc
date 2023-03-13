@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1737 2023/03/13 13:56:14 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.1738 2023/03/13 14:18:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2239,3 +2239,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/texttest to 4.2.3 [schmonz 2023-03-13]
 	Updated devel/py-approval-utilities to 8.2.1 [schmonz 2023-03-13]
 	Updated devel/py-approvaltests to 8.2.1 [schmonz 2023-03-13]
+	Added textproc/sentencepiece version 0.1.97 [wiz 2023-03-13]
