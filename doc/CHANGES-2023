@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1725 2023/03/13 09:26:40 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1726 2023/03/13 09:26:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2227,3 +2227,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-exceptiongroup to 1.1.1 [adam 2023-03-13]
 	Updated devel/py-test-xdist to 3.2.1 [adam 2023-03-13]
 	Added textproc/tree-sitter-heex version 0.6.0 [wiz 2023-03-13]
+	Added textproc/tree-sitter-elixir version 0.0.20221016 [wiz 2023-03-13]
