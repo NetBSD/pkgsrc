@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.85 2023/01/24 18:36:29 wiz Exp $
+# $NetBSD: Makefile,v 1.86 2023/03/13 11:41:57 triaxx Exp $
 
-DISTNAME=	rspamd-3.3
-PKGREVISION=	1
+DISTNAME=	rspamd-3.4
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rspamd/}
 
@@ -18,8 +17,6 @@ GCC_REQD+=	8
 USE_TOOLS+=	perl pkg-config
 USE_LANGUAGES=	c99 c++
 BUILD_DEFS+=	VARBASE
-
-LUA_VERSIONS_ACCEPTED=	54 53 52 51
 
 .include "../../mk/bsd.prefs.mk"
 

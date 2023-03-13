@@ -1,4 +1,4 @@
-$NetBSD: patch-CMakeLists.txt,v 1.8 2022/10/15 19:56:55 triaxx Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.9 2023/03/13 11:41:57 triaxx Exp $
 
 For pkgsrc. Install config files to examples directory.
 Find lua more reliably.
@@ -41,7 +41,7 @@ Find lua more reliably.
  			ENDIF()
  		ENDIF()
  	ENDIF()
-@@ -679,9 +679,9 @@ FILE(GLOB_RECURSE CONF_FILES RELATIVE "$
+@@ -685,9 +685,9 @@ FILE(GLOB_RECURSE CONF_FILES RELATIVE "$
  	"${CMAKE_SOURCE_DIR}/conf/*.inc" )
  FOREACH(CONF_FILE ${CONF_FILES})
  	GET_FILENAME_COMPONENT(_rp ${CONF_FILE} PATH)
