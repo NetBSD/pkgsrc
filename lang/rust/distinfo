@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.154 2023/01/23 18:49:03 he Exp $
+$NetBSD: distinfo,v 1.155 2023/03/13 14:52:31 he Exp $
 
 BLAKE2s (rust-1.65.0-aarch64-apple-darwin.tar.gz) = 2fdcead04098326a367cc9f8eff1b39a103a936c4bffd0087e064b676be99128
 SHA512 (rust-1.65.0-aarch64-apple-darwin.tar.gz) = 12c5d233d5a4a532e8e07788c0e93974023b84670384fbe6f4ebd88d584bcd0105602431563515151a811636effe905e93c4e780dd79009918467c2bfd35afad
@@ -30,9 +30,9 @@ Size (rust-1.65.0-i586-unknown-netbsd.tar.xz) = 168620576 bytes
 BLAKE2s (rust-1.65.0-i686-unknown-linux-gnu.tar.gz) = 3cd6e9e538eea9d7274a12d73b27e1a154282c9afe1ad4b7e09fb6255b6e3a6c
 SHA512 (rust-1.65.0-i686-unknown-linux-gnu.tar.gz) = 2afe5b3a0cec7fe0a43cf0f1057d82a64677a6a0dccc0a6a34fa22f85390a99a72ba0406e638754ecdd819bcd4eace8b12cac5c30572b9d390437f525079fc04
 Size (rust-1.65.0-i686-unknown-linux-gnu.tar.gz) = 390830346 bytes
-BLAKE2s (rust-1.65.0-powerpc-unknown-netbsd.tar.xz) = 3947aa52e476fd1e331e6e0be5c8169681cbdc526e83b4b0b85b94d95c21d215
-SHA512 (rust-1.65.0-powerpc-unknown-netbsd.tar.xz) = 6e2e50ca0dcf729e2a79ad3d48d8ed830f90868d9548a730e9a98c61f0c5344fb32ec58c8a2e5d2c8c75c8253d213db2e7f2df5639b274e7f977ce72c0505a45
-Size (rust-1.65.0-powerpc-unknown-netbsd.tar.xz) = 178065264 bytes
+BLAKE2s (rust-1.65.0-powerpc-unknown-netbsd.tar.xz) = aea68419d10e67a6b71da52e8112d7f7758ce173a61db204792f45f869e20d44
+SHA512 (rust-1.65.0-powerpc-unknown-netbsd.tar.xz) = fc23a62bec7ecb0400fa474d03fe6787c64842deb34352e8b2d23b21d4fc995035cc10bc385fac46a49239c431ac96a06fd876677bf0810152ba609a7bef2945
+Size (rust-1.65.0-powerpc-unknown-netbsd.tar.xz) = 177186064 bytes
 BLAKE2s (rust-1.65.0-powerpc-unknown-netbsd90.tar.xz) = cb05e60d4c5ab5bbad21a4539ee9e11d0a0aba8b433171822178d1c1172d824e
 SHA512 (rust-1.65.0-powerpc-unknown-netbsd90.tar.xz) = 3331e9c6c5b13ba15d1119e86e25d96adbfe38200339353ff68081627fbcdcd5e7f0041d8caecb91e0bfd48cd2ed7a9f72648c4661aa06cc15c916ff17c79b24
 Size (rust-1.65.0-powerpc-unknown-netbsd90.tar.xz) = 178033536 bytes
@@ -84,9 +84,9 @@ Size (rust-std-1.65.0-i586-unknown-netbsd.tar.xz) = 26137324 bytes
 BLAKE2s (rust-std-1.65.0-i686-unknown-linux-gnu.tar.gz) = 1eec3a6185232d75d9ef234e1bbac3fd1329b47c9e12d2234210a7067c06f51d
 SHA512 (rust-std-1.65.0-i686-unknown-linux-gnu.tar.gz) = a45f8d5e2df181f78c3f6564af3d1e4c5d1756f5cee2294df14a35f9cdf2560d67e53cefbf8d53f4d698fd1b83ac10160d08f22b35610ac124eda79e18084d5d
 Size (rust-std-1.65.0-i686-unknown-linux-gnu.tar.gz) = 44955280 bytes
-BLAKE2s (rust-std-1.65.0-powerpc-unknown-netbsd.tar.xz) = 19fbbbe1376f564c3a62814c8e7694eac229c5939d6a89784a63e70ab42ff0ad
-SHA512 (rust-std-1.65.0-powerpc-unknown-netbsd.tar.xz) = 94f664f2951b241a162867450721099961e138587a5a56fd01d510c31ad632b31cdfc037910829a0154b19ab452e61e7f5995d41e399f2512c46ed2e2d84a461
-Size (rust-std-1.65.0-powerpc-unknown-netbsd.tar.xz) = 23349728 bytes
+BLAKE2s (rust-std-1.65.0-powerpc-unknown-netbsd.tar.xz) = 2ffa117cfb3db29f910f3f533578c4e5b9d54422f2a1d13cfadc0dcb48fc441d
+SHA512 (rust-std-1.65.0-powerpc-unknown-netbsd.tar.xz) = cce8720b7c6d9df5d4884ee796dd20ecb026ae2be64962301794e838f277d6c86bcdff340d78ddacdfa251da70667ab8379acf7cd92a882c9711948d140d23b7
+Size (rust-std-1.65.0-powerpc-unknown-netbsd.tar.xz) = 23427008 bytes
 BLAKE2s (rust-std-1.65.0-powerpc-unknown-netbsd90.tar.xz) = b199c02124b35b0a302f77b401dd07db702c81ebf877edd0e6c0c27925238265
 SHA512 (rust-std-1.65.0-powerpc-unknown-netbsd90.tar.xz) = 22f789f437ad3211d491d2ab29f26b25a6aa88633dccfd6518c45e5ff7ea8ef51e204a7d7afbd11c5aa5d9ede84ff58daabfaf6a22880fd4c479c5095ce0fdba
 Size (rust-std-1.65.0-powerpc-unknown-netbsd90.tar.xz) = 23423344 bytes
