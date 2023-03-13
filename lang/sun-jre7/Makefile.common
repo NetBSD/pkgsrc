@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.18 2022/03/07 16:42:37 nia Exp $
+# $NetBSD: Makefile.common,v 1.19 2023/03/13 09:35:15 jperkin Exp $
 # used by lang/sun-jre7/Makefile
 # used by lang/sun-jdk7/Makefile
 
@@ -23,6 +23,7 @@ CHECK_RELRO_SUPPORTED=	no
 CHECK_PIE_SUPPORTED=	no
 CHECK_SSP_SUPPORTED=	no
 CTF_SUPPORTED=		no
+STRIP_DEBUG_SUPPORTED=	no
 
 USE_TOOLS+=	pax
 
