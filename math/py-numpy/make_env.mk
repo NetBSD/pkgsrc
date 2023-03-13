@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.make_env,v 1.4 2021/06/15 04:41:53 thor Exp $
+# $NetBSD: make_env.mk,v 1.1 2023/03/13 21:11:15 wiz Exp $
 # Use the variables from blas.buildlink3.mk, pulled in via cblas.
 # Dependent Python packages possibly re-use the system_info logic and
 # might need this in the environment.
