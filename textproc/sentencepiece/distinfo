@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/03/13 14:17:12 wiz Exp $
+
+BLAKE2s (sentencepiece-0.1.97.tar.gz) = 969788b6d87e8c992f6df4349f984fb2d6e80f978d4007127174222ec7fcb3ab
+SHA512 (sentencepiece-0.1.97.tar.gz) = 4c35488e3661e45be677b04299c0d0b1f0d46421098f0b1625a1bb5e7725d175dfd55328a5a7bbf88badeb03c2ba087aef942b0d7520a29f6bf34eae211a99eb
+Size (sentencepiece-0.1.97.tar.gz) = 11945436 bytes
