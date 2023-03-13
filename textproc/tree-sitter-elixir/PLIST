@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2023/03/13 09:26:02 wiz Exp $
+lib/libtree-sitter-elixir.la
