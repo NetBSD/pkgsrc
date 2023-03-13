@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.153 2023/02/01 09:25:19 wiz Exp $
+# $NetBSD: Makefile,v 1.154 2023/03/13 11:09:25 wiz Exp $
 
-VERSION=	3.63.1
+VERSION=	3.63.2.1
 DISTNAME=	FileZilla_${VERSION}_src
 PKGNAME=	filezilla-${VERSION}
 CATEGORIES=	net x11
@@ -30,7 +30,7 @@ GCC_REQD+=		7
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/libidn/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libfilezilla+=	libfilezilla>=0.40
+BUILDLINK_API_DEPENDS.libfilezilla+=	libfilezilla>=0.41.1
 .include "../../net/libfilezilla/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gnutls+=	gnutls>=3.4.0
 .include "../../security/gnutls/buildlink3.mk"
