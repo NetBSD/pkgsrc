@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22685 2023/03/13 10:18:57 wiz Exp $
+$NetBSD: TODO,v 1.22686 2023/03/13 10:39:38 wiz Exp $
 
 Suggested new packages
 ======================
@@ -408,7 +408,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o TeXmacs-2.1.1
 	o TiffIO-140a
 	o YoSucker-81
-	o a2ps-4.15
 	o aarch64-none-elf-binutils-2.36.1
 	o aarch64-none-elf-gcc-9.3.0
 	o abcl-1.8.0
