@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2020/05/29 10:57:22 abs Exp $
+# $NetBSD: Makefile,v 1.11 2023/03/13 09:31:48 jperkin Exp $
 
 # Note: This must be kept in sync with the oracle-jre8 package
 # Note: make sure you include sums for both the x86_64 and the x86_32
@@ -27,7 +27,7 @@ PLIST_SRC=	PLIST.${DIST_OS}-${EMUL_ARCH}
 PLIST_SUBST+=	JAVA_ARCH="${JAVA_ARCH}"
 
 # Simplify distinfo generation
-.if make(distinfo)
+.if make(distinfo) || make (makesum) || make(mdi)
 DISTFILES=	jdk-8u${UPDATE_NUMBER}-linux-i586.tar.gz
 DISTFILES+=	jdk-8u${UPDATE_NUMBER}-linux-x64.tar.gz
 DISTFILES+=	jdk-8u${UPDATE_NUMBER}-solaris-x64.tar.gz
