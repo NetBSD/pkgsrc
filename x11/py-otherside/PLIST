@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2023/03/14 09:26:14 wiz Exp $
+qt5/qml/io/thp/pyotherside/libpyothersideplugin.so
+qt5/qml/io/thp/pyotherside/pyotherside.qmltypes
+qt5/qml/io/thp/pyotherside/qmldir
+qt5/tests/qtquicktests/qtquicktests
