@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2021/05/12 08:32:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2023/03/14 14:12:49 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -85,6 +85,9 @@ ${PYSITELIB}/mpmath/functions/qfunctions.pyo
 ${PYSITELIB}/mpmath/functions/rszeta.py
 ${PYSITELIB}/mpmath/functions/rszeta.pyc
 ${PYSITELIB}/mpmath/functions/rszeta.pyo
+${PYSITELIB}/mpmath/functions/signals.py
+${PYSITELIB}/mpmath/functions/signals.pyc
+${PYSITELIB}/mpmath/functions/signals.pyo
 ${PYSITELIB}/mpmath/functions/theta.py
 ${PYSITELIB}/mpmath/functions/theta.pyc
 ${PYSITELIB}/mpmath/functions/theta.pyo
