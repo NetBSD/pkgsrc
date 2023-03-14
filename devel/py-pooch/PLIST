@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2022/01/31 17:31:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/03/14 14:10:52 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -25,6 +25,7 @@ ${PYSITELIB}/pooch/tests/__init__.pyc
 ${PYSITELIB}/pooch/tests/data/large-data.txt
 ${PYSITELIB}/pooch/tests/data/registry-custom-url.txt
 ${PYSITELIB}/pooch/tests/data/registry-invalid.txt
+${PYSITELIB}/pooch/tests/data/registry-spaces.txt
 ${PYSITELIB}/pooch/tests/data/registry.txt
 ${PYSITELIB}/pooch/tests/data/registry_comments.txt
 ${PYSITELIB}/pooch/tests/data/store.tar.gz
