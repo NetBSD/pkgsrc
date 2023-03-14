@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1748 2023/03/14 10:44:05 adam Exp $
+$NetBSD: CHANGES-2023,v 1.1749 2023/03/14 12:23:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2253,3 +2253,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/tree-sitter-elixir to 0.1.0 [wiz 2023-03-14]
 	Updated www/py-urllib3 to 1.26.15 [adam 2023-03-14]
 	Updated textproc/py-fastjsonschema to 2.16.3 [adam 2023-03-14]
+	Added security/yubikey-manager-qt version 1.2.5 [wiz 2023-03-14]
