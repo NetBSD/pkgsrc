@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.29 2022/08/22 11:41:31 markd Exp $
+# $NetBSD: Makefile,v 1.30 2023/03/14 19:43:15 markd Exp $
 
 DISTNAME=	collection-fontsextra
 PKGNAME=	texlive-${DISTNAME}-2022pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	63936
+TEXLIVE_REV=	64952
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -100,6 +100,7 @@ DEPENDS+=	tex-comicneue-[0-9]*:../../fonts/tex-comicneue
 DEPENDS+=	tex-concmath-fonts-[0-9]*:../../fonts/tex-concmath-fonts
 # depend concmath-otf
 DEPENDS+=	tex-cookingsymbols-[0-9]*:../../fonts/tex-cookingsymbols
+# depend cooperhewitt
 # depend cormorantgaramond
 DEPENDS+=	tex-countriesofeurope-[0-9]*:../../fonts/tex-countriesofeurope
 DEPENDS+=	tex-courier-scaled-[0-9]*:../../fonts/tex-courier-scaled
@@ -145,6 +146,7 @@ DEPENDS+=	tex-esrelation-[0-9]*:../../fonts/tex-esrelation
 DEPENDS+=	tex-esstix-[0-9]*:../../fonts/tex-esstix
 DEPENDS+=	tex-esvect-[0-9]*:../../fonts/tex-esvect
 # depend etbb
+# depend euler-math
 DEPENDS+=	tex-eulervm-[0-9]*:../../fonts/tex-eulervm
 DEPENDS+=	tex-euxm-[0-9]*:../../fonts/tex-euxm
 DEPENDS+=	tex-fbb-[0-9]*:../../fonts/tex-fbb
@@ -192,6 +194,7 @@ DEPENDS+=	tex-hacm-[0-9]*:../../fonts/tex-hacm
 DEPENDS+=	tex-hands-[0-9]*:../../fonts/tex-hands
 # depend hep-font
 # depend hep-math-font
+# depend heros-otf
 DEPENDS+=	tex-heuristica-[0-9]*:../../fonts/tex-heuristica
 DEPENDS+=	tex-hfbright-[0-9]*:../../fonts/tex-hfbright
 DEPENDS+=	tex-hfoldsty-[0-9]*:../../fonts/tex-hfoldsty
@@ -276,6 +279,7 @@ DEPENDS+=	tex-orkhun-[0-9]*:../../fonts/tex-orkhun
 # depend oswald
 DEPENDS+=	tex-overlock-[0-9]*:../../fonts/tex-overlock
 DEPENDS+=	tex-pacioli-[0-9]*:../../fonts/tex-pacioli
+# depend pagella-otf
 DEPENDS+=	tex-paratype-[0-9]*:../../fonts/tex-paratype
 DEPENDS+=	tex-phaistos-[0-9]*:../../fonts/tex-phaistos
 DEPENDS+=	tex-phonetic-[0-9]*:../../fonts/tex-phonetic
@@ -302,6 +306,7 @@ DEPENDS+=	tex-sansmathaccent-[0-9]*:../../fonts/tex-sansmathaccent
 DEPENDS+=	tex-sansmathfonts-[0-9]*:../../fonts/tex-sansmathfonts
 DEPENDS+=	tex-sauter-[0-9]*:../../fonts/tex-sauter
 DEPENDS+=	tex-sauterfonts-[0-9]*:../../fonts/tex-sauterfonts
+# depend schola-otf
 # depend scholax
 DEPENDS+=	tex-schulschriften-[0-9]*:../../print/tex-schulschriften
 DEPENDS+=	tex-semaphor-[0-9]*:../../fonts/tex-semaphor
@@ -327,6 +332,7 @@ DEPENDS+=	tex-superiors-[0-9]*:../../fonts/tex-superiors
 DEPENDS+=	tex-tapir-[0-9]*:../../fonts/tex-tapir
 # depend tempora
 DEPENDS+=	tex-tengwarscript-[0-9]*:../../fonts/tex-tengwarscript
+# depend termes-otf
 DEPENDS+=	tex-tfrupee-[0-9]*:../../fonts/tex-tfrupee
 # depend theanodidot
 # depend theanomodern
