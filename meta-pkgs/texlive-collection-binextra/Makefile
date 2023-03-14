@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.21 2022/04/10 04:00:45 markd Exp $
+# $NetBSD: Makefile,v 1.22 2023/03/14 19:38:36 markd Exp $
 
 DISTNAME=	collection-binextra
 PKGNAME=	texlive-${DISTNAME}-2020pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	61780
+TEXLIVE_REV=	65204
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -34,6 +34,7 @@ DEPENDS+=	chktex-[0-9]*:../../print/chktex
 DEPENDS+=	tex-cweb-[0-9]*:../../print/tex-cweb
 # depend de-macro
 DEPENDS+=	detex-[0-9]*:../../textproc/detex
+# depend digestif
 # depend dtl
 # depend dtxgen
 DEPENDS+=	dvi2tty-[0-9]*:../../converters/dvi2tty
@@ -92,6 +93,7 @@ DEPENDS+=	seetexk-[0-9]*:../../print/seetexk
 # depend sty2dtx
 # depend synctex
 DEPENDS+=	tex-tex4ebook-[0-9]*:../../print/tex-tex4ebook
+# depend texaccents
 # depend texcount
 # depend texdef
 # depend texdiff
