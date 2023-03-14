@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.891 2023/03/12 20:11:04 leot Exp $
+# $NetBSD: Makefile,v 1.892 2023/03/14 12:22:52 wiz Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -657,6 +657,7 @@ SUBDIR+=	yara
 SUBDIR+=	ykclient
 SUBDIR+=	ykman
 SUBDIR+=	ykpers
+SUBDIR+=	yubikey-manager-qt
 SUBDIR+=	zebedee
 SUBDIR+=	zkt
 SUBDIR+=	zoneminder
