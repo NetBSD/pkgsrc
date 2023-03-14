@@ -1,0 +1,16 @@
+This application provides an easy way to perform the most common
+configuration tasks on a YubiKey.
+
+Features:
+
+* Display the serial number and firmware version of a YubiKey
+* Configure a FIDO2 PIN
+* Reset the FIDO Applications
+* Configure the OTP Application. A YubiKey have two slots (Short
+Touch and Long Touch), which may both be configured for different
+functionality. This tool can configure a Yubico OTP credential,
+a static password, a challenge-response credential or an OATH HOTP
+credential in both of these slots.
+* Manage certificates and PINs for the PIV Application
+* Swap the credentials between two configured slots
+* Enable and disable USB and NFC interfaces
