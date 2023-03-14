@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1745 2023/03/14 08:05:20 adam Exp $
+$NetBSD: CHANGES-2023,v 1.1746 2023/03/14 09:26:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2249,3 +2249,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/openvpn to 2.6.1 [adam 2023-03-14]
 	Updated devel/git to 2.40.0 [adam 2023-03-14]
 	Updated textproc/py-xlsxwriter to 3.0.9 [adam 2023-03-14]
+	Added x11/py-otherside version 1.6.0 [wiz 2023-03-14]
