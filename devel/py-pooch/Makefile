@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2022/01/31 17:31:23 adam Exp $
+# $NetBSD: Makefile,v 1.3 2023/03/14 14:10:52 adam Exp $
 
-DISTNAME=	pooch-1.6.0
+DISTNAME=	pooch-1.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pooch/}
@@ -10,11 +10,11 @@ HOMEPAGE=	https://github.com/fatiando/pooch
 COMMENT=	Manages Python library's sample data files
 LICENSE=	modified-bsd
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
-DEPENDS+=	${PYPKGPREFIX}-appdirs>=1.3.0:../../devel/py-appdirs
-DEPENDS+=	${PYPKGPREFIX}-packaging>=20.0:../../devel/py-packaging
-DEPENDS+=	${PYPKGPREFIX}-requests>=2.19.0:../../devel/py-requests
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+DEPENDS+=	${PYPKGPREFIX}-packaging>=20.0:../../devel/py-packaging
+DEPENDS+=	${PYPKGPREFIX}-platformdirs>=2.5.0:../../misc/py-platformdirs
+DEPENDS+=	${PYPKGPREFIX}-requests>=2.19.0:../../devel/py-requests
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	# none
