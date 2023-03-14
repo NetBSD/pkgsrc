@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.22 2022/09/01 06:17:02 markd Exp $
+# $NetBSD: Makefile,v 1.23 2023/03/14 19:54:52 markd Exp $
 
 DISTNAME=	collection-luatex
 PKGNAME=	texlive-${DISTNAME}-2022pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	64203
+TEXLIVE_REV=	65791
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -16,6 +16,7 @@ DEPENDS+=	texlive-collection-basic-[0-9]*:../../meta-pkgs/texlive-collection-bas
 # depend auto-pst-pdf-lua
 # depend barracuda
 # depend bezierplot
+# depend blopentype
 # depend checkcites
 # depend chickenize
 # depend chinese-jfm
@@ -32,6 +33,7 @@ DEPENDS+=	tex-ctablestack-[0-9]*:../../print/tex-ctablestack
 # depend kanaparser
 # depend ligtype
 # depend linebreaker
+# depend lparse
 # depend lt3luabridge
 # depend lua-typo
 # depend lua-uca
@@ -40,9 +42,12 @@ DEPENDS+=	tex-lua-uni-algos-[0-9]*:../../print/tex-lua-uni-algos
 # depend lua-visual-debug
 # depend lua-widow-control
 # depend luaaddplot
+# depend luacas
 # depend luacensor
 DEPENDS+=	tex-luacode-[0-9]*:../../print/tex-luacode
 DEPENDS+=	tex-luacolor-[0-9]*:../../print/tex-luacolor
+# depend luacomplex
+# depend luagcd
 # depend luahyphenrules
 # depend luaimageembed
 # depend luaindex
@@ -53,17 +58,23 @@ DEPENDS+=	tex-luacolor-[0-9]*:../../print/tex-luacolor
 DEPENDS+=	tex-lualatex-math-[0-9]*:../../math/tex-lualatex-math
 # depend lualatex-truncate
 DEPENDS+=	tex-lualibs-[0-9]*:../../devel/tex-lualibs
+# depend lualinalg
 # depend luamathalign
+# depend luamaths
+# depend luamodulartables
 # depend luamplib
+# depend luaoptions
 DEPENDS+=	tex-luaotfload-[0-9]*:../../fonts/tex-luaotfload
 # depend luapackageloader
 # depend luaprogtable
 # depend luaquotes
+# depend luaset
 # depend luarandom
 DEPENDS+=	tex-luatex85-[0-9]*:../../print/tex-luatex85
 DEPENDS+=	tex-luatexbase-[0-9]*:../../devel/tex-luatexbase
 # depend luatexko
 # depend luatextra
+# depend luatruthtable
 # depend luavlna
 # depend luaxml
 # depend lutabulartools
@@ -79,9 +90,11 @@ DEPENDS+=	tex-luatexbase-[0-9]*:../../devel/tex-luatexbase
 # depend pdfarticle
 # depend pdfextra
 # depend penlight
+# depend piton
 # depend placeat
 # depend plantuml
 # depend pyluatex
+# depend scikgtex
 # depend selnolig
 # depend showhyphenation
 # depend showkerning
@@ -89,6 +102,7 @@ DEPENDS+=	tex-luatexbase-[0-9]*:../../devel/tex-luatexbase
 # depend spelling
 # depend stricttex
 # depend truthtable
+# depend tsvtemplate
 # depend typewriter
 # depend uninormalize
 # depend yamlvars
