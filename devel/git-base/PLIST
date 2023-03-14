@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.39 2022/10/21 17:31:18 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.40 2023/03/14 08:03:35 adam Exp $
 bin/git
 bin/git-cvsserver
 bin/git-receive-pack
@@ -27,14 +27,12 @@ ${PERL5_SUB_INSTALLVENDORLIB}/Git/SVN/Ra.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Git/SVN/Utils.pm
 libexec/git-core/git
 libexec/git-core/git-add
-libexec/git-core/git-add--interactive
 libexec/git-core/git-am
 libexec/git-core/git-annotate
 libexec/git-core/git-apply
 libexec/git-core/git-archimport
 libexec/git-core/git-archive
 libexec/git-core/git-bisect
-libexec/git-core/git-bisect--helper
 libexec/git-core/git-blame
 libexec/git-core/git-branch
 libexec/git-core/git-bugreport
@@ -73,7 +71,6 @@ libexec/git-core/git-diff-index
 libexec/git-core/git-diff-tree
 libexec/git-core/git-difftool
 libexec/git-core/git-difftool--helper
-libexec/git-core/git-env--helper
 libexec/git-core/git-fast-export
 libexec/git-core/git-fast-import
 libexec/git-core/git-fetch
