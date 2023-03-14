@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/03/14 09:26:14 wiz Exp $
+
+BLAKE2s (pyotherside-1.6.0.tar.gz) = da56f007a5c364eed4f2aaa47bb531795b2957760bcdd2f441c3aab0a3a1f664
+SHA512 (pyotherside-1.6.0.tar.gz) = 57835db9d65fae10e6b3ec8ab37793e316324e7a819a1045436adf9eabdee11ccf3090a4db0302283b236e77e5e0bd14cf92ed1430835ccc324e50085a872787
+Size (pyotherside-1.6.0.tar.gz) = 183645 bytes
