@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2020/01/26 17:31:53 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2023/03/14 06:31:38 adam Exp $
 
 .include "../../net/openvpn/Makefile.common"
 
@@ -28,4 +28,5 @@ SPECIAL_PERMS+=	bin/logwtmpx ${SETUID_ROOT_PERMS}
 
 DEPENDS+=	openvpn>=2.4.2:../../net/openvpn
 
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
