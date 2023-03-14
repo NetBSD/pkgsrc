@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2022/09/01 06:13:54 markd Exp $
+# $NetBSD: Makefile,v 1.11 2023/03/14 19:47:16 markd Exp $
 
 DISTNAME=	collection-humanities
 PKGNAME=	texlive-${DISTNAME}-2020pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	64209
+TEXLIVE_REV=	65216
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -24,7 +24,6 @@ DEPENDS+=	texlive-collection-latex-[0-9]*:../../meta-pkgs/texlive-collection-lat
 # depend dvgloss
 # depend ecltree
 # depend edfnotes
-# depend ednotes
 # depend eledform
 # depend eledmac
 # depend expex
