@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.20 2023/01/24 18:36:23 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2023/03/14 11:25:56 fcambus Exp $
 
 .include "../../lang/llvm/version.mk"
 
 DISTNAME=	lld-${LLVM_VERSION}.src
 PKGNAME=	${DISTNAME:S/.src//}
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -19,6 +20,11 @@ CMAKE_ARGS+=	-DCMAKE_C_COMPILER=${CC:Q}
 CMAKE_ARGS+=	-DCMAKE_CXX_COMPILER=${CXX:Q}
 
 PYTHON_FOR_BUILD_ONLY=	yes
+
+INSTALLATION_DIRS+=	libexec/lld
+
+post-install:
+	${LN} -sf ${PREFIX}/bin/lld ${DESTDIR}${PREFIX}/libexec/lld/ld
 
 .include "options.mk"
 .include "../../devel/cmake/build.mk"
