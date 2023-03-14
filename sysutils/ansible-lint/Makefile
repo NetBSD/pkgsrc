@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2023/03/08 12:05:59 adam Exp $
+# $NetBSD: Makefile,v 1.28 2023/03/14 19:47:17 adam Exp $
 
-DISTNAME=	ansible-lint-6.14.1
+DISTNAME=	ansible-lint-6.14.2
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/ansible-lint/}
 
@@ -9,7 +9,7 @@ HOMEPAGE=	https://ansible-lint.readthedocs.io/
 COMMENT=	Checks playbooks for practices and behaviour that could be improved
 LICENSE=	gnu-gpl-v3 AND mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=7.0.0:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=7.0.5:../../devel/py-setuptools_scm
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	ansible-core>=2.12.0:../../sysutils/ansible-core
 DEPENDS+=	${PYPKGPREFIX}-black>=22.8.0:../../textproc/py-black
