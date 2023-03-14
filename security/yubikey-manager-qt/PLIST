@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2023/03/14 12:22:37 wiz Exp $
+bin/ykman-gui

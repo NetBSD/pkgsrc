@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/03/14 12:22:37 wiz Exp $
+
+BLAKE2s (yubikey-manager-qt-1.2.5.tar.gz) = 4fe1d67f5921bc3801292e803c048bf82f272dcd9dac9cb69732d0ef6ed58cce
+SHA512 (yubikey-manager-qt-1.2.5.tar.gz) = e204f393a939bdc8bdec481b1a401c3f99fc364706dc4efc7460286a9bb4e5aa51496a92015a4b328eb948084135e95bb30f3f043ed742293799b6650915d6a7
+Size (yubikey-manager-qt-1.2.5.tar.gz) = 17360184 bytes
