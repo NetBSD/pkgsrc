@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2022/11/06 13:31:01 gdt Exp $
+# $NetBSD: Makefile,v 1.12 2023/03/14 07:12:09 jperkin Exp $
 
 DISTNAME=	numpy-1.16.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -23,7 +23,7 @@ USE_PKG_RESOURCES=	yes
 
 USE_LANGUAGES=		c fortran
 
-.include "../../math/py-numpy/Makefile.make_env"
+.include "../../math/py-numpy/make_env.mk"
 
 REPLACE_PYTHON+=	*.py */*.py */*/*.py */*/*/*.py */*/*/*/*.py
 
