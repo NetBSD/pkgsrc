@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2021/10/05 19:25:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.25 2023/03/14 06:31:38 adam Exp $
 include/openvpn-msg.h
 include/openvpn-plugin.h
 ${PLIST.pam}lib/openvpn/plugins/openvpn-plugin-auth-pam.la
@@ -10,7 +10,6 @@ share/doc/openvpn/COPYING
 share/doc/openvpn/COPYRIGHT.GPL
 share/doc/openvpn/Changes.rst
 share/doc/openvpn/README
-share/doc/openvpn/README.IPv6
 ${PLIST.pam}share/doc/openvpn/README.auth-pam
 share/doc/openvpn/README.down-root
 share/doc/openvpn/README.mbedtls
@@ -28,8 +27,6 @@ share/examples/openvpn/config/openvpn-startup.sh
 share/examples/openvpn/config/server.conf
 share/examples/openvpn/config/tls-home.conf
 share/examples/openvpn/config/tls-office.conf
-share/examples/openvpn/config/xinetd-client-config
-share/examples/openvpn/config/xinetd-server-config
 share/examples/openvpn/keys/README
 share/examples/openvpn/keys/ca.crt
 share/examples/openvpn/keys/ca.key
@@ -50,5 +47,6 @@ share/examples/openvpn/keys/ta.key
 share/examples/openvpn/scripts/auth-pam.pl
 share/examples/openvpn/scripts/bridge-start
 share/examples/openvpn/scripts/bridge-stop
+share/examples/openvpn/scripts/totpauth.py
 share/examples/openvpn/scripts/ucn.pl
 share/examples/openvpn/scripts/verify-cn
