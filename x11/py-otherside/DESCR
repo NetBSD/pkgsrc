@@ -1,0 +1,2 @@
+A Qt plugin providing access to a Python 3 interpreter from QML
+for creating asynchronous mobile and Desktop UIs with Python.
