@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1774 2023/03/15 14:23:07 taca Exp $
+$NetBSD: CHANGES-2023,v 1.1775 2023/03/15 14:25:11 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2310,3 +2310,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated databases/ruby-moneta to 1.6.0 [taca 2023-03-15]
 	Updated devel/ruby-async to 2.4.2 [taca 2023-03-15]
 	Updated devel/ruby-git to 1.17.2 [taca 2023-03-15]
+	Updated devel/ruby-io-event to 1.1.7 [taca 2023-03-15]
