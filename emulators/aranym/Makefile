@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2022/09/11 12:51:30 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2023/03/15 02:20:48 charlotte Exp $
 
 DISTNAME=	aranym_1.1.0.orig
 PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
@@ -60,6 +60,7 @@ post-install:
 	${INSTALL_DATA} ${EMUTOS_WRKSRC}/doc/license.txt ${DESTDIR}${EMUTOS_DOC_DIR}
 	${INSTALL_DATA} ${EMUTOS_WRKSRC}/doc/status.txt ${DESTDIR}${EMUTOS_DOC_DIR}
 
+.include "options.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} != "Darwin"
