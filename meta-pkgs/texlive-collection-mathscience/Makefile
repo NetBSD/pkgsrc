@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.21 2022/08/22 11:35:02 markd Exp $
+# $NetBSD: Makefile,v 1.22 2023/03/15 05:41:02 markd Exp $
 
 DISTNAME=	collection-mathscience
 PKGNAME=	texlive-${DISTNAME}-2022pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	63667
+TEXLIVE_REV=	65753
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -57,6 +57,7 @@ DEPENDS+=	tex-chemarrow-[0-9]*:../../print/tex-chemarrow
 DEPENDS+=	tex-chemgreek-[0-9]*:../../print/tex-chemgreek
 # depend chemmacros
 # depend chemnum
+# depend chemobabel
 # depend chemplants
 # depend chemschemex
 # depend chemsec
@@ -74,6 +75,7 @@ DEPENDS+=	tex-concrete-[0-9]*:../../fonts/tex-concrete
 # depend correctmathalign
 # depend cryptocode
 # depend csassignments
+# depend cvss
 # depend decision-table
 # depend delim
 # depend delimseasy
@@ -92,6 +94,7 @@ DEPENDS+=	tex-ebproof-[0-9]*:../../print/tex-ebproof
 # depend emf
 # depend endiagram
 # depend engtlc
+# depend eolang
 # depend eqexpl
 # depend eqnarray
 # depend eqnnumwarn
@@ -101,6 +104,7 @@ DEPENDS+=	tex-ebproof-[0-9]*:../../print/tex-ebproof
 # depend faktor
 # depend fascicules
 # depend fixdif
+# depend fixmath
 # depend fnspe
 # depend formal-grammar
 # depend fouridx
@@ -115,10 +119,12 @@ DEPENDS+=	tex-ebproof-[0-9]*:../../print/tex-ebproof
 # depend gu
 # depend helmholtz-ellis-ji-notation
 # depend hep
+# depend hep-reference
 # depend hepnames
 # depend hepparticles
 # depend hepthesis
 # depend hepunits
+# depend ibrackets
 # depend includernw
 # depend interval
 # depend ionumbers
@@ -131,7 +137,6 @@ DEPENDS+=	tex-ebproof-[0-9]*:../../print/tex-ebproof
 # depend kvmap
 # depend letterswitharrows
 # depend lie-hasse
-# depend linenoamsmath
 # depend logicproof
 # depend longdivision
 # depend lpform
@@ -157,6 +162,8 @@ DEPENDS+=	tex-mhchem-[0-9]*:../../print/tex-mhchem
 # depend miller
 # depend mismath
 # depend multiobjective
+# depend naive-ebnf
+# depend namedtensor
 # depend natded
 # depend nath
 # depend nchairx
@@ -170,11 +177,13 @@ DEPENDS+=	tex-mhchem-[0-9]*:../../print/tex-mhchem
 # depend oplotsymbl
 # depend ot-tableau
 DEPENDS+=	tex-oubraces-[0-9]*:../../print/tex-oubraces
+# depend overarrows
 # depend pascaltriangle
 # depend perfectcut
 # depend pfdicons
 # depend physconst
 DEPENDS+=	tex-physics-[0-9]*:../../math/tex-physics
+# depend physics2
 # depend physunits
 # depend pinoutikz
 # depend pm-isomath
@@ -191,6 +200,7 @@ DEPENDS+=	tex-physics-[0-9]*:../../math/tex-physics
 # depend rank-2-roots
 # depend rbt-mathnotes
 # depend rec-thy
+# depend resolsysteme
 # depend rest-api
 # depend revquantum
 # depend ribbonproofs
