@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2022/04/18 05:53:31 markd Exp $
+# $NetBSD: Makefile,v 1.16 2023/03/15 06:04:47 markd Exp $
 
 DISTNAME=	collection-langeuropean
 PKGNAME=	texlive-${DISTNAME}-2022pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	61419
+TEXLIVE_REV=	66452
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -28,6 +28,7 @@ DEPENDS+=	tex-babel-irish-[0-9]*:../../print/tex-babel-irish
 DEPENDS+=	tex-babel-kurmanji-[0-9]*:../../print/tex-babel-kurmanji
 DEPENDS+=	tex-babel-latin-[0-9]*:../../print/tex-babel-latin
 DEPENDS+=	tex-babel-latvian-[0-9]*:../../print/tex-babel-latvian
+# depend babel-lithuanian
 # depend babel-macedonian
 DEPENDS+=	tex-babel-norsk-[0-9]*:../../print/tex-babel-norsk
 # depend babel-occitan
@@ -43,6 +44,7 @@ DEPENDS+=	tex-babel-welsh-[0-9]*:../../print/tex-babel-welsh
 # depend finbib
 # gloss-occitan is documentation only
 # depend hrlatex
+# depend huaz
 # depend hulipsum
 DEPENDS+=	tex-hyphen-croatian-[0-9]*:../../print/tex-hyphen-croatian
 DEPENDS+=	tex-hyphen-danish-[0-9]*:../../print/tex-hyphen-danish
