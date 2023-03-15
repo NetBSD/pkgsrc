@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1756 2023/03/15 10:07:53 pin Exp $
+$NetBSD: CHANGES-2023,v 1.1757 2023/03/15 12:36:49 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2264,3 +2264,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/dust to 0.8.5 [pin 2023-03-15]
 	Updated shells/nushell to 0.77.0 [pin 2023-03-15]
 	Added sysutils/erdtree version 1.5.2 [pin 2023-03-15]
+	Updated geography/qgis to 3.28.4 [gdt 2023-03-15]
