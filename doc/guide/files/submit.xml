@@ -1,4 +1,4 @@
-<!-- $NetBSD: submit.xml,v 1.38 2022/02/11 08:02:05 nia Exp $ -->
+<!-- $NetBSD: submit.xml,v 1.39 2023/03/15 16:01:38 schmonz Exp $ -->
 
 <chapter id="submit"> <?dbhtml filename="submit.html"?>
 <title>Submitting and Committing</title>
@@ -148,7 +148,7 @@ you can check by running <quote>cvs status</quote>. An example:</para>
 &uprompt; cvs status | less
 &uprompt; cvs commit
 &uprompt; cd ..
-&uprompt; vi Makefile # add SUBDIRS+=pkgname line
+&uprompt; vi Makefile # add SUBDIR+=pkgname line
 &uprompt; cvs commit Makefile
 &uprompt; cd pkgname
 &uprompt; make CTYPE=Added commit-changes-entry
