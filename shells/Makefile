@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2023/01/18 17:55:15 schmonz Exp $
+# $NetBSD: Makefile,v 1.73 2023/03/15 16:47:57 schmonz Exp $
 #
 
 COMMENT=	Shells
@@ -26,6 +26,7 @@ SUBDIR+=	lshell
 SUBDIR+=	mksh
 SUBDIR+=	nologinmsg
 SUBDIR+=	nushell
+SUBDIR+=	oh-my-posh
 SUBDIR+=	oksh
 SUBDIR+=	pbosh
 SUBDIR+=	pdksh
