@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1038 2023/03/02 23:14:10 wiz Exp $
+# $NetBSD: Makefile,v 1.1039 2023/03/15 10:07:27 pin Exp $
 #
 
 COMMENT=	System utilities
@@ -204,6 +204,7 @@ SUBDIR+=	edbus
 SUBDIR+=	efreet
 SUBDIR+=	eggdbus
 SUBDIR+=	entr
+SUBDIR+=	erdtree
 SUBDIR+=	erlang-goldrush
 SUBDIR+=	erlang-lager
 SUBDIR+=	estd
