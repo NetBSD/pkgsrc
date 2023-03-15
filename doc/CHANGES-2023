@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1753 2023/03/14 19:50:13 jperkin Exp $
+$NetBSD: CHANGES-2023,v 1.1754 2023/03/15 10:03:13 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2261,3 +2261,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/haproxy to 2.7.4 [adam 2023-03-14]
 	Updated sysutils/ansible-lint to 6.14.2 [adam 2023-03-14]
 	Updated sysutils/node_exporter to 1.5.0 [jperkin 2023-03-14]
+	Updated sysutils/dust to 0.8.5 [pin 2023-03-15]
