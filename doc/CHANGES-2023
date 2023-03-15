@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1762 2023/03/15 13:31:33 adam Exp $
+$NetBSD: CHANGES-2023,v 1.1763 2023/03/15 13:33:18 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2274,3 +2274,16 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/snappy to 1.1.10 [adam 2023-03-15]
 	Updated devel/cmake to 3.26.0 [adam 2023-03-15]
 	Updated devel/cmake-gui to 3.26.0 [adam 2023-03-15]
+	Updated devel/ruby-activesupport61 to 6.1.7.3 [taca 2023-03-15]
+	Updated devel/ruby-activemodel61 to 6.1.7.3 [taca 2023-03-15]
+	Updated devel/ruby-activejob61 to 6.1.7.3 [taca 2023-03-15]
+	Updated www/ruby-actionview61 to 6.1.7.3 [taca 2023-03-15]
+	Updated www/ruby-actionpack61 to 6.1.7.3 [taca 2023-03-15]
+	Updated databases/ruby-activerecord61 to 6.1.7.3 [taca 2023-03-15]
+	Updated devel/ruby-activestorage61 to 6.1.7.3 [taca 2023-03-15]
+	Updated mail/ruby-actionmailer61 to 6.1.7.3 [taca 2023-03-15]
+	Updated mail/ruby-actionmailbox61 to 6.1.7.3 [taca 2023-03-15]
+	Updated www/ruby-actioncable61 to 6.1.7.3 [taca 2023-03-15]
+	Updated devel/ruby-railties61 to 6.1.7.3 [taca 2023-03-15]
+	Updated textproc/ruby-actiontext61 to 6.1.7.3 [taca 2023-03-15]
+	Updated www/ruby-rails61 to 6.1.7.3 [taca 2023-03-15]
