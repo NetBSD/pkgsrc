@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.60 2023/03/13 13:56:08 schmonz Exp $
+# $NetBSD: Makefile,v 1.61 2023/03/15 14:07:39 schmonz Exp $
 
-DISTNAME=	approvaltests-8.2.1
+DISTNAME=	approvaltests-8.2.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/approvaltests/}
@@ -11,7 +11,7 @@ COMMENT=	Assertion/verification library to aid testing
 LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-allpairspy>=2.1.0:../../devel/py-allpairspy
-DEPENDS+=	${PYPKGPREFIX}-approval-utilities>=8.2.1:../../devel/py-approval-utilities
+DEPENDS+=	${PYPKGPREFIX}-approval-utilities>=8.2.4:../../devel/py-approval-utilities
 DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4>=4.4.0:../../www/py-beautifulsoup4
 DEPENDS+=	${PYPKGPREFIX}-empty-files>=0.0.3:../../devel/py-empty-files
 # mrjob >= 0.7.4 (prod.extras)

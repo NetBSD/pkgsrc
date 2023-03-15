@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2023/03/13 13:56:08 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.31 2023/03/15 14:07:39 schmonz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -197,3 +197,6 @@ ${PYSITELIB}/approvaltests/verifiable_objects/__init__.pyo
 ${PYSITELIB}/approvaltests/verifiable_objects/formatter_of_argparse_namespace.py
 ${PYSITELIB}/approvaltests/verifiable_objects/formatter_of_argparse_namespace.pyc
 ${PYSITELIB}/approvaltests/verifiable_objects/formatter_of_argparse_namespace.pyo
+${PYSITELIB}/approvaltests/version.py
+${PYSITELIB}/approvaltests/version.pyc
+${PYSITELIB}/approvaltests/version.pyo
