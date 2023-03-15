@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1778 2023/03/15 14:38:21 pin Exp $
+$NetBSD: CHANGES-2023,v 1.1779 2023/03/15 14:38:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2314,3 +2314,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/ruby-octokit to 6.1.0 [taca 2023-03-15]
 	Updated devel/ruby-rspec-mocks to 3.12.4 [taca 2023-03-15]
 	Updated benchmarks/hyperfine to 1.16.0 [pin 2023-03-15]
+	Updated devel/libcbor to 0.10.2 [adam 2023-03-15]
+	Updated security/libfido2 to 1.13.0 [adam 2023-03-15]
