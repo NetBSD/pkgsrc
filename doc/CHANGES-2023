@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1757 2023/03/15 12:36:49 gdt Exp $
+$NetBSD: CHANGES-2023,v 1.1758 2023/03/15 13:01:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2265,3 +2265,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated shells/nushell to 0.77.0 [pin 2023-03-15]
 	Added sysutils/erdtree version 1.5.2 [pin 2023-03-15]
 	Updated geography/qgis to 3.28.4 [gdt 2023-03-15]
+	Updated devel/py-pathspec to 0.11.1 [adam 2023-03-15]
+	Updated converters/py-simplejson to 3.18.4 [adam 2023-03-15]
