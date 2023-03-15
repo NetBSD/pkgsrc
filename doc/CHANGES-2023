@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1768 2023/03/15 13:54:21 taca Exp $
+$NetBSD: CHANGES-2023,v 1.1769 2023/03/15 13:55:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2304,3 +2304,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/ruby-redmine42 to 4.2.10 [taca 2023-03-15]
 	Updated devel/ruby-redmine50 to 5.0.5 [taca 2023-03-15]
 	Updated devel/php-igbinary to 3.2.14 [taca 2023-03-15]
+	Updated security/php-pecl-mcrypt to 1.0.6 [taca 2023-03-15]
