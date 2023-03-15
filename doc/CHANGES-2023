@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1763 2023/03/15 13:33:18 taca Exp $
+$NetBSD: CHANGES-2023,v 1.1764 2023/03/15 13:36:41 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2287,3 +2287,16 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/ruby-railties61 to 6.1.7.3 [taca 2023-03-15]
 	Updated textproc/ruby-actiontext61 to 6.1.7.3 [taca 2023-03-15]
 	Updated www/ruby-rails61 to 6.1.7.3 [taca 2023-03-15]
+	Updated devel/ruby-activesupport70 to 7.0.4.3 [taca 2023-03-15]
+	Updated devel/ruby-activemodel70 to 7.0.4.3 [taca 2023-03-15]
+	Updated devel/ruby-activejob70 to 7.0.4.3 [taca 2023-03-15]
+	Updated www/ruby-actionview70 to 7.0.4.3 [taca 2023-03-15]
+	Updated www/ruby-actionpack70 to 7.0.4.3 [taca 2023-03-15]
+	Updated databases/ruby-activerecord70 to 7.0.4.3 [taca 2023-03-15]
+	Updated devel/ruby-activestorage70 to 7.0.4.3 [taca 2023-03-15]
+	Updated mail/ruby-actionmailer70 to 7.0.4.3 [taca 2023-03-15]
+	Updated mail/ruby-actionmailbox70 to 7.0.4.3 [taca 2023-03-15]
+	Updated www/ruby-actioncable70 to 7.0.4.3 [taca 2023-03-15]
+	Updated devel/ruby-railties70 to 7.0.4.3 [taca 2023-03-15]
+	Updated textproc/ruby-actiontext70 to 7.0.4.3 [taca 2023-03-15]
+	Updated www/ruby-rails70 to 7.0.4.3 [taca 2023-03-15]
