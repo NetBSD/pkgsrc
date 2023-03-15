@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1770 2023/03/15 14:07:35 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.1771 2023/03/15 14:07:44 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2306,3 +2306,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/php-igbinary to 3.2.14 [taca 2023-03-15]
 	Updated security/php-pecl-mcrypt to 1.0.6 [taca 2023-03-15]
 	Updated devel/py-approval-utilities to 8.2.4 [schmonz 2023-03-15]
+	Updated devel/py-approvaltests to 8.2.4 [schmonz 2023-03-15]
