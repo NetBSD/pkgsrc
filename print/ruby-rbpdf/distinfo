@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:12:17 nia Exp $
+$NetBSD: distinfo,v 1.4 2023/03/15 13:44:01 taca Exp $
 
-BLAKE2s (rbpdf-1.20.1.gem) = 3e54e7edb3e8e8e2b01410dfb19cd996a9a267deb5cef766df7442ee209c54db
-SHA512 (rbpdf-1.20.1.gem) = 1f26a61ffacb9b7048972abfc07687b9dcd7787ebd78a0a98dd2493912873c818a488390fb354b595c736f9314d984a8f380c8f82a372837143ed4ee1ab02b8f
-Size (rbpdf-1.20.1.gem) = 211968 bytes
+BLAKE2s (rbpdf-1.21.0.gem) = 2a4f3328fef5c7cf6441f78dc5d1a1bf28bd30a55d2947f6b7baa5ecf695671d
+SHA512 (rbpdf-1.21.0.gem) = a34eb13f116ba2b11bb76160fe0eff1c2368b19dcd3386fc26f2978217a804291b6be276c4759697caa3f4f0287a0bf8474c7a686d58a1587024a9be30ecd15f
+Size (rbpdf-1.21.0.gem) = 212480 bytes
