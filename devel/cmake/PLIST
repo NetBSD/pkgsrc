@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.73 2022/11/22 19:14:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.74 2023/03/15 13:30:35 adam Exp $
 bin/ccmake
 bin/cmake
 bin/cpack
@@ -12,8 +12,10 @@ share/cmake-${CMAKE_API}/Help/command/FIND_XXX.txt
 share/cmake-${CMAKE_API}/Help/command/FIND_XXX_ORDER.txt
 share/cmake-${CMAKE_API}/Help/command/FIND_XXX_REGISTRY_VIEW.txt
 share/cmake-${CMAKE_API}/Help/command/FIND_XXX_ROOT.txt
+share/cmake-${CMAKE_API}/Help/command/GENEX_NOTE.txt
 share/cmake-${CMAKE_API}/Help/command/LINK_OPTIONS_LINKER.txt
 share/cmake-${CMAKE_API}/Help/command/OPTIONS_SHELL.txt
+share/cmake-${CMAKE_API}/Help/command/SUPPORTED_LANGUAGES.txt
 share/cmake-${CMAKE_API}/Help/command/add_compile_definitions.rst
 share/cmake-${CMAKE_API}/Help/command/add_compile_options.rst
 share/cmake-${CMAKE_API}/Help/command/add_custom_command.rst
@@ -182,6 +184,7 @@ share/cmake-${CMAKE_API}/Help/envvar/CMAKE_PREFIX_PATH.rst
 share/cmake-${CMAKE_API}/Help/envvar/CMAKE_TOOLCHAIN_FILE.rst
 share/cmake-${CMAKE_API}/Help/envvar/CSFLAGS.rst
 share/cmake-${CMAKE_API}/Help/envvar/CTEST_INTERACTIVE_DEBUG_MODE.rst
+share/cmake-${CMAKE_API}/Help/envvar/CTEST_NO_TESTS_ACTION.rst
 share/cmake-${CMAKE_API}/Help/envvar/CTEST_OUTPUT_ON_FAILURE.rst
 share/cmake-${CMAKE_API}/Help/envvar/CTEST_PARALLEL_LEVEL.rst
 share/cmake-${CMAKE_API}/Help/envvar/CTEST_PROGRESS_OUTPUT.rst
@@ -255,6 +258,7 @@ share/cmake-${CMAKE_API}/Help/manual/ccmake.1.rst
 share/cmake-${CMAKE_API}/Help/manual/cmake-buildsystem.7.rst
 share/cmake-${CMAKE_API}/Help/manual/cmake-commands.7.rst
 share/cmake-${CMAKE_API}/Help/manual/cmake-compile-features.7.rst
+share/cmake-${CMAKE_API}/Help/manual/cmake-configure-log.7.rst
 share/cmake-${CMAKE_API}/Help/manual/cmake-developer.7.rst
 share/cmake-${CMAKE_API}/Help/manual/cmake-env-variables.7.rst
 share/cmake-${CMAKE_API}/Help/manual/cmake-file-api.7.rst
@@ -689,6 +693,7 @@ share/cmake-${CMAKE_API}/Help/policy/CMP0139.rst
 share/cmake-${CMAKE_API}/Help/policy/CMP0140.rst
 share/cmake-${CMAKE_API}/Help/policy/CMP0141.rst
 share/cmake-${CMAKE_API}/Help/policy/CMP0142.rst
+share/cmake-${CMAKE_API}/Help/policy/CMP0143.rst
 share/cmake-${CMAKE_API}/Help/policy/DEPRECATED.txt
 share/cmake-${CMAKE_API}/Help/policy/DISALLOWED_COMMAND.txt
 share/cmake-${CMAKE_API}/Help/prop_cache/ADVANCED.rst
@@ -787,6 +792,7 @@ share/cmake-${CMAKE_API}/Help/prop_sf/COMPILE_DEFINITIONS.rst
 share/cmake-${CMAKE_API}/Help/prop_sf/COMPILE_DEFINITIONS_CONFIG.rst
 share/cmake-${CMAKE_API}/Help/prop_sf/COMPILE_FLAGS.rst
 share/cmake-${CMAKE_API}/Help/prop_sf/COMPILE_OPTIONS.rst
+share/cmake-${CMAKE_API}/Help/prop_sf/CXX_SCAN_FOR_MODULES.rst
 share/cmake-${CMAKE_API}/Help/prop_sf/EXTERNAL_OBJECT.rst
 share/cmake-${CMAKE_API}/Help/prop_sf/Fortran_FORMAT.rst
 share/cmake-${CMAKE_API}/Help/prop_sf/Fortran_PREPROCESS.rst
@@ -947,6 +953,7 @@ share/cmake-${CMAKE_API}/Help/prop_tgt/CXX_MODULE_HEADER_UNIT_SET_NAME.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/CXX_MODULE_SET.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/CXX_MODULE_SETS.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/CXX_MODULE_SET_NAME.rst
+share/cmake-${CMAKE_API}/Help/prop_tgt/CXX_SCAN_FOR_MODULES.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/CXX_STANDARD.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/CXX_STANDARD_REQUIRED.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/C_EXTENSIONS.rst
@@ -1057,6 +1064,7 @@ share/cmake-${CMAKE_API}/Help/prop_tgt/JOB_POOL_LINK.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/JOB_POOL_PRECOMPILE_HEADER.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/LABELS.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/LANG_CLANG_TIDY.rst
+share/cmake-${CMAKE_API}/Help/prop_tgt/LANG_CLANG_TIDY_EXPORT_FIXES_DIR.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/LANG_COMPILER_LAUNCHER.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/LANG_CPPCHECK.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/LANG_CPPLINT.rst
@@ -1268,6 +1276,7 @@ share/cmake-${CMAKE_API}/Help/release/3.22.rst
 share/cmake-${CMAKE_API}/Help/release/3.23.rst
 share/cmake-${CMAKE_API}/Help/release/3.24.rst
 share/cmake-${CMAKE_API}/Help/release/3.25.rst
+share/cmake-${CMAKE_API}/Help/release/3.26.rst
 share/cmake-${CMAKE_API}/Help/release/3.3.rst
 share/cmake-${CMAKE_API}/Help/release/3.4.rst
 share/cmake-${CMAKE_API}/Help/release/3.5.rst
@@ -1393,6 +1402,7 @@ share/cmake-${CMAKE_API}/Help/variable/CMAKE_CURRENT_LIST_LINE.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_CURRENT_SOURCE_DIR.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_CXX_COMPILE_FEATURES.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_CXX_EXTENSIONS.rst
+share/cmake-${CMAKE_API}/Help/variable/CMAKE_CXX_SCAN_FOR_MODULES.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_CXX_STANDARD.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_CXX_STANDARD_REQUIRED.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_C_COMPILE_FEATURES.rst
@@ -1536,6 +1546,7 @@ share/cmake-${CMAKE_API}/Help/variable/CMAKE_LANG_ARCHIVE_CREATE.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_LANG_ARCHIVE_FINISH.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_LANG_BYTE_ORDER.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_LANG_CLANG_TIDY.rst
+share/cmake-${CMAKE_API}/Help/variable/CMAKE_LANG_CLANG_TIDY_EXPORT_FIXES_DIR.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_LANG_COMPILER.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_LANG_COMPILER_ABI.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_LANG_COMPILER_AR.rst
@@ -1789,6 +1800,8 @@ share/cmake-${CMAKE_API}/Help/variable/CMAKE_VS_SDK_SOURCE_DIRECTORIES.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_VS_TARGET_FRAMEWORK_IDENTIFIER.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_VS_TARGET_FRAMEWORK_TARGETS_VERSION.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_VS_TARGET_FRAMEWORK_VERSION.rst
+share/cmake-${CMAKE_API}/Help/variable/CMAKE_VS_VERSION_BUILD_NUMBER.rst
+share/cmake-${CMAKE_API}/Help/variable/CMAKE_VS_VERSION_BUILD_NUMBER_COMPONENTS.txt
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_VS_WINDOWS_TARGET_PLATFORM_VERSION.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_VS_WINDOWS_TARGET_PLATFORM_VERSION_MAXIMUM.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_VS_WINRT_BY_DEFAULT.rst
@@ -1984,6 +1997,7 @@ share/cmake-${CMAKE_API}/Modules/CMake.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeASM-ATTInformation.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeASMCompiler.cmake.in
 share/cmake-${CMAKE_API}/Modules/CMakeASMInformation.cmake
+share/cmake-${CMAKE_API}/Modules/CMakeASM_MARMASMInformation.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeASM_MASMInformation.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeASM_NASMInformation.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeAddFortranSubdirectory.cmake
@@ -2017,6 +2031,7 @@ share/cmake-${CMAKE_API}/Modules/CMakeConfigurableFile.in
 share/cmake-${CMAKE_API}/Modules/CMakeDependentOption.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeDetermineASM-ATTCompiler.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeDetermineASMCompiler.cmake
+share/cmake-${CMAKE_API}/Modules/CMakeDetermineASM_MARMASMCompiler.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeDetermineASM_MASMCompiler.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeDetermineASM_NASMCompiler.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeDetermineCCompiler.cmake
@@ -2104,6 +2119,7 @@ share/cmake-${CMAKE_API}/Modules/CMakeSystemSpecificInformation.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeSystemSpecificInitialize.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeTestASM-ATTCompiler.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeTestASMCompiler.cmake
+share/cmake-${CMAKE_API}/Modules/CMakeTestASM_MARMASMCompiler.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeTestASM_MASMCompiler.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeTestASM_NASMCompiler.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeTestCCompiler.cmake
@@ -3018,6 +3034,10 @@ share/cmake-${CMAKE_API}/Modules/Platform/Windows-Watcom-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Windows-df.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Windows-windres.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Windows.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/Windows3x-OpenWatcom-C.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/Windows3x-OpenWatcom-CXX.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/Windows3x-OpenWatcom.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/Windows3x.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/WindowsCE-MSVC-C.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/WindowsCE-MSVC-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/WindowsCE.cmake
@@ -3111,6 +3131,7 @@ share/cmake-${CMAKE_API}/Templates/MSBuild/FlagTables/v10_Cuda.json
 share/cmake-${CMAKE_API}/Templates/MSBuild/FlagTables/v10_CudaHost.json
 share/cmake-${CMAKE_API}/Templates/MSBuild/FlagTables/v10_LIB.json
 share/cmake-${CMAKE_API}/Templates/MSBuild/FlagTables/v10_Link.json
+share/cmake-${CMAKE_API}/Templates/MSBuild/FlagTables/v10_MARMASM.json
 share/cmake-${CMAKE_API}/Templates/MSBuild/FlagTables/v10_MASM.json
 share/cmake-${CMAKE_API}/Templates/MSBuild/FlagTables/v10_NASM.json
 share/cmake-${CMAKE_API}/Templates/MSBuild/FlagTables/v10_RC.json
