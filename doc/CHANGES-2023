@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1781 2023/03/15 18:20:57 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.1782 2023/03/15 20:21:12 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2318,3 +2318,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/libfido2 to 1.13.0 [adam 2023-03-15]
 	Added shells/oh-my-posh version 14.14.1 [schmonz 2023-03-15]
 	Updated security/go-mkcert to 1.4.4 [schmonz 2023-03-15]
+	Added misc/exercism version 3.1.0 [schmonz 2023-03-15]
