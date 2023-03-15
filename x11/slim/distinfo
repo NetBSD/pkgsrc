@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 11:34:28 nia Exp $
+$NetBSD: distinfo,v 1.10 2023/03/15 13:39:16 abs Exp $
 
 BLAKE2s (slim-1.3.6.tar.gz) = 45b562196e1253a1a341b821c866f4d0db9c747c73fda215cac52097af77ed2c
 SHA512 (slim-1.3.6.tar.gz) = 345b1dee5d6f0c3716dfa7c5c16274adbf18586bdaaa6af4f310e24c5a61f79a297ffac921a5ba545523317e9fe120916df226c36b9c9b49c2ac9c1ca21dee0c
 Size (slim-1.3.6.tar.gz) = 232547 bytes
 SHA1 (patch-CMakeLists.txt) = 8eaeba1bb48bcdb825a3809feefb62b7182fde42
 SHA1 (patch-panel.cpp) = 51f87c90214cbc55fd5628f7d852d6287d763903
-SHA1 (patch-slim.conf) = ff838df99c53512524863631e3dda77542b01dbf
+SHA1 (patch-slim.conf) = 3bc88e703e002801e757c27c778b0e79f0cb0ad6
