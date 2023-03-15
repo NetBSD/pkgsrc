@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1773 2023/03/15 14:19:56 taca Exp $
+$NetBSD: CHANGES-2023,v 1.1774 2023/03/15 14:23:07 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2309,3 +2309,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-approvaltests to 8.2.4 [schmonz 2023-03-15]
 	Updated databases/ruby-moneta to 1.6.0 [taca 2023-03-15]
 	Updated devel/ruby-async to 2.4.2 [taca 2023-03-15]
+	Updated devel/ruby-git to 1.17.2 [taca 2023-03-15]
