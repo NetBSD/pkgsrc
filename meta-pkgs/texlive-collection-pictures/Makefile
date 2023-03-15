@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.34 2022/09/01 06:18:44 markd Exp $
+# $NetBSD: Makefile,v 1.35 2023/03/15 05:48:43 markd Exp $
 
 DISTNAME=	collection-pictures
 PKGNAME=	texlive-${DISTNAME}-2022pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	64199
+TEXLIVE_REV=	66377
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -108,13 +108,14 @@ DEPENDS+=	tex-here-[0-9]*:../../print/tex-here
 # depend nl-interval
 # depend nndraw
 # depend numericplots
+# depend outilsgeomtikz
 DEPENDS+=	tex-pb-diagram-[0-9]*:../../print/tex-pb-diagram
 # depend penrose
 # depend petri-nets
 DEPENDS+=	tex-pgf-[0-9]*:../../print/tex-pgf
 # depend pgf-blur
-# depend pgf-cmykshadings
 # depend pgf-interference
+# depend pgf-periodictable
 # depend pgf-pie
 # depend pgf-soroban
 # depend pgf-spectra
@@ -133,6 +134,7 @@ DEPENDS+=	tex-pictex-[0-9]*:../../graphics/tex-pictex
 # depend pictex2
 # depend pinlabel
 # depend pixelart
+# depend pixelarttikz
 # depend pmgraph
 # depend postage
 # depend prerex
@@ -151,6 +153,7 @@ DEPENDS+=	tex-qrcode-[0-9]*:../../graphics/tex-qrcode
 # depend robotarm
 # depend rviewport
 # depend sa-tikz
+# depend sacsymb
 # depend schemabloc
 # depend scratch
 # depend scratch3
@@ -186,6 +189,7 @@ DEPENDS+=	tex-tikz-cd-[0-9]*:../../graphics/tex-tikz-cd
 # depend tikz-ladder
 # depend tikz-lake-fig
 # depend tikz-layers
+# depend tikz-mirror-lens
 # depend tikz-nef
 # depend tikz-network
 # depend tikz-opm
@@ -218,6 +222,7 @@ DEPENDS+=	tex-tikzposter-[0-9]*:../../graphics/tex-tikzposter
 DEPENDS+=	tex-tikzscale-[0-9]*:../../graphics/tex-tikzscale
 DEPENDS+=	tex-tikzsymbols-[0-9]*:../../graphics/tex-tikzsymbols
 # depend tikztosvg
+# depend tikzviolinplots
 # depend tile-graphic
 # depend tipfr
 DEPENDS+=	tex-tkz-base-[0-9]*:../../graphics/tex-tkz-base
@@ -238,6 +243,7 @@ DEPENDS+=	tex-tufte-latex-[0-9]*:../../print/tex-tufte-latex
 # depend utfsym
 DEPENDS+=	tex-venndiagram-[0-9]*:../../graphics/tex-venndiagram
 # depend visualpstricks
+# depend wheelchart
 # depend worldflags
 # depend xistercian
 # depend xpicture
