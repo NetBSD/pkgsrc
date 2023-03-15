@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2023/01/03 17:37:29 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2023/03/15 13:44:14 wiz Exp $
 
 DISTNAME=	Willow-1.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,11 +12,11 @@ COMMENT=	Wrapper library for Pillow, OpenCV and Wand
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-wand-[0-9]*:../../graphics/py-wand
+DEPENDS+=	${PYPKGPREFIX}-Willow-[0-9]*:../../graphics/py-Pillow
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock>=3.0.0:../../devel/py-mock
 
-PYTHON_VERSIONED_DEPENDENCIES=	Pillow
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../graphics/opencv/buildlink3.mk"
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
