@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2023/03/05 13:37:33 taca Exp $
+# $NetBSD: Makefile,v 1.5 2023/03/15 14:22:43 taca Exp $
 
-DISTNAME=	git-1.16.0
+DISTNAME=	git-1.17.2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
