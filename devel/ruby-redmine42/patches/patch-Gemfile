@@ -1,8 +1,8 @@
-$NetBSD: patch-Gemfile,v 1.9 2023/01/15 15:09:32 taca Exp $
+$NetBSD: patch-Gemfile,v 1.10 2023/03/15 13:45:00 taca Exp $
 
 Relax dependency.
 
---- Gemfile.orig	2022-12-01 15:40:06.000000000 +0000
+--- Gemfile.orig	2023-03-05 21:35:15.000000000 +0000
 +++ Gemfile
 @@ -3,25 +3,25 @@ source 'https://rubygems.org'
  ruby '>= 2.4.0', '< 2.8.0'
@@ -28,12 +28,12 @@ Relax dependency.
                   elsif Gem.ruby_version < Gem::Version.new('2.6.0')
                     '~> 1.12.5'
                   else
--                   '~> 1.13.6'
+-                   '~> 1.13.10'
 +                   '~> 1.13'
                   end)
 -gem 'i18n', '~> 1.8.2'
 +gem 'i18n', '~> 1.8'
- gem "rbpdf", "~> 1.20.0"
+ gem 'rbpdf', '~> 1.21.0'
  gem 'addressable'
  gem 'rubyzip', '~> 2.3.0'
 @@ -47,7 +47,7 @@ end
