@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1779 2023/03/15 14:38:54 adam Exp $
+$NetBSD: CHANGES-2023,v 1.1780 2023/03/15 16:48:03 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2316,3 +2316,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated benchmarks/hyperfine to 1.16.0 [pin 2023-03-15]
 	Updated devel/libcbor to 0.10.2 [adam 2023-03-15]
 	Updated security/libfido2 to 1.13.0 [adam 2023-03-15]
+	Added shells/oh-my-posh version 14.14.1 [schmonz 2023-03-15]
