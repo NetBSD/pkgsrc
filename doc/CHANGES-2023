@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1754 2023/03/15 10:03:13 pin Exp $
+$NetBSD: CHANGES-2023,v 1.1755 2023/03/15 10:04:21 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2262,3 +2262,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/ansible-lint to 6.14.2 [adam 2023-03-14]
 	Updated sysutils/node_exporter to 1.5.0 [jperkin 2023-03-14]
 	Updated sysutils/dust to 0.8.5 [pin 2023-03-15]
+	Updated shells/nushell to 0.77.0 [pin 2023-03-15]
