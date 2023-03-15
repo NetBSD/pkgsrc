@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.22 2022/08/22 11:32:08 markd Exp $
+# $NetBSD: Makefile,v 1.23 2023/03/15 05:51:21 markd Exp $
 
 DISTNAME=	collection-plaingeneric
 PKGNAME=	texlive-${DISTNAME}-2022pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	64113
+TEXLIVE_REV=	65622
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -24,6 +24,7 @@ DEPENDS+=	tex-apnum>=1.1:../../math/tex-apnum
 # depend chronosys
 # depend colorsep
 DEPENDS+=	tex-compare-[0-9]*:../../print/tex-compare
+# depend crossrefenum
 # depend cweb-old
 # depend dinat
 # depend dirtree
@@ -35,10 +36,7 @@ DEPENDS+=	tex-eijkhout-[0-9]*:../../print/tex-eijkhout
 DEPENDS+=	tex-epsf>=2.7.4:../../print/tex-epsf
 DEPENDS+=	tex-epsf-dvipdfmx-[0-9]*:../../print/tex-epsf-dvipdfmx
 # depend expex-acro
-# depend expkv
-# depend expkv-cs
-# depend expkv-def
-# depend expkv-opt
+# depend expkv-bundle
 # depend fenixpar
 DEPENDS+=	tex-figflow-[0-9]*:../../print/tex-figflow
 DEPENDS+=	tex-fixpdfmag-[0-9]*:../../print/tex-fixpdfmag
@@ -81,6 +79,7 @@ DEPENDS+=	tex-nth-[0-9]*:../../print/tex-nth
 DEPENDS+=	tex-outerhbox-[0-9]*:../../print/tex-outerhbox
 DEPENDS+=	tex-path>=3.05:../../print/tex-path
 # depend pdf-trans
+# depend pdfmsym
 DEPENDS+=	tex-pitex-[0-9]*:../../print/tex-pitex
 DEPENDS+=	tex-placeins-plain-[0-9]*:../../print/tex-placeins-plain
 # depend plainpkg
