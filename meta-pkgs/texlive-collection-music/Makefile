@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2021/06/07 00:45:21 markd Exp $
+# $NetBSD: Makefile,v 1.14 2023/03/15 05:43:22 markd Exp $
 
 DISTNAME=	collection-music
 PKGNAME=	texlive-${DISTNAME}-2021pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	57878
+TEXLIVE_REV=	65862
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -41,7 +41,9 @@ DEPENDS+=	tex-musixtex-fonts-[0-9]*:../../fonts/tex-musixtex-fonts
 # depend piano
 # depend pmx
 # depend pmxchords
+# depend recorder-fingering
 # depend songbook
+# depend songproj
 # depend songs
 # depend xml2pmx
 # depend xpiano
