@@ -1,0 +1,14 @@
+A modern, vibrant, and multi-threaded file-tree visualizer and disk usage
+analyzer that respects hidden files and .gitignore rules by default, i.e.
+the secret love child of tree and du.
+
+erdtree is a modern alternative to tree and du in that it:
+  - offers a minimal and user-friendly CLI
+  - respects hidden files and .gitignore rules by default
+  - displays file sizes in human-readable format by default
+  - leverages parallism to traverse the file-system
+  - displays files using ANSI colors by default
+  - supports icons! (checkout the Icons section before using)
+
+If the chosen defaults don't meet your requirements and you don't want to bloat
+your shell configs with aliases, you can use a configuration file instead.
