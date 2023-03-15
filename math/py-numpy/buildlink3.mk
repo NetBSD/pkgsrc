@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2023/03/13 21:11:15 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2023/03/15 13:48:40 wiz Exp $
 
 BUILDLINK_TREE+=	py-numpy
 
@@ -8,7 +8,7 @@ PY_NUMPY_BUILDLINK3_MK:=
 .include "../../lang/python/pyversion.mk"
 
 BUILDLINK_API_DEPENDS.py-numpy+=	${PYPKGPREFIX}-numpy>=1.0
-.if ${_PYTHON_VERSION} < 38
+.if ${_PYTHON_VERSION} == 27 || ${_PYTHON_VERSION} == 37
 BUILDLINK_ABI_DEPENDS.py-numpy+=	${PYPKGPREFIX}-numpy>=1.16.6nb3
 BUILDLINK_PKGSRCDIR.py-numpy?=		../../math/py-numpy16
 .else
