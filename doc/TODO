@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22693 2023/03/13 21:11:41 wiz Exp $
+$NetBSD: TODO,v 1.22694 2023/03/15 13:31:33 adam Exp $
 
 Suggested new packages
 ======================
@@ -536,7 +536,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o classpath-gui-0.99
 	o clawsker-0.7.13
 	o clusterssh-4.16
-	o cmake-3.25.3
 	o coccigrep-1.20
 	o collectd-CGP-1
 	o colord-1.4.5
