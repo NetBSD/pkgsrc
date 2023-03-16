@@ -1,7 +1,7 @@
-# $NetBSD: go-modules.mk,v 1.2 2022/09/30 21:45:08 leot Exp $
+# $NetBSD: go-modules.mk,v 1.3 2023/03/16 10:01:00 leot Exp $
 
-GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v1.1.0.mod
-GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v1.1.0.zip
+GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v1.2.0.mod
+GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v1.2.0.zip
 GO_MODULE_FILES+=	github.com/mattn/go-isatty/@v/v0.0.14.mod
 GO_MODULE_FILES+=	github.com/mattn/go-isatty/@v/v0.0.14.zip
 GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.0.0-20190308221718-c2843e01d9a2.mod
