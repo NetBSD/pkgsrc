@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1791 2023/03/16 08:38:59 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1792 2023/03/16 08:49:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2329,3 +2329,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/py-python-socks to 2.2.0 [adam 2023-03-16]
 	Updated graphics/digikam to 7.10.0 [wiz 2023-03-16]
 	Updated graphics/libraw to 0.21.1 [wiz 2023-03-16]
+	Updated devel/rinutils to 0.10.1 [adam 2023-03-16]
+	Updated security/py-pip-audit to 2.4.14 [adam 2023-03-16]
