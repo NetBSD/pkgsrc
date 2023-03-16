@@ -1,6 +1,6 @@
-# $NetBSD: common.mk,v 1.2 2021/11/24 17:26:15 wiz Exp $
+# $NetBSD: common.mk,v 1.3 2023/03/16 11:06:02 jperkin Exp $
 
-MASTER_SITES=	https://raw.githubusercontent.com/nltk/nltk_data/gh-pages/packages/${TYPE}/
+MASTER_SITES=	https://github.com/nltk/nltk_data/raw/ee3fb3aecd8bce44a44e2303d679fe32c0ec437b/packages/${TYPE}/
 EXTRACT_SUFX?=	.zip
 
 MAINTAINER?=	pkgsrc-users@NetBSD.org
