@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2023/03/15 13:39:16 abs Exp $
+# $NetBSD: Makefile,v 1.16 2023/03/16 03:25:41 gutteridge Exp $
 
 DISTNAME=	slim-1.3.6
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=slim.berlios/}
 
@@ -17,8 +17,6 @@ USE_CMAKE=	yes
 
 AUTO_MKDIRS=	yes
 RCD_SCRIPTS+=	slim
-
-DEPENDS+=	bash-[0-9]*:../../shells/bash
 
 SUBST_CLASSES+=		options
 SUBST_FILES.options=	slim.conf
