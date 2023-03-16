@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2023/03/08 13:38:54 bsiegert Exp $
+# $NetBSD: Makefile,v 1.29 2023/03/16 10:01:00 leot Exp $
 
-DISTNAME=	direnv-2.32.1
-PKGREVISION=	6
+DISTNAME=	direnv-2.32.2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=direnv/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -11,15 +10,14 @@ HOMEPAGE=	https://direnv.net/
 COMMENT=	Environment switcher for the shell
 LICENSE=	mit
 
+# Do not build `script/' binaries
+GO_BUILD_PATTERN+=	.
+
 .include "go-modules.mk"
 
-do-build:
-	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${GO} build -o direnv
+INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
-do-install:
-	${INSTALL_PROGRAM_DIR} ${DESTDIR}/${PREFIX}/bin
-	${INSTALL_MAN_DIR} ${DESTDIR}/${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_PROGRAM} ${WRKSRC}/direnv ${DESTDIR}/${PREFIX}/bin
+post-install:
 	${INSTALL_MAN} ${WRKSRC}/man/*.1 ${DESTDIR}/${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../lang/go/go-module.mk"
