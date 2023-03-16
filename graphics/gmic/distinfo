@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 10:46:14 nia Exp $
+$NetBSD: distinfo,v 1.12 2023/03/16 07:15:48 wiz Exp $
 
 BLAKE2s (gmic_2.9.0.tar.gz) = 80b2dcb145ad70f9e7ea0c1824922f3524a9299cfeb5c1f3ec4135b7e76bd323
 SHA512 (gmic_2.9.0.tar.gz) = 3b3703520998e5ad547316683158d7b60541a8cea2a7c1e7118f8de88492e0961bf1fe1da360dfb26d0ba7eaf997e7005a864364297db2bb405d532dedc4241d
 Size (gmic_2.9.0.tar.gz) = 6195597 bytes
-SHA1 (patch-gmic-qt_gmic__qt.pro) = 9fb32f44c13f743a0d6624bd24a0dac331f677b5
+SHA1 (patch-gmic-qt_gmic__qt.pro) = 2c6bdf80a9b34cfbd07cbae962e17e6191ade007
 SHA1 (patch-src_Makefile) = 30327a1860885d93d8f0a59ff5d024b41ca1f836
 SHA1 (patch-src_gmic.cpp) = f74d2f444b9b8121fce5aa14e3266a88bf749da1
