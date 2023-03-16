@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.4 2022/09/30 21:45:08 leot Exp $
+$NetBSD: distinfo,v 1.5 2023/03/16 10:01:00 leot Exp $
 
-BLAKE2s (direnv-2.32.1.tar.gz) = c0875f6831762f273276ab412f56363171ed3a23ed06cad06bed2b2110ac754e
-SHA512 (direnv-2.32.1.tar.gz) = 1d4f7f4ef8ff4c84e6a5f0cb2cbd510064b7d0c9de41f57b075024af06407fe0cc40ddcd9f6f52ca260550833e38ae9690b39abc85e17a3c500899ec46f761e4
-Size (direnv-2.32.1.tar.gz) = 86219 bytes
-BLAKE2s (github.com__burnt_sushi_toml_@v_v1.1.0.mod) = cd3c2cea509a40639fa5501d594ba981c1385767f14e35780d21b8bd313977a4
-SHA512 (github.com__burnt_sushi_toml_@v_v1.1.0.mod) = 0e8cdda81300811f629bce3a9307de05450036f750f8c3c0cd5b70854f8f95bd962ce99bfe1325c8d1bf562a5b7b94afb9e9fd2dbe4dcc45325fac6e27471102
-Size (github.com__burnt_sushi_toml_@v_v1.1.0.mod) = 43 bytes
-BLAKE2s (github.com__burnt_sushi_toml_@v_v1.1.0.zip) = 4e2443a8ad6e21c7c9ab6f052918e53825efcda60b9d6ef4ce975428d177a124
-SHA512 (github.com__burnt_sushi_toml_@v_v1.1.0.zip) = a53eefa9a9129ebf9307ba0535e91c87a84505ce84523493f20619a23d94c0b456e519e7fbc55fbf8ebff482d91c3ef139dd92d7262b78bab03cb45eb5cca86b
-Size (github.com__burnt_sushi_toml_@v_v1.1.0.zip) = 227845 bytes
+BLAKE2s (direnv-2.32.2.tar.gz) = 0aa96357c2a4a14f93dd4c6084657a29a437306d5f798f54c7117419c68f4b80
+SHA512 (direnv-2.32.2.tar.gz) = aa0af7e6d13fad99652f01504287a15b4543ce5b010fbcd0e4b8afb55a39355fc3445b983412203a2307592184c197994a9bd73a3b94889c4ea16f09718f9540
+Size (direnv-2.32.2.tar.gz) = 86969 bytes
+BLAKE2s (github.com__burnt_sushi_toml_@v_v1.2.0.mod) = cd3c2cea509a40639fa5501d594ba981c1385767f14e35780d21b8bd313977a4
+SHA512 (github.com__burnt_sushi_toml_@v_v1.2.0.mod) = 0e8cdda81300811f629bce3a9307de05450036f750f8c3c0cd5b70854f8f95bd962ce99bfe1325c8d1bf562a5b7b94afb9e9fd2dbe4dcc45325fac6e27471102
+Size (github.com__burnt_sushi_toml_@v_v1.2.0.mod) = 43 bytes
+BLAKE2s (github.com__burnt_sushi_toml_@v_v1.2.0.zip) = 966c48435dd94357a59b54ebc8c533825a86691235363e84d6bf099d46fa491a
+SHA512 (github.com__burnt_sushi_toml_@v_v1.2.0.zip) = 04a6ead1f4fc2f63832ad0d9abd4fc9b8089700fc51a4ed42419d4903b46af7ab554d3ca7ce7456ba385a33f91bd54bc220f444b8e7847ef188e2eb216606096
+Size (github.com__burnt_sushi_toml_@v_v1.2.0.zip) = 238247 bytes
 BLAKE2s (github.com_mattn_go-isatty_@v_v0.0.14.mod) = 927c4e44c809a70af5d278922fe3bc89f7fb0a7f8642c31c6b91d9b9c463f5b0
 SHA512 (github.com_mattn_go-isatty_@v_v0.0.14.mod) = 23b01eb4023ff5018437ff98b55ada053eba49feab2777eed36d033f426c5456b143f3defbc3131dad1251205f3ffb3553e3c10bd98de80f0a462e8450d6d56c
 Size (github.com_mattn_go-isatty_@v_v0.0.14.mod) = 104 bytes
