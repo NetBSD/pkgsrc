@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1783 2023/03/16 00:13:24 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.1784 2023/03/16 03:25:49 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2320,3 +2320,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/go-mkcert to 1.4.4 [schmonz 2023-03-15]
 	Added misc/exercism version 3.1.0 [schmonz 2023-03-15]
 	Updated wm/enlightenment16 to 1.0.27nb2 [gutteridge 2023-03-16]
+	Updated x11/slim to 1.3.6nb11 [gutteridge 2023-03-16]
