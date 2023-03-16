@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1793 2023/03/16 09:49:45 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1794 2023/03/16 10:01:06 leot Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2332,3 +2332,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/rinutils to 0.10.1 [adam 2023-03-16]
 	Updated security/py-pip-audit to 2.4.14 [adam 2023-03-16]
 	Updated graphics/gnuplot to 5.4.6nb1 [wiz 2023-03-16]
+	Updated sysutils/direnv to 2.32.2 [leot 2023-03-16]
