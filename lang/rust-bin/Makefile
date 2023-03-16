@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2023/01/25 05:17:23 gutteridge Exp $
+# $NetBSD: Makefile,v 1.50 2023/03/16 18:57:44 he Exp $
 
 DISTNAME=	rust-1.66.1
 PKGNAME=	${DISTNAME:S/rust/rust-bin/1}
@@ -179,6 +179,8 @@ SITES.${DF}=	${NETBSD_REPO}
 
 # Binary still extracts to plain non-nb'ed directory
 WRKSRC:=	${WRKSRC:C/nb[0-9]*//}
+# Undo the powerpc netbsd90 thingie...
+WRKSRC:=	${WRKSRC:C/netbsd90/netbsd/}
 
 do-install:
 	cd ${.CURDIR}/files; pax -rw install.sh ${WRKSRC}
