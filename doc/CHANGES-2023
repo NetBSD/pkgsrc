@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1788 2023/03/16 07:37:28 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1789 2023/03/16 07:56:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2325,3 +2325,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/libXaw to 1.0.15 [wiz 2023-03-16]
 	Updated security/openssh to 9.3p1 [wiz 2023-03-16]
 	Updated editors/Sigil to 1.9.30 [wiz 2023-03-16]
+	Updated databases/soci to 4.0.3 [adam 2023-03-16]
+	Updated net/py-python-socks to 2.2.0 [adam 2023-03-16]
