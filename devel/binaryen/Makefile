@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2023/02/12 22:32:58 fcambus Exp $
+# $NetBSD: Makefile,v 1.17 2023/03/16 08:36:24 adam Exp $
 
 VERSION=	112
 DISTNAME=	binaryen-${VERSION}
@@ -11,7 +11,6 @@ HOMEPAGE=	https://github.com/WebAssembly/binaryen/
 COMMENT=	Compiler and toolchain infrastructure library for WebAssembly
 LICENSE=	apache-2.0
 
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++17
 
 WRKSRC=		${WRKDIR}/binaryen-${GITHUB_TAG}
@@ -20,6 +19,7 @@ CMAKE_ARGS+=	-DENABLE_WERROR=OFF
 
 PYTHON_FOR_BUILD_ONLY=	yes
 
+.include "../../devel/cmake/build.mk"
 .include "../../devel/googletest/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
