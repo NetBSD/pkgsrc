@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22697 2023/03/16 08:35:53 wiz Exp $
+$NetBSD: TODO,v 1.22698 2023/03/16 08:41:34 wiz Exp $
 
 Suggested new packages
 ======================
@@ -832,6 +832,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ja-vflib-lib-3.6.10
 	o ja-vflib-utils-2.25.6
 	o ja-vfxdvik-22.40y1
+	o jasper-4.0.0
 	o java-db3-3.87
 	o jcabc2ps-20181112
 	o jchkmail-2.6.2
