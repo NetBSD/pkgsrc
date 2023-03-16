@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.56 2023/03/12 14:43:20 wiz Exp $
+$NetBSD: distinfo,v 1.57 2023/03/16 08:35:43 wiz Exp $
 
-BLAKE2s (digiKam-7.9.0.tar.xz) = 71cf024d77912b99999d6990be2b5249b14ec8f8994d354bb1320ea2e24f8ab5
-SHA512 (digiKam-7.9.0.tar.xz) = 6c5c9dac8a056d4c8c3b4d67f5a607592ee6319b9f372aebf6ef4245d58883897424d4fabae1d04f43ff3561d8e79b4e4bf5c697aa57467f831437b1cf0da1e6
-Size (digiKam-7.9.0.tar.xz) = 349286920 bytes
+BLAKE2s (digiKam-7.10.0.tar.xz) = 85438caa591ab967fab4d7897c6273ab62a04178fc48320018d7bd92192c1255
+SHA512 (digiKam-7.10.0.tar.xz) = 1a5f045161253d73c4012fa949ec718fcc6c6b292ee0557c8015bea81c95fa39d3034ad46a40fdb64221f59832dc8ecdc724e93929ad2c0e35cc51fc82d28f27
+Size (digiKam-7.10.0.tar.xz) = 349238192 bytes
 SHA1 (patch-core_dplugins_generic_tools_mediaserver_upnpsdk_Neptune_Source_Core_NptConfig.h) = 1bf94ffefb1d174422918d34131beb8e44b544c2
