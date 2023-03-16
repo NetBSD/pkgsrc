@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.19 2022/10/21 12:28:07 adam Exp $
+# $NetBSD: options.mk,v 1.20 2023/03/16 09:48:12 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnuplot
 PKG_SUPPORTED_OPTIONS=	cairo cerf gd gnuplot-pdf-doc lua qt5 wxwidgets x11
@@ -81,8 +81,7 @@ CONFIGURE_ARGS+=	--disable-wxwidgets
 .endif
 
 .if !empty(PKG_OPTIONS:Mx11)
-PLIST.x11=	yes
-.include "../../x11/libXaw/buildlink3.mk"
+PLIST.x11=		yes
 .else
 CONFIGURE_ARGS+=	--without-x
 .endif
