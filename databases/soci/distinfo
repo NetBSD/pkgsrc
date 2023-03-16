@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:10:05 nia Exp $
+$NetBSD: distinfo,v 1.11 2023/03/16 07:50:16 adam Exp $
 
-BLAKE2s (soci-3.2.2.tar.gz) = a6e71ef945941b3d56c5ff1db4a063f84f9a8cb95806869be2e60cc6fa326082
-SHA512 (soci-3.2.2.tar.gz) = b18b82f5bb24072852cc02cece311d1d5ddb9cb9a029a2925b9e834905b20eb3ceaa3089f2aaf547771dc3c50eea87c351d2f172041116d1710138fa3b2fb1bf
-Size (soci-3.2.2.tar.gz) = 354047 bytes
-SHA1 (patch-CMakeLists.txt) = 589fed2101a09637cb3f052bf7915dd2bccf0385
-SHA1 (patch-backends_postgresql_statement.cpp) = d8c9fc32b9866eb3756e7f6f684255840462ac56
-SHA1 (patch-cmake_SociConfig.cmake) = d9b7585b4fe82058f70928e4a57058fa03273385
+BLAKE2s (soci-4.0.3.tar.gz) = 4e048690280bdf602fc9c852001e5773f3dd5019281de4af5e63bfb3f2671c74
+SHA512 (soci-4.0.3.tar.gz) = 1a3a00b8656a95d0e47256fe5ce5a26bc3fc6379b8cadfb12d4e604fb0168724d6cd7090b6b47ee329822593089386a59bdd040b081d873fcc31ad3555031bc6
+Size (soci-4.0.3.tar.gz) = 1213452 bytes
