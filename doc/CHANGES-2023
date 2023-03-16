@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1795 2023/03/16 13:52:31 taca Exp $
+$NetBSD: CHANGES-2023,v 1.1796 2023/03/16 17:40:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2334,3 +2334,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/gnuplot to 5.4.6nb1 [wiz 2023-03-16]
 	Updated sysutils/direnv to 2.32.2 [leot 2023-03-16]
 	Updated lang/php81 to 8.1.17 [taca 2023-03-16]
+	Updated security/py-secretstorage to 3.3.3 [adam 2023-03-16]
+	Updated devel/py-pyleri to 1.4.2 [adam 2023-03-16]
