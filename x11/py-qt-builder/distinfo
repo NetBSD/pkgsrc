@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2022/12/02 15:26:43 wiz Exp $
+$NetBSD: distinfo,v 1.5 2023/03/17 13:51:48 adam Exp $
 
-BLAKE2s (PyQt-builder-1.14.0.tar.gz) = bbfee781a4c4cb266283c9238d79f7bf0df3ddab4ef728854a1d97c0ef140a41
-SHA512 (PyQt-builder-1.14.0.tar.gz) = 99209df0de25e750f1d9a42f5123d9fda3d8dfc8780a4539efa1c98e680d03850a1eba9312fd5fb3fb41ccfe1e9ba7f74a46371c9673e8569f11c6f3f95d04d6
-Size (PyQt-builder-1.14.0.tar.gz) = 3907829 bytes
+BLAKE2s (PyQt-builder-1.14.1.tar.gz) = 03965c34aa77e4ed68c83bd5f19a5f7de777b532c449e5f05bacddf44115b18f
+SHA512 (PyQt-builder-1.14.1.tar.gz) = 4de9be2c42f38fbc22d46a31dd6da37c02620bb112a674ef846a4eb7f862715852e1d7328da1e0d0e33f78475166fe3c690e710e18bfeb48f840f137831a2182
+Size (PyQt-builder-1.14.1.tar.gz) = 3907982 bytes
