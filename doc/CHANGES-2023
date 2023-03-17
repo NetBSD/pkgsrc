@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1810 2023/03/17 11:50:39 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.1811 2023/03/17 11:51:44 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2353,3 +2353,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/libhighlight to 4.5 [schmonz 2023-03-17]
 	Updated textproc/highlight to 4.5 [schmonz 2023-03-17]
 	Updated textproc/p5-highlight to 4.5 [schmonz 2023-03-17]
+	Updated net/nagios-base to 4.4.10 [jperkin 2023-03-17]
