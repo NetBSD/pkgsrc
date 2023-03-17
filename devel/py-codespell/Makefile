@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2022/11/29 21:05:08 adam Exp $
+# $NetBSD: Makefile,v 1.10 2023/03/17 16:51:34 adam Exp $
 
-DISTNAME=	codespell-2.2.2
+DISTNAME=	codespell-2.2.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/codespell/}
@@ -23,6 +23,9 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} codespell codespell-${PYVERSSUFFIX} || ${TRUE}
+
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/wheel.mk"
