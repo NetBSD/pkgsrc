@@ -1,7 +1,5 @@
-# $NetBSD: Makefile,v 1.56 2023/01/09 00:28:41 sekiya Exp $
-#
+# $NetBSD: Makefile,v 1.57 2023/03/17 12:40:34 jperkin Exp $
 
-#PKGREVISION=	1
 CATEGORIES=	net sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -17,10 +15,13 @@ USE_TOOLS+=	msgfmt msgmerge intltool perl:run xgettext
 
 PKG_GROUPS+=	${NAGIOS_GROUP}
 
-CONFIGURE_ARGS+=	--without-pgsql --without-mysql \
-			--without-smbclient-command --without-snmpget-command \
-			--without-snmpgetnext-command --without-fping-command \
-			--without-apt-get-command
+CONFIGURE_ARGS+=	--without-apt-get-command
+CONFIGURE_ARGS+=	--without-fping-command
+CONFIGURE_ARGS+=	--without-mysql
+CONFIGURE_ARGS+=	--without-pgsql
+CONFIGURE_ARGS+=	--without-smbclient-command
+CONFIGURE_ARGS+=	--without-snmpget-command
+CONFIGURE_ARGS+=	--without-snmpgetnext-command
 
 SPECIAL_PERMS+=	${PREFIX}/libexec/nagios/check_icmp ${SETUID_ROOT_PERMS}
 SPECIAL_PERMS+=	${PREFIX}/libexec/nagios/check_dhcp ${SETUID_ROOT_PERMS}
@@ -47,8 +48,6 @@ CPPFLAGS_LFS=		${CPPFLAGS_LFS_CMD:sh}
 MAKE_ENV+=		CPPFLAGS_LFS=${CPPFLAGS_LFS:Q}
 .endif
 LIBS.SunOS+=		-lm
-
-#DEPENDS+=	nagios-base-*:../../net/nagios-base
 
 .if !exists(/usr/bin/ssh)
 DEPENDS+=	{ssh{,6}-[0-9]*,openssh-[0-9]*}:../../security/openssh
@@ -80,6 +79,6 @@ post-install:
 	${CHMOD} -x ${DESTDIR}${PREFIX}/libexec/nagios/utils.pm
 
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
