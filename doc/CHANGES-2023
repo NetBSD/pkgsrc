@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1822 2023/03/17 14:33:37 taca Exp $
+$NetBSD: CHANGES-2023,v 1.1823 2023/03/17 14:41:39 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2373,3 +2373,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/ruby-backports to 3.24.0 [taca 2023-03-17]
 	Updated graphics/ruby-RMagick to 5.2.0 [taca 2023-03-17]
 	Updated net/ruby-ruby_smb to 3.2.5 [taca 2023-03-17]
+	Updated security/ruby-metasploit-payloads to 2.0.122 [taca 2023-03-17]
