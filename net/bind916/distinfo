@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.45 2023/02/16 13:36:01 taca Exp $
+$NetBSD: distinfo,v 1.46 2023/03/17 13:54:19 taca Exp $
 
-BLAKE2s (bind-9.16.38.tar.xz) = 83c26141121aeda2aff8f515d9b3c51914390401d622f1feb406518609018f30
-SHA512 (bind-9.16.38.tar.xz) = fe95681b95ce90aee019e1bdcedba104f7bd968915853321205176c29eedd8df6e04682380adaa332aec06c1cc6537f431d5e21d09f756f45c2d780e8bc80435
-Size (bind-9.16.38.tar.xz) = 5112340 bytes
+BLAKE2s (bind-9.16.39.tar.xz) = a4252557cf77d30d4d3629a4121d8021b35c404571c9be78b8be152bfb6f3eb4
+SHA512 (bind-9.16.39.tar.xz) = 6e2e30815222a289e94f6857fdb6b142558ca56ecf5f8291f843f8476da8e4011042f1dd2bed031e5d9924370ae0705ce5b3ea2ce10ae830f8980b669eb26328
+Size (bind-9.16.39.tar.xz) = 5120164 bytes
 SHA1 (patch-bin_dig_dighost.c) = b1073911d80ecd519af98b6678968296ff8c0c98
 SHA1 (patch-bin_dig_include_dig_dig.h) = 10166f5bb98b208c7b10d63eb31e8253f704acc8
 SHA1 (patch-bin_named_Makefile.in) = f1367da6a226ba44d0ee13acf00b8abeb5b1b7eb
@@ -16,7 +16,7 @@ SHA1 (patch-config.guess) = f44c6344a297e7c623dcbf75b308eb35f797a537
 SHA1 (patch-config.h.in) = 6072793048cdf590863046355eeffa1d93524c36
 SHA1 (patch-config.sub) = 7389c0f2500f2afe96d43979a2d3e0b9f8dff073
 SHA1 (patch-config.threads.in) = fc5cc7097d87523a34c0e630cb8dd1d081d859e5
-SHA1 (patch-configure.ac) = 9a8aa06ca82de5f3a37aac01aef2fc93af575309
+SHA1 (patch-configure.ac) = 906239fa24c6cb47888adc84e88adda609a12410
 SHA1 (patch-contrib_dlz_config.dlz.in) = 6c53d61aaaf1a952a867e4c4da0194db94f511d7
 SHA1 (patch-lib_dns_byaddr.c) = 647ddaaaf040233e18d1a87d83bc2bd63d2a20e3
 SHA1 (patch-lib_dns_client.c) = 94909ebeaded676cca502d83bf8071ae651e1928
