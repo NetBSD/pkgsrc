@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2022/02/03 09:10:12 adam Exp $
+# $NetBSD: Makefile,v 1.5 2023/03/17 16:46:11 adam Exp $
 
-DISTNAME=	css-parser-1.0.7
+DISTNAME=	css-parser-1.0.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/css-parser/}
