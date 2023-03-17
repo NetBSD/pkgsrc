@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1820 2023/03/17 14:28:16 taca Exp $
+$NetBSD: CHANGES-2023,v 1.1821 2023/03/17 14:30:29 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2371,3 +2371,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/sudo to 1.9.13p3 [taca 2023-03-17]
 	Updated www/squid5 to 5.8 [taca 2023-03-17]
 	Updated devel/ruby-backports to 3.24.0 [taca 2023-03-17]
+	Updated graphics/ruby-RMagick to 5.2.0 [taca 2023-03-17]
