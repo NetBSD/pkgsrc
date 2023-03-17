@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1797 2023/03/17 08:00:48 adam Exp $
+$NetBSD: CHANGES-2023,v 1.1798 2023/03/17 08:19:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2338,3 +2338,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-pyleri to 1.4.2 [adam 2023-03-16]
 	Updated devel/py-pybind11 to 2.10.4 [adam 2023-03-17]
 	Updated fonts/py-fonttools to 4.39.2 [adam 2023-03-17]
+	Updated textproc/py-jmespath to 1.0.1 [adam 2023-03-17]
+	Updated devel/py-jaraco.functools to 3.6.0 [adam 2023-03-17]
