@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/11/29 21:05:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/03/17 16:51:34 adam Exp $
 bin/codespell-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/COPYING
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
@@ -9,7 +9,6 @@ ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
-${PYSITELIB}/bin/codespell
 ${PYSITELIB}/codespell_lib/__init__.py
 ${PYSITELIB}/codespell_lib/__init__.pyc
 ${PYSITELIB}/codespell_lib/__main__.py
@@ -28,6 +27,7 @@ ${PYSITELIB}/codespell_lib/data/dictionary_names.txt
 ${PYSITELIB}/codespell_lib/data/dictionary_rare.txt
 ${PYSITELIB}/codespell_lib/data/dictionary_usage.txt
 ${PYSITELIB}/codespell_lib/data/linux-kernel.exclude
+${PYSITELIB}/codespell_lib/py.typed
 ${PYSITELIB}/codespell_lib/tests/__init__.py
 ${PYSITELIB}/codespell_lib/tests/__init__.pyc
 ${PYSITELIB}/codespell_lib/tests/test_basic.py
