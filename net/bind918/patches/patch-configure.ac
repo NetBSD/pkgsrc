@@ -1,9 +1,9 @@
-$NetBSD: patch-configure.ac,v 1.2 2022/12/12 22:07:05 sekiya Exp $
+$NetBSD: patch-configure.ac,v 1.3 2023/03/17 13:58:59 taca Exp $
 
 * Add support for blocklist(blacklist).
 * Remove WRKDIR reference from config.h.
 
---- configure.ac.orig	2022-11-07 22:17:42.020258069 +0000
+--- configure.ac.orig	2023-03-06 09:28:43.542611501 +0000
 +++ configure.ac
 @@ -36,7 +36,9 @@ AC_DEFINE([PACKAGE_DESCRIPTION], [m4_ifn
  AC_DEFINE([PACKAGE_SRCID], ["][bind_SRCID]["], [A short hash from git])
@@ -31,8 +31,8 @@ $NetBSD: patch-configure.ac,v 1.2 2022/12/12 22:07:05 sekiya Exp $
 +    AC_CHECK_LIB(blacklist, blacklist)])])
 +
  # libuv
- AC_MSG_CHECKING([for libuv])
- PKG_CHECK_MODULES([LIBUV], [libuv >= 1.0.0], [],
+ PKG_CHECK_MODULES([LIBUV], [libuv >= 1.37.0], [],
+ 		  [PKG_CHECK_MODULES([LIBUV], [libuv >= 1.0.0 libuv < 1.35.0], [],
 @@ -1212,6 +1224,18 @@ AS_IF([test "$enable_fixed_rrset" = "yes
        [AC_DEFINE([DNS_RDATASET_FIXED], [1],
  		 [Define to enable "rrset-order fixed" syntax.])])
