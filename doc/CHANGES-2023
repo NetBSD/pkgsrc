@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1826 2023/03/17 16:34:02 fcambus Exp $
+$NetBSD: CHANGES-2023,v 1.1827 2023/03/17 17:05:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2377,3 +2377,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/ruby-metasploit_payloads-mettle to 1.0.25 [taca 2023-03-17]
 	Updated geography/geos to 3.11.2 [gdt 2023-03-17]
 	Updated devel/mold to 1.11.0 [fcambus 2023-03-17]
+	Updated textproc/py-css-parser to 1.0.8 [adam 2023-03-17]
+	Updated devel/py-codespell to 2.2.4 [adam 2023-03-17]
