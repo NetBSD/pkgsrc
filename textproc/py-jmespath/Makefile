@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2022/01/04 20:54:57 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2023/03/17 08:16:11 adam Exp $
 
-DISTNAME=	jmespath-0.10.0
+DISTNAME=	jmespath-1.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jmespath/}
 
@@ -12,6 +11,8 @@ COMMENT=	Query language for JSON
 LICENSE=	mit
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

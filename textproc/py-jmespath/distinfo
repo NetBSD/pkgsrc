@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:23:05 nia Exp $
+$NetBSD: distinfo,v 1.7 2023/03/17 08:16:11 adam Exp $
 
-BLAKE2s (jmespath-0.10.0.tar.gz) = 3e25124b9b31fc45e280a5f7fa01488ccb4977e796a99a20fc11c189f47c1f88
-SHA512 (jmespath-0.10.0.tar.gz) = 9e229b5809d2dd74eb7dbf518953f848175743fb0ee91ffc901777be2f4809cc0c4f4ba40890746533e344f64e900ec189d6a8c847c864fa47fbf67e5106a7bc
-Size (jmespath-0.10.0.tar.gz) = 21607 bytes
+BLAKE2s (jmespath-1.0.1.tar.gz) = b8edf0238033a742d9c5597386497b9072485cbf81df2b887110099b6f1e883c
+SHA512 (jmespath-1.0.1.tar.gz) = a1c2424d859f732ba854fabf5e3e47cef88f782d6e9707e5f49f29ddef2fab391aa69866f2e70a58a5f4373a43ab098a787a9a03c15025acf46e5a25243513fb
+Size (jmespath-1.0.1.tar.gz) = 25843 bytes
