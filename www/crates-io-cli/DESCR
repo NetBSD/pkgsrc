@@ -1,0 +1,6 @@
+Command-line interface to interact with crates.io
+
+Features
+ - search crates.io interactively and open in browser
+ - list recently changes crates
+ - output modes for humans and machines
