@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.24 2022/02/12 12:12:32 taca Exp $
+$NetBSD: distinfo,v 1.25 2023/03/17 14:27:47 taca Exp $
 
-BLAKE2s (backports-3.23.0.gem) = 57c19ab981948bbf56ecf1fe914840f571ead910b55fbb9cf20ac58dd77634fb
-SHA512 (backports-3.23.0.gem) = b6d721a2925a932e451437938e01c6e3f4ac08bafac975063963f7866e17015abfeb6862face89cbd08caf479db75eb085f540263ba251a87c6acc7611ba6d40
-Size (backports-3.23.0.gem) = 137728 bytes
+BLAKE2s (backports-3.24.0.gem) = 568448d49e7354762c21e1eeafbfedd8ca4e38cd3dda1c479e1387c9f27b7119
+SHA512 (backports-3.24.0.gem) = bfcd259102285e98c71116d60220f4e0d773caaa229cfa5c18d41154fd232b21779e8f98c95e548e2632ad6fbefd414220785f4e7a62a8d08823332ca79b2f15
+Size (backports-3.24.0.gem) = 140288 bytes
