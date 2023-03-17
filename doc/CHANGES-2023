@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1798 2023/03/17 08:19:36 adam Exp $
+$NetBSD: CHANGES-2023,v 1.1799 2023/03/17 08:25:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2340,3 +2340,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated fonts/py-fonttools to 4.39.2 [adam 2023-03-17]
 	Updated textproc/py-jmespath to 1.0.1 [adam 2023-03-17]
 	Updated devel/py-jaraco.functools to 3.6.0 [adam 2023-03-17]
+	Updated textproc/py-openpyxl to 3.1.2 [adam 2023-03-17]
+	Updated textproc/py-rapidjson to 1.10 [adam 2023-03-17]
