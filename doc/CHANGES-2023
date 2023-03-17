@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1814 2023/03/17 13:54:42 taca Exp $
+$NetBSD: CHANGES-2023,v 1.1815 2023/03/17 13:55:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2362,3 +2362,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/nagios-plugins to 2.4.3 [jperkin 2023-03-17]
 	Updated lang/php82 to 8.2.4 [taca 2023-03-17]
 	Updated net/bind916 to 9.16.39 [taca 2023-03-17]
+	Updated x11/py-sip6 to 6.7.7 [adam 2023-03-17]
+	Updated x11/py-qt-builder to 1.14.1 [adam 2023-03-17]
+	Updated x11/py-sip-qt5 to 12.11.1 [adam 2023-03-17]
+	Updated x11/py-qt5 to 5.15.9 [adam 2023-03-17]
