@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1818 2023/03/17 14:04:13 taca Exp $
+$NetBSD: CHANGES-2023,v 1.1819 2023/03/17 14:08:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2369,3 +2369,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/bind918 to 9.18.13 [taca 2023-03-17]
 	Updated net/samba4 to 4.17.6 [taca 2023-03-17]
 	Updated security/sudo to 1.9.13p3 [taca 2023-03-17]
+	Updated www/squid5 to 5.8 [taca 2023-03-17]
