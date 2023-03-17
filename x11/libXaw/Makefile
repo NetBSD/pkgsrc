@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2023/03/16 07:19:22 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2023/03/17 07:31:48 wiz Exp $
 
 DISTNAME=		libXaw-1.0.15
 CATEGORIES=		x11 graphics
@@ -18,9 +18,9 @@ CONFIGURE_ENV+=		LIB_MAN_SUFFIX=3
 
 # remove compatibility links that never were in pkgsrc
 post-install:
-	${RM} ${DESTDIR}${PREFIX}/lib/libXaw.so
-	${RM} ${DESTDIR}${PREFIX}/lib/libXaw.so.6
-	${RM} ${DESTDIR}${PREFIX}/lib/libXaw.so.7
+	${RM} -f ${DESTDIR}${PREFIX}/lib/libXaw.so
+	${RM} -f ${DESTDIR}${PREFIX}/lib/libXaw.so.6
+	${RM} -f ${DESTDIR}${PREFIX}/lib/libXaw.so.7
 
 .include "../../x11/libICE/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
