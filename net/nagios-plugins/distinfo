@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.29 2023/01/11 09:27:27 sekiya Exp $
+$NetBSD: distinfo,v 1.30 2023/03/17 12:40:34 jperkin Exp $
 
-BLAKE2s (nagios-plugins-2.3.3.tar.gz) = 4eee57a0cae28eab4a115d1f518506a7c33ab0ab66e505088a7af2a65308bb22
-SHA512 (nagios-plugins-2.3.3.tar.gz) = 2128601b1098eb82f4e7d720b96a5f92d6ad75dc181a94b25c38172767de8b72f9fece3eddb74933b1cd520928ae9416a7dc665e2f059bfe362dd74041d28cd7
-Size (nagios-plugins-2.3.3.tar.gz) = 2782610 bytes
-SHA1 (patch-configure) = b37e7b7cd1fd1582a36a0906a5a1e532fd231d50
+BLAKE2s (nagios-plugins-2.4.3.tar.gz) = e62a8afe8943759b50f31b9aa02e339125db24ad0c279b878867cb7a9d70b6f5
+SHA512 (nagios-plugins-2.4.3.tar.gz) = 28eb7ec0f51a4c62f134557293bf18dac3a27378b021fc1c3aa4da7a18107c4251ffdddd6ccf5c2465a4e96e0e43e184d28a27606dc2f666420d387b6c3e9a9c
+Size (nagios-plugins-2.4.3.tar.gz) = 2781759 bytes
+SHA1 (patch-configure) = 94e7095cb6039e06c263c3fd6f962cbdf736b2a7
 SHA1 (patch-gl_gettext.h) = c6e4917c30a1c4cceb46d1236fe9d2ff24359586
-SHA1 (patch-lib_Makefile.in) = a91faf1b6ee112152ee85b0233466d799dfe30da
+SHA1 (patch-lib_Makefile.in) = bdc62254e08503436b032a4d54f26836ef3f2e12
 SHA1 (patch-plugins-root_Makefile.in) = 11a249107265a26b453bba9e3ea951595d3a01fc
-SHA1 (patch-plugins-scripts_Makefile.in) = 442a0be4d4a7b5370a9a25bc5c52f0bd467bdb8c
+SHA1 (patch-plugins-scripts_Makefile.in) = 6618ab351fc1990268ffde5b94c6e491168f2b9a
 SHA1 (patch-plugins-scripts_check_breeze.pl) = 80c7f889a0cf3c1f5da4f5b6564f993c25e421b6
 SHA1 (patch-plugins-scripts_check_ntp.pl) = 8101604b3227fc9977d992c1e73885b8e3dab86a
 SHA1 (patch-plugins-scripts_check_wave.pl) = af42b740b64906fb4c882827165054a84bbddb76
