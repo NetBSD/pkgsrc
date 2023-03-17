@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2022/02/12 12:12:32 taca Exp $
+@comment $NetBSD: PLIST,v 1.16 2023/03/17 14:27:47 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/Gemfile
@@ -515,6 +515,7 @@ ${GEM_LIBDIR}/lib/backports/2.7.0/enumerator.rb
 ${GEM_LIBDIR}/lib/backports/2.7.0/enumerator/produce.rb
 ${GEM_LIBDIR}/lib/backports/2.7.0/symbol.rb
 ${GEM_LIBDIR}/lib/backports/2.7.0/symbol/end_with.rb
+${GEM_LIBDIR}/lib/backports/2.7.0/symbol/start_with.rb
 ${GEM_LIBDIR}/lib/backports/2.7.0/time/ceil.rb
 ${GEM_LIBDIR}/lib/backports/2.7.0/time/floor.rb
 ${GEM_LIBDIR}/lib/backports/2.7.rb
@@ -531,8 +532,6 @@ ${GEM_LIBDIR}/lib/backports/3.0.rb
 ${GEM_LIBDIR}/lib/backports/3.1.0.rb
 ${GEM_LIBDIR}/lib/backports/3.1.0/array.rb
 ${GEM_LIBDIR}/lib/backports/3.1.0/array/intersect.rb
-${GEM_LIBDIR}/lib/backports/3.1.0/class.rb
-${GEM_LIBDIR}/lib/backports/3.1.0/class/descendants.rb
 ${GEM_LIBDIR}/lib/backports/3.1.0/class/subclasses.rb
 ${GEM_LIBDIR}/lib/backports/3.1.0/enumerable.rb
 ${GEM_LIBDIR}/lib/backports/3.1.0/enumerable/compact.rb
@@ -547,6 +546,19 @@ ${GEM_LIBDIR}/lib/backports/3.1.0/match_data/match_length.rb
 ${GEM_LIBDIR}/lib/backports/3.1.0/struct.rb
 ${GEM_LIBDIR}/lib/backports/3.1.0/struct/keyword_init.rb
 ${GEM_LIBDIR}/lib/backports/3.1.rb
+${GEM_LIBDIR}/lib/backports/3.2.0.rb
+${GEM_LIBDIR}/lib/backports/3.2.0/class.rb
+${GEM_LIBDIR}/lib/backports/3.2.0/class/attached_object.rb
+${GEM_LIBDIR}/lib/backports/3.2.0/data.rb
+${GEM_LIBDIR}/lib/backports/3.2.0/enumerator.rb
+${GEM_LIBDIR}/lib/backports/3.2.0/enumerator/product.rb
+${GEM_LIBDIR}/lib/backports/3.2.0/hash.rb
+${GEM_LIBDIR}/lib/backports/3.2.0/hash/shift.rb
+${GEM_LIBDIR}/lib/backports/3.2.0/integer.rb
+${GEM_LIBDIR}/lib/backports/3.2.0/integer/ceildiv.rb
+${GEM_LIBDIR}/lib/backports/3.2.0/match_data.rb
+${GEM_LIBDIR}/lib/backports/3.2.0/match_data/byteoffset.rb
+${GEM_LIBDIR}/lib/backports/3.2.rb
 ${GEM_LIBDIR}/lib/backports/basic_object.rb
 ${GEM_LIBDIR}/lib/backports/force/array_map.rb
 ${GEM_LIBDIR}/lib/backports/force/enumerable_map.rb
