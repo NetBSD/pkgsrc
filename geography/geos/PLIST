@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2022/11/20 13:02:07 gdt Exp $
+@comment $NetBSD: PLIST,v 1.24 2023/03/17 15:16:47 gdt Exp $
 bin/geos-config
 bin/geosop
 include/geos.h
@@ -24,6 +24,7 @@ include/geos/algorithm/Orientation.h
 include/geos/algorithm/PointInRing.h
 include/geos/algorithm/PointLocation.h
 include/geos/algorithm/PointLocator.h
+include/geos/algorithm/PolygonNodeTopology.h
 include/geos/algorithm/RayCrossingCounter.h
 include/geos/algorithm/RayCrossingCounterDD.h
 include/geos/algorithm/RobustDeterminant.h
@@ -411,6 +412,7 @@ include/geos/triangulate/VoronoiDiagramBuilder.h
 include/geos/triangulate/polygon/ConstrainedDelaunayTriangulator.h
 include/geos/triangulate/polygon/PolygonEarClipper.h
 include/geos/triangulate/polygon/PolygonHoleJoiner.h
+include/geos/triangulate/polygon/PolygonNoder.h
 include/geos/triangulate/polygon/PolygonTriangulator.h
 include/geos/triangulate/polygon/TriDelaunayImprover.h
 include/geos/triangulate/quadedge/LastFoundQuadEdgeLocator.h
@@ -453,5 +455,5 @@ lib/libgeos.so
 lib/libgeos.so.${PKGVERSION}
 lib/libgeos_c.so
 lib/libgeos_c.so.1
-lib/libgeos_c.so.1.17.1
+lib/libgeos_c.so.1.17.2
 lib/pkgconfig/geos.pc
