@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2023/03/12 20:10:14 leot Exp $
+# $NetBSD: Makefile,v 1.2 2023/03/17 10:28:00 leot Exp $
 
-DISTNAME=	httpx-1.2.8
+DISTNAME=	httpx-1.2.9
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=projectdiscovery/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
