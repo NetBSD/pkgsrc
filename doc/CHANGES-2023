@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1804 2023/03/17 11:19:36 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.1805 2023/03/17 11:24:02 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2347,3 +2347,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated shells/nushell to 0.77.1 [pin 2023-03-17]
 	Added www/crates-io-cli version 4.0.1 [pin 2023-03-17]
 	Updated devel/asdf to 0.11.3 [schmonz 2023-03-17]
+	Updated shells/oh-my-posh to 14.14.3 [schmonz 2023-03-17]
