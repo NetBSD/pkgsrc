@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2023/01/12 12:51:30 pin Exp $
+# $NetBSD: Makefile,v 1.2 2023/03/17 21:20:59 pin Exp $
 
-DISTNAME=	git-branchless-0.6.0
+DISTNAME=	git-branchless-0.7.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=arxanas/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -8,7 +8,7 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/arxanas/git-branchless/
 COMMENT=	High-velocity, monorepo-scale workflow for Git
-LICENSE=	gnu-gpl-v2
+LICENSE=	mit OR apache-2.0
 
 .include "cargo-depends.mk"
 
