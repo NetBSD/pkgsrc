@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2022/11/15 12:07:29 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.21 2023/03/17 11:49:49 schmonz Exp $
 lib/libhighlight.la
 share/bash-completion/completions/highlight
 share/doc/highlight/AUTHORS
@@ -152,6 +152,7 @@ share/highlight/langDefs/gdscript.lang
 share/highlight/langDefs/go.lang
 share/highlight/langDefs/graphviz.lang
 share/highlight/langDefs/haml.lang
+share/highlight/langDefs/hare.lang
 share/highlight/langDefs/haskell.lang
 share/highlight/langDefs/haxe.lang
 share/highlight/langDefs/hcl.lang
