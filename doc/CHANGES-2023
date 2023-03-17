@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1812 2023/03/17 12:44:47 jperkin Exp $
+$NetBSD: CHANGES-2023,v 1.1813 2023/03/17 13:53:27 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2360,3 +2360,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/nagios-plugin-radius to 2.4.3 [jperkin 2023-03-17]
 	Updated net/nagios-plugin-snmp to 2.4.3 [jperkin 2023-03-17]
 	Updated net/nagios-plugins to 2.4.3 [jperkin 2023-03-17]
+	Updated lang/php82 to 8.2.4 [taca 2023-03-17]
