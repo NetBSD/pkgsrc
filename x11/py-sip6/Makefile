@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2022/12/31 22:51:43 adam Exp $
+# $NetBSD: Makefile,v 1.5 2023/03/17 13:50:41 adam Exp $
 
-DISTNAME=	sip-${PKGVERSION_NOREV}
-PKGNAME=	${PYPKGPREFIX}-sip6-6.7.5
+DISTNAME=	sip-6.7.7
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/sip/sip6/}
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sip/}
 
