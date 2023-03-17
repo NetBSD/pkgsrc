@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.170 2023/01/29 21:17:34 ryoon Exp $
+# $NetBSD: Makefile,v 1.171 2023/03/17 19:41:58 adam Exp $
 
-DISTNAME=	cups-filters-1.28.15
-PKGREVISION=	5
+DISTNAME=	cups-filters-1.28.16
 CATEGORIES=	print
 MASTER_SITES=	http://openprinting.org/download/cups-filters/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.linuxfoundation.org/collaborate/workgroups/openprinting/cups-filters
+HOMEPAGE=	https://wiki.linuxfoundation.org/openprinting/cups-filters
 COMMENT=	Backends, filters, and other software for cups
 LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND mit
 
@@ -84,6 +83,7 @@ post-install:
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
+.include "../../graphics/libexif/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../print/cups-base/buildlink3.mk"
