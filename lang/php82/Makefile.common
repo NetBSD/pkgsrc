@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2022/12/11 14:12:29 taca Exp $
+# $NetBSD: Makefile.common,v 1.2 2023/03/17 08:07:54 tnn Exp $
 # used by lang/php82/Makefile.php
 # used by lang/php/ext.mk
 # used by meta-pkgs/php82-extensions/Makefile
@@ -11,6 +11,8 @@ CATEGORIES+=		www
 MAINTAINER?=		pkgsrc-users@NetBSD.org
 
 USE_TOOLS+=		pkg-config
+
+CHECK_PORTABILITY_SKIP+=	scripts/dev/makedist
 
 .if ${OPSYS} == "NetBSD"
 CONFIGURE_ARGS+=	ax_cv_have_func_attribute_ifunc=no
