@@ -1,11 +1,11 @@
-$NetBSD: patch-plugins-scripts_Makefile.in,v 1.1 2023/01/09 00:28:41 sekiya Exp $
+$NetBSD: patch-plugins-scripts_Makefile.in,v 1.2 2023/03/17 12:40:34 jperkin Exp $
 
 Exclude plugins that would require extra dependancies.
 Some can be found in specific nagios plugin packages.
 
---- plugins-scripts/Makefile.in.orig	2020-03-12 01:58:00.000000000 +0900
-+++ plugins-scripts/Makefile.in	2023-01-09 08:50:02.651881773 +0900
-@@ -1348,17 +1348,12 @@
+--- plugins-scripts/Makefile.in.orig	2023-01-17 22:21:30.000000000 +0000
++++ plugins-scripts/Makefile.in
+@@ -1603,17 +1603,12 @@ top_srcdir = @top_srcdir@
  with_trusted_path = @with_trusted_path@
  @RELEASE_PRESENT_TRUE@NP_VERSION = @NP_RELEASE@
  SUFFIXES = .pl .sh
@@ -14,13 +14,12 @@ Some can be found in specific nagios plugin packages.
 -	check_ifstatus check_ifoperstatus check_mailq check_file_age \
 -	check_ssl_validity \
 -	utils.sh utils.pm
--
+ 
 -EXTRA_DIST = check_breeze.pl check_disk_smb.pl check_flexlm.pl check_ircd.pl \
 -	check_log.sh check_ntp.pl check_oracle.sh check_rpc.pl check_sensors.sh \
 -	check_ifstatus.pl check_ifoperstatus.pl check_wave.pl check_mailq.pl check_file_age.pl \
 -	check_ssl_validity.pl \
 -	utils.sh.in utils.pm.in t
-+
 +libexec_SCRIPTS = check_ircd check_log check_ntp check_rpc \
 +	check_mailq check_file_age utils.sh utils.pm
 +
