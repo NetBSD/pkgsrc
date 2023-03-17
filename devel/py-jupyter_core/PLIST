@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2022/11/28 18:06:55 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2023/03/17 17:21:20 adam Exp $
 bin/jupyter-${PYVERSSUFFIX}
 bin/jupyter-migrate-${PYVERSSUFFIX}
 bin/jupyter-troubleshoot-${PYVERSSUFFIX}
@@ -9,7 +9,7 @@ ${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING.md
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/jupyter.py
 ${PYSITELIB}/jupyter.pyc
 ${PYSITELIB}/jupyter_core/__init__.py
