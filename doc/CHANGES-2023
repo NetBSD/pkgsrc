@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1811 2023/03/17 11:51:44 jperkin Exp $
+$NetBSD: CHANGES-2023,v 1.1812 2023/03/17 12:44:47 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2354,3 +2354,9 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/highlight to 4.5 [schmonz 2023-03-17]
 	Updated textproc/p5-highlight to 4.5 [schmonz 2023-03-17]
 	Updated net/nagios-base to 4.4.10 [jperkin 2023-03-17]
+	Updated net/nagios-plugin-ldap to 2.4.3 [jperkin 2023-03-17]
+	Updated net/nagios-plugin-mysql to 2.4.3 [jperkin 2023-03-17]
+	Updated net/nagios-plugin-pgsql to 2.4.3 [jperkin 2023-03-17]
+	Updated net/nagios-plugin-radius to 2.4.3 [jperkin 2023-03-17]
+	Updated net/nagios-plugin-snmp to 2.4.3 [jperkin 2023-03-17]
+	Updated net/nagios-plugins to 2.4.3 [jperkin 2023-03-17]
