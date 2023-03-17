@@ -1,15 +1,15 @@
-$NetBSD: distinfo,v 1.36 2023/01/09 04:29:12 sekiya Exp $
+$NetBSD: distinfo,v 1.37 2023/03/17 11:51:34 jperkin Exp $
 
-BLAKE2s (nagios-4.4.9.tar.gz) = 738b4b0f1aea7558d8197a11d0b6d03c7491bb5cdc9d9e52f6d0cb0a00bd534e
-SHA512 (nagios-4.4.9.tar.gz) = 59279cd35f329394481e4b3d3f5c3e2418125adeef98f0a8551c2ccf62720459e54c18f8a914be72fb5c2300ab7a69e115f262bfe3aedcf7226380621b32cd8c
-Size (nagios-4.4.9.tar.gz) = 11339450 bytes
+BLAKE2s (nagios-4.4.10.tar.gz) = e73fd421ed9974cf0500630b0c9af15a4507722c221a375bf2f1d281cbc6c84e
+SHA512 (nagios-4.4.10.tar.gz) = fc8d8203d53c4ec87a831cec0564c9bdb553a43675b974616ce6444340b2170b82091259d495b458ab57b0cce0ab23ab30df09b05d71107ff264462c0ebb37fc
+Size (nagios-4.4.10.tar.gz) = 11339491 bytes
 BLAKE2s (nagios-netbsd40-icons.tar.gz) = f2b36e2dd9753ea56a0e531b047800166e84910f11ca4134daf498c7f36b5a82
 SHA512 (nagios-netbsd40-icons.tar.gz) = 27cd564ef6dbe076b43dc2207f8f4f49bfb575f216e90d03a157208e57e23930c1e5915353406f09bd762ad11e6306625544292bd919f8524a2239aac758afb1
 Size (nagios-netbsd40-icons.tar.gz) = 5659 bytes
 SHA1 (patch-Makefile.in) = 12f06a27510f8a082d0c3780e3f5fe0f9cd74c1c
 SHA1 (patch-base_Makefile.in) = 77d69a521983a0dedb7cfdc84ef6b92b9a14c3b4
 SHA1 (patch-base_checks.c) = cbc58f44597d5971ee5a8d061b38d8a81bf8cc7e
-SHA1 (patch-base_events.c) = c67a781cee688a527fb2d5cc39e6481b8cf6caf2
+SHA1 (patch-base_events.c) = c52d07cfc1a6a5579bb13b55ef7f124297d37471
 SHA1 (patch-base_logging.c) = 9cafe98c56c80e47b15ed8593fabc614eea8bcc9
 SHA1 (patch-base_nerd.c) = c000dfbda459083a551955250588ec36fb1e6715
 SHA1 (patch-cgi_Makefile.in) = 3b79d2b8f9c52aee6b6fd76409607cac83893d7d
