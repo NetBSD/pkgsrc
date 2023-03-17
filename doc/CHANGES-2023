@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1815 2023/03/17 13:55:03 adam Exp $
+$NetBSD: CHANGES-2023,v 1.1816 2023/03/17 13:59:23 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2366,3 +2366,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/py-qt-builder to 1.14.1 [adam 2023-03-17]
 	Updated x11/py-sip-qt5 to 12.11.1 [adam 2023-03-17]
 	Updated x11/py-qt5 to 5.15.9 [adam 2023-03-17]
+	Updated net/bind918 to 9.18.13 [taca 2023-03-17]
