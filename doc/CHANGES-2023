@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1796 2023/03/16 17:40:49 adam Exp $
+$NetBSD: CHANGES-2023,v 1.1797 2023/03/17 08:00:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2336,3 +2336,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/php81 to 8.1.17 [taca 2023-03-16]
 	Updated security/py-secretstorage to 3.3.3 [adam 2023-03-16]
 	Updated devel/py-pyleri to 1.4.2 [adam 2023-03-16]
+	Updated devel/py-pybind11 to 2.10.4 [adam 2023-03-17]
+	Updated fonts/py-fonttools to 4.39.2 [adam 2023-03-17]
