@@ -1,7 +1,8 @@
-# $NetBSD: options.mk,v 1.2 2008/07/21 00:35:42 tonnerre Exp $
+# $NetBSD: options.mk,v 1.3 2023/03/17 11:51:34 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nagios-base
-PKG_SUPPORTED_OPTIONS=	mysql pgsql
+PKG_SUPPORTED_OPTIONS=	mysql pgsql ssl
+
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mmysql)
@@ -16,4 +17,11 @@ CONFIGURE_ARGS+=	--with-pgsql-lib=${PREFIX}/pgsql \
 			--with-pgsql-inc=${PREFIX}/pgsql \
 			--with-pgsql-xdata
 .include "../../mk/pgsql.buildlink3.mk"
+.endif
+
+.if ${PKG_OPTIONS:Mssl}
+CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_PREFIX.openssl}
+.include "../../security/openssl/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-ssl
 .endif
