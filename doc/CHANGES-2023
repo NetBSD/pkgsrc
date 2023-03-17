@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1824 2023/03/17 14:47:08 taca Exp $
+$NetBSD: CHANGES-2023,v 1.1825 2023/03/17 15:16:59 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2375,3 +2375,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/ruby-ruby_smb to 3.2.5 [taca 2023-03-17]
 	Updated security/ruby-metasploit-payloads to 2.0.122 [taca 2023-03-17]
 	Updated security/ruby-metasploit_payloads-mettle to 1.0.25 [taca 2023-03-17]
+	Updated geography/geos to 3.11.2 [gdt 2023-03-17]
