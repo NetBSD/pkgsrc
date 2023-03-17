@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1693 2023/03/17 09:17:45 leot Exp $
+# $NetBSD: Makefile,v 1.1694 2023/03/17 10:44:27 pin Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -90,6 +90,7 @@ SUBDIR+=	clisp-fastcgi
 SUBDIR+=	cobalt
 SUBDIR+=	contao35
 SUBDIR+=	cppcms
+SUBDIR+=	crates-io-cli
 SUBDIR+=	cratuity
 SUBDIR+=	crawl
 SUBDIR+=	cronolog
