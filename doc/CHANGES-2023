@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1800 2023/03/17 09:17:54 leot Exp $
+$NetBSD: CHANGES-2023,v 1.1801 2023/03/17 10:28:06 leot Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2343,3 +2343,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-openpyxl to 3.1.2 [adam 2023-03-17]
 	Updated textproc/py-rapidjson to 1.10 [adam 2023-03-17]
 	Added www/shoutrrr version 0.7.1 [leot 2023-03-17]
+	Updated security/httpx to 1.2.9 [leot 2023-03-17]
