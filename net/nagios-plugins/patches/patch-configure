@@ -1,10 +1,10 @@
-$NetBSD: patch-configure,v 1.5 2023/01/09 00:28:41 sekiya Exp $
+$NetBSD: patch-configure,v 1.6 2023/03/17 12:40:34 jperkin Exp $
 
 Disable all the plugins which are installed by the nagios-plugin-* packages.
 
---- configure.orig	2020-03-12 01:58:02.000000000 +0900
-+++ configure	2023-01-09 08:50:57.067773726 +0900
-@@ -17494,7 +17494,7 @@
+--- configure.orig	2023-01-17 22:21:31.000000000 +0000
++++ configure
+@@ -15397,7 +15397,7 @@ _ACEOF
  
  fi
  
@@ -13,109 +13,67 @@ Disable all the plugins which are installed by the nagios-plugin-* packages.
          EXTRAS="$EXTRAS check_radius\$(EXEEXT)"
          RADIUSLIBS="-lradiusclient"
  
-@@ -19019,6 +19019,9 @@
- cat >>conftest.$ac_ext <<_ACEOF
- /* end confdefs.h.  */
- #ifdef HAVE_UNISTD_H
-+#if defined(__sun) && !defined(_LP64) && _FILE_OFFSET_BITS == 64
-+#undef _FILE_OFFSET_BITS
-+#endif
- 			#include <unistd.h>
- 			#endif
- 			#include <netinet/in.h>
-@@ -21793,7 +21796,7 @@
+@@ -16849,7 +16849,7 @@ elif test "$ac_cv_uname_s" = "SunOS"; th
          ac_cv_ps_cols=9
-         { $as_echo "$as_me:$LINENO: result: using nagios-plugins internal ps command (pst3) for solaris" >&5
+         { $as_echo "$as_me:${as_lineno-$LINENO}: result: using nagios-plugins internal ps command (pst3) for solaris" >&5
  $as_echo "using nagios-plugins internal ps command (pst3) for solaris" >&6; }
 -	if test `isainfo -b` = 64 ; then
-+	if test "$MACHINE_ARCH" = "x86_64" ; then
++	if test "$MACHINE_ARCH" = "x86_64"; then
  		pst3_use_64bit=1
- 		{ $as_echo "$as_me:$LINENO: using 64bit pst3" >&5
+ 		{ $as_echo "$as_me:${as_lineno-$LINENO}: using 64bit pst3" >&5
  $as_echo "$as_me: using 64bit pst3" >&6;}
-@@ -22856,7 +22859,7 @@
- 	then
- 		{ $as_echo "$as_me:$LINENO: checking for nslookup syntax" >&5
- $as_echo_n "checking for nslookup syntax... " >&6; }
--		if $PATH_TO_NSLOOKUP -sil 127.0.0.1 2>&1 | grep "Invalid option: sil" >/dev/null
-+		if $PATH_TO_NSLOOKUP -sil 127.0.0.1 2>&1 | grep -F "Invalid option: sil" >/dev/null
- 		then
- 			ac_cv_nslookup_command="$PATH_TO_NSLOOKUP"
- 			{ $as_echo "$as_me:$LINENO: result: $ac_cv_nslookup_command" >&5
-@@ -23245,7 +23248,7 @@
+@@ -18133,7 +18133,7 @@ fi
  
  
  # Check whether --with-snmpget_command was given.
--if test "${with_snmpget_command+set}" = set; then
-+if false; then
+-if test "${with_snmpget_command+set}" = set; then :
++if false; then :
    withval=$with_snmpget_command; PATH_TO_SNMPGET=$withval
  fi
  
-@@ -23256,7 +23259,7 @@
+@@ -18144,7 +18144,7 @@ cat >>confdefs.h <<_ACEOF
  #define PATH_TO_SNMPGET "$PATH_TO_SNMPGET"
  _ACEOF
  
 -	EXTRAS="$EXTRAS check_hpjd check_snmp\$(EXEEXT)"
 +	#EXTRAS="$EXTRAS check_hpjd check_snmp\$(EXEEXT)"
  else
- 	{ $as_echo "$as_me:$LINENO: WARNING: Get snmpget from http://net-snmp.sourceforge.net to make check_hpjd and check_snmp plugins" >&5
+ 	{ $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: Get snmpget from http://net-snmp.sourceforge.net to make check_hpjd and check_snmp plugins" >&5
  $as_echo "$as_me: WARNING: Get snmpget from http://net-snmp.sourceforge.net to make check_hpjd and check_snmp plugins" >&2;}
-@@ -23317,7 +23320,7 @@
+@@ -18205,7 +18205,7 @@ _ACEOF
  
  fi
  
 -if ( $PERL -M"Net::SNMP 3.6" -e 'exit' 2>/dev/null  )
 +if false
  then
- 	{ $as_echo "$as_me:$LINENO: checking for Net::SNMP perl module" >&5
+ 	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for Net::SNMP perl module" >&5
  $as_echo_n "checking for Net::SNMP perl module... " >&6; }
-@@ -23480,7 +23483,7 @@
+@@ -18368,7 +18368,7 @@ IFS=$as_save_IFS
  esac
  fi
  PATH_TO_FPING=$ac_cv_path_PATH_TO_FPING
 -if test -n "$PATH_TO_FPING"; then
-+if test -n "$PATH_TO_FPING" -a "$PATH_TO_FPING" != "no"; then
-   { $as_echo "$as_me:$LINENO: result: $PATH_TO_FPING" >&5
++if test -n "$PATH_TO_FPING6" -a "$PATH_TO_FPING6" != "no"; then
+   { $as_echo "$as_me:${as_lineno-$LINENO}: result: $PATH_TO_FPING" >&5
  $as_echo "$PATH_TO_FPING" >&6; }
  else
-@@ -23520,7 +23523,7 @@
+@@ -18408,7 +18408,7 @@ IFS=$as_save_IFS
  esac
  fi
  PATH_TO_FPING6=$ac_cv_path_PATH_TO_FPING6
 -if test -n "$PATH_TO_FPING6"; then
 +if test -n "$PATH_TO_FPING6" -a "$PATH_TO_FPING6" != "no"; then
-   { $as_echo "$as_me:$LINENO: result: $PATH_TO_FPING6" >&5
+   { $as_echo "$as_me:${as_lineno-$LINENO}: result: $PATH_TO_FPING6" >&5
  $as_echo "$PATH_TO_FPING6" >&6; }
  else
-@@ -24211,6 +24214,10 @@
- cat >>conftest.$ac_ext <<_ACEOF
- /* end confdefs.h.  */
+@@ -18439,7 +18439,8 @@ cat >>confdefs.h <<_ACEOF
+ _ACEOF
  
-+#if defined(__sun) && !defined(_LP64) && _FILE_OFFSET_BITS == 64
-+#undef _FILE_OFFSET_BITS
-+#endif
+ 	EXTRAS="$EXTRAS check_fping\$(EXEEXT)"
+-	if test x"$with_ipv6" != xno && test -n "$PATH_TO_FPING6"; then
++	if test x"$with_ipv6" != xno && test -n "$PATH_TO_FPING6" -a "$PATH_TO_FPING6" != "no"; then
 +
- #ifdef HAVE_SYS_PARAM_H
- #include <sys/param.h>
- #endif
-@@ -24273,6 +24280,10 @@
- cat >>conftest.$ac_ext <<_ACEOF
- /* end confdefs.h.  */
  
-+#if defined(__sun) && !defined(_LP64) && _FILE_OFFSET_BITS == 64
-+#undef _FILE_OFFSET_BITS
-+#endif
-+
-                #include <unistd.h>
-                #include <sys/types.h>
-                #include <sys/param.h>
-@@ -24350,6 +24361,10 @@
- cat >>conftest.$ac_ext <<_ACEOF
- /* end confdefs.h.  */
- 
-+#if defined(__sun) && !defined(_LP64) && _FILE_OFFSET_BITS == 64
-+#undef _FILE_OFFSET_BITS
-+#endif
-+
-                #include <sys/types.h>
-                #include <sys/param.h>
-                #include <sys/stat.h>
+ cat >>confdefs.h <<_ACEOF
+ #define PATH_TO_FPING6 "$PATH_TO_FPING6"
