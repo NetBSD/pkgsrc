@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1831 2023/03/18 15:06:34 nia Exp $
+$NetBSD: CHANGES-2023,v 1.1832 2023/03/18 16:14:33 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2386,3 +2386,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/git-branchless to 0.7.1 [pin 2023-03-17]
 	Updated databases/mariadb105-server to 10.5.19 [nia 2023-03-18]
 	Updated databases/mariadb105-client to 10.5.19 [nia 2023-03-18]
+	Updated sysutils/broot to 1.21.0 [pin 2023-03-18]
