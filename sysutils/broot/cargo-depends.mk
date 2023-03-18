@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.53 2023/02/21 13:26:18 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.54 2023/03/18 16:14:12 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
 CARGO_CRATE_DEPENDS+=	ahash-0.4.7
@@ -129,7 +129,7 @@ CARGO_CRATE_DEPENDS+=	memmap2-0.5.8
 CARGO_CRATE_DEPENDS+=	memoffset-0.6.5
 CARGO_CRATE_DEPENDS+=	memoffset-0.7.1
 CARGO_CRATE_DEPENDS+=	minimad-0.9.1
-CARGO_CRATE_DEPENDS+=	minimad-0.10.0
+CARGO_CRATE_DEPENDS+=	minimad-0.11.0
 CARGO_CRATE_DEPENDS+=	miniz_oxide-0.5.4
 CARGO_CRATE_DEPENDS+=	miniz_oxide-0.6.2
 CARGO_CRATE_DEPENDS+=	mio-0.8.5
@@ -218,7 +218,7 @@ CARGO_CRATE_DEPENDS+=	syntect-no-panic-4.6.1
 CARGO_CRATE_DEPENDS+=	tempfile-3.3.0
 CARGO_CRATE_DEPENDS+=	termcolor-1.2.0
 CARGO_CRATE_DEPENDS+=	termimad-0.20.6
-CARGO_CRATE_DEPENDS+=	termimad-0.21.0
+CARGO_CRATE_DEPENDS+=	termimad-0.22.0
 CARGO_CRATE_DEPENDS+=	terminal-clipboard-0.3.1
 CARGO_CRATE_DEPENDS+=	terminal-light-1.1.1
 CARGO_CRATE_DEPENDS+=	termux-clipboard-0.1.0
@@ -262,6 +262,7 @@ CARGO_CRATE_DEPENDS+=	wasm-bindgen-macro-0.2.84
 CARGO_CRATE_DEPENDS+=	wasm-bindgen-macro-support-0.2.84
 CARGO_CRATE_DEPENDS+=	wasm-bindgen-shared-0.2.84
 CARGO_CRATE_DEPENDS+=	weezl-0.1.7
+CARGO_CRATE_DEPENDS+=	which-4.4.0
 CARGO_CRATE_DEPENDS+=	winapi-0.3.9
 CARGO_CRATE_DEPENDS+=	winapi-i686-pc-windows-gnu-0.4.0
 CARGO_CRATE_DEPENDS+=	winapi-util-0.1.5
