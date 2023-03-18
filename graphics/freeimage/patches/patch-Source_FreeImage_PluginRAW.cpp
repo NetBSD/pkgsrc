@@ -1,9 +1,10 @@
-$NetBSD: patch-Source_FreeImage_PluginRAW.cpp,v 1.2 2021/10/06 14:48:29 nia Exp $
+$NetBSD: patch-Source_FreeImage_PluginRAW.cpp,v 1.3 2023/03/18 05:42:34 wiz Exp $
 
 - Unbundle image libraries.
 - Fix building with libraw-0.20.
+- Fix building with libraw-0.21.
 
---- Source/FreeImage/PluginRAW.cpp.orig	2015-03-10 10:12:04.000000000 +0000
+--- Source/FreeImage/PluginRAW.cpp.orig	2015-03-10 11:12:04.000000000 +0000
 +++ Source/FreeImage/PluginRAW.cpp
 @@ -19,7 +19,7 @@
  // Use at your own risk!
@@ -62,3 +63,15 @@ $NetBSD: patch-Source_FreeImage_PluginRAW.cpp,v 1.2 2021/10/06 14:48:29 nia Exp 
          return (_io->tell_proc(_handle) >= _eof);
      }
  
+@@ -694,7 +687,11 @@ Load(FreeImageIO *io, fi_handle handle, 
+ 		// --------------------------------------------
+ 
+ 		// (-s [0..N-1]) Select one raw image from input file
++#if LIBRAW_COMPILE_CHECK_VERSION_NOTLESS(0, 21)
++		RawProcessor->imgdata.rawparams.shot_select = 0;
++#else
+ 		RawProcessor->imgdata.params.shot_select = 0;
++#endif
+ 		// (-w) Use camera white balance, if possible (otherwise, fallback to auto_wb)
+ 		RawProcessor->imgdata.params.use_camera_wb = 1;
+ 		// (-M) Use any color matrix from the camera metadata. This option only affects Olympus, Leaf, and Phase One cameras.
