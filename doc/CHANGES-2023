@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1832 2023/03/18 16:14:33 pin Exp $
+$NetBSD: CHANGES-2023,v 1.1833 2023/03/18 16:15:36 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2387,3 +2387,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated databases/mariadb105-server to 10.5.19 [nia 2023-03-18]
 	Updated databases/mariadb105-client to 10.5.19 [nia 2023-03-18]
 	Updated sysutils/broot to 1.21.0 [pin 2023-03-18]
+	Updated misc/wthrr to 1.0.0 [pin 2023-03-18]
