@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.169 2023/03/12 14:54:43 wiz Exp $
+# $NetBSD: Makefile,v 1.170 2023/03/18 22:30:03 triaxx Exp $
 
 # Protocol breaks require tech-pkg@ discussion and MAINTAINER approval.
-DISTNAME=	syncthing-source-v1.23.1
+DISTNAME=	syncthing-source-v1.23.2
 PKGNAME=	${DISTNAME:S,source-v,,}
-PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=syncthing/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
@@ -12,10 +11,6 @@ COMMENT=	Keeps directories in sync across hosts
 HOMEPAGE=	https://syncthing.net/
 MAINTAINER=	gdt@NetBSD.org
 LICENSE=	mpl-2.0
-
-# does not support go 1.20 yet (as of 1.23.1)
-# vendor/github.com/lucas-clemente/quic-go/internal/qtls/go120.go:5:13: cannot use "The version of quic-go you're using can't be built on Go 1.20 yet. For more details, please see https://github.com/lucas-clemente/quic-go/wiki/quic-go-and-Go-versions." (untyped string constant "The version of quic-go you're using can't be built on Go 1.20 yet. F...) as int value in variable declaration
-GO_VERSION_DEFAULT=	119
 
 # The 'zillode' dependency calls the compiler on certain archs.
 USE_LANGUAGES=		c
