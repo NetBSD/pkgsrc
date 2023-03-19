@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2022/07/14 13:21:26 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2023/03/19 07:18:43 wiz Exp $
 bin/pip-audit-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
@@ -28,12 +28,6 @@ ${PYSITELIB}/pip_audit/_dependency_source/pyproject.py
 ${PYSITELIB}/pip_audit/_dependency_source/pyproject.pyc
 ${PYSITELIB}/pip_audit/_dependency_source/requirement.py
 ${PYSITELIB}/pip_audit/_dependency_source/requirement.pyc
-${PYSITELIB}/pip_audit/_dependency_source/resolvelib/__init__.py
-${PYSITELIB}/pip_audit/_dependency_source/resolvelib/__init__.pyc
-${PYSITELIB}/pip_audit/_dependency_source/resolvelib/pypi_provider.py
-${PYSITELIB}/pip_audit/_dependency_source/resolvelib/pypi_provider.pyc
-${PYSITELIB}/pip_audit/_dependency_source/resolvelib/resolvelib.py
-${PYSITELIB}/pip_audit/_dependency_source/resolvelib/resolvelib.pyc
 ${PYSITELIB}/pip_audit/_fix.py
 ${PYSITELIB}/pip_audit/_fix.pyc
 ${PYSITELIB}/pip_audit/_format/__init__.py
