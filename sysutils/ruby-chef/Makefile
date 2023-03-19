@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2023/01/21 13:57:31 taca Exp $
+# $NetBSD: Makefile,v 1.39 2023/03/19 13:50:22 taca Exp $
 
-DISTNAME=	chef-18.1.0
-PKGREVISION=	1
+DISTNAME=	chef-18.1.29
 CATEGORIES=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -12,8 +11,8 @@ LICENSE=	apache-2.0
 #DEPENDS+=	${RUBY_PKGPREFIX}-addressable>=0:../../net/ruby-addressable
 DEPENDS+=	${RUBY_PKGPREFIX}-aws-sdk-s3>=1.91<2:../../www/ruby-aws-sdk-s3
 DEPENDS+=	${RUBY_PKGPREFIX}-aws-sdk-secretsmanager>=1.46<2:../../www/ruby-aws-sdk-secretsmanager
-DEPENDS+=	${RUBY_PKGPREFIX}-chef-config>=18.1.0<18.2:../../sysutils/ruby-chef-config
-#DEPENDS+=	${RUBY_PKGPREFIX}-chef-utils>=18.1.0<18.2:../../sysutils/ruby-chef-utils
+DEPENDS+=	${RUBY_PKGPREFIX}-chef-config>=18.1.29<18.2:../../sysutils/ruby-chef-config
+#DEPENDS+=	${RUBY_PKGPREFIX}-chef-utils>=18.1.29<18.2:../../sysutils/ruby-chef-utils
 DEPENDS+=	${RUBY_PKGPREFIX}-chef-vault>=0:../../security/ruby-chef-vault
 DEPENDS+=	${RUBY_PKGPREFIX}-chef-zero>=14.0.11:../../sysutils/ruby-chef-zero
 DEPENDS+=	${RUBY_PKGPREFIX}-corefoundation>=0.3.4<0.4:../../devel/ruby-corefoundation
