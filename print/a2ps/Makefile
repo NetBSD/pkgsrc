@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.91 2023/03/13 10:39:29 wiz Exp $
+# $NetBSD: Makefile,v 1.92 2023/03/19 07:02:06 wiz Exp $
 
-DISTNAME=		a2ps-4.15
+DISTNAME=		a2ps-4.15.1
 CATEGORIES=		print
 MASTER_SITES=		${MASTER_SITE_GNU:=a2ps/}
 
@@ -13,7 +13,7 @@ DEPENDS+=		psutils>=1.17:../../print/psutils
 
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		bash:run file:run gmake lex mktemp:run perl:run pkg-config
+USE_TOOLS+=		file:run gmake lex mktemp:run perl:run pkg-config
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		LPR=lpr
@@ -29,7 +29,6 @@ EGDIR=			${PREFIX}/share/examples/a2ps
 CONF_FILES=		${EGDIR}/a2ps-site.cfg ${PKG_SYSCONFDIR}/a2ps-site.cfg
 CONF_FILES+=		${EGDIR}/a2ps.cfg ${PKG_SYSCONFDIR}/a2ps.cfg
 
-REPLACE_BASH+=		src/a2ps-lpr-wrapper
 REPLACE_SH+=		contrib/[a-z]*.in
 
 INSTALLATION_DIRS=	share/examples/a2ps
