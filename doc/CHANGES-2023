@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1866 2023/03/19 13:51:41 taca Exp $
+$NetBSD: CHANGES-2023,v 1.1867 2023/03/19 16:16:40 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2426,3 +2426,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/ruby-chef-utils to 18.1.29 [taca 2023-03-19]
 	Updated sysutils/ruby-chef-config to 18.1.29 [taca 2023-03-19]
 	Updated sysutils/ruby-chef to 18.1.29 [taca 2023-03-19]
+	Updated graphics/oculante to 0.6.54 [pin 2023-03-19]
