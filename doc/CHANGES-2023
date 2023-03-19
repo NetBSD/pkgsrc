@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1856 2023/03/19 13:20:15 taca Exp $
+$NetBSD: CHANGES-2023,v 1.1857 2023/03/19 13:21:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2414,3 +2414,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/gallery-dl to 1.25.0 [leot 2023-03-19]
 	Updated net/unison to 2.53.1 [gdt 2023-03-19]
 	Removed www/drupal8 [taca 2023-03-19]
+	Updated www/drupal7 to 7.95 [taca 2023-03-19]
