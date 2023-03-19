@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2022/11/30 14:42:45 taca Exp $
+# $NetBSD: Makefile,v 1.17 2023/03/19 08:17:51 taca Exp $
 
-DISTNAME=	recog-3.0.3
+DISTNAME=	recog-3.1.1
 CATEGORIES=	net
 
 MAINTAINER=	minskim@NetBSD.org
@@ -9,7 +9,6 @@ COMMENT=	Framework to send network probes for identification
 LICENSE=	2-clause-bsd
 
 DEPENDS+=	${RUBY_PKGPREFIX}-nokogiri-[0-9]*:../../textproc/ruby-nokogiri
-DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
 USE_LANGUAGES=	# none
 
