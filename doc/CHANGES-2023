@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1837 2023/03/19 07:02:15 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1838 2023/03/19 07:18:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2392,3 +2392,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/xfce4-notes-plugin to 1.10.0 [gutteridge 2023-03-19]
 	Updated print/libpaper to 1.1.29 [wiz 2023-03-19]
 	Updated print/a2ps to 4.15.1 [wiz 2023-03-19]
+	Updated security/py-pip-audit to 2.5.1 [wiz 2023-03-19]
