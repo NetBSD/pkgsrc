@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2021/11/30 15:06:32 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.9 2023/03/19 00:58:33 gutteridge Exp $
 bin/xfce4-notes
 bin/xfce4-notes-settings
 bin/xfce4-popup-notes
@@ -21,6 +21,7 @@ share/locale/da/LC_MESSAGES/xfce4-notes-plugin.mo
 share/locale/de/LC_MESSAGES/xfce4-notes-plugin.mo
 share/locale/el/LC_MESSAGES/xfce4-notes-plugin.mo
 share/locale/en_AU/LC_MESSAGES/xfce4-notes-plugin.mo
+share/locale/en_CA/LC_MESSAGES/xfce4-notes-plugin.mo
 share/locale/en_GB/LC_MESSAGES/xfce4-notes-plugin.mo
 share/locale/es/LC_MESSAGES/xfce4-notes-plugin.mo
 share/locale/et/LC_MESSAGES/xfce4-notes-plugin.mo
