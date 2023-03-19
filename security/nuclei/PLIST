@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2023/03/19 11:22:34 leot Exp $
+bin/nuclei
