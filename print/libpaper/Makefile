@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2019/07/04 13:34:57 ryoon Exp $
+# $NetBSD: Makefile,v 1.12 2023/03/19 06:58:40 wiz Exp $
 
-DISTNAME=	libpaper_1.1.28
+DISTNAME=	libpaper_1.1.29
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/libp/libpaper/}
@@ -23,7 +23,7 @@ BUILD_DEFS=		PAPERSIZE
 
 .include "../../devel/libgetopt/buildlink3.mk"
 
-# missing generated files in 1.1.26 tarball
+# missing generated files in 1.1.26 and newer tarballs
 pre-configure:
 	cd ${WRKSRC} && autoreconf -fiv
 
