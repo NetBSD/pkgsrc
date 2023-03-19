@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2017/06/05 15:34:33 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2023/03/19 13:35:33 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/raindrops_ext.${RUBY_DLEXT}
@@ -54,6 +54,7 @@ ${GEM_LIBDIR}/test/test_linux_all_tcp_listen_stats.rb
 ${GEM_LIBDIR}/test/test_linux_all_tcp_listen_stats_leak.rb
 ${GEM_LIBDIR}/test/test_linux_ipv6.rb
 ${GEM_LIBDIR}/test/test_linux_middleware.rb
+${GEM_LIBDIR}/test/test_linux_reuseport_tcp_listen_stats.rb
 ${GEM_LIBDIR}/test/test_middleware.rb
 ${GEM_LIBDIR}/test/test_middleware_unicorn.rb
 ${GEM_LIBDIR}/test/test_middleware_unicorn_ipv6.rb
