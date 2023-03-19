@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.893 2023/03/19 10:56:57 leot Exp $
+# $NetBSD: Makefile,v 1.894 2023/03/19 11:15:03 leot Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -633,6 +633,7 @@ SUBDIR+=	starttls
 SUBDIR+=	steghide
 SUBDIR+=	stegtunnel
 SUBDIR+=	stunnel
+SUBDIR+=	subfinder
 SUBDIR+=	sudo
 SUBDIR+=	tcl-tls
 SUBDIR+=	tcp_wrappers
