@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1834 2023/03/18 22:30:26 triaxx Exp $
+$NetBSD: CHANGES-2023,v 1.1835 2023/03/19 00:58:49 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2389,3 +2389,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/broot to 1.21.0 [pin 2023-03-18]
 	Updated misc/wthrr to 1.0.0 [pin 2023-03-18]
 	Updated net/syncthing to 1.23.2 [triaxx 2023-03-18]
+	Updated x11/xfce4-notes-plugin to 1.10.0 [gutteridge 2023-03-19]
