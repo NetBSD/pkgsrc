@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.894 2023/03/19 11:15:03 leot Exp $
+# $NetBSD: Makefile,v 1.895 2023/03/19 11:23:04 leot Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -244,6 +244,7 @@ SUBDIR+=	netpgpverify
 SUBDIR+=	nettle
 SUBDIR+=	nfsbug
 SUBDIR+=	nikto
+SUBDIR+=	nuclei
 SUBDIR+=	oath-toolkit
 SUBDIR+=	oauth2c
 SUBDIR+=	ocaml-cryptokit
