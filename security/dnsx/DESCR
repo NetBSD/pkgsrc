@@ -1,0 +1,4 @@
+dnsx is a fast and multi-purpose DNS toolkit designed for running
+various probes through the retryabledns library. It supports multiple
+DNS queries, user supplied resolvers, DNS wildcard filtering like
+shuffledns etc.
