@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1852 2023/03/19 11:34:56 leot Exp $
+$NetBSD: CHANGES-2023,v 1.1853 2023/03/19 11:35:56 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2410,3 +2410,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added security/subfinder version 2.5.7 [leot 2023-03-19]
 	Added security/nuclei version 2.9.0 [leot 2023-03-19]
 	Added security/tlsx version 1.0.6 [leot 2023-03-19]
+	Updated converters/bdf2psf to 1.218 [fcambus 2023-03-19]
