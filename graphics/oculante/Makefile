@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2023/03/04 15:37:06 pin Exp $
+# $NetBSD: Makefile,v 1.39 2023/03/19 16:16:10 pin Exp $
 
-DISTNAME=	oculante-0.6.53
+DISTNAME=	oculante-0.6.54
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=woelper/}
 
@@ -37,7 +37,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/oculante \
 		${DESTDIR}${PREFIX}/bin
 
-DEPENDS+=       nasm-[0-9]*:../../devel/nasm
+DEPENDS+=	nasm-[0-9]*:../../devel/nasm
 
 .include "../../lang/rust/cargo.mk"
 .include "../../security/openssl/buildlink3.mk"
