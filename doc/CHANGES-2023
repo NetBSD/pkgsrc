@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1840 2023/03/19 08:12:32 taca Exp $
+$NetBSD: CHANGES-2023,v 1.1841 2023/03/19 08:18:23 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2395,3 +2395,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/py-pip-audit to 2.5.1 [wiz 2023-03-19]
 	Updated security/gpgme to 1.19.0 [wiz 2023-03-19]
 	Updated devel/ruby-version_gem to 1.1.2 [taca 2023-03-19]
+	Updated net/ruby-recog to 3.1.1 [taca 2023-03-19]
