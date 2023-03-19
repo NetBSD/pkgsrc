@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1859 2023/03/19 13:27:28 taca Exp $
+$NetBSD: CHANGES-2023,v 1.1860 2023/03/19 13:30:46 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2417,3 +2417,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/drupal7 to 7.95 [taca 2023-03-19]
 	Updated www/ruby-html-proofer to 5.0.6 [taca 2023-03-19]
 	Updated www/ruby-rack to 3.0.7 [taca 2023-03-19]
+	Updated www/ruby-rack-test to 2.1.0 [taca 2023-03-19]
