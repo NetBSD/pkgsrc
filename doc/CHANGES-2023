@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1870 2023/03/19 18:08:44 tsutsui Exp $
+$NetBSD: CHANGES-2023,v 1.1871 2023/03/19 22:15:54 thor Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2430,3 +2430,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/amass to 3.22.1 [leot 2023-03-19]
 	Updated mail/fdm to 2.2 [leot 2023-03-19]
 	Updated net/sayaka to 3.6.0 [tsutsui 2023-03-19]
+	Updated audio/mpg123 to 1.31.3 [thomas 2023-03-19]
