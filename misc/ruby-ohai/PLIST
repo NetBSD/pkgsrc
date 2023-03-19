@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2023/02/23 15:48:17 taca Exp $
+@comment $NetBSD: PLIST,v 1.23 2023/03/19 13:43:45 taca Exp $
 bin/ohai${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
@@ -26,6 +26,7 @@ ${GEM_LIBDIR}/lib/ohai/mixin/do_metadata.rb
 ${GEM_LIBDIR}/lib/ohai/mixin/ec2_metadata.rb
 ${GEM_LIBDIR}/lib/ohai/mixin/gce_metadata.rb
 ${GEM_LIBDIR}/lib/ohai/mixin/http_helper.rb
+${GEM_LIBDIR}/lib/ohai/mixin/json_helper.rb
 ${GEM_LIBDIR}/lib/ohai/mixin/network_helper.rb
 ${GEM_LIBDIR}/lib/ohai/mixin/oci_metadata.rb
 ${GEM_LIBDIR}/lib/ohai/mixin/os.rb
