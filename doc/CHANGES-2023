@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1853 2023/03/19 11:35:56 fcambus Exp $
+$NetBSD: CHANGES-2023,v 1.1854 2023/03/19 11:56:07 leot Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2411,3 +2411,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added security/nuclei version 2.9.0 [leot 2023-03-19]
 	Added security/tlsx version 1.0.6 [leot 2023-03-19]
 	Updated converters/bdf2psf to 1.218 [fcambus 2023-03-19]
+	Updated net/gallery-dl to 1.25.0 [leot 2023-03-19]
