@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1851 2023/03/19 11:23:11 leot Exp $
+$NetBSD: CHANGES-2023,v 1.1852 2023/03/19 11:34:56 leot Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2409,3 +2409,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added security/dnsx version 1.1.3 [leot 2023-03-19]
 	Added security/subfinder version 2.5.7 [leot 2023-03-19]
 	Added security/nuclei version 2.9.0 [leot 2023-03-19]
+	Added security/tlsx version 1.0.6 [leot 2023-03-19]
