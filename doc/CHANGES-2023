@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1868 2023/03/19 17:45:19 leot Exp $
+$NetBSD: CHANGES-2023,v 1.1869 2023/03/19 17:50:16 leot Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2428,3 +2428,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/ruby-chef to 18.1.29 [taca 2023-03-19]
 	Updated graphics/oculante to 0.6.54 [pin 2023-03-19]
 	Updated security/amass to 3.22.1 [leot 2023-03-19]
+	Updated mail/fdm to 2.2 [leot 2023-03-19]
