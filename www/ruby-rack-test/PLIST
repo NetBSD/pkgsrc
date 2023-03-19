@@ -1,13 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2019/03/03 16:45:21 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/03/19 13:30:19 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/History.md
 ${GEM_LIBDIR}/MIT-LICENSE.txt
 ${GEM_LIBDIR}/README.md
-${GEM_LIBDIR}/lib/rack/mock_session.rb
 ${GEM_LIBDIR}/lib/rack/test.rb
 ${GEM_LIBDIR}/lib/rack/test/cookie_jar.rb
 ${GEM_LIBDIR}/lib/rack/test/methods.rb
-${GEM_LIBDIR}/lib/rack/test/mock_digest_request.rb
 ${GEM_LIBDIR}/lib/rack/test/uploaded_file.rb
 ${GEM_LIBDIR}/lib/rack/test/utils.rb
 ${GEM_LIBDIR}/lib/rack/test/version.rb
