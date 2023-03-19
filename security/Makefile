@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.892 2023/03/14 12:22:52 wiz Exp $
+# $NetBSD: Makefile,v 1.893 2023/03/19 10:56:57 leot Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -81,6 +81,7 @@ SUBDIR+=	destroy
 SUBDIR+=	dhbitty
 SUBDIR+=	dirb
 SUBDIR+=	dnssec-tools
+SUBDIR+=	dnsx
 SUBDIR+=	doas
 SUBDIR+=	dropbear
 SUBDIR+=	dsniff
