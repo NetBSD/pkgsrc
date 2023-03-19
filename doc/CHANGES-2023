@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1843 2023/03/19 08:25:22 taca Exp $
+$NetBSD: CHANGES-2023,v 1.1844 2023/03/19 08:28:05 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2398,3 +2398,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/ruby-recog to 3.1.1 [taca 2023-03-19]
 	Updated security/ruby-net-ssh to 7.1.0 [taca 2023-03-19]
 	Updated security/ruby-rex-exploitation to 0.1.38 [taca 2023-03-19]
+	Updated security/ruby-rex-socket to 0.1.48 [taca 2023-03-19]
