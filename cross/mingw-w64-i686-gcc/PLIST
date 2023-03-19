@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2022/10/09 02:37:02 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/03/19 16:00:48 js Exp $
 cross/i686-w64-mingw32/bin/i686-w64-mingw32-c++
 cross/i686-w64-mingw32/bin/i686-w64-mingw32-cpp
 cross/i686-w64-mingw32/bin/i686-w64-mingw32-g++
@@ -818,7 +818,7 @@ cross/i686-w64-mingw32/i686-w64-mingw32/include/c++/${PKGVERSION}/version
 cross/i686-w64-mingw32/i686-w64-mingw32/lib/libatomic-1.dll
 cross/i686-w64-mingw32/i686-w64-mingw32/lib/libatomic.la
 cross/i686-w64-mingw32/i686-w64-mingw32/lib/libgcc_s.a
-cross/i686-w64-mingw32/i686-w64-mingw32/lib/libgcc_s_sjlj-1.dll
+cross/i686-w64-mingw32/i686-w64-mingw32/lib/libgcc_s_dw2-1.dll
 cross/i686-w64-mingw32/i686-w64-mingw32/lib/libgfortran-5.dll
 cross/i686-w64-mingw32/i686-w64-mingw32/lib/libgfortran.la
 cross/i686-w64-mingw32/i686-w64-mingw32/lib/libgfortran.spec
