@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1694 2023/03/17 10:44:27 pin Exp $
+# $NetBSD: Makefile,v 1.1695 2023/03/19 13:18:59 taca Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -103,7 +103,6 @@ SUBDIR+=	deforaos-surfer
 SUBDIR+=	dillo
 SUBDIR+=	drraw
 SUBDIR+=	drupal7
-SUBDIR+=	drupal8
 SUBDIR+=	drupal9
 SUBDIR+=	e2guardian
 SUBDIR+=	elinks
