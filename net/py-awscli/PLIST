@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2023/02/15 18:26:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.36 2023/03/19 09:07:45 adam Exp $
 bin/aws
 bin/aws.cmd
 bin/aws_bash_completer
@@ -2537,6 +2537,7 @@ ${PYSITELIB}/awscli/examples/ecs/list-account-settings.rst
 ${PYSITELIB}/awscli/examples/ecs/list-attributes.rst
 ${PYSITELIB}/awscli/examples/ecs/list-clusters.rst
 ${PYSITELIB}/awscli/examples/ecs/list-container-instances.rst
+${PYSITELIB}/awscli/examples/ecs/list-services-by-namespace.rst
 ${PYSITELIB}/awscli/examples/ecs/list-services.rst
 ${PYSITELIB}/awscli/examples/ecs/list-tags-for-resource.rst
 ${PYSITELIB}/awscli/examples/ecs/list-task-definition-families.rst
@@ -4832,6 +4833,25 @@ ${PYSITELIB}/awscli/examples/rekognition/start-label-detection.rst
 ${PYSITELIB}/awscli/examples/rekognition/start-person-tracking.rst
 ${PYSITELIB}/awscli/examples/rekognition/start-stream-processor.rst
 ${PYSITELIB}/awscli/examples/rekognition/stop-stream-processor.rst
+${PYSITELIB}/awscli/examples/resource-explorer-2/associate-default-view.rst
+${PYSITELIB}/awscli/examples/resource-explorer-2/batch-get-view.rst
+${PYSITELIB}/awscli/examples/resource-explorer-2/create-index.rst
+${PYSITELIB}/awscli/examples/resource-explorer-2/create-view.rst
+${PYSITELIB}/awscli/examples/resource-explorer-2/delete-index.rst
+${PYSITELIB}/awscli/examples/resource-explorer-2/delete-view.rst
+${PYSITELIB}/awscli/examples/resource-explorer-2/disassociate-default-view.rst
+${PYSITELIB}/awscli/examples/resource-explorer-2/get-default-view.rst
+${PYSITELIB}/awscli/examples/resource-explorer-2/get-index.rst
+${PYSITELIB}/awscli/examples/resource-explorer-2/get-view.rst
+${PYSITELIB}/awscli/examples/resource-explorer-2/list-indexes.rst
+${PYSITELIB}/awscli/examples/resource-explorer-2/list-supported-resource-types.rst
+${PYSITELIB}/awscli/examples/resource-explorer-2/list-tags-for-resource.rst
+${PYSITELIB}/awscli/examples/resource-explorer-2/list-views.rst
+${PYSITELIB}/awscli/examples/resource-explorer-2/search.rst
+${PYSITELIB}/awscli/examples/resource-explorer-2/tag-resource.rst
+${PYSITELIB}/awscli/examples/resource-explorer-2/untag-resource.rst
+${PYSITELIB}/awscli/examples/resource-explorer-2/update-index-type.rst
+${PYSITELIB}/awscli/examples/resource-explorer-2/update-view.rst
 ${PYSITELIB}/awscli/examples/resource-groups/create-group.rst
 ${PYSITELIB}/awscli/examples/resource-groups/delete-group.rst
 ${PYSITELIB}/awscli/examples/resource-groups/get-group-query.rst
