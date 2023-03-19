@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1846 2023/03/19 08:32:40 taca Exp $
+$NetBSD: CHANGES-2023,v 1.1847 2023/03/19 08:42:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2401,3 +2401,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/ruby-rex-socket to 0.1.48 [taca 2023-03-19]
 	Updated security/ruby-rex-text to 0.2.50 [taca 2023-03-19]
 	Updated textproc/ruby-kramdown-rfc2629 to 1.6.27 [taca 2023-03-19]
+	Updated graphics/ImageMagick to 7.1.1.4 [wiz 2023-03-19]
