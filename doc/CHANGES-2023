@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1839 2023/03/19 07:23:25 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1840 2023/03/19 08:12:32 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2394,3 +2394,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated print/a2ps to 4.15.1 [wiz 2023-03-19]
 	Updated security/py-pip-audit to 2.5.1 [wiz 2023-03-19]
 	Updated security/gpgme to 1.19.0 [wiz 2023-03-19]
+	Updated devel/ruby-version_gem to 1.1.2 [taca 2023-03-19]
