@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2022/07/31 14:23:22 taca Exp $
+@comment $NetBSD: PLIST,v 1.32 2023/03/19 13:21:16 taca Exp $
 share/doc/drupal/CHANGELOG.txt
 share/doc/drupal/COPYRIGHT.txt
 share/doc/drupal/INSTALL.mysql.txt
@@ -329,6 +329,8 @@ share/drupal/modules/comment/comment.pages.inc
 share/drupal/modules/comment/comment.test
 share/drupal/modules/comment/comment.tokens.inc
 share/drupal/modules/comment/comment.tpl.php
+share/drupal/modules/comment/tests/comment_hook_test.info
+share/drupal/modules/comment/tests/comment_hook_test.module
 share/drupal/modules/contact/contact.admin.inc
 share/drupal/modules/contact/contact.info
 share/drupal/modules/contact/contact.install
@@ -800,6 +802,8 @@ share/drupal/modules/simpletest/tests/system_test.info
 share/drupal/modules/simpletest/tests/system_test.install
 share/drupal/modules/simpletest/tests/system_test.module
 share/drupal/modules/simpletest/tests/tablesort.test
+share/drupal/modules/simpletest/tests/taxonomy_nodes_test.info
+share/drupal/modules/simpletest/tests/taxonomy_nodes_test.module
 share/drupal/modules/simpletest/tests/taxonomy_test.info
 share/drupal/modules/simpletest/tests/taxonomy_test.install
 share/drupal/modules/simpletest/tests/taxonomy_test.module
@@ -945,6 +949,7 @@ share/drupal/modules/toolbar/toolbar.info
 share/drupal/modules/toolbar/toolbar.js
 share/drupal/modules/toolbar/toolbar.module
 share/drupal/modules/toolbar/toolbar.png
+share/drupal/modules/toolbar/toolbar.test
 share/drupal/modules/toolbar/toolbar.tpl.php
 share/drupal/modules/tracker/tracker.css
 share/drupal/modules/tracker/tracker.info
@@ -1001,6 +1006,10 @@ share/drupal/modules/update/update.module
 share/drupal/modules/update/update.report.inc
 share/drupal/modules/update/update.settings.inc
 share/drupal/modules/update/update.test
+share/drupal/modules/user/tests/anonymous_user_unblock_test.info
+share/drupal/modules/user/tests/anonymous_user_unblock_test.module
+share/drupal/modules/user/tests/user_email_validation_test.info
+share/drupal/modules/user/tests/user_email_validation_test.module
 share/drupal/modules/user/tests/user_flood_test.info
 share/drupal/modules/user/tests/user_flood_test.module
 share/drupal/modules/user/tests/user_form_test.info
