@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1874 2023/03/20 07:46:06 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1875 2023/03/20 08:54:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2434,3 +2434,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Added geography/py-owslib version 0.28.1 [wiz 2023-03-20]
 	Updated sysutils/xplr to 0.21.0 [pin 2023-03-20]
 	Updated www/curl to 8.0.0 [wiz 2023-03-20]
+	Updated archivers/xz to 5.4.2 [adam 2023-03-20]
+	Updated devel/py-test-asyncio to 0.21.0 [adam 2023-03-20]
