@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2022/12/09 10:47:05 adam Exp $
+# $NetBSD: Makefile,v 1.22 2023/03/20 08:54:19 adam Exp $
 
-DISTNAME=	pytest-asyncio-0.20.3
+DISTNAME=	pytest-asyncio-0.21.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-asyncio/}
@@ -12,8 +12,8 @@ LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=6.2:../../devel/py-setuptools_scm
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0.36:../../devel/py-wheel
-DEPENDS+=	${PYPKGPREFIX}-test>=6.1.0:../../devel/py-test
-TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=5.2:../../devel/py-coverage
+DEPENDS+=	${PYPKGPREFIX}-test>=7.0.0:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=6.2:../../devel/py-coverage
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=5.7.1:../../devel/py-hypothesis
 TEST_DEPENDS+=	${PYPKGPREFIX}-flaky>=3.5.0:../../devel/py-flaky
 TEST_DEPENDS+=	${PYPKGPREFIX}-mypy>=0.931:../../lang/py-mypy
