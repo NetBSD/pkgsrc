@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.679 2023/02/25 18:03:14 ryoon Exp $
+# $NetBSD: Makefile,v 1.680 2023/03/20 13:58:34 ryoon Exp $
 #
 
 COMMENT=	Programming languages
@@ -142,6 +142,7 @@ SUBDIR+=	kaffe-x11
 SUBDIR+=	kali
 SUBDIR+=	kona
 SUBDIR+=	konoha
+SUBDIR+=	kotlin
 SUBDIR+=	ksi
 SUBDIR+=	libBlocksRuntime
 SUBDIR+=	libLLVM
