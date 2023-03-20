@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.168 2023/03/20 13:30:04 wiz Exp $
+# $NetBSD: Makefile,v 1.169 2023/03/20 13:49:49 gdt Exp $
 
 # This is intentionally 3.28 Long Term Release.  Please do not update
 # to later branches, and instead discuss whether/how we want multiple
@@ -42,8 +42,7 @@ CMAKE_PREFIX_PATH+=	${QTDIR}
 # This could be used if we want to build pdf doc, which is currently false
 #BUILD_DEPENDS+=	txt2tags-[0-9]*:../../wip/txt2tags
 
-# Disable building of QGIS.app
-# (XXX For now, we might want to find a way to do this later.)
+# Disable building of QGIS.app.  \todo Consider building it.
 SUBST_CLASSES+=			xapple
 SUBST_STAGE.xapple=		pre-configure
 SUBST_MESSAGE.xapple=		Disabling APPLE App in cmake scripts
@@ -66,6 +65,9 @@ CMAKE_ARGS+=		-DWITH_BINDINGS:BOOL=TRUE
 CMAKE_ARGS+=		-DWITH_INTERNAL_MARKUPSAFE=FALSE
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 37 # py-gdal
+
+# \todo Consider (optional?) dependency on GRASS.
+# \todo Consider (optional?) dependency on SAGA.
 
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-psycopg2-[0-9]*:../../databases/py-psycopg2
