@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.8 2012/09/16 00:51:32 dholland Exp $
+# $NetBSD: options.mk,v 1.9 2023/03/20 21:35:31 nikita Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.cone
-PKG_SUPPORTED_OPTIONS=		aspell ldap wide-curses
+PKG_SUPPORTED_OPTIONS=		aspell ldap fam
 PKG_OPTIONS_REQUIRED_GROUPS=	tls
 PKG_OPTIONS_GROUP.tls=		gnutls ssl
-PKG_SUGGESTED_OPTIONS=		aspell ldap ssl wide-curses
+PKG_SUGGESTED_OPTIONS=		aspell ldap ssl
 
 .include "../../mk/bsd.options.mk"
 
@@ -45,15 +45,4 @@ CONFIGURE_ARGS+=	--with-gnutls
 ###
 .if !empty(PKG_OPTIONS:Mssl)
 .  include "../../security/openssl/buildlink3.mk"
-.endif
-
-###
-### Wide curses display
-###
-.if !empty(PKG_OPTIONS:Mwide-curses)
-USE_NCURSES=	yes	# termattrs()
-.  include "../../devel/ncursesw/buildlink3.mk"
-.else
-USE_NCURSES=	yes	# termattrs()
-.  include "../../devel/ncurses/buildlink3.mk"
 .endif
