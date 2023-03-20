@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.167 2023/03/15 12:36:38 gdt Exp $
+# $NetBSD: Makefile,v 1.168 2023/03/20 13:30:04 wiz Exp $
 
 # This is intentionally 3.28 Long Term Release.  Please do not update
 # to later branches, and instead discuss whether/how we want multiple
 # versions.
 DISTNAME=	qgis-3.28.4
+PKGREVISION=	1
 CATEGORIES=	geography
 MASTER_SITES=	https://qgis.org/downloads/
 EXTRACT_SUFX=	.tar.bz2
@@ -74,7 +75,7 @@ DEPENDS+=	${PYPKGPREFIX}-markupsafe-[0-9]*:../../textproc/py-markupsafe
 # for quickosm
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 # for metasearch
-#DEPENDS+=	${PYPKGPREFIX}-wip-[0-9]*:../../wip/py-owslib
+DEPENDS+=	${PYPKGPREFIX}-owslib-[0-9]*:../../geography/py-owslib
 
 CMAKE_ARGS+=	-DWITH_QTWEBKIT=FALSE
 CMAKE_ARGS+=	-DQWT_DIR=${QWT_DIR}
