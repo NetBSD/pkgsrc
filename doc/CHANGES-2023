@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1872 2023/03/20 06:41:11 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1873 2023/03/20 06:52:48 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2432,3 +2432,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/sayaka to 3.6.0 [tsutsui 2023-03-19]
 	Updated audio/mpg123 to 1.31.3 [thomas 2023-03-19]
 	Added geography/py-owslib version 0.28.1 [wiz 2023-03-20]
+	Updated sysutils/xplr to 0.21.0 [pin 2023-03-20]
