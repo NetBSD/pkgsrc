@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1877 2023/03/20 13:30:13 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1878 2023/03/20 13:57:35 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2439,3 +2439,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated databases/py-redis to 4.5.2 [adam 2023-03-20]
 	Updated textproc/py-pyphen to 0.14.0 [adam 2023-03-20]
 	Updated geography/qgis to 3.28.4nb1 [wiz 2023-03-20]
+	Added lang/kotlin version 1.8.10 [ryoon 2023-03-20]
