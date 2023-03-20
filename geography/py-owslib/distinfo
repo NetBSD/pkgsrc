@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/03/20 06:40:49 wiz Exp $
+
+BLAKE2s (OWSLib-0.28.1.tar.gz) = b8d7e00a1c6e9aabb92f27090dd77a6c52189c4b744d9b666ae8d84faf0157be
+SHA512 (OWSLib-0.28.1.tar.gz) = d22574bf2309ada1df8d32a2110ca624b90725ba7574a632fda02003a2ce1fb1f9a3c9ecdd1c68ac82b8e3ae4d5c4b2a03574c01a0fd9f167c62de8a09596b53
+Size (OWSLib-0.28.1.tar.gz) = 175435 bytes
