@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1876 2023/03/20 13:19:00 adam Exp $
+$NetBSD: CHANGES-2023,v 1.1877 2023/03/20 13:30:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2438,3 +2438,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-test-asyncio to 0.21.0 [adam 2023-03-20]
 	Updated databases/py-redis to 4.5.2 [adam 2023-03-20]
 	Updated textproc/py-pyphen to 0.14.0 [adam 2023-03-20]
+	Updated geography/qgis to 3.28.4nb1 [wiz 2023-03-20]
