@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2023/03/21 19:59:46 abs Exp $
+# $NetBSD: Makefile,v 1.84 2023/03/21 20:08:16 abs Exp $
 
 FIREFOX_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
 MOZ_BRANCH=		52.9
@@ -31,11 +31,6 @@ LDFLAGS.FreeBSD+=	-lplc4 -lnspr4
 LDFLAGS.Linux+=		-lnspr4
 LDFLAGS.SunOS+=		-lm
 
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-sparc64)
-# Without this NetBSD/sparc64 gets "Bus error (core dumped)"
-SSP_SUPPORTED=no
-.endif
-
 NOT_PAX_MPROTECT_SAFE+=	lib/${PKGBASE}/plugin-container
 
 ALL_ENV+=		MOZILLA_PKG_NAME=${PKGBASE}
@@ -53,6 +48,11 @@ SUBST_FILES.dfly_malloc_h+=	media/ffvpx/libavutil/mem.c
 
 .include "mozilla-common.mk"
 .include "options.mk"
+
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-sparc64)
+# Without this NetBSD/sparc64 gets "Bus error (core dumped)"
+SSP_SUPPORTED=no
+.endif
 
 CHECK_INTERPRETER_SKIP+=	lib/firefox-sdk/sdk/bin/header.py
 CHECK_INTERPRETER_SKIP+=	lib/firefox-sdk/sdk/bin/typelib.py
