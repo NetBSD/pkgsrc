@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1881 2023/03/20 22:45:22 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.1882 2023/03/21 00:08:40 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2443,3 +2443,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/unison to 2.53.2 [gdt 2023-03-20]
 	Updated x11/mate-desktop to 1.26.1 [gutteridge 2023-03-20]
 	Updated x11/xfce4-clipman-plugin to 1.6.3 [gutteridge 2023-03-20]
+	mk/bsd.pkg.mk: started freeze for pkgsrc-2023Q1 branch [gdt 2023-03-21]
