@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2023/01/29 21:17:01 ryoon Exp $
+# $NetBSD: Makefile,v 1.27 2023/03/21 20:08:40 abs Exp $
 
 DISTNAME=	thunderbird-${TB_VER}.source
 PKGNAME=	thunderbird${TB_VER:C/\..*$//}-${TB_VER}
-PKGREVISION=	23
+PKGREVISION=	24
 TB_VER=		52.9.1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=thunderbird/releases/${TB_VER}/source/}
@@ -35,6 +35,11 @@ ALL_ENV+=		MOZILLA_PKG_NAME=${PKGBASE}
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/${PKGBASE}
 
 .include "../../mk/bsd.prefs.mk"
+
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-sparc64)
+# Without this NetBSD/sparc64 gets "Bus error (core dumped)"
+SSP_SUPPORTED=no
+.endif
 
 #SUBST_CLASSES+=		ext-compat
 #SUBST_STAGE.ext-compat=	pre-configure
