@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22710 2023/03/20 21:33:52 gutteridge Exp $
+$NetBSD: TODO,v 1.22711 2023/03/21 08:17:42 wiz Exp $
 
 Suggested new packages
 ======================
@@ -547,6 +547,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o consul-1.9.5
 	o cook-2.31
 	o coordgenlibs-2.0.3
+	o coreutils-9.2
 	o courier-0.77.0
 	o courier-imap-4.16.1
 	o courier-mta-0.74.2
