@@ -1,4 +1,4 @@
-# $NetBSD: cargo.mk,v 1.32 2023/01/23 18:49:03 he Exp $
+# $NetBSD: cargo.mk,v 1.33 2023/03/21 19:53:25 nikita Exp $
 #
 # Common logic that can be used by packages that depend on cargo crates
 # from crates.io. This lets existing pkgsrc infrastructure fetch and verify
@@ -29,6 +29,7 @@ USE_TOOLS+=		bsdtar
 CARGO_VENDOR_DIR=	${WRKDIR}/vendor
 CARGO_WRKSRC?=		${WRKSRC}
 
+# TODO: some Cargo.lock files include git+https sources which need to be fetched from the URL (not necessarily resolving to a crate.io url)
 DISTFILES?=			${DEFAULT_DISTFILES}
 .for crate in ${CARGO_CRATE_DEPENDS}
 DISTFILES+=			${crate}.crate
