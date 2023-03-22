@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.18 2022/09/20 17:13:24 nikita Exp $
+# $NetBSD: options.mk,v 1.19 2023/03/22 20:34:39 nikita Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.neomutt
 PKG_OPTIONS_REQUIRED_GROUPS=	display
@@ -132,11 +132,8 @@ CFLAGS+=	-g
 ### gpgme support
 ###
 .if !empty(PKG_OPTIONS:Mgpgme)
-.  include "../../security/gpgme/buildlink3.mk"
 CONFIGURE_ARGS+=	--gpgme
-CONFIGURE_ARGS+=	--with-gpgme=${BUILDLINK_PREFIX.gpgme}
-.else
-CONFIGURE_ARGS+=	--disable-gpgme
+.  include "../../security/gpgme/buildlink3.mk"
 .endif
 
 ###
