@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2023/03/21 20:08:16 abs Exp $
+# $NetBSD: Makefile,v 1.85 2023/03/22 19:09:54 abs Exp $
 
 FIREFOX_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
 MOZ_BRANCH=		52.9
@@ -6,7 +6,7 @@ MOZ_BRANCH_MINOR=	.0esr
 
 DISTNAME=	firefox-${FIREFOX_VER}.source
 PKGNAME=	firefox${MOZ_BRANCH:C/\..*$//}-${MOZ_BRANCH}${MOZ_BRANCH_MINOR:S/b/beta/:S/esr//}
-PKGREVISION=	53
+PKGREVISION=	54
 CATEGORIES=	www
 MASTER_SITES+=	${MASTER_SITE_MOZILLA:=firefox/releases/${FIREFOX_VER}/source/}
 MASTER_SITES+=	${MASTER_SITE_MOZILLA_ALL:=firefox/releases/${FIREFOX_VER}/source/}
@@ -46,13 +46,13 @@ SUBST_SED.dfly_malloc_h=	-e 's,HAVE_MALLOC_H,HAVE_MALLOC_H \&\& !defined(__Drago
 SUBST_FILES.dfly_malloc_h=	media/libav/libavutil/mem.c
 SUBST_FILES.dfly_malloc_h+=	media/ffvpx/libavutil/mem.c
 
-.include "mozilla-common.mk"
-.include "options.mk"
-
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-sparc64)
+.if ${MACHINE_ARCH} == "sparc64"
 # Without this NetBSD/sparc64 gets "Bus error (core dumped)"
 SSP_SUPPORTED=no
 .endif
+
+.include "mozilla-common.mk"
+.include "options.mk"
 
 CHECK_INTERPRETER_SKIP+=	lib/firefox-sdk/sdk/bin/header.py
 CHECK_INTERPRETER_SKIP+=	lib/firefox-sdk/sdk/bin/typelib.py
