@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.47 2022/09/11 12:51:26 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2023/03/22 05:44:41 charlotte Exp $
 
 DISTNAME=	allegro-4.4.3.1
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=liballeg/}
 GITHUB_PROJECT=	allegro5
@@ -20,6 +20,16 @@ INFO_FILES=	yes
 CMAKE_ARGS+=	-DINFODIR=${PKGINFODIR:Q}
 
 PLIST_SUBST+=	ALLEG_VER=${PKGVERSION_NOREV:R}
+
+.include "../../mk/oss.buildlink3.mk"
+
+.if ${OSS_TYPE} != "none"
+SUBST_CLASSES+=		oss
+SUBST_STAGE.oss=	pre-configure
+SUBST_MESSAGE.oss=	Correcting the path to the OSS device.
+SUBST_FILES.oss+=	src/unix/uoss.c
+SUBST_SED.oss+=		-e "s,/dev/dsp,${DEVOSSAUDIO},g"
+.endif
 
 SUBST_CLASSES.NetBSD+=	ossmidi
 SUBST_STAGE.ossmidi=	pre-configure
@@ -43,7 +53,6 @@ post-install:
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../mk/oss.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../x11/libICE/buildlink3.mk"
