@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.80 2022/09/20 17:13:24 nikita Exp $
+# $NetBSD: Makefile,v 1.81 2023/03/22 20:34:39 nikita Exp $
 
-DISTNAME=		neomutt-20220429
-PKGREVISION=		2
+DISTNAME=		neomutt-20230322
 CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_GITHUB:=neomutt/}
 GITHUB_TAG=		${PKGVERSION_NOREV}
@@ -17,7 +16,7 @@ BUILD_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 BUILD_DEPENDS+=		w3m-[0-9]*:../../www/w3m
 DEPENDS+=		mime-types-[0-9]*:../../misc/mime-types
 
-USE_TOOLS+=		msgfmt gmake perl:build
+USE_TOOLS+=		msgfmt gmake perl:build pkg-config
 
 HAS_CONFIGURE=		yes
 EXTRACT_USING=		bsdtar
@@ -40,9 +39,17 @@ INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} DOTLOCK_GROUP= sysconfdir=${EGDIR}
 CONFIGURE_ENV+=		SENDMAIL=/usr/sbin/sendmail
 .endif
 
+SUBST_CLASSES+=			interpreter
+SUBST_STAGE.interpreter=	pre-configure
+SUBST_MESSAGE.interpreter=	Substituting /usr/bin/env python3 interpreter lines
+SUBST_FILES.interpreter=	contrib/oauth2/mutt_oauth2.py
+SUBST_FILES.interpreter+=	data/account-command/macos-keychain/keychain.py
+SUBST_SED.interpreter+=		-e "s,\#! */usr/bin/env *python3,\#!${PYTHONBIN},"
+
 .include "options.mk"
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
