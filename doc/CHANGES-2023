@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1883 2023/03/21 09:36:38 adam Exp $
+$NetBSD: CHANGES-2023,v 1.1884 2023/03/22 20:43:33 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2445,3 +2445,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/xfce4-clipman-plugin to 1.6.3 [gutteridge 2023-03-20]
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2023Q1 branch [gdt 2023-03-21]
 	Updated databases/redis to 7.0.10 [adam 2023-03-21]
+	Updated mail/neomutt to 20230322 [nikita 2023-03-22]
