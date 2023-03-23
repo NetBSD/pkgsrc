@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1885 2023/03/23 06:16:32 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1886 2023/03/23 10:31:04 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2447,3 +2447,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated databases/redis to 7.0.10 [adam 2023-03-21]
 	Updated mail/neomutt to 20230322 [nikita 2023-03-22]
 	Updated security/openssl to 1.1.1tnb1 [wiz 2023-03-23]
+	Updated benchmarks/hyperfine to 1.16.1 [pin 2023-03-23]
