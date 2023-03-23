@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2023/03/09 10:21:32 pin Exp $
+$NetBSD: distinfo,v 1.2 2023/03/23 20:52:02 pin Exp $
 
 BLAKE2s (adler-1.0.2.crate) = f263779d752af886455fc0f42c997893fb1a09edcf1bd2980605251c2e3602aa
 SHA512 (adler-1.0.2.crate) = 7ab190d31890fc05b0b55d8e2c6527a505e06793d5496be0b3831e0513412f9ba97f8148f6f68ed0770fa9cd980a5092d885e058becf1d5506b7c74b82674aa1
@@ -402,9 +402,9 @@ Size (hyper-0.14.23.crate) = 186136 bytes
 BLAKE2s (hyper-rustls-0.23.2.crate) = 251868b020f722dc2bd1ebfa2a34c77f581841e8b9b557866dfa3292cfa9aa6f
 SHA512 (hyper-rustls-0.23.2.crate) = 4a2982a43f98ce7335d5fa1575d35ed4e190efdc6f489a8dfddf4c0f185563f76f2067c262240161c4a0baaeb8fb3d8e21f8ad50e2f7978e3ae570e3e0e205cd
 Size (hyper-rustls-0.23.2.crate) = 30993 bytes
-BLAKE2s (iamb-0.0.6-10b142c071dbc1b28aa65b51197ed29efdf1e61f.tar.gz) = 22d559c102ab1adc33e9925c7707b92f776352d1400ed8a5ae4c7f0a756f6fcd
-SHA512 (iamb-0.0.6-10b142c071dbc1b28aa65b51197ed29efdf1e61f.tar.gz) = c6cd132ec5c21834e1ca000f51bff2900b17e94d36f2a935d3cbd95ddb321bdb9c77b3fc9b51be34fd91cecfb32c2c8abd3808366b23e7be3a11e6d4a3552305
-Size (iamb-0.0.6-10b142c071dbc1b28aa65b51197ed29efdf1e61f.tar.gz) = 95194 bytes
+BLAKE2s (iamb-0.0.7.tar.gz) = dd5a83a514a531b2502b8f261951e058f3c31ae961b360459694fc61084dd628
+SHA512 (iamb-0.0.7.tar.gz) = 86349a27960120daaad62a6c6a2f1cb1a56fcb57933e3d999a2143488581a2d008ede80ffc4f8a63a0fbc3cbbbc00147d64beb71b2de4690011144467553b995
+Size (iamb-0.0.7.tar.gz) = 96313 bytes
 BLAKE2s (iana-time-zone-0.1.53.crate) = bc76b69317387a1427aa749614894a3066e0fd5b1132cefb72022d5eaa4f1a3e
 SHA512 (iana-time-zone-0.1.53.crate) = a3f899fe9ebc7501bd22e75b2df34c3b26ad5a53afbff4fa552672d0185d8a291736c48ac2fa76dab36a6621e689b5584a2d7bd0334055994bb21077765aa7cb
 Size (iana-time-zone-0.1.53.crate) = 20176 bytes
@@ -546,9 +546,9 @@ Size (miniz_oxide-0.6.2.crate) = 54536 bytes
 BLAKE2s (mio-0.8.5.crate) = a1efca50e44ec8a84157d9e3def55fee88869e8c0383d599f573e5af48632751
 SHA512 (mio-0.8.5.crate) = e92bbc1d06ad8d4311d76f878d514d0c91e47de2c511c54bb53096ad689012c3d1ffeec18e2de05a5f66c03ad83150cd45d31edd203e9b9522ece13be00bcede
 Size (mio-0.8.5.crate) = 93993 bytes
-BLAKE2s (modalkit-0.0.13.crate) = 264533c629dc214042347c87b1e137e072ca54eb1d9f6539136dd9c9fe5e6a64
-SHA512 (modalkit-0.0.13.crate) = caaaa0e94a273ac33f463250b6acfe28e433145cab7b8854f0b817e80aaba04fa68994deb4a554295f0853eda49462f7d6cf8dfca28d2b738addfaca60c3e6f8
-Size (modalkit-0.0.13.crate) = 257761 bytes
+BLAKE2s (modalkit-0.0.14.crate) = 0ce45f24f8af45e778dfc309772f13a07397cbe57e012126cc4fcdccb68c9986
+SHA512 (modalkit-0.0.14.crate) = e496945b2bfd0c970978953f419c8ebd700fa58b4e30b24810645eb75f70f6f3edf7855e8fefa708a089efbb791706a9e35cbdfab099347e7c1ba8570f2be5cf
+Size (modalkit-0.0.14.crate) = 258369 bytes
 BLAKE2s (new_debug_unreachable-1.0.4.crate) = 5779df9667d34e07fe8139cb8b6a481e43535a8e5b6960d3d6e0539a3c18199d
 SHA512 (new_debug_unreachable-1.0.4.crate) = 6f964bb322aa8f2ff92078381dd720527600c6449e237b703278cbcf47b39a2581fddfc2f34ebb7cf31229e33d58de48bb5050e083fec6dad9aefddc1d771c85
 Size (new_debug_unreachable-1.0.4.crate) = 2561 bytes
