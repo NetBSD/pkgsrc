@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2023/03/15 14:38:00 pin Exp $
+$NetBSD: distinfo,v 1.9 2023/03/23 10:30:43 pin Exp $
 
 BLAKE2s (ahash-0.7.6.crate) = 5a260485860dccfc4af4ad41b107d11c1a1a0fadb036ef801484ecc98d4a6bc8
 SHA512 (ahash-0.7.6.crate) = 61354688b6fb096359faefb6f34be958cd2215d56b88c22c737d24183eaad433f811bc9e64f927e4852c87d2799c22fda82b55cfbef2ed6357ff74f0c4ffec68
@@ -132,9 +132,9 @@ Size (hermit-abi-0.1.19.crate) = 9979 bytes
 BLAKE2s (hermit-abi-0.3.1.crate) = 2f8289c1cad806c8b9292de862dc3e9dc4964367962228e3468669403f77ad8f
 SHA512 (hermit-abi-0.3.1.crate) = a55fe9230e4e8fef63284befff74108f206e76067257439d334d33068875368902dc690926a1feea15611f14123073867d7e9cd21397bc484cef849d6e1dfbf9
 Size (hermit-abi-0.3.1.crate) = 13793 bytes
-BLAKE2s (hyperfine-1.16.0.tar.gz) = 1585472a73058724e0ccf6607ff4d855080f15eddd67727fe07104d6018c2a43
-SHA512 (hyperfine-1.16.0.tar.gz) = 1b28ca7420751d758f1a6673f4d7c034a5b0720d6d011fc542a9f304c03f1a161d386389877341b41b9a4e10bf79bc6fda04e0a42479bf9b644731d31048eb1a
-Size (hyperfine-1.16.0.tar.gz) = 154662 bytes
+BLAKE2s (hyperfine-1.16.1.tar.gz) = 32933f279d3e6edbed616e55abb8457f3c9ac47ebd56350f689743d19bad23c0
+SHA512 (hyperfine-1.16.1.tar.gz) = d132c32f40106933ee7d8866c548883eff28bac2bd85659ace0812cdb9ef8feee9580acb2291b07c9ec28dff282a6a1b45af8fc3efdf312196895806a6947b74
+Size (hyperfine-1.16.1.tar.gz) = 154681 bytes
 BLAKE2s (indicatif-0.17.3.crate) = e5d81b60f76874ee24129f736ca4f9c46e09a496cde52452482094f9353fbdd5
 SHA512 (indicatif-0.17.3.crate) = 9d536106cb5435f6944ad78fbbcad2dd15763f7efbd78a21da452ab6fe939bed8fa565909aa6db12f738035cd1417ddfbfba2c2a10ec14b8fb464acaf7356c39
 Size (indicatif-0.17.3.crate) = 53584 bytes
