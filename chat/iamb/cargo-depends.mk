@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.1 2023/03/09 10:21:32 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.2 2023/03/23 20:52:02 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
 CARGO_CRATE_DEPENDS+=	aead-0.4.3
@@ -181,7 +181,7 @@ CARGO_CRATE_DEPENDS+=	mime_guess-2.0.4
 CARGO_CRATE_DEPENDS+=	minimal-lexical-0.2.1
 CARGO_CRATE_DEPENDS+=	miniz_oxide-0.6.2
 CARGO_CRATE_DEPENDS+=	mio-0.8.5
-CARGO_CRATE_DEPENDS+=	modalkit-0.0.13
+CARGO_CRATE_DEPENDS+=	modalkit-0.0.14
 CARGO_CRATE_DEPENDS+=	new_debug_unreachable-1.0.4
 CARGO_CRATE_DEPENDS+=	nibble_vec-0.1.0
 CARGO_CRATE_DEPENDS+=	nix-0.24.3
