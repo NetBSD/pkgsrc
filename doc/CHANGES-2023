@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1884 2023/03/22 20:43:33 nikita Exp $
+$NetBSD: CHANGES-2023,v 1.1885 2023/03/23 06:16:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2446,3 +2446,4 @@ Changes to the packages collection and infrastructure in 2023:
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2023Q1 branch [gdt 2023-03-21]
 	Updated databases/redis to 7.0.10 [adam 2023-03-21]
 	Updated mail/neomutt to 20230322 [nikita 2023-03-22]
+	Updated security/openssl to 1.1.1tnb1 [wiz 2023-03-23]
