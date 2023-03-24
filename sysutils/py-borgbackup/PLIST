@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2022/03/03 12:01:09 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2023/03/24 07:08:55 wiz Exp $
 bin/borg
 bin/borgfs
 ${PYSITELIB}/borg/__init__.py
@@ -175,6 +175,9 @@ ${PYSITELIB}/borg/testsuite/file_integrity.pyo
 ${PYSITELIB}/borg/testsuite/hashindex.py
 ${PYSITELIB}/borg/testsuite/hashindex.pyc
 ${PYSITELIB}/borg/testsuite/hashindex.pyo
+${PYSITELIB}/borg/testsuite/hashindex_stress.py
+${PYSITELIB}/borg/testsuite/hashindex_stress.pyc
+${PYSITELIB}/borg/testsuite/hashindex_stress.pyo
 ${PYSITELIB}/borg/testsuite/helpers.py
 ${PYSITELIB}/borg/testsuite/helpers.pyc
 ${PYSITELIB}/borg/testsuite/helpers.pyo
