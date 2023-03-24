@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3937 2023/03/12 13:39:13 wiz Exp $
+# $NetBSD: Makefile,v 1.3938 2023/03/24 07:10:37 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2646,7 +2646,6 @@ SUBDIR+=	py-more-itertools
 SUBDIR+=	py-more-itertools2
 SUBDIR+=	py-mox
 SUBDIR+=	py-msgpack
-SUBDIR+=	py-msgpack104
 SUBDIR+=	py-mulpyplexer
 SUBDIR+=	py-multipledispatch
 SUBDIR+=	py-nest-asyncio
