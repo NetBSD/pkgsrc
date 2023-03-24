@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2023/03/09 06:52:35 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2023/03/24 07:08:55 wiz Exp $
 
-DISTNAME=	borgbackup-1.2.2
+DISTNAME=	borgbackup-1.2.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/borgbackup/}
 
@@ -13,12 +12,14 @@ LICENSE=	modified-bsd
 USE_LANGUAGES=	c c++
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
-# https://github.com/borgbackup/borg/issues/7417
-DEPENDS+=	${PYPKGPREFIX}-msgpack>=1.0.1<1.0.5:../../devel/py-msgpack104
+DEPENDS+=	${PYPKGPREFIX}-msgpack>=1.0.1:../../devel/py-msgpack
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
+TEST_DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 37
 PYTHON_SELF_CONFLICT=		yes
+# DISTUTILS_BUILDDIR_IN_TEST_ENV=	yes
 
 USE_PKG_RESOURCES=	yes
 
@@ -31,6 +32,10 @@ INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/docs/man/*1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+
+# doesn't work due to file name mismatch errors
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
 .include "../../archivers/lz4/buildlink3.mk"
 .include "../../archivers/zstd/buildlink3.mk"
