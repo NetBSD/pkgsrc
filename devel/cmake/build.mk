@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.7 2023/01/25 16:46:37 wiz Exp $
+# $NetBSD: build.mk,v 1.8 2023/03/25 18:29:44 gdt Exp $
 #
 # This Makefile fragment supports building using the CMake build tool.
 #
@@ -42,6 +42,10 @@ CMAKE_REQD?=	0
 .for version in ${CMAKE_REQD}
 TOOL_DEPENDS+=	cmake>=${version}:../../devel/cmake
 .endfor
+
+# Declare that this package is using cmake, for bl3 files to know
+# to add to CMAKE_CONFIGURE_ARGS.
+BUILD_USES_CMAKE=	yes
 
 CMAKE_CONFIGURE_ARGS?=	${CMAKE_ARGS}
 
