@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.146 2023/01/12 10:56:12 markd Exp $
+# $NetBSD: pyversion.mk,v 1.147 2023/03/25 18:29:44 gdt Exp $
 
 # This file should be included by packages as a way to depend on
 # python when none of the other methods are appropriate, e.g. a
@@ -211,7 +211,7 @@ PRINT_PLIST_AWK+=	/^${PYLIB:S|/|\\/|g}/ \
 			{ gsub(/${PYLIB:S|/|\\/|g}/, "$${PYLIB}") }
 
 ALL_ENV+=		PYTHON=${PYTHONBIN}
-.if defined(USE_CMAKE)
+.if defined(USE_CMAKE) || defined(BUILD_USES_CMAKE)
 # used by FindPython
 CMAKE_ARGS+=		-DPython_EXECUTABLE:FILEPATH=${PYTHONBIN}
 CMAKE_ARGS+=		-DPython_INCLUDE_DIR:PATH=${BUILDLINK_DIR}/${PYINC}
@@ -238,7 +238,7 @@ _VARGROUPS+=		pyversion
 _USER_VARS.pyversion=	PYTHON_VERSION_DEFAULT
 _PKG_VARS.pyversion=	\
 	PYTHON_VERSIONS_ACCEPTED PYTHON_VERSIONS_INCOMPATIBLE		\
-	PYTHON_SELF_CONFLICT PYTHON_FOR_BUILD_ONLY USE_CMAKE
+	PYTHON_SELF_CONFLICT PYTHON_FOR_BUILD_ONLY USE_CMAKE BUILD_USES_CMAKE
 _SYS_VARS.pyversion=	\
 	PYTHON_VERSION_REQD PYPACKAGE PYVERSSUFFIX PYPKGSRCDIR		\
 	PYPKGPREFIX PYTHONBIN PYTHONCONFIG PY_COMPILE_ALL		\
