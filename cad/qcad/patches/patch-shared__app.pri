@@ -1,4 +1,4 @@
-$NetBSD: patch-shared__app.pri,v 1.4 2022/05/24 05:17:12 plunky Exp $
+$NetBSD: patch-shared__app.pri,v 1.5 2023/03/25 13:16:11 wiz Exp $
 
 fix build for pkgsrc, by allowing qmake to link binaries in situ
 and create an install target
@@ -23,7 +23,6 @@ and create an install target
 -    -l$${RLIBNAME}snap \
 -    -l$${RLIBNAME}core \
 -    -l$${RLIBNAME}stemmer \
--    -lstemmer
 +    -L$$PWD/src/gui -l$${RLIBNAME}gui \
 +    -L$$PWD/src/entity -l$${RLIBNAME}entity \
 +    -L$$PWD/src/operations -l$${RLIBNAME}operations \
@@ -33,7 +32,7 @@ and create an install target
 +    -L$$PWD/src/snap -l$${RLIBNAME}snap \
 +    -L$$PWD/src/core -l$${RLIBNAME}core \
 +    -L$$PWD/src/stemmer -l$${RLIBNAME}stemmer \
-+    -L$$PWD/src/3rdparty/stemmer -lstemmer
+     -lstemmer
  
  !r_no_opennurbs {
      LIBS += \
