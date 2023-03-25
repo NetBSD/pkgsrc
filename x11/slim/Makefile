@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2023/03/16 03:25:41 gutteridge Exp $
+# $NetBSD: Makefile,v 1.17 2023/03/25 22:54:22 gutteridge Exp $
 
 DISTNAME=	slim-1.3.6
 PKGREVISION=	11
@@ -45,6 +45,8 @@ SLIM_XSERVER_ARGUMENTS?=
 CONF_FILES+=	share/examples/slim/slim.conf \
 		${PKG_SYSCONFDIR}/slim.conf
 
+# XXX the slim.sh file installed for rc.d use specifies dbus as a
+# dependency, but this isn't reflected below.
 .include "options.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
