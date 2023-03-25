@@ -1,4 +1,4 @@
-$NetBSD: patch-src_stemmer_stemmer.pro,v 1.3 2021/04/02 20:27:12 plunky Exp $
+$NetBSD: patch-src_stemmer_stemmer.pro,v 1.4 2023/03/25 13:16:11 wiz Exp $
 
 fix build for pkgsrc, by allowing qmake to link binaries in situ
 and create an install target
@@ -9,8 +9,7 @@ and create an install target
  TEMPLATE = lib
  CONFIG += plugin
  TARGET = $${RLIBNAME}stemmer
--LIBS += -lstemmer
-+LIBS += -L../3rdparty/stemmer -lstemmer
+ LIBS += -lstemmer
 +INSTALLS += target
  OTHER_FILES += stemmer.dox
  DEFINES += QCADSTEMMER_LIBRARY

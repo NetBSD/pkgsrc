@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2022/05/24 05:17:12 plunky Exp $
+@comment $NetBSD: PLIST,v 1.23 2023/03/25 13:16:11 wiz Exp $
 bin/qcad
 lib/libdxflib.so
 lib/libopennurbs.so
@@ -13,7 +13,6 @@ lib/libqcadsnap.so
 lib/libqcadspatialindex.so
 lib/libqcadstemmer.so
 lib/libspatialindexnavel.so
-lib/libstemmer.so
 lib/qcad/fonts/CourierCad.cxf
 lib/qcad/fonts/Cursive.cxf
 lib/qcad/fonts/Cyrillic_II.cxf
