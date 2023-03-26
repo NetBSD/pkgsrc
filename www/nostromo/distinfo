@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:29:41 nia Exp $
+$NetBSD: distinfo,v 1.6 2023/03/26 13:08:36 ast Exp $
 
-BLAKE2s (nostromo-1.9.9.tar.gz) = 6a226188bee8f0a1f0d401582b18dfff37763331799d87e1a3413f9c99cac53a
-SHA512 (nostromo-1.9.9.tar.gz) = 2b6af94fb39e7691f46fb8ba5289ff1db42b2de2fda05a748309f9d2a05c279303d9a0f4c9a3c36cde321ff4695571ee2f7bd8360649df6907ebef7176051bf7
-Size (nostromo-1.9.9.tar.gz) = 54274 bytes
+BLAKE2s (nostromo-2.1.tar.gz) = 123be93799ed7fe103c13ffca804d6f4b3c660b8c106c7e41d81b6f2f957334c
+SHA512 (nostromo-2.1.tar.gz) = 06962e3997e149aa5894deef63033148038d6a905d2cc76ead37a4ae763f21acc8b32d8904eba726e82cea1275a02b045ab3e00ca6451f229845017f57601eca
+Size (nostromo-2.1.tar.gz) = 55066 bytes
