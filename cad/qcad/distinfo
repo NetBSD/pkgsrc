@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.43 2023/03/25 13:16:11 wiz Exp $
+$NetBSD: distinfo,v 1.44 2023/03/26 08:52:18 wiz Exp $
 
-BLAKE2s (qcad-3.27.6.0.tar.gz) = 785b6fa299fb7486f66b61e1fa0566e3f7b64c71296d81f9dd29a52ae414b13b
-SHA512 (qcad-3.27.6.0.tar.gz) = cc793bcb4934cf234c3e6fd8b9072147df9906e54bcab454d6a08ba148ffd08fbbbdfdfbe52232af5ac55921c7cba6a126b30cfb86d5f650b427ea9608bfadcb
-Size (qcad-3.27.6.0.tar.gz) = 40353903 bytes
+BLAKE2s (qcad-3.27.9.0.tar.gz) = 0db5941e36d55aa1aa9ec71cfac71b5a6b079bcdf6817b7c866d246ba974b058
+SHA512 (qcad-3.27.9.0.tar.gz) = 1209616785cf8ac2fa173ecb23302d600e68e638b831c38ae177c59584361df241e1d18477da0b3e947205576bb3bab7e01e419b26f24a44f8ec9c9d15c4cc2b
+Size (qcad-3.27.9.0.tar.gz) = 41342106 bytes
 SHA1 (patch-qcad.pro) = b8dafdf3105ff3580815bb82a6a84b71f4d0b172
 SHA1 (patch-scripts_Help_ShowReadme_ShowReadme.js) = 96412237a7c4422f02dc5d2ab3634457b376a2d2
 SHA1 (patch-scripts_Widgets_LibraryBrowser_LibraryBrowser.js) = 65f988e553259eb93217ea12e9cb429fe52f05be
