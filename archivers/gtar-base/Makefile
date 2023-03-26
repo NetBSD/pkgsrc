@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.95 2019/02/24 15:18:45 wiz Exp $
+# $NetBSD: Makefile,v 1.96 2023/03/26 09:18:48 spz Exp $
 
 .include "../../archivers/gtar/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/tar/gtar-base/}
 COMMENT=	The GNU tape archiver with remote magnetic tape support
 LICENSE=	gnu-gpl-v3
+
+PKGREVISION=	1
 
 CONFLICTS=	gcpio-[0-9]*
 
