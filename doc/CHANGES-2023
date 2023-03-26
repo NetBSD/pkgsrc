@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1891 2023/03/25 13:16:23 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1892 2023/03/26 07:50:23 tron Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2453,3 +2453,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed devel/py-msgpack104 [wiz 2023-03-24]
 	Updated www/curl to 8.0.1 [leot 2023-03-24]
 	Updated cad/qcad to 3.27.6.0nb5 [wiz 2023-03-25]
+	Updated mail/mutt to 2.2.9 [tron 2023-03-26]
