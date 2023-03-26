@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22715 2023/03/26 07:54:01 tron Exp $
+$NetBSD: TODO,v 1.22716 2023/03/26 08:54:17 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1283,7 +1283,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o qca2-2.3.2
 	o qca2-gnupg-2.3.2
 	o qca2-ossl-2.3.2
-	o qcad-3.27.9
 	o qconf-2.5
 	o qdirstat-1.8.1
 	o qgis-3.30.0
