@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1895 2023/03/26 11:59:41 he Exp $
+$NetBSD: CHANGES-2023,v 1.1896 2023/03/26 13:09:41 ast Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2456,3 +2456,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated mail/mutt to 2.2.10 [tron 2023-03-26]
 	Updated cad/qcad to 3.27.9.0 [wiz 2023-03-26]
 	Updated sysutils/zabbix to 4.0.24nb10 [he 2023-03-26]
+	Updated www/nostromo to 2.1 [ast 2023-03-26]
