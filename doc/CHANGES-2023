@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1898 2023/03/26 21:35:14 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1899 2023/03/27 07:16:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2459,3 +2459,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/nostromo to 2.1 [ast 2023-03-26]
 	Updated time/p5-DateTime-TimeZone to 2.58 [gutteridge 2023-03-26]
 	Updated finance/gnucash to 4.14 [wiz 2023-03-26]
+	Updated finance/gnucash-docs to 4.14 [wiz 2023-03-27]
