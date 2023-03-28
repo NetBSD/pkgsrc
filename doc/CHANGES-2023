@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1910 2023/03/28 20:27:37 pin Exp $
+$NetBSD: CHANGES-2023,v 1.1911 2023/03/28 20:29:14 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2477,3 +2477,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/haproxy to 2.7.6 [adam 2023-03-28]
 	Updated sysutils/ansible-core to 2.14.4 [adam 2023-03-28]
 	Updated x11/alacritty to 0.12.0 [pin 2023-03-28]
+	Updated sysutils/xplr to 0.21.1 [pin 2023-03-28]
