@@ -1,20 +1,16 @@
-# $NetBSD: Makefile,v 1.7 2022/11/09 13:14:13 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2023/03/28 13:25:26 joerg Exp $
 #
 
-DISTNAME=	Gentium_102_W
-PKGNAME=	gentium-ttf-1.02
-PKGREVISION=	1
+DISTNAME=	Gentium-1.03
+PKGNAME=	gentium-ttf-1.03
 CATEGORIES=	fonts
+MASTER_SITES=	https://software.sil.org/downloads/r/gentium/
 EXTRACT_SUFX=	.zip
 
-WRKSRC=		${WRKDIR}/Gentium102
-
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://scripts.sil.org/FontDownloadsGentium
-COMMENT=	Free TrueType fonts from Bitstream, useful for web viewing
+MAINTAINER=	joerg@NetBSD.org
+HOMEPAGE=	https://software.sil.org/gentium/
+COMMENT=	Modern international font for Latin and Greek scripts
 LICENSE=	ofl-v1.1
-
-MASTER_SITES=	${MASTER_SITE_LOCAL}
 
 NO_CONFIGURE=	YES
 NO_BUILD=	YES
@@ -24,9 +20,6 @@ FONTS_DIRS.ttf+=	${PREFIX}/share/fonts/X11/TTF
 INSTALLATION_DIRS=	share/fonts/X11/TTF
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/GenAI102.TTF ${DESTDIR}${FONTS_DIRS.ttf}/genai102.ttf
-	${INSTALL_DATA} ${WRKSRC}/GenAR102.TTF ${DESTDIR}${FONTS_DIRS.ttf}/genar102.ttf
-	${INSTALL_DATA} ${WRKSRC}/GenI102.TTF ${DESTDIR}${FONTS_DIRS.ttf}/geni102.ttf
-	${INSTALL_DATA} ${WRKSRC}/GenR102.TTF ${DESTDIR}${FONTS_DIRS.ttf}/genr102.ttf
+	${INSTALL_DATA} ${WRKSRC}/*.ttf ${DESTDIR}${FONTS_DIRS.ttf}
 
 .include "../../mk/bsd.pkg.mk"
