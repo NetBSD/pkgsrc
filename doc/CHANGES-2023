@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1906 2023/03/28 13:31:54 adam Exp $
+$NetBSD: CHANGES-2023,v 1.1907 2023/03/28 13:50:57 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2472,3 +2472,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated multimedia/mkvtoolnix to 75.0.0 [adam 2023-03-28]
 	Updated devel/cmake to 3.26.1 [adam 2023-03-28]
 	Updated devel/cmake-gui to 3.26.1 [adam 2023-03-28]
+	Updated fonts/gentiumbasic-ttf to 1.102 [joerg 2023-03-28]
