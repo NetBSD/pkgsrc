@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.41 2022/06/17 18:09:24 tnn Exp $
+$NetBSD: distinfo,v 1.42 2023/03/28 10:08:30 tnn Exp $
 
 BLAKE2s (googletest-1.10.0.tar.gz) = 53d218b6e7821bf20289e24c4efec5b7a3cc2be8f06373c07a5af078dc4ee892
 SHA512 (googletest-1.10.0.tar.gz) = bd52abe938c3722adc2347afad52ea3a17ecc76730d8d16b065e165bc7477d762bce0997a427131866a89f1001e3f3315198204ffa5d643a9355f1f4d0d7b1a9
@@ -16,3 +16,4 @@ SHA1 (patch-src_lib_platform_CMakeLists.txt) = 0ed41294261e7dc07313a2d93a6874878
 SHA1 (patch-src_lib_platform_XWindowsKeyState.cpp) = 8c7715c4c569a180f825946e11b2b3967b9c84c1
 SHA1 (patch-src_lib_platform_XWindowsPowerManager.cpp) = 630c648cf31aea19d4b8ccd4f200c96401157459
 SHA1 (patch-src_lib_server_Config.cpp) = dc6a00fd33e71480a5f002cf15b8f876143f82a3
+SHA1 (patch-src_lib_synergy_unix_AppUtilUnix.cpp) = 63b6329203ebd1be011e378c5766746fd0c26ce2
