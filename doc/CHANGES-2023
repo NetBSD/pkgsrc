@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1901 2023/03/28 12:42:29 gdt Exp $
+$NetBSD: CHANGES-2023,v 1.1902 2023/03/28 13:02:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2462,3 +2462,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated finance/gnucash-docs to 4.14 [wiz 2023-03-27]
 	Updated filesystems/glusterfs to 10.3nb2 [gutteridge 2023-03-28]
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2023Q1 branch [gdt 2022-03-28]
+	Updated databases/sqlite3 to 3.41.2 [adam 2023-03-28]
+	Updated databases/sqlite3-docs to 3.41.2 [adam 2023-03-28]
+	Updated databases/sqlite3-tcl to 3.41.2 [adam 2023-03-28]
+	Updated devel/lemon to 1.0.3.41.2 [adam 2023-03-28]
