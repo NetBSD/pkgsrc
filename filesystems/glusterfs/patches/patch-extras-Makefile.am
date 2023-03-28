@@ -1,0 +1,31 @@
+$NetBSD: patch-extras-Makefile.am,v 1.1 2023/03/28 01:10:53 gutteridge Exp $
+
+Move config file examples into datadir/config.
+
+--- extras/Makefile.am.orig	2023-03-26 21:13:51.077824013 +0200
++++ extras/Makefile.am	2023-03-26 22:06:51.601849285 +0200
+@@ -14,7 +14,7 @@
+           $(GEOREP_EXTRAS_SUBDIR) snap_scheduler firewalld cliutils python \
+ 		  ganesha
+ 
+-confdir = $(sysconfdir)/glusterfs
++confdir = $(datadir)
+ if WITH_SERVER
+ conf_DATA = glusterfs-logrotate gluster-rsyslog-7.2.conf gluster-rsyslog-5.8.conf \
+ 	    logger.conf.example glusterfs-georep-logrotate group-virt.example \
+@@ -22,13 +22,13 @@
+ 	    group-db-workload group-distributed-virt group-samba
+ endif
+ 
+-voldir = $(sysconfdir)/glusterfs
++voldir = $(datadir)
+ vol_DATA = thin-arbiter/thin-arbiter.vol
+ if WITH_SERVER
+ vol_DATA += glusterd.vol
+ endif
+ 
+-scriptsdir = $(datadir)/glusterfs/scripts
++scriptsdir = $(datadir)/../../glusterfs/scripts
+ scripts_SCRIPTS = thin-arbiter/setup-thin-arbiter.sh
+ if WITH_SERVER
+ scripts_SCRIPTS += post-upgrade-script-for-quota.sh \

@@ -1,0 +1,15 @@
+$NetBSD: patch-events-src-Makefile.am,v 1.1 2023/03/28 01:10:53 gutteridge Exp $
+
+Move config file examples into datadir/config.
+
+--- events/src/Makefile.am.orig	2023-03-26 20:21:30.925479702 +0200
++++ events/src/Makefile.am	2023-03-26 20:23:29.931392874 +0200
+@@ -18,7 +18,7 @@
+ 
+ if BUILD_EVENTS
+ eventspeerscriptdir = $(GLUSTERFS_LIBEXECDIR)
+-eventsconfdir = $(sysconfdir)/glusterfs
++eventsconfdir = $(datadir)
+ eventsconf_DATA = eventsconfig.json
+ 
+ events_PYTHON += handlers.py
