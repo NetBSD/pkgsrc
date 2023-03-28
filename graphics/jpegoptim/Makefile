@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2023/02/11 07:49:55 adam Exp $
+# $NetBSD: Makefile,v 1.26 2023/03/28 14:02:59 fcambus Exp $
 
-DISTNAME=	jpegoptim-1.5.2
+DISTNAME=	jpegoptim-1.5.3
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.kokkonen.net/tjko/src/
 
