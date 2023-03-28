@@ -1,0 +1,14 @@
+$NetBSD: patch-events-tools-Makefile.am,v 1.1 2023/03/28 01:10:53 gutteridge Exp $
+
+Move config file examples into datadir/config.
+
+--- ./events/tools/Makefile.am.orig	2023-03-26 22:02:34.114370386 +0200
++++ ./events/tools/Makefile.am	2023-03-26 22:04:34.696253263 +0200
+@@ -1,6 +1,6 @@
+ EXTRA_DIST = eventsdash.py
+ 
+ if BUILD_EVENTS
+-scriptsdir = $(datadir)/glusterfs/scripts
++scriptsdir = $(datadir)/../../glusterfs/scripts
+ scripts_SCRIPTS = eventsdash.py
+ endif

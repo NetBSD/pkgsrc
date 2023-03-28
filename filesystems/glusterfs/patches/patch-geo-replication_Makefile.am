@@ -1,0 +1,13 @@
+$NetBSD: patch-geo-replication_Makefile.am,v 1.1 2023/03/28 01:10:53 gutteridge Exp $
+
+Move config file examples into datadir/config.
+
+--- geo-replication/Makefile.am.orig	2023-03-26 21:48:57.832695826 +0200
++++ geo-replication/Makefile.am	2023-03-26 21:49:19.972307456 +0200
+@@ -4,5 +4,5 @@
+ 
+ EXTRA_DIST = gsyncd.conf.in
+ 
+-gsyncdconfdir = $(sysconfdir)/glusterfs/
++gsyncdconfdir = $(datadir)
+ gsyncdconf_DATA = gsyncd.conf
