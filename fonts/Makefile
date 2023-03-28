@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.400 2023/02/25 18:37:00 nikita Exp $
+# $NetBSD: Makefile,v 1.401 2023/03/28 13:30:30 joerg Exp $
 #
 
 COMMENT=	Fonts
@@ -32,6 +32,7 @@ SUBDIR+=	afm2pl
 SUBDIR+=	akkadian-ttf
 SUBDIR+=	alee-ttf
 SUBDIR+=	altmeister-otf
+SUBDIR+=	amiri-ttf
 SUBDIR+=	anatolian-ttf
 SUBDIR+=	anjalioldlipi-ttf
 SUBDIR+=	arphic-ttf
@@ -117,6 +118,7 @@ SUBDIR+=	freefont-ttf
 SUBDIR+=	freefonts
 SUBDIR+=	gbdfed
 SUBDIR+=	gentium-ttf
+SUBDIR+=	gentiumplus-ttf
 SUBDIR+=	geoslab703-ttf
 SUBDIR+=	ghostscript-cidfonts
 SUBDIR+=	ghostscript-cidfonts-ryumin
