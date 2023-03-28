@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2023/01/29 21:15:31 ryoon Exp $
+# $NetBSD: Makefile,v 1.18 2023/03/28 20:33:56 pin Exp $
 
-DISTNAME=	spotify-qt-3.9
-PKGREVISION=	2
+DISTNAME=	spotify-qt-3.10
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kraxarn/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,7 +11,7 @@ COMMENT=	Lightweight Spotify client using Qt
 LICENSE=	gnu-gpl-v3
 
 USE_CMAKE=	yes
-USE_LANGUAGES=	c++
+USE_LANGUAGES=	c c++
 
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	..
