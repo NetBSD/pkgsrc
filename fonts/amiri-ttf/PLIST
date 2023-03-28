@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2023/03/28 13:21:07 joerg Exp $
+share/fonts/X11/TTF/Amiri-Bold.ttf
+share/fonts/X11/TTF/Amiri-BoldItalic.ttf
+share/fonts/X11/TTF/Amiri-Italic.ttf
+share/fonts/X11/TTF/Amiri-Regular.ttf
+share/fonts/X11/TTF/AmiriQuran.ttf
+share/fonts/X11/TTF/AmiriQuranColored.ttf
