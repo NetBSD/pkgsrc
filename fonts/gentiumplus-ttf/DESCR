@@ -1,0 +1,16 @@
+Gentium ("belonging to the nations" in Latin) is a Unicode typeface
+family  designed to enable the many diverse ethnic groups around the
+world who use  the Latin script to produce readable, high-quality
+publications. The  design is intended to be highly readable, reasonably
+compact, and visually  attractive. Gentium has won a "Certificate of
+Excellence in Typeface  Design" in two major international typeface
+design competitions:  bukva:raz! (2001), TDC2003 (2003). The Gentium Plus
+font family is based on this original design.
+
+This project is intended to provide a free and open font family for all
+current languages and writing systems that use Latin and Cyrillic
+scripts. It supports almost the complete range of Unicode characters for
+these scripts, including a comprehensive range of diacritics and a large
+set of symbols useful for linguistics and literacy work. Smart font
+routines automatically adjust the position of diacritics to support and
+optimize arbitrary base+diacritic combinations.
