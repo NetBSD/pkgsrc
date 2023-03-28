@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/03/28 13:21:07 joerg Exp $
+
+BLAKE2s (Amiri-1.000.zip) = 908a45a1c2771563158ebb3f7cdbefdee5c11d8b5c4e55296b48e157d868d73b
+SHA512 (Amiri-1.000.zip) = 9179e6dc1a74c547b4028d7fdf965d76b02ef3621d70db8ec6ee01f3c3e6ea1abc1b26b7315af0fa27e2c642e96948de45dc85f77b255db050ecddf469ceddf3
+Size (Amiri-1.000.zip) = 1039502 bytes
