@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/03/28 13:48:23 joerg Exp $
+
+BLAKE2s (GentiumBasic_1102.zip) = 898f7c9312c09f88efd9dde54d0d525b9b536cf9cbafffdb73d2c1d7dd334628
+SHA512 (GentiumBasic_1102.zip) = 2fa01482dd74fcb62176317f7dcda504472f28f7eda22882903e4e71272743228e5b9d7614fb554e6bd390c0dbcfd8a31dcdbb29a7f54266f376ff2ee376178f
+Size (GentiumBasic_1102.zip) = 811606 bytes

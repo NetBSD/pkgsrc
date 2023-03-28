@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2023/03/28 13:48:22 joerg Exp $
+share/fonts/X11/TTF/GenBasB.ttf
+share/fonts/X11/TTF/GenBasBI.ttf
+share/fonts/X11/TTF/GenBasI.ttf
+share/fonts/X11/TTF/GenBasR.ttf
+share/fonts/X11/TTF/GenBkBasB.ttf
+share/fonts/X11/TTF/GenBkBasBI.ttf
+share/fonts/X11/TTF/GenBkBasI.ttf
+share/fonts/X11/TTF/GenBkBasR.ttf
