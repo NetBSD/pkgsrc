@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2023/03/28 13:27:37 joerg Exp $
+share/fonts/X11/TTF/GentiumBookPlus-Bold.ttf
+share/fonts/X11/TTF/GentiumBookPlus-BoldItalic.ttf
+share/fonts/X11/TTF/GentiumBookPlus-Italic.ttf
+share/fonts/X11/TTF/GentiumBookPlus-Regular.ttf
+share/fonts/X11/TTF/GentiumPlus-Bold.ttf
+share/fonts/X11/TTF/GentiumPlus-BoldItalic.ttf
+share/fonts/X11/TTF/GentiumPlus-Italic.ttf
+share/fonts/X11/TTF/GentiumPlus-Regular.ttf
