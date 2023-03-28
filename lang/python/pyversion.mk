@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.147 2023/03/25 18:29:44 gdt Exp $
+# $NetBSD: pyversion.mk,v 1.148 2023/03/28 19:57:06 wiz Exp $
 
 # This file should be included by packages as a way to depend on
 # python when none of the other methods are appropriate, e.g. a
@@ -54,17 +54,23 @@
 #
 # === Defined variables ===
 #
+# PYTHON_VERSION
+#	Version of python that will be used in this build, as
+#	a three-digit number of major_version * 100 + minor_version.
+#
+#	Examples: 207, 309, 310
+#
 # PYPKGPREFIX
 #	The prefix to use in PKGNAME for extensions which are meant
 #	to be installed for multiple Python versions.
 #
-#	Example: py27
+#	Example: py310
 #
 # PYVERSSUFFIX
 #	The suffix to executables and in the library path, equal to
 #	sys.version[0:3].
 #
-#	Example: 2.7
+#	Example: 3.10
 #
 # Keywords: python
 #
@@ -139,9 +145,14 @@ MULTI+=	PYTHON_VERSION_REQD=${_PYTHON_VERSION}
 # No supported version found, annotate to simplify statements below.
 .if !defined(_PYTHON_VERSION)
 _PYTHON_VERSION=	none
+# since no supported version is found and no build will happen,
+# choose a numeric default
+PYTHON_VERSION=		0
 PKG_FAIL_REASON+=	"No valid Python version"
 PYPKGPREFIX=		none
 PYVERSSUFFIX=		none
+.else
+PYTHON_VERSION=		${_PYTHON_VERSION:C/^(.)(.)$/\10\2/}
 .endif
 
 # Additional CONFLICTS
@@ -240,7 +251,7 @@ _PKG_VARS.pyversion=	\
 	PYTHON_VERSIONS_ACCEPTED PYTHON_VERSIONS_INCOMPATIBLE		\
 	PYTHON_SELF_CONFLICT PYTHON_FOR_BUILD_ONLY USE_CMAKE BUILD_USES_CMAKE
 _SYS_VARS.pyversion=	\
-	PYTHON_VERSION_REQD PYPACKAGE PYVERSSUFFIX PYPKGSRCDIR		\
+	PYTHON_VERSION PYTHON_VERSION_REQD PYPACKAGE PYVERSSUFFIX PYPKGSRCDIR		\
 	PYPKGPREFIX PYTHONBIN PYTHONCONFIG PY_COMPILE_ALL		\
 	PY_COMPILE_O_ALL PYINC PYLIB PYSITELIB CMAKE_ARGS
 _USE_VARS.pyversion=	\
