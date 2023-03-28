@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1900 2023/03/28 01:11:11 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.1901 2023/03/28 12:42:29 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2461,3 +2461,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated finance/gnucash to 4.14 [wiz 2023-03-26]
 	Updated finance/gnucash-docs to 4.14 [wiz 2023-03-27]
 	Updated filesystems/glusterfs to 10.3nb2 [gutteridge 2023-03-28]
+	mk/bsd.pkg.mk: freeze ended for pkgsrc-2023Q1 branch [gdt 2022-03-28]
