@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1907 2023/03/28 13:50:57 joerg Exp $
+$NetBSD: CHANGES-2023,v 1.1908 2023/03/28 14:03:10 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2473,3 +2473,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/cmake to 3.26.1 [adam 2023-03-28]
 	Updated devel/cmake-gui to 3.26.1 [adam 2023-03-28]
 	Updated fonts/gentiumbasic-ttf to 1.102 [joerg 2023-03-28]
+	Updated graphics/jpegoptim to 1.5.3 [fcambus 2023-03-28]
