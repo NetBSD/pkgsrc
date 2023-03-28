@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1915 2023/03/28 20:34:19 pin Exp $
+$NetBSD: CHANGES-2023,v 1.1916 2023/03/28 20:35:44 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2482,3 +2482,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated archivers/arqiver to 0.11.0 [pin 2023-03-28]
 	Updated sysutils/broot to 1.21.1 [pin 2023-03-28]
 	Updated audio/spotify-qt to 3.10 [pin 2023-03-28]
+	Updated graphics/oculante to 0.6.56 [pin 2023-03-28]
