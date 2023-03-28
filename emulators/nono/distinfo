@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.19 2023/02/13 21:45:26 jun Exp $
+$NetBSD: distinfo,v 1.20 2023/03/28 22:50:26 jun Exp $
 
-BLAKE2s (nono-0.5.1.tar.gz) = 1893cdf707e3df715251affa61608ecac994ba3ed61b3536de3fc592db121c40
-SHA512 (nono-0.5.1.tar.gz) = 0b3d027ddbe3243a591e4b8f9b05959dae0ba74db5209f882ee1b5eeefa7f31e5e5e7fde081b92fbcfda098f1b9d51264403b24cd437b814e555058803f7094f
-Size (nono-0.5.1.tar.gz) = 3129008 bytes
+BLAKE2s (nono-0.6.0.tar.gz) = 9d4186c500b0a1bc4e3345d704ea08e61864022c7a969ad42e9d259d9e7a822d
+SHA512 (nono-0.6.0.tar.gz) = fe34dc7e18ffbaaa2192e0ee679deb626bb52d7b3922c38022bcff3681b211940516a426cb44fb1940c4d073e1e66604013b347659f432e2c4da108b527e174d
+Size (nono-0.6.0.tar.gz) = 3163699 bytes
 SHA1 (patch-cli_Makefile) = a9597bc1c8c5376ea78c35415abae4bab7c086f3
 SHA1 (patch-po_Makefile) = 76a7d30858d1afd27fcfed512f00bfb4b9dd0f13
 SHA1 (patch-wx_Makefile.in) = 982a4cff11d453bdb7924d05c81173b7c43ad010
