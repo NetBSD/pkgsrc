@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1905 2023/03/28 13:28:29 joerg Exp $
+$NetBSD: CHANGES-2023,v 1.1906 2023/03/28 13:31:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2469,3 +2469,6 @@ Changes to the packages collection and infrastructure in 2023:
 	Added fonts/amiri-ttf to 1.000 [joerg 2023-03-28]
 	Updated fonts/gentium-ttf to 1.03 [joerg 2023-03-28]
 	Added fonts/gentiumplus-ttf version 6.200 [joerg 2023-03-28]
+	Updated multimedia/mkvtoolnix to 75.0.0 [adam 2023-03-28]
+	Updated devel/cmake to 3.26.1 [adam 2023-03-28]
+	Updated devel/cmake-gui to 3.26.1 [adam 2023-03-28]
