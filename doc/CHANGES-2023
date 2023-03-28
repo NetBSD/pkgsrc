@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1917 2023/03/28 20:37:04 pin Exp $
+$NetBSD: CHANGES-2023,v 1.1918 2023/03/28 22:51:34 jun Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2484,3 +2484,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated audio/spotify-qt to 3.10 [pin 2023-03-28]
 	Updated graphics/oculante to 0.6.56 [pin 2023-03-28]
 	Updated net/trippy to 0.7.0 [pin 2023-03-28]
+	Updated emulators/nono to 0.6.0 [jun 2023-03-29]
