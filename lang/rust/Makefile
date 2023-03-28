@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.277 2023/01/23 18:49:03 he Exp $
+# $NetBSD: Makefile,v 1.278 2023/03/28 09:06:15 mef Exp $
 
 DISTNAME=	rustc-1.66.1-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -175,6 +175,10 @@ CHECK_INTERPRETER_SKIP+=	lib/rustlib/src/rust/library/stdarch/ci/dox.sh
 #
 # If we aren't on 9-current, and are on 8.x or 9.x, avoid parallel.
 # \todo Consider avoiding setting this on netbsd-9 past the fix.
+# Release 9.x and 9.1 or later is OK
+.  if ${OPSYS} == "NetBSD" &&  090099 < ${OPSYS_VERSION} && ${OPSYS_VERSION} < 090900
+MAKE_JOBS_SAFE?=	yes
+.  endif
 .  if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 099957
 MAKE_JOBS_SAFE?=	no
 .  endif
