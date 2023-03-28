@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1899 2023/03/27 07:16:45 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1900 2023/03/28 01:11:11 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2460,3 +2460,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated time/p5-DateTime-TimeZone to 2.58 [gutteridge 2023-03-26]
 	Updated finance/gnucash to 4.14 [wiz 2023-03-26]
 	Updated finance/gnucash-docs to 4.14 [wiz 2023-03-27]
+	Updated filesystems/glusterfs to 10.3nb2 [gutteridge 2023-03-28]
