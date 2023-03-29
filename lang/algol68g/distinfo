@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.15 2023/01/16 05:00:57 dholland Exp $
+$NetBSD: distinfo,v 1.16 2023/03/29 10:11:12 rhialto Exp $
 
-BLAKE2s (algol68g-3.1.2.tar.gz) = 71fea9f77119a90c928475cb6f4465a1af5350871c16b572eca76db7d810566b
-SHA512 (algol68g-3.1.2.tar.gz) = 12ce45c24412be3f5de1a3dec1b8b5ea8c6caaac30bd7e7ba26442139988ea05fa7c593dc961d73a2ad9b0b965d1df61aedf8265be9f2ea86ff4f2ad6f5368c9
-Size (algol68g-3.1.2.tar.gz) = 615054 bytes
-SHA1 (patch-src_a68g_a68g.c) = 3dcee4e2343dc6305b000933bea685820d7cacdc
-SHA1 (patch-src_a68g_options.c) = 35d53f40b5874f0169a49641e73cbcc71dd143a0
+BLAKE2s (algol68g-3.1.4.tar.gz) = 1812f1ebdaf6562aaafa6bc5671dbeeab68a1003be81528306fc23f63baf9697
+SHA512 (algol68g-3.1.4.tar.gz) = 3d8522edc5ed721c7b4fc5534fc3db350ca5a33cbbd8aa6b8c6a4840cd90ba415ca01ba0e6d6573a4cedfd9f72a294bbe56252b161b97fcc9596386692cc9170
+Size (algol68g-3.1.4.tar.gz) = 618962 bytes
+SHA1 (patch-src_a68g_a68g-options.c) = bd659a155d0a6ee835e42868a0eaac9c4a7d9824
