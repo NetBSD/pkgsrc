@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1939 2023/03/29 12:07:27 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1940 2023/03/29 12:46:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2512,3 +2512,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated multimedia/libva to 2.18.0 [wiz 2023-03-29]
 	Updated finance/gnucash to 5.0 [wiz 2023-03-29]
 	Updated finance/gnucash-docs to 5.0 [wiz 2023-03-29]
+	Updated x11/modular-xorg-server to 21.1.7nb1 [wiz 2023-03-29]
