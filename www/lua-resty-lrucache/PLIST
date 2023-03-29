@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2023/03/29 08:29:57 adam Exp $
+share/luajit-2.0.5/resty/lrucache.lua
+share/luajit-2.0.5/resty/lrucache/pureffi.lua
