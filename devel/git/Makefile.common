@@ -1,7 +1,8 @@
-# $NetBSD: Makefile.common,v 1.6 2017/08/16 20:21:06 wiz Exp $
+# $NetBSD: Makefile.common,v 1.7 2023/03/29 16:32:36 schmonz Exp $
 #
 # used by devel/git-base/Makefile
 # used by devel/git-contrib/Makefile
+# used by devel/git-credential-osxkeychain/Makefile
 # used by devel/git-docs/Makefile
 # used by devel/git-gitk/Makefile
 # used by www/gitweb/Makefile
