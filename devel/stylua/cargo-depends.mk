@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.1 2023/01/09 17:48:34 nikita Exp $
+# $NetBSD: cargo-depends.mk,v 1.2 2023/03/29 19:27:25 nikita Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-0.7.18
 CARGO_CRATE_DEPENDS+=	anyhow-1.0.53
@@ -29,11 +29,12 @@ CARGO_CRATE_DEPENDS+=	derive_more-0.99.16
 CARGO_CRATE_DEPENDS+=	difflib-0.4.0
 CARGO_CRATE_DEPENDS+=	doc-comment-0.3.3
 CARGO_CRATE_DEPENDS+=	dtoa-0.4.8
+CARGO_CRATE_DEPENDS+=	ec4rs-1.0.1
 CARGO_CRATE_DEPENDS+=	either-1.6.1
 CARGO_CRATE_DEPENDS+=	encode_unicode-0.3.6
 CARGO_CRATE_DEPENDS+=	env_logger-0.9.0
 CARGO_CRATE_DEPENDS+=	fnv-1.0.7
-CARGO_CRATE_DEPENDS+=	full_moon-0.16.2
+CARGO_CRATE_DEPENDS+=	full_moon-0.17.0
 CARGO_CRATE_DEPENDS+=	full_moon_derive-0.11.0
 CARGO_CRATE_DEPENDS+=	globset-0.4.8
 CARGO_CRATE_DEPENDS+=	half-1.7.1
