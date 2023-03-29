@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/04/27 11:55:12 adam Exp $
+# $NetBSD: Makefile,v 1.6 2023/03/29 09:34:08 wiz Exp $
 
 DISTNAME=	mando-0.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,8 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 .include "../../lang/python/pyversion.mk"
-.if ${_PYTHON_VERSION} == 27
+
+.if ${PYTHON_VERSION} == 207
 DEPENDS+=	${PYPKGPREFIX}-funcsigs-[0-9]*:../../devel/py-funcsigs
 .endif
 

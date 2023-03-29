@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/01/04 20:54:54 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2023/03/29 09:34:13 wiz Exp $
 
 DISTNAME=	diff-match-patch-20200713
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,7 +17,7 @@ USE_LANGUAGES=	# none
 
 .include "../../lang/python/pyversion.mk"
 do-test:
-.if ${_PYTHON_VERSION} == 27
+.if ${PYTHON_VERSION} == 207
 	cd ${WRKSRC} && ${PYTHONBIN} diff_match_patch/tests/diff_match_patch_test_py2.py
 .else
 	cd ${WRKSRC} && ${PYTHONBIN} diff_match_patch/tests/diff_match_patch_test.py

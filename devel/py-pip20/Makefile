@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/01/05 20:47:35 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2023/03/29 09:34:08 wiz Exp $
 
 DISTNAME=	pip-20.3.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -22,7 +22,7 @@ PYTHON_VERSIONS_ACCEPTED=	27
 USE_PKG_RESOURCES=	yes
 
 .include "../../lang/python/pyversion.mk"
-FILES_SUBST+=  PYMAJORVERSION=${_PYTHON_VERSION:C/^([0-9]).*/\1/}
+FILES_SUBST+=  PYMAJORVERSION=${PYTHON_VERSION:C/^([0-9]).*/\1/}
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${RM} -f pip pip[2-3]

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2020/06/30 18:49:56 nia Exp $
+# $NetBSD: options.mk,v 1.10 2023/03/29 09:34:10 wiz Exp $
 
 PKG_SUPPORTED_OPTIONS+=	ruby python perl lua luajit
 PKG_OPTIONS_VAR=	PKG_OPTIONS.vim
@@ -13,7 +13,7 @@ CONFIGURE_ENV+=		vi_cv_path_ruby=${RUBY}
 
 .if !empty(PKG_OPTIONS:Mpython)
 .include "../../lang/python/pyversion.mk"
-.  if empty(_PYTHON_VERSION:M3*)
+.  if empty(PYTHON_VERSION:M3*)
 CONFIGURE_ARGS+=	--enable-pythoninterp
 CONFIGURE_ARGS+=	--with-python-command=${PYTHONBIN}
 .  else

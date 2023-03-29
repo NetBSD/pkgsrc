@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2022/10/18 08:50:08 adam Exp $
+# $NetBSD: Makefile,v 1.12 2023/03/29 09:34:15 wiz Exp $
 
 DISTNAME=	h11-0.14.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,8 @@ USE_LANGUAGES=	# none
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
-.if ${_PYTHON_VERSION} < 38
+
+.if ${PYTHON_VERSION} < 308
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>0:../../devel/py-typing-extensions
 .endif
 

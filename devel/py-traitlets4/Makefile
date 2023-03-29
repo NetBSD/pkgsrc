@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/01/09 11:58:14 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2023/03/29 09:34:10 wiz Exp $
 
 DISTNAME=	traitlets-4.3.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,7 +16,8 @@ DEPENDS+=	${PYPKGPREFIX}-ipython_genutils-[0-9]*:../../devel/py-ipython_genutils
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
 .include "../../lang/python/pyversion.mk"
-.if ${_PYTHON_VERSION} == 27
+
+.if ${PYTHON_VERSION} == 207
 DEPENDS+=	${PYPKGPREFIX}-enum34-[0-9]*:../../devel/py-enum34
 .endif
 
