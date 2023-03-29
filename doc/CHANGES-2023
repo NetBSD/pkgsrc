@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1925 2023/03/29 08:32:50 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1926 2023/03/29 08:37:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2495,3 +2495,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Added www/lua-resty-core version 0.1.26 [adam 2023-03-29]
 	Added www/lua-resty-lrucache version 0.13 [adam 2023-03-29]
 	Updated textproc/bat to 0.23.0 [wiz 2023-03-29]
+	Updated www/nginx-devel to 1.23.4 [adam 2023-03-29]
+	Updated www/nginx to 1.22.1nb6 [adam 2023-03-29]
