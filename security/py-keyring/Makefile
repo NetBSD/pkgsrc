@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2023/03/12 13:58:25 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2023/03/29 09:04:02 wiz Exp $
 
 DISTNAME=	keyring-23.13.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -26,10 +26,10 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
 
-.if ${PYPKGPREFIX} == "py37" || ${PYPKGPREFIX} == "py38" || ${PYPKGPREFIX} == "py39" || ${PYPKGPREFIX} == "py310" || ${PYPKGPREFIX} == "py311"
+.if ${PYTHON_VERSION} < 312
 DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=4.11.4:../../devel/py-importlib-metadata
 .endif
-.if ${PYPKGPREFIX} == "py37" || ${PYPKGPREFIX} == "py38"
+.if ${PYTHON_VERSION} < 309
 DEPENDS+=	${PYPKGPREFIX}-importlib-resources>=0:../../devel/py-importlib-resources
 .endif
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2022/09/18 11:53:56 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2023/03/29 09:04:02 wiz Exp $
 
 DISTNAME=	cyclonedx-python-lib-3.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -20,7 +20,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
 
-.if ${PYPKGPREFIX} == "py37"
+.if ${PYTHON_VERSION} == 307
 DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=3.4:../../devel/py-importlib-metadata
 .endif
 
