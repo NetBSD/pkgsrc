@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/03/29 15:29:41 joerg Exp $
+
+BLAKE2s (luacheck-0.23.0.tar.gz) = bfc1e907a858f3c3c170cdf913102df5be2f0f0d8fa03ada4987bdd297680225
+SHA512 (luacheck-0.23.0.tar.gz) = d76e4b22f1e9d868a8531ad51fb98607e5bfb1fbbd55053105d9978ba6c0455de99202c53d4e199733ea997863b26527fb84e7e9717209fd588f1d02db9db028
+Size (luacheck-0.23.0.tar.gz) = 158201 bytes
