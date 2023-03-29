@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1919 2023/03/29 04:31:22 adam Exp $
+$NetBSD: CHANGES-2023,v 1.1920 2023/03/29 07:12:46 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2487,3 +2487,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated emulators/nono to 0.6.0 [jun 2023-03-29]
 	Updated www/nghttp3 to 0.10.0 [adam 2023-03-29]
 	Updated net/ngtcp2 to 0.14.0 [adam 2023-03-29]
+	Updated pkgtools/pkglint to 23.1.0 [rillig 2023-03-29]
