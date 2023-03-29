@@ -1,4 +1,4 @@
-# $NetBSD: subst.mk,v 1.106 2022/11/23 10:53:14 jperkin Exp $
+# $NetBSD: subst.mk,v 1.107 2023/03/29 10:57:16 rillig Exp $
 #
 # The subst framework replaces text in one or more files in the WRKSRC
 # directory. Packages can define several ``classes'' of replacements.
@@ -39,9 +39,9 @@
 #	A list of file patterns on which to run the substitution;
 #	the filenames are either absolute or relative to ${WRKSRC}.
 #
-#	Starting with 2020Q1, it is an error if any of these patterns
-#	has no effect at all, to catch typos and outdated definitions.
-#	To prevent this, see SUBST_NOOP_OK.<class> below.
+#	It is an error if any of these patterns has no effect at all, to
+#	catch typos and outdated definitions.  To prevent this, see
+#	SUBST_NOOP_OK.<class> below.
 #
 #	In most cases the filename patterns are given directly.
 #	If that is not flexible enough, use the :sh variable modifier.
