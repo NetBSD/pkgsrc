@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1950 2023/03/29 19:27:36 nikita Exp $
+$NetBSD: CHANGES-2023,v 1.1951 2023/03/29 19:31:50 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2526,3 +2526,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/erdtree to 1.6.0 [pin 2023-03-29]
 	Updated graphics/oculante to 0.6.57 [pin 2023-03-29]
 	Updated devel/stylua to 0.17.0 [nikita 2023-03-29]
+	Added fonts/gerb version 28 [pin 2023-03-29]
