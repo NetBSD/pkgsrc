@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/03/29 08:29:08 adam Exp $
+
+BLAKE2s (lua-resty-core-0.1.26.tar.gz) = e7dfd263caf3c9567d93e52313cb12d7f74b3220ec68c270e33cbf29c636389b
+SHA512 (lua-resty-core-0.1.26.tar.gz) = d15c5bfa051e1a8a7efe30dcac22ba581baf6b4d22ab608f7440461fb1b4502cc111a580460aff89d446eed9c8eed3764f88045b246b85816ba9d6e6934af195
+Size (lua-resty-core-0.1.26.tar.gz) = 187646 bytes
