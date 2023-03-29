@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2022/11/14 08:43:05 adam Exp $
+# $NetBSD: Makefile,v 1.12 2023/03/29 09:34:08 wiz Exp $
 
 DISTNAME=	pep517-0.13.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -20,7 +20,8 @@ NO_BUILD=	yes
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
-.if ${_PYTHON_VERSION} < 311
+
+.if ${PYTHON_VERSION} < 311
 DEPENDS+=	${PYPKGPREFIX}-tomli>=1.1.0:../../textproc/py-tomli
 .endif
 

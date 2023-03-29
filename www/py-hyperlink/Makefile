@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2022/06/28 11:37:49 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2023/03/29 09:34:15 wiz Exp $
 
 DISTNAME=	hyperlink-21.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,8 +12,10 @@ COMMENT=	Featureful, correct URL for Python
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-idna>=2.5:../../www/py-idna
+
 .include "../../lang/python/pyversion.mk"
-.if ${_PYTHON_VERSION} == 27
+
+.if ${PYTHON_VERSION} == 207
 DEPENDS+=	${PYPKGPREFIX}-typing-[0-9]*:../../devel/py-typing
 .endif
 
