@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2023/03/29 16:31:50 schmonz Exp $
+libexec/git-core/git-credential-osxkeychain
