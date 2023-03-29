@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2023/03/01 18:20:23 adam Exp $
+# $NetBSD: Makefile,v 1.2 2023/03/29 10:47:50 adam Exp $
 
-DISTNAME=	bandit-1.7.4
+DISTNAME=	bandit-1.7.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/bandit/}
@@ -12,8 +12,10 @@ LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-pbr>=2.0.0:../../devel/py-pbr
 DEPENDS+=	${PYPKGPREFIX}-gitpython>=1.0.1:../../devel/py-gitpython
+DEPENDS+=	${PYPKGPREFIX}-rich-[0-9]*:../../comms/py-rich
 DEPENDS+=	${PYPKGPREFIX}-stevedore>=1.20.0:../../devel/py-stevedore
 DEPENDS+=	${PYPKGPREFIX}-yaml>=5.3.1:../../textproc/py-yaml
+TEST_DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4>=4.8.0:../../www/py-beautifulsoup4
 TEST_DEPENDS+=	${PYPKGPREFIX}-testscenarios>=0.5.0:../../devel/py-testscenarios
 TEST_DEPENDS+=	${PYPKGPREFIX}-testtools>=2.3.0:../../devel/py-testtools
 
