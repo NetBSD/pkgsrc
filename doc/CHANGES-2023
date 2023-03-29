@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1945 2023/03/29 15:34:12 joerg Exp $
+$NetBSD: CHANGES-2023,v 1.1946 2023/03/29 16:31:59 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2521,3 +2521,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/mtools to 4.0.43 [rhialto 2023-03-29]
 	Added devel/lua-check version 0.23.0 [joerg 2023-03-29]
 	Added fonts/libertinus-ttf version 7.040 [joerg 2023-03-29]
+	Added devel/git-credential-osxkeychain version 2.40.0 [schmonz 2023-03-29]
