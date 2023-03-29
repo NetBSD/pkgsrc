@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.23 2021/10/26 11:25:11 nia Exp $
+$NetBSD: distinfo,v 1.24 2023/03/29 08:51:30 rhialto Exp $
 
-BLAKE2s (ctwm-4.0.3.tar.xz) = fe0a2107e13d439474d849bc5f629502f2b95b580ec4823830ab0b31a886a2ec
-SHA512 (ctwm-4.0.3.tar.xz) = f9bb2f8f28a050cce0fc2f1f4e00e79acd7c54055016d8483e045d8f5fa9829f8f5d92bb53f0c1d9500f97d6f52cd827ddd15515c84451ea03551025a8ab831d
-Size (ctwm-4.0.3.tar.xz) = 683684 bytes
+BLAKE2s (ctwm-4.1.0.tar.xz) = a5b88746508ffedb29d4bcde21863469420e021c6380033ea770f6ae00f7db8f
+SHA512 (ctwm-4.1.0.tar.xz) = 7273769d7cc0039ed809d359aced5d4462f6731ae0b0036d9e0b98f263f187c23ee5a6bf531311f3696336024ac1c1e786941bb1c003a6916699a240daa6d0d1
+Size (ctwm-4.1.0.tar.xz) = 719364 bytes
