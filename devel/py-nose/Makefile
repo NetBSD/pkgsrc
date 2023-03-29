@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2022/08/24 09:25:56 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2023/03/29 09:04:02 wiz Exp $
 
 DISTNAME=	nose-1.3.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -25,7 +25,7 @@ post-install:
 
 .include "../../lang/python/egg.mk"
 
-.if ${PYPKGPREFIX} == "py27"
+.if ${PYTHON_VERSION} == 207
 # only work with python 2.x
 do-test:
 	${RUN} cd ${WRKSRC}; ${SETENV} ${TEST_ENV} ${PYTHONBIN} selftest.py
