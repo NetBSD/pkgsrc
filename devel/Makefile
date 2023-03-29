@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3939 2023/03/29 15:30:39 joerg Exp $
+# $NetBSD: Makefile,v 1.3940 2023/03/29 16:31:53 schmonz Exp $
 #
 
 COMMENT=	Development utilities
@@ -406,6 +406,7 @@ SUBDIR+=	git-base
 SUBDIR+=	git-branchless
 SUBDIR+=	git-cliff
 SUBDIR+=	git-contrib
+SUBDIR+=	git-credential-osxkeychain
 SUBDIR+=	git-cvs
 SUBDIR+=	git-docs
 SUBDIR+=	git-filter-repo
