@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1920 2023/03/29 07:12:46 rillig Exp $
+$NetBSD: CHANGES-2023,v 1.1921 2023/03/29 07:46:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2488,3 +2488,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/nghttp3 to 0.10.0 [adam 2023-03-29]
 	Updated net/ngtcp2 to 0.14.0 [adam 2023-03-29]
 	Updated pkgtools/pkglint to 23.1.0 [rillig 2023-03-29]
+	Updated textproc/py-yamllint to 1.30.0 [adam 2023-03-29]
+	Updated sysutils/ansible-lint to 6.14.3 [adam 2023-03-29]
