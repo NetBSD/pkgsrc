@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2022/11/02 08:45:29 adam Exp $
+# $NetBSD: Makefile,v 1.11 2023/03/29 09:34:12 wiz Exp $
 
 DISTNAME=	moto-4.0.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -35,7 +35,8 @@ USE_PKG_RESOURCES=	yes
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
-.if ${_PYTHON_VERSION} == 37
+
+.if ${PYTHON_VERSION} == 307
 DEPENDS+=	${PYPKGPREFIX}-importlib-metadata-[0-9]*:../../devel/py-importlib-metadata
 .endif
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/10/06 13:07:19 gdt Exp $
+# $NetBSD: Makefile,v 1.4 2023/03/29 09:34:09 wiz Exp $
 
 # Do not update to 1.3.x without understanding the impacts of a change
 # that breaks at least some poetry-using programs.  -gdt
@@ -16,7 +16,8 @@ LICENSE=	mit
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
-.if ${_PYTHON_VERSION} < 38
+
+.if ${PYTHON_VERSION} < 308
 DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=1.7.0:../../devel/py-importlib-metadata
 .endif
 

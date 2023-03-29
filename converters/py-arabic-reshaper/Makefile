@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/11/18 06:06:02 adam Exp $
+# $NetBSD: Makefile,v 1.6 2023/03/29 09:34:04 wiz Exp $
 
 DISTNAME=	arabic_reshaper-2.1.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -13,7 +13,8 @@ LICENSE=	mit
 DEPENDS+=	${PYPKGPREFIX}-future-[0-9]*:../../devel/py-future
 
 .include "../../lang/python/pyversion.mk"
-.if ${_PYTHON_VERSION} == 27
+
+.if ${PYTHON_VERSION} == 207
 DEPENDS+=	${PYPKGPREFIX}-configparser-[0-9]*:../../devel/py-configparser
 .endif
 

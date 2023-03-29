@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2023/03/08 13:47:54 adam Exp $
+# $NetBSD: Makefile,v 1.22 2023/03/29 09:34:10 wiz Exp $
 
 DISTNAME=	asttokens-2.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,7 +19,8 @@ USE_LANGUAGES=	# none
 PYTHON_VERSIONED_DEPENDENCIES+=	pip:build setuptools_scm:build
 
 .include "../../lang/python/pyversion.mk"
-.if ${_PYTHON_VERSION} == 27
+
+.if ${PYTHON_VERSION} == 207
 DEPENDS+=	${PYPKGPREFIX}-typing-[0-9]*:../../devel/py-typing
 TEST_DEPENDS=	# none; test depends are incompatible to py27
 do-test:

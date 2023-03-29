@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2022/05/12 08:15:48 adam Exp $
+# $NetBSD: Makefile,v 1.8 2023/03/29 09:34:12 wiz Exp $
 
 DISTNAME=	pyu2f-0.1.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -20,7 +20,7 @@ USE_LANGUAGES=	# none
 
 .include "../../lang/python/pyversion.mk"
 
-.if ${_PYTHON_VERSION} != 27
+.if ${PYTHON_VERSION} != 207
 TEST_DEPENDS+=	${PYPKGPREFIX}-fakefs>=2.4:../../devel/py-fakefs
 .endif
 
