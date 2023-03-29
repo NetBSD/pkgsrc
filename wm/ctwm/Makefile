@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2019/11/04 21:50:15 rillig Exp $
+# $NetBSD: Makefile,v 1.40 2023/03/29 08:51:30 rhialto Exp $
 #
 
-DISTNAME=	ctwm-4.0.3
+DISTNAME=	ctwm-4.1.0
 CATEGORIES=	x11 wm
 MASTER_SITES=	http://ctwm.org/dist/
 EXTRACT_SUFX=	.tar.xz
@@ -28,6 +28,7 @@ CFLAGS.SunOS+=		-D__EXTENSIONS__
 
 # If M4_CMD is not set, it is autodetected as ${WRKDIR}/.tools/bin/m4
 CMAKE_ARGS+=		-DM4_CMD=${TOOLS_PATH.gm4}
+CMAKE_ARGS+=		-DMANDIR=${PREFIX}/${PKGMANDIR}
 CMAKE_ARG_PATH=		${WRKSRC}
 
 CONFIGURE_DIRS=		build
