@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3938 2023/03/24 07:10:37 wiz Exp $
+# $NetBSD: Makefile,v 1.3939 2023/03/29 15:30:39 joerg Exp $
 #
 
 COMMENT=	Development utilities
@@ -1021,6 +1021,7 @@ SUBDIR+=	lua-basexx
 SUBDIR+=	lua-binaryheap
 SUBDIR+=	lua-bit32
 SUBDIR+=	lua-busted
+SUBDIR+=	lua-check
 SUBDIR+=	lua-cliargs
 SUBDIR+=	lua-compat53
 SUBDIR+=	lua-cov
