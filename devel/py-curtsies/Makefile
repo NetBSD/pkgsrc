@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2022/10/13 16:43:42 adam Exp $
+# $NetBSD: Makefile,v 1.12 2023/03/29 09:34:06 wiz Exp $
 
 DISTNAME=	curtsies-0.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -21,7 +21,8 @@ USE_LANGUAGES=	# none
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
-.if ${_PYTHON_VERSION} < 38
+
+.if ${PYTHON_VERSION} < 308
 DEPENDS+=	${PYPKGPREFIX}-backports.cached-property-[0-9]*:../../devel/py-backports.cached-property
 .endif
 

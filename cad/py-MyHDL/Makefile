@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2022/05/05 07:11:55 nia Exp $
+# $NetBSD: Makefile,v 1.31 2023/03/29 09:34:04 wiz Exp $
 
 .include "Makefile.common"
 
@@ -13,7 +13,7 @@ PYTHON_VERSIONED_DEPENDENCIES=	test:test
 .include "../../lang/python/pyversion.mk"
 
 # Python 2.x only -- subprocess is part of Python 3.x
-.if ${_PYTHON_VERSION} < 32
+.if ${PYTHON_VERSION} == 207
 BUILD_DEPENDS+=	${PYPKGPREFIX}-subprocess32-[0-9]*:../../devel/py-subprocess32
 .endif
 

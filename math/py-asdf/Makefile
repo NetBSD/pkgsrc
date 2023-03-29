@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2022/08/29 16:20:19 thor Exp $
+# $NetBSD: Makefile,v 1.9 2023/03/29 09:34:11 wiz Exp $
 
 DISTNAME=	asdf-2.11.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -26,7 +26,8 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-numpy
 USE_PKG_RESOURCES=	yes
 
 .include "../../lang/python/pyversion.mk"
-.if ${_PYTHON_VERSION} < 39
+
+.if ${PYTHON_VERSION} < 309
 DEPENDS+=	${PYPKGPREFIX}-importlib-resources>=3:../../devel/py-importlib-resources
 .endif
 

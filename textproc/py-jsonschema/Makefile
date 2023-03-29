@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2022/12/19 08:22:10 adam Exp $
+# $NetBSD: Makefile,v 1.33 2023/03/29 09:34:13 wiz Exp $
 
 DISTNAME=	jsonschema-4.17.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -23,7 +23,8 @@ USE_LANGUAGES=	# none
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
-.if ${_PYTHON_VERSION} < 39
+
+.if ${PYTHON_VERSION} < 309
 DEPENDS+=	${PYPKGPREFIX}-importlib-resources>=1.4.0:../../devel/py-importlib-resources
 DEPENDS+=	${PYPKGPREFIX}-pkgutil_resolve_name>=1.3.10:../../devel/py-pkgutil_resolve_name
 .endif
