@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2023/03/07 11:31:49 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2023/03/29 11:29:27 wiz Exp $
 #
 # Changelog sometimes at: https://www.mercurial-scm.org/wiki/WhatsNew
 
@@ -17,6 +17,8 @@ DEPENDS+=	${PYPKGPREFIX}-curses-[0-9]*:../../devel/py-curses
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
+# https://bz.mercurial-scm.org/show_bug.cgi?id=6805
+TEST_DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 
 USE_TOOLS+=	gmake msgfmt
 
@@ -29,7 +31,12 @@ PYTHON_SELF_CONFLICT=		yes
 .include "version.mk"
 
 USE_TOOLS+=		bash:test
-# Known test failures as of 6.3.3
+# Known test failures as of 6.4
+# test-revlog-delta-find.t
+# https://bz.mercurial-scm.org/show_bug.cgi?id=6808
+# (fixed in pkgsrc)
+# test-transaction-rollback-on-revlog-split.t
+# https://bz.mercurial-scm.org/show_bug.cgi?id=6807
 # test-remotefilelog-gc.t
 # https://bz.mercurial-scm.org/show_bug.cgi?id=6783
 # test-push-cgi.t, test-oldcgi.t, test-newcgi.t, test-newercgi.t, test-clone-cgi.t
@@ -39,7 +46,7 @@ USE_TOOLS+=		bash:test
 # test-demandimport.py
 # https://bz.mercurial-scm.org/show_bug.cgi?id=6786
 #
-# Ran 912 tests, 82 skipped, 8 failed.
+# Ran 919 tests, 82 skipped, 10 failed.
 
 TEST_TARGET=		tests
 TEST_MAKE_FLAGS+=	PYTHON=${PYTHONBIN} TESTFLAGS=${_MAKE_JOBS:Q}
