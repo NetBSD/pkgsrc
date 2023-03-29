@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22719 2023/03/29 00:24:42 taca Exp $
+$NetBSD: TODO,v 1.22720 2023/03/29 08:20:12 wiz Exp $
 
 Suggested new packages
 ======================
@@ -407,7 +407,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o TeXmacs-2.1.1
 	o TiffIO-140a
 	o YoSucker-81
-	o a2ps-4.15.2
 	o aarch64-none-elf-binutils-2.36.1
 	o aarch64-none-elf-gcc-9.3.0
 	o abcl-1.8.0
@@ -932,6 +931,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libtecla-1.6.3
 	o libthai-0.2.2
 	o libtrace-4.0.16
+	o libva-2.18
 	o libvirt-2.3
 	o libxdg-basedir-1.2.3
 	o libzookeeper-3.7.0
@@ -1054,7 +1054,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o onscripter-20200722
 	o oo2c-2.1.7
 	o opal-3.16.2
-	o openblas-0.3.21
+	o openblas-0.3.22
 	o opencl-3.0.12
 	o opencolorio-2.2.0
 	o opencpn-plugin-draw-1.8.5.2
