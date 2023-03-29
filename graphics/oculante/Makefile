@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.40 2023/03/28 20:35:18 pin Exp $
+# $NetBSD: Makefile,v 1.41 2023/03/29 19:26:58 pin Exp $
 
-DISTNAME=	oculante-0.6.56
+DISTNAME=	oculante-0.6.57
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=woelper/}
 
@@ -18,8 +18,6 @@ USE_TOOLS+=	pkg-config perl
 
 INSTALLATION_DIRS=	bin
 
-MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
-RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libX11}/lib
 RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.libX11}/lib
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.gtk3}/lib
@@ -40,7 +38,6 @@ do-install:
 DEPENDS+=	nasm-[0-9]*:../../devel/nasm
 
 .include "../../lang/rust/cargo.mk"
-.include "../../security/openssl/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
