@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2023/03/05 07:30:10 adam Exp $
+# $NetBSD: Makefile,v 1.33 2023/03/29 08:44:44 adam Exp $
 
-DISTNAME=	rich-13.3.2
+DISTNAME=	rich-13.3.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	comms python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rich/}
@@ -10,6 +10,7 @@ HOMEPAGE=	https://github.com/willmcgugan/rich
 COMMENT=	Render rich text, tables, progress bars, syntax highlighting
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=1.0.0:../../devel/py-poetry-core
 DEPENDS+=	${PYPKGPREFIX}-markdown-it-py>=2.2.0:../../textproc/py-markdown-it-py
 DEPENDS+=	${PYPKGPREFIX}-pygments>=2.14.0:../../textproc/py-pygments
 
@@ -18,9 +19,9 @@ USE_LANGUAGES=	# none
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
-.if ${_PYTHON_VERSION} == 38
+.if ${PYTHON_VERSION} == 308
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.0.0:../../devel/py-typing-extensions
 .endif
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
