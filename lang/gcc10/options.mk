@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2021/10/01 11:56:13 nia Exp $
+# $NetBSD: options.mk,v 1.3 2023/03/29 20:44:52 joerg Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.${GCC_PKGNAME}
 PKG_SUPPORTED_OPTIONS=	nls gcc-inplace-math gcc-c++ gcc-fortran \
@@ -54,7 +54,7 @@ PKG_SUGGESTED_OPTIONS+=	gcc-multilib
 
 .  for _libdir_ in ${_OPSYS_LIB_DIRS}
 .    if exists(${_libdir_})
-BASE_LIBGCC!=			find ${_libdir_} -name libgcc_s.so
+BASE_LIBGCC!=			find ${_libdir_} -name libgcc_s.so 2> /dev/null
 BASE_LIBGCC_MATCH_STRING!=	${ECHO} ${BASE_LIBGCC} ${GCC10_DIST_VERSION} | \
 				${AWK} -f ../../mk/scripts/larger_symbol_version.awk
 .      if ${BASE_LIBGCC_MATCH_STRING:Mnewer}
