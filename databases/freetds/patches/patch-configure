@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2023/03/29 21:01:38 joerg Exp $
+
+_THREAD_SAFE is necessary for internal headers on Linux.
+
+--- configure.orig	2022-06-14 01:04:46.688096332 +0000
++++ configure
+@@ -16664,7 +16664,7 @@ _ACEOF
+ $as_echo_n "checking if more special flags are required for pthreads... " >&6; }
+         flag=no
+         case "${host_cpu}-${host_os}" in
+-            *-aix* | *-freebsd* | *-darwin*) flag="-D_THREAD_SAFE";;
++            *-aix* | *-freebsd* | *-darwin*|*-linux*) flag="-D_THREAD_SAFE";;
+             *solaris* | *-osf* | *-hpux*) flag="-D_REENTRANT";;
+         esac
+         { $as_echo "$as_me:${as_lineno-$LINENO}: result: ${flag}" >&5
