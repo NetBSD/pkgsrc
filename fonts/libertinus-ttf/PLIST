@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2023/03/29 15:32:42 joerg Exp $
+share/fonts/X11/OTF/LibertinusKeyboard-Regular.otf
+share/fonts/X11/OTF/LibertinusMath-Regular.otf
+share/fonts/X11/OTF/LibertinusMono-Regular.otf
+share/fonts/X11/OTF/LibertinusSans-Bold.otf
+share/fonts/X11/OTF/LibertinusSans-Italic.otf
+share/fonts/X11/OTF/LibertinusSans-Regular.otf
+share/fonts/X11/OTF/LibertinusSerif-Bold.otf
+share/fonts/X11/OTF/LibertinusSerif-BoldItalic.otf
+share/fonts/X11/OTF/LibertinusSerif-Italic.otf
+share/fonts/X11/OTF/LibertinusSerif-Regular.otf
+share/fonts/X11/OTF/LibertinusSerif-Semibold.otf
+share/fonts/X11/OTF/LibertinusSerif-SemiboldItalic.otf
+share/fonts/X11/OTF/LibertinusSerifDisplay-Regular.otf
+share/fonts/X11/OTF/LibertinusSerifInitials-Regular.otf
