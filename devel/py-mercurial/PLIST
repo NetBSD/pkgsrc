@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.42 2022/07/17 09:51:33 wiz Exp $
+@comment $NetBSD: PLIST,v 1.43 2023/03/29 11:29:27 wiz Exp $
 bin/hg
 ${PYSITELIB}/hgdemandimport/__init__.py
 ${PYSITELIB}/hgdemandimport/__init__.pyc
@@ -590,9 +590,6 @@ ${PYSITELIB}/mercurial/diffutil.pyo
 ${PYSITELIB}/mercurial/dirstate.py
 ${PYSITELIB}/mercurial/dirstate.pyc
 ${PYSITELIB}/mercurial/dirstate.pyo
-${PYSITELIB}/mercurial/dirstateguard.py
-${PYSITELIB}/mercurial/dirstateguard.pyc
-${PYSITELIB}/mercurial/dirstateguard.pyo
 ${PYSITELIB}/mercurial/dirstatemap.py
 ${PYSITELIB}/mercurial/dirstatemap.pyc
 ${PYSITELIB}/mercurial/dirstatemap.pyo
@@ -1265,7 +1262,12 @@ ${PYSITELIB}/mercurial/thirdparty/__init__.pyc
 ${PYSITELIB}/mercurial/thirdparty/__init__.pyo
 ${PYSITELIB}/mercurial/thirdparty/attr/__init__.py
 ${PYSITELIB}/mercurial/thirdparty/attr/__init__.pyc
+${PYSITELIB}/mercurial/thirdparty/attr/__init__.pyi
 ${PYSITELIB}/mercurial/thirdparty/attr/__init__.pyo
+${PYSITELIB}/mercurial/thirdparty/attr/_cmp.py
+${PYSITELIB}/mercurial/thirdparty/attr/_cmp.pyc
+${PYSITELIB}/mercurial/thirdparty/attr/_cmp.pyi
+${PYSITELIB}/mercurial/thirdparty/attr/_cmp.pyo
 ${PYSITELIB}/mercurial/thirdparty/attr/_compat.py
 ${PYSITELIB}/mercurial/thirdparty/attr/_compat.pyc
 ${PYSITELIB}/mercurial/thirdparty/attr/_compat.pyo
@@ -1278,17 +1280,33 @@ ${PYSITELIB}/mercurial/thirdparty/attr/_funcs.pyo
 ${PYSITELIB}/mercurial/thirdparty/attr/_make.py
 ${PYSITELIB}/mercurial/thirdparty/attr/_make.pyc
 ${PYSITELIB}/mercurial/thirdparty/attr/_make.pyo
+${PYSITELIB}/mercurial/thirdparty/attr/_next_gen.py
+${PYSITELIB}/mercurial/thirdparty/attr/_next_gen.pyc
+${PYSITELIB}/mercurial/thirdparty/attr/_next_gen.pyo
+${PYSITELIB}/mercurial/thirdparty/attr/_version_info.py
+${PYSITELIB}/mercurial/thirdparty/attr/_version_info.pyc
+${PYSITELIB}/mercurial/thirdparty/attr/_version_info.pyi
+${PYSITELIB}/mercurial/thirdparty/attr/_version_info.pyo
 ${PYSITELIB}/mercurial/thirdparty/attr/converters.py
 ${PYSITELIB}/mercurial/thirdparty/attr/converters.pyc
+${PYSITELIB}/mercurial/thirdparty/attr/converters.pyi
 ${PYSITELIB}/mercurial/thirdparty/attr/converters.pyo
 ${PYSITELIB}/mercurial/thirdparty/attr/exceptions.py
 ${PYSITELIB}/mercurial/thirdparty/attr/exceptions.pyc
+${PYSITELIB}/mercurial/thirdparty/attr/exceptions.pyi
 ${PYSITELIB}/mercurial/thirdparty/attr/exceptions.pyo
 ${PYSITELIB}/mercurial/thirdparty/attr/filters.py
 ${PYSITELIB}/mercurial/thirdparty/attr/filters.pyc
+${PYSITELIB}/mercurial/thirdparty/attr/filters.pyi
 ${PYSITELIB}/mercurial/thirdparty/attr/filters.pyo
+${PYSITELIB}/mercurial/thirdparty/attr/py.typed
+${PYSITELIB}/mercurial/thirdparty/attr/setters.py
+${PYSITELIB}/mercurial/thirdparty/attr/setters.pyc
+${PYSITELIB}/mercurial/thirdparty/attr/setters.pyi
+${PYSITELIB}/mercurial/thirdparty/attr/setters.pyo
 ${PYSITELIB}/mercurial/thirdparty/attr/validators.py
 ${PYSITELIB}/mercurial/thirdparty/attr/validators.pyc
+${PYSITELIB}/mercurial/thirdparty/attr/validators.pyi
 ${PYSITELIB}/mercurial/thirdparty/attr/validators.pyo
 ${PYSITELIB}/mercurial/thirdparty/sha1dc.so
 ${PYSITELIB}/mercurial/thirdparty/zope/__init__.py
@@ -1343,6 +1361,9 @@ ${PYSITELIB}/mercurial/treediscovery.pyo
 ${PYSITELIB}/mercurial/txnutil.py
 ${PYSITELIB}/mercurial/txnutil.pyc
 ${PYSITELIB}/mercurial/txnutil.pyo
+${PYSITELIB}/mercurial/typelib.py
+${PYSITELIB}/mercurial/typelib.pyc
+${PYSITELIB}/mercurial/typelib.pyo
 ${PYSITELIB}/mercurial/ui.py
 ${PYSITELIB}/mercurial/ui.pyc
 ${PYSITELIB}/mercurial/ui.pyo
