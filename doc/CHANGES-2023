@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1932 2023/03/29 10:11:25 rhialto Exp $
+$NetBSD: CHANGES-2023,v 1.1933 2023/03/29 10:23:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2504,3 +2504,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated shells/fish to 3.6.1 [wiz 2023-03-29]
 	Updated security/py-pip-audit to 2.5.4 [wiz 2023-03-29]
 	Updated lang/algol68g to 3.1.4 [rhialto 2023-03-29]
+	Updated print/poppler to 23.03.0 [wiz 2023-03-29]
