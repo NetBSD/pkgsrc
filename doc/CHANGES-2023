@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1946 2023/03/29 16:31:59 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.1947 2023/03/29 19:24:49 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2522,3 +2522,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/lua-check version 0.23.0 [joerg 2023-03-29]
 	Added fonts/libertinus-ttf version 7.040 [joerg 2023-03-29]
 	Added devel/git-credential-osxkeychain version 2.40.0 [schmonz 2023-03-29]
+	Updated audio/spotify-player to 0.13.1 [pin 2023-03-29]
