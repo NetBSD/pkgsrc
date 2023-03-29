@@ -1,4 +1,4 @@
-# $NetBSD: u-boot.mk,v 1.36 2022/07/29 13:47:36 thorpej Exp $
+# $NetBSD: u-boot.mk,v 1.37 2023/03/29 09:04:03 wiz Exp $
 
 .include "../../sysutils/u-boot/u-boot-version.mk"
 
@@ -40,7 +40,7 @@ PYTHON_FOR_BUILD_ONLY=	yes
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 .endif
 
-.if ${PYPKGPREFIX} == "py27"
+.if ${PYTHON_VERSION} == 207
 ALL_ENV+=		PYTHON2=${PYTHONBIN} PYTHONCONFIG=${PYTHONCONFIG}
 .else
 ALL_ENV+=		PYTHON3=${PYTHONBIN} PYTHONCONFIG=${PYTHONCONFIG}

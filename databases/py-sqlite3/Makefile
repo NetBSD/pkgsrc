@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2022/11/23 16:19:43 adam Exp $
+# $NetBSD: Makefile,v 1.46 2023/03/29 09:04:02 wiz Exp $
 
 PKGNAME=	${PYPKGPREFIX}-sqlite3-${PY_DISTVERSION}
 PKGREVISION=	23
@@ -17,7 +17,7 @@ PYSETUPINSTALLARGS+=	--install-lib ${PREFIX}/${PYLIB}/lib-dynload
 
 .include "../../lang/python/pyversion.mk"
 
-.if ${PYPKGPREFIX} == "py311"
+.if ${PYTHON_VERSION} == 311
 SUBST_CLASSES+=		py311
 SUBST_FILES.py311+=	setup.py
 SUBST_SED.py311+=	-e "s+'_sqlite/cache.c',+'_sqlite/blob.c',+"

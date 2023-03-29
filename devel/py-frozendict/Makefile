@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2023/03/02 12:40:45 adam Exp $
+# $NetBSD: Makefile,v 1.14 2023/03/29 09:04:02 wiz Exp $
 
 DISTNAME=	frozendict-2.3.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,7 +18,7 @@ PLIST_VARS=	c
 
 .include "../../lang/python/pyversion.mk"
 
-.if ${PYPKGPREFIX} == "py311"
+.if ${PYTHON_VERSION} == 311
 # as of 2.3.4, python 3.11 is not supported
 # do not build C extension for now
 PYSETUPARGS=	py
