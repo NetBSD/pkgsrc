@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1924 2023/03/29 08:30:40 adam Exp $
+$NetBSD: CHANGES-2023,v 1.1925 2023/03/29 08:32:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2494,3 +2494,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/gmake to 4.4.1 [wiz 2023-03-29]
 	Added www/lua-resty-core version 0.1.26 [adam 2023-03-29]
 	Added www/lua-resty-lrucache version 0.13 [adam 2023-03-29]
+	Updated textproc/bat to 0.23.0 [wiz 2023-03-29]
