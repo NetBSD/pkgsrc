@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.15 2022/11/17 16:04:27 osa Exp $
+# $NetBSD: options.mk,v 1.16 2023/03/29 08:32:52 adam Exp $
 
 CODELOAD_SITE_GITHUB=		https://codeload.github.com/
 
@@ -164,12 +164,14 @@ DISTFILES+=		${NDK_DISTFILE}
 .endif
 
 .if !empty(PKG_OPTIONS:Mluajit) || make(makesum) || make(mdi) || make(distclean)
-LUA_VERSION=		0.10.22
+LUA_VERSION=		0.10.24
 LUA_DISTNAME=		lua-nginx-module-${LUA_VERSION}
 LUA_DISTFILE=		${LUA_DISTNAME}.tar.gz
 SITES.${LUA_DISTFILE}=	-${MASTER_SITE_GITHUB:=openresty/lua-nginx-module/archive/}v${LUA_VERSION}.tar.gz
 DISTFILES+=		${LUA_DISTFILE}
 .include "../../lang/LuaJIT2/buildlink3.mk"
+DEPENDS+=		lua-resty-core>=0.1.26:../../www/lua-resty-core
+DEPENDS+=		lua-resty-lrucache>=0.13:../../www/lua-resty-lrucache
 CONFIGURE_ENV+=		LUAJIT_LIB=${PREFIX}/lib
 CONFIGURE_ENV+=		LUAJIT_INC=${PREFIX}/include/luajit-2.0
 DSO_EXTMODS+=		lua
@@ -177,7 +179,7 @@ PLIST.lua=		yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mecho) || make(makesum) || make(mdi) || make(distclean)
-ECHOMOD_VERSION=		0.62
+ECHOMOD_VERSION=		0.63
 ECHOMOD_DISTNAME=		echo-nginx-module-${ECHOMOD_VERSION}
 ECHOMOD_DISTFILE=		${ECHOMOD_DISTNAME}.tar.gz
 SITES.${ECHOMOD_DISTFILE}=	-${MASTER_SITE_GITHUB:=openresty/echo-nginx-module/archive/}v${ECHOMOD_VERSION}.tar.gz
@@ -208,7 +210,7 @@ PLIST.geoip2=			yes
 .endif
 
 .if !empty(PKG_OPTIONS:Marray-var) || make(makesum) || make(mdi) || make(distclean)
-ARRAYVAR_VERSION=		0.05
+ARRAYVAR_VERSION=		0.06
 ARRAYVAR_DISTNAME=		array-var-nginx-module-${ARRAYVAR_VERSION}
 ARRAYVAR_DISTFILE=		${ARRAYVAR_DISTNAME}.tar.gz
 SITES.${ARRAYVAR_DISTFILE}=	-${MASTER_SITE_GITHUB:=openresty/array-var-nginx-module/archive/}v${ARRAYVAR_VERSION}.tar.gz
@@ -238,12 +240,10 @@ PLIST.forminput=		yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mheaders-more) || make(makesum) || make(mdi) || make(distclean)
-HEADMORE_GH_ACCOUNT=		openresty
-HEADMORE_GH_PROJECT=		headers-more-nginx-module
-HEADMORE_GH_TAG=		d502e41
-HEADMORE_DISTNAME=		${HEADMORE_GH_PROJECT}-${HEADMORE_GH_TAG}
-HEADMORE_DISTFILE=		${HEADMORE_GH_ACCOUNT}-${HEADMORE_DISTNAME}_GH.tar.gz
-SITES.${HEADMORE_DISTFILE}=	-${CODELOAD_SITE_GITHUB:=${HEADMORE_GH_ACCOUNT}/${HEADMORE_GH_PROJECT}/tar.gz/${HEADMORE_VERSION}?dummy=${HEADMORE_DISTFILE}}
+HEADMORE_VERSION=		0.34
+HEADMORE_DISTNAME=		headers-more-nginx-module-${HEADMORE_VERSION}
+HEADMORE_DISTFILE=		${HEADMORE_DISTNAME}.tar.gz
+SITES.${HEADMORE_DISTFILE}=	-${MASTER_SITE_GITHUB:=openresty/headers-more-nginx-module/archive/}v${HEADMORE_VERSION}.tar.gz
 DISTFILES+=			${HEADMORE_DISTFILE}
 DSO_EXTMODS+=			headmore
 PLIST.headmore=			yes
