@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1940 2023/03/29 12:46:46 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1941 2023/03/29 13:06:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2513,3 +2513,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated finance/gnucash to 5.0 [wiz 2023-03-29]
 	Updated finance/gnucash-docs to 5.0 [wiz 2023-03-29]
 	Updated x11/modular-xorg-server to 21.1.7nb1 [wiz 2023-03-29]
+	Updated time/py-dateparser to 1.1.8 [adam 2023-03-29]
+	Updated time/py-pytz to 2023.3 [adam 2023-03-29]
+	Updated databases/py-redis to 4.5.3 [adam 2023-03-29]
+	Updated databases/py-apsw to 3.41.2.0 [adam 2023-03-29]
