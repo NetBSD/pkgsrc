@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2022/09/17 18:53:33 fox Exp $
+# $NetBSD: Makefile,v 1.30 2023/03/29 08:32:40 wiz Exp $
 
-DISTNAME=	bat-0.22.1
+DISTNAME=	bat-0.23.0
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sharkdp/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
