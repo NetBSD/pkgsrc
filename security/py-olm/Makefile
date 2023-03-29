@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/01/25 13:12:49 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/03/29 09:04:03 wiz Exp $
 
 DISTNAME=	olm-3.2.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-cffi>=1.0.0:../../devel/py-cffi
 
 .include "../../lang/python/pyversion.mk"
 
-.if ${PYPKGPREFIX} == "py27"
+.if ${PYTHON_VERSION} == 207
 DEPENDS+=	${PYPKGPREFIX}-typing-[0-9]*:../../devel/py-typing
 .endif
 
