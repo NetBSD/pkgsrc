@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.88 2022/11/17 16:04:27 osa Exp $
+# $NetBSD: options.mk,v 1.89 2023/03/29 08:35:10 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nginx
 PKG_SUPPORTED_OPTIONS=	array-var auth-request cache-purge dav debug
@@ -166,6 +166,8 @@ LUA_DISTFILE=		${LUA_DISTNAME}.tar.gz
 SITES.${LUA_DISTFILE}=	-${MASTER_SITE_GITHUB:=openresty/lua-nginx-module/archive/}v${LUA_VERSION}.tar.gz
 DISTFILES+=		${LUA_DISTFILE}
 .include "../../lang/LuaJIT2/buildlink3.mk"
+DEPENDS+=		lua-resty-core>=0.1.26:../../www/lua-resty-core
+DEPENDS+=		lua-resty-lrucache>=0.13:../../www/lua-resty-lrucache
 CONFIGURE_ENV+=		LUAJIT_LIB=${PREFIX}/lib
 CONFIGURE_ENV+=		LUAJIT_INC=${PREFIX}/include/luajit-2.0
 DSO_EXTMODS+=		lua
