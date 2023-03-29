@@ -1,4 +1,7 @@
-$NetBSD: patch-Eigen_src_Core_IO.h,v 1.1 2020/04/18 22:01:57 joerg Exp $
+$NetBSD: patch-Eigen_src_Core_IO.h,v 1.2 2023/03/29 08:55:00 wiz Exp $
+
+Add missing includes
+https://gitlab.com/libeigen/eigen/-/issues/2634
 
 --- Eigen/src/Core/IO.h.orig	2020-04-18 02:56:39.805274318 +0000
 +++ Eigen/src/Core/IO.h
