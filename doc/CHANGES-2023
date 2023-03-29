@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1942 2023/03/29 13:27:26 rhialto Exp $
+$NetBSD: CHANGES-2023,v 1.1943 2023/03/29 13:30:47 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2518,3 +2518,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated databases/py-redis to 4.5.3 [adam 2023-03-29]
 	Updated databases/py-apsw to 3.41.2.0 [adam 2023-03-29]
 	Updated x11/x3270 to 4.2ga6 [rhialto 2023-03-29]
+	Updated sysutils/mtools to 4.0.43 [rhialto 2023-03-29]
