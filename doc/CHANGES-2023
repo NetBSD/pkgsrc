@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1926 2023/03/29 08:37:10 adam Exp $
+$NetBSD: CHANGES-2023,v 1.1927 2023/03/29 08:46:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2497,3 +2497,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/bat to 0.23.0 [wiz 2023-03-29]
 	Updated www/nginx-devel to 1.23.4 [adam 2023-03-29]
 	Updated www/nginx to 1.22.1nb6 [adam 2023-03-29]
+	Updated comms/py-rich to 13.3.3 [adam 2023-03-29]
+	Updated sysutils/ansible to 7.4.0 [adam 2023-03-29]
