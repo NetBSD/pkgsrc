@@ -1,6 +1,7 @@
 package pkglint
 
 import (
+	"netbsd.org/pkglint/makepat"
 	"netbsd.org/pkglint/textproc"
 	"strings"
 )
@@ -282,13 +283,18 @@ func (s *MkCondSimplifier) simplifyMatch(varuse *MkVarUse, fromEmpty bool, neg b
 	//
 	// The same reasoning applies to the variable name, even though the
 	// variable name typically only uses a restricted character set.
-	if !matches(varuse.Mod(), `^[*.:\w\[\]]+$`) {
+	if !matches(varuse.Mod(), `^[*+\-.:\w\[\]]+$`) {
+		return
+	}
+
+	mayMatchNumber, err := s.mayMatchNumber(pattern)
+	if err != nil {
 		return
 	}
 
 	fixedPart := varname + modsExceptLast + ":M" + pattern
 	from := condStr(neg, "!", "") + "empty(" + fixedPart + ")"
-	to := condStr(neg, "", "!") + "${" + fixedPart + "}"
+	to := condStr(neg, "", "!") + "${" + fixedPart + "}" + condStr(mayMatchNumber, " != \"\"", "")
 
 	fix := s.MkLine.Autofix()
 	fix.Notef("%q can be simplified to %q.", from, to)
@@ -317,4 +323,29 @@ func (s *MkCondSimplifier) isDefined(varname string, vartype *Vartype) bool {
 	return s.MkLines.Tools.SeenPrefs &&
 		vartype.Union().Contains(aclpUseLoadtime) &&
 		vartype.IsDefinedIfInScope()
+}
+
+var numeric = makepat.Number()
+
+// In the conditional '.if ${EXPR}', the condition '${EXPR}' may evaluate to
+// a single word. If that word is numeric and evaluates to zero, the condition
+// evaluates to false.
+//
+// There are several words that evaluate to zero, such as 0, .0, 0.0, 1e-400,
+// -1e-400, +1e400.
+//
+// When simplifying the condition '!empty(EXPR:Mpattern)' to
+// '${EXPR:Mpattern}', if the pattern can result in a numeric word, the
+// result must be compared with an empty string by adding '!= ""', to
+// preserve the exact behavior.
+func (*MkCondSimplifier) mayMatchNumber(pattern string) (bool, error) {
+	if pattern == "" {
+		return false, nil
+	}
+	p, err := makepat.Compile(pattern)
+	if err != nil {
+		return true, err
+	}
+	both := makepat.Intersect(p, numeric)
+	return both.CanMatch(), nil
 }

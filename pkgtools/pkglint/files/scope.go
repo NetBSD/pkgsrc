@@ -6,13 +6,11 @@ import "sort"
 // in a certain scope, such as a package or a file.
 //
 // TODO: Decide whether the scope should consider variable assignments
-//
-//	from the pkgsrc infrastructure. For Package.checkGnuConfigureUseLanguages
-//	it would be better to ignore them completely.
+// from the pkgsrc infrastructure. For Package.checkGnuConfigureUseLanguages
+// it would be better to ignore them completely.
 //
 // TODO: Merge this code with Var, which defines essentially the
-//
-//	same features.
+// same features.
 //
 // See also substScope, which already analyzes the possible variable values
 // based on the conditional code paths.
