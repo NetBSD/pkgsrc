@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/03/29 15:32:42 joerg Exp $
+
+BLAKE2s (Libertinus-7.040.tar.xz) = a91730d24a7e4912474e15435ae0ff7f3b6b19591c76e395276308e232fcdf35
+SHA512 (Libertinus-7.040.tar.xz) = 9cd870adc2c9007dd7265b4c0bcb8590c3467506ed4c912190cb198f07e27a784ec62c6922e8244cc875a94e880afaa96937ff5b547f7868ac4f0ffb6747f2a3
+Size (Libertinus-7.040.tar.xz) = 4374448 bytes
