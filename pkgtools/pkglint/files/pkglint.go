@@ -32,7 +32,8 @@ type Pkglint struct {
 	Network,
 	Recursive bool
 
-	Pkgsrc *Pkgsrc // Global data, mostly extracted from mk/*.
+	Project Project
+	Pkgsrc  *Pkgsrc // Global data, mostly extracted from mk/*.
 
 	Todo CurrPathQueue // The files or directories that still need to be checked.
 
@@ -205,10 +206,12 @@ func (p *Pkglint) prepareMainLoop() {
 		} else {
 			G.Logger.TechFatalf(firstDir, "Must be inside a pkgsrc tree.")
 		}
+		p.Project = NewNetBSDProject()
 	} else {
 		p.Pkgsrc = NewPkgsrc(firstDir.JoinNoClean(relTopdir))
 		p.Wip = p.Pkgsrc.IsWip(firstDir) // See Pkglint.checkMode.
 		p.Pkgsrc.LoadInfrastructure()
+		p.Project = p.Pkgsrc
 	}
 
 	currentUser, err := user.Current()

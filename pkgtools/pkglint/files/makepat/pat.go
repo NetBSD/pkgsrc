@@ -19,16 +19,16 @@ type state struct {
 
 type transition struct {
 	min, max byte
-	to       StateID
+	to       stateID
 }
 
-type StateID uint16
+type stateID uint16
 
 // Compile parses a pattern, including the error checking that is missing
 // from bmake.
 func Compile(pattern string) (*Pattern, error) {
 	var p Pattern
-	s := p.AddState(false)
+	s := p.addState(false)
 
 	lex := textproc.NewLexer(pattern)
 	for !lex.EOF() {
@@ -36,18 +36,18 @@ func Compile(pattern string) (*Pattern, error) {
 
 		switch ch {
 		case '*':
-			p.AddTransition(s, 0, 255, s)
+			p.addTransition(s, 0, 255, s)
 		case '?':
-			next := p.AddState(false)
-			p.AddTransition(s, 0, 255, next)
+			next := p.addState(false)
+			p.addTransition(s, 0, 255, next)
 			s = next
 		case '\\':
 			if lex.EOF() {
 				return nil, errors.New("unfinished escape sequence")
 			}
 			ch := lex.NextByte()
-			next := p.AddState(false)
-			p.AddTransition(s, ch, ch, next)
+			next := p.addState(false)
+			p.addTransition(s, ch, ch, next)
 			s = next
 		case '[':
 			next, err := compileCharClass(&p, lex, ch, s)
@@ -56,8 +56,8 @@ func Compile(pattern string) (*Pattern, error) {
 			}
 			s = next
 		default:
-			next := p.AddState(false)
-			p.AddTransition(s, ch, ch, next)
+			next := p.addState(false)
+			p.addTransition(s, ch, ch, next)
 			s = next
 		}
 	}
@@ -66,10 +66,10 @@ func Compile(pattern string) (*Pattern, error) {
 	return &p, nil
 }
 
-func compileCharClass(p *Pattern, lex *textproc.Lexer, ch byte, s StateID) (StateID, error) {
+func compileCharClass(p *Pattern, lex *textproc.Lexer, ch byte, s stateID) (stateID, error) {
 	negate := lex.SkipByte('^')
-	chars := make([]bool, 256)
-	next := p.AddState(false)
+	var chars [256]bool
+	next := p.addState(false)
 	for {
 		if lex.EOF() {
 			return 0, errors.New("unfinished character class")
@@ -99,6 +99,11 @@ func compileCharClass(p *Pattern, lex *textproc.Lexer, ch byte, s StateID) (Stat
 		}
 	}
 
+	p.addTransitions(s, &chars, next)
+	return next, nil
+}
+
+func (p *Pattern) addTransitions(from stateID, chars *[256]bool, to stateID) {
 	start := 0
 	for start < len(chars) && !chars[start] {
 		start++
@@ -111,7 +116,7 @@ func compileCharClass(p *Pattern, lex *textproc.Lexer, ch byte, s StateID) (Stat
 		}
 
 		if start < end {
-			p.AddTransition(s, byte(start), byte(end-1), next)
+			p.addTransition(from, byte(start), byte(end-1), to)
 		}
 
 		start = end
@@ -119,15 +124,14 @@ func compileCharClass(p *Pattern, lex *textproc.Lexer, ch byte, s StateID) (Stat
 			start++
 		}
 	}
-	return next, nil
 }
 
-func (p *Pattern) AddState(end bool) StateID {
+func (p *Pattern) addState(end bool) stateID {
 	p.states = append(p.states, state{nil, end})
-	return StateID(len(p.states) - 1)
+	return stateID(len(p.states) - 1)
 }
 
-func (p *Pattern) AddTransition(from StateID, min, max byte, to StateID) {
+func (p *Pattern) addTransition(from stateID, min, max byte, to stateID) {
 	state := &p.states[from]
 	state.transitions = append(state.transitions, transition{min, max, to})
 }
@@ -178,15 +182,15 @@ func (p *Pattern) Match(s string) bool {
 func Intersect(p1, p2 *Pattern) *Pattern {
 	var res Pattern
 
-	newState := make(map[[2]StateID]StateID)
+	newState := make(map[[2]stateID]stateID)
 
 	// stateFor returns the state ID in the intersection,
 	// creating it if necessary.
-	stateFor := func(s1, s2 StateID) StateID {
-		key := [2]StateID{s1, s2}
+	stateFor := func(s1, s2 stateID) stateID {
+		key := [2]stateID{s1, s2}
 		ns, ok := newState[key]
 		if !ok {
-			ns = res.AddState(p1.states[s1].end && p2.states[s2].end)
+			ns = res.addState(p1.states[s1].end && p2.states[s2].end)
 			newState[key] = ns
 		}
 		return ns
@@ -202,16 +206,18 @@ func Intersect(p1, p2 *Pattern) *Pattern {
 					min := bmax(t1.min, t2.min)
 					max := bmin(t1.max, t2.max)
 					if min <= max {
-						from := stateFor(StateID(i1), StateID(i2))
+						from := stateFor(stateID(i1), stateID(i2))
 						to := stateFor(t1.to, t2.to)
-						res.AddTransition(from, min, max, to)
+						res.addTransition(from, min, max, to)
 					}
 				}
 			}
 		}
 	}
 
-	return res.optimized()
+	// If the returned pattern is used more than once,
+	// consider calling .optimize first.
+	return &res
 }
 
 func (p *Pattern) optimized() *Pattern {
@@ -252,7 +258,7 @@ func (p *Pattern) reachable() []bool {
 	return reachable
 }
 
-// relevant returns all states from which and end state is reachable.
+// relevant returns all states from which an end state is reachable.
 // In optimized patterns, each state is relevant.
 func (p *Pattern) relevant(reachable []bool) []bool {
 	relevant := make([]bool, len(p.states))
@@ -276,7 +282,7 @@ func (p *Pattern) relevant(reachable []bool) []bool {
 			changed = true
 			for from, st := range p.states {
 				for _, tr := range st.transitions {
-					if tr.to == StateID(to) && reachable[from] &&
+					if tr.to == stateID(to) && reachable[from] &&
 						progress[from] == 0 {
 						progress[from] = 1
 					}
@@ -296,17 +302,17 @@ func (p *Pattern) relevant(reachable []bool) []bool {
 func (p *Pattern) compressed(relevant []bool) *Pattern {
 	var opt Pattern
 
-	newIDs := make([]StateID, len(p.states))
+	newIDs := make([]stateID, len(p.states))
 	for i, r := range relevant {
 		if r {
-			newIDs[i] = opt.AddState(p.states[i].end)
+			newIDs[i] = opt.addState(p.states[i].end)
 		}
 	}
 
 	for from, s := range p.states {
 		for _, t := range s.transitions {
 			if relevant[from] && relevant[t.to] {
-				opt.AddTransition(newIDs[from], t.min, t.max, newIDs[t.to])
+				opt.addTransition(newIDs[from], t.min, t.max, newIDs[t.to])
 			}
 		}
 	}
@@ -333,6 +339,145 @@ func (p *Pattern) CanMatch() bool {
 		}
 	}
 	return false
+}
+
+// Number creates a pattern that matches integer or floating point constants,
+// as in C99, both decimal and hex.
+func Number() *Pattern {
+	// The states and transitions are taken from a manually constructed
+	// hand-drawn state diagram, based on the syntax rules from C99 6.4.4.
+
+	const (
+		start stateID = iota
+		sign
+
+		dec
+		decDot
+		decFrac
+
+		zero
+		zeroX
+
+		hex
+		hexDot
+		hexFrac
+
+		exp
+		expSign
+		expDec
+	)
+
+	return &Pattern{
+		states: []state{
+			start: {
+				[]transition{
+					{'+', '+', sign},
+					{'-', '-', sign},
+					{'0', '9', dec},
+					{'.', '.', decDot},
+					{'0', '9', decFrac},
+					{'0', '0', zero},
+				},
+				false,
+			},
+			sign: {
+				[]transition{
+					{'0', '9', dec},
+					{'.', '.', decDot},
+					{'0', '9', decFrac},
+					{'0', '0', zero},
+				},
+				false,
+			},
+			dec: {
+				[]transition{
+					{'0', '9', dec},
+					{'.', '.', decFrac},
+				},
+				true,
+			},
+			decDot: {
+				[]transition{
+					{'0', '9', decFrac},
+				},
+				false,
+			},
+			decFrac: {
+				[]transition{
+					{'0', '9', decFrac},
+					{'E', 'E', exp},
+					{'e', 'e', exp},
+				},
+				true,
+			},
+			zero: {
+				[]transition{
+					{'X', 'X', zeroX},
+					{'x', 'x', zeroX},
+				},
+				false,
+			},
+			zeroX: {
+				[]transition{
+					{'0', '9', hex},
+					{'A', 'F', hex},
+					{'a', 'f', hex},
+					{'.', '.', hexDot},
+					{'0', '9', hexFrac},
+					{'A', 'F', hexFrac},
+					{'a', 'f', hexFrac},
+				},
+				false,
+			},
+			hex: {
+				[]transition{
+					{'0', '9', hex},
+					{'A', 'F', hex},
+					{'a', 'f', hex},
+					{'.', '.', hexFrac},
+				},
+				true,
+			},
+			hexDot: {
+				[]transition{
+					{'0', '9', hexFrac},
+					{'A', 'F', hexFrac},
+					{'a', 'f', hexFrac},
+				},
+				false,
+			},
+			hexFrac: {
+				[]transition{
+					{'0', '9', hexFrac},
+					{'A', 'F', hexFrac},
+					{'a', 'f', hexFrac},
+					{'P', 'P', exp},
+					{'p', 'p', exp},
+				},
+				false,
+			},
+			exp: {
+				[]transition{
+					{'+', '+', expSign},
+					{'-', '-', expSign},
+					{'0', '9', expDec},
+				},
+				false,
+			},
+			expSign: {
+				[]transition{
+					{'0', '9', expDec},
+				},
+				false,
+			},
+			expDec: {
+				[]transition{
+					{'0', '9', expDec},
+				},
+				true,
+			},
+		},
+	}
 }
 
 func bmin(a, b byte) byte {
