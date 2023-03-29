@@ -265,7 +265,8 @@ func NewByteSet(chars string) *ByteSet {
 	return &set
 }
 
-// Inverse returns a byte set that matches the inverted set of bytes.
+// Inverse returns a byte set that contains exactly those bytes that
+// are not in the given set.
 func (bs *ByteSet) Inverse() *ByteSet {
 	var inv ByteSet
 	for i := 0; i < 256; i++ {

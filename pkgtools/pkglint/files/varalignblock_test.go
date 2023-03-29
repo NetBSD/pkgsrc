@@ -1963,8 +1963,7 @@ func (s *Suite) Test_VaralignBlock__var_tab32_value_var_tabs24_value_var_tabs24_
 // initial line, this is intentional.
 //
 // TODO: Make this rule more general: if the indentation of the continuation
-//
-//	lines is more than the initial line, it is intentional.
+// lines is more than the initial line, it is intentional.
 func (s *Suite) Test_VaralignBlock__var_tab24_value_space_cont_tabs32_value_space_cont_tabs32_value(c *check.C) {
 	vt := NewVaralignTester(s, c)
 	vt.Input(

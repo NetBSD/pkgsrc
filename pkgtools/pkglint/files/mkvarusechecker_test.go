@@ -157,7 +157,7 @@ func (s *Suite) Test_MkVarUseChecker_Check__LOCALBASE_in_infrastructure(c *check
 	// do this. In packages though, LOCALBASE is deprecated.
 
 	// There is no warning about DEFAULT_PREFIX being "defined but not used"
-	// since Pkgsrc.loadUntypedVars calls Pkgsrc.vartypes.DefineType, which
+	// since Pkgsrc.loadUntypedVars calls Pkgsrc.Types().DefineType, which
 	// registers that variable globally.
 	t.CheckOutputEmpty()
 }

@@ -92,9 +92,8 @@ func (v *Var) AddRef(varname string) {
 // cases may be implemented later.
 //
 // TODO: Simple .for loops that append to the variable are ok as well.
-//
-//	(This needs to be worded more precisely since that part potentially
-//	adds a lot of complexity to the whole data structure.)
+// (This needs to be worded more precisely since that part potentially
+// adds a lot of complexity to the whole data structure.)
 //
 // Variable assignments in the pkgsrc infrastructure are taken into account
 // for determining whether a variable is constant.

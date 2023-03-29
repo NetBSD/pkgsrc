@@ -161,7 +161,7 @@ func (s *Suite) Test_VarTypeRegistry_enumFromDirs__no_testing(c *check.C) {
 
 	t.ExpectFatal(
 		func() {
-			G.Pkgsrc.vartypes.enumFromDirs(
+			G.Project.Types().enumFromDirs(
 				G.Pkgsrc, "category", `^pack.*`, "$0", "default")
 		},
 		"FATAL: ~/category: Must contain at least 1 "+
@@ -193,7 +193,7 @@ func (s *Suite) Test_VarTypeRegistry_enumFromFiles__no_testing(c *check.C) {
 
 	t.ExpectFatal(
 		func() {
-			G.Pkgsrc.vartypes.enumFromFiles(G.Pkgsrc,
+			G.Project.Types().enumFromFiles(G.Pkgsrc,
 				"mk/platform", `^(\w+)\.mk$`, "$1", "default")
 		},
 		"FATAL: ~/mk/platform: Must contain at least 1 "+
@@ -216,10 +216,10 @@ func (s *Suite) Test_VarTypeRegistry_Init(c *check.C) {
 	t := s.Init(c)
 
 	src := NewPkgsrc(t.File("."))
-	src.vartypes.Init(src)
+	src.Types().Init(src)
 
-	t.CheckEquals(src.vartypes.Canon("BSD_MAKE_ENV").basicType.name, "ShellWord")
-	t.CheckEquals(src.vartypes.Canon("USE_BUILTIN.*").basicType.name, "YesNoIndirectly")
+	t.CheckEquals(src.Types().Canon("BSD_MAKE_ENV").basicType.name, "ShellWord")
+	t.CheckEquals(src.Types().Canon("USE_BUILTIN.*").basicType.name, "YesNoIndirectly")
 }
 
 func (s *Suite) Test_VarTypeRegistry_Init__LP64PLATFORMS(c *check.C) {

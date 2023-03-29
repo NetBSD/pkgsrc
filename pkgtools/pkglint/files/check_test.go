@@ -63,6 +63,7 @@ func (s *Suite) SetUpTest(c *check.C) {
 	trace.Out = &t.stdout
 
 	G.Pkgsrc = NewPkgsrc(t.File("."))
+	G.Project = G.Pkgsrc
 
 	t.c = c
 	t.SetUpCommandLine("-Wall")    // To catch duplicate warnings
@@ -231,11 +232,11 @@ func (t *Tester) SetUpCommandLine(args ...string) {
 //
 // See SetUpTool for registering tools like echo, awk, perl.
 func (t *Tester) SetUpVartypes() {
-	G.Pkgsrc.vartypes.Init(G.Pkgsrc)
+	G.Pkgsrc.Types().Init(G.Pkgsrc)
 }
 
 func (t *Tester) SetUpMasterSite(varname string, urls ...string) {
-	if !G.Pkgsrc.vartypes.IsDefinedExact(varname) {
+	if !G.Pkgsrc.Types().IsDefinedExact(varname) {
 		t.SetUpVarType(varname, BtFetchURL,
 			List|SystemProvided,
 			"buildlink3.mk: none",
@@ -272,7 +273,7 @@ func (t *Tester) SetUpVarType(varname string, basicType *BasicType,
 		aclEntries = []string{"Makefile, *.mk: default, set, append, use, use-loadtime"}
 	}
 
-	G.Pkgsrc.vartypes.acl(varname, basicType, options, aclEntries...)
+	G.Project.Types().acl(varname, basicType, options, aclEntries...)
 
 	// Make sure that registering the type succeeds.
 	// This is necessary for BtUnknown and guessed types.
