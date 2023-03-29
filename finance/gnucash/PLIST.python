@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.python,v 1.4 2023/01/29 00:22:29 wiz Exp $
+@comment $NetBSD: PLIST.python,v 1.5 2023/03/29 12:03:28 wiz Exp $
 lib/gnucash/libgncmod-python.so
 ${PYSITELIB}/gnucash/__init__.py
 ${PYSITELIB}/gnucash/_gnucash_core_c.so
