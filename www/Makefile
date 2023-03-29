@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1695 2023/03/19 13:18:59 taca Exp $
+# $NetBSD: Makefile,v 1.1696 2023/03/29 08:29:57 adam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -228,6 +228,8 @@ SUBDIR+=	longboard
 SUBDIR+=	lua-curl
 SUBDIR+=	lua-http
 SUBDIR+=	lua-psl
+SUBDIR+=	lua-resty-core
+SUBDIR+=	lua-resty-lrucache
 SUBDIR+=	lua-web-sanitize
 SUBDIR+=	luakit
 SUBDIR+=	lynx
