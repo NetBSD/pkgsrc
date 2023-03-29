@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.24 2022/10/01 21:07:51 rhialto Exp $
+$NetBSD: distinfo,v 1.25 2023/03/29 13:27:16 rhialto Exp $
 
-BLAKE2s (suite3270-4.2ga6-src.tgz) = a8391d5cbb314541b9e444c577dbe0dc65afe7d1b54bb9c9c0edc232db69ca2c
-SHA512 (suite3270-4.2ga6-src.tgz) = e9fa5f7ed5f9620682678e15c5f52d0e064060807d2d9ea19bbd02334902fd185fdd2cf720be89f3e4e64163beca82e27120f2caf525f25a3053895eb84a92d7
-Size (suite3270-4.2ga6-src.tgz) = 4310909 bytes
+BLAKE2s (suite3270-4.2ga9-src.tgz) = 2cf70a7011eb53e17ccab75e7c0a9446dba28cf2921937f355c3cee0c620b764
+SHA512 (suite3270-4.2ga9-src.tgz) = b489cede7e503815acd42235e500f95e67b5d1b04e042da5e1ac02fae758accc74c96ffda3a59b818b25e1b28ad961e1898348931c727acf542d5878972f4ce5
+Size (suite3270-4.2ga9-src.tgz) = 12738974 bytes
