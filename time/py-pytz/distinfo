@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.55 2023/01/16 08:37:56 adam Exp $
+$NetBSD: distinfo,v 1.56 2023/03/29 12:59:29 adam Exp $
 
-BLAKE2s (pytz-2022.7.1.tar.gz) = fabfb3cfa570c8eb5218d50e144097522d7de97d9e4e5171dde1660c8996b522
-SHA512 (pytz-2022.7.1.tar.gz) = c70b9ef9c6e6a7dd50fc80a58bf068af33dbcdc83c3f2f44b0726e696927e17d843f2f0438392b6f34738a63aa51c5025e6aa4bcbb9e43400b9d68334ff05c18
-Size (pytz-2022.7.1.tar.gz) = 313522 bytes
+BLAKE2s (pytz-2023.3.tar.gz) = 1008be84c00f18bd891053f2d05854e6b90629cddb083ceab72a47b7b79b9589
+SHA512 (pytz-2023.3.tar.gz) = 3a39e9ec22bf1468e7415f60f10bf4a4e5b0b12bea2aeec45c5e63a916136c747fa0abd1b0612a99da962e743f28f24ebc43c1d73d96f0e98f7fb0ae6b62e319
+Size (pytz-2023.3.tar.gz) = 317095 bytes
